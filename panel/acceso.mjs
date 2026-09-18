@@ -149,7 +149,13 @@ export function sesionDe(req) {
 // cookie no viaje cuando se entra por http a la red local, y nadie podría
 // iniciar sesión desde la PC de al lado.
 function cookie(valor, req, segundos) {
-  const seguro = req.headers['x-forwarded-proto'] === 'https' ? ' Secure;' : '';
+  // Tailscale Funnel sirve el panel SOLO por https, pero no siempre manda
+  // el X-Forwarded-Proto, así que se mira también el nombre del equipo: si
+  // la cookie no sale marcada como Secure, el navegador estaría dispuesto a
+  // mandarla por una conexión sin cifrar.
+  const porTunel = String(req.headers.host ?? '').endsWith('.ts.net');
+  const https = req.headers['x-forwarded-proto'] === 'https' || porTunel;
+  const seguro = https ? ' Secure;' : '';
   return `rb_sesion=${valor}; HttpOnly;${seguro} SameSite=Lax; Path=/; Max-Age=${segundos}`;
 }
 
@@ -175,9 +181,24 @@ function anotarFallo(ip) {
 
 // --------------------------------------------------------------- entrar
 
+/** De dónde viene realmente el pedido.
+ *
+ *  Importa por el freno de abajo: detrás de Tailscale Funnel TODO llega
+ *  desde 127.0.0.1, así que si se contaran los fallos por esa IP, cualquiera
+ *  desde internet podría gastar cinco intentos fallidos y dejar afuera a
+ *  Andrés y a Hernán durante quince minutos. El túnel manda la IP verdadera
+ *  en X-Forwarded-For, y sólo se le cree cuando el pedido entró por él. */
+function ipDe(req) {
+  const local = req.socket.remoteAddress ?? 'desconocida';
+  const porTunel = String(req.headers.host ?? '').endsWith('.ts.net');
+  if (!porTunel) return local;
+  const cadena = String(req.headers['x-forwarded-for'] ?? '').split(',')[0].trim();
+  return cadena || local;
+}
+
 /** Procesa el formulario. Devuelve { ok, error, cookie }. */
 export function entrar({ usuario, clave }, req) {
-  const ip = req.socket.remoteAddress ?? 'desconocida';
+  const ip = ipDe(req);
   const minutos = frenado(ip);
   if (minutos) {
     return { ok: false, error: `Demasiados intentos. Probá de nuevo en ${minutos} minutos.` };
