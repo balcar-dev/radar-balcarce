@@ -12,7 +12,9 @@ echo.
 echo   Levantando Radar Balcarce...
 echo.
 
-REM El panel: busca noticias solo cada 10 minutos.
+REM El panel: busca noticias solo cada 10 minutos, y cada 2 horas
+REM regenera y publica la web. Mientras esta ventana este abierta,
+REM el sitio se actualiza solo.
 start "Radar Balcarce - PANEL" cmd /k "node panel/servidor.mjs"
 
 REM La web publica. Primero regenera los datos con lo que decidiste

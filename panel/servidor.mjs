@@ -13,6 +13,7 @@ import {
 } from '../ingesta/agenda.mjs';
 import { NUMEROS, tocaHoy, diaDeEstaSemana } from '../ingesta/utiles.mjs';
 import { reescribirConRespaldo, INSTRUCCION_EDITORIAL } from '../reels/reescritura.mjs';
+import { spawn } from 'node:child_process';
 import { clave as claveGemini } from '../reels/voz-gemini.mjs';
 import {
   sesionDe, entrar, salir, paginaLogin, hayUsuarios,
@@ -281,6 +282,70 @@ async function reescribirPendientes() {
     anotar(`reescribió ${hechas} ${hechas === 1 ? 'nota' : 'notas'} automáticas`, '', 'ia');
     guardarJson(F_ESTADO, estado);
   }
+}
+
+// ------------------------------------------------------ publicar la web
+
+// Cada cuánto se publica solo lo que el panel decidió. Dos horas: las
+// noticias no cambian tanto, y cada publicación compila el sitio entero.
+const HORAS_ENTRE_PUBLICACIONES = 2;
+const F_LOG_PUBLICACION = path.join(DATOS, 'publicaciones.log');
+
+/** Publica la web: regenera los datos, compila y sube a Vercel.
+ *
+ *  Esto vivía en una tarea del Programador de Windows, y no funcionaba: la
+ *  tarea corre con un entorno distinto y la CLI de Vercel no encontraba la
+ *  sesión guardada ("No existing credentials found"). Desde acá sí la
+ *  encuentra, porque el panel se arranca desde la sesión del usuario.
+ *
+ *  Y además tiene sentido que viva acá: si el panel está apagado, los datos
+ *  no se actualizan, así que publicar no tendría nada nuevo que mostrar. */
+let publicando = false;
+
+function publicarWeb() {
+  // Sin este cerrojo las publicaciones se apilan: compilar y subir puede
+  // tardar varios minutos, y si entra la siguiente antes de que termine la
+  // anterior quedan dos deploys peleándose por el mismo proyecto.
+  if (publicando) { console.log('  ya hay una publicación en curso, se saltea'); return Promise.resolve(); }
+  publicando = true;
+
+  const raiz = path.join(AQUI, '..');
+  const web = path.join(raiz, 'web');
+  const anotarLinea = (t) => fs.appendFileSync(F_LOG_PUBLICACION, t, 'utf8');
+  anotarLinea(`
+===== ${new Date().toLocaleString('es-AR', { timeZone: 'America/Argentina/Buenos_Aires' })} =====
+`);
+
+  const pasos = [
+    { que: 'generar los datos', cmd: 'npm', args: ['run', 'datos'], donde: web },
+    { que: 'compilar el sitio', cmd: 'npm', args: ['run', 'build'], donde: web },
+    { que: 'publicar en Vercel', cmd: 'npx', args: ['--no-install', 'vercel', '--prod', '--yes'], donde: web },
+  ];
+
+  const correr = ({ que, cmd, args, donde }) => new Promise((listo, falla) => {
+    // shell: true porque en Windows npm y npx son .cmd, no ejecutables.
+    const p = spawn(cmd, args, { cwd: donde, shell: true });
+    p.stdout.on('data', (d) => anotarLinea(d.toString()));
+    p.stderr.on('data', (d) => anotarLinea(d.toString()));
+    p.on('close', (codigo) => (codigo === 0 ? listo() : falla(new Error(`falló al ${que} (código ${codigo})`))));
+    p.on('error', (e) => falla(new Error(`no se pudo ${que}: ${e.message}`)));
+  });
+
+  return (async () => {
+    try {
+      for (const paso of pasos) await correr(paso);
+      anotarLinea('----- publicado bien -----\n');
+      console.log('  web publicada');
+      anotar('la web se publicó sola', '', 'sistema');
+      guardarJson(F_ESTADO, estado);
+    } catch (e) {
+      anotarLinea(`----- ${e.message} -----
+`);
+      console.error(`  no se pudo publicar: ${e.message}`);
+    } finally {
+      publicando = false;
+    }
+  })();
 }
 
 async function correrIngesta() {
@@ -640,6 +705,10 @@ servidor.listen(PUERTO, async () => {
   if (!agenda) { console.log('  trayendo agenda...'); await actualizarAgenda(); }
   // Cada 10 minutos, igual que va a correr en producción.
   setInterval(correrIngesta, 10 * 60 * 1000);
+  // La web se publica sola cada dos horas, y una vez al arrancar (a los
+  // tres minutos, para no pelearle CPU al primer ciclo de ingesta).
+  setTimeout(publicarWeb, 3 * 60 * 1000);
+  setInterval(publicarWeb, HORAS_ENTRE_PUBLICACIONES * 60 * 60 * 1000);
   // La agenda cambia mucho menos que las noticias: alcanza con una vez por hora.
   setInterval(actualizarAgenda, 60 * 60 * 1000);
 });

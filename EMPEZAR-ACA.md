@@ -36,8 +36,9 @@ cuando las tengas guardadas en otro lado.
   las clasifica y les pone puntaje.
 - **Cada 10 minutos**: reescribe con IA las notas que van a salir sin que
   nadie las mire (las verdes). Doce por vuelta.
-- **Cada 2 horas, de 7 a 23**: regenera la web y la publica. Es una tarea de
-  Windows llamada "Radar Balcarce - publicar".
+- **Cada 2 horas**: regenera la web y la publica. Lo hace el panel mismo, así
+  que mientras el panel esté corriendo, la web se actualiza sola. Si algo
+  falla, queda escrito en `panel/datos/publicaciones.log`.
 - **A las 72 horas**: archiva lo que quedó sin decidir.
 
 ### A mano
@@ -57,7 +58,8 @@ En la carpeta del proyecto:
   prender la PC.
 - **`PUBLICAR.bat`** — publica ahora, sin esperar las 2 horas. Te muestra lo
   que va pasando.
-- **`publicar-automatico.bat`** — no lo abras: lo usa la tarea programada.
+- **`publicar-automatico.bat`** — quedó por si alguna vez hace falta publicar
+  desde afuera del panel. No hace falta usarlo.
 
 ## Las dos cosas que hay que entender
 
