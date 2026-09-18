@@ -46,7 +46,7 @@ if errorlevel 1 (
 echo.
 echo   [4/4] Publicando en Vercel...
 cd web
-call npx vercel --prod --yes
+call npx --no-install vercel --prod --yes
 if errorlevel 1 goto :error
 
 echo.

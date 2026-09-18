@@ -238,6 +238,54 @@ export const FUENTES_NACIONALES = [
     maxItems: 6,
     temas: ['automovilismo'],
   },
+  // ------------------------------------------------ deporte que no es fútbol
+  //
+  // Balcarce es tierra de fierros: es la ciudad de Fangio, tiene autódromo y
+  // el automovilismo es de lo más leído. Pero los medios grandes cubren F1
+  // sólo cuando pasa algo escandaloso, y el resto del año el hueco lo llena
+  // quien quiera. Motorsport.com publica todos los días, en castellano y con
+  // feed limpio: 50 notas por vuelta, de F1, MotoGP, Fórmula E y resistencia.
+  //
+  // Peso bajo a propósito (15): son notas de afuera, no tienen que competir
+  // contra lo local. Suben solas cuando nombran a un argentino, porque la
+  // regla de esRelevante suma 22 puntos si aparece Balcarce y el filtro de
+  // alcance deja pasar lo que menciona a la ciudad.
+  {
+    id: 'motorsport-f1',
+    nombre: 'Motorsport · Fórmula 1',
+    medio: 'Motorsport',
+    url: 'https://es.motorsport.com/rss/f1/news/',
+    tipo: 'rss',
+    alcance: 'pais',
+    peso: 15,
+    maxItems: 4,
+    temas: ['automovilismo', 'formula 1'],
+    nota: 'F1 en castellano, todos los días. Lo que no cubre nadie en la zona.',
+  },
+  {
+    id: 'motorsport-motos',
+    nombre: 'Motorsport · MotoGP',
+    medio: 'Motorsport',
+    url: 'https://es.motorsport.com/rss/motogp/news/',
+    tipo: 'rss',
+    alcance: 'pais',
+    peso: 14,
+    maxItems: 2,
+    temas: ['automovilismo', 'motociclismo'],
+    nota: 'MotoGP. Poco volumen a propósito: es para no tener sólo autos.',
+  },
+  {
+    id: 'lanacion-deportes',
+    nombre: 'La Nación · Deportes',
+    medio: 'La Nación',
+    url: 'https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/deportes/',
+    tipo: 'rss',
+    alcance: 'pais',
+    peso: 16,
+    maxItems: 3,
+    temas: ['deportes'],
+    nota: 'Para rugby, tenis, hockey y atletismo: lo que Olé no cubre porque va todo a fútbol.',
+  },
 ];
 
 // Candidatos a probar para región, provincia, país, deportes y automovilismo.
@@ -274,7 +322,11 @@ export const REGLAS_SECCION = [
     seccion: 'Automovilismo',
     palabras: ['turismo carretera', 'tc pista', 'automovilismo', 'autódromo', 'autodromo',
       'fangio', 'karting', 'rally', 'tc2000', 'top race', 'procar', 'fórmula', 'formula 1',
-      'pick up', 'motociclismo', 'motocross'],
+      'pick up', 'motociclismo', 'motocross',
+      // Los que trae Motorsport: sin esto, una nota de F1 caía en Deportes
+      // por la palabra "campeonato" y se mezclaba con el fútbol local.
+      'f1', 'gran premio', 'motogp', 'piloto', 'parrilla', 'pole', 'escudería',
+      'escuderia', 'fórmula e', 'formula e', 'clasificación de f1', 'box', 'neumáticos'],
   },
   {
     seccion: 'Policiales',
@@ -287,7 +339,11 @@ export const REGLAS_SECCION = [
     palabras: ['fútbol', 'futbol', 'básquet', 'basquet', 'vóley', 'voley', 'maxivoley',
       'torneo', 'campeonato', 'liga', 'partido', 'goleó', 'goleo', 'gol', 'goles',
       'playoffs', 'hockey', 'atletismo', 'maratón', 'maraton', 'árbitro', 'arbitro',
-      'deportivo', 'descenso', 'selección', 'seleccion', 'copa'],
+      'deportivo', 'descenso', 'selección', 'seleccion', 'copa',
+      // Los que no son fútbol y suelen quedar sin cubrir en la zona.
+      'rugby', 'tenis', 'ciclismo', 'mountain bike', 'running', 'triatlón',
+      'triatlon', 'natación', 'natacion', 'handball', 'hándbol', 'pádel',
+      'padel', 'ajedrez', 'patín', 'patin', 'las leonas', 'los pumas'],
   },
   {
     seccion: 'Cultura y agenda',
