@@ -8,29 +8,30 @@ REM
 REM  Que hace, en orden:
 REM    1. Regenera web/data/portada.json con lo que hay en el panel.
 REM    2. Compila el sitio para verificar que no quedo roto.
-REM    3. Lo sube a GitHub.
+REM    3. Lo guarda en GitHub (respaldo del historial).
+REM    4. Lo publica en Vercel.
 REM
-REM  Y ahi termina: Vercel esta conectado al repositorio, asi que
-REM  el push dispara el deploy solo. No hace falta llamar a Vercel
-REM  desde aca (ademas, la consola de esta PC quedo autenticada en
-REM  una cuenta de Vercel distinta a la del medio).
+REM  La consola de esta PC esta autenticada en la cuenta de Vercel
+REM  del medio (radarbalcarce@gmail.com), asi que el paso 4 publica
+REM  donde corresponde. El dia que el repositorio quede conectado a
+REM  Vercel, el push del paso 3 va a alcanzar y el 4 sobra.
 REM ============================================================
 
 cd /d "%~dp0"
 
 echo.
-echo   [1/3] Generando los datos desde el panel...
+echo   [1/4] Generando los datos desde el panel...
 cd web
 call npm run datos
 if errorlevel 1 goto :error
 
 echo.
-echo   [2/3] Compilando el sitio para ver que no quedo roto...
+echo   [2/4] Compilando el sitio para ver que no quedo roto...
 call npm run build
 if errorlevel 1 goto :error
 
 echo.
-echo   [3/3] Subiendo a GitHub...
+echo   [3/4] Guardando en GitHub...
 cd ..
 git add web/data/portada.json
 git diff --cached --quiet
@@ -38,12 +39,19 @@ if errorlevel 1 (
   git commit -m "Datos de la portada al %date% %time:~0,5%"
   git push origin main
   if errorlevel 1 goto :error
-  echo.
-  echo   Listo. Vercel esta compilando: en un minuto se ve online.
 ) else (
-  echo        Sin cambios en los datos: no habia nada nuevo que publicar.
+  echo        Sin cambios en los datos que guardar.
 )
 
+echo.
+echo   [4/4] Publicando en Vercel...
+cd web
+call npx vercel --prod --yes
+if errorlevel 1 goto :error
+
+echo.
+echo   Listo. Ya se ve en:
+echo     https://radar-balcarce-six.vercel.app
 echo.
 pause
 exit /b 0
