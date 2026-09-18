@@ -1,0 +1,17 @@
+{
+  "name": "radar-balcarce-web",
+  "private": true,
+  "version": "0.1.0",
+  "description": "La web pública de Radar Balcarce. Lee datos estáticos generados desde el panel (ver scripts/generar-datos.mjs) — no necesita el panel corriendo para funcionar una vez generados.",
+  "scripts": {
+    "datos": "node scripts/generar-datos.mjs",
+    "dev": "npm run datos && next dev",
+    "build": "npm run datos && next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "next": "^15.0.0",
+    "react": "^18.3.0",
+    "react-dom": "^18.3.0"
+  }
+}

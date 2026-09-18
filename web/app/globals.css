@@ -1,0 +1,161 @@
+/* Los mismos tokens que se usaron en el diseño del canvas (Main.dc.html,
+   Servicios.dc.html): que la web y las piezas para redes se reconozcan
+   como del mismo medio con sólo mirarlas. */
+:root {
+  --tinta: #14161A;
+  --papel: #F7F5EF;
+  --rojo: #A8371F;
+  --rojo-oscuro: #7C2717;
+  --verde: #16615B;
+  --ambar: #E8A33C;
+  --linea: #D5CFC0;
+  --suave: #4A4F4B;
+  --crema: #EDE9DE;
+  --blanco: #FFFFFF;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--papel);
+  color: var(--tinta);
+  font-family: "IBM Plex Sans", system-ui, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+h1, h2, h3, .fraunces {
+  font-family: "Fraunces", Georgia, serif;
+  letter-spacing: -0.01em;
+  margin: 0;
+}
+
+a { color: var(--rojo); text-decoration: none; }
+a:hover { color: var(--rojo-oscuro); }
+
+img { max-width: 100%; display: block; }
+
+.envoltura {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ------------------------------------------------------------- cabecera */
+
+.chapa-superior {
+  background: var(--tinta);
+  color: var(--papel);
+  font-size: 12px;
+  letter-spacing: 0.03em;
+}
+.chapa-superior .envoltura {
+  height: 38px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+.chapa-superior a { color: var(--papel); }
+.chapa-superior a:hover { color: var(--ambar); }
+.chapa-superior .sep { color: #4A4F4B; }
+.chapa-superior .crece { flex-grow: 1; }
+.chapa-superior .cta { color: var(--ambar); font-weight: 600; }
+
+header.principal .envoltura {
+  padding-top: 26px;
+  padding-bottom: 16px;
+  display: flex;
+  align-items: flex-end;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+.logo { font-size: 44px; font-weight: 700; line-height: 1; }
+.logo span { color: var(--rojo); }
+.logo .sub { font-family: "IBM Plex Sans", sans-serif; font-size: 13px; color: var(--suave); margin-top: 8px; font-weight: 400; letter-spacing: 0; }
+
+nav.principal {
+  border-top: 1px solid var(--tinta);
+  border-bottom: 1px solid var(--linea);
+  background: var(--papel);
+}
+nav.principal .envoltura {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+nav.principal a {
+  color: var(--tinta);
+  font-weight: 600;
+  font-size: 14px;
+}
+nav.principal a.activo { color: var(--rojo); border-bottom: 2px solid var(--rojo); height: 49px; display: flex; align-items: center; }
+
+/* -------------------------------------------------------------- layout */
+
+main { padding: 28px 0 60px; }
+.dos-columnas { display: grid; grid-template-columns: 1fr 340px; gap: 32px; align-items: start; }
+@media (max-width: 860px) {
+  .dos-columnas { grid-template-columns: 1fr; }
+}
+
+/* --------------------------------------------------------------- notas */
+
+.nota-chapa { display: flex; align-items: center; gap: 8px; font-size: 11px; font-weight: 700; letter-spacing: 0.06em; color: var(--suave); flex-wrap: wrap; }
+.nota-chapa .seccion { color: var(--rojo); text-transform: uppercase; }
+.nota-chapa .sep { color: var(--linea); }
+
+.destacada h2 { font-size: 38px; line-height: 1.08; font-weight: 700; margin-top: 10px; }
+.destacada p { font-size: 16px; color: #3B403C; line-height: 1.55; margin: 12px 0 0; max-width: 640px; }
+.destacada .imagen-vacia {
+  width: 100%; height: 300px; background: var(--crema); border: 1px solid var(--linea);
+  border-radius: 6px; margin-bottom: 14px; display: flex; align-items: center; justify-content: center;
+  color: var(--suave); font-size: 12px; letter-spacing: 0.06em; font-weight: 600;
+}
+
+.lista-notas { display: flex; flex-direction: column; }
+.fila-nota { display: flex; gap: 14px; padding: 16px 0; border-bottom: 1px solid var(--linea); }
+.fila-nota h3 { font-size: 19px; line-height: 1.25; font-weight: 600; margin-top: 5px; }
+.fila-nota p { font-size: 13.5px; color: var(--suave); margin: 6px 0 0; line-height: 1.5; }
+.fila-nota .num { font-size: 11px; color: var(--suave); }
+
+.rejilla-secciones { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; margin-top: 10px; }
+@media (max-width: 640px) { .rejilla-secciones { grid-template-columns: 1fr; } }
+
+/* -------------------------------------------------------------- lateral */
+
+.tarjeta {
+  background: var(--blanco); border: 1px solid var(--linea); border-radius: 6px; padding: 18px; margin-bottom: 16px;
+}
+.tarjeta h3 { font-size: 19px; font-weight: 600; margin-bottom: 10px; }
+.tarjeta.oscura { background: var(--tinta); color: var(--papel); border-color: var(--tinta); }
+.tarjeta.oscura .mini { color: #BDC1B8; }
+.mini { font-size: 12.5px; color: var(--suave); line-height: 1.5; }
+.temp-grande { font-family: "Fraunces", serif; font-size: 48px; font-weight: 700; line-height: 1; }
+
+.boton {
+  display: inline-flex; align-items: center; height: 44px; padding: 0 18px; border-radius: 4px;
+  font-size: 14px; font-weight: 600; border: none; cursor: pointer;
+}
+.boton.rojo { background: var(--rojo); color: #fff; }
+.boton.tinta { background: var(--tinta); color: var(--papel); }
+.boton.borde { background: transparent; border: 1px solid var(--tinta); color: var(--tinta); }
+
+/* --------------------------------------------------------------- pie */
+
+footer.principal { background: var(--tinta); color: #BDC1B8; padding: 30px 0; margin-top: 40px; font-size: 13px; }
+footer.principal .envoltura { display: flex; flex-direction: column; gap: 10px; }
+footer.principal a { color: var(--papel); }
+footer.principal .aclaracion { max-width: 720px; line-height: 1.6; border-top: 1px solid #2A2E32; padding-top: 16px; margin-top: 10px; }
+
+.etiqueta-semaforo {
+  display: inline-flex; align-items: center; gap: 5px; font-size: 10px; font-weight: 700;
+  letter-spacing: 0.04em; padding: 3px 8px; border-radius: 3px;
+}
+.etiqueta-semaforo.auto { background: #E3F0E9; color: #14533F; }

@@ -1,0 +1,678 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Tablero · Radar Balcarce</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap">
+<style>
+  :root { --tinta:#14161A; --papel:#F7F5EF; --rojo:#A8371F; --verde:#16615B; --ambar:#C99A16;
+          --linea:#D5CFC0; --suave:#4A4F4B; --blanco:#fff; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--papel); color:var(--tinta);
+         font-family:"IBM Plex Sans",system-ui,sans-serif; font-size:14px; }
+  button { font-family:inherit; cursor:pointer; }
+
+  header { background:var(--tinta); color:var(--papel); padding:14px 22px; display:flex; align-items:center; gap:16px; flex-wrap:wrap; }
+  header h1 { margin:0; font-family:Fraunces,Georgia,serif; font-size:21px; font-weight:700; }
+  header h1 span { color:#E8A33C; }
+  .estado { font-size:12px; color:#BDC1B8; display:flex; align-items:center; gap:7px; }
+  .luz { width:8px; height:8px; border-radius:50%; background:#4FB07E; }
+  .crece { flex-grow:1; }
+  header select, header button { height:36px; border-radius:4px; font-size:13px; }
+  header select { background:#1D2024; color:var(--papel); border:1px solid #3A3E42; padding:0 8px; }
+  .btn-claro { background:#E8A33C; color:var(--tinta); border:none; padding:0 14px; font-weight:700; }
+  .btn-claro:disabled { opacity:.5; cursor:wait; }
+
+  nav { background:var(--blanco); border-bottom:1px solid var(--linea); padding:0 22px; display:flex; gap:4px; }
+  nav button { background:none; border:none; padding:13px 14px; font-size:13px; font-weight:600; color:var(--suave); border-bottom:2px solid transparent; }
+  nav button.on { color:var(--rojo); border-bottom-color:var(--rojo); }
+  nav button b { background:var(--rojo); color:#fff; border-radius:9px; padding:1px 6px; font-size:11px; margin-left:5px; }
+
+  main { padding:20px 22px 60px; }
+  .dos { display:grid; grid-template-columns:1fr 440px; gap:20px; align-items:start; }
+  @media (max-width:1100px) { .dos { grid-template-columns:1fr; } }
+
+  .tarjeta { background:var(--blanco); border:1px solid var(--linea); border-radius:6px; padding:14px 16px; margin-bottom:10px; }
+  .tarjeta.sel { border:2px solid var(--rojo); }
+  .chapa { display:flex; align-items:center; gap:8px; font-size:11px; font-weight:600; color:var(--suave); flex-wrap:wrap; }
+  .punto { width:9px; height:9px; border-radius:50%; }
+  .secc { text-transform:uppercase; letter-spacing:.06em; color:var(--rojo); }
+  .rel { margin-left:auto; background:var(--papel); border:1px solid var(--linea); border-radius:3px; padding:2px 7px; font-weight:700; }
+  .tit { margin:7px 0 0; font-family:Fraunces,Georgia,serif; font-size:17px; line-height:1.3; font-weight:600; }
+  .mini { font-size:12px; color:var(--suave); line-height:1.5; margin-top:5px; }
+
+  .lateral { position:sticky; top:20px; }
+  label.campo { display:block; font-size:10px; font-weight:700; letter-spacing:.08em; color:var(--suave); margin:12px 0 5px; }
+  input[type=text], input[type=url], input[type=number], textarea, select.ancho {
+    width:100%; padding:9px 11px; border:1px solid var(--linea); border-radius:4px;
+    font-family:inherit; font-size:13px; background:var(--blanco); color:var(--tinta); }
+  textarea { resize:vertical; line-height:1.5; }
+  .acciones { display:flex; gap:8px; margin-top:14px; }
+  .b { border:1px solid var(--linea); background:var(--blanco); border-radius:4px; height:42px; padding:0 14px; font-size:13px; font-weight:600; }
+  .b.verde { background:var(--verde); color:#fff; border-color:var(--verde); flex-grow:1; }
+  .b.rojo { color:var(--rojo); }
+  .b.chico { height:32px; padding:0 10px; font-size:12px; }
+
+  table { width:100%; border-collapse:collapse; background:var(--blanco); }
+  th { text-align:left; font-size:10px; letter-spacing:.07em; color:var(--suave); padding:9px 10px; border-bottom:1px solid var(--tinta); }
+  td { padding:10px; border-bottom:1px solid var(--linea); font-size:13px; vertical-align:middle; }
+  td.n { font-weight:600; }
+  .etiq { display:inline-block; background:var(--papel); border-radius:3px; padding:2px 7px; font-size:11px; font-weight:600; }
+  .etiq.ok { background:#E3F0E9; color:#14533F; }
+  .etiq.mal { background:#FBF3EE; color:#8C2D18; }
+  .etiq.pausa { background:#FDF3E2; color:#6B5210; }
+
+  h2 { font-family:Fraunces,Georgia,serif; font-size:20px; margin:0 0 12px; }
+  .vacio { color:var(--suave); background:var(--blanco); border:1px dashed var(--linea); border-radius:6px; padding:26px; text-align:center; }
+  .aviso { background:#FDF3E2; color:#6B5210; border-radius:4px; padding:9px 11px; font-size:12px; margin-top:8px; }
+  .ok { background:#E3F0E9; color:#14533F; border-radius:4px; padding:9px 11px; font-size:12px; margin-top:8px; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Radar <span>Balcarce</span></h1>
+  <div class="estado"><span class="luz" id="luz"></span><span id="txtEstado">cargando…</span></div>
+  <div class="crece"></div>
+  <label for="quien" style="font-size:12px;color:#BDC1B8">Soy</label>
+  <select id="quien"><option>Andrés</option><option>Hernán</option></select>
+  <button class="btn-claro" id="btnActualizar">Buscar noticias ahora</button>
+</header>
+
+<nav>
+  <button data-t="cola" class="on">Para decidir <b id="nCola">0</b></button>
+  <button data-t="publicadas">Publicadas</button>
+  <button data-t="descartadas">Descartadas</button>
+  <button data-t="bloqueadas">Frenadas</button>
+  <button data-t="fuentes">Fuentes</button>
+  <button data-t="servicios">Clima y farmacias</button>
+  <button data-t="agenda">Agenda</button>
+  <button data-t="buzon">Buzón <b id="nBuzon">0</b></button>
+  <button data-t="editorial">Cómo escribe la IA</button>
+</nav>
+
+<main id="main"></main>
+
+<script>
+let D = null, sel = null, tab = 'cola';
+const $ = (s) => document.querySelector(s);
+const esc = (s) => String(s ?? '').replace(/[&<>"]/g, (c) => ({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;' }[c]));
+const puntos = { verde:'#16615B', amarillo:'#C99A16', rojo:'#A8371F' };
+const quien = () => $('#quien').value;
+
+async function api(ruta, cuerpo) {
+  const r = await fetch(ruta, cuerpo ? {
+    method:'POST', headers:{'content-type':'application/json'},
+    body: JSON.stringify({ ...cuerpo, quien: quien() })
+  } : undefined);
+  return r.json();
+}
+
+async function cargar(datos) {
+  D = datos ?? await api('/api/estado');
+  const pend = D.notas.filter((n) => n.estado === 'pendiente');
+  $('#nCola').textContent = pend.length;
+  $('#nBuzon').textContent = (D.buzon || []).filter((b) => b.estado === 'nuevo' || b.estado === 'pendiente').length;
+  $('#txtEstado').textContent = D.generado
+    ? `última búsqueda ${new Date(D.generado).toLocaleTimeString('es-AR',{hour:'2-digit',minute:'2-digit'})} · ${D.notas.length} historias · ${pend.length} sin decidir`
+    : 'todavía no busqué noticias';
+  $('#luz').style.background = D.corriendo ? '#C99A16' : '#4FB07E';
+  pintar();
+}
+
+function pintar() {
+  document.querySelectorAll('nav button').forEach((b) => b.classList.toggle('on', b.dataset.t === tab));
+  const m = $('#main');
+  if (tab === 'cola') m.innerHTML = vistaCola();
+  if (tab === 'publicadas') m.innerHTML = vistaLista(['publicada', 'automatica'], 'Todavía no hay nada publicado.');
+  if (tab === 'descartadas') m.innerHTML = vistaLista(['descartada'], 'No descartaste nada todavía.');
+  if (tab === 'bloqueadas') m.innerHTML = vistaLista(['bloqueada'], 'No hay nada frenado. El semáforo rojo frena menores, víctimas y causas sin confirmar: si aparece algo acá, no se publica ni por error.');
+  if (tab === 'fuentes') m.innerHTML = vistaFuentes();
+  if (tab === 'servicios') m.innerHTML = vistaServicios();
+  if (tab === 'agenda') m.innerHTML = vistaAgenda();
+  if (tab === 'buzon') m.innerHTML = vistaBuzon();
+  if (tab === 'editorial') m.innerHTML = vistaEditorial();
+  conectar();
+}
+
+// ------------------------------------------------------------------- cola
+
+function tarjeta(n) {
+  return `<div class="tarjeta ${sel === n.id ? 'sel' : ''}" data-id="${n.id}">
+    <div class="chapa">
+      <span class="punto" style="background:${puntos[n.semaforo]}"></span>
+      <span class="secc">${esc(n.seccion)}</span><span>·</span>
+      <span>${esc(n.medios.join(' + '))}</span><span>·</span>
+      <span>${esc(n.cuando)}</span>
+      ${n.medios.length > 1 ? '<span class="etiq ok">coinciden ' + n.medios.length + '</span>' : ''}
+      ${n.nombraBalcarce ? '<span class="etiq ok">nos nombran afuera</span>' : ''}
+      <span class="rel">${n.relevancia}</span>
+    </div>
+    <div class="tit">${esc(n.titulo)}</div>
+    <div class="mini">${esc(n.motivo)}</div>
+  </div>`;
+}
+
+function vistaCola() {
+  const pend = D.notas.filter((n) => n.estado === 'pendiente');
+  const nota = D.notas.find((n) => n.id === sel);
+  const viejas = pend.filter((n) => n.cuando.includes('días') || n.relevancia < 55);
+  return `<div class="dos">
+    <div>
+      <h2>Para decidir · ${pend.length}</h2>
+      ${viejas.length > 8 ? `<div class="aviso" style="display:flex;align-items:center;gap:12px;margin:0 0 12px">
+        <span style="flex-grow:1">Hay ${viejas.length} que ya tienen días o puntaje bajo: es el archivo que las portadas muestran siempre. Sacalas de una y quedate con lo de hoy.</span>
+        <button class="b chico" id="btnArchivar">Archivar esas ${viejas.length}</button></div>` : ''}
+      ${pend.length ? pend.map(tarjeta).join('') : '<div class="vacio">No queda nada por decidir. Tocá “Buscar noticias ahora”.</div>'}
+    </div>
+    <div class="lateral">${nota ? detalle(nota) : '<div class="vacio">Tocá una noticia de la izquierda para verla, editarla y decidir.</div>'}</div>
+  </div>`;
+}
+
+function detalle(n) {
+  return `<div class="tarjeta">
+    <div class="chapa">
+      <span class="punto" style="background:${puntos[n.semaforo]}"></span>
+      <span class="secc">${esc(n.seccion)}</span>
+      <span class="rel">${n.relevancia}</span>
+    </div>
+    <div class="acciones" style="margin:0 0 4px">
+      <button class="b" id="btnReescribir" data-reescribir="${n.id}" style="flex-grow:1">✨ Reescribir con IA${n.deIA === true ? ' (ya reescrita)' : n.deIA === false ? ' (falló, quedó la mecánica — reintentar)' : ''}</button>
+    </div>
+    <label class="campo" for="eT">TÍTULO · <span id="cuenta">0</span> de 65</label>
+    <input type="text" id="eT" value="${esc(n.titulo)}">
+    <label class="campo" for="eC">COPETE</label>
+    <textarea id="eC" rows="4">${esc(n.copete || '')}</textarea>
+    <label class="campo" for="eG">GUION PARA LA VOZ</label>
+    <textarea id="eG" rows="3">${esc(n.guion || '')}</textarea>
+    <div class="mini" style="margin-top:10px">
+      Fuente: ${esc(n.medios.join(' + '))} · ${esc(n.cuando)}<br>
+      <a href="${esc(n.enlace)}" target="_blank" rel="noopener">Ver la nota original ↗</a>
+    </div>
+    <div class="aviso">${esc(n.motivo)}</div>
+    <div class="acciones">
+      <button class="b verde" data-acc="publicada">Publicar</button>
+      <button class="b" data-acc="editar">Guardar cambios</button>
+      <button class="b rojo" data-acc="descartada">Descartar</button>
+    </div>
+  </div>`;
+}
+
+const TITULOS = { publicada:'Publicadas', descartada:'Descartadas', bloqueada:'Frenadas por el semáforo rojo' };
+
+function vistaLista(estados, vacio) {
+  const ns = D.notas.filter((n) => estados.includes(n.estado));
+  const auto = ns.filter((n) => n.estado === 'automatica').length;
+  return `<h2>${TITULOS[estados[0]]} · ${ns.length}</h2>
+    ${auto ? `<div class="ok" style="margin:0 0 12px">${auto} salieron solas porque el semáforo las marcó verdes: clima, farmacias, cortes de luz, agenda, deportes y comunicados. Si alguna no te gusta, la sacás desde acá.</div>` : ''}
+    ${ns.length ? ns.map((n) => `<div class="tarjeta">
+        <div class="chapa"><span class="secc">${esc(n.seccion)}</span><span>·</span>
+          ${n.estado === 'automatica' ? '<span class="etiq ok">salió sola</span>'
+            : n.estado === 'bloqueada' ? `<span class="etiq mal">${esc(n.motivo)}</span>`
+            : `<span>${esc(n.decidioQuien || '')} ${n.decidioCuando ? new Date(n.decidioCuando).toLocaleString('es-AR',{day:'2-digit',month:'2-digit',hour:'2-digit',minute:'2-digit'}) : ''}</span>`}
+          <span class="rel">${n.relevancia}</span></div>
+        <div class="tit">${esc(n.titulo)}</div>
+        <div class="acciones">
+          ${n.estado === 'bloqueada' ? '' : `<button class="b chico" data-volver="${n.id}">Volver a la cola</button>`}
+          ${n.estado === 'automatica' ? `<button class="b chico rojo" data-bajar="${n.id}">Bajar de la web</button>` : ''}
+        </div>
+      </div>`).join('') : `<div class="vacio">${vacio}</div>`}`;
+}
+
+// ---------------------------------------------------------------- fuentes
+
+function vistaFuentes() {
+  return `<div class="dos">
+    <div>
+      <h2>Fuentes · ${D.fuentes.filter((f) => f.activa).length} activas de ${D.fuentes.length}</h2>
+      <table>
+        <tr><th>MEDIO</th><th>TEMAS</th><th>ALCANCE</th><th>ÚLTIMO CICLO</th><th>PESO</th><th></th></tr>
+        ${D.fuentes.map((f) => `<tr>
+          <td class="n">${esc(f.nombre)}<div class="mini" style="margin:2px 0 0">${esc(f.url).slice(0, 62)}</div>${f.nota ? `<div class="mini" style="margin-top:3px;font-style:italic">${esc(f.nota)}</div>` : ''}</td>
+          <td>${(f.temas || []).map((t) => `<span class="etiq" style="margin:0 3px 3px 0">${esc(t)}</span>`).join('') || '<span class="mini">—</span>'}</td>
+          <td>${esc(f.alcance)}${f.seccion ? `<div class="mini">→ ${esc(f.seccion)}</div>` : ''}</td>
+          <td>${!f.activa ? '<span class="etiq pausa">en pausa</span>'
+            : f.ultimo?.estado === 'ok' ? `<span class="etiq ok">${f.ultimo.notas} notas</span> <div class="mini">${esc(f.ultimo.frescura)}</div>`
+            : f.ultimo ? `<span class="etiq mal">error</span><div class="mini">${esc(f.ultimo.error || '').slice(0,40)}</div>` : '—'}</td>
+          <td><input type="number" min="1" max="40" value="${f.peso}" style="width:62px" data-peso="${f.id}"></td>
+          <td style="white-space:nowrap">
+            <button class="b chico" data-pausa="${f.id}">${f.activa ? 'Pausar' : 'Activar'}</button>
+            <button class="b chico rojo" data-borrar="${f.id}">Borrar</button>
+          </td></tr>`).join('')}
+      </table>
+      <div class="mini" style="margin-top:10px">El peso es cuánto empuja esa fuente hacia arriba en la portada: 30 es un medio local fuerte, 8 es un diario nacional.</div>
+    </div>
+    <div class="lateral">
+      <div class="tarjeta">
+        <h2 style="font-size:18px">Sumar una fuente</h2>
+        <label class="campo" for="fN">NOMBRE</label>
+        <input type="text" id="fN" placeholder="Radio X de Balcarce">
+        <label class="campo" for="fU">DIRECCIÓN DEL FEED</label>
+        <input type="url" id="fU" placeholder="https://elmedio.com.ar/feed">
+        <label class="campo" for="fA">ALCANCE</label>
+        <select class="ancho" id="fA">
+          <option value="local">Local · entra todo</option>
+          <option value="region">Región · sólo si nombra Balcarce</option>
+          <option value="pais">País · sólo si nombra Balcarce, más unas pocas</option>
+        </select>
+        <label class="campo" for="fS">SECCIÓN FIJA (opcional)</label>
+        <input type="text" id="fS" placeholder="Deportes, Automovilismo…">
+        <div class="acciones">
+          <button class="b" id="btnProbar">Probar primero</button>
+          <button class="b verde" id="btnSumar" disabled>Sumar</button>
+        </div>
+        <div id="resProbar"></div>
+      </div>
+      <div class="tarjeta">
+        <h2 style="font-size:18px">Últimos movimientos</h2>
+        ${D.historial.length ? D.historial.map((h) => `<div class="mini" style="padding:5px 0;border-bottom:1px solid var(--papel)">
+          <b>${esc(h.accion)}</b> · ${esc(h.detalle).slice(0,60)}<br>${esc(h.quien)} · ${new Date(h.cuando).toLocaleString('es-AR',{day:'2-digit',month:'2-digit',hour:'2-digit',minute:'2-digit'})}
+        </div>`).join('') : '<div class="mini">Todavía no hay movimientos.</div>'}
+      </div>
+    </div>
+  </div>`;
+}
+
+// -------------------------------------------------------------- servicios
+
+function vistaServicios() {
+  const c = D.clima?.ahora; const f = D.farmacias;
+  const hoy = new Date().getDate();
+  const turnoHoy = f?.turnos?.find((t) => t.dia === hoy);
+  return `<div class="dos">
+    <div>
+      <h2>Farmacias de turno</h2>
+      <div class="tarjeta">
+        <div class="chapa"><span class="secc">HOY, DÍA ${hoy}</span></div>
+        <div class="tit" style="font-size:26px">${turnoHoy ? esc(turnoHoy.farmacias.join(' y ')) : 'no figura en el cronograma'}</div>
+        <div class="mini">De 9 de la mañana a 9 del día siguiente · Colegio de Farmacéuticos de Balcarce</div>
+        ${f?.cruce ? `<div class="${f.cruce.discrepancias?.length ? 'aviso' : 'ok'}" style="margin-top:8px">
+          ${f.cruce.discrepancias?.length ? '⚠ ' + f.cruce.discrepancias.join('<br>')
+            : '✓ Cruzado contra ' + (f.cruce.fuentes || []).filter(x => x.estado === 'ok').map(x => esc(x.nombre)).join(' y ') + ': coincide.'}
+        </div>` : ''}
+        ${(f?.avisos ?? []).map((a) => `<div class="aviso">${esc(a)}</div>`).join('')}
+      </div>
+      <table>
+        <tr><th>DÍA</th><th>FARMACIA</th></tr>
+        ${(f?.turnos ?? []).filter((t) => t.dia >= hoy).map((t) => `<tr>
+          <td class="n">${esc(t.diaSemana)} ${t.dia}</td><td>${esc(t.farmacias.join(' y '))}</td></tr>`).join('')}
+      </table>
+    </div>
+    <div class="lateral">
+      <div class="tarjeta">
+        <h2 style="font-size:18px">El clima ahora</h2>
+        ${c ? `<div style="font-family:Fraunces,Georgia,serif;font-size:46px;font-weight:700;line-height:1">${c.temp}°</div>
+        <div class="mini">${esc(c.cielo)} · sensación ${c.sensacion}°<br>Viento ${esc(c.rumbo)} ${c.viento} km/h · humedad ${c.humedad}%</div>
+        <table style="margin-top:12px"><tr><th>DÍA</th><th>MÁX</th><th>MÍN</th><th>LLUVIA</th></tr>
+        ${D.clima.dias.map((x) => `<tr><td class="n">${esc(x.dia)}</td><td>${x.max}°</td><td>${x.min}°</td><td>${x.lluvia}%</td></tr>`).join('')}</table>`
+        : '<div class="mini">Sin datos todavía.</div>'}
+      </div>
+      <div class="tarjeta">
+        <h2 style="font-size:18px">Números útiles</h2>
+        <div class="mini">Salen como historia una vez por semana, día variable para que no se vuelva previsible. Esta semana: <b>${esc(D.utiles?.diaDeLaSemana || '?')}</b>${D.utiles?.tocaHoy ? ' · <span class="etiq ok">hoy</span>' : ''}</div>
+        <div style="margin-top:10px;max-height:220px;overflow:auto">
+          ${(D.utiles?.numeros || []).map(n => `<div style="font-size:12px;padding:4px 0;border-bottom:1px solid var(--papel)"><b>${esc(n.nombre)}</b><br>${esc(n.numero)}</div>`).join('')}
+        </div>
+      </div>
+    </div>
+  </div>`;
+}
+
+// ----------------------------------------------------------------- agenda
+
+function vistaAgenda() {
+  const a = D.agenda;
+  if (!a) return '<div class="vacio">Todavía no se cargó la agenda.</div>';
+  const manuales = (D.eventosManual || []).slice().sort((x, y) => x.desde.localeCompare(y.desde));
+  return `<div class="dos">
+    <div>
+      <div style="display:flex;align-items:baseline;gap:10px;margin-bottom:4px">
+        <h2 style="margin:0">Cargados por el municipio</h2>
+        <button class="b chico" id="btnAgenda">Actualizar</button>
+      </div>
+      <div class="mini" style="margin-bottom:12px">Vía la API pública de balcarce.gob.ar (The Events Calendar). Sólo trae lo que alguien ya cargó ahí: no va a aparecer solo la Fiesta del Automovilismo en septiembre. Para lo demás, está la carga a mano de al lado.</div>
+      ${(a.municipio || []).length ? a.municipio.map(e => `<div class="tarjeta">
+          <div class="chapa"><span class="secc">${esc((e.categorias||[])[0] || 'Evento')}</span><span>·</span><span>${esc(e.desde?.slice(0,16).replace('T',' · '))}</span></div>
+          <div class="tit" style="font-size:17px">${esc(e.nombre)}</div>
+          <div class="mini">${esc(e.lugar || '')}${e.direccion ? ' · ' + esc(e.direccion) : ''}${e.costo ? ' · ' + esc(e.costo) : ' · gratis'}</div>
+        </div>`).join('') : '<div class="vacio">No hay eventos cargados ahora mismo.</div>'}
+
+      <h2 style="margin:22px 0 4px">Cargados a mano</h2>
+      <div class="mini" style="margin-bottom:12px">Lo que alguien avisó por WhatsApp, teléfono o en la calle. No espera a que el municipio lo suba.</div>
+      ${manuales.length ? manuales.map(e => `<div class="tarjeta">
+          <div class="chapa"><span class="secc">${esc(CATEGORIAS_AGENDA_TXT(e.categoria))}</span><span>·</span><span>${esc(e.desde)}${e.hasta ? ' a ' + esc(e.hasta) : ''}</span>
+            <span class="rel" style="margin-left:auto">${esc(e.cargadoPor)}</span></div>
+          <div class="tit" style="font-size:17px">${esc(e.nombre)}</div>
+          <div class="mini">${esc(e.lugar || 'sin lugar cargado')}${e.fuente ? ' · fuente: ' + esc(e.fuente) : ''}</div>
+          <div class="acciones"><button class="b chico rojo" data-borrar-evento="${e.id}">Borrar</button></div>
+        </div>`).join('') : '<div class="vacio">Ninguno todavía. Usá el formulario de la derecha.</div>'}
+    </div>
+    <div class="lateral">
+      <div class="tarjeta">
+        <h2 style="font-size:18px">Cargar un evento</h2>
+        <label class="campo" for="evN">NOMBRE</label>
+        <input type="text" id="evN" placeholder="Feria de artesanos en la plaza">
+        <label class="campo" for="evF">FECHA (o inicio)</label>
+        <input type="text" id="evF" placeholder="2026-10-15">
+        <label class="campo" for="evFH">FECHA FIN (opcional)</label>
+        <input type="text" id="evFH" placeholder="2026-10-16">
+        <label class="campo" for="evC">CATEGORÍA</label>
+        <select class="ancho" id="evC">
+          ${Object.entries(D.categoriasAgenda || {}).map(([k, v]) => `<option value="${esc(k)}">${esc(v)}</option>`).join('')}
+        </select>
+        <label class="campo" for="evL">LUGAR</label>
+        <input type="text" id="evL" placeholder="Plaza San Martín">
+        <label class="campo" for="evOr">QUIÉN LO AVISÓ (para volver a preguntar)</label>
+        <input type="text" id="evOr" placeholder="Nombre y teléfono/WhatsApp de quien avisó">
+        <div class="acciones"><button class="b verde" id="btnCargarEvento">Cargar evento</button></div>
+      </div>
+      <div class="tarjeta">
+        <h2 style="font-size:18px">A quién preguntarle</h2>
+        <div class="mini" style="margin-bottom:10px">Una vez por mes, mensaje formal por WhatsApp pidiendo la agenda — no hace falta escribirles seguido. El botón queda gris 30 días y se pone verde cuando toca de nuevo.</div>
+        ${(D.contactosAgenda || []).map(c => `<div style="padding:11px 0;border-bottom:1px solid var(--papel)">
+            <div style="font-weight:700;font-size:13px">${esc(c.quien)}</div>
+            <div class="mini">${esc(c.para)}</div>
+            <div style="font-size:13px;font-weight:600;color:var(--rojo);margin-top:2px">${esc(c.telefono)}</div>
+            <div class="mini" style="margin-top:2px;font-style:italic">${esc(c.nota)}</div>
+            <div class="mini" style="margin-top:6px">${c.ultimoContacto
+              ? `Último mensaje: hace ${c.diasSinContacto} día${c.diasSinContacto === 1 ? '' : 's'}`
+              : 'Todavía no se le escribió'}${c.tocaEscribir ? ' · <b style="color:var(--rojo)">toca escribirle</b>' : ''}</div>
+            <div class="acciones" style="margin-top:8px">
+              <button class="b chico" data-ver-mensaje="${c.id}">Ver mensaje</button>
+              <button class="b chico ${c.tocaEscribir ? 'verde' : ''}" data-contactado="${c.id}" ${c.tocaEscribir ? '' : 'style="opacity:.55"'}>Ya le escribí</button>
+            </div>
+            <textarea id="msg-${c.id}" readonly style="display:none;width:100%;margin-top:8px;font-size:12px;padding:8px;border:1px solid var(--linea);border-radius:4px;font-family:inherit" rows="7">${esc(c.mensaje)}</textarea>
+          </div>`).join('')}
+      </div>
+      <div class="tarjeta">
+        <h2 style="font-size:18px">Se acercan estas fechas anuales</h2>
+        <div class="mini" style="margin-bottom:10px">Investigado a mano: lo que se repite todos los años en Balcarce. NUNCA es fecha confirmada — es un aviso de "esto vuelve por esta época, confirmá antes de publicar" (llamando a los contactos de arriba).</div>
+        ${(a.proximosAnuales || []).length ? a.proximosAnuales.map(e => `<div style="padding:10px 0;border-bottom:1px solid var(--papel)">
+            <div style="font-weight:700;font-size:14px">${esc(e.nombre)}</div>
+            <div class="mini">${esc(CATEGORIAS_AGENDA_TXT(e.categoria))} · última vez: ${esc(e.ultimaEdicion.desde)}${e.ultimaEdicion.edicion ? ' (edición ' + e.ultimaEdicion.edicion + ')' : ''}</div>
+            <div class="mini" style="margin-top:3px;font-style:italic">${esc(e.nota)}</div>
+          </div>`).join('') : '<div class="mini">Ninguna cerca del mes actual.</div>'}
+      </div>
+      <div class="tarjeta">
+        <h2 style="font-size:18px">Todo el calendario anual conocido</h2>
+        ${(D.calendarioAnualCompleto || []).map(e => `<div class="mini" style="padding:5px 0;border-bottom:1px solid var(--papel)">mes ${e.mesAproximado} · <b>${esc(e.nombre)}</b> (${esc(e.categoria)})</div>`).join('')}
+      </div>
+    </div>
+  </div>`;
+}
+function CATEGORIAS_AGENDA_TXT(cat) { return (D.categoriasAgenda || {})[cat] || cat; }
+
+// ------------------------------------------------------------------ buzón
+
+const ETIQ_ESTADO_BUZON = {
+  nuevo: 'mal', pendiente: '', 'en curso': '', cumplido: 'ok', incumplido: 'mal', archivado: 'pausa', publicada: 'ok', descartada: 'pausa',
+};
+
+function vistaBuzon() {
+  const items = D.buzon || [];
+  return `<div class="dos">
+    <div>
+      <h2>Lo que manda la gente · ${items.length}</h2>
+      <div class="mini" style="margin-bottom:14px">Todavía no hay web ni WhatsApp propio, así que esto se carga a mano cuando algo llega por otro lado. El día que exista un formulario público, entra directo acá.</div>
+      ${items.length ? items.map(b => `<div class="tarjeta">
+          <div class="chapa">
+            <span class="secc">${esc((D.tiposBuzon?.[b.tipo]?.nombre) || b.tipo)}</span><span>·</span>
+            <span>${b.anonimo ? 'anónimo' : esc(b.contactoNombre || 'sin nombre')}</span>
+            <span class="etiq ${ETIQ_ESTADO_BUZON[b.estado] || ''}" style="margin-left:auto">${esc(b.estado)}</span>
+          </div>
+          <div class="tit" style="font-size:16px;font-weight:600;font-family:'IBM Plex Sans',sans-serif">${esc(b.texto)}</div>
+          ${b.contactoTelefono ? `<div class="mini" style="margin-top:4px">Contacto: ${esc(b.contactoTelefono)}</div>` : ''}
+          ${b.tipo === 'reclamo' ? `<div class="${b.respuestaOtraParte ? 'ok' : 'aviso'}" style="margin-top:8px">
+              ${b.respuestaOtraParte ? '✓ Respuesta de la otra parte: ' + esc(b.respuestaOtraParte) : '⚠ Sin la respuesta de la otra parte todavía. No se publica así.'}
+            </div>
+            ${!b.respuestaOtraParte ? `<div class="acciones"><input type="text" id="resp-${b.id}" placeholder="Pegá acá la respuesta cuando la consigan" style="flex-grow:1"><button class="b chico" data-guardar-respuesta="${b.id}">Guardar</button></div>` : ''}`
+            : ''}
+          <div class="acciones">
+            ${b.tipo === 'seguimiento'
+              ? `<select data-cambiar-estado="${b.id}" style="height:36px;border-radius:4px;border:1px solid var(--linea)">
+                  ${(D.estadosSeguimiento || []).map(e => `<option value="${esc(e)}" ${e === b.estado ? 'selected' : ''}>${esc(e)}</option>`).join('')}
+                </select>`
+              : `<button class="b chico" data-cambiar-estado-simple="${b.id}" data-valor="en revisión">En revisión</button>
+                 <button class="b chico" data-cambiar-estado-simple="${b.id}" data-valor="publicada">Marcar publicada</button>
+                 <button class="b chico" data-cambiar-estado-simple="${b.id}" data-valor="descartada">Descartar</button>`}
+            <button class="b chico rojo" data-borrar-buzon="${b.id}">Borrar</button>
+          </div>
+        </div>`).join('') : '<div class="vacio">Nada todavía. Cuando alguien te cuente algo por WhatsApp o en persona, cargalo acá.</div>'}
+    </div>
+    <div class="lateral">
+      <div class="tarjeta">
+        <h2 style="font-size:18px">Cargar algo que llegó</h2>
+        <label class="campo" for="bzT">TIPO</label>
+        <select class="ancho" id="bzT">
+          ${Object.entries(D.tiposBuzon || {}).map(([k, v]) => `<option value="${esc(k)}">${esc(v.nombre)}</option>`).join('')}
+        </select>
+        <div id="bzRegla" class="mini" style="margin-top:6px"></div>
+        <label class="campo" for="bzX">QUÉ DICE</label>
+        <textarea id="bzX" rows="4" placeholder="Lo que contó la persona, con sus palabras"></textarea>
+        <label class="campo" for="bzN">NOMBRE (si no es anónimo)</label>
+        <input type="text" id="bzN" placeholder="Nombre y apellido">
+        <label class="campo" for="bzTel">TELÉFONO / CONTACTO</label>
+        <input type="text" id="bzTel" placeholder="Para volver a preguntarle">
+        <label for="bzAn" style="display:flex;align-items:center;gap:8px;margin-top:10px;font-size:13px"><input type="checkbox" id="bzAn"> Pidió mantenerse anónimo</label>
+        <div class="acciones"><button class="b verde" id="btnCargarBuzon">Cargar</button></div>
+      </div>
+      <div class="tarjeta">
+        <h2 style="font-size:18px">Las reglas de cada tipo</h2>
+        ${Object.entries(D.tiposBuzon || {}).map(([k, v]) => `<div style="padding:9px 0;border-bottom:1px solid var(--papel)">
+            <div style="font-weight:700;font-size:13px">${esc(v.nombre)}</div>
+            <div class="mini">${esc(v.que)}</div>
+            <div class="mini" style="margin-top:3px;font-style:italic">${esc(v.regla)}</div>
+          </div>`).join('')}
+      </div>
+    </div>
+  </div>`;
+}
+
+// --------------------------------------------------------------- editorial
+
+function vistaEditorial() {
+  return `<div class="dos">
+    <div>
+      <h2>La instrucción exacta que lee la IA</h2>
+      <div class="mini" style="margin-bottom:12px">Esto no es un resumen: es el texto completo que se le manda a Gemini antes de cada noticia. Si algo suena mal en un guion, se corrige acá (en <code>reels/reescritura.mjs</code>), no adivinando.</div>
+      <div class="tarjeta"><pre style="white-space:pre-wrap;font-family:'IBM Plex Sans',sans-serif;font-size:12.5px;line-height:1.6;margin:0">${esc(D.instruccionEditorial || 'Todavía no se cargó.')}</pre></div>
+    </div>
+    <div class="lateral">
+      <div class="tarjeta">
+        <h2 style="font-size:18px">Cuota de la reescritura</h2>
+        <div class="mini">Usa el modelo de texto de Gemini (no el de voz: cuotas separadas). Si falla o no hay clave, cada nota cae sola al armado mecánico anterior — nunca queda sin texto.</div>
+      </div>
+      <div class="tarjeta">
+        <h2 style="font-size:18px">Cómo se usa desde la cola</h2>
+        <div class="mini">Al abrir una noticia en "Para decidir" aparece el botón <b>Reescribir con IA</b>. Reemplaza título, copete y guion con la versión editada; se puede seguir tocando a mano después, como cualquier edición.</div>
+      </div>
+    </div>
+  </div>`;
+}
+
+// ------------------------------------------------------------- conexiones
+
+function conectar() {
+  document.querySelectorAll('.tarjeta[data-id]').forEach((el) => {
+    el.onclick = () => { sel = el.dataset.id; pintar(); };
+  });
+
+  const arch = $('#btnArchivar');
+  if (arch) {
+    arch.onclick = async () => {
+      const ids = D.notas.filter((n) => n.estado === 'pendiente'
+        && (n.cuando.includes('días') || n.relevancia < 55)).map((n) => n.id);
+      arch.disabled = true;
+      cargar(await api('/api/lote', { ids, accion: 'descartada' }));
+    };
+  }
+
+  const eT = $('#eT');
+  if (eT) {
+    const cuenta = () => { $('#cuenta').textContent = eT.value.length;
+      $('#cuenta').style.color = eT.value.length > 65 ? 'var(--rojo)' : 'inherit'; };
+    eT.oninput = cuenta; cuenta();
+  }
+
+  document.querySelectorAll('[data-acc]').forEach((b) => {
+    b.onclick = async () => {
+      b.disabled = true;
+      const d = await api('/api/nota', {
+        id: sel, accion: b.dataset.acc, titulo: $('#eT').value, copete: $('#eC').value, guion: $('#eG').value,
+      });
+      if (b.dataset.acc !== 'editar') sel = null;
+      cargar(d);
+    };
+  });
+
+  const btnR = $('#btnReescribir');
+  if (btnR) {
+    btnR.onclick = async () => {
+      btnR.disabled = true;
+      btnR.textContent = 'Escribiendo…';
+      cargar(await api('/api/reescribir', { id: btnR.dataset.reescribir }));
+    };
+  }
+  const btnAg = $('#btnAgenda');
+  if (btnAg) {
+    btnAg.onclick = async () => {
+      btnAg.disabled = true; btnAg.textContent = 'Actualizando…';
+      cargar(await api('/api/agenda/actualizar', {}));
+    };
+  }
+
+  const btnCE = $('#btnCargarEvento');
+  if (btnCE) {
+    btnCE.onclick = async () => {
+      const nombre = $('#evN').value.trim();
+      const fecha = $('#evF').value.trim();
+      if (!nombre || !fecha) { alert('Falta el nombre o la fecha.'); return; }
+      cargar(await api('/api/evento', {
+        accion: 'agregar', nombre, fecha, fechaHasta: $('#evFH').value.trim() || null,
+        categoria: $('#evC').value, lugar: $('#evL').value.trim(), fuente: $('#evOr').value.trim(),
+      }));
+    };
+  }
+  document.querySelectorAll('[data-borrar-evento]').forEach((b) => {
+    b.onclick = async () => cargar(await api('/api/evento', { accion: 'borrar', id: b.dataset.borrarEvento }));
+  });
+
+  document.querySelectorAll('[data-ver-mensaje]').forEach((b) => {
+    b.onclick = () => {
+      const ta = $('#msg-' + b.dataset.verMensaje);
+      const abierto = ta.style.display !== 'none';
+      ta.style.display = abierto ? 'none' : 'block';
+      if (!abierto) { ta.focus(); ta.select(); }
+      b.textContent = abierto ? 'Ver mensaje' : 'Ocultar (ya está seleccionado, Ctrl+C)';
+    };
+  });
+  document.querySelectorAll('[data-contactado]').forEach((b) => {
+    b.onclick = async () => cargar(await api('/api/agenda/contactado', { id: b.dataset.contactado }));
+  });
+
+  const bzT = $('#bzT');
+  if (bzT) {
+    const actualizarRegla = () => {
+      const t = (D.tiposBuzon || {})[bzT.value];
+      $('#bzRegla').textContent = t ? t.regla : '';
+    };
+    bzT.onchange = actualizarRegla;
+    actualizarRegla();
+  }
+  const btnBZ = $('#btnCargarBuzon');
+  if (btnBZ) {
+    btnBZ.onclick = async () => {
+      const texto = $('#bzX').value.trim();
+      if (!texto) { alert('Falta el texto.'); return; }
+      cargar(await api('/api/buzon', {
+        accion: 'agregar', tipo: $('#bzT').value, texto,
+        contactoNombre: $('#bzN').value.trim(), contactoTelefono: $('#bzTel').value.trim(),
+        anonimo: $('#bzAn').checked,
+      }));
+    };
+  }
+  document.querySelectorAll('[data-guardar-respuesta]').forEach((b) => {
+    b.onclick = async () => {
+      const resp = $('#resp-' + b.dataset.guardarRespuesta).value.trim();
+      if (!resp) return;
+      cargar(await api('/api/buzon', { accion: 'respuesta', id: b.dataset.guardarRespuesta, respuesta: resp }));
+    };
+  });
+  document.querySelectorAll('[data-cambiar-estado]').forEach((sel) => {
+    sel.onchange = async () => cargar(await api('/api/buzon', { accion: 'estado', id: sel.dataset.cambiarEstado, estado: sel.value }));
+  });
+  document.querySelectorAll('[data-cambiar-estado-simple]').forEach((b) => {
+    b.onclick = async () => cargar(await api('/api/buzon', { accion: 'estado', id: b.dataset.cambiarEstadoSimple, estado: b.dataset.valor }));
+  });
+  document.querySelectorAll('[data-borrar-buzon]').forEach((b) => {
+    b.onclick = async () => {
+      if (!confirm('¿Borrar este envío?')) return;
+      cargar(await api('/api/buzon', { accion: 'borrar', id: b.dataset.borrarBuzon }));
+    };
+  });
+
+  document.querySelectorAll('[data-volver]').forEach((b) => {
+    b.onclick = async () => cargar(await api('/api/nota', { id: b.dataset.volver, accion: 'pendiente' }));
+  });
+  document.querySelectorAll('[data-bajar]').forEach((b) => {
+    b.onclick = async () => cargar(await api('/api/nota', { id: b.dataset.bajar, accion: 'descartada' }));
+  });
+
+  document.querySelectorAll('[data-pausa]').forEach((b) => {
+    b.onclick = async () => cargar(await api('/api/fuente', { accion: 'activar', id: b.dataset.pausa }));
+  });
+  document.querySelectorAll('[data-borrar]').forEach((b) => {
+    b.onclick = async () => {
+      if (!confirm('¿Sacar esta fuente? Se puede volver a agregar después.')) return;
+      cargar(await api('/api/fuente', { accion: 'borrar', id: b.dataset.borrar }));
+    };
+  });
+  document.querySelectorAll('[data-peso]').forEach((i) => {
+    i.onchange = async () => cargar(await api('/api/fuente', { accion: 'peso', id: i.dataset.peso, peso: i.value }));
+  });
+
+  const probar = $('#btnProbar');
+  if (probar) {
+    probar.onclick = async () => {
+      const url = $('#fU').value.trim();
+      if (!url) return;
+      $('#resProbar').innerHTML = '<div class="mini" style="margin-top:10px">Probando…</div>';
+      const r = await api('/api/probar', { url });
+      if (r.ok) {
+        $('#resProbar').innerHTML = `<div class="ok"><b>Anda.</b> ${r.cantidad} notas, última ${esc(r.frescura)}.
+          ${r.textoCompleto ? 'Trae texto completo. ' : 'Trae sólo resumen. '}${r.conImagen ? 'Trae imagen.' : 'Sin imagen.'}
+          <div style="margin-top:6px">${r.ejemplos.map((e) => '· ' + esc(e)).join('<br>')}</div></div>`;
+        $('#btnSumar').disabled = false;
+        if (!$('#fN').value) $('#fN').value = new URL(url).hostname.replace('www.', '');
+      } else {
+        $('#resProbar').innerHTML = `<div class="aviso"><b>No sirve:</b> ${esc(r.motivo)}</div>`;
+        $('#btnSumar').disabled = true;
+      }
+    };
+    $('#btnSumar').onclick = async () => {
+      const d = await api('/api/fuente', {
+        accion: 'agregar', nombre: $('#fN').value.trim(), url: $('#fU').value.trim(),
+        alcance: $('#fA').value, seccion: $('#fS').value.trim() || null,
+      });
+      if (d.error) { $('#resProbar').innerHTML = `<div class="aviso">${esc(d.error)}</div>`; return; }
+      cargar(d);
+    };
+  }
+}
+
+document.querySelectorAll('nav button').forEach((b) => {
+  b.onclick = () => { tab = b.dataset.t; pintar(); };
+});
+
+$('#btnActualizar').onclick = async () => {
+  const b = $('#btnActualizar');
+  b.disabled = true; b.textContent = 'Buscando…';
+  cargar(await api('/api/actualizar', {}));
+  b.disabled = false; b.textContent = 'Buscar noticias ahora';
+};
+
+cargar();
+setInterval(() => { if (!sel) cargar(); }, 60000);
+</script>
+</body>
+</html>

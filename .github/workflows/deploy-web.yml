@@ -1,0 +1,48 @@
+# Despliega web/ a Vercel cada vez que se sube un cambio a main.
+#
+# No hace nada solo todavía: necesita tres secretos del repo
+# (Settings → Secrets and variables → Actions) que salen de tu cuenta de
+# Vercel: VERCEL_TOKEN, VERCEL_ORG_ID, VERCEL_PROJECT_ID. Se consiguen
+# corriendo `npx vercel link` una vez en la carpeta web/ y mirando el
+# archivo .vercel/project.json que genera, más un token nuevo desde
+# vercel.com/account/tokens. Hasta que esos tres secretos no estén
+# cargados, este workflow no corre (o corre y falla en el primer paso).
+#
+# OJO — esto sólo mueve código (web/), nunca panel/datos/. Ver el README
+# de web/ y NOTAS.md para la parte que falta: cómo llegan datos frescos
+# acá antes del deploy.
+
+name: Deploy web a Vercel
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'web/**'
+      - '.github/workflows/deploy-web.yml'
+  workflow_dispatch: {}
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: web
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+          cache-dependency-path: web/package-lock.json
+
+      - name: Instalar dependencias
+        run: npm install
+
+      - name: Desplegar a Vercel (producción)
+        run: npx vercel deploy --prod --token="$VERCEL_TOKEN" --yes
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+          VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+          VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
