@@ -63,11 +63,16 @@ considera quemada: hay que generar una nueva.
 
 ## 2. Lo que falta — en orden de impacto
 
-1. **La web pública.** Es lo único que falta para que esto sea un medio de
-   verdad. Todo lo demás ya decide qué publicar; falta dónde se ve. No
-   necesita dominio: sale en `vercel.app` para empezar a probar.
+1. ✅ **La web pública — construida el 18/09/2026.** Ver sección 9. Corre
+   local, compila sin errores, 54 páginas generadas con datos reales del
+   panel. Lo que falta es sólo **publicarla** (necesita tu cuenta de
+   Vercel, no algo que yo pueda hacer solo) y decidir cómo le llegan datos
+   frescos una vez en producción (ver el README de `web/`).
 2. **Que corra solo.** GitHub Actions con el ciclo cada 10 minutos y las
-   piezas a su hora, sin depender de que la PC esté prendida.
+   piezas a su hora, sin depender de que la PC esté prendida. El workflow
+   de *deploy* ya está escrito (`.github/workflows/deploy-web.yml`) pero
+   necesita tres secretos de tu cuenta de Vercel para activarse. El de
+   *ingesta* todavía no se armó: depende de la decisión del punto 1.
 3. **Redes conectadas.** Hoy "Publicar" guarda la decisión pero no empuja
    nada a ningún lado. Necesita: cuentas creadas, Instagram como cuenta
    profesional vinculada a una página de Facebook, y las claves de la API
@@ -279,3 +284,48 @@ se vuelva a intentar de la misma forma:
   primero.
 - No se intentó ni se va a intentar loguearse para sacar más datos de la
   competencia: eso deja de ser "mirar" y pasa a ser otra cosa.
+
+## 9. La web pública (`web/`) — construida el 18/09/2026
+
+Next.js, App Router, JavaScript plano (sin TypeScript, consistente con el
+resto del proyecto). **No se conecta en vivo al panel**: lee un archivo
+estático, `web/data/portada.json`, generado por
+`web/scripts/generar-datos.mjs`. Es la decisión de diseño más importante
+de esta parte, y vale explicar el porqué: la web se va a desplegar en
+Vercel, que no puede leer los archivos de una PC. Un JSON generado y
+commiteado es lo que permite que funcione igual en las dos partes, sin
+armar una base de datos todavía.
+
+**Páginas:** portada (destacada + grilla por sección + clima/farmacia en
+la lateral), `/util` (Balcarce Útil completo: farmacia con dirección,
+cronograma de la semana, agenda, teléfonos útiles), `/nota/[id]` (una
+página por noticia publicada, generada estática), `/politica-de-privacidad`,
+`/feed.xml` (RSS). 54 páginas en el build de prueba, con las 47 notas que
+había publicadas o automáticas en ese momento.
+
+**Probado de punta a punta:** `npm install`, `npm run build` (compila
+limpio, sin warnings), `npm start` sirviendo en `localhost:3000`, y se
+verificó a mano en el navegador — portada, Balcarce Útil, una nota, y en
+tamaño de celular. El feed RSS devuelve XML válido con las notas reales.
+
+**Lo que falta, y por qué no lo hice yo solo:**
+
+1. **Publicarla.** Necesita tu cuenta de Vercel — no es algo que yo pueda
+   crear por vos. Instrucciones exactas en `web/README.md` (dos caminos:
+   la web de Vercel o `npx vercel` desde la terminal). Ojo con un detalle
+   fácil de pifiar: el **Root Directory tiene que ser `web`**, no la raíz
+   del repo.
+2. **Que se actualice sola en producción.** Esto es una decisión de
+   infraestructura, no de código, y no la tomé por vos a propósito: hay
+   que decidir dónde vive el panel corriendo de forma permanente (¿una PC
+   prendida todo el día? ¿un VPS chico?) antes de armar el paso de
+   automatización que regenere `portada.json` y dispare el redeploy. El
+   workflow de *deploy* (`​.github/workflows/deploy-web.yml`) ya está
+   escrito y sólo necesita tres secretos de Vercel para activarse; el de
+   *actualizar datos* todavía no, porque depende de esa decisión.
+3. **El dominio.** Sale en `algo.vercel.app` para empezar; `.com.ar`
+   cuando quieras, no bloquea nada mientras tanto.
+
+**Repo Git:** se inicializó localmente (`git init`, primer commit hecho)
+pero **no tiene remoto ni se subió a ningún lado** — eso también queda
+para cuando decidas dónde vive (GitHub, y con qué cuenta).
