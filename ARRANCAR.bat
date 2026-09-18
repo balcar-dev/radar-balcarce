@@ -15,13 +15,18 @@ echo.
 REM El panel: busca noticias solo cada 10 minutos.
 start "Radar Balcarce - PANEL" cmd /k "node panel/servidor.mjs"
 
-REM La web publica. Antes regenera los datos con lo que decidiste
-REM en el panel, para que la portada muestre lo ultimo.
-start "Radar Balcarce - WEB" cmd /k "cd web && npm run datos && npm start"
+REM La web publica. Primero regenera los datos con lo que decidiste
+REM en el panel, y despues arranca el servidor.
+REM
+REM OJO con el segundo comando: arranca Next DIRECTO con node, no con
+REM "npm start". Con npm de por medio queda una cadena cmd -> npm -> node,
+REM y si el npm del medio pierde la consola se lleva puesto al servidor:
+REM arrancaba bien y se moria a los segundos. Asi es estable.
+start "Radar Balcarce - WEB" cmd /k "cd web && npm run datos && node node_modules/next/dist/bin/next start"
 
 REM Un respiro para que ambos terminen de levantar antes de abrir
 REM el navegador.
-timeout /t 18 /nobreak >nul
+timeout /t 20 /nobreak >nul
 
 start "" http://localhost:4321
 start "" http://localhost:3000

@@ -6,7 +6,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import {
-  BALCARCE, FUENTES, FUENTES_NACIONALES, PALABRAS_LOCALES, REGLAS_SECCION, REGLAS_SEMAFORO,
+  NOMBRES_PROPIOS, BALCARCE, FUENTES, FUENTES_NACIONALES, PALABRAS_LOCALES, REGLAS_SECCION, REGLAS_SEMAFORO,
 } from './fuentes.mjs';
 
 export const TODAS_LAS_FUENTES = [...FUENTES, ...FUENTES_NACIONALES];
@@ -185,6 +185,86 @@ export function parsearFeed(xml, fuente) {
 // Los medios sin feed se leen de la portada. `fuente.patronEnlace` es la
 // forma de reconocer un link a una nota (distinta en cada sitio) y
 // `fuente.base` es lo que se antepone a un href relativo.
+// Lee un <meta> de Open Graph o del <head>. Los medios los ponen para que
+// WhatsApp y Facebook muestren bien el link, así que son el texto que ellos
+// mismos eligieron como resumen: es lo más honesto que podemos tomar.
+function meta(html, nombre) {
+  const directo = new RegExp(`<meta[^>]+(?:property|name)=["']${nombre}["'][^>]*content=["']([^"']*)["']`, 'i');
+  const alReves = new RegExp(`<meta[^>]+content=["']([^"']*)["'][^>]*(?:property|name)=["']${nombre}["']`, 'i');
+  const m = html.match(directo) ?? html.match(alReves);
+  return m ? sinEtiquetas(m[1]).trim() : '';
+}
+
+// Las fuentes que se leen raspando la portada (hoy El Diario) sólo dan el
+// título: ni bajada ni fecha real. Eso terminaba en la web como notas que
+// eran un titular pelado, y además, al no tener hora, no podían competir
+// en relevancia contra las que sí la tienen. Esto entra a cada nota y saca
+// la bajada y la fecha de publicación de sus propios metadatos.
+//
+// De a 4 en paralelo y sólo para lo que no tiene cuerpo: son unos 15
+// pedidos por ciclo, nada para el servidor de ellos.
+async function ampliar(notas, { concurrencia = 4 } = {}) {
+  const pendientes = notas.filter((n) => !n.cuerpo);
+  for (let i = 0; i < pendientes.length; i += concurrencia) {
+    await Promise.allSettled(pendientes.slice(i, i + concurrencia).map(async (n) => {
+      const html = await traer(n.enlace, { timeout: 12000 });
+      const bajada = meta(html, 'og:description') || meta(html, 'twitter:description');
+      if (bajada.length > 40) { n.cuerpo = bajada; n.textoCompleto = true; }
+
+      // La portada corta los títulos con puntos suspensivos; adentro está entero.
+      const entero = meta(html, 'og:title');
+      if (/[.…]{3}$|…$/.test(n.titulo) && entero.length > n.titulo.length - 3) n.titulo = entero;
+
+      const cruda = meta(html, 'article:published_time') || meta(html, 'og:updated_time');
+      // Viene como "2026-09-17 18:45:02" (sin la T del formato ISO).
+      const d = cruda ? new Date(cruda.includes('T') ? cruda : cruda.replace(' ', 'T')) : null;
+      const dentroDeRango = d && !Number.isNaN(+d)
+        && d < new Date(Date.now() + 864e5) && d > new Date(Date.now() - 30 * 864e5);
+      if (dentroDeRango) { n.fecha = d; n.fechaEstimada = false; }
+
+      // La foto no se publica nunca (es del medio que la sacó); se guarda
+      // sólo porque tener foto es señal de que la nota está trabajada.
+      const foto = meta(html, 'og:image');
+      if (foto) n.imagen = foto;
+    }));
+  }
+  return notas;
+}
+
+// Varios medios publican los títulos ENTEROS EN MAYÚSCULAS. En una placa de
+// reel y en una portada eso se lee como un grito, así que se pasa a mayúscula
+// inicial. El problema es no perder los nombres propios, y para eso se mira
+// el cuerpo de la nota, que casi siempre sí viene bien escrito: cualquier
+// palabra que ahí aparezca con mayúscula (Balcarce, Fangio, Municipalidad)
+// se conserva con mayúscula acá.
+const ARTICULOS = new Set(['el', 'la', 'los', 'las', 'de', 'del', 'y', 'en', 'al', 'un', 'una']);
+
+function sentenciar(titulo, cuerpo = '') {
+  const letras = titulo.replace(/[^A-Za-zÁÉÍÓÚÑÜáéíóúñü]/g, '');
+  if (letras.length < 8) return titulo;
+  const mayusculas = letras.replace(/[^A-ZÁÉÍÓÚÑÜ]/g, '').length;
+  if (mayusculas / letras.length < 0.75) return titulo; // ya está bien escrito
+
+  // Los nombres salen de dos lados: el cuerpo de la nota (que casi siempre
+  // viene bien escrito) y la lista a mano de fuentes.mjs.
+  const propios = new Map();
+  for (const palabra of cuerpo.match(/[A-ZÁÉÍÓÚÑÜ][a-záéíóúñü]{2,}/g) ?? []) {
+    propios.set(palabra.toLowerCase(), palabra);
+  }
+  for (const nombre of NOMBRES_PROPIOS) {
+    for (const palabra of nombre.split(' ')) {
+      // "El Triunfo" y "Los Pinos" no pueden dejar suelto que "el" y "los"
+      // llevan mayuscula: un titulo quedaba "por El dia del estudiante".
+      if (ARTICULOS.has(palabra.toLowerCase())) continue;
+      propios.set(palabra.toLowerCase(), palabra);
+    }
+  }
+
+  const texto = titulo.toLowerCase()
+    .replace(/(^|[.:¿?¡!"“«] *)([a-záéíóúñü])/g, (m, antes, letra) => antes + letra.toUpperCase());
+  return texto.replace(/[a-záéíóúñü]{2,}/g, (p) => propios.get(p) ?? p);
+}
+
 function parsearScrape(html, fuente) {
   const vistos = new Set();
   const notas = [];
@@ -257,9 +337,30 @@ function semaforo(nota, seccion) {
   for (const p of REGLAS_SEMAFORO.amarillo) {
     if (contiene(texto, p)) return { color: 'amarillo', motivo: `necesita ojo humano: "${p}"` };
   }
+  for (const p of REGLAS_SEMAFORO.promocional ?? []) {
+    if (contiene(texto, p)) return { color: 'amarillo', motivo: `parece promoción, no noticia: "${p}"` };
+  }
   if (nota.oficial) return { color: 'verde', motivo: 'comunicado oficial' };
   if (REGLAS_SEMAFORO.verdeSecciones.includes(seccion)) return { color: 'verde', motivo: `sección ${seccion}` };
   return { color: 'amarillo', motivo: 'sección general, sin regla verde' };
+}
+
+/** Deja el copete listo para publicar: le saca la firma del medio que casi
+ *  todos pegan al final ("... | Diario La Vanguardia"), y lo descarta si es
+ *  apenas el título repetido, que no le suma nada a nadie. */
+function limpiarCopete(cuerpo, titulo, medio) {
+  let t = (cuerpo ?? '').trim();
+  if (!t) return '';
+  // La firma del medio, con los separadores que usan: " | ", " - ", " :: ".
+  t = t.replace(/\s*[|–—-]\s*[^|–—-]{0,40}$/u, (cola) => (
+    normalizar(cola).includes(normalizar(medio).slice(0, 10)) ? '' : cola
+  ));
+  t = t.replace(/^\s*[-–—]\s*/, '').trim();
+  // Si arranca repitiendo el título, se le saca esa parte.
+  const nt = normalizar(titulo);
+  if (normalizar(t).startsWith(nt)) t = t.slice(titulo.length).replace(/^\s*[-:.–—|]\s*/, '').trim();
+  if (normalizar(t).length < 40) return '';
+  return t.slice(0, 280);
 }
 
 function relevancia(nota, seccion, medios) {
@@ -571,6 +672,8 @@ export async function ingestar({
   const resultados = await Promise.allSettled(lista.map(async (f) => {
     const cuerpo = await traer(f.url);
     let notas = f.tipo === 'scrape' ? parsearScrape(cuerpo, f) : parsearFeed(cuerpo, f);
+    // Raspar la portada da títulos sin bajada ni fecha: hay que entrar a cada nota.
+    if (f.tipo === 'scrape') await ampliar(notas);
     // De las fuentes de afuera entra lo que nombra a Balcarce (siempre) y unas
     // pocas recientes para tener sección País sin tapar lo local.
     if (f.alcance !== 'local') {
@@ -635,7 +738,7 @@ export async function ingestar({
     const sem = semaforo(g.principal, seccion);
     return {
       id: idDe(g.principal.enlace),
-      titulo: g.principal.titulo,
+      titulo: sentenciar(g.principal.titulo, g.principal.cuerpo),
       enlace: g.principal.enlace,
       fecha: g.principal.fecha.toISOString(),
       cuando: g.principal.fechaEstimada ? 'sin fecha en la fuente' : haceCuanto(g.principal.fecha),
@@ -646,7 +749,7 @@ export async function ingestar({
       motivo: sem.motivo,
       relevancia: relevancia(g.principal, seccion, g.medios.length),
       imagen: g.principal.imagen || null,
-      resumenFuente: g.principal.cuerpo.slice(0, 280),
+      resumenFuente: limpiarCopete(g.principal.cuerpo, g.principal.titulo, g.principal.medio),
       local: esDeBalcarce(g.principal),
       alcance: g.principal.alcance,
       nombraBalcarce: !!g.principal.nombraBalcarce,

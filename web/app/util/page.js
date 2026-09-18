@@ -1,4 +1,5 @@
 import { obtenerDatos } from '@/lib/datos';
+import { TarjetaClima, TarjetaBuzon } from '@/components/piezas';
 
 export const metadata = { title: 'Balcarce Útil · Radar Balcarce' };
 
@@ -81,31 +82,27 @@ export default function BalcarceUtil() {
           </section>
         </div>
 
-        <aside>
-          {c?.ahora && (
-            <div className="tarjeta oscura" style={{ padding: 24 }}>
-              <h3>El clima</h3>
-              <div className="temp-grande">{c.ahora.temp}°</div>
-              <div className="mini" style={{ marginTop: 6 }}>
-                {c.ahora.cielo} · sensación {c.ahora.sensacion}°<br />
-                Viento {c.ahora.rumbo} {c.ahora.viento} km/h · humedad {c.ahora.humedad}%
-              </div>
-              {c.dias?.length > 0 && (
-                <table style={{ width: '100%', marginTop: 16, fontSize: 13 }}>
-                  <tbody>
-                    {c.dias.map((x) => (
-                      <tr key={x.fecha}>
-                        <td style={{ padding: '4px 0' }}>{x.dia}</td>
-                        <td style={{ padding: '4px 0', textAlign: 'right' }}>{x.max}° / {x.min}°</td>
-                        <td style={{ padding: '4px 0', textAlign: 'right', color: '#8E938B' }}>{x.lluvia}%</td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              )}
-              <div className="mini" style={{ marginTop: 10 }}>Fuente: Open-Meteo</div>
+        <aside className="lateral">
+          <TarjetaClima clima={c} />
+          {c?.dias?.length > 0 && (
+            <div className="tarjeta">
+              <h3>Los próximos días</h3>
+              <table style={{ width: '100%', marginTop: 12, fontSize: 13.5, borderCollapse: 'collapse' }}>
+                <tbody>
+                  {c.dias.map((x) => (
+                    <tr key={x.fecha} style={{ borderBottom: '1px solid var(--linea-suave)' }}>
+                      <td style={{ padding: '8px 0', fontWeight: 600, textTransform: 'capitalize' }}>{x.dia}</td>
+                      <td style={{ padding: '8px 0' }}>{x.cielo}</td>
+                      <td style={{ padding: '8px 0', textAlign: 'right', fontWeight: 600 }}>{x.max}° / {x.min}°</td>
+                      <td style={{ padding: '8px 0', textAlign: 'right', color: x.lluvia >= 40 ? 'var(--s-tecnologia)' : 'var(--suave)' }}>{x.lluvia}%</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+              <div className="mini" style={{ marginTop: 12 }}>Pronóstico de {c.fuente ?? 'Open-Meteo'}.</div>
             </div>
           )}
+          <TarjetaBuzon />
         </aside>
       </div>
     </div>

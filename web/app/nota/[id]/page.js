@@ -1,4 +1,5 @@
-import { obtenerDatos, obtenerNota, haceCuanto } from '@/lib/datos';
+import { obtenerDatos, obtenerNota, cuando, datosSeccion, nombreCorto } from '@/lib/datos';
+import { PlacaSeccion, Etiqueta, FilaNota } from '@/components/piezas';
 import { notFound } from 'next/navigation';
 
 export function generateStaticParams() {
@@ -8,39 +9,60 @@ export function generateStaticParams() {
 export function generateMetadata({ params }) {
   const n = obtenerNota(params.id);
   if (!n) return {};
-  return { title: `${n.titulo} · Radar Balcarce`, description: n.copete };
+  return { title: n.titulo, description: n.copete };
 }
 
 export default function PaginaNota({ params }) {
   const n = obtenerNota(params.id);
   if (!n) notFound();
 
-  return (
-    <div className="envoltura" style={{ maxWidth: 760 }}>
-      <article>
-        <div className="nota-chapa">
-          <span className="seccion">{n.seccion}</span>
-          <span className="sep">|</span>
-          <span>{haceCuanto(n.fecha)}</span>
-        </div>
-        <h1 style={{ fontSize: 36, lineHeight: 1.15, marginTop: 10 }}>{n.titulo}</h1>
-        <p style={{ fontSize: 18, color: '#3B403C', marginTop: 14, lineHeight: 1.6 }}>{n.copete}</p>
+  const s = datosSeccion(n.seccion);
+  const relacionadas = obtenerDatos().notas
+    .filter((o) => o.seccion === n.seccion && o.id !== n.id)
+    .slice(0, 4);
 
-        {n.imagen && (
-          <img src={n.imagen} alt="" style={{ width: '100%', borderRadius: 6, marginTop: 20, border: '1px solid var(--linea)' }} />
+  return (
+    <div className="envoltura">
+      <article className="cuerpo-nota">
+        <div className="chapa-nota">
+          <Etiqueta seccion={n.seccion} />
+          <span className="meta">{cuando(n)}</span>
+        </div>
+
+        <h1>{n.titulo}</h1>
+        {n.copete && <p className="copete">{n.copete}</p>}
+
+        {/* Sin foto de la fuente, a propósito: la excepción de noticias de la
+            ley 11.723 cubre el texto, no las fotografías. */}
+        <div style={{ marginTop: 22 }}><PlacaSeccion seccion={n.seccion} /></div>
+
+        {n.guion && (
+          <p style={{ fontSize: 16, lineHeight: 1.7, marginTop: 22, color: 'var(--texto)' }}>{n.guion}</p>
         )}
 
-        <div className="tarjeta" style={{ marginTop: 24 }}>
-          <div className="mini">
-            <strong>Fuente:</strong> {n.medios.join(' · ')}
-            <br />
-            <a href={n.enlace} target="_blank" rel="noopener noreferrer">Leer la nota original en su fuente ↗</a>
-          </div>
+        <div className="atribucion">
+          <strong>De dónde sale esta nota.</strong> La informaron{' '}
+          {n.medios.join(' y ')}. Nosotros la resumimos; el trabajo original es de ellos
+          y está completo acá:
+          <br />
+          <a href={n.enlace} target="_blank" rel="noopener noreferrer">Leer la nota original ↗</a>
         </div>
 
-        <div style={{ marginTop: 28 }}>
-          <a href="/" className="boton borde">← Volver a la portada</a>
+        <div style={{ display: 'flex', gap: 10, marginTop: 24, flexWrap: 'wrap' }}>
+          <a href="/" className="boton borde">← Portada</a>
+          <a href={`/seccion/${s.ranura}`} className="boton borde">Más de {nombreCorto(n.seccion)}</a>
         </div>
+
+        {relacionadas.length > 0 && (
+          <section className="bloque-seccion">
+            <div className="titulo-seccion">
+              <span className="barra" style={{ background: s.color }} />
+              <h2>Seguí leyendo</h2>
+              <a href={`/seccion/${s.ranura}`} className="ver-todo">Ver todo →</a>
+            </div>
+            {relacionadas.map((o) => <FilaNota nota={o} key={o.id} />)}
+          </section>
+        )}
       </article>
     </div>
   );

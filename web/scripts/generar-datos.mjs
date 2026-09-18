@@ -47,8 +47,16 @@ function notaPublicada(n) {
     seccion: n.seccion,
     medios: n.medios,
     enlace: n.enlace,
-    imagen: n.imagen ?? null,
+    // La imagen de la fuente NO se publica: es obra protegida del medio
+    // que la sacó, y la excepción de "noticias de interés general" de la
+    // ley 11.723 cubre el texto, no las fotos. Se guarda sólo el dato de
+    // si la fuente tenía imagen, por si algún día sirve para priorizar.
+    teniaImagenLaFuente: !!n.imagen,
     fecha: n.fecha,
+    // Cuando la fuente no publica la hora, la ingesta pone la de ahora para
+    // poder ordenar. Se guarda el aviso para que la web no mienta un
+    // "hace 1 minuto" que no es cierto.
+    sinFecha: n.cuando === 'sin fecha en la fuente',
     relevancia: n.relevancia,
     local: n.local,
     publicadaPor: d?.por ?? null,
@@ -72,7 +80,7 @@ const salida = {
   clima: ultima.clima ?? null,
   farmacias: { hoy: turnoHoy, proximos: proximosTurnos, avisos: ultima.farmacias?.avisos ?? [] },
   agenda: {
-    municipio: (agenda?.municipio ?? []).slice(0, 8),
+    municipio: (agenda?.municipio ?? []).slice(0, 30),
     proximosAnuales: agenda?.proximosAnuales ?? [],
   },
   utiles: { numeros: NUMEROS, diaDeLaSemana: diaDeEstaSemana(), tocaHoy: tocaHoy() },

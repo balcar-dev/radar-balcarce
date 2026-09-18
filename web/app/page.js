@@ -1,4 +1,8 @@
-import { obtenerDatos, haceCuanto } from '@/lib/datos';
+import { obtenerDatos, cuando, SECCIONES } from '@/lib/datos';
+import {
+  TarjetaClima, TarjetaFarmacia, TarjetaBuzon, PlacaSeccion,
+  Etiqueta, TituloSeccion, FilaNota, Evento,
+} from '@/components/piezas';
 
 export default function Portada() {
   const d = obtenerDatos();
@@ -6,8 +10,17 @@ export default function Portada() {
   const secundarias = resto.slice(0, 4);
   const restoAgrupado = resto.slice(4);
 
+  // Los bloques de abajo salen en el orden editorial de SECCIONES, no en el
+  // orden en que aparecieron las notas: la portada tiene que verse igual
+  // todos los días aunque el día haya sido flojo en una sección.
   const porSeccion = {};
   for (const n of restoAgrupado) (porSeccion[n.seccion] ??= []).push(n);
+  const bloques = SECCIONES
+    .map((s) => [s.nombre, porSeccion[s.nombre]])
+    .filter(([, notas]) => notas?.length)
+    .concat(Object.entries(porSeccion).filter(([nombre]) => !SECCIONES.some((s) => s.nombre === nombre)));
+
+  const eventos = (d.agenda?.municipio ?? []).slice(0, 3);
 
   return (
     <div className="envoltura">
@@ -25,57 +38,41 @@ export default function Portada() {
         <div>
           {principal && (
             <article className="destacada">
-              <div className="imagen-vacia">
-                {principal.imagen ? (
-                  // Imagen que trajo la fuente original, no una foto nuestra.
-                  <img src={principal.imagen} alt="" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: 6 }} />
-                ) : '[SIN IMAGEN]'}
+              {/* Nunca la foto del medio de origen: es obra ajena. Va una
+                  placa tipográfica propia con el color de la sección. */}
+              <a href={`/nota/${principal.id}`}><PlacaSeccion seccion={principal.seccion} /></a>
+
+              <div className="chapa-nota" style={{ marginTop: 16 }}>
+                <Etiqueta seccion={principal.seccion} />
+                <span className="meta">{cuando(principal)}</span>
+                <span className="punto">·</span>
+                <span className="meta">{principal.medios.join(' · ')}</span>
               </div>
-              <div className="nota-chapa">
-                <span className="seccion">{principal.seccion}</span>
-                <span className="sep">|</span>
-                <span>{haceCuanto(principal.fecha)}</span>
-              </div>
-              <h2>
-                <a href={`/nota/${principal.id}`} style={{ color: 'inherit' }}>{principal.titulo}</a>
-              </h2>
-              <p>{principal.copete}</p>
-              <div className="mini" style={{ marginTop: 12 }}>
-                Fuente: {principal.medios.join(' · ')} —{' '}
-                <a href={principal.enlace} target="_blank" rel="noopener noreferrer">nota original ↗</a>
-              </div>
+
+              <h2><a href={`/nota/${principal.id}`}>{principal.titulo}</a></h2>
+              {principal.copete && <p>{principal.copete}</p>}
             </article>
           )}
 
           {secundarias.length > 0 && (
-            <div className="rejilla-secciones">
-              {secundarias.map((n) => (
-                <article key={n.id}>
-                  <div className="nota-chapa">
-                    <span className="seccion">{n.seccion}</span>
-                    <span className="sep">|</span>
-                    <span>{haceCuanto(n.fecha)}</span>
-                  </div>
-                  <h3><a href={`/nota/${n.id}`} style={{ color: 'inherit' }}>{n.titulo}</a></h3>
-                  <p>{n.copete?.slice(0, 140)}</p>
-                </article>
-              ))}
-            </div>
-          )}
-
-          {Object.entries(porSeccion).map(([seccion, notas]) => (
-            <section key={seccion} style={{ marginTop: 30 }}>
-              <h3 style={{ fontSize: 22, borderBottom: '2px solid var(--tinta)', paddingBottom: 8 }}>{seccion}</h3>
-              <div className="lista-notas">
-                {notas.map((n) => (
-                  <div className="fila-nota" key={n.id}>
-                    <div>
-                      <span className="num">{haceCuanto(n.fecha)} · {n.medios.join(' + ')}</span>
-                      <h3><a href={`/nota/${n.id}`} style={{ color: 'inherit' }}>{n.titulo}</a></h3>
-                    </div>
-                  </div>
+            <>
+              <div className="separador" />
+              <div className="rejilla-secundarias">
+                {secundarias.map((n) => (
+                  <article key={n.id}>
+                    <Etiqueta seccion={n.seccion} />
+                    <h3><a href={`/nota/${n.id}`}>{n.titulo}</a></h3>
+                    {n.copete && <p>{recortar(n.copete, 150)}</p>}
+                  </article>
                 ))}
               </div>
+            </>
+          )}
+
+          {bloques.map(([seccion, notas]) => (
+            <section className="bloque-seccion" key={seccion}>
+              <TituloSeccion seccion={seccion} />
+              {notas.slice(0, 5).map((n) => <FilaNota nota={n} key={n.id} />)}
             </section>
           ))}
 
@@ -84,44 +81,48 @@ export default function Portada() {
           )}
         </div>
 
-        <aside>
-          {d.clima?.ahora && (
-            <div className="tarjeta oscura">
-              <h3>El clima ahora</h3>
-              <div className="temp-grande">{d.clima.ahora.temp}°</div>
-              <div className="mini" style={{ marginTop: 6 }}>
-                {d.clima.ahora.cielo} · sensación {d.clima.ahora.sensacion}°<br />
-                Viento {d.clima.ahora.rumbo} {d.clima.ahora.viento} km/h
+        <aside className="lateral">
+          <TarjetaClima clima={d.clima} />
+          <TarjetaFarmacia farmacia={d.farmacias?.hoy} />
+
+          {eventos.length > 0 && (
+            <div className="tarjeta" style={{ paddingBottom: 8 }}>
+              <div style={{ display: 'flex', alignItems: 'center' }}>
+                <h3 style={{ flexGrow: 1 }}>Agenda de Balcarce</h3>
+                <a href="/agenda" style={{ fontSize: 12.5, fontWeight: 600, color: 'var(--rojo)' }}>Todo →</a>
               </div>
+              {eventos.map((e) => <Evento evento={e} key={e.id} />)}
             </div>
           )}
 
-          {d.farmacias?.hoy && (
-            <div className="tarjeta">
-              <h3>Farmacia de turno</h3>
-              <div style={{ fontFamily: 'Fraunces, serif', fontSize: 24, fontWeight: 700, color: 'var(--rojo)' }}>
-                {d.farmacias.hoy.farmacias.join(' y ')}
-              </div>
-              {d.farmacias.hoy.detalle?.[0]?.direccion && (
-                <div className="mini" style={{ marginTop: 6 }}>{d.farmacias.hoy.detalle[0].direccion}</div>
-              )}
-              <a href="/util" className="boton borde" style={{ marginTop: 12 }}>Ver toda la semana</a>
-            </div>
-          )}
+          <TarjetaBuzon />
 
-          {d.agenda?.municipio?.length > 0 && (
-            <div className="tarjeta" id="agenda">
-              <h3>Agenda</h3>
-              {d.agenda.municipio.slice(0, 4).map((e) => (
-                <div key={e.id} style={{ padding: '9px 0', borderBottom: '1px solid var(--papel)' }}>
-                  <div style={{ fontSize: 13, fontWeight: 700 }}>{e.nombre}</div>
-                  <div className="mini">{e.desde?.slice(0, 10)} · {e.lugar || ''}</div>
-                </div>
-              ))}
+          {d.utiles?.numeros?.length > 0 && (
+            <div style={{ borderRadius: 12, border: '1px dashed #C9C4B6', padding: 16 }}>
+              <div className="meta">Números útiles</div>
+              <div className="chips">
+                {/* Sólo los que son un número solo: varios de la lista oficial
+                    traen tres o cuatro líneas separadas por barras y no sirven
+                    para un enlace de llamada. Esos están completos en /util. */}
+                {d.utiles.numeros.filter((n) => !n.numero.includes('/')).slice(0, 5).map((n) => (
+                  <a key={n.nombre} href={`tel:${n.numero.replace(/\D/g, '')}`}>
+                    {n.nombre.replace(/ \(.*\)$/, '')} {n.numero}
+                  </a>
+                ))}
+              </div>
+              <div style={{ marginTop: 12 }}>
+                <a href="/util" style={{ fontSize: 12.5, fontWeight: 600, color: 'var(--rojo)' }}>Toda la guía →</a>
+              </div>
             </div>
           )}
         </aside>
       </div>
     </div>
   );
+}
+
+function recortar(texto, largo) {
+  if (texto.length <= largo) return texto;
+  const corte = texto.slice(0, largo);
+  return `${corte.slice(0, corte.lastIndexOf(' '))}…`;
 }

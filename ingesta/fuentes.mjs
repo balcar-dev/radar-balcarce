@@ -347,4 +347,33 @@ export const REGLAS_SEMAFORO = {
     'hospital', 'muerte', 'falleció', 'fallecio', 'investigación', 'investigacion'],
   // Todo lo demás sale solo si la sección lo permite.
   verdeSecciones: ['Servicios', 'Cultura y agenda', 'Deportes', 'Automovilismo', 'Agro'],
+  // Esto NO es noticia: es publicidad o promoción de otro medio. No se
+  // bloquea (a veces un sorteo del club sí interesa), pero nunca sale solo:
+  // el 18/09 la portada abrió con "Ganá tu entrada para el TC", que es una
+  // promoción de una radio, no una noticia nuestra.
+  promocional: ['sorteo', 'sortea', 'sortearemos', 'ganá tu entrada', 'gana tu entrada',
+    'participá del', 'participa del', 'regala las entradas', 'promoción exclusiva',
+    'promocion exclusiva', 'suscribite', 'seguinos en', 'auspicia', 'publicidad'],
 };
+
+// Nombres propios de Balcarce y siglas que se repiten todo el tiempo. Sirven
+// para reescribir los títulos que los medios publican EN MAYÚSCULAS sin
+// perder los nombres por el camino. Es una lista a mano y se amplía: si un
+// título sale mal escrito, la palabra se agrega acá.
+export const NOMBRES_PROPIOS = [
+  'Balcarce', 'Fangio', 'Napaleofú', 'Ramos Otero', 'San Agustín', 'Los Pinos',
+  'El Triunfo', 'La Brava', 'Mar del Plata', 'Necochea', 'Tandil', 'Buenos Aires',
+  'Municipalidad', 'Municipio', 'Concejo Deliberante', 'Intendente', 'Intendenta',
+  'Provincia', 'Nación', 'Gobierno', 'Ejecutivo', 'Legislatura',
+  'Dirección', 'Subsecretaría', 'Secretaría', 'Juventud', 'Cultura', 'Deportes',
+  'Desarrollo Social', 'Salud', 'Educación', 'Producción', 'Turismo',
+  'Hospital', 'Felipe Fossati', 'Policía', 'Bomberos', 'Defensa Civil',
+  'Sociedad Rural', 'Cámara de Comercio', 'Cooperativa', 'Auto Club',
+  'Ferroviarios', 'Balcarce Newcom', 'Las Valkyrias', 'Campo de Pato',
+  'Teatro Municipal', 'Luis A. Conti', 'Museo Histórico', 'Plaza Libertad',
+  'Autódromo', 'Polideportivo', 'Escuela', 'Jardín', 'Instituto',
+  'Día del Estudiante', 'Día de la Primavera', 'Semana Santa',
+  // Siglas: van enteras en mayúscula.
+  'INTA', 'ARBAL', 'ABSA', 'EDEA', 'ANSES', 'PAMI', 'SAME', 'AFIP', 'ARCA',
+  'UNMdP', 'ACA', 'TC', 'TN', 'APINTA', 'IOMA', 'PBA',
+];

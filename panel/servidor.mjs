@@ -196,11 +196,28 @@ function vista() {
   };
 }
 
+/** La lista de fuentes con la que se sale a buscar: el objeto completo del
+ *  código, con el peso y el estado de pausa que se hayan tocado en el panel.
+ *  Una fuente que el panel borró no vuelve. */
+function fuentesParaIngestar() {
+  return TODAS_LAS_FUENTES
+    .filter((f) => estado.fuentes.some((g) => g.id === f.id))
+    .map((f) => {
+      const guardada = estado.fuentes.find((g) => g.id === f.id);
+      return { ...f, peso: guardada.peso ?? f.peso, activa: guardada.activa !== false };
+    });
+}
+
 async function correrIngesta() {
   if (corriendo) return;
   corriendo = true;
   try {
-    ultima = await ingestar({ fuentes: estado.fuentes, silencioso: true });
+    // Se ingesta con la definición del CÓDIGO y sólo se le pisan encima las
+    // tres cosas que el panel deja editar (peso, pausada, nota). El estado
+    // guardado no alcanza: no guarda `base` ni `patronEnlace`, que es lo que
+    // el raspador necesita para armar el enlace de cada nota — sin eso, las
+    // de El Diario salían apuntando a "undefined/...".
+    ultima = await ingestar({ fuentes: fuentesParaIngestar(), silencioso: true });
     guardarJson(F_ULTIMA, ultima);
     const nuevas = ultima.notas.filter((n) => !estado.decisiones[n.id]).length;
     console.log(`  ciclo ok · ${ultima.notas.length} historias · ${nuevas} sin decidir`);

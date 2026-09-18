@@ -1,17 +1,39 @@
-/* Los mismos tokens que se usaron en el diseño del canvas (Main.dc.html,
-   Servicios.dc.html): que la web y las piezas para redes se reconozcan
-   como del mismo medio con sólo mirarlas. */
+/* Radar Balcarce — hoja de estilo del portal.
+   Es la traducción a CSS del lienzo de diseño: la portada, el celular y la
+   tarjeta del clima. Si hay que cambiar el aspecto, se cambia acá y en el
+   lienzo, para que no se separen.
+
+   Criterio general: fondo blanco de portal (no el crema de diario viejo),
+   tipografía con carácter (Fraunces en los títulos), color por sección y
+   movimiento sólo en las dos piezas que se miran todos los días — el clima
+   y la farmacia de turno. */
+
 :root {
   --tinta: #14161A;
-  --papel: #F7F5EF;
-  --rojo: #A8371F;
-  --rojo-oscuro: #7C2717;
+  --tinta-suave: #22262B;
+  --papel: #FFFFFF;
+  --crema: #F4F1EA;
+  --linea: #E4DFD2;
+  --linea-suave: #EDE9DE;
+  --suave: #6B6F6C;
+  --texto: #3B403C;
+  --rojo: #C7381C;
+  --rojo-oscuro: #9C2B15;
   --verde: #16615B;
   --ambar: #E8A33C;
-  --linea: #D5CFC0;
-  --suave: #4A4F4B;
-  --crema: #EDE9DE;
-  --blanco: #FFFFFF;
+
+  /* Un color por sección. Se usa en la etiqueta, en la barrita del
+     encabezado de sección y en la placa que reemplaza a la foto. */
+  --s-balcarce: #C7381C;
+  --s-politica: #C7381C;
+  --s-policiales: #8C2D18;
+  --s-deportes: #1E6E4F;
+  --s-automovilismo: #E08A16;
+  --s-agro: #6B7A2A;
+  --s-cultura: #6D4BA0;
+  --s-tecnologia: #2563A8;
+  --s-servicios: #16615B;
+  --s-pais: #4A4F4B;
 }
 
 * { box-sizing: border-box; }
@@ -24,138 +46,239 @@ html, body {
   font-family: "IBM Plex Sans", system-ui, sans-serif;
   font-size: 16px;
   line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
 }
 
 h1, h2, h3, .fraunces {
   font-family: "Fraunces", Georgia, serif;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.02em;
   margin: 0;
 }
 
-a { color: var(--rojo); text-decoration: none; }
-a:hover { color: var(--rojo-oscuro); }
+a { color: inherit; text-decoration: none; }
+a:hover { color: var(--rojo); }
 
 img { max-width: 100%; display: block; }
 
-.envoltura {
-  max-width: 1180px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
+.envoltura { max-width: 1280px; margin: 0 auto; padding: 0 20px; }
+@media (min-width: 900px) { .envoltura { padding: 0 50px; } }
 
-/* ------------------------------------------------------------- cabecera */
+/* ------------------------------------------------------- chapa de servicio */
 
-.chapa-superior {
-  background: var(--tinta);
-  color: var(--papel);
-  font-size: 12px;
-  letter-spacing: 0.03em;
-}
+/* Clima y farmacia de turno viven acá: se ven en todas las páginas sin
+   tener que entrar a buscarlos. */
+.chapa-superior { background: var(--tinta); color: var(--crema); font-size: 12px; }
 .chapa-superior .envoltura {
-  height: 38px;
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  overflow-x: auto;
-  white-space: nowrap;
+  min-height: 44px; display: flex; align-items: center; gap: 12px;
+  overflow-x: auto; white-space: nowrap; scrollbar-width: none;
 }
-.chapa-superior a { color: var(--papel); }
-.chapa-superior a:hover { color: var(--ambar); }
-.chapa-superior .sep { color: #4A4F4B; }
+.chapa-superior .envoltura::-webkit-scrollbar { display: none; }
+.chapa-superior .apagado { color: #8C918D; }
 .chapa-superior .crece { flex-grow: 1; }
-.chapa-superior .cta { color: var(--ambar); font-weight: 600; }
+
+.pastilla {
+  display: inline-flex; align-items: center; gap: 7px;
+  background: var(--tinta-suave); border-radius: 20px; padding: 5px 13px;
+  color: var(--crema);
+}
+.pastilla:hover { background: #2E3339; color: var(--crema); }
+.pastilla .fuerte { font-weight: 700; }
+.pastilla.con-icono { padding-left: 8px; }
+
+/* ---------------------------------------------------------------- cabecera */
 
 header.principal .envoltura {
-  padding-top: 26px;
-  padding-bottom: 16px;
-  display: flex;
-  align-items: flex-end;
-  gap: 24px;
-  flex-wrap: wrap;
+  padding-top: 22px; padding-bottom: 16px;
+  display: flex; align-items: center; gap: 20px;
 }
-.logo { font-size: 44px; font-weight: 700; line-height: 1; }
+.logo { font-size: 32px; font-weight: 900; line-height: 1; letter-spacing: -0.03em; }
 .logo span { color: var(--rojo); }
-.logo .sub { font-family: "IBM Plex Sans", sans-serif; font-size: 13px; color: var(--suave); margin-top: 8px; font-weight: 400; letter-spacing: 0; }
-
-nav.principal {
-  border-top: 1px solid var(--tinta);
-  border-bottom: 1px solid var(--linea);
-  background: var(--papel);
+.logo .sub { font-family: "IBM Plex Sans", sans-serif; font-size: 13px; color: var(--suave); margin-top: 8px; font-weight: 400; letter-spacing: 0; display: none; }
+@media (min-width: 720px) {
+  .logo { font-size: 46px; }
+  .logo .sub { display: block; }
 }
+
+/* ------------------------------------------------------------ navegación */
+
+nav.principal { border-top: 2px solid var(--tinta); border-bottom: 1px solid var(--linea); background: var(--papel); position: sticky; top: 0; z-index: 20; }
 nav.principal .envoltura {
-  height: 50px;
-  display: flex;
-  align-items: center;
-  gap: 24px;
-  overflow-x: auto;
-  white-space: nowrap;
+  height: 52px; display: flex; align-items: center; gap: 20px;
+  overflow-x: auto; white-space: nowrap; scrollbar-width: none;
 }
-nav.principal a {
-  color: var(--tinta);
-  font-weight: 600;
-  font-size: 14px;
+nav.principal .envoltura::-webkit-scrollbar { display: none; }
+nav.principal a { font-weight: 600; font-size: 14px; }
+nav.principal a.activo { color: var(--rojo); border-bottom: 3px solid var(--rojo); height: 51px; display: flex; align-items: center; }
+nav.principal .servicio { color: var(--verde); }
+nav.principal .crece { flex-grow: 1; }
+
+/* --------------------------------------------------------------- estructura */
+
+main { padding: 24px 0 10px; }
+.dos-columnas { display: grid; grid-template-columns: minmax(0, 1fr); gap: 28px; align-items: start; }
+@media (min-width: 980px) { .dos-columnas { grid-template-columns: minmax(0, 1fr) 340px; gap: 40px; } }
+
+/* ------------------------------------------------------------------ notas */
+
+.tag {
+  display: inline-block; font-size: 10px; font-weight: 700; letter-spacing: 0.09em;
+  text-transform: uppercase; color: #fff; padding: 3px 8px; border-radius: 3px;
+  background: var(--s-pais);
 }
-nav.principal a.activo { color: var(--rojo); border-bottom: 2px solid var(--rojo); height: 49px; display: flex; align-items: center; }
+.meta { font-size: 11px; font-weight: 600; letter-spacing: 0.05em; color: var(--suave); text-transform: uppercase; }
+.chapa-nota { display: flex; align-items: center; gap: 9px; flex-wrap: wrap; }
+.chapa-nota .punto { color: #C9C4B6; }
 
-/* -------------------------------------------------------------- layout */
+/* La placa que reemplaza a la foto: nunca se usa la imagen del medio de
+   origen — es obra ajena, y la excepción de noticias de la ley 11.723 cubre
+   el texto, no las fotos (INVESTIGACION.md, sección 7). */
+.placa-seccion {
+  border-radius: 10px; display: flex; align-items: flex-end;
+  padding: 30px; position: relative; overflow: hidden;
+  background: linear-gradient(145deg, var(--color-seccion, var(--rojo)) -30%, var(--tinta) 62%);
+  height: 190px;
+}
+@media (min-width: 720px) { .placa-seccion { height: 300px; } }
+.placa-seccion::after,
+.placa-seccion::before {
+  content: ''; position: absolute; border-radius: 50%;
+  border: 3px solid rgba(255, 255, 255, 0.13);
+}
+.placa-seccion::after { right: -130px; top: -150px; width: 400px; height: 400px; }
+.placa-seccion::before { right: -40px; top: -60px; width: 220px; height: 220px; border-color: rgba(255, 255, 255, 0.08); }
+.placa-seccion span {
+  font-family: "Fraunces", Georgia, serif; font-size: 28px; font-weight: 900;
+  color: var(--crema); position: relative; letter-spacing: -0.03em;
+}
+@media (min-width: 720px) { .placa-seccion span { font-size: 42px; } }
 
-main { padding: 28px 0 60px; }
-.dos-columnas { display: grid; grid-template-columns: 1fr 340px; gap: 32px; align-items: start; }
-@media (max-width: 860px) {
-  .dos-columnas { grid-template-columns: 1fr; }
+.destacada h2 { font-size: 27px; line-height: 1.12; font-weight: 700; margin-top: 12px; }
+.destacada p { font-size: 15.5px; color: var(--texto); line-height: 1.55; margin: 12px 0 0; max-width: 660px; }
+@media (min-width: 720px) {
+  .destacada h2 { font-size: 40px; line-height: 1.1; }
+  .destacada p { font-size: 17px; }
 }
 
-/* --------------------------------------------------------------- notas */
+.separador { height: 1px; background: var(--linea); margin: 26px 0 20px; }
 
-.nota-chapa { display: flex; align-items: center; gap: 8px; font-size: 11px; font-weight: 700; letter-spacing: 0.06em; color: var(--suave); flex-wrap: wrap; }
-.nota-chapa .seccion { color: var(--rojo); text-transform: uppercase; }
-.nota-chapa .sep { color: var(--linea); }
+.rejilla-secundarias { display: grid; grid-template-columns: minmax(0, 1fr); gap: 24px 30px; }
+@media (min-width: 620px) { .rejilla-secundarias { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.rejilla-secundarias h3 { font-size: 20px; line-height: 1.25; font-weight: 700; margin-top: 9px; }
+.rejilla-secundarias p { font-size: 14px; line-height: 1.55; color: #4A4F4B; margin: 8px 0 0; }
 
-.destacada h2 { font-size: 38px; line-height: 1.08; font-weight: 700; margin-top: 10px; }
-.destacada p { font-size: 16px; color: #3B403C; line-height: 1.55; margin: 12px 0 0; max-width: 640px; }
-.destacada .imagen-vacia {
-  width: 100%; height: 300px; background: var(--crema); border: 1px solid var(--linea);
-  border-radius: 6px; margin-bottom: 14px; display: flex; align-items: center; justify-content: center;
-  color: var(--suave); font-size: 12px; letter-spacing: 0.06em; font-weight: 600;
+/* -------------------------------------------------------- bloque de sección */
+
+.bloque-seccion { margin-top: 32px; }
+.titulo-seccion {
+  display: flex; align-items: center; gap: 12px;
+  border-bottom: 2px solid var(--tinta); padding-bottom: 9px;
 }
+.titulo-seccion .barra { width: 9px; height: 22px; border-radius: 2px; background: var(--color-seccion, var(--rojo)); flex-shrink: 0; }
+.titulo-seccion h2 { font-size: 21px; font-weight: 700; flex-grow: 1; }
+@media (min-width: 720px) { .titulo-seccion h2 { font-size: 23px; } }
+.titulo-seccion .ver-todo { font-size: 13px; font-weight: 600; color: var(--rojo); flex-shrink: 0; }
 
-.lista-notas { display: flex; flex-direction: column; }
-.fila-nota { display: flex; gap: 14px; padding: 16px 0; border-bottom: 1px solid var(--linea); }
-.fila-nota h3 { font-size: 19px; line-height: 1.25; font-weight: 600; margin-top: 5px; }
-.fila-nota p { font-size: 13.5px; color: var(--suave); margin: 6px 0 0; line-height: 1.5; }
-.fila-nota .num { font-size: 11px; color: var(--suave); }
+.fila-nota { padding: 14px 0; border-bottom: 1px solid var(--linea-suave); display: flex; gap: 16px; align-items: baseline; }
+.fila-nota:last-child { border-bottom: none; }
+.fila-nota .cuando { width: 96px; flex-shrink: 0; display: none; }
+@media (min-width: 620px) { .fila-nota .cuando { display: block; } }
+.fila-nota h3 { font-size: 17px; font-weight: 600; line-height: 1.3; }
+@media (min-width: 720px) { .fila-nota h3 { font-size: 18px; } }
+.fila-nota .cuando-movil { display: block; margin-bottom: 4px; }
+@media (min-width: 620px) { .fila-nota .cuando-movil { display: none; } }
 
-.rejilla-secciones { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; margin-top: 10px; }
-@media (max-width: 640px) { .rejilla-secciones { grid-template-columns: 1fr; } }
+/* ------------------------------------------------------------------ lateral */
 
-/* -------------------------------------------------------------- lateral */
-
-.tarjeta {
-  background: var(--blanco); border: 1px solid var(--linea); border-radius: 6px; padding: 18px; margin-bottom: 16px;
-}
-.tarjeta h3 { font-size: 19px; font-weight: 600; margin-bottom: 10px; }
-.tarjeta.oscura { background: var(--tinta); color: var(--papel); border-color: var(--tinta); }
-.tarjeta.oscura .mini { color: #BDC1B8; }
-.mini { font-size: 12.5px; color: var(--suave); line-height: 1.5; }
-.temp-grande { font-family: "Fraunces", serif; font-size: 48px; font-weight: 700; line-height: 1; }
+.lateral { display: flex; flex-direction: column; gap: 16px; }
+.tarjeta { background: var(--papel); border: 1px solid var(--linea); border-radius: 10px; padding: 18px; }
+.tarjeta h3 { font-size: 19px; font-weight: 700; }
+.mini { font-size: 13px; color: var(--suave); line-height: 1.5; }
 
 .boton {
-  display: inline-flex; align-items: center; height: 44px; padding: 0 18px; border-radius: 4px;
-  font-size: 14px; font-weight: 600; border: none; cursor: pointer;
+  display: inline-flex; align-items: center; justify-content: center; gap: 7px;
+  height: 44px; padding: 0 18px; border-radius: 22px;
+  font-size: 13.5px; font-weight: 600; border: none; cursor: pointer;
+  font-family: inherit;
 }
 .boton.rojo { background: var(--rojo); color: #fff; }
-.boton.tinta { background: var(--tinta); color: var(--papel); }
+.boton.rojo:hover { background: var(--rojo-oscuro); color: #fff; }
+.boton.tinta { background: var(--tinta); color: var(--crema); }
+.boton.tinta:hover { color: #fff; }
 .boton.borde { background: transparent; border: 1px solid var(--tinta); color: var(--tinta); }
+.boton.ancho { width: 100%; }
 
-/* --------------------------------------------------------------- pie */
+/* ------------------------------------------------------------------- clima */
 
-footer.principal { background: var(--tinta); color: #BDC1B8; padding: 30px 0; margin-top: 40px; font-size: 13px; }
-footer.principal .envoltura { display: flex; flex-direction: column; gap: 10px; }
-footer.principal a { color: var(--papel); }
-footer.principal .aclaracion { max-width: 720px; line-height: 1.6; border-top: 1px solid #2A2E32; padding-top: 16px; margin-top: 10px; }
-
-.etiqueta-semaforo {
-  display: inline-flex; align-items: center; gap: 5px; font-size: 10px; font-weight: 700;
-  letter-spacing: 0.04em; padding: 3px 8px; border-radius: 3px;
+.tarjeta-clima {
+  border-radius: 12px; padding: 20px; color: var(--crema);
+  background: linear-gradient(160deg, var(--cielo-fondo, #1D4F63) 0%, var(--tinta) 78%);
 }
-.etiqueta-semaforo.auto { background: #E3F0E9; color: #14533F; }
+.tarjeta-clima .titulo { font-size: 11px; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; color: #9FB4BD; }
+.tarjeta-clima .temp { font-family: "Fraunces", serif; font-size: 62px; font-weight: 900; line-height: 1; margin-top: 6px; letter-spacing: -0.04em; }
+.tarjeta-clima .cielo { font-size: 14px; margin-top: 6px; font-weight: 600; }
+.tarjeta-clima .detalle { font-size: 12.5px; color: #9FB4BD; margin-top: 3px; }
+.tira-dias { display: flex; gap: 8px; margin-top: 18px; }
+.tira-dias div { flex-grow: 1; background: rgba(255, 255, 255, 0.08); border-radius: 8px; padding: 9px 6px; text-align: center; }
+.tira-dias .dia { font-size: 11px; color: #9FB4BD; text-transform: uppercase; letter-spacing: 0.06em; font-weight: 700; }
+.tira-dias .max { font-size: 16px; font-weight: 700; margin-top: 5px; }
+.tira-dias .min { font-size: 12px; color: #9FB4BD; }
+.tira-dias .lluvia { font-size: 12px; color: #7FBCE8; }
+
+/* El sol gira despacio, la nube va y viene y las gotas caen: se nota si lo
+   mirás y no molesta si estás leyendo al lado. Quien pidió menos movimiento
+   en su sistema operativo no ve nada de esto. */
+@keyframes rb-girar { to { transform: rotate(360deg); } }
+@keyframes rb-flotar { 0%, 100% { transform: translateX(0); } 50% { transform: translateX(9px); } }
+@keyframes rb-caer { 0% { transform: translateY(-4px); opacity: 0; } 25% { opacity: 1; } 100% { transform: translateY(20px); opacity: 0; } }
+@keyframes rb-latir { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
+.rayos { transform-origin: 26px 26px; animation: rb-girar 26s linear infinite; }
+.nube { animation: rb-flotar 7s ease-in-out infinite; }
+.gota { animation: rb-caer 1.3s linear infinite; }
+.gota-2 { animation-delay: 0.42s; }
+.gota-3 { animation-delay: 0.85s; }
+.punto-vivo { width: 7px; height: 7px; border-radius: 50%; background: #2E9D5B; display: inline-block; flex-shrink: 0; animation: rb-latir 2.2s ease-in-out infinite; }
+@media (prefers-reduced-motion: reduce) {
+  .rayos, .nube, .gota, .punto-vivo { animation: none; }
+}
+
+/* ---------------------------------------------------------------- farmacia */
+
+.nombre-farmacia { font-family: "Fraunces", serif; font-size: 27px; font-weight: 900; color: var(--rojo); margin-top: 9px; letter-spacing: -0.02em; line-height: 1.1; }
+
+/* ------------------------------------------------------------------ agenda */
+
+.evento { padding: 11px 0; border-bottom: 1px solid var(--linea-suave); display: flex; gap: 12px; }
+.evento:last-child { border-bottom: none; }
+.taco {
+  width: 44px; flex-shrink: 0; text-align: center; background: var(--crema);
+  border-radius: 6px; padding: 5px 0; align-self: flex-start;
+}
+.taco .mes { font-size: 10px; font-weight: 700; color: var(--rojo); text-transform: uppercase; letter-spacing: 0.05em; }
+.taco .dia { font-family: "Fraunces", serif; font-size: 19px; font-weight: 900; line-height: 1.1; }
+.evento .que { font-size: 13.5px; font-weight: 600; line-height: 1.3; }
+.evento .donde { font-size: 12px; color: var(--suave); margin-top: 3px; }
+
+/* ------------------------------------------------------------------- buzón */
+
+.tarjeta-buzon { border-radius: 12px; background: var(--crema); border: 1px solid var(--linea); padding: 18px; }
+.tarjeta-buzon p { font-size: 13.5px; color: #4A4F4B; line-height: 1.5; margin: 8px 0 14px; }
+
+.chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; font-size: 12.5px; font-weight: 600; }
+.chips span, .chips a { background: var(--crema); border-radius: 14px; padding: 5px 11px; }
+
+/* --------------------------------------------------------------------- pie */
+
+footer.principal { background: var(--tinta); color: #BDC1B8; padding: 28px 0; margin-top: 44px; font-size: 13px; }
+footer.principal .envoltura { display: flex; flex-direction: column; gap: 9px; }
+footer.principal a:hover { color: #fff; }
+footer.principal .marca { font-family: "Fraunces", serif; font-size: 20px; font-weight: 900; color: var(--crema); }
+footer.principal .aclaracion { max-width: 760px; line-height: 1.6; border-top: 1px solid #2A2E32; padding-top: 14px; margin-top: 6px; }
+
+/* ----------------------------------------------------------- página de nota */
+
+.cuerpo-nota { max-width: 760px; margin: 0 auto; }
+.cuerpo-nota h1 { font-size: 30px; line-height: 1.15; margin-top: 12px; font-weight: 700; }
+@media (min-width: 720px) { .cuerpo-nota h1 { font-size: 38px; } }
+.cuerpo-nota .copete { font-size: 17px; color: var(--texto); margin-top: 14px; line-height: 1.6; }
+.atribucion { background: var(--crema); border-radius: 10px; padding: 16px; margin-top: 26px; font-size: 13.5px; line-height: 1.6; }
+.atribucion a { color: var(--rojo); font-weight: 600; }
