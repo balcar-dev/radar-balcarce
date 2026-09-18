@@ -9,8 +9,23 @@ competitivo, investigado aparte para no inflar este archivo.
 
 ## Cómo correr todo
 
+**La forma fácil, después de prender o reiniciar la PC:** doble clic en
+**`ARRANCAR.bat`** (está en esta misma carpeta). Levanta el panel y la
+web, y te abre las dos en el navegador. Deja dos ventanas negras
+abiertas: son los servidores, si las cerrás se apaga todo.
+
+| Qué | Dónde se ve | Qué es |
+|---|---|---|
+| **El panel** | http://localhost:4321 | Donde ustedes deciden qué se publica. Privado, sólo desde esta PC. |
+| **La web** | http://localhost:3000 | Lo que vería la gente. Todavía local — no está en internet. |
+
+Son direcciones locales: funcionan sólo en esta computadora mientras los
+servidores estén levantados. Para que Balcarce las pueda ver hace falta
+publicarlas (ver sección 9).
+
+Lo demás, a mano desde la terminal:
+
 ```bash
-node panel/servidor.mjs          # el tablero, en http://localhost:4321
 node reels/plan.mjs              # ver el plan del día sin generar nada
 node reels/plan.mjs --generar    # generar los videos del día
 node ingesta/agenda.mjs          # ver la agenda de eventos sola
@@ -202,6 +217,25 @@ cargarlo en el formulario cuando conteste.
   pueblo. Cuando la web tenga un mes de tráfico, ahí se decide con números
   y no a ojo.
 
+## 5 bis. Reglas automáticas que evitan trabajo manual
+
+- **Archivado a las 72 horas.** Una nota que pasa tres días sin que nadie
+  la decida se archiva sola (pestaña "Archivadas" del panel, no se borra).
+  Sin esto la cola crece hasta volverse inmirable: pasó de 47 a 127
+  pendientes en una noche. Las que llegan sin fecha real (los scrapers de
+  portada, que no dicen cuándo salió la nota) quedan exentas: no sabemos
+  si son viejas y descartarlas por las dudas sería tirar notas buenas.
+  También aplica a las verdes: si el ciclo estuvo caído dos días, al
+  volver no queremos que salga de golpe el clima del martes.
+- **Respaldo del clima.** El 18/09 Open-Meteo no respondió en un ciclo y
+  la placa quedó sin datos. Ahora, si falla, entra sola la API del
+  Instituto Meteorológico de Noruega (`api.met.no`): gratis, sin clave,
+  sólo pide identificarse con un User-Agent propio. Probado forzando la
+  caída del primario. La única diferencia: met.no no da sensación térmica
+  (se usa la temperatura real en vez de inventar un número) y la mínima
+  del día en curso puede salir más alta, porque sólo ve las horas que
+  quedan por delante.
+
 ## 6. Riesgos técnicos anotados (para no redescubrirlos)
 
 - `gemini-flash-latest` respondía con **503 de alta demanda** de forma
@@ -284,6 +318,31 @@ se vuelva a intentar de la misma forma:
   primero.
 - No se intentó ni se va a intentar loguearse para sacar más datos de la
   competencia: eso deja de ser "mirar" y pasa a ser otra cosa.
+
+## 8 bis. Rediseño de las piezas para redes (18/09/2026)
+
+Las placas se veían correctas pero anticuadas, y no terminaban de parecer
+del mismo medio que la web. Qué cambió:
+
+- **Las tipografías ahora son las del portal, de verdad.** Antes se
+  dibujaban con Georgia y Segoe UI (las que trae Windows) porque eran las
+  únicas disponibles. Ahora están incrustadas **Fraunces** (titulares) e
+  **IBM Plex Sans** (todo lo demás), en `reels/marca/fuentes/`, y resvg
+  las usa directamente. Era la incoherencia número uno que estaba anotada.
+- **Se fue el "radar" de anillos concéntricos.** Casi no se veía, y cuando
+  se veía ensuciaba. Lo reemplaza un degradado profundo del color de la
+  sección más dos arcos limpios: se reconoce como marca incluso en
+  miniatura, que es como la gente ve los reels.
+- **El rótulo de sección pasó a ser una píldora de color sólido**, lo
+  primero que se entiende antes de leer el título.
+- **El titular manda.** El cuerpo se adapta al largo (104 px con dos
+  renglones, 78 con cinco) y se ancla a una línea fija abajo, así todas
+  las piezas se sienten de la misma familia aunque el título cambie.
+- **Más aire:** margen de 88 px en vez de 72, y las cajas de datos del
+  clima perdieron el recuadro — ahora son una línea fina arriba. Menos
+  marco, menos cara de plantilla.
+- El logo quedó siempre en ámbar: en el color de la sección perdía
+  contraste sobre el fondo oscuro.
 
 ## 9. La web pública (`web/`) — construida el 18/09/2026
 

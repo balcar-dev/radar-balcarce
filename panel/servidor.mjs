@@ -115,6 +115,29 @@ function anotar(accion, detalle, quien) {
   estado.historial = estado.historial.slice(0, 200);
 }
 
+// Cuánto puede quedar una nota esperando decisión antes de archivarse sola.
+// Tres días: pasado eso no es noticia, y si igual vale la pena, va a volver
+// a aparecer cuando algún medio la retome.
+const HORAS_PARA_ARCHIVAR = 72;
+
+function esVieja(n) {
+  // Las que llegan sin fecha real (los scrapers de portada) no se archivan
+  // por tiempo: no sabemos cuándo salieron, y descartarlas por las dudas
+  // sería tirar notas buenas.
+  if (!n.fecha || n.cuando === 'sin fecha en la fuente') return false;
+  const horas = (Date.now() - new Date(n.fecha).getTime()) / 3600000;
+  return horas > HORAS_PARA_ARCHIVAR;
+}
+
+function estadoPorDefecto(n) {
+  if (n.semaforo === 'rojo') return 'bloqueada';
+  // Una verde vieja tampoco se publica sola: si el ciclo estuvo caído dos
+  // días, no queremos que al volver salga de golpe el clima del martes.
+  if (esVieja(n)) return 'archivada';
+  if (n.semaforo === 'verde') return 'automatica';
+  return 'pendiente';
+}
+
 // Mezcla lo que trajo la ingesta con las decisiones ya tomadas.
 function vista() {
   const notas = (ultima?.notas ?? []).map((n) => {
@@ -127,9 +150,13 @@ function vista() {
       deIA: d?.deIA ?? null,
       // Sin decisión tomada manda el semáforo: la verde sale sola, la roja
       // queda bloqueada y sólo la amarilla espera a que alguien la mire.
-      estado: d?.estado ?? ({ verde: 'automatica', rojo: 'bloqueada' }[n.semaforo] ?? 'pendiente'),
+      // Y si nadie la miró en 72 horas, se archiva sola: una noticia de
+      // hace tres días ya no es noticia, y dejarla en la cola sólo hace que
+      // la cola crezca hasta volverse inmirable.
+      estado: d?.estado ?? estadoPorDefecto(n),
       decidioQuien: d?.por ?? null,
       decidioCuando: d?.cuando ?? null,
+      archivadaPorTiempo: !d && esVieja(n),
     };
   });
   return {

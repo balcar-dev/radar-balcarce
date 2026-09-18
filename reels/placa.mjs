@@ -98,45 +98,75 @@ export function envolver(texto, ancho) {
   return renglones;
 }
 
-/** El barrido del radar, que es el fondo de todas las placas. */
-function radar(color, { cx = 980, cy = 380, escala = 1 } = {}) {
-  const anillos = [260, 420, 580, 760, 960].map((r) => `
-    <circle cx="${cx}" cy="${cy}" r="${r * escala}" fill="none"
-            stroke="${color}" stroke-width="2" opacity="${0.42 - r / 3400}"/>`).join('');
+// Tipografías: las mismas del portal. Se declaran acá una sola vez para no
+// repetir el string en cada placa.
+const DISPLAY = 'Fraunces';
+const TEXTO = 'IBM Plex Sans';
+
+// El margen lateral. Más aire que antes: las placas apretadas contra el
+// borde se leen peor y parecen hechas a las apuradas.
+const MARGEN = 88;
+
+/**
+ * El fondo. Antes era un "radar" de anillos concéntricos muy tenue que casi
+ * no se veía y, cuando se veía, ensuciaba. Ahora es un degradado profundo
+ * del color de la sección más un arco grande y limpio: se lee como marca
+ * incluso a tamaño de miniatura, que es como la gente ve los reels.
+ */
+function fondo(color) {
   return `
   <defs>
-    <radialGradient id="barrido" cx="${cx}" cy="${cy}" r="${960 * escala}" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="${color}" stop-opacity="0.55"/>
-      <stop offset="60%" stop-color="${color}" stop-opacity="0.12"/>
-      <stop offset="100%" stop-color="${color}" stop-opacity="0"/>
-    </radialGradient>
+    <linearGradient id="base" x1="0" y1="0" x2="0.35" y2="1">
+      <stop offset="0%" stop-color="${color}" stop-opacity="0.42"/>
+      <stop offset="45%" stop-color="${COLORES.tinta}" stop-opacity="1"/>
+      <stop offset="100%" stop-color="${COLORES.tinta}" stop-opacity="1"/>
+    </linearGradient>
+    <linearGradient id="brillo" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="${color}" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="${color}" stop-opacity="0.15"/>
+    </linearGradient>
   </defs>
-  <circle cx="${cx}" cy="${cy}" r="${960 * escala}" fill="url(#barrido)"/>
-  ${anillos}
-  <path d="M ${cx} ${cy} L ${cx - 960 * escala} ${cy - 360 * escala} A ${960 * escala} ${960 * escala} 0 0 1 ${cx - 860 * escala} ${cy + 430 * escala} Z"
-        fill="${color}" opacity="0.10"/>`;
+  <rect width="${ANCHO}" height="${ALTO}" fill="${COLORES.tinta}"/>
+  <rect width="${ANCHO}" height="${ALTO}" fill="url(#base)"/>
+  <circle cx="${ANCHO + 120}" cy="240" r="620" fill="none"
+          stroke="${color}" stroke-width="3" opacity="0.28"/>
+  <circle cx="${ANCHO + 120}" cy="240" r="880" fill="none"
+          stroke="${color}" stroke-width="3" opacity="0.14"/>`;
 }
 
 /**
- * La chapa de arriba: sólo el logo. El horario de publicación no va: es dato
- * interno nuestro y al que mira la pieza no le dice nada.
+ * La chapa de arriba: logo y una barra de color que identifica la sección
+ * de un vistazo. El horario de publicación no va: es dato interno nuestro.
  * Va a 170 px del borde y no más arriba: Instagram tapa la franja superior
- * con su propia interfaz, y el zoom del video se come otro poco.
+ * con su interfaz, y el zoom del video se come otro poco.
  */
 function cabecera(_hora, color) {
   return `
-  <rect x="0" y="0" width="${ANCHO}" height="10" fill="${color}"/>
-  <text x="72" y="196" font-family="Georgia, serif" font-size="42" font-weight="bold" fill="${COLORES.papel}">
-    RADAR <tspan fill="${COLORES.ambar}">BALCARCE</tspan>
-  </text>`;
+  <rect x="0" y="0" width="${ANCHO}" height="12" fill="url(#brillo)"/>
+  <text x="${MARGEN}" y="196" font-family="${DISPLAY}" font-size="40" font-weight="900"
+        letter-spacing="-1" fill="${COLORES.papel}">RADAR <tspan fill="${COLORES.ambar}">BALCARCE</tspan></text>`;
+}
+
+/**
+ * El rótulo de sección: un bloque de color sólido con el nombre en
+ * mayúsculas. Es el elemento que más rápido comunica de qué se trata la
+ * pieza antes de que nadie lea el título.
+ */
+function rotulo(texto, color, y = 300) {
+  const ancho = 46 + String(texto).length * 23;
+  return `
+  <rect x="${MARGEN}" y="${y}" width="${ancho}" height="62" rx="31" fill="${color}"/>
+  <text x="${MARGEN + ancho / 2}" y="${y + 41}" text-anchor="middle" font-family="${TEXTO}"
+        font-size="26" font-weight="700" letter-spacing="3"
+        fill="#FFFFFF">${esc(String(texto).toUpperCase())}</text>`;
 }
 
 /** El pie, arriba de la zona donde van los subtítulos. */
 function pie(texto, color) {
   return `
-  <rect x="72" y="${ALTO - 150}" width="8" height="52" fill="${color}"/>
-  <text x="104" y="${ALTO - 112}" font-family="Segoe UI, sans-serif" font-size="27"
-        fill="${COLORES.suave}">${esc(texto)}</text>`;
+  <rect x="${MARGEN}" y="${ALTO - 152}" width="52" height="5" fill="${color}"/>
+  <text x="${MARGEN}" y="${ALTO - 108}" font-family="${TEXTO}" font-size="26"
+        font-weight="500" fill="${COLORES.suave}">${esc(texto)}</text>`;
 }
 
 /**
@@ -148,29 +178,39 @@ export function placaClima({
   kicker = 'EL CLIMA DE HOY', cajas = [],
 }) {
   const color = COLOR_SECCION.Clima;
-  const caja = (x, titulo, valor) => `
-    <rect x="${x}" y="1180" width="292" height="150" rx="14" fill="#ffffff" fill-opacity="0.09"/>
-    <text x="${x + 28}" y="1234" font-family="Segoe UI, sans-serif" font-size="24" font-weight="700"
+  const anchoCaja = (ANCHO - MARGEN * 2 - 32) / 3;
+
+  // Las tres cajas de datos: sin recuadro, separadas por una línea fina
+  // arriba. Menos marco, más aire — lo que hace que se vea actual y no
+  // como una plantilla de PowerPoint.
+  const caja = (i, titulo, valor) => {
+    const x = MARGEN + i * (anchoCaja + 16);
+    return `
+    <rect x="${x}" y="1210" width="${anchoCaja - 16}" height="3" fill="${color}" opacity="0.65"/>
+    <text x="${x}" y="1264" font-family="${TEXTO}" font-size="22" font-weight="700"
           letter-spacing="3" fill="${COLORES.suave}">${esc(titulo)}</text>
-    <text x="${x + 28}" y="1296" font-family="Segoe UI, sans-serif" font-size="40" font-weight="600"
+    <text x="${x}" y="1320" font-family="${TEXTO}" font-size="40" font-weight="600"
           fill="${COLORES.papel}">${esc(valor)}</text>`;
+  };
 
   return `<svg xmlns="http://www.w3.org/2000/svg" width="${ANCHO}" height="${ALTO}" viewBox="0 0 ${ANCHO} ${ALTO}">
-  <rect width="${ANCHO}" height="${ALTO}" fill="${COLORES.tinta}"/>
-  ${radar(color, { cx: 820, cy: 700 })}
+  ${fondo(color)}
   ${cabecera(hora, color)}
-  <text x="72" y="360" font-family="Segoe UI, sans-serif" font-size="30" font-weight="700"
-        letter-spacing="7" fill="${COLORES.ambar}">${esc(kicker)}</text>
-  <text x="72" y="450" font-family="Georgia, serif" font-size="66" font-weight="bold"
-        fill="${COLORES.papel}">${esc(fecha)}</text>
-  <text x="66" y="880" font-family="Georgia, serif" font-size="300" font-weight="bold"
-        fill="${COLORES.papel}">${temp}<tspan font-size="150" fill="${COLORES.ambar}">°</tspan></text>
-  <text x="72" y="980" font-family="Segoe UI, sans-serif" font-size="46"
+  ${rotulo(kicker, color, 296)}
+  <text x="${MARGEN}" y="470" font-family="${DISPLAY}" font-size="58" font-weight="700"
+        letter-spacing="-1" fill="${COLORES.papel}">${esc(fecha)}</text>
+
+  <text x="${MARGEN - 12}" y="900" font-family="${DISPLAY}" font-size="330" font-weight="900"
+        letter-spacing="-14" fill="${COLORES.papel}">${temp}<tspan
+        font-size="140" letter-spacing="0" dy="-150" fill="${color}">°</tspan></text>
+
+  <text x="${MARGEN}" y="985" font-family="${TEXTO}" font-size="44" font-weight="500"
         fill="${COLORES.suave}">${esc(cielo)}</text>
-  <text x="72" y="1070" font-family="Segoe UI, sans-serif" font-size="52" font-weight="600"
-        fill="${COLORES.papel}">mínima ${min}° · máxima ${max}°</text>
-  ${cajas.slice(0, 3).map((c, i) => caja(72 + i * 322, c.titulo, c.valor)).join('')}
-  ${pie('radarbalcarce.com.ar · el clima todos los días', color)}
+  <text x="${MARGEN}" y="1078" font-family="${TEXTO}" font-size="50" font-weight="700"
+        fill="${COLORES.papel}">${min}° <tspan font-weight="400" fill="${COLORES.suave}">mínima</tspan>  ·  ${max}° <tspan font-weight="400" fill="${COLORES.suave}">máxima</tspan></text>
+
+  ${cajas.slice(0, 3).map((c, i) => caja(i, c.titulo, c.valor)).join('')}
+  ${pie('radarbalcarce.com.ar', color)}
 </svg>`;
 }
 
@@ -186,24 +226,25 @@ export function placaFarmacia({ detalle = [], farmacias = [], dia, diaSemana }) 
   const doble = lista.length > 1;
 
   const bloque = (f, y) => {
-    const nombre = envolver(f.nombre, doble ? 20 : 15);
-    const dir = f.direccion ? envolver(f.direccion, doble ? 30 : 26) : [];
+    const nombre = envolver(f.nombre, doble ? 18 : 14);
+    const dir = f.direccion ? envolver(f.direccion, doble ? 28 : 24) : [];
+    const tamNombre = doble ? 72 : 108;
     let cursor = y;
-    const partes = nombre.map((l, i) => `<text x="72" y="${cursor + i * (doble ? 76 : 112)}"
-        font-family="Georgia, serif" font-size="${doble ? 68 : 100}" font-weight="bold"
-        fill="${COLORES.ambar}">${esc(l)}</text>`).join('');
-    cursor += (nombre.length - 1) * (doble ? 76 : 112) + (doble ? 62 : 86);
-    const dirs = dir.map((l, i) => `<text x="72" y="${cursor + i * (doble ? 48 : 60)}"
-        font-family="Segoe UI, sans-serif" font-size="${doble ? 40 : 52}" font-weight="600"
+    const partes = nombre.map((l, i) => `<text x="${MARGEN}" y="${cursor + i * (tamNombre * 1.1)}"
+        font-family="${DISPLAY}" font-size="${tamNombre}" font-weight="900" letter-spacing="-2"
         fill="${COLORES.papel}">${esc(l)}</text>`).join('');
-    cursor += Math.max(0, dir.length - 1) * (doble ? 48 : 60);
-    const tel = f.telefono ? `<text x="72" y="${cursor + (doble ? 46 : 58)}"
-        font-family="Segoe UI, sans-serif" font-size="${doble ? 34 : 42}"
+    cursor += (nombre.length - 1) * (tamNombre * 1.1) + (doble ? 66 : 92);
+    const dirs = dir.map((l, i) => `<text x="${MARGEN}" y="${cursor + i * (doble ? 48 : 58)}"
+        font-family="${TEXTO}" font-size="${doble ? 38 : 48}" font-weight="600"
+        fill="${COLORES.ambar}">${esc(l)}</text>`).join('');
+    cursor += Math.max(0, dir.length - 1) * (doble ? 48 : 58);
+    const tel = f.telefono ? `<text x="${MARGEN}" y="${cursor + (doble ? 46 : 56)}"
+        font-family="${TEXTO}" font-size="${doble ? 32 : 40}" font-weight="500"
         fill="${COLORES.suave}">Tel. ${esc(f.telefono)}</text>` : '';
-    return { svg: partes + dirs + tel, alto: cursor - y + (doble ? 100 : 120) };
+    return { svg: partes + dirs + tel, alto: cursor - y + (doble ? 104 : 124) };
   };
 
-  let y = doble ? 500 : 620;
+  let y = doble ? 520 : 640;
   const bloques = lista.map((f) => {
     const b = bloque(f, y);
     y += b.alto + (doble ? 30 : 0);
@@ -214,16 +255,14 @@ export function placaFarmacia({ detalle = [], farmacias = [], dia, diaSemana }) 
   const yHorario = Math.min(1240, y + 30);
 
   return `<svg xmlns="http://www.w3.org/2000/svg" width="${ANCHO}" height="${ALTO}" viewBox="0 0 ${ANCHO} ${ALTO}">
-  <rect width="${ANCHO}" height="${ALTO}" fill="${COLORES.tinta}"/>
-  ${radar(color, { cx: 260, cy: 760 })}
+  ${fondo(color)}
   ${cabecera(null, color)}
-  <text x="72" y="340" font-family="Segoe UI, sans-serif" font-size="30" font-weight="700"
-        letter-spacing="7" fill="${COLORES.ambar}">FARMACIA DE TURNO</text>
-  <text x="72" y="412" font-family="Georgia, serif" font-size="54" font-weight="bold"
-        fill="${COLORES.papel}">${esc(diaSemana)} ${dia}</text>
+  ${rotulo('Farmacia de turno', color, 296)}
+  <text x="${MARGEN}" y="470" font-family="${DISPLAY}" font-size="52" font-weight="700"
+        letter-spacing="-1" fill="${COLORES.suave}">${esc(diaSemana)} ${dia}</text>
   ${bloques}
-  <rect x="72" y="${yHorario}" width="936" height="96" rx="14" fill="#ffffff" fill-opacity="0.09"/>
-  <text x="104" y="${yHorario + 60}" font-family="Segoe UI, sans-serif" font-size="36"
+  <rect x="${MARGEN}" y="${yHorario}" width="${ANCHO - MARGEN * 2}" height="4" fill="${color}" opacity="0.7"/>
+  <text x="${MARGEN}" y="${yHorario + 62}" font-family="${TEXTO}" font-size="36"
         font-weight="600" fill="${COLORES.papel}">Abierta hasta las 9 de la mañana de mañana</text>
   ${pie('Colegio de Farmacéuticos de Balcarce', color)}
 </svg>`;
@@ -248,61 +287,100 @@ export function placaUtiles({ grupos = [] }) {
     }
   }
 
+  // Cada teléfono como una fila con el número grande a la derecha: se lee
+  // de un vistazo, que es para lo que existe esta pieza.
   const fila = (it, y) => `
-    <text x="72" y="${y}" font-family="Segoe UI, sans-serif" font-size="26" font-weight="700"
-          letter-spacing="1" fill="${COLORES.ambar}">${esc(it.categoria.toUpperCase())}</text>
-    <text x="72" y="${y + 44}" font-family="Georgia, serif" font-size="34" font-weight="600"
-          fill="${COLORES.papel}">${esc(it.nombre)}</text>
-    <text x="72" y="${y + 82}" font-family="Segoe UI, sans-serif" font-size="30"
+    <text x="${MARGEN}" y="${y}" font-family="${TEXTO}" font-size="21" font-weight="700"
+          letter-spacing="3" fill="${color}">${esc(it.categoria.toUpperCase())}</text>
+    <text x="${MARGEN}" y="${y + 48}" font-family="${DISPLAY}" font-size="38" font-weight="700"
+          letter-spacing="-1" fill="${COLORES.papel}">${esc(it.nombre)}</text>
+    <text x="${MARGEN}" y="${y + 96}" font-family="${TEXTO}" font-size="34" font-weight="600"
           fill="${COLORES.ambar}">${esc(it.numero)}</text>
-    <rect x="72" y="${y + 106}" width="936" height="1" fill="#ffffff" fill-opacity="0.12"/>`;
+    <rect x="${MARGEN}" y="${y + 126}" width="${ANCHO - MARGEN * 2}" height="1"
+          fill="#ffffff" fill-opacity="0.14"/>`;
 
-  let y = 460;
-  const bloques = filas.map((it) => { const s = fila(it, y); y += 138; return s; }).join('');
+  let y = 500;
+  const bloques = filas.map((it) => { const s = fila(it, y); y += 152; return s; }).join('');
 
   return `<svg xmlns="http://www.w3.org/2000/svg" width="${ANCHO}" height="${ALTO}" viewBox="0 0 ${ANCHO} ${ALTO}">
-  <rect width="${ANCHO}" height="${ALTO}" fill="${COLORES.tinta}"/>
-  ${radar(color, { cx: 900, cy: 300 })}
+  ${fondo(color)}
   ${cabecera(null, color)}
-  <text x="72" y="340" font-family="Segoe UI, sans-serif" font-size="30" font-weight="700"
-        letter-spacing="7" fill="${COLORES.ambar}">TELÉFONOS ÚTILES</text>
-  <text x="72" y="410" font-family="Georgia, serif" font-size="46" font-weight="bold"
-        fill="${COLORES.papel}">Guardalos en el celular</text>
+  ${rotulo('Teléfonos útiles', color, 296)}
+  <text x="${MARGEN}" y="450" font-family="${DISPLAY}" font-size="56" font-weight="900"
+        letter-spacing="-2" fill="${COLORES.papel}">Guardalos en el celular</text>
   ${bloques}
-  ${pie('Municipalidad de Balcarce · más en radarbalcarce.com.ar', color)}
+  ${pie('Municipalidad de Balcarce · radarbalcarce.com.ar', color)}
 </svg>`;
 }
 
 // Regla: en las piezas para redes NO va la fuente. La atribución vive en la
 // nota de la página, que es donde además está el link al original.
-export function placaNoticia({ seccion, titulo, cuando = '', hora = '', fondo }) {
+export function placaNoticia({
+  seccion, titulo, cuando = '', hora = '', fondo: ilustracionPedida,
+}) {
   const color = COLOR_SECCION[seccion] ?? COLORES.rojo;
-  const ilustracion = fondo === undefined ? fondoDeSeccion(seccion) : fondo;
-  const renglones = envolver(titulo, 22).slice(0, 5);
-  const y0 = 760 - (renglones.length - 3) * 40;
+  const ilustracion = ilustracionPedida === undefined ? fondoDeSeccion(seccion) : ilustracionPedida;
+
+  // El titular es el protagonista, así que el cuerpo se adapta a su largo
+  // en vez de achicarse siempre igual: un título corto se ve enorme, uno
+  // largo entra completo sin desbordar.
+  const renglones = envolver(titulo, 20).slice(0, 5);
+  const tam = renglones.length <= 2 ? 104 : renglones.length === 3 ? 92 : 78;
+  const interlinea = Math.round(tam * 1.16);
+
+  // Anclado abajo, no centrado: el texto crece hacia arriba desde una
+  // línea fija, que es lo que hace que todas las piezas se sientan de la
+  // misma familia aunque el titular cambie de largo.
+  const base = 1180;
+  const y0 = base - (renglones.length - 1) * interlinea;
+
   return `<svg xmlns="http://www.w3.org/2000/svg" width="${ANCHO}" height="${ALTO}" viewBox="0 0 ${ANCHO} ${ALTO}">
-  <rect width="${ANCHO}" height="${ALTO}" fill="${COLORES.tinta}"/>
+  ${fondo(color)}
   ${capaFondo(ilustracion)}
-  ${radar(color, { cx: 900, cy: 480 })}
   ${cabecera(hora, color)}
-  <rect x="72" y="300" width="${18 + esc(seccion).length * 22}" height="58" rx="8" fill="${color}"/>
-  <text x="${81 + 9}" y="341" font-family="Segoe UI, sans-serif" font-size="28" font-weight="700"
-        letter-spacing="4" fill="#ffffff">${esc(seccion.toUpperCase())}</text>
-  ${renglones.map((l, i) => `<text x="72" y="${y0 + i * 104}" font-family="Georgia, serif"
-        font-size="86" font-weight="bold" fill="${COLORES.papel}">${esc(l)}</text>`).join('')}
-  <rect x="72" y="${y0 + renglones.length * 104 + 40}" width="150" height="6" fill="${color}"/>
-  ${cuando ? `<text x="72" y="${y0 + renglones.length * 104 + 120}" font-family="Segoe UI, sans-serif"
-        font-size="32" fill="${COLORES.suave}">${esc(cuando)}</text>` : ''}
+  ${rotulo(seccion, color, 296)}
+
+  ${renglones.map((l, i) => `<text x="${MARGEN}" y="${y0 + i * interlinea}"
+        font-family="${DISPLAY}" font-size="${tam}" font-weight="900" letter-spacing="-2"
+        fill="${COLORES.papel}">${esc(l)}</text>`).join('')}
+
+  <rect x="${MARGEN}" y="${base + 62}" width="96" height="6" fill="${color}"/>
+  ${cuando ? `<text x="${MARGEN}" y="${base + 142}" font-family="${TEXTO}"
+        font-size="30" font-weight="500" fill="${COLORES.suave}">${esc(cuando)}</text>` : ''}
   ${pie('La nota completa en radarbalcarce.com.ar', color)}
 </svg>`;
 }
 
 /** Pasa el SVG a PNG con la calidad que pide Instagram. */
+// Las tipografías del portal, incrustadas de verdad. Antes las placas se
+// dibujaban con Georgia y Segoe UI (las que trae Windows) y por eso no
+// terminaban de verse del mismo medio que la web. Estas son las mismas
+// que usa el sitio: Fraunces para los titulares, IBM Plex Sans para todo
+// lo demás.
+const CARPETA_FUENTES = path.join(import.meta.dirname, 'marca', 'fuentes');
+
+function archivosDeFuente() {
+  try {
+    return fs.readdirSync(CARPETA_FUENTES)
+      .filter((f) => f.endsWith('.ttf'))
+      .map((f) => path.join(CARPETA_FUENTES, f));
+  } catch {
+    return [];
+  }
+}
+
 export function aPng(svg, destino) {
   fs.mkdirSync(path.dirname(destino), { recursive: true });
+  const propias = archivosDeFuente();
   const r = new Resvg(svg, {
     fitTo: { mode: 'width', value: ANCHO },
-    font: { loadSystemFonts: true, defaultFontFamily: 'Segoe UI' },
+    font: {
+      fontFiles: propias,
+      // Si por lo que sea faltan los archivos, sigue andando con las del
+      // sistema en vez de romperse: una placa fea es mejor que ninguna.
+      loadSystemFonts: propias.length === 0,
+      defaultFontFamily: 'IBM Plex Sans',
+    },
   });
   fs.writeFileSync(destino, r.render().asPng());
   return destino;

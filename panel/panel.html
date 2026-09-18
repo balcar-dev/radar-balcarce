@@ -84,6 +84,7 @@
   <button data-t="publicadas">Publicadas</button>
   <button data-t="descartadas">Descartadas</button>
   <button data-t="bloqueadas">Frenadas</button>
+  <button data-t="archivadas">Archivadas</button>
   <button data-t="fuentes">Fuentes</button>
   <button data-t="servicios">Clima y farmacias</button>
   <button data-t="agenda">Agenda</button>
@@ -127,6 +128,7 @@ function pintar() {
   if (tab === 'publicadas') m.innerHTML = vistaLista(['publicada', 'automatica'], 'Todavía no hay nada publicado.');
   if (tab === 'descartadas') m.innerHTML = vistaLista(['descartada'], 'No descartaste nada todavía.');
   if (tab === 'bloqueadas') m.innerHTML = vistaLista(['bloqueada'], 'No hay nada frenado. El semáforo rojo frena menores, víctimas y causas sin confirmar: si aparece algo acá, no se publica ni por error.');
+  if (tab === 'archivadas') m.innerHTML = vistaLista(['archivada'], 'Nada archivado todavía. Acá caen solas las notas que pasaron 72 horas sin que nadie las decidiera.');
   if (tab === 'fuentes') m.innerHTML = vistaFuentes();
   if (tab === 'servicios') m.innerHTML = vistaServicios();
   if (tab === 'agenda') m.innerHTML = vistaAgenda();
@@ -198,7 +200,7 @@ function detalle(n) {
   </div>`;
 }
 
-const TITULOS = { publicada:'Publicadas', descartada:'Descartadas', bloqueada:'Frenadas por el semáforo rojo' };
+const TITULOS = { publicada:'Publicadas', descartada:'Descartadas', bloqueada:'Frenadas por el semáforo rojo', archivada:'Archivadas por tiempo' };
 
 function vistaLista(estados, vacio) {
   const ns = D.notas.filter((n) => estados.includes(n.estado));

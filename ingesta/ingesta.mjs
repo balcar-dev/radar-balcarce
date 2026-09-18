@@ -27,14 +27,16 @@ const UA = 'RadarBalcarce/0.1 (agregador local de noticias de Balcarce)';
 
 // ---------------------------------------------------------------- utilidades
 
-export async function traer(url, { timeout = 15000 } = {}) {
+export async function traer(url, { timeout = 15000, agente } = {}) {
   const ctrl = new AbortController();
   const t = setTimeout(() => ctrl.abort(), timeout);
   try {
     const res = await fetch(url, {
       signal: ctrl.signal,
       redirect: 'follow',
-      headers: { 'user-agent': UA, accept: '*/*' },
+      // Algunas APIs (met.no) exigen un User-Agent que identifique al que
+      // llama, con contacto incluido: es su condición de uso gratuito.
+      headers: { 'user-agent': agente ?? UA, accept: '*/*' },
     });
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     // Varios sitios no declaran charset y fetch los lee como latin1: forzamos UTF-8
@@ -288,7 +290,90 @@ const CIELO = {
   96: 'Tormenta con granizo', 99: 'Tormenta fuerte con granizo',
 };
 
+const RUMBOS = ['N', 'NE', 'E', 'SE', 'S', 'SO', 'O', 'NO'];
+const DIAS_CORTOS = ['dom', 'lun', 'mar', 'mié', 'jue', 'vie', 'sáb'];
+
+// El clima es de las pocas cosas que se publican solas todos los días, así
+// que no puede depender de un solo proveedor: el 18/09 Open-Meteo no
+// respondió en un ciclo y la placa del clima quedó sin datos. Este es el
+// respaldo: la API del Instituto Meteorológico de Noruega, gratis, sin
+// clave, sólo pide identificarse con un User-Agent propio (lo exige su
+// política de uso).
+const SIMBOLOS_METNO = {
+  clearsky: 'Despejado', fair: 'Mayormente despejado', partlycloudy: 'Parcialmente nublado',
+  cloudy: 'Nublado', fog: 'Niebla', lightrain: 'Lluvia leve', rain: 'Lluvia',
+  heavyrain: 'Lluvia fuerte', lightrainshowers: 'Chaparrones leves',
+  rainshowers: 'Chaparrones', heavyrainshowers: 'Chaparrones fuertes',
+  lightsnow: 'Nieve leve', snow: 'Nieve', heavysnow: 'Nieve intensa',
+  sleet: 'Aguanieve', thunderstorm: 'Tormenta', rainandthunder: 'Lluvia con tormenta',
+  heavyrainandthunder: 'Tormenta fuerte',
+};
+
+function cieloDeSimbolo(codigo = '') {
+  // met.no devuelve cosas como "partlycloudy_day" o "rain_night".
+  const base = codigo.replace(/_(day|night|polartwilight)$/, '');
+  return SIMBOLOS_METNO[base] ?? 'Sin datos';
+}
+
+async function climaDeMetNo() {
+  const url = 'https://api.met.no/weatherapi/locationforecast/2.0/compact'
+    + `?lat=${BALCARCE.lat}&lon=${BALCARCE.lon}`;
+  const j = JSON.parse(await traer(url, { agente: 'RadarBalcarce/0.1 (radarbalcarce.com.ar)' }));
+  const serie = j.properties.timeseries;
+  const ahora = serie[0];
+  const det = ahora.data.instant.details;
+
+  // met.no da una entrada por hora: se agrupan por día para sacar máxima,
+  // mínima y probabilidad de lluvia, que es lo que usan las placas.
+  const porDia = {};
+  for (const punto of serie) {
+    const dia = punto.time.slice(0, 10);
+    const t = punto.data.instant.details.air_temperature;
+    porDia[dia] ??= { temps: [], lluvia: 0, simbolo: null };
+    porDia[dia].temps.push(t);
+    const prob = punto.data.next_1_hours?.details?.probability_of_precipitation
+      ?? punto.data.next_6_hours?.details?.probability_of_precipitation ?? 0;
+    porDia[dia].lluvia = Math.max(porDia[dia].lluvia, prob);
+    porDia[dia].simbolo ??= punto.data.next_6_hours?.summary?.symbol_code
+      ?? punto.data.next_1_hours?.summary?.symbol_code;
+  }
+
+  const dias = Object.entries(porDia).slice(0, 4).map(([fecha, d]) => ({
+    fecha,
+    dia: DIAS_CORTOS[new Date(`${fecha}T12:00:00`).getDay()],
+    max: Math.round(Math.max(...d.temps)),
+    min: Math.round(Math.min(...d.temps)),
+    lluvia: Math.round(d.lluvia),
+    cielo: cieloDeSimbolo(d.simbolo ?? ''),
+  }));
+
+  return {
+    ahora: {
+      temp: Math.round(det.air_temperature),
+      // met.no no da sensación térmica: se usa la temperatura real antes
+      // que inventar un número.
+      sensacion: Math.round(det.air_temperature),
+      humedad: Math.round(det.relative_humidity),
+      // Viene en metros por segundo, hay que pasarlo a km/h.
+      viento: Math.round(det.wind_speed * 3.6),
+      rumbo: RUMBOS[Math.round(det.wind_from_direction / 45) % 8],
+      cielo: cieloDeSimbolo(ahora.data.next_1_hours?.summary?.symbol_code ?? ''),
+    },
+    dias,
+    fuente: 'MET Noruega',
+  };
+}
+
 async function traerClima() {
+  try {
+    return await climaDeOpenMeteo();
+  } catch (e) {
+    log(`  \x1b[33maviso\x1b[0m Open-Meteo falló (${e.message}), probando el respaldo`);
+    return climaDeMetNo();
+  }
+}
+
+async function climaDeOpenMeteo() {
   const url = 'https://api.open-meteo.com/v1/forecast'
     + `?latitude=${BALCARCE.lat}&longitude=${BALCARCE.lon}`
     + '&current=temperature_2m,apparent_temperature,relative_humidity_2m,wind_speed_10m,wind_direction_10m,weather_code'
