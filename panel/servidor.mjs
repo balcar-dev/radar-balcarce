@@ -14,6 +14,9 @@ import {
 import { NUMEROS, tocaHoy, diaDeEstaSemana } from '../ingesta/utiles.mjs';
 import { reescribirConRespaldo, INSTRUCCION_EDITORIAL } from '../reels/reescritura.mjs';
 import { clave as claveGemini } from '../reels/voz-gemini.mjs';
+import {
+  sesionDe, entrar, salir, paginaLogin, hayUsuarios,
+} from './acceso.mjs';
 import { TIPOS as TIPOS_BUZON, ESTADOS_SEGUIMIENTO } from './buzon.mjs';
 import { estadoCuota as estadoCuotaVoz } from '../reels/voz-gemini.mjs';
 import { guionNoticia } from '../reels/plan.mjs';
@@ -140,7 +143,7 @@ function estadoPorDefecto(n) {
 }
 
 // Mezcla lo que trajo la ingesta con las decisiones ya tomadas.
-function vista() {
+function vista(sesion = null) {
   const notas = (ultima?.notas ?? []).map((n) => {
     const d = estado.decisiones[n.id];
     return {
@@ -163,6 +166,7 @@ function vista() {
   return {
     generado: ultima?.generado ?? null,
     corriendo,
+    yo: sesion?.nombre ?? null,
     notas,
     fuentes: estado.fuentes.map((f) => ({
       ...f,
@@ -316,28 +320,80 @@ async function cuerpoDe(req) {
   try { return JSON.parse(Buffer.concat(trozos).toString('utf8')); } catch { return {}; }
 }
 
+function html(res, texto, codigo = 200) {
+  res.writeHead(codigo, { 'content-type': 'text/html; charset=utf-8' });
+  res.end(texto);
+}
+
+/** El formulario del login viaja como formulario de toda la vida, no como
+ *  JSON: así la pantalla de entrada funciona sin una línea de JavaScript. */
+async function formularioDe(req) {
+  const trozos = [];
+  for await (const t of req) trozos.push(t);
+  const datos = new URLSearchParams(Buffer.concat(trozos).toString('utf8'));
+  return Object.fromEntries(datos);
+}
+
 const servidor = http.createServer(async (req, res) => {
   const url = new URL(req.url, `http://localhost:${PUERTO}`);
   const ruta = url.pathname;
 
   try {
+    // ---------------------------------------------------------- la puerta
+    //
+    // Todo lo de abajo necesita sesión. Antes no: el panel escuchaba en
+    // todas las interfaces sin contraseña, así que cualquiera en la misma
+    // red podía publicar o descartar noticias. Ahora que lo van a abrir
+    // para entrar desde afuera, eso no puede seguir así.
+    if (ruta === '/login') {
+      if (!hayUsuarios()) { html(res, paginaLogin({ sinUsuarios: true })); return; }
+      if (req.method === 'POST') {
+        const datos = await formularioDe(req);
+        const r = entrar(datos, req);
+        if (!r.ok) { html(res, paginaLogin({ error: r.error }), 401); return; }
+        res.writeHead(302, { 'set-cookie': r.cookie, location: '/' });
+        res.end();
+        return;
+      }
+      html(res, paginaLogin());
+      return;
+    }
+
+    if (ruta === '/salir') {
+      res.writeHead(302, { 'set-cookie': salir(req), location: '/login' });
+      res.end();
+      return;
+    }
+
+    const sesion = sesionDe(req);
+    if (!sesion) {
+      // A la API se le contesta 401 y no una redirección: el panel corre en
+      // el navegador y necesita saber que se le venció la sesión para
+      // mandar a iniciarla de nuevo, no recibir el HTML del login como si
+      // fuera la respuesta de la API.
+      if (ruta.startsWith('/api/')) { json(res, { error: 'sesión vencida' }, 401); return; }
+      res.writeHead(302, { location: '/login' });
+      res.end();
+      return;
+    }
+
     if (ruta === '/' || ruta === '/index.html') {
       res.writeHead(200, { 'content-type': 'text/html; charset=utf-8' });
       res.end(fs.readFileSync(path.join(AQUI, 'panel.html')));
       return;
     }
 
-    if (ruta === '/api/estado') { json(res, vista()); return; }
+    if (ruta === '/api/estado') { json(res, vista(sesion)); return; }
 
     if (ruta === '/api/actualizar' && req.method === 'POST') {
       await correrIngesta();
-      json(res, vista());
+      json(res, vista(sesion));
       return;
     }
 
     if (ruta === '/api/agenda/actualizar' && req.method === 'POST') {
       await actualizarAgenda();
-      json(res, vista());
+      json(res, vista(sesion));
       return;
     }
 
@@ -360,27 +416,27 @@ const servidor = http.createServer(async (req, res) => {
           // usa un estado más simple de cola editorial.
           estado: d.tipo === 'seguimiento' ? 'pendiente' : 'nuevo',
           respuestaOtraParte: null,
-          cargadoPor: d.quien || 'vos',
+          cargadoPor: sesion.nombre,
           cargadoCuando: new Date().toISOString(),
         });
-        anotar(`buzón: ${TIPOS_BUZON[d.tipo]?.nombre ?? d.tipo} recibido`, d.texto.slice(0, 70), d.quien ?? 'vos');
+        anotar(`buzón: ${TIPOS_BUZON[d.tipo]?.nombre ?? d.tipo} recibido`, d.texto.slice(0, 70), sesion.nombre);
       }
       if (d.accion === 'estado') {
         const item = estado.buzon.find((x) => x.id === d.id);
-        if (item) { item.estado = d.estado; anotar('buzón: cambio de estado', `${item.texto.slice(0, 50)} → ${d.estado}`, d.quien ?? 'vos'); }
+        if (item) { item.estado = d.estado; anotar('buzón: cambio de estado', `${item.texto.slice(0, 50)} → ${d.estado}`, sesion.nombre); }
       }
       if (d.accion === 'respuesta') {
         // La respuesta de la otra parte en un reclamo: es lo que habilita
         // publicarlo. Sin esto, un reclamo no debería salir nunca.
         const item = estado.buzon.find((x) => x.id === d.id);
-        if (item) { item.respuestaOtraParte = d.respuesta; anotar('buzón: se sumó la respuesta de la otra parte', item.texto.slice(0, 50), d.quien ?? 'vos'); }
+        if (item) { item.respuestaOtraParte = d.respuesta; anotar('buzón: se sumó la respuesta de la otra parte', item.texto.slice(0, 50), sesion.nombre); }
       }
       if (d.accion === 'borrar') {
         estado.buzon = estado.buzon.filter((x) => x.id !== d.id);
-        anotar('buzón: eliminado', d.id, d.quien ?? 'vos');
+        anotar('buzón: eliminado', d.id, sesion.nombre);
       }
       guardarJson(F_ESTADO, estado);
-      json(res, vista());
+      json(res, vista(sesion));
       return;
     }
 
@@ -388,13 +444,14 @@ const servidor = http.createServer(async (req, res) => {
     // agenda: sólo lleva la cuenta de cuándo, no manda nada — el mensaje se
     // copia y se pega a mano en WhatsApp, esto es apenas el recordatorio.
     if (ruta === '/api/agenda/contactado' && req.method === 'POST') {
-      const { id, quien = 'vos' } = await cuerpoDe(req);
+      const { id } = await cuerpoDe(req);
+      const quien = sesion.nombre;
       const c = CONTACTOS_AGENDA.find((x) => x.id === id);
       if (!c) { json(res, { error: 'no existe ese contacto' }, 404); return; }
       estado.contactadoEl[id] = new Date().toISOString();
       anotar('agenda: mensaje mensual enviado', c.quien, quien);
       guardarJson(F_ESTADO, estado);
-      json(res, vista());
+      json(res, vista(sesion));
       return;
     }
 
@@ -412,17 +469,17 @@ const servidor = http.createServer(async (req, res) => {
           hasta: d.fechaHasta || null,
           lugar: d.lugar || null,
           fuente: d.fuente || 'cargado a mano',
-          cargadoPor: d.quien || 'vos',
+          cargadoPor: sesion.nombre,
           cargadoCuando: new Date().toISOString(),
         });
-        anotar('evento cargado a mano', `${d.nombre} · ${d.fecha}`, d.quien ?? 'vos');
+        anotar('evento cargado a mano', `${d.nombre} · ${d.fecha}`, sesion.nombre);
       }
       if (d.accion === 'borrar') {
         estado.eventosManual = estado.eventosManual.filter((e) => e.id !== d.id);
-        anotar('evento manual borrado', d.id, d.quien ?? 'vos');
+        anotar('evento manual borrado', d.id, sesion.nombre);
       }
       guardarJson(F_ESTADO, estado);
-      json(res, vista());
+      json(res, vista(sesion));
       return;
     }
 
@@ -430,7 +487,8 @@ const servidor = http.createServer(async (req, res) => {
     // resultado como si fuera una edición manual, para que quede igual de
     // editable después. Si Gemini falla, cae al armado mecánico y lo dice.
     if (ruta === '/api/reescribir' && req.method === 'POST') {
-      const { id, quien = 'vos' } = await cuerpoDe(req);
+      const { id } = await cuerpoDe(req);
+      const quien = sesion.nombre;
       const nota = ultima?.notas?.find((n) => n.id === id);
       if (!nota) { json(res, { error: 'no existe esa nota' }, 404); return; }
 
@@ -451,15 +509,18 @@ const servidor = http.createServer(async (req, res) => {
       };
       anotar(r.deIA ? 'reescrita por IA' : `reescritura: la IA falló (${r.motivoRespaldo}), quedó la mecánica`, nota.titulo, quien);
       guardarJson(F_ESTADO, estado);
-      json(res, vista());
+      json(res, vista(sesion));
       return;
     }
 
     // Decidir sobre una nota: publicar, descartar, volver a la cola, editar.
     if (ruta === '/api/nota' && req.method === 'POST') {
       const {
-        id, accion, titulo, copete, guion, quien = 'vos',
+        id, accion, titulo, copete, guion,
       } = await cuerpoDe(req);
+      // Quién hizo esto sale de la sesión, no de lo que diga el navegador:
+      // antes el panel lo mandaba en el cuerpo y era a confianza.
+      const quien = sesion.nombre;
       const nota = ultima?.notas?.find((n) => n.id === id);
       if (!nota) { json(res, { error: 'no existe esa nota' }, 404); return; }
 
@@ -483,20 +544,21 @@ const servidor = http.createServer(async (req, res) => {
         anotar(accion === 'editar' ? 'editada' : accion, titulo ?? nota.titulo, quien);
       }
       guardarJson(F_ESTADO, estado);
-      json(res, vista());
+      json(res, vista(sesion));
       return;
     }
 
     // Decidir de a montones: la primera corrida trae todo el archivo que haya
     // en las portadas, y no tiene sentido tocar cien botones.
     if (ruta === '/api/lote' && req.method === 'POST') {
-      const { ids = [], accion, quien = 'vos' } = await cuerpoDe(req);
+      const { ids = [], accion } = await cuerpoDe(req);
+      const quien = sesion.nombre;
       for (const id of ids) {
         estado.decisiones[id] = { estado: accion, por: quien, cuando: new Date().toISOString() };
       }
       anotar(`${ids.length} notas ${accion === 'descartada' ? 'archivadas' : accion}`, 'en lote', quien);
       guardarJson(F_ESTADO, estado);
-      json(res, vista());
+      json(res, vista(sesion));
       return;
     }
 
@@ -545,22 +607,22 @@ const servidor = http.createServer(async (req, res) => {
           activa: true,
           nota: d.nota ?? '',
         });
-        anotar('fuente agregada', `${d.nombre} · ${d.url}`, d.quien ?? 'vos');
+        anotar('fuente agregada', `${d.nombre} · ${d.url}`, sesion.nombre);
       }
       if (d.accion === 'borrar') {
         estado.fuentes = estado.fuentes.filter((f) => f.id !== d.id);
-        anotar('fuente borrada', d.id, d.quien ?? 'vos');
+        anotar('fuente borrada', d.id, sesion.nombre);
       }
       if (d.accion === 'activar') {
         const f = estado.fuentes.find((x) => x.id === d.id);
-        if (f) { f.activa = !f.activa; anotar(f.activa ? 'fuente reactivada' : 'fuente pausada', f.nombre, d.quien ?? 'vos'); }
+        if (f) { f.activa = !f.activa; anotar(f.activa ? 'fuente reactivada' : 'fuente pausada', f.nombre, sesion.nombre); }
       }
       if (d.accion === 'peso') {
         const f = estado.fuentes.find((x) => x.id === d.id);
-        if (f) { f.peso = Math.max(1, Math.min(40, Number(d.peso) || f.peso)); anotar('peso cambiado', `${f.nombre} → ${f.peso}`, d.quien ?? 'vos'); }
+        if (f) { f.peso = Math.max(1, Math.min(40, Number(d.peso) || f.peso)); anotar('peso cambiado', `${f.nombre} → ${f.peso}`, sesion.nombre); }
       }
       guardarJson(F_ESTADO, estado);
-      json(res, vista());
+      json(res, vista(sesion));
       return;
     }
 

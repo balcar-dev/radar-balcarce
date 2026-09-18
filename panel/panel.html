@@ -74,8 +74,8 @@
   <h1>Radar <span>Balcarce</span></h1>
   <div class="estado"><span class="luz" id="luz"></span><span id="txtEstado">cargando…</span></div>
   <div class="crece"></div>
-  <label for="quien" style="font-size:12px;color:#BDC1B8">Soy</label>
-  <select id="quien"><option>Andrés</option><option>Hernán</option></select>
+  <span id="quienSoy" style="font-size:12px;color:#BDC1B8"></span>
+  <a href="/salir" class="btn-claro" style="text-decoration:none;display:inline-flex;align-items:center">Salir</a>
   <button class="btn-claro" id="btnActualizar">Buscar noticias ahora</button>
 </header>
 
@@ -99,13 +99,16 @@ let D = null, sel = null, tab = 'cola';
 const $ = (s) => document.querySelector(s);
 const esc = (s) => String(s ?? '').replace(/[&<>"]/g, (c) => ({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;' }[c]));
 const puntos = { verde:'#16615B', amarillo:'#C99A16', rojo:'#A8371F' };
-const quien = () => $('#quien').value;
+// Quién sos ya no lo elige el navegador: lo sabe el servidor por la
+// sesión, y es eso lo que queda anotado en el historial.
+let yo = null;
 
 async function api(ruta, cuerpo) {
   const r = await fetch(ruta, cuerpo ? {
     method:'POST', headers:{'content-type':'application/json'},
-    body: JSON.stringify({ ...cuerpo, quien: quien() })
+    body: JSON.stringify(cuerpo)
   } : undefined);
+  if (r.status === 401) { location.href = '/login'; return {}; }
   return r.json();
 }
 
@@ -114,6 +117,7 @@ async function cargar(datos) {
   const pend = D.notas.filter((n) => n.estado === 'pendiente');
   $('#nCola').textContent = pend.length;
   $('#nBuzon').textContent = (D.buzon || []).filter((b) => b.estado === 'nuevo' || b.estado === 'pendiente').length;
+  if (D.yo) { yo = D.yo; $('#quienSoy').textContent = D.yo; }
   $('#txtEstado').textContent = D.generado
     ? `última búsqueda ${new Date(D.generado).toLocaleTimeString('es-AR',{hour:'2-digit',minute:'2-digit'})} · ${D.notas.length} historias · ${pend.length} sin decidir`
     : 'todavía no busqué noticias';
