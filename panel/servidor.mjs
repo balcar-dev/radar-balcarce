@@ -13,6 +13,7 @@ import {
 } from '../ingesta/agenda.mjs';
 import { NUMEROS, tocaHoy, diaDeEstaSemana } from '../ingesta/utiles.mjs';
 import { reescribirConRespaldo, INSTRUCCION_EDITORIAL } from '../reels/reescritura.mjs';
+import { clave as claveGemini } from '../reels/voz-gemini.mjs';
 import { TIPOS as TIPOS_BUZON, ESTADOS_SEGUIMIENTO } from './buzon.mjs';
 import { estadoCuota as estadoCuotaVoz } from '../reels/voz-gemini.mjs';
 import { guionNoticia } from '../reels/plan.mjs';
@@ -208,6 +209,76 @@ function fuentesParaIngestar() {
     });
 }
 
+// Cuántas se reescriben en cada ciclo. El ciclo es cada 10 minutos, así que
+// 12 por vuelta son unas 70 por hora: bastante más de lo que Balcarce publica
+// en un día entero, y sin vaciar el cupo gratis de golpe.
+const REESCRITURAS_POR_CICLO = 12;
+
+// Si la IA falla tres veces seguidas, se corta y se sigue en el próximo ciclo.
+// Cuando Gemini está saturado falla para todas por igual, y lo único que se
+// consigue insistiendo es llenar el historial de errores.
+const FALLOS_PARA_CORTAR = 3;
+
+/** Reescribe sola lo que va a salir sin que nadie lo mire.
+ *
+ *  Sólo toca las verdes: son las que se publican automáticamente, así que
+ *  son justamente las que nadie va a corregir a mano. Lo amarillo espera
+ *  aprobación y ahí ya hay un humano que puede apretar el botón.
+ *
+ *  Nunca pisa algo que escribió una persona: si la decisión guardada no vino
+ *  de la IA, se respeta. Y el estado que deja es el que la nota habría tenido
+ *  igual (estadoPorDefecto), para no cambiar sin querer qué se publica. */
+async function reescribirPendientes() {
+  if (!claveGemini()) return;
+
+  const cola = (ultima?.notas ?? [])
+    .filter((n) => n.semaforo === 'verde')
+    .filter((n) => {
+      const d = estado.decisiones[n.id];
+      if (!d) return true;              // sin tocar: se reescribe
+      if (d.deIA) return false;         // ya la reescribió la IA
+      if (d.por && d.por !== 'ia') return false; // la tocó una persona
+      return !d.guion;
+    })
+    .filter((n) => !esVieja(n))
+    .sort((a, b) => b.relevancia - a.relevancia)
+    .slice(0, REESCRITURAS_POR_CICLO);
+
+  if (!cola.length) return;
+
+  let hechas = 0;
+  let fallos = 0;
+  for (const nota of cola) {
+    const r = await reescribirConRespaldo({ ...nota, copete: nota.resumenFuente }, mecanico);
+    if (!r.deIA) {
+      fallos += 1;
+      if (fallos >= FALLOS_PARA_CORTAR) break;
+      continue; // se deja como estaba y se reintenta en el próximo ciclo
+    }
+    const previo = estado.decisiones[nota.id] ?? {};
+    estado.decisiones[nota.id] = {
+      ...previo,
+      estado: previo.estado ?? estadoPorDefecto(nota),
+      titulo: r.titulo,
+      copete: r.copete,
+      guion: r.guion,
+      deIA: true,
+      por: 'ia',
+      cuando: new Date().toISOString(),
+    };
+    hechas += 1;
+  }
+
+  if (hechas || fallos) {
+    guardarJson(F_ESTADO, estado);
+    console.log(`  reescritas ${hechas}${fallos ? ` · ${fallos} sin poder` : ''}`);
+  }
+  if (hechas) {
+    anotar(`reescribió ${hechas} ${hechas === 1 ? 'nota' : 'notas'} automáticas`, '', 'ia');
+    guardarJson(F_ESTADO, estado);
+  }
+}
+
 async function correrIngesta() {
   if (corriendo) return;
   corriendo = true;
@@ -221,6 +292,9 @@ async function correrIngesta() {
     guardarJson(F_ULTIMA, ultima);
     const nuevas = ultima.notas.filter((n) => !estado.decisiones[n.id]).length;
     console.log(`  ciclo ok · ${ultima.notas.length} historias · ${nuevas} sin decidir`);
+    // Lo que va a salir solo se escribe solo. Va después de guardar la
+    // ingesta: si la reescritura falla, las notas ya están.
+    await reescribirPendientes();
   } catch (e) {
     console.error('  ciclo con error:', e.message);
   } finally {
@@ -367,7 +441,7 @@ const servidor = http.createServer(async (req, res) => {
       );
       estado.decisiones[id] = {
         ...previo,
-        estado: previo.estado ?? 'pendiente',
+        estado: previo.estado ?? estadoPorDefecto(nota),
         titulo: r.titulo,
         copete: r.copete,
         guion: r.guion,
