@@ -33,6 +33,11 @@ if errorlevel 1 goto :error
 echo.
 echo   [3/4] Guardando en GitHub...
 cd ..
+REM Vercel lee la firma del commit y bloquea el deploy si el mail no se
+REM puede asociar a una cuenta suya. Por eso se firma siempre con el mail
+REM del medio, que es el de la cuenta de Vercel.
+git config user.name "Radar Balcarce"
+git config user.email "radarbalcarce@gmail.com"
 git add web/data/portada.json
 git diff --cached --quiet
 if errorlevel 1 (
