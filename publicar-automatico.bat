@@ -35,11 +35,11 @@ REM (por ejemplo porque alguien subio algo desde otro lado y hay
 REM que hacer merge) NO se corta, porque el deploy de abajo es el
 REM que pone el sitio online y ese tiene que salir igual.
 cd /d "%~dp0"
-REM Vercel lee la firma del commit y bloquea el deploy si el mail no se
-REM puede asociar a una cuenta suya. Por eso se firma siempre con el mail
-REM del medio, que es el de la cuenta de Vercel.
+REM Vercel valida la firma del commit contra GitHub antes de publicar, asi
+REM que el mail tiene que ser uno que GitHub reconozca: el interno de la
+REM cuenta balcar-dev. Con cualquier otro el deploy queda BLOCKED.
 git config user.name "Radar Balcarce"
-git config user.email "radarbalcarce@gmail.com"
+git config user.email "272334999+balcar-dev@users.noreply.github.com"
 git add web/data/portada.json
 git diff --cached --quiet
 if errorlevel 1 (
