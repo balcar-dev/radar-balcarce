@@ -202,7 +202,7 @@ export function placaClima({
 
   <text x="${MARGEN - 12}" y="900" font-family="${DISPLAY}" font-size="330" font-weight="900"
         letter-spacing="-14" fill="${COLORES.papel}">${temp}<tspan
-        font-size="140" letter-spacing="0" dy="-150" fill="${color}">°</tspan></text>
+        font-size="140" letter-spacing="0" dx="34" dy="-150" fill="${color}">°</tspan></text>
 
   <text x="${MARGEN}" y="985" font-family="${TEXTO}" font-size="44" font-weight="500"
         fill="${COLORES.suave}">${esc(cielo)}</text>
@@ -244,21 +244,24 @@ export function placaFarmacia({ detalle = [], farmacias = [], dia, diaSemana }) 
     return { svg: partes + dirs + tel, alto: cursor - y + (doble ? 104 : 124) };
   };
 
-  let y = doble ? 520 : 640;
+  // Abajo del día, con aire: antes arrancaba en 520 y el nombre de la
+  // farmacia se montaba encima de "SÁBADO 19".
+  let y = doble ? 620 : 700;
   const bloques = lista.map((f) => {
     const b = bloque(f, y);
-    y += b.alto + (doble ? 30 : 0);
+    y += b.alto + (doble ? 56 : 0);
     return b.svg;
   }).join('');
-  // La chapa del horario va pegada al bloque, no colgada abajo: si no, queda
-  // un agujero en el medio de la placa.
-  const yHorario = Math.min(1240, y + 30);
+  // La línea del horario: pegada al último bloque si la placa quedó larga,
+  // o a una altura fija si sobró lugar — para que no quede ni encimada ni
+  // colgando con medio metro de vacío arriba.
+  const yHorario = Math.min(1460, Math.max(y + 40, 1240));
 
   return `<svg xmlns="http://www.w3.org/2000/svg" width="${ANCHO}" height="${ALTO}" viewBox="0 0 ${ANCHO} ${ALTO}">
   ${fondo(color)}
   ${cabecera(null, color)}
   ${rotulo('Farmacia de turno', color, 296)}
-  <text x="${MARGEN}" y="470" font-family="${DISPLAY}" font-size="52" font-weight="700"
+  <text x="${MARGEN}" y="456" font-family="${DISPLAY}" font-size="52" font-weight="700"
         letter-spacing="-1" fill="${COLORES.suave}">${esc(diaSemana)} ${dia}</text>
   ${bloques}
   <rect x="${MARGEN}" y="${yHorario}" width="${ANCHO - MARGEN * 2}" height="4" fill="${color}" opacity="0.7"/>
@@ -300,8 +303,12 @@ export function placaAgenda({ eventos = [], titulo = 'Qué hacer este fin de sem
     <rect x="${MARGEN}" y="${y + 132}" width="${ANCHO - MARGEN * 2}" height="1"
           fill="#ffffff" fill-opacity="0.14"/>`;
 
-  let y = 520;
-  const bloques = lista.map((ev) => { const t = fila(ev, y); y += 176; return t; }).join('');
+  // El espacio se reparte entre los eventos que haya: con tres, quedaba
+  // media placa vacía abajo.
+  const desde = 540;
+  const hasta = 1560;
+  const paso = Math.min(300, Math.round((hasta - desde) / Math.max(1, lista.length)));
+  const bloques = lista.map((ev, i) => fila(ev, desde + i * paso)).join('');
 
   return `<svg xmlns="http://www.w3.org/2000/svg" width="${ANCHO}" height="${ALTO}" viewBox="0 0 ${ANCHO} ${ALTO}">
   ${fondo(color)}
@@ -325,11 +332,14 @@ export function placaUtiles({ grupos = [] }) {
     }
   }
 
-  // Cada teléfono como una fila con el número grande a la derecha: se lee
-  // de un vistazo, que es para lo que existe esta pieza.
-  const fila = (it, y) => `
-    <text x="${MARGEN}" y="${y}" font-family="${TEXTO}" font-size="21" font-weight="700"
-          letter-spacing="3" fill="${color}">${esc(it.categoria.toUpperCase())}</text>
+  // Cada teléfono como una fila: nombre grande y número debajo, que se lee
+  // de un vistazo — es para lo que existe esta pieza.
+  //
+  // La categoría sólo se escribe cuando cambia: antes se repetía en cada
+  // fila y la placa decía "EMERGENCIAS" dos veces seguidas.
+  const fila = (it, y, conCategoria) => `
+    ${conCategoria ? `<text x="${MARGEN}" y="${y}" font-family="${TEXTO}" font-size="21" font-weight="700"
+          letter-spacing="3" fill="${color}">${esc(it.categoria.toUpperCase())}</text>` : ''}
     <text x="${MARGEN}" y="${y + 48}" font-family="${DISPLAY}" font-size="38" font-weight="700"
           letter-spacing="-1" fill="${COLORES.papel}">${esc(it.nombre)}</text>
     <text x="${MARGEN}" y="${y + 96}" font-family="${TEXTO}" font-size="34" font-weight="600"
@@ -337,8 +347,16 @@ export function placaUtiles({ grupos = [] }) {
     <rect x="${MARGEN}" y="${y + 126}" width="${ANCHO - MARGEN * 2}" height="1"
           fill="#ffffff" fill-opacity="0.14"/>`;
 
-  let y = 500;
-  const bloques = filas.map((it) => { const s = fila(it, y); y += 152; return s; }).join('');
+  // El espacio se reparte entre las filas que haya, para no dejar media
+  // placa vacía cuando son pocas.
+  const desde = 540;
+  const paso = Math.min(210, Math.round((1600 - desde) / Math.max(1, filas.length)));
+  let anterior = null;
+  const bloques = filas.map((it, i) => {
+    const conCategoria = it.categoria !== anterior;
+    anterior = it.categoria;
+    return fila(it, desde + i * paso, conCategoria);
+  }).join('');
 
   return `<svg xmlns="http://www.w3.org/2000/svg" width="${ANCHO}" height="${ALTO}" viewBox="0 0 ${ANCHO} ${ALTO}">
   ${fondo(color)}
@@ -353,24 +371,100 @@ export function placaUtiles({ grupos = [] }) {
 
 // Regla: en las piezas para redes NO va la fuente. La atribución vive en la
 // nota de la página, que es donde además está el link al original.
+// Cuánto ocupa un texto, aproximadamente, en píxeles.
+//
+// Cortar por cantidad de letras no sirve con una tipografía proporcional:
+// "La Dirección de Juventud" y "MMMMMMMMMMMMMMMMMMMMMMMM" tienen las mismas
+// letras y ocupan el doble una que la otra. Por eso el renglón se pasaba
+// del margen derecho aunque el conteo diera bien.
+//
+// Estos factores son del ancho de cada letra respecto del cuerpo, medidos
+// a ojo sobre Fraunces en negrita. No son exactos, pero alcanzan: el error
+// queda muy por debajo del margen que dejamos.
+// Calibrados contra una placa real: con los valores de antes, "La Dirección
+// de Juventud" medía 859 px estimados y se dibujaba en 945. Fraunces en
+// negro es más ancha de lo que parece.
+const ANCHO_LETRA = { estrecha: 0.34, normal: 0.58, ancha: 0.96, mayuscula: 0.72, numero: 0.62 };
+
+// Un poco de aire: el cálculo es aproximado y es preferible que un renglón
+// baje antes de tiempo a que se salga del margen.
+const AIRE = 0.96;
+
+function anchoAproximado(texto, tam) {
+  let total = 0;
+  for (const c of String(texto)) {
+    if (' iltjfr.,;:!|\'"()[]-'.includes(c)) total += ANCHO_LETRA.estrecha;
+    else if ('mwMW'.includes(c)) total += ANCHO_LETRA.ancha;
+    else if (c >= '0' && c <= '9') total += ANCHO_LETRA.numero;
+    else if (c === c.toUpperCase() && c !== c.toLowerCase()) total += ANCHO_LETRA.mayuscula;
+    else total += ANCHO_LETRA.normal;
+  }
+  return total * tam;
+}
+
+/** Corta el texto en renglones que entren en `disponible` píxeles. */
+export function envolverAncho(texto, tam, disponible) {
+  const palabras = String(texto).split(/\s+/);
+  const renglones = [];
+  let actual = '';
+  for (const p of palabras) {
+    const prueba = (`${actual} ${p}`).trim();
+    if (actual && anchoAproximado(prueba, tam) > disponible) { renglones.push(actual); actual = p; }
+    else actual = prueba;
+  }
+  if (actual) renglones.push(actual);
+  return renglones;
+}
+
+// Los cuerpos posibles para el titular, de mayor a menor, con cuántos
+// renglones se le permiten a cada uno. Gana el primero donde el título
+// entre completo: uno corto sale enorme y uno largo se achica lo justo.
+const ESCALONES = [
+  { tam: 104, max: 2 },
+  { tam: 96, max: 3 },
+  { tam: 86, max: 4 },
+  { tam: 76, max: 5 },
+  { tam: 66, max: 6 },
+  { tam: 58, max: 7 },
+];
+
+function repartirTitular(titulo) {
+  const disponible = (ANCHO - MARGEN * 2) * AIRE;
+  for (const e of ESCALONES) {
+    const lineas = envolverAncho(titulo, e.tam, disponible);
+    if (lineas.length <= e.max) return { lineas, tam: e.tam };
+  }
+  // Ni en el cuerpo más chico entra. Se corta, pero con puntos suspensivos
+  // para que quede claro que el titular sigue.
+  const ultimo = ESCALONES[ESCALONES.length - 1];
+  const lineas = envolverAncho(titulo, ultimo.tam, disponible).slice(0, ultimo.max);
+  lineas[lineas.length - 1] = `${lineas[lineas.length - 1]}…`;
+  return { lineas, tam: ultimo.tam };
+}
+
 export function placaNoticia({
   seccion, titulo, cuando = '', hora = '', fondo: ilustracionPedida,
 }) {
   const color = COLOR_SECCION[seccion] ?? COLORES.rojo;
   const ilustracion = ilustracionPedida === undefined ? fondoDeSeccion(seccion) : ilustracionPedida;
 
-  // El titular es el protagonista, así que el cuerpo se adapta a su largo
-  // en vez de achicarse siempre igual: un título corto se ve enorme, uno
-  // largo entra completo sin desbordar.
-  const renglones = envolver(titulo, 20).slice(0, 5);
-  const tam = renglones.length <= 2 ? 104 : renglones.length === 3 ? 92 : 78;
+  // El titular es el protagonista, así que el cuerpo se adapta a su largo.
+  //
+  // Antes esto cortaba a cinco renglones con un slice y listo: un título de
+  // seis renglones salía publicado por la mitad, terminando en "en el" y
+  // sin que nada avisara. Ahora se busca el primer escalón donde entre
+  // entero, y recién si no entra en ninguno se corta — pero con puntos
+  // suspensivos, para que se vea que falta algo.
+  const renglones = repartirTitular(titulo);
+  const tam = renglones.tam;
   const interlinea = Math.round(tam * 1.16);
 
   // Anclado abajo, no centrado: el texto crece hacia arriba desde una
   // línea fija, que es lo que hace que todas las piezas se sientan de la
   // misma familia aunque el titular cambie de largo.
   const base = 1180;
-  const y0 = base - (renglones.length - 1) * interlinea;
+  const lineas = renglones.lineas;
+  const y0 = base - (lineas.length - 1) * interlinea;
 
   return `<svg xmlns="http://www.w3.org/2000/svg" width="${ANCHO}" height="${ALTO}" viewBox="0 0 ${ANCHO} ${ALTO}">
   ${fondo(color)}
@@ -378,7 +472,7 @@ export function placaNoticia({
   ${cabecera(hora, color)}
   ${rotulo(seccion, color, 296)}
 
-  ${renglones.map((l, i) => `<text x="${MARGEN}" y="${y0 + i * interlinea}"
+  ${lineas.map((l, i) => `<text x="${MARGEN}" y="${y0 + i * interlinea}"
         font-family="${DISPLAY}" font-size="${tam}" font-weight="900" letter-spacing="-2"
         fill="${COLORES.papel}">${esc(l)}</text>`).join('')}
 
