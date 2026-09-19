@@ -235,7 +235,14 @@ main { padding: 24px 0 10px; }
   border-radius: 12px; padding: 20px; color: var(--crema);
   background: linear-gradient(160deg, var(--cielo-fondo, #1D4F63) 0%, var(--tinta) 78%);
 }
-.tarjeta-clima .titulo { font-size: 11px; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; color: #9FB4BD; }
+.tarjeta-clima .titulo { font-size: 11px; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; color: #9FB4BD; display: flex; align-items: center; gap: 7px; }
+/* El puntito verde aparece recién cuando el dato se actualizó en vivo desde
+   el navegador: si Open-Meteo no contesta, no se muestra y no se promete
+   algo que no está pasando. */
+.tarjeta-clima .en-vivo {
+  width: 6px; height: 6px; border-radius: 50%; background: #4FBF7A;
+  display: inline-block; animation: rb-latir 2.2s ease-in-out infinite;
+}
 .tarjeta-clima .temp { font-family: "Fraunces", serif; font-size: 62px; font-weight: 900; line-height: 1; margin-top: 6px; letter-spacing: -0.04em; }
 .tarjeta-clima .cielo { font-size: 14px; margin-top: 6px; font-weight: 600; }
 .tarjeta-clima .detalle { font-size: 12.5px; color: #9FB4BD; margin-top: 3px; }

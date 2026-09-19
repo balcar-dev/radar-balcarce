@@ -1,5 +1,6 @@
 import { obtenerDatos, cuando, porRanura, datosSeccion, nombreCorto, SECCIONES } from '@/lib/datos';
-import { PlacaSeccion, Etiqueta, FilaNota, TarjetaClima, TarjetaFarmacia, TarjetaBuzon } from '@/components/piezas';
+import { PlacaSeccion, Etiqueta, FilaNota, TarjetaFarmacia, TarjetaBuzon } from '@/components/piezas';
+import { TarjetaClima } from '@/components/clima-vivo';
 import { notFound } from 'next/navigation';
 
 // Se generan sólo las secciones que hoy tienen notas: no tiene sentido

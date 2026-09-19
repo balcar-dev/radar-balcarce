@@ -1,5 +1,6 @@
 import { obtenerDatos, partirFecha } from '@/lib/datos';
-import { TarjetaClima, TarjetaFarmacia, Evento } from '@/components/piezas';
+import { TarjetaFarmacia, Evento } from '@/components/piezas';
+import { TarjetaClima } from '@/components/clima-vivo';
 
 export const metadata = {
   title: 'Agenda',

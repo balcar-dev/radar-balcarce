@@ -1,5 +1,6 @@
 import { obtenerDatos } from '@/lib/datos';
-import { TarjetaClima, TarjetaBuzon } from '@/components/piezas';
+import { TarjetaBuzon } from '@/components/piezas';
+import { TarjetaClima } from '@/components/clima-vivo';
 
 export const metadata = { title: 'Balcarce Útil · Radar Balcarce' };
 

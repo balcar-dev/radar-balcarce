@@ -1,8 +1,9 @@
 import { obtenerDatos, cuando, SECCIONES } from '@/lib/datos';
 import {
-  TarjetaClima, TarjetaFarmacia, TarjetaBuzon, PlacaSeccion,
+  TarjetaFarmacia, TarjetaBuzon, PlacaSeccion,
   Etiqueta, TituloSeccion, FilaNota, Evento,
 } from '@/components/piezas';
+import { TarjetaClima } from '@/components/clima-vivo';
 
 export default function Portada() {
   const d = obtenerDatos();

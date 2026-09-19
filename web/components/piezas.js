@@ -8,60 +8,10 @@
 import { datosSeccion, nombreCorto, cuando, partirFecha } from '@/lib/datos';
 
 // --------------------------------------------------------------- el clima
-
-/** Decide qué dibujo corresponde al texto del cielo que manda el
- *  pronóstico ("Parcialmente nublado", "Chaparrones fuertes", ...). */
-function tipoDeCielo(cielo = '') {
-  const t = cielo.toLowerCase();
-  if (/lluvia|llovizna|chaparr|tormenta|nieve/.test(t)) return 'lluvia';
-  if (/despejado/.test(t) && !/mayormente/.test(t)) return 'sol';
-  return 'nube';
-}
-
-const FONDO_CIELO = { sol: '#2A6E8C', nube: '#1D4F63', lluvia: '#243D52' };
-
-export function IconoCielo({ cielo, tamano = 92 }) {
-  const tipo = tipoDeCielo(cielo);
-  const rayos = (
-    <g className="rayos" stroke="#E8A33C" strokeWidth="3" strokeLinecap="round" transform="translate(24 6)">
-      <path d="M26 5v6M26 41v6M5 26h6M41 26h6M11 11l4.2 4.2M36.8 36.8L41 41M41 11l-4.2 4.2M15.2 36.8L11 41" />
-    </g>
-  );
-
-  return (
-    <svg width={tamano} height={tamano} viewBox="0 0 92 92" fill="none" aria-hidden="true">
-      {tipo === 'sol' && (
-        <>
-          <g className="rayos" stroke="#E8A33C" strokeWidth="3" strokeLinecap="round" transform="translate(20 20)">
-            <path d="M26 2v8M26 42v8M2 26h8M42 26h8M9.5 9.5l5.6 5.6M36.9 36.9l5.6 5.6M42.5 9.5l-5.6 5.6M15.1 36.9l-5.6 5.6" />
-          </g>
-          <circle cx="46" cy="46" r="15" fill="#E8A33C" />
-        </>
-      )}
-      {tipo === 'nube' && (
-        <>
-          {rayos}
-          <circle cx="50" cy="32" r="11" fill="#E8A33C" />
-          <g className="nube">
-            <path d="M28 66a11 11 0 0 1 1.6-21.9 16 16 0 0 1 30.2 4.2A9.8 9.8 0 0 1 58.5 66z" fill="#E7EDF0" />
-          </g>
-        </>
-      )}
-      {tipo === 'lluvia' && (
-        <>
-          <g className="nube">
-            <path d="M25 52a12 12 0 0 1 1.8-23.9 17.5 17.5 0 0 1 33 4.6A10.7 10.7 0 0 1 58 52z" fill="#C8D4DB" />
-          </g>
-          <g stroke="#7FBCE8" strokeWidth="3.4" strokeLinecap="round">
-            <path className="gota" d="M32 60v7" />
-            <path className="gota gota-2" d="M44 60v7" />
-            <path className="gota gota-3" d="M56 60v7" />
-          </g>
-        </>
-      )}
-    </svg>
-  );
-}
+//
+// La tarjeta del clima se mudó a clima-vivo.js, que corre en el navegador y
+// se actualiza sola cada diez minutos. Acá queda sólo el sol chiquito de la
+// chapa de arriba, que es decorativo y no muestra ningún dato.
 
 /** El sol chiquito de la chapa de arriba: siempre el mismo, para que la
  *  pastilla no cambie de ancho cada vez que cambia el pronóstico. */
@@ -73,42 +23,6 @@ export function SolChico() {
       </g>
       <circle cx="26" cy="26" r="10" fill="#E8A33C" />
     </svg>
-  );
-}
-
-export function TarjetaClima({ clima }) {
-  if (!clima?.ahora) return null;
-  const a = clima.ahora;
-  const dias = (clima.dias ?? []).slice(0, 4);
-
-  return (
-    <div className="tarjeta-clima" style={{ '--cielo-fondo': FONDO_CIELO[tipoDeCielo(a.cielo)] }}>
-      <div style={{ display: 'flex', alignItems: 'flex-start' }}>
-        <div style={{ flexGrow: 1 }}>
-          <div className="titulo">El clima ahora</div>
-          <div className="temp">{a.temp}°</div>
-          <div className="cielo">{a.cielo}</div>
-          <div className="detalle">
-            Sensación {a.sensacion}° · Viento {a.rumbo} {a.viento} km/h · Humedad {a.humedad}%
-          </div>
-        </div>
-        <div style={{ margin: '-4px -4px 0 0' }}><IconoCielo cielo={a.cielo} /></div>
-      </div>
-
-      {dias.length > 0 && (
-        <div className="tira-dias">
-          {dias.map((d) => (
-            <div key={d.fecha}>
-              <div className="dia">{d.dia}</div>
-              <div className="max">{d.max}°</div>
-              {d.lluvia >= 40
-                ? <div className="lluvia">{d.lluvia}% lluvia</div>
-                : <div className="min">{d.min}°</div>}
-            </div>
-          ))}
-        </div>
-      )}
-    </div>
   );
 }
 
