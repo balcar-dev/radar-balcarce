@@ -71,38 +71,73 @@ function tipoDeCielo(cielo = '') {
 
 const FONDO_CIELO = { sol: '#2A6E8C', nube: '#1D4F63', lluvia: '#243D52' };
 
+/** Los rayos del sol, calculados en vez de dibujados a ojo.
+ *
+ *  La versión anterior tenía las ocho líneas escritas a mano en el path, y
+ *  quedaban desparejas: unas más largas que otras y con un hueco abajo a la
+ *  derecha. Con trigonometría salen los ocho exactamente iguales y
+ *  exactamente cada 45 grados.
+ *
+ *  `desde` y `hasta` son distancias al centro, no coordenadas: así el rayo
+ *  siempre arranca afuera del disco por más que cambie el radio. */
+function rayos(cx, cy, desde, hasta) {
+  return Array.from({ length: 8 }, (_, i) => {
+    const a = (i * Math.PI) / 4;
+    const x = Math.cos(a);
+    const y = Math.sin(a);
+    return `M${(cx + x * desde).toFixed(1)} ${(cy + y * desde).toFixed(1)}`
+      + `L${(cx + x * hasta).toFixed(1)} ${(cy + y * hasta).toFixed(1)}`;
+  }).join('');
+}
+
+// Una nube hecha con círculos superpuestos y una base redondeada. Un solo
+// path quedaba con bultos raros; así la silueta es limpia siempre.
+function Nube({ x = 0, y = 0, color = '#E7EDF0', escala = 1 }) {
+  return (
+    <g className="nube" transform={`translate(${x} ${y}) scale(${escala})`}>
+      <circle cx="46" cy="50" r="17" fill={color} />
+      <circle cx="28" cy="58" r="12" fill={color} />
+      <circle cx="62" cy="57" r="13" fill={color} />
+      <rect x="28" y="56" width="34" height="14" rx="7" fill={color} />
+    </g>
+  );
+}
+
 export function IconoCielo({ cielo, tamano = 92 }) {
   const tipo = tipoDeCielo(cielo);
+
   return (
-    <svg width={tamano} height={tamano} viewBox="0 0 92 92" fill="none" aria-hidden="true">
+    <svg width={tamano} height={tamano} viewBox="0 0 96 96" fill="none" aria-hidden="true">
       {tipo === 'sol' && (
         <>
-          <g className="rayos" stroke="#E8A33C" strokeWidth="3" strokeLinecap="round" transform="translate(20 20)">
-            <path d="M26 2v8M26 42v8M2 26h8M42 26h8M9.5 9.5l5.6 5.6M36.9 36.9l5.6 5.6M42.5 9.5l-5.6 5.6M15.1 36.9l-5.6 5.6" />
+          <g className="rayos" stroke="#E8A33C" strokeWidth="5" strokeLinecap="round">
+            <path d={rayos(48, 48, 26, 35)} />
           </g>
-          <circle cx="46" cy="46" r="15" fill="#E8A33C" />
+          <circle cx="48" cy="48" r="18" fill="#E8A33C" />
         </>
       )}
+
       {tipo === 'nube' && (
         <>
-          <g className="rayos" stroke="#E8A33C" strokeWidth="3" strokeLinecap="round" transform="translate(24 6)">
-            <path d="M26 5v6M26 41v6M5 26h6M41 26h6M11 11l4.2 4.2M36.8 36.8L41 41M41 11l-4.2 4.2M15.2 36.8L11 41" />
+          {/* El sol asoma arriba a la derecha, detrás de la nube. */}
+          <g className="rayos" stroke="#E8A33C" strokeWidth="4" strokeLinecap="round">
+            <path d={rayos(62, 30, 19, 26)} />
           </g>
-          <circle cx="50" cy="32" r="11" fill="#E8A33C" />
-          <g className="nube">
-            <path d="M28 66a11 11 0 0 1 1.6-21.9 16 16 0 0 1 30.2 4.2A9.8 9.8 0 0 1 58.5 66z" fill="#E7EDF0" />
-          </g>
+          <circle cx="62" cy="30" r="13" fill="#E8A33C" />
+          <Nube y={6} />
         </>
       )}
+
       {tipo === 'lluvia' && (
         <>
-          <g className="nube">
-            <path d="M25 52a12 12 0 0 1 1.8-23.9 17.5 17.5 0 0 1 33 4.6A10.7 10.7 0 0 1 58 52z" fill="#C8D4DB" />
-          </g>
-          <g stroke="#7FBCE8" strokeWidth="3.4" strokeLinecap="round">
-            <path className="gota" d="M32 60v7" />
-            <path className="gota gota-2" d="M44 60v7" />
-            <path className="gota gota-3" d="M56 60v7" />
+          {/* La nube va más arriba para dejarle lugar a las gotas, que
+              además se mueven 20px hacia abajo al caer: si arrancaran más
+              abajo, la animación se cortaría contra el borde del dibujo. */}
+          <Nube y={-12} color="#C8D4DB" />
+          <g stroke="#7FBCE8" strokeWidth="5" strokeLinecap="round">
+            <path className="gota" d="M33 62v8" />
+            <path className="gota gota-2" d="M47 62v8" />
+            <path className="gota gota-3" d="M61 62v8" />
           </g>
         </>
       )}

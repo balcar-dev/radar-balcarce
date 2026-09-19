@@ -16,12 +16,21 @@ import { datosSeccion, nombreCorto, cuando, partirFecha } from '@/lib/datos';
 /** El sol chiquito de la chapa de arriba: siempre el mismo, para que la
  *  pastilla no cambie de ancho cada vez que cambia el pronóstico. */
 export function SolChico() {
+  // Los ocho rayos, calculados igual que en la tarjeta grande (clima-vivo.js)
+  // para que el sol chiquito y el grande sean el mismo dibujo.
+  const rayos = Array.from({ length: 8 }, (_, i) => {
+    const a = (i * Math.PI) / 4;
+    const x = Math.cos(a);
+    const y = Math.sin(a);
+    return `M${(24 + x * 13).toFixed(1)} ${(24 + y * 13).toFixed(1)}L${(24 + x * 18).toFixed(1)} ${(24 + y * 18).toFixed(1)}`;
+  }).join('');
+
   return (
-    <svg width="20" height="20" viewBox="0 0 52 52" fill="none" aria-hidden="true">
+    <svg width="20" height="20" viewBox="0 0 48 48" fill="none" aria-hidden="true">
       <g className="rayos" stroke="#E8A33C" strokeWidth="3.4" strokeLinecap="round">
-        <path d="M26 5v6M26 41v6M5 26h6M41 26h6M11 11l4.2 4.2M36.8 36.8L41 41M41 11l-4.2 4.2M15.2 36.8L11 41" />
+        <path d={rayos} />
       </g>
-      <circle cx="26" cy="26" r="10" fill="#E8A33C" />
+      <circle cx="24" cy="24" r="9" fill="#E8A33C" />
     </svg>
   );
 }
