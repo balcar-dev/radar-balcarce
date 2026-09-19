@@ -234,6 +234,8 @@ function vista(sesion = null) {
     estadosSeguimiento: ESTADOS_SEGUIMIENTO,
     utiles: { numeros: NUMEROS, diaDeLaSemana: diaDeEstaSemana(), tocaHoy: tocaHoy() },
     horarios: horariosDe(estado),
+    ultimaPublicacion: estado.ultimaPublicacion ?? null,
+    piezas: piezasListas(),
     diasSemana: DIAS_SEMANA,
     cuotaVoz: estadoCuotaVoz(),
     instruccionEditorial: INSTRUCCION_EDITORIAL,
@@ -323,6 +325,31 @@ async function reescribirPendientes() {
   }
 }
 
+// --------------------------------------------------- las piezas para redes
+
+const CARPETA_PIEZAS = path.join(AQUI, '..', 'reels', 'salida');
+
+/** Los videos y placas que generó el plan del día, para poder bajarlos
+ *  desde el celular en vez de tener que sentarse en la PC.
+ *
+ *  Sólo las de las últimas 24 horas: lo de ayer ya no se publica, y la
+ *  carpeta acumula todo lo que se fue generando. */
+function piezasListas() {
+  try {
+    const hace24h = Date.now() - 24 * 3600 * 1000;
+    return fs.readdirSync(CARPETA_PIEZAS)
+      .filter((f) => /[.](mp4|png)$/i.test(f))
+      // Las de revisión, prueba y las verticales de respaldo no son para publicar.
+      .filter((f) => !/^(rev-|prueba-|v-|iconos|avatar)/.test(f))
+      .map((f) => {
+        const st = fs.statSync(path.join(CARPETA_PIEZAS, f));
+        return { archivo: f, bytes: st.size, cuando: st.mtime.toISOString() };
+      })
+      .filter((x) => new Date(x.cuando).getTime() > hace24h)
+      .sort((a, b) => new Date(b.cuando) - new Date(a.cuando));
+  } catch { return []; }
+}
+
 // ------------------------------------------------------ publicar la web
 
 // Cada cuánto se publica solo lo que el panel decidió. Dos horas: las
@@ -375,12 +402,18 @@ function publicarWeb() {
       for (const paso of pasos) await correr(paso);
       anotarLinea('----- publicado bien -----\n');
       console.log('  web publicada');
+      estado.ultimaPublicacion = { cuando: new Date().toISOString(), ok: true, error: null };
       anotar('la web se publicó sola', '', 'sistema');
       guardarJson(F_ESTADO, estado);
     } catch (e) {
-      anotarLinea(`----- ${e.message} -----
-`);
+      anotarLinea(`----- ${e.message} -----\n`);
       console.error(`  no se pudo publicar: ${e.message}`);
+      // Queda registrado para que el panel lo muestre en rojo. El 18/09 la
+      // publicación estuvo siete horas fallando y lo único que lo decía era
+      // un archivo de registro que nadie mira.
+      estado.ultimaPublicacion = { cuando: new Date().toISOString(), ok: false, error: e.message };
+      anotar('la web NO se pudo publicar', e.message.slice(0, 80), 'sistema');
+      guardarJson(F_ESTADO, estado);
     } finally {
       publicando = false;
     }
@@ -614,6 +647,25 @@ const servidor = http.createServer(async (req, res) => {
       anotar(r.deIA ? 'reescrita por IA' : `reescritura: la IA falló (${r.motivoRespaldo}), quedó la mecánica`, nota.titulo, quien);
       guardarJson(F_ESTADO, estado);
       json(res, vista(sesion));
+      return;
+    }
+
+    // Bajar una pieza. El nombre se valida contra la lista real en vez de
+    // limpiarlo con expresiones: así no hay forma de pedir un archivo de
+    // otra carpeta por más que se escriba "../" en la dirección.
+    if (ruta.startsWith('/pieza/')) {
+      const pedido = decodeURIComponent(ruta.slice('/pieza/'.length));
+      if (!piezasListas().some((x) => x.archivo === pedido)) {
+        json(res, { error: 'no existe esa pieza' }, 404);
+        return;
+      }
+      const archivo = path.join(CARPETA_PIEZAS, pedido);
+      res.writeHead(200, {
+        'content-type': pedido.endsWith('.mp4') ? 'video/mp4' : 'image/png',
+        'content-disposition': `attachment; filename="${pedido}"`,
+        'content-length': fs.statSync(archivo).size,
+      });
+      fs.createReadStream(archivo).pipe(res);
       return;
     }
 

@@ -67,6 +67,26 @@
   .aviso { background:#FDF3E2; color:#6B5210; border-radius:4px; padding:9px 11px; font-size:12px; margin-top:8px; }
   .ok { background:#E3F0E9; color:#14533F; border-radius:4px; padding:9px 11px; font-size:12px; margin-top:8px; }
 
+.aviso-rojo {
+  margin: 0 20px 14px; background: #3A1712; border: 1px solid #8C2D18;
+  color: #F0C4BA; border-radius: 8px; padding: 14px 16px; font-size: 14px; line-height: 1.6;
+}
+.aviso-rojo .detalle { color: #C99A8E; font-size: 12.5px; }
+
+.fila-pieza {
+  display: flex; align-items: center; gap: 14px;
+  padding: 14px 0; border-bottom: 1px solid #23282c;
+}
+.fila-pieza .que { flex-grow: 1; min-width: 0; }
+.fila-pieza .porque { font-size: 12px; color: #8C918D; margin-top: 3px; }
+.fila-pieza .tipo {
+  font-size: 10px; font-weight: 700; letter-spacing: 1.5px; padding: 4px 8px;
+  border-radius: 4px; flex-shrink: 0;
+}
+.fila-pieza .tipo.video { background: #7A4B8C; color: #fff; }
+.fila-pieza .tipo.placa { background: #16615B; color: #fff; }
+.fila-pieza a { text-decoration: none; display: inline-flex; align-items: center; }
+
 /* --------------------------------------- calendario de las historias fijas */
 .fila-horario {
   display: flex; align-items: center; gap: 18px; flex-wrap: wrap;
@@ -114,6 +134,7 @@ input.hora:focus { outline: none; border-color: #C7381C; }
   <button data-t="servicios">Clima y farmacias</button>
   <button data-t="agenda">Agenda</button>
   <button data-t="calendario">Calendario</button>
+  <button data-t="piezas">Para redes <b id="nPiezas">0</b></button>
   <button data-t="buzon">Buzón <b id="nBuzon">0</b></button>
   <button data-t="editorial">Cómo escribe la IA</button>
 </nav>
@@ -144,6 +165,8 @@ async function cargar(datos) {
   $('#nCola').textContent = pend.length;
   $('#nBuzon').textContent = (D.buzon || []).filter((b) => b.estado === 'nuevo' || b.estado === 'pendiente').length;
   if (D.yo) { yo = D.yo; $('#quienSoy').textContent = D.yo; }
+  if ($('#nPiezas')) $('#nPiezas').textContent = (D.piezas || []).length;
+  pintarAvisoPublicacion();
   $('#txtEstado').textContent = D.generado
     ? `última búsqueda ${new Date(D.generado).toLocaleTimeString('es-AR',{hour:'2-digit',minute:'2-digit'})} · ${D.notas.length} historias · ${pend.length} sin decidir`
     : 'todavía no busqué noticias';
@@ -163,6 +186,7 @@ function pintar() {
   if (tab === 'servicios') m.innerHTML = vistaServicios();
   if (tab === 'agenda') m.innerHTML = vistaAgenda();
   if (tab === 'calendario') m.innerHTML = vistaCalendario();
+  if (tab === 'piezas') m.innerHTML = vistaPiezas();
   if (tab === 'buzon') m.innerHTML = vistaBuzon();
   if (tab === 'editorial') m.innerHTML = vistaEditorial();
   conectar();
@@ -310,6 +334,56 @@ function vistaFuentes() {
 
 // Cuándo sale cada historia fija. Cinco piezas, un renglón cada una: los
 // días como botoncitos que se prenden y apagan, y la hora en un campo.
+// El aviso de que la web no se está publicando. Va arriba de todo y en
+// rojo: el 18/09 la publicación estuvo siete horas fallando y lo único que
+// lo decía era un archivo de registro que nadie mira.
+function pintarAvisoPublicacion() {
+  const p = D.ultimaPublicacion;
+  let caja = $('#avisoPublicacion');
+  if (!p || p.ok) { if (caja) caja.remove(); return; }
+  if (!caja) {
+    caja = document.createElement('div');
+    caja.id = 'avisoPublicacion';
+    caja.className = 'aviso-rojo';
+    $('#main').parentNode.insertBefore(caja, $('#main'));
+  }
+  const cuando = new Date(p.cuando).toLocaleString('es-AR', { day: '2-digit', month: '2-digit', hour: '2-digit', minute: '2-digit' });
+  caja.innerHTML = `<b>La web no se está publicando.</b> Último intento: ${cuando}.<br>
+    <span class="detalle">${esc(p.error)}</span><br>
+    <span class="detalle">Lo que decidas acá no se ve en el sitio hasta que esto se arregle.
+    El detalle completo está en panel/datos/publicaciones.log</span>`;
+}
+
+// Los videos y placas del día, para bajarlos desde el celular y subirlos a
+// mano. Mientras Meta no apruebe la publicación automática, este es el
+// camino real de todos los días.
+function vistaPiezas() {
+  const piezas = D.piezas || [];
+  if (!piezas.length) {
+    return `<div class="panelito"><h2>Para redes</h2>
+      <p class="ayuda">No hay piezas generadas en las últimas 24 horas.</p>
+      <p class="ayuda">Se arman en la PC con <code>node reels/plan.mjs --generar</code>.
+      Después aparecen acá y las podés bajar desde donde estés.</p></div>`;
+  }
+  const peso = (b) => (b > 1048576 ? `${(b / 1048576).toFixed(1)} MB` : `${Math.round(b / 1024)} KB`);
+  const filas = piezas.map((x) => {
+    const esVideo = x.archivo.endsWith('.mp4');
+    const hora = new Date(x.cuando).toLocaleTimeString('es-AR', { hour: '2-digit', minute: '2-digit' });
+    return `<div class="fila-pieza">
+      <span class="tipo ${esVideo ? 'video' : 'placa'}">${esVideo ? 'VIDEO' : 'PLACA'}</span>
+      <div class="que"><b>${esc(x.archivo.replace(/\.(mp4|png)$/, ''))}</b>
+        <div class="porque">${hora} · ${peso(x.bytes)}</div></div>
+      <a class="btn-claro" href="/pieza/${encodeURIComponent(x.archivo)}" download>Bajar</a>
+    </div>`;
+  }).join('');
+  return `<div class="panelito">
+    <h2>Para redes</h2>
+    <p class="ayuda">Lo que generó el plan del día. Bajalo y subilo a Instagram.
+    Los videos son para reels e historias; las placas, para el feed.</p>
+    ${filas}
+  </div>`;
+}
+
 function vistaCalendario() {
   const dias = D.diasSemana ?? [];
   const filas = (D.horarios ?? []).map((h) => {
