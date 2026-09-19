@@ -115,8 +115,30 @@ nav.principal .crece { flex-grow: 1; }
 /* --------------------------------------------------------------- estructura */
 
 main { padding: 24px 0 10px; }
-.dos-columnas { display: grid; grid-template-columns: minmax(0, 1fr); gap: 28px; align-items: start; }
-@media (min-width: 980px) { .dos-columnas { grid-template-columns: minmax(0, 1fr) 340px; gap: 40px; } }
+
+/* Tres bloques: las noticias, los servicios (clima y farmacia) y el resto
+   del lateral.
+
+   En el celular los servicios van PRIMEROS, antes de las noticias. Es lo que
+   la mayoría viene a buscar, y estaban al final de todo: había que pasar
+   ochenta titulares para ver la farmacia de turno.
+
+   En la pantalla grande vuelven a su lugar, arriba de la columna derecha. */
+.dos-columnas { display: grid; grid-template-columns: minmax(0, 1fr); gap: 24px; align-items: start; }
+.dos-columnas .servicios { order: 1; display: flex; flex-direction: column; gap: 14px; }
+.dos-columnas .principal { order: 2; min-width: 0; }
+.dos-columnas .lateral { order: 3; }
+
+@media (min-width: 980px) {
+  .dos-columnas {
+    grid-template-columns: minmax(0, 1fr) 340px;
+    column-gap: 40px;
+    row-gap: 16px;
+  }
+  .dos-columnas .principal { grid-column: 1; grid-row: 1 / span 2; }
+  .dos-columnas .servicios { grid-column: 2; grid-row: 1; }
+  .dos-columnas .lateral { grid-column: 2; grid-row: 2; }
+}
 
 /* ------------------------------------------------------------------ notas */
 

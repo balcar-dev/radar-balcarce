@@ -35,7 +35,15 @@ export default function Portada() {
       )}
 
       <div className="dos-columnas">
-        <div>
+        {/* En el celular esto va primero: es lo que la gente viene a
+            buscar. Antes había que pasar ochenta titulares para ver la
+            farmacia de turno. */}
+        <aside className="servicios">
+          <TarjetaClima clima={d.clima} />
+          <TarjetaFarmacia farmacia={d.farmacias?.hoy} />
+        </aside>
+
+        <div className="principal">
           {principal && (
             <article className="destacada">
               {/* Nunca la foto del medio de origen: es obra ajena. Va una
@@ -82,9 +90,6 @@ export default function Portada() {
         </div>
 
         <aside className="lateral">
-          <TarjetaClima clima={d.clima} />
-          <TarjetaFarmacia farmacia={d.farmacias?.hoy} />
-
           {eventos.length > 0 && (
             <div className="tarjeta" style={{ paddingBottom: 8 }}>
               <div style={{ display: 'flex', alignItems: 'center' }}>

@@ -31,7 +31,12 @@ export default function PaginaAgenda() {
   return (
     <div className="envoltura">
       <div className="dos-columnas">
-        <div>
+        <aside className="servicios">
+          <TarjetaClima clima={d.clima} />
+          <TarjetaFarmacia farmacia={d.farmacias?.hoy} />
+        </aside>
+
+        <div className="principal">
           <h1 className="fraunces" style={{ fontSize: 34 }}>Agenda de Balcarce</h1>
           <p className="mini" style={{ marginTop: 8, marginBottom: 26, maxWidth: 600 }}>
             Actos, muestras, ferias, fiestas y encuentros deportivos. Sale de la agenda
@@ -91,8 +96,6 @@ export default function PaginaAgenda() {
         </div>
 
         <aside className="lateral">
-          <TarjetaClima clima={d.clima} />
-          <TarjetaFarmacia farmacia={d.farmacias?.hoy} />
           <div className="tarjeta-buzon">
             <h3 style={{ fontSize: 19, fontWeight: 700 }}>¿Organizás un evento?</h3>
             <p>

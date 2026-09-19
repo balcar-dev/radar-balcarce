@@ -13,7 +13,8 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { placaClima, placaFarmacia, placaNoticia, placaUtiles, placaAgenda, COLOR_SECCION } from './placa.mjs';
 import { armarReel } from './reel.mjs';
-import { NUMEROS, tocaHoy } from '../ingesta/utiles.mjs';
+import { NUMEROS } from '../ingesta/utiles.mjs';
+import { horariosDe, toca } from '../panel/horarios.mjs';
 
 // El cupo de reels es el recurso escaso del día, así que NO se gasta en lo que
 // se repite todas las mañanas. Clima, farmacia y agenda van a historias, que
@@ -42,6 +43,17 @@ const fechaLarga = (d = new Date()) => {
 };
 
 const F_AGENDA = path.join(import.meta.dirname, '..', 'panel', 'datos', 'agenda.json');
+const F_ESTADO = path.join(import.meta.dirname, '..', 'panel', 'datos', 'estado.json');
+
+/** Los horarios de las piezas fijas, como quedaron configurados en el panel
+ *  (pestaña Calendario). Si no hay nada guardado, valen los de fábrica. */
+function horariosConfigurados() {
+  let estado = {};
+  try { estado = JSON.parse(fs.readFileSync(F_ESTADO, 'utf8')); } catch { /* valores de fábrica */ }
+  const porId = {};
+  for (const h of horariosDe(estado)) porId[h.id] = h;
+  return porId;
+}
 
 /** Los eventos de los próximos días, listos para la placa. Si no hay agenda
  *  todavía, devuelve vacío: la pieza simplemente no se arma. */
@@ -210,14 +222,18 @@ export function planDelDia(datos) {
 
   const piezas = [];
 
+  // Los horarios y los días salen del panel (pestaña Calendario). Si una
+  // pieza está apagada o hoy no le toca, directamente no se arma.
+  const cuando = horariosConfigurados();
+
   // --- Historias: lo de todos los días, que es servicio y no noticia -------
-  if (datos.clima) {
+  if (datos.clima && toca(cuando['clima-manana'])) {
     const c = datos.clima.ahora;
     const hoy = datos.clima.dias[0];
     const manana = datos.clima.dias[1];
 
     piezas.push({
-      tipo: 'historia', hora: '07:30', nombre: 'clima-manana', titulo: 'El clima de hoy',
+      tipo: 'historia', hora: cuando['clima-manana'].hora, nombre: 'clima-manana', titulo: 'El clima de hoy',
       motivo: 'servicio fijo · no gasta cupo de reel', seccion: 'Clima',
       guion: guionClima(datos.clima, turno),
       svg: placaClima({
@@ -238,10 +254,9 @@ export function planDelDia(datos) {
     });
 
     // Segundo pase: de noche, cuando la gente ya está en casa y lo que
-    // importa es cómo amanece mañana. A las 16:30 competía con la tarde de
-    // trabajo y lo veía menos gente.
-    piezas.push({
-      tipo: 'historia', hora: '20:00', nombre: 'clima-noche', titulo: 'Cómo sigue el día',
+    // importa es cómo amanece mañana.
+    if (toca(cuando['clima-noche'])) piezas.push({
+      tipo: 'historia', hora: cuando['clima-noche'].hora, nombre: 'clima-noche', titulo: 'Cómo sigue el día',
       motivo: 'segundo pase del clima · mira para adelante', seccion: 'Clima',
       guion: guionClimaTarde(datos.clima),
       svg: placaClima({
@@ -263,9 +278,9 @@ export function planDelDia(datos) {
   }
 
   // La farmacia va tarde a propósito: sirve cuando las demás ya cerraron.
-  if (turno) {
+  if (turno && toca(cuando.farmacia)) {
     piezas.push({
-      tipo: 'historia', hora: '19:00', nombre: 'farmacia', titulo: `Farmacia de turno: ${comoNombre(turno.farmacias.join(' y '))}`,
+      tipo: 'historia', hora: cuando.farmacia.hora, nombre: 'farmacia', titulo: `Farmacia de turno: ${comoNombre(turno.farmacias.join(' y '))}`,
       motivo: 'a la hora en que cierran las demás', seccion: 'Farmacias',
       guion: guionFarmacia(turno),
       svg: placaFarmacia({
@@ -278,11 +293,11 @@ export function planDelDia(datos) {
   // Números útiles: una vez por semana, día variable (ingesta/utiles.mjs
   // decide cuál). No es noticia ni clima: es contenido de utilidad pura, así
   // que no compite por cupo de reel ni tiene por qué salir todos los días.
-  if (tocaHoy()) {
+  if (toca(cuando.utiles)) {
     const grupos = [...new Set(NUMEROS.map((n) => n.categoria))]
       .map((categoria) => ({ categoria, items: NUMEROS.filter((n) => n.categoria === categoria) }));
     piezas.push({
-      tipo: 'historia', hora: '11:00', nombre: 'utiles',
+      tipo: 'historia', hora: cuando.utiles.hora, nombre: 'utiles',
       titulo: 'Teléfonos útiles de Balcarce', motivo: 'una vez por semana, día variable',
       seccion: 'Servicios',
       guion: guionUtiles(),
@@ -295,9 +310,9 @@ export function planDelDia(datos) {
   // gente empieza a pensar qué hacer. Es la pieza que ninguno de los otros
   // medios de Balcarce tiene, así que es de lo que más nos diferencia.
   const deLaAgenda = eventosProximos(4);
-  if (new Date().getDay() === 4 && deLaAgenda.length) {
+  if (toca(cuando.agenda) && deLaAgenda.length) {
     piezas.push({
-      tipo: 'historia', hora: '18:00', nombre: 'agenda',
+      tipo: 'historia', hora: cuando.agenda.hora, nombre: 'agenda',
       titulo: 'Qué hacer este fin de semana', motivo: 'los jueves, si hay eventos cargados',
       seccion: 'Cultura y agenda',
       guion: guionAgenda(deLaAgenda),

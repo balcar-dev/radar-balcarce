@@ -19,6 +19,7 @@ import {
   sesionDe, entrar, salir, paginaLogin, hayUsuarios,
 } from './acceso.mjs';
 import { TIPOS as TIPOS_BUZON, ESTADOS_SEGUIMIENTO } from './buzon.mjs';
+import { horariosDe, guardarHorario, DIAS as DIAS_SEMANA } from './horarios.mjs';
 import { estadoCuota as estadoCuotaVoz } from '../reels/voz-gemini.mjs';
 import { guionNoticia } from '../reels/plan.mjs';
 
@@ -196,6 +197,8 @@ function vista(sesion = null) {
     tiposBuzon: TIPOS_BUZON,
     estadosSeguimiento: ESTADOS_SEGUIMIENTO,
     utiles: { numeros: NUMEROS, diaDeLaSemana: diaDeEstaSemana(), tocaHoy: tocaHoy() },
+    horarios: horariosDe(estado),
+    diasSemana: DIAS_SEMANA,
     cuotaVoz: estadoCuotaVoz(),
     instruccionEditorial: INSTRUCCION_EDITORIAL,
     historial: estado.historial.slice(0, 12),
@@ -575,6 +578,22 @@ const servidor = http.createServer(async (req, res) => {
       anotar(r.deIA ? 'reescrita por IA' : `reescritura: la IA falló (${r.motivoRespaldo}), quedó la mecánica`, nota.titulo, quien);
       guardarJson(F_ESTADO, estado);
       json(res, vista(sesion));
+      return;
+    }
+
+    // Cuándo salen las historias fijas. Es lo que más se va a querer
+    // ajustar cuando vean qué hora rinde, así que se cambia acá y no
+    // tocando código.
+    if (ruta === '/api/horarios' && req.method === 'POST') {
+      const d = await cuerpoDe(req);
+      try {
+        const lista = guardarHorario(estado, d);
+        anotar('horario de historia fija', `${d.id}`, sesion.nombre);
+        guardarJson(F_ESTADO, estado);
+        json(res, { ...vista(sesion), horarios: lista });
+      } catch (e) {
+        json(res, { error: e.message }, 400);
+      }
       return;
     }
 

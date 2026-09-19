@@ -66,6 +66,31 @@
   .vacio { color:var(--suave); background:var(--blanco); border:1px dashed var(--linea); border-radius:6px; padding:26px; text-align:center; }
   .aviso { background:#FDF3E2; color:#6B5210; border-radius:4px; padding:9px 11px; font-size:12px; margin-top:8px; }
   .ok { background:#E3F0E9; color:#14533F; border-radius:4px; padding:9px 11px; font-size:12px; margin-top:8px; }
+
+/* --------------------------------------- calendario de las historias fijas */
+.fila-horario {
+  display: flex; align-items: center; gap: 18px; flex-wrap: wrap;
+  padding: 16px 0; border-bottom: 1px solid #23282c;
+}
+.fila-horario.apagada { opacity: 0.45; }
+.fila-horario .que { flex-grow: 1; min-width: 240px; }
+.fila-horario .porque { font-size: 12px; color: #8C918D; margin-top: 4px; }
+.interruptor { display: flex; align-items: center; gap: 9px; cursor: pointer; }
+.interruptor input { width: 16px; height: 16px; accent-color: #C7381C; cursor: pointer; }
+.fila-horario .dias { display: flex; gap: 5px; }
+button.dia {
+  width: 34px; height: 34px; border-radius: 17px; border: 1px solid #3A4046;
+  background: transparent; color: #8C918D; font-weight: 700; font-size: 12.5px;
+  cursor: pointer; font-family: inherit;
+}
+button.dia:hover { border-color: #6B6F6C; color: #F4F1EA; }
+button.dia.on { background: #C7381C; border-color: #C7381C; color: #fff; }
+input.hora {
+  height: 38px; border-radius: 8px; border: 1px solid #3A4046; background: #15181b;
+  color: #F4F1EA; padding: 0 10px; font-family: inherit; font-size: 14px;
+}
+input.hora:focus { outline: none; border-color: #C7381C; }
+.ayuda { font-size: 13px; color: #8C918D; line-height: 1.6; max-width: 620px; }
 </style>
 </head>
 <body>
@@ -88,6 +113,7 @@
   <button data-t="fuentes">Fuentes</button>
   <button data-t="servicios">Clima y farmacias</button>
   <button data-t="agenda">Agenda</button>
+  <button data-t="calendario">Calendario</button>
   <button data-t="buzon">Buzón <b id="nBuzon">0</b></button>
   <button data-t="editorial">Cómo escribe la IA</button>
 </nav>
@@ -136,6 +162,7 @@ function pintar() {
   if (tab === 'fuentes') m.innerHTML = vistaFuentes();
   if (tab === 'servicios') m.innerHTML = vistaServicios();
   if (tab === 'agenda') m.innerHTML = vistaAgenda();
+  if (tab === 'calendario') m.innerHTML = vistaCalendario();
   if (tab === 'buzon') m.innerHTML = vistaBuzon();
   if (tab === 'editorial') m.innerHTML = vistaEditorial();
   conectar();
@@ -280,6 +307,39 @@ function vistaFuentes() {
 }
 
 // -------------------------------------------------------------- servicios
+
+// Cuándo sale cada historia fija. Cinco piezas, un renglón cada una: los
+// días como botoncitos que se prenden y apagan, y la hora en un campo.
+function vistaCalendario() {
+  const dias = D.diasSemana ?? [];
+  const filas = (D.horarios ?? []).map((h) => {
+    const botones = dias.map((d) => `
+      <button class="dia ${(h.dias ?? []).includes(d.n) ? 'on' : ''}"
+              data-pieza="${h.id}" data-dia="${d.n}" title="${esc(d.nombre)}">${d.corto}</button>`).join('');
+    return `<div class="fila-horario ${h.activa === false ? 'apagada' : ''}">
+      <div class="que">
+        <label class="interruptor">
+          <input type="checkbox" data-activa="${h.id}" ${h.activa === false ? '' : 'checked'}>
+          <b>${esc(h.nombre)}</b>
+        </label>
+        <div class="porque">${esc(h.porQue)}</div>
+      </div>
+      <div class="dias">${botones}</div>
+      <input type="time" class="hora" data-hora="${h.id}" value="${esc(h.hora)}">
+    </div>`;
+  }).join('');
+
+  return `<div class="panelito">
+    <h2>Cuándo salen las historias fijas</h2>
+    <p class="ayuda">Son las piezas que se repiten: el clima, la farmacia de turno, la agenda
+    y los teléfonos útiles. Acá elegís qué días sale cada una y a qué hora. Apagá el interruptor
+    para que deje de generarse.</p>
+    ${filas || '<p class="ayuda">No hay piezas fijas configuradas.</p>'}
+    <p class="ayuda" style="margin-top:18px">Los horarios son la hora a la que conviene publicarla.
+    Las piezas se arman cuando corrés <code>node reels/plan.mjs --generar</code>; esto le dice al
+    plan qué armar y con qué horario sugerido.</p>
+  </div>`;
+}
 
 function vistaServicios() {
   const c = D.clima?.ahora; const f = D.farmacias;
@@ -499,6 +559,28 @@ function vistaEditorial() {
 // ------------------------------------------------------------- conexiones
 
 function conectar() {
+  // Calendario de las historias fijas
+  document.querySelectorAll('button.dia').forEach((b) => {
+    b.onclick = async () => {
+      const pieza = D.horarios.find((h) => h.id === b.dataset.pieza);
+      const dia = Number(b.dataset.dia);
+      const dias = new Set(pieza.dias ?? []);
+      if (dias.has(dia)) dias.delete(dia); else dias.add(dia);
+      if (!dias.size) { alert('Tiene que quedar al menos un día.'); return; }
+      cargar(await api('/api/horarios', { id: pieza.id, dias: [...dias] }));
+    };
+  });
+  document.querySelectorAll('input[data-hora]').forEach((el) => {
+    el.onchange = async () => {
+      cargar(await api('/api/horarios', { id: el.dataset.hora, hora: el.value }));
+    };
+  });
+  document.querySelectorAll('input[data-activa]').forEach((el) => {
+    el.onchange = async () => {
+      cargar(await api('/api/horarios', { id: el.dataset.activa, activa: el.checked }));
+    };
+  });
+
   document.querySelectorAll('.tarjeta[data-id]').forEach((el) => {
     el.onclick = () => { sel = el.dataset.id; pintar(); };
   });
