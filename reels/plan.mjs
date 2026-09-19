@@ -11,7 +11,7 @@
 
 import fs from 'node:fs';
 import path from 'node:path';
-import { placaClima, placaFarmacia, placaNoticia, placaUtiles, COLOR_SECCION } from './placa.mjs';
+import { placaClima, placaFarmacia, placaNoticia, placaUtiles, placaAgenda, COLOR_SECCION } from './placa.mjs';
 import { armarReel } from './reel.mjs';
 import { NUMEROS, tocaHoy } from '../ingesta/utiles.mjs';
 
@@ -40,6 +40,41 @@ const fechaLarga = (d = new Date()) => {
   });
   return t.charAt(0).toUpperCase() + t.slice(1);
 };
+
+const F_AGENDA = path.join(import.meta.dirname, '..', 'panel', 'datos', 'agenda.json');
+
+/** Los eventos de los próximos días, listos para la placa. Si no hay agenda
+ *  todavía, devuelve vacío: la pieza simplemente no se arma. */
+function eventosProximos(dias = 4) {
+  let agenda;
+  try { agenda = JSON.parse(fs.readFileSync(F_AGENDA, 'utf8')); } catch { return []; }
+  const DIAS = ['domingo', 'lunes', 'martes', 'miércoles', 'jueves', 'viernes', 'sábado'];
+  const hoy = new Date(); hoy.setHours(0, 0, 0, 0);
+  const tope = new Date(hoy.getTime() + dias * 86400000);
+
+  return (agenda.municipio ?? []).map((e) => {
+    const m = String(e.desde ?? '').match(/^(\d{4})-(\d{2})-(\d{2})(?:[T ](\d{2}):(\d{2}))?/);
+    if (!m) return null;
+    const f = new Date(Number(m[1]), Number(m[2]) - 1, Number(m[3]));
+    if (f < hoy || f > tope) return null;
+    const dia = DIAS[f.getDay()];
+    return {
+      nombre: e.nombre,
+      lugar: e.lugar,
+      cuando: m[4] ? `${dia} ${m[4]}:${m[5]}` : dia,
+      orden: f.getTime(),
+    };
+  }).filter(Boolean).sort((a, b) => a.orden - b.orden);
+}
+
+function guionAgenda(eventos) {
+  if (!eventos.length) return '';
+  const primero = eventos[0];
+  const cuantos = eventos.length;
+  return `Hay ${cuantos === 1 ? 'una actividad' : `${cuantos} actividades`} en Balcarce estos días. `
+    + `${primero.nombre}, el ${primero.cuando}${primero.lugar ? `, en ${primero.lugar}` : ''}. `
+    + 'La agenda completa está en nuestra página.';
+}
 
 function leerDatos() {
   if (!fs.existsSync(DATOS)) {
@@ -202,9 +237,11 @@ export function planDelDia(datos) {
       acento: COLOR_SECCION.Clima,
     });
 
-    // Segundo pase: a media tarde, mirando la noche y el día siguiente.
+    // Segundo pase: de noche, cuando la gente ya está en casa y lo que
+    // importa es cómo amanece mañana. A las 16:30 competía con la tarde de
+    // trabajo y lo veía menos gente.
     piezas.push({
-      tipo: 'historia', hora: '16:30', nombre: 'clima-tarde', titulo: 'Cómo sigue el día',
+      tipo: 'historia', hora: '20:00', nombre: 'clima-noche', titulo: 'Cómo sigue el día',
       motivo: 'segundo pase del clima · mira para adelante', seccion: 'Clima',
       guion: guionClimaTarde(datos.clima),
       svg: placaClima({
@@ -213,7 +250,7 @@ export function planDelDia(datos) {
         max: hoy.max,
         min: hoy.min,
         fecha: 'Cómo sigue el día',
-        hora: '16:30',
+        hora: '20:00',
         kicker: 'LA TARDE Y LA NOCHE',
         cajas: [
           { titulo: 'ESTA NOCHE', valor: `${hoy.min}°` },
@@ -228,7 +265,7 @@ export function planDelDia(datos) {
   // La farmacia va tarde a propósito: sirve cuando las demás ya cerraron.
   if (turno) {
     piezas.push({
-      tipo: 'historia', hora: '19:15', nombre: 'farmacia', titulo: `Farmacia de turno: ${comoNombre(turno.farmacias.join(' y '))}`,
+      tipo: 'historia', hora: '19:00', nombre: 'farmacia', titulo: `Farmacia de turno: ${comoNombre(turno.farmacias.join(' y '))}`,
       motivo: 'a la hora en que cierran las demás', seccion: 'Farmacias',
       guion: guionFarmacia(turno),
       svg: placaFarmacia({
@@ -251,6 +288,21 @@ export function planDelDia(datos) {
       guion: guionUtiles(),
       svg: placaUtiles({ grupos }),
       acento: COLOR_UTILES_ACENTO,
+    });
+  }
+
+  // La agenda del fin de semana: los jueves a la tarde, que es cuando la
+  // gente empieza a pensar qué hacer. Es la pieza que ninguno de los otros
+  // medios de Balcarce tiene, así que es de lo que más nos diferencia.
+  const deLaAgenda = eventosProximos(4);
+  if (new Date().getDay() === 4 && deLaAgenda.length) {
+    piezas.push({
+      tipo: 'historia', hora: '18:00', nombre: 'agenda',
+      titulo: 'Qué hacer este fin de semana', motivo: 'los jueves, si hay eventos cargados',
+      seccion: 'Cultura y agenda',
+      guion: guionAgenda(deLaAgenda),
+      svg: placaAgenda({ eventos: deLaAgenda }),
+      acento: '#6D4BA0',
     });
   }
 

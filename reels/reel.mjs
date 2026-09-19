@@ -78,7 +78,12 @@ ${lineas.join('\n')}
 // { musica: true }.
 export async function armarReel({
   nombre, svg, guion, acento = '#E8A33C', musica = false,
-  proveedor = process.env.VOZ ?? 'edge', vozGemini = process.env.VOZ_GEMINI ?? 'Kore',
+  // Gemini por defecto: se nota bastante mejor que Edge, sobre todo en las
+  // piezas que se repiten todos los días. El cupo gratis es de 10 pedidos
+  // diarios y las piezas fijas son 4, así que entra holgado — y si se acaba,
+  // el respaldo de abajo lee con Elena y la pieza sale igual.
+  // Para forzar una u otra: VOZ=edge o VOZ=gemini.
+  proveedor = process.env.VOZ ?? 'gemini', vozGemini = process.env.VOZ_GEMINI ?? 'Kore',
 }, dir) {
   fs.mkdirSync(dir, { recursive: true });
   const png = path.join(dir, `${nombre}.png`);

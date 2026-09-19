@@ -276,6 +276,44 @@ const COLOR_UTILES = '#8C2D18';
  * tipografía no se achique: el resto queda para la página.
  * `grupos` = [{ categoria, items: [{ nombre, numero }] }]
  */
+const COLOR_AGENDA = '#6D4BA0';
+
+/** La agenda del fin de semana.
+ *
+ *  Es la pieza que ningún medio de Balcarce tiene hoy: los tres publican
+ *  noticias, pero ninguno arma un calendario. El jueves a la tarde, cuando
+ *  la gente empieza a pensar qué hacer, es cuando sirve.
+ *
+ *  Cuatro eventos como máximo: en una historia que se mira cinco segundos,
+ *  seis ya no se leen. */
+export function placaAgenda({ eventos = [], titulo = 'Qué hacer este fin de semana' }) {
+  const color = COLOR_AGENDA;
+  const lista = eventos.slice(0, 4);
+
+  const fila = (ev, y) => `
+    <text x="${MARGEN}" y="${y}" font-family="${TEXTO}" font-size="21" font-weight="700"
+          letter-spacing="3" fill="${COLORES.ambar}">${esc((ev.cuando ?? '').toUpperCase())}</text>
+    <text x="${MARGEN}" y="${y + 52}" font-family="${DISPLAY}" font-size="40" font-weight="700"
+          letter-spacing="-1" fill="${COLORES.papel}">${esc(ev.nombre)}</text>
+    <text x="${MARGEN}" y="${y + 98}" font-family="${TEXTO}" font-size="28" font-weight="500"
+          fill="#BDC1B8">${esc(ev.lugar ?? 'Balcarce')}</text>
+    <rect x="${MARGEN}" y="${y + 132}" width="${ANCHO - MARGEN * 2}" height="1"
+          fill="#ffffff" fill-opacity="0.14"/>`;
+
+  let y = 520;
+  const bloques = lista.map((ev) => { const t = fila(ev, y); y += 176; return t; }).join('');
+
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="${ANCHO}" height="${ALTO}" viewBox="0 0 ${ANCHO} ${ALTO}">
+  ${fondo(color)}
+  ${cabecera(null, color)}
+  ${rotulo('Agenda', color, 296)}
+  <text x="${MARGEN}" y="460" font-family="${DISPLAY}" font-size="58" font-weight="900"
+        letter-spacing="-2" fill="${COLORES.papel}">${esc(titulo)}</text>
+  ${bloques}
+  ${pie('Agenda del Municipio de Balcarce · radarbalcarce.com.ar', color)}
+</svg>`;
+}
+
 export function placaUtiles({ grupos = [] }) {
   const color = COLOR_UTILES;
   const filas = [];
