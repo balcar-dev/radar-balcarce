@@ -247,11 +247,21 @@ main { padding: 24px 0 10px; }
 .tarjeta-clima .cielo { font-size: 14px; margin-top: 6px; font-weight: 600; }
 .tarjeta-clima .detalle { font-size: 12.5px; color: #9FB4BD; margin-top: 3px; }
 .tira-dias { display: flex; gap: 8px; margin-top: 18px; }
-.tira-dias div { flex-grow: 1; background: rgba(255, 255, 255, 0.08); border-radius: 8px; padding: 9px 6px; text-align: center; }
+/* El ">" importa: sin él la regla también agarraba los divs de adentro (el
+   día, la máxima, la mínima) y cada uno se dibujaba con su propia cajita
+   redondeada adentro de la cajita del día. Se veían recuadros anidados.
+   Y "flex: 1 1 0" en vez de flex-grow: sin la base en cero, cada columna
+   se ensanchaba según su contenido y "100% lluvia" quedaba el doble de
+   ancho que "10°". */
+.tira-dias > div {
+  flex: 1 1 0; min-width: 0;
+  background: rgba(255, 255, 255, 0.08); border-radius: 8px;
+  padding: 9px 4px; text-align: center;
+}
 .tira-dias .dia { font-size: 11px; color: #9FB4BD; text-transform: uppercase; letter-spacing: 0.06em; font-weight: 700; }
 .tira-dias .max { font-size: 16px; font-weight: 700; margin-top: 5px; }
 .tira-dias .min { font-size: 12px; color: #9FB4BD; }
-.tira-dias .lluvia { font-size: 12px; color: #7FBCE8; }
+.tira-dias .lluvia { font-size: 11px; color: #7FBCE8; white-space: nowrap; }
 
 /* El sol gira despacio, la nube va y viene y las gotas caen: se nota si lo
    mirás y no molesta si estás leyendo al lado. Quien pidió menos movimiento
@@ -260,7 +270,12 @@ main { padding: 24px 0 10px; }
 @keyframes rb-flotar { 0%, 100% { transform: translateX(0); } 50% { transform: translateX(9px); } }
 @keyframes rb-caer { 0% { transform: translateY(-4px); opacity: 0; } 25% { opacity: 1; } 100% { transform: translateY(20px); opacity: 0; } }
 @keyframes rb-latir { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
-.rayos { transform-origin: 26px 26px; animation: rb-girar 26s linear infinite; }
+/* transform-box: fill-box hace que el giro sea alrededor del centro del
+   propio dibujo. Antes el origen estaba fijo en 26,26, que era el centro
+   del sol sólo en el ícono de "nublado": en el de "despejado" el grupo
+   está corrido, así que los rayos giraban alrededor de un punto que no era
+   el sol y se veían descolgados. */
+.rayos { transform-box: fill-box; transform-origin: center; animation: rb-girar 26s linear infinite; }
 .nube { animation: rb-flotar 7s ease-in-out infinite; }
 .gota { animation: rb-caer 1.3s linear infinite; }
 .gota-2 { animation-delay: 0.42s; }
