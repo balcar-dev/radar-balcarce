@@ -35,7 +35,19 @@ const tiempo = (s) => {
 // El subtítulo va SIEMPRE en el mismo lugar: anclado por su centro con \pos,
 // no apoyado en el borde de abajo. Si se apoya abajo, cada vez que un cartel
 // necesita dos renglones el bloque crece hacia arriba y parece que salta.
-const SUB_Y = 1545;
+// Los subtítulos viven en la mitad de abajo, que en el diseño nuevo es
+// papel. Por eso el texto va en tinta con un halo claro, y no en blanco
+// sobre un recuadro negro: ese recuadro quedaba como un parche pegado
+// encima del diseño.
+const TINTA = '#14161A';
+const SUB_Y = 1660;
+
+// La carpeta de tipografías, en ruta RELATIVA a donde corre ffmpeg (que es
+// la carpeta de salida). Con la ruta absoluta no anda: el filtro usa los dos
+// puntos como separador de opciones, así que "D:" lo parte al medio, y el
+// espacio de "Radar Balcarce" lo termina de romper. Relativa no tiene ni una
+// cosa ni la otra.
+const CARPETA_FUENTES = '../marca/fuentes';
 
 function armarAss(carteles, { acento = '#E8A33C', retardo = 0 } = {}) {
   const lineas = [];
@@ -45,7 +57,7 @@ function armarAss(carteles, { acento = '#E8A33C', retardo = 0 } = {}) {
       const desde = (i === 0 ? c.desde : p.desde) + retardo;
       const hasta = (i === c.palabras.length - 1 ? c.hasta : c.palabras[i + 1].desde) + retardo;
       const texto = c.palabras.map((q, j) => (j === i
-        ? `{\\c${aAss(acento)}}${q.texto}{\\c${aAss('#FFFFFF')}}`
+        ? `{\\c${aAss(acento)}}${q.texto}{\\c${aAss(TINTA)}}`
         : q.texto)).join(' ');
       lineas.push(`Dialogue: 0,${tiempo(desde)},${tiempo(hasta)},Sub,,0,0,0,,{\\pos(540,${SUB_Y})}${texto}`);
     }
@@ -60,7 +72,7 @@ ScaledBorderAndShadow: yes
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
-Style: Sub,Segoe UI,62,&H00FFFFFF,&H00FFFFFF,&H00000000,&HB2100F0D,-1,0,0,0,100,100,0,0,3,20,0,5,60,60,0,1
+Style: Sub,IBM Plex Sans,58,&H001A1614,&H00FFFFFF,&H00E3ECEF,&H00000000,-1,0,0,0,100,100,0,0,1,8,0,5,60,60,0,1
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
@@ -133,7 +145,9 @@ export async function armarReel({
   const filtro = [
     'scale=2160:3840:flags=lanczos',
     "zoompan=z='min(pzoom+0.00010,1.035)':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':d=1:s=1080x1920:fps=30",
-    `subtitles=${path.basename(ass)}`,
+    // fontsdir: sin esto ffmpeg busca la tipografía en el sistema y, si no
+    // la encuentra, cae en una cualquiera. Las nuestras están en marca/fuentes.
+    `subtitles=${path.basename(ass)}:fontsdir=${CARPETA_FUENTES}`,
     'format=yuv420p',
   ].join(',');
 

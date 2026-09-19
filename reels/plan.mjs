@@ -179,34 +179,20 @@ export function guionUtiles() {
 }
 
 export function guionNoticia(n) {
-  // Se cuenta el hecho, no se lee el titular. El titular ya está en la placa.
-  const cuerpo = (n.copete || n.resumenFuente || '').replace(/\s+/g, ' ').trim();
-  const oraciones = cuerpo.split(/(?<=[.!?])\s+/)
-    .map((o) => o.trim())
-    .filter((o) => o.length > 35 && /[.!?]$/.test(o) && !o.endsWith('...')
-      && o.toLowerCase() !== n.titulo.toLowerCase());
-
-  let cuerpoDicho = [];
-  let palabras = 0;
-  for (const o of oraciones) {
-    const largo = o.split(/\s+/).length;
-    if (palabras + largo > 55) break;
-    cuerpoDicho.push(o);
-    palabras += largo;
-    if (cuerpoDicho.length === 2) break;
-  }
-
-  // Si la fuente no dejó cuerpo aprovechable, al menos no repetimos el título
-  // palabra por palabra: lo damos como entrada hablada.
-  if (!cuerpoDicho.length) cuerpoDicho = [`Te contamos: ${n.titulo}.`];
-
-  const entrada = n.seccion === 'Automovilismo' ? 'Atención los fierreros.'
-    : n.seccion === 'Deportes' ? 'Deportes en Balcarce.'
-      : n.seccion === 'Servicios' ? 'Dato útil para hoy.'
-        : 'Lo que pasó en Balcarce.';
-
-  return [entrada, ...cuerpoDicho, 'La nota completa está en radar balcarce punto com punto a ere.'].join(' ');
+  // La voz dice el MISMO titular que está en la placa, y nada más.
+  //
+  // Antes contaba la noticia con el cuerpo de la nota y salían piezas de
+  // veinticinco segundos. Una historia se mira cinco y se pasa: si a los
+  // diez segundos todavía está hablando, ya nadie está mirando. Y que lo
+  // dicho coincida con lo escrito tiene otra ventaja: los subtítulos
+  // acompañan el titular en vez de tapar la placa con otro texto.
+  //
+  // Los reels van a poder ser más largos cuando haya alguien grabando en
+  // cámara; hasta entonces, van igual que las historias.
+  const titulo = String(n.titulo ?? '').replace(/\s+/g, ' ').trim().replace(/[.:]+$/, '');
+  return `${titulo}.`;
 }
+
 
 // --- el plan ---------------------------------------------------------------
 
