@@ -1,95 +1,41 @@
 {
-  "generado": "2026-09-18T19:44:24.835Z",
+  "generado": "2026-09-19T01:25:50.517Z",
   "notas": [
     {
-      "id": "1od3ckv",
-      "titulo": "Limpieza de desagües en Balcarce por lluvias",
-      "copete": "El Municipio realiza tareas de limpieza en desagües y bocas de tormenta de la ciudad para mejorar el escurrimiento del agua ante futuros pronósticos de lluvias.",
-      "guion": "La comuna intensificó los trabajos de limpieza en desagües y bocas de tormenta de distintos barrios. El objetivo es asegurar el normal escurrimiento del agua ante el pronóstico de precipitaciones.",
+      "id": "1vfmv30",
+      "titulo": "El regreso del automovilismo colma el turismo en Balcarce",
+      "copete": "La reapertura del autódromo Juan Manuel Fangio genera ocupación hotelera total a nueve días de la llegada de las TC Pick Up.",
+      "guion": "La reapertura del autódromo genera una ocupación hotelera total en la ciudad. A pocos días de la llegada de las TC Pick Up, el sector turístico registra un movimiento récord.",
+      "seccion": "Automovilismo",
+      "medios": [
+        "Diario La Vanguardia"
+      ],
+      "enlace": "https://www.diariolavanguardia.com/noticias/44847-la-reapertura-del-fangio-ya-impacta-en-el-turismo-ocupacion-total-y-fuerte-movimiento-para-las-tc-pick-up/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-19T01:21:24.326Z",
+      "sinFecha": true,
+      "relevancia": 71,
+      "local": true,
+      "publicadaPor": "ia",
+      "publicadaCuando": "2026-09-18T23:01:37.348Z"
+    },
+    {
+      "id": "19i6quk",
+      "titulo": "Entrega de mercadería de Desarrollo Social en Balcarce",
+      "copete": "Desde este lunes entre las ocho y las doce se distribuyen alimentos a beneficiarios locales en la sede de avenida Aristóbulo del Valle.",
+      "guion": "Comienza la entrega mensual de mercadería para beneficiarios de Desarrollo Social. La distribución se realiza en la sede de avenida Aristóbulo del Valle y calle doce, de ocho a doce, y se extiende durante toda la semana organizada por barrios.",
       "seccion": "Servicios",
       "medios": [
         "Diario La Vanguardia"
       ],
-      "enlace": "https://www.diariolavanguardia.com/noticias/44814-el-municipio-refuerza-la-limpieza-de-desagues-ante-las-previsiones-de-lluvias/",
+      "enlace": "https://www.diariolavanguardia.com/noticias/44839-el-lunes-comienza-la-entrega-mensual-de-mercaderia-a-beneficiarios-de-desarrollo-social/",
       "teniaImagenLaFuente": true,
-      "fecha": "2026-09-18T19:30:26.420Z",
+      "fecha": "2026-09-19T01:21:24.326Z",
       "sinFecha": true,
       "relevancia": 69,
       "local": true,
       "publicadaPor": "ia",
-      "publicadaCuando": "2026-09-18T17:29:45.824Z"
-    },
-    {
-      "id": "jfn0bi",
-      "titulo": "Proyecto escolar de Los Pinos llegó a Decisión Niñez",
-      "copete": "Alumnos de la Primaria Nº 19 presentaron su proyecto de huerta en Santa Clara del Mar en el marco del programa provincial.",
-      "guion": "Estudiantes de la Escuela Primaria número diecinueve participaron de la etapa zonal del programa provincial con una propuesta para construir un invernadero y fortalecer una huerta comunitaria en Los Pinos.",
-      "seccion": "Deportes",
-      "medios": [
-        "Diario La Vanguardia"
-      ],
-      "enlace": "https://www.diariolavanguardia.com/noticias/44819-comemos-rico-y-sano-un-proyecto-de-alumnos-de-la-primaria-n-19-fue-seleccionado-en-decision-ninez-2026/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-18T19:30:26.420Z",
-      "sinFecha": true,
-      "relevancia": 63,
-      "local": true,
-      "publicadaPor": "ia",
-      "publicadaCuando": "2026-09-18T17:38:51.326Z"
-    },
-    {
-      "id": "ygy7vo",
-      "titulo": "Evalúan cambios en la Verificación Técnica Vehicular",
-      "copete": "El Senado bonaerense aprobó un pedido para modificar el sistema de la VTV. Buscan habilitar nuevos talleres y extender los plazos de vigencia.",
-      "guion": "El Senado de la provincia de Buenos Aires aprobó una iniciativa para modificar el sistema de verificación vehicular. Proponen sumar talleres, incorporar concesionarios y extender los plazos para algunos vehículos.",
-      "seccion": "Cultura y agenda",
-      "medios": [
-        "Diario La Vanguardia"
-      ],
-      "enlace": "https://www.diariolavanguardia.com/noticias/44817-vtv-podrian-habilitar-mas-talleres-cambiar-los-plazos-y-ampliar-la-competencia/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-18T19:30:26.420Z",
-      "sinFecha": true,
-      "relevancia": 63,
-      "local": true,
-      "publicadaPor": "ia",
-      "publicadaCuando": "2026-09-18T17:38:52.434Z"
-    },
-    {
-      "id": "1x87c94",
-      "titulo": "Reclamos del campo al Gobierno por impuestos",
-      "copete": "La Exposición Rural de Palermo cerró hace dos semanas con fuertes pedidos del sector agropecuario para reducir la carga impositiva nacional.",
-      "guion": "La última Exposición Rural de Palermo dejó nuevos reclamos del campo. El sector agropecuario le exigió al Gobierno nacional una baja en la carga impositiva.",
-      "seccion": "Cultura y agenda",
-      "medios": [
-        "El Diario Balcarce"
-      ],
-      "enlace": "https://eldiariobalcarce.com.ar/le-seguiremos-demandando-al-gobierno-nacional-que-reduzca-la-carga-impositiva-193",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-18T19:30:25.988Z",
-      "sinFecha": true,
-      "relevancia": 63,
-      "local": true,
-      "publicadaPor": "ia",
-      "publicadaCuando": "2026-09-18T17:38:53.363Z"
-    },
-    {
-      "id": "19jah2t",
-      "titulo": "Periodista de Balcarce cubre el Mundial desde El Salvador",
-      "copete": "El periodista balcarceño Claudio Martínez cubre la Copa del Mundo desde El Salvador, país donde reside hace más de dos décadas.",
-      "guion": "Un periodista nacido en Balcarce radicado en El Salvador vive la experiencia de cubrir mundiales de fútbol desde adentro. Una trayectoria internacional que comenzó en Buenos Aires y hoy lo lleva a los escenarios principales del deporte.",
-      "seccion": "Deportes",
-      "medios": [
-        "El Diario Balcarce"
-      ],
-      "enlace": "https://eldiariobalcarce.com.ar/de-balcarce-al-mundial-la-historia-del-periodista-que-vive-el-futbol-desde-adentro-899",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-18T19:30:25.988Z",
-      "sinFecha": true,
-      "relevancia": 63,
-      "local": true,
-      "publicadaPor": "ia",
-      "publicadaCuando": "2026-09-18T17:38:54.557Z"
+      "publicadaCuando": "2026-09-18T21:31:35.079Z"
     },
     {
       "id": "119oqdp",
@@ -102,7 +48,7 @@
       ],
       "enlace": "https://eldiariobalcarce.com.ar/una-noche-de-musica-solidaridad-y-suenos-para-acompanar-a-la-infancia-625",
       "teniaImagenLaFuente": true,
-      "fecha": "2026-09-18T19:30:25.987Z",
+      "fecha": "2026-09-19T01:21:23.995Z",
       "sinFecha": true,
       "relevancia": 63,
       "local": true,
@@ -120,7 +66,7 @@
       ],
       "enlace": "https://eldiariobalcarce.com.ar/presentan-plataforma-que-combina-ia-y-datos-del-lote-para-definir-que-corregir-en-cada-ambiente-857",
       "teniaImagenLaFuente": true,
-      "fecha": "2026-09-18T19:30:25.987Z",
+      "fecha": "2026-09-19T01:21:23.995Z",
       "sinFecha": true,
       "relevancia": 63,
       "local": true,
@@ -138,7 +84,7 @@
       ],
       "enlace": "https://eldiariobalcarce.com.ar/ferroviarios-gano-la-primera-final-de-la-copa-de-plata-878",
       "teniaImagenLaFuente": true,
-      "fecha": "2026-09-18T19:30:25.987Z",
+      "fecha": "2026-09-19T01:21:23.995Z",
       "sinFecha": true,
       "relevancia": 63,
       "local": true,
@@ -156,48 +102,12 @@
       ],
       "enlace": "https://eldiariobalcarce.com.ar/ferroviarios-campeon-de-copa-de-bronce-585",
       "teniaImagenLaFuente": true,
-      "fecha": "2026-09-18T19:30:25.987Z",
+      "fecha": "2026-09-19T01:21:23.995Z",
       "sinFecha": true,
       "relevancia": 63,
       "local": true,
       "publicadaPor": "ia",
       "publicadaCuando": "2026-09-18T17:48:55.625Z"
-    },
-    {
-      "id": "1y62trk",
-      "titulo": "Exitoso debut de Las Valkyrias en la Liga Mar y Sierras",
-      "copete": "Las Valkyrias, el equipo femenino de la Escuela de Básquet de Ferroviarios, ganaron en su presentación en la Primera división de la Liga Mar y Sierras.",
-      "guion": "Las Valkyrias tuvieron un comienzo ganador en la Liga Mar y Sierras. El equipo de Ferroviarios venció a SMATA en su primera presentación dentro de la máxima categoría.",
-      "seccion": "Deportes",
-      "medios": [
-        "El Diario Balcarce"
-      ],
-      "enlace": "https://eldiariobalcarce.com.ar/exitoso-debut-de-las-valkyrias-en-la-liga-mar-y-sierras-782",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-18T19:30:25.987Z",
-      "sinFecha": true,
-      "relevancia": 63,
-      "local": true,
-      "publicadaPor": "ia",
-      "publicadaCuando": "2026-09-18T17:49:16.781Z"
-    },
-    {
-      "id": "112kb6b",
-      "titulo": "Ferro Básquet busca los octavos en la Liga Mar y Sierras",
-      "copete": "El equipo de Balcarce afronta una nueva temporada con la dirección técnica de Facundo Fernández.",
-      "guion": "El plantel de Ferro ya se encuentra disputando una nueva temporada en la Liga Mar y Sierras. Con la conducción técnica de Facundo Fernández, el equipo apunta alto y busca llegar hasta los octavos de final del certamen.",
-      "seccion": "Deportes",
-      "medios": [
-        "El Diario Balcarce"
-      ],
-      "enlace": "https://eldiariobalcarce.com.ar/fernandez-el-objetivo-es-llegar-a-los-octavos-de-final-de-la-copa-de-oro-515",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-18T19:30:25.987Z",
-      "sinFecha": true,
-      "relevancia": 63,
-      "local": true,
-      "publicadaPor": "ia",
-      "publicadaCuando": "2026-09-18T17:49:25.672Z"
     },
     {
       "id": "33h243",
@@ -210,7 +120,7 @@
       ],
       "enlace": "https://eldiariobalcarce.com.ar/peidon-se-consagro-campeon-nacional-en-los-800-metros-696",
       "teniaImagenLaFuente": true,
-      "fecha": "2026-09-18T19:30:25.987Z",
+      "fecha": "2026-09-19T01:21:23.995Z",
       "sinFecha": true,
       "relevancia": 63,
       "local": true,
@@ -228,7 +138,7 @@
       ],
       "enlace": "https://eldiariobalcarce.com.ar/en-los-3000-metros-con-obstaculos-obtuvo-medalla-de-bronce-shalom-lescano-330",
       "teniaImagenLaFuente": true,
-      "fecha": "2026-09-18T19:30:25.987Z",
+      "fecha": "2026-09-19T01:21:23.995Z",
       "sinFecha": true,
       "relevancia": 63,
       "local": true,
@@ -236,76 +146,384 @@
       "publicadaCuando": "2026-09-18T17:50:01.737Z"
     },
     {
-      "id": "2gj4t6",
-      "titulo": "Confirmaron el embargo de inmuebles de la familia Kirchner",
-      "copete": "La Justicia federal rechazó un recurso presentado por Máximo y Florencia Kirchner y dejó firme el embargo sobre trece propiedades.",
-      "guion": "La Justicia federal confirmó el embargo preventivo sobre trece propiedades vinculadas a la familia Kirchner. La medida incluye el departamento donde reside Cristina Kirchner y afecta a bienes de las firmas familiares.",
+      "id": "1x87c94",
+      "titulo": "Reclamos del campo al Gobierno por impuestos",
+      "copete": "La Exposición Rural de Palermo cerró hace dos semanas con fuertes pedidos del sector agropecuario para reducir la carga impositiva nacional.",
+      "guion": "La última Exposición Rural de Palermo dejó nuevos reclamos del campo. El sector agropecuario le exigió al Gobierno nacional una baja en la carga impositiva.",
       "seccion": "Cultura y agenda",
       "medios": [
-        "La Nación"
+        "El Diario Balcarce"
       ],
-      "enlace": "https://www.lanacion.com.ar/politica/dejan-firme-el-embargo-del-departamento-de-san-jose-1111-para-ejecutar-el-decomiso-de-bienes-de-los-nid18092026/",
+      "enlace": "https://eldiariobalcarce.com.ar/le-seguiremos-demandando-al-gobierno-nacional-que-reduzca-la-carga-impositiva-193",
       "teniaImagenLaFuente": true,
-      "fecha": "2026-09-18T19:25:49.000Z",
-      "sinFecha": false,
-      "relevancia": 43,
-      "local": false,
+      "fecha": "2026-09-19T01:21:23.995Z",
+      "sinFecha": true,
+      "relevancia": 63,
+      "local": true,
       "publicadaPor": "ia",
-      "publicadaCuando": "2026-09-18T19:30:37.462Z"
+      "publicadaCuando": "2026-09-18T17:38:53.363Z"
     },
     {
-      "id": "ymaceq",
-      "titulo": "Bayern Múnich y Unión Berlín juegan en la Bundesliga",
-      "copete": "El Bayern Múnich recibe al Unión Berlín este dieciocho de septiembre en el estadio Allianz Arena, por la cuarta fecha del torneo alemán.",
-      "guion": "El Bayern Múnich enfrenta al Unión Berlín en el estadio Allianz Arena por la cuarta fecha de la liga alemana.",
+      "id": "19jah2t",
+      "titulo": "Periodista de Balcarce cubre el Mundial desde El Salvador",
+      "copete": "El periodista balcarceño Claudio Martínez cubre la Copa del Mundo desde El Salvador, país donde reside hace más de dos décadas.",
+      "guion": "Un periodista nacido en Balcarce radicado en El Salvador vive la experiencia de cubrir mundiales de fútbol desde adentro. Una trayectoria internacional que comenzó en Buenos Aires y hoy lo lleva a los escenarios principales del deporte.",
+      "seccion": "Deportes",
+      "medios": [
+        "El Diario Balcarce"
+      ],
+      "enlace": "https://eldiariobalcarce.com.ar/de-balcarce-al-mundial-la-historia-del-periodista-que-vive-el-futbol-desde-adentro-899",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-19T01:21:23.995Z",
+      "sinFecha": true,
+      "relevancia": 63,
+      "local": true,
+      "publicadaPor": "ia",
+      "publicadaCuando": "2026-09-18T17:38:54.557Z"
+    },
+    {
+      "id": "1y62trk",
+      "titulo": "Exitoso debut de Las Valkyrias en la Liga Mar y Sierras",
+      "copete": "Las Valkyrias, el equipo femenino de la Escuela de Básquet de Ferroviarios, ganaron en su presentación en la Primera división de la Liga Mar y Sierras.",
+      "guion": "Las Valkyrias tuvieron un comienzo ganador en la Liga Mar y Sierras. El equipo de Ferroviarios venció a SMATA en su primera presentación dentro de la máxima categoría.",
+      "seccion": "Deportes",
+      "medios": [
+        "El Diario Balcarce"
+      ],
+      "enlace": "https://eldiariobalcarce.com.ar/exitoso-debut-de-las-valkyrias-en-la-liga-mar-y-sierras-782",
+      "teniaImagenLaFuente": false,
+      "fecha": "2026-09-19T01:21:23.995Z",
+      "sinFecha": true,
+      "relevancia": 53,
+      "local": true,
+      "publicadaPor": "ia",
+      "publicadaCuando": "2026-09-18T17:49:16.781Z"
+    },
+    {
+      "id": "112kb6b",
+      "titulo": "Ferro Básquet busca los octavos en la Liga Mar y Sierras",
+      "copete": "El equipo de Balcarce afronta una nueva temporada con la dirección técnica de Facundo Fernández.",
+      "guion": "El plantel de Ferro ya se encuentra disputando una nueva temporada en la Liga Mar y Sierras. Con la conducción técnica de Facundo Fernández, el equipo apunta alto y busca llegar hasta los octavos de final del certamen.",
+      "seccion": "Balcarce",
+      "medios": [
+        "El Diario Balcarce"
+      ],
+      "enlace": "https://eldiariobalcarce.com.ar/fernandez-el-objetivo-es-llegar-a-los-octavos-de-final-de-la-copa-de-oro-515",
+      "teniaImagenLaFuente": false,
+      "fecha": "2026-09-19T01:21:23.995Z",
+      "sinFecha": true,
+      "relevancia": 53,
+      "local": true,
+      "publicadaPor": "ia",
+      "publicadaCuando": "2026-09-18T17:49:25.672Z"
+    },
+    {
+      "id": "b2u0v1",
+      "titulo": "Alianza Lima y ADT se enfrentan por el Clausura",
+      "copete": "Alianza Lima recibe a ADT este viernes 18 de septiembre en el estadio Alejandro Villanueva por la fecha diez del Torneo Clausura.",
+      "guion": "Por una nueva fecha del fútbol peruano, Alianza Lima jugará este viernes como local frente a ADT en el estadio Alejandro Villanueva desde las veinte horas.",
+      "seccion": "Deportes",
+      "medios": [
+        "Infobae",
+        "Clarín"
+      ],
+      "enlace": "https://www.infobae.com/peru/deportes/2026/09/18/alianza-lima-vs-adt-en-vivo-hoy-minuto-a-minuto-partido-matute-fecha-10-torneo-clausura-liga-1-2026-goles-resumen-resultado/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-19T01:17:51.000Z",
+      "sinFecha": false,
+      "relevancia": 53,
+      "local": false,
+      "publicadaPor": "ia",
+      "publicadaCuando": "2026-09-18T20:01:46.839Z"
+    },
+    {
+      "id": "r0ralj",
+      "titulo": "Perú y Paraguay listos para la serie de Copa Davis",
+      "copete": "Los seleccionados de tenis de Perú y Paraguay completaron su preparación en la previa del cruce por la Copa Davis.",
+      "guion": "Los equipos de tenis de Perú y Paraguay quedaron listos para disputar la serie de Copa Davis. Ambas delegaciones cumplieron con su último entrenamiento antes del inicio de los partidos en el certamen internacional.",
       "seccion": "Deportes",
       "medios": [
         "Infobae"
       ],
-      "enlace": "https://www.infobae.com/colombia/deportes/2026/09/18/bayern-munich-vs-union-berlin-en-vivo-bundesliga-siga-aqui-el-minuto-a-minuto-con-luis-diaz-en-accion/",
+      "enlace": "https://www.infobae.com/peru/deportes/2026/09/18/peru-vs-paraguay-en-vivo-hoy-punto-a-punto-ignacio-buse-juan-pablo-varillas-dia-1-grupo-mundial-1-copa-davis-2026-resumen-resultado/",
       "teniaImagenLaFuente": true,
-      "fecha": "2026-09-18T19:23:28.000Z",
+      "fecha": "2026-09-19T01:16:26.000Z",
       "sinFecha": false,
       "relevancia": 43,
       "local": false,
       "publicadaPor": "ia",
-      "publicadaCuando": "2026-09-18T18:38:42.591Z"
+      "publicadaCuando": "2026-09-18T20:01:43.713Z"
     },
     {
-      "id": "1esltho",
-      "titulo": "Beder y Cavanna estarán en el Olé Summit 2026",
-      "copete": "Los conductores y humoristas participarán del evento en Buenos Aires para compartir su experiencia en medios digitales.",
-      "guion": "Los conductores Germán Beder y Joaquín Cavanna participarán en el próximo Olé Summit para contar su experiencia en el mundo de los medios digitales.",
+      "id": "ru4i5f",
+      "titulo": "El historial adverso de Dabove frente a Vélez",
+      "copete": "El director técnico enfrenta una racha desfavorable ante el conjunto de Liniers de cara al próximo compromiso del equipo.",
+      "guion": "El entrenador registra varios partidos sin vencer a su próximo rival dirigiendo a diferentes clubes. El plantel se prepara para cortar esta mala racha en el próximo encuentro del torneo.",
       "seccion": "Deportes",
       "medios": [
         "Olé"
       ],
-      "enlace": "https://www.ole.com.ar/ole-sports-summit-congreso/olesummit-beder-cavanna-parenlamano_0_pojQ6htuSA.html",
+      "enlace": "https://www.ole.com.ar/tigre/tigre-diegodabove-velez-estadiojoseamalfitani-playoffs-felipezenobio-joaquinlaso-ignaciorusso-torneoclausura-guillermobarrosschelotto_0_jIUGN1EtQG.html",
       "teniaImagenLaFuente": true,
-      "fecha": "2026-09-18T18:57:47.000Z",
+      "fecha": "2026-09-19T01:00:35.000Z",
       "sinFecha": false,
       "relevancia": 39,
       "local": false,
       "publicadaPor": "ia",
-      "publicadaCuando": "2026-09-18T19:20:41.603Z"
+      "publicadaCuando": "2026-09-19T01:21:45.124Z"
     },
     {
-      "id": "1x5mmki",
-      "titulo": "Javier Zanetti participo del Ole Summit 2026",
-      "copete": "El exjugador de la seleccion argentina repaso su carrera y su actualidad en el Inter durante el evento realizado este sabado.",
-      "guion": "Javier Zanetti participo de un evento internacional este sabado para repasar su trayectoria deportiva. El ex capitano hablo sobre su rol actual en el Inter de Milan y los veinticinco años de su fundacion benifica.",
+      "id": "ogpf54",
+      "titulo": "Golazo de Gonzalo Escudero en el triunfo de Racing",
+      "copete": "El defensor juvenil Gonzalo Escudero convirtió su primer tanto en la primera de Racing con un remate de larga distancia frente a Sarmiento.",
+      "guion": "El joven defensor Gonzalo Escudero marcó su primer tanto en la primera división de Racing. Lo hizo con un potente remate de larga distancia en el encuentro frente a Sarmiento.",
       "seccion": "Deportes",
       "medios": [
         "Olé"
       ],
-      "enlace": "https://www.ole.com.ar/ole-sports-summit-congreso/zanetti-ole-fundacionpupi-summit-2026_0_IiFGsGOzqC.html",
+      "enlace": "https://www.ole.com.ar/racing/video-golazo-escudero-racing-sarmiento-clausura_0_iTbgh9Ojeq.html",
       "teniaImagenLaFuente": true,
-      "fecha": "2026-09-18T18:49:45.000Z",
+      "fecha": "2026-09-19T00:55:38.000Z",
       "sinFecha": false,
       "relevancia": 39,
       "local": false,
       "publicadaPor": "ia",
-      "publicadaCuando": "2026-09-18T19:10:43.608Z"
+      "publicadaCuando": "2026-09-19T01:11:36.635Z"
+    },
+    {
+      "id": "txw0gv",
+      "titulo": "Los Pumas 7s debutaron con triunfo en Rosario",
+      "copete": "El seleccionado argentino de rugby seven comenzó su participación en los Juegos Suramericanos con una victoria en Rosario.",
+      "guion": "El seleccionado argentino de rugby seven tuvo un estreno exitoso en los Juegos Suramericanos que se disputan en Rosario. Con una gran actuación del equipo, el público local disfrutó de la victoria en el arranque del torneo.",
+      "seccion": "Deportes",
+      "medios": [
+        "La Nación"
+      ],
+      "enlace": "https://www.lanacion.com.ar/deportes/rugby/los-juegos-suramericanos-consumaron-la-comunion-entre-los-pumas-7s-y-su-publico-nid18092026/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-19T00:53:51.000Z",
+      "sinFecha": false,
+      "relevancia": 51,
+      "local": false,
+      "publicadaPor": "ia",
+      "publicadaCuando": "2026-09-18T23:21:37.937Z"
+    },
+    {
+      "id": "1ncmltc",
+      "titulo": "Agenda deportiva del sábado con Copa Davis y fútbol",
+      "copete": "La programación televisiva del sábado incluye los cruces de la selección argentina de tenis en la Copa Davis y partidos del torneo local.",
+      "guion": "El sábado televisado trae tenis de Copa Davis con el equipo argentino frente a Turquía y partidos del fútbol local. La transmisión se podrá seguir en vivo por canales de deportes y plataformas digitales.",
+      "seccion": "Deportes",
+      "medios": [
+        "La Nación"
+      ],
+      "enlace": "https://www.lanacion.com.ar/deportes/futbol/agenda-de-tv-y-streaming-del-sabado-argentina-por-copa-davis-river-huracan-independiente-y-nid18092026/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-19T00:33:10.000Z",
+      "sinFecha": false,
+      "relevancia": 51,
+      "local": false,
+      "publicadaPor": "ia",
+      "publicadaCuando": "2026-09-19T00:41:45.064Z"
+    },
+    {
+      "id": "ea2uhj",
+      "titulo": "Central Córdoba y Defensa y Justicia empataron en Santiago",
+      "copete": "Central Córdoba y Defensa y Justicia igualaron en un encuentro disputado en Santiago del Estero, en el inicio de la jornada futbolística.",
+      "guion": "En Santiago del Estero, Central Córdoba y Defensa y Justicia empataron en un partido entretenido. El conjunto visitante dominó las acciones del juego, que finalizó con momentos de tensión entre los planteles.",
+      "seccion": "Deportes",
+      "medios": [
+        "La Nación",
+        "Clarín"
+      ],
+      "enlace": "https://www.lanacion.com.ar/deportes/futbol/central-cordoba-empato-con-defensa-y-justicia-en-un-partido-que-termino-con-polemicas-y-al-borde-del-nid18092026/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-19T00:06:30.000Z",
+      "sinFecha": false,
+      "relevancia": 61,
+      "local": false,
+      "publicadaPor": "ia",
+      "publicadaCuando": "2026-09-19T00:01:36.877Z"
+    },
+    {
+      "id": "m99x9",
+      "titulo": "Instituto y Talleres juegan una nueva edición del clásico",
+      "copete": "Este sábado se enfrentan Instituto y Talleres en Alta Córdoba, en un nuevo capítulo del clásico cordobés con presentes distintos para ambos equipos.",
+      "guion": "El clásico cordobés suma un nuevo capítulo este sábado. Instituto llega en su mejor inicio histórico en Primera División, mientras que Talleres busca afianzar su recuperación en el torneo.",
+      "seccion": "Deportes",
+      "medios": [
+        "Olé"
+      ],
+      "enlace": "https://www.ole.com.ar/instituto/clasico-cordobes-instituto-talleres-gloria-t-matador-felippe-diego-flores-zona_0_vvmAmyKwj6.html",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-19T00:02:29.000Z",
+      "sinFecha": false,
+      "relevancia": 39,
+      "local": false,
+      "publicadaPor": "ia",
+      "publicadaCuando": "2026-09-19T00:21:37.056Z"
+    },
+    {
+      "id": "102v840",
+      "titulo": "Independiente visita a Unión por la Liga Profesional",
+      "copete": "Independiente enfrenta este viernes a Unión en Santa Fe con el objetivo de afianzarse en la zona de clasificación.",
+      "guion": "Independiente visita a Unión en condición de visitante. El equipo de Avellaneda busca un triunfo clave para mantenerse en puestos de copas y asegurar su lugar en los playoffs.",
+      "seccion": "Deportes",
+      "medios": [
+        "Olé"
+      ],
+      "enlace": "https://www.ole.com.ar/futbol-primera/independiente-union-equipo-rojo-palais-parmo_0_j8CJiKJcXE.html",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-18T23:57:55.000Z",
+      "sinFecha": false,
+      "relevancia": 39,
+      "local": false,
+      "publicadaPor": "ia",
+      "publicadaCuando": "2026-09-19T00:11:43.657Z"
+    },
+    {
+      "id": "1pig8zv",
+      "titulo": "Liga Balcarceña: asoma el Clausura 2026",
+      "copete": "La Liga Balcarceña de Fútbol presentó el cronograma de partidos para la fase Clausura del Torneo Oficial 2026, mientras aún se disputa el certamen Apertura.",
+      "guion": "La Liga Balcarceña dio a conocer el cronograma de partidos para la fase Clausura del torneo oficial de fútbol. La presentación se realizó mientras todavía se define el campeonato Apertura.",
+      "seccion": "Deportes",
+      "medios": [
+        "Infórmese Primero (FM 104.9)"
+      ],
+      "enlace": "http://www.blogger.com/feeds/8495648477830064035/posts/default/899871394741806340",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-18T22:17:49.080Z",
+      "sinFecha": false,
+      "relevancia": 80,
+      "local": true,
+      "publicadaPor": "ia",
+      "publicadaCuando": "2026-09-18T23:01:36.337Z"
+    },
+    {
+      "id": "1a5lh38",
+      "titulo": "Goleada en contra para el equipo de Dibu Martínez y Barco",
+      "copete": "El conjunto de los argentinos cayó por tres a cero ante el Brentford este fin de semana en la liga inglesa.",
+      "guion": "Valentín Barco fue titular por primera vez en Inglaterra y Emiliano Martínez recibió tres goles. Fue en la dura derrota de su equipo frente al Brentford por la Premier League.",
+      "seccion": "Deportes",
+      "medios": [
+        "Clarín"
+      ],
+      "enlace": "https://www.clarin.com/deportes/chelsea-dibu-martinez-colo-barco-sufrio-dura-goleada-premier-league-brentford_0_9z7OKOnKdI.html",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-18T22:01:04.000Z",
+      "sinFecha": false,
+      "relevancia": 28,
+      "local": false,
+      "publicadaPor": "ia",
+      "publicadaCuando": "2026-09-18T22:32:12.336Z"
+    },
+    {
+      "id": "1k6fg2w",
+      "titulo": "Avanzan las obras en el autódromo porteño",
+      "copete": "El autódromo de Buenos Aires intensifica sus obras de remodelación para recibir al MotoGP en abril próximo.",
+      "guion": "El autódromo de Buenos Aires intensifica sus trabajos de remodelación con la mirada puesta en recibir al MotoGP en abril del año próximo y renueva además su ilusión con la Fórmula Uno.",
+      "seccion": "Automovilismo",
+      "medios": [
+        "Campeones"
+      ],
+      "enlace": "https://campeones.com.ar/asi-avanzan-las-obras-en-el-autodromo-porteno/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-18T20:26:04.000Z",
+      "sinFecha": false,
+      "relevancia": 45,
+      "local": false,
+      "publicadaPor": "ia",
+      "publicadaCuando": "2026-09-18T20:31:33.804Z"
+    },
+    {
+      "id": "1ozoykm",
+      "titulo": "Zoonosis traslada el quirófano móvil a la Plaza Colón",
+      "copete": "El quirófano móvil de Zoonosis atiende hasta el lunes en las inmediaciones del Club de Pesca, en la zona de Plaza Colón.",
+      "guion": "El quirófano móvil de Zoonosis continúa atendiendo cerca del Club de Pesca. Los vecinos de esa zona pueden acercarse hasta el próximo lunes para realizar castraciones y vacunaciones a sus mascotas.",
+      "seccion": "Servicios",
+      "medios": [
+        "Puntonueve (FM 100.9)"
+      ],
+      "enlace": "https://puntonueve.com.ar/el-quirofano-movil-de-zoonosis-se-trasladara-a-un-nuevo-punto-de-atencion/",
+      "teniaImagenLaFuente": false,
+      "fecha": "2026-09-18T20:11:28.000Z",
+      "sinFecha": false,
+      "relevancia": 80,
+      "local": true,
+      "publicadaPor": "ia",
+      "publicadaCuando": "2026-09-18T20:21:35.057Z"
+    },
+    {
+      "id": "linzdb",
+      "titulo": "WEC: evalúan extender el acuerdo más allá de 2027",
+      "copete": "La FIA y el Automóvil Club del Oeste analizan prolongar su vínculo para fiscalizar el Mundial de Resistencia.",
+      "guion": "La Federación Internacional del Automovilismo y el Automóvil Club del Oeste analizan prolongar su alianza para fiscalizar el Campeonato Mundial de Resistencia una vez que finalice el plazo actual en dos mil veintisiete.",
+      "seccion": "Automovilismo",
+      "medios": [
+        "Campeones"
+      ],
+      "enlace": "https://campeones.com.ar/wec-fia-y-aco-trabajan-en-extender-su-acuerdo-mas-alla-de-2027/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-18T19:49:28.000Z",
+      "sinFecha": false,
+      "relevancia": 45,
+      "local": false,
+      "publicadaPor": "ia",
+      "publicadaCuando": "2026-09-18T19:51:34.206Z"
+    },
+    {
+      "id": "11fjvi7",
+      "titulo": "El fan que le dio la bandera a Colapinto",
+      "copete": "Un vecino de la provincia de Buenos Aires vivió un giro inesperado en su vida tras entregarle la bandera argentina a Franco Colapinto el último domingo en Madrid.",
+      "guion": "Darle la bandera argentina a Franco Colapinto en Madrid le cambió la vida a un hincha. El gesto generó una repercusión inesperada y se viralizó en las redes sociales de inmediato.",
+      "seccion": "Automovilismo",
+      "medios": [
+        "Campeones"
+      ],
+      "enlace": "https://campeones.com.ar/le-entrego-la-bandera-argentina-a-colapinto-y-su-vida-cambio/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-18T19:31:00.000Z",
+      "sinFecha": false,
+      "relevancia": 45,
+      "local": false,
+      "publicadaPor": "ia",
+      "publicadaCuando": "2026-09-18T19:51:42.035Z"
+    },
+    {
+      "id": "uqv64k",
+      "titulo": "Platense sancionado por disturbios en la Libertadores",
+      "copete": "La Conmebol sancionó este martes a Platense con dos partidos a puertas cerradas tras los incidentes ante Fluminense en la Copa Libertadores.",
+      "guion": "La Confederación Sudamericana de Fútbol sancionó a Platense con dos partidos sin público. La medida surge tras los graves disturbios ocurridos con la parcialidad de Fluminense. La dirigencia del club analiza presentar una apelación.",
+      "seccion": "Deportes",
+      "medios": [
+        "Clarín"
+      ],
+      "enlace": "https://www.clarin.com/deportes/platense-sancionado-disturbios-fluminense-jugara-partidos-puertas-cerradas-clasico-argentinos_0_DPUurJ7CFY.html",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-18T18:52:59.000Z",
+      "sinFecha": false,
+      "relevancia": 28,
+      "local": false,
+      "publicadaPor": "ia",
+      "publicadaCuando": "2026-09-18T19:51:52.781Z"
+    },
+    {
+      "id": "1ssjwpj",
+      "titulo": "Encuentro nacional de básquet en Tandil",
+      "copete": "Jugadoras de la Escuela Municipal de Básquet participaron el fin último fin de semana del cuarto Encuentro Nacional de Mini Básquet en Tandil.",
+      "guion": "La Escuela Municipal de Básquet participó de un encuentro nacional en Tandil. Las categorías formativas integraron la delegación que viajó al torneo organizado por el Club Independiente.",
+      "seccion": "Deportes",
+      "medios": [
+        "Infórmese Primero (FM 104.9)"
+      ],
+      "enlace": "http://www.blogger.com/feeds/8495648477830064035/posts/default/1279238160283510661",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-18T18:52:45.710Z",
+      "sinFecha": false,
+      "relevancia": 80,
+      "local": true,
+      "publicadaPor": "ia",
+      "publicadaCuando": "2026-09-18T20:41:37.805Z"
     },
     {
       "id": "11gcaxz",
@@ -320,46 +538,46 @@
       "teniaImagenLaFuente": true,
       "fecha": "2026-09-18T18:49:15.000Z",
       "sinFecha": false,
-      "relevancia": 55,
+      "relevancia": 45,
       "local": false,
       "publicadaPor": "ia",
       "publicadaCuando": "2026-09-18T18:55:17.385Z"
     },
     {
-      "id": "xi4ohd",
-      "titulo": "Cerúndolo abrirá la serie de Copa Davis ante Turquía",
-      "copete": "Francisco Cerúndolo jugará el primer partido de la serie entre Argentina y Turquía este sábado en Neuquén, por el Grupo Mundial I de la Copa Davis.",
-      "guion": "Comienza la Copa Davis en la Patagonia. Francisco Cerúndolo será el primer singlista de Argentina y abrirá este sábado la serie frente a Turquía en la provincia de Neuquén.",
+      "id": "15d9qt6",
+      "titulo": "Ferroviarios +40 cayó ante Unión Quincho en básquet",
+      "copete": "El equipo de Ferroviarios perdió frente a Unión Quincho de Mar del Plata por el Torneo Clausura Mar y Sierras.",
+      "guion": "El equipo senior de Ferroviarios no pudo ante Unión Quincho de Mar del Plata. Fue en un partido parejo correspondiente a una nueva fecha del torneo regional de básquetbol.",
       "seccion": "Deportes",
       "medios": [
-        "La Nación"
+        "Infórmese Primero (FM 104.9)"
       ],
-      "enlace": "https://www.lanacion.com.ar/deportes/tenis/francisco-cerundolo-abrira-la-serie-entre-argentina-y-turquia-en-la-primera-serie-de-copa-davis-en-nid18092026/",
+      "enlace": "http://www.blogger.com/feeds/8495648477830064035/posts/default/6907867450299426743",
       "teniaImagenLaFuente": true,
-      "fecha": "2026-09-18T18:45:23.000Z",
+      "fecha": "2026-09-18T18:48:38.104Z",
       "sinFecha": false,
-      "relevancia": 51,
-      "local": false,
+      "relevancia": 80,
+      "local": true,
       "publicadaPor": "ia",
-      "publicadaCuando": "2026-09-18T18:09:24.826Z"
+      "publicadaCuando": "2026-09-18T20:41:38.781Z"
     },
     {
-      "id": "7n9lpw",
-      "titulo": "San Lorenzo y Boca juegan este domingo por el Clausura",
-      "copete": "San Lorenzo y Boca se enfrentan este domingo por la fecha diez del Torneo Clausura dos mil veintiséis en el único clásico del fin de semana.",
-      "guion": "San Lorenzo y Boca se enfrentan este domingo en el único clásico de la fecha diez del Torneo Clausura dos mil veintiséis. Ambos equipos buscan el triunfo para llevarle alegría a sus hinchas.",
+      "id": "1fp3opk",
+      "titulo": "Racing fue segundo en el Torneo Atlantis Primavera",
+      "copete": "El equipo de natación de Racing Club de Balcarce logró el segundo puesto este fin de semana en Mar del Plata durante el torneo provincial.",
+      "guion": "La delegación de natación de Racing obtuvo el segundo puesto en el Torneo Atlantis Primavera en Mar del Plata. Diecinueve deportistas compitieron en el natatorio municipal durante las dos jornadas del certamen bonaerense.",
       "seccion": "Deportes",
       "medios": [
-        "La Nación"
+        "Infórmese Primero (FM 104.9)"
       ],
-      "enlace": "https://www.lanacion.com.ar/deportes/futbol/san-lorenzo-vs-boca-por-el-torneo-clausura-2026-dia-horario-tv-y-como-ver-online-nid18092026/",
+      "enlace": "http://www.blogger.com/feeds/8495648477830064035/posts/default/1277376378889145958",
       "teniaImagenLaFuente": true,
-      "fecha": "2026-09-18T18:41:44.000Z",
+      "fecha": "2026-09-18T18:45:44.085Z",
       "sinFecha": false,
-      "relevancia": 51,
-      "local": false,
+      "relevancia": 80,
+      "local": true,
       "publicadaPor": "ia",
-      "publicadaCuando": "2026-09-18T19:01:16.089Z"
+      "publicadaCuando": "2026-09-18T20:41:39.840Z"
     },
     {
       "id": "s1kopx",
@@ -374,47 +592,10 @@
       "teniaImagenLaFuente": true,
       "fecha": "2026-09-18T18:37:14.000Z",
       "sinFecha": false,
-      "relevancia": 93,
+      "relevancia": 83,
       "local": true,
       "publicadaPor": "ia",
       "publicadaCuando": "2026-09-18T18:55:16.381Z"
-    },
-    {
-      "id": "r63xd2",
-      "titulo": "Zidane asumió como técnico de Francia con una lista renovada",
-      "copete": "Zinedine Zidane asumió la dirección técnica de la selección de Francia y presentó su primera lista de convocados de cara a la doble fecha de la Liga de Naciones.",
-      "guion": "Comenzó la era de Zinedine Zidane al frente del seleccionado francés. El flamante entrenador dio a conocer su primera convocatoria para disputar los próximos compromisos internacionales por la Liga de Naciones.",
-      "seccion": "Deportes",
-      "medios": [
-        "Olé"
-      ],
-      "enlace": "https://www.ole.com.ar/futbol-internacional/zidane-primera-convocatoria-francia-ausencias-mbappe_0_dN9HqziXGk.html",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-18T18:36:19.000Z",
-      "sinFecha": false,
-      "relevancia": 39,
-      "local": false,
-      "publicadaPor": "ia",
-      "publicadaCuando": "2026-09-18T18:55:21.570Z"
-    },
-    {
-      "id": "1gn9ox4",
-      "titulo": "Argentina sigue segunda en el medallero de los Suramericanos",
-      "copete": "La delegación nacional se mantiene en el segundo puesto de los Juegos Suramericanos este jueves, con oro en remo.",
-      "guion": "La delegación argentina continúa en el segundo puesto de los Juegos Suramericanos tras sumar una nueva medalla dorada en remo durante la jornada del jueves.",
-      "seccion": "Deportes",
-      "medios": [
-        "Olé",
-        "Clarín"
-      ],
-      "enlace": "https://www.ole.com.ar/polideportivo/juegos-suramericanos/medallero-juegos-suramericanos-posiciones-argentina-paises_0_S4HFAvvWId.html",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-18T18:33:00.000Z",
-      "sinFecha": false,
-      "relevancia": 49,
-      "local": false,
-      "publicadaPor": "ia",
-      "publicadaCuando": "2026-09-18T19:10:38.798Z"
     },
     {
       "id": "b852j8",
@@ -429,46 +610,28 @@
       "teniaImagenLaFuente": true,
       "fecha": "2026-09-18T18:28:55.000Z",
       "sinFecha": false,
-      "relevancia": 55,
+      "relevancia": 45,
       "local": false,
       "publicadaPor": "ia",
       "publicadaCuando": "2026-09-18T18:38:40.055Z"
     },
     {
-      "id": "sn1jbq",
-      "titulo": "Copa Davis: Argentina y Turquía definen el orden de juego",
-      "copete": "La selección nacional de tenis enfrentará a Turquía desde este sábado en Neuquén, tras confirmarse los cruces de la serie en superficie dura.",
-      "guion": "La selección argentina de tenis comenzará este sábado su serie ante Turquía en Neuquén. Ya quedaron definidos los cruces para la pista dura, donde el equipo buscará el triunfo en condición de local.",
-      "seccion": "Deportes",
+      "id": "smbukf",
+      "titulo": "Zoonosis atiende cerca de la Escuela de Arte",
+      "copete": "El quirófano móvil municipal ofrece castraciones y vacunación antirrábica frente al Club de Pesca hasta el próximo lunes.",
+      "guion": "El quirófano móvil de Zoonosis atiende esta semana cerca de la Escuela de Arte. Ofrece castraciones y vacunación para mascotas hasta el lunes próximo frente al Club de Pesca.",
+      "seccion": "Servicios",
       "medios": [
-        "Olé"
+        "Infórmese Primero (FM 104.9)"
       ],
-      "enlace": "https://www.ole.com.ar/tenis/copa-davis-orden-juego-argentina-turquia-cerundolo-superficie_0_j7gRYxrkvb.html",
+      "enlace": "http://www.blogger.com/feeds/8495648477830064035/posts/default/2718313349947535418",
       "teniaImagenLaFuente": true,
-      "fecha": "2026-09-18T18:20:57.000Z",
+      "fecha": "2026-09-18T18:25:33.779Z",
       "sinFecha": false,
-      "relevancia": 39,
-      "local": false,
+      "relevancia": 86,
+      "local": true,
       "publicadaPor": "ia",
-      "publicadaCuando": "2026-09-18T18:38:43.856Z"
-    },
-    {
-      "id": "1c0rv03",
-      "titulo": "Clausuran el autódromo Roberto Mouras por seis meses",
-      "copete": "La Justicia ratificó la medida este fin de semana tras un informe sobre fallas de seguridad en el predio platense.",
-      "guion": "La Justicia confirmó la clausura por seis meses del autódromo Roberto Mouras de La Plata. La medida se dispuso tras un informe sobre graves deficiencias de seguridad en el predio que debía recibir el cierre del Turismo Carretera.",
-      "seccion": "Automovilismo",
-      "medios": [
-        "Clarín"
-      ],
-      "enlace": "https://www.clarin.com/deportes/justicia-confirmo-clausura-autodromo-roberto-mouras-plata-meses-duro-informe-complica-final-tc_0_37obITfXmi.html",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-18T18:17:13.000Z",
-      "sinFecha": false,
-      "relevancia": 46,
-      "local": false,
-      "publicadaPor": "ia",
-      "publicadaCuando": "2026-09-18T19:10:39.742Z"
+      "publicadaCuando": "2026-09-18T20:41:36.862Z"
     },
     {
       "id": "u8y4ug",
@@ -483,7 +646,7 @@
       "teniaImagenLaFuente": false,
       "fecha": "2026-09-18T18:04:19.000Z",
       "sinFecha": false,
-      "relevancia": 49,
+      "relevancia": 39,
       "local": false,
       "publicadaPor": "ia",
       "publicadaCuando": "2026-09-18T18:09:20.281Z"
@@ -501,7 +664,7 @@
       "teniaImagenLaFuente": true,
       "fecha": "2026-09-18T17:55:48.000Z",
       "sinFecha": false,
-      "relevancia": 57,
+      "relevancia": 47,
       "local": false,
       "publicadaPor": "ia",
       "publicadaCuando": "2026-09-18T19:01:13.713Z"
@@ -519,7 +682,7 @@
       "teniaImagenLaFuente": true,
       "fecha": "2026-09-18T17:34:00.000Z",
       "sinFecha": false,
-      "relevancia": 58,
+      "relevancia": 48,
       "local": false,
       "publicadaPor": "ia",
       "publicadaCuando": "2026-09-18T19:01:12.421Z"
@@ -537,28 +700,10 @@
       "teniaImagenLaFuente": false,
       "fecha": "2026-09-18T17:32:07.000Z",
       "sinFecha": false,
-      "relevancia": 35,
+      "relevancia": 25,
       "local": false,
       "publicadaPor": "ia",
       "publicadaCuando": "2026-09-18T18:28:12.597Z"
-    },
-    {
-      "id": "wgu414",
-      "titulo": "Medalla de plata para Argentina en los Suramericanos",
-      "copete": "La delegación nacional logró el segundo puesto en el pentatlón moderno tras una cerrada definición con Venezuela en los Juegos Suramericanos.",
-      "guion": "El deporte nacional sumó una nueva presea en los Juegos Suramericanos. La dupla argentina obtuvo el segundo puesto en pentatlón moderno tras una definición muy pareja frente al representante de Venezuela.",
-      "seccion": "Deportes",
-      "medios": [
-        "Clarín"
-      ],
-      "enlace": "https://www.clarin.com/deportes/juegos-suramericanos-2026-dramatica-definicion-pentatlon-moderno-argentina-venezuela-medalla-oro_0_4uLxcOx3D6.html",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-18T17:25:11.000Z",
-      "sinFecha": false,
-      "relevancia": 38,
-      "local": false,
-      "publicadaPor": "ia",
-      "publicadaCuando": "2026-09-18T18:28:10.529Z"
     },
     {
       "id": "rfplfj",
@@ -573,28 +718,10 @@
       "teniaImagenLaFuente": false,
       "fecha": "2026-09-18T17:23:55.000Z",
       "sinFecha": false,
-      "relevancia": 35,
+      "relevancia": 25,
       "local": false,
       "publicadaPor": "ia",
       "publicadaCuando": "2026-09-18T18:28:13.522Z"
-    },
-    {
-      "id": "1x3nhpz",
-      "titulo": "Comenzó la actividad del Turismo Nacional en Río Cuarto",
-      "copete": "Los pilotos Valentín Aguirre e Ian Iansa completaron los ensayos previos a la novena fecha del campeonato en el autódromo cordobés.",
-      "guion": "Comenzó la novena fecha del Turismo Nacional en Córdoba. Los pilotos Valentín Aguirre e Ian Iansa completaron las pruebas iniciales en el autódromo de Río Cuarto para poner a punto sus vehículos.",
-      "seccion": "Automovilismo",
-      "medios": [
-        "Campeones"
-      ],
-      "enlace": "https://campeones.com.ar/tn-en-rio-cuarto-las-pruebas-siguieron-con-aguirre-e-iansa/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-18T17:10:06.000Z",
-      "sinFecha": false,
-      "relevancia": 55,
-      "local": false,
-      "publicadaPor": "ia",
-      "publicadaCuando": "2026-09-18T17:52:05.655Z"
     },
     {
       "id": "1rhe8h7",
@@ -609,7 +736,7 @@
       "teniaImagenLaFuente": true,
       "fecha": "2026-09-18T17:03:37.000Z",
       "sinFecha": false,
-      "relevancia": 53,
+      "relevancia": 43,
       "local": false,
       "publicadaPor": "ia",
       "publicadaCuando": "2026-09-18T19:01:15.042Z"
@@ -627,7 +754,7 @@
       "teniaImagenLaFuente": false,
       "fecha": "2026-09-18T17:01:31.000Z",
       "sinFecha": false,
-      "relevancia": 90,
+      "relevancia": 80,
       "local": true,
       "publicadaPor": "ia",
       "publicadaCuando": "2026-09-18T17:29:23.266Z"
@@ -652,24 +779,6 @@
       "publicadaCuando": "2026-09-18T17:29:20.393Z"
     },
     {
-      "id": "12inmxp",
-      "titulo": "Nueva era en el WRC con los autos Rally One",
-      "copete": "Presentaron en Bélgica el nuevo vehículo que utilizará el Campeonato Mundial de Rally desde el próximo año, con un formato más accesible para las terminales.",
-      "guion": "Presentaron en Bélgica el vehículo de la nueva categoría Rally One para el Mundial de Rally. Busca atraer más marcas con costos más bajos y mayor flexibilidad técnica.",
-      "seccion": "Automovilismo",
-      "medios": [
-        "Campeones"
-      ],
-      "enlace": "https://campeones.com.ar/wrc-la-nueva-era-llega-con-rally-one/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-18T15:45:50.000Z",
-      "sinFecha": false,
-      "relevancia": 45,
-      "local": false,
-      "publicadaPor": "ia",
-      "publicadaCuando": "2026-09-18T17:52:06.691Z"
-    },
-    {
       "id": "648mh3",
       "titulo": "Zoonosis atiende con el quirófano móvil en plaza Colón",
       "copete": "El quirófano móvil de Zoonosis funcionará hasta el próximo lunes cerca de la sede del Club de Pesca, en la zona de plaza Colón.",
@@ -688,40 +797,22 @@
       "publicadaCuando": "2026-09-18T17:29:24.126Z"
     },
     {
-      "id": "1gbe19u",
-      "titulo": "Desfile solidario a beneficio del hogar Pinto en Balcarce",
-      "copete": "Este domingo a las diecisiete se realizará un desfile solidario a beneficio del Hogar Pinto en la Casa del Bicentenario de Balcarce.",
-      "guion": "Este domingo por la tarde la Casa del Bicentenario recibirá un desfile solidario a beneficio del hogar Pinto. La actividad comenzará a las diecisiete y cuenta con organización local y apoyo comunal.",
+      "id": "834bwh",
+      "titulo": "Festejos por el Día del Estudiante en el cerro El Triunfo",
+      "copete": "La Dirección de Juventud realizará una jornada recreativa y musical este lunes en el anfiteatro Saverio Bonazza, de dos a seis de la tarde.",
+      "guion": "El próximo lunes habrá música y actividades recreativas para los jóvenes en el anfiteatro del cerro El Triunfo. El encuentro se desarrollará por la tarde en el marco del Día del Estudiante.",
       "seccion": "Balcarce",
       "medios": [
         "Municipalidad de Balcarce"
       ],
-      "enlace": "https://balcarce.gob.ar/2026/09/18/desfile-a-beneficio-del-hogar-pinto-el-domingo-en-cultura/",
+      "enlace": "https://balcarce.gob.ar/2026/09/18/la-direccion-de-juventud-organiza-una-jornada-especial-por-el-dia-del-estudiante/",
       "teniaImagenLaFuente": true,
-      "fecha": "2026-09-18T15:16:25.000Z",
+      "fecha": "2026-09-18T15:12:07.000Z",
       "sinFecha": false,
       "relevancia": 74,
       "local": true,
       "publicadaPor": "ia",
-      "publicadaCuando": "2026-09-18T17:29:25.075Z"
-    },
-    {
-      "id": "bq4jjw",
-      "titulo": "Pedro Acosta lideró las prácticas de MotoGP en Austria",
-      "copete": "El piloto español quedó en lo más alto de la tabla de tiempos en el circuito Red Bull Ring durante las prácticas del Gran Premio de Austria.",
-      "guion": "El español Pedro Acosta dominó las prácticas de MotoGP en Austria. Con su moto del equipo KTM, el joven piloto marcó el mejor tiempo en el circuito de Red Bull Ring tras una destacada evolución en su rendimiento.",
-      "seccion": "Automovilismo",
-      "medios": [
-        "Campeones"
-      ],
-      "enlace": "https://campeones.com.ar/ktm-empieza-solido-en-el-gp-de-austria-con-pedro-acosta/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-18T14:17:03.000Z",
-      "sinFecha": false,
-      "relevancia": 45,
-      "local": false,
-      "publicadaPor": "ia",
-      "publicadaCuando": "2026-09-18T17:58:49.354Z"
+      "publicadaCuando": "2026-09-18T17:29:26.040Z"
     },
     {
       "id": "1b9ah19",
@@ -754,7 +845,7 @@
       "teniaImagenLaFuente": true,
       "fecha": "2026-09-18T13:17:27.000Z",
       "sinFecha": false,
-      "relevancia": 48,
+      "relevancia": 41,
       "local": false,
       "publicadaPor": "ia",
       "publicadaCuando": "2026-09-18T19:01:19.313Z"
@@ -773,7 +864,7 @@
       "teniaImagenLaFuente": true,
       "fecha": "2026-09-18T13:01:44.000Z",
       "sinFecha": false,
-      "relevancia": 96,
+      "relevancia": 89,
       "local": true,
       "publicadaPor": "ia",
       "publicadaCuando": "2026-09-18T17:29:22.412Z"
@@ -793,7 +884,7 @@
       "teniaImagenLaFuente": true,
       "fecha": "2026-09-18T12:41:52.000Z",
       "sinFecha": false,
-      "relevancia": 98,
+      "relevancia": 91,
       "local": true,
       "publicadaPor": "ia",
       "publicadaCuando": "2026-09-18T17:29:21.265Z"
@@ -811,28 +902,28 @@
       "teniaImagenLaFuente": true,
       "fecha": "2026-09-18T12:11:37.000Z",
       "sinFecha": false,
-      "relevancia": 44,
+      "relevancia": 37,
       "local": false,
       "publicadaPor": "ia",
       "publicadaCuando": "2026-09-18T19:01:20.392Z"
     },
     {
-      "id": "18us8rn",
-      "titulo": "Inter Miami jugará el torneo infantil de Balcarce",
-      "copete": "El Inter Miami confirmó su participación con la categoría dos mil quince en el tradicional torneo infantil de Balcarce.",
-      "guion": "El Inter Miami jugará el tradicional torneo infantil en Balcarce. El club estadounidense confirmó su llegada con la categoría dos mil quince para competir en el certamen local.",
-      "seccion": "Deportes",
+      "id": "13ufat",
+      "titulo": "Clasificaron a la final provincial de los Juegos Bonaerenses",
+      "copete": "Balcarce fue sede de la etapa regional de juegos lúdicos para adultos mayores el fin de semana en el Club Ferroviarios.",
+      "guion": "Adultos mayores locales lograron la clasificación a la final provincial de los Juegos Bonaerenses. La competencia regional de juegos lúdicos se llevó a cabo en las instalaciones del Club Ferroviarios.",
+      "seccion": "Balcarce",
       "medios": [
-        "Puntonueve (FM 100.9)"
+        "Municipalidad de Balcarce"
       ],
-      "enlace": "https://puntonueve.com.ar/confirmado-inter-miami-participara-del-torneo-de-futbol-infantil-ciudad-de-balcarce/",
-      "teniaImagenLaFuente": false,
-      "fecha": "2026-09-17T23:08:18.000Z",
+      "enlace": "https://balcarce.gob.ar/2026/09/18/minaudo-y-aguirre-a-la-final-provincial/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-18T12:10:17.000Z",
       "sinFecha": false,
       "relevancia": 67,
       "local": true,
       "publicadaPor": "ia",
-      "publicadaCuando": "2026-09-18T17:38:45.912Z"
+      "publicadaCuando": "2026-09-18T21:51:40.983Z"
     },
     {
       "id": "495bur",
@@ -847,7 +938,7 @@
       "teniaImagenLaFuente": true,
       "fecha": "2026-09-17T22:49:32.000Z",
       "sinFecha": false,
-      "relevancia": 79,
+      "relevancia": 71,
       "local": true,
       "publicadaPor": "ia",
       "publicadaCuando": "2026-09-18T17:29:27.808Z"
@@ -889,77 +980,22 @@
       "publicadaCuando": "2026-09-18T17:38:46.974Z"
     },
     {
-      "id": "1nvf6pj",
-      "titulo": "Renuevan las canchas de tenis del Polideportivo",
-      "copete": "La Subsecretaría de Deporte de Balcarce lleva adelante tareas para recuperar las canchas de tenis del Complejo Polideportivo Municipal.",
-      "guion": "La comuna local inició trabajos para recuperar las canchas de tenis del Complejo Polideportivo. El objetivo es mejorar las instalaciones y fomentar la práctica de esta disciplina en el predio municipal.",
+      "id": "jul4wv",
+      "titulo": "Renuevan las canchas de tenis del Polideportivo municipal",
+      "copete": "La Subsecretaría de Deporte de Balcarce lleva adelante trabajos de puesta en valor en las canchas de tenis del Complejo Polideportivo Municipal para fomentar la disciplina.",
+      "guion": "La comuna avanza con la puesta en valor de las canchas de tenis del Complejo Polideportivo Municipal. Los trabajos buscan recuperar el espacio para que más vecinos puedan practicar la disciplina en mejores condiciones.",
       "seccion": "Deportes",
       "medios": [
-        "Infórmese Primero (FM 104.9)",
         "News Balcarce (FM 91.7)"
       ],
-      "enlace": "http://www.blogger.com/feeds/8495648477830064035/posts/default/4694677019626262857",
+      "enlace": "https://newsbalcarce.com.ar/?p=30724",
       "teniaImagenLaFuente": true,
-      "fecha": "2026-09-17T15:49:34.272Z",
-      "sinFecha": false,
-      "relevancia": 75,
-      "local": true,
-      "publicadaPor": "ia",
-      "publicadaCuando": "2026-09-18T19:01:10.003Z"
-    },
-    {
-      "id": "ewwmts",
-      "titulo": "Sigue la muestra de arte local en el Palacio Municipal",
-      "copete": "La exposición \"Grabando la memoria de Balcarce\", organizada por la Escuela de Arte, continúa abierta en el hall comunal.",
-      "guion": "Continúa en el Palacio Municipal la muestra artística por los ciento cincuenta años de la ciudad. La exposición organizada por la Escuela de Arte Astor Piazzolla se puede visitar en el hall del municipio.",
-      "seccion": "Cultura y agenda",
-      "medios": [
-        "Infórmese Primero (FM 104.9)"
-      ],
-      "enlace": "http://www.blogger.com/feeds/8495648477830064035/posts/default/4759902127490413506",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-17T15:45:27.490Z",
+      "fecha": "2026-09-17T14:48:44.000Z",
       "sinFecha": false,
       "relevancia": 65,
       "local": true,
       "publicadaPor": "ia",
-      "publicadaCuando": "2026-09-18T17:29:47.792Z"
-    },
-    {
-      "id": "17dxsn",
-      "titulo": "MaxiVoley Balcarce clasificó a la Copa de Oro",
-      "copete": "El equipo balcarceño aseguró su lugar entre los seis mejores de la Liga Marplatense tras cerrar la fase regular este domingo en Mar del Plata.",
-      "guion": "El MaxiVoley de Balcarce logró la clasificación a la Copa de Oro de la Liga Marplatense. El conjunto local cerró de buena manera la fase regular del torneo y se metió entre los seis mejores equipos.",
-      "seccion": "Deportes",
-      "medios": [
-        "Infórmese Primero (FM 104.9)"
-      ],
-      "enlace": "http://www.blogger.com/feeds/8495648477830064035/posts/default/7429120480900764589",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-17T15:38:27.595Z",
-      "sinFecha": false,
-      "relevancia": 65,
-      "local": true,
-      "publicadaPor": "ia",
-      "publicadaCuando": "2026-09-18T17:38:48.070Z"
-    },
-    {
-      "id": "w1jydl",
-      "titulo": "Atletas de Balcarce compitieron en el Medio Maratón",
-      "copete": "Una delegación local participó este fin de semana en la vigésima edición de la prueba atlética en Quequén, que reunió a más de ciento treinta corredores.",
-      "guion": "Atletas locales sumaron una destacada participación en el clásico Medio Maratón de Quequén. La prueba, que cumplió su vigésima edición, reunió a más de ciento treinta competidores en circuitos de cinco y veintiún kilómetros.",
-      "seccion": "Deportes",
-      "medios": [
-        "Infórmese Primero (FM 104.9)"
-      ],
-      "enlace": "http://www.blogger.com/feeds/8495648477830064035/posts/default/636986884274517627",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-17T15:28:09.663Z",
-      "sinFecha": false,
-      "relevancia": 65,
-      "local": true,
-      "publicadaPor": "ia",
-      "publicadaCuando": "2026-09-18T17:38:49.242Z"
+      "publicadaCuando": "2026-09-18T23:01:38.244Z"
     },
     {
       "id": "jul4wq",
@@ -1070,42 +1106,22 @@
       "publicadaCuando": "2026-09-18T17:51:31.367Z"
     },
     {
-      "id": "4rwaf0",
-      "titulo": "Marcela Cabutti presenta su fanzine en el Museo Histórico",
-      "copete": "La artista mostrará este sábado en Balcarce su obra sobre el paisaje local, tras suspender la charla prevista para este viernes en el teatro.",
-      "guion": "El Museo Histórico de Balcarce recibirá este sábado a las dieciocho la presentación del fanzine de Marcela Cabutti sobre la memoria local. El evento inicial del viernes quedó suspendido.",
+      "id": "jul4vs",
+      "titulo": "Presentan el fanzine sobre paisajes de Balcarce",
+      "copete": "La artista Marcela Cabutti y su editora presentarán este viernes en Balcarce una publicación independiente sobre los paisajes locales.",
+      "guion": "La artista Marcela Cabutti presenta una nueva publicación independiente sobre los paisajes locales. La cita es este viernes para compartir distintas miradas sobre el territorio de Balcarce.",
       "seccion": "Cultura y agenda",
       "medios": [
-        "Diario La Vanguardia",
         "News Balcarce (FM 91.7)"
       ],
-      "enlace": "https://www.diariolavanguardia.com/noticias/44815-marcela-cabutti-presentara-balcarce-memorias-de-un-paisaje-en-el-museo-historico/",
+      "enlace": "https://newsbalcarce.com.ar/?p=30710",
       "teniaImagenLaFuente": true,
       "fecha": "2026-09-16T15:18:27.000Z",
       "sinFecha": false,
-      "relevancia": 73,
+      "relevancia": 65,
       "local": true,
       "publicadaPor": "ia",
-      "publicadaCuando": "2026-09-18T17:29:30.727Z"
-    },
-    {
-      "id": "160p93b",
-      "titulo": "Muestra de arte local en el Palacio Municipal",
-      "copete": "Estudiantes de la Escuela Astor Piazzolla exponen obras sobre la identidad de Balcarce en el hall comunal durante todo el mes.",
-      "guion": "El hall del municipio exhibe trabajos de alumnos de arte que reflejan paisajes y costumbres locales. La muestra se puede visitar gratis hasta fin de mes.",
-      "seccion": "Cultura y agenda",
-      "medios": [
-        "Diario La Vanguardia",
-        "News Balcarce (FM 91.7)"
-      ],
-      "enlace": "https://www.diariolavanguardia.com/noticias/44824-grabando-la-memoria-de-balcarce-una-muestra-artistica-que-recorre-la-identidad-de-la-ciudad/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-16T15:09:41.000Z",
-      "sinFecha": false,
-      "relevancia": 73,
-      "local": true,
-      "publicadaPor": "ia",
-      "publicadaCuando": "2026-09-18T17:29:29.832Z"
+      "publicadaCuando": "2026-09-18T21:31:36.030Z"
     },
     {
       "id": "sx0ehz",
@@ -1145,9 +1161,9 @@
     },
     {
       "id": "rax2jh",
-      "titulo": "Campo de Pato volvió a tener una destacada jornada de hockey",
-      "copete": "La actividad del hockey femenino del Club Social y Campo de Pato \"General Balcarce\" volvió a ser positiva, permitiendo los distintos equipos obtener importantes victorias en la mayoría de la tira competitiva. Fue en este caso, en el marco de la d�",
-      "guion": null,
+      "titulo": "Nueva fecha destacada para el hockey del Campo de Pato",
+      "copete": "El Club Independiente llevó adelante una nueva jornada de hockey sobre césped en sus instalaciones de Balcarce con partidos en diversas categorías.",
+      "guion": "El hockey local tuvo un fin de semana con mucha actividad. El Club Independiente recibió a numerosos equipos en sus canchas para disputar encuentros en varias categorías, en una nueva jornada deportiva para la disciplina.",
       "seccion": "Deportes",
       "medios": [
         "El Diario Balcarce"
@@ -1158,8 +1174,8 @@
       "sinFecha": false,
       "relevancia": 63,
       "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null
+      "publicadaPor": "ia",
+      "publicadaCuando": "2026-09-18T22:51:34.988Z"
     },
     {
       "id": "j60d5",
@@ -1271,9 +1287,9 @@
     },
     {
       "id": "1ueyyim",
-      "titulo": "Dolor en la comunidad agropecuaria por la partida de Elvira Suero",
-      "copete": "La Ingeniera Agrónoma desarrolló gran parte de su trayectoria en la EEA Balcarce del INTA y fue una figura clave en el estudio de la física del suelo y el riego complementario en la Región Pampeana. Fue además cofundadora de la Asociación de Ri",
-      "guion": null,
+      "titulo": "Falleció el referente agropecuario Abelardo Teijeiro",
+      "copete": "El sector rural de Balcarce lamenta la pérdida de Abelardo Teijeiro, un destacado dirigente de larga trayectoria en la actividad local.",
+      "guion": "Falleció Abelardo Teijeiro, una figura muy querida y respetada en el ámbito agropecuario local. Su partida genera un profundo pesar en toda la comunidad del campo.",
       "seccion": "Agro",
       "medios": [
         "El Diario Balcarce"
@@ -1284,8 +1300,8 @@
       "sinFecha": false,
       "relevancia": 63,
       "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null
+      "publicadaPor": "ia",
+      "publicadaCuando": "2026-09-18T22:21:33.640Z"
     },
     {
       "id": "15u7qbh",
@@ -1450,24 +1466,6 @@
       "publicadaCuando": null
     },
     {
-      "id": "1msbj8p",
-      "titulo": "Bronce para Gabriel Robledo en el Provincial de Pista y Campo",
-      "copete": "El Campeonato Provincial de Pista y Campo tuvo actividad en las categorías U16 y U18, en el Estadio Atlético \"Justo Román\", de Mar del Plata, ocasión en la cual Gabriel Robledo y Jeremías Jove cumplieron muy buena labor. Ese mismo escenario, dí",
-      "guion": null,
-      "seccion": "Deportes",
-      "medios": [
-        "El Diario Balcarce"
-      ],
-      "enlace": "https://eldiariobalcarce.com.ar/bronce-para-gabriel-robledo-en-el-provincial-de-pista-y-campo-353",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-08-26T11:58:00.000Z",
-      "sinFecha": false,
-      "relevancia": 63,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null
-    },
-    {
       "id": "jje778",
       "titulo": "La Sociedad Rural de Balcarce participó de una reunión regional sobre seguridad y producción",
       "copete": "La Sociedad Rural de Balcarce participó de la reunión mensual de las Sociedades Rurales de la Zona VI de Carbap, que se desarrolló el sábado en Benito Juárez con la presencia de representantes de distintas entidades del Sudeste bonaerense. El e",
@@ -1504,42 +1502,6 @@
       "publicadaCuando": null
     },
     {
-      "id": "1ciev9b",
-      "titulo": "Amenazó a un compañero de trabajo con un arma y le secuestraron dos escopetas",
-      "copete": "El Comando de Prevención Rural (CPR) Balcarce llevó adelante durante la tarde de este viernes un registro domiciliario, requisa personal y secuestro de elementos en una quinta ubicada en la zona del Paraje Casado, sobre la Ruta Provincial 55, a la",
-      "guion": null,
-      "seccion": "Agro",
-      "medios": [
-        "El Diario Balcarce"
-      ],
-      "enlace": "https://eldiariobalcarce.com.ar/amenazo-a-un-companero-de-trabajo-con-un-arma-y-le-secuestraron-dos-escopetas-598",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-08-21T23:14:15.000Z",
-      "sinFecha": false,
-      "relevancia": 63,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null
-    },
-    {
-      "id": "1kpxt2v",
-      "titulo": "Karina Lupo y Mariano Barreiro los ganadores en los 21k",
-      "copete": "Con la participación de más de 160 atletas se llevó a cabo el pasado fin de semana la Media Maratón de Balcarce, que recorrió distintos puntos del casco urbano. Se trata de la prueba con la cual se festejó el cuarto aniversario de la Escuela de",
-      "guion": null,
-      "seccion": "Deportes",
-      "medios": [
-        "El Diario Balcarce"
-      ],
-      "enlace": "https://eldiariobalcarce.com.ar/karina-lupo-y-mariano-barreiro-los-ganadores-en-los-21k-214",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-08-21T12:00:43.000Z",
-      "sinFecha": false,
-      "relevancia": 63,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null
-    },
-    {
       "id": "48t7ke",
       "titulo": "Inicia la segunda campaña de vacunación contra el carbunclo en Balcarce",
       "copete": "La vacunación se realizará entre el 15 de septiembre y el 15 de diciembre de 2026 e incluirá distintas acciones sanitarias para los rodeos. Leer más…",
@@ -1559,19 +1521,19 @@
     }
   ],
   "secciones": [
+    "Automovilismo",
     "Servicios",
-    "Deportes",
     "Cultura y agenda",
     "Agro",
-    "Automovilismo",
+    "Deportes",
     "Balcarce"
   ],
   "clima": {
     "ahora": {
-      "temp": 21,
-      "sensacion": 19,
-      "humedad": 56,
-      "viento": 20,
+      "temp": 15,
+      "sensacion": 13,
+      "humedad": 84,
+      "viento": 16,
       "rumbo": "N",
       "cielo": "Nublado"
     },
@@ -1597,15 +1559,15 @@
         "dia": "dom",
         "max": 21,
         "min": 10,
-        "lluvia": 90,
+        "lluvia": 100,
         "cielo": "Chaparrones"
       },
       {
         "fecha": "2026-09-21",
         "dia": "lun",
-        "max": 13,
+        "max": 14,
         "min": 7,
-        "lluvia": 41,
+        "lluvia": 53,
         "cielo": "Llovizna"
       }
     ],

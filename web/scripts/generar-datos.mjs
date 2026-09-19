@@ -28,9 +28,35 @@ function leerJson(archivo, porDefecto = null) {
   try { return JSON.parse(fs.readFileSync(archivo, 'utf8')); } catch { return porDefecto; }
 }
 
-const estado = leerJson(path.join(DATOS_PANEL, 'estado.json'), { decisiones: {} });
-const ultima = leerJson(path.join(DATOS_PANEL, 'ultima.json'), { notas: [] });
-const agenda = leerJson(path.join(DATOS_PANEL, 'agenda.json'), null);
+// Este script corre en dos lugares distintos:
+//
+//   · En la PC que tiene el panel, que es donde viven las decisiones.
+//   · En GitHub Actions, donde no hay panel: ahí se sale a buscar las
+//     noticias en el momento y las decisiones se leen del archivo que el
+//     panel exporta al repositorio (web/data/decisiones.json).
+//
+// El segundo caso es lo que permite que el sitio se actualice solo con la
+// computadora apagada.
+const enLaNube = !fs.existsSync(path.join(DATOS_PANEL, 'ultima.json'));
+
+let estado;
+let ultima;
+let agenda;
+
+if (enLaNube) {
+  const { ingestar } = await import('../../ingesta/ingesta.mjs');
+  const { agendaCompleta } = await import('../../ingesta/agenda.mjs');
+  console.log('  sin panel a mano: se buscan las noticias ahora');
+  ultima = await ingestar({ silencioso: true });
+  agenda = await agendaCompleta().catch(() => null);
+  const exportado = leerJson(path.join(AQUI, '..', 'data', 'decisiones.json'), { decisiones: {} });
+  estado = { decisiones: exportado.decisiones ?? {} };
+  console.log(`  ${ultima.notas.length} historias · ${Object.keys(estado.decisiones).length} decisiones del panel`);
+} else {
+  estado = leerJson(path.join(DATOS_PANEL, 'estado.json'), { decisiones: {} });
+  ultima = leerJson(path.join(DATOS_PANEL, 'ultima.json'), { notas: [] });
+  agenda = leerJson(path.join(DATOS_PANEL, 'agenda.json'), null);
+}
 
 // Mismo criterio que el panel: sin decisión manda el semáforo (verde =
 // automática, rojo = bloqueada, el resto pendiente). Sólo lo publicado o

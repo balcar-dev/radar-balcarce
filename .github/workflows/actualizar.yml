@@ -1,0 +1,65 @@
+# Busca noticias y actualiza la web, sin depender de que haya una PC prendida.
+#
+# Corre en los servidores de GitHub cada media hora. Lo que hace es lo mismo
+# que hace el panel en casa: leer las 22 fuentes, agrupar, clasificar, poner
+# puntaje, y escribir web/data/portada.json.
+#
+# La diferencia está en las decisiones humanas. Acá no hay panel, así que se
+# leen de web/data/decisiones.json, que el panel exporta al repositorio cada
+# vez que alguien publica o descarta algo. O sea:
+#
+#   · Lo que sale solo (el semáforo verde, el clima, la farmacia, la agenda)
+#     se actualiza siempre, con la computadora apagada.
+#   · Lo que ustedes decidieron a mano se respeta hasta la última vez que el
+#     panel estuvo prendido y sincronizó.
+#
+# Para que esto además PUBLIQUE, el repositorio tiene que estar conectado a
+# Vercel (Settings → Git). Con eso, cada commit de acá dispara el deploy solo.
+
+name: Actualizar la web
+
+on:
+  schedule:
+    # Cada 30 minutos. El horario de GitHub es UTC: en Balcarce son 3 horas
+    # menos, pero como corre todo el día da lo mismo.
+    - cron: '*/30 * * * *'
+  # Y a mano, desde la pestaña Actions, por si hace falta forzar una vuelta.
+  workflow_dispatch:
+
+# Que no se pisen dos corridas: la de las 10:30 no arranca si la de las 10:00
+# todavía está trabajando.
+concurrency:
+  group: actualizar-web
+  cancel-in-progress: false
+
+jobs:
+  actualizar:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # para poder commitear portada.json
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      # No hace falta instalar nada: la ingesta usa sólo lo que trae Node
+      # (fetch y expresiones regulares), sin una sola dependencia. Por eso
+      # esto tarda segundos y no minutos.
+      - name: Buscar noticias y armar los datos
+        working-directory: web
+        run: node scripts/generar-datos.mjs
+
+      - name: Guardar si cambió algo
+        run: |
+          git config user.name "Radar Balcarce"
+          git config user.email "radarbalcarce@gmail.com"
+          git add web/data/portada.json
+          if git diff --cached --quiet; then
+            echo "Sin novedades: no hay nada que publicar."
+          else
+            git commit -m "Datos de la portada · $(TZ=America/Argentina/Buenos_Aires date '+%d/%m %H:%M')"
+            git push
+          fi

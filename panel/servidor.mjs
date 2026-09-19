@@ -50,6 +50,42 @@ function leerJson(archivo, porDefecto) {
 
 function guardarJson(archivo, datos) {
   fs.writeFileSync(archivo, JSON.stringify(datos, null, 2), 'utf8');
+  // Cada vez que cambia el estado se exportan las decisiones al repo. Son lo
+  // único del panel que la web necesita y que no se puede deducir sola: qué
+  // se publicó a mano, qué se descartó, y el texto que se corrigió.
+  if (archivo === F_ESTADO) exportarDecisiones(datos);
+}
+
+// El archivo que lee la web cuando se genera fuera de esta PC (GitHub
+// Actions). Va versionado a propósito — no tiene nada secreto, y es lo que
+// permite que el sitio se actualice solo con la computadora apagada.
+const F_DECISIONES = path.join(AQUI, '..', 'web', 'data', 'decisiones.json');
+
+function exportarDecisiones(estado) {
+  try {
+    // Sólo lo que la web usa. El historial, el buzón y los contactos se
+    // quedan acá: tienen datos de gente que nos escribió.
+    const decisiones = {};
+    for (const [id, d] of Object.entries(estado.decisiones ?? {})) {
+      decisiones[id] = {
+        estado: d.estado,
+        titulo: d.titulo ?? null,
+        copete: d.copete ?? null,
+        guion: d.guion ?? null,
+        deIA: d.deIA ?? null,
+        por: d.por ?? null,
+        cuando: d.cuando ?? null,
+      };
+    }
+    fs.mkdirSync(path.dirname(F_DECISIONES), { recursive: true });
+    fs.writeFileSync(F_DECISIONES, JSON.stringify({
+      exportado: new Date().toISOString(),
+      decisiones,
+      horarios: estado.horarios ?? {},
+    }, null, 2), 'utf8');
+  } catch (e) {
+    console.error('  no se pudieron exportar las decisiones:', e.message);
+  }
 }
 
 function deCodigo(f) {
