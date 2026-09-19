@@ -121,10 +121,18 @@ export async function armarReel({
 
   // Zoom lento sobre la placa: sin movimiento, un reel parece una foto y la
   // gente sigue de largo.
+  // El movimiento se veía a saltos, y la culpa era del tamaño: zoompan
+  // trabaja con recortes de píxeles enteros, así que sobre una imagen de
+  // 1350 de ancho cada paso del zoom se nota como un tirón. Agrandando la
+  // placa al doble antes de mover, un paso equivale a medio píxel de
+  // salida y el movimiento se vuelve continuo. Más de 2x se nota poco y
+  // duplica lo que tarda el render.
+  //
+  // El zoom también es más corto que antes (1.035 en vez de 1.05): a esta
+  // suavidad, menos recorrido se lee mejor que más.
   const filtro = [
-    'scale=1350:2400',
-    // Zoom corto: con más de 1.05 el encuadre se come el logo de arriba.
-    "zoompan=z='min(pzoom+0.00025,1.05)':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':d=1:s=1080x1920:fps=30",
+    'scale=2160:3840:flags=lanczos',
+    "zoompan=z='min(pzoom+0.00010,1.035)':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':d=1:s=1080x1920:fps=30",
     `subtitles=${path.basename(ass)}`,
     'format=yuv420p',
   ].join(',');

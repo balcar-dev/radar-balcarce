@@ -3,6 +3,7 @@
 // Es una herramienta de control: usa datos de ejemplo pensados para que
 // salte lo que suele romperse — nombres largos, muchos días, títulos que
 // no entran.
+import fs from 'node:fs';
 import path from 'node:path';
 import {
   placaClima, placaFarmacia, placaUtiles, placaAgenda, placaNoticia, aPng,
@@ -47,7 +48,31 @@ const casos = [
   })],
 ];
 
+casos.push(['rev-automovilismo', placaNoticia({
+  titulo: 'Las TC Pick Up girarán por las calles de Balcarce',
+  seccion: 'Automovilismo', cuando: 'hace 2 horas',
+})]);
+
 for (const [nombre, svg] of casos) {
   aPng(svg, path.join(import.meta.dirname, 'salida', `${nombre}.png`));
   console.log('  ', nombre);
 }
+
+// Y una tira con todas juntas: es la única forma de ver si se sienten de
+// la misma familia. De a una parecen bien y juntas saltan las diferencias.
+const salida = path.join(import.meta.dirname, 'salida');
+const ANCHO_MINI = 300;
+const ALTO_MINI = 533;
+const HUECO = 14;
+const miniaturas = casos.map(([n]) => {
+  const datos = fs.readFileSync(path.join(salida, `${n}.png`)).toString('base64');
+  return `data:image/png;base64,${datos}`;
+});
+const anchoTira = miniaturas.length * (ANCHO_MINI + HUECO) + HUECO;
+const tira = `<svg xmlns="http://www.w3.org/2000/svg" width="${anchoTira}" height="${ALTO_MINI + 28}">
+  <rect width="100%" height="100%" fill="#2A2E32"/>
+  ${miniaturas.map((d, i) => `<image href="${d}" x="${HUECO + i * (ANCHO_MINI + HUECO)}" y="14"
+      width="${ANCHO_MINI}" height="${ALTO_MINI}"/>`).join('')}
+</svg>`;
+aPng(tira, path.join(salida, 'tira.png'), anchoTira);
+console.log('   tira.png: las seis juntas');

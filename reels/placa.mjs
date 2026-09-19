@@ -15,30 +15,74 @@ export const ALTO = 1920;
 export const COLORES = {
   tinta: '#14161A',
   papel: '#F7F5EF',
-  suave: '#B9BDB4',
+  // El gris de los datos secundarios: antes era claro porque el fondo era
+  // negro. Ahora el fondo es papel, así que tiene que ser oscuro o no se lee.
+  suave: '#6B6F6C',
   rojo: '#A8371F',
   ambar: '#E8A33C',
   verde: '#16615B',
 };
 
 // Cada sección tiene su color, siempre el mismo.
+// Los colores de sección, subidos de tono. Los de antes eran apagados y,
+// sobre fondo casi negro, la placa entera se veía vieja. Estos son los
+// mismos tonos pero saturados, pensados para ocupar media placa como
+// bloque de color en vez de ser una insinuación en un degradado.
 export const COLOR_SECCION = {
-  Balcarce: '#A8371F',
-  Servicios: '#16615B',
-  Deportes: '#16615B',
-  Automovilismo: '#E8A33C',
-  Policiales: '#8C2D18',
-  Política: '#A8371F',
-  Agro: '#6B7A2A',
-  'Cultura y agenda': '#7A4B8C',
-  País: '#4A4F4B',
-  Región: '#4A4F4B',
-  Clima: '#16615B',
-  Farmacias: '#A8371F',
-  Tecnología: '#2B6CB0',
-  Reclamos: '#8C2D18',
-  Seguimiento: '#6B7A2A',
+  Balcarce: '#D6412A',
+  Servicios: '#12857A',
+  Deportes: '#12857A',
+  Automovilismo: '#F2A324',
+  Policiales: '#B23A1C',
+  Política: '#D6412A',
+  Agro: '#7E9420',
+  'Cultura y agenda': '#8B5BC4',
+  País: '#5A6270',
+  Región: '#5A6270',
+  Clima: '#12857A',
+  Farmacias: '#D6412A',
+  Tecnología: '#2F7FD6',
+  Reclamos: '#B23A1C',
+  Seguimiento: '#7E9420',
 };
+
+/** Una versión más oscura del color. */
+function oscurecer(hex, factor) {
+  const n = parseInt(hex.slice(1), 16);
+  const r = Math.round(((n >> 16) & 255) * factor);
+  const g = Math.round(((n >> 8) & 255) * factor);
+  const b = Math.round((n & 255) * factor);
+  return `#${((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1)}`;
+}
+
+/** Qué tan claro se ve un color, según cómo lo percibe el ojo (WCAG). El
+ *  verde pesa mucho más que el azul: por eso un amarillo "medio" es en
+ *  realidad clarísimo y se come el texto blanco. */
+function luminancia(hex) {
+  const n = parseInt(hex.slice(1), 16);
+  const canal = (v) => {
+    const c = v / 255;
+    return c <= 0.03928 ? c / 12.92 : ((c + 0.055) / 1.055) ** 2.4;
+  };
+  return 0.2126 * canal((n >> 16) & 255) + 0.7152 * canal((n >> 8) & 255) + 0.0722 * canal(n & 255);
+}
+
+/** Oscurece el color lo necesario para que el texto blanco encima se lea.
+ *
+ *  Es la vuelta que faltaba: sobre el color puro el texto se perdía, y con
+ *  el amarillo del automovilismo directamente desaparecía. La regla de
+ *  accesibilidad pide un contraste de 4.5 a 1, que para blanco encima se
+ *  traduce en que el fondo no pase de 0.18 de luminancia. Se baja el color
+ *  hasta ahí — sigue siendo el mismo tono, sólo que profundo. */
+function paraTextoBlanco(hex, objetivo = 0.16) {
+  let factor = 1;
+  let salida = hex;
+  while (luminancia(salida) > objetivo && factor > 0.12) {
+    factor -= 0.04;
+    salida = oscurecer(hex, factor);
+  }
+  return salida;
+}
 
 const esc = (s = '') => String(s)
   .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
@@ -107,6 +151,11 @@ const TEXTO = 'IBM Plex Sans';
 // borde se leen peor y parecen hechas a las apuradas.
 const MARGEN = 88;
 
+// Dónde termina el bloque de color y empieza el papel. El corte es en
+// diagonal: es lo que hace que la placa se vea actual en vez de una caja
+// dentro de otra caja.
+const CORTE = 820;
+
 /**
  * El fondo. Antes era un "radar" de anillos concéntricos muy tenue que casi
  * no se veía y, cuando se veía, ensuciaba. Ahora es un degradado profundo
@@ -116,22 +165,16 @@ const MARGEN = 88;
 function fondo(color) {
   return `
   <defs>
-    <linearGradient id="base" x1="0" y1="0" x2="0.35" y2="1">
-      <stop offset="0%" stop-color="${color}" stop-opacity="0.42"/>
-      <stop offset="45%" stop-color="${COLORES.tinta}" stop-opacity="1"/>
-      <stop offset="100%" stop-color="${COLORES.tinta}" stop-opacity="1"/>
-    </linearGradient>
-    <linearGradient id="brillo" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="${color}" stop-opacity="0.9"/>
-      <stop offset="100%" stop-color="${color}" stop-opacity="0.15"/>
+    <linearGradient id="bloque" x1="0" y1="0" x2="0.6" y2="1">
+      <stop offset="0%" stop-color="${paraTextoBlanco(color)}"/>
+      <stop offset="100%" stop-color="${oscurecer(paraTextoBlanco(color), 0.6)}"/>
     </linearGradient>
   </defs>
-  <rect width="${ANCHO}" height="${ALTO}" fill="${COLORES.tinta}"/>
-  <rect width="${ANCHO}" height="${ALTO}" fill="url(#base)"/>
-  <circle cx="${ANCHO + 120}" cy="240" r="620" fill="none"
-          stroke="${color}" stroke-width="3" opacity="0.28"/>
-  <circle cx="${ANCHO + 120}" cy="240" r="880" fill="none"
-          stroke="${color}" stroke-width="3" opacity="0.14"/>`;
+  <rect width="${ANCHO}" height="${ALTO}" fill="${COLORES.papel}"/>
+  <path d="M0 0 H${ANCHO} V${CORTE - 150} L0 ${CORTE} Z" fill="url(#bloque)"/>
+  <circle cx="${ANCHO - 120}" cy="200" r="300" fill="#FFFFFF" opacity="0.10"/>
+  <circle cx="${ANCHO - 120}" cy="200" r="460" fill="none"
+          stroke="#FFFFFF" stroke-width="3" opacity="0.14"/>`;
 }
 
 /**
@@ -140,11 +183,10 @@ function fondo(color) {
  * Va a 170 px del borde y no más arriba: Instagram tapa la franja superior
  * con su interfaz, y el zoom del video se come otro poco.
  */
-function cabecera(_hora, color) {
+function cabecera(_hora, _color) {
   return `
-  <rect x="0" y="0" width="${ANCHO}" height="12" fill="url(#brillo)"/>
-  <text x="${MARGEN}" y="196" font-family="${DISPLAY}" font-size="40" font-weight="900"
-        letter-spacing="-1" fill="${COLORES.papel}">RADAR <tspan fill="${COLORES.ambar}">BALCARCE</tspan></text>`;
+  <text x="${MARGEN}" y="196" font-family="${DISPLAY}" font-size="42" font-weight="900"
+        letter-spacing="-1" fill="#FFFFFF">RADAR <tspan opacity="0.72">BALCARCE</tspan></text>`;
 }
 
 /**
@@ -152,21 +194,23 @@ function cabecera(_hora, color) {
  * mayúsculas. Es el elemento que más rápido comunica de qué se trata la
  * pieza antes de que nadie lea el título.
  */
+// El rótulo va en blanco sobre el color, no al revés: sobre el bloque de
+// color un chip del mismo color no se distinguiría.
 function rotulo(texto, color, y = 300) {
   const ancho = 46 + String(texto).length * 23;
   return `
-  <rect x="${MARGEN}" y="${y}" width="${ancho}" height="62" rx="31" fill="${color}"/>
+  <rect x="${MARGEN}" y="${y}" width="${ancho}" height="62" rx="31" fill="#FFFFFF"/>
   <text x="${MARGEN + ancho / 2}" y="${y + 41}" text-anchor="middle" font-family="${TEXTO}"
         font-size="26" font-weight="700" letter-spacing="3"
-        fill="#FFFFFF">${esc(String(texto).toUpperCase())}</text>`;
+        fill="${paraTextoBlanco(color, 0.22)}">${esc(String(texto).toUpperCase())}</text>`;
 }
 
 /** El pie, arriba de la zona donde van los subtítulos. */
 function pie(texto, color) {
   return `
-  <rect x="${MARGEN}" y="${ALTO - 152}" width="52" height="5" fill="${color}"/>
+  <rect x="${MARGEN}" y="${ALTO - 152}" width="52" height="6" fill="${color}"/>
   <text x="${MARGEN}" y="${ALTO - 108}" font-family="${TEXTO}" font-size="26"
-        font-weight="500" fill="${COLORES.suave}">${esc(texto)}</text>`;
+        font-weight="500" fill="#7C7F79">${esc(texto)}</text>`;
 }
 
 /**
@@ -189,8 +233,8 @@ export function placaClima({
     <rect x="${x}" y="1210" width="${anchoCaja - 16}" height="3" fill="${color}" opacity="0.65"/>
     <text x="${x}" y="1264" font-family="${TEXTO}" font-size="22" font-weight="700"
           letter-spacing="3" fill="${COLORES.suave}">${esc(titulo)}</text>
-    <text x="${x}" y="1320" font-family="${TEXTO}" font-size="40" font-weight="600"
-          fill="${COLORES.papel}">${esc(valor)}</text>`;
+    <text x="${x}" y="1320" font-family="${TEXTO}" font-size="40" font-weight="700"
+          fill="${COLORES.tinta}">${esc(valor)}</text>`;
   };
 
   return `<svg xmlns="http://www.w3.org/2000/svg" width="${ANCHO}" height="${ALTO}" viewBox="0 0 ${ANCHO} ${ALTO}">
@@ -198,16 +242,19 @@ export function placaClima({
   ${cabecera(hora, color)}
   ${rotulo(kicker, color, 296)}
   <text x="${MARGEN}" y="470" font-family="${DISPLAY}" font-size="58" font-weight="700"
-        letter-spacing="-1" fill="${COLORES.papel}">${esc(fecha)}</text>
+        letter-spacing="-1" fill="#FFFFFF">${esc(fecha)}</text>
 
-  <text x="${MARGEN - 12}" y="900" font-family="${DISPLAY}" font-size="330" font-weight="900"
-        letter-spacing="-14" fill="${COLORES.papel}">${temp}<tspan
-        font-size="140" letter-spacing="0" dx="34" dy="-150" fill="${color}">°</tspan></text>
+  <!-- La temperatura, con aire suficiente arriba de la diagonal. Antes casi
+       la tocaba y la placa del clima se veía distinta a todas las demás,
+       aunque el corte fuera exactamente el mismo. -->
+  <text x="${MARGEN - 12}" y="${CORTE - 120}" font-family="${DISPLAY}" font-size="264" font-weight="900"
+        letter-spacing="-14" fill="#FFFFFF">${temp}<tspan
+        font-size="114" letter-spacing="0" dx="30" dy="-120" opacity="0.65">°</tspan></text>
 
-  <text x="${MARGEN}" y="985" font-family="${TEXTO}" font-size="44" font-weight="500"
-        fill="${COLORES.suave}">${esc(cielo)}</text>
-  <text x="${MARGEN}" y="1078" font-family="${TEXTO}" font-size="50" font-weight="700"
-        fill="${COLORES.papel}">${min}° <tspan font-weight="400" fill="${COLORES.suave}">mínima</tspan>  ·  ${max}° <tspan font-weight="400" fill="${COLORES.suave}">máxima</tspan></text>
+  <text x="${MARGEN}" y="1010" font-family="${DISPLAY}" font-size="62" font-weight="900"
+        letter-spacing="-2" fill="${COLORES.tinta}">${esc(cielo)}</text>
+  <text x="${MARGEN}" y="1096" font-family="${TEXTO}" font-size="50" font-weight="700"
+        fill="${COLORES.tinta}">${min}° <tspan font-weight="400" fill="${COLORES.suave}">mínima</tspan>  ·  ${max}° <tspan font-weight="400" fill="${COLORES.suave}">máxima</tspan></text>
 
   ${cajas.slice(0, 3).map((c, i) => caja(i, c.titulo, c.valor)).join('')}
   ${pie('radarbalcarce.com.ar', color)}
@@ -232,7 +279,7 @@ export function placaFarmacia({ detalle = [], farmacias = [], dia, diaSemana }) 
     let cursor = y;
     const partes = nombre.map((l, i) => `<text x="${MARGEN}" y="${cursor + i * (tamNombre * 1.1)}"
         font-family="${DISPLAY}" font-size="${tamNombre}" font-weight="900" letter-spacing="-2"
-        fill="${COLORES.papel}">${esc(l)}</text>`).join('');
+        fill="${COLORES.tinta}">${esc(l)}</text>`).join('');
     cursor += (nombre.length - 1) * (tamNombre * 1.1) + (doble ? 66 : 92);
     const dirs = dir.map((l, i) => `<text x="${MARGEN}" y="${cursor + i * (doble ? 48 : 58)}"
         font-family="${TEXTO}" font-size="${doble ? 38 : 48}" font-weight="600"
@@ -244,9 +291,9 @@ export function placaFarmacia({ detalle = [], farmacias = [], dia, diaSemana }) 
     return { svg: partes + dirs + tel, alto: cursor - y + (doble ? 104 : 124) };
   };
 
-  // Abajo del día, con aire: antes arrancaba en 520 y el nombre de la
-  // farmacia se montaba encima de "SÁBADO 19".
-  let y = doble ? 620 : 700;
+  // Debajo del bloque de color. Arriba el texto es blanco; el nombre de la
+  // farmacia va en tinta, así que tiene que caer sobre el papel.
+  let y = CORTE + (doble ? 140 : 190);
   const bloques = lista.map((f) => {
     const b = bloque(f, y);
     y += b.alto + (doble ? 56 : 0);
@@ -255,18 +302,18 @@ export function placaFarmacia({ detalle = [], farmacias = [], dia, diaSemana }) 
   // La línea del horario: pegada al último bloque si la placa quedó larga,
   // o a una altura fija si sobró lugar — para que no quede ni encimada ni
   // colgando con medio metro de vacío arriba.
-  const yHorario = Math.min(1460, Math.max(y + 40, 1240));
+  const yHorario = Math.min(1520, Math.max(y + 40, 1380));
 
   return `<svg xmlns="http://www.w3.org/2000/svg" width="${ANCHO}" height="${ALTO}" viewBox="0 0 ${ANCHO} ${ALTO}">
   ${fondo(color)}
   ${cabecera(null, color)}
   ${rotulo('Farmacia de turno', color, 296)}
   <text x="${MARGEN}" y="456" font-family="${DISPLAY}" font-size="52" font-weight="700"
-        letter-spacing="-1" fill="${COLORES.suave}">${esc(diaSemana)} ${dia}</text>
+        letter-spacing="-1" fill="#FFFFFF" opacity="0.8">${esc(diaSemana)} ${dia}</text>
   ${bloques}
   <rect x="${MARGEN}" y="${yHorario}" width="${ANCHO - MARGEN * 2}" height="4" fill="${color}" opacity="0.7"/>
   <text x="${MARGEN}" y="${yHorario + 62}" font-family="${TEXTO}" font-size="36"
-        font-weight="600" fill="${COLORES.papel}">Abierta hasta las 9 de la mañana de mañana</text>
+        font-weight="600" fill="${COLORES.tinta}">Abierta hasta las 9 de la mañana de mañana</text>
   ${pie('Colegio de Farmacéuticos de Balcarce', color)}
 </svg>`;
 }
@@ -297,17 +344,17 @@ export function placaAgenda({ eventos = [], titulo = 'Qué hacer este fin de sem
     <text x="${MARGEN}" y="${y}" font-family="${TEXTO}" font-size="21" font-weight="700"
           letter-spacing="3" fill="${COLORES.ambar}">${esc((ev.cuando ?? '').toUpperCase())}</text>
     <text x="${MARGEN}" y="${y + 52}" font-family="${DISPLAY}" font-size="40" font-weight="700"
-          letter-spacing="-1" fill="${COLORES.papel}">${esc(ev.nombre)}</text>
+          letter-spacing="-1" fill="${COLORES.tinta}">${esc(ev.nombre)}</text>
     <text x="${MARGEN}" y="${y + 98}" font-family="${TEXTO}" font-size="28" font-weight="500"
-          fill="#BDC1B8">${esc(ev.lugar ?? 'Balcarce')}</text>
+          fill="${COLORES.suave}">${esc(ev.lugar ?? 'Balcarce')}</text>
     <rect x="${MARGEN}" y="${y + 132}" width="${ANCHO - MARGEN * 2}" height="1"
-          fill="#ffffff" fill-opacity="0.14"/>`;
+          fill="${COLORES.tinta}" fill-opacity="0.12"/>`;
 
   // El espacio se reparte entre los eventos que haya: con tres, quedaba
   // media placa vacía abajo.
-  const desde = 540;
-  const hasta = 1560;
-  const paso = Math.min(300, Math.round((hasta - desde) / Math.max(1, lista.length)));
+  const desde = CORTE + 150;
+  const hasta = 1700;
+  const paso = Math.min(260, Math.round((hasta - desde) / Math.max(1, lista.length)));
   const bloques = lista.map((ev, i) => fila(ev, desde + i * paso)).join('');
 
   return `<svg xmlns="http://www.w3.org/2000/svg" width="${ANCHO}" height="${ALTO}" viewBox="0 0 ${ANCHO} ${ALTO}">
@@ -315,7 +362,7 @@ export function placaAgenda({ eventos = [], titulo = 'Qué hacer este fin de sem
   ${cabecera(null, color)}
   ${rotulo('Agenda', color, 296)}
   <text x="${MARGEN}" y="460" font-family="${DISPLAY}" font-size="58" font-weight="900"
-        letter-spacing="-2" fill="${COLORES.papel}">${esc(titulo)}</text>
+        letter-spacing="-2" fill="#FFFFFF">${esc(titulo)}</text>
   ${bloques}
   ${pie('Agenda del Municipio de Balcarce · radarbalcarce.com.ar', color)}
 </svg>`;
@@ -341,16 +388,16 @@ export function placaUtiles({ grupos = [] }) {
     ${conCategoria ? `<text x="${MARGEN}" y="${y}" font-family="${TEXTO}" font-size="21" font-weight="700"
           letter-spacing="3" fill="${color}">${esc(it.categoria.toUpperCase())}</text>` : ''}
     <text x="${MARGEN}" y="${y + 48}" font-family="${DISPLAY}" font-size="38" font-weight="700"
-          letter-spacing="-1" fill="${COLORES.papel}">${esc(it.nombre)}</text>
+          letter-spacing="-1" fill="${COLORES.tinta}">${esc(it.nombre)}</text>
     <text x="${MARGEN}" y="${y + 96}" font-family="${TEXTO}" font-size="34" font-weight="600"
           fill="${COLORES.ambar}">${esc(it.numero)}</text>
     <rect x="${MARGEN}" y="${y + 126}" width="${ANCHO - MARGEN * 2}" height="1"
-          fill="#ffffff" fill-opacity="0.14"/>`;
+          fill="${COLORES.tinta}" fill-opacity="0.12"/>`;
 
   // El espacio se reparte entre las filas que haya, para no dejar media
   // placa vacía cuando son pocas.
-  const desde = 540;
-  const paso = Math.min(210, Math.round((1600 - desde) / Math.max(1, filas.length)));
+  const desde = CORTE + 150;
+  const paso = Math.min(180, Math.round((1720 - desde) / Math.max(1, filas.length)));
   let anterior = null;
   const bloques = filas.map((it, i) => {
     const conCategoria = it.categoria !== anterior;
@@ -363,7 +410,7 @@ export function placaUtiles({ grupos = [] }) {
   ${cabecera(null, color)}
   ${rotulo('Teléfonos útiles', color, 296)}
   <text x="${MARGEN}" y="450" font-family="${DISPLAY}" font-size="56" font-weight="900"
-        letter-spacing="-2" fill="${COLORES.papel}">Guardalos en el celular</text>
+        letter-spacing="-2" fill="#FFFFFF">Guardalos en el celular</text>
   ${bloques}
   ${pie('Municipalidad de Balcarce · radarbalcarce.com.ar', color)}
 </svg>`;
@@ -459,12 +506,12 @@ export function placaNoticia({
   const tam = renglones.tam;
   const interlinea = Math.round(tam * 1.16);
 
-  // Anclado abajo, no centrado: el texto crece hacia arriba desde una
-  // línea fija, que es lo que hace que todas las piezas se sientan de la
-  // misma familia aunque el titular cambie de largo.
-  const base = 1180;
+  // Anclado ARRIBA, justo debajo del bloque de color, y crece hacia abajo.
+  // Antes crecía hacia arriba desde una línea fija, y un titular de cinco
+  // renglones se metía adentro de la diagonal de color.
   const lineas = renglones.lineas;
-  const y0 = base - (lineas.length - 1) * interlinea;
+  const y0 = CORTE + 150;
+  const base = y0 + (lineas.length - 1) * interlinea;
 
   return `<svg xmlns="http://www.w3.org/2000/svg" width="${ANCHO}" height="${ALTO}" viewBox="0 0 ${ANCHO} ${ALTO}">
   ${fondo(color)}
@@ -474,7 +521,7 @@ export function placaNoticia({
 
   ${lineas.map((l, i) => `<text x="${MARGEN}" y="${y0 + i * interlinea}"
         font-family="${DISPLAY}" font-size="${tam}" font-weight="900" letter-spacing="-2"
-        fill="${COLORES.papel}">${esc(l)}</text>`).join('')}
+        fill="${COLORES.tinta}">${esc(l)}</text>`).join('')}
 
   <rect x="${MARGEN}" y="${base + 62}" width="96" height="6" fill="${color}"/>
   ${cuando ? `<text x="${MARGEN}" y="${base + 142}" font-family="${TEXTO}"
@@ -501,11 +548,11 @@ function archivosDeFuente() {
   }
 }
 
-export function aPng(svg, destino) {
+export function aPng(svg, destino, ancho = ANCHO) {
   fs.mkdirSync(path.dirname(destino), { recursive: true });
   const propias = archivosDeFuente();
   const r = new Resvg(svg, {
-    fitTo: { mode: 'width', value: ANCHO },
+    fitTo: { mode: 'width', value: ancho },
     font: {
       fontFiles: propias,
       // Si por lo que sea faltan los archivos, sigue andando con las del
