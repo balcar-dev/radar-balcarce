@@ -31,21 +31,8 @@ export default function Farmacias() {
       </p>
 
       {f?.hoy
-        ? <TarjetaFarmacia farmacia={f.hoy} conBotones={false} />
+        ? <TarjetaFarmacia farmacia={f.hoy} verLaSemana={false} />
         : <div className="tarjeta"><strong>Todavía no tenemos el turno de hoy.</strong></div>}
-
-      {f?.hoy?.detalle?.[0]?.direccion && (
-        <div style={{ marginTop: 14 }}>
-          <a
-            className="boton tinta"
-            href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${f.hoy.detalle[0].direccion}, Balcarce, Buenos Aires`)}`}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Cómo llegar
-          </a>
-        </div>
-      )}
 
       {f?.proximos?.length > 0 && (
         <section style={{ marginTop: 34 }}>

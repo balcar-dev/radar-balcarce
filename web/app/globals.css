@@ -317,7 +317,7 @@ main { padding: 24px 0 10px; }
 /* ------------------------------------------------------------------- clima */
 
 .tarjeta-clima {
-  border-radius: 12px; padding: 16px 18px; color: var(--crema);
+  border-radius: 12px; padding: 14px 16px; color: var(--crema);
   background: linear-gradient(160deg, var(--cielo-fondo, #1D4F63) 0%, var(--tinta) 78%);
 }
 .tarjeta-clima .titulo { font-size: 11px; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; color: #9FB4BD; display: flex; align-items: center; gap: 7px; }
@@ -328,10 +328,20 @@ main { padding: 24px 0 10px; }
   width: 6px; height: 6px; border-radius: 50%; background: #4FBF7A;
   display: inline-block; animation: rb-latir 2.2s ease-in-out infinite;
 }
-.tarjeta-clima .temp { font-family: "Fraunces", serif; font-size: 52px; font-weight: 900; line-height: 1; margin-top: 4px; letter-spacing: -0.04em; }
-.tarjeta-clima .cielo { font-size: 14px; margin-top: 6px; font-weight: 600; }
-.tarjeta-clima .detalle { font-size: 12px; color: #9FB4BD; margin-top: 3px; line-height: 1.45; }
-.tira-dias { display: flex; gap: 7px; margin-top: 14px; }
+/* La fila de arriba: número, estado y dibujo. `align-items: center` y no
+   flex-start porque el número es mucho más alto que el texto de al lado y
+   alineados arriba quedaban descolgados. */
+.ahora-clima { display: flex; align-items: center; gap: 14px; }
+.ahora-clima .que-hace { flex-grow: 1; min-width: 0; }
+.ahora-clima svg { flex: none; }
+.tarjeta-clima .temp {
+  font-family: "Fraunces", serif; font-size: 46px; font-weight: 900;
+  line-height: 1; letter-spacing: -0.04em; flex: none;
+}
+.tarjeta-clima .cielo { font-size: 14px; margin-top: 2px; font-weight: 600; }
+.tarjeta-clima .detalle { font-size: 11.5px; color: #9FB4BD; margin-top: 8px; line-height: 1.45; }
+.tarjeta-clima .detalle span { white-space: nowrap; }
+.tira-dias { display: flex; gap: 6px; margin-top: 12px; }
 /* El ">" importa: sin él la regla también agarraba los divs de adentro (el
    día, la máxima, la mínima) y cada uno se dibujaba con su propia cajita
    redondeada adentro de la cajita del día. Se veían recuadros anidados.
@@ -341,10 +351,10 @@ main { padding: 24px 0 10px; }
 .tira-dias > div {
   flex: 1 1 0; min-width: 0;
   background: rgba(255, 255, 255, 0.08); border-radius: 8px;
-  padding: 7px 4px; text-align: center;
+  padding: 6px 4px; text-align: center;
 }
 .tira-dias .dia { font-size: 11px; color: #9FB4BD; text-transform: uppercase; letter-spacing: 0.06em; font-weight: 700; }
-.tira-dias .max { font-size: 16px; font-weight: 700; margin-top: 5px; }
+.tira-dias .max { font-size: 15px; font-weight: 700; margin-top: 3px; }
 .tira-dias .min { font-size: 12px; color: #9FB4BD; }
 .tira-dias .lluvia { font-size: 11px; color: #7FBCE8; white-space: nowrap; }
 
@@ -379,14 +389,33 @@ main { padding: 24px 0 10px; }
    estuviera rota. Un nombre que se lee de apuro tiene que ser limpio. */
 .nombre-farmacia {
   font-family: "IBM Plex Sans", system-ui, sans-serif;
-  font-size: 22px; font-weight: 700; color: var(--rojo);
-  margin-top: 8px; letter-spacing: -0.01em; line-height: 1.2;
+  font-size: 20px; font-weight: 700; color: var(--rojo);
+  letter-spacing: -0.01em; line-height: 1.2;
 }
-@media (min-width: 720px) { .nombre-farmacia { font-size: 25px; } }
+@media (min-width: 720px) { .nombre-farmacia { font-size: 23px; } }
 
 /* Cada farmacia de turno, con su propia dirección y su propio botón. */
-.una-farmacia { margin-top: 14px; }
-.una-farmacia + .una-farmacia { padding-top: 14px; border-top: 1px solid var(--linea-suave); }
+/* Cada farmacia de turno, con su dirección y su enlace al mapa. */
+.una-farmacia { margin-top: 12px; }
+.una-farmacia + .una-farmacia { padding-top: 12px; border-top: 1px solid var(--linea-suave); }
+/* El nombre y "Cómo llegar" comparten renglón, y el enlace se va al fondo
+   de la línea base del nombre. `flex-wrap` por si un nombre muy largo no
+   deja lugar: ahí baja en vez de apretarse. */
+.cabeza-farmacia {
+  display: flex; align-items: baseline; justify-content: space-between;
+  gap: 10px; flex-wrap: wrap;
+}
+.ir-al-mapa {
+  display: inline-flex; align-items: center; gap: 5px; flex: none;
+  font-size: 13px; font-weight: 600; color: var(--texto);
+  text-decoration: none; white-space: nowrap;
+}
+.ir-al-mapa:hover { color: var(--tinta); text-decoration: underline; }
+.ver-semana {
+  display: inline-block; margin-top: 14px;
+  font-size: 13.5px; font-weight: 600; color: var(--texto); text-decoration: none;
+}
+.ver-semana:hover { color: var(--tinta); text-decoration: underline; }
 .donde-farmacia { font-size: 13.5px; color: var(--texto); margin-top: 4px; line-height: 1.5; }
 .donde-farmacia.sin-dato { color: var(--suave); font-style: italic; }
 .boton.chico { height: 38px; padding: 0 14px; font-size: 13px; margin-top: 10px; }

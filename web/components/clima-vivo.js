@@ -214,19 +214,28 @@ export function TarjetaClima({ clima }) {
 
   return (
     <div className="tarjeta-clima" style={{ '--cielo-fondo': FONDO_CIELO[tipoDeCielo(a.cielo, a.esDeDia !== false)] }}>
-      <div style={{ display: 'flex', alignItems: 'flex-start' }}>
-        <div style={{ flexGrow: 1 }}>
+      {/* El numero, el estado del cielo y el dibujo en una sola fila. Antes
+          iban uno debajo del otro y la tarjeta se comia media pantalla de
+          celular antes de la primera noticia. */}
+      <div className="ahora-clima">
+        <div className="temp">{a.temp}°</div>
+        <div className="que-hace">
           <div className="titulo">
             El clima ahora
             {enVivo && <span className="en-vivo" title="Se actualiza cada 10 minutos" />}
           </div>
-          <div className="temp">{a.temp}°</div>
           <div className="cielo">{a.cielo}</div>
-          <div className="detalle">
-            Sensación {a.sensacion}° · Viento {a.rumbo} {a.viento} km/h · Humedad {a.humedad}%
-          </div>
         </div>
-        <div style={{ margin: '-4px -4px 0 0' }}><IconoCielo cielo={a.cielo} esDeDia={a.esDeDia !== false} tamano={76} /></div>
+        <IconoCielo cielo={a.cielo} esDeDia={a.esDeDia !== false} tamano={62} />
+      </div>
+      {/* El detalle ocupa el ancho entero de la tarjeta: entre el número
+          grande y el dibujo quedaba una columna angosta y los tres datos
+          caían en tres renglones. Cada uno en su span para que el corte
+          pase entre datos y no en el medio de "14 km/h". */}
+      <div className="detalle">
+        <span>Sensación {a.sensacion}°</span>{' · '}
+        <span>Viento {a.rumbo} {a.viento} km/h</span>{' · '}
+        <span>Humedad {a.humedad}%</span>
       </div>
 
       {dias.length > 0 && (

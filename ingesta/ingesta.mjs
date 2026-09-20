@@ -542,6 +542,38 @@ const DIAS_RE = 'LUNES|MARTES|MI[EÉ]RCOLES|JUEVES|VIERNES|S[AÁ]BADO|DOMINGO';
 // El cronograma sólo trae el apellido de la farmacia. La dirección, que es lo
 // que la gente necesita a las once de la noche, está en otra página del mismo
 // Colegio: "Nombre · dirección · teléfono", todo seguido.
+// Los nexos que un listado escribe y el otro no. El Colegio publica
+// "SAN JOSE PLAZA" y La Vanguardia "SAN JOSÉ DE LA PLAZA": es la misma
+// farmacia y hay que poder cruzarlas.
+const NEXOS = new Set(['de', 'del', 'la', 'las', 'los', 'el', 'y']);
+
+/** Las formas en que puede estar escrito un nombre: como viene, y sin los
+ *  nexos. Se indexa por las dos y se busca por las dos, así da igual cuál
+ *  de los dos listados abrevió. */
+function clavesDe(nombre) {
+  const tal = normalizar(nombre);
+  const corta = tal.split(/\s+/).filter((x) => !NEXOS.has(x)).join(' ');
+  return corta && corta !== tal ? [tal, corta] : [tal];
+}
+
+/** Guarda una farmacia bajo todas sus claves, sin pisar lo que ya había. */
+function anotar(directorio, nombre, datos) {
+  for (const clave of clavesDe(nombre)) {
+    if (!directorio[clave]) directorio[clave] = datos;
+  }
+}
+
+/** La busca por cualquiera de sus formas, en el orden en que se pasen los
+ *  directorios: primero el del Colegio, que es el oficial. */
+function buscarFarmacia(nombre, ...directorios) {
+  for (const dir of directorios) {
+    for (const clave of clavesDe(nombre)) {
+      if (dir?.[clave]) return dir[clave];
+    }
+  }
+  return null;
+}
+
 async function traerDirectorioFarmacias() {
   const texto = sinEtiquetas(await traer('https://www.colbalcarce.com/farmacias-de-balcarce'));
   // El título "Farmacias de Balcarce" se repite en el menú: el que interesa es
@@ -553,11 +585,11 @@ async function traerDirectorioFarmacias() {
   const directorio = {};
   let m;
   while ((m = re.exec(recorte)) !== null) {
-    directorio[normalizar(m[1])] = {
+    anotar(directorio, m[1], {
       nombre: m[1].trim(),
       direccion: m[2].replace(/\s+/g, ' ').trim(),
       telefono: m[3],
-    };
+    });
   }
   return directorio;
 }
@@ -599,12 +631,11 @@ export function parsearCronograma(texto, directorio = {}) {
       dia,
       diaSemana: m[1].toUpperCase(),
       farmacias: nombres,
-      // Cada nombre se busca primero en el directorio del Colegio y, si no
-      // está, en la lista cargada a mano (fuentes.mjs). Una farmacia de
-      // turno sin dirección no sirve para nada: es justamente el dato que
-      // la persona necesita a las tres de la mañana.
-      detalle: nombres.map((n) => directorio[normalizar(n)]
-        ?? FARMACIAS_A_MANO[normalizar(n)]
+      // La dirección se busca en el directorio que llega armado (Colegio +
+      // La Vanguardia) y, si ninguno la tiene, en la lista cargada a mano.
+      // Una farmacia de turno sin dirección no sirve para nada: es el dato
+      // que la persona necesita a las tres de la mañana.
+      detalle: nombres.map((n) => buscarFarmacia(n, directorio, FARMACIAS_A_MANO)
         ?? { nombre: n, direccion: null, telefono: null }),
       mes: mesDe,
       fecha: mesDe && anioDe ? `${anioDe}-${String(mesDe).padStart(2, '0')}-${String(dia).padStart(2, '0')}` : null,
@@ -614,10 +645,44 @@ export function parsearCronograma(texto, directorio = {}) {
   return { mes, anio, turnos };
 }
 
+/**
+ * El segundo lugar de donde sacamos direcciones.
+ *
+ * La Vanguardia publica la farmacia de turno CON la dirección al lado, y
+ * eso cubre un agujero del directorio del Colegio: San José de la Plaza
+ * estuvo de turno el 20/09/2026 y no figuraba en el directorio oficial, así
+ * que en la tarjeta salía el nombre sin dirección — justo el dato que la
+ * persona necesita a las tres de la mañana.
+ *
+ * Se arma del mismo pedido que ya hacíamos para cruzar los turnos, así que
+ * no cuesta una llamada de red más.
+ */
+function directorioDeLaVanguardia(turnos) {
+  const directorio = {};
+  for (const t of turnos) {
+    if (!t.direccion) continue;
+    anotar(directorio, t.nombre, {
+      nombre: t.nombre.trim(),
+      direccion: t.direccion,
+      telefono: null,
+      // De dónde salió, para que el panel pueda mostrarlo.
+      fuente: "La Vanguardia",
+    });
+  }
+  return directorio;
+}
+
 async function traerFarmacias() {
   const html = await traer('https://www.colbalcarce.com/');
   const texto = sinEtiquetas(html);
-  const directorio = await traerDirectorioFarmacias().catch(() => ({}));
+  // Las direcciones salen de dos lados. El Colegio es el oficial y trae
+  // teléfono, así que manda; La Vanguardia tapa los huecos. Se piden a la
+  // vez para no sumar espera.
+  const [oficial, enLaVanguardia] = await Promise.all([
+    traerDirectorioFarmacias().catch(() => ({})),
+    turnosDeLaVanguardia().then(directorioDeLaVanguardia).catch(() => ({})),
+  ]);
+  const directorio = { ...enLaVanguardia, ...oficial };
 
   const { mes, anio, turnos } = parsearCronograma(texto, directorio);
 
@@ -1005,6 +1070,7 @@ export const paraPruebas = {
   idDe, normalizar, parecido, sentenciar, esDeBalcarce, figuraQueNombra,
   clasificar, semaforo, limpiarCopete, relevancia, meta, parsearScrape,
   cieloDeSimbolo, haceCuanto, sinEtiquetas, decodificar,
+  clavesDe, anotar, buscarFarmacia, directorioDeLaVanguardia,
 };
 
 // Sólo corre cuando se lo invoca directo; si lo importa probar.mjs, no.

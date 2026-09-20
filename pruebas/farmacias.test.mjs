@@ -10,7 +10,9 @@
 
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { parsearCronograma } from '../ingesta/ingesta.mjs';
+import { parsearCronograma, paraPruebas } from '../ingesta/ingesta.mjs';
+
+const { clavesDe, buscarFarmacia, directorioDeLaVanguardia } = paraPruebas;
 
 // Una copia reducida de lo que publica el Colegio: el encabezado del mes,
 // los turnos, y —esto es lo importante— el encabezado del mes siguiente
@@ -105,4 +107,40 @@ test('un cronograma que no se entiende devuelve vacío en vez de romper', () => 
   // farmacia a publicar cualquier cosa.
   const { turnos } = parsearCronograma('<p>La página está en mantenimiento</p>');
   assert.deepEqual(turnos, []);
+});
+
+
+// ------------------------------------------- cruzar los dos listados
+
+test('el mismo nombre escrito de dos formas es la misma farmacia', () => {
+  // El Colegio publica "SAN JOSE PLAZA" y La Vanguardia "SAN JOSÉ DE LA
+  // PLAZA". Si no se cruzan, la farmacia queda sin dirección.
+  assert.deepEqual(clavesDe('SAN JOSÉ DE LA PLAZA'), ['san jose de la plaza', 'san jose plaza']);
+  assert.deepEqual(clavesDe('SAN JOSE PLAZA'), ['san jose plaza']);
+});
+
+test('un nombre sin nexos tiene una sola forma', () => {
+  assert.deepEqual(clavesDe('GALINDO'), ['galindo']);
+});
+
+test('La Vanguardia sirve de directorio', () => {
+  const dir = directorioDeLaVanguardia([
+    { dia: 20, nombre: 'San José de la Plaza', direccion: 'Av. Chaves esquina 15' },
+    { dia: 21, nombre: 'Galindo', direccion: 'Calle 18 N° 715 entre 19 y 21' },
+  ]);
+  const f = buscarFarmacia('SAN JOSE PLAZA', dir);
+  assert.equal(f.direccion, 'Av. Chaves esquina 15');
+  assert.equal(f.fuente, 'La Vanguardia');
+});
+
+test('el Colegio manda sobre La Vanguardia', () => {
+  // El oficial trae teléfono y es el que publica el turno. La Vanguardia
+  // está para tapar huecos, no para discutirle.
+  const oficial = { 'del cerro': { nombre: 'Del Cerro', direccion: 'Calle 28 N° 920', telefono: '42-1611' } };
+  const vang = { 'del cerro': { nombre: 'Del Cerro', direccion: 'otra cosa', telefono: null } };
+  assert.equal(buscarFarmacia('DEL CERRO', oficial, vang).telefono, '42-1611');
+});
+
+test('una farmacia que no está en ningún lado devuelve null', () => {
+  assert.equal(buscarFarmacia('FARMACIA NUEVA', {}, {}), null);
 });

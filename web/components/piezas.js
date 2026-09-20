@@ -99,7 +99,7 @@ export function SolChico({ cielo = '', esDeDia = true }) {
   );
 }
 
-export function TarjetaFarmacia({ farmacia, conBotones = true }) {
+export function TarjetaFarmacia({ farmacia, verLaSemana = true }) {
   if (!farmacia) return null;
 
   // Cuando hay dos farmacias de turno se muestran las DOS, cada una con su
@@ -128,7 +128,20 @@ export function TarjetaFarmacia({ farmacia, conBotones = true }) {
         const mapa = mapaDe(f.direccion);
         return (
           <div className="una-farmacia" key={f.nombre ?? i}>
-            <div className="nombre-farmacia">{comoNombre(f.nombre)}</div>
+            {/* El nombre y el enlace al mapa en la misma línea. "Cómo
+                llegar" era un botón de 38px de alto por farmacia, y con dos
+                de turno la tarjeta se estiraba de más en el celular. */}
+            <div className="cabeza-farmacia">
+              <span className="nombre-farmacia">{comoNombre(f.nombre)}</span>
+              {mapa && (
+                <a href={mapa} target="_blank" rel="noopener noreferrer" className="ir-al-mapa">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" /><circle cx="12" cy="10" r="3" />
+                  </svg>
+                  Cómo llegar
+                </a>
+              )}
+            </div>
             {f.direccion
               ? (
                 <div className="donde-farmacia">
@@ -136,22 +149,12 @@ export function TarjetaFarmacia({ farmacia, conBotones = true }) {
                 </div>
               )
               : <div className="donde-farmacia sin-dato">Dirección no publicada</div>}
-            {conBotones && mapa && (
-              <a href={mapa} target="_blank" rel="noopener noreferrer" className="boton tinta chico">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" /><circle cx="12" cy="10" r="3" />
-                </svg>
-                Cómo llegar
-              </a>
-            )}
           </div>
         );
       })}
 
-      {conBotones && (
-        <a href="/farmacias" className="boton borde ancho" style={{ marginTop: 14 }}>
-          Ver la semana
-        </a>
+      {verLaSemana && (
+        <a href="/farmacias" className="ver-semana">Ver la semana →</a>
       )}
     </div>
   );
