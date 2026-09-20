@@ -286,6 +286,49 @@ export const FUENTES_NACIONALES = [
     temas: ['deportes'],
     nota: 'Para rugby, tenis, hockey y atletismo: lo que Olé no cubre porque va todo a fútbol.',
   },
+  // ------------------------------------------------ más ojos en lo nacional
+  //
+  // No para llenar la portada de noticias de Buenos Aires: para no quedar
+  // ciegos cuando pasa algo grande, y para agarrar lo que nombra a
+  // Balcarce o a un balcarceño desde afuera (ahí el filtro de alcance deja
+  // pasar todo y la relevancia suma 22 puntos).
+  //
+  // Pesos bajos y maxItems chicos a propósito: si empatan con lo local,
+  // dejamos de ser un medio de Balcarce.
+  {
+    id: 'ambito',
+    nombre: 'Ámbito',
+    medio: 'Ámbito',
+    url: 'https://www.ambito.com/rss/pages/ultimas-noticias.xml',
+    tipo: 'rss',
+    alcance: 'pais',
+    peso: 15,
+    maxItems: 3,
+    temas: ['economia', 'pais'],
+    nota: 'Economía y últimas noticias. Es la sección que más le pega al bolsillo.',
+  },
+  {
+    id: 'minutouno',
+    nombre: 'Minuto Uno',
+    medio: 'Minuto Uno',
+    url: 'https://www.minutouno.com/rss/pages/home.xml',
+    tipo: 'rss',
+    alcance: 'pais',
+    peso: 13,
+    maxItems: 3,
+    temas: ['pais', 'espectaculos'],
+  },
+  {
+    id: 'lanacion-economia',
+    nombre: 'La Nación · Economía',
+    medio: 'La Nación',
+    url: 'https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/',
+    tipo: 'rss',
+    alcance: 'pais',
+    peso: 15,
+    maxItems: 2,
+    temas: ['economia'],
+  },
 ];
 
 // Candidatos a probar para región, provincia, país, deportes y automovilismo.
@@ -411,6 +454,32 @@ export const REGLAS_SEMAFORO = {
     'participá del', 'participa del', 'regala las entradas', 'promoción exclusiva',
     'promocion exclusiva', 'suscribite', 'seguinos en', 'auspicia', 'publicidad'],
 };
+
+// Argentinos que, cuando aparecen, la gente quiere leer — aunque la noticia
+// no tenga nada que ver con Balcarce.
+//
+// El criterio para entrar acá es estrecho a propósito: tiene que ser alguien
+// cuyo nombre solo alcance para que un balcarceño se detenga a leer. Si hay
+// que explicar quién es, no va. Y nunca por polémica: es por logro
+// deportivo o por relevancia que no se discute.
+//
+// Se usa en ingesta.mjs: una nota nacional que nombra a alguien de esta
+// lista sube de puntaje y entra aunque no mencione a Balcarce.
+export const FIGURAS = [
+  // Fútbol
+  'messi', 'scaloni', 'dibu martínez', 'dibu martinez', 'julián álvarez',
+  'julian alvarez', 'enzo fernández', 'enzo fernandez', 'selección argentina',
+  'seleccion argentina', 'la scaloneta',
+  // Automovilismo — en la ciudad de Fangio esto pesa doble
+  'colapinto', 'franco colapinto', 'canapino', 'agustín canapino',
+  'agustin canapino', 'pechito lópez', 'pechito lopez', 'josé maría lópez',
+  // Tenis
+  'cerúndolo', 'cerundolo', 'báez', 'sebastián báez', 'etcheverry',
+  // Básquet y otros
+  'campazzo', 'facundo campazzo', 'las leonas', 'los pumas',
+  // Ciclismo y atletismo, que en Balcarce tienen público propio
+  'maximiliano richeze', 'belén casetta', 'belen casetta',
+];
 
 // Nombres propios de Balcarce y siglas que se repiten todo el tiempo. Sirven
 // para reescribir los títulos que los medios publican EN MAYÚSCULAS sin

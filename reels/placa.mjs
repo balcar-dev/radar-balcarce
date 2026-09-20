@@ -277,8 +277,13 @@ export function placaFarmacia({ detalle = [], farmacias = [], dia, diaSemana }) 
     const dir = f.direccion ? envolver(f.direccion, doble ? 28 : 24) : [];
     const tamNombre = doble ? 72 : 108;
     let cursor = y;
+    // El nombre va en la sans, no en Fraunces. Fraunces tiene un rasgo de
+    // diseño llamado "wonk" que hace las letras a propósito irregulares: en
+    // un titular largo se lee como carácter, pero en un nombre corto a 108
+    // píxeles la J y las s se ven torcidas, como si la tipografía estuviera
+    // rota. Un nombre de farmacia tiene que leerse limpio y rápido.
     const partes = nombre.map((l, i) => `<text x="${MARGEN}" y="${cursor + i * (tamNombre * 1.1)}"
-        font-family="${DISPLAY}" font-size="${tamNombre}" font-weight="900" letter-spacing="-2"
+        font-family="${TEXTO}" font-size="${tamNombre}" font-weight="700" letter-spacing="-2"
         fill="${COLORES.tinta}">${esc(l)}</text>`).join('');
     cursor += (nombre.length - 1) * (tamNombre * 1.1) + (doble ? 66 : 92);
     const dirs = dir.map((l, i) => `<text x="${MARGEN}" y="${cursor + i * (doble ? 48 : 58)}"

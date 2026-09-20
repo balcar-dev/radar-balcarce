@@ -6,7 +6,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import {
-  NOMBRES_PROPIOS, BALCARCE, FUENTES, FUENTES_NACIONALES, PALABRAS_LOCALES, REGLAS_SECCION, REGLAS_SEMAFORO,
+  NOMBRES_PROPIOS, FIGURAS, BALCARCE, FUENTES, FUENTES_NACIONALES, PALABRAS_LOCALES, REGLAS_SECCION, REGLAS_SEMAFORO,
 } from './fuentes.mjs';
 
 export const TODAS_LAS_FUENTES = [...FUENTES, ...FUENTES_NACIONALES];
@@ -307,6 +307,14 @@ function esDeBalcarce(nota) {
   return PALABRAS_LOCALES.some((p) => contiene(texto, p));
 }
 
+/** ¿Nombra a alguien que en Balcarce se lee igual aunque la noticia sea de
+ *  afuera? Messi, Colapinto, la Selección. Devuelve el nombre encontrado o
+ *  null, para poder mostrar por qué entró. */
+function figuraQueNombra(nota) {
+  const texto = normalizar(`${nota.titulo} ${nota.cuerpo.slice(0, 400)}`);
+  return FIGURAS.find((f) => contiene(texto, f)) ?? null;
+}
+
 function clasificar(nota) {
   const texto = normalizar(`${nota.titulo} ${nota.categorias.join(' ')} ${nota.cuerpo.slice(0, 400)}`);
 
@@ -375,6 +383,9 @@ function relevancia(nota, seccion, medios) {
   if (nota.textoCompleto) p += 4;
   // Que un medio nacional nombre a Balcarce es noticia en Balcarce.
   if (nota.nombraBalcarce) p += 22;
+  // Una figura argentina no vale tanto como que nombren a Balcarce, pero
+  // vale bastante más que una nota nacional cualquiera.
+  if (nota.figura) p += 16;
   if (seccion === 'Automovilismo') p += 8; // Balcarce es tierra de fierros
   if (seccion === 'Servicios') p += 6;
   return Math.min(100, Math.round(p));
@@ -679,10 +690,15 @@ export async function ingestar({
     if (f.alcance !== 'local') {
       const nuestras = notas.filter(esDeBalcarce);
       nuestras.forEach((n) => { n.nombraBalcarce = true; });
-      const resto = notas.filter((n) => !nuestras.includes(n))
+      // Las que nombran a una figura entran aunque no digan Balcarce: son
+      // las que la gente lee igual. Van marcadas para que el puntaje las
+      // suba y para poder explicar en el panel por qué están.
+      const conFigura = notas.filter((n) => !nuestras.includes(n) && figuraQueNombra(n));
+      conFigura.forEach((n) => { n.figura = figuraQueNombra(n); });
+      const resto = notas.filter((n) => !nuestras.includes(n) && !conFigura.includes(n))
         .sort((a, b) => b.fecha - a.fecha)
         .slice(0, f.maxItems ?? 5);
-      notas = [...nuestras, ...resto];
+      notas = [...nuestras, ...conFigura, ...resto];
     }
     return { fuente: f, notas };
   }));
@@ -751,6 +767,7 @@ export async function ingestar({
       imagen: g.principal.imagen || null,
       resumenFuente: limpiarCopete(g.principal.cuerpo, g.principal.titulo, g.principal.medio),
       local: esDeBalcarce(g.principal),
+      figura: g.principal.figura ?? null,
       alcance: g.principal.alcance,
       nombraBalcarce: !!g.principal.nombraBalcarce,
     };
