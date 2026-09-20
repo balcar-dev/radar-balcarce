@@ -10,7 +10,7 @@ import { paraPruebas } from '../ingesta/ingesta.mjs';
 
 const {
   normalizar, parecido, sentenciar, esDeBalcarce, figuraQueNombra,
-  clasificar, semaforo, limpiarCopete, relevancia, idDe,
+  clasificar, semaforo, limpiarCopete, relevancia, idDe, parsearScrape,
 } = paraPruebas;
 
 /** Una nota mínima, para no repetir diez campos en cada prueba. */
@@ -261,6 +261,22 @@ test('Balcarce sale sola, Política y Policiales no', () => {
   assert.equal(semaforo(p, 'Política', 70).color, 'amarillo');
   const po = nota({ titulo: 'Chocaron dos autos en la ruta', local: true });
   assert.equal(semaforo(po, 'Policiales', 70).color, 'amarillo');
+});
+
+// ------------------------------------------------- lo que no es una nota
+
+test('un bloque de texto de la página no es un titular', () => {
+  // El 20/09 salió publicado el "quiénes somos" de El Diario como si fuera
+  // una noticia. El titular más largo que publicaron las 24 fuentes ese día
+  // tiene 99 caracteres y la mediana es 53.
+  const quienesSomos = 'El único diario de Balcarce de aparición en papel y en formato '
+    + 'digital. Nuestro compromiso es informar con la verdad, con información chequeada, '
+    + 'sin tergiversación y con compromiso con el ciudadano.';
+  const html = `<article><h2><a href="/quienes-somos">${quienesSomos}</a></h2></article>`
+    + '<article><h2><a href="/nota/1">Inauguran una plaza en el barrio Norte</a></h2></article>';
+  const notas = parsearScrape(html, { nombre: 'El Diario', medio: 'El Diario', base: 'https://x.ar', peso: 20 });
+  const titulos = notas.map((n) => n.titulo);
+  assert.ok(!titulos.some((t) => t.includes('único diario')), titulos.join(' | '));
 });
 
 // ------------------------------------------------------------------ el id

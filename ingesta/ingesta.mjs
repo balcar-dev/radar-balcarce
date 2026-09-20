@@ -303,7 +303,12 @@ function parsearScrape(html, fuente) {
     // (<h3>bajada</h3><h2>título</h2>): si hay un <h2>, es el título real.
     const h2 = m[2].match(/<h2[^>]*>([\s\S]*?)<\/h2>/i);
     const titulo = sinEtiquetas(h2 ? h2[1] : m[2]);
-    if (titulo.length < 25 || vistos.has(href)) continue;
+    // Un titular no pasa de cien caracteres: el más largo que publicaron
+    // las 24 fuentes hoy tiene 99 y la mediana es 53. Lo que se pasa no es
+    // una noticia, es un bloque de texto de la página. El 20/09 salió
+    // publicado "El único diario de Balcarce de aparición en papel y en
+    // formato digital…", que es el "quiénes somos" de El Diario.
+    if (titulo.length < 25 || titulo.length > 140 || vistos.has(href)) continue;
     vistos.add(href);
     notas.push({
       titulo,
