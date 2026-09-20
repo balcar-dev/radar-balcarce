@@ -6,7 +6,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import {
-  NOMBRES_PROPIOS, FIGURAS, BALCARCE, FUENTES, FUENTES_NACIONALES, PALABRAS_LOCALES, REGLAS_SECCION, REGLAS_SEMAFORO,
+  NOMBRES_PROPIOS, FIGURAS, FARMACIAS_A_MANO, BALCARCE, FUENTES, FUENTES_NACIONALES, PALABRAS_LOCALES, REGLAS_SECCION, REGLAS_SEMAFORO,
 } from './fuentes.mjs';
 
 export const TODAS_LAS_FUENTES = [...FUENTES, ...FUENTES_NACIONALES];
@@ -239,6 +239,12 @@ async function ampliar(notas, { concurrencia = 4 } = {}) {
 // se conserva con mayúscula acá.
 const ARTICULOS = new Set(['el', 'la', 'los', 'las', 'de', 'del', 'y', 'en', 'al', 'un', 'una']);
 
+// Las letras del castellano, para poder pedir "palabra entera". El \b de
+// las expresiones regulares no sirve acá: para JavaScript la "á" no es una
+// letra, así que \bBalcarce\b y \bBalcarcé\b se comportan distinto.
+const PALABRA_CON_MAYUSCULA = /(?<![A-Za-zÁÉÍÓÚÑÜáéíóúñü])[A-ZÁÉÍÓÚÑÜ][a-záéíóúñü]{2,}(?![A-Za-zÁÉÍÓÚÑÜáéíóúñü])/gu;
+const PALABRA_SUELTA = /(?<![A-Za-zÁÉÍÓÚÑÜáéíóúñü])[a-záéíóúñü]{2,}(?![A-Za-zÁÉÍÓÚÑÜáéíóúñü])/gu;
+
 function sentenciar(titulo, cuerpo = '') {
   const letras = titulo.replace(/[^A-Za-zÁÉÍÓÚÑÜáéíóúñü]/g, '');
   if (letras.length < 8) return titulo;
@@ -248,8 +254,13 @@ function sentenciar(titulo, cuerpo = '') {
   // Los nombres salen de dos lados: el cuerpo de la nota (que casi siempre
   // viene bien escrito) y la lista a mano de fuentes.mjs.
   const propios = new Map();
-  for (const palabra of cuerpo.match(/[A-ZÁÉÍÓÚÑÜ][a-záéíóúñü]{2,}/g) ?? []) {
-    propios.set(palabra.toLowerCase(), palabra);
+  // Una palabra con mayúscula al principio de una oración no prueba nada:
+  // "Durante la sesión…" no convierte a "durante" en nombre propio. Sólo
+  // cuentan las que aparecen con mayúscula en medio de una frase.
+  for (const m of cuerpo.matchAll(PALABRA_CON_MAYUSCULA)) {
+    const antes = cuerpo.slice(0, m.index).trimEnd();
+    if (!antes || /[.!?:;¡¿"«»]$/u.test(antes)) continue;
+    propios.set(m[0].toLowerCase(), m[0]);
   }
   for (const nombre of NOMBRES_PROPIOS) {
     for (const palabra of nombre.split(' ')) {
@@ -262,7 +273,7 @@ function sentenciar(titulo, cuerpo = '') {
 
   const texto = titulo.toLowerCase()
     .replace(/(^|[.:¿?¡!"“«] *)([a-záéíóúñü])/g, (m, antes, letra) => antes + letra.toUpperCase());
-  return texto.replace(/[a-záéíóúñü]{2,}/g, (p) => propios.get(p) ?? p);
+  return texto.replace(PALABRA_SUELTA, (p) => propios.get(p) ?? p);
 }
 
 function parsearScrape(html, fuente) {
@@ -551,38 +562,69 @@ async function traerDirectorioFarmacias() {
   return directorio;
 }
 
-async function traerFarmacias() {
-  const html = await traer('https://www.colbalcarce.com/');
-  const texto = sinEtiquetas(html);
-  const directorio = await traerDirectorioFarmacias().catch(() => ({}));
-
+// Lee el cronograma del Colegio y devuelve los turnos con fecha y detalle.
+//
+// Está separada del pedido de red a propósito: es la parte que ya se rompió
+// dos veces en silencio (una farmacia pegada al encabezado del mes, los
+// turnos de octubre fechados en septiembre) y es la única forma de probarla
+// sin salir a internet. Las pruebas viven en pruebas/farmacias.test.mjs.
+export function parsearCronograma(texto, directorio = {}) {
   // Mes y año del cronograma publicado.
   const cab = texto.match(new RegExp(`(${MESES.join('|')})\\s*,?\\s*(20\\d\\d)`, 'i'));
   const mes = cab ? MESES.indexOf(cab[1].toLowerCase()) + 1 : null;
   const anio = cab ? +cab[2] : null;
 
+  // El corte del nombre también mira el encabezado del mes siguiente: la
+  // página publica dos cronogramas seguidos y, sin eso, la última farmacia
+  // del mes se leía como "MARIOLI OCTUBRE 2026".
   const turnos = [];
-  const re = new RegExp(`(${DIAS_RE})\\s+(\\d{1,2})\\s+([A-ZÁÉÍÓÚÑ][A-ZÁÉÍÓÚÑ0-9'’.\\- ]*?)(?=\\s+(?:${DIAS_RE})\\s+\\d|\\s+Recordamos|\\s+Turnos|\\s*$)`, 'gi');
+  const re = new RegExp(`(${DIAS_RE})\\s+(\\d{1,2})\\s+([A-ZÁÉÍÓÚÑ][A-ZÁÉÍÓÚÑ0-9'’.\\- ]*?)(?=\\s+(?:${DIAS_RE})\\s+\\d|\\s+(?:${MESES.join('|')})\\s*,?\\s*20|\\s+Recordamos|\\s+Turnos|\\s*$)`, 'gi');
+  // La página publica el cronograma del mes y el arranque del siguiente, uno
+  // detrás del otro y sin repetir el encabezado. Cuando el número de día
+  // vuelve para atrás (…29, 30, 3, 4) es que empezó el mes que viene, y esos
+  // turnos tienen que quedar fechados en octubre, no en septiembre.
   let m;
+  let mesDe = mes;
+  let anioDe = anio;
+  let diaAnterior = 0;
   while ((m = re.exec(texto)) !== null) {
     const nombres = m[3].trim().split(/\s+-\s+/).map((s) => s.trim()).filter((s) => s.length > 2);
     if (!nombres.length) continue;
+    const dia = +m[2];
+    if (mesDe && dia < diaAnterior) {
+      if (mesDe === 12) { mesDe = 1; anioDe += 1; } else { mesDe += 1; }
+    }
+    diaAnterior = dia;
     turnos.push({
-      dia: +m[2],
+      dia,
       diaSemana: m[1].toUpperCase(),
       farmacias: nombres,
-      // Cada nombre del cronograma se busca en el directorio para sumarle
-      // dirección y teléfono. Si alguno no aparece, queda sin dirección y el
-      // panel lo avisa en vez de inventarla.
+      // Cada nombre se busca primero en el directorio del Colegio y, si no
+      // está, en la lista cargada a mano (fuentes.mjs). Una farmacia de
+      // turno sin dirección no sirve para nada: es justamente el dato que
+      // la persona necesita a las tres de la mañana.
       detalle: nombres.map((n) => directorio[normalizar(n)]
+        ?? FARMACIAS_A_MANO[normalizar(n)]
         ?? { nombre: n, direccion: null, telefono: null }),
-      fecha: mes && anio ? `${anio}-${String(mes).padStart(2, '0')}-${String(+m[2]).padStart(2, '0')}` : null,
+      mes: mesDe,
+      fecha: mesDe && anioDe ? `${anioDe}-${String(mesDe).padStart(2, '0')}-${String(dia).padStart(2, '0')}` : null,
     });
   }
 
+  return { mes, anio, turnos };
+}
+
+async function traerFarmacias() {
+  const html = await traer('https://www.colbalcarce.com/');
+  const texto = sinEtiquetas(html);
+  const directorio = await traerDirectorioFarmacias().catch(() => ({}));
+
+  const { mes, anio, turnos } = parsearCronograma(texto, directorio);
+
   // Control de calidad: el cronograma tiene que llegar hasta fin de mes.
   const hoy = new Date();
-  const ultimoDia = turnos.length ? Math.max(...turnos.map((t) => t.dia)) : 0;
+  const delMes = turnos.filter((t) => !mes || t.mes === mes);
+  const ultimoDia = delMes.length ? Math.max(...delMes.map((t) => t.dia)) : 0;
   const diasEnMes = mes ? new Date(anio, mes, 0).getDate() : 31;
   const avisos = [];
   if (mes && mes !== hoy.getMonth() + 1) avisos.push(`el cronograma publicado es de ${MESES[mes - 1]}, no del mes en curso`);
@@ -590,6 +632,7 @@ async function traerFarmacias() {
 
   // Una farmacia sin dirección se publica igual, pero avisando: es preferible
   // dar el nombre solo a inventar una calle.
+  // Las cargadas a mano ya no cuentan como faltantes.
   const sinDireccion = [...new Set(turnos.flatMap((t) => t.detalle)
     .filter((f) => !f.direccion).map((f) => f.nombre))];
   if (sinDireccion.length) {
@@ -951,6 +994,18 @@ function armarPreview(d) {
 </main>
 </body></html>`;
 }
+
+// Las piezas internas que las pruebas necesitan ver.
+//
+// No se exportan una por una para que quede claro, leyendo el archivo, cuál
+// es la interfaz de verdad (ingestar, parsearFeed, parsearCronograma, traer)
+// y cuál es la ventana que abrimos sólo para poder probar. Las pruebas están
+// en la carpeta pruebas/ y corren con `npm test`, sin red.
+export const paraPruebas = {
+  idDe, normalizar, parecido, sentenciar, esDeBalcarce, figuraQueNombra,
+  clasificar, semaforo, limpiarCopete, relevancia, meta, parsearScrape,
+  cieloDeSimbolo, haceCuanto, sinEtiquetas, decodificar,
+};
 
 // Sólo corre cuando se lo invoca directo; si lo importa probar.mjs, no.
 const esEjecutable = process.argv[1]

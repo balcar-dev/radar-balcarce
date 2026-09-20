@@ -8,6 +8,8 @@
 import {
   datosSeccion, nombreCorto, cuando, partirFecha, whatsapp, MAIL, WHATSAPP,
 } from '@/lib/datos';
+import { tipoDeCielo } from '@/lib/clima';
+import { comoNombre } from '@/lib/texto';
 
 const WHATSAPP_VISIBLE = WHATSAPP.visible;
 
@@ -19,11 +21,54 @@ const WHATSAPP_VISIBLE = WHATSAPP.visible;
 
 /** El sol chiquito de la chapa de arriba: siempre el mismo, para que la
  *  pastilla no cambie de ancho cada vez que cambia el pronóstico. */
-/** El dibujito de la barra de arriba. Chico y sin detalle: en esa barra se
- *  ve a veinte píxeles, así que lo único que tiene que comunicar es si es
- *  de día o de noche. */
-export function SolChico({ esDeDia = true }) {
-  if (!esDeDia) {
+/** El dibujito de la barra de arriba. Chico y sin detalle: ahí se ve a
+ *  veinte píxeles. Pero tiene que decir la verdad — antes sólo sabía si era
+ *  de día o de noche, así que a las dos de la tarde con chaparrones mostraba
+ *  un sol radiante mientras la tarjeta de abajo dibujaba lluvia. */
+export function SolChico({ cielo = '', esDeDia = true }) {
+  const tipo = tipoDeCielo(cielo, esDeDia);
+
+  if (tipo === 'lluvia') {
+    return (
+      <svg width="20" height="20" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+        <path d="M13 27a7 7 0 0 1 1-13.7 10 10 0 0 1 19 2.6A6 6 0 0 1 32 27z" fill="#C8D4DB" />
+        <g stroke="#7FBCE8" strokeWidth="3" strokeLinecap="round">
+          <path className="gota" d="M17 32v5" />
+          <path className="gota gota-2" d="M24 32v5" />
+          <path className="gota gota-3" d="M31 32v5" />
+        </g>
+      </svg>
+    );
+  }
+
+  if (tipo === 'cubierto') {
+    return (
+      <svg width="20" height="20" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+        <path d="M13 32a7 7 0 0 1 1-13.7 10 10 0 0 1 19 2.6A6 6 0 0 1 32 32z" fill="#C8D4DB" />
+      </svg>
+    );
+  }
+
+  if (tipo === 'nube' || tipo === 'luna-nube') {
+    return (
+      <svg width="20" height="20" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+        {esDeDia
+          ? <circle cx="32" cy="15" r="7" fill="#E8A33C" />
+          : (
+            <>
+              <mask id="gajo-nube">
+                <rect width="48" height="48" fill="#fff" />
+                <circle cx="37" cy="10" r="6" fill="#000" />
+              </mask>
+              <circle cx="32" cy="14" r="7" fill="#E8D08C" mask="url(#gajo-nube)" />
+            </>
+          )}
+        <path d="M13 32a7 7 0 0 1 1-13.7 10 10 0 0 1 19 2.6A6 6 0 0 1 32 32z" fill="#E7EDF0" />
+      </svg>
+    );
+  }
+
+  if (tipo === 'luna') {
     return (
       <svg width="20" height="20" viewBox="0 0 48 48" fill="none" aria-hidden="true">
         <mask id="gajo-chico">
@@ -54,44 +99,67 @@ export function SolChico({ esDeDia = true }) {
   );
 }
 
-// ------------------------------------------------------------- la farmacia
-
 export function TarjetaFarmacia({ farmacia, conBotones = true }) {
   if (!farmacia) return null;
-  const nombre = farmacia.farmacias.join(' y ');
-  const det = farmacia.detalle?.[0];
-  const mapa = det?.direccion
-    ? `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${det.direccion}, Balcarce, Buenos Aires`)}`
-    : null;
+
+  // Cuando hay dos farmacias de turno se muestran las DOS, cada una con su
+  // dirección. Antes se mostraban los dos nombres juntos y una sola
+  // dirección debajo, así que parecía una sola farmacia con nombre largo —
+  // y el que iba a la dirección equivocada se encontraba con la persiana
+  // baja.
+  const lista = farmacia.detalle?.length
+    ? farmacia.detalle
+    : (farmacia.farmacias ?? []).map((n) => ({ nombre: n }));
+
+  const mapaDe = (direccion) => (direccion
+    ? `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${direccion}, Balcarce, Buenos Aires`)}`
+    : null);
 
   return (
     <div className="tarjeta">
       <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
         <span className="punto-vivo" />
-        <span className="meta">Farmacia de turno · hoy</span>
+        <span className="meta">
+          {lista.length > 1 ? 'Farmacias de turno · hoy' : 'Farmacia de turno · hoy'}
+        </span>
       </div>
-      <div className="nombre-farmacia">{nombre}</div>
-      {det?.direccion && (
-        <div style={{ fontSize: 13.5, color: 'var(--texto)', marginTop: 5 }}>
-          {det.direccion}{det.telefono ? ` · Tel. ${det.telefono}` : ''}
-        </div>
-      )}
+
+      {lista.map((f, i) => {
+        const mapa = mapaDe(f.direccion);
+        return (
+          <div className="una-farmacia" key={f.nombre ?? i}>
+            <div className="nombre-farmacia">{comoNombre(f.nombre)}</div>
+            {f.direccion
+              ? (
+                <div className="donde-farmacia">
+                  {f.direccion}{f.telefono ? ` · Tel. ${f.telefono}` : ''}
+                </div>
+              )
+              : <div className="donde-farmacia sin-dato">Dirección no publicada</div>}
+            {conBotones && mapa && (
+              <a href={mapa} target="_blank" rel="noopener noreferrer" className="boton tinta chico">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" /><circle cx="12" cy="10" r="3" />
+                </svg>
+                Cómo llegar
+              </a>
+            )}
+          </div>
+        );
+      })}
+
       {conBotones && (
-        <div style={{ display: 'flex', gap: 8, marginTop: 14 }}>
-          <a href="/farmacias" className="boton borde" style={{ flexGrow: 1 }}>Ver la semana</a>
-          {mapa && (
-            <a href={mapa} target="_blank" rel="noopener noreferrer" className="boton tinta" style={{ flexGrow: 1 }}>
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" /><circle cx="12" cy="10" r="3" />
-              </svg>
-              Cómo llegar
-            </a>
-          )}
-        </div>
+        <a href="/farmacias" className="boton borde ancho" style={{ marginTop: 14 }}>
+          Ver la semana
+        </a>
       )}
     </div>
   );
 }
+
+/** "SAN JOSE PLAZA" en mayúsculas grita. Se pasa a mayúscula inicial, que es
+ *  como se escribe el nombre de un comercio. */
+
 
 // ------------------------------------------------------------------ notas
 

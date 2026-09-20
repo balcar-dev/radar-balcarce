@@ -1,5 +1,14 @@
 import { obtenerDatos } from '@/lib/datos';
+
+// El Colegio escribe los días en mayúsculas y a veces sin acento
+// ("MIERCOLES"). Acá se escriben como se escriben.
+const DIA_ESCRITO = {
+  domingo: 'Domingo', lunes: 'Lunes', martes: 'Martes',
+  miercoles: 'Miércoles', 'miércoles': 'Miércoles', jueves: 'Jueves',
+  viernes: 'Viernes', sabado: 'Sábado', 'sábado': 'Sábado',
+};
 import { TarjetaFarmacia, Cierre, Invitacion } from '@/components/piezas';
+import { comoNombre } from '@/lib/texto';
 
 export const metadata = {
   title: 'Farmacias de turno',
@@ -44,15 +53,24 @@ export default function Farmacias() {
             <span className="barra" style={{ background: 'var(--s-farmacias, var(--rojo))' }} />
             <h2 style={{ fontSize: 19 }}>Cómo sigue la semana</h2>
           </div>
-          {f.proximos.map((t) => (
-            <div className="fila-nota" key={t.dia}>
-              <span className="meta cuando" style={{ width: 130 }}>{t.diaSemana} {t.dia}</span>
-              <div style={{ flexGrow: 1 }}>
-                <span className="meta cuando-movil">{t.diaSemana} {t.dia}</span>
-                <div style={{ fontSize: 16, fontWeight: 600 }}>{t.farmacias.join(' y ')}</div>
+          {f.proximos.map((t) => {
+            // El cronograma llega todo en mayúsculas y sin acentos. Los
+            // nombres se toman del detalle, que es el directorio del Colegio,
+            // y el día se escribe como se escribe.
+            const nombreDia = DIA_ESCRITO[String(t.diaSemana).toLowerCase()] ?? comoNombre(t.diaSemana);
+            const dia = `${nombreDia} ${t.dia}`;
+            const nombres = (t.detalle?.length ? t.detalle.map((x) => x.nombre) : t.farmacias)
+              .map(comoNombre).join(' y ');
+            return (
+              <div className="fila-nota" key={t.fecha ?? t.dia}>
+                <span className="meta cuando" style={{ width: 130 }}>{dia}</span>
+                <div style={{ flexGrow: 1 }}>
+                  <span className="meta cuando-movil">{dia}</span>
+                  <div style={{ fontSize: 16, fontWeight: 600 }}>{nombres}</div>
+                </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </section>
       )}
 

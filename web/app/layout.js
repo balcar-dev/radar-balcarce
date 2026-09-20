@@ -3,6 +3,7 @@ import {
   obtenerDatos, datosSeccion, nombreCorto, EN_NAVEGACION, whatsapp, WHATSAPP, MAIL,
 } from '@/lib/datos';
 import { SolChico } from '@/components/piezas';
+import { comoNombre } from '@/lib/texto';
 import { Analytics } from '@vercel/analytics/next';
 import Buscador from '@/components/buscador';
 
@@ -66,7 +67,7 @@ export default function RaizLayout({ children }) {
                 lado mejor que no exista. */}
             {clima && (
               <span className="pastilla con-icono">
-                <SolChico esDeDia={clima.esDeDia !== false} />
+                <SolChico cielo={clima.cielo} esDeDia={clima.esDeDia !== false} />
                 <span className="fuerte">{clima.temp}°</span>
                 <span className="apagado solo-grande">{clima.cielo}</span>
               </span>
@@ -76,7 +77,12 @@ export default function RaizLayout({ children }) {
               <a href="/farmacias" className="pastilla solo-grande">
                 <span className="punto-vivo" />
                 <span className="apagado">De turno</span>
-                <span className="fuerte">{farmacia.farmacias.join(' y ')}</span>
+                {/* El nombre sale del detalle, que es el del directorio del Colegio y
+                    trae los acentos; el del cronograma viene en mayúsculas y grita. */}
+                <span className="fuerte">
+                  {(farmacia.detalle?.length ? farmacia.detalle.map((f) => f.nombre) : farmacia.farmacias)
+                    .map(comoNombre).join(' y ')}
+                </span>
               </a>
             )}
           </div>

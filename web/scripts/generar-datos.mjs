@@ -96,9 +96,21 @@ const notas = (ultima.notas ?? [])
   .filter(Boolean)
   .sort((a, b) => new Date(b.fecha) - new Date(a.fecha));
 
-const hoy = new Date().getDate();
-const turnoHoy = ultima.farmacias?.turnos?.find((t) => t.dia === hoy) ?? null;
-const proximosTurnos = (ultima.farmacias?.turnos ?? []).filter((t) => t.dia >= hoy).slice(0, 6);
+// Los turnos se comparan por fecha completa y no por número de día: el
+// cronograma del Colegio arranca el mes siguiente sin cortar, y el 30 de
+// septiembre lo que sigue es el 3 de octubre, no el 3 de septiembre.
+const ahora = new Date();
+const hoyISO = [
+  ahora.getFullYear(),
+  String(ahora.getMonth() + 1).padStart(2, '0'),
+  String(ahora.getDate()).padStart(2, '0'),
+].join('-');
+const hoy = ahora.getDate();
+// Si un cronograma viejo no trae fecha armada, se cae al número de día.
+const esHoy = (t) => (t.fecha ? t.fecha === hoyISO : t.dia === hoy);
+const yaViene = (t) => (t.fecha ? t.fecha >= hoyISO : t.dia >= hoy);
+const turnoHoy = ultima.farmacias?.turnos?.find(esHoy) ?? null;
+const proximosTurnos = (ultima.farmacias?.turnos ?? []).filter(yaViene).slice(0, 6);
 
 const salida = {
   generado: new Date().toISOString(),

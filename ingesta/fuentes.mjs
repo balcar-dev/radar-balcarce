@@ -180,17 +180,6 @@ export const FUENTES_NACIONALES = [
     temas: ['nacionales', 'general'],
   },
   {
-    id: 'ambito',
-    nombre: 'Ámbito',
-    medio: 'Ámbito',
-    url: 'https://www.ambito.com/rss/pages/home.xml',
-    tipo: 'rss',
-    alcance: 'pais',
-    peso: 6,
-    maxItems: 3,
-    temas: ['nacionales', 'economía'],
-  },
-  {
     id: 'ole',
     nombre: 'Olé',
     medio: 'Olé',
@@ -363,7 +352,7 @@ export const PALABRAS_LOCALES = [
 export const REGLAS_SECCION = [
   {
     seccion: 'Automovilismo',
-    palabras: ['turismo carretera', 'tc pista', 'automovilismo', 'autódromo', 'autodromo',
+    palabras: ['turismo carretera', 'tc', 'tc pista', 'automovilismo', 'autódromo', 'autodromo',
       'fangio', 'karting', 'rally', 'tc2000', 'top race', 'procar', 'fórmula', 'formula 1',
       'pick up', 'motociclismo', 'motocross',
       // Los que trae Motorsport: sin esto, una nota de F1 caía en Deportes
@@ -502,3 +491,16 @@ export const NOMBRES_PROPIOS = [
   'INTA', 'ARBAL', 'ABSA', 'EDEA', 'ANSES', 'PAMI', 'SAME', 'AFIP', 'ARCA',
   'UNMdP', 'ACA', 'TC', 'TN', 'APINTA', 'IOMA', 'PBA',
 ];
+
+// Farmacias que el directorio del Colegio no lista, cargadas a mano.
+//
+// El cronograma de turnos las nombra igual, así que sin esto salen sin
+// dirección — y una farmacia de turno sin dirección no sirve para nada: es
+// justamente el dato que la persona necesita a las tres de la mañana.
+//
+// Las direcciones se verifican contra lo que publican los medios locales
+// antes de cargarlas acá. Si aparece una nueva, el panel lo avisa en la
+// pestaña "Clima y farmacias" y se agrega en esta lista.
+export const FARMACIAS_A_MANO = {
+  'san jose plaza': { nombre: 'San José de la Plaza', direccion: 'Av. Chaves esquina 15', telefono: null },
+};

@@ -18,6 +18,7 @@
 // navegador tenga JavaScript apagado. El pedido en vivo sólo la corrige.
 
 import { useEffect, useState } from 'react';
+import { tipoDeCielo } from '@/lib/clima';
 
 const BALCARCE = { lat: -37.8459, lon: -58.2557, tz: 'America/Argentina/Buenos_Aires' };
 const CADA = 10 * 60 * 1000; // cada diez minutos
@@ -63,19 +64,11 @@ function interpretar(j) {
   };
 }
 
-function tipoDeCielo(cielo = '', esDeDia = true) {
-  const t = cielo.toLowerCase();
-  if (/lluvia|llovizna|chaparr|tormenta|nieve/.test(t)) return 'lluvia';
-  // De noche no hay sol. Parece obvio, pero el dibujo mostraba un sol
-  // radiante a la una de la mañana porque sólo miraba si estaba despejado.
-  if (/despejado/.test(t) && !/mayormente/.test(t)) return esDeDia ? 'sol' : 'luna';
-  return esDeDia ? 'nube' : 'luna-nube';
-}
 
 // De noche el fondo también baja: una tarjeta celeste a las dos de la
 // mañana se ve fuera de lugar.
 const FONDO_CIELO = {
-  sol: '#2A6E8C', nube: '#1D4F63', lluvia: '#243D52',
+  sol: '#2A6E8C', nube: '#1D4F63', cubierto: '#1D4F63', lluvia: '#243D52',
   luna: '#1B2A44', 'luna-nube': '#1A2438',
 };
 
@@ -124,6 +117,8 @@ export function IconoCielo({ cielo, esDeDia = true, tamano = 92 }) {
           <circle cx="48" cy="48" r="18" fill="#E8A33C" />
         </>
       )}
+
+      {tipo === 'cubierto' && <Nube y={16} color="#C8D4DB" />}
 
       {tipo === 'nube' && (
         <>

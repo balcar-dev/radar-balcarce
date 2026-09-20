@@ -384,6 +384,14 @@ main { padding: 24px 0 10px; }
 }
 @media (min-width: 720px) { .nombre-farmacia { font-size: 25px; } }
 
+/* Cada farmacia de turno, con su propia dirección y su propio botón. */
+.una-farmacia { margin-top: 14px; }
+.una-farmacia + .una-farmacia { padding-top: 14px; border-top: 1px solid var(--linea-suave); }
+.donde-farmacia { font-size: 13.5px; color: var(--texto); margin-top: 4px; line-height: 1.5; }
+.donde-farmacia.sin-dato { color: var(--suave); font-style: italic; }
+.boton.chico { height: 38px; padding: 0 14px; font-size: 13px; margin-top: 10px; }
+.boton.ancho { width: 100%; }
+
 /* ------------------------------------------------------------------ agenda */
 
 .evento { padding: 11px 0; border-bottom: 1px solid var(--linea-suave); display: flex; gap: 12px; }
@@ -420,6 +428,13 @@ main { padding: 24px 0 10px; }
 a.telefono:hover { border-color: var(--rojo); color: inherit; }
 .telefono .nombre { font-size: 13.5px; color: var(--suave); }
 .telefono .numero { font-size: 19px; font-weight: 700; margin-top: 2px; }
+
+/* Pasar de página en una sección. Los extremos vacíos se rellenan con un
+   <span/> para que el número quede siempre en el centro. */
+.paginacion {
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  margin-top: 30px; padding-top: 20px; border-top: 1px solid var(--linea-suave);
+}
 
 /* ------------------------------------------------- el final de cada página */
 

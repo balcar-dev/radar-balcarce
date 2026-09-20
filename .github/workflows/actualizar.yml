@@ -45,6 +45,13 @@ jobs:
         with:
           node-version: '24'
 
+      # Las pruebas corren antes de salir a buscar noticias: si la
+      # clasificación o el parseo de la farmacia se rompieron, es preferible
+      # dejar la web como está antes que publicar datos mal armados. La
+      # corrida anterior sigue online y nadie ve nada roto.
+      - name: Probar que nada se rompió
+        run: npm test
+
       # No hace falta instalar nada: la ingesta usa sólo lo que trae Node
       # (fetch y expresiones regulares), sin una sola dependencia. Por eso
       # esto tarda segundos y no minutos.
