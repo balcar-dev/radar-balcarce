@@ -1,6 +1,7 @@
-import { obtenerDatos, cuando, porRanura, datosSeccion, nombreCorto, SECCIONES } from '@/lib/datos';
-import { PlacaSeccion, Etiqueta, FilaNota, TarjetaFarmacia, TarjetaBuzon } from '@/components/piezas';
-import { TarjetaClima } from '@/components/clima-vivo';
+import { obtenerDatos, cuando, porRanura, nombreCorto, SECCIONES } from '@/lib/datos';
+import {
+  PlacaSeccion, Etiqueta, FilaNota, Cierre, Invitacion,
+} from '@/components/piezas';
 import { notFound } from 'next/navigation';
 
 // Se generan sólo las secciones que hoy tienen notas: no tiene sentido
@@ -19,64 +20,57 @@ export function generateMetadata({ params }) {
   };
 }
 
+// Una sola columna. El clima y la farmacia están en la barra de arriba y en
+// la portada; repetirlos acá los convertía en ruido. Y la tarjeta de "otras
+// secciones" sobraba desde que la navegación las muestra todas.
 export default function PaginaSeccion({ params }) {
   const s = porRanura(params.ranura);
   if (!s) notFound();
 
-  const d = obtenerDatos();
-  const notas = d.notas.filter((n) => n.seccion === s.nombre);
+  const notas = obtenerDatos().notas.filter((n) => n.seccion === s.nombre);
   if (notas.length === 0) notFound();
 
   const [principal, ...resto] = notas;
 
   return (
-    <div className="envoltura">
-      <div className="dos-columnas">
-        <div className="principal sin-servicios">
-          <div className="titulo-seccion" style={{ marginBottom: 22 }}>
-            <span className="barra" style={{ background: s.color }} />
-            <h2 style={{ fontSize: 28 }}>{s.nombre}</h2>
-            <span className="meta">{notas.length} {notas.length === 1 ? 'nota' : 'notas'}</span>
-          </div>
-
-          <article className="destacada">
-            <a href={`/nota/${principal.id}`}><PlacaSeccion seccion={principal.seccion} /></a>
-            <div className="chapa-nota" style={{ marginTop: 16 }}>
-              <Etiqueta seccion={principal.seccion} />
-              <span className="meta">{cuando(principal)}</span>
-              <span className="punto">·</span>
-              <span className="meta">{principal.medios.join(' · ')}</span>
-            </div>
-            <h2><a href={`/nota/${principal.id}`}>{principal.titulo}</a></h2>
-            {principal.copete && <p>{principal.copete}</p>}
-          </article>
-
-          {resto.length > 0 && (
-            <div style={{ marginTop: 28 }}>
-              {resto.map((n) => <FilaNota nota={n} key={n.id} />)}
-            </div>
-          )}
-
-          <div style={{ marginTop: 28 }}>
-            <a href="/" className="boton borde">← Volver a la portada</a>
-          </div>
-        </div>
-
-        <aside className="lateral">
-          <div className="tarjeta">
-            <h3>Otras secciones</h3>
-            <div className="chips" style={{ marginTop: 12 }}>
-              {SECCIONES
-                .filter((o) => o.ranura !== s.ranura && d.notas.some((n) => n.seccion === o.nombre))
-                .map((o) => (
-                  <a key={o.ranura} href={`/seccion/${o.ranura}`}>{nombreCorto(o.nombre)}</a>
-                ))}
-            </div>
-          </div>
-
-          <TarjetaBuzon />
-        </aside>
+    <div className="envoltura" style={{ maxWidth: 760 }}>
+      <div className="titulo-seccion" style={{ marginBottom: 22 }}>
+        <span className="barra" style={{ background: s.color }} />
+        <h2 style={{ fontSize: 28 }}>{s.nombre}</h2>
+        <span className="meta">{notas.length} {notas.length === 1 ? 'nota' : 'notas'}</span>
       </div>
+
+      <article className="destacada">
+        <a href={`/nota/${principal.id}`}><PlacaSeccion seccion={principal.seccion} /></a>
+        <div className="chapa-nota" style={{ marginTop: 16 }}>
+          <Etiqueta seccion={principal.seccion} />
+          <span className="meta">{cuando(principal)}</span>
+          <span className="punto">·</span>
+          <span className="meta">{principal.medios.join(' · ')}</span>
+        </div>
+        <h2><a href={`/nota/${principal.id}`}>{principal.titulo}</a></h2>
+        {principal.copete && <p>{principal.copete}</p>}
+      </article>
+
+      {resto.length > 0 && (
+        <div style={{ marginTop: 28 }}>
+          {resto.map((n) => <FilaNota nota={n} key={n.id} />)}
+        </div>
+      )}
+
+      <Cierre
+        enlaces={[
+          { href: '/agenda', texto: 'Agenda' },
+          { href: '/farmacias', texto: 'Farmacias' },
+        ]}
+      >
+        <Invitacion
+          titulo="¿Viste algo en el barrio?"
+          texto="Mandanos la foto o el dato por correo. Lo chequeamos antes de publicarlo y, si lo pedís, no ponemos tu nombre."
+          boton="Escribirnos"
+          asunto="Tengo un dato para Radar Balcarce"
+        />
+      </Cierre>
     </div>
   );
 }

@@ -1,5 +1,5 @@
 import { obtenerDatos, obtenerNota, cuando, datosSeccion, nombreCorto } from '@/lib/datos';
-import { PlacaSeccion, Etiqueta, FilaNota } from '@/components/piezas';
+import { PlacaSeccion, Etiqueta, FilaNota, Cierre, Invitacion } from '@/components/piezas';
 import { notFound } from 'next/navigation';
 
 export function generateStaticParams() {
@@ -48,11 +48,6 @@ export default function PaginaNota({ params }) {
           <a href={n.enlace} target="_blank" rel="noopener noreferrer">Leer la nota original ↗</a>
         </div>
 
-        <div style={{ display: 'flex', gap: 10, marginTop: 24, flexWrap: 'wrap' }}>
-          <a href="/" className="boton borde">← Portada</a>
-          <a href={`/seccion/${s.ranura}`} className="boton borde">Más de {nombreCorto(n.seccion)}</a>
-        </div>
-
         {relacionadas.length > 0 && (
           <section className="bloque-seccion">
             <div className="titulo-seccion">
@@ -63,6 +58,19 @@ export default function PaginaNota({ params }) {
             {relacionadas.map((o) => <FilaNota nota={o} key={o.id} />)}
           </section>
         )}
+        <Cierre
+          enlaces={[
+            { href: `/seccion/${s.ranura}`, texto: `Más de ${nombreCorto(n.seccion)}` },
+            { href: '/agenda', texto: 'Agenda' },
+          ]}
+        >
+          <Invitacion
+            titulo="¿Tenés más información sobre esto?"
+            texto="Si sabés algo que falta en esta nota, o si algo está mal, escribinos. Corregimos rápido y a la vista."
+            boton="Escribirnos"
+            asunto={`Sobre la nota: ${n.titulo}`}
+          />
+        </Cierre>
       </article>
     </div>
   );

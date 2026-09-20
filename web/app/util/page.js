@@ -1,4 +1,5 @@
 import { obtenerDatos } from '@/lib/datos';
+import { Cierre, Invitacion } from '@/components/piezas';
 
 export const metadata = {
   title: 'Teléfonos útiles',
@@ -53,16 +54,21 @@ export default function BalcarceUtil() {
         </section>
       ))}
 
-      <div style={{ display: 'flex', gap: 10, marginTop: 24, flexWrap: 'wrap' }}>
-        <a href="/farmacias" className="boton borde">Farmacias de turno</a>
-        <a href="/agenda" className="boton borde">Agenda</a>
-        <a href="/" className="boton borde">← Portada</a>
-      </div>
+      <Cierre
+        enlaces={[
+          { href: '/farmacias', texto: 'Farmacias' },
+          { href: '/agenda', texto: 'Agenda' },
+        ]}
+        fuente="Los teléfonos salen de la lista oficial de la Municipalidad de Balcarce."
+      >
+        <Invitacion
+          titulo="¿Encontraste un teléfono que cambió?"
+          texto="Avisanos cuál y, si lo sabés, el nuevo. Lo corregimos el mismo día."
+          boton="Avisarnos"
+          asunto="Un teléfono cambió"
+        />
+      </Cierre>
 
-      <p className="mini" style={{ marginTop: 26 }}>
-        Los teléfonos salen de la lista oficial de la Municipalidad de Balcarce.
-        Si encontrás uno que cambió, <a href="mailto:radarbalcarce@gmail.com?subject=Un%20tel%C3%A9fono%20cambi%C3%B3" style={{ color: 'var(--rojo)', fontWeight: 600 }}>escribinos</a> y lo corregimos.
-      </p>
     </div>
   );
 }

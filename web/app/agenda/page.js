@@ -1,6 +1,5 @@
 import { obtenerDatos, partirFecha } from '@/lib/datos';
-import { TarjetaFarmacia, Evento } from '@/components/piezas';
-import { TarjetaClima } from '@/components/clima-vivo';
+import { Evento, Cierre, Invitacion } from '@/components/piezas';
 
 export const metadata = {
   title: 'Agenda',
@@ -30,9 +29,7 @@ export default function PaginaAgenda() {
   }
 
   return (
-    <div className="envoltura">
-      <div className="dos-columnas">
-        <div className="principal sin-servicios">
+    <div className="envoltura" style={{ maxWidth: 760 }}>
           <h1 className="fraunces" style={{ fontSize: 34 }}>Agenda de Balcarce</h1>
           <p className="mini" style={{ marginTop: 8, marginBottom: 26, maxWidth: 600 }}>
             Actos, muestras, ferias, fiestas y encuentros deportivos. Sale de la agenda
@@ -86,24 +83,20 @@ export default function PaginaAgenda() {
             </section>
           )}
 
-          <div style={{ marginTop: 28 }}>
-            <a href="/" className="boton borde">← Volver a la portada</a>
-          </div>
-        </div>
-
-        <aside className="lateral">
-          <div className="tarjeta-buzon">
-            <h3 style={{ fontSize: 19, fontWeight: 700 }}>¿Organizás un evento?</h3>
-            <p>
-              Mandanos qué es, dónde, a qué hora y si tiene entrada. Lo publicamos
-              gratis: la agenda del pueblo la llenamos entre todos.
-            </p>
-            <a href="mailto:radarbalcarce@gmail.com?subject=Evento%20para%20la%20agenda" className="boton rojo ancho">
-              Sumar un evento
-            </a>
-          </div>
-        </aside>
-      </div>
+      <Cierre
+        enlaces={[
+          { href: '/farmacias', texto: 'Farmacias' },
+          { href: '/util', texto: 'Teléfonos' },
+        ]}
+        fuente="Los eventos salen de la agenda oficial del Municipio de Balcarce y de lo que nos acercan las instituciones."
+      >
+        <Invitacion
+          titulo="¿Organizás un evento?"
+          texto="Mandanos qué es, dónde, a qué hora y si tiene entrada. Lo publicamos gratis: la agenda del pueblo la llenamos entre todos."
+          boton="Sumar un evento"
+          asunto="Evento para la agenda"
+        />
+      </Cierre>
     </div>
   );
 }

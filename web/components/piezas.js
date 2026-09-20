@@ -152,6 +152,52 @@ export function Evento({ evento }) {
   );
 }
 
+// ------------------------------------------------- el final de cada página
+//
+// Todas las páginas internas terminan igual, en este orden:
+//
+//   1. una línea, y los botones: "← Portada" primero, después dos atajos
+//      a las páginas hermanas que tengan sentido desde donde estás;
+//   2. una tarjeta que invita a escribirnos, con el pedido que corresponde
+//      a esa página;
+//   3. si el dato viene de algún lado, una línea diciendo de dónde.
+//
+// Antes cada página terminaba a su manera — una con "Volver a la portada",
+// otra con "Portada", una con tarjeta y otra sin — y eso hace que el sitio
+// se sienta armado por partes.
+
+export function Cierre({ enlaces = [], children, fuente = null }) {
+  return (
+    <section className="cierre-pagina">
+      <div className="botonera">
+        <a href="/" className="boton borde">← Portada</a>
+        {enlaces.map((e) => (
+          <a key={e.href} href={e.href} className="boton borde">{e.texto}</a>
+        ))}
+      </div>
+      {children}
+      {fuente && <p className="nota-fuente">{fuente}</p>}
+    </section>
+  );
+}
+
+/** La tarjeta de invitación. Siempre igual: título, una línea que explica
+ *  qué esperamos, y un botón. Cambia el pedido, no la forma. */
+export function Invitacion({ titulo, texto, boton, asunto }) {
+  return (
+    <div className="tarjeta-buzon">
+      <h3 style={{ fontSize: 19, fontWeight: 700 }}>{titulo}</h3>
+      <p>{texto}</p>
+      <a
+        href={`mailto:radarbalcarce@gmail.com?subject=${encodeURIComponent(asunto)}`}
+        className="boton rojo ancho"
+      >
+        {boton}
+      </a>
+    </div>
+  );
+}
+
 // ------------------------------------------------------------------ buzón
 
 export function TarjetaBuzon() {

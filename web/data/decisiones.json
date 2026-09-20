@@ -1,5 +1,5 @@
 {
-  "exportado": "2026-09-20T05:09:57.882Z",
+  "exportado": "2026-09-20T05:19:41.293Z",
   "decisiones": {
     "1x4d9hl": {
       "estado": "pendiente",
@@ -3204,6 +3204,24 @@
       "deIA": true,
       "por": "ia",
       "cuando": "2026-09-20T05:09:57.876Z"
+    },
+    "j60d5": {
+      "estado": "automatica",
+      "titulo": "Reunión positiva de pilotos del Turismo Special de la Costa",
+      "copete": "Piloto y dirigentes del Turismo Special de la Costa mantuvieron un encuentro en Balcarce para planificar la temporada.",
+      "guion": "Reunión positiva de pilotos del Turismo Special de la Costa",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-20T05:19:40.444Z"
+    },
+    "qsrqxu": {
+      "estado": "automatica",
+      "titulo": "Instituto y Talleres empataron en el clásico cordobés",
+      "copete": "Instituto y Talleres igualaron este sábado en Alta Córdoba en el duelo interzonal del torneo Clausura, en un partido marcado por la tensión y el arbitraje.",
+      "guion": "Instituto y Talleres empataron en el clásico cordobés",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-20T05:19:41.288Z"
     }
   },
   "horarios": {

@@ -347,6 +347,17 @@ a.telefono:hover { border-color: var(--rojo); color: inherit; }
 .telefono .nombre { font-size: 13.5px; color: var(--suave); }
 .telefono .numero { font-size: 19px; font-weight: 700; margin-top: 2px; }
 
+/* ------------------------------------------------- el final de cada página */
+
+.cierre-pagina {
+  margin-top: 40px; padding-top: 26px; border-top: 1px solid var(--linea);
+  display: flex; flex-direction: column; gap: 20px;
+}
+.cierre-pagina .botonera { display: flex; gap: 10px; flex-wrap: wrap; }
+.cierre-pagina .tarjeta-buzon { max-width: 520px; }
+.nota-fuente { font-size: 13px; color: var(--suave); line-height: 1.6; margin: 0; max-width: 560px; }
+.nota-fuente a { color: var(--rojo); font-weight: 600; }
+
 /* --------------------------------------------------------------------- pie */
 
 footer.principal { background: var(--tinta); color: #BDC1B8; padding: 28px 0; margin-top: 44px; font-size: 13px; }

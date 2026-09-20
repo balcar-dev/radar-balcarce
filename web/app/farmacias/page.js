@@ -1,5 +1,5 @@
 import { obtenerDatos } from '@/lib/datos';
-import { TarjetaFarmacia } from '@/components/piezas';
+import { TarjetaFarmacia, Cierre, Invitacion } from '@/components/piezas';
 
 export const metadata = {
   title: 'Farmacias de turno',
@@ -56,16 +56,24 @@ export default function Farmacias() {
         </section>
       )}
 
-      {f?.avisos?.length > 0 && (
-        <div className="atribucion" style={{ marginTop: 22 }}>
-          {f.avisos.map((a) => <div key={a}>{a}</div>)}
-        </div>
-      )}
+      <Cierre
+        enlaces={[
+          { href: '/util', texto: 'Teléfonos' },
+          { href: '/agenda', texto: 'Agenda' },
+        ]}
+        fuente={[
+          'El turno lo publica el Colegio de Farmacéuticos de Balcarce.',
+          ...(f?.avisos ?? []),
+        ].join(' ')}
+      >
+        <Invitacion
+          titulo="¿El turno no coincide?"
+          texto="Si la farmacia que figura no es la que está abierta, avisanos. Lo verificamos y lo corregimos enseguida."
+          boton="Avisarnos"
+          asunto="El turno de farmacia no coincide"
+        />
+      </Cierre>
 
-      <div style={{ display: 'flex', gap: 10, marginTop: 26, flexWrap: 'wrap' }}>
-        <a href="/util" className="boton borde">Teléfonos útiles</a>
-        <a href="/" className="boton borde">← Portada</a>
-      </div>
     </div>
   );
 }
