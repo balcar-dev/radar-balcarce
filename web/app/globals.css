@@ -372,8 +372,17 @@ main { padding: 24px 0 10px; }
 
 /* ---------------------------------------------------------------- farmacia */
 
-.nombre-farmacia { font-family: "Fraunces", serif; font-size: 23px; font-weight: 900; color: var(--rojo); margin-top: 8px; letter-spacing: -0.02em; line-height: 1.15; }
-@media (min-width: 720px) { .nombre-farmacia { font-size: 27px; } }
+/* El nombre de la farmacia va en la sans, igual que en las placas. Fraunces
+   tiene un rasgo de diseño llamado "wonk" que hace las letras a propósito
+   irregulares: en un titular largo se lee como carácter, pero en un nombre
+   corto y grande la J y las S se ven torcidas, como si la tipografía
+   estuviera rota. Un nombre que se lee de apuro tiene que ser limpio. */
+.nombre-farmacia {
+  font-family: "IBM Plex Sans", system-ui, sans-serif;
+  font-size: 22px; font-weight: 700; color: var(--rojo);
+  margin-top: 8px; letter-spacing: -0.01em; line-height: 1.2;
+}
+@media (min-width: 720px) { .nombre-farmacia { font-size: 25px; } }
 
 /* ------------------------------------------------------------------ agenda */
 

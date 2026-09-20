@@ -33,6 +33,11 @@ export default function RaizLayout({ children }) {
   return (
     <html lang="es">
       <head>
+        {/* El feed se anuncia acá y no con un enlace en el pie: al que lo
+            tocaba le aparecía una pantalla de código, porque un feed es
+            para que lo lea un programa, no una persona. Los lectores de
+            noticias lo encuentran solos por esta línea. */}
+        <link rel="alternate" type="application/rss+xml" title="Radar Balcarce" href="/feed.xml" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link
@@ -131,7 +136,7 @@ export default function RaizLayout({ children }) {
             <div>
               <a href="/agenda">Agenda</a> · <a href="/farmacias">Farmacias</a> ·{' '}
               <a href="/util">Teléfonos útiles</a> ·{' '}
-              <a href="/politica-de-privacidad">Política de privacidad</a> · <a href="/feed.xml">RSS</a>
+              <a href="/politica-de-privacidad">Política de privacidad</a>
             </div>
             <div className="aclaracion">
               Algunos resúmenes y las voces de nuestros videos se producen con inteligencia
