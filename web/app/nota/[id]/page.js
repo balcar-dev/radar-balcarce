@@ -1,5 +1,7 @@
 import { obtenerDatos, obtenerNota, cuando, datosSeccion, nombreCorto } from '@/lib/datos';
-import { PlacaSeccion, Etiqueta, FilaNota, Cierre, Invitacion } from '@/components/piezas';
+import {
+  PlacaSeccion, Etiqueta, FilaNota, Cierre, Invitacion, Firma,
+} from '@/components/piezas';
 import { notFound } from 'next/navigation';
 
 export function generateStaticParams() {
@@ -39,6 +41,8 @@ export default function PaginaNota({ params }) {
         {n.guion && (
           <p style={{ fontSize: 16, lineHeight: 1.7, marginTop: 22, color: 'var(--texto)' }}>{n.guion}</p>
         )}
+
+        <Firma nota={n} />
 
         <div className="atribucion">
           <strong>De dónde sale esta nota.</strong> La informaron{' '}

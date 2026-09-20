@@ -436,6 +436,17 @@ a.telefono:hover { border-color: var(--rojo); color: inherit; }
   margin-top: 30px; padding-top: 20px; border-top: 1px solid var(--linea-suave);
 }
 
+/* La firma al pie de la nota: quién la escribió y quién la revisó. Va en
+   gris y en cuerpo chico a propósito — es un dato honesto, no un aviso. */
+.firma-nota {
+  display: flex; align-items: baseline; gap: 9px;
+  margin-top: 26px; font-size: 13.5px; line-height: 1.55; color: var(--suave);
+}
+.punto-firma {
+  flex: none; width: 6px; height: 6px; border-radius: 3px;
+  background: var(--linea); transform: translateY(-2px);
+}
+
 /* ------------------------------------------------- el final de cada página */
 
 .cierre-pagina {

@@ -19,6 +19,16 @@ export default function RaizLayout({ children }) {
   const d = obtenerDatos();
   const farmacia = d.farmacias?.hoy;
   const clima = d.clima?.ahora;
+
+  // Cuándo se armó esta página. La hora absoluta y no "hace veinte
+  // minutos": el sitio es HTML estático, así que un "hace" calculado
+  // al construirlo se queda congelado y a las tres horas miente.
+  const actualizado = d.generado
+    ? new Date(d.generado).toLocaleTimeString('es-AR', {
+      hour: '2-digit', minute: '2-digit', hour12: false,
+      timeZone: 'America/Argentina/Buenos_Aires',
+    })
+    : null;
   const fecha = new Date().toLocaleDateString('es-AR', {
     weekday: 'long', day: 'numeric', month: 'long', timeZone: 'America/Argentina/Buenos_Aires',
   });
@@ -144,6 +154,12 @@ export default function RaizLayout({ children }) {
               <a href="/util">Teléfonos útiles</a> ·{' '}
               <a href="/politica-de-privacidad">Política de privacidad</a>
             </div>
+            {actualizado && (
+              <div className="aclaracion">
+                Las noticias se actualizan solas cada media hora. Esta página se armó
+                a las {actualizado}.
+              </div>
+            )}
             <div className="aclaracion">
               Algunos resúmenes y las voces de nuestros videos se producen con inteligencia
               artificial, siempre con revisión humana y con la fuente original enlazada.

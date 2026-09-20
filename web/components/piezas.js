@@ -296,3 +296,34 @@ export function TarjetaBuzon() {
     </div>
   );
 }
+
+
+/**
+ * Quién escribió la nota que estás leyendo.
+ *
+ * De los diarios nacionales que miramos, dos de cuatro identifican al
+ * autor; de los locales, uno de tres (INVESTIGACION-NACIONALES.md). Para
+ * nosotros es distinto que para ellos: parte de lo que publicamos lo
+ * redacta una inteligencia artificial. Decirlo en cada nota, y no sólo en
+ * el pie de página, nos conviene — el día que alguien lo descubra por su
+ * cuenta va a parecer que lo escondíamos.
+ */
+export function Firma({ nota }) {
+  const reescrita = !!nota.guion;
+  const revisada = nota.como === 'publicada';
+
+  const texto = reescrita
+    ? 'El resumen lo redactó una inteligencia artificial a partir de la nota original.'
+    : 'El resumen es el que publicó la fuente. No lo reescribimos.';
+
+  const quien = revisada
+    ? 'Lo revisó y lo publicó una persona de la redacción.'
+    : 'Se publicó automáticamente: es una sección y un tema que no piden revisión.';
+
+  return (
+    <p className="firma-nota">
+      <span className="punto-firma" aria-hidden="true" />
+      {texto} {quien}
+    </p>
+  );
+}

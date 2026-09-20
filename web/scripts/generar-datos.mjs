@@ -88,6 +88,12 @@ function notaPublicada(n) {
     local: n.local,
     publicadaPor: d?.por ?? null,
     publicadaCuando: d?.cuando ?? null,
+    // Cómo llegó a publicarse: sola por el semáforo verde, o porque
+    // alguien la miró y le dio el visto bueno. La nota lo dice al pie.
+    // Que parte de lo que publicamos lo redacte una IA no es algo para
+    // esconder en la letra chica: el día que alguien lo descubra por su
+    // cuenta, va a parecer que lo escondíamos.
+    como: st,
   };
 }
 
