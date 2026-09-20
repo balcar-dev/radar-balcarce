@@ -108,11 +108,26 @@ function fichas(titulo) {
 // Busca una palabra entera, no un pedazo: "obra" no puede matchear dentro de
 // "cobra", pero sí tiene que matchear "obras". Los sufijos cortos se permiten.
 const CACHE_RE = new Map();
+// De cuántas letras para arriba se permite que la palabra siga.
+const SUFIJO_DESDE = 5;
+
+/**
+ * ¿Aparece esa palabra en el texto?
+ *
+ * Se permiten hasta tres letras de más al final para no tener que escribir
+ * todas las formas de cada una: "granizo" encuentra "granizos", "denuncia"
+ * encuentra "denunciado".
+ *
+ * Con palabras cortas eso se vuelve peligroso. "gol" encontraba "golpe", y
+ * por eso "Los extremismos dan un doble golpe en Alemania" salió publicada
+ * en Deportes. De cuatro letras para abajo se exige la palabra entera.
+ */
 function contiene(textoNormalizado, palabra) {
   let re = CACHE_RE.get(palabra);
   if (!re) {
     const p = normalizar(palabra).replace(/\s+/g, '\\s+');
-    re = new RegExp(`\\b${p}\\w{0,3}\\b`);
+    const cola = p.length >= SUFIJO_DESDE ? '\\w{0,3}' : '';
+    re = new RegExp(`\\b${p}${cola}\\b`);
     CACHE_RE.set(palabra, re);
   }
   return re.test(textoNormalizado);
@@ -326,41 +341,89 @@ function figuraQueNombra(nota) {
   return FIGURAS.find((f) => contiene(texto, f)) ?? null;
 }
 
+// Palabras que adentro del deporte significan una cosa y afuera otra.
+//
+// Son las que más notas mandaron a la sección equivocada:
+//
+//   · "partido" — en la provincia de Buenos Aires un partido es un municipio,
+//     y en castellano común es también un partido político. Mandó a Deportes
+//     "Violento robo en la puerta de un kiosco" y "Recordaron a Domingo
+//     Teruggi a 50 años de su asesinato".
+//   · "descenso" — "un marcado descenso de las temperaturas" terminó en
+//     Deportes.
+//   · "tenis" — "piedras del tamaño de pelotas de tenis", también.
+//   · "muestra" y "exposición" — "La EducoAgro muestra el potencial de
+//     Balcarce" cayó en Cultura.
+//   · "paso" — son las elecciones PASO, pero también el verbo pasar.
+//
+// No se borran, porque cuando no hay nada mejor sí aciertan: "Boca le ganó a
+// San Lorenzo" no tiene otra palabra que la delate. Lo que hacen es esperar:
+// deciden sólo si ninguna palabra firme encontró nada.
+const PALABRAS_DEBILES = new Set([
+  'partido', 'descenso', 'tenis', 'copa', 'liga', 'gol',
+  'muestra', 'exposicion', 'exposición', 'paso', 'box',
+]);
+
 function clasificar(nota) {
   const texto = normalizar(`${nota.titulo} ${nota.categorias.join(' ')} ${nota.cuerpo.slice(0, 400)}`);
+  // Una palabra débil sólo decide si está en el TITULAR. En el cuerpo
+  // aparece de casualidad: "Recordaron a Domingo Teruggi" hablaba del
+  // partido de Lobería y terminó en Deportes.
+  const titular = normalizar(nota.titulo);
 
   // 1. Automovilismo gana siempre: en Balcarce es sección propia, no un
   //    subtema de deportes, y aparece mezclado en cualquier feed.
   const fierros = REGLAS_SECCION.find((r) => r.seccion === 'Automovilismo');
-  if (fierros.palabras.some((p) => contiene(texto, p))) return 'Automovilismo';
+  if (fierros.palabras.some((p) => !PALABRAS_DEBILES.has(p) && contiene(texto, p))) return 'Automovilismo';
 
   // 2. Si la fuente ya viene separada por sección (las de Radio Gabal, Olé,
   //    Clarín Deportes), le creemos: es más confiable que adivinar.
   if (nota.seccionFuente) return nota.seccionFuente;
 
-  // 3. Recién ahí, palabras clave: gana la coincidencia más específica,
-  //    no la primera de la lista. "Exposición Rural de Palermo" caía en
-  //    Cultura porque "exposición" está en esa regla y Cultura va antes
-  //    que Agro; con esto gana "exposición rural", que dice más. Si dos
-  //    palabras son igual de largas, manda el orden de las reglas.
+  // 3. Recién ahí, palabras clave. Gana la coincidencia más específica, no la
+  //    primera de la lista: "Exposición Rural de Palermo" caía en Cultura
+  //    porque "exposición" está en esa regla y Cultura va antes que Agro.
+  //    Si dos palabras son igual de largas, manda el orden de las reglas.
   let mejor = null;
   let largo = 0;
+  let debil = null;
   for (const regla of REGLAS_SECCION) {
     for (const palabra of regla.palabras) {
-      if (palabra.length > largo && contiene(texto, palabra)) {
+      if (!contiene(texto, palabra)) continue;
+      if (PALABRAS_DEBILES.has(palabra)) {
+        if (!debil && contiene(titular, palabra)) debil = regla.seccion;
+        continue;
+      }
+      if (palabra.length > largo) {
         largo = palabra.length;
         mejor = regla.seccion;
       }
     }
   }
   if (mejor) return mejor;
+  if (debil) return debil;
+
   if (nota.alcance === 'local') return 'Balcarce';
   if (nota.alcance === 'region') return 'Región';
   if (nota.alcance === 'provincia') return 'Provincia';
   return 'País';
 }
 
-function semaforo(nota, seccion) {
+// Cuánto puntaje necesita una nota de afuera para salir sola.
+//
+// El 20/09 la portada tenía "Boca derrota a San Lorenzo" (37 puntos) y
+// "Turismo invita a recorrer los parajes rurales de Lobería" (10) saliendo
+// solas, mientras la caravana para recibir al campeón balcarceño Kevin Gómez
+// (100) esperaba aprobación. Eso está al revés.
+//
+// Lo de Balcarce no tiene piso: si pasa acá, se publica. El piso es para lo
+// que viene de afuera, que es lo que sobra — las fuentes nacionales tiran
+// cincuenta notas por vuelta y sólo unas pocas le importan a alguien de
+// Balcarce. Las que hablan de Messi o Colapinto ya suman 16 puntos por eso,
+// así que pasan sin problema.
+const PISO_NO_LOCAL = 50;
+
+function semaforo(nota, seccion, puntaje) {
   const texto = normalizar(`${nota.titulo} ${nota.cuerpo.slice(0, 600)}`);
   for (const p of REGLAS_SEMAFORO.rojo) {
     if (contiene(texto, p)) return { color: 'rojo', motivo: `tema sensible: "${p}"` };
@@ -372,6 +435,16 @@ function semaforo(nota, seccion) {
     if (contiene(texto, p)) return { color: 'amarillo', motivo: `parece promoción, no noticia: "${p}"` };
   }
   if (nota.oficial) return { color: 'verde', motivo: 'comunicado oficial' };
+
+  // Automovilismo tampoco tiene piso. No es una sección más: es la ciudad
+  // de Fangio y ya se le suman 8 puntos por eso en el puntaje. Con el piso
+  // puesto, las notas de Fórmula 1 quedaban justo abajo (48 de 50) y la
+  // sección se vaciaba.
+  const deAca = nota.local || nota.nombraBalcarce || seccion === 'Automovilismo' || esDeBalcarce(nota);
+  if (!deAca && puntaje < PISO_NO_LOCAL) {
+    return { color: 'amarillo', motivo: `de afuera y con poco puntaje (${puntaje} de ${PISO_NO_LOCAL})` };
+  }
+
   if (REGLAS_SEMAFORO.verdeSecciones.includes(seccion)) return { color: 'verde', motivo: `sección ${seccion}` };
   return { color: 'amarillo', motivo: 'sección general, sin regla verde' };
 }
@@ -877,7 +950,8 @@ export async function ingestar({
   // 3. Clasificar, semáforo y relevancia
   const portada = grupos.map((g) => {
     const seccion = clasificar(g.principal);
-    const sem = semaforo(g.principal, seccion);
+    const rel = relevancia(g.principal, seccion, g.medios.length);
+    const sem = semaforo(g.principal, seccion, rel);
     return {
       id: idDe(g.principal.enlace),
       titulo: sentenciar(g.principal.titulo, g.principal.cuerpo),
@@ -889,7 +963,7 @@ export async function ingestar({
       seccion,
       semaforo: sem.color,
       motivo: sem.motivo,
-      relevancia: relevancia(g.principal, seccion, g.medios.length),
+      relevancia: rel,
       imagen: g.principal.imagen || null,
       resumenFuente: limpiarCopete(g.principal.cuerpo, g.principal.titulo, g.principal.medio),
       local: esDeBalcarce(g.principal),

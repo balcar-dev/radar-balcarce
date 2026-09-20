@@ -434,7 +434,18 @@ export const REGLAS_SEMAFORO = {
     'gremio', 'paro', 'protesta', 'reclamo', 'detenido', 'acusado', 'imputado',
     'hospital', 'muerte', 'falleció', 'fallecio', 'investigación', 'investigacion'],
   // Todo lo demás sale solo si la sección lo permite.
-  verdeSecciones: ['Servicios', 'Cultura y agenda', 'Deportes', 'Automovilismo', 'Agro'],
+  // Todo lo demás sale solo si la sección lo permite.
+  //
+  // Balcarce entró el 20/09. Estaba afuera por prudencia y el resultado
+  // era el contrario al buscado: 58 de 61 notas locales esperando, contra
+  // 65 de 67 de Deportes publicándose solas. La portada de un medio de
+  // Balcarce mostraba el fútbol nacional. Las listas de arriba ya frenan
+  // lo que hay que frenar — de esas 58, diez las agarraba una palabra
+  // (denuncia, intendente, hospital) y esas siguen esperando.
+  //
+  // Política y Policiales no entran, y no es por miedo al trabajo: en un
+  // pueblo son los dos temas donde un error no se perdona.
+  verdeSecciones: ['Servicios', 'Cultura y agenda', 'Deportes', 'Automovilismo', 'Agro', 'Balcarce'],
   // Esto NO es noticia: es publicidad o promoción de otro medio. No se
   // bloquea (a veces un sorteo del club sí interesa), pero nunca sale solo:
   // el 18/09 la portada abrió con "Ganá tu entrada para el TC", que es una

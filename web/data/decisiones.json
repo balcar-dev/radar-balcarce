@@ -1,5 +1,5 @@
 {
-  "exportado": "2026-09-20T23:09:42.596Z",
+  "exportado": "2026-09-20T23:39:21.635Z",
   "decisiones": {
     "1x4d9hl": {
       "estado": "pendiente",
@@ -6417,6 +6417,159 @@
       "deIA": true,
       "por": "ia",
       "cuando": "2026-09-20T23:09:42.564Z"
+    },
+    "13nzi02": {
+      "estado": "automatica",
+      "titulo": "Fuerte caída de granizo en Santa Fe",
+      "copete": "Una intensa tormenta con piedras de gran tamaño afectó este domingo a varias zonas de Santa Fe, en medio de la alerta meteorológica.",
+      "guion": "Fuerte caída de granizo en Santa Fe",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-20T23:20:00.493Z"
+    },
+    "yhxob": {
+      "estado": "automatica",
+      "titulo": "David Ferrer elogió a los jóvenes tras clasificar en la Davis",
+      "copete": "El seleccionado español de tenis masculino venció a Chile por cuatro a cero este domingo en Europa y avanzó a la Final 8 de la Copa Davis.",
+      "guion": "David Ferrer elogió a los jóvenes tras clasificar en la Davis",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-20T23:20:01.248Z"
+    },
+    "149b49s": {
+      "estado": "automatica",
+      "titulo": "Reabrió la estación Patio Bonito tras obras de ampliación",
+      "copete": "La estación Patio Bonito retomó sus operaciones el sábado pasado sobre la troncal Américas, tras finalizar las obras de ampliación de la avenida Ciudad de Cali.",
+      "guion": "Reabrió la estación Patio Bonito tras obras de ampliación",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-20T23:20:02.229Z"
+    },
+    "19eifu5": {
+      "estado": "automatica",
+      "titulo": "Tinkertown: el museo artesanal hecho con miles de botellas",
+      "copete": "El museo estadounidense creado por Ross Ward con figuras talladas y miles de botellas cumple cuatro décadas desde su apertura en 1983.",
+      "guion": "Tinkertown: el museo artesanal hecho con miles de botellas",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-20T23:20:03.192Z"
+    },
+    "17h4np8": {
+      "estado": "automatica",
+      "titulo": "Rosario Central le ganó a Argentinos y lidera la Zona B",
+      "copete": "Rosario Central venció a Argentinos Juniors por la mínima con un tanto de Ignacio Ovando y quedó en lo más alto de la Zona B.",
+      "guion": "Rosario Central le ganó a Argentinos y lidera la Zona B",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-20T23:20:04.198Z"
+    },
+    "1ch4gvm": {
+      "estado": "automatica",
+      "titulo": "Boca le ganó de visitante a San Lorenzo",
+      "copete": "Boca Juniors venció a San Lorenzo por dos a cero como visitante este domingo, en el marco de la décima fecha del Torneo Clausura.",
+      "guion": "Boca le ganó de visitante a San Lorenzo",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-20T23:20:04.905Z"
+    },
+    "49gl6c": {
+      "estado": "automatica",
+      "titulo": "Sigue el desconcierto tras el masivo apagón",
+      "copete": "Un corte de luz afectó a un millón y medio de personas en el Área Metropolitana de Buenos Aires y aún se desconocen las causas.",
+      "guion": "Sigue el desconcierto tras el masivo apagón",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-20T23:39:07.783Z"
+    },
+    "16nwek": {
+      "estado": "automatica",
+      "titulo": "Andújar terminó octavo en la penúltima etapa en Marruecos",
+      "copete": "Manuel Andújar y su navegante finalizaban en el octavo puesto la penúltima etapa de la Baja Marruecos en Marzouga tras trescientos kilómetros de recorrido.",
+      "guion": "Andújar terminó octavo en la penúltima etapa en Marruecos",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-20T23:39:12.184Z"
+    },
+    "1fz6fzb": {
+      "estado": "automatica",
+      "titulo": "Pepe Sand discutio con un arbitro en un partido de inferiores",
+      "copete": "El exdelantero protagonizo un fuerte cruce verbal con el juez durante un encuentro de las divisiones formativas de Lanus.",
+      "guion": "Pepe Sand discutio con un arbitro en un partido de inferiores",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-20T23:39:13.049Z"
+    },
+    "ujw0vt": {
+      "estado": "automatica",
+      "titulo": "Nigeria apuntó al arbitraje tras quedar fuera del Mundial",
+      "copete": "La prensa nigeriana cuestionó la expulsión de su jugadora clave ante Colombia en el Mundial Sub-20, resultado que decretó su eliminación del torneo.",
+      "guion": "Nigeria apuntó al arbitraje tras quedar fuera del Mundial",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-20T23:39:14.039Z"
+    },
+    "ut5fsb": {
+      "estado": "automatica",
+      "titulo": "Gustavo Alfaro dio la lista de Paraguay",
+      "copete": "El director técnico convocó a veintiocho futbolistas para los próximos partidos de Eliminatorias, con una cara nueva del fútbol argentino.",
+      "guion": "Gustavo Alfaro dio la lista de Paraguay",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-20T23:39:15.076Z"
+    },
+    "1137vu5": {
+      "estado": "automatica",
+      "titulo": "Protesta en Vélez por deudas salariales",
+      "copete": "El plantel profesional de Vélez Sarsfield llegó al estadio en autos particulares y sin la indumentaria oficial debido a una deuda de la dirigencia.",
+      "guion": "Protesta en Vélez por deudas salariales",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-20T23:39:16.015Z"
+    },
+    "14mfe7c": {
+      "estado": "automatica",
+      "titulo": "El esquí náutico lideró los oros argentinos en los Suramericanos",
+      "copete": "La delegación nacional sumó tres medallas doradas y once preseas en total este domingo en los Juegos Suramericanos.",
+      "guion": "El esquí náutico lideró los oros argentinos en los Suramericanos",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-20T23:39:17.033Z"
+    },
+    "171ithq": {
+      "estado": "automatica",
+      "titulo": "Ataúdes de cartón frenaron a Almirante en Chaco",
+      "copete": "El partido entre Almirante Brown y Chaco For Ever estuvo demorado tras la aparición de ataúdes de cartón en la tribuna.",
+      "guion": "Ataúdes de cartón frenaron a Almirante en Chaco",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-20T23:39:19.024Z"
+    },
+    "b4e2tb": {
+      "estado": "automatica",
+      "titulo": "Golazo de Nacho Lago en la goleada de Colón",
+      "copete": "El delantero marcó una destacada anotación este fin de semana en el estadio Brigadier General Estanislao López, durante el triunfo frente a Los Andes.",
+      "guion": "Golazo de Nacho Lago en la goleada de Colón",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-20T23:39:19.833Z"
+    },
+    "1mt6r4t": {
+      "estado": "automatica",
+      "titulo": "Universitario cayó goleado y perdió la punta",
+      "copete": "Universitario de Deportes perdió cuatro a cero ante Deportivo Garcilaso en Cusco este viernes y cedió el primer puesto del torneo.",
+      "guion": "Universitario cayó goleado y perdió la punta",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-20T23:39:20.765Z"
+    },
+    "127a6yh": {
+      "estado": "automatica",
+      "titulo": "Ex juvenil de Boca juega en Paraguay",
+      "copete": "Un ex futbolista de las inferiores de Boca Juniors continuó su carrera en el fútbol de Paraguay, donde actualmente pelea por mantener la categoría con su equipo.",
+      "guion": "Ex juvenil de Boca juega en Paraguay",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-20T23:39:21.600Z"
     }
   },
   "horarios": {

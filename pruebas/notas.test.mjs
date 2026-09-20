@@ -169,6 +169,100 @@ test('el puntaje nunca pasa de 100', () => {
   assert.ok(relevancia(todo, 'Automovilismo', 4) <= 100);
 });
 
+
+// ------------------------------------------ palabras que engañan al filtro
+
+test('una palabra corta no encuentra otra más larga', () => {
+  // "gol" encontraba "golpe", y por eso "Los extremismos dan un doble golpe
+  // en Alemania" salió publicada en Deportes. De cuatro letras para abajo se
+  // exige la palabra entera.
+  const alemania = nota({
+    titulo: 'Los extremismos dan un doble golpe en Alemania',
+    cuerpo: 'El canciller Merz quedó en una posición delicada.',
+    alcance: 'pais',
+  });
+  assert.notEqual(clasificar(alemania), 'Deportes');
+});
+
+test('"partido" en el cuerpo no manda una nota a Deportes', () => {
+  // En la provincia de Buenos Aires un partido es un municipio. "Recordaron a
+  // Domingo Teruggi a 50 años de su asesinato" hablaba del partido de Lobería
+  // y terminó en Deportes.
+  const robo = nota({
+    titulo: 'Violento robo en la puerta de un kiosco',
+    cuerpo: 'Ocurrió en el partido de Lobería, donde se llevaron la recaudación.',
+    alcance: 'region',
+  });
+  assert.equal(clasificar(robo), 'Policiales');
+});
+
+test('"partido" en el titular sí cuenta', () => {
+  // Cuando la nota es realmente de fútbol, la palabra está en el titular y no
+  // hay otra que la delate.
+  const boca = nota({
+    titulo: 'Boca le ganó a San Lorenzo y llegó a 14 partidos sin perder',
+    cuerpo: 'El equipo sigue invicto.',
+    alcance: 'pais',
+  });
+  assert.equal(clasificar(boca), 'Deportes');
+});
+
+test('un descenso de temperatura no es un descenso de categoría', () => {
+  const frio = nota({
+    titulo: 'Se desploma la temperatura y vuelve el frío al AMBA',
+    cuerpo: 'El ingreso de aire frío provocará un marcado descenso de las temperaturas.',
+    alcance: 'pais',
+  });
+  assert.equal(clasificar(frio), 'País');
+});
+
+// ------------------------------------------------ el piso para lo de afuera
+
+test('lo de Balcarce sale solo aunque puntúe poco', () => {
+  const local = nota({ titulo: 'Arreglan una vereda en el centro', local: true });
+  assert.equal(semaforo(local, 'Balcarce', 20).color, 'verde');
+});
+
+test('lo de afuera con poco puntaje espera', () => {
+  // El 20/09 "Turismo invita a recorrer los parajes rurales de Lobería" (10
+  // puntos) salía sola mientras la caravana del campeón balcarceño (100)
+  // esperaba aprobación.
+  const afuera = nota({ titulo: 'Boca derrota a San Lorenzo', alcance: 'pais', local: false });
+  const s = semaforo(afuera, 'Deportes', 37);
+  assert.equal(s.color, 'amarillo');
+  assert.match(s.motivo, /poco puntaje/);
+});
+
+test('lo de afuera con buen puntaje sale igual', () => {
+  const messi = nota({ titulo: 'Messi metió dos goles en Inter Miami', alcance: 'pais', local: false });
+  assert.equal(semaforo(messi, 'Deportes', 89).color, 'verde');
+});
+
+test('el automovilismo no tiene piso', () => {
+  // Es la ciudad de Fangio. Con el piso puesto, las notas de Fórmula 1
+  // quedaban justo abajo (48 de 50) y la sección se vaciaba.
+  const f1 = nota({ titulo: 'El complicado arte de frenar en la Fórmula 1', alcance: 'pais', local: false });
+  assert.equal(semaforo(f1, 'Automovilismo', 48).color, 'verde');
+});
+
+test('el piso no pisa a las reglas de arriba', () => {
+  // Un tema sensible sigue bloqueado por más puntaje que tenga, y una
+  // promoción sigue esperando por más local que sea.
+  const grave = nota({ titulo: 'Detuvieron a un hombre por un femicidio', local: true });
+  assert.equal(semaforo(grave, 'Balcarce', 100).color, 'rojo');
+  const rifa = nota({ titulo: 'La rifa de Bomberos ya tiene su sorteo', local: true });
+  assert.equal(semaforo(rifa, 'Balcarce', 90).color, 'amarillo');
+});
+
+test('Balcarce sale sola, Política y Policiales no', () => {
+  const b = nota({ titulo: 'Inauguran una plaza en el barrio', local: true });
+  assert.equal(semaforo(b, 'Balcarce', 70).color, 'verde');
+  const p = nota({ titulo: 'Se define la interna del oficialismo', local: true });
+  assert.equal(semaforo(p, 'Política', 70).color, 'amarillo');
+  const po = nota({ titulo: 'Chocaron dos autos en la ruta', local: true });
+  assert.equal(semaforo(po, 'Policiales', 70).color, 'amarillo');
+});
+
 // ------------------------------------------------------------------ el id
 
 test('el mismo título da siempre el mismo id', () => {
