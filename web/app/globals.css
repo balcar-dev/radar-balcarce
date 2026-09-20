@@ -469,11 +469,9 @@ a.telefono:hover { border-color: var(--rojo); color: inherit; }
    WhatsApp lleva su verde, que es el color por el que la gente lo
    encuentra sin leer. 44px de alto: es el mínimo para que un dedo le
    acierte. */
-.compartir {
-  display: flex; align-items: center; gap: 10px; flex-wrap: wrap;
-  margin-top: 28px; padding-top: 20px; border-top: 1px solid var(--linea-suave);
-}
-.compartir .meta { margin-right: 2px; }
+.compartir { margin-top: 28px; padding-top: 20px; border-top: 1px solid var(--linea-suave); }
+.compartir .meta { display: block; margin-bottom: 10px; }
+.botones-compartir { display: flex; gap: 10px; flex-wrap: wrap; }
 .boton-compartir {
   display: inline-flex; align-items: center; gap: 7px;
   height: 44px; padding: 0 16px; border-radius: 22px;
