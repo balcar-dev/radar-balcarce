@@ -32,12 +32,7 @@ export default function PaginaSeccion({ params }) {
   return (
     <div className="envoltura">
       <div className="dos-columnas">
-        <aside className="servicios">
-          <TarjetaClima clima={d.clima} />
-          <TarjetaFarmacia farmacia={d.farmacias?.hoy} />
-        </aside>
-
-        <div className="principal">
+        <div className="principal sin-servicios">
           <div className="titulo-seccion" style={{ marginBottom: 22 }}>
             <span className="barra" style={{ background: s.color }} />
             <h2 style={{ fontSize: 28 }}>{s.nombre}</h2>

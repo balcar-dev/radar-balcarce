@@ -488,7 +488,7 @@ async function traerClima() {
 async function climaDeOpenMeteo() {
   const url = 'https://api.open-meteo.com/v1/forecast'
     + `?latitude=${BALCARCE.lat}&longitude=${BALCARCE.lon}`
-    + '&current=temperature_2m,apparent_temperature,relative_humidity_2m,wind_speed_10m,wind_direction_10m,weather_code'
+    + '&current=temperature_2m,apparent_temperature,relative_humidity_2m,wind_speed_10m,wind_direction_10m,weather_code,is_day'
     + '&daily=temperature_2m_max,temperature_2m_min,precipitation_probability_max,weather_code'
     + `&timezone=${encodeURIComponent(BALCARCE.tz)}&forecast_days=4`;
   const j = JSON.parse(await traer(url));
@@ -502,6 +502,7 @@ async function climaDeOpenMeteo() {
       viento: Math.round(j.current.wind_speed_10m),
       rumbo: rumbos[Math.round(j.current.wind_direction_10m / 45) % 8],
       cielo: CIELO[j.current.weather_code] ?? 'Sin datos',
+      esDeDia: j.current.is_day === 1,
     },
     dias: j.daily.time.map((f, i) => ({
       fecha: f,

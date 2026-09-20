@@ -18,6 +18,9 @@ export default function RaizLayout({ children }) {
   const fecha = new Date().toLocaleDateString('es-AR', {
     weekday: 'long', day: 'numeric', month: 'long', timeZone: 'America/Argentina/Buenos_Aires',
   });
+  const fechaCorta = new Date().toLocaleDateString('es-AR', {
+    weekday: 'short', day: 'numeric', month: 'short', timeZone: 'America/Argentina/Buenos_Aires',
+  });
 
   // Sólo se ofrecen las secciones que hoy tienen al menos una nota: una
   // pestaña que lleva a una página vacía es peor que no tenerla.
@@ -40,21 +43,29 @@ export default function RaizLayout({ children }) {
             querer leer nada. */}
         <div className="chapa-superior">
           <div className="envoltura">
-            <span style={{ textTransform: 'capitalize' }}>{fecha}</span>
-            <span className="apagado">/</span>
-            <span className="apagado">Balcarce, Buenos Aires</span>
+            {/* En el celular sólo entra la fecha corta: lo demás se salía de
+                la pantalla y había que deslizar, cosa que nadie hace en una
+                barra de servicio. La farmacia queda igual en la tarjeta de
+                abajo, que en el celular es lo primero que se ve. */}
+            <span className="solo-grande" style={{ textTransform: 'capitalize' }}>{fecha}</span>
+            <span className="solo-chico" style={{ textTransform: 'capitalize' }}>{fechaCorta}</span>
+            <span className="apagado solo-grande">/</span>
+            <span className="apagado solo-grande">Balcarce, Buenos Aires</span>
             <span className="crece" />
 
+            {/* El clima no es un enlace: no hay página de clima, está acá y
+                en la tarjeta de la portada. Un enlace que no lleva a ningún
+                lado mejor que no exista. */}
             {clima && (
-              <a href="/util" className="pastilla con-icono">
-                <SolChico />
+              <span className="pastilla con-icono">
+                <SolChico esDeDia={clima.esDeDia !== false} />
                 <span className="fuerte">{clima.temp}°</span>
-                <span className="apagado">{clima.cielo}</span>
-              </a>
+                <span className="apagado solo-grande">{clima.cielo}</span>
+              </span>
             )}
 
             {farmacia && (
-              <a href="/util" className="pastilla">
+              <a href="/farmacias" className="pastilla solo-grande">
                 <span className="punto-vivo" />
                 <span className="apagado">De turno</span>
                 <span className="fuerte">{farmacia.farmacias.join(' y ')}</span>
@@ -65,19 +76,12 @@ export default function RaizLayout({ children }) {
 
         <header className="principal">
           <div className="envoltura">
-            <div style={{ flexGrow: 1 }}>
-              <a href="/" className="logo fraunces">Radar <span>Balcarce</span></a>
-              <div className="sub">Lo que pasa en Balcarce, la región y el país — con la fuente siempre a la vista.</div>
-            </div>
-            <a
-              href="mailto:radarbalcarce@gmail.com?subject=Tengo%20un%20dato%20para%20Radar%20Balcarce"
-              className="boton rojo"
-            >
-              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
-              </svg>
-              Mandanos tu dato
-            </a>
+            {/* Sólo el nombre. La bajada de tres renglones y el botón se
+                comían media pantalla de celular antes de la primera noticia:
+                el que entró ya sabe dónde está y viene a leer, no a que le
+                expliquen qué es el sitio. La invitación a escribirnos está
+                en el pie y en la tarjeta del buzón. */}
+            <a href="/" className="logo fraunces">Radar <span>Balcarce</span></a>
           </div>
         </header>
 
@@ -91,7 +95,8 @@ export default function RaizLayout({ children }) {
             ))}
             <span className="crece" />
             <a href="/agenda" className="servicio">Agenda</a>
-            <a href="/util" className="servicio">Balcarce Útil</a>
+            <a href="/farmacias" className="servicio">Farmacias</a>
+            <a href="/util" className="servicio">Teléfonos</a>
           </div>
         </nav>
 
@@ -111,7 +116,8 @@ export default function RaizLayout({ children }) {
               radarbalcarce.com.ar · <a href="mailto:radarbalcarce@gmail.com">radarbalcarce@gmail.com</a>
             </div>
             <div>
-              <a href="/agenda">Agenda</a> · <a href="/util">Balcarce Útil</a> ·{' '}
+              <a href="/agenda">Agenda</a> · <a href="/farmacias">Farmacias</a> ·{' '}
+              <a href="/util">Teléfonos útiles</a> ·{' '}
               <a href="/politica-de-privacidad">Política de privacidad</a> · <a href="/feed.xml">RSS</a>
             </div>
             <div className="aclaracion">

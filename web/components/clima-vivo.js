@@ -37,7 +37,7 @@ const RUMBOS = ['N', 'NE', 'E', 'SE', 'S', 'SO', 'O', 'NO'];
 const DIAS = ['dom', 'lun', 'mar', 'mié', 'jue', 'vie', 'sáb'];
 
 const URL = `https://api.open-meteo.com/v1/forecast?latitude=${BALCARCE.lat}&longitude=${BALCARCE.lon}`
-  + '&current=temperature_2m,apparent_temperature,relative_humidity_2m,wind_speed_10m,wind_direction_10m,weather_code'
+  + '&current=temperature_2m,apparent_temperature,relative_humidity_2m,wind_speed_10m,wind_direction_10m,weather_code,is_day'
   + '&daily=temperature_2m_max,temperature_2m_min,precipitation_probability_max,weather_code'
   + `&timezone=${encodeURIComponent(BALCARCE.tz)}&forecast_days=4`;
 
@@ -50,6 +50,7 @@ function interpretar(j) {
       viento: Math.round(j.current.wind_speed_10m),
       rumbo: RUMBOS[Math.round(j.current.wind_direction_10m / 45) % 8],
       cielo: CIELO[j.current.weather_code] ?? 'Sin datos',
+      esDeDia: j.current.is_day === 1,
     },
     dias: j.daily.time.map((f, i) => ({
       fecha: f,
@@ -62,14 +63,21 @@ function interpretar(j) {
   };
 }
 
-function tipoDeCielo(cielo = '') {
+function tipoDeCielo(cielo = '', esDeDia = true) {
   const t = cielo.toLowerCase();
   if (/lluvia|llovizna|chaparr|tormenta|nieve/.test(t)) return 'lluvia';
-  if (/despejado/.test(t) && !/mayormente/.test(t)) return 'sol';
-  return 'nube';
+  // De noche no hay sol. Parece obvio, pero el dibujo mostraba un sol
+  // radiante a la una de la mañana porque sólo miraba si estaba despejado.
+  if (/despejado/.test(t) && !/mayormente/.test(t)) return esDeDia ? 'sol' : 'luna';
+  return esDeDia ? 'nube' : 'luna-nube';
 }
 
-const FONDO_CIELO = { sol: '#2A6E8C', nube: '#1D4F63', lluvia: '#243D52' };
+// De noche el fondo también baja: una tarjeta celeste a las dos de la
+// mañana se ve fuera de lugar.
+const FONDO_CIELO = {
+  sol: '#2A6E8C', nube: '#1D4F63', lluvia: '#243D52',
+  luna: '#1B2A44', 'luna-nube': '#1A2438',
+};
 
 /** Los rayos del sol, calculados en vez de dibujados a ojo.
  *
@@ -103,8 +111,8 @@ function Nube({ x = 0, y = 0, color = '#E7EDF0', escala = 1 }) {
   );
 }
 
-export function IconoCielo({ cielo, tamano = 92 }) {
-  const tipo = tipoDeCielo(cielo);
+export function IconoCielo({ cielo, esDeDia = true, tamano = 92 }) {
+  const tipo = tipoDeCielo(cielo, esDeDia);
 
   return (
     <svg width={tamano} height={tamano} viewBox="0 0 96 96" fill="none" aria-hidden="true">
@@ -125,6 +133,31 @@ export function IconoCielo({ cielo, tamano = 92 }) {
           </g>
           <circle cx="62" cy="30" r="13" fill="#E8A33C" />
           <Nube y={6} />
+        </>
+      )}
+
+      {(tipo === 'luna' || tipo === 'luna-nube') && (
+        <>
+          {/* La luna es un círculo al que se le recorta otro: así queda el
+              gajo sin tener que dibujar una curva a mano. */}
+          <defs>
+            <mask id="gajo">
+              <rect width="96" height="96" fill="#fff" />
+              <circle cx={tipo === 'luna' ? 60 : 72} cy={tipo === 'luna' ? 34 : 24} r="19" fill="#000" />
+            </mask>
+          </defs>
+          <circle
+            cx={tipo === 'luna' ? 48 : 60} cy={tipo === 'luna' ? 44 : 32}
+            r={tipo === 'luna' ? 22 : 16} fill="#E8D08C" mask="url(#gajo)"
+          />
+          {tipo === 'luna' && (
+            <g fill="#E8D08C" opacity="0.8">
+              <circle cx="78" cy="22" r="2.5" />
+              <circle cx="22" cy="26" r="2" />
+              <circle cx="70" cy="66" r="2" />
+            </g>
+          )}
+          {tipo === 'luna-nube' && <Nube y={6} color="#C6CEDC" />}
         </>
       )}
 
@@ -185,7 +218,7 @@ export function TarjetaClima({ clima }) {
   const dias = (datos.dias ?? []).slice(0, 4);
 
   return (
-    <div className="tarjeta-clima" style={{ '--cielo-fondo': FONDO_CIELO[tipoDeCielo(a.cielo)] }}>
+    <div className="tarjeta-clima" style={{ '--cielo-fondo': FONDO_CIELO[tipoDeCielo(a.cielo, a.esDeDia !== false)] }}>
       <div style={{ display: 'flex', alignItems: 'flex-start' }}>
         <div style={{ flexGrow: 1 }}>
           <div className="titulo">
@@ -198,7 +231,7 @@ export function TarjetaClima({ clima }) {
             Sensación {a.sensacion}° · Viento {a.rumbo} {a.viento} km/h · Humedad {a.humedad}%
           </div>
         </div>
-        <div style={{ margin: '-4px -4px 0 0' }}><IconoCielo cielo={a.cielo} /></div>
+        <div style={{ margin: '-4px -4px 0 0' }}><IconoCielo cielo={a.cielo} esDeDia={a.esDeDia !== false} tamano={76} /></div>
       </div>
 
       {dias.length > 0 && (

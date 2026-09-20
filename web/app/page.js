@@ -81,7 +81,11 @@ export default function Portada() {
           {bloques.map(([seccion, notas]) => (
             <section className="bloque-seccion" key={seccion}>
               <TituloSeccion seccion={seccion} />
-              {notas.slice(0, 5).map((n) => <FilaNota nota={n} key={n.id} />)}
+              {/* Tres por sección, no cinco: la portada se hacía larguísima
+                  y en el celular había que pasar veinte titulares para
+                  llegar a la sección siguiente. El que quiere más tiene
+                  "Ver todo". */}
+              {notas.slice(0, 3).map((n) => <FilaNota nota={n} key={n.id} />)}
             </section>
           ))}
 

@@ -38,6 +38,20 @@
 
 * { box-sizing: border-box; }
 
+/* Lo que sólo se muestra en pantalla grande, y lo que sólo en el celular.
+   En el celular el espacio es el recurso escaso: todo lo que no sea el dato
+   que la persona vino a buscar le está robando lugar.
+
+   La clase va repetida a propósito (.solo-grande.solo-grande): así pesa más
+   que cualquier regla de una sola clase y gana sin tener que usar
+   !important. Sin eso, .pastilla le ganaba y la farmacia seguía
+   apareciendo en el celular, cortada contra el borde. */
+.solo-grande.solo-grande { display: none; }
+@media (min-width: 720px) {
+  .solo-grande.solo-grande { display: inline-flex; }
+  .solo-chico.solo-chico { display: none; }
+}
+
 html, body {
   margin: 0;
   padding: 0;
@@ -69,10 +83,9 @@ img { max-width: 100%; display: block; }
    tener que entrar a buscarlos. */
 .chapa-superior { background: var(--tinta); color: var(--crema); font-size: 12px; }
 .chapa-superior .envoltura {
-  min-height: 44px; display: flex; align-items: center; gap: 12px;
-  overflow-x: auto; white-space: nowrap; scrollbar-width: none;
+  min-height: 44px; display: flex; align-items: center; gap: 10px;
+  white-space: nowrap; overflow: hidden;
 }
-.chapa-superior .envoltura::-webkit-scrollbar { display: none; }
 .chapa-superior .apagado { color: #8C918D; }
 .chapa-superior .crece { flex-grow: 1; }
 
@@ -88,26 +101,32 @@ img { max-width: 100%; display: block; }
 /* ---------------------------------------------------------------- cabecera */
 
 header.principal .envoltura {
-  padding-top: 22px; padding-bottom: 16px;
+  padding-top: 16px; padding-bottom: 14px;
   display: flex; align-items: center; gap: 20px;
 }
 .logo { font-size: 32px; font-weight: 900; line-height: 1; letter-spacing: -0.03em; }
 .logo span { color: var(--rojo); }
-.logo .sub { font-family: "IBM Plex Sans", sans-serif; font-size: 13px; color: var(--suave); margin-top: 8px; font-weight: 400; letter-spacing: 0; display: none; }
-@media (min-width: 720px) {
-  .logo { font-size: 46px; }
-  .logo .sub { display: block; }
-}
+
+@media (min-width: 720px) { .logo { font-size: 42px; } }
 
 /* ------------------------------------------------------------ navegación */
 
 nav.principal { border-top: 2px solid var(--tinta); border-bottom: 1px solid var(--linea); background: var(--papel); position: sticky; top: 0; z-index: 20; }
+/* En el celular la navegación ENVUELVE en dos renglones en vez de
+   deslizarse: una barra que se desliza esconde secciones enteras y nada
+   avisa que hay más a la derecha. En pantalla grande entra todo en una
+   línea y vuelve a ser una barra normal. */
 nav.principal .envoltura {
-  height: 52px; display: flex; align-items: center; gap: 20px;
-  overflow-x: auto; white-space: nowrap; scrollbar-width: none;
+  display: flex; align-items: center; gap: 12px 16px;
+  flex-wrap: wrap; padding-top: 11px; padding-bottom: 11px;
 }
-nav.principal .envoltura::-webkit-scrollbar { display: none; }
-nav.principal a { font-weight: 600; font-size: 14px; }
+nav.principal .crece { display: none; }
+@media (min-width: 900px) {
+  nav.principal .envoltura { height: 52px; flex-wrap: nowrap; padding-top: 0; padding-bottom: 0; }
+  nav.principal .crece { display: block; flex-grow: 1; }
+}
+nav.principal a { font-weight: 600; font-size: 13.5px; }
+@media (min-width: 900px) { nav.principal a { font-size: 14px; } }
 nav.principal a.activo { color: var(--rojo); border-bottom: 3px solid var(--rojo); height: 51px; display: flex; align-items: center; }
 nav.principal .servicio { color: var(--verde); }
 nav.principal .crece { flex-grow: 1; }
@@ -138,6 +157,11 @@ main { padding: 24px 0 10px; }
   .dos-columnas .principal { grid-column: 1; grid-row: 1 / span 2; }
   .dos-columnas .servicios { grid-column: 2; grid-row: 1; }
   .dos-columnas .lateral { grid-column: 2; grid-row: 2; }
+  /* En las páginas internas no va el bloque de servicios: el clima y la
+     farmacia ya están en la barra de arriba y repetirlos en cada sección
+     los convierte en ruido. Sin ese bloque, el lateral sube. */
+  .dos-columnas .principal.sin-servicios { grid-row: 1 / span 2; }
+  .dos-columnas .principal.sin-servicios ~ .lateral { grid-row: 1; }
 }
 
 /* ------------------------------------------------------------------ notas */
@@ -232,7 +256,7 @@ main { padding: 24px 0 10px; }
 /* ------------------------------------------------------------------- clima */
 
 .tarjeta-clima {
-  border-radius: 12px; padding: 20px; color: var(--crema);
+  border-radius: 12px; padding: 16px 18px; color: var(--crema);
   background: linear-gradient(160deg, var(--cielo-fondo, #1D4F63) 0%, var(--tinta) 78%);
 }
 .tarjeta-clima .titulo { font-size: 11px; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; color: #9FB4BD; display: flex; align-items: center; gap: 7px; }
@@ -243,10 +267,10 @@ main { padding: 24px 0 10px; }
   width: 6px; height: 6px; border-radius: 50%; background: #4FBF7A;
   display: inline-block; animation: rb-latir 2.2s ease-in-out infinite;
 }
-.tarjeta-clima .temp { font-family: "Fraunces", serif; font-size: 62px; font-weight: 900; line-height: 1; margin-top: 6px; letter-spacing: -0.04em; }
+.tarjeta-clima .temp { font-family: "Fraunces", serif; font-size: 52px; font-weight: 900; line-height: 1; margin-top: 4px; letter-spacing: -0.04em; }
 .tarjeta-clima .cielo { font-size: 14px; margin-top: 6px; font-weight: 600; }
-.tarjeta-clima .detalle { font-size: 12.5px; color: #9FB4BD; margin-top: 3px; }
-.tira-dias { display: flex; gap: 8px; margin-top: 18px; }
+.tarjeta-clima .detalle { font-size: 12px; color: #9FB4BD; margin-top: 3px; line-height: 1.45; }
+.tira-dias { display: flex; gap: 7px; margin-top: 14px; }
 /* El ">" importa: sin él la regla también agarraba los divs de adentro (el
    día, la máxima, la mínima) y cada uno se dibujaba con su propia cajita
    redondeada adentro de la cajita del día. Se veían recuadros anidados.
@@ -256,7 +280,7 @@ main { padding: 24px 0 10px; }
 .tira-dias > div {
   flex: 1 1 0; min-width: 0;
   background: rgba(255, 255, 255, 0.08); border-radius: 8px;
-  padding: 9px 4px; text-align: center;
+  padding: 7px 4px; text-align: center;
 }
 .tira-dias .dia { font-size: 11px; color: #9FB4BD; text-transform: uppercase; letter-spacing: 0.06em; font-weight: 700; }
 .tira-dias .max { font-size: 16px; font-weight: 700; margin-top: 5px; }
@@ -287,7 +311,8 @@ main { padding: 24px 0 10px; }
 
 /* ---------------------------------------------------------------- farmacia */
 
-.nombre-farmacia { font-family: "Fraunces", serif; font-size: 27px; font-weight: 900; color: var(--rojo); margin-top: 9px; letter-spacing: -0.02em; line-height: 1.1; }
+.nombre-farmacia { font-family: "Fraunces", serif; font-size: 23px; font-weight: 900; color: var(--rojo); margin-top: 8px; letter-spacing: -0.02em; line-height: 1.15; }
+@media (min-width: 720px) { .nombre-farmacia { font-size: 27px; } }
 
 /* ------------------------------------------------------------------ agenda */
 
@@ -309,6 +334,18 @@ main { padding: 24px 0 10px; }
 
 .chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; font-size: 12.5px; font-weight: 600; }
 .chips span, .chips a { background: var(--crema); border-radius: 14px; padding: 5px 11px; }
+
+/* ------------------------------------------------------ teléfonos útiles */
+
+.rejilla-telefonos { display: grid; grid-template-columns: minmax(0, 1fr); gap: 10px; margin-top: 12px; }
+@media (min-width: 620px) { .rejilla-telefonos { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.telefono {
+  background: var(--crema); border-radius: 10px; padding: 12px 14px;
+  display: block; border: 1px solid transparent;
+}
+a.telefono:hover { border-color: var(--rojo); color: inherit; }
+.telefono .nombre { font-size: 13.5px; color: var(--suave); }
+.telefono .numero { font-size: 19px; font-weight: 700; margin-top: 2px; }
 
 /* --------------------------------------------------------------------- pie */
 

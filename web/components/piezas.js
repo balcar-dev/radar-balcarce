@@ -15,7 +15,22 @@ import { datosSeccion, nombreCorto, cuando, partirFecha } from '@/lib/datos';
 
 /** El sol chiquito de la chapa de arriba: siempre el mismo, para que la
  *  pastilla no cambie de ancho cada vez que cambia el pronóstico. */
-export function SolChico() {
+/** El dibujito de la barra de arriba. Chico y sin detalle: en esa barra se
+ *  ve a veinte píxeles, así que lo único que tiene que comunicar es si es
+ *  de día o de noche. */
+export function SolChico({ esDeDia = true }) {
+  if (!esDeDia) {
+    return (
+      <svg width="20" height="20" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+        <mask id="gajo-chico">
+          <rect width="48" height="48" fill="#fff" />
+          <circle cx="31" cy="17" r="11" fill="#000" />
+        </mask>
+        <circle cx="24" cy="24" r="12" fill="#E8D08C" mask="url(#gajo-chico)" />
+      </svg>
+    );
+  }
+
   // Los ocho rayos, calculados igual que en la tarjeta grande (clima-vivo.js)
   // para que el sol chiquito y el grande sean el mismo dibujo.
   const rayos = Array.from({ length: 8 }, (_, i) => {
@@ -59,7 +74,7 @@ export function TarjetaFarmacia({ farmacia, conBotones = true }) {
       )}
       {conBotones && (
         <div style={{ display: 'flex', gap: 8, marginTop: 14 }}>
-          <a href="/util" className="boton borde" style={{ flexGrow: 1 }}>Ver la semana</a>
+          <a href="/farmacias" className="boton borde" style={{ flexGrow: 1 }}>Ver la semana</a>
           {mapa && (
             <a href={mapa} target="_blank" rel="noopener noreferrer" className="boton tinta" style={{ flexGrow: 1 }}>
               <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
@@ -97,9 +112,10 @@ export function TituloSeccion({ seccion, verTodo = true }) {
     <div className="titulo-seccion">
       <span className="barra" style={{ background: s.color }} />
       <h2>{seccion}</h2>
-      {verTodo && (
-        <a href={`/seccion/${s.ranura}`} className="ver-todo">Ver todo {nombreCorto(seccion)} →</a>
-      )}
+      {/* "Ver todo →" a secas: el nombre de la sección está tres centímetros
+          a la izquierda, repetirlo no agrega nada y en el celular obliga a
+          que el título se achique para que entren los dos. */}
+      {verTodo && <a href={`/seccion/${s.ranura}`} className="ver-todo">Ver todo →</a>}
     </div>
   );
 }
