@@ -338,10 +338,22 @@ function clasificar(nota) {
   //    Clarín Deportes), le creemos: es más confiable que adivinar.
   if (nota.seccionFuente) return nota.seccionFuente;
 
-  // 3. Recién ahí, palabras clave.
+  // 3. Recién ahí, palabras clave: gana la coincidencia más específica,
+  //    no la primera de la lista. "Exposición Rural de Palermo" caía en
+  //    Cultura porque "exposición" está en esa regla y Cultura va antes
+  //    que Agro; con esto gana "exposición rural", que dice más. Si dos
+  //    palabras son igual de largas, manda el orden de las reglas.
+  let mejor = null;
+  let largo = 0;
   for (const regla of REGLAS_SECCION) {
-    if (regla.palabras.some((p) => contiene(texto, p))) return regla.seccion;
+    for (const palabra of regla.palabras) {
+      if (palabra.length > largo && contiene(texto, palabra)) {
+        largo = palabra.length;
+        mejor = regla.seccion;
+      }
+    }
   }
+  if (mejor) return mejor;
   if (nota.alcance === 'local') return 'Balcarce';
   if (nota.alcance === 'region') return 'Región';
   if (nota.alcance === 'provincia') return 'Provincia';

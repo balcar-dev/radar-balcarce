@@ -465,6 +465,25 @@ a.telefono:hover { border-color: var(--rojo); color: inherit; }
   margin-top: 30px; padding-top: 20px; border-top: 1px solid var(--linea-suave);
 }
 
+/* Compartir la nota. Los dos botones son del mismo tamaño y el de
+   WhatsApp lleva su verde, que es el color por el que la gente lo
+   encuentra sin leer. 44px de alto: es el mínimo para que un dedo le
+   acierte. */
+.compartir {
+  display: flex; align-items: center; gap: 10px; flex-wrap: wrap;
+  margin-top: 28px; padding-top: 20px; border-top: 1px solid var(--linea-suave);
+}
+.compartir .meta { margin-right: 2px; }
+.boton-compartir {
+  display: inline-flex; align-items: center; gap: 7px;
+  height: 44px; padding: 0 16px; border-radius: 22px;
+  border: 1px solid var(--linea); background: var(--papel); color: var(--texto);
+  font-family: inherit; font-size: 14px; font-weight: 600; cursor: pointer;
+}
+.boton-compartir:hover { border-color: var(--tinta); color: var(--tinta); }
+.boton-compartir.whatsapp { border-color: #1DA851; color: #12793A; }
+.boton-compartir.whatsapp:hover { background: #1DA851; border-color: #1DA851; color: #FFFFFF; }
+
 /* La firma al pie de la nota: quién la escribió y quién la revisó. Va en
    gris y en cuerpo chico a propósito — es un dato honesto, no un aviso. */
 .firma-nota {

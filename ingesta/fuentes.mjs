@@ -385,7 +385,7 @@ export const REGLAS_SECCION = [
   },
   {
     seccion: 'Agro',
-    palabras: ['agro', 'cosecha', 'siembra', 'trigo', 'soja', 'ganader', 'agropecuar',
+    palabras: ['agro', 'cosecha', 'siembra', 'trigo', 'soja', 'ganader', 'agropecuar', 'exposicion rural', 'exposición rural', 'expo rural', 'expoagro',
       'inta', 'rural', 'productores', 'lluvias acumuladas', 'tambo', 'maquinaria agrícola'],
   },
   {

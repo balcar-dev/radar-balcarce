@@ -7,6 +7,7 @@ import { comoNombre } from '../web/lib/texto.js';
 import {
   POR_PAGINA, partirRanura, cuantasPaginas, direccionDePagina,
 } from '../web/lib/paginas.js';
+import { cuando, haceCuanto } from '../web/lib/datos.js';
 
 // Las secciones que existen de verdad, para que partirRanura sepa distinguir.
 const esSeccion = (r) => ['deportes', 'balcarce', 'automovilismo', 'agro'].includes(r);
@@ -77,4 +78,33 @@ test('una sección sin notas tiene igual una página', () => {
 test('quince notas entran en una sola página', () => {
   assert.equal(cuantasPaginas(15), 1);
   assert.equal(cuantasPaginas(16), 2);
+});
+
+
+// ----------------------------------------------------- la hora de la nota
+
+test('si la fuente dio la hora, se usa esa', () => {
+  const hace2h = new Date(Date.now() - 2 * 3600 * 1000).toISOString();
+  assert.equal(cuando({ fecha: hace2h, sinFecha: false }), 'hace 2 h');
+});
+
+test('si la fuente no dio la hora, se dice cuándo la vimos', () => {
+  // Decía "sin hora", que se lee como un error nuestro y no le sirve a
+  // nadie para saber si la nota es de hoy. Cuándo la vimos aparecer sí lo
+  // sabemos, y es honesto decirlo así.
+  const hace3h = new Date(Date.now() - 3 * 3600 * 1000).toISOString();
+  assert.equal(cuando({ sinFecha: true, visto: hace3h }), 'la vimos hace 3 h');
+});
+
+test('sin fecha y sin avistaje no se inventa nada', () => {
+  assert.equal(cuando({ sinFecha: true }), 'sin hora');
+});
+
+test('haceCuanto dice lo que corresponde en cada tramo', () => {
+  const hace = (min) => haceCuanto(new Date(Date.now() - min * 60000).toISOString());
+  assert.equal(hace(0), 'recién');
+  assert.equal(hace(20), 'hace 20 min');
+  assert.equal(hace(180), 'hace 3 h');
+  assert.equal(hace(1500), 'ayer');
+  assert.equal(hace(4400), 'hace 3 días');
 });

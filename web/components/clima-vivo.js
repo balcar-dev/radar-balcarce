@@ -17,52 +17,8 @@
 // tarjeta se ve completa desde el primer instante y funciona aunque el
 // navegador tenga JavaScript apagado. El pedido en vivo sólo la corrige.
 
-import { useEffect, useState } from 'react';
 import { tipoDeCielo } from '@/lib/clima';
-
-const BALCARCE = { lat: -37.8459, lon: -58.2557, tz: 'America/Argentina/Buenos_Aires' };
-const CADA = 10 * 60 * 1000; // cada diez minutos
-
-// La misma tabla que usa la ingesta (ingesta/ingesta.mjs). Está repetida a
-// propósito: este archivo corre en el navegador y no puede importar nada de
-// la carpeta del motor.
-const CIELO = {
-  0: 'Despejado', 1: 'Mayormente despejado', 2: 'Parcialmente nublado', 3: 'Nublado',
-  45: 'Niebla', 48: 'Niebla con escarcha', 51: 'Llovizna leve', 53: 'Llovizna',
-  55: 'Llovizna intensa', 61: 'Lluvia leve', 63: 'Lluvia', 65: 'Lluvia fuerte',
-  71: 'Nieve leve', 73: 'Nieve', 75: 'Nieve intensa', 80: 'Chaparrones',
-  81: 'Chaparrones fuertes', 82: 'Chaparrones muy fuertes', 95: 'Tormenta',
-  96: 'Tormenta con granizo', 99: 'Tormenta fuerte con granizo',
-};
-const RUMBOS = ['N', 'NE', 'E', 'SE', 'S', 'SO', 'O', 'NO'];
-const DIAS = ['dom', 'lun', 'mar', 'mié', 'jue', 'vie', 'sáb'];
-
-const URL = `https://api.open-meteo.com/v1/forecast?latitude=${BALCARCE.lat}&longitude=${BALCARCE.lon}`
-  + '&current=temperature_2m,apparent_temperature,relative_humidity_2m,wind_speed_10m,wind_direction_10m,weather_code,is_day'
-  + '&daily=temperature_2m_max,temperature_2m_min,precipitation_probability_max,weather_code'
-  + `&timezone=${encodeURIComponent(BALCARCE.tz)}&forecast_days=4`;
-
-function interpretar(j) {
-  return {
-    ahora: {
-      temp: Math.round(j.current.temperature_2m),
-      sensacion: Math.round(j.current.apparent_temperature),
-      humedad: j.current.relative_humidity_2m,
-      viento: Math.round(j.current.wind_speed_10m),
-      rumbo: RUMBOS[Math.round(j.current.wind_direction_10m / 45) % 8],
-      cielo: CIELO[j.current.weather_code] ?? 'Sin datos',
-      esDeDia: j.current.is_day === 1,
-    },
-    dias: j.daily.time.map((f, i) => ({
-      fecha: f,
-      dia: DIAS[new Date(`${f}T12:00:00`).getDay()],
-      max: Math.round(j.daily.temperature_2m_max[i]),
-      min: Math.round(j.daily.temperature_2m_min[i]),
-      lluvia: j.daily.precipitation_probability_max[i],
-      cielo: CIELO[j.daily.weather_code[i]] ?? '',
-    })),
-  };
-}
+import { useClimaVivo } from '@/lib/pedir-clima';
 
 
 // De noche el fondo también baja: una tarjeta celeste a las dos de la
@@ -174,39 +130,7 @@ export function IconoCielo({ cielo, esDeDia = true, tamano = 92 }) {
 }
 
 export function TarjetaClima({ clima }) {
-  const [datos, setDatos] = useState(clima);
-  const [enVivo, setEnVivo] = useState(false);
-
-  useEffect(() => {
-    let vivo = true;
-
-    const traer = async () => {
-      try {
-        const r = await fetch(URL, { cache: 'no-store' });
-        if (!r.ok) return;
-        const j = await r.json();
-        if (!vivo) return;
-        setDatos(interpretar(j));
-        setEnVivo(true);
-      } catch {
-        // Si Open-Meteo no contesta, se queda el dato que trajo el servidor.
-        // Un número de hace un rato es mejor que una tarjeta rota.
-      }
-    };
-
-    traer();
-    const reloj = setInterval(traer, CADA);
-    // Cuando alguien vuelve a la pestaña después de un rato, el dato que ve
-    // es viejo aunque el reloj no haya llegado a disparar.
-    const alVolver = () => { if (document.visibilityState === 'visible') traer(); };
-    document.addEventListener('visibilitychange', alVolver);
-
-    return () => {
-      vivo = false;
-      clearInterval(reloj);
-      document.removeEventListener('visibilitychange', alVolver);
-    };
-  }, []);
+  const [datos, enVivo] = useClimaVivo(clima);
 
   if (!datos?.ahora) return null;
   const a = datos.ahora;
@@ -252,5 +176,107 @@ export function TarjetaClima({ clima }) {
         </div>
       )}
     </div>
+  );
+}
+
+
+/** El sol chiquito de la chapa de arriba: siempre el mismo, para que la
+ *  pastilla no cambie de ancho cada vez que cambia el pronóstico. */
+/** El dibujito de la barra de arriba. Chico y sin detalle: ahí se ve a
+ *  veinte píxeles. Pero tiene que decir la verdad — antes sólo sabía si era
+ *  de día o de noche, así que a las dos de la tarde con chaparrones mostraba
+ *  un sol radiante mientras la tarjeta de abajo dibujaba lluvia. */
+export function SolChico({ cielo = '', esDeDia = true }) {
+  const tipo = tipoDeCielo(cielo, esDeDia);
+
+  if (tipo === 'lluvia') {
+    return (
+      <svg width="20" height="20" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+        <path d="M13 27a7 7 0 0 1 1-13.7 10 10 0 0 1 19 2.6A6 6 0 0 1 32 27z" fill="#C8D4DB" />
+        <g stroke="#7FBCE8" strokeWidth="3" strokeLinecap="round">
+          <path className="gota" d="M17 32v5" />
+          <path className="gota gota-2" d="M24 32v5" />
+          <path className="gota gota-3" d="M31 32v5" />
+        </g>
+      </svg>
+    );
+  }
+
+  if (tipo === 'cubierto') {
+    return (
+      <svg width="20" height="20" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+        <path d="M13 32a7 7 0 0 1 1-13.7 10 10 0 0 1 19 2.6A6 6 0 0 1 32 32z" fill="#C8D4DB" />
+      </svg>
+    );
+  }
+
+  if (tipo === 'nube' || tipo === 'luna-nube') {
+    return (
+      <svg width="20" height="20" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+        {esDeDia
+          ? <circle cx="32" cy="15" r="7" fill="#E8A33C" />
+          : (
+            <>
+              <mask id="gajo-nube">
+                <rect width="48" height="48" fill="#fff" />
+                <circle cx="37" cy="10" r="6" fill="#000" />
+              </mask>
+              <circle cx="32" cy="14" r="7" fill="#E8D08C" mask="url(#gajo-nube)" />
+            </>
+          )}
+        <path d="M13 32a7 7 0 0 1 1-13.7 10 10 0 0 1 19 2.6A6 6 0 0 1 32 32z" fill="#E7EDF0" />
+      </svg>
+    );
+  }
+
+  if (tipo === 'luna') {
+    return (
+      <svg width="20" height="20" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+        <mask id="gajo-chico">
+          <rect width="48" height="48" fill="#fff" />
+          <circle cx="31" cy="17" r="11" fill="#000" />
+        </mask>
+        <circle cx="24" cy="24" r="12" fill="#E8D08C" mask="url(#gajo-chico)" />
+      </svg>
+    );
+  }
+
+  // Los ocho rayos, calculados igual que en la tarjeta grande (clima-vivo.js)
+  // para que el sol chiquito y el grande sean el mismo dibujo.
+  const rayos = Array.from({ length: 8 }, (_, i) => {
+    const a = (i * Math.PI) / 4;
+    const x = Math.cos(a);
+    const y = Math.sin(a);
+    return `M${(24 + x * 13).toFixed(1)} ${(24 + y * 13).toFixed(1)}L${(24 + x * 18).toFixed(1)} ${(24 + y * 18).toFixed(1)}`;
+  }).join('');
+
+  return (
+    <svg width="20" height="20" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+      <g className="rayos" stroke="#E8A33C" strokeWidth="3.4" strokeLinecap="round">
+        <path d={rayos} />
+      </g>
+      <circle cx="24" cy="24" r="9" fill="#E8A33C" />
+    </svg>
+  );
+}
+
+/**
+ * La pastilla del clima de la barra de arriba.
+ *
+ * Lee del mismo pedido que la tarjeta grande. Antes tomaba el número del
+ * momento en que se armó la página y la tarjeta se actualizaba sola, así
+ * que en la misma pantalla podían leerse dos temperaturas distintas.
+ */
+export function PastillaClima({ clima }) {
+  const [datos] = useClimaVivo(clima ? { ahora: clima } : null);
+  const a = datos?.ahora;
+  if (!a) return null;
+
+  return (
+    <span className="pastilla con-icono">
+      <SolChico cielo={a.cielo} esDeDia={a.esDeDia !== false} />
+      <span className="fuerte">{a.temp}°</span>
+      <span className="apagado solo-grande">{a.cielo}</span>
+    </span>
   );
 }

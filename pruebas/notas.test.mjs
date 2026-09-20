@@ -87,6 +87,26 @@ test('el automovilismo le gana a deportes', () => {
   assert.equal(clasificar(n), 'Automovilismo');
 });
 
+test('gana la palabra más específica, no la primera regla de la lista', () => {
+  // "La Exposición Rural de Palermo" salió publicada en Cultura porque
+  // "exposición" está en esa regla y Cultura se evalúa antes que Agro.
+  // Ahora gana "exposición rural", que dice más sobre de qué se trata.
+  const campo = nota({
+    titulo: 'Reclamos del campo al Gobierno por impuestos',
+    cuerpo: 'La Exposición Rural de Palermo cerró con pedidos del sector agropecuario.',
+    alcance: 'pais',
+  });
+  assert.equal(clasificar(campo), 'Agro');
+});
+
+test('una exposición que sí es de cultura sigue en cultura', () => {
+  const muestra = nota({
+    titulo: 'Se inaugura una exposición de fotos en el Museo',
+    cuerpo: 'Muestra del fotógrafo local.',
+  });
+  assert.equal(clasificar(muestra), 'Cultura y agenda');
+});
+
 test('si la fuente ya viene separada por sección, se le cree', () => {
   const n = nota({ titulo: 'Ganó el equipo local', seccionFuente: 'Deportes' });
   assert.equal(clasificar(n), 'Deportes');

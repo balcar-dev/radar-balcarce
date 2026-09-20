@@ -35,10 +35,16 @@ export function haceCuanto(fechaISO) {
   return dias === 1 ? 'ayer' : `hace ${dias} días`;
 }
 
-/** Lo que se muestra como antigüedad de una nota. Si la fuente no publicó
- *  la hora, se dice eso y no se inventa un "hace 1 minuto". */
+/**
+ * Qué decir en el lugar de la hora.
+ *
+ * Si la fuente publicó la hora, esa. Si no, cuándo la vimos nosotros, que
+ * es lo único que sabemos de verdad. Decía "sin hora", que parecía un
+ * error nuestro y no le servía a nadie para saber si la nota es de hoy.
+ */
 export function cuando(nota) {
-  return nota.sinFecha ? 'sin hora' : haceCuanto(nota.fecha);
+  if (!nota.sinFecha) return haceCuanto(nota.fecha);
+  return nota.visto ? `la vimos ${haceCuanto(nota.visto)}` : 'sin hora';
 }
 
 // ---------------------------------------------------------------- contacto

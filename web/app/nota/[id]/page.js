@@ -2,6 +2,7 @@ import { obtenerDatos, obtenerNota, cuando, datosSeccion, nombreCorto } from '@/
 import {
   PlacaSeccion, Etiqueta, FilaNota, Cierre, Invitacion, Firma,
 } from '@/components/piezas';
+import Compartir from '@/components/compartir';
 import { notFound } from 'next/navigation';
 
 export function generateStaticParams() {
@@ -42,6 +43,7 @@ export default function PaginaNota({ params }) {
           <p style={{ fontSize: 16, lineHeight: 1.7, marginTop: 22, color: 'var(--texto)' }}>{n.guion}</p>
         )}
 
+        <Compartir titulo={n.titulo} />
         <Firma nota={n} />
 
         <div className="atribucion">

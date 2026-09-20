@@ -62,6 +62,20 @@ if (enLaNube) {
 // Mismo criterio que el panel: sin decisión manda el semáforo (verde =
 // automática, rojo = bloqueada, el resto pendiente). Sólo lo publicado o
 // automático llega a la web.
+// Cuándo vimos cada nota por primera vez.
+//
+// Las fuentes que no publican la hora obligaban a mostrar "sin hora", que
+// se lee como un error nuestro. Sabemos algo honesto y útil: cuándo la
+// vimos aparecer. La ingesta no sirve para eso —a una nota sin fecha le
+// pone la hora de ahora, así que se mueve en cada corrida—, pero la
+// portada anterior está versionada en el repositorio y corre tanto acá
+// como en GitHub Actions. De ahí sale el primer avistaje, y no se pisa.
+const anterior = leerJson(SALIDA, { notas: [] });
+const vistoAntes = Object.fromEntries((anterior.notas ?? [])
+  .filter((n) => n.visto)
+  .map((n) => [n.id, n.visto]));
+const ahoraISO = new Date().toISOString();
+
 function notaPublicada(n) {
   const d = estado.decisiones[n.id];
   const st = d?.estado ?? ({ verde: 'automatica', rojo: 'bloqueada' }[n.semaforo] ?? 'pendiente');
@@ -84,6 +98,9 @@ function notaPublicada(n) {
     // poder ordenar. Se guarda el aviso para que la web no mienta un
     // "hace 1 minuto" que no es cierto.
     sinFecha: n.cuando === 'sin fecha en la fuente',
+    // La primera vez que la vimos. Sólo se usa cuando la fuente no dio
+    // hora; para el resto manda la fecha del medio.
+    visto: vistoAntes[n.id] ?? ahoraISO,
     relevancia: n.relevancia,
     local: n.local,
     publicadaPor: d?.por ?? null,

@@ -64,7 +64,7 @@ export default function Buscador({ notas = [] }) {
         <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" aria-hidden="true">
           <circle cx="11" cy="11" r="7" /><path d="M20 20l-3.5-3.5" />
         </svg>
-        <span className="solo-grande">Buscar</span>
+        <span>Buscar</span>
       </button>
     );
   }

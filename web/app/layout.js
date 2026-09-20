@@ -2,7 +2,7 @@ import './globals.css';
 import {
   obtenerDatos, datosSeccion, nombreCorto, EN_NAVEGACION, whatsapp, WHATSAPP, MAIL,
 } from '@/lib/datos';
-import { SolChico } from '@/components/piezas';
+import { PastillaClima } from '@/components/clima-vivo';
 import { comoNombre } from '@/lib/texto';
 import { Analytics } from '@vercel/analytics/next';
 import Buscador from '@/components/buscador';
@@ -29,12 +29,14 @@ export default function RaizLayout({ children }) {
       timeZone: 'America/Argentina/Buenos_Aires',
     })
     : null;
-  const fecha = new Date().toLocaleDateString('es-AR', {
-    weekday: 'long', day: 'numeric', month: 'long', timeZone: 'America/Argentina/Buenos_Aires',
+  const hoyEscrito = new Date().toLocaleDateString('es-AR', {
+    weekday: 'long', day: 'numeric', month: 'long',
+    timeZone: 'America/Argentina/Buenos_Aires',
   });
-  const fechaCorta = new Date().toLocaleDateString('es-AR', {
-    weekday: 'short', day: 'numeric', month: 'short', timeZone: 'America/Argentina/Buenos_Aires',
-  });
+  // Sólo la primera letra. Con text-transform: capitalize salía "Domingo,
+  // 20 De Septiembre": en castellano ni el mes ni la preposición llevan
+  // mayúscula, eso es del inglés.
+  const fecha = hoyEscrito.charAt(0).toUpperCase() + hoyEscrito.slice(1);
 
   // Sólo se ofrecen las secciones que hoy tienen al menos una nota: una
   // pestaña que lleva a una página vacía es peor que no tenerla.
@@ -62,12 +64,10 @@ export default function RaizLayout({ children }) {
             querer leer nada. */}
         <div className="chapa-superior">
           <div className="envoltura">
-            {/* En el celular sólo entra la fecha corta: lo demás se salía de
-                la pantalla y había que deslizar, cosa que nadie hace en una
-                barra de servicio. La farmacia queda igual en la tarjeta de
-                abajo, que en el celular es lo primero que se ve. */}
-            <span className="solo-grande" style={{ textTransform: 'capitalize' }}>{fecha}</span>
-            <span className="solo-chico" style={{ textTransform: 'capitalize' }}>{fechaCorta}</span>
+            {/* La fecha entera, también en el celular. La farmacia de al
+                lado se esconde en pantalla chica y queda en la tarjeta de
+                abajo, que ahí es lo primero que se ve. */}
+            <span>{fecha}</span>
             <span className="apagado solo-grande">/</span>
             <span className="apagado solo-grande">Balcarce, Buenos Aires</span>
             <span className="crece" />
@@ -75,13 +75,7 @@ export default function RaizLayout({ children }) {
             {/* El clima no es un enlace: no hay página de clima, está acá y
                 en la tarjeta de la portada. Un enlace que no lleva a ningún
                 lado mejor que no exista. */}
-            {clima && (
-              <span className="pastilla con-icono">
-                <SolChico cielo={clima.cielo} esDeDia={clima.esDeDia !== false} />
-                <span className="fuerte">{clima.temp}°</span>
-                <span className="apagado solo-grande">{clima.cielo}</span>
-              </span>
-            )}
+            {clima && <PastillaClima clima={clima} />}
 
             {farmacia && (
               <a href="/farmacias" className="pastilla solo-grande">

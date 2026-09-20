@@ -1,6 +1,6 @@
 import { obtenerDatos, cuando, SECCIONES } from '@/lib/datos';
 import {
-  TarjetaFarmacia, TarjetaBuzon, PlacaSeccion,
+  TarjetaFarmacia, TarjetaBuzon,
   Etiqueta, TituloSeccion, FilaNota, Evento,
 } from '@/components/piezas';
 import { TarjetaClima } from '@/components/clima-vivo';
@@ -64,11 +64,7 @@ export default function Portada() {
         <div className="principal">
           {principal && (
             <article className="destacada">
-              {/* Nunca la foto del medio de origen: es obra ajena. Va una
-                  placa tipográfica propia con el color de la sección. */}
-              <a href={`/nota/${principal.id}`}><PlacaSeccion seccion={principal.seccion} /></a>
-
-              <div className="chapa-nota" style={{ marginTop: 16 }}>
+              <div className="chapa-nota">
                 <Etiqueta seccion={principal.seccion} />
                 <span className="meta">{cuando(principal)}</span>
                 <span className="punto">·</span>
