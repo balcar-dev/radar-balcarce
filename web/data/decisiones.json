@@ -1,5 +1,5 @@
 {
-  "exportado": "2026-09-20T04:29:41.518Z",
+  "exportado": "2026-09-20T05:09:57.882Z",
   "decisiones": {
     "1x4d9hl": {
       "estado": "pendiente",
@@ -3177,6 +3177,33 @@
       "deIA": true,
       "por": "ia",
       "cuando": "2026-09-20T04:29:41.506Z"
+    },
+    "q8kzb6": {
+      "estado": "automatica",
+      "titulo": "Instituto le ganó el clásico a Talleres en Alta Córdoba",
+      "copete": "Instituto venció a Talleres por la Liga Profesional y sumó su quinta victoria consecutiva como local.",
+      "guion": "Instituto le ganó el clásico a Talleres en Alta Córdoba",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-20T04:39:43.429Z"
+    },
+    "1dmj600": {
+      "estado": "automatica",
+      "titulo": "Kevin Gómez se consagró campeón argentino de boxeo",
+      "copete": "El deportista local venció por nocaut al contrincante Santiago Fernández en la madrugada del domingo en Balcarce.",
+      "guion": "Kevin Gómez se consagró campeón argentino de boxeo",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-20T04:59:46.117Z"
+    },
+    "e3ci1b": {
+      "estado": "automatica",
+      "titulo": "Kevin Gómez ganó por nocaut el título nacional supermediano",
+      "copete": "El boxeador balcarceño se consagró campeón nacional supermediano tras vencer por nocaut a Santiago Fernández.",
+      "guion": "Kevin Gómez ganó por nocaut el título nacional supermediano",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-20T05:09:57.876Z"
     }
   },
   "horarios": {
