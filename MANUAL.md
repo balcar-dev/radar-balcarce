@@ -147,7 +147,26 @@ El lienzo de diseño (portada de escritorio, de celular y la tarjeta del clima)
 está publicado como artefacto; si se cambia el aspecto, se cambia en los dos
 lados para que no se separen.
 
-## 7. Lo que todavía falla
+## 7. Las pruebas
+
+Se corren con `npm test` desde la carpeta del proyecto. Son 62, tardan un
+cuarto de segundo, no instalan nada y no salen a internet.
+
+**Cada una es un error que ya pasó de verdad**, no un ejercicio: dos
+farmacias de turno mostradas como una sola, un sol dibujado un domingo
+nublado, el encabezado del mes pegado al nombre de la última farmacia, los
+enlaces de El Diario apuntando a `undefined/…`. Están en `pruebas/` y cada
+una explica arriba qué error cuida.
+
+También corren solas en GitHub Actions **antes** de publicar. Si algo se
+rompió, la web se queda como está: es preferible una portada de hace media
+hora a una con los datos mal armados.
+
+Al agregar una regla nueva —una palabra en `REGLAS_SECCION`, una farmacia en
+`FARMACIAS_A_MANO`— no hace falta escribir una prueba. Cuando se arregla algo
+que estuvo mal publicado, sí: es la única forma de que no vuelva.
+
+## 8. Lo que todavía falla
 
 - **La clasificación se equivoca.** Un proyecto de una escuela primaria salió
   en Deportes; noticias de fútbol peruano entran por las fuentes nacionales.
