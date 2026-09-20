@@ -95,6 +95,7 @@ export default function PaginaAgenda() {
           texto="Mandanos qué es, dónde, a qué hora y si tiene entrada. Lo publicamos gratis: la agenda del pueblo la llenamos entre todos."
           boton="Sumar un evento"
           asunto="Evento para la agenda"
+          mensaje="Hola, quiero sumar un evento a la agenda. Es:"
         />
       </Cierre>
     </div>

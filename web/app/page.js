@@ -35,6 +35,23 @@ export default function Portada() {
         </div>
       )}
 
+      {/* El aviso de clima va arriba de todo y ocupa el ancho: es lo único
+          del sitio que puede cambiarle el día a alguien. Sale sólo cuando
+          hay algo real que avisar — los umbrales son altos a propósito, en
+          ingesta/alertas.mjs. */}
+      {(d.avisosClima ?? []).slice(0, 1).map((a) => (
+        <aside className={`aviso-clima ${a.gravedad}`} key={a.titulo}>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+            <path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z" />
+            <path d="M12 9v4M12 17h.01" />
+          </svg>
+          <div>
+            <strong>{a.titulo}</strong>
+            <span>{a.texto}</span>
+          </div>
+        </aside>
+      ))}
+
       <div className="dos-columnas">
         {/* En el celular esto va primero: es lo que la gente viene a
             buscar. Antes había que pasar ochenta titulares para ver la

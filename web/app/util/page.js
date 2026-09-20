@@ -66,6 +66,7 @@ export default function BalcarceUtil() {
           texto="Avisanos cuál y, si lo sabés, el nuevo. Lo corregimos el mismo día."
           boton="Avisarnos"
           asunto="Un teléfono cambió"
+          mensaje="Hola, este teléfono cambió:"
         />
       </Cierre>
 

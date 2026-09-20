@@ -19,6 +19,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { NUMEROS, tocaHoy, diaDeEstaSemana } from '../../ingesta/utiles.mjs';
+import { avisosDelClima } from '../../ingesta/alertas.mjs';
 
 const AQUI = import.meta.dirname;
 const DATOS_PANEL = path.join(AQUI, '..', '..', 'panel', 'datos');
@@ -104,6 +105,9 @@ const salida = {
   notas,
   secciones: [...new Set(notas.map((n) => n.seccion))],
   clima: ultima.clima ?? null,
+  // Los avisos se calculan acá y no en el navegador: la web es estática y
+  // así el aviso ya está en el HTML, sin esperar a que cargue nada.
+  avisosClima: avisosDelClima(ultima.clima),
   farmacias: { hoy: turnoHoy, proximos: proximosTurnos, avisos: ultima.farmacias?.avisos ?? [] },
   agenda: {
     municipio: (agenda?.municipio ?? []).slice(0, 30),

@@ -66,9 +66,10 @@ export default function PaginaSeccion({ params }) {
       >
         <Invitacion
           titulo="¿Viste algo en el barrio?"
-          texto="Mandanos la foto o el dato por correo. Lo chequeamos antes de publicarlo y, si lo pedís, no ponemos tu nombre."
+          texto="Mandanos la foto o el dato por WhatsApp. Lo chequeamos antes de publicarlo y, si lo pedís, no ponemos tu nombre."
           boton="Escribirnos"
           asunto="Tengo un dato para Radar Balcarce"
+          mensaje="Hola, tengo un dato para contarles:"
         />
       </Cierre>
     </div>

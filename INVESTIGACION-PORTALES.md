@@ -44,9 +44,14 @@ medios: es dónde vive la conversación del pueblo. **Nosotros no lo tenemos, y
 es el hueco más grande que tenemos.**
 
 **Los fúnebres.** 3 de 5, y los tres más grandes. En una ciudad de cuarenta
-mil habitantes esto se lee muchísimo — mucha gente entra sólo a eso. No es
-morbo: es cómo se entera un pueblo de que murió alguien conocido. **También
-nos falta.**
+mil habitantes esto se lee muchísimo — mucha gente entra sólo a eso.
+
+**Decidimos NO hacerlo.** El motivo no es el trabajo: es que no hay una
+fuente oficial de la que salga el dato. Habría que confiar en lo que llegue
+por mensaje, y publicar por error que murió alguien que está vivo es de los
+pocos errores que un medio nuevo no sobrevive. Es información delicada y no
+tenemos cómo verificarla. Si algún día una casa de sepelios nos manda el dato
+con su firma, se revisa.
 
 ## Lo que lo tienen todos porque se copiaron
 
@@ -107,13 +112,13 @@ son tres espacios de texto y logo, no banners de una red publicitaria.
 2. **Buscador.** Barato, y sólo lo tienen dos.
 
 **Después:**
-3. **Fúnebres.** Se lee muchísimo en un pueblo. Hay que resolver de dónde
-   sale el dato — probablemente de las casas de sepelios, hablando con ellas.
-4. **Alertas de clima**, que es la única forma de que el clima aporte algo
+3. **Alertas de clima**, que es la única forma de que el clima aporte algo
    que el teléfono no da.
-5. **Encuestas semanales**, que no las tiene nadie.
+4. **Encuestas semanales**, que no las tiene nadie — pero recién cuando haya
+   público. Una encuesta con tres votos se ve peor que no tenerla.
 
 **No haría:**
+- **Fúnebres**, por lo dicho arriba: sin fuente oficial, el riesgo no compensa.
 - Transmisiones en vivo largas.
 - Newsletter antes que WhatsApp.
 - Clasificados como servicio (sí, eventualmente, como espacio pago).

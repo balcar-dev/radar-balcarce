@@ -69,6 +69,7 @@ export default function PaginaNota({ params }) {
             texto="Si sabés algo que falta en esta nota, o si algo está mal, escribinos. Corregimos rápido y a la vista."
             boton="Escribirnos"
             asunto={`Sobre la nota: ${n.titulo}`}
+            mensaje={`Hola, escribo por la nota "${n.titulo}":`}
           />
         </Cierre>
       </article>

@@ -109,6 +109,54 @@ header.principal .envoltura {
 
 @media (min-width: 720px) { .logo { font-size: 42px; } }
 
+/* -------------------------------------------------------------- buscador */
+
+.abrir-buscador {
+  display: inline-flex; align-items: center; gap: 8px;
+  height: 40px; padding: 0 14px; border-radius: 20px;
+  border: 1px solid var(--linea); background: var(--papel); color: var(--suave);
+  font-family: inherit; font-size: 14px; font-weight: 500; cursor: pointer;
+  flex-shrink: 0;
+}
+.abrir-buscador:hover { border-color: var(--tinta); color: var(--tinta); }
+
+.capa-buscador { position: fixed; inset: 0; z-index: 60; display: flex; justify-content: center; }
+.fondo-buscador {
+  position: absolute; inset: 0; background: rgba(20, 22, 26, 0.55);
+  border: none; padding: 0; cursor: default;
+}
+.caja-buscador {
+  position: relative; width: min(640px, 100%); margin: 0 12px;
+  margin-top: calc(56px + env(safe-area-inset-top, 0px));
+  background: var(--papel); border-radius: 14px; overflow: hidden;
+  box-shadow: 0 24px 60px rgba(20, 22, 26, 0.35);
+  max-height: 76vh; display: flex; flex-direction: column;
+}
+.campo-buscador {
+  display: flex; align-items: center; gap: 10px;
+  padding: 14px 16px; border-bottom: 1px solid var(--linea); color: var(--suave);
+}
+.campo-buscador input {
+  flex-grow: 1; border: none; background: none; outline: none;
+  font-family: inherit; font-size: 17px; color: var(--tinta); min-width: 0;
+}
+.campo-buscador .cerrar {
+  border: none; background: none; color: var(--suave); font-family: inherit;
+  font-size: 13.5px; font-weight: 600; cursor: pointer; padding: 6px 4px; flex-shrink: 0;
+}
+.resultados { overflow-y: auto; padding: 6px; }
+.resultados .pista { font-size: 13.5px; color: var(--suave); padding: 18px 12px; margin: 0; }
+.resultado {
+  display: flex; flex-direction: column; gap: 3px;
+  padding: 11px 12px; border-radius: 9px;
+}
+.resultado:hover { background: var(--crema); color: inherit; }
+.resultado .seccion {
+  font-size: 10.5px; font-weight: 700; letter-spacing: 0.08em;
+  text-transform: uppercase; color: var(--rojo);
+}
+.resultado .titulo { font-size: 15.5px; font-weight: 600; line-height: 1.35; }
+
 /* ------------------------------------------------------------ navegación */
 
 nav.principal { border-top: 2px solid var(--tinta); border-bottom: 1px solid var(--linea); background: var(--papel); position: sticky; top: 0; z-index: 20; }
@@ -163,6 +211,19 @@ main { padding: 24px 0 10px; }
   .dos-columnas .principal.sin-servicios { grid-row: 1 / span 2; }
   .dos-columnas .principal.sin-servicios ~ .lateral { grid-row: 1; }
 }
+
+/* ------------------------------------------------------- aviso de clima */
+
+.aviso-clima {
+  display: flex; gap: 14px; align-items: flex-start;
+  padding: 16px 18px; border-radius: 12px; margin-bottom: 22px;
+  background: #FDF3E7; border: 1px solid #E8C9A0; color: #6B4310;
+}
+.aviso-clima.alta { background: #FCEBE6; border-color: #E8B4A4; color: #8C2D18; }
+.aviso-clima svg { flex-shrink: 0; margin-top: 1px; }
+.aviso-clima div { display: flex; flex-direction: column; gap: 3px; }
+.aviso-clima strong { font-size: 15.5px; font-weight: 700; }
+.aviso-clima span { font-size: 14px; line-height: 1.5; }
 
 /* ------------------------------------------------------------------ notas */
 
@@ -331,6 +392,10 @@ main { padding: 24px 0 10px; }
 
 .tarjeta-buzon { border-radius: 12px; background: var(--crema); border: 1px solid var(--linea); padding: 18px; }
 .tarjeta-buzon p { font-size: 13.5px; color: #4A4F4B; line-height: 1.5; margin: 8px 0 14px; }
+/* El mail queda abajo y chico: existe para quien lo prefiera, pero el canal
+   es WhatsApp — es donde la gente del pueblo ya está. */
+.o-por-mail { font-size: 12.5px; color: var(--suave); margin: 10px 0 0 !important; text-align: center; }
+.o-por-mail a { color: var(--suave); text-decoration: underline; }
 
 .chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; font-size: 12.5px; font-weight: 600; }
 .chips span, .chips a { background: var(--crema); border-radius: 14px; padding: 5px 11px; }

@@ -41,6 +41,26 @@ export function cuando(nota) {
   return nota.sinFecha ? 'sin hora' : haceCuanto(nota.fecha);
 }
 
+// ---------------------------------------------------------------- contacto
+
+// El WhatsApp del medio. La investigación dejó claro que es el canal: los
+// cinco portales de la zona lo tienen y nosotros éramos los únicos sin él.
+// En un pueblo el mail es un trámite; el WhatsApp es donde ya está la gente.
+export const WHATSAPP = {
+  // El formato de wa.me: país (54), el 9 de celular, el código de área sin
+  // el cero y el número sin el 15.
+  numero: '5492266511612',
+  visible: '2266 51-1612',
+};
+
+/** Un enlace de WhatsApp con el mensaje ya escrito. Que la persona no tenga
+ *  que explicar de dónde viene ni qué quiere. */
+export function whatsapp(mensaje) {
+  return `https://wa.me/${WHATSAPP.numero}?text=${encodeURIComponent(mensaje)}`;
+}
+
+export const MAIL = 'radarbalcarce@gmail.com';
+
 // ------------------------------------------------------------- secciones
 
 // El orden de acá es el orden de la navegación, y es editorial: primero lo

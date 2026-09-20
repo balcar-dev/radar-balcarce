@@ -5,7 +5,11 @@
 // animación es CSS puro (globals.css). Así la web sigue siendo HTML
 // estático que Vercel sirve sin ejecutar nada.
 
-import { datosSeccion, nombreCorto, cuando, partirFecha } from '@/lib/datos';
+import {
+  datosSeccion, nombreCorto, cuando, partirFecha, whatsapp, MAIL, WHATSAPP,
+} from '@/lib/datos';
+
+const WHATSAPP_VISIBLE = WHATSAPP.visible;
 
 // --------------------------------------------------------------- el clima
 //
@@ -182,18 +186,25 @@ export function Cierre({ enlaces = [], children, fuente = null }) {
 }
 
 /** La tarjeta de invitación. Siempre igual: título, una línea que explica
- *  qué esperamos, y un botón. Cambia el pedido, no la forma. */
-export function Invitacion({ titulo, texto, boton, asunto }) {
+ *  qué esperamos, y un botón. Cambia el pedido, no la forma.
+ *
+ *  El botón es WhatsApp, no mail: es donde la gente ya está, y el mensaje va
+ *  escrito de antemano para que no tenga que explicar de dónde viene. El
+ *  mail queda abajo, chiquito, para quien lo prefiera. */
+export function Invitacion({ titulo, texto, boton, asunto, mensaje }) {
   return (
     <div className="tarjeta-buzon">
       <h3 style={{ fontSize: 19, fontWeight: 700 }}>{titulo}</h3>
       <p>{texto}</p>
-      <a
-        href={`mailto:radarbalcarce@gmail.com?subject=${encodeURIComponent(asunto)}`}
-        className="boton rojo ancho"
-      >
+      <a href={whatsapp(mensaje ?? asunto)} className="boton rojo ancho" target="_blank" rel="noopener noreferrer">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.87 9.87 0 0 0 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm5.8 14.08c-.24.68-1.42 1.31-1.96 1.36-.5.05-.97.23-3.27-.68-2.75-1.08-4.5-3.9-4.64-4.08-.14-.18-1.11-1.48-1.11-2.82s.7-2 .95-2.27c.25-.27.54-.34.72-.34h.52c.17 0 .39-.06.61.47.23.54.77 1.88.84 2.02.07.14.11.3.02.48-.09.18-.14.3-.27.46-.14.16-.29.36-.41.48-.14.14-.28.29-.12.57.16.27.71 1.17 1.52 1.9 1.04.93 1.92 1.21 2.19 1.35.27.14.43.11.59-.07.16-.18.68-.79.86-1.07.18-.27.36-.23.61-.14.25.09 1.58.75 1.85.88.27.14.45.2.52.32.07.11.07.66-.17 1.34z" />
+        </svg>
         {boton}
       </a>
+      <p className="o-por-mail">
+        o por mail a <a href={`mailto:${MAIL}?subject=${encodeURIComponent(asunto)}`}>{MAIL}</a>
+      </p>
     </div>
   );
 }
@@ -205,12 +216,15 @@ export function TarjetaBuzon() {
     <div className="tarjeta-buzon" id="buzon">
       <h3 style={{ fontSize: 19, fontWeight: 700 }}>¿Viste algo en el barrio?</h3>
       <p>
-        Mandanos la foto o el dato por correo. Lo chequeamos antes de publicarlo
+        Mandanos la foto o el dato por WhatsApp. Lo chequeamos antes de publicarlo
         y, si lo pedís, no ponemos tu nombre.
       </p>
-      <a href="mailto:radarbalcarce@gmail.com?subject=Tengo%20un%20dato%20para%20Radar%20Balcarce" className="boton rojo ancho">
-        Escribirnos
+      <a href={whatsapp('Hola, tengo un dato para Radar Balcarce:')} className="boton rojo ancho" target="_blank" rel="noopener noreferrer">
+        Escribirnos por WhatsApp
       </a>
+      <p className="o-por-mail">
+        {WHATSAPP_VISIBLE} · o por mail a <a href={`mailto:${MAIL}`}>{MAIL}</a>
+      </p>
     </div>
   );
 }

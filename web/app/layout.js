@@ -1,7 +1,10 @@
 import './globals.css';
-import { obtenerDatos, datosSeccion, nombreCorto, EN_NAVEGACION } from '@/lib/datos';
+import {
+  obtenerDatos, datosSeccion, nombreCorto, EN_NAVEGACION, whatsapp, WHATSAPP, MAIL,
+} from '@/lib/datos';
 import { SolChico } from '@/components/piezas';
 import { Analytics } from '@vercel/analytics/next';
+import Buscador from '@/components/buscador';
 
 export const metadata = {
   metadataBase: new URL('https://radarbalcarce.com.ar'),
@@ -82,6 +85,12 @@ export default function RaizLayout({ children }) {
                 expliquen qué es el sitio. La invitación a escribirnos está
                 en el pie y en la tarjeta del buzón. */}
             <a href="/" className="logo fraunces">Radar <span>Balcarce</span></a>
+            <span style={{ flexGrow: 1 }} />
+            {/* El buscador busca sobre las notas que ya están en la página:
+                sin servidor y sin una sola consulta de red. */}
+            <Buscador notas={(d.notas ?? []).map((n) => ({
+              id: n.id, titulo: n.titulo, copete: n.copete, seccion: n.seccion, medios: n.medios,
+            }))} />
           </div>
         </header>
 
@@ -113,7 +122,11 @@ export default function RaizLayout({ children }) {
           <div className="envoltura">
             <div className="marca">Radar Balcarce</div>
             <div>
-              radarbalcarce.com.ar · <a href="mailto:radarbalcarce@gmail.com">radarbalcarce@gmail.com</a>
+              <a href={whatsapp('Hola, escribo por Radar Balcarce:')} target="_blank" rel="noopener noreferrer">
+                WhatsApp {WHATSAPP.visible}
+              </a>
+              {' · '}
+              <a href={`mailto:${MAIL}`}>{MAIL}</a>
             </div>
             <div>
               <a href="/agenda">Agenda</a> · <a href="/farmacias">Farmacias</a> ·{' '}

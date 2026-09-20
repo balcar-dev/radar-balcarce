@@ -489,7 +489,7 @@ async function climaDeOpenMeteo() {
   const url = 'https://api.open-meteo.com/v1/forecast'
     + `?latitude=${BALCARCE.lat}&longitude=${BALCARCE.lon}`
     + '&current=temperature_2m,apparent_temperature,relative_humidity_2m,wind_speed_10m,wind_direction_10m,weather_code,is_day'
-    + '&daily=temperature_2m_max,temperature_2m_min,precipitation_probability_max,weather_code'
+    + '&daily=temperature_2m_max,temperature_2m_min,precipitation_probability_max,weather_code,wind_speed_10m_max,precipitation_sum'
     + `&timezone=${encodeURIComponent(BALCARCE.tz)}&forecast_days=4`;
   const j = JSON.parse(await traer(url));
   const rumbos = ['N', 'NE', 'E', 'SE', 'S', 'SO', 'O', 'NO'];
@@ -510,6 +510,11 @@ async function climaDeOpenMeteo() {
       max: Math.round(j.daily.temperature_2m_max[i]),
       min: Math.round(j.daily.temperature_2m_min[i]),
       lluvia: j.daily.precipitation_probability_max[i],
+      // Para los avisos (ingesta/alertas.mjs): el código dice si hay granizo
+      // o tormenta, y el viento y los milímetros dicen si es en serio.
+      codigo: j.daily.weather_code[i],
+      viento: Math.round(j.daily.wind_speed_10m_max?.[i] ?? 0),
+      milimetros: Math.round(j.daily.precipitation_sum?.[i] ?? 0),
       cielo: CIELO[j.daily.weather_code[i]] ?? '',
     })),
     fuente: 'Open-Meteo',

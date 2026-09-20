@@ -71,6 +71,7 @@ export default function Farmacias() {
           texto="Si la farmacia que figura no es la que está abierta, avisanos. Lo verificamos y lo corregimos enseguida."
           boton="Avisarnos"
           asunto="El turno de farmacia no coincide"
+          mensaje="Hola, el turno de farmacia que figura no coincide. La que está abierta es:"
         />
       </Cierre>
 
