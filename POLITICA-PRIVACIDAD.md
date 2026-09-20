@@ -20,6 +20,19 @@ dejar tu nombre — podés pedir mantenerte anónimo, salvo en las notas de
 opinión, que siempre van firmadas con nombre real porque son un texto de
 opinión personal, no un dato anónimo.
 
+## Cómo medimos las visitas
+
+Contamos cuánta gente entra y qué notas se leen. Es lo único que nos permite
+saber qué le interesa a Balcarce y qué no.
+
+Lo hacemos con la medición de Vercel, la empresa donde vive el sitio, elegida
+a propósito: **no usa cookies, no guarda direcciones IP y no sigue a nadie a
+otros sitios**. Sabemos que alguien entró, desde qué tipo de dispositivo y qué
+página miró. Nada más.
+
+No usamos Google Analytics ni ninguna herramienta de una red publicitaria. Un
+medio que promete cuidar a sus lectores no puede estar entregándoselos a otro.
+
 ## Para qué lo usamos
 
 - Para poder volver a contactarte si necesitamos verificar algo antes de

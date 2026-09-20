@@ -1,5 +1,5 @@
 {
-  "exportado": "2026-09-20T03:51:06.884Z",
+  "exportado": "2026-09-20T03:59:50.644Z",
   "decisiones": {
     "1x4d9hl": {
       "estado": "pendiente",
@@ -2826,6 +2826,114 @@
       "deIA": true,
       "por": "ia",
       "cuando": "2026-09-20T03:51:06.877Z"
+    },
+    "1o3c04o": {
+      "estado": "automatica",
+      "titulo": "Copa Davis: Cerundolo gano el primer punto para Argentina",
+      "copete": "Francisco Cerúndolo le dio el primer punto a la Argentina en el inicio de la serie de la Copa Davis frente a Turquía.",
+      "guion": "Copa Davis: Cerundolo gano el primer punto para Argentina",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-20T03:59:39.984Z"
+    },
+    "wify3j": {
+      "estado": "automatica",
+      "titulo": "Agenda deportiva de domingo con tenis y fútbol",
+      "copete": "La programación televisiva del domingo 20 de septiembre de 2026 incluye el clásico San Lorenzo frente a Boca, el cruce de Copa Davis entre Argentina y Turquía, y los Juegos Suramericanos.",
+      "guion": "Agenda deportiva de domingo con tenis y fútbol",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-20T03:59:40.758Z"
+    },
+    "1r6n9sa": {
+      "estado": "automatica",
+      "titulo": "La Irenita ganó el Abierto del Jockey Club de polo",
+      "copete": "La Irenita venció a Las Monjitas por trece a nueve en San Isidro y se consagró campeón del torneo este fin de semana.",
+      "guion": "La Irenita ganó el Abierto del Jockey Club de polo",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-20T03:59:41.678Z"
+    },
+    "c0mx68": {
+      "estado": "automatica",
+      "titulo": "Dólar calmo y economía real en tensión",
+      "copete": "El dólar subió casi nada este mes mientras la economía real sigue complicada, según informó el sector financiero en los últimos días.",
+      "guion": "Dólar calmo y economía real en tensión",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-20T03:59:42.554Z"
+    },
+    "hdywrn": {
+      "estado": "automatica",
+      "titulo": "El Gobierno frena la actividad segun analistas",
+      "copete": "La economia argentina muestra un estancamiento general, con excepcion del sector agropecuario y la produccion de hidrocarburos, segun indico el economista Matias Rajnerman.",
+      "guion": "El Gobierno frena la actividad segun analistas",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-20T03:59:43.425Z"
+    },
+    "6q72l2": {
+      "estado": "automatica",
+      "titulo": "Ausencias sorpresivas en la lista de la Selección",
+      "copete": "Lionel Scaloni armó la nómina para los próximos amistosos de la Selección Argentina con ausencias destacadas que generaron sorpresa.",
+      "guion": "Ausencias sorpresivas en la lista de la Seleccion",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-20T03:59:44.578Z"
+    },
+    "l6tx7u": {
+      "estado": "automatica",
+      "titulo": "Luciana Aymar palpita los Juegos Suramericanos en Rosario",
+      "copete": "La exjugadora de hockey Luciana Aymar participa de los Juegos Suramericanos dos mil veintiséis en Rosario y destacó el clima del torneo.",
+      "guion": "Luciana Aymar palpita los Juegos Suramericanos en Rosario",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-20T03:59:45.517Z"
+    },
+    "qsqsoy": {
+      "estado": "automatica",
+      "titulo": "Sebastián Dubuc brilla en la nueva camada de los Pumas 7s",
+      "copete": "El seleccionado argentino de rugby reducido compite en los Juegos Suramericanos Santa Fe 2026 con destacadas actuaciones de sus jóvenes figuras.",
+      "guion": "Sebastian Dubuc brilla en la nueva camada de los Pumas 7s",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-20T03:59:46.701Z"
+    },
+    "q1m9j5": {
+      "estado": "automatica",
+      "titulo": "Williams frena su desarrollo de Fórmula 1 y apunta a 2027",
+      "copete": "La escudería británica Williams reconoció que relegará el desarrollo de su auto actual para enfocar sus recursos en el proyecto del año próximo.",
+      "guion": "Williams frena su desarrollo de Fórmula uno y apunta a dos mil veintisiete",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-20T03:59:47.772Z"
+    },
+    "esyk5u": {
+      "estado": "automatica",
+      "titulo": "Steiner criticó al presidente de la FIA por Fernando Alonso",
+      "copete": "El exjefe de Haas cuestionó al titular de la entidad por ofrecer ayuda para retener al piloto en Aston Martin.",
+      "guion": "Steiner criticó al presidente de la FIA por Fernando Alonso",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-20T03:59:48.909Z"
+    },
+    "c97g1": {
+      "estado": "automatica",
+      "titulo": "El código secreto que usó Mercedes para ganar en Madrid",
+      "copete": "Mercedes reveló el método de comunicación interna que facilitó la victoria de Andrea Kimi Antonelli en el Gran Premio de España.",
+      "guion": "El código secreto que usó Mercedes para ganar en Madrid",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-20T03:59:49.829Z"
+    },
+    "1miwji8": {
+      "estado": "automatica",
+      "titulo": "El MotoGP analiza cambios en su agenda",
+      "copete": "La categoría evalúa modificar su reglamento deportivo para cambiar la actividad del fin de semana.",
+      "guion": "El MotoGP analiza cambios en su agenda",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-20T03:59:50.640Z"
     }
   },
   "horarios": {

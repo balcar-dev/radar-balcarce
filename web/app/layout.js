@@ -1,6 +1,7 @@
 import './globals.css';
 import { obtenerDatos, datosSeccion, nombreCorto, EN_NAVEGACION } from '@/lib/datos';
 import { SolChico } from '@/components/piezas';
+import { Analytics } from '@vercel/analytics/next';
 
 export const metadata = {
   metadataBase: new URL('https://radarbalcarce.com.ar'),
@@ -95,6 +96,13 @@ export default function RaizLayout({ children }) {
         </nav>
 
         <main>{children}</main>
+
+        {/* Las analíticas de Vercel: cuenta visitas y qué nota se leyó, sin
+            cookies, sin seguir a nadie entre sitios y sin guardar direcciones
+            IP. Se eligió ésta y no Google Analytics justamente por eso: un
+            medio chico que promete cuidar a sus lectores no puede estar
+            entregándoselos a una red publicitaria. */}
+        <Analytics />
 
         <footer className="principal">
           <div className="envoltura">

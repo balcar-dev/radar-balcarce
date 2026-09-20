@@ -23,6 +23,22 @@ export default function PoliticaPrivacidad() {
           real porque son un texto de opinión personal, no un dato anónimo.
         </p>
 
+        <h3 style={{ fontSize: 20, marginTop: 28, marginBottom: 8 }}>Cómo medimos las visitas</h3>
+        <p>
+          Contamos cuánta gente entra y qué notas se leen. Es lo único que nos permite saber
+          qué le interesa a Balcarce y qué no, y decidir dónde poner el esfuerzo.
+        </p>
+        <p>
+          Lo hacemos con la medición de Vercel, la empresa donde vive este sitio, y elegimos
+          ésa a propósito: <strong>no usa cookies, no guarda tu dirección IP y no te sigue a
+          otros sitios</strong>. No sabemos quién sos ni podemos saberlo. Sabemos que alguien
+          entró, desde qué tipo de dispositivo y qué página miró — nada más.
+        </p>
+        <p>
+          No usamos Google Analytics ni ninguna herramienta de una red publicitaria. Un medio
+          que promete cuidar a sus lectores no puede estar entregándoselos a otro.
+        </p>
+
         <h3 style={{ fontSize: 20, marginTop: 28, marginBottom: 8 }}>Para qué lo usamos</h3>
         <ul style={{ paddingLeft: 20 }}>
           <li>Para poder volver a contactarte si necesitamos verificar algo antes de publicar.</li>
