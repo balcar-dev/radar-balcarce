@@ -169,11 +169,26 @@ test('hay un tope diario y un respiro entre posteos', () => {
   // Salió una hace media hora: todavía es pronto.
   assert.equal(elegirParaFacebook({ notas: [nota()], libro, ahora: AHORA }).length, 0);
 
-  // Ya pasó el respiro, pero con dos hechas hoy se llegó al tope.
+  // Ya pasó el respiro, pero con el tope del día hecho no sale otra.
   const lleno = libroNuevo();
-  anotar(lleno, 'facebook', 'uno', {}, new Date('2026-09-21T10:00:00-03:00'));
-  anotar(lleno, 'facebook', 'dos', {}, new Date('2026-09-21T12:00:00-03:00'));
+  for (let i = 0; i < REGLAS_FACEBOOK.porDia; i += 1) {
+    anotar(lleno, 'facebook', `n${i}`, {}, new Date(`2026-09-21T${String(8 + i).padStart(2, '0')}:00:00-03:00`));
+  }
   assert.equal(elegirParaFacebook({ notas: [nota()], libro: lleno, ahora: AHORA }).length, 0);
+
+  // Con un lugar libre, sí.
+  const casi = libroNuevo();
+  for (let i = 0; i < REGLAS_FACEBOOK.porDia - 1; i += 1) {
+    anotar(casi, 'facebook', `n${i}`, {}, new Date(`2026-09-21T${String(8 + i).padStart(2, '0')}:00:00-03:00`));
+  }
+  assert.equal(elegirParaFacebook({ notas: [nota()], libro: casi, ahora: new Date('2026-09-21T15:30:00-03:00') }).length, 1);
+});
+
+test('el tope y el piso de Facebook son los conservadores que se decidieron', () => {
+  // 5 por día y relevancia 75: en las últimas 24 horas la web publicó unas 100
+  // notas y publicarlas todas en Facebook sería ruido.
+  assert.equal(REGLAS_FACEBOOK.porDia, 5);
+  assert.equal(REGLAS_FACEBOOK.relevanciaMinima, 75);
 });
 
 test('sale de a una por vez, la más fuerte primero', () => {

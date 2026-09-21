@@ -436,6 +436,10 @@ aprendió.
   automatización; se cambia desde el celular.
 - Las pestañas de Chrome en segundo plano no responden a capturas.
 
+**Facebook, conservador (decisión del 21/09):** 5 posteos por día con relevancia 75 o más,
+no todas las notas de la web (unas 100 por día). Más adelante se van a mezclar con
+las notas propias y originales de la redacción.
+
 **El reloj (mismo día, más tarde)**
 
 - `redes.yml` pasó a ser el reloj: varias corridas por día, cada una publica en

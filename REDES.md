@@ -92,11 +92,11 @@ la portada y publica **una** nota si cumple todo esto:
 
 | Regla | Valor |
 |---|---|
-| Relevancia | 80 o más |
+| Relevancia | 75 o más |
 | Antigüedad en la web | entre 15 minutos y 8 horas (el enlace tiene que existir) |
 | Sección | nunca **Política** ni **Policiales**: esas las decide una persona |
 | Horario | entre las 8 y las 22 |
-| Tope | 2 por día, con 90 minutos entre una y otra |
+| Tope | **5 por día**, con 90 minutos entre una y otra (conservador a propósito: la web publica unas 100 notas por día y en Facebook sería ruido) |
 | Repetición | una nota sale una sola vez (lo garantiza `web/data/redes.json`) |
 
 El texto lleva el titular, el copete y `Fuente: …`, más `Resumen hecho con IA`

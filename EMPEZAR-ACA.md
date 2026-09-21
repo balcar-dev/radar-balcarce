@@ -47,7 +47,7 @@ cuando las tengas guardadas en otro lado.
 
 - **Cada 30 minutos**: actualiza la web y la publica.
 - **Varias veces por día** (el reloj de las redes): publica **una** nota en la
-  página de Facebook, si hay alguna fuerte y reciente (dos por día como máximo,
+  página de Facebook, si hay alguna fuerte y reciente (cinco por día como máximo,
   entre las 8 y las 22, nunca Política ni Policiales), y sube a Instagram la
   historia o el reel que le toca a esa hora (clima, farmacia, noticias, podcast).
   GitHub no es puntual: una pieza puede salir hasta 2 horas tarde.

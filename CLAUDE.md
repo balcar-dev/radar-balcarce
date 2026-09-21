@@ -98,7 +98,7 @@ publicar piezas a mano. Detalle y horarios en `REDES.md`.
   `radar-balcarce-six.vercel.app` redirige al dominio propio. El sitio ya se
   indexa (`web/lib/sitio.js` lo detecta solo).
 - **Redes, al 21/09:** Facebook e Instagram publican solos desde GitHub. Facebook,
-  una nota por vez (2 por día como máximo). Instagram, las piezas de video del día
+  una nota por vez (5 por día como máximo, relevancia 75 o más). Instagram, las piezas de video del día
   (clima, farmacia, 2 reels de noticias, el podcast y 3 historias de notas) con la
   voz Gemini "Kore". Horarios y reglas: `REDES.md`. **El reloj de GitHub no es
   puntual:** cada pieza tiene una ventana de 2 horas y puede salir tarde.

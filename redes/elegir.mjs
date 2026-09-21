@@ -22,8 +22,12 @@ import { rutaDeNota } from '../web/lib/ruta.js';
 export const SECCIONES_QUE_ESPERAN_PERSONA = ['Policiales', 'Política'];
 
 export const REGLAS_FACEBOOK = {
-  porDia: 2,               // como en REDES.md: dos del feed por día
-  relevanciaMinima: 80,
+  // Conservador a propósito (decisión del 21/09): en las últimas 24 horas la web
+  // publicó unas 100 notas y publicar todas en Facebook sería ruido: una página
+  // nueva con 90 posteos por día pierde alcance y parece un robot. Cinco buenas
+  // por día, y más adelante se mezclan con las notas propias y originales.
+  porDia: 5,
+  relevanciaMinima: 75,
   porCorrida: 1,           // así no salen dos pegadas
   minutosEntrePosteos: 90,
   esperaMinutos: 15,       // que el deploy de la web ya haya terminado
