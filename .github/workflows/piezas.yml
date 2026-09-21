@@ -13,7 +13,8 @@
 #
 # A mano: pestaña Actions → "Piezas" → Run workflow.
 #   solo      una o varias piezas (por ejemplo clima-manana) para no gastar de más
-#   publicar  además de armarlas, subirlas a Instagram ya, sin esperar su hora
+#   publicar  además de armarlas, subirlas ya, sin esperar su hora
+#   destino   ambas (Instagram y la página de Facebook), instagram o facebook
 
 name: Piezas
 
@@ -25,9 +26,14 @@ on:
         type: string
         default: ''
       publicar:
-        description: 'Publicarlas en Instagram ahora'
+        description: 'Publicarlas ahora, sin esperar su hora'
         type: boolean
         default: false
+      destino:
+        description: 'Dónde publicarlas'
+        type: choice
+        options: [ambas, instagram, facebook]
+        default: ambas
 
 concurrency:
   group: redes # la misma que el reloj: nunca dos publicando a la vez
@@ -71,9 +77,9 @@ jobs:
           if-no-files-found: error
           retention-days: 7
 
-      - name: Publicar en Instagram
+      - name: Publicar en Instagram y Facebook
         if: ${{ inputs.publicar }}
-        run: node redes/publicar.mjs --piezas --sin-horario
+        run: node redes/publicar.mjs --piezas --sin-horario --destino=${{ inputs.destino }}
         env:
           META_TOKEN: ${{ secrets.META_TOKEN }}
           REDES_ACTIVAS: ${{ vars.REDES_ACTIVAS }}

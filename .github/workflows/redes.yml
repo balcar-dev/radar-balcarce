@@ -6,7 +6,8 @@
 #      máximo, entre las 8 y las 22, nunca Política ni Policiales).
 #   2. El reloj: mira qué historia o reel de Instagram le toca a esta hora
 #      (clima, farmacia, noticias, podcast…) y todavía no salió hoy.
-#   3. Si toca alguna: la arma con la voz de Gemini y la sube a Instagram.
+#   3. Si toca alguna: la arma con la voz de Gemini y la sube a Instagram y a la
+#      página de Facebook (el mismo video, como historia o reel).
 #
 # Cuando no toca ninguna pieza, la corrida termina en segundos y no instala
 # nada. Los horarios y las reglas están en REDES.md.
@@ -113,7 +114,7 @@ jobs:
         env:
           GEMINI_API_KEY_REDES: ${{ secrets.GEMINI_API_KEY_REDES }}
 
-      - name: Publicar en Instagram
+      - name: Publicar en Instagram y en la página de Facebook
         if: steps.reloj.outputs.hay == 'true'
         run: node redes/publicar.mjs --piezas
         env:

@@ -200,6 +200,66 @@ export function crearCliente({ token, paginaId, fetchFn = fetch, esperar = dormi
     return { id: j.id };
   }
 
+  /**
+   * El mismo video, en la página de Facebook, como historia (STORIES) o como
+   * reel (REELS).
+   *
+   * Es la misma idea que en Instagram, con las direcciones de Facebook: se
+   * abre la subida, se manda el archivo y se cierra. Así el video que se armó
+   * una vez sirve para las dos redes y no se gasta voz de más.
+   *
+   * @param {Buffer} o.video
+   * @param {'STORIES'|'REELS'} o.tipo
+   * @param {string} [o.pie]   el texto del reel (las historias no llevan)
+   */
+  async function publicarVideoEnFacebook({ video, tipo, pie = '' }) {
+    const p = await pagina();
+    if (tipo !== 'STORIES' && tipo !== 'REELS') throw new ErrorMeta(`Tipo de video desconocido: ${tipo}`);
+    const camino = `${paginaId}/${tipo === 'REELS' ? 'video_reels' : 'video_stories'}`;
+
+    // 1. Abrir la subida.
+    const inicio = await pedir(camino, { metodo: 'POST', conToken: p.tokenPagina, params: { upload_phase: 'start' } });
+    if (!inicio.video_id || !inicio.upload_url) throw new ErrorMeta('Facebook no indicó dónde subir el video.');
+
+    // 2. Mandar el archivo, tal cual, a la dirección que dio Facebook.
+    let r;
+    try {
+      r = await fetchFn(inicio.upload_url, {
+        method: 'POST',
+        headers: { Authorization: `OAuth ${p.tokenPagina}`, offset: '0', file_size: String(video.length) },
+        body: video,
+      });
+    } catch (e) {
+      throw new ErrorMeta(`No se pudo subir el video a Facebook: ${sinToken(sinToken(e.message, token), p.tokenPagina)}`);
+    }
+    let cuerpo = null;
+    try { cuerpo = await r.json(); } catch { /* sin cuerpo */ }
+    if (!r.ok || cuerpo?.success === false) {
+      const detalle = cuerpo?.debug_info?.message ?? cuerpo?.error?.message ?? cuerpo?.message ?? '';
+      throw new ErrorMeta(sinToken(sinToken(`La subida del video a Facebook falló (${r.status}) ${detalle}`.trim(), token), p.tokenPagina), { http: r.status });
+    }
+
+    // 3. Cerrar y publicar.
+    const cierre = { upload_phase: 'finish', video_id: inicio.video_id };
+    if (tipo === 'REELS') { cierre.video_state = 'PUBLISHED'; if (pie) cierre.description = pie; }
+    const fin = await pedir(camino, { metodo: 'POST', conToken: p.tokenPagina, params: cierre });
+    if (fin.success === false) throw new ErrorMeta('Facebook no aceptó publicar el video.');
+
+    // 4. Facebook procesa el video. Si dice que falló, se avisa; si no dice nada
+    // claro, se da por publicado.
+    for (let i = 0; i < 20; i += 1) {
+      let estado = null;
+      try { estado = await pedir(inicio.video_id, { conToken: p.tokenPagina, params: { fields: 'status' } }); } catch { break; }
+      const st = estado?.status?.video_status;
+      if (st === 'error' || st === 'expired') {
+        throw new ErrorMeta(`Facebook rechazó el video (${st}).`);
+      }
+      if (!st || st === 'ready' || st === 'complete' || st === 'published') break;
+      await esperar(3000);
+    }
+    return { id: inicio.video_id, postId: fin.post_id ?? null };
+  }
+
   /** Un chequeo sin efectos: sirve para saber si el acceso quedó bien. */
   async function verificar() {
     const p = await pagina();
@@ -211,5 +271,7 @@ export function crearCliente({ token, paginaId, fetchFn = fetch, esperar = dormi
     return { pagina: p.nombre, enlace: p.enlace, instagram: p.instagramUsuario, instagramId: p.instagramId, permisos };
   }
 
-  return { pedir, pagina, publicarEnFacebook, publicarFotoEnInstagram, publicarVideoEnInstagram, verificar };
+  return {
+    pedir, pagina, publicarEnFacebook, publicarFotoEnInstagram, publicarVideoEnInstagram, publicarVideoEnFacebook, verificar,
+  };
 }

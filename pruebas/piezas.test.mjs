@@ -173,7 +173,7 @@ test('publica lo que toca, lo anota y guarda después de cada una', async () => 
   const libro = libroNuevo();
   let guardados = 0;
   const r = await publicarPiezas({
-    api, manifiesto: PIEZAS, libro, activo: true, sinHorario: true, ahora: A_LAS('16:00'),
+    api, manifiesto: PIEZAS, libro, activo: true, destinos: ['instagram'], esperar: async () => {}, sinHorario: true, ahora: A_LAS('16:00'),
     leerVideo: (a) => Buffer.from(a), guardar: () => { guardados += 1; }, log: () => {},
   });
   assert.equal(r.publicadas.length, 3);
@@ -185,7 +185,7 @@ test('si una pieza falla, las otras igual salen y la que falló queda para reint
   const api = apiFalsa({ falla: ['noticia1.mp4'] });
   const libro = libroNuevo();
   const r = await publicarPiezas({
-    api, manifiesto: PIEZAS, libro, activo: true, sinHorario: true, ahora: A_LAS('16:00'),
+    api, manifiesto: PIEZAS, libro, activo: true, destinos: ['instagram'], esperar: async () => {}, sinHorario: true, ahora: A_LAS('16:00'),
     leerVideo: (a) => Buffer.from(a), guardar: () => {}, log: () => {},
   });
   assert.deepEqual(r.publicadas, ['clima-manana', 'farmacia']);
@@ -197,7 +197,7 @@ test('en modo prueba no publica ni anota nada', async () => {
   const api = apiFalsa();
   const libro = libroNuevo();
   await publicarPiezas({
-    api, manifiesto: PIEZAS, libro, activo: false, sinHorario: true, ahora: A_LAS('16:00'),
+    api, manifiesto: PIEZAS, libro, activo: false, destinos: ['instagram'], esperar: async () => {}, sinHorario: true, ahora: A_LAS('16:00'),
     leerVideo: (a) => Buffer.from(a), guardar: () => assert.fail('no debería guardar'), log: () => {},
   });
   assert.equal(api.subidas.length, 0);
@@ -209,7 +209,7 @@ test('si el token murió, corta: no tiene sentido seguir', async () => {
     publicarVideoEnInstagram: async () => { throw Object.assign(new Error('token'), { tokenMuerto: true }); },
   };
   const r = await publicarPiezas({
-    api, manifiesto: PIEZAS, libro: libroNuevo(), activo: true, sinHorario: true, ahora: A_LAS('16:00'),
+    api, manifiesto: PIEZAS, libro: libroNuevo(), activo: true, destinos: ['instagram'], esperar: async () => {}, sinHorario: true, ahora: A_LAS('16:00'),
     leerVideo: (a) => Buffer.from(a), guardar: () => {}, log: () => {},
   });
   assert.equal(r.tokenMuerto, true);
@@ -289,4 +289,174 @@ test('las notas ya usadas hoy y las piezas ya publicadas se reconocen', () => {
   anotar(libro, 'instagram', claveDePieza('clima-manana', new Date('2026-09-20T08:00:00-03:00')), { notaId: 'vieja' });
   assert.deepEqual([...notasUsadasHoy(libro, LUNES('12:00'))], ['abc']);
   assert.deepEqual([...piezasPublicadasHoy(libro, LUNES('12:00'))], ['noticia1']);
+});
+
+
+// -------------------------------------------- el mismo video en Facebook
+
+const PAGINA_FB = {
+  json: {
+    name: 'Radar Balcarce', link: 'x', access_token: 'TOKEN-DE-PAGINA',
+    instagram_business_account: { id: '999', username: 'radarbalcarce' },
+  },
+};
+
+test('un reel en Facebook: se abre la subida, se manda el archivo y se cierra con su texto', async () => {
+  const video = Buffer.from('un-reel-de-mentira');
+  const { fn, pedidos } = fetchFalso([
+    PAGINA_FB,
+    { json: { video_id: 'v1', upload_url: 'https://rupload.facebook.com/video-upload/v23.0/v1' } },
+    { json: { success: true } },                       // la subida
+    { json: { success: true, post_id: 'p1' } },        // el cierre
+    { json: { status: { video_status: 'ready' } } },   // ya está procesado
+  ]);
+  const api = crearCliente({ token: TOKEN, paginaId: '123', fetchFn: fn, esperar: async () => {} });
+  const r = await api.publicarVideoEnFacebook({ video, tipo: 'REELS', pie: 'Un titular' });
+
+  assert.deepEqual(r, { id: 'v1', postId: 'p1' });
+  assert.ok(pedidos[1].url.endsWith('/123/video_reels'));
+  assert.equal(new URLSearchParams(pedidos[1].init.body).get('upload_phase'), 'start');
+
+  assert.equal(pedidos[2].url, 'https://rupload.facebook.com/video-upload/v23.0/v1');
+  assert.equal(pedidos[2].init.headers.Authorization, 'OAuth TOKEN-DE-PAGINA');
+  assert.equal(pedidos[2].init.headers.file_size, String(video.length));
+  assert.equal(pedidos[2].init.body, video);
+
+  const cierre = new URLSearchParams(pedidos[3].init.body);
+  assert.equal(cierre.get('upload_phase'), 'finish');
+  assert.equal(cierre.get('video_id'), 'v1');
+  assert.equal(cierre.get('video_state'), 'PUBLISHED');
+  assert.equal(cierre.get('description'), 'Un titular');
+  for (const p of pedidos) assert.ok(!p.url.includes('TOKEN'), 'el token está en una dirección');
+});
+
+test('una historia en Facebook usa su propia dirección y no lleva texto', async () => {
+  const { fn, pedidos } = fetchFalso([
+    PAGINA_FB,
+    { json: { video_id: 'v2', upload_url: 'https://rupload/v2' } },
+    { json: { success: true } }, { json: { success: true } }, { json: { status: {} } },
+  ]);
+  const api = crearCliente({ token: TOKEN, paginaId: '123', fetchFn: fn, esperar: async () => {} });
+  await api.publicarVideoEnFacebook({ video: Buffer.from('v'), tipo: 'STORIES', pie: 'no debería ir' });
+  assert.ok(pedidos[1].url.endsWith('/123/video_stories'));
+  const cierre = new URLSearchParams(pedidos[3].init.body);
+  assert.ok(!cierre.has('description'));
+  assert.ok(!cierre.has('video_state'));
+});
+
+test('si Facebook rechaza el video al procesarlo, se avisa', async () => {
+  const { fn } = fetchFalso([
+    PAGINA_FB,
+    { json: { video_id: 'v3', upload_url: 'https://rupload/v3' } },
+    { json: { success: true } }, { json: { success: true } },
+    { json: { status: { video_status: 'error' } } },
+  ]);
+  const api = crearCliente({ token: TOKEN, paginaId: '123', fetchFn: fn, esperar: async () => {} });
+  await assert.rejects(api.publicarVideoEnFacebook({ video: Buffer.from('v'), tipo: 'REELS' }), /rechaz/);
+});
+
+test('si falla la subida a Facebook, no se cierra ni se publica', async () => {
+  const { fn, pedidos } = fetchFalso([
+    PAGINA_FB,
+    { json: { video_id: 'v4', upload_url: 'https://rupload/v4' } },
+    { ok: false, status: 500, json: { debug_info: { message: `roto ${TOKEN}` } } },
+  ]);
+  const api = crearCliente({ token: TOKEN, paginaId: '123', fetchFn: fn, esperar: async () => {} });
+  await assert.rejects(api.publicarVideoEnFacebook({ video: Buffer.from('v'), tipo: 'STORIES' }), (e) => {
+    assert.ok(!e.message.includes(TOKEN), 'el error repite el token');
+    return true;
+  });
+  assert.equal(pedidos.length, 3, 'siguió después de una subida fallida');
+});
+
+// -------------------------------------- las dos redes juntas
+
+function apiDoble({ fallaInstagram = false, fallaFacebook = 0 } = {}) {
+  const hechas = { instagram: [], facebook: [] };
+  let intentosFb = 0;
+  return {
+    hechas,
+    publicarVideoEnInstagram: async ({ video, tipo }) => {
+      if (fallaInstagram) throw new Error('Instagram dijo que no');
+      hechas.instagram.push({ nombre: video.toString(), tipo });
+      return { id: `ig-${video}` };
+    },
+    publicarVideoEnFacebook: async ({ video, tipo }) => {
+      intentosFb += 1;
+      if (intentosFb <= fallaFacebook) throw new Error('Facebook dijo que no');
+      hechas.facebook.push({ nombre: video.toString(), tipo });
+      return { id: `fb-${video}` };
+    },
+  };
+}
+
+const CORRIDA = (api, libro, extra = {}) => publicarPiezas({
+  api, manifiesto: PIEZAS, libro, activo: true, sinHorario: true, ahora: A_LAS('16:00'),
+  leerVideo: (a) => Buffer.from(a), guardar: () => {}, log: () => {}, esperar: async () => {}, ...extra,
+});
+
+test('el mismo video sale en Instagram y en Facebook, y cada uno se anota en su libro', async () => {
+  const api = apiDoble();
+  const libro = libroNuevo();
+  const r = await CORRIDA(api, libro);
+  assert.equal(r.publicadas.length, 3);
+  assert.equal(api.hechas.instagram.length, 3);
+  assert.equal(api.hechas.facebook.length, 3);
+  assert.deepEqual(api.hechas.facebook.map((h) => h.nombre), api.hechas.instagram.map((h) => h.nombre));
+  assert.ok(libro.instagram[claveDePieza('noticia1', A_LAS('16:00'))]);
+  assert.ok(libro.facebookVideos[claveDePieza('noticia1', A_LAS('16:00'))]);
+});
+
+test('los reels van como reel y las historias como historia, en las dos redes', async () => {
+  const api = apiDoble();
+  await CORRIDA(api, libroNuevo());
+  const tipos = (lista) => Object.fromEntries(lista.map((h) => [h.nombre, h.tipo]));
+  assert.deepEqual(tipos(api.hechas.instagram), tipos(api.hechas.facebook));
+  assert.equal(tipos(api.hechas.facebook)['noticia1.mp4'], 'REELS');
+  assert.equal(tipos(api.hechas.facebook)['clima-manana.mp4'], 'STORIES');
+});
+
+test('si falla Instagram, no se publica en Facebook: quedaría un video distinto en cada red', async () => {
+  const api = apiDoble({ fallaInstagram: true });
+  const libro = libroNuevo();
+  const r = await CORRIDA(api, libro);
+  assert.equal(api.hechas.facebook.length, 0);
+  assert.equal(r.publicadas.length, 0);
+  assert.equal(libro.facebookVideos[claveDePieza('noticia1', A_LAS('16:00'))], undefined);
+});
+
+test('si Facebook falla una vez, se reintenta y sale', async () => {
+  const api = apiDoble({ fallaFacebook: 1 });
+  const libro = libroNuevo();
+  const r = await CORRIDA(api, libro);
+  assert.equal(r.fallos.length, 0);
+  assert.equal(api.hechas.facebook.length, 3);
+});
+
+test('si Facebook no anda nunca, Instagram igual sale y se avisa', async () => {
+  const api = apiDoble({ fallaFacebook: 99 });
+  const libro = libroNuevo();
+  const r = await CORRIDA(api, libro);
+  assert.equal(api.hechas.instagram.length, 3, 'no puede perderse lo de Instagram por Facebook');
+  assert.equal(r.publicadas.length, 3);
+  assert.ok(r.fallos.length >= 1 && r.fallos.every((f) => f.red === 'facebook'));
+});
+
+test('sólo Facebook: se publica lo que Facebook no tiene, aunque Instagram ya lo tenga', async () => {
+  const api = apiDoble();
+  const libro = libroNuevo();
+  anotar(libro, 'instagram', claveDePieza('noticia1', A_LAS('16:00')), {});
+  const r = await CORRIDA(api, libro, { destinos: ['facebook'] });
+  assert.equal(api.hechas.instagram.length, 0);
+  assert.equal(api.hechas.facebook.length, 3);
+  assert.equal(r.publicadas.length, 3);
+});
+
+test('lo que Facebook ya tiene no se vuelve a subir', async () => {
+  const api = apiDoble();
+  const libro = libroNuevo();
+  anotar(libro, 'facebookVideos', claveDePieza('clima-manana', A_LAS('16:00')), {});
+  await CORRIDA(api, libro);
+  assert.ok(!api.hechas.facebook.some((h) => h.nombre === 'clima-manana.mp4'));
+  assert.equal(api.hechas.instagram.length, 3);
 });

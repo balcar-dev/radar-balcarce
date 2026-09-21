@@ -102,8 +102,16 @@ async function piezas() {
     return;
   }
   const libro = leer(LIBRO, libroNuevo());
+  // --destino=instagram | facebook | ambas (por defecto). La primera red de la
+  // lista es la que manda: decide si la pieza está pendiente.
+  const destino = (process.argv.find((a) => a.startsWith('--destino=')) ?? '--destino=ambas').slice(10);
+  const destinos = { ambas: ['instagram', 'facebook'], instagram: ['instagram'], facebook: ['facebook'] }[destino];
+  if (!destinos) {
+    console.error(`  Destino desconocido: ${destino}. Usá instagram, facebook o ambas.`);
+    process.exit(2);
+  }
   const r = await publicarPiezas({
-    api, manifiesto, libro, activo: ACTIVO,
+    api, manifiesto, libro, activo: ACTIVO, destinos,
     sinHorario: process.argv.includes('--sin-horario'),
     leerVideo: (archivo) => fs.readFileSync(path.join(carpeta, archivo)),
     guardar: () => fs.writeFileSync(LIBRO, JSON.stringify(libro, null, 2)),
@@ -116,6 +124,6 @@ if (modo === '--verificar') await verificar();
 else if (modo === '--facebook') await facebook();
 else if (modo === '--piezas') await piezas();
 else {
-  console.log('Uso: node redes/publicar.mjs --verificar | --facebook | --piezas [--sin-horario]');
+  console.log('Uso: node redes/publicar.mjs --verificar | --facebook | --piezas [--sin-horario] [--destino=ambas|instagram|facebook]');
   process.exit(2);
 }

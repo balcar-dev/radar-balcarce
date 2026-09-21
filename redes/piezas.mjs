@@ -145,9 +145,11 @@ export function notasUsadasHoy(libro, fecha = new Date()) {
  * @param {object} o.libro      lo ya publicado
  * @param {boolean} [o.sinHorario] para probar a mano: todas las que falten
  */
-export function piezasQueTocan({ piezas, libro, ahora = new Date(), sinHorario = false, ventana = VENTANA_MINUTOS, porCorrida = POR_CORRIDA }) {
+export function piezasQueTocan({
+  piezas, libro, ahora = new Date(), sinHorario = false, ventana = VENTANA_MINUTOS, porCorrida = POR_CORRIDA, red = 'instagram',
+}) {
   return [...piezas]
-    .filter((p) => !yaPublicada(libro, 'instagram', claveDePieza(p.nombre, ahora)))
+    .filter((p) => !yaPublicada(libro, red, claveDePieza(p.nombre, ahora)))
     .filter((p) => sinHorario || enHora(p.hora, ahora, ventana))
     .sort((a, b) => aMinutos(a.hora) - aMinutos(b.hora))
     .slice(0, sinHorario ? piezas.length : porCorrida);
