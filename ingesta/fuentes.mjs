@@ -503,6 +503,71 @@ export const NOMBRES_PROPIOS = [
   'UNMdP', 'ACA', 'TC', 'TN', 'APINTA', 'IOMA', 'PBA',
 ];
 
+// Los temas que se siguen en el tiempo.
+//
+// Una sección agrupa por tipo de noticia; un tema agrupa por historia. En un
+// pueblo eso vale más que en un diario nacional: las historias duran meses y
+// la gente quiere saber cómo siguió aquello que leyó en marzo. Hoy el que
+// entra por una nota del autódromo no tiene forma de ver las otras once.
+//
+// Son pocos a propósito. Un tema con dos notas no es un tema, es una
+// etiqueta suelta; y cincuenta etiquetas es lo mismo que ninguna. Se agrega
+// uno cuando la historia ya demostró que vuelve.
+//
+// Las palabras van completas: acá "escuela" sola engancharía media portada.
+export const TEMAS = [
+  {
+    nombre: 'El autódromo',
+    ranura: 'autodromo',
+    palabras: ['autodromo', 'autódromo', 'juan manuel fangio', 'circuito de balcarce'],
+  },
+  {
+    nombre: 'Ferroviarios',
+    ranura: 'ferroviarios',
+    palabras: ['ferroviarios'],
+  },
+  {
+    nombre: 'TC Pick Up',
+    ranura: 'tc-pick-up',
+    palabras: ['tc pick up', 'pick up en balcarce'],
+  },
+  {
+    nombre: 'El Concejo Deliberante',
+    ranura: 'concejo',
+    palabras: ['concejo deliberante', 'concejal', 'concejales'],
+  },
+  {
+    nombre: 'El INTA',
+    ranura: 'inta',
+    palabras: ['inta', 'instituto nacional de tecnologia agropecuaria'],
+  },
+  {
+    nombre: 'El Cerro El Triunfo',
+    ranura: 'cerro',
+    palabras: ['cerro el triunfo', 'el cerro'],
+  },
+  {
+    nombre: 'Bomberos Voluntarios',
+    ranura: 'bomberos',
+    palabras: ['bomberos voluntarios', 'cuartel de bomberos'],
+  },
+  {
+    nombre: 'El hospital',
+    ranura: 'hospital',
+    palabras: ['hospital felipe glasman', 'hospital municipal', 'hospital de balcarce'],
+  },
+  {
+    nombre: 'Las rutas',
+    ranura: 'rutas',
+    palabras: ['ruta 226', 'ruta 55', 'ruta provincial 55', 'ruta nacional 226'],
+  },
+  {
+    nombre: 'Fangio',
+    ranura: 'fangio',
+    palabras: ['fangio', 'museo fangio'],
+  },
+];
+
 // Farmacias que el directorio del Colegio no lista, cargadas a mano.
 //
 // El cronograma de turnos las nombra igual, así que sin esto salen sin

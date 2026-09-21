@@ -1,6 +1,6 @@
-import { obtenerDatos, obtenerNota, cuando, datosSeccion, nombreCorto } from '@/lib/datos';
+import { obtenerDatos, obtenerNota, cuando, datosSeccion, nombreCorto, temasVivos } from '@/lib/datos';
 import {
-  PlacaSeccion, Etiqueta, FilaNota, Cierre, Invitacion, Firma,
+  PlacaSeccion, Etiqueta, FilaNota, Cierre, Invitacion, Firma, TemasDeLaNota,
 } from '@/components/piezas';
 import Compartir from '@/components/compartir';
 import { notFound } from 'next/navigation';
@@ -20,6 +20,7 @@ export default function PaginaNota({ params }) {
   if (!n) notFound();
 
   const s = datosSeccion(n.seccion);
+  const temas = temasVivos();
   const relacionadas = obtenerDatos().notas
     .filter((o) => o.seccion === n.seccion && o.id !== n.id)
     .slice(0, 4);
@@ -43,6 +44,7 @@ export default function PaginaNota({ params }) {
           <p style={{ fontSize: 16, lineHeight: 1.7, marginTop: 22, color: 'var(--texto)' }}>{n.guion}</p>
         )}
 
+        <TemasDeLaNota temas={n.temas} catalogo={temas} />
         <Compartir titulo={n.titulo} />
         <Firma nota={n} />
 

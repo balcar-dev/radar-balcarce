@@ -255,3 +255,27 @@ export function Firma({ nota }) {
     </p>
   );
 }
+
+/**
+ * Los temas que toca una nota, para poder seguir la historia.
+ *
+ * Una sección agrupa por tipo de noticia; un tema, por historia. El que
+ * entra por una nota del autódromo tiene que poder ver las otras once.
+ */
+export function TemasDeLaNota({ temas = [], catalogo = [] }) {
+  const suyos = catalogo.filter((t) => temas.includes(t.ranura));
+  if (!suyos.length) return null;
+
+  return (
+    <div className="temas-nota">
+      <span className="meta">Seguí el tema</span>
+      <div className="chips-tema">
+        {suyos.map((t) => (
+          <a key={t.ranura} href={`/tema/${t.ranura}`} className="chip-tema">
+            {t.nombre} <span>{t.cuantas}</span>
+          </a>
+        ))}
+      </div>
+    </div>
+  );
+}

@@ -6,7 +6,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import {
-  NOMBRES_PROPIOS, FIGURAS, FARMACIAS_A_MANO, BALCARCE, FUENTES, FUENTES_NACIONALES, PALABRAS_LOCALES, REGLAS_SECCION, REGLAS_SEMAFORO,
+  NOMBRES_PROPIOS, FIGURAS, TEMAS, FARMACIAS_A_MANO, BALCARCE, FUENTES, FUENTES_NACIONALES, PALABRAS_LOCALES, REGLAS_SECCION, REGLAS_SEMAFORO,
 } from './fuentes.mjs';
 
 export const TODAS_LAS_FUENTES = [...FUENTES, ...FUENTES_NACIONALES];
@@ -368,6 +368,12 @@ const PALABRAS_DEBILES = new Set([
   'partido', 'descenso', 'tenis', 'copa', 'liga', 'gol',
   'muestra', 'exposicion', 'exposición', 'paso', 'box',
 ]);
+
+/** Los temas de larga duración que toca esta nota. Suele ser ninguno. */
+function temasDe(nota) {
+  const texto = normalizar(`${nota.titulo} ${nota.cuerpo.slice(0, 600)}`);
+  return TEMAS.filter((t) => t.palabras.some((p) => contiene(texto, p))).map((t) => t.ranura);
+}
 
 function clasificar(nota) {
   const texto = normalizar(`${nota.titulo} ${nota.categorias.join(' ')} ${nota.cuerpo.slice(0, 400)}`);
@@ -966,6 +972,7 @@ export async function ingestar({
       medio: g.principal.medio,
       medios: g.medios,
       seccion,
+      temas: temasDe(g.principal),
       semaforo: sem.color,
       motivo: sem.motivo,
       relevancia: rel,

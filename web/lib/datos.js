@@ -65,6 +65,23 @@ export function ordenarPortada(notas = []) {
   return { principal, resto: porHora.filter((n) => n.id !== principal.id) };
 }
 
+/** Los temas que hoy tienen notas, del que más tiene al que menos. */
+export function temasVivos() {
+  return obtenerDatos().temas ?? [];
+}
+
+/** El nombre de un tema, o null si esa ranura no existe. */
+export function nombreDeTema(ranura) {
+  return temasVivos().find((t) => t.ranura === ranura)?.nombre ?? null;
+}
+
+/** Las notas de un tema, de la más nueva a la más vieja. */
+export function porTema(ranura) {
+  return obtenerDatos().notas
+    .filter((n) => n.temas?.includes(ranura))
+    .sort((a, b) => new Date(b.fecha) - new Date(a.fecha));
+}
+
 export function haceCuanto(fechaISO) {
   const min = Math.round((Date.now() - new Date(fechaISO).getTime()) / 60000);
   if (min < 1) return 'recién';

@@ -20,6 +20,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { NUMEROS, tocaHoy, diaDeEstaSemana, diaDeTurno, comoISO } from '../../ingesta/utiles.mjs';
 import { avisosDelClima } from '../../ingesta/alertas.mjs';
+import { TEMAS } from '../../ingesta/fuentes.mjs';
 
 const AQUI = import.meta.dirname;
 const DATOS_PANEL = path.join(AQUI, '..', '..', 'panel', 'datos');
@@ -110,6 +111,10 @@ function notaPublicada(n) {
     // Que parte de lo que publicamos lo redacte una IA no es algo para
     // esconder en la letra chica: el día que alguien lo descubra por su
     // cuenta, va a parecer que lo escondíamos.
+    // Los temas de larga duración que toca. En un pueblo las historias
+    // duran meses: el que entra por una nota del autódromo tiene que
+    // poder ver las otras once.
+    temas: n.temas ?? [],
     como: st,
   };
 }
@@ -135,6 +140,12 @@ const salida = {
   generado: new Date().toISOString(),
   notas,
   secciones: [...new Set(notas.map((n) => n.seccion))],
+  // Sólo los temas que hoy tienen al menos dos notas publicadas: uno con
+  // una sola nota no es un tema, es una etiqueta suelta.
+  temas: TEMAS
+    .map((t) => ({ ...t, palabras: undefined, cuantas: notas.filter((n) => n.temas?.includes(t.ranura)).length }))
+    .filter((t) => t.cuantas >= 2)
+    .sort((a, b) => b.cuantas - a.cuantas),
   clima: ultima.clima ?? null,
   // Los avisos se calculan acá y no en el navegador: la web es estática y
   // así el aviso ya está en el HTML, sin esperar a que cargue nada.

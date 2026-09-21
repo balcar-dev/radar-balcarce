@@ -467,6 +467,43 @@ a.telefono:hover { border-color: var(--rojo); color: inherit; }
   margin-top: 30px; padding-top: 20px; border-top: 1px solid var(--linea-suave);
 }
 
+/* -------------------------------------------------------------- temas */
+
+/* Los temas al pie de la nota. El número al lado dice cuántas notas hay:
+   sin eso, un tema con dos notas y uno con quince se ven igual. */
+.temas-nota { margin-top: 26px; }
+.temas-nota .meta { display: block; margin-bottom: 9px; }
+.chips-tema { display: flex; gap: 8px; flex-wrap: wrap; }
+.chip-tema {
+  display: inline-flex; align-items: center; gap: 7px;
+  padding: 7px 13px; border-radius: 16px;
+  border: 1px solid var(--linea); background: var(--crema);
+  font-size: 13.5px; font-weight: 600; color: var(--texto); text-decoration: none;
+}
+.chip-tema:hover { border-color: var(--tinta); color: var(--tinta); }
+.chip-tema span {
+  font-size: 11.5px; font-weight: 700; color: var(--suave);
+  font-variant-numeric: tabular-nums;
+}
+
+/* El encabezado de la página de un tema. */
+.chapa-tema { padding-bottom: 18px; border-bottom: 2px solid var(--tinta); }
+.chapa-tema h1 {
+  font-family: "Fraunces", Georgia, serif; font-size: clamp(30px, 6vw, 42px);
+  font-weight: 900; line-height: 1.08; letter-spacing: -0.025em;
+  margin: 6px 0 0; color: var(--tinta);
+}
+.chapa-tema .mini { margin-top: 8px; color: var(--suave); font-size: 13.5px; }
+
+/* La tira de temas de la portada. Se desliza en el celular. */
+.tira-temas {
+  margin-top: 20px;
+  display: flex; gap: 8px; overflow-x: auto; padding-bottom: 4px;
+  scrollbar-width: none; -ms-overflow-style: none;
+}
+.tira-temas::-webkit-scrollbar { display: none; }
+.tira-temas .chip-tema { flex: none; }
+
 /* Compartir la nota. Los dos botones son del mismo tamaño y el de
    WhatsApp lleva su verde, que es el color por el que la gente lo
    encuentra sin leer. 44px de alto: es el mínimo para que un dedo le

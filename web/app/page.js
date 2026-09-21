@@ -1,4 +1,6 @@
-import { obtenerDatos, cuando, ordenarPortada, SECCIONES } from '@/lib/datos';
+import {
+  obtenerDatos, cuando, ordenarPortada, temasVivos, SECCIONES,
+} from '@/lib/datos';
 import {
   TarjetaFarmacia, TarjetaBuzon,
   Etiqueta, TituloSeccion, FilaNota, Evento,
@@ -20,6 +22,8 @@ export default function Portada() {
     .map((s) => [s.nombre, porSeccion[s.nombre]])
     .filter(([, notas]) => notas?.length)
     .concat(Object.entries(porSeccion).filter(([nombre]) => !SECCIONES.some((s) => s.nombre === nombre)));
+
+  const temas = temasVivos().slice(0, 8);
 
   const eventos = (d.agenda?.municipio ?? []).slice(0, 3);
 
@@ -75,6 +79,20 @@ export default function Portada() {
               {principal.copete && <p>{principal.copete}</p>}
             </article>
           )}
+          {/* Los temas que se siguen. Una sección agrupa por tipo de
+              noticia; un tema, por historia. En un pueblo las historias
+              duran meses, y el que entra por una nota del autódromo no
+              tenía forma de ver las otras diez. */}
+          {temas.length > 0 && (
+            <nav className="tira-temas" aria-label="Temas que seguimos">
+              {temas.map((t) => (
+                <a key={t.ranura} href={`/tema/${t.ranura}`} className="chip-tema">
+                  {t.nombre} <span>{t.cuantas}</span>
+                </a>
+              ))}
+            </nav>
+          )}
+
 
           {secundarias.length > 0 && (
             <>

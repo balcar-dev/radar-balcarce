@@ -10,7 +10,9 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import path from 'node:path';
 import { TODAS_LAS_FUENTES } from '../ingesta/ingesta.mjs';
-import { REGLAS_SECCION, REGLAS_SEMAFORO, FARMACIAS_A_MANO } from '../ingesta/fuentes.mjs';
+import {
+  REGLAS_SECCION, REGLAS_SEMAFORO, FARMACIAS_A_MANO, TEMAS,
+} from '../ingesta/fuentes.mjs';
 
 const AQUI = import.meta.dirname;
 const RAIZ = path.join(AQUI, '..');
@@ -89,6 +91,28 @@ test('las farmacias cargadas a mano tienen dirección', () => {
     assert.equal(clave, clave.toLowerCase(), 'la clave tiene que estar normalizada: ' + clave);
     assert.ok(f.nombre, clave + ' sin nombre');
     assert.ok(f.direccion, clave + ' sin dirección');
+  }
+});
+
+test('cada tema tiene nombre, ranura y palabras', () => {
+  for (const t of TEMAS) {
+    assert.ok(t.nombre, 'tema sin nombre');
+    assert.match(t.ranura, /^[a-z0-9-]+$/, `ranura rara en ${t.nombre}: ${t.ranura}`);
+    assert.ok(t.palabras?.length, `${t.nombre} sin palabras`);
+    for (const p of t.palabras) {
+      assert.equal(p, p.toLowerCase(), `la palabra va en minúscula: "${p}"`);
+      assert.ok(p.length >= 4, `palabra demasiado corta en ${t.nombre}: "${p}"`);
+    }
+  }
+});
+
+test('no hay dos temas con la misma ranura', () => {
+  // La ranura es la dirección de la página: /tema/autodromo. Dos iguales y
+  // una de las dos no existe.
+  const vistas = new Set();
+  for (const t of TEMAS) {
+    assert.ok(!vistas.has(t.ranura), `ranura repetida: ${t.ranura}`);
+    vistas.add(t.ranura);
   }
 });
 
