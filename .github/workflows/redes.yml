@@ -2,7 +2,7 @@
 #
 # CADA CORRIDA hace tres cosas:
 #
-#   1. Facebook: si hay una nota fuerte y reciente, publica UNA (dos por día como
+#   1. Facebook: si hay una nota fuerte y reciente, publica UNA (cinco por día como
 #      máximo, entre las 8 y las 22, nunca Política ni Policiales).
 #   2. El reloj: mira qué historia o reel de Instagram le toca a esta hora
 #      (clima, farmacia, noticias, podcast…) y todavía no salió hoy.

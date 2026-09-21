@@ -48,8 +48,9 @@ cuando las tengas guardadas en otro lado.
 - **Cada 30 minutos**: actualiza la web y la publica.
 - **Varias veces por día** (el reloj de las redes): publica **una** nota en la
   página de Facebook, si hay alguna fuerte y reciente (cinco por día como máximo,
-  entre las 8 y las 22, nunca Política ni Policiales), y sube a Instagram la
-  historia o el reel que le toca a esa hora (clima, farmacia, noticias, podcast).
+  entre las 8 y las 22, nunca Política ni Policiales), y sube a Instagram y a la
+  página de Facebook la historia o el reel que le toca a esa hora (clima,
+  farmacia, noticias, podcast; el mismo video en las dos redes).
   GitHub no es puntual: una pieza puede salir hasta 2 horas tarde.
 
 ### A mano
@@ -108,13 +109,12 @@ tailscale funnel --https=443 off
 
 1. Mirar los primeros días cómo salen las piezas (voz, horarios, cantidad) y
    ajustar.
-2. Historias y reels también en la página de Facebook.
-3. Threads (pide su propio token).
-4. Cambiar la categoría de Instagram a "Sitio web de noticias y medios" (desde
+2. Threads (pide su propio token).
+3. Cambiar la categoría de Instagram a "Sitio web de noticias y medios" (desde
    el celular).
-5. Notas más largas, con el texto completo de las fuentes.
-6. Borrar el sitio duplicado en la cuenta vieja de Vercel (`radar-balcarce.vercel.app`).
-7. Sacar el panel de esta PC, para que no dependa de que esté prendida.
+4. Notas más largas, con el texto completo de las fuentes.
+5. Borrar el sitio duplicado en la cuenta vieja de Vercel (`radar-balcarce.vercel.app`).
+6. Sacar el panel de esta PC, para que no dependa de que esté prendida.
 
 Ya resuelto: el dominio propio `radarbalcarce.com` (21/09), la clave de Gemini
 (ahora hay dos, una para redactar y una para redes), y el permiso de Meta para

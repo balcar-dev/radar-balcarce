@@ -436,6 +436,11 @@ aprendió.
   automatización; se cambia desde el celular.
 - Las pestañas de Chrome en segundo plano no responden a capturas.
 
+**Historias y reels también en la página de Facebook (21/09, noche):** el mismo
+video que va a Instagram sale como historia o reel de la página, a la misma hora.
+Probado en vivo (una historia y el reel del podcast). Instagram manda: si falla
+ahí no se intenta en Facebook.
+
 **Facebook, conservador (decisión del 21/09):** 5 posteos por día con relevancia 75 o más,
 no todas las notas de la web (unas 100 por día). Más adelante se van a mezclar con
 las notas propias y originales de la redacción.
@@ -457,5 +462,4 @@ las notas propias y originales de la redacción.
 **Lo que falta**
 
 Ver "Lo que falta" al final de `REDES.md`: puntualidad exacta si hiciera falta,
-historias y reels en Facebook, Threads, la categoría de Instagram y las notas
-largas.
+Threads, la categoría de Instagram y las notas largas.

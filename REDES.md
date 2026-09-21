@@ -81,9 +81,10 @@ y el video sí se le puede entregar directo. Como no queremos alojar archivos
 en ningún lado, todo va en video. Por eso el feed de Instagram con fotos está
 apagado (`feedPorDia: 0` en `reels/plan.mjs`).
 
-**Facebook recibe posteos con enlace.** La tarjeta con la imagen y el titular
-la arma sola con la imagen de NUESTRA página (`web/lib/tarjeta.js`): nunca la
-foto de otro medio.
+**Facebook recibe dos cosas.** Por un lado, posteos con enlace: la tarjeta con la
+imagen y el titular la arma sola con la imagen de NUESTRA página
+(`web/lib/tarjeta.js`), nunca la foto de otro medio. Por otro, **los mismos
+videos de Instagram como historias y reels de la página**, a la misma hora.
 
 ### Qué sale hoy y a qué hora (hora de Balcarce)
 
@@ -103,7 +104,8 @@ El texto lleva el titular, el copete y `Fuente: …`, más `Resumen hecho con IA
 cuando la redactó la IA. La regla de que cada nota diga quién la escribió
 vale también afuera del sitio.
 
-**Instagram, en video.** Estas son las piezas del día y su horario:
+**Historias y reels: Instagram y la página de Facebook, el mismo video.** Estas
+son las piezas del día y su horario:
 
 | Hora | Pieza | Tipo | Qué es |
 |---|---|---|---|
@@ -147,6 +149,11 @@ Cómo se eligen (todo en `redes/elegir.mjs`, con pruebas):
 - **Las piezas se arman en GitHub** con la PC apagada (workflow **Piezas**).
   Usan el clima, la farmacia y las notas de `web/data/portada.json`, o sea lo
   que ya se publicó: una pieza nunca habla de algo que el semáforo frenó.
+- **Facebook (historias y reels de la página)**: el mismo video, con el mismo
+  método (se abre la subida, se manda el archivo y se cierra). Instagram manda:
+  si falla en Instagram no se intenta en Facebook (quedaría un video distinto en
+  cada red); si falla en Facebook se reintenta 3 veces y, si igual no anda, se
+  avisa sin perder lo de Instagram.
 - **Instagram**: el video se sube directo en dos pasos (Instagram da una
   dirección de subida y se le manda el archivo). Las historias no llevan
   texto; los reels llevan el titular y `Más en radarbalcarce.com`.
@@ -164,7 +171,8 @@ con la PC apagada. En cada corrida hace tres cosas:
    publicado (`web/data/redes.json`) y dice qué historia o reel de Instagram le
    toca a esta hora y todavía no salió hoy.
 3. **Si toca alguna**: la arma con la voz de Gemini (`reels/plan.mjs --solo=…`) y
-   la sube a Instagram. Después guarda el libro en el repositorio.
+   la sube a Instagram y a la página de Facebook. Después guarda el libro en el
+   repositorio.
 
 Cuando no toca ninguna pieza, la corrida termina en segundos y no instala nada.
 
@@ -185,9 +193,9 @@ servicio y un token de GitHub.
 | Cosa | Estado |
 |---|---|
 | Posteos en Facebook | Automático |
-| Historias y reels en Instagram | Automático (reloj) |
+| Historias y reels en Instagram y en la página de Facebook | Automático (reloj) |
 | Armar las piezas a demanda | Actions → **Piezas** → Run workflow |
-| Publicar una pieza a mano | Actions → **Piezas**, con `solo` y `publicar` tildado |
+| Publicar una pieza a mano | Actions → **Piezas**, con `solo`, `publicar` tildado y `destino` (ambas, instagram o facebook) |
 | Comprobar el token | Actions → **Redes** → Run workflow → `verificar` |
 
 Todo esto sólo **publica** si la variable `REDES_ACTIVAS` vale `Si`; con otra cosa
@@ -287,12 +295,11 @@ tiene alternativa: si falta, los reels no arrancan. Los tokens y las claves
 
 1. **Puntualidad exacta**, si hiciera falta: un servicio externo que dispare el
    reloj a la hora justa (hoy una pieza puede salir hasta 2 horas tarde).
-2. **Historias y reels también en la página de Facebook.**
-3. **Threads**: pide su propio token, no sirve el de Meta.
-4. **La categoría de Instagram** sigue en "Blog personal" (no se ve en el
+2. **Threads**: pide su propio token, no sirve el de Meta.
+3. **La categoría de Instagram** sigue en "Blog personal" (no se ve en el
    perfil). Se cambia desde el celular a "Sitio web de noticias y medios de
    comunicación".
-5. **La agenda de la semana en historia** sólo se arma en la PC, porque
+4. **La agenda de la semana en historia** sólo se arma en la PC, porque
    `agenda.json` no está en GitHub.
-6. **Notas más largas**, con el texto completo de las fuentes.
-7. Mirar los primeros días cómo salen las piezas y ajustar horarios y cantidad.
+5. **Notas más largas**, con el texto completo de las fuentes.
+6. Mirar los primeros días cómo salen las piezas y ajustar horarios y cantidad.
