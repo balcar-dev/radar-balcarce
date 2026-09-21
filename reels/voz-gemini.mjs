@@ -88,7 +88,7 @@ const ESPACIADO = 6000;
  * tiempos de cada palabra resueltos por alineación (ver alinear.mjs).
  */
 export async function decirGemini(texto, destino, {
-  voz = 'Kore', indicacion = INDICACION, intentos = 3,
+  voz = 'Kore', indicacion = INDICACION, intentos = 4,
 } = {}) {
   const k = clave();
   if (!k) throw new Error('falta GEMINI_API_KEY_REDES (en el entorno o en .env)');
@@ -120,12 +120,26 @@ export async function decirGemini(texto, destino, {
       if (intento < intentos) { await dormir((seg + 2) * 1000); continue; }
       throw ultimoError;
     }
-    if (!res.ok) { anotarPedido(false); throw new Error(`HTTP ${res.status}: ${(await res.text()).slice(0, 300)}`); }
+    if (!res.ok) {
+      anotarPedido(false);
+      ultimoError = new Error(`HTTP ${res.status}: ${(await res.text()).slice(0, 300)}`);
+      // 500, 502, 503 y 504 son "el servicio está ocupado o se cayó un momento":
+      // vale la pena esperar y volver a pedir antes de resignarse.
+      if (res.status >= 500 && intento < intentos) { await dormir(4000 * intento); continue; }
+      throw ultimoError;
+    }
     anotarPedido(true);
 
     const j = await res.json();
     const parte = j.candidates?.[0]?.content?.parts?.find((p) => p.inlineData);
-    if (!parte) throw new Error(`sin audio en la respuesta: ${JSON.stringify(j).slice(0, 200)}`);
+    if (!parte) {
+      // El modelo de voz a veces contesta sin audio (finishReason "OTHER") y al
+      // pedir de nuevo el mismo texto responde bien. Se vio el 21/09 en GitHub:
+      // una pieza cayó a Elena por un único intento fallido.
+      ultimoError = new Error(`sin audio en la respuesta: ${JSON.stringify(j).slice(0, 200)}`);
+      if (intento < intentos) { await dormir(3000 * intento); continue; }
+      throw ultimoError;
+    }
 
     // Viene PCM 16 bits a 24 kHz, mono, sin cabecera.
     const crudo = `${destino}.pcm`;
