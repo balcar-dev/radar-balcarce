@@ -1,4 +1,6 @@
-import { obtenerDatos, cuando, porRanura, nombreCorto, SECCIONES } from '@/lib/datos';
+import {
+  obtenerDatos, cuando, porRanura, nombreCorto, ordenarPortada, SECCIONES,
+} from '@/lib/datos';
 import {
   PlacaSeccion, Etiqueta, FilaNota, Cierre, Invitacion,
 } from '@/components/piezas';
@@ -50,9 +52,12 @@ export default function PaginaSeccion({ params }) {
   if (pagina > paginas) notFound();
 
   const notas = todas.slice((pagina - 1) * POR_PAGINA, pagina * POR_PAGINA);
-  // La placa grande sólo en la primera página: en la tercera, destacar una
-  // nota vieja sería mentir sobre su importancia.
-  const [principal, ...resto] = pagina === 1 ? notas : [null, ...notas];
+  // La grande sólo en la primera página, y elegida por puntaje igual que
+  // en la portada: en la tercera, destacar una nota vieja sería mentir
+  // sobre su importancia.
+  const { principal, resto } = pagina === 1
+    ? ordenarPortada(notas)
+    : { principal: null, resto: notas };
   const direccion = (p) => direccionDePagina(s.ranura, p);
 
   return (

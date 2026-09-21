@@ -26,6 +26,45 @@ export function obtenerNota(id) {
   return obtenerDatos().notas.find((n) => n.id === id) ?? null;
 }
 
+/** Cuántas horas atrás se sigue considerando "de hoy" para la portada. */
+const VENTANA_HORAS = 24;
+
+/**
+ * Elige qué nota va grande arriba, y devuelve el resto en orden de hora.
+ *
+ * La lista va por hora, como cualquier diario: lo último primero. Pero la
+ * nota grande no puede salir de ahí, porque entonces la elige el reloj. El
+ * 20/09 la portada abría con la que había entrado hace un minuto y la
+ * caravana para recibir al campeón balcarceño Kevin Gómez —la nota de más
+ * puntaje del día, 100 sobre 100— estaba enterrada en el medio de la lista.
+ *
+ * Así que la grande es la de más puntaje de las últimas 24 horas. El puntaje
+ * ya sabe lo que importa acá: suma 25 si es de Balcarce, 22 si un medio de
+ * afuera nombra a Balcarce, 10 por cada medio que la contó, y baja con las
+ * horas. Si no hay nada de las últimas 24 horas, manda el puntaje a secas.
+ */
+export function ordenarPortada(notas = []) {
+  const porHora = [...notas].sort((a, b) => new Date(b.fecha) - new Date(a.fecha));
+  if (!porHora.length) return { principal: null, resto: [] };
+
+  const corte = Date.now() - VENTANA_HORAS * 3600 * 1000;
+  const recientes = porHora.filter((n) => new Date(n.fecha).getTime() >= corte);
+  const ventana = recientes.length ? recientes : porHora;
+
+  // El lugar grande es de Balcarce. Con el puntaje solo, hoy la portada la
+  // abría Messi jugando en la MLS (97) por encima de Ferroviarios ganando
+  // por penales y metiéndose en la final anual (90). Messi puede estar en
+  // la portada de cualquier diario del país; Ferroviarios, no. Si no hay
+  // nada de acá en la ventana, manda el puntaje a secas.
+  const deAca = ventana.filter((n) => n.local || n.nombraBalcarce);
+  const candidatas = deAca.length ? deAca : ventana;
+
+  // Con el mismo puntaje gana la más nueva, que es el orden en que ya vienen.
+  const principal = candidatas.reduce((a, b) => (b.relevancia > a.relevancia ? b : a));
+
+  return { principal, resto: porHora.filter((n) => n.id !== principal.id) };
+}
+
 export function haceCuanto(fechaISO) {
   const min = Math.round((Date.now() - new Date(fechaISO).getTime()) / 60000);
   if (min < 1) return 'recién';

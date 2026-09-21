@@ -1,4 +1,4 @@
-import { obtenerDatos, cuando, SECCIONES } from '@/lib/datos';
+import { obtenerDatos, cuando, ordenarPortada, SECCIONES } from '@/lib/datos';
 import {
   TarjetaFarmacia, TarjetaBuzon,
   Etiqueta, TituloSeccion, FilaNota, Evento,
@@ -7,7 +7,7 @@ import { TarjetaClima } from '@/components/clima-vivo';
 
 export default function Portada() {
   const d = obtenerDatos();
-  const [principal, ...resto] = d.notas;
+  const { principal, resto } = ordenarPortada(d.notas);
   const secundarias = resto.slice(0, 4);
   const restoAgrupado = resto.slice(4);
 
