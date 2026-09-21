@@ -19,7 +19,10 @@ const PORTADA = path.join(RAIZ, 'web', 'data', 'portada.json');
 const LIBRO = path.join(RAIZ, 'web', 'data', 'redes.json');
 
 const SITIO = process.env.SITIO ?? 'https://radarbalcarce.com';
-const PAGINA = process.env.META_PAGE_ID ?? '61594865361170';
+// Ojo: NO es el número de la dirección facebook.com/profile.php?id=..., que es el
+// del perfil de la página. El de la API sale de Configuración del negocio →
+// Páginas → "Identificador".
+const PAGINA = process.env.META_PAGE_ID ?? '1254237411116171';
 const ACTIVO = process.env.REDES_ACTIVAS === 'si';
 
 function leer(archivo, porDefecto) {
