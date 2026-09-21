@@ -54,7 +54,7 @@ casos.push(['rev-automovilismo', placaNoticia({
 })]);
 
 for (const [nombre, svg] of casos) {
-  aPng(svg, path.join(import.meta.dirname, 'salida', `${nombre}.png`));
+  await aPng(svg, path.join(import.meta.dirname, 'salida', `${nombre}.png`));
   console.log('  ', nombre);
 }
 
@@ -74,5 +74,5 @@ const tira = `<svg xmlns="http://www.w3.org/2000/svg" width="${anchoTira}" heigh
   ${miniaturas.map((d, i) => `<image href="${d}" x="${HUECO + i * (ANCHO_MINI + HUECO)}" y="14"
       width="${ANCHO_MINI}" height="${ALTO_MINI}"/>`).join('')}
 </svg>`;
-aPng(tira, path.join(salida, 'tira.png'), anchoTira);
+await aPng(tira, path.join(salida, 'tira.png'), anchoTira);
 console.log('   tira.png: las seis juntas');

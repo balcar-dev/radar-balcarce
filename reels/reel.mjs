@@ -103,7 +103,7 @@ export async function armarReel({
   const ass = path.join(dir, `${nombre}.ass`);
   const mp4 = path.join(dir, `${nombre}.mp4`);
 
-  aPng(svg, png);
+  await aPng(svg, png);
   // Edge trae los tiempos de palabra de fábrica; Gemini no, y se resuelven
   // alineando el texto con los silencios del audio (alinear.mjs).
   const texto = paraLeer(guion);

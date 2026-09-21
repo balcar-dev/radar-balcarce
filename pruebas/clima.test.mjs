@@ -7,6 +7,10 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { avisosDelClima, UMBRALES } from '../ingesta/alertas.mjs';
+// plan.mjs se importa para probar que el aviso de clima sale sin esperar
+// horario. Que se pueda importar sin tener nada instalado no es
+// casualidad: el conversor a PNG se carga recién cuando se usa. Con el
+// import arriba de placa.mjs, esta prueba rompía en GitHub Actions.
 import { planDelDia } from '../reels/plan.mjs';
 import { tipoDeCielo } from '../web/lib/clima.js';
 

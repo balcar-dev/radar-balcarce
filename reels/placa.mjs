@@ -7,7 +7,6 @@
 
 import fs from 'node:fs';
 import path from 'node:path';
-import { Resvg } from '@resvg/resvg-js';
 
 export const ANCHO = 1080;
 export const ALTO = 1920;
@@ -553,7 +552,17 @@ function archivosDeFuente() {
   }
 }
 
-export function aPng(svg, destino, ancho = ANCHO) {
+/**
+ * Convierte una placa a PNG.
+ *
+ * Es async porque el conversor se carga recién acá. Dibujar una placa es
+ * SVG puro y no necesita nada instalado; convertirla sí, y es una
+ * dependencia nativa pesada. Con el import arriba del archivo, importar
+ * este módulo para leer el plan del día la arrastraba — y las pruebas
+ * rompían en GitHub Actions, donde a propósito no se instala nada.
+ */
+export async function aPng(svg, destino, ancho = ANCHO) {
+  const { Resvg } = await import('@resvg/resvg-js');
   fs.mkdirSync(path.dirname(destino), { recursive: true });
   const propias = archivosDeFuente();
   const r = new Resvg(svg, {
