@@ -116,6 +116,30 @@ test('no hay dos temas con la misma ranura', () => {
   }
 });
 
+test('el motor no necesita nada instalado', () => {
+  // Es lo que hace que GitHub Actions tarde segundos y no minutos, y que
+  // nada se rompa solo cuando una dependencia de afuera cambia. Dos veces
+  // se coló un import pesado arriba de un archivo (resvg, ffmpeg) y las
+  // pruebas rompieron en la nube andando en la máquina.
+  //
+  // Los de reels/ sí pueden usarlas, pero cargándolas cuando hacen falta
+  // y no al importar el archivo.
+  const DEL_SISTEMA = /^node:/;
+  const sucios = [];
+  for (const carpeta of ['ingesta', 'panel']) {
+    for (const archivo of fs.readdirSync(path.join(RAIZ, carpeta))) {
+      if (!archivo.endsWith(".mjs")) continue;
+      const texto = fs.readFileSync(path.join(RAIZ, carpeta, archivo), "utf8");
+      for (const m of texto.matchAll(/^import .*? from '([^']+)';/gm)) {
+        const de = m[1];
+        if (DEL_SISTEMA.test(de) || de.startsWith('.')) continue;
+        sucios.push(`${carpeta}/${archivo} importa ${de}`);
+      }
+    }
+  }
+  assert.deepEqual(sucios, [], sucios.join(' · '));
+});
+
 // ------------------------------------------------------------- los archivos
 
 /** Los archivos de código del proyecto, sin node_modules ni lo generado. */

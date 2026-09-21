@@ -13,7 +13,6 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { placaClima, placaFarmacia, placaNoticia, placaUtiles, placaAgenda, COLOR_SECCION } from './placa.mjs';
 import { avisosDelClima } from '../ingesta/alertas.mjs';
-import { armarReel } from './reel.mjs';
 import { NUMEROS } from '../ingesta/utiles.mjs';
 import { horariosDe, toca } from '../panel/horarios.mjs';
 
@@ -410,6 +409,10 @@ if (process.argv[1] && process.argv[1].endsWith('plan.mjs')) {
     const solo = (process.argv.find((a) => a.startsWith('--solo='))?.slice(7) ?? '')
       .split(',').map((s) => s.trim()).filter(Boolean);
 
+    // Se carga acá y no arriba del archivo: armar los videos necesita
+    // ffmpeg, que son ochenta megas, y leer el plan del día no. Con el
+    // import arriba, las pruebas obligaban a instalarlo en GitHub Actions.
+    const { armarReel } = await import('./reel.mjs');
     console.log('\n\x1b[1mARMANDO LOS VIDEOS\x1b[0m');
     for (const p of piezas.filter((x) => x.svg && !x.fueraDeTecho
       && (!solo.length || solo.includes(x.nombre)))) {
