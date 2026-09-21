@@ -170,8 +170,10 @@ export function guionFarmacia(turno) {
   const cual = dichas.length > 1
     ? `hay dos de turno: ${dichas.join(', y también ')}`
     : `la de turno es ${dichas[0]}`;
+  // No dice hasta qué hora está abierta: ese dato es para la web. Acá alcanza
+  // con decir cuál es la de turno.
   return `Si esta noche necesitás una farmacia en Balcarce, ${cual}. `
-    + 'Está abierta hasta mañana a las ocho y media de la mañana. Guardá el dato, que te puede salvar una madrugada.';
+    + 'Guardá el dato, que te puede salvar una madrugada.';
 }
 
 const COLOR_UTILES_ACENTO = '#8C2D18';
@@ -386,7 +388,10 @@ export function planDelDia(datos) {
   elegirHistoriasDeNotas(publicables, paraReel).forEach((n, i) => {
     piezas.push({
       tipo: 'historia', hora: `${String(10 + i * 2).padStart(2, '0')}:40`, nombre: `historia${i + 1}`,
-      titulo: n.titulo, motivo: `relevancia ${n.relevancia}`, seccion: n.seccion, sinVideo: true,
+      titulo: n.titulo, motivo: `relevancia ${n.relevancia}`, seccion: n.seccion,
+      guion: guionNoticia(n),
+      svg: placaNoticia({ seccion: n.seccion, titulo: n.titulo, cuando: n.cuando }),
+      acento: COLOR_SECCION[n.seccion] ?? '#A8371F',
     });
   });
 

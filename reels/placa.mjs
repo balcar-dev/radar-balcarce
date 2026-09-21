@@ -304,11 +304,6 @@ export function placaFarmacia({ detalle = [], farmacias = [], dia, diaSemana }) 
     y += b.alto + (doble ? 56 : 0);
     return b.svg;
   }).join('');
-  // La línea del horario: pegada al último bloque si la placa quedó larga,
-  // o a una altura fija si sobró lugar — para que no quede ni encimada ni
-  // colgando con medio metro de vacío arriba.
-  const yHorario = Math.min(1520, Math.max(y + 40, 1380));
-
   return `<svg xmlns="http://www.w3.org/2000/svg" width="${ANCHO}" height="${ALTO}" viewBox="0 0 ${ANCHO} ${ALTO}">
   ${fondo(color)}
   ${cabecera(null, color)}
@@ -316,9 +311,6 @@ export function placaFarmacia({ detalle = [], farmacias = [], dia, diaSemana }) 
   <text x="${MARGEN}" y="456" font-family="${DISPLAY}" font-size="52" font-weight="700"
         letter-spacing="-1" fill="#FFFFFF" opacity="0.8">${esc(diaSemana)} ${dia}</text>
   ${bloques}
-  <rect x="${MARGEN}" y="${yHorario}" width="${ANCHO - MARGEN * 2}" height="4" fill="${color}" opacity="0.7"/>
-  <text x="${MARGEN}" y="${yHorario + 62}" font-family="${TEXTO}" font-size="36"
-        font-weight="600" fill="${COLORES.tinta}">Abierta hasta las 8:30 de la mañana de mañana</text>
   ${pie('Colegio de Farmacéuticos de Balcarce', color)}
 </svg>`;
 }
