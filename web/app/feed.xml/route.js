@@ -11,8 +11,8 @@ export async function GET() {
   const items = d.notas.map((n) => `
     <item>
       <title>${esc(n.titulo)}</title>
-      <link>${SITIO}/nota/${n.id}</link>
-      <guid>${SITIO}/nota/${n.id}</guid>
+      <link>${SITIO}${n.ruta}</link>
+      <guid>${SITIO}${n.ruta}</guid>
       <pubDate>${new Date(n.fecha).toUTCString()}</pubDate>
       <category>${esc(n.seccion)}</category>
       <description>${esc(n.copete)}</description>

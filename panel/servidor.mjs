@@ -19,6 +19,8 @@ import {
   sesionDe, entrar, salir, paginaLogin, hayUsuarios,
 } from './acceso.mjs';
 import { TIPOS as TIPOS_BUZON, ESTADOS_SEGUIMIENTO } from './buzon.mjs';
+import { decisionHumana } from '../ingesta/utiles.mjs';
+import { verificar, resumirProblemas } from '../ingesta/verificar.mjs';
 import { horariosDe, guardarHorario, DIAS as DIAS_SEMANA } from './horarios.mjs';
 import { estadoCuota as estadoCuotaVoz } from '../reels/voz-gemini.mjs';
 import { guionNoticia } from '../reels/plan.mjs';
@@ -195,10 +197,10 @@ function vista(sesion = null) {
       // Y si nadie la miró en 72 horas, se archiva sola: una noticia de
       // hace tres días ya no es noticia, y dejarla en la cola sólo hace que
       // la cola crezca hasta volverse inmirable.
-      estado: d?.estado ?? estadoPorDefecto(n),
+      estado: decisionHumana(d) ? d.estado : estadoPorDefecto(n),
       decidioQuien: d?.por ?? null,
       decidioCuando: d?.cuando ?? null,
-      archivadaPorTiempo: !d && esVieja(n),
+      archivadaPorTiempo: !decisionHumana(d) && esVieja(n),
     };
   });
   return {
@@ -283,6 +285,7 @@ async function reescribirPendientes() {
       const d = estado.decisiones[n.id];
       if (!d) return true;              // sin tocar: se reescribe
       if (d.deIA) return false;         // ya la reescribió la IA
+      if (d.rechazadaPorVerificacion) return false; // la IA inventó algo: no se reintenta
       if (d.por && d.por !== 'ia') return false; // la tocó una persona
       return !d.guion;
     })
@@ -293,6 +296,7 @@ async function reescribirPendientes() {
   if (!cola.length) return;
 
   let hechas = 0;
+  let rechazadas = 0;
   let fallos = 0;
   for (const nota of cola) {
     const r = await reescribirConRespaldo({ ...nota, copete: nota.resumenFuente }, mecanico);
@@ -301,6 +305,29 @@ async function reescribirPendientes() {
       if (fallos >= FALLOS_PARA_CORTAR) break;
       continue; // se deja como estaba y se reintenta en el próximo ciclo
     }
+    // Lo que escribió la IA se compara contra lo que ella recibió. Si aparece
+    // un número, un nombre, un día o una cita que la fuente no trae, el texto
+    // NO se usa: la nota sigue saliendo con el resumen del medio original, que
+    // es como salía antes de que existiera la reescritura. Ver
+    // ingesta/verificar.mjs para qué se controla y por qué es estricto.
+    const control = verificar(
+      { titulo: nota.titulo, resumen: nota.resumenFuente },
+      { titulo: r.titulo, copete: r.copete, guion: r.guion },
+    );
+    if (!control.ok) {
+      const previoRechazada = estado.decisiones[nota.id] ?? {};
+      estado.decisiones[nota.id] = {
+        ...previoRechazada,
+        estado: previoRechazada.estado ?? estadoPorDefecto(nota),
+        rechazadaPorVerificacion: true,
+        problemasDeLaIA: control.problemas,
+        cuando: new Date().toISOString(),
+      };
+      rechazadas += 1;
+      console.log(`  IA rechazada · ${nota.titulo.slice(0, 50)} · ${resumirProblemas(control.problemas)}`);
+      continue;
+    }
+
     const previo = estado.decisiones[nota.id] ?? {};
     estado.decisiones[nota.id] = {
       ...previo,
@@ -315,9 +342,9 @@ async function reescribirPendientes() {
     hechas += 1;
   }
 
-  if (hechas || fallos) {
+  if (hechas || fallos || rechazadas) {
     guardarJson(F_ESTADO, estado);
-    console.log(`  reescritas ${hechas}${fallos ? ` · ${fallos} sin poder` : ''}`);
+    console.log(`  reescritas ${hechas}${fallos ? ` · ${fallos} sin poder` : ''}${rechazadas ? ` · ${rechazadas} rechazadas por la verificación` : ''}`);
   }
   if (hechas) {
     anotar(`reescribió ${hechas} ${hechas === 1 ? 'nota' : 'notas'} automáticas`, '', 'ia');
@@ -634,6 +661,12 @@ const servidor = http.createServer(async (req, res) => {
         { ...nota, copete: previo.copete ?? nota.resumenFuente },
         mecanico,
       );
+      // Lo mismo que en la reescritura automática, pero acá no se descarta:
+      // lo aprieta una persona y lo va a leer. Se guarda con el aviso de qué
+      // no cuadra con la fuente.
+      const control = r.deIA
+        ? verificar({ titulo: nota.titulo, resumen: previo.copete ?? nota.resumenFuente }, r)
+        : { ok: true, problemas: [] };
       estado.decisiones[id] = {
         ...previo,
         estado: previo.estado ?? estadoPorDefecto(nota),
@@ -641,10 +674,11 @@ const servidor = http.createServer(async (req, res) => {
         copete: r.copete,
         guion: r.guion,
         deIA: r.deIA,
+        problemasDeLaIA: control.ok ? undefined : control.problemas,
         por: quien,
         cuando: new Date().toISOString(),
       };
-      anotar(r.deIA ? 'reescrita por IA' : `reescritura: la IA falló (${r.motivoRespaldo}), quedó la mecánica`, nota.titulo, quien);
+      anotar(r.deIA ? (control.ok ? 'reescrita por IA' : `reescrita por IA, con avisos: ${resumirProblemas(control.problemas)}`) : `reescritura: la IA falló (${r.motivoRespaldo}), quedó la mecánica`, nota.titulo, quien);
       guardarJson(F_ESTADO, estado);
       json(res, vista(sesion));
       return;

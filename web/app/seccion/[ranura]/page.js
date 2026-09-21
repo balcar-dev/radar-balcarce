@@ -82,14 +82,14 @@ export default function PaginaSeccion({ params }) {
 
       {principal && (
       <article className="destacada">
-        <a href={`/nota/${principal.id}`}><PlacaSeccion seccion={principal.seccion} /></a>
+        <a href={principal.ruta}><PlacaSeccion seccion={principal.seccion} /></a>
         <div className="chapa-nota" style={{ marginTop: 16 }}>
           <Etiqueta seccion={principal.seccion} />
           <span className="meta">{cuando(principal)}</span>
           <span className="punto">·</span>
           <span className="meta">{principal.medios.join(' · ')}</span>
         </div>
-        <h2><a href={`/nota/${principal.id}`}>{principal.titulo}</a></h2>
+        <h2><a href={principal.ruta}>{principal.titulo}</a></h2>
         {principal.copete && <p>{principal.copete}</p>}
       </article>
       )}

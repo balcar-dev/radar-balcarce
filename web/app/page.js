@@ -75,7 +75,7 @@ export default function Portada() {
                 <span className="meta">{principal.medios.join(' · ')}</span>
               </div>
 
-              <h2><a href={`/nota/${principal.id}`}>{principal.titulo}</a></h2>
+              <h2><a href={principal.ruta}>{principal.titulo}</a></h2>
               {principal.copete && <p>{principal.copete}</p>}
             </article>
           )}
@@ -101,7 +101,7 @@ export default function Portada() {
                 {secundarias.map((n) => (
                   <article key={n.id}>
                     <Etiqueta seccion={n.seccion} />
-                    <h3><a href={`/nota/${n.id}`}>{n.titulo}</a></h3>
+                    <h3><a href={n.ruta}>{n.titulo}</a></h3>
                     {n.copete && <p>{recortar(n.copete, 150)}</p>}
                   </article>
                 ))}

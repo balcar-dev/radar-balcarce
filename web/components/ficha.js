@@ -62,7 +62,7 @@ export function FichaDelSitio() {
  */
 export function FichaDeNota({ nota }) {
   const base = sitio();
-  const url = enlace(`/nota/${nota.id}`);
+  const url = enlace(nota.ruta);
   const datos = {
     '@context': 'https://schema.org',
     '@type': 'NewsArticle',
@@ -74,7 +74,7 @@ export function FichaDeNota({ nota }) {
     articleSection: nota.seccion,
     inLanguage: 'es-AR',
     url,
-    image: [enlace(`/nota/${nota.id}/opengraph-image`)],
+    image: [enlace(`${nota.ruta}/opengraph-image`)],
     isAccessibleForFree: true,
     publisher: { '@id': `${base}/#medio` },
     // Quién la escribió. Si el resumen lo redactó la IA se dice, igual que

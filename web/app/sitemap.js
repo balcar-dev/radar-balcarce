@@ -53,7 +53,7 @@ export default function sitemap() {
   }));
 
   const deNotas = notas.map((n) => ({
-    url: `${base}/nota/${n.id}`,
+    url: `${base}${n.ruta}`,
     lastModified: new Date(n.fecha),
     changeFrequency: 'weekly',
     priority: n.local ? 0.9 : 0.6,

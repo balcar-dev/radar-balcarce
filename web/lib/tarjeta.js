@@ -31,6 +31,9 @@ const COLOR = {
   Agro: '#6B7A2A',
   'Cultura y agenda': '#6D4BA0',
   Servicios: '#16615B',
+  Economía: '#9A6A12',
+  Tecnología: '#2563A8',
+  País: '#4A4F4B',
 };
 const POR_DEFECTO = '#14161A';
 

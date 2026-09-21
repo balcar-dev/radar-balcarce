@@ -5,9 +5,11 @@ import {
 import Compartir from '@/components/compartir';
 import { FichaDeNota, Migas } from '@/components/ficha';
 import { notFound } from 'next/navigation';
+import { parteDeNota } from '@/lib/ruta';
 
 export function generateStaticParams() {
-  return obtenerDatos().notas.map((n) => ({ id: n.id }));
+  // El parámetro es "titular-en-guiones-id". Ver lib/ruta.js.
+  return obtenerDatos().notas.map((n) => ({ id: parteDeNota(n) }));
 }
 
 /**
@@ -24,7 +26,7 @@ export function generateMetadata({ params }) {
   const n = obtenerNota(params.id);
   if (!n) return {};
 
-  const camino = `/nota/${n.id}`;
+  const camino = n.ruta;
   const descripcion = n.copete || `${n.seccion} · Lo informaron ${n.medios.join(' y ')}.`;
 
   return {
@@ -59,7 +61,7 @@ export default function PaginaNota({ params }) {
       <FichaDeNota nota={n} />
       <Migas pasos={[
         { nombre: s.nombre, camino: `/seccion/${s.ranura}` },
-        { nombre: n.titulo, camino: `/nota/${n.id}` },
+        { nombre: n.titulo, camino: n.ruta },
       ]} />
       <article className="cuerpo-nota">
         <div className="chapa-nota">

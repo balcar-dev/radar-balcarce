@@ -5,12 +5,17 @@
 
 import fs from 'node:fs';
 import path from 'node:path';
+import { rutaDeNota, idDeRuta } from './ruta.js';
 
 const ARCHIVO = path.join(process.cwd(), 'data', 'portada.json');
 
 export function obtenerDatos() {
   try {
-    return JSON.parse(fs.readFileSync(ARCHIVO, 'utf8'));
+    const d = JSON.parse(fs.readFileSync(ARCHIVO, 'utf8'));
+    // La dirección de cada nota se arma acá y no en los datos: así sigue al
+    // titular si se corrige, y ninguna página tiene que saber cómo se arma.
+    d.notas = (d.notas ?? []).map((n) => ({ ...n, ruta: rutaDeNota(n) }));
+    return d;
   } catch {
     // Sin datos generados todavía: la web no se rompe, muestra vacío.
     return {
@@ -22,7 +27,12 @@ export function obtenerDatos() {
   }
 }
 
-export function obtenerNota(id) {
+/**
+ * Una nota, por lo que llegó en la dirección: "titular-en-guiones-id" o el
+ * id a secas. Se resuelve por el final, no por el titular entero.
+ */
+export function obtenerNota(parte) {
+  const id = idDeRuta(parte);
   return obtenerDatos().notas.find((n) => n.id === id) ?? null;
 }
 
@@ -136,6 +146,7 @@ export const SECCIONES = [
   { nombre: 'Deportes', ranura: 'deportes', color: 'var(--s-deportes)' },
   { nombre: 'Automovilismo', ranura: 'automovilismo', color: 'var(--s-automovilismo)' },
   { nombre: 'Agro', ranura: 'agro', color: 'var(--s-agro)' },
+  { nombre: 'Economía', ranura: 'economia', color: 'var(--s-economia)' },
   { nombre: 'Cultura y agenda', ranura: 'cultura', color: 'var(--s-cultura)' },
   { nombre: 'Tecnología', ranura: 'tecnologia', color: 'var(--s-tecnologia)' },
   { nombre: 'Servicios', ranura: 'servicios', color: 'var(--s-servicios)' },
@@ -144,7 +155,7 @@ export const SECCIONES = [
 
 // Las que van en la barra de navegación: el resto existe igual como página,
 // pero no ocupa lugar arriba.
-export const EN_NAVEGACION = ['Balcarce', 'Policiales', 'Deportes', 'Automovilismo', 'Agro', 'Cultura y agenda', 'Tecnología'];
+export const EN_NAVEGACION = ['Balcarce', 'Política', 'Policiales', 'Deportes', 'Automovilismo', 'Agro', 'Economía', 'Cultura y agenda', 'Tecnología'];
 
 export function datosSeccion(nombre) {
   return SECCIONES.find((s) => s.nombre === nombre)

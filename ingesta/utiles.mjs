@@ -114,3 +114,22 @@ export function comoISO(fecha) {
     String(fecha.getDate()).padStart(2, '0'),
   ].join('-');
 }
+
+
+/**
+ * ¿Esta decisión la tomó una persona?
+ *
+ * Sólo esas mandan sobre el semáforo. Una decisión guardada por la máquina
+ * ("automática", "pendiente", "archivada") es una foto de lo que decía el
+ * semáforo ese día, y si se la respeta para siempre, cambiar las reglas no
+ * cambia nada de lo ya publicado.
+ *
+ * Se vio el 21/09: el panel guarda el estado cuando la IA reescribe una
+ * nota, y eso dejó 29 notas de Deportes publicadas por encima del cupo
+ * nuevo — las reglas se habían apretado y ellas no se enteraron.
+ *
+ * La IA firma con por: "ia". Una decisión sin firma es de la máquina también.
+ */
+export function decisionHumana(d) {
+  return !!d && !!d.por && d.por !== 'ia';
+}

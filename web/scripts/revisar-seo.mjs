@@ -13,6 +13,7 @@
 
 import fs from 'node:fs';
 import path from 'node:path';
+import { parteDeNota } from '../lib/ruta.js';
 
 const SALIDA = path.join(process.cwd(), '.next', 'server', 'app');
 const fallas = [];
@@ -47,7 +48,7 @@ const primera = datos.notas?.[0];
 if (!primera) {
   fallas.push('no hay ninguna nota publicada para revisar');
 } else {
-  const html = leer(path.join('nota', `${primera.id}.html`));
+  const html = leer(path.join('nota', `${parteDeNota(primera)}.html`));
   exigir(`la nota ${primera.id}`, html, {
     'el enlace canónico': 'rel="canonical"',
     'og:title': 'property="og:title"',
@@ -60,7 +61,7 @@ if (!primera) {
 
   // La imagen para compartir tiene que existir de verdad, no sólo estar
   // declarada: una etiqueta og:image que apunta a un 404 es peor que nada.
-  const imagen = path.join(SALIDA, 'nota', primera.id, 'opengraph-image.body');
+  const imagen = path.join(SALIDA, 'nota', parteDeNota(primera), 'opengraph-image.body');
   if (!fs.existsSync(imagen)) {
     fallas.push(`la nota ${primera.id}: og:image declarada pero la imagen no se generó`);
   } else if (fs.statSync(imagen).size < 4000) {

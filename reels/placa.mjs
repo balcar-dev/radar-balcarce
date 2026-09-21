@@ -40,6 +40,7 @@ export const COLOR_SECCION = {
   Región: '#5A6270',
   Clima: '#12857A',
   Farmacias: '#D6412A',
+  Economía: '#C08A1E',
   Tecnología: '#2F7FD6',
   Reclamos: '#B23A1C',
   Seguimiento: '#7E9420',

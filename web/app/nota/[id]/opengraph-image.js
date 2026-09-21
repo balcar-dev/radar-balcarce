@@ -1,5 +1,6 @@
 import { obtenerDatos, obtenerNota } from '@/lib/datos';
 import { tarjeta, TAMANO, TIPO } from '@/lib/tarjeta';
+import { parteDeNota } from '@/lib/ruta';
 
 // La imagen de cada nota, generada al compilar. Una por nota, archivo
 // estático: cuando alguien comparte el enlace no hay nada corriendo.
@@ -9,7 +10,7 @@ export const contentType = TIPO;
 export const alt = 'Radar Balcarce';
 
 export function generateStaticParams() {
-  return obtenerDatos().notas.map((n) => ({ id: n.id }));
+  return obtenerDatos().notas.map((n) => ({ id: parteDeNota(n) }));
 }
 
 export default function Imagen({ params }) {

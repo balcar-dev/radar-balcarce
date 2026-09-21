@@ -30,6 +30,10 @@ const { normalizar, parsearScrape, clasificar } = paraPruebas;
 const AMBIGUAS = new Set([
   'partido', 'descenso', 'tenis', 'copa', 'liga', 'gol',
   'muestra', 'exposicion', 'exposición', 'paso', 'box',
+  'comerciantes', 'comercio local', 'precios', 'ahorro', 'inversiones', 'mercados',
+  'bonos', 'finanzas', 'empresas en mora', 'salarios', 'deuda',
+  'ia', 'claude', 'gemini', 'copilot', 'robot', 'robots', 'software', 'startup',
+  'smartphone', 'chatbot',
 ]);
 
 const pega = (t, p) => {
@@ -74,6 +78,17 @@ for (const n of salida.notas) {
 }
 for (const [m, c] of Object.entries(motivos).sort((a, b) => b[1] - a[1])) {
   console.log(String(c).padStart(5), m);
+}
+
+titulo('LAS FUENTES');
+const enfermas = (salida.fuentes ?? []).filter((f) => f.estado === 'error' || f.notas === 0);
+if (!enfermas.length) {
+  console.log(`  Las ${(salida.fuentes ?? []).length} fuentes respondieron con notas.`);
+} else {
+  for (const f of enfermas) {
+    console.log(`  ${f.estado === 'error' ? 'CAÍDA ' : 'VACÍA '} ${f.nombre}${f.error ? ' · ' + f.error : ''}`);
+  }
+  console.log('\n  Una fuente vacía casi siempre es una página que cambió de formato.');
 }
 
 titulo('LOS TEMAS QUE SE SIGUEN');

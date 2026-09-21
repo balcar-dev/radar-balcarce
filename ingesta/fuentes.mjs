@@ -315,8 +315,127 @@ export const FUENTES_NACIONALES = [
     tipo: 'rss',
     alcance: 'pais',
     peso: 15,
-    maxItems: 2,
+    maxItems: 3,
+    seccion: 'Economía',
     temas: ['economia'],
+  },
+  // --- Tecnología, economía y política nacionales ------------------------
+  //
+  // Se agregaron el 21/09 a pedido de la redacción: tecnología con foco en
+  // inteligencia artificial, economía regional y nacional, y política, que
+  // hasta entonces sólo entraba por palabra clave y casi no salía.
+  //
+  // Van con `seccion` fija: el feed ya viene separado por tema y es más
+  // confiable que adivinar por palabras. Los pesos son parejos y bajos a
+  // propósito — que un medio de Balcarce no se vuelva una copia de Infobae —
+  // y `maxItems` chico, porque estas tres fuentes tiran cien notas por vuelta.
+  {
+    id: 'infobae-tecno',
+    nombre: 'Infobae · Tecnología',
+    medio: 'Infobae',
+    url: 'https://www.infobae.com/arc/outboundfeeds/rss/category/tecno/?outputType=xml',
+    tipo: 'rss',
+    alcance: 'pais',
+    seccion: 'Tecnología',
+    peso: 14,
+    maxItems: 4,
+    temas: ['tecnologia'],
+  },
+  {
+    id: 'clarin-tecno',
+    nombre: 'Clarín · Tecnología',
+    medio: 'Clarín',
+    url: 'https://www.clarin.com/rss/tecnologia/',
+    tipo: 'rss',
+    alcance: 'pais',
+    seccion: 'Tecnología',
+    peso: 14,
+    maxItems: 3,
+    temas: ['tecnologia'],
+  },
+  {
+    id: 'ambito-tecno',
+    nombre: 'Ámbito · Tecnología',
+    medio: 'Ámbito',
+    url: 'https://www.ambito.com/rss/pages/tecnologia.xml',
+    tipo: 'rss',
+    alcance: 'pais',
+    seccion: 'Tecnología',
+    peso: 13,
+    maxItems: 3,
+    temas: ['tecnologia'],
+  },
+  {
+    id: 'infobae-economia',
+    nombre: 'Infobae · Economía',
+    medio: 'Infobae',
+    url: 'https://www.infobae.com/arc/outboundfeeds/rss/category/economia/?outputType=xml',
+    tipo: 'rss',
+    alcance: 'pais',
+    seccion: 'Economía',
+    peso: 14,
+    maxItems: 4,
+    temas: ['economia'],
+  },
+  {
+    id: 'clarin-economia',
+    nombre: 'Clarín · Economía',
+    medio: 'Clarín',
+    url: 'https://www.clarin.com/rss/economia/',
+    tipo: 'rss',
+    alcance: 'pais',
+    seccion: 'Economía',
+    peso: 14,
+    maxItems: 3,
+    temas: ['economia'],
+  },
+  {
+    id: 'ambito-economia',
+    nombre: 'Ámbito · Economía',
+    medio: 'Ámbito',
+    url: 'https://www.ambito.com/rss/pages/economia.xml',
+    tipo: 'rss',
+    alcance: 'pais',
+    seccion: 'Economía',
+    peso: 14,
+    maxItems: 3,
+    temas: ['economia'],
+  },
+  {
+    id: 'infobae-politica',
+    nombre: 'Infobae · Política',
+    medio: 'Infobae',
+    url: 'https://www.infobae.com/arc/outboundfeeds/rss/category/politica/?outputType=xml',
+    tipo: 'rss',
+    alcance: 'pais',
+    seccion: 'Política',
+    peso: 13,
+    maxItems: 3,
+    temas: ['politica'],
+  },
+  {
+    id: 'clarin-politica',
+    nombre: 'Clarín · Política',
+    medio: 'Clarín',
+    url: 'https://www.clarin.com/rss/politica/',
+    tipo: 'rss',
+    alcance: 'pais',
+    seccion: 'Política',
+    peso: 13,
+    maxItems: 3,
+    temas: ['politica'],
+  },
+  {
+    id: 'lanacion-politica',
+    nombre: 'La Nación · Política',
+    medio: 'La Nación',
+    url: 'https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/politica/',
+    tipo: 'rss',
+    alcance: 'pais',
+    seccion: 'Política',
+    peso: 13,
+    maxItems: 3,
+    temas: ['politica'],
   },
 ];
 
@@ -402,6 +521,18 @@ export const REGLAS_SECCION = [
       'transito', 'vacunación', 'vacunacion', 'desagüe', 'desague', 'pluvial'],
   },
   {
+    // Economía regional y nacional. Entró el 21/09: hasta entonces la plata
+    // se repartía entre País, Agro y Servicios según por dónde se colara.
+    seccion: 'Economía',
+    palabras: ['dólar', 'dolar', 'inflación', 'inflacion', 'plazo fijo', 'tasa de interés',
+      'tasas de interés', 'riesgo país', 'bcra', 'banco central', 'salarios', 'paritarias',
+      'jubilaciones', 'aguinaldo', 'canasta básica', 'canasta basica', 'pymes', 'desempleo',
+      'exportaciones', 'importaciones', 'aranceles', 'monotributo', 'arca', 'afip',
+      'mercados', 'bonos', 'cedears', 'billetera virtual', 'crédito hipotecario',
+      'credito hipotecario', 'costo de vida', 'precios', 'comercio local', 'comerciantes',
+      'empresas en mora', 'ventas minoristas', 'ahorro', 'inversiones', 'finanzas'],
+  },
+  {
     // Sección diferencial: casi ningún medio de Balcarce cubre esto con
     // regularidad, y encaja con la identidad del pueblo (INTA Balcarce es uno
     // de los centros de investigación agropecuaria más grandes del país).
@@ -412,7 +543,14 @@ export const REGLAS_SECCION = [
     // sin el contexto de una frase completa.
     palabras: ['inteligencia artificial', 'algoritmo', 'drone', 'dron', 'satelital',
       'agricultura de precisión', 'agricultura precision', 'biotecnología', 'biotecnologia',
-      'digitalización', 'digitalizacion', 'ciberseguridad', 'automatización', 'automatizacion'],
+      'digitalización', 'digitalizacion', 'ciberseguridad', 'automatización', 'automatizacion',
+      // Inteligencia artificial: es lo que más se lee de tecnología hoy y lo
+      // que más le interesa a la redacción. "IA" sola sí entra: en castellano
+      // no significa otra cosa, y la regla exige la palabra entera.
+      'ia', 'chatgpt', 'openai', 'gemini', 'claude', 'copilot', 'chatbot', 'machine learning',
+      'modelo de lenguaje', 'robot', 'robots', 'robótica', 'robotica',
+      'ciberataque', 'ciberdelito', 'hackeo', 'software', 'startup', 'semiconductores',
+      'smartphone', 'nvidia', 'inteligencia artificial generativa'],
   },
 ];
 
@@ -430,22 +568,37 @@ export const REGLAS_SEMAFORO = {
     'violencia de género', 'violencia de genero', 'femicidio', 'niño identificado',
     'niña identificada', 'abuso infantil', 'grooming'],
   // Espera aprobación.
-  amarillo: ['concejo deliberante', 'intendente', 'denuncia', 'denunció', 'denuncio',
-    'gremio', 'paro', 'protesta', 'reclamo', 'detenido', 'acusado', 'imputado',
-    'hospital', 'muerte', 'falleció', 'fallecio', 'investigación', 'investigacion'],
-  // Todo lo demás sale solo si la sección lo permite.
+  //
+  // El 21/09 se sacaron de acá "concejo deliberante", "intendente", "gremio",
+  // "paro", "protesta" y "reclamo", a pedido de la redacción: son política
+  // de todos los días, y con ellas frenando, Política no publicaba nada.
+  // Siguen esperando lo que acusa, lo que muere y lo que involucra a chicos.
+  amarillo: ['denuncia', 'denunció', 'denuncio', 'detenido', 'acusado', 'imputado',
+    'hospital', 'muerte', 'falleció', 'fallecio', 'investigación', 'investigacion',
+    // Una muerte se llame como se llame. "Murió Mario Torres" salió sola
+    // porque el filtro sólo conocía "muerte" y "falleció": es una necrológica,
+    // y las necrológicas no salen sin fuente firmada.
+    'murió', 'murio', 'muere', 'fallece', 'deceso', 'velatorio',
+    // Policiales entró a las secciones automáticas el 21/09. Esto es lo que
+    // hace que eso sea seguro: lo grave sigue esperando a una persona.
+    'homicidio', 'asesinato', 'asesinado', 'asesinaron', 'cadáver', 'cadaver',
+    'víctima', 'victima', 'apuñalado', 'apuñalaron', 'baleado', 'balearon',
+    'adolescente', 'adolescentes', 'niño', 'niña', 'nene', 'nena', 'menores de edad'],
   // Todo lo demás sale solo si la sección lo permite.
   //
-  // Balcarce entró el 20/09. Estaba afuera por prudencia y el resultado
-  // era el contrario al buscado: 58 de 61 notas locales esperando, contra
-  // 65 de 67 de Deportes publicándose solas. La portada de un medio de
-  // Balcarce mostraba el fútbol nacional. Las listas de arriba ya frenan
-  // lo que hay que frenar — de esas 58, diez las agarraba una palabra
-  // (denuncia, intendente, hospital) y esas siguen esperando.
+  // Balcarce entró el 20/09: estaba afuera por prudencia y el resultado era
+  // el contrario al buscado (58 de 61 notas locales esperando, contra 65 de
+  // 67 de Deportes publicándose solas).
   //
-  // Política y Policiales no entran, y no es por miedo al trabajo: en un
-  // pueblo son los dos temas donde un error no se perdona.
-  verdeSecciones: ['Servicios', 'Cultura y agenda', 'Deportes', 'Automovilismo', 'Agro', 'Balcarce'],
+  // Política, Policiales, Economía y Tecnología entraron el 21/09. Política
+  // y Policiales estaban afuera porque en un pueblo son los dos temas donde
+  // un error no se perdona, y tenían 38 notas esperando que nadie aprobaba:
+  // dos secciones enteras que no existían para el lector. Lo que las hace
+  // seguras no es que estén afuera sino la lista de arriba — todo lo que
+  // acusa, mata o involucra a un chico sigue esperando a una persona — y
+  // el rojo, que no sale nunca.
+  verdeSecciones: ['Servicios', 'Cultura y agenda', 'Deportes', 'Automovilismo', 'Agro',
+    'Balcarce', 'Política', 'Policiales', 'Economía', 'Tecnología'],
   // Esto NO es noticia: es publicidad o promoción de otro medio. No se
   // bloquea (a veces un sorteo del club sí interesa), pero nunca sale solo:
   // el 18/09 la portada abrió con "Ganá tu entrada para el TC", que es una
@@ -580,3 +733,40 @@ export const TEMAS = [
 export const FARMACIAS_A_MANO = {
   'san jose plaza': { nombre: 'San José de la Plaza', direccion: 'Av. Chaves esquina 15', telefono: null },
 };
+
+
+// Cuánto puntaje necesita una nota de AFUERA para salir sola, por sección.
+//
+// Lo de Balcarce no tiene piso. Lo de afuera sí, porque las fuentes
+// nacionales tiran cincuenta notas por vuelta y sólo unas pocas le importan
+// a alguien de acá. El piso no es igual para todas:
+//
+//   · Deportes sube: es casi un tercio de todo lo que entra y no es lo que
+//     define a un medio de Balcarce. Queda lo que ya vale mucho — Messi,
+//     Colapinto, la Selección — y lo de la zona.
+//   · Economía, Tecnología, Política y Policiales bajan: las fuentes de
+//     esas secciones son pocas y de peso parejo, y con el piso general de
+//     50 no habría pasado casi nada.
+export const PISO_DE_AFUERA = {
+  Deportes: 62,
+  Economía: 38,
+  Tecnología: 38,
+  Política: 40,
+  Policiales: 40,
+};
+export const PISO_POR_DEFECTO = 50;
+
+// Cuántas notas de AFUERA salen solas por sección, como máximo.
+//
+// Con el piso no alcanza: un domingo de fútbol tiene treinta notas arriba de
+// 62 puntos, y la portada de Balcarce sería la de Olé. El cupo se queda con
+// las de más puntaje y manda el resto a esperar. Lo de Balcarce no tiene
+// cupo, y Automovilismo tampoco.
+export const CUPO_DE_AFUERA = {
+  Deportes: 10,
+  Economía: 12,
+  Tecnología: 12,
+  Política: 12,
+  Policiales: 8,
+};
+export const CUPO_POR_DEFECTO = 15;

@@ -97,7 +97,7 @@ export default function Buscador({ notas = [] }) {
             <p className="pista">No encontramos nada con esas palabras.</p>
           )}
           {resultados.map((n) => (
-            <a className="resultado" key={n.id} href={`/nota/${n.id}`}>
+            <a className="resultado" key={n.id} href={n.ruta}>
               <span className="seccion">{n.seccion}</span>
               <span className="titulo">{n.titulo}</span>
             </a>

@@ -6,11 +6,12 @@
 
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { paraPruebas } from '../ingesta/ingesta.mjs';
+import { paraPruebas, aplicarCupos } from '../ingesta/ingesta.mjs';
+import { decisionHumana } from '../ingesta/utiles.mjs';
 
 const {
   normalizar, parecido, sentenciar, esDeBalcarce, figuraQueNombra,
-  clasificar, semaforo, limpiarCopete, relevancia, idDe, parsearScrape,
+  clasificar, semaforo, limpiarCopete, relevancia, idDe, parsearScrape, pisoDe,
 } = paraPruebas;
 
 /** Una nota mínima, para no repetir diez campos en cada prueba. */
@@ -254,13 +255,96 @@ test('el piso no pisa a las reglas de arriba', () => {
   assert.equal(semaforo(rifa, 'Balcarce', 90).color, 'amarillo');
 });
 
-test('Balcarce sale sola, Política y Policiales no', () => {
-  const b = nota({ titulo: 'Inauguran una plaza en el barrio', local: true });
-  assert.equal(semaforo(b, 'Balcarce', 70).color, 'verde');
+test('Política y Policiales salen solas cuando no hay nada sensible', () => {
+  // Estaban afuera y tenían 38 notas esperando que nadie aprobaba: dos
+  // secciones enteras que no existían para el lector. Entraron el 21/09.
   const p = nota({ titulo: 'Se define la interna del oficialismo', local: true });
-  assert.equal(semaforo(p, 'Política', 70).color, 'amarillo');
+  assert.equal(semaforo(p, 'Política', 70).color, 'verde');
   const po = nota({ titulo: 'Chocaron dos autos en la ruta', local: true });
-  assert.equal(semaforo(po, 'Policiales', 70).color, 'amarillo');
+  assert.equal(semaforo(po, 'Policiales', 70).color, 'verde');
+});
+
+test('en Policiales lo grave sigue esperando a una persona', () => {
+  // Esto es lo que hace segura la entrada de la sección: no que esté
+  // afuera, sino que todo lo que acusa, mata o involucra a un chico espere.
+  const casos = [
+    'Detuvieron a un hombre por el homicidio de un vecino',
+    'Encontraron un cadáver en el arroyo',
+    'Un adolescente fue baleado en el barrio Norte',
+    'Apuñalaron a un joven a la salida de un boliche',
+    'El acusado declaró ante el fiscal',
+  ];
+  for (const titulo of casos) {
+    const s = semaforo(nota({ titulo, local: true }), 'Policiales', 90);
+    assert.notEqual(s.color, 'verde', 'salió sola: ' + titulo);
+  }
+});
+
+test('una muerte espera se la llame como se la llame', () => {
+  // "Murió Mario Torres" salió sola porque el filtro sólo conocía "muerte" y
+  // "falleció". Es una necrológica, y las necrológicas no salen sin fuente
+  // firmada.
+  for (const titulo of ['Murió un reconocido vecino', 'Falleció el histórico dirigente', 'Es el velatorio de un docente']) {
+    const s = semaforo(nota({ titulo, local: true }), 'Balcarce', 90);
+    assert.notEqual(s.color, 'verde', 'salió sola: ' + titulo);
+  }
+});
+
+test('la política de todos los días ya no espera', () => {
+  // "intendente", "concejo deliberante", "paro" y "reclamo" frenaban
+  // Política entera. Lo que acusa sigue esperando: eso es otra lista.
+  for (const titulo of ['El intendente inauguró una obra', 'El Concejo Deliberante aprobó el presupuesto', 'Reclamo de vecinos por el alumbrado']) {
+    assert.equal(semaforo(nota({ titulo, local: true }), 'Política', 70).color, 'verde', titulo);
+  }
+  assert.notEqual(semaforo(nota({ titulo: 'Denuncian al intendente por irregularidades', local: true }), 'Política', 90).color, 'verde');
+});
+
+test('Economía y Tecnología también salen solas', () => {
+  const e = nota({ titulo: 'El dólar cerró en alza', alcance: 'pais', local: false });
+  assert.equal(semaforo(e, 'Economía', 45).color, 'verde');
+  const t = nota({ titulo: 'Nueva herramienta de inteligencia artificial', alcance: 'pais', local: false });
+  assert.equal(semaforo(t, 'Tecnología', 45).color, 'verde');
+});
+
+// ------------------------------------------------ pisos y cupos por sección
+
+test('el piso de Deportes es más alto que el de las demás', () => {
+  // Deportes es casi un tercio de todo lo que entra y no define a un medio
+  // de Balcarce. Una nota de afuera con 55 puntos sale en Economía y espera
+  // en Deportes.
+  const afuera = (titulo) => nota({ titulo, alcance: 'pais', local: false });
+  assert.equal(semaforo(afuera('Boca ganó en la Bombonera'), 'Deportes', 55).color, 'amarillo');
+  assert.equal(semaforo(afuera('El BCRA subió la tasa'), 'Economía', 55).color, 'verde');
+  assert.ok(pisoDe('Deportes') > pisoDe('Economía'));
+});
+
+test('el cupo se queda con las de más puntaje', () => {
+  // Un domingo de fútbol tiene treinta notas arriba del piso, y la portada
+  // de Balcarce sería la de Olé.
+  const portada = Array.from({ length: 25 }, (_, i) => ({
+    id: 'd' + i, seccion: 'Deportes', semaforo: 'verde', local: false, nombraBalcarce: false,
+    relevancia: 90 - i,
+  }));
+  aplicarCupos(portada);
+  const salen = portada.filter((n) => n.semaforo === 'verde');
+  assert.equal(salen.length, 10);
+  assert.equal(salen[0].id, 'd0', 'tienen que ser las de más puntaje');
+  assert.match(portada[24].motivo, /cupo/);
+});
+
+test('lo de Balcarce y el automovilismo no tienen cupo', () => {
+  const portada = [
+    ...Array.from({ length: 30 }, (_, i) => ({ id: 'l' + i, seccion: 'Deportes', semaforo: 'verde', local: true, relevancia: 80 })),
+    ...Array.from({ length: 30 }, (_, i) => ({ id: 'a' + i, seccion: 'Automovilismo', semaforo: 'verde', local: false, relevancia: 60 })),
+  ];
+  aplicarCupos(portada);
+  assert.equal(portada.filter((n) => n.semaforo === 'verde').length, 60);
+});
+
+test('el cupo no toca lo que ya esperaba', () => {
+  const portada = [{ id: 'x', seccion: 'Deportes', semaforo: 'amarillo', local: false, relevancia: 99, motivo: 'otro' }];
+  aplicarCupos(portada);
+  assert.equal(portada[0].motivo, 'otro');
 });
 
 // ------------------------------------------------- lo que no es una nota
@@ -277,6 +361,27 @@ test('un bloque de texto de la página no es un titular', () => {
   const notas = parsearScrape(html, { nombre: 'El Diario', medio: 'El Diario', base: 'https://x.ar', peso: 20 });
   const titulos = notas.map((n) => n.titulo);
   assert.ok(!titulos.some((t) => t.includes('único diario')), titulos.join(' | '));
+});
+
+// ------------------------------------------- quién manda sobre el semáforo
+
+test('sólo una persona le gana al semáforo', () => {
+  assert.equal(decisionHumana({ estado: 'publicada', por: 'Hernán' }), true);
+  assert.equal(decisionHumana({ estado: 'descartada', por: 'Andrés' }), true);
+});
+
+test('lo que guardó la máquina no cuenta', () => {
+  // Es una foto del semáforo de ese día. Si se la respetara, apretar las
+  // reglas no cambiaría nada de lo ya publicado: el 21/09 dejó 29 notas de
+  // Deportes por encima del cupo nuevo.
+  assert.equal(decisionHumana({ estado: 'automatica', por: 'ia' }), false);
+  assert.equal(decisionHumana({ estado: 'automatica' }), false);
+  assert.equal(decisionHumana({ estado: 'pendiente', por: null }), false);
+});
+
+test('sin decisión, manda el semáforo', () => {
+  assert.equal(decisionHumana(undefined), false);
+  assert.equal(decisionHumana(null), false);
 });
 
 // ------------------------------------------------------------------ el id

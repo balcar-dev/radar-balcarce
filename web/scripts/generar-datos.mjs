@@ -18,7 +18,7 @@
 
 import fs from 'node:fs';
 import path from 'node:path';
-import { NUMEROS, tocaHoy, diaDeEstaSemana, diaDeTurno, comoISO } from '../../ingesta/utiles.mjs';
+import { NUMEROS, tocaHoy, diaDeEstaSemana, diaDeTurno, comoISO, decisionHumana } from '../../ingesta/utiles.mjs';
 import { avisosDelClima } from '../../ingesta/alertas.mjs';
 import { TEMAS } from '../../ingesta/fuentes.mjs';
 
@@ -54,6 +54,16 @@ if (enLaNube) {
   const exportado = leerJson(path.join(AQUI, '..', 'data', 'decisiones.json'), { decisiones: {} });
   estado = { decisiones: exportado.decisiones ?? {} };
   console.log(`  ${ultima.notas.length} historias · ${Object.keys(estado.decisiones).length} decisiones del panel`);
+
+  // Una fuente que se vacía no avisa. Tres de las 24 se leen raspando el
+  // HTML de la página: el día que El Diario la rediseñe, esas notas dejan
+  // de entrar sin ningún error, y lo único que se nota es que el sitio
+  // tiene menos. Estas líneas ("::warning::") las muestra GitHub arriba de
+  // la corrida, donde se ve sin abrir el registro.
+  for (const f of ultima.fuentes ?? []) {
+    if (f.estado === 'error') console.log(`::warning title=Fuente caída::${f.nombre}: ${f.error}`);
+    else if (f.notas === 0) console.log(`::warning title=Fuente vacía::${f.nombre} no trajo ninguna nota`);
+  }
 } else {
   estado = leerJson(path.join(DATOS_PANEL, 'estado.json'), { decisiones: {} });
   ultima = leerJson(path.join(DATOS_PANEL, 'ultima.json'), { notas: [] });
@@ -79,7 +89,10 @@ const ahoraISO = new Date().toISOString();
 
 function notaPublicada(n) {
   const d = estado.decisiones[n.id];
-  const st = d?.estado ?? ({ verde: 'automatica', rojo: 'bloqueada' }[n.semaforo] ?? 'pendiente');
+  // Sólo manda lo que decidió una persona. Lo que guardó la máquina es una
+  // foto de un semáforo viejo: ver decisionHumana en ingesta/utiles.mjs.
+  const delSemaforo = { verde: 'automatica', rojo: 'bloqueada' }[n.semaforo] ?? 'pendiente';
+  const st = decisionHumana(d) ? d.estado : delSemaforo;
   if (st !== 'publicada' && st !== 'automatica') return null;
   return {
     id: n.id,

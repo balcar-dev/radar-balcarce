@@ -135,7 +135,7 @@ export default function RaizLayout({ children }) {
             {/* El buscador busca sobre las notas que ya están en la página:
                 sin servidor y sin una sola consulta de red. */}
             <Buscador notas={(d.notas ?? []).map((n) => ({
-              id: n.id, titulo: n.titulo, copete: n.copete, seccion: n.seccion, medios: n.medios,
+              id: n.id, ruta: n.ruta, titulo: n.titulo, copete: n.copete, seccion: n.seccion, medios: n.medios,
             }))} />
           </div>
         </header>

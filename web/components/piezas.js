@@ -126,7 +126,7 @@ export function FilaNota({ nota }) {
       <span className="meta cuando">{cuando(nota)}</span>
       <div style={{ flexGrow: 1 }}>
         <span className="meta cuando-movil">{cuando(nota)}</span>
-        <h3><a href={`/nota/${nota.id}`}>{nota.titulo}</a></h3>
+        <h3><a href={nota.ruta}>{nota.titulo}</a></h3>
       </div>
     </div>
   );

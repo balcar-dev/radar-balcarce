@@ -6,7 +6,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import {
-  NOMBRES_PROPIOS, FIGURAS, TEMAS, FARMACIAS_A_MANO, BALCARCE, FUENTES, FUENTES_NACIONALES, PALABRAS_LOCALES, REGLAS_SECCION, REGLAS_SEMAFORO,
+  NOMBRES_PROPIOS, FIGURAS, TEMAS, FARMACIAS_A_MANO, PISO_DE_AFUERA, PISO_POR_DEFECTO, CUPO_DE_AFUERA, CUPO_POR_DEFECTO, BALCARCE, FUENTES, FUENTES_NACIONALES, PALABRAS_LOCALES, REGLAS_SECCION, REGLAS_SEMAFORO,
 } from './fuentes.mjs';
 
 export const TODAS_LAS_FUENTES = [...FUENTES, ...FUENTES_NACIONALES];
@@ -367,6 +367,15 @@ function figuraQueNombra(nota) {
 const PALABRAS_DEBILES = new Set([
   'partido', 'descenso', 'tenis', 'copa', 'liga', 'gol',
   'muestra', 'exposicion', 'exposición', 'paso', 'box',
+  // Economía y Tecnología (21/09). Con "gana la palabra más larga", una
+  // palabra genérica y larga le ganaba a una corta y precisa: "Rompieron la
+  // vidriera y se llevaron herramientas" cayó en Economía por decir
+  // "comerciantes", que le ganaba a "robo". Estas sólo deciden desde el
+  // titular, y sólo si no hay nada más firme.
+  'comerciantes', 'comercio local', 'precios', 'ahorro', 'inversiones', 'mercados',
+  'bonos', 'finanzas', 'empresas en mora', 'salarios', 'deuda',
+  'ia', 'claude', 'gemini', 'copilot', 'robot', 'robots', 'software', 'startup',
+  'smartphone', 'chatbot',
 ]);
 
 /** Los temas de larga duración que toca esta nota. Suele ser ninguno. */
@@ -420,19 +429,9 @@ function clasificar(nota) {
   return 'País';
 }
 
-// Cuánto puntaje necesita una nota de afuera para salir sola.
-//
-// El 20/09 la portada tenía "Boca derrota a San Lorenzo" (37 puntos) y
-// "Turismo invita a recorrer los parajes rurales de Lobería" (10) saliendo
-// solas, mientras la caravana para recibir al campeón balcarceño Kevin Gómez
-// (100) esperaba aprobación. Eso está al revés.
-//
-// Lo de Balcarce no tiene piso: si pasa acá, se publica. El piso es para lo
-// que viene de afuera, que es lo que sobra — las fuentes nacionales tiran
-// cincuenta notas por vuelta y sólo unas pocas le importan a alguien de
-// Balcarce. Las que hablan de Messi o Colapinto ya suman 16 puntos por eso,
-// así que pasan sin problema.
-const PISO_NO_LOCAL = 50;
+// El piso de puntaje para lo de afuera ya no es uno solo: cada sección tiene
+// el suyo (PISO_DE_AFUERA en fuentes.mjs, con el porqué de cada número).
+const pisoDe = (seccion) => PISO_DE_AFUERA[seccion] ?? PISO_POR_DEFECTO;
 
 function semaforo(nota, seccion, puntaje) {
   const texto = normalizar(`${nota.titulo} ${nota.cuerpo.slice(0, 600)}`);
@@ -452,8 +451,8 @@ function semaforo(nota, seccion, puntaje) {
   // puesto, las notas de Fórmula 1 quedaban justo abajo (48 de 50) y la
   // sección se vaciaba.
   const deAca = nota.local || nota.nombraBalcarce || seccion === 'Automovilismo' || esDeBalcarce(nota);
-  if (!deAca && puntaje < PISO_NO_LOCAL) {
-    return { color: 'amarillo', motivo: `de afuera y con poco puntaje (${puntaje} de ${PISO_NO_LOCAL})` };
+  if (!deAca && puntaje < pisoDe(seccion)) {
+    return { color: 'amarillo', motivo: `de afuera y con poco puntaje (${puntaje} de ${pisoDe(seccion)})` };
   }
 
   if (REGLAS_SEMAFORO.verdeSecciones.includes(seccion)) return { color: 'verde', motivo: `sección ${seccion}` };
@@ -879,6 +878,25 @@ async function cruzarFarmacias(turnosColegio) {
 
 // ------------------------------------------------------------------ correr
 
+/**
+ * Baja a "amarillo" las notas de afuera que se pasan del cupo de su sección.
+ * Recibe la portada ya ordenada de más a menos puntaje, y la modifica.
+ */
+export function aplicarCupos(portada) {
+  const usados = {};
+  for (const n of portada) {
+    if (n.semaforo !== 'verde') continue;
+    if (n.local || n.nombraBalcarce || n.seccion === 'Automovilismo') continue;
+    usados[n.seccion] = (usados[n.seccion] ?? 0) + 1;
+    const cupo = CUPO_DE_AFUERA[n.seccion] ?? CUPO_POR_DEFECTO;
+    if (usados[n.seccion] > cupo) {
+      n.semaforo = 'amarillo';
+      n.motivo = `pasó el cupo de ${n.seccion} de afuera (${cupo} por vuelta)`;
+    }
+  }
+  return portada;
+}
+
 export async function ingestar({
   fuentes = null, silencioso = false, escribirArchivos = false,
 } = {}) {
@@ -984,6 +1002,14 @@ export async function ingestar({
       nombraBalcarce: !!g.principal.nombraBalcarce,
     };
   }).sort((a, b) => b.relevancia - a.relevancia);
+
+  // 3b. El cupo de lo de afuera.
+  //
+  // El piso solo no alcanza: un domingo de fútbol tiene treinta notas arriba
+  // de 62 puntos y la portada de Balcarce sería la de Olé. Por sección, las
+  // de afuera que salen solas son las N de más puntaje; el resto espera.
+  // Lo de Balcarce no entra en la cuenta, y Automovilismo tampoco.
+  aplicarCupos(portada);
 
   // 4. Clima y farmacias
   let clima = null; let farmacias = null;
@@ -1168,7 +1194,7 @@ export const paraPruebas = {
   idDe, normalizar, parecido, sentenciar, esDeBalcarce, figuraQueNombra,
   clasificar, semaforo, limpiarCopete, relevancia, meta, parsearScrape,
   cieloDeSimbolo, haceCuanto, sinEtiquetas, decodificar,
-  clavesDe, anotar, buscarFarmacia, directorioDeLaVanguardia,
+  clavesDe, anotar, buscarFarmacia, directorioDeLaVanguardia, pisoDe,
 };
 
 // Sólo corre cuando se lo invoca directo; si lo importa probar.mjs, no.
