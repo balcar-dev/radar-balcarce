@@ -463,3 +463,85 @@ las notas propias y originales de la redacción.
 
 Ver "Lo que falta" al final de `REDES.md`: puntualidad exacta si hiciera falta,
 Threads, la categoría de Instagram y las notas largas.
+
+## 11. Pendientes anotados el 21/09/2026 (para retomar): posicionamiento y bios
+
+Pedido de Hernán: que la página esté bien estructurada y posicionada en Google,
+en las redes y en los buscadores con IA, y mejorar las biografías. Nada de esto
+está hecho todavía; es la lista de lo que hay que revisar.
+
+**Lo que ya existe (no repetir):** direcciones con el titular adentro
+(`web/lib/ruta.js`), `sitemap.xml`, `robots.txt`, `feed.xml`, enlace canónico
+(`web/lib/sitio.js`), una tarjeta de imagen propia por nota para compartir
+(`web/lib/tarjeta.js`), el dominio propio con `www` redirigido, y una prueba que
+vigila el SEO en cada compilación (`web/scripts/revisar-seo.mjs`).
+
+### Google
+
+- **Search Console**: verificar `radarbalcarce.com` y enviar el sitemap. Sin eso
+  no sabemos qué indexó Google ni qué errores tiene. Necesita la cuenta de Google
+  del medio (la hace una persona).
+- **Datos estructurados (JSON-LD)**: `NewsArticle` en cada nota (titular, fecha
+  de publicación y de modificación, autor u organización, imagen) y
+  `NewsMediaOrganization` en el sitio (nombre, logo, redes). Es lo que más ayuda
+  a que Google entienda qué es cada página.
+- **Google News y Discover**: Publisher Center, y cuidar que las imágenes de las
+  notas sean grandes (al menos 1200 px de ancho) para poder aparecer en Discover.
+- **Páginas que dan confianza (E-E-A-T)**: quiénes somos, contacto, política
+  editorial (cómo se hace, qué se resume con IA y qué no, cómo corregimos un
+  error), y firma en cada nota. Hoy `POLITICA-PRIVACIDAD.md` está como página;
+  faltan las otras.
+- **Títulos y descripciones**: revisar que cada sección, tema y nota tenga un
+  título y una descripción propios, y no repetidos.
+- **Rendimiento (Core Web Vitals)**: medir con PageSpeed Insights y ajustar. La
+  web es HTML estático, así que la base es buena.
+- **Enlaces internos y migas de pan**: ahora que se sacaron las etiquetas de
+  temas (`MOSTRAR_TEMAS`), pensar cómo se relacionan las notas entre sí sin
+  cargar la página.
+- **Bing Webmaster Tools**: alimenta a Bing y a varios buscadores con IA.
+- **Ficha de Google Business Profile** del medio, si corresponde.
+
+### Redes sociales (cuando alguien comparte un enlace)
+
+- Revisar cómo se ve cada nota compartida en Facebook, WhatsApp e Instagram con
+  el **Depurador de uso compartido de Facebook** y con pruebas reales.
+- Completar las etiquetas Open Graph y de Twitter (tamaño 1200 x 630,
+  `og:locale` es_AR, fecha de publicación) y ver que estén en todas las páginas.
+- **Medir cuánta gente llega desde cada red**: agregar parámetros UTM a los
+  enlaces que publicamos y mirar el resultado en una analítica sin cookies.
+- Sumar el permiso de estadísticas de Meta (`instagram_manage_insights`) para
+  poder leer qué rinde en cada red.
+
+### Buscadores con IA (ChatGPT, Gemini, Perplexity, etc.)
+
+- Decidir en `robots.txt` si se permite o no a los rastreadores de IA (por
+  ejemplo GPTBot, ClaudeBot, PerplexityBot, Google-Extended). Es una decisión de
+  la redacción: permitirlo da visibilidad y citas, prohibirlo protege el
+  contenido.
+- Agregar un archivo `llms.txt` que explique qué es el sitio y dónde está lo
+  importante, y un sitemap de noticias (`sitemap-news.xml`).
+- Que cada nota abra con un resumen claro y verificable, con fecha, lugar, fuente
+  y autor visibles: es lo que las IA citan.
+- Nombre único y constante para la entidad ("Radar Balcarce") en el sitio, las
+  redes y los datos estructurados.
+
+### Biografías de las redes
+
+- Reescribir las biografías de Instagram y Facebook. **No hace falta que sean
+  "full IA"**: la biografía tiene que decir qué es el medio y qué cubre
+  (Balcarce, clima, farmacia de turno, agenda, noticias), y la mención de que hay
+  textos y voces con IA se mantiene por transparencia pero **más corta y menos
+  protagonista** (una línea, o en la página "quiénes somos").
+- Sumar el enlace al sitio en la biografía de Instagram (sólo se edita desde el
+  celular), la categoría "Sitio web de noticias y medios de comunicación", el
+  botón de contacto, y historias destacadas fijas (farmacia, teléfonos, agenda).
+
+### Hashtags
+
+Pregunta abierta de Hernán: si todavía se usan. Resumen de lo que se sabe hoy
+(a confirmar mirando los números propios): en Instagram pesan mucho menos que
+antes y se recomiendan pocos y relevantes (unos 3 a 5); en Facebook casi no
+mueven nada. Lo que más rinde es el texto con las palabras que la gente busca
+(Balcarce, el barrio, el evento). Propuesta: probar 2 o 3 (`#Balcarce` y uno de
+la sección) en los reels durante dos semanas y comparar el alcance con los que no
+los llevan. Hoy las piezas salen sin hashtags.

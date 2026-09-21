@@ -102,6 +102,8 @@ publicar piezas a mano. Detalle y horarios en `REDES.md`.
   piezas de video del día (clima, farmacia, 2 reels de noticias, el podcast y 3
   historias de notas; el mismo video en las dos redes) con la voz Gemini "Kore". Horarios y reglas: `REDES.md`. **El reloj de GitHub no es
   puntual:** cada pieza tiene una ventana de 2 horas y puede salir tarde.
+- **SEO y posicionamiento (Google, redes, buscadores con IA) y biografías:**
+  anotado el 21/09, todavía sin hacer. Lista completa en `NOTAS.md` § 11.
 - Pendientes de redes: Threads (token propio),
   categoría de Instagram (cambiar desde el celular a "Sitio web de noticias y
   medios"), notas más largas con el texto completo de las fuentes, y mirar los
