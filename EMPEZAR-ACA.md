@@ -1,12 +1,14 @@
 # Radar Balcarce — todo en una hoja
 
-*Actualizado el 18/09/2026.*
+*Actualizado el 21/09/2026.*
 
 ## Los links
 
 | Qué | Dónde | Quién entra |
 |---|---|---|
-| **La web pública** | https://radar-balcarce-six.vercel.app | Cualquiera |
+| **La web pública** | https://radarbalcarce.com | Cualquiera |
+| Instagram | https://www.instagram.com/radarbalcarce | Cualquiera |
+| Facebook | La página "Radar Balcarce" | Cualquiera |
 | **El panel** | https://radar-balcarce.tail4f06f0.ts.net | Andrés y Hernán |
 | El panel, desde esta PC | http://localhost:4321 | Igual |
 | El código | https://github.com/balcar-dev/radar-balcarce | Privado |
@@ -41,13 +43,24 @@ cuando las tengas guardadas en otro lado.
   falla, queda escrito en `panel/datos/publicaciones.log`.
 - **A las 72 horas**: archiva lo que quedó sin decidir.
 
+### Solo, desde GitHub (con la PC apagada)
+
+- **Cada 30 minutos**: actualiza la web y la publica.
+- **Cada 30 minutos (a los :10 y :40)**: publica **una** nota en la página de
+  Facebook, si hay alguna fuerte y reciente. Dos por día como máximo, entre
+  las 8 y las 22. Nunca Política ni Policiales.
+
 ### A mano
 
 - **Decidir las notas amarillas** en el panel. Son las que pueden traer
   problemas: denuncias, intendente, gremios, detenidos.
-- **Publicar en redes**. Las piezas se generan con `node reels/plan.mjs
-  --generar` y quedan en `reels/salida`. Subirlas es manual hasta que Meta
-  apruebe la app.
+- **Historias y reels de Instagram**. Se arman en GitHub con la voz de Gemini
+  y se suben a mano: GitHub → Actions → **Piezas** → Run workflow (en `solo` la
+  pieza, y tildar `publicar`). Falta el reloj que las saque solas a su hora.
+  Horarios y reglas: `REDES.md`.
+- **Prender o apagar las redes**: variable `REDES_ACTIVAS` en GitHub (Settings →
+  Secrets and variables → Actions → Variables). Con `Si` publica; con otro
+  valor sólo simula.
 - **Cargar eventos** que no estén en la agenda del municipio.
 
 ## Los tres botones que importan
@@ -77,7 +90,8 @@ tailscale funnel --https=443 off
 ## Las cuentas
 
 - **radarbalcarce@gmail.com** — el medio: Vercel, Tailscale, Instagram,
-  Facebook, el mail de contacto.
+  Facebook, Meta (la app "Radar Balcarce Publicador"), Gemini, el mail de
+  contacto.
 - **balcardev@gmail.com** — lo técnico: GitHub.
 
 ## Dónde está cada cosa explicada
@@ -85,15 +99,22 @@ tailscale funnel --https=443 off
 | Archivo | Qué cuenta |
 |---|---|
 | `MANUAL.md` | Cómo se curan las noticias: puntaje, semáforo, qué sale solo |
-| `REDES.md` | La competencia, dónde van los avisos, el plan de redes |
+| `REDES.md` | **Qué se publica en redes, a qué hora y con qué reglas**, cómo está conectado Meta, la competencia y los avisos |
 | `INVESTIGACION.md` | Lo legal, con las fuentes |
 | `NOTAS.md` | Estado del proyecto y qué falta |
 
 ## Lo que falta
 
-1. Borrar el sitio duplicado en la cuenta vieja de Vercel (`radar-balcarce.vercel.app`).
-2. Abrir Instagram y Facebook, y publicar a mano las primeras semanas.
-3. Pedirle a Meta los permisos para publicar solo.
-4. El dominio propio (~$5.000 al año en NIC.ar).
-5. Regenerar la clave de Gemini.
-6. Sacar el panel de esta PC, para que no dependa de que esté prendida.
+1. **El reloj de Instagram**: que las historias, los reels y el podcast salgan
+   solos a su hora. Hoy se publican a mano desde GitHub.
+2. Historias y reels también en la página de Facebook.
+3. Threads (pide su propio token).
+4. Cambiar la categoría de Instagram a "Sitio web de noticias y medios" (desde
+   el celular).
+5. Notas más largas, con el texto completo de las fuentes.
+6. Borrar el sitio duplicado en la cuenta vieja de Vercel (`radar-balcarce.vercel.app`).
+7. Sacar el panel de esta PC, para que no dependa de que esté prendida.
+
+Ya resuelto: el dominio propio `radarbalcarce.com` (21/09), la clave de Gemini
+(ahora hay dos, una para redactar y una para redes), y el permiso de Meta para
+publicar solo (la app está conectada y probada).

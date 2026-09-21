@@ -28,7 +28,7 @@ export const REGLAS = {
   horasEntreReels: 4, // que no salgan pegados
   relevanciaParaReel: 78,
   historiasPorDia: 6, // clima de la mañana y de la noche, farmacia, y tres de notas
-  feedPorDia: 2,
+  feedPorDia: 0, // apagado: Instagram no acepta fotos sin alojarlas; todo sale en video
   relevanciaParaHistoria: 62,
   relevanciaParaFeed: 80,
   horariosReel: ['10:00', '15:00', '20:30'],
@@ -395,7 +395,7 @@ export function planDelDia(datos) {
     });
   });
 
-  elegirFeed(publicables).forEach((n, i) => {
+  (REGLAS.feedPorDia > 0 ? elegirFeed(publicables) : []).forEach((n, i) => {
     piezas.push({
       tipo: 'feed', hora: i === 0 ? '13:30' : '19:30', nombre: `feed${i + 1}`,
       titulo: n.titulo, motivo: `relevancia ${n.relevancia}`, seccion: n.seccion, sinVideo: true,

@@ -13,11 +13,11 @@ Los otros archivos: `NOTAS.md` (estado del proyecto y qué falta),
 ## 1. El recorrido de una noticia
 
 ```
-19 fuentes  →  agrupar  →  clasificar  →  puntuar  →  semáforo  →  panel  →  web / reels
+33 fuentes  →  agrupar  →  clasificar  →  puntuar  →  semáforo  →  panel  →  web / reels
 ```
 
-1. **Buscar.** Cada 10 minutos el panel lee las 19 fuentes (10 locales,
-   Sendero Regional, 7 nacionales). La mayoría tiene RSS; El Diario Balcarce
+1. **Buscar.** Cada 10 minutos el panel lee las 33 fuentes (locales,
+   regionales y nacionales; la lista está en `ingesta/fuentes.mjs`). La mayoría tiene RSS; El Diario Balcarce
    no, así que se raspa la portada y después se entra a cada nota para sacar
    la bajada y la hora de publicación de sus metadatos.
 2. **Agrupar.** Si dos medios cuentan lo mismo, es UNA historia con dos
@@ -59,9 +59,11 @@ una que sí tiene hora.
 Para qué sirve el número:
 
 - **Ordena la portada**, junto con la fecha.
-- **Decide qué llega a reel**: hace falta 78 o más. Son 3 reels por día como
-  máximo (10:00, 15:00, 20:30). El clima y la farmacia van como **historias**,
-  así no gastan cupo de reels con lo que se repite todos los días.
+- **Decide qué llega a reel**: hace falta 78 o más. Son 3 reels por día: dos
+  noticias de Balcarce de secciones distintas (10:00 y 15:00) y el podcast del
+  día (20:30). Política y Policiales no se arman solas en ninguna pieza. El
+  clima y la farmacia van como **historias**, así no gastan cupo de reels con
+  lo que se repite todos los días. Horarios y reglas completas en `REDES.md`.
 
 ## 3. El semáforo
 
@@ -149,8 +151,8 @@ lados para que no se separen.
 
 ## 7. Las pruebas
 
-Se corren con `npm test` desde la carpeta del proyecto. Son 62, tardan un
-cuarto de segundo, no instalan nada y no salen a internet.
+Se corren con `npm test` desde la carpeta del proyecto. Son más de 210, tardan
+menos de un segundo, no instalan nada y no salen a internet.
 
 **Cada una es un error que ya pasó de verdad**, no un ejercicio: dos
 farmacias de turno mostradas como una sola, un sol dibujado un domingo
@@ -173,6 +175,18 @@ que estuvo mal publicado, sí: es la única forma de que no vuelva.
   Se ajusta agregando o sacando palabras en `REGLAS_SECCION`.
 - **Hay notas sin hora**, las que vienen de fuentes que no la publican. La web
   dice "sin hora" en vez de inventar un "hace 1 minuto".
-- **Los textos automáticos son el resumen del medio original, no una
-  reescritura.** La reescritura con IA existe y funciona, pero hoy se dispara
-  a mano desde el panel. Que corra sola para todo lo verde es el próximo paso.
+- **Las notas son cortas.** De cada nota sólo se guarda el resumen que trae
+  el feed del medio (unos 280 caracteres como máximo) y el guion de la voz es
+  el titular dicho en voz alta, así que lo que se lee es titular y copete. La
+  reescritura con IA corre sola en el panel para todo lo verde (con la
+  verificación contra la fuente), pero no tiene más texto para trabajar. El
+  próximo paso es traer el texto completo de las fuentes y armar una nota
+  propia más larga, empezando por Tecnología, Deportes y Economía.
+
+## 9. Las redes
+
+Qué se publica en Facebook e Instagram, a qué hora, con qué voz y qué reglas lo
+frenan está en [`REDES.md`](REDES.md). En una línea: Facebook publica solo una
+nota por vez con enlace; Instagram recibe siempre **video con voz** (historias
+y reels) armado en GitHub con Gemini; y Política y Policiales no salen solas
+a ninguna red.

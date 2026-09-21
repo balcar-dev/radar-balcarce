@@ -69,20 +69,102 @@ Reglas que no se negocian:
 Nunca: pop-ups, videos que arrancan solos, publinotas sin aclarar que lo son,
 avisos de apuestas o de préstamos.
 
-## 3. Las redes
+## 3. Las redes: qué sale, cómo y cuándo
 
-### Qué se publica y cuándo
+*Aplicado y probado el 21/09/2026.*
 
-Sale del plan diario (`node reels/plan.mjs`), que ya respeta los cupos:
+### La regla de fondo
 
-| Formato | Cuántos | Cuándo | Qué |
+**Lo que sale a Instagram es siempre video con voz**: historias y reels.
+Instagram no acepta una foto si no está en una dirección pública de internet,
+y el video sí se le puede entregar directo. Como no queremos alojar archivos
+en ningún lado, todo va en video. Por eso el feed de Instagram con fotos está
+apagado (`feedPorDia: 0` en `reels/plan.mjs`).
+
+**Facebook recibe posteos con enlace.** La tarjeta con la imagen y el titular
+la arma sola con la imagen de NUESTRA página (`web/lib/tarjeta.js`): nunca la
+foto de otro medio.
+
+### Qué sale hoy y a qué hora (hora de Balcarce)
+
+**Facebook, automático.** Cada 30 minutos (a los :10 y :40) el sistema mira
+la portada y publica **una** nota si cumple todo esto:
+
+| Regla | Valor |
+|---|---|
+| Relevancia | 80 o más |
+| Antigüedad en la web | entre 15 minutos y 8 horas (el enlace tiene que existir) |
+| Sección | nunca **Política** ni **Policiales**: esas las decide una persona |
+| Horario | entre las 8 y las 22 |
+| Tope | 2 por día, con 90 minutos entre una y otra |
+| Repetición | una nota sale una sola vez (lo garantiza `web/data/redes.json`) |
+
+El texto lleva el titular, el copete y `Fuente: …`, más `Resumen hecho con IA`
+cuando la redactó la IA. La regla de que cada nota diga quién la escribió
+vale también afuera del sitio.
+
+**Instagram, en video.** Estas son las piezas del día y su horario:
+
+| Hora | Pieza | Tipo | Qué es |
 |---|---|---|---|
-| **Reel** | 3 por día | 10:00, 15:00, 20:30 | Sólo notas con relevancia 78 o más |
-| **Historia** | las que haga falta | a lo largo del día | Clima (7:30 y 16:30), farmacia (19:15), notas del día |
-| **Feed** | 2 por día | 13:30 y 19:30 | Placa con el titular |
+| 07:30 | El clima de hoy | Historia | Todos los días |
+| 10:00 | Noticia 1 | Reel | La de más gancho de Balcarce |
+| 10:40 | Nota 1 | Historia | |
+| 12:40 | Nota 2 | Historia | |
+| 14:40 | Nota 3 | Historia | |
+| 15:00 | Noticia 2 | Reel | De otra sección que la primera |
+| 19:00 | Farmacia de turno | Historia | Sólo dice cuál es la de turno |
+| 20:00 | Cómo sigue el día | Historia | Clima de la noche |
+| 20:30 | El repaso del día | Reel | El podcast: 4 titulares dichos con la voz |
+| Martes 11:00 | Teléfonos útiles | Historia | Una vez por semana |
+| Jueves 18:00 | Qué hacer el fin de semana | Historia | Sólo si hay eventos cargados |
 
-El clima y la farmacia van como **historia** a propósito: si fueran reels,
-gastarían el cupo todos los días con lo mismo.
+Son **3 reels por día** (2 noticias y el podcast) y **6 historias** (clima
+mañana, clima noche, farmacia y 3 de notas), más las semanales.
+
+Cómo se eligen (todo en `redes/elegir.mjs`, con pruebas):
+
+- Los reels de noticias son de Balcarce, con relevancia 78 o más, de
+  secciones distintas y sin repetir el mismo tema. "Gancho" es lo que se mide
+  sin inventar: relevancia y que sea local.
+- Las historias de notas tienen relevancia 62 o más y no repiten lo que ya es
+  reel.
+- El mismo tema contado por dos medios cuenta una sola vez (por ejemplo, el
+  mismo partido con dos titulares).
+- El podcast es un repaso de los titulares ya publicados, sin IA: no puede
+  inventar nada. Si un día hay menos de dos noticias para repasar, no sale.
+- **Política y Policiales no se arman solas en ninguna pieza**, no sólo en
+  Facebook.
+- Los horarios de las fijas (clima, farmacia, agenda, útiles) se cambian en el
+  panel → Calendario, pero eso vale sólo en la PC. En GitHub rigen los de
+  fábrica de `panel/horarios.mjs`.
+
+### Quién publica y con qué
+
+- **La voz** es de Gemini (voz Kore), con la clave de redes
+  `GEMINI_API_KEY_REDES`, que es **paga**: no hay tope de pedidos. Si Gemini
+  falla, la pieza sale igual con Elena, la voz de Microsoft.
+- **Las piezas se arman en GitHub** con la PC apagada (workflow **Piezas**).
+  Usan el clima, la farmacia y las notas de `web/data/portada.json`, o sea lo
+  que ya se publicó: una pieza nunca habla de algo que el semáforo frenó.
+- **Instagram**: el video se sube directo en dos pasos (Instagram da una
+  dirección de subida y se le manda el archivo). Las historias no llevan
+  texto; los reels llevan el titular y `Más en radarbalcarce.com`.
+- **El interruptor** es la variable de GitHub `REDES_ACTIVAS`. Vale `Si`
+  (acepta cualquier mayúscula o tilde). Con otro valor, todo funciona pero
+  sólo **simula**: muestra qué publicaría y no publica nada.
+
+### Lo que hoy es automático y lo que no
+
+| | Estado |
+|---|---|
+| Posteos en Facebook | **Automático**, cada 30 minutos |
+| Armar las piezas de video | A demanda: Actions → **Piezas** → Run workflow |
+| Publicar historias y reels en Instagram | **A mano** por ahora: Actions → **Piezas** → Run workflow, con `publicar` tildado. Falta el reloj que las saque solas a su hora |
+
+Para publicar una pieza a mano: Actions → Piezas → Run workflow → en `solo`
+el nombre de la pieza (`clima-manana`, `farmacia`, `noticia1`, `podcast`, …) →
+tildar `publicar`. Vacío arma todas.
 
 ### El primer mes
 
@@ -117,15 +199,64 @@ En la bio de las dos cuentas, y en el pie de la web:
 No es humildad: es lo que evita que el día que alguien lo descubra parezca que
 lo estábamos escondiendo.
 
-## 4. Lo que falta para publicar solo
+## 4. Cómo está conectado, y lo que falta
 
-Hoy las piezas se generan en la PC (`node reels/plan.mjs --generar`) y se
-suben a mano. Para que salgan solas hace falta:
+### Lo conectado
 
-1. Instagram como **cuenta profesional**, vinculada a una **página** de
-   Facebook (no un perfil personal).
-2. Una app en Meta for Developers con los permisos `instagram_content_publish`
-   y `pages_manage_posts`.
-3. Meta revisa la app antes de darte esos permisos. Tarda, y es el motivo por
-   el que conviene empezar publicando a mano: cuando la aprueben, ya vamos a
-   saber qué formato funciona.
+- **Instagram** `@radarbalcarce`: cuenta profesional (Negocio), vinculada a la
+  página de Facebook.
+- **Página de Facebook** "Radar Balcarce". Ojo con el ID: el de la API de Meta
+  es **`1254237411116171`** (Configuración del negocio → Páginas →
+  Identificador). El número de la dirección `facebook.com/profile.php?id=…`
+  (61594865361170) es el del perfil de la página y Graph lo rechaza.
+- **App de Meta** "Radar Balcarce Publicador" (ID `2302218363874399`), en el
+  portfolio comercial "Radar Balcarce". Casos de uso: Threads, Instagram y
+  Páginas. Permisos: `pages_manage_posts`, `pages_read_engagement`,
+  `pages_show_list`, `instagram_basic`, `instagram_content_publish`.
+- **Usuario del sistema** `publicador-radar`, con la página (Contenido y
+  Estadísticas), el Instagram (Contenido y Estadísticas) y la app (Desarrollar
+  app). Su token **no vence** y está guardado como el secreto `META_TOKEN` en
+  GitHub. No hizo falta la revisión de Meta que se preveía: en modo desarrollo,
+  con cuentas propias, los permisos andan.
+
+### Secretos y variables (GitHub → Settings → Secrets and variables → Actions)
+
+| Nombre | Tipo | Para qué |
+|---|---|---|
+| `META_TOKEN` | Secreto | Publicar en Facebook e Instagram |
+| `GEMINI_API_KEY_REDES` | Secreto | Voces de las piezas (paga) |
+| `REDES_ACTIVAS` | Variable | El interruptor: `Si` publica, otro valor sólo simula |
+
+En la PC, en el archivo `.env`: `GEMINI_API_KEY_REDACCION` para redactar las
+notas (acepta el nombre viejo `GEMINI_API_KEY`) y, si se quieren armar reels en
+la PC, `GEMINI_API_KEY_REDES`. **Van separadas a propósito**: cada clave tiene
+su propio cupo y así los reels no le sacan cuota a la redacción. La de redes no
+tiene alternativa: si falta, los reels no arrancan. Los tokens y las claves
+**nunca** se pegan en un chat ni se escriben en el código.
+
+### Dónde está el código
+
+| Archivo | Qué hace |
+|---|---|
+| `redes/meta.mjs` | Habla con Meta: posteo, subida de video, verificación. El token viaja en un encabezado, nunca en la dirección |
+| `redes/elegir.mjs` | Qué se publica: reglas de Facebook, reels, historias, podcast, interruptor |
+| `redes/piezas.mjs` | Qué pieza le toca a cada hora, con ventana de 2 horas |
+| `redes/publicar-piezas.mjs` | Publica en Instagram y guarda el libro después de cada una |
+| `redes/publicar.mjs` | El programa: `--verificar`, `--facebook`, `--piezas [--sin-horario]` |
+| `redes/datos.mjs` | Arma los datos del día desde la web, para generar sin panel |
+| `reels/claves.mjs` | Las dos claves de Gemini |
+| `.github/workflows/redes.yml` | Facebook cada 30 min, y comprobar el acceso |
+| `.github/workflows/piezas.yml` | Armar y publicar las piezas de video |
+
+### Lo que falta
+
+1. **El reloj de Instagram**: un workflow programado que cada 30 minutos genere
+   sólo la pieza que toca y la publique.
+2. **Historias y reels también en la página de Facebook.**
+3. **Threads**: pide su propio token, no sirve el de Meta.
+4. **La categoría de Instagram** sigue en "Blog personal" (no se ve en el
+   perfil). Se cambia desde el celular a "Sitio web de noticias y medios de
+   comunicación".
+5. **La agenda de la semana en historia** sólo se arma en la PC, porque
+   `agenda.json` no está en GitHub.
+6. **Notas más largas**, con el texto completo de las fuentes.

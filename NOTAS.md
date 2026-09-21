@@ -1,6 +1,6 @@
 # Radar Balcarce — estado del proyecto
 
-Última revisión: 18 de septiembre de 2026. Este archivo es el que se lee
+Última revisión: 21 de septiembre de 2026 (ver la sección 10 para las redes). Este archivo es el que se lee
 antes de tocar nada: qué existe, qué falta, y las decisiones que ya se
 tomaron para no volver a discutirlas cada vez.
 
@@ -42,7 +42,7 @@ considera quemada: hay que generar una nueva.
 
 ## 1. Lo que ya funciona de punta a punta
 
-- **Ingesta** (`ingesta/`): 20 fuentes locales, regionales y nacionales,
+- **Ingesta** (`ingesta/`): 33 fuentes locales, regionales y nacionales,
   agrupación de noticias repetidas entre medios, clasificación por sección,
   semáforo editorial, relevancia.
 - **Farmacias** (`ingesta/ingesta.mjs`): cronograma del Colegio +
@@ -83,12 +83,15 @@ considera quemada: hay que generar una nueva.
    panel. Lo que falta es sólo **publicarla** (necesita tu cuenta de
    Vercel, no algo que yo pueda hacer solo) y decidir cómo le llegan datos
    frescos una vez en producción (ver el README de `web/`).
-2. **Que corra solo.** GitHub Actions con el ciclo cada 10 minutos y las
+2. **Que corra solo.** *(21/09: la web ya se actualiza sola cada 30 minutos
+   desde GitHub, y Facebook e Instagram publican desde GitHub; falta el reloj
+   de las piezas de Instagram, ver sección 10.)* GitHub Actions con el ciclo
+   cada 10 minutos y las
    piezas a su hora, sin depender de que la PC esté prendida. El workflow
    de *deploy* ya está escrito (`.github/workflows/deploy-web.yml`) pero
    necesita tres secretos de tu cuenta de Vercel para activarse. El de
    *ingesta* todavía no se armó: depende de la decisión del punto 1.
-3. **Redes conectadas.** Hoy "Publicar" guarda la decisión pero no empuja
+3. ✅ **Redes conectadas — hecho el 21/09/2026** (sección 10). Antes de eso, "Publicar" guardaba la decisión pero no empujaba
    nada a ningún lado. Necesita: cuentas creadas, Instagram como cuenta
    profesional vinculada a una página de Facebook, y las claves de la API
    de Meta.
@@ -388,3 +391,52 @@ tamaño de celular. El feed RSS devuelve XML válido con las notas reales.
 **Repo Git:** se inicializó localmente (`git init`, primer commit hecho)
 pero **no tiene remoto ni se subió a ningún lado** — eso también queda
 para cuando decidas dónde vive (GitHub, y con qué cuenta).
+
+## 10. Redes con Meta y piezas en GitHub (21/09/2026)
+
+Lo que quedó aplicado ese día. El detalle operativo (horarios, reglas, claves,
+archivos) está en [`REDES.md`](REDES.md); acá va lo que se decidió y lo que se
+aprendió.
+
+**Lo que ya funciona**
+
+- El dominio `radarbalcarce.com` está conectado y online; `www` redirige.
+- Instagram `@radarbalcarce` es cuenta profesional, vinculada a la página de
+  Facebook "Radar Balcarce", con foto, portada (`reels/portada.mjs`) y bio.
+- La app de Meta y el usuario del sistema publican con un token sin
+  vencimiento (`META_TOKEN`).
+- Facebook publica solo, con enlace, una nota por vez (`redes.yml`).
+- Las piezas de video se arman en GitHub con la voz de Gemini y se suben a
+  Instagram directo, sin alojar nada (`piezas.yml`). Probado con una historia
+  real (el clima) y un posteo real en Facebook.
+- Se apagaron las etiquetas de temas de la web (`MOSTRAR_TEMAS`), el turno de
+  farmacia cambió a las 8:30, y el plan del día pasó a 3 reels (2 noticias + el
+  podcast) y 6 historias.
+
+**Decisiones**
+
+- Todo lo que va a Instagram es video con voz (la API no acepta imágenes sin
+  una dirección pública). El feed de fotos quedó apagado.
+- Política y Policiales no se arman solas para ninguna red.
+- Dos claves de Gemini separadas: redactar y redes. La de redes es paga.
+- La farmacia en las piezas no dice hasta qué hora está abierta (eso es para
+  la web).
+- Se empieza por lo simple para probar: primero Facebook, después Instagram.
+
+**Lo que se aprendió (para no repetirlo)**
+
+- El ID de página que sirve para la API de Meta no es el número de la dirección
+  de Facebook. Se sacó de Configuración del negocio → Páginas.
+- La variable `REDES_ACTIVAS` se creó como `Si` y la comparación exacta la
+  dejaba apagada sin avisar; ahora acepta cualquier forma.
+- Una nota es corta porque sólo guardamos el resumen del feed (unos 280
+  caracteres) y el guion de voz es el titular dicho en voz alta. Arreglarlo
+  pide traer el texto completo de las fuentes.
+- La búsqueda de categorías de Instagram no responde cuando se maneja con
+  automatización; se cambia desde el celular.
+- Las pestañas de Chrome en segundo plano no responden a capturas.
+
+**Lo que falta**
+
+Ver "Lo que falta" al final de `REDES.md`: el reloj de Instagram, historias y
+reels en Facebook, Threads, la categoría de Instagram y las notas largas.

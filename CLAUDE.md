@@ -10,11 +10,17 @@ rioplatense, sin voseo forzado.
     ingesta/   el motor. SIN dependencias: sólo lo que trae Node
     panel/     el tablero editorial (vive en la PC de Hernán, puerto 4321)
     reels/     placas, voz y video. SÍ tiene dependencias (resvg, ffmpeg)
+    redes/     publicar en Facebook e Instagram (API de Meta). SIN dependencias
     web/       el sitio público (Next.js 15, JavaScript, HTML estático)
-    pruebas/   `npm test`, 150+ pruebas, sin red
+    pruebas/   `npm test`, 210+ pruebas, sin red
 
 Flujo: fuentes → ingesta → clasificar → puntaje → semáforo → `web/data/portada.json`
 → GitHub Actions (cada 30 min) → Vercel. **La web se actualiza con la PC apagada.**
+
+Redes (todo desde GitHub, con la PC apagada): `redes.yml` publica en Facebook cada
+30 min; `piezas.yml` arma las historias, reels y el podcast con la voz de Gemini y
+los sube a Instagram (por ahora a mano; falta el reloj). Detalle y horarios en
+`REDES.md`.
 
 ## Comandos
 
@@ -24,10 +30,17 @@ Flujo: fuentes → ingesta → clasificar → puntaje → semáforo → `web/dat
 
 ## Reglas que no se negocian
 
-- **`ingesta/` y `panel/` no importan nada de afuera de Node.** Hay una prueba
+- **`ingesta/`, `panel/` y `redes/` no importan nada de afuera de Node.** Hay una prueba
   que lo vigila. Dos veces se coló un import pesado y las pruebas rompieron en
   GitHub Actions andando en la máquina.
 - **Cuando se arregla algo que estuvo mal publicado, se escribe una prueba.**
+- **Nada sensible sale solo a las redes.** Política y Policiales esperan a una
+  persona en TODAS las piezas (`redes/elegir.mjs`), aunque en la web salgan por
+  el semáforo.
+- **Todo lo que va a Instagram es video con voz.** La API no acepta una imagen
+  si no está en una dirección pública, y no alojamos archivos.
+- **Tokens y claves nunca en un chat ni en el código.** Van a GitHub Secrets o
+  al `.env`. Quien los pega es una persona.
 - **Nunca la foto de otro medio.** La ley 11.723 cubre el texto, no las fotos.
   Va una placa propia con el titular.
 - **Nunca identificar a un menor ni a una víctima** (leyes 26.061 y 26.485). El
@@ -54,22 +67,47 @@ Flujo: fuentes → ingesta → clasificar → puntaje → semáforo → `web/dat
   la provincia es un municipio. Las ambiguas están en `PALABRAS_DEBILES`
   (`ingesta/ingesta.mjs`) y sólo deciden desde el titular.
 
+- **Las redes tienen un interruptor:** la variable de GitHub `REDES_ACTIVAS`.
+  Con `Si` (cualquier mayúscula o tilde) publica; con otro valor todo corre pero
+  sólo simula. No hay que tocar código para prender o apagar.
+- **Dos claves de Gemini, separadas a propósito:** `GEMINI_API_KEY_REDACCION`
+  para redactar las notas (acepta el nombre viejo `GEMINI_API_KEY`) y
+  `GEMINI_API_KEY_REDES` para voces y reels (`reels/claves.mjs`). La de redes
+  no tiene alternativa: si falta, los reels no arrancan. La de redes es paga.
+- **En GitHub las piezas se arman con lo ya publicado** (`web/data/portada.json`,
+  vía `redes/datos.mjs`), no con los datos del panel. `reels/marca/` está en
+  `.gitignore` salvo las tipografías; la cortina de sonido se genera sola.
+- **Para que hoy y las horas sean las de Balcarce en Actions** hay que poner
+  `TZ: America/Argentina/Buenos_Aires` en el workflow: el servidor corre en UTC.
+
 ## Cuentas
 
 - **GitHub:** `balcardev@gmail.com` (única con ese correo). Repo `balcar-dev/radar-balcarce`.
 - **Todo lo demás:** `radarbalcarce@gmail.com` (Vercel, Google/Gemini, Meta, Instagram).
+- **Meta:** app "Radar Balcarce Publicador" (ID 2302218363874399), usuario del
+  sistema `publicador-radar`, token sin vencimiento en el secreto `META_TOKEN`.
+  Página de Facebook "Radar Balcarce"; su ID para la API es **1254237411116171**
+  (no el número de la dirección de Facebook). Instagram `@radarbalcarce`.
 - El correo de los commits automáticos es el noreply de GitHub, porque Vercel
   valida la firma contra una cuenta de GitHub. No cambiarlo.
 
 ## Estado y pendientes
 
-- Sitio: `radar-balcarce-six.vercel.app`. Dominio `radarbalcarce.com` comprado
-  en DonWeb, **todavía sin conectar**. Mientras tanto el sitio le pide a Google
-  que no lo indexe (`web/lib/sitio.js`); se da vuelta solo al conectarlo.
-- **No gastar la clave de Gemini en reels** hasta que se puedan subir a
-  Instagram y Facebook automáticamente (decisión del 21/09). La reescritura con
-  IA tampoco corre sola todavía.
-- Los reels se suben a mano por ahora. Hay que decidir voces por sección.
+- Sitio: **`radarbalcarce.com`** (conectado el 21/09: nameservers de DonWeb
+  apuntando a Vercel; `www` redirige al dominio sin `www`). La dirección vieja
+  `radar-balcarce-six.vercel.app` redirige al dominio propio. El sitio ya se
+  indexa (`web/lib/sitio.js` lo detecta solo).
+- **Redes, al 21/09:** Facebook publica solo (una nota cada 30 min, 2 por día
+  como máximo). Las piezas de video (clima, farmacia, 2 reels de noticias, el
+  podcast y 3 historias de notas) se arman en GitHub con la voz Gemini "Kore" y
+  se publican en Instagram **a mano** (Actions → Piezas). **Falta el reloj** que
+  las saque solas a su hora. Horarios y reglas: `REDES.md`.
+- Pendientes de redes: el reloj de Instagram, historias y reels en Facebook,
+  Threads (token propio), categoría de Instagram (cambiar desde el celular a
+  "Sitio web de noticias y medios"), y notas más largas con el texto completo
+  de las fuentes.
+- La reescritura con IA corre sola en el panel (PC prendida) con la clave de
+  redacción; la verificación contra la fuente sigue siendo obligatoria.
 - Lista completa de pendientes: el documento "Pendientes" de la sesión del 21/09
   y `IDEAS.md`. Documentación del proyecto: `MANUAL.md`.
 
@@ -84,3 +122,7 @@ Flujo: fuentes → ingesta → clasificar → puntaje → semáforo → `web/dat
 | agregar un tema que se sigue | `TEMAS`, mismo archivo |
 | ajustar el filtro de la IA | `ingesta/verificar.mjs` |
 | cambiar cuándo salen las historias | panel → Calendario (`panel/horarios.mjs`) |
+| cambiar qué se publica en Facebook, reels, historias o el podcast | `redes/elegir.mjs` |
+| cambiar a qué hora sale una pieza de Instagram | `redes/piezas.mjs` (ventana) y `reels/plan.mjs` (horarios de reels e historias de notas) |
+| prender o apagar la publicación en redes | variable `REDES_ACTIVAS` en GitHub |
+| cambiar cómo se habla con Meta | `redes/meta.mjs` |
