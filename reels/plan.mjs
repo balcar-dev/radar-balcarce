@@ -15,6 +15,8 @@ import { placaClima, placaFarmacia, placaNoticia, placaUtiles, placaAgenda, COLO
 import { avisosDelClima } from '../ingesta/alertas.mjs';
 import { NUMEROS } from '../ingesta/utiles.mjs';
 import { horariosDe, toca } from '../panel/horarios.mjs';
+import { elegirReels, elegirHistoriasDeNotas, elegirFeed, guionPodcast } from '../redes/elegir.mjs';
+import { datosDeLaWeb } from '../redes/datos.mjs';
 
 // El cupo de reels es el recurso escaso del día, así que NO se gasta en lo que
 // se repite todas las mañanas. Clima, farmacia y agenda van a historias, que
@@ -25,7 +27,7 @@ export const REGLAS = {
   reelsPorDia: 3, // techo duro, sólo noticias
   horasEntreReels: 4, // que no salgan pegados
   relevanciaParaReel: 78,
-  historiasPorDia: 10,
+  historiasPorDia: 6, // clima de la mañana y de la noche, farmacia, y tres de notas
   feedPorDia: 2,
   relevanciaParaHistoria: 62,
   relevanciaParaFeed: 80,
@@ -88,11 +90,13 @@ function guionAgenda(eventos) {
     + 'La agenda completa está en nuestra página.';
 }
 
+const PORTADA_WEB = path.join(import.meta.dirname, '..', 'web', 'data', 'portada.json');
+
+/** Con panel, lo que dejó el panel. Sin panel (GitHub), lo ya publicado en la web. */
 function leerDatos() {
-  if (!fs.existsSync(DATOS)) {
-    throw new Error('Todavía no hay datos. Corré primero:  node panel/servidor.mjs  o  node ingesta/ingesta.mjs');
-  }
-  return JSON.parse(fs.readFileSync(DATOS, 'utf8'));
+  if (fs.existsSync(DATOS)) return JSON.parse(fs.readFileSync(DATOS, 'utf8'));
+  if (fs.existsSync(PORTADA_WEB)) return datosDeLaWeb(JSON.parse(fs.readFileSync(PORTADA_WEB, 'utf8')));
+  throw new Error('Todavía no hay datos. Corré primero:  node panel/servidor.mjs  o  node ingesta/ingesta.mjs');
 }
 
 // --- los guiones -----------------------------------------------------------
@@ -346,16 +350,17 @@ export function planDelDia(datos) {
     });
   }
 
-  // --- Reels: sólo noticias, y sólo las que se lo ganan --------------------
-  const paraReel = publicables
-    .filter((n) => n.local && n.relevancia >= REGLAS.relevanciaParaReel)
-    .slice(0, REGLAS.reelsPorDia);
+  // --- Reels: dos noticias con gancho y el podcast del día ------------------
+  //
+  // Las reglas de qué se puede armar solo (nada de Política ni Policiales)
+  // y cómo se elige el gancho están en redes/elegir.mjs, donde se prueban.
+  const paraReel = elegirReels(publicables);
 
   paraReel.forEach((n, i) => {
     piezas.push({
       tipo: 'reel', hora: REGLAS.horariosReel[i] ?? '21:00', nombre: `noticia${i + 1}`,
       titulo: n.titulo,
-      motivo: `relevancia ${n.relevancia}, arriba del piso de ${REGLAS.relevanciaParaReel}`,
+      motivo: `relevancia ${n.relevancia}, de las que más enganchan (${n.seccion})`,
       seccion: n.seccion,
       guion: guionNoticia(n),
       svg: placaNoticia({ seccion: n.seccion, titulo: n.titulo, cuando: n.cuando }),
@@ -363,23 +368,34 @@ export function planDelDia(datos) {
     });
   });
 
-  const paraHistorias = publicables
-    .filter((n) => !paraReel.includes(n) && n.relevancia >= REGLAS.relevanciaParaHistoria)
-    .slice(0, REGLAS.historiasPorDia - 2);
-  paraHistorias.forEach((n, i) => {
+  // El podcast: el repaso de lo más fuerte del día, con la voz de siempre. Sale
+  // a la noche, cuando la gente ya vio todo y quiere el resumen. Si ese día
+  // no hay al menos dos noticias para repasar, no se arma.
+  const repaso = guionPodcast(publicables);
+  if (repaso) {
     piezas.push({
-      tipo: 'historia', hora: `${String(10 + i).padStart(2, '0')}:40`, nombre: `historia${i + 1}`,
+      tipo: 'reel', hora: REGLAS.horariosReel[2] ?? '20:30', nombre: 'podcast',
+      titulo: 'El repaso del día', motivo: 'el podcast diario: los titulares más fuertes, un solo audio',
+      seccion: 'Balcarce', guion: repaso,
+      svg: placaNoticia({ seccion: 'Balcarce', titulo: 'El repaso del día', cuando: fechaLarga() }),
+      acento: '#A8371F',
+    });
+  }
+
+  // --- Historias: además del clima y la farmacia, tres de notas ------------
+  elegirHistoriasDeNotas(publicables, paraReel).forEach((n, i) => {
+    piezas.push({
+      tipo: 'historia', hora: `${String(10 + i * 2).padStart(2, '0')}:40`, nombre: `historia${i + 1}`,
       titulo: n.titulo, motivo: `relevancia ${n.relevancia}`, seccion: n.seccion, sinVideo: true,
     });
   });
 
-  publicables.filter((n) => n.relevancia >= REGLAS.relevanciaParaFeed).slice(0, REGLAS.feedPorDia)
-    .forEach((n, i) => {
-      piezas.push({
-        tipo: 'feed', hora: i === 0 ? '13:30' : '19:30', nombre: `feed${i + 1}`,
-        titulo: n.titulo, motivo: `relevancia ${n.relevancia}`, seccion: n.seccion, sinVideo: true,
-      });
+  elegirFeed(publicables).forEach((n, i) => {
+    piezas.push({
+      tipo: 'feed', hora: i === 0 ? '13:30' : '19:30', nombre: `feed${i + 1}`,
+      titulo: n.titulo, motivo: `relevancia ${n.relevancia}`, seccion: n.seccion, sinVideo: true,
     });
+  });
 
   // El techo: si hay más reels de los permitidos, se van los de menos motivo.
   const reels = piezas.filter((p) => p.tipo === 'reel');

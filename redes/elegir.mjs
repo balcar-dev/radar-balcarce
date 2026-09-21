@@ -18,6 +18,9 @@
 
 import { rutaDeNota } from '../web/lib/ruta.js';
 
+/** Secciones que no salen solas a ninguna red: las decide una persona. */
+export const SECCIONES_QUE_ESPERAN_PERSONA = ['Policiales', 'Política'];
+
 export const REGLAS_FACEBOOK = {
   porDia: 2,               // como en REDES.md: dos del feed por día
   relevanciaMinima: 80,
@@ -27,7 +30,7 @@ export const REGLAS_FACEBOOK = {
   edadMaximaHoras: 8,      // no se publica lo que ya es viejo
   desdeHora: 8,            // horario de Balcarce
   hastaHora: 22,
-  seccionesQueEsperanPersona: ['Policiales', 'Política'],
+  seccionesQueEsperanPersona: SECCIONES_QUE_ESPERAN_PERSONA,
 };
 
 const ZONA = 'America/Argentina/Buenos_Aires';
@@ -121,4 +124,109 @@ export function mensajeDeNota(nota) {
   if (linea) partes.push(linea);
 
   return partes.join('\n\n');
+}
+
+// ------------------------------------------------- reels, historias y feed
+//
+// Lo que sale de la PC (reels/plan.mjs) se elige con las mismas reglas de
+// fondo que Facebook: nada sensible solo. Está acá, y no en plan.mjs, porque
+// plan.mjs necesita resvg y ffmpeg instalados y esto se prueba sin nada.
+
+export const REGLAS_PIEZAS = {
+  reelsDeNoticias: 2,      // el tercer reel del día es el podcast
+  historiasDeNotas: 3,     // además del clima y la farmacia, que son fijas
+  relevanciaParaReel: 78,
+  relevanciaParaHistoria: 62,
+  relevanciaParaFeed: 80,
+  feedPorDia: 2,
+};
+
+/** ¿Se puede armar una pieza sola con esta nota? */
+export function sePuedeSola(nota) {
+  return nota.semaforo !== 'rojo' && !SECCIONES_QUE_ESPERAN_PERSONA.includes(nota.seccion);
+}
+
+const porRelevancia = (a, b) => (b.relevancia ?? 0) - (a.relevancia ?? 0);
+
+// Palabras que aparecen en media portada y no dicen "es la misma noticia".
+const COMUNES = new Set(['balcarce', 'municipio', 'municipal', 'municipalidad', 'provincia', 'ciudad', 'escuela', 'escuelas']);
+
+const palabrasClave = (titulo = '') => new Set(
+  String(titulo).toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').split(/[^a-z0-9]+/)
+    .filter((w) => w.length >= 7 && !COMUNES.has(w)),
+);
+
+/** ¿Dos titulares cuentan lo mismo? Los medios locales repiten mucho: el mismo
+ *  partido sale con tres titulares distintos y no tiene sentido contarlo tres
+ *  veces en el mismo día. Alcanza con que compartan una palabra larga y rara. */
+export function mismoTema(a, b) {
+  const A = palabrasClave(a?.titulo);
+  return [...palabrasClave(b?.titulo)].some((w) => A.has(w));
+}
+
+/** Saca de la lista las que repiten un tema ya elegido o ya visto. */
+function sinRepetidos(notas, yaVistas = []) {
+  const elegidas = [];
+  for (const n of notas) {
+    if ([...yaVistas, ...elegidas].some((v) => v.id === n.id || mismoTema(v, n))) continue;
+    elegidas.push(n);
+  }
+  return elegidas;
+}
+
+/**
+ * Los reels de noticias del día: los de más gancho, de secciones distintas.
+ *
+ * "Gancho" acá es lo que se puede medir sin inventar: relevancia alta y que
+ * sea de Balcarce. Y que no se repita la sección, porque dos reels seguidos
+ * del mismo tema se comen entre ellos y el que ve el segundo ya se aburrió.
+ */
+export function elegirReels(notas, reglas = REGLAS_PIEZAS) {
+  const elegidas = [];
+  const secciones = new Set();
+  for (const n of [...notas].filter(sePuedeSola).sort(porRelevancia)) {
+    if (elegidas.length >= reglas.reelsDeNoticias) break;
+    if (!n.local || (n.relevancia ?? 0) < reglas.relevanciaParaReel) continue;
+    if (secciones.has(n.seccion)) continue;
+    if (elegidas.some((e) => mismoTema(e, n))) continue;
+    secciones.add(n.seccion);
+    elegidas.push(n);
+  }
+  return elegidas;
+}
+
+/** Las notas que van como historia, sin repetir las que ya son reel. */
+export function elegirHistoriasDeNotas(notas, yaElegidas = [], reglas = REGLAS_PIEZAS) {
+  const candidatas = [...notas]
+    .filter(sePuedeSola)
+    .filter((n) => (n.relevancia ?? 0) >= reglas.relevanciaParaHistoria)
+    .sort(porRelevancia);
+  return sinRepetidos(candidatas, yaElegidas).slice(0, reglas.historiasDeNotas);
+}
+
+/** Los posteos del feed de Instagram. */
+export function elegirFeed(notas, reglas = REGLAS_PIEZAS) {
+  return [...notas]
+    .filter(sePuedeSola)
+    .filter((n) => (n.relevancia ?? 0) >= reglas.relevanciaParaFeed)
+    .sort(porRelevancia)
+    .slice(0, reglas.feedPorDia);
+}
+
+/**
+ * El guion del podcast del día: un repaso de lo más importante, dicho por la
+ * voz de siempre. Sólo usa los titulares que ya están publicados, no agrega ni
+ * un dato: no hay nada que la IA pueda inventar porque la IA no participa.
+ */
+export function guionPodcast(notas, { cuantas = 4, fecha = new Date() } = {}) {
+  const dia = new Intl.DateTimeFormat('es-AR', { weekday: 'long', timeZone: ZONA }).format(fecha);
+  const elegidas = sinRepetidos([...notas].filter(sePuedeSola).sort(porRelevancia)).slice(0, cuantas);
+  if (elegidas.length < 2) return null; // un repaso de una sola noticia no es un repaso
+
+  const titulares = elegidas.map((n) => String(n.titulo).replace(/\s+/g, ' ').trim().replace(/[.:]+$/, ''));
+  const marca = (i) => (i === titulares.length - 1 ? 'Y para cerrar' : ['Primero', 'Después', 'Además'][i]);
+  const cuerpo = titulares.map((t, i) => `${marca(i)}: ${t}.`).join(' ');
+
+  return `Buenas, Balcarce. Este es el repaso de este ${dia}. ${cuerpo} `
+    + 'Todas las notas, con la fuente, en radar balcarce punto com.';
 }

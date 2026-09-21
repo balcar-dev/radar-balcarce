@@ -207,6 +207,7 @@ import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
 import { claveRedaccion, claveRedes, leerVariable } from '../reels/claves.mjs';
+import { elegirReels, elegirHistoriasDeNotas, elegirFeed, guionPodcast, mismoTema, sePuedeSola } from '../redes/elegir.mjs';
 
 /** Un .env de mentira en una carpeta temporal. */
 function envDe(contenido) {
@@ -242,4 +243,101 @@ test('sin archivo ni variable no hay clave, y no se rompe', () => {
 test('las comillas del .env no forman parte de la clave', () => {
   const archivo = envDe('GEMINI_API_KEY_REDES="con-comillas"\n');
   assert.equal(claveRedes({ env: {}, archivo }), 'con-comillas');
+});
+
+// ------------------------------------------------ reels, historias y podcast
+
+const n = (id, titulo, seccion, relevancia, extra = {}) => ({ id, titulo, seccion, relevancia, local: true, semaforo: 'verde', ...extra });
+
+test('Política y Policiales no se arman solas en ninguna pieza', () => {
+  const notas = [
+    n('a', 'Petruccelli pidió informes sobre el programa', 'Política', 98),
+    n('b', 'Detuvieron a un hombre por un robo en Balcarce', 'Policiales', 95),
+    n('c', 'Kevin Gómez volvió a Balcarce como campeón', 'Balcarce', 90),
+  ];
+  assert.deepEqual(elegirReels(notas).map((x) => x.id), ['c']);
+  assert.deepEqual(elegirHistoriasDeNotas(notas).map((x) => x.id), ['c']);
+  assert.deepEqual(elegirFeed(notas).map((x) => x.id), ['c']);
+  assert.equal(sePuedeSola(notas[0]), false);
+});
+
+test('las dos noticias del reel son de secciones distintas', () => {
+  const notas = [
+    n('a', 'Kevin Gómez volvió a Balcarce como campeón', 'Balcarce', 100),
+    n('b', 'El intendente inauguró la nueva plaza del barrio', 'Balcarce', 99),
+    n('c', 'Ferroviarios ganó el Apertura y va por la final', 'Deportes', 90),
+  ];
+  assert.deepEqual(elegirReels(notas).map((x) => x.id), ['a', 'c']);
+});
+
+test('un reel es de Balcarce y de relevancia alta', () => {
+  const notas = [
+    n('a', 'Suben las tasas de interés en todo el país', 'Economía', 99, { local: false }),
+    n('b', 'Una nota floja del barrio', 'Balcarce', 50),
+  ];
+  assert.deepEqual(elegirReels(notas), []);
+});
+
+test('la misma noticia contada por dos medios no sale dos veces', () => {
+  const a = n('a', 'Ferroviarios se quedó con el Apertura y jugará la final anual', 'Deportes', 100);
+  const b = n('b', 'Desde los doce pasos, Ferro se llevó el Apertura', 'Deportes', 88);
+  const c = n('c', 'Estudiantes crearon un mapa de EcoPuntos en la escuela', 'Balcarce', 85);
+  assert.equal(mismoTema(a, b), true);
+  assert.equal(mismoTema(a, c), false);
+  // Y las historias no repiten lo que ya es reel.
+  assert.deepEqual(elegirHistoriasDeNotas([a, b, c], [a]).map((x) => x.id), ['c']);
+});
+
+test('"Balcarce" no alcanza para decir que dos notas son lo mismo', () => {
+  assert.equal(
+    mismoTema({ titulo: 'Obras en el centro de Balcarce' }, { titulo: 'Un vecino de Balcarce ganó un premio' }),
+    false,
+  );
+});
+
+test('hay tres historias de notas como máximo, además de clima y farmacia', () => {
+  const temas = ['mercado', 'biblioteca', 'hospital', 'cooperadora', 'autódromo', 'bomberos', 'polideportivo', 'carnaval'];
+  const notas = temas.map((t, i) => n(`x${i}`, `El ${t} abre hoy`, 'Balcarce', 90 - i));
+  assert.equal(elegirHistoriasDeNotas(notas).length, 3);
+});
+
+test('el podcast repasa los titulares del día y no inventa nada', () => {
+  const notas = [
+    n('a', 'Kevin Gómez volvió a Balcarce como campeón.', 'Balcarce', 100),
+    n('b', 'Ferroviarios ganó el Apertura y va por la final', 'Deportes', 95),
+    n('c', 'Petruccelli pidió informes sobre el programa', 'Política', 99),
+  ];
+  const g = guionPodcast(notas, { fecha: new Date('2026-09-21T12:00:00-03:00') });
+  assert.match(g, /repaso de este lunes/);
+  assert.match(g, /Primero: Kevin Gómez volvió a Balcarce como campeón\./);
+  assert.match(g, /Y para cerrar: Ferroviarios ganó el Apertura y va por la final\./);
+  assert.ok(!g.includes('Petruccelli'), 'coló una nota de Política');
+});
+
+test('con menos de dos noticias no hay podcast', () => {
+  assert.equal(guionPodcast([n('a', 'Una sola noticia importante', 'Balcarce', 99)]), null);
+});
+
+// ---------------------------------------------- los datos del día sin panel
+
+import { datosDeLaWeb } from '../redes/datos.mjs';
+
+test('las piezas se pueden armar con lo ya publicado en la web', () => {
+  const portada = {
+    generado: '2026-09-21T10:00:00Z',
+    notas: [{ id: 'a', titulo: 'Algo' }],
+    clima: { ahora: { temp: 10 }, dias: [] },
+    farmacias: { hoy: { dia: 21, farmacias: ['GALINDO'] }, proximos: [{ dia: 21 }, { dia: 22 }] },
+  };
+  const d = datosDeLaWeb(portada);
+  assert.equal(d.notas.length, 1);
+  assert.equal(d.clima.ahora.temp, 10);
+  // El plan busca el turno por día: tiene que estar el de hoy y los que siguen.
+  assert.deepEqual(d.farmacias.turnos.map((t) => t.dia), [21, 21, 22]);
+});
+
+test('sin farmacia ni clima en la web, no se rompe', () => {
+  const d = datosDeLaWeb({ notas: [] });
+  assert.deepEqual(d.farmacias.turnos, []);
+  assert.equal(d.clima, null);
 });

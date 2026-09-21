@@ -1,0 +1,62 @@
+# Arma las piezas del día (voces, reels, historias, podcast) en los servidores
+# de GitHub, con la PC apagada, y las deja para descargar.
+#
+# Por ahora NO publica nada: las deja en la pestaña de la corrida, en
+# "Artifacts", para escucharlas y mirarlas antes de soltarlas. La publicación
+# a Instagram se agrega cuando las piezas estén aprobadas.
+#
+# La voz sale de Gemini con el secreto GEMINI_API_KEY_REDES (la clave de redes,
+# separada de la que redacta las notas). Si Gemini falla o se acaba el cupo,
+# la pieza sale igual con Elena, la voz de Microsoft.
+#
+# A mano: pestaña Actions → "Piezas" → Run workflow. En "solo" se puede pedir
+# una sola pieza (por ejemplo clima-manana) para no gastar pedidos de más.
+
+name: Piezas
+
+on:
+  workflow_dispatch:
+    inputs:
+      solo:
+        description: 'Sólo estas piezas, separadas por coma (vacío = todas)'
+        type: string
+        default: ''
+
+concurrency:
+  group: piezas
+  cancel-in-progress: false
+
+jobs:
+  piezas:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      # Que "hoy" y "las 19:00" sean los de Balcarce y no los de UTC.
+      TZ: America/Argentina/Buenos_Aires
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      # Acá sí se instala: las placas necesitan resvg y los videos, ffmpeg.
+      - name: Instalar
+        run: npm ci --no-audit --no-fund
+
+      - name: Armar las piezas
+        run: node reels/plan.mjs --generar ${{ inputs.solo != '' && format('--solo={0}', inputs.solo) || '' }}
+        env:
+          GEMINI_API_KEY_REDES: ${{ secrets.GEMINI_API_KEY_REDES }}
+
+      - name: Dejar las piezas para descargar
+        uses: actions/upload-artifact@v4
+        with:
+          name: piezas
+          path: |
+            reels/salida/*.mp4
+            reels/salida/*.mp3
+            reels/salida/*.png
+          if-no-files-found: error
+          retention-days: 7

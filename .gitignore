@@ -5,7 +5,10 @@ node_modules/
 reels/salida/
 reels/casting/
 reels/voces/
-reels/marca/
+# La cortina (marca/cortina.wav) se genera sola con ffmpeg; las tipografías sí
+# se suben, para que GitHub pueda armar las placas (son libres: OFL).
+reels/marca/*
+!reels/marca/fuentes/
 panel/datos/
 ingesta/salida/
 web/node_modules/
