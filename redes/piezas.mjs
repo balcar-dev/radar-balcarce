@@ -24,8 +24,11 @@ import { horariosDe } from '../panel/horarios.mjs';
  *  una corrida llega una hora tarde, todavía alcanza. */
 export const VENTANA_MINUTOS = 120;
 
-/** Las piezas por corrida: que salgan de a poco y no todas juntas. */
-export const POR_CORRIDA = 2;
+/** Las piezas por corrida. Antes eran 2, para que salieran de a poco, pero con el
+ *  reloj impuntual de GitHub una pieza que quedaba para la corrida siguiente se
+ *  podía perder. La clave de Gemini es paga y no hay cupo que cuidar: sale todo
+ *  lo que toque, junto. */
+export const POR_CORRIDA = 6;
 
 /** Los reels del día: dos noticias y el podcast. Los usa reels/plan.mjs. */
 export const HORAS_REELS = ['10:00', '15:00', '20:30'];

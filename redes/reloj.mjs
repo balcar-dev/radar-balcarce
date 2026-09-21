@@ -11,7 +11,7 @@
 //   hay=true|false      si hay algo para armar
 //   solo=a,b            las piezas, listas para plan.mjs --solo=
 //
-// Nunca pide más de POR_CORRIDA piezas juntas: que salgan de a poco.
+// Pide todo lo que toque: si una corrida llega tarde, no deja nada para la próxima.
 
 import fs from 'node:fs';
 import path from 'node:path';

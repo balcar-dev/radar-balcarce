@@ -81,7 +81,7 @@ export function estadoCuota() {
 // solas y, si igual salta el límite, se espera y se reintenta. Nunca conviene
 // disparar una atrás de la otra.
 let ultimoPedido = 0;
-const ESPACIADO = 6000;
+const ESPACIADO = 2000; // la clave de redes es paga: no hay cupo gratis que cuidar
 
 /**
  * Sintetiza con Gemini. Devuelve { archivo, duracion, palabras }, con los
