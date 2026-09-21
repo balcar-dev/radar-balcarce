@@ -230,3 +230,10 @@ export function guionPodcast(notas, { cuantas = 4, fecha = new Date() } = {}) {
   return `Buenas, Balcarce. Este es el repaso de este ${dia}. ${cuerpo} `
     + 'Todas las notas, con la fuente, en radar balcarce punto com.';
 }
+
+/** ¿Está prendido el interruptor de publicar? Acepta "si", "Si", "SÍ", "sí"…
+ *  Se descubrió el 21/09: la variable se creó como "Si" y una comparación
+ *  exacta la dejaba apagada sin avisar. */
+export function estaActivo(valor) {
+  return String(valor ?? '').trim().toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '') === 'si';
+}

@@ -1,16 +1,19 @@
 # Arma las piezas del día (voces, reels, historias, podcast) en los servidores
-# de GitHub, con la PC apagada, y las deja para descargar.
+# de GitHub, con la PC apagada, y opcionalmente las publica en Instagram.
 #
-# Por ahora NO publica nada: las deja en la pestaña de la corrida, en
-# "Artifacts", para escucharlas y mirarlas antes de soltarlas. La publicación
-# a Instagram se agrega cuando las piezas estén aprobadas.
+# Todo lo que sale a Instagram es video con voz: es lo único que se puede
+# entregar directo, sin dejarlo en un sitio público.
 #
 # La voz sale de Gemini con el secreto GEMINI_API_KEY_REDES (la clave de redes,
-# separada de la que redacta las notas). Si Gemini falla o se acaba el cupo,
-# la pieza sale igual con Elena, la voz de Microsoft.
+# separada de la que redacta las notas). Si Gemini falla, la pieza sale igual
+# con Elena, la voz de Microsoft.
 #
-# A mano: pestaña Actions → "Piezas" → Run workflow. En "solo" se puede pedir
-# una sola pieza (por ejemplo clima-manana) para no gastar pedidos de más.
+# Publicar necesita el secreto META_TOKEN y que la variable REDES_ACTIVAS valga
+# "si". Sin esa variable sólo simula.
+#
+# A mano: pestaña Actions → "Piezas" → Run workflow.
+#   solo      una o varias piezas (por ejemplo clima-manana) para no gastar de más
+#   publicar  además de armarlas, subirlas a Instagram ya, sin esperar su hora
 
 name: Piezas
 
@@ -21,6 +24,10 @@ on:
         description: 'Sólo estas piezas, separadas por coma (vacío = todas)'
         type: string
         default: ''
+      publicar:
+        description: 'Publicarlas en Instagram ahora'
+        type: boolean
+        default: false
 
 concurrency:
   group: piezas
@@ -30,6 +37,8 @@ jobs:
   piezas:
     runs-on: ubuntu-latest
     timeout-minutes: 30
+    permissions:
+      contents: write # para guardar el libro de lo ya publicado
     env:
       # Que "hoy" y "las 19:00" sean los de Balcarce y no los de UTC.
       TZ: America/Argentina/Buenos_Aires
@@ -58,5 +67,30 @@ jobs:
             reels/salida/*.mp4
             reels/salida/*.mp3
             reels/salida/*.png
+            reels/salida/piezas.json
           if-no-files-found: error
           retention-days: 7
+
+      - name: Publicar en Instagram
+        if: ${{ inputs.publicar }}
+        run: node redes/publicar.mjs --piezas --sin-horario
+        env:
+          META_TOKEN: ${{ secrets.META_TOKEN }}
+          REDES_ACTIVAS: ${{ vars.REDES_ACTIVAS }}
+
+      # El libro dice qué pieza ya salió. Sin guardarlo, la próxima vuelta
+      # publicaría lo mismo otra vez. Se guarda aunque el paso anterior haya
+      # fallado a la mitad: lo que sí salió no tiene que repetirse.
+      - name: Guardar lo publicado
+        if: ${{ always() && inputs.publicar }}
+        run: |
+          git config user.name "Radar Balcarce"
+          git config user.email "272334999+balcar-dev@users.noreply.github.com"
+          git add web/data/redes.json
+          if git diff --cached --quiet; then
+            echo "Nada nuevo que guardar."
+          else
+            git commit -m "Redes: libro de publicaciones · $(TZ=America/Argentina/Buenos_Aires date '+%d/%m %H:%M')"
+            git pull --rebase
+            git push
+          fi

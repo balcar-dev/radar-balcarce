@@ -434,18 +434,26 @@ if (process.argv[1] && process.argv[1].endsWith('plan.mjs')) {
     // ffmpeg, que son ochenta megas, y leer el plan del día no. Con el
     // import arriba, las pruebas obligaban a instalarlo en GitHub Actions.
     const { armarReel } = await import('./reel.mjs');
+    const manifiesto = [];
     console.log('\n\x1b[1mARMANDO LOS VIDEOS\x1b[0m');
     for (const p of piezas.filter((x) => x.svg && !x.fueraDeTecho
       && (!solo.length || solo.includes(x.nombre)))) {
       process.stdout.write(`  ${p.nombre}… `);
       try {
         const r = await armarReel(p, SALIDA);
+        manifiesto.push({
+          nombre: p.nombre, tipo: p.tipo, hora: p.hora, titulo: p.titulo,
+          archivo: path.basename(r.mp4), duracion: Number(r.duracion.toFixed(1)),
+        });
         console.log(`\x1b[32mlisto\x1b[0m ${path.basename(r.mp4)} · ${r.duracion.toFixed(1)} s · voz ${r.vozUsada}`);
       } catch (e) {
         console.log(`\x1b[31mfalló\x1b[0m ${e.message.split('\n')[0]}`);
       }
     }
     console.log(`\n  Quedaron en ${SALIDA}\n`);
+    // El manifiesto le dice a redes/publicar.mjs qué se armó y a qué hora sale
+    // cada pieza. Con --solo se pisa: lista sólo lo que se acaba de hacer.
+    fs.writeFileSync(path.join(SALIDA, 'piezas.json'), JSON.stringify(manifiesto, null, 2));
   } else {
     console.log('\n  Para armar los videos:  node reels/plan.mjs --generar\n');
   }

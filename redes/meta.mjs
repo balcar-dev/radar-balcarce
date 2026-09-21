@@ -77,7 +77,7 @@ export function crearCliente({ token, paginaId, fetchFn = fetch, esperar = dormi
 
     if (!r.ok || json?.error) {
       const e = json?.error ?? {};
-      throw new ErrorMeta(sinToken(e.message ?? `Meta respondió ${r.status}`, token), {
+      throw new ErrorMeta(sinToken(sinToken(e.message ?? `Meta respondió ${r.status}`, token), conToken), {
         codigo: e.code ?? null, subcodigo: e.error_subcode ?? null, tipo: e.type ?? null, http: r.status,
       });
     }
@@ -142,6 +142,64 @@ export function crearCliente({ token, paginaId, fetchFn = fetch, esperar = dormi
     return { id: j.id };
   }
 
+  /**
+   * Un video en Instagram, como historia (STORIES) o como reel (REELS).
+   *
+   * Se sube directo, en dos pasos: Instagram da una dirección de subida y el
+   * archivo se manda ahí, sin tener que dejarlo en ningún sitio público. Por
+   * eso todo lo que sale a Instagram es video: es lo único que se puede
+   * entregar sin alojarlo.
+   *
+   * @param {Buffer} o.video   el mp4 entero
+   * @param {'STORIES'|'REELS'} o.tipo
+   * @param {string} [o.pie]   el texto del reel (las historias no llevan)
+   */
+  async function publicarVideoEnInstagram({ video, tipo, pie = '' }) {
+    const p = await pagina();
+    if (!p.instagramId) throw new ErrorMeta('La página no tiene un Instagram vinculado.');
+    if (tipo !== 'STORIES' && tipo !== 'REELS') throw new ErrorMeta(`Tipo de video desconocido: ${tipo}`);
+
+    const params = { media_type: tipo, upload_type: 'resumable' };
+    if (pie && tipo === 'REELS') params.caption = pie;
+
+    const contenedor = await pedir(`${p.instagramId}/media`, { metodo: 'POST', conToken: p.tokenPagina, params });
+    if (!contenedor.uri) throw new ErrorMeta('Instagram no indicó dónde subir el video.');
+
+    // Paso 2: el archivo, tal cual, a la dirección que dio Instagram.
+    let r;
+    try {
+      r = await fetchFn(contenedor.uri, {
+        method: 'POST',
+        headers: { Authorization: `OAuth ${p.tokenPagina}`, offset: '0', file_size: String(video.length) },
+        body: video,
+      });
+    } catch (e) {
+      throw new ErrorMeta(`No se pudo subir el video: ${sinToken(sinToken(e.message, token), p.tokenPagina)}`);
+    }
+    let cuerpo = null;
+    try { cuerpo = await r.json(); } catch { /* sin cuerpo */ }
+    if (!r.ok || cuerpo?.success === false) {
+      const detalle = cuerpo?.debug_info?.message ?? cuerpo?.error?.message ?? cuerpo?.message ?? '';
+      throw new ErrorMeta(sinToken(sinToken(`La subida del video falló (${r.status}) ${detalle}`.trim(), token), p.tokenPagina), { http: r.status });
+    }
+
+    // Instagram procesa el video: unos segundos, a veces un minuto o más.
+    for (let i = 0; i < 60; i += 1) {
+      const estado = await pedir(contenedor.id, { conToken: p.tokenPagina, params: { fields: 'status_code,status' } });
+      if (estado.status_code === 'FINISHED') break;
+      if (estado.status_code === 'ERROR' || estado.status_code === 'EXPIRED') {
+        throw new ErrorMeta(`Instagram rechazó el video (${estado.status_code}${estado.status ? `: ${estado.status}` : ''}).`);
+      }
+      if (i === 59) throw new ErrorMeta('Instagram no terminó de procesar el video a tiempo.');
+      await esperar(3000);
+    }
+
+    const j = await pedir(`${p.instagramId}/media_publish`, {
+      metodo: 'POST', conToken: p.tokenPagina, params: { creation_id: contenedor.id },
+    });
+    return { id: j.id };
+  }
+
   /** Un chequeo sin efectos: sirve para saber si el acceso quedó bien. */
   async function verificar() {
     const p = await pagina();
@@ -153,5 +211,5 @@ export function crearCliente({ token, paginaId, fetchFn = fetch, esperar = dormi
     return { pagina: p.nombre, enlace: p.enlace, instagram: p.instagramUsuario, instagramId: p.instagramId, permisos };
   }
 
-  return { pedir, pagina, publicarEnFacebook, publicarFotoEnInstagram, verificar };
+  return { pedir, pagina, publicarEnFacebook, publicarFotoEnInstagram, publicarVideoEnInstagram, verificar };
 }

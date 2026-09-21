@@ -12,7 +12,8 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { crearCliente, ErrorMeta, sinToken } from './meta.mjs';
-import { elegirParaFacebook, mensajeDeNota, enlaceDeNota, libroNuevo, anotar } from './elegir.mjs';
+import { publicarPiezas } from './publicar-piezas.mjs';
+import { elegirParaFacebook, mensajeDeNota, enlaceDeNota, libroNuevo, anotar, estaActivo } from './elegir.mjs';
 
 const RAIZ = path.join(import.meta.dirname, '..');
 const PORTADA = path.join(RAIZ, 'web', 'data', 'portada.json');
@@ -23,7 +24,7 @@ const SITIO = process.env.SITIO ?? 'https://radarbalcarce.com';
 // del perfil de la página. El de la API sale de Configuración del negocio →
 // Páginas → "Identificador".
 const PAGINA = process.env.META_PAGE_ID ?? '1254237411116171';
-const ACTIVO = process.env.REDES_ACTIVAS === 'si';
+const ACTIVO = estaActivo(process.env.REDES_ACTIVAS);
 
 function leer(archivo, porDefecto) {
   try { return JSON.parse(fs.readFileSync(archivo, 'utf8')); } catch { return porDefecto; }
@@ -91,10 +92,30 @@ async function facebook() {
   if (fallo) process.exit(1);
 }
 
+/** Los videos del día (historias y reels) a Instagram. */
+async function piezas() {
+  const { api } = cliente();
+  const carpeta = path.join(RAIZ, 'reels', 'salida');
+  const manifiesto = leer(path.join(carpeta, 'piezas.json'), []);
+  if (!manifiesto.length) {
+    console.log('  No hay piezas armadas (falta reels/salida/piezas.json).');
+    return;
+  }
+  const libro = leer(LIBRO, libroNuevo());
+  const r = await publicarPiezas({
+    api, manifiesto, libro, activo: ACTIVO,
+    sinHorario: process.argv.includes('--sin-horario'),
+    leerVideo: (archivo) => fs.readFileSync(path.join(carpeta, archivo)),
+    guardar: () => fs.writeFileSync(LIBRO, JSON.stringify(libro, null, 2)),
+  });
+  if (r.fallos.length) process.exit(1);
+}
+
 const modo = process.argv[2];
 if (modo === '--verificar') await verificar();
 else if (modo === '--facebook') await facebook();
+else if (modo === '--piezas') await piezas();
 else {
-  console.log('Uso: node redes/publicar.mjs --verificar | --facebook');
+  console.log('Uso: node redes/publicar.mjs --verificar | --facebook | --piezas [--sin-horario]');
   process.exit(2);
 }

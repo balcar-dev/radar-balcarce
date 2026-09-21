@@ -207,7 +207,7 @@ import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
 import { claveRedaccion, claveRedes, leerVariable } from '../reels/claves.mjs';
-import { elegirReels, elegirHistoriasDeNotas, elegirFeed, guionPodcast, mismoTema, sePuedeSola } from '../redes/elegir.mjs';
+import { elegirReels, elegirHistoriasDeNotas, elegirFeed, guionPodcast, mismoTema, sePuedeSola, estaActivo } from '../redes/elegir.mjs';
 
 /** Un .env de mentira en una carpeta temporal. */
 function envDe(contenido) {
@@ -340,4 +340,11 @@ test('sin farmacia ni clima en la web, no se rompe', () => {
   const d = datosDeLaWeb({ notas: [] });
   assert.deepEqual(d.farmacias.turnos, []);
   assert.equal(d.clima, null);
+});
+
+test('el interruptor acepta si, Si, SÍ y sí, y nada más', () => {
+  // GitHub guardó la variable como "Si" y la comparación exacta la dejaba
+  // apagada sin avisar.
+  for (const v of ['si', 'Si', 'SI', 'sí', 'Sí', ' si ']) assert.equal(estaActivo(v), true, v);
+  for (const v of ['', 'no', 'true', undefined, null, 'sino']) assert.equal(estaActivo(v), false, String(v));
 });
