@@ -7,6 +7,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { avisosDelClima, UMBRALES } from '../ingesta/alertas.mjs';
+import { planDelDia } from '../reels/plan.mjs';
 import { tipoDeCielo } from '../web/lib/clima.js';
 
 // ------------------------------------------------------------ los dibujos
@@ -109,4 +110,47 @@ test('sin pronóstico no se rompe', () => {
   assert.deepEqual(avisosDelClima(null), []);
   assert.deepEqual(avisosDelClima({}), []);
   assert.deepEqual(avisosDelClima({ dias: [] }), []);
+});
+
+
+// ------------------------------------------- la historia que no espera
+
+/** Unos datos mínimos como los que lee el plan del día. */
+function datosDelDia(codigoHoy) {
+  return {
+    notas: [],
+    farmacias: { turnos: [] },
+    clima: {
+      ahora: { temp: 14, sensacion: 13, humedad: 70, viento: 12, rumbo: 'O', cielo: 'Nublado', esDeDia: true },
+      dias: [
+        { fecha: '2026-09-20', dia: 'dom', max: 20, min: 9, lluvia: 30, codigo: codigoHoy, viento: 15 },
+        { fecha: '2026-09-21', dia: 'lun', max: 19, min: 8, lluvia: 10, codigo: 1, viento: 12 },
+      ],
+    },
+  };
+}
+
+const avisosDelPlan = (codigo) => planDelDia(datosDelDia(codigo))
+  .piezas.filter((x) => x.nombre?.startsWith('aviso'));
+
+test('un día tranquilo no interrumpe a nadie', () => {
+  // Un aviso que salta todas las semanas deja de ser un aviso.
+  assert.deepEqual(avisosDelPlan(3), []);
+});
+
+test('con granizo sale una historia, y sale ya', () => {
+  const [pieza] = avisosDelPlan(96);
+  assert.ok(pieza, 'no salió la pieza');
+  assert.equal(pieza.hora, 'ahora');
+  assert.match(pieza.guion, /granizo/i);
+  assert.ok(pieza.svg?.length > 500, 'la placa salió vacía');
+});
+
+test('sólo los avisos graves interrumpen', () => {
+  // El calor extremo y la posible helada ya están en la tarjeta de la
+  // portada. Una historia es para lo que puede costar plata o un susto.
+  const datos = datosDelDia(3);
+  datos.clima.dias[0].max = 36; // calor extremo: gravedad media
+  const piezas = planDelDia(datos).piezas.filter((x) => x.nombre?.startsWith('aviso'));
+  assert.deepEqual(piezas, []);
 });

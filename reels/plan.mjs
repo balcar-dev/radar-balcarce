@@ -12,6 +12,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { placaClima, placaFarmacia, placaNoticia, placaUtiles, placaAgenda, COLOR_SECCION } from './placa.mjs';
+import { avisosDelClima } from '../ingesta/alertas.mjs';
 import { armarReel } from './reel.mjs';
 import { NUMEROS } from '../ingesta/utiles.mjs';
 import { horariosDe, toca } from '../panel/horarios.mjs';
@@ -211,6 +212,45 @@ export function planDelDia(datos) {
   // Los horarios y los días salen del panel (pestaña Calendario). Si una
   // pieza está apagada o hoy no le toca, directamente no se arma.
   const cuando = horariosConfigurados();
+
+  // --- El aviso de clima: la única pieza que no tiene horario -------------
+  //
+  // Helada fuerte, granizo o viento de más de 60 km/h. Sale cuando hay algo
+  // que avisar y no cuando le toca, porque un aviso que espera a las 20:00
+  // no es un aviso. Los umbrales están altos a propósito (ingesta/alertas.mjs):
+  // si esto saltara todas las semanas dejaría de mirarlo nadie, y el día que
+  // importa pasaría de largo.
+  //
+  // Sólo los graves. Un "posible helada" o un "calor extremo" ya están en la
+  // tarjeta de la portada; interrumpir a alguien con una historia es para lo
+  // que le puede costar plata o un susto.
+  const avisos = avisosDelClima(datos.clima).filter((a) => a.gravedad === 'alta');
+  if (avisos.length) {
+    const a = avisos[0];
+    piezas.push({
+      tipo: 'historia',
+      hora: 'ahora',
+      nombre: `aviso-${a.tipo}`,
+      titulo: a.titulo,
+      motivo: 'aviso de clima · sale apenas se detecta, sin esperar horario',
+      seccion: 'Clima',
+      guion: `${a.titulo}. ${a.texto}`,
+      svg: placaClima({
+        temp: datos.clima.ahora.temp,
+        cielo: a.titulo,
+        max: datos.clima.dias[0].max,
+        min: datos.clima.dias[0].min,
+        fecha: fechaLarga(),
+        hora: 'AVISO',
+        kicker: 'ATENCIÓN',
+        cajas: [
+          { titulo: 'QUÉ', valor: a.titulo },
+          { titulo: 'CUÁNDO', valor: a.dia === datos.clima.dias[0].fecha ? 'Hoy' : 'Mañana' },
+        ],
+      }),
+      acento: COLOR_SECCION.Policiales ?? COLOR_SECCION.Clima,
+    });
+  }
 
   // --- Historias: lo de todos los días, que es servicio y no noticia -------
   if (datos.clima && toca(cuando['clima-manana'])) {
