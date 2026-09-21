@@ -40,9 +40,14 @@ export function TarjetaFarmacia({ farmacia, verLaSemana = true }) {
       <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
         <span className="punto-vivo" />
         <span className="meta">
-          {lista.length > 1 ? 'Farmacias de turno · hoy' : 'Farmacia de turno · hoy'}
+          {lista.length > 1 ? 'Farmacias de turno' : 'Farmacia de turno'}
         </span>
       </div>
+
+      {/* Hasta cuándo. El turno no va de medianoche a medianoche y eso no
+          es obvio: a las dos de la mañana de un lunes la que está abierta
+          es la del domingo. */}
+      <p className="hasta-cuando">El turno termina a las 9 de la mañana.</p>
 
       {lista.map((f, i) => {
         const mapa = mapaDe(f.direccion);

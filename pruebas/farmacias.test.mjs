@@ -11,6 +11,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { parsearCronograma, paraPruebas } from '../ingesta/ingesta.mjs';
+import { diaDeTurno, comoISO, HORA_DE_CAMBIO } from '../ingesta/utiles.mjs';
 
 const { clavesDe, buscarFarmacia, directorioDeLaVanguardia } = paraPruebas;
 
@@ -143,4 +144,42 @@ test('el Colegio manda sobre La Vanguardia', () => {
 
 test('una farmacia que no está en ningún lado devuelve null', () => {
   assert.equal(buscarFarmacia('FARMACIA NUEVA', {}, {}), null);
+});
+
+// ------------------------------------------- hasta cuándo dura el turno
+
+/** Una hora concreta de Balcarce, como Date. */
+const enBalcarce = (cuando) => new Date(`${cuando}-03:00`);
+
+test('a la medianoche sigue de turno la farmacia del día anterior', () => {
+  // Entraste a la página un lunes a las 00:30 y ya mostraba la del lunes.
+  // La que está abierta a esa hora es la del domingo: el turno termina a
+  // las 9 de la mañana, no a medianoche.
+  assert.equal(comoISO(diaDeTurno(enBalcarce('2026-09-21T00:30:00'))), '2026-09-20');
+  assert.equal(comoISO(diaDeTurno(enBalcarce('2026-09-21T03:00:00'))), '2026-09-20');
+  assert.equal(comoISO(diaDeTurno(enBalcarce('2026-09-21T08:59:00'))), '2026-09-20');
+});
+
+test('a las nueve de la mañana cambia', () => {
+  assert.equal(comoISO(diaDeTurno(enBalcarce('2026-09-21T09:00:00'))), '2026-09-21');
+  assert.equal(comoISO(diaDeTurno(enBalcarce('2026-09-21T14:00:00'))), '2026-09-21');
+  assert.equal(comoISO(diaDeTurno(enBalcarce('2026-09-21T23:59:00'))), '2026-09-21');
+});
+
+test('el cambio de mes también retrocede bien', () => {
+  // A las 2 de la mañana del 1 de octubre está de turno la del 30 de
+  // septiembre, que es otro mes y otro cronograma.
+  assert.equal(comoISO(diaDeTurno(enBalcarce('2026-10-01T02:00:00'))), '2026-09-30');
+  assert.equal(comoISO(diaDeTurno(enBalcarce('2027-01-01T05:00:00'))), '2026-12-31');
+});
+
+test('la hora del servidor no cambia el resultado', () => {
+  // GitHub Actions corre en UTC, tres horas adelante. Con la hora del
+  // servidor, el turno cambiaba a las seis de la tarde de Balcarce.
+  const seisDeLaTarde = enBalcarce('2026-09-20T18:00:00');
+  assert.equal(comoISO(diaDeTurno(seisDeLaTarde)), '2026-09-20');
+});
+
+test('la hora de cambio es la que dice la página', () => {
+  assert.equal(HORA_DE_CAMBIO, 9);
 });

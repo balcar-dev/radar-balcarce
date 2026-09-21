@@ -80,3 +80,37 @@ if (process.argv[1] && process.argv[1].endsWith('utiles.mjs')) {
   }
   console.log('');
 }
+
+// A qué día corresponde la farmacia que está abierta AHORA.
+//
+// El turno no va de medianoche a medianoche: arranca a la mañana y termina a
+// las 9 de la mañana del día siguiente. La página lo decía y el cálculo no lo
+// hacía — a las 00:30 del lunes ya mostraba la del lunes, cuando la que está
+// abierta es todavía la del domingo.
+//
+// Es el error más caro que puede tener este sitio: manda a alguien a una
+// puerta cerrada justo a la hora en que no hay a quién preguntarle.
+export const HORA_DE_CAMBIO = 9;
+
+/**
+ * Devuelve el día (como Date) cuyo turno está corriendo ahora.
+ *
+ * Todo se mira en hora de Balcarce y no en la del servidor: GitHub Actions
+ * corre en UTC, tres horas adelante, y ahí el cambio de turno se adelantaba
+ * a las seis de la tarde.
+ */
+export function diaDeTurno(ahora = new Date()) {
+  const enBalcarce = new Date(ahora.toLocaleString('en-US', { timeZone: 'America/Argentina/Buenos_Aires' }));
+  const dia = new Date(enBalcarce);
+  if (enBalcarce.getHours() < HORA_DE_CAMBIO) dia.setDate(dia.getDate() - 1);
+  return dia;
+}
+
+/** La misma fecha en formato 2026-09-20, sin pasar por UTC. */
+export function comoISO(fecha) {
+  return [
+    fecha.getFullYear(),
+    String(fecha.getMonth() + 1).padStart(2, '0'),
+    String(fecha.getDate()).padStart(2, '0'),
+  ].join('-');
+}

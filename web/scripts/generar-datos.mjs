@@ -18,7 +18,7 @@
 
 import fs from 'node:fs';
 import path from 'node:path';
-import { NUMEROS, tocaHoy, diaDeEstaSemana } from '../../ingesta/utiles.mjs';
+import { NUMEROS, tocaHoy, diaDeEstaSemana, diaDeTurno, comoISO } from '../../ingesta/utiles.mjs';
 import { avisosDelClima } from '../../ingesta/alertas.mjs';
 
 const AQUI = import.meta.dirname;
@@ -119,16 +119,12 @@ const notas = (ultima.notas ?? [])
   .filter(Boolean)
   .sort((a, b) => new Date(b.fecha) - new Date(a.fecha));
 
-// Los turnos se comparan por fecha completa y no por número de día: el
-// cronograma del Colegio arranca el mes siguiente sin cortar, y el 30 de
-// septiembre lo que sigue es el 3 de octubre, no el 3 de septiembre.
-const ahora = new Date();
-const hoyISO = [
-  ahora.getFullYear(),
-  String(ahora.getMonth() + 1).padStart(2, '0'),
-  String(ahora.getDate()).padStart(2, '0'),
-].join('-');
-const hoy = ahora.getDate();
+// Qué farmacia está de turno AHORA. La regla del cambio a las 9 de la
+// mañana está en ingesta/utiles.mjs, con su explicación.
+const delTurno = diaDeTurno();
+const hoyISO = comoISO(delTurno);
+const hoy = delTurno.getDate();
+
 // Si un cronograma viejo no trae fecha armada, se cae al número de día.
 const esHoy = (t) => (t.fecha ? t.fecha === hoyISO : t.dia === hoy);
 const yaViene = (t) => (t.fecha ? t.fecha >= hoyISO : t.dia >= hoy);
