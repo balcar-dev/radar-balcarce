@@ -45,7 +45,9 @@ export async function publicarPiezas({
       const r = await api.publicarVideoEnInstagram({
         video: leerVideo(pieza.archivo), tipo, pie: pieDePieza(pieza),
       });
-      anotar(libro, 'instagram', claveDePieza(pieza.nombre, ahora), { mediaId: r.id, nombre: pieza.nombre, tipo });
+      anotar(libro, 'instagram', claveDePieza(pieza.nombre, ahora), {
+        mediaId: r.id, nombre: pieza.nombre, tipo, notaId: pieza.notaId ?? null,
+      });
       guardar();
       resultado.publicadas.push(pieza.nombre);
       log(`             publicado: ${r.id}`);

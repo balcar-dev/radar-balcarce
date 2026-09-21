@@ -1,32 +1,62 @@
-# Publica en las redes lo que corresponde, sin depender de la PC.
+# Publica solo en Facebook e Instagram, con la PC apagada.
 #
-# Corre cada media hora, diez minutos después de la que actualiza la web: así
-# la nota ya está online cuando se comparte el enlace.
+# CADA CORRIDA hace tres cosas:
 #
-# POR DEFECTO NO PUBLICA. Muestra qué elegiría y listo. Para que publique de
-# verdad hay que crear la variable REDES_ACTIVAS con el valor "si" en GitHub
-# (Settings → Secrets and variables → Actions → Variables). Es el interruptor:
-# se mira unos días qué elegiría y recién ahí se prende.
+#   1. Facebook: si hay una nota fuerte y reciente, publica UNA (dos por día como
+#      máximo, entre las 8 y las 22, nunca Política ni Policiales).
+#   2. El reloj: mira qué historia o reel de Instagram le toca a esta hora
+#      (clima, farmacia, noticias, podcast…) y todavía no salió hoy.
+#   3. Si toca alguna: la arma con la voz de Gemini y la sube a Instagram.
 #
-# Necesita el secreto META_TOKEN (el token del usuario del sistema de Meta).
+# Cuando no toca ninguna pieza, la corrida termina en segundos y no instala
+# nada. Los horarios y las reglas están en REDES.md.
+#
+# POR QUÉ TANTAS CORRIDAS: el planificador de GitHub NO es puntual. En este
+# repositorio llegó a dejar cinco horas entre dos corridas que debían distar
+# treinta minutos. Por eso hay dos o tres pasadas alrededor de cada horario, en
+# minutos poco cargados (ni en punto ni y media), y cada pieza tiene una ventana
+# de dos horas: si una corrida llega tarde, todavía alcanza. Lo que no sale
+# dentro de su ventana se pierde: es mejor no publicar el clima de la mañana a
+# la tarde.
+#
+# Las horas de abajo son UTC (Balcarce es UTC-3): 13:05 UTC son las 10:05 de acá.
+#
+# INTERRUPTOR: la variable REDES_ACTIVAS ("Si") en Settings → Secrets and
+# variables → Actions → Variables. Con otro valor todo corre pero sólo simula.
+#
+# SECRETOS: META_TOKEN (publicar) y GEMINI_API_KEY_REDES (la voz).
 #
 # A mano (pestaña Actions → "Redes" → Run workflow):
-#   verificar   comprueba que el token, la página y el Instagram andan
-#   facebook    corre la elección de Facebook ahora
+#   reloj      lo mismo que las corridas programadas (es lo que usa un servicio
+#              externo si un día se necesita más puntualidad)
+#   verificar  comprueba que el token, la página y el Instagram andan
+#   facebook   sólo la elección de Facebook
 
 name: Redes
 
 on:
   schedule:
-    - cron: '10,40 * * * *'
+    - cron: '35 10 * * *'   # 07:35
+    - cron: '5 11 * * *'    # 08:05
+    - cron: '5,35,45 13 * * *' # 10:05 10:35 10:45
+    - cron: '15 14 * * *'   # 11:15
+    - cron: '45 15 * * *'   # 12:45
+    - cron: '15 16 * * *'   # 13:15
+    - cron: '45 17 * * *'   # 14:45
+    - cron: '5,15,35 18 * * *' # 15:05 15:15 15:35
+    - cron: '5,35 22 * * *' # 19:05 19:35
+    - cron: '5,35 23 * * *' # 20:05 20:35
+    - cron: '5 0 * * *'     # 21:05
   workflow_dispatch:
     inputs:
       accion:
         description: 'Qué hacer'
         type: choice
-        options: [verificar, facebook]
-        default: verificar
+        options: [reloj, verificar, facebook]
+        default: reloj
 
+# Una sola corrida a la vez, compartida con "Piezas": si dos publicaran juntas,
+# la misma pieza podría salir dos veces antes de anotarse en el libro.
 concurrency:
   group: redes
   cancel-in-progress: false
@@ -34,8 +64,12 @@ concurrency:
 jobs:
   redes:
     runs-on: ubuntu-latest
+    timeout-minutes: 25
     permissions:
       contents: write # para guardar el libro de lo ya publicado
+    env:
+      # Que "hoy" y las horas sean las de Balcarce y no las de UTC.
+      TZ: America/Argentina/Buenos_Aires
 
     steps:
       - uses: actions/checkout@v4
@@ -43,15 +77,17 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '24'
+          cache: npm
 
-      # Sin instalar nada: redes/ usa sólo lo que trae Node.
+      # ------------------------------------------------ comprobar el acceso
       - name: Comprobar el acceso a Meta
         if: github.event.inputs.accion == 'verificar'
         run: node redes/publicar.mjs --verificar
         env:
           META_TOKEN: ${{ secrets.META_TOKEN }}
 
-      - name: Publicar en Facebook lo que toque
+      # ------------------------------------------------------------ Facebook
+      - name: Facebook
         if: github.event.inputs.accion != 'verificar'
         run: node redes/publicar.mjs --facebook
         env:
@@ -59,10 +95,49 @@ jobs:
           REDES_ACTIVAS: ${{ vars.REDES_ACTIVAS }}
           SITIO: https://radarbalcarce.com
 
-      # El libro dice qué nota ya salió en qué red. Sin guardarlo, la próxima
-      # vuelta publicaría lo mismo otra vez.
+      # ------------------------------------------ Instagram: el reloj y las piezas
+      - name: Ver qué pieza toca ahora
+        id: reloj
+        if: github.event.inputs.accion != 'verificar' && github.event.inputs.accion != 'facebook'
+        run: node redes/reloj.mjs
+
+      # Sólo si toca algo: acá sí se instala (resvg para las placas, ffmpeg para
+      # el video).
+      - name: Instalar
+        if: steps.reloj.outputs.hay == 'true'
+        run: npm ci --no-audit --no-fund
+
+      - name: Armar las piezas que tocan
+        if: steps.reloj.outputs.hay == 'true'
+        run: node reels/plan.mjs --generar --solo=${{ steps.reloj.outputs.solo }}
+        env:
+          GEMINI_API_KEY_REDES: ${{ secrets.GEMINI_API_KEY_REDES }}
+
+      - name: Publicar en Instagram
+        if: steps.reloj.outputs.hay == 'true'
+        run: node redes/publicar.mjs --piezas
+        env:
+          META_TOKEN: ${{ secrets.META_TOKEN }}
+          REDES_ACTIVAS: ${{ vars.REDES_ACTIVAS }}
+
+      # Las piezas quedan unos días por si hay que revisar cómo salieron.
+      - name: Guardar las piezas para revisarlas
+        if: always() && steps.reloj.outputs.hay == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: piezas-${{ github.run_id }}
+          path: |
+            reels/salida/*.mp4
+            reels/salida/piezas.json
+          if-no-files-found: ignore
+          retention-days: 3
+
+      # ----------------------------------------------------- el libro
+      # El libro dice qué salió ya. Sin guardarlo, la próxima vuelta publicaría
+      # lo mismo otra vez. Se guarda aunque un paso anterior haya fallado a la
+      # mitad: lo que sí salió no tiene que repetirse.
       - name: Guardar lo publicado
-        if: github.event.inputs.accion != 'verificar'
+        if: always() && github.event.inputs.accion != 'verificar'
         run: |
           git config user.name "Radar Balcarce"
           git config user.email "272334999+balcar-dev@users.noreply.github.com"

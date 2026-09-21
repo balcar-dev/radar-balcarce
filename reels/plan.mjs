@@ -17,6 +17,7 @@ import { NUMEROS } from '../ingesta/utiles.mjs';
 import { horariosDe, toca } from '../panel/horarios.mjs';
 import { elegirReels, elegirHistoriasDeNotas, elegirFeed, guionPodcast } from '../redes/elegir.mjs';
 import { datosDeLaWeb } from '../redes/datos.mjs';
+import { HORAS_REELS, horaHistoriaDeNota, HISTORIAS_DE_NOTAS, notasUsadasHoy, piezasPublicadasHoy } from '../redes/piezas.mjs';
 
 // El cupo de reels es el recurso escaso del día, así que NO se gasta en lo que
 // se repite todas las mañanas. Clima, farmacia y agenda van a historias, que
@@ -31,7 +32,7 @@ export const REGLAS = {
   feedPorDia: 0, // apagado: Instagram no acepta fotos sin alojarlas; todo sale en video
   relevanciaParaHistoria: 62,
   relevanciaParaFeed: 80,
-  horariosReel: ['10:00', '15:00', '20:30'],
+  horariosReel: HORAS_REELS,
 };
 
 const DATOS = path.join(import.meta.dirname, '..', 'panel', 'datos', 'ultima.json');
@@ -91,6 +92,12 @@ function guionAgenda(eventos) {
 }
 
 const PORTADA_WEB = path.join(import.meta.dirname, '..', 'web', 'data', 'portada.json');
+const LIBRO_REDES = path.join(import.meta.dirname, '..', 'web', 'data', 'redes.json');
+
+/** Lo ya publicado en las redes, para no repetir notas. Vacío si no hay. */
+function leerLibro() {
+  try { return JSON.parse(fs.readFileSync(LIBRO_REDES, 'utf8')); } catch { return null; }
+}
 
 /** Con panel, lo que dejó el panel. Sin panel (GitHub), lo ya publicado en la web. */
 function leerDatos() {
@@ -202,7 +209,7 @@ export function guionNoticia(n) {
 
 // --- el plan ---------------------------------------------------------------
 
-export function planDelDia(datos) {
+export function planDelDia(datos, { libro = null } = {}) {
   const hoy = new Date().getDate();
   const turno = datos.farmacias?.turnos?.find((t) => t.dia === hoy) ?? null;
 
@@ -356,11 +363,22 @@ export function planDelDia(datos) {
   //
   // Las reglas de qué se puede armar solo (nada de Política ni Policiales)
   // y cómo se elige el gancho están en redes/elegir.mjs, donde se prueban.
-  const paraReel = elegirReels(publicables);
+  //
+  // Con el libro de lo ya publicado, el plan sabe qué reels salieron y qué notas
+  // se usaron hoy. Cuando a las 15:00 se arma sólo el reel 2, elige la mejor
+  // nota que QUEDA y no repite la que ya salió a las 10:00.
+  const usadas = notasUsadasHoy(libro);
+  const hechas = piezasPublicadasHoy(libro);
+  const libres = publicables.filter((n) => !usadas.has(n.id));
+
+  const slotsReel = ['noticia1', 'noticia2']
+    .map((nombre, i) => ({ nombre, hora: REGLAS.horariosReel[i] ?? '21:00' }))
+    .filter((sl) => !hechas.has(sl.nombre));
+  const paraReel = elegirReels(libres).slice(0, slotsReel.length);
 
   paraReel.forEach((n, i) => {
     piezas.push({
-      tipo: 'reel', hora: REGLAS.horariosReel[i] ?? '21:00', nombre: `noticia${i + 1}`,
+      tipo: 'reel', hora: slotsReel[i].hora, nombre: slotsReel[i].nombre, notaId: n.id,
       titulo: n.titulo,
       motivo: `relevancia ${n.relevancia}, de las que más enganchan (${n.seccion})`,
       seccion: n.seccion,
@@ -385,9 +403,13 @@ export function planDelDia(datos) {
   }
 
   // --- Historias: además del clima y la farmacia, tres de notas ------------
-  elegirHistoriasDeNotas(publicables, paraReel).forEach((n, i) => {
+  const slotsHistoria = Array.from({ length: HISTORIAS_DE_NOTAS }, (_, i) => (
+    { nombre: `historia${i + 1}`, hora: horaHistoriaDeNota(i) }
+  )).filter((sl) => !hechas.has(sl.nombre));
+
+  elegirHistoriasDeNotas(libres, paraReel).slice(0, slotsHistoria.length).forEach((n, i) => {
     piezas.push({
-      tipo: 'historia', hora: `${String(10 + i * 2).padStart(2, '0')}:40`, nombre: `historia${i + 1}`,
+      tipo: 'historia', hora: slotsHistoria[i].hora, nombre: slotsHistoria[i].nombre, notaId: n.id,
       titulo: n.titulo, motivo: `relevancia ${n.relevancia}`, seccion: n.seccion,
       guion: guionNoticia(n),
       svg: placaNoticia({ seccion: n.seccion, titulo: n.titulo, cuando: n.cuando }),
@@ -415,7 +437,7 @@ export function planDelDia(datos) {
 
 if (process.argv[1] && process.argv[1].endsWith('plan.mjs')) {
   const datos = leerDatos();
-  const { piezas } = planDelDia(datos);
+  const { piezas } = planDelDia(datos, { libro: leerLibro() });
 
   console.log(`\n\x1b[1mPLAN DEL DÍA · ${fechaLarga()}\x1b[0m`);
   console.log(`  techo: ${REGLAS.reelsPorDia} reels, ${REGLAS.historiasPorDia} historias, ${REGLAS.feedPorDia} en el feed\n`);
@@ -442,7 +464,7 @@ if (process.argv[1] && process.argv[1].endsWith('plan.mjs')) {
       try {
         const r = await armarReel(p, SALIDA);
         manifiesto.push({
-          nombre: p.nombre, tipo: p.tipo, hora: p.hora, titulo: p.titulo,
+          nombre: p.nombre, tipo: p.tipo, hora: p.hora, titulo: p.titulo, notaId: p.notaId ?? null,
           archivo: path.basename(r.mp4), duracion: Number(r.duracion.toFixed(1)),
         });
         console.log(`\x1b[32mlisto\x1b[0m ${path.basename(r.mp4)} · ${r.duracion.toFixed(1)} s · voz ${r.vozUsada}`);

@@ -154,17 +154,50 @@ Cómo se eligen (todo en `redes/elegir.mjs`, con pruebas):
   (acepta cualquier mayúscula o tilde). Con otro valor, todo funciona pero
   sólo **simula**: muestra qué publicaría y no publica nada.
 
-### Lo que hoy es automático y lo que no
+### Cómo se dispara solo
 
-| | Estado |
+El workflow **Redes** (`.github/workflows/redes.yml`) corre varias veces por día,
+con la PC apagada. En cada corrida hace tres cosas:
+
+1. **Facebook**: si hay una nota fuerte y reciente, publica una.
+2. **El reloj** (`redes/reloj.mjs`): mira la hora de Balcarce y el libro de lo ya
+   publicado (`web/data/redes.json`) y dice qué historia o reel de Instagram le
+   toca a esta hora y todavía no salió hoy.
+3. **Si toca alguna**: la arma con la voz de Gemini (`reels/plan.mjs --solo=…`) y
+   la sube a Instagram. Después guarda el libro en el repositorio.
+
+Cuando no toca ninguna pieza, la corrida termina en segundos y no instala nada.
+
+**Por qué hay tantas corridas programadas.** El planificador de GitHub **no es
+puntual**: en este repositorio dejó hasta cinco horas entre dos corridas que
+debían distar treinta minutos. Por eso hay dos o tres pasadas alrededor de cada
+horario, en minutos poco cargados (ni en punto ni y media), y **cada pieza tiene
+una ventana de 2 horas**: si una corrida llega tarde, todavía alcanza. Si la
+ventana se cierra sin que salga, esa pieza se pierde por hoy: es mejor que
+publicar el clima de la mañana a la tarde.
+
+**Consecuencia honesta:** una pieza puede salir hasta 2 horas después de su hora
+si GitHub se demora. Si algún día hace falta puntualidad exacta, la solución es
+que un servicio externo gratuito dispare el workflow a la hora justa (el
+workflow ya acepta la acción `reloj` a mano para eso). Necesita una cuenta en ese
+servicio y un token de GitHub.
+
+| Cosa | Estado |
 |---|---|
-| Posteos en Facebook | **Automático**, cada 30 minutos |
-| Armar las piezas de video | A demanda: Actions → **Piezas** → Run workflow |
-| Publicar historias y reels en Instagram | **A mano** por ahora: Actions → **Piezas** → Run workflow, con `publicar` tildado. Falta el reloj que las saque solas a su hora |
+| Posteos en Facebook | Automático |
+| Historias y reels en Instagram | Automático (reloj) |
+| Armar las piezas a demanda | Actions → **Piezas** → Run workflow |
+| Publicar una pieza a mano | Actions → **Piezas**, con `solo` y `publicar` tildado |
+| Comprobar el token | Actions → **Redes** → Run workflow → `verificar` |
 
-Para publicar una pieza a mano: Actions → Piezas → Run workflow → en `solo`
-el nombre de la pieza (`clima-manana`, `farmacia`, `noticia1`, `podcast`, …) →
-tildar `publicar`. Vacío arma todas.
+Todo esto sólo **publica** si la variable `REDES_ACTIVAS` vale `Si`; con otra cosa
+simula.
+
+**Los subtítulos** de las piezas siguen la voz palabra por palabra
+(`reels/tiempos.mjs`). Se ubican a partir de las pausas del audio y del peso en
+sílabas (los números se cuentan como los dice la voz: "715" son 6 sílabas).
+Medido contra la voz de Edge, que trae el tiempo exacto de cada palabra, el error
+medio es de 0,1 a 0,2 segundos. El texto va en tinta, sin halo.
 
 ### El primer mes
 
@@ -245,13 +278,15 @@ tiene alternativa: si falta, los reels no arrancan. Los tokens y las claves
 | `redes/publicar.mjs` | El programa: `--verificar`, `--facebook`, `--piezas [--sin-horario]` |
 | `redes/datos.mjs` | Arma los datos del día desde la web, para generar sin panel |
 | `reels/claves.mjs` | Las dos claves de Gemini |
-| `.github/workflows/redes.yml` | Facebook cada 30 min, y comprobar el acceso |
-| `.github/workflows/piezas.yml` | Armar y publicar las piezas de video |
+| `redes/reloj.mjs` | Dice qué pieza toca a esta hora (sin instalar nada) |
+| `reels/tiempos.mjs` | Cuándo arranca cada palabra del subtítulo |
+| `.github/workflows/redes.yml` | **El reloj**: Facebook + Instagram, varias corridas por día |
+| `.github/workflows/piezas.yml` | Armar y publicar piezas a mano |
 
 ### Lo que falta
 
-1. **El reloj de Instagram**: un workflow programado que cada 30 minutos genere
-   sólo la pieza que toca y la publique.
+1. **Puntualidad exacta**, si hiciera falta: un servicio externo que dispare el
+   reloj a la hora justa (hoy una pieza puede salir hasta 2 horas tarde).
 2. **Historias y reels también en la página de Facebook.**
 3. **Threads**: pide su propio token, no sirve el de Meta.
 4. **La categoría de Instagram** sigue en "Blog personal" (no se ve en el
@@ -260,3 +295,4 @@ tiene alternativa: si falta, los reels no arrancan. Los tokens y las claves
 5. **La agenda de la semana en historia** sólo se arma en la PC, porque
    `agenda.json` no está en GitHub.
 6. **Notas más largas**, con el texto completo de las fuentes.
+7. Mirar los primeros días cómo salen las piezas y ajustar horarios y cantidad.

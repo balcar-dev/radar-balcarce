@@ -20,9 +20,12 @@ name: Actualizar la web
 
 on:
   schedule:
-    # Cada 30 minutos. El horario de GitHub es UTC: en Balcarce son 3 horas
-    # menos, pero como corre todo el día da lo mismo.
-    - cron: '*/30 * * * *'
+    # Cada 30 minutos, pero en el minuto 7 y el 37 y no en punto ni y media:
+    # esos dos son los más cargados de GitHub y ahí las corridas se demoraban
+    # o se salteaban (cada 2 a 6 horas en vez de cada 30 minutos). El horario
+    # es UTC: en Balcarce son 3 horas menos, pero como corre todo el día da lo
+    # mismo.
+    - cron: '7,37 * * * *'
   # Y a mano, desde la pestaña Actions, por si hace falta forzar una vuelta.
   workflow_dispatch:
 
@@ -92,5 +95,8 @@ jobs:
             echo "Sin novedades: no hay nada que publicar."
           else
             git commit -m "Datos de la portada · $(TZ=America/Argentina/Buenos_Aires date '+%d/%m %H:%M')"
+            # El reloj de las redes también guarda su libro en este repositorio:
+            # se traen sus cambios antes de subir los nuestros.
+            git pull --rebase
             git push
           fi

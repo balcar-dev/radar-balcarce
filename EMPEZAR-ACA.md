@@ -46,18 +46,19 @@ cuando las tengas guardadas en otro lado.
 ### Solo, desde GitHub (con la PC apagada)
 
 - **Cada 30 minutos**: actualiza la web y la publica.
-- **Cada 30 minutos (a los :10 y :40)**: publica **una** nota en la página de
-  Facebook, si hay alguna fuerte y reciente. Dos por día como máximo, entre
-  las 8 y las 22. Nunca Política ni Policiales.
+- **Varias veces por día** (el reloj de las redes): publica **una** nota en la
+  página de Facebook, si hay alguna fuerte y reciente (dos por día como máximo,
+  entre las 8 y las 22, nunca Política ni Policiales), y sube a Instagram la
+  historia o el reel que le toca a esa hora (clima, farmacia, noticias, podcast).
+  GitHub no es puntual: una pieza puede salir hasta 2 horas tarde.
 
 ### A mano
 
 - **Decidir las notas amarillas** en el panel. Son las que pueden traer
   problemas: denuncias, intendente, gremios, detenidos.
-- **Historias y reels de Instagram**. Se arman en GitHub con la voz de Gemini
-  y se suben a mano: GitHub → Actions → **Piezas** → Run workflow (en `solo` la
-  pieza, y tildar `publicar`). Falta el reloj que las saque solas a su hora.
-  Horarios y reglas: `REDES.md`.
+- **Historias y reels de Instagram**: salen solos. Si alguna vez hace falta
+  publicar una a mano: GitHub → Actions → **Piezas** → Run workflow (en `solo` la
+  pieza, y tildar `publicar`). Horarios y reglas: `REDES.md`.
 - **Prender o apagar las redes**: variable `REDES_ACTIVAS` en GitHub (Settings →
   Secrets and variables → Actions → Variables). Con `Si` publica; con otro
   valor sólo simula.
@@ -105,8 +106,8 @@ tailscale funnel --https=443 off
 
 ## Lo que falta
 
-1. **El reloj de Instagram**: que las historias, los reels y el podcast salgan
-   solos a su hora. Hoy se publican a mano desde GitHub.
+1. Mirar los primeros días cómo salen las piezas (voz, horarios, cantidad) y
+   ajustar.
 2. Historias y reels también en la página de Facebook.
 3. Threads (pide su propio token).
 4. Cambiar la categoría de Instagram a "Sitio web de noticias y medios" (desde

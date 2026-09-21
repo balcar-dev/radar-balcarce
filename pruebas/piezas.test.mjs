@@ -215,3 +215,78 @@ test('si el token murió, corta: no tiene sentido seguir', async () => {
   assert.equal(r.tokenMuerto, true);
   assert.equal(r.fallos.length, 1, 'siguió intentando con un token muerto');
 });
+
+// ------------------------------------------------------------- el reloj
+
+import {
+  cronogramaDelDia, slotsQueTocan, notasUsadasHoy, piezasPublicadasHoy, VENTANA_MINUTOS, HORAS_REELS, horaHistoriaDeNota,
+} from '../redes/piezas.mjs';
+
+/** Un lunes (21/09/2026) a la hora de Balcarce que se pida. */
+const LUNES = (hhmm) => new Date(`2026-09-21T${hhmm}:00-03:00`);
+const nombres = (lista) => lista.map((p) => p.nombre);
+
+test('el cronograma del día trae las fijas, los reels y las historias de notas', () => {
+  const c = cronogramaDelDia(LUNES('12:00'));
+  assert.deepEqual(nombres(c), [
+    'clima-manana', 'noticia1', 'historia1', 'historia2', 'historia3', 'noticia2', 'farmacia', 'clima-noche', 'podcast',
+  ]);
+  assert.equal(c.find((p) => p.nombre === 'clima-manana').hora, '07:30');
+  assert.equal(c.find((p) => p.nombre === 'podcast').tipo, 'reel');
+});
+
+test('los teléfonos útiles sólo salen los martes, y la agenda no la espera GitHub', () => {
+  const martes = new Date('2026-09-22T12:00:00-03:00');
+  assert.ok(nombres(cronogramaDelDia(martes)).includes('utiles'));
+  assert.ok(!nombres(cronogramaDelDia(LUNES('12:00'))).includes('utiles'));
+  // La agenda (jueves) necesita datos que sólo hay en la PC: si GitHub la
+  // esperara, la reintentaría en cada corrida sin poder armarla nunca.
+  const jueves = new Date('2026-09-24T12:00:00-03:00');
+  assert.ok(!nombres(cronogramaDelDia(jueves)).includes('agenda'));
+});
+
+test('los horarios de los reels y las historias de notas son los que dice REDES.md', () => {
+  assert.deepEqual(HORAS_REELS, ['10:00', '15:00', '20:30']);
+  assert.deepEqual([0, 1, 2].map(horaHistoriaDeNota), ['10:40', '12:40', '14:40']);
+});
+
+test('a cada hora toca lo que corresponde', () => {
+  const libro = libroNuevo();
+  assert.deepEqual(nombres(slotsQueTocan({ ahora: LUNES('07:35'), libro })), ['clima-manana']);
+  assert.deepEqual(nombres(slotsQueTocan({ ahora: LUNES('10:05'), libro })), ['noticia1']);
+  assert.deepEqual(nombres(slotsQueTocan({ ahora: LUNES('19:05'), libro })), ['farmacia']);
+  // La farmacia de las 19:00 todavía está en su ventana (hasta las 21:00): si no salió, toca.
+  assert.deepEqual(nombres(slotsQueTocan({ ahora: LUNES('20:35'), libro })), ['farmacia', 'clima-noche', 'podcast']);
+});
+
+test('de madrugada no toca nada', () => {
+  assert.deepEqual(slotsQueTocan({ ahora: LUNES('03:00'), libro: libroNuevo() }), []);
+});
+
+test('una corrida que llega tarde todavía alcanza, pero no para siempre', () => {
+  // El reloj de GitHub se demora: la ventana es lo que lo hace tolerable.
+  const libro = libroNuevo();
+  assert.deepEqual(nombres(slotsQueTocan({ ahora: LUNES('08:50'), libro })), ['clima-manana']);
+  assert.deepEqual(slotsQueTocan({ ahora: LUNES('09:40'), libro }), [], 'el clima de las 7:30 ya no sirve a las 9:40');
+  assert.equal(VENTANA_MINUTOS, 120);
+});
+
+test('lo que ya salió hoy no vuelve a tocar', () => {
+  const libro = libroNuevo();
+  anotar(libro, 'instagram', claveDePieza('clima-manana', LUNES('08:00')), {});
+  assert.deepEqual(nombres(slotsQueTocan({ ahora: LUNES('08:35'), libro })), []);
+});
+
+test('lo de ayer no frena lo de hoy', () => {
+  const libro = libroNuevo();
+  anotar(libro, 'instagram', claveDePieza('clima-manana', new Date('2026-09-20T08:00:00-03:00')), {});
+  assert.deepEqual(nombres(slotsQueTocan({ ahora: LUNES('07:35'), libro })), ['clima-manana']);
+});
+
+test('las notas ya usadas hoy y las piezas ya publicadas se reconocen', () => {
+  const libro = libroNuevo();
+  anotar(libro, 'instagram', claveDePieza('noticia1', LUNES('10:00')), { notaId: 'abc' });
+  anotar(libro, 'instagram', claveDePieza('clima-manana', new Date('2026-09-20T08:00:00-03:00')), { notaId: 'vieja' });
+  assert.deepEqual([...notasUsadasHoy(libro, LUNES('12:00'))], ['abc']);
+  assert.deepEqual([...piezasPublicadasHoy(libro, LUNES('12:00'))], ['noticia1']);
+});

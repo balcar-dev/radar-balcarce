@@ -436,7 +436,22 @@ aprendió.
   automatización; se cambia desde el celular.
 - Las pestañas de Chrome en segundo plano no responden a capturas.
 
+**El reloj (mismo día, más tarde)**
+
+- `redes.yml` pasó a ser el reloj: varias corridas por día, cada una publica en
+  Facebook y, si toca, arma y sube la historia o reel de esa hora. Cada pieza
+  tiene una ventana de 2 horas porque el planificador de GitHub no es puntual
+  (en este repositorio dejó hasta 5 horas entre dos corridas de "cada 30
+  minutos").
+- El plan elige la nota para cada pieza según lo que ya salió hoy (el libro
+  guarda la nota usada), así una noticia no se repite entre historia y reel.
+- Los subtítulos iban por delante de la voz (hasta 19 s en el podcast) porque el
+  alineador usaba las primeras pausas del audio, y la voz también respira en las
+  comas. Se rehízo (`reels/tiempos.mjs`) y se midió contra Edge: de 2,5–9,5 s de
+  error medio a 0,1–0,2 s. Los números se cuentan como los dice la voz.
+
 **Lo que falta**
 
-Ver "Lo que falta" al final de `REDES.md`: el reloj de Instagram, historias y
-reels en Facebook, Threads, la categoría de Instagram y las notas largas.
+Ver "Lo que falta" al final de `REDES.md`: puntualidad exacta si hiciera falta,
+historias y reels en Facebook, Threads, la categoría de Instagram y las notas
+largas.

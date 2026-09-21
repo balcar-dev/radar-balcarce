@@ -30,7 +30,7 @@ on:
         default: false
 
 concurrency:
-  group: piezas
+  group: redes # la misma que el reloj: nunca dos publicando a la vez
   cancel-in-progress: false
 
 jobs:

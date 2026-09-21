@@ -17,10 +17,10 @@ rioplatense, sin voseo forzado.
 Flujo: fuentes → ingesta → clasificar → puntaje → semáforo → `web/data/portada.json`
 → GitHub Actions (cada 30 min) → Vercel. **La web se actualiza con la PC apagada.**
 
-Redes (todo desde GitHub, con la PC apagada): `redes.yml` publica en Facebook cada
-30 min; `piezas.yml` arma las historias, reels y el podcast con la voz de Gemini y
-los sube a Instagram (por ahora a mano; falta el reloj). Detalle y horarios en
-`REDES.md`.
+Redes (todo desde GitHub, con la PC apagada): `redes.yml` es el reloj. Varias veces
+por día publica en Facebook y, si a esa hora le toca una historia o reel, la arma
+con la voz de Gemini y la sube a Instagram. `piezas.yml` sirve para armar o
+publicar piezas a mano. Detalle y horarios en `REDES.md`.
 
 ## Comandos
 
@@ -97,15 +97,15 @@ los sube a Instagram (por ahora a mano; falta el reloj). Detalle y horarios en
   apuntando a Vercel; `www` redirige al dominio sin `www`). La dirección vieja
   `radar-balcarce-six.vercel.app` redirige al dominio propio. El sitio ya se
   indexa (`web/lib/sitio.js` lo detecta solo).
-- **Redes, al 21/09:** Facebook publica solo (una nota cada 30 min, 2 por día
-  como máximo). Las piezas de video (clima, farmacia, 2 reels de noticias, el
-  podcast y 3 historias de notas) se arman en GitHub con la voz Gemini "Kore" y
-  se publican en Instagram **a mano** (Actions → Piezas). **Falta el reloj** que
-  las saque solas a su hora. Horarios y reglas: `REDES.md`.
-- Pendientes de redes: el reloj de Instagram, historias y reels en Facebook,
-  Threads (token propio), categoría de Instagram (cambiar desde el celular a
-  "Sitio web de noticias y medios"), y notas más largas con el texto completo
-  de las fuentes.
+- **Redes, al 21/09:** Facebook e Instagram publican solos desde GitHub. Facebook,
+  una nota por vez (2 por día como máximo). Instagram, las piezas de video del día
+  (clima, farmacia, 2 reels de noticias, el podcast y 3 historias de notas) con la
+  voz Gemini "Kore". Horarios y reglas: `REDES.md`. **El reloj de GitHub no es
+  puntual:** cada pieza tiene una ventana de 2 horas y puede salir tarde.
+- Pendientes de redes: historias y reels en Facebook, Threads (token propio),
+  categoría de Instagram (cambiar desde el celular a "Sitio web de noticias y
+  medios"), notas más largas con el texto completo de las fuentes, y mirar los
+  primeros días cómo salen las piezas.
 - La reescritura con IA corre sola en el panel (PC prendida) con la clave de
   redacción; la verificación contra la fuente sigue siendo obligatoria.
 - Lista completa de pendientes: el documento "Pendientes" de la sesión del 21/09
