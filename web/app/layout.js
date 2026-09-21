@@ -6,11 +6,41 @@ import { PastillaClima } from '@/components/clima-vivo';
 import { comoNombre } from '@/lib/texto';
 import { Analytics } from '@vercel/analytics/next';
 import Buscador from '@/components/buscador';
+import { sitio, enElDominioPropio, NOMBRE } from '@/lib/sitio';
+import { FichaDelSitio } from '@/components/ficha';
 
+const DESCRIPCION = 'Lo que pasa en Balcarce, la región y el país. Actualizado todo el día, con la fuente siempre a la vista.';
+
+// Lo que ve todo el que comparte un enlace del sitio.
+//
+// Hasta ahora una nota compartida por WhatsApp llegaba como una dirección
+// pelada: sin título, sin bajada y sin imagen. El botón de compartir que
+// pusimos estaba tirando contra un muro.
+//
+// metadataBase no se escribe a mano: sale de lib/sitio.js, que mira dónde
+// está corriendo el sitio de verdad. Mientras radarbalcarce.com no esté
+// conectado, los enlaces apuntan a donde el sitio sí abre.
 export const metadata = {
-  metadataBase: new URL('https://radarbalcarce.com.ar'),
-  title: { default: 'Radar Balcarce', template: '%s · Radar Balcarce' },
-  description: 'Lo que pasa en Balcarce, la región y el país. Actualizado todo el día, con la fuente siempre a la vista.',
+  metadataBase: new URL(sitio()),
+  title: { default: NOMBRE, template: `%s · ${NOMBRE}` },
+  description: DESCRIPCION,
+  applicationName: NOMBRE,
+  alternates: { canonical: '/', types: { 'application/rss+xml': '/feed.xml' } },
+  openGraph: {
+    siteName: NOMBRE,
+    title: NOMBRE,
+    description: DESCRIPCION,
+    locale: 'es_AR',
+    type: 'website',
+    url: '/',
+  },
+  twitter: { card: 'summary_large_image', title: NOMBRE, description: DESCRIPCION },
+  // Mientras no estemos en el dominio propio, que no lo indexen: la misma
+  // nota en dos direcciones es la forma más fácil de que Google elija la
+  // equivocada.
+  robots: enElDominioPropio()
+    ? { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 }
+    : { index: false, follow: false },
 };
 
 export const viewport = { themeColor: '#14161A' };
@@ -50,6 +80,7 @@ export default function RaizLayout({ children }) {
             tocaba le aparecía una pantalla de código, porque un feed es
             para que lo lea un programa, no una persona. Los lectores de
             noticias lo encuentran solos por esta línea. */}
+        <FichaDelSitio />
         <link rel="alternate" type="application/rss+xml" title="Radar Balcarce" href="/feed.xml" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />

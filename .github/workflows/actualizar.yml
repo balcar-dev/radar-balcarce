@@ -59,6 +59,27 @@ jobs:
         working-directory: web
         run: node scripts/generar-datos.mjs
 
+      # El sitio se compila acá antes de publicar. Hasta ahora, un cambio
+      # que rompía Next llegaba a Vercel y se descubría recién cuando el
+      # deploy fallaba — con la web anterior sirviéndose mientras tanto,
+      # pero sin que nadie se enterara de que dejó de actualizarse.
+      #
+      # Si no compila, no se commitea: la web se queda como está.
+      - name: Compilar el sitio
+        working-directory: web
+        run: |
+          npm ci --no-audit --no-fund
+          npm run build
+        env:
+          SITIO: https://radarbalcarce.com
+
+      # Que lo importante haya quedado en el HTML. Sin esto, alguien toca
+      # layout.js dentro de seis meses, se lleva puesto el Open Graph y no
+      # se entera nadie hasta que una nota compartida llega pelada.
+      - name: Revisar que el SEO siga en pie
+        working-directory: web
+        run: node scripts/revisar-seo.mjs
+
       - name: Guardar si cambió algo
         run: |
           git config user.name "Radar Balcarce"

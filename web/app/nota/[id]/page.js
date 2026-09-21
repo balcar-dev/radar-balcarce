@@ -3,16 +3,45 @@ import {
   PlacaSeccion, Etiqueta, FilaNota, Cierre, Invitacion, Firma, TemasDeLaNota,
 } from '@/components/piezas';
 import Compartir from '@/components/compartir';
+import { FichaDeNota, Migas } from '@/components/ficha';
 import { notFound } from 'next/navigation';
 
 export function generateStaticParams() {
   return obtenerDatos().notas.map((n) => ({ id: n.id }));
 }
 
+/**
+ * Lo que ve un buscador y lo que ve WhatsApp.
+ *
+ * `canonical` importa más de lo que parece: la misma nota puede llegar con
+ * parámetros pegados (?fbclid=…, ?utm_source=…) y sin esto Google la cuenta
+ * como páginas distintas y reparte el mérito entre todas.
+ *
+ * La imagen no se declara acá: la toma sola de opengraph-image.js, que está
+ * al lado.
+ */
 export function generateMetadata({ params }) {
   const n = obtenerNota(params.id);
   if (!n) return {};
-  return { title: n.titulo, description: n.copete };
+
+  const camino = `/nota/${n.id}`;
+  const descripcion = n.copete || `${n.seccion} · Lo informaron ${n.medios.join(' y ')}.`;
+
+  return {
+    title: n.titulo,
+    description: descripcion,
+    alternates: { canonical: camino },
+    openGraph: {
+      type: 'article',
+      title: n.titulo,
+      description: descripcion,
+      url: camino,
+      publishedTime: n.fecha,
+      modifiedTime: n.fecha,
+      section: n.seccion,
+    },
+    twitter: { card: 'summary_large_image', title: n.titulo, description: descripcion },
+  };
 }
 
 export default function PaginaNota({ params }) {
@@ -27,6 +56,11 @@ export default function PaginaNota({ params }) {
 
   return (
     <div className="envoltura">
+      <FichaDeNota nota={n} />
+      <Migas pasos={[
+        { nombre: s.nombre, camino: `/seccion/${s.ranura}` },
+        { nombre: n.titulo, camino: `/nota/${n.id}` },
+      ]} />
       <article className="cuerpo-nota">
         <div className="chapa-nota">
           <Etiqueta seccion={n.seccion} />

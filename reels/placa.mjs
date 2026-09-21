@@ -257,7 +257,7 @@ export function placaClima({
         fill="${COLORES.tinta}">${min}° <tspan font-weight="400" fill="${COLORES.suave}">mínima</tspan>  ·  ${max}° <tspan font-weight="400" fill="${COLORES.suave}">máxima</tspan></text>
 
   ${cajas.slice(0, 3).map((c, i) => caja(i, c.titulo, c.valor)).join('')}
-  ${pie('radarbalcarce.com.ar', color)}
+  ${pie('radarbalcarce.com', color)}
 </svg>`;
 }
 
@@ -369,7 +369,7 @@ export function placaAgenda({ eventos = [], titulo = 'Qué hacer este fin de sem
   <text x="${MARGEN}" y="460" font-family="${DISPLAY}" font-size="58" font-weight="900"
         letter-spacing="-2" fill="#FFFFFF">${esc(titulo)}</text>
   ${bloques}
-  ${pie('Agenda del Municipio de Balcarce · radarbalcarce.com.ar', color)}
+  ${pie('Agenda del Municipio de Balcarce · radarbalcarce.com', color)}
 </svg>`;
 }
 
@@ -417,7 +417,7 @@ export function placaUtiles({ grupos = [] }) {
   <text x="${MARGEN}" y="450" font-family="${DISPLAY}" font-size="56" font-weight="900"
         letter-spacing="-2" fill="#FFFFFF">Guardalos en el celular</text>
   ${bloques}
-  ${pie('Municipalidad de Balcarce · radarbalcarce.com.ar', color)}
+  ${pie('Municipalidad de Balcarce · radarbalcarce.com', color)}
 </svg>`;
 }
 
@@ -531,7 +531,7 @@ export function placaNoticia({
   <rect x="${MARGEN}" y="${base + 62}" width="96" height="6" fill="${color}"/>
   ${cuando ? `<text x="${MARGEN}" y="${base + 142}" font-family="${TEXTO}"
         font-size="30" font-weight="500" fill="${COLORES.suave}">${esc(cuando)}</text>` : ''}
-  ${pie('La nota completa en radarbalcarce.com.ar', color)}
+  ${pie('La nota completa en radarbalcarce.com', color)}
 </svg>`;
 }
 

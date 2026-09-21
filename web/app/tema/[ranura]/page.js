@@ -5,6 +5,7 @@ import {
   PlacaSeccion, Etiqueta, FilaNota, Cierre, Invitacion,
 } from '@/components/piezas';
 import { notFound } from 'next/navigation';
+import { Migas } from '@/components/ficha';
 
 // Un tema es una historia que vuelve: el autódromo, el Concejo, Ferroviarios.
 // La sección agrupa por tipo de noticia; el tema, por historia. En un pueblo
@@ -17,9 +18,15 @@ export function generateStaticParams() {
 export function generateMetadata({ params }) {
   const nombre = nombreDeTema(params.ranura);
   if (!nombre) return {};
+
+  const descripcion = `Todo lo que publicamos sobre ${nombre.toLowerCase()} en Balcarce, de lo último a lo primero.`;
+  const camino = `/tema/${params.ranura}`;
+
   return {
     title: nombre,
-    description: `Todo lo que publicamos sobre ${nombre.toLowerCase()} en Balcarce, de lo último a lo primero.`,
+    description: descripcion,
+    alternates: { canonical: camino },
+    openGraph: { type: 'website', title: nombre, description: descripcion, url: camino },
   };
 }
 
@@ -32,6 +39,7 @@ export default function PaginaTema({ params }) {
 
   return (
     <div className="envoltura" style={{ maxWidth: 760 }}>
+      <Migas pasos={[{ nombre, camino: `/tema/${params.ranura}` }]} />
       <div className="chapa-tema">
         <span className="meta">Tema que seguimos</span>
         <h1>{nombre}</h1>

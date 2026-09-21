@@ -8,6 +8,7 @@ import { notFound } from 'next/navigation';
 import {
   POR_PAGINA, partirRanura, cuantasPaginas, direccionDePagina,
 } from '@/lib/paginas';
+import { Migas } from '@/components/ficha';
 
 // Se generan sólo las secciones que hoy tienen notas —no tiene sentido
 // publicar una página vacía de Política si en el día no hubo nada— y una
@@ -31,9 +32,16 @@ export function generateMetadata({ params }) {
   const { base, pagina } = partirRanura(params.ranura, porRanura);
   const s = porRanura(base);
   if (!s) return {};
+
+  const titulo = pagina > 1 ? `${s.nombre} · página ${pagina}` : s.nombre;
+  const descripcion = `Todo lo que publicamos en ${nombreCorto(s.nombre)}, en Radar Balcarce.`;
+  const camino = direccionDePagina(s.ranura, pagina);
+
   return {
-    title: pagina > 1 ? `${s.nombre} · página ${pagina}` : s.nombre,
-    description: `Todo lo que publicamos en ${nombreCorto(s.nombre)}, en Radar Balcarce.`,
+    title: titulo,
+    description: descripcion,
+    alternates: { canonical: camino },
+    openGraph: { type: 'website', title: titulo, description: descripcion, url: camino },
   };
 }
 
@@ -62,6 +70,7 @@ export default function PaginaSeccion({ params }) {
 
   return (
     <div className="envoltura" style={{ maxWidth: 760 }}>
+      <Migas pasos={[{ nombre: s.nombre, camino: `/seccion/${s.ranura}` }]} />
       <div className="titulo-seccion" style={{ marginBottom: 22 }}>
         <span className="barra" style={{ background: s.color }} />
         <h2 style={{ fontSize: 28 }}>{s.nombre}</h2>

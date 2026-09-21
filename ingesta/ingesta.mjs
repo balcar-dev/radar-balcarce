@@ -537,7 +537,7 @@ function cieloDeSimbolo(codigo = '') {
 async function climaDeMetNo() {
   const url = 'https://api.met.no/weatherapi/locationforecast/2.0/compact'
     + `?lat=${BALCARCE.lat}&lon=${BALCARCE.lon}`;
-  const j = JSON.parse(await traer(url, { agente: 'RadarBalcarce/0.1 (radarbalcarce.com.ar)' }));
+  const j = JSON.parse(await traer(url, { agente: 'RadarBalcarce/0.1 (radarbalcarce.com)' }));
   const serie = j.properties.timeseries;
   const ahora = serie[0];
   const det = ahora.data.instant.details;

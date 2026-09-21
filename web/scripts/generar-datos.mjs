@@ -159,5 +159,41 @@ const salida = {
 };
 
 fs.mkdirSync(path.dirname(SALIDA), { recursive: true });
-fs.writeFileSync(SALIDA, JSON.stringify(salida, null, 2), 'utf8');
-console.log(`  portada.json: ${notas.length} notas publicadas, generado ${salida.generado}`);
+// ¿Cambió algo que justifique volver a publicar?
+//
+// `generado` cambia en cada corrida por definición, así que el archivo
+// siempre difiere y el workflow siempre commitea — y cada commit dispara una
+// compilación entera del sitio en Vercel.
+//
+// Hoy eso no molesta: las nueve corridas de ayer publicaron contenido nuevo
+// las nueve, porque en un pueblo con 24 fuentes en una hora siempre se movió
+// algo. Pero una noche tranquila, o el día que compilar cinco mil notas
+// tarde minutos, esto se paga.
+//
+// La temperatura merece una regla propia. Se mueve un grado cada media hora
+// y sola no justifica recompilar ciento setenta páginas, sobre todo porque
+// la tarjeta se corrige en el navegador a los dos segundos de abrir la
+// página. Pero tampoco puede quedar congelada: un "el clima ahora" de hace
+// seis horas es mentira. Dos grados, o que cambie el cielo, sí publican.
+function cambioQueImporta(antes, ahora) {
+  if (!antes?.notas?.length) return true;
+
+  const salvoClima = (o) => JSON.stringify({ ...o, generado: null, clima: null });
+  if (salvoClima(antes) !== salvoClima(ahora)) return true;
+
+  const a = antes.clima?.ahora ?? {};
+  const b = ahora.clima?.ahora ?? {};
+  if (a.cielo !== b.cielo || a.esDeDia !== b.esDeDia) return true;
+  if (Math.abs((a.temp ?? 0) - (b.temp ?? 0)) >= 2) return true;
+
+  // El pronóstico de los próximos días sí se publica siempre que cambie: no
+  // se mueve cada media hora y es lo que alguien mira para mañana.
+  return JSON.stringify(antes.clima?.dias) !== JSON.stringify(ahora.clima?.dias);
+}
+
+if (cambioQueImporta(anterior, salida)) {
+  fs.writeFileSync(SALIDA, JSON.stringify(salida, null, 2), 'utf8');
+  console.log(`  portada.json: ${notas.length} notas publicadas, generado ${salida.generado}`);
+} else {
+  console.log('  sin novedades: la portada quedó igual, no se toca el archivo');
+}
