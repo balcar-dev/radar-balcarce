@@ -54,5 +54,11 @@ export function enElDominioPropio() {
   }
 }
 
+// Las etiquetas de temas (la tira de la portada y el pie de cada nota) están
+// apagadas desde el 21/09: cargaban la página y las notas. Las páginas
+// /tema/... siguen existiendo; sólo se dejó de enlazarlas. Para volver a
+// mostrarlas alcanza con poner true.
+export const MOSTRAR_TEMAS = false;
+
 export const NOMBRE = 'Radar Balcarce';
 export const DOMINIO = DOMINIO_PROPIO;

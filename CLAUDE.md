@@ -48,7 +48,7 @@ Flujo: fuentes → ingesta → clasificar → puntaje → semáforo → `web/dat
 - **`web/data/portada.json` lo regenera GitHub Actions.** Antes de `git push`
   suele haber conflicto en ese archivo: `git pull --rebase`, resolver con
   `git checkout --theirs web/data/portada.json`, continuar.
-- **El turno de farmacia dura hasta las 9 de la mañana del día siguiente**, no
+- **El turno de farmacia dura hasta las 8:30 de la mañana del día siguiente**, no
   hasta la medianoche. La regla está en `ingesta/utiles.mjs`.
 - **Las palabras clave cortas engañan.** "gol" encontraba "golpe"; "partido" en
   la provincia es un municipio. Las ambiguas están en `PALABRAS_DEBILES`

@@ -425,7 +425,7 @@ function vistaServicios() {
       <div class="tarjeta">
         <div class="chapa"><span class="secc">HOY, DÍA ${hoy}</span></div>
         <div class="tit" style="font-size:26px">${turnoHoy ? esc(turnoHoy.farmacias.join(' y ')) : 'no figura en el cronograma'}</div>
-        <div class="mini">De 9 de la mañana a 9 del día siguiente · Colegio de Farmacéuticos de Balcarce</div>
+        <div class="mini">De 8:30 de la mañana a 8:30 del día siguiente · Colegio de Farmacéuticos de Balcarce</div>
         ${f?.cruce ? `<div class="${f.cruce.discrepancias?.length ? 'aviso' : 'ok'}" style="margin-top:8px">
           ${f.cruce.discrepancias?.length ? '⚠ ' + f.cruce.discrepancias.join('<br>')
             : '✓ Cruzado contra ' + (f.cruce.fuentes || []).filter(x => x.estado === 'ok').map(x => esc(x.nombre)).join(' y ') + ': coincide.'}

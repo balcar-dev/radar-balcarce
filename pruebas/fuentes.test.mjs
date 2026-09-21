@@ -126,7 +126,7 @@ test('el motor no necesita nada instalado', () => {
   // y no al importar el archivo.
   const DEL_SISTEMA = /^node:/;
   const sucios = [];
-  for (const carpeta of ['ingesta', 'panel']) {
+  for (const carpeta of ['ingesta', 'panel', 'redes']) {
     for (const archivo of fs.readdirSync(path.join(RAIZ, carpeta))) {
       if (!archivo.endsWith(".mjs")) continue;
       const texto = fs.readFileSync(path.join(RAIZ, carpeta, archivo), "utf8");

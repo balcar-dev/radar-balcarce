@@ -1,8 +1,9 @@
 // Voz por Gemini. A diferencia de las otras, a ésta se le puede pedir el
 // TONO en palabras: no elegís una voz de catálogo, le explicás cómo leer.
 //
-// La clave se lee de la variable GEMINI_API_KEY o de un archivo .env en la
-// raíz del proyecto (GEMINI_API_KEY=...). Nunca se escribe en el código.
+// La clave es la de REDES: GEMINI_API_KEY_REDES, en el entorno o en el .env de
+// la raíz. Es distinta de la que redacta las notas (ver claves.mjs), para que
+// los reels no gasten el cupo de la redacción. Nunca se escribe en el código.
 //
 //   node reels/voz-gemini.mjs                    prueba con varias voces
 //   node reels/voz-gemini.mjs "texto a decir"
@@ -13,19 +14,14 @@ import { execFile } from 'node:child_process';
 import { promisify } from 'node:util';
 import ffmpeg from 'ffmpeg-static';
 import { alinear } from './alinear.mjs';
+import { claveRedes } from './claves.mjs';
 
 const correr = promisify(execFile);
 const RAIZ = path.join(import.meta.dirname, '..');
 const MODELO = 'gemini-2.5-flash-preview-tts';
 
 export function clave() {
-  if (process.env.GEMINI_API_KEY) return process.env.GEMINI_API_KEY;
-  const env = path.join(RAIZ, '.env');
-  if (fs.existsSync(env)) {
-    const m = fs.readFileSync(env, 'utf8').match(/^GEMINI_API_KEY\s*=\s*(.+)$/m);
-    if (m) return m[1].trim();
-  }
-  return null;
+  return claveRedes();
 }
 
 // Cómo queremos que suene el medio. Esto es lo que ninguna voz de catálogo
@@ -95,7 +91,7 @@ export async function decirGemini(texto, destino, {
   voz = 'Kore', indicacion = INDICACION, intentos = 3,
 } = {}) {
   const k = clave();
-  if (!k) throw new Error('falta GEMINI_API_KEY (en el entorno o en .env)');
+  if (!k) throw new Error('falta GEMINI_API_KEY_REDES (en el entorno o en .env)');
   fs.mkdirSync(path.dirname(destino), { recursive: true });
 
   let ultimoError = null;

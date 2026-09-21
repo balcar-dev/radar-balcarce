@@ -14,7 +14,7 @@ import {
 import { NUMEROS, tocaHoy, diaDeEstaSemana } from '../ingesta/utiles.mjs';
 import { reescribirConRespaldo, INSTRUCCION_EDITORIAL } from '../reels/reescritura.mjs';
 import { spawn } from 'node:child_process';
-import { clave as claveGemini } from '../reels/voz-gemini.mjs';
+import { claveRedaccion as claveGemini } from '../reels/claves.mjs';
 import {
   sesionDe, entrar, salir, paginaLogin, hayUsuarios,
 } from './acceso.mjs';

@@ -318,7 +318,7 @@ export function placaFarmacia({ detalle = [], farmacias = [], dia, diaSemana }) 
   ${bloques}
   <rect x="${MARGEN}" y="${yHorario}" width="${ANCHO - MARGEN * 2}" height="4" fill="${color}" opacity="0.7"/>
   <text x="${MARGEN}" y="${yHorario + 62}" font-family="${TEXTO}" font-size="36"
-        font-weight="600" fill="${COLORES.tinta}">Abierta hasta las 9 de la mañana de mañana</text>
+        font-weight="600" fill="${COLORES.tinta}">Abierta hasta las 8:30 de la mañana de mañana</text>
   ${pie('Colegio de Farmacéuticos de Balcarce', color)}
 </svg>`;
 }

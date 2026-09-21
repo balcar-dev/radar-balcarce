@@ -6,6 +6,7 @@ import {
   Etiqueta, TituloSeccion, FilaNota, Evento,
 } from '@/components/piezas';
 import { TarjetaClima } from '@/components/clima-vivo';
+import { MOSTRAR_TEMAS } from '@/lib/sitio';
 
 export default function Portada() {
   const d = obtenerDatos();
@@ -23,7 +24,7 @@ export default function Portada() {
     .filter(([, notas]) => notas?.length)
     .concat(Object.entries(porSeccion).filter(([nombre]) => !SECCIONES.some((s) => s.nombre === nombre)));
 
-  const temas = temasVivos().slice(0, 8);
+  const temas = MOSTRAR_TEMAS ? temasVivos().slice(0, 8) : [];
 
   const eventos = (d.agenda?.municipio ?? []).slice(0, 3);
 

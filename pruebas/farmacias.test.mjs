@@ -11,7 +11,8 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { parsearCronograma, paraPruebas } from '../ingesta/ingesta.mjs';
-import { diaDeTurno, comoISO, HORA_DE_CAMBIO } from '../ingesta/utiles.mjs';
+import fs from 'node:fs';
+import { diaDeTurno, comoISO, HORA_DE_CAMBIO, MINUTO_DE_CAMBIO } from '../ingesta/utiles.mjs';
 
 const { clavesDe, buscarFarmacia, directorioDeLaVanguardia } = paraPruebas;
 
@@ -154,13 +155,15 @@ const enBalcarce = (cuando) => new Date(`${cuando}-03:00`);
 test('a la medianoche sigue de turno la farmacia del día anterior', () => {
   // Entraste a la página un lunes a las 00:30 y ya mostraba la del lunes.
   // La que está abierta a esa hora es la del domingo: el turno termina a
-  // las 9 de la mañana, no a medianoche.
+  // las 8:30 de la mañana, no a medianoche.
   assert.equal(comoISO(diaDeTurno(enBalcarce('2026-09-21T00:30:00'))), '2026-09-20');
   assert.equal(comoISO(diaDeTurno(enBalcarce('2026-09-21T03:00:00'))), '2026-09-20');
-  assert.equal(comoISO(diaDeTurno(enBalcarce('2026-09-21T08:59:00'))), '2026-09-20');
+  assert.equal(comoISO(diaDeTurno(enBalcarce('2026-09-21T08:29:00'))), '2026-09-20');
 });
 
-test('a las nueve de la mañana cambia', () => {
+test('a las ocho y media de la mañana cambia', () => {
+  // Lo corrigió Hernán el 21/09: el turno termina a las 8:30, no a las 9.
+  assert.equal(comoISO(diaDeTurno(enBalcarce('2026-09-21T08:30:00'))), '2026-09-21');
   assert.equal(comoISO(diaDeTurno(enBalcarce('2026-09-21T09:00:00'))), '2026-09-21');
   assert.equal(comoISO(diaDeTurno(enBalcarce('2026-09-21T14:00:00'))), '2026-09-21');
   assert.equal(comoISO(diaDeTurno(enBalcarce('2026-09-21T23:59:00'))), '2026-09-21');
@@ -181,5 +184,11 @@ test('la hora del servidor no cambia el resultado', () => {
 });
 
 test('la hora de cambio es la que dice la página', () => {
-  assert.equal(HORA_DE_CAMBIO, 9);
+  // Las 8:30 las dijo Hernán el 21/09. Si la regla cambia, tiene que cambiar
+  // también lo que leen los vecinos: por eso se compara contra los textos.
+  assert.equal(HORA_DE_CAMBIO * 60 + MINUTO_DE_CAMBIO, 8 * 60 + 30);
+  for (const archivo of ['web/app/farmacias/page.js', 'web/components/piezas.js', 'panel/panel.html']) {
+    const texto = fs.readFileSync(new URL(`../${archivo}`, import.meta.url), 'utf8');
+    assert.ok(texto.includes('8:30'), `${archivo} no dice a qué hora cambia el turno`);
+  }
 });

@@ -11,7 +11,7 @@
 // panel muestra en la pestaña "Cómo escribe la IA", para que se pueda leer y
 // corregir sin abrir el código.
 
-import { clave } from './voz-gemini.mjs';
+import { claveRedaccion } from './claves.mjs';
 
 // "-latest" en vez de un número de versión fijo: la reescritura no necesita
 // la última novedad, necesita no romperse cuando Google jubile un modelo
@@ -56,8 +56,8 @@ function limpiarJson(texto) {
 const dormir = (ms) => new Promise((r) => { setTimeout(r, ms); });
 
 export async function reescribir(nota, { intentos = 3 } = {}) {
-  const k = clave();
-  if (!k) throw new Error('falta GEMINI_API_KEY');
+  const k = claveRedaccion();
+  if (!k) throw new Error('falta GEMINI_API_KEY_REDACCION');
 
   const entrada = [
     `Sección: ${nota.seccion}`,

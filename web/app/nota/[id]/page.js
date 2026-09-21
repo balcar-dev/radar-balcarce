@@ -6,6 +6,7 @@ import Compartir from '@/components/compartir';
 import { FichaDeNota, Migas } from '@/components/ficha';
 import { notFound } from 'next/navigation';
 import { parteDeNota } from '@/lib/ruta';
+import { MOSTRAR_TEMAS } from '@/lib/sitio';
 
 export function generateStaticParams() {
   // El parámetro es "titular-en-guiones-id". Ver lib/ruta.js.
@@ -80,7 +81,7 @@ export default function PaginaNota({ params }) {
           <p style={{ fontSize: 16, lineHeight: 1.7, marginTop: 22, color: 'var(--texto)' }}>{n.guion}</p>
         )}
 
-        <TemasDeLaNota temas={n.temas} catalogo={temas} />
+        {MOSTRAR_TEMAS && <TemasDeLaNota temas={n.temas} catalogo={temas} />}
         <Compartir titulo={n.titulo} />
         <Firma nota={n} />
 

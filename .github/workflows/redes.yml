@@ -1,0 +1,78 @@
+# Publica en las redes lo que corresponde, sin depender de la PC.
+#
+# Corre cada media hora, diez minutos después de la que actualiza la web: así
+# la nota ya está online cuando se comparte el enlace.
+#
+# POR DEFECTO NO PUBLICA. Muestra qué elegiría y listo. Para que publique de
+# verdad hay que crear la variable REDES_ACTIVAS con el valor "si" en GitHub
+# (Settings → Secrets and variables → Actions → Variables). Es el interruptor:
+# se mira unos días qué elegiría y recién ahí se prende.
+#
+# Necesita el secreto META_TOKEN (el token del usuario del sistema de Meta).
+#
+# A mano (pestaña Actions → "Redes" → Run workflow):
+#   verificar   comprueba que el token, la página y el Instagram andan
+#   facebook    corre la elección de Facebook ahora
+
+name: Redes
+
+on:
+  schedule:
+    - cron: '10,40 * * * *'
+  workflow_dispatch:
+    inputs:
+      accion:
+        description: 'Qué hacer'
+        type: choice
+        options: [verificar, facebook]
+        default: verificar
+
+concurrency:
+  group: redes
+  cancel-in-progress: false
+
+jobs:
+  redes:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # para guardar el libro de lo ya publicado
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      # Sin instalar nada: redes/ usa sólo lo que trae Node.
+      - name: Comprobar el acceso a Meta
+        if: github.event.inputs.accion == 'verificar'
+        run: node redes/publicar.mjs --verificar
+        env:
+          META_TOKEN: ${{ secrets.META_TOKEN }}
+
+      - name: Publicar en Facebook lo que toque
+        if: github.event.inputs.accion != 'verificar'
+        run: node redes/publicar.mjs --facebook
+        env:
+          META_TOKEN: ${{ secrets.META_TOKEN }}
+          REDES_ACTIVAS: ${{ vars.REDES_ACTIVAS }}
+          SITIO: https://radarbalcarce.com
+
+      # El libro dice qué nota ya salió en qué red. Sin guardarlo, la próxima
+      # vuelta publicaría lo mismo otra vez.
+      - name: Guardar lo publicado
+        if: github.event.inputs.accion != 'verificar'
+        run: |
+          git config user.name "Radar Balcarce"
+          git config user.email "272334999+balcar-dev@users.noreply.github.com"
+          git add web/data/redes.json
+          if git diff --cached --quiet; then
+            echo "Nada nuevo que guardar."
+          else
+            git commit -m "Redes: libro de publicaciones · $(TZ=America/Argentina/Buenos_Aires date '+%d/%m %H:%M')"
+            # La otra corrida (la que actualiza la web) también empuja: se
+            # traen sus cambios antes de subir los nuestros.
+            git pull --rebase
+            git push
+          fi

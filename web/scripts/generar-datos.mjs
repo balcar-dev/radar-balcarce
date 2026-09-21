@@ -137,7 +137,7 @@ const notas = (ultima.notas ?? [])
   .filter(Boolean)
   .sort((a, b) => new Date(b.fecha) - new Date(a.fecha));
 
-// Qué farmacia está de turno AHORA. La regla del cambio a las 9 de la
+// Qué farmacia está de turno AHORA. La regla del cambio a las 8:30 de la
 // mañana está en ingesta/utiles.mjs, con su explicación.
 const delTurno = diaDeTurno();
 const hoyISO = comoISO(delTurno);

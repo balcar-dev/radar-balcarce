@@ -167,7 +167,7 @@ export function guionFarmacia(turno) {
     ? `hay dos de turno: ${dichas.join(', y también ')}`
     : `la de turno es ${dichas[0]}`;
   return `Si esta noche necesitás una farmacia en Balcarce, ${cual}. `
-    + 'Está abierta hasta mañana a las nueve de la mañana. Guardá el dato, que te puede salvar una madrugada.';
+    + 'Está abierta hasta mañana a las ocho y media de la mañana. Guardá el dato, que te puede salvar una madrugada.';
 }
 
 const COLOR_UTILES_ACENTO = '#8C2D18';

@@ -59,7 +59,7 @@ export const HOJA_PERSONAJE = 'Hoja de personaje para una mascota de un medio de
 
 async function generar(prompt, destino, { referencia = null, formato = '9:16' } = {}) {
   const k = clave();
-  if (!k) throw new Error('falta GEMINI_API_KEY');
+  if (!k) throw new Error('falta GEMINI_API_KEY_REDES');
   fs.mkdirSync(path.dirname(destino), { recursive: true });
 
   const partes = [{ text: `${ESTILO}\n\nQué mostrar: ${prompt}` }];

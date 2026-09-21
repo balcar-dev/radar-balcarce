@@ -1,0 +1,97 @@
+// Publica en las redes lo que corresponde ahora.
+//
+//   node redes/publicar.mjs --verificar   comprueba que el acceso a Meta anda
+//   node redes/publicar.mjs --facebook    publica en Facebook lo que toque
+//
+// Por defecto NO publica: muestra qué haría. Para que publique de verdad hace
+// falta REDES_ACTIVAS=si (en GitHub, Settings → Variables → Actions). Así se
+// puede mirar qué elegiría durante unos días antes de soltarlo.
+//
+// Necesita META_TOKEN. Nunca lo muestra.
+
+import fs from 'node:fs';
+import path from 'node:path';
+import { crearCliente, ErrorMeta, sinToken } from './meta.mjs';
+import { elegirParaFacebook, mensajeDeNota, enlaceDeNota, libroNuevo, anotar } from './elegir.mjs';
+
+const RAIZ = path.join(import.meta.dirname, '..');
+const PORTADA = path.join(RAIZ, 'web', 'data', 'portada.json');
+const LIBRO = path.join(RAIZ, 'web', 'data', 'redes.json');
+
+const SITIO = process.env.SITIO ?? 'https://radarbalcarce.com';
+const PAGINA = process.env.META_PAGE_ID ?? '61594865361170';
+const ACTIVO = process.env.REDES_ACTIVAS === 'si';
+
+function leer(archivo, porDefecto) {
+  try { return JSON.parse(fs.readFileSync(archivo, 'utf8')); } catch { return porDefecto; }
+}
+
+function cliente() {
+  const token = process.env.META_TOKEN;
+  if (!token) {
+    console.error('  Falta META_TOKEN. En GitHub: Settings → Secrets and variables → Actions.');
+    process.exit(1);
+  }
+  return { token, api: crearCliente({ token, paginaId: PAGINA }) };
+}
+
+async function verificar() {
+  const { token, api } = cliente();
+  try {
+    const v = await api.verificar();
+    console.log(`  Página:     ${v.pagina}`);
+    console.log(`  Instagram:  ${v.instagram ? `@${v.instagram}` : 'NO VINCULADO'}`);
+    console.log(`  Permisos:   ${v.permisos ? v.permisos.join(', ') : '(este token no los lista)'}`);
+    if (!v.instagram) process.exit(1);
+  } catch (e) {
+    console.error(`  No anduvo: ${sinToken(e.message, token)}`);
+    process.exit(1);
+  }
+}
+
+async function facebook() {
+  const { token, api } = cliente();
+  const portada = leer(PORTADA, { notas: [] });
+  const libro = leer(LIBRO, libroNuevo());
+  libro.facebook ??= {};
+
+  const elegidas = elegirParaFacebook({ notas: portada.notas ?? [], libro });
+  if (!elegidas.length) {
+    console.log('  Nada para publicar en Facebook ahora.');
+    return;
+  }
+
+  let fallo = false;
+  for (const nota of elegidas) {
+    const enlace = enlaceDeNota(nota, SITIO);
+    console.log(`  Facebook · ${nota.titulo}\n             ${enlace}`);
+
+    if (!ACTIVO) {
+      console.log('             (modo prueba: no se publicó. Falta REDES_ACTIVAS=si)');
+      continue;
+    }
+
+    try {
+      const r = await api.publicarEnFacebook({ mensaje: mensajeDeNota(nota), enlace });
+      anotar(libro, 'facebook', nota.id, { postId: r.id, titulo: nota.titulo });
+      fs.writeFileSync(LIBRO, `${JSON.stringify(libro, null, 2)}\n`);
+      console.log(`             publicado: ${r.id}`);
+    } catch (e) {
+      fallo = true;
+      console.error(`             falló: ${sinToken(e.message, token)}`);
+      if (e instanceof ErrorMeta && e.tokenMuerto) {
+        console.error('             El token venció o lo revocaron: hay que generar otro.');
+        break;
+      }
+    }
+  }
+  if (fallo) process.exit(1);
+}
+
+const modo = process.argv[2];
+if (modo === '--verificar') await verificar();
+else if (modo === '--facebook') await facebook();
+else {
+  console.log('Uso: node redes/publicar.mjs --verificar | --facebook');
+  process.exit(2);
+}

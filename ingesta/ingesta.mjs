@@ -1167,7 +1167,7 @@ function armarPreview(d) {
       <h2>Farmacias de turno</h2>
       ${d.farmacias?.turnos?.length
     ? `<div style="font-size:13px;line-height:1.8">${d.farmacias.turnos.filter((t) => t.dia >= new Date().getDate()).slice(0, 8).map((t) => `<span style="color:var(--suave)">${esc(t.diaSemana)} ${t.dia}</span> · <b>${esc(t.farmacias.join(' y '))}</b>`).join('<br>')}</div>
-       <div style="margin-top:10px;font-size:11px;color:var(--suave)">De 9 de la mañana a 9 del día siguiente · Colegio de Farmacéuticos de Balcarce</div>
+       <div style="margin-top:10px;font-size:11px;color:var(--suave)">De 8:30 de la mañana a 8:30 del día siguiente · Colegio de Farmacéuticos de Balcarce</div>
        ${d.farmacias.avisos.map((a) => `<div style="margin-top:8px;background:#FDF3E2;color:#6B5210;border-radius:4px;padding:8px 10px;font-size:12px">${esc(a)}</div>`).join('')}`
     : '<div style="font-size:13px;color:var(--suave)">El cronograma está en la página del Colegio, pero el formato todavía no se reconoce automáticamente. Mirá <code>salida/farmacias-crudo.txt</code> para ajustar el lector.</div>'}
     </section>
