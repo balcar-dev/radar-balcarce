@@ -436,6 +436,12 @@ aprendió.
   automatización; se cambia desde el celular.
 - Las pestañas de Chrome en segundo plano no responden a capturas.
 
+**El reloj de GitHub falló una tarde entera (21/09, 19:00 a 21:30):** ninguna corrida
+programada de "Redes" se ejecutó y la farmacia de esa noche se perdió (se publicó
+a mano a las 21:38). Respuesta: ventanas por pieza (farmacia, clima de la noche y
+podcast valen hasta la medianoche) y un segundo disparador (cuando termina
+"Actualizar la web"). La solución de fondo sigue siendo un disparador externo.
+
 **Historias y reels también en la página de Facebook (21/09, noche):** el mismo
 video que va a Instagram sale como historia o reel de la página, a la misma hora.
 Probado en vivo (una historia y el reel del podcast). Instagram manda: si falla

@@ -48,6 +48,13 @@ on:
     - cron: '5,35 22 * * *' # 19:05 19:35
     - cron: '5,35 23 * * *' # 20:05 20:35
     - cron: '5 0 * * *'     # 21:05
+  # Un segundo disparador: cuando termina "Actualizar la web". El planificador de
+  # GitHub es tan impuntual que el 21/09 no ejecutó ninguna corrida de esta
+  # cola entre las 19:00 y las 21:00, mientras que "Actualizar la web" sí corrió
+  # (tarde, pero corrió). Colgarse de esa corrida da más oportunidades por día.
+  workflow_run:
+    workflows: ["Actualizar la web"]
+    types: [completed]
   workflow_dispatch:
     inputs:
       accion:

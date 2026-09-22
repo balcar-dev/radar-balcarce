@@ -24,6 +24,35 @@ import { horariosDe } from '../panel/horarios.mjs';
  *  una corrida llega una hora tarde, todavía alcanza. */
 export const VENTANA_MINUTOS = 120;
 
+/**
+ * Cuánto sigue valiendo cada pieza después de su hora, en minutos.
+ *
+ * Es más larga que las 2 horas de arriba en lo que no caduca rápido: el 21/09 el
+ * planificador de GitHub no ejecutó ninguna corrida entre las 19:00 y las 21:00,
+ * se cerró la ventana de la farmacia y esa noche no salió. Pero la farmacia de
+ * turno sirve toda la noche (el turno dura hasta la mañana siguiente), igual que
+ * el clima de la noche y el podcast. Ninguna pasa de la medianoche: lo de un día
+ * no sale al siguiente.
+ *
+ * Lo que sí caduca (una historia de una nota, el clima "de hoy" de la mañana) se
+ * deja más corto, para no publicar viejo.
+ */
+export const VENTANAS = {
+  'clima-manana': 240, // 7:30 → 11:30
+  noticia1: 300,       // 10:00 → 15:00
+  noticia2: 300,       // 15:00 → 20:00
+  historia1: 180,      // 10:40 → 13:40
+  historia2: 180,      // 12:40 → 15:40
+  historia3: 180,      // 14:40 → 17:40
+  farmacia: 300,       // 19:00 → 24:00
+  'clima-noche': 240,  // 20:00 → 24:00
+  podcast: 210,        // 20:30 → 24:00
+  utiles: 300,         // 11:00 → 16:00
+};
+
+/** La ventana de una pieza: la suya, o la de siempre si no tiene. */
+export const ventanaDe = (nombre) => VENTANAS[nombre] ?? VENTANA_MINUTOS;
+
 /** Las piezas por corrida. Antes eran 2, para que salieran de a poco, pero con el
  *  reloj impuntual de GitHub una pieza que quedaba para la corrida siguiente se
  *  podía perder. La clave de Gemini es paga y no hay cupo que cuidar: sale todo
@@ -117,10 +146,10 @@ function enHora(hora, ahora, ventana) {
  * ventana. Si se cierra sin haber salido, se pierde: es preferible a publicar
  * el clima de la mañana a la tarde.
  */
-export function slotsQueTocan({ ahora = new Date(), libro, ventana = VENTANA_MINUTOS, estado = {} }) {
+export function slotsQueTocan({ ahora = new Date(), libro, ventana, estado = {} }) {
   return cronogramaDelDia(ahora, { estado })
     .filter((p) => !yaPublicada(libro, 'instagram', claveDePieza(p.nombre, ahora)))
-    .filter((p) => enHora(p.hora, ahora, ventana));
+    .filter((p) => enHora(p.hora, ahora, ventana ?? ventanaDe(p.nombre)));
 }
 
 /**
@@ -146,11 +175,11 @@ export function notasUsadasHoy(libro, fecha = new Date()) {
  * @param {boolean} [o.sinHorario] para probar a mano: todas las que falten
  */
 export function piezasQueTocan({
-  piezas, libro, ahora = new Date(), sinHorario = false, ventana = VENTANA_MINUTOS, porCorrida = POR_CORRIDA, red = 'instagram',
+  piezas, libro, ahora = new Date(), sinHorario = false, ventana, porCorrida = POR_CORRIDA, red = 'instagram',
 }) {
   return [...piezas]
     .filter((p) => !yaPublicada(libro, red, claveDePieza(p.nombre, ahora)))
-    .filter((p) => sinHorario || enHora(p.hora, ahora, ventana))
+    .filter((p) => sinHorario || enHora(p.hora, ahora, ventana ?? ventanaDe(p.nombre)))
     .sort((a, b) => aMinutos(a.hora) - aMinutos(b.hora))
     .slice(0, sinHorario ? piezas.length : porCorrida);
 }

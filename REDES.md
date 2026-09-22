@@ -180,12 +180,21 @@ Cuando no toca ninguna pieza, la corrida termina en segundos y no instala nada.
 puntual**: en este repositorio dejó hasta cinco horas entre dos corridas que
 debían distar treinta minutos. Por eso hay dos o tres pasadas alrededor de cada
 horario, en minutos poco cargados (ni en punto ni y media), y **cada pieza tiene
-una ventana de 2 horas**: si una corrida llega tarde, todavía alcanza. Si la
-ventana se cierra sin que salga, esa pieza se pierde por hoy: es mejor que
-publicar el clima de la mañana a la tarde.
+una ventana** (`VENTANAS` en `redes/piezas.mjs`): si una corrida llega tarde,
+todavía alcanza. Lo que no caduca rápido dura más: la farmacia, el clima de la
+noche y el podcast valen hasta la medianoche; el clima de la mañana, hasta las
+11:30; una historia de nota, 3 horas. Ninguna cruza la medianoche. Si la ventana
+se cierra sin que salga, esa pieza se pierde por hoy.
 
-**Consecuencia honesta:** una pieza puede salir hasta 2 horas después de su hora
-si GitHub se demora. Si algún día hace falta puntualidad exacta, la solución es
+**Un segundo disparador.** El 21/09 el planificador de GitHub no ejecutó ni una
+corrida programada de esta cola en toda la tarde-noche (la farmacia de las 19:00
+se perdió), mientras que "Actualizar la web" sí corrió, aunque tarde. Por eso el
+reloj también arranca cuando termina "Actualizar la web" (`workflow_run`), lo que
+del lado de GitHub da más oportunidades por día. Sigue sin ser puntual: la
+solución de fondo es un disparador externo (ver abajo).
+
+**Consecuencia honesta:** una pieza puede salir bastante después de su hora si
+GitHub se demora, y si se demora más que su ventana se pierde. Si algún día hace falta puntualidad exacta, la solución es
 que un servicio externo gratuito dispare el workflow a la hora justa (el
 workflow ya acepta la acción `reloj` a mano para eso). Necesita una cuenta en ese
 servicio y un token de GitHub.
@@ -293,8 +302,12 @@ tiene alternativa: si falta, los reels no arrancan. Los tokens y las claves
 
 ### Lo que falta
 
-1. **Puntualidad exacta**, si hiciera falta: un servicio externo que dispare el
-   reloj a la hora justa (hoy una pieza puede salir hasta 2 horas tarde).
+1. **Un disparador externo puntual** (recomendado: el 21/09 el reloj de GitHub falló
+   una tarde entera). Un servicio gratuito (por ejemplo cron-job.org) que cada
+   15 minutos llame a la API de GitHub para lanzar el workflow **Redes** con la
+   acción `reloj`. Necesita una cuenta en ese servicio y un token de GitHub
+   limitado a este repositorio (permiso Actions: lectura y escritura), que crea
+   una persona.
 2. **Threads**: pide su propio token, no sirve el de Meta.
 3. **La categoría de Instagram** sigue en "Blog personal" (no se ve en el
    perfil). Se cambia desde el celular a "Sitio web de noticias y medios de

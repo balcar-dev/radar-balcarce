@@ -219,7 +219,7 @@ test('si el token murió, corta: no tiene sentido seguir', async () => {
 // ------------------------------------------------------------- el reloj
 
 import {
-  cronogramaDelDia, slotsQueTocan, notasUsadasHoy, piezasPublicadasHoy, VENTANA_MINUTOS, HORAS_REELS, horaHistoriaDeNota,
+  cronogramaDelDia, slotsQueTocan, notasUsadasHoy, piezasPublicadasHoy, VENTANA_MINUTOS, HORAS_REELS, horaHistoriaDeNota, ventanaDe,
 } from '../redes/piezas.mjs';
 
 /** Un lunes (21/09/2026) a la hora de Balcarce que se pida. */
@@ -253,8 +253,10 @@ test('los horarios de los reels y las historias de notas son los que dice REDES.
 test('a cada hora toca lo que corresponde', () => {
   const libro = libroNuevo();
   assert.deepEqual(nombres(slotsQueTocan({ ahora: LUNES('07:35'), libro })), ['clima-manana']);
-  assert.deepEqual(nombres(slotsQueTocan({ ahora: LUNES('10:05'), libro })), ['noticia1']);
-  assert.deepEqual(nombres(slotsQueTocan({ ahora: LUNES('19:05'), libro })), ['farmacia']);
+  // El clima de la mañana sigue valiendo hasta las 11:30.
+  assert.deepEqual(nombres(slotsQueTocan({ ahora: LUNES('10:05'), libro })), ['clima-manana', 'noticia1']);
+  // El reel de las 15:00 sigue valiendo hasta las 20:00.
+  assert.deepEqual(nombres(slotsQueTocan({ ahora: LUNES('19:05'), libro })), ['noticia2', 'farmacia']);
   // La farmacia de las 19:00 todavía está en su ventana (hasta las 21:00): si no salió, toca.
   assert.deepEqual(nombres(slotsQueTocan({ ahora: LUNES('20:35'), libro })), ['farmacia', 'clima-noche', 'podcast']);
 });
@@ -267,8 +269,27 @@ test('una corrida que llega tarde todavía alcanza, pero no para siempre', () =>
   // El reloj de GitHub se demora: la ventana es lo que lo hace tolerable.
   const libro = libroNuevo();
   assert.deepEqual(nombres(slotsQueTocan({ ahora: LUNES('08:50'), libro })), ['clima-manana']);
-  assert.deepEqual(slotsQueTocan({ ahora: LUNES('09:40'), libro }), [], 'el clima de las 7:30 ya no sirve a las 9:40');
+  assert.deepEqual(slotsQueTocan({ ahora: LUNES('11:40'), libro }).filter((p) => p.nombre === 'clima-manana'), [],
+    'el clima de las 7:30 ya no sirve a las 11:40');
   assert.equal(VENTANA_MINUTOS, 120);
+});
+
+test('la farmacia, el clima de la noche y el podcast valen toda la noche', () => {
+  // El 21/09 GitHub no corrió nada entre las 19:00 y las 21:00 y la farmacia de
+  // esa noche se perdió con una ventana de 2 horas. El turno dura hasta la
+  // mañana siguiente: no tiene sentido que la pieza venza a las 21:00.
+  const libro = libroNuevo();
+  assert.deepEqual(nombres(slotsQueTocan({ ahora: LUNES('23:30'), libro })), ['farmacia', 'clima-noche', 'podcast']);
+  assert.equal(ventanaDe('farmacia'), 300);
+});
+
+test('ninguna ventana cruza la medianoche: lo de un día no sale al siguiente', () => {
+  const dia = cronogramaDelDia(LUNES('12:00'));
+  for (const p of dia) {
+    const [h, m] = p.hora.split(':').map(Number);
+    assert.ok(h * 60 + m + ventanaDe(p.nombre) <= 24 * 60, `${p.nombre} llega después de las 24:00`);
+  }
+  assert.deepEqual(slotsQueTocan({ ahora: new Date('2026-09-22T00:30:00-03:00'), libro: libroNuevo() }), []);
 });
 
 test('lo que ya salió hoy no vuelve a tocar', () => {

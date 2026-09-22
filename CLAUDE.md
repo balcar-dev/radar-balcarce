@@ -101,7 +101,9 @@ publicar piezas a mano. Detalle y horarios en `REDES.md`.
   una nota por vez (5 por día como máximo, relevancia 75 o más). Instagram y la página de Facebook, las
   piezas de video del día (clima, farmacia, 2 reels de noticias, el podcast y 3
   historias de notas; el mismo video en las dos redes) con la voz Gemini "Kore". Horarios y reglas: `REDES.md`. **El reloj de GitHub no es
-  puntual:** cada pieza tiene una ventana de 2 horas y puede salir tarde.
+  puntual (el 21/09 no ejecutó ninguna corrida programada en toda una tarde):** cada
+  pieza tiene su ventana y puede salir tarde o perderse. Pendiente: un disparador
+  externo (ver `REDES.md`).
 - **SEO y posicionamiento (Google, redes, buscadores con IA) y biografías:**
   anotado el 21/09, todavía sin hacer. Lista completa en `NOTAS.md` § 11.
 - Pendientes de redes: Threads (token propio),

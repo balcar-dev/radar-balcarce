@@ -51,7 +51,9 @@ cuando las tengas guardadas en otro lado.
   entre las 8 y las 22, nunca Política ni Policiales), y sube a Instagram y a la
   página de Facebook la historia o el reel que le toca a esa hora (clima,
   farmacia, noticias, podcast; el mismo video en las dos redes).
-  GitHub no es puntual: una pieza puede salir hasta 2 horas tarde.
+  GitHub no es puntual: una pieza puede salir tarde, y si se demora más que su
+  ventana se pierde. Si falta una pieza, se puede publicar a mano (Actions →
+  Redes → Run workflow → `reloj`).
 
 ### A mano
 
