@@ -9,6 +9,10 @@ funciona cada cosa; éste dice **qué falta**.
 
 ## A. Redes y automatización
 
+0. **Reactivar Redes y Piezas cuando Meta confirme la cuenta.** Desde el
+   22/09 están apagados a mano (Actions → cada uno → Enable workflow) porque
+   Meta bloqueó la API por "actividad inusual" y la pantalla para confirmar
+   la cuenta está rota del lado de ellos. Detalle en `REDES.md` § "En pausa".
 1. **Renovar el token de GitHub antes del 21/09/2027.** Lo usa cron-job.org
    para disparar el reloj. Sin token nuevo, las redes dejan de publicar solas
    sin ningún aviso salvo el mail de error de cron-job.org.

@@ -209,14 +209,35 @@ servicio y un token de GitHub.
 
 | Cosa | Estado |
 |---|---|
-| Posteos en Facebook | Automático |
-| Historias y reels en Instagram y en la página de Facebook | Automático (reloj) |
+| Posteos en Facebook | **En pausa** (ver abajo) |
+| Historias y reels en Instagram y en la página de Facebook | **En pausa** (ver abajo) |
 | Armar las piezas a demanda | Actions → **Piezas** → Run workflow |
 | Publicar una pieza a mano | Actions → **Piezas**, con `solo`, `publicar` tildado y `destino` (ambas, instagram o facebook) |
 | Comprobar el token | Actions → **Redes** → Run workflow → `verificar` |
 
 Todo esto sólo **publica** si la variable `REDES_ACTIVAS` vale `Si`; con otra cosa
 simula.
+
+### En pausa desde el 22/09/2026
+
+Meta bloqueó el acceso a la API de la cuenta de desarrollador por "actividad
+inusual" (todas las llamadas, hasta la más simple, devuelven `API access
+blocked`, código 200, `OAuthException`). La pantalla de confirmación de
+cuenta (developers.facebook.com → la app → "Confirmar cuenta") también está
+rota del lado de Meta: tira "Se produjo un error. Hay un problema técnico con
+esta función." en cada intento, probado tres veces desde dos sesiones
+distintas.
+
+Mientras esto no se resuelva, publicar no serviría de nada y sólo gastaría
+cuota de Gemini armando piezas que después no se pueden subir. Por eso los
+workflows **Redes** y **Piezas** están **desactivados a mano** (Actions →
+cada uno → "···" → Enable/Disable workflow; hoy están disabled). cron-job.org
+va a seguir llamando cada 30 minutos sin hacer nada, porque GitHub rechaza el
+disparo de un workflow apagado: no hace falta tocar cron-job.org.
+
+**Para reactivar cuando Meta confirme la cuenta:** Actions → **Redes** → "···"
+→ Enable workflow, y lo mismo con **Piezas**. Nada más: el resto (cron-job.org,
+el libro de publicaciones, las reglas) sigue como estaba.
 
 **Los subtítulos** de las piezas siguen la voz palabra por palabra
 (`reels/tiempos.mjs`). Se ubican a partir de las pausas del audio y del peso en
