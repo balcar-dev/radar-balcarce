@@ -49,6 +49,9 @@ async function verificar() {
     if (!v.instagram) process.exit(1);
   } catch (e) {
     console.error(`  No anduvo: ${sinToken(e.message, token)}`);
+    if (e instanceof ErrorMeta) {
+      console.error(`  código: ${e.codigo} · subcódigo: ${e.subcodigo} · tipo: ${e.tipo} · http: ${e.http}`);
+    }
     process.exit(1);
   }
 }
