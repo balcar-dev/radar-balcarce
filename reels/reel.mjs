@@ -129,7 +129,7 @@ export async function armarReel({
   // Sin música, la voz entra casi enseguida; con música, medio segundo después.
   const retardo = musica ? RETARDO : 0.25;
   if (musica && !fs.existsSync(CORTINA)) await generarCortina();
-  fs.writeFileSync(ass, armarAss(enCarteles(voz.palabras, { max: 3 }), { acento, retardo }), 'utf8');
+  fs.writeFileSync(ass, armarAss(enCarteles(voz.palabras, { max: 4, minimo: 2 }), { acento, retardo }), 'utf8');
 
   // Zoom lento sobre la placa: sin movimiento, un reel parece una foto y la
   // gente sigue de largo.

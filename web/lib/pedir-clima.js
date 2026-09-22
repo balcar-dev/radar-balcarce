@@ -35,7 +35,8 @@ const URL = `https://api.open-meteo.com/v1/forecast?latitude=${BALCARCE.lat}&lon
   + '&daily=temperature_2m_max,temperature_2m_min,precipitation_probability_max,weather_code'
   + `&timezone=${encodeURIComponent(BALCARCE.tz)}&forecast_days=4`;
 
-function interpretar(j) {
+/** Aparte y exportada para poder probarla sin hacer un pedido de verdad. */
+export function interpretar(j) {
   return {
     ahora: {
       temp: Math.round(j.current.temperature_2m),

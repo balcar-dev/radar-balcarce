@@ -119,11 +119,17 @@ async function piezas() {
   if (r.fallos.length) process.exit(1);
 }
 
-const modo = process.argv[2];
-if (modo === '--verificar') await verificar();
-else if (modo === '--facebook') await facebook();
-else if (modo === '--piezas') await piezas();
-else {
-  console.log('Uso: node redes/publicar.mjs --verificar | --facebook | --piezas [--sin-horario] [--destino=ambas|instagram|facebook]');
-  process.exit(2);
+// Sólo corre cuando esto se ejecuta directamente (node redes/publicar.mjs),
+// igual que reels/plan.mjs y compañía: así se puede importar (por ejemplo,
+// desde una prueba) sin que dispare una publicación real ni cierre el
+// proceso con process.exit().
+if (process.argv[1] && process.argv[1].endsWith('publicar.mjs')) {
+  const modo = process.argv[2];
+  if (modo === '--verificar') await verificar();
+  else if (modo === '--facebook') await facebook();
+  else if (modo === '--piezas') await piezas();
+  else {
+    console.log('Uso: node redes/publicar.mjs --verificar | --facebook | --piezas [--sin-horario] [--destino=ambas|instagram|facebook]');
+    process.exit(2);
+  }
 }

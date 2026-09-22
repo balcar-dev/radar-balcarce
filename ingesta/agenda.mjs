@@ -162,10 +162,10 @@ Estamos armando la agenda de eventos del mes y nos gustaría sumar los suyos, co
 — ${firma}`;
 }
 
-/** Trae lo que el municipio tiene cargado ahora mismo, con paginación. */
-export async function eventosDelMunicipio({ hasta = 60 } = {}) {
-  const j = JSON.parse(await traer(`${API}?per_page=${hasta}`));
-  return (j.events ?? []).map((e) => ({
+/** Un evento de la API del municipio, en nuestra forma. Aparte para poder
+ *  probarlo sin llamar a la API de verdad. */
+export function eventoDeMunicipio(e) {
+  return {
     id: `muni-${e.id}`,
     nombre: e.title.replace(/&#8211;/g, '–').trim(),
     desde: e.start_date,
@@ -178,7 +178,32 @@ export async function eventosDelMunicipio({ hasta = 60 } = {}) {
     categorias: (e.categories ?? []).map((c) => c.name),
     fuente: 'Municipalidad de Balcarce',
     confirmado: true,
-  }));
+  };
+}
+
+/** Trae lo que el municipio tiene cargado ahora mismo, con paginación. */
+export async function eventosDelMunicipio({ hasta = 60 } = {}) {
+  const j = JSON.parse(await traer(`${API}?per_page=${hasta}`));
+  return (j.events ?? []).map(eventoDeMunicipio);
+}
+
+/**
+ * Cuántos meses faltan de `desde` a `hasta`, mirando siempre hacia adelante
+ * (nunca da negativo): de noviembre a diciembre es 1, y de diciembre a enero
+ * también es 1, no 11. Aparte para poder probar el cruce de año con números
+ * simples, sin depender de qué haya en el calendario ese mes.
+ */
+export function mesesHastaQueLlegue(desde, hasta) {
+  return (((hasta - desde) % 12) + 12) % 12;
+}
+
+/** Los eventos anuales cuyo mes aproximado cae este mes o el que viene, para
+ *  avisar con antelación. Aparte para poder probarla con una fecha fija. */
+export function anualesQueSeAcercan(ahora = new Date()) {
+  const mesActual = ahora.getMonth() + 1;
+  return CALENDARIO_ANUAL
+    .filter((ev) => mesesHastaQueLlegue(mesActual, ev.mesAproximado) <= 1)
+    .map((ev) => ({ ...ev, confirmado: false }));
 }
 
 /**
@@ -186,18 +211,11 @@ export async function eventosDelMunicipio({ hasta = 60 } = {}) {
  * semanas, más un recordatorio de qué fiesta anual cae cerca (por mes), sin
  * inventarle una fecha exacta.
  */
-export async function agendaCompleta() {
+export async function agendaCompleta(ahora = new Date()) {
   const municipio = await eventosDelMunicipio().catch(() => []);
-  const hoy = new Date();
-  const mesActual = hoy.getMonth() + 1;
-
   // "Cerca" = mismo mes o el próximo, para dar aviso con antelación.
-  const proximosAnuales = CALENDARIO_ANUAL.filter((ev) => {
-    const dist = ((ev.mesAproximado - mesActual) + 12) % 12;
-    return dist <= 1;
-  }).map((ev) => ({ ...ev, confirmado: false }));
-
-  return { municipio, proximosAnuales, generado: hoy.toISOString() };
+  const proximosAnuales = anualesQueSeAcercan(ahora);
+  return { municipio, proximosAnuales, generado: ahora.toISOString() };
 }
 
 if (process.argv[1] && process.argv[1].endsWith('agenda.mjs')) {

@@ -1,6 +1,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { ImageResponse } from 'next/og';
+import { cuerpo } from './tamano-titulo.js';
 
 // La imagen que se ve al compartir una nota.
 //
@@ -39,15 +40,6 @@ const POR_DEFECTO = '#14161A';
 
 const FUENTES = path.join(process.cwd(), 'fuentes');
 const leer = (archivo) => fs.readFileSync(path.join(FUENTES, archivo));
-
-/** Cuánto achicar el titular según lo largo que sea. */
-function cuerpo(titulo) {
-  const n = titulo.length;
-  if (n <= 48) return 74;
-  if (n <= 80) return 62;
-  if (n <= 120) return 52;
-  return 44;
-}
 
 /**
  * La tarjeta de una nota, o del sitio si no se pasa ninguna.

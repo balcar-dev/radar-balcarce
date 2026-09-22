@@ -105,19 +105,9 @@ tailscale funnel --https=443 off
 | `MANUAL.md` | Cómo se curan las noticias: puntaje, semáforo, qué sale solo |
 | `REDES.md` | **Qué se publica en redes, a qué hora y con qué reglas**, cómo está conectado Meta, la competencia y los avisos |
 | `INVESTIGACION.md` | Lo legal, con las fuentes |
-| `NOTAS.md` | Estado del proyecto y qué falta |
+| `PENDIENTES.md` | **Qué falta, por categoría** |
+| `NOTAS.md` | Historia del proyecto: qué se hizo y por qué |
 
 ## Lo que falta
 
-1. Mirar los primeros días cómo salen las piezas (voz, horarios, cantidad) y
-   ajustar.
-2. Threads (pide su propio token).
-3. Cambiar la categoría de Instagram a "Sitio web de noticias y medios" (desde
-   el celular).
-4. Notas más largas, con el texto completo de las fuentes.
-5. Borrar el sitio duplicado en la cuenta vieja de Vercel (`radar-balcarce.vercel.app`).
-6. Sacar el panel de esta PC, para que no dependa de que esté prendida.
-
-Ya resuelto: el dominio propio `radarbalcarce.com` (21/09), la clave de Gemini
-(ahora hay dos, una para redactar y una para redes), y el permiso de Meta para
-publicar solo (la app está conectada y probada).
+Todo lo pendiente, por categoría, está en [`PENDIENTES.md`](PENDIENTES.md).

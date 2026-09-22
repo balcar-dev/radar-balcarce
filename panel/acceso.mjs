@@ -25,9 +25,16 @@ import fs from 'node:fs';
 import path from 'node:path';
 import crypto from 'node:crypto';
 
-const DATOS = path.join(import.meta.dirname, 'datos');
-const F_USUARIOS = path.join(DATOS, 'usuarios.json');
-const F_SECRETO = path.join(DATOS, 'secreto.txt');
+let DATOS = path.join(import.meta.dirname, 'datos');
+let F_USUARIOS = path.join(DATOS, 'usuarios.json');
+let F_SECRETO = path.join(DATOS, 'secreto.txt');
+
+/** Sólo para las pruebas: usar una carpeta aparte y no la real del panel. */
+export function _usarCarpetaDeDatos(dir) {
+  DATOS = dir;
+  F_USUARIOS = path.join(DATOS, 'usuarios.json');
+  F_SECRETO = path.join(DATOS, 'secreto.txt');
+}
 
 const DIAS_DE_SESION = 30;
 

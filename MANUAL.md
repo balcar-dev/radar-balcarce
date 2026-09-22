@@ -151,7 +151,7 @@ lados para que no se separen.
 
 ## 7. Las pruebas
 
-Se corren con `npm test` desde la carpeta del proyecto. Son más de 210, tardan
+Se corren con `npm test` desde la carpeta del proyecto. Son más de 300, tardan
 menos de un segundo, no instalan nada y no salen a internet.
 
 **Cada una es un error que ya pasó de verdad**, no un ejercicio: dos

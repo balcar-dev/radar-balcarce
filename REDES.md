@@ -310,20 +310,4 @@ tiene alternativa: si falta, los reels no arrancan. Los tokens y las claves
 
 ### Lo que falta
 
-1. ✅ **Disparador externo — hecho el 21/09/2026.** Queda pendiente sólo renovar el
-   token antes de septiembre de 2027.
-2. **Threads**: pide su propio token, no sirve el de Meta.
-3. **La categoría de Instagram** sigue en "Blog personal" (no se ve en el
-   perfil). Se cambia desde el celular a "Sitio web de noticias y medios de
-   comunicación".
-4. **La agenda de la semana en historia** sólo se arma en la PC, porque
-   `agenda.json` no está en GitHub.
-5. **Notas más largas**, con el texto completo de las fuentes.
-6. Mirar los primeros días cómo salen las piezas y ajustar horarios y cantidad.
-7. **Reescribir las biografías** de Instagram y Facebook, más cortas y sin que la IA
-   sea la protagonista (la transparencia se mantiene en una línea). Detalle en
-   `NOTAS.md` § 11.
-8. **Hashtags**: hoy las piezas salen sin ninguno. Probar 2 o 3 por dos semanas y
-   comparar el alcance.
-9. **Posicionamiento** en Google, redes y buscadores con IA: lista completa en
-   `NOTAS.md` § 11.
+Ver [`PENDIENTES.md`](PENDIENTES.md), sección A (redes y automatización).

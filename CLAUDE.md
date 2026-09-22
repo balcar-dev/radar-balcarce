@@ -12,7 +12,7 @@ rioplatense, sin voseo forzado.
     reels/     placas, voz y video. SÍ tiene dependencias (resvg, ffmpeg)
     redes/     publicar en Facebook e Instagram (API de Meta). SIN dependencias
     web/       el sitio público (Next.js 15, JavaScript, HTML estático)
-    pruebas/   `npm test`, 210+ pruebas, sin red
+    pruebas/   `npm test`, 300+ pruebas, sin red
 
 Flujo: fuentes → ingesta → clasificar → puntaje → semáforo → `web/data/portada.json`
 → GitHub Actions (cada 30 min) → Vercel. **La web se actualiza con la PC apagada.**
@@ -104,16 +104,11 @@ publicar piezas a mano. Detalle y horarios en `REDES.md`.
   7 a 23), porque el planificador propio de GitHub no era confiable (el 21/09 no
   ejecutó ninguna corrida en toda una tarde). El token de GitHub que usa vence el
   21/09/2027: hay que renovarlo antes. Detalle en `REDES.md`.
-- **SEO y posicionamiento (Google, redes, buscadores con IA) y biografías:**
-  anotado el 21/09, todavía sin hacer. Lista completa en `NOTAS.md` § 11.
-- Pendientes de redes: Threads (token propio),
-  categoría de Instagram (cambiar desde el celular a "Sitio web de noticias y
-  medios"), notas más largas con el texto completo de las fuentes, y mirar los
-  primeros días cómo salen las piezas.
 - La reescritura con IA corre sola en el panel (PC prendida) con la clave de
   redacción; la verificación contra la fuente sigue siendo obligatoria.
-- Lista completa de pendientes: el documento "Pendientes" de la sesión del 21/09
-  y `IDEAS.md`. Documentación del proyecto: `MANUAL.md`.
+- **Todo lo que falta, por categoría, está en [`PENDIENTES.md`](PENDIENTES.md)**
+  (redes, SEO, bios, editorial, técnico) y en `IDEAS.md` (ideas de producto).
+  Documentación del proyecto: `MANUAL.md`.
 
 ## Dónde tocar cada cosa
 

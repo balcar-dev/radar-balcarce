@@ -5,7 +5,9 @@ antes de tocar nada: qué existe, qué falta, y las decisiones que ya se
 tomaron para no volver a discutirlas cada vez.
 
 Ver también [`INVESTIGACION.md`](INVESTIGACION.md) — lo legal y lo
-competitivo, investigado aparte para no inflar este archivo.
+competitivo, investigado aparte para no inflar este archivo. Y
+[`PENDIENTES.md`](PENDIENTES.md) — qué falta, por categoría; este archivo es
+la historia de cómo se llegó hasta acá, no la lista de tareas.
 
 ## Cómo correr todo
 
@@ -473,84 +475,57 @@ las notas propias y originales de la redacción.
 Ver "Lo que falta" al final de `REDES.md`: puntualidad exacta si hiciera falta,
 Threads, la categoría de Instagram y las notas largas.
 
-## 11. Pendientes anotados el 21/09/2026 (para retomar): posicionamiento y bios
+## 11. SEO, posicionamiento, biografías y hashtags
 
-Pedido de Hernán: que la página esté bien estructurada y posicionada en Google,
-en las redes y en los buscadores con IA, y mejorar las biografías. Nada de esto
-está hecho todavía; es la lista de lo que hay que revisar.
+Pedido de Hernán del 21/09. La lista completa de qué falta se movió a
+[`PENDIENTES.md`](PENDIENTES.md) (secciones B y C), para no repetirla en dos
+lugares. Lo que ya existía y no había que repetir sigue documentado ahí mismo.
 
-**Lo que ya existe (no repetir):** direcciones con el titular adentro
-(`web/lib/ruta.js`), `sitemap.xml`, `robots.txt`, `feed.xml`, enlace canónico
-(`web/lib/sitio.js`), una tarjeta de imagen propia por nota para compartir
-(`web/lib/tarjeta.js`), el dominio propio con `www` redirigido, y una prueba que
-vigila el SEO en cada compilación (`web/scripts/revisar-seo.mjs`).
+## 12. Auditoría del 22/09/2026: pruebas, un descuido de seguridad y los subtítulos
 
-### Google
+Repaso pedido por Hernán: "revisa todo, que todo tenga su test, y el tema
+subtítulos". Esto es lo que se encontró y se corrigió.
 
-- **Search Console**: verificar `radarbalcarce.com` y enviar el sitemap. Sin eso
-  no sabemos qué indexó Google ni qué errores tiene. Necesita la cuenta de Google
-  del medio (la hace una persona).
-- **Datos estructurados (JSON-LD)**: `NewsArticle` en cada nota (titular, fecha
-  de publicación y de modificación, autor u organización, imagen) y
-  `NewsMediaOrganization` en el sitio (nombre, logo, redes). Es lo que más ayuda
-  a que Google entienda qué es cada página.
-- **Google News y Discover**: Publisher Center, y cuidar que las imágenes de las
-  notas sean grandes (al menos 1200 px de ancho) para poder aparecer en Discover.
-- **Páginas que dan confianza (E-E-A-T)**: quiénes somos, contacto, política
-  editorial (cómo se hace, qué se resume con IA y qué no, cómo corregimos un
-  error), y firma en cada nota. Hoy `POLITICA-PRIVACIDAD.md` está como página;
-  faltan las otras.
-- **Títulos y descripciones**: revisar que cada sección, tema y nota tenga un
-  título y una descripción propios, y no repetidos.
-- **Rendimiento (Core Web Vitals)**: medir con PageSpeed Insights y ajustar. La
-  web es HTML estático, así que la base es buena.
-- **Enlaces internos y migas de pan**: ahora que se sacaron las etiquetas de
-  temas (`MOSTRAR_TEMAS`), pensar cómo se relacionan las notas entre sí sin
-  cargar la página.
-- **Bing Webmaster Tools**: alimenta a Bing y a varios buscadores con IA.
-- **Ficha de Google Business Profile** del medio, si corresponde.
+**Pruebas agregadas** (de 244 a más de 300) para lo que no tenía ninguna:
+`panel/horarios.mjs` (los horarios de las historias fijas), `panel/acceso.mjs`
+(login, sesiones, freno a la fuerza bruta — con una carpeta de datos de mentira,
+nunca la real), `panel/buzon.mjs` (el catálogo del contenido propio),
+`ingesta/agenda.mjs` (qué evento anual se avisa cada mes, sin depender de la
+fecha del sistema), `web/lib/pedir-clima.js` y una función nueva,
+`web/lib/tamano-titulo.js` (se separó de `tarjeta.js` porque ese archivo importa
+`next/og`, que no corre fuera de Next), `reels/voz.mjs` (el texto que lee la
+voz) y `reels/placa.mjs` (cómo se cortan los renglones).
 
-### Redes sociales (cuando alguien comparte un enlace)
+**Un descuido de seguridad, corregido:** `redes/reloj.mjs` y
+`redes/publicar.mjs` ejecutaban su lógica con sólo IMPORTARLOS, a diferencia
+del resto del proyecto (`reels/plan.mjs` y los demás, que sólo corren si se
+ejecutan directo). `publicar.mjs` hasta podía llamar a `process.exit()`. Si
+algún día una prueba los hubiera importado sin querer, se cortaba toda la
+corrida de pruebas. Se les puso el mismo resguardo que ya usa el resto del
+código.
 
-- Revisar cómo se ve cada nota compartida en Facebook, WhatsApp e Instagram con
-  el **Depurador de uso compartido de Facebook** y con pruebas reales.
-- Completar las etiquetas Open Graph y de Twitter (tamaño 1200 x 630,
-  `og:locale` es_AR, fecha de publicación) y ver que estén en todas las páginas.
-- **Medir cuánta gente llega desde cada red**: agregar parámetros UTM a los
-  enlaces que publicamos y mirar el resultado en una analítica sin cookies.
-- Sumar el permiso de estadísticas de Meta (`instagram_manage_insights`) para
-  poder leer qué rinde en cada red.
+**Los subtítulos, dos arreglos:**
 
-### Buscadores con IA (ChatGPT, Gemini, Perplexity, etc.)
+1. Cuando la última palabra de una frase caía sola en su propio cartel (por
+   ejemplo, "Balcarce." al final), el efecto que pinta de color la palabra que
+   se está diciendo pintaba el cartel ENTERO — se veía como un error, no como
+   un subtítulo. Ahora ningún cartel queda con menos de dos palabras: el corto
+   se junta con el de al lado (`reels/voz.mjs`, `enCarteles`).
+2. "N° 1" se leía como tres palabras sueltas ("ene", "grado", "uno") y el
+   subtítulo mostraba "N ° 1". Ahora se dice "número 1" (`paraLeer`).
 
-- Decidir en `robots.txt` si se permite o no a los rastreadores de IA (por
-  ejemplo GPTBot, ClaudeBot, PerplexityBot, Google-Extended). Es una decisión de
-  la redacción: permitirlo da visibilidad y citas, prohibirlo protege el
-  contenido.
-- Agregar un archivo `llms.txt` que explique qué es el sitio y dónde está lo
-  importante, y un sitemap de noticias (`sitemap-news.xml`).
-- Que cada nota abra con un resumen claro y verificable, con fecha, lugar, fuente
-  y autor visibles: es lo que las IA citan.
-- Nombre único y constante para la entidad ("Radar Balcarce") en el sitio, las
-  redes y los datos estructurados.
+**Documentación reorganizada:** los pendientes, que estaban repetidos y
+desactualizados entre `REDES.md`, `NOTAS.md`, `CLAUDE.md` y `EMPEZAR-ACA.md`,
+se juntaron en un solo archivo por categoría: [`PENDIENTES.md`](PENDIENTES.md).
+Los demás documentos apuntan ahí en vez de repetir la lista.
 
-### Biografías de las redes
-
-- Reescribir las biografías de Instagram y Facebook. **No hace falta que sean
-  "full IA"**: la biografía tiene que decir qué es el medio y qué cubre
-  (Balcarce, clima, farmacia de turno, agenda, noticias), y la mención de que hay
-  textos y voces con IA se mantiene por transparencia pero **más corta y menos
-  protagonista** (una línea, o en la página "quiénes somos").
-- Sumar el enlace al sitio en la biografía de Instagram (sólo se edita desde el
-  celular), la categoría "Sitio web de noticias y medios de comunicación", el
-  botón de contacto, y historias destacadas fijas (farmacia, teléfonos, agenda).
-
-### Hashtags
-
-Pregunta abierta de Hernán: si todavía se usan. Resumen de lo que se sabe hoy
-(a confirmar mirando los números propios): en Instagram pesan mucho menos que
-antes y se recomiendan pocos y relevantes (unos 3 a 5); en Facebook casi no
-mueven nada. Lo que más rinde es el texto con las palabras que la gente busca
-(Balcarce, el barrio, el evento). Propuesta: probar 2 o 3 (`#Balcarce` y uno de
-la sección) en los reels durante dos semanas y comparar el alcance con los que no
-los llevan. Hoy las piezas salen sin hashtags.
+**Lo que se dejó sin prueba, a propósito:** los scripts de `reels/` que
+dependen de red (Gemini, Edge) o de binarios pesados (ffmpeg, resvg) y se
+disparan a mano o desde un workflow — `reel.mjs`, `voz-gemini.mjs`,
+`reescritura.mjs`, `ilustrar.mjs`, `casting.mjs`, `cortina.mjs`, `avatar.mjs`,
+`portada.mjs`, y los scripts de diagnóstico (`prueba-iconos.mjs`,
+`revisar-placas.mjs`, `test-entonacion.mjs`); `panel/servidor.mjs` (el servidor
+entero, con estado y puertos: `npm test` no abre red por regla del proyecto);
+y `ingesta/auditar.mjs` / `ingesta/probar.mjs` (herramientas de diagnóstico
+para correr a mano). La lógica pura que tenían adentro y se podía separar sin
+riesgo, se separó y sí se probó.

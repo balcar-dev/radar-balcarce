@@ -21,24 +21,32 @@ import { slotsQueTocan, POR_CORRIDA } from './piezas.mjs';
 const RAIZ = path.join(import.meta.dirname, '..');
 const LIBRO = path.join(RAIZ, 'web', 'data', 'redes.json');
 
-let libro = libroNuevo();
-try { libro = JSON.parse(fs.readFileSync(LIBRO, 'utf8')); } catch { /* todavía no hay libro */ }
-
-const ahora = new Date();
-const tocan = slotsQueTocan({ ahora, libro }).slice(0, POR_CORRIDA);
-const hora = new Intl.DateTimeFormat('es-AR', {
-  hour: '2-digit', minute: '2-digit', timeZone: 'America/Argentina/Buenos_Aires',
-}).format(ahora);
-
-if (tocan.length) {
-  console.log(`  ${hora} en Balcarce · tocan: ${tocan.map((p) => `${p.nombre} (${p.hora})`).join(', ')}`);
-} else {
-  console.log(`  ${hora} en Balcarce · no hay ninguna pieza para publicar ahora.`);
+/** Lo que corresponde publicar ahora, como { hora, tocan, textoResumen }. */
+export function estadoDelReloj({ ahora = new Date(), libro } = {}) {
+  const tocan = slotsQueTocan({ ahora, libro }).slice(0, POR_CORRIDA);
+  const hora = new Intl.DateTimeFormat('es-AR', {
+    hour: '2-digit', minute: '2-digit', timeZone: 'America/Argentina/Buenos_Aires',
+  }).format(ahora);
+  const textoResumen = tocan.length
+    ? `${hora} en Balcarce · tocan: ${tocan.map((p) => `${p.nombre} (${p.hora})`).join(', ')}`
+    : `${hora} en Balcarce · no hay ninguna pieza para publicar ahora.`;
+  return { hora, tocan, textoResumen };
 }
 
-if (process.env.GITHUB_OUTPUT) {
-  fs.appendFileSync(
-    process.env.GITHUB_OUTPUT,
-    `hay=${tocan.length > 0}\nsolo=${tocan.map((p) => p.nombre).join(',')}\n`,
-  );
+// Sólo corre cuando esto se ejecuta directamente (node redes/reloj.mjs), igual
+// que reels/plan.mjs y compañía: así se puede importar estadoDelReloj() desde
+// una prueba sin leer el libro real ni escribir en GITHUB_OUTPUT.
+if (process.argv[1] && process.argv[1].endsWith('reloj.mjs')) {
+  let libro = libroNuevo();
+  try { libro = JSON.parse(fs.readFileSync(LIBRO, 'utf8')); } catch { /* todavía no hay libro */ }
+
+  const { tocan, textoResumen } = estadoDelReloj({ libro });
+  console.log(`  ${textoResumen}`);
+
+  if (process.env.GITHUB_OUTPUT) {
+    fs.appendFileSync(
+      process.env.GITHUB_OUTPUT,
+      `hay=${tocan.length > 0}\nsolo=${tocan.map((p) => p.nombre).join(',')}\n`,
+    );
+  }
 }
