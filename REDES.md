@@ -179,19 +179,27 @@ Cuando no toca ninguna pieza, la corrida termina en segundos y no instala nada.
 **Por qué hay tantas corridas programadas.** El planificador de GitHub **no es
 puntual**: en este repositorio dejó hasta cinco horas entre dos corridas que
 debían distar treinta minutos. Por eso hay dos o tres pasadas alrededor de cada
-horario, en minutos poco cargados (ni en punto ni y media), y **cada pieza tiene
-una ventana** (`VENTANAS` en `redes/piezas.mjs`): si una corrida llega tarde,
+horario, PERO desde el 21/09 lo que dispara el reloj en la práctica es un
+servicio externo (ver más abajo), porque el planificador de GitHub solo no
+alcanzaba. Cada pieza tiene una ventana (`VENTANAS` en `redes/piezas.mjs`): si una corrida llega tarde,
 todavía alcanza. Lo que no caduca rápido dura más: la farmacia, el clima de la
 noche y el podcast valen hasta la medianoche; el clima de la mañana, hasta las
 11:30; una historia de nota, 3 horas. Ninguna cruza la medianoche. Si la ventana
 se cierra sin que salga, esa pieza se pierde por hoy.
 
-**Un segundo disparador.** El 21/09 el planificador de GitHub no ejecutó ni una
-corrida programada de esta cola en toda la tarde-noche (la farmacia de las 19:00
-se perdió), mientras que "Actualizar la web" sí corrió, aunque tarde. Por eso el
-reloj también arranca cuando termina "Actualizar la web" (`workflow_run`), lo que
-del lado de GitHub da más oportunidades por día. Sigue sin ser puntual: la
-solución de fondo es un disparador externo (ver abajo).
+**El disparador real es externo, desde el 21/09.** El 21/09 el planificador de
+GitHub no ejecutó ni una corrida programada de esta cola en toda la
+tarde-noche (la farmacia de las 19:00 se perdió y se publicó a mano). La
+solución: **cron-job.org** llama a la API de GitHub (endpoint
+`actions/workflows/redes.yml/dispatches`) cada 30 minutos, de 7 a 23 hora de
+Balcarce, con `{"ref":"main","inputs":{"accion":"reloj"}}`. La cuenta de
+cron-job.org es de `radarbalcarce@gmail.com`; el token de GitHub que usa es de
+`balcardev@gmail.com`, personal (Settings → Developer settings → Personal
+access tokens → Fine-grained), limitado a este repositorio, sólo permiso
+Actions en lectura y escritura, vence el 21/09/2027 (**hay que renovarlo antes**
+y actualizar el encabezado `Authorization` en cron-job.org). El workflow ya no
+tiene `schedule` propio: si cron-job.org falla, el único respaldo es que el
+reloj también arranca cuando termina "Actualizar la web" (`workflow_run`).
 
 **Consecuencia honesta:** una pieza puede salir bastante después de su hora si
 GitHub se demora, y si se demora más que su ventana se pierde. Si algún día hace falta puntualidad exacta, la solución es
@@ -302,12 +310,8 @@ tiene alternativa: si falta, los reels no arrancan. Los tokens y las claves
 
 ### Lo que falta
 
-1. **Un disparador externo puntual** (recomendado: el 21/09 el reloj de GitHub falló
-   una tarde entera). Un servicio gratuito (por ejemplo cron-job.org) que cada
-   15 minutos llame a la API de GitHub para lanzar el workflow **Redes** con la
-   acción `reloj`. Necesita una cuenta en ese servicio y un token de GitHub
-   limitado a este repositorio (permiso Actions: lectura y escritura), que crea
-   una persona.
+1. ✅ **Disparador externo — hecho el 21/09/2026.** Queda pendiente sólo renovar el
+   token antes de septiembre de 2027.
 2. **Threads**: pide su propio token, no sirve el de Meta.
 3. **La categoría de Instagram** sigue en "Blog personal" (no se ve en el
    perfil). Se cambia desde el celular a "Sitio web de noticias y medios de

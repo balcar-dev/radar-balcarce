@@ -439,8 +439,11 @@ aprendió.
 **El reloj de GitHub falló una tarde entera (21/09, 19:00 a 21:30):** ninguna corrida
 programada de "Redes" se ejecutó y la farmacia de esa noche se perdió (se publicó
 a mano a las 21:38). Respuesta: ventanas por pieza (farmacia, clima de la noche y
-podcast valen hasta la medianoche) y un segundo disparador (cuando termina
-"Actualizar la web"). La solución de fondo sigue siendo un disparador externo.
+podcast valen hasta la medianoche), un segundo disparador (cuando termina
+"Actualizar la web") y, esa misma noche, **un disparador externo real:
+cron-job.org**, que llama a GitHub cada 30 minutos. El workflow ya no tiene su
+propio `schedule`. Token de GitHub de balcardev, vence 21/09/2027: renovarlo
+antes.
 
 **Historias y reels también en la página de Facebook (21/09, noche):** el mismo
 video que va a Instagram sale como historia o reel de la página, a la misma hora.

@@ -100,10 +100,10 @@ publicar piezas a mano. Detalle y horarios en `REDES.md`.
 - **Redes, al 21/09:** Facebook e Instagram publican solos desde GitHub. Facebook,
   una nota por vez (5 por día como máximo, relevancia 75 o más). Instagram y la página de Facebook, las
   piezas de video del día (clima, farmacia, 2 reels de noticias, el podcast y 3
-  historias de notas; el mismo video en las dos redes) con la voz Gemini "Kore". Horarios y reglas: `REDES.md`. **El reloj de GitHub no es
-  puntual (el 21/09 no ejecutó ninguna corrida programada en toda una tarde):** cada
-  pieza tiene su ventana y puede salir tarde o perderse. Pendiente: un disparador
-  externo (ver `REDES.md`).
+  historias de notas; el mismo video en las dos redes) con la voz Gemini "Kore". Horarios y reglas: `REDES.md`. **El disparador real es cron-job.org** (cada 30 min, de
+  7 a 23), porque el planificador propio de GitHub no era confiable (el 21/09 no
+  ejecutó ninguna corrida en toda una tarde). El token de GitHub que usa vence el
+  21/09/2027: hay que renovarlo antes. Detalle en `REDES.md`.
 - **SEO y posicionamiento (Google, redes, buscadores con IA) y biografías:**
   anotado el 21/09, todavía sin hacer. Lista completa en `NOTAS.md` § 11.
 - Pendientes de redes: Threads (token propio),

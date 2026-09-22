@@ -12,15 +12,17 @@
 # Cuando no toca ninguna pieza, la corrida termina en segundos y no instala
 # nada. Los horarios y las reglas están en REDES.md.
 #
-# POR QUÉ TANTAS CORRIDAS: el planificador de GitHub NO es puntual. En este
-# repositorio llegó a dejar cinco horas entre dos corridas que debían distar
-# treinta minutos. Por eso hay dos o tres pasadas alrededor de cada horario, en
-# minutos poco cargados (ni en punto ni y media), y cada pieza tiene una ventana
-# de dos horas: si una corrida llega tarde, todavía alcanza. Lo que no sale
-# dentro de su ventana se pierde: es mejor no publicar el clima de la mañana a
-# la tarde.
-#
-# Las horas de abajo son UTC (Balcarce es UTC-3): 13:05 UTC son las 10:05 de acá.
+# EL DISPARADOR ES EXTERNO (cron-job.org), no el planificador propio de GitHub.
+# El 21/09 el planificador de GitHub llegó a dejar cinco horas entre dos
+# corridas que debían distar treinta minutos, y una tarde entera sin ejecutar
+# ninguna: la farmacia de esa noche se perdió y hubo que publicarla a mano.
+# cron-job.org llama a este workflow cada 30 minutos (7 a 23, hora de Balcarce)
+# con la acción "reloj", desde una cuenta de radarbalcarce@gmail.com con un
+# token de GitHub limitado a este repositorio (permiso Actions: lectura y
+# escritura). Cada pieza tiene su propia ventana (ver redes/piezas.mjs): si el
+# disparador se atrasa, igual alcanza; lo que no sale dentro de su ventana se
+# pierde. Un segundo disparador de respaldo sigue siendo la corrida de
+# "Actualizar la web".
 #
 # INTERRUPTOR: la variable REDES_ACTIVAS ("Si") en Settings → Secrets and
 # variables → Actions → Variables. Con otro valor todo corre pero sólo simula.
@@ -36,18 +38,6 @@
 name: Redes
 
 on:
-  schedule:
-    - cron: '35 10 * * *'   # 07:35
-    - cron: '5 11 * * *'    # 08:05
-    - cron: '5,35,45 13 * * *' # 10:05 10:35 10:45
-    - cron: '15 14 * * *'   # 11:15
-    - cron: '45 15 * * *'   # 12:45
-    - cron: '15 16 * * *'   # 13:15
-    - cron: '45 17 * * *'   # 14:45
-    - cron: '5,15,35 18 * * *' # 15:05 15:15 15:35
-    - cron: '5,35 22 * * *' # 19:05 19:35
-    - cron: '5,35 23 * * *' # 20:05 20:35
-    - cron: '5 0 * * *'     # 21:05
   # Un segundo disparador: cuando termina "Actualizar la web". El planificador de
   # GitHub es tan impuntual que el 21/09 no ejecutó ninguna corrida de esta
   # cola entre las 19:00 y las 21:00, mientras que "Actualizar la web" sí corrió
