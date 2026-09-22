@@ -38,6 +38,13 @@
       "nombre": "podcast",
       "tipo": "REELS",
       "notaId": null
+    },
+    "2026-09-21/farmacia": {
+      "cuando": "2026-09-22T00:38:10.983Z",
+      "mediaId": "18178312270441221",
+      "nombre": "farmacia",
+      "tipo": "STORIES",
+      "notaId": null
     }
   },
   "facebookVideos": {
@@ -59,6 +66,13 @@
       "cuando": "2026-09-22T00:35:20.231Z",
       "mediaId": "1660352509092691",
       "nombre": "clima-noche",
+      "tipo": "STORIES",
+      "notaId": null
+    },
+    "2026-09-21/farmacia": {
+      "cuando": "2026-09-22T00:38:50.885Z",
+      "mediaId": "1079732618244975",
+      "nombre": "farmacia",
       "tipo": "STORIES",
       "notaId": null
     }
