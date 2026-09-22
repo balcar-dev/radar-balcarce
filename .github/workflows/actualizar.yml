@@ -48,6 +48,18 @@ jobs:
         with:
           node-version: '24'
 
+      # Hace falta ANTES de las pruebas: desde que pruebas/ tiene tests que
+      # tocan reels/ (voz.mjs, msedge-tts) y web/lib (pedir-clima.js, react),
+      # "npm test" ya no corre con lo único que trae Node. Sin este paso,
+      # esos dos archivos de prueba fallaban por "Cannot find package" y la
+      # corrida entera se cortaba acá: pasó el 22/09, la web quedó sin
+      # actualizarse desde la noche anterior.
+      - name: Instalar
+        run: npm ci --no-audit --no-fund
+      - name: Instalar (web)
+        working-directory: web
+        run: npm ci --no-audit --no-fund
+
       # Las pruebas corren antes de salir a buscar noticias: si la
       # clasificación o el parseo de la farmacia se rompieron, es preferible
       # dejar la web como está antes que publicar datos mal armados. La
@@ -70,9 +82,7 @@ jobs:
       # Si no compila, no se commitea: la web se queda como está.
       - name: Compilar el sitio
         working-directory: web
-        run: |
-          npm ci --no-audit --no-fund
-          npm run build
+        run: npm run build
         env:
           SITIO: https://radarbalcarce.com
 
