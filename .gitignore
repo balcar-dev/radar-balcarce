@@ -14,6 +14,12 @@ ingesta/salida/
 web/node_modules/
 web/.next/
 web/.vercel/
+web/out/
+# public/_redirects y vercel.json los escribe scripts/generar-redirects.mjs
+# en cada build, a partir de portada.json: no son código, son un artefacto
+# más, como .next/.
+web/public/_redirects
+web/vercel.json
 # web/data/portada.json SÍ se versiona a propósito: es el artefacto que
 # lee el sitio público. panel/datos/ (arriba) es distinto — ahí viven las
 # decisiones humanas, y eso se queda en la máquina de quien corre el panel.

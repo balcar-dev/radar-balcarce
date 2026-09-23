@@ -6,9 +6,10 @@
   "scripts": {
     "datos": "node scripts/generar-datos.mjs",
     "dev": "npm run datos && next dev",
-    "_comentario_build": "OJO: build NO regenera los datos. En Vercel se sube solo la carpeta web/, asi que scripts/generar-datos.mjs (que lee ../../ingesta y ../../panel) no puede correr alli: rompia el deploy con ERR_MODULE_NOT_FOUND. Los datos se generan en la maquina que tiene el panel, con `npm run datos`, y data/portada.json se versiona a proposito.",
-    "build": "next build",
-    "datos-y-build": "npm run datos && next build",
+    "_comentario_build": "OJO: build NO regenera los datos. En Vercel se sube solo la carpeta web/, asi que scripts/generar-datos.mjs (que lee ../../ingesta y ../../panel) no puede correr alli: rompia el deploy con ERR_MODULE_NOT_FOUND. Los datos se generan en la maquina que tiene el panel, con `npm run datos`, y data/portada.json se versiona a proposito. redirects si corre en el build: solo lee data/portada.json, que ya esta.",
+    "redirects": "node scripts/generar-redirects.mjs",
+    "build": "npm run redirects && next build",
+    "datos-y-build": "npm run datos && npm run redirects && next build",
     "start": "next start"
   },
   "dependencies": {

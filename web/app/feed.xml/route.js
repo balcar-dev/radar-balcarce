@@ -3,6 +3,14 @@ import { sitio } from '@/lib/sitio';
 
 // RSS para quien quiera seguirnos sin redes: Google Noticias y los
 // lectores de feeds lo leen desde acá.
+//
+// Se arma en el momento de compilar, no en cada visita: los datos no
+// cambian entre una compilación y la siguiente (el sitio se reconstruye
+// entero cada 30 minutos), así que no hace falta un servidor corriendo
+// para esto — es justo lo que permite exportar el sitio como archivos
+// estáticos puros, sin depender de ningún proveedor en particular.
+export const dynamic = 'force-static';
+
 export async function GET() {
   const SITIO = sitio();
   const d = obtenerDatos();
