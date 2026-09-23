@@ -185,8 +185,11 @@ export function guionFarmacia(turno) {
 
 const COLOR_UTILES_ACENTO = '#8C2D18';
 
+// Nada de "esta semana" ni "una vez por semana": son los mismos teléfonos
+// siempre, la única variable es cuándo sale la pieza. Decir que son "de
+// esta semana" da a entender que cambian, y no es así.
 export function guionUtiles() {
-  return 'Una vez por semana te dejamos los teléfonos que sirve tener a mano en Balcarce: '
+  return 'Te dejamos los teléfonos que sirve tener a mano en Balcarce: '
     + 'emergencias, el hospital, la comisaría y los servicios del municipio. '
     + 'Guardalos ahora, que después te olvidás. Los demás números están en la página.';
 }
