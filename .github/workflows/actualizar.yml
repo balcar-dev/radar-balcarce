@@ -106,7 +106,11 @@ jobs:
           # asi que el mail tiene que ser uno que GitHub reconozca. Este es el
           # mail interno de la cuenta balcar-dev.
           git config user.email "272334999+balcar-dev@users.noreply.github.com"
-          git add web/data/portada.json
+          # vercel.json va junto con portada.json a propósito: lo escribió
+          # "Compilar el sitio" recién (scripts/generar-redirects.mjs), y
+          # Vercel necesita leerlo ANTES de su propia compilación, no le
+          # alcanza con que quede en el disco de esta corrida.
+          git add web/data/portada.json web/vercel.json
           if git diff --cached --quiet; then
             echo "Sin novedades: no hay nada que publicar."
           else
