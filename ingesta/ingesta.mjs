@@ -470,11 +470,20 @@ function limpiarCopete(cuerpo, titulo, medio) {
     normalizar(cola).includes(normalizar(medio).slice(0, 10)) ? '' : cola
   ));
   t = t.replace(/^\s*[-–—]\s*/, '').trim();
+  // El "seguir leyendo" que casi todas las fuentes pegan al final del
+  // resumen no es parte de la noticia: es el link para ir a su nota.
+  t = t.replace(/\s*(leer|le[eé]|segu[ií]|sigue)\s+(m[aá]s|leyendo)\s*[.…»]*\s*$/iu, '').trim();
   // Si arranca repitiendo el título, se le saca esa parte.
   const nt = normalizar(titulo);
   if (normalizar(t).startsWith(nt)) t = t.slice(titulo.length).replace(/^\s*[-:.–—|]\s*/, '').trim();
   if (normalizar(t).length < 40) return '';
-  return t.slice(0, 280);
+  // Cortar en 280 a lo bruto partía la última palabra a la mitad, y a veces
+  // en plena frase ("...pasión por los"): se veía como una nota rota, no
+  // como un resumen. Se corta en el último espacio y se avisa con "…".
+  if (t.length <= 280) return t;
+  const corte = t.slice(0, 280);
+  const ultimoEspacio = corte.lastIndexOf(' ');
+  return `${corte.slice(0, ultimoEspacio > 200 ? ultimoEspacio : 280).replace(/[\s,.;:]+$/, '')}…`;
 }
 
 function relevancia(nota, seccion, medios) {

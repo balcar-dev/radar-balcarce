@@ -70,8 +70,32 @@ test('el copete pierde la firma del medio', () => {
   assert.ok(c.startsWith('La sesión duró cuatro horas'));
 });
 
+test('el "seguir leyendo" del final no es parte de la noticia', () => {
+  // Pasó el 22/09: una nota de Radio Gabal terminaba el copete en "Leer
+  // más…", que es el link de la fuente para ir a su propia nota, no algo
+  // que haya dicho la fuente sobre el tema.
+  const c = limpiarCopete(
+    'El integrante de la Asociación Autódromo se emocionó al recordar al reconocido constructor. Leer más…',
+    'Mario Alberghini recordó a Tulio Crespi',
+    'Radio Gabal',
+  );
+  assert.ok(!/leer\s*m[aá]s/i.test(c), c);
+  assert.ok(c.endsWith('constructor.'), c);
+});
+
 test('un copete demasiado corto se descarta', () => {
   assert.equal(limpiarCopete('Seguí leyendo', 'Un título cualquiera', 'El Diario'), '');
+});
+
+test('un copete largo se corta en una palabra entera, no a la mitad', () => {
+  // Pasó el 22/09: el corte a los 280 caracteres caía en plena palabra o en
+  // plena frase ("...pasión por los"), sin ningún "…" que avisara que
+  // seguía. Se veía como una nota rota, no como un resumen.
+  const cuerpo = `${'Una palabra '.repeat(30)}más para completar el texto original de la fuente.`;
+  const c = limpiarCopete(cuerpo, 'Un título cualquiera', 'El Diario');
+  assert.ok(c.length <= 281, c.length); // 280 + el "…"
+  assert.ok(c.endsWith('…'), c);
+  assert.ok(!/\bpalabr$/.test(c.slice(0, -1)), 'no corta una palabra a la mitad');
 });
 
 // ------------------------------------------------------------ las secciones
