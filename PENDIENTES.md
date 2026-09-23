@@ -50,10 +50,14 @@ Lo que ya existe y no hay que repetir: direcciones con el titular adentro
 que vigila el SEO en cada compilación (`web/scripts/revisar-seo.mjs`).
 
 **Google**
-10. Verificar `radarbalcarce.com` en Search Console y enviar el sitemap.
-11. Datos estructurados (JSON-LD): `NewsArticle` en cada nota y
-    `NewsMediaOrganization` en el sitio.
-12. Google News y Discover: Publisher Center, imágenes de al menos 1200 px.
+10. Verificar `radarbalcarce.com` en Search Console y enviar el sitemap
+    (ahora hay dos: `sitemap.xml` y `sitemap-news.xml` — enviar los dos).
+11. ~~Datos estructurados (JSON-LD)~~ — ya estaba hecho (`web/components/ficha.js`):
+    `NewsArticle` en cada nota, `NewsMediaOrganization` y `WebSite` en el
+    sitio, `BreadcrumbList` en las migas. Esta lista estaba desactualizada.
+12. Google News y Discover: falta el Publisher Center (alta manual en Google)
+    e imágenes de al menos 1200 px. El sitemap de noticias ya está
+    (`sitemap-news.xml`, 22/09): las últimas 48 horas, formato Google News.
 13. Páginas de confianza (E-E-A-T): quiénes somos, contacto, política editorial
     (qué se resume con IA, cómo se corrige un error), firma en cada nota.
 14. Revisar que cada sección, tema y nota tenga título y descripción propios.
@@ -72,8 +76,10 @@ que vigila el SEO en cada compilación (`web/scripts/revisar-seo.mjs`).
 **Buscadores con IA**
 21. Decidir en `robots.txt` si se permite a los rastreadores de IA (GPTBot,
     ClaudeBot, PerplexityBot, Google-Extended): da visibilidad y citas, o
-    protege el contenido — es una decisión editorial, no técnica.
-22. Agregar `llms.txt` y un `sitemap-news.xml`.
+    protege el contenido — es una decisión editorial, no técnica. Sigue
+    pendiente a propósito: hoy `robots.txt` no distingue rastreadores, ni a
+    favor ni en contra.
+22. ~~Agregar `llms.txt` y un `sitemap-news.xml`~~ — hecho el 23/09.
 23. Que cada nota abra con un resumen claro: fecha, lugar, fuente y autor
     visibles, que es lo que una IA cita.
 

@@ -29,7 +29,9 @@ export default function robots() {
       // El feed es para programas, no para el índice de búsqueda.
       disallow: ['/feed.xml'],
     },
-    sitemap: `${base}/sitemap.xml`,
+    // El de noticias es aparte: Google Noticias y Discover lo miran solo,
+    // con las reglas propias de ese sitemap (ver sitemap-news.xml/route.js).
+    sitemap: [`${base}/sitemap.xml`, `${base}/sitemap-news.xml`],
     host: base,
   };
 }
