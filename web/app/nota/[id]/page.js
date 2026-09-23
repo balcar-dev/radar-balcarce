@@ -80,9 +80,13 @@ export default function PaginaNota({ params }) {
             día de mañana hay una foto o ilustración propia de la nota
             (con IA, por ejemplo), va este espacio. */}
 
-        {n.guion && (
-          <p style={{ fontSize: 16, lineHeight: 1.7, marginTop: 22, color: 'var(--texto)' }}>{n.guion}</p>
-        )}
+        {/* El cuerpo sólo existe si la IA reescribió la nota (o alguien la
+            cargó a mano): el resumen mecánico de la fuente no tiene de dónde
+            sacar más texto propio, así que ahí no se muestra nada acá y la
+            nota queda con el copete nada más. */}
+        {n.cuerpo && n.cuerpo.split('\n').map((p) => p.trim()).filter(Boolean).map((parrafo) => (
+          <p key={parrafo.slice(0, 40)} style={{ fontSize: 16, lineHeight: 1.7, marginTop: 16, color: 'var(--texto)' }}>{parrafo}</p>
+        ))}
 
         {MOSTRAR_TEMAS && <TemasDeLaNota temas={n.temas} catalogo={temas} />}
         <Compartir titulo={n.titulo} />

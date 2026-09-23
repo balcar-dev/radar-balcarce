@@ -18,7 +18,7 @@
 //
 // Sin dependencias: corre en GitHub Actions sin instalar nada.
 //
-//   verificar({ titulo, resumen }, { titulo, copete, guion })
+//   verificar({ titulo, resumen }, { titulo, copete, cuerpo, guion })
 //     → { ok: boolean, problemas: [{ tipo, detalle }] }
 
 const sinTildes = (s = '') => String(s)
@@ -144,6 +144,9 @@ export const LIMITES = {
   titulo: 90,
   copete: 280,
   guion: 200,
+  // Uno a tres párrafos cortos: alcanza y sobra con esto. Es la nota, no una
+  // crónica.
+  cuerpo: 1200,
   // Más de esto seguido, palabra por palabra, es copiar y no reescribir.
   copiaMaxima: 12,
 };
@@ -152,7 +155,7 @@ export const LIMITES = {
  * Compara lo que escribió la IA contra lo que recibió.
  *
  * @param {{ titulo?: string, resumen?: string }} fuente lo que se le dio
- * @param {{ titulo?: string, copete?: string, guion?: string }} nuevo lo que devolvió
+ * @param {{ titulo?: string, copete?: string, cuerpo?: string, guion?: string }} nuevo lo que devolvió
  */
 export function verificar(fuente, nuevo) {
   const problemas = [];
@@ -168,7 +171,7 @@ export function verificar(fuente, nuevo) {
   if (!nuevo?.titulo?.trim()) agregar('vacio', 'no devolvió título');
   if (!nuevo?.copete?.trim()) agregar('vacio', 'no devolvió copete');
 
-  for (const campo of ['titulo', 'copete', 'guion']) {
+  for (const campo of ['titulo', 'copete', 'cuerpo', 'guion']) {
     const texto = nuevo?.[campo] ?? '';
     if (!texto) continue;
 
@@ -238,6 +241,7 @@ export function verificar(fuente, nuevo) {
   const copiado = Math.max(
     tramoCopiado(origen, nuevo?.titulo ?? ''),
     tramoCopiado(origen, nuevo?.copete ?? ''),
+    tramoCopiado(origen, nuevo?.cuerpo ?? ''),
   );
   if (copiado > LIMITES.copiaMaxima) {
     agregar('copia', `copia ${copiado} palabras seguidas del original`);

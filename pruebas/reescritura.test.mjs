@@ -38,8 +38,12 @@ function fetchFalso(respuestas) {
   return { fn, pedidos };
 }
 
-const respuestaOk = (titulo, copete, guion) => ({
-  json: { candidates: [{ content: { parts: [{ text: JSON.stringify({ titulo, copete, guion }) }] } }] },
+const respuestaOk = (titulo, copete, guion, cuerpo) => ({
+  json: {
+    candidates: [{
+      content: { parts: [{ text: JSON.stringify({ titulo, copete, guion, cuerpo }) }] },
+    }],
+  },
 });
 
 // ---------------------------------------------------------------- el tono
@@ -205,4 +209,17 @@ test('lo que ya estaba en caché y sigue pasando la verificación se reusa igual
     assert.equal(r.n1.titulo, 'Un título cualquiera');
     assert.equal(pedidos.length, 0);
   });
+});
+
+test('reescribir() también devuelve el cuerpo cuando la IA lo manda', async () => {
+  const { fn } = fetchFalso([respuestaOk(
+    'Título nuevo', 'Copete nuevo.', 'Título nuevo.',
+    'Primer párrafo con más detalle.\n\nSegundo párrafo con el resto.',
+  )]);
+  const r = await reescribir(
+    { titulo: 'Original', resumenFuente: 'Pasó tal cosa.', seccion: 'Balcarce', medios: ['El Diario'] },
+    { fetchFn: fn },
+  );
+  assert.match(r.cuerpo, /Primer párrafo/);
+  assert.match(r.cuerpo, /Segundo párrafo/);
 });

@@ -30,22 +30,22 @@ Tu trabajo es reescribir una noticia que llegó de otro medio (a veces más de u
 
 1. NUNCA copiás el texto original. Se reescribe con palabras propias, cruzando lo que cuenta cada fuente si hay más de una. Podés citar una frase textual corta si hace falta, entre comillas.
 2. El título va hasta 65 caracteres, sin signos de admiración, sin pregunta, y se entiende solo en la pantalla del celular.
-3. El copete son dos líneas COMO MUCHO (unas 30 palabras): qué pasó, dónde y cuándo. Nada de contexto antes del hecho, nada de antecedentes largos, nada de "cabe destacar que". Si la fuente da para más, esa profundidad queda para el cuerpo de la nota en la web, no para el copete.
+3. El copete son dos líneas COMO MUCHO (unas 30 palabras): qué pasó, dónde y cuándo. Nada de contexto antes del hecho, nada de antecedentes largos, nada de "cabe destacar que". Es un adelanto, no el resumen completo: esa profundidad va en el cuerpo (punto 4), nunca en el copete.
+4. Además escribís el cuerpo de la nota: entre uno y tres párrafos cortos (separados por un salto de línea en blanco) que desarrollan lo que el copete sólo adelantó, cruzando lo que cuenta cada fuente. Nunca repite el copete con las mismas palabras: lo amplía con lo que falta — el resto del hecho, alguna cita textual corta si la fuente la trae, el contexto que sí importa. Si el texto de origen es corto y no da para más de un párrafo, el cuerpo es un párrafo: mejor breve y cierto que largo y relleno.
 {{TONO}}
-5. Los números van redondeados y comparados cuando se pueda ("el triple que el año pasado") antes que un porcentaje con decimales.
-6. El guion para la voz ES EL TÍTULO, dicho tal cual, y nada más. Nada de contexto, nada de cierre, nada de "la nota completa en...". Sólo cambiás algo si el título no se puede leer en voz alta: las siglas se escriben como se pronuncian y los números van en palabras (catorce, no 14). La pieza tiene que durar unos diez segundos: si el título es largo, acortalo al hecho central en vez de agregarle nada.
-7. La fuente NO se nombra nunca en el guion de voz ni en el título: eso va aparte, en la atribución de la nota.
-8. Si el texto de origen no alcanza para escribir dos oraciones propias, el guion puede ser más corto: mejor breve y cierto que largo y relleno.
-9. Nunca inventás un dato, una cifra o una cita que no esté en el texto de origen. Si dos fuentes se contradicen en un dato (una hora, un número), usás el que repiten más o el más reciente, nunca inventás uno propio para "resolver" la diferencia.
-10. Si la nota original ACUSA a alguien de algo (un delito, una falta, una irregularidad) y todavía no hay una condena o una confirmación oficial: SIEMPRE atribuís la acusación a quien la hizo ("según la denuncia de...", "de acuerdo con la Policía...", "según fuentes judiciales...") y usás el modo condicional ("habría", no "hizo"). Nunca lo escribís como un hecho afirmado por vos. Esto no es sólo estilo: es lo que en Argentina protege a un medio de una demanda por calumnias o injurias (doctrina Campillay).
+6. Los números van redondeados y comparados cuando se pueda ("el triple que el año pasado") antes que un porcentaje con decimales.
+7. El guion para la voz ES EL TÍTULO, dicho tal cual, y nada más. Nada de contexto, nada de cierre, nada de "la nota completa en...". Sólo cambiás algo si el título no se puede leer en voz alta: las siglas se escriben como se pronuncian y los números van en palabras (catorce, no 14). La pieza tiene que durar unos diez segundos: si el título es largo, acortalo al hecho central en vez de agregarle nada.
+8. La fuente NO se nombra nunca en el guion de voz ni en el título: eso va aparte, en la atribución de la nota. En el cuerpo sí podés referirte a ella en general ("según informó el municipio"), nunca citar el nombre del medio que la publicó.
+9. Nunca inventás un dato, una cifra o una cita que no esté en el texto de origen — ni en el copete ni en el cuerpo. Si dos fuentes se contradicen en un dato (una hora, un número), usás el que repiten más o el más reciente, nunca inventás uno propio para "resolver" la diferencia.
+10. Si la nota original ACUSA a alguien de algo (un delito, una falta, una irregularidad) y todavía no hay una condena o una confirmación oficial: SIEMPRE atribuís la acusación a quien la hizo ("según la denuncia de...", "de acuerdo con la Policía...", "según fuentes judiciales...") y usás el modo condicional ("habría", no "hizo"). Nunca lo escribís como un hecho afirmado por vos, ni en el copete ni en el cuerpo. Esto no es sólo estilo: es lo que en Argentina protege a un medio de una demanda por calumnias o injurias (doctrina Campillay).
 11. Escribís en castellano correcto, con las tildes y la eñe donde van (últimos, sábado, Napaleofú, señal). Un medio que escribe sin tildes se lee como un mensaje apurado, no como un medio.
 
 Devolvés SOLO un JSON con esta forma exacta, sin texto alrededor:
-{"titulo": "...", "copete": "...", "guion": "..."}`;
+{"titulo": "...", "copete": "...", "cuerpo": "...", "guion": "..."}`;
 
-const TONO_AMENO = `4. Tono: español rioplatense neutro y cercano. Tercera persona, sin voseo ni modismos: no es un amigo contando algo, es un medio informando — pero se lee liviano, como una novedad del pueblo bien contada, no como un parte frío. Ni solemne ni canchero. Sin adjetivos de opinión en nota informativa, sin exclamaciones, sin "impresionante", "tremendo" ni "increíble".`;
+const TONO_AMENO = `5. Tono: español rioplatense neutro y cercano. Tercera persona, sin voseo ni modismos: no es un amigo contando algo, es un medio informando — pero se lee liviano, como una novedad del pueblo bien contada, no como un parte frío. Ni solemne ni canchero. Sin adjetivos de opinión en nota informativa, sin exclamaciones, sin "impresionante", "tremendo" ni "increíble".`;
 
-const TONO_SERIO = `4. Tono: por el tema (inseguridad o una problemática local), acá el registro es sobrio e institucional. Preciso y mesurado, sin ninguna calidez ni color: sólo los hechos, con el cuidado que exige algo que afecta a la gente. Nada de liviandad ni de humor. Tercera persona, sin opinión.`;
+const TONO_SERIO = `5. Tono: por el tema (inseguridad o una problemática local), acá el registro es sobrio e institucional. Preciso y mesurado, sin ninguna calidez ni color: sólo los hechos, con el cuidado que exige algo que afecta a la gente. Nada de liviandad ni de humor. Tercera persona, sin opinión.`;
 
 // Palabras que, sin llegar a frenar el semáforo (eso ya lo filtra
 // REGLAS_SEMAFORO en ingesta/fuentes.mjs), sí piden el tono serio en vez del
@@ -81,7 +81,7 @@ export const INSTRUCCION_EDITORIAL = `${instruccionPara({ seccion: '', titulo: '
 
 Nota aparte, esto no se lo manda a la IA: cuando la noticia es de Policiales, o
 toca inseguridad, robos, choques, accidentes, incendios, cortes de luz o agua,
-conflictos, protestas, reclamos o alguna emergencia, el punto 4 cambia por el
+conflictos, protestas, reclamos o alguna emergencia, el punto 5 cambia por el
 registro serio de arriba en vez del cercano.`;
 
 function limpiarJson(texto) {
@@ -168,6 +168,7 @@ export async function reescribir(nota, { intentos = 3, fetchFn = fetch } = {}) {
   return {
     titulo: salida.titulo.trim().slice(0, 90),
     copete: (salida.copete ?? '').trim(),
+    cuerpo: (salida.cuerpo ?? '').trim(),
     guion: salida.guion.trim(),
     deIA: true,
   };
@@ -222,11 +223,11 @@ const FALLOS_PARA_CORTAR = 3;
  *
  * @param {object[]} notas
  * @param {object} [o]
- * @param {Record<string, {titulo:string,copete:string,guion:string}>} [o.previas]
+ * @param {Record<string, {titulo:string,copete:string,cuerpo?:string,guion:string}>} [o.previas]
  * @param {Record<string, object>} [o.decisiones]
  * @param {number} [o.tope]
  * @param {object} [o.opciones] se le pasa tal cual a reescribir() (fetchFn, intentos)
- * @returns {Promise<Record<string, {titulo:string,copete:string,guion:string,deIA:boolean}>>}
+ * @returns {Promise<Record<string, {titulo:string,copete:string,cuerpo?:string,guion:string,deIA:boolean}>>}
  */
 export async function reescribirAutomaticas(notas, {
   previas = {}, decisiones = {}, tope = REESCRITURAS_POR_CORRIDA, opciones,
@@ -251,7 +252,9 @@ export async function reescribirAutomaticas(notas, {
       const cacheada = previas[nota.id];
       const control = verificar(
         { titulo: nota.titulo, resumen: nota.resumenFuente },
-        { titulo: cacheada.titulo, copete: cacheada.copete, guion: cacheada.guion },
+        {
+          titulo: cacheada.titulo, copete: cacheada.copete, guion: cacheada.guion, cuerpo: cacheada.cuerpo,
+        },
       );
       if (control.ok) { resultado[nota.id] = cacheada; continue; }
       // No entra en resultado: queda el resumen mecánico por ahora, y como
@@ -267,11 +270,15 @@ export async function reescribirAutomaticas(notas, {
 
     const control = verificar(
       { titulo: nota.titulo, resumen: nota.resumenFuente },
-      { titulo: r.titulo, copete: r.copete, guion: r.guion },
+      {
+        titulo: r.titulo, copete: r.copete, guion: r.guion, cuerpo: r.cuerpo,
+      },
     );
     if (!control.ok) continue; // inventó algo: se descarta, queda el copete de siempre
 
-    resultado[nota.id] = { titulo: r.titulo, copete: r.copete, guion: r.guion, deIA: true };
+    resultado[nota.id] = {
+      titulo: r.titulo, copete: r.copete, cuerpo: r.cuerpo, guion: r.guion, deIA: true,
+    };
   }
 
   return resultado;

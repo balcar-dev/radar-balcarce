@@ -69,6 +69,7 @@ export function FichaDeNota({ nota }) {
     mainEntityOfPage: { '@type': 'WebPage', '@id': url },
     headline: nota.titulo.slice(0, 110),
     description: nota.copete || undefined,
+    articleBody: nota.cuerpo || undefined,
     datePublished: nota.fecha,
     dateModified: nota.publicadaCuando ?? nota.fecha,
     articleSection: nota.seccion,

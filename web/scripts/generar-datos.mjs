@@ -125,6 +125,11 @@ function notaPublicada(n) {
     id: n.id,
     titulo: d?.titulo ?? auto?.titulo ?? n.titulo,
     copete: d?.copete ?? auto?.copete ?? n.resumenFuente ?? '',
+    // Sólo existe cuando la reescribió la IA (o lo cargó una persona a
+    // mano): el resumen mecánico de la fuente no tiene de dónde sacar un
+    // cuerpo propio, así que la nota queda con el copete nada más, como
+    // siempre — ver EDITORIAL.md.
+    cuerpo: d?.cuerpo ?? auto?.cuerpo ?? null,
     guion: d?.guion ?? auto?.guion ?? null,
     seccion: n.seccion,
     medios: n.medios,

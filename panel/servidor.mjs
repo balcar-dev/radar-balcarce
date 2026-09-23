@@ -312,7 +312,9 @@ async function reescribirPendientes() {
     // ingesta/verificar.mjs para qué se controla y por qué es estricto.
     const control = verificar(
       { titulo: nota.titulo, resumen: nota.resumenFuente },
-      { titulo: r.titulo, copete: r.copete, guion: r.guion },
+      {
+        titulo: r.titulo, copete: r.copete, guion: r.guion, cuerpo: r.cuerpo,
+      },
     );
     if (!control.ok) {
       const previoRechazada = estado.decisiones[nota.id] ?? {};
@@ -335,6 +337,7 @@ async function reescribirPendientes() {
       titulo: r.titulo,
       copete: r.copete,
       guion: r.guion,
+      cuerpo: r.cuerpo,
       deIA: true,
       por: 'ia',
       cuando: new Date().toISOString(),
@@ -673,6 +676,7 @@ const servidor = http.createServer(async (req, res) => {
         titulo: r.titulo,
         copete: r.copete,
         guion: r.guion,
+        cuerpo: r.cuerpo,
         deIA: r.deIA,
         problemasDeLaIA: control.ok ? undefined : control.problemas,
         por: quien,
@@ -722,7 +726,7 @@ const servidor = http.createServer(async (req, res) => {
     // Decidir sobre una nota: publicar, descartar, volver a la cola, editar.
     if (ruta === '/api/nota' && req.method === 'POST') {
       const {
-        id, accion, titulo, copete, guion,
+        id, accion, titulo, copete, guion, cuerpo,
       } = await cuerpoDe(req);
       // Quién hizo esto sale de la sesión, no de lo que diga el navegador:
       // antes el panel lo mandaba en el cuerpo y era a confianza.
@@ -741,6 +745,7 @@ const servidor = http.createServer(async (req, res) => {
           titulo: titulo ?? previo.titulo,
           copete: copete ?? previo.copete,
           guion: guion ?? previo.guion,
+          cuerpo: cuerpo ?? previo.cuerpo,
           // Si alguien toca el texto a mano después de que la IA lo escribió,
           // deja de ser "de la IA sin tocar": queda como edición manual.
           deIA: guion && guion !== previo.guion ? false : previo.deIA,

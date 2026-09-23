@@ -257,3 +257,32 @@ test('"más" bien escrito no tiene ningún problema de tilde', () => {
   });
   assert.ok(!tipos(r).includes('tilde'), JSON.stringify(r.problemas));
 });
+
+// --------------------------------------------------------------- el cuerpo
+
+test('un número inventado en el cuerpo se rechaza igual que en el copete', () => {
+  const r = verificar(FUENTE, {
+    titulo: 'Kevin Gómez fue recibido en Balcarce',
+    copete: 'Lo recibieron en el cruce de las rutas.',
+    cuerpo: 'Participaron 500 personas del festejo, según contaron los vecinos presentes.',
+  });
+  assert.ok(tipos(r).includes('numero'), JSON.stringify(r.problemas));
+});
+
+test('un cuerpo demasiado largo se rechaza', () => {
+  const r = verificar(FUENTE, {
+    titulo: 'Kevin Gómez fue recibido en Balcarce',
+    copete: 'Lo recibieron en el cruce de las rutas.',
+    cuerpo: 'Párrafo largo. '.repeat(100),
+  });
+  assert.ok(tipos(r).includes('largo'), JSON.stringify(r.problemas));
+});
+
+test('un cuerpo corto y fiel a la fuente no tiene ningún problema', () => {
+  const r = verificar(FUENTE, {
+    titulo: 'Kevin Gómez fue recibido en Balcarce',
+    copete: 'El boxeador balcarceño volvió campeón.',
+    cuerpo: 'Llegó arriba de un vehículo de emergencias de la ciudad, acompañado por gente del barrio que salió a saludarlo.',
+  });
+  assert.equal(r.ok, true, JSON.stringify(r.problemas));
+});
