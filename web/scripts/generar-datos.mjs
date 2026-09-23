@@ -20,6 +20,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { NUMEROS, tocaHoy, diaDeEstaSemana, diaDeTurno, comoISO, decisionHumana } from '../../ingesta/utiles.mjs';
 import { avisosDelClima } from '../../ingesta/alertas.mjs';
+import { reescribirAutomaticas } from '../../reels/reescritura.mjs';
 import { TEMAS } from '../../ingesta/fuentes.mjs';
 
 const AQUI = import.meta.dirname;
@@ -87,6 +88,26 @@ const vistoAntes = Object.fromEntries((anterior.notas ?? [])
   .map((n) => [n.id, n.visto]));
 const ahoraISO = new Date().toISOString();
 
+// Reescritura automática, sin que nadie la mire: sólo tiene sentido en la
+// nube, porque en la PC el panel ya hace exactamente esto (reescribirPendientes
+// en panel/servidor.mjs, cada 10 minutos) — correrlo acá también sería
+// gastar cuota dos veces en la misma nota.
+//
+// `previas` es lo que ya se reescribió en una corrida anterior (la portada
+// de la vez pasada): así no se le vuelve a pedir a Gemini la misma nota en
+// cada corrida de acá a que alguien la revise. No hay otro lugar en la nube
+// donde guardar "esto ya está": portada.json, que ya se commitea siempre, es
+// la única memoria entre una corrida y la siguiente.
+let reescritas = {};
+if (enLaNube) {
+  const previas = Object.fromEntries((anterior.notas ?? [])
+    .filter((n) => n.redactadaPor === 'ia' && n.titulo)
+    .map((n) => [n.id, { titulo: n.titulo, copete: n.copete, guion: n.guion, deIA: true }]));
+  reescritas = await reescribirAutomaticas(ultima.notas ?? [], { previas, decisiones: estado.decisiones });
+  const nuevas = Object.keys(reescritas).filter((id) => !previas[id]).length;
+  if (nuevas) console.log(`  ${nuevas} notas reescritas con IA en esta corrida`);
+}
+
 function notaPublicada(n) {
   const d = estado.decisiones[n.id];
   // Sólo manda lo que decidió una persona. Lo que guardó la máquina es una
@@ -94,11 +115,17 @@ function notaPublicada(n) {
   const delSemaforo = { verde: 'automatica', rojo: 'bloqueada' }[n.semaforo] ?? 'pendiente';
   const st = decisionHumana(d) ? d.estado : delSemaforo;
   if (st !== 'publicada' && st !== 'automatica') return null;
+  // Lo que decidió una persona manda. Si no, lo que ya reescribió la IA sola
+  // en esta corrida o en una anterior. Si ninguna de las dos cosas pasó,
+  // queda el resumen mecánico de la fuente, como salía antes de todo esto.
+  // Que `guion` tenga algo es justamente la señal que usa <Firma> para decir
+  // "esto lo redactó una IA": no hace falta un campo aparte para lo mismo.
+  const auto = reescritas[n.id];
   return {
     id: n.id,
-    titulo: d?.titulo ?? n.titulo,
-    copete: d?.copete ?? n.resumenFuente ?? '',
-    guion: d?.guion ?? null,
+    titulo: d?.titulo ?? auto?.titulo ?? n.titulo,
+    copete: d?.copete ?? auto?.copete ?? n.resumenFuente ?? '',
+    guion: d?.guion ?? auto?.guion ?? null,
     seccion: n.seccion,
     medios: n.medios,
     enlace: n.enlace,

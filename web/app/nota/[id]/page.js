@@ -1,6 +1,6 @@
 import { obtenerDatos, obtenerNota, cuando, datosSeccion, nombreCorto, temasVivos } from '@/lib/datos';
 import {
-  PlacaSeccion, Etiqueta, FilaNota, Cierre, Invitacion, Firma, TemasDeLaNota,
+  Etiqueta, FilaNota, Cierre, Invitacion, Firma, TemasDeLaNota,
 } from '@/components/piezas';
 import Compartir from '@/components/compartir';
 import { FichaDeNota, Migas } from '@/components/ficha';
@@ -74,8 +74,11 @@ export default function PaginaNota({ params }) {
         {n.copete && <p className="copete">{n.copete}</p>}
 
         {/* Sin foto de la fuente, a propósito: la excepción de noticias de la
-            ley 11.723 cubre el texto, no las fotografías. */}
-        <div style={{ marginTop: 22 }}><PlacaSeccion seccion={n.seccion} /></div>
+            ley 11.723 cubre el texto, no las fotografías. Tampoco va la
+            placa de sección grande acá: repetía lo que ya dice la etiqueta
+            de arriba, en un rectángulo enorme sin ningún dato nuevo. Si el
+            día de mañana hay una foto o ilustración propia de la nota
+            (con IA, por ejemplo), va este espacio. */}
 
         {n.guion && (
           <p style={{ fontSize: 16, lineHeight: 1.7, marginTop: 22, color: 'var(--texto)' }}>{n.guion}</p>

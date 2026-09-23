@@ -67,12 +67,18 @@ jobs:
       - name: Probar que nada se rompió
         run: npm test
 
-      # No hace falta instalar nada: la ingesta usa sólo lo que trae Node
-      # (fetch y expresiones regulares), sin una sola dependencia. Por eso
-      # esto tarda segundos y no minutos.
+      # La ingesta en sí no necesita nada (fetch y expresiones regulares).
+      # Las claves de Gemini son para la reescritura automática de las notas
+      # que van a salir sin que nadie las mire (ver reels/reescritura.mjs):
+      # primero intenta con la de redacción, y si no está o se quedó sin
+      # cupo, sigue con la de redes. Si ninguna de las dos anda, la nota sale
+      # igual con el resumen mecánico de la fuente — esto nunca frena nada.
       - name: Buscar noticias y armar los datos
         working-directory: web
         run: node scripts/generar-datos.mjs
+        env:
+          GEMINI_API_KEY_REDACCION: ${{ secrets.GEMINI_API_KEY_REDACCION }}
+          GEMINI_API_KEY_REDES: ${{ secrets.GEMINI_API_KEY_REDES }}
 
       # El sitio se compila acá antes de publicar. Hasta ahora, un cambio
       # que rompía Next llegaba a Vercel y se descubría recién cuando el

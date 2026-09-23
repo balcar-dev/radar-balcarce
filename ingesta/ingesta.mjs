@@ -1005,6 +1005,12 @@ export async function ingestar({
       relevancia: rel,
       imagen: g.principal.imagen || null,
       resumenFuente: limpiarCopete(g.principal.cuerpo, g.principal.titulo, g.principal.medio),
+      // El resumen de cada medio que contó lo mismo, no sólo el principal:
+      // es lo que permite reescribir cruzando varias versiones en vez de
+      // repetir una sola. Vacío si nadie más lo contó.
+      fuentesTexto: g.tambien
+        .map((n) => limpiarCopete(n.cuerpo, n.titulo, n.medio))
+        .filter(Boolean),
       local: esDeBalcarce(g.principal),
       figura: g.principal.figura ?? null,
       alcance: g.principal.alcance,
