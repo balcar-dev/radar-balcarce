@@ -103,6 +103,7 @@ tailscale funnel --https=443 off
 | Archivo | Qué cuenta |
 |---|---|
 | `MANUAL.md` | Cómo se curan las noticias: puntaje, semáforo, qué sale solo |
+| `EDITORIAL.md` | **Las secciones, el semáforo, y cómo escribe la IA** las notas que salen sin revisión |
 | `REDES.md` | **Qué se publica en redes, a qué hora y con qué reglas**, cómo está conectado Meta, la competencia y los avisos |
 | `INVESTIGACION.md` | Lo legal, con las fuentes |
 | `PENDIENTES.md` | **Qué falta, por categoría** |

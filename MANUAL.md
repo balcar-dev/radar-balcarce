@@ -105,18 +105,22 @@ cola.
 
 ## 5. Cómo escribe el editor
 
-El prompt completo está en `reels/reescritura.mjs` y se lee tal cual en el
-panel, pestaña "Cómo escribe la IA". Lo central:
+El detalle completo, con los dos tonos y cuándo cambia cada uno, está en
+[`EDITORIAL.md`](EDITORIAL.md). El prompt en sí vive en
+`reels/reescritura.mjs` y se lee tal cual en el panel, pestaña "Cómo escribe
+la IA". Lo central:
 
-- Nunca copia el texto original; lo reescribe.
+- Nunca copia el texto original; lo reescribe, cruzando varias fuentes si hay
+  más de una.
 - Título de hasta 65 caracteres, sin signos de admiración.
 - Copete de dos líneas como mucho: qué pasó, dónde y cuándo.
-- **Tono: español rioplatense neutro y tranquilo, en tercera persona, sin
-  voseo ni modismos.** No es un amigo contando algo, es un medio informando.
-  Ni solemne ni canchero, sin "tremendo" ni "impresionante".
-- El guion de voz cuenta el hecho en 25 a 40 palabras, en voz de locutor de
-  radio, con los números en palabras.
-- No inventa un dato que no esté en el original.
+- **Dos tonos:** cercano y liviano para el día a día; sobrio e institucional
+  para Policiales y para cualquier problemática local (inseguridad, choques,
+  cortes de servicio, emergencias).
+- El guion de voz es el título, dicho tal cual, y nada más.
+- No inventa un dato que no esté en el original — y desde el 22/09 corre
+  sola, en la nube, para lo que se publica sin revisión humana, no sólo
+  cuando el panel está prendido.
 
 Los títulos que los medios publican EN MAYÚSCULAS se pasan a mayúscula
 inicial, cuidando los nombres propios con la lista `NOMBRES_PROPIOS` de

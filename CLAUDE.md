@@ -97,17 +97,27 @@ publicar piezas a mano. Detalle y horarios en `REDES.md`.
   apuntando a Vercel; `www` redirige al dominio sin `www`). La dirección vieja
   `radar-balcarce-six.vercel.app` redirige al dominio propio. El sitio ya se
   indexa (`web/lib/sitio.js` lo detecta solo).
-- **Redes, al 21/09:** Facebook e Instagram publican solos desde GitHub. Facebook,
-  una nota por vez (5 por día como máximo, relevancia 75 o más). Instagram y la página de Facebook, las
-  piezas de video del día (clima, farmacia, 2 reels de noticias, el podcast y 3
-  historias de notas; el mismo video en las dos redes) con la voz Gemini "Kore". Horarios y reglas: `REDES.md`. **El disparador real es cron-job.org** (cada 30 min, de
-  7 a 23), porque el planificador propio de GitHub no era confiable (el 21/09 no
-  ejecutó ninguna corrida en toda una tarde). El token de GitHub que usa vence el
-  21/09/2027: hay que renovarlo antes. Detalle en `REDES.md`.
-- La reescritura con IA corre sola en el panel (PC prendida) con la clave de
-  redacción; la verificación contra la fuente sigue siendo obligatoria.
+- **Redes, al 22/09: en pausa.** Meta bloqueó la API de la cuenta de
+  desarrollador por "actividad inusual" y la pantalla para confirmarla está
+  rota del lado de ellos. Los workflows **Redes** y **Piezas** están
+  desactivados a mano hasta que se destrabe. Cuando ande: Facebook publica
+  solo (una nota por vez, 5 por día como máximo, relevancia 75 o más) e
+  Instagram y la página de Facebook las piezas de video del día (clima,
+  farmacia, 2 reels de noticias, el podcast y 3 historias de notas) con la
+  voz Gemini "Kore". Horarios y reglas, y cómo reactivarlo: `REDES.md`. El
+  token de GitHub de cron-job.org vence el 21/09/2027: hay que renovarlo
+  antes.
+- **La reescritura con IA corre sola, 100% en la nube, desde el 22/09**: lo
+  que se publica sin revisión humana se reescribe en cada corrida de
+  "Actualizar la web" (no sólo cuando el panel está prendido), cruzando
+  varias fuentes cuando hay más de una, con un tono distinto para lo serio
+  (Policiales, inseguridad, emergencias) que para el resto, y verificado
+  contra la fuente antes de aceptarse. Detalle completo: `EDITORIAL.md`.
+- **Vercel Analytics activado el 22/09** (plan gratuito, 50.000 eventos/mes):
+  ya se puede medir tráfico real desde vercel.com → el proyecto → Analytics.
 - **Todo lo que falta, por categoría, está en [`PENDIENTES.md`](PENDIENTES.md)**
   (redes, SEO, bios, editorial, técnico) y en `IDEAS.md` (ideas de producto).
+  Qué se publica y cómo se escribe: `EDITORIAL.md`. Redes: `REDES.md`.
   Documentación del proyecto: `MANUAL.md`.
 
 ## Dónde tocar cada cosa
@@ -120,6 +130,7 @@ publicar piezas a mano. Detalle y horarios en `REDES.md`.
 | cambiar cuánto puntaje pide cada sección | `PISO_DE_AFUERA` y `CUPO_DE_AFUERA`, mismo archivo |
 | agregar un tema que se sigue | `TEMAS`, mismo archivo |
 | ajustar el filtro de la IA | `ingesta/verificar.mjs` |
+| cambiar el tono o las reglas con que la IA reescribe una nota | `reels/reescritura.mjs` (`INSTRUCCION_EDITORIAL`, `esTemaSerio`) |
 | cambiar cuándo salen las historias | panel → Calendario (`panel/horarios.mjs`) |
 | cambiar qué se publica en Facebook, reels, historias o el podcast | `redes/elegir.mjs` |
 | cambiar a qué hora sale una pieza de Instagram | `redes/piezas.mjs` (ventana) y `reels/plan.mjs` (horarios de reels e historias de notas) |

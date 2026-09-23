@@ -79,10 +79,26 @@ que vigila el SEO en cada compilación (`web/scripts/revisar-seo.mjs`).
 
 ## D. Editorial y contenido
 
-24. **Notas más largas y propias**, con el texto completo de las fuentes en
-    vez del resumen del feed. Empezar por Tecnología, Deportes y Economía.
+24. ~~Notas más largas y propias~~ — resuelto el 22/09: la reescritura con IA
+    ahora corre sola en la nube para lo que se publica sin revisión humana,
+    cruzando varias fuentes cuando hay más de una. Detalle en `EDITORIAL.md`.
+    Lo que queda pendiente de esto: mirar cómo salen las primeras notas
+    reescritas unos días y ajustar el prompt si hace falta.
 25. Decidir si alguna sección más puede salir sola, con los números reales de
-    lectura una vez que haya tráfico (ver `REDES.md` § "El primer mes").
+    lectura una vez que haya tráfico (ver `REDES.md` § "El primer mes"). Con
+    Vercel Analytics activado el 22/09, ya se puede medir esto en un par de
+    semanas (`vercel.com` → el proyecto → Analytics).
+26. **Fuentes nuevas para evaluar** (encontradas buscando el 22/09, faltan
+    confirmar si tienen RSS y probarlas):
+    - **Acción 5** (accion5.com / Facebook), deportivo balcarceño — sumaría
+      una segunda voz a Deportes además de Radio Gabal.
+    - El **Boletín Oficial Municipal** de Balcarce
+      (sibom.slyt.gba.gov.ar/bulletins/11595), la fuente primaria y oficial
+      de las actas del Concejo Deliberante — conecta directo con la idea 2
+      de `IDEAS.md` ("lo que pasó en el Concejo").
+27. **Repensar las secciones con datos reales**, no con intuición, una vez
+    que Analytics tenga un par de semanas de tráfico: qué sección se lee más,
+    cuál nadie abre, si conviene partir o unir alguna.
 
 ## E. Técnico e infraestructura
 
