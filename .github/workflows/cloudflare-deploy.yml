@@ -1,0 +1,69 @@
+# Sube el sitio a Cloudflare Pages, como alternativa a Vercel.
+#
+# Por qué existe: Vercel Hobby (el plan gratis) prohíbe explícitamente
+# publicidad y cualquier uso comercial (ver Fair Use Guidelines de Vercel).
+# El día que haya un aviso pago en la web, seguir en Vercel gratis dejaría
+# de estar permitido. Cloudflare Pages sí lo permite, con ancho de banda
+# ilimitado, y el sitio ya se exporta como archivos estáticos puros (ver
+# next.config.mjs) — no hace falta nada especial de Next.js del lado del
+# hosting.
+#
+# NO corre solo: es a mano, workflow_dispatch únicamente. No reemplaza a
+# Vercel hasta que alguien:
+#   1. Cree una cuenta en Cloudflare (gratis) con radarbalcarce@gmail.com.
+#   2. Cree un proyecto de Pages (el nombre "radar-balcarce", o el que sea:
+#      se usa el mismo en CLOUDFLARE_PROJECT abajo).
+#   3. Genere un token de API: Cloudflare → Mi perfil → Tokens de API →
+#      "Crear token" → plantilla "Edit Cloudflare Workers" (o un token
+#      personalizado con permiso Account.Cloudflare Pages: Edit).
+#   4. Pegue ese token como el secreto CLOUDFLARE_API_TOKEN en GitHub
+#      (Settings → Secrets and variables → Actions), y el ID de cuenta de
+#      Cloudflare (se ve en el panel, a la derecha) como CLOUDFLARE_ACCOUNT_ID.
+#   5. Corra este workflow a mano (Actions → "Cloudflare Pages" → Run
+#      workflow) para probar que el sitio sube bien, ANTES de tocar el DNS.
+#   6. Recién ahí, cambiar el dominio en DonWeb para que apunte a Cloudflare
+#      en vez de a Vercel (y ahí sí, conviene ir con calma: es el paso que
+#      puede dejar el sitio caído un rato si algo sale mal).
+#
+# Ninguno de esos seis pasos lo puede hacer un asistente: piden crear una
+# cuenta y pegar credenciales, que sólo puede hacer una persona.
+#
+# Mientras tanto, esto no afecta en nada a Vercel: son dos despliegues
+# independientes del mismo sitio, y Vercel sigue siendo el que sirve
+# radarbalcarce.com hasta que se decida lo contrario.
+
+name: Cloudflare Pages
+
+on:
+  workflow_dispatch:
+
+jobs:
+  desplegar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Instalar
+        working-directory: web
+        run: npm ci --no-audit --no-fund
+
+      - name: Compilar el sitio
+        working-directory: web
+        run: npm run build
+        env:
+          SITIO: https://radarbalcarce.com
+
+      # Direct Upload: se sube lo que ya compilamos, sin que Cloudflare
+      # corra su propio build. Así no cuenta contra el límite de 500 builds
+      # gratis por mes — con una corrida cada 30 minutos, lo superaríamos
+      # el primer día si Cloudflare tuviera que compilar cada vez.
+      - name: Subir a Cloudflare Pages
+        working-directory: web
+        run: npx wrangler@4 pages deploy out --project-name="${{ vars.CLOUDFLARE_PROJECT || 'radar-balcarce' }}" --branch=main
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}

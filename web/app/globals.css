@@ -302,6 +302,16 @@ main { padding: 24px 0 10px; }
 .tarjeta h3 { font-size: 19px; font-weight: 700; }
 .mini { font-size: 13px; color: var(--suave); line-height: 1.5; }
 
+/* -------------------------------------------------------------- publicidad */
+/* Gris, quieto y con la etiqueta siempre arriba: ver REDES.md § 2. Nunca
+   var(--rojo) acá — un aviso que se ve como una nota deja de distinguirse. */
+.aviso { background: var(--crema); border: 1px solid var(--linea); border-radius: 10px; padding: 14px 16px; margin: 24px 0; }
+.aviso-etiqueta { font-size: 11px; letter-spacing: 0.04em; text-transform: uppercase; color: var(--suave); margin: 0 0 8px; }
+.aviso-cuerpo { display: flex; align-items: center; gap: 12px; }
+.aviso-logo { width: 40px; height: 40px; border-radius: 6px; object-fit: cover; flex-shrink: 0; }
+.aviso-nombre { font-family: "Fraunces", Georgia, serif; font-weight: 900; font-size: 16px; margin: 0 0 2px; color: var(--tinta); }
+.aviso-texto { font-size: 13px; color: var(--texto); margin: 0; }
+
 .boton {
   display: inline-flex; align-items: center; justify-content: center; gap: 7px;
   height: 44px; padding: 0 18px; border-radius: 22px;

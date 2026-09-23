@@ -6,6 +6,7 @@ import { PastillaClima } from '@/components/clima-vivo';
 import { comoNombre } from '@/lib/texto';
 import { Analytics } from '@vercel/analytics/next';
 import Buscador from '@/components/buscador';
+import { Aviso } from '@/components/avisos';
 import { sitio, enElDominioPropio, NOMBRE } from '@/lib/sitio';
 import { FichaDelSitio } from '@/components/ficha';
 
@@ -191,6 +192,7 @@ export default function RaizLayout({ children }) {
               La responsabilidad editorial es de Radar Balcarce. Si publicamos algo sobre
               vos que considerás erróneo, escribinos y lo corregimos.
             </div>
+            <Aviso slot="pie" />
           </div>
         </footer>
       </body>

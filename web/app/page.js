@@ -6,6 +6,7 @@ import {
   Etiqueta, TituloSeccion, FilaNota, Evento,
 } from '@/components/piezas';
 import { TarjetaClima } from '@/components/clima-vivo';
+import { Aviso } from '@/components/avisos';
 import { MOSTRAR_TEMAS } from '@/lib/sitio';
 
 export default function Portada() {
@@ -64,6 +65,7 @@ export default function Portada() {
         <aside className="servicios">
           <TarjetaClima clima={d.clima} />
           <TarjetaFarmacia farmacia={d.farmacias?.hoy} />
+          <Aviso slot="clima" />
         </aside>
 
         <div className="principal">
@@ -80,6 +82,7 @@ export default function Portada() {
               {principal.copete && <p>{principal.copete}</p>}
             </article>
           )}
+          <Aviso slot="apertura" />
           {/* Los temas que se siguen. Una sección agrupa por tipo de
               noticia; un tema, por historia. En un pueblo las historias
               duran meses, y el que entra por una nota del autódromo no
