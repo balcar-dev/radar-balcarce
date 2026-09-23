@@ -230,3 +230,30 @@ test('el resumen de problemas se lee en una línea', () => {
   const r = verificar(FUENTE, { titulo: 'Kevin Gómez con Tinelli y 8.000 vecinos', copete: 'Llegó el viernes.' });
   assert.match(resumirProblemas(r.problemas), /problemas \(/);
 });
+
+// -------------------------------------------------------------- las tildes
+
+test('"mas" sin tilde se rechaza: cambia el sentido, no es un detalle de estilo', () => {
+  const r = verificar(FUENTE, {
+    titulo: 'Kevin Gómez fue recibido en Balcarce',
+    copete: 'Lo esperaban mas de tres mil personas en el cruce de las rutas.',
+  });
+  assert.ok(tipos(r).includes('tilde'), JSON.stringify(r.problemas));
+});
+
+test('"ms" solo (la IA se comió la "á" de "más") también se rechaza', () => {
+  // Pasó el 23/09: "con ms de ciento sesenta atletas" en vez de "con más de...".
+  const r = verificar(FUENTE, {
+    titulo: 'Kevin Gómez fue recibido en Balcarce',
+    copete: 'Lo esperaban ms de tres mil personas en el cruce de las rutas.',
+  });
+  assert.ok(tipos(r).includes('tilde'), JSON.stringify(r.problemas));
+});
+
+test('"más" bien escrito no tiene ningún problema de tilde', () => {
+  const r = verificar(FUENTE, {
+    titulo: 'Kevin Gómez fue recibido en Balcarce',
+    copete: 'Lo esperaban más de tres mil personas en el cruce de las rutas.',
+  });
+  assert.ok(!tipos(r).includes('tilde'), JSON.stringify(r.problemas));
+});

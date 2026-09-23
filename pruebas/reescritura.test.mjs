@@ -186,3 +186,23 @@ test('no pasa del tope de pedidos nuevos por corrida, pero igual reusa lo que ya
   assert.equal(r.nuevo.titulo, 'Título nuevo');
   assert.equal(r.n1.titulo, 'Cacheada', 'la que ya estaba en caché se reusa igual, sin contar contra el tope');
 });
+
+test('lo que ya estaba en caché se revalida: si ahora no pasa la verificación, se descarta', async () => {
+  // Simula que ayer se aceptó algo que la regla de hoy (una nueva en
+  // verificar.mjs) ya no dejaría pasar: no debería quedar publicado para
+  // siempre sólo porque "ya estaba hecho".
+  const { fn, pedidos } = fetchFalso([]);
+  const previas = { n1: { titulo: 'Un título cualquiera', copete: 'Lo esperaban ms de tres mil personas.', guion: 'Un título cualquiera.', deIA: true } };
+  const r = await reescribirAutomaticas([notaVerde()], { previas, opciones: { fetchFn: fn } });
+  assert.equal(r.n1, undefined, 'lo cacheado que ya no pasa la verificación no debería reusarse');
+  assert.equal(pedidos.length, 0, 'tampoco debería gastar un pedido nuevo en la misma corrida');
+});
+
+test('lo que ya estaba en caché y sigue pasando la verificación se reusa igual', () => {
+  const { fn, pedidos } = fetchFalso([]);
+  const previas = { n1: { titulo: 'Un título cualquiera', copete: 'Se hizo una reunión por el agua.', guion: 'Un título cualquiera.', deIA: true } };
+  return reescribirAutomaticas([notaVerde()], { previas, opciones: { fetchFn: fn } }).then((r) => {
+    assert.equal(r.n1.titulo, 'Un título cualquiera');
+    assert.equal(pedidos.length, 0);
+  });
+});

@@ -241,8 +241,24 @@ export async function reescribirAutomaticas(notas, {
     .sort((a, b) => (b.relevancia ?? 0) - (a.relevancia ?? 0));
 
   for (const nota of candidatas) {
-    // Ya se reescribió en una corrida anterior: se reusa sin gastar un pedido.
-    if (previas[nota.id]?.titulo) { resultado[nota.id] = previas[nota.id]; continue; }
+    // Ya se reescribió en una corrida anterior: se revalida (es local y
+    // gratis, no pide nada a Gemini) y se reusa sin gastar un pedido nuevo.
+    // Así, si mañana se agrega una regla nueva a verificar.mjs, lo que ya
+    // estaba publicado y ahora la incumple se cae solo y se vuelve a
+    // reescribir en una corrida siguiente, en vez de quedar mal para
+    // siempre porque "ya estaba hecho".
+    if (previas[nota.id]?.titulo) {
+      const cacheada = previas[nota.id];
+      const control = verificar(
+        { titulo: nota.titulo, resumen: nota.resumenFuente },
+        { titulo: cacheada.titulo, copete: cacheada.copete, guion: cacheada.guion },
+      );
+      if (control.ok) { resultado[nota.id] = cacheada; continue; }
+      // No entra en resultado: queda el resumen mecánico por ahora, y como
+      // no aparece acá tampoco va a aparecer en `previas` la próxima vez, así
+      // que se reintenta con Gemini en una corrida futura.
+      continue;
+    }
     if (hechas >= tope || fallos >= FALLOS_PARA_CORTAR) continue; // sigue por si algo más abajo está en caché
 
     const r = await reescribirConRespaldo(nota, mecanicoPorDefecto, opciones);

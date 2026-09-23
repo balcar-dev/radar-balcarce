@@ -213,6 +213,14 @@ export function verificar(fuente, nuevo) {
     if (DELITOS.test(n) && !ATRIBUCION.test(n)) {
       agregar('acusacion', `el ${campo} afirma un delito sin atribuirlo a nadie: "${texto.slice(0, 50)}"`);
     }
+
+    // 7. "más" mal escrito no es un detalle de estilo: "mas" sin tilde es
+    // "pero" (un medio de noticias no usa esa conjunción), y a veces el
+    // modelo se come directamente la "á" y deja "ms" solo. Pasó el 23/09:
+    // "con ms de ciento sesenta atletas" en vez de "con más de...".
+    if (/\b(mas|ms)\b/.test(texto)) {
+      agregar('tilde', `el ${campo} dice "${texto.match(/\b(mas|ms)\b/)[0]}" en vez de "más": "${texto.slice(0, 60)}"`);
+    }
   }
 
   // 7. Una negación que la fuente no tiene, o una que desapareció.
