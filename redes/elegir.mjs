@@ -244,13 +244,26 @@ export function primeraOracion(texto = '', maximo = 150) {
 }
 
 /** Las notas de un podcast: las de más puntaje, de temas distintos, sin
- *  repetir las que ya se contaron en otro podcast del día (`excluir`). */
+ *  repetir las que ya se contaron en otro podcast del día (`excluir`). Primero
+ *  una por sección, para que un podcast no sea tres notas del mismo evento
+ *  (el 24/09 salían tres del autódromo); si sobra lugar, se completa por
+ *  puntaje. */
 export function elegirParaPodcast(notas, { cuantas = 3, excluir = [] } = {}, reglas = REGLAS_PIEZAS) {
-  const candidatas = [...notas]
-    .filter(sePuedeSola)
-    .filter((n) => (n.relevancia ?? 0) >= reglas.relevanciaParaHistoria)
-    .sort(porRelevancia);
-  return sinRepetidos(candidatas, excluir).slice(0, cuantas);
+  const candidatas = sinRepetidos(
+    [...notas]
+      .filter(sePuedeSola)
+      .filter((n) => (n.relevancia ?? 0) >= reglas.relevanciaParaHistoria)
+      .sort(porRelevancia),
+    excluir,
+  );
+  const secciones = new Set();
+  const variadas = candidatas.filter((n) => {
+    if (secciones.has(n.seccion)) return false;
+    secciones.add(n.seccion);
+    return true;
+  }).slice(0, cuantas);
+  const resto = candidatas.filter((n) => !variadas.includes(n));
+  return [...variadas, ...resto].slice(0, cuantas).sort(porRelevancia);
 }
 
 /**

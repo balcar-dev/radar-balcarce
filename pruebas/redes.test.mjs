@@ -411,7 +411,7 @@ test('los podcasts del día no repiten notas ni temas entre sí', () => {
   ];
   const manana = elegirParaPodcast(notas, { cuantas: 3 });
   const tarde = elegirParaPodcast(notas, { cuantas: 3, excluir: manana });
-  assert.deepEqual(manana.map((n) => n.id), ['1', '3', '4']);
+  assert.deepEqual(manana.map((n) => n.id), ['1', '3', '4'], 'una por sección, de mayor a menor puntaje');
   assert.ok(tarde.every((n) => !manana.some((m) => m.id === n.id)));
   assert.ok(!tarde.some((n) => n.id === '2'), 'repitió el tema del autódromo en el segundo podcast');
 });
@@ -430,4 +430,24 @@ test('primeraOracion corta en el primer punto y descarta lo demasiado largo', ()
   assert.equal(primeraOracion('Una. Dos.'), 'Una.');
   assert.equal(primeraOracion(''), '');
   assert.equal(primeraOracion(`${'palabra '.repeat(40)}fin.`), '');
+});
+
+test('un podcast prefiere secciones distintas antes que tres notas del mismo tema', () => {
+  const notas = [
+    nn('a1', 'Reapertura del autódromo con Kicillof presente', 'Automovilismo', 100),
+    nn('a2', 'Largas filas por el regreso de las carreras', 'Automovilismo', 99),
+    nn('a3', 'Los pilotos ya están en el circuito', 'Automovilismo', 98),
+    nn('b1', 'Cortan el agua en el barrio norte', 'Servicios', 80),
+    nn('c1', 'Nueva muestra en el museo municipal', 'Cultura', 70),
+  ];
+  assert.deepEqual(elegirParaPodcast(notas, { cuantas: 3 }).map((n) => n.id), ['a1', 'b1', 'c1']);
+});
+
+test('si no hay secciones distintas alcanza, se completa por puntaje', () => {
+  const notas = [
+    nn('a1', 'Primera del autódromo Fangio hoy', 'Automovilismo', 90),
+    nn('a2', 'Segunda de las carreras nacionales', 'Automovilismo', 85),
+    nn('b1', 'Cortan el agua en el barrio norte', 'Servicios', 80),
+  ];
+  assert.equal(elegirParaPodcast(notas, { cuantas: 3 }).length, 3);
 });
