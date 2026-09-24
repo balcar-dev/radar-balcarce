@@ -79,7 +79,7 @@ export async function publicarPiezas({
         try {
           const r = await api[metodo]({ video, tipo, pie: pieDePieza(pieza) });
           anotar(libro, rubro, clave, {
-            mediaId: r.id, nombre: pieza.nombre, tipo, notaId: pieza.notaId ?? null,
+            mediaId: r.id, nombre: pieza.nombre, tipo, notaId: pieza.notaId ?? null, notaIds: pieza.notaIds ?? [],
           });
           guardar();
           hecho = true;

@@ -72,19 +72,18 @@ avisos de apuestas o de préstamos.
 **Cómo se cargan (desde el 23/09):** panel → pestaña **Avisos**. Se completa
 comercio, texto y opcionalmente un logo, por cada uno de los tres espacios, y
 se guarda directo en `web/data/avisos.json` (lee `web/components/avisos.js`).
-Como es un archivo versionado, el cambio recién llega a la web cuando se
-commitea y se pushea — el panel sólo lo escribe en la PC. Para ver ideas de
-cómo vender estos espacios y sumar otras (un mapa de comercios, sorteos
-conjuntos, mención en los reels), ver `IDEAS.md` § "La guía comercial y el
-mapa de Balcarce".
+Al guardar, el panel lo sube solo a GitHub (`panel/sincronizar.mjs`) y en
+unos minutos está en la web. Para ver cómo vender estos espacios y sumar
+otros (un mapa de comercios, sorteos, mención en los podcasts), ver
+`IDEAS.md` § "Cómo ganar plata".
 
 ## 3. Las redes: qué sale, cómo y cuándo
 
-*Aplicado y probado el 21/09/2026. El espejo a Instagram, el mini podcast de
-los reels y el reflejo de cada reel como historia se sumaron el 23/09: están
-probados con Meta de mentira (`pruebas/`) pero no en vivo todavía, porque
-Meta sigue bloqueada (ver "En pausa" más abajo) — se van a poder probar de
-verdad recién cuando eso se destrabe.*
+*Andando en vivo desde el 24/09 (Meta destrabó la cuenta). El espejo a
+Instagram, el reflejo de cada reel como historia y los tres podcasts se
+sumaron el 23 y 24/09; el reflejo como historia y las historias se vieron
+salir bien el 24/09. Falta mirar unos días el link en los posteos y el
+podcast con notas de texto propio.*
 
 ### La regla de fondo
 
@@ -101,7 +100,8 @@ videos de Instagram como historias y reels de la página**, a la misma hora.
 
 **Y, desde el 23/09, cada posteo de Facebook se espeja como foto en el feed
 de Instagram** (`redes/publicar.mjs`, función `facebook()`): la misma tarjeta
-propia, con el titular como pie y "Más en radarbalcarce.com". Si el espejo
+propia, con el mismo texto que Facebook (titular, copete y el enlace a la
+nota, sin nombrar la fuente). Si el espejo
 falla, no invalida lo que ya se publicó en Facebook — sólo se avisa. Es la
 única foto (no video) que sale a Instagram, y sólo porque es la tarjeta
 propia ya alojada en nuestro sitio (`/nota/ID/opengraph-image`), no un
@@ -121,9 +121,9 @@ la portada y publica **una** nota si cumple todo esto:
 | Tope | **5 por día**, con 90 minutos entre una y otra (conservador a propósito: la web publica unas 100 notas por día y en Facebook sería ruido) |
 | Repetición | una nota sale una sola vez (lo garantiza `web/data/redes.json`) |
 
-El texto lleva el titular, el copete y `Fuente: …`, más `Resumen hecho con IA`
+El texto lleva el titular, el copete y **el enlace a la nota en nuestro sitio**, más `Resumen hecho con IA`
 cuando la redactó la IA. La regla de que cada nota diga quién la escribió
-vale también afuera del sitio.
+vale también afuera del sitio. **La fuente no se nombra en las redes** (desde el 24/09): eso está en la nota de la web.
 
 **Historias y reels: Instagram y la página de Facebook, el mismo video.** Estas
 son las piezas del día y su horario:
@@ -131,42 +131,34 @@ son las piezas del día y su horario:
 | Hora | Pieza | Tipo | Qué es |
 |---|---|---|---|
 | 07:30 | El clima de hoy | Historia | Todos los días |
-| 10:00 | Noticia 1 | Reel (+ historia) | Mini podcast: la de más gancho de Balcarce y una segunda de otro tema |
-| 10:40 | Nota 1 | Historia | |
-| 12:40 | Nota 2 | Historia | |
-| 14:40 | Nota 3 | Historia | |
-| 15:00 | Noticia 2 | Reel (+ historia) | Mini podcast: de otra sección que la primera, y otra segunda distinta |
+| 10:00 | **El repaso de la mañana** | Reel (+ historia) | Podcast de 3 notas de temas distintos |
+| 11:00 | Teléfonos útiles | Historia | Un día hábil por semana, rota solo |
+| 15:00 | **El repaso de la tarde** | Reel (+ historia) | Podcast de otras 3 notas, sin repetir las de la mañana |
 | 19:00 | Farmacia de turno | Historia | Sólo dice cuál es la de turno |
 | 20:00 | Cómo sigue el día | Historia | Clima de la noche |
-| 20:30 | El repaso del día | Reel (+ historia) | El podcast grande: 4 titulares dichos con la voz |
-| Martes 11:00 | Teléfonos útiles | Historia | Una vez por semana |
+| 20:30 | **El repaso del día** | Reel (+ historia) | Podcast grande: 4 titulares de lo más fuerte |
 | Jueves 18:00 | Qué hacer el fin de semana | Historia | Sólo si hay eventos cargados |
 
-Son **3 reels por día** (2 noticias y el podcast) y **6 historias fijas**
-(clima mañana, clima noche, farmacia y 3 de notas), más las semanales. Y,
-desde el 23/09, **cada reel se sube también como historia**, en la misma red:
-es el mismo video ya subido, así que compartirlo ahí de paso no cuesta nada
-(`redes/publicar-piezas.mjs`). No cuenta como una historia más del
-cronograma — es un reflejo, se anota aparte en `libro.historiasDeReels`.
+Son **3 podcasts por día** (mañana, tarde y noche) y **3 historias fijas**
+(clima mañana, clima noche, farmacia), más las semanales. **Ya no salen
+noticias sueltas** (24/09): dichas de a una sonaban raras. Cada podcast se
+sube también como historia, en la misma red (`redes/publicar-piezas.mjs`);
+ese reflejo no cuenta como una historia más del cronograma, se anota aparte
+en `libro.historiasDeReels`.
+
+**El texto del posteo de cada podcast** lista las notas que cuenta, cada una
+con su enlace, y no nombra la fuente (`pieDePieza`, `redes/piezas.mjs`).
 
 Cómo se eligen (todo en `redes/elegir.mjs`, con pruebas):
 
-- Los reels de noticias son de Balcarce, con relevancia 78 o más, de
-  secciones distintas y sin repetir el mismo tema. "Gancho" es lo que se mide
-  sin inventar: relevancia y que sea local.
-- **Desde el 23/09, un reel de noticias ya no cuenta un solo titular:** suma
-  una segunda noticia de otro tema, a modo de racconto corto (mismo espíritu
-  que el podcast de la noche, pero pensado para 45-75 segundos en vez del
-  resumen completo del día). La segunda de un reel no se repite en el otro.
-  Si no queda ninguna con qué acompañarla, sale sola, como antes
-  (`guionMiniPodcast` y `elegirSecundariaDeReel`, en `redes/elegir.mjs`).
-- Las historias de notas tienen relevancia 62 o más y no repiten lo que ya es
-  reel.
+- **Un podcast lee el titular de cada nota y, sólo si el texto es nuestro**
+  (reescrito por la IA o por una persona), **una oración del copete.** Si el
+  copete es el resumen del medio de origen, no se lee. Nunca se nombra la
+  fuente. Mañana y tarde: 3 notas de temas distintos (`elegirParaPodcast`,
+  `guionRepaso`, en `redes/elegir.mjs`), sin repetir entre sí; relevancia 62
+  o más. Con menos de dos notas, ese podcast no sale.
 - El mismo tema contado por dos medios cuenta una sola vez (por ejemplo, el
   mismo partido con dos titulares).
-- El podcast de la noche es un repaso de los titulares ya publicados, sin IA:
-  no puede inventar nada. Si un día hay menos de dos noticias para repasar,
-  no sale.
 - **Política y Policiales no se arman solas en ninguna pieza**, no sólo en
   Facebook.
 - Los horarios de las fijas (clima, farmacia, agenda, útiles) se cambian en el
@@ -241,8 +233,8 @@ servicio y un token de GitHub.
 
 | Cosa | Estado |
 |---|---|
-| Posteos en Facebook | **En pausa** (ver abajo) |
-| Historias y reels en Instagram y en la página de Facebook | **En pausa** (ver abajo) |
+| Posteos en Facebook | **Andando** (desde el 24/09) |
+| Historias y podcasts en Instagram y en la página de Facebook | **Andando** (desde el 24/09) |
 | Armar las piezas a demanda | Actions → **Piezas** → Run workflow |
 | Publicar una pieza a mano | Actions → **Piezas**, con `solo`, `publicar` tildado y `destino` (ambas, instagram o facebook) |
 | Comprobar el token | Actions → **Redes** → Run workflow → `verificar` |
@@ -250,26 +242,20 @@ servicio y un token de GitHub.
 Todo esto sólo **publica** si la variable `REDES_ACTIVAS` vale `Si`; con otra cosa
 simula.
 
-### En pausa desde el 22/09/2026
+### Lo que pasó con el bloqueo de Meta (22 al 24/09/2026)
 
-Meta bloqueó el acceso a la API de la cuenta de desarrollador por "actividad
-inusual" (todas las llamadas, hasta la más simple, devuelven `API access
-blocked`, código 200, `OAuthException`). La pantalla de confirmación de
-cuenta (developers.facebook.com → la app → "Confirmar cuenta") también está
-rota del lado de Meta: tira "Se produjo un error. Hay un problema técnico con
-esta función." en cada intento, probado tres veces desde dos sesiones
-distintas.
+Meta bloqueó la API de la cuenta de desarrollador por "actividad inusual": todas
+las llamadas devolvían `API access blocked` (código 200, `OAuthException`) y
+la pantalla "Confirmar cuenta" fallaba. Era una falla de la plataforma que
+afectó a muchas cuentas (hay decenas de reportes públicos desde julio). Se
+resolvió el 24/09 confirmando la cuenta; se prendieron de nuevo los workflows
+**Redes** y **Piezas** y se verificó el token.
 
-Mientras esto no se resuelva, publicar no serviría de nada y sólo gastaría
-cuota de Gemini armando piezas que después no se pueden subir. Por eso los
-workflows **Redes** y **Piezas** están **desactivados a mano** (Actions →
-cada uno → "···" → Enable/Disable workflow; hoy están disabled). cron-job.org
-va a seguir llamando cada 30 minutos sin hacer nada, porque GitHub rechaza el
-disparo de un workflow apagado: no hace falta tocar cron-job.org.
-
-**Para reactivar cuando Meta confirme la cuenta:** Actions → **Redes** → "···"
-→ Enable workflow, y lo mismo con **Piezas**. Nada más: el resto (cron-job.org,
-el libro de publicaciones, las reglas) sigue como estaba.
+**Ojo con cron-job.org:** cuando un trabajo falla varias veces seguidas
+(por ejemplo porque el workflow de GitHub estaba apagado), cron-job.org lo
+**desactiva solo**. El 24/09 hubo que volver a activar los dos (Actualizar la
+web y el reloj de Redes). Si algo deja de salir, es lo primero que hay que
+mirar: https://console.cron-job.org/jobs
 
 **Los subtítulos** de las piezas siguen la voz palabra por palabra
 (`reels/tiempos.mjs`). Se ubican a partir de las pausas del audio y del peso en

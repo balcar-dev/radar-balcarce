@@ -59,14 +59,16 @@ export const ventanaDe = (nombre) => VENTANAS[nombre] ?? VENTANA_MINUTOS;
  *  lo que toque, junto. */
 export const POR_CORRIDA = 6;
 
-/** Los reels del día: dos noticias y el podcast. Los usa reels/plan.mjs. */
+/** Los tres podcasts del día: mañana, tarde y noche. Los usa reels/plan.mjs. */
 export const HORAS_REELS = ['10:00', '15:00', '20:30'];
 
 /** Las historias de notas: 10:40, 12:40 y 14:40. Las usa reels/plan.mjs. */
 export const horaHistoriaDeNota = (i) => `${String(10 + i * 2).padStart(2, '0')}:40`;
 
-/** Cuántas historias de notas hay por día (ver REGLAS_PIEZAS en elegir.mjs). */
-export const HISTORIAS_DE_NOTAS = 3;
+/** Cuántas historias de UNA nota hay por día. Cero desde el 24/09: una noticia
+ *  sola dicha en voz alta sonaba rara. Las notas salen dentro de los podcasts, y
+ *  cada podcast se sube también como historia. */
+export const HISTORIAS_DE_NOTAS = 0;
 
 /** Piezas fijas que sólo se pueden armar en la PC: sus datos no están en la
  *  web. Hasta que lo estén, GitHub no las espera (si no, las reintentaría en
@@ -85,6 +87,12 @@ export const tipoInstagram = (pieza) => (pieza.tipo === 'reel' ? 'REELS' : 'STOR
  */
 export function pieDePieza(pieza) {
   if (pieza.tipo !== 'reel') return '';
+  // Un podcast lista las notas que cuenta, cada una con su enlace. La fuente
+  // no se nombra: eso está en la nota de la web.
+  if (pieza.items?.length) {
+    const lista = pieza.items.map((i) => `• ${i.titulo}${i.enlace ? `\n  ${i.enlace}` : ''}`).join('\n');
+    return `${pieza.titulo}\n\n${lista}\n\nMás en radarbalcarce.com`;
+  }
   if (pieza.nombre === 'podcast') {
     return 'El repaso del día en Balcarce.\n\nLas notas, con la fuente, en radarbalcarce.com';
   }
@@ -188,8 +196,9 @@ export function notasUsadasHoy(libro, fecha = new Date()) {
   const hoy = diaAR(fecha);
   return new Set(
     Object.entries(libro?.instagram ?? {})
-      .filter(([clave, v]) => clave.startsWith(`${hoy}/`) && v?.notaId)
-      .map(([, v]) => v.notaId),
+      .filter(([clave]) => clave.startsWith(`${hoy}/`))
+      .flatMap(([, v]) => [v?.notaId, ...(v?.notaIds ?? [])])
+      .filter(Boolean),
   );
 }
 

@@ -24,6 +24,9 @@ import { verificar, resumirProblemas } from '../ingesta/verificar.mjs';
 import { horariosDe, guardarHorario, DIAS as DIAS_SEMANA } from './horarios.mjs';
 import { estadoCuota as estadoCuotaVoz } from '../reels/voz-gemini.mjs';
 import { guionNoticia } from '../reels/plan.mjs';
+import { aplicarAviso } from './avisos.mjs';
+import { camposEditables, decisionParaLaWeb } from './notas.mjs';
+import { crearSincronizador, ejecutarGit } from './sincronizar.mjs';
 
 const AQUI = import.meta.dirname;
 const DATOS = path.join(AQUI, 'datos');
@@ -33,12 +36,9 @@ const F_AGENDA = path.join(DATOS, 'agenda.json');
 const PUERTO = 4321;
 
 // Los tres espacios de publicidad de la web (ver REDES.md § 2). Va directo a
-// web/data/avisos.json, el mismo archivo que lee el sitio: no hay una copia
-// intermedia. Como es un archivo versionado, el cambio recién se ve en
-// producción cuando alguien lo commitea y lo pushea (o en el próximo cambio
-// que haga el flujo automático) — el panel sólo lo escribe en esta PC.
+// web/data/avisos.json, el mismo archivo que lee el sitio, y se sube solo a
+// GitHub (panel/sincronizar.mjs).
 const F_AVISOS = path.join(AQUI, '..', 'web', 'data', 'avisos.json');
-const SLOTS_AVISOS = ['apertura', 'clima', 'pie'];
 
 // El respaldo mecánico de la reescritura: lo que ya se mostraba antes de que
 // existiera la IA. reescribirConRespaldo cae acá si Gemini falla.
@@ -58,12 +58,22 @@ function leerJson(archivo, porDefecto) {
   try { return JSON.parse(fs.readFileSync(archivo, 'utf8')); } catch { return porDefecto; }
 }
 
+// Lo que el panel decide se sube solo a GitHub unos segundos después del
+// último cambio (panel/sincronizar.mjs). Se apaga con SINCRONIZAR_GITHUB=no.
+const RAIZ_REPO = path.join(AQUI, '..');
+const sincronizador = crearSincronizador({
+  archivos: ['web/data/decisiones.json', 'web/data/avisos.json'],
+  git: (args) => ejecutarGit(args, { cwd: RAIZ_REPO }),
+});
+const subirAGitHub = () => { if (process.env.SINCRONIZAR_GITHUB !== 'no') sincronizador.programar(); };
+
 function guardarJson(archivo, datos) {
   fs.writeFileSync(archivo, JSON.stringify(datos, null, 2), 'utf8');
   // Cada vez que cambia el estado se exportan las decisiones al repo. Son lo
   // único del panel que la web necesita y que no se puede deducir sola: qué
   // se publicó a mano, qué se descartó, y el texto que se corrigió.
-  if (archivo === F_ESTADO) exportarDecisiones(datos);
+  if (archivo === F_ESTADO) { exportarDecisiones(datos); subirAGitHub(); }
+  if (archivo === F_AVISOS) subirAGitHub();
 }
 
 // El archivo que lee la web cuando se genera fuera de esta PC (GitHub
@@ -77,15 +87,7 @@ function exportarDecisiones(estado) {
     // quedan acá: tienen datos de gente que nos escribió.
     const decisiones = {};
     for (const [id, d] of Object.entries(estado.decisiones ?? {})) {
-      decisiones[id] = {
-        estado: d.estado,
-        titulo: d.titulo ?? null,
-        copete: d.copete ?? null,
-        guion: d.guion ?? null,
-        deIA: d.deIA ?? null,
-        por: d.por ?? null,
-        cuando: d.cuando ?? null,
-      };
+      decisiones[id] = decisionParaLaWeb(d);
     }
     fs.mkdirSync(path.dirname(F_DECISIONES), { recursive: true });
     fs.writeFileSync(F_DECISIONES, JSON.stringify({
@@ -196,11 +198,7 @@ function vista(sesion = null) {
     const d = estado.decisiones[n.id];
     return {
       ...n,
-      titulo: d?.titulo ?? n.titulo,
-      copete: d?.copete ?? n.resumenFuente,
-      cuerpo: d?.cuerpo ?? null,
-      guion: d?.guion ?? null,
-      deIA: d?.deIA ?? null,
+      ...camposEditables(n, d),
       // Sin decisión tomada manda el semáforo: la verde sale sola, la roja
       // queda bloqueada y sólo la amarilla espera a que alguien la mire.
       // Y si nadie la miró en 72 horas, se archiva sola: una noticia de
@@ -811,12 +809,11 @@ const servidor = http.createServer(async (req, res) => {
     // de la web (apertura, clima, pie). Nombre y texto vacíos borran el
     // aviso de ese espacio, que vuelve a no mostrar nada.
     if (ruta === '/api/avisos' && req.method === 'POST') {
-      const { slot, nombre, texto, logo } = await cuerpoDe(req);
-      if (!SLOTS_AVISOS.includes(slot)) { json(res, { error: 'ese espacio no existe' }, 400); return; }
-      const avisos = leerJson(F_AVISOS, {});
-      avisos[slot] = nombre?.trim() ? { nombre: nombre.trim(), texto: (texto || '').trim(), logo: (logo || '').trim() || undefined } : null;
+      const pedido = await cuerpoDe(req);
+      let avisos;
+      try { avisos = aplicarAviso(leerJson(F_AVISOS, {}), pedido); } catch (e) { json(res, { error: e.message }, 400); return; }
       guardarJson(F_AVISOS, avisos);
-      anotar(avisos[slot] ? `aviso de "${avisos[slot].nombre}" en ${slot}` : `aviso de ${slot} borrado`, 'espacio publicitario', sesion.nombre);
+      anotar(avisos[pedido.slot] ? `aviso de "${avisos[pedido.slot].nombre}" en ${pedido.slot}` : `aviso de ${pedido.slot} borrado`, 'espacio publicitario', sesion.nombre);
       guardarJson(F_ESTADO, estado);
       json(res, vista(sesion));
       return;

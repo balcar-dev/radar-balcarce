@@ -267,7 +267,7 @@ test('si el token murió, corta: no tiene sentido seguir', async () => {
 // ------------------------------------------------------------- el reloj
 
 import {
-  cronogramaDelDia, slotsQueTocan, notasUsadasHoy, piezasPublicadasHoy, VENTANA_MINUTOS, HORAS_REELS, horaHistoriaDeNota, ventanaDe,
+  cronogramaDelDia, slotsQueTocan, notasUsadasHoy, piezasPublicadasHoy, VENTANA_MINUTOS, HORAS_REELS, HISTORIAS_DE_NOTAS, ventanaDe,
   diaRotativoDeUtiles,
 } from '../redes/piezas.mjs';
 
@@ -275,10 +275,10 @@ import {
 const LUNES = (hhmm) => new Date(`2026-09-21T${hhmm}:00-03:00`);
 const nombres = (lista) => lista.map((p) => p.nombre);
 
-test('el cronograma del día trae las fijas, los reels y las historias de notas', () => {
+test('el cronograma del día trae las fijas y los tres podcasts, sin historias sueltas de una nota', () => {
   const c = cronogramaDelDia(LUNES('12:00'));
   assert.deepEqual(nombres(c), [
-    'clima-manana', 'noticia1', 'historia1', 'historia2', 'historia3', 'noticia2', 'farmacia', 'clima-noche', 'podcast',
+    'clima-manana', 'noticia1', 'noticia2', 'farmacia', 'clima-noche', 'podcast',
   ]);
   assert.equal(c.find((p) => p.nombre === 'clima-manana').hora, '07:30');
   assert.equal(c.find((p) => p.nombre === 'podcast').tipo, 'reel');
@@ -323,7 +323,7 @@ test('la agenda no la espera GitHub: necesita datos que sólo hay en la PC', () 
 
 test('los horarios de los reels y las historias de notas son los que dice REDES.md', () => {
   assert.deepEqual(HORAS_REELS, ['10:00', '15:00', '20:30']);
-  assert.deepEqual([0, 1, 2].map(horaHistoriaDeNota), ['10:40', '12:40', '14:40']);
+  assert.equal(HISTORIAS_DE_NOTAS, 0, 'una noticia sola en una historia sonaba rara: van dentro de los podcasts');
 });
 
 test('a cada hora toca lo que corresponde', () => {
@@ -558,4 +558,57 @@ test('lo que Facebook ya tiene no se vuelve a subir', async () => {
   await CORRIDA(api, libro);
   assert.ok(!api.hechas.facebook.some((h) => h.nombre === 'clima-manana.mp4'));
   assert.equal(api.hechas.instagram.length, 4);
+});
+
+// ------------------------------------- el pie de los podcasts y las notas usadas
+
+test('el pie de un podcast lista cada nota con su enlace y no nombra la fuente', () => {
+  const pie = pieDePieza({
+    tipo: 'reel', nombre: 'noticia1', titulo: 'El repaso de la mañana',
+    items: [
+      { titulo: 'Una nota', enlace: 'https://radarbalcarce.com/nota/una-nota-a' },
+      { titulo: 'Otra nota', enlace: 'https://radarbalcarce.com/nota/otra-nota-b' },
+    ],
+  });
+  assert.match(pie, /^El repaso de la mañana\n\n• Una nota\n  https:\/\/radarbalcarce\.com\/nota\/una-nota-a\n• Otra nota\n  https:\/\/radarbalcarce\.com\/nota\/otra-nota-b\n\nMás en radarbalcarce\.com$/);
+  assert.ok(!/fuente/i.test(pie));
+});
+
+test('las notas de un podcast cuentan como usadas, todas', async () => {
+  const { notasUsadasHoy: usadasHoy } = await import('../redes/piezas.mjs');
+  const libro = libroNuevo();
+  anotar(libro, 'instagram', claveDePieza('noticia1', LUNES('10:00')), { notaId: 'a', notaIds: ['a', 'b', 'c'] });
+  const u = usadasHoy(libro, LUNES('15:00'));
+  assert.deepEqual([...u].sort(), ['a', 'b', 'c']);
+});
+
+// ------------------------------------- que todo salga en horario (cron real)
+
+// Los minutos y horas a los que cron-job.org dispara el reloj (Radar Balcarce
+// reloj: "5,35,45 0-22 * * *"). Si cambia allá, hay que cambiar acá.
+const DISPAROS_MIN = [5, 35, 45];
+const DISPAROS_HORAS = Array.from({ length: 23 }, (_, h) => h);
+
+test('cada pieza del día tiene al menos un disparo del reloj dentro de su ventana', () => {
+  const dia = LUNES('12:00');
+  for (const p of cronogramaDelDia(dia)) {
+    const [h, m] = p.hora.split(':').map(Number);
+    const desde = h * 60 + m;
+    const hasta = desde + ventanaDe(p.nombre);
+    const disparos = DISPAROS_HORAS.flatMap((hh) => DISPAROS_MIN.map((mm) => hh * 60 + mm))
+      .filter((t) => t >= desde && t < hasta);
+    assert.ok(disparos.length >= 2, `${p.nombre} (${p.hora}) tiene sólo ${disparos.length} disparo(s) en su ventana: si uno falla, se pierde`);
+    assert.ok(hasta <= 24 * 60, `${p.nombre} cruzaría la medianoche`);
+  }
+});
+
+test('la primera corrida después de la hora de cada pieza la encuentra en ventana', () => {
+  const dia = '2026-09-21';
+  for (const p of cronogramaDelDia(LUNES('12:00'))) {
+    const [h, m] = p.hora.split(':').map(Number);
+    const primero = DISPAROS_HORAS.flatMap((hh) => DISPAROS_MIN.map((mm) => [hh, mm]))
+      .find(([hh, mm]) => hh * 60 + mm >= h * 60 + m);
+    const ahora = new Date(`${dia}T${String(primero[0]).padStart(2, '0')}:${String(primero[1]).padStart(2, '0')}:00-03:00`);
+    assert.ok(nombres(slotsQueTocan({ ahora, libro: libroNuevo() })).includes(p.nombre), `${p.nombre} no sale en la primera corrida que le toca`);
+  }
 });

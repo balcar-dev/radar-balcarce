@@ -15,7 +15,8 @@ rioplatense, sin voseo forzado.
     pruebas/   `npm test`, 300+ pruebas, sin red
 
 Flujo: fuentes → ingesta → clasificar → puntaje → semáforo → `web/data/portada.json`
-→ GitHub Actions (cada 30 min) → Vercel. **La web se actualiza con la PC apagada.**
+→ GitHub Actions (cada 30 min) → **Cloudflare Pages** (desde el 24/09; Vercel queda
+de respaldo). **La web se actualiza con la PC apagada.**
 
 Redes (todo desde GitHub, con la PC apagada): `redes.yml` es el reloj. Varias veces
 por día publica en Facebook y, si a esa hora le toca una historia o reel, la arma
@@ -83,7 +84,7 @@ publicar piezas a mano. Detalle y horarios en `REDES.md`.
 ## Cuentas
 
 - **GitHub:** `balcardev@gmail.com` (única con ese correo). Repo `balcar-dev/radar-balcarce`.
-- **Todo lo demás:** `radarbalcarce@gmail.com` (Vercel, Google/Gemini, Meta, Instagram).
+- **Todo lo demás:** `radarbalcarce@gmail.com` (Cloudflare, Vercel, Google/Gemini, Meta, Instagram).
 - **Meta:** app "Radar Balcarce Publicador" (ID 2302218363874399), usuario del
   sistema `publicador-radar`, token sin vencimiento en el secreto `META_TOKEN`.
   Página de Facebook "Radar Balcarce"; su ID para la API es **1254237411116171**
@@ -93,22 +94,24 @@ publicar piezas a mano. Detalle y horarios en `REDES.md`.
 
 ## Estado y pendientes
 
-- Sitio: **`radarbalcarce.com`** (conectado el 21/09: nameservers de DonWeb
-  apuntando a Vercel; `www` redirige al dominio sin `www`). La dirección vieja
-  `radar-balcarce-six.vercel.app` redirige al dominio propio. El sitio ya se
-  indexa (`web/lib/sitio.js` lo detecta solo).
-- **Redes, al 23/09: en pausa.** Meta bloqueó la API de la cuenta de
-  desarrollador por "actividad inusual" y la pantalla para confirmarla está
-  rota del lado de ellos. Los workflows **Redes** y **Piezas** están
-  desactivados a mano hasta que se destrabe. Cuando ande: Facebook publica
-  solo (una nota por vez, 5 por día como máximo, relevancia 75 o más) y
-  espeja cada posteo como foto en el feed de Instagram; e Instagram y la
-  página de Facebook reciben las piezas de video del día (clima, farmacia,
-  2 reels de noticias — cada uno un mini podcast de dos titulares — el
-  podcast grande y 3 historias de notas) con la voz Gemini "Kore", y cada
-  reel se sube también como historia. Horarios y reglas, y cómo reactivarlo:
-  `REDES.md`. El token de GitHub de cron-job.org vence el 21/09/2027: hay
-  que renovarlo antes.
+- Sitio: **`radarbalcarce.com`**, servido por **Cloudflare Pages** desde el
+  24/09 (nameservers de DonWeb → Cloudflare; `www` también). Se despliega solo
+  después de cada "Actualizar la web" (`cloudflare-deploy.yml`, con los
+  secretos `CLOUDFLARE_API_TOKEN` y `CLOUDFLARE_ACCOUNT_ID`). Vercel sigue
+  desplegando lo mismo pero ya no recibe el dominio: se puede apagar. Falta
+  una regla que redirija `www` al dominio sin `www` (hoy sirve el mismo
+  sitio en los dos). Cloudflare permite publicidad; Vercel Hobby no.
+- **Redes, al 24/09: andando.** Meta destrabó la cuenta; Redes y Piezas están
+  prendidos y los dispara cron-job.org (dos trabajos, uno para "Actualizar la
+  web" y otro para el reloj de Redes; si un trabajo falla varias veces
+  cron-job.org lo **desactiva solo**: revisarlos si algo deja de salir).
+  Facebook publica una nota por vez (5 por día como máximo, relevancia 75 o
+  más) con el enlace a la nota y sin nombrar la fuente, y la espeja como foto
+  en el feed de Instagram. Instagram y la página de Facebook reciben las
+  piezas de video: clima, farmacia y **tres podcasts** (mañana, tarde y noche,
+  con notas de temas distintos), y cada podcast se sube también como historia.
+  Ya no salen noticias sueltas. Horarios y reglas: `REDES.md`. El token de
+  GitHub de cron-job.org vence el 21/09/2027: hay que renovarlo antes.
 - **La reescritura con IA corre sola, 100% en la nube, desde el 22/09**: lo
   que se publica sin revisión humana se reescribe en cada corrida de
   "Actualizar la web" (no sólo cuando el panel está prendido), cruzando
@@ -120,12 +123,13 @@ publicar piezas a mano. Detalle y horarios en `REDES.md`.
   Primer dato, 23/09: 11 visitantes y 27 páginas vistas — recién empieza.
 - **Los tres avisos publicitarios se cargan desde el panel** (pestaña Avisos,
   23/09), no editando `web/data/avisos.json` a mano. Detalle: `REDES.md` § 2.
-- **Vercel Hobby no permite uso comercial/publicitario** (está en sus
-  condiciones de uso justo): para vender los avisos de verdad hace falta
-  mudar el hosting a Cloudflare Pages, que sí lo permite. El sitio ya es
-  host-agnostic y el workflow `cloudflare-deploy.yml` ya existe, apagado,
-  esperando que el usuario cree la cuenta (necesita login). Detalle:
-  `PENDIENTES.md`, punto E29.
+- **Lo que decide el panel se sube solo a GitHub** (`panel/sincronizar.mjs`,
+  unos segundos después del último cambio; se apaga con
+  `SINCRONIZAR_GITHUB=no`). El panel sigue viviendo en la PC: si está apagada,
+  no se pueden decidir notas amarillas ni cargar avisos.
+- **La IA recibe el texto completo de la nota original** (`ingesta/articulo.mjs`)
+  para escribir el cuerpo, y se verifica contra todo lo que recibió. Sin eso
+  inventaba nombres y números y se rechazaba 65% de las notas.
 - **Todo lo que falta, por categoría, está en [`PENDIENTES.md`](PENDIENTES.md)**
   (redes, SEO, bios, editorial, técnico) y en `IDEAS.md` (ideas de producto).
   Qué se publica y cómo se escribe: `EDITORIAL.md`. Redes: `REDES.md`.

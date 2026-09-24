@@ -121,28 +121,25 @@ export function imagenDeNota(nota, sitio) {
 }
 
 /**
- * El texto del posteo. Dice de dónde sale la información y, cuando la
- * redactó la IA, que fue la IA: es la regla de que cada nota diga quién la
- * escribió, y vale también afuera del sitio.
+ * El texto del posteo: titular, copete y el enlace a la nota completa en
+ * NUESTRO sitio. La fuente no se nombra en las redes: la atribución y el
+ * enlace al original están en la nota de la web. Cuando la redactó la IA,
+ * lo dice: la regla de que cada nota diga quién la escribió vale también
+ * afuera del sitio.
  */
-export function mensajeDeNota(nota) {
+export function mensajeDeNota(nota, sitio) {
   const partes = [nota.titulo];
   const copete = recortar(nota.copete);
   if (copete) partes.push(copete);
-
-  const fuente = (nota.medios ?? []).join(', ');
-  const linea = [fuente ? `Fuente: ${fuente}` : null, nota.publicadaPor === 'ia' ? 'Resumen hecho con IA' : null]
-    .filter(Boolean).join(' · ');
-  if (linea) partes.push(linea);
-
+  if (sitio) partes.push(`Leé la nota completa: ${enlaceDeNota(nota, sitio)}`);
+  if (nota.publicadaPor === 'ia') partes.push('Resumen hecho con IA');
   return partes.join('\n\n');
 }
 
-/** Lo mismo que se posteó en Facebook, para Instagram: el enlace de arriba
- *  no es clickeable en un posteo de Instagram, así que se lo nombra en
- *  texto en vez de pegarlo. */
-export function mensajeParaInstagram(nota) {
-  return `${mensajeDeNota(nota)}\n\nMás en radarbalcarce.com`;
+/** Lo mismo para Instagram. Ahí el enlace no es clickeable, pero se pide que
+ *  esté igual: quien lo quiera lo copia, y queda a la vista adónde ir. */
+export function mensajeParaInstagram(nota, sitio) {
+  return mensajeDeNota(nota, sitio);
 }
 
 // ------------------------------------------------- reels, historias y feed
@@ -232,50 +229,55 @@ export function elegirFeed(notas, reglas = REGLAS_PIEZAS) {
     .slice(0, reglas.feedPorDia);
 }
 
-/**
- * La segunda noticia de un reel-podcast corto: de otro tema, y sin repetir la
- * que ya se usó en otro reel del día (para eso está `excluir`). Si no queda
- * ninguna, la principal sale sola, como antes.
- */
-export function elegirSecundariaDeReel(principal, notas, excluir = [], reglas = REGLAS_PIEZAS) {
+/** ¿El texto de esta nota es nuestro (reescrito por la IA o por una persona)?
+ *  Sólo de esas se lee el copete en voz alta: en las demás el copete es el
+ *  resumen del medio de origen y ahí sólo se dice el titular. */
+const esPropia = (n) => Boolean(n.guion) || n.deIA === true;
+
+/** La primera oración del copete, para que el audio no se alargue. */
+export function primeraOracion(texto = '', maximo = 150) {
+  const t = String(texto).replace(/\s+/g, ' ').trim();
+  if (!t) return '';
+  const fin = t.search(/[.!?](\s|$)/);
+  const oracion = fin > 0 ? t.slice(0, fin + 1) : t;
+  return oracion.length <= maximo ? oracion : '';
+}
+
+/** Las notas de un podcast: las de más puntaje, de temas distintos, sin
+ *  repetir las que ya se contaron en otro podcast del día (`excluir`). */
+export function elegirParaPodcast(notas, { cuantas = 3, excluir = [] } = {}, reglas = REGLAS_PIEZAS) {
   const candidatas = [...notas]
     .filter(sePuedeSola)
-    .filter((n) => n.id !== principal.id)
     .filter((n) => (n.relevancia ?? 0) >= reglas.relevanciaParaHistoria)
     .sort(porRelevancia);
-  return sinRepetidos(candidatas, [principal, ...excluir])[0] ?? null;
+  return sinRepetidos(candidatas, excluir).slice(0, cuantas);
 }
 
 /**
- * El guion de un reel de noticias del mediodía: ya no cuenta un solo
- * titular, sino dos — la principal, la que se ve en la placa, y una segunda
- * de otro tema, a modo de racconto corto. Mismo espíritu que el repaso del
- * podcast de la noche, pero pensado para un reel de 45 a 75 segundos, no
- * para el resumen completo del día.
+ * El guion de un podcast: un saludo, cada noticia con su titular y, si el
+ * texto es propio, una oración más de contexto, y el cierre. Todo sale de lo
+ * ya publicado: no hay nada que la IA pueda inventar acá. La fuente no se
+ * nombra nunca. Con menos de dos noticias no es un repaso: devuelve null.
  */
-export function guionMiniPodcast(principal, secundaria) {
-  const t1 = String(principal.titulo).replace(/\s+/g, ' ').trim().replace(/[.:]+$/, '');
-  if (!secundaria) return `${t1}.`; // no hay con qué acompañarla: sale sola
-  const t2 = String(secundaria.titulo).replace(/\s+/g, ' ').trim().replace(/[.:]+$/, '');
-  return `${t1}. Además, ${t2.charAt(0).toLowerCase()}${t2.slice(1)}.`;
+export function guionRepaso(elegidas, { saludo, cierre = 'Todas las notas, en radar balcarce punto com.' }) {
+  if (elegidas.length < 2) return null;
+  const marca = (i) => (i === elegidas.length - 1 ? 'Y para cerrar' : ['Primero', 'Después', 'Además'][i]);
+  const cuerpo = elegidas.map((n, i) => {
+    const titular = String(n.titulo).replace(/\s+/g, ' ').trim().replace(/[.:]+$/, '');
+    const detalle = esPropia(n) ? primeraOracion(n.copete) : '';
+    return `${marca(i)}: ${titular}.${detalle ? ` ${detalle}` : ''}`;
+  }).join(' ');
+  return `${saludo} ${cuerpo} ${cierre}`;
 }
 
 /**
- * El guion del podcast del día: un repaso de lo más importante, dicho por la
- * voz de siempre. Sólo usa los titulares que ya están publicados, no agrega ni
- * un dato: no hay nada que la IA pueda inventar porque la IA no participa.
+ * El podcast de la noche: el repaso de lo más importante del día, dicho por
+ * la voz de siempre.
  */
 export function guionPodcast(notas, { cuantas = 4, fecha = new Date() } = {}) {
   const dia = new Intl.DateTimeFormat('es-AR', { weekday: 'long', timeZone: ZONA }).format(fecha);
-  const elegidas = sinRepetidos([...notas].filter(sePuedeSola).sort(porRelevancia)).slice(0, cuantas);
-  if (elegidas.length < 2) return null; // un repaso de una sola noticia no es un repaso
-
-  const titulares = elegidas.map((n) => String(n.titulo).replace(/\s+/g, ' ').trim().replace(/[.:]+$/, ''));
-  const marca = (i) => (i === titulares.length - 1 ? 'Y para cerrar' : ['Primero', 'Después', 'Además'][i]);
-  const cuerpo = titulares.map((t, i) => `${marca(i)}: ${t}.`).join(' ');
-
-  return `Buenas, Balcarce. Este es el repaso de este ${dia}. ${cuerpo} `
-    + 'Todas las notas, con la fuente, en radar balcarce punto com.';
+  const elegidas = elegirParaPodcast(notas, { cuantas }, { ...REGLAS_PIEZAS, relevanciaParaHistoria: 0 });
+  return guionRepaso(elegidas, { saludo: `Buenas, Balcarce. Este es el repaso de este ${dia}.` });
 }
 
 /** ¿Está prendido el interruptor de publicar? Acepta "si", "Si", "SÍ", "sí"…

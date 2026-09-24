@@ -203,6 +203,157 @@ vez que se revisa. Es lo que un medio grande no tiene tiempo de sostener y un
 medio chico sí — y es gratis: no pide ninguna fuente nueva, sólo usar lo que
 ya está armado.
 
+## Cómo ganar plata: el orden en que lo haría
+
+*Actualizado el 24/09. Los precios no van escritos a propósito: hay que
+salir a preguntar qué paga un comercio de Balcarce hoy en la radio y en los
+otros medios, y arrancar por debajo. Se decide con la realidad, no acá.*
+
+Cada escalón se apoya en el anterior, y ninguno necesita más tráfico del que
+va a haber en los primeros meses. Lo que se vende siempre es **lo mismo:
+que el vecino los vea**, en el lugar donde ya mira.
+
+| # | Qué se vende | Dónde vive | Estado |
+|---|---|---|---|
+| 1 | **Los 3 avisos fijos** de la web (apertura, al lado del clima, al pie) | `web/data/avisos.json`, se carga desde el panel → Avisos | Armado. Falta el primer comercio |
+| 2 | **"El clima de hoy, presentado por…"**: mención del comercio en la historia del clima y de la farmacia, que son lo que más se mira | La voz ya lee un texto fijo; sumar una línea | Idea. Sin código nuevo importante |
+| 3 | **Mención en los podcasts** ("y esta mañana, gracias a…") | `redes/elegir.mjs`, un cierre distinto por auspiciante | Idea. Los 3 podcasts diarios ya existen |
+| 4 | **La guía comercial y el mapa** (abajo) | Sección nueva de la web | Propuesta |
+| 5 | **Sorteos y marketing conjunto** entre comercios anotados | Historias + posteos | Propuesta |
+| 6 | **Clasificados** y **empleo/changas** | Página nueva + formulario | Propuesta |
+| 7 | **Resumen semanal por WhatsApp o mail** con un espacio patrocinado | Ver "La semana en Balcarce" | Propuesta |
+| 8 | **Contenido patrocinado**, siempre marcado como tal | Nota con etiqueta "Contenido patrocinado" | Con reglas (abajo) |
+| 9 | **Pauta oficial** (campañas de vacunación, cortes de servicio, etc.) | Igual que un aviso | Depende de la relación con el municipio |
+| 10 | **Socios lectores** (aporte voluntario mensual, tipo Cafecito) | Un botón | Cuando haya lectores que lo pidan |
+| 11 | **AdSense** en un cuarto espacio | Script de Google | **Al final**: rinde poco en un pueblo, pesa y rompe la regla de "nada de terceros". Ver `PENDIENTES.md` |
+
+**Qué agregar antes de vender nada:** una página `/publicidad` con los
+espacios, cómo se ven y un contacto (WhatsApp); y un **media kit** de una
+hoja con los números reales de Vercel/Cloudflare Analytics (visitas,
+vecinos de Balcarce, seguidores de Instagram y Facebook, alcance de los
+podcasts). Un comercio compra números, no promesas: con los primeros
+30 días de datos alcanza para arrancar.
+
+**Reglas que no se negocian** (las mismas de `REDES.md` § 2, más tres):
+avisos quietos, grises, chicos y con la etiqueta "Espacio publicitario";
+nunca apuestas ni préstamos; nunca una publinota sin decirlo. Además:
+1. **Un aviso no compra una nota.** Lo que se escribe sobre un comercio
+   anunciante sigue el mismo criterio que sobre cualquier otro.
+2. **Política y Policiales no llevan patrocinio** de nadie.
+3. **El auspiciante nunca habla por la voz sin que se sepa:** la mención
+   dice "gracias a" o "presentado por", no simula ser una noticia.
+
+## La guía comercial: cómo se arma en serio
+
+Ya está descripta más arriba (mapa + catálogo de venta). Esto es el **cómo**,
+pensado para empezar chico y que se pueda dejar de hacer sin que rompa nada:
+
+1. **Datos mínimos por comercio:** nombre, rubro, dirección, teléfono,
+   horario, y si quiere, WhatsApp e Instagram. Un archivo (`web/data/comercios.json`)
+   que se edita desde el panel, igual que los avisos.
+2. **Cómo cargarlos sin ser una carga eterna:** salir con un formulario de
+   papel o un mensaje de WhatsApp de una línea ("nombre, rubro, dirección,
+   horario"). El comerciante lo manda, alguien del equipo lo pasa al panel.
+   Con 15 a 20 del centro alcanza para probar.
+3. **El mapa:** OpenStreetMap con MapLibre o Leaflet (gratis, sin clave). Las
+   coordenadas se sacan una vez de la dirección (Nominatim) y se guardan.
+4. **Búsqueda por rubro** ("farmacias", "ferreterías", "restaurantes") — es lo
+   que la gente busca en Google, y cada rubro es una página que posiciona sola.
+5. **Ferias y eventos** en el mismo mapa con fecha, enganchados a la agenda
+   que ya existe (`ingesta/agenda.mjs`).
+6. **Mejoras pagas:** pin destacado, foto, aparecer primero en el rubro,
+   mención en podcasts, historia propia. Lo básico siempre gratis.
+7. **Medir para poder vender:** cuántos toques recibe cada ficha (con
+   Analytics por página), y mostrárselo al comerciante una vez al mes. Es lo
+   que hace que renueve.
+
+## Contenido propio: cosas que no dependen de lo que publican otros
+
+*Nueva, 24/09. Objetivo: que la portada tenga algo nuestro todos los días,
+aunque las otras fuentes no publiquen nada. Es lo que hace que nos citen a
+nosotros y no al revés.*
+
+Todo esto se apoya en lo que ya funciona: datos públicos o calendarios fijos,
+reescritos por la IA con la verificación contra la fuente
+(`ingesta/verificar.mjs`) y con la firma "IA" de siempre. Nada se inventa.
+
+**Calendario fijo (se arma una vez y sirve todos los años)**
+- **Efemérides de Balcarce y de Fangio.** Fangio nació en Balcarce el 24 de
+  junio de 1911 y murió el 17 de julio de 1995: dos fechas seguras para
+  arrancar. El resto (fundación, inauguraciones, hechos locales) hay que
+  **verificarlo con el Museo Fangio, el Museo Histórico y el Archivo
+  Municipal** antes de escribirlo: no se publica una fecha de memoria.
+- **Fechas patrias y feriados**, con el ángulo local cuando lo hay (qué acto
+  hace el municipio, cómo funcionan farmacias y transporte). Las de siempre:
+  24/3, 2/4, 1/5, 25/5, 20/6, 9/7, 17/8, 11/9 (Día del Maestro), 12/10, 20/11,
+  8/12 y 25/12, más los feriados puente de cada año.
+- **Días temáticos que mueven el pueblo:** del Agricultor, del Padre y la
+  Madre, del Niño, del Estudiante y la Primavera (21/9), de la Tradición
+  (10/11). Cada uno es un posteo o una historia con recomendación local.
+- **Un archivo:** `ingesta/efemerides.mjs` con `{ dia, mes, titulo, texto,
+  fuente }`, y una regla que cada mañana arma la pieza del día. Es la misma
+  idea que `CALENDARIO_ANUAL` de `ingesta/agenda.mjs`.
+
+**Cultura (una pieza por semana, siempre el mismo día)**
+- **Película de la semana.** Elegida por criterio editorial (no por lo que
+  esté en cartelera, salvo que haya cine local). Sinopsis corta, dónde verla,
+  y por qué. Fuentes de datos abiertas y gratuitas: TMDB (con clave gratis)
+  o Wikipedia/Wikidata. Enfocar en **cine argentino** le da identidad propia
+  y evita competir con las páginas de estrenos. Un ciclo posible: "Cine
+  argentino de los jueves".
+- **Libro de la semana.** Lo mismo con literatura argentina: aniversarios de
+  autores (Borges nació el 24/8/1899, Cortázar el 26/8/1914, Alfonsina Storni
+  el 22/5/1892) y el Día del Libro (23/4). **Ojo con los derechos:** de los
+  autores fallecidos hace menos de 70 años no se copian fragmentos largos;
+  se recomienda, se cuenta de qué trata y, como mucho, una cita corta. Lo que
+  sí es de dominio público (Sarmiento, Hernández, etc.) se puede citar más.
+- **Música / disco de la semana** y **escritor o artista local** (ver la
+  sección de historias con la gente, abajo).
+
+**Datos convertidos en nota (lo que un medio grande no tiene paciencia de
+hacer)**
+- **"Lo que pasó en el Concejo"** y **"En qué quedó"** (ya están descriptas
+  más arriba). Fuente primaria: el Boletín Oficial Municipal.
+- **Precios del campo:** hacienda, granos y dólar agro, de fuentes públicas
+  (Bolsa de Cereales, Mercado Agroganadero, BCRA). Una tarjeta diaria en la
+  portada, muy útil en una zona agrícola.
+- **Balcarce en números:** un dato de INDEC o del municipio por semana, con
+  un gráfico simple. Es de lo que más se comparte.
+- **Alertas del clima** (idea 4 de arriba) y **cortes programados** (agua,
+  luz, tránsito) tomados del municipio y las cooperativas.
+- **La semana en Balcarce:** cada domingo, las 5 notas más leídas y las 3
+  cosas que vienen. Es 100% contenido propio armado con lo que ya tenemos, y
+  es el mejor candidato a resumen por WhatsApp o mail (escalón 7).
+
+**Guías que quedan para siempre (las que posicionan en Google)**
+- "Cómo sacar…" y "Qué hacer si…": trámites municipales, turnos, dónde pagar
+  tasas, teléfonos por rubro, horarios de trámites. Se escriben una vez, se
+  revisan cada tanto y traen visitas todos los meses sin esfuerzo. Son
+  además el mejor lugar para un aviso.
+
+**Con la gente**
+- **Historia de reclamos y opiniones**, moderada por nosotros (ya descripta
+  en la idea 5). Sale por el buzón, que ya tiene la regla de "nunca de un
+  solo lado".
+- **"El vecino que…":** una persona o comercio del pueblo por semana, con una
+  foto que mandan ellos (nunca la de otro medio). Alimenta la guía comercial.
+- **Encuestas de historia** semanales.
+
+**Cómo elegir qué hacer primero:** empezar por lo que **no necesita a nadie
+más**: efemérides + fechas patrias + la semana en Balcarce + precios del
+campo. Son datos fijos o públicos, se verifican solos y llenan la portada sin
+depender de que otro medio publique. La película y el libro después, cuando
+haya criterio sobre el tono.
+
+## Lo que ya se hizo de esta lista
+
+- Los tres avisos fijos de la web, con su pestaña en el panel (23/09).
+- Los podcasts de la mañana, la tarde y la noche (24/09) en lugar de noticias
+  sueltas, con el enlace de cada nota en el texto y sin nombrar la fuente.
+- Los teléfonos útiles rotando de día (23/09).
+- El buzón con reglas de moderación (`panel/buzon.mjs`): falta la puerta de
+  entrada pública.
+
 ## Las que NO haría
 
 **Clickbait.** En un pueblo el que exagera se quema en dos semanas y no

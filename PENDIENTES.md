@@ -5,14 +5,14 @@ Antes esta lista estaba repartida entre `REDES.md`, `NOTAS.md`, `CLAUDE.md` y
 sí. Ahora viven acá, por categoría. Los otros documentos explican **cómo**
 funciona cada cosa; éste dice **qué falta**.
 
-*Última revisión: 23/09/2026.*
+*Última revisión: 24/09/2026.*
 
 ## A. Redes y automatización
 
-0. **Reactivar Redes y Piezas cuando Meta confirme la cuenta.** Desde el
-   22/09 están apagados a mano (Actions → cada uno → Enable workflow) porque
-   Meta bloqueó la API por "actividad inusual" y la pantalla para confirmar
-   la cuenta está rota del lado de ellos. Detalle en `REDES.md` § "En pausa".
+0. ~~Reactivar Redes y Piezas~~ — hecho el 24/09: Meta destrabó la cuenta.
+   **Mirar los primeros días** que salgan bien los tres podcasts, el link en
+   los posteos y el espejo a Instagram (cron-job.org desactiva solo un
+   trabajo que falla varias veces: si algo deja de salir, revisar ahí).
 1. **Renovar el token de GitHub antes del 21/09/2027.** Lo usa cron-job.org
    para disparar el reloj. Sin token nuevo, las redes dejan de publicar solas
    sin ningún aviso salvo el mail de error de cron-job.org.
@@ -118,17 +118,20 @@ que vigila el SEO en cada compilación (`web/scripts/revisar-seo.mjs`).
 28. Backup del contenido de `panel/datos/` (usuarios, decisiones editoriales,
     buzón): hoy vive sólo en esa PC, sin copia en ningún otro lado. Si se
     rompe el disco, se pierde el historial editorial completo.
-29. **La mudanza a Cloudflare Pages, para poder vender publicidad de verdad.**
-    Vercel Hobby prohíbe expresamente el uso comercial/publicitario en sus
-    condiciones; Cloudflare Pages lo permite y no cobra por el ancho de
-    banda. El sitio ya es host-agnostic (`output: 'export'`, redirecciones
-    generadas para los dos formatos) y el workflow `cloudflare-deploy.yml`
-    ya existe, apagado, esperando la cuenta. Falta, todo del lado del
-    usuario porque pide login: crear la cuenta de Cloudflare, el proyecto,
-    un API token, cargar `CLOUDFLARE_API_TOKEN` y `CLOUDFLARE_ACCOUNT_ID` en
-    GitHub Secrets, probar el workflow, y recién con eso funcionando cambiar
-    los nameservers en DonWeb — ese último paso se hace con calma, no
-    apurado, porque corta el sitio unos minutos mientras propaga.
+29. ~~La mudanza a Cloudflare Pages~~ — hecha el 24/09. Falta: una regla que
+    redirija `www` al dominio sin `www` (hoy los dos sirven el sitio; el
+    canónico ya apunta al de sin `www`), apagar Vercel cuando se confirme que
+    todo anda, y activar **Cloudflare Web Analytics** (gratis, sin límite).
+30. **Google AdSense**: se decidió dejarlo para más adelante (24/09). Pide
+    cuenta con datos fiscales, verificar el sitio y `ads.txt`, y aprobación
+    de días a semanas. Ver `IDEAS.md` § "Cómo ganar plata".
+31. **Panel 100% online.** Hoy vive en la PC de Hernán. Sin gastar: pasar
+    lo esencial (aprobar notas, cargar avisos) a una página protegida que
+    escriba en el repositorio. Con gasto (~USD 5/mes): alojar el panel
+    entero en Railway o Fly.io. Mientras tanto, lo que decide se sube solo a
+    GitHub (`panel/sincronizar.mjs`).
+32. **Clave gratuita de redacción** (`GEMINI_API_KEY_REDACCION`) sin cargar en
+    GitHub: la reescritura usa la clave paga de redes (decidido el 24/09).
 
 ## F. Ideas más grandes, para leer y pensar
 

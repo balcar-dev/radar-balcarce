@@ -87,7 +87,7 @@ async function facebook() {
     }
 
     try {
-      const r = await api.publicarEnFacebook({ mensaje: mensajeDeNota(nota), enlace });
+      const r = await api.publicarEnFacebook({ mensaje: mensajeDeNota(nota, SITIO), enlace });
       anotar(libro, 'facebook', nota.id, { postId: r.id, titulo: nota.titulo });
       fs.writeFileSync(LIBRO, `${JSON.stringify(libro, null, 2)}\n`);
       console.log(`             publicado: ${r.id}`);
@@ -106,7 +106,7 @@ async function facebook() {
     // principal.
     if (!yaPublicada(libro, 'instagramFeed', nota.id)) {
       try {
-        const ri = await api.publicarFotoEnInstagram({ imagenUrl: imagenDeNota(nota, SITIO), pie: mensajeParaInstagram(nota) });
+        const ri = await api.publicarFotoEnInstagram({ imagenUrl: imagenDeNota(nota, SITIO), pie: mensajeParaInstagram(nota, SITIO) });
         anotar(libro, 'instagramFeed', nota.id, { mediaId: ri.id, titulo: nota.titulo });
         fs.writeFileSync(LIBRO, `${JSON.stringify(libro, null, 2)}\n`);
         console.log(`             + Instagram: ${ri.id}`);

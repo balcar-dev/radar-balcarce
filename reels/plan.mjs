@@ -16,7 +16,7 @@ import { avisosDelClima } from '../ingesta/alertas.mjs';
 import { NUMEROS } from '../ingesta/utiles.mjs';
 import { horariosDe, toca } from '../panel/horarios.mjs';
 import {
-  elegirReels, elegirHistoriasDeNotas, elegirFeed, elegirSecundariaDeReel, guionMiniPodcast, guionPodcast,
+  elegirHistoriasDeNotas, elegirFeed, elegirParaPodcast, guionRepaso, guionPodcast, enlaceDeNota,
 } from '../redes/elegir.mjs';
 import { datosDeLaWeb } from '../redes/datos.mjs';
 import { HORAS_REELS, horaHistoriaDeNota, HISTORIAS_DE_NOTAS, notasUsadasHoy, piezasPublicadasHoy } from '../redes/piezas.mjs';
@@ -376,36 +376,45 @@ export function planDelDia(datos, { libro = null } = {}) {
   const hechas = piezasPublicadasHoy(libro);
   const libres = publicables.filter((n) => !usadas.has(n.id));
 
-  const slotsReel = ['noticia1', 'noticia2']
-    .map((nombre, i) => ({ nombre, hora: REGLAS.horariosReel[i] ?? '21:00' }))
-    .filter((sl) => !hechas.has(sl.nombre));
-  const paraReel = elegirReels(libres).slice(0, slotsReel.length);
-
-  // Cada reel de noticias es un mini podcast de dos titulares: el principal,
-  // el que se ve en la placa, y uno de otro tema que se suma en la voz. La
-  // segunda de un reel no se repite en el otro (mencionadas).
-  const mencionadas = [];
-  paraReel.forEach((n, i) => {
-    const secundaria = elegirSecundariaDeReel(n, libres, mencionadas);
-    if (secundaria) mencionadas.push(secundaria);
+  // Tres podcasts por día en vez de noticias sueltas (24/09: una noticia sola
+  // dicha en voz alta sonaba rara). Mañana y tarde cuentan tres notas de temas
+  // distintos, sin repetir entre sí; el de la noche repasa lo más fuerte del
+  // día. Cada uno lleva su lista de notas con el enlace en el texto del posteo,
+  // y sin nombrar la fuente. Cada podcast se sube también como historia.
+  const SITIO = process.env.SITIO ?? 'https://radarbalcarce.com';
+  const RONDAS = [
+    { nombre: 'noticia1', titulo: 'El repaso de la mañana', saludo: 'Buen día, Balcarce. Esto es lo que hay para saber esta mañana.' },
+    { nombre: 'noticia2', titulo: 'El repaso de la tarde', saludo: 'Buenas tardes, Balcarce. Repasamos lo que fue pasando hoy.' },
+  ];
+  const yaContadas = [];
+  RONDAS.forEach((ronda, i) => {
+    if (hechas.has(ronda.nombre)) return;
+    const elegidas = elegirParaPodcast(libres, { cuantas: 3, excluir: yaContadas });
+    const guion = guionRepaso(elegidas, { saludo: ronda.saludo });
+    if (!guion) return; // un podcast de una sola noticia no es un repaso
+    yaContadas.push(...elegidas);
     piezas.push({
-      tipo: 'reel', hora: slotsReel[i].hora, nombre: slotsReel[i].nombre, notaId: n.id,
-      titulo: n.titulo,
-      motivo: `relevancia ${n.relevancia}, de las que más enganchan (${n.seccion})`,
-      seccion: n.seccion,
-      guion: guionMiniPodcast(n, secundaria),
-      svg: placaNoticia({ seccion: n.seccion, titulo: n.titulo, cuando: n.cuando }),
-      acento: COLOR_SECCION[n.seccion] ?? '#A8371F',
+      tipo: 'reel', hora: REGLAS.horariosReel[i] ?? '21:00', nombre: ronda.nombre, notaId: elegidas[0].id,
+      notaIds: elegidas.map((n) => n.id),
+      items: elegidas.map((n) => ({ titulo: n.titulo, enlace: enlaceDeNota(n, SITIO) })),
+      titulo: ronda.titulo,
+      motivo: `podcast de ${elegidas.length} notas, las de más puntaje de temas distintos`,
+      seccion: 'Balcarce', guion,
+      svg: placaNoticia({ seccion: 'Balcarce', titulo: ronda.titulo, cuando: fechaLarga() }),
+      acento: '#A8371F',
     });
   });
 
-  // El podcast: el repaso de lo más fuerte del día, con la voz de siempre. Sale
-  // a la noche, cuando la gente ya vio todo y quiere el resumen. Si ese día
-  // no hay al menos dos noticias para repasar, no se arma.
+  // El podcast de la noche: el repaso de lo más fuerte del día. Sale cuando la
+  // gente ya vio todo y quiere el resumen. Si ese día no hay al menos dos
+  // noticias para repasar, no se arma.
+  const delDia = elegirParaPodcast(publicables, { cuantas: 4 }, { relevanciaParaHistoria: 0 });
   const repaso = guionPodcast(publicables);
-  if (repaso) {
+  if (repaso && !hechas.has('podcast')) {
     piezas.push({
       tipo: 'reel', hora: REGLAS.horariosReel[2] ?? '20:30', nombre: 'podcast',
+      notaIds: delDia.map((n) => n.id),
+      items: delDia.map((n) => ({ titulo: n.titulo, enlace: enlaceDeNota(n, SITIO) })),
       titulo: 'El repaso del día', motivo: 'el podcast diario: los titulares más fuertes, un solo audio',
       seccion: 'Balcarce', guion: repaso,
       svg: placaNoticia({ seccion: 'Balcarce', titulo: 'El repaso del día', cuando: fechaLarga() }),
@@ -418,7 +427,7 @@ export function planDelDia(datos, { libro = null } = {}) {
     { nombre: `historia${i + 1}`, hora: horaHistoriaDeNota(i) }
   )).filter((sl) => !hechas.has(sl.nombre));
 
-  elegirHistoriasDeNotas(libres, paraReel).slice(0, slotsHistoria.length).forEach((n, i) => {
+  elegirHistoriasDeNotas(libres, yaContadas).slice(0, slotsHistoria.length).forEach((n, i) => {
     piezas.push({
       tipo: 'historia', hora: slotsHistoria[i].hora, nombre: slotsHistoria[i].nombre, notaId: n.id,
       titulo: n.titulo, motivo: `relevancia ${n.relevancia}`, seccion: n.seccion,
@@ -476,6 +485,7 @@ if (process.argv[1] && process.argv[1].endsWith('plan.mjs')) {
         const r = await armarReel(p, SALIDA);
         manifiesto.push({
           nombre: p.nombre, tipo: p.tipo, hora: p.hora, titulo: p.titulo, notaId: p.notaId ?? null,
+          notaIds: p.notaIds ?? [], items: p.items ?? [],
           archivo: path.basename(r.mp4), duracion: Number(r.duracion.toFixed(1)),
         });
         console.log(`\x1b[32mlisto\x1b[0m ${path.basename(r.mp4)} · ${r.duracion.toFixed(1)} s · voz ${r.vozUsada}`);

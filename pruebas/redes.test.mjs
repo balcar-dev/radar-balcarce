@@ -200,13 +200,14 @@ test('sale de a una por vez, la más fuerte primero', () => {
 
 // -------------------------------------------------------------- el mensaje
 
-test('el mensaje dice de dónde sale y cuándo lo resumió una IA', () => {
-  const m = mensajeDeNota(nota());
-  assert.match(m, /^Un titular\n\nUn copete\n\nFuente: Diario La Vanguardia · Resumen hecho con IA$/);
+test('el mensaje lleva el enlace a la nota, dice cuándo lo resumió una IA y NO nombra la fuente', () => {
+  const m = mensajeDeNota(nota({ id: 'abc', titulo: 'Un titular' }), 'https://radarbalcarce.com');
+  assert.equal(m, 'Un titular\n\nUn copete\n\nLeé la nota completa: https://radarbalcarce.com/nota/un-titular-abc\n\nResumen hecho con IA');
+  assert.ok(!/Fuente|Vanguardia/i.test(m), 'nombró la fuente en una red social');
 });
 
 test('el mensaje no dice IA si no fue la IA', () => {
-  assert.ok(!mensajeDeNota(nota({ publicadaPor: null })).includes('IA'));
+  assert.ok(!mensajeDeNota(nota({ publicadaPor: null }), 'https://radarbalcarce.com').includes('IA'));
 });
 
 test('el enlace es de nuestro sitio, con el titular adentro', () => {
@@ -223,10 +224,12 @@ test('la imagen del posteo es la tarjeta propia de la nota, no una foto ajena', 
   );
 });
 
-test('el mensaje de Instagram es el mismo que Facebook, con el sitio nombrado en texto', () => {
-  const m = mensajeParaInstagram(nota());
-  assert.match(m, /^Un titular\n\n/);
-  assert.match(m, /Más en radarbalcarce\.com$/);
+test('el mensaje de Instagram es el mismo que Facebook: con el enlace y sin la fuente', () => {
+  const n = nota({ id: 'abc' });
+  const m = mensajeParaInstagram(n, 'https://radarbalcarce.com');
+  assert.equal(m, mensajeDeNota(n, 'https://radarbalcarce.com'));
+  assert.match(m, /radarbalcarce\.com\/nota\//);
+  assert.ok(!/Fuente/.test(m));
 });
 
 // ------------------------------------------------------- las claves de Gemini
@@ -375,4 +378,56 @@ test('el interruptor acepta si, Si, SÍ y sí, y nada más', () => {
   // apagada sin avisar.
   for (const v of ['si', 'Si', 'SI', 'sí', 'Sí', ' si ']) assert.equal(estaActivo(v), true, v);
   for (const v of ['', 'no', 'true', undefined, null, 'sino']) assert.equal(estaActivo(v), false, String(v));
+});
+
+// ------------------------------------------------------------ los podcasts
+
+import { elegirParaPodcast, guionRepaso, primeraOracion } from '../redes/elegir.mjs';
+
+const nn = (id, titulo, seccion, relevancia, extra = {}) => ({ id, titulo, seccion, relevancia, semaforo: 'verde', ...extra });
+
+test('el podcast lee el copete sólo de las notas propias, y sin nombrar la fuente', () => {
+  const g = guionRepaso([
+    nn('a', 'Se reinaugura el autódromo', 'Automovilismo', 90, { guion: 'x', copete: 'El viernes habrá acto oficial. Y después más cosas.', medios: ['Puntonueve'] }),
+    nn('b', 'Cortan el agua en el centro', 'Servicios', 80, { copete: 'Resumen copiado del medio de origen.', medios: ['El Diario'] }),
+  ], { saludo: 'Buen día, Balcarce.' });
+  assert.match(g, /^Buen día, Balcarce\. Primero: Se reinaugura el autódromo\. El viernes habrá acto oficial\. Y para cerrar: Cortan el agua en el centro\. Todas las notas/);
+  assert.ok(!g.includes('copiado'), 'leyó el copete de una nota que no es nuestra');
+  assert.ok(!/Puntonueve|El Diario|fuente/i.test(g));
+});
+
+test('un podcast con menos de dos notas no existe', () => {
+  assert.equal(guionRepaso([nn('a', 'Sola', 'Balcarce', 90)], { saludo: 'Hola.' }), null);
+});
+
+test('los podcasts del día no repiten notas ni temas entre sí', () => {
+  const notas = [
+    nn('1', 'Reinauguran el autódromo Fangio con Kicillof', 'Automovilismo', 95),
+    nn('2', 'Otra nota del autódromo Fangio con Kicillof', 'Automovilismo', 94),
+    nn('3', 'Cortan el suministro de agua en el barrio', 'Servicios', 90),
+    nn('4', 'Ferroviarios ganó y va por la final', 'Deportes', 88),
+    nn('5', 'Nueva exposición en el museo municipal', 'Cultura', 85),
+    nn('6', 'Vuelve la feria de artesanos al parque', 'Cultura', 80),
+  ];
+  const manana = elegirParaPodcast(notas, { cuantas: 3 });
+  const tarde = elegirParaPodcast(notas, { cuantas: 3, excluir: manana });
+  assert.deepEqual(manana.map((n) => n.id), ['1', '3', '4']);
+  assert.ok(tarde.every((n) => !manana.some((m) => m.id === n.id)));
+  assert.ok(!tarde.some((n) => n.id === '2'), 'repitió el tema del autódromo en el segundo podcast');
+});
+
+test('nunca entra Política ni Policiales a un podcast, ni lo que está en rojo', () => {
+  const r = elegirParaPodcast([
+    nn('p', 'Concejo debate la ordenanza', 'Política', 99),
+    nn('q', 'Choque en la ruta', 'Policiales', 98),
+    nn('r', 'Algo sensible', 'Balcarce', 97, { semaforo: 'rojo' }),
+    nn('s', 'Una nota común y corriente', 'Balcarce', 70),
+  ], { cuantas: 4 });
+  assert.deepEqual(r.map((n) => n.id), ['s']);
+});
+
+test('primeraOracion corta en el primer punto y descarta lo demasiado largo', () => {
+  assert.equal(primeraOracion('Una. Dos.'), 'Una.');
+  assert.equal(primeraOracion(''), '');
+  assert.equal(primeraOracion(`${'palabra '.repeat(40)}fin.`), '');
 });
