@@ -27,6 +27,7 @@ import { guionNoticia } from '../reels/plan.mjs';
 import { aplicarAviso } from './avisos.mjs';
 import { camposEditables, decisionParaLaWeb } from './notas.mjs';
 import { crearSincronizador, ejecutarGit } from './sincronizar.mjs';
+import { respaldar } from './respaldo.mjs';
 
 const AQUI = import.meta.dirname;
 const DATOS = path.join(AQUI, 'datos');
@@ -65,6 +66,19 @@ const sincronizador = crearSincronizador({
   archivos: ['web/data/decisiones.json', 'web/data/avisos.json'],
   git: (args) => ejecutarGit(args, { cwd: RAIZ_REPO }),
 });
+// Copia de seguridad de panel/datos/ al arrancar y cada 6 horas. La carpeta
+// se fija con RESPALDO_CARPETA (mejor una de Drive/OneDrive: así queda afuera
+// de esta PC); si no, respaldos/ junto al proyecto. Ver panel/respaldo.mjs.
+const hacerRespaldo = () => {
+  try {
+    respaldar({ destino: process.env.RESPALDO_CARPETA ?? path.join(AQUI, '..', 'respaldos') });
+  } catch (e) {
+    console.error('  no se pudo hacer el respaldo:', e.message);
+  }
+};
+setTimeout(hacerRespaldo, 15000);
+setInterval(hacerRespaldo, 6 * 3600 * 1000).unref();
+
 const subirAGitHub = () => { if (process.env.SINCRONIZAR_GITHUB !== 'no') sincronizador.programar(); };
 
 function guardarJson(archivo, datos) {

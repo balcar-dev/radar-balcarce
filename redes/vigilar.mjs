@@ -38,6 +38,18 @@ export const LIMITES = {
   horaDelResumen: 21,
 };
 
+/**
+ * Cosas que vencen en una fecha conocida y hay que renovar a mano. El aviso
+ * sale 30 días antes y se repite (cada seis horas, como todos).
+ */
+export const VENCIMIENTOS = [
+  {
+    clave: 'vence-token-github', fecha: '2027-09-21',
+    texto: 'El token de GitHub que usa cron-job.org vence el 21/09/2027. Hay que crear otro (GitHub → Settings → Developer settings → Fine-grained tokens, sólo este repositorio, permiso Actions: lectura y escritura) y pegarlo en los tres trabajos de cron-job.org.',
+  },
+];
+export const DIAS_DE_AVISO_ANTES = 30;
+
 const minutos = (desde, ahora) => (ahora.getTime() - new Date(desde).getTime()) / 60000;
 
 /**
@@ -68,6 +80,14 @@ export function evaluar({ ahora, web, www = null, corridas = {}, libro = {} }) {
     }
   }
   if (www && !www.redirige) de('www', 'media', 'www.radarbalcarce.com ya no redirige al dominio sin www.');
+
+  // --- lo que vence
+  for (const v of VENCIMIENTOS) {
+    const dias = Math.ceil((new Date(`${v.fecha}T12:00:00-03:00`).getTime() - ahora.getTime()) / 86400000);
+    if (dias <= DIAS_DE_AVISO_ANTES) {
+      de(v.clave, dias <= 7 ? 'alta' : 'media', dias > 0 ? `Faltan ${dias} día(s): ${v.texto}` : `YA VENCIÓ: ${v.texto}`);
+    }
+  }
 
   // --- las corridas de GitHub
   const NOMBRES = { 'Actualizar la web': 'Actualizar la web', Redes: 'Redes', 'Cloudflare Pages': 'Cloudflare Pages' };

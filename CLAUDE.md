@@ -98,9 +98,10 @@ publicar piezas a mano. Detalle y horarios en `REDES.md`.
   24/09 (nameservers de DonWeb → Cloudflare; `www` también). Se despliega solo
   después de cada "Actualizar la web" (`cloudflare-deploy.yml`, con los
   secretos `CLOUDFLARE_API_TOKEN` y `CLOUDFLARE_ACCOUNT_ID`). Vercel sigue
-  desplegando lo mismo pero ya no recibe el dominio: se puede apagar. Falta
-  una regla que redirija `www` al dominio sin `www` (hoy sirve el mismo
-  sitio en los dos). Cloudflare permite publicidad; Vercel Hobby no.
+  desplegando lo mismo pero ya no recibe el dominio: se puede apagar. `www`
+  redirige (301) al dominio sin `www` con una regla de Cloudflare. Web
+  Analytics de Cloudflare está activado. Search Console verificado y con los
+  dos sitemaps enviados (24/09). Cloudflare permite publicidad; Vercel Hobby no.
 - **Redes, al 24/09: andando.** Meta destrabó la cuenta; Redes y Piezas están
   prendidos y los dispara cron-job.org (dos trabajos, uno para "Actualizar la
   web" y otro para el reloj de Redes; si un trabajo falla varias veces
@@ -123,6 +124,20 @@ publicar piezas a mano. Detalle y horarios en `REDES.md`.
   Primer dato, 23/09: 11 visitantes y 27 páginas vistas — recién empieza.
 - **Los tres avisos publicitarios se cargan desde el panel** (pestaña Avisos,
   23/09), no editando `web/data/avisos.json` a mano. Detalle: `REDES.md` § 2.
+- **Vigilancia** (`redes/vigilar.mjs`, workflow "Vigilancia", tercer trabajo de
+  cron-job.org cada 30 min): revisa la web publicada, las corridas de GitHub,
+  el reloj de redes y las piezas fijas del día, y avisa por **WhatsApp**
+  (CallMeBot; secretos `WHATSAPP_TELEFONO` y `WHATSAPP_APIKEY`, los pega una
+  persona) una vez cada 6 horas por problema, más un resumen "todo bien" a las
+  21. También avisa 30 días antes de que venza el token de GitHub
+  (21/09/2027). Sin esos secretos corre igual y no avisa.
+- **Base comercial** (`comercial/`, ver `COMERCIAL.md`): comercios de Balcarce, aparte
+  del sitio, con puntaje de "¿sigue abierto?". Todavía no se usa en la web.
+- **SEO:** `web/scripts/auditar-seo-vivo.mjs [url]` audita las páginas
+  publicadas (título, descripción, h1, canónico, ícono, imagen para compartir).
+- **Respaldo del panel:** `panel/respaldo.mjs` copia `panel/datos/` al arrancar y
+  cada 6 horas; con `RESPALDO_CARPETA` apuntando a Drive/OneDrive queda afuera
+  de la PC.
 - **Lo que decide el panel se sube solo a GitHub** (`panel/sincronizar.mjs`,
   unos segundos después del último cambio; se apaga con
   `SINCRONIZAR_GITHUB=no`). El panel sigue viviendo en la PC: si está apagada,
@@ -152,3 +167,5 @@ publicar piezas a mano. Detalle y horarios en `REDES.md`.
 | prender o apagar la publicación en redes | variable `REDES_ACTIVAS` en GitHub |
 | cambiar cómo se habla con Meta | `redes/meta.mjs` |
 | cargar o sacar un aviso publicitario | panel → Avisos (`web/data/avisos.json`) |
+| cambiar qué revisa el vigilante o cuándo avisa | `redes/vigilar.mjs` |
+| sumar o completar comercios | `comercial/` (ver `COMERCIAL.md`) |

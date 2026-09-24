@@ -27,3 +27,8 @@ web/public/_redirects
 *.log
 .claude/
 reels/canvas-*.png
+# Copias de seguridad del panel (tienen contraseñas con hash y datos del buzón).
+respaldos/
+# Base comercial: el archivo crudo de OpenStreetMap y la vista previa se regeneran.
+comercial/datos/osm-crudo.json
+comercial/salida/

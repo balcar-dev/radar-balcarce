@@ -26,7 +26,8 @@ funciona cada cosa; éste dice **qué falta**.
 
 ## B. Biografías y hashtags
 
-6. **Reescribir las biografías** de Instagram y Facebook: más cortas, centradas
+6. **Reescribir las biografías** de Instagram y Facebook (propuestas listas en
+   `BIOS.md`, falta aplicarlas): más cortas, centradas
    en qué es el medio y qué cubre (Balcarce, clima, farmacia, agenda,
    noticias). La mención a la IA se mantiene por transparencia pero en una
    línea, no como protagonista.
@@ -50,8 +51,11 @@ Lo que ya existe y no hay que repetir: direcciones con el titular adentro
 que vigila el SEO en cada compilación (`web/scripts/revisar-seo.mjs`).
 
 **Google**
-10. Verificar `radarbalcarce.com` en Search Console y enviar el sitemap
-    (ahora hay dos: `sitemap.xml` y `sitemap-news.xml` — enviar los dos).
+10. ~~Verificar en Search Console y enviar el sitemap~~ — hecho el 24/09
+    (propiedad de dominio, con un registro TXT en Cloudflare; los dos
+    sitemaps enviados). Falta mirar en unos días qué páginas indexó Google.
+    **Bing Webmaster Tools** sigue pendiente (se puede importar desde Search
+    Console, pero pide un permiso de Google: lo hace una persona).
 11. ~~Datos estructurados (JSON-LD)~~ — ya estaba hecho (`web/components/ficha.js`):
     `NewsArticle` en cada nota, `NewsMediaOrganization` y `WebSite` en el
     sitio, `BreadcrumbList` en las migas. Esta lista estaba desactualizada.
@@ -125,6 +129,15 @@ que vigila el SEO en cada compilación (`web/scripts/revisar-seo.mjs`).
 30. **Google AdSense**: se decidió dejarlo para más adelante (24/09). Pide
     cuenta con datos fiscales, verificar el sitio y `ads.txt`, y aprobación
     de días a semanas. Ver `IDEAS.md` § "Cómo ganar plata".
+33. **WhatsApp de la vigilancia:** falta activarlo. Con el celular: agregar el
+    contacto de CallMeBot, mandarle "I allow callmebot to send me messages",
+    y cargar en GitHub los secretos `WHATSAPP_TELEFONO` y `WHATSAPP_APIKEY`
+    (pasos en `redes/whatsapp.mjs`). Sin eso el vigilante corre pero no avisa.
+34. **Base comercial:** completar los 145 comercios, pedirle la lista de socios a
+    la Cámara de Comercio y el padrón de habilitaciones al municipio. Todo en
+    `COMERCIAL.md`.
+35. **Backup del panel:** ya se copia solo; falta apuntar `RESPALDO_CARPETA` a una
+    carpeta de Drive/OneDrive para que quede afuera de la PC.
 31. **Panel 100% online.** Hoy vive en la PC de Hernán. Sin gastar: pasar
     lo esencial (aprobar notas, cargar avisos) a una página protegida que
     escriba en el repositorio. Con gasto (~USD 5/mes): alojar el panel

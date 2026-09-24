@@ -223,3 +223,36 @@ test('si la red falla, el error no filtra la clave', async () => {
 test('sinSecretos tapa todo lo que se le pide', () => {
   assert.equal(sinSecretos('a SECRETO b SECRETO', 'SECRETO'), 'a *** b ***');
 });
+
+// ------------------------------------------------------ vencimientos
+
+import { VENCIMIENTOS } from '../redes/vigilar.mjs';
+
+test('un mes antes de que venza el token de GitHub, se avisa', () => {
+  const o = sano(new Date('2027-08-25T12:00:00-03:00'));
+  o.web.actualizado = hace(o.ahora, 20);
+  for (const n of ['clima-manana', 'farmacia', 'clima-noche']) o.libro.instagram[claveDePieza(n, o.ahora)] = {};
+  const r = evaluar(o);
+  const v = r.find((p) => p.clave === 'vence-token-github');
+  assert.ok(v, 'no avisó del vencimiento');
+  assert.match(v.texto, /Faltan \d+ día/);
+});
+
+test('con tiempo de sobra no molesta', () => {
+  assert.ok(!claves(evaluar(sano(A('12:00')))).includes('vence-token-github'));
+});
+
+test('la última semana el aviso es grave', () => {
+  const o = sano(new Date('2027-09-17T12:00:00-03:00'));
+  const v = evaluar(o).find((p) => p.clave === 'vence-token-github');
+  assert.equal(v.nivel, 'alta');
+});
+
+test('pasada la fecha dice que ya venció', () => {
+  const v = evaluar(sano(new Date('2027-09-23T12:00:00-03:00'))).find((p) => p.clave === 'vence-token-github');
+  assert.match(v.texto, /YA VENCIÓ/);
+});
+
+test('el vencimiento apunta al 21/09/2027, como dice REDES.md', () => {
+  assert.equal(VENCIMIENTOS.find((v) => v.clave === 'vence-token-github').fecha, '2027-09-21');
+});

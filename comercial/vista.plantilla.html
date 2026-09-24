@@ -1,0 +1,384 @@
+<title>Guía comercial</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+  :root {
+    --bg: #F4F1EA; --sup: #FFFFFF; --tinta: #14161A; --suave: #5D625D; --linea: #DDD8CB; --linea2: #ECE8DD;
+    --acento: #C7381C; --calle: #CDC7B7; --calle2: #B9B2A0; --mapa: #EFEBE1;
+    --ok: #16615B; --ok-bg: #E4F0EB; --duda: #8A5A12; --duda-bg: #FBF0DA; --mal: #9C2B15; --mal-bg: #FBE7E2; --gris-bg: #ECE8DD;
+    --foco: #14161A;
+    --serif: "Fraunces", Georgia, "Times New Roman", serif;
+    --sans: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+    --mono: "IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      color-scheme: dark;
+      --bg: #15140F; --sup: #1E1D17; --tinta: #F3F0E8; --suave: #A29D8D; --linea: #37332A; --linea2: #2A2820;
+      --acento: #EF6A4C; --calle: #34312A; --calle2: #4A463B; --mapa: #1A1913;
+      --ok: #59B79E; --ok-bg: #16302A; --duda: #E5B25D; --duda-bg: #342A14; --mal: #F08B76; --mal-bg: #3A1E18; --gris-bg: #2A2820;
+      --foco: #F3F0E8;
+    }
+  }
+  :root[data-theme="dark"] {
+    color-scheme: dark;
+    --bg: #15140F; --sup: #1E1D17; --tinta: #F3F0E8; --suave: #A29D8D; --linea: #37332A; --linea2: #2A2820;
+    --acento: #EF6A4C; --calle: #34312A; --calle2: #4A463B; --mapa: #1A1913;
+    --ok: #59B79E; --ok-bg: #16302A; --duda: #E5B25D; --duda-bg: #342A14; --mal: #F08B76; --mal-bg: #3A1E18; --gris-bg: #2A2820;
+    --foco: #F3F0E8;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--tinta); font-family: var(--sans); font-size: 14px; line-height: 1.5; padding-inline: 16px; padding-block: 20px 56px; }
+  .pagina { max-width: 1120px; margin: 0 auto; }
+  h1, h2, h3 { font-family: var(--serif); text-wrap: balance; margin: 0; }
+  button { font: inherit; color: inherit; cursor: pointer; }
+  :focus-visible { outline: 2px solid var(--foco); outline-offset: 2px; }
+  .num { font-variant-numeric: tabular-nums; }
+
+  .cabecera { display: flex; flex-wrap: wrap; gap: 8px 20px; align-items: flex-end; justify-content: space-between; padding-bottom: 16px; border-bottom: 1px solid var(--linea); }
+  .cabecera h1 { font-size: clamp(26px, 5vw, 38px); font-weight: 800; line-height: 1.05; }
+  .cabecera h1 span { color: var(--acento); }
+  .borrador { font-family: var(--mono); font-size: 11px; letter-spacing: .06em; text-transform: uppercase; color: var(--duda); background: var(--duda-bg); padding: 4px 9px; border-radius: 4px; }
+  .sub { color: var(--suave); max-width: 62ch; margin: 8px 0 0; }
+
+  .cifras { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 0; margin: 16px 0 6px; border: 1px solid var(--linea); background: var(--sup); }
+  .cifra { padding: 10px 14px; border-right: 1px solid var(--linea2); }
+  .cifra:last-child { border-right: 0; }
+  .cifra b { display: block; font-family: var(--mono); font-weight: 500; font-size: 22px; }
+  .cifra span { font-size: 11.5px; color: var(--suave); }
+
+  .pestanas { display: flex; gap: 2px; margin: 18px 0 14px; border-bottom: 1px solid var(--linea); overflow-x: auto; scrollbar-width: none; }
+  .pestanas::-webkit-scrollbar { display: none; }
+  .pestanas button { background: none; border: 0; padding: 10px 16px; font-weight: 600; color: var(--suave); border-bottom: 2px solid transparent; margin-bottom: -1px; white-space: nowrap; }
+  .pestanas button[aria-selected="true"] { color: var(--tinta); border-bottom-color: var(--acento); }
+
+  /* ---- mapa */
+  .mapa-grid { display: grid; grid-template-columns: minmax(0, 1fr) 340px; gap: 16px; align-items: start; }
+  @media (max-width: 880px) { .mapa-grid { grid-template-columns: 1fr; } }
+  .lienzo { position: relative; background: var(--mapa); border: 1px solid var(--linea); aspect-ratio: 1 / 1; max-height: 78vh; width: 100%; overflow: hidden; touch-action: none; }
+  .lienzo svg { width: 100%; height: 100%; display: block; cursor: grab; }
+  .lienzo svg:active { cursor: grabbing; }
+  .zoom { position: absolute; right: 10px; top: 10px; display: flex; flex-direction: column; gap: 4px; }
+  .zoom button { width: 34px; height: 34px; background: var(--sup); border: 1px solid var(--linea); font-size: 18px; line-height: 1; }
+  .nota-mapa { position: absolute; left: 10px; bottom: 8px; font-size: 11px; color: var(--suave); background: color-mix(in srgb, var(--mapa) 85%, transparent); padding: 2px 6px; }
+  .calle { fill: none; stroke: var(--calle); stroke-linecap: round; stroke-linejoin: round; vector-effect: non-scaling-stroke; }
+  .calle.g { stroke: var(--calle2); }
+  .punto { stroke: var(--sup); stroke-width: 1.2; vector-effect: non-scaling-stroke; cursor: pointer; }
+  .punto.tenue { opacity: .14; }
+  .punto.sel { stroke: var(--tinta); stroke-width: 2.4; }
+  .halo { fill: none; stroke: var(--acento); stroke-width: 2; vector-effect: non-scaling-stroke; pointer-events: none; }
+
+  .lateral { display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+  .buscar { width: 100%; padding: 9px 11px; border: 1px solid var(--linea); background: var(--sup); color: var(--tinta); font: inherit; }
+  .chips { display: flex; flex-wrap: wrap; gap: 5px; }
+  .chip { display: inline-flex; align-items: center; gap: 6px; border: 1px solid var(--linea); background: var(--sup); padding: 3px 9px; font-size: 12px; border-radius: 99px; }
+  .chip[aria-pressed="true"] { background: var(--tinta); color: var(--bg); border-color: var(--tinta); }
+  .chip i { width: 8px; height: 8px; border-radius: 50%; display: inline-block; }
+  .chip small { color: inherit; opacity: .65; font-family: var(--mono); }
+  .lista { border: 1px solid var(--linea); background: var(--sup); max-height: 440px; overflow-y: auto; }
+  .fila { display: flex; gap: 10px; width: 100%; text-align: left; background: none; border: 0; border-bottom: 1px solid var(--linea2); padding: 8px 12px; align-items: flex-start; }
+  .fila:hover, .fila[aria-current="true"] { background: var(--gris-bg); }
+  .fila i { width: 9px; height: 9px; border-radius: 50%; margin-top: 6px; flex: 0 0 auto; }
+  .fila b { font-weight: 600; display: block; }
+  .fila small { color: var(--suave); }
+  .vacio { padding: 18px; color: var(--suave); text-align: center; }
+
+  .ficha { background: var(--sup); border: 1px solid var(--linea); padding: 14px; }
+  .ficha h2 { font-size: 21px; font-weight: 800; }
+  .ficha .rubro { font-family: var(--mono); font-size: 11px; letter-spacing: .05em; text-transform: uppercase; color: var(--suave); margin-bottom: 4px; }
+  .ficha dl { display: grid; grid-template-columns: 84px 1fr; gap: 4px 10px; margin: 10px 0 0; }
+  .ficha dt { color: var(--suave); font-size: 12px; }
+  .ficha dd { margin: 0; overflow-wrap: anywhere; }
+  .ficha .falta { color: var(--suave); font-style: italic; }
+  .sello { display: inline-block; font-size: 11.5px; font-weight: 600; padding: 2px 8px; border-radius: 4px; }
+  .sello.activo { background: var(--ok-bg); color: var(--ok); }
+  .sello.dudoso, .sello.a-confirmar { background: var(--duda-bg); color: var(--duda); }
+  .sello.cerrado { background: var(--mal-bg); color: var(--mal); }
+  .sello.sin-verificar { background: var(--gris-bg); color: var(--suave); }
+  .senales { margin: 8px 0 0; padding-left: 16px; color: var(--suave); font-size: 12.5px; }
+
+  /* ---- guía */
+  .guia { display: flex; flex-direction: column; gap: 22px; }
+  .rubro-bloque h2 { font-size: 20px; font-weight: 800; display: flex; gap: 10px; align-items: baseline; padding-bottom: 6px; border-bottom: 2px solid var(--tinta); }
+  .rubro-bloque h2 small { font-family: var(--mono); font-size: 12px; color: var(--suave); font-weight: 400; }
+  .tarjetas { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 0; }
+  .tarjeta { padding: 12px 14px 12px 0; border-bottom: 1px solid var(--linea); min-width: 0; }
+  .tarjeta h3 { font-family: var(--sans); font-size: 15px; font-weight: 600; }
+  .tarjeta p { margin: 2px 0 0; color: var(--suave); font-size: 13px; overflow-wrap: anywhere; }
+  .tarjeta .sin { color: var(--suave); opacity: .7; font-style: italic; }
+  .aviso-guia { background: var(--sup); border: 1px solid var(--linea); padding: 12px 14px; color: var(--suave); }
+
+  /* ---- trabajo */
+  .barra-trabajo { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-bottom: 10px; }
+  .barra-trabajo select { padding: 7px 9px; border: 1px solid var(--linea); background: var(--sup); color: var(--tinta); font: inherit; }
+  .tabla { overflow-x: auto; border: 1px solid var(--linea); background: var(--sup); }
+  table { border-collapse: collapse; width: 100%; min-width: 720px; }
+  th { text-align: left; font-family: var(--mono); font-size: 11px; font-weight: 500; letter-spacing: .05em; text-transform: uppercase; color: var(--suave); padding: 8px 12px; border-bottom: 1px solid var(--linea); background: var(--linea2); }
+  td { padding: 9px 12px; border-bottom: 1px solid var(--linea2); vertical-align: top; }
+  tr.detalle td { background: var(--gris-bg); color: var(--suave); font-size: 12.5px; }
+  .medidor { width: 90px; height: 6px; background: var(--linea2); display: inline-block; vertical-align: middle; margin-right: 8px; }
+  .medidor i { display: block; height: 100%; background: var(--acento); }
+  .pie { margin-top: 26px; color: var(--suave); font-size: 12px; max-width: 80ch; }
+</style>
+
+<div class="pagina">
+  <header class="cabecera">
+    <div>
+      <h1>Guía comercial <span>Balcarce</span></h1>
+      <p class="sub">Así quedaría la guía y el mapa. Es una base aparte del sitio, armada con datos abiertos: todavía no está publicada y nada de esto sale en la web.</p>
+    </div>
+    <span class="borrador">Vista previa · sin publicar</span>
+  </header>
+
+  <div class="cifras" id="cifras"></div>
+
+  <div class="pestanas" role="tablist">
+    <button role="tab" id="t-mapa" aria-selected="true" data-t="mapa">Mapa</button>
+    <button role="tab" id="t-guia" aria-selected="false" data-t="guia">La guía como la ve un vecino</button>
+    <button role="tab" id="t-trabajo" aria-selected="false" data-t="trabajo">Qué falta confirmar</button>
+  </div>
+
+  <section id="p-mapa">
+    <div class="mapa-grid">
+      <div class="lienzo" id="lienzo">
+        <svg id="svg" role="img" aria-label="Mapa de Balcarce con los comercios"></svg>
+        <div class="zoom">
+          <button id="mas" aria-label="Acercar">+</button>
+          <button id="menos" aria-label="Alejar">−</button>
+          <button id="ini" aria-label="Ver todo" style="font-size:12px">⌂</button>
+        </div>
+        <span class="nota-mapa">Arrastrá para mover · rueda o botones para acercar</span>
+      </div>
+      <div class="lateral">
+        <input class="buscar" id="buscar" type="search" placeholder="Buscar por nombre o calle" aria-label="Buscar comercio">
+        <div class="chips" id="chips"></div>
+        <div id="ficha"></div>
+        <div class="lista" id="lista"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="p-guia" hidden></section>
+
+  <section id="p-trabajo" hidden>
+    <div class="barra-trabajo">
+      <label for="f-accion" style="color:var(--suave)">Mostrar:</label>
+      <select id="f-accion"></select>
+      <span id="cuenta-trabajo" class="num" style="color:var(--suave)"></span>
+    </div>
+    <div class="tabla"><table><thead><tr><th>Comercio</th><th>Rubro</th><th>Datos cargados</th><th>¿Sigue abierto?</th><th>Qué hacer</th></tr></thead><tbody id="cuerpo-trabajo"></tbody></table></div>
+  </section>
+
+  <p class="pie" id="pie"></p>
+</div>
+
+<script>
+const D = __DATOS__;
+const C = __CALLES__;
+
+const COLORES = {
+  'Gastronomía': '#D9541E', 'Alimentos y almacenes': '#B9861B', 'Indumentaria y calzado': '#B04A86', 'Hogar y ferretería': '#7A6A55',
+  'Salud y farmacias': '#1F8A5B', 'Belleza y cuidado personal': '#C2557A', 'Automotor y combustible': '#4C5B66', 'Tecnología y comunicaciones': '#2B6DB3',
+  'Servicios profesionales': '#5B57B5', 'Finanzas y seguros': '#2A7F8E', 'Educación y cultura': '#8A54B8', 'Turismo y alojamiento': '#3F8F3A',
+  'Campo y agro': '#799328', 'Mascotas': '#A86B3C', 'Otros': '#8B8F8A',
+};
+const colorDe = (r) => COLORES[r] || COLORES['Otros'];
+const ESTADOS = { 'activo': 'Sigue abierto', 'dudoso': 'Dudoso', 'a-confirmar': 'A confirmar', 'cerrado': 'Cerrado', 'sin-verificar': 'Sin verificar' };
+const $ = (s) => document.querySelector(s);
+const esc = (s) => String(s == null ? '' : s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+
+const com = D.comercios;
+let rubroSel = null, sel = null, texto = '';
+
+/* ---------------- cifras */
+(function () {
+  const r = D.resumen;
+  const cel = (n, t) => '<div class="cifra"><b class="num">' + n + '</b><span>' + t + '</span></div>';
+  $('#cifras').innerHTML = cel(r.total, 'comercios en la base') + cel(r.conMapa, 'ubicados en el mapa') + cel(r.conDireccion, 'con dirección')
+    + cel(r.conTelefono, 'con teléfono') + cel(r.conRedes + r.conWeb, 'con red social o web') + cel((r.porEstado.activo || 0), 'que sabemos que siguen abiertos');
+  $('#pie').textContent = 'Fuente de los datos: ' + (D.fuentes || []).join(' · ') + '. Generado el ' + new Date(D.generado).toLocaleDateString('es-AR', { day: 'numeric', month: 'long', year: 'numeric' }) + '. Sólo datos del negocio, nunca de personas.';
+})();
+
+/* ---------------- pestañas */
+document.querySelectorAll('.pestanas button').forEach((b) => b.addEventListener('click', () => {
+  document.querySelectorAll('.pestanas button').forEach((x) => x.setAttribute('aria-selected', x === b ? 'true' : 'false'));
+  ['mapa', 'guia', 'trabajo'].forEach((t) => { $('#p-' + t).hidden = t !== b.dataset.t; });
+  if (b.dataset.t === 'mapa') dibujarPuntos();
+}));
+
+/* ---------------- mapa */
+const [S, W, N, E] = C.caja.map(Number);
+const kx = Math.cos(((S + N) / 2) * Math.PI / 180);
+const proy = (lat, lon) => [(lon - W) * kx * 1000, (N - lat) * 1000];
+const ANCHO = (E - W) * kx * 1000, ALTO = (N - S) * 1000;
+let vb = [0, 0, Math.max(ANCHO, ALTO), Math.max(ANCHO, ALTO)];
+const svg = $('#svg');
+const NS = 'http://www.w3.org/2000/svg';
+// Arranca encuadrado donde están los comercios (sin el 3% más alejado de cada lado).
+const encuadre = (function () {
+  const xs = [], ys = [];
+  com.forEach((c) => { if (c.ubicacion) { const p = proy(c.ubicacion.lat, c.ubicacion.lon); xs.push(p[0]); ys.push(p[1]); } });
+  if (!xs.length) return vb.slice();
+  xs.sort((a, b) => a - b); ys.sort((a, b) => a - b);
+  const q = (a, f) => a[Math.min(a.length - 1, Math.max(0, Math.floor(a.length * f)))];
+  const x0 = q(xs, 0.04), x1 = q(xs, 0.96), y0 = q(ys, 0.04), y1 = q(ys, 0.96);
+  const lado = Math.max(x1 - x0, y1 - y0) * 1.25;
+  return [(x0 + x1) / 2 - lado / 2, (y0 + y1) / 2 - lado / 2, lado, lado];
+})();
+const inicial = [vb[0], vb[1], vb[2], vb[3]];
+vb = encuadre.slice();
+
+function armarMapa() {
+  const grandes = { trunk: 1, primary: 1, secondary: 1 };
+  let h = '<g>';
+  C.calles.forEach((c) => {
+    const pts = c.g.map((p) => proy(p[0], p[1]).map((n) => n.toFixed(2)).join(',')).join(' ');
+    h += '<polyline class="calle' + (grandes[c.t] ? ' g' : '') + '" points="' + pts + '" style="stroke-width:' + (grandes[c.t] ? 2.2 : 1.1) + 'px"/>';
+  });
+  h += '</g><g id="capa-puntos"></g><g id="capa-halo"></g>';
+  svg.innerHTML = h;
+  aplicarVista();
+}
+function aplicarVista() { svg.setAttribute('viewBox', vb.join(' ')); ajustarRadio(); }
+function ajustarRadio() {
+  const px = svg.getBoundingClientRect().width || 600;
+  const r = 5.2 * vb[2] / px;
+  document.querySelectorAll('#capa-puntos circle').forEach((c) => c.setAttribute('r', c.classList.contains('sel') ? r * 1.5 : r));
+  const h = $('#capa-halo circle'); if (h) h.setAttribute('r', r * 2.6);
+}
+function visibles() {
+  return com.filter((c) => (!rubroSel || c.rubro === rubroSel) && (!texto || (c.nombre + ' ' + ((c.direccion && c.direccion.texto) || '')).toLowerCase().includes(texto)));
+}
+function dibujarPuntos() {
+  const cap = $('#capa-puntos'); if (!cap) return;
+  const vis = new Set(visibles().map((c) => c.id));
+  cap.innerHTML = '';
+  com.forEach((c) => {
+    if (!c.ubicacion) return;
+    const p = proy(c.ubicacion.lat, c.ubicacion.lon);
+    const el = document.createElementNS(NS, 'circle');
+    el.setAttribute('cx', p[0]); el.setAttribute('cy', p[1]);
+    el.setAttribute('fill', colorDe(c.rubro));
+    el.setAttribute('class', 'punto' + (vis.has(c.id) ? '' : ' tenue') + (sel === c.id ? ' sel' : ''));
+    el.addEventListener('click', (e) => { e.stopPropagation(); elegir(c.id, false); });
+    const t = document.createElementNS(NS, 'title'); t.textContent = c.nombre; el.appendChild(t);
+    cap.appendChild(el);
+  });
+  ajustarRadio();
+  const halo = $('#capa-halo'); halo.innerHTML = '';
+  const s = com.find((c) => c.id === sel);
+  if (s && s.ubicacion) {
+    const p = proy(s.ubicacion.lat, s.ubicacion.lon);
+    const h = document.createElementNS(NS, 'circle'); h.setAttribute('class', 'halo'); h.setAttribute('cx', p[0]); h.setAttribute('cy', p[1]); halo.appendChild(h);
+    ajustarRadio();
+  }
+}
+function zoom(f, cx, cy) {
+  const nw = Math.min(inicial[2] * 1.05, Math.max(inicial[2] / 30, vb[2] * f));
+  const k = nw / vb[2];
+  const px = cx == null ? vb[0] + vb[2] / 2 : cx, py = cy == null ? vb[1] + vb[3] / 2 : cy;
+  vb = [px - (px - vb[0]) * k, py - (py - vb[1]) * k, nw, nw];
+  aplicarVista();
+}
+function aPunto(ev) {
+  const r = svg.getBoundingClientRect();
+  return [vb[0] + ((ev.clientX - r.left) / r.width) * vb[2], vb[1] + ((ev.clientY - r.top) / r.height) * vb[3]];
+}
+svg.addEventListener('wheel', (e) => { e.preventDefault(); const p = aPunto(e); zoom(e.deltaY < 0 ? 0.8 : 1.25, p[0], p[1]); }, { passive: false });
+let arrastre = null;
+svg.addEventListener('pointerdown', (e) => { arrastre = { x: e.clientX, y: e.clientY, vb: vb.slice() }; svg.setPointerCapture(e.pointerId); });
+svg.addEventListener('pointermove', (e) => {
+  if (!arrastre) return;
+  const r = svg.getBoundingClientRect();
+  vb = [arrastre.vb[0] - ((e.clientX - arrastre.x) / r.width) * vb[2], arrastre.vb[1] - ((e.clientY - arrastre.y) / r.height) * vb[3], vb[2], vb[3]];
+  aplicarVista();
+});
+svg.addEventListener('pointerup', () => { arrastre = null; });
+$('#mas').addEventListener('click', () => zoom(0.7));
+$('#menos').addEventListener('click', () => zoom(1.4));
+$('#ini').addEventListener('click', () => { vb = encuadre.slice(); aplicarVista(); });
+window.addEventListener('resize', ajustarRadio);
+
+/* ---------------- lista y ficha */
+function armarChips() {
+  const cuenta = {}; com.forEach((c) => { cuenta[c.rubro] = (cuenta[c.rubro] || 0) + 1; });
+  const orden = Object.keys(cuenta).sort((a, b) => cuenta[b] - cuenta[a]);
+  $('#chips').innerHTML = orden.map((r) => '<button class="chip" data-r="' + esc(r) + '" aria-pressed="false"><i style="background:' + colorDe(r) + '"></i>' + esc(r) + ' <small>' + cuenta[r] + '</small></button>').join('');
+  document.querySelectorAll('#chips .chip').forEach((b) => b.addEventListener('click', () => {
+    rubroSel = rubroSel === b.dataset.r ? null : b.dataset.r;
+    document.querySelectorAll('#chips .chip').forEach((x) => x.setAttribute('aria-pressed', x.dataset.r === rubroSel ? 'true' : 'false'));
+    refrescar();
+  }));
+}
+function refrescar() { armarLista(); dibujarPuntos(); }
+function armarLista() {
+  const v = visibles().sort((a, b) => a.nombre.localeCompare(b.nombre, 'es'));
+  $('#lista').innerHTML = v.length ? v.map((c) => '<button class="fila" data-id="' + esc(c.id) + '"' + (c.id === sel ? ' aria-current="true"' : '') + '><i style="background:' + colorDe(c.rubro) + '"></i><span><b>' + esc(c.nombre) + '</b><small>' + esc(c.rubro) + (c.direccion && c.direccion.texto ? ' · ' + esc(c.direccion.texto) : '') + '</small></span></button>').join('') : '<div class="vacio">Ningún comercio con ese filtro.</div>';
+  document.querySelectorAll('#lista .fila').forEach((b) => b.addEventListener('click', () => elegir(b.dataset.id, true)));
+}
+function dato(v) { return v ? esc(v) : '<span class="falta">sin dato</span>'; }
+function elegir(id, centrar) {
+  sel = id;
+  const c = com.find((x) => x.id === id);
+  if (c && c.ubicacion && centrar) {
+    const p = proy(c.ubicacion.lat, c.ubicacion.lon);
+    const w = Math.min(vb[2], inicial[2] / 4);
+    vb = [p[0] - w / 2, p[1] - w / 2, w, w];
+    aplicarVista();
+  }
+  const v = c.vigencia || {};
+  $('#ficha').innerHTML = '<div class="ficha"><div class="rubro">' + esc(c.rubro) + '</div><h2>' + esc(c.nombre) + '</h2>'
+    + '<div style="margin-top:6px"><span class="sello ' + esc(v.estado || 'sin-verificar') + '">' + esc(ESTADOS[v.estado] || 'Sin verificar') + (v.puntaje != null ? ' · ' + v.puntaje + '/100' : '') + '</span></div>'
+    + '<dl><dt>Dirección</dt><dd>' + dato(c.direccion && c.direccion.texto) + '</dd><dt>Teléfono</dt><dd>' + dato(c.contacto && c.contacto.telefono) + '</dd>'
+    + '<dt>Horario</dt><dd>' + dato(c.horarios) + '</dd><dt>Web</dt><dd>' + dato(c.contacto && c.contacto.web) + '</dd>'
+    + '<dt>Redes</dt><dd>' + dato([c.redes && c.redes.instagram, c.redes && c.redes.facebook].filter(Boolean).join(' · ')) + '</dd></dl>'
+    + (v.senales && v.senales.length ? '<ul class="senales">' + v.senales.map((s) => '<li>' + esc(s) + '</li>').join('') + '</ul>' : '')
+    + '<p style="margin:10px 0 0;font-size:12.5px"><b>Qué hacer:</b> ' + esc(c.accion) + '</p></div>';
+  armarLista(); dibujarPuntos();
+}
+$('#buscar').addEventListener('input', (e) => { texto = e.target.value.trim().toLowerCase(); refrescar(); });
+
+/* ---------------- la guía */
+(function () {
+  const porRubro = {};
+  com.forEach((c) => { (porRubro[c.rubro] = porRubro[c.rubro] || []).push(c); });
+  const orden = D.rubros.filter((r) => porRubro[r]);
+  let h = '<div class="guia"><p class="aviso-guia">Los comercios <b>sin dato</b> se muestran con lo que hay. En la guía real sólo entra quien confirmó que sigue abierto; el resto queda en la lista de trabajo.</p>';
+  orden.forEach((r) => {
+    const l = porRubro[r].slice().sort((a, b) => b.completitud - a.completitud || a.nombre.localeCompare(b.nombre, 'es'));
+    h += '<div class="rubro-bloque"><h2>' + esc(r) + ' <small class="num">' + l.length + '</small></h2><div class="tarjetas">';
+    l.forEach((c) => {
+      h += '<article class="tarjeta"><h3>' + esc(c.nombre) + '</h3>'
+        + '<p>' + (c.direccion && c.direccion.texto ? esc(c.direccion.texto) : '<span class="sin">Dirección a confirmar</span>') + '</p>'
+        + (c.contacto && c.contacto.telefono ? '<p class="num">' + esc(c.contacto.telefono) + '</p>' : '')
+        + (c.horarios ? '<p>' + esc(c.horarios) + '</p>' : '') + '</article>';
+    });
+    h += '</div></div>';
+  });
+  $('#p-guia').innerHTML = h + '</div>';
+})();
+
+/* ---------------- lo que falta */
+(function () {
+  const acciones = Array.from(new Set(com.map((c) => c.accion)));
+  const cuenta = {}; com.forEach((c) => { cuenta[c.accion] = (cuenta[c.accion] || 0) + 1; });
+  $('#f-accion').innerHTML = '<option value="">Todo (' + com.length + ')</option>' + acciones.sort((a, b) => cuenta[b] - cuenta[a]).map((a) => '<option value="' + esc(a) + '">' + esc(a) + ' (' + cuenta[a] + ')</option>').join('');
+  function pintar() {
+    const f = $('#f-accion').value;
+    const l = com.filter((c) => !f || c.accion === f).sort((a, b) => b.completitud - a.completitud || a.nombre.localeCompare(b.nombre, 'es'));
+    $('#cuenta-trabajo').textContent = l.length + ' comercios';
+    $('#cuerpo-trabajo').innerHTML = l.map((c) => {
+      const v = c.vigencia || {};
+      return '<tr class="fila-t" data-id="' + esc(c.id) + '"><td><b>' + esc(c.nombre) + '</b></td><td>' + esc(c.rubro) + '</td>'
+        + '<td class="num"><span class="medidor"><i style="width:' + c.completitud + '%"></i></span>' + c.completitud + '%</td>'
+        + '<td><span class="sello ' + esc(v.estado || 'sin-verificar') + '">' + esc(ESTADOS[v.estado] || 'Sin verificar') + '</span> <span class="num" style="color:var(--suave)">' + (v.puntaje == null ? '' : v.puntaje) + '</span></td>'
+        + '<td>' + esc(c.accion) + '</td></tr>'
+        + '<tr class="detalle" hidden><td colspan="5">' + ((v.senales || []).map(esc).join(' · ') || 'Todavía no hay señales.') + '</td></tr>';
+    }).join('');
+    document.querySelectorAll('.fila-t').forEach((tr) => tr.addEventListener('click', () => { tr.nextElementSibling.hidden = !tr.nextElementSibling.hidden; }));
+  }
+  $('#f-accion').addEventListener('change', pintar);
+  pintar();
+})();
+
+armarMapa(); armarChips(); armarLista(); dibujarPuntos();
+</script>
