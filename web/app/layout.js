@@ -4,7 +4,6 @@ import {
 } from '@/lib/datos';
 import { PastillaClima } from '@/components/clima-vivo';
 import { comoNombre } from '@/lib/texto';
-import { Analytics } from '@vercel/analytics/next';
 import Buscador from '@/components/buscador';
 import { Aviso } from '@/components/avisos';
 import { sitio, enElDominioPropio, NOMBRE } from '@/lib/sitio';
@@ -26,6 +25,8 @@ export const metadata = {
   title: { default: NOMBRE, template: `%s · ${NOMBRE}` },
   description: DESCRIPCION,
   applicationName: NOMBRE,
+  icons: { icon: [{ url: '/favicon.ico', sizes: 'any' }, { url: '/icon-192.png', type: 'image/png', sizes: '192x192' }, { url: '/icon-512.png', type: 'image/png', sizes: '512x512' }], apple: '/apple-touch-icon.png' },
+  manifest: '/manifest.webmanifest',
   alternates: { canonical: '/', types: { 'application/rss+xml': '/feed.xml' } },
   openGraph: {
     siteName: NOMBRE,
@@ -158,12 +159,11 @@ export default function RaizLayout({ children }) {
 
         <main>{children}</main>
 
-        {/* Las analíticas de Vercel: cuenta visitas y qué nota se leyó, sin
+        {/* Las analíticas (Cloudflare Web Analytics, se prende desde el panel de Cloudflare, no desde el código): cuenta visitas y qué nota se leyó, sin
             cookies, sin seguir a nadie entre sitios y sin guardar direcciones
             IP. Se eligió ésta y no Google Analytics justamente por eso: un
             medio chico que promete cuidar a sus lectores no puede estar
             entregándoselos a una red publicitaria. */}
-        <Analytics />
 
         <footer className="principal">
           <div className="envoltura">

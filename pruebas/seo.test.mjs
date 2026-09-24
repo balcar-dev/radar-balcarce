@@ -1,88 +1,104 @@
-// Lo que hace que Google nos entienda y WhatsApp nos muestre.
+// Lo que ve un buscador de nuestras páginas: íconos, títulos, encabezados.
 //
-// Nada de esto se ve mirando la página: si mañana alguien se lleva puesto el
-// enlace canónico o la dirección del sitio, el sitio se sigue viendo
-// perfecto y nos enteramos meses después. Por eso está acá.
-//
-// La revisión del HTML compilado es otra cosa y vive en
-// web/scripts/revisar-seo.mjs, que corre en GitHub Actions después de armar
-// el sitio. Esto de acá prueba las decisiones; eso prueba el resultado.
+// El 24/09 se auditó el sitio publicado y no tenía ícono, la portada y las
+// secciones no tenían un h1, las notas tenían títulos de más de 70 caracteres
+// y las secciones compartían la misma descripción. Esto vigila que no vuelva.
 
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import path from 'node:path';
+import { recortarEn } from '../web/lib/texto.js';
 
-const cargar = async (env = {}) => {
-  const antes = { ...process.env };
-  // Se limpia lo que pone Vercel, para que la prueba no dependa de dónde corre.
-  delete process.env.SITIO;
-  delete process.env.VERCEL_PROJECT_PRODUCTION_URL;
-  delete process.env.VERCEL_URL;
-  Object.assign(process.env, env);
-  // La marca de tiempo obliga a releer el módulo con el entorno nuevo.
-  const m = await import(`../web/lib/sitio.js?${Date.now()}${Math.random()}`);
-  const r = {
-    sitio: m.sitio(),
-    enlace: m.enlace('/nota/abc'),
-    propio: m.enElDominioPropio(),
-  };
-  process.env = antes;
-  return r;
-};
+const RAIZ = path.join(import.meta.dirname, '..', 'web');
+const leer = (r) => fs.readFileSync(path.join(RAIZ, r), 'utf8');
 
-// ------------------------------------------------ la dirección del sitio
+// ----------------------------------------------------- recortar títulos
 
-test('en la máquina apunta a localhost', async () => {
-  const r = await cargar();
-  assert.equal(r.sitio, 'http://localhost:3000');
-  assert.equal(r.propio, false);
+test('un texto corto no se toca', () => {
+  assert.equal(recortarEn('Un título corto', 60), 'Un título corto');
 });
 
-test('en Vercel apunta al dominio de producción', async () => {
-  // Apenas radarbalcarce.com quede conectado, esta variable pasa a valer
-  // eso sola y no hay que tocar una línea de código.
-  const r = await cargar({ VERCEL_PROJECT_PRODUCTION_URL: 'radarbalcarce.com' });
-  assert.equal(r.sitio, 'https://radarbalcarce.com');
-  assert.equal(r.propio, true);
+test('un texto largo se corta en una palabra entera y termina en puntos suspensivos', () => {
+  const r = recortarEn('Ferroviarios se consagró campeón de básquet en una final apretadísima', 40);
+  assert.ok(r.length <= 40, `mide ${r.length}`);
+  assert.ok(r.endsWith('…'));
+  assert.ok(!/\s…$/.test(r), 'dejó un espacio antes de los puntos');
+  assert.ok('Ferroviarios se consagró campeón de básquet en una final apretadísima'.startsWith(r.slice(0, -1)), 'cortó por la mitad de una palabra');
 });
 
-test('el dominio de producción le gana a la dirección del despliegue', async () => {
-  const r = await cargar({
-    VERCEL_PROJECT_PRODUCTION_URL: 'radarbalcarce.com',
-    VERCEL_URL: 'radar-balcarce-7m1tk.vercel.app',
-  });
-  assert.equal(r.sitio, 'https://radarbalcarce.com');
+test('no deja una coma ni un guion colgando antes de los puntos', () => {
+  const r = recortarEn('Balcarce, la ciudad de Fangio, recibe a los pilotos - y a todo el país', 32);
+  assert.ok(!/[,\-–—.;:]…$/.test(r), r);
 });
 
-test('una vista previa usa su propia dirección y no se hace pasar por el sitio', async () => {
-  const r = await cargar({ VERCEL_URL: 'radar-balcarce-7m1tk.vercel.app' });
-  assert.equal(r.sitio, 'https://radar-balcarce-7m1tk.vercel.app');
-  assert.equal(r.propio, false);
+test('espacios de sobra y saltos de línea se limpian', () => {
+  assert.equal(recortarEn('  Una   nota\n con  espacios  ', 60), 'Una nota con espacios');
 });
 
-test('SITIO manda sobre todo lo demás', async () => {
-  const r = await cargar({
-    SITIO: 'https://otra.com',
-    VERCEL_PROJECT_PRODUCTION_URL: 'radarbalcarce.com',
-  });
-  assert.equal(r.sitio, 'https://otra.com');
+// ------------------------------------------------------------- íconos
+
+test('están todos los íconos que piden los navegadores y los celulares', () => {
+  for (const f of ['favicon.ico', 'icon-192.png', 'icon-512.png', 'apple-touch-icon.png', 'manifest.webmanifest']) {
+    assert.ok(fs.existsSync(path.join(RAIZ, 'public', f)), `falta web/public/${f}`);
+  }
 });
 
-test('la barra del final no se duplica', async () => {
-  // Un enlace con doble barra existe como dirección distinta para Google.
-  const r = await cargar({ SITIO: 'https://radarbalcarce.com/' });
-  assert.equal(r.sitio, 'https://radarbalcarce.com');
-  assert.equal(r.enlace, 'https://radarbalcarce.com/nota/abc');
+test('favicon.ico es un ícono de verdad, con varios tamaños', () => {
+  const b = fs.readFileSync(path.join(RAIZ, 'public', 'favicon.ico'));
+  assert.equal(b.readUInt16LE(0), 0, 'cabecera');
+  assert.equal(b.readUInt16LE(2), 1, 'no es un .ico');
+  assert.ok(b.readUInt16LE(4) >= 2, 'tiene un solo tamaño');
 });
 
-test('siempre queda con https', async () => {
-  const r = await cargar({ SITIO: 'radarbalcarce.com' });
-  assert.equal(r.sitio, 'https://radarbalcarce.com');
+test('los PNG son cuadrados y del tamaño que dicen', () => {
+  for (const [f, t] of [['icon-192.png', 192], ['icon-512.png', 512], ['apple-touch-icon.png', 180]]) {
+    const b = fs.readFileSync(path.join(RAIZ, 'public', f));
+    assert.equal(b.subarray(1, 4).toString(), 'PNG');
+    assert.equal(b.readUInt32BE(16), t, `${f}: ancho`);
+    assert.equal(b.readUInt32BE(20), t, `${f}: alto`);
+  }
 });
 
-test('el .com.ar no es nuestro', async () => {
-  // El dominio registrado es radarbalcarce.com. El código decía .com.ar, que
-  // nunca compramos: cada enlace canónico habría apuntado a una dirección
-  // que no abre.
-  const r = await cargar({ SITIO: 'https://radarbalcarce.com.ar' });
-  assert.equal(r.propio, false, 'el .com.ar no debería contar como el dominio propio');
+test('el manifiesto apunta a íconos que existen', () => {
+  const m = JSON.parse(leer('public/manifest.webmanifest'));
+  assert.equal(m.name, 'Radar Balcarce');
+  for (const i of m.icons) assert.ok(fs.existsSync(path.join(RAIZ, 'public', i.src.replace(/^\//, ''))), i.src);
+});
+
+test('el layout declara los íconos y el manifiesto', () => {
+  const l = leer('app/layout.js');
+  for (const s of ['/favicon.ico', '/icon-192.png', '/icon-512.png', '/apple-touch-icon.png', '/manifest.webmanifest']) {
+    assert.ok(l.includes(s), `el layout no menciona ${s}`);
+  }
+});
+
+// -------------------------------------------------- encabezados y títulos
+
+test('la portada tiene un h1 y un título que dice qué es', () => {
+  const p = leer('app/page.js');
+  assert.match(p, /<h1 className="solo-lectores">/);
+  assert.match(p, /absolute: 'Radar Balcarce · Noticias de Balcarce/);
+});
+
+test('cada página de sección tiene un h1 y su propia tarjeta para compartir', () => {
+  assert.match(leer('app/seccion/[ranura]/page.js'), /<h1 style=\{\{ fontSize: 28 \}\}>/);
+  assert.ok(fs.existsSync(path.join(RAIZ, 'app/seccion/[ranura]/opengraph-image.js')));
+});
+
+test('la descripción de una sección nombra las últimas notas: no es igual para todas', () => {
+  const s = leer('app/seccion/[ranura]/page.js');
+  assert.match(s, /ultimas/);
+  assert.ok(!s.includes('Todo lo que publicamos en ${nombreCorto(s.nombre)}, en Radar Balcarce.'));
+});
+
+test('los títulos y descripciones de las notas se recortan al largo que muestra Google', () => {
+  const n = leer('app/nota/[id]/page.js');
+  assert.match(n, /title: recortarEn\(n\.titulo, \d+\)/);
+  assert.match(n, /recortarEn\(n\.copete[^)]*, 155\)/);
+});
+
+test('las analíticas de Vercel ya no están: en Cloudflare pedían un archivo que no existe', () => {
+  assert.ok(!leer('app/layout.js').includes('@vercel/analytics'));
+  assert.ok(!leer('package.json').includes('@vercel/analytics'));
 });

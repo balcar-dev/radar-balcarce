@@ -19,3 +19,17 @@ export function comoNombre(texto = '') {
   if (!letras.length || mayusculas / letras.length < 0.8) return t;
   return t.toLowerCase().replace(/(^|\s)([a-záéíóúñ])/g, (m, a, l) => a + l.toUpperCase());
 }
+
+/**
+ * Recorta en una palabra entera y agrega "…". Los títulos de los buscadores
+ * se cortan a unos 60 caracteres y las descripciones a unos 155: mejor que el
+ * corte lo haga uno, en un lugar que se lea bien, y no Google a mitad de una
+ * palabra.
+ */
+export function recortarEn(texto = '', maximo = 60) {
+  const t = String(texto).replace(/\s+/g, ' ').trim();
+  if (t.length <= maximo) return t;
+  const corte = t.slice(0, maximo - 1);
+  const ultimo = corte.lastIndexOf(' ');
+  return `${corte.slice(0, ultimo > maximo * 0.6 ? ultimo : maximo - 1).replace(/[\s,.;:–—-]+$/, '')}…`;
+}

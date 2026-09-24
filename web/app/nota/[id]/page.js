@@ -7,6 +7,7 @@ import { FichaDeNota, Migas } from '@/components/ficha';
 import { notFound } from 'next/navigation';
 import { parteDeNota } from '@/lib/ruta';
 import { MOSTRAR_TEMAS } from '@/lib/sitio';
+import { recortarEn } from '@/lib/texto';
 
 export function generateStaticParams() {
   // El parámetro es "titular-en-guiones-id". Ver lib/ruta.js.
@@ -28,10 +29,11 @@ export function generateMetadata({ params }) {
   if (!n) return {};
 
   const camino = n.ruta;
-  const descripcion = n.copete || `${n.seccion} · Lo informaron ${n.medios.join(' y ')}.`;
+  // El título que ve Google se acorta; el titular entero queda en la página.
+  const descripcion = recortarEn(n.copete || `${n.seccion} en Balcarce: ${n.titulo}`, 155);
 
   return {
-    title: n.titulo,
+    title: recortarEn(n.titulo, 52),
     description: descripcion,
     alternates: { canonical: camino },
     openGraph: {

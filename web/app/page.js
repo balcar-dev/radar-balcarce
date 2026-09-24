@@ -9,6 +9,12 @@ import { TarjetaClima } from '@/components/clima-vivo';
 import { Aviso } from '@/components/avisos';
 import { MOSTRAR_TEMAS } from '@/lib/sitio';
 
+// El título de la portada dice qué es y de dónde: es lo que se ve en Google.
+export const metadata = {
+  title: { absolute: 'Radar Balcarce · Noticias de Balcarce, clima y farmacia de turno' },
+  description: 'Las noticias de Balcarce y la región al día, el clima, la farmacia de turno y la agenda de la semana. Se actualiza todo el día, con la fuente siempre a la vista.',
+};
+
 export default function Portada() {
   const d = obtenerDatos();
   const { principal, resto } = ordenarPortada(d.notas);
@@ -31,6 +37,7 @@ export default function Portada() {
 
   return (
     <div className="envoltura">
+      <h1 className="solo-lectores">Radar Balcarce: noticias de Balcarce, clima y farmacia de turno</h1>
       {!d.generado && (
         <div className="tarjeta" style={{ marginBottom: 24 }}>
           <strong>Todavía no hay datos generados.</strong>

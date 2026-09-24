@@ -9,6 +9,7 @@ import {
   POR_PAGINA, partirRanura, cuantasPaginas, direccionDePagina,
 } from '@/lib/paginas';
 import { Migas } from '@/components/ficha';
+import { recortarEn } from '@/lib/texto';
 
 // Se generan sólo las secciones que hoy tienen notas —no tiene sentido
 // publicar una página vacía de Política si en el día no hubo nada— y una
@@ -34,7 +35,12 @@ export function generateMetadata({ params }) {
   if (!s) return {};
 
   const titulo = pagina > 1 ? `${s.nombre} · página ${pagina}` : s.nombre;
-  const descripcion = `Todo lo que publicamos en ${nombreCorto(s.nombre)}, en Radar Balcarce.`;
+  const delDia = obtenerDatos().notas.filter((n) => n.seccion === s.nombre);
+  const ultimas = delDia.slice(0, 2).map((n) => n.titulo).join(' · ');
+  const descripcion = recortarEn(
+    `${nombreCorto(s.nombre)} en Balcarce${pagina > 1 ? ` (página ${pagina})` : ''}: ${ultimas || 'las últimas noticias'}.`,
+    155,
+  );
   const camino = direccionDePagina(s.ranura, pagina);
 
   return {
@@ -73,7 +79,7 @@ export default function PaginaSeccion({ params }) {
       <Migas pasos={[{ nombre: s.nombre, camino: `/seccion/${s.ranura}` }]} />
       <div className="titulo-seccion" style={{ marginBottom: 22 }}>
         <span className="barra" style={{ background: s.color }} />
-        <h2 style={{ fontSize: 28 }}>{s.nombre}</h2>
+        <h1 style={{ fontSize: 28 }}>{s.nombre}</h1>
         <span className="meta">
           {todas.length} {todas.length === 1 ? 'nota' : 'notas'}
           {paginas > 1 ? ` · página ${pagina} de ${paginas}` : ''}
