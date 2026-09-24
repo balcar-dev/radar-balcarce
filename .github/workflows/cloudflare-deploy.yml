@@ -36,9 +36,20 @@ name: Cloudflare Pages
 
 on:
   workflow_dispatch:
+  # Cada vez que "Actualizar la web" termina bien (cada 30 minutos), se sube
+  # la versión nueva. Así Cloudflare y Vercel quedan iguales hasta que se
+  # apague uno de los dos.
+  workflow_run:
+    workflows: ['Actualizar la web']
+    types: [completed]
+
+concurrency:
+  group: cloudflare-pages
+  cancel-in-progress: true
 
 jobs:
   desplegar:
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
