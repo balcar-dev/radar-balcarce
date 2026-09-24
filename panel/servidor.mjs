@@ -32,6 +32,14 @@ const F_ULTIMA = path.join(DATOS, 'ultima.json');
 const F_AGENDA = path.join(DATOS, 'agenda.json');
 const PUERTO = 4321;
 
+// Los tres espacios de publicidad de la web (ver REDES.md § 2). Va directo a
+// web/data/avisos.json, el mismo archivo que lee el sitio: no hay una copia
+// intermedia. Como es un archivo versionado, el cambio recién se ve en
+// producción cuando alguien lo commitea y lo pushea (o en el próximo cambio
+// que haga el flujo automático) — el panel sólo lo escribe en esta PC.
+const F_AVISOS = path.join(AQUI, '..', 'web', 'data', 'avisos.json');
+const SLOTS_AVISOS = ['apertura', 'clima', 'pie'];
+
 // El respaldo mecánico de la reescritura: lo que ya se mostraba antes de que
 // existiera la IA. reescribirConRespaldo cae acá si Gemini falla.
 function mecanico(nota) {
@@ -190,6 +198,7 @@ function vista(sesion = null) {
       ...n,
       titulo: d?.titulo ?? n.titulo,
       copete: d?.copete ?? n.resumenFuente,
+      cuerpo: d?.cuerpo ?? null,
       guion: d?.guion ?? null,
       deIA: d?.deIA ?? null,
       // Sin decisión tomada manda el semáforo: la verde sale sola, la roja
@@ -214,6 +223,7 @@ function vista(sesion = null) {
     })),
     clima: ultima?.clima ?? null,
     farmacias: ultima?.farmacias ?? null,
+    avisos: leerJson(F_AVISOS, {}),
     agenda: agenda ?? null,
     categoriasAgenda: CATEGORIAS_AGENDA,
     calendarioAnualCompleto: CALENDARIO_ANUAL.map((e) => ({ nombre: e.nombre, categoria: e.categoria, mesAproximado: e.mesAproximado })),
@@ -794,6 +804,21 @@ const servidor = http.createServer(async (req, res) => {
       } catch (e) {
         json(res, { ok: false, motivo: e.message });
       }
+      return;
+    }
+
+    // Cargar o borrar un aviso comercial en uno de los tres espacios fijos
+    // de la web (apertura, clima, pie). Nombre y texto vacíos borran el
+    // aviso de ese espacio, que vuelve a no mostrar nada.
+    if (ruta === '/api/avisos' && req.method === 'POST') {
+      const { slot, nombre, texto, logo } = await cuerpoDe(req);
+      if (!SLOTS_AVISOS.includes(slot)) { json(res, { error: 'ese espacio no existe' }, 400); return; }
+      const avisos = leerJson(F_AVISOS, {});
+      avisos[slot] = nombre?.trim() ? { nombre: nombre.trim(), texto: (texto || '').trim(), logo: (logo || '').trim() || undefined } : null;
+      guardarJson(F_AVISOS, avisos);
+      anotar(avisos[slot] ? `aviso de "${avisos[slot].nombre}" en ${slot}` : `aviso de ${slot} borrado`, 'espacio publicitario', sesion.nombre);
+      guardarJson(F_ESTADO, estado);
+      json(res, vista(sesion));
       return;
     }
 

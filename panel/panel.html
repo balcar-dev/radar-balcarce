@@ -136,6 +136,7 @@ input.hora:focus { outline: none; border-color: #C7381C; }
   <button data-t="calendario">Calendario</button>
   <button data-t="piezas">Para redes <b id="nPiezas">0</b></button>
   <button data-t="buzon">Buzón <b id="nBuzon">0</b></button>
+  <button data-t="avisos">Avisos</button>
   <button data-t="editorial">Cómo escribe la IA</button>
 </nav>
 
@@ -188,6 +189,7 @@ function pintar() {
   if (tab === 'calendario') m.innerHTML = vistaCalendario();
   if (tab === 'piezas') m.innerHTML = vistaPiezas();
   if (tab === 'buzon') m.innerHTML = vistaBuzon();
+  if (tab === 'avisos') m.innerHTML = vistaAvisos();
   if (tab === 'editorial') m.innerHTML = vistaEditorial();
   conectar();
 }
@@ -238,8 +240,10 @@ function detalle(n) {
     </div>
     <label class="campo" for="eT">TÍTULO · <span id="cuenta">0</span> de 65</label>
     <input type="text" id="eT" value="${esc(n.titulo)}">
-    <label class="campo" for="eC">COPETE</label>
-    <textarea id="eC" rows="4">${esc(n.copete || '')}</textarea>
+    <label class="campo" for="eC">COPETE · lo que se ve arriba del todo</label>
+    <textarea id="eC" rows="3">${esc(n.copete || '')}</textarea>
+    <label class="campo" for="eB">CUERPO · la nota desarrollada, uno o más párrafos</label>
+    <textarea id="eB" rows="6">${esc(n.cuerpo || '')}</textarea>
     <label class="campo" for="eG">GUION PARA LA VOZ</label>
     <textarea id="eG" rows="3">${esc(n.guion || '')}</textarea>
     <div class="mini" style="margin-top:10px">
@@ -608,6 +612,47 @@ function vistaBuzon() {
   </div>`;
 }
 
+// ---------------------------------------------------------------- avisos
+
+const SLOTS_AVISOS = {
+  apertura: { nombre: 'Aviso 1 · después de la apertura', porQue: 'El único que interrumpe la lectura, y una sola vez.' },
+  clima: { nombre: 'Aviso 2 · al lado del clima y la farmacia', porQue: 'El mejor lugar del sitio: se cobra más caro.' },
+  pie: { nombre: 'Aviso 3 · al pie de todo', porQue: 'Vale poco. Sirve para regalarlo los primeros meses.' },
+};
+
+function vistaAvisos() {
+  const avisos = D.avisos || {};
+  return `<div class="dos">
+    <div>
+      <h2>Espacios publicitarios</h2>
+      <div class="mini" style="margin-bottom:14px">Son tres, y ni uno más (ver REDES.md § 2): quietos, grises, chicos, nunca el rojo de la marca, y siempre dicen "Espacio publicitario" arriba. Se venden a comercios de Balcarce, no a una red publicitaria. Ojo: esto lo escribe esta PC — para que se vea en la web hace falta subirlo (avisale a quien haga los commits).</div>
+      ${Object.entries(SLOTS_AVISOS).map(([slot, info]) => {
+        const a = avisos[slot];
+        return `<div class="tarjeta">
+          <div class="chapa"><span class="secc">${esc(info.nombre)}</span>${a ? '<span class="etiq ok" style="margin-left:auto">ocupado</span>' : '<span class="etiq" style="margin-left:auto">libre</span>'}</div>
+          <div class="mini" style="margin-bottom:8px">${esc(info.porQue)}</div>
+          <label class="campo" for="av-${slot}-n">COMERCIO</label>
+          <input type="text" id="av-${slot}-n" value="${esc(a?.nombre || '')}" placeholder="Nombre del comercio">
+          <label class="campo" for="av-${slot}-t">TEXTO</label>
+          <input type="text" id="av-${slot}-t" value="${esc(a?.texto || '')}" placeholder="Una línea corta: qué ofrece, dirección, teléfono">
+          <label class="campo" for="av-${slot}-l">LOGO (dirección de una imagen, opcional)</label>
+          <input type="url" id="av-${slot}-l" value="${esc(a?.logo || '')}" placeholder="https://...">
+          <div class="acciones">
+            <button class="b verde" data-guardar-aviso="${slot}">Guardar</button>
+            ${a ? `<button class="b rojo" data-borrar-aviso="${slot}">Sacar el aviso</button>` : ''}
+          </div>
+        </div>`;
+      }).join('')}
+    </div>
+    <div class="lateral">
+      <div class="tarjeta">
+        <h2 style="font-size:18px">Cómo se ve</h2>
+        <div class="mini">Es texto y, si se carga, un logo chico al lado — nunca una imagen pesada ni nada que se mueva. La etiqueta "Espacio publicitario" va siempre arriba, para que nadie confunda un aviso con una nota.</div>
+      </div>
+    </div>
+  </div>`;
+}
+
 // --------------------------------------------------------------- editorial
 
 function vistaEditorial() {
@@ -680,7 +725,7 @@ function conectar() {
     b.onclick = async () => {
       b.disabled = true;
       const d = await api('/api/nota', {
-        id: sel, accion: b.dataset.acc, titulo: $('#eT').value, copete: $('#eC').value, guion: $('#eG').value,
+        id: sel, accion: b.dataset.acc, titulo: $('#eT').value, copete: $('#eC').value, cuerpo: $('#eB').value, guion: $('#eG').value,
       });
       if (b.dataset.acc !== 'editar') sel = null;
       cargar(d);
@@ -820,6 +865,24 @@ function conectar() {
       cargar(d);
     };
   }
+
+  document.querySelectorAll('[data-guardar-aviso]').forEach((b) => {
+    b.onclick = async () => {
+      const slot = b.dataset.guardarAviso;
+      const nombre = $(`#av-${slot}-n`).value.trim();
+      if (!nombre) { alert('Le falta el nombre del comercio.'); return; }
+      cargar(await api('/api/avisos', {
+        slot, nombre, texto: $(`#av-${slot}-t`).value.trim(), logo: $(`#av-${slot}-l`).value.trim(),
+      }));
+    };
+  });
+  document.querySelectorAll('[data-borrar-aviso]').forEach((b) => {
+    b.onclick = async () => {
+      const slot = b.dataset.borrarAviso;
+      if (!confirm('¿Sacar este aviso? El espacio vuelve a quedar vacío.')) return;
+      cargar(await api('/api/avisos', { slot, nombre: '' }));
+    };
+  });
 }
 
 document.querySelectorAll('nav button').forEach((b) => {

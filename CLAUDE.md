@@ -97,16 +97,18 @@ publicar piezas a mano. Detalle y horarios en `REDES.md`.
   apuntando a Vercel; `www` redirige al dominio sin `www`). La dirección vieja
   `radar-balcarce-six.vercel.app` redirige al dominio propio. El sitio ya se
   indexa (`web/lib/sitio.js` lo detecta solo).
-- **Redes, al 22/09: en pausa.** Meta bloqueó la API de la cuenta de
+- **Redes, al 23/09: en pausa.** Meta bloqueó la API de la cuenta de
   desarrollador por "actividad inusual" y la pantalla para confirmarla está
   rota del lado de ellos. Los workflows **Redes** y **Piezas** están
   desactivados a mano hasta que se destrabe. Cuando ande: Facebook publica
-  solo (una nota por vez, 5 por día como máximo, relevancia 75 o más) e
-  Instagram y la página de Facebook las piezas de video del día (clima,
-  farmacia, 2 reels de noticias, el podcast y 3 historias de notas) con la
-  voz Gemini "Kore". Horarios y reglas, y cómo reactivarlo: `REDES.md`. El
-  token de GitHub de cron-job.org vence el 21/09/2027: hay que renovarlo
-  antes.
+  solo (una nota por vez, 5 por día como máximo, relevancia 75 o más) y
+  espeja cada posteo como foto en el feed de Instagram; e Instagram y la
+  página de Facebook reciben las piezas de video del día (clima, farmacia,
+  2 reels de noticias — cada uno un mini podcast de dos titulares — el
+  podcast grande y 3 historias de notas) con la voz Gemini "Kore", y cada
+  reel se sube también como historia. Horarios y reglas, y cómo reactivarlo:
+  `REDES.md`. El token de GitHub de cron-job.org vence el 21/09/2027: hay
+  que renovarlo antes.
 - **La reescritura con IA corre sola, 100% en la nube, desde el 22/09**: lo
   que se publica sin revisión humana se reescribe en cada corrida de
   "Actualizar la web" (no sólo cuando el panel está prendido), cruzando
@@ -115,6 +117,15 @@ publicar piezas a mano. Detalle y horarios en `REDES.md`.
   contra la fuente antes de aceptarse. Detalle completo: `EDITORIAL.md`.
 - **Vercel Analytics activado el 22/09** (plan gratuito, 50.000 eventos/mes):
   ya se puede medir tráfico real desde vercel.com → el proyecto → Analytics.
+  Primer dato, 23/09: 11 visitantes y 27 páginas vistas — recién empieza.
+- **Los tres avisos publicitarios se cargan desde el panel** (pestaña Avisos,
+  23/09), no editando `web/data/avisos.json` a mano. Detalle: `REDES.md` § 2.
+- **Vercel Hobby no permite uso comercial/publicitario** (está en sus
+  condiciones de uso justo): para vender los avisos de verdad hace falta
+  mudar el hosting a Cloudflare Pages, que sí lo permite. El sitio ya es
+  host-agnostic y el workflow `cloudflare-deploy.yml` ya existe, apagado,
+  esperando que el usuario cree la cuenta (necesita login). Detalle:
+  `PENDIENTES.md`, punto E29.
 - **Todo lo que falta, por categoría, está en [`PENDIENTES.md`](PENDIENTES.md)**
   (redes, SEO, bios, editorial, técnico) y en `IDEAS.md` (ideas de producto).
   Qué se publica y cómo se escribe: `EDITORIAL.md`. Redes: `REDES.md`.
@@ -136,3 +147,4 @@ publicar piezas a mano. Detalle y horarios en `REDES.md`.
 | cambiar a qué hora sale una pieza de Instagram | `redes/piezas.mjs` (ventana) y `reels/plan.mjs` (horarios de reels e historias de notas) |
 | prender o apagar la publicación en redes | variable `REDES_ACTIVAS` en GitHub |
 | cambiar cómo se habla con Meta | `redes/meta.mjs` |
+| cargar o sacar un aviso publicitario | panel → Avisos (`web/data/avisos.json`) |

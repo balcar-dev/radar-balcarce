@@ -5,7 +5,7 @@ Antes esta lista estaba repartida entre `REDES.md`, `NOTAS.md`, `CLAUDE.md` y
 sí. Ahora viven acá, por categoría. Los otros documentos explican **cómo**
 funciona cada cosa; éste dice **qué falta**.
 
-*Última revisión: 22/09/2026.*
+*Última revisión: 23/09/2026.*
 
 ## A. Redes y automatización
 
@@ -93,7 +93,10 @@ que vigila el SEO en cada compilación (`web/scripts/revisar-seo.mjs`).
 25. Decidir si alguna sección más puede salir sola, con los números reales de
     lectura una vez que haya tráfico (ver `REDES.md` § "El primer mes"). Con
     Vercel Analytics activado el 22/09, ya se puede medir esto en un par de
-    semanas (`vercel.com` → el proyecto → Analytics).
+    semanas (`vercel.com` → el proyecto → Analytics). **Primer dato, 23/09:**
+    11 visitantes y 27 páginas vistas en dos días, la mayoría en la portada;
+    todavía es muy poco para sacar ninguna conclusión, pero el circuito ya
+    está midiendo.
 26. **Fuentes nuevas para evaluar** (encontradas buscando el 22/09, faltan
     confirmar si tienen RSS y probarlas):
     - **Acción 5** (accion5.com / Facebook), deportivo balcarceño — sumaría
@@ -115,6 +118,17 @@ que vigila el SEO en cada compilación (`web/scripts/revisar-seo.mjs`).
 28. Backup del contenido de `panel/datos/` (usuarios, decisiones editoriales,
     buzón): hoy vive sólo en esa PC, sin copia en ningún otro lado. Si se
     rompe el disco, se pierde el historial editorial completo.
+29. **La mudanza a Cloudflare Pages, para poder vender publicidad de verdad.**
+    Vercel Hobby prohíbe expresamente el uso comercial/publicitario en sus
+    condiciones; Cloudflare Pages lo permite y no cobra por el ancho de
+    banda. El sitio ya es host-agnostic (`output: 'export'`, redirecciones
+    generadas para los dos formatos) y el workflow `cloudflare-deploy.yml`
+    ya existe, apagado, esperando la cuenta. Falta, todo del lado del
+    usuario porque pide login: crear la cuenta de Cloudflare, el proyecto,
+    un API token, cargar `CLOUDFLARE_API_TOKEN` y `CLOUDFLARE_ACCOUNT_ID` en
+    GitHub Secrets, probar el workflow, y recién con eso funcionando cambiar
+    los nameservers en DonWeb — ese último paso se hace con calma, no
+    apurado, porque corta el sitio unos minutos mientras propaga.
 
 ## F. Ideas más grandes, para leer y pensar
 
@@ -144,6 +158,10 @@ de tocarlas conviene decidir con calma si valen la pena.
   cuando corre en producción.
 - **Revisar la accesibilidad de la web** (contraste de colores, texto
   alternativo de las imágenes, navegación por teclado): no se auditó todavía.
+- **La guía comercial y el mapa de Balcarce**, con marketing conjunto y
+  sorteos entre comercios anotados. Desarrollada en `IDEAS.md` § "La guía
+  comercial y el mapa de Balcarce" (23/09) — es la idea más grande de todas
+  las nuevas, y la que más conecta con vender publicidad de verdad.
 
 ## Ya resuelto (para no volver a proponerlo)
 
@@ -159,3 +177,11 @@ de tocarlas conviene decidir con calma si valen la pena.
 - Etiquetas de temas apagadas en la web (cargaban la página).
 - Subtítulos sincronizados con la voz (antes iban varios segundos adelantados)
   y sin carteles de una sola palabra pintados enteros de color (22/09).
+- Las notas ahora tienen cuerpo desarrollado, no sólo copete (22/09), y el
+  panel lo muestra y lo deja editar como cualquier otro campo (23/09): antes
+  el dato existía en la web pero no se veía en el tablero.
+- Los tres espacios de publicidad se cargan desde el panel (pestaña Avisos,
+  23/09), en vez de editar `web/data/avisos.json` a mano.
+- Facebook espeja cada posteo como foto en el feed de Instagram (23/09).
+- Los reels de noticias son mini podcasts de dos titulares, y cada reel sale
+  también como historia en la misma red (23/09).

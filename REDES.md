@@ -69,9 +69,22 @@ Reglas que no se negocian:
 Nunca: pop-ups, videos que arrancan solos, publinotas sin aclarar que lo son,
 avisos de apuestas o de préstamos.
 
+**Cómo se cargan (desde el 23/09):** panel → pestaña **Avisos**. Se completa
+comercio, texto y opcionalmente un logo, por cada uno de los tres espacios, y
+se guarda directo en `web/data/avisos.json` (lee `web/components/avisos.js`).
+Como es un archivo versionado, el cambio recién llega a la web cuando se
+commitea y se pushea — el panel sólo lo escribe en la PC. Para ver ideas de
+cómo vender estos espacios y sumar otras (un mapa de comercios, sorteos
+conjuntos, mención en los reels), ver `IDEAS.md` § "La guía comercial y el
+mapa de Balcarce".
+
 ## 3. Las redes: qué sale, cómo y cuándo
 
-*Aplicado y probado el 21/09/2026.*
+*Aplicado y probado el 21/09/2026. El espejo a Instagram, el mini podcast de
+los reels y el reflejo de cada reel como historia se sumaron el 23/09: están
+probados con Meta de mentira (`pruebas/`) pero no en vivo todavía, porque
+Meta sigue bloqueada (ver "En pausa" más abajo) — se van a poder probar de
+verdad recién cuando eso se destrabe.*
 
 ### La regla de fondo
 
@@ -85,6 +98,14 @@ apagado (`feedPorDia: 0` en `reels/plan.mjs`).
 imagen y el titular la arma sola con la imagen de NUESTRA página
 (`web/lib/tarjeta.js`), nunca la foto de otro medio. Por otro, **los mismos
 videos de Instagram como historias y reels de la página**, a la misma hora.
+
+**Y, desde el 23/09, cada posteo de Facebook se espeja como foto en el feed
+de Instagram** (`redes/publicar.mjs`, función `facebook()`): la misma tarjeta
+propia, con el titular como pie y "Más en radarbalcarce.com". Si el espejo
+falla, no invalida lo que ya se publicó en Facebook — sólo se avisa. Es la
+única foto (no video) que sale a Instagram, y sólo porque es la tarjeta
+propia ya alojada en nuestro sitio (`/nota/ID/opengraph-image`), no un
+archivo nuevo que haya que subir.
 
 ### Qué sale hoy y a qué hora (hora de Balcarce)
 
@@ -110,31 +131,42 @@ son las piezas del día y su horario:
 | Hora | Pieza | Tipo | Qué es |
 |---|---|---|---|
 | 07:30 | El clima de hoy | Historia | Todos los días |
-| 10:00 | Noticia 1 | Reel | La de más gancho de Balcarce |
+| 10:00 | Noticia 1 | Reel (+ historia) | Mini podcast: la de más gancho de Balcarce y una segunda de otro tema |
 | 10:40 | Nota 1 | Historia | |
 | 12:40 | Nota 2 | Historia | |
 | 14:40 | Nota 3 | Historia | |
-| 15:00 | Noticia 2 | Reel | De otra sección que la primera |
+| 15:00 | Noticia 2 | Reel (+ historia) | Mini podcast: de otra sección que la primera, y otra segunda distinta |
 | 19:00 | Farmacia de turno | Historia | Sólo dice cuál es la de turno |
 | 20:00 | Cómo sigue el día | Historia | Clima de la noche |
-| 20:30 | El repaso del día | Reel | El podcast: 4 titulares dichos con la voz |
+| 20:30 | El repaso del día | Reel (+ historia) | El podcast grande: 4 titulares dichos con la voz |
 | Martes 11:00 | Teléfonos útiles | Historia | Una vez por semana |
 | Jueves 18:00 | Qué hacer el fin de semana | Historia | Sólo si hay eventos cargados |
 
-Son **3 reels por día** (2 noticias y el podcast) y **6 historias** (clima
-mañana, clima noche, farmacia y 3 de notas), más las semanales.
+Son **3 reels por día** (2 noticias y el podcast) y **6 historias fijas**
+(clima mañana, clima noche, farmacia y 3 de notas), más las semanales. Y,
+desde el 23/09, **cada reel se sube también como historia**, en la misma red:
+es el mismo video ya subido, así que compartirlo ahí de paso no cuesta nada
+(`redes/publicar-piezas.mjs`). No cuenta como una historia más del
+cronograma — es un reflejo, se anota aparte en `libro.historiasDeReels`.
 
 Cómo se eligen (todo en `redes/elegir.mjs`, con pruebas):
 
 - Los reels de noticias son de Balcarce, con relevancia 78 o más, de
   secciones distintas y sin repetir el mismo tema. "Gancho" es lo que se mide
   sin inventar: relevancia y que sea local.
+- **Desde el 23/09, un reel de noticias ya no cuenta un solo titular:** suma
+  una segunda noticia de otro tema, a modo de racconto corto (mismo espíritu
+  que el podcast de la noche, pero pensado para 45-75 segundos en vez del
+  resumen completo del día). La segunda de un reel no se repite en el otro.
+  Si no queda ninguna con qué acompañarla, sale sola, como antes
+  (`guionMiniPodcast` y `elegirSecundariaDeReel`, en `redes/elegir.mjs`).
 - Las historias de notas tienen relevancia 62 o más y no repiten lo que ya es
   reel.
 - El mismo tema contado por dos medios cuenta una sola vez (por ejemplo, el
   mismo partido con dos titulares).
-- El podcast es un repaso de los titulares ya publicados, sin IA: no puede
-  inventar nada. Si un día hay menos de dos noticias para repasar, no sale.
+- El podcast de la noche es un repaso de los titulares ya publicados, sin IA:
+  no puede inventar nada. Si un día hay menos de dos noticias para repasar,
+  no sale.
 - **Política y Policiales no se arman solas en ninguna pieza**, no sólo en
   Facebook.
 - Los horarios de las fijas (clima, farmacia, agenda, útiles) se cambian en el

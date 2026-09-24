@@ -179,13 +179,19 @@ que estuvo mal publicado, sí: es la única forma de que no vuelva.
   Se ajusta agregando o sacando palabras en `REGLAS_SECCION`.
 - **Hay notas sin hora**, las que vienen de fuentes que no la publican. La web
   dice "sin hora" en vez de inventar un "hace 1 minuto".
-- **Las notas son cortas.** De cada nota sólo se guarda el resumen que trae
-  el feed del medio (unos 280 caracteres como máximo) y el guion de la voz es
-  el titular dicho en voz alta, así que lo que se lee es titular y copete. La
-  reescritura con IA corre sola en el panel para todo lo verde (con la
-  verificación contra la fuente), pero no tiene más texto para trabajar. El
-  próximo paso es traer el texto completo de las fuentes y armar una nota
-  propia más larga, empezando por Tecnología, Deportes y Economía.
+- **Resuelto el 22/09: las notas ya no son sólo el resumen del feed.** Ahora
+  la reescritura con IA arma tres campos separados — título, copete (dos
+  líneas, lo que se ve arriba) y **cuerpo** (uno a tres párrafos, la nota
+  desarrollada, hasta 1200 caracteres) — y la web muestra el cuerpo debajo
+  del copete en la página de cada nota. El guion de la voz sigue siendo sólo
+  el titular: en un reel de cinco segundos no hay tiempo para más. El panel
+  (pestaña "Para decidir") muestra y deja editar los tres campos por
+  separado desde el 23/09.
+- Sigue habiendo notas con poco para trabajar: las que vienen de una fuente
+  sin texto completo en el feed sólo tienen el resumen corto para reescribir,
+  así que el cuerpo que arma la IA no puede decir más que eso. El próximo
+  paso, si hace falta, es traer el texto completo desde la fuente misma en
+  vez de conformarse con el resumen del feed.
 
 ## 9. Las redes
 
