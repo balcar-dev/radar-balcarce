@@ -1,71 +1,6 @@
 {
   "redirects": [
     {
-      "source": "/nota/din3cj",
-      "destination": "/nota/desde-rawson-a-balcarce-sonia-y-dario-son-los-primeros-en-la-fila-del-din3cj",
-      "permanent": true
-    },
-    {
-      "source": "/nota/9oermg",
-      "destination": "/nota/autodromo-bianco-hablo-de-una-inversion-de-3-300-millones-pero-el-9oermg",
-      "permanent": true
-    },
-    {
-      "source": "/nota/m7fmln",
-      "destination": "/nota/obras-autodromo-los-primeros-desembolsos-de-la-provincia-fueron-a-m7fmln",
-      "permanent": true
-    },
-    {
-      "source": "/nota/1ss3yj3",
-      "destination": "/nota/reino-y-ciantini-participaron-en-tandil-de-la-presentacion-de-las-tc-1ss3yj3",
-      "permanent": true
-    },
-    {
-      "source": "/nota/1rh34g1",
-      "destination": "/nota/los-socorristas-voluntarios-estaran-presentes-en-la-reapertura-del-1rh34g1",
-      "permanent": true
-    },
-    {
-      "source": "/nota/1m9oza2",
-      "destination": "/nota/tc-pick-up-en-el-fangio-los-socios-fundadores-deberan-acreditarse-1m9oza2",
-      "permanent": true
-    },
-    {
-      "source": "/nota/1oudf0t",
-      "destination": "/nota/crece-la-expectativa-por-las-tc-pick-up-las-camionetas-giraran-por-1oudf0t",
-      "permanent": true
-    },
-    {
-      "source": "/nota/qxe9vk",
-      "destination": "/nota/el-stm-y-el-gobierno-cerca-de-cerrar-una-recomposicion-salarial-que-qxe9vk",
-      "permanent": true
-    },
-    {
-      "source": "/nota/7c7bdz",
-      "destination": "/nota/taxis-y-remises-debatiran-la-eliminacion-de-tasas-mientras-el-sector-7c7bdz",
-      "permanent": true
-    },
-    {
-      "source": "/nota/ynod8l",
-      "destination": "/nota/lombardini-se-reunio-con-massa-en-buenos-aires-y-abordo-gestiones-ynod8l",
-      "permanent": true
-    },
-    {
-      "source": "/nota/lzg81y",
-      "destination": "/nota/un-gran-paso-227-familias-de-balcarce-recibieron-su-lote-y-ya-pueden-lzg81y",
-      "permanent": true
-    },
-    {
-      "source": "/nota/1kqy6kr",
-      "destination": "/nota/despues-de-mas-de-60-anos-tintoreria-moderna-cierra-una-etapa-en-1kqy6kr",
-      "permanent": true
-    },
-    {
-      "source": "/nota/1h9ckrd",
-      "destination": "/nota/el-fuerte-viento-tambien-afecto-el-paseo-de-la-fundacion-cayeron-1h9ckrd",
-      "permanent": true
-    },
-    {
       "source": "/nota/8hniuy",
       "destination": "/nota/un-balcarceno-investiga-sobre-vida-extrema-para-la-nasa-8hniuy",
       "permanent": true
@@ -161,23 +96,153 @@
       "permanent": true
     },
     {
+      "source": "/nota/din3cj",
+      "destination": "/nota/desde-rawson-a-balcarce-sonia-y-dario-son-los-primeros-en-la-fila-del-din3cj",
+      "permanent": true
+    },
+    {
+      "source": "/nota/9oermg",
+      "destination": "/nota/autodromo-bianco-hablo-de-una-inversion-de-3-300-millones-pero-el-9oermg",
+      "permanent": true
+    },
+    {
+      "source": "/nota/m7fmln",
+      "destination": "/nota/obras-autodromo-los-primeros-desembolsos-de-la-provincia-fueron-a-m7fmln",
+      "permanent": true
+    },
+    {
+      "source": "/nota/1ss3yj3",
+      "destination": "/nota/reino-y-ciantini-participaron-en-tandil-de-la-presentacion-de-las-tc-1ss3yj3",
+      "permanent": true
+    },
+    {
+      "source": "/nota/1rh34g1",
+      "destination": "/nota/los-socorristas-voluntarios-estaran-presentes-en-la-reapertura-del-1rh34g1",
+      "permanent": true
+    },
+    {
+      "source": "/nota/1m9oza2",
+      "destination": "/nota/tc-pick-up-en-el-fangio-los-socios-fundadores-deberan-acreditarse-1m9oza2",
+      "permanent": true
+    },
+    {
+      "source": "/nota/1oudf0t",
+      "destination": "/nota/crece-la-expectativa-por-las-tc-pick-up-las-camionetas-giraran-por-1oudf0t",
+      "permanent": true
+    },
+    {
+      "source": "/nota/qxe9vk",
+      "destination": "/nota/el-stm-y-el-gobierno-cerca-de-cerrar-una-recomposicion-salarial-que-qxe9vk",
+      "permanent": true
+    },
+    {
+      "source": "/nota/7c7bdz",
+      "destination": "/nota/taxis-y-remises-debatiran-la-eliminacion-de-tasas-mientras-el-sector-7c7bdz",
+      "permanent": true
+    },
+    {
+      "source": "/nota/ynod8l",
+      "destination": "/nota/lombardini-se-reunio-con-massa-en-buenos-aires-y-abordo-gestiones-ynod8l",
+      "permanent": true
+    },
+    {
+      "source": "/nota/lzg81y",
+      "destination": "/nota/un-gran-paso-227-familias-de-balcarce-recibieron-su-lote-y-ya-pueden-lzg81y",
+      "permanent": true
+    },
+    {
+      "source": "/nota/1kqy6kr",
+      "destination": "/nota/despues-de-mas-de-60-anos-tintoreria-moderna-cierra-una-etapa-en-1kqy6kr",
+      "permanent": true
+    },
+    {
+      "source": "/nota/1h9ckrd",
+      "destination": "/nota/el-fuerte-viento-tambien-afecto-el-paseo-de-la-fundacion-cayeron-1h9ckrd",
+      "permanent": true
+    },
+    {
       "source": "/nota/uqq6ff",
       "destination": "/nota/dolar-hoy-y-dolar-blue-en-vivo-a-cuanto-cotiza-el-oficial-y-cual-es-uqq6ff",
       "permanent": true
     },
     {
-      "source": "/nota/1q3000s",
-      "destination": "/nota/senado-en-vivo-comenzo-el-debate-por-la-reforma-de-la-carta-organica-1q3000s",
+      "source": "/nota/zwwvx9",
+      "destination": "/nota/las-solicitudes-semanales-de-subsidio-por-desempleo-en-eeuu-zwwvx9",
       "permanent": true
     },
     {
-      "source": "/nota/v64kru",
-      "destination": "/nota/cuidado-con-la-estafa-del-falso-domicilio-con-un-qr-quieren-robar-tus-v64kru",
+      "source": "/nota/1betnw4",
+      "destination": "/nota/reniec-abre-mas-de-100-sedes-este-fin-de-semana-y-extiende-horarios-1betnw4",
+      "permanent": true
+    },
+    {
+      "source": "/nota/mcaqak",
+      "destination": "/nota/que-dijo-caputo-tras-el-aumento-de-la-pobreza-y-la-indigencia-en-el-mcaqak",
+      "permanent": true
+    },
+    {
+      "source": "/nota/k6rr8h",
+      "destination": "/nota/milei-prometio-que-el-ano-dos-mil-veintiocho-sera-historico-k6rr8h",
+      "permanent": true
+    },
+    {
+      "source": "/nota/1q3000s",
+      "destination": "/nota/senado-en-vivo-se-acerca-la-votacion-de-la-reforma-de-la-carta-1q3000s",
+      "permanent": true
+    },
+    {
+      "source": "/nota/1vcv6ud",
+      "destination": "/nota/senado-el-oficialismo-se-encamina-a-aprobar-la-reforma-del-banco-1vcv6ud",
       "permanent": true
     },
     {
       "source": "/nota/94lss8",
       "destination": "/nota/la-pobreza-subio-al-32-3-en-el-primer-semestre-del-ano-y-afecto-a-15-94lss8",
+      "permanent": true
+    },
+    {
+      "source": "/nota/qvj24r",
+      "destination": "/nota/quisieron-justificarse-y-la-empeoraron-un-municipio-bonaerense-qvj24r",
+      "permanent": true
+    },
+    {
+      "source": "/nota/47354z",
+      "destination": "/nota/basquet-femenino-de-balcarce-en-torneo-internacional-47354z",
+      "permanent": true
+    },
+    {
+      "source": "/nota/1w7nnsk",
+      "destination": "/nota/a-que-hora-arranca-hoy-la-venta-de-entradas-para-la-despedida-de-1w7nnsk",
+      "permanent": true
+    },
+    {
+      "source": "/nota/11a72v4",
+      "destination": "/nota/mark-zuckerberg-lanza-un-mensaje-sobre-el-futuro-de-la-ia-y-quien-11a72v4",
+      "permanent": true
+    },
+    {
+      "source": "/nota/1ug279b",
+      "destination": "/nota/el-llamativo-video-del-entrenamiento-de-colapinto-que-abrio-un-debate-1ug279b",
+      "permanent": true
+    },
+    {
+      "source": "/nota/1kwaj1a",
+      "destination": "/nota/el-riesgo-pais-no-encuentra-techo-y-alcanza-los-570-puntos-mientras-1kwaj1a",
+      "permanent": true
+    },
+    {
+      "source": "/nota/mah0sf",
+      "destination": "/nota/rebajan-las-condenas-por-el-crimen-del-mapuche-rafael-nahuel-y-los-mah0sf",
+      "permanent": true
+    },
+    {
+      "source": "/nota/v2hhk3",
+      "destination": "/nota/la-actividad-economica-se-desplomo-casi-3-mensual-en-julio-el-peor-v2hhk3",
+      "permanent": true
+    },
+    {
+      "source": "/nota/v64kru",
+      "destination": "/nota/cuidado-con-la-estafa-del-falso-domicilio-con-un-qr-quieren-robar-tus-v64kru",
       "permanent": true
     },
     {
@@ -211,28 +276,18 @@
       "permanent": true
     },
     {
-      "source": "/nota/141y0yl",
-      "destination": "/nota/la-pobreza-volvio-a-subir-en-el-primer-semestre-alcanzo-al-32-3-de-la-141y0yl",
+      "source": "/nota/5s5tpz",
+      "destination": "/nota/la-justicia-pide-datos-a-israel-y-gran-bretana-sobre-la-composicion-5s5tpz",
       "permanent": true
     },
     {
-      "source": "/nota/1nud4zm",
-      "destination": "/nota/entradas-para-la-despedida-de-lionel-messi-de-la-seleccion-argentina-1nud4zm",
+      "source": "/nota/kbtz7w",
+      "destination": "/nota/la-actividad-economica-cayo-2-9-en-julio-el-mayor-retroceso-mensual-kbtz7w",
       "permanent": true
     },
     {
       "source": "/nota/4xohu7",
       "destination": "/nota/ceo-de-nvidia-advirtio-que-los-laboratorios-de-ia-que-no-puedan-4xohu7",
-      "permanent": true
-    },
-    {
-      "source": "/nota/13ocycb",
-      "destination": "/nota/la-pobreza-crecio-a-32-3-en-el-primer-semestre-segun-el-indec-13ocycb",
-      "permanent": true
-    },
-    {
-      "source": "/nota/1n2z1ky",
-      "destination": "/nota/macron-desmiente-que-la-cia-alertara-sobre-un-ataque-con-drones-rusos-1n2z1ky",
       "permanent": true
     },
     {
@@ -243,11 +298,6 @@
     {
       "source": "/nota/ejorlh",
       "destination": "/nota/javier-milei-y-sus-medidas-en-vivo-el-mandatario-hablo-en-la-onu-y-ejorlh",
-      "permanent": true
-    },
-    {
-      "source": "/nota/193rdf",
-      "destination": "/nota/franco-colapinto-y-un-mal-comienzo-en-azerbaiyan-no-me-siento-muy-193rdf",
       "permanent": true
     },
     {
@@ -266,33 +316,18 @@
       "permanent": true
     },
     {
-      "source": "/nota/6zd8aw",
-      "destination": "/nota/el-dolar-volvio-a-subir-y-marco-un-nuevo-record-nominal-con-una-caida-6zd8aw",
-      "permanent": true
-    },
-    {
-      "source": "/nota/k6rr8h",
-      "destination": "/nota/milei-en-new-york-si-nuestro-gobierno-es-reelecto-2028-sera-el-mejor-k6rr8h",
-      "permanent": true
-    },
-    {
       "source": "/nota/1h44kp6",
       "destination": "/nota/buscar-futbol-libre-o-tarjeta-roja-para-ver-alemania-vs-paises-bajos-1h44kp6",
       "permanent": true
     },
     {
-      "source": "/nota/cy1yxa",
-      "destination": "/nota/matias-canapino-con-un-cambio-importante-para-la-recta-final-del-ano-cy1yxa",
-      "permanent": true
-    },
-    {
-      "source": "/nota/7csjqt",
-      "destination": "/nota/el-nuevo-desafio-de-agustin-pichot-tendra-su-equipo-en-la-formula-e-7csjqt",
-      "permanent": true
-    },
-    {
       "source": "/nota/e4g8x1",
       "destination": "/nota/confirmaron-la-condena-a-perpetua-por-el-crimen-de-un-diputado-y-su-e4g8x1",
+      "permanent": true
+    },
+    {
+      "source": "/nota/1k46h6e",
+      "destination": "/nota/antes-de-la-despedida-de-messi-scaloni-hablo-de-su-futuro-y-el-1k46h6e",
       "permanent": true
     },
     {
@@ -313,11 +348,6 @@
     {
       "source": "/nota/lcvlqf",
       "destination": "/nota/vuelve-el-tc-al-tradicional-autodromo-juan-manuel-fangio-la-categoria-lcvlqf",
-      "permanent": true
-    },
-    {
-      "source": "/nota/19pvpxw",
-      "destination": "/nota/el-riesgo-pais-sube-a-570-puntos-y-vuelve-al-nivel-que-tenia-al-19pvpxw",
       "permanent": true
     },
     {
@@ -346,11 +376,6 @@
       "permanent": true
     },
     {
-      "source": "/nota/l83pn8",
-      "destination": "/nota/fabian-turnes-conto-detalles-de-las-reuniones-para-el-regreso-de-la-l83pn8",
-      "permanent": true
-    },
-    {
       "source": "/nota/qc00yi",
       "destination": "/nota/norris-lanza-un-aviso-a-mclaren-en-baku-estamos-a-kilometros-del-ritmo-qc00yi",
       "permanent": true
@@ -361,18 +386,8 @@
       "permanent": true
     },
     {
-      "source": "/nota/5226gq",
-      "destination": "/nota/martin-saa-con-presente-de-alto-nivel-un-futuro-prometedor-y-una-5226gq",
-      "permanent": true
-    },
-    {
       "source": "/nota/1hh6vil",
       "destination": "/nota/cuanto-cuesta-viajar-al-gp-de-brasil-en-interlagos-para-ver-a-franco-1hh6vil",
-      "permanent": true
-    },
-    {
-      "source": "/nota/18pdws6",
-      "destination": "/nota/gp-de-azerbaiyan-franco-colapinto-fue-11-en-los-entrenamientos-pero-18pdws6",
       "permanent": true
     },
     {
@@ -381,23 +396,13 @@
       "permanent": true
     },
     {
-      "source": "/nota/942wi7",
-      "destination": "/nota/urcera-y-la-tranquilidad-del-trabajo-a-largo-plazo-con-mercedes-en-tc-942wi7",
-      "permanent": true
-    },
-    {
       "source": "/nota/1li63ec",
-      "destination": "/nota/la-carta-de-la-investigadora-virginia-aparicio-y-su-situacion-en-la-1li63ec",
+      "destination": "/nota/el-concejo-debatira-la-situacion-de-la-investigadora-del-inta-1li63ec",
       "permanent": true
     },
     {
       "source": "/nota/jul41g",
       "destination": "/nota/balcarce-se-prepara-para-vivir-un-fin-de-semana-a-fondo-jul41g",
-      "permanent": true
-    },
-    {
-      "source": "/nota/1ctm3pk",
-      "destination": "/nota/el-primer-balance-de-colapinto-en-baku-dimos-un-pasito-con-el-auto-1ctm3pk",
       "permanent": true
     },
     {
@@ -426,18 +431,8 @@
       "permanent": true
     },
     {
-      "source": "/nota/19q4ui5",
-      "destination": "/nota/la-preparacion-de-henry-martin-para-su-carrera-homenaje-en-tc2000-19q4ui5",
-      "permanent": true
-    },
-    {
       "source": "/nota/n331xk",
       "destination": "/nota/definieron-horarios-para-el-automovilismo-en-el-fangio-n331xk",
-      "permanent": true
-    },
-    {
-      "source": "/nota/lllx6x",
-      "destination": "/nota/f1-colapinto-culmino-un-dia-intenso-de-pruebas-en-el-gp-de-azerbaijan-lllx6x",
       "permanent": true
     },
     {
@@ -452,7 +447,7 @@
     },
     {
       "source": "/nota/kiy3gs",
-      "destination": "/nota/el-concejo-deliberante-vuelve-a-sesionar-los-principales-temas-que-kiy3gs",
+      "destination": "/nota/el-concejo-deliberante-realiza-su-decima-cuarta-sesion-kiy3gs",
       "permanent": true
     },
     {
@@ -461,33 +456,18 @@
       "permanent": true
     },
     {
-      "source": "/nota/1xoec9u",
-      "destination": "/nota/gp-de-azerbaijan-colapinto-quedo-18-en-la-primera-practica-de-f1-1xoec9u",
-      "permanent": true
-    },
-    {
       "source": "/nota/wmweq4",
-      "destination": "/nota/casi-cien-jugadores-reunio-el-prix-de-ajedrez-del-atlantico-wmweq4",
+      "destination": "/nota/casi-cien-jugadores-en-el-prix-de-ajedrez-wmweq4",
       "permanent": true
     },
     {
       "source": "/nota/1uf64an",
-      "destination": "/nota/milei-aseguro-que-la-onu-es-una-casta-de-parasitos-que-ignoro-la-1uf64an",
+      "destination": "/nota/milei-critico-a-la-onu-en-nueva-york-y-reclamo-por-malvinas-1uf64an",
       "permanent": true
     },
     {
       "source": "/nota/1yy5hcd",
       "destination": "/nota/persecucion-caida-y-fuga-a-pie-recuperaron-una-moto-robada-y-1yy5hcd",
-      "permanent": true
-    },
-    {
-      "source": "/nota/ytk363",
-      "destination": "/nota/la-expectativa-de-colapinto-en-baku-probablemente-sera-de-los-mejores-ytk363",
-      "permanent": true
-    },
-    {
-      "source": "/nota/71d4si",
-      "destination": "/nota/el-gran-premio-argentino-historico-se-reinicio-con-cambio-de-mando-71d4si",
       "permanent": true
     },
     {
@@ -503,11 +483,6 @@
     {
       "source": "/nota/4482cx",
       "destination": "/nota/pinilla-hay-mucha-ansiedad-por-las-candidaturas-pero-la-pregunta-es-4482cx",
-      "permanent": true
-    },
-    {
-      "source": "/nota/an3qj5",
-      "destination": "/nota/omar-arreguito-integro-una-nueva-concentracion-de-la-seleccion-an3qj5",
       "permanent": true
     },
     {
@@ -531,8 +506,13 @@
       "permanent": true
     },
     {
+      "source": "/nota/1tg5rro",
+      "destination": "/nota/nuevo-entrenamiento-de-los-tigres-con-presencia-balcarcena-1tg5rro",
+      "permanent": true
+    },
+    {
       "source": "/nota/5axoor",
-      "destination": "/nota/carrera-homenaje-a-luis-vildoza-preparan-la-segunda-edicion-5axoor",
+      "destination": "/nota/vuelve-la-carrera-homenaje-a-luis-vildoza-en-balcarce-5axoor",
       "permanent": true
     },
     {
@@ -547,7 +527,7 @@
     },
     {
       "source": "/nota/16zvbdl",
-      "destination": "/nota/el-viernes-reinauguran-el-autodromo-fangio-con-la-presencia-de-16zvbdl",
+      "destination": "/nota/reinauguran-el-autodromo-fangio-este-viernes-16zvbdl",
       "permanent": true
     },
     {
@@ -622,7 +602,7 @@
     },
     {
       "source": "/nota/19a10ju",
-      "destination": "/nota/reconocieron-a-kevin-gomez-tras-consagrarse-campeon-argentino-de-19a10ju",
+      "destination": "/nota/reconocieron-al-boxeador-balcarceno-kevin-gomez-19a10ju",
       "permanent": true
     },
     {
