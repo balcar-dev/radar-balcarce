@@ -62,6 +62,10 @@ export const HISTORIAS_FIJAS = [
     porQue: 'Una vez por semana. No es noticia: es para que lo guarden en el celular.',
     activa: true,
     hora: '11:00',
+    // Este valor es el que se usa si alguien fija el día a mano desde acá.
+    // Si nadie lo toca, en GitHub el día rota solo, de lunes a viernes, una
+    // semana distinta cada vez, en vez de ser siempre martes — ver
+    // diaRotativoDeUtiles en redes/piezas.mjs.
     dias: [2],
   },
 ];

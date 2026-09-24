@@ -220,6 +220,7 @@ test('si el token murió, corta: no tiene sentido seguir', async () => {
 
 import {
   cronogramaDelDia, slotsQueTocan, notasUsadasHoy, piezasPublicadasHoy, VENTANA_MINUTOS, HORAS_REELS, horaHistoriaDeNota, ventanaDe,
+  diaRotativoDeUtiles,
 } from '../redes/piezas.mjs';
 
 /** Un lunes (21/09/2026) a la hora de Balcarce que se pida. */
@@ -235,12 +236,39 @@ test('el cronograma del día trae las fijas, los reels y las historias de notas'
   assert.equal(c.find((p) => p.nombre === 'podcast').tipo, 'reel');
 });
 
-test('los teléfonos útiles sólo salen los martes, y la agenda no la espera GitHub', () => {
-  const martes = new Date('2026-09-22T12:00:00-03:00');
-  assert.ok(nombres(cronogramaDelDia(martes)).includes('utiles'));
-  assert.ok(!nombres(cronogramaDelDia(LUNES('12:00'))).includes('utiles'));
-  // La agenda (jueves) necesita datos que sólo hay en la PC: si GitHub la
-  // esperara, la reintentaría en cada corrida sin poder armarla nunca.
+test('los teléfonos útiles salen un día hábil por semana, y rotan de una semana a la otra', () => {
+  // No siempre el mismo día: se probó una semana y salía siempre martes, y
+  // se pidió que cambiara. diaRotativoDeUtiles ya dice qué día es esta
+  // semana; alcanza con probar que el cronograma lo respeta y que otro día
+  // de la misma semana no lo tiene.
+  const unLunes = LUNES('12:00');
+  const diaDeEstaSemana = diaRotativoDeUtiles(unLunes);
+  const otroDiaHabil = new Date(unLunes);
+  otroDiaHabil.setDate(otroDiaHabil.getDate() + ((diaDeEstaSemana === 1 ? 2 : 1)));
+
+  const conElDiaQueToca = new Date(unLunes);
+  conElDiaQueToca.setDate(conElDiaQueToca.getDate() + (diaDeEstaSemana - 1));
+  assert.ok(nombres(cronogramaDelDia(conElDiaQueToca)).includes('utiles'));
+  assert.ok(!nombres(cronogramaDelDia(otroDiaHabil)).includes('utiles'));
+
+  // Y de una semana a la siguiente, el día cambia.
+  const semanaQueViene = new Date(unLunes);
+  semanaQueViene.setDate(semanaQueViene.getDate() + 7);
+  assert.notEqual(diaRotativoDeUtiles(semanaQueViene), diaDeEstaSemana);
+});
+
+test('si alguien fija el día de los útiles a mano en el panel, eso manda y no rota', () => {
+  const unLunes = LUNES('12:00');
+  const diaFijado = diaRotativoDeUtiles(unLunes) === 3 ? 4 : 3; // cualquiera distinto del que tocaría solo
+  const estado = { horarios: { utiles: { dias: [diaFijado] } } };
+  const diaConElFijado = new Date(unLunes);
+  diaConElFijado.setDate(diaConElFijado.getDate() + (diaFijado - 1));
+  assert.ok(nombres(cronogramaDelDia(diaConElFijado, { estado })).includes('utiles'));
+});
+
+test('la agenda no la espera GitHub: necesita datos que sólo hay en la PC', () => {
+  // Si GitHub la esperara, la reintentaría en cada corrida sin poder
+  // armarla nunca.
   const jueves = new Date('2026-09-24T12:00:00-03:00');
   assert.ok(!nombres(cronogramaDelDia(jueves)).includes('agenda'));
 });
