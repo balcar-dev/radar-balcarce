@@ -233,6 +233,34 @@ export function elegirFeed(notas, reglas = REGLAS_PIEZAS) {
 }
 
 /**
+ * La segunda noticia de un reel-podcast corto: de otro tema, y sin repetir la
+ * que ya se usó en otro reel del día (para eso está `excluir`). Si no queda
+ * ninguna, la principal sale sola, como antes.
+ */
+export function elegirSecundariaDeReel(principal, notas, excluir = [], reglas = REGLAS_PIEZAS) {
+  const candidatas = [...notas]
+    .filter(sePuedeSola)
+    .filter((n) => n.id !== principal.id)
+    .filter((n) => (n.relevancia ?? 0) >= reglas.relevanciaParaHistoria)
+    .sort(porRelevancia);
+  return sinRepetidos(candidatas, [principal, ...excluir])[0] ?? null;
+}
+
+/**
+ * El guion de un reel de noticias del mediodía: ya no cuenta un solo
+ * titular, sino dos — la principal, la que se ve en la placa, y una segunda
+ * de otro tema, a modo de racconto corto. Mismo espíritu que el repaso del
+ * podcast de la noche, pero pensado para un reel de 45 a 75 segundos, no
+ * para el resumen completo del día.
+ */
+export function guionMiniPodcast(principal, secundaria) {
+  const t1 = String(principal.titulo).replace(/\s+/g, ' ').trim().replace(/[.:]+$/, '');
+  if (!secundaria) return `${t1}.`; // no hay con qué acompañarla: sale sola
+  const t2 = String(secundaria.titulo).replace(/\s+/g, ' ').trim().replace(/[.:]+$/, '');
+  return `${t1}. Además, ${t2.charAt(0).toLowerCase()}${t2.slice(1)}.`;
+}
+
+/**
  * El guion del podcast del día: un repaso de lo más importante, dicho por la
  * voz de siempre. Sólo usa los titulares que ya están publicados, no agrega ni
  * un dato: no hay nada que la IA pueda inventar porque la IA no participa.

@@ -43,6 +43,7 @@ export async function publicarPiezas({
   sinHorario = false, ahora = new Date(), log = console.log, esperar = (ms) => new Promise((r) => { setTimeout(r, ms); }),
 }) {
   for (const red of destinos) libro[REDES[red].libro] ??= {};
+  libro.historiasDeReels ??= {}; // el reflejo de cada reel como historia, aparte del libro de reels
   const principal = REDES[destinos[0]];
 
   const tocan = piezasQueTocan({ piezas: manifiesto, libro, ahora, sinHorario, red: principal.libro });
@@ -84,6 +85,26 @@ export async function publicarPiezas({
           hecho = true;
           if (i === 0) resultado.publicadas.push(pieza.nombre);
           log(`             publicado: ${r.id}`);
+
+          // Un reel también vale como historia: es el mismo video, ya subido,
+          // así que compartirlo ahí de paso no cuesta nada y le suma una
+          // vidriera más. Si falla, no se pierde el reel por eso: sólo se
+          // avisa y se sigue.
+          if (tipo === 'REELS') {
+            const claveHistoria = `${red}/${clave}`; // una por red: no es el mismo medio subido
+            if (!libro.historiasDeReels?.[claveHistoria]) {
+              try {
+                const rh = await api[metodo]({ video, tipo: 'STORIES', pie: '' });
+                anotar(libro, 'historiasDeReels', claveHistoria, {
+                  mediaId: rh.id, nombre: pieza.nombre, red, notaId: pieza.notaId ?? null,
+                });
+                guardar();
+                log(`             + historia: ${rh.id}`);
+              } catch (e) {
+                log(`             la historia del reel falló, queda igual el reel: ${e.message}`);
+              }
+            }
+          }
         } catch (e) {
           log(`             falló${intentos > 1 ? ` (intento ${intento} de ${intentos})` : ''}: ${e.message}`);
           if (e.tokenMuerto) {

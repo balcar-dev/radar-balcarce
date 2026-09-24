@@ -15,7 +15,9 @@ import { placaClima, placaFarmacia, placaNoticia, placaUtiles, placaAgenda, COLO
 import { avisosDelClima } from '../ingesta/alertas.mjs';
 import { NUMEROS } from '../ingesta/utiles.mjs';
 import { horariosDe, toca } from '../panel/horarios.mjs';
-import { elegirReels, elegirHistoriasDeNotas, elegirFeed, guionPodcast } from '../redes/elegir.mjs';
+import {
+  elegirReels, elegirHistoriasDeNotas, elegirFeed, elegirSecundariaDeReel, guionMiniPodcast, guionPodcast,
+} from '../redes/elegir.mjs';
 import { datosDeLaWeb } from '../redes/datos.mjs';
 import { HORAS_REELS, horaHistoriaDeNota, HISTORIAS_DE_NOTAS, notasUsadasHoy, piezasPublicadasHoy } from '../redes/piezas.mjs';
 
@@ -379,13 +381,19 @@ export function planDelDia(datos, { libro = null } = {}) {
     .filter((sl) => !hechas.has(sl.nombre));
   const paraReel = elegirReels(libres).slice(0, slotsReel.length);
 
+  // Cada reel de noticias es un mini podcast de dos titulares: el principal,
+  // el que se ve en la placa, y uno de otro tema que se suma en la voz. La
+  // segunda de un reel no se repite en el otro (mencionadas).
+  const mencionadas = [];
   paraReel.forEach((n, i) => {
+    const secundaria = elegirSecundariaDeReel(n, libres, mencionadas);
+    if (secundaria) mencionadas.push(secundaria);
     piezas.push({
       tipo: 'reel', hora: slotsReel[i].hora, nombre: slotsReel[i].nombre, notaId: n.id,
       titulo: n.titulo,
       motivo: `relevancia ${n.relevancia}, de las que más enganchan (${n.seccion})`,
       seccion: n.seccion,
-      guion: guionNoticia(n),
+      guion: guionMiniPodcast(n, secundaria),
       svg: placaNoticia({ seccion: n.seccion, titulo: n.titulo, cuando: n.cuando }),
       acento: COLOR_SECCION[n.seccion] ?? '#A8371F',
     });
