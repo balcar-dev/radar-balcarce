@@ -7,7 +7,7 @@
 import { test, before, after } from 'node:test';
 import assert from 'node:assert/strict';
 import {
-  esTemaSerio, reescribir, reescribirConRespaldo, reescribirAutomaticas,
+  esTemaSerio, reescribir, reescribirConRespaldo, reescribirAutomaticas, previasDeLaPortada,
 } from '../reels/reescritura.mjs';
 
 // claveRedaccion()/claveRedes() leen de process.env primero: alcanza con
@@ -222,4 +222,21 @@ test('reescribir() también devuelve el cuerpo cuando la IA lo manda', async () 
   );
   assert.match(r.cuerpo, /Primer párrafo/);
   assert.match(r.cuerpo, /Segundo párrafo/);
+});
+
+// La portada no guarda quién redactó cada nota: la memoria entre corridas se
+// arma con lo que sí guarda. Antes buscaba un campo que no existía y la nube
+// reescribía de cero en cada corrida, sin acordarse de nada (23/09).
+test('la memoria de la portada recuerda lo reescrito, con su cuerpo', () => {
+  const previas = previasDeLaPortada([
+    { id: 'a', titulo: 'T', copete: 'C', cuerpo: 'Cuerpo.', guion: 'G' },
+    { id: 'b', titulo: 'T', copete: 'C', cuerpo: null, guion: null },
+  ]);
+  assert.deepEqual(Object.keys(previas), ['a']);
+  assert.equal(previas.a.cuerpo, 'Cuerpo.');
+});
+
+test('una nota reescrita antes de que existiera el cuerpo se vuelve a reescribir', () => {
+  const previas = previasDeLaPortada([{ id: 'a', titulo: 'T', copete: 'C', guion: 'G' }]);
+  assert.deepEqual(previas, {});
 });

@@ -20,7 +20,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { NUMEROS, tocaHoy, diaDeEstaSemana, diaDeTurno, comoISO, decisionHumana } from '../../ingesta/utiles.mjs';
 import { avisosDelClima } from '../../ingesta/alertas.mjs';
-import { reescribirAutomaticas } from '../../reels/reescritura.mjs';
+import { reescribirAutomaticas, previasDeLaPortada } from '../../reels/reescritura.mjs';
 import { TEMAS } from '../../ingesta/fuentes.mjs';
 
 const AQUI = import.meta.dirname;
@@ -100,9 +100,7 @@ const ahoraISO = new Date().toISOString();
 // la única memoria entre una corrida y la siguiente.
 let reescritas = {};
 if (enLaNube) {
-  const previas = Object.fromEntries((anterior.notas ?? [])
-    .filter((n) => n.redactadaPor === 'ia' && n.titulo)
-    .map((n) => [n.id, { titulo: n.titulo, copete: n.copete, guion: n.guion, deIA: true }]));
+  const previas = previasDeLaPortada(anterior.notas ?? []);
   reescritas = await reescribirAutomaticas(ultima.notas ?? [], { previas, decisiones: estado.decisiones });
   const nuevas = Object.keys(reescritas).filter((id) => !previas[id]).length;
   if (nuevas) console.log(`  ${nuevas} notas reescritas con IA en esta corrida`);

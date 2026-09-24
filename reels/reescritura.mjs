@@ -229,12 +229,29 @@ const FALLOS_PARA_CORTAR = 3;
  * @param {object} [o.opciones] se le pasa tal cual a reescribir() (fetchFn, intentos)
  * @returns {Promise<Record<string, {titulo:string,copete:string,cuerpo?:string,guion:string,deIA:boolean}>>}
  */
+/**
+ * Lo que la portada de la corrida anterior ya trae reescrito, para no volver
+ * a pedírselo a Gemini. La portada no guarda un campo "redactada por IA": la
+ * señal es que la nota tenga guion (el resumen mecánico de la fuente no lo
+ * tiene). Las que no tienen `cuerpo` (de antes de que existiera) quedan
+ * afuera a propósito, para que se reescriban de nuevo con cuerpo.
+ */
+export function previasDeLaPortada(notas) {
+  return Object.fromEntries(notas
+    .filter((n) => n.titulo && n.guion && n.cuerpo != null)
+    .map((n) => [n.id, {
+      titulo: n.titulo, copete: n.copete, cuerpo: n.cuerpo, guion: n.guion, deIA: true,
+    }]));
+}
+
 export async function reescribirAutomaticas(notas, {
   previas = {}, decisiones = {}, tope = REESCRITURAS_POR_CORRIDA, opciones,
 } = {}) {
   const resultado = {};
   let hechas = 0;
   let fallos = 0;
+  let rechazadas = 0;
+  let motivo = null;
 
   const candidatas = [...notas]
     .filter((n) => n.semaforo === 'verde')
@@ -266,7 +283,7 @@ export async function reescribirAutomaticas(notas, {
 
     const r = await reescribirConRespaldo(nota, mecanicoPorDefecto, opciones);
     hechas += 1;
-    if (!r.deIA) { fallos += 1; continue; } // Gemini falló: queda el copete de siempre por ahora
+    if (!r.deIA) { fallos += 1; motivo ??= r.motivoRespaldo; continue; } // Gemini falló: queda el copete de siempre por ahora
 
     const control = verificar(
       { titulo: nota.titulo, resumen: nota.resumenFuente },
@@ -274,13 +291,14 @@ export async function reescribirAutomaticas(notas, {
         titulo: r.titulo, copete: r.copete, guion: r.guion, cuerpo: r.cuerpo,
       },
     );
-    if (!control.ok) continue; // inventó algo: se descarta, queda el copete de siempre
+    if (!control.ok) { rechazadas += 1; continue; } // inventó algo: se descarta, queda el copete de siempre
 
     resultado[nota.id] = {
       titulo: r.titulo, copete: r.copete, cuerpo: r.cuerpo, guion: r.guion, deIA: true,
     };
   }
 
+  if (hechas) console.log(`  reescritura: ${hechas} pedidas, ${fallos} fallaron${motivo ? ` (${String(motivo).slice(0, 160)})` : ''}, ${rechazadas} rechazadas por no cuadrar con la fuente`);
   return resultado;
 }
 
