@@ -15,6 +15,7 @@
 import { claveRedaccion, claveRedes } from './claves.mjs';
 import { verificar } from '../ingesta/verificar.mjs';
 import { decisionHumana } from '../ingesta/utiles.mjs';
+import { traerTexto } from '../ingesta/articulo.mjs';
 
 // "-latest" en vez de un número de versión fijo: la reescritura no necesita
 // la última novedad, necesita no romperse cuando Google jubile un modelo
@@ -103,7 +104,15 @@ function entradaDe(nota) {
   } else {
     fuentes.forEach((f, i) => partes.push(`Resumen del medio ${i + 1}: ${f}`));
   }
+  if (nota.textoDeLaFuente) partes.push(`Texto completo de la nota original (de acá sale todo lo que podés contar):\n${nota.textoDeLaFuente}`);
   return partes.join('\n');
+}
+
+/** Todo lo que la IA recibió de la fuente, junto: contra eso se verifica. Si se
+ *  verificara sólo contra un resumen, un dato que venía en otro medio o en el
+ *  texto completo pasaría por inventado. */
+export function fuenteParaVerificar(nota) {
+  return [nota.resumenFuente, ...(nota.fuentesTexto ?? []), nota.textoDeLaFuente].filter(Boolean).join('\n');
 }
 
 const dormir = (ms) => new Promise((r) => { setTimeout(r, ms); });
@@ -245,7 +254,7 @@ export function previasDeLaPortada(notas) {
 }
 
 export async function reescribirAutomaticas(notas, {
-  previas = {}, decisiones = {}, tope = REESCRITURAS_POR_CORRIDA, opciones,
+  previas = {}, decisiones = {}, tope = REESCRITURAS_POR_CORRIDA, opciones, traer = traerTexto,
 } = {}) {
   const resultado = {};
   let hechas = 0;
@@ -281,12 +290,15 @@ export async function reescribirAutomaticas(notas, {
     }
     if (hechas >= tope || fallos >= FALLOS_PARA_CORTAR) continue; // sigue por si algo más abajo está en caché
 
-    const r = await reescribirConRespaldo(nota, mecanicoPorDefecto, opciones);
+    // El texto completo de la nota original, para que el cuerpo salga de
+    // hechos reales y no de rellenar. Si no se puede bajar, se sigue sin él.
+    const conTexto = { ...nota, textoDeLaFuente: await traer(nota.enlace) };
+    const r = await reescribirConRespaldo(conTexto, mecanicoPorDefecto, opciones);
     hechas += 1;
     if (!r.deIA) { fallos += 1; motivo ??= r.motivoRespaldo; continue; } // Gemini falló: queda el copete de siempre por ahora
 
     const control = verificar(
-      { titulo: nota.titulo, resumen: nota.resumenFuente },
+      { titulo: nota.titulo, resumen: fuenteParaVerificar(conTexto) },
       {
         titulo: r.titulo, copete: r.copete, guion: r.guion, cuerpo: r.cuerpo,
       },
