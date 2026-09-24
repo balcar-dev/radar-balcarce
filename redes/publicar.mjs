@@ -13,7 +13,9 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { crearCliente, ErrorMeta, sinToken } from './meta.mjs';
 import { publicarPiezas } from './publicar-piezas.mjs';
-import { elegirParaFacebook, mensajeDeNota, enlaceDeNota, libroNuevo, anotar, estaActivo } from './elegir.mjs';
+import {
+  elegirParaFacebook, mensajeDeNota, mensajeParaInstagram, enlaceDeNota, imagenDeNota, libroNuevo, anotar, yaPublicada, estaActivo,
+} from './elegir.mjs';
 
 const RAIZ = path.join(import.meta.dirname, '..');
 const PORTADA = path.join(RAIZ, 'web', 'data', 'portada.json');
@@ -61,6 +63,12 @@ async function facebook() {
   const portada = leer(PORTADA, { notas: [] });
   const libro = leer(LIBRO, libroNuevo());
   libro.facebook ??= {};
+  // El mismo posteo de Facebook, espejado como foto en el feed de
+  // Instagram: misma noticia en las dos redes, con la tarjeta propia que ya
+  // se genera para compartir (nunca la foto de la fuente). Va aparte del
+  // libro de Facebook porque puede fallar sin que eso invalide lo que ya
+  // se publicó ahí.
+  libro.instagramFeed ??= {};
 
   const elegidas = elegirParaFacebook({ notas: portada.notas ?? [], libro });
   if (!elegidas.length) {
@@ -89,6 +97,21 @@ async function facebook() {
       if (e instanceof ErrorMeta && e.tokenMuerto) {
         console.error('             El token venció o lo revocaron: hay que generar otro.');
         break;
+      }
+      continue; // sin Facebook, tampoco tiene sentido intentar Instagram
+    }
+
+    // El espejo en Instagram: si falla, se avisa pero no se cuenta como un
+    // fallo del posteo en sí — ya quedó publicado en Facebook, que es lo
+    // principal.
+    if (!yaPublicada(libro, 'instagramFeed', nota.id)) {
+      try {
+        const ri = await api.publicarFotoEnInstagram({ imagenUrl: imagenDeNota(nota, SITIO), pie: mensajeParaInstagram(nota) });
+        anotar(libro, 'instagramFeed', nota.id, { mediaId: ri.id, titulo: nota.titulo });
+        fs.writeFileSync(LIBRO, `${JSON.stringify(libro, null, 2)}\n`);
+        console.log(`             + Instagram: ${ri.id}`);
+      } catch (e) {
+        console.error(`             Instagram (feed) falló, queda sólo en Facebook: ${sinToken(e.message, token)}`);
       }
     }
   }

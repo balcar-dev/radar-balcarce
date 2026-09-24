@@ -8,7 +8,7 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { crearCliente, ErrorMeta, sinToken } from '../redes/meta.mjs';
 import {
-  elegirParaFacebook, mensajeDeNota, enlaceDeNota, libroNuevo, anotar, yaPublicada, horaAR, REGLAS_FACEBOOK,
+  elegirParaFacebook, mensajeDeNota, mensajeParaInstagram, enlaceDeNota, imagenDeNota, libroNuevo, anotar, yaPublicada, horaAR, REGLAS_FACEBOOK,
 } from '../redes/elegir.mjs';
 
 const TOKEN = 'TOKEN-SECRETO-123';
@@ -214,6 +214,19 @@ test('el enlace es de nuestro sitio, con el titular adentro', () => {
     enlaceDeNota({ id: 'abc', titulo: 'Nuevo mural de Fangio' }, 'https://radarbalcarce.com/'),
     'https://radarbalcarce.com/nota/nuevo-mural-de-fangio-abc',
   );
+});
+
+test('la imagen del posteo es la tarjeta propia de la nota, no una foto ajena', () => {
+  assert.equal(
+    imagenDeNota({ id: 'abc', titulo: 'Nuevo mural de Fangio' }, 'https://radarbalcarce.com/'),
+    'https://radarbalcarce.com/nota/nuevo-mural-de-fangio-abc/opengraph-image',
+  );
+});
+
+test('el mensaje de Instagram es el mismo que Facebook, con el sitio nombrado en texto', () => {
+  const m = mensajeParaInstagram(nota());
+  assert.match(m, /^Un titular\n\n/);
+  assert.match(m, /Más en radarbalcarce\.com$/);
 });
 
 // ------------------------------------------------------- las claves de Gemini

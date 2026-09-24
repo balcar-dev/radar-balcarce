@@ -112,6 +112,14 @@ export function enlaceDeNota(nota, sitio) {
   return `${String(sitio).replace(/\/+$/, '')}${rutaDeNota(nota)}`;
 }
 
+/** La tarjeta que ya se genera para compartir por WhatsApp (web/lib/tarjeta.js,
+ *  servida en /nota/ID/opengraph-image): es una imagen propia, pública y ya
+ *  alojada — exactamente lo que pide Instagram para un posteo de foto, sin
+ *  tener que alojar nada nuevo. */
+export function imagenDeNota(nota, sitio) {
+  return `${enlaceDeNota(nota, sitio)}/opengraph-image`;
+}
+
 /**
  * El texto del posteo. Dice de dónde sale la información y, cuando la
  * redactó la IA, que fue la IA: es la regla de que cada nota diga quién la
@@ -128,6 +136,13 @@ export function mensajeDeNota(nota) {
   if (linea) partes.push(linea);
 
   return partes.join('\n\n');
+}
+
+/** Lo mismo que se posteó en Facebook, para Instagram: el enlace de arriba
+ *  no es clickeable en un posteo de Instagram, así que se lo nombra en
+ *  texto en vez de pegarlo. */
+export function mensajeParaInstagram(nota) {
+  return `${mensajeDeNota(nota)}\n\nMás en radarbalcarce.com`;
 }
 
 // ------------------------------------------------- reels, historias y feed
