@@ -6,7 +6,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import {
-  NOMBRES_PROPIOS, FIGURAS, TEMAS, FARMACIAS_A_MANO, PISO_DE_AFUERA, PISO_POR_DEFECTO, CUPO_DE_AFUERA, CUPO_POR_DEFECTO, BALCARCE, FUENTES, FUENTES_NACIONALES, PALABRAS_LOCALES, REGLAS_SECCION, REGLAS_SEMAFORO,
+  NOMBRES_PROPIOS, FIGURAS, TEMAS, FARMACIAS_A_MANO, PISO_DE_AFUERA, PISO_POR_DEFECTO, CUPO_DE_AFUERA, CUPO_POR_DEFECTO, BALCARCE, FUENTES, FUENTES_NACIONALES, PALABRAS_LOCALES, PALABRAS_ZONA, REGLAS_SECCION, REGLAS_SEMAFORO,
 } from './fuentes.mjs';
 import { diaDeTurno, fechaEnBalcarce } from './utiles.mjs';
 
@@ -303,7 +303,10 @@ function parsearScrape(html, fuente) {
     // Algunas tarjetas traen bajada y título en encabezados separados
     // (<h3>bajada</h3><h2>título</h2>): si hay un <h2>, es el título real.
     const h2 = m[2].match(/<h2[^>]*>([\s\S]*?)<\/h2>/i);
-    const titulo = sinEtiquetas(h2 ? h2[1] : m[2]);
+    // Algunos medios le ponen una etiqueta fija adelante a cada título
+    // ("Argentina: …" en Argenpapa): `fuente.prefijoTitulo` la saca.
+    let titulo = sinEtiquetas(h2 ? h2[1] : m[2]);
+    if (fuente.prefijoTitulo && titulo.startsWith(fuente.prefijoTitulo)) titulo = titulo.slice(fuente.prefijoTitulo.length).trim();
     // Un titular no pasa de cien caracteres: el más largo que publicaron
     // las 24 fuentes hoy tiene 99 y la mediana es 53. Lo que se pasa no es
     // una noticia, es un bloque de texto de la página. El 20/09 salió
@@ -322,8 +325,8 @@ function parsearScrape(html, fuente) {
       fuenteId: fuente.id,
       medio: fuente.medio,
       alcance: fuente.alcance,
-      oficial: false,
-      seccionFuente: null,
+      oficial: !!fuente.oficial,
+      seccionFuente: fuente.seccion ?? null,
       peso: fuente.peso,
       fechaEstimada: true,
     });
@@ -337,6 +340,15 @@ function esDeBalcarce(nota) {
   if (nota.alcance === 'local') return true;
   const texto = normalizar(`${nota.titulo} ${nota.cuerpo.slice(0, 600)}`);
   return PALABRAS_LOCALES.some((p) => contiene(texto, p));
+}
+
+/** ¿Toca la zona sin nombrar a Balcarce? La ruta 226, el sudeste, la papa.
+ *  Coincidencia exacta, sin la cola de `contiene` (que acepta hasta tres
+ *  letras más para los plurales): con ella "ruta 2260" era "ruta 226". */
+const RE_ZONA = PALABRAS_ZONA.map((p) => new RegExp(`\\b${normalizar(p).replace(/\s+/g, '\\s+')}\\b`));
+function tocaLaZona(nota) {
+  const texto = normalizar(`${nota.titulo} ${(nota.cuerpo ?? '').slice(0, 600)}`);
+  return RE_ZONA.some((re) => re.test(texto));
 }
 
 /** ¿Nombra a alguien que en Balcarce se lee igual aunque la noticia sea de
@@ -425,6 +437,10 @@ function clasificar(nota) {
   if (debil) return debil;
 
   if (nota.alcance === 'local') return 'Balcarce';
+  // Una nota de afuera que nombra a Balcarce y no encaja en ninguna sección
+  // es de Balcarce, no de "Región" (que no sale sola). El 25/09 el acuerdo
+  // salarial del STM con el Municipio, que trajo QZ Noticias, quedaba ahí.
+  if (nota.nombraBalcarce) return 'Balcarce';
   if (nota.alcance === 'region') return 'Región';
   if (nota.alcance === 'provincia') return 'Provincia';
   return 'País';
@@ -979,10 +995,14 @@ export async function ingestar({
       // suba y para poder explicar en el panel por qué están.
       const conFigura = notas.filter((n) => !nuestras.includes(n) && figuraQueNombra(n));
       conFigura.forEach((n) => { n.figura = figuraQueNombra(n); });
-      const resto = notas.filter((n) => !nuestras.includes(n) && !conFigura.includes(n))
+      // Lo que toca la zona (ruta 226, sudeste, papa) entra aunque no diga
+      // Balcarce, pero sin marcarse como que la nombra (sin los +22).
+      const deLaZona = notas.filter((n) => !nuestras.includes(n) && !conFigura.includes(n) && tocaLaZona(n));
+      deLaZona.forEach((n) => { n.deLaZona = true; });
+      const resto = notas.filter((n) => !nuestras.includes(n) && !conFigura.includes(n) && !deLaZona.includes(n))
         .sort((a, b) => b.fecha - a.fecha)
         .slice(0, f.maxItems ?? 5);
-      notas = [...nuestras, ...conFigura, ...resto];
+      notas = [...nuestras, ...conFigura, ...deLaZona, ...resto];
     }
     return { fuente: f, notas };
   }));
@@ -1271,7 +1291,7 @@ export const paraPruebas = {
   clasificar, semaforo, limpiarCopete, relevancia, meta, parsearScrape,
   cieloDeSimbolo, haceCuanto, sinEtiquetas, decodificar,
   clavesDe, anotar, buscarFarmacia, directorioDeLaVanguardia, pisoDe,
-  contiene, cruzarFarmacias, controlDelCronograma,
+  contiene, cruzarFarmacias, controlDelCronograma, tocaLaZona,
 };
 
 // Sólo corre cuando se lo invoca directo; si lo importa probar.mjs, no.

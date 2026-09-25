@@ -15,14 +15,22 @@ Los otros documentos: `REGLAS.md` (lo que se exige siempre y qué lo vigila),
 ## 1. El recorrido de una noticia
 
 ```
-33 fuentes  →  agrupar  →  clasificar  →  puntuar  →  semáforo  →  panel  →  web / reels
+45 fuentes  →  agrupar  →  clasificar  →  puntuar  →  semáforo  →  panel  →  web / reels
 ```
 
-1. **Buscar.** Cada 30 minutos GitHub Actions lee las 33 fuentes (locales,
+1. **Buscar.** Cada 30 minutos GitHub Actions lee las 45 fuentes (locales,
    regionales y nacionales; la lista está en `ingesta/fuentes.mjs`), con la PC
    apagada; el panel, mientras está prendido, también busca cada 10. La mayoría tiene RSS; El Diario Balcarce
    no, así que se raspa la portada y después se entra a cada nota para sacar
    la bajada y la hora de publicación de sus metadatos.
+   **De afuera entra poco y a propósito.** Desde el 25/09 hay doce fuentes de
+   la región y la provincia (0223, LU9, QZ, El Eco de Tandil, Ecos Diarios,
+   Lobería, Ayacucho, la Agencia DIB, La Noticia 1, Diputados bonaerenses, el
+   Gobierno de la Provincia y Argenpapa). De casi todas entra sólo lo que
+   nombra a Balcarce (`PALABRAS_LOCALES`), a una figura (`FIGURAS`) o toca la
+   zona sin nombrarla: la ruta 226, la 55, el sudeste o el cultivo de papa
+   (`PALABRAS_ZONA`, en `ingesta/fuentes.mjs`). Pesan poco para no ganarle a lo
+   local, y lo de afuera que nombra a Balcarce va a la sección Balcarce.
 2. **Agrupar.** Si dos medios cuentan lo mismo, es UNA historia con dos
    fuentes, no dos notas. Se comparan los títulos por similitud (Jaccard,
    umbral 0,55). Que varios medios la tengan es señal de que importa, y suma

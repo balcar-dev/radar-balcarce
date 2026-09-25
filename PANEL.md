@@ -46,7 +46,7 @@ Dos usuarios: **Hernán** y **Andrés**. Cada uno con su contraseña.
 |---|---|
 | **Para decidir** | La cola de notas amarillas (denuncias, detenidos, muertes, chicos, promociones, lo de afuera con poco puntaje y País): publicar, descartar o editar título, copete y cuerpo. Política y Policiales llegan acá sólo si el semáforo las frena: si da verde, salen solas a la web (a las redes, nunca sin una persona) |
 | **Publicadas / Descartadas / Frenadas / Archivadas** | Lo ya decidido. **Frenadas** es el semáforo rojo (menores, víctimas): no se publica ni por error. **Archivadas** son las que pasaron 72 horas sin decidir |
-| **Fuentes** | Las 33 fuentes, con sus pesos y temas |
+| **Fuentes** | Las 45 fuentes, con sus pesos y temas |
 | **Clima y farmacias** | Lo que la web muestra hoy |
 | **Agenda** | Eventos del municipio, carga y publicación de eventos a mano (cada uno con su página en la web) y la base de contactos para pedir fechas. Ver "La agenda" más abajo |
 | **Calendario** | Horarios de las historias fijas (sólo rigen en la PC; en GitHub valen los de `panel/horarios.mjs`) |

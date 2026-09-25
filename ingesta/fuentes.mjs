@@ -219,6 +219,169 @@ export const FUENTES_NACIONALES = [
     temas: ['región', 'agro', 'policiales', 'política'],
     nota: 'Cubre Necochea, Lobería, San Cayetano, Balcarce y Tandil. Primera fuente de región que funciona: las otras cuatro probadas (La Capital MdP, El Retrato de Hoy, 0223, La Noticia 1) fallaron.',
   },
+  // --- Región y provincia (25/09) ------------------------------------------
+  // Hernán y Andrés pidieron más fuentes de la zona para tener notas más
+  // originales que le importen a Balcarce. Las eligió una búsqueda del 25/09
+  // (qué medios de afuera nombraron a Balcarce en 30 días, con Google Noticias
+  // como radar) y todas respondieron ese día.
+  //
+  // maxItems: 0 = de estas fuentes SÓLO entra lo que nombra a Balcarce
+  // (PALABRAS_LOCALES), a una FIGURA, o toca la zona (PALABRAS_ZONA). Pesos
+  // bajos a propósito: lo que nombra a Balcarce ya suma +25 y +22, y con más
+  // peso una nota de Mar del Plata le ganaría a una de acá.
+  // Siete medios de la región usan la misma plataforma (<medio>apiv3.eleco.com.ar):
+  // si ese servidor se cae, se caen juntos.
+  {
+    id: '0223',
+    nombre: '0223',
+    medio: '0223 (Mar del Plata)',
+    url: 'https://www.0223.com.ar/rss',
+    tipo: 'rss',
+    alcance: 'region',
+    peso: 12,
+    maxItems: 0,
+    temas: ['región', 'mar del plata', 'rutas'],
+    nota: 'El medio de afuera que más nombra a Balcarce (autódromo, ruta 226, sudeste). ~150 notas por día: sin filtro taparía todo. /rss/pages/home.xml viene vacío; /rss anda.',
+  },
+  {
+    id: 'eleco',
+    nombre: 'El Eco de Tandil',
+    medio: 'El Eco de Tandil',
+    url: 'https://articapiv3.eleco.com.ar/feed-notes',
+    tipo: 'atom',
+    alcance: 'region',
+    peso: 12,
+    maxItems: 0,
+    temas: ['región', 'tandil', 'rutas'],
+    nota: 'Tandil y la ruta 226 Tandil–Balcarce. El feed lo publica la plataforma de El Eco (el link rel=alternate de su portada).',
+  },
+  {
+    id: 'lu9',
+    nombre: 'LU9 Mar del Plata',
+    medio: 'LU9 Mar del Plata',
+    url: 'https://lu9mardelplataapiv3.eleco.com.ar/feed-notes',
+    tipo: 'atom',
+    alcance: 'region',
+    peso: 12,
+    maxItems: 0,
+    temas: ['región', 'mar del plata'],
+    nota: 'Radio de Mar del Plata con entrevistas propias (el 25/09, a Reino por el autódromo). Misma plataforma que El Eco.',
+  },
+  {
+    id: 'qznoticias',
+    nombre: 'QZ Noticias',
+    medio: 'QZ Noticias (Mar del Plata)',
+    url: 'https://qznoticiasapiv3.eleco.com.ar/feed-notes',
+    tipo: 'atom',
+    alcance: 'region',
+    peso: 12,
+    maxItems: 0,
+    temas: ['región', 'mar del plata', 'gremiales'],
+    nota: 'El 25/09 trajo el acuerdo salarial STM–Municipio de Balcarce, que no publicó ningún medio local.',
+  },
+  {
+    id: 'ecosdiarios',
+    nombre: 'Ecos Diarios',
+    medio: 'Ecos Diarios (Necochea)',
+    url: 'https://ecosdiariosapiv3.eleco.com.ar/feed-notes',
+    tipo: 'atom',
+    alcance: 'region',
+    peso: 11,
+    maxItems: 0,
+    temas: ['región', 'necochea', 'lobería'],
+    nota: 'El que más cubre Lobería. El dominio viejo (ecosdiariosweb.com.ar) corta la conexión.',
+  },
+  {
+    id: 'dib',
+    nombre: 'Agencia DIB',
+    medio: 'Agencia DIB',
+    url: 'https://dib.com.ar/rss/pages/home.xml',
+    tipo: 'rss',
+    alcance: 'provincia',
+    peso: 12,
+    maxItems: 0,
+    temas: ['provincia', 'interior bonaerense'],
+    nota: 'Agencia de noticias del interior bonaerense; la levantan decenas de diarios. Sólo lo que nombra a Balcarce o toca la zona: con dos por vuelta entraba "Edición impresa del día" y la sección Provincia no sale sola.',
+  },
+  {
+    id: 'lanoticia1',
+    nombre: 'La Noticia 1',
+    medio: 'La Noticia 1',
+    url: 'https://lanoticia1apiv3.eleco.com.ar/feed-notes',
+    tipo: 'atom',
+    alcance: 'provincia',
+    peso: 11,
+    maxItems: 0,
+    temas: ['provincia'],
+    nota: 'Interior bonaerense. La URL vieja (/rss) no andaba; el feed real es el de la plataforma de El Eco.',
+  },
+  {
+    id: 'diputadosbsas',
+    nombre: 'Diputados Bonaerenses',
+    medio: 'Diputados Bonaerenses',
+    url: 'https://diputadosbsas.com.ar/feed/',
+    tipo: 'rss',
+    alcance: 'provincia',
+    peso: 11,
+    maxItems: 0,
+    temas: ['legislatura', 'política provincial'],
+    nota: 'Legislatura bonaerense. Sólo entra cuando nombra a Balcarce (proyectos, legisladores de la sección).',
+  },
+  {
+    id: 'gba',
+    nombre: 'Gobierno de la Provincia',
+    medio: 'Gobierno de la Provincia de Buenos Aires',
+    url: 'https://www.gba.gob.ar/rss.xml',
+    tipo: 'rss',
+    alcance: 'provincia',
+    peso: 14,
+    maxItems: 0,
+    oficial: true,
+    temas: ['oficial', 'provincia'],
+    nota: 'Sólo trae discursos del gobernador. oficial + maxItems 0: sale únicamente lo que nombra a Balcarce o toca la zona. NO subir maxItems con oficial: true (saltearía el piso).',
+  },
+  {
+    id: 'loberia2261',
+    nombre: '2261 Lobería',
+    medio: '2261 – Noticias de Lobería',
+    url: 'https://www.2261.com.ar/feed/',
+    tipo: 'rss',
+    alcance: 'region',
+    peso: 10,
+    maxItems: 1,
+    temas: ['región', 'lobería', 'rural'],
+    nota: 'Partido vecino. Una por vuelta: obras, rutas, sociedades rurales.',
+  },
+  {
+    id: 'ayacuchoaldia',
+    nombre: 'Ayacucho al Día',
+    medio: 'Ayacucho al Día',
+    url: 'https://ayacuchoaldia.com.ar/feed/',
+    tipo: 'rss',
+    alcance: 'region',
+    peso: 10,
+    maxItems: 0,
+    temas: ['región', 'ayacucho'],
+    nota: 'Partido vecino, pero mezcla notas de toda la provincia: sólo lo que nombra a Balcarce o toca la zona.',
+  },
+  {
+    id: 'argenpapa',
+    nombre: 'Argenpapa',
+    medio: 'Argenpapa',
+    url: 'https://www.argenpapa.com.ar/noticias/argentina/',
+    base: 'https://www.argenpapa.com.ar',
+    // Notas: /noticia/<id>-argentina-<slug>. Cada una tiene dos <a>: la foto
+    // (vacía, la descarta el largo mínimo) y el título.
+    patronEnlace: /<a[^>]+href=["']([^"']*\/noticia\/\d+-argentina-[a-z0-9-]+)["'][^>]*>([\s\S]*?)<\/a>/gi,
+    tipo: 'scrape',
+    alcance: 'region',
+    seccion: 'Agro',
+    prefijoTitulo: 'Argentina:',
+    peso: 16,
+    maxItems: 3,
+    temas: ['agro', 'papa'],
+    nota: 'Balcarce es capital nacional de la papa y nadie de la zona cubre el negocio (precios, semilla, industria, importaciones). Sin feed: se lee la sección Argentina.',
+  },
   {
     id: 'campeones',
     nombre: 'Campeones',
@@ -458,8 +621,6 @@ export const CANDIDATOS = [
   // publica feed: su sección de Balcarce habría que leerla de la página.
   { id: 'lacapitalmdp', nombre: 'La Capital (MdP)', url: 'https://www.lacapitalmdp.com/feed/', alcance: 'region' },
   { id: 'retratodehoy', nombre: 'El Retrato de Hoy', url: 'https://elretratodehoy.com.ar/feed/', alcance: 'region' },
-  { id: '0223', nombre: '0223 (MdP)', url: 'https://www.0223.com.ar/rss/pages/home.xml', alcance: 'region' },
-  { id: 'lanoticia1', nombre: 'La Noticia 1', url: 'https://www.lanoticia1.com/rss', alcance: 'provincia' },
   { id: 'pagina12', nombre: 'Página 12', url: 'https://www.pagina12.com.ar/rss/portada', alcance: 'pais' },
   { id: 'carburando', nombre: 'Carburando', url: 'https://carburando.com/feed/', alcance: 'pais' },
   { id: 'actc', nombre: 'ACTC (Turismo Carretera)', url: 'https://www.actc.org.ar/feed/', alcance: 'pais' },
@@ -475,6 +636,17 @@ export const PALABRAS_LOCALES = [
   'napaleofú', 'napaleofu', 'ramos otero', 'laguna la brava',
   'sierras de balcarce', 'inta balcarce', 'partido de balcarce',
   'autódromo juan manuel fangio', 'museo fangio',
+];
+
+// Lo que afecta a Balcarce sin nombrarla: las rutas que la cruzan, el sudeste
+// y la papa. De las fuentes de afuera entra aunque no diga "Balcarce", pero sin
+// los +22 de nombrarla (25/09). "papa" sola no: el 25/09 apareció "el Papa
+// León XIV"; van frases que sólo pueden ser del cultivo.
+export const PALABRAS_ZONA = [
+  'ruta 226', 'ruta nacional 226', 'ruta 55', 'ruta provincial 55',
+  'sudeste bonaerense', 'sudeste de la provincia',
+  'productores de papa', 'papa semilla', 'cultivo de papa', 'producción de papa',
+  'produccion de papa', 'cosecha de papa', 'siembra de papa',
 ];
 
 // Clasificación por palabras. El orden importa: gana la primera que coincide.

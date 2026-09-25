@@ -39,7 +39,7 @@ PC de Hernán: el panel (puerto 4321) ── sincroniza decisiones a GitHub
 
 | Workflow | Cuándo corre | Qué hace |
 |---|---|---|
-| `actualizar.yml` · Actualizar la web | cron-job.org cada 30 min (y un `schedule` propio de GitHub, que es impuntual, como respaldo) | Lee las 33 fuentes, reescribe con IA lo que sale sin revisión, corre las pruebas, arma `web/data/portada.json` (sólo notas de las últimas 72 h) y `web/data/archivo.json` (lo publicado de los últimos 180 días) y los sube. Tiempo máximo: 20 minutos. **Si las pruebas fallan, la web se queda como estaba.** |
+| `actualizar.yml` · Actualizar la web | cron-job.org cada 30 min (y un `schedule` propio de GitHub, que es impuntual, como respaldo) | Lee las 45 fuentes, reescribe con IA lo que sale sin revisión, corre las pruebas, arma `web/data/portada.json` (sólo notas de las últimas 72 h) y `web/data/archivo.json` (lo publicado de los últimos 180 días) y los sube. Tiempo máximo: 20 minutos. **Si las pruebas fallan, la web se queda como estaba.** |
 | `cloudflare-deploy.yml` · Cloudflare Pages | Al terminar "Actualizar la web" | Compila el sitio y lo sube a Cloudflare Pages con `wrangler` en una versión fija (4.139.0). Tiempo máximo: 15 minutos. |
 | `redes.yml` · Redes | cron-job.org cada 30 min, de 7 a 23 (y al terminar "Actualizar la web") | Publica en Facebook y, si a esa hora toca una pieza, la arma con la voz de Gemini y la sube a Instagram y a la página. |
 | `piezas.yml` · Piezas | A mano (Actions → Piezas → Run workflow) | Armar o publicar una pieza puntual. |
