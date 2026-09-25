@@ -1,5 +1,5 @@
 {
-  "generado": "2026-09-25T19:30:38.143Z",
+  "generado": "2026-09-25T20:00:45.079Z",
   "notas": [
     {
       "id": "xtbw5",
@@ -106,118 +106,6 @@
         "sugeridoPorIA": "ALTA"
       },
       "slug": "franco-colapinto-largara-noveno-el-gran-premio-de-azerbaiyan"
-    },
-    {
-      "id": "1plbwti",
-      "titulo": "El riesgo país supera los seiscientos puntos básicos",
-      "copete": "El indicador financiero registra su décima suba consecutiva y alcanza máximos que no se veían desde marzo. La situación restringe el acceso a nuevos créditos internacionales y obliga a cancelar compromisos en efectivo.",
-      "cuerpo": "El indicador elaborado por JP Morgan escaló este viernes por encima de los seiscientos puntos básicos, un nivel que no se alcanzaba desde principios de abril, tras registrar su décima rueda consecutiva de aumento.\n\nEspecialistas de la consultora Mills Capital señalaron que este comportamiento responde a una combinación de factores externos adversos y a la cautela de los inversores locales. Por su parte, desde IEB indicaron que la fortaleza de la economía estadounidense y el fortalecimiento del dólar impactan de forma directa sobre los mercados emergentes.\n\nUn riesgo país en estos niveles encarece de forma significativa el costo de financiamiento externo, lo que margina al país de la emisión de nueva deuda y obliga al Gobierno a utilizar dólares en efectivo para afrontar los próximos vencimientos de capital e intereses.",
-      "guion": "El riesgo país supera los seiscientos puntos básicos.",
-      "seccion": "Economía",
-      "medios": [
-        "Infobae"
-      ],
-      "enlace": "https://www.infobae.com/economia/2026/09/25/por-que-sube-el-riesgo-pais-de-argentina-y-como-afecta-a-la-economia/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-25T18:49:17.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-25T18:00:42.931Z",
-      "relevancia": 49,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "El riesgo país superó los seiscientos puntos básicos este viernes.",
-        "Se trata de la décima suba consecutiva del indicador de JP Morgan.",
-        "El contexto internacional y las dudas locales impulsan el incremento.",
-        "La situación encarece el acceso a los mercados internacionales de crédito."
-      ],
-      "noConfirmado": [
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "El riesgo país superó este viernes los seiscientos puntos básicos tras registrar su décima suba consecutiva. La suba del indicador financiero restringe el acceso a los mercados internacionales de crédito.",
-      "etiquetas": [
-        "riesgo pais",
-        "economia",
-        "deuda",
-        "mercados"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Infobae",
-          "enlace": "https://www.infobae.com/economia/2026/09/25/por-que-sube-el-riesgo-pais-de-argentina-y-como-afecta-a-la-economia/",
-          "fecha": "2026-09-25T17:40:46.000Z",
-          "oficial": false,
-          "aporte": "Aportó datos sobre la suba del riesgo país, las declaraciones de analistas económicos y el impacto en el financiamiento."
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "el-riesgo-pais-supera-los-seiscientos-puntos-basicos"
-    },
-    {
-      "id": "hi1v27",
-      "titulo": "Desarrollan una mano robótica con autonomía para caminar y usar teclados",
-      "copete": "Un equipo de investigadores en Suiza creó una mano robótica con forma humana que puede desplazarse por distintas superficies, recuperar el equilibrio y pulsar teclas sin estar unida a un brazo.",
-      "cuerpo": "Investigadores del Laboratorio de Robótica Blanda de ETH Zúrich, en Suiza, desarrollaron una mano robótica capaz de caminar, mantener el equilibrio y manipular objetos por cuenta propia, sin la necesidad de estar montada a un brazo mecánico.\n\nPara lograrlo, el equipo dirigido por Amir Kazemi adaptó un dispositivo comercial añadiéndole una batería, sensores de movimiento y una computadora pequeña en el dorso. El sistema fue entrenado mediante aprendizaje por refuerzo, una técnica de inteligencia artificial que le permitió aprender a repartir el peso entre sus dedos de diferentes longitudes y avanzar sobre catorce superficies distintas, como alfombra, césped y grava.\n\nDurante las pruebas, el prototipo logró levantarse por sus propios medios en la mayoría de los ensayos realizados y demostró precisión al pulsar teclas y desplazar objetos sobre una mesa. Los responsables del proyecto indicaron que este avance busca dotar a los robots del futuro de mayor versatilidad en espacios diseñados para personas, aunque aclararon que por el momento se trató de pruebas específicas sin una aplicación inmediata en hogares o industrias.",
-      "guion": "Desarrollan una mano robótica con autonomia para caminar y usar teclados",
-      "seccion": "Tecnología",
-      "medios": [
-        "Infobae"
-      ],
-      "enlace": "https://www.infobae.com/tecno/2026/09/25/como-funciona-la-mano-robotica-que-aprendio-a-caminar-recuperar-el-equilibrio-y-usar-un-teclado/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-25T18:30:32.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-25T16:30:41.984Z",
-      "relevancia": 49,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Creada por investigadores del Laboratorio de Robótica Blanda de ETH Zúrich, en Suiza.",
-        "Incorpora batería, sensores y una computadora en el dorso para moverse de forma autónoma.",
-        "Se entrenó mediante inteligencia artificial para caminar sobre catorce superficies diferentes.",
-        "Pudo pulsar teclas y desplazar objetos con precisión durante las pruebas experimentales."
-      ],
-      "seSabe": [
-        "El prototipo fue desarrollado por investigadores de ETH Zúrich en Suiza.",
-        "El dispositivo cuenta con una batería, sensores de movimiento y una computadora pequeña en su dorso.",
-        "El control del movimiento se entrenó mediante aprendizaje por refuerzo en un simulador y luego en el prototipo físico.",
-        "Las pruebas incluyeron catorce superficies diferentes, como alfombra, césped, grava y rejillas metálicas.",
-        "El sistema logró pulsar teclas de dirección y empujar bloques pequeños sobre una mesa durante las evaluaciones."
-      ],
-      "noConfirmado": [
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "Investigadores en Suiza desarrollaron una mano robótica con forma humana capaz de caminar sobre distintas superficies, recuperar el equilibrio, pulsar teclas y mover objetos por cuenta propia sin estar unida a un brazo mecánico.",
-      "etiquetas": [
-        "robotica",
-        "inteligencia artificial",
-        "suiza"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Infobae",
-          "enlace": "https://www.infobae.com/tecno/2026/09/25/como-funciona-la-mano-robotica-que-aprendio-a-caminar-recuperar-el-equilibrio-y-usar-un-teclado/",
-          "fecha": "2026-09-25T16:04:45.000Z",
-          "oficial": false,
-          "aporte": "Aportó los detalles sobre el desarrollo, funcionamiento y pruebas del prototipo de mano robótica autónoma creado en Suiza."
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "desarrollan-una-mano-robotica-con-autonomia-para-caminar-y-usar"
     },
     {
       "id": "repaso20260925tarde",
@@ -358,52 +246,6 @@
       "slug": "franco-colapinto-larga-decimo-en-el-gran-premio-de-azerbaiyan"
     },
     {
-      "id": "1g2gwr2",
-      "titulo": "Ofrecen viviendas prefabricadas de madera con montaje rápido",
-      "copete": "Un sistema industrializado de Concepción del Uruguay propone casas de casi 150 metros cuadrados que se montan en diez días. El esquema genera interés en el mercado por sus costos reducidos frente a los departamentos urbanos.",
-      "cuerpo": "Un nuevo sistema constructivo desarrollado en Entre Ríos promete reducir los tiempos de obra al trasladar la fabricación de los componentes a planta, lo que permite realizar el montaje de la estructura en diez días una vez finalizada la etapa previa.\n\nLa estructura principal se levanta con eucalipto saligna y quebracho colorado, e incluye dos dormitorios, un baño, cocina integrada y living-comedor.\n\nSin embargo, el presupuesto final debe contemplar otros gastos adicionales que no vienen incluidos en la oferta inicial. Entre ellos figuran el traslado desde la planta entrerriana, calculado en diez dólares por kilómetro, y las conexiones domiciliarias de servicios como luz, gas y agua. Asimismo, el sistema admite modificaciones en las medidas y en la distribución interior antes de iniciar la fabricación en fábrica.",
-      "guion": "Ofrecen viviendas prefabricadas de madera con montaje rápido",
-      "seccion": "Economía",
-      "medios": [
-        "Ámbito"
-      ],
-      "enlace": "https://www.ambito.com/economia/casa-propia-10-dias-la-vivienda-madera-150-m-que-cuesta-un-65-menos-que-un-monoambiente-n6326075",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-25T17:00:00.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-25T18:30:44.515Z",
-      "relevancia": 45,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "noConfirmado": [
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "Un sistema industrializado de Entre Ríos ofrece casas de casi 150 metros cuadrados que se montan en diez días. Cuáles son los costos informados, los adicionales a tener en cuenta y las características de este modelo constructivo que gana espacio en el mercado.",
-      "etiquetas": [
-        "viviendas",
-        "construccion",
-        "madera"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Ámbito",
-          "enlace": "https://www.ambito.com/economia/casa-propia-10-dias-la-vivienda-madera-150-m-que-cuesta-un-65-menos-que-un-monoambiente-n6326075",
-          "fecha": "2026-09-25T17:00:00.000Z",
-          "oficial": false,
-          "aporte": "Detalló las características técnicas, los tiempos de obra, los costos y las condiciones de contratación del sistema de viviendas de madera."
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "ofrecen-viviendas-prefabricadas-de-madera-con-montaje-rapido"
-    },
-    {
       "id": "6zyz8n",
       "titulo": "El handball municipal compitió en el circuito Asabal en Balcarce",
       "copete": "Unos cuarenta jugadores locales participaron de la sexta fecha del Circuito Asabal en Mar del Plata. La delegación sumó rodaje de cara al torneo internacional de noviembre.",
@@ -418,7 +260,7 @@
       "fecha": "2026-09-25T16:32:32.000Z",
       "sinFecha": false,
       "visto": "2026-09-25T17:00:45.961Z",
-      "relevancia": 82,
+      "relevancia": 72,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1133,78 +975,6 @@
       "slug": "diego-santilli-llega-a-balcarce-por-el-automovilismo"
     },
     {
-      "id": "1825h24",
-      "titulo": "Campo de Pato disputa una doble fecha de hockey en Balcarce",
-      "copete": "El Club Social y Campo de Pato fue escenario de un fin de semana a puro hockey por el Torneo AB de la Asociación Amateur Marplatense, con partidos frente a Del Valle de Necochea y Polideportivo Villa Gesell.",
-      "cuerpo": "Durante el fin de semana pasado, el Club Social y Campo de Pato \"Gral. Balcarce\" recibió dos fechas de hockey sobre césped en el marco del Torneo AB de la Asociación Amateur Marplatense. Las actividades comenzaron el sábado con el enfrentamiento ante Del Valle de Necochea, donde más de sesenta jugadoras infantiles participaron de la jornada.\n\nEn tanto, el domingo la jornada continuó con el adelanto de la fecha doce frente al Polideportivo Villa Gesell, en un contexto marcado por el mal tiempo. En esta ocasión, la categoría sub-dieciséis obtuvo un cómodo triunfo por cuatro a cero, mientras que la séptima empató sin goles y cayó en los penales, y la quinta división no pudo superar a su rival.\n\nPróximamente, el conjunto de Balcarce afrontará una nueva jornada del certamen cuando deba viajar a Mar del Plata para medirse ante Biguá.",
-      "guion": "Campo de Pato disputa una doble fecha de hockey en Balcarce",
-      "seccion": "Deportes",
-      "medios": [
-        "Municipalidad de Balcarce"
-      ],
-      "enlace": "https://balcarce.gob.ar/2026/09/25/doble-fecha-de-hockey-para-campo-de-pato/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-25T13:28:23.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-25T13:30:44.576Z",
-      "relevancia": 74,
-      "local": true,
-      "publicadaPor": "ia",
-      "publicadaCuando": "2026-09-25T13:33:00.780Z",
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Campo de Pato recibió a Del Valle de Necochea y Polideportivo Villa Gesell.",
-        "Los encuentros correspondieron al Torneo AB de la Asociación Amateur Marplatense.",
-        "La próxima fecha se jugará en Mar del Plata frente a Biguá."
-      ],
-      "noConfirmado": [
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "El Club Social y Campo de Pato fue local en una intensa doble fecha de hockey sobre césped por el Torneo AB de la Asociación Amateur Marplatense, con partidos frente a Del Valle de Necochea y Polideportivo Villa Gesell.",
-      "etiquetas": [
-        "hockey",
-        "Campo de Pato",
-        "Balcarce",
-        "deportes"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Municipalidad de Balcarce",
-          "enlace": "https://balcarce.gob.ar/2026/09/25/doble-fecha-de-hockey-para-campo-de-pato/",
-          "fecha": "2026-09-25T13:28:23.000Z",
-          "oficial": true,
-          "aporte": "Detalló los resultados y goleadores de todas las categorías frente a Necochea y Villa Gesell."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "acvevu",
-          "titulo": "Hockey: Campo de Pato disputó dos fechas del Torneo AB",
-          "fecha": "2026-09-21T18:10:52.000Z",
-          "ruta": "/nota/hockey-campo-de-pato-disputo-dos-fechas-del-torneo-ab-acvevu"
-        },
-        {
-          "id": "zmbe8t",
-          "titulo": "Rugby: doble triunfo para Campo de Pato en el Torneo Desarrollo",
-          "fecha": "2026-09-21T18:02:31.000Z",
-          "ruta": "/nota/rugby-doble-triunfo-para-campo-de-pato-en-el-torneo-desarrollo-zmbe8t"
-        },
-        {
-          "id": "1xf2418",
-          "titulo": "Campo de Pato volvió a tener una destacada jornada de hockey",
-          "fecha": "2026-09-18T05:43:46.737Z",
-          "ruta": "/nota/campo-de-pato-volvio-a-tener-una-destacada-jornada-de-hockey-1xf2418"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Sale de una fuente oficial: Municipalidad de Balcarce.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "campo-de-pato-disputa-una-doble-fecha-de-hockey-en-balcarce"
-    },
-    {
       "id": "5agvfd",
       "titulo": "El autódromo de Balcarce vuelve a recibir al automovilismo nacional en Balcarce",
       "copete": "El circuito Juan Manuel Fangio recupera las competencias nacionales este fin de semana con el TC Pick Up como categoría principal, tras casi quince años de inactividad oficial.",
@@ -1397,86 +1167,6 @@
         }
       ],
       "slug": "el-repaso-de-la-manana-en-radar-balcarce-franco-colapinto-y-juan-jose"
-    },
-    {
-      "id": "1v69v60",
-      "titulo": "Kicillof visita la vecina ciudad de Loberia",
-      "copete": "El gobernador bonaerense encabeza un acto en Loberia este viernes, donde entrega una ambulancia, escrituras y netbooks en el marco de su recorrida por la region.",
-      "cuerpo": "El gobernador de la Provincia de Buenos Aires, Axel Kicillof, visita este viernes la vecina ciudad de Lobería en una agenda oficial que coincide con su cumpleaños, acompañado por los ministros de Salud, Nicolás Kreplak, y de Hábitat y Desarrollo Urbano, Silvina Batakis. Las actividades se desarrollan en el CEF número 43, donde el mandatario comparte escenario con el intendente local, Pablo Barrena.\n\nEsta recorrida regional del gobernador bonaerense se produce en la misma jornada en la que el mandatario encabeza la reapertura del autódromo Juan Manuel Fangio en el distrito de Balcarce, un acontecimiento institucional que marca el regreso de las competencias nacionales al circuito serrano tras quince años sin actividad oficial, de acuerdo con la información difundida previamente por este medio.",
-      "guion": "Kicillof visita la vecina ciudad de Loberia",
-      "seccion": "Política",
-      "medios": [
-        "Sendero Regional",
-        "2261 – Noticias de Lobería"
-      ],
-      "enlace": "https://www.senderomultimedios.com.ar/kicillof-celebra-su-cumpleanos-en-loberia-y-entregara-una-ambulancia-escrituras-y-netbooks/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-25T12:55:56.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-25T14:00:47.747Z",
-      "relevancia": 70,
-      "local": true,
-      "publicadaPor": "ia",
-      "publicadaCuando": "2026-09-25T13:51:22.900Z",
-      "temas": [
-        "autodromo",
-        "fangio"
-      ],
-      "como": "automatica",
-      "noConfirmado": [
-        "No se detalló el horario exacto en el que se desarrollarán las actividades previstas en el distrito loberense."
-      ],
-      "textoRedes": "El gobernador Axel Kicillof visita este viernes la vecina ciudad de Lobería para entregar equipamiento sanitario, escrituras y computadoras para escuelas en una jornada de recorrida regional.",
-      "etiquetas": [
-        "Axel Kicillof",
-        "Loberia",
-        "Pablo Barrena",
-        "Salud",
-        "Educacion",
-        "Provincia de Buenos Aires"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Sendero Regional",
-          "enlace": "https://www.senderomultimedios.com.ar/kicillof-celebra-su-cumpleanos-en-loberia-y-entregara-una-ambulancia-escrituras-y-netbooks/",
-          "fecha": "2026-09-25T12:55:56.000Z",
-          "oficial": false,
-          "aporte": "Detalló las actividades, funcionarios presentes y equipamiento entregado durante la visita a Lobería."
-        },
-        {
-          "medio": "2261 – Noticias de Lobería",
-          "enlace": "https://www.2261.com.ar/kicillof-visitara-loberia-en-el-dia-de-su-cumpleanos/",
-          "fecha": "2026-09-23T23:52:12.000Z",
-          "oficial": false,
-          "aporte": "Coincidió en la fecha y la particularidad del cumpleaños del mandatario en su recorrida por la zona."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "1nuz3q",
-          "titulo": "Kicillof visitará Balcarce: inaugurará obras en el autódromo y entregará escrituras",
-          "fecha": "2026-09-16T13:12:10.873Z",
-          "ruta": "/nota/kicillof-visitara-balcarce-inaugurara-obras-en-el-autodromo-y-1nuz3q"
-        },
-        {
-          "id": "uj4h1v",
-          "titulo": "Kicillof encabeza la reinauguración del autódromo en Balcarce",
-          "fecha": "2026-09-25T11:53:01.000Z",
-          "ruta": "/nota/kicillof-encabeza-la-reinauguracion-del-autodromo-en-balcarce-uj4h1v"
-        },
-        {
-          "id": "1e6tvp9",
-          "titulo": "Kicillof encabeza la reapertura del autódromo Juan Manuel Fangio en Balcarce",
-          "fecha": "2026-09-25T10:15:00.000Z",
-          "ruta": "/nota/el-gobernador-bonaerense-encabeza-la-reapertura-del-autodromo-en-1e6tvp9"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron dos medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "kicillof-visita-la-vecina-ciudad-de-loberia"
     },
     {
       "id": "164efaj",
@@ -1858,15 +1548,14 @@
       "guion": "La Escuela Municipal de Basquet compite en un torneo en Mar del Plata en Balcarce",
       "seccion": "Deportes",
       "medios": [
-        "Radio Gabal (FM 104.1)",
-        "Puntonueve (FM 100.9)"
+        "Radio Gabal (FM 104.1)"
       ],
       "enlace": "https://www.radiogabal.com.ar/index.php/deportes/experiencia-internacional-para-las-jugadoras-de-la-escuela-municipal-de-basquet",
       "teniaImagenLaFuente": true,
       "fecha": "2026-09-25T11:46:11.000Z",
       "sinFecha": false,
       "visto": "2026-09-25T12:00:43.124Z",
-      "relevancia": 86,
+      "relevancia": 72,
       "local": true,
       "publicadaPor": "ia",
       "publicadaCuando": "2026-09-25T11:57:25.176Z",
@@ -1975,86 +1664,6 @@
         "sugeridoPorIA": "MEDIA"
       },
       "slug": "karina-lupo-y-mariano-barreiro-ganan-la-media-maraton-en-balcarce"
-    },
-    {
-      "id": "1s8swk5",
-      "titulo": "El Concejo pide informes al Municipio por obras tras una renuncia en Balcarce",
-      "copete": "El cuerpo legislativo aprobó un proyecto para conocer detalles sobre la continuidad del área de Obras y Servicios Públicos y el estado de los trabajos en marcha.",
-      "cuerpo": "La iniciativa, fundamentada por la concejal Sol Di Gerónimo, requiere detalles sobre quién ocupará el reemplazo, las funciones asignadas y el impacto del recambio en la planificación de los trabajos municipales, un sector que actualmente se encuentra bajo la órbita del secretario Gustavo Torres. El pedido también exige un detalle físico y financiero del plan de obras, incluyendo el bacheo urbano, la red vial rural y las delegaciones, además de reclamar precisiones sobre intervenciones prioritarias como el Geriátrico Municipal, el autódromo Juan Manuel Fangio y el Hospital Municipal Subzonal. Por su parte, el concejal Ignacio Capeccio, de la Alianza La Libertad Avanza, acompañó la iniciativa y propuso convocar a Torres a la Comisión de Planeamiento ante las demoras previas en las respuestas del área.",
-      "guion": "El Concejo pide informes al Municipio por obras tras una renuncia en Balcarce.",
-      "seccion": "Política",
-      "medios": [
-        "El Diario Balcarce"
-      ],
-      "enlace": "https://eldiariobalcarce.com.ar/el-concejo-pidio-al-municipio-detalles-sobre-las-obras-y-la-continuidad-del-area-tras-la-renuncia-de-alvarez-quintero-903",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-25T10:47:08.606Z",
-      "sinFecha": true,
-      "visto": "2026-09-25T10:47:08.606Z",
-      "relevancia": 63,
-      "local": true,
-      "publicadaPor": "ia",
-      "publicadaCuando": "2026-09-25T13:14:20.980Z",
-      "temas": [
-        "concejo"
-      ],
-      "como": "automatica",
-      "claves": [
-        "El Concejo Deliberante aprobó un pedido de informes al Ejecutivo municipal.",
-        "La iniciativa surge tras la renuncia del subsecretario de Obras y Servicios Públicos.",
-        "Se solicita información sobre el estado de las obras y la asignación de fondos.",
-        "La Libertad Avanza propuso convocar al secretario Gustavo Torres al recinto."
-      ],
-      "seSabe": [
-        "El Concejo Deliberante aprobó un proyecto de comunicación presentado por el bloque de Fuerza Patria.",
-        "La iniciativa fue impulsada por la concejal Sol Di Gerónimo.",
-        "El área de Obras y Servicios Públicos está a cargo de Gustavo Torres tras la salida del subsecretario Nicolás Álvarez Quintero.",
-        "El concejal Ignacio Capeccio respaldó el pedido y sugirió convocar a Torres a la Comisión de Planeamiento."
-      ],
-      "noConfirmado": [
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "El Concejo Deliberante aprobó un pedido de informes al Municipio sobre la situación del área de Obras y Servicios Públicos y el estado de los trabajos en marcha tras la renuncia del subsecretario del área.",
-      "etiquetas": [
-        "Concejo Deliberante",
-        "Obras Públicas",
-        "Municipalidad de Balcarce"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "El Diario Balcarce",
-          "enlace": "https://eldiariobalcarce.com.ar/el-concejo-pidio-al-municipio-detalles-sobre-las-obras-y-la-continuidad-del-area-tras-la-renuncia-de-alvarez-quintero-903",
-          "fecha": null,
-          "oficial": false,
-          "aporte": "Detalló la aprobación del pedido de informes del Concejo sobre la obra pública tras la salida de Álvarez Quintero."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "1chkxhh",
-          "titulo": "El Concejo Deliberante debate tasas y obras en Balcarce",
-          "fecha": "2026-09-25T02:23:01.000Z",
-          "ruta": "/nota/concejo-deliberante-la-decimocuarta-sesion-tuvo-debates-mas-1chkxhh"
-        },
-        {
-          "id": "1iv58lw",
-          "titulo": "El Concejo Deliberante debate tasas, obras y proyectos en Balcarce",
-          "fecha": "2026-09-24T12:55:31.000Z",
-          "ruta": "/nota/concejo-deliberante-este-jueves-se-desarrollara-el-decimocuarto-1iv58lw"
-        },
-        {
-          "id": "1spjzhb",
-          "titulo": "El Concejo designa Paseo Intendente Juan José Mare a la vuelta interna del Cerro en Balcar",
-          "fecha": "2026-09-25T12:46:51.000Z",
-          "ruta": "/nota/el-concejo-designa-paseo-intendente-juan-jose-mare-a-la-vuelta-1spjzhb"
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "el-concejo-pidio-informes-al-municipio-por-obras-publicas"
     },
     {
       "id": "33h243",
@@ -2186,6 +1795,86 @@
         "sugeridoPorIA": "MEDIA"
       },
       "slug": "un-balcarceno-investiga-sobre-vida-extrema-para-la-nasa"
+    },
+    {
+      "id": "1s8swk5",
+      "titulo": "El Concejo pide informes al Municipio por obras tras una renuncia en Balcarce",
+      "copete": "El cuerpo legislativo aprobó un proyecto para conocer detalles sobre la continuidad del área de Obras y Servicios Públicos y el estado de los trabajos en marcha.",
+      "cuerpo": "La iniciativa, fundamentada por la concejal Sol Di Gerónimo, requiere detalles sobre quién ocupará el reemplazo, las funciones asignadas y el impacto del recambio en la planificación de los trabajos municipales, un sector que actualmente se encuentra bajo la órbita del secretario Gustavo Torres. El pedido también exige un detalle físico y financiero del plan de obras, incluyendo el bacheo urbano, la red vial rural y las delegaciones, además de reclamar precisiones sobre intervenciones prioritarias como el Geriátrico Municipal, el autódromo Juan Manuel Fangio y el Hospital Municipal Subzonal. Por su parte, el concejal Ignacio Capeccio, de la Alianza La Libertad Avanza, acompañó la iniciativa y propuso convocar a Torres a la Comisión de Planeamiento ante las demoras previas en las respuestas del área.",
+      "guion": "El Concejo pide informes al Municipio por obras tras una renuncia en Balcarce.",
+      "seccion": "Política",
+      "medios": [
+        "El Diario Balcarce"
+      ],
+      "enlace": "https://eldiariobalcarce.com.ar/el-concejo-pidio-al-municipio-detalles-sobre-las-obras-y-la-continuidad-del-area-tras-la-renuncia-de-alvarez-quintero-903",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-25T10:47:08.606Z",
+      "sinFecha": true,
+      "visto": "2026-09-25T10:47:08.606Z",
+      "relevancia": 63,
+      "local": true,
+      "publicadaPor": "ia",
+      "publicadaCuando": "2026-09-25T13:14:20.980Z",
+      "temas": [
+        "concejo"
+      ],
+      "como": "automatica",
+      "claves": [
+        "El Concejo Deliberante aprobó un pedido de informes al Ejecutivo municipal.",
+        "La iniciativa surge tras la renuncia del subsecretario de Obras y Servicios Públicos.",
+        "Se solicita información sobre el estado de las obras y la asignación de fondos.",
+        "La Libertad Avanza propuso convocar al secretario Gustavo Torres al recinto."
+      ],
+      "seSabe": [
+        "El Concejo Deliberante aprobó un proyecto de comunicación presentado por el bloque de Fuerza Patria.",
+        "La iniciativa fue impulsada por la concejal Sol Di Gerónimo.",
+        "El área de Obras y Servicios Públicos está a cargo de Gustavo Torres tras la salida del subsecretario Nicolás Álvarez Quintero.",
+        "El concejal Ignacio Capeccio respaldó el pedido y sugirió convocar a Torres a la Comisión de Planeamiento."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El Concejo Deliberante aprobó un pedido de informes al Municipio sobre la situación del área de Obras y Servicios Públicos y el estado de los trabajos en marcha tras la renuncia del subsecretario del área.",
+      "etiquetas": [
+        "Concejo Deliberante",
+        "Obras Públicas",
+        "Municipalidad de Balcarce"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/el-concejo-pidio-al-municipio-detalles-sobre-las-obras-y-la-continuidad-del-area-tras-la-renuncia-de-alvarez-quintero-903",
+          "fecha": null,
+          "oficial": false,
+          "aporte": "Detalló la aprobación del pedido de informes del Concejo sobre la obra pública tras la salida de Álvarez Quintero."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1chkxhh",
+          "titulo": "El Concejo Deliberante debate tasas y obras en Balcarce",
+          "fecha": "2026-09-25T02:23:01.000Z",
+          "ruta": "/nota/concejo-deliberante-la-decimocuarta-sesion-tuvo-debates-mas-1chkxhh"
+        },
+        {
+          "id": "1iv58lw",
+          "titulo": "El Concejo Deliberante debate tasas, obras y proyectos en Balcarce",
+          "fecha": "2026-09-24T12:55:31.000Z",
+          "ruta": "/nota/concejo-deliberante-este-jueves-se-desarrollara-el-decimocuarto-1iv58lw"
+        },
+        {
+          "id": "1spjzhb",
+          "titulo": "El Concejo designa Paseo Intendente Juan José Mare a la vuelta interna del Cerro en Balcar",
+          "fecha": "2026-09-25T12:46:51.000Z",
+          "ruta": "/nota/el-concejo-designa-paseo-intendente-juan-jose-mare-a-la-vuelta-1spjzhb"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "el-concejo-pidio-informes-al-municipio-por-obras-publicas"
     },
     {
       "id": "kiy3gs",
@@ -3811,200 +3500,6 @@
       "slug": "el-chi-kung-gana-espacio-y-se-difunde-en-balcarce"
     },
     {
-      "id": "jul3vf",
-      "titulo": "Una referente de disciplinas chinas visita el Municipio en Balcarce",
-      "copete": "La maestra Wu Huimin fue recibida por las autoridades locales en el marco de una jornada abierta a la comunidad dedicada a prácticas corporales tradicionales.",
-      "cuerpo": "El intendente municipal, Esteban Reino, junto al secretario de Gobierno, Ricardo Stoppani, recibió a la maestra Wu Huimin, especialista en disciplinas tradicionales chinas que visita la ciudad para una serie de actividades públicas.\n\nDurante la jornada gratuita destinada a los vecinos, se programó además una presentación de Daoyin Yangsheng Gong a cargo de la maestra Ana Wu, quien posee una amplia trayectoria internacional en artes marciales y Qigong. La especialista cuenta con reconocimientos en el ámbito deportivo y directivo a nivel global, y encabeza instituciones dedicadas a la difusión de estas prácticas orientales.\n\nEstas propuestas recreativas y saludables buscan acercar a la comunidad nuevas alternativas de bienestar integral mediante movimientos corporales suaves, respiración consciente y concentración mental.",
-      "guion": "Una referente de disciplinas chinas visita el Municipio en Balcarce",
-      "seccion": "Política",
-      "medios": [
-        "News Balcarce (FM 91.7)"
-      ],
-      "enlace": "https://newsbalcarce.com.ar/?p=30849",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-24T21:28:44.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-24T21:30:39.193Z",
-      "relevancia": 73,
-      "local": true,
-      "publicadaPor": "ia",
-      "publicadaCuando": "2026-09-25T12:15:37.284Z",
-      "temas": [
-        "autodromo",
-        "fangio"
-      ],
-      "como": "automatica",
-      "claves": [
-        "El intendente Esteban Reino recibió a la maestra Wu Huimin.",
-        "Se programó una clase abierta de Chi Kung en plaza Libertad.",
-        "La actividad cuenta con el apoyo de la Subsecretaría de Deporte y Recreación."
-      ],
-      "seSabe": [
-        "El intendente Esteban Reino y el secretario de Gobierno Ricardo Stoppani recibieron a la maestra Wu Huimin.",
-        "Se realizará una clase abierta de Chi Kung y una presentación de Daoyin Yangsheng Gong en plaza Libertad.",
-        "La actividad cuenta con el auspicio de la Subsecretaría de Deporte y Recreación."
-      ],
-      "noConfirmado": [
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "La referente de disciplinas tradicionales chinas Wu Huimin fue recibida por las autoridades locales y encabeza una jornada abierta con clases gratuitas para los vecinos en plaza Libertad.",
-      "etiquetas": [
-        "Wu Huimin",
-        "Chi Kung",
-        "Deporte",
-        "Plaza Libertad",
-        "Balcarce"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "News Balcarce (FM 91.7)",
-          "enlace": "https://newsbalcarce.com.ar/?p=30849",
-          "fecha": "2026-09-24T21:28:44.000Z",
-          "oficial": false,
-          "aporte": "Detalló la visita institucional de la maestra Wu Huimin y las actividades abiertas a la comunidad programadas en la ciudad."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "86l1ng",
-          "titulo": "Reino recibió a referente de disciplinas tradicionales chinas",
-          "fecha": "2026-09-24T16:09:50.000Z",
-          "ruta": "/nota/reino-recibio-a-referente-de-disciplinas-tradicionales-chinas-86l1ng"
-        },
-        {
-          "id": "1408sz9",
-          "titulo": "El intendente recibe a la maestra Wu Huimin en Balcarce",
-          "fecha": "2026-09-24T20:19:56.506Z",
-          "ruta": "/nota/esteban-reino-recibio-a-la-maestra-wu-huimin-en-balcarce-1408sz9"
-        },
-        {
-          "id": "gfro59",
-          "titulo": "El autódromo Juan Manuel Fangio vuelve a recibir automovilismo nacional en Balcarce",
-          "fecha": "2026-09-24T19:48:00.000Z",
-          "ruta": "/nota/el-autodromo-juan-manuel-fangio-vuelve-a-recibir-automovilismo-gfro59"
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "el-intendente-recibe-a-la-maestra-wu-huimin-en-balcarce"
-    },
-    {
-      "id": "1k3g7wg",
-      "titulo": "El intendente recibe a autoridades del Club de Leones en Balcarce",
-      "copete": "El intendente Esteban Reino mantuvo un encuentro protocolar en el Palacio Municipal con representantes del Club de Leones para conversar sobre el trabajo social en la comunidad.",
-      "cuerpo": "De acuerdo con la información oficial y los medios locales, el jefe comunal mantuvo un encuentro protocolar con el gobernador del Distrito O-3 de la organización, Christian Bousquet.\n\nEn el transcurso del encuentro se destacó el rol que cumplen las entidades intermedias y el aporte que realizan mediante acciones solidarias y de servicio. Reino agradeció la visita de las autoridades y valoró la disposición para continuar fortaleciendo los vínculos comunitarios.",
-      "guion": "El intendente recibe a autoridades del Club de Leones en Balcarce",
-      "seccion": "Política",
-      "medios": [
-        "Diario La Vanguardia",
-        "News Balcarce (FM 91.7)",
-        "Infórmese Primero (FM 104.9)",
-        "Puntonueve (FM 100.9)",
-        "Municipalidad de Balcarce"
-      ],
-      "enlace": "https://www.diariolavanguardia.com/noticias/44894-reino-recibio-a-autoridades-del-club-de-leones-en-el-palacio-municipal/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-24T21:18:42.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-24T21:30:39.193Z",
-      "relevancia": 100,
-      "local": true,
-      "publicadaPor": "ia",
-      "publicadaCuando": "2026-09-25T11:57:25.176Z",
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Reino recibió a referentes del Club de Leones en el Palacio Municipal.",
-        "Participó el gobernador del Distrito O-3, Christian Bousquet.",
-        "Dialogaron sobre las iniciativas solidarias en la comunidad."
-      ],
-      "seSabe": [
-        "El intendente Esteban Reino recibió a autoridades del Club de Leones en la Sala de los Intendentes, según informó el municipio.",
-        "Participaron el gobernador del Distrito O-3, Christian Bousquet, y la presidenta local, María de los Ángeles Rodríguez.",
-        "También estuvieron presentes los integrantes Ricardo Cacace y Jorge Baliña.",
-        "Las autoridades dialogaron sobre el trabajo social y las acciones solidarias en la comunidad."
-      ],
-      "textoRedes": "El intendente Esteban Reino recibió a autoridades del Club de Leones en el Palacio Municipal para dialogar sobre el trabajo social y las acciones solidarias que la institución desarrolla en la comunidad.",
-      "etiquetas": [
-        "Reino",
-        "Club de Leones",
-        "Balcarce"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Diario La Vanguardia",
-          "enlace": "https://www.diariolavanguardia.com/noticias/44894-reino-recibio-a-autoridades-del-club-de-leones-en-el-palacio-municipal/",
-          "fecha": "2026-09-24T21:18:42.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "News Balcarce (FM 91.7)",
-          "enlace": "https://newsbalcarce.com.ar/?p=30845",
-          "fecha": "2026-09-24T21:18:42.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Infórmese Primero (FM 104.9)",
-          "enlace": "http://www.blogger.com/feeds/8495648477830064035/posts/default/6360410155648573649",
-          "fecha": "2026-09-24T20:26:07.021Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Puntonueve (FM 100.9)",
-          "enlace": "https://puntonueve.com.ar/reino-recibio-a-autoridades-del-club-de-leones-en-la-sala-de-los-intendentes/",
-          "fecha": "2026-09-24T19:19:45.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Radio Gabal (FM 104.1)",
-          "enlace": "https://www.radiogabal.com.ar/index.php/comunidad/reino-recibio-a-autoridades-del-club-de-leones-en-el-palacio-municipal",
-          "fecha": "2026-09-24T19:00:58.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Municipalidad de Balcarce",
-          "enlace": "https://balcarce.gob.ar/2026/09/24/reino-recibio-a-autoridades-del-club-de-leones/",
-          "fecha": "2026-09-24T16:29:36.000Z",
-          "oficial": true,
-          "aporte": null
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "awfv2d",
-          "titulo": "Reino recibió a autoridades del Club de Leones",
-          "fecha": "2026-09-24T19:19:45.000Z",
-          "ruta": "/nota/reino-recibio-a-autoridades-del-club-de-leones-awfv2d"
-        },
-        {
-          "id": "x1ihjl",
-          "titulo": "Reino recibió a autoridades del Club de Leones",
-          "fecha": "2026-09-24T16:29:36.000Z",
-          "ruta": "/nota/reino-recibio-a-autoridades-del-club-de-leones-x1ihjl"
-        },
-        {
-          "id": "86l1ng",
-          "titulo": "Reino recibió a referente de disciplinas tradicionales chinas",
-          "fecha": "2026-09-24T16:09:50.000Z",
-          "ruta": "/nota/reino-recibio-a-referente-de-disciplinas-tradicionales-chinas-86l1ng"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo confirman cinco medios independientes y Municipalidad de Balcarce.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "esteban-reino-recibe-al-club-de-leones-en-balcarce"
-    },
-    {
       "id": "qx0kz",
       "titulo": "El municipio y el sindicato firman el acuerdo paritario en Balcarce",
       "copete": "El intendente Esteban Reino y la secretaria general del STM, Xoana Martínez, acordaron la pauta salarial para los trabajadores municipales hasta marzo de 2027.",
@@ -4372,6 +3867,117 @@
         "sugeridoPorIA": "MEDIA"
       },
       "slug": "jovenes-balcarcenas-participaran-de-un-torneo-internacional-de"
+    },
+    {
+      "id": "1k3g7wg",
+      "titulo": "El intendente recibe a autoridades del Club de Leones en Balcarce",
+      "copete": "El intendente Esteban Reino mantuvo un encuentro protocolar en el Palacio Municipal con representantes del Club de Leones para conversar sobre el trabajo social en la comunidad.",
+      "cuerpo": "De acuerdo con la información oficial y los medios locales, el jefe comunal mantuvo un encuentro protocolar con el gobernador del Distrito O-3 de la organización, Christian Bousquet.\n\nEn el transcurso del encuentro se destacó el rol que cumplen las entidades intermedias y el aporte que realizan mediante acciones solidarias y de servicio. Reino agradeció la visita de las autoridades y valoró la disposición para continuar fortaleciendo los vínculos comunitarios.",
+      "guion": "El intendente recibe a autoridades del Club de Leones en Balcarce",
+      "seccion": "Política",
+      "medios": [
+        "Diario La Vanguardia",
+        "Infórmese Primero (FM 104.9)",
+        "Municipalidad de Balcarce"
+      ],
+      "enlace": "https://www.diariolavanguardia.com/noticias/44894-reino-recibio-a-autoridades-del-club-de-leones-en-el-palacio-municipal/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-24T20:26:07.021Z",
+      "sinFecha": false,
+      "visto": "2026-09-24T21:30:39.193Z",
+      "relevancia": 91,
+      "local": true,
+      "publicadaPor": "ia",
+      "publicadaCuando": "2026-09-25T11:57:25.176Z",
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Reino recibió a referentes del Club de Leones en el Palacio Municipal.",
+        "Participó el gobernador del Distrito O-3, Christian Bousquet.",
+        "Dialogaron sobre las iniciativas solidarias en la comunidad."
+      ],
+      "seSabe": [
+        "El intendente Esteban Reino recibió a autoridades del Club de Leones en la Sala de los Intendentes, según informó el municipio.",
+        "Participaron el gobernador del Distrito O-3, Christian Bousquet, y la presidenta local, María de los Ángeles Rodríguez.",
+        "También estuvieron presentes los integrantes Ricardo Cacace y Jorge Baliña.",
+        "Las autoridades dialogaron sobre el trabajo social y las acciones solidarias en la comunidad."
+      ],
+      "textoRedes": "El intendente Esteban Reino recibió a autoridades del Club de Leones en el Palacio Municipal para dialogar sobre el trabajo social y las acciones solidarias que la institución desarrolla en la comunidad.",
+      "etiquetas": [
+        "Reino",
+        "Club de Leones",
+        "Balcarce"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Diario La Vanguardia",
+          "enlace": "https://www.diariolavanguardia.com/noticias/44894-reino-recibio-a-autoridades-del-club-de-leones-en-el-palacio-municipal/",
+          "fecha": "2026-09-24T21:18:42.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "News Balcarce (FM 91.7)",
+          "enlace": "https://newsbalcarce.com.ar/?p=30845",
+          "fecha": "2026-09-24T21:18:42.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Infórmese Primero (FM 104.9)",
+          "enlace": "http://www.blogger.com/feeds/8495648477830064035/posts/default/6360410155648573649",
+          "fecha": "2026-09-24T20:26:07.021Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Puntonueve (FM 100.9)",
+          "enlace": "https://puntonueve.com.ar/reino-recibio-a-autoridades-del-club-de-leones-en-la-sala-de-los-intendentes/",
+          "fecha": "2026-09-24T19:19:45.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Radio Gabal (FM 104.1)",
+          "enlace": "https://www.radiogabal.com.ar/index.php/comunidad/reino-recibio-a-autoridades-del-club-de-leones-en-el-palacio-municipal",
+          "fecha": "2026-09-24T19:00:58.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Municipalidad de Balcarce",
+          "enlace": "https://balcarce.gob.ar/2026/09/24/reino-recibio-a-autoridades-del-club-de-leones/",
+          "fecha": "2026-09-24T16:29:36.000Z",
+          "oficial": true,
+          "aporte": null
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "awfv2d",
+          "titulo": "Reino recibió a autoridades del Club de Leones",
+          "fecha": "2026-09-24T19:19:45.000Z",
+          "ruta": "/nota/reino-recibio-a-autoridades-del-club-de-leones-awfv2d"
+        },
+        {
+          "id": "x1ihjl",
+          "titulo": "Reino recibió a autoridades del Club de Leones",
+          "fecha": "2026-09-24T16:29:36.000Z",
+          "ruta": "/nota/reino-recibio-a-autoridades-del-club-de-leones-x1ihjl"
+        },
+        {
+          "id": "86l1ng",
+          "titulo": "Reino recibió a referente de disciplinas tradicionales chinas",
+          "fecha": "2026-09-24T16:09:50.000Z",
+          "ruta": "/nota/reino-recibio-a-referente-de-disciplinas-tradicionales-chinas-86l1ng"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo confirman cinco medios independientes y Municipalidad de Balcarce.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "esteban-reino-recibe-al-club-de-leones-en-balcarce"
     },
     {
       "id": "1408sz9",
@@ -4774,89 +4380,6 @@
       "slug": "franco-peidon-finaliza-septimo-en-los-odesur-en-balcarce"
     },
     {
-      "id": "xtlwre",
-      "titulo": "Largas filas para ingresar al autódromo Juan Manuel Fangio en Balcarce",
-      "copete": "Balcarce vive una gran expectativa por el regreso del automovilismo nacional al autódromo Juan Manuel Fangio con largas filas de público en el ingreso.",
-      "cuerpo": "Vecinos y visitantes comenzaron a concentrarse desde temprano en Balcarce para buscar su lugar en la parte alta de la Sierra La Barrosa, en la previa del regreso de la actividad nacional al autódromo Juan Manuel Fangio. Sobre la calle 63, habilitada como Puerta 1 para el acceso exclusivo del público, se registró una extensa fila de personas que se extendía hasta la avenida Suipacha, en el marco de un fin de semana que espera una convocatoria de cerca de 15 mil personas o más.\n\nPara el operativo del evento, las autoridades dispusieron que los equipos de competición y los trabajadores de prensa ingresen por la Puerta 2, ubicada sobre la calle 79, sector vedado para los espectadores. Asimismo, el ingreso de vehículos del público a la zona alta se realizará únicamente por calle 63 y el descenso por calle 79, mientras que sobre la avenida Dorrego habrá presencia de Gendarmería Nacional para impedir el acceso por El Mirador. La apertura total del predio está estimada para este viernes alrededor de las 8 de la mañana.",
-      "guion": "Largas filas para ingresar al autódromo Juan Manuel Fangio en Balcarce",
-      "seccion": "Automovilismo",
-      "medios": [
-        "Infórmese Primero (FM 104.9)"
-      ],
-      "enlace": "http://www.informeseprimero.com.ar/2026/09/la-pasion-por-el-automovilismo-ya-se.html",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-24T12:24:00.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-25T00:30:49.995Z",
-      "relevancia": 73,
-      "local": true,
-      "publicadaPor": "ia",
-      "publicadaCuando": "2026-09-25T12:06:02.776Z",
-      "temas": [
-        "autodromo",
-        "fangio"
-      ],
-      "como": "automatica",
-      "claves": [
-        "Se registran largas filas de público sobre la calle 63 para ingresar al autódromo Juan Manuel Fangio.",
-        "Se espera la llegada de unas 15 mil personas o más para presenciar el regreso del automovilismo nacional.",
-        "El ingreso vehicular general será exclusivamente por calle 63 y el descenso por la calle 79.",
-        "Gendarmería Nacional custodiará la avenida Dorrego para evitar el acceso por el sector de El Mirador."
-      ],
-      "seSabe": [
-        "La calle 63 funciona como el acceso exclusivo para el público mediante la Puerta 1.",
-        "Los equipos de competición y la prensa ingresarán por la Puerta 2 situada en la calle 79.",
-        "El acceso vehicular a la parte alta de la sierra se canalizará por calle 63 y el descenso por calle 79.",
-        "La habilitación de los accesos está estimada para este viernes alrededor de las 8 de la mañana.",
-        "Gendarmería Nacional montará un operativo sobre la avenida Dorrego para restringir el paso por El Mirador."
-      ],
-      "noConfirmado": [
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "Balcarce registra largas filas en el ingreso al autódromo Juan Manuel Fangio en la previa del regreso del automovilismo nacional con una masiva convocatoria esperada para este fin de semana en la Sierra La Barrosa.",
-      "etiquetas": [
-        "autodromo Juan Manuel Fangio",
-        "automovilismo",
-        "Sierra La Barrosa",
-        "Balcarce"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Infórmese Primero (FM 104.9)",
-          "enlace": "http://www.blogger.com/feeds/8495648477830064035/posts/default/5556638852969935468",
-          "fecha": "2026-09-24T12:24:00.000Z",
-          "oficial": false,
-          "aporte": "Detalló el operativo de ingresos, la extensión de las filas y la expectativa de concurrencia para la reapertura del autódromo."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "1rh34g1",
-          "titulo": "Socorristas participan en la reapertura del Fangio en Balcarce",
-          "fecha": "2026-09-23T22:58:23.988Z",
-          "ruta": "/nota/socorristas-participan-en-la-reapertura-del-fangio-en-balcarce-1rh34g1"
-        },
-        {
-          "id": "1sjses1",
-          "titulo": "Mangoni palpita el regreso del automovilismo a Balcarce",
-          "fecha": "2026-09-23T22:16:46.000Z",
-          "ruta": "/nota/mangoni-palpita-el-regreso-del-automovilismo-a-balcarce-1sjses1"
-        },
-        {
-          "id": "f7pgfp",
-          "titulo": "El autódromo Fangio recibe a las TC Pick Up en Balcarce",
-          "fecha": "2026-09-23T21:31:47.000Z",
-          "ruta": "/nota/el-autodromo-fangio-recibe-a-las-tc-pick-up-en-balcarce-f7pgfp"
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "largas-filas-para-ingresar-al-autodromo-fangio"
-    },
-    {
       "id": "wmweq4",
       "titulo": "El Club Sportivo Trabajo recibe una nueva fecha del Prix de Ajedrez en Balcarce",
       "copete": "Casi cien jugadores compitieron en la cuarta fecha del Prix de Ajedrez del Atlántico. El certamen se desarrolló en las instalaciones de la entidad balcarceña por tercer año consecutivo.",
@@ -4924,15 +4447,14 @@
       "guion": "Milei cuestiona a la ONU y reclama por Malvinas",
       "seccion": "Política",
       "medios": [
-        "El Diario Balcarce",
-        "Infórmese Primero (FM 104.9)"
+        "El Diario Balcarce"
       ],
       "enlace": "https://eldiariobalcarce.com.ar/milei-aseguro-que-la-onu-es-una-casta-de-parasitos-que-ignoro-la-causa-malvinas-789",
       "teniaImagenLaFuente": true,
       "fecha": "2026-09-24T12:13:27.000Z",
       "sinFecha": false,
       "visto": "2026-09-25T10:47:08.606Z",
-      "relevancia": 73,
+      "relevancia": 63,
       "local": true,
       "publicadaPor": "ia",
       "publicadaCuando": "2026-09-25T12:15:37.284Z",
@@ -4995,140 +4517,6 @@
         "sugeridoPorIA": "ALTA"
       },
       "slug": "milei-cuestiona-a-la-onu-y-reclama-por-malvinas"
-    },
-    {
-      "id": "11nk8l",
-      "titulo": "Milei cruza a Kicillof en Estados Unidos y lo culpa por el riesgo país",
-      "copete": "El presidente Javier Milei cuestionó al gobernador bonaerense Axel Kicillof durante su visita a Estados Unidos y lo responsabilizó por el incremento del indicador financiero.",
-      "cuerpo": "El presidente Javier Milei apuntó contra el gobernador de la provincia de Buenos Aires, Axel Kicillof, durante una conferencia en la sede del Citi Bank en Manhattan, en el cierre de su gira por Estados Unidos. El mandatario nacional culpó al dirigente provincial por la suba del riesgo país tras declaraciones previas realizadas en Nueva York, donde Kicillof había señalado que el plan económico oficial no existe. Durante su exposición ante banqueros y empresarios, Milei defendió la marcha de la economía y sostuvo que el indicador financiero responde a lo que denominó riesgo Kuka.",
-      "guion": "Milei cruza a Kicillof en Estados Unidos y lo culpa por el riesgo país",
-      "seccion": "Economía",
-      "medios": [
-        "Infórmese Primero (FM 104.9)"
-      ],
-      "enlace": "http://www.informeseprimero.com.ar/2026/09/milei-insulto-kicillof-y-lo-culpo-por.html",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-24T01:04:00.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-24T05:15:52.635Z",
-      "relevancia": 65,
-      "local": true,
-      "publicadaPor": "ia",
-      "publicadaCuando": "2026-09-25T12:50:49.506Z",
-      "temas": [],
-      "como": "automatica",
-      "noConfirmado": [
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "El presidente Javier Milei cuestionó al gobernador Axel Kicillof durante su visita a Estados Unidos y lo responsabilizó por la suba del riesgo país.",
-      "etiquetas": [
-        "Javier Milei",
-        "Axel Kicillof",
-        "Riesgo país",
-        "Estados Unidos"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Infórmese Primero (FM 104.9)",
-          "enlace": "http://www.informeseprimero.com.ar/2026/09/milei-insulto-kicillof-y-lo-culpo-por.html",
-          "fecha": "2026-09-24T01:04:00.000Z",
-          "oficial": false,
-          "aporte": "Detalló las declaraciones de Javier Milei en Estados Unidos y las críticas hacia Axel Kicillof."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "glz6z8",
-          "titulo": "Axel Kicillof, sobre el discurso de Javier Milei en la ONU: \"Sorprende que ahora se acuerde de las Malvinas\"",
-          "fecha": "2026-09-23T23:09:00.000Z",
-          "ruta": "/nota/axel-kicillof-sobre-el-discurso-de-javier-milei-en-la-onu-sorprende-glz6z8"
-        },
-        {
-          "id": "1ulc8zs",
-          "titulo": "En un encuentro con Pedro Sánchez y Mamdani, Kicillof apuntó contra Milei: \"En Argentina se está viviendo una verdadera catástrofe\"",
-          "fecha": "2026-09-23T22:15:04.000Z",
-          "ruta": "/nota/en-un-encuentro-con-pedro-sanchez-y-mamdani-kicillof-apunto-contra-1ulc8zs"
-        },
-        {
-          "id": "1c45mmi",
-          "titulo": "Con un discurso anti Milei, Kicillof se mostró con el alcalde de Nueva York y el presidente de España",
-          "fecha": "2026-09-23T21:35:22.000Z",
-          "ruta": "/nota/con-un-discurso-anti-milei-kicillof-se-mostro-con-el-alcalde-de-nueva-1c45mmi"
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "milei-critico-a-kicillof-por-el-riesgo-pais-en-nueva-york"
-    },
-    {
-      "id": "159jwak",
-      "titulo": "El Gobierno logra dictamen en Diputados por la ley de Discapacidad",
-      "copete": "El oficialismo consiguió el dictamen de mayoría en la Cámara de Diputados tras dar marcha atrás con los recortes. La oposición mantiene reparos de cara al debate en el recinto previsto para octubre.",
-      "cuerpo": "Durante el debate, la diputada oficialista Laura Rodríguez Machado defendió la propuesta y aseguró la incorporación de partidas presupuestarias y la puesta en marcha de auditorías. Como se había informado a principios de semana, el oficialismo debió reconfigurar su estrategia legislativa en busca de consensos con bloques provinciales, el PRO, la UCR y el MID.\n\nEl texto aprobado fija el valor de las pensiones en el setenta por ciento del haber jubilatorio mínimo, establece actualizaciones mensuales atadas a la inflación y permite compatibilizar el beneficio con un empleo formal o monotributo cuyos ingresos no superen dos salarios mínimos. El oficialismo prevé llevar el proyecto al recinto para su votación definitiva el próximo siete de octubre.",
-      "guion": "El Gobierno logra dictamen en Diputados por la ley de Discapacidad",
-      "seccion": "Política",
-      "medios": [
-        "Infórmese Primero (FM 104.9)"
-      ],
-      "enlace": "http://www.informeseprimero.com.ar/2026/09/discapacidad-el-gobierno-dio-marcha.html",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-24T01:02:00.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-24T05:15:52.635Z",
-      "relevancia": 65,
-      "local": true,
-      "publicadaPor": "ia",
-      "publicadaCuando": "2026-09-25T12:50:49.506Z",
-      "temas": [],
-      "como": "automatica",
-      "noConfirmado": [
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "El oficialismo consiguió el dictamen de mayoría en Diputados para la ley de Discapacidad tras dar marcha atrás con los recortes presupuestarios y fijar actualizaciones mensuales.",
-      "etiquetas": [
-        "Diputados",
-        "Discapacidad",
-        "Presupuesto 2027",
-        "Gobierno nacional"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Infórmese Primero (FM 104.9)",
-          "enlace": "http://www.informeseprimero.com.ar/2026/09/discapacidad-el-gobierno-dio-marcha.html",
-          "fecha": "2026-09-24T01:02:00.000Z",
-          "oficial": false,
-          "aporte": "Detalló los apoyos, disidencias y cruces políticos en el plenario de comisiones de Diputados."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "1ld0sju",
-          "titulo": "Discapacidad: el Gobierno dio marcha atrás y consiguió un dictamen, pero persiste la desconfianza por el proyecto",
-          "fecha": "2026-09-23T20:09:02.000Z",
-          "ruta": "/nota/discapacidad-el-gobierno-dio-marcha-atras-y-consiguio-un-dictamen-1ld0sju"
-        },
-        {
-          "id": "xdi5no",
-          "titulo": "Tras la marcha atrás del Gobierno, el oficialismo consiguió el dictamen de Discapacidad y avanza la ley pese a la desconfianza de la oposición",
-          "fecha": "2026-09-23T17:19:01.000Z",
-          "ruta": "/nota/tras-la-marcha-atras-del-gobierno-el-oficialismo-consiguio-el-xdi5no"
-        },
-        {
-          "id": "uhtlm2",
-          "titulo": "Discapacidad: LLA retrocedió con el recorte y logró un dictamen para avanzar con una ley propia",
-          "fecha": "2026-09-23T20:11:17.000Z",
-          "ruta": "/nota/discapacidad-lla-retrocedio-con-el-recorte-y-logro-un-dictamen-para-uhtlm2"
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "el-gobierno-logra-dictamen-sobre-discapacidad-en-balcarce"
     },
     {
       "id": "1ss3yj3",
@@ -5733,75 +5121,6 @@
         "sugeridoPorIA": "MEDIA"
       },
       "slug": "la-escuela-tecnica-busca-poner-en-valor-su-gimnasio-y-apela-a-la"
-    },
-    {
-      "id": "1pr955",
-      "titulo": "Kreplak asiste al Senado para defender proyectos sanitarios",
-      "copete": "El ministro de Salud bonaerense acude al Senado para respaldar iniciativas sobre política sanitaria impulsadas por el Ejecutivo.",
-      "cuerpo": "El ministro de Salud, Nicolás Kreplak, asiste al Senado para defender proyectos de ley sobre política sanitaria considerados clave por el gobierno provincial. Las iniciativas se encuentran trabadas en la Legislatura e incluyen la creación de una empresa de medicamentos.\n\nPor otra parte, la oposición cruza al ministro durante su presentación en el debate parlamentario.\n\nEstas discusiones legislativas ocurren en el contexto del tratamiento de proyectos sanitarios impulsados por la administración provincial en la cámara alta.",
-      "guion": "Kreplak asiste al Senado para defender proyectos sanitarios",
-      "seccion": "Política",
-      "medios": [
-        "El Diario Balcarce"
-      ],
-      "enlace": "https://eldiariobalcarce.com.ar/kreplak-fue-al-senado-a-defender-dos-proyectos-del-ejecutivo-pero-la-oposicion-lo-cruzo-por-ioma-925",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-23T03:05:01.594Z",
-      "sinFecha": true,
-      "visto": "2026-09-23T03:05:01.594Z",
-      "relevancia": 63,
-      "local": true,
-      "publicadaPor": "ia",
-      "publicadaCuando": "2026-09-25T13:14:20.980Z",
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "El ministro de Salud concurrió al Senado",
-        "Defendió proyectos de ley sanitarios del Ejecutivo",
-        "Las iniciativas están trabadas en la Legislatura",
-        "La oposición cuestionó al funcionario"
-      ],
-      "seSabe": [
-        "El ministro de Salud, Nicolás Kreplak, acudió al Senado.",
-        "El funcionario defendió proyectos de ley sobre política sanitaria.",
-        "Las iniciativas del Ejecutivo están trabadas en la Legislatura.",
-        "Uno de los proyectos busca crear una empresa de medicamentos.",
-        "La oposición cruzó al ministro por IOMA."
-      ],
-      "noConfirmado": [
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "El ministro de Salud bonaerense, Nicolás Kreplak, concurrió al Senado para defender proyectos clave del Ejecutivo vinculados a la política sanitaria que se encuentran trabados en la Legislatura.",
-      "etiquetas": [
-        "Kreplak",
-        "Senado",
-        "Salud",
-        "Legislatura",
-        "IOMA"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "El Diario Balcarce",
-          "enlace": "https://eldiariobalcarce.com.ar/kreplak-fue-al-senado-a-defender-dos-proyectos-del-ejecutivo-pero-la-oposicion-lo-cruzo-por-ioma-925",
-          "fecha": null,
-          "oficial": false,
-          "aporte": "Informó la visita del ministro Nicolás Kreplak al Senado para defender proyectos sanitarios y las críticas de la oposición."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "4y8q12",
-          "titulo": "Senado: sin la oposición en el recinto, el Gobierno convirtió en ley la reforma del régimen de zona fría",
-          "fecha": "2026-09-24T22:21:00.000Z",
-          "ruta": "/nota/senado-sin-la-oposicion-en-el-recinto-el-gobierno-convirtio-en-ley-la-4y8q12"
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "kreplak-fue-al-senado-a-defender-dos-proyectos-del-ejecutivo-pero-la"
     },
     {
       "id": "hcjt9j",
@@ -6619,56 +5938,65 @@
       "slug": "periodista-de-balcarce-cubre-el-mundial-desde-el-salvador"
     },
     {
-      "id": "jul4yj",
-      "titulo": "Aranaga participa en un plenario federal peronista",
-      "copete": "El presidente del Partido Justicialista de Balcarce asistió al encuentro del Movimiento Derecho al Futuro en Avellaneda, que fue encabezado por el gobernador Axel Kicillof.",
-      "cuerpo": "El presidente del Partido Justicialista de Balcarce, Sergio Aranaga, participó en la ciudad de Avellaneda del Plenario Federal del Movimiento Derecho al Futuro. El encuentro, que reunió a dirigentes, militantes y referentes de todo el país, tuvo como eje central la construcción política, territorial y programática de una alternativa nacional.\n\nSegún informó la única fuente disponible, la jornada fue encabezada por el gobernador bonaerense Axel Kicillof. El dirigente local manifestó que se trató de un evento multitudinario y constructivo para debatir y organizar el futuro, y destacó que la participación del espacio balcarceño se dio a partir de una invitación de la secretaría privada del mandatario provincial.",
-      "guion": "Aranaga participa en un plenario federal peronista",
+      "id": "1pr955",
+      "titulo": "Kreplak asiste al Senado para defender proyectos sanitarios",
+      "copete": "El ministro de Salud bonaerense acude al Senado para respaldar iniciativas sobre política sanitaria impulsadas por el Ejecutivo.",
+      "cuerpo": "El ministro de Salud, Nicolás Kreplak, asiste al Senado para defender proyectos de ley sobre política sanitaria considerados clave por el gobierno provincial. Las iniciativas se encuentran trabadas en la Legislatura e incluyen la creación de una empresa de medicamentos.\n\nPor otra parte, la oposición cruza al ministro durante su presentación en el debate parlamentario.\n\nEstas discusiones legislativas ocurren en el contexto del tratamiento de proyectos sanitarios impulsados por la administración provincial en la cámara alta.",
+      "guion": "Kreplak asiste al Senado para defender proyectos sanitarios",
       "seccion": "Política",
       "medios": [
-        "News Balcarce (FM 91.7)"
+        "El Diario Balcarce"
       ],
-      "enlace": "https://newsbalcarce.com.ar/?p=30746",
+      "enlace": "https://eldiariobalcarce.com.ar/kreplak-fue-al-senado-a-defender-dos-proyectos-del-ejecutivo-pero-la-oposicion-lo-cruzo-por-ioma-925",
       "teniaImagenLaFuente": true,
-      "fecha": "2026-09-22T21:37:19.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-22T23:46:50.102Z",
-      "relevancia": 65,
+      "fecha": "2026-09-23T03:05:01.594Z",
+      "sinFecha": true,
+      "visto": "2026-09-23T03:05:01.594Z",
+      "relevancia": 63,
       "local": true,
       "publicadaPor": "ia",
-      "publicadaCuando": "2026-09-25T12:50:49.506Z",
+      "publicadaCuando": "2026-09-25T13:14:20.980Z",
       "temas": [],
       "como": "automatica",
       "claves": [
-        "Aranaga participó del plenario en Avellaneda",
-        "El encuentro fue encabezado por Axel Kicillof",
-        "El PJ local estuvo presente en la jornada"
+        "El ministro de Salud concurrió al Senado",
+        "Defendió proyectos de ley sanitarios del Ejecutivo",
+        "Las iniciativas están trabadas en la Legislatura",
+        "La oposición cuestionó al funcionario"
+      ],
+      "seSabe": [
+        "El ministro de Salud, Nicolás Kreplak, acudió al Senado.",
+        "El funcionario defendió proyectos de ley sobre política sanitaria.",
+        "Las iniciativas del Ejecutivo están trabadas en la Legislatura.",
+        "Uno de los proyectos busca crear una empresa de medicamentos.",
+        "La oposición cruzó al ministro por IOMA."
       ],
       "noConfirmado": [
         "No pudo ser contrastado de forma independiente con las fuentes consultadas."
       ],
+      "textoRedes": "El ministro de Salud bonaerense, Nicolás Kreplak, concurrió al Senado para defender proyectos clave del Ejecutivo vinculados a la política sanitaria que se encuentran trabados en la Legislatura.",
       "etiquetas": [
-        "Sergio Aranaga",
-        "PJ Balcarce",
-        "Axel Kicillof",
-        "Avellaneda",
-        "politica"
+        "Kreplak",
+        "Senado",
+        "Salud",
+        "Legislatura",
+        "IOMA"
       ],
       "fuentesConsultadas": [
         {
-          "medio": "News Balcarce (FM 91.7)",
-          "enlace": "https://newsbalcarce.com.ar/?p=30746",
-          "fecha": "2026-09-22T21:37:19.000Z",
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/kreplak-fue-al-senado-a-defender-dos-proyectos-del-ejecutivo-pero-la-oposicion-lo-cruzo-por-ioma-925",
+          "fecha": null,
           "oficial": false,
-          "aporte": "Detalles sobre la participación de Sergio Aranaga en el plenario de Avellaneda y sus declaraciones sobre el encuentro."
+          "aporte": "Informó la visita del ministro Nicolás Kreplak al Senado para defender proyectos sanitarios y las críticas de la oposición."
         }
       ],
       "antecedentes": [
         {
-          "id": "wmdo1p",
-          "titulo": "El PJ de Balcarce participó del Plenario Federal del Movimiento Derecho al Futuro",
-          "fecha": "2026-09-21T00:49:24.000Z",
-          "ruta": "/nota/el-pj-de-balcarce-participo-del-plenario-federal-del-movimiento-wmdo1p"
+          "id": "4y8q12",
+          "titulo": "Senado: sin la oposición en el recinto, el Gobierno convirtió en ley la reforma del régimen de zona fría",
+          "fecha": "2026-09-24T22:21:00.000Z",
+          "ruta": "/nota/senado-sin-la-oposicion-en-el-recinto-el-gobierno-convirtio-en-ley-la-4y8q12"
         }
       ],
       "verificacion": {
@@ -6676,30 +6004,30 @@
         "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
         "sugeridoPorIA": "MEDIA"
       },
-      "slug": "sergio-aranaga-participa-en-un-plenario-en-avellaneda-en-balcarce"
+      "slug": "kreplak-fue-al-senado-a-defender-dos-proyectos-del-ejecutivo-pero-la"
     }
   ],
   "secciones": [
     "Automovilismo",
-    "Economía",
-    "Tecnología",
     "Balcarce",
     "Deportes",
     "Política",
     "Policiales",
+    "Economía",
     "Cultura y agenda",
+    "Tecnología",
     "Agro"
   ],
   "temas": [
     {
       "nombre": "El autódromo",
       "ranura": "autodromo",
-      "cuantas": 16
+      "cuantas": 13
     },
     {
       "nombre": "Fangio",
       "ranura": "fangio",
-      "cuantas": 16
+      "cuantas": 13
     },
     {
       "nombre": "El Concejo Deliberante",
@@ -6724,10 +6052,10 @@
   ],
   "clima": {
     "ahora": {
-      "temp": 19,
-      "sensacion": 16,
-      "humedad": 47,
-      "viento": 18,
+      "temp": 18,
+      "sensacion": 14,
+      "humedad": 51,
+      "viento": 20,
       "rumbo": "SO",
       "cielo": "Parcialmente nublado",
       "esDeDia": true
@@ -6737,7 +6065,7 @@
         "fecha": "2026-09-25",
         "dia": "vie",
         "max": 20,
-        "min": 9,
+        "min": 8,
         "lluvia": 27,
         "codigo": 2,
         "viento": 22,
@@ -6747,18 +6075,18 @@
       {
         "fecha": "2026-09-26",
         "dia": "sáb",
-        "max": 17,
+        "max": 18,
         "min": 5,
         "lluvia": 10,
         "codigo": 2,
-        "viento": 16,
+        "viento": 17,
         "milimetros": 0,
         "cielo": "Parcialmente nublado"
       },
       {
         "fecha": "2026-09-27",
         "dia": "dom",
-        "max": 17,
+        "max": 16,
         "min": 6,
         "lluvia": 27,
         "codigo": 51,
@@ -6769,11 +6097,11 @@
       {
         "fecha": "2026-09-28",
         "dia": "lun",
-        "max": 16,
+        "max": 15,
         "min": 10,
         "lluvia": 37,
         "codigo": 51,
-        "viento": 19,
+        "viento": 23,
         "milimetros": 1,
         "cielo": "Llovizna leve"
       }
@@ -7105,18 +6433,6 @@
       "motivo": "necesita ojo humano: \"murió\""
     },
     {
-      "id": "jul3x0",
-      "titulo": "Capacitacion para personal del Hospital.",
-      "seccion": "Cultura y agenda",
-      "motivo": "necesita ojo humano: \"hospital\""
-    },
-    {
-      "id": "z2ees5",
-      "titulo": "Un encuentro comunitario busca ayudar a Gael, un niño que…",
-      "seccion": "Balcarce",
-      "motivo": "necesita ojo humano: \"hospital\""
-    },
-    {
       "id": "1jgrepa",
       "titulo": "La Caravana de la Alegría cambia de escenario y prepara su…",
       "seccion": "Agro",
@@ -7153,12 +6469,6 @@
       "motivo": "parece promoción, no noticia: \"sortea\""
     },
     {
-      "id": "ybpsst",
-      "titulo": "Murió Oscar el “Negro” González Oro: reacciones y mensajes…",
-      "seccion": "País",
-      "motivo": "necesita ojo humano: \"murió\""
-    },
-    {
       "id": "vo3j62",
       "titulo": "Juicio por el crimen de Federico Martín Aramburú, EN VIVO…",
       "seccion": "País",
@@ -7189,16 +6499,22 @@
       "motivo": "necesita ojo humano: \"muerte\""
     },
     {
+      "id": "45w2kj",
+      "titulo": "Javier Milei y sus medidas, en vivo: “Netanyahu es uno de…",
+      "seccion": "Política",
+      "motivo": "internacional: sin relación con Balcarce"
+    },
+    {
       "id": "1lr0l95",
       "titulo": "Camioneros mantiene bloqueada desde hace 48 horas una…",
       "seccion": "Política",
       "motivo": "necesita ojo humano: \"denuncia\""
     },
     {
-      "id": "1vm5zz2",
-      "titulo": "Barclays advierte que petróleo y tasas de interés pesan…",
-      "seccion": "Economía",
-      "motivo": "internacional: sin relación con Balcarce"
+      "id": "k6g2m5",
+      "titulo": "Se entregaron 380 escrituras, 77 netbooks y Lobería…",
+      "seccion": "Política",
+      "motivo": "necesita ojo humano: \"hospital\""
     },
     {
       "id": "mke70t",
@@ -7207,16 +6523,10 @@
       "motivo": "necesita ojo humano: \"detenido\""
     },
     {
-      "id": "103bxbx",
-      "titulo": null,
-      "seccion": "País",
-      "motivo": "necesita ojo humano: \"adolescente\""
-    },
-    {
-      "id": "1ubmub5",
-      "titulo": "Crisis en Nueva Jersey: renunció el vicegobernador y Mikie…",
+      "id": "16wtle5",
+      "titulo": "Turista mexicano muere en Machu Picchu mientras se tomaba…",
       "seccion": "Política",
-      "motivo": "necesita ojo humano: \"investigación\""
+      "motivo": "necesita ojo humano: \"muere\""
     },
     {
       "id": "1xna9h3",
@@ -7225,29 +6535,17 @@
       "motivo": "necesita ojo humano: \"hospital\""
     },
     {
-      "id": "r6s0ms",
-      "titulo": "El dolor del papá del estudiante asesinado una fiesta en…",
+      "id": "ywzsd8",
+      "titulo": "Quiniela Nacional: resultado del sorteo de la Matutina de…",
       "seccion": "País",
-      "motivo": "necesita ojo humano: \"murió\""
+      "motivo": "parece promoción, no noticia: \"sorteo\""
     },
     {
-      "id": "hdwpxn",
-      "titulo": null,
-      "seccion": "Economía",
-      "motivo": "necesita ojo humano: \"adolescente\""
-    },
-    {
-      "id": "ucqwi7",
-      "titulo": "Violento choque en Quequén: un herido trasladado al hospital",
-      "seccion": "Servicios",
-      "motivo": "necesita ojo humano: \"hospital\""
-    },
-    {
-      "id": "bjudxk",
-      "titulo": "Cómo hizo Alexander Zverev para llegar a la élite del…",
-      "seccion": "Deportes",
+      "id": "yjljhn",
+      "titulo": "Kicillof en Lobería: “Frente a la mentira y el abandono…",
+      "seccion": "Política",
       "motivo": "necesita ojo humano: \"hospital\""
     }
   ],
-  "esperandoCuerpo": 26
+  "esperandoCuerpo": 45
 }
