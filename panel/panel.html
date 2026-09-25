@@ -441,82 +441,152 @@ function vistaServicios() {
 function vistaAgenda() {
   const a = D.agenda;
   if (!a) return '<div class="vacio">Todavía no se cargó la agenda.</div>';
-  const manuales = (D.eventosManual || []).slice().sort((x, y) => x.desde.localeCompare(y.desde));
+  const manuales = (D.eventosManual || []).slice().sort((x, y) => String(x.desde).localeCompare(String(y.desde)));
+  const contactos = D.contactosAgenda || [];
+  const esteMes = contactos.filter((c) => c.aEscribirEsteMes);
+  const lista = filtroContactos === 'mes' ? esteMes : contactos;
+  const b = borradorEvento;
+  const val = (k) => esc(b[k] || '');
+  const contactoDelBorrador = contactos.find((c) => c.id === b.contactoId);
+  const anualDelBorrador = (D.calendarioAnualCompleto || []).find((x) => x.id === b.anualId);
   return `<div class="dos">
     <div>
-      <div style="display:flex;align-items:baseline;gap:10px;margin-bottom:4px">
+      <h2 style="margin:0 0 4px">Cargados a mano</h2>
+      <div class="mini" style="margin-bottom:12px">Lo que avisó un organizador por WhatsApp, teléfono o en la calle. Cada evento nace como <b>borrador</b>: cuando apretás <b>Publicar en la web</b>, en la próxima corrida de GitHub (media hora, como mucho) tiene su propia página con fecha, lugar, entrada, botón para agendarlo y para pasarlo por WhatsApp. <b>Publicá sólo fechas confirmadas por quien organiza</b>, nunca una aproximada.</div>
+      ${manuales.length ? manuales.map(e => `<div class="tarjeta">
+          <div class="chapa"><span class="secc">${esc(CATEGORIAS_AGENDA_TXT(e.categoria))}</span><span>·</span><span>${esc(e.desde)}${e.hasta ? ' a ' + esc(e.hasta) : ''}</span>
+            <span class="etiq ${e.estado === 'publicado' ? 'ok' : 'pausa'}">${e.estado === 'publicado' ? 'en la web' : 'borrador'}</span>
+            <span class="rel" style="margin-left:auto">${esc(e.cargadoPor)}</span></div>
+          <div class="tit" style="font-size:17px">${esc(e.nombre)}</div>
+          <div class="mini">${esc(e.lugar || 'sin lugar cargado')}${e.costo ? ' · ' + esc(e.costo) : ''}${e.organizador ? ' · organiza ' + esc(e.organizador) : ''}</div>
+          ${e.contacto || e.avisoPor || e.fuente ? `<div class="mini" style="font-style:italic">Lo avisó: ${esc(e.contacto || e.avisoPor || e.fuente)} (esto no sale en la web)</div>` : ''}
+          ${e.enLaWeb ? `<div class="mini">Su página: <a href="${esc(e.enLaWeb)}" target="_blank" rel="noopener">${esc(e.enLaWeb)}</a> (aparece en la próxima corrida)</div>` : ''}
+          <div class="acciones">
+            ${e.estado === 'publicado'
+              ? `<button class="b chico" data-evento-accion="despublicar" data-id="${e.id}">Sacar de la web</button>`
+              : `<button class="b chico verde" style="flex-grow:0" data-evento-accion="publicar" data-id="${e.id}">Publicar en la web</button>`}
+            <button class="b chico rojo" data-borrar-evento="${e.id}">Borrar</button>
+          </div>
+        </div>`).join('') : '<div class="vacio">Ninguno todavía. Usá el formulario de la derecha.</div>'}
+
+      <div style="display:flex;align-items:baseline;gap:10px;margin:22px 0 4px">
         <h2 style="margin:0">Cargados por el municipio</h2>
         <button class="b chico" id="btnAgenda">Actualizar</button>
       </div>
-      <div class="mini" style="margin-bottom:12px">Vía la API pública de balcarce.gob.ar (The Events Calendar). Sólo trae lo que alguien ya cargó ahí: no va a aparecer solo la Fiesta del Automovilismo en septiembre. Para lo demás, está la carga a mano de al lado.</div>
+      <div class="mini" style="margin-bottom:12px">Vía la API pública de balcarce.gob.ar. Salen solos en la web, cada uno con su página: no hay que hacer nada. Sólo trae lo que alguien ya cargó ahí: no va a aparecer sola la Fiesta del Automovilismo en septiembre.</div>
       ${(a.municipio || []).length ? a.municipio.map(e => `<div class="tarjeta">
           <div class="chapa"><span class="secc">${esc((e.categorias||[])[0] || 'Evento')}</span><span>·</span><span>${esc(e.desde?.slice(0,16).replace('T',' · '))}</span></div>
           <div class="tit" style="font-size:17px">${esc(e.nombre)}</div>
-          <div class="mini">${esc(e.lugar || '')}${e.direccion ? ' · ' + esc(e.direccion) : ''}${e.costo ? ' · ' + esc(e.costo) : ' · gratis'}</div>
+          <div class="mini">${esc(e.lugar || '')}${e.direccion ? ' · ' + esc(e.direccion) : ''}${e.costo ? ' · ' + esc(e.costo) : ''}</div>
         </div>`).join('') : '<div class="vacio">No hay eventos cargados ahora mismo.</div>'}
-
-      <h2 style="margin:22px 0 4px">Cargados a mano</h2>
-      <div class="mini" style="margin-bottom:12px">Lo que alguien avisó por WhatsApp, teléfono o en la calle. No espera a que el municipio lo suba.</div>
-      ${manuales.length ? manuales.map(e => `<div class="tarjeta">
-          <div class="chapa"><span class="secc">${esc(CATEGORIAS_AGENDA_TXT(e.categoria))}</span><span>·</span><span>${esc(e.desde)}${e.hasta ? ' a ' + esc(e.hasta) : ''}</span>
-            <span class="rel" style="margin-left:auto">${esc(e.cargadoPor)}</span></div>
-          <div class="tit" style="font-size:17px">${esc(e.nombre)}</div>
-          <div class="mini">${esc(e.lugar || 'sin lugar cargado')}${e.fuente ? ' · fuente: ' + esc(e.fuente) : ''}</div>
-          <div class="acciones"><button class="b chico rojo" data-borrar-evento="${e.id}">Borrar</button></div>
-        </div>`).join('') : '<div class="vacio">Ninguno todavía. Usá el formulario de la derecha.</div>'}
     </div>
-    <div class="lateral">
-      <div class="tarjeta">
+    <div class="lateral" style="position:static">
+      <div class="tarjeta" id="formEvento">
         <h2 style="font-size:18px">Cargar un evento</h2>
+        ${contactoDelBorrador ? `<div class="ok">Viene de: <b>${esc(contactoDelBorrador.quien)}</b> <button class="b chico" data-soltar-borrador>Soltar</button></div>` : ''}
+        ${anualDelBorrador ? `<div class="ok">Confirma la fecha de: <b>${esc(anualDelBorrador.nombre)}</b> <button class="b chico" data-soltar-borrador>Soltar</button></div>` : ''}
         <label class="campo" for="evN">NOMBRE</label>
-        <input type="text" id="evN" placeholder="Feria de artesanos en la plaza">
-        <label class="campo" for="evF">FECHA (o inicio)</label>
-        <input type="text" id="evF" placeholder="2026-10-15">
-        <label class="campo" for="evFH">FECHA FIN (opcional)</label>
-        <input type="text" id="evFH" placeholder="2026-10-16">
+        <input type="text" id="evN" value="${val('nombre')}" placeholder="Feria de artesanos en la plaza">
+        <label class="campo" for="evF">FECHA · HORA (la hora es opcional)</label>
+        <div style="display:flex;gap:6px"><input type="text" id="evF" value="${val('fecha')}" placeholder="2026-10-15"><input type="text" id="evH" value="${val('hora')}" placeholder="20:30" style="max-width:90px"></div>
+        <label class="campo" for="evFH">TERMINA · FECHA Y HORA (opcional)</label>
+        <div style="display:flex;gap:6px"><input type="text" id="evFH" value="${val('fechaHasta')}" placeholder="2026-10-16"><input type="text" id="evHH" value="${val('horaHasta')}" placeholder="23:00" style="max-width:90px"></div>
         <label class="campo" for="evC">CATEGORÍA</label>
         <select class="ancho" id="evC">
-          ${Object.entries(D.categoriasAgenda || {}).map(([k, v]) => `<option value="${esc(k)}">${esc(v)}</option>`).join('')}
+          ${Object.entries(D.categoriasAgenda || {}).map(([k, v]) => `<option value="${esc(k)}" ${b.categoria === k ? 'selected' : ''}>${esc(v)}</option>`).join('')}
         </select>
         <label class="campo" for="evL">LUGAR</label>
-        <input type="text" id="evL" placeholder="Plaza San Martín">
-        <label class="campo" for="evOr">QUIÉN LO AVISÓ (para volver a preguntar)</label>
-        <input type="text" id="evOr" placeholder="Nombre y teléfono/WhatsApp de quien avisó">
+        <input type="text" id="evL" value="${val('lugar')}" placeholder="Plaza Libertad">
+        <label class="campo" for="evD">DIRECCIÓN</label>
+        <input type="text" id="evD" value="${val('direccion')}" placeholder="Calle 16 y 17">
+        <label class="campo" for="evCo">ENTRADA</label>
+        <input type="text" id="evCo" value="${val('costo')}" placeholder="Gratis · $5.000 · a la gorra">
+        <label class="campo" for="evO">QUIÉN ORGANIZA (sale en la web)</label>
+        <input type="text" id="evO" value="${val('organizador')}" placeholder="Club Atlético…">
+        <label class="campo" for="evW">PÁGINA DEL EVENTO O DE LAS ENTRADAS (opcional)</label>
+        <input type="url" id="evW" value="${val('web')}" placeholder="https://…">
+        <label class="campo" for="evDe">DESCRIPCIÓN (sale en la web tal cual)</label>
+        <textarea id="evDe" rows="4" placeholder="Qué es, qué va a haber, para quién es.">${val('descripcion')}</textarea>
+        <label class="campo" for="evOr">QUIÉN LO AVISÓ (queda en el panel, NO sale en la web)</label>
+        <input type="text" id="evOr" value="${val('avisoPor')}" placeholder="Nombre y teléfono/WhatsApp de quien avisó">
+        <label class="interruptor" style="margin-top:12px"><input type="checkbox" id="evP"> Publicar ya en la web: la fecha está confirmada por quien organiza</label>
         <div class="acciones"><button class="b verde" id="btnCargarEvento">Cargar evento</button></div>
       </div>
-      <div class="tarjeta">
-        <h2 style="font-size:18px">A quién preguntarle</h2>
-        <div class="mini" style="margin-bottom:10px">Una vez por mes, mensaje formal por WhatsApp pidiendo la agenda — no hace falta escribirles seguido. El botón queda gris 30 días y se pone verde cuando toca de nuevo.</div>
-        ${(D.contactosAgenda || []).map(c => `<div style="padding:11px 0;border-bottom:1px solid var(--papel)">
-            <div style="font-weight:700;font-size:13px">${esc(c.quien)}</div>
-            <div class="mini">${esc(c.para)}</div>
-            <div style="font-size:13px;font-weight:600;color:var(--rojo);margin-top:2px">${esc(c.telefono)}</div>
-            <div class="mini" style="margin-top:2px;font-style:italic">${esc(c.nota)}</div>
-            <div class="mini" style="margin-top:6px">${c.ultimoContacto
-              ? `Último mensaje: hace ${c.diasSinContacto} día${c.diasSinContacto === 1 ? '' : 's'}`
-              : 'Todavía no se le escribió'}${c.tocaEscribir ? ' · <b style="color:var(--rojo)">toca escribirle</b>' : ''}</div>
-            <div class="acciones" style="margin-top:8px">
-              <button class="b chico" data-ver-mensaje="${c.id}">Ver mensaje</button>
-              <button class="b chico ${c.tocaEscribir ? 'verde' : ''}" data-contactado="${c.id}" ${c.tocaEscribir ? '' : 'style="opacity:.55"'}>Ya le escribí</button>
-            </div>
-            <textarea id="msg-${c.id}" readonly style="display:none;width:100%;margin-top:8px;font-size:12px;padding:8px;border:1px solid var(--linea);border-radius:4px;font-family:inherit" rows="7">${esc(c.mensaje)}</textarea>
-          </div>`).join('')}
-      </div>
-      <div class="tarjeta">
-        <h2 style="font-size:18px">Se acercan estas fechas anuales</h2>
-        <div class="mini" style="margin-bottom:10px">Investigado a mano: lo que se repite todos los años en Balcarce. NUNCA es fecha confirmada — es un aviso de "esto vuelve por esta época, confirmá antes de publicar" (llamando a los contactos de arriba).</div>
-        ${(a.proximosAnuales || []).length ? a.proximosAnuales.map(e => `<div style="padding:10px 0;border-bottom:1px solid var(--papel)">
-            <div style="font-weight:700;font-size:14px">${esc(e.nombre)}</div>
-            <div class="mini">${esc(CATEGORIAS_AGENDA_TXT(e.categoria))} · última vez: ${esc(e.ultimaEdicion.desde)}${e.ultimaEdicion.edicion ? ' (edición ' + e.ultimaEdicion.edicion + ')' : ''}</div>
-            <div class="mini" style="margin-top:3px;font-style:italic">${esc(e.nota)}</div>
-          </div>`).join('') : '<div class="mini">Ninguna cerca del mes actual.</div>'}
-      </div>
-      <div class="tarjeta">
-        <h2 style="font-size:18px">Todo el calendario anual conocido</h2>
-        ${(D.calendarioAnualCompleto || []).map(e => `<div class="mini" style="padding:5px 0;border-bottom:1px solid var(--papel)">mes ${e.mesAproximado} · <b>${esc(e.nombre)}</b> (${esc(e.categoria)})</div>`).join('')}
-      </div>
+    </div>
+  </div>
+
+  <div class="tarjeta" style="margin-top:18px">
+    <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
+      <h2 style="margin:0;font-size:20px">A quién pedirle fechas</h2>
+      <button class="b chico ${filtroContactos === 'mes' ? 'verde' : ''}" data-filtro-contactos="mes" style="flex-grow:0">A quién escribir este mes · ${esteMes.length}</button>
+      <button class="b chico ${filtroContactos === 'todos' ? 'verde' : ''}" data-filtro-contactos="todos" style="flex-grow:0">Todos · ${contactos.length}</button>
+    </div>
+    <div class="mini" style="margin:6px 0 10px">Instituciones de Balcarce que organizan eventos, con los canales que ellas mismas publican (<code>ingesta/contactos-agenda.json</code>). "Este mes" = suelen tener eventos en los próximos 45 días y hace más de 30 que no les escribimos. <b>El panel no manda nada solo</b>: "Escribir por WhatsApp" abre la conversación con el mensaje ya escrito, y lo mandás vos desde el WhatsApp de Radar. Después apretá "Le escribimos hoy". Cuando contesten con una fecha, "Cargar un evento suyo" arma el formulario con ellos como organizadores.</div>
+    ${lista.length ? lista.map(c => `<div style="padding:11px 0;border-bottom:1px solid var(--papel)">
+        <div style="display:flex;gap:8px;align-items:baseline;flex-wrap:wrap">
+          <span style="font-weight:700;font-size:14px">${esc(c.quien)}</span>
+          ${c.rubro ? `<span class="etiq">${esc(c.rubro)}</span>` : ''}
+          ${c.respondio ? '<span class="etiq ok">respondió</span>' : ''}
+          ${c.aEscribirEsteMes ? '<span class="etiq mal">toca escribirle</span>' : ''}
+        </div>
+        <div class="mini">${esc(c.organiza || c.para || '')}${(c.meses || []).length ? ' · suele tener eventos en: ' + c.meses.map(MES_CORTO).join(', ') : ''}</div>
+        <div class="mini">${canalesDe(c)}</div>${(c.compartenCanal || []).length ? `<div class="mini">Mismo WhatsApp o mail que: ${esc(c.compartenCanal.join(', '))}. Con un mensaje alcanza para todos.</div>` : ''}
+        ${c.nota ? `<div class="mini" style="font-style:italic">${esc(c.nota)}</div>` : ''}
+        <div class="mini">Dato sacado de <a href="${esc(c.fuente)}" target="_blank" rel="noopener">esta página</a>, verificado el ${esc(c.verificado || '?')}. ${c.ultimoContacto ? 'Último mensaje: hace ' + c.diasSinContacto + ' día' + (c.diasSinContacto === 1 ? '' : 's') + '.' : 'Todavía no se le escribió.'}${c.respondioEl ? ' Respondió el ' + esc(c.respondioEl.slice(0, 10)) + '.' : ''}</div>
+        <div class="acciones" style="margin-top:8px;flex-wrap:wrap">
+          ${c.whatsappUrl ? `<a class="b chico verde" style="flex-grow:0;display:inline-flex;align-items:center;text-decoration:none" href="${esc(c.whatsappUrl)}" target="_blank" rel="noopener">Escribir por WhatsApp</a>` : ''}
+          ${c.mailUrl ? `<a class="b chico" style="display:inline-flex;align-items:center;text-decoration:none;color:inherit" href="${esc(c.mailUrl)}">Escribir por mail</a>` : ''}
+          <button class="b chico" data-ver-mensaje="${c.id}">Ver mensaje</button>
+          <button class="b chico" data-contactado="${c.id}" data-accion="escribimos" ${c.tocaEscribir ? '' : 'style="opacity:.55"'}>Le escribimos hoy</button>
+          <button class="b chico" data-contactado="${c.id}" data-accion="respondio">Respondió</button>
+          <button class="b chico" data-evento-de-contacto="${c.id}">Cargar un evento suyo</button>
+        </div>
+        <textarea id="msg-${c.id}" readonly style="display:none;width:100%;margin-top:8px;font-size:12px;padding:8px;border:1px solid var(--linea);border-radius:4px;font-family:inherit" rows="7">${esc(c.mensaje)}</textarea>
+      </div>`).join('') : '<div class="vacio">Nadie para escribir este mes: o ya se les escribió en los últimos 30 días, o no suelen tener eventos en las próximas semanas. Mirá "Todos".</div>'}
+  </div>
+
+  <div class="dos" style="margin-top:8px">
+    <div class="tarjeta">
+      <h2 style="font-size:18px">Se acercan estas fechas anuales</h2>
+      <div class="mini" style="margin-bottom:10px">Investigado a mano: lo que se repite todos los años en Balcarce. NUNCA es fecha confirmada: es un aviso de "esto vuelve por esta época". Cuando el organizador confirme la fecha, apretá "Ya tengo la fecha" y cargala: recién ahí tiene página en la web.</div>
+      ${(a.proximosAnuales || []).length ? a.proximosAnuales.map(e => `<div style="padding:10px 0;border-bottom:1px solid var(--papel)">
+          <div style="font-weight:700;font-size:14px">${esc(e.nombre)}</div>
+          <div class="mini">${esc(CATEGORIAS_AGENDA_TXT(e.categoria))} · última vez: ${esc(e.ultimaEdicion.desde)}${e.ultimaEdicion.edicion ? ' (edición ' + e.ultimaEdicion.edicion + ')' : ''}</div>
+          <div class="mini" style="margin-top:3px;font-style:italic">${esc(e.nota)}</div>
+          <div class="acciones" style="margin-top:6px"><button class="b chico" data-confirmar-anual="${esc(e.id)}">Ya tengo la fecha</button></div>
+        </div>`).join('') : '<div class="mini">Ninguna cerca del mes actual.</div>'}
+    </div>
+    <div class="tarjeta">
+      <h2 style="font-size:18px">Todo el calendario anual conocido</h2>
+      ${(D.calendarioAnualCompleto || []).map(e => `<div class="mini" style="padding:5px 0;border-bottom:1px solid var(--papel)">mes ${e.mesAproximado} · <b>${esc(e.nombre)}</b> (${esc(e.categoria)}) · <a href="#" data-confirmar-anual="${esc(e.id)}">ya tengo la fecha</a></div>`).join('')}
     </div>
   </div>`;
+}
+// Lo que se está cargando en el formulario de eventos: sobrevive a que el
+// panel se vuelva a dibujar, y se llena solo desde un contacto o una fiesta.
+let borradorEvento = {};
+let filtroContactos = 'mes';
+const MES_CORTO = (m) => ['ene', 'feb', 'mar', 'abr', 'may', 'jun', 'jul', 'ago', 'sep', 'oct', 'nov', 'dic'][m - 1] || m;
+function canalesDe(c) {
+  const k = c.canales || {};
+  const partes = [];
+  if (k.whatsapp) partes.push('WhatsApp ' + esc(k.whatsapp));
+  if (k.telefono) partes.push('Tel. ' + esc(k.telefono));
+  if (k.mail) partes.push(`<a href="mailto:${esc(k.mail)}">${esc(k.mail)}</a>`);
+  if (k.instagram) partes.push(`<a href="https://www.instagram.com/${esc(String(k.instagram).replace(/^@/, ''))}" target="_blank" rel="noopener">${esc(k.instagram)}</a>`);
+  if (k.facebook) partes.push(`<a href="${esc(k.facebook)}" target="_blank" rel="noopener">Facebook</a>`);
+  if (k.web) partes.push(`<a href="${esc(k.web)}" target="_blank" rel="noopener">web</a>`);
+  return partes.join(' · ') || 'sin canales cargados';
+}
+function leerFormularioEvento() {
+  if (!$('#evN')) return { ...borradorEvento };
+  const v = (s) => ($(s) ? $(s).value.trim() : '');
+  return {
+    ...borradorEvento,
+    nombre: v('#evN'), fecha: v('#evF'), hora: v('#evH'), fechaHasta: v('#evFH'), horaHasta: v('#evHH'),
+    categoria: v('#evC'), lugar: v('#evL'), direccion: v('#evD'), costo: v('#evCo'), organizador: v('#evO'),
+    web: v('#evW'), descripcion: $('#evDe') ? $('#evDe').value : '', avisoPor: v('#evOr'),
+  };
 }
 function CATEGORIAS_AGENDA_TXT(cat) { return (D.categoriasAgenda || {})[cat] || cat; }
 
@@ -725,17 +795,68 @@ function conectar() {
   const btnCE = $('#btnCargarEvento');
   if (btnCE) {
     btnCE.onclick = async () => {
-      const nombre = $('#evN').value.trim();
-      const fecha = $('#evF').value.trim();
-      if (!nombre || !fecha) { alert('Falta el nombre o la fecha.'); return; }
-      cargar(await api('/api/evento', {
-        accion: 'agregar', nombre, fecha, fechaHasta: $('#evFH').value.trim() || null,
-        categoria: $('#evC').value, lugar: $('#evL').value.trim(), fuente: $('#evOr').value.trim(),
-      }));
+      const datos = leerFormularioEvento();
+      if (!datos.nombre || !datos.fecha) { alert('Falta el nombre o la fecha.'); return; }
+      const publicar = $('#evP').checked;
+      if (publicar && !confirm('¿La fecha está confirmada por quien lo organiza? Si es aproximada, cargalo sin publicar.')) return;
+      btnCE.disabled = true;
+      const r = await api('/api/evento', { accion: 'agregar', ...datos, publicar });
+      btnCE.disabled = false;
+      if (r.error) { alert(r.error); return; }
+      borradorEvento = {};
+      cargar(r);
     };
   }
+  // Lo que se escribe en el formulario se guarda al toque: si el panel se
+  // vuelve a dibujar (cada vez que llega algo nuevo), no se pierde.
+  document.querySelectorAll('#formEvento input[type=text], #formEvento input[type=url], #formEvento textarea, #formEvento select').forEach((el) => {
+    el.oninput = () => { borradorEvento = leerFormularioEvento(); };
+    el.onchange = el.oninput;
+  });
+  document.querySelectorAll('[data-soltar-borrador]').forEach((b) => {
+    b.onclick = () => { borradorEvento = { ...leerFormularioEvento(), contactoId: null, anualId: null }; pintar(); };
+  });
   document.querySelectorAll('[data-borrar-evento]').forEach((b) => {
-    b.onclick = async () => cargar(await api('/api/evento', { accion: 'borrar', id: b.dataset.borrarEvento }));
+    b.onclick = async () => {
+      if (!confirm('¿Borrar este evento? Si estaba en la web, su página deja de existir.')) return;
+      cargar(await api('/api/evento', { accion: 'borrar', id: b.dataset.borrarEvento }));
+    };
+  });
+  document.querySelectorAll('[data-evento-accion]').forEach((b) => {
+    b.onclick = async () => {
+      const accion = b.dataset.eventoAccion;
+      if (accion === 'publicar' && !confirm('¿La fecha está confirmada por quien lo organiza? Sólo se publican fechas confirmadas.')) return;
+      const r = await api('/api/evento', { accion, id: b.dataset.id });
+      if (r.error) { alert(r.error); return; }
+      cargar(r);
+    };
+  });
+  document.querySelectorAll('[data-filtro-contactos]').forEach((b) => {
+    b.onclick = () => { borradorEvento = leerFormularioEvento(); filtroContactos = b.dataset.filtroContactos; pintar(); };
+  });
+  document.querySelectorAll('[data-evento-de-contacto]').forEach((b) => {
+    b.onclick = () => {
+      const c = (D.contactosAgenda || []).find((x) => x.id === b.dataset.eventoDeContacto);
+      if (!c) return;
+      borradorEvento = { ...leerFormularioEvento(), contactoId: c.id, anualId: null, organizador: c.quien.split(' (')[0] };
+      pintar();
+      $('#formEvento').scrollIntoView({ behavior: 'smooth' });
+      $('#evN').focus();
+    };
+  });
+  document.querySelectorAll('[data-confirmar-anual]').forEach((b) => {
+    b.onclick = (ev) => {
+      ev.preventDefault();
+      const f = (D.calendarioAnualCompleto || []).find((x) => x.id === b.dataset.confirmarAnual);
+      if (!f) return;
+      borradorEvento = {
+        ...leerFormularioEvento(), anualId: f.id, nombre: f.nombre, categoria: f.categoria,
+        lugar: f.lugar && !/confirmar/i.test(f.lugar) ? f.lugar : '',
+      };
+      pintar();
+      $('#formEvento').scrollIntoView({ behavior: 'smooth' });
+      $('#evF').focus();
+    };
   });
 
   document.querySelectorAll('[data-ver-mensaje]').forEach((b) => {
@@ -748,7 +869,11 @@ function conectar() {
     };
   });
   document.querySelectorAll('[data-contactado]').forEach((b) => {
-    b.onclick = async () => cargar(await api('/api/agenda/contactado', { id: b.dataset.contactado }));
+    b.onclick = async () => {
+      const r = await api('/api/agenda/contactado', { id: b.dataset.contactado, accion: b.dataset.accion || 'escribimos' });
+      if (r.error) { alert(r.error); return; }
+      cargar(r);
+    };
   });
 
   const bzT = $('#bzT');

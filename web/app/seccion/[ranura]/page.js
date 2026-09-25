@@ -1,8 +1,8 @@
 import {
-  obtenerDatos, cuando, porRanura, nombreCorto, ordenarPortada, SECCIONES,
+  obtenerDatos, cuando, porRanura, nombreCorto, ordenarPortada, SECCIONES, proximosEventos,
 } from '@/lib/datos';
 import {
-  PlacaSeccion, Etiqueta, FilaNota, Cierre, Invitacion,
+  PlacaSeccion, Etiqueta, FilaNota, Cierre, Invitacion, Evento,
 } from '@/components/piezas';
 import { notFound } from 'next/navigation';
 import {
@@ -75,6 +75,11 @@ export default function PaginaSeccion({ params }) {
     ? ordenarPortada(notas)
     : { principal: null, resto: notas };
   const direccion = (p) => direccionDePagina(s.ranura, p);
+  // En Cultura y agenda, los próximos eventos van en un bloque aparte, cada
+  // uno enlazado a su página. No se mezclan con las notas: un evento no es
+  // una noticia (no va al feed ni al sitemap de noticias), y la nota del
+  // medio que lo anuncia ya está en la lista. Así no sale dos veces.
+  const eventos = s.ranura === 'cultura' && pagina === 1 ? proximosEventos().slice(0, 4) : [];
 
   return (
     <div className="envoltura" style={{ maxWidth: 760 }}>
@@ -98,6 +103,16 @@ export default function PaginaSeccion({ params }) {
         <h2><a href={principal.ruta}>{principal.titulo}</a></h2>
         {principal.copete && <p>{principal.copete}</p>}
       </article>
+      )}
+
+      {eventos.length > 0 && (
+        <section className="tarjeta" style={{ marginTop: 22, paddingBottom: 8 }}>
+          <div style={{ display: 'flex', alignItems: 'center' }}>
+            <h2 style={{ flexGrow: 1, fontSize: 18 }}>Se viene en la agenda</h2>
+            <a href="/agenda" style={{ fontSize: 12.5, fontWeight: 600, color: 'var(--rojo)' }}>Toda la agenda →</a>
+          </div>
+          {eventos.map((e) => <Evento evento={e} key={e.id} />)}
+        </section>
       )}
 
       {resto.length > 0 && (

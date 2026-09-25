@@ -40,6 +40,13 @@
 /tema/*/opengraph-image
   Content-Type: image/png
 
+/agenda/*/opengraph-image
+  Content-Type: image/png
+
+# El archivo para agendar un evento: que el celular lo abra con el calendario.
+/agenda/*/evento.ics
+  Content-Type: text/calendar; charset=utf-8
+
 # Lo que Next genera con un código en el nombre no cambia nunca: si cambia el
 # contenido, cambia el nombre. Se puede guardar un año.
 /_next/static/*

@@ -162,6 +162,66 @@ panel las muestra en "Cómo escribe la IA"). Las que más importan:
 - La fuente nunca se nombra en el título ni en el guion de voz: la
   atribución va aparte, al pie de la nota.
 
+## Los eventos de la agenda: una página por fecha (desde el 25/09)
+
+Cada fecha de la agenda tiene su propia página, que funciona como la "nota" del
+evento: `/agenda/<nombre>-<id>` (por ejemplo
+`/agenda/22-fiesta-nacional-del-postre-muni22540`). La lista `/agenda`, la
+tarjeta de agenda de la portada y la sección Cultura y agenda enlazan a esa
+página desde cada fecha.
+
+**Qué trae la página:** nombre, cuándo (día y horario, o "del viernes 9 al lunes
+12 de octubre"), dónde (con "Cómo llegar"), la entrada, quién organiza, enlace a
+la fuente o a las entradas, un botón **"Agendar en el celular"** (un archivo
+`.ics`) y otro de **Google Calendar**, compartir por WhatsApp, la tarjeta propia
+para compartir (nunca el afiche del organizador: la misma regla que las fotos) y
+los datos estructurados `Event` para que Google muestre el evento.
+
+**Cómo se escribe: con los datos, sin IA.** El texto sale de una plantilla
+(`web/lib/eventos.js`): "Del viernes 9 al lunes 12 de octubre, desde las 12.30,
+en Sociedad Rural de Balcarce (Avenida Centenario 2175)." No hay nada que
+inventar. Si la fuente trae una descripción, va tal cual, limpia de HTML, bajo
+"Lo que cuenta la Municipalidad de Balcarce", con el enlace al original. Si la
+fuente no dice la entrada, la página dice "No la informaron. Consultá con quien
+lo organiza": nunca "gratis" por las dudas.
+
+**Quién la escribió** va al pie, igual que en las notas (regla 7), y lo mismo en
+los datos para Google: "Esta ficha se armó automáticamente con los datos que
+publicó la Municipalidad de Balcarce… No la escribió una inteligencia
+artificial ni la revisó una persona antes de salir", o "la cargó y la publicó
+una persona de la redacción".
+
+**De dónde salen, y sólo con fecha confirmada:**
+
+| Origen | Cómo llega a la web |
+|---|---|
+| **Municipio** (API de balcarce.gob.ar) | Solo, en cada corrida de "Actualizar la web" |
+| **Cargado en el panel** | Cuando una persona aprieta **Publicar en la web** (pestaña Agenda). Nace como borrador. Llega por `web/data/eventos-panel.json`, aunque la PC se apague |
+| **Calendario anual** (las fiestas que vuelven) | Nunca con fecha aproximada. Cuando alguien confirma la fecha, la carga en el panel con "Ya tengo la fecha" y ahí tiene página. Mientras tanto, `/agenda` dice "octubre · fecha a confirmar" |
+
+**Cuánto dura una página.** Mientras el evento no terminó, está en las listas y
+en el sitemap. Cuando pasa, la página sigue **60 días** (los enlaces que
+circularon no se rompen, regla 20) con el aviso "Este evento ya pasó", y sale de
+las listas. Si el municipio saca un evento de su agenda antes de que ocurra, la
+página queda con el aviso "lo sacó de su agenda: puede haberse suspendido" y sin
+datos para Google.
+
+**El semáforo también mira la agenda:** si el nombre de un evento del municipio
+da rojo (menores, víctimas), no sale; si da rojo la descripción, sale sólo con
+los datos (`eventoSinSensibles` en `ingesta/agenda.mjs`).
+
+**Por qué no entran como notas.** En la sección Cultura y agenda aparecen en un
+bloque aparte, "Se viene en la agenda", con los próximos cuatro. No se mezclan
+con las notas de la portada: un evento no es una noticia (no va al feed ni al
+sitemap de noticias de Google), y la nota del medio que lo anuncia ya está en la
+lista. Así no sale dos veces.
+
+**Dónde está cada cosa:** `web/lib/eventos.js` (plantilla, fechas, archivo,
+`.ics`, datos para Google), `web/app/agenda/[id]/` (la página, su tarjeta y el
+`.ics`), `web/data/agenda.json` (los eventos con página, lo regenera GitHub),
+`ingesta/agenda.mjs` (la API del municipio). Pruebas: `pruebas/eventos.test.mjs`
+y `pruebas/agenda-panel.test.mjs`.
+
 ## Pendiente de esto
 
 Ver [`PENDIENTES.md`](PENDIENTES.md) — sección D (editorial) tiene lo que

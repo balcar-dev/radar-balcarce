@@ -1,0 +1,806 @@
+{
+  "actualizado": "2026-09-25",
+  "nota": "Instituciones de Balcarce que organizan eventos, para pedirles las fechas. Sólo canales que publica la propia institución, con la dirección de donde salió cada dato (fuente) y la fecha en que se verificó. El repo es público: nunca un celular personal que no esté publicado como contacto de la institución. Cuándo se les escribió y si respondieron lo lleva el panel (panel/datos/), no este archivo. Meses: sólo los que tienen respaldo en una fuente; vacío si no se sabe.",
+  "contactos": [
+    {
+      "id": "municipio-balcarce",
+      "quien": "Municipalidad de Balcarce",
+      "rubro": "municipio",
+      "organiza": "Agenda oficial de eventos del partido; Fiesta Nacional del Automovilismo, Fiesta Nacional del Postre, Fiesta de la Papa Frita",
+      "meses": [
+        2,
+        7,
+        8,
+        10
+      ],
+      "canales": {
+        "telefono": "(02266) 43-0240",
+        "whatsapp": "5492266448464",
+        "instagram": "@balcarcemunicipio",
+        "facebook": "https://www.facebook.com/municipiodebalcarce",
+        "web": "https://balcarce.gob.ar/"
+      },
+      "fuente": "https://balcarce.gob.ar/",
+      "fuentes": [
+        "https://balcarce.gob.ar/events/",
+        "https://balcarce.gob.ar/event/33-fiesta-nacional-del-automovilismo/"
+      ],
+      "verificado": "2026-09-25",
+      "nota": "La web publica el WhatsApp como api.whatsapp.com/send?phone=2266448464 (sin 549); se normalizó al formato internacional. Calle 16 N°602 PB. La agenda pública de eventos está en balcarce.gob.ar/events/."
+    },
+    {
+      "id": "cultura-municipio",
+      "quien": "Subsecretaría de Cultura y Educación - Municipalidad de Balcarce",
+      "rubro": "cultura",
+      "organiza": "Programación del Teatro Municipal, Balcarce es Folklore, Casa de la Historia y la Cultura del Bicentenario, talleres culturales",
+      "meses": [
+        1
+      ],
+      "canales": {
+        "telefono": "(02266) 42-2617 / 42-4929",
+        "mail": "culturabce@gmail.com",
+        "instagram": "@balcarcecultura",
+        "facebook": "https://www.facebook.com/subsecretariadecultura.balcarce/"
+      },
+      "fuente": "https://balcarce.gob.ar/institucional-borrador/",
+      "fuentes": [
+        "https://balcarce.gob.ar/2026/01/06/horario-de-verano-en-la-casa-de-la-historia-y-la-cultura-del-bicentenario/",
+        "https://www.instagram.com/balcarcecultura/",
+        "https://balcarce.gob.ar/balcarce-es-folklore/"
+      ],
+      "verificado": "2026-09-25",
+      "nota": "Los teléfonos salen de la página 'institucional-borrador' del municipio (con responsables viejos). El mail, Instagram y Facebook están confirmados en una nota municipal de enero de 2026; según el buscador, la bio de Instagram repite el 2266 42 2617. Dirección: Av. Dr. René Favaloro 785. Balcarce es Folklore fue en enero en 2023; la fecha cambia según el año. No se cargó un segundo mail que aparece en esa página porque parece personal."
+    },
+    {
+      "id": "turismo-municipio",
+      "quien": "Subsecretaría de Turismo - Municipalidad de Balcarce",
+      "rubro": "turismo",
+      "organiza": "Fiestas populares (Automovilismo, Postre, Papa Frita), acreditaciones del Autódromo, agenda turística",
+      "meses": [
+        2,
+        7,
+        8,
+        10
+      ],
+      "canales": {
+        "telefono": "(02266) 42-2394",
+        "whatsapp": "5492266638650",
+        "mail": "turismobalcarce@gmail.com",
+        "instagram": "@turismobalcarce",
+        "facebook": "https://www.facebook.com/subsecretariadeturismo.balcarce/",
+        "web": "https://balcarce.tur.ar/"
+      },
+      "fuente": "https://balcarce.gob.ar/institucional/",
+      "fuentes": [
+        "https://linktr.ee/turismobalcarce",
+        "https://balcarce.tur.ar/"
+      ],
+      "verificado": "2026-09-25",
+      "nota": "El Linktree público muestra 'WhatsApp - Oficina de Turismo' = wa.me/5492266638650 y un asistente virtual ('Juanma') en wa.me/5492266679933. No se encontró publicado el (02266) 43-0895 que teníamos del 18/09: no se cargó. Oficina en calle 17 Nº 671. Las páginas de eventos del municipio (Postre, Expo) ponen como contacto el 42-2394 y el 63-8650, que son de Turismo."
+    },
+    {
+      "id": "deportes-municipio",
+      "quien": "Subsecretaría de Deportes y Recreación - Municipalidad de Balcarce",
+      "rubro": "deporte",
+      "organiza": "Fiesta del Deporte (premios Fangio de Plata y Fangio de Oro), actividades deportivas municipales",
+      "meses": [
+        2
+      ],
+      "canales": {
+        "telefono": "(02266) 43-1218 / 43-1704",
+        "instagram": "@deportes_balcarce",
+        "facebook": "https://www.facebook.com/deportesyrecreacionbalcarce/"
+      },
+      "fuente": "https://balcarce.gob.ar/institucional-borrador/",
+      "fuentes": [
+        "https://balcarce.gob.ar/2025/01/28/todo-listo-para-la-38a-edicion-de-la-fiesta-del-deporte/",
+        "https://www.instagram.com/deportes_balcarce/"
+      ],
+      "verificado": "2026-09-25",
+      "nota": "Los teléfonos y la dirección (Av. Suipacha 931) sólo aparecen en la página 'institucional-borrador', que parece vieja; la página institucional vigente no lista Deportes. La Fiesta del Deporte se hace en febrero, en el escenario de la Fiesta del Automovilismo."
+    },
+    {
+      "id": "juventud-municipio",
+      "quien": "Dirección de Juventud - Municipalidad de Balcarce",
+      "rubro": "municipio",
+      "organiza": "Actividades para jóvenes (la fuente no detalla eventos)",
+      "meses": [],
+      "canales": {
+        "telefono": "(02266) 42-0137 / 42-0202",
+        "mail": "direcciondejuventudbalcarce@gmail.com"
+      },
+      "fuente": "https://balcarce.gob.ar/institucional/",
+      "verificado": "2026-09-25",
+      "nota": "Dirección: calle 22 entre 21 y 23. La fuente no dice qué eventos organiza."
+    },
+    {
+      "id": "polideportivo-municipal",
+      "quien": "Complejo Polideportivo Municipal de Balcarce",
+      "rubro": "deporte",
+      "organiza": "Temporada de pileta y camping, actividades deportivas y recreativas",
+      "meses": [],
+      "canales": {
+        "facebook": "https://www.facebook.com/p/Complejo-Polideportivo-Municipal-de-Balcarce-100064847014912/"
+      },
+      "fuente": "https://www.facebook.com/p/Complejo-Polideportivo-Municipal-de-Balcarce-100064847014912/",
+      "fuentes": [
+        "https://www.solocampings.com.ar/english/camping/Complejo-Polideportivo-Municipal/Balcarce/Buenos-Aires/23.html"
+      ],
+      "verificado": "2026-09-25",
+      "nota": "Un directorio de campings (no la institución) da el teléfono 02266-420392; no se cargó por no estar en un canal propio. Ruta 55, Cerro El Triunfo."
+    },
+    {
+      "id": "autodromo-fangio",
+      "quien": "Autódromo Municipal Juan Manuel Fangio",
+      "rubro": "autodromo",
+      "organiza": "Carreras nacionales (TC, TC Pick Up, TC Pista Pick Up, TSC)",
+      "meses": [
+        9
+      ],
+      "canales": {
+        "whatsapp": "5492266638650",
+        "web": "https://balcarce.gob.ar/events/"
+      },
+      "fuente": "https://balcarce.gob.ar/2026/09/23/acreditacion-para-socios-fundadores-del-autodromo-juan-manuel-fangio/",
+      "fuentes": [
+        "https://balcarce.tur.ar/",
+        "https://www.facebook.com/autodromo.juanmanuelfangio/"
+      ],
+      "verificado": "2026-09-25",
+      "nota": "Lo administra el municipio. El contacto que publica para el autódromo es el WhatsApp de Turismo. Se reabrió con el TC Pick Up del 26 y 27/09/2026. En Facebook hay dos páginas con el nombre del autódromo (autodromo.juanmanuelfangio y autodromo.juanmanuelfangiobalcarce) y no se pudo confirmar cuál es la oficial: no se cargó ninguna. Av. Suipacha y calle 63."
+    },
+    {
+      "id": "fiesta-automovilismo",
+      "quien": "Fiesta Nacional del Automovilismo",
+      "rubro": "fiesta",
+      "organiza": "Fiesta Nacional del Automovilismo en Plaza Libertad: autos, pilotos, shows, feria",
+      "meses": [
+        2
+      ],
+      "canales": {
+        "whatsapp": "5492266448464",
+        "web": "https://balcarce.gob.ar/event/33-fiesta-nacional-del-automovilismo/"
+      },
+      "fuente": "https://balcarce.gob.ar/event/33-fiesta-nacional-del-automovilismo/",
+      "fuentes": [
+        "https://ayacuchoaldia.com.ar/balcarce-prepara-la-33o-fiesta-nacional-del-automovilismo-del-jueves-5-al-domingo-8-de-febrero-de-2026/"
+      ],
+      "verificado": "2026-09-25",
+      "nota": "La 33ª fue del 5 al 8/02/2026. La organizan el municipio y la Fundación Fangio, con Turismo de la Provincia. El WhatsApp es el general del municipio."
+    },
+    {
+      "id": "fiesta-postre",
+      "quien": "Fiesta Nacional del Postre Balcarce",
+      "rubro": "fiesta",
+      "organiza": "Fiesta Nacional del Postre en la Sociedad Rural: postre más largo, cocina en vivo, música",
+      "meses": [
+        7,
+        10
+      ],
+      "canales": {
+        "whatsapp": "5492266638650",
+        "facebook": "https://www.facebook.com/p/Fiesta-Nacional-del-Postre-BALCARCE-100069661465661/",
+        "web": "https://balcarce.gob.ar/event/fiesta-nacional-del-postre-de-balcarce/"
+      },
+      "fuente": "https://balcarce.gob.ar/event/fiesta-nacional-del-postre-de-balcarce/",
+      "fuentes": [
+        "https://balcarce.gob.ar/events/"
+      ],
+      "verificado": "2026-09-25",
+      "nota": "La organiza el municipio. En 2025 fue del 18 al 20 de julio; la 22ª edición está anunciada del 9 al 12 de octubre de 2026. El contacto publicado (2266 63-8650) es el WhatsApp de Turismo."
+    },
+    {
+      "id": "fiesta-papa-frita",
+      "quien": "Fiesta de la Papa Frita",
+      "rubro": "fiesta",
+      "organiza": "Fiesta de la Papa Frita: concursos, cocina en vivo, recorrido de la papa",
+      "meses": [
+        8,
+        10
+      ],
+      "canales": {
+        "whatsapp": "5492266638650",
+        "web": "https://balcarce.gob.ar/event/fiesta-de-la-papa-frita/"
+      },
+      "fuente": "https://balcarce.gob.ar/event/fiesta-de-la-papa-frita/",
+      "fuentes": [
+        "https://www.lacapitalmdp.com/balcarce-celebra-el-primer-festival-de-la-papa-frita/",
+        "https://www.diariolavanguardia.com/noticias/41221-en-agosto-se-realizara-la-segunda-edicion-de-la-fiesta-de-la-papa-frita/"
+      ],
+      "verificado": "2026-09-25",
+      "nota": "La organiza el municipio, con apoyo de empresas. La primera fue el 7 y 8 de octubre de 2023; la segunda, en agosto. La de 2025 estaba para el 30 y 31 de agosto y se suspendió por el tiempo. La fecha no es fija. Contacto publicado: 2266 63-8650 (Turismo)."
+    },
+    {
+      "id": "educoagro",
+      "quien": "EduCoAgro - Exposición Agroeducativa de Balcarce",
+      "rubro": "educacion",
+      "organiza": "Muestra educativa, agropecuaria y comercial en el Colegio San José",
+      "meses": [
+        9
+      ],
+      "canales": {
+        "instagram": "@educoagro_balcarce",
+        "facebook": "https://www.facebook.com/educoagrobalcarce",
+        "web": "https://educoagro.com.ar/"
+      },
+      "fuente": "https://educoagro.com.ar/",
+      "fuentes": [
+        "https://balcarce.gob.ar/event/educoagro/",
+        "https://puntonueve.com.ar/educoagro-2026-se-realizara-del-10-al-13-de-septiembre-y-tendra-una-edicion-especial-por-los-150-anos-de-san-jose/"
+      ],
+      "verificado": "2026-09-25",
+      "nota": "La organizan la Escuela Agraria del Colegio San José y la asociación civil Agricultores Unidos de Balcarce. En 2026 fue del 10 al 13 de septiembre. La web no publica ni teléfono ni mail: tiene un formulario de contacto."
+    },
+    {
+      "id": "colegio-san-jose",
+      "quien": "Colegio San José Balcarce",
+      "rubro": "educacion",
+      "organiza": "EduCoAgro (junto con Agricultores Unidos); 150 años del colegio en 2026",
+      "meses": [
+        9
+      ],
+      "canales": {
+        "instagram": "@colegio_san_jose_balcarce"
+      },
+      "fuente": "https://www.instagram.com/colegio_san_jose_balcarce/",
+      "fuentes": [
+        "https://educoagro.com.ar/"
+      ],
+      "verificado": "2026-09-25",
+      "nota": "No se encontró completo el teléfono del colegio (el buscador lo mostraba cortado)."
+    },
+    {
+      "id": "museo-fangio",
+      "quien": "Museo del Automovilismo Juan Manuel Fangio (Fundación Fangio)",
+      "rubro": "museo",
+      "organiza": "Muestras del museo; coorganiza la Fiesta Nacional del Automovilismo; eventos deportivos y culturales",
+      "meses": [
+        2
+      ],
+      "canales": {
+        "telefono": "+54 2266 425540",
+        "mail": "archivo@museofangio.com",
+        "instagram": "@museo_fangio",
+        "facebook": "https://www.facebook.com/museofangio/",
+        "web": "https://www.museofangio.com/"
+      },
+      "fuente": "https://www.museofangio.com/",
+      "fuentes": [
+        "https://www.fundacionfangio.com/la-fundacion",
+        "https://www.museofangio.com/es/horarios/"
+      ],
+      "verificado": "2026-09-25",
+      "nota": "Los mismos datos sirven para la Fundación Fangio. Dardo Rocha (18) esquina Mitre (17)."
+    },
+    {
+      "id": "reserva-fangio",
+      "quien": "Reserva Fundación Juan Manuel Fangio",
+      "rubro": "turismo",
+      "organiza": "Visitas guiadas interpretativas, muestras de arte en la reserva",
+      "meses": [],
+      "canales": {
+        "whatsapp": "5492266671256",
+        "instagram": "@reservafangio",
+        "web": "https://linktr.ee/reserva.fangio"
+      },
+      "fuente": "https://linktr.ee/reserva.fangio",
+      "fuentes": [
+        "https://www.instagram.com/reservafangio/"
+      ],
+      "verificado": "2026-09-25",
+      "nota": "El WhatsApp está publicado en el Linktree oficial para 'agendar visita con grupo'."
+    },
+    {
+      "id": "museo-historico",
+      "quien": "Museo Histórico Municipal de Balcarce",
+      "rubro": "museo",
+      "organiza": "Muestras, archivo y biblioteca de consulta",
+      "meses": [],
+      "canales": {
+        "telefono": "(02266) 42-1800",
+        "mail": "museohbce@gmail.com",
+        "instagram": "@museohistoricodebalcarce",
+        "facebook": "https://www.facebook.com/museohistoricodebalcarce/"
+      },
+      "fuente": "https://php7.cultura.gba.gob.ar/patrimonioculturalNew/busqueda/detalle/265",
+      "fuentes": [
+        "https://www.instagram.com/museohistoricodebalcarce/",
+        "https://balcarce.gob.ar/category/museo-historico/"
+      ],
+      "verificado": "2026-09-25",
+      "nota": "Los datos salen del registro de patrimonio de la Provincia; la ficha no tiene fecha, el teléfono puede estar viejo. Av. Suipacha y 35, Cerro El Triunfo."
+    },
+    {
+      "id": "teatro-municipal",
+      "quien": "Teatro Municipal \"Luis A. Conti\"",
+      "rubro": "cultura",
+      "organiza": "Obras, música, ópera, espectáculos infantiles, ballet",
+      "meses": [],
+      "canales": {
+        "instagram": "@teatromunicipalbalcarce",
+        "facebook": "https://www.facebook.com/teatroluisconti/"
+      },
+      "fuente": "https://www.instagram.com/teatromunicipalbalcarce/",
+      "fuentes": [
+        "https://balcarce.gob.ar/2026/03/04/agenda-teatral/",
+        "https://www.facebook.com/teatroluisconti/"
+      ],
+      "verificado": "2026-09-25",
+      "nota": "No se encontró un teléfono publicado. Está en calle 16 Nº 690 y la boletería atiende de 8 a 12. La programación la maneja Cultura (ver cultura-municipio)."
+    },
+    {
+      "id": "cine-paris",
+      "quien": "Cine París Balcarce",
+      "rubro": "cultura",
+      "organiza": "Cartelera de cine 2D y 3D",
+      "meses": [],
+      "canales": {
+        "telefono": "(02266) 42-1703",
+        "mail": "cineparisbalcarce@gmail.com",
+        "facebook": "https://www.facebook.com/CineParisBalcarce/",
+        "web": "https://www.cineparis.com.ar"
+      },
+      "fuente": "https://bafilma.gba.gob.ar/salas/balcarce/cine-paris-balcarce",
+      "fuentes": [
+        "https://www.facebook.com/CineParisBalcarce/"
+      ],
+      "verificado": "2026-09-25",
+      "nota": "Sala comercial, en 18 Nº 649. Bafilma le asigna el Instagram @cineparis, pero no se confirmó que sea de esta sala: no se cargó."
+    },
+    {
+      "id": "bec-espacio-cultural",
+      "quien": "BEC - Balcarce Espacio Cultural",
+      "rubro": "cultura",
+      "organiza": "Talleres, Festi BEC, feria Gran Barata",
+      "meses": [],
+      "canales": {
+        "instagram": "@balcarce_espacio_cultural"
+      },
+      "fuente": "https://www.instagram.com/balcarce_espacio_cultural/",
+      "verificado": "2026-09-25",
+      "nota": "Espacio cultural independiente, desde 2019. La bio no tiene teléfono, mail ni dirección."
+    },
+    {
+      "id": "escuela-estetica",
+      "quien": "Escuela de Educación Estética de Balcarce",
+      "rubro": "educacion",
+      "organiza": "Talleres de danza, música, teatro y artes visuales; Semana de las Artes",
+      "meses": [],
+      "canales": {
+        "telefono": "(02266) 42-2367",
+        "mail": "escuestetbal@yahoo.com.ar",
+        "facebook": "https://www.facebook.com/escueladeesteticabalcarce/"
+      },
+      "fuente": "https://escuelaesteticabalcarce.blogspot.com/",
+      "fuentes": [
+        "https://www.facebook.com/escueladeesteticabalcarce/"
+      ],
+      "verificado": "2026-09-25",
+      "nota": "El blog es viejo (última entrada: abril de 2013): el teléfono y el mail pueden estar desactualizados. Calle 13 Nº 642, entre Chaves y 18."
+    },
+    {
+      "id": "sociedad-rural",
+      "quien": "Sociedad Rural de Balcarce",
+      "rubro": "rural",
+      "organiza": "Expo Balcarce (ganadera, industrial y comercial); su predio es sede de la Fiesta Nacional del Postre",
+      "meses": [
+        4
+      ],
+      "canales": {
+        "telefono": "(02266) 42-3224",
+        "mail": "balcarce@carbap.org",
+        "facebook": "https://www.facebook.com/p/Sociedad-Rural-de-Balcarce-100054615152932/"
+      },
+      "fuente": "https://carbap.org/rurales/sociedad-rural-de-balcarce/",
+      "fuentes": [
+        "https://balcarce.gob.ar/event/expo-balcarce-2026/"
+      ],
+      "verificado": "2026-09-25",
+      "nota": "La Expo Balcarce 2026 fue del 17 al 19 de abril. En la página municipal del evento el contacto es el 42-2394, que es el teléfono de Turismo, no el de la Rural. Av. Centenario 2175."
+    },
+    {
+      "id": "bomberos",
+      "quien": "Asociación de Bomberos Voluntarios de Balcarce",
+      "rubro": "bomberos",
+      "organiza": "Actividades institucionales; su salón recibe charlas y eventos",
+      "meses": [],
+      "canales": {
+        "telefono": "(02266) 42-4507 / 42-3378",
+        "instagram": "@bomberosvoluntariosbalcarce",
+        "facebook": "https://www.facebook.com/bomberosvoluntariosdebalcarce/"
+      },
+      "fuente": "https://www.bomberosra.org.ar/bomberos/571-bomberos-voluntarios-de-balcarce",
+      "fuentes": [
+        "https://www.instagram.com/bomberosvoluntariosbalcarce/",
+        "https://balcarce.gob.ar/events/"
+      ],
+      "verificado": "2026-09-25",
+      "nota": "Calle 2 Nº 580. Los teléfonos pueden ser de guardia: consultar por eventos en horario administrativo o por redes. En la agenda municipal figura una charla en su salón el 3/10/2026."
+    },
+    {
+      "id": "camara-comercio",
+      "quien": "Cámara de Comercio e Industria de Balcarce",
+      "rubro": "comercio",
+      "organiza": "Promociones y campañas comerciales (la fuente no detalla eventos)",
+      "meses": [],
+      "canales": {
+        "telefono": "(02266) 42-5899 / 42-2993",
+        "facebook": "https://www.facebook.com/camarabal/"
+      },
+      "fuente": "https://www.facebook.com/camarabal/",
+      "fuentes": [
+        "https://www.paginasamarillas.com.ar/fichas/camara-de-comercio-e-industria_12796666/"
+      ],
+      "verificado": "2026-09-25",
+      "nota": "Los teléfonos salen de guías comerciales (Páginas Amarillas y otras), no de un canal propio de la Cámara. La página de Facebook dice tener teléfono, mail, WhatsApp e Instagram, pero sin sesión no se pudieron leer. Calle 19 esquina 20."
+    },
+    {
+      "id": "parroquia-san-jose",
+      "quien": "Parroquia San José de Balcarce",
+      "rubro": "iglesia",
+      "organiza": "Celebraciones y actividades parroquiales",
+      "meses": [],
+      "canales": {
+        "telefono": "(02266) 43-0756",
+        "mail": "iglesiasanjosebalcarce@hotmail.com",
+        "facebook": "https://www.facebook.com/parroquiasanjose.balcarce1/"
+      },
+      "fuente": "https://www.obispado-mdp.org.ar/a/parroquias/",
+      "fuentes": [
+        "https://www.facebook.com/parroquiasanjose.balcarce1/"
+      ],
+      "verificado": "2026-09-25",
+      "nota": "Datos del listado de parroquias de la Diócesis de Mar del Plata. Calle 18 Nº 577."
+    },
+    {
+      "id": "parroquia-santa-maria",
+      "quien": "Parroquia Santa María (Balcarce)",
+      "rubro": "iglesia",
+      "organiza": "Celebraciones y actividades parroquiales",
+      "meses": [],
+      "canales": {
+        "telefono": "(02266) 42-0775",
+        "mail": "santamaria@iglesiamdp.org.ar"
+      },
+      "fuente": "https://www.obispado-mdp.org.ar/a/parroquias/",
+      "verificado": "2026-09-25",
+      "nota": "Calle 31 Nº 924."
+    },
+    {
+      "id": "parroquia-sagrada-familia-san-agustin",
+      "quien": "Parroquia Sagrada Familia (San Agustín)",
+      "rubro": "iglesia",
+      "organiza": "Celebraciones y actividades parroquiales en San Agustín",
+      "meses": [],
+      "canales": {
+        "telefono": "(02266) 49-1018"
+      },
+      "fuente": "https://www.obispado-mdp.org.ar/a/parroquias/",
+      "verificado": "2026-09-25",
+      "nota": "Localidad de San Agustín, partido de Balcarce. La diócesis no publica un mail para esta parroquia."
+    },
+    {
+      "id": "inta-balcarce",
+      "quien": "INTA - Estación Experimental Agropecuaria Balcarce",
+      "rubro": "educacion",
+      "organiza": "Jornadas técnicas y de campo",
+      "meses": [],
+      "canales": {
+        "facebook": "https://www.facebook.com/intabalcarce/",
+        "web": "https://www.argentina.gob.ar/inta/cr-buenosaires-sur/estacion-experimental-agropecuaria-balcarce"
+      },
+      "fuente": "https://www.argentina.gob.ar/inta/cr-buenosaires-sur/estacion-experimental-agropecuaria-balcarce",
+      "fuentes": [
+        "https://www.facebook.com/intabalcarce/"
+      ],
+      "verificado": "2026-09-25",
+      "nota": "El buscador asocia el mail eeabalcarce@inta.gob.ar y el teléfono +54 2266 43-9100, pero no se pudieron ver en una página oficial: no se cargaron. También tiene X: @INTABalcarce. Ruta 226 km 73,5."
+    },
+    {
+      "id": "fca-unmdp",
+      "quien": "Facultad de Ciencias Agrarias - UNMdP (Balcarce)",
+      "rubro": "educacion",
+      "organiza": "Jornadas, cursos y actividades de extensión",
+      "meses": [],
+      "canales": {
+        "telefono": "(02266) 43-1856 / 43-0311 / 43-0353 / 43-0456",
+        "mail": "comunicacionfca@mdp.edu.ar",
+        "instagram": "@fca.balcarce",
+        "facebook": "https://www.facebook.com/FCABalcarce/",
+        "web": "https://fca.mdp.edu.ar/"
+      },
+      "fuente": "https://fca.mdp.edu.ar/contacto/",
+      "fuentes": [
+        "https://fca.mdp.edu.ar/secretaria-de-extension/"
+      ],
+      "verificado": "2026-09-25",
+      "nota": "El mail de comunicación y prensa está en la página de la Secretaría de Extensión. El mail general de Extensión es extenfca@mdp.edu.ar (interno 35). Ruta 226 km 73,5."
+    },
+    {
+      "id": "club-pato",
+      "quien": "Club Social y Campo de Pato General Balcarce",
+      "rubro": "club",
+      "organiza": "Golf, hockey, rugby, pato, tenis y pelota paleta; pileta y colonia de verano",
+      "meses": [],
+      "canales": {
+        "whatsapp": "5492266416900",
+        "mail": "clubsocial@gmail.com",
+        "instagram": "@clubpato.balcarce",
+        "facebook": "https://www.facebook.com/clubcampodepato",
+        "web": "https://clubpato.com/"
+      },
+      "fuente": "https://clubpato.com/",
+      "fuentes": [
+        "https://www.instagram.com/clubpato.balcarce/"
+      ],
+      "verificado": "2026-09-25",
+      "nota": "La web publica 'Tel. / WhatsApp: (0)2266 (15)41 69 00'. El mail 'clubsocial@gmail.com' figura así en la web pero es muy genérico: confirmarlo antes de usarlo. También existe la cuenta @clubpato.ok. Av. San Martín s/n, cerca del cruce de la RN226 y la RP55."
+    },
+    {
+      "id": "racing-club",
+      "quien": "Racing Club Balcarce",
+      "rubro": "club",
+      "organiza": "Fútbol de la Liga Balcarceña, natación; sede del Torneo Ciudad de Balcarce",
+      "meses": [
+        1
+      ],
+      "canales": {
+        "instagram": "@racingbalcarce",
+        "facebook": "https://www.facebook.com/racingbalcarce/"
+      },
+      "fuente": "https://www.instagram.com/racingbalcarce/",
+      "fuentes": [
+        "https://torneociudaddebalcarce.com/"
+      ],
+      "verificado": "2026-09-25",
+      "nota": "Sede social en calle 25 Nº 485, según el buscador. Natación tiene cuenta propia: @natacionracingbalcarce."
+    },
+    {
+      "id": "torneo-ciudad-balcarce",
+      "quien": "Torneo Ciudad de Balcarce \"Javier Vallina\" (fútbol infantil internacional)",
+      "rubro": "deporte",
+      "organiza": "Torneo internacional de fútbol infantil en Racing Club",
+      "meses": [
+        1
+      ],
+      "canales": {
+        "mail": "contacto@torneociudaddebalcarce.com",
+        "instagram": "@torneobalcarce",
+        "web": "https://torneociudaddebalcarce.com/"
+      },
+      "fuente": "https://torneociudaddebalcarce.com/",
+      "fuentes": [
+        "https://balcarce.gob.ar/event/ciudad-de-balcarce-javier-vallina/"
+      ],
+      "verificado": "2026-09-25",
+      "nota": "La XX edición fue del 24 al 30 de enero de 2026. La web también publica los celulares de dos organizadores, con nombre y apellido; no se cargaron porque son de personas. Si hace falta, están en la web."
+    },
+    {
+      "id": "ferroviarios",
+      "quien": "Club Atlético Ferroviarios (Balcarce)",
+      "rubro": "club",
+      "organiza": "Fútbol de la Liga Balcarceña",
+      "meses": [],
+      "canales": {
+        "instagram": "@ferroviariosoficial",
+        "facebook": "https://www.facebook.com/CAtleticoFerroviarosBalcarce/"
+      },
+      "fuente": "https://www.instagram.com/ferroviariosoficial/",
+      "fuentes": [
+        "https://www.facebook.com/CAtleticoFerroviarosBalcarce/"
+      ],
+      "verificado": "2026-09-25",
+      "nota": "También en X: @CAFerroviarios. Es el club más ganador de la Liga (18 títulos, según Wikipedia)."
+    },
+    {
+      "id": "amigos-unidos",
+      "quien": "Club Atlético Amigos Unidos (Balcarce)",
+      "rubro": "club",
+      "organiza": "Fútbol de la Liga Balcarceña",
+      "meses": [],
+      "canales": {
+        "instagram": "@amigosunidosclub",
+        "facebook": "https://www.facebook.com/amigosunidosbalcarce/"
+      },
+      "fuente": "https://www.instagram.com/amigosunidosclub/",
+      "fuentes": [
+        "https://www.facebook.com/amigosunidosbalcarce/"
+      ],
+      "verificado": "2026-09-25",
+      "nota": "Fundado el 9/09/1951. Hay una segunda cuenta chica, @club.amigos.unidos: no se cargó."
+    },
+    {
+      "id": "sportivo-trabajo",
+      "quien": "Club Sportivo Trabajo (Balcarce)",
+      "rubro": "club",
+      "organiza": "Fútbol de la Liga Balcarceña (como Sportivo Trabajo Mitre)",
+      "meses": [],
+      "canales": {
+        "facebook": "https://www.facebook.com/sportivotrabajo/",
+        "web": "http://clubsportivotrabajo.com.ar/"
+      },
+      "fuente": "https://www.facebook.com/sportivotrabajo/",
+      "fuentes": [
+        "http://clubsportivotrabajo.com.ar/"
+      ],
+      "verificado": "2026-09-25",
+      "nota": "La web del club casi no tiene contenido (sólo un login). El buscador da la dirección Av. San Martín Nº 125."
+    },
+    {
+      "id": "san-lorenzo",
+      "quien": "San Lorenzo Fútbol Club de Balcarce",
+      "rubro": "club",
+      "organiza": "Fútbol de la Liga Balcarceña",
+      "meses": [],
+      "canales": {
+        "facebook": "https://www.facebook.com/p/San-Lorenzo-Futbol-Club-de-Balcarce-100064446562448/"
+      },
+      "fuente": "https://www.facebook.com/p/San-Lorenzo-Futbol-Club-de-Balcarce-100064446562448/",
+      "verificado": "2026-09-25",
+      "nota": "Hay un reel de Instagram a nombre de 'Club San Lorenzo Balcarce', pero no se identificó bien la cuenta: no se cargó."
+    },
+    {
+      "id": "club-telefonos",
+      "quien": "Club Teléfonos Balcarce",
+      "rubro": "club",
+      "organiza": "Pileta, camping, fútbol, pádel",
+      "meses": [],
+      "canales": {
+        "instagram": "@clubtelefonosbalcarce",
+        "facebook": "https://www.facebook.com/campingypileta.clubtelefonosbalcarce/"
+      },
+      "fuente": "https://www.instagram.com/clubtelefonosbalcarce/",
+      "verificado": "2026-09-25"
+    },
+    {
+      "id": "club-san-agustin",
+      "quien": "Club Atlético San Agustín",
+      "rubro": "club",
+      "organiza": "Fútbol de la Liga Balcarceña (localidad de San Agustín)",
+      "meses": [],
+      "canales": {
+        "instagram": "@club_san_agustin"
+      },
+      "fuente": "https://www.instagram.com/club_san_agustin/",
+      "verificado": "2026-09-25",
+      "nota": "Hay una página de Facebook a nombre del club, pero no se confirmó que sea la oficial: no se cargó."
+    },
+    {
+      "id": "deportivo-los-pinos",
+      "quien": "Club Deportivo Los Pinos",
+      "rubro": "club",
+      "organiza": "Fútbol de la Liga Balcarceña; aniversario de Los Pinos junto con la Delegación Municipal",
+      "meses": [
+        11
+      ],
+      "canales": {
+        "instagram": "@deportivo_los_pinos"
+      },
+      "fuente": "https://www.instagram.com/deportivo_los_pinos/",
+      "fuentes": [
+        "https://balcarce.gob.ar/event/los-pinos-festejara-sus-125-anos/"
+      ],
+      "verificado": "2026-09-25",
+      "nota": "Los 125 años de Los Pinos se festejaron el 15 y 16 de noviembre, organizados por el club y la delegación. También existe la cuenta @club.lospinos ('Club Deportivo Social y Cultural Los Pinos'): no se sabe cuál es la principal."
+    },
+    {
+      "id": "club-pesca",
+      "quien": "Club de Pesca Balcarce \"Laguna La Brava\"",
+      "rubro": "club",
+      "organiza": "Pesca y camping en Laguna La Brava",
+      "meses": [],
+      "canales": {
+        "instagram": "@clubdepescabalcarce",
+        "facebook": "https://www.facebook.com/cdpb.comisiondirectiva/"
+      },
+      "fuente": "https://www.instagram.com/clubdepescabalcarce/",
+      "fuentes": [
+        "https://www.solocampings.com.ar/english/camping/Club-de-Pesca-Laguna-Brava/Balcarce/Buenos-Aires/22.html"
+      ],
+      "verificado": "2026-09-25",
+      "nota": "Aparecen dos teléfonos distintos: 2266 48-3380 (según el buscador, de Instagram) y 0223-4608029 (directorio de campings). No se cargó ninguno. RN 226 km 39,5."
+    },
+    {
+      "id": "liga-balcarcena",
+      "quien": "Liga Balcarceña de Fútbol",
+      "rubro": "deporte",
+      "organiza": "Torneos de fútbol masculino y femenino del partido",
+      "meses": [],
+      "canales": {
+        "facebook": "https://www.facebook.com/p/Liga-Balcarce%C3%B1a-de-Futbol-61557442910896/"
+      },
+      "fuente": "https://www.facebook.com/p/Liga-Balcarce%C3%B1a-de-Futbol-61557442910896/",
+      "fuentes": [
+        "https://es.wikipedia.org/wiki/Liga_Balcarce%C3%B1a_de_F%C3%BAtbol"
+      ],
+      "verificado": "2026-09-25",
+      "nota": "lbf.com.ar se presenta como 'sitio NO oficial': no se cargó su mail. Hay otras páginas con nombres parecidos (facebook.com/balcarcedefutbol, X @futbolbalcarce) y no se sabe cuál es la oficial. El fútbol femenino tiene Instagram: @futbolfemligabalcarce. Sede en Kelly 848, según el buscador."
+    },
+    {
+      "id": "grupo-hets",
+      "quien": "Grupo Hets - Organización de Eventos Deportivos",
+      "rubro": "deporte",
+      "organiza": "Balcarce Corre (también de noche), Ultra Trail Tierras del Diablo, Media Maratón",
+      "meses": [
+        8,
+        10,
+        12
+      ],
+      "canales": {
+        "telefono": "(02266) 15-475024",
+        "whatsapp": "5492266475024",
+        "mail": "grupohets@gmail.com",
+        "instagram": "@grupohets_oficial",
+        "facebook": "https://www.facebook.com/grupo.autoctona",
+        "web": "https://www.grupohets.org/"
+      },
+      "fuente": "https://www.grupohets.org/",
+      "fuentes": [
+        "https://balcarce.gob.ar/events/",
+        "https://www.grupohets.org/balcarce-corre"
+      ],
+      "verificado": "2026-09-25",
+      "nota": "La web publica el WhatsApp como +542266475024 (sin el 9); se normalizó a 549. El teléfono que teníamos como (02266) 47-5024 la web lo publica como celular: (02266) 15-475024. Para atención al corredor también figura el (2266) 475026. La UTTD 2026 es el 11/10 en el Cerro El Triunfo. Los meses de Balcarce Corre (diciembre) y de la Media Maratón (agosto) vienen de la investigación del 18/09; en esta pasada sólo se confirmó octubre."
+    },
+    {
+      "id": "perfil-extremo",
+      "quien": "Perfil Extremo (Tandil)",
+      "rubro": "deporte",
+      "organiza": "Fechas de mountain bike XCO en el Cerro El Triunfo (Open XCO, campeonato provincial)",
+      "meses": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "canales": {
+        "telefono": "(0249) 15-460-2248 / (0249) 15-464-1547",
+        "mail": "contacto@perfilextremo.com",
+        "instagram": "@perfilextremo",
+        "facebook": "https://www.facebook.com/perfil.extremo",
+        "web": "https://www.perfilextremo.com/"
+      },
+      "fuente": "https://www.perfilextremo.com/",
+      "fuentes": [
+        "https://balcarce.gob.ar/2026/04/13/vuelve-el-mountain-bike-al-cerro-el-triunfo/",
+        "https://www.0223.com.ar/nota/2026-4-17-10-38-0-los-mejores-exponentes-del-mountain-bike-bonaerense-vuelven-al-cerro-el-triunfo-de-balcarce"
+      ],
+      "verificado": "2026-09-25",
+      "nota": "Es una empresa de Tandil. Su web publica esos dos celulares como contacto oficial de la empresa (acá van sin los nombres de pila). Los meses (abril a octubre) vienen de lo investigado el 18/09; las notas encontradas son de abril, mayo y septiembre. Colabora MTB Balcarce."
+    },
+    {
+      "id": "mtb-balcarce",
+      "quien": "MTB Balcarce",
+      "rubro": "deporte",
+      "organiza": "Eventos de MTB, XC, rally y endurance; colabora en las fechas de Perfil Extremo",
+      "meses": [],
+      "canales": {
+        "instagram": "@mtbbalcarce"
+      },
+      "fuente": "https://www.instagram.com/mtbbalcarce/",
+      "fuentes": [
+        "https://puntonueve.com.ar/vuelve-la-pasion-del-mountain-bike-al-cerro-el-triunfo/"
+      ],
+      "verificado": "2026-09-25"
+    },
+    {
+      "id": "leones-balcarce",
+      "quien": "Club de Leones Balcarce",
+      "rubro": "ong",
+      "organiza": "Actividades solidarias (la fuente no detalla eventos)",
+      "meses": [],
+      "canales": {
+        "web": "https://e-clubhouse.org/sites/balcarce/contact.php"
+      },
+      "fuente": "https://e-clubhouse.org/sites/balcarce/contact.php",
+      "fuentes": [
+        "https://balcarce.gob.ar/"
+      ],
+      "verificado": "2026-09-25",
+      "nota": "Sede en calle 11 Nº 624; se reúnen los lunes a las 19:30. La página no publica teléfono ni mail. El 24/09/2026 el municipio informó una reunión con el Club de Leones."
+    }
+  ]
+}

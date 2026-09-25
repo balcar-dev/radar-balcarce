@@ -1,4 +1,6 @@
-import { obtenerDatos, temasVivos, SECCIONES } from '@/lib/datos';
+import {
+  obtenerDatos, temasVivos, SECCIONES, proximosEventos,
+} from '@/lib/datos';
 import { cuantasPaginas, direccionDePagina } from '@/lib/paginas';
 import { sitio } from '@/lib/sitio';
 
@@ -61,6 +63,15 @@ export default function sitemap() {
     priority: n.local ? 0.9 : 0.6,
   }));
 
-  return [...fijas, ...secciones, ...temas, ...deNotas];
+  // Los eventos que vienen, cada uno con su página. Los que ya pasaron siguen
+  // teniendo página (los enlaces no se rompen) pero no se ofrecen a Google.
+  const deEventos = proximosEventos().map((e) => ({
+    url: `${base}${e.ruta}`,
+    lastModified: new Date(e.publicadoCuando || e.primeraVez || Date.now()),
+    changeFrequency: 'daily',
+    priority: 0.7,
+  }));
+
+  return [...fijas, ...secciones, ...temas, ...deNotas, ...deEventos];
 }
 

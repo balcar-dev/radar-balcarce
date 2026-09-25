@@ -7,6 +7,9 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { rutaDeNota, idDeRuta } from './ruta.js';
 import { vigenteEnPortada } from './archivo.js';
+import {
+  rutaDeEvento, claveDeEvento, claveDeRuta, proximos, confirmacionDeAnual,
+} from './eventos.js';
 
 // Se arma en el momento y no al cargar el módulo: las pruebas se paran en
 // otra carpeta para leer datos de mentira.
@@ -36,7 +39,7 @@ function leerConMemoria(archivo, armar) {
 const VACIO = () => ({
   generado: null, notas: [], secciones: [], clima: null,
   farmacias: { hoy: null, proximos: [], avisos: [] },
-  agenda: { municipio: [], proximosAnuales: [] },
+  agenda: { proximosAnuales: [] },
   utiles: { numeros: [], diaDeLaSemana: null, tocaHoy: false },
 });
 
@@ -124,6 +127,40 @@ export function notasConImagen() {
 export function obtenerNota(parte) {
   const id = idDeRuta(parte);
   return todasLasNotas().find((n) => n.id === id) ?? null;
+}
+
+// ---------------------------------------------------------------- la agenda
+
+/**
+ * Todos los eventos con página (web/data/agenda.json), con su dirección: los
+ * que vienen y los que pasaron hace menos de 60 días (lib/eventos.js).
+ */
+export function todosLosEventos() {
+  try {
+    return leerConMemoria(path.join(carpetaDeDatos(), 'agenda.json'), (crudo) => (crudo?.eventos ?? [])
+      .map((e) => ({ ...e, ruta: rutaDeEvento(e) })));
+  } catch {
+    return [];
+  }
+}
+
+/** Lo que va en las listas: lo que todavía no terminó, por fecha. Se cuenta
+ *  al compilar, que pasa cada media hora. */
+export function proximosEventos(ahora = Date.now()) {
+  return proximos(todosLosEventos(), ahora);
+}
+
+/** Un evento, por lo que llegó en la dirección ("nombre-en-guiones-clave"). */
+export function obtenerEvento(parte) {
+  const clave = claveDeRuta(parte);
+  return todosLosEventos().find((e) => claveDeEvento(e.id) === clave) ?? null;
+}
+
+/** Las fiestas anuales que se acercan, cada una con su evento confirmado si
+ *  ya lo hay (para enlazarlo) o sin fecha (para decir "a confirmar"). */
+export function anualesConFecha(anuales = [], ahora = Date.now()) {
+  const lista = proximosEventos(ahora);
+  return anuales.map((a) => ({ ...a, confirmado: confirmacionDeAnual(a, lista) }));
 }
 
 /** Cuántas horas atrás se sigue considerando "de hoy" para la portada. */

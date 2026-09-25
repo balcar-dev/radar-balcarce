@@ -1,6 +1,7 @@
 import { sitio, enlace, NOMBRE } from '@/lib/sitio';
 import { autorDeNota } from '@/components/metadatos';
 import { REDES_SOCIALES } from '@/lib/datos';
+import { fichaDeEvento } from '@/lib/eventos';
 
 // Los datos estructurados: lo mismo que ya está en la página, pero escrito
 // para que lo lea una máquina.
@@ -101,6 +102,15 @@ export function FichaDeNota({ nota }) {
     isBasedOn: nota.enlace || undefined,
     keywords: [nota.seccion, ...(nota.temas ?? [])].join(', '),
   };
+  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: json(datos) }} />;
+}
+
+/**
+ * Un evento de la agenda: el `Event` de schema.org, con fecha, lugar y quién
+ * armó la ficha (lo mismo que dice al pie de la página). Ver lib/eventos.js.
+ */
+export function FichaDeEvento({ evento }) {
+  const datos = fichaDeEvento(evento, { base: sitio(), url: enlace(evento.ruta) });
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: json(datos) }} />;
 }
 

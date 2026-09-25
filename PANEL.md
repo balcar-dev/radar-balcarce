@@ -47,7 +47,7 @@ Dos usuarios: **Hernán** y **Andrés**. Cada uno con su contraseña.
 | **Publicadas / Descartadas / Frenadas / Archivadas** | Lo ya decidido. **Frenadas** es el semáforo rojo (menores, víctimas): no se publica ni por error. **Archivadas** son las que pasaron 72 horas sin decidir |
 | **Fuentes** | Las 33 fuentes, con sus pesos y temas |
 | **Clima y farmacias** | Lo que la web muestra hoy |
-| **Agenda** | Eventos del municipio, carga a mano y recordatorio mensual a los organizadores |
+| **Agenda** | Eventos del municipio, carga y publicación de eventos a mano (cada uno con su página en la web) y la base de contactos para pedir fechas. Ver "La agenda" más abajo |
 | **Calendario** | Horarios de las historias fijas (sólo rigen en la PC; en GitHub valen los de `panel/horarios.mjs`) |
 | **Para redes** | Las piezas armadas |
 | **Buzón** | Datos, reclamos, opiniones y seguimientos que manda la gente, con la regla de cada tipo (`panel/buzon.mjs`) |
@@ -57,8 +57,9 @@ Dos usuarios: **Hernán** y **Andrés**. Cada uno con su contraseña.
 ## Qué pasa con lo que se decide
 
 **Sincronización** (`panel/sincronizar.mjs`): unos segundos después del último
-cambio, el panel sube solo a GitHub `web/data/decisiones.json` y
-`web/data/avisos.json`. Con eso "Actualizar la web" respeta lo decidido aunque
+cambio, el panel sube solo a GitHub `web/data/decisiones.json`,
+`web/data/avisos.json` y (desde el 25/09) `web/data/eventos-panel.json`, los
+eventos publicados desde la pestaña Agenda. Con eso "Actualizar la web" respeta lo decidido aunque
 la PC se apague. Si algo falla (sin internet, un conflicto de git), lo cuenta en
 la consola y no rompe el panel: el cambio queda en el archivo y se sube en el
 siguiente intento. Se apaga con `SINCRONIZAR_GITHUB=no`. Al exportar,
@@ -70,8 +71,58 @@ cada 2 horas y regeneraba `portada.json`; se sacó. La web la arma y la
 publica GitHub ("Actualizar la web" → Cloudflare Pages).
 
 **Lo que NO se sincroniza, a propósito:** `panel/datos/` (usuarios con hash,
-buzón con datos de personas, agenda, cuota de Gemini). Está en `.gitignore`.
-Por eso la agenda de la semana como historia sólo se arma en la PC.
+buzón con datos de personas, la copia de la agenda del municipio, cuándo se le
+escribió a cada contacto, quién avisó cada evento, cuota de Gemini). Está en
+`.gitignore`. De los eventos cargados a mano sólo sale lo público y sólo lo
+publicado (`eventosParaLaWeb` en `panel/agenda.mjs`): nunca quién avisó ni su
+teléfono. La agenda de la semana como historia todavía se arma sólo en la PC
+(`PENDIENTES.md`).
+
+## La agenda: eventos con página y contactos para pedir fechas
+
+Desde el 25/09 (`panel/agenda.mjs`, `EDITORIAL.md` § "Los eventos de la agenda").
+
+**Cargar un evento que avisó alguien:**
+
+1. Pestaña **Agenda** → formulario **Cargar un evento** (a la derecha): nombre,
+   fecha (`2026-10-15`) y, si se sabe, hora (`20:30`), cuándo termina, lugar,
+   dirección, entrada, quién organiza, página de entradas y una descripción.
+   Todo eso **sale en la web tal cual**. "Quién lo avisó" queda en el panel.
+2. Si la fecha está **confirmada por quien organiza**, tildar "Publicar ya en la
+   web". Si no, se carga como **borrador** y se publica después con el botón
+   **Publicar en la web** de su tarjeta. Una fecha aproximada no se publica.
+3. En la próxima corrida de GitHub (media hora como mucho) el evento tiene su
+   página. La tarjeta muestra la dirección. **Sacar de la web** o **Borrar** la
+   hacen desaparecer en la corrida siguiente.
+
+**Una fiesta del calendario anual** (Automovilismo, Postre, Balcarce Corre…):
+cuando el organizador confirma la fecha, botón **Ya tengo la fecha** (tarjeta
+"Se acercan estas fechas anuales" o "Todo el calendario anual"): llena el
+formulario con el nombre y lo liga a la fiesta, y la web cambia "fecha a
+confirmar" por la fecha con enlace.
+
+**Pedirle fechas a las instituciones** (tarjeta "A quién pedirle fechas", abajo):
+
+1. **A quién escribir este mes** muestra los que suelen tener eventos en los
+   próximos 45 días y a los que no se les escribió en los últimos 30. **Todos**
+   muestra la base completa (43 instituciones al 25/09).
+2. **Escribir por WhatsApp** abre WhatsApp con el mensaje ya escrito (o
+   **Escribir por mail**, el correo). **El panel no manda nada solo**: lo manda
+   una persona desde el WhatsApp o el correo de Radar. Sin WhatsApp ni mail,
+   **Ver mensaje**, copiarlo y mandarlo por Instagram o Facebook.
+3. Después, **Le escribimos hoy**. Si varios comparten el mismo número (el de
+   Turismo sirve para el autódromo y varias fiestas), vale para todos.
+4. Cuando contestan, **Respondió**, y si mandan una fecha, **Cargar un evento
+   suyo**: el formulario queda con ellos como organizadores.
+
+**La base de contactos** está en `ingesta/contactos-agenda.json`: por cada
+institución, qué organiza, en qué meses (sólo si hay una fuente que lo
+respalde), sus canales **oficiales** (teléfono, WhatsApp, mail, Instagram,
+Facebook, web), la dirección de donde salió cada dato y cuándo se verificó. El
+repositorio es público: nunca un celular personal que la institución no
+publique como contacto. Se suma o se corrige editando ese archivo (y
+reiniciando el panel). No se mezcla con `comercial/`: aquello son comercios
+para vender publicidad; esto, organizadores para pedir fechas.
 
 **Respaldo** (`panel/respaldo.mjs`): copia `panel/datos/` al arrancar y cada 6
 horas, con las últimas 14 copias. Por defecto va a `respaldos/` junto al

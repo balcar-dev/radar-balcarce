@@ -9,6 +9,7 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import {
   CALENDARIO_ANUAL, CONTACTOS, eventoDeMunicipio, anualesQueSeAcercan, mesesHastaQueLlegue, mensajeAgenda,
+  textoDeDescripcion, eventoSinSensibles, sinEntidades, MAXIMO_DESCRIPCION,
 } from '../ingesta/agenda.mjs';
 
 test('un evento de la API se traduce a nuestra forma, con el guion largo bien escrito', () => {
@@ -66,12 +67,65 @@ test('todos los eventos del calendario anual tienen mes, categoría y contacto p
   }
 });
 
-test('cada contacto tiene a quién llamar y para qué sirve', () => {
+test('cada contacto tiene a quién escribirle y para qué sirve (la base completa, en agenda-panel.test.mjs)', () => {
   for (const c of CONTACTOS) {
     assert.ok(c.quien, `${c.id} sin nombre`);
-    assert.ok(c.telefono, `${c.id} sin teléfono`);
+    assert.ok(Object.keys(c.canales).length, `${c.id} sin ningún canal`);
     assert.ok(c.para, `${c.id} sin decir para qué sirve`);
   }
+});
+
+test('cada fiesta anual tiene una clave para reconocer su fecha confirmada', () => {
+  for (const ev of CALENDARIO_ANUAL) {
+    assert.ok(ev.clave, `${ev.id} sin clave`);
+    assert.equal(ev.clave, ev.clave.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, ''), `${ev.id}: la clave va sin tildes ni mayúsculas`);
+  }
+});
+
+// ------------------------------------------ la descripción y el organizador
+
+test('del evento del municipio se guarda la descripción limpia, el organizador y su página', () => {
+  const r = eventoDeMunicipio({
+    id: 7,
+    title: 'TC PICK UP &#8211; BALCARCE',
+    start_date: '2026-09-26 08:00:00',
+    end_date: '2026-09-27 17:00:00',
+    all_day: false,
+    description: '<h2 class="x">Acerca del Evento</h2>\n<div><h1><strong>¡Las TC Pick Up llegan!</strong></h1><h1></h1><p>El fin de semana&nbsp;del 26 y 27.</p><p>El fin de semana&nbsp;del 26 y 27.</p><ul><li>Gastronomía</li></ul></div>',
+    website: 'https://ticket-motor.actc.org.ar/x',
+    venue: { venue: 'Autodromo', address: 'Av Suipacha y calle 63', city: 'Balcarce' },
+    organizer: [{ organizer: 'ACTC', website: 'https://actc.org.ar', phone: '2266 15-111111', email: 'alguien@x.com' }],
+    categories: [],
+  });
+  assert.equal(r.nombre, 'TC PICK UP – BALCARCE');
+  assert.equal(r.descripcion, '¡Las TC Pick Up llegan!\nEl fin de semana del 26 y 27.\n• Gastronomía');
+  assert.equal(r.organizador, 'ACTC');
+  assert.equal(r.organizadorUrl, 'https://actc.org.ar');
+  assert.equal(r.web, 'https://ticket-motor.actc.org.ar/x');
+  assert.equal(r.localidad, 'Balcarce');
+  assert.equal(r.todoElDia, false);
+  // El teléfono y el mail del organizador no se guardan: pueden ser de una persona.
+  assert.ok(!JSON.stringify(r).includes('111111'));
+  assert.ok(!JSON.stringify(r).includes('alguien@x.com'));
+});
+
+test('una descripción larga se corta al final de una oración y avisa que sigue', () => {
+  const larga = `<p>${'Una oración de relleno para la prueba. '.repeat(80)}</p>`;
+  const t = textoDeDescripcion(larga);
+  assert.ok(t.length <= MAXIMO_DESCRIPCION + 4, `mide ${t.length}`);
+  assert.ok(t.endsWith('. […]'), t.slice(-20));
+  assert.equal(textoDeDescripcion('<p> </p>'), null, 'vacía queda en null');
+  assert.equal(textoDeDescripcion(null), null);
+  assert.equal(sinEntidades('Fiesta &amp; feria &#8220;x&#8221;'), 'Fiesta & feria “x”');
+});
+
+test('el semáforo rojo también mira la agenda: nunca un menor ni una víctima', () => {
+  const base = { id: 'muni-1', nombre: 'Feria', descripcion: 'Una feria.' };
+  assert.deepEqual(eventoSinSensibles(base), base);
+  assert.equal(eventoSinSensibles({ ...base, nombre: 'Marcha por la víctima de violencia de género' }), null, 'con el nombre en rojo, no sale');
+  assert.equal(eventoSinSensibles({ ...base, descripcion: 'En memoria del menor de edad que...' }).descripcion, null, 'con la descripción en rojo, sale sin descripción');
+  // El amarillo no frena un evento.
+  assert.equal(eventoSinSensibles({ ...base, descripcion: 'Para menores de 12, acompañados.' }).descripcion, 'Para menores de 12, acompañados.');
 });
 
 test('el mensaje de agenda saluda por su nombre y firma como el medio', () => {

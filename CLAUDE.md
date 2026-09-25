@@ -188,6 +188,7 @@ publicar piezas a mano. Detalle y horarios en `REDES.md`.
 | cambiar una medida de imagen de Instagram/Facebook | `redes/formatos.mjs` (fuente única, con fecha de verificación) y `FORMATOS.md`. Los lunes `redes/auditar.mjs` audita lo publicado y avisa por WhatsApp si algo se desvió o los datos pasaron de 90 días |
 | cambiar qué revisa el vigilante o cuándo avisa | `redes/vigilar.mjs` |
 | sumar o completar comercios | `comercial/` (ver `COMERCIAL.md`) |
+| publicar un evento, su página en la web o a quién pedirle fechas | panel → Agenda (`panel/agenda.mjs`); la página, `web/lib/eventos.js` y `web/app/agenda/[id]`; los contactos, `ingesta/contactos-agenda.json` (ver `EDITORIAL.md` y `PANEL.md`) |
 
 ## Dónde está cada documento
 

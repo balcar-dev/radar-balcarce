@@ -1,5 +1,5 @@
 import {
-  obtenerDatos, cuando, ordenarPortada, temasVivos, SECCIONES,
+  obtenerDatos, cuando, ordenarPortada, temasVivos, SECCIONES, proximosEventos,
 } from '@/lib/datos';
 import {
   TarjetaFarmacia, TarjetaBuzon,
@@ -40,7 +40,8 @@ export default function Portada() {
 
   const temas = MOSTRAR_TEMAS ? temasVivos().slice(0, 8) : [];
 
-  const eventos = (d.agenda?.municipio ?? []).slice(0, 3);
+  // Los próximos tres, cada uno con su página (lib/eventos.js).
+  const eventos = proximosEventos().slice(0, 3);
 
   return (
     <div className="envoltura">

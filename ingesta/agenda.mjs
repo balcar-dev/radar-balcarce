@@ -18,7 +18,8 @@
 //    como fecha confirmada: es un recordatorio de "esto vuelve por esta época,
 //    confirmá la fecha real cuando se acerque".
 
-import { traer } from './ingesta.mjs';
+import fs from 'node:fs';
+import { traer, semaforoDelTexto } from './ingesta.mjs';
 import { fechaEnBalcarce } from './utiles.mjs';
 
 const API = 'https://balcarce.gob.ar/wp-json/tribe/events/v1/events';
@@ -39,9 +40,15 @@ export const CATEGORIAS = {
 // El calendario anual: lo que vuelve todos los años. `mesAproximado` es
 // 1-12; `diaAprox` cuando se conoce el patrón (ej. "primer sábado"). Todo
 // entra con `confirmado: false` — es una expectativa, no un dato de hoy.
+//
+// `clave` es cómo se reconoce la fiesta en un evento con fecha confirmada
+// (el del municipio o el que se carga en el panel): cuando aparece, la web
+// enlaza a su página en vez de decir sólo el mes (web/lib/eventos.js). Sin
+// tildes y en minúsculas.
 export const CALENDARIO_ANUAL = [
   {
     id: 'automovilismo-nacional',
+    clave: 'fiesta nacional del automovilismo',
     nombre: 'Fiesta Nacional del Automovilismo',
     categoria: 'automovilismo',
     mesAproximado: 2,
@@ -51,6 +58,7 @@ export const CALENDARIO_ANUAL = [
   },
   {
     id: 'mountain-bike-cerro',
+    clave: 'mountain bike',
     nombre: 'Fechas de Mountain Bike en el Cerro El Triunfo',
     categoria: 'ciclismo',
     mesAproximado: 4, // suele tener rondas entre abril y octubre
@@ -60,6 +68,7 @@ export const CALENDARIO_ANUAL = [
   },
   {
     id: 'educo-agro',
+    clave: 'educo agro',
     nombre: 'Educo Agro',
     categoria: 'agro',
     mesAproximado: 9,
@@ -69,6 +78,7 @@ export const CALENDARIO_ANUAL = [
   },
   {
     id: 'fiesta-postre',
+    clave: 'fiesta nacional del postre',
     nombre: 'Fiesta Nacional del Postre',
     categoria: 'feria',
     mesAproximado: 7, // en 2025 fue julio; el municipio ya cargó la edición 2026 para octubre
@@ -78,6 +88,7 @@ export const CALENDARIO_ANUAL = [
   },
   {
     id: 'fiesta-papa-frita',
+    clave: 'papa frita',
     nombre: 'Fiesta de la Papa Frita',
     categoria: 'feria',
     mesAproximado: 10,
@@ -87,6 +98,7 @@ export const CALENDARIO_ANUAL = [
   },
   {
     id: 'balcarce-corre',
+    clave: 'balcarce corre',
     nombre: 'Balcarce Corre',
     categoria: 'running',
     mesAproximado: 12,
@@ -96,6 +108,7 @@ export const CALENDARIO_ANUAL = [
   },
   {
     id: 'media-maraton',
+    clave: 'media maraton',
     nombre: 'Media Maratón de Balcarce',
     categoria: 'running',
     mesAproximado: 8,
@@ -105,6 +118,7 @@ export const CALENDARIO_ANUAL = [
   },
   {
     id: 'tierras-del-diablo',
+    clave: 'tierras del diablo',
     nombre: 'Tierras del Diablo (trail)',
     categoria: 'running',
     mesAproximado: 10,
@@ -115,39 +129,38 @@ export const CALENDARIO_ANUAL = [
 ];
 
 // Quién organiza qué, para cuando hay que preguntar directamente en vez de
-// esperar a que alguien lo suba a una web. Investigado el 18/09/2026: son
-// los organizadores reales de los eventos grandes del calendario anual, no
-// números genéricos del municipio.
-export const CONTACTOS = [
-  {
-    id: 'deportes-municipio',
-    quien: 'Subsecretaría de Deportes y Recreación (municipio)',
-    para: 'Running, ciclismo, eventos deportivos en general',
-    telefono: '(02266) 43-1218 / 43-1704',
-    nota: 'Av. Suipacha 931. Lunes a viernes de 7 a 13. Es el primer lugar para preguntar por cualquier prueba deportiva que se venga.',
-  },
-  {
-    id: 'perfil-extremo',
-    quien: 'Perfil Extremo (organiza el Mountain Bike del Cerro)',
-    para: 'Ciclismo / Cerro El Triunfo',
-    telefono: 'Gastón +54 9 249-460-2248 · Lalo +54 9 249-464-1547',
-    nota: 'Empresa de Tandil, no de Balcarce. contacto@perfilextremo.com',
-  },
-  {
-    id: 'grupo-hets',
-    quien: 'Grupo Hets (organiza Balcarce Corre y Tierras del Diablo)',
-    para: 'Running / trail',
-    telefono: '(02266) 47-5024',
-    nota: 'grupohets@gmail.com · grupohets.org. Con sede en Balcarce, son los mismos para varias carreras del año.',
-  },
-  {
-    id: 'turismo-municipio',
-    quien: 'Subsecretaría de Turismo (municipio)',
-    para: 'Ferias, fiestas populares, agenda cultural amplia',
-    telefono: '(02266) 42-2394 (centro) / 43-0895 (el cruce)',
-    nota: 'También en @turismobalcarce (Instagram, 25 mil seguidores) con WhatsApp propio en su Linktree.',
-  },
-];
+// esperar a que alguien lo suba a una web. Desde el 25/09 es una base aparte,
+// ingesta/contactos-agenda.json: instituciones de Balcarce que organizan
+// eventos, cada una con los canales que ELLA MISMA publica (teléfono, mail,
+// WhatsApp, redes), de dónde salió cada dato y cuándo se verificó. El repo es
+// público: nunca un celular personal que no esté publicado como contacto de
+// la institución. No se mezcla con comercial/: aquello son comercios, para
+// vender publicidad; esto son organizadores, para pedir fechas.
+//
+// Cuándo se les escribió y si respondieron lo lleva el panel (panel/datos/,
+// que no va a GitHub), no este archivo.
+const F_CONTACTOS = new URL('./contactos-agenda.json', import.meta.url);
+
+/** Los canales que puede tener un contacto, en el orden en que se muestran. */
+export const CANALES = ['whatsapp', 'telefono', 'mail', 'instagram', 'facebook', 'web'];
+
+function leerContactos() {
+  try {
+    const datos = JSON.parse(fs.readFileSync(F_CONTACTOS, 'utf8'));
+    return (datos.contactos ?? []).map((c) => ({
+      ...c,
+      meses: c.meses ?? [],
+      canales: c.canales ?? {},
+      // `para` es el nombre viejo de `organiza`: lo sigue usando el panel.
+      para: c.organiza ?? c.para ?? '',
+    }));
+  } catch (e) {
+    console.error('  no se pudo leer ingesta/contactos-agenda.json:', e.message);
+    return [];
+  }
+}
+
+export const CONTACTOS = leerContactos();
 
 // El mensaje formal para pedir la agenda una vez por mes. Se manda por
 // WhatsApp a cada contacto de CONTACTOS, con el nombre reemplazado. Corto,
@@ -163,17 +176,75 @@ Estamos armando la agenda de eventos del mes y nos gustaría sumar los suyos, co
 — ${firma}`;
 }
 
+const ENTIDADES = {
+  '&nbsp;': ' ', '&amp;': '&', '&quot;': '"', '&#39;': "'", '&apos;': "'", '&lt;': '<', '&gt;': '>',
+  '&aacute;': 'á', '&eacute;': 'é', '&iacute;': 'í', '&oacute;': 'ó', '&uacute;': 'ú', '&ntilde;': 'ñ',
+  '&Aacute;': 'Á', '&Eacute;': 'É', '&Iacute;': 'Í', '&Oacute;': 'Ó', '&Uacute;': 'Ú', '&Ntilde;': 'Ñ',
+  '&ldquo;': '“', '&rdquo;': '”', '&lsquo;': '‘', '&rsquo;': '’', '&hellip;': '…', '&ndash;': '–', '&mdash;': '—',
+  '&iexcl;': '¡', '&iquest;': '¿', '&deg;': '°', '&ordm;': 'º', '&ordf;': 'ª',
+};
+
+/** Las entidades de HTML ("&#8211;", "&amp;") a letras. */
+export function sinEntidades(texto = '') {
+  return String(texto ?? '')
+    .replace(/&#(\d+);/g, (_, n) => String.fromCodePoint(Number(n)))
+    .replace(/&#x([0-9a-f]+);/gi, (_, n) => String.fromCodePoint(parseInt(n, 16)))
+    .replace(/&[a-zA-Z]+;/g, (e) => ENTIDADES[e] ?? ' ');
+}
+
+/** Cuánto de la descripción de la fuente se muestra. Lo demás, en la fuente. */
+export const MAXIMO_DESCRIPCION = 1500;
+
+/**
+ * La descripción de un evento, de HTML a texto: un párrafo por línea, sin
+ * etiquetas, sin el "Acerca del Evento" que pone la plantilla del municipio,
+ * sin líneas repetidas. Se corta al final de una oración. null si no queda
+ * nada que valga la pena.
+ */
+export function textoDeDescripcion(html, maximo = MAXIMO_DESCRIPCION) {
+  const lineas = sinEntidades(String(html ?? '')
+    .replace(/<(script|style)[\s\S]*?<\/\1>/gi, ' ')
+    .replace(/<br\s*\/?>/gi, '\n')
+    .replace(/<\/(p|h[1-6]|li|div|tr)>/gi, '\n')
+    .replace(/<li[^>]*>/gi, '\n• ')
+    .replace(/<[^>]+>/g, ' '))
+    .split('\n')
+    .map((l) => l.replace(/[ \t\u00a0]+/g, ' ').trim())
+    .filter((l) => l && l !== '•' && !/^acerca del evento$/i.test(l));
+  const unicas = lineas.filter((l, i) => lineas.indexOf(l) === i);
+  let texto = unicas.join('\n');
+  if (texto.length < 20) return null;
+  if (texto.length > maximo) {
+    const corte = texto.slice(0, maximo);
+    const fin = Math.max(corte.lastIndexOf('. '), corte.lastIndexOf('.\n'), corte.lastIndexOf('\n'));
+    texto = `${corte.slice(0, fin > maximo * 0.5 ? fin + 1 : maximo).trim()} […]`;
+  }
+  return texto;
+}
+
 /** Un evento de la API del municipio, en nuestra forma. Aparte para poder
- *  probarlo sin llamar a la API de verdad. */
+ *  probarlo sin llamar a la API de verdad.
+ *
+ *  Del organizador se guarda el nombre y su página, nunca su teléfono ni su
+ *  mail: pueden ser de una persona, y esto termina en un archivo público. La
+ *  imagen se guarda para el panel, pero la web no la muestra (es el afiche de
+ *  otro: la misma regla que las fotos de los medios). */
 export function eventoDeMunicipio(e) {
+  const organizador = (e.organizer ?? [])[0];
   return {
     id: `muni-${e.id}`,
-    nombre: e.title.replace(/&#8211;/g, '–').trim(),
+    nombre: sinEntidades(e.title ?? '').replace(/\s+/g, ' ').trim(),
     desde: e.start_date,
     hasta: e.end_date,
-    lugar: e.venue?.venue || null,
-    direccion: e.venue?.address || null,
-    costo: e.cost || null,
+    todoElDia: !!e.all_day,
+    lugar: e.venue?.venue ? sinEntidades(e.venue.venue).trim() : null,
+    direccion: e.venue?.address ? sinEntidades(e.venue.address).trim() : null,
+    localidad: e.venue?.city ? sinEntidades(e.venue.city).trim() : null,
+    costo: e.cost ? sinEntidades(e.cost).trim() : null,
+    organizador: organizador?.organizer ? sinEntidades(organizador.organizer).trim() : null,
+    organizadorUrl: /^https?:\/\//.test(organizador?.website ?? '') ? organizador.website : null,
+    web: /^https?:\/\//.test(e.website ?? '') ? e.website : null,
+    descripcion: textoDeDescripcion(e.description),
     imagen: e.image?.url || null,
     url: e.url,
     categorias: (e.categories ?? []).map((c) => c.name),
@@ -182,10 +253,23 @@ export function eventoDeMunicipio(e) {
   };
 }
 
+/**
+ * El semáforo también mira la agenda: nunca identificar a un menor ni a una
+ * víctima (leyes 26.061 y 26.485), tampoco en un evento. Si el nombre da
+ * rojo, el evento no sale; si lo que da rojo es la descripción, sale sin
+ * descripción, sólo con los datos. El amarillo no frena: un evento no acusa
+ * a nadie, y "para menores de 12" es una agenda cualquiera.
+ */
+export function eventoSinSensibles(e) {
+  if (semaforoDelTexto(e.nombre)?.color === 'rojo') return null;
+  if (e.descripcion && semaforoDelTexto(e.descripcion)?.color === 'rojo') return { ...e, descripcion: null };
+  return e;
+}
+
 /** Trae lo que el municipio tiene cargado ahora mismo, con paginación. */
 export async function eventosDelMunicipio({ hasta = 60 } = {}) {
   const j = JSON.parse(await traer(`${API}?per_page=${hasta}`));
-  return (j.events ?? []).map(eventoDeMunicipio);
+  return (j.events ?? []).map(eventoDeMunicipio).map(eventoSinSensibles).filter(Boolean);
 }
 
 /**
@@ -215,10 +299,15 @@ export function anualesQueSeAcercan(ahora = new Date()) {
  * inventarle una fecha exacta.
  */
 export async function agendaCompleta(ahora = new Date()) {
-  const municipio = await eventosDelMunicipio().catch(() => []);
+  // `municipioOk` distingue "la API no tiene nada" de "la API no contestó":
+  // con la API caída no hay que dar por retirado lo que ya estaba publicado.
+  let municipioOk = true;
+  const municipio = await eventosDelMunicipio().catch(() => { municipioOk = false; return []; });
   // "Cerca" = mismo mes o el próximo, para dar aviso con antelación.
   const proximosAnuales = anualesQueSeAcercan(ahora);
-  return { municipio, proximosAnuales, generado: ahora.toISOString() };
+  return {
+    municipio, municipioOk, proximosAnuales, generado: ahora.toISOString(),
+  };
 }
 
 if (process.argv[1] && process.argv[1].endsWith('agenda.mjs')) {

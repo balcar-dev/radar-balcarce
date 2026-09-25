@@ -27,6 +27,9 @@ import { camposEditables, decisionParaLaWeb, podarDecisiones } from './notas.mjs
 import { crearSincronizador, ejecutarGit } from './sincronizar.mjs';
 import { respaldar } from './respaldo.mjs';
 import { origenPermitido, probarUrlPermitida } from './seguridad.mjs';
+import {
+  nuevoEventoManual, publicarEvento, despublicarEvento, eventosParaLaWeb, estadoDeContactos, enlaceEnLaWeb,
+} from './agenda.mjs';
 
 // Nada de reels/ que traiga paquetes instalados (ffmpeg, resvg) se importa
 // arriba: el panel tiene que arrancar sólo con Node (prueba "el motor no
@@ -69,7 +72,7 @@ function leerJson(archivo, porDefecto) {
 // último cambio (panel/sincronizar.mjs). Se apaga con SINCRONIZAR_GITHUB=no.
 const RAIZ_REPO = path.join(AQUI, '..');
 const sincronizador = crearSincronizador({
-  archivos: ['web/data/decisiones.json', 'web/data/avisos.json'],
+  archivos: ['web/data/decisiones.json', 'web/data/avisos.json', 'web/data/eventos-panel.json'],
   git: (args) => ejecutarGit(args, { cwd: RAIZ_REPO }),
 });
 // Copia de seguridad de panel/datos/ al arrancar y cada 6 horas. La carpeta
@@ -92,7 +95,7 @@ function guardarJson(archivo, datos) {
   // Cada vez que cambia el estado se exportan las decisiones al repo. Son lo
   // único del panel que la web necesita y que no se puede deducir sola: qué
   // se publicó a mano, qué se descartó, y el texto que se corrigió.
-  if (archivo === F_ESTADO) { exportarDecisiones(datos); subirAGitHub(); }
+  if (archivo === F_ESTADO) { exportarDecisiones(datos); exportarEventos(datos); subirAGitHub(); }
   if (archivo === F_AVISOS) subirAGitHub();
 }
 
@@ -119,6 +122,24 @@ function exportarDecisiones(estado) {
     }, null, 2), 'utf8');
   } catch (e) {
     console.error('  no se pudieron exportar las decisiones:', e.message);
+  }
+}
+
+// Los eventos que se publicaron desde la pestaña Agenda, para que la web les
+// arme su página aunque la PC esté apagada (web/lib/eventos.js). Público: sólo
+// lo que se ve en la web, nunca quién avisó ni su teléfono (panel/agenda.mjs).
+const F_EVENTOS_WEB = path.join(AQUI, '..', 'web', 'data', 'eventos-panel.json');
+
+function exportarEventos(estado) {
+  try {
+    const eventos = eventosParaLaWeb(estado.eventosManual ?? []);
+    const anterior = leerJson(F_EVENTOS_WEB, null);
+    // Si no cambió nada, no se toca: así no hay un commit por cada decisión.
+    if (anterior && JSON.stringify(anterior.eventos) === JSON.stringify(eventos)) return;
+    fs.mkdirSync(path.dirname(F_EVENTOS_WEB), { recursive: true });
+    fs.writeFileSync(F_EVENTOS_WEB, `${JSON.stringify({ exportado: new Date().toISOString(), eventos }, null, 2)}\n`, 'utf8');
+  } catch (e) {
+    console.error('  no se pudieron exportar los eventos:', e.message);
   }
 }
 
@@ -150,6 +171,7 @@ const estado = leerJson(F_ESTADO, null) ?? {
 };
 estado.eventosManual ??= [];
 estado.contactadoEl ??= {}; // { [contactoId]: fecha ISO del último mensaje }
+estado.respondioEl ??= {}; // { [contactoId]: fecha ISO de la última respuesta }
 estado.buzon ??= []; // envíos de la gente: datos, reclamos, opinión, seguimiento
 delete estado.ultimaPublicacion; // de cuando el panel publicaba en Vercel (hasta el 25/09)
 if (!estado.fuentes.length) {
@@ -247,21 +269,21 @@ function vista(sesion = null) {
     avisos: leerJson(F_AVISOS, {}),
     agenda: agenda ?? null,
     categoriasAgenda: CATEGORIAS_AGENDA,
-    calendarioAnualCompleto: CALENDARIO_ANUAL.map((e) => ({ nombre: e.nombre, categoria: e.categoria, mesAproximado: e.mesAproximado })),
-    contactosAgenda: CONTACTOS_AGENDA.map((c) => {
-      const ultimo = estado.contactadoEl[c.id] ?? null;
-      const dias = ultimo ? Math.floor((Date.now() - new Date(ultimo).getTime()) / 86400000) : null;
-      return {
-        ...c,
-        ultimoContacto: ultimo,
-        diasSinContacto: dias,
-        // Se sugiere reescribirle pasados 30 días, no antes: es un pedido
-        // mensual, no una cadena de mensajes.
-        tocaEscribir: dias === null || dias >= 30,
-        mensaje: mensajeAgenda({ quien: c.quien.split(' (')[0] }),
-      };
+    calendarioAnualCompleto: CALENDARIO_ANUAL.map((e) => ({
+      id: e.id, nombre: e.nombre, categoria: e.categoria, mesAproximado: e.mesAproximado, lugar: e.lugar,
+    })),
+    // Se sugiere reescribirle a cada uno pasados 30 días, no antes: es un
+    // pedido mensual, no una cadena de mensajes (panel/agenda.mjs).
+    contactosAgenda: estadoDeContactos(CONTACTOS_AGENDA, {
+      contactadoEl: estado.contactadoEl,
+      respondioEl: estado.respondioEl,
+      mensaje: (c) => mensajeAgenda({ quien: c.quien.split(' (')[0] }),
     }),
-    eventosManual: estado.eventosManual,
+    eventosManual: estado.eventosManual.map((e) => ({
+      ...e,
+      enLaWeb: e.estado === 'publicado' ? enlaceEnLaWeb(e) : null,
+      contacto: CONTACTOS_AGENDA.find((c) => c.id === e.contactoId)?.quien ?? null,
+    })),
     buzon: estado.buzon,
     tiposBuzon: TIPOS_BUZON,
     estadosSeguimiento: ESTADOS_SEGUIMIENTO,
@@ -602,15 +624,25 @@ const servidor = http.createServer(async (req, res) => {
     }
 
     // Registrar que se le mandó el mensaje mensual a un contacto de la
-    // agenda: sólo lleva la cuenta de cuándo, no manda nada — el mensaje se
-    // copia y se pega a mano en WhatsApp, esto es apenas el recordatorio.
+    // agenda, o que respondió: sólo lleva la cuenta de cuándo, no manda nada.
+    // El mensaje lo manda una persona desde el WhatsApp (o el correo) de
+    // Radar; el panel apenas abre la conversación con el texto ya escrito.
     if (ruta === '/api/agenda/contactado' && req.method === 'POST') {
-      const { id } = await cuerpoDe(req);
+      const { id, accion = 'escribimos' } = await cuerpoDe(req);
       const quien = sesion.nombre;
       const c = CONTACTOS_AGENDA.find((x) => x.id === id);
       if (!c) { json(res, { error: 'no existe ese contacto' }, 404); return; }
-      estado.contactadoEl[id] = new Date().toISOString();
-      anotar('agenda: mensaje mensual enviado', c.quien, quien);
+      if (accion === 'escribimos') {
+        estado.contactadoEl[id] = new Date().toISOString();
+        anotar('agenda: mensaje mensual enviado', c.quien, quien);
+      } else if (accion === 'respondio') {
+        estado.respondioEl[id] = new Date().toISOString();
+        anotar('agenda: respondió', c.quien, quien);
+      } else if (accion === 'deshacer') {
+        delete estado.contactadoEl[id];
+        delete estado.respondioEl[id];
+        anotar('agenda: se borró el registro de mensajes', c.quien, quien);
+      } else { json(res, { error: 'acción desconocida' }, 400); return; }
       guardarJson(F_ESTADO, estado);
       json(res, vista(sesion));
       return;
@@ -618,22 +650,26 @@ const servidor = http.createServer(async (req, res) => {
 
     // Cargar un evento a mano: para cuando alguien avisa por WhatsApp, por
     // teléfono o en la calle, y no está esperando a que lo suba el municipio.
+    // Nace como borrador; "publicar" es lo que le arma la página en la web
+    // (panel/agenda.mjs, web/lib/eventos.js).
     if (ruta === '/api/evento' && req.method === 'POST') {
       const d = await cuerpoDe(req);
       if (d.accion === 'agregar') {
-        if (!d.nombre || !d.fecha) { json(res, { error: 'falta nombre o fecha' }, 400); return; }
-        estado.eventosManual.push({
-          id: `manual-${Date.now()}`,
-          nombre: d.nombre,
-          categoria: d.categoria || 'oficial',
-          desde: d.fecha,
-          hasta: d.fechaHasta || null,
-          lugar: d.lugar || null,
-          fuente: d.fuente || 'cargado a mano',
-          cargadoPor: sesion.nombre,
-          cargadoCuando: new Date().toISOString(),
-        });
-        anotar('evento cargado a mano', `${d.nombre} · ${d.fecha}`, sesion.nombre);
+        let ev;
+        try {
+          ev = nuevoEventoManual(d, {
+            quien: sesion.nombre, contactos: CONTACTOS_AGENDA, anuales: CALENDARIO_ANUAL, categorias: CATEGORIAS_AGENDA,
+          });
+        } catch (e) { json(res, { error: e.message }, 400); return; }
+        estado.eventosManual.push(ev);
+        anotar(ev.estado === 'publicado' ? 'evento cargado y publicado' : 'evento cargado a mano', `${ev.nombre} · ${ev.desde}`, sesion.nombre);
+      }
+      if (d.accion === 'publicar' || d.accion === 'despublicar') {
+        const i = estado.eventosManual.findIndex((e) => e.id === d.id);
+        if (i < 0) { json(res, { error: 'no existe ese evento' }, 404); return; }
+        const cambiar = d.accion === 'publicar' ? publicarEvento : despublicarEvento;
+        estado.eventosManual[i] = cambiar(estado.eventosManual[i], { quien: sesion.nombre });
+        anotar(d.accion === 'publicar' ? 'evento publicado en la web' : 'evento sacado de la web', estado.eventosManual[i].nombre, sesion.nombre);
       }
       if (d.accion === 'borrar') {
         estado.eventosManual = estado.eventosManual.filter((e) => e.id !== d.id);

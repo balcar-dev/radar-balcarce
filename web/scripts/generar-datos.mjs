@@ -23,6 +23,7 @@ import { pendientesDeLaIngesta } from '../../redes/avisos.mjs';
 import {
   vigenteEnPortada, slugsConocidos, fijarSlug, actualizarArchivo, idsEnRedes, sinPuntaje, comoArchivoJson,
 } from '../lib/archivo.js';
+import { actualizarAgenda, comoAgendaJson } from '../lib/eventos.js';
 
 const AQUI = import.meta.dirname;
 const DATOS_PANEL = path.join(AQUI, '..', '..', 'panel', 'datos');
@@ -32,6 +33,12 @@ const ARCHIVO = path.join(AQUI, '..', 'data', 'archivo.json');
 // El libro de lo publicado en las redes: de ahí salen las direcciones de los
 // enlaces que ya están en Facebook.
 const LIBRO_REDES = path.join(AQUI, '..', 'data', 'redes.json');
+// Los eventos con página propia (/agenda/<nombre>-<id>): los del municipio y
+// los que se publicaron desde el panel, más los que ya pasaron hace menos de
+// 60 días. Ver lib/eventos.js.
+const AGENDA_WEB = path.join(AQUI, '..', 'data', 'agenda.json');
+// Lo que el panel publicó en la pestaña Agenda (lo sube panel/sincronizar.mjs).
+const EVENTOS_PANEL = path.join(AQUI, '..', 'data', 'eventos-panel.json');
 
 function leerJson(archivo, porDefecto = null) {
   try { return JSON.parse(fs.readFileSync(archivo, 'utf8')); } catch { return porDefecto; }
@@ -240,6 +247,29 @@ if (JSON.stringify(archivo) !== JSON.stringify(archivoAnterior.notas ?? [])) {
   console.log(`  archivo.json: ${archivo.length} notas con página (${retiradas.size} retiradas)`);
 }
 
+// ------------------------------------------------------------- la agenda
+//
+// Cada evento con fecha confirmada tiene su página, aunque la PC esté apagada:
+// los del municipio se traen en cada corrida y los del panel llegan por
+// eventos-panel.json. Si la API del municipio no contestó, lo suyo queda como
+// estaba (no se da por retirado). En la PC no se marca nada como retirado: la
+// copia de la agenda del panel puede tener horas y la que manda es la de
+// GitHub.
+const agendaAnterior = leerJson(AGENDA_WEB, { eventos: [] });
+const delPanel = leerJson(EVENTOS_PANEL, null);
+const eventosAgenda = actualizarAgenda({
+  anterior: agendaAnterior.eventos ?? [],
+  municipio: agenda && agenda.municipioOk !== false ? (agenda.municipio ?? []) : null,
+  panel: delPanel ? (delPanel.eventos ?? []) : null,
+  retirar: enLaNube,
+});
+// Se escribe siempre que falte: el workflow lo suma con `git add` y un archivo
+// que no existe hace fallar el paso entero.
+if (!fs.existsSync(AGENDA_WEB) || JSON.stringify(eventosAgenda) !== JSON.stringify(agendaAnterior.eventos ?? [])) {
+  fs.writeFileSync(AGENDA_WEB, comoAgendaJson(eventosAgenda), 'utf8');
+  console.log(`  agenda.json: ${eventosAgenda.length} eventos con página`);
+}
+
 // Qué farmacia está de turno AHORA. La regla del cambio a las 8:30 de la
 // mañana está en ingesta/utiles.mjs, con su explicación.
 const delTurno = diaDeTurno();
@@ -267,8 +297,9 @@ const salida = {
   // así el aviso ya está en el HTML, sin esperar a que cargue nada.
   avisosClima: avisosDelClima(ultima.clima),
   farmacias: { hoy: turnoHoy, proximos: proximosTurnos, avisos: ultima.farmacias?.avisos ?? [] },
+  // Los eventos, con su página, están en data/agenda.json (arriba). Acá
+  // quedan sólo las fiestas anuales, que no tienen fecha confirmada.
   agenda: {
-    municipio: (agenda?.municipio ?? []).slice(0, 30),
     proximosAnuales: agenda?.proximosAnuales ?? [],
   },
   utiles: { numeros: NUMEROS, diaDeLaSemana: diaDeEstaSemana(), tocaHoy: tocaHoy() },

@@ -58,8 +58,17 @@ Cada cosa figura una sola vez: si está en "Para mañana", no se repite abajo.
 11. **Renovar el token de GitHub antes del 21/09/2027.** Lo usa cron-job.org
     en sus tres trabajos. El vigilante avisa por WhatsApp 30 días antes.
 12. **Threads**: pide su propio token, distinto del de Facebook e Instagram.
-13. **La agenda de la semana en historia** sólo se arma en la PC, porque
-    `panel/datos/agenda.json` no está en GitHub (a propósito).
+13. **La agenda de la semana en historia** todavía se arma sólo en la PC
+    (`reels/plan.mjs` lee `panel/datos/agenda.json`). Desde el 25/09 los eventos
+    ya están en GitHub con su página (`web/data/agenda.json`: los del municipio
+    y los que se publican desde el panel), así que falta poco: que
+    `reels/plan.mjs` los lea de ahí (con el enlace a cada página) y sacar
+    `agenda` de `SOLO_EN_LA_PC` en `redes/piezas.mjs`. Además, **revisar la
+    base de contactos** (`ingesta/contactos-agenda.json`, 43 instituciones):
+    lo dudoso está anotado en `nota` (Cámara de Comercio y Museo Histórico con
+    teléfonos de guías, Escuela de Estética con datos de 2013, varios clubes
+    sólo con Instagram, clubes que no se pudieron confirmar). Y empezar a
+    escribirles desde "A quién escribir este mes" (`PANEL.md`).
 14. Mirar cómo salieron las primeras tandas (voz, horarios, cantidad) y ajustar
     `redes/elegir.mjs` / `redes/piezas.mjs` según rinda.
 15. **Hashtags**: hoy las piezas salen sin ninguno. Probar `#Balcarce` + uno de

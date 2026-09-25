@@ -43,7 +43,7 @@ export function crearSincronizador({
       if (sinCambios) return { hecho: false, motivo: 'sin cambios' };
 
       const hora = ahora().toLocaleString('es-AR', { timeZone: 'America/Argentina/Buenos_Aires' });
-      const c = await git(['commit', '-m', `Panel: decisiones y avisos · ${hora}`]);
+      const c = await git(['commit', '-m', `Panel: decisiones, avisos y agenda · ${hora}`]);
       if (c.codigo !== 0) return { hecho: false, motivo: `commit: ${c.salida.trim().slice(0, 120)}` };
 
       const p = await git(['pull', '--rebase', '--autostash']);

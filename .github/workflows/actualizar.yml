@@ -119,7 +119,7 @@ jobs:
           # se descarta ese cambio: con un archivo modificado sin guardar,
           # el "git pull --rebase" de abajo se niega a correr.
           git checkout -- web/vercel.json 2>/dev/null || true
-          git add web/data/portada.json web/data/archivo.json
+          git add web/data/portada.json web/data/archivo.json web/data/agenda.json
           if git diff --cached --quiet; then
             echo "Sin novedades: no hay nada que publicar."
           else

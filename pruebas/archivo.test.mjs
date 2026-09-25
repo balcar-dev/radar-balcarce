@@ -234,7 +234,10 @@ test('generar-datos corta las listas en 72 horas y guarda el archivo, sin tocar 
   // Las piezas que no son notas salen de otro lado, no del filtro.
   assert.match(s, /farmacias: \{ hoy: turnoHoy, proximos: proximosTurnos/);
   assert.match(s, /clima: ultima\.clima \?\? null/);
-  assert.match(s, /municipio: \(agenda\?\.municipio \?\? \[\]\)/);
+  assert.match(s, /proximosAnuales: agenda\?\.proximosAnuales \?\? \[\]/);
+  // Los eventos van a su propio archivo, con página cada uno (lib/eventos.js).
+  assert.match(s, /actualizarAgenda\(/);
+  assert.match(s, /fs\.writeFileSync\(AGENDA_WEB/);
 });
 
 // -------------------------------------------------- "Seguí leyendo" (25/09)

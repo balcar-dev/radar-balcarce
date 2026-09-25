@@ -11,6 +11,7 @@ import {
 import { tipoDeCielo } from '@/lib/clima';
 import { comoNombre } from '@/lib/texto';
 import { quienEscribio } from '@/components/metadatos';
+import { nombreDeEvento } from '@/lib/eventos';
 
 const WHATSAPP_VISIBLE = WHATSAPP.visible;
 
@@ -130,8 +131,11 @@ export function FilaNota({ nota }) {
 
 // ----------------------------------------------------------------- agenda
 
+/** Una fecha de la agenda. Cada una lleva a la página del evento (su "nota",
+ *  app/agenda/[id]), donde están los detalles y el botón para agendarlo. */
 export function Evento({ evento }) {
   const f = partirFecha(evento.desde);
+  const nombre = nombreDeEvento(evento.nombre);
   return (
     <div className="evento">
       <div className="taco">
@@ -139,9 +143,9 @@ export function Evento({ evento }) {
         <div className="dia">{f?.dia ?? '·'}</div>
       </div>
       <div style={{ flexGrow: 1 }}>
-        <div className="que">{evento.nombre}</div>
+        <div className="que">{evento.ruta ? <a href={evento.ruta}>{nombre}</a> : nombre}</div>
         <div className="donde">
-          {f?.hora ? `${f.hora} · ` : ''}{evento.lugar || 'Balcarce'}
+          {f?.hora && !evento.todoElDia ? `${f.hora} · ` : ''}{nombreDeEvento(evento.lugar || '') || 'Balcarce'}
         </div>
       </div>
     </div>
