@@ -1,5 +1,5 @@
 {
-  "exportado": "2026-09-25T08:20:44.136Z",
+  "exportado": "2026-09-25T08:30:48.774Z",
   "decisiones": {
     "1951120": {
       "estado": "automatica",
@@ -11483,6 +11483,69 @@
       "deIA": null,
       "por": null,
       "cuando": "2026-09-25T08:20:44.078Z"
+    },
+    "osfsql": {
+      "estado": "automatica",
+      "titulo": "Los Aventureros del Aire regresan para recorrer el mundo en Balcarce",
+      "copete": "Claudio y Betina Robetto retomaron sus travesías internacionales a bordo de su aeronave, llevando el espíritu de la aventura desde el distrito hacia distintos puntos del planeta.",
+      "cuerpo": "Los conocidos referentes aeronáuticos locales Claudio y Betina Robetto emprendieron una nueva etapa de sus habituales travesías globales a bordo de su avión, según informó la prensa local. La pareja, identificada como Los Aventureros del Aire, retomó sus vuelos internacionales.\n\nEl recorrido forma parte de las expediciones que realizan habitualmente, sumando millas y representando al distrito en el ámbito de la aviación recreativa y de aventura a nivel internacional.",
+      "guion": "Los Aventureros del Aire regresan para recorrer el mundo en Balcarce",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T08:30:35.044Z",
+      "claves": [
+        "Claudio y Betina Robetto retomaron sus viajes internacionales",
+        "Son conocidos como Los Aventureros del Aire",
+        "Realizan las travesías a bordo de su propia aeronave"
+      ],
+      "seSabe": [
+        "Claudio y Betina Robetto volvieron a recorrer el mundo",
+        "Realizan las travesías a bordo de una aeronave"
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Claudio y Betina Robetto, conocidos como Los Aventureros del Aire, retomaron sus travesías internacionales a bordo de su aeronave para recorrer distintos puntos del planeta.",
+      "etiquetas": [
+        "Aventureros del Aire",
+        "Claudio Robetto",
+        "Betina Robetto",
+        "Balcarce"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/los-aventureros-del-aire-claudio-y-betina-robetto-volvieron-a-recorrer-el-mundo-460",
+          "fecha": null,
+          "oficial": false,
+          "aporte": "Informó sobre el regreso de Claudio y Betina Robetto a los recorridos internacionales por el mundo."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "1gjx7zt": {
+      "estado": "automatica",
+      "titulo": null,
+      "copete": null,
+      "cuerpo": null,
+      "guion": null,
+      "deIA": null,
+      "por": null,
+      "cuando": "2026-09-25T08:30:41.912Z"
+    },
+    "924pwu": {
+      "estado": "automatica",
+      "titulo": null,
+      "copete": null,
+      "cuerpo": null,
+      "guion": null,
+      "deIA": null,
+      "por": null,
+      "cuando": "2026-09-25T08:30:48.702Z"
     }
   },
   "horarios": {
