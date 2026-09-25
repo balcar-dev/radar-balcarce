@@ -1,5 +1,5 @@
 {
-  "exportado": "2026-09-25T12:28:56.841Z",
+  "exportado": "2026-09-25T12:40:18.859Z",
   "decisiones": {
     "1951120": {
       "estado": "automatica",
@@ -9483,13 +9483,69 @@
     },
     "f7pgfp": {
       "estado": "automatica",
-      "titulo": null,
-      "copete": null,
-      "cuerpo": null,
-      "guion": null,
-      "deIA": null,
-      "por": null,
-      "cuando": "2026-09-24T00:54:48.701Z"
+      "titulo": "Las TC Pick Up compiten en el autódromo Juan Manuel Fangio en Balcarce",
+      "copete": "El autódromo municipal retoma la actividad nacional este fin de semana con la octava fecha de la categoría y la participación de pilotos locales.",
+      "cuerpo": "El autódromo “Juan Manuel Fangio” de Balcarce vuelve a recibir competencias nacionales tras quince años de inactividad.\n\nLa competencia cuenta con el atractivo del regreso de referentes del automovilismo y la participación de los balcarceños José “Bocha” Ciantini y Diego Ciantini en un equipo familiar, además de Santiago Mangoni y Juan José Suárez en las TC Pista Pick Up. Mariano Werner encabeza el inicio del Play Off con 31 unidades tras la etapa regular.\n\nLas actividades oficiales en el circuito serrano comprenden ensayos, clasificaciones y series distribuidas entre sábado y domingo. Como se había informado en la previa, la ciudad palpita la llegada de las categorías nacionales en el marco de la reactivación del histórico trazado.",
+      "guion": "Las TC Pick Up compiten en el autódromo Juan Manuel Fangio en Balcarce",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T12:40:18.815Z",
+      "claves": [
+        "El autódromo recupera actividad nacional tras quince años.",
+        "Participan 18 camionetas en la octava fecha.",
+        "Los pilotos locales Ciantini y Mangoni son de la partida.",
+        "El cronograma incluye actividad sábado y domingo."
+      ],
+      "seSabe": [
+        "El autódromo “Juan Manuel Fangio” recibe a las TC Pick Up este fin de semana por primera vez en su historia.",
+        "Participan 18 camionetas en la categoría principal y se suman pilotos locales como los Ciantini y Santiago Mangoni.",
+        "Mariano Werner llega como líder del Play Off con 31 puntos.",
+        "Hay cronograma oficial de entrenamientos y clasificaciones para sábado y domingo."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El autódromo Juan Manuel Fangio de Balcarce vuelve a recibir una competencia nacional tras quince años con la llegada de las TC Pick Up y la participación de pilotos locales durante este fin de semana.",
+      "etiquetas": [
+        "TC Pick Up",
+        "Autodromo Juan Manuel Fangio",
+        "Balcarce",
+        "Automovilismo"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/18-protagonistas-en-las-tc-pick-up-15",
+          "fecha": "2026-09-23T21:31:47.000Z",
+          "oficial": false,
+          "aporte": "Detalló la nómina de inscriptos, el cronograma de actividades y la participación de los pilotos locales en el autódromo Juan Manuel Fangio."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "p5na02",
+          "titulo": "El Procar 4000 ya definió el escenario para su continuidad",
+          "fecha": "2026-09-23T21:25:22.000Z",
+          "ruta": "/nota/el-procar-4000-ya-definio-el-escenario-para-su-continuidad-p5na02"
+        },
+        {
+          "id": "1dqsysk",
+          "titulo": "Fin de semana de CAMPEONES con COLAPINTO, TC Pick Up, TC2000, F4 y Eurocup3",
+          "fecha": "2026-09-23T21:00:17.000Z",
+          "ruta": "/nota/fin-de-semana-de-campeones-con-colapinto-tc-pick-up-tc2000-f4-y-1dqsysk"
+        },
+        {
+          "id": "qxvf77",
+          "titulo": "Balcarce palpita la previa del TC Pick Up",
+          "fecha": "2026-09-23T15:58:01.847Z",
+          "ruta": "/nota/balcarce-palpita-la-previa-del-tc-pick-up-qxvf77"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
     },
     "ve1kus": {
       "estado": "automatica",
@@ -11339,23 +11395,96 @@
     },
     "af5xg4": {
       "estado": "automatica",
-      "titulo": null,
-      "copete": null,
-      "cuerpo": null,
-      "guion": null,
-      "deIA": null,
-      "por": null,
-      "cuando": "2026-09-25T06:40:43.566Z"
+      "titulo": "El Senado aprueba la reforma del régimen de Zona Fría",
+      "copete": "El Senado nacional convirtió en ley la reforma del régimen de Zona Fría. La modificación afecta a Balcarce y a otros distritos bonaerenses que pierden el beneficio automático en las tarifas de gas.",
+      "cuerpo": "Con esta modificación, el esquema vuelve a restringir su alcance territorial a la Patagonia, la Puna y el departamento mendocino de Malargüe.\n\nComo excepción, la normativa contempla un esquema focalizado para hogares cuyos ingresos resulten inferiores a tres Canastas Básicas Totales.\n\nEn la provincia de Buenos Aires, el cambio impactará sobre más de un millón de hogares que perderán la bonificación territorial. El texto establece el reemplazo del beneficio anterior por un criterio socioeconómico directo.",
+      "guion": "El Senado aprueba la reforma del régimen de Zona Fría",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T12:40:18.816Z",
+      "claves": [
+        "El Senado aprobó la reforma del régimen de Zona Fría.",
+        "Balcarce figura entre los distritos que pierden el beneficio automático.",
+        "Se prevé un esquema focalizado según ingresos del hogar."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "etiquetas": [
+        "Zona Fría",
+        "Senado",
+        "Gas",
+        "Balcarce",
+        "Tarifas"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Puntonueve (FM 100.9)",
+          "enlace": "https://puntonueve.com.ar/es-ley-el-cambio-del-regimen-de-zona-fria-94-municipios-bonaerenses-se-quedan-afuera/",
+          "fecha": "2026-09-24T23:14:55.000Z",
+          "oficial": false,
+          "aporte": "Detalló la sanción de la ley en el Senado, los municipios afectados en la provincia de Buenos Aires y los criterios del nuevo esquema focalizado."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
     },
     "1d356vs": {
       "estado": "automatica",
-      "titulo": null,
-      "copete": null,
-      "cuerpo": null,
-      "guion": null,
-      "deIA": null,
-      "por": null,
-      "cuando": "2026-09-25T06:40:46.256Z"
+      "titulo": "El Concejo aprueba el proyecto escolar Balcarce se recorre jugando en Balcarce",
+      "copete": "El Concejo Deliberante aprobó por unanimidad la iniciativa impulsada por la Escuela Primaria N° 3 y Turismo para conocer la ciudad mediante un recorrido lúdico por puntos de interés local.",
+      "cuerpo": "El Honorable Concejo Deliberante aprobó por unanimidad el proyecto «Balcarce se recorre jugando», impulsado por la Escuela Primaria N° 3 en conjunto con el área de Turismo, durante la décimo cuarta sesión ordinaria. Previamente al ingreso al recinto, los alumnos entregaron llaveros con el mapa de la ciudad a los ediles.\n\nAdemás, los ediles Paciaroni, Di Gerónimo y Guillén felicitaron a los estudiantes y docentes por el trabajo articulado que busca que el aprendizaje trascienda las aulas.\n\nEn materia legislativa, el cuerpo deliberativo también trató diversas iniciativas sobre tasas, obras y proyectos durante su reunión semanal.",
+      "guion": "El Concejo aprueba el proyecto escolar Balcarce se recorre jugando en Balcarce",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T12:40:18.816Z",
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El Concejo Deliberante aprobó por unanimidad el proyecto «Balcarce se recorre jugando», una iniciativa de la Escuela Primaria N° 3 y el área de Turismo para conocer los atractivos locales a través de una experiencia lúdica.",
+      "etiquetas": [
+        "Concejo Deliberante",
+        "Escuela Primaria N° 3",
+        "Turismo",
+        "Balcarce se recorre jugando"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Puntonueve (FM 100.9)",
+          "enlace": "https://puntonueve.com.ar/balcarce-se-recorre-jugando-el-proyecto-de-la-escuela-primaria-n-3-fue-aprobado-por-unanimidad/",
+          "fecha": "2026-09-24T23:00:34.000Z",
+          "oficial": false,
+          "aporte": "Detalló la aprobación unánime del proyecto en el Concejo Deliberante, la presentación a cargo del concejal Paciaroni y el contenido de la iniciativa lúdica y turística."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "e4vkqm",
+          "titulo": "La tecnología, una herramienta para trabajar la convivencia en la Escuela Primaria N° 3",
+          "fecha": "2026-09-21T09:08:05.000Z",
+          "ruta": "/nota/la-tecnologia-una-herramienta-para-trabajar-la-convivencia-en-la-e4vkqm"
+        },
+        {
+          "id": "jul4v3",
+          "titulo": "Hoy Balcarce «se recorre jugando».",
+          "fecha": "2026-09-16T15:09:41.000Z",
+          "ruta": "/nota/hoy-balcarce-se-recorre-jugando-jul4v3"
+        },
+        {
+          "id": "1iv58lw",
+          "titulo": "El Concejo Deliberante debate tasas, obras y proyectos en Balcarce",
+          "fecha": "2026-09-24T12:55:31.000Z",
+          "ruta": "/nota/concejo-deliberante-este-jueves-se-desarrollara-el-decimocuarto-1iv58lw"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
     },
     "1k3dzvz": {
       "estado": "automatica",
@@ -11862,13 +11991,57 @@
     },
     "1m9oza2": {
       "estado": "automatica",
-      "titulo": null,
-      "copete": null,
-      "cuerpo": null,
-      "guion": null,
-      "deIA": null,
-      "por": null,
-      "cuando": "2026-09-25T06:50:58.923Z"
+      "titulo": "Los socios fundadores deben acreditarse para el TC Pick Up en Balcarce",
+      "copete": "Los socios fundadores del Autódromo Juan Manuel Fangio tienen tiempo hasta este viernes a las nueve de la mañana para gestionar su ingreso a la competencia automovilística del fin de semana.",
+      "cuerpo": "Desde el Municipio remarcaron que no se entregarán acreditaciones en el predio durante el fin de semana, por lo que el plazo límite para completar el procedimiento finaliza este viernes a veinticinco de septiembre a las nueve. Como se había informado, el circuito vuelve a recibir competencias nacionales este fin de semana tras quince años sin actividad oficial, en el marco de un evento que cuenta con la participación prevista del gobernador bonaerense y el intendente Esteban Reino.",
+      "guion": "Los socios fundadores deben acreditarse para el TC Pick Up en Balcarce",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T12:40:18.815Z",
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Los socios fundadores del Autódromo Juan Manuel Fangio tienen tiempo hasta este viernes a las nueve para acreditarse de cara a la competencia de TC Pick Up de este fin de semana en Balcarce.",
+      "etiquetas": [
+        "Autódromo Juan Manuel Fangio",
+        "TC Pick Up",
+        "Balcarce",
+        "Turismo"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Diario La Vanguardia",
+          "enlace": "https://www.diariolavanguardia.com/noticias/44881-tc-pick-up-en-el-fangio-los-socios-fundadores-deberan-acreditarse-antes-del-fin-de-semana/",
+          "fecha": null,
+          "oficial": false,
+          "aporte": "Informó los requisitos, plazos y modalidades de acreditación para los socios fundadores del autódromo."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "10f4z20",
+          "titulo": "Acreditación para socios fundadores del Autódromo",
+          "fecha": "2026-09-23T15:38:18.425Z",
+          "ruta": "/nota/acreditacion-para-socios-fundadores-del-autodromo-10f4z20"
+        },
+        {
+          "id": "1ymbfmi",
+          "titulo": "Acreditación previa para socios fundadores del Autódromo",
+          "fecha": "2026-09-23T13:36:11.000Z",
+          "ruta": "/nota/acreditacion-previa-para-socios-fundadores-del-autodromo-1ymbfmi"
+        },
+        {
+          "id": "1e6tvp9",
+          "titulo": "Kicillof encabeza la reapertura del autódromo Juan Manuel Fangio en Balcarce",
+          "fecha": "2026-09-25T10:15:00.000Z",
+          "ruta": "/nota/el-gobernador-bonaerense-encabeza-la-reapertura-del-autodromo-en-1e6tvp9"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "ALTA"
+      }
     },
     "harbx1": {
       "estado": "automatica",
@@ -11902,13 +12075,43 @@
     },
     "cs4hof": {
       "estado": "automatica",
-      "titulo": null,
-      "copete": null,
-      "cuerpo": null,
-      "guion": null,
-      "deIA": null,
-      "por": null,
-      "cuando": "2026-09-25T06:51:08.589Z"
+      "titulo": "Nicolás Girotti gana y se afirma en la punta en Balcarce",
+      "copete": "El piloto local se impuso en la categoría 150 c.c. Súper Master en el circuito de Rauch y estiró su ventaja en el Play Off del Karting Regional.",
+      "cuerpo": "Lo más relevante fue la victoria de Nicolás Girotti en la final de la divisional 150 c.c. Súper Master, donde se defendió con un andar firme ante Ezequiel Equisito para quedarse con el triunfo por escasa diferencia y estirar su liderazgo en el campeonato.\n\nEn la misma categoría, Ariel Grave completó una buena labor al finalizar en los puestos de vanguardia tras un recargo, mientras que Horacio Goyeneche completó la prueba en el decimosexto lugar. Por su parte, en la divisional 150 c.c. Junior, Juan Cruz Tambascio cruzó la meta en el tercer puesto pero fue penalizado por los comisarios deportivos con un recargo de posición, quedando finalmente cuarto.\n\nEn la categoría Promocional Escuela, el representante balcarceño Enzo Bazán Marín debió ausentarse de la competencia debido a un cuadro de laringitis que le impidió ser de la partida. La actividad reunió a las diferentes divisionales en una jornada que dejó posiciones clave de cara a la definición del Play Off.",
+      "guion": "Nicolás Girotti gana y se afirma en la punta en Balcarce",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T12:40:18.816Z",
+      "claves": [
+        "Nicolás Girotti ganó en 150 c.c. Súper Master y lidera el Play Off.",
+        "Juan Cruz Tambascio fue penalizado y quedó cuarto en Junior.",
+        "Enzo Bazán Marín no compitió en Promocional por un cuadro de laringitis.",
+        "La séptima fecha se disputó el sábado en el circuito de Rauch."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Nicolás Girotti se impuso en la categoría 150 c.c. Súper Master en el circuito de Rauch y estiró su ventaja al frente del Play Off del Karting Regional. La jornada contó con una amplia representación de pilotos locales en las distintas divisionales.",
+      "etiquetas": [
+        "karting regional",
+        "nicolas giromti",
+        "balcarce",
+        "rauch"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/nicolas-girotti-gano-y-saco-mayor-ventaja-al-frente-del-play-off-906",
+          "fecha": "2026-09-22T21:00:46.000Z",
+          "oficial": false,
+          "aporte": "Detalló los resultados de los pilotos balcarceños en la séptima fecha del Karting Regional en Rauch."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
     },
     "1837g46": {
       "estado": "automatica",
@@ -14490,6 +14693,51 @@
         "nivel": "ALTA",
         "porque": "Lo confirman cinco medios independientes y Municipalidad de Balcarce.",
         "sugeridoPorIA": "ALTA"
+      }
+    },
+    "vsvyus": {
+      "estado": "automatica",
+      "titulo": "El viernes se presenta agradable y con una máxima de hasta veinticuatro grados en Balcarce",
+      "copete": "La ciudad vivirá una jornada estable y sin lluvias, ideal para las actividades previas al fin de semana automovilístico.",
+      "cuerpo": "Balcarce transita este viernes una jornada con buenas condiciones meteorológicas, marcada por un cielo despejado o parcialmente nublado y un ambiente fresco durante las primeras horas de la mañana. Con el correr de las horas, la temperatura irá en aumento y la máxima se ubicará entre los 21 y 24 grados, de acuerdo con los diferentes servicios consultados.\n\nEl Servicio Meteorológico Nacional anticipa una probabilidad baja o nula de precipitaciones para todo el día. Durante la tarde se prevé un posible incremento en la intensidad del viento, principalmente desde los sectores oeste y sudoeste.\n\nHacia la noche el tiempo se mantendrá estable y sin lluvias, registrándose un descenso gradual de la temperatura en la previa del fin de semana automovilístico en la ciudad.",
+      "guion": "El viernes se presenta agradable y con una máxima de hasta veinticuatro grados en Balcarce",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T12:40:18.815Z",
+      "claves": [
+        "Jornada estable con períodos de sol y nubosidad",
+        "Temperatura máxima estimada entre los 21 y 24 grados",
+        "Baja o nula probabilidad de precipitaciones",
+        "Aumento del viento por la tarde desde el oeste y sudoeste"
+      ],
+      "seSabe": [
+        "El viernes presenta buenas condiciones meteorológicas en Balcarce",
+        "La temperatura máxima se ubicará entre los 21 y 24 grados",
+        "No se esperan precipitaciones durante la jornada",
+        "El viento podría incrementarse por la tarde desde el oeste y sudoeste"
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Balcarce tendrá este viernes una jornada agradable, con una temperatura máxima que se ubicará entre los 21 y 24 grados y sin probabilidad de precipitaciones en la previa del fin de semana automovilístico.",
+      "etiquetas": [
+        "Balcarce",
+        "temperatura",
+        "fin de semana"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Radio Gabal (FM 104.1)",
+          "enlace": "https://www.radiogabal.com.ar/index.php/comunidad/viernes-agradable-sin-lluvias-y-con-una-maxima-que-podria-superar-los-20-grados",
+          "fecha": "2026-09-25T12:29:42.000Z",
+          "oficial": false,
+          "aporte": "Aportó el pronóstico del tiempo para este viernes en Balcarce, con detalles sobre temperatura, vientos y probabilidad de precipitaciones."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
       }
     }
   },
