@@ -1,5 +1,6 @@
 import { sitio, enlace, NOMBRE } from '@/lib/sitio';
 import { autorDeNota } from '@/components/metadatos';
+import { REDES_SOCIALES } from '@/lib/datos';
 
 // Los datos estructurados: lo mismo que ya está en la página, pero escrito
 // para que lo lea una máquina.
@@ -27,6 +28,8 @@ export function FichaDelSitio() {
         name: NOMBRE,
         url: base,
         email: 'radarbalcarce@gmail.com',
+        // Las cuentas del medio: Google las muestra junto al nombre.
+        sameAs: Object.values(REDES_SOCIALES),
         // El logo lo piden Google Noticias y los resultados enriquecidos:
         // cuadrado, de al menos 112 px. Es el mismo ícono del manifiesto.
         logo: {

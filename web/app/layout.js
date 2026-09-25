@@ -1,6 +1,6 @@
 import './globals.css';
 import {
-  obtenerDatos, datosSeccion, nombreCorto, EN_NAVEGACION, whatsapp, WHATSAPP, MAIL,
+  obtenerDatos, datosSeccion, nombreCorto, EN_NAVEGACION, whatsapp, WHATSAPP, MAIL, REDES_SOCIALES,
 } from '@/lib/datos';
 import { PastillaClima } from '@/components/clima-vivo';
 import { comoNombre } from '@/lib/texto';
@@ -177,6 +177,11 @@ export default function RaizLayout({ children }) {
               </a>
               {' · '}
               <a href={`mailto:${MAIL}`}>{MAIL}</a>
+            </div>
+            <div>
+              <a href={REDES_SOCIALES.instagram} target="_blank" rel="noopener noreferrer me">Instagram</a>
+              {' · '}
+              <a href={REDES_SOCIALES.facebook} target="_blank" rel="noopener noreferrer me">Facebook</a>
             </div>
             <div>
               <a href="/agenda">Agenda</a> · <a href="/farmacias">Farmacias</a> ·{' '}

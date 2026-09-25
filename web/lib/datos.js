@@ -226,6 +226,13 @@ export function whatsapp(mensaje) {
 
 export const MAIL = 'radarbalcarce@gmail.com';
 
+// Las cuentas del medio. La de Facebook va por el número del perfil de la
+// página (el de la dirección), no por el ID de la API (ver REDES.md).
+export const REDES_SOCIALES = {
+  instagram: 'https://www.instagram.com/radarbalcarce',
+  facebook: 'https://www.facebook.com/profile.php?id=61594865361170',
+};
+
 // ------------------------------------------------------------- secciones
 
 // El orden de acá es el orden de la navegación, y es editorial: primero lo
