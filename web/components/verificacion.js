@@ -54,8 +54,22 @@ const ESTILO = `
  * escribió), pero corta; lo interno ("salió sin revisión humana") no se dice.
  */
 export default function FuentesDeLaNota({ nota }) {
-  const fuentes = fuentesDeLaNota(nota);
-  const firma = firmaCorta(nota);
+  return (
+    <PieConFuentes
+      firma={firmaCorta(nota)}
+      explicacion={explicacionDeFirma(nota)}
+      fuentes={fuentesDeLaNota(nota)}
+    />
+  );
+}
+
+/**
+ * El mismo pie para cualquier página con firma y fuentes (las notas y las
+ * fichas de la agenda): una línea gris con la firma y "Fuentes (N)"; al
+ * abrirlo, la explicación larga y cada fuente con su enlace. Sin fuentes, sólo
+ * la firma.
+ */
+export function PieConFuentes({ firma, explicacion, fuentes }) {
   if (!fuentes.length) {
     return (
       <p className="firma-nota">
@@ -64,7 +78,6 @@ export default function FuentesDeLaNota({ nota }) {
       </p>
     );
   }
-  const explicacion = explicacionDeFirma(nota);
   return (
     <details className="fuentes-nota">
       <style dangerouslySetInnerHTML={{ __html: ESTILO }} />

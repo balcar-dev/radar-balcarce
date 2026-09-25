@@ -12,7 +12,7 @@ import {
   claveDeEvento, parteDeEvento, rutaDeEvento, claveDeRuta, nombreDeEvento, partesDeFecha, instante, terminaEl,
   yaPaso, tienePagina, cuandoEs, dondeEs, copeteDeEvento, entradaDe, firmaDeEvento, mismoEvento, proximos,
   actualizarAgenda, comoAgendaJson, rangoDeCalendario, enlaceGoogleCalendar, icsDeEvento, fichaDeEvento,
-  confirmacionDeAnual, DIAS_DESPUES,
+  confirmacionDeAnual, DIAS_DESPUES, fuentesDeEvento, detallesDeEvento, descripcionPropia,
 } from '../web/lib/eventos.js';
 import { slugDe } from '../web/lib/ruta.js';
 
@@ -87,24 +87,138 @@ test('la entrada no se inventa: si la fuente no la dijo, no hay entrada', () => 
   assert.equal(entradaDe({ costo: 'entrada libre y gratuita' }), 'Gratis');
   assert.equal(entradaDe({ costo: '$5.000' }), '$5.000');
   // Y la página lo dice con todas las letras.
-  assert.match(leer('web/app/agenda/[id]/page.js'), /No la informaron\. Consultá con quien lo organiza\./);
+  assert.match(leer('web/app/agenda/[id]/page.js'), /No la informaron\. Consultá el valor con quien organiza\./);
 });
 
 // ------------------------------------------------------------ quién la escribió
 
-test('cada ficha dice quién la hizo, y lo mismo en los datos para Google (regla 7)', () => {
+test('cada ficha dice quién la hizo en UNA línea corta, y lo mismo en los datos para Google (regla 7)', () => {
   const muni = firmaDeEvento(postre);
-  assert.match(muni.texto, /automáticamente con los datos que publicó la Municipalidad de Balcarce/);
-  assert.match(muni.texto, /No la escribió una inteligencia artificial ni la revisó una persona/);
-  assert.ok(!/revisi[oó]n humana/i.test(muni.texto), 'no promete una revisión que no hubo');
+  assert.equal(muni.texto, 'Ficha con los datos de la Municipalidad de Balcarce');
+  assert.ok(!/revisi[oó]n humana|revis[oó] una persona|inteligencia artificial/i.test(muni.texto), 'nada de párrafos sobre quién la escribió o la revisó');
+  assert.ok(muni.texto.length <= 60);
+  assert.match(muni.explicacion, /Se armó con los datos que publicó la Municipalidad de Balcarce/);
 
   const panel = firmaDeEvento({ origen: 'panel', organizador: 'Club Pato' });
-  assert.match(panel.texto, /la cargó y la publicó una persona de la redacción, con los datos que nos pasó Club Pato/);
+  assert.equal(panel.texto, 'Ficha cargada por la redacción');
+  assert.match(panel.explicacion, /La cargó y la publicó una persona de la redacción, con los datos que nos pasó Club Pato/);
+  assert.ok(panel.texto.length <= 60);
 
   const ld = fichaDeEvento({ ...postre, ruta: '/agenda/x' }, { base: 'https://radarbalcarce.com', url: 'https://radarbalcarce.com/agenda/x' });
   assert.equal(ld.author.name, muni.autor);
-  // La página usa la misma firma.
-  assert.match(leer('web/app/agenda/[id]/page.js'), /firmaDeEvento\(e\)/);
+  assert.ok(!/inteligencia artificial|revis/i.test(ld.author.name));
+  // La página usa el mismo pie que las notas: firma corta pegada a "Fuentes (N)", la explicación adentro.
+  const p = leer('web/app/agenda/[id]/page.js');
+  assert.match(p, /<PieConFuentes firma=\{firma\.texto\} explicacion=\{firma\.explicacion\} fuentes=\{fuentesDeEvento\(e\)\}/);
+  assert.ok(!/className="firma-nota"/.test(p), 'sin párrafo de firma a la vista');
+  assert.deepEqual(fuentesDeEvento(postre), [{ medio: 'Agenda de la Municipalidad de Balcarce', enlace: postre.url }]);
+  assert.deepEqual(fuentesDeEvento({ origen: 'panel' }), []);
+});
+
+// ------------------------------------------- lo que NO va en la ficha (25/09)
+
+// Los cinco eventos que había el 25/09, con la descripción tal cual la manda el municipio.
+const REALES = [
+  {
+    id: 'muni-23242', nombre: 'TC PICK UP BALCARCE', desde: '2026-09-26 08:00:00', hasta: '2026-09-27 17:00:00',
+    lugar: 'Autodromo Juan Manuel Fangio', direccion: 'Av Suipacha y calle 63', localidad: 'Balcarce', organizador: 'ACTC',
+    web: 'https://ticket-motor.actc.org.ar/evento/x', url: 'https://balcarce.gob.ar/event/tc-pick-up-balcarce/',
+    fuente: 'Municipalidad de Balcarce', origen: 'municipio',
+    descripcion: '¡Las TC Pick Up llegan a Balcarce!\nEl ambiente familiar contará con gastronomía, merchandising oficial y todas las comodidades.\n¡¡¡INFORMACIÓN IMPORTANTE!!! Ya podés asegurar tu lugar.\nNo te quedes afuera. Vuelve el automovilismo a Balcarce.',
+  },
+  {
+    id: 'muni-22477', nombre: 'NAPA VUELVE A CORRER – CARRERA NOCTURNA', desde: '2026-09-26 18:00:00', hasta: '2026-09-26 23:00:00',
+    lugar: 'NAPALEOFU', direccion: 'Napaleofu', localidad: 'balcarce', organizador: 'Peña El Fogón',
+    url: 'https://balcarce.gob.ar/event/x/', fuente: 'Municipalidad de Balcarce', origen: 'municipio',
+  },
+  {
+    id: 'muni-23692', nombre: 'MISION A VENEZUELA BRIGADA ARG-13. PUMA', desde: '2026-10-03 17:00:00', hasta: '2026-10-03 19:00:00',
+    lugar: 'Salón Bomberos Voluntarios', direccion: 'Calle 2 entre Av. Del Valle y 15', localidad: 'balcarce',
+    organizador: 'Club Rotario Balcarce Cerrito', url: 'https://balcarce.gob.ar/event/y/', fuente: 'Municipalidad de Balcarce', origen: 'municipio',
+  },
+  { ...postre, origen: 'municipio' },
+  {
+    id: 'muni-22346', nombre: 'UTTD TIERRAS DEL DIABLO', desde: '2026-10-11 06:00:00', hasta: '2026-10-11 17:00:00',
+    lugar: 'Cerro “El Triunfo”', direccion: 'Av. Suipacha y Av. Cereijo', localidad: 'Balcarce', organizador: 'Grupo Hets',
+    url: 'https://balcarce.gob.ar/event/z/', fuente: 'Municipalidad de Balcarce', origen: 'municipio',
+    descripcion: 'LUGAR DE LARGADA: PISTA DE CICLISMO DE CERRO “EL TRIUNFO” CALLE 40 Y 27. HORARIOS DE LARGADA: 50KM A LAS 6HS.',
+  },
+];
+
+test('los nombres de la agenda se escriben bien: tildes, mayúscula inicial, siglas', () => {
+  const [tc, napa, mision, , uttd] = REALES;
+  assert.equal(nombreDeEvento(tc.nombre), 'TC Pick Up Balcarce');
+  assert.equal(nombreDeEvento(tc.lugar), 'Autódromo Juan Manuel Fangio');
+  assert.equal(nombreDeEvento(tc.direccion), 'Av. Suipacha y calle 63');
+  assert.equal(nombreDeEvento(tc.organizador), 'ACTC');
+  assert.equal(nombreDeEvento(napa.nombre), 'Napa Vuelve a Correr – Carrera Nocturna');
+  assert.equal(nombreDeEvento(napa.lugar), 'Napaleofú');
+  assert.equal(nombreDeEvento(napa.direccion), 'Napaleofú');
+  assert.equal(nombreDeEvento(napa.localidad), 'Balcarce', 'lo que viene todo en minúscula');
+  assert.equal(nombreDeEvento(mision.nombre), 'Misión a Venezuela Brigada ARG-13. Puma', 'ARG-13 queda; Misión lleva tilde');
+  assert.equal(nombreDeEvento('Mision a Venezuela'), 'Misión a Venezuela', 'también cuando no viene en mayúsculas');
+  assert.equal(nombreDeEvento(mision.lugar), 'Salón Bomberos Voluntarios');
+  assert.equal(nombreDeEvento(uttd.nombre), 'UTTD Tierras del Diablo');
+  assert.equal(nombreDeEvento(uttd.lugar), 'Cerro “El Triunfo”');
+  assert.equal(nombreDeEvento('SOCIEDAD RURAL DE BALCARCE'), 'Sociedad Rural de Balcarce');
+  assert.equal(nombreDeEvento('Fiesta de la Música'), 'Fiesta de la Música', 'lo bien escrito no se toca');
+  // El lugar y la dirección iguales no se repiten.
+  assert.equal(dondeEs(napa), 'Napaleofú');
+  assert.equal(dondeEs(tc), 'Autódromo Juan Manuel Fangio (Av. Suipacha y calle 63)');
+});
+
+test('la descripción que copió la máquina de la fuente no sale en ninguna parte: ni página, ni .ics, ni Google', () => {
+  const p = leer('web/app/agenda/[id]/page.js');
+  assert.ok(!/Lo que cuenta/.test(p) && !/Texto de la agenda oficial/.test(p) && !/Ver en la agenda de/.test(p));
+  assert.ok(!/\be\.descripcion\b/.test(p), 'la página no toca la descripción cruda: pasa por descripcionPropia');
+  for (const e of REALES) {
+    assert.equal(descripcionPropia(e), null);
+    const salidas = [
+      copeteDeEvento(e), JSON.stringify(fichaDeEvento(e, { url: 'https://radarbalcarce.com/agenda/x' })),
+      icsDeEvento(e, { url: 'https://radarbalcarce.com/agenda/x' }), enlaceGoogleCalendar(e), JSON.stringify(firmaDeEvento(e)),
+    ].join('\n');
+    for (const frase of ['INFORMACIÓN IMPORTANTE', 'No te quedes afuera', 'asegurar tu lugar', 'LUGAR DE LARGADA', 'merchandising']) {
+      assert.ok(!salidas.includes(frase.replace(/ /g, '%20')) && !salidas.includes(frase), `salió "${frase}"`);
+    }
+    // Y ninguna salida tiene una tira de palabras en mayúsculas sostenidas.
+    assert.ok(!/(?:\b[A-ZÁÉÍÓÚÑ]{4,}\b\s+){2,}\b[A-ZÁÉÍÓÚÑ]{4,}\b/.test(salidas.replace(/\\n/g, ' ')), 'mayúsculas sostenidas');
+  }
+  // Los datos para Google llevan el copete de plantilla, no la descripción.
+  assert.equal(fichaDeEvento(REALES[0]).description, copeteDeEvento(REALES[0]));
+  // Sólo lo que escribió una persona de la redacción se muestra, y a Google va su primera oración.
+  const propia = { origen: 'panel', descripcion: 'Peña con folclore y empanadas. Trae tu silla.\nHay mesas para todos.' };
+  assert.equal(descripcionPropia(propia), propia.descripcion);
+  assert.equal(fichaDeEvento({ ...propia, nombre: 'Peña', desde: '2026-10-03' }).description, 'Peña con folclore y empanadas.');
+});
+
+test('"Qué hay": etiquetas con nuestras palabras, detectadas en la descripción y nunca copiadas', () => {
+  assert.deepEqual(detallesDeEvento(REALES[0]), ['Gastronomía', 'Ambiente familiar']);
+  assert.deepEqual(detallesDeEvento(REALES[1]), []);
+  assert.deepEqual(detallesDeEvento(REALES[4]), [], 'sin palabras conocidas no se inventa nada');
+  assert.deepEqual(detallesDeEvento({ descripcion: 'Feria de emprendedores, música en vivo y estacionamiento propio.' }), ['Feria o stands', 'Música en vivo', 'Estacionamiento']);
+  assert.deepEqual(detallesDeEvento({ descripcion: 'No habrá gastronomía. Sin estacionamiento en el predio.' }), [], 'lo negado no cuenta');
+  // Nunca dice "gratis" por su cuenta.
+  assert.ok(!detallesDeEvento({ descripcion: 'Entrada libre y gratuita' }).includes('Entrada gratuita'));
+});
+
+test('el desplegable "Fuentes (N)" y los botones de la ficha', () => {
+  const p = leer('web/app/agenda/[id]/page.js');
+  // "Entradas e información" es una acción: botón visible, del mismo estilo que los otros.
+  assert.match(p, /className="boton borde"[^>]*>Entradas e información ↗/);
+  assert.match(p, /className="boton rojo">Agendar en el celular/);
+  assert.match(p, /<dt>Qué hay<\/dt>/);
+  // El enlace a la agenda del municipio ya no está a la vista: va adentro del desplegable.
+  assert.ok(!/<dt>Más información<\/dt>/.test(p));
+  assert.match(leer('web/components/verificacion.js'), /export function PieConFuentes/);
+});
+
+test('el .ics y la tarjeta para compartir llevan los nombres limpios', () => {
+  const ics = icsDeEvento(REALES[0], { url: 'https://radarbalcarce.com/agenda/x' });
+  assert.match(ics, /SUMMARY:TC Pick Up Balcarce/);
+  assert.match(ics, /LOCATION:Autódromo Juan Manuel Fangio \(Av\. Suipacha y calle 63\)\\, Balcarce/);
+  assert.ok(!/asegurar|quedes afuera/i.test(ics));
+  assert.match(leer('web/app/agenda/[id]/opengraph-image.js'), /nombreDeEvento\(e\.nombre\)/);
+  assert.equal(fichaDeEvento(REALES[1]).location.name, 'Napaleofú');
 });
 
 // ------------------------------------------------------------ fechas y listas

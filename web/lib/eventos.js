@@ -6,9 +6,10 @@
 // para agendarlo y otro para pasarlo por WhatsApp.
 //
 // La ficha NO la escribe una IA. Se arma con los datos del evento (esta
-// plantilla) y, si la fuente trae una descripción, se muestra tal cual,
-// diciendo de dónde sale. No hay nada que inventar: sólo se ordena lo que ya
-// dijo el municipio o lo que cargó una persona desde el panel.
+// plantilla). La descripción que trae el municipio NO se muestra ni se copia
+// (es texto de otro, con mayúsculas y frases de venta): sólo se usa para
+// detectar qué hay (detallesDeEvento) y se dice con nuestras palabras. Sólo la
+// descripción que escribió una persona desde el panel se muestra.
 //
 // De dónde salen los eventos (todos con fecha confirmada, nunca aproximada):
 //
@@ -70,26 +71,54 @@ const MENORES = new Set(['de', 'del', 'la', 'las', 'el', 'los', 'a', 'al', 'y', 
 // suman acá cuando aparezca una nueva.
 const SIGLAS = new Set(['TC', 'ACTC', 'UTTD', 'INTA', 'UNMDP', 'MTB', 'ARG', 'TN', 'CGT', 'APA', 'UOCRA', 'SUM', 'DJ']);
 
+// Palabras que llegan mal escritas de la agenda del municipio (sin tilde, sobre
+// todo: en MAYÚSCULAS no se ponen). Clave sin tildes y en minúscula; valor
+// bien escrito. Se suman acá cuando aparezca una nueva.
+const CORRECCIONES = {
+  autodromo: 'Autódromo', napaleofu: 'Napaleofú', mision: 'Misión', agustin: 'Agustín', jose: 'José',
+  martin: 'Martín', peron: 'Perón', musica: 'Música', exposicion: 'Exposición', educacion: 'Educación',
+  celebracion: 'Celebración', gastronomia: 'Gastronomía', maraton: 'Maratón', mecanica: 'Mecánica',
+  estacion: 'Estación', ninos: 'Niños', juarez: 'Juárez', gonzalez: 'González', lopez: 'López',
+  fernandez: 'Fernández', rodriguez: 'Rodríguez', perez: 'Pérez', gomez: 'Gómez', ramon: 'Ramón',
+};
+const LETRA = 'A-Za-zÁÉÍÓÚÑÜáéíóúñü';
+const sinTildes = (t) => String(t ?? '').normalize('NFD').replace(/[̀-ͯ]/g, '');
+
 /**
- * El nombre de un evento como se escribe. La agenda del municipio carga
- * muchos en mayúsculas ("22° FIESTA NACIONAL DEL POSTRE") y en un título
- * grande eso grita. Si el nombre ya viene bien escrito, no se toca.
+ * El nombre de un evento (o de un lugar, o de quien organiza) como se
+ * escribe. La agenda del municipio carga muchos en mayúsculas ("22° FIESTA
+ * NACIONAL DEL POSTRE"), otros todo en minúscula ("balcarce") y casi todos sin
+ * las tildes que corresponden ("Autodromo", "Napaleofu", "Mision"). Un título
+ * grande en mayúsculas grita, y una tilde faltante se lee como descuido.
+ *
+ *   · si viene TODO en mayúsculas (o todo en minúscula), se pasa a mayúscula
+ *     inicial, dejando las siglas (TC, UTTD, ARG-13) y los conectores;
+ *   · las palabras conocidas se corrigen (CORRECCIONES);
+ *   · "Av" pasa a "Av.".
+ * Lo que ya está bien escrito no se toca.
  */
 export function nombreDeEvento(nombre = '') {
   const t = String(nombre ?? '').replace(/\s+/g, ' ').trim();
-  const letras = t.replace(/[^A-Za-zÁÉÍÓÚÑÜáéíóúñü]/g, '');
+  const letras = t.replace(new RegExp(`[^${LETRA}]`, 'g'), '');
   const mayusculas = letras.replace(/[^A-ZÁÉÍÓÚÑÜ]/g, '').length;
-  if (!letras.length || mayusculas / letras.length < 0.8) return t;
+  const recasar = letras.length > 0 && (mayusculas / letras.length >= 0.8 || mayusculas === 0);
+  const forma = new RegExp(`^([^${LETRA}]*)([${LETRA}]+)(.*)$`);
   let primera = true;
   return t.split(' ').map((palabra) => {
-    const limpia = palabra.replace(/[^A-Za-zÁÉÍÓÚÑÜáéíóúñü]/g, '');
-    if (!limpia) return palabra;
-    if (SIGLAS.has(limpia.toUpperCase()) || /\d/.test(palabra)) { primera = false; return palabra; }
-    const baja = palabra.toLowerCase();
-    if (!primera && MENORES.has(limpia.toLowerCase())) return baja;
+    const m = palabra.match(forma);
+    if (!m) return palabra;
+    const [, antes, nucleo, despues] = m;
+    const conocida = CORRECCIONES[sinTildes(nucleo).toLowerCase()];
+    const intocable = SIGLAS.has(nucleo.toUpperCase()) || /\d/.test(palabra);
+    let nueva = nucleo;
+    if (recasar && !intocable) {
+      const baja = nucleo.toLowerCase();
+      nueva = !primera && MENORES.has(baja) ? baja : baja[0].toUpperCase() + baja.slice(1);
+    }
+    if (conocida && !intocable) nueva = nueva === nueva.toLowerCase() ? conocida.toLowerCase() : conocida;
     primera = false;
-    return baja.replace(/[a-záéíóúñü]/, (l) => l.toUpperCase());
-  }).join(' ');
+    return antes + nueva + despues;
+  }).join(' ').replace(/\bAv\b(?!\.)/g, 'Av.');
 }
 
 // ------------------------------------------------------------------ fechas
@@ -206,22 +235,76 @@ export function entradaDe(e) {
 // ------------------------------------------------------------- quién escribe
 
 /**
- * Quién hizo esta ficha, con el mismo texto en la página y en los datos
- * estructurados (como Firma y autorDeNota con las notas: regla 7).
+ * Quién hizo esta ficha, con el mismo criterio que las notas (regla 7): una
+ * línea corta y gris al pie (`texto`, pegada al desplegable "Fuentes (N)"), la
+ * explicación larga sólo al abrir el desplegable (`explicacion`) y el mismo
+ * dato en los datos para Google (`autor`). Ningún párrafo sobre quién la
+ * escribió o la revisó va a la vista (criterio del 25/09).
  */
 export function firmaDeEvento(e = {}) {
   if (e.origen === 'panel') {
     return {
-      texto: `Esta ficha la cargó y la publicó una persona de la redacción, con los datos que nos pasó ${e.organizador ? nombreDeEvento(e.organizador) : 'la organización'}. No la escribió una inteligencia artificial.`,
+      texto: 'Ficha cargada por la redacción',
+      explicacion: `La cargó y la publicó una persona de la redacción, con los datos que nos pasó ${e.organizador ? nombreDeEvento(e.organizador) : 'la organización'}.`,
       autor: 'Radar Balcarce (cargado por la redacción)',
     };
   }
   const fuente = !e.fuente ? 'la Municipalidad de Balcarce'
     : /^(municipalidad|subsecretar|secretar|direcci)/i.test(e.fuente) ? `la ${e.fuente}` : e.fuente;
   return {
-    texto: `Esta ficha se armó automáticamente con los datos que publicó ${fuente} en su agenda oficial${e.descripcion ? ', y la descripción es la suya, sin cambios' : ''}. No la escribió una inteligencia artificial ni la revisó una persona antes de salir.`,
-    autor: `Radar Balcarce (ficha automática con datos de ${fuente})`,
+    texto: `Ficha con los datos de ${fuente}`,
+    explicacion: `Se armó con los datos que publicó ${fuente} en su agenda oficial.`,
+    autor: `Radar Balcarce (ficha con datos de ${fuente})`,
   };
+}
+
+/** Las fuentes de la ficha, para el desplegable "Fuentes (N)": la agenda de
+ *  donde salen los datos, con su enlace. */
+export function fuentesDeEvento(e = {}) {
+  if (!e.url) return [];
+  const de = /^municipalidad/i.test(e.fuente ?? '') ? 'la ' : '';
+  return [{ medio: e.fuente ? `Agenda de ${de}${e.fuente}` : 'Página del evento', enlace: e.url }];
+}
+
+// Lo que tiene el evento, dicho con NUESTRAS palabras. Se detecta por palabras
+// clave en la descripción de la fuente, pero la descripción no se muestra ni
+// se copia: sólo estas etiquetas. Si la palabra viene negada ("sin
+// gastronomía", "no habrá feria") no cuenta.
+const SERVICIOS = [
+  ['Gastronomía', /gastronom|patio de comidas|food ?truck|cantina|buffet/],
+  ['Feria o stands', /\bferia\b|artesan|emprendedor|\bstands?\b/],
+  ['Música en vivo', /musica en vivo|shows? en vivo|recital|bandas? en vivo|shows? musicales?/],
+  ['Estacionamiento', /estacionamiento/],
+  ['Ambiente familiar', /ambiente familiar|para toda la familia|para (?:las )?familias?/],
+];
+
+export function detallesDeEvento(e = {}) {
+  const texto = sinTildes(e.descripcion ?? '').toLowerCase();
+  if (!texto) return [];
+  return SERVICIOS.filter(([, re]) => {
+    const g = new RegExp(re.source, 'g');
+    let m = g.exec(texto);
+    while (m) {
+      const antes = texto.slice(Math.max(0, m.index - 30), m.index);
+      if (!/\b(sin|no|ni)\b[^.]*$/.test(antes)) return true;
+      m = g.exec(texto);
+    }
+    return false;
+  }).map(([nombre]) => nombre);
+}
+
+/** Lo que se muestra de la descripción: nada si es la que copió la máquina de
+ *  la fuente (no se copia el texto de otro); sí si la escribió una persona de
+ *  la redacción en el panel. */
+export function descripcionPropia(e = {}) {
+  return e.origen === 'panel' && e.descripcion ? String(e.descripcion) : null;
+}
+
+/** La primera oración de un texto (hasta 200 letras): para los datos de Google. */
+function primeraOracion(texto) {
+  const linea = String(texto).split('\n').map((l) => l.trim()).find(Boolean) ?? '';
+  const m = linea.match(/^.{20,200}?[.!?](?=\s|$)/);
+  return m ? m[0] : linea.slice(0, 200);
 }
 
 // ---------------------------------------------------------- listas y archivo
@@ -489,7 +572,7 @@ export function fichaDeEvento(e, { base = '', url = '' } = {}) {
         addressCountry: 'AR',
       },
     },
-    description: e.descripcion ? e.descripcion.slice(0, 500) : copeteDeEvento(e),
+    description: descripcionPropia(e) ? primeraOracion(descripcionPropia(e)) : copeteDeEvento(e),
     url: url || undefined,
     image: url ? [`${url}/opengraph-image`] : undefined,
     inLanguage: 'es-AR',

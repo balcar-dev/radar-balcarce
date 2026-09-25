@@ -409,13 +409,37 @@ página (`/agenda/<nombre>-<id>`), armada con los datos y una plantilla
 - **Sólo con fecha confirmada**: la del municipio o una que publicó una persona
   desde el panel. Las fiestas del calendario anual dicen "fecha a confirmar"
   hasta entonces. Una fecha aproximada nunca se publica como confirmada.
-- Si la fuente trae una descripción, va tal cual, limpia, bajo "Lo que cuenta
-  la Municipalidad de Balcarce", con el enlace al original.
+- **Qué muestra la ficha** (25/09): el título (con los nombres bien escritos),
+  una bajada de plantilla con cuándo y dónde, y un bloque de datos: Cuándo,
+  Dónde (con "Cómo llegar"), Entrada, Organiza y, si se detecta, "Qué hay"
+  (gastronomía, feria o stands, música en vivo, estacionamiento, ambiente
+  familiar: etiquetas nuestras, detectadas por palabras clave en la descripción
+  de la fuente y nunca negadas). Debajo, los botones: Agendar en el celular,
+  Google Calendar y, si el organizador lo cargó, "Entradas e información ↗"
+  (es una acción útil, va como botón). Al pie, la firma corta y "Fuentes (1)".
+- **Qué NO muestra**: la descripción que trae el municipio (es el texto de
+  otro, con mayúsculas y frases de venta como "no te quedes afuera"; no se
+  copia, igual que con las notas); ningún párrafo explicativo de firma; ni
+  enlaces a la fuente sueltos ("Lo que cuenta la Municipalidad", "Ver en la
+  agenda…"): el enlace al original va adentro del desplegable de fuentes. La
+  descripción cruda tampoco va al .ics ni a los datos para Google (llevan la
+  bajada de plantilla). Sólo se muestra la descripción que escribió una
+  persona de la redacción desde el panel ("De qué se trata"). Una prueba
+  (`pruebas/eventos.test.mjs`) cuida todo esto.
+- **Los nombres se limpian** (`nombreDeEvento`, `web/lib/eventos.js`), en la
+  ficha, la lista, la portada, el .ics y la tarjeta para compartir: lo que
+  viene TODO en mayúsculas o todo en minúscula pasa a mayúscula inicial (las
+  siglas TC, UTTD, ARG-13, ACTC se quedan) y una lista de correcciones conocidas
+  repone las tildes ("Autódromo", "Napaleofú", "Misión"). Un nombre nuevo mal
+  escrito se suma a `CORRECCIONES`.
 - **La entrada no se inventa**: si no la informaron, la página dice "No la
-  informaron. Consultá con quien lo organiza", nunca "gratis" por las dudas.
+  informaron. Consultá el valor con quien organiza", nunca "gratis" por las dudas.
 - La tarjeta para compartir es propia, **nunca el afiche del organizador**.
-- La ficha dice quién la armó: automáticamente con los datos del municipio, o
-  cargada y publicada por una persona de la redacción.
+- **La firma es una línea corta y gris**, pegada al desplegable "Fuentes (N)" (el
+  mismo pie que las notas): "Ficha con los datos de la Municipalidad de
+  Balcarce" o "Ficha cargada por la redacción". La explicación larga va sólo al
+  abrir el desplegable, y los datos para Google dicen lo mismo. Nunca un
+  párrafo a la vista sobre quién la escribió o la revisó.
 - El semáforo también mira la agenda: si el nombre de un evento da rojo, no
   sale; si da rojo la descripción, sale sólo con los datos.
 - Un evento no es una noticia: no entra en la lista de notas, el feed ni el

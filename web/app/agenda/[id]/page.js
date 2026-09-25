@@ -1,12 +1,13 @@
 import { obtenerEvento, todosLosEventos, proximosEventos } from '@/lib/datos';
 import { Etiqueta, Evento, Cierre, Invitacion } from '@/components/piezas';
 import Compartir from '@/components/compartir';
+import { PieConFuentes } from '@/components/verificacion';
 import { OG_COMUN } from '@/components/metadatos';
 import { FichaDeEvento, Migas } from '@/components/ficha';
 import { notFound } from 'next/navigation';
 import {
   parteDeEvento, nombreDeEvento, copeteDeEvento, cuandoEs, dondeEs, entradaDe, firmaDeEvento, yaPaso,
-  enlaceGoogleCalendar,
+  enlaceGoogleCalendar, fuentesDeEvento, detallesDeEvento, descripcionPropia,
 } from '@/lib/eventos';
 import { enlace } from '@/lib/sitio';
 import { recortarEn } from '@/lib/texto';
@@ -61,6 +62,8 @@ export default function PaginaEvento({ params }) {
     : null;
   const firma = firmaDeEvento(e);
   const fuente = e.fuente && /^municipalidad/i.test(e.fuente) ? `la ${e.fuente}` : e.fuente;
+  const detalles = detallesDeEvento(e);
+  const descripcion = descripcionPropia(e);
   const otros = proximosEventos().filter((o) => o.id !== e.id).slice(0, 3);
 
   return (
@@ -112,7 +115,7 @@ export default function PaginaEvento({ params }) {
           </div>
           <div>
             <dt>Entrada</dt>
-            <dd>{entrada ?? 'No la informaron. Consultá con quien lo organiza.'}</dd>
+            <dd>{entrada ?? 'No la informaron. Consultá el valor con quien organiza.'}</dd>
           </div>
           {e.organizador && (
             <div>
@@ -124,14 +127,10 @@ export default function PaginaEvento({ params }) {
               </dd>
             </div>
           )}
-          {(e.web || e.url) && (
+          {detalles.length > 0 && (
             <div>
-              <dt>Más información</dt>
-              <dd>
-                {e.web && <a href={e.web} target="_blank" rel="noopener noreferrer">Entradas e información ↗</a>}
-                {e.web && e.url && ' · '}
-                {e.url && <a href={e.url} target="_blank" rel="noopener noreferrer">Ver en la agenda de {fuente || 'la fuente'} ↗</a>}
-              </dd>
+              <dt>Qué hay</dt>
+              <dd>{detalles.join(' · ')}</dd>
             </div>
           )}
         </dl>
@@ -140,27 +139,22 @@ export default function PaginaEvento({ params }) {
           <div className="botones-evento">
             <a href={`${e.ruta}/evento.ics`} className="boton rojo">Agendar en el celular</a>
             <a href={enlaceGoogleCalendar(e, url)} className="boton borde" target="_blank" rel="noopener noreferrer">Google Calendar</a>
+            {e.web && <a href={e.web} className="boton borde" target="_blank" rel="noopener noreferrer">Entradas e información ↗</a>}
           </div>
         )}
 
-        {e.descripcion && (
+        {descripcion && (
           <section className="descripcion-evento">
-            <h2>{e.origen === 'panel' ? 'De qué se trata' : `Lo que cuenta ${fuente || 'la fuente'}`}</h2>
-            {e.descripcion.split('\n').map((p) => p.trim()).filter(Boolean).map((parrafo, i) => (
+            <h2>De qué se trata</h2>
+            {descripcion.split(/\r?\n/).map((p) => p.trim()).filter(Boolean).map((parrafo, i) => (
               // eslint-disable-next-line react/no-array-index-key
               <p key={`${i}-${parrafo.slice(0, 30)}`}>{parrafo}</p>
             ))}
-            {e.origen !== 'panel' && (
-              <p className="mini">Texto de la agenda oficial, tal como lo publicó{e.url ? <>: <a href={e.url} target="_blank" rel="noopener noreferrer">ver el original ↗</a></> : '.'}</p>
-            )}
           </section>
         )}
 
+        <PieConFuentes firma={firma.texto} explicacion={firma.explicacion} fuentes={fuentesDeEvento(e)} />
         <Compartir titulo={`${nombre}: ${copeteDeEvento(e)}`} />
-        <p className="firma-nota">
-          <span className="punto-firma" aria-hidden="true" />
-          {firma.texto}
-        </p>
 
         {otros.length > 0 && (
           <section className="bloque-seccion">
