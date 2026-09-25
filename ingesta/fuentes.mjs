@@ -828,7 +828,37 @@ export const REGLAS_SEMAFORO = {
     'dólar oficial', 'dólar mep', 'dólar minorista', 'dólar mayorista', 'dólar tarjeta',
     'dólar cripto', 'dólar ccl', 'contado con liquidación', 'precio del dólar', 'cotiza el dólar',
     'cotizó el dólar', 'blue hoy'],
+  // Política y economía de OTROS países (26/09). "Donald Trump y Xi Jinping
+  // concluyen su cumbre en Washington" salió sola en Tecnología, con 39 puntos,
+  // y no le importa a nadie de Balcarce. Se mira sólo el TÍTULO y sólo en lo de
+  // afuera que no nombra a Balcarce: queda amarilla, con su motivo, por si una
+  // persona quiere publicarla igual (por ejemplo, si afecta a la papa o al agro).
+  internacional: ['trump', 'xi jinping', 'putin', 'zelenski', 'zelensky', 'netanyahu', 'casa blanca',
+    'kremlin', 'hamas', 'franja de gaza', 'ucrania', 'otan', 'brics', 'g20', 'g7',
+    'unión europea', 'union europea', 'parlamento europeo', 'macron', 'starmer', 'sheinbaum', 'lula',
+    'maduro', 'petro', 'boric', 'erdogan', 'kim jong'],
 };
+
+/** El motivo con que queda amarilla una nota internacional sin relación con Balcarce. */
+export const MOTIVO_INTERNACIONAL = 'internacional: sin relación con Balcarce';
+
+// Las fuentes de tecnología de los diarios nacionales traen de todo (esa
+// cumbre, un partido, una serie): no alcanza con que el feed diga "Tecnología".
+// La sección se confirma con el TÍTULO: si no nombra algo de tecnología, no se
+// le cree a la fuente y la nota se clasifica por lo que dice.
+export const PALABRAS_DE_TECNOLOGIA_EN_EL_TITULO = [
+  'inteligencia artificial', 'algoritmo', 'drone', 'dron', 'drones', 'satelital', 'ciberseguridad',
+  'ciberataque', 'hackeo', 'software', 'startup', 'semiconductores', 'smartphone', 'nvidia', 'robot',
+  'robots', 'ia', 'chatgpt', 'openai', 'gemini', 'claude', 'copilot', 'chatbot', 'machine learning',
+  'microsoft', 'google', 'apple', 'samsung', 'android', 'iphone', 'windows', 'linux',
+  'celular', 'celulares', 'app', 'aplicación', 'aplicacion', 'tecnología', 'tecnologia', 'digital',
+  'internet', 'wifi', 'fibra óptica', 'red social', 'redes sociales', 'videojuego', 'videojuegos',
+  'consola', 'playstation', 'xbox', 'nintendo', 'gamer', 'starlink', 'spacex', 'tesla', 'bitcoin',
+  'criptomoneda', 'criptomonedas', 'blockchain', 'chip', 'procesador',
+  'batería', 'bateria', 'cámara', 'camara', 'streaming', 'netflix', 'spotify', 'youtube', 'tiktok',
+  'instagram', 'whatsapp', 'telegram', 'ciencia', 'científico', 'cientifico', 'nasa', 'satélite',
+  'satelite', 'espacial', 'cohete', 'genética', 'genetica', 'vacuna',
+];
 
 /** El motivo con que queda amarilla una nota de la cotización del dólar. */
 export const MOTIVO_COTIZACION = 'cotización del dólar: se muestra en /dolar';

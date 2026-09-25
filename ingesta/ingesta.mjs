@@ -7,6 +7,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import {
   NOMBRES_PROPIOS, FIGURAS, TEMAS, FARMACIAS_A_MANO, PISO_DE_AFUERA, PISO_POR_DEFECTO, CUPO_DE_AFUERA, CUPO_POR_DEFECTO, BALCARCE, FUENTES, FUENTES_NACIONALES, PALABRAS_LOCALES, PALABRAS_ZONA, REGLAS_SECCION, AMARILLO_MENORES, REGLAS_SEMAFORO, MOTIVO_COTIZACION,
+  MOTIVO_INTERNACIONAL, PALABRAS_DE_TECNOLOGIA_EN_EL_TITULO,
 } from './fuentes.mjs';
 import { diaDeTurno, fechaEnBalcarce } from './utiles.mjs';
 
@@ -423,6 +424,11 @@ function temasDe(nota) {
   return TEMAS.filter((t) => t.palabras.some((p) => contiene(texto, p))).map((t) => t.ranura);
 }
 
+/** ¿El título habla de tecnología? Palabras enteras, sin tildes ni mayúsculas. */
+function tituloEsDeTecnologia(titularNormalizado) {
+  return PALABRAS_DE_TECNOLOGIA_EN_EL_TITULO.some((p) => contiene(titularNormalizado, p));
+}
+
 function clasificar(nota) {
   const texto = normalizar(`${nota.titulo} ${nota.categorias.join(' ')} ${nota.cuerpo.slice(0, 400)}`);
   // Una palabra débil sólo decide si está en el TITULAR. En el cuerpo
@@ -437,7 +443,12 @@ function clasificar(nota) {
 
   // 2. Si la fuente ya viene separada por sección (las de Radio Gabal, Olé,
   //    Clarín Deportes), le creemos: es más confiable que adivinar.
-  if (nota.seccionFuente) return nota.seccionFuente;
+  //    Con una excepción: las fuentes de "Tecnología" de los diarios traen de
+  //    todo (el 26/09, la cumbre Trump–Xi). Esa sección se confirma con el
+  //    título; si no nombra nada de tecnología, se clasifica por lo que dice.
+  if (nota.seccionFuente && !(nota.seccionFuente === 'Tecnología' && !tituloEsDeTecnologia(titular))) {
+    return nota.seccionFuente;
+  }
 
   // 3. Recién ahí, palabras clave. Gana la coincidencia más específica, no la
   //    primera de la lista: "Exposición Rural de Palermo" caía en Cultura
@@ -512,6 +523,11 @@ function semaforo(nota, seccion, puntaje) {
   const delTitulo = normalizar(String(nota.titulo ?? ''));
   if ((REGLAS_SEMAFORO.cotizacion ?? []).some((p) => contiene(delTitulo, p))) {
     return { color: 'amarillo', motivo: MOTIVO_COTIZACION };
+  }
+  // Lo internacional sin relación con Balcarce no sale solo. Sólo el título.
+  if (nota.alcance !== 'local' && !nota.nombraBalcarce
+    && (REGLAS_SEMAFORO.internacional ?? []).some((p) => contiene(delTitulo, p))) {
+    return { color: 'amarillo', motivo: MOTIVO_INTERNACIONAL };
   }
   const texto = normalizar(`${nota.titulo} ${nota.cuerpo.slice(0, 600)}`);
   for (const p of REGLAS_SEMAFORO.promocional ?? []) {
@@ -1328,7 +1344,7 @@ export const paraPruebas = {
   clasificar, semaforo, limpiarCopete, relevancia, meta, parsearScrape,
   cieloDeSimbolo, haceCuanto, sinEtiquetas, decodificar,
   clavesDe, anotar, buscarFarmacia, directorioDeLaVanguardia, pisoDe,
-  contiene, cruzarFarmacias, controlDelCronograma, tocaLaZona,
+  contiene, cruzarFarmacias, controlDelCronograma, tocaLaZona, tituloEsDeTecnologia,
 };
 
 // Sólo corre cuando se lo invoca directo; si lo importa probar.mjs, no.

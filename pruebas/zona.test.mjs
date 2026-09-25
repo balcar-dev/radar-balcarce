@@ -78,3 +78,38 @@ test('lo que escribe la IA: el título y la bajada miran todo; el cuerpo, sólo 
   const cuerpoConChico = { titulo: 'Inauguran la plaza', copete: 'La obra llevó dos años.', cuerpo: 'Un niño cortó la cinta.' };
   assert.equal(semaforoDeLaReescritura({}, cuerpoConChico).color, 'amarillo');
 });
+
+// ------------------------------- lo que no es de tecnología ni de acá (26/09)
+
+const nacional = (titulo, extra = {}) => ({
+  titulo, cuerpo: '', categorias: [], alcance: 'pais', oficial: false, peso: 14, ...extra,
+});
+
+test('"Trump y Xi concluyen su cumbre" no es Tecnología aunque lo traiga el feed de tecnología (26/09)', () => {
+  const n = nacional('Donald Trump y Xi Jinping concluyen su cumbre en Washington', { seccionFuente: 'Tecnología' });
+  assert.notEqual(paraPruebas.clasificar(n), 'Tecnología');
+});
+
+test('lo que sí es de tecnología en un feed de tecnología sigue siendo Tecnología', () => {
+  for (const titulo of [
+    'Microsoft reorganiza Copilot para sumar agentes autónomos',
+    'Desarrollan una inteligencia artificial para guiar cirugías',
+    'El cable y el wifi definen su rendimiento en Balcarce',
+    'Call of Duty: Warzone sumará un filtro en su videojuego',
+  ]) {
+    assert.equal(paraPruebas.clasificar(nacional(titulo, { seccionFuente: 'Tecnología' })), 'Tecnología', titulo);
+  }
+});
+
+test('lo internacional sin relación con Balcarce no sale solo; lo de acá, sí', () => {
+  const abierto = (n) => paraPruebas.semaforo({ ...n, cuerpo: 'Texto.' }, 'Política', 80);
+  const cumbre = abierto(nacional('Donald Trump y Xi Jinping concluyen su cumbre en Washington'));
+  assert.equal(cumbre.color, 'amarillo');
+  assert.match(cumbre.motivo, /internacional/);
+  // Si nombra a Balcarce, es otra cosa.
+  assert.notEqual(abierto(nacional('Trump impone aranceles y afecta a los productores de papa de Balcarce', { nombraBalcarce: true })).motivo, 'internacional: sin relación con Balcarce');
+  // Una nota local nunca.
+  assert.notEqual(abierto({ ...nacional('Viaje a la cumbre del G20', {}), alcance: 'local' }).motivo, 'internacional: sin relación con Balcarce');
+  // Lo argentino no se toca.
+  assert.notEqual(abierto(nacional('Milei y Caputo presentan el presupuesto en el Congreso')).motivo, 'internacional: sin relación con Balcarce');
+});
