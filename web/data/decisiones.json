@@ -1,5 +1,5 @@
 {
-  "exportado": "2026-09-25T10:10:36.061Z",
+  "exportado": "2026-09-25T10:20:38.261Z",
   "decisiones": {
     "1951120": {
       "estado": "automatica",
@@ -12080,6 +12080,70 @@
       "deIA": null,
       "por": null,
       "cuando": "2026-09-25T10:10:36.003Z"
+    },
+    "jul4zc": {
+      "estado": "automatica",
+      "titulo": "Reinauguran el Autodromo Municipal Juan Manuel Fangio en Balcarce",
+      "copete": "El autódromo Juan Manuel Fangio reabre sus puertas este viernes en una ceremonia oficial. El evento marca un hito histórico para el automovilismo local.",
+      "cuerpo": "El acto de reinauguración del Autódromo Municipal Juan Manuel Fangio se llevará a cabo este viernes a las catorce horas. Este acontecimiento representa un hito de especial relevancia para la ciudad y para la historia del automovilismo argentino.\n\nComo se había informado a principios de semana, la reapertura del circuito local se da en paralelo a trabajos artísticos en las instalaciones, como la pintura de un mural del quíntuple campeón a cargo del artista Nico Lahitte en la zona de los boxes.",
+      "guion": "Reinauguran el Autodromo Municipal Juan Manuel Fangio en Balcarce",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T10:20:38.199Z",
+      "claves": [
+        "Reinauguración oficial del autódromo municipal este viernes a las catorce horas.",
+        "El circuito lleva el nombre del quíntuple campeón Juan Manuel Fangio.",
+        "Se realizaron trabajos artísticos recientes en el sector de los boxes."
+      ],
+      "seSabe": [
+        "El acto de reapertura del Autódromo Municipal se programó para el viernes 25 de septiembre a las 14 horas.",
+        "El predio lleva el nombre de Juan Manuel Fangio."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Este viernes a las 14 horas se realizará la reinauguración oficial del Autódromo Municipal Juan Manuel Fangio en Balcarce, un acontecimiento histórico para la ciudad y el automovilismo.",
+      "etiquetas": [
+        "autodromo",
+        "juan manuel fangio",
+        "automovilismo",
+        "balcarce",
+        "reinauguracion"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "News Balcarce (FM 91.7)",
+          "enlace": "https://newsbalcarce.com.ar/?p=30754",
+          "fecha": "2026-09-22T22:14:09.000Z",
+          "oficial": false,
+          "aporte": "Informó la fecha, hora y relevancia del acto de reinauguración del Autódromo Municipal."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "5yolmk",
+          "titulo": "El Autódromo Juan Manuel Fangio será reinaugurado este viernes",
+          "fecha": "2026-09-22T19:26:50.000Z",
+          "ruta": "/nota/el-autodromo-juan-manuel-fangio-sera-reinaugurado-este-viernes-5yolmk"
+        },
+        {
+          "id": "1crfv0z",
+          "titulo": "La Fórmula 3 Metropolitana debuta en el autódromo de Rosario",
+          "fecha": "2026-09-22T21:17:44.000Z",
+          "ruta": "/nota/la-formula-3-metropolitana-debuta-en-el-autodromo-de-rosario-1crfv0z"
+        },
+        {
+          "id": "1tftag2",
+          "titulo": "Nuevo mural de Fangio en el autódromo local",
+          "fecha": "2026-09-22T21:12:28.452Z",
+          "ruta": "/nota/nuevo-mural-de-fangio-en-el-autodromo-local-1tftag2"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
     }
   },
   "horarios": {
