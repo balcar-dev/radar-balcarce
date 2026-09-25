@@ -1,5 +1,5 @@
 {
-  "exportado": "2026-09-25T14:43:47.493Z",
+  "exportado": "2026-09-25T14:50:21.221Z",
   "decisiones": {
     "1951120": {
       "estado": "automatica",
@@ -19382,6 +19382,564 @@
           "titulo": "Javier Milei prepara su próximo viaje a Francia tras su paso por Nueva York",
           "fecha": "2026-09-25T12:00:46.000Z",
           "ruta": "/nota/javier-milei-prepara-su-proximo-viaje-a-francia-tras-su-paso-por-gdzyk4"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "j133lw": {
+      "estado": "automatica",
+      "titulo": "La AFA organiza un Fan Fest para la despedida de Lionel Messi",
+      "copete": "La Asociación del Fútbol Argentino preparó un Fan Fest oficial para acompañar la despedida de Lionel Messi de la selección argentina. El encuentro se realizará en Ciudad Universitaria y contará con entradas disponibles en una plataforma digital.",
+      "cuerpo": "La Asociación del Fútbol Argentino confirmó la realización de un Fan Fest oficial en el predio de UBA Deportes en Ciudad Universitaria para celebrar la despedida de Lionel Messi de la selección nacional. Los tickets para el megaevento, denominado \"Gracias, Leo\", ya se encuentran disponibles de manera online a través de la plataforma Deportick.\n\nLa celebración se desarrollará el martes 6 de octubre de 2026, en una jornada que irá desde las 12 hasta las 0 horas. El evento acompañará el último partido del capitán argentino con la camiseta albiceleste, previsto para esa misma fecha frente a Benín en el Estadio Monumental.\n\nComo antecedentes, tras el anuncio de retiro de Messi luego de la final del Mundial 2026, la entidad madre del fútbol nacional programó una serie de encuentros en la fecha FIFA que incluyeron partidos en Córdoba y en la cancha de River, cuyos boletos para el encuentro despedida se habían agotado en menos de dos horas a finales de septiembre.",
+      "guion": "La AFA organiza un Fan Fest para la despedida de Lionel Messi",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T14:50:21.119Z",
+      "claves": [
+        "La AFA organizó un Fan Fest oficial para la despedida de Lionel Messi.",
+        "El evento se realizará en el predio de UBA Deportes en Ciudad Universitaria.",
+        "Las entradas se consiguen a través de la plataforma digital Deportick.",
+        "La jornada será el martes 6 de octubre de 2026 desde el mediodía hasta la medianoche."
+      ],
+      "noConfirmado": [
+        "No se detallaron los precios exactos de las ubicaciones ni los detalles de las alternativas de acceso en la plataforma."
+      ],
+      "etiquetas": [
+        "Seleccion Argentina",
+        "Lionel Messi",
+        "Fan Fest",
+        "AFA",
+        "Estadio Monumental"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Minuto Uno",
+          "enlace": "https://www.minutouno.com/deportes/fan-fest-la-seleccion-argentina-la-despedida-lionel-messi-como-sacar-entradas-y-precios-n6326638",
+          "fecha": "2026-09-25T14:43:00.000Z",
+          "oficial": false,
+          "aporte": "Aportó la información sobre la realización del Fan Fest oficial de la AFA en Ciudad Universitaria y la venta por Deportick."
+        },
+        {
+          "medio": "El Eco de Tandil",
+          "enlace": "https://www.eleco.com.ar/deportes/la-seleccion-argentina-presento-la-camiseta-especial-para-la-despedida-de-messi",
+          "fecha": "2026-09-25T12:46:30.000Z",
+          "oficial": false,
+          "aporte": "Mencionó la presentación de una camiseta especial con el Sol de Mayo para el partido ante Benín."
+        },
+        {
+          "medio": "Minuto Uno",
+          "enlace": "https://www.minutouno.com/deportes/locura-lionel-messi-se-agotaron-tiempo-record-las-entradas-su-despedida-la-seleccion-n6326439",
+          "fecha": "2026-09-24T23:25:00.000Z",
+          "oficial": false,
+          "aporte": "Señaló que el astro mundial diría adiós a la Albiceleste el 6 de octubre en el Monumental."
+        },
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/deportes/futbol/a-que-hora-empieza-hoy-la-venta-de-entradas-para-la-despedida-de-messi-de-la-seleccion-argentina-nid24092026/",
+          "fecha": "2026-09-24T18:59:40.000Z",
+          "oficial": false,
+          "aporte": "Informó sobre el anuncio de retiro de Lionel Messi y la confirmación del último partido en el país."
+        },
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/deportes/futbol/lista-de-precios-de-las-entradas-para-la-despedida-de-messi-de-la-seleccion-una-por-una-todas-las-nid24092026/",
+          "fecha": "2026-09-24T18:49:26.000Z",
+          "oficial": false,
+          "aporte": "Indicó el inicio de la venta de entradas para el amistoso frente a Benín en el estadio Monumental."
+        },
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/deportes/futbol/como-comprar-las-entradas-para-la-despedida-de-messi-en-la-seleccion-precios-lugares-y-plataforma-nid24092026/",
+          "fecha": "2026-09-24T18:47:33.000Z",
+          "oficial": false,
+          "aporte": "Aportó datos sobre el expendio de localidades a través de la plataforma digital."
+        },
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/deportes/futbol/deportick-asi-es-el-registro-en-el-sitio-para-comprar-entradas-para-la-despedida-de-messi-de-la-nid24092026/",
+          "fecha": "2026-09-24T15:00:00.000Z",
+          "oficial": false,
+          "aporte": "Detalló los cruces de la fecha FIFA ante Bolivia y Burkina Faso."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1nud4zm",
+          "titulo": "Entradas para la despedida de Lionel Messi de la Selección Argentina: paso a paso para comprarlas",
+          "fecha": "2026-09-24T19:05:00.000Z",
+          "ruta": "/nota/entradas-para-la-despedida-de-lionel-messi-de-la-seleccion-argentina-1nud4zm"
+        },
+        {
+          "id": "150qeb8",
+          "titulo": "A qué hora venden las entradas para la despedida de Lionel Messi de la Selección Argentina",
+          "fecha": "2026-09-22T21:21:00.000Z",
+          "ruta": "/nota/a-que-hora-venden-las-entradas-para-la-despedida-de-lionel-messi-de-150qeb8"
+        },
+        {
+          "id": "e3051r",
+          "titulo": "Los hinchas agotan las entradas para la despedida de Lionel Messi",
+          "fecha": "2026-09-25T00:06:00.000Z",
+          "ruta": "/nota/los-hinchas-agotan-las-entradas-para-la-despedida-de-lionel-messi-e3051r"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron tres medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      }
+    },
+    "1fq9x2v": {
+      "estado": "automatica",
+      "titulo": "Diego Santilli visita Balcarce por la reinauguración del autódromo",
+      "copete": "El jefe de Gabinete nacional estará este fin de semana en Balcarce para la reapertura del autódromo Juan Manuel Fangio, donde su hijo competirá en la categoría TC Pista Pick Up.",
+      "cuerpo": "Su visita se suma a la agenda institucional prevista para el regreso del automovilismo nacional al circuito de La Barrosa tras casi quince años sin competencias oficiales.\n\nEl funcionario nacional no será el único miembro de la familia presente en el predio serrano, ya que su hijo, Nicanor Santilli Pazos, competirá con la Foton número 123 del equipo Coiro Competición en la TC Pista Pick Up. El piloto llega clasificado a la instancia decisiva del campeonato, que iniciará en Balcarce su Copa Coronación en el marco de la octava fecha de las TC Pick Up y la presentación del Turismo Special de la Costa.\n\nLa actividad en pista comenzará este sábado con los entrenamientos y las tandas de clasificación, mientras que el domingo se disputarán las finales, con la carrera principal de las TC Pick Up programada para las catorce y diez.",
+      "guion": "Diego Santilli visita Balcarce por la reinauguración del autódromo",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T14:50:21.119Z",
+      "claves": [
+        "Diego Santilli visitará Balcarce este fin de semana.",
+        "El funcionario participará en la reinauguración del autódromo Juan Manuel Fangio.",
+        "Su hijo, Nicanor Santilli Pazos, competirá en la categoría TC Pista Pick Up.",
+        "El circuito vuelve a recibir automovilismo nacional después de quince años."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El jefe de Gabinete de la Nación, Diego Santilli, visitará Balcarce este fin de semana para participar de la reapertura del autódromo Juan Manuel Fangio, donde su hijo competirá en la categoría TC Pista Pick Up en el marco del regreso del automovilismo nacional.",
+      "etiquetas": [
+        "Diego Santilli",
+        "Autodromo Juan Manuel Fangio",
+        "TC Pista Pick Up",
+        "Balcarce",
+        "Automovilismo"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Diario La Vanguardia",
+          "enlace": "https://www.diariolavanguardia.com/noticias/44904-diego-santilli-estara-en-balcarce-para-la-reapertura-del-fangio-y-la-fecha-de-las-tc-pick-up/",
+          "fecha": null,
+          "oficial": false,
+          "aporte": "Informó la llegada del jefe de Gabinete nacional Diego Santilli a Balcarce para la reapertura del autódromo y la participación de su hijo en la competencia."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1mphhlq",
+          "titulo": "Diego Santilli llega a Balcarce por el automovilismo",
+          "fecha": "2026-09-25T13:40:13.000Z",
+          "ruta": "/nota/diego-santilli-llega-a-balcarce-por-el-automovilismo-1mphhlq"
+        },
+        {
+          "id": "1e6tvp9",
+          "titulo": "Kicillof encabeza la reapertura del autódromo Juan Manuel Fangio en Balcarce",
+          "fecha": "2026-09-25T10:15:00.000Z",
+          "ruta": "/nota/el-gobernador-bonaerense-encabeza-la-reapertura-del-autodromo-en-1e6tvp9"
+        },
+        {
+          "id": "1synfb5",
+          "titulo": "Reapertura del Fangio: horarios, accesos, estacionamiento y recomendaciones para el público",
+          "fecha": "2026-09-25T00:21:50.000Z",
+          "ruta": "/nota/reapertura-del-fangio-horarios-accesos-estacionamiento-y-1synfb5"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "xb5kod": {
+      "estado": "automatica",
+      "titulo": "Franco Colapinto larga décimo en el Gran Premio de Azerbaiyán",
+      "copete": "El piloto argentino Franco Colapinto se metió entre los diez mejores en la clasificación de la Fórmula 1 en Bakú. Durante la última práctica tuvo un insólito incidente con un insecto en su auto.",
+      "cuerpo": "El piloto argentino Franco Colapinto se ubicó en la décima posición de la grilla de partida para el Gran Premio de Azerbaiyán de la Fórmula 1, tras una tanda de clasificación desarrollada este viernes en el circuito urbano de Bakú. Durante la última práctica libre matutina, el corredor protagonizó un particular momento al advertir por radio a su ingeniero de pista, Stuart Barlow, que \"un bicho\" había impactado contra su vehículo en la curva siete. Desde el equipo revisaron los parámetros y confirmaron que la máquina no sufrió daños ni alteraciones en su temperatura.\n\nEn la sesión cronometrada, el argentino logró avanzar hasta la última instancia y cerró su mejor vuelta en la Q3 con un registro que lo dejó en el décimo lugar, tras superar la fase previa por escaso margen y sortear una bandera amarilla previa en la curva quince. La pole position quedó en poder del británico George Russell, mientras que el neerlandés Max Verstappen había liderado el entrenamiento matutino.",
+      "guion": "Franco Colapinto larga decimo en el Gran Premio de Azerbaiyán",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T14:50:21.119Z",
+      "claves": [
+        "Franco Colapinto largará en el décimo puesto en el Gran Premio de Azerbaiyán.",
+        "El piloto argentino avanzó hasta la Q3 en la sesión de clasificación de este viernes.",
+        "Durante la última práctica libre advirtió por radio el impacto de un insecto en su auto.",
+        "El equipo técnico descartó inconvenientes mecánicos tras revisar los valores del motor."
+      ],
+      "seSabe": [
+        "Franco Colapinto se clasificó en el décimo lugar para la carrera del sábado en Bakú.",
+        "El piloto argentino advirtió por radio a su ingeniero sobre el impacto de un insecto en la curva siete durante la práctica libre.",
+        "El ingeniero Stuart Barlow confirmó que no se registraron problemas en los parámetros del motor del auto.",
+        "Max Verstappen fue el más rápido en la última práctica libre.",
+        "George Russell se quedó con la pole position de la clasificación."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Franco Colapinto se metió entre los diez mejores en la clasificación y largará décimo este sábado en el Gran Premio de Azerbaiyán de la Fórmula 1. Durante la práctica matutina, el piloto tuvo un insólito aviso por radio sobre el impacto de un insecto en su auto.",
+      "etiquetas": [
+        "Franco Colapinto",
+        "Formula 1",
+        "Gran Premio de Azerbaiyán",
+        "Bakú"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/deportes/creo-que-un-bicho-me-pego-el-particular-imprevisto-que-sufrio-franco-colapinto-durante-la-practica-nid25092026/",
+          "fecha": "2026-09-25T14:41:31.000Z",
+          "oficial": false,
+          "aporte": "Informó los detalles de la clasificación, el incidente con el insecto y los tiempos de la Fórmula 1 en Bakú."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "24vfqp",
+          "titulo": "Franco Colapinto finaliza décimo en la última práctica en Bakú",
+          "fecha": "2026-09-25T12:03:28.000Z",
+          "ruta": "/nota/franco-colapinto-finaliza-decimo-en-la-ultima-practica-en-baku-24vfqp"
+        },
+        {
+          "id": "2du9ow",
+          "titulo": "Franco Colapinto termina décimo en la práctica libre en Bakú",
+          "fecha": "2026-09-25T11:38:39.000Z",
+          "ruta": "/nota/franco-colapinto-termina-decimo-en-la-practica-libre-en-baku-2du9ow"
+        },
+        {
+          "id": "1e2jbrs",
+          "titulo": "Franco Colapinto finaliza décimo en la práctica libre en Bakú",
+          "fecha": "2026-09-25T11:00:00.000Z",
+          "ruta": "/nota/franco-colapinto-finaliza-decimo-en-la-practica-libre-en-baku-1e2jbrs"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "ALTA"
+      }
+    },
+    "lpzl4j": {
+      "estado": "automatica",
+      "titulo": "El Gobierno afronta un vencimiento con el FMI por ochocientos millones",
+      "copete": "El Gobierno nacional enfrenta un nuevo compromiso de pago con el Fondo Monetario Internacional en el marco de la tercera revisión del acuerdo.",
+      "cuerpo": "El Gobierno nacional afronta este viernes un nuevo vencimiento de capital con el Fondo Monetario Internacional por un monto de u$s800 millones, de acuerdo con el cronograma oficial.\n\nEn total, los vencimientos del mes suman u$s1.452 millones.\n\nPara los balcarceños, la evolución de los compromisos de deuda nacional y la disponibilidad de divisas impactan en el escenario macroeconómico general que condiciona la actividad económica y financiera de todo el país.",
+      "guion": "El Gobierno afronta un vencimiento con el FMI por ochocientos millones",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T14:50:21.119Z",
+      "seSabe": [
+        "El FMI realiza la tercera revisión del acuerdo con la Argentina.",
+        "El vencimiento de capital con el organismo es por u$s800 millones según el cronograma oficial.",
+        "Los depósitos en moneda extranjera del Tesoro en el BCRA ascendían a u$s2.230 millones al 22 de septiembre.",
+        "Los vencimientos totales de septiembre suman u$s1.452 millones."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El Gobierno nacional afronta este viernes un nuevo vencimiento de capital con el FMI por u$s800 millones en el marco de la revisión del acuerdo vigente.",
+      "etiquetas": [
+        "deuda externa",
+        "FMI",
+        "Gobierno nacional"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Ámbito",
+          "enlace": "https://www.ambito.com/economia/deuda-luis-caputo-enfrenta-un-nuevo-vencimiento-el-fmi-us800-millones-n6326576",
+          "fecha": "2026-09-25T13:24:00.000Z",
+          "oficial": false,
+          "aporte": "Detalló el vencimiento con el FMI por u$s800 millones, el estado de los depósitos en el BCRA y las proyecciones de la consultora Analytica."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "198vm01",
+          "titulo": "San Juan vuelve al mercado internacional de deuda con un bono por US$600 millones y una tasa estimada en torno al 9%",
+          "fecha": "2026-09-23T18:27:30.000Z",
+          "ruta": "/nota/san-juan-vuelve-al-mercado-internacional-de-deuda-con-un-bono-por-us-198vm01"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "6vf21p": {
+      "estado": "automatica",
+      "titulo": "Viajar en auto desde el conurbano a la Ciudad supera el millón de pesos al mes",
+      "copete": "Trasladarse diariamente en vehículo desde distintos puntos del Gran Buenos Aires hacia la Ciudad de Buenos Aires requiere superar el millón de pesos mensuales al contabilizar combustible, peajes y estacionamiento.",
+      "cuerpo": "Desde Pilar, los viajes diarios alcanzan un costo mensual estimado entre un millón cuatrocientos mil y un millón cuatrochenta mil pesos según el destino. Desde Moreno, los gastos oscilan entre un millón doscientos mil y un millón trescientos mil pesos. En tanto, desde Ezeiza se registran los valores más bajos de la comparación, que van desde un millón cien mil hasta casi un millón doscientos mil pesos mensuales.\n\nEl cálculo contempla precios de combustible informados por la Secretaría de Energía utilizando a YPF como referencia, tarifas de peajes y estadías de estacionamiento que varían según la zona. El análisis excluye los gastos de mantenimiento, seguro, patente, service, neumáticos, reparaciones y depreciación del vehículo.",
+      "guion": "Viajar en auto desde el conurbano a la Ciudad supera el millón de pesos al mes",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T14:50:21.119Z",
+      "claves": [
+        "El costo mensual de viajar en auto al trabajo desde el conurbano supera el millón de pesos.",
+        "La estimación contempla nafta, peajes y estacionamiento durante veinte días laborales.",
+        "El análisis abarca recorridos desde Pilar, Moreno y Ezeiza hacia Microcentro, Palermo y Barracas.",
+        "El cálculo deja fuera los gastos de mantenimiento, seguro, patente y reparaciones del vehículo."
+      ],
+      "seSabe": [
+        "El traslado en auto desde el Gran Buenos Aires a la Ciudad puede superar el millón de pesos al mes según un cálculo basado en nafta, peajes y estacionamiento.",
+        "Se tomaron como puntos de partida Pilar, Moreno y Ezeiza, con destinos en Microcentro, Palermo y Barracas.",
+        "El cálculo contempla veinte días laborales, un consumo de diez litros cada cien kilómetros y precios de combustible de YPF informados por la Secretaría de Energía.",
+        "El gasto mensual estimado varía entre un millón cien mil pesos desde Ezeiza y un millón cuatrocientos mil pesos desde Pilar.",
+        "La estimación excluye seguro, patente, mantenimiento, service, neumáticos, reparaciones y depreciación."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Ir a trabajar en auto desde el Gran Buenos Aires hacia la Ciudad supera el millón de pesos al mes entre nafta, peajes y estacionamiento.",
+      "etiquetas": [
+        "GBA",
+        "CABA",
+        "combustible",
+        "peajes"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Clarín",
+          "enlace": "https://www.clarin.com/economia/1-millon-mes-costo-ir-auto-trabajar-ciudad-gba_0_UAR7HY3mjf.html",
+          "fecha": "2026-09-25T12:25:51.000Z",
+          "oficial": false,
+          "aporte": "Detalló los costos mensuales, diarios, de combustible, peajes y estacionamiento para viajar en auto desde Pilar, Moreno y Ezeiza hacia la Ciudad."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "16vlfyu": {
+      "estado": "automatica",
+      "titulo": "Crecen las consultas por créditos hipotecarios tras bajas de tasas",
+      "copete": "Las consultas para comprar viviendas crecieron con fuerza luego de que los bancos redujeran las tasas al 7,5% anual más UVA, impulsados por un esquema oficial.",
+      "cuerpo": "Los créditos hipotecarios volvieron a despertar interés entre quienes buscan adquirir una vivienda, luego de que varias entidades financieras aplicaran recortes que ubicaron la mayoría de las tasas en el 7,5% anual más UVA. Entidades como Macro, Hipotecario, Galicia y Supervielle ajustaron sus propuestas, mientras que otras como Ciudad, Nación e ICBC ofrecen alternativas que van del 6,5% al 6,9%. Este movimiento responde en parte a un programa oficial que destina fondos del Fondo de Garantía de Sustentabilidad de la ANSES, estableciendo un tope del 7,5% para los préstamos fondeados con esos recursos. En el Banco Ciudad, la cantidad de consultas llegó a multiplicarse por cuatro. A mediados de septiembre, como se había informado, doce entidades ya habían reducido los intereses a ese nivel o menos, abriendo diferencias en las condiciones de acceso y en los ingresos requeridos para cada línea.",
+      "guion": "Crecen las consultas por créditos hipotecarios tras bajas de tasas",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T14:50:21.119Z",
+      "claves": [
+        "Los bancos redujeron las tasas de los créditos hipotecarios mayormente al 7,5% más UVA.",
+        "Un programa oficial con fondos de la ANSES impulsó el esquema de financiamiento.",
+        "Las consultas se multiplicaron por cuatro en algunas entidades, como el Banco Ciudad.",
+        "Cada banco mantiene requisitos propios de ingresos y porcentajes de financiación."
+      ],
+      "seSabe": [
+        "Las consultas por créditos hipotecarios crecieron tras los recortes de tasas aplicados por los bancos.",
+        "La mayoría de las entidades financieras ubicó sus tasas en torno al 7,5% anual más UVA.",
+        "Un esquema oficial utiliza recursos del Fondo de Garantía de Sustentabilidad de la ANSES con un tope del 7,5%.",
+        "A mediados de septiembre, doce bancos ya habían bajado sus tasas al 7,5% o menos."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Las consultas por créditos hipotecarios crecieron con fuerza tras la baja de tasas de los bancos al 7,5% más UVA, impulsadas por un esquema oficial que busca ampliar el financiamiento para la vivienda.",
+      "etiquetas": [
+        "créditos hipotecarios",
+        "bancos",
+        "vivienda",
+        "tasas de interés",
+        "ANSES"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Ámbito",
+          "enlace": "https://www.ambito.com/economia/boom-creditos-hipotecarios-las-consultas-se-disparan-la-baja-tasas-anunciada-el-gobierno-n6325773",
+          "fecha": "2026-09-25T12:00:00.000Z",
+          "oficial": false,
+          "aporte": "Detalló la baja de tasas de los bancos al 7,5% y el impacto del programa oficial con fondos de la ANSES."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "3hepnz",
+          "titulo": "La guerra de tasas en créditos hipotecarios UVA: ya son 12 los bancos que las bajaron al 7,5% o menos",
+          "fecha": "2026-09-22T23:00:00.000Z",
+          "ruta": "/nota/la-guerra-de-tasas-en-creditos-hipotecarios-uva-ya-son-12-los-bancos-3hepnz"
+        },
+        {
+          "id": "66ksij",
+          "titulo": "Créditos hipotecarios UVA: ¿cuánto hay que ganar para comprar un departamento en septiembre de 2026?",
+          "fecha": "2026-09-23T20:00:00.000Z",
+          "ruta": "/nota/creditos-hipotecarios-uva-cuanto-hay-que-ganar-para-comprar-un-66ksij"
+        },
+        {
+          "id": "clxtth",
+          "titulo": "Créditos hipotecarios: ya son 12 los bancos que bajaron la tasa al 7,5% y otros tres la fijaron por debajo del 7%",
+          "fecha": "2026-09-23T02:59:00.000Z",
+          "ruta": "/nota/creditos-hipotecarios-ya-son-12-los-bancos-que-bajaron-la-tasa-al-7-5-clxtth"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "gdzyk4": {
+      "estado": "automatica",
+      "titulo": "Javier Milei prepara su viaje a Francia tras su paso por Nueva York",
+      "copete": "El presidente Javier Milei regresará al país y se alista para una nueva gira internacional rumbo a París, donde participará de un foro económico la próxima semana.",
+      "cuerpo": "Según se informó, el mandatario participará entre el 30 de septiembre y el 2 de octubre de la denominada Argentina Week en París, un foro diseñado por la Presidencia junto a la embajada argentina y del que formarán parte integrantes del Gabinete, gobernadores y empresarios.\n\nEn paralelo a la agenda internacional, la administración nacional atraviesa diversos debates legislativos y económicos, entre ellos la discusión por la eliminación de las PASO y los recientes datos oficiales de pobreza difundidos por el INDEC, los cuales fueron atribuidos por el presidente provisional del Senado, Bartolomé Abdala, a desajustes provocados por la inflación previa.",
+      "guion": "Javier Milei prepara su viaje a Francia tras su paso por Nueva York",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T14:50:21.119Z",
+      "claves": [
+        "El presidente Javier Milei regresa al país tras su visita a Nueva York.",
+        "La próxima semana encabezará la Argentina Week en la ciudad de París.",
+        "El foro se desarrollará entre el 30 de septiembre y el 2 de octubre.",
+        "Participarán funcionarios del Gabinete, gobernadores y empresarios."
+      ],
+      "seSabe": [
+        "El presidente Javier Milei regresará al país tras su estadía en Nueva York.",
+        "El mandatario participará de la Argentina Week en París entre el 30 de septiembre y el 2 de octubre.",
+        "El foro es organizado por la Presidencia de la Nación y la Embajada argentina en Francia.",
+        "El INDEC informó que la pobreza alcanzó al 32,3% y la indigencia al 7,5%."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El presidente Javier Milei regresa al país tras su visita a Nueva York y ya prepara su agenda para viajar la próxima semana a la ciudad de París, donde participará de un foro económico internacional.",
+      "etiquetas": [
+        "Javier Milei",
+        "Gira presidencial",
+        "Paris",
+        "Nueva York",
+        "Politica"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Clarín",
+          "enlace": "https://www.clarin.com/politica/javier-milei-medidas-vivo-presidente-vuelve-hoy-pais-visita-nueva-york-prepara-viaje-francia_0_Mowp5dlhjS.html",
+          "fecha": "2026-09-25T12:00:46.000Z",
+          "oficial": false,
+          "aporte": "Detalló el viaje del presidente Javier Milei a París para participar de la Argentina Week y reunió declaraciones de funcionarios sobre diversos temas políticos."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1j01p83",
+          "titulo": "Javier Milei y sus medidas, en vivo: el Presidente consideró como “matices de opinión” las internas en el Ejecutivo",
+          "fecha": "2026-09-22T01:40:36.000Z",
+          "ruta": "/nota/javier-milei-y-sus-medidas-en-vivo-el-presidente-considero-como-1j01p83"
+        },
+        {
+          "id": "1ezdmye",
+          "titulo": "Javier Milei cerró su viaje a Nueva York con una reunión con Benjamin Netanyahu",
+          "fecha": "2026-09-24T23:11:00.000Z",
+          "ruta": "/nota/javier-milei-cerro-su-viaje-a-nueva-york-con-una-reunion-con-benjamin-1ezdmye"
+        },
+        {
+          "id": "va3dvb",
+          "titulo": "Javier Milei cierra su viaje a Nueva York: disertación en un club económico y reunión con Netanyahu",
+          "fecha": "2026-09-24T04:56:07.000Z",
+          "ruta": "/nota/javier-milei-cierra-su-viaje-a-nueva-york-disertacion-en-un-club-va3dvb"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "tzhclc": {
+      "estado": "automatica",
+      "titulo": "Estilos contrapuestos en la cena de la Casa Blanca",
+      "copete": "Los presidentes de Estados Unidos y China compartieron una cena formal donde las primeras damas llamaron la atención por sus atuendos. El evento se da en medio de las tensiones bilaterales.",
+      "cuerpo": "El presidente de Estados Unidos, Donald Trump, y su esposa, Melania Trump, recibieron el jueves al mandatario chino, Xi Jinping, y a su pareja, Peng Liyuan, en una cena de Estado en la Casa Blanca. El encuentro se produjo en un contexto de creciente tensión entre ambas potencias por la regulación de la inteligencia artificial, entre otros asuntos centrales abordados en la cumbre bilateral.\n\nDurante la gala, Peng lució un vestido rojo con cuello mandarín y un collar de perlas, mientras que Xi vistió un traje tradicional estilo Mao. Por su parte, el presidente estadounidense optó por el esmoquin clásico y Melania Trump sorprendió al vestir un conjunto de pantalones de brocado oscuro y blusa blanca.\n\nLas dos mujeres mantuvieron trayectorias públicas previas a sus roles actuales, combinando estilos diferenciados en la diplomacia internacional. Mientras que la primera dama estadounidense suele elegir firmas europeas, la esposa del mandatario chino ha destacado históricamente por fusionar la tradición de su país con la estética occidental.",
+      "guion": "Estilos contrapuestos en la cena de la Casa Blanca",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T14:50:21.119Z",
+      "claves": [
+        "Trump y Xi Jinping se reunieron en la Casa Blanca.",
+        "Las primeras damas llamaron la atención con sus atuendos.",
+        "El encuentro se da en medio de tensiones bilaterales."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Las primeras damas de Estados Unidos y China llamaron la atención con sus atuendos durante una cena de Estado en la Casa Blanca que reunió a los presidentes Donald Trump y Xi Jinping en medio de tensiones bilaterales.",
+      "etiquetas": [
+        "Casa Blanca",
+        "Estados Unidos",
+        "China",
+        "Donald Trump",
+        "Xi Jinping",
+        "Melania Trump",
+        "Peng Liyuan"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/wapo/2026/09/25/dos-estilos-antagonicos-los-looks-que-eligieron-las-primeras-damas-melania-trump-y-peng-liyuan-para-la-gala-de-la-casa-blanca/",
+          "fecha": "2026-09-25T14:41:08.000Z",
+          "oficial": false,
+          "aporte": "Detalla los atuendos de los presidentes y sus esposas en la cena de la Casa Blanca y repasa sus antecedentes públicos."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "17kk9tp",
+          "titulo": "EN VIVO: Donald Trump y Melania reciben a Xi Jinping y a su esposa para una cena de Estado en la Casa Blanca",
+          "fecha": "2026-09-25T00:26:24.000Z",
+          "ruta": "/nota/en-vivo-donald-trump-y-melania-reciben-a-xi-jinping-y-a-su-esposa-17kk9tp"
+        },
+        {
+          "id": "6hse8q",
+          "titulo": "Trump y Melania reciben a Xi y a su esposa para una cena de Estado en la Casa Blanca",
+          "fecha": "2026-09-24T23:20:13.000Z",
+          "ruta": "/nota/trump-y-melania-reciben-a-xi-y-a-su-esposa-para-una-cena-de-estado-en-6hse8q"
+        },
+        {
+          "id": "su12vk",
+          "titulo": "Trump recibe a Xi en la Casa Blanca: las claves de un encuentro entre la pompa y las tensiones",
+          "fecha": "2026-09-24T19:17:29.000Z",
+          "ruta": "/nota/trump-recibe-a-xi-en-la-casa-blanca-las-claves-de-un-encuentro-entre-su12vk"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "19k9o6b": {
+      "estado": "automatica",
+      "titulo": "Analizan una estrategia fiscal para jubilados sobre planes de retiro",
+      "copete": "Un caso ilustrativo analiza cómo los años sin ingresos tras el retiro pueden influir en la carga impositiva sobre los planes de ahorro para la jubilación.",
+      "cuerpo": "Un caso financiero difundido recientemente expone la situación de una persona que se retira a los 64 años con un fondo acumulado en un plan de ahorro tradicional y atraviesa nueve años sin percibir ingresos laborales, permitiendo que el capital invertido continúe su crecimiento. Según el análisis, este período sin actividad laboral coincide con etapas de menores ingresos que pueden aprovecharse para planificar cargas tributarias antes de alcanzar la edad obligatoria de retiros.\n\nEl planteo señala que, al llegar a la edad en la que comienzan las extracciones obligatorias estipuladas por la normativa fiscal estadounidense, el saldo acumulado se incrementa y puede quedar alcanzado por tasas impositivas superiores al combinarse con otros ingresos. Como alternativa, se menciona la opción de realizar conversiones parciales hacia cuentas de tipo Roth durante los años de bajos ingresos, pagando tributos menores en el presente para reducir el capital sujeto a extracciones futuras.\n\nEspecialistas aclaran que estas estrategias dependen de las particularidades de cada contribuyente, como el estado civil, las deducciones vigentes y otras rentas como la Seguridad Social, por lo que no constituyen una recomendación única aplicable a todos los casos.",
+      "guion": "Analizan una estrategia fiscal para jubilados sobre planes de retiro",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T14:50:21.119Z",
+      "claves": [
+        "Un caso ilustrativo analiza los años sin ingresos tras el retiro.",
+        "El capital acumulado continúa invertido y crece durante nueve años.",
+        "Se evalúan conversiones de cuentas para optimizar la carga impositiva."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Un análisis financiero ilustra cómo los años sin ingresos posteriores al retiro pueden influir en la planificación impositiva de los planes de ahorro previsional en Estados Unidos.",
+      "etiquetas": [
+        "impuestos",
+        "ahorro",
+        "Estados Unidos"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Clarín",
+          "enlace": "https://www.clarin.com/estados-unidos/jubilo-380000-dolares-401k-paso-9-anos-ingresos-decision-pudo-reducir-impuestos_0_puuKmQV9kK.html",
+          "fecha": "2026-09-25T14:30:03.000Z",
+          "oficial": false,
+          "aporte": "Aportó un caso financiero ilustrativo sobre la planificación fiscal en planes de retiro y cuentas de ahorro."
         }
       ],
       "verificacion": {
