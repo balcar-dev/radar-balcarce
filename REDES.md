@@ -59,13 +59,22 @@ la portada y publica **una** nota si cumple todo esto:
 | Relevancia | 75 o más |
 | Antigüedad en la web | entre 15 minutos y 8 horas (el enlace tiene que existir) |
 | Sección | nunca **Política** ni **Policiales**: esas las decide una persona |
-| Horario | entre las 8 y las 22 |
+| Horario | de las 8 a las **22:00 en punto** (se cuenta en minutos: el 24/09 salió uno a las 22:25 y ya no puede pasar) |
 | Tope | **5 por día**, con 90 minutos entre una y otra (conservador a propósito: la web publica unas 100 notas por día y en Facebook sería ruido) |
 | Repetición | una nota sale una sola vez (lo garantiza `web/data/redes.json`) |
+| Tema | **no repite un tema publicado en las últimas 24 horas** (desde el 25/09; el 24/09 salieron tres posteos de la reapertura del autódromo en cuatro horas). Dos notas son del mismo tema si sus titulares comparten dos palabras que dicen algo, o una larga, o una palabra y un tema del sitio (`temaParecido`, `redes/elegir.mjs`) |
 
 El texto lleva el titular, el copete y **el enlace a la nota en nuestro sitio**, más `Resumen hecho con IA`
 cuando la redactó la IA. La regla de que cada nota diga quién la escribió
 vale también afuera del sitio. **La fuente no se nombra en las redes** (desde el 24/09): eso está en la nota de la web.
+
+**El enlace no se rompe** (desde el 25/09). La dirección de cada nota queda
+fija desde la primera vez que sale, aunque la IA cambie el titular después. Y
+la página sigue existiendo 180 días aunque la nota ya no esté en la portada
+(`web/data/archivo.json`, `web/lib/archivo.js`). Si igual llega una
+dirección vieja, la página 404 la rescata por el identificador del final.
+Antes de eso, dos posteos del primer día daban 404. Pruebas en
+`pruebas/archivo.test.mjs`.
 
 **Historias y reels: Instagram y la página de Facebook, el mismo video.** Estas
 son las piezas del día y su horario:
@@ -148,37 +157,33 @@ con la PC apagada. En cada corrida hace tres cosas:
 
 Cuando no toca ninguna pieza, la corrida termina en segundos y no instala nada.
 
-**Por qué hay tantas corridas programadas.** El planificador de GitHub **no es
-puntual**: en este repositorio dejó hasta cinco horas entre dos corridas que
-debían distar treinta minutos. Por eso hay dos o tres pasadas alrededor de cada
-horario, PERO desde el 21/09 lo que dispara el reloj en la práctica es un
-servicio externo (ver más abajo), porque el planificador de GitHub solo no
-alcanzaba. Cada pieza tiene una ventana (`VENTANAS` en `redes/piezas.mjs`): si una corrida llega tarde,
-todavía alcanza. Lo que no caduca rápido dura más: la farmacia, el clima de la
-noche y el podcast valen hasta la medianoche; el clima de la mañana, hasta las
-11:30; una historia de nota, 3 horas. Ninguna cruza la medianoche. Si la ventana
-se cierra sin que salga, esa pieza se pierde por hoy.
-
-**El disparador real es externo, desde el 21/09** (y son **tres** trabajos en
-cron-job.org: "Actualizar la web", el reloj de "Redes" y "Vigilancia"). El 21/09 el planificador de
-GitHub no ejecutó ni una corrida programada de esta cola en toda la
-tarde-noche (la farmacia de las 19:00 se perdió y se publicó a mano). La
-solución: **cron-job.org** llama a la API de GitHub (endpoint
+**Quién lo dispara: cron-job.org**, desde el 21/09. El planificador propio de
+GitHub **no es puntual**: en este repositorio dejó hasta cinco horas entre dos
+corridas que debían distar treinta minutos, y el 21/09 no ejecutó ninguna en
+toda la tarde-noche (la farmacia de las 19:00 se perdió y se publicó a mano).
+Por eso cron-job.org tiene **tres** trabajos: "Actualizar la web", el reloj de
+"Redes" y "Vigilancia". El del reloj llama a la API de GitHub (endpoint
 `actions/workflows/redes.yml/dispatches`) cada 30 minutos, de 7 a 23 hora de
 Balcarce, con `{"ref":"main","inputs":{"accion":"reloj"}}`. La cuenta de
 cron-job.org es de `radarbalcarce@gmail.com`; el token de GitHub que usa es de
 `balcardev@gmail.com`, personal (Settings → Developer settings → Personal
 access tokens → Fine-grained), limitado a este repositorio, sólo permiso
 Actions en lectura y escritura, vence el 21/09/2027 (**hay que renovarlo antes**
-y actualizar el encabezado `Authorization` en cron-job.org). El workflow ya no
+y actualizar el encabezado `Authorization` en cron-job.org). El workflow no
 tiene `schedule` propio: si cron-job.org falla, el único respaldo es que el
 reloj también arranca cuando termina "Actualizar la web" (`workflow_run`).
 
-**Consecuencia honesta:** una pieza puede salir bastante después de su hora si
-GitHub se demora, y si se demora más que su ventana se pierde. Si algún día hace falta puntualidad exacta, la solución es
-que un servicio externo gratuito dispare el workflow a la hora justa (el
-workflow ya acepta la acción `reloj` a mano para eso). Necesita una cuenta en ese
-servicio y un token de GitHub.
+**Las ventanas.** Cada pieza tiene una ventana (`VENTANAS` en
+`redes/piezas.mjs`; si no tiene una propia, 2 horas): si una corrida llega
+tarde, todavía alcanza. El clima de la mañana vale hasta las 11:30; el repaso
+de la mañana, hasta las 15; el de la tarde, hasta las 20; los teléfonos
+útiles, hasta las 16; la farmacia, el clima de la noche y el repaso del día,
+hasta la medianoche. Ninguna cruza la medianoche. Si la ventana se cierra sin
+que salga, esa pieza se pierde por hoy.
+
+**Consecuencia honesta:** una pieza puede salir hasta media hora después de su
+hora (cron-job.org dispara cada 30 minutos, y GitHub tarda un poco en
+arrancar). Si algo falla más tiempo que su ventana, se pierde.
 
 | Cosa | Estado |
 |---|---|
@@ -199,8 +204,9 @@ que las corridas de GitHub no fallen, que el reloj de Redes corra, que las
 piezas fijas del día (clima y farmacia) hayan salido, y que la portada no
 vuelva a mostrar lo que se pidió sacar (`REGLAS.md`). Avisa por **WhatsApp**
 (`redes/whatsapp.mjs`, CallMeBot, secretos `WHATSAPP_TELEFONO` y
-`WHATSAPP_APIKEY`) una vez cada 6 horas por problema, y a las 21 manda un
-resumen "todo bien". Cada lunes, la **Auditoría** (`redes/auditar.mjs`) mide
+`WHATSAPP_APIKEY`; **funciona desde el 25/09**) una vez cada 6 horas por
+problema, y a las 21 manda un resumen "todo bien". También avisa 30 días antes
+de que venzan el token de GitHub y el dominio. Cada lunes, la **Auditoría** (`redes/auditar.mjs`) mide
 las imágenes publicadas. Detalle en `INFRAESTRUCTURA.md`.
 
 ### Lo que pasó con el bloqueo de Meta (22 al 24/09/2026)
@@ -214,9 +220,10 @@ resolvió el 24/09 confirmando la cuenta; se prendieron de nuevo los workflows
 
 **Ojo con cron-job.org:** cuando un trabajo falla varias veces seguidas
 (por ejemplo porque el workflow de GitHub estaba apagado), cron-job.org lo
-**desactiva solo**. El 24/09 hubo que volver a activar los dos (Actualizar la
+**desactiva solo**. El 24/09 hubo que volver a activar dos (Actualizar la
 web y el reloj de Redes). Si algo deja de salir, es lo primero que hay que
-mirar: https://console.cron-job.org/jobs
+mirar (https://console.cron-job.org/jobs); los pasos completos están en
+"Si algo dejó de salir", en `EMPEZAR-ACA.md`.
 
 **Los subtítulos** de las piezas siguen la voz palabra por palabra
 (`reels/tiempos.mjs`). Se ubican a partir de las pausas del audio y del peso en
@@ -224,22 +231,15 @@ sílabas (los números se cuentan como los dice la voz: "715" son 6 sílabas).
 Medido contra la voz de Edge, que trae el tiempo exacto de cada palabra, el error
 medio es de 0,1 a 0,2 segundos. El texto va en tinta, sin halo.
 
-### El primer mes
+### El primer mes (plan de septiembre, histórico)
 
-**Semana 1 — existir.** Abrir Instagram y Facebook. Publicar clima y farmacia
-todos los días sin falta: es lo que hace que alguien te empiece a mirar. Tres
-o cuatro notas locales por día.
-
-**Semana 2 — que nos encuentren.** Sumar la agenda del fin de semana como
-historia el jueves. Etiquetar a los lugares (Teatro Municipal, Museo, el
-Cerro). Escribirle a las instituciones que organizan cosas: el mensaje ya está
-escrito en `ingesta/agenda.mjs`.
-
-**Semana 3 — probar formatos.** Un reel de automovilismo y uno de agenda.
-Mirar cuál funciona. Empezar la sección de tecnología.
-
-**Semana 4 — medir y decidir.** Con números reales de Instagram, ver qué
-sección rinde y ajustar los pesos en `ingesta/fuentes.mjs`.
+El plan original era: semana 1, existir (clima y farmacia todos los días);
+semana 2, que nos encuentren (agenda del fin de semana los jueves, etiquetar
+lugares, escribirle a las instituciones con el mensaje de
+`ingesta/agenda.mjs`); semana 3, probar formatos; semana 4, medir y ajustar
+los pesos de `ingesta/fuentes.mjs`. Lo de las tres primeras semanas ya corre
+solo o cambió (los podcasts reemplazaron a las noticias sueltas). Lo que sigue
+vigente es medir con números: `PENDIENTES.md`, secciones A y D.
 
 ### El tono
 
@@ -248,11 +248,16 @@ QUE PASÓ", sin cebar el clic. En un pueblo el que exagera se quema rápido.
 
 ### Lo que hay que decir siempre
 
-En la bio de las dos cuentas, y en el pie de la web:
+En el pie de la web (y, más corto, en la bio de las dos cuentas):
 
-> Resumimos lo que publican los medios de Balcarce, siempre con el enlace a la
-> nota original. Algunos textos y las voces de los videos se producen con
-> inteligencia artificial, con revisión humana.
+> Los resúmenes los escribe una inteligencia artificial y se verifican
+> automáticamente contra la fuente original, que queda enlazada; lo sensible
+> lo revisa una persona antes de salir. Las voces de los videos también son
+> de IA.
+
+(Es el texto del pie de la web desde el 25/09. Antes decía "con revisión
+humana", y ninguna nota la había tenido. Las biografías cortas están en
+`PERFILES.md`.)
 
 No es humildad: es lo que evita que el día que alguien lo descubra parezca que
 lo estábamos escondiendo.
@@ -300,7 +305,7 @@ tiene alternativa: si falta, los reels no arrancan. Los tokens y las claves
 |---|---|
 | `redes/meta.mjs` | Habla con Meta: posteo, subida de video, verificación. El token viaja en un encabezado, nunca en la dirección |
 | `redes/elegir.mjs` | Qué se publica: reglas de Facebook, reels, historias, podcast, interruptor |
-| `redes/piezas.mjs` | Qué pieza le toca a cada hora, con ventana de 2 horas |
+| `redes/piezas.mjs` | Qué pieza le toca a cada hora y hasta cuándo vale (`VENTANAS`; 2 horas si no tiene una propia) |
 | `redes/publicar-piezas.mjs` | Publica en Instagram y guarda el libro después de cada una |
 | `redes/publicar.mjs` | El programa: `--verificar`, `--facebook`, `--piezas [--sin-horario]` |
 | `redes/datos.mjs` | Arma los datos del día desde la web, para generar sin panel |

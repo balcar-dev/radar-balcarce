@@ -12,7 +12,7 @@ funciona cada cosa está en los otros documentos (ver el índice al final).*
 | Facebook | La página "Radar Balcarce" | Cualquiera |
 | **El panel** | https://radar-balcarce.tail4f06f0.ts.net | Andrés y Hernán |
 | El panel, desde la PC | http://localhost:4321 | Igual |
-| El código | https://github.com/balcar-dev/radar-balcarce | Privado |
+| El código | https://github.com/balcar-dev/radar-balcarce | Público desde el 25/09 (no tiene ninguna clave) |
 | Cloudflare (la web, el dominio, las estadísticas) | https://dash.cloudflare.com | `radarbalcarce@gmail.com` |
 | Trabajos automáticos (cron-job.org) | https://console.cron-job.org/jobs | `radarbalcarce@gmail.com` |
 | Google Search Console | https://search.google.com/search-console | `radarbalcarce@gmail.com` |
@@ -43,8 +43,12 @@ Todo esto corre en GitHub, **con la PC apagada**:
   y sube a Instagram y a la página de Facebook lo que toca a esa hora: el clima,
   la farmacia, y tres podcasts de noticias (mañana, tarde y noche).
 - **Cada 30 minutos (Vigilancia):** revisa que todo lo anterior ande y te
-  escribe por WhatsApp si algo falla. Detalle: `INFRAESTRUCTURA.md`.
-- **A las 72 horas:** archiva lo que nadie decidió.
+  escribe por WhatsApp si algo falla (anda desde el 25/09; a las 21 manda un
+  resumen). Detalle: `INFRAESTRUCTURA.md`.
+- **72 horas:** la portada muestra sólo las notas de las últimas 72 horas. Eso
+  corre en la nube desde el 25/09 (antes lo hacía el panel, sólo con la PC
+  prendida). Las notas más viejas siguen teniendo su página, así los enlaces
+  que circulan no se rompen.
 
 Los tres relojes los dispara **cron-job.org**. **Si alguno falla varias veces
 seguidas, cron-job.org lo desactiva solo:** es lo primero que hay que mirar
@@ -52,12 +56,40 @@ cuando algo deja de salir.
 
 ## Qué hay que hacer a mano
 
-- **Decidir las notas amarillas** en el panel (Política, Policiales, denuncias,
-  detenidos): esperan a una persona.
+- **Decidir las notas amarillas** en el panel: las que acusan a alguien
+  (denuncia, detenido, imputado), hablan de una muerte o nombran a un chico.
+  Esperan a una persona. **Política y Policiales, en la web, salen solas si el
+  semáforo da verde; en las redes siempre esperan a una persona.** Si se
+  quiere que en la web también esperen, está anotado en `PENDIENTES.md`.
 - **Cargar avisos publicitarios**, eventos de la agenda y lo que llegue al buzón.
 - **Prender o apagar las redes:** variable `REDES_ACTIVAS` en GitHub (con `Si`
   publica; con otra cosa, sólo simula).
 - **Publicar una pieza a mano:** GitHub → Actions → **Piezas** → Run workflow.
+
+Dos palabras que aparecen todo el tiempo: un **workflow** es una tarea
+automática de GitHub (se ven en la pestaña Actions del repositorio; cada vez
+que corre queda una "corrida" en verde, amarillo o rojo). Un **secreto** es una
+clave guardada en GitHub (Settings → Secrets and variables → Actions) que los
+workflows usan sin que nadie la vea; los carga una persona.
+
+## Si algo dejó de salir
+
+En este orden:
+
+1. **¿Llegó un WhatsApp del vigilante?** Dice qué falló. Si no llegó ni el
+   resumen de las 21, el problema puede ser el vigilante mismo: seguir con el 2.
+2. **cron-job.org** (https://console.cron-job.org/jobs): ¿están **prendidos los
+   tres trabajos** ("Actualizar la web", el reloj de "Redes" y "Vigilancia")?
+   Si uno falla varias veces seguidas, cron-job.org lo apaga solo. Prenderlo.
+3. **GitHub → Actions:** ¿hay alguna corrida en rojo? Abrirla y leer el paso
+   rojo. (Un aviso amarillo de "Vigilancia" no es una falla: es lo que encontró.)
+4. **La variable `REDES_ACTIVAS`** (GitHub → Settings → Secrets and variables →
+   Actions → Variables): tiene que decir `Si`. Con otra cosa, las redes sólo
+   simulan.
+5. **¿La PC está prendida?** Sólo importa para el panel (decidir notas, cargar
+   avisos). La web y las redes no la necesitan.
+6. Si nada de eso explica la falla: la tabla "Qué se cae y cómo se ve" de
+   `INFRAESTRUCTURA.md`.
 
 ## Las dos cosas que hay que entender
 
@@ -80,7 +112,7 @@ tailscale funnel --https=443 off
 
 ## Las cuentas
 
-- **`radarbalcarce@gmail.com`** — el medio: Cloudflare, Vercel (respaldo),
+- **`radarbalcarce@gmail.com`** — el medio: Cloudflare, Vercel (apagado; falta borrarlo),
   Tailscale, Instagram, Facebook, Meta, Gemini, cron-job.org, Search Console.
 - **`balcardev@gmail.com`** — lo técnico: GitHub.
 
@@ -102,6 +134,7 @@ tailscale funnel --https=443 off
 | `INVESTIGACION.md` | Lo legal, con las fuentes |
 | `INVESTIGACION-COMPETENCIA.md` | Cómo se ven los otros medios |
 | `PENDIENTES.md` | **Qué falta, por categoría** |
+| `AUDITORIA.md` | La auditoría del 25/09 y qué quedó arreglado |
 | `IDEAS.md` | Ideas de producto |
 | `NOTAS.md` | Decisiones vigentes (corto) |
 | `POLITICA-PRIVACIDAD.md` | El texto de la política de privacidad |

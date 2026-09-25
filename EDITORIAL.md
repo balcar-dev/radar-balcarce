@@ -19,12 +19,22 @@ redes.
 | Economía | Sí (desde el 21/09) |
 | Política | Sí (desde el 21/09) |
 | Policiales | Sí (desde el 21/09) |
+| País | No: espera a una persona |
 
-Que las diez publiquen solas no quiere decir que todo lo que llega salga
-directo: hay una segunda red de seguridad que corta por palabras, no por
-sección (ver abajo). Política y Policiales son justamente las que más
-dependen de esa red, porque son las dos donde un error no se perdona en un
-pueblo.
+Son once secciones (`web/lib/datos.js`); diez publican solas
+(`verdeSecciones` en `ingesta/fuentes.mjs`). Eso no quiere decir que todo lo
+que llega salga directo: hay una segunda red de seguridad que corta por
+palabras, no por sección (ver abajo). Y lo que no es de Balcarce tiene un piso
+de puntaje y un cupo por sección (`PISO_DE_AFUERA` y `CUPO_DE_AFUERA`):
+desde el 25/09, Automovilismo 12, Tecnología 8, Política 8, Policiales 8,
+Deportes 10, Economía 12 y el resto 15. Lo de Balcarce no tiene cupo.
+
+**Política y Policiales: en la web salen solas, en las redes no.** Hoy, en la
+web, salen solas si el semáforo da verde. En las redes (Facebook, podcasts,
+historias) **siempre** esperan a una persona (`redes/elegir.mjs`). Son las dos
+secciones donde un error no se perdona en un pueblo, y las que más dependen
+del semáforo. Hernán y Andrés tienen que decidir si en la web también esperan
+(`PENDIENTES.md`).
 
 ## El semáforo (`ingesta/fuentes.mjs`, `REGLAS_SEMAFORO`)
 
@@ -34,7 +44,22 @@ pueblo.
 - **Amarillo, espera una persona:** acusa a alguien (denuncia, detenido,
   imputado), involucra una muerte, o nombra a un menor sin ser el caso de
   arriba. Se revisa a mano en el panel.
-- **Verde, sale solo:** todo lo demás, si la sección lo permite (todas, hoy).
+- **Verde, sale solo:** todo lo demás, si la sección lo permite (todas menos
+  País) y si pasa el piso y el cupo de lo de afuera.
+
+**Qué lee el semáforo.** Desde el 25/09 no alcanza con el título y el
+comienzo del resumen: mira también el **texto completo de la nota original**
+y lo que contaron los otros medios de la misma noticia. Y después de que
+escribe la IA, **vuelve a pasar por lo que escribió** (`semaforoDeLaReescritura`
+en `reels/reescritura.mjs`, lo mismo en el panel): si da rojo o amarillo, esa
+reescritura no se usa y la nota deja de salir sola. Compara sin tildes. Cada
+término de las listas roja y amarilla tiene su prueba
+(`pruebas/semaforo.test.mjs`). Por eso se publica un poco menos sola que
+antes, a propósito.
+
+Falsos positivos conocidos: "violación de la ley" da rojo y "el menor de los
+males" da amarillo. Se prefiere pasarse de cuidadoso; la lista no se toca sin
+que decidan Hernán y Andrés.
 
 ## Cómo se escribe una nota
 
@@ -87,7 +112,7 @@ esté prendido.
    algo (la publicó, la corrigió, la descartó), eso manda siempre. La IA
    nunca pisa una decisión humana.
 2. **Cruza fuentes, no repite una.** Si dos o tres medios contaron la misma
-   noticia, se le manda el resumen de cada uno por separado (no sólo el
+   noticia, se le manda el texto de cada uno por separado (no sólo el
    "principal"), para que la reescritura combine en vez de parafrasear uno
    solo. Es lo más parecido a contenido propio que se puede hacer sin que
    nadie escriba a mano.
@@ -103,11 +128,14 @@ esté prendido.
    — o si escribe "más" mal (cambia el sentido) — se descarta y la nota sale
    con el resumen mecánico de siempre. Ser estricto acá cuesta poco: peor es
    publicar algo inventado.
-5. **Nunca se paga dos veces por lo mismo.** Lo ya reescrito se reusa de la
+5. **Primero lo local.** Hay un tope de pedidos por corrida: con el tope
+   justo, se reescribe primero lo de Balcarce aunque lo de afuera tenga más
+   puntaje (desde el 25/09).
+6. **Nunca se paga dos veces por lo mismo.** Lo ya reescrito se reusa de la
    portada anterior; sólo se le vuelve a pedir a Gemini si es nueva. Y lo
    reusado se revalida igual contra las reglas de hoy: si una regla nueva ya
    no lo dejaría pasar, se descarta y se reintenta en una corrida futura.
-6. **Si Gemini falla o no hay cupo**, la nota sale igual con el resumen
+7. **Si Gemini falla o no hay cupo**, la nota sale igual con el resumen
    mecánico — nunca se cae una publicación por esto. Primero se intenta con
    la clave de redacción (gratis); si se queda sin cupo (429), reintenta una
    vez con la de redes (paga) antes de resignarse.
@@ -123,6 +151,11 @@ panel las muestra en "Cómo escribe la IA"). Las que más importan:
 
 - Nunca copia el texto original.
 - Nunca inventa un dato, una cifra o una cita que la fuente no tenga.
+- **Nunca identifica a un menor ni a una víctima** de un delito sexual o de
+  violencia de género: ni nombre, ni apodo, ni iniciales, ni escuela, ni
+  domicilio, ni un parentesco que la deje identificada. Aunque la fuente lo
+  publique (leyes 26.061 y 26.485). Está en la instrucción desde el 25/09, y
+  el semáforo lo controla igual sobre lo que escribe.
 - Si la nota acusa a alguien sin condena firme, siempre en condicional y
   atribuido a quien acusó (doctrina Campillay) — protege al medio de una
   demanda por calumnias.

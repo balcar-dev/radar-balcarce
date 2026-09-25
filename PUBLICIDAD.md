@@ -11,7 +11,7 @@ documento reúne lo que antes estaba repartido entre `REDES.md` y `IDEAS.md`.
 - Los precios **no están escritos a propósito**: hay que salir a preguntar qué
   paga hoy un comercio de Balcarce en la radio y en los otros medios, y arrancar
   por debajo. Se decide con la realidad, no acá.
-- **Google AdSense se dejó para más adelante** (24/09). Ver el final.
+- **Google AdSense se empieza el 26/09** (lo pidieron Hernán y Andrés; es el punto 6 de "Para mañana" en `PENDIENTES.md`). Ver el final.
 - El hosting ya permite publicidad: Cloudflare Pages sí; Vercel Hobby no (por
   eso se mudó el 24/09).
 
@@ -84,7 +84,7 @@ vecino los vea**, en el lugar donde ya mira.
 | 8 | **Contenido patrocinado**, siempre marcado | Nota con etiqueta "Contenido patrocinado" | Con las reglas de arriba |
 | 9 | **Pauta oficial** (vacunación, cortes de servicio) | Igual que un aviso | Depende de la relación con el municipio |
 | 10 | **Socios lectores** (aporte voluntario mensual, tipo Cafecito) | Un botón | Cuando haya lectores que lo pidan |
-| 11 | **AdSense** en un cuarto espacio | Script de Google | **Al final** |
+| 11 | **AdSense** en un cuarto espacio | Script de Google | **En trámite desde el 26/09** |
 
 **El catálogo comercial** (qué servicios se ofrecen a un comercio y con qué
 mensaje) está en `comercial/propuestas.mjs` y se explica en `COMERCIAL.md`.
@@ -99,13 +99,21 @@ mensaje) está en `comercial/propuestas.mjs` y se explica en `COMERCIAL.md`.
    alcanza para arrancar.
 3. **Preguntar precios** (ver arriba).
 
-## Google AdSense: por qué no todavía
+## Google AdSense
 
-- Rinde poco en un pueblo, pesa y rompe la regla de "nada de terceros".
-- Pide cuenta con datos fiscales, verificar el sitio, un archivo `ads.txt` (hoy
-  no existe) y aprobación de días a semanas.
-- Si algún día se hace, va en un cuarto espacio, aparte de los tres avisos
-  propios. Pendiente registrado en `PENDIENTES.md` y `SEO.md`.
+Se empieza el 26/09. Lo que falta, en orden:
+
+1. Que una persona abra la cuenta (pide datos fiscales) y pida la revisión.
+2. `ads.txt` con el ID de editor que da AdSense. Sin el ID no se puede armar.
+3. Más notas con cuerpo: hoy sólo el 19 % tiene. AdSense rechaza sitios con
+   poco contenido propio.
+
+"Quiénes somos", "Contacto" y la política de privacidad ya están (25/09). La
+aprobación tarda de días a semanas.
+
+Lo que hay que tener en cuenta: rinde poco en un pueblo, pesa y rompe la regla
+de "nada de terceros". Por eso va en un cuarto espacio, aparte de los tres
+avisos propios. El mismo pendiente, en `PENDIENTES.md` y `SEO.md`.
 
 ## Relacionado
 

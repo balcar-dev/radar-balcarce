@@ -1,5 +1,82 @@
 # Auditoría completa — 25/09/2026
 
+## Estado al cierre del 25/09
+
+✅ arreglado · ⏳ pendiente (técnico) · 👤 le toca a una persona.
+Los números (1 a 7) son los de la tabla "Urgente" de más abajo. El resto de
+la auditoría, tal como se escribió a la mañana, sigue después de este bloque.
+Al cierre: **684 pruebas, todas pasan.**
+
+**Urgente**
+
+| # | Qué | Estado |
+|---|---|---|
+| 1 | Enlaces de Facebook que daban 404 | ✅ La dirección de cada nota queda fija desde la primera publicación; `web/data/archivo.json` guarda 180 días (hasta 2500 notas) y las páginas se generan también desde ahí; la 404 rescata por el identificador. Se rescataron 1556 notas del historial. Pruebas en `pruebas/archivo.test.mjs` |
+| 2 | Minutos de GitHub Actions | ✅ El repositorio pasó a **público** (los públicos no gastan minutos). Se revisó todo el historial: ninguna clave en el repo |
+| 3 | El filtro de menores y víctimas miraba poco texto | ✅ El semáforo mira también el texto completo de la fuente y lo que escribió la IA; la instrucción de la IA prohíbe identificar menores y víctimas |
+| 4 | La lista roja tenía una sola prueba | ✅ Términos nuevos (decididos por Hernán y Andrés) y una prueba por término (`pruebas/semaforo.test.mjs`). ⏳ Falsos positivos conocidos: "violación de la ley" da rojo, "el menor de los males" da amarillo |
+| 5 | "Siempre con revisión humana" | ✅ El pie dice ahora que los resúmenes los escribe una IA, se verifican solos contra la fuente y lo sensible lo revisa una persona. 👤 Aplicar las biografías nuevas de `PERFILES.md` en Instagram y Facebook |
+| 6 | Farmacias, Agenda, Útil y Privacidad decían ser la portada | ✅ Canónico propio en cada una, con prueba |
+| 7 | WhatsApp roto | ✅ Funciona desde el 25/09 (llegó el mensaje de prueba). Faltaba el teléfono completo con 549 y la clave correcta |
+
+**Importante: web y SEO**
+
+- ⏳ Cuerpos de notas: 19 %. Sigue siendo lo más importante para Google y AdSense.
+- ⏳ Nota duplicada ("Zona Fría"): el agrupamiento todavía no las une ("Seguí leyendo" ya no repite el mismo titular).
+- ✅ Imagen para compartir como `image/png`, HSTS y otros encabezados, caché de un año para `/_next/static` (`web/public/_headers`). ⏳ Una CSP completa (hoy sólo `frame-ancestors`).
+- ✅ Páginas "Quiénes somos" y "Contacto", en el pie y en el sitemap. 👤 Confirmar el texto "Lo hacen Hernán y Andrés, dos vecinos de Balcarce".
+- 👤 `ads.txt`: necesita el ID de AdSense.
+- ✅ Logo en el JSON-LD, `es-AR`, sitemap de noticias sin fechas de relleno.
+
+**Importante: código y operación**
+
+- ✅ Hora de Balcarce (`TZ`) en los workflows; tiempos máximos en "Actualizar la web" (20 min) y "Cloudflare Pages" (15 min). ⏳ `tocaHoy` (`ingesta/utiles.mjs`) todavía depende de la zona del servidor.
+- ✅ Tiempos máximos en Gemini, Meta y el clima.
+- ✅ El panel ya no publica en Vercel ni regenera `portada.json`.
+- ✅ Sin dependencias de afuera, con prueba que sigue los imports en cadena.
+- ✅ `generar-datos.mjs` tiene pruebas del corte de 72 h y del archivo.
+- ✅ Facebook no repite tema en 24 h y publica hasta las 22:00 en punto.
+- ✅ El registro dice por qué el verificador rechazó una nota.
+- ✅ La Vigilancia ya no pinta de rojo Actions: deja un aviso amarillo.
+
+**Importante: seguridad**
+
+- ✅ El respaldo ya no copia `CLAVES-INICIALES.txt` ni `secreto.txt`. 👤 Las copias viejas en `respaldos/` todavía los tienen: borrarlas a mano, junto con `panel/datos/CLAVES-INICIALES.txt`.
+- ✅ El freno de 5 intentos ya no se saltea con `X-Forwarded-For`; control de origen; "Salir" por POST; `/api/probar` no entra a la red de la casa.
+- ✅ `wrangler` fijo en 4.139.0. ✅ Permisos de sólo lectura en los workflows que no necesitan más.
+- ⏳ `next`/`postcss` con una vulnerabilidad conocida (riesgo bajo).
+- ⏳ `reels/ilustrar.mjs` (experimento) todavía manda la clave de Gemini en la dirección.
+
+**Menor**
+
+- ✅ Contraste de Automovilismo, nombre del buscador, `es-AR`, título de Privacidad sin la marca repetida.
+- ✅ `decisiones.json` se poda a 60 días.
+- ✅ Vencimiento del dominio (21/09/2027, DonWeb) en la tabla de vencimientos y en el vigilante (avisa 30 días antes).
+- ✅ `CLOUDFLARE_PROJECT` corregida en `INFRAESTRUCTURA.md` (no existe: se usa `radar-balcarce`).
+- ⏳ `ingesta/ingesta.mjs` sigue largo; scripts de experimentos sueltos en `reels/`.
+
+**Documentación**
+
+- ✅ Documentos puestos al día el 25/09 (`CLAUDE.md`, `PENDIENTES.md`, `EMPEZAR-ACA.md` con "Si algo dejó de salir", `INFRAESTRUCTURA.md`, `REDES.md`, `SEO.md`, `PANEL.md`, `EDITORIAL.md`, `REGLAS.md`, `HISTORIA.md`, `web/README.md`).
+- 👤 **Política y Policiales en la web.** Hoy salen solas si el semáforo da verde; en las redes siempre esperan a una persona. Hernán y Andrés tienen que decidir si en la web también esperan.
+- ⏳ Quedan menciones a Vercel en comentarios de `web/scripts/generar-datos.mjs` y `web/components/piezas.js`, y `generar-redirects.mjs` sigue escribiendo `web/vercel.json` (ya no se commitea).
+
+**Producto**
+
+- ✅ Portada sólo con notas de las últimas 72 h (ahora en la nube). Cupos de afuera: Automovilismo 12, Tecnología 8, Política 8.
+- ✅ La IA reescribe primero lo local.
+- ⏳ Canal de WhatsApp para lectores (idea, en `PENDIENTES.md`).
+
+**Le toca a una persona (resumen):** borrar el proyecto de Vercel y el DNS que
+quedó · `ads.txt` y AdSense · decidir Política y Policiales en la web ·
+confirmar el texto de "Quiénes somos" · borrar `CLAVES-INICIALES.txt` y las
+copias viejas en `respaldos/` · **reiniciar el panel** (`ARRANCAR.bat`) para
+que tome los cambios · aplicar las biografías de `PERFILES.md`.
+
+---
+
+## La auditoría, tal como se escribió (mañana del 25/09)
+
 Revisión de sólo lectura en cinco áreas: seguridad y legal, código y pruebas,
 web y SEO, infraestructura y operación, documentación y producto. No se tocó
 nada durante la revisión. "Verificado" = se comprobó; "a confirmar" = sospecha.

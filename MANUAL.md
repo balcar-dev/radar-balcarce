@@ -79,20 +79,25 @@ para un medio. Palabras: menor de edad, abuso sexual, suicidio, violación,
 violencia de género, femicidio, grooming, abuso infantil. Detalle en
 `INVESTIGACION.md` § 6.
 
-**🟡 Amarillo — espera que alguien apruebe.** Todo lo que puede traer un
-problema si sale mal escrito: concejo deliberante, intendente, denuncia,
-gremio, paro, protesta, reclamo, detenido, acusado, imputado, hospital,
-muerte, investigación. También lo que **parece promoción y no noticia**
-(sorteo, "ganá tu entrada", "participá del", auspicia): no se bloquea, pero
-nunca sale solo.
+**🟡 Amarillo — espera que alguien apruebe.** Lo que acusa (denuncia,
+detenido, acusado, imputado), lo que habla de una muerte y lo que involucra a
+un chico. También lo que **parece promoción y no noticia** (sorteo, "ganá tu
+entrada", "participá del", auspicia): no se bloquea, pero nunca sale solo. Y
+lo de afuera con poco puntaje o fuera del cupo de su sección.
 
-**🟢 Verde — sale automático.** Comunicados oficiales del municipio, y las
-secciones Servicios, Cultura y agenda, Deportes, Automovilismo y Agro.
-Cualquier otra cosa cae en amarillo por defecto.
+**🟢 Verde — sale automático.** Los comunicados oficiales del municipio y todo
+lo demás en diez de las once secciones (todas menos País). Política y
+Policiales salen solas en la web si el semáforo da verde, pero en las redes
+siempre esperan a una persona.
+
+La lista completa y actual está en `REGLAS_SEMAFORO` (`ingesta/fuentes.mjs`).
+Desde el 25/09 el semáforo lee también el texto completo de la fuente y lo
+que escribió la IA. Detalle en `EDITORIAL.md`.
 
 **⚫ Archivada.** A las 72 horas, lo que quedó sin decidir se archiva solo.
 Está en la pestaña Archivadas del panel, no se pierde, pero deja de tapar la
-cola.
+cola. (Eso lo hace el panel. Aparte, desde el 25/09 la portada de la web
+muestra sólo lo de las últimas 72 horas, aunque la PC esté apagada.)
 
 ## 4. Qué NO se publica, más allá del semáforo
 

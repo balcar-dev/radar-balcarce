@@ -12,11 +12,12 @@ rioplatense, sin voseo forzado.
     reels/     placas, voz y video. SÍ tiene dependencias (resvg, ffmpeg)
     redes/     publicar en Facebook e Instagram (API de Meta). SIN dependencias
     web/       el sitio público (Next.js 15, JavaScript, HTML estático)
-    pruebas/   `npm test`, 300+ pruebas, sin red
+    pruebas/   `npm test`, 680+ pruebas, sin red
 
 Flujo: fuentes → ingesta → clasificar → puntaje → semáforo → `web/data/portada.json`
-→ GitHub Actions (cada 30 min) → **Cloudflare Pages** (desde el 24/09; Vercel APAGADO el 25/09, queda
-de respaldo). **La web se actualiza con la PC apagada.**
+→ GitHub Actions (cada 30 min) → **Cloudflare Pages** (desde el 24/09). Vercel
+está apagado desde el 25/09; falta borrar el proyecto. **La web se actualiza con
+la PC apagada.**
 
 Redes (todo desde GitHub, con la PC apagada): `redes.yml` es el reloj. Varias veces
 por día publica en Facebook y, si a esa hora le toca una historia o reel, la arma
@@ -59,9 +60,16 @@ publicar piezas a mano. Detalle y horarios en `REDES.md`.
   reemplazos multilínea: un `\n` literal no encuentra nada.
 - **Escapar barras invertidas desde la terminal falla.** Para regex con `\b`,
   `\s`, `\d`: escribir un archivo `.cjs` con la herramienta Write, no `node -e`.
-- **`web/data/portada.json` lo regenera GitHub Actions.** Antes de `git push`
-  suele haber conflicto en ese archivo: `git pull --rebase`, resolver con
-  `git checkout --theirs web/data/portada.json`, continuar.
+- **`web/data/portada.json` y `web/data/archivo.json` los regenera GitHub
+  Actions.** Antes de `git push` suele haber conflicto en esos archivos:
+  `git pull --rebase`, resolver con `git checkout --theirs` sobre cada uno,
+  continuar.
+- **La dirección de una nota es fija** desde la primera vez que sale, aunque la
+  IA cambie el titular después (los enlaces ya están en Facebook). La portada
+  muestra sólo 72 horas; `web/data/archivo.json` guarda lo publicado de los
+  últimos 180 días (hasta 2500 notas) y de ahí también salen páginas. Si una
+  nota pasa a rojo o amarillo, o una persona la bloquea, sale del archivo y
+  pierde la página. Todo en `web/lib/archivo.js`.
 - **El turno de farmacia dura hasta las 8:30 de la mañana del día siguiente**, no
   hasta la medianoche. La regla está en `ingesta/utiles.mjs`.
 - **Las palabras clave cortas engañan.** "gol" encontraba "golpe"; "partido" en
@@ -83,28 +91,33 @@ publicar piezas a mano. Detalle y horarios en `REDES.md`.
 
 ## Cuentas
 
-- **GitHub:** `balcardev@gmail.com` (única con ese correo). Repo `balcar-dev/radar-balcarce`.
+- **GitHub:** `balcardev@gmail.com` (única con ese correo). Repo
+  `balcar-dev/radar-balcarce`, **público desde el 25/09**: un repo privado
+  gastaba los 2.000 minutos gratis de Actions hacia el día 6 de cada mes, y
+  los públicos no pagan minutos. Se revisó todo el historial: no hay ninguna
+  clave. Por eso, más que nunca, nada sensible en el repo.
 - **Todo lo demás:** `radarbalcarce@gmail.com` (Cloudflare, Vercel, Google/Gemini, Meta, Instagram).
 - **Meta:** app "Radar Balcarce Publicador" (ID 2302218363874399), usuario del
   sistema `publicador-radar`, token sin vencimiento en el secreto `META_TOKEN`.
   Página de Facebook "Radar Balcarce"; su ID para la API es **1254237411116171**
   (no el número de la dirección de Facebook). Instagram `@radarbalcarce`.
-- El correo de los commits automáticos es el noreply de GitHub, porque Vercel
-  valida la firma contra una cuenta de GitHub. No cambiarlo.
+- El correo de los commits automáticos es el noreply de GitHub (lo pedía
+  Vercel para validar la firma). No cambiarlo.
 
 ## Estado y pendientes
 
 - Sitio: **`radarbalcarce.com`**, servido por **Cloudflare Pages** desde el
   24/09 (nameservers de DonWeb → Cloudflare; `www` también). Se despliega solo
   después de cada "Actualizar la web" (`cloudflare-deploy.yml`, con los
-  secretos `CLOUDFLARE_API_TOKEN` y `CLOUDFLARE_ACCOUNT_ID`). Vercel (apagado el 25/09: sin conexión a GitHub) ya no
-  despliega ni recibe el dominio; falta borrar el proyecto. `www`
+  secretos `CLOUDFLARE_API_TOKEN` y `CLOUDFLARE_ACCOUNT_ID`). Vercel está
+  apagado desde el 25/09 (sin conexión a GitHub); falta borrar el proyecto y
+  limpiar el DNS que quedó. `www`
   redirige (301) al dominio sin `www` con una regla de Cloudflare. Web
   Analytics de Cloudflare está activado. Search Console verificado y con los
   dos sitemaps enviados (24/09). Cloudflare permite publicidad; Vercel Hobby no.
 - **Redes, al 24/09: andando.** Meta destrabó la cuenta; Redes y Piezas están
-  prendidos y los dispara cron-job.org (dos trabajos, uno para "Actualizar la
-  web" y otro para el reloj de Redes; si un trabajo falla varias veces
+  prendidos y los dispara cron-job.org (tres trabajos: "Actualizar la web",
+  el reloj de Redes y "Vigilancia"; si un trabajo falla varias veces
   cron-job.org lo **desactiva solo**: revisarlos si algo deja de salir).
   Facebook publica una nota por vez (5 por día como máximo, relevancia 75 o
   más) con el enlace a la nota y sin nombrar la fuente, y la espeja como foto
@@ -129,8 +142,11 @@ publicar piezas a mano. Detalle y horarios en `REDES.md`.
   el reloj de redes y las piezas fijas del día, y avisa por **WhatsApp**
   (CallMeBot; secretos `WHATSAPP_TELEFONO` y `WHATSAPP_APIKEY`, los pega una
   persona) una vez cada 6 horas por problema, más un resumen "todo bien" a las
-  21. También avisa 30 días antes de que venza el token de GitHub
-  (21/09/2027). Sin esos secretos corre igual y no avisa.
+  21. También avisa 30 días antes de que venzan el token de GitHub y el
+  dominio (los dos el 21/09/2027). **El WhatsApp funciona desde el 25/09**
+  (se prueba con el workflow "Prueba de WhatsApp"). Sin esos secretos corre
+  igual y no avisa. Cuando encuentra un problema deja un aviso amarillo en
+  Actions, no una falla roja.
 - **Base comercial** (`comercial/`, ver `COMERCIAL.md`): comercios de Balcarce, aparte
   del sitio, con puntaje de "¿sigue abierto?". Todavía no se usa en la web.
 - **SEO:** `web/scripts/auditar-seo-vivo.mjs [url]` audita las páginas
@@ -160,6 +176,8 @@ publicar piezas a mano. Detalle y horarios en `REDES.md`.
 | cambiar cuánto puntaje pide cada sección | `PISO_DE_AFUERA` y `CUPO_DE_AFUERA`, mismo archivo |
 | agregar un tema que se sigue | `TEMAS`, mismo archivo |
 | ajustar el filtro de la IA | `ingesta/verificar.mjs` |
+| que el semáforo mire lo que escribe la IA | `reels/reescritura.mjs` (`semaforoDeLaReescritura`; usa las listas de `REGLAS_SEMAFORO`) |
+| cuánto dura una nota en la portada o en el archivo | `web/lib/archivo.js` (`HORAS_EN_PORTADA`, `DIAS_DE_ARCHIVO`, `MAXIMO_EN_ARCHIVO`) |
 | cambiar el tono o las reglas con que la IA reescribe una nota | `reels/reescritura.mjs` (`INSTRUCCION_EDITORIAL`, `esTemaSerio`) |
 | cambiar cuándo salen las historias | panel → Calendario (`panel/horarios.mjs`) |
 | cambiar qué se publica en Facebook, reels, historias o el podcast | `redes/elegir.mjs` |
@@ -191,6 +209,7 @@ publicar piezas a mano. Detalle y horarios en `REDES.md`.
 | `INVESTIGACION-COMPETENCIA.md` | Lo que hacen los otros medios, con hecho/pendiente |
 | `POLITICA-PRIVACIDAD.md` | El texto de la política de privacidad del sitio |
 | `PENDIENTES.md` | Qué falta, por categoría |
+| `AUDITORIA.md` | La auditoría del 25/09 y qué quedó arreglado o pendiente |
 | `AUDITORIA.md` | Última auditoría completa (25/09), por urgencia |
 | `IDEAS.md` | Ideas de producto |
 | `NOTAS.md` | Decisiones vigentes (corto) |

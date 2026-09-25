@@ -1,8 +1,8 @@
-# Radar Balcarce — estado del proyecto
+# Radar Balcarce — historia del proyecto
 
-Última revisión: 21 de septiembre de 2026 (ver la sección 10 para las redes). Este archivo es el que se lee
-antes de tocar nada: qué existe, qué falta, y las decisiones que ya se
-tomaron para no volver a discutirlas cada vez.
+**Documento histórico.** Cuenta qué se hizo y por qué, con fecha. Lo que dicen
+las secciones viejas puede ya no valer: para saber cómo está todo hoy, leer
+`EMPEZAR-ACA.md` y `CLAUDE.md`. Última entrada: 25/09/2026 (sección 13).
 
 Ver también [`INVESTIGACION.md`](INVESTIGACION.md) — lo legal y lo
 competitivo, investigado aparte para no inflar este archivo. Y
@@ -529,3 +529,51 @@ entero, con estado y puertos: `npm test` no abre red por regla del proyecto);
 y `ingesta/auditar.mjs` / `ingesta/probar.mjs` (herramientas de diagnóstico
 para correr a mano). La lógica pura que tenían adentro y se podía separar sin
 riesgo, se separó y sí se probó.
+
+## 13. Auditoría y arreglos del 25/09/2026
+
+A la mañana se hizo una auditoría de sólo lectura en cinco áreas (seguridad y
+legal, código, web y SEO, infraestructura, documentación). Está completa en
+[`AUDITORIA.md`](AUDITORIA.md), con el estado de cada ítem al cierre del día.
+Durante el día se arregló casi todo (commit "Arreglos de la auditoría del
+25/09"). Las pruebas pasaron de 537 a 684.
+
+**Lo que costaba lectores.** Los enlaces que se publicaban en Facebook daban
+404 cuando la IA cambiaba el titular o la nota salía de la portada. Ahora la
+dirección queda fija desde la primera publicación, `web/data/archivo.json`
+guarda 180 días de notas con página (se rescataron 1556 del historial; se
+sacaron 22 que el semáforo nuevo manda a revisar) y la 404 rescata por el
+identificador. También: canónico propio en Farmacias, Agenda, Útil y
+Privacidad (decían ser la portada), la imagen para compartir como
+`image/png`, "Quiénes somos" y "Contacto".
+
+**Lo legal.** El semáforo miraba el título y 600 caracteres, pero la IA
+escribía con la nota entera. Ahora mira el texto completo y lo que escribió la
+IA, y la instrucción de la IA prohíbe identificar menores y víctimas.
+Hernán y Andrés decidieron términos nuevos para las listas roja y amarilla,
+cada uno con su prueba. El pie decía "siempre con revisión humana" y ninguna
+nota la había tenido: se cambió por lo que pasa de verdad.
+
+**Lo que podía frenar todo.** El repositorio era privado y gastaba los 2.000
+minutos gratis de Actions hacia el día 6 de cada mes: se hizo **público**,
+después de revisar que no hubiera ninguna clave en todo el historial. El
+WhatsApp de la Vigilancia nunca había funcionado (teléfono de 7 dígitos y una
+clave mal copiada): se recargaron los dos y llegó el mensaje de prueba.
+
+**Operación.** Hora de Balcarce y tiempos máximos en los workflows; tiempos
+máximos en Gemini (con la clave en el encabezado), Meta y el clima;
+`wrangler` en versión fija; la Vigilancia deja un aviso amarillo en vez de
+pintar de rojo y avisa el vencimiento del dominio. Vercel se apagó y el panel
+dejó de publicar ahí. La portada muestra sólo 72 horas, ahora en la nube.
+Automovilismo tuvo cupo de afuera por primera vez y la IA reescribe primero lo
+local. Facebook dejó de repetir tema y corta a las 22:00 en punto.
+
+**Panel.** Respaldo sin claves en texto plano, freno de intentos que no se
+saltea, control de origen, "Salir" por POST, "probar una fuente" sin acceso a
+la red de la casa, poda de decisiones a 60 días, y una prueba que sigue los
+imports en cadena para que no se cuele una dependencia de afuera.
+
+**Lo que quedó para una persona:** borrar el proyecto de Vercel, AdSense y
+`ads.txt`, decidir si Política y Policiales esperan también en la web,
+confirmar el texto de "Quiénes somos", borrar las claves viejas y reiniciar el
+panel. Todo en `PENDIENTES.md`.

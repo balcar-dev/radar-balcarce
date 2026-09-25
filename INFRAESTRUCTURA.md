@@ -25,13 +25,13 @@ PC de Hernán: el panel (puerto 4321) ── sincroniza decisiones a GitHub
 
 | Dónde | Qué hace | Cuenta |
 |---|---|---|
-| **GitHub Actions** (repo `balcar-dev/radar-balcarce`) | Todo el trabajo automático. La PC apagada no importa. | `balcardev@gmail.com` |
-| **Cloudflare Pages** | Sirve la web (`radarbalcarce.com` y `www`, que redirige con 301 al dominio sin `www`). El DNS del dominio también está en Cloudflare. Web Analytics activado. | `radarbalcarce@gmail.com` |
-| **Vercel** | APAGADO el 25/09 (se le sacó la conexión con GitHub: ya no despliega ni recibe el dominio; el proyecto sigue ahí por si hay que volver) (`PENDIENTES.md`). El plan Hobby no permite publicidad. | `radarbalcarce@gmail.com` |
+| **GitHub Actions** (repo `balcar-dev/radar-balcarce`) | Todo el trabajo automático. La PC apagada no importa. El repositorio es **público desde el 25/09**: los repos públicos no gastan minutos de Actions. Privado, el plan gratis trae 2.000 minutos por mes y se usaban unos 360 por día: se acababan hacia el día 6. Se revisó todo el historial y no hay ninguna clave en el repo; las claves viven en GitHub Secrets. (El WhatsApp que aparece en `web/lib/datos.js` es el de contacto público del sitio.) | `balcardev@gmail.com` |
+| **Cloudflare Pages** | Sirve la web (`radarbalcarce.com` y `www`, que redirige con 301 al dominio sin `www`). El DNS del dominio también está en Cloudflare. Web Analytics activado. Los encabezados de lo publicado (tipo de la imagen para compartir, HSTS y otros de seguridad, caché de un año para `/_next/static`) están en `web/public/_headers`. | `radarbalcarce@gmail.com` |
+| **Vercel** | **Apagado desde el 25/09** (sin conexión a GitHub: no despliega ni recibe el dominio). El panel tampoco publica ahí. Falta borrar el proyecto y limpiar el DNS que quedó (`PENDIENTES.md`). El plan Hobby no permite publicidad. | `radarbalcarce@gmail.com` |
 | **cron-job.org** | Dispara tres trabajos en GitHub cada 30 minutos: "Actualizar la web", el reloj de "Redes" y "Vigilancia". | `radarbalcarce@gmail.com` |
 | **Meta** (app "Radar Balcarce Publicador") | Publicar en la página de Facebook "Radar Balcarce" y en Instagram `@radarbalcarce`. Usuario del sistema `publicador-radar`, token sin vencimiento. | `radarbalcarce@gmail.com` |
 | **Gemini** (Google) | Dos claves separadas: una para redactar las notas y otra (paga) para las voces y los reels. | `radarbalcarce@gmail.com` |
-| **CallMeBot** | Manda el WhatsApp de la vigilancia, sólo al número que lo activó. | El teléfono de Hernán |
+| **CallMeBot** | Manda el WhatsApp de la vigilancia, sólo al número que lo activó. **Funciona desde el 25/09.** | El teléfono de Hernán |
 | **Search Console** | Indexación en Google (propiedad de dominio). | `radarbalcarce@gmail.com` |
 | **La PC de Hernán** | El panel y su carpeta `panel/datos/`. Ver `PANEL.md`. | — |
 
@@ -39,15 +39,17 @@ PC de Hernán: el panel (puerto 4321) ── sincroniza decisiones a GitHub
 
 | Workflow | Cuándo corre | Qué hace |
 |---|---|---|
-| `actualizar.yml` · Actualizar la web | cron-job.org cada 30 min (y un `schedule` propio de GitHub, que es impuntual, como respaldo) | Lee las 33 fuentes, reescribe con IA lo que sale sin revisión, corre las pruebas, arma `web/data/portada.json` y lo sube. **Si las pruebas fallan, la web se queda como estaba.** |
-| `cloudflare-deploy.yml` · Cloudflare Pages | Al terminar "Actualizar la web" | Compila el sitio y lo sube a Cloudflare Pages. |
+| `actualizar.yml` · Actualizar la web | cron-job.org cada 30 min (y un `schedule` propio de GitHub, que es impuntual, como respaldo) | Lee las 33 fuentes, reescribe con IA lo que sale sin revisión, corre las pruebas, arma `web/data/portada.json` (sólo notas de las últimas 72 h) y `web/data/archivo.json` (lo publicado de los últimos 180 días) y los sube. Tiempo máximo: 20 minutos. **Si las pruebas fallan, la web se queda como estaba.** |
+| `cloudflare-deploy.yml` · Cloudflare Pages | Al terminar "Actualizar la web" | Compila el sitio y lo sube a Cloudflare Pages con `wrangler` en una versión fija (4.139.0). Tiempo máximo: 15 minutos. |
 | `redes.yml` · Redes | cron-job.org cada 30 min, de 7 a 23 (y al terminar "Actualizar la web") | Publica en Facebook y, si a esa hora toca una pieza, la arma con la voz de Gemini y la sube a Instagram y a la página. |
 | `piezas.yml` · Piezas | A mano (Actions → Piezas → Run workflow) | Armar o publicar una pieza puntual. |
-| `vigilancia.yml` · Vigilancia | cron-job.org cada 30 min (y un `schedule` propio como respaldo) | Corre `redes/vigilar.mjs`. |
+| `vigilancia.yml` · Vigilancia | cron-job.org cada 30 min (y un `schedule` propio como respaldo) | Corre `redes/vigilar.mjs`. Si encuentra un problema deja un aviso amarillo en Actions (no una falla roja) y manda el WhatsApp. |
+| `prueba-whatsapp.yml` · Prueba de WhatsApp | A mano (Actions → Prueba de WhatsApp → Run workflow) | Manda un mensaje de prueba. Sirve para ver que los secretos de WhatsApp están bien. |
 | `auditoria.yml` · Auditoría | Lunes, 12:00 UTC (9:00 en Balcarce) | Corre `redes/auditar.mjs`: medidas de imágenes, íconos, SEO en vivo y antigüedad de `FORMATOS.md`. |
 
 Todos comparten el huso horario de Balcarce (`TZ: America/Argentina/Buenos_Aires`)
-donde importa la hora, porque el servidor corre en UTC. "Redes" y "Piezas"
+donde importa la hora, porque el servidor corre en UTC. Los que no necesitan
+escribir en el repositorio tienen permiso de sólo lectura. "Redes" y "Piezas"
 comparten un candado (`concurrency: redes`) para que nunca publiquen dos a la
 vez.
 
@@ -63,11 +65,11 @@ pega una persona, nunca un chat ni un archivo del repo.**
 | `GEMINI_API_KEY_REDACCION` | Secreto | Redactar notas. Acepta el nombre viejo `GEMINI_API_KEY`. Hoy la reescritura usa la clave de redes si ésta falta (`PENDIENTES.md`). |
 | `CLOUDFLARE_API_TOKEN` | Secreto | Subir el sitio a Cloudflare Pages. |
 | `CLOUDFLARE_ACCOUNT_ID` | Secreto | Idem. |
-| `WHATSAPP_TELEFONO` | Secreto | Número al que la vigilancia manda los avisos (con código de país). |
-| `WHATSAPP_APIKEY` | Secreto | La clave que da CallMeBot al activarse. |
+| `WHATSAPP_TELEFONO` | Secreto | Número al que la vigilancia manda los avisos: **completo, con 549 adelante**, sin + ni espacios, el mismo con el que se activó CallMeBot. Hasta el 25/09 estaba cargado con 7 dígitos y no llegaba nada. |
+| `WHATSAPP_APIKEY` | Secreto | La clave que da CallMeBot al activarse: un número corto. Si CallMeBot contesta "APIKey is invalid", está mal copiada. |
 | `GITHUB_TOKEN` | Automático | Lo pone GitHub en cada corrida. No se carga. |
 | `REDES_ACTIVAS` | Variable | El interruptor. Con `Si` (cualquier mayúscula o tilde) publica; con otra cosa sólo simula. |
-| `CLOUDFLARE_PROJECT` | Variable | Nombre del proyecto de Pages. |
+| `CLOUDFLARE_PROJECT` | Variable (opcional) | **No está cargada**: sin ella el workflow usa `radar-balcarce`, que es el nombre real del proyecto de Pages. Sólo haría falta si el proyecto cambiara de nombre. |
 
 Fuera de GitHub:
 
@@ -82,6 +84,7 @@ Fuera de GitHub:
 | Qué | Cuándo | Qué hacer | Quién avisa |
 |---|---|---|---|
 | Token de GitHub de cron-job.org | **21/09/2027** | Crear otro y pegarlo en los **tres** trabajos de cron-job.org | El vigilante, por WhatsApp, 30 días antes (alta en la última semana) |
+| Dominio `radarbalcarce.com` (DonWeb) | **21/09/2027** | Renovarlo en DonWeb. El DNS está en Cloudflare, pero el registro del dominio sigue en DonWeb | El vigilante, por WhatsApp, 30 días antes (grave en la última semana) |
 | Medidas de imágenes de las redes (`FORMATOS.md`) | Cada 90 días desde el 24/09/2026 | Volver a mirar las medidas | La auditoría semanal, por WhatsApp |
 | Número de CallMeBot | Cambia de vez en cuando | Ver `redes/whatsapp.mjs` | Nadie: si el WhatsApp deja de llegar, mirar ahí |
 
@@ -99,7 +102,7 @@ Fuera de GitHub:
 | **`www` dejó de redirigir** | Aviso `www` (leve) | Revisar la regla de redirección en Cloudflare. |
 | **Meta bloquea la API** (pasó del 22 al 24/09) | Fallan "Redes" y las piezas | Detalle en `REDES.md`. |
 | **La auditoría dejó de correr** | Aviso `auditoria-vencida` | Ver el workflow "Auditoría". |
-| **El WhatsApp no llega** | Silencio | Sin los secretos, la vigilancia corre pero no avisa. Mirar el log de "Vigilancia" en Actions, que siempre dice qué encontró. |
+| **El WhatsApp no llega** | Silencio (no llega el resumen de las 21) | Correr Actions → **Prueba de WhatsApp**. Si falla, revisar los dos secretos (teléfono completo con 549, la clave de CallMeBot). Sin los secretos, la vigilancia corre pero no avisa. El log de "Vigilancia" en Actions siempre dice qué encontró. |
 | **La PC está apagada** | Sólo se ve en el panel: no se pueden decidir notas amarillas ni cargar avisos | Nada se rompe: la web, las redes y la vigilancia siguen. |
 
 Los avisos se repiten a lo sumo una vez cada 6 horas por problema, y a las 21

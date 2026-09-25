@@ -1,140 +1,162 @@
 # Pendientes: todo en un solo lugar
 
 Los otros documentos explican **cómo** funciona cada cosa; éste dice **qué
-falta**. Lo que se exige siempre está en `REGLAS.md`.
+falta**. Lo que se exige siempre está en `REGLAS.md`. El estado de la
+auditoría del 25/09, ítem por ítem, está en `AUDITORIA.md`.
 
 *Última revisión: 25/09/2026.* Lo que ya se hizo está al final ("Ya resuelto").
+Cada cosa figura una sola vez: si está en "Para mañana", no se repite abajo.
 
 ## PARA MAÑANA (26/09), en este orden
 
-1. **WhatsApp NO está andando.** El 25/09 el workflow "Prueba de WhatsApp"
-   (Actions → Run workflow) mostró que CallMeBot contesta **"APIKey is
-   invalid"** y que el secreto `WHATSAPP_TELEFONO` tiene **7 dígitos** (tiene
-   que ser el número completo con código de país, sin + ni espacios, el mismo
-   con el que se activó CallMeBot). Hay que cargar de nuevo los dos secretos
-   (los pega una persona) y volver a correr "Prueba de WhatsApp" hasta que
-   llegue el mensaje al celular. Ojo: durante unas horas el código dio ese
-   error por bueno (arreglado el 25/09, con prueba); nunca llegó ningún aviso.
-2. **Ver que la portada quedó bien** con el deploy nuevo (sin fuentes arriba
-   de los títulos, sin "la vimos hace", farmacia sin hora, más nuevas primero)
-   y que el vigilante ya no detecta esas reglas. El 25/09 a la noche estaba bien.
-3. **Cuerpos de las notas:** el 24/09 sólo 15 de 115 notas tenían cuerpo. Mirar
-   si sube (log de "Actualizar la web": clave de Gemini, cuota, verificador).
-4. **Google AdSense** (lo pidió el usuario para mañana).
-5. **Panel online** (`PANEL.md`): decidir cómo se entra (Cloudflare Access o
-   login propio) y que una persona cargue el token de GitHub en Cloudflare.
-6. Cloudflare Web Analytics: el código ya está en el sitio; mirar en el panel
-   de Cloudflare que estén llegando visitas.
-7. Perfiles: aplicar las biografías de `PERFILES.md` (Instagram sólo desde el
-   celular) y hacer avatar/portada; confirmar nombre y categoría.
-8. Comercial: campo "tipo de actividad" y micro-SAS/SAS en el catálogo.
-9. Borrar `panel/datos/CLAVES-INICIALES.txt` cuando las claves nuevas del panel
-   (cambiadas el 25/09) estén guardadas en otro lado.
+1. **Reiniciar el panel** (cerrar su ventana y doble clic en `ARRANCAR.bat`).
+   Sin eso sigue con el código viejo: publica en Vercel, respalda las claves y
+   no tiene los arreglos de seguridad del 25/09.
+2. **Borrar las claves en texto plano.** `panel/datos/CLAVES-INICIALES.txt`
+   (una vez que las contraseñas nuevas estén guardadas en otro lado) y, en las
+   copias viejas de `respaldos/`, los `CLAVES-INICIALES.txt` y `secreto.txt`
+   que quedaron de antes del 25/09. Las copias nuevas ya no los llevan.
+3. **Decidir si Política y Policiales esperan a una persona también en la
+   web** (Hernán y Andrés). Hoy, en la web, salen solas si el semáforo da
+   verde; en las redes siempre esperan a una persona. Si se decide que
+   esperen, es sacarlas de `verdeSecciones` en `ingesta/fuentes.mjs`.
+4. **Confirmar el texto de "Quiénes somos"** (`/quienes-somos`): dice "Lo
+   hacen Hernán y Andrés, dos vecinos de Balcarce". Si no los representa, se
+   cambia en `web/app/quienes-somos/page.js`.
+5. **Cuerpos de las notas:** sólo el 19 % tiene cuerpo (el vigilante pide
+   35 %). Es lo que más pesa para Google y para AdSense. Mirar si sube con la
+   IA reescribiendo primero lo local (log de "Actualizar la web": clave de
+   Gemini, cuota y por qué rechaza el verificador, que ahora lo dice).
+6. **Google AdSense** (lo pidieron Hernán y Andrés). Lo que falta:
+   - una persona abre la cuenta (pide datos fiscales) y pide la revisión;
+   - `ads.txt` con el ID de editor que da AdSense (sin el ID no se puede
+     armar);
+   - más notas con cuerpo (el punto 5): AdSense rechaza sitios con poco
+     contenido propio.
+   "Quiénes somos", "Contacto" y la política de privacidad ya están. La
+   aprobación tarda de días a semanas. Detalle en `PUBLICIDAD.md`.
+7. **Cloudflare Web Analytics:** mirar en el panel de Cloudflare que estén
+   llegando visitas.
+8. **Comercial:** campo "tipo de actividad" y micro-SAS/SAS en el catálogo.
 
 ## A. Redes y automatización
 
-1. **Mirar los primeros días** que salgan bien los tres podcasts, el enlace en
+9. **Mirar los primeros días** que salgan bien los tres podcasts, el enlace en
    los posteos de Facebook y el espejo a Instagram. Si algo deja de salir,
-   **lo primero es revisar cron-job.org**: desactiva solo un trabajo que falla
-   varias veces (`INFRAESTRUCTURA.md`).
-2. **Renovar el token de GitHub antes del 21/09/2027.** Lo usa cron-job.org
-   en sus tres trabajos. El vigilante avisa por WhatsApp 30 días antes.
-3. **Threads**: pide su propio token, distinto del de Facebook e Instagram.
-4. **La agenda de la semana en historia** sólo se arma en la PC, porque
-   `panel/datos/agenda.json` no está en GitHub (a propósito).
-5. Mirar cómo salieron las primeras tandas (voz, horarios, cantidad) y ajustar
-   `redes/elegir.mjs` / `redes/piezas.mjs` según rinda.
-6. **Hashtags**: hoy las piezas salen sin ninguno. Probar `#Balcarce` + uno de
-   la sección durante dos semanas y comparar el alcance con números propios.
-7. Permiso `instagram_manage_insights` para leer qué rinde cada red.
+   seguir los pasos de "Si algo dejó de salir" en `EMPEZAR-ACA.md`.
+10. **Avisos nuevos por WhatsApp, en construcción** (25/09): notas esperando
+    a una persona, noticia local importante, lo que salió en redes, el
+    resumen de las 21 y estadísticas dos veces por día. Cuando estén, se
+    documentan en `INFRAESTRUCTURA.md`.
+11. **Renovar el token de GitHub antes del 21/09/2027.** Lo usa cron-job.org
+    en sus tres trabajos. El vigilante avisa por WhatsApp 30 días antes.
+12. **Threads**: pide su propio token, distinto del de Facebook e Instagram.
+13. **La agenda de la semana en historia** sólo se arma en la PC, porque
+    `panel/datos/agenda.json` no está en GitHub (a propósito).
+14. Mirar cómo salieron las primeras tandas (voz, horarios, cantidad) y ajustar
+    `redes/elegir.mjs` / `redes/piezas.mjs` según rinda.
+15. **Hashtags**: hoy las piezas salen sin ninguno. Probar `#Balcarce` + uno de
+    la sección durante dos semanas y comparar el alcance con números propios.
+16. Permiso `instagram_manage_insights` para leer qué rinde cada red.
 
 ## B. Perfiles y medidas
 
-8. **Aplicar a mano las biografías** de Instagram y Facebook, la categoría, el
-   botón de contacto y las historias destacadas fijas. Los textos están listos
-   en `PERFILES.md`. Instagram sólo se edita desde el celular; Facebook, desde
-   Meta Business Suite.
-9. **Confirmar las medidas de `FORMATOS.md` que no tienen fuente oficial**:
-   foto de perfil de Instagram (1080 × 1080), portada de la página de Facebook
-   (1640 × 624) y foto de perfil de Facebook (720 × 720). Están marcadas
-   `verificado: false` en `redes/formatos.mjs`. Además, volver a mirar todas
-   cada 90 días (la auditoría avisa).
+17. **Aplicar a mano las biografías** de Instagram y Facebook (las nuevas ya
+    no prometen "revisión humana" en todo), la categoría, el botón de
+    contacto y las historias destacadas fijas; hacer avatar y portada;
+    confirmar nombre y categoría. Los textos están listos en `PERFILES.md`.
+    Instagram sólo se edita desde el celular; Facebook, desde Meta Business
+    Suite.
+18. **Confirmar las medidas de `FORMATOS.md` que no tienen fuente oficial**:
+    foto de perfil de Instagram (1080 × 1080), portada de la página de Facebook
+    (1640 × 624) y foto de perfil de Facebook (720 × 720). Están marcadas
+    `verificado: false` en `redes/formatos.mjs`. Además, volver a mirar todas
+    cada 90 días (la auditoría avisa).
 
 ## C. SEO y posicionamiento
 
-Lo hecho y lo que falta, en detalle, en `SEO.md`.
+Lo hecho y lo que falta, en detalle, en `SEO.md`. AdSense está en "Para
+mañana".
 
-10. **Bing Webmaster Tools** (se puede importar desde Search Console; pide un
+19. **Bing Webmaster Tools** (se puede importar desde Search Console; pide un
     permiso de Google, lo hace una persona).
-11. **Google AdSense**: se dejó para más adelante (24/09). Pide cuenta con
-    datos fiscales, verificar el sitio, `ads.txt` y aprobación de días a
-    semanas. Ver `PUBLICIDAD.md`.
-12. Mirar en Search Console qué páginas indexó Google (el sitemap se envió el
+20. Mirar en Search Console qué páginas indexó Google (el sitemap se envió el
     24/09).
-13. **Google Publisher Center** (Google Noticias y Discover): alta manual e
+21. **Google Publisher Center** (Google Noticias y Discover): alta manual e
     imágenes de al menos 1200 px.
-14. Páginas de confianza (quiénes somos, contacto, política editorial).
-15. Medir con PageSpeed Insights (Core Web Vitals) y ajustar.
-16. Depurador de Facebook y Twitter Cards en todas las páginas; parámetros UTM
+22. **Política editorial** como página pública ("Quiénes somos" y "Contacto"
+    ya están desde el 25/09).
+23. Medir con PageSpeed Insights (Core Web Vitals) y ajustar.
+24. Depurador de Facebook y Twitter Cards en todas las páginas; parámetros UTM
     en los enlaces de redes.
-17. Enlaces internos entre notas mientras las etiquetas de temas estén
+25. Enlaces internos entre notas mientras las etiquetas de temas estén
     apagadas (`MOSTRAR_TEMAS`).
-18. Decidir en `robots.txt` si se permite a los rastreadores de IA (GPTBot,
+26. Decidir en `robots.txt` si se permite a los rastreadores de IA (GPTBot,
     ClaudeBot, PerplexityBot, Google-Extended). Decisión editorial.
-19. Google Business Profile, si corresponde.
+27. Google Business Profile, si corresponde.
+28. Nota duplicada con dos direcciones ("Zona Fría"): el agrupamiento todavía
+    no las une.
 
 ## D. Editorial y contenido
 
-20. Mirar cómo salen las notas reescritas con IA (cuerpo distinto del copete,
+29. Mirar cómo salen las notas reescritas con IA (cuerpo distinto del copete,
     sin inventos) y ajustar el prompt si hace falta. Detalle en `EDITORIAL.md`.
-21. **Decidir con números** qué sección puede salir sola, cuál se lee más y si
+30. **Falsos positivos conocidos del semáforo** (Hernán y Andrés deciden: la
+    lista no se toca sin preguntar): "violación de la ley" da rojo y "el menor
+    de los males" da amarillo. Hoy es preferible pasarse de cuidadoso; si
+    frena demasiadas notas, se afina la frase.
+31. **Decidir con números** qué sección puede salir sola, cuál se lee más y si
     conviene partir o unir alguna, cuando la analítica de Cloudflare tenga un
     par de semanas de tráfico.
-22. **Fuentes nuevas para evaluar** (faltan confirmar si tienen RSS): **Acción
+32. **Fuentes nuevas para evaluar** (faltan confirmar si tienen RSS): **Acción
     5** (deportivo balcarceño, una segunda voz para Deportes) y el **Boletín
     Oficial Municipal** (`sibom.slyt.gba.gov.ar/bulletins/11595`, fuente
     primaria de las actas del Concejo Deliberante; conecta con `IDEAS.md`).
-23. Lo pendiente de la investigación de la competencia (WhatsApp para
+33. Lo pendiente de la investigación de la competencia (WhatsApp para
     lectores, alertas de clima, "lo más leído", encuestas): ver
     `INVESTIGACION-COMPETENCIA.md` § 4.
 
 ## E. Panel
 
-24. **Panel 100% online.** Hoy vive en la PC de Hernán y, con la PC apagada, no
-    se pueden decidir notas amarillas ni cargar avisos. Opciones sin costo y
-    con costo en `PANEL.md`.
-25. **Apuntar `RESPALDO_CARPETA`** a una carpeta de Drive u OneDrive, para que
+34. **Panel 100% online.** Hoy vive en la PC de Hernán y, con la PC apagada, no
+    se pueden decidir notas amarillas ni cargar avisos. Primero hay que
+    decidir cómo se entra (Cloudflare Access o login propio) y que una persona
+    cargue el token de GitHub en Cloudflare. Opciones sin costo y con costo en
+    `PANEL.md`.
+35. **Apuntar `RESPALDO_CARPETA`** a una carpeta de Drive u OneDrive, para que
     el respaldo del panel quede afuera de la PC. Si se rompe el disco hoy, se
     pierde el historial editorial.
-26. Confirmar que `panel/datos/CLAVES-INICIALES.txt` ya no existe. (Las
-    contraseñas del panel se cambiaron el 25/09; si se difunde otra, se cambia
-    con `node panel/clave.mjs`.)
-27. Cerrar el túnel de Tailscale (`tailscale funnel --https=443 off`) cuando no
+36. Cerrar el túnel de Tailscale (`tailscale funnel --https=443 off`) cuando no
     haga falta.
 
-## F. Infraestructura
+## F. Infraestructura y código
 
-28. **(Vercel apagado el 25/09: se le sacó la conexión con GitHub, ya no despliega; el proyecto sigue ahí por si hay que volver.) Falta borrar el proyecto y limpiar el DNS que quedó de Vercel.** El dominio ya lo
-    sirve Cloudflare desde el 24/09; Vercel sólo queda de respaldo. Borrar
-    también el sitio duplicado de la cuenta vieja (`radar-balcarce.vercel.app`).
-29. **Activar el WhatsApp de la vigilancia** si todavía no llega el resumen de
-    las 21: contacto de CallMeBot, mensaje de activación y los secretos
-    `WHATSAPP_TELEFONO` y `WHATSAPP_APIKEY` (pasos en `redes/whatsapp.mjs`).
-    Con eso funcionando, sigue sólo.
-30. **Clave gratuita de redacción** (`GEMINI_API_KEY_REDACCION`) sin cargar en
+37. **Borrar el proyecto de Vercel y limpiar el DNS que quedó.** Vercel está
+    apagado desde el 25/09 (sin conexión a GitHub, no despliega). Borrar
+    también el sitio duplicado de la cuenta vieja
+    (`radar-balcarce.vercel.app`).
+38. **Clave gratuita de redacción** (`GEMINI_API_KEY_REDACCION`) sin cargar en
     GitHub: la reescritura usa la clave paga de redes (decidido el 24/09).
-31. Comentarios de código con datos viejos (no se tocaron: sólo documentación):
-    `.github/workflows/actualizar.yml` dice "22 fuentes" y "conectado a
-    Vercel"; `web/components/buscador.js`, `web/components/compartir.js` y
-    `web/components/piezas.js` citan `INVESTIGACION-PORTALES.md` /
-    `INVESTIGACION-NACIONALES.md`, que ahora son `INVESTIGACION-COMPETENCIA.md`;
-    `web/scripts/generar-datos.mjs` cita `NOTAS.md`, fase 2.
+39. **`tocaHoy`** (`ingesta/utiles.mjs`, qué día salen los teléfonos útiles)
+    todavía cuenta el día con la zona del servidor, no con la de Balcarce.
+40. **`reels/ilustrar.mjs`** (un experimento) todavía manda la clave de Gemini
+    en la dirección (`?key=`). Lo demás ya la manda en el encabezado.
+41. `next`/`postcss` con una vulnerabilidad conocida (riesgo bajo: el sitio es
+    estático). Actualizar cuando haya versión.
+42. Una política de seguridad de contenido (CSP) completa en
+    `web/public/_headers` (hoy sólo `frame-ancestors`).
+43. Restos de Vercel en el código: comentarios en
+    `web/scripts/generar-datos.mjs` y `web/components/piezas.js`, y
+    `web/scripts/generar-redirects.mjs` sigue escribiendo `web/vercel.json`
+    (ya no se commitea).
+44. `ingesta/ingesta.mjs` es muy largo; hay scripts de experimentos sueltos en
+    `reels/`.
 
 ## G. Base comercial y publicidad
 
-32. **Completar los 145 comercios**, pedir la lista de socios a la Cámara de
+45. **Completar los 145 comercios**, pedir la lista de socios a la Cámara de
     Comercio y el padrón de habilitaciones al municipio. Todo en `COMERCIAL.md`.
-33. **Cargar el primer aviso** en los tres espacios de la web, preguntar
+46. **Cargar el primer aviso** en los tres espacios de la web, preguntar
     precios en Balcarce y armar la página `/publicidad` y el media kit
     (`PUBLICIDAD.md`).
 
@@ -147,14 +169,40 @@ Cambian cómo funciona algo: conviene decidir con calma.
 - **Una vista previa de lo que el reloj va a publicar** en las próximas horas.
 - **Analítica propia sin cookies** más completa que la de Cloudflare.
 - **Probar los workflows localmente** (`act`).
-- **Revisar la accesibilidad** de la web (contraste, texto alternativo,
-  teclado): no se auditó.
+- **Revisar la accesibilidad** de la web a fondo (el 25/09 se arreglaron el
+  contraste de Automovilismo y el nombre del buscador; falta el resto).
 - **La guía comercial y el mapa de Balcarce** con marketing conjunto y
   sorteos (`IDEAS.md`, `COMERCIAL.md`): la idea más grande y la que más
   conecta con vender publicidad.
 
 ## Ya resuelto (para no volver a proponerlo)
 
+- **Arreglos de la auditoría del 25/09** (detalle en `AUDITORIA.md`):
+  - **WhatsApp de la Vigilancia funcionando** (teléfono completo con 549 y la
+    clave correcta; probado con "Prueba de WhatsApp").
+  - **Repositorio público**, para no quedarse sin minutos de Actions. Sin
+    claves en el historial.
+  - **Enlaces de redes que no se rompen**: dirección fija desde la primera
+    publicación, archivo de 180 días (`web/data/archivo.json`) y rescate en
+    la 404. Se recuperaron 1556 notas.
+  - **Portada sólo con notas de las últimas 72 h**, ahora en la nube (antes
+    sólo con la PC prendida). Se vio que la portada quedó bien.
+  - **Semáforo más estricto**: mira el texto completo y lo que escribe la IA;
+    términos nuevos con una prueba por término; la IA tiene prohibido
+    identificar menores y víctimas.
+  - Cupos de afuera (Automovilismo 12, Tecnología 8, Política 8) y la IA
+    reescribe primero lo local.
+  - Facebook no repite tema en 24 h y publica hasta las 22:00 en punto.
+  - Web: canónico propio en Farmacias, Agenda, Útil y Privacidad; "Quiénes
+    somos" y "Contacto"; pie honesto sobre la revisión; `_headers`; logo en
+    el JSON-LD; `es-AR`; sitemap de noticias sin fechas de relleno.
+  - Workflows con hora de Balcarce, tiempos máximos, `wrangler` fijo y
+    permisos justos; la Vigilancia avisa el vencimiento del dominio y ya no
+    pinta de rojo.
+  - Panel: ya no publica en Vercel, respaldo sin claves, freno de intentos
+    firme, control de origen, "Salir" por POST, poda de decisiones a 60 días,
+    sin dependencias de afuera (con prueba que sigue los imports en cadena).
+  - Vercel apagado (queda borrar el proyecto: punto 37).
 - Dominio propio (`radarbalcarce.com`, 21/09) y mudanza a **Cloudflare Pages**
   (24/09), con `www` redirigido y Web Analytics.
 - Search Console verificado y sitemaps enviados (24/09); datos estructurados;

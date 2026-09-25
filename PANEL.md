@@ -25,16 +25,25 @@ Dos usuarios: **Hernán** y **Andrés**. Cada uno con su contraseña.
 - Se guardan con hash en `panel/datos/usuarios.json`. Las contraseñas
   iniciales se cambiaron el 25/09/2026; si `panel/datos/CLAVES-INICIALES.txt`
   todavía existe, se borra.
-- Protecciones (`panel/acceso.mjs`, con pruebas en `pruebas/acceso.test.mjs`):
-  cookie de sesión firmada, cookie `Secure` cuando se entra por el túnel, freno
-  de una IP después de cinco intentos fallidos, y el error de acceso no delata
-  si el usuario existe.
+- Protecciones (`panel/acceso.mjs` y `panel/seguridad.mjs`, con pruebas en
+  `pruebas/acceso.test.mjs` y `pruebas/panel-seguridad.test.mjs`):
+  - cookie de sesión firmada, y `Secure` cuando se entra por el túnel;
+  - freno de una IP después de cinco intentos fallidos. Desde el 25/09 no se
+    puede saltear inventando la IP: el encabezado `X-Forwarded-For` sólo se
+    cree si la conexión viene de la misma PC (el túnel);
+  - **control de origen**: un pedido que cambia algo y viene de otra página
+    se rechaza;
+  - **"Salir" es un POST**, no un enlace: otra página no puede cerrar la
+    sesión;
+  - "probar una fuente" sólo acepta `http` y `https` y no entra a la red de
+    la casa ni a la propia PC;
+  - el error de acceso no delata si el usuario existe.
 
 ## Qué hace cada pestaña
 
 | Pestaña | Para qué |
 |---|---|
-| **Para decidir** | La cola de notas amarillas (Política, Policiales, denuncias, detenidos, promociones): publicar, descartar o editar título, copete y cuerpo |
+| **Para decidir** | La cola de notas amarillas (denuncias, detenidos, muertes, chicos, promociones, lo de afuera con poco puntaje y País): publicar, descartar o editar título, copete y cuerpo. Política y Policiales llegan acá sólo si el semáforo las frena: si da verde, salen solas a la web (a las redes, nunca sin una persona) |
 | **Publicadas / Descartadas / Frenadas / Archivadas** | Lo ya decidido. **Frenadas** es el semáforo rojo (menores, víctimas): no se publica ni por error. **Archivadas** son las que pasaron 72 horas sin decidir |
 | **Fuentes** | Las 33 fuentes, con sus pesos y temas |
 | **Clima y farmacias** | Lo que la web muestra hoy |
@@ -52,7 +61,13 @@ cambio, el panel sube solo a GitHub `web/data/decisiones.json` y
 `web/data/avisos.json`. Con eso "Actualizar la web" respeta lo decidido aunque
 la PC se apague. Si algo falla (sin internet, un conflicto de git), lo cuenta en
 la consola y no rompe el panel: el cambio queda en el archivo y se sube en el
-siguiente intento. Se apaga con `SINCRONIZAR_GITHUB=no`.
+siguiente intento. Se apaga con `SINCRONIZAR_GITHUB=no`. Al exportar,
+`decisiones.json` se poda: se van las decisiones de más de 60 días, salvo lo
+que una persona sacó de circulación.
+
+**El panel ya no publica la web.** Hasta el 25/09 intentaba subir a Vercel
+cada 2 horas y regeneraba `portada.json`; se sacó. La web la arma y la
+publica GitHub ("Actualizar la web" → Cloudflare Pages).
 
 **Lo que NO se sincroniza, a propósito:** `panel/datos/` (usuarios con hash,
 buzón con datos de personas, agenda, cuota de Gemini). Está en `.gitignore`.
@@ -63,10 +78,15 @@ horas, con las últimas 14 copias. Por defecto va a `respaldos/` junto al
 proyecto (también ignorada por git). Con la variable `RESPALDO_CARPETA`
 apuntando a una carpeta de Drive u OneDrive, la copia queda también afuera de
 la PC. **Pendiente**: apuntarla (`PENDIENTES.md`). Nunca va a GitHub: hay
-contraseñas y datos de gente.
+usuarios y datos de gente. **Desde el 25/09 no copia `CLAVES-INICIALES.txt`
+ni `secreto.txt`** (las claves en texto plano y la firma de las sesiones).
+Las copias viejas de `respaldos/` todavía los tienen: hay que borrarlos a
+mano.
 
 Cada cambio en `ingesta/`, `panel/` o `reels/` exige **reiniciar el panel**
 (cerrar su ventana y correr `ARRANCAR.bat`): Node carga el código al arrancar.
+**Los arreglos del 25/09 (seguridad, respaldo, Vercel) sólo corren después de
+reiniciarlo.**
 
 ## La limitación: no es online
 
