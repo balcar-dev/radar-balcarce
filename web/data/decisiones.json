@@ -1,5 +1,5 @@
 {
-  "exportado": "2026-09-25T13:02:40.370Z",
+  "exportado": "2026-09-25T13:14:21.033Z",
   "decisiones": {
     "1951120": {
       "estado": "automatica",
@@ -316,23 +316,102 @@
     },
     "19jah2t": {
       "estado": "automatica",
-      "titulo": "Periodista de Balcarce cubre el Mundial desde El Salvador",
-      "copete": "El periodista balcarceño Claudio Martínez cubre la Copa del Mundo desde El Salvador, país donde reside hace más de dos décadas.",
-      "cuerpo": null,
-      "guion": "Un periodista nacido en Balcarce radicado en El Salvador vive la experiencia de cubrir mundiales de fútbol desde adentro. Una trayectoria internacional que comenzó en Buenos Aires y hoy lo lleva a los escenarios principales del deporte.",
+      "titulo": "Un periodista nacido en Balcarce cubre un nuevo Mundial",
+      "copete": "El periodista Claudio Martínez, radicado en El Salvador y con pasado en la revista El Gráfico, cubre la Copa del Mundo para un programa radial. A pesar de los años fuera de la ciudad, mantiene su arraigo local.",
+      "cuerpo": "El periodista deportivo Claudio Martínez, nacido en Balcarce y radicado desde hace veinticuatro años en El Salvador, cubre una nueva Copa del Mundo para el programa radial La Tribu.\n\nDurante su carrera cubrió Juegos Olímpicos y competencias internacionales, aunque destaca que el torneo de fútbol conserva una fiesta y un color únicos en las tribunas. Además, señaló los cambios tecnológicos en la profesión, que pasó de la labor escrita a la producción multimedia simultánea para radio y plataformas digitales.\n\nAunque sus visitas a la ciudad son menos frecuentes y suele encontrarse con amigos en Mar del Plata, Martínez remarca su identidad balcarceña.",
+      "guion": "Un periodista nacido en Balcarce cubre un nuevo Mundial",
       "deIA": true,
       "por": "ia",
-      "cuando": "2026-09-18T17:38:54.557Z"
+      "cuando": "2026-09-25T13:14:20.979Z",
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El periodista deportivo Claudio Martínez, nacido en Balcarce, cubre su segundo Mundial desde El Salvador para un ciclo radial. Con pasado en El Gráfico y una trayectoria consolidada en Centroamérica, mantiene intacto su arraigo con la ciudad.",
+      "etiquetas": [
+        "Claudio Martínez",
+        "Periodismo",
+        "Mundial",
+        "Deportes",
+        "El Salvador"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/de-balcarce-al-mundial-la-historia-del-periodista-que-vive-el-futbol-desde-adentro-899",
+          "fecha": null,
+          "oficial": false,
+          "aporte": "Detalla la trayectoria del periodista Claudio Martínez, su cobertura del Mundial desde El Salvador y su vínculo con Balcarce."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "5evl6s",
+          "titulo": "De Balcarce al Mundial: la historia del periodista que vive el fútbol desde adentro",
+          "fecha": "2026-09-18T05:43:46.737Z",
+          "ruta": "/nota/de-balcarce-al-mundial-la-historia-del-periodista-que-vive-el-futbol-5evl6s"
+        },
+        {
+          "id": "1s6jmdm",
+          "titulo": "La mexicana Rosa María Guerrero hace historia y se lleva el oro al imponer récord mundial de Para Atletismo",
+          "fecha": "2026-09-19T06:13:33.000Z",
+          "ruta": "/nota/la-mexicana-rosa-maria-guerrero-hace-historia-y-se-lleva-el-oro-al-1s6jmdm"
+        },
+        {
+          "id": "4nzjd0",
+          "titulo": "Yamal se tiró flores por el gol de Ferrán en la final del Mundial: \"La gente no se da cuenta\" y \"los que saben de fútbol lo valoran\"",
+          "fecha": "2026-09-18T16:35:57.000Z",
+          "ruta": "/nota/yamal-se-tiro-flores-por-el-gol-de-ferran-en-la-final-del-mundial-la-4nzjd0"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
     },
     "119oqdp": {
       "estado": "automatica",
-      "titulo": "Éxito de la gala solidaria por la infancia en el teatro",
-      "copete": "El Teatro Municipal albergó el viernes el festival solidario \"Voces por la Infancia\", organizado por la Sociedad de Protección a la Infancia.",
-      "cuerpo": null,
-      "guion": "Música y solidaridad se unieron en el Teatro Municipal. La Sociedad de Protección a la Infancia reunió a la comunidad en una nueva edición del festival benéfico para acompañar a los chicos.",
+      "titulo": "La Sociedad de Protección a la Infancia realiza Voces por la Infancia en Balcarce",
+      "copete": "La Sociedad de Protección a la Infancia llevó adelante el festival Voces por la Infancia en el Teatro Municipal Luis Conti, en una propuesta que reunió a la comunidad en una noche de arte y solidaridad.",
+      "cuerpo": "El Teatro Municipal Luis Conti fue escenario de una nueva edición de Voces por la Infancia, un evento impulsado por la Sociedad de Protección a la Infancia que combinó propuestas artísticas con un fin solidario. La iniciativa convocó a numerosos vecinos de Balcarce en una propuesta orientada a acompañar el desarrollo y las necesidades de la infancia local a través de la música y la emoción.\n\nEl encuentro permitió que la institución volviera a encontrarse de manera presencial con la comunidad local, fortaleciendo los lazos de colaboración y apoyo mutuo entre los asistentes y la entidad organizadora. Las actividades contaron con la participación de artistas locales sobre el escenario del principal coliseo balcarceño.\n\nDesde la organización destacaron la respuesta positiva de los espectadores que se acercaron a colaborar con la institución durante la jornada cultural desarrollada en el centro de la ciudad.",
+      "guion": "La Sociedad de Protección a la Infancia realiza Voces por la Infancia en Balcarce",
       "deIA": true,
       "por": "ia",
-      "cuando": "2026-09-18T17:38:55.654Z"
+      "cuando": "2026-09-25T13:14:20.980Z",
+      "claves": [
+        "Se realizó el festival Voces por la Infancia",
+        "El evento tuvo lugar en el Teatro Municipal Luis Conti",
+        "La organización estuvo a cargo de la Sociedad de Protección a la Infancia"
+      ],
+      "seSabe": [
+        "La Sociedad de Protección a la Infancia organizó el encuentro Voces por la Infancia.",
+        "El evento se desarrolló en el Teatro Municipal Luis Conti.",
+        "La propuesta combinó arte, solidaridad y música."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "La Sociedad de Protección a la Infancia llevó adelante el festival solidario Voces por la Infancia en el Teatro Municipal Luis Conti, una propuesta cultural que reunió a los vecinos de Balcarce en torno al arte y la colaboración.",
+      "etiquetas": [
+        "Sociedad de Protección a la Infancia",
+        "Teatro Municipal Luis Conti",
+        "Voces por la Infancia",
+        "solidaridad"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/una-noche-de-musica-solidaridad-y-suenos-para-acompanar-a-la-infancia-625",
+          "fecha": null,
+          "oficial": false,
+          "aporte": "Informó sobre la realización del festival Voces por la Infancia en el Teatro Municipal Luis Conti organizado por la Sociedad de Protección a la Infancia."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
     },
     "64m33v": {
       "estado": "automatica",
@@ -7726,23 +7805,90 @@
     },
     "14m0mm5": {
       "estado": "automatica",
-      "titulo": "Tato Melucci presenta su nueva obra teatral en Balcarce",
-      "copete": "El actor Donatto Melucci regresa este fin de semana a Balcarce con un unipersonal inspirado en los recuerdos de su padre.",
-      "cuerpo": null,
-      "guion": "Tato Melucci presenta su nueva obra teatral en Balcarce",
+      "titulo": "Actualizan los servicios de sepelios de la Cooperativa en Balcarce",
+      "copete": "La Cooperativa de Electricidad emitió el listado con los recientes servicios de sepelios correspondientes a los fallecimientos registrados en el distrito.",
+      "cuerpo": "La Cooperativa de Electricidad «General Balcarce» Limitada informó los detalles de los servicios de sepelios prestados a lo largo de los últimos meses en el distrito. La información comprende los cronogramas de los velatorios, los oficios religiosos y los destinos de los restos en cada caso.\n\nLos procedimientos incluyeron inhumaciones en el Cementerio Municipal y cremaciones en el Crematorio Privado de Miramar, según los requerimientos de las familias. Las ceremonias contaron con el acompañamiento de familiares y allegados en las salas velatorias habilitadas.\n\nLos servicios se coordinaron a través de la entidad local, que centraliza las prestaciones funerarias y la atención a los deudos en las diferentes casas de duelo dispuestas tanto en la zona urbana como en áreas rurales del partido.",
+      "guion": "Actualizan los servicios de sepelios de la Cooperativa en Balcarce",
       "deIA": true,
       "por": "ia",
-      "cuando": "2026-09-21T01:07:55.793Z"
+      "cuando": "2026-09-25T13:14:20.979Z",
+      "claves": [
+        "La Cooperativa de Electricidad informó sobre los servicios de sepelios prestados.",
+        "Se detallaron los cronogramas de velatorios y traslados a cementerios.",
+        "Las familias participaron de las ceremonias de inhumación y cremación."
+      ],
+      "seSabe": [
+        "La Cooperativa de Electricidad «General Balcarce» Limitada estuvo a cargo de los servicios de sepelios.",
+        "Los restos fueron destinados al Cementerio Municipal y al Crematorio Privado de Miramar según cada caso."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "La Cooperativa de Electricidad dio a conocer el detalle de los recientes servicios de sepelios prestados en el distrito.",
+      "etiquetas": [
+        "servicios de sepelios",
+        "Cooperativa de Electricidad",
+        "Balcarce",
+        "fallecimientos"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/tato-melucci-vuelve-a-balcarce-con-una-obra-atravesada-por-la-memoria-de-su-padre-997",
+          "fecha": null,
+          "oficial": false,
+          "aporte": "Aportó el registro de los servicios de sepelios y los detalles de los fallecimientos en el distrito."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
     },
     "1q76ezk": {
       "estado": "automatica",
-      "titulo": "Remate conjunto de cabañas Angus en Balcarce",
-      "copete": "Las cabañas María Luján y San Antonio realizaron su octavo remate anual conjunto de genética Angus en las instalaciones locales.",
-      "cuerpo": null,
-      "guion": "Remate conjunto de cabañas Angus en Balcarce",
+      "titulo": "Informan sobre servicios de sepelios en Balcarce",
+      "copete": "Se difundieron los avisos fúnebres y los detalles de los servicios de sepelios prestados en el distrito durante las últimas semanas.",
+      "cuerpo": "La Cooperativa de Electricidad General Balcarce dio a conocer los detalles correspondientes a los servicios de sepelios y traslados a salas velatorias llevados a cabo en el partido. Los procedimientos incluyeron inhumaciones en el Cementerio Municipal y cremaciones en el distrito vecino de Miramar, según los registros difundidos.\n\nLos reportes detallan las casas de duelo de las personas fallecidas en distintas fechas a lo largo de los últimos meses, abarcando tanto la planta urbana como zonas rurales del distrito como Los Pinos. Las ceremonias contaron con los previos oficios religiosos habituales en las salas velatorias de la institución.\n\nEste tipo de comunicados recopila de manera periódica la información sobre los servicios prestados a la comunidad local, detallando las locaciones y los horarios dispuestos para la despedida de los vecinos por parte de sus familiares y allegados.",
+      "guion": "Informan sobre servicios de sepelios en Balcarce",
       "deIA": true,
       "por": "ia",
-      "cuando": "2026-09-21T01:07:57.100Z"
+      "cuando": "2026-09-25T13:14:20.980Z",
+      "claves": [
+        "La Cooperativa de Electricidad informó sobre servicios fúnebres.",
+        "Se detallaron inhumaciones y cremaciones.",
+        "Los procedimientos incluyeron zonas urbanas y rurales de Balcarce."
+      ],
+      "seSabe": [
+        "La Cooperativa de Electricidad General Balcarce informó sobre los servicios de sepelios prestados.",
+        "Se registraron inhumaciones en el Cementerio Municipal y cremaciones en Miramar.",
+        "Los servicios incluyeron el uso de salas velatorias y atención a casas de duelo locales."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "La Cooperativa de Electricidad dio a conocer el detalle de los servicios de sepelios y traslados a salas velatorias realizados en distintas fechas en el partido de Balcarce.",
+      "etiquetas": [
+        "Balcarce",
+        "servicios fúnebres",
+        "cooperativa de electricidad",
+        "sepelios"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/la-genetica-y-calidad-de-dos-colores-de-una-misma-raza-cotizadas-en-la-pista-968",
+          "fecha": null,
+          "oficial": false,
+          "aporte": "Aportó el listado de servicios fúnebres, fechas de fallecimiento y detalles de sepelios de la Cooperativa de Electricidad."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
     },
     "14pejg2": {
       "estado": "automatica",
@@ -7966,13 +8112,68 @@
     },
     "1s8swk5": {
       "estado": "automatica",
-      "titulo": "El Concejo pidió informes al Municipio por obras públicas",
-      "copete": "El Concejo Deliberante aprobó un proyecto para solicitar detalles sobre el estado de las obras y el área tras una renuncia en Balcarce.",
-      "cuerpo": null,
-      "guion": "El Concejo pidió informes al Municipio por obras públicas",
+      "titulo": "El Concejo pide informes al Municipio por obras tras una renuncia en Balcarce",
+      "copete": "El cuerpo legislativo aprobó un proyecto para conocer detalles sobre la continuidad del área de Obras y Servicios Públicos y el estado de los trabajos en marcha.",
+      "cuerpo": "La iniciativa, fundamentada por la concejal Sol Di Gerónimo, requiere detalles sobre quién ocupará el reemplazo, las funciones asignadas y el impacto del recambio en la planificación de los trabajos municipales, un sector que actualmente se encuentra bajo la órbita del secretario Gustavo Torres. El pedido también exige un detalle físico y financiero del plan de obras, incluyendo el bacheo urbano, la red vial rural y las delegaciones, además de reclamar precisiones sobre intervenciones prioritarias como el Geriátrico Municipal, el autódromo Juan Manuel Fangio y el Hospital Municipal Subzonal. Por su parte, el concejal Ignacio Capeccio, de la Alianza La Libertad Avanza, acompañó la iniciativa y propuso convocar a Torres a la Comisión de Planeamiento ante las demoras previas en las respuestas del área.",
+      "guion": "El Concejo pide informes al Municipio por obras tras una renuncia en Balcarce.",
       "deIA": true,
       "por": "ia",
-      "cuando": "2026-09-21T02:54:43.483Z"
+      "cuando": "2026-09-25T13:14:20.980Z",
+      "claves": [
+        "El Concejo Deliberante aprobó un pedido de informes al Ejecutivo municipal.",
+        "La iniciativa surge tras la renuncia del subsecretario de Obras y Servicios Públicos.",
+        "Se solicita información sobre el estado de las obras y la asignación de fondos.",
+        "La Libertad Avanza propuso convocar al secretario Gustavo Torres al recinto."
+      ],
+      "seSabe": [
+        "El Concejo Deliberante aprobó un proyecto de comunicación presentado por el bloque de Fuerza Patria.",
+        "La iniciativa fue impulsada por la concejal Sol Di Gerónimo.",
+        "El área de Obras y Servicios Públicos está a cargo de Gustavo Torres tras la salida del subsecretario Nicolás Álvarez Quintero.",
+        "El concejal Ignacio Capeccio respaldó el pedido y sugirió convocar a Torres a la Comisión de Planeamiento."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El Concejo Deliberante aprobó un pedido de informes al Municipio sobre la situación del área de Obras y Servicios Públicos y el estado de los trabajos en marcha tras la renuncia del subsecretario del área.",
+      "etiquetas": [
+        "Concejo Deliberante",
+        "Obras Públicas",
+        "Municipalidad de Balcarce"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/el-concejo-pidio-al-municipio-detalles-sobre-las-obras-y-la-continuidad-del-area-tras-la-renuncia-de-alvarez-quintero-903",
+          "fecha": null,
+          "oficial": false,
+          "aporte": "Detalló la aprobación del pedido de informes del Concejo sobre la obra pública tras la salida de Álvarez Quintero."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1chkxhh",
+          "titulo": "El Concejo Deliberante debate tasas y obras en Balcarce",
+          "fecha": "2026-09-25T02:23:01.000Z",
+          "ruta": "/nota/concejo-deliberante-la-decimocuarta-sesion-tuvo-debates-mas-1chkxhh"
+        },
+        {
+          "id": "1iv58lw",
+          "titulo": "El Concejo Deliberante debate tasas, obras y proyectos en Balcarce",
+          "fecha": "2026-09-24T12:55:31.000Z",
+          "ruta": "/nota/concejo-deliberante-este-jueves-se-desarrollara-el-decimocuarto-1iv58lw"
+        },
+        {
+          "id": "1spjzhb",
+          "titulo": "El Concejo designa Paseo Intendente Juan José Mare a la vuelta interna del Cerro en Balcar",
+          "fecha": "2026-09-25T12:46:51.000Z",
+          "ruta": "/nota/el-concejo-designa-paseo-intendente-juan-jose-mare-a-la-vuelta-1spjzhb"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
     },
     "160xnh": {
       "estado": "automatica",
@@ -8454,13 +8655,59 @@
     },
     "1pr955": {
       "estado": "automatica",
-      "titulo": null,
-      "copete": null,
-      "cuerpo": null,
-      "guion": null,
-      "deIA": null,
-      "por": null,
-      "cuando": "2026-09-21T06:14:13.292Z"
+      "titulo": "Kreplak asiste al Senado para defender proyectos sanitarios",
+      "copete": "El ministro de Salud bonaerense acude al Senado para respaldar iniciativas sobre política sanitaria impulsadas por el Ejecutivo.",
+      "cuerpo": "El ministro de Salud, Nicolás Kreplak, asiste al Senado para defender proyectos de ley sobre política sanitaria considerados clave por el gobierno provincial. Las iniciativas se encuentran trabadas en la Legislatura e incluyen la creación de una empresa de medicamentos.\n\nPor otra parte, la oposición cruza al ministro durante su presentación en el debate parlamentario.\n\nEstas discusiones legislativas ocurren en el contexto del tratamiento de proyectos sanitarios impulsados por la administración provincial en la cámara alta.",
+      "guion": "Kreplak asiste al Senado para defender proyectos sanitarios",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T13:14:20.980Z",
+      "claves": [
+        "El ministro de Salud concurrió al Senado",
+        "Defendió proyectos de ley sanitarios del Ejecutivo",
+        "Las iniciativas están trabadas en la Legislatura",
+        "La oposición cuestionó al funcionario"
+      ],
+      "seSabe": [
+        "El ministro de Salud, Nicolás Kreplak, acudió al Senado.",
+        "El funcionario defendió proyectos de ley sobre política sanitaria.",
+        "Las iniciativas del Ejecutivo están trabadas en la Legislatura.",
+        "Uno de los proyectos busca crear una empresa de medicamentos.",
+        "La oposición cruzó al ministro por IOMA."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El ministro de Salud bonaerense, Nicolás Kreplak, concurrió al Senado para defender proyectos clave del Ejecutivo vinculados a la política sanitaria que se encuentran trabados en la Legislatura.",
+      "etiquetas": [
+        "Kreplak",
+        "Senado",
+        "Salud",
+        "Legislatura",
+        "IOMA"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/kreplak-fue-al-senado-a-defender-dos-proyectos-del-ejecutivo-pero-la-oposicion-lo-cruzo-por-ioma-925",
+          "fecha": null,
+          "oficial": false,
+          "aporte": "Informó la visita del ministro Nicolás Kreplak al Senado para defender proyectos sanitarios y las críticas de la oposición."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "4y8q12",
+          "titulo": "Senado: sin la oposición en el recinto, el Gobierno convirtió en ley la reforma del régimen de zona fría",
+          "fecha": "2026-09-24T22:21:00.000Z",
+          "ruta": "/nota/senado-sin-la-oposicion-en-el-recinto-el-gobierno-convirtio-en-ley-la-4y8q12"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
     },
     "tape5j": {
       "estado": "automatica",
