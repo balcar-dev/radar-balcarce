@@ -23,8 +23,9 @@ Cada cosa figura una sola vez: si está en "Para mañana", no se repite abajo.
 4. **Confirmar el texto de "Quiénes somos"** (`/quienes-somos`): dice "Lo
    hacen Hernán y Andrés, dos vecinos de Balcarce". Si no los representa, se
    cambia en `web/app/quienes-somos/page.js`.
-5. **Cuerpos de las notas:** sólo el 19 % tiene cuerpo (el vigilante pide
-   35 %). Es lo que más pesa para Google y para AdSense. Mirar si sube con la
+5. **Cuerpos de las notas:** el 25/09 a la mañana tenía cuerpo el 19 %; a la
+   madrugada, con la portada de 72 h y la IA primero en lo local, 62 de 104
+   (60 %). El vigilante pide 35 %. Es lo que más pesa para Google y para AdSense. Mirar si sube con la
    IA reescribiendo primero lo local (log de "Actualizar la web": clave de
    Gemini, cuota y por qué rechaza el verificador, que ahora lo dice).
 6. **Google AdSense** (lo pidieron Hernán y Andrés). Lo que falta:
@@ -35,8 +36,15 @@ Cada cosa figura una sola vez: si está en "Para mañana", no se repite abajo.
      contenido propio.
    "Quiénes somos", "Contacto" y la política de privacidad ya están. La
    aprobación tarda de días a semanas. Detalle en `PUBLICIDAD.md`.
-7. **Cloudflare Web Analytics:** mirar en el panel de Cloudflare que estén
-   llegando visitas.
+7. **Permisos para las estadísticas** (las pide el resumen de WhatsApp; los
+   seguidores ya llegan):
+   - Cloudflare: crear un token con *Account · Account Analytics · Read* y
+     guardarlo como secreto `CLOUDFLARE_ANALYTICS_TOKEN` (pasos en
+     `INFRAESTRUCTURA.md`).
+   - Meta: regenerar el token del usuario del sistema `publicador-radar` con
+     todos los permisos de ahora **más** `read_insights` e
+     `instagram_manage_insights`, y reemplazar `META_TOKEN`.
+   - Probar con Actions → "Prueba de estadísticas".
 8. **Comercial:** campo "tipo de actividad" y micro-SAS/SAS en el catálogo.
 
 ## A. Redes y automatización
@@ -44,10 +52,9 @@ Cada cosa figura una sola vez: si está en "Para mañana", no se repite abajo.
 9. **Mirar los primeros días** que salgan bien los tres podcasts, el enlace en
    los posteos de Facebook y el espejo a Instagram. Si algo deja de salir,
    seguir los pasos de "Si algo dejó de salir" en `EMPEZAR-ACA.md`.
-10. **Avisos nuevos por WhatsApp, en construcción** (25/09): notas esperando
-    a una persona, noticia local importante, lo que salió en redes, el
-    resumen de las 21 y estadísticas dos veces por día. Cuando estén, se
-    documentan en `INFRAESTRUCTURA.md`.
+10. **Avisos nuevos por WhatsApp** (andando desde el 25/09, ver
+    `INFRAESTRUCTURA.md`): mirar los primeros días que no sean demasiados ni
+    muy pocos, y ajustar los umbrales en `redes/avisos.mjs`.
 11. **Renovar el token de GitHub antes del 21/09/2027.** Lo usa cron-job.org
     en sus tres trabajos. El vigilante avisa por WhatsApp 30 días antes.
 12. **Threads**: pide su propio token, distinto del de Facebook e Instagram.

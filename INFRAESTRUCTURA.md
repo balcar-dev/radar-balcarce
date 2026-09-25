@@ -44,6 +44,7 @@ PC de Hernán: el panel (puerto 4321) ── sincroniza decisiones a GitHub
 | `redes.yml` · Redes | cron-job.org cada 30 min, de 7 a 23 (y al terminar "Actualizar la web") | Publica en Facebook y, si a esa hora toca una pieza, la arma con la voz de Gemini y la sube a Instagram y a la página. |
 | `piezas.yml` · Piezas | A mano (Actions → Piezas → Run workflow) | Armar o publicar una pieza puntual. |
 | `vigilancia.yml` · Vigilancia | cron-job.org cada 30 min (y un `schedule` propio como respaldo) | Corre `redes/vigilar.mjs`. Si encuentra un problema deja un aviso amarillo en Actions (no una falla roja) y manda el WhatsApp. |
+| `prueba-estadisticas.yml` · Prueba de estadísticas | A mano | Muestra las visitas de la web y los números de Facebook e Instagram, y qué permisos faltan. No guarda ni avisa. |
 | `prueba-whatsapp.yml` · Prueba de WhatsApp | A mano (Actions → Prueba de WhatsApp → Run workflow) | Manda un mensaje de prueba. Sirve para ver que los secretos de WhatsApp están bien. |
 | `auditoria.yml` · Auditoría | Lunes, 12:00 UTC (9:00 en Balcarce) | Corre `redes/auditar.mjs`: medidas de imágenes, íconos, SEO en vivo y antigüedad de `FORMATOS.md`. |
 
@@ -60,16 +61,32 @@ pega una persona, nunca un chat ni un archivo del repo.**
 
 | Nombre | Tipo | Para qué |
 |---|---|---|
-| `META_TOKEN` | Secreto | Publicar en Facebook e Instagram. No vence. |
+| `META_TOKEN` | Secreto | Publicar en Facebook e Instagram, y leer seguidores. No vence. Para vistas, alcance e interacciones le faltan los permisos `read_insights` e `instagram_manage_insights` (al regenerarlo, tildar TODOS los de ahora más esos dos). |
 | `GEMINI_API_KEY_REDES` | Secreto | Voces y reels (clave paga). Sin ella los reels no arrancan. |
 | `GEMINI_API_KEY_REDACCION` | Secreto | Redactar notas. Acepta el nombre viejo `GEMINI_API_KEY`. Hoy la reescritura usa la clave de redes si ésta falta (`PENDIENTES.md`). |
 | `CLOUDFLARE_API_TOKEN` | Secreto | Subir el sitio a Cloudflare Pages. |
-| `CLOUDFLARE_ACCOUNT_ID` | Secreto | Idem. |
+| `CLOUDFLARE_ACCOUNT_ID` | Secreto | Idem (también para las estadísticas). |
+| `CLOUDFLARE_ANALYTICS_TOKEN` | Secreto (**falta cargarlo**) | Leer las visitas de Cloudflare Web Analytics para las estadísticas. Token de Cloudflare con permiso *Account · Account Analytics · Read*. Sin él, el resumen dice "falta permiso de Analytics". |
 | `WHATSAPP_TELEFONO` | Secreto | Número al que la vigilancia manda los avisos: **completo, con 549 adelante**, sin + ni espacios, el mismo con el que se activó CallMeBot. Hasta el 25/09 estaba cargado con 7 dígitos y no llegaba nada. |
 | `WHATSAPP_APIKEY` | Secreto | La clave que da CallMeBot al activarse: un número corto. Si CallMeBot contesta "APIKey is invalid", está mal copiada. |
 | `GITHUB_TOKEN` | Automático | Lo pone GitHub en cada corrida. No se carga. |
 | `REDES_ACTIVAS` | Variable | El interruptor. Con `Si` (cualquier mayúscula o tilde) publica; con otra cosa sólo simula. |
 | `CLOUDFLARE_PROJECT` | Variable (opcional) | **No está cargada**: sin ella el workflow usa `radar-balcarce`, que es el nombre real del proyecto de Pages. Sólo haría falta si el proyecto cambiara de nombre. |
+
+### Avisos por WhatsApp y estadísticas (25/09)
+
+El vigilante (`redes/vigilar.mjs`, `redes/avisos.mjs`) junta todo en **un solo
+WhatsApp por corrida**, con los problemas primero:
+
+- **Problemas** (web, corridas, reloj de redes, piezas del día, vencimientos): una vez cada 6 h por problema.
+- **Notas esperando a una persona**: cada 3 h como mucho y sólo si hay nuevas. Salen del campo `pendientes` de `portada.json`, que escribe `generar-datos` sin notas rojas y sin titular en Policiales o si habla de chicos o víctimas.
+- **Noticia de Balcarce muy importante**: relevancia 100 y la misma noticia en 3 medios o más; 2 por día como mucho.
+- **Lo que salió en redes** desde la corrida anterior, en una línea por pieza.
+- **Estadísticas** a las 9 (`redes/estadisticas.mjs`; historia en `web/data/estadisticas.json`, sólo números).
+- **Resumen del día** a las 21, siempre: notas, redes, piezas, pendientes, problemas y estadísticas.
+
+Lo ya avisado se guarda en `web/data/vigilancia.json`. Para ver cómo llega el
+resumen sin guardar nada: Actions → Vigilancia → Run workflow → modo "probar-resumen".
 
 Fuera de GitHub:
 
