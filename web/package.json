@@ -9,8 +9,7 @@
     "_comentario_build": "OJO: build NO regenera los datos. scripts/generar-datos.mjs (que lee ../ingesta y ../panel) corre aparte, con `npm run datos`: lo hace GitHub Actions (Actualizar la web), y data/portada.json y data/archivo.json se versionan a proposito. El build (Cloudflare Pages) compila con lo que ya esta. redirects si corre en el build: solo lee esos datos.",
     "redirects": "node scripts/generar-redirects.mjs",
     "build": "npm run redirects && next build",
-    "datos-y-build": "npm run datos && npm run redirects && next build",
-    "start": "next start"
+    "datos-y-build": "npm run datos && npm run redirects && next build"
   },
   "dependencies": {
     "next": "^15.0.0",
