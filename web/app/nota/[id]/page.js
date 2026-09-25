@@ -12,6 +12,7 @@ import { notFound } from 'next/navigation';
 import { parteDeNota } from '@/lib/ruta';
 import { MOSTRAR_TEMAS } from '@/lib/sitio';
 import { recortarEn, sinTitularRepetido } from '@/lib/texto';
+import { parrafosConEnlaces } from '@/lib/enlaces-en-texto';
 
 export function generateStaticParams() {
   // El parámetro es "titular-en-guiones-id". Ver lib/ruta.js. Van todas las
@@ -96,9 +97,27 @@ export default function PaginaNota({ params }) {
         {/* El cuerpo: la nota elaborada. Desde el 25/09 una nota automática
             sin cuerpo no se publica (web/lib/cuerpo.js); sólo puede faltar en
             lo que publicó una persona a mano o en páginas viejas del archivo. */}
-        {n.cuerpo && n.cuerpo.split('\n').map((p) => p.trim()).filter(Boolean).map((parrafo) => (
-          <p key={parrafo.slice(0, 40)} style={{ fontSize: 16, lineHeight: 1.7, marginTop: 16, color: 'var(--texto)' }}>{parrafo}</p>
+        {/* Las notas propias (lib/notas-propias.js) llevan enlaces adentro del
+            texto: la del repaso, a cada nota que se contó; la del dólar, a
+            /dolar. El cuerpo sigue siendo texto plano. */}
+        {n.cuerpo && parrafosConEnlaces(n.cuerpo, n.enlacesEnTexto).map((pedazos, i) => (
+          <p key={`${i}-${pedazos[0].texto.slice(0, 40)}`} style={{ fontSize: 16, lineHeight: 1.7, marginTop: 16, color: 'var(--texto)' }}>
+            {pedazos.map((x, j) => (x.href
+              ? <a key={j} href={x.href} style={{ color: 'var(--rojo)', fontWeight: 600 }} {...(x.externo ? { target: '_blank', rel: 'noopener noreferrer' } : {})}>{x.texto}</a>
+              : x.texto))}
+          </p>
         ))}
+
+        {/* El enlace destacado de una nota propia: "Ver la cotización
+            actualizada" (/dolar) o el video del repaso en Instagram y
+            Facebook. */}
+        {n.destacados?.length > 0 && (
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: 10, marginTop: 22 }}>
+            {n.destacados.map((d) => (
+              <a key={d.href} href={d.href} className="boton rojo" {...(d.externo ? { target: '_blank', rel: 'noopener noreferrer' } : {})}>{d.texto}</a>
+            ))}
+          </div>
+        )}
 
         {/* Lo que ve el lector es la nota: título, bajada y cuerpo. Al pie,
             las fuentes en un desplegable chico y cerrado (nombre del medio y

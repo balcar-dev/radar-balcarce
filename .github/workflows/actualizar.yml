@@ -115,7 +115,9 @@ jobs:
           # intentos-ia.json: cuántas veces se le pidió cada nota a Gemini (tope
           # de tres por nota, reels/reescritura.mjs). Sin guardarlo, el tope no
           # existiría: cada corrida empezaría de cero.
-          git add web/data/portada.json web/data/archivo.json web/data/agenda.json web/data/intentos-ia.json
+          # dolar-historia.json: la cotización de las 11 de cada día hábil, para
+          # la nota propia del dólar y su comparación (web/lib/notas-propias.js).
+          git add web/data/portada.json web/data/archivo.json web/data/agenda.json web/data/intentos-ia.json web/data/dolar-historia.json
           if git diff --cached --quiet; then
             echo "Sin novedades: no hay nada que publicar."
           else

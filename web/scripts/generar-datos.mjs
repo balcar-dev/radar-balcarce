@@ -27,6 +27,10 @@ import {
   vigenteEnPortada, slugsConocidos, fijarSlug, actualizarArchivo, idsEnRedes, sinPuntaje, comoArchivoJson,
 } from '../lib/archivo.js';
 import { actualizarAgenda, comoAgendaJson } from '../lib/eventos.js';
+import { traerDolar } from '../lib/dolar.js';
+import {
+  cuandoArmarDolar, entradaDelDia, sumarAlHistorial, comoHistoriaJson, notasDelDolar, notasDeRepasos,
+} from '../lib/notas-propias.js';
 
 const AQUI = import.meta.dirname;
 const DATOS_PANEL = path.join(AQUI, '..', '..', 'panel', 'datos');
@@ -46,6 +50,10 @@ const EVENTOS_PANEL = path.join(AQUI, '..', 'data', 'eventos-panel.json');
 // MAXIMO_DE_INTENTOS): { id: { intentos, ultimo, motivo } }, podado a 7 días.
 // Va versionado: es la única memoria entre corridas de lo que NO salió.
 const INTENTOS_IA = path.join(AQUI, '..', 'data', 'intentos-ia.json');
+// La cotización del dólar de las 11 de cada día hábil, 60 días: de ahí sale la
+// nota propia del dólar y su comparación con días anteriores
+// (lib/notas-propias.js). Va versionado, como intentos-ia.json.
+const HISTORIA_DOLAR = path.join(AQUI, '..', 'data', 'dolar-historia.json');
 
 function leerJson(archivo, porDefecto = null) {
   try { return JSON.parse(fs.readFileSync(archivo, 'utf8')); } catch { return porDefecto; }
@@ -239,16 +247,11 @@ function notaPublicada(n) {
   return nota;
 }
 
-const publicadas = (ultima.notas ?? [])
+// Lo que viene de las fuentes. Las notas propias se suman más abajo, después
+// de saber qué salió del archivo.
+const deLaIngesta = (ultima.notas ?? [])
   .map(notaPublicada)
-  .filter(Boolean)
-  .sort((a, b) => new Date(b.fecha) - new Date(a.fecha));
-
-// Lo que se MUESTRA (portada, secciones, temas, buscador, feed): sólo lo de
-// las últimas 72 horas. El 25/09 la portada tenía 43 notas de más de tres
-// días, porque el panel las archiva sólo cuando la PC está prendida. La
-// página de cada una sigue existiendo: está en el archivo.
-const notas = publicadas.filter((n) => vigenteEnPortada(n));
+  .filter(Boolean);
 
 // ------------------------------------------------------------- el archivo
 //
@@ -283,6 +286,60 @@ for (const a of archivoAnterior.notas ?? []) {
     retiradas.add(a.id);
   }
 }
+// ------------------------------------------------------ las notas propias
+//
+// La del dólar (una por día hábil, desde las 11) y la de cada podcast que
+// salió en las redes (lib/notas-propias.js). Texto armado con plantilla a
+// partir de datos que tenemos: los números de DolarApi y lo que esas notas
+// ya publicaron. Sin IA.
+//
+// La cotización se sale a buscar sólo en la nube: en la PC, escribir
+// dolar-historia.json dejaría un cambio suelto en el repositorio que trabaría
+// la sincronización del panel. La PC arma igual las notas con lo guardado.
+const historiaAntes = leerJson(HISTORIA_DOLAR, null);
+let historiaDolar = historiaAntes ?? { dias: [] };
+if (enLaNube) {
+  const toca = cuandoArmarDolar({ historia: historiaDolar });
+  if (toca.armar) {
+    const datos = await traerDolar();
+    const entrada = datos?.fuente === 'dolarapi' ? entradaDelDia(datos, { consultado: new Date(datos.consultado) }) : null;
+    if (entrada) {
+      historiaDolar = sumarAlHistorial(historiaDolar, entrada);
+      console.log(`  dólar: se guardó la cotización de hoy (oficial ${entrada.cotizaciones.oficial.venta}, blue ${entrada.cotizaciones.blue.venta})`);
+    } else {
+      console.log('  dólar: DolarApi todavía no tiene la cotización de hoy (o es feriado): se vuelve a probar en la próxima corrida');
+    }
+  }
+}
+// Se escribe siempre que falte: el workflow lo suma con `git add`.
+if (!historiaAntes || JSON.stringify(historiaDolar) !== JSON.stringify(historiaAntes)) {
+  fs.writeFileSync(HISTORIA_DOLAR, comoHistoriaJson(historiaDolar), 'utf8');
+}
+
+// Las notas con página, para contar cada podcast: lo de esta corrida y el
+// archivo, sin lo que se acaba de retirar. Un repaso que ya no se puede armar
+// (una de sus notas se retiró) también se retira.
+const conPagina = new Map([
+  ...(archivoAnterior.notas ?? []).filter((a) => !retiradas.has(a.id)),
+  ...deLaIngesta,
+].map((n) => [n.id, n]));
+const { notas: repasos, noSeArman } = notasDeRepasos(libroRedes, conPagina, { catalogo: TEMAS });
+for (const id of noSeArman) retiradas.add(id);
+// La regla de cuerpo vale también para lo propio (lib/cuerpo.js).
+const propias = [...notasDelDolar(historiaDolar), ...repasos]
+  .map((n) => fijarSlug(n, direcciones))
+  .filter((n) => tieneCuerpo(n));
+if (propias.length) console.log(`  notas propias: ${propias.map((n) => n.id).join(', ')}`);
+
+const publicadas = [...deLaIngesta, ...propias]
+  .sort((a, b) => new Date(b.fecha) - new Date(a.fecha));
+
+// Lo que se MUESTRA (portada, secciones, temas, buscador, feed): sólo lo de
+// las últimas 72 horas. El 25/09 la portada tenía 43 notas de más de tres
+// días, porque el panel las archiva sólo cuando la PC está prendida. La
+// página de cada una sigue existiendo: está en el archivo.
+const notas = publicadas.filter((n) => vigenteEnPortada(n));
+
 const archivo = actualizarArchivo({
   archivo: archivoAnterior.notas ?? [],
   // Las partes nuevas que hoy no están (una persona corrigió el texto, o la

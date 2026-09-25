@@ -275,6 +275,27 @@ export function crearCliente({
     return { id: inicio.video_id, postId: fin.post_id ?? null };
   }
 
+  /**
+   * La dirección pública de algo ya publicado, para poder enlazarlo desde la
+   * web (la nota de cada podcast, web/lib/notas-propias.js). Sin efectos: sólo
+   * pregunta.
+   *
+   *   Instagram: el campo `permalink` del medio ("https://www.instagram.com/reel/…").
+   *   Facebook:  el campo `permalink_url` del video, que a veces viene sin el
+   *              dominio ("/reel/…"): se completa.
+   *
+   * Devuelve la dirección o null si Meta no la da.
+   */
+  async function enlaceDePublicacion({ id, red }) {
+    if (!id) return null;
+    const p = await pagina();
+    const campo = red === 'instagram' ? 'permalink' : 'permalink_url';
+    const j = await pedir(String(id), { conToken: p.tokenPagina, params: { fields: campo } });
+    let url = typeof j?.[campo] === 'string' ? j[campo].trim() : '';
+    if (url.startsWith('/')) url = `https://www.facebook.com${url}`;
+    return /^https:\/\//.test(url) ? url : null;
+  }
+
   /** Un chequeo sin efectos: sirve para saber si el acceso quedó bien. */
   async function verificar() {
     const p = await pagina();
@@ -287,6 +308,7 @@ export function crearCliente({
   }
 
   return {
-    pedir, pagina, publicarEnFacebook, publicarFotoEnInstagram, publicarVideoEnInstagram, publicarVideoEnFacebook, verificar,
+    pedir, pagina, publicarEnFacebook, publicarFotoEnInstagram, publicarVideoEnInstagram, publicarVideoEnFacebook,
+    enlaceDePublicacion, verificar,
   };
 }

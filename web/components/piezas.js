@@ -238,7 +238,18 @@ export function TarjetaBuzon() {
  */
 export function Firma({ nota }) {
   // El mismo criterio que el `author` de los datos estructurados.
-  const { reescrita, revisada } = quienEscribio(nota);
+  const { reescrita, revisada, propia } = quienEscribio(nota);
+
+  // Una nota propia (lib/notas-propias.js) trae su firma escrita: "Nota de
+  // Radar Balcarce armada con los datos de DolarApi.com a las 11:07."
+  if (propia) {
+    return (
+      <p className="firma-nota">
+        <span className="punto-firma" aria-hidden="true" />
+        {nota.firma || 'Nota de Radar Balcarce.'}
+      </p>
+    );
+  }
 
   const texto = reescrita
     ? 'El resumen lo redactó una inteligencia artificial a partir de la nota original.'

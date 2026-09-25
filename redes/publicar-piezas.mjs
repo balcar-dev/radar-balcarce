@@ -15,7 +15,7 @@
 //     vez). Si falla una de las siguientes, se reintenta en el momento y, si
 //     igual no anda, se avisa y se sigue: no se pierde lo que ya salió.
 
-import { anotar } from './elegir.mjs';
+import { anotar, diaAR } from './elegir.mjs';
 import { claveDePieza, piezasQueTocan, tipoInstagram, pieDePieza } from './piezas.mjs';
 
 /** Cómo se llama cada red en el libro y qué método del cliente la publica. */
@@ -26,6 +26,50 @@ export const REDES = {
 
 /** Los intentos en las redes que no mandan. */
 const INTENTOS_SECUNDARIA = 3;
+
+/** ¿Es un podcast? Un reel que cuenta dos notas o más. Cada podcast tiene su
+ *  nota en la web (web/lib/notas-propias.js), que enlaza al video: para eso
+ *  se guarda en el libro su dirección pública (`permalink`). */
+export const esPodcast = (p) => p?.tipo === 'REELS' && (p?.notaIds ?? []).length >= 2;
+
+/** La dirección pública de una publicación, o null. Nunca tira un error: sin
+ *  la dirección, la nota del podcast sale igual, sólo que sin el enlace. */
+async function buscarEnlace(api, red, id) {
+  if (typeof api?.enlaceDePublicacion !== 'function') return null;
+  try { return await api.enlaceDePublicacion({ id, red }); } catch { return null; }
+}
+
+/** Cuántas veces se pide la dirección de una publicación antes de rendirse. */
+export const INTENTOS_ENLACE = 5;
+
+/**
+ * Completa la dirección pública de los podcasts de los últimos días que
+ * todavía no la tienen (Facebook a veces no la da hasta terminar de procesar
+ * el video). Corre en cada vuelta del reloj de Redes. Devuelve cuántas
+ * entradas del libro cambió.
+ */
+export async function completarEnlaces({
+  api, libro, ahora = new Date(), dias = 3, intentos = INTENTOS_ENLACE, log = console.log,
+}) {
+  const desde = diaAR(new Date(ahora.getTime() - dias * 24 * 3600e3));
+  let cambios = 0;
+  for (const red of ['instagram', 'facebook']) {
+    for (const [clave, p] of Object.entries(libro?.[REDES[red].libro] ?? {})) {
+      if (!esPodcast(p) || p.permalink || clave.slice(0, 10) < desde) continue;
+      if ((p.intentosEnlace ?? 0) >= intentos) continue;
+      const url = await buscarEnlace(api, red, p.mediaId);
+      if (url) {
+        p.permalink = url;
+        delete p.intentosEnlace;
+        log(`  ${REDES[red].nombre} · ${clave}: ${url}`);
+      } else {
+        p.intentosEnlace = (p.intentosEnlace ?? 0) + 1;
+      }
+      cambios += 1;
+    }
+  }
+  return cambios;
+}
 
 /**
  * @param {object} o
@@ -81,6 +125,13 @@ export async function publicarPiezas({
           anotar(libro, rubro, clave, {
             mediaId: r.id, nombre: pieza.nombre, tipo, notaId: pieza.notaId ?? null, notaIds: pieza.notaIds ?? [],
           });
+          // La dirección pública del podcast, para enlazarlo desde su nota en
+          // la web. Si Meta todavía no la da, la completa la vuelta siguiente
+          // (completarEnlaces).
+          if (esPodcast(libro[rubro][clave])) {
+            const url = await buscarEnlace(api, red, r.id);
+            if (url) libro[rubro][clave].permalink = url;
+          }
           guardar();
           hecho = true;
           if (i === 0) resultado.publicadas.push(pieza.nombre);

@@ -100,6 +100,32 @@ en `libro.historiasDeReels`.
 **El texto del posteo de cada podcast** lista las notas que cuenta, cada una
 con su enlace, y no nombra la fuente (`pieDePieza`, `redes/piezas.mjs`).
 
+**Cada podcast tiene su nota en la web** (desde el 25/09). Cuando el libro
+(`web/data/redes.json`) registra que salió un podcast (`noticia1` = mañana,
+`noticia2` = tarde, `podcast` = noche, con dos notas o más), la corrida
+siguiente de "Actualizar la web" arma una nota propia: *"El repaso de la
+mañana en Radar Balcarce: Ferroviarios, autódromo y economía"*, con cada
+nota que se contó (su titular, con el enlace, y una o dos frases de lo que
+esa nota ya publicó) y, al final, los botones "Mirá y escuchá el repaso en
+Instagram / Facebook". Identificador fijo: `repaso20260926manana`. Firma:
+"Nota de Radar Balcarce: el texto del repaso publicado en nuestras redes."
+Sección Balcarce si la mayoría de las notas es de acá. Sin IA: el texto sale
+sólo de lo ya publicado (`web/lib/notas-propias.js`).
+
+- **La dirección de cada video** (`permalink`) se le pide a Meta al publicar
+  (Instagram: el campo `permalink` del medio; Facebook: `permalink_url` del
+  video) y se guarda en el libro. Si Meta todavía no la da (a Facebook le
+  lleva un rato procesar el video), la completa el paso "Completar las
+  direcciones de los podcasts" de `redes.yml` (`node redes/publicar.mjs
+  --enlaces`), en cada vuelta, hasta 5 intentos y sólo de los últimos 3 días.
+  Sólo pregunta: corre aunque `REDES_ACTIVAS` esté apagado. Sin dirección, la
+  nota sale igual, con el enlace que haya (o sólo con el texto).
+- **Las notas propias no van a Facebook como posteo ni entran a un podcast**
+  (serían redundantes: `esNotaPropia` en `redes/elegir.mjs`). Tampoco la del
+  dólar de cada día.
+- Si una nota del podcast se retira después (una persona la bloquea), el
+  repaso se rearma sin ella; con menos de dos, se retira el repaso.
+
 **Un color por día.** Los tres podcasts del día llevan el mismo color de placa
 y cambia de un día al otro (domingo magenta, lunes el rojo de la marca, martes
 verde, miércoles azul, jueves ámbar, viernes violeta, sábado verde azulado):
@@ -307,7 +333,7 @@ tiene alternativa: si falta, los reels no arrancan. Los tokens y las claves
 | `redes/elegir.mjs` | Qué se publica: reglas de Facebook, reels, historias, podcast, interruptor |
 | `redes/piezas.mjs` | Qué pieza le toca a cada hora y hasta cuándo vale (`VENTANAS`; 2 horas si no tiene una propia) |
 | `redes/publicar-piezas.mjs` | Publica en Instagram y guarda el libro después de cada una |
-| `redes/publicar.mjs` | El programa: `--verificar`, `--facebook`, `--piezas [--sin-horario]` |
+| `redes/publicar.mjs` | El programa: `--verificar`, `--facebook`, `--enlaces` (la dirección pública de los podcasts), `--piezas [--sin-horario]` |
 | `redes/datos.mjs` | Arma los datos del día desde la web, para generar sin panel |
 | `reels/claves.mjs` | Las dos claves de Gemini |
 | `redes/reloj.mjs` | Dice qué pieza toca a esta hora (sin instalar nada) |

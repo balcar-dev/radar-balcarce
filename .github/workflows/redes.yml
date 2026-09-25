@@ -130,6 +130,17 @@ jobs:
           if-no-files-found: ignore
           retention-days: 3
 
+      # La dirección pública de cada podcast (Instagram y Facebook), para que
+      # su nota en la web enlace al video (web/lib/notas-propias.js). Sólo
+      # pregunta, no publica; si Meta todavía no la da, se vuelve a pedir en
+      # la vuelta siguiente. Nunca frena la corrida.
+      - name: Completar las direcciones de los podcasts
+        if: always() && github.event.inputs.accion != 'verificar'
+        continue-on-error: true
+        run: node redes/publicar.mjs --enlaces
+        env:
+          META_TOKEN: ${{ secrets.META_TOKEN }}
+
       # ----------------------------------------------------- el libro
       # El libro dice qué salió ya. Sin guardarlo, la próxima vuelta publicaría
       # lo mismo otra vez. Se guarda aunque un paso anterior haya fallado a la

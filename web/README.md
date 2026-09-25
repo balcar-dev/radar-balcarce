@@ -39,7 +39,7 @@ la web arranca igual con un aviso.
 | `app/` | Las páginas: portada, `nota/`, `seccion/`, `tema/`, `agenda/` (y `agenda/[id]`, cada evento con su `.ics`), `farmacias/`, `dolar/` (la cotización, que se pide en el navegador), `util/`, `politica-de-privacidad/`, `quienes-somos/`, `contacto/`, la 404 (`not-found.js`, rescata direcciones viejas con `nota/indice.json`), más `sitemap`, `sitemap-news.xml`, `robots`, `feed.xml` y `llms.txt` |
 | `components/` | Piezas de la interfaz (avisos, buscador, clima, ficha con datos estructurados, compartir) |
 | `lib/` | Direcciones (`ruta.js`), archivo de notas (`archivo.js`), dirección del sitio (`sitio.js`), tarjetas de imagen (`tarjeta.js`) |
-| `data/` | `portada.json`, `archivo.json` y `agenda.json` (los regenera Actions), `decisiones.json`, `avisos.json` y `eventos-panel.json` (los sube el panel), `redes.json` (libro de lo publicado); `dolar.json` es la foto del dólar que guarda cada build (no se versiona) |
+| `data/` | `portada.json`, `archivo.json`, `agenda.json` y `dolar-historia.json` (los regenera Actions), `decisiones.json`, `avisos.json` y `eventos-panel.json` (los sube el panel), `redes.json` (libro de lo publicado); `dolar.json` es la foto del dólar que guarda cada build (no se versiona) |
 | `scripts/` | Generar datos y redirecciones, íconos, auditoría de SEO y `recuperar-archivo.mjs` (herramienta de rescate: rearma `data/archivo.json` desde el historial de git si se pierde o se rompe) |
 | `public/` | Íconos, manifiesto, `_headers` (la imagen para compartir sale como `image/png`, HSTS y otros encabezados de seguridad, caché de un año para `/_next/static`) y `_redirects` (se genera en cada compilación) |
 
@@ -57,6 +57,34 @@ Mientras tanto, o si las dos fallan, se ve la foto que guardó el build
 "Actualizado a las…" aparecen sólo cuando la fuente contestó en el navegador,
 y la hora es la que informa la fuente. Lógica y textos en `lib/dolar.js`,
 tarjetas en `components/dolar-vivo.js`, pruebas en `../pruebas/dolar.test.mjs`.
+
+## Las notas propias (`lib/notas-propias.js`)
+
+Notas que arma el sitio con datos propios, **sin IA**: texto de plantilla
+lleno con números o con lo ya publicado. Son notas normales (portada,
+sección, feed, sitemap de noticias, archivo) y pasan por la regla de cuerpo
+(`lib/cuerpo.js`). No van a Facebook ni a los podcasts. Las arma
+`scripts/generar-datos.mjs` en cada corrida.
+
+- **El dólar del día**: una por día hábil, desde las 11:00 de Balcarce, con los
+  números que da DolarApi en ese momento (oficial, blue, MEP, contado con liqui,
+  tarjeta, mayorista y la brecha). Si el oficial no se actualizó hoy (feriado,
+  o el mercado no abrió) no se hace, y se vuelve a probar hasta las 18. Compara
+  con el día hábil anterior y con una semana atrás sólo con lo guardado en
+  `data/dolar-historia.json` (la cotización de cada día, 60 días, versionada;
+  sólo la escribe GitHub Actions). Sección Economía, relevancia 55 (no le gana a
+  lo de Balcarce), identificador `dolar20260925`, botón "Ver la cotización
+  actualizada" a `/dolar`.
+- **El repaso de cada podcast**: ver `../REDES.md` ("Cada podcast tiene su nota
+  en la web"). Identificador `repaso20260926manana` (`tarde`, `noche`).
+
+Los identificadores no llevan guiones (la dirección es `titular-ID` y el ID es
+lo que va después del último guion, `lib/ruta.js`). La firma sale de
+`nota.firma` (`components/piezas.js`, `Firma`), los datos para Google dicen
+"Radar Balcarce" (`components/metadatos.js`), y los enlaces adentro del texto
+(`nota.enlacesEnTexto`) y los botones (`nota.destacados`) los pone
+`app/nota/[id]/page.js` con `lib/enlaces-en-texto.js`. Pruebas:
+`../pruebas/notas-propias.test.mjs`.
 
 ## Para saber más
 

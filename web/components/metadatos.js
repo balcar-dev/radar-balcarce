@@ -68,12 +68,17 @@ export function metadatosDePagina({ titulo, descripcion, camino }) {
  *                verificada automáticamente contra la fuente).
  */
 export function quienEscribio(nota = {}) {
+  // Las notas propias (la del dólar, la de cada podcast: lib/notas-propias.js)
+  // no las redactó la IA ni son de una fuente: las arma el sitio con
+  // plantilla, a partir de datos. Su firma la dice la nota (`firma`).
+  if (nota.propia) return { reescrita: false, revisada: false, propia: true };
   return { reescrita: !!nota.guion, revisada: nota.como === 'publicada' };
 }
 
 /** El `author` del NewsArticle, igual a la firma de la nota. */
 export function autorDeNota(nota = {}, base = '') {
-  const { reescrita, revisada } = quienEscribio(nota);
+  const { reescrita, revisada, propia } = quienEscribio(nota);
+  if (propia) return { '@type': 'Organization', name: NOMBRE, url: base };
   if (!reescrita) {
     // El resumen es el que publicó la fuente: el autor es ese medio.
     const fuente = (nota.medios ?? [])[0];

@@ -2,6 +2,8 @@
 //
 //   node redes/publicar.mjs --verificar   comprueba que el acceso a Meta anda
 //   node redes/publicar.mjs --facebook    publica en Facebook lo que toque
+//   node redes/publicar.mjs --enlaces     completa en el libro la dirección
+//                                         pública de los podcasts (sólo lee)
 //
 // Por defecto NO publica: muestra qué haría. Para que publique de verdad hace
 // falta REDES_ACTIVAS=si (en GitHub, Settings → Variables → Actions). Así se
@@ -12,7 +14,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { crearCliente, ErrorMeta, sinToken } from './meta.mjs';
-import { publicarPiezas } from './publicar-piezas.mjs';
+import { publicarPiezas, completarEnlaces } from './publicar-piezas.mjs';
 import {
   elegirParaFacebook, mensajeDeNota, mensajeParaInstagram, enlaceDeNota, imagenDeNota, libroNuevo, anotar, yaPublicada, estaActivo,
 } from './elegir.mjs';
@@ -150,6 +152,29 @@ async function piezas() {
   if (r.fallos.length) process.exit(1);
 }
 
+/**
+ * La dirección pública de los podcasts de los últimos días que todavía no la
+ * tienen: la usa la nota de cada podcast en la web (web/lib/notas-propias.js).
+ * Sólo pregunta, no publica nada, así que corre aunque REDES_ACTIVAS esté
+ * apagado. Nunca hace fallar la corrida.
+ */
+async function enlaces() {
+  const token = process.env.META_TOKEN;
+  if (!token) {
+    console.log('  Sin META_TOKEN: no se completan las direcciones de los podcasts.');
+    return;
+  }
+  const api = crearCliente({ token, paginaId: PAGINA });
+  const libro = leer(LIBRO, libroNuevo());
+  try {
+    const cambios = await completarEnlaces({ api, libro });
+    if (cambios) fs.writeFileSync(LIBRO, `${JSON.stringify(libro, null, 2)}\n`);
+    else console.log('  Los podcasts de estos días ya tienen su dirección (o no hay).');
+  } catch (e) {
+    console.log(`  No se pudieron completar las direcciones: ${sinToken(e.message, token)}`);
+  }
+}
+
 // Sólo corre cuando esto se ejecuta directamente (node redes/publicar.mjs),
 // igual que reels/plan.mjs y compañía: así se puede importar (por ejemplo,
 // desde una prueba) sin que dispare una publicación real ni cierre el
@@ -159,8 +184,9 @@ if (process.argv[1] && process.argv[1].endsWith('publicar.mjs')) {
   if (modo === '--verificar') await verificar();
   else if (modo === '--facebook') await facebook();
   else if (modo === '--piezas') await piezas();
+  else if (modo === '--enlaces') await enlaces();
   else {
-    console.log('Uso: node redes/publicar.mjs --verificar | --facebook | --piezas [--sin-horario] [--destino=ambas|instagram|facebook]');
+    console.log('Uso: node redes/publicar.mjs --verificar | --facebook | --enlaces | --piezas [--sin-horario] [--destino=ambas|instagram|facebook]');
     process.exit(2);
   }
 }

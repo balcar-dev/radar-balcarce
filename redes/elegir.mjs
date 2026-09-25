@@ -18,9 +18,17 @@
 //   · Una nota que salió sola y no tiene cuerpo no va a ninguna red (25/09,
 //     web/lib/cuerpo.js): el enlace llevaría a una nota de dos renglones.
 //     generar-datos ya no la pone en la portada; esto es la segunda red.
+//   · Las notas propias del sitio (la del dólar y la de cada podcast,
+//     web/lib/notas-propias.js) no van a Facebook como posteo ni a los
+//     podcasts: la del repaso ES un podcast, y la del dólar es un número que
+//     cambia en el día. Serían redundantes.
 
 import { rutaDeNota } from '../web/lib/ruta.js';
 import { esperaCuerpo } from '../web/lib/cuerpo.js';
+
+/** ¿Es una nota propia del sitio (la del dólar o la de un podcast)? Las marca
+ *  web/lib/notas-propias.js con `propia`. */
+export const esNotaPropia = (n) => Boolean(n?.propia);
 
 /** Secciones que no salen solas a ninguna red: las decide una persona. */
 export const SECCIONES_QUE_ESPERAN_PERSONA = ['Policiales', 'Política'];
@@ -120,6 +128,7 @@ export function elegirParaFacebook({ notas, libro = libroNuevo(), ahora = new Da
   const candidatas = notas.filter((n) => {
     if (yaPublicada(libro, 'facebook', n.id)) return false;
     if (esperaCuerpo(n)) return false;
+    if (esNotaPropia(n)) return false;
     if ((n.relevancia ?? 0) < reglas.relevanciaMinima) return false;
     if (reglas.seccionesQueEsperanPersona.includes(n.seccion)) return false;
     if (recientes.some((p) => temaParecido(n, p))) return false;
@@ -274,7 +283,8 @@ export const REGLAS_PIEZAS = {
 
 /** ¿Se puede armar una pieza sola con esta nota? */
 export function sePuedeSola(nota) {
-  return nota.semaforo !== 'rojo' && !SECCIONES_QUE_ESPERAN_PERSONA.includes(nota.seccion) && !esperaCuerpo(nota);
+  return nota.semaforo !== 'rojo' && !SECCIONES_QUE_ESPERAN_PERSONA.includes(nota.seccion) && !esperaCuerpo(nota)
+    && !esNotaPropia(nota);
 }
 
 const porRelevancia = (a, b) => (b.relevancia ?? 0) - (a.relevancia ?? 0);
