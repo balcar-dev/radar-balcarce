@@ -5,8 +5,10 @@ puntúan, qué sale solo, qué espera aprobación y qué no sale nunca. Es el
 documento para leer antes de tocar `ingesta/fuentes.mjs`, que es donde se
 ajusta todo.
 
-Los otros archivos: `NOTAS.md` (estado del proyecto y qué falta),
-`INVESTIGACION.md` (lo legal, con fuentes).
+Los otros documentos: `REGLAS.md` (lo que se exige siempre y qué lo vigila),
+`EDITORIAL.md` (cómo se escribe una nota), `REDES.md`, `INFRAESTRUCTURA.md`,
+`PENDIENTES.md` (qué falta), `NOTAS.md` (decisiones vigentes) e `INVESTIGACION.md`
+(lo legal, con fuentes). La lista completa está en `CLAUDE.md`.
 
 ---
 
@@ -16,8 +18,9 @@ Los otros archivos: `NOTAS.md` (estado del proyecto y qué falta),
 33 fuentes  →  agrupar  →  clasificar  →  puntuar  →  semáforo  →  panel  →  web / reels
 ```
 
-1. **Buscar.** Cada 10 minutos el panel lee las 33 fuentes (locales,
-   regionales y nacionales; la lista está en `ingesta/fuentes.mjs`). La mayoría tiene RSS; El Diario Balcarce
+1. **Buscar.** Cada 30 minutos GitHub Actions lee las 33 fuentes (locales,
+   regionales y nacionales; la lista está en `ingesta/fuentes.mjs`), con la PC
+   apagada; el panel, mientras está prendido, también busca cada 10. La mayoría tiene RSS; El Diario Balcarce
    no, así que se raspa la portada y después se entra a cada nota para sacar
    la bajada y la hora de publicación de sus metadatos.
 2. **Agrupar.** Si dos medios cuentan lo mismo, es UNA historia con dos
@@ -29,8 +32,8 @@ Los otros archivos: `NOTAS.md` (estado del proyecto y qué falta),
    de un piloto local es Automovilismo, no Deportes.
 4. **Puntuar.** Un número de 0 a 100 (abajo, sección 2).
 5. **Semáforo.** Verde / amarillo / rojo (sección 3).
-6. **Decidir.** En el panel (localhost:4321). Lo verde sale solo; lo amarillo
-   espera; lo rojo está bloqueado.
+6. **Decidir.** En el panel (localhost:4321, `PANEL.md`). Lo verde sale solo; lo
+   amarillo espera; lo rojo está bloqueado.
 7. **Publicar.** `npm run datos` arma `web/data/portada.json` y la web lo lee.
    Los reels y las historias salen del mismo material.
 
@@ -59,11 +62,11 @@ una que sí tiene hora.
 Para qué sirve el número:
 
 - **Ordena la portada**, junto con la fecha.
-- **Decide qué llega a reel**: hace falta 78 o más. Son 3 reels por día: dos
-  noticias de Balcarce de secciones distintas (10:00 y 15:00) y el podcast del
-  día (20:30). Política y Policiales no se arman solas en ninguna pieza. El
-  clima y la farmacia van como **historias**, así no gastan cupo de reels con
-  lo que se repite todos los días. Horarios y reglas completas en `REDES.md`.
+- **Decide qué se cuenta en las redes.** Facebook pide relevancia de 75 o
+  más; los podcasts, 62 o más. Ya no salen noticias sueltas: son **tres
+  podcasts por día** (mañana, tarde y noche) con notas de temas distintos.
+  Política y Policiales no se arman solas en ninguna pieza. El clima y la
+  farmacia van como **historias**. Horarios y reglas completas en `REDES.md`.
 
 ## 3. El semáforo
 
@@ -96,8 +99,9 @@ cola.
 - **La foto del medio de origen, nunca.** La excepción de "noticias de interés
   general" de la ley 11.723 cubre el texto, no las fotografías. En su lugar va
   una placa tipográfica propia con el color de la sección.
-- **El nombre de la fuente en el reel, la placa o la voz.** La atribución va en
-  la nota de la web, con el enlace al original.
+- **El nombre de la fuente en el reel, la placa, la voz ni el posteo de las
+  redes.** La atribución va en la nota de la web, con el enlace al original;
+  las redes enlazan a **nuestra** nota.
 - **Una acusación como hecho.** Si hay una denuncia sin condena, se atribuye a
   quien la hizo y se usa el condicional ("habría", no "hizo"). Es la doctrina
   Campillay, y es lo que protege a un medio de una demanda por calumnias e
@@ -114,13 +118,17 @@ la IA". Lo central:
   más de una.
 - Título de hasta 65 caracteres, sin signos de admiración.
 - Copete de dos líneas como mucho: qué pasó, dónde y cuándo.
+- Cuerpo: la nota desarrollada, de lo más importante a lo menos (pirámide
+  invertida), **distinta del copete**. Detalle en `EDITORIAL.md` § "Cómo se
+  escribe una nota".
 - **Dos tonos:** cercano y liviano para el día a día; sobrio e institucional
   para Policiales y para cualquier problemática local (inseguridad, choques,
   cortes de servicio, emergencias).
 - El guion de voz es el título, dicho tal cual, y nada más.
-- No inventa un dato que no esté en el original — y desde el 22/09 corre
-  sola, en la nube, para lo que se publica sin revisión humana, no sólo
-  cuando el panel está prendido.
+- No inventa un dato que no esté en el original: recibe el **texto completo**
+  de la nota (`ingesta/articulo.mjs`) y se verifica contra todo lo que recibió.
+  Desde el 22/09 corre sola, en la nube, para lo que se publica sin revisión
+  humana, no sólo cuando el panel está prendido.
 
 Los títulos que los medios publican EN MAYÚSCULAS se pasan a mayúscula
 inicial, cuidando los nombres propios con la lista `NOMBRES_PROPIOS` de
@@ -133,6 +141,10 @@ Criterio: portal de noticias, no diario solemne. Fondo blanco, Fraunces en
 los títulos, color por sección, y movimiento sólo en las dos piezas que se
 miran todos los días.
 
+- **Reglas de la portada** (`REGLAS.md`): sin la fuente arriba de los títulos,
+  sin "la vimos hace…", con las notas de la más nueva a la más vieja (la nota
+  grande de arriba es la de más puntaje y de Balcarce) y la farmacia sin hora
+  de cierre. Hay pruebas y el vigilante las mira en la web publicada.
 - **Chapa negra de arriba**: fecha, clima y farmacia de turno, en *todas* las
   páginas. Son las dos cosas que la gente viene a buscar sin querer leer nada.
 - **Navegación por secciones reales**, cada una con su página
@@ -181,22 +193,23 @@ que estuvo mal publicado, sí: es la única forma de que no vuelva.
   dice "sin hora" en vez de inventar un "hace 1 minuto".
 - **Resuelto el 22/09: las notas ya no son sólo el resumen del feed.** Ahora
   la reescritura con IA arma tres campos separados — título, copete (dos
-  líneas, lo que se ve arriba) y **cuerpo** (uno a tres párrafos, la nota
-  desarrollada, hasta 1200 caracteres) — y la web muestra el cuerpo debajo
+  líneas, lo que se ve arriba) y **cuerpo** (de uno a cuatro párrafos, la nota
+  desarrollada, hasta 1800 caracteres) — y la web muestra el cuerpo debajo
   del copete en la página de cada nota. El guion de la voz sigue siendo sólo
   el titular: en un reel de cinco segundos no hay tiempo para más. El panel
   (pestaña "Para decidir") muestra y deja editar los tres campos por
   separado desde el 23/09.
-- Sigue habiendo notas con poco para trabajar: las que vienen de una fuente
-  sin texto completo en el feed sólo tienen el resumen corto para reescribir,
-  así que el cuerpo que arma la IA no puede decir más que eso. El próximo
-  paso, si hace falta, es traer el texto completo desde la fuente misma en
-  vez de conformarse con el resumen del feed.
+- **Resuelto el 24/09: la IA recibe el texto completo de la nota original**
+  (`ingesta/articulo.mjs`), no sólo el resumen del feed. Sigue habiendo notas
+  con poco para trabajar (fuentes que bloquean la lectura o sin texto): ahí el
+  cuerpo puede ser corto o faltar, y el vigilante avisa si menos del 35 % de
+  las notas de las últimas 24 horas tienen cuerpo.
 
 ## 9. Las redes
 
 Qué se publica en Facebook e Instagram, a qué hora, con qué voz y qué reglas lo
 frenan está en [`REDES.md`](REDES.md). En una línea: Facebook publica solo una
-nota por vez con enlace; Instagram recibe siempre **video con voz** (historias
-y reels) armado en GitHub con Gemini; y Política y Policiales no salen solas
-a ninguna red.
+nota por vez con enlace a la nota y sin nombrar la fuente; Instagram y la
+página de Facebook reciben **video con voz** (clima, farmacia y tres podcasts
+por día, más historias) armado en GitHub con Gemini; y Política y Policiales
+no salen solas a ninguna red.

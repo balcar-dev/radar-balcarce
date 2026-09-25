@@ -2,7 +2,7 @@
 
 // El buscador.
 //
-// De los cinco portales de la zona sólo dos tienen uno (INVESTIGACION-PORTALES.md).
+// De los cinco portales de la zona sólo dos tienen uno (INVESTIGACION-COMPETENCIA.md).
 // Un sitio con ochenta notas sin forma de buscar es un archivo cerrado con
 // llave, y dentro de seis meses van a ser mil.
 //

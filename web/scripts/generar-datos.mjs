@@ -3,7 +3,7 @@
 // Por qué un archivo estático y no una conexión en vivo al panel: la web
 // se va a desplegar en Vercel, que no puede leer los archivos de tu PC.
 // La forma correcta de resolver esto sin armar una base de datos todavía
-// es la que ya estaba planeada desde el principio (ver NOTAS.md, fase 2):
+// es la que ya estaba planeada desde el principio (ver HISTORIA.md, fase 2):
 // GitHub Actions corre la ingesta, y en vez de dejarla en tu PC, ACTUALIZA
 // este archivo y lo sube al repo — eso dispara un redeploy automático en
 // Vercel. Mientras tanto, para probar en tu máquina, este script hace lo

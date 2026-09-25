@@ -1,7 +1,7 @@
 # Busca noticias y actualiza la web, sin depender de que haya una PC prendida.
 #
 # Corre en los servidores de GitHub cada media hora. Lo que hace es lo mismo
-# que hace el panel en casa: leer las 22 fuentes, agrupar, clasificar, poner
+# que hace el panel en casa: leer las 33 fuentes, agrupar, clasificar, poner
 # puntaje, y escribir web/data/portada.json.
 #
 # La diferencia está en las decisiones humanas. Acá no hay panel, así que se

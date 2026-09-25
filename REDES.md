@@ -1,81 +1,19 @@
-# Redes, marketing y competencia
+# Redes
 
-## 1. Qué hace la competencia (revisado el 18/09/2026)
+*Actualizado el 25/09/2026.* Qué se publica en Instagram y Facebook, cómo y cuándo. Las reglas que siempre se cumplen y qué las vigila están en `REGLAS.md`; dónde corre todo, en `INFRAESTRUCTURA.md`; los textos de los perfiles, en `PERFILES.md`; las medidas de las imágenes, en `FORMATOS.md`.
 
-Los tres medios de Balcarce con web propia, mirados el mismo día:
+## 1. La competencia
 
-| | El Diario | Punto Nueve | La Vanguardia |
-|---|---|---|---|
-| Peso de la portada | 256 KB | 370 KB | 55 KB |
-| Publicidad | Google AdSense | Google Ads | Sin avisos |
-| Clima | Sí | No | Sí |
-| Farmacia de turno | Sí | Sí | Sí |
-| Video | Sí | Sí (En Vivo) | No |
-| Agenda de eventos | No | No | No |
+Se mudó a [`INVESTIGACION-COMPETENCIA.md`](INVESTIGACION-COMPETENCIA.md): qué
+hacen El Diario, Punto Nueve y La Vanguardia, los huecos que nadie llena y qué
+de eso ya se hizo.
 
-Secciones que tienen los tres: Balcarce, Policiales, Deportes, Automovilismo,
-Agro/Rural, Actualidad.
+## 2. Publicidad
 
-**La Vanguardia** es el único que monetiza sin banners: vende *Edictos*,
-*Inmobiliarias*, *Profesionales* e *Infocampo*. Son secciones pagas, no
-publicidad intrusiva. Es el modelo más parecido al que nos sirve.
-
-### Los huecos que nadie llena
-
-1. **Agenda de eventos.** Ninguno de los tres tiene un calendario. Nosotros lo
-   sacamos de la API del municipio y se actualiza solo. Es lo más fácil de
-   defender: el que quiere saber qué hay para hacer el fin de semana hoy no
-   tiene dónde mirar.
-2. **Automovilismo que no sea local.** Cubren el TC y el zonal, pero no F1 ni
-   MotoGP. En la ciudad de Fangio, con autódromo propio, eso es raro. Ya
-   sumamos Motorsport.com en castellano.
-3. **Deportes que no son fútbol.** Rugby, hockey, ciclismo, running, atletismo:
-   aparecen sólo cuando gana alguien de acá. Sumamos La Nación · Deportes.
-4. **Tecnología e IA.** Nadie. Es la sección que nos puede dar identidad propia
-   y traer un lector más joven.
-5. **Velocidad.** Sus portadas pesan 256 y 370 KB por los banners. La nuestra
-   es HTML estático. En un celular con señal mala de la zona rural, eso se nota.
-
-### Dónde no podemos competir todavía
-
-Tienen algo que no se compra: **periodistas en la calle**. Punto Nueve
-transmite en vivo. El Diario cubre el Concejo Deliberante. Nosotros hoy
-resumimos lo que ellos averiguan. Mientras sea así, la regla de citar y
-enlazar la fuente no es sólo legal: es lo que hace que la relación sea
-sostenible en un pueblo donde todos se conocen.
-
-## 2. Publicidad: tres avisos y ni uno más
-
-La maqueta está en el lienzo de diseño, artboard "Dónde irían los avisos".
-
-- **Aviso 1** — después de la nota de apertura. El único que interrumpe la
-  lectura, y lo hace una sola vez.
-- **Aviso 2** — al lado del clima y la farmacia de turno. Es el mejor lugar del
-  sitio: lo que la gente mira todos los días, sin interrumpir nada. Es el que
-  se cobra más caro.
-- **Aviso 3** — abajo de todo. Vale poco. Sirve para regalarlo los primeros
-  meses y que un comercio se anime.
-
-Reglas que no se negocian:
-
-- Vendidos a comercios de Balcarce, no traídos por una red publicitaria.
-  Sabemos quién es cada aviso.
-- Quietos: no parpadean, no se expanden, no persiguen el scroll.
-- Grises y con tipografía chica. **Nunca el rojo de la marca.** Si el aviso se
-  ve igual que una nota, la gente deja de distinguir qué es qué.
-- Dicen "Espacio publicitario" arriba, siempre.
-- Son texto y un logo, no imágenes pesadas.
-
-Nunca: pop-ups, videos que arrancan solos, publinotas sin aclarar que lo son,
-avisos de apuestas o de préstamos.
-
-**Cómo se cargan (desde el 23/09):** panel → pestaña **Avisos**. Se completa
-comercio, texto y opcionalmente un logo, por cada uno de los tres espacios, y
-se guarda directo en `web/data/avisos.json` (lee `web/components/avisos.js`).
-Al guardar, el panel lo sube solo a GitHub (`panel/sincronizar.mjs`) y en
-unos minutos está en la web. Para ver cómo vender estos espacios y sumar
-otros (un mapa de comercios, sorteos, mención en los podcasts), ver
-`IDEAS.md` § "Cómo ganar plata".
+Se mudó a [`PUBLICIDAD.md`](PUBLICIDAD.md): los tres avisos de la web, cómo se
+cargan desde el panel, las reglas que no se negocian y el orden para vender
+(incluidas las menciones en los podcasts y en las historias, que son lo que
+toca a este documento).
 
 ## 3. Las redes: qué sale, cómo y cuándo
 
@@ -95,17 +33,21 @@ apagado (`feedPorDia: 0` en `reels/plan.mjs`).
 
 **Facebook recibe dos cosas.** Por un lado, posteos con enlace: la tarjeta con la
 imagen y el titular la arma sola con la imagen de NUESTRA página
-(`web/lib/tarjeta.js`), nunca la foto de otro medio. Por otro, **los mismos
+(`web/lib/tarjeta.js`), nunca la foto de otro medio. Esa imagen, la que se ve
+al compartir un enlace, mide **1200 × 630** (`opengraph-image` de la nota). Por otro, **los mismos
 videos de Instagram como historias y reels de la página**, a la misma hora.
 
 **Y, desde el 23/09, cada posteo de Facebook se espeja como foto en el feed
-de Instagram** (`redes/publicar.mjs`, función `facebook()`): la misma tarjeta
-propia, con el mismo texto que Facebook (titular, copete y el enlace a la
+de Instagram** (`redes/publicar.mjs`, función `facebook()`): una tarjeta
+propia **vertical de 1080 × 1350 (4:5)**, con el mismo texto que Facebook (titular, copete y el enlace a la
 nota, sin nombrar la fuente). Si el espejo
 falla, no invalida lo que ya se publicó en Facebook — sólo se avisa. Es la
 única foto (no video) que sale a Instagram, y sólo porque es la tarjeta
-propia ya alojada en nuestro sitio (`/nota/ID/opengraph-image`), no un
-archivo nuevo que haya que subir.
+propia ya alojada en nuestro sitio (`/nota/ID/instagram.png`), no un
+archivo nuevo que haya que subir. Es vertical porque Instagram muestra el
+posteo vertical y en la grilla del perfil lo recorta: todo el texto queda en
+la **zona segura** del centro (1012 × 1080). Facebook usa la apaisada porque
+así muestra Facebook un enlace. Por qué y cómo se vigila: `FORMATOS.md`.
 
 ### Qué sale hoy y a qué hora (hora de Balcarce)
 
@@ -148,6 +90,12 @@ en `libro.historiasDeReels`.
 
 **El texto del posteo de cada podcast** lista las notas que cuenta, cada una
 con su enlace, y no nombra la fuente (`pieDePieza`, `redes/piezas.mjs`).
+
+**Un color por día.** Los tres podcasts del día llevan el mismo color de placa
+y cambia de un día al otro (domingo magenta, lunes el rojo de la marca, martes
+verde, miércoles azul, jueves ámbar, viernes violeta, sábado verde azulado):
+en la grilla de Instagram se nota de un vistazo de qué día es cada uno
+(`colorDelDia`, `redes/piezas.mjs`; se cuenta con la hora de Balcarce).
 
 Cómo se eligen (todo en `redes/elegir.mjs`, con pruebas):
 
@@ -211,7 +159,8 @@ noche y el podcast valen hasta la medianoche; el clima de la mañana, hasta las
 11:30; una historia de nota, 3 horas. Ninguna cruza la medianoche. Si la ventana
 se cierra sin que salga, esa pieza se pierde por hoy.
 
-**El disparador real es externo, desde el 21/09.** El 21/09 el planificador de
+**El disparador real es externo, desde el 21/09** (y son **tres** trabajos en
+cron-job.org: "Actualizar la web", el reloj de "Redes" y "Vigilancia"). El 21/09 el planificador de
 GitHub no ejecutó ni una corrida programada de esta cola en toda la
 tarde-noche (la farmacia de las 19:00 se perdió y se publicó a mano). La
 solución: **cron-job.org** llama a la API de GitHub (endpoint
@@ -241,6 +190,18 @@ servicio y un token de GitHub.
 
 Todo esto sólo **publica** si la variable `REDES_ACTIVAS` vale `Si`; con otra cosa
 simula.
+
+### La vigilancia
+
+Un tercer trabajo de cron-job.org dispara cada 30 minutos el workflow
+**Vigilancia** (`redes/vigilar.mjs`). Revisa que la web responda y se actualice,
+que las corridas de GitHub no fallen, que el reloj de Redes corra, que las
+piezas fijas del día (clima y farmacia) hayan salido, y que la portada no
+vuelva a mostrar lo que se pidió sacar (`REGLAS.md`). Avisa por **WhatsApp**
+(`redes/whatsapp.mjs`, CallMeBot, secretos `WHATSAPP_TELEFONO` y
+`WHATSAPP_APIKEY`) una vez cada 6 horas por problema, y a las 21 manda un
+resumen "todo bien". Cada lunes, la **Auditoría** (`redes/auditar.mjs`) mide
+las imágenes publicadas. Detalle en `INFRAESTRUCTURA.md`.
 
 ### Lo que pasó con el bloqueo de Meta (22 al 24/09/2026)
 
@@ -318,6 +279,8 @@ lo estábamos escondiendo.
 
 ### Secretos y variables (GitHub → Settings → Secrets and variables → Actions)
 
+La lista completa (Cloudflare, WhatsApp, etc.) está en `INFRAESTRUCTURA.md`. Las de redes:
+
 | Nombre | Tipo | Para qué |
 |---|---|---|
 | `META_TOKEN` | Secreto | Publicar en Facebook e Instagram |
@@ -343,10 +306,15 @@ tiene alternativa: si falta, los reels no arrancan. Los tokens y las claves
 | `redes/datos.mjs` | Arma los datos del día desde la web, para generar sin panel |
 | `reels/claves.mjs` | Las dos claves de Gemini |
 | `redes/reloj.mjs` | Dice qué pieza toca a esta hora (sin instalar nada) |
+| `redes/formatos.mjs` | Las medidas de imágenes y videos de cada red (`FORMATOS.md`) |
+| `redes/auditar.mjs` | Auditoría semanal de lo publicado (`auditoria.yml`) |
+| `redes/vigilar.mjs` | El vigilante: revisa y avisa por WhatsApp (`vigilancia.yml`) |
+| `redes/whatsapp.mjs` | Manda el aviso por CallMeBot |
 | `reels/tiempos.mjs` | Cuándo arranca cada palabra del subtítulo |
 | `.github/workflows/redes.yml` | **El reloj**: Facebook + Instagram, varias corridas por día |
 | `.github/workflows/piezas.yml` | Armar y publicar piezas a mano |
 
 ### Lo que falta
 
-Ver [`PENDIENTES.md`](PENDIENTES.md), sección A (redes y automatización).
+Ver [`PENDIENTES.md`](PENDIENTES.md), secciones A (redes y automatización) y B
+(perfiles y medidas).

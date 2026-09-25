@@ -119,11 +119,11 @@ publicar piezas a mano. Detalle y horarios en `REDES.md`.
   varias fuentes cuando hay más de una, con un tono distinto para lo serio
   (Policiales, inseguridad, emergencias) que para el resto, y verificado
   contra la fuente antes de aceptarse. Detalle completo: `EDITORIAL.md`.
-- **Vercel Analytics activado el 22/09** (plan gratuito, 50.000 eventos/mes):
-  ya se puede medir tráfico real desde vercel.com → el proyecto → Analytics.
-  Primer dato, 23/09: 11 visitantes y 27 páginas vistas — recién empieza.
+- **Analítica: Cloudflare Web Analytics** (dash.cloudflare.com, gratis y sin
+  cookies). Las analíticas de Vercel se sacaron al mudar el sitio. Todavía hay
+  poco tráfico para sacar conclusiones.
 - **Los tres avisos publicitarios se cargan desde el panel** (pestaña Avisos,
-  23/09), no editando `web/data/avisos.json` a mano. Detalle: `REDES.md` § 2.
+  23/09), no editando `web/data/avisos.json` a mano. Detalle: `PUBLICIDAD.md`.
 - **Vigilancia** (`redes/vigilar.mjs`, workflow "Vigilancia", tercer trabajo de
   cron-job.org cada 30 min): revisa la web publicada, las corridas de GitHub,
   el reloj de redes y las piezas fijas del día, y avisa por **WhatsApp**
@@ -170,3 +170,28 @@ publicar piezas a mano. Detalle y horarios en `REDES.md`.
 | cambiar una medida de imagen de Instagram/Facebook | `redes/formatos.mjs` (fuente única, con fecha de verificación) y `FORMATOS.md`. Los lunes `redes/auditar.mjs` audita lo publicado y avisa por WhatsApp si algo se desvió o los datos pasaron de 90 días |
 | cambiar qué revisa el vigilante o cuándo avisa | `redes/vigilar.mjs` |
 | sumar o completar comercios | `comercial/` (ver `COMERCIAL.md`) |
+
+## Dónde está cada documento
+
+| Documento | Qué cuenta |
+|---|---|
+| `EMPEZAR-ACA.md` | Enlaces, qué corre solo y qué hay que hacer a mano |
+| `REGLAS.md` | Lo que se exige siempre y la prueba o el chequeo que lo cuida |
+| `INFRAESTRUCTURA.md` | Qué corre dónde, secretos por nombre, vencimientos, qué se cae y cómo se ve |
+| `MANUAL.md` | Cómo se eligen las noticias: puntaje, semáforo, diseño de la web |
+| `EDITORIAL.md` | Secciones y cómo se escribe una nota (título, copete, cuerpo) |
+| `REDES.md` | Qué se publica en Instagram y Facebook, cuándo y con qué reglas |
+| `PERFILES.md` | Biografías, categorías y colores de las redes |
+| `FORMATOS.md` | Medidas de imágenes y videos, con la auditoría semanal |
+| `SEO.md` | Posicionamiento: qué está hecho, cómo se audita, qué falta |
+| `PANEL.md` | El tablero: pestañas, usuarios, respaldo, sincronización y cómo pasarlo online |
+| `PUBLICIDAD.md` | Avisos, monetización y AdSense |
+| `COMERCIAL.md` | La base de comercios, la vigencia y las propuestas |
+| `INVESTIGACION.md` | Lo legal, con fuentes |
+| `INVESTIGACION-COMPETENCIA.md` | Lo que hacen los otros medios, con hecho/pendiente |
+| `POLITICA-PRIVACIDAD.md` | El texto de la política de privacidad del sitio |
+| `PENDIENTES.md` | Qué falta, por categoría |
+| `IDEAS.md` | Ideas de producto |
+| `NOTAS.md` | Decisiones vigentes (corto) |
+| `HISTORIA.md` | Qué se hizo y por qué, con fecha (histórico) |
+| `web/README.md` | La web: cómo correrla y dónde está cada cosa |

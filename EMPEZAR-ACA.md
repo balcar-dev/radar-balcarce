@@ -1,6 +1,6 @@
 # Radar Balcarce — empezar acá
 
-*Actualizado el 24/09/2026. Es una hoja de enlaces y de "qué hago yo": cómo
+*Actualizado el 25/09/2026. Es una hoja de enlaces y de "qué hago yo": cómo
 funciona cada cosa está en los otros documentos (ver el índice al final).*
 
 ## Los enlaces
@@ -29,8 +29,8 @@ node panel/clave.mjs hernan "la contraseña nueva"
 ```
 
 Si en algún momento se difundió una contraseña (pasó con las iniciales, que
-estuvieron escritas en este archivo hasta el 24/09), se cambia y listo. Y se
-borra `panel/datos/CLAVES-INICIALES.txt` si todavía existe.
+estuvieron escritas en este archivo hasta el 24/09; se cambiaron el 25/09), se
+cambia y listo. Y se borra `panel/datos/CLAVES-INICIALES.txt` si todavía existe.
 
 ## Qué hace solo
 
@@ -94,12 +94,17 @@ tailscale funnel --https=443 off
 | `EDITORIAL.md` | Las secciones y **cómo se escriben las notas** |
 | `REDES.md` | Qué se publica en Instagram y Facebook, a qué hora y con qué reglas |
 | `PERFILES.md` | Biografías, imágenes y colores de las redes |
+| `FORMATOS.md` | Medidas de imágenes y videos, con auditoría semanal |
 | `SEO.md` | Cómo se posiciona la web y cómo se audita |
-| `PANEL.md` | El tablero: qué hace cada pestaña |
+| `PANEL.md` | El tablero: pestañas, respaldo, sincronización y cómo pasarlo online |
 | `PUBLICIDAD.md` | Los avisos, la competencia y cómo se piensa ganar plata |
 | `COMERCIAL.md` | La base de comercios, la vigencia y las propuestas |
 | `INVESTIGACION.md` | Lo legal, con las fuentes |
 | `INVESTIGACION-COMPETENCIA.md` | Cómo se ven los otros medios |
 | `PENDIENTES.md` | **Qué falta, por categoría** |
 | `IDEAS.md` | Ideas de producto |
+| `NOTAS.md` | Decisiones vigentes (corto) |
+| `POLITICA-PRIVACIDAD.md` | El texto de la política de privacidad |
 | `HISTORIA.md` | Qué se hizo y por qué (histórico) |
+
+La lista completa, con el mismo orden, está al final de `CLAUDE.md`.

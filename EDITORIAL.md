@@ -36,7 +36,43 @@ pueblo.
   arriba. Se revisa a mano en el panel.
 - **Verde, sale solo:** todo lo demás, si la sección lo permite (todas, hoy).
 
-## Cómo se escribe una nota que sale sola
+## Cómo se escribe una nota
+
+Toda nota que la IA escribe tiene **tres partes**, y cada una cumple un papel
+distinto (el prompt exacto, con sus reglas, está en `reels/reescritura.mjs` y
+se lee en el panel, pestaña "Cómo escribe la IA"):
+
+| Parte | Qué es | Límite |
+|---|---|---|
+| **Título** | Empieza por lo que pasó, en presente, sin signos de admiración ni pregunta. Se entiende solo en el celular | Hasta 65 caracteres (el verificador rechaza más de 90) |
+| **Copete** | El adelanto: qué pasó, dónde y cuándo. Sin contexto ni antecedentes | Dos líneas como mucho, unas 30 palabras |
+| **Cuerpo** | La nota desarrollada, en **pirámide invertida**: primero el hecho central con el dato que el copete no dio (quién, cuándo, dónde, cuánto); después el contexto que importa; al final, si la fuente da para eso, qué sigue o qué significa para Balcarce | De uno a cuatro párrafos cortos, hasta 1800 caracteres |
+
+**El cuerpo tiene que ser distinto del copete.** No arranca con las mismas
+palabras ni lo repite. Si lo repite, el verificador lo rechaza
+(`pruebas/cuerpo.test.mjs`).
+
+**Con qué material trabaja.** La IA recibe el **texto completo de la nota
+original** (`ingesta/articulo.mjs`, hasta 4000 caracteres), no sólo el resumen del
+feed. Sin eso inventaba nombres y números y se rechazaba 65 % de las notas. Si
+hay varias fuentes para la misma noticia, recibe cada una por separado.
+
+**Cómo se controla:**
+
+1. **Verificador anti-invención** (`ingesta/verificar.mjs`): compara título,
+   copete y cuerpo contra todo lo que la IA recibió. Si aparece un número, un
+   nombre, un día o una cita que la fuente no trae, se rechaza.
+2. **Un reintento con corrección**: si la primera respuesta se rechaza, se
+   vuelve a pedir diciéndole qué falló ("usá únicamente lo que dice la fuente").
+3. **Si sólo falla el cuerpo** las dos veces, se publica el título y el copete
+   y la nota queda sin cuerpo: mejor eso que un cuerpo inventado.
+4. **Si falla todo**, la nota sale con el resumen mecánico de siempre.
+5. El vigilante avisa si menos del 35 % de las notas de las últimas 24 horas
+   tienen cuerpo.
+
+Las reglas que esto cuida están en `REGLAS.md` (5 y 6).
+
+## La reescritura automática de las notas que salen solas
 
 Hasta el 22/09, una nota automática (verde, sin que nadie la mire) salía con
 el resumen tal cual lo cortaba la fuente: prolijo, pero repetido, y a veces

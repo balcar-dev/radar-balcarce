@@ -1,6 +1,7 @@
 # Investigación legal — Radar Balcarce
 
-Fecha: 18 de septiembre de 2026.
+Fecha: 18 de septiembre de 2026. *Estado de lo aplicado revisado el 25/09/2026
+(ver "Qué cambiaría en el proyecto", al final).*
 
 Este archivo junta lo que se investigó sobre el marco legal argentino que
 le importa a un medio digital chico como este. Se buscó en fuentes
@@ -269,7 +270,7 @@ Fuentes:
    Esto se puede meter directo como regla en `reels/reescritura.mjs` o en
    el prompt editorial que ya usan, no sólo como criterio a mano.
 3. **Ampliar el criterio editorial de menores/víctimas** (punto 6) para
-   dejarlo explícito por escrito en `NOTAS.md` o donde estén las reglas
+   dejarlo explícito por escrito en `REGLAS.md` o donde estén las reglas
    del semáforo: no es sólo buen criterio, es ley (26.061 y 26.485). Se
    puede agregar como una regla dura al semáforo (rojo automático si la
    nota identifica a un menor o una víctima de delito sexual/violencia de
@@ -281,6 +282,18 @@ Fuentes:
    injurias y conecta con el derecho de rectificación — así la regla no
    se lee como una traba burocrática sino como protección real, si en
    algún momento alguien nuevo toca ese código.
+
+**Estado al 25/09/2026: los cuatro puntos están aplicados.** (1) La política
+de privacidad está publicada en la web (`web/app/politica-de-privacidad`, texto
+en `POLITICA-PRIVACIDAD.md`). (2) La lógica Campillay está en el prompt de
+`reels/reescritura.mjs` (regla 10). (3) Menores y víctimas son rojo automático
+en `ingesta/fuentes.mjs`. (4) La regla del reclamo está comentada en
+`panel/buzon.mjs`.
+
+**Zona gris nueva (25/09):** los posteos de redes no nombran la fuente y
+enlazan a nuestra nota, donde sí se cita y se enlaza el original. Es una
+decisión editorial (`REGLAS.md`, regla 10); si algún día llega un reclamo de un
+medio por eso, consultar antes de responder.
 
 No se encontró necesidad de trámite ante ENACOM para el proyecto tal cual
 está (punto 4 de la investigación original — renumerado acá como sección

@@ -225,7 +225,7 @@ export function TarjetaBuzon() {
  * Quién escribió la nota que estás leyendo.
  *
  * De los diarios nacionales que miramos, dos de cuatro identifican al
- * autor; de los locales, uno de tres (INVESTIGACION-NACIONALES.md). Para
+ * autor; de los locales, uno de tres (INVESTIGACION-COMPETENCIA.md). Para
  * nosotros es distinto que para ellos: parte de lo que publicamos lo
  * redacta una inteligencia artificial. Decirlo en cada nota, y no sólo en
  * el pie de página, nos conviene — el día que alguien lo descubra por su

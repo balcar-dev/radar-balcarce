@@ -85,7 +85,7 @@ firma, qué se hace público y qué no).
 ### La guía comercial y el mapa de Balcarce
 
 *Ampliada el 23/09, a pedido de Hernán: no sólo un directorio, un producto
-comercial completo.*
+comercial completo. La base de datos ya existe: `COMERCIAL.md`.*
 
 La versión chica (horarios, dirección, teléfono) sigue siendo buena idea y es
 **la parte del sitio que se puede cobrar** sin poner un solo banner (La
@@ -203,45 +203,12 @@ vez que se revisa. Es lo que un medio grande no tiene tiempo de sostener y un
 medio chico sí — y es gratis: no pide ninguna fuente nueva, sólo usar lo que
 ya está armado.
 
-## Cómo ganar plata: el orden en que lo haría
+## Cómo ganar plata
 
-*Actualizado el 24/09. Los precios no van escritos a propósito: hay que
-salir a preguntar qué paga un comercio de Balcarce hoy en la radio y en los
-otros medios, y arrancar por debajo. Se decide con la realidad, no acá.*
-
-Cada escalón se apoya en el anterior, y ninguno necesita más tráfico del que
-va a haber en los primeros meses. Lo que se vende siempre es **lo mismo:
-que el vecino los vea**, en el lugar donde ya mira.
-
-| # | Qué se vende | Dónde vive | Estado |
-|---|---|---|---|
-| 1 | **Los 3 avisos fijos** de la web (apertura, al lado del clima, al pie) | `web/data/avisos.json`, se carga desde el panel → Avisos | Armado. Falta el primer comercio |
-| 2 | **"El clima de hoy, presentado por…"**: mención del comercio en la historia del clima y de la farmacia, que son lo que más se mira | La voz ya lee un texto fijo; sumar una línea | Idea. Sin código nuevo importante |
-| 3 | **Mención en los podcasts** ("y esta mañana, gracias a…") | `redes/elegir.mjs`, un cierre distinto por auspiciante | Idea. Los 3 podcasts diarios ya existen |
-| 4 | **La guía comercial y el mapa** (abajo) | Sección nueva de la web | Propuesta |
-| 5 | **Sorteos y marketing conjunto** entre comercios anotados | Historias + posteos | Propuesta |
-| 6 | **Clasificados** y **empleo/changas** | Página nueva + formulario | Propuesta |
-| 7 | **Resumen semanal por WhatsApp o mail** con un espacio patrocinado | Ver "La semana en Balcarce" | Propuesta |
-| 8 | **Contenido patrocinado**, siempre marcado como tal | Nota con etiqueta "Contenido patrocinado" | Con reglas (abajo) |
-| 9 | **Pauta oficial** (campañas de vacunación, cortes de servicio, etc.) | Igual que un aviso | Depende de la relación con el municipio |
-| 10 | **Socios lectores** (aporte voluntario mensual, tipo Cafecito) | Un botón | Cuando haya lectores que lo pidan |
-| 11 | **AdSense** en un cuarto espacio | Script de Google | **Al final**: rinde poco en un pueblo, pesa y rompe la regla de "nada de terceros". Ver `PENDIENTES.md` |
-
-**Qué agregar antes de vender nada:** una página `/publicidad` con los
-espacios, cómo se ven y un contacto (WhatsApp); y un **media kit** de una
-hoja con los números reales de Vercel/Cloudflare Analytics (visitas,
-vecinos de Balcarce, seguidores de Instagram y Facebook, alcance de los
-podcasts). Un comercio compra números, no promesas: con los primeros
-30 días de datos alcanza para arrancar.
-
-**Reglas que no se negocian** (las mismas de `REDES.md` § 2, más tres):
-avisos quietos, grises, chicos y con la etiqueta "Espacio publicitario";
-nunca apuestas ni préstamos; nunca una publinota sin decirlo. Además:
-1. **Un aviso no compra una nota.** Lo que se escribe sobre un comercio
-   anunciante sigue el mismo criterio que sobre cualquier otro.
-2. **Política y Policiales no llevan patrocinio** de nadie.
-3. **El auspiciante nunca habla por la voz sin que se sepa:** la mención
-   dice "gracias a" o "presentado por", no simula ser una noticia.
+Se mudó a [`PUBLICIDAD.md`](PUBLICIDAD.md): el orden para vender (avisos fijos,
+menciones en los podcasts, guía y mapa, sorteos, clasificados, contenido
+patrocinado, AdSense al final), las reglas que no se negocian y lo que falta
+antes de vender (página `/publicidad`, media kit, precios).
 
 ## La guía comercial: cómo se arma en serio
 

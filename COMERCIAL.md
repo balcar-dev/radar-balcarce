@@ -17,6 +17,37 @@ que se puede mirar, completar y probar sin tocar nada de lo que está en línea.
 la guía como la vería un vecino y la lista de qué falta confirmar. (Hay una
 copia como artefacto privado del 24/09.)
 
+## Qué se busca y para qué (25/09/2026)
+
+**Qué se guarda.** Cualquier actividad económica o institucional de Balcarce. La
+ficha distingue seis **tipos de actividad**: comercio, profesional, industria,
+servicio, institución y feria. (Hoy el esquema clasifica por **rubro**, que sale
+de OpenStreetMap; el tipo de actividad como campo propio todavía **no está** en
+`comercial/esquema.mjs`: es lo que hay que sumar cuando se carguen las
+instituciones y los profesionales.)
+
+**Qué se les propone** (`comercial/propuestas.mjs`, de lo más suave a lo más
+comercial):
+
+| Propuesta | Qué es |
+|---|---|
+| **Confirmar datos** | El primer mensaje: pregunta si siguen abiertos. No vende nada |
+| **Sumarse gratis** a la guía | La entrada para el resto |
+| **Colaborar** | Un intercambio sin plata (mención en historias o podcasts a cambio de algo) |
+| **Sorteo conjunto** | Se sortea un premio del comercio entre los seguidores de los dos |
+| **Publicidad paga** | Aviso fijo en la web, mención en los podcasts, historia propia |
+| **Servicios digitales** | Lo que ofrecemos: **páginas web** y tiendas, **publicidad y marketing**, **micro-SAS y SAS** (constituir la sociedad) y **apps** o sistemas a medida |
+
+El catálogo con cada servicio y con qué comercio encaja está en `CATALOGO`
+(`comercial/propuestas.mjs`; las micro-SAS y SAS todavía no figuran ahí, hay que sumarlas); cómo se venden los avisos, en `PUBLICIDAD.md`.
+
+**Cómo se contacta: sin envíos masivos.** Cada mensaje lo manda **una persona**,
+desde un enlace que abre WhatsApp con el texto ya escrito. WhatsApp bloquea las
+cuentas que mandan masivamente, y en un pueblo un mensaje de una persona que se
+presenta cae distinto que un envío automático. Además, la ley de protección de
+datos personales (25.326) y el registro No Llame (26.951) piden que quien recibe
+pueda decir que no: **todos los mensajes ofrecen salirse**.
+
 ## Qué hay hoy (24/09/2026)
 
 145 comercios con nombre y ubicación en el mapa, todos de OpenStreetMap:
@@ -93,10 +124,11 @@ contacto comercial.
 |---|---|---|
 | **Cámara de Comercio e Industria de Balcarce** (desde 1940, calle 19 esquina 20; Facebook `camarabal`) | La lista de socios: es la mejor fuente y el mejor aliado | Reunión. Ofrecerles la guía gratis para sus socios a cambio de la lista |
 | **Municipalidad, Inspección General** (calle 23 Nº 636, tel. 02266 42-3396, `inspecgeneral@balcarce.mun.gba.gov.ar`) | Padrón de comercios habilitados | Pedido de acceso a la información pública (ley provincial 12.475). Pedir sólo nombre, rubro y dirección |
+| **Perfiles públicos de WhatsApp, Instagram y Facebook** | Confirmar que el comercio existe y sigue activo (teléfono, horario, últimas publicaciones) | **Cruce a mano**: una persona mira el perfil o le escribe. No se entra a las redes con un programa (ver arriba) |
 | **Los propios comercios** | Lo más confiable: horarios, WhatsApp, redes | Un formulario o un mensaje. Con su permiso, y con la opción de salir |
 | **Colegio de Farmacéuticos** | Farmacias | Ya lo usamos para la farmacia de turno |
 | **Las notas de Radar Balcarce** | Nombres que aparecen y sirven de señal de vida | Ya se cruza |
-| **OpenStreetMap** | La semilla | Ya importada. También se puede completar a mano ahí: es abierto |
+| **OpenStreetMap** | La semilla | Ya importada. Es abierto, con licencia **ODbL**: obliga a citar la fuente (la vista y el archivo la llevan) y a compartir igual lo derivado. También se puede completar a mano ahí |
 
 **Lo que NO se copia:** las guías comerciales privadas (Páginas Amarillas,
 ABC Teléfonos, argentino.com.ar, etc.). Sus datos tienen derechos y sus
@@ -123,3 +155,7 @@ condiciones prohíben copiarlos. Sirven para mirar, no para importar.
 - Si hay dudas sobre un dato personal, se saca.
 - La atribución a OpenStreetMap es obligatoria (licencia ODbL): la vista y el
   archivo la llevan.
+- **Sin envíos masivos** y siempre con la opción de salir de la lista (ley
+  25.326). Ver "Qué se busca y para qué" arriba.
+
+Qué falta hacer, por prioridad: `PENDIENTES.md`, sección G.
