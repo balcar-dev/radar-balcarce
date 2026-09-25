@@ -2,6 +2,7 @@ import { sitio, enlace, NOMBRE } from '@/lib/sitio';
 import { autorDeNota } from '@/components/metadatos';
 import { REDES_SOCIALES } from '@/lib/datos';
 import { fichaDeEvento } from '@/lib/eventos';
+import { enlaceParaElLector } from '@/lib/fuentes-de-la-nota';
 
 // Los datos estructurados: lo mismo que ya está en la página, pero escrito
 // para que lo lea una máquina.
@@ -99,7 +100,8 @@ export function FichaDeNota({ nota }) {
     // De dónde salió. Es la mitad de lo que ofrecemos: el trabajo original
     // es del medio que la informó.
     citation: (nota.medios ?? []).map((m) => ({ '@type': 'CreativeWork', name: m })),
-    isBasedOn: nota.enlace || undefined,
+    // Nunca la entrada XML de un feed de Blogger (CRITERIO-EDITORIAL.md, § 7).
+    isBasedOn: enlaceParaElLector(nota.enlace) || undefined,
     // Las etiquetas de la nota (desde el 25/09) son palabras clave de verdad.
     // El nivel de verificación, las claves y lo que falta confirmar NO van
     // acá: schema.org no tiene una propiedad clara para eso y no se inventa.

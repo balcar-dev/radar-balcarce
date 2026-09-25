@@ -14,6 +14,8 @@
 
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import path from 'node:path';
 import { parsearFeed, enlaceAlternativo, paraPruebas } from '../ingesta/ingesta.mjs';
 import {
   origenesDe, textoCompletoDe, revalidarExtras, conEnlacesDelLector, completarReescritura,
@@ -124,6 +126,9 @@ test('al lector nunca le llega el XML de un feed: si quedó alguno, se muestra e
     { medio: 'Infórmese Primero (FM 104.9)', enlace: null },
     { medio: 'La Nación', enlace: 'https://lanacion.com.ar/x' },
   ]);
+  // Los datos para Google (isBasedOn) tampoco: el 25/09 decían el XML.
+  const ficha = fs.readFileSync(path.join(import.meta.dirname, '..', 'web', 'components', 'ficha.js'), 'utf8');
+  assert.match(ficha, /isBasedOn: enlaceParaElLector\(nota\.enlace\)/);
   // Una nota vieja, sin fuentes consultadas, tampoco.
   assert.deepEqual(fuentesDeLaNota({ enlace: FEED_XML, medios: ['Infórmese Primero (FM 104.9)'] }), [
     { medio: 'Infórmese Primero (FM 104.9)', enlace: null },
