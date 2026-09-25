@@ -1,5 +1,5 @@
 {
-  "exportado": "2026-09-25T12:40:18.859Z",
+  "exportado": "2026-09-25T12:50:49.559Z",
   "decisiones": {
     "1951120": {
       "estado": "automatica",
@@ -11687,13 +11687,63 @@
     },
     "wra9xv": {
       "estado": "automatica",
-      "titulo": null,
-      "copete": null,
-      "cuerpo": null,
-      "guion": null,
-      "deIA": null,
-      "por": null,
-      "cuando": "2026-09-25T06:40:57.508Z"
+      "titulo": "Kevin Gómez analiza entrenar fuera de Balcarce tras su título nacional",
+      "copete": "El boxeador balcarceño se consagró campeón argentino de los supermedianos tras vencer por nocaut a Santiago Fernández. Ahora evalúa realizar futuros campamentos en La Plata para sumar nuevas herramientas.",
+      "cuerpo": "El boxeador balcarceño Kevin Gómez visitó un medio local tras consagrarse campeón argentino de la categoría supermediano el pasado sábado, cuando derrotó por nocaut a Santiago Fernández y obtuvo el primer cinturón profesional de su carrera. El deportista de veintidós años recordó que los primeros asaltos fueron complejos debido a la velocidad del rival, pero la estrategia de su rincón consistía en incrementar la agresividad desde el quinto round, momento en que logró la definición con un derechazo a los quince segundos.\n\nCon el título nacional ya obtenido, Gómez adelantó que analiza realizar futuras preparaciones fuera de Balcarce para acceder a mayores posibilidades de sparring y sumar herramientas, evaluando la alternativa de sumarse de forma temporal a un equipo en La Plata para sus próximos compromisos.",
+      "guion": "Kevin Gómez analiza entrenar fuera de Balcarce tras su título nacional",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T12:50:49.506Z",
+      "claves": [
+        "Kevin Gómez se consagró campeón argentino de los supermedianos por nocaut ante Santiago Fernández.",
+        "El boxeador balcarceño obtuvo el primer cinturón profesional de su trayectoria deportiva.",
+        "Analiza realizar campamentos temporales en La Plata para sumar nuevas herramientas de entrenamiento."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El boxeador balcarceño Kevin Gómez se consagró campeón argentino de los supermedianos tras vencer por nocaut a Santiago Fernández y analiza realizar futuros campamentos de entrenamiento en La Plata.",
+      "etiquetas": [
+        "Kevin Gómez",
+        "boxeo",
+        "deportes",
+        "Balcarce",
+        "título argentino"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Radio Gabal (FM 104.1)",
+          "enlace": "https://www.radiogabal.com.ar/index.php/deportes/kevin-gomez-en-gabal-tengo-grandes-metas-y-con-esfuerzo-las-voy-a-ir-consiguiendo",
+          "fecha": "2026-09-24T19:11:20.000Z",
+          "oficial": false,
+          "aporte": "Detalles de la pelea por el título nacional, el desarrollo del combate y los proyectos de entrenamiento del boxeador."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1vgvciw",
+          "titulo": "Kevin Gomez festeja su titulo argentino de boxeo en Balcarce",
+          "fecha": "2026-09-23T11:53:31.000Z",
+          "ruta": "/nota/entre-felicitaciones-y-orgullo-kevin-gomez-compartio-en-quality-su-1vgvciw"
+        },
+        {
+          "id": "10x98wn",
+          "titulo": "Caravana y recibimiento para el boxeador Kevin Gómez",
+          "fecha": "2026-09-22T23:46:36.443Z",
+          "ruta": "/nota/caravana-y-recibimiento-para-el-boxeador-kevin-gomez-10x98wn"
+        },
+        {
+          "id": "mvz4ty",
+          "titulo": "Reconocieron a Kevin Gómez en el Museo Fangio",
+          "fecha": "2026-09-22T19:54:30.000Z",
+          "ruta": "/nota/reconocieron-a-kevin-gomez-en-el-museo-fangio-mvz4ty"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
     },
     "m7fmln": {
       "estado": "automatica",
@@ -12055,13 +12105,70 @@
     },
     "q84c12": {
       "estado": "pendiente",
-      "titulo": null,
-      "copete": null,
-      "cuerpo": null,
-      "guion": null,
-      "deIA": null,
-      "por": null,
-      "cuando": "2026-09-25T06:51:03.538Z"
+      "titulo": "Una investigadora del INTA cuestiona la suspensión de un proyecto en Balcarce",
+      "copete": "La científica Virginia Aparicio difundió una carta donde repasa su labor en el proyecto internacional SPRINT y advierte sobre un sumario administrativo en su contra.",
+      "cuerpo": "La investigadora de la Estación Experimental Agropecuaria Balcarce del INTA y del CONICET, Virginia Aparicio, difundió una carta pública para detallar su participación en la iniciativa internacional SPRINT, enfocada en estudiar la presencia de plaguicidas y su impacto ambiental y sanitario. En el texto, la especialista cuestionó que la institución suspendiera la presentación de los resultados locales en junio de dos mil veintitrés y se retirara posteriormente del programa financiado por la Unión Europea.\n\nPreviamente, la Asamblea Permanente por los Derechos Humanos emitió una declaración para rechazar la factible sanción a la investigadora balcarceña, mientras que en la Legislatura provincial se impulsó un proyecto de respaldo a su labor científica.",
+      "guion": "Una investigadora del INTA cuestiona la suspensión de un proyecto en Balcarce",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T12:50:49.506Z",
+      "claves": [
+        "Virginia Aparicio difundió una carta sobre su rol en el proyecto SPRINT",
+        "La científica cuestionó la suspensión de los resultados locales en dos mil veintitrés",
+        "Señaló que afronta un sumario administrativo con una posible sanción",
+        "El caso generó pronunciamientos de entidades y legisladores provinciales"
+      ],
+      "seSabe": [
+        "Virginia Aparicio trabaja en la Estación Experimental Agropecuaria Balcarce del INTA y del CONICET",
+        "El proyecto SPRINT estudió plaguicidas y sus impactos ambientales",
+        "El INTA suspendió la presentación de resultados locales y se retiró de la iniciativa",
+        "La investigadora indicó que supo de una posible exoneración a través de la asociación gremial"
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "La investigadora Virginia Aparicio difundió una carta donde cuestiona la suspensión de un proyecto internacional en el INTA Balcarce y advierte sobre un sumario en su contra.",
+      "etiquetas": [
+        "INTA",
+        "Virginia Aparicio",
+        "Balcarce",
+        "investigacion",
+        "plaguicidas"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/cuando-la-ciencia-incomoda-la-carta-de-virginia-aparicio-199",
+          "fecha": "2026-09-24T14:26:31.000Z",
+          "oficial": false,
+          "aporte": "Aporta la carta completa de la investigadora Virginia Aparicio sobre el proyecto SPRINT y el sumario administrativo."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "v91szb",
+          "titulo": "La APDH rechaza la factible exoneración de la Dra. Virginia Aparicio, investigadora del INTA Balcarce y del CONICET",
+          "fecha": "2026-09-23T01:50:24.356Z",
+          "ruta": "/nota/la-apdh-rechaza-la-factible-exoneracion-de-la-dra-virginia-aparicio-v91szb"
+        },
+        {
+          "id": "tmpmtz",
+          "titulo": "Legislatura bonarense: presentan un proyecto para respaldar a Virginia Aparicio, investigadora de INTA Balcarce",
+          "fecha": "2026-09-21T17:19:51.000Z",
+          "ruta": "/nota/legislatura-bonarense-presentan-un-proyecto-para-respaldar-a-virginia-tmpmtz"
+        },
+        {
+          "id": "1w8nq7h",
+          "titulo": "Estudiantes de Balcarce expusieron proyectos productivos",
+          "fecha": "2026-09-20T17:06:47.000Z",
+          "ruta": "/nota/estudiantes-de-balcarce-expusieron-proyectos-productivos-1w8nq7h"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
     },
     "wmweq4": {
       "estado": "automatica",
@@ -12145,23 +12252,130 @@
     },
     "1iv58lw": {
       "estado": "automatica",
-      "titulo": null,
-      "copete": null,
-      "cuerpo": null,
-      "guion": null,
-      "deIA": null,
-      "por": null,
-      "cuando": "2026-09-25T07:00:41.253Z"
+      "titulo": "El Concejo Deliberante debate tasas, obras y proyectos en Balcarce",
+      "copete": "El cuerpo deliberativo local se reúne este jueves desde las 19:30 para abordar un extenso orden del día con 39 expedientes. Entre los temas figuran pedidos sobre transporte, obras públicas, salud y reconocimientos deportivos.",
+      "cuerpo": "El Honorable Concejo Deliberante de Balcarce llevará a cabo este jueves su decimocuarta sesión del año a partir de las 19:30, con el tratamiento de 39 expedientes que incluyen solicitudes al Departamento Ejecutivo sobre tasas, obras y servicios públicos, salud, educación y deporte.\n\nEntre los puntos destacados del orden del día figura un pedido para eliminar tasas y cánones a taxis y remises de cara al ejercicio 2027, un tema que ya había generado debate en la previa parlamentaria. Asimismo, se discutirán iniciativas de mejoramiento habitacional, la puesta en valor del Estadio Municipal General Balcarce, un plan de forestación y la ampliación de la red de gas natural.",
+      "guion": "El Concejo Deliberante debate tasas, obras y proyectos en Balcarce",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T12:50:49.506Z",
+      "claves": [
+        "El Concejo Deliberante sesiona este jueves desde las 19:30.",
+        "Tratan 39 expedientes sobre obras, transporte y servicios.",
+        "Analizan la eliminación de tasas para taxis y remises para 2027.",
+        "Incluye reconocimientos educativos y deportivos en el distrito."
+      ],
+      "seSabe": [
+        "La decimocuarta sesión ordinaria del año se realiza este jueves.",
+        "El orden del día contempla 39 expedientes en total.",
+        "Se evalúa una solicitud para eximir de tasas y cánones a taxis y remises para el ejercicio 2027.",
+        "Tratarán iniciativas de mejoramiento habitacional, forestación y obras viales.",
+        "Analizarán la designación del 'Paseo Intendente Juan José Mare' en el cerro El Triunfo."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El Concejo Deliberante de Balcarce sesiona este jueves para tratar 39 expedientes que incluyen tasas para taxis y remises, obras públicas, servicios y reconocimientos deportivos.",
+      "etiquetas": [
+        "Concejo Deliberante",
+        "Balcarce",
+        "tasas municipales",
+        "obras públicas"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Radio Gabal (FM 104.1)",
+          "enlace": "https://www.radiogabal.com.ar/index.php/politica/concejo-deliberante-este-jueves-se-desarrollara-el-decimocuarto-capitulo-del-ano",
+          "fecha": "2026-09-24T12:55:31.000Z",
+          "oficial": false,
+          "aporte": "Detalló los 39 expedientes del orden del día para la sesión del Concejo Deliberante y los principales temas a tratar."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "7c7bdz",
+          "titulo": "El Concejo debate eliminar tasas a taxis y remises en Balcarce",
+          "fecha": "2026-09-23T22:58:23.988Z",
+          "ruta": "/nota/taxis-y-remises-debatiran-la-eliminacion-de-tasas-mientras-el-sector-7c7bdz"
+        },
+        {
+          "id": "160xnh",
+          "titulo": "La inseguridad volvió a ocupar el centro de la agenda del Concejo",
+          "fecha": "2026-09-21T16:47:05.946Z",
+          "ruta": "/nota/la-inseguridad-volvio-a-ocupar-el-centro-de-la-agenda-del-concejo-160xnh"
+        },
+        {
+          "id": "1n4w9ua",
+          "titulo": "Piden instalar un punto presencial para gestionar el TelePASE en Balcarce o en el peaje de la Ruta 226",
+          "fecha": "2026-09-23T14:56:16.191Z",
+          "ruta": "/nota/piden-instalar-un-punto-presencial-para-gestionar-el-telepase-en-1n4w9ua"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
     },
     "11pnmnw": {
       "estado": "automatica",
-      "titulo": null,
-      "copete": null,
-      "cuerpo": null,
-      "guion": null,
-      "deIA": null,
-      "por": null,
-      "cuando": "2026-09-25T07:00:48.198Z"
+      "titulo": "Axel Kicillof visita Balcarce para la reinauguración del autódromo",
+      "copete": "El gobernador bonaerense llegará este viernes para encabezar la reapertura del autódromo Juan Manuel Fangio y entregar escrituras.",
+      "cuerpo": "El gobernador de la provincia de Buenos Aires, Axel Kicillof, visitará Balcarce este viernes en el marco de una agenda regional que incluirá la reinauguración oficial del autódromo Juan Manuel Fangio en el circuito de La Barrosa.\n\nLa actividad central en Balcarce comenzará a las 14 en el sector de boxes del escenario deportivo. Previamente, el mandatario provincial encabezará un acto institucional en el distrito para entregar cerca de trescientos títulos de propiedad a vecinos.\n\nLa visita oficial forma parte de una recorrida que el Gobernador realizará por la zona, la cual incluirá una escala previa en Lobería durante la mañana para participar en la entrega de equipamiento y computadoras portátiles para estudiantes, según informó la fuente consultada.",
+      "guion": "Axel Kicillof visita Balcarce para la reinauguracion del autodromo",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T12:50:49.506Z",
+      "seSabe": [
+        "El gobernador Axel Kicillof visitará Balcarce este viernes 25 de septiembre.",
+        "Encabezará la reinauguración del autódromo Juan Manuel Fangio a las 14 en el sector de boxes.",
+        "Entregará cerca de trescientos títulos de propiedad en Balcarce.",
+        "Realizará una escala previa en Lobería durante la mañana para entregar escrituras, un camión de residuos, una ambulancia y netbooks."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El gobernador Axel Kicillof visitará Balcarce este viernes para encabezar la reinauguración del autódromo Juan Manuel Fangio y entregar escrituras.",
+      "etiquetas": [
+        "Axel Kicillof",
+        "Balcarce",
+        "Autodromo Juan Manuel Fangio",
+        "La Barrosa"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "2261 – Noticias de Lobería",
+          "enlace": "https://www.2261.com.ar/kicillof-visitara-loberia-en-el-dia-de-su-cumpleanos/",
+          "fecha": "2026-09-23T23:52:12.000Z",
+          "oficial": false,
+          "aporte": "Detalló la agenda del gobernador Axel Kicillof en Lobería y su llegada posterior a Balcarce para el autódromo."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1nuz3q",
+          "titulo": "Kicillof visitará Balcarce: inaugurará obras en el autódromo y entregará escrituras",
+          "fecha": "2026-09-16T13:12:10.873Z",
+          "ruta": "/nota/kicillof-visitara-balcarce-inaugurara-obras-en-el-autodromo-y-1nuz3q"
+        },
+        {
+          "id": "101q9i9",
+          "titulo": "Sol Di Geronimo sobre la visita de Kicillof: “Es muy importante recibir al gobernador en épocas no electorales”",
+          "fecha": "2026-09-23T11:30:08.000Z",
+          "ruta": "/nota/sol-di-geronimo-sobre-la-visita-de-kicillof-es-muy-importante-recibir-101q9i9"
+        },
+        {
+          "id": "din3cj",
+          "titulo": "Un matrimonio llega desde Chubut y espera en Balcarce",
+          "fecha": "2026-09-23T22:58:23.988Z",
+          "ruta": "/nota/sonia-y-dario-lideran-la-fila-en-el-autodromo-en-balcarce-din3cj"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
     },
     "52q3fj": {
       "estado": "automatica",
@@ -12175,33 +12389,158 @@
     },
     "11nk8l": {
       "estado": "automatica",
-      "titulo": null,
-      "copete": null,
-      "cuerpo": null,
-      "guion": null,
-      "deIA": null,
-      "por": null,
-      "cuando": "2026-09-25T07:00:55.074Z"
+      "titulo": "Milei cruza a Kicillof en Estados Unidos y lo culpa por el riesgo país",
+      "copete": "El presidente Javier Milei cuestionó al gobernador bonaerense Axel Kicillof durante su visita a Estados Unidos y lo responsabilizó por el incremento del indicador financiero.",
+      "cuerpo": "El presidente Javier Milei apuntó contra el gobernador de la provincia de Buenos Aires, Axel Kicillof, durante una conferencia en la sede del Citi Bank en Manhattan, en el cierre de su gira por Estados Unidos. El mandatario nacional culpó al dirigente provincial por la suba del riesgo país tras declaraciones previas realizadas en Nueva York, donde Kicillof había señalado que el plan económico oficial no existe. Durante su exposición ante banqueros y empresarios, Milei defendió la marcha de la economía y sostuvo que el indicador financiero responde a lo que denominó riesgo Kuka.",
+      "guion": "Milei cruza a Kicillof en Estados Unidos y lo culpa por el riesgo país",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T12:50:49.506Z",
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El presidente Javier Milei cuestionó al gobernador Axel Kicillof durante su visita a Estados Unidos y lo responsabilizó por la suba del riesgo país.",
+      "etiquetas": [
+        "Javier Milei",
+        "Axel Kicillof",
+        "Riesgo país",
+        "Estados Unidos"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infórmese Primero (FM 104.9)",
+          "enlace": "http://www.informeseprimero.com.ar/2026/09/milei-insulto-kicillof-y-lo-culpo-por.html",
+          "fecha": "2026-09-24T01:04:00.000Z",
+          "oficial": false,
+          "aporte": "Detalló las declaraciones de Javier Milei en Estados Unidos y las críticas hacia Axel Kicillof."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "glz6z8",
+          "titulo": "Axel Kicillof, sobre el discurso de Javier Milei en la ONU: \"Sorprende que ahora se acuerde de las Malvinas\"",
+          "fecha": "2026-09-23T23:09:00.000Z",
+          "ruta": "/nota/axel-kicillof-sobre-el-discurso-de-javier-milei-en-la-onu-sorprende-glz6z8"
+        },
+        {
+          "id": "1ulc8zs",
+          "titulo": "En un encuentro con Pedro Sánchez y Mamdani, Kicillof apuntó contra Milei: \"En Argentina se está viviendo una verdadera catástrofe\"",
+          "fecha": "2026-09-23T22:15:04.000Z",
+          "ruta": "/nota/en-un-encuentro-con-pedro-sanchez-y-mamdani-kicillof-apunto-contra-1ulc8zs"
+        },
+        {
+          "id": "1c45mmi",
+          "titulo": "Con un discurso anti Milei, Kicillof se mostró con el alcalde de Nueva York y el presidente de España",
+          "fecha": "2026-09-23T21:35:22.000Z",
+          "ruta": "/nota/con-un-discurso-anti-milei-kicillof-se-mostro-con-el-alcalde-de-nueva-1c45mmi"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
     },
     "159jwak": {
       "estado": "automatica",
-      "titulo": null,
-      "copete": null,
-      "cuerpo": null,
-      "guion": null,
-      "deIA": null,
-      "por": null,
-      "cuando": "2026-09-25T07:00:57.727Z"
+      "titulo": "El Gobierno logra dictamen en Diputados por la ley de Discapacidad",
+      "copete": "El oficialismo consiguió el dictamen de mayoría en la Cámara de Diputados tras dar marcha atrás con los recortes. La oposición mantiene reparos de cara al debate en el recinto previsto para octubre.",
+      "cuerpo": "Durante el debate, la diputada oficialista Laura Rodríguez Machado defendió la propuesta y aseguró la incorporación de partidas presupuestarias y la puesta en marcha de auditorías. Como se había informado a principios de semana, el oficialismo debió reconfigurar su estrategia legislativa en busca de consensos con bloques provinciales, el PRO, la UCR y el MID.\n\nEl texto aprobado fija el valor de las pensiones en el setenta por ciento del haber jubilatorio mínimo, establece actualizaciones mensuales atadas a la inflación y permite compatibilizar el beneficio con un empleo formal o monotributo cuyos ingresos no superen dos salarios mínimos. El oficialismo prevé llevar el proyecto al recinto para su votación definitiva el próximo siete de octubre.",
+      "guion": "El Gobierno logra dictamen en Diputados por la ley de Discapacidad",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T12:50:49.506Z",
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El oficialismo consiguió el dictamen de mayoría en Diputados para la ley de Discapacidad tras dar marcha atrás con los recortes presupuestarios y fijar actualizaciones mensuales.",
+      "etiquetas": [
+        "Diputados",
+        "Discapacidad",
+        "Presupuesto 2027",
+        "Gobierno nacional"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infórmese Primero (FM 104.9)",
+          "enlace": "http://www.informeseprimero.com.ar/2026/09/discapacidad-el-gobierno-dio-marcha.html",
+          "fecha": "2026-09-24T01:02:00.000Z",
+          "oficial": false,
+          "aporte": "Detalló los apoyos, disidencias y cruces políticos en el plenario de comisiones de Diputados."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1ld0sju",
+          "titulo": "Discapacidad: el Gobierno dio marcha atrás y consiguió un dictamen, pero persiste la desconfianza por el proyecto",
+          "fecha": "2026-09-23T20:09:02.000Z",
+          "ruta": "/nota/discapacidad-el-gobierno-dio-marcha-atras-y-consiguio-un-dictamen-1ld0sju"
+        },
+        {
+          "id": "xdi5no",
+          "titulo": "Tras la marcha atrás del Gobierno, el oficialismo consiguió el dictamen de Discapacidad y avanza la ley pese a la desconfianza de la oposición",
+          "fecha": "2026-09-23T17:19:01.000Z",
+          "ruta": "/nota/tras-la-marcha-atras-del-gobierno-el-oficialismo-consiguio-el-xdi5no"
+        },
+        {
+          "id": "uhtlm2",
+          "titulo": "Discapacidad: LLA retrocedió con el recorte y logró un dictamen para avanzar con una ley propia",
+          "fecha": "2026-09-23T20:11:17.000Z",
+          "ruta": "/nota/discapacidad-lla-retrocedio-con-el-recorte-y-logro-un-dictamen-para-uhtlm2"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
     },
     "jul4yj": {
       "estado": "automatica",
-      "titulo": null,
-      "copete": null,
-      "cuerpo": null,
-      "guion": null,
-      "deIA": null,
-      "por": null,
-      "cuando": "2026-09-25T07:01:00.319Z"
+      "titulo": "Aranaga participa en un plenario federal peronista",
+      "copete": "El presidente del Partido Justicialista de Balcarce asistió al encuentro del Movimiento Derecho al Futuro en Avellaneda, que fue encabezado por el gobernador Axel Kicillof.",
+      "cuerpo": "El presidente del Partido Justicialista de Balcarce, Sergio Aranaga, participó en la ciudad de Avellaneda del Plenario Federal del Movimiento Derecho al Futuro. El encuentro, que reunió a dirigentes, militantes y referentes de todo el país, tuvo como eje central la construcción política, territorial y programática de una alternativa nacional.\n\nSegún informó la única fuente disponible, la jornada fue encabezada por el gobernador bonaerense Axel Kicillof. El dirigente local manifestó que se trató de un evento multitudinario y constructivo para debatir y organizar el futuro, y destacó que la participación del espacio balcarceño se dio a partir de una invitación de la secretaría privada del mandatario provincial.",
+      "guion": "Aranaga participa en un plenario federal peronista",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T12:50:49.506Z",
+      "claves": [
+        "Aranaga participó del plenario en Avellaneda",
+        "El encuentro fue encabezado por Axel Kicillof",
+        "El PJ local estuvo presente en la jornada"
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "etiquetas": [
+        "Sergio Aranaga",
+        "PJ Balcarce",
+        "Axel Kicillof",
+        "Avellaneda",
+        "politica"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "News Balcarce (FM 91.7)",
+          "enlace": "https://newsbalcarce.com.ar/?p=30746",
+          "fecha": "2026-09-22T21:37:19.000Z",
+          "oficial": false,
+          "aporte": "Detalles sobre la participación de Sergio Aranaga en el plenario de Avellaneda y sus declaraciones sobre el encuentro."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "wmdo1p",
+          "titulo": "El PJ de Balcarce participó del Plenario Federal del Movimiento Derecho al Futuro",
+          "fecha": "2026-09-21T00:49:24.000Z",
+          "ruta": "/nota/el-pj-de-balcarce-participo-del-plenario-federal-del-movimiento-wmdo1p"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
     },
     "1x3bvjs": {
       "estado": "automatica",
@@ -14737,6 +15076,72 @@
       "verificacion": {
         "nivel": "MEDIA",
         "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "1spjzhb": {
+      "estado": "automatica",
+      "titulo": "El Concejo designa Paseo Intendente Juan José Mare a la vuelta interna del Cerro en Balcar",
+      "copete": "El Concejo Deliberante aprobó una ordenanza para nombrar el circuito del Cerro El Triunfo en honor al exjefe comunal Juan José Mare. La medida generó cuestionamientos por su asunción durante un gobierno de facto.",
+      "cuerpo": "La iniciativa fue impulsada por la concejala Sandra Divito, integrante del bloque Juntos, según informaron los medios locales.\n\nLa decisión generó cuestionamientos por parte del exconcejal Atilio R. Barragán. El vecino señaló que resulta una paradoja institucional homenajear a quien gobernó en un período sin funcionamiento legislativo.\n\nSi bien reconoció la concreción de obras y eventos destacados durante aquellas gestiones, Barragán sugirió distinguir los proyectos realizados de las circunstancias políticas iniciales para evitar convalidar el método de acceso al poder.",
+      "guion": "El Concejo designa Paseo Intendente Juan José Mare a la vuelta interna del Cerro en Balcarce",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T12:50:49.506Z",
+      "seSabe": [
+        "El Concejo Deliberante aprobó por mayoría la ordenanza que lleva el nombre de Juan José Mare al circuito del Cerro El Triunfo.",
+        "La concejala Sandra Divito impulsó el proyecto desde el bloque Juntos.",
+        "El exconcejal Atilio R. Barragán envió una carta al presidente del cuerpo, Agustín Cassini, para expresar su rechazo."
+      ],
+      "noConfirmado": [
+        "No trascendieron mayores detalles sobre el debate interno en el recinto ni la votación exacta de los ediles."
+      ],
+      "etiquetas": [
+        "Concejo Deliberante",
+        "Cerro El Triunfo",
+        "Juan José Mare",
+        "Balcarce",
+        "Atilio Barragán"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Radio Gabal (FM 104.1)",
+          "enlace": "https://www.radiogabal.com.ar/index.php/comunidad/cuestionan-que-la-vuelta-interna-del-cerro-lleve-el-nombre-de-juan-jose-mare",
+          "fecha": "2026-09-25T12:46:51.000Z",
+          "oficial": false,
+          "aporte": "Informó sobre la aprobación de la ordenanza, la impulsora del proyecto y la carta de rechazo enviada por un exconcejal."
+        },
+        {
+          "medio": "Infórmese Primero (FM 104.9)",
+          "enlace": "http://www.informeseprimero.com.ar/2026/09/por-mayoria-el-hcd-aprobo-que-la-vuelta.html",
+          "fecha": "2026-09-25T00:52:49.160Z",
+          "oficial": false,
+          "aporte": "Confirmó la aprobación por mayoría de la ordenanza para nombrar al circuito del Cerro El Triunfo."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1muc0dj",
+          "titulo": "El Concejo aprueba denominar Paseo Intendente Juan José Mare al circuito del Cerro El Triu",
+          "fecha": "2026-09-24T23:30:13.000Z",
+          "ruta": "/nota/el-concejo-aprueba-denominar-paseo-intendente-juan-jose-mare-al-1muc0dj"
+        },
+        {
+          "id": "vf07qr",
+          "titulo": "Festejos por el Día del Estudiante en el Cerro El Triunfo",
+          "fecha": "2026-09-18T17:07:18.000Z",
+          "ruta": "/nota/festejos-por-el-dia-del-estudiante-en-el-cerro-el-triunfo-vf07qr"
+        },
+        {
+          "id": "834bwh",
+          "titulo": "Festejos por el Día del Estudiante en el cerro El Triunfo",
+          "fecha": "2026-09-18T15:12:07.000Z",
+          "ruta": "/nota/festejos-por-el-dia-del-estudiante-en-el-cerro-el-triunfo-834bwh"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
         "sugeridoPorIA": "MEDIA"
       }
     }
