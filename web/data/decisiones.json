@@ -1,5 +1,5 @@
 {
-  "exportado": "2026-09-25T10:50:40.948Z",
+  "exportado": "2026-09-25T11:00:55.946Z",
   "decisiones": {
     "1951120": {
       "estado": "automatica",
@@ -12224,6 +12224,135 @@
       "deIA": null,
       "por": null,
       "cuando": "2026-09-25T10:50:40.900Z"
+    },
+    "18bahep": {
+      "estado": "automatica",
+      "titulo": "Las petroleras privadas aumentan hasta cinco por ciento los combustibles en Balcarce",
+      "copete": "Shell, Axion y Puma aplicaron subas en sus valores en respuesta al incremento del petróleo a nivel global. El ajuste se da en el marco de la escalada internacional.",
+      "cuerpo": "Las estaciones de servicio de las firmas Shell, Axion y Puma comenzaron a reflejar en sus surtidores incrementos que van del dos al cinco por ciento. La medida responde directamente a la suba en el valor internacional del petróleo crudo, impulsada por la situación en Medio Oriente, que superó los cien dólares por barril.\n\nComo se había informado a principios de esta semana, las empresas privadas avanzaron con estas modificaciones en sus tarifas, mientras se aguardaba una definición por parte de YPF sobre un posible reacomodamiento en sus precios.\n\nPara los conductores locales, esta actualización en las pizarras representa un nuevo golpe al bolsillo al momento de cargar combustible en las bocas de expendio del partido.",
+      "guion": "Las petroleras privadas aumentan hasta cinco por ciento los combustibles en Balcarce",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T11:00:44.795Z",
+      "seSabe": [
+        "Las estaciones de servicio de Shell, Axion y Puma aplicaron incrementos en los precios de sus combustibles.",
+        "Las subas se ubican en un rango de entre el dos y el cinco por ciento.",
+        "Los ajustes ocurren a raíz de la suba del valor internacional del petróleo, impulsada por el conflicto en Medio Oriente."
+      ],
+      "textoRedes": "Shell, Axion y Puma aumentaron entre dos y cinco por ciento los precios de sus combustibles en Balcarce. La medida responde a la suba internacional del petróleo crudo vinculada al conflicto en Medio Oriente.",
+      "etiquetas": [
+        "combustibles",
+        "aumento",
+        "Shell",
+        "Axion",
+        "Puma",
+        "petroleo",
+        "Balcarce"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/economia/2026/09/24/sube-la-nafta-shell-axion-y-puma-aumentaron-entre-2-y-5-por-ciento-los-precios-de-sus-combustibles/",
+          "fecha": "2026-09-25T10:54:43.000Z",
+          "oficial": false,
+          "aporte": "Informó sobre el contexto de incertidumbre y la suba aplicada por Shell, Axion y Puma."
+        },
+        {
+          "medio": "Infórmese Primero (FM 104.9)",
+          "enlace": "http://www.blogger.com/feeds/8495648477830064035/posts/default/7976430694001347512",
+          "fecha": "2026-09-24T22:04:00.000Z",
+          "oficial": false,
+          "aporte": "Detalló que el incremento en surtidores oscila entre el dos y el cinco por ciento."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "18o7aeq",
+          "titulo": "Las petroleras privadas aumentaron 5% los combustibles, mientras YPF espera: cómo quedaron los precios",
+          "fecha": "2026-09-24T18:26:39.000Z",
+          "ruta": "/nota/las-petroleras-privadas-aumentaron-5-los-combustibles-mientras-ypf-18o7aeq"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      }
+    },
+    "r0e52q": {
+      "estado": "automatica",
+      "titulo": null,
+      "copete": null,
+      "cuerpo": null,
+      "guion": null,
+      "deIA": null,
+      "por": null,
+      "cuando": "2026-09-25T11:00:49.176Z"
+    },
+    "htjr40": {
+      "estado": "automatica",
+      "titulo": null,
+      "copete": null,
+      "cuerpo": null,
+      "guion": null,
+      "deIA": null,
+      "por": null,
+      "cuando": "2026-09-25T11:00:51.190Z"
+    },
+    "1s6eqif": {
+      "estado": "automatica",
+      "titulo": null,
+      "copete": null,
+      "cuerpo": null,
+      "guion": null,
+      "deIA": null,
+      "por": null,
+      "cuando": "2026-09-25T11:00:53.921Z"
+    },
+    "16ujvql": {
+      "estado": "automatica",
+      "titulo": "Lleida prohíbe el uso de prendas que oculten el rostro en espacios públicos",
+      "copete": "El Ayuntamiento de Lleida aprobó una ordenanza que veta el uso de elementos que cubran totalmente la cara en la vía pública, afectando a prendas de carácter religioso.",
+      "cuerpo": "El consistorio de la ciudad española de Lleida aprobó una normativa municipal que veta el uso de prendas que cubran por completo el rostro en la vía pública. La disposición impacta de forma directa sobre indumentarias de carácter religioso como el burka o el niqab, aunque estas prendas no figuran nombradas de manera directa en el texto de la medida aprobada.",
+      "guion": "Lleida prohíbe el uso de prendas que oculten el rostro en espacios públicos",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T11:00:55.880Z",
+      "claves": [
+        "Aprobación de la ordenanza municipal en Lleida.",
+        "Prohibición de elementos que oculten el rostro.",
+        "Afecta a prendas religiosas como el burka y el niqab."
+      ],
+      "seSabe": [
+        "El Ayuntamiento de Lleida aprobó una ordenanza municipal.",
+        "La medida prohíbe vestir con elementos que oculten totalmente el rostro en espacios públicos.",
+        "La disposición alcanza a prendas como el burka y el niqab, aunque no se las menciona directamente."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El Ayuntamiento de Lleida aprobó una ordenanza municipal que prohíbe el uso de elementos que oculten totalmente el rostro en espacios públicos, una medida que afecta a prendas religiosas como el burka y el niqab.",
+      "etiquetas": [
+        "Lleida",
+        "ordenanza municipal",
+        "burka",
+        "niqab",
+        "espacio público"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/espana/2026/09/25/lleida-prohibe-el-uso-del-burka-en-espacios-publicos/",
+          "fecha": "2026-09-25T10:52:02.000Z",
+          "oficial": false,
+          "aporte": "Informó sobre la aprobación de la ordenanza municipal en Lleida que prohíbe ocultar el rostro en espacios públicos."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
     }
   },
   "horarios": {
