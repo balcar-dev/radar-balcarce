@@ -70,13 +70,13 @@ Para qué sirve el número:
 
 ## 3. El semáforo
 
-Se evalúa sobre el título más los primeros 600 caracteres del cuerpo.
+Se evalúa sobre el título, el comienzo del resumen y, desde el 25/09, el texto completo de la nota original y lo que escribe la IA.
 
 **🔴 Rojo — no se publica nunca.** No es criterio editorial, es la ley:
 identificar a un menor en un hecho policial o judicial (ley 26.061) o a una
 víctima de violencia de género o de un delito sexual (ley 26.485) es ilegal
 para un medio. Palabras: menor de edad, abuso sexual, suicidio, violación,
-violencia de género, femicidio, grooming, abuso infantil. Detalle en
+violencia de género, femicidio, grooming, abuso infantil, y desde el 25/09 más frases (la lista completa está en `REGLAS_SEMAFORO`). Detalle en
 `INVESTIGACION.md` § 6.
 
 **🟡 Amarillo — espera que alguien apruebe.** Lo que acusa (denuncia,
