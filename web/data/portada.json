@@ -1,50 +1,6 @@
 {
-  "generado": "2026-09-25T04:02:46.497Z",
+  "generado": "2026-09-25T04:04:47.216Z",
   "notas": [
-    {
-      "id": "1i9c288",
-      "titulo": "El INE contiene ansias de partidos y define fechas para candidaturas de diputados",
-      "copete": "Mientras los partidos políticos avanzan en la definición de sus perfiles y estructuras rumbo a las elecciones de 2027 , el Instituto Nacional Electoral ( INE ) ya puso fecha a las distintas etapas que deberán seguir para seleccionar a sus candidaturas a diputaciones federales…",
-      "cuerpo": null,
-      "guion": null,
-      "seccion": "Política",
-      "medios": [
-        "Infobae"
-      ],
-      "enlace": "https://www.infobae.com/mexico/2026/09/25/el-ine-contiene-ansias-de-partidos-y-define-fechas-para-candidaturas-de-diputados/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-25T03:55:42.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-25T04:00:47.743Z",
-      "relevancia": 43,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica"
-    },
-    {
-      "id": "1b8d9jm",
-      "titulo": "Poncho Lizárraga explica por qué la policía detuvo a la Banda El Recodo en Londres: “se nos hizo fácil”",
-      "copete": "Poncho Lizárraga explica que la Banda El Recodo intentó tocar gratis El Corrido de Mazatlán en el Tower Bridge de Londres cuando la policía interrumpió la presentación por falta de permiso. El líder de la agrupación relató en entrevista con De Primera Mano de Imagen Televisión…",
-      "cuerpo": null,
-      "guion": null,
-      "seccion": "Policiales",
-      "medios": [
-        "Infobae"
-      ],
-      "enlace": "https://www.infobae.com/mexico/2026/09/25/poncho-lizarraga-explica-por-que-la-policia-detuvo-a-la-banda-el-recodo-en-londres-se-nos-hizo-facil/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-25T03:55:11.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-25T04:00:47.743Z",
-      "relevancia": 43,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica"
-    },
     {
       "id": "i36jmo",
       "titulo": "Franco Colapinto compite en el Gran Premio de Azerbaiyán",
@@ -66,29 +22,8 @@
       "publicadaPor": null,
       "publicadaCuando": null,
       "temas": [],
-      "como": "automatica"
-    },
-    {
-      "id": "mits95",
-      "titulo": "Una acusación en redes pone en duda una novela en Francia",
-      "copete": "Una denuncia anónima señala que un escritor canadiense usó inteligencia artificial para su libro, algo que él niega.",
-      "cuerpo": "",
-      "guion": "Una acusación en redes pone en duda una novela en Francia",
-      "seccion": "Tecnología",
-      "medios": [
-        "Infobae"
-      ],
-      "enlace": "https://www.infobae.com/tecno/2026/09/25/como-saber-si-una-novela-la-escribio-un-humano-o-una-ia-las-claves-tras-la-polemica-por-las-acusaciones-contra-thelyson-orelien/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-25T03:43:39.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-25T04:00:47.743Z",
-      "relevancia": 49,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica"
+      "como": "automatica",
+      "slug": "franco-colapinto-compite-en-el-gran-premio-de-azerbaiyan"
     },
     {
       "id": "ejorlh",
@@ -111,14 +46,15 @@
       "publicadaPor": null,
       "publicadaCuando": null,
       "temas": [],
-      "como": "automatica"
+      "como": "automatica",
+      "slug": "javier-milei-y-sus-medidas-en-vivo-la-explicacion-de-luis-caputo"
     },
     {
       "id": "o1h5t4",
-      "titulo": "Dólar blue hoy: a cuánto opera este viernes 25 de septiembre",
-      "copete": "Conocé las cotizaciones dólar blue, el oficial, el MEP y el CCL.",
-      "cuerpo": null,
-      "guion": null,
+      "titulo": "El dólar blue cotiza en baja en el mercado financiero",
+      "copete": "La cotización informal de la divisa estadounidense opera con tendencia a la baja este viernes veinticinco de septiembre.",
+      "cuerpo": "El mercado cambiario registra este viernes diversos movimientos en sus principales cotizaciones, abarcando tanto al dólar oficial como a las variantes financieras MEP y CCL. Los operadores del sector siguen de cerca el comportamiento de cada tipo de cambio en una jornada clave para la economía nacional.\n\nEstas variaciones impactan de manera directa en el escenario financiero general, marcando el pulso de la plaza cambiaria hacia el cierre de la semana.",
+      "guion": "El dólar blue cotiza en baja en el mercado financiero",
       "seccion": "Economía",
       "medios": [
         "Ámbito"
@@ -133,7 +69,8 @@
       "publicadaPor": null,
       "publicadaCuando": null,
       "temas": [],
-      "como": "automatica"
+      "como": "automatica",
+      "slug": "el-dolar-blue-cotiza-en-baja-en-el-mercado-financiero"
     },
     {
       "id": "1bj7207",
@@ -155,14 +92,15 @@
       "publicadaPor": null,
       "publicadaCuando": null,
       "temas": [],
-      "como": "automatica"
+      "como": "automatica",
+      "slug": "cuando-cobro-anses-jubilados-auh-desempleo-y-el-resto-de-las"
     },
     {
       "id": "1564rge",
-      "titulo": "Boom exportador en seis provincias: solo una logra un derrame amplio sobre salarios y otros sectores",
-      "copete": "La disparidad sectorial en términos de actividad económica tiene su correlato a nivel regional. Sin embargo, ni siquiera la mayoría de las provincias que cuentan con los sectores \"estrella\" disfrutan de una bonanza generalizada.",
-      "cuerpo": null,
-      "guion": null,
+      "titulo": "Un informe revela disparidad económica por exportaciones",
+      "copete": "La bonanza exportadora no alcanza a toda la economía regional, según un reciente informe difundido este mes.",
+      "cuerpo": "Los últimos datos económicos muestran que apenas una provincia logra trasladar el crecimiento de las ventas al exterior hacia los salarios y otros sectores productivos. El relevamiento señala que la disparidad regional responde a que los rubros generadores de empleo no logran despegar al mismo ritmo que la actividad exportadora.\n\nEsa situación profundiza las diferencias entre los distritos que concentran los sectores estrella y el resto de las economías locales que dependen del consumo interno y la creación masiva de puestos de trabajo.",
+      "guion": "Un informe revela disparidad económica por exportaciones",
       "seccion": "Economía",
       "medios": [
         "Ámbito"
@@ -177,14 +115,15 @@
       "publicadaPor": null,
       "publicadaCuando": null,
       "temas": [],
-      "como": "automatica"
+      "como": "automatica",
+      "slug": "un-informe-revela-disparidad-economica-por-exportaciones"
     },
     {
       "id": "wprn3p",
-      "titulo": "Peter Thiel habló sobre Milei y pronosticó qué puede pasar con Argentina en 2027",
-      "copete": "El empresario dijo que cree que Milei va a reelegir porque \"la gente entiende que no hay vuelta atrás\". El CEO de Palantir viajó a Alemania para recibir el premio Axel Springer.",
-      "cuerpo": null,
-      "guion": null,
+      "titulo": "Peter Thiel pronostica la reeleccion de Javier Milei en Argentina",
+      "copete": "El empresario Peter Thiel pronosticó la reelección de Javier Milei durante una entrevista en un pódcast en Alemania.",
+      "cuerpo": "El fundador de PayPal y Palantir se refirió al escenario electoral argentino y afirmó que el presidente conseguirá un nuevo mandato porque la sociedad comprende que la situación actual es de carácter existencial. El empresario, que actualmente reside en el país, sostuvo que a las potencias occidentales les fascina la evolución nacional y advirtió sobre las dificultades económicas acumuladas durante el último siglo.\n\nDurante su paso por Europa, donde recibió el premio Axel Springer en Berlín, el empresario también analizó los desafíos macroeconómicos globales y comparó las medidas de ajuste fiscal aplicadas en el plano local con las opciones que evalúan Estados Unidos y Europa ante el incremento de los déficits públicos.",
+      "guion": "Peter Thiel pronostica la reeleccion de Javier Milei en Argentina",
       "seccion": "Política",
       "medios": [
         "Clarín"
@@ -199,7 +138,8 @@
       "publicadaPor": null,
       "publicadaCuando": null,
       "temas": [],
-      "como": "automatica"
+      "como": "automatica",
+      "slug": "peter-thiel-pronostica-la-reeleccion-de-javier-milei-en-argentina"
     },
     {
       "id": "hvo0ic",
@@ -221,7 +161,8 @@
       "publicadaPor": null,
       "publicadaCuando": null,
       "temas": [],
-      "como": "automatica"
+      "como": "automatica",
+      "slug": "el-ajuste-de-whatsapp-para-enviar-imagenes-y-videos-en-mayor"
     },
     {
       "id": "8bakdz",
@@ -243,31 +184,8 @@
       "publicadaPor": null,
       "publicadaCuando": null,
       "temas": [],
-      "como": "automatica"
-    },
-    {
-      "id": "1chkxhh",
-      "titulo": "Concejo Deliberante: la decimocuarta sesión tuvo debates \"más civilizados\" con el foco en el Telepase",
-      "copete": "El cuerpo trató 39 expedientes vinculados con obras, servicios, salud, educación, deporte y distintos reclamos de vecinos.",
-      "cuerpo": null,
-      "guion": null,
-      "seccion": "Política",
-      "medios": [
-        "Radio Gabal (FM 104.1)"
-      ],
-      "enlace": "https://www.radiogabal.com.ar/index.php/politica/concejo-deliberante-la-decimocuarta-sesion-tuvo-debates-mas-civilizados-con-el-foco-en-el-telepase",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-25T02:23:01.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-25T02:30:48.531Z",
-      "relevancia": 84,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [
-        "concejo"
-      ],
-      "como": "automatica"
+      "como": "automatica",
+      "slug": "estos-son-los-dos-juegos-que-epic-games-store-regalara-en-la-primera"
     },
     {
       "id": "1juqupr",
@@ -291,14 +209,15 @@
       "publicadaPor": null,
       "publicadaCuando": null,
       "temas": [],
-      "como": "automatica"
+      "como": "automatica",
+      "slug": "el-senado-aprueba-la-reforma-de-zona-fria-en-balcarce"
     },
     {
       "id": "1fsdyns",
-      "titulo": "Una actualización de Samsung apagó heladeras inteligentes y arruinó la comida de usuarios",
-      "copete": "Una actualización de software de Samsung dejó sin funcionar a un grupo de heladeras inteligentes en Corea del Sur , apagó la refrigeración y arruinó la comida almacenada justo antes del feriado de Chuseok, la principal celebración familiar del país. Los reclamos se concentraron…",
-      "cuerpo": null,
-      "guion": null,
+      "titulo": "Una falla de Samsung apaga heladeras inteligentes",
+      "copete": "Una actualización de software afectó a heladeras inteligentes en Corea del Sur y arruinó alimentos antes de un feriado.",
+      "cuerpo": "Una versión de prueba interna del firmware enviada por error a través de la plataforma SmartThings dejó sin refrigeración a modelos Bespoke AI cuatro puertas en Corea del Sur. La falla impidió la apertura automática de las puertas y provocó la pérdida de grandes cantidades de alimentos que los usuarios habían acopiado para la celebración familiar de Chuseok.\n\nLa compañía tecnológica suspendió la actualización defectuosa y aclaró que no se trató de un problema de hardware ni de una caída general de sus sistemas conectados. Voceros de la firma informaron que desplegaron un esquema de guardias para atender los reclamos de reparación urgente durante el fin de semana y pidieron a los afectados utilizar conservadoras de manera provisoria.",
+      "guion": "Una falla de Samsung apaga heladeras inteligentes",
       "seccion": "Tecnología",
       "medios": [
         "Infobae"
@@ -313,29 +232,8 @@
       "publicadaPor": null,
       "publicadaCuando": null,
       "temas": [],
-      "como": "automatica"
-    },
-    {
-      "id": "1cpldpk",
-      "titulo": "Bajaron de los pasillos de ARCA los cuadros de Ricardo Echegaray y otros ex administradores generales",
-      "copete": "En la Agencia de Recaudación y Control Aduanero (ARCA) comenzaron a retirar los cuadros que formaban parte de la denominada “galería de administradores” , una serie de retratos que reunía a quienes ocuparon la conducción del organismo a lo largo de distintas gestiones. La medida…",
-      "cuerpo": null,
-      "guion": null,
-      "seccion": "Economía",
-      "medios": [
-        "Infobae"
-      ],
-      "enlace": "https://www.infobae.com/economia/2026/09/25/bajaron-de-los-pasillos-de-arca-los-cuadros-de-ricardo-echegaray-y-otros-ex-administradores-generales/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-25T00:59:22.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-25T01:23:25.208Z",
-      "relevancia": 39,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica"
+      "como": "automatica",
+      "slug": "una-actualizacion-de-samsung-apago-heladeras-inteligentes-y-arruino"
     },
     {
       "id": "11a57qo",
@@ -360,7 +258,8 @@
         "concejo",
         "cerro"
       ],
-      "como": "automatica"
+      "como": "automatica",
+      "slug": "el-cerro-el-triunfo-tendra-el-paseo-juan-jose-mare"
     },
     {
       "id": "yaqf3p",
@@ -386,7 +285,8 @@
         "autodromo",
         "fangio"
       ],
-      "como": "automatica"
+      "como": "automatica",
+      "slug": "todo-sobre-la-reapertura-del-autodromo-juan-manuel-fangio"
     },
     {
       "id": "1tspv07",
@@ -410,7 +310,8 @@
       "temas": [
         "concejo"
       ],
-      "como": "automatica"
+      "como": "automatica",
+      "slug": "el-concejo-pide-prorroga-para-deudas-de-agua-en-balcarce"
     },
     {
       "id": "30tlwf",
@@ -436,14 +337,15 @@
         "autodromo",
         "fangio"
       ],
-      "como": "automatica"
+      "como": "automatica",
+      "slug": "reabre-el-autodromo-juan-manuel-fangio-en-balcarce"
     },
     {
       "id": "1elclrq",
-      "titulo": "El Gobierno tuvo una importante victoria en el Senado y convirtió en ley el recorte de subsidios por Zonas Frías",
-      "copete": "El Gobierno libertario sumó una victoria de peso en el Congreso : la bancada oficialista en el Senado, que comanda Patricia Bullrich , sancionó el recorte de subsidios en zonas frías empujado durante la gestión de Alberto Fernández y Cristina Kirchner . La medida, que obtuvo 38…",
-      "cuerpo": null,
-      "guion": null,
+      "titulo": "El Senado aprueba la reforma del régimen de Zonas Frías",
+      "copete": "El Congreso convirtió en ley este jueves la modificación del régimen de subsidios que afectará a millones de usuarios en el país.",
+      "cuerpo": "",
+      "guion": "El Senado aprueba la reforma del régimen de Zonas Frías",
       "seccion": "Política",
       "medios": [
         "Clarín",
@@ -459,13 +361,14 @@
       "publicadaPor": null,
       "publicadaCuando": null,
       "temas": [],
-      "como": "automatica"
+      "como": "automatica",
+      "slug": "el-gobierno-tuvo-una-importante-victoria-en-el-senado-y-convirtio-en"
     },
     {
       "id": "iiw0oc",
       "titulo": "Nuevas escalas y aumentos para niñeras y cuidadores",
       "copete": "Los trabajadores de casas particulares perciben un incremento salarial este mes en todo el país, con nuevas escalas horarias y mensuales.",
-      "cuerpo": null,
+      "cuerpo": "",
       "guion": "Nuevas escalas y aumentos para niñeras y cuidadores",
       "seccion": "Economía",
       "medios": [
@@ -481,7 +384,31 @@
       "publicadaPor": "ia",
       "publicadaCuando": "2026-09-21T11:44:15.740Z",
       "temas": [],
-      "como": "automatica"
+      "como": "automatica",
+      "slug": "nuevas-escalas-y-aumentos-para-nineras-y-cuidadores"
+    },
+    {
+      "id": "19zr113",
+      "titulo": "El Senado reduce los subsidios al gas en Balcarce",
+      "copete": "La Cámara alta aprobó la modificación del régimen de Zona Fría, afectando a más de un millón de usuarios.",
+      "cuerpo": "",
+      "guion": "El Senado reduce los subsidios al gas en Balcarce",
+      "seccion": "Balcarce",
+      "medios": [
+        "El Diario Balcarce"
+      ],
+      "enlace": "https://eldiariobalcarce.com.ar/el-oficialismo-hizo-ley-la-reduccion-del-subsidio-al-gas-natural-para-balcarce-y-otras-localidades-746",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-24T23:34:10.000Z",
+      "sinFecha": false,
+      "visto": "2026-09-25T00:00:51.273Z",
+      "relevancia": 78,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "slug": "el-senado-reduce-los-subsidios-al-gas-en-balcarce"
     },
     {
       "id": "rosl57",
@@ -503,32 +430,8 @@
       "publicadaPor": null,
       "publicadaCuando": null,
       "temas": [],
-      "como": "automatica"
-    },
-    {
-      "id": "1muc0dj",
-      "titulo": "El Concejo designa el paseo del cerro El Triunfo en Balcarce",
-      "copete": "El Concejo Deliberante aprobó que la Vuelta Interna del cerro El Triunfo lleve el nombre del exintendente Juan José Mare.",
-      "cuerpo": "La iniciativa impulsada por el bloque de Juntos por le Cambio busca reconocer la trayectoria y las obras concretadas durante las gestiones de Mare al frente del municipio. Entre los trabajos destacados figuran el acceso a San Agustín, el edificio del Hospital Municipal y la construcción del autódromo local, además de diversos planes de asfaltado.\n\nEl proyecto recibió el respaldo de la mayoría de los ediles, a excepción del concejal Edgar Foglia, quien decidió abstenerse tras recibir referencias sobre personas perseguidas durante el período en el que Mare gobernó en el marco de la interrupción del orden democrático.\n\nTras la sanción de la ordenanza, el Departamento Ejecutivo quedará facultado para colocar la cartelería y la señalética correspondiente integrada con el entorno natural del paseo.",
-      "guion": "El Concejo designa el paseo del cerro El Triunfo en Balcarce",
-      "seccion": "Política",
-      "medios": [
-        "Puntonueve (FM 100.9)"
-      ],
-      "enlace": "https://puntonueve.com.ar/mare-tendra-su-paseo-en-el-cerro-el-triunfo-tras-la-aprobacion-del-concejo-deliberante/",
-      "teniaImagenLaFuente": false,
-      "fecha": "2026-09-24T23:30:13.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-24T23:30:55.262Z",
-      "relevancia": 74,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [
-        "concejo",
-        "cerro"
-      ],
-      "como": "automatica"
+      "como": "automatica",
+      "slug": "congelan-las-tarifas-de-la-vtv-en-balcarce"
     },
     {
       "id": "1s5n48z",
@@ -552,7 +455,8 @@
       "publicadaPor": null,
       "publicadaCuando": null,
       "temas": [],
-      "como": "automatica"
+      "como": "automatica",
+      "slug": "agotaron-las-entradas-para-la-despedida-de-lionel-messi"
     },
     {
       "id": "af5xg4",
@@ -574,7 +478,8 @@
       "publicadaPor": null,
       "publicadaCuando": null,
       "temas": [],
-      "como": "automatica"
+      "como": "automatica",
+      "slug": "el-senado-aprueba-la-reforma-de-zona-fria-en-balcarce"
     },
     {
       "id": "ntbsnv",
@@ -600,7 +505,8 @@
         "tc-pick-up",
         "fangio"
       ],
-      "como": "automatica"
+      "como": "automatica",
+      "slug": "realizan-una-caravana-previa-en-mar-del-plata"
     },
     {
       "id": "wwbmd7",
@@ -622,7 +528,8 @@
       "publicadaPor": null,
       "publicadaCuando": null,
       "temas": [],
-      "como": "automatica"
+      "como": "automatica",
+      "slug": "la-familia-crespi-confirma-que-la-fabrica-sigue-en-balcarce"
     },
     {
       "id": "1d356vs",
@@ -646,7 +553,31 @@
       "temas": [
         "concejo"
       ],
-      "como": "automatica"
+      "como": "automatica",
+      "slug": "el-concejo-aprueba-un-juego-turistico-escolar-en-balcarce"
+    },
+    {
+      "id": "15fat14",
+      "titulo": "Ana Wu visita Balcarce por primera vez para dar clases",
+      "copete": "La referente en disciplinas tradicionales chinas llegó a la ciudad invitada por su discípula local.",
+      "cuerpo": "",
+      "guion": "Ana Wu visita Balcarce por primera vez para dar clases",
+      "seccion": "Balcarce",
+      "medios": [
+        "El Diario Balcarce"
+      ],
+      "enlace": "https://eldiariobalcarce.com.ar/una-maestra-de-la-tradicion-china-visito-balcarce-292",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-24T22:44:44.000Z",
+      "sinFecha": false,
+      "visto": "2026-09-24T23:00:51.452Z",
+      "relevancia": 78,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "slug": "ana-wu-visita-balcarce-por-primera-vez-para-dar-clases"
     },
     {
       "id": "1x3bvjs",
@@ -668,14 +599,15 @@
       "publicadaPor": null,
       "publicadaCuando": null,
       "temas": [],
-      "como": "automatica"
+      "como": "automatica",
+      "slug": "ypf-mantiene-precios-y-queda-mas-barata-en-balcarce"
     },
     {
       "id": "113bpe",
-      "titulo": "El banco digital más grande de Europa desembarca en la Argentina: el BCRA lo autorizó a comprar una entidad local",
-      "copete": "Revolut , el banco digital más grande de Europa con más de 80 millones de clientes a nivel global, recibió la autorización del Banco Central para adquirir el Banco Cetelem , y con ello concretar su ingreso al sistema financiero argentino . La operación fue acordada con la…",
-      "cuerpo": null,
-      "guion": null,
+      "titulo": "El Banco Central autoriza la llegada de un banco digital",
+      "copete": "El Banco Central aprobó la compra del Banco Cetelem por parte de Revolut, el banco digital más grande de Europa, para ingresar al sistema financiero argentino.",
+      "cuerpo": "Revolut recibió el visto bueno del Banco Central para adquirir el Banco Cetelem y dar el salto al mercado nacional bajo el nombre de Revolut Bank Argentina. La entidad estará dirigida por Agustín Danza y presidida por Juan Marotta, y ya cuenta con miles de usuarios en lista de espera.\n\nEl servicio definitivo recién estará disponible en dos mil veintisiete, a la espera de los permisos regulatorios correspondientes para comenzar a operar. Desde la compañía adelantaron que la propuesta incluirá cuentas, tarjetas, préstamos, inversiones, seguros y servicios para viajeros.\n\nLa llegada se da en paralelo a la inminente aparición de Mercado Banco en el sistema financiero local. Según indicó el superintendente de Entidades Financieras, Juan Curutchet, las licencias se aprobarán antes de fin de año.",
+      "guion": "El Banco Central autoriza la llegada de un banco digital",
       "seccion": "Economía",
       "medios": [
         "Infobae"
@@ -690,7 +622,31 @@
       "publicadaPor": null,
       "publicadaCuando": null,
       "temas": [],
-      "como": "automatica"
+      "como": "automatica",
+      "slug": "el-banco-digital-mas-grande-de-europa-desembarca-en-la-argentina-el"
+    },
+    {
+      "id": "gyvv58",
+      "titulo": "Remiseros debatieron con autoridades por los autos de aplicaciones",
+      "copete": "Representantes de remises se reunieron con concejales y el secretario de Gobierno para discutir regulaciones y controles al sector en Balcarce.",
+      "cuerpo": "El encuentro reunió a referentes del servicio tradicional con integrantes del cuerpo legislativo y el secretario de Gobierno, Ricardo Stoppani, para analizar el impacto de los vehículos que operan mediante plataformas digitales. Durante la reunión se discutió un proyecto legislativo sobre transporte privado y los trabajadores plantearon cuestionamientos sobre su aplicación práctica, además de solicitar mayores operativos de control.\n\nAsimismo, las partes evaluaron modificar algunas exigencias vigentes para el sector, como la extensión de la antigüedad permitida para los automóviles y una posible reducción en la carga impositiva ante la caída en la actividad. Los remiseros aclararon que no se oponen a la actividad de las aplicaciones, sino que reclaman condiciones equitativas de competencia y tributación para todos los prestadores.",
+      "guion": "Remiseros debatieron con autoridades por los autos de aplicaciones",
+      "seccion": "Balcarce",
+      "medios": [
+        "El Diario Balcarce"
+      ],
+      "enlace": "https://eldiariobalcarce.com.ar/remiseros-plantearon-sus-reclamos-y-esperan-nuevas-alternativas-para-regular-los-autos-de-aplicaciones-231",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-24T22:18:31.000Z",
+      "sinFecha": false,
+      "visto": "2026-09-24T22:30:48.434Z",
+      "relevancia": 78,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "slug": "remiseros-debatieron-con-autoridades-por-los-autos-de-aplicaciones"
     },
     {
       "id": "1m6wyz8",
@@ -713,7 +669,8 @@
       "publicadaPor": null,
       "publicadaCuando": null,
       "temas": [],
-      "como": "automatica"
+      "como": "automatica",
+      "slug": "milei-anticipa-crecimiento-economico-record-en-balcarce"
     },
     {
       "id": "1c89ry1",
@@ -736,7 +693,8 @@
       "publicadaPor": null,
       "publicadaCuando": null,
       "temas": [],
-      "como": "automatica"
+      "como": "automatica",
+      "slug": "el-senado-aprueba-la-reforma-del-banco-central-en-balcarce"
     },
     {
       "id": "yya7lo",
@@ -758,7 +716,8 @@
       "publicadaPor": null,
       "publicadaCuando": null,
       "temas": [],
-      "como": "automatica"
+      "como": "automatica",
+      "slug": "aumentan-los-combustibles-en-balcarce"
     },
     {
       "id": "1nyse71",
@@ -780,7 +739,8 @@
       "publicadaPor": null,
       "publicadaCuando": null,
       "temas": [],
-      "como": "automatica"
+      "como": "automatica",
+      "slug": "la-pobreza-subio-a-casi-un-tercio-de-la-poblacion"
     },
     {
       "id": "1qk6uan",
@@ -802,7 +762,8 @@
       "publicadaPor": null,
       "publicadaCuando": null,
       "temas": [],
-      "como": "automatica"
+      "como": "automatica",
+      "slug": "la-justicia-frena-el-aumento-de-luz-en-balcarce"
     },
     {
       "id": "1lg4u7s",
@@ -824,14 +785,15 @@
       "publicadaPor": null,
       "publicadaCuando": null,
       "temas": [],
-      "como": "automatica"
+      "como": "automatica",
+      "slug": "la-actividad-economica-cae-en-julio-en-balcarce"
     },
     {
       "id": "179wg7v",
-      "titulo": "San Juan regresó al mercado internacional de deuda tras 27 años: emitió un bono por USD 600 millones",
-      "copete": "La provincia de San Juan concretó con éxito su regreso al mercado internacional de capitales con la emisión de un bono por USD 600 millones bajo legislación de Nueva York , destinado a financiar obras de infraestructura, en una operación que representa un hito para la provincia…",
-      "cuerpo": null,
-      "guion": null,
+      "titulo": "San Juan emite un bono por seiscientos millones de dólares",
+      "copete": "La provincia cuyana volvió a endeudarse en el mercado internacional tras veintisiete años para financiar obras públicas.",
+      "cuerpo": "",
+      "guion": "San Juan emite un bono por seiscientos millones de dólares",
       "seccion": "Economía",
       "medios": [
         "Infobae"
@@ -846,7 +808,8 @@
       "publicadaPor": null,
       "publicadaCuando": null,
       "temas": [],
-      "como": "automatica"
+      "como": "automatica",
+      "slug": "san-juan-regreso-al-mercado-internacional-de-deuda-tras-27-anos"
     },
     {
       "id": "1gso9lv",
@@ -868,7 +831,8 @@
       "publicadaPor": null,
       "publicadaCuando": null,
       "temas": [],
-      "como": "automatica"
+      "como": "automatica",
+      "slug": "jornada-financiera-el-riesgo-pais-rozo-los-580-puntos-y-las-acciones"
     },
     {
       "id": "15zqvfd",
@@ -890,7 +854,8 @@
       "publicadaPor": null,
       "publicadaCuando": null,
       "temas": [],
-      "como": "automatica"
+      "como": "automatica",
+      "slug": "el-chi-kung-gana-espacio-y-se-difunde-en-balcarce"
     },
     {
       "id": "1nt7h0p",
@@ -912,7 +877,8 @@
       "publicadaPor": null,
       "publicadaCuando": null,
       "temas": [],
-      "como": "automatica"
+      "como": "automatica",
+      "slug": "el-stm-y-el-gobierno-cerraron-un-acuerdo-con-una-recomposicion"
     },
     {
       "id": "jul3vf",
@@ -937,7 +903,8 @@
         "autodromo",
         "fangio"
       ],
-      "como": "automatica"
+      "como": "automatica",
+      "slug": "el-intendente-recibe-a-la-maestra-wu-huimin-en-balcarce"
     },
     {
       "id": "1k3g7wg",
@@ -964,7 +931,8 @@
       "publicadaPor": null,
       "publicadaCuando": null,
       "temas": [],
-      "como": "automatica"
+      "como": "automatica",
+      "slug": "esteban-reino-recibe-al-club-de-leones-en-balcarce"
     },
     {
       "id": "qx0kz",
@@ -986,7 +954,8 @@
       "publicadaPor": null,
       "publicadaCuando": null,
       "temas": [],
-      "como": "automatica"
+      "como": "automatica",
+      "slug": "acuerdo-paritario-para-los-municipales-de-balcarce"
     },
     {
       "id": "1tatbr",
@@ -1008,7 +977,8 @@
       "publicadaPor": null,
       "publicadaCuando": null,
       "temas": [],
-      "como": "automatica"
+      "como": "automatica",
+      "slug": "angel-ruiz-debuto-con-exito-en-el-culturismo-provincial"
     },
     {
       "id": "1czdwgt",
@@ -1030,7 +1000,8 @@
       "publicadaPor": null,
       "publicadaCuando": null,
       "temas": [],
-      "como": "automatica"
+      "como": "automatica",
+      "slug": "campo-de-pato-gana-en-el-torneo-desarrollo-en-balcarce"
     },
     {
       "id": "52q3fj",
@@ -1052,7 +1023,8 @@
       "publicadaPor": null,
       "publicadaCuando": null,
       "temas": [],
-      "como": "automatica"
+      "como": "automatica",
+      "slug": "franco-colapinto-busca-la-clasificacion-y-los-puntos-en-baku"
     },
     {
       "id": "1b29bdn",
@@ -1074,7 +1046,31 @@
       "publicadaPor": null,
       "publicadaCuando": null,
       "temas": [],
-      "como": "automatica"
+      "como": "automatica",
+      "slug": "destacada-actuacion-de-ciclistas-balcarcenos-en-miramar"
+    },
+    {
+      "id": "nauwa6",
+      "titulo": "El Indec ubica la pobreza en el país en el treinta y dos por ciento",
+      "copete": "La pobreza alcanzó al treinta y dos por ciento de la población durante el primer semestre del año, según informó el Indec.",
+      "cuerpo": "",
+      "guion": "El Indec ubica la pobreza en el país en el treinta y dos por ciento",
+      "seccion": "Balcarce",
+      "medios": [
+        "El Diario Balcarce"
+      ],
+      "enlace": "https://eldiariobalcarce.com.ar/la-pobreza-en-argentina-subio-al-323-y-ya-alcanza-a-mas-de-15-millones-de-personas-891",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-24T20:36:17.000Z",
+      "sinFecha": false,
+      "visto": "2026-09-24T21:00:52.460Z",
+      "relevancia": 78,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "slug": "el-indec-ubica-la-pobreza-en-el-pais-en-el-treinta-y-dos-por-ciento"
     },
     {
       "id": "krgsl6",
@@ -1097,29 +1093,8 @@
       "publicadaPor": null,
       "publicadaCuando": null,
       "temas": [],
-      "como": "automatica"
-    },
-    {
-      "id": "19zr113",
-      "titulo": "El Senado reduce los subsidios al gas en Balcarce",
-      "copete": "La Cámara alta aprobó la modificación del régimen de Zona Fría, afectando a más de un millón de usuarios.",
-      "cuerpo": "",
-      "guion": "El Senado reduce los subsidios al gas en Balcarce",
-      "seccion": "Balcarce",
-      "medios": [
-        "El Diario Balcarce"
-      ],
-      "enlace": "https://eldiariobalcarce.com.ar/el-oficialismo-hizo-ley-la-reduccion-del-subsidio-al-gas-natural-para-balcarce-y-otras-localidades-746",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-24T20:34:10.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-25T00:00:51.273Z",
-      "relevancia": 78,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica"
+      "como": "automatica",
+      "slug": "jovenes-balcarcenas-participaran-de-un-torneo-internacional-de"
     },
     {
       "id": "1408sz9",
@@ -1145,97 +1120,8 @@
         "autodromo",
         "fangio"
       ],
-      "como": "automatica"
-    },
-    {
-      "id": "gq26",
-      "titulo": "Gianni Giovanelli entrenó en Brasilia con la Fórmula 4",
-      "copete": "Nueva fecha de la Fórmula 4 Brasil, esta vez desde el circuito de Brasilia. Gianni Giovanelli se presenta junto al TMG Racing tras la exclusión por Interlagos y con las esperanzas renovadas de seguir progresando. Hoy, se realizaron tres entrenamientos extraoficiales…",
-      "cuerpo": null,
-      "guion": null,
-      "seccion": "Automovilismo",
-      "medios": [
-        "Campeones"
-      ],
-      "enlace": "https://campeones.com.ar/gianni-giovanelli-entreno-en-brasilia-con-la-f4-brasil/",
-      "teniaImagenLaFuente": false,
-      "fecha": "2026-09-24T20:08:30.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-25T01:31:24.625Z",
-      "relevancia": 39,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica"
-    },
-    {
-      "id": "wq1o1s",
-      "titulo": "Portugal seguirá en el calendario del MotoGP hasta 2029",
-      "copete": "Portimao aseguró su presencia en el calendario del Mundial de Motociclismo por tres temporadas más, y con ello tendrá presencia ininterrumpida por siete certamenes al hilo. La categoría anunció el acuerdo con el Autódromo Internacional do Algarve para extender el contrato hasta…",
-      "cuerpo": null,
-      "guion": null,
-      "seccion": "Automovilismo",
-      "medios": [
-        "Campeones"
-      ],
-      "enlace": "https://campeones.com.ar/portugal-seguira-en-el-calendario-del-motogp-hasta-2029/",
-      "teniaImagenLaFuente": false,
-      "fecha": "2026-09-24T20:00:17.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-25T01:31:24.625Z",
-      "relevancia": 39,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [
-        "autodromo"
-      ],
-      "como": "automatica"
-    },
-    {
-      "id": "15fat14",
-      "titulo": "Ana Wu visita Balcarce por primera vez para dar clases",
-      "copete": "La referente en disciplinas tradicionales chinas llegó a la ciudad invitada por su discípula local.",
-      "cuerpo": "",
-      "guion": "Ana Wu visita Balcarce por primera vez para dar clases",
-      "seccion": "Balcarce",
-      "medios": [
-        "El Diario Balcarce"
-      ],
-      "enlace": "https://eldiariobalcarce.com.ar/una-maestra-de-la-tradicion-china-visito-balcarce-292",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-24T19:44:44.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-24T23:00:51.452Z",
-      "relevancia": 78,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica"
-    },
-    {
-      "id": "gyvv58",
-      "titulo": "Remiseros debatieron con autoridades por los autos de aplicaciones",
-      "copete": "Representantes de remises se reunieron con concejales y el secretario de Gobierno para discutir regulaciones y controles al sector en Balcarce.",
-      "cuerpo": "El encuentro reunió a referentes del servicio tradicional con integrantes del cuerpo legislativo y el secretario de Gobierno, Ricardo Stoppani, para analizar el impacto de los vehículos que operan mediante plataformas digitales. Durante la reunión se discutió un proyecto legislativo sobre transporte privado y los trabajadores plantearon cuestionamientos sobre su aplicación práctica, además de solicitar mayores operativos de control.\n\nAsimismo, las partes evaluaron modificar algunas exigencias vigentes para el sector, como la extensión de la antigüedad permitida para los automóviles y una posible reducción en la carga impositiva ante la caída en la actividad. Los remiseros aclararon que no se oponen a la actividad de las aplicaciones, sino que reclaman condiciones equitativas de competencia y tributación para todos los prestadores.",
-      "guion": "Remiseros debatieron con autoridades por los autos de aplicaciones",
-      "seccion": "Balcarce",
-      "medios": [
-        "El Diario Balcarce"
-      ],
-      "enlace": "https://eldiariobalcarce.com.ar/remiseros-plantearon-sus-reclamos-y-esperan-nuevas-alternativas-para-regular-los-autos-de-aplicaciones-231",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-24T19:18:31.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-24T22:30:48.434Z",
-      "relevancia": 78,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica"
+      "como": "automatica",
+      "slug": "esteban-reino-recibio-a-la-maestra-wu-huimin-en-balcarce"
     },
     {
       "id": "1k3dzvz",
@@ -1259,7 +1145,8 @@
       "temas": [
         "bomberos"
       ],
-      "como": "automatica"
+      "como": "automatica",
+      "slug": "principio-de-incendio-en-un-departamento-centrico"
     },
     {
       "id": "wra9xv",
@@ -1281,7 +1168,8 @@
       "publicadaPor": null,
       "publicadaCuando": null,
       "temas": [],
-      "como": "automatica"
+      "como": "automatica",
+      "slug": "kevin-gomez-proyecta-nuevos-desafios-tras-ganar-el-titulo"
     },
     {
       "id": "1b3p6ze",
@@ -1306,14 +1194,15 @@
         "autodromo",
         "fangio"
       ],
-      "como": "automatica"
+      "como": "automatica",
+      "slug": "suarez-acelera-en-casa-es-un-sueno-correr-en-balcarce"
     },
     {
       "id": "rppqe4",
-      "titulo": "Lo que Kimi Antonelli ha aprendido de Max Verstappen",
-      "copete": "Con solo 20 años, Andrea Kimi Antonelli, piloto de Mercedes, está en esa edad en la que muchos creen que no tienen nada que aprender de quienes cuentan con más experiencia. Y después de haber ganado ocho grandes premios esta temporada, incluidos cinco consecutivos desde China…",
-      "cuerpo": null,
-      "guion": null,
+      "titulo": "Antonelli destaca lo aprendido de Verstappen en Balcarce",
+      "copete": "El piloto de Mercedes analiza su trayectoria tras una destacada temporada en el automovilismo internacional.",
+      "cuerpo": "Con apenas veinte años, el corredor Andrea Kimi Antonelli atraviesa un gran momento deportivo dentro de la máxima categoría del automovilismo. Durante la actual temporada, el joven piloto acumuló ocho victorias en grandes premios, destacándose una racha de cinco triunfos consecutivos desde la competencia en China.\n\nEstas actuaciones lo posicionan como una de las principales figuras jóvenes de la escudería Mercedes. Su enfoque actual incluye observar de cerca la experiencia de referentes de la categoría como Max Verstappen para continuar con su desarrollo en la disciplina.",
+      "guion": "Antonelli destaca lo aprendido de Verstappen en Balcarce",
       "seccion": "Automovilismo",
       "medios": [
         "Motorsport"
@@ -1328,7 +1217,8 @@
       "publicadaPor": null,
       "publicadaCuando": null,
       "temas": [],
-      "como": "automatica"
+      "como": "automatica",
+      "slug": "lo-que-kimi-antonelli-ha-aprendido-de-max-verstappen"
     },
     {
       "id": "cy1yxa",
@@ -1350,73 +1240,8 @@
       "publicadaPor": null,
       "publicadaCuando": null,
       "temas": [],
-      "como": "automatica"
-    },
-    {
-      "id": "st1e8r",
-      "titulo": "Rivola: \"Martín tiene dos ventajas sobre Bezzecchi: ha ganado un Mundial y ha perdido otro\"",
-      "copete": "El doble podio en la carrera larga del Red Bull Ring equivalió casi a una victoria para Aprilia. En un circuito que históricamente era feudo de Ducati, donde los de Borgo Panigale se habían impuesto nada menos que nueve veces en la última década, Jorge Martín triunfó en la…",
-      "cuerpo": null,
-      "guion": null,
-      "seccion": "Automovilismo",
-      "medios": [
-        "Motorsport"
-      ],
-      "enlace": "https://es.motorsport.com/motogp/news/rivola-martin-dos-ventajas-bezzecchi-ganado-mundial-perdido-otro/10857937/?utm_source=RSS&utm_medium=referral&utm_campaign=RSS-MOTOGP&utm_term=News&utm_content=es",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-24T17:49:57.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-24T19:00:52.389Z",
-      "relevancia": 43,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica"
-    },
-    {
-      "id": "nauwa6",
-      "titulo": "El Indec ubica la pobreza en el país en el treinta y dos por ciento",
-      "copete": "La pobreza alcanzó al treinta y dos por ciento de la población durante el primer semestre del año, según informó el Indec.",
-      "cuerpo": "",
-      "guion": "El Indec ubica la pobreza en el país en el treinta y dos por ciento",
-      "seccion": "Balcarce",
-      "medios": [
-        "El Diario Balcarce"
-      ],
-      "enlace": "https://eldiariobalcarce.com.ar/la-pobreza-en-argentina-subio-al-323-y-ya-alcanza-a-mas-de-15-millones-de-personas-891",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-24T17:36:17.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-24T21:00:52.460Z",
-      "relevancia": 78,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica"
-    },
-    {
-      "id": "2asvx0",
-      "titulo": "Por qué la enorme ventaja de Mercedes en los libres de Bakú puede no reflejar la realidad",
-      "copete": "Mercedes lanzó un serio aviso durante las sesiones de entrenamientos libres del jueves en el Bakú. George Russell encabezó la tabla de tiempos en ambas sesiones, con el primer coche que no era un Mercedes a casi un segundo al final de la jornada: Max Verstappen, a 0.827s…",
-      "cuerpo": null,
-      "guion": null,
-      "seccion": "Automovilismo",
-      "medios": [
-        "Motorsport"
-      ],
-      "enlace": "https://es.motorsport.com/f1/news/why-mercedes-huge-baku-practice-advantage-may-not-be-the-real-picture/10858686/?utm_source=RSS&utm_medium=referral&utm_campaign=RSS-F1&utm_term=News&utm_content=es",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-24T17:28:52.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-24T19:00:52.389Z",
-      "relevancia": 48,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica"
+      "como": "automatica",
+      "slug": "matias-canapino-con-un-cambio-importante-para-la-recta-final-del-ano"
     },
     {
       "id": "nt4ftf",
@@ -1438,53 +1263,8 @@
       "publicadaPor": null,
       "publicadaCuando": null,
       "temas": [],
-      "como": "automatica"
-    },
-    {
-      "id": "gx247j",
-      "titulo": "Acto de Homenaje a José Miguel Herceg",
-      "copete": "El Honorable Concejo Deliberante de Tigre otorgó una placa , consagrando su huella en nuestra historia, un reconocimiento como Ciudadano Ilustre a la leyenda del automovilismo local, José Miguel Herceg, nacido y crecido hasta su juventud en la Tierras del Castillo de General…",
-      "cuerpo": null,
-      "guion": null,
-      "seccion": "Automovilismo",
-      "medios": [
-        "Campeones"
-      ],
-      "enlace": "https://campeones.com.ar/acto-de-homenaje-a-jose-miguel-herceg/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-24T16:34:16.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-25T01:31:24.625Z",
-      "relevancia": 45,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [
-        "concejo"
-      ],
-      "como": "automatica"
-    },
-    {
-      "id": "9omc0o",
-      "titulo": "Red Bull da un paso adelante en Bakú: sus mejoras funcionan y Verstappen sonríe",
-      "copete": "Red Bull llegó a Bakú con un importante paquete de actualizaciones, destinado a representar el último gran paso evolutivo de la temporada. De hecho, el equipo ya ha comenzado a desplazar el foco del desarrollo hacia 2027, también por una cuestión presupuestaria después de la…",
-      "cuerpo": null,
-      "guion": null,
-      "seccion": "Automovilismo",
-      "medios": [
-        "Motorsport"
-      ],
-      "enlace": "https://es.motorsport.com/f1/news/red-bull-mejoras-baku-funcionan-jueves/10858661/?utm_source=RSS&utm_medium=referral&utm_campaign=RSS-F1&utm_term=News&utm_content=es",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-24T16:26:32.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-24T19:00:52.389Z",
-      "relevancia": 48,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica"
+      "como": "automatica",
+      "slug": "colapinto-finaliza-undecimo-en-la-jornada-inicial-de-baku"
     },
     {
       "id": "l83pn8",
@@ -1508,29 +1288,8 @@
       "temas": [
         "autodromo"
       ],
-      "como": "automatica"
-    },
-    {
-      "id": "qc00yi",
-      "titulo": "Norris lanza un aviso a McLaren en Bakú: \"Estamos a kilómetros del ritmo\"",
-      "copete": "Lando Norris no escondió la preocupación de McLaren tras la jornada del jueves en el Gran Premio de Azerbaiyán 2026. Aunque el británico aseguró sentirse cómodo con el comportamiento del coche, admitió que el rendimiento está bastante lejos del esperado en un circuito cuyas…",
-      "cuerpo": null,
-      "guion": null,
-      "seccion": "Automovilismo",
-      "medios": [
-        "Motorsport"
-      ],
-      "enlace": "https://es.motorsport.com/f1/news/declaraciones-norris-jueves-baku-2026/10858651/?utm_source=RSS&utm_medium=referral&utm_campaign=RSS-F1&utm_term=News&utm_content=es",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-24T15:57:34.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-24T19:00:52.389Z",
-      "relevancia": 37,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica"
+      "como": "automatica",
+      "slug": "fabian-turnes-conto-detalles-de-las-reuniones-para-el-regreso-de-la"
     },
     {
       "id": "m7fmln",
@@ -1554,53 +1313,8 @@
       "temas": [
         "autodromo"
       ],
-      "como": "automatica"
-    },
-    {
-      "id": "1cv68uw",
-      "titulo": "MotoGP continúa con las renovaciones de circuitos: Mugello, hasta 2031",
-      "copete": "MotoGP sigue anunciando renovaciones de circuitos este jueves. Si por la mañana ha sido el turno a Portimao, que continuará como sede del Gran Premio de Portugal hasta 2029, esta tarde le ha tocado a una de las pistas italianas del calendario: el icónico Autódromo de Mugello…",
-      "cuerpo": null,
-      "guion": null,
-      "seccion": "Automovilismo",
-      "medios": [
-        "Motorsport"
-      ],
-      "enlace": "https://es.motorsport.com/motogp/news/motogp-renovacion-circuito-mugello-italia-2031/10858614/?utm_source=RSS&utm_medium=referral&utm_campaign=RSS-MOTOGP&utm_term=News&utm_content=es",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-24T15:21:36.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-24T15:27:47.939Z",
-      "relevancia": 36,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [
-        "autodromo"
-      ],
-      "como": "automatica"
-    },
-    {
-      "id": "5226gq",
-      "titulo": "Martín Saa, con presente de alto nivel, un futuro prometedor y una agenda cargada",
-      "copete": "El pasado sábado, Martín «Rayito» Saa consiguió su segundo pase al mundial de Rotax : ya compitió el año pasado en Baréin y este año hará lo propio en Portimao, tras retener el título de la especialidad argentina. Ganó las primeras dos carreras del fin de semana, cerró el boleto…",
-      "cuerpo": null,
-      "guion": null,
-      "seccion": "Automovilismo",
-      "medios": [
-        "Campeones"
-      ],
-      "enlace": "https://campeones.com.ar/martin-saa-con-presente-de-alto-nivel-un-futuro-prometedor-y-una-agenda-cargada/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-24T15:03:45.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-25T01:31:24.625Z",
-      "relevancia": 38,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica"
+      "como": "automatica",
+      "slug": "surgen-diferencias-por-los-fondos-del-autodromo-en-balcarce"
     },
     {
       "id": "1hh6vil",
@@ -1622,7 +1336,8 @@
       "publicadaPor": null,
       "publicadaCuando": null,
       "temas": [],
-      "como": "automatica"
+      "como": "automatica",
+      "slug": "cuanto-cuesta-viajar-al-gp-de-brasil-en-interlagos-para-ver-a-franco"
     },
     {
       "id": "165tzq5",
@@ -1644,7 +1359,8 @@
       "publicadaPor": null,
       "publicadaCuando": null,
       "temas": [],
-      "como": "automatica"
+      "como": "automatica",
+      "slug": "el-senado-bonaerense-debate-multas-por-escapes-libres-en-balcarce"
     },
     {
       "id": "942wi7",
@@ -1669,7 +1385,8 @@
         "autodromo",
         "fangio"
       ],
-      "como": "automatica"
+      "como": "automatica",
+      "slug": "urcera-y-la-tranquilidad-del-trabajo-a-largo-plazo-con-mercedes-en-tc"
     },
     {
       "id": "1li63ec",
@@ -1694,7 +1411,33 @@
         "concejo",
         "inta"
       ],
-      "como": "automatica"
+      "como": "automatica",
+      "slug": "el-concejo-debate-la-situacion-de-una-investigadora-en-balcarce"
+    },
+    {
+      "id": "q84c12",
+      "titulo": "Carta abierta de investigadora del INTA Balcarce",
+      "copete": "La científica Virginia Aparicio difundió una carta pública en Balcarce para cuestionar la suspensión de una presentación del proyecto internacional SPRINT.",
+      "cuerpo": "La investigadora de la Estación Experimental Agropecuaria local dio a conocer su postura a través de un escrito dirigido a los medios de comunicación. En el texto reconstruye su participación en la iniciativa global y expone los motivos de su disconformidad frente a la decisión que frenó la difusión de los avances del estudio.",
+      "guion": "Carta abierta de investigadora del INTA Balcarce",
+      "seccion": "Agro",
+      "medios": [
+        "El Diario Balcarce"
+      ],
+      "enlace": "https://eldiariobalcarce.com.ar/cuando-la-ciencia-incomoda-la-carta-de-virginia-aparicio-199",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-24T14:26:31.000Z",
+      "sinFecha": false,
+      "visto": "2026-09-24T15:27:47.939Z",
+      "relevancia": 71,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [
+        "inta"
+      ],
+      "como": "automatica",
+      "slug": "carta-abierta-de-investigadora-del-inta-balcarce"
     },
     {
       "id": "jul41g",
@@ -1722,29 +1465,8 @@
         "autodromo",
         "fangio"
       ],
-      "como": "automatica"
-    },
-    {
-      "id": "1ctm3pk",
-      "titulo": "El primer balance de Colapinto en Baku: «Dimos un pasito con el auto, pero no estoy consistente»",
-      "copete": "Luego de una intensa jornada de labor en pista en el comienzo del Gran Premio de Azerbaijan, en donde Alpine F1 Team adoptó diferentes objetivos con los A526 de Franco Colapinto y su compañero Pierre Gasly, el piloto argentino se refirió al funcionamiento del auto y la…",
-      "cuerpo": null,
-      "guion": null,
-      "seccion": "Automovilismo",
-      "medios": [
-        "Campeones"
-      ],
-      "enlace": "https://campeones.com.ar/el-primer-balance-colapinto-en-baku-dimos-un-pasito-con-el-auto-pero-no-estoy-consistente/",
-      "teniaImagenLaFuente": false,
-      "fecha": "2026-09-24T14:07:07.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-25T01:31:24.625Z",
-      "relevancia": 48,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica"
+      "como": "automatica",
+      "slug": "balcarce-se-prepara-para-vivir-un-fin-de-semana-a-fondo"
     },
     {
       "id": "12xkda6",
@@ -1767,51 +1489,8 @@
       "publicadaPor": null,
       "publicadaCuando": null,
       "temas": [],
-      "como": "automatica"
-    },
-    {
-      "id": "1a7n1tl",
-      "titulo": "Sufrió tres robos en menos de un mes y teme por su seguridad: “No quiero perder la tranquilidad”",
-      "copete": "Javier Arias dialogó con GABAL luego de sufrir tres hechos delictivos en alrededor de 20 días en una quinta ubicada en inmediaciones de la Ruta 77. Además de las pérdidas materiales, expresó su preocupación ante la posibilidad de encontrarse con los delincuentes dentro de la…",
-      "cuerpo": null,
-      "guion": null,
-      "seccion": "Policiales",
-      "medios": [
-        "Radio Gabal (FM 104.1)"
-      ],
-      "enlace": "https://www.radiogabal.com.ar/index.php/policiales/sufrio-tres-robos-en-menos-de-un-mes-y-teme-por-su-seguridad-no-quiero-perder-la-tranquilidad",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-24T13:52:37.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-24T15:27:47.939Z",
-      "relevancia": 67,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica"
-    },
-    {
-      "id": "q98w9w",
-      "titulo": "Santino Panetta ya palpita la fecha de Eurocup-3",
-      "copete": "Se viene una nueva fecha de Eurocup-3 desde el circuito de Jerez, España, y Campeones está presente siguiendo la actividad de los jóvenes pilotos argentinos. Martes y miércoles fueron días de pruebas extraoficiales, donde los equipos sacaron las primeras conclusiones bajo un…",
-      "cuerpo": null,
-      "guion": null,
-      "seccion": "Automovilismo",
-      "medios": [
-        "Campeones"
-      ],
-      "enlace": "https://campeones.com.ar/santino-panetta-ya-palpita-la-fecha-de-eurocup-3/",
-      "teniaImagenLaFuente": false,
-      "fecha": "2026-09-24T13:37:20.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-25T01:31:24.625Z",
-      "relevancia": 32,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica"
+      "como": "automatica",
+      "slug": "franco-peidon-finaliza-septimo-en-los-odesur-en-balcarce"
     },
     {
       "id": "8qdpz7",
@@ -1833,7 +1512,8 @@
       "publicadaPor": null,
       "publicadaCuando": null,
       "temas": [],
-      "como": "automatica"
+      "como": "automatica",
+      "slug": "colapinto-termino-11-en-la-segunda-practica-del-gran-premio-de"
     },
     {
       "id": "s897ks",
@@ -1855,55 +1535,8 @@
       "publicadaPor": null,
       "publicadaCuando": null,
       "temas": [],
-      "como": "automatica"
-    },
-    {
-      "id": "19q4ui5",
-      "titulo": "La preparación de Henry Martin para su «Carrera Homenaje» en TC2000",
-      "copete": "FOTOS GENTILEZA DANA COMACHI Henry Martin se aboca a celebrar un fin de semana por demás especial ante la « Carrera Homenaje » que le brindará Turismo Competición 2000 durante la presentación en el autódromo «El Zonda – Eduardo Copello» y en donde el campeón de la categoría en…",
-      "cuerpo": null,
-      "guion": null,
-      "seccion": "Automovilismo",
-      "medios": [
-        "Campeones"
-      ],
-      "enlace": "https://campeones.com.ar/la-preparacion-de-henry-martin-para-su-carrera-homenaje-en-tc2000/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-24T13:06:30.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-25T01:31:24.625Z",
-      "relevancia": 38,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [
-        "autodromo"
-      ],
-      "como": "automatica"
-    },
-    {
-      "id": "1iv58lw",
-      "titulo": "Concejo Deliberante: este jueves se desarrollará el decimocuarto capítulo del año",
-      "copete": "El cuerpo deliberativo de Balcarce se reunirá desde las 19:30 para abordar 39 expedientes, con pedidos vinculados a tasas, obras, servicios públicos, salud, educación y deporte.",
-      "cuerpo": null,
-      "guion": null,
-      "seccion": "Política",
-      "medios": [
-        "Radio Gabal (FM 104.1)"
-      ],
-      "enlace": "https://www.radiogabal.com.ar/index.php/politica/concejo-deliberante-este-jueves-se-desarrollara-el-decimocuarto-capitulo-del-ano",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-24T12:55:31.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-24T15:27:47.939Z",
-      "relevancia": 67,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [
-        "concejo"
-      ],
-      "como": "automatica"
+      "como": "automatica",
+      "slug": "citacion"
     },
     {
       "id": "v7ui9o",
@@ -1928,7 +1561,8 @@
         "autodromo",
         "fangio"
       ],
-      "como": "automatica"
+      "como": "automatica",
+      "slug": "habra-una-clase-abierta-de-chi-kung-en-plaza-libertad"
     },
     {
       "id": "xtlwre",
@@ -1953,31 +1587,8 @@
         "autodromo",
         "fangio"
       ],
-      "como": "automatica"
-    },
-    {
-      "id": "q84c12",
-      "titulo": "Carta abierta de investigadora del INTA Balcarce",
-      "copete": "La científica Virginia Aparicio difundió una carta pública en Balcarce para cuestionar la suspensión de una presentación del proyecto internacional SPRINT.",
-      "cuerpo": "La investigadora de la Estación Experimental Agropecuaria local dio a conocer su postura a través de un escrito dirigido a los medios de comunicación. En el texto reconstruye su participación en la iniciativa global y expone los motivos de su disconformidad frente a la decisión que frenó la difusión de los avances del estudio.",
-      "guion": "Carta abierta de investigadora del INTA Balcarce",
-      "seccion": "Agro",
-      "medios": [
-        "El Diario Balcarce"
-      ],
-      "enlace": "https://eldiariobalcarce.com.ar/cuando-la-ciencia-incomoda-la-carta-de-virginia-aparicio-199",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-24T11:26:31.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-24T15:27:47.939Z",
-      "relevancia": 71,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [
-        "inta"
-      ],
-      "como": "automatica"
+      "como": "automatica",
+      "slug": "largas-filas-para-ingresar-al-autodromo-fangio"
     },
     {
       "id": "wmweq4",
@@ -1991,7 +1602,7 @@
       ],
       "enlace": "https://eldiariobalcarce.com.ar/casi-cien-jugadores-reunio-el-prix-de-ajedrez-del-atlantico-482",
       "teniaImagenLaFuente": true,
-      "fecha": "2026-09-24T09:20:17.000Z",
+      "fecha": "2026-09-24T12:20:17.000Z",
       "sinFecha": false,
       "visto": "2026-09-24T15:27:47.939Z",
       "relevancia": 71,
@@ -1999,55 +1610,8 @@
       "publicadaPor": null,
       "publicadaCuando": null,
       "temas": [],
-      "como": "automatica"
-    },
-    {
-      "id": "1uf64an",
-      "titulo": "El presidente Javier Milei critica con dureza a la ONU",
-      "copete": "El presidente Javier Milei cuestionó a la Organización de las Naciones Unidas ante la Asamblea General en Nueva York y reclamó por Malvinas.",
-      "cuerpo": "El mandatario cuestionó a la Organización de las Naciones Unidas durante su exposición en Nueva York, donde calificó al organismo internacional como una estructura inútil que solo beneficia a una casta de burócratas. Además, el jefe de Estado denunció que las instituciones globales ignoraron los reclamos soberanos sobre las Islas Malvinas y cuestionó la gestión sanitaria durante la pandemia.\n\nDurante su mensaje, el líder nacional también rechazó las agendas multilaterales de regulación económica y ambiental, mientras ratificó la decisión de mantener la participación del país en foros internacionales bajo una postura de cooperación sin subordinación. Asimismo, reclamó retomar el diálogo con el Reino Unido y adelantó que la Argentina adoptará una política de vanguardia frente al desarrollo tecnológico.",
-      "guion": "El presidente Javier Milei critica con dureza a la ONU",
-      "seccion": "Política",
-      "medios": [
-        "El Diario Balcarce",
-        "Infórmese Primero (FM 104.9)"
-      ],
-      "enlace": "https://eldiariobalcarce.com.ar/milei-aseguro-que-la-onu-es-una-casta-de-parasitos-que-ignoro-la-causa-malvinas-789",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-24T09:13:27.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-24T15:27:47.939Z",
-      "relevancia": 81,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica"
-    },
-    {
-      "id": "1yy5hcd",
-      "titulo": "Persecución y moto recuperada: un menor aprehendido",
-      "copete": "Recuperaron una moto robada esta madrugada tras una persecución policial y aprehendieron a un menor en Balcarce.",
-      "cuerpo": "El procedimiento se inició durante la madrugada de este miércoles cuando personal de la Estación de Policía Comunal, con apoyo del Centro Operativo de Monitoreo, detectó en la zona de calles 16 y 9 a dos menores que circulaban en una motocicleta Yamaha de características similares a una sustraída horas antes. Al notar la presencia del móvil, los jóvenes huyeron en contramano hasta el sector de calles 107 y 2, donde perdieron el control del rodado y cayeron al suelo.\n\nTras la caída, ambos intentaron escapar a pie, aunque los efectivos lograron aprehender al acompañante mientras que el conductor huyó del lugar. La policía constató mediante el sistema que la moto tenía un pedido de secuestro activo y se iniciaron actuaciones por encubrimiento con intervención judicial.",
-      "guion": "Persecución y moto recuperada: un menor aprehendido",
-      "seccion": "Policiales",
-      "medios": [
-        "Diario La Vanguardia",
-        "El Diario Balcarce",
-        "Infórmese Primero (FM 104.9)",
-        "Radio Gabal (FM 104.1)"
-      ],
-      "enlace": "https://www.diariolavanguardia.com/noticias/44890-persecucion-caida-y-fuga-a-pie-recuperaron-una-moto-robada-y-aprehendieron-a-un-menor/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-24T09:07:18.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-24T10:27:08.767Z",
-      "relevancia": 100,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica"
+      "como": "automatica",
+      "slug": "el-club-sportivo-trabajo-recibe-el-prix-de-ajedrez-en-balcarce"
     },
     {
       "id": "11nk8l",
@@ -2069,7 +1633,8 @@
       "publicadaPor": null,
       "publicadaCuando": null,
       "temas": [],
-      "como": "automatica"
+      "como": "automatica",
+      "slug": "milei-critico-a-kicillof-por-el-riesgo-pais-en-nueva-york"
     },
     {
       "id": "159jwak",
@@ -2091,7 +1656,8 @@
       "publicadaPor": null,
       "publicadaCuando": null,
       "temas": [],
-      "como": "automatica"
+      "como": "automatica",
+      "slug": "el-gobierno-logra-dictamen-sobre-discapacidad-en-balcarce"
     },
     {
       "id": "1ss3yj3",
@@ -2116,7 +1682,8 @@
         "tc-pick-up",
         "fangio"
       ],
-      "como": "automatica"
+      "como": "automatica",
+      "slug": "reino-y-ciantini-participan-en-tandil"
     },
     {
       "id": "din3cj",
@@ -2142,7 +1709,8 @@
         "tc-pick-up",
         "fangio"
       ],
-      "como": "automatica"
+      "como": "automatica",
+      "slug": "sonia-y-dario-lideran-la-fila-en-el-autodromo-en-balcarce"
     },
     {
       "id": "1rh34g1",
@@ -2167,7 +1735,8 @@
         "autodromo",
         "fangio"
       ],
-      "como": "automatica"
+      "como": "automatica",
+      "slug": "socorristas-participan-en-la-reapertura-del-fangio-en-balcarce"
     },
     {
       "id": "7c7bdz",
@@ -2191,31 +1760,8 @@
       "temas": [
         "concejo"
       ],
-      "como": "automatica"
-    },
-    {
-      "id": "kiy3gs",
-      "titulo": "El Concejo Deliberante realiza su sesión ordinaria en Balcarce",
-      "copete": "Los concejales llevan a cabo este jueves la décima cuarta sesión ordinaria del año con un extenso temario en el recinto.",
-      "cuerpo": "El cuerpo legislativo analiza este jueves decretos vinculados a operaciones de leasing municipal, además de expedientes sobre taxis, remises y distintas obras de infraestructura para el distrito. También se debaten proyectos ambientales que incluyen una propuesta técnica para el saneamiento de la Laguna La Brava y una declaración de preocupación por situaciones denunciadas por APINTA Balcarce.\n\nLa agenda contempla además expedientes relacionados con la salud, la acción social y el servicio sanitario, junto con pedidos de informe sobre la red de agua potable y el sistema de constatación de infracciones. Por último, los ediles prevén distinguir la trayectoria de vecinos, instituciones locales y deportistas destacados de la ciudad.",
-      "guion": "El Concejo Deliberante realiza su sesión ordinaria en Balcarce",
-      "seccion": "Política",
-      "medios": [
-        "Diario La Vanguardia"
-      ],
-      "enlace": "https://www.diariolavanguardia.com/noticias/44885-el-concejo-deliberante-vuelve-a-sesionar-los-principales-temas-que-estaran-en-debate/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-23T22:58:23.988Z",
-      "sinFecha": true,
-      "visto": "2026-09-23T22:58:23.988Z",
-      "relevancia": 63,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [
-        "concejo"
-      ],
-      "como": "automatica"
+      "como": "automatica",
+      "slug": "taxis-y-remises-debatiran-la-eliminacion-de-tasas-mientras-el-sector"
     },
     {
       "id": "1m9oza2",
@@ -2240,7 +1786,8 @@
         "tc-pick-up",
         "fangio"
       ],
-      "como": "automatica"
+      "como": "automatica",
+      "slug": "los-socios-fundadores-deben-acreditarse-para-el-tc-pick-up-en-balcarce"
     },
     {
       "id": "f7pgfp",
@@ -2254,7 +1801,7 @@
       ],
       "enlace": "https://eldiariobalcarce.com.ar/18-protagonistas-en-las-tc-pick-up-15",
       "teniaImagenLaFuente": true,
-      "fecha": "2026-09-23T18:31:47.000Z",
+      "fecha": "2026-09-23T21:31:47.000Z",
       "sinFecha": false,
       "visto": "2026-09-23T21:43:49.924Z",
       "relevancia": 71,
@@ -2266,7 +1813,8 @@
         "tc-pick-up",
         "fangio"
       ],
-      "como": "automatica"
+      "como": "automatica",
+      "slug": "el-autodromo-fangio-recibe-a-las-tc-pick-up-en-balcarce"
     },
     {
       "id": "pd6ls9",
@@ -2280,7 +1828,7 @@
       ],
       "enlace": "https://eldiariobalcarce.com.ar/investigadores-del-conicet-revelan-como-celulas-de-cancer-pancreatico-se-comunican-para-sobrevivir-594",
       "teniaImagenLaFuente": true,
-      "fecha": "2026-09-23T18:29:29.000Z",
+      "fecha": "2026-09-23T21:29:29.000Z",
       "sinFecha": false,
       "visto": "2026-09-23T21:43:49.924Z",
       "relevancia": 63,
@@ -2288,14 +1836,15 @@
       "publicadaPor": null,
       "publicadaCuando": null,
       "temas": [],
-      "como": "automatica"
+      "como": "automatica",
+      "slug": "investigadores-del-conicet-revelan-como-celulas-de-cancer-pancreatico"
     },
     {
       "id": "n1sv0a",
-      "titulo": "Briatore se harta de los ultras argentinos: \"Si esto sigue así, Colapinto dejará de hablar\"",
-      "copete": "Flavio Briatore ha tenido que intervenir tras el último episodio de acoso online en la Fórmula 1, relacionado de nuevo con Franco Colapinto, después de lo ocurrido entre el argentino y su compañero de equipo, Pierre Gasly, en el pasado Gran Premio de España en Madring. El piloto…",
-      "cuerpo": null,
-      "guion": null,
+      "titulo": "Briatore frena los agravios a Franco Colapinto",
+      "copete": "El asesor de la Fórmula 1 advirtió que el piloto nacional dejará de hablar si continúan los ataques virtuales.",
+      "cuerpo": "El directivo debió intervenir a raíz de una nueva situación de hostigamiento en las redes sociales. Este episodio se suma al cruce previo que involucró al corredor argentino con su compañero de equipo Pierre Gasly durante una reciente competencia.\n\nLa advertencia busca poner freno a la agresividad de los fanáticos en internet tras los incidentes ocurridos en las últimas carreras del campeonato internacional.",
+      "guion": "Briatore frena los agravios a Franco Colapinto",
       "seccion": "Automovilismo",
       "medios": [
         "Motorsport"
@@ -2310,7 +1859,8 @@
       "publicadaPor": null,
       "publicadaCuando": null,
       "temas": [],
-      "como": "automatica"
+      "como": "automatica",
+      "slug": "briatore-se-harta-de-los-ultras-argentinos-si-esto-sigue-asi"
     },
     {
       "id": "je5vvm",
@@ -2332,7 +1882,8 @@
       "publicadaPor": null,
       "publicadaCuando": null,
       "temas": [],
-      "como": "automatica"
+      "como": "automatica",
+      "slug": "la-fuerte-advertencia-de-briatore-para-los-argentinos-que-opinan"
     },
     {
       "id": "1tg5rro",
@@ -2355,7 +1906,8 @@
       "publicadaPor": null,
       "publicadaCuando": null,
       "temas": [],
-      "como": "automatica"
+      "como": "automatica",
+      "slug": "nuevo-entrenamiento-de-los-tigres-con-presencia-balcarcena"
     },
     {
       "id": "pktre7",
@@ -2377,7 +1929,8 @@
       "publicadaPor": null,
       "publicadaCuando": null,
       "temas": [],
-      "como": "automatica"
+      "como": "automatica",
+      "slug": "carrera-homenaje-a-luis-vildoza"
     },
     {
       "id": "pjnmc",
@@ -2403,7 +1956,8 @@
         "autodromo",
         "fangio"
       ],
-      "como": "automatica"
+      "como": "automatica",
+      "slug": "reinauguran-el-autodromo-fangio-en-balcarce"
     },
     {
       "id": "1s9duvg",
@@ -2425,7 +1979,8 @@
       "publicadaPor": null,
       "publicadaCuando": null,
       "temas": [],
-      "como": "automatica"
+      "como": "automatica",
+      "slug": "franco-colapinto-tiene-la-mejor-reaccion-al-apagarse-los-semaforos-en"
     },
     {
       "id": "myfrfq",
@@ -2439,7 +1994,7 @@
       ],
       "enlace": "https://eldiariobalcarce.com.ar/el-9-de-noviembre-sera-feriado-nacional-por-la-visita-del-papa-leon-xiv-584",
       "teniaImagenLaFuente": true,
-      "fecha": "2026-09-23T09:01:51.000Z",
+      "fecha": "2026-09-23T12:01:51.000Z",
       "sinFecha": false,
       "visto": "2026-09-24T21:30:39.193Z",
       "relevancia": 63,
@@ -2447,7 +2002,8 @@
       "publicadaPor": null,
       "publicadaCuando": null,
       "temas": [],
-      "como": "automatica"
+      "como": "automatica",
+      "slug": "el-9-de-noviembre-sera-feriado-nacional-por-la-visita-del-papa-leon"
     },
     {
       "id": "1vgvciw",
@@ -2461,7 +2017,7 @@
       ],
       "enlace": "https://eldiariobalcarce.com.ar/entre-felicitaciones-y-orgullo-kevin-gomez-compartio-en-quality-su-titulo-argentino-577",
       "teniaImagenLaFuente": true,
-      "fecha": "2026-09-23T08:53:31.000Z",
+      "fecha": "2026-09-23T11:53:31.000Z",
       "sinFecha": false,
       "visto": "2026-09-23T14:21:53.516Z",
       "relevancia": 63,
@@ -2469,7 +2025,8 @@
       "publicadaPor": null,
       "publicadaCuando": null,
       "temas": [],
-      "como": "automatica"
+      "como": "automatica",
+      "slug": "entre-felicitaciones-y-orgullo-kevin-gomez-compartio-en-quality-su"
     },
     {
       "id": "1jv9qa4",
@@ -2483,7 +2040,7 @@
       ],
       "enlace": "https://eldiariobalcarce.com.ar/la-escuela-tecnica-busca-poner-en-valor-su-gimnasio-y-apela-a-la-solidaridad-de-la-comunidad-370",
       "teniaImagenLaFuente": true,
-      "fecha": "2026-09-23T08:52:12.000Z",
+      "fecha": "2026-09-23T11:52:12.000Z",
       "sinFecha": false,
       "visto": "2026-09-23T14:21:53.516Z",
       "relevancia": 63,
@@ -2491,209 +2048,8 @@
       "publicadaPor": null,
       "publicadaCuando": null,
       "temas": [],
-      "como": "automatica"
-    },
-    {
-      "id": "8hniuy",
-      "titulo": "Un balcarceño investiga sobre vida extrema para la NASA",
-      "copete": "El científico local Felipe Vilicich estudia organismos capaces de sobrevivir en condiciones extremas para los proyectos de la agencia espacial.",
-      "cuerpo": "El investigador Felipe Vilicich realiza su doctorado en el Albert Einstein College of Medicine de Nueva York y forma parte de un proyecto internacional que obtuvo una beca de un millón y medio de dólares otorgada por el Departamento de Exobiología de la NASA. El equipo analiza microorganismos de zonas áridas capaces de entrar en un estado de latencia ante el calor y la falta de agua, para determinar qué moléculas utilizan para sobrevivir a situaciones de estrés extremo.\n\nPara avanzar en el descubrimiento, el especialista está a cargo del análisis de millones de datos mediante herramientas de inteligencia artificial y algoritmos propios. Su trabajo consiste en identificar proteínas protectoras similares a las que utilizan organismos conocidos como extremófilos, como el tardígrado, para soportar radiación o temperaturas extremas.\n\nEl proyecto, que forma parte de su tesis doctoral, busca comprender los mecanismos que permiten a estas comunidades biológicas sostener el ciclo del dióxido de carbono y prevenir la erosión en la Tierra. A su vez, los resultados de la investigación aportan información clave para los estudios sobre el origen y la evolución de la vida vinculados con la exploración espacial.",
-      "guion": "Un balcarceño investiga sobre vida extrema para la NASA",
-      "seccion": "Tecnología",
-      "medios": [
-        "El Diario Balcarce"
-      ],
-      "enlace": "https://eldiariobalcarce.com.ar/felipe-vilicich-el-balcarceno-que-investiga-para-la-nasa-como-puede-sobrevivir-la-vida-en-condiciones-extremas-209",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-23T03:05:01.594Z",
-      "sinFecha": true,
-      "visto": "2026-09-23T03:05:01.594Z",
-      "relevancia": 63,
-      "local": true,
-      "publicadaPor": "ia",
-      "publicadaCuando": "2026-09-21T03:14:13.747Z",
-      "temas": [],
-      "como": "automatica"
-    },
-    {
-      "id": "1x87c94",
-      "titulo": "Reclamos del campo al Gobierno por impuestos",
-      "copete": "La Exposición Rural de Palermo cerró hace dos semanas con fuertes pedidos del sector agropecuario para reducir la carga impositiva nacional.",
-      "cuerpo": "Los delegados por Balcarce ante la Sociedad Rural Argentina, Patricio Dellagiovanna y Luis Ispizúa, participaron de la última edición de la Exposición Rural en Palermo. Durante el encuentro, Dellagiovanna enfatizó la necesidad de continuar reclamando al Gobierno nacional la reducción de la carga impositiva y de los tributos provinciales, a pesar de reconocer los avances en la baja de retenciones.\n\nEn cuanto al trabajo institucional, el delegado destacó que la representación local se amplió con la incorporación de nuevos integrantes en zonas de la región y detalló que mantienen un diálogo permanente con las autoridades locales para acercar inquietudes vinculadas a la seguridad, la Tasa Vial y el mantenimiento de caminos. Asimismo, de cara a las próximas elecciones de la entidad, respaldó la gestión del actual presidente Nicolás Pino, quien buscará un nuevo mandato frente a Marcos Pereda.",
-      "guion": "La última Exposición Rural de Palermo dejó nuevos reclamos del campo. El sector agropecuario le exigió al Gobierno nacional una baja en la carga impositiva.",
-      "seccion": "Agro",
-      "medios": [
-        "El Diario Balcarce"
-      ],
-      "enlace": "https://eldiariobalcarce.com.ar/le-seguiremos-demandando-al-gobierno-nacional-que-reduzca-la-carga-impositiva-193",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-23T03:05:01.594Z",
-      "sinFecha": true,
-      "visto": "2026-09-23T03:05:01.594Z",
-      "relevancia": 63,
-      "local": true,
-      "publicadaPor": "ia",
-      "publicadaCuando": "2026-09-18T17:38:53.363Z",
-      "temas": [],
-      "como": "automatica"
-    },
-    {
-      "id": "ts9zo0",
-      "titulo": "Nuevos sacerdotes asumen en parroquias locales",
-      "copete": "El presbítero Marcelo Gabriel Panebianco asumió sus funciones pastorales en comunidades de Balcarce y San Agustín.",
-      "cuerpo": "La Cooperativa de Electricidad General Balcarce Limitada informó los detalles de los servicios de sepelios prestados a la comunidad, incluyendo inhumaciones en el Cementerio Municipal y cremaciones en Miramar.\n\nLos procedimientos se llevaron a cabo tras los respectivos oficios religiosos en las salas velatorias, con casas de duelo ubicadas en distintos puntos de la ciudad y localidades del partido.",
-      "guion": "Nuevos sacerdotes asumen en parroquias locales",
-      "seccion": "Balcarce",
-      "medios": [
-        "El Diario Balcarce"
-      ],
-      "enlace": "https://eldiariobalcarce.com.ar/una-nueva-etapa-para-la-comunidad-catolica-fe-cercania-y-el-desafio-de-caminar-juntos-943",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-23T03:05:01.594Z",
-      "sinFecha": true,
-      "visto": "2026-09-23T03:05:01.594Z",
-      "relevancia": 63,
-      "local": true,
-      "publicadaPor": "ia",
-      "publicadaCuando": "2026-09-21T01:07:53.482Z",
-      "temas": [],
-      "como": "automatica"
-    },
-    {
-      "id": "5tyfmu",
-      "titulo": "La historia del padre Ezequiel Kseim y sus raíces",
-      "copete": "El sacerdote Ezequiel Kseim repasó su infancia en Balcarce, su paso por el cerro El Triunfo y el camino que lo llevó a la vocación sacerdotal.",
-      "cuerpo": null,
-      "guion": "La historia del padre Ezequiel Kseim y sus raíces",
-      "seccion": "Balcarce",
-      "medios": [
-        "El Diario Balcarce"
-      ],
-      "enlace": "https://eldiariobalcarce.com.ar/las-raices-que-nunca-se-olvidan-la-historia-del-padre-ezequiel-kseim-465",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-23T03:05:01.594Z",
-      "sinFecha": true,
-      "visto": "2026-09-23T03:05:01.594Z",
-      "relevancia": 63,
-      "local": true,
-      "publicadaPor": "ia",
-      "publicadaCuando": "2026-09-21T01:07:54.635Z",
-      "temas": [
-        "cerro"
-      ],
-      "como": "automatica"
-    },
-    {
-      "id": "14m0mm5",
-      "titulo": "Tato Melucci presenta su nueva obra teatral en Balcarce",
-      "copete": "El actor Donatto Melucci regresa este fin de semana a Balcarce con un unipersonal inspirado en los recuerdos de su padre.",
-      "cuerpo": "Donatto \"Tato\" Melucci regresa a Balcarce con el estreno de su nuevo unipersonal. El proyecto comenzó a gestarse a partir de un guion escrito en su juventud.",
-      "guion": "Tato Melucci presenta su nueva obra teatral en Balcarce",
-      "seccion": "Balcarce",
-      "medios": [
-        "El Diario Balcarce"
-      ],
-      "enlace": "https://eldiariobalcarce.com.ar/tato-melucci-vuelve-a-balcarce-con-una-obra-atravesada-por-la-memoria-de-su-padre-997",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-23T03:05:01.594Z",
-      "sinFecha": true,
-      "visto": "2026-09-23T03:05:01.594Z",
-      "relevancia": 63,
-      "local": true,
-      "publicadaPor": "ia",
-      "publicadaCuando": "2026-09-21T01:07:55.793Z",
-      "temas": [],
-      "como": "automatica"
-    },
-    {
-      "id": "18iooyc",
-      "titulo": "Luis Ispizua destacó el rol del campo para la economía",
-      "copete": "El referente ganadero Luis Calixto Ispizúa analizó la actualidad del sector agrícola y ganadero en Buenos Aires.",
-      "cuerpo": "El delegado de la Sociedad Rural Argentina en Balcarce, Luis Ispizúa, advirtió sobre las dificultades fiscales que afrontan los productores locales. Afirmó que la provincia de Buenos Aires aplica una carga tributaria que triplica a la de otras jurisdicciones y reclamó la anulación gradual de las retenciones junto con mejoras en los caminos rurales.\n\nEn el plano político, el dirigente respaldó la gestión de Nicolás Pino al frente de la entidad gremial de cara a las próximas elecciones internas. Asimismo, destacó la existencia de un canal de diálogo directo con la administración nacional tras señalar que el Gobierno comprendió el rol estratégico del sector productivo.",
-      "guion": "Luis Ispizua destacó el rol del campo para la economía",
-      "seccion": "Agro",
-      "medios": [
-        "El Diario Balcarce"
-      ],
-      "enlace": "https://eldiariobalcarce.com.ar/luis-ispizua-el-gobierno-entendio-que-el-campo-es-el-motor-del-pais-969",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-23T03:05:01.594Z",
-      "sinFecha": true,
-      "visto": "2026-09-23T03:05:01.594Z",
-      "relevancia": 63,
-      "local": true,
-      "publicadaPor": "ia",
-      "publicadaCuando": "2026-09-21T02:54:42.589Z",
-      "temas": [],
-      "como": "automatica"
-    },
-    {
-      "id": "19jah2t",
-      "titulo": "Periodista de Balcarce cubre el Mundial desde El Salvador",
-      "copete": "El periodista balcarceño Claudio Martínez cubre la Copa del Mundo desde El Salvador, país donde reside hace más de dos décadas.",
-      "cuerpo": "El periodista deportivo Claudio Martínez cumple su segunda cobertura mundialista, tras su paso inicial en Alemania 2006, para el programa radial salvadoreño \"La Tribu\". Tras formarse profesionalmente en Buenos Aires y trabajar en la revista El Gráfico, se instaló hace veinticuatro años en El Salvador, donde consolidó su carrera en los medios.\n\nDurante su trayectoria ha cubierto Juegos Olímpicos y otras competencias internacionales, aunque destaca que el clima de la Copa del Mundo es único por el colorido de las tribunas y la mezcla de culturas. A pesar de los años transcurridos fuera del país y de que sus visitas actuales son menos frecuentes, asegura que mantiene intacta su identidad balcarceña y su vínculo con la ciudad.",
-      "guion": "Un periodista nacido en Balcarce radicado en El Salvador vive la experiencia de cubrir mundiales de fútbol desde adentro. Una trayectoria internacional que comenzó en Buenos Aires y hoy lo lleva a los escenarios principales del deporte.",
-      "seccion": "Deportes",
-      "medios": [
-        "El Diario Balcarce"
-      ],
-      "enlace": "https://eldiariobalcarce.com.ar/de-balcarce-al-mundial-la-historia-del-periodista-que-vive-el-futbol-desde-adentro-899",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-23T03:05:01.594Z",
-      "sinFecha": true,
-      "visto": "2026-09-23T03:05:01.594Z",
-      "relevancia": 63,
-      "local": true,
-      "publicadaPor": "ia",
-      "publicadaCuando": "2026-09-18T17:38:54.557Z",
-      "temas": [],
-      "como": "automatica"
-    },
-    {
-      "id": "1s8swk5",
-      "titulo": "El Concejo pidió informes al Municipio por obras públicas",
-      "copete": "El Concejo Deliberante aprobó un proyecto para solicitar detalles sobre el estado de las obras y el área tras una renuncia en Balcarce.",
-      "cuerpo": "Durante la undécima sesión ordinaria, el cuerpo legislativo aprobó un proyecto impulsado por la concejal Sol Di Gerónimo para conocer cómo seguirá funcionando la Subsecretaría de Obras y Servicios Públicos luego de la renuncia de Nicolás Álvarez Quintero.\n\nLa iniciativa exige detalles sobre quién ocupará el reemplazo, el estado financiero de los trabajos en marcha y el impacto de la medida en proyectos clave como el bacheo, los caminos rurales y obras en el hospital local. Además, el concejal Ignacio Capeccio respaldó el pedido y propuso convocar al secretario del área, Gustavo Torres, para que brinde explicaciones de manera presencial ante las demoras en responder requerimientos previos.",
-      "guion": "El Concejo pidió informes al Municipio por obras públicas",
-      "seccion": "Política",
-      "medios": [
-        "El Diario Balcarce"
-      ],
-      "enlace": "https://eldiariobalcarce.com.ar/el-concejo-pidio-al-municipio-detalles-sobre-las-obras-y-la-continuidad-del-area-tras-la-renuncia-de-alvarez-quintero-903",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-23T03:05:01.594Z",
-      "sinFecha": true,
-      "visto": "2026-09-23T03:05:01.594Z",
-      "relevancia": 63,
-      "local": true,
-      "publicadaPor": "ia",
-      "publicadaCuando": "2026-09-21T02:54:43.483Z",
-      "temas": [
-        "concejo"
-      ],
-      "como": "automatica"
-    },
-    {
-      "id": "119oqdp",
-      "titulo": "Éxito de la gala solidaria por la infancia en el teatro",
-      "copete": "El Teatro Municipal albergó el viernes el festival solidario \"Voces por la Infancia\", organizado por la Sociedad de Protección a la Infancia.",
-      "cuerpo": "El escenario recibió las presentaciones de los músicos y grupos Maxi Daruch, Darío Gómez, Ezequiel Méndez, Lucila Belmonte, La Pulpera y Estampa Criolla. Además, Ana Clara Ambatese envió una canción grabada y un mensaje debido a su ausencia en el evento.\n\nDurante la función, Belmonte y la conductora Natalia Angulo recorrieron la platea para dialogar con los asistentes sobre los sueños de la infancia. La recaudación se destinó a sostener el trabajo cotidiano que la institución realiza junto a niños y adolescentes.",
-      "guion": "Música y solidaridad se unieron en el Teatro Municipal. La Sociedad de Protección a la Infancia reunió a la comunidad en una nueva edición del festival benéfico para acompañar a los chicos.",
-      "seccion": "Cultura y agenda",
-      "medios": [
-        "El Diario Balcarce"
-      ],
-      "enlace": "https://eldiariobalcarce.com.ar/una-noche-de-musica-solidaridad-y-suenos-para-acompanar-a-la-infancia-625",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-23T03:05:01.594Z",
-      "sinFecha": true,
-      "visto": "2026-09-23T03:05:01.594Z",
-      "relevancia": 63,
-      "local": true,
-      "publicadaPor": "ia",
-      "publicadaCuando": "2026-09-18T17:38:55.654Z",
-      "temas": [],
-      "como": "automatica"
+      "como": "automatica",
+      "slug": "la-escuela-tecnica-busca-poner-en-valor-su-gimnasio-y-apela-a-la"
     },
     {
       "id": "jje778",
@@ -2715,7 +2071,8 @@
       "publicadaPor": null,
       "publicadaCuando": "2026-09-21T03:54:12.174Z",
       "temas": [],
-      "como": "automatica"
+      "como": "automatica",
+      "slug": "la-sociedad-rural-participa-de-un-encuentro-regional-en-balcarce"
     },
     {
       "id": "1knnogg",
@@ -2737,7 +2094,8 @@
       "publicadaPor": null,
       "publicadaCuando": null,
       "temas": [],
-      "como": "automatica"
+      "como": "automatica",
+      "slug": "cabana-los-pinos-concreta-su-remate-anual-en-balcarce"
     },
     {
       "id": "1q76ezk",
@@ -2759,7 +2117,8 @@
       "publicadaPor": "ia",
       "publicadaCuando": "2026-09-21T01:07:57.100Z",
       "temas": [],
-      "como": "automatica"
+      "como": "automatica",
+      "slug": "remate-conjunto-de-cabanas-angus-en-balcarce"
     },
     {
       "id": "v1u9f1",
@@ -2783,7 +2142,8 @@
       "temas": [
         "ferroviarios"
       ],
-      "como": "automatica"
+      "como": "automatica",
+      "slug": "ferroviarios-gano-la-primera-final-de-la-copa-de-plata"
     },
     {
       "id": "1av7fh9",
@@ -2807,7 +2167,8 @@
       "temas": [
         "ferroviarios"
       ],
-      "como": "automatica"
+      "como": "automatica",
+      "slug": "ferroviarios-se-consagro-campeon-en-basquet"
     },
     {
       "id": "1y62trk",
@@ -2831,13 +2192,14 @@
       "temas": [
         "ferroviarios"
       ],
-      "como": "automatica"
+      "como": "automatica",
+      "slug": "exitoso-debut-de-las-valkyrias-en-la-liga-mar-y-sierras"
     },
     {
       "id": "112kb6b",
       "titulo": "Ferro Básquet busca los octavos en la Liga Mar y Sierras",
       "copete": "El equipo de Balcarce afronta una nueva temporada con la dirección técnica de Facundo Fernández.",
-      "cuerpo": "El plantel se armó manteniendo la base del año pasado, con la incorporación de jugadores provenientes de la categoría Mayores de treinta y jóvenes de localidades de la zona que llegaron a la ciudad para estudiar. Actualmente cuenta con unos diecisêcuteis integrantes, de los cuales doce ingresan a la planilla en cada encuentro.\n\nEl director técnico señaló que el rendimiento viene en crecimiento de menor a mayor tras enfrentar en el arranque a rivales exigentes. Además, remarcó la importancia de la cohesión grupal y el compromiso para sostener la intensidad durante los partidos.\n\nEl objetivo principal para lo que resta del certamen es alcanzar la instancia de reclasificación y llegar a los octavos de final de la Copa de Oro.",
+      "cuerpo": null,
       "guion": "El plantel de Ferro ya se encuentra disputando una nueva temporada en la Liga Mar y Sierras. Con la conducción técnica de Facundo Fernández, el equipo apunta alto y busca llegar hasta los octavos de final del certamen.",
       "seccion": "Deportes",
       "medios": [
@@ -2853,13 +2215,14 @@
       "publicadaPor": "ia",
       "publicadaCuando": "2026-09-18T17:49:25.672Z",
       "temas": [],
-      "como": "automatica"
+      "como": "automatica",
+      "slug": "ferro-basquet-busca-los-octavos-en-la-liga-mar-y-sierras"
     },
     {
       "id": "1kpxt2v",
       "titulo": "Karina Lupo y Mariano Barreiro ganaron la Media Maratón",
       "copete": "Karina Lupo y Mariano Barreiro se impusieron el fin de semana en la Media Maratón de Balcarce, con la participación de ms de ciento sesenta atletas.",
-      "cuerpo": "",
+      "cuerpo": null,
       "guion": "Karina Lupo y Mariano Barreiro ganaron la Media Maratón",
       "seccion": "Deportes",
       "medios": [
@@ -2875,13 +2238,14 @@
       "publicadaPor": "ia",
       "publicadaCuando": "2026-09-20T12:09:40.057Z",
       "temas": [],
-      "como": "automatica"
+      "como": "automatica",
+      "slug": "karina-lupo-y-mariano-barreiro-ganaron-la-media-maraton"
     },
     {
       "id": "33h243",
       "titulo": "Franco Peidón ganó el oro nacional en 800 metros",
       "copete": "El atleta local Franco Peidón obtuvo la medalla de oro en los ochocientos metros durante el Campeonato Nacional de Mayores en Rosario.",
-      "cuerpo": "",
+      "cuerpo": null,
       "guion": "El atleta local Franco Peidón se consagró campeón argentino de ochocientos metros llanos. Fue durante el centésimo sexto Campeonato Nacional de Mayores que se llevó a cabo este fin de semana en la ciudad santafesina de Rosario.",
       "seccion": "Deportes",
       "medios": [
@@ -2897,7 +2261,8 @@
       "publicadaPor": "ia",
       "publicadaCuando": "2026-09-18T17:49:26.848Z",
       "temas": [],
-      "como": "automatica"
+      "como": "automatica",
+      "slug": "franco-peidon-gano-el-oro-nacional-en-800-metros"
     },
     {
       "id": "8yoymu",
@@ -2919,29 +2284,123 @@
       "publicadaPor": "ia",
       "publicadaCuando": "2026-09-18T17:50:01.737Z",
       "temas": [],
-      "como": "automatica"
+      "como": "automatica",
+      "slug": "medalla-de-bronce-para-shalom-lescano-en-atletismo"
     },
     {
-      "id": "jul4zg",
-      "titulo": "Muere Tulio Crespi y enluta al automovilismo en Balcarce",
-      "copete": "El célebre preparador y constructor de vehículos de competición falleció, según informó el Gobierno Municipal.",
-      "cuerpo": "El municipio local despidió con pesar al histórico diseñador y constructor de autos de carrera, cuya trayectoria dejó una marca profunda en la industria nacional y en la comunidad. Su vínculo con el distrito comenzó en la década de 1980 y abarcó además la docencia, ya que en 1993 dio clases en la Escuela Técnica Número 1 dentro de la Tecnicatura en Automotores. Las autoridades enviaron condolencias a sus familiares, allegados y a todo el ámbito del deporte motor.",
-      "guion": "Muere Tulio Crespi y enluta al automovilismo en Balcarce",
-      "seccion": "Automovilismo",
+      "id": "1x87c94",
+      "titulo": "Reclamos del campo al Gobierno por impuestos",
+      "copete": "La Exposición Rural de Palermo cerró hace dos semanas con fuertes pedidos del sector agropecuario para reducir la carga impositiva nacional.",
+      "cuerpo": "Los delegados por Balcarce ante la Sociedad Rural Argentina, Patricio Dellagiovanna y Luis Ispizúa, participaron de la última edición de la Exposición Rural en Palermo. Durante el encuentro, Dellagiovanna enfatizó la necesidad de continuar reclamando al Gobierno nacional la reducción de la carga impositiva y de los tributos provinciales, a pesar de reconocer los avances en la baja de retenciones.\n\nEn cuanto al trabajo institucional, el delegado destacó que la representación local se amplió con la incorporación de nuevos integrantes en zonas de la región y detalló que mantienen un diálogo permanente con las autoridades locales para acercar inquietudes vinculadas a la seguridad, la Tasa Vial y el mantenimiento de caminos. Asimismo, de cara a las próximas elecciones de la entidad, respaldó la gestión del actual presidente Nicolás Pino, quien buscará un nuevo mandato frente a Marcos Pereda.",
+      "guion": "La última Exposición Rural de Palermo dejó nuevos reclamos del campo. El sector agropecuario le exigió al Gobierno nacional una baja en la carga impositiva.",
+      "seccion": "Agro",
       "medios": [
-        "News Balcarce (FM 91.7)"
+        "El Diario Balcarce"
       ],
-      "enlace": "https://newsbalcarce.com.ar/?p=30750",
+      "enlace": "https://eldiariobalcarce.com.ar/le-seguiremos-demandando-al-gobierno-nacional-que-reduzca-la-carga-impositiva-193",
       "teniaImagenLaFuente": true,
-      "fecha": "2026-09-22T21:58:46.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-22T23:46:50.102Z",
-      "relevancia": 73,
+      "fecha": "2026-09-23T03:05:01.594Z",
+      "sinFecha": true,
+      "visto": "2026-09-23T03:05:01.594Z",
+      "relevancia": 63,
       "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": "2026-09-24T00:54:41.075Z",
+      "publicadaPor": "ia",
+      "publicadaCuando": "2026-09-18T17:38:53.363Z",
       "temas": [],
-      "como": "automatica"
+      "como": "automatica",
+      "slug": "reclamos-del-campo-al-gobierno-por-impuestos"
+    },
+    {
+      "id": "ts9zo0",
+      "titulo": "Nuevos sacerdotes asumen en parroquias locales",
+      "copete": "El presbítero Marcelo Gabriel Panebianco asumió sus funciones pastorales en comunidades de Balcarce y San Agustín.",
+      "cuerpo": "La Cooperativa de Electricidad General Balcarce Limitada informó los detalles de los servicios de sepelios prestados a la comunidad, incluyendo inhumaciones en el Cementerio Municipal y cremaciones en Miramar.\n\nLos procedimientos se llevaron a cabo tras los respectivos oficios religiosos en las salas velatorias, con casas de duelo ubicadas en distintos puntos de la ciudad y localidades del partido.",
+      "guion": "Nuevos sacerdotes asumen en parroquias locales",
+      "seccion": "Balcarce",
+      "medios": [
+        "El Diario Balcarce"
+      ],
+      "enlace": "https://eldiariobalcarce.com.ar/una-nueva-etapa-para-la-comunidad-catolica-fe-cercania-y-el-desafio-de-caminar-juntos-943",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-23T03:05:01.594Z",
+      "sinFecha": true,
+      "visto": "2026-09-23T03:05:01.594Z",
+      "relevancia": 63,
+      "local": true,
+      "publicadaPor": "ia",
+      "publicadaCuando": "2026-09-21T01:07:53.482Z",
+      "temas": [],
+      "como": "automatica",
+      "slug": "nuevos-sacerdotes-asumen-en-parroquias-locales"
+    },
+    {
+      "id": "14m0mm5",
+      "titulo": "Tato Melucci presenta su nueva obra teatral en Balcarce",
+      "copete": "El actor Donatto Melucci regresa este fin de semana a Balcarce con un unipersonal inspirado en los recuerdos de su padre.",
+      "cuerpo": "Donatto \"Tato\" Melucci regresa a Balcarce con el estreno de su nuevo unipersonal. El proyecto comenzó a gestarse a partir de un guion escrito en su juventud.",
+      "guion": "Tato Melucci presenta su nueva obra teatral en Balcarce",
+      "seccion": "Balcarce",
+      "medios": [
+        "El Diario Balcarce"
+      ],
+      "enlace": "https://eldiariobalcarce.com.ar/tato-melucci-vuelve-a-balcarce-con-una-obra-atravesada-por-la-memoria-de-su-padre-997",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-23T03:05:01.594Z",
+      "sinFecha": true,
+      "visto": "2026-09-23T03:05:01.594Z",
+      "relevancia": 63,
+      "local": true,
+      "publicadaPor": "ia",
+      "publicadaCuando": "2026-09-21T01:07:55.793Z",
+      "temas": [],
+      "como": "automatica",
+      "slug": "tato-melucci-presenta-su-nueva-obra-teatral-en-balcarce"
+    },
+    {
+      "id": "18iooyc",
+      "titulo": "Luis Ispizua destacó el rol del campo para la economía",
+      "copete": "El referente ganadero Luis Calixto Ispizúa analizó la actualidad del sector agrícola y ganadero en Buenos Aires.",
+      "cuerpo": "El delegado de la Sociedad Rural Argentina en Balcarce, Luis Ispizúa, advirtió sobre las dificultades fiscales que afrontan los productores locales. Afirmó que la provincia de Buenos Aires aplica una carga tributaria que triplica a la de otras jurisdicciones y reclamó la anulación gradual de las retenciones junto con mejoras en los caminos rurales.\n\nEn el plano político, el dirigente respaldó la gestión de Nicolás Pino al frente de la entidad gremial de cara a las próximas elecciones internas. Asimismo, destacó la existencia de un canal de diálogo directo con la administración nacional tras señalar que el Gobierno comprendió el rol estratégico del sector productivo.",
+      "guion": "Luis Ispizua destacó el rol del campo para la economía",
+      "seccion": "Agro",
+      "medios": [
+        "El Diario Balcarce"
+      ],
+      "enlace": "https://eldiariobalcarce.com.ar/luis-ispizua-el-gobierno-entendio-que-el-campo-es-el-motor-del-pais-969",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-23T03:05:01.594Z",
+      "sinFecha": true,
+      "visto": "2026-09-23T03:05:01.594Z",
+      "relevancia": 63,
+      "local": true,
+      "publicadaPor": "ia",
+      "publicadaCuando": "2026-09-21T02:54:42.589Z",
+      "temas": [],
+      "como": "automatica",
+      "slug": "luis-ispizua-destaco-el-rol-del-campo-para-la-economia"
+    },
+    {
+      "id": "19jah2t",
+      "titulo": "Periodista de Balcarce cubre el Mundial desde El Salvador",
+      "copete": "El periodista balcarceño Claudio Martínez cubre la Copa del Mundo desde El Salvador, país donde reside hace más de dos décadas.",
+      "cuerpo": null,
+      "guion": "Un periodista nacido en Balcarce radicado en El Salvador vive la experiencia de cubrir mundiales de fútbol desde adentro. Una trayectoria internacional que comenzó en Buenos Aires y hoy lo lleva a los escenarios principales del deporte.",
+      "seccion": "Deportes",
+      "medios": [
+        "El Diario Balcarce"
+      ],
+      "enlace": "https://eldiariobalcarce.com.ar/de-balcarce-al-mundial-la-historia-del-periodista-que-vive-el-futbol-desde-adentro-899",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-23T03:05:01.594Z",
+      "sinFecha": true,
+      "visto": "2026-09-23T03:05:01.594Z",
+      "relevancia": 63,
+      "local": true,
+      "publicadaPor": "ia",
+      "publicadaCuando": "2026-09-18T17:38:54.557Z",
+      "temas": [],
+      "como": "automatica",
+      "slug": "periodista-de-balcarce-cubre-el-mundial-desde-el-salvador"
     },
     {
       "id": "jul4yj",
@@ -2963,7 +2422,8 @@
       "publicadaPor": null,
       "publicadaCuando": null,
       "temas": [],
-      "como": "automatica"
+      "como": "automatica",
+      "slug": "sergio-aranaga-participa-en-un-plenario-en-avellaneda-en-balcarce"
     },
     {
       "id": "cs4hof",
@@ -2977,7 +2437,7 @@
       ],
       "enlace": "https://eldiariobalcarce.com.ar/nicolas-girotti-gano-y-saco-mayor-ventaja-al-frente-del-play-off-906",
       "teniaImagenLaFuente": true,
-      "fecha": "2026-09-22T18:00:46.000Z",
+      "fecha": "2026-09-22T21:00:46.000Z",
       "sinFecha": false,
       "visto": "2026-09-24T15:27:47.939Z",
       "relevancia": 71,
@@ -2985,7 +2445,8 @@
       "publicadaPor": null,
       "publicadaCuando": null,
       "temas": [],
-      "como": "automatica"
+      "como": "automatica",
+      "slug": "nicolas-girotti-gano-y-saco-mayor-ventaja-al-frente-del-play-off"
     },
     {
       "id": "1837g46",
@@ -2999,7 +2460,7 @@
       ],
       "enlace": "https://eldiariobalcarce.com.ar/el-pugilista-kevin-gomez-recibio-un-reconocimiento-tras-consagrarse-campeon-argentino-271",
       "teniaImagenLaFuente": true,
-      "fecha": "2026-09-22T12:10:53.000Z",
+      "fecha": "2026-09-22T15:10:53.000Z",
       "sinFecha": false,
       "visto": "2026-09-24T22:41:28.811Z",
       "relevancia": 71,
@@ -3010,7 +2471,8 @@
         "autodromo",
         "fangio"
       ],
-      "como": "automatica"
+      "como": "automatica",
+      "slug": "kevin-gomez-recibe-un-reconocimiento-en-balcarce"
     },
     {
       "id": "m4p2h",
@@ -3024,7 +2486,7 @@
       ],
       "enlace": "https://eldiariobalcarce.com.ar/destacada-participacion-de-la-emdab-en-torneo-nacional-de-natacion-684",
       "teniaImagenLaFuente": true,
-      "fecha": "2026-09-22T09:10:01.000Z",
+      "fecha": "2026-09-22T12:10:01.000Z",
       "sinFecha": false,
       "visto": "2026-09-23T03:05:01.594Z",
       "relevancia": 63,
@@ -3032,1024 +2494,51 @@
       "publicadaPor": null,
       "publicadaCuando": null,
       "temas": [],
-      "como": "automatica"
-    },
-    {
-      "id": "1pjzhm6",
-      "titulo": "Las TC Pick Up se presentaron en Mar del Plata",
-      "copete": "José Bocha Ciantini recorrió la costa marplatense con una TC Pick Up este jueves, en la previa de la carrera en Balcarce.",
-      "cuerpo": "La presentación oficial de la octava fecha de la categoría se llevó a cabo en Mar del Plata con una conferencia y una exhibición callejera que convocó a numerosos fanáticos del automovilismo. Del evento participaron autoridades municipales, dirigentes de la ACTC y pilotos como Juan José Suárez, Diego De Carlo y el propio Ciantini, quien manejó la camioneta desde el Torreón del Monje hasta la Rotonda del Golf.\n\nLas actividades continuarán este viernes en Balcarce con un nuevo recorrido de los vehículos por las calles céntricas, que partirá desde la estación de servicio de avenida San Martín y finalizará frente al Museo Juan Manuel Fangio, donde se realizará la conferencia oficial previa al regreso de la actividad al autódromo local después de quince años.",
-      "guion": "Las TC Pick Up se presentaron en Mar del Plata",
-      "seccion": "Automovilismo",
-      "medios": [
-        "Diario La Vanguardia",
-        "El Diario Balcarce"
-      ],
-      "enlace": "https://www.diariolavanguardia.com/noticias/44901-el-bocha-ciantini-y-el-intendente-presentaron-en-mar-del-plata-la-actividad-de-las-tc-pick-up/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-21T19:45:23.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-25T00:00:51.273Z",
-      "relevancia": 81,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [
-        "autodromo",
-        "tc-pick-up",
-        "fangio"
-      ],
-      "como": "automatica"
-    },
-    {
-      "id": "7ihatv",
-      "titulo": "El 76% de los endeudados en Argentina recurre al crédito para pagar alimentos, salud y servicios",
-      "copete": "Seis de cada diez argentinos debieron financiarse en los últimos seis meses y el 76% recurre al crédito para pagar alimentos, salud y servicios, mientras que al 65% de la población se le agota el sueldo antes del día 20 del mes. El Monitor de Op",
-      "cuerpo": null,
-      "guion": null,
-      "seccion": "Balcarce",
-      "medios": [
-        "El Diario Balcarce"
-      ],
-      "enlace": "https://eldiariobalcarce.com.ar/el-76-de-los-endeudados-en-argentina-recurre-al-credito-para-pagar-alimentos-salud-y-servicios-714",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-21T19:05:30.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-23T03:05:01.594Z",
-      "relevancia": 63,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica"
-    },
-    {
-      "id": "gvrmid",
-      "titulo": "Renuncia el secretario nacional de Discapacidad",
-      "copete": "Alejandro Vilches dejó su cargo este lunes en medio de la discusión por el Presupuesto dos mil veintisiete.",
-      "cuerpo": "El secretario nacional de Discapacidad, Alejandro Vilches, presentó este lunes su renuncia al cargo mediante una carta enviada al ministro de Salud, Mario Lugones, en la que argumentó razones estrictamente personales. Por el momento, el Poder Ejecutivo no informó quién será su reemplazante en el área.\n\nLa salida del funcionario se produjo de manera sorpresiva y en paralelo a la discusión interna generada por los cambios previstos para el sector en el proyecto de Presupuesto dos mil veintisiete. Dicho capítulo presupuestario provocó cuestionamientos de la oposición, reparos dentro del propio oficialismo y negociaciones en marcha por parte del Gobierno.",
-      "guion": "Renuncia el secretario nacional de Discapacidad",
-      "seccion": "Balcarce",
-      "medios": [
-        "El Diario Balcarce"
-      ],
-      "enlace": "https://eldiariobalcarce.com.ar/renuncio-el-secretario-nacional-de-discapacidad-en-medio-de-la-disputa-por-el-presupuesto-2027-425",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-21T17:05:42.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-23T18:35:12.641Z",
-      "relevancia": 63,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica"
-    },
-    {
-      "id": "q8ze4n",
-      "titulo": "Ferroviarios ganó el Apertura por penales",
-      "copete": "Ferroviarios se consagró campeón del torneo Apertura de fútbol al vencer a Atlético San Manuel en el estadio General Balcarce.",
-      "cuerpo": "El equipo de la Estación se quedó con el título local tras imponerse por diez a nueve en una sufrida definición desde los doce pasos, luego de igualar uno a uno en el tiempo reglamentario. El encuentro decisivo se disputó bajo una intensa lluvia por momentos y contó con el arbitraje de Martín Córdoba.\n\nDurante la primera etapa, Atlético San Manuel abrió el marcador por intermedio de Gonzalo Fernández, pero Ferroviarios llegó rápidamente a la igualdad gracias a un tanto de Luca Ramírez tras un centro de Fernando Telechea. En el complemento el juego se volvió más trabado y, a pesar de algunas situaciones claras en ambos arcos, el marcador no volvió a modificarse.\n\nEn la extensa tanda de penales, donde cada equipo ejecutó doce remates, Ferroviarios estuvo más preciso y festejó el campeonato ante un aceptable marco de público presente en el estadio.",
-      "guion": "Ferroviarios ganó el Apertura por penales",
-      "seccion": "Deportes",
-      "medios": [
-        "El Diario Balcarce"
-      ],
-      "enlace": "https://eldiariobalcarce.com.ar/desde-los-doce-pasos-ferro-se-llevo-el-apertura-11",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-21T08:53:53.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-23T03:05:01.594Z",
-      "relevancia": 63,
-      "local": true,
-      "publicadaPor": "ia",
-      "publicadaCuando": "2026-09-21T11:54:15.136Z",
-      "temas": [
-        "ferroviarios"
-      ],
-      "como": "automatica"
-    },
-    {
-      "id": "ycv541",
-      "titulo": "Jurado balcarceño en la Expo Primavera de Angus en Cañuelas",
-      "copete": "El balcarceño Julio Fernández participará como jurado en la cuadragésima séptima Exposición Primavera de Angus, que se realizará la semana próxima en Cañuelas.",
-      "cuerpo": "Unos trescientos reproductores de sesenta cabañas competirán desde el lunes al viernes en el Centro de Remates y Exposiciones de Cañuelas. La Asociación Argentina de Angus convocó nuevamente al balcarceño Julio Fernández para consagrar a los mejores ejemplares de la cuadragésima séptima Exposición Nacional y la vigésima sexta del Ternero.\n\nFernández cumplirá veinte años desde su debut como jurado en una muestra en Dolores. Durante este año, el especialista también evaluó ejemplares en Palermo, Entre Ríos y otros encuentros regionales.\n\nLa programación incluirá actividades para niños y jóvenes organizadas por la institución. En paralelo, la feria reunirá a más de cuarenta expositores y ofrecerá subastas diarias con transmisiones por televisión y streaming.",
-      "guion": "Jurado balcarceño en la Expo Primavera de Angus en Cañuelas",
-      "seccion": "Balcarce",
-      "medios": [
-        "El Diario Balcarce"
-      ],
-      "enlace": "https://eldiariobalcarce.com.ar/julio-fernandez-elegira-los-mejores-angus-en-la-expo-primavera-en-canuelas-507",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-21T08:48:50.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-23T03:05:01.594Z",
-      "relevancia": 63,
-      "local": true,
-      "publicadaPor": "ia",
-      "publicadaCuando": "2026-09-21T11:54:17.872Z",
-      "temas": [],
-      "como": "automatica"
-    },
-    {
-      "id": "4retlk",
-      "titulo": "Kevin Gómez volvió a Balcarce tras ser campeón argentino",
-      "copete": "El flamante campeón argentino supermediano regresó este lunes a Balcarce tras su victoria por nocaut y fue recibido por funcionarios y familiares.",
-      "cuerpo": "El boxeador local fue recibido por familiares, amigos y la subsecretaria de Deportes y Recreación, Soledad Vivio. Gómez se consagró tras vencer por nocaut en el quinto round a Santiago Fernández.\n\nTras el recibimiento, el deportista expresó su agradecimiento y destacó el afecto recibido por parte de los vecinos. \"Me siento muy apreciado por Balcarce y me llena el corazón representarlo\", manifestó.",
-      "guion": "Kevin Gómez volvió a Balcarce tras ser campeón argentino",
-      "seccion": "Balcarce",
-      "medios": [
-        "El Diario Balcarce"
-      ],
-      "enlace": "https://eldiariobalcarce.com.ar/kevin-gomez-me-siento-muy-apreciado-por-balcarce-y-me-llena-el-corazon-representarlo-106",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-20T17:51:56.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-23T03:05:01.594Z",
-      "relevancia": 63,
-      "local": true,
-      "publicadaPor": "ia",
-      "publicadaCuando": "2026-09-21T00:56:25.346Z",
-      "temas": [],
-      "como": "automatica"
-    },
-    {
-      "id": "jaaaux",
-      "titulo": "Axel Kicillof lanza su armado federal hacia dos mil veintisiete",
-      "copete": "El gobernador bonaerense encabezó un plenario político en Avellaneda y dejó abierta la puerta a una candidatura presidencial.",
-      "cuerpo": "",
-      "guion": "Axel Kicillof lanza su armado federal hacia dos mil veintisiete",
-      "seccion": "Política",
-      "medios": [
-        "El Diario Balcarce"
-      ],
-      "enlace": "https://eldiariobalcarce.com.ar/kicillof-lanzo-su-armado-federal-con-un-mensaje-claro-para-2027-cuenten-conmigo-995",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-20T17:10:51.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-23T03:05:01.594Z",
-      "relevancia": 63,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": "2026-09-21T02:44:14.075Z",
-      "temas": [],
-      "como": "automatica"
-    },
-    {
-      "id": "1lnkdom",
-      "titulo": "Víctor Tonelli anticipa un gran futuro para la ganadería",
-      "copete": "El analista Víctor Tonelli destacó el potencial del sector ganadero durante una disertación en Balcarce.",
-      "cuerpo": null,
-      "guion": "El especialista en mercados ganaderos Víctor Tonelli aseguró que el sector atraviesa un momento clave. Afirmó que se vienen años muy favorables para la actividad en el país, gracias a las nuevas oportunidades comerciales.",
-      "seccion": "Agro",
-      "medios": [
-        "El Diario Balcarce"
-      ],
-      "enlace": "https://eldiariobalcarce.com.ar/victor-tonelli-hay-un-futuro-fenomenal-y-diferente-por-delante-para-la-ganaderia-700",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-19T09:53:04.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-23T03:05:01.594Z",
-      "relevancia": 63,
-      "local": true,
-      "publicadaPor": "ia",
-      "publicadaCuando": "2026-09-19T14:17:10.982Z",
-      "temas": [],
-      "como": "automatica"
-    },
-    {
-      "id": "btxfpt",
-      "titulo": "Fernando Piro y su sueño cumplido en el fútbol infantil",
-      "copete": "El entrenador Fernando Piro concretó un proyecto personal vinculado al fútbol infantil de Racing, tras años de trabajo en las divisiones formativas.",
-      "cuerpo": null,
-      "guion": "El entrenador Fernando Piro concretó un proyecto muy esperado en el fútbol infantil de Racing. Tras varias temporadas al frente de las categorías formativas, logró cumplir una meta largamente anhelada junto a sus allegados.",
-      "seccion": "Deportes",
-      "medios": [
-        "El Diario Balcarce"
-      ],
-      "enlace": "https://eldiariobalcarce.com.ar/es-un-sueno-cumplido-y-es-como-cerrar-un-circulo-954",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-19T09:42:12.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-23T03:05:01.594Z",
-      "relevancia": 63,
-      "local": true,
-      "publicadaPor": "ia",
-      "publicadaCuando": "2026-09-19T14:17:11.985Z",
-      "temas": [],
-      "como": "automatica"
-    },
-    {
-      "id": "k12eig",
-      "titulo": "Detienen a dos marplatenses tras una persecución en Balcarce",
-      "copete": "Dos hombres oriundos de Mar del Plata fueron aprehendidos este fin de semana tras una persecución policial, según informaron fuentes oficiales.",
-      "cuerpo": "El procedimiento comenzó cuando el Centro de Operaciones y Monitoreo advirtió el ingreso de un Toyota Corolla gris investigado por la DDI de Tandil. Los efectivos montaron un operativo cerrojo y persiguieron el vehículo desde calle 22 hasta interceptarlo en la zona de 11 y 10.\n\nDurante la requisa ordenada por el fiscal Rodolfo Moure, de la UFI de Balcarce, los agentes hallaron plantillas con la letra D para adulterar dominios, un compresor, herramientas de corte y llaves de vehículos. Los dos ocupantes, oriundos de Mar del Plata, quedaron aprehendidos y fueron trasladados a la Unidad Penal de Batán.",
-      "guion": "Detienen a dos marplatenses tras una persecución en Balcarce",
-      "seccion": "Policiales",
-      "medios": [
-        "El Diario Balcarce"
-      ],
-      "enlace": "https://eldiariobalcarce.com.ar/dos-marplatenses-aprehendidos-tras-una-persecucion-llevaban-herramientas-y-plantillas-para-adulterar-patentes-802",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-18T17:50:33.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-23T03:05:01.594Z",
-      "relevancia": 63,
-      "local": true,
-      "publicadaPor": "ia",
-      "publicadaCuando": "2026-09-21T02:44:17.852Z",
-      "temas": [],
-      "como": "automatica"
-    },
-    {
-      "id": "19cfh7v",
-      "titulo": "Kevin Gómez busca el título argentino supermediano",
-      "copete": "El deportista local Kevin Gómez disputará este sábado por primera vez el título argentino de la categoría supermediano en su décimo combate profesional.",
-      "cuerpo": "El boxeador Kevin Gómez enfrentará a Santiago Fernández en lo que será su décimo combate en el campo profesional. \"Esto es mucho más que un combate para mí\", expresó el deportista sobre este desafío.\n\nAmbos contrincantes ya se habían cruzado el trece de octubre del dos mil veintiuno en Balcarce, oportunidad en la que el local se impuso por puntos. Para este nuevo enfrentamiento, Gómez completó una preparación basada en la disciplina y el trabajo duro tras su última pelea disputada el veintitrés de mayo.",
-      "guion": "Kevin Gómez busca el título argentino supermediano",
-      "seccion": "Balcarce",
-      "medios": [
-        "El Diario Balcarce"
-      ],
-      "enlace": "https://eldiariobalcarce.com.ar/kevin-gomez-esto-es-mucho-mas-que-un-combate-para-mi-401",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-18T17:48:33.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-23T03:05:01.594Z",
-      "relevancia": 63,
-      "local": true,
-      "publicadaPor": "ia",
-      "publicadaCuando": "2026-09-21T01:31:23.101Z",
-      "temas": [],
-      "como": "automatica"
-    },
-    {
-      "id": "495bur",
-      "titulo": "Marcio Amado Cunqueiro correrá en el TSC en Balcarce",
-      "copete": "El piloto confirmó su presencia para la histórica reapertura del autódromo Juan Manuel Fangio, que se disputará este fin de semana.",
-      "cuerpo": "",
-      "guion": "El Turismo Special de la Costa sumó un nuevo protagonista. Marcio Amado Cunqueiro estará presente en la esperada reapertura del autódromo Juan Manuel Fangio durante este fin de semana.",
-      "seccion": "Automovilismo",
-      "medios": [
-        "El Diario Balcarce"
-      ],
-      "enlace": "https://eldiariobalcarce.com.ar/marcio-amado-cunqueiro-tambien-estara-en-el-tsc-en-el-juan-manuel-fangio-467",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-17T19:49:32.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-23T03:05:01.594Z",
-      "relevancia": 71,
-      "local": true,
-      "publicadaPor": "ia",
-      "publicadaCuando": "2026-09-18T17:29:27.808Z",
-      "temas": [
-        "autodromo",
-        "tc-pick-up",
-        "fangio"
-      ],
-      "como": "automatica"
-    },
-    {
-      "id": "jul4wv",
-      "titulo": "Renuevan las canchas de tenis del Polideportivo municipal",
-      "copete": "La Subsecretaría de Deporte de Balcarce lleva adelante trabajos de puesta en valor en las canchas de tenis del Complejo Polideportivo Municipal para fomentar la disciplina.",
-      "cuerpo": "Los trabajos incluyen la quita de verdín y césped superficial para dejar la base lista para la aplicación de polvo de ladrillo grueso. Además, se compró material nuevo y se colocaron sectores de alambrado perimetral que estaban deteriorados. Estas tareas buscan posicionar al tenis como una disciplina accesible dentro de la oferta deportiva local, donde las clases son gratuitas y están a cargo de Daniel Vitale.",
-      "guion": "La comuna avanza con la puesta en valor de las canchas de tenis del Complejo Polideportivo Municipal. Los trabajos buscan recuperar el espacio para que más vecinos puedan practicar la disciplina en mejores condiciones.",
-      "seccion": "Deportes",
-      "medios": [
-        "News Balcarce (FM 91.7)"
-      ],
-      "enlace": "https://newsbalcarce.com.ar/?p=30724",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-17T14:48:44.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-20T23:06:56.722Z",
-      "relevancia": 65,
-      "local": true,
-      "publicadaPor": "ia",
-      "publicadaCuando": "2026-09-18T23:01:38.244Z",
-      "temas": [],
-      "como": "automatica"
-    },
-    {
-      "id": "nrm2b5",
-      "titulo": "El Congreso congela la eliminación de las PASO por falta de votos",
-      "copete": "El Gobierno nacional frenó el proyecto para suspender las primarias en el Congreso ante la resistencia de los gobernadores.",
-      "cuerpo": "La iniciativa del Ejecutivo nacional para eliminar las Elecciones Primarias, Abiertas, Simultáneas y Obligatorias quedó paralizada en el Senado por la falta de apoyo legislativo. La jefa de la bancada oficialista, la senadora Patricia Bullrich, reconoció públicamente que todavía no cuentan con la cantidad necesaria de sufragios para avanzar con la medida.\n\nLa resistencia responde al rechazo de los mandatarios provinciales, quienes defienden el mecanismo para resolver internas partidarias y ordenar la oferta electoral en sus distritos. Salvo excepciones como el gobernador catamarqueño Raúl Jalil, la mayoría prefiere mantener el sistema vigente o desdoblar los cronogramas electorales en sus jurisdicciones.",
-      "guion": "El Congreso congela la eliminación de las PASO por falta de votos",
-      "seccion": "Política",
-      "medios": [
-        "El Diario Balcarce"
-      ],
-      "enlace": "https://eldiariobalcarce.com.ar/el-rechazo-a-eliminar-las-paso-cobra-fuerza-923",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-17T09:04:32.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-23T03:05:01.594Z",
-      "relevancia": 63,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica"
-    },
-    {
-      "id": "wp9pca",
-      "titulo": "Alumnos de Balcarce elaboran productos con aromáticas",
-      "copete": "Estudiantes del colegio San José crearon \"Agro Aromas\", un proyecto para investigar plantas y fabricar artículos naturales.",
-      "cuerpo": "Alumnos de cuarto y segundo año presentaron el proyecto Agro Aromas en la muestra educativa, donde exhibieron velas, brumas faciales, difusores y un repelente de mosquitos llamado Mosqui Off. El trabajo incluyó meses de investigación, pruebas con ingredientes como eucalipto y romero, y el diseño propio de los envases y etiquetas.\n\nComo parte del proceso de aprendizaje, los estudiantes viajaron a la Universidad Nacional de Azul para conocer métodos de destilación y profundizar en el origen de las plantas aromáticas.",
-      "guion": "Alumnos de secundaria elaboraron productos naturales con plantas aromáticas. Investigaron métodos de extracción y crearon una línea propia en el colegio.",
-      "seccion": "Agro",
-      "medios": [
-        "El Diario Balcarce"
-      ],
-      "enlace": "https://eldiariobalcarce.com.ar/alumnos-del-san-jose-transforman-plantas-aromaticas-en-productos-naturales-917",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-16T19:57:14.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-23T03:05:01.594Z",
-      "relevancia": 63,
-      "local": true,
-      "publicadaPor": "ia",
-      "publicadaCuando": "2026-09-18T17:50:14.760Z",
-      "temas": [],
-      "como": "automatica"
-    },
-    {
-      "id": "sx0ehz",
-      "titulo": "Podios y triunfos balcarceños en Mar del Plata",
-      "copete": "Pilotos de Balcarce sumaron victorias y clasificaciones al Play Off durante la doble fecha del Zonal del Atlántico en Mar del Plata.",
-      "cuerpo": "Los pilotos locales Diego Petrantonio, Santiago Lantella, Tomás Massa, Mario Castaño y Nahuel Di Cicco aseguraron su lugar entre los ocho clasificados que competirán por el título de la Monomarca. La categoría completó una doble fecha en el autódromo Ciudad de Mar del Plata para cerrar la Fase Regular del campeonato.\n\nPor otra parte, el Zonal del Atlántico tuvo las victorias de Braian Hernández en la Promocional y de Braian De Palma junto a Alan Adolfo en el TC 2000 del Atlántico. En tanto, el Turismo Special de la Costa no formó parte de esta jornada ya que se prepara para su próxima presentación en el autódromo Juan Manuel Fangio.",
-      "guion": "El automovilismo zonal tuvo acción en Mar del Plata. Varios pilotos locales consiguieron triunfos y aseguraron su lugar en el Play Off de la Monomarca.",
-      "seccion": "Automovilismo",
-      "medios": [
-        "El Diario Balcarce"
-      ],
-      "enlace": "https://eldiariobalcarce.com.ar/petrantonio-lantella-massa-y-castano-di-cicco-al-play-off-de-la-monomarca-874",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-15T19:57:37.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-23T03:05:01.594Z",
-      "relevancia": 71,
-      "local": true,
-      "publicadaPor": "ia",
-      "publicadaCuando": "2026-09-18T17:29:43.972Z",
-      "temas": [
-        "autodromo"
-      ],
-      "como": "automatica"
-    },
-    {
-      "id": "1kyolt",
-      "titulo": "Santiago Lantella ganó en la Monomarca del Salado",
-      "copete": "El piloto balcarceño se impuso como invitado de Oscar Garay en la sexta fecha disputada en el autódromo de Mar del Plata.",
-      "cuerpo": "Santiago Lantella logró la victoria en la sexta fecha de la Monomarca del Salado al competir como invitado de Oscar Garay en el autódromo Ciudad de Mar del Plata. Durante la jornada con diez autos en pista, el binomio reforzó sus posibilidades en el campeonato tras las alternativas de la competencia.\n\nEn la primera final el triunfo quedó para Nahuel Madina con el auto de Juan Carlos Fernández, mientras que en la segunda prueba Lantella se quedó con el primer puesto tras superar a Martín Aguirre. La clasificación de este último quedó en suspenso a la espera de una definición reglamentaria sobre su partida desde los boxes.",
-      "guion": "En el automovilismo zonal, Santiago Lantella se quedó con la victoria como invitado en una de las finales de la Monomarca del Salado. La competencia se disputó en el autódromo de Mar del Plata.",
-      "seccion": "Automovilismo",
-      "medios": [
-        "El Diario Balcarce"
-      ],
-      "enlace": "https://eldiariobalcarce.com.ar/santiago-lantella-gano-y-pelea-por-el-titulo-en-la-monomarca-del-salado-961",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-15T19:11:11.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-23T03:05:01.594Z",
-      "relevancia": 71,
-      "local": true,
-      "publicadaPor": "ia",
-      "publicadaCuando": "2026-09-18T17:29:44.886Z",
-      "temas": [
-        "autodromo"
-      ],
-      "como": "automatica"
-    },
-    {
-      "id": "10e13dt",
-      "titulo": "Ferroviarios goleó en la final del torneo local",
-      "copete": "Ferroviarios se consagró campeón este fin de semana tras golear en el partido decisivo del Play Off de la Liga Balcarceña de Fútbol.",
-      "cuerpo": "El equipo de la Estación se quedó con el Play Off del torneo Apertura tras una actuación contundente que sentenció con goles de Rodrigo Machado, Fernando Telechea, Fernando Juárez y Franco Córdoba. El encuentro contó con el arbitraje de Lautaro Moyano y dejó sin chances al conjunto rival en una tarde difícil que incluyó la salida por lesión de Fausto Luna.\n\nCon este resultado, Ferroviarios deberá definir el certamen ante Atlético San Manuel, que se consagró como ganador de la etapa regular.",
-      "guion": "Ferroviarios goleó en la final del torneo local",
-      "seccion": "Deportes",
-      "medios": [
-        "El Diario Balcarce"
-      ],
-      "enlace": "https://eldiariobalcarce.com.ar/ferroviarios-goleo-en-la-final-del-play-off-y-definira-con-san-manuel-238",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-13T21:33:24.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-23T03:05:01.594Z",
-      "relevancia": 63,
-      "local": true,
-      "publicadaPor": "ia",
-      "publicadaCuando": "2026-09-20T04:09:39.466Z",
-      "temas": [
-        "ferroviarios"
-      ],
-      "como": "automatica"
-    },
-    {
-      "id": "6sz9pj",
-      "titulo": "Amigos Unidos gana a Los Patos y se consagra en Balcarce",
-      "copete": "Amigos Unidos venció a Los Patos FC en el estadio General Balcarce y se quedó con el título del Torneo Apertura.",
-      "cuerpo": "",
-      "guion": "Amigos Unidos gana a Los Patos y se consagra en Balcarce",
-      "seccion": "Deportes",
-      "medios": [
-        "El Diario Balcarce"
-      ],
-      "enlace": "https://eldiariobalcarce.com.ar/amigos-unidos-vencio-a-los-patos-y-obtuvo-el-torneo-apertura-762",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-13T21:11:45.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-23T03:05:01.594Z",
-      "relevancia": 63,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": "2026-09-21T12:04:24.265Z",
-      "temas": [],
-      "como": "automatica"
-    },
-    {
-      "id": "1xddyhu",
-      "titulo": "Inter Miami jugara un partido oficial en Balcarce",
-      "copete": "El Inter Miami disputara un encuentro oficial en la ciudad de Balcarce, segun se confirmo en las ultimas horas.",
-      "cuerpo": "",
-      "guion": "Inter Miami jugara un partido oficial en Balcarce",
-      "seccion": "Deportes",
-      "medios": [
-        "El Diario Balcarce"
-      ],
-      "enlace": "https://eldiariobalcarce.com.ar/inter-miami-confirmo-su-participacion-en-el-torneo-ciudad-de-balcarce-272",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-12T11:03:48.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-23T03:05:01.594Z",
-      "relevancia": 63,
-      "local": true,
-      "publicadaPor": "ia",
-      "publicadaCuando": "2026-09-21T02:26:32.550Z",
-      "temas": [],
-      "como": "automatica"
-    },
-    {
-      "id": "19znilf",
-      "titulo": "El Concejo aprueba un reclamo por recortes de PAMI en Balcarce",
-      "copete": "El cuerpo deliberativo local debatió este mes sobre la reducción de fondos que afecta a pacientes con diálisis.",
-      "cuerpo": "",
-      "guion": "El Concejo aprueba un reclamo por recortes de PAMI en Balcarce",
-      "seccion": "Balcarce",
-      "medios": [
-        "El Diario Balcarce"
-      ],
-      "enlace": "https://eldiariobalcarce.com.ar/preocupacion-por-los-recortes-de-pami-y-el-impacto-en-la-atencion-de-pacientes-339",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-11T18:55:19.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-23T03:05:01.594Z",
-      "relevancia": 63,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [
-        "concejo"
-      ],
-      "como": "automatica"
-    },
-    {
-      "id": "1ww9tw0",
-      "titulo": "Microchips para equinos: la nueva disposición para la digitalización de documentación en el SENASA",
-      "copete": "La medida alcanza a caballos y otros équidos de todo el país. Desde el 1° de marzo de 2027 deberán contar con un microchip individual, único y permanente.",
-      "cuerpo": null,
-      "guion": null,
-      "seccion": "Agro",
-      "medios": [
-        "Radio Gabal (FM 104.1)"
-      ],
-      "enlace": "https://www.radiogabal.com.ar/index.php/agro/microchips-para-equinos-la-nueva-disposicion-para-la-digitalizacion-de-documentacion-en-el-senasa",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-10T13:27:45.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-23T03:05:01.594Z",
-      "relevancia": 57,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica"
-    },
-    {
-      "id": "1ueyyim",
-      "titulo": "Falleció el referente agropecuario Abelardo Teijeiro",
-      "copete": "El sector rural de Balcarce lamenta la pérdida de Abelardo Teijeiro, un destacado dirigente de larga trayectoria en la actividad local.",
-      "cuerpo": "",
-      "guion": "Falleció Abelardo Teijeiro, una figura muy querida y respetada en el ámbito agropecuario local. Su partida genera un profundo pesar en toda la comunidad del campo.",
-      "seccion": "Agro",
-      "medios": [
-        "El Diario Balcarce"
-      ],
-      "enlace": "https://eldiariobalcarce.com.ar/dolor-en-la-comunidad-agropecuaria-por-la-partida-de-elvira-suero-817",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-10T08:57:08.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-23T03:05:01.594Z",
-      "relevancia": 63,
-      "local": true,
-      "publicadaPor": "ia",
-      "publicadaCuando": "2026-09-18T22:21:33.640Z",
-      "temas": [
-        "inta"
-      ],
-      "como": "automatica"
-    },
-    {
-      "id": "osfsql",
-      "titulo": "Claudio y Betina Robetto completan dos vueltas al mundo en Balcarce",
-      "copete": "Los vecinos Claudio y Betina Robetto finalizaron dos travesías globales a bordo de un avión monomotor.",
-      "cuerpo": "Los aviadores locales completaron su segunda vuelta al planeta tras afrontar tramos exigentes como un cruce del Atlántico de catorce horas y media entre Brasil y Senegal. Durante sus recorridos también debieron superar situaciones límite, como la formación de hielo en el vuelo que une Rusia con Alaska.\n\nLa pasión de Claudio por la aviación tiene raíces familiares en Balcarce a través de su padre, José Robetto, quien fue piloto en la Segunda Guerra Mundial e instructor en el Aero Club local durante la década de 1960.",
-      "guion": "Claudio y Betina Robetto completan dos vueltas al mundo en Balcarce",
-      "seccion": "Balcarce",
-      "medios": [
-        "El Diario Balcarce"
-      ],
-      "enlace": "https://eldiariobalcarce.com.ar/los-aventureros-del-aire-claudio-y-betina-robetto-volvieron-a-recorrer-el-mundo-460",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-09T08:54:07.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-23T03:05:01.594Z",
-      "relevancia": 63,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica"
-    },
-    {
-      "id": "4i0gkv",
-      "titulo": "Educación: Argentina cayó en PISA 2025 y el 76% no alcanzó el nivel mínimo en Matemática",
-      "copete": "Los resultados de los estudiantes argentinos de 15 años, en las pruebas PISA de 2025, fueron inferiores a los obtenidos en 2022 en lectura, matemática y ciencias, según un informe. El trabajo de la ONG Argentinos por la Educación da cuenta de qu",
-      "cuerpo": null,
-      "guion": null,
-      "seccion": "Balcarce",
-      "medios": [
-        "El Diario Balcarce"
-      ],
-      "enlace": "https://eldiariobalcarce.com.ar/educacion-argentina-cayo-en-pisa-2025-y-el-76-no-alcanzo-el-nivel-minimo-en-matematica-169",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-08T09:01:46.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-23T03:05:01.594Z",
-      "relevancia": 63,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica"
-    },
-    {
-      "id": "izytbj",
-      "titulo": "Un cocinero de Balcarce preparó un asado en China",
-      "copete": "Un vecino de Balcarce viajó a China para cocinar carne argentina y compartir los sabores tradicionales del asado en el exterior.",
-      "cuerpo": "El asador balcarceño Argentino Lucero viajó a China para representar a la parrilla argentina en un imponente complejo comercial y de exposición que será inaugurado oficialmente el próximo nueve de septiembre.\n\nDurante su estadía de aproximadamente un mes en el país asiático, Lucero se encarga de preparar carne, pollo y verduras a la parrilla bajo una modalidad similar a un tenedor libre, utilizando insumos de origen australiano que llegan supercongelados.\n\nEl trabajo diario le exige adaptarse a las costumbres locales, desde cortar los alimentos en pequeñas porciones para ser consumidos con palitos hasta interactuar con una gastronomía diversa que incluye pescado, pollo y ganso.",
-      "guion": "Un cocinero de Balcarce preparó un asado en China",
-      "seccion": "Automovilismo",
-      "medios": [
-        "El Diario Balcarce"
-      ],
-      "enlace": "https://eldiariobalcarce.com.ar/entre-brasas-y-sabores-desconocidos-la-experiencia-de-un-balcarceno-asando-en-china-190",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-07T08:48:50.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-23T03:05:01.594Z",
-      "relevancia": 71,
-      "local": true,
-      "publicadaPor": "ia",
-      "publicadaCuando": "2026-09-21T03:14:12.297Z",
-      "temas": [],
-      "como": "automatica"
-    },
-    {
-      "id": "1sxk7mg",
-      "titulo": "Producir papa Spunta supera los quince mil dólares por hectárea",
-      "copete": "Producir una hectárea de papa Spunta en Balcarce supera los quince mil dólares, según datos difundidos esta semana por el sector.",
-      "cuerpo": null,
-      "guion": "Producir papa Spunta supera los quince mil dólares por hectárea",
-      "seccion": "Balcarce",
-      "medios": [
-        "El Diario Balcarce"
-      ],
-      "enlace": "https://eldiariobalcarce.com.ar/producir-papa-spunta-cuesta-mas-de-us-15000-por-hectarea-y-el-costo-aumento-315-en-un-ano-461",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-07T08:44:51.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-23T03:05:01.594Z",
-      "relevancia": 63,
-      "local": true,
-      "publicadaPor": "ia",
-      "publicadaCuando": "2026-09-21T06:44:16.563Z",
-      "temas": [],
-      "como": "automatica"
-    },
-    {
-      "id": "50jq4b",
-      "titulo": "La Libertad Avanza impulsa proyectos sobre Malvinas en Balcarce",
-      "copete": "Concejales y legisladores libertarios replican en la provincia la postura de Javier Milei sobre soberanía y recursos naturales.",
-      "cuerpo": "Los concejales locales de La Libertad Avanza se suman a la movida provincial para presentar proyectos de apoyo al planteo sobre Malvinas realizado por el presidente Javier Milei. La iniciativa busca replicar en todos los distritos con representación libertaria los textos que ingresarán en ambas cámaras de la Legislatura bonaerense. El diputado nacional Sebastián Pareja indicó que la propuesta llegará a cada rincón de la provincia y vinculó la estrategia con el posicionamiento internacional del Gobierno. Por su parte, el titular del bloque del Senado, Carlos Curestis, afirmó que la causa Malvinas es irrenunciable y el jefe de bloque de diputados provinciales, Juanes Osaba, sostuvo que la medida no admite posiciones ambiguas.",
-      "guion": "La Libertad Avanza impulsa proyectos sobre Malvinas en Balcarce",
-      "seccion": "Política",
-      "medios": [
-        "El Diario Balcarce"
-      ],
-      "enlace": "https://eldiariobalcarce.com.ar/la-libertad-avaza-lanza-una-movida-para-sumar-respaldos-en-toda-provincia-al-planteo-de-milei-sobre-malvinas-869",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-05T09:40:45.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-23T03:05:01.594Z",
-      "relevancia": 63,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [
-        "concejo"
-      ],
-      "como": "automatica"
-    },
-    {
-      "id": "1altd98",
-      "titulo": "Axel Kicillof participa de un acto universitario en La Plata",
-      "copete": "El gobernador bonaerense encabezó este jueves la renovación de autoridades de la Juventud Universitaria Peronista en La Plata junto al intendente local.",
-      "cuerpo": "",
-      "guion": "Axel Kicillof participa de un acto universitario en La Plata",
-      "seccion": "Política",
-      "medios": [
-        "El Diario Balcarce"
-      ],
-      "enlace": "https://eldiariobalcarce.com.ar/kicillof-nos-vamos-a-organizar-para-construir-un-espacio-que-transforme-a-la-argentina-272",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-05T09:39:20.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-23T03:05:01.594Z",
-      "relevancia": 63,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": "2026-09-21T04:04:12.112Z",
-      "temas": [],
-      "como": "automatica"
-    },
-    {
-      "id": "1h8sxxo",
-      "titulo": "Nuevas propuestas para la dinámica de campo en Balcarce",
-      "copete": "El sector agropecuario de Balcarce incorpora nuevas propuestas y actividades orientadas a la producción y la capacitación técnica.",
-      "cuerpo": "De acuerdo con la denuncia, delincuentes ingresaron a la propiedad de una jubilada a quien golpearon y maniataron en el marco de un violento asalto. El hecho ocurrió en la zona de Lomas de Stella Maris.\n\nPersonal policial tomó intervención en el lugar para realizar las pericias correspondientes y dar con los autores del hecho.",
-      "guion": "Nuevas propuestas para la dinámica de campo en Balcarce",
-      "seccion": "Balcarce",
-      "medios": [
-        "El Diario Balcarce"
-      ],
-      "enlace": "https://eldiariobalcarce.com.ar/la-dinamica-de-campo-trae-nuevas-propuestas-y-actividades-969",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-05T09:33:15.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-23T03:05:01.594Z",
-      "relevancia": 63,
-      "local": true,
-      "publicadaPor": "ia",
-      "publicadaCuando": "2026-09-21T12:14:15.502Z",
-      "temas": [],
-      "como": "automatica"
-    },
-    {
-      "id": "wc6fea",
-      "titulo": "Muestra anual de la escuela San José en Balcarce",
-      "copete": "La comunidad educativa de la escuela San José expone este año los trabajos realizados por los alumnos en Balcarce.",
-      "cuerpo": "",
-      "guion": "Muestra anual de la escuela San José en Balcarce",
-      "seccion": "Cultura y agenda",
-      "medios": [
-        "El Diario Balcarce"
-      ],
-      "enlace": "https://eldiariobalcarce.com.ar/la-escuela-san-jose-se-prepara-para-mostrar-todo-lo-que-construyo-durante-el-ano-416",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-05T09:31:23.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-23T03:05:01.594Z",
-      "relevancia": 63,
-      "local": true,
-      "publicadaPor": "ia",
-      "publicadaCuando": "2026-09-21T09:14:12.546Z",
-      "temas": [],
-      "como": "automatica"
-    },
-    {
-      "id": "tape5j",
-      "titulo": "Cristian Mendez inicia una gira de payadas en Espana",
-      "copete": "El payador Cristian Mendez representara a la Argentina en una gira por las Islas Canarias entre el 24 de septiembre y el 4 de octubre.",
-      "cuerpo": "El artista local viajara junto al payador dolorense Emanuel Gabotto para participar de la Gira Internacional de Payadores, que abarcara cuatro islas del archipielago espanol. La agenda incluye presentaciones en teatros y universidades, encuentros con alumnos y talleres de improvisacion junto a referentes locales como Yeray Rodriguez.\n\nMendez ya habia visitado la region en 2018 de manera exclusiva en Gran Canaria, mientras que en esta oportunidad el recorrido se extendera tambien a Tenerife, El Hierro y Fuerteventura. Las actividades buscaran vincular la tradicion de la poesia oral rioplatense con la cultura de improvisacion propia de Canarias.",
-      "guion": "Cristian Mendez inicia una gira de payadas en Espana",
-      "seccion": "Balcarce",
-      "medios": [
-        "El Diario Balcarce"
-      ],
-      "enlace": "https://eldiariobalcarce.com.ar/cristian-mendez-llevara-el-canto-improvisado-de-balcarce-a-una-gira-por-las-islas-canarias-442",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-05T09:28:32.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-24T15:27:47.939Z",
-      "relevancia": 63,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": "2026-09-21T06:14:14.058Z",
-      "temas": [],
-      "como": "automatica"
-    },
-    {
-      "id": "qx770i",
-      "titulo": "Roban herramientas de un comercio en Balcarce",
-      "copete": "Delincuentes rompieron la vidriera de un local comercial situado en avenida Pueyrredón y calle 8 y sustrajeron diversos elementos.",
-      "cuerpo": "Tres personas con los rostros cubiertos rompieron la vidriera del local Nacho Hogar durante la madrugada y robaron dos motosierras, un kit de herramientas y un atornillador. El hecho fue advertido por una vecina y constatado posteriormente por los propietarios mediante registros de cámaras de seguridad que captaron el movimiento de los sospechosos en moto.\n\nLos titulares del establecimiento comercial reclamaron una mejor iluminación en esa zona de la avenida y señalaron que vecinos del sector ya habían advertido sobre hechos delictivos previos en las inmediaciones.",
-      "guion": "Roban herramientas de un comercio en Balcarce",
-      "seccion": "Balcarce",
-      "medios": [
-        "El Diario Balcarce"
-      ],
-      "enlace": "https://eldiariobalcarce.com.ar/rompieron-la-vidriera-y-se-llevaron-herramientas-de-nacho-hogar-713",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-03T18:51:45.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-23T03:05:01.594Z",
-      "relevancia": 63,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica"
-    },
-    {
-      "id": "1hoob9y",
-      "titulo": "Milei, entre la defensa del modelo y el mensaje electoral: \"Si no ganamos la sociedad está eligiendo sucidarse\"",
-      "copete": "En un discurso encendido en el evento Vientos de Cambio, el presidente Javier Milei hizo otra fuerte defensa de su plan económico -en especial de su política monetaria que anticipó que “no se negociará”- a la que esta vez le agregó el tono e",
-      "cuerpo": null,
-      "guion": null,
-      "seccion": "Política",
-      "medios": [
-        "El Diario Balcarce"
-      ],
-      "enlace": "https://eldiariobalcarce.com.ar/milei-entre-la-defensa-del-modelo-y-el-mensaje-electoral-si-no-ganamos-la-sociedad-esta-eligiendo-sucidarse-977",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-02T20:31:06.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-23T03:05:01.594Z",
-      "relevancia": 63,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica"
-    },
-    {
-      "id": "zjz8av",
-      "titulo": "La actriz balcarceña Camila Peralta brilla en el teatro",
-      "copete": "La actriz oriunda de Balcarce destaca en la cartelera teatral con una nueva obra en Buenos Aires.",
-      "cuerpo": "La actriz local Camila Peralta forma parte del elenco principal de Pepita, la pistolera, la producción dirigida por Lucía Puenzo y protagonizada por Luisana Lopilato. En el filme, que tuvo su avant premiere el lunes en Buenos Aires, interpreta a Vicky, uno de los personajes que acompañan la historia inspirada en Margarita Di Tullio.\n\nPeralta dejó la ciudad a los diecisiete años para formarse y desarrolló una trayectoria que incluye trabajos en cine, teatro y televisión, como Suavecita, En el barro y Puan. Su incorporación a este nuevo proyecto bajo la dirección de Puenzo le permite sumar otra participación en una producción de gran exposición a nivel nacional.",
-      "guion": "La actriz balcarceña Camila Peralta brilla en el teatro",
-      "seccion": "Cultura y agenda",
-      "medios": [
-        "El Diario Balcarce"
-      ],
-      "enlace": "https://eldiariobalcarce.com.ar/camila-peralta-la-actriz-balcarcena-que-llego-a-la-pantalla-grande-con-pepita-la-pistolera-790",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-01T21:09:30.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-23T03:05:01.594Z",
-      "relevancia": 63,
-      "local": true,
-      "publicadaPor": "ia",
-      "publicadaCuando": "2026-09-21T06:14:14.991Z",
-      "temas": [],
-      "como": "automatica"
-    },
-    {
-      "id": "14ht7th",
-      "titulo": "Piden revisar el nuevo esquema de vacunación contra la aftosa en Balcarce",
-      "copete": "A cuatro meses de los cambios dispuestos por el organismo sanitario, la Provincia solicitó una revisión para preservar las garantías.",
-      "cuerpo": "",
-      "guion": "Piden revisar el nuevo esquema de vacunación contra la aftosa en Balcarce",
-      "seccion": "Agro",
-      "medios": [
-        "Radio Gabal (FM 104.1)"
-      ],
-      "enlace": "https://www.radiogabal.com.ar/index.php/agro/fiebre-aftosa-piden-revisar-el-nuevo-esquema-de-vacunacion",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-08-31T13:18:07.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-23T03:05:01.594Z",
-      "relevancia": 57,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica"
-    },
-    {
-      "id": "1ny0yyi",
-      "titulo": "Cabaña Santo Domingo realiza su sexto remate en Balcarce",
-      "copete": "La cabaña Santo Domingo concretó su tradicional subasta anual de genética Hereford en el predio ferial de la Sociedad Rural local.",
-      "cuerpo": "",
-      "guion": "Cabaña Santo Domingo realiza su sexto remate en Balcarce",
-      "seccion": "Agro",
-      "medios": [
-        "El Diario Balcarce"
-      ],
-      "enlace": "https://eldiariobalcarce.com.ar/la-genetica-100-hereford-volvio-a-dar-la-nota-de-la-mano-de-santo-domingo-159",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-08-31T09:21:37.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-23T03:05:01.594Z",
-      "relevancia": 63,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": "2026-09-21T06:44:17.612Z",
-      "temas": [],
-      "como": "automatica"
-    },
-    {
-      "id": "qad19g",
-      "titulo": "Ventas récord de los Angus de Inambú en Balcarce",
-      "copete": "La cabaña Inambú concretó un remate con valores máximos en Balcarce durante el fin de semana.",
-      "cuerpo": "",
-      "guion": "Ventas récord de los Angus de Inambú en Balcarce",
-      "seccion": "Balcarce",
-      "medios": [
-        "El Diario Balcarce"
-      ],
-      "enlace": "https://eldiariobalcarce.com.ar/ventas-record-de-los-angus-de-inambu-en-el-propio-jardin-de-la-cabana-356",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-08-31T09:20:47.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-23T03:05:01.594Z",
-      "relevancia": 63,
-      "local": true,
-      "publicadaPor": "ia",
-      "publicadaCuando": "2026-09-21T06:44:18.417Z",
-      "temas": [],
-      "como": "automatica"
-    },
-    {
-      "id": "1390kus",
-      "titulo": "Fernando García ingresa a la Academia de Agronomía en Balcarce",
-      "copete": "El investigador local Fernando García será incorporado a la Academia Nacional de Agronomía y Veterinaria por su aporte a la ciencia.",
-      "cuerpo": "",
-      "guion": "Fernando García ingresa a la Academia de Agronomía en Balcarce",
-      "seccion": "Balcarce",
-      "medios": [
-        "El Diario Balcarce"
-      ],
-      "enlace": "https://eldiariobalcarce.com.ar/el-dr-fernando-garcia-sera-incorporado-a-la-academia-nacional-de-agronomia-y-veterinaria-936",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-08-29T09:42:13.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-23T03:05:01.594Z",
-      "relevancia": 63,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica"
-    },
-    {
-      "id": "1pr955",
-      "titulo": "Kreplak defiende proyectos sanitarios en la Legislatura",
-      "copete": "El ministro de Salud bonaerense visitó el Senado para impulsar dos iniciativas y recibió fuertes críticas de la oposición.",
-      "cuerpo": "El ministro de Salud bonaerense, Nicolás Kreplak, concurrió al Senado provincial para defender dos proyectos clave del Ejecutivo: la creación de una empresa estatal de medicamentos y la integración de los niveles del sistema sanitario. Durante el encuentro, la oposición cuestionó duramente la iniciativa y desvió el eje hacia el funcionamiento de la obra social IOMA por la caída de prestaciones.\n\nLos legisladores opositores rechazaron los argumentos del funcionario y cuestionaron la creación de nuevas estructuras estatales en lugar de fortalecer las existentes. En paralelo a la reunión, un grupo de autoconvocados y familiares de personas con discapacidad se manifestaron con carteles y protestas en reclamo de respuestas por la situación prestacional.",
-      "guion": "Kreplak defiende proyectos sanitarios en la Legislatura",
-      "seccion": "Política",
-      "medios": [
-        "El Diario Balcarce"
-      ],
-      "enlace": "https://eldiariobalcarce.com.ar/kreplak-fue-al-senado-a-defender-dos-proyectos-del-ejecutivo-pero-la-oposicion-lo-cruzo-por-ioma-925",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-08-26T09:05:56.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-23T03:05:01.594Z",
-      "relevancia": 63,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": "2026-09-21T06:14:13.292Z",
-      "temas": [],
-      "como": "automatica"
-    },
-    {
-      "id": "1msbj8p",
-      "titulo": "Gabriel Robledo gana medalla de bronce en Mar del Plata",
-      "copete": "El atleta local logró el tercer puesto en el Provincial de Pista y Campo disputado en el Estadio Atlético Justo Román.",
-      "cuerpo": "Gabriel Robledo obtuvo la medalla de bronce en los ochenta metros llanos durante el Campeonato Provincial de Pista y Campo en las categorías U16 y U18. Competir en el Estadio Atlético Justo Román de Mar del Plata implicó enfrentar fuertes ráfagas de viento y bajas temperaturas, representando junto a Jeremías Jove a la Asociación Atlética Balcarce. En la misma cita, Jove alcanzó el quinto puesto en esa prueba, además de ubicarse cuarto en salto en largo y sexto en los mil quinientos metros con obstáculos.\n\nDías antes, el mismo escenario recibió la Copa Nacional de Clubes U18 con presencia de la agrupación AACYC Balcarce. Jesús Coria participó en lanzamiento de bala y de disco, mientras que Juan Andrés Solar afrontó las exigencias de ochocientos y mil quinientos metros llanos y también lanzamiento de disco.",
-      "guion": "Gabriel Robledo gana medalla de bronce en Mar del Plata",
-      "seccion": "Deportes",
-      "medios": [
-        "El Diario Balcarce"
-      ],
-      "enlace": "https://eldiariobalcarce.com.ar/bronce-para-gabriel-robledo-en-el-provincial-de-pista-y-campo-353",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-08-26T08:58:00.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-23T03:05:01.594Z",
-      "relevancia": 63,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": "2026-09-21T05:54:23.364Z",
-      "temas": [],
-      "como": "automatica"
-    },
-    {
-      "id": "hcjt9j",
-      "titulo": "Realizan una exitosa jornada sobre la papa en Balcarce",
-      "copete": "Cerca de cuatrocientas personas participaron del encuentro técnico dedicado a la producción papafrutera en la ciudad.",
-      "cuerpo": "La primera jornada técnica denominada La Papa, de Argentina al Mundo reunió a cerca de cuatrocientas personas y contó con la colaboración de cincuenta empresas en el salón local. El ingeniero agrónomo e integrante del Banco de Alimentos Balcarce, Javier Fornieles, señaló que la convocatoria superó ampliamente las previsiones iniciales que tenían desde el mes de abril.  El evento surgió a partir de una propuesta inicial del INTA que luego fue impulsada por la institución solidaria para consolidar el fuerte vínculo productivo local con el cultivo.  Además del contenido técnico de las charlas, los recursos generados por la actividad se destinan a la compra de alimentos que no se consiguen mediante donaciones habituales.",
-      "guion": "Realizan una exitosa jornada sobre la papa en Balcarce",
-      "seccion": "Balcarce",
-      "medios": [
-        "El Diario Balcarce"
-      ],
-      "enlace": "https://eldiariobalcarce.com.ar/javier-fornieles-indudablemente-habia-una-necesidad-de-una-jornada-como-esta-para-el-sector-de-la-papa-469",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-08-26T08:55:39.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-23T03:05:01.594Z",
-      "relevancia": 63,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica"
-    },
-    {
-      "id": "48t7ke",
-      "titulo": "Inicia la segunda campaña de vacunación en Balcarce",
-      "copete": "Comienza el plazo de inmunización para ganado bovino en septiembre de dos mil veintiséis en todo el partido.",
-      "cuerpo": "",
-      "guion": "Inicia la segunda campaña de vacunación en Balcarce",
-      "seccion": "Agro",
-      "medios": [
-        "Radio Gabal (FM 104.1)"
-      ],
-      "enlace": "https://www.radiogabal.com.ar/index.php/agro/inicia-la-segunda-campana-de-vacunacion-contra-el-carbunclo-en-balcarce",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-08-18T14:35:54.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-23T03:05:01.594Z",
-      "relevancia": 57,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica"
+      "como": "automatica",
+      "slug": "destacada-participacion-de-la-emdab-en-torneo-nacional-de-natacion"
     }
   ],
   "secciones": [
-    "Política",
-    "Policiales",
     "Automovilismo",
-    "Tecnología",
+    "Política",
     "Economía",
+    "Tecnología",
     "Balcarce",
     "Deportes",
-    "Cultura y agenda",
-    "Agro"
+    "Policiales",
+    "Agro",
+    "Cultura y agenda"
   ],
   "temas": [
     {
       "nombre": "El autódromo",
       "ranura": "autodromo",
-      "cuantas": 24
+      "cuantas": 17
     },
     {
       "nombre": "Fangio",
       "ranura": "fangio",
-      "cuantas": 19
-    },
-    {
-      "nombre": "El Concejo Deliberante",
-      "ranura": "concejo",
-      "cuantas": 13
+      "cuantas": 17
     },
     {
       "nombre": "TC Pick Up",
       "ranura": "tc-pick-up",
-      "cuantas": 7
+      "cuantas": 5
+    },
+    {
+      "nombre": "El Concejo Deliberante",
+      "ranura": "concejo",
+      "cuantas": 5
     },
     {
       "nombre": "Ferroviarios",
       "ranura": "ferroviarios",
-      "cuantas": 5
+      "cuantas": 3
     },
     {
       "nombre": "El INTA",
       "ranura": "inta",
-      "cuantas": 3
-    },
-    {
-      "nombre": "El Cerro El Triunfo",
-      "ranura": "cerro",
-      "cuantas": 3
+      "cuantas": 2
     }
   ],
   "clima": {
