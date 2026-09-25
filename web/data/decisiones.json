@@ -1,5 +1,5 @@
 {
-  "exportado": "2026-09-25T12:15:37.333Z",
+  "exportado": "2026-09-25T12:26:55.347Z",
   "decisiones": {
     "1951120": {
       "estado": "automatica",
@@ -10229,13 +10229,62 @@
     },
     "12xkda6": {
       "estado": "automatica",
-      "titulo": null,
-      "copete": null,
-      "cuerpo": null,
-      "guion": null,
-      "deIA": null,
-      "por": null,
-      "cuando": "2026-09-25T05:55:51.165Z"
+      "titulo": "Franco Peidón finaliza séptimo en los Juegos ODESUR en Balcarce",
+      "copete": "El atleta balcarceño completó la final de los 800 metros en la competencia internacional desarrollada en Santa Fe y sumó experiencia en su debut.",
+      "cuerpo": "La competencia reunió a destacados especialistas y la medalla de oro quedó para Chamar Chambers, seguido por el venezolano Ryan López con la plata y el colombiano Rafael Muñoz con el bronce.\n\nPara el atleta de la ciudad, esta participación representó su debut absoluto en el certamen regional y una valiosa experiencia para su trayectoria, luego de consagrarse recientemente como campeón argentino de la categoría Mayores en la misma distancia.",
+      "guion": "Franco Peidón finaliza séptimo en los Juegos ODESUR en Balcarce",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T12:26:55.301Z",
+      "claves": [
+        "El atleta local Franco Peidón terminó séptimo en la final de 800 metros.",
+        "Participó en los Juegos Suramericanos ODESUR Santa Fe 2026.",
+        "Completó la prueba en 1:49.68 en su debut internacional.",
+        "Chamar Chambers se quedó con la medalla de oro."
+      ],
+      "seSabe": [
+        "Franco Peidón finalizó séptimo en la final de los 800 metros masculinos de los Juegos ODESUR.",
+        "El tiempo registrado por el atleta balcarceño fue de un minuto, 49 segundos y 68 centésimas.",
+        "La medalla de oro fue para Chamar Chambers, la plata para Ryan López y el bronce para Rafael Muñoz.",
+        "Peidón venía de consagrarse campeón argentino de Mayores en la misma distancia y debutó en esta competencia."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "etiquetas": [
+        "Franco Peidón",
+        "Juegos ODESUR",
+        "Balcarce",
+        "deportes"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infórmese Primero (FM 104.9)",
+          "enlace": "http://www.blogger.com/feeds/8495648477830064035/posts/default/8301955797410605381",
+          "fecha": "2026-09-24T13:57:30.660Z",
+          "oficial": false,
+          "aporte": "Informó el desempeño y el tiempo de Franco Peidón en la final de 800 metros de los Juegos ODESUR, así como el podio de la competencia."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1bglcef",
+          "titulo": "Franco Peidón a la final de los 800 metros en los Juegos Suramericanos",
+          "fecha": "2026-09-22T20:31:49.000Z",
+          "ruta": "/nota/franco-peidon-a-la-final-de-los-800-metros-en-los-juegos-suramericanos-1bglcef"
+        },
+        {
+          "id": "13n5c55",
+          "titulo": "Franco Peidón fue séptimo en los Suramericanos",
+          "fecha": "2026-09-24T12:42:46.000Z",
+          "ruta": "/nota/franco-peidon-fue-septimo-en-los-suramericanos-13n5c55"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
     },
     "ntbsnv": {
       "estado": "automatica",
@@ -10652,13 +10701,50 @@
     },
     "qx0kz": {
       "estado": "automatica",
-      "titulo": "El municipio y el sindicato firman el aumento en Balcarce",
-      "copete": "El intendente y el gremio municipal acordaron la pauta salarial hasta marzo de 2027 en una reunión realizada el jueves.",
-      "cuerpo": "El intendente Esteban Reino y la secretaria general del Sindicato de Trabajadores Municipales, Xoana Martínez, firmaron el acuerdo paritario que fija los incrementos al básico. La pauta salarial contempla aumentos que se ubican por encima del índice de precios al consumidor.\n\nEste entendimiento entre las autoridades comunales y la representación gremial se extiende hasta marzo de 2027.",
-      "guion": "El municipio y el sindicato firman el aumento en Balcarce",
+      "titulo": "El municipio y el sindicato firman el acuerdo paritario en Balcarce",
+      "copete": "El intendente Esteban Reino y la secretaria general del STM, Xoana Martínez, acordaron la pauta salarial para los trabajadores municipales hasta marzo de 2027.",
+      "cuerpo": "Desde el gremio resaltaron que se logró un aumento por encima de la variación del Índice de Precios al Consumidor y detallaron que el entendimiento incluye a los trabajadores de la Carrera Profesional Hospitalaria. Durante el anuncio, el jefe comunal planteó además la creación de un Consejo del Salario Municipal.\n\nPor su parte, Martínez valoró el cumplimiento de compromisos por parte del Ejecutivo local y mencionó la participación del personal en obras públicas de la ciudad como la guardia y el autódromo.",
+      "guion": "El municipio y el sindicato firman el acuerdo paritario en Balcarce",
       "deIA": true,
       "por": "ia",
-      "cuando": "2026-09-25T05:56:06.976Z"
+      "cuando": "2026-09-25T12:26:55.301Z",
+      "claves": [
+        "Firma de paritarias municipales hasta marzo de 2027",
+        "Aumentos aplicados al básico y de carácter acumulativo",
+        "Inclusión de la Carrera Profesional Hospitalaria",
+        "Propuesta para crear un Consejo del Salario Municipal"
+      ],
+      "seSabe": [
+        "El intendente Esteban Reino y la secretaria general del STM, Xoana Martínez, firmaron el acuerdo paritario este jueves.",
+        "La pauta salarial se extiende hasta marzo de 2027 con aumentos acumulativos al básico.",
+        "El acuerdo incluye a los trabajadores de la Carrera Profesional Hospitalaria.",
+        "Reino propuso avanzar en la conformación de un Consejo del Salario Municipal."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El municipio y el Sindicato de Trabajadores Municipales firmaron el acuerdo paritario que fija la pauta salarial hasta marzo de 2027 con aumentos acumulativos al básico.",
+      "etiquetas": [
+        "municipales",
+        "sindicato",
+        "Esteban Reino",
+        "Xoana Martínez",
+        "Balcarce"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infórmese Primero (FM 104.9)",
+          "enlace": "http://www.blogger.com/feeds/8495648477830064035/posts/default/6365505400168434410",
+          "fecha": "2026-09-24T21:08:28.050Z",
+          "oficial": false,
+          "aporte": "Aportó los detalles sobre la firma del acuerdo paritario municipal, los alcances hasta 2027 y las declaraciones de las autoridades."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
     },
     "4tauw0": {
       "estado": "automatica",
@@ -10788,13 +10874,54 @@
     },
     "1czdwgt": {
       "estado": "automatica",
-      "titulo": null,
-      "copete": null,
-      "cuerpo": null,
-      "guion": null,
-      "deIA": null,
-      "por": null,
-      "cuando": "2026-09-25T06:20:45.646Z"
+      "titulo": "Campo de Pato gana en el Torneo Desarrollo de rugby en Balcarce",
+      "copete": "Los primeros equipos de rugby del Club Social y Campo de Pato sumaron contundentes victorias en condición de visitante durante el último fin de semana por el Torneo Desarrollo.",
+      "cuerpo": "Los planteles superiores del Club Social y Campo de Pato completaron una destacada presentación el pasado fin de semana en el marco de una nueva fecha del Torneo Desarrollo.\n\nPor un lado, el conjunto de Pato Naranja se trasladó hasta la ciudad de Miramar, donde logró imponerse con claridad por 38 a 5 tras desplegar un sólido rendimiento durante todo el desarrollo del encuentro.\n\nEn tanto, el equipo de Pato Negro debió presentarse en la localidad de Dolores para medirse ante Pampas, encuentro en el cual también consiguió quedarse con el triunfo por un amplio margen de 59 a 31, cerrando así una jornada sumamente positiva para la institución balcarceña.",
+      "guion": "Campo de Pato gana en el Torneo Desarrollo de rugby en Balcarce",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T12:26:55.301Z",
+      "claves": [
+        "Los equipos de Campo de Pato jugaron como visitantes el fin de semana.",
+        "Pato Naranja venció a su rival en la ciudad de Miramar.",
+        "Pato Negro superó a Pampas en la localidad de Dolores."
+      ],
+      "seSabe": [
+        "Los primeros equipos de rugby de Campo de Pato jugaron el fin de semana pasado por el Torneo Desarrollo.",
+        "Pato Naranja le ganó a su rival en Miramar por 38 a 5.",
+        "Pato Negro superó a Pampas en Dolores por 59 a 31."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Los primeros equipos de rugby de Campo de Pato cerraron una destacada jornada con triunfos como visitantes en Miramar y Dolores por el Torneo Desarrollo.",
+      "etiquetas": [
+        "rugby",
+        "Campo de Pato",
+        "Torneo Desarrollo"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infórmese Primero (FM 104.9)",
+          "enlace": "http://www.blogger.com/feeds/8495648477830064035/posts/default/3869928171129001583",
+          "fecha": "2026-09-24T20:51:53.604Z",
+          "oficial": false,
+          "aporte": "Detalla los triunfos de Pato Naranja en Miramar y de Pato Negro en Dolores durante el último fin de semana por el Torneo Desarrollo."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "zmbe8t",
+          "titulo": "Rugby: doble triunfo para Campo de Pato en el Torneo Desarrollo",
+          "fecha": "2026-09-21T18:02:31.000Z",
+          "ruta": "/nota/rugby-doble-triunfo-para-campo-de-pato-en-el-torneo-desarrollo-zmbe8t"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
     },
     "1b29bdn": {
       "estado": "automatica",
@@ -10944,13 +11071,57 @@
     },
     "nauwa6": {
       "estado": "automatica",
-      "titulo": null,
-      "copete": null,
-      "cuerpo": null,
-      "guion": null,
-      "deIA": null,
-      "por": null,
-      "cuando": "2026-09-25T06:21:20.520Z"
+      "titulo": "Informan los datos de pobreza del primer semestre en Balcarce",
+      "copete": "El Instituto Nacional de Estadística y Censos difundió las cifras oficiales correspondientes al primer semestre de 2026. Los indicadores registran variaciones respecto al periodo anterior.",
+      "cuerpo": "El Instituto Nacional de Estadística y Censos dio a conocer los registros oficiales de pobreza e indigencia correspondientes al primer semestre de 2026 en los principales centros urbanos del país.\n\nComo se había informado en publicaciones previas del mes de septiembre, la cifra nacional equivale a millones de personas afectadas en todo el territorio.\n\nLa información difundida permite dimensionar el impacto de los indicadores socioeconómicos a nivel general, cuyos resultados oficiales se conocieron a través de los canales institucionales correspondientes.",
+      "guion": "Informan los datos de pobreza del primer semestre en Balcarce",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T12:26:55.301Z",
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El Indec dio a conocer los datos oficiales de pobreza correspondientes al primer semestre de 2026. Los detalles del informe nacional.",
+      "etiquetas": [
+        "pobreza",
+        "Indec",
+        "Balcarce",
+        "estadísticas"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/la-pobreza-en-argentina-subio-al-323-y-ya-alcanza-a-mas-de-15-millones-de-personas-891",
+          "fecha": "2026-09-24T20:36:17.000Z",
+          "oficial": false,
+          "aporte": "Informó los datos estadísticos sobre pobreza del primer semestre de 2026 difundidos por el Indec."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "94lss8",
+          "titulo": "La pobreza subió al 32,3% en el primer semestre del año y afectó a 15,5 millones de personas",
+          "fecha": "2026-09-24T19:36:25.000Z",
+          "ruta": "/nota/la-pobreza-subio-al-32-3-en-el-primer-semestre-del-ano-y-afecto-a-15-94lss8"
+        },
+        {
+          "id": "12qtyz8",
+          "titulo": "La pobreza subió a 32,3% en el primer semestre de 2026, según la medición del INDEC",
+          "fecha": "2026-09-24T19:02:11.000Z",
+          "ruta": "/nota/la-pobreza-subio-a-32-3-en-el-primer-semestre-de-2026-segun-la-12qtyz8"
+        },
+        {
+          "id": "15mf0y2",
+          "titulo": "Apagón masivo: el Gobierno apunta a un gas contaminado como la causa que dejó sin luz a casi dos millones de personas",
+          "fecha": "2026-09-21T20:55:20.000Z",
+          "ruta": "/nota/apagon-masivo-el-gobierno-apunta-a-un-gas-contaminado-como-la-causa-15mf0y2"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
     },
     "1tg5rro": {
       "estado": "automatica",
@@ -11262,13 +11433,63 @@
     },
     "165tzq5": {
       "estado": "automatica",
-      "titulo": null,
-      "copete": null,
-      "cuerpo": null,
-      "guion": null,
-      "deIA": null,
-      "por": null,
-      "cuando": "2026-09-25T06:40:53.217Z"
+      "titulo": "El Senado bonaerense evalúa multas millonarias por escapes libres",
+      "copete": "La iniciativa legislativa busca sancionar la contaminación sonora de autos y motos en toda la provincia. En Balcarce ya se realizan operativos de control vehicular por esta problemática.",
+      "cuerpo": "El Senado bonaerense buscará avanzar en su próxima sesión con un proyecto de ley para frenar los ruidos molestos de vehículos modificados.\n\nEl proyecto apunta a combatir la contaminación sonora que afecta a familias, adultos mayores y niños con Trastorno del Espectro Autista. Además de las sanciones económicas, la norma contempla la inhabilitación para conducir, el decomiso y la compactación de los vehículos y elementos antirreglamentarios, y la clausura temporaria de los establecimientos comerciales que vendan estos productos.",
+      "guion": "El Senado bonaerense evalúa multas millonarias por escapes libres",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T12:26:55.301Z",
+      "claves": [
+        "Tratarán un proyecto contra escapes libres en el Senado.",
+        "Prevén multas millonarias para conductores y comercios.",
+        "En Balcarce ya se realizan operativos por esta infracción."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El Senado bonaerense debatirá un proyecto para sancionar con multas millonarias el uso de escapes libres en autos y motos. En Balcarce ya se realizan operativos de control vehicular por esta infracción.",
+      "etiquetas": [
+        "Senado bonaerense",
+        "escapes libres",
+        "multas",
+        "contaminación sonora",
+        "Balcarce"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infórmese Primero (FM 104.9)",
+          "enlace": "http://www.blogger.com/feeds/8495648477830064035/posts/default/7993072428106130960",
+          "fecha": "2026-09-24T14:42:25.611Z",
+          "oficial": false,
+          "aporte": "Detalles del proyecto legislativo sobre escapes libres, montos de multas y sanciones a comercios en la provincia."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1fu2is1",
+          "titulo": "El Senado sesiona para modificar la ley del Banco Central y sancionar un recorte a los subsidios en zonas frías",
+          "fecha": "2026-09-24T04:57:25.000Z",
+          "ruta": "/nota/el-senado-sesiona-para-modificar-la-ley-del-banco-central-y-sancionar-1fu2is1"
+        },
+        {
+          "id": "1tcfagn",
+          "titulo": "Avanza en la Provincia un proyecto contra los escapes libres: en Balcarce ya rige una normativa",
+          "fecha": "2026-09-23T15:03:05.000Z",
+          "ruta": "/nota/avanza-en-la-provincia-un-proyecto-contra-los-escapes-libres-en-1tcfagn"
+        },
+        {
+          "id": "1if0oi6",
+          "titulo": "Senado: Bullrich empuja una sesión para sancionar mañana la reforma del BCRA y la ley de zonas frías",
+          "fecha": "2026-09-23T14:04:01.000Z",
+          "ruta": "/nota/senado-bullrich-empuja-una-sesion-para-sancionar-manana-la-reforma-1if0oi6"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
     },
     "v7ui9o": {
       "estado": "automatica",
@@ -11414,13 +11635,72 @@
     },
     "1ss3yj3": {
       "estado": "automatica",
-      "titulo": null,
-      "copete": null,
-      "cuerpo": null,
-      "guion": null,
-      "deIA": null,
-      "por": null,
-      "cuando": "2026-09-25T06:41:02.735Z"
+      "titulo": "Reino y Ciantini participan en Tandil de la presentación de las TC Pick Up en Balcarce",
+      "copete": "El intendente Esteban Reino y el piloto Diego Ciantini participaron de la presentación de las TC Pick Up en Tandil, en la previa de la competencia que marcará el regreso de la actividad oficial al Autódromo Juan Manuel Fangio.",
+      "cuerpo": "Durante la conferencia, de la que también formaron parte autoridades tandilenses y representantes de la ACTC, el jefe comunal destacó el trabajo conjunto con la Provincia y el organismo nacional para recuperar el circuito tras años de tareas. Por su parte, Ciantini remarcó el esfuerzo realizado por el municipio y expresó su expectativa por competir en el trazado de su ciudad.\n\nLa jornada incluyó además la exhibición de la Toyota Hilux del piloto Gonzalo Aramburu, que giró frente a los vecinos en el sector del Lago del Fuerte, anticipando el movimiento económico y turístico que la competencia generará en la región.",
+      "guion": "Reino y Ciantini participan en Tandil de la presentación de las TC Pick Up en Balcarce",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T12:26:55.301Z",
+      "claves": [
+        "Presentación de las TC Pick Up en Tandil en la previa de la carrera en Balcarce.",
+        "Participación del intendente Esteban Reino y del piloto Diego Ciantini.",
+        "Exhibición de la camioneta del piloto Gonzalo Aramburu ante el público tandilense.",
+        "Expectativa por el impacto económico y la reinauguración del Autódromo Juan Manuel Fangio."
+      ],
+      "seSabe": [
+        "El intendente Esteban Reino y el piloto Diego Ciantini participaron de la presentación en Tandil.",
+        "El evento se realizó en la Cámara Empresaria de Tandil previa a la octava fecha de las TC Pick Up en el Autódromo Juan Manuel Fangio.",
+        "Participaron autoridades de Tandil y representantes de la ACTC.",
+        "El piloto Gonzalo Aramburu exhibió su Toyota Hilux y giró en el Lago del Fuerte."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El intendente Esteban Reino y el piloto Diego Ciantini participaron en Tandil de la presentación de las TC Pick Up, en la previa del regreso de la actividad oficial al Autódromo Juan Manuel Fangio de Balcarce.",
+      "etiquetas": [
+        "Automovilismo",
+        "TC Pick Up",
+        "Autodromo Juan Manuel Fangio",
+        "Esteban Reino",
+        "Diego Ciantini",
+        "Tandil",
+        "Balcarce"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Diario La Vanguardia",
+          "enlace": "https://www.diariolavanguardia.com/noticias/44889-reino-y-ciantini-participaron-en-tandil-de-la-presentacion-de-las-tc-pick-up-que-anticipo-la-vuelta-del-fangio/",
+          "fecha": null,
+          "oficial": false,
+          "aporte": "Detalles de la presentación en Tandil, declaraciones del intendente Esteban Reino y del piloto Diego Ciantini, y exhibición de la camioneta de Gonzalo Aramburu."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "5bq6e6",
+          "titulo": "Reabre el autódromo Juan Manuel Fangio de Balcarce: ‘Jamás vi el autódromo como está hoy’, dijo Esteban Reino",
+          "fecha": "2026-09-24T12:44:10.000Z",
+          "ruta": "/nota/reabre-el-autodromo-juan-manuel-fangio-de-balcarce-jamas-vi-el-5bq6e6"
+        },
+        {
+          "id": "1e6tvp9",
+          "titulo": "Kicillof encabeza la reapertura del autódromo Juan Manuel Fangio en Balcarce",
+          "fecha": "2026-09-25T10:15:00.000Z",
+          "ruta": "/nota/el-gobernador-bonaerense-encabeza-la-reapertura-del-autodromo-en-1e6tvp9"
+        },
+        {
+          "id": "1hm23zx",
+          "titulo": "El autódromo Juan Manuel Fangio reabre sus puertas en Balcarce",
+          "fecha": "2026-09-25T08:03:43.000Z",
+          "ruta": "/nota/el-autodromo-juan-manuel-fangio-reabre-sus-puertas-en-balcarce-1hm23zx"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
     },
     "mayad0": {
       "estado": "automatica",
@@ -11454,23 +11734,131 @@
     },
     "din3cj": {
       "estado": "automatica",
-      "titulo": null,
-      "copete": null,
-      "cuerpo": null,
-      "guion": null,
-      "deIA": null,
-      "por": null,
-      "cuando": "2026-09-25T06:50:53.519Z"
+      "titulo": "Un matrimonio llega desde Chubut y espera en Balcarce",
+      "copete": "Sonia y Darío viajaron desde Rawson para presenciar la reapertura del Autódromo Juan Manuel Fangio y ya se instalaron primeros en la fila, varios días antes de la competencia de las TC Pick Up.",
+      "cuerpo": "Un matrimonio proveniente de la ciudad chubutense de Rawson se convirtió en el primero en posicionarse a la espera de la habilitación del ingreso al circuito local. Los fanáticos emprendieron un extenso viaje hacia el territorio bonaerense para presenciar la vuelta oficial de la actividad al escenario deportivo, prevista para el próximo fin de semana con el desarrollo de las competencias de las TC Pick Up. A pesar de la diferencia temporal con el inicio de las pruebas centrales, los visitantes ya aseguraron su lugar en el acceso, reflejando la alta expectativa generada en torno al evento que congregará a una multitud de seguidores del deporte motor.",
+      "guion": "Un matrimonio llega desde Chubut y espera en Balcarce",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T12:26:55.301Z",
+      "claves": [
+        "Un matrimonio viajó desde Rawson, Chubut, hasta Balcarce.",
+        "Llegaron con varios días de anticipación para la reapertura del autódromo.",
+        "Ya se encuentran primeros en la fila para ingresar al circuito.",
+        "Las competencias de las TC Pick Up se disputarán el fin de semana."
+      ],
+      "seSabe": [
+        "Sonia y Darío viajaron desde Rawson, Chubut, hasta Balcarce.",
+        "Se ubicaron primeros en la fila para ingresar al Autódromo Juan Manuel Fangio.",
+        "Llegaron este miércoles, varios días antes de la competencia de las TC Pick Up programada para el domingo."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Llegaron desde Rawson a Balcarce y ya hacen fila para la reapertura del Autódromo Juan Manuel Fangio. Sonia y Darío se adelantaron varios días a la llegada de las TC Pick Up.",
+      "etiquetas": [
+        "Autodromo Juan Manuel Fangio",
+        "TC Pick Up",
+        "Balcarce",
+        "automovilismo"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Diario La Vanguardia",
+          "enlace": "https://www.diariolavanguardia.com/noticias/44887-desde-rawson-a-balcarce-sonia-y-dario-son-los-primeros-en-la-fila-del-fangio/",
+          "fecha": null,
+          "oficial": false,
+          "aporte": "Informó la llegada de los primeros fanáticos desde Chubut y su ubicación en la fila del autódromo."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1e6tvp9",
+          "titulo": "Kicillof encabeza la reapertura del autódromo Juan Manuel Fangio en Balcarce",
+          "fecha": "2026-09-25T10:15:00.000Z",
+          "ruta": "/nota/el-gobernador-bonaerense-encabeza-la-reapertura-del-autodromo-en-1e6tvp9"
+        },
+        {
+          "id": "1hm23zx",
+          "titulo": "El autódromo Juan Manuel Fangio reabre sus puertas en Balcarce",
+          "fecha": "2026-09-25T08:03:43.000Z",
+          "ruta": "/nota/el-autodromo-juan-manuel-fangio-reabre-sus-puertas-en-balcarce-1hm23zx"
+        },
+        {
+          "id": "mayad0",
+          "titulo": "El autódromo Juan Manuel Fangio reabre tras una década en Balcarce",
+          "fecha": "2026-09-25T02:56:25.783Z",
+          "ruta": "/nota/el-autodromo-juan-manuel-fangio-reabre-sus-puertas-en-balcarce-mayad0"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
     },
     "1rh34g1": {
       "estado": "automatica",
-      "titulo": null,
-      "copete": null,
-      "cuerpo": null,
-      "guion": null,
-      "deIA": null,
-      "por": null,
-      "cuando": "2026-09-25T06:50:55.868Z"
+      "titulo": "Los Socorristas Voluntarios participan en la reapertura del autódromo en Balcarce",
+      "copete": "La asociación civil brindará servicios de prevención sanitaria durante la reinauguración del Autódromo Municipal Juan Manuel Fangio, prevista para este fin de semana.",
+      "cuerpo": "La institución prestará servicios como parte del dispositivo de prevención sanitaria para acompañar las competencias automovilísticas.\n\nSu presencia formará parte de la cadena de prevención necesaria ante la importante cantidad de personas que se convocarán en el circuito.\n\nAsimismo, remarcaron su predisposición para colaborar en otras actividades y situaciones que requieran asistencia en la ciudad, destacando la importancia de contar con esta estructura profesional en acontecimientos de gran concentración de público.",
+      "guion": "Los Socorristas Voluntarios participan en la reapertura del autódromo en Balcarce",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T12:26:55.301Z",
+      "claves": [
+        "Los Socorristas Voluntarios estarán en la reapertura del autódromo.",
+        "La institución brindará prevención sanitaria el 26 y 27 de septiembre.",
+        "El servicio apunta a eventos con gran concentración de público."
+      ],
+      "seSabe": [
+        "Los Socorristas Voluntarios participarán en la reapertura del Autódromo Juan Manuel Fangio.",
+        "El servicio se realizará los días 26 y 27 de septiembre.",
+        "La institución integrará el dispositivo de prevención sanitaria para las competencias."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "etiquetas": [
+        "Socorristas Voluntarios",
+        "Autodromo Fangio",
+        "Balcarce",
+        "prevencion sanitaria"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Diario La Vanguardia",
+          "enlace": "https://www.diariolavanguardia.com/noticias/44883-los-socorristas-voluntarios-estaran-presentes-en-la-reapertura-del-autodromo-fangio/",
+          "fecha": null,
+          "oficial": false,
+          "aporte": "Informó la presencia de los Socorristas Voluntarios en la reapertura del autódromo y su rol en la prevención sanitaria."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1e6tvp9",
+          "titulo": "Kicillof encabeza la reapertura del autódromo Juan Manuel Fangio en Balcarce",
+          "fecha": "2026-09-25T10:15:00.000Z",
+          "ruta": "/nota/el-gobernador-bonaerense-encabeza-la-reapertura-del-autodromo-en-1e6tvp9"
+        },
+        {
+          "id": "lcvlqf",
+          "titulo": "Vuelve el TC al tradicional autódromo Juan Manuel Fangio: la categoría Pick Up protagonizará la reapertura del circuito",
+          "fecha": "2026-09-24T17:08:37.000Z",
+          "ruta": "/nota/vuelve-el-tc-al-tradicional-autodromo-juan-manuel-fangio-la-categoria-lcvlqf"
+        },
+        {
+          "id": "h30g4e",
+          "titulo": "El TC Pick Up marcará la reapertura del autódromo en Balcarce",
+          "fecha": "2026-09-25T09:46:26.000Z",
+          "ruta": "/nota/el-tc-pick-up-marca-el-regreso-de-la-actividad-al-autodromo-en-h30g4e"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
     },
     "1m9oza2": {
       "estado": "automatica",
@@ -13998,6 +14386,110 @@
         "nivel": "MEDIA",
         "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
         "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "uj4h1v": {
+      "estado": "automatica",
+      "titulo": "Kicillof encabeza la reinauguración del autódromo en Balcarce",
+      "copete": "El gobernador bonaerense participa este viernes en la reapertura del autódromo Juan Manuel Fangio. El circuito serrano vuelve a recibir competencias nacionales tras quince años sin actividad oficial.",
+      "cuerpo": "El gobernador de la provincia de Buenos Aires, Axel Kicillof, encabeza este viernes a las 14 la reinauguración oficial del autódromo municipal Juan Manuel Fangio en Balcarce.\n\nEl predio abrirá sus puertas a las 8 y el ingreso del público se realizará por calle 79.\n\nLa recuperación del trazado demandó un trabajo conjunto entre el municipio y la Provincia, que aportó más de mil millones de pesos para finalizar las obras, según detalló el intendente. En tanto, las reservas hoteleras alcanzaron el ciento por ciento y los socios fundadores debieron realizar un trámite previo de acreditación para asistir al evento.",
+      "guion": "Kicillof encabeza la reinauguración del autódromo en Balcarce",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T12:26:55.301Z",
+      "claves": [
+        "Kicillof y Reino participan de la reapertura del autódromo Juan Manuel Fangio.",
+        "El circuito vuelve a tener competencias nacionales tras quince años sin actividad.",
+        "Las TC Pick Up, TC Pista Pick Up y el Turismo Special compiten este fin de semana.",
+        "La Provincia aportó más de mil millones de pesos para finalizar los trabajos."
+      ],
+      "noConfirmado": [
+        "No se informaron cifras exactas sobre la cantidad total de espectadores que ingresarán al predio durante el fin de semana."
+      ],
+      "textoRedes": "El gobernador Axel Kicillof encabeza este viernes la reinauguración del autódromo Juan Manuel Fangio en Balcarce. Tras quince años sin actividad oficial, el circuito serrano vuelve a recibir competencias nacionales este fin de semana con hotelería llena.",
+      "etiquetas": [
+        "autodromo municipal",
+        "Juan Manuel Fangio",
+        "Balcarce",
+        "Axel Kicillof",
+        "Esteban Reino",
+        "Turismo Carretera"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Eco de Tandil",
+          "enlace": "https://www.eleco.com.ar/la-region/axel-kicillof-encabezara-la-reinauguracion-del-autodromo-juan-manuel-fangio-en-balcarce",
+          "fecha": "2026-09-25T11:53:01.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Diputados Bonaerenses",
+          "enlace": "https://diputadosbsas.com.ar/kicillof-llega-balcarce-reinauguracion-fangio/",
+          "fecha": "2026-09-25T10:15:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "La Noticia 1",
+          "enlace": "https://www.lanoticia1.com/noticia/kicillof-reinaugura-el-autodromo-fangio-en-balcarce",
+          "fecha": "2026-09-25T08:03:43.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Municipalidad de Balcarce",
+          "enlace": "https://balcarce.gob.ar/2026/09/24/reapertura-del-autodromo-juan-manuel-fangio-informacion-para-los-asistentes/",
+          "fecha": "2026-09-25T00:03:22.000Z",
+          "oficial": true,
+          "aporte": null
+        },
+        {
+          "medio": "LU9 Mar del Plata",
+          "enlace": "https://www.lu9mardelplata.com.ar/reabre-el-autodromo-juan-manuel-fangio-de-balcarce-jamas-vi-el-autodromo-como-esta-hoy-dijo-esteban-reino",
+          "fecha": "2026-09-24T12:44:10.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Municipalidad de Balcarce",
+          "enlace": "https://balcarce.gob.ar/2026/09/23/acreditacion-para-socios-fundadores-del-autodromo-juan-manuel-fangio/",
+          "fecha": "2026-09-23T13:13:26.000Z",
+          "oficial": true,
+          "aporte": null
+        },
+        {
+          "medio": "Sendero Regional",
+          "enlace": "https://www.senderomultimedios.com.ar/balcarce-reinaugura-el-autodromo-fangio-con-la-presencia-de-kicillof/",
+          "fecha": "2026-09-23T12:30:43.000Z",
+          "oficial": false,
+          "aporte": null
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1e6tvp9",
+          "titulo": "Kicillof encabeza la reapertura del autódromo Juan Manuel Fangio en Balcarce",
+          "fecha": "2026-09-25T10:15:00.000Z",
+          "ruta": "/nota/el-gobernador-bonaerense-encabeza-la-reapertura-del-autodromo-en-1e6tvp9"
+        },
+        {
+          "id": "1hm23zx",
+          "titulo": "El autódromo Juan Manuel Fangio reabre sus puertas en Balcarce",
+          "fecha": "2026-09-25T08:03:43.000Z",
+          "ruta": "/nota/el-autodromo-juan-manuel-fangio-reabre-sus-puertas-en-balcarce-1hm23zx"
+        },
+        {
+          "id": "mayad0",
+          "titulo": "El autódromo Juan Manuel Fangio reabre tras una década en Balcarce",
+          "fecha": "2026-09-25T02:56:25.783Z",
+          "ruta": "/nota/el-autodromo-juan-manuel-fangio-reabre-sus-puertas-en-balcarce-mayad0"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo confirman cinco medios independientes y Municipalidad de Balcarce.",
+        "sugeridoPorIA": "ALTA"
       }
     }
   },
