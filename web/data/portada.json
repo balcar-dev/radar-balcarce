@@ -1,6 +1,83 @@
 {
-  "generado": "2026-09-25T20:23:58.580Z",
+  "generado": "2026-09-25T20:30:41.633Z",
   "notas": [
+    {
+      "id": "1mkm1na",
+      "titulo": "El autódromo Juan Manuel Fangio abre sus puertas en Balcarce",
+      "copete": "El histórico circuito serrano recibe nuevamente al público en la previa de la competencia de TC Pick Up, tras casi quince años sin actividad oficial.",
+      "cuerpo": "El autódromo Juan Manuel Fangio de Balcarce abrió sus puertas este viernes en la antesala de la competencia de TC Pick Up. Desde las primeras horas, los fanáticos comenzaron a llegar al predio y a ocupar distintos sectores de la sierra La Barrosa para vivir el regreso de la actividad oficial, que no se registraba desde noviembre de 2011.\n\nLa reapertura del circuito demandó años de obras y trabajos de recuperación. Como se había informado, el fin de semana del 26 y 27 de septiembre marcará el retorno de las categorías nacionales a la ciudad, con la presencia del piloto local Juan José Suárez compitiendo en TC Pista Pick Up.\n\nEste regreso significa para los balcarceños la recuperación de uno de sus escenarios más emblemáticos, estrechamente ligado a la identidad deportiva y turística local. Las autoridades municipales habían solicitado prestar especial atención a los accesos y al sentido de circulación establecido para el ingreso al predio.",
+      "guion": "El autódromo Juan Manuel Fangio abre sus puertas en Balcarce",
+      "seccion": "Automovilismo",
+      "medios": [
+        "Diario La Vanguardia",
+        "Puntonueve (FM 100.9)",
+        "Municipalidad de Balcarce"
+      ],
+      "enlace": "https://www.diariolavanguardia.com/noticias/44903-dia-historico-el-autodromo-juan-manuel-fangio-volvio-a-abrir-sus-puertas-despues-de-casi-15-anos/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-25T20:27:43.000Z",
+      "sinFecha": false,
+      "visto": "2026-09-25T14:30:50.868Z",
+      "relevancia": 100,
+      "local": true,
+      "publicadaPor": "ia",
+      "publicadaCuando": "2026-09-25T14:13:23.260Z",
+      "temas": [
+        "autodromo",
+        "tc-pick-up",
+        "fangio"
+      ],
+      "como": "automatica",
+      "textoRedes": "El autódromo Juan Manuel Fangio volvió a abrir sus puertas en Balcarce este viernes después de casi quince años sin actividad oficial, en la previa de la llegada de las TC Pick Up y el fin de semana de competencias nacionales.",
+      "etiquetas": [
+        "Autodromo Juan Manuel Fangio",
+        "Balcarce",
+        "TC Pick Up",
+        "Automovilismo"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Diario La Vanguardia",
+          "enlace": "https://www.diariolavanguardia.com/noticias/44903-dia-historico-el-autodromo-juan-manuel-fangio-volvio-a-abrir-sus-puertas-despues-de-casi-15-anos/",
+          "fecha": "2026-09-25T00:03:22.000Z",
+          "oficial": false,
+          "aporte": "Detalló la llegada de los fanáticos al circuito y el significado histórico del regreso tras casi quince años sin actividad."
+        },
+        {
+          "medio": "Municipalidad de Balcarce",
+          "enlace": "https://balcarce.gob.ar/2026/09/24/reapertura-del-autodromo-juan-manuel-fangio-informacion-para-los-asistentes/",
+          "fecha": "2026-09-25T00:03:22.000Z",
+          "oficial": true,
+          "aporte": "Informó el horario de apertura del predio y solicitó atención a los accesos y la circulación."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "gfro59",
+          "titulo": "El autódromo Juan Manuel Fangio vuelve a recibir automovilismo nacional en Balcarce",
+          "fecha": "2026-09-24T19:48:00.000Z",
+          "ruta": "/nota/el-autodromo-juan-manuel-fangio-vuelve-a-recibir-automovilismo-gfro59"
+        },
+        {
+          "id": "1b3p6ze",
+          "titulo": "Juan José Suárez corre en el Autódromo Juan Manuel Fangio en Balcarce",
+          "fecha": "2026-09-24T19:08:06.000Z",
+          "ruta": "/nota/suarez-acelera-en-casa-es-un-sueno-correr-en-balcarce-1b3p6ze"
+        },
+        {
+          "id": "lcvlqf",
+          "titulo": "Vuelve el TC al tradicional autódromo Juan Manuel Fangio: la categoría Pick Up protagonizará la reapertura del circuito",
+          "fecha": "2026-09-24T17:08:37.000Z",
+          "ruta": "/nota/vuelve-el-tc-al-tradicional-autodromo-juan-manuel-fangio-la-categoria-lcvlqf"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo informaron Municipalidad de Balcarce y un medio independiente.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "el-autodromo-juan-manuel-fangio-abre-sus-puertas-en-balcarce"
+    },
     {
       "id": "repaso20260925tarde",
       "propia": "repaso",
@@ -205,93 +282,6 @@
         "sugeridoPorIA": "MEDIA"
       },
       "slug": "el-handball-municipal-compitio-en-el-circuito-asabal-en-balcarce"
-    },
-    {
-      "id": "yaqf3p",
-      "titulo": "El autódromo Juan Manuel Fangio abre sus puertas este viernes en Balcarce",
-      "copete": "El histórico circuito vuelve a recibir actividad automovilística este viernes con un operativo especial de tránsito, accesos diferenciados desde las 8 y venta de entradas en el predio.",
-      "cuerpo": "Las puertas del Autódromo Juan Manuel Fangio abrirán este viernes desde las 8 en lo que representa una jornada histórica para Balcarce y el automovilismo nacional, tras más de una década sin actividad oficial en el circuito principal. La organización estableció ingresos diferenciados: el público general entrará exclusivamente por la Puerta 1 sobre calle 63, mientras que los boxes y acreditaciones especiales lo harán por calle 79 a través del ingreso al Kartódromo. Dentro del predio habrá circulación en sentido único en el sector superior, estacionamiento arancelado y boletería habilitada las 24 horas.\n\nEl operativo incluye baños químicos, puestos gastronómicos y asistencia sanitaria con postas de salud y socorristas. Para ordenar el flujo vehicular y prevenir inconvenientes, participarán agentes de Control y Movilidad Urbana, Gendarmería Nacional, Policía y el Ministerio de Transporte bonaerense.",
-      "guion": "El autódromo Juan Manuel Fangio abre sus puertas este viernes en Balcarce",
-      "seccion": "Automovilismo",
-      "medios": [
-        "Diario La Vanguardia",
-        "0223 (Mar del Plata)",
-        "Radio Gabal (FM 104.1)",
-        "Puntonueve (FM 100.9)"
-      ],
-      "enlace": "https://www.diariolavanguardia.com/noticias/44902-reapertura-del-fangio-horarios-accesos-estacionamiento-y-todo-lo-que-hay-que-saber-para-ingresar/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-25T16:19:00.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-25T01:00:57.004Z",
-      "relevancia": 100,
-      "local": true,
-      "publicadaPor": "ia",
-      "publicadaCuando": "2026-09-25T11:57:25.176Z",
-      "temas": [
-        "autodromo",
-        "fangio"
-      ],
-      "como": "automatica",
-      "seSabe": [
-        "Las puertas del autódromo abrirán al público a partir de las 8 de la mañana.",
-        "El ingreso general será por la Puerta 1 en la calle 63.",
-        "El acceso a boxes y acreditaciones especiales se realizará por la calle 79 a través del Kartódromo.",
-        "La venta de entradas funcionará las 24 horas en las puertas de ingreso.",
-        "El predio contará con baños químicos, puestos gastronómicos y un operativo sanitario.",
-        "Participarán del operativo vial Gendarmería Nacional, Policía, Transporte provincial y agentes municipales."
-      ],
-      "noConfirmado": [
-        "No se informaron en el reporte las tarifas específicas correspondientes al estacionamiento arancelado."
-      ],
-      "textoRedes": "El Autódromo Juan Manuel Fangio reabre este viernes desde las 8 con accesos diferenciados, estacionamiento y venta de entradas. Conocé los detalles del operativo de tránsito y seguridad dispuesto para el histórico regreso del automovilismo a Balcarce.",
-      "etiquetas": [
-        "Autódromo Juan Manuel Fangio",
-        "Balcarce",
-        "automovilismo"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Diario La Vanguardia",
-          "enlace": "https://www.diariolavanguardia.com/noticias/44902-reapertura-del-fangio-horarios-accesos-estacionamiento-y-todo-lo-que-hay-que-saber-para-ingresar/",
-          "fecha": "2026-09-25T00:21:50.000Z",
-          "oficial": false,
-          "aporte": "Detalló los horarios, los accesos diferenciados, la circulación interna, el estacionamiento, los servicios y el operativo de seguridad y salud."
-        },
-        {
-          "medio": "Puntonueve (FM 100.9)",
-          "enlace": "https://puntonueve.com.ar/reapertura-del-fangio-horarios-accesos-estacionamiento-y-recomendaciones-para-el-publico/",
-          "fecha": "2026-09-25T00:21:50.000Z",
-          "oficial": false,
-          "aporte": "Confirmó que la reapertura oficial se llevará adelante este viernes en una jornada especial para la ciudad y el automovilismo."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "lcvlqf",
-          "titulo": "Vuelve el TC al tradicional autódromo Juan Manuel Fangio: la categoría Pick Up protagonizará la reapertura del circuito",
-          "fecha": "2026-09-24T17:08:37.000Z",
-          "ruta": "/nota/vuelve-el-tc-al-tradicional-autodromo-juan-manuel-fangio-la-categoria-lcvlqf"
-        },
-        {
-          "id": "jul41g",
-          "titulo": "Balcarce se prepara para la reapertura del autódromo Juan Manuel Fangio",
-          "fecha": "2026-09-24T14:21:16.000Z",
-          "ruta": "/nota/balcarce-se-prepara-para-vivir-un-fin-de-semana-a-fondo-jul41g"
-        },
-        {
-          "id": "n331xk",
-          "titulo": "Definieron horarios para el automovilismo en el Fangio",
-          "fecha": "2026-09-24T13:05:55.000Z",
-          "ruta": "/nota/definieron-horarios-para-el-automovilismo-en-el-fangio-n331xk"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron dos medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "todo-sobre-la-reapertura-del-autodromo-juan-manuel-fangio"
     },
     {
       "id": "2olgpl",
@@ -1474,16 +1464,16 @@
       "slug": "karina-lupo-y-mariano-barreiro-ganan-la-media-maraton-en-balcarce"
     },
     {
-      "id": "33h243",
-      "titulo": "Franco Peidón gana el oro nacional en los 800 metros en Balcarce",
-      "copete": "El atleta local se consagró campeón argentino de Mayores en los 800 metros llanos tras quedarse con la medalla de oro en el campeonato disputado en Rosario.",
-      "cuerpo": "El deportista Franco Peidón obtuvo la medalla de oro en los 800 metros llanos y se consagró campeón argentino de Mayores. El logro se concretó este fin de semana en el centésimo sexto Campeonato Nacional de Mayores, desarrollado en la ciudad santafesina de Rosario.\n\nPreviamente, a finales de septiembre, el atleta local había superado la serie clasificatoria para disputar la final de la misma distancia en los Juegos Suramericanos Santa Fe 2026, llevada a cabo en el Centro de Alto Rendimiento Deportivo Pedro Candioti, tal como se había informado en su momento.",
-      "guion": "Franco Peidón gana el oro nacional en los ochocientos metros en Balcarce",
-      "seccion": "Deportes",
+      "id": "kiy3gs",
+      "titulo": "El Concejo Deliberante realiza este jueves la décima cuarta sesión ordinaria en Balcarce",
+      "copete": "El cuerpo legislativo local lleva a cabo este jueves su décima cuarta sesión ordinaria del año con un temario que incluye leasing, obras, transporte y cuestiones ambientales.",
+      "cuerpo": "Los concejales llevan adelante este jueves la décima cuarta sesión ordinaria del año en Balcarce, con el análisis de un extenso orden del día que abarca expedientes sobre servicios, obras y salud, según informó un medio local.\n\nDurante la jornada, el recinto evalúa convalidar decretos de operaciones de leasing y debate iniciativas vinculadas a taxis, remises y mejoras urbanas. Como se había informado en las reuniones previas de la semana, la agenda legislativa incluye expedientes sobre infraestructura, transporte y un pedido de informes sobre la red de agua potable.",
+      "guion": "El Concejo Deliberante realiza este jueves la décima cuarta sesión ordinaria en Balcarce",
+      "seccion": "Política",
       "medios": [
-        "El Diario Balcarce"
+        "Diario La Vanguardia"
       ],
-      "enlace": "https://eldiariobalcarce.com.ar/peidon-se-consagro-campeon-nacional-en-los-800-metros-696",
+      "enlace": "https://www.diariolavanguardia.com/noticias/44885-el-concejo-deliberante-vuelve-a-sesionar-los-principales-temas-que-estaran-en-debate/",
       "teniaImagenLaFuente": true,
       "fecha": "2026-09-25T10:47:08.606Z",
       "sinFecha": true,
@@ -1491,49 +1481,62 @@
       "relevancia": 63,
       "local": true,
       "publicadaPor": "ia",
-      "publicadaCuando": "2026-09-25T13:24:36.675Z",
-      "temas": [],
+      "publicadaCuando": "2026-09-25T13:02:40.310Z",
+      "temas": [
+        "concejo"
+      ],
       "como": "automatica",
       "claves": [
-        "Franco Peidón obtuvo la medalla de oro en los 800 metros llanos.",
-        "El torneo se desarrolló en la ciudad de Rosario, provincia de Santa Fe.",
-        "El atleta local alcanzó el título en el Campeonato Nacional de Mayores."
+        "El Concejo Deliberante lleva a cabo su décima cuarta sesión ordinaria del año.",
+        "El temario incluye leasing, taxis, remises, obras y proyectos ambientales.",
+        "Se debaten iniciativas sobre salud, transporte y pedidos de informes a servicios públicos.",
+        "Tratan reconocimientos a deportistas, instituciones y establecimientos educativos."
+      ],
+      "seSabe": [
+        "Los concejales llevan adelante este jueves la décima cuarta sesión ordinaria del año, según un medio local.",
+        "El orden del día incluye decretos de leasing con Provincia Leasing S.A. con despacho unánime.",
+        "Se analizan proyectos sobre el Estadio Municipal, forestación, red de gas y reparación de un puente.",
+        "Tratan una propuesta técnica de José Luis Costa para el saneamiento de la Laguna La Brava.",
+        "Se evalúan expedientes sobre salud, campañas de prevención y el Programa de Acompañamiento Alimentario.",
+        "Incluye reconocimientos al boxeador Kevin Facundo Gómez y a distintas instituciones locales."
       ],
       "noConfirmado": [
         "No pudo ser contrastado de forma independiente con las fuentes consultadas."
       ],
+      "textoRedes": "El Concejo Deliberante de Balcarce lleva adelante este jueves su décima cuarta sesión ordinaria del año con proyectos sobre leasing, transporte, obras y salud.",
       "etiquetas": [
-        "Franco Peidón",
-        "campeón argentino",
-        "Rosario"
+        "Concejo Deliberante",
+        "Balcarce",
+        "sesion ordinaria",
+        "obras"
       ],
       "fuentesConsultadas": [
         {
-          "medio": "El Diario Balcarce",
-          "enlace": "https://eldiariobalcarce.com.ar/peidon-se-consagro-campeon-nacional-en-los-800-metros-696",
+          "medio": "Diario La Vanguardia",
+          "enlace": "https://www.diariolavanguardia.com/noticias/44885-el-concejo-deliberante-vuelve-a-sesionar-los-principales-temas-que-estaran-en-debate/",
           "fecha": null,
           "oficial": false,
-          "aporte": "Informó que Franco Peidón ganó la medalla de oro en los 800 metros en el Campeonato Nacional de Mayores en Rosario."
+          "aporte": "Detalló el orden del día de la décima cuarta sesión ordinaria del Concejo Deliberante y los expedientes en debate."
         }
       ],
       "antecedentes": [
         {
-          "id": "1bglcef",
-          "titulo": "Franco Peidón a la final de los 800 metros en los Juegos Suramericanos",
-          "fecha": "2026-09-22T20:31:49.000Z",
-          "ruta": "/nota/franco-peidon-a-la-final-de-los-800-metros-en-los-juegos-suramericanos-1bglcef"
+          "id": "1chkxhh",
+          "titulo": "El Concejo Deliberante debate tasas y obras en Balcarce",
+          "fecha": "2026-09-25T02:23:01.000Z",
+          "ruta": "/nota/concejo-deliberante-la-decimocuarta-sesion-tuvo-debates-mas-1chkxhh"
         },
         {
-          "id": "1paz2ii",
-          "titulo": "Atlanta se consagró campeón en la Liga Nacional de béisbol",
-          "fecha": "2026-09-20T22:00:04.000Z",
-          "ruta": "/nota/atlanta-se-consagro-campeon-en-la-liga-nacional-de-beisbol-1paz2ii"
+          "id": "1iv58lw",
+          "titulo": "El Concejo Deliberante debate tasas, obras y proyectos en Balcarce",
+          "fecha": "2026-09-24T12:55:31.000Z",
+          "ruta": "/nota/concejo-deliberante-este-jueves-se-desarrollara-el-decimocuarto-1iv58lw"
         },
         {
-          "id": "1ibi15p",
-          "titulo": "Kevin Gómez se consagró campeón nacional de boxeo",
-          "fecha": "2026-09-20T19:25:07.000Z",
-          "ruta": "/nota/kevin-gomez-se-consagro-campeon-nacional-de-boxeo-1ibi15p"
+          "id": "7c7bdz",
+          "titulo": "El Concejo debate eliminar tasas a taxis y remises en Balcarce",
+          "fecha": "2026-09-23T22:58:23.988Z",
+          "ruta": "/nota/taxis-y-remises-debatiran-la-eliminacion-de-tasas-mientras-el-sector-7c7bdz"
         }
       ],
       "verificacion": {
@@ -1541,7 +1544,7 @@
         "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
         "sugeridoPorIA": "MEDIA"
       },
-      "slug": "franco-peidon-gano-el-oro-nacional-en-800-metros"
+      "slug": "el-concejo-deliberante-realiza-este-jueves-su-decimocuarta-sesion"
     },
     {
       "id": "8hniuy",
@@ -1685,16 +1688,16 @@
       "slug": "el-concejo-pidio-informes-al-municipio-por-obras-publicas"
     },
     {
-      "id": "kiy3gs",
-      "titulo": "El Concejo Deliberante realiza este jueves la décima cuarta sesión ordinaria en Balcarce",
-      "copete": "El cuerpo legislativo local lleva a cabo este jueves su décima cuarta sesión ordinaria del año con un temario que incluye leasing, obras, transporte y cuestiones ambientales.",
-      "cuerpo": "Los concejales llevan adelante este jueves la décima cuarta sesión ordinaria del año en Balcarce, con el análisis de un extenso orden del día que abarca expedientes sobre servicios, obras y salud, según informó un medio local.\n\nDurante la jornada, el recinto evalúa convalidar decretos de operaciones de leasing y debate iniciativas vinculadas a taxis, remises y mejoras urbanas. Como se había informado en las reuniones previas de la semana, la agenda legislativa incluye expedientes sobre infraestructura, transporte y un pedido de informes sobre la red de agua potable.",
-      "guion": "El Concejo Deliberante realiza este jueves la décima cuarta sesión ordinaria en Balcarce",
-      "seccion": "Política",
+      "id": "33h243",
+      "titulo": "Franco Peidón gana el oro nacional en los 800 metros en Balcarce",
+      "copete": "El atleta local se consagró campeón argentino de Mayores en los 800 metros llanos tras quedarse con la medalla de oro en el campeonato disputado en Rosario.",
+      "cuerpo": "El deportista Franco Peidón obtuvo la medalla de oro en los 800 metros llanos y se consagró campeón argentino de Mayores. El logro se concretó este fin de semana en el centésimo sexto Campeonato Nacional de Mayores, desarrollado en la ciudad santafesina de Rosario.\n\nPreviamente, a finales de septiembre, el atleta local había superado la serie clasificatoria para disputar la final de la misma distancia en los Juegos Suramericanos Santa Fe 2026, llevada a cabo en el Centro de Alto Rendimiento Deportivo Pedro Candioti, tal como se había informado en su momento.",
+      "guion": "Franco Peidón gana el oro nacional en los ochocientos metros en Balcarce",
+      "seccion": "Deportes",
       "medios": [
-        "Diario La Vanguardia"
+        "El Diario Balcarce"
       ],
-      "enlace": "https://www.diariolavanguardia.com/noticias/44885-el-concejo-deliberante-vuelve-a-sesionar-los-principales-temas-que-estaran-en-debate/",
+      "enlace": "https://eldiariobalcarce.com.ar/peidon-se-consagro-campeon-nacional-en-los-800-metros-696",
       "teniaImagenLaFuente": true,
       "fecha": "2026-09-25T10:47:08.606Z",
       "sinFecha": true,
@@ -1702,62 +1705,49 @@
       "relevancia": 63,
       "local": true,
       "publicadaPor": "ia",
-      "publicadaCuando": "2026-09-25T13:02:40.310Z",
-      "temas": [
-        "concejo"
-      ],
+      "publicadaCuando": "2026-09-25T13:24:36.675Z",
+      "temas": [],
       "como": "automatica",
       "claves": [
-        "El Concejo Deliberante lleva a cabo su décima cuarta sesión ordinaria del año.",
-        "El temario incluye leasing, taxis, remises, obras y proyectos ambientales.",
-        "Se debaten iniciativas sobre salud, transporte y pedidos de informes a servicios públicos.",
-        "Tratan reconocimientos a deportistas, instituciones y establecimientos educativos."
-      ],
-      "seSabe": [
-        "Los concejales llevan adelante este jueves la décima cuarta sesión ordinaria del año, según un medio local.",
-        "El orden del día incluye decretos de leasing con Provincia Leasing S.A. con despacho unánime.",
-        "Se analizan proyectos sobre el Estadio Municipal, forestación, red de gas y reparación de un puente.",
-        "Tratan una propuesta técnica de José Luis Costa para el saneamiento de la Laguna La Brava.",
-        "Se evalúan expedientes sobre salud, campañas de prevención y el Programa de Acompañamiento Alimentario.",
-        "Incluye reconocimientos al boxeador Kevin Facundo Gómez y a distintas instituciones locales."
+        "Franco Peidón obtuvo la medalla de oro en los 800 metros llanos.",
+        "El torneo se desarrolló en la ciudad de Rosario, provincia de Santa Fe.",
+        "El atleta local alcanzó el título en el Campeonato Nacional de Mayores."
       ],
       "noConfirmado": [
         "No pudo ser contrastado de forma independiente con las fuentes consultadas."
       ],
-      "textoRedes": "El Concejo Deliberante de Balcarce lleva adelante este jueves su décima cuarta sesión ordinaria del año con proyectos sobre leasing, transporte, obras y salud.",
       "etiquetas": [
-        "Concejo Deliberante",
-        "Balcarce",
-        "sesion ordinaria",
-        "obras"
+        "Franco Peidón",
+        "campeón argentino",
+        "Rosario"
       ],
       "fuentesConsultadas": [
         {
-          "medio": "Diario La Vanguardia",
-          "enlace": "https://www.diariolavanguardia.com/noticias/44885-el-concejo-deliberante-vuelve-a-sesionar-los-principales-temas-que-estaran-en-debate/",
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/peidon-se-consagro-campeon-nacional-en-los-800-metros-696",
           "fecha": null,
           "oficial": false,
-          "aporte": "Detalló el orden del día de la décima cuarta sesión ordinaria del Concejo Deliberante y los expedientes en debate."
+          "aporte": "Informó que Franco Peidón ganó la medalla de oro en los 800 metros en el Campeonato Nacional de Mayores en Rosario."
         }
       ],
       "antecedentes": [
         {
-          "id": "1chkxhh",
-          "titulo": "El Concejo Deliberante debate tasas y obras en Balcarce",
-          "fecha": "2026-09-25T02:23:01.000Z",
-          "ruta": "/nota/concejo-deliberante-la-decimocuarta-sesion-tuvo-debates-mas-1chkxhh"
+          "id": "1bglcef",
+          "titulo": "Franco Peidón a la final de los 800 metros en los Juegos Suramericanos",
+          "fecha": "2026-09-22T20:31:49.000Z",
+          "ruta": "/nota/franco-peidon-a-la-final-de-los-800-metros-en-los-juegos-suramericanos-1bglcef"
         },
         {
-          "id": "1iv58lw",
-          "titulo": "El Concejo Deliberante debate tasas, obras y proyectos en Balcarce",
-          "fecha": "2026-09-24T12:55:31.000Z",
-          "ruta": "/nota/concejo-deliberante-este-jueves-se-desarrollara-el-decimocuarto-1iv58lw"
+          "id": "1paz2ii",
+          "titulo": "Atlanta se consagró campeón en la Liga Nacional de béisbol",
+          "fecha": "2026-09-20T22:00:04.000Z",
+          "ruta": "/nota/atlanta-se-consagro-campeon-en-la-liga-nacional-de-beisbol-1paz2ii"
         },
         {
-          "id": "7c7bdz",
-          "titulo": "El Concejo debate eliminar tasas a taxis y remises en Balcarce",
-          "fecha": "2026-09-23T22:58:23.988Z",
-          "ruta": "/nota/taxis-y-remises-debatiran-la-eliminacion-de-tasas-mientras-el-sector-7c7bdz"
+          "id": "1ibi15p",
+          "titulo": "Kevin Gómez se consagró campeón nacional de boxeo",
+          "fecha": "2026-09-20T19:25:07.000Z",
+          "ruta": "/nota/kevin-gomez-se-consagro-campeon-nacional-de-boxeo-1ibi15p"
         }
       ],
       "verificacion": {
@@ -1765,7 +1755,7 @@
         "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
         "sugeridoPorIA": "MEDIA"
       },
-      "slug": "el-concejo-deliberante-realiza-este-jueves-su-decimocuarta-sesion"
+      "slug": "franco-peidon-gano-el-oro-nacional-en-800-metros"
     },
     {
       "id": "19nfzay",
@@ -1975,91 +1965,6 @@
         "sugeridoPorIA": "MEDIA"
       },
       "slug": "presentan-proyecto-para-financiar-barrios-populares"
-    },
-    {
-      "id": "mayad0",
-      "titulo": "El autódromo Juan Manuel Fangio reabre tras una década en Balcarce",
-      "copete": "El histórico circuito vuelve a recibir actividad automovilística este fin de semana. Habrá accesos diferenciados, venta de entradas en el predio y un operativo especial de seguridad.",
-      "cuerpo": "El Autódromo Juan Manuel Fangio reabrirá sus puertas este fin de semana del 26 y 27 de septiembre para el regreso de la actividad tras más de una década sin competencias en su circuito principal. El predio abrirá al público a partir de las 8 y contará con accesos diferenciados: el público general ingresará por la calle 63, mientras que el sector de boxes y acreditaciones lo hará por la calle 79 a través del Kartódromo. La organización detalló que habrá un sentido único de circulación vehicular en el sector superior y venta de entradas disponible las 24 horas en las puertas de acceso.\n\nPara garantizar la seguridad y el orden durante las jornadas, se desplegará un operativo preventivo con la participación de la Dirección de Control y Movilidad Urbana, Gendarmería Nacional, la Policía y el Ministerio de Transporte bonaerense. Asimismo, el predio dispondrá de postas sanitarias, baños químicos, puestos de comida y sectores de estacionamiento, mientras que se recomendó a los asistentes utilizar protección solar, mantenerse hidratados y respetar las indicaciones del personal de seguridad.",
-      "guion": "El autódromo Juan Manuel Fangio reabre tras una década en Balcarce",
-      "seccion": "Automovilismo",
-      "medios": [
-        "Infórmese Primero (FM 104.9)",
-        "La Nación"
-      ],
-      "enlace": "http://www.informeseprimero.com.ar/2026/09/reapertura-del-autodromo-juan-manuel.html",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-25T02:56:25.783Z",
-      "sinFecha": false,
-      "visto": "2026-09-25T07:00:45.820Z",
-      "relevancia": 91,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": "2026-09-25T06:50:45.104Z",
-      "temas": [
-        "autodromo",
-        "fangio"
-      ],
-      "como": "automatica",
-      "seSabe": [
-        "Las puertas del autódromo abrirán desde las 8 para el público general.",
-        "El ingreso general será por la calle 63 y el acceso a boxes por la calle 79.",
-        "Habrá venta de entradas las 24 horas en la puerta de acceso.",
-        "Participarán del operativo de control Gendarmería, Policía, tránsito municipal y Transporte provincial."
-      ],
-      "noConfirmado": [
-        "Los valores específicos de las tarifas de estacionamiento."
-      ],
-      "textoRedes": "El Autódromo Juan Manuel Fangio reabre este fin de semana en Balcarce tras más de una década. Conocé los accesos, los horarios, la venta de entradas y el operativo de tránsito y seguridad dispuesto para las jornadas.",
-      "etiquetas": [
-        "autodromo",
-        "juan manuel fangio",
-        "balcarce",
-        "automovilismo",
-        "reapertura"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Infórmese Primero (FM 104.9)",
-          "enlace": "http://www.informeseprimero.com.ar/2026/09/reapertura-del-autodromo-juan-manuel.html",
-          "fecha": "2026-09-25T02:56:25.783Z",
-          "oficial": false,
-          "aporte": "Informó los horarios de apertura, los accesos diferenciados, la circulación interna, la venta de entradas, los servicios y el operativo de seguridad y tránsito."
-        },
-        {
-          "medio": "La Nación",
-          "enlace": "https://www.lanacion.com.ar/deportes/automovilismo/vuelve-el-tc-al-tradicional-autodromo-juan-manuel-fangio-la-categoria-pick-up-protagonizara-la-nid24092026/",
-          "fecha": "2026-09-24T17:08:37.000Z",
-          "oficial": false,
-          "aporte": "Indicó que la reapertura se realizará este fin de semana del 26 y 27 de septiembre tras más de una década sin actividad en el circuito principal."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "1synfb5",
-          "titulo": "Reapertura del Fangio: horarios, accesos, estacionamiento y recomendaciones para el público",
-          "fecha": "2026-09-25T00:21:50.000Z",
-          "ruta": "/nota/reapertura-del-fangio-horarios-accesos-estacionamiento-y-1synfb5"
-        },
-        {
-          "id": "lcvlqf",
-          "titulo": "Vuelve el TC al tradicional autódromo Juan Manuel Fangio: la categoría Pick Up protagonizará la reapertura del circuito",
-          "fecha": "2026-09-24T17:08:37.000Z",
-          "ruta": "/nota/vuelve-el-tc-al-tradicional-autodromo-juan-manuel-fangio-la-categoria-lcvlqf"
-        },
-        {
-          "id": "30tlwf",
-          "titulo": "Reabre el Autódromo Juan Manuel Fangio en Balcarce",
-          "fecha": "2026-09-25T00:03:22.000Z",
-          "ruta": "/nota/reabre-el-autodromo-juan-manuel-fangio-en-balcarce-30tlwf"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron dos medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "el-autodromo-juan-manuel-fangio-reabre-sus-puertas-en-balcarce"
     },
     {
       "id": "11a57qo",
@@ -3966,6 +3871,105 @@
       "slug": "carta-abierta-de-investigadora-del-inta-balcarce"
     },
     {
+      "id": "jul41g",
+      "titulo": "El Autódromo Juan Manuel Fangio reabre este viernes en Balcarce",
+      "copete": "Balcarce será escenario este fin de semana de la octava fecha del TC Pick Up. El evento incluirá la esperada reapertura del autódromo local, exhibiciones callejeras de vehículos y una conferencia oficial.",
+      "cuerpo": "Las actividades comenzarán este viernes a partir de las 14 con el corte de cinta en la pista del Autódromo Municipal Juan Manuel Fangio, un hito que marcará su reapertura oficial con la presencia de autoridades provinciales, municipales y de la ACTC. La agenda continuará a las 17 en una estación de servicio ubicada en avenida San Martín y 107, donde se realizará una firma de autógrafos con los pilotos locales y nacionales. Más tarde, desde las 18:30, las camionetas recorrerán distintos sectores de la ciudad, pasando por la avenida Gonzales Chaves, plaza Libertad y la zona del Museo Fangio, frente al cual se desarrollará la conferencia de presentación a las 19.\n\nEn lo estrictamente deportivo, la actividad competitiva comenzará el sábado a las 9 con entrenamientos y clasificaciones, mientras que el domingo se disputarán las series y finales con transmisión televisiva. Mariano Werner llega como líder del campeonato tras imponerse en dos finales y ganar la Etapa Regular, al tiempo que se confirmó la participación de los pilotos locales Santiago Mangoni, Diego Ciantini, José Ciantini y Juan José Suárez.",
+      "guion": "El Autódromo Juan Manuel Fangio reabre este viernes en Balcarce",
+      "seccion": "Automovilismo",
+      "medios": [
+        "News Balcarce (FM 91.7)",
+        "El Diario Balcarce",
+        "Municipalidad de Balcarce"
+      ],
+      "enlace": "https://newsbalcarce.com.ar/?p=30813",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-24T14:21:16.000Z",
+      "sinFecha": false,
+      "visto": "2026-09-24T15:27:47.939Z",
+      "relevancia": 93,
+      "local": true,
+      "publicadaPor": "ia",
+      "publicadaCuando": "2026-09-25T11:57:25.176Z",
+      "temas": [
+        "autodromo",
+        "fangio"
+      ],
+      "como": "automatica",
+      "claves": [
+        "El autódromo municipal reabre sus puertas este viernes con un acto oficial.",
+        "Habrá firma de autógrafos y una caravana de camionetas por las calles céntricas.",
+        "El sábado y domingo se disputarán los entrenamientos, series y finales.",
+        "Mariano Werner llega como puntero y cuatro pilotos locales competirán en la fecha."
+      ],
+      "noConfirmado": [
+        "No se detalló la nómina completa de las autoridades provinciales y de la ACTC que asistirán al corte de cinta."
+      ],
+      "textoRedes": "Balcarce se prepara para vivir un fin de semana a todo motor con la reapertura del Autódromo Juan Manuel Fangio, la llegada del TC Pick Up, caravanas de camionetas por la ciudad y la presencia de destacados pilotos locales.",
+      "etiquetas": [
+        "Autodromo Juan Manuel Fangio",
+        "TC Pick Up",
+        "Balcarce",
+        "Automovilismo"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "News Balcarce (FM 91.7)",
+          "enlace": "https://newsbalcarce.com.ar/?p=30813",
+          "fecha": "2026-09-24T14:21:16.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/balcarce-se-prepara-para-un-fin-de-semana-historico-475",
+          "fecha": "2026-09-24T12:05:53.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Infórmese Primero (FM 104.9)",
+          "enlace": "http://www.blogger.com/feeds/8495648477830064035/posts/default/4187113007910707683",
+          "fecha": "2026-09-23T15:58:01.847Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Municipalidad de Balcarce",
+          "enlace": "https://balcarce.gob.ar/2026/09/23/balcarce-se-prepara-para-vivir-un-fin-de-semana-a-puro-automovilismo/",
+          "fecha": "2026-09-23T15:49:50.000Z",
+          "oficial": true,
+          "aporte": null
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "4v2vga",
+          "titulo": "Largas filas en Balcarce por el regreso del automovilismo",
+          "fecha": "2026-09-24T13:34:15.000Z",
+          "ruta": "/nota/largas-filas-en-balcarce-por-el-regreso-del-automovilismo-4v2vga"
+        },
+        {
+          "id": "1s3g86p",
+          "titulo": "Viernes a puro motor en Balcarce con el TC Pick Up",
+          "fecha": "2026-09-24T13:09:20.000Z",
+          "ruta": "/nota/viernes-a-puro-motor-en-balcarce-con-el-tc-pick-up-1s3g86p"
+        },
+        {
+          "id": "n331xk",
+          "titulo": "Definieron horarios para el automovilismo en el Fangio",
+          "fecha": "2026-09-24T13:05:55.000Z",
+          "ruta": "/nota/definieron-horarios-para-el-automovilismo-en-el-fangio-n331xk"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo confirman tres medios independientes y Municipalidad de Balcarce.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "balcarce-se-prepara-para-vivir-un-fin-de-semana-a-fondo"
+    },
+    {
       "id": "12xkda6",
       "titulo": "Franco Peidón finaliza séptimo en los Juegos ODESUR en Balcarce",
       "copete": "El atleta balcarceño completó la final de los 800 metros en la competencia internacional desarrollada en Santa Fe y sumó experiencia en su debut.",
@@ -4779,76 +4783,6 @@
         "sugeridoPorIA": "MEDIA"
       },
       "slug": "la-escuela-tecnica-busca-poner-en-valor-su-gimnasio-y-apela-a-la"
-    },
-    {
-      "id": "8yoymu",
-      "titulo": "Shalom Lescano gana la medalla de bronce en el Nacional de Mayores en Balcarce",
-      "copete": "La atleta balcarceña Shalom Lescano obtuvo el tercer puesto en la prueba de los tres mil metros con obstáculos durante el campeonato nacional.",
-      "cuerpo": "La atleta balcarceña Shalom Lescano logró subirse nuevamente al podio en una competencia de nivel nacional al conseguir la medalla de bronce en los tres mil metros con obstáculos. El desempeño se concretó en el marco del centésimo sexto Campeonato Nacional de Mayores de Pista y Campo.\n\nEste nuevo logro se suma a las recientes actuaciones deportivas de la deportista local, quien a principios de semana había alcanzado el segundo puesto en la clasificación general y la victoria en su categoría durante la competencia de diez kilómetros disputada en la localidad de Comandante Nicanor Otamendi.",
-      "guion": "Shalom Lescano gana la medalla de bronce en el Nacional de Mayores en Balcarce",
-      "seccion": "Deportes",
-      "medios": [
-        "El Diario Balcarce"
-      ],
-      "enlace": "https://eldiariobalcarce.com.ar/en-los-3000-metros-con-obstaculos-obtuvo-medalla-de-bronce-shalom-lescano-330",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-23T03:05:01.594Z",
-      "sinFecha": true,
-      "visto": "2026-09-23T03:05:01.594Z",
-      "relevancia": 63,
-      "local": true,
-      "publicadaPor": "ia",
-      "publicadaCuando": "2026-09-25T13:24:36.675Z",
-      "temas": [],
-      "como": "automatica",
-      "seSabe": [
-        "Shalom Lescano logró el tercer puesto en los tres mil metros con obstáculos.",
-        "La competencia fue el centésimo sexto Campeonato Nacional de Mayores de Pista y Campo."
-      ],
-      "noConfirmado": [
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "La atleta balcarceña Shalom Lescano obtuvo la medalla de bronce en los tres mil metros con obstáculos durante el centésimo sexto Campeonato Nacional de Mayores de Pista y Campo.",
-      "etiquetas": [
-        "Shalom Lescano",
-        "Balcarce",
-        "Campeonato Nacional"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "El Diario Balcarce",
-          "enlace": "https://eldiariobalcarce.com.ar/en-los-3000-metros-con-obstaculos-obtuvo-medalla-de-bronce-shalom-lescano-330",
-          "fecha": null,
-          "oficial": false,
-          "aporte": "Informó que la atleta balcarceña Shalom Lescano obtuvo la medalla de bronce en los tres mil metros con obstáculos en el Campeonato Nacional de Mayores de Pista y Campo."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "1msbj8p",
-          "titulo": "Gabriel Robledo gana medalla de bronce en Mar del Plata",
-          "fecha": "2026-09-23T03:05:01.594Z",
-          "ruta": "/nota/bronce-para-gabriel-robledo-en-el-provincial-de-pista-y-campo-1msbj8p"
-        },
-        {
-          "id": "8qlok6",
-          "titulo": "Shalom Lescano fue segunda en los diezK de Otamendi",
-          "fecha": "2026-09-22T20:23:44.000Z",
-          "ruta": "/nota/shalom-lescano-fue-segunda-en-los-diezk-de-otamendi-8qlok6"
-        },
-        {
-          "id": "1ls3nd7",
-          "titulo": "Podio para Shalom Lescano",
-          "fecha": "2026-09-22T13:43:06.000Z",
-          "ruta": "/nota/podio-para-shalom-lescano-1ls3nd7"
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "medalla-de-bronce-para-shalom-lescano-en-atletismo"
     },
     {
       "id": "1x87c94",
@@ -5665,6 +5599,76 @@
       "slug": "bronce-para-gabriel-robledo-en-el-provincial-de-pista-y-campo"
     },
     {
+      "id": "8yoymu",
+      "titulo": "Shalom Lescano gana la medalla de bronce en el Nacional de Mayores en Balcarce",
+      "copete": "La atleta balcarceña Shalom Lescano obtuvo el tercer puesto en la prueba de los tres mil metros con obstáculos durante el campeonato nacional.",
+      "cuerpo": "La atleta balcarceña Shalom Lescano logró subirse nuevamente al podio en una competencia de nivel nacional al conseguir la medalla de bronce en los tres mil metros con obstáculos. El desempeño se concretó en el marco del centésimo sexto Campeonato Nacional de Mayores de Pista y Campo.\n\nEste nuevo logro se suma a las recientes actuaciones deportivas de la deportista local, quien a principios de semana había alcanzado el segundo puesto en la clasificación general y la victoria en su categoría durante la competencia de diez kilómetros disputada en la localidad de Comandante Nicanor Otamendi.",
+      "guion": "Shalom Lescano gana la medalla de bronce en el Nacional de Mayores en Balcarce",
+      "seccion": "Deportes",
+      "medios": [
+        "El Diario Balcarce"
+      ],
+      "enlace": "https://eldiariobalcarce.com.ar/en-los-3000-metros-con-obstaculos-obtuvo-medalla-de-bronce-shalom-lescano-330",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-23T03:05:01.594Z",
+      "sinFecha": true,
+      "visto": "2026-09-23T03:05:01.594Z",
+      "relevancia": 63,
+      "local": true,
+      "publicadaPor": "ia",
+      "publicadaCuando": "2026-09-25T13:24:36.675Z",
+      "temas": [],
+      "como": "automatica",
+      "seSabe": [
+        "Shalom Lescano logró el tercer puesto en los tres mil metros con obstáculos.",
+        "La competencia fue el centésimo sexto Campeonato Nacional de Mayores de Pista y Campo."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "La atleta balcarceña Shalom Lescano obtuvo la medalla de bronce en los tres mil metros con obstáculos durante el centésimo sexto Campeonato Nacional de Mayores de Pista y Campo.",
+      "etiquetas": [
+        "Shalom Lescano",
+        "Balcarce",
+        "Campeonato Nacional"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/en-los-3000-metros-con-obstaculos-obtuvo-medalla-de-bronce-shalom-lescano-330",
+          "fecha": null,
+          "oficial": false,
+          "aporte": "Informó que la atleta balcarceña Shalom Lescano obtuvo la medalla de bronce en los tres mil metros con obstáculos en el Campeonato Nacional de Mayores de Pista y Campo."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1msbj8p",
+          "titulo": "Gabriel Robledo gana medalla de bronce en Mar del Plata",
+          "fecha": "2026-09-23T03:05:01.594Z",
+          "ruta": "/nota/bronce-para-gabriel-robledo-en-el-provincial-de-pista-y-campo-1msbj8p"
+        },
+        {
+          "id": "8qlok6",
+          "titulo": "Shalom Lescano fue segunda en los diezK de Otamendi",
+          "fecha": "2026-09-22T20:23:44.000Z",
+          "ruta": "/nota/shalom-lescano-fue-segunda-en-los-diezk-de-otamendi-8qlok6"
+        },
+        {
+          "id": "1ls3nd7",
+          "titulo": "Podio para Shalom Lescano",
+          "fecha": "2026-09-22T13:43:06.000Z",
+          "ruta": "/nota/podio-para-shalom-lescano-1ls3nd7"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "medalla-de-bronce-para-shalom-lescano-en-atletismo"
+    },
+    {
       "id": "jul4zc",
       "titulo": "Reinauguran el Autodromo Municipal Juan Manuel Fangio en Balcarce",
       "copete": "El autódromo Juan Manuel Fangio reabre sus puertas este viernes en una ceremonia oficial. El evento marca un hito histórico para el automovilismo local.",
@@ -5806,8 +5810,8 @@
     }
   ],
   "secciones": [
-    "Balcarce",
     "Automovilismo",
+    "Balcarce",
     "Deportes",
     "Política",
     "Policiales",
@@ -5828,14 +5832,14 @@
       "cuantas": 14
     },
     {
-      "nombre": "El Concejo Deliberante",
-      "ranura": "concejo",
+      "nombre": "TC Pick Up",
+      "ranura": "tc-pick-up",
       "cuantas": 7
     },
     {
-      "nombre": "TC Pick Up",
-      "ranura": "tc-pick-up",
-      "cuantas": 6
+      "nombre": "El Concejo Deliberante",
+      "ranura": "concejo",
+      "cuantas": 7
     },
     {
       "nombre": "Ferroviarios",
@@ -5850,10 +5854,10 @@
   ],
   "clima": {
     "ahora": {
-      "temp": 17,
-      "sensacion": 14,
-      "humedad": 52,
-      "viento": 20,
+      "temp": 16,
+      "sensacion": 13,
+      "humedad": 55,
+      "viento": 19,
       "rumbo": "S",
       "cielo": "Parcialmente nublado",
       "esDeDia": true
@@ -6273,10 +6277,10 @@
       "motivo": "parece promoción, no noticia: \"sortea\""
     },
     {
-      "id": "1c0r59y",
-      "titulo": "Condenaron a 26 años de prisión al asesino del ex Puma…",
-      "seccion": "País",
-      "motivo": "necesita ojo humano: \"asesinato\""
+      "id": "c4k7b7",
+      "titulo": null,
+      "seccion": "Policiales",
+      "motivo": "necesita ojo humano: \"acusado\""
     },
     {
       "id": "dzqios",
@@ -6285,10 +6289,10 @@
       "motivo": "sección general, sin regla verde"
     },
     {
-      "id": "c4k7b7",
-      "titulo": null,
-      "seccion": "Policiales",
-      "motivo": "necesita ojo humano: \"acusado\""
+      "id": "vo3j62",
+      "titulo": "Se conoció la sentencia del crimen de Federico Martín…",
+      "seccion": "País",
+      "motivo": "necesita ojo humano: \"asesinato\""
     },
     {
       "id": "1jktaf1",
@@ -6303,12 +6307,6 @@
       "motivo": "necesita ojo humano: \"denunció\""
     },
     {
-      "id": "ljypef",
-      "titulo": "Bill Gates advierte que la IA podría causar “mil millones…",
-      "seccion": "Tecnología",
-      "motivo": "necesita ojo humano: \"muerte\""
-    },
-    {
       "id": "45w2kj",
       "titulo": "Javier Milei y sus medidas, en vivo: “Netanyahu es uno de…",
       "seccion": "Política",
@@ -6319,6 +6317,12 @@
       "titulo": "Camioneros mantiene bloqueada desde hace 48 horas una…",
       "seccion": "Política",
       "motivo": "necesita ojo humano: \"denuncia\""
+    },
+    {
+      "id": "k6g2m5",
+      "titulo": "Se entregaron 380 escrituras, 77 netbooks y Lobería…",
+      "seccion": "Política",
+      "motivo": "necesita ojo humano: \"hospital\""
     },
     {
       "id": "as9m30",
@@ -6333,10 +6337,10 @@
       "motivo": "necesita ojo humano: \"acusado\""
     },
     {
-      "id": "mke70t",
-      "titulo": "El represor Christian von Wernich pidió un permiso…",
-      "seccion": "Política",
-      "motivo": "necesita ojo humano: \"detenido\""
+      "id": "1c0r59y",
+      "titulo": "Condenaron a 26 y 19 años de prisión a los asesinos del ex…",
+      "seccion": "País",
+      "motivo": "necesita ojo humano: \"asesinato\""
     },
     {
       "id": "ybpsst",
@@ -6345,29 +6349,23 @@
       "motivo": "necesita ojo humano: \"murió\""
     },
     {
-      "id": "vo3j62",
-      "titulo": "Se conoció la sentencia del crimen de Federico Martín…",
-      "seccion": "País",
-      "motivo": "necesita ojo humano: \"asesinato\""
-    },
-    {
       "id": "1xna9h3",
       "titulo": "Murió Marcos Franchi, histórico representante de Maradona…",
       "seccion": "Deportes",
       "motivo": "necesita ojo humano: \"hospital\""
     },
     {
-      "id": "qkjjp7",
-      "titulo": "Quién es Michael Chu, el misterioso hombre detrás de una…",
-      "seccion": "País",
-      "motivo": "necesita ojo humano: \"acusado\""
+      "id": "1d8y9ok",
+      "titulo": "Los precios del petróleo caen ante la esperanza de una…",
+      "seccion": "Política",
+      "motivo": "internacional: sin relación con Balcarce"
     },
     {
-      "id": "14d0hqw",
-      "titulo": "Quiniela de Santa Fe: resultado del sorteo de la Matutina…",
-      "seccion": "País",
-      "motivo": "parece promoción, no noticia: \"sorteo\""
+      "id": "yjljhn",
+      "titulo": "Kicillof en Lobería: “Frente a la mentira y el abandono…",
+      "seccion": "Política",
+      "motivo": "necesita ojo humano: \"hospital\""
     }
   ],
-  "esperandoCuerpo": 48
+  "esperandoCuerpo": 50
 }
