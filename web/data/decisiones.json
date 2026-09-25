@@ -1,5 +1,5 @@
 {
-  "exportado": "2026-09-25T07:11:08.334Z",
+  "exportado": "2026-09-25T07:22:05.669Z",
   "decisiones": {
     "1951120": {
       "estado": "automatica",
@@ -10952,6 +10952,236 @@
       "deIA": null,
       "por": null,
       "cuando": "2026-09-25T07:11:08.302Z"
+    },
+    "pktre7": {
+      "estado": "automatica",
+      "titulo": null,
+      "copete": null,
+      "cuerpo": null,
+      "guion": null,
+      "deIA": null,
+      "por": null,
+      "cuando": "2026-09-25T07:21:20.375Z"
+    },
+    "8qdpz7": {
+      "estado": "automatica",
+      "titulo": "Colapinto finaliza undécimo en la segunda práctica en Bakú",
+      "copete": "El piloto argentino mejoró su rendimiento en el Gran Premio de Azerbaiyán de Fórmula 1 y escaló posiciones tras el primer entrenamiento.",
+      "cuerpo": "Franco Colapinto completó la segunda práctica libre del Gran Premio de Azerbaiyán en el puesto once dentro del circuito callejero de Bakú. De esta manera, el piloto de la escudería Alpine mejoró la décima octava colocación que había conseguido horas antes durante la primera sesión de entrenamientos de la décima quinta fecha del campeonato.\n\nEn la actividad inicial desarrollada este jueves en el trazado callejero, el británico George Russell, representante del equipo Mercedes, se había quedado con el mejor tiempo de la tanda. La competencia forma parte del calendario anual de veintidós fechas de la máxima categoría del automovilismo mundial.",
+      "guion": "Colapinto finaliza undecimo en la segunda practica en Baku",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T07:21:23.500Z",
+      "claves": [
+        "Colapinto fue undécimo en la segunda práctica",
+        "El piloto había quedado decimoctavo en el primer entrenamiento",
+        "La actividad se desarrolla en el circuito callejero de Bakú",
+        "El Gran Premio de Azerbaiyán es la décima quinta fecha del año"
+      ],
+      "seSabe": [
+        "Franco Colapinto terminó en el puesto 11 la segunda práctica libre en Bakú, según las fuentes.",
+        "El piloto había finalizado en la posición 18 en el primer entrenamiento de la jornada, de acuerdo con los registros.",
+        "George Russell fue el más rápido de la primera sesión, según la información oficial."
+      ],
+      "noConfirmado": [
+        "No se detalla quién registró el mejor tiempo en la segunda práctica libre.",
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Franco Colapinto finalizó en el undécimo puesto durante la segunda práctica libre del Gran Premio de Azerbaiyán en Bakú y mejoró su desempeño respecto al primer entrenamiento de la decimoquinta fecha de la Fórmula 1.",
+      "etiquetas": [
+        "Colapinto",
+        "Formula 1",
+        "Gran Premio de Azerbaiyán",
+        "Bakú"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/deportes/automovilismo/franco-colapinto-en-vivo-nid24092026/",
+          "fecha": "2026-09-24T13:29:49.000Z",
+          "oficial": false,
+          "aporte": "Informó que Colapinto terminó undécimo en la segunda práctica y mejoró su rendimiento."
+        },
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/deportes/automovilismo/colapinto-termino-18-en-la-primera-practica-del-gp-de-azerbaiyan-y-el-mas-rapido-fue-russell-nid24092026/",
+          "fecha": "2026-09-24T12:56:04.000Z",
+          "oficial": false,
+          "aporte": "Detalló el resultado del primer entrenamiento y el mejor tiempo de Russell."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "y8hgj",
+          "titulo": "Colapinto terminó 18 en la primera práctica del GP de Azerbaiyán y el más rápido fue Russell",
+          "fecha": "2026-09-24T10:07:22.000Z",
+          "ruta": "/nota/colapinto-termino-18-en-la-primera-practica-del-gp-de-azerbaiyan-y-el-y8hgj"
+        },
+        {
+          "id": "1xoec9u",
+          "titulo": "GP de Azerbaijan: Colapinto quedó 18.°en la primera práctica de F1",
+          "fecha": "2026-09-24T09:42:32.000Z",
+          "ruta": "/nota/gp-de-azerbaijan-colapinto-quedo-18-en-la-primera-practica-de-f1-1xoec9u"
+        },
+        {
+          "id": "p2n4gt",
+          "titulo": "F1 GP de Azerbaiyán , EN VIVO: cómo salió Colapinto hoy, resultados de las practicas libres en Bakú y dónde ver la Fórmula 1",
+          "fecha": "2026-09-24T03:01:36.000Z",
+          "ruta": "/nota/f1-gp-de-azerbaiyan-en-vivo-como-salio-colapinto-hoy-resultados-de-p2n4gt"
+        }
+      ],
+      "verificacion": {
+        "nivel": "BAJA",
+        "porque": "Hay datos centrales de la nota que no pudieron confirmarse con las fuentes consultadas.",
+        "sugeridoPorIA": "ALTA"
+      }
+    },
+    "nt4ftf": {
+      "estado": "automatica",
+      "titulo": null,
+      "copete": null,
+      "cuerpo": null,
+      "guion": null,
+      "deIA": null,
+      "por": null,
+      "cuando": "2026-09-25T07:21:26.138Z"
+    },
+    "1mwwyzx": {
+      "estado": "automatica",
+      "titulo": null,
+      "copete": null,
+      "cuerpo": null,
+      "guion": null,
+      "deIA": null,
+      "por": null,
+      "cuando": "2026-09-25T07:21:28.740Z"
+    },
+    "1ukr235": {
+      "estado": "automatica",
+      "titulo": null,
+      "copete": null,
+      "cuerpo": null,
+      "guion": null,
+      "deIA": null,
+      "por": null,
+      "cuando": "2026-09-25T07:21:38.262Z"
+    },
+    "1fqoh7r": {
+      "estado": "automatica",
+      "titulo": null,
+      "copete": null,
+      "cuerpo": null,
+      "guion": null,
+      "deIA": null,
+      "por": null,
+      "cuando": "2026-09-25T07:21:40.782Z"
+    },
+    "eqq9fi": {
+      "estado": "automatica",
+      "titulo": null,
+      "copete": null,
+      "cuerpo": null,
+      "guion": null,
+      "deIA": null,
+      "por": null,
+      "cuando": "2026-09-25T07:21:46.349Z"
+    },
+    "1946rka": {
+      "estado": "automatica",
+      "titulo": null,
+      "copete": null,
+      "cuerpo": null,
+      "guion": null,
+      "deIA": null,
+      "por": null,
+      "cuando": "2026-09-25T07:21:51.332Z"
+    },
+    "qh0q32": {
+      "estado": "automatica",
+      "titulo": null,
+      "copete": null,
+      "cuerpo": null,
+      "guion": null,
+      "deIA": null,
+      "por": null,
+      "cuando": "2026-09-25T07:21:53.568Z"
+    },
+    "45w2kj": {
+      "estado": "automatica",
+      "titulo": null,
+      "copete": null,
+      "cuerpo": null,
+      "guion": null,
+      "deIA": null,
+      "por": null,
+      "cuando": "2026-09-25T07:21:57.449Z"
+    },
+    "1wrjo98": {
+      "estado": "automatica",
+      "titulo": "Chaco suspende las primarias provinciales y fija los comicios",
+      "copete": "La Legislatura chaqueña suspendió las elecciones primarias a instancias del oficialismo y fijó los comicios generales para septiembre.",
+      "cuerpo": "La Legislatura de la provincia de Chaco decidió suspender las Primarias Abiertas, Simultáneas y Obligatorias para el próximo año. La medida fue impulsada por el oficialismo local y adelanta los tiempos electorales provinciales.\n\nTras esta modificación legislativa, los comicios generales se llevarán a cabo entre mediados y fines de septiembre. La fecha establecida se ubica con casi un mes de anticipación en comparación con los plazos habituales del calendario electoral.",
+      "guion": "Chaco suspende las primarias provinciales y fija los comicios",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T07:22:02.773Z",
+      "claves": [
+        "La Legislatura chaqueña suspendió las PASO para el próximo año.",
+        "La decisión se tomó a instancias del oficialismo provincial.",
+        "Las elecciones generales se realizarán entre mediados y fines de septiembre."
+      ],
+      "seSabe": [
+        "La Legislatura de Chaco suspendió las PASO provinciales para el año próximo a instancias del oficialismo.",
+        "Las elecciones generales provinciales se programaron entre mediados y fines de septiembre, con casi un mes de anticipación."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "La Legislatura de Chaco suspendió las primarias provinciales para el próximo año a instancias del oficialismo y fijó las elecciones generales entre mediados y fines de septiembre.",
+      "etiquetas": [
+        "Chaco",
+        "PASO",
+        "elecciones",
+        "Legislatura"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/politica/2026/09/25/internas-abiertas-o-congreso-para-definir-listas-chaco-sera-el-laboratorio-del-peronismo-si-milei-logra-cancelar-las-paso-2027/",
+          "fecha": "2026-09-25T04:33:32.000Z",
+          "oficial": false,
+          "aporte": "Informó que la Legislatura chaqueña suspendió las PASO y fijó las elecciones generales para septiembre de manera anticipada."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "3g9efc",
+          "titulo": "Javier Milei en Estados Unidos: “Escuchan hoy al peronismo y es como si nos hubieran entregado Suiza, es irritante”",
+          "fecha": "2026-09-23T21:38:46.000Z",
+          "ruta": "/nota/javier-milei-en-estados-unidos-escuchan-hoy-al-peronismo-y-es-como-si-3g9efc"
+        },
+        {
+          "id": "1j01p83",
+          "titulo": "Javier Milei y sus medidas, en vivo: el Presidente consideró como “matices de opinión” las internas en el Ejecutivo",
+          "fecha": "2026-09-22T01:40:36.000Z",
+          "ruta": "/nota/javier-milei-y-sus-medidas-en-vivo-el-presidente-considero-como-1j01p83"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "1cwdhov": {
+      "estado": "automatica",
+      "titulo": null,
+      "copete": null,
+      "cuerpo": null,
+      "guion": null,
+      "deIA": null,
+      "por": null,
+      "cuando": "2026-09-25T07:22:05.608Z"
     }
   },
   "horarios": {
