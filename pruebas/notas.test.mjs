@@ -403,6 +403,23 @@ test('con los cupos del 25/09, Balcarce es la sección con más notas', () => {
   for (const s of Object.keys(hoy)) assert.ok(por[s] > 0, `${s} quedó vacía`);
 });
 
+test('semana del autódromo y de F1 (25/09 a la madrugada): Balcarce sigue primera', () => {
+  const hoy = {
+    Balcarce: { local: 24, afuera: 0 },
+    Automovilismo: { local: 16, afuera: 12 },
+    Política: { local: 12, afuera: 5 },
+  };
+  const portada = Object.entries(hoy).flatMap(([seccion, { local, afuera }]) => [
+    ...Array.from({ length: local }, (_, i) => ({ id: `${seccion}-l${i}`, seccion, semaforo: 'verde', local: true, relevancia: 70 })),
+    ...Array.from({ length: afuera }, (_, i) => ({ id: `${seccion}-a${i}`, seccion, semaforo: 'verde', local: false, relevancia: 60 - i })),
+  ]);
+  aplicarCupos(portada);
+  const por = {};
+  for (const n of portada.filter((x) => x.semaforo === 'verde')) por[n.seccion] = (por[n.seccion] ?? 0) + 1;
+  assert.ok(por.Balcarce > por.Automovilismo, JSON.stringify(por));
+  assert.ok(por.Automovilismo >= 16 + 1, 'lo del autódromo sale entero y algo de la F1 también');
+});
+
 test('el cupo no toca lo que ya esperaba', () => {
   const portada = [{ id: 'x', seccion: 'Deportes', semaforo: 'amarillo', local: false, relevancia: 99, motivo: 'otro' }];
   aplicarCupos(portada);

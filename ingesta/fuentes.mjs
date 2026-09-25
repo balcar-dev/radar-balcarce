@@ -790,12 +790,15 @@ export const PISO_POR_DEFECTO = 50;
 // sigue sin cupo, como siempre: ese día habrían quedado 23 + 12 = 35.
 // Tecnología y Política bajan de 12 a 8: ese día tenían 6 y 4 de afuera, así
 // que no se vacían, pero un día de mucha noticia nacional ya no tapan lo local.
+// Automovilismo bajó otra vez, de 12 a 6, esa misma madrugada: con la portada
+// de 72 h quedaban 16 locales (semana del autódromo) + 12 de afuera (semana de
+// F1) = 28, contra 24 de Balcarce. Con 6, las mejores de la F1 siguen saliendo.
 export const CUPO_DE_AFUERA = {
   Deportes: 10,
   Economía: 12,
   Tecnología: 8,
   Política: 8,
   Policiales: 8,
-  Automovilismo: 12,
+  Automovilismo: 6,
 };
 export const CUPO_POR_DEFECTO = 15;

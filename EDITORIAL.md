@@ -26,7 +26,7 @@ Son once secciones (`web/lib/datos.js`); diez publican solas
 que llega salga directo: hay una segunda red de seguridad que corta por
 palabras, no por sección (ver abajo). Y lo que no es de Balcarce tiene un piso
 de puntaje y un cupo por sección (`PISO_DE_AFUERA` y `CUPO_DE_AFUERA`):
-desde el 25/09, Automovilismo 12, Tecnología 8, Política 8, Policiales 8,
+desde el 25/09, Automovilismo 6 (en semana de autódromo y F1 igual quedaba por encima de Balcarce con 12), Tecnología 8, Política 8, Policiales 8,
 Deportes 10, Economía 12 y el resto 15. Lo de Balcarce no tiene cupo.
 
 **Política y Policiales: en la web salen solas, en las redes no.** Hoy, en la
