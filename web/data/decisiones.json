@@ -1,5 +1,5 @@
 {
-  "exportado": "2026-09-25T14:02:59.690Z",
+  "exportado": "2026-09-25T14:13:23.329Z",
   "decisiones": {
     "1951120": {
       "estado": "automatica",
@@ -17534,6 +17534,459 @@
           "titulo": "Javier Milei reclamó al Reino Unido por Malvinas y calificó de organismo \"inútil\" a las Naciones Unidas",
           "fecha": "2026-09-23T16:35:12.000Z",
           "ruta": "/nota/javier-milei-reclamo-al-reino-unido-por-malvinas-y-califico-de-l2710w"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "1mkm1na": {
+      "estado": "automatica",
+      "titulo": "El autódromo Juan Manuel Fangio abre sus puertas en Balcarce",
+      "copete": "El histórico circuito serrano recibe nuevamente al público en la previa de la competencia de TC Pick Up, tras casi quince años sin actividad oficial.",
+      "cuerpo": "El autódromo Juan Manuel Fangio de Balcarce abrió sus puertas este viernes en la antesala de la competencia de TC Pick Up. Desde las primeras horas, los fanáticos comenzaron a llegar al predio y a ocupar distintos sectores de la sierra La Barrosa para vivir el regreso de la actividad oficial, que no se registraba desde noviembre de 2011.\n\nLa reapertura del circuito demandó años de obras y trabajos de recuperación. Como se había informado, el fin de semana del 26 y 27 de septiembre marcará el retorno de las categorías nacionales a la ciudad, con la presencia del piloto local Juan José Suárez compitiendo en TC Pista Pick Up.\n\nEste regreso significa para los balcarceños la recuperación de uno de sus escenarios más emblemáticos, estrechamente ligado a la identidad deportiva y turística local. Las autoridades municipales habían solicitado prestar especial atención a los accesos y al sentido de circulación establecido para el ingreso al predio.",
+      "guion": "El autódromo Juan Manuel Fangio abre sus puertas en Balcarce",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T14:13:23.260Z",
+      "textoRedes": "El autódromo Juan Manuel Fangio volvió a abrir sus puertas en Balcarce este viernes después de casi quince años sin actividad oficial, en la previa de la llegada de las TC Pick Up y el fin de semana de competencias nacionales.",
+      "etiquetas": [
+        "Autodromo Juan Manuel Fangio",
+        "Balcarce",
+        "TC Pick Up",
+        "Automovilismo"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Diario La Vanguardia",
+          "enlace": "https://www.diariolavanguardia.com/noticias/44903-dia-historico-el-autodromo-juan-manuel-fangio-volvio-a-abrir-sus-puertas-despues-de-casi-15-anos/",
+          "fecha": "2026-09-25T00:03:22.000Z",
+          "oficial": false,
+          "aporte": "Detalló la llegada de los fanáticos al circuito y el significado histórico del regreso tras casi quince años sin actividad."
+        },
+        {
+          "medio": "Municipalidad de Balcarce",
+          "enlace": "https://balcarce.gob.ar/2026/09/24/reapertura-del-autodromo-juan-manuel-fangio-informacion-para-los-asistentes/",
+          "fecha": "2026-09-25T00:03:22.000Z",
+          "oficial": true,
+          "aporte": "Informó el horario de apertura del predio y solicitó atención a los accesos y la circulación."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "gfro59",
+          "titulo": "El autódromo Juan Manuel Fangio vuelve a recibir automovilismo nacional en Balcarce",
+          "fecha": "2026-09-24T19:48:00.000Z",
+          "ruta": "/nota/el-autodromo-juan-manuel-fangio-vuelve-a-recibir-automovilismo-gfro59"
+        },
+        {
+          "id": "1b3p6ze",
+          "titulo": "Juan José Suárez corre en el Autódromo Juan Manuel Fangio en Balcarce",
+          "fecha": "2026-09-24T19:08:06.000Z",
+          "ruta": "/nota/suarez-acelera-en-casa-es-un-sueno-correr-en-balcarce-1b3p6ze"
+        },
+        {
+          "id": "lcvlqf",
+          "titulo": "Vuelve el TC al tradicional autódromo Juan Manuel Fangio: la categoría Pick Up protagonizará la reapertura del circuito",
+          "fecha": "2026-09-24T17:08:37.000Z",
+          "ruta": "/nota/vuelve-el-tc-al-tradicional-autodromo-juan-manuel-fangio-la-categoria-lcvlqf"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo informaron Municipalidad de Balcarce y un medio independiente.",
+        "sugeridoPorIA": "ALTA"
+      }
+    },
+    "1cz64fw": {
+      "estado": "automatica",
+      "titulo": "Rodrigo De Paul pierde su lugar en la selección argentina",
+      "copete": "El mediocampista dejó de formar parte del núcleo estable del equipo que dirige Lionel Scaloni. La decisión responde a cuestiones futbolísticas y al nivel de competencia tras su paso al fútbol de Estados Unidos.",
+      "cuerpo": "El mediocampista Rodrigo De Paul, uno de los jugadores con más presencias y pilar en los cuatro títulos de la era de Lionel Scaloni, quedó fuera de las prioridades del cuerpo técnico en la nueva etapa de la selección argentina. Durante la primera práctica abierta posterior al Mundial, el futbolista no participó y se evidenció la pérdida de su lugar en el equipo principal. El cambio en la consideración comenzó a gestarse durante el último año, luego de su salida del Atlético de Madrid para sumarse al Inter Miami. Desde el cuerpo técnico evaluaron que su rendimiento en la liga estadounidense disminuyó el roce competitivo necesario, fundamental para un jugador que basa su juego en el despliegue y la intensidad física, aunque su regreso dependerá de que logre levantar su nivel.\n\nEl plantel nacional transcurre esta etapa de preparación con la ausencia de otras figuras como Lionel Messi, quien se sumará para la despedida del seis de octubre frente a Benín, y Nicolás Otamendi, presente solo para ese homenaje, además de Leandro Paredes y Nahuel Molina por suspensiones. Como antecedente de la actual preparación, el cuerpo técnico había asistido días atrás a presenciar la victoria del seleccionado en los Juegos Suramericanos y mantuvo reuniones vinculadas a la conformación del plantel para la doble fecha FIFA.",
+      "guion": "Rodrigo De Paul pierde su lugar en la selección argentina",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T14:13:23.260Z",
+      "claves": [
+        "Rodrigo De Paul quedó fuera de las prioridades de Lionel Scaloni en la selección.",
+        "El cuerpo técnico evaluó que su paso al fútbol de Estados Unidos afectó su roce competitivo.",
+        "La ausencia del mediocampista se registró en la primera práctica abierta posterior al Mundial.",
+        "Su regreso al equipo dependerá de que logre recuperar su nivel de juego."
+      ],
+      "seSabe": [
+        "Rodrigo De Paul dejó de formar parte del núcleo estable de la selección argentina, según informó el medio periodístico.",
+        "Lionel Scaloni y su cuerpo técnico comenzaron a evaluar otras opciones para su puesto, de acuerdo con la información difundida.",
+        "El futbolista fue transferido del Atlético de Madrid al Inter Miami en el último año.",
+        "Jugadores como Lionel Messi, Nicolás Otamendi, Leandro Paredes y Nahuel Molina tampoco formaron parte de la práctica por diversos motivos."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Rodrigo De Paul dejó de formar parte del núcleo estable de la selección argentina bajo la conducción de Lionel Scaloni. El cuerpo técnico busca otras opciones para su puesto debido a su actual nivel de competencia.",
+      "etiquetas": [
+        "Selección Argentina",
+        "Rodrigo De Paul",
+        "Lionel Scaloni",
+        "Fútbol"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/deportes/futbol/rodrigo-de-paul-perdio-su-lugar-en-la-seleccion-argentina-las-razones-y-las-opciones-que-prueba-nid25092026/",
+          "fecha": "2026-09-25T14:01:48.000Z",
+          "oficial": false,
+          "aporte": "Detalló la salida de Rodrigo De Paul de la selección argentina y las razones vinculadas a su rendimiento y su paso al fútbol de Estados Unidos."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "pqjedg",
+          "titulo": "Lionel Scaloni, Aimar, Samuel y todo el cuerpo técnico de la Selección vieron la victoria de Argentina sobre Uruguay en los Suramericanos",
+          "fecha": "2026-09-19T19:10:27.000Z",
+          "ruta": "/nota/lionel-scaloni-aimar-samuel-y-todo-el-cuerpo-tecnico-de-la-seleccion-pqjedg"
+        },
+        {
+          "id": "n1lrk8",
+          "titulo": "Lionel Scaloni, sobre su continuidad en la Selección Argentina: \"Lo intentaremos, estemos o no nosotros\"",
+          "fecha": "2026-09-19T12:51:15.000Z",
+          "ruta": "/nota/lionel-scaloni-sobre-su-continuidad-en-la-seleccion-argentina-lo-n1lrk8"
+        },
+        {
+          "id": "1mqxijp",
+          "titulo": "Lionel Scaloni y su cuerpo técnico cenan en Belgrano",
+          "fecha": "2026-09-25T13:00:54.000Z",
+          "ruta": "/nota/lionel-scaloni-y-su-cuerpo-tecnico-cenan-en-belgrano-1mqxijp"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "163jy6m": {
+      "estado": "automatica",
+      "titulo": "Cristian Romero será el nuevo capitán de la Selección Argentina",
+      "copete": "El director técnico Lionel Scaloni confirmó que el defensor heredará la cinta de liderazgo tras la despedida de Lionel Messi.",
+      "cuerpo": "En la previa de los amistosos frente a Bolivia, Burkina Faso y Benín, el director técnico Lionel Scaloni confirmó que Cristian Romero será quien herede la cinta de capitán de la Selección Argentina. La decisión se oficializa de cara a la despedida de Lionel Messi, programada para el 6 de octubre frente a Benín.\n\nAdemás, Scaloni destacó que el futbolista cuenta con la capacidad para liderar al grupo y aportar su voz de mando desde la defensa.\n\nHasta el momento, el jugador ya portó la capitanía en tres oportunidades: frente a Chile por Eliminatorias en 2025, ante Venezuela en un amistoso de ese mismo año y contra Mauritania en la previa del Mundial 2026. A su vez, el cuerpo técnico evalúa alternativas futuras a la espera de definir la continuidad del entrenador para el año 2027.",
+      "guion": "Cristian Romero será el nuevo capitán de la Selección Argentina",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T14:13:23.260Z",
+      "claves": [
+        "Lionel Scaloni confirmó que Cristian Romero será el nuevo capitán de la Selección.",
+        "El anuncio se realizó en la previa de los próximos encuentros amistosos.",
+        "El defensor ya lució la cinta en tres ocasiones anteriores.",
+        "La decisión se da en el marco de la despedida oficial de Lionel Messi."
+      ],
+      "noConfirmado": [
+        "Resta confirmar la continuidad del director técnico Lionel Scaloni para el año 2027.",
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El cuerpo técnico de la Selección Argentina confirmó quién será el encargado de heredar la cinta de capitán tras la despedida oficial de Lionel Messi.",
+      "etiquetas": [
+        "Selección Argentina",
+        "Lionel Scaloni",
+        "Cristian Romero",
+        "Lionel Messi",
+        "Fútbol"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Eco de Tandil",
+          "enlace": "https://www.eleco.com.ar/deportes/scaloni-confirmo-al-futuro-capitan-de-la-seleccion-argentina-quien-sera",
+          "fecha": "2026-09-25T12:23:14.000Z",
+          "oficial": false,
+          "aporte": "Informó la confirmación de Cristian Romero como capitán y los detalles brindados por Lionel Scaloni en conferencia de prensa."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "11a72v4",
+          "titulo": "Mark Zuckerberg lanza un mensaje sobre el futuro de la IA y quién debería tener el control",
+          "fecha": "2026-09-24T19:31:00.000Z",
+          "ruta": "/nota/mark-zuckerberg-lanza-un-mensaje-sobre-el-futuro-de-la-ia-y-quien-11a72v4"
+        },
+        {
+          "id": "177rfvd",
+          "titulo": "Red Bull confirmó quién será el compañero de Verstappen en 2027: cuáles son las butacas que faltan confirmar para la próxima temporada de Fórmula 1",
+          "fecha": "2026-09-23T14:44:49.000Z",
+          "ruta": "/nota/red-bull-confirmo-quien-sera-el-companero-de-verstappen-en-2027-177rfvd"
+        },
+        {
+          "id": "5ibpo3",
+          "titulo": "Entradas para la Selección Argentina: se confirmó cuándo salen a la venta los tickets para la despedida de Messi",
+          "fecha": "2026-09-22T17:35:00.000Z",
+          "ruta": "/nota/entradas-para-la-seleccion-argentina-se-confirmo-cuando-salen-a-la-5ibpo3"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "1yy713d": {
+      "estado": "automatica",
+      "titulo": "Electrolux cierra su planta en Rosario y empezará a importar",
+      "copete": "La empresa sueca Electrolux Group anunció el cierre de su fábrica en Rosario y pasará a importar sus productos de línea blanca, una medida que afecta a un centenar de trabajadores.",
+      "cuerpo": "La posibilidad de este cierre industrial se barajaba desde hace meses tras la suspensión previa de la producción de heladeras en el establecimiento que el grupo adquirió en 2011, donde hasta ahora solo se fabricaban algunas líneas de freezers y lavarropas. El cese de actividades se da en un contexto de caída del consumo local de electrodomésticos y un fuerte avance de las importaciones sobre la producción nacional.\n\nPor el momento no se precisaron detalles sobre posibles indemnizaciones o un plan de reubicación para el personal afectado por la medida en la planta santafesina.",
+      "guion": "Electrolux cierra su planta en Rosario y empezará a importar",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T14:13:23.260Z",
+      "claves": [
+        "Electrolux Group cerró su fábrica en Rosario.",
+        "La compañía pasará a importar toda su línea blanca.",
+        "Cerca de cien trabajadores se quedan sin empleo.",
+        "El sector registra una baja en el consumo y suba de importaciones."
+      ],
+      "seSabe": [
+        "Electrolux Group comunicó el cierre de su planta en Rosario.",
+        "La empresa comenzará a importar heladeras, freezers y lavarropas.",
+        "La decisión implica el despido de cerca de cien trabajadores, según la empresa (un medio local estimó ochenta puestos en peligro).",
+        "La producción de heladeras ya había sido suspendida previamente."
+      ],
+      "noConfirmado": [
+        "No se informó el destino exacto de las fuentes laborales de todos los operarios afectados.",
+        "No se detalló si habrá un plan de asistencia o reubicación por parte de la firma."
+      ],
+      "textoRedes": "La empresa Electrolux Group cerró su planta en Rosario y pasará a importar todos sus productos de línea blanca. La medida deja a cerca de cien trabajadores sin empleo en medio de un contexto de caída del consumo y aumento de las importaciones.",
+      "etiquetas": [
+        "Electrolux",
+        "Rosario",
+        "industria",
+        "empleo",
+        "importaciones"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/economia/electrolux-cierra-su-planta-en-rosario-y-empezara-a-importar-heladeras-nid25092026/",
+          "fecha": "2026-09-25T13:46:19.000Z",
+          "oficial": false,
+          "aporte": "Aportó la confirmación del cierre de la planta, el número de afectados y los motivos económicos."
+        },
+        {
+          "medio": "Clarín",
+          "enlace": "https://www.clarin.com/economia/electrolux-cierra-planta-rosario-seguira-vendedor-productos-importados_0_890y98pjyI.html",
+          "fecha": "2026-09-25T13:45:41.000Z",
+          "oficial": false,
+          "aporte": "Aportó una estimación propia sobre el número de puestos de trabajo en peligro."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1kzeqjl",
+          "titulo": "Cierra la planta de Dánica en Llavallol tras casi noventa años",
+          "fecha": "2026-09-25T12:03:21.000Z",
+          "ruta": "/nota/cierra-la-planta-de-danica-en-llavallol-tras-casi-noventa-anos-1kzeqjl"
+        },
+        {
+          "id": "e6h8p9",
+          "titulo": "Cierra la histórica planta de Dánica en Llavallol y quedan en riesgo 35 puestos de trabajo",
+          "fecha": "2026-09-23T02:02:00.000Z",
+          "ruta": "/nota/cierra-la-historica-planta-de-danica-en-llavallol-y-quedan-en-riesgo-e6h8p9"
+        },
+        {
+          "id": "1xzilre",
+          "titulo": "Dánica cierra definitivamente su planta de Llavallol y desvincula a los últimos 30 trabajadores",
+          "fecha": "2026-09-22T20:48:24.000Z",
+          "ruta": "/nota/danica-cierra-definitivamente-su-planta-de-llavallol-y-desvincula-a-1xzilre"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      }
+    },
+    "gs6pyb": {
+      "estado": "automatica",
+      "titulo": "Aumentan los combustibles en surtidores y aguardan a YPF en Balcarce",
+      "copete": "Shell, Axion y Puma subieron sus precios entre un 2% y un 5% tras el incremento internacional del petróleo. El mercado espera la definición de la petrolera estatal.",
+      "cuerpo": "En estaciones de la Ciudad de Buenos Aires relevadas el 24 de septiembre, la nafta súper alcanzó los 2.149 pesos en Axion y los 2.185 pesos en Shell, mientras que las versiones premium llegaron a 2.479 pesos.\n\nComo antecedente, el 22 de septiembre pasado las estaciones de servicio locales ya habían actualizado sus pizarras y el litro de combustible superaba los 2.200 pesos en las principales marcas de Balcarce.\n\nEl presidente de YPF, Horacio Marín, advirtió que si el valor del barril se sostiene alrededor de los 100 dólares durante un período prolongado, los precios locales deberán acompañar ese nivel, aunque destacó la volatilidad del mercado petrolero.",
+      "guion": "Aumentan los combustibles en surtidores y aguardan a YPF en Balcarce",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T14:13:23.260Z",
+      "claves": [
+        "Shell, Axion y Puma aplicaron subas de hasta el 5%.",
+        "El mercado espera la definición de precios por parte de YPF.",
+        "El crudo internacional presiona sobre los valores locales."
+      ],
+      "seSabe": [
+        "Las petroleras privadas subieron sus precios entre un 2% y un 5% tras el incremento del crudo.",
+        "El presidente de YPF, Horacio Marín, advirtió que los precios deberán acompañar si el barril se mantiene en torno a los 100 dólares.",
+        "Las estaciones de servicio de Balcarce ya superaban los 2.200 pesos por litro a fines de septiembre."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Shell, Axion y Puma aumentaron sus combustibles entre un 2% y un 5% por la suba del petróleo. Las estaciones de Balcarce ya operan con valores actualizados y el mercado espera la decisión de YPF.",
+      "etiquetas": [
+        "combustibles",
+        "aumento",
+        "nafta",
+        "YPF",
+        "Balcarce"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/economia/2026/09/25/aumento-de-la-nafta-que-va-a-pasar-con-los-precios-en-los-surtidores/",
+          "fecha": "2026-09-25T14:04:21.000Z",
+          "oficial": false,
+          "aporte": "Detalló los aumentos de las petroleras privadas, los precios relevados, la postura de YPF y la cotización del petróleo."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "75bc87",
+          "titulo": "Aumentó la nafta en Balcarce: ¿cuáles son los valores actualizados en las estaciones de servicio?",
+          "fecha": "2026-09-22T23:04:59.000Z",
+          "ruta": "/nota/aumento-la-nafta-en-balcarce-cuales-son-los-valores-actualizados-en-75bc87"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "1n8iuyx": {
+      "estado": "automatica",
+      "titulo": "Instalan la primera computadora cuántica en el estado de Florida",
+      "copete": "La Universidad Internacional de Florida y la empresa IonQ cerraron un acuerdo para incorporar el sistema Superion a finales de 2027 en el campus universitario.",
+      "cuerpo": "El pacto fue suscrito por la vicerrectora ejecutiva y directora de operaciones, Elizabeth M. Béjar, y el director ejecutivo de la compañía, Niccolo de Masi. La presidenta de la casa de estudios, Jeanette M. Nuñez, señaló que la incorporación representa una apuesta por el descubrimiento y la competitividad nacional.\n\nLa infraestructura permitirá a docentes, alumnos e investigadores ejecutar flujos de trabajo complejos para proyectos de inteligencia artificial, ciberseguridad, salud y ciencia de materiales. Además, la universidad proyecta desarrollar nuevas titulaciones y certificados especializados en computación cuántica.",
+      "guion": "Instalan la primera computadora cuántica en el estado de Florida",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T14:13:23.260Z",
+      "claves": [
+        "Acuerdo entre la Universidad de Florida e IonQ",
+        "Instalación prevista para finales de 2027",
+        "Uso de tecnología de iones atrapados",
+        "Aplicación en investigación y desarrollo académico"
+      ],
+      "seSabe": [
+        "La Universidad Internacional de Florida y IonQ firmaron un acuerdo para instalar un sistema cuántico.",
+        "El modelo seleccionado es el Superion de 256 qubits de iones atrapados.",
+        "El despliegue está previsto para finales de 2027 tras la construcción de un centro de datos."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "La Universidad Internacional de Florida y la empresa IonQ firmaron un acuerdo para instalar la primera computadora cuántica del estado en el campus universitario, con una puesta en marcha prevista para finales de 2027.",
+      "etiquetas": [
+        "tecnologia",
+        "computacion cuantica",
+        "universidad internacional de florida",
+        "ionq",
+        "florida"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/estados-unidos/2026/09/25/la-universidad-internacional-de-florida-instalara-la-primera-computadora-cuantica-del-estado/",
+          "fecha": "2026-09-25T13:52:55.000Z",
+          "oficial": false,
+          "aporte": "Detalló el acuerdo entre la universidad y la empresa para instalar la computadora cuántica en Florida."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "1hk3eku": {
+      "estado": "automatica",
+      "titulo": "Microsoft deja de usar la marca Copilot más PC en sus portátiles Surface",
+      "copete": "La compañía tecnológica decidió retirar la denominación comercial en sus nuevos equipos Surface, a pesar de que los dispositivos mantienen los requisitos técnicos necesarios para ejecutar funciones de inteligencia artificial local.",
+      "cuerpo": "Microsoft dejó de utilizar la marca Copilot más PC en sus computadoras Surface lanzadas este año, como la Surface Pro de doce pulgadas y la Surface Laptop de trece pulgadas equipadas con procesadores Snapdragon de Qualcomm. El cambio fue confirmado por el vicepresidente corporativo de Surface, Brett Ostrum, quien explicó al sitio especializado Windows Central que los nuevos modelos cumplen con los estándares anteriores pero ya no se promocionan con ese nombre comercial.\n\nLa categoría había sido presentada originalmente en 2024 junto a Qualcomm para identificar equipos con unidades de procesamiento neuronal capaces de realizar una alta cantidad de operaciones por segundo. Sin embargo, inconvenientes de seguridad con la función insignia llamada Recall afectaron la reputación inicial de la marca, lo que llevó a que distintos fabricantes retiraran progresivamente la denominación de sus materiales de marketing.\n\nA pesar de la modificación comercial, la empresa mantiene vigentes las especificaciones técnicas y la documentación de soporte que respaldan la compatibilidad de estos dispositivos con las herramientas de inteligencia artificial. Está previsto un evento corporativo para principios de octubre de este año donde se abordará el desarrollo de estas tecnologías en las computadoras personales.",
+      "guion": "Microsoft deja de usar la marca Copilot más PC en sus portátiles Surface",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T14:13:23.260Z",
+      "claves": [
+        "Microsoft eliminó la marca Copilot más PC de sus nuevas computadoras Surface.",
+        "El cambio fue confirmado por directivos de la compañía y de Qualcomm.",
+        "Los equipos conservan los requisitos técnicos de hardware para inteligencia artificial.",
+        "Problemas de seguridad iniciales afectaron la reputación de la categoría comercial."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "etiquetas": [
+        "Microsoft",
+        "Surface",
+        "Copilot",
+        "Inteligencia Artificial"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/tecno/2026/09/25/fin-de-una-era-microsoft-deja-de-usar-la-marca-copilot-pc-en-sus-portatiles-surface/",
+          "fecha": "2026-09-25T13:27:50.000Z",
+          "oficial": false,
+          "aporte": "Detalla el retiro de la marca Copilot más PC en equipos Surface y las declaraciones de directivos de Microsoft y Qualcomm."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "pvygrq": {
+      "estado": "automatica",
+      "titulo": "Meta amplía su catálogo de gafas inteligentes con nuevos modelos",
+      "copete": "La compañía tecnológica presentó una nueva línea de dispositivos desarrollados junto a Ray-Ban y Oakley, que incluye versiones sin cámara, grabación en alta resolución y una función de asistencia auditiva.",
+      "cuerpo": "Durante la conferencia Meta Connect 2026, celebrada en Menlo Park, la empresa tecnológica presentó su nueva línea de dispositivos desarrollados en colaboración con Ray-Ban y Oakley, con el objetivo de superar los cien estilos disponibles este año e incorporar inteligencia artificial a la vida cotidiana.\n\nComo se había informado en septiembre, la decisión de lanzar una versión sin cámara responde a las críticas previas vinculadas con la privacidad de los usuarios.",
+      "guion": "Meta amplía su catálogo de gafas inteligentes con nuevos modelos.",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T14:13:23.260Z",
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Meta presentó una nueva línea de gafas inteligentes desarrolladas junto a Ray-Ban y Oakley, que incluye modelos sin cámara, grabación en 3K y una función de asistencia auditiva.",
+      "etiquetas": [
+        "Meta",
+        "gafas inteligentes",
+        "inteligencia artificial",
+        "Ray-Ban"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/tecno/2026/09/25/meta-presenta-una-nueva-linea-de-gafas-inteligentes-cuanto-cuestan-y-que-novedades-incorporan/",
+          "fecha": "2026-09-25T13:21:05.000Z",
+          "oficial": false,
+          "aporte": "Detalló los nuevos modelos de gafas inteligentes de Meta, sus precios, características técnicas y la función de asistencia auditiva."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "i04hkn",
+          "titulo": "Meta presenta sus gafas inteligentes sin cámara tras las críticas por invasión de la privacidad",
+          "fecha": "2026-09-24T00:08:01.000Z",
+          "ruta": "/nota/meta-presenta-sus-gafas-inteligentes-sin-camara-tras-las-criticas-por-i04hkn"
+        },
+        {
+          "id": "1h5qlut",
+          "titulo": "Gafas inteligentes enfrentan posible prohibición en edificios gubernamentales de Australia",
+          "fecha": "2026-09-21T00:04:36.000Z",
+          "ruta": "/nota/gafas-inteligentes-enfrentan-posible-prohibicion-en-edificios-1h5qlut"
+        },
+        {
+          "id": "8wbi68",
+          "titulo": "Cuánto cuestan las entradas para los amistosos de Argentina: el partido que marcará la despedida de Messi",
+          "fecha": "2026-09-19T16:47:13.000Z",
+          "ruta": "/nota/cuanto-cuestan-las-entradas-para-los-amistosos-de-argentina-el-8wbi68"
         }
       ],
       "verificacion": {
