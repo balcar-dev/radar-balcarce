@@ -49,7 +49,7 @@ estaba en este archivo hasta el 24/09/2026. Lo que **falta** está en
 
 ## Cómo correr todo
 
-- `ARRANCAR.bat` levanta el panel (puerto 4321) y la web local (3000). La
-  web pública **no** corre en la PC: está en Cloudflare Pages.
+- `ARRANCAR.bat` levanta sólo el panel (puerto 4321). La web pública **no**
+  corre en la PC: está en Cloudflare Pages.
 - La clave de Gemini va en `.env`, nunca en el código ni en un chat.
 - Cada cambio en `ingesta/`, `panel/` o `reels/` exige reiniciar el panel.

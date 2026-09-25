@@ -8,7 +8,8 @@ deciden qué se publica, cargan avisos y miran el buzón.
 - Un servidor de Node (`panel/servidor.mjs`) con una sola página
   (`panel/panel.html`), sin dependencias.
 - **Vive en la PC de Hernán, puerto 4321**: `http://localhost:4321`. Se
-  arranca con `ARRANCAR.bat` (doble clic después de prender la PC).
+  arranca con `ARRANCAR.bat` (doble clic después de prender la PC), que
+  levanta sólo el panel: la web no corre en la PC.
 - Además se puede entrar desde afuera por **Tailscale Funnel**, con la
   dirección que figura en `EMPEZAR-ACA.md`. Mientras la PC esté encendida, ese
   túnel deja el panel abierto a internet y lo protege **sólo la contraseña**.

@@ -106,7 +106,8 @@ tailscale funnel --https=443 off
 
 ## Los botones de la carpeta
 
-- **`ARRANCAR.bat`** — levanta el panel. Doble clic después de prender la PC.
+- **`ARRANCAR.bat`** — levanta el panel, y sólo el panel. Doble clic después
+  de prender la PC. La web no corre en la PC: la sirve Cloudflare Pages.
 
 ## Las cuentas
 
