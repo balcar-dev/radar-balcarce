@@ -1,4 +1,9 @@
 {
+ "10o96uk": {
+  "intentos": 1,
+  "ultimo": "2026-09-25T15:30:41.452Z",
+  "motivo": "con cuerpo"
+ },
  "119oqdp": {
   "intentos": 1,
   "ultimo": "2026-09-25T12:00:43.134Z",
@@ -134,6 +139,11 @@
   "ultimo": "2026-09-25T12:12:18.091Z",
   "motivo": "con cuerpo"
  },
+ "1a1vwe0": {
+  "intentos": 1,
+  "ultimo": "2026-09-25T15:30:41.452Z",
+  "motivo": "con cuerpo"
+ },
  "1a7n1tl": {
   "intentos": 3,
   "ultimo": "2026-09-25T12:12:18.091Z",
@@ -244,6 +254,11 @@
   "ultimo": "2026-09-25T15:00:50.448Z",
   "motivo": "con cuerpo"
  },
+ "1jaqxc4": {
+  "intentos": 1,
+  "ultimo": "2026-09-25T15:30:41.452Z",
+  "motivo": "cuerpo: 6 problemas (antecedente, repite): el cuerpo usa \"viernes\", que sale de una nota anterior, como si fuera de hoy; sin esas oraciones quedan 36 palabras"
+ },
  "1juqupr": {
   "intentos": 1,
   "ultimo": "2026-09-25T11:38:40.017Z",
@@ -326,9 +341,14 @@
   "ultimo": "2026-09-25T14:00:47.762Z",
   "motivo": "semáforo: necesita ojo humano: \"investigación\", en lo que escribió la IA (título, bajada o texto para redes)"
  },
- "1pwtr34": {
+ "1oc9ip8": {
   "intentos": 1,
-  "ultimo": "2026-09-25T15:00:50.448Z",
+  "ultimo": "2026-09-25T15:30:41.452Z",
+  "motivo": "con cuerpo"
+ },
+ "1pwtr34": {
+  "intentos": 2,
+  "ultimo": "2026-09-25T15:30:41.452Z",
   "motivo": "título o bajada: 3 problemas (numero): el titulo dice 30 y la fuente no lo dice"
  },
  "1q0g5gb": {
@@ -359,6 +379,11 @@
  "1rp9xu7": {
   "intentos": 1,
   "ultimo": "2026-09-25T14:00:47.762Z",
+  "motivo": "con cuerpo"
+ },
+ "1s3zprq": {
+  "intentos": 1,
+  "ultimo": "2026-09-25T15:30:41.452Z",
   "motivo": "con cuerpo"
  },
  "1s5n48z": {
@@ -397,6 +422,11 @@
   "intentos": 3,
   "ultimo": "2026-09-25T12:32:06.257Z",
   "motivo": "sin material"
+ },
+ "1tyhzgi": {
+  "intentos": 1,
+  "ultimo": "2026-09-25T15:30:41.452Z",
+  "motivo": "con cuerpo"
  },
  "1uf58u7": {
   "intentos": 2,
@@ -441,9 +471,9 @@
   "motivo": "con cuerpo"
  },
  "1w27oo6": {
-  "intentos": 1,
-  "ultimo": "2026-09-25T12:00:43.134Z",
-  "motivo": "Gemini: Bad Unicode escape in JSON at position 76 (line 1 column 77)"
+  "intentos": 2,
+  "ultimo": "2026-09-25T15:30:41.452Z",
+  "motivo": "con cuerpo"
  },
  "1y3aqq8": {
   "intentos": 1,
@@ -458,6 +488,11 @@
  "1yhd0gw": {
   "intentos": 1,
   "ultimo": "2026-09-25T15:00:50.448Z",
+  "motivo": "con cuerpo"
+ },
+ "1yobdag": {
+  "intentos": 1,
+  "ultimo": "2026-09-25T15:30:41.452Z",
   "motivo": "con cuerpo"
  },
  "24vfqp": {
@@ -493,6 +528,11 @@
  "52q3fj": {
   "intentos": 3,
   "ultimo": "2026-09-25T12:32:06.257Z",
+  "motivo": "con cuerpo"
+ },
+ "56y0ry": {
+  "intentos": 1,
+  "ultimo": "2026-09-25T15:30:41.452Z",
   "motivo": "con cuerpo"
  },
  "5agvfd": {
@@ -543,6 +583,11 @@
  "8ey2ba": {
   "intentos": 1,
   "ultimo": "2026-09-25T14:00:47.762Z",
+  "motivo": "con cuerpo"
+ },
+ "8py8op": {
+  "intentos": 1,
+  "ultimo": "2026-09-25T15:30:41.452Z",
   "motivo": "con cuerpo"
  },
  "924pwu": {
@@ -617,6 +662,13 @@
   "ultimo": "2026-09-25T12:32:06.257Z",
   "motivo": "título o bajada: 1 problema (negacion): la fuente niega algo en el título y el texto nuevo no"
  },
+ "htjr40": {
+  "intentos": 1,
+  "ultimo": "2026-09-25T15:30:41.452Z",
+  "motivo": "verificación baja: espera a una persona",
+  "baja": true,
+  "fuentes": 1
+ },
  "ioxucv": {
   "intentos": 1,
   "ultimo": "2026-09-25T14:00:47.762Z",
@@ -630,8 +682,8 @@
   "fuentes": 7
  },
  "jgxyqx": {
-  "intentos": 1,
-  "ultimo": "2026-09-25T15:00:50.448Z",
+  "intentos": 2,
+  "ultimo": "2026-09-25T15:30:41.452Z",
   "motivo": "título o bajada: 1 problema (negacion): la fuente niega algo en el título y el texto nuevo no"
  },
  "jul3vf": {
@@ -675,8 +727,8 @@
   "motivo": "con cuerpo"
  },
  "mh67nw": {
-  "intentos": 1,
-  "ultimo": "2026-09-25T15:00:50.448Z",
+  "intentos": 2,
+  "ultimo": "2026-09-25T15:30:41.452Z",
   "motivo": "sin material"
  },
  "nauwa6": {
@@ -739,9 +791,14 @@
   "ultimo": "2026-09-25T11:38:40.017Z",
   "motivo": "con cuerpo"
  },
- "r8rp4y": {
+ "r12lr7": {
   "intentos": 1,
-  "ultimo": "2026-09-25T15:00:50.448Z",
+  "ultimo": "2026-09-25T15:30:41.452Z",
+  "motivo": "título o bajada: 1 problema (negacion): la fuente niega algo en el título y el texto nuevo no"
+ },
+ "r8rp4y": {
+  "intentos": 2,
+  "ultimo": "2026-09-25T15:30:41.452Z",
   "motivo": "título o bajada: 1 problema (antecedente): el copete usa 3, que sale de una nota anterior, como si fuera de hoy"
  },
  "rosl57": {
