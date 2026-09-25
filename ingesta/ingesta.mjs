@@ -6,7 +6,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import {
-  NOMBRES_PROPIOS, FIGURAS, TEMAS, FARMACIAS_A_MANO, PISO_DE_AFUERA, PISO_POR_DEFECTO, CUPO_DE_AFUERA, CUPO_POR_DEFECTO, BALCARCE, FUENTES, FUENTES_NACIONALES, PALABRAS_LOCALES, PALABRAS_ZONA, REGLAS_SECCION, REGLAS_SEMAFORO,
+  NOMBRES_PROPIOS, FIGURAS, TEMAS, FARMACIAS_A_MANO, PISO_DE_AFUERA, PISO_POR_DEFECTO, CUPO_DE_AFUERA, CUPO_POR_DEFECTO, BALCARCE, FUENTES, FUENTES_NACIONALES, PALABRAS_LOCALES, PALABRAS_ZONA, REGLAS_SECCION, AMARILLO_MENORES, REGLAS_SEMAFORO,
 } from './fuentes.mjs';
 import { diaDeTurno, fechaEnBalcarce } from './utiles.mjs';
 
@@ -465,13 +465,15 @@ const pisoDe = (seccion) => PISO_DE_AFUERA[seccion] ?? PISO_POR_DEFECTO;
  * y el texto completo de una página trae "seguinos en" y "suscribite" en
  * cualquier nota.
  */
-export function semaforoDelTexto(textoCrudo) {
+export function semaforoDelTexto(textoCrudo, { soloMenores = false } = {}) {
   const texto = normalizar(String(textoCrudo ?? ''));
   if (!texto) return null;
   for (const p of REGLAS_SEMAFORO.rojo) {
     if (contiene(texto, p)) return { color: 'rojo', motivo: `tema sensible: "${p}"` };
   }
-  for (const p of REGLAS_SEMAFORO.amarillo) {
+  // En un texto entero (el artículo completo, el cuerpo que escribió la IA)
+  // sólo frena lo que cuida a chicos y víctimas: ver AMARILLO_MENORES.
+  for (const p of soloMenores ? AMARILLO_MENORES : REGLAS_SEMAFORO.amarillo) {
     if (contiene(texto, p)) return { color: 'amarillo', motivo: `necesita ojo humano: "${p}"` };
   }
   return null;

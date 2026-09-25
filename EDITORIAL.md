@@ -52,7 +52,7 @@ comienzo del resumen: mira también el **texto completo de la nota original**
 y lo que contaron los otros medios de la misma noticia. Y después de que
 escribe la IA, **vuelve a pasar por lo que escribió** (`semaforoDeLaReescritura`
 en `reels/reescritura.mjs`, lo mismo en el panel): si da rojo o amarillo, esa
-reescritura no se usa y la nota deja de salir sola. Compara sin tildes. Cada
+reescritura no se usa y la nota deja de salir sola. **Pero en el texto entero** (el artículo completo, el cuerpo y las partes nuevas que escribe la IA) sólo frenan el rojo y las palabras de chicos y víctimas (`AMARILLO_MENORES`); "denuncia", "falleció", "hospital" o "investigación" frenan sólo si están en el título o el comienzo, como siempre. Lo decidieron Hernán y Andrés el 25/09: mirando todo, se frenaban 16 de cada 23 notas por una palabra perdida en el octavo párrafo. Compara sin tildes. Cada
 término de las listas roja y amarilla tiene su prueba
 (`pruebas/semaforo.test.mjs`). Por eso se publica un poco menos sola que
 antes, a propósito.

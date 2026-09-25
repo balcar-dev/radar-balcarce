@@ -56,3 +56,25 @@ test('una nota de afuera que nombra a Balcarce y no encaja en ninguna sección e
   };
   assert.equal(paraPruebas.clasificar(n), 'Balcarce');
 });
+
+// ---------------------------------------------- el semáforo en el texto entero
+
+import { semaforoDelTexto } from '../ingesta/ingesta.mjs';
+import { semaforoDeLaReescritura } from '../reels/reescritura.mjs';
+
+test('en el artículo completo, "falleció" o "denuncia" ya no frenan; un chico sí (25/09: frenaba 16 de 23)', () => {
+  const largo = 'El intendente inauguró la obra. En el párrafo ocho se recuerda que el vecino que la impulsó falleció en 2019 y que hubo una denuncia vieja.';
+  assert.equal(semaforoDelTexto(largo, { soloMenores: true }), null);
+  assert.equal(semaforoDelTexto(largo).color, 'amarillo', 'en el título y el comienzo sigue frenando');
+  assert.equal(semaforoDelTexto('Un adolescente de 15 años fue trasladado', { soloMenores: true }).color, 'amarillo');
+  assert.equal(semaforoDelTexto('Hubo un caso de grooming', { soloMenores: true }).color, 'rojo');
+});
+
+test('lo que escribe la IA: el título y la bajada miran todo; el cuerpo, sólo menores y víctimas', () => {
+  const cuerpoConMuerte = { titulo: 'Inauguran la plaza del barrio Norte', copete: 'La obra llevó dos años.', cuerpo: 'El impulsor de la obra falleció el año pasado.' };
+  assert.equal(semaforoDeLaReescritura({}, cuerpoConMuerte), null);
+  const tituloConMuerte = { titulo: 'Falleció un histórico vecino del barrio Norte', copete: 'Tenía 90 años.', cuerpo: 'Lo despidieron ayer.' };
+  assert.equal(semaforoDeLaReescritura({}, tituloConMuerte).color, 'amarillo');
+  const cuerpoConChico = { titulo: 'Inauguran la plaza', copete: 'La obra llevó dos años.', cuerpo: 'Un niño cortó la cinta.' };
+  assert.equal(semaforoDeLaReescritura({}, cuerpoConChico).color, 'amarillo');
+});

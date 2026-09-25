@@ -737,6 +737,15 @@ export const REGLAS_SECCION = [
 ];
 
 // Semáforo editorial: qué necesita revisión humana antes de salir.
+// La parte del amarillo que cuida a los chicos y a las víctimas. Es la que se
+// mira en TODO el texto (el artículo completo de la fuente y el cuerpo que
+// escribe la IA). El resto del amarillo ("denuncia", "falleció", "hospital",
+// "investigación") mira sólo el título y el comienzo, como siempre: el 25/09,
+// mirando el artículo entero, frenaba 16 de cada 23 notas por una palabra
+// perdida en el octavo párrafo. Lo decidieron Hernán y Andrés el 25/09.
+// No es una lista aparte: se saca del amarillo de abajo, así no se desfasan.
+const ES_DE_MENORES = /menor|beb[eé]|beba|nacid|alumn|abus|niñ|nen[ea]|adolescen/;
+
 export const REGLAS_SEMAFORO = {
   // Nunca se publica. No es sólo criterio editorial: identificar a un
   // menor en un hecho policial/judicial (ley 26.061) o a una víctima de
@@ -809,6 +818,9 @@ export const REGLAS_SEMAFORO = {
     'participá del', 'participa del', 'regala las entradas', 'promoción exclusiva',
     'promocion exclusiva', 'suscribite', 'seguinos en', 'auspicia', 'publicidad'],
 };
+
+/** El amarillo que se mira en el texto entero: menores y víctimas. */
+export const AMARILLO_MENORES = REGLAS_SEMAFORO.amarillo.filter((p) => ES_DE_MENORES.test(p));
 
 // Argentinos que, cuando aparecen, la gente quiere leer — aunque la noticia
 // no tenga nada que ver con Balcarce.

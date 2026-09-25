@@ -469,14 +469,21 @@ function textoEscrito(e) {
  * @param {object} [escrito]  lo que devolvió la IA
  */
 export function semaforoDeLaReescritura(nota, escrito = null) {
+  // Lo que se ve primero (el título, la bajada y el texto para redes) pasa
+  // por el semáforo entero, como el título y el comienzo de la fuente. Lo
+  // largo (el artículo completo, lo de otros medios, el cuerpo y las partes
+  // nuevas) sólo por el rojo y lo de menores y víctimas: decisión del 25/09,
+  // ver AMARILLO_MENORES en ingesta/fuentes.mjs.
+  const aLaVista = escrito ? [escrito.titulo, escrito.copete, escrito.guion, escrito.textoRedes].filter(Boolean).join('\n') : '';
   const partes = [
-    ['el texto completo de la fuente', nota?.textoDeLaFuente],
-    ['lo que contaron otros medios', (nota?.fuentesTexto ?? []).join('\n')],
-    ['lo que escribió la IA', escrito ? textoEscrito(escrito) : ''],
+    ['el texto completo de la fuente', nota?.textoDeLaFuente, true],
+    ['lo que contaron otros medios', (nota?.fuentesTexto ?? []).join('\n'), true],
+    ['lo que escribió la IA (título, bajada o texto para redes)', aLaVista, false],
+    ['lo que escribió la IA', escrito ? textoEscrito(escrito) : '', true],
   ];
   let peor = null;
-  for (const [donde, texto] of partes) {
-    const s = semaforoDelTexto(texto);
+  for (const [donde, texto, soloMenores] of partes) {
+    const s = semaforoDelTexto(texto, { soloMenores });
     if (!s) continue;
     const conDonde = { color: s.color, motivo: `${s.motivo}, en ${donde}` };
     if (s.color === 'rojo') return conDonde;
