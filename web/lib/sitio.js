@@ -5,23 +5,14 @@
 // problema concreto: mientras el dominio propio no esté conectado, cada nota
 // compartida apuntaría a una dirección que no abre — peor que no poner nada.
 //
-// El orden es:
-//
-//   1. SITIO, si alguien la fija a mano (para probar, o si algún día el
-//      dominio de producción no es el de Vercel).
-//   2. El dominio de producción del proyecto en Vercel. Es el de verdad:
-//      apenas radarbalcarce.com quede conectado, esta variable pasa a
-//      valer eso sola, sin tocar una línea de código.
-//   3. La dirección del despliegue puntual, para las vistas previas.
-//   4. localhost, cuando se trabaja en la máquina.
+// La da la variable SITIO (en GitHub Actions vale https://radarbalcarce.com).
+// Sin ella, localhost, cuando se trabaja en la máquina: y como localhost no
+// es el dominio propio, el sitio pide que no lo indexen (enElDominioPropio).
 
 const DOMINIO_PROPIO = 'radarbalcarce.com';
 
 function crudo() {
-  if (process.env.SITIO) return process.env.SITIO;
-  if (process.env.VERCEL_PROJECT_PRODUCTION_URL) return process.env.VERCEL_PROJECT_PRODUCTION_URL;
-  if (process.env.VERCEL_URL) return process.env.VERCEL_URL;
-  return 'http://localhost:3000';
+  return process.env.SITIO || 'http://localhost:3000';
 }
 
 /** La base del sitio, siempre con esquema y sin barra al final. */

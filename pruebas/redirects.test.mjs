@@ -1,5 +1,5 @@
 // Las redirecciones de las notas viejas (/nota/ID) a las de ahora
-// (/nota/titulo-ID), en los dos formatos que entienden los hosts estáticos.
+// (/nota/titulo-ID), en el formato de Cloudflare Pages (public/_redirects).
 //
 // Esto reemplazó a `redirects()` de next.config.mjs: exportar el sitio como
 // archivos puros (para poder alojarlo en cualquier lado) no soporta esa
@@ -8,7 +8,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import {
-  redireccionesDeNotas, comoRedirectsDeCloudflare, comoVercelJson,
+  redireccionesDeNotas, comoRedirectsDeCloudflare,
 } from '../web/scripts/generar-redirects.mjs';
 
 const PORTADA = {
@@ -37,10 +37,3 @@ test('el formato de Cloudflare/Netlify: origen, destino y 301 en una línea', ()
   assert.ok(texto.endsWith('\n'), 'termina en salto de línea');
 });
 
-test('el formato de Vercel: un array de objetos source/destination/permanent', () => {
-  const r = redireccionesDeNotas(PORTADA);
-  const j = comoVercelJson(r);
-  assert.equal(j.redirects.length, 2);
-  assert.equal(j.redirects[0].source, '/nota/abc123');
-  assert.equal(j.redirects[0].permanent, true);
-});

@@ -2,11 +2,9 @@
 #
 # Desde el 24/09 el dominio apunta a Cloudflare (los nameservers de DonWeb se
 # cambiaron a Cloudflare; `www` redirige al dominio sin `www` con una regla de
-# Cloudflare). Vercel está apagado desde el 25/09: no publica ni recibe el
-# dominio.
+# Cloudflare).
 #
-# Por qué Cloudflare: Vercel Hobby (el plan gratis) prohíbe publicidad y
-# cualquier uso comercial; Cloudflare Pages lo permite, con ancho de banda
+# Por qué Cloudflare: permite publicidad y uso comercial, con ancho de banda
 # ilimitado. El sitio se exporta como archivos estáticos puros (ver
 # next.config.mjs), así que no hace falta nada especial del lado del hosting.
 #

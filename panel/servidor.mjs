@@ -173,7 +173,7 @@ estado.eventosManual ??= [];
 estado.contactadoEl ??= {}; // { [contactoId]: fecha ISO del último mensaje }
 estado.respondioEl ??= {}; // { [contactoId]: fecha ISO de la última respuesta }
 estado.buzon ??= []; // envíos de la gente: datos, reclamos, opinión, seguimiento
-delete estado.ultimaPublicacion; // de cuando el panel publicaba en Vercel (hasta el 25/09)
+delete estado.ultimaPublicacion; // de cuando el panel publicaba la web (hasta el 25/09)
 if (!estado.fuentes.length) {
   estado.fuentes = TODAS_LAS_FUENTES.map(deCodigo);
 } else {
@@ -450,10 +450,10 @@ function piezasListas() {
 // ------------------------------------------------------ publicar la web
 //
 // El panel ya no publica la web. Hasta el 25/09 cada dos horas regeneraba
-// web/data/portada.json, compilaba y subía con `npx vercel --prod`. Desde el
-// 24/09 el sitio lo sirve Cloudflare Pages y lo arma GitHub Actions cada 30
-// minutos ("Actualizar la web" → cloudflare-deploy.yml), con la PC apagada o
-// prendida; Vercel se apagó el 25/09. Regenerar portada.json acá no servía
+// web/data/portada.json, compilaba y la subía. Desde el 24/09 el sitio lo
+// sirve Cloudflare Pages y lo arma GitHub Actions cada 30 minutos
+// ("Actualizar la web" → cloudflare-deploy.yml), con la PC apagada o
+// prendida. Regenerar portada.json acá no servía
 // para nada del tablero (lee panel/datos/ultima.json) y sólo dejaba el
 // archivo modificado en la PC, que es justo el que choca al hacer git pull.
 // Lo que el panel decide llega a la web por panel/sincronizar.mjs.

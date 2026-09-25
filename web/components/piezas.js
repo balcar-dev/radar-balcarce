@@ -3,7 +3,7 @@
 //
 // Son componentes de servidor a propósito: no hay estado ni eventos, la
 // animación es CSS puro (globals.css). Así la web sigue siendo HTML
-// estático que Vercel sirve sin ejecutar nada.
+// estático que se sirve sin ejecutar nada.
 
 import {
   datosSeccion, nombreCorto, cuando, partirFecha, whatsapp, MAIL, WHATSAPP,

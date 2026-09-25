@@ -4,7 +4,7 @@ import path from 'node:path';
 const nextConfig = {
   // Archivos estáticos puros: HTML, CSS, JS, y nada de servidor corriendo.
   // Es lo que permite que el sitio se pueda alojar en cualquier lado (hoy
-  // Vercel, mañana Cloudflare Pages u otro) sin depender de que ese
+  // Cloudflare Pages) sin depender de que ese
   // proveedor en particular sepa correr Next.js — sólo necesita servir
   // archivos. Las redirecciones de las notas viejas, que antes vivían acá
   // como `redirects()` (necesita un servidor), ahora se generan aparte:

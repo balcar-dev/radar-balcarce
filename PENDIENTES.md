@@ -161,18 +161,14 @@ mañana".
     estático). Actualizar cuando haya versión.
 42. Una política de seguridad de contenido (CSP) completa en
     `web/public/_headers` (hoy sólo `frame-ancestors`).
-43. Restos de Vercel en el código: comentarios en
-    `web/scripts/generar-datos.mjs` y `web/components/piezas.js`, y
-    `web/scripts/generar-redirects.mjs` sigue escribiendo `web/vercel.json`
-    (ya no se commitea).
-44. `ingesta/ingesta.mjs` es muy largo; hay scripts de experimentos sueltos en
+43. `ingesta/ingesta.mjs` es muy largo; hay scripts de experimentos sueltos en
     `reels/`.
 
 ## G. Base comercial y publicidad
 
-45. **Completar los 145 comercios**, pedir la lista de socios a la Cámara de
+44. **Completar los 145 comercios**, pedir la lista de socios a la Cámara de
     Comercio y el padrón de habilitaciones al municipio. Todo en `COMERCIAL.md`.
-46. **Cargar el primer aviso** en los tres espacios de la web, preguntar
+45. **Cargar el primer aviso** en los tres espacios de la web, preguntar
     precios en Balcarce y armar la página `/publicidad` y el media kit
     (`PUBLICIDAD.md`).
 

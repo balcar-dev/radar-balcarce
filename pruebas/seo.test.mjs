@@ -13,10 +13,8 @@ import assert from 'node:assert/strict';
 
 const cargar = async (env = {}) => {
   const antes = { ...process.env };
-  // Se limpia lo que pone Vercel, para que la prueba no dependa de dónde corre.
+  // Se limpia SITIO, para que la prueba no dependa de dónde corre.
   delete process.env.SITIO;
-  delete process.env.VERCEL_PROJECT_PRODUCTION_URL;
-  delete process.env.VERCEL_URL;
   Object.assign(process.env, env);
   // La marca de tiempo obliga a releer el módulo con el entorno nuevo.
   const m = await import(`../web/lib/sitio.js?${Date.now()}${Math.random()}`);
@@ -37,34 +35,16 @@ test('en la máquina apunta a localhost', async () => {
   assert.equal(r.propio, false);
 });
 
-test('en Vercel apunta al dominio de producción', async () => {
-  // Apenas radarbalcarce.com quede conectado, esta variable pasa a valer
-  // eso sola y no hay que tocar una línea de código.
-  const r = await cargar({ VERCEL_PROJECT_PRODUCTION_URL: 'radarbalcarce.com' });
+test('con SITIO apunta al dominio propio', async () => {
+  const r = await cargar({ SITIO: 'https://radarbalcarce.com' });
   assert.equal(r.sitio, 'https://radarbalcarce.com');
   assert.equal(r.propio, true);
 });
 
-test('el dominio de producción le gana a la dirección del despliegue', async () => {
-  const r = await cargar({
-    VERCEL_PROJECT_PRODUCTION_URL: 'radarbalcarce.com',
-    VERCEL_URL: 'radar-balcarce-7m1tk.vercel.app',
-  });
-  assert.equal(r.sitio, 'https://radarbalcarce.com');
-});
-
-test('una vista previa usa su propia dirección y no se hace pasar por el sitio', async () => {
-  const r = await cargar({ VERCEL_URL: 'radar-balcarce-7m1tk.vercel.app' });
-  assert.equal(r.sitio, 'https://radar-balcarce-7m1tk.vercel.app');
-  assert.equal(r.propio, false);
-});
-
-test('SITIO manda sobre todo lo demás', async () => {
-  const r = await cargar({
-    SITIO: 'https://otra.com',
-    VERCEL_PROJECT_PRODUCTION_URL: 'radarbalcarce.com',
-  });
+test('otra dirección no se hace pasar por el sitio', async () => {
+  const r = await cargar({ SITIO: 'https://otra.com' });
   assert.equal(r.sitio, 'https://otra.com');
+  assert.equal(r.propio, false);
 });
 
 test('la barra del final no se duplica', async () => {

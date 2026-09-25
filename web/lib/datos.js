@@ -1,7 +1,7 @@
 // Lee web/data/portada.json, generado por scripts/generar-datos.mjs.
 // Todas las páginas del sitio pasan por acá — nunca leen el panel
-// directamente, así la web funciona igual desplegada en Vercel que en
-// una PC con el panel corriendo al lado.
+// directamente, así la web funciona igual publicada que en una PC con el
+// panel corriendo al lado.
 
 import fs from 'node:fs';
 import path from 'node:path';

@@ -3,19 +3,11 @@
 //
 // Antes esto vivía en next.config.mjs, con `redirects()`: Next las servía
 // en cada visita, con un servidor corriendo. Pero exportar el sitio como
-// archivos estáticos puros (`output: 'export'`) — lo que permite subirlo a
-// cualquier lado, no sólo a Vercel — no soporta `redirects()`: no hay
-// servidor que las aplique.
+// archivos estáticos puros (`output: 'export'`) no soporta `redirects()`:
+// no hay servidor que las aplique.
 //
 // La solución no pierde nada: se escriben las mismas redirecciones, ya
-// resueltas, en los dos formatos que entienden los hosts estáticos:
-//
-//   public/_redirects   lo lee Cloudflare Pages (y Netlify)
-//   vercel.json          lo lee Vercel
-//
-// Mientras el sitio siga en Vercel, manda vercel.json. El día que se mude a
-// Cloudflare Pages, manda _redirects. No hace falta elegir de antemano: los
-// dos quedan listos, y cada host usa el que entiende.
+// resueltas, en public/_redirects, que lo lee Cloudflare Pages.
 //
 //   node scripts/generar-redirects.mjs
 
@@ -58,12 +50,6 @@ export function comoRedirectsDeCloudflare(redirecciones) {
   return `${redirecciones.map((r) => `${r.origen}  ${r.destino}  301`).join('\n')}\n`;
 }
 
-export function comoVercelJson(redirecciones) {
-  return {
-    redirects: redirecciones.map((r) => ({ source: r.origen, destination: r.destino, permanent: true })),
-  };
-}
-
 if (process.argv[1] && process.argv[1].endsWith('generar-redirects.mjs')) {
   const portada = leerJson(path.join(RAIZ, 'data', 'portada.json'), { notas: [] });
   const archivo = leerJson(path.join(RAIZ, 'data', 'archivo.json'), { notas: [] });
@@ -71,7 +57,6 @@ if (process.argv[1] && process.argv[1].endsWith('generar-redirects.mjs')) {
 
   fs.mkdirSync(path.join(RAIZ, 'public'), { recursive: true });
   fs.writeFileSync(path.join(RAIZ, 'public', '_redirects'), comoRedirectsDeCloudflare(redirecciones), 'utf8');
-  fs.writeFileSync(path.join(RAIZ, 'vercel.json'), `${JSON.stringify(comoVercelJson(redirecciones), null, 2)}\n`, 'utf8');
 
-  console.log(`  ${redirecciones.length} redirecciones (public/_redirects y vercel.json)`);
+  console.log(`  ${redirecciones.length} redirecciones (public/_redirects)`);
 }

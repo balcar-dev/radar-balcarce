@@ -13,13 +13,9 @@ panel/datos/
 ingesta/salida/
 web/node_modules/
 web/.next/
-web/.vercel/
 web/out/
 # public/_redirects lo escribe scripts/generar-redirects.mjs en cada build,
 # a partir de portada.json: no es código, es un artefacto más, como .next/.
-# vercel.json NO se ignora (ver abajo): a diferencia de _redirects, Vercel
-# necesita leerlo ANTES de compilar, no le alcanza con que el build lo
-# escriba — por eso se commitea junto con portada.json.
 web/public/_redirects
 # web/data/portada.json SÍ se versiona a propósito: es el artefacto que
 # lee el sitio público. panel/datos/ (arriba) es distinto — ahí viven las

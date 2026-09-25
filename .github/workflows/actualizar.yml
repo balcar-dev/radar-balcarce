@@ -15,7 +15,6 @@
 #
 # Quien PUBLICA es Cloudflare Pages: cuando esta corrida termina bien, arranca
 # sola "Cloudflare Pages" (cloudflare-deploy.yml), que compila y sube el sitio.
-# Vercel está apagado desde el 25/09 y ya no publica nada.
 
 name: Actualizar la web
 
@@ -110,15 +109,9 @@ jobs:
       - name: Guardar si cambió algo
         run: |
           git config user.name "Radar Balcarce"
-          # El mail interno de la cuenta balcar-dev, que GitHub reconoce. Lo
-          # pedía Vercel para publicar; se deja igual (ver CLAUDE.md).
+          # El mail interno de la cuenta balcar-dev, que GitHub reconoce. No
+          # cambiarlo (ver CLAUDE.md).
           git config user.email "272334999+balcar-dev@users.noreply.github.com"
-          # web/vercel.json ya no se guarda: era para Vercel, apagado desde el
-          # 25/09 (Cloudflare usa public/_redirects, que se arma en cada
-          # compilación). "Compilar el sitio" lo sigue reescribiendo, así que
-          # se descarta ese cambio: con un archivo modificado sin guardar,
-          # el "git pull --rebase" de abajo se niega a correr.
-          git checkout -- web/vercel.json 2>/dev/null || true
           git add web/data/portada.json web/data/archivo.json web/data/agenda.json
           if git diff --cached --quiet; then
             echo "Sin novedades: no hay nada que publicar."

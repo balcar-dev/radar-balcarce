@@ -9,9 +9,8 @@
 //
 // Corre en el navegador por un motivo concreto: la dirección la saca de
 // `window.location.href`. Si la armáramos en el servidor habría que elegir
-// un dominio fijo, y hoy el sitio vive en una dirección de Vercel que va a
-// cambiar en cuanto tengamos el propio — y los enlaces ya compartidos
-// quedarían apuntando a la vieja.
+// un dominio fijo; así el enlace es siempre el de la página que se está
+// viendo.
 
 import { useState } from 'react';
 

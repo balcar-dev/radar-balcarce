@@ -107,8 +107,6 @@ tailscale funnel --https=443 off
 ## Los botones de la carpeta
 
 - **`ARRANCAR.bat`** — levanta el panel. Doble clic después de prender la PC.
-- **`PUBLICAR.bat`** y **`publicar-automatico.bat`** — quedaron por si hace
-  falta publicar desde la PC; ya no son necesarios, la web se publica sola.
 
 ## Las cuentas
 

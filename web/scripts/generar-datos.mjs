@@ -316,7 +316,7 @@ fs.mkdirSync(path.dirname(SALIDA), { recursive: true });
 //
 // `generado` cambia en cada corrida por definición, así que el archivo
 // siempre difiere y el workflow siempre commitea — y cada commit dispara una
-// compilación entera del sitio en Vercel.
+// compilación entera del sitio.
 //
 // Hoy eso no molesta: las nueve corridas de ayer publicaron contenido nuevo
 // las nueve, porque en un pueblo con 24 fuentes en una hora siempre se movió
