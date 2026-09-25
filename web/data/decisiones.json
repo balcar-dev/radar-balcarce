@@ -1,5 +1,5 @@
 {
-  "exportado": "2026-09-25T15:30:37.819Z",
+  "exportado": "2026-09-25T15:40:27.238Z",
   "decisiones": {
     "1951120": {
       "estado": "automatica",
@@ -20757,6 +20757,201 @@
           "fecha": "2026-09-25T15:20:21.000Z",
           "oficial": false,
           "aporte": "Aportó los detalles sobre la llamada a revisión de casi tres millones de vehículos de Volkswagen y Audi, los modelos afectados, las causas técnicas del fallo y las estimaciones de las marcas."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "1drzk8j": {
+      "estado": "automatica",
+      "titulo": "El momento de Franco Colapinto en la Fórmula 1 y Alpine",
+      "copete": "La interna en Alpine entre Franco Colapinto y Pierre Gasly abrió un debate sobre las órdenes de equipo y la presión en la máxima categoría. El contexto para los seguidores del automovilismo.",
+      "cuerpo": "El piloto argentino Franco Colapinto y su compañero Pierre Gasly quedaron en el centro de la escena dentro de la escudería Alpine tras una maniobra en pista donde el corredor francés no cedió su posición. El episodio generó discusiones sobre las órdenes internas y críticas en redes sociales hacia Gasly, en una temporada donde ambos comparten equipo pero compiten por imponerse.\n\nEl periodista especializado Mariano Angarolla explicó que la rivalidad con el compañero de equipo es la más directa en la categoría y señaló que el equipo cometió un error inicial en la gestión de la pista. Según los datos aportados, en las últimas once competencias el piloto argentino sumó veintiséis puntos frente a los veinticuatro del francés, lo que incrementa la exigencia sobre este último. Además, se indicó que el corredor nacional ya tendría asegurada su continuidad para el próximo año.",
+      "guion": "El momento de Franco Colapinto en la Fórmula 1 y Alpine",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T15:40:27.172Z",
+      "claves": [
+        "La maniobra entre Colapinto y Gasly abrió el debate sobre las órdenes en Alpine.",
+        "Destacan que la rivalidad interna es habitual entre compañeros de escudería.",
+        "El piloto argentino sumó más puntos que su compañero en las últimas once carreras."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "La interna en Alpine entre Franco Colapinto y Pierre Gasly genera debate en la Fórmula 1. Los detalles de la competencia interna y el rendimiento del piloto argentino en la categoría.",
+      "etiquetas": [
+        "Franco Colapinto",
+        "Formula 1",
+        "Alpine",
+        "Pierre Gasly"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/deportes/2026/09/25/colapinto-y-gasly-en-el-centro-de-la-interna-de-alpine-que-se-juega-cada-piloto-dentro-del-equipo/",
+          "fecha": "2026-09-25T15:31:46.000Z",
+          "oficial": false,
+          "aporte": "Detalló la situación interna en Alpine, las estadísticas recientes entre los pilotos y las declaraciones sobre la rivalidad en la categoría."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "hgesfo",
+          "titulo": "Franco Colapinto tendrá la ayuda de un ex piloto de F1 que se sumó a Alpine: el rol clave que tendrá en las carreras",
+          "fecha": "2026-09-24T20:26:57.000Z",
+          "ruta": "/nota/franco-colapinto-tendra-la-ayuda-de-un-ex-piloto-de-f1-que-se-sumo-a-hgesfo"
+        },
+        {
+          "id": "1cvio1y",
+          "titulo": "Franco Colapinto, entre las dificultades que tuvo con su Alpine y los objetivos para el GP de Azerbaiyán: \"Q3 y puntos\"",
+          "fecha": "2026-09-24T14:43:16.000Z",
+          "ruta": "/nota/franco-colapinto-entre-las-dificultades-que-tuvo-con-su-alpine-y-los-1cvio1y"
+        },
+        {
+          "id": "9m345n",
+          "titulo": "El fuerte comunicado del presidente de la FIA tras las amenazas a Gasly, compañero de Colapinto",
+          "fecha": "2026-09-23T22:34:00.000Z",
+          "ruta": "/nota/el-fuerte-comunicado-del-presidente-de-la-fia-tras-las-amenazas-a-9m345n"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "1tyhzgi": {
+      "estado": "automatica",
+      "titulo": "Mineras y data centers deben generar su propia energía",
+      "copete": "El Gobierno dispuso que los proyectos de gran consumo eléctrico generen su propia electricidad para evitar riesgos en el suministro y proteger a los usuarios residenciales y comerciales.",
+      "cuerpo": "La medida busca ordenar los nuevos consumos de gran escala para que no comprometan la seguridad del sistema eléctrico ni incrementen los costos del resto de los usuarios.\n\nLas empresas involucradas deberán cubrir al menos el ochenta por ciento de su consumo mensual con contratos de generación nueva o abastecimiento propio.\n\nComo antecedente, el Gobierno ya había dispuesto que los grandes proyectos eléctricos aseguruen su propio abastecimiento para proteger las reservas del sistema.",
+      "guion": "Mineras y data centers deben generar su propia energía",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T15:40:27.172Z",
+      "claves": [
+        "El Gobierno dispuso un régimen para grandes consumidores de energía.",
+        "Afecta a proyectos de minería y centros de datos que superen ciertos límites.",
+        "Las empresas deberán cubrir gran parte de su consumo con generación propia."
+      ],
+      "seSabe": [
+        "La Secretaría de Energía estableció el Régimen de Demandas Extratendenciales mediante la resolución 264/2026.",
+        "La medida exige que los proyectos de gran consumo generen su propia electricidad para proteger el suministro general.",
+        "El régimen alcanza a demandas nuevas o ampliaciones que alcancen unos ochenta megavatios."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El Gobierno dispuso que los proyectos de minería y centros de datos de gran consumo eléctrico deban generar su propia energía para proteger el suministro general y evitar mayores costos en los usuarios del sistema.",
+      "etiquetas": [
+        "energia",
+        "mineria",
+        "data centers",
+        "gobierno nacional"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Clarín",
+          "enlace": "https://www.clarin.com/economia/mineras-data-centers-deberan-generar-propia-energia_0_0tEkLJa0lv.html",
+          "fecha": "2026-09-25T14:47:09.000Z",
+          "oficial": false,
+          "aporte": "Detalló la resolución oficial sobre el régimen de generación eléctrica para grandes consumidores y sus porcentajes de exigencia."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "4kdclu",
+          "titulo": "El Gobierno exige que proyectos de gran consumo eléctrico aporten su propia energía",
+          "fecha": "2026-09-25T12:03:00.000Z",
+          "ruta": "/nota/el-gobierno-exige-que-proyectos-de-gran-consumo-electrico-aporten-su-4kdclu"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "8py8op": {
+      "estado": "automatica",
+      "titulo": "Abre el primer local de moda circular en los shoppings",
+      "copete": "El mercado de indumentaria usada da el salto a los grandes centros de compras con una apertura en el DOT, en paralelo a la caída en las ventas del sector textil tradicional.",
+      "cuerpo": "La cadena Galpón de Ropa inauguró un local de más de cien metros cuadrados en el centro comercial DOT, donde los clientes pueden comprar indumentaria de segunda mano o entregar prendas para su reventa o donación.\n\nEsta apertura se produce mientras el mercado global de segunda mano crece a un ritmo superior al diez por ciento anual y proyecta representar una porción importante del negocio de la moda hacia el final de la década, según datos de la propia empresa.\n\nEn contraste, el sector textil tradicional atraviesa un momento complejo en el país. De acuerdo con un relevamiento de la Cámara Industrial de la Indumentaria, las ventas sufrieron una baja interanual en el tercer bimestre y la caída en la demanda afecta a la gran mayoría de las empresas del rubro.",
+      "guion": "Abre el primer local de moda circular en los shoppings",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T15:40:27.172Z",
+      "claves": [
+        "La indumentaria usada llega por primera vez a los grandes centros de compras.",
+        "La firma Galpón de Ropa inauguró una sucursal en el DOT.",
+        "El sector de segunda mano crece a nivel global frente al retroceso de la industria textil tradicional."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "La moda circular da el salto a los shoppings con la apertura del primer local de indumentaria usada en un centro comercial, en un contexto de caída de ventas para el sector textil tradicional.",
+      "etiquetas": [
+        "moda circular",
+        "ropa usada",
+        "shoppings",
+        "industria textil"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Clarín",
+          "enlace": "https://www.clarin.com/economia/boom-ropa-usada-llega-shoppings-abre-primer-local-moda-circular_0_grgNrDoCm3.html",
+          "fecha": "2026-09-25T14:42:15.000Z",
+          "oficial": false,
+          "aporte": "Detalló la apertura del primer local de indumentaria usada en un shopping, las cifras de crecimiento del sector y la caída de ventas de la industria textil."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "1k50zp3": {
+      "estado": "automatica",
+      "titulo": "Una figura de la cultura qatarí visita el país por el aniversario del Malba",
+      "copete": "La jequesa de Qatar Al Mayassa bint Hamad bin Khalifa Al Thani participó de la gala por los veinticinco años del museo porteño. El evento recaudó más de un millón de dólares para futuras obras.",
+      "cuerpo": "Durante el evento, que contó con la presencia de su fundador Eduardo Costantini, se recaudaron más de un millón de dólares destinados a los futuros planes de la institución, entre los que se destaca una reforma edilicia para duplicar su superficie.\n\nLa llegada de la hermana del emir qatarí busca afianzar los lazos de intercambio artístico y educativo entre ambas regiones, según explicó la referente cultural en una entrevista brindada durante su estadía en la capital del país.",
+      "guion": "Una figura de la cultura qatarí visita el país por el aniversario del Malba",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T15:40:27.173Z",
+      "claves": [
+        "La jequesa de Qatar visitó Buenos Aires por el aniversario del Malba.",
+        "La gala recaudó más de un millón de dólares para ampliar el museo.",
+        "El vínculo cultural comenzó con una exposición conjunta en Doha."
+      ],
+      "seSabe": [
+        "La jequesa Al Mayassa bint Hamad bin Khalifa Al Thani visitó Buenos Aires por el veinticinco aniversario del Malba.",
+        "El Consejo Honorario de la gala recaudó más de un millón de dólares para la futura ampliación del museo.",
+        "La relación institucional inició tras una muestra de arte latinoamericano expuesta en Doha."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "La jequesa de Qatar visitó Buenos Aires para participar del vigésimo quinto aniversario del Malba en una gala que recaudó más de un millón de dólares para ampliar el museo.",
+      "etiquetas": [
+        "Malba",
+        "Cultura",
+        "Qatar",
+        "Buenos Aires",
+        "Aniversario"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Clarín",
+          "enlace": "https://www.clarin.com/cultura/poder-cultura-hacer-sientan-comodos-casa_0_C6ADvHy5n1.html",
+          "fecha": "2026-09-25T15:00:10.000Z",
+          "oficial": false,
+          "aporte": "Detalló la visita de la jequesa de Qatar, la recaudación para el Malba y los detalles de la diplomacia cultural."
         }
       ],
       "verificacion": {
