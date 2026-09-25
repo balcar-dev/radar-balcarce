@@ -1,0 +1,21 @@
+# Un pedido mínimo con la clave gratis de redacción, para saber si anda.
+# Se corre a mano (Actions → Prueba de Gemini → Run workflow).
+name: Prueba de Gemini
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  probar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - run: node reels/probar-gemini.mjs
+        env:
+          GEMINI_API_KEY_REDACCION: ${{ secrets.GEMINI_API_KEY_REDACCION }}
