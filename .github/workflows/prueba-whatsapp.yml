@@ -1,0 +1,19 @@
+# Manda un WhatsApp de prueba y muestra lo que contestó CallMeBot.
+# Se corre a mano (Actions → Prueba de WhatsApp → Run workflow).
+name: Prueba de WhatsApp
+
+on:
+  workflow_dispatch:
+
+jobs:
+  probar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - run: node redes/probar-whatsapp.mjs
+        env:
+          WHATSAPP_TELEFONO: ${{ secrets.WHATSAPP_TELEFONO }}
+          WHATSAPP_APIKEY: ${{ secrets.WHATSAPP_APIKEY }}
