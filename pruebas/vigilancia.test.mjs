@@ -307,3 +307,19 @@ test('con muy pocas notas no se juzga el cuerpo (no hay de qué sacar un porcent
   const o = sano(A('12:00')); o.contenido = { cuerpos: { total: 4, conCuerpo: 0 } };
   assert.ok(!claves(evaluar(o)).includes('pocos-cuerpos'));
 });
+
+test('CallMeBot acepta con 203 y repite el mensaje: aunque el texto diga "error", es un éxito', async () => {
+  const r = await enviarWhatsApp({
+    telefono: '5492266123456', apikey: 'K', texto: 'hubo un error',
+    fetchFn: async () => ({ ok: true, status: 203, text: async () => 'Message to: +5492266123456 Text to send: hubo un error Message queued. You will receive it in a few seconds.' }),
+  });
+  assert.equal(r.ok, true);
+});
+
+test('CallMeBot con el eco del mensaje pero sin "queued" ni error propio tampoco se toma como error por el texto enviado', async () => {
+  const r = await enviarWhatsApp({
+    telefono: '5492266123456', apikey: 'K', texto: 'error de mi mensaje',
+    fetchFn: async () => ({ ok: true, status: 203, text: async () => 'Message to: +5492266123456 Text to send: error de mi mensaje' }),
+  });
+  assert.equal(r.ok, true);
+});

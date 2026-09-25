@@ -34,9 +34,13 @@ export async function enviarWhatsApp({ telefono, apikey, texto, fetchFn = fetch 
   try {
     const r = await fetchFn(url, { signal: AbortSignal.timeout(20000) });
     const cuerpo = await r.text();
-    // CallMeBot contesta 200 aun con un error en el texto.
-    if (!r.ok || /error|apikey is invalid|not activated/i.test(cuerpo)) {
-      return { ok: false, error: sinSecretos(`HTTP ${r.status} ${cuerpo.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim().slice(0, 140)}`, apikey, numero) };
+    // CallMeBot contesta 200 (o 203) aun con un error en el texto. Cuando acepta el
+    // mensaje repite el destino y el texto que mandamos y dice "queued": el eco
+    // NO se mira, porque el propio mensaje puede tener la palabra "error".
+    const propio = cuerpo.split(/Text to send:/i)[0];
+    const encolado = /queued|will receive/i.test(cuerpo);
+    if (!r.ok || (!encolado && /error|apikey is invalid|not activated/i.test(propio))) {
+      return { ok: false, error: sinSecretos(`HTTP ${r.status} ${cuerpo.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim().slice(-160)}`, apikey, numero) };
     }
     return { ok: true };
   } catch (e) {
