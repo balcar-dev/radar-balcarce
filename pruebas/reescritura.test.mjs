@@ -439,3 +439,20 @@ test('con el tope del día alcanzado no se le pide nada a la IA (la clave es pag
   assert.equal(r.n1, undefined);
   assert.ok(registro.some((l) => /tope del día/.test(l)), 'lo tiene que decir en el registro');
 });
+
+test('el registro cuenta qué clave se usó: la gratis primero, la paga sólo si la gratis se queda sin cupo', async () => {
+  const { USO_DE_CLAVES } = await import('../reels/reescritura.mjs');
+  const antes = { ...USO_DE_CLAVES };
+  const previoR = process.env.GEMINI_API_KEY_REDACCION; const previoP = process.env.GEMINI_API_KEY_REDES;
+  process.env.GEMINI_API_KEY_REDACCION = 'gratis'; process.env.GEMINI_API_KEY_REDES = 'paga';
+  try {
+    const ok = respuestaOk('Título de prueba', 'Bajada de prueba.', 'Título de prueba.', CUERPO);
+    const { fn } = fetchFalso([ok]);
+    await reescribir(notaVerde(), { fetchFn: fn });
+    assert.equal(USO_DE_CLAVES.redaccion, antes.redaccion + 1);
+    assert.equal(USO_DE_CLAVES.redes, antes.redes);
+  } finally {
+    if (previoR === undefined) delete process.env.GEMINI_API_KEY_REDACCION; else process.env.GEMINI_API_KEY_REDACCION = previoR;
+    if (previoP === undefined) delete process.env.GEMINI_API_KEY_REDES; else process.env.GEMINI_API_KEY_REDES = previoP;
+  }
+});

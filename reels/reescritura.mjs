@@ -263,6 +263,11 @@ async function pedir({ prompt, entrada, clave, fetchFn, intentos }) {
  * reescribir. Cualquier otro error no reintenta con la otra clave: no tiene
  * sentido pagar por un pedido que ya está mal armado.
  */
+/** Cuántos pedidos fueron a cada clave desde que arrancó el programa: la gratis
+ *  ('redaccion') o la paga ('redes'). El registro de Actualizar la web lo
+ *  muestra, para ver de un vistazo si se está gastando. */
+export const USO_DE_CLAVES = { redaccion: 0, redes: 0 };
+
 export async function reescribir(nota, { intentos = 3, fetchFn = fetch, correccion = null } = {}) {
   const primera = claveRedaccion();
   const segunda = claveRedes();
@@ -285,6 +290,7 @@ export async function reescribir(nota, { intentos = 3, fetchFn = fetch, correcci
     usada = 'redes';
   }
   if (!res) throw new Error('no se pudo pedir a Gemini');
+  USO_DE_CLAVES[usada] += 1;
   if (!res.ok) throw new Error(`HTTP ${res.status} (clave ${usada}): ${(await res.text()).slice(0, 200)}`);
 
   const j = await res.json();
@@ -1053,6 +1059,7 @@ export async function reescribirAutomaticas(notas, {
       + `${cuenta.sinCuerpo} sin cuerpo que sirva, ${cuenta.rechazadas} rechazadas por el título o la bajada, ${cuenta.sinMaterial} sin material, `
       + `${cuenta.oraciones} oraciones sacadas, ${cuenta.agotadas} ya agotaron los ${maximoDeIntentos} intentos, `
       + `${cuenta.partesDescartadas} partes nuevas descartadas, ${cuenta.frenadas} frenadas por el semáforo`);
+    registro(`  claves de Gemini usadas: ${USO_DE_CLAVES.redaccion} con la gratis, ${USO_DE_CLAVES.redes} con la paga`);
   }
   return resultado;
 }
