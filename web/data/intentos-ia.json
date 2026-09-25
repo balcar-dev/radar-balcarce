@@ -139,6 +139,11 @@
   "ultimo": "2026-09-25T15:00:50.448Z",
   "motivo": "con cuerpo"
  },
+ "19iy42g": {
+  "intentos": 1,
+  "ultimo": "2026-09-25T17:05:21.676Z",
+  "motivo": "con cuerpo"
+ },
  "19jah2t": {
   "intentos": 1,
   "ultimo": "2026-09-25T12:00:43.134Z",
@@ -225,9 +230,9 @@
   "motivo": "con cuerpo"
  },
  "1dgdpko": {
-  "intentos": 1,
-  "ultimo": "2026-09-25T17:00:45.979Z",
-  "motivo": "cuerpo: 9 problemas (numero, nombre): el cuerpo dice 5 y la fuente no lo dice; sin esas oraciones quedan 13 palabras"
+  "intentos": 2,
+  "ultimo": "2026-09-25T17:05:21.676Z",
+  "motivo": "cuerpo: 6 problemas (numero): el cuerpo dice 5 y la fuente no lo dice; sin esas oraciones quedan 19 palabras"
  },
  "1drzk8j": {
   "intentos": 1,
@@ -420,6 +425,11 @@
   "intentos": 1,
   "ultimo": "2026-09-25T16:30:41.998Z",
   "motivo": "con cuerpo"
+ },
+ "1r41igs": {
+  "intentos": 1,
+  "ultimo": "2026-09-25T17:05:21.676Z",
+  "motivo": "Gemini: Bad Unicode escape in JSON at position 2424 (line 1 column 2425)"
  },
  "1rhdtxr": {
   "intentos": 1,
@@ -782,6 +792,11 @@
   "motivo": "verificación baja: espera a una persona",
   "baja": true,
   "fuentes": 1
+ },
+ "ib1bom": {
+  "intentos": 1,
+  "ultimo": "2026-09-25T17:05:21.676Z",
+  "motivo": "título o bajada: 1 problema (numero): el copete dice 6 y la fuente no lo dice"
  },
  "ioxucv": {
   "intentos": 1,
