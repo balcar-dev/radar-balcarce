@@ -335,3 +335,30 @@ test('una respuesta que no dice que quedó en cola no se da por buena', async ()
   });
   assert.equal(r.ok, false);
 });
+
+// ------------------------- cuándo se armó la web (25/09: falsa alarma de 2,5 h)
+
+import { ultimaModificacion } from '../redes/vigilar.mjs';
+
+test('la web "se armó" cuando dice la página más nueva del sitemap, no la nota más nueva (falsa alarma del 25/09)', () => {
+  const xml = `<urlset>
+    <url><loc>https://radarbalcarce.com</loc><lastmod>2026-09-25T18:00:00.000Z</lastmod></url>
+    <url><loc>https://radarbalcarce.com/farmacias</loc><lastmod>2026-09-25T20:30:12.000Z</lastmod></url>
+    <url><loc>https://radarbalcarce.com/nota/a</loc><lastmod>2026-09-25T17:00:00.000Z</lastmod></url>
+  </urlset>`;
+  assert.equal(ultimaModificacion(xml), '2026-09-25T20:30:12.000Z');
+});
+
+test('un sitemap vacío o roto no se toma por una fecha', () => {
+  assert.equal(ultimaModificacion(''), null);
+  assert.equal(ultimaModificacion('<lastmod>ayer</lastmod>'), null);
+  assert.equal(ultimaModificacion(undefined), null);
+});
+
+test('con la nota más nueva de hace 2,5 h pero el deploy de hace 10 minutos, no hay alarma de web vieja', async () => {
+  const { evaluar } = await import('../redes/vigilar.mjs');
+  const ahora = new Date('2026-09-25T20:40:00Z');
+  const xml = '<lastmod>2026-09-25T18:10:00Z</lastmod><lastmod>2026-09-25T20:30:00Z</lastmod>';
+  const problemas = evaluar({ ahora, web: { estado: 200, actualizado: ultimaModificacion(xml) } });
+  assert.ok(!problemas.some((p) => p.clave === 'web-vieja'), 'no debería avisar web-vieja');
+});

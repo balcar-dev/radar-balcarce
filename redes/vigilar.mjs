@@ -311,12 +311,30 @@ export function revisarPortada(html) {
   };
 }
 
+/**
+ * Cuándo se armó la web por última vez, según el sitemap.
+ *
+ * Es la fecha MÁS NUEVA de todas las entradas, no la de la primera. La primera
+ * (la portada) lleva la fecha de la nota más nueva, no la del deploy: el 25/09
+ * el vigilante avisó "la web no se actualiza hace 2,5 horas" con la web
+ * armándose cada media hora, sólo porque la última nota publicada tenía 2,5
+ * horas (con las notas incompletas y las internacionales esperando, salen
+ * menos notas). Las páginas de servicio (farmacias, dólar, agenda…) llevan la
+ * hora del deploy, así que el máximo es siempre el deploy.
+ */
+export function ultimaModificacion(xml = '') {
+  const fechas = [...String(xml).matchAll(/<lastmod>([^<]+)<\/lastmod>/g)]
+    .map((m) => ({ texto: m[1], t: new Date(m[1]).getTime() }))
+    .filter((f) => Number.isFinite(f.t));
+  if (!fechas.length) return null;
+  return fechas.reduce((a, b) => (b.t > a.t ? b : a)).texto;
+}
+
 export async function observar({ sitio, repo, token, ahora = new Date() }) {
   const portada = await pedir(`${sitio}/sitemap.xml`);
   let actualizado = null;
   if (portada?.ok) {
-    // La portada es la primera entrada del sitemap y su fecha es la del último deploy.
-    actualizado = (await portada.text()).match(/<lastmod>([^<]+)<\/lastmod>/)?.[1] ?? null;
+    actualizado = ultimaModificacion(await portada.text());
   }
   const inicio = await pedir(`${sitio}/`);
   const html = inicio?.ok ? await inicio.text() : '';
