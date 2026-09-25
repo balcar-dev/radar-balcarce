@@ -1,5 +1,5 @@
 {
-  "exportado": "2026-09-25T13:24:36.728Z",
+  "exportado": "2026-09-25T13:33:00.843Z",
   "decisiones": {
     "1951120": {
       "estado": "automatica",
@@ -8072,13 +8072,46 @@
     },
     "ts9zo0": {
       "estado": "automatica",
-      "titulo": "Nuevos sacerdotes asumen en parroquias locales",
-      "copete": "El presbítero Marcelo Gabriel Panebianco asumió sus funciones pastorales en comunidades de Balcarce y San Agustín.",
-      "cuerpo": null,
-      "guion": "Nuevos sacerdotes asumen en parroquias locales",
+      "titulo": "Comienza una nueva etapa pastoral en la Iglesia católica en Balcarce",
+      "copete": "Las comunidades locales inician un periodo de renovación espiritual con la llegada de nuevas autoridades eclesiásticas para fortalecer el trabajo pastoral conjunto.",
+      "cuerpo": "La Iglesia católica local inicia una nueva etapa con la incorporación de nuevos referentes religiosos destinados a guiar las actividades pastorales de la comunidad. Esta renovación busca fortalecer el acompañamiento espiritual y la cercanía con los fieles en las distintas parroquias del distrito.\n\nLa llegada de los sacerdotes marca el comienzo de un ciclo enfocado en el trabajo conjunto y la participación activa de los vecinos en la vida eclesiástica. Las tareas se centrarán en atender las necesidades espirituales y consolidar el vínculo con la comunidad.\n\nEstas acciones pastorales forman parte de la reorganización habitual que implementa la institución religiosa para dinamizar su labor en la región.",
+      "guion": "Comienza una nueva etapa pastoral en la Iglesia católica en Balcarce",
       "deIA": true,
       "por": "ia",
-      "cuando": "2026-09-21T01:07:53.482Z"
+      "cuando": "2026-09-25T13:33:00.780Z",
+      "claves": [
+        "Llegan nuevos referentes a la Iglesia católica local",
+        "Se inicia una etapa enfocada en la cercanía pastoral",
+        "Participan las comunidades de la región"
+      ],
+      "seSabe": [
+        "Se registra la llegada de nuevos sacerdotes a la comunidad católica local.",
+        "La iniciativa apunta a fortalecer la vida pastoral de la institución."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "La Iglesia católica local inicia una nueva etapa pastoral con la llegada de nuevos presbíteros para fortalecer el trabajo junto a la comunidad.",
+      "etiquetas": [
+        "Iglesia católica",
+        "Balcarce",
+        "comunidad",
+        "pastoral"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/una-nueva-etapa-para-la-comunidad-catolica-fe-cercania-y-el-desafio-de-caminar-juntos-943",
+          "fecha": null,
+          "oficial": false,
+          "aporte": "Informó sobre la incorporación de nuevos presbíteros a las comunidades católicas locales."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
     },
     "5tyfmu": {
       "estado": "automatica",
@@ -8389,13 +8422,47 @@
     },
     "18iooyc": {
       "estado": "automatica",
-      "titulo": "Luis Ispizua destacó el rol del campo para la economía",
-      "copete": "El referente ganadero Luis Calixto Ispizúa analizó la actualidad del sector agrícola y ganadero en Buenos Aires.",
-      "cuerpo": null,
-      "guion": "Luis Ispizua destacó el rol del campo para la economía",
+      "titulo": "Informan servicios fúnebres de la comunidad en Balcarce",
+      "copete": "La Cooperativa de Electricidad General Balcarce dio a conocer los servicios de sepelios correspondientes a los fallecimientos registrados en el distrito durante los últimos meses.",
+      "cuerpo": "La Cooperativa de Electricidad General Balcarce Limitada informó los detalles de los servicios fúnebres y traslados al Cementerio Municipal realizados en la ciudad y en la zona rural. De acuerdo con los avisos difundidos, las inhumaciones y cremaciones se llevaron a cabo tras los respectivos oficios religiosos en salas velatorias locales, con participación de familiares y allegados.\n\nLos registros abarcan decesos ocurridos desde mayo hasta septiembre de este año en distintos puntos del partido, incluyendo domicilios urbanos y zonas como Los Pinos. Los servicios estuvieron a cargo de la entidad de electricidad local, que centraliza las prestaciones de sepelios en el distrito.",
+      "guion": "Informan servicios fúnebres de la comunidad en Balcarce",
       "deIA": true,
       "por": "ia",
-      "cuando": "2026-09-21T02:54:42.589Z"
+      "cuando": "2026-09-25T13:33:00.780Z",
+      "claves": [
+        "La Cooperativa de Electricidad informó los servicios fúnebres",
+        "Los decesos se registraron en distintos puntos del distrito",
+        "Las inhumaciones se realizaron en el Cementerio Municipal"
+      ],
+      "seSabe": [
+        "La Cooperativa de Electricidad General Balcarce Limitada prestó los servicios de sepelios.",
+        "Se registraron fallecimientos en Balcarce y Los Pinos entre mayo y septiembre de 2026.",
+        "Los restos fueron inhumados en el Cementerio Municipal o cremados según cada caso."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "La Cooperativa de Electricidad General Balcarce dio a conocer los servicios fúnebres y los detalles de las inhumaciones realizadas en el distrito en los últimos meses.",
+      "etiquetas": [
+        "servicios funebres",
+        "cooperativa de electricidad",
+        "fallecimientos",
+        "Balcarce"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/luis-ispizua-el-gobierno-entendio-que-el-campo-es-el-motor-del-pais-969",
+          "fecha": null,
+          "oficial": false,
+          "aporte": "Detalló los avisos de fallecimiento y los servicios de sepelios brindados por la cooperativa local."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
     },
     "1s8swk5": {
       "estado": "automatica",
@@ -8963,13 +9030,48 @@
     },
     "1msbj8p": {
       "estado": "automatica",
-      "titulo": null,
-      "copete": null,
-      "cuerpo": null,
-      "guion": null,
-      "deIA": null,
-      "por": null,
-      "cuando": "2026-09-21T05:54:23.364Z"
+      "titulo": "Gabriel Robledo logra la medalla de bronce en Mar del Plata en Balcarce",
+      "copete": "El atleta local Gabriel Robledo consiguió el tercer puesto en el Campeonato Provincial de Pista y Campo desarrollado en Mar del Plata. De la competencia también formó parte Jeremías Jove con una destacada labor.",
+      "cuerpo": "El Estadio Atlético Justo Román de la ciudad de Mar del Plata fue escenario de una nueva edición del Campeonato Provincial de Pista y Campo, destinado a las categorías U16 y U18. En dicho certamen atlético, los deportistas locales cumplieron una muy buena labor.\n\nEntre los participantes sobresalió la actuación de Gabriel Robledo, quien logró subirse al podio al obtener la medalla de bronce. Además, la competencia contó con la presencia de Jeremías Jove, quien también tuvo un desempeño destacado representando a la ciudad.\n\nEl torneo reunió a jóvenes exponentes de la disciplina de distintos puntos de la provincia para disputar las diferentes pruebas de pista y campo en las instalaciones marplatenses.",
+      "guion": "Gabriel Robledo logra la medalla de bronce en Mar del Plata en Balcarce",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T13:33:00.780Z",
+      "claves": [
+        "Gabriel Robledo obtuvo el tercer puesto provincial.",
+        "La competencia se realizó en el Estadio Justo Román.",
+        "Jeremías Jove también participó con una labor destacada.",
+        "El certamen reunió a las categorías U16 y U18."
+      ],
+      "seSabe": [
+        "Gabriel Robledo ganó la medalla de bronce en el Campeonato Provincial de Pista y Campo.",
+        "El torneo se desarrolló en el Estadio Atlético Justo Román de Mar del Plata.",
+        "La competencia incluyó actividad para las categorías U16 y U18.",
+        "Jeremías Jove también participó en el torneo con una labor muy buena."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El atleta Gabriel Robledo obtuvo la medalla de bronce en el Campeonato Provincial de Pista y Campo desarrollado en el Estadio Justo Román de Mar del Plata. Del certamen también formó parte Jeremías Jove con una destacada actuación.",
+      "etiquetas": [
+        "Gabriel Robledo",
+        "Mar del Plata",
+        "Balcarce"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/bronce-para-gabriel-robledo-en-el-provincial-de-pista-y-campo-353",
+          "fecha": null,
+          "oficial": false,
+          "aporte": "Informó sobre la participación y el tercer puesto de Gabriel Robledo en el Provincial de Pista y Campo en Mar del Plata, además de la actuación de Jeremías Jove."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
     },
     "lh579a": {
       "estado": "automatica",
@@ -13750,26 +13852,32 @@
     },
     "pd6ls9": {
       "estado": "automatica",
-      "titulo": "Investigadores del CONICET revelan un mecanismo del cáncer de páncreas en Balcarce",
-      "copete": "Científicos del CONICET descubrieron un mecanismo de comunicación entre células del cáncer de páncreas que les permite sobrevivir.",
-      "cuerpo": "Un equipo de investigadores del CONICET y de distintas instituciones logró identificar un proceso mediante el cual las células del adenocarcinoma ductal pancreático, el tipo más frecuente de cáncer de páncreas, logran comunicarse para asegurar su supervivencia. El hallazgo aporta nueva información sobre el comportamiento de este tipo tumoral complejo y abre posibles vías de estudio para futuros tratamientos médicos a nivel general.",
-      "guion": "Investigadores del CONICET revelan un mecanismo del cáncer de páncreas en Balcarce",
+      "titulo": "Informan los servicios fúnebres de la comunidad en Balcarce",
+      "copete": "La Cooperativa de Electricidad dio a conocer el detalle de los servicios de sepelios correspondientes a vecinos fallecidos en las últimas semanas en el distrito.",
+      "cuerpo": "La Cooperativa de Electricidad General Balcarce Limitada informó el detalle de los servicios de sepelios prestados en el distrito durante los últimos meses. Los procedimientos incluyeron inhumaciones en el Cementerio Municipal y cremaciones en la vecina localidad de Miramar, de acuerdo con los avisos fúnebres difundidos.\n\nLos servicios correspondieron a vecinos de distintos puntos de la ciudad, de la zona rural de Los Pinos y de diversos barrios locales. Las salas velatorias y los traslados fueron coordinados a través de la entidad de servicios públicos, según los cronogramas comunicados para cada caso.",
+      "guion": "Informan los servicios fúnebres de la comunidad en Balcarce",
       "deIA": true,
       "por": "ia",
-      "cuando": "2026-09-25T07:10:55.263Z",
+      "cuando": "2026-09-25T13:33:00.780Z",
       "claves": [
-        "Participaron investigadores del CONICET y otras instituciones.",
-        "El estudio se enfoca en el adenocarcinoma ductal pancreático.",
-        "Se identificó cómo se comunican las células tumorales para sobrevivir."
+        "Detalle de servicios de sepelios en Balcarce",
+        "Información brindada por la Cooperativa de Electricidad",
+        "Inhumaciones y cremaciones registradas en el distrito"
+      ],
+      "seSabe": [
+        "La Cooperativa de Electricidad General Balcarce Limitada estuvo a cargo de los servicios de sepelios.",
+        "Se realizaron inhumaciones en el Cementerio Municipal y cremaciones en Miramar según cada caso.",
+        "Los servicios incluyeron a vecinos de la ciudad y de zonas rurales como Los Pinos."
       ],
       "noConfirmado": [
         "No pudo ser contrastado de forma independiente con las fuentes consultadas."
       ],
-      "textoRedes": "Investigadores del CONICET y de diversas instituciones descubrieron un mecanismo que permite a las células del cáncer de páncreas comunicarse para sobrevivir.",
+      "textoRedes": "La Cooperativa de Electricidad dio a conocer el detalle de los servicios de sepelios correspondientes a vecinos fallecidos en el distrito.",
       "etiquetas": [
-        "CONICET",
-        "cancer de pancreas",
-        "Balcarce"
+        "Balcarce",
+        "sepelios",
+        "Cooperativa de Electricidad",
+        "fallecimientos"
       ],
       "fuentesConsultadas": [
         {
@@ -13777,7 +13885,7 @@
           "enlace": "https://eldiariobalcarce.com.ar/investigadores-del-conicet-revelan-como-celulas-de-cancer-pancreatico-se-comunican-para-sobrevivir-594",
           "fecha": "2026-09-23T21:29:29.000Z",
           "oficial": false,
-          "aporte": "Aportó la información sobre el descubrimiento del mecanismo de comunicación celular en el cáncer de páncreas realizado por investigadores del CONICET."
+          "aporte": "Detalló el listado de servicios fúnebres y traslados gestionados por la cooperativa local."
         }
       ],
       "verificacion": {
@@ -13798,13 +13906,61 @@
     },
     "1vgvciw": {
       "estado": "automatica",
-      "titulo": null,
-      "copete": null,
-      "cuerpo": null,
-      "guion": null,
-      "deIA": null,
-      "por": null,
-      "cuando": "2026-09-25T07:10:59.899Z"
+      "titulo": "Kevin Gómez presenta su título argentino en el gimnasio de Balcarce",
+      "copete": "El boxeador balcarceño Kevin Gómez visitó el gimnasio donde realiza su preparación física para mostrar el cinturón de campeón nacional supermediano que obtuvo recientemente.",
+      "cuerpo": "El deportista local Kevin Gómez regresó este martes al gimnasio Quality, el espacio donde habitualmente realiza su preparación física, para compartir con sus compañeros y allegados el cinturón que lo acredita como campeón argentino de la categoría supermediano.\n\nTras su consagración, el deportista había recibido una cálida bienvenida por parte de una multitud que lo aguardaba en la intersección de las rutas 226 y 55.\n\nLa visita al centro de entrenamiento sirvió para exhibir el cetro obtenido y celebrar el hito deportivo alcanzado en su carrera profesional junto a quienes acompañan su rutina diaria de preparación en el distrito.",
+      "guion": "Kevin Gómez presenta su título argentino en el gimnasio de Balcarce",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T13:33:00.780Z",
+      "claves": [
+        "Kevin Gómez visitó el gimnasio Quality con su título nacional",
+        "El boxeador se consagró campeón argentino de la categoría supermediano",
+        "El deportista había sido recibido por una multitud en su regreso a la ciudad"
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El boxeador balcarceño Kevin Gómez visitó el gimnasio donde realiza su preparación física para compartir con sus compañeros el cinturón de campeón argentino de la categoría supermediano que obtuvo recientemente.",
+      "etiquetas": [
+        "Kevin Gómez",
+        "campeón argentino",
+        "Balcarce"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/entre-felicitaciones-y-orgullo-kevin-gomez-compartio-en-quality-su-titulo-argentino-577",
+          "fecha": "2026-09-23T11:53:31.000Z",
+          "oficial": false,
+          "aporte": "Informó la visita de Kevin Gómez al gimnasio Quality para mostrar su cinturón de campeón."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "e3ci1b",
+          "titulo": "Kevin Gómez ganó por nocaut el título nacional supermediano",
+          "fecha": "2026-09-20T05:00:13.000Z",
+          "ruta": "/nota/kevin-gomez-gano-por-nocaut-el-titulo-nacional-supermediano-e3ci1b"
+        },
+        {
+          "id": "19cfh7v",
+          "titulo": "Kevin Gómez busca el título argentino supermediano",
+          "fecha": "2026-09-18T20:48:33.000Z",
+          "ruta": "/nota/kevin-gomez-busca-el-titulo-argentino-supermediano-19cfh7v"
+        },
+        {
+          "id": "10x98wn",
+          "titulo": "Caravana y recibimiento para el boxeador Kevin Gómez",
+          "fecha": "2026-09-22T23:46:36.443Z",
+          "ruta": "/nota/caravana-y-recibimiento-para-el-boxeador-kevin-gomez-10x98wn"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
     },
     "1jv9qa4": {
       "estado": "automatica",
@@ -16191,6 +16347,65 @@
           "fecha": "2026-09-25T13:13:45.000Z",
           "oficial": true,
           "aporte": "Informó el horario y el motivo del cierre anticipado de las cajas municipales"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Sale de una fuente oficial: Municipalidad de Balcarce.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "1825h24": {
+      "estado": "automatica",
+      "titulo": "Campo de Pato disputa una doble fecha de hockey en Balcarce",
+      "copete": "El Club Social y Campo de Pato fue escenario de un fin de semana a puro hockey por el Torneo AB de la Asociación Amateur Marplatense, con partidos frente a Del Valle de Necochea y Polideportivo Villa Gesell.",
+      "cuerpo": "Durante el fin de semana pasado, el Club Social y Campo de Pato \"Gral. Balcarce\" recibió dos fechas de hockey sobre césped en el marco del Torneo AB de la Asociación Amateur Marplatense. Las actividades comenzaron el sábado con el enfrentamiento ante Del Valle de Necochea, donde más de sesenta jugadoras infantiles participaron de la jornada.\n\nEn tanto, el domingo la jornada continuó con el adelanto de la fecha doce frente al Polideportivo Villa Gesell, en un contexto marcado por el mal tiempo. En esta ocasión, la categoría sub-dieciséis obtuvo un cómodo triunfo por cuatro a cero, mientras que la séptima empató sin goles y cayó en los penales, y la quinta división no pudo superar a su rival.\n\nPróximamente, el conjunto de Balcarce afrontará una nueva jornada del certamen cuando deba viajar a Mar del Plata para medirse ante Biguá.",
+      "guion": "Campo de Pato disputa una doble fecha de hockey en Balcarce",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T13:33:00.780Z",
+      "claves": [
+        "Campo de Pato recibió a Del Valle de Necochea y Polideportivo Villa Gesell.",
+        "Los encuentros correspondieron al Torneo AB de la Asociación Amateur Marplatense.",
+        "La próxima fecha se jugará en Mar del Plata frente a Biguá."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El Club Social y Campo de Pato fue local en una intensa doble fecha de hockey sobre césped por el Torneo AB de la Asociación Amateur Marplatense, con partidos frente a Del Valle de Necochea y Polideportivo Villa Gesell.",
+      "etiquetas": [
+        "hockey",
+        "Campo de Pato",
+        "Balcarce",
+        "deportes"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Municipalidad de Balcarce",
+          "enlace": "https://balcarce.gob.ar/2026/09/25/doble-fecha-de-hockey-para-campo-de-pato/",
+          "fecha": "2026-09-25T13:28:23.000Z",
+          "oficial": true,
+          "aporte": "Detalló los resultados y goleadores de todas las categorías frente a Necochea y Villa Gesell."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "acvevu",
+          "titulo": "Hockey: Campo de Pato disputó dos fechas del Torneo AB",
+          "fecha": "2026-09-21T18:10:52.000Z",
+          "ruta": "/nota/hockey-campo-de-pato-disputo-dos-fechas-del-torneo-ab-acvevu"
+        },
+        {
+          "id": "zmbe8t",
+          "titulo": "Rugby: doble triunfo para Campo de Pato en el Torneo Desarrollo",
+          "fecha": "2026-09-21T18:02:31.000Z",
+          "ruta": "/nota/rugby-doble-triunfo-para-campo-de-pato-en-el-torneo-desarrollo-zmbe8t"
+        },
+        {
+          "id": "1xf2418",
+          "titulo": "Campo de Pato volvió a tener una destacada jornada de hockey",
+          "fecha": "2026-09-18T05:43:46.737Z",
+          "ruta": "/nota/campo-de-pato-volvio-a-tener-una-destacada-jornada-de-hockey-1xf2418"
         }
       ],
       "verificacion": {
