@@ -1,5 +1,5 @@
 {
-  "exportado": "2026-09-25T11:57:25.226Z",
+  "exportado": "2026-09-25T12:06:02.841Z",
   "decisiones": {
     "1951120": {
       "estado": "automatica",
@@ -9909,23 +9909,120 @@
     },
     "1m6wyz8": {
       "estado": "automatica",
-      "titulo": null,
-      "copete": null,
-      "cuerpo": null,
-      "guion": null,
-      "deIA": null,
-      "por": null,
-      "cuando": "2026-09-25T05:46:00.377Z"
+      "titulo": "Milei afirma que 2028 será el mejor año económico",
+      "copete": "El presidente Javier Milei aseguró en Nueva York ante inversores que, si es reelegido el próximo año, 2028 marcará un crecimiento histórico para el país con mejoras en salarios e inversiones.",
+      "cuerpo": "Durante su exposición en el Club Económico estadounidense, el mandatario defendió su plan de ajuste y sostuvo que las inversiones en sectores como Vaca Muerta, la minería y la energía se acelerarán de manera dramática, lo que repercutirá en los salarios.\n\nDel encuentro participaron funcionarios nacionales como el ministro de Economía, Luis Caputo, y el canciller Pablo Quirno, junto con representantes diplomáticos y referentes internacionales con quienes el jefe de Estado analizó diversos temas de agenda global.",
+      "guion": "Milei afirma que 2028 será el mejor año económico",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T12:06:02.776Z",
+      "noConfirmado": [
+        "No se detallaron los plazos específicos de ejecución para las inversiones anunciadas en el sector energético y minero."
+      ],
+      "etiquetas": [
+        "Javier Milei",
+        "Economia",
+        "Inversores",
+        "Nueva York"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infórmese Primero (FM 104.9)",
+          "enlace": "http://www.blogger.com/feeds/8495648477830064035/posts/default/6686993970594138841",
+          "fecha": "2026-09-24T22:08:00.000Z",
+          "oficial": false,
+          "aporte": "Detalló los dichos del Presidente ante los inversores y los funcionarios presentes."
+        },
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/politica/2026/09/24/milei-en-new-york-si-nuestro-gobierno-es-reelecto-2028-sera-el-mejor-ano-economico-de-la-historia-de-la-argentina/",
+          "fecha": "2026-09-24T19:50:09.000Z",
+          "oficial": false,
+          "aporte": "Aportó la ubicación del evento y la defensa del plan económico."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1l7ss76",
+          "titulo": "Milei, ante inversores en Nueva York: “Si somos reelectos, 2028 será el mejor año económico de la historia de la Argentina”",
+          "fecha": "2026-09-24T21:42:47.000Z",
+          "ruta": "/nota/milei-ante-inversores-en-nueva-york-si-somos-reelectos-2028-sera-el-1l7ss76"
+        },
+        {
+          "id": "k6rr8h",
+          "titulo": "Milei en New York: “Si nuestro gobierno es reelecto, 2028 será el mejor año económico de la historia de la Argentina”",
+          "fecha": "2026-09-24T19:50:09.000Z",
+          "ruta": "/nota/milei-en-new-york-si-nuestro-gobierno-es-reelecto-2028-sera-el-mejor-k6rr8h"
+        },
+        {
+          "id": "fzmfy4",
+          "titulo": "Gira por New York: Milei se reunirá con Netanyahu y disertará en el Club Económico antes de regresar a Buenos Aires",
+          "fecha": "2026-09-24T07:37:23.000Z",
+          "ruta": "/nota/gira-por-new-york-milei-se-reunira-con-netanyahu-y-disertara-en-el-fzmfy4"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      }
     },
     "1c89ry1": {
       "estado": "automatica",
-      "titulo": null,
-      "copete": null,
-      "cuerpo": null,
-      "guion": null,
-      "deIA": null,
-      "por": null,
-      "cuando": "2026-09-25T05:46:01.724Z"
+      "titulo": "El Senado aprueba la reforma del Banco Central y vuelve a Diputados",
+      "copete": "La Cámara Alta dio luz verde general al proyecto que veta la asistencia financiera al Estado. Como sufrió cambios durante el debate, la iniciativa deberá regresar a la Cámara de Diputados.",
+      "cuerpo": "La medida prohíbe la asistencia financiera al Estado nacional y a las provincias.\n\nEl proyecto elimina además funciones vinculadas con el direccionamiento del crédito y habilita al organismo a utilizar activos y reservas como garantía colateral en operaciones de financiamiento internacional y acuerdos de tipo REPO. Tras la votación general, los senadores iniciaron el tratamiento en particular.\n\nDebido a las modificaciones introducidas en el recinto, la iniciativa regresará a la Cámara de Diputados para su revisión. La medida forma parte de las iniciativas impulsadas por el Gobierno nacional para concentrar a la autoridad monetaria en la preservación del valor de la moneda.",
+      "guion": "El Senado aprueba la reforma del Banco Central y vuelve a Diputados",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T12:06:02.776Z",
+      "etiquetas": [
+        "Senado",
+        "Banco Central",
+        "Diputados",
+        "Gobierno nacional"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infórmese Primero (FM 104.9)",
+          "enlace": "http://www.blogger.com/feeds/8495648477830064035/posts/default/1090250732179167403",
+          "fecha": "2026-09-24T22:06:00.000Z",
+          "oficial": false,
+          "aporte": "Detalló los votos de la aprobación general, las modificaciones sobre las mayorías y los cambios que obligan al retorno a Diputados."
+        },
+        {
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/diputados-dio-media-sancion-a-la-reforma-de-la-carta-organica-del-banco-central-830",
+          "fecha": "2026-08-26T21:36:39.000Z",
+          "oficial": false,
+          "aporte": "Aportó el respaldo de sectores aliados y la definición presidencial sobre la medida legislativa."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "bsna1",
+          "titulo": "El Senado aprobó con cambios la reforma de la Carta Orgánica del Banco Central",
+          "fecha": "2026-09-24T20:17:00.000Z",
+          "ruta": "/nota/el-senado-aprobo-con-cambios-la-reforma-de-la-carta-organica-del-bsna1"
+        },
+        {
+          "id": "1iqwljr",
+          "titulo": "Milei celebró la aprobación de la reforma de la carta orgánica del Banco Central: \"Comienza el fin de la inflación\"",
+          "fecha": "2026-09-24T21:44:04.000Z",
+          "ruta": "/nota/milei-celebro-la-aprobacion-de-la-reforma-de-la-carta-organica-del-1iqwljr"
+        },
+        {
+          "id": "1vcv6ud",
+          "titulo": "Senado: el oficialismo logró aprobar la reforma del Banco Central, pero no es ley ya que volverá modificada a Diputados",
+          "fecha": "2026-09-24T20:15:13.000Z",
+          "ruta": "/nota/senado-el-oficialismo-logro-aprobar-la-reforma-del-banco-central-pero-1vcv6ud"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      }
     },
     "krgsl6": {
       "estado": "automatica",
@@ -9939,13 +10036,77 @@
     },
     "1408sz9": {
       "estado": "automatica",
-      "titulo": "Esteban Reino recibe a la maestra Wu Huimin en Balcarce",
-      "copete": "El intendente mantuvo un encuentro con la referente de disciplinas tradicionales chinas durante su visita a la ciudad.",
-      "cuerpo": "El intendente Esteban Reino, junto al secretario de Gobierno, Ricardo Stoppani, recibió en el palacio municipal a la maestra Wu Huimin. La referente de disciplinas tradicionales chinas llegó a la ciudad para participar de una jornada abierta destinada a toda la comunidad.",
-      "guion": "Esteban Reino recibe a la maestra Wu Huimin en Balcarce",
+      "titulo": "El intendente recibe a la maestra de disciplinas chinas Wu Huimin en Balcarce",
+      "copete": "El intendente Esteban Reino recibió a la referente de disciplinas tradicionales chinas Wu Huimin, quien visitó la ciudad para ofrecer una jornada abierta a la comunidad con clases de Chi Kung.",
+      "cuerpo": "El intendente municipal, Esteban Reino, junto al secretario de Gobierno, Ricardo Stoppani, recibió a la maestra de disciplinas tradicionales chinas Wu Huimin, quien llegó a Balcarce para participar de una jornada abierta destinada a vecinos.\n\nDurante la actividad, que combinó movimientos suaves, respiración y concentración para promover el bienestar, la especialista brindó además una demostración de Daoyin Yangsheng Gong. Huimin cuenta con una destacada trayectoria internacional, es discípula directa de los creadores del sistema y dirige el Centro MULAN de Vitalidad en Argentina, además de ocupar cargos jerárquicos en federaciones internacionales de la disciplina.",
+      "guion": "El intendente recibe a la maestra de disciplinas chinas Wu Huimin en Balcarce",
       "deIA": true,
       "por": "ia",
-      "cuando": "2026-09-25T05:46:04.459Z"
+      "cuando": "2026-09-25T12:06:02.776Z",
+      "claves": [
+        "El intendente Esteban Reino recibió a la maestra Wu Huimin.",
+        "Se realizó una clase abierta de Chi Kung en la plaza Libertad.",
+        "La actividad contó con el apoyo de la Subsecretaría de Deporte."
+      ],
+      "seSabe": [
+        "El intendente Esteban Reino y el secretario de Gobierno Ricardo Stoppani recibieron a la maestra Wu Huimin.",
+        "Se desarrolló una clase abierta de Chi Kung en la plaza Libertad frente al Museo Fangio.",
+        "Participó la instructora María Claudia Juárez con el auspicio de la Subsecretaría de Deporte y Recreación.",
+        "Wu Huimin presentó un sistema de ejercicios orientados al cuidado de la salud denominado Daoyin Yangsheng Gong."
+      ],
+      "noConfirmado": [
+        "No trascendió la cantidad exacta de vecinos que participaron de la jornada en la plaza Libertad."
+      ],
+      "textoRedes": "El intendente Esteban Reino recibió a la maestra de disciplinas tradicionales chinas Wu Huimin, quien visitó Balcarce para encabezar una jornada abierta de Chi Kung en la plaza Libertad junto a vecinos.",
+      "etiquetas": [
+        "Wu Huimin",
+        "Esteban Reino",
+        "Chi Kung",
+        "Balcarce",
+        "Deportes",
+        "Cultura"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infórmese Primero (FM 104.9)",
+          "enlace": "http://www.blogger.com/feeds/8495648477830064035/posts/default/8017312236700753332",
+          "fecha": "2026-09-24T20:19:56.506Z",
+          "oficial": false,
+          "aporte": "Detalló el desarrollo de la clase de Chi Kung en la plaza Libertad junto a la instructora María Claudia Juárez y la trayectoria de la maestra visitante."
+        },
+        {
+          "medio": "Municipalidad de Balcarce",
+          "enlace": "https://balcarce.gob.ar/2026/09/24/reino-recibio-a-referente-de-disciplinas-tradicionales-chinas/",
+          "fecha": "2026-09-24T16:09:50.000Z",
+          "oficial": true,
+          "aporte": "Confirmó de manera oficial el encuentro institucional entre el intendente Reino, el secretario Stoppani y la referente china."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "86l1ng",
+          "titulo": "Reino recibió a referente de disciplinas tradicionales chinas",
+          "fecha": "2026-09-24T16:09:50.000Z",
+          "ruta": "/nota/reino-recibio-a-referente-de-disciplinas-tradicionales-chinas-86l1ng"
+        },
+        {
+          "id": "awfv2d",
+          "titulo": "Reino recibió a autoridades del Club de Leones",
+          "fecha": "2026-09-24T19:19:45.000Z",
+          "ruta": "/nota/reino-recibio-a-autoridades-del-club-de-leones-awfv2d"
+        },
+        {
+          "id": "x1ihjl",
+          "titulo": "Reino recibió a autoridades del Club de Leones",
+          "fecha": "2026-09-24T16:29:36.000Z",
+          "ruta": "/nota/reino-recibio-a-autoridades-del-club-de-leones-x1ihjl"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo informaron Municipalidad de Balcarce y un medio independiente.",
+        "sugeridoPorIA": "ALTA"
+      }
     },
     "942wi7": {
       "estado": "automatica",
@@ -10036,13 +10197,69 @@
     },
     "ntbsnv": {
       "estado": "automatica",
-      "titulo": null,
-      "copete": null,
-      "cuerpo": null,
-      "guion": null,
-      "deIA": null,
-      "por": null,
-      "cuando": "2026-09-25T05:55:52.357Z"
+      "titulo": "Mar del Plata recibe la previa del automovilismo en Balcarce",
+      "copete": "Una conferencia de prensa y una exhibición de TC Pick Up en Mar del Plata marcaron la previa del retorno de la actividad deportiva al autódromo Juan Manuel Fangio.",
+      "cuerpo": "Participaron Sebastián D’Andrea, Christian Ledesma, Juan José Suárez, Diego De Carlo y José Ciantini. Tras el encuentro, una camioneta de TC Pick Up conducida por Ciantini realizó un recorrido por la costa marplatense que partió desde el Torreon del Monje y culminó en la Rotonda del Golf.\n\nEl cronograma continuará en Balcarce este viernes desde las 18:30 con una caravana que iniciará en la estación Shell de avenida San Martín y 107, pasará por Plaza Libertad y finalizará frente al Museo del Automovilismo Juan Manuel Fangio, donde se realizara la conferencia oficial de la octava fecha. Como se había informado a principios de semana, la vuelta de la competencia nacional generó gran expectativa en la region, con largas filas de público en el predio y declaraciones de pilotos locales sobre el significado de correr nuevamente en la ciudad.",
+      "guion": "Mar del plata recibe la previa del automovilismo en Balcarce",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T12:06:02.776Z",
+      "claves": [
+        "Conferencia de prensa y exhibición de TC Pick Up en Mar del Plata.",
+        "Recorrido de la categoría por la costa marplatense con presencia de pilotos.",
+        "Continuidad de las actividades promocionales este viernes en Balcarce.",
+        "Gran expectativa regional por el regreso de la competencia al autódromo."
+      ],
+      "seSabe": [
+        "Se realizó una conferencia de prensa este jueves en Mar del Plata con autoridades y pilotos.",
+        "Una camioneta de TC Pick Up conducida por José Ciantini recorrió la costa marplatense.",
+        "El cronograma seguirá este viernes en Balcarce con una caravana hacia el Museo Juan Manuel Fangio."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Mar del Plata fue escenario de la previa del regreso del automovilismo a Balcarce con una exhibición de TC Pick Up y una conferencia oficial. Las actividades promocionales continúan este viernes en la ciudad.",
+      "etiquetas": [
+        "Automovilismo",
+        "Autodromo Juan Manuel Fangio",
+        "Balcarce",
+        "Mar del Plata",
+        "TC Pick Up"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Puntonueve (FM 100.9)",
+          "enlace": "https://puntonueve.com.ar/mar-del-plata-vibro-con-la-tc-pick-up-en-la-previa-del-regreso-del-automovilismo-a-balcarce/",
+          "fecha": "2026-09-24T23:08:08.000Z",
+          "oficial": false,
+          "aporte": "Detalló las actividades promocionales previas en Mar del Plata y Balcarce, las autoridades presentes y los recorridos de los vehículos."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "4v2vga",
+          "titulo": "Largas filas en Balcarce por el regreso del automovilismo",
+          "fecha": "2026-09-24T13:34:15.000Z",
+          "ruta": "/nota/largas-filas-en-balcarce-por-el-regreso-del-automovilismo-4v2vga"
+        },
+        {
+          "id": "xtlwre",
+          "titulo": "Largas filas en Balcarce por el regreso del automovilismo en Balcarce",
+          "fecha": "2026-09-24T12:24:00.000Z",
+          "ruta": "/nota/largas-filas-para-ingresar-al-autodromo-fangio-xtlwre"
+        },
+        {
+          "id": "1sjses1",
+          "titulo": "Mangoni palpita el regreso del automovilismo a Balcarce",
+          "fecha": "2026-09-23T22:16:46.000Z",
+          "ruta": "/nota/mangoni-palpita-el-regreso-del-automovilismo-a-balcarce-1sjses1"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
     },
     "1b3p6ze": {
       "estado": "automatica",
@@ -10056,13 +10273,70 @@
     },
     "xtlwre": {
       "estado": "automatica",
-      "titulo": null,
-      "copete": null,
-      "cuerpo": null,
-      "guion": null,
-      "deIA": null,
-      "por": null,
-      "cuando": "2026-09-25T05:55:54.620Z"
+      "titulo": "Largas filas para ingresar al autódromo Juan Manuel Fangio en Balcarce",
+      "copete": "Balcarce vive una gran expectativa por el regreso del automovilismo nacional al autódromo Juan Manuel Fangio con largas filas de público en el ingreso.",
+      "cuerpo": "Vecinos y visitantes comenzaron a concentrarse desde temprano en Balcarce para buscar su lugar en la parte alta de la Sierra La Barrosa, en la previa del regreso de la actividad nacional al autódromo Juan Manuel Fangio. Sobre la calle 63, habilitada como Puerta 1 para el acceso exclusivo del público, se registró una extensa fila de personas que se extendía hasta la avenida Suipacha, en el marco de un fin de semana que espera una convocatoria de cerca de 15 mil personas o más.\n\nPara el operativo del evento, las autoridades dispusieron que los equipos de competición y los trabajadores de prensa ingresen por la Puerta 2, ubicada sobre la calle 79, sector vedado para los espectadores. Asimismo, el ingreso de vehículos del público a la zona alta se realizará únicamente por calle 63 y el descenso por calle 79, mientras que sobre la avenida Dorrego habrá presencia de Gendarmería Nacional para impedir el acceso por El Mirador. La apertura total del predio está estimada para este viernes alrededor de las 8 de la mañana.",
+      "guion": "Largas filas para ingresar al autódromo Juan Manuel Fangio en Balcarce",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T12:06:02.776Z",
+      "claves": [
+        "Se registran largas filas de público sobre la calle 63 para ingresar al autódromo Juan Manuel Fangio.",
+        "Se espera la llegada de unas 15 mil personas o más para presenciar el regreso del automovilismo nacional.",
+        "El ingreso vehicular general será exclusivamente por calle 63 y el descenso por la calle 79.",
+        "Gendarmería Nacional custodiará la avenida Dorrego para evitar el acceso por el sector de El Mirador."
+      ],
+      "seSabe": [
+        "La calle 63 funciona como el acceso exclusivo para el público mediante la Puerta 1.",
+        "Los equipos de competición y la prensa ingresarán por la Puerta 2 situada en la calle 79.",
+        "El acceso vehicular a la parte alta de la sierra se canalizará por calle 63 y el descenso por calle 79.",
+        "La habilitación de los accesos está estimada para este viernes alrededor de las 8 de la mañana.",
+        "Gendarmería Nacional montará un operativo sobre la avenida Dorrego para restringir el paso por El Mirador."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Balcarce registra largas filas en el ingreso al autódromo Juan Manuel Fangio en la previa del regreso del automovilismo nacional con una masiva convocatoria esperada para este fin de semana en la Sierra La Barrosa.",
+      "etiquetas": [
+        "autodromo Juan Manuel Fangio",
+        "automovilismo",
+        "Sierra La Barrosa",
+        "Balcarce"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infórmese Primero (FM 104.9)",
+          "enlace": "http://www.blogger.com/feeds/8495648477830064035/posts/default/5556638852969935468",
+          "fecha": "2026-09-24T12:24:00.000Z",
+          "oficial": false,
+          "aporte": "Detalló el operativo de ingresos, la extensión de las filas y la expectativa de concurrencia para la reapertura del autódromo."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1rh34g1",
+          "titulo": "Socorristas participan en la reapertura del Fangio en Balcarce",
+          "fecha": "2026-09-23T22:58:23.988Z",
+          "ruta": "/nota/socorristas-participan-en-la-reapertura-del-fangio-en-balcarce-1rh34g1"
+        },
+        {
+          "id": "1sjses1",
+          "titulo": "Mangoni palpita el regreso del automovilismo a Balcarce",
+          "fecha": "2026-09-23T22:16:46.000Z",
+          "ruta": "/nota/mangoni-palpita-el-regreso-del-automovilismo-a-balcarce-1sjses1"
+        },
+        {
+          "id": "f7pgfp",
+          "titulo": "El autódromo Fangio recibe a las TC Pick Up en Balcarce",
+          "fecha": "2026-09-23T21:31:47.000Z",
+          "ruta": "/nota/el-autodromo-fangio-recibe-a-las-tc-pick-up-en-balcarce-f7pgfp"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
     },
     "1uf64an": {
       "estado": "automatica",
@@ -10086,13 +10360,56 @@
     },
     "yya7lo": {
       "estado": "automatica",
-      "titulo": null,
-      "copete": null,
-      "cuerpo": null,
-      "guion": null,
-      "deIA": null,
-      "por": null,
-      "cuando": "2026-09-25T05:55:59.290Z"
+      "titulo": "Aumentan los combustibles en estaciones de servicio en Balcarce",
+      "copete": "Las estaciones de servicio Shell, Axion y Puma aplican subas en los precios de los combustibles de entre el dos y el cinco por ciento, mientras se aguarda una posible definicion de YPF.",
+      "cuerpo": "Las estaciones de servicio Shell, Axion y Puma ya aplican aumentos en los precios de los combustibles de entre el dos y el cinco por ciento en los surtidores. La medida responde al incremento del valor internacional del petróleo, que superó los ciento siete dólares por barril debido al conflicto en Medio Oriente.\n\nEn contraste, estos incrementos todavía no se trasladaron a YPF, aunque el presidente de la petrolera, Horacio González, abrió la posibilidad de aplicar una suba en el corto plazo. La empresa estatal concentra más de la mitad del mercado de ventas de naftas y diésel en el país.\n\nSi bien los valores varían según el distrito, las subas impactan en los costos que afrontan los automovilistas locales al cargar combustible en las distintas banderas comerciales disponibles en la región.",
+      "guion": "Aumentan los combustibles en estaciones de servicio en Balcarce",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T12:06:02.776Z",
+      "claves": [
+        "Aumentaron los combustibles en estaciones de servicio privadas.",
+        "Las subas van del dos al cinco por ciento.",
+        "YPF analiza una posible suba en sus surtidores.",
+        "El incremento responde al valor internacional del petróleo."
+      ],
+      "seSabe": [
+        "Las estaciones Shell, Axion y Puma aplican aumentos de entre el dos y el cinco por ciento.",
+        "El valor internacional del petróleo superó los ciento siete dólares por barril.",
+        "El presidente de YPF, Horacio González, abrió la posibilidad de un incremento en la petrolera estatal."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Las estaciones de servicio Shell, Axion y Puma aplicaron aumentos de entre el dos y el cinco por ciento en los combustibles debido a la suba internacional del petróleo, mientras YPF analiza una posible medida similar.",
+      "etiquetas": [
+        "combustibles",
+        "aumento",
+        "estaciones de servicio",
+        "balcarce"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infórmese Primero (FM 104.9)",
+          "enlace": "http://www.blogger.com/feeds/8495648477830064035/posts/default/7976430694001347512",
+          "fecha": "2026-09-24T22:04:00.000Z",
+          "oficial": false,
+          "aporte": "Aportó los detalles sobre el aumento de los combustibles en las estaciones privadas y la postura de YPF."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "18o7aeq",
+          "titulo": "Las petroleras privadas aumentaron 5% los combustibles, mientras YPF espera: cómo quedaron los precios",
+          "fecha": "2026-09-24T18:26:39.000Z",
+          "ruta": "/nota/las-petroleras-privadas-aumentaron-5-los-combustibles-mientras-ypf-18o7aeq"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
     },
     "1nyse71": {
       "estado": "automatica",
@@ -10136,41 +10453,73 @@
     },
     "4tauw0": {
       "estado": "automatica",
-      "titulo": null,
-      "copete": null,
-      "cuerpo": null,
-      "guion": null,
-      "deIA": null,
-      "por": null,
-      "cuando": "2026-09-25T06:20:38.048Z"
-    },
-    "t3o3tt": {
-      "estado": "automatica",
-      "titulo": "Comienza la quincuagésima octava edición de la Invasión de Pueblos",
-      "copete": "Desde este viernes y durante todo el fin de semana se desarrollará en la vecina ciudad de Necochea la tradicional Invasión de Pueblos, un encuentro juvenil católico de la diócesis de Mar del Plata.",
-      "cuerpo": "El tradicional evento juvenil católico de la diócesis de Mar del Plata se llevará a cabo durante tres jornadas consecutivas, abarcando desde el viernes hasta el domingo. La organización de esta quincuagésima octava edición se encuentra a cargo del Movimiento Juvenil Diocesano.\n\nLa propuesta reúne a jóvenes de distintas localidades de la región para compartir diversas actividades de carácter religioso y recreativo a lo largo del fin de semana.",
-      "guion": "Comienza la quincuagésima octava edición de la Invasión de Pueblos",
+      "titulo": "El Municipio de Balcarce y el sindicato avanzan en un acuerdo salarial",
+      "copete": "El Sindicato de Trabajadores Municipales y la comuna negocian un incremento escalonado que se extendería hasta marzo de 2027. El entendimiento contempla porcentajes superiores a la inflación en ciertos tramos y una mesa técnica de revisión.",
+      "cuerpo": "El Sindicato de Trabajadores Municipales y el Municipio de Balcarce se encuentran cerca de cerrar una nueva paritaria para septiembre de 2026. El esquema contempla subas escalonadas sobre el salario básico desde este mes hasta marzo de 2027, con tramos que superarían la evolución del Índice de Precios al Consumidor.\n\nEl plan incluye un incremento del 3,2 por ciento en septiembre sobre el básico de agosto, un 2,2 por ciento en octubre y un 2,3 por ciento en noviembre. Los aumentos continuarían en enero y febrero de 2027 atados a la inflación de los meses previos, además de un porcentaje extra en marzo en reconocimiento por el diferimiento en la aplicación.\n\nAsimismo, el entendimiento prevé la creación de una mesa técnica a partir del 15 de febrero de 2027 para evaluar los ingresos por coparticipación frente a la inflación y la posibilidad de otorgar un complemento extraordinario.",
+      "guion": "El Municipio de Balcarce y el sindicato avanzan en un acuerdo salarial",
       "deIA": true,
       "por": "ia",
-      "cuando": "2026-09-25T06:20:40.831Z",
+      "cuando": "2026-09-25T12:06:02.776Z",
       "claves": [
-        "Se realiza la 58ª edición de la Invasión de Pueblos en Necochea.",
-        "El encuentro juvenil católico dura tres días.",
-        "Está organizado por el Movimiento Juvenil Diocesano."
+        "Negociación paritaria entre el municipio y el gremio",
+        "Aumentos escalonados previstos hasta marzo de 2027",
+        "Creación de una mesa técnica de revisión para febrero"
       ],
       "seSabe": [
-        "El evento es la 58ª edición de la Invasión de Pueblos, según el Movimiento Juvenil Diocesano.",
-        "Se desarrollará durante tres jornadas, desde el viernes hasta el domingo, en Necochea.",
-        "Participa la diócesis de Mar del Plata."
+        "El Sindicato de Trabajadores Municipales y la comuna negocian una nueva paritaria.",
+        "El esquema salarial se extendería desde septiembre de 2026 hasta marzo de 2027.",
+        "Se proyecta una mesa técnica para febrero de 2027 para analizar los ingresos por coparticipación."
       ],
       "noConfirmado": [
         "No pudo ser contrastado de forma independiente con las fuentes consultadas."
       ],
-      "textoRedes": "Este fin de semana se lleva a cabo en Necochea la 58ª edición de la Invasión de Pueblos, el tradicional encuentro juvenil católico organizado por el Movimiento Juvenil Diocesano de la diócesis de Mar del Plata.",
+      "textoRedes": "El Municipio de Balcarce y el gremio de trabajadores avanzan en un acuerdo paritario con aumentos escalonados hasta marzo de 2027 y una mesa técnica de revisión.",
+      "etiquetas": [
+        "salarios",
+        "municipios",
+        "paritarias",
+        "sindicato"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "QZ Noticias (Mar del Plata)",
+          "enlace": "https://www.qznoticias.com/la-region/el-stm-y-el-municipio-de-balcarce-avanzan-en-un-acuerdo-salarial-con-aumentos-por-encima-del-ipc",
+          "fecha": "2026-09-24T21:09:33.000Z",
+          "oficial": false,
+          "aporte": "Detalló los porcentajes y plazos del entendimiento salarial entre el municipio y el gremio."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "t3o3tt": {
+      "estado": "automatica",
+      "titulo": "Comienza la Invasión de Pueblos en Necochea con presencia de jóvenes de Balcarce",
+      "copete": "Cientos de jóvenes de la región participan desde este viernes en la tradicional propuesta católica de la diócesis de Mar del Plata, que incluye actividades comunitarias y misas durante tres jornadas.",
+      "cuerpo": "Este fin de semana se lleva a cabo la quincuagésima octava edición de la Invasión de Pueblos en la ciudad de Necochea, un encuentro juvenil católico de la diócesis de Mar del Plata que convoca a participantes mayores de trece años de distintas localidades, entre ellas Balcarce. Las actividades se desarrollan bajo el lema \"Quiero estar con vos\" y son organizadas por el Movimiento Juvenil Diocesano.\n\nEl programa previsto comprende momentos de oración, talleres y presentaciones musicales a lo largo de tres jornadas. Las actividades formales comienzan este viernes por la noche en el Colegio Capuchinos, mientras que para el sábado por la tarde están programadas misiones comunitarias en diferentes barrios y una misa en la parroquia Santa María del Carmen.\n\nEl cronograma continuará el domingo con una caminata por la paz que se extenderá desde la mencionada parroquia hasta las inmediaciones de la Terminal de Ómnibus. El cierre del tradicional encuentro regional tendrá lugar el mismo domingo por la tarde con una misa de clausura.",
+      "guion": "Comienza la Invasión de Pueblos en Necochea con presencia de jóvenes de Balcarce",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T12:06:02.776Z",
+      "claves": [
+        "Participan jóvenes mayores de trece años de Balcarce y la región.",
+        "El encuentro es organizado por el Movimiento Juvenil Diocesano.",
+        "Incluye misiones comunitarias, talleres y caminatas.",
+        "Las actividades se extienden durante todo el fin de semana."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Jóvenes de Balcarce participan este fin de semana de la 58ª Invasión de Pueblos en Necochea. El tradicional encuentro católico diocesano incluye misiones, talleres y misas durante tres jornadas.",
       "etiquetas": [
         "Invasión de Pueblos",
         "Necochea",
-        "Movimiento Juvenil Diocesano"
+        "Balcarce",
+        "iglesia católica",
+        "diócesis de Mar del Plata"
       ],
       "fuentesConsultadas": [
         {
@@ -10178,7 +10527,7 @@
           "enlace": "https://elecos.com.ar/este-viernes-comienza-la-58a-invasion-de-pueblos",
           "fecha": "2026-09-24T22:00:00.000Z",
           "oficial": false,
-          "aporte": "Informó sobre el inicio de la 58ª Invasión de Pueblos en Necochea organizada por el Movimiento Juvenil Diocesano."
+          "aporte": "Detalló el cronograma, las actividades y las localidades participantes de la 58ª Invasión de Pueblos en Necochea."
         }
       ],
       "verificacion": {
@@ -10409,13 +10758,68 @@
     },
     "1chkxhh": {
       "estado": "automatica",
-      "titulo": null,
-      "copete": null,
-      "cuerpo": null,
-      "guion": null,
-      "deIA": null,
-      "por": null,
-      "cuando": "2026-09-25T06:21:38.138Z"
+      "titulo": "El Concejo Deliberante debate tasas y obras en Balcarce",
+      "copete": "El cuerpo legislativo abordó un extenso temario con proyectos sobre servicios, tránsito y deporte, destacándose el debate por inconvenientes con el TelePASE.",
+      "cuerpo": "El Concejo Deliberante realizó este jueves su decimocuarta sesión ordinaria del año, en la que trató un total de 39 expedientes vinculados con obras, servicios públicos, salud, educación y deporte. Durante el encuentro, que según se informó transcurrió con debates más civilizados, los ediles analizaron iniciativas sobre infraestructura, tránsito, agua potable, gas y mantenimiento de espacios urbanos.\n\nEntre los asuntos principales figuraron los reclamos de usuarios del sistema TelePASE en el corredor hacia Mar del Plata, para lo cual se solicitó la intervención de Vialidad Nacional. Asimismo, el cuerpo legislativo reconoció la trayectoria del boxeador Kevin Facundo Gómez tras consagrarse campeón argentino de la categoría supermediano.\n\nEl temario también incluyó pedidos para eliminar tasas de taxis y remises de cara a las normativas impositivas del próximo año, además de proyectos sobre forestación, cuestiones habitacionales y la denominación de un paseo en el Cerro El Triunfo.",
+      "guion": "El Concejo Deliberante debate tasas y obras en Balcarce",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T12:06:02.776Z",
+      "claves": [
+        "El Concejo Deliberante realizó su decimocuarta sesión ordinaria con 39 expedientes.",
+        "Trataron inconvenientes en el sistema TelePASE del corredor a Mar del Plata.",
+        "Reconocieron al boxeador Kevin Facundo Gómez por su consagración nacional."
+      ],
+      "seSabe": [
+        "El cuerpo deliberativo analizó 39 expedientes durante la decimocuarta sesión ordinaria.",
+        "Se presentaron reclamos sobre el funcionamiento del TelePASE en el corredor Balcarce-Mar del Plata.",
+        "El Concejo reconoció al boxeador Kevin Facundo Gómez por su título en la categoría supermediano."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El Concejo Deliberante llevó a cabo su decimocuarta sesión ordinaria con el análisis de 39 expedientes, entre los que se destacaron reclamos por el sistema TelePASE y un reconocimiento a la trayectoria deportiva local.",
+      "etiquetas": [
+        "Concejo Deliberante",
+        "TelePASE",
+        "Balcarce",
+        "deportes",
+        "tasas municipales"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Radio Gabal (FM 104.1)",
+          "enlace": "https://www.radiogabal.com.ar/index.php/politica/concejo-deliberante-la-decimocuarta-sesion-tuvo-debates-mas-civilizados-con-el-foco-en-el-telepase",
+          "fecha": "2026-09-25T02:23:01.000Z",
+          "oficial": false,
+          "aporte": "Detalló los expedientes tratados en la decimocuarta sesión ordinaria del Concejo Deliberante."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1iv58lw",
+          "titulo": "Concejo Deliberante: este jueves se desarrollará el decimocuarto capítulo del año",
+          "fecha": "2026-09-24T12:55:31.000Z",
+          "ruta": "/nota/concejo-deliberante-este-jueves-se-desarrollara-el-decimocuarto-1iv58lw"
+        },
+        {
+          "id": "11a57qo",
+          "titulo": "El Concejo aprueba el Paseo Intendente Juan José Mare en Balcarce",
+          "fecha": "2026-09-25T00:52:49.160Z",
+          "ruta": "/nota/el-cerro-el-triunfo-tendra-el-paseo-juan-jose-mare-11a57qo"
+        },
+        {
+          "id": "1tspv07",
+          "titulo": "El Concejo aprueba prorrogar deudas de agua en Balcarce",
+          "fecha": "2026-09-25T00:05:57.000Z",
+          "ruta": "/nota/el-concejo-pide-prorroga-para-deudas-de-agua-en-balcarce-1tspv07"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
     },
     "1tspv07": {
       "estado": "automatica",
@@ -13273,6 +13677,63 @@
       "verificacion": {
         "nivel": "ALTA",
         "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "1kzeqjl": {
+      "estado": "automatica",
+      "titulo": "Cierra la planta de Dánica en Llavallol tras casi noventa años",
+      "copete": "La planta bonaerense de Dánica dejará de producir a fin de mes debido a problemas económicos, tras casi noventa años de trayectoria industrial.",
+      "cuerpo": "La fábrica de margarinas y aderezos Dánica finalizará su producción el treinta de septiembre tras atravesar un extenso proceso de dificultades operativas y financieras que incluyó reducciones de personal y reestructuraciones previas.\n\nComo se había informado a fines de septiembre, la medida anunciada por la firma implica el cierre definitivo del establecimiento ubicado en Llavallol, en la zona sur del Gran Buenos Aires, un funcionamiento histórico que se prolongó durante casi noventa años.\n\nLa decisión adoptada por la empresa deja sin efecto la continuidad de las actividades en el predio fabril, tras no poder revertir el cuadro adverso que arrastraba la planta en los últimos tiempos.",
+      "guion": "Cierra la planta de Dánica en Llavallol tras casi noventa años",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T12:06:02.775Z",
+      "claves": [
+        "La planta de Dánica en Llavallol dejará de producir el treinta de septiembre.",
+        "El cese de actividades ocurre tras casi noventa años de historia industrial.",
+        "La decisión responde a problemas económicos y operativos sostenidos."
+      ],
+      "seSabe": [
+        "La planta de Dánica en Llavallol dejará de producir el treinta de septiembre de dos mil veintiséis.",
+        "La fábrica cuenta con casi noventa años de historia.",
+        "La empresa arrastraba problemas económicos y operativos, además de reducciones de personal y reestructuraciones."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "La planta bonaerense de Dánica dejará de producir el treinta de septiembre tras casi noventa años de historia debido a problemas económicos y operativos.",
+      "etiquetas": [
+        "Llavallol",
+        "Cierre de planta",
+        "Economia"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/cierra-la-planta-de-danica-en-llavallol-tras-casi-90-anos-de-historia-131",
+          "fecha": "2026-09-25T12:03:21.000Z",
+          "oficial": false,
+          "aporte": "Informa el cese de producción de la planta de Dánica en Llavallol para el treinta de septiembre tras casi noventa años por problemas económicos y operativos."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "e6h8p9",
+          "titulo": "Cierra la histórica planta de Dánica en Llavallol y quedan en riesgo 35 puestos de trabajo",
+          "fecha": "2026-09-23T02:02:00.000Z",
+          "ruta": "/nota/cierra-la-historica-planta-de-danica-en-llavallol-y-quedan-en-riesgo-e6h8p9"
+        },
+        {
+          "id": "1xzilre",
+          "titulo": "Dánica cierra definitivamente su planta de Llavallol y desvincula a los últimos 30 trabajadores",
+          "fecha": "2026-09-22T20:48:24.000Z",
+          "ruta": "/nota/danica-cierra-definitivamente-su-planta-de-llavallol-y-desvincula-a-1xzilre"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
         "sugeridoPorIA": "MEDIA"
       }
     }
