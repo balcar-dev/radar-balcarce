@@ -1,5 +1,5 @@
 {
-  "exportado": "2026-09-25T15:13:16.938Z",
+  "exportado": "2026-09-25T15:20:49.888Z",
   "decisiones": {
     "1951120": {
       "estado": "automatica",
@@ -16298,13 +16298,46 @@
     },
     "7ihatv": {
       "estado": "automatica",
-      "titulo": null,
-      "copete": null,
-      "cuerpo": null,
-      "guion": null,
-      "deIA": null,
-      "por": null,
-      "cuando": "2026-09-25T11:30:39.391Z"
+      "titulo": "Informan los servicios de sepelios en Balcarce",
+      "copete": "Se dieron a conocer los distintos servicios de sepelios correspondientes a los fallecimientos registrados en el distrito en las últimas semanas, según los registros oficiales de la cooperativa local.",
+      "cuerpo": "La Cooperativa de Electricidad General Balcarce Limitada comunicó los cronogramas de velatorios, inhumaciones y cremaciones correspondientes a los decesos registrados en el distrito durante los últimos meses. Las ceremonias religiosas y posteriores inhumaciones en el Cementerio Municipal o crematorios privados se llevaron a cabo según los cronogramas establecidos para cada caso.\n\nLos avisos fúnebres detallan las casas de duelo y los horarios de los servicios prestados por la entidad cooperativa, abarcando tanto a vecinos de la planta urbana como de zonas rurales del partido de Balcarce.\n\nEstos reportes forman parte de la información institucional que la entidad prestataria difunde de manera periódica para conocimiento de familiares, allegados y de la comunidad en general.",
+      "guion": "Informan los servicios de sepelios en Balcarce",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T15:20:49.798Z",
+      "claves": [
+        "Se informaron los servicios de sepelios de la cooperativa local",
+        "Los decesos corresponden a registros de los últimos meses",
+        "Las inhumaciones se realizaron en el Cementerio Municipal"
+      ],
+      "seSabe": [
+        "Se registraron los avisos fúnebres informados por la cooperativa local",
+        "Las ceremonias incluyeron inhumaciones y cremaciones según cada caso"
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Se dieron a conocer los servicios de sepelios y avisos fúnebres informados por la cooperativa eléctrica local para los vecinos de Balcarce.",
+      "etiquetas": [
+        "sepelios",
+        "fallecimientos",
+        "Balcarce",
+        "cooperativa de electricidad"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/el-76-de-los-endeudados-en-argentina-recurre-al-credito-para-pagar-alimentos-salud-y-servicios-714",
+          "fecha": null,
+          "oficial": false,
+          "aporte": "Aportó el listado de avisos fúnebres y servicios de sepelios de la cooperativa local."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
     },
     "pwq91n": {
       "estado": "pendiente",
@@ -20313,6 +20346,274 @@
           "titulo": "Tregua en la interna del Gobierno: las oscilaciones de Patricia Bullrich y los pronósticos del grupo de Karina Milei",
           "fecha": "2026-09-24T14:40:00.000Z",
           "ruta": "/nota/tregua-en-la-interna-del-gobierno-las-oscilaciones-de-patricia-14e7f85"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "1w27oo6": {
+      "estado": "automatica",
+      "titulo": "Franco Colapinto larga décimo en el Gran Premio de Azerbaiyán",
+      "copete": "El piloto argentino de Alpine se metió en la Q3 y largará desde la décima posición en la carrera de este sábado en el circuito callejero de Bakú.",
+      "cuerpo": "El piloto argentino Franco Colapinto alcanzó la Q3 y se aseguró el décimo puesto de largada para la carrera del Gran Premio de Azerbaiyán de Fórmula 1, que se disputará este sábado a partir de las ocho en el circuito callejero de Bakú. Durante la sesión definitiva, el deportista sufrió un bloqueo de neumáticos que le impidió mejorar su registro, luego de haber avanzado con lo justo en la segunda instancia. La pole position quedó en manos de George Russell con Mercedes, seguido por Charles Leclerc y Oscar Piastri, mientras que su compañero de equipo, Pierre Gasly, finalizó séptimo.\n\nDurante la actividad previa en la capital azerbaiyana, el argentino había protagonizado un particular diálogo con su ingeniero, Stuart Barlow, al advertir por radio que un insecto había impactado en su monoplaza, aunque los controles descartaron inconvenientes técnicos. La competencia se adelantó al sábado debido a la conmemoración del Día del Recuerdo en ese país.\n\nPara los seguidores locales del automovilismo, la expectativa se centra en ver si el piloto de Alpine logra repetir o mejorar el rendimiento mostrado en sus recientes presentaciones en Monza y Madrid, donde sumó puntos para el campeonato.",
+      "guion": "Franco Colapinto larga décimo en el Gran Premio de Azerbaiyán",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T15:20:49.798Z",
+      "claves": [
+        "Franco Colapinto largará desde la décima posición en el Gran Premio de Azerbaiyán.",
+        "El piloto de Alpine alcanzó la Q3 tras una ajustada definición en la segunda fase.",
+        "George Russell se quedó con la pole position con su Mercedes.",
+        "La carrera principal se disputará este sábado desde las ocho."
+      ],
+      "textoRedes": "Franco Colapinto se metió en la Q3 y largará décimo este sábado en el Gran Premio de Azerbaiyán de Fórmula 1 en Bakú. La pole position fue para George Russell.",
+      "etiquetas": [
+        "Franco Colapinto",
+        "Formula 1",
+        "Gran Premio de Azerbaiyán",
+        "Bakú",
+        "Automovilismo"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Ámbito",
+          "enlace": "https://www.ambito.com/deportes/franco-colapinto-f1-gran-premio-azerbaiyan-baku",
+          "fecha": "2026-09-25T15:02:00.000Z",
+          "oficial": false,
+          "aporte": "Detalles del desarrollo de la clasificación, el incidente con los neumáticos en la Q3 y el diálogo con el ingeniero Stuart Barlow."
+        },
+        {
+          "medio": "QZ Noticias (Mar del Plata)",
+          "enlace": "https://www.qznoticias.com/deportes/franco-colapinto-largara-10-en-el-gran-premio-de-azerbaiyan",
+          "fecha": "2026-09-25T14:30:27.000Z",
+          "oficial": false,
+          "aporte": "Confirmación de la posición de largada y la participación en la Q3."
+        },
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/deportes/automovilismo/franco-colapinto-en-la-formula-1-en-vivo-nid25092026/",
+          "fecha": "2026-09-25T14:09:23.000Z",
+          "oficial": false,
+          "aporte": "Información sobre la pole position de George Russell y la cantidad de fechas de la temporada."
+        },
+        {
+          "medio": "Ecos Diarios (Necochea)",
+          "enlace": "https://elecos.com.ar/formula-1-franco-colapinto-largara-en-el-10-lugar-en-azerbaiyan",
+          "fecha": "2026-09-25T13:14:02.000Z",
+          "oficial": false,
+          "aporte": "Horario de inicio de la carrera principal para este sábado."
+        },
+        {
+          "medio": "Clarín",
+          "enlace": "https://www.clarin.com/deportes/f1-gp-azerbaiyan-franco-colapinto-vivo-horario-fp3-clasificacion-ver-formula-1-baku_0_Jx2MWC16zZ.html",
+          "fecha": "2026-09-25T03:01:54.000Z",
+          "oficial": false,
+          "aporte": "Mención sobre el cambio de cronograma de la categoría al disputar la clasificación un viernes y la carrera un sábado."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "xb5kod",
+          "titulo": "Franco Colapinto larga décimo en el Gran Premio de Azerbaiyán",
+          "fecha": "2026-09-25T14:41:31.000Z",
+          "ruta": "/nota/franco-colapinto-larga-decimo-en-el-gran-premio-de-azerbaiyan-xb5kod"
+        },
+        {
+          "id": "1mr981m",
+          "titulo": "Franco Colapinto larga décimo en el Gran Premio de Azerbaiyán",
+          "fecha": "2026-09-25T14:30:27.000Z",
+          "ruta": "/nota/franco-colapinto-larga-decimo-en-el-gran-premio-de-azerbaiyan-1mr981m"
+        },
+        {
+          "id": "1y3aqq8",
+          "titulo": "Franco Colapinto avanza a la última tanda en el Gran Premio de Azerbaiyán",
+          "fecha": "2026-09-25T14:12:30.000Z",
+          "ruta": "/nota/franco-colapinto-avanza-a-la-ultima-tanda-en-el-gran-premio-de-1y3aqq8"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron cinco medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      }
+    },
+    "1jaqxc4": {
+      "estado": "automatica",
+      "titulo": "Espectadores de Rawson son los primeros en ingresar al autódromo en Balcarce",
+      "copete": "Una pareja llegada desde Chubut inauguró los accesos al Autódromo Juan Manuel Fangio y recibió obsequios del Municipio y comercios locales en la previa de las competencias.",
+      "cuerpo": "Sonia y Darío París se transformaron en los primeros espectadores en acceder al Autódromo Juan Manuel Fangio para presenciar la reapertura del escenario balcarceño. Los visitantes arribaron desde Rawson, provincia de Chubut, con varios días de anticipación con la intención de conseguir un lugar preferencial en el predio.\n\nAl atravesar los accesos, la pareja recibió diversos presentes otorgados por la comuna y por firmas comerciales de la zona, entre ellas la panadería y confitería Tentaciones, como muestra de agradecimiento por el esfuerzo del viaje.\n\nEl arribo de los primeros asistentes marcó el inicio formal de una jornada marcada por la expectativa ante el retorno de las competencias automovilísticas al circuito local, que convocó a fanáticos de diferentes puntos del país.",
+      "guion": "Espectadores de Rawson son los primeros en ingresar al autódromo en Balcarce",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T15:20:49.798Z",
+      "claves": [
+        "Una pareja de Rawson fue la primera en ingresar al Autódromo Juan Manuel Fangio.",
+        "Recibieron presentes del Municipio y de comercios locales en el acceso al predio.",
+        "La llegada se produjo en el marco de la reapertura del circuito balcarceño."
+      ],
+      "seSabe": [
+        "Sonia y Darío París llegaron desde Rawson, Chubut, con anticipación.",
+        "Fueron los primeros espectadores en ingresar al Autódromo Juan Manuel Fangio.",
+        "Recibieron regalos del Municipio y de la panadería y confitería Tentaciones.",
+        "El autódromo volvió a abrir sus puertas para recibir competencias de automovilismo."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Una pareja llegada desde Chubut se convirtió en la primera en ingresar al Autódromo Juan Manuel Fangio en Balcarce y recibió obsequios del Municipio y comercios locales en el inicio de la jornada automovilística.",
+      "etiquetas": [
+        "autodromo",
+        "Balcarce",
+        "automovilismo",
+        "Rawson",
+        "reapertura"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Diario La Vanguardia",
+          "enlace": "https://www.diariolavanguardia.com/noticias/44905-sonia-y-dario-paris-los-primeros-espectadores-en-ingresar-al-fangio-fueron-recibidos-con-regalos/",
+          "fecha": null,
+          "oficial": false,
+          "aporte": "Detalló la llegada de los primeros espectadores desde Rawson y los reconocimientos recibidos en la reapertura del autódromo."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "xtlwre",
+          "titulo": "Largas filas para ingresar al autódromo Juan Manuel Fangio en Balcarce",
+          "fecha": "2026-09-24T12:24:00.000Z",
+          "ruta": "/nota/largas-filas-para-ingresar-al-autodromo-fangio-xtlwre"
+        },
+        {
+          "id": "yaqf3p",
+          "titulo": "El autódromo Juan Manuel Fangio abre sus puertas este viernes en Balcarce",
+          "fecha": "2026-09-25T13:35:22.000Z",
+          "ruta": "/nota/todo-sobre-la-reapertura-del-autodromo-juan-manuel-fangio-yaqf3p"
+        },
+        {
+          "id": "1e6tvp9",
+          "titulo": "Kicillof encabeza la reapertura del autódromo Juan Manuel Fangio en Balcarce",
+          "fecha": "2026-09-25T10:15:00.000Z",
+          "ruta": "/nota/el-gobernador-bonaerense-encabeza-la-reapertura-del-autodromo-en-1e6tvp9"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "143vdln": {
+      "estado": "automatica",
+      "titulo": "El riesgo país supera los seiscientos puntos en Balcarce",
+      "copete": "El indicador financiero elaborado por JP Morgan trepa por encima de los seiscientos puntos tras registrar su décima suba consecutiva, impulsado por un contexto internacional desfavorable.",
+      "cuerpo": "En paralelo, los bonos soberanos en dólares operan a la baja en las primeras horas de la jornada. Los títulos de deuda experimentan retrocesos tanto en los bonos bajo ley local como en los Globales, lo que arrastra a la baja la valuación de los activos argentinos en los mercados financieros.\n\nEste comportamiento financiero general repercute en la economía nacional y en las variables que siguen de cerca los inversores y ahorristas locales. El mercado se mantiene atento a la evolución de las tasas internacionales y al comportamiento de los bonos soberanos para las próximas ruedas de operaciones.",
+      "guion": "El riesgo país supera los seiscientos puntos en Balcarce",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T15:20:49.798Z",
+      "claves": [
+        "El riesgo país supera los seiscientos puntos básicos.",
+        "El indicador acumula diez ruedas consecutivas en alza.",
+        "Los bonos soberanos en dólares operan con bajas.",
+        "Influye la suba de tasas de la Reserva Federal de Estados Unidos."
+      ],
+      "seSabe": [
+        "El riesgo país supera los seiscientos puntos básicos, según los datos de Rava y JP Morgan.",
+        "El indicador acumula diez ruedas consecutivas con tendencia alcista.",
+        "Los bonos soberanos en dólares registran pérdidas en la jornada.",
+        "El movimiento se produce tras la suba de tasas de referencia de la Reserva Federal de Estados Unidos."
+      ],
+      "noConfirmado": [
+        "No se informaron proyecciones sobre el comportamiento futuro de los bonos soberanos."
+      ],
+      "textoRedes": "El riesgo país supera los seiscientos puntos básicos tras diez ruedas consecutivas en alza, impulsado por el contexto internacional y la caída de los bonos soberanos en los mercados financieros.",
+      "etiquetas": [
+        "riesgo pais",
+        "bonos"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/economia/el-riesgo-pais-vuelve-a-subir-y-ya-supera-los-600-puntos-nid25092026/",
+          "fecha": "2026-09-25T15:09:38.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/economia/2026/09/25/mercados-la-bolsa-portena-cae-por-quinto-dia-y-el-riesgo-pais-se-acerca-a-los-600-puntos/",
+          "fecha": "2026-09-25T14:56:11.000Z",
+          "oficial": false,
+          "aporte": null
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1jtg2vy",
+          "titulo": "El riesgo país vuelve a subir y supera los 550 puntos por primera vez desde mayo",
+          "fecha": "2026-09-22T19:17:54.000Z",
+          "ruta": "/nota/el-riesgo-pais-vuelve-a-subir-y-supera-los-550-puntos-por-primera-vez-1jtg2vy"
+        },
+        {
+          "id": "vn0qei",
+          "titulo": "Los bonos y la Bolsa porteña operan a la baja y el riesgo país se acerca a los 600 puntos",
+          "fecha": "2026-09-25T14:42:24.000Z",
+          "ruta": "/nota/los-bonos-y-la-bolsa-portena-operan-a-la-baja-y-el-riesgo-pais-se-vn0qei"
+        },
+        {
+          "id": "1gso9lv",
+          "titulo": "Jornada financiera: el riesgo país rozó los 580 puntos y las acciones argentinas volvieron a caer",
+          "fecha": "2026-09-24T21:37:42.000Z",
+          "ruta": "/nota/jornada-financiera-el-riesgo-pais-rozo-los-580-puntos-y-las-acciones-1gso9lv"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      }
+    },
+    "1oc9ip8": {
+      "estado": "automatica",
+      "titulo": "Legisladores bonaerenses acuerdan agilizar proyectos en una cumbre",
+      "copete": "Jefes de bloques legislativos bonaerenses mantuvieron un encuentro en La Plata para acelerar el tratamiento de iniciativas y debatir reformas electorales.",
+      "cuerpo": "Legisladores bonaerenses de diferentes fuerzas políticas mantuvieron un encuentro en un centro cultural de La Plata para acordar una mayor agilidad en el tratamiento de proyectos entre ambas cámaras. La convocatoria se realizó tras reclamos por demoras en la aprobación de iniciativas con media sanción.\n\nDurante la reunión también se conversó sobre modificaciones en el sistema electoral, como la discusión en torno a las reelecciones de intendentes, las primarias y la implementación de la boleta única, aunque sin definiciones concretas sobre estos puntos.\n\nLa posibilidad de avanzar en los debates electorales quedó condicionada a futuros acuerdos con el Poder Ejecutivo provincial sobre la distribución de fondos y la cobertura de vacantes judiciales. La cumbre no incluyó a todos los bloques legislativos y se acordó la repetición periódica de este tipo de reuniones.",
+      "guion": "Legisladores bonaerenses acuerdan agilizar proyectos en una cumbre",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T15:20:49.798Z",
+      "claves": [
+        "Cumbre de legisladores provinciales en La Plata.",
+        "Acuerdo para agilizar la aprobación de proyectos.",
+        "Debate sin definiciones sobre reforma electoral.",
+        "Participación de distintos bloques partidarios."
+      ],
+      "seSabe": [
+        "El senador Sergio Berni y el diputado Alejandro Dichiara convocaron a un almuerzo a jefes de bloque de ambas cámaras legislativas en La Plata.",
+        "Participaron representantes de Fuerza Patria, La Libertad Avanza, PRO, Unión y Libertad y la UCR.",
+        "Se acordó agilizar el tratamiento de proyectos con demoras entre el Senado y Diputados.",
+        "Se conversó sobre la boleta única de papel, las PASO y las reelecciones indefinidas de intendentes sin alcanzar definiciones."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Legisladores de distintos bloques de la Provincia se reunieron en La Plata para acordar una mayor celeridad en el tratamiento de proyectos y debatieron sobre reformas electorales.",
+      "etiquetas": [
+        "Legislatura bonaerense",
+        "Reforma electoral",
+        "La Plata"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/politica/en-una-sorpresiva-cumbre-legisladores-del-pj-lla-y-la-ucr-acordaron-agilizar-proyectos-y-evaluaron-nid25092026/",
+          "fecha": "2026-09-25T15:12:57.000Z",
+          "oficial": false,
+          "aporte": "Detalló los asistentes, los temas debatidos y los acuerdos alcanzados en la cumbre legislativa bonaerense."
         }
       ],
       "verificacion": {
