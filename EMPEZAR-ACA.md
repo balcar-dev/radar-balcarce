@@ -10,7 +10,7 @@ funciona cada cosa está en los otros documentos (ver el índice al final).*
 | **La web** | https://radarbalcarce.com | Cualquiera |
 | Instagram | https://www.instagram.com/radarbalcarce | Cualquiera |
 | Facebook | La página "Radar Balcarce" | Cualquiera |
-| **El panel** | https://radar-balcarce.tail4f06f0.ts.net | Andrés y Hernán |
+| **El panel** | La dirección del túnel está en `panel/datos/DIRECCION-DEL-PANEL.txt`, en la PC (no va en el repo, que es público) | Andrés y Hernán |
 | El panel, desde la PC | http://localhost:4321 | Igual |
 | El código | https://github.com/balcar-dev/radar-balcarce | Público desde el 25/09 (no tiene ninguna clave) |
 | Cloudflare (la web, el dominio, las estadísticas) | https://dash.cloudflare.com | `radarbalcarce@gmail.com` |

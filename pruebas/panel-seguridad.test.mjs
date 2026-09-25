@@ -45,7 +45,7 @@ test('un GET no se frena por el origen: no cambia nada', () => {
 });
 
 test('por el túnel vale el nombre que puso el túnel, pero sólo si la conexión es de esta PC', () => {
-  const porTunel = { origin: 'https://radar.tail4f06f0.ts.net', host: 'localhost:4321', xhost: 'radar.tail4f06f0.ts.net' };
+  const porTunel = { origin: 'https://radar.tailXXXX.ts.net', host: 'localhost:4321', xhost: 'radar.tailXXXX.ts.net' };
   assert.ok(origenPermitido(pedido({ ...porTunel, ip: '127.0.0.1' })));
   assert.equal(origenPermitido(pedido({ ...porTunel, ip: '192.168.0.99' })), false, 'el X-Forwarded-Host lo inventó el que llama');
 });
@@ -70,7 +70,7 @@ test('probar una fuente: nada de la red de casa ni de esta PC', () => {
     'http://localhost:4321/api/estado', 'http://127.0.0.1/', 'http://127.1.2.3/', 'http://10.0.0.1/',
     'http://192.168.0.1/', 'http://172.16.0.1/', 'http://172.31.255.255/', 'http://169.254.169.254/latest/meta-data',
     'http://[::1]:4321/', 'http://0.0.0.0/', 'http://2130706433/', 'http://[::ffff:127.0.0.1]/',
-    'http://router.local/', 'http://otra-pc.tail4f06f0.ts.net/', 'http://100.101.102.103/',
+    'http://router.local/', 'http://otra-pc.tailXXXX.ts.net/', 'http://100.101.102.103/',
   ]) {
     assert.equal(urlDePruebaPermitida(u).ok, false, u);
   }

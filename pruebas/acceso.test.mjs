@@ -26,7 +26,7 @@ function pedido({ ip = '10.0.0.1', cookie = '', tunel = false, xff } = {}) {
     socket: { remoteAddress: tunel ? '127.0.0.1' : ip },
     headers: {
       cookie,
-      host: tunel ? 'radar-balcarce.tail4f06f0.ts.net' : 'localhost',
+      host: tunel ? 'radar-balcarce.tailXXXX.ts.net' : 'localhost',
       'x-forwarded-for': xff ?? (tunel ? ip : undefined),
     },
   };
