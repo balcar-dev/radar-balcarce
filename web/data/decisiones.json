@@ -1,5 +1,5 @@
 {
-  "exportado": "2026-09-25T15:59:12.244Z",
+  "exportado": "2026-09-25T16:19:17.629Z",
   "decisiones": {
     "1951120": {
       "estado": "automatica",
@@ -21036,6 +21036,61 @@
           "titulo": "Jorge Macri pedirá el juicio político para la jueza que declaró inconstitucional la baja en la edad de imputabilidad en CABA",
           "fecha": "2026-09-22T00:00:36.000Z",
           "ruta": "/nota/jorge-macri-pedira-el-juicio-politico-para-la-jueza-que-declaro-1393ayl"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "2olgpl": {
+      "estado": "automatica",
+      "titulo": "El Concejo aprueba pedir la baja de tasas a taxis y remises en Balcarce",
+      "copete": "El Deliberante solicitó al Ejecutivo municipal que analice reducir tributos al sector para equipararlo con las aplicaciones de transporte.",
+      "cuerpo": "La iniciativa busca aliviar la carga fiscal de la actividad frente al avance de las aplicaciones de transporte.\n\nDurante el debate, el concejal Ignacio Capeccio planteó que las modificaciones se contemplen en el próximo presupuesto municipal y sostuvo que el impacto económico en las cuentas comunales no sería significativo. En tanto, el concejal Javier Menonne acompañó la medida, pero consideró necesario incluir a las plataformas digitales en los controles y tributos estatales.\n\nEl expediente será remitido ahora al Ejecutivo municipal para su estudio en la confección de las ordenanzas Fiscal e Impositiva.",
+      "guion": "El Concejo aprueba pedir la baja de tasas a taxis y remises en Balcarce",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T16:19:17.578Z",
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El Concejo Deliberante aprobó un pedido al Ejecutivo para que evalúe reducir tributos a taxis y remises y equiparar su situación frente a las aplicaciones de transporte en Balcarce.",
+      "etiquetas": [
+        "Concejo Deliberante",
+        "taxis y remises",
+        "tasas municipales",
+        "transporte",
+        "Balcarce"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Radio Gabal (FM 104.1)",
+          "enlace": "https://www.radiogabal.com.ar/index.php/politica/aprobaron-un-proyecto-para-que-el-ejecutivo-evalue-bajar-cargas-impositivas-a-taxis-y-remises",
+          "fecha": "2026-09-25T16:08:22.000Z",
+          "oficial": false,
+          "aporte": "Informó la aprobación del proyecto en el Concejo Deliberante y los detalles del debate legislativo."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "7c7bdz",
+          "titulo": "El Concejo debate eliminar tasas a taxis y remises en Balcarce",
+          "fecha": "2026-09-23T22:58:23.988Z",
+          "ruta": "/nota/taxis-y-remises-debatiran-la-eliminacion-de-tasas-mientras-el-sector-7c7bdz"
+        },
+        {
+          "id": "1q0vr9a",
+          "titulo": "La Libertad Avanza propone eliminar tasas municipales para taxis y remises desde 2027",
+          "fecha": "2026-09-17T18:02:03.000Z",
+          "ruta": "/nota/la-libertad-avanza-propone-eliminar-tasas-municipales-para-taxis-y-1q0vr9a"
+        },
+        {
+          "id": "1d356vs",
+          "titulo": "El Concejo aprueba el proyecto escolar Balcarce se recorre jugando en Balcarce",
+          "fecha": "2026-09-24T23:00:34.000Z",
+          "ruta": "/nota/el-concejo-aprueba-un-juego-turistico-escolar-en-balcarce-1d356vs"
         }
       ],
       "verificacion": {
