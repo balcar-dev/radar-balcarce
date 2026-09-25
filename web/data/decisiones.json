@@ -1,5 +1,5 @@
 {
-  "exportado": "2026-09-25T15:40:27.238Z",
+  "exportado": "2026-09-25T15:49:37.546Z",
   "decisiones": {
     "1951120": {
       "estado": "automatica",
@@ -20952,6 +20952,90 @@
           "fecha": "2026-09-25T15:00:10.000Z",
           "oficial": false,
           "aporte": "Detalló la visita de la jequesa de Qatar, la recaudación para el Malba y los detalles de la diplomacia cultural."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "1i4yl1": {
+      "estado": "automatica",
+      "titulo": "La actividad económica cae en julio y analizan un riesgo de recesión",
+      "copete": "La caída de la actividad económica en julio genera alertas entre economistas sobre una posible recesión técnica en el tercer trimestre. Las proyecciones de crecimiento anual quedan en revisión.",
+      "cuerpo": "El Estimador Mensual de Actividad Económica registró una baja de casi el tres por ciento en julio respecto de junio, según los datos analizados por distintos especialistas. Analistas señalaron que la magnitud del retroceso deja escaso margen para una recuperación en el trimestre y advirtieron que la economía podría encadenar dos trimestres consecutivos de contracción si no se registran repuntes en agosto y septiembre.\n\nDesde la consultora Analytica indicaron que la baja es la más pronunciada desde el inicio de la actual gestión nacional y afirmaron que el escenario base apunta hacia una recesión técnica. En la misma línea, referentes económicos cuestionaron las proyecciones oficiales y señalaron que indicadores como la recaudación y el empleo reflejan un escenario de estancamiento.\n\nPor su parte, desde la consultora Invecq advirtieron que el retroceso dificulta alcanzar las metas de crecimiento previstas para todo el año, cuya estimación inicial rondaba una expansión anual superior al dos por ciento, un nivel que ahora se perfila como un techo difícil de superar.",
+      "guion": "La actividad economica cae en julio y analizan un riesgo de recesion",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T15:49:37.463Z",
+      "claves": [
+        "La actividad económica cayó casi tres por ciento en julio frente a junio.",
+        "Especialistas advierten sobre el riesgo de una recesión técnica en el tercer trimestre.",
+        "Cuestionan las metas de crecimiento anual previstas en el Presupuesto."
+      ],
+      "seSabe": [
+        "El Estimador Mensual de Actividad Económica registró una caída de 2,9% en julio en comparación con junio.",
+        "Economistas como Claudio Caprarulo, Martín Lousteau, Milagros Gismondi y Haroldo Montagu advirtieron sobre el impacto de la baja en el tercer trimestre.",
+        "Las proyecciones de crecimiento anual del Relevamiento de Expectativas de Mercado preveían una expansión de 2,1% antes de conocerse el dato."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "La actividad económica registró una fuerte caída en julio y economistas advierten sobre el riesgo de una recesión técnica en el tercer trimestre. Las proyecciones de crecimiento anual para este año quedan bajo revisión.",
+      "etiquetas": [
+        "economia",
+        "recesion",
+        "actividad economica"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/economia/la-economia-quedo-al-borde-de-una-recesion-tecnica-segun-expertos-nid25092026/",
+          "fecha": "2026-09-25T15:43:05.000Z",
+          "oficial": false,
+          "aporte": "Aportó los datos sobre la caída de la actividad económica en julio y las declaraciones de diversos economistas acerca del riesgo de recesión técnica."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "dyc2ao": {
+      "estado": "automatica",
+      "titulo": "Magistrados respaldan a la jueza que declaró inconstitucional la baja de imputabilidad",
+      "copete": "La Federación Argentina de la Magistratura y un grupo de jueces criticaron el pedido de juicio político contra Laura De Marinis. La medida había sido cuestionada por el gobierno porteño tras un fallo sobre la edad de imputabilidad.",
+      "cuerpo": "Se espera que la semana próxima haya una nueva resolución judicial, según informaron fuentes judiciales.\n\nPreviamente, el veintiuno de septiembre, el jefe de Gobierno de la Ciudad de Buenos Aires, Jorge Macri, había anunciado que solicitaría el juicio político de la magistrada por mal desempeño a raíz de su resolución sobre la nueva norma que bajó la edad punible y que entró en vigencia el cinco de septiembre.\n\nSostuvieron que recurrir a mecanismos disciplinarios por un criterio jurídico afecta la independencia judicial y señalaron que las discrepancias con las sentencias deben canalizarse a través de las vías recursivas previstas en el ordenamiento.",
+      "guion": "Magistrados respaldan a la jueza que declaró inconstitucional la baja de imputabilidad",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T15:49:37.463Z",
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Magistrados y jueces respaldaron a la jueza Laura De Marinis tras el pedido de juicio político impulsado por el gobierno porteño a raíz de un fallo sobre la edad de imputabilidad.",
+      "etiquetas": [
+        "Imputabilidad",
+        "Juicio político",
+        "Ciudad de Buenos Aires"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Clarín",
+          "enlace": "https://www.clarin.com/politica/hostigamiento-magistrados-respaldaron-jueza-marinis-fallo-baja-edad-imputabilidad-comienza-revisado_0_0eabKbUdgX.html",
+          "fecha": "2026-09-25T15:03:04.000Z",
+          "oficial": false,
+          "aporte": "Aportó los detalles sobre el respaldo de la Federación Argentina de la Magistratura y de un grupo de jueces a la jueza De Marinis, el inicio de la revisión del fallo por la Cámara Penal y los antecedentes del caso."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1393ayl",
+          "titulo": "Jorge Macri pedirá el juicio político para la jueza que declaró inconstitucional la baja en la edad de imputabilidad en CABA",
+          "fecha": "2026-09-22T00:00:36.000Z",
+          "ruta": "/nota/jorge-macri-pedira-el-juicio-politico-para-la-jueza-que-declaro-1393ayl"
         }
       ],
       "verificacion": {
