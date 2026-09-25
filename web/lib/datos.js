@@ -7,6 +7,8 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { rutaDeNota, idDeRuta } from './ruta.js';
 import { vigenteEnPortada } from './archivo.js';
+import { sinNotasRepetidas } from './texto.js';
+import { interpretarDolarApi } from './dolar.js';
 import {
   rutaDeEvento, claveDeEvento, claveDeRuta, proximos, confirmacionDeAnual,
 } from './eventos.js';
@@ -129,6 +131,26 @@ export function obtenerNota(parte) {
   return todasLasNotas().find((n) => n.id === id) ?? null;
 }
 
+// ---------------------------------------------------------------- el dólar
+
+/**
+ * La foto que guardó scripts/foto-dolar.mjs al compilar (data/dolar.json). Se
+ * revisa con el mismo cuidado que lo que llega de la fuente: si el archivo
+ * está roto o no existe, no hay foto (null). La usan /dolar y el panel de la
+ * portada; el navegador la reemplaza por la cotización de ahora.
+ */
+export function fotoDelDolar() {
+  try {
+    const j = JSON.parse(fs.readFileSync(path.join(carpetaDeDatos(), 'dolar.json'), 'utf8'));
+    if (!Array.isArray(j.cotizaciones) || !j.consultado) return null;
+    // Se pasa por el mismo filtro que la respuesta de la fuente.
+    const limpio = interpretarDolarApi(j.cotizaciones.map((c) => ({ ...c, fechaActualizacion: c.fecha })));
+    return limpio ? { fuente: j.fuente, cotizaciones: limpio.cotizaciones, consultado: j.consultado, deLaFoto: true } : null;
+  } catch {
+    return null;
+  }
+}
+
 // ---------------------------------------------------------------- la agenda
 
 /**
@@ -221,7 +243,9 @@ export function ordenarPortada(notas = []) {
  * @param {object[]} notas
  * @param {string[]} [orden]  el orden editorial de las secciones
  */
-export function armarTapa(notas = [], orden = SECCIONES.map((s) => s.nombre)) {
+export function armarTapa(notasSueltas = [], orden = SECCIONES.map((s) => s.nombre)) {
+  // Por si acaso: generar-datos ya saca las repetidas de la portada.
+  const notas = sinNotasRepetidas(notasSueltas);
   const conHora = notas.filter((n) => !n.sinFecha);
   const { principal } = ordenarPortada(conHora.length ? conHora : notas);
   if (!principal) return { principal: null, secundarias: [], bloques: [] };

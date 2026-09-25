@@ -1,11 +1,12 @@
 import {
-  obtenerDatos, armarTapa, temasVivos, proximosEventos,
+  obtenerDatos, armarTapa, temasVivos, proximosEventos, fotoDelDolar,
 } from '@/lib/datos';
 import {
   TarjetaFarmacia, TarjetaBuzon,
   Etiqueta, TituloSeccion, FilaNota, Evento, Hace,
 } from '@/components/piezas';
 import { TarjetaClima } from '@/components/clima-vivo';
+import TarjetaDolar from '@/components/tarjeta-dolar';
 import { Aviso } from '@/components/avisos';
 import { MOSTRAR_TEMAS } from '@/lib/sitio';
 import { metadatosDePagina } from '@/components/metadatos';
@@ -64,15 +65,56 @@ export default function Portada() {
         </aside>
       ))}
 
+      {/* Dos columnas en escritorio: las noticias a la izquierda y UNA sola
+          pila a la derecha (clima, farmacia, dólar, agenda, buzón, números
+          útiles), sin huecos. En el celular la pila derecha se desarma
+          (`display: contents`): los servicios van primero, después las
+          noticias y el resto al final. Ver .dos-columnas en globals.css. */}
       <div className="dos-columnas">
+        <div className="derecha">
         {/* En el celular esto va primero: es lo que la gente viene a
             buscar. Antes había que pasar ochenta titulares para ver la
             farmacia de turno. */}
         <aside className="servicios">
           <TarjetaClima clima={d.clima} />
           <TarjetaFarmacia farmacia={d.farmacias?.hoy} />
+          <TarjetaDolar foto={fotoDelDolar()} />
           <Aviso slot="clima" />
         </aside>
+
+        <aside className="lateral">
+          {eventos.length > 0 && (
+            <div className="tarjeta" style={{ paddingBottom: 8 }}>
+              <div style={{ display: 'flex', alignItems: 'center' }}>
+                <h3 style={{ flexGrow: 1 }}>Agenda de Balcarce</h3>
+                <a href="/agenda" style={{ fontSize: 12.5, fontWeight: 600, color: 'var(--rojo)' }}>Todo →</a>
+              </div>
+              {eventos.map((e) => <Evento evento={e} key={e.id} />)}
+            </div>
+          )}
+
+          <TarjetaBuzon />
+
+          {d.utiles?.numeros?.length > 0 && (
+            <div style={{ borderRadius: 12, border: '1px dashed #C9C4B6', padding: 16 }}>
+              <div className="meta">Números útiles</div>
+              <div className="chips">
+                {/* Sólo los que son un número solo: varios de la lista oficial
+                    traen tres o cuatro líneas separadas por barras y no sirven
+                    para un enlace de llamada. Esos están completos en /util. */}
+                {d.utiles.numeros.filter((n) => !n.numero.includes('/')).slice(0, 5).map((n) => (
+                  <a key={n.nombre} href={`tel:${n.numero.replace(/\D/g, '')}`}>
+                    {n.nombre.replace(/ \(.*\)$/, '')} {n.numero}
+                  </a>
+                ))}
+              </div>
+              <div style={{ marginTop: 12 }}>
+                <a href="/util" style={{ fontSize: 12.5, fontWeight: 600, color: 'var(--rojo)' }}>Toda la guía →</a>
+              </div>
+            </div>
+          )}
+        </aside>
+        </div>
 
         <div className="principal">
           {principal && (
@@ -135,39 +177,6 @@ export default function Portada() {
             <div className="tarjeta">No hay notas publicadas todavía. Se publican desde el panel.</div>
           )}
         </div>
-
-        <aside className="lateral">
-          {eventos.length > 0 && (
-            <div className="tarjeta" style={{ paddingBottom: 8 }}>
-              <div style={{ display: 'flex', alignItems: 'center' }}>
-                <h3 style={{ flexGrow: 1 }}>Agenda de Balcarce</h3>
-                <a href="/agenda" style={{ fontSize: 12.5, fontWeight: 600, color: 'var(--rojo)' }}>Todo →</a>
-              </div>
-              {eventos.map((e) => <Evento evento={e} key={e.id} />)}
-            </div>
-          )}
-
-          <TarjetaBuzon />
-
-          {d.utiles?.numeros?.length > 0 && (
-            <div style={{ borderRadius: 12, border: '1px dashed #C9C4B6', padding: 16 }}>
-              <div className="meta">Números útiles</div>
-              <div className="chips">
-                {/* Sólo los que son un número solo: varios de la lista oficial
-                    traen tres o cuatro líneas separadas por barras y no sirven
-                    para un enlace de llamada. Esos están completos en /util. */}
-                {d.utiles.numeros.filter((n) => !n.numero.includes('/')).slice(0, 5).map((n) => (
-                  <a key={n.nombre} href={`tel:${n.numero.replace(/\D/g, '')}`}>
-                    {n.nombre.replace(/ \(.*\)$/, '')} {n.numero}
-                  </a>
-                ))}
-              </div>
-              <div style={{ marginTop: 12 }}>
-                <a href="/util" style={{ fontSize: 12.5, fontWeight: 600, color: 'var(--rojo)' }}>Toda la guía →</a>
-              </div>
-            </div>
-          )}
-        </aside>
       </div>
     </div>
   );

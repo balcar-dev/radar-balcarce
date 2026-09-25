@@ -10,7 +10,6 @@ import {
 } from '@/lib/datos';
 import { tipoDeCielo } from '@/lib/clima';
 import { comoNombre } from '@/lib/texto';
-import { quienEscribio } from '@/components/metadatos';
 import { nombreDeEvento } from '@/lib/eventos';
 
 const WHATSAPP_VISIBLE = WHATSAPP.visible;
@@ -131,7 +130,12 @@ export function Hace({ nota, className = 'meta' }) {
 export function FilaNota({ nota }) {
   return (
     <div className="fila-nota">
-      <Hace nota={nota} className="meta cuando" />
+      {/* En escritorio la columna de la hora se reserva SIEMPRE, aunque la
+          fuente no haya dicho la hora (celda vacía, sin inventar ninguna): si
+          no, los títulos de las notas sin hora arrancaban pegados a la
+          izquierda y los demás sangrados. En el celular la hora va arriba del
+          título y, si no hay, no ocupa lugar. */}
+      <div className="col-hora"><Hace nota={nota} className="meta" /></div>
       <div style={{ flexGrow: 1 }}>
         <Hace nota={nota} className="meta cuando-movil" />
         <h3><a href={nota.ruta}>{nota.titulo}</a></h3>
@@ -236,49 +240,6 @@ export function TarjetaBuzon() {
   );
 }
 
-
-/**
- * Quién escribió la nota que estás leyendo.
- *
- * De los diarios nacionales que miramos, dos de cuatro identifican al
- * autor; de los locales, uno de tres (docs/historico/INVESTIGACION-COMPETENCIA.md). Para
- * nosotros es distinto que para ellos: parte de lo que publicamos lo
- * redacta una inteligencia artificial. Decirlo en cada nota, y no sólo en
- * el pie de página, nos conviene — el día que alguien lo descubra por su
- * cuenta va a parecer que lo escondíamos.
- */
-export function Firma({ nota }) {
-  // El mismo criterio que el `author` de los datos estructurados.
-  const { reescrita, revisada, propia } = quienEscribio(nota);
-
-  // Una nota propia (lib/notas-propias.js) trae su firma escrita: "Nota de
-  // Radar Balcarce armada con los datos de DolarApi.com a las 11:07."
-  if (propia) {
-    return (
-      <p className="firma-nota">
-        <span className="punto-firma" aria-hidden="true" />
-        {nota.firma || 'Nota de Radar Balcarce.'}
-      </p>
-    );
-  }
-
-  const texto = reescrita
-    // Desde el 26/09 es una nota, no un resumen: la IA la escribe con lo que
-    // contaron todas las fuentes y se controla contra ellas (CRITERIO-EDITORIAL.md).
-    ? 'Esta nota la escribió una inteligencia artificial con lo que publicaron las fuentes, y se verificó automáticamente contra ellas: un dato que no estaba se descarta.'
-    : 'El texto es el que publicó la fuente. No lo reescribimos.';
-
-  const quien = revisada
-    ? 'Lo revisó y lo publicó una persona de la redacción.'
-    : 'Salió sin revisión humana: la sección y el tema no la piden.';
-
-  return (
-    <p className="firma-nota">
-      <span className="punto-firma" aria-hidden="true" />
-      {texto} {quien}
-    </p>
-  );
-}
 
 /**
  * Los temas que toca una nota, para poder seguir la historia.

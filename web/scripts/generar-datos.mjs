@@ -22,6 +22,7 @@ import {
 } from '../../reels/reescritura.mjs';
 import { TEMAS, MOTIVO_COTIZACION } from '../../ingesta/fuentes.mjs';
 import { tieneCuerpo } from '../lib/cuerpo.js';
+import { sinNotasRepetidas } from '../lib/texto.js';
 import { pendientesDeLaIngesta } from '../../redes/avisos.mjs';
 import {
   vigenteEnPortada, slugsConocidos, fijarSlug, actualizarArchivo, idsEnRedes, sinPuntaje, comoArchivoJson,
@@ -338,7 +339,14 @@ const publicadas = [...deLaIngesta, ...propias]
 // las últimas 72 horas. El 25/09 la portada tenía 43 notas de más de tres
 // días, porque el panel las archiva sólo cuando la PC está prendida. La
 // página de cada una sigue existiendo: está en el archivo.
-const notas = publicadas.filter((n) => vigenteEnPortada(n));
+const vigentes = publicadas.filter((n) => vigenteEnPortada(n));
+// Ni dos notas con el mismo titular (o casi) en las listas: se queda la de más
+// relevancia y la otra sale de la portada, las secciones, el feed y el sitemap.
+// Conserva su página: entra igual al archivo (`enPortada` usa `vigentes`) y sus
+// enlaces, que pueden estar ya compartidos, no se rompen.
+const notas = sinNotasRepetidas(vigentes);
+const repetidas = vigentes.length - notas.length;
+if (repetidas) console.log(`  ${repetidas} notas repetidas (mismo titular) salen de las listas y conservan su página`);
 
 const archivo = actualizarArchivo({
   archivo: archivoAnterior.notas ?? [],
@@ -347,7 +355,7 @@ const archivo = actualizarArchivo({
   // `undefined` pisa lo viejo al mezclar y no se escribe.
   publicadas: [...corregidas, ...publicadas].map(sinPuntaje)
     .map((n) => ({ ...Object.fromEntries(CAMPOS_EXTRA.map((k) => [k, undefined])), ...n })),
-  enPortada: new Set(notas.map((n) => n.id)),
+  enPortada: new Set(vigentes.map((n) => n.id)),
   retiradas,
   enRedes: idsEnRedes(libroRedes),
 });

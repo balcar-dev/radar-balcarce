@@ -1,9 +1,8 @@
-import fs from 'node:fs';
-import path from 'node:path';
 import DolarVivo from '@/components/dolar-vivo';
 import { Cierre } from '@/components/piezas';
 import { metadatosDePagina } from '@/components/metadatos';
-import { CASAS, interpretarDolarApi } from '@/lib/dolar';
+import { CASAS } from '@/lib/dolar';
+import { fotoDelDolar } from '@/lib/datos';
 
 export const metadata = metadatosDePagina({
   titulo: 'Dólar hoy en Balcarce: oficial, blue y MEP',
@@ -11,28 +10,11 @@ export const metadata = metadatosDePagina({
   camino: '/dolar',
 });
 
-/**
- * La foto que guardó scripts/foto-dolar.mjs al compilar. Se revisa con el
- * mismo cuidado que lo que llega de la fuente: si el archivo está roto, no hay
- * foto y la página lo dice.
- */
-function leerFoto() {
-  try {
-    const j = JSON.parse(fs.readFileSync(path.join(process.cwd(), 'data', 'dolar.json'), 'utf8'));
-    if (!Array.isArray(j.cotizaciones) || !j.consultado) return null;
-    // Se pasa por el mismo filtro que la respuesta de la fuente.
-    const limpio = interpretarDolarApi(j.cotizaciones.map((c) => ({ ...c, fechaActualizacion: c.fecha })));
-    return limpio ? { fuente: j.fuente, cotizaciones: limpio.cotizaciones, consultado: j.consultado, deLaFoto: true } : null;
-  } catch {
-    return null;
-  }
-}
-
 // Como farmacias: una página de servicio que abre directo en el dato. La
 // cotización se pide en el navegador (components/dolar-vivo.js); lo de acá
 // es el marco y la foto de respaldo.
 export default function Dolar() {
-  const foto = leerFoto();
+  const foto = fotoDelDolar();
 
   return (
     <div className="envoltura" style={{ maxWidth: 760 }}>

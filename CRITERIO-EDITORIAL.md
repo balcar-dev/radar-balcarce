@@ -348,7 +348,7 @@ El vigilante avisa por WhatsApp si menos del 35 % de las notas de las últimas
 
 | | Qué es | Dónde se ve |
 |---|---|---|
-| **El lector** | Título, bajada, cuerpo y, al pie, un desplegable chico y **cerrado** "Fuentes (N)" con el nombre de cada medio y el enlace a su nota. Después, compartir y la **firma** | La web |
+| **El lector** | Título, bajada, cuerpo y, al pie, un desplegable chico y **cerrado** "Fuentes (N)" con el nombre de cada medio y el enlace a su nota. Después, compartir. La **firma** va en el mismo renglón del desplegable (§ 10) | La web |
 | **La redacción** | Claves, qué se sabe, qué falta confirmar, lo que aportó cada fuente, los antecedentes, el nivel de verificación con su porqué y el texto para redes | El panel, plegado en "Análisis interno" de cada nota. No va a la web ni a los datos para Google (las etiquetas sí, como palabras clave) |
 
 **El desplegable de fuentes es la atribución** (ley 11.723): toda nota tiene
@@ -446,11 +446,26 @@ Resumen del criterio. Los horarios, las piezas y cómo se publica, en
 
 ## 10. Correcciones y firma
 
-**Cada nota dice quién la escribió**, al pie (componente `<Firma>`) y en los
-datos para Google: si el resumen lo redactó una inteligencia artificial o es
-el de la fuente, y si lo revisó y publicó una persona o salió solo. El sitio
-nunca promete una revisión que no hubo. En Facebook, "Resumen hecho con IA".
-El pie de la web lo dice para todo el sitio: los resúmenes los escribe una IA
+**Cada nota dice quién la escribió**, y lo dice en **una sola línea chica y gris**
+al pie, pegada al desplegable de fuentes (`firmaCorta`, en
+`web/components/metadatos.js`; la línea es el renglón del `<summary>` de
+`web/components/verificacion.js`), y en los datos para Google (`author`, con el
+mismo criterio). Los textos:
+
+| La nota es… | La línea dice |
+|---|---|
+| Escrita por la IA, sin revisión de una persona | "Redacción con IA, verificada contra las fuentes · Fuentes (N)" |
+| Escrita por la IA y revisada y publicada por una persona | "Redacción con IA, revisada por la redacción · Fuentes (N)" |
+| Cargada o corregida por una persona | "Revisada por la redacción · Fuentes (N)" |
+| El texto de la fuente, sin reescribir | "Texto de *medio* · Fuentes (N)" |
+| Propia (dólar, repaso) | Lo que dice la nota: "Nota de Radar Balcarce con datos de…" |
+
+La explicación larga ("la escribió una inteligencia artificial con lo que
+publicaron las fuentes, y se verificó automáticamente contra ellas: un dato que
+no estaba se descarta", más el enlace a *Quiénes somos*) se ve sólo al abrir el
+desplegable. Nunca se dice "sin revisión humana": es un dato interno, y el
+sitio nunca promete una revisión que no hubo. En Facebook, "Resumen hecho con
+IA". El pie de la web lo dice para todo el sitio: los textos los escribe una IA
 y se verifican automáticamente contra la fuente, que queda enlazada; lo
 sensible lo revisa una persona antes de salir; las voces de los videos
 también son de IA.
@@ -683,5 +698,5 @@ mismo y hasta tres notas que el sitio ya publicó sobre el tema en los últimos
 | "Sin cuerpo no se publica" | `web/lib/cuerpo.js` |
 | Lo que ve el lector de las fuentes | `web/lib/fuentes-de-la-nota.js` y `web/components/verificacion.js` |
 | Qué sale en las redes | `redes/elegir.mjs` |
-| La firma | `<Firma>` en `web/components/piezas.js` |
+| La firma (una línea) | `firmaCorta` en `web/components/metadatos.js`; se ve en `web/components/verificacion.js` |
 | Las pruebas de todo esto | `pruebas/criterio.test.mjs`, `pruebas/editor.test.mjs`, `pruebas/reescritura.test.mjs`, `pruebas/verificar.test.mjs`, `pruebas/cuerpo.test.mjs`, `pruebas/semaforo.test.mjs` |

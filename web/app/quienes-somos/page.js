@@ -24,7 +24,7 @@ export default function QuienesSomos() {
     <div className="envoltura" style={{ maxWidth: 700 }}>
       <h1 className="fraunces" style={{ fontSize: 34, marginBottom: 18 }}>Quiénes somos</h1>
 
-      <div style={{ fontSize: 15.5, lineHeight: 1.7 }}>
+      <div className="texto-pagina" style={{ fontSize: 15.5, lineHeight: 1.7 }}>
         <p>
           Radar Balcarce es un medio digital de Balcarce, provincia de Buenos Aires. Reúne en un
           solo lugar lo que pasa en la ciudad, la región y el país, y suma lo que la gente viene a

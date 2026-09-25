@@ -63,7 +63,7 @@ export default function PaginaAgenda() {
             <section key={g.clave} style={{ marginBottom: 26 }}>
               <div className="titulo-seccion" style={{ borderBottomWidth: 1 }}>
                 <span className="barra" style={{ background: 'var(--s-cultura)' }} />
-                <h2 style={{ fontSize: 19, textTransform: 'capitalize' }}>{g.titulo}</h2>
+                <h2 style={{ fontSize: 19 }}>{g.titulo}</h2>
               </div>
               <div style={{ marginTop: 6 }}>
                 {g.eventos.map((e) => <Evento evento={e} key={e.id} />)}
@@ -127,5 +127,7 @@ function tituloDeDia(f) {
   if (f.iso === enBalcarce(Date.now())) return 'Hoy';
   if (f.iso === enBalcarce(Date.now() + 86400000)) return 'Mañana';
   const fecha = new Date(Date.UTC(a, m - 1, d, 12));
-  return `${DIAS[fecha.getUTCDay()]} ${d} de ${MESES_LARGOS[m - 1]}`;
+  // Con mayúscula sólo la primera letra: "Sábado 3 de octubre" (el CSS capitalize escribía "De").
+  const dia = DIAS[fecha.getUTCDay()];
+  return `${dia[0].toUpperCase()}${dia.slice(1)} ${d} de ${MESES_LARGOS[m - 1]}`;
 }

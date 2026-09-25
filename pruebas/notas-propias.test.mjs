@@ -308,7 +308,7 @@ test('las notas propias firman como Radar Balcarce, no como IA ni como la fuente
   const n = notaDelDolar(HOY, HISTORIA);
   assert.deepEqual(quienEscribio(n), { reescrita: false, revisada: false, propia: true });
   assert.equal(autorDeNota(n, 'https://radarbalcarce.com').name, 'Radar Balcarce');
-  assert.match(leer('web/components/piezas.js'), /nota\.firma/);
+  assert.match(leer('web/components/metadatos.js'), /nota\.firma/);
   assert.match(leer('web/app/nota/[id]/page.js'), /parrafosConEnlaces\(n\.cuerpo, n\.enlacesEnTexto\)/);
   assert.match(leer('web/app/nota/[id]/page.js'), /n\.destacados/);
 });

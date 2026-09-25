@@ -11,9 +11,9 @@
 // navegador aparece el punto verde y "Actualizado a las…": antes, no se
 // promete nada que no pasó.
 
-import { useEffect, useState } from 'react';
+import useDolar from '@/components/usar-dolar';
 import {
-  traerDolar, textoDeEstado, brecha, pesos, porcentaje, momento, datosDeCasa, FUENTES, CADA_DOLAR,
+  textoDeEstado, brecha, pesos, porcentaje, momento, datosDeCasa, FUENTES,
 } from '@/lib/dolar';
 
 function HoraDeTarjeta({ fecha, ahora }) {
@@ -22,41 +22,7 @@ function HoraDeTarjeta({ fecha, ahora }) {
 }
 
 export default function DolarVivo({ foto }) {
-  const [datos, setDatos] = useState(foto);
-  const [estado, setEstado] = useState('guardada');
-  // Al armar el HTML "ahora" es la hora de la foto; en el navegador se pone
-  // la de verdad apenas arranca. Así el servidor y el navegador dibujan lo
-  // mismo en el primer instante y no se pelean.
-  const [ahora, setAhora] = useState(foto?.consultado ?? null);
-
-  useEffect(() => {
-    let vigente = true;
-    const consultar = async () => {
-      setAhora(new Date().toISOString());
-      setEstado((e) => (e === 'vivo' ? e : 'cargando'));
-      const nuevo = await traerDolar();
-      if (!vigente) return;
-      setAhora(new Date().toISOString());
-      if (nuevo) {
-        setDatos(nuevo);
-        setEstado('vivo');
-      } else {
-        // Si ya había un dato traído recién, se sigue mostrando pero se
-        // dice que la última consulta falló.
-        setEstado('fallo');
-      }
-    };
-    const alVolver = () => { if (document.visibilityState === 'visible') consultar(); };
-
-    consultar();
-    const reloj = setInterval(consultar, CADA_DOLAR);
-    document.addEventListener('visibilitychange', alVolver);
-    return () => {
-      vigente = false;
-      clearInterval(reloj);
-      document.removeEventListener('visibilitychange', alVolver);
-    };
-  }, []);
+  const { datos, estado, ahora } = useDolar(foto);
 
   const lista = datos?.cotizaciones ?? [];
   const estadoTexto = textoDeEstado({ estado, datos, ahora });

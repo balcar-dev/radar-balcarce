@@ -56,3 +56,51 @@ export function sinTitularRepetido(notas = [], yaMostradas = []) {
     return true;
   });
 }
+
+// Las palabras que no distinguen un titular de otro.
+const VACIAS = new Set(['de', 'la', 'el', 'en', 'y', 'a', 'los', 'las', 'un', 'una', 'del',
+  'por', 'con', 'para', 'que', 'se', 'su', 'al', 'lo', 'es', 'no', 'mas', 'sobre', 'tras']);
+
+/** Las palabras que cuentan de un titular: más de tres letras y sin vacías. */
+function fichasDeTitular(titulo) {
+  return new Set(titularNormalizado(titulo).split(' ').filter((w) => w.length > 3 && !VACIAS.has(w)));
+}
+
+/**
+ * ¿Dos titulares cuentan lo mismo? Sí si son iguales una vez normalizados, o
+ * si casi todas las palabras del más corto están en el otro (0,8 o más; es la
+ * misma cuenta que `parecido` de ingesta/ingesta.mjs). Con menos de cuatro
+ * palabras que cuenten no se compara "casi": dos titulares cortos comparten
+ * palabras sin ser la misma historia.
+ */
+export function titularesParecidos(a = '', b = '', umbral = 0.8) {
+  const A = titularNormalizado(a);
+  if (A && A === titularNormalizado(b)) return true;
+  const FA = fichasDeTitular(a);
+  const FB = fichasDeTitular(b);
+  if (Math.min(FA.size, FB.size) < 4) return false;
+  let comunes = 0;
+  for (const w of FA) if (FB.has(w)) comunes += 1;
+  return comunes / Math.min(FA.size, FB.size) >= umbral;
+}
+
+/**
+ * La lista sin notas repetidas: dos que cuentan lo mismo con el mismo titular
+ * (o casi) no pueden estar las dos en la portada. El 25/09 "Franco Colapinto
+ * larga décimo en el Gran Premio de Azerbaiyán" salió dos veces en
+ * Automovilismo: la IA reescribió dos notas de fuentes distintas y dio el
+ * mismo titular, y la agrupación de antes no las había juntado.
+ *
+ * Se queda la de mayor relevancia (a igual relevancia, la más nueva) y la
+ * otra sale de la lista. El orden de las que quedan es el de entrada.
+ */
+export function sinNotasRepetidas(notas = []) {
+  const tiempo = (n) => new Date(n.fecha).getTime() || 0;
+  const porMerito = [...notas].sort((a, b) => ((b.relevancia ?? 0) - (a.relevancia ?? 0)) || (tiempo(b) - tiempo(a)));
+  const quedan = [];
+  for (const n of porMerito) {
+    if (!quedan.some((q) => titularesParecidos(q.titulo, n.titulo))) quedan.push(n);
+  }
+  const ids = new Set(quedan);
+  return notas.filter((n) => ids.has(n));
+}

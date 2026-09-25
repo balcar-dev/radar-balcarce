@@ -339,7 +339,8 @@ test('la página de la nota muestra sólo la nota y un desplegable cerrado "Fuen
   const pagina = leer('web/app/nota/[id]/page.js');
   const componente = leer('web/components/verificacion.js');
   assert.match(pagina, /<FuentesDeLaNota nota=\{n\} \/>/);
-  assert.match(pagina, /<Firma nota=\{n\} \/>/, 'la firma sigue');
+  assert.ok(!/<Firma[ >]/.test(pagina), 'la firma va en el renglón del desplegable de fuentes');
+  assert.match(componente, /firmaCorta\(nota\)/, 'la firma sigue');
   assert.match(componente, /<details className="fuentes-nota">/);
   assert.ok(!/<details[^>]*\bopen\b/.test(componente), 'el desplegable arranca cerrado');
   assert.match(componente, /Fuentes \(\{fuentes\.length\}\)/);
@@ -348,8 +349,8 @@ test('la página de la nota muestra sólo la nota y un desplegable cerrado "Fuen
     assert.ok(!sinComentarios(componente).includes(t), `el componente vuelve a mostrar "${t}"`);
     assert.ok(!sinComentarios(pagina).includes(t), `la página vuelve a mostrar "${t}"`);
   }
-  // El orden: cuerpo → fuentes → compartir → firma.
-  const orden = ['n.cuerpo &&', '<FuentesDeLaNota', '<Compartir', '<Firma'].map((t) => pagina.indexOf(t));
+  // El orden: cuerpo → fuentes y firma (una línea) → compartir.
+  const orden = ['n.cuerpo &&', '<FuentesDeLaNota', '<Compartir'].map((t) => pagina.indexOf(t));
   assert.ok(orden.every((x, i) => x > 0 && (i === 0 || x > orden[i - 1])), `orden: ${orden}`);
 });
 

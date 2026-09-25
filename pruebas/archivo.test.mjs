@@ -228,7 +228,8 @@ test('las listas no muestran notas de más de 72 horas', () => {
 
 test('generar-datos corta las listas en 72 horas y guarda el archivo, sin tocar farmacia, clima ni agenda', () => {
   const s = leer('web/scripts/generar-datos.mjs');
-  assert.match(s, /const notas = publicadas\.filter\(\(n\) => vigenteEnPortada\(n\)\)/);
+  assert.match(s, /const vigentes = publicadas\.filter\(\(n\) => vigenteEnPortada\(n\)\)/);
+  assert.match(s, /const notas = sinNotasRepetidas\(vigentes\)/);
   assert.match(s, /actualizarArchivo\(/);
   assert.match(s, /fs\.writeFileSync\(ARCHIVO/);
   // Las piezas que no son notas salen de otro lado, no del filtro.

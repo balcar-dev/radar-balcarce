@@ -17,7 +17,7 @@ export default function PoliticaPrivacidad() {
     <div className="envoltura" style={{ maxWidth: 700 }}>
       <h1 className="fraunces" style={{ fontSize: 34, marginBottom: 18 }}>Política de privacidad</h1>
 
-      <div style={{ fontSize: 15.5, lineHeight: 1.7 }}>
+      <div className="texto-pagina" style={{ fontSize: 15.5, lineHeight: 1.7 }}>
         <p>
           En Radar Balcarce pedimos algunos datos cuando alguien nos manda un dato, un reclamo,
           una opinión para publicar o algo para investigar. Esta página explica qué pedimos, para

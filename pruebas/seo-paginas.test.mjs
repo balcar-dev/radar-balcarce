@@ -10,7 +10,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { recortarEn } from '../web/lib/texto.js';
 import {
-  metadatosDePagina, autorDeNota, quienEscribio, OG_COMUN,
+  metadatosDePagina, autorDeNota, quienEscribio, firmaCorta, explicacionDeFirma, OG_COMUN,
 } from '../web/components/metadatos.js';
 
 const RAIZ = path.join(import.meta.dirname, '..', 'web');
@@ -188,11 +188,11 @@ test('no volvemos a prometer una revisión humana que no hay', () => {
 test('el autor de los datos estructurados dice lo mismo que la firma de la nota', () => {
   const auto = autorDeNota({ guion: 'x', como: 'automatica', medios: ['La Vanguardia'] }, 'https://radarbalcarce.com');
   assert.match(auto.name, /IA/);
-  assert.match(auto.name, /verificado automáticamente contra la fuente/);
+  assert.match(auto.name, /verificada automáticamente contra las fuentes/);
   assert.ok(!/revis/i.test(auto.name), `una nota automática dice que fue revisada: ${auto.name}`);
 
   const revisada = autorDeNota({ guion: 'x', como: 'publicada' }, 'https://radarbalcarce.com');
-  assert.match(revisada.name, /revisado por una persona/);
+  assert.match(revisada.name, /revisada por una persona/);
 
   // El resumen es el de la fuente: el autor es ese medio.
   assert.equal(autorDeNota({ guion: null, como: 'automatica', medios: ['El Diario Balcarce'] }).name, 'El Diario Balcarce');
@@ -202,7 +202,34 @@ test('el autor de los datos estructurados dice lo mismo que la firma de la nota'
   assert.deepEqual(quienEscribio({ guion: null, como: 'automatica' }), { reescrita: false, revisada: false });
 
   assert.match(leer('components/ficha.js'), /author: autorDeNota\(nota, base\)/);
-  assert.match(leer('components/piezas.js'), /quienEscribio\(nota\)/);
+  assert.match(leer('components/metadatos.js'), /export function firmaCorta[\s\S]*quienEscribio\(nota\)/);
+  assert.match(leer('components/verificacion.js'), /firmaCorta\(nota\)/);
+});
+
+test('la firma que ve el lector es una línea corta, coherente con el autor de los datos', () => {
+  const auto = { guion: 'x', como: 'automatica', medios: ['La Vanguardia'] };
+  assert.equal(firmaCorta(auto), 'Redacción con IA, verificada contra las fuentes');
+  assert.equal(firmaCorta({ ...auto, como: 'publicada' }), 'Redacción con IA, revisada por la redacción');
+  assert.equal(firmaCorta({ guion: null, como: 'publicada' }), 'Revisada por la redacción');
+  assert.equal(firmaCorta({ guion: null, como: 'automatica', medios: ['El Diario Balcarce'] }), 'Texto de El Diario Balcarce');
+  assert.equal(firmaCorta({ guion: null, como: 'automatica', medios: [] }), 'Texto de la fuente');
+  assert.equal(firmaCorta({ propia: true, firma: 'Nota de Radar Balcarce con datos de DolarApi.com a las 11:07.' }),
+    'Nota de Radar Balcarce con datos de DolarApi.com a las 11:07');
+  // Lo interno no se le dice al lector, y ninguna firma es un párrafo.
+  for (const n of [auto, { ...auto, como: 'publicada' }, { guion: null, como: 'automatica', medios: ['X'] }]) {
+    assert.ok(!/sin revisi[oó]n humana/i.test(firmaCorta(n) + explicacionDeFirma(n)));
+    assert.ok(firmaCorta(n).length <= 60, `demasiado larga: ${firmaCorta(n)}`);
+  }
+  // Una automática nunca dice que la revisó una persona.
+  assert.ok(!/revis/i.test(firmaCorta(auto)));
+  assert.ok(!/revis/i.test(explicacionDeFirma(auto)));
+  // La explicación larga existe (va al abrir el desplegable) y no en las propias.
+  assert.match(explicacionDeFirma(auto), /inteligencia artificial/);
+  assert.equal(explicacionDeFirma({ propia: true }), null);
+  // El componente: la firma va en el renglón del desplegable, y el párrafo largo no está en la página.
+  const verificacion = leer('components/verificacion.js');
+  assert.match(verificacion, /<summary>[\s\S]*\{firma\}[\s\S]*Fuentes \(\{fuentes\.length\}\)[\s\S]*<\/summary>/);
+  assert.ok(!/Salió sin revisión humana/.test(leer('components/piezas.js') + verificacion + leer('components/metadatos.js')));
 });
 
 // ------------------------------------------------ encabezados de Cloudflare

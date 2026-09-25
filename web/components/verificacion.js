@@ -20,31 +20,64 @@
 // Qué fuentes van sale de lib/fuentes-de-la-nota.js (sin JSX, se prueba).
 
 import { fuentesDeLaNota } from '@/lib/fuentes-de-la-nota';
+import { firmaCorta, explicacionDeFirma } from '@/components/metadatos';
 
-// Chico y en gris de rótulo: es un dato de apoyo, no otra nota. En el
-// celular, el renglón del desplegable tiene 44 px de alto para el dedo.
+// Chico y en gris: es un dato de apoyo, no otra nota. La primera parte del
+// renglón es la firma (quién escribió la nota); la segunda, las fuentes. En el
+// celular el renglón tiene 44 px de alto mínimo para el dedo y, si la firma no
+// entra, pasa a dos líneas.
 const ESTILO = `
-.fuentes-nota { margin-top: 26px; padding-top: 6px; border-top: 1px solid var(--linea); }
+.fuentes-nota { margin-top: 26px; padding-top: 2px; border-top: 1px solid var(--linea); }
 .fuentes-nota summary {
-  display: flex; align-items: center; gap: 6px; min-height: 44px; cursor: pointer; list-style: none;
-  font-size: 12px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--suave);
+  display: flex; flex-wrap: wrap; align-items: center; column-gap: 6px; row-gap: 0; min-height: 44px; padding: 6px 0; cursor: pointer; list-style: none;
+  font-size: 12.5px; line-height: 1.4; color: var(--suave);
 }
 .fuentes-nota summary::-webkit-details-marker { display: none; }
-.fuentes-nota summary::after { content: ""; width: 7px; height: 7px; margin-left: 2px; border-right: 2px solid currentColor; border-bottom: 2px solid currentColor; transform: translateY(-2px) rotate(45deg); transition: transform .15s; }
+.fuentes-nota summary .fn-n { font-weight: 700; }
+/* En el celular la firma ocupa casi todo el renglón: "Fuentes" pasa abajo, sin el punto suelto al final de la línea. */
+@media (max-width: 519px) { .fuentes-nota summary .fn-sep { display: none; } .fuentes-nota summary .fn-firma { flex-basis: 100%; } }
+.fuentes-nota summary::after { content: ""; flex: none; width: 7px; height: 7px; margin-left: 2px; border-right: 2px solid currentColor; border-bottom: 2px solid currentColor; transform: translateY(-2px) rotate(45deg); transition: transform .15s; }
 .fuentes-nota[open] summary::after { transform: translateY(2px) rotate(-135deg); }
 .fuentes-nota summary:focus-visible { outline: 2px solid var(--rojo); outline-offset: 2px; border-radius: 4px; }
+.fuentes-nota .fn-explica { margin: 0 0 12px; font-size: 13.5px; line-height: 1.55; color: var(--suave); }
+.fuentes-nota .fn-explica a { text-decoration: underline; font-weight: 500; color: inherit; }
 .fuentes-nota ul { margin: 0 0 8px; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 8px; }
 .fuentes-nota li { font-size: 14px; line-height: 1.45; overflow-wrap: anywhere; }
-.fuentes-nota a { color: var(--rojo); font-weight: 600; }
+.fuentes-nota li a { color: var(--rojo); font-weight: 600; }
 `;
 
+/**
+ * El pie de la nota: una sola línea gris con la firma y las fuentes
+ * ("Redacción con IA, verificada contra las fuentes · Fuentes (4)"). Al abrir
+ * el desplegable, la explicación de la firma y el nombre de cada medio con su
+ * enlace. La firma se dice siempre (regla del sitio: cada nota dice quién la
+ * escribió), pero corta; lo interno ("salió sin revisión humana") no se dice.
+ */
 export default function FuentesDeLaNota({ nota }) {
   const fuentes = fuentesDeLaNota(nota);
-  if (!fuentes.length) return null;
+  const firma = firmaCorta(nota);
+  if (!fuentes.length) {
+    return (
+      <p className="firma-nota">
+        <span className="punto-firma" aria-hidden="true" />
+        {firma}
+      </p>
+    );
+  }
+  const explicacion = explicacionDeFirma(nota);
   return (
     <details className="fuentes-nota">
       <style dangerouslySetInnerHTML={{ __html: ESTILO }} />
-      <summary>Fuentes ({fuentes.length})</summary>
+      <summary>
+        <span className="fn-firma">{firma}</span>
+        <span className="fn-sep" aria-hidden="true">·</span>
+        <span className="fn-n">Fuentes ({fuentes.length})</span>
+      </summary>
+      {explicacion && (
+        <p className="fn-explica">
+          {explicacion} <a href="/quienes-somos">Cómo trabajamos</a>
+        </p>
+      )}
       <ul>
         {fuentes.map((f) => (
           <li key={f.enlace ?? f.medio}>

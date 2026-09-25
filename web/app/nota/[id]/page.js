@@ -2,7 +2,7 @@ import {
   obtenerDatos, obtenerNota, todasLasNotas, datosSeccion, nombreCorto, temasVivos,
 } from '@/lib/datos';
 import {
-  Etiqueta, FilaNota, Cierre, Invitacion, Firma, TemasDeLaNota, Hace,
+  Etiqueta, FilaNota, Cierre, Invitacion, TemasDeLaNota, Hace,
 } from '@/components/piezas';
 import Compartir from '@/components/compartir';
 import FuentesDeLaNota from '@/components/verificacion';
@@ -119,9 +119,10 @@ export default function PaginaNota({ params }) {
           </div>
         )}
 
-        {/* Lo que ve el lector es la nota: título, bajada y cuerpo. Al pie,
-            las fuentes en un desplegable chico y cerrado (nombre del medio y
-            enlace), que es también la atribución. Las claves, qué se sabe,
+        {/* Lo que ve el lector es la nota: título, bajada y cuerpo. Al pie, una
+            línea chica con la firma (quién la escribió) y el desplegable
+            cerrado de fuentes (nombre del medio y enlace), que es también la
+            atribución. Las claves, qué se sabe,
             qué falta confirmar, lo que aportó cada fuente y el nivel de
             verificación son de uso interno: se usan para escribir la nota y
             se ven en el panel, no acá (CRITERIO-EDITORIAL.md, sección 7). */}
@@ -129,7 +130,6 @@ export default function PaginaNota({ params }) {
 
         {MOSTRAR_TEMAS && <TemasDeLaNota temas={n.temas} catalogo={temas} />}
         <Compartir titulo={n.titulo} />
-        <Firma nota={n} />
 
         {relacionadas.length > 0 && (
           <section className="bloque-seccion">

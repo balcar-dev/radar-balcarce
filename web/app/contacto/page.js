@@ -20,7 +20,7 @@ export default function Contacto() {
     <div className="envoltura" style={{ maxWidth: 700 }}>
       <h1 className="fraunces" style={{ fontSize: 34, marginBottom: 18 }}>Contacto y correcciones</h1>
 
-      <div style={{ fontSize: 15.5, lineHeight: 1.7 }}>
+      <div className="texto-pagina" style={{ fontSize: 15.5, lineHeight: 1.7 }}>
         <p>Para lo que sea, escribinos por cualquiera de estos dos canales:</p>
         <ul style={{ paddingLeft: 20 }}>
           <li>

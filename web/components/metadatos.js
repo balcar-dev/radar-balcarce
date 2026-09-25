@@ -87,7 +87,43 @@ export function autorDeNota(nota = {}, base = '') {
       : { '@type': 'Organization', name: NOMBRE, url: base };
   }
   const como = revisada
-    ? 'resumen escrito con IA y revisado por una persona'
-    : 'resumen escrito con IA y verificado automáticamente contra la fuente';
+    ? 'nota escrita con IA y revisada por una persona'
+    : 'nota escrita con IA y verificada automáticamente contra las fuentes';
   return { '@type': 'Organization', name: `${NOMBRE} (${como})`, url: base };
+}
+
+/**
+ * La firma que ve el lector, en una línea corta (va en el renglón del
+ * desplegable "Fuentes (N)", components/verificacion.js). Dice lo mismo que el
+ * `author` de arriba, en pocas palabras:
+ *
+ *   · propia:            lo que dice la nota ("Nota de Radar Balcarce con datos de…")
+ *   · escrita por la IA: "Redacción con IA, verificada contra las fuentes"
+ *   · ...y revisada:     "Redacción con IA, revisada por la redacción"
+ *   · de una persona:    "Revisada por la redacción"
+ *   · texto de la fuente: "Texto de <medio>"
+ *
+ * Nunca se promete una revisión que no hubo, ni se dice "sin revisión humana":
+ * eso es interno.
+ */
+export function firmaCorta(nota = {}) {
+  const { reescrita, revisada, propia } = quienEscribio(nota);
+  if (propia) return String(nota.firma || 'Nota de Radar Balcarce').replace(/\.\s*$/, '');
+  if (reescrita) return revisada ? 'Redacción con IA, revisada por la redacción' : 'Redacción con IA, verificada contra las fuentes';
+  if (revisada) return 'Revisada por la redacción';
+  const medio = (nota.medios ?? [])[0];
+  return medio ? `Texto de ${medio}` : 'Texto de la fuente';
+}
+
+/** La explicación larga de la firma, que se ve sólo al abrir el desplegable.
+ *  Null cuando la firma ya lo dice todo (las notas propias). */
+export function explicacionDeFirma(nota = {}) {
+  const { reescrita, revisada, propia } = quienEscribio(nota);
+  if (propia) return null;
+  if (reescrita) {
+    return `La escribió una inteligencia artificial con lo que publicaron las fuentes, y se verificó automáticamente contra ellas: un dato que no estaba se descarta.${revisada ? ' Antes de salir la revisó una persona de la redacción.' : ''}`;
+  }
+  return revisada
+    ? 'Una persona de la redacción la revisó y la publicó.'
+    : 'El texto es el que publicó la fuente. No lo reescribimos.';
 }

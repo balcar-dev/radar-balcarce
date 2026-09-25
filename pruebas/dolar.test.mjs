@@ -12,7 +12,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import {
   interpretarDolarApi, interpretarBluelytics, brecha, pesos, porcentaje, momento, cuando,
-  textoDeEstado, traerDolar, ultimaFecha, CASAS, FUENTES,
+  textoDeEstado, traerDolar, ultimaFecha, CASAS, FUENTES, filasDelPanel, horaDelPanel,
 } from '../web/lib/dolar.js';
 
 const RAIZ = path.join(import.meta.dirname, '..');
@@ -220,4 +220,56 @@ test('la foto se guarda en cada build, no lo frena y no se versiona', () => {
   assert.match(leer('.gitignore'), /^web\/data\/dolar\.json\r?$/m);
   const s = leer('web/scripts/foto-dolar.mjs');
   assert.ok(!/process\.exit\(\s*[1-9]/.test(s), 'el script de la foto no puede cortar la compilación');
+});
+
+// ---------------------------------------------- el panel de la portada
+
+test('el panel: oficial, blue y MEP, con la venta y la compra, en ese orden', () => {
+  const { cotizaciones } = interpretarDolarApi(DOLARAPI);
+  const filas = filasDelPanel(cotizaciones);
+  assert.deepEqual(filas.map((f) => [f.nombre, f.compra, f.venta]), [['Oficial', 1490, 1540], ['Blue', 1540, 1560], ['MEP', 1539, 1545.6]]);
+  // Sin un tipo, no hay fila (no un cero); sin nada, no hay panel.
+  assert.deepEqual(filasDelPanel(cotizaciones.filter((c) => c.casa !== 'blue')).map((f) => f.nombre), ['Oficial', 'MEP']);
+  assert.deepEqual(filasDelPanel([]), []);
+  assert.deepEqual(filasDelPanel(interpretarBluelytics({ last_update: '2026-09-24T21:00:00Z', oficial: { value_sell: 1500, value_buy: 1450 }, blue: { value_sell: 1560, value_buy: 1540 } }).cotizaciones).map((f) => f.nombre), ['Oficial', 'Blue']);
+});
+
+test('el panel dice la hora real de la cotización, y si no se pudo actualizar, lo dice', () => {
+  const filas = filasDelPanel(interpretarDolarApi(DOLARAPI).cotizaciones);
+  // La más nueva de las que se ven: las 17:56 del 24/09 en Balcarce.
+  assert.equal(horaDelPanel({ estado: 'vivo', filas, ahora: MISMO_DIA }), 'Cotización de las 17:56');
+  assert.equal(horaDelPanel({ estado: 'guardada', filas, ahora: MISMO_DIA }), 'Cotización de las 17:56');
+  assert.equal(horaDelPanel({ estado: 'fallo', filas, ahora: MISMO_DIA }), 'Cotización de las 17:56; no se pudo actualizar');
+  assert.equal(horaDelPanel({ estado: 'fallo', filas, ahora: AL_OTRO_DIA }), 'Cotización de ayer a las 17:56; no se pudo actualizar');
+  assert.equal(horaDelPanel({ estado: 'vivo', filas: [], ahora: MISMO_DIA }), null);
+  for (const estado of ['vivo', 'guardada', 'cargando', 'fallo']) {
+    assert.ok(!/en vivo/i.test(horaDelPanel({ estado, filas, ahora: MISMO_DIA })));
+  }
+});
+
+test('el panel usa la misma lógica que /dolar: una consulta por página, sin "en vivo" ni cuadro vacío', () => {
+  const tarjeta = leer('web/components/tarjeta-dolar.js');
+  assert.ok(!/en vivo/i.test(tarjeta));
+  assert.match(tarjeta, /useDolar\(foto\)/);
+  assert.match(tarjeta, /if \(!filas\.length\) return null;/, 'sin datos no hay tarjeta');
+  assert.match(tarjeta, /href="\/dolar"/);
+  assert.match(tarjeta, /Ver todos los dólares/);
+  // Los dos componentes comparten el hook: la consulta no se escribe dos veces.
+  assert.match(leer('web/components/dolar-vivo.js'), /useDolar\(foto\)/);
+  assert.match(leer('web/components/usar-dolar.js'), /traerDolar\(\)/);
+  assert.ok(!/traerDolar/.test(tarjeta + leer('web/components/dolar-vivo.js')), 'la consulta está sólo en usar-dolar.js');
+  // Está en la pila de servicios de la portada, con la foto del build.
+  const portada = leer('web/app/page.js');
+  assert.match(portada, /<TarjetaDolar foto=\{fotoDelDolar\(\)\} \/>/);
+  assert.ok(portada.indexOf('<TarjetaFarmacia') < portada.indexOf('<TarjetaDolar'), 'el dólar va después de la farmacia');
+});
+
+test('el HTML compilado de la portada no dice "en vivo" en el panel del dólar (si ya se compiló)', (t) => {
+  const f = path.join(RAIZ, 'web/out/index.html');
+  if (!fs.existsSync(f)) { t.skip('todavía no se compiló el sitio'); return; }
+  const html = fs.readFileSync(f, 'utf8');
+  const panel = html.match(/<section class="tarjeta panel-dolar"[\s\S]*?<\/section>/)?.[0];
+  if (!panel) { t.skip('la compilación es de antes del panel o no había foto del dólar'); return; }
+  assert.ok(!/en vivo/i.test(panel));
+  assert.match(panel, /Cotización de/);
 });

@@ -77,6 +77,12 @@ h1, h2, h3, .fraunces {
 a { color: inherit; text-decoration: none; }
 a:hover { color: var(--rojo); }
 
+/* Los títulos de las páginas fijas, en dos líneas, no se separan como un párrafo. */
+h1.fraunces { line-height: 1.15; }
+/* Los enlaces dentro de un texto largo (contacto, quiénes somos, privacidad) se tienen que ver como enlaces. */
+.texto-pagina a { color: var(--rojo); font-weight: 600; text-decoration: underline; text-underline-offset: 2px; }
+.texto-pagina a:hover { color: var(--rojo-oscuro); }
+
 img { max-width: 100%; display: block; }
 
 .envoltura { max-width: 1280px; margin: 0 auto; padding: 0 20px; }
@@ -192,33 +198,30 @@ nav.principal .crece { flex-grow: 1; }
 
 main { padding: 24px 0 10px; }
 
-/* Tres bloques: las noticias, los servicios (clima y farmacia) y el resto
-   del lateral.
+/* Las noticias y la pila de servicios de la derecha.
 
-   En el celular los servicios van PRIMEROS, antes de las noticias. Es lo que
-   la mayoría viene a buscar, y estaban al final de todo: había que pasar
-   ochenta titulares para ver la farmacia de turno.
+   En el celular los servicios (clima, farmacia y dólar) van PRIMEROS, antes de
+   las noticias. Es lo que la mayoría viene a buscar, y estaban al final de
+   todo: había que pasar ochenta titulares para ver la farmacia de turno. La
+   agenda, el buzón y los números útiles van al final.
 
-   En la pantalla grande vuelven a su lugar, arriba de la columna derecha. */
+   Eso se resuelve con `display: contents` en `.derecha`: en el celular sus dos
+   hijos (.servicios y .lateral) son hijos directos de la grilla y se ordenan
+   con `order`. En escritorio `.derecha` es UNA columna que fluye sola (flex,
+   con un solo gap), así que no hay huecos: antes los servicios y el lateral
+   eran dos filas de la grilla, y la fila de arriba se estiraba con la altura de
+   la nota grande. */
 .dos-columnas { display: grid; grid-template-columns: minmax(0, 1fr); gap: 24px; align-items: start; }
+.dos-columnas .derecha { display: contents; }
 .dos-columnas .servicios { order: 1; display: flex; flex-direction: column; gap: 14px; }
 .dos-columnas .principal { order: 2; min-width: 0; }
 .dos-columnas .lateral { order: 3; }
 
 @media (min-width: 980px) {
-  .dos-columnas {
-    grid-template-columns: minmax(0, 1fr) 340px;
-    column-gap: 40px;
-    row-gap: 16px;
-  }
-  .dos-columnas .principal { grid-column: 1; grid-row: 1 / span 2; }
-  .dos-columnas .servicios { grid-column: 2; grid-row: 1; }
-  .dos-columnas .lateral { grid-column: 2; grid-row: 2; }
-  /* En las páginas internas no va el bloque de servicios: el clima y la
-     farmacia ya están en la barra de arriba y repetirlos en cada sección
-     los convierte en ruido. Sin ese bloque, el lateral sube. */
-  .dos-columnas .principal.sin-servicios { grid-row: 1 / span 2; }
-  .dos-columnas .principal.sin-servicios ~ .lateral { grid-row: 1; }
+  .dos-columnas { grid-template-columns: minmax(0, 1fr) 340px; column-gap: 40px; }
+  .dos-columnas .principal { grid-column: 1; grid-row: 1; order: 0; }
+  .dos-columnas .derecha { display: flex; flex-direction: column; gap: 16px; grid-column: 2; grid-row: 1; min-width: 0; }
+  .dos-columnas .servicios, .dos-columnas .lateral { order: 0; display: flex; flex-direction: column; gap: 16px; }
 }
 
 /* ------------------------------------------------------- aviso de clima */
@@ -300,6 +303,10 @@ main { padding: 24px 0 10px; }
 .fila-nota:last-child { border-bottom: none; }
 .fila-nota .cuando { width: 96px; flex-shrink: 0; display: none; }
 @media (min-width: 620px) { .fila-nota .cuando { display: block; } }
+/* La columna de la hora de las listas de notas (FilaNota): se reserva siempre en escritorio, con o sin hora. */
+.fila-nota .col-hora { width: 96px; flex-shrink: 0; display: none; }
+@media (min-width: 620px) { .fila-nota .col-hora { display: block; } }
+.fila-nota .col-hora .meta { display: block; }
 .fila-nota h3 { font-size: 17px; font-weight: 600; line-height: 1.3; }
 @media (min-width: 720px) { .fila-nota h3 { font-size: 18px; } }
 .fila-nota .cuando-movil { display: block; margin-bottom: 4px; }
@@ -308,6 +315,19 @@ main { padding: 24px 0 10px; }
 /* ------------------------------------------------------------------ lateral */
 
 .lateral { display: flex; flex-direction: column; gap: 16px; }
+
+/* El panel del dólar de la portada (components/tarjeta-dolar.js). */
+.panel-dolar { padding: 14px 16px; }
+.filas-panel-dolar { margin-top: 4px; }
+.fila-panel-dolar { display: flex; align-items: baseline; gap: 8px; padding: 4px 0; border-bottom: 1px solid var(--linea-suave); font-variant-numeric: tabular-nums; }
+.fila-panel-dolar:last-child { border-bottom: none; }
+.fila-panel-dolar .nombre { font-size: 14px; font-weight: 600; color: var(--texto); }
+.fila-panel-dolar .compra { margin-left: auto; font-size: 11.5px; color: var(--suave); white-space: nowrap; }
+.fila-panel-dolar .venta { flex: none; min-width: 84px; text-align: right; font-size: 21px; font-weight: 700; line-height: 1.2; letter-spacing: -0.01em; color: var(--tinta); }
+.fila-panel-dolar .nombre + .venta { margin-left: auto; }
+.pie-panel-dolar { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 4px 12px; margin-top: 6px; font-size: 12px; color: var(--suave); }
+.pie-panel-dolar .viejo { color: #8A5A00; }
+.pie-panel-dolar a { font-size: 13px; font-weight: 600; color: var(--rojo); }
 .tarjeta { background: var(--papel); border: 1px solid var(--linea); border-radius: 10px; padding: 18px; }
 .tarjeta h3 { font-size: 19px; font-weight: 700; }
 .mini { font-size: 13px; color: var(--suave); line-height: 1.5; }

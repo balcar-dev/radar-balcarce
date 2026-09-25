@@ -80,7 +80,7 @@ sección, feed, sitemap de noticias, archivo) y pasan por la regla de cuerpo
 
 Los identificadores no llevan guiones (la dirección es `titular-ID` y el ID es
 lo que va después del último guion, `lib/ruta.js`). La firma sale de
-`nota.firma` (`components/piezas.js`, `Firma`), los datos para Google dicen
+`nota.firma` (`components/metadatos.js`, `firmaCorta`), los datos para Google dicen
 "Radar Balcarce" (`components/metadatos.js`), y los enlaces adentro del texto
 (`nota.enlacesEnTexto`) y los botones (`nota.destacados`) los pone
 `app/nota/[id]/page.js` con `lib/enlaces-en-texto.js`. Pruebas:
