@@ -19,6 +19,7 @@ import { NUMEROS, tocaHoy, diaDeEstaSemana, diaDeTurno, comoISO, decisionHumana 
 import { avisosDelClima } from '../../ingesta/alertas.mjs';
 import { reescribirAutomaticas, previasDeLaPortada } from '../../reels/reescritura.mjs';
 import { TEMAS } from '../../ingesta/fuentes.mjs';
+import { pendientesDeLaIngesta } from '../../redes/avisos.mjs';
 import {
   vigenteEnPortada, slugsConocidos, fijarSlug, actualizarArchivo, idsEnRedes, sinPuntaje, comoArchivoJson,
 } from '../lib/archivo.js';
@@ -271,6 +272,12 @@ const salida = {
     proximosAnuales: agenda?.proximosAnuales ?? [],
   },
   utiles: { numeros: NUMEROS, diaDeLaSemana: diaDeEstaSemana(), tocaHoy: tocaHoy() },
+  // Las notas que esperan a una persona en el panel (amarillas), para que el
+  // vigilante avise por WhatsApp: en GitHub no hay panel y es la única forma
+  // de saberlo. Este archivo es público, así que va lo mínimo, nunca una roja,
+  // y sin titular cuando la nota es de Policiales o habla de chicos o de
+  // víctimas (redes/avisos.mjs, pendientesDeLaIngesta).
+  pendientes: pendientesDeLaIngesta(ultima.notas ?? [], estado.decisiones ?? {}),
 };
 
 fs.mkdirSync(path.dirname(SALIDA), { recursive: true });

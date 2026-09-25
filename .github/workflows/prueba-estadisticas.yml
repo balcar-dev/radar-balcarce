@@ -1,0 +1,29 @@
+# Mide las estadísticas ahora y muestra los números y los permisos que faltan.
+# No guarda nada ni manda WhatsApp. Se corre a mano (Actions → Prueba de
+# estadísticas → Run workflow), por ejemplo después de cargar un token nuevo.
+name: Prueba de estadísticas
+
+on:
+  workflow_dispatch:
+
+# Sólo lee el repositorio: no guarda nada.
+permissions:
+  contents: read
+
+jobs:
+  probar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    env:
+      TZ: America/Argentina/Buenos_Aires
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - run: node redes/estadisticas.mjs
+        env:
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          CLOUDFLARE_ANALYTICS_TOKEN: ${{ secrets.CLOUDFLARE_ANALYTICS_TOKEN }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          META_TOKEN: ${{ secrets.META_TOKEN }}

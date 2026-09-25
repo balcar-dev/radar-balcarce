@@ -18,11 +18,21 @@
 //     la mayoría de las notas tengan cuerpo. Ver REGLAS.md.
 //
 // Los problemas se avisan una vez cada seis horas (no un mensaje cada media
-// hora por lo mismo), y a las 21 sale un resumen "todo bien" si no hay nada.
+// hora por lo mismo), y a las 21 sale el resumen del día.
 //
-// La parte que decide (`evaluar`) es una función pura: recibe lo observado y
-// devuelve los problemas. Se prueba sin red. Lo que baja datos y manda el
-// mensaje está abajo, en `main`.
+// Desde el 25/09 también avisa lo que conviene saber aunque todo ande
+// (redes/avisos.mjs): notas que esperan a una persona, una noticia de
+// Balcarce muy importante, lo que salió en redes, y las estadísticas de la
+// web y de las redes a las 9 y a las 21 (redes/estadisticas.mjs). Todo junto
+// en UN solo WhatsApp por corrida: CallMeBot bloquea si se abusa.
+//
+//   node redes/vigilar.mjs --probar-resumen   manda UN WhatsApp con el resumen
+//                                             de las 21, tal cual, para ver
+//                                             cómo llega (no guarda nada)
+//
+// La parte que decide (`evaluar`, `planDeAvisos`) son funciones puras: reciben
+// lo observado y devuelven qué decir. Se prueban sin red. Lo que baja datos y
+// manda el mensaje está abajo, en `main`.
 //
 // Sin dependencias: sólo lo que trae Node.
 
@@ -30,8 +40,15 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { cronogramaDelDia, ventanaDe, claveDePieza } from './piezas.mjs';
 import { yaPublicada, horaAR, diaAR } from './elegir.mjs';
-import { enviarWhatsApp } from './whatsapp.mjs';
+import { enviarWhatsApp, sinSecretos } from './whatsapp.mjs';
 import { auditoriaVencida } from './auditar.mjs';
+import {
+  importantesAAvisar, textoImportantes, anotarImportantes, pendientesAAvisar, textoPendientes,
+  anotarPendientes, novedadesEnRedes, textoRedes, datosDelDia, textoResumen, armarMensaje,
+} from './avisos.mjs';
+import {
+  medir, tocaMedir, turnoDeMedicion, agregarPunto, textoEstadisticas, nombresDeCaminos,
+} from './estadisticas.mjs';
 
 /** Las piezas que tienen que salir todos los días: si no salió una, es un
  *  problema. Los podcasts no están: dependen de que haya notas para contar. */
@@ -181,18 +198,87 @@ export function mensajeDeProblemas(problemas) {
   return `${cab}\n\n${problemas.map((p) => `• ${p.texto}`).join('\n')}`;
 }
 
-/** El resumen de las 21: sólo si no hay ningún problema. */
-export function mensajeDelResumen({ ahora, libro = {}, web }) {
-  const hoy = diaAR(ahora);
-  const salidas = Object.keys(libro.instagram ?? {}).filter((c) => c.startsWith(`${hoy}/`)).length;
-  const posteos = Object.values(libro.facebook ?? {}).filter((p) => diaAR(new Date(p.cuando)) === hoy).length;
-  return `✅ Radar Balcarce: todo bien.\n\n• Web al día${web?.actualizado ? ` (última actualización ${new Date(web.actualizado).toLocaleTimeString('es-AR', { hour: '2-digit', minute: '2-digit', timeZone: 'America/Argentina/Buenos_Aires' })})` : ''}\n• Instagram y Facebook: ${salidas} pieza(s) de video y ${posteos} posteo(s) hoy`;
+/**
+ * El resumen de las 21. Desde el 25/09 sale siempre, con o sin problemas, y
+ * cuenta el día: notas, redes, piezas, lo que espera a una persona, los
+ * problemas abiertos y las estadísticas.
+ */
+export function mensajeDelResumen({
+  ahora, libro = {}, web, portada = {}, problemas = [], problemasArriba = false, estadisticas = '',
+}) {
+  return textoResumen({ datos: datosDelDia({ ahora, portada, libro }), problemas, problemasArriba, estadisticas, web });
 }
 
 /** ¿Toca mandar el resumen? Una vez por día, a partir de las 21. */
 export function tocaResumen(ahora, estado = {}) {
   return horaAR(ahora) >= LIMITES.horaDelResumen && estado.ultimoResumen !== diaAR(ahora);
 }
+
+/**
+ * Todo lo que hay para decir en esta corrida, en orden de prioridad, y cómo
+ * anotar cada cosa una vez avisada. Sale en UN solo mensaje (armarMensaje):
+ * CallMeBot bloquea el número si se le manda de más.
+ *
+ *   1. los problemas nuevos (o que ya pasaron seis horas desde el aviso);
+ *   2. una noticia de Balcarce muy importante que acaba de entrar;
+ *   3. las notas nuevas que esperan a una persona (cada tres horas);
+ *   4. el resumen de las 21, con las estadísticas; o, a las 9, las
+ *      estadísticas solas;
+ *   5. lo que salió en redes desde la corrida anterior.
+ *
+ * @returns {{ secciones: {clave:string, texto:string}[], anotar: (estado:object, incluidas:string[]) => void }}
+ */
+export function planDeAvisos({
+  ahora, problemas = [], estado = {}, portada = {}, libro = {}, web = null,
+  estadisticas = '', soloResumen = false, sitio = 'https://radarbalcarce.com',
+}) {
+  const secciones = [];
+  const hechos = {};
+
+  const nuevos = soloResumen ? [] : aAvisar(problemas, estado, ahora);
+  if (nuevos.length) {
+    secciones.push({ clave: 'problemas', texto: mensajeDeProblemas(nuevos) });
+    hechos.problemas = (e) => { e.avisos ??= {}; for (const p of nuevos) e.avisos[p.clave] = ahora.toISOString(); };
+  }
+
+  const importantes = soloResumen ? [] : importantesAAvisar(portada.notas, estado.importantes, ahora);
+  if (importantes.length) {
+    secciones.push({ clave: 'importantes', texto: textoImportantes(importantes, sitio) });
+    hechos.importantes = (e) => { e.importantes = anotarImportantes(e.importantes, importantes, ahora); };
+  }
+
+  const pendientes = soloResumen ? null : pendientesAAvisar(portada.pendientes, estado.pendientes, ahora);
+  if (pendientes) {
+    secciones.push({ clave: 'pendientes', texto: textoPendientes(pendientes) });
+    hechos.pendientes = (e) => { e.pendientes = anotarPendientes(portada.pendientes, ahora); };
+  }
+
+  if (soloResumen || tocaResumen(ahora, estado)) {
+    secciones.push({
+      clave: 'resumen',
+      texto: mensajeDelResumen({ ahora, libro, web, portada, problemas, problemasArriba: nuevos.length > 0, estadisticas }),
+    });
+    hechos.resumen = (e) => { e.ultimoResumen = diaAR(ahora); };
+  } else if (estadisticas) {
+    secciones.push({ clave: 'estadisticas', texto: estadisticas });
+  }
+
+  if (!soloResumen) {
+    // La primera vez no hay marca: se mira la última hora, no todo el libro.
+    const desde = estado.redes?.hasta ?? new Date(ahora.getTime() - 60 * 60000).toISOString();
+    const red = novedadesEnRedes(libro, desde);
+    if (red.items.length) {
+      secciones.push({ clave: 'redes', texto: textoRedes(red.items) });
+      hechos.redes = (e) => { e.redes = { hasta: red.hasta }; };
+    }
+  }
+
+  return {
+    secciones,
+    anotar(e, incluidas = []) { for (const c of incluidas) hechos[c]?.(e); },
+  };
+}
+
 
 // ------------------------------------------------------------ lo que baja datos
 
@@ -261,13 +347,19 @@ export async function observar({ sitio, repo, token, ahora = new Date() }) {
 async function main() {
   const RAIZ = path.join(import.meta.dirname, '..');
   const ESTADO = path.join(RAIZ, 'web', 'data', 'vigilancia.json');
+  const ESTADISTICAS = path.join(RAIZ, 'web', 'data', 'estadisticas.json');
   const leer = (f, defecto) => { try { return JSON.parse(fs.readFileSync(f, 'utf8')); } catch { return defecto; } };
   const sinAvisar = process.argv.includes('--sin-avisar');
+  // Manda UN WhatsApp con el resumen del día tal como saldría a las 21 (con
+  // las estadísticas medidas en el momento), para ver cómo llega. No guarda
+  // nada: ni el estado de los avisos ni la medición.
+  const probarResumen = process.argv.includes('--probar-resumen');
 
   const sitio = (process.env.SITIO ?? 'https://radarbalcarce.com').replace(/\/$/, '');
   const ahora = new Date();
   const libro = leer(path.join(RAIZ, 'web', 'data', 'redes.json'), {});
   const estado = leer(ESTADO, { avisos: {} });
+  estado.avisos ??= {};
 
   const obs = await observar({ sitio, repo: process.env.GITHUB_REPOSITORY, token: process.env.GITHUB_TOKEN, ahora });
   // Cuántas notas de las últimas 24 horas tienen cuerpo (de lo ya publicado).
@@ -287,21 +379,52 @@ async function main() {
   if (!sinAvisar && !puedeAvisar) console.log('  (no hay WHATSAPP_TELEFONO / WHATSAPP_APIKEY: no se avisa por WhatsApp)');
 
   let cambio = false;
-  const nuevos = aAvisar(problemas, estado, ahora);
-  if (nuevos.length && puedeAvisar) {
-    const r = await enviarWhatsApp({ telefono, apikey, texto: mensajeDeProblemas(nuevos) });
-    console.log(r.ok ? '  Aviso enviado por WhatsApp.' : `  No se pudo avisar por WhatsApp: ${r.error}`);
-    if (r.ok) { for (const p of nuevos) estado.avisos[p.clave] = ahora.toISOString(); cambio = true; }
+
+  // --- las estadísticas: a las 9 y a las 21 (o ahora, si es la prueba)
+  const historia = leer(ESTADISTICAS, { puntos: [] });
+  historia.puntos ??= [];
+  let textoStats = '';
+  if (probarResumen || tocaMedir(ahora, estado)) {
+    console.log('  Midiendo las estadísticas…');
+    const { punto } = await medir({ env: process.env, ahora });
+    const turno = turnoDeMedicion(ahora);
+    textoStats = textoEstadisticas({
+      punto, puntos: historia.puntos, ahora, nombreDeCamino: nombresDeCaminos(portada.notas),
+      titulo: turno?.endsWith('/9') ? '📊 Estadísticas de la mañana' : '📊 Estadísticas',
+    });
+    if (!probarResumen && !sinAvisar) {
+      historia.puntos = agregarPunto(historia.puntos, punto);
+      fs.writeFileSync(ESTADISTICAS, `${JSON.stringify(historia, null, 2)}\n`);
+      estado.ultimaMedicion = turno;
+      cambio = true;
+    }
+  }
+
+  // --- un solo mensaje con todo lo que haya para decir
+  const plan = planDeAvisos({
+    ahora, problemas, estado, portada, libro, web: obs.web, estadisticas: textoStats, soloResumen: probarResumen, sitio,
+  });
+  const { texto, incluidas } = armarMensaje(plan.secciones);
+  const afuera = plan.secciones.map((s) => s.clave).filter((c) => !incluidas.includes(c));
+  if (texto) {
+    console.log(`\n  Mensaje de esta corrida (${incluidas.join(', ')}; ${texto.length} caracteres):\n`);
+    console.log(texto.split('\n').map((l) => `    ${l}`).join('\n'));
+    if (afuera.length) console.log(`\n  No entró en el mensaje (sale en la corrida siguiente): ${afuera.join(', ')}`);
+  } else {
+    console.log('  Nada para avisar.');
+  }
+  if (texto && puedeAvisar) {
+    const r = await enviarWhatsApp({ telefono, apikey, texto });
+    console.log(r.ok ? '  Aviso enviado por WhatsApp.' : `  No se pudo avisar por WhatsApp: ${sinSecretos(r.error, apikey, telefono)}`);
+    if (r.ok && !probarResumen) { plan.anotar(estado, incluidas); cambio = true; }
   }
   // Lo que se arregló deja de estar "avisado": si vuelve a fallar, se avisa de nuevo.
-  for (const clave of Object.keys(estado.avisos)) {
-    if (!problemas.some((p) => p.clave === clave)) { delete estado.avisos[clave]; cambio = true; }
+  if (!probarResumen) {
+    for (const clave of Object.keys(estado.avisos)) {
+      if (!problemas.some((p) => p.clave === clave)) { delete estado.avisos[clave]; cambio = true; }
+    }
   }
-  if (!problemas.length && tocaResumen(ahora, estado) && puedeAvisar) {
-    const r = await enviarWhatsApp({ telefono, apikey, texto: mensajeDelResumen({ ahora, libro, web: obs.web }) });
-    if (r.ok) { estado.ultimoResumen = diaAR(ahora); cambio = true; console.log('  Resumen del día enviado.'); }
-  }
-  if (cambio) fs.writeFileSync(ESTADO, `${JSON.stringify(estado, null, 2)}\n`);
+  if (cambio && !probarResumen) fs.writeFileSync(ESTADO, `${JSON.stringify(estado, null, 2)}\n`);
   // Los problemas se anotan arriba de la corrida, pero la corrida termina
   // bien: el vigilante HIZO su trabajo. Antes terminaba con error cuando
   // encontraba algo grave, y Actions pintaba de rojo "Vigilancia" como si
@@ -309,6 +432,7 @@ async function main() {
   for (const p of problemas) console.log(anotacion(p));
   process.exit(0);
 }
+
 
 /**
  * La línea que GitHub Actions muestra como aviso amarillo arriba de la

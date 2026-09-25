@@ -15,6 +15,10 @@
 
 const ENDPOINT = 'https://api.callmebot.com/whatsapp.php';
 
+/** Lo más largo que se manda. Lo que pase de acá se corta: el vigilante arma
+ *  sus mensajes para que entren (redes/avisos.mjs, armarMensaje). */
+export const LARGO_MAXIMO = 1000;
+
 /** Saca la clave y el teléfono de cualquier texto que se vaya a mostrar. */
 export function sinSecretos(texto, ...secretos) {
   let t = String(texto ?? '');
@@ -30,7 +34,7 @@ export async function enviarWhatsApp({ telefono, apikey, texto, fetchFn = fetch 
   if (!numero || !apikey) return { ok: false, error: 'falta el teléfono o la clave' };
   if (!texto) return { ok: false, error: 'mensaje vacío' };
 
-  const url = `${ENDPOINT}?phone=${numero}&text=${encodeURIComponent(String(texto).slice(0, 1000))}&apikey=${encodeURIComponent(apikey)}`;
+  const url = `${ENDPOINT}?phone=${numero}&text=${encodeURIComponent(String(texto).slice(0, LARGO_MAXIMO))}&apikey=${encodeURIComponent(apikey)}`;
   try {
     const r = await fetchFn(url, { signal: AbortSignal.timeout(20000) });
     const cuerpo = await r.text();

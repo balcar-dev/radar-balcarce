@@ -169,7 +169,10 @@ test('el resumen de las 21 cuenta lo que salió hoy', () => {
   };
   const m = mensajeDelResumen({ ahora, libro, web: { actualizado: hace(ahora, 15) } });
   assert.match(m, /todo bien/);
-  assert.match(m, /2 pieza\(s\) de video y 1 posteo\(s\)/);
+  assert.match(m, /Facebook: 1 posteo\(s\)/);
+  assert.match(m, /clima mañana ✓/);
+  assert.match(m, /farmacia ✓/);
+  assert.match(m, /clima noche ✗/);
 });
 
 test('el resumen sale una sola vez por día, desde las 21', () => {
