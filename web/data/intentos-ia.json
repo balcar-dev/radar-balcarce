@@ -64,6 +64,11 @@
   "ultimo": "2026-09-25T13:00:43.192Z",
   "motivo": "con cuerpo"
  },
+ "160531l": {
+  "intentos": 1,
+  "ultimo": "2026-09-25T15:00:50.448Z",
+  "motivo": "con cuerpo"
+ },
  "163jy6m": {
   "intentos": 1,
   "ultimo": "2026-09-25T13:00:43.192Z",
@@ -107,6 +112,11 @@
  "1837g46": {
   "intentos": 2,
   "ultimo": "2026-09-25T12:00:43.134Z",
+  "motivo": "con cuerpo"
+ },
+ "19ezy3w": {
+  "intentos": 1,
+  "ultimo": "2026-09-25T15:00:50.448Z",
   "motivo": "con cuerpo"
  },
  "19jah2t": {
@@ -194,6 +204,11 @@
   "ultimo": "2026-09-25T13:30:44.587Z",
   "motivo": "con cuerpo"
  },
+ "1fq9x2v": {
+  "intentos": 1,
+  "ultimo": "2026-09-25T15:00:50.448Z",
+  "motivo": "cuerpo: 2 problemas (repite, copia): el cuerpo repite el copete en vez de desarrollarlo; sin esas oraciones quedan 67 palabras"
+ },
  "1ft3pp0": {
   "intentos": 1,
   "ultimo": "2026-09-25T13:30:44.587Z",
@@ -222,6 +237,11 @@
  "1iv58lw": {
   "intentos": 2,
   "ultimo": "2026-09-25T12:00:43.134Z",
+  "motivo": "con cuerpo"
+ },
+ "1j46l05": {
+  "intentos": 1,
+  "ultimo": "2026-09-25T15:00:50.448Z",
   "motivo": "con cuerpo"
  },
  "1juqupr": {
@@ -305,6 +325,11 @@
   "intentos": 1,
   "ultimo": "2026-09-25T14:00:47.762Z",
   "motivo": "semáforo: necesita ojo humano: \"investigación\", en lo que escribió la IA (título, bajada o texto para redes)"
+ },
+ "1pwtr34": {
+  "intentos": 1,
+  "ultimo": "2026-09-25T15:00:50.448Z",
+  "motivo": "título o bajada: 3 problemas (numero): el titulo dice 30 y la fuente no lo dice"
  },
  "1q0g5gb": {
   "intentos": 1,
@@ -430,6 +455,11 @@
   "ultimo": "2026-09-25T11:38:40.017Z",
   "motivo": "con cuerpo"
  },
+ "1yhd0gw": {
+  "intentos": 1,
+  "ultimo": "2026-09-25T15:00:50.448Z",
+  "motivo": "con cuerpo"
+ },
  "24vfqp": {
   "intentos": 2,
   "ultimo": "2026-09-25T14:30:50.886Z",
@@ -491,8 +521,8 @@
   "motivo": "con cuerpo"
  },
  "6yc9a8": {
-  "intentos": 1,
-  "ultimo": "2026-09-25T14:30:50.886Z",
+  "intentos": 2,
+  "ultimo": "2026-09-25T15:00:50.448Z",
   "motivo": "título o bajada: 1 problema (negacion): la fuente niega algo en el título y el texto nuevo no"
  },
  "7zv9na": {
@@ -592,6 +622,18 @@
   "ultimo": "2026-09-25T14:00:47.762Z",
   "motivo": "con cuerpo"
  },
+ "j133lw": {
+  "intentos": 1,
+  "ultimo": "2026-09-25T15:00:50.448Z",
+  "motivo": "verificación baja: espera a una persona",
+  "baja": true,
+  "fuentes": 7
+ },
+ "jgxyqx": {
+  "intentos": 1,
+  "ultimo": "2026-09-25T15:00:50.448Z",
+  "motivo": "título o bajada: 1 problema (negacion): la fuente niega algo en el título y el texto nuevo no"
+ },
  "jul3vf": {
   "intentos": 1,
   "ultimo": "2026-09-25T11:38:40.017Z",
@@ -612,6 +654,11 @@
   "ultimo": "2026-09-25T14:30:50.886Z",
   "motivo": "con cuerpo"
  },
+ "ldyp8v": {
+  "intentos": 1,
+  "ultimo": "2026-09-25T15:00:50.448Z",
+  "motivo": "título o bajada: 2 problemas (numero): el copete dice 80 y la fuente no lo dice"
+ },
  "lpzl4j": {
   "intentos": 1,
   "ultimo": "2026-09-25T14:00:47.762Z",
@@ -626,6 +673,11 @@
   "intentos": 1,
   "ultimo": "2026-09-25T11:38:40.017Z",
   "motivo": "con cuerpo"
+ },
+ "mh67nw": {
+  "intentos": 1,
+  "ultimo": "2026-09-25T15:00:50.448Z",
+  "motivo": "sin material"
  },
  "nauwa6": {
   "intentos": 2,
@@ -686,6 +738,11 @@
   "intentos": 1,
   "ultimo": "2026-09-25T11:38:40.017Z",
   "motivo": "con cuerpo"
+ },
+ "r8rp4y": {
+  "intentos": 1,
+  "ultimo": "2026-09-25T15:00:50.448Z",
+  "motivo": "título o bajada: 1 problema (antecedente): el copete usa 3, que sale de una nota anterior, como si fuera de hoy"
  },
  "rosl57": {
   "intentos": 1,
@@ -757,6 +814,11 @@
   "ultimo": "2026-09-25T12:12:18.091Z",
   "motivo": "con cuerpo"
  },
+ "vn0qei": {
+  "intentos": 1,
+  "ultimo": "2026-09-25T15:00:50.448Z",
+  "motivo": "con cuerpo"
+ },
  "vnrtbh": {
   "intentos": 1,
   "ultimo": "2026-09-25T13:00:43.192Z",
@@ -773,9 +835,9 @@
   "motivo": "con cuerpo"
  },
  "wh1os8": {
-  "intentos": 1,
-  "ultimo": "2026-09-25T14:30:50.886Z",
-  "motivo": "título o bajada: 6 problemas (numero): el titulo dice 80 y la fuente no lo dice"
+  "intentos": 2,
+  "ultimo": "2026-09-25T15:00:50.448Z",
+  "motivo": "con cuerpo"
  },
  "wmweq4": {
   "intentos": 1,
@@ -788,6 +850,11 @@
   "motivo": "verificación baja: espera a una persona",
   "baja": true,
   "fuentes": 1
+ },
+ "xb5kod": {
+  "intentos": 1,
+  "ultimo": "2026-09-25T15:00:50.448Z",
+  "motivo": "con cuerpo"
  },
  "xrrrlb": {
   "intentos": 1,
