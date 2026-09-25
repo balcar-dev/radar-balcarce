@@ -1,5 +1,5 @@
 {
-  "exportado": "2026-09-25T13:44:02.436Z",
+  "exportado": "2026-09-25T13:51:22.955Z",
   "decisiones": {
     "1951120": {
       "estado": "automatica",
@@ -9141,23 +9141,95 @@
     },
     "tape5j": {
       "estado": "automatica",
-      "titulo": null,
-      "copete": null,
-      "cuerpo": null,
-      "guion": null,
-      "deIA": null,
-      "por": null,
-      "cuando": "2026-09-21T06:14:14.058Z"
+      "titulo": "Informa sobre los servicios de sepelios en Balcarce",
+      "copete": "Se dieron a conocer los avisos fúnebres correspondientes a los servicios prestados por la Cooperativa de Electricidad General Balcarce.",
+      "cuerpo": "La Cooperativa de Electricidad General Balcarce Limitada difundió el registro de los servicios de sepelios llevados a cabo en el distrito durante los últimos meses. Los procedimientos incluyeron los tradicionales velatorios, oficios religiosos e inhumaciones en el Cementerio Municipal, además de traslados a un crematorio privado en la vecina ciudad de Miramar, según los datos provistos por la entidad.\n\nComo parte de la actividad habitual de la institución, los avisos detallan las fechas de los decesos, las casas de duelo correspondientes a cada vecino fallecido y los horarios establecidos para las exequias. La información es recopilada de manera periódica para conocimiento de familiares y allegados de la comunidad.",
+      "guion": "Informa sobre los servicios de sepelios en Balcarce",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T13:51:22.901Z",
+      "claves": [
+        "Difusión de servicios de sepelios locales",
+        "Información brindada por la Cooperativa de Electricidad",
+        "Registro de decesos en el distrito"
+      ],
+      "seSabe": [
+        "La Cooperativa de Electricidad General Balcarce Limitada está a cargo de los servicios de sepelios.",
+        "Los procedimientos funerarios incluyeron inhumaciones en el Cementerio Municipal y cremaciones en Miramar."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "La Cooperativa de Electricidad General Balcarce dio a conocer el registro de los servicios de sepelios y avisos fúnebres correspondientes a la actividad local.",
+      "etiquetas": [
+        "sepelios",
+        "fallecimientos",
+        "Cooperativa de Electricidad",
+        "Balcarce"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/cristian-mendez-llevara-el-canto-improvisado-de-balcarce-a-una-gira-por-las-islas-canarias-442",
+          "fecha": null,
+          "oficial": false,
+          "aporte": "Aportó el listado detallado de los servicios fúnebres y avisos de decesos gestionados por la entidad local."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "i18bwp",
+          "titulo": "Gira internacional para el payador Cristian Méndez",
+          "fecha": "2026-09-23T11:52:28.000Z",
+          "ruta": "/nota/gira-internacional-para-el-payador-cristian-mendez-i18bwp"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
     },
     "zjz8av": {
       "estado": "automatica",
-      "titulo": "La actriz balcarceña Camila Peralta brilla en el teatro",
-      "copete": "La actriz oriunda de Balcarce destaca en la cartelera teatral con una nueva obra en Buenos Aires.",
-      "cuerpo": null,
-      "guion": "La actriz balcarceña Camila Peralta brilla en el teatro",
+      "titulo": "La Cooperativa de Electricidad difunde los avisos fúnebres en Balcarce",
+      "copete": "Se informaron los servicios de sepelios y las salas velatorias correspondientes a los fallecimientos registrados en el distrito por la Cooperativa de Electricidad General Balcarce Limitada.",
+      "cuerpo": "La Cooperativa de Electricidad General Balcarce Limitada dio a conocer los detalles de los servicios de sepelios y los cronogramas de inhumaciones y cremaciones correspondientes a los vecinos fallecidos en el distrito durante los últimos meses.\n\nLos avisos, difundidos a través de los medios locales, detallan las fechas de los decesos, las casas de duelo y los horarios de los oficios religiosos y traslados al Cementerio Municipal o a crematorios privados, según cada caso.\n\nEste registro forma parte del servicio institucional que la entidad solidaria brinda habitualmente a la comunidad para acompañar a las familias en los sepelios.",
+      "guion": "La Cooperativa de Electricidad difunde los avisos fúnebres en Balcarce",
       "deIA": true,
       "por": "ia",
-      "cuando": "2026-09-21T06:14:14.991Z"
+      "cuando": "2026-09-25T13:51:22.901Z",
+      "claves": [
+        "La entidad solidaria publica los servicios de sepelios.",
+        "Se detallan los cronogramas de inhumaciones y cremaciones.",
+        "Se comunican las casas de duelo de cada fallecido."
+      ],
+      "seSabe": [
+        "La Cooperativa de Electricidad General Balcarce Limitada informó los servicios de sepelios.",
+        "Se detallan los horarios de los velatorios y destinos de los restos."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "La Cooperativa de Electricidad General Balcarce Limitada dio a conocer los avisos fúnebres y cronogramas de servicios de sepelios en el distrito.",
+      "etiquetas": [
+        "Balcarce",
+        "Cooperativa de Electricidad"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/camila-peralta-la-actriz-balcarcena-que-llego-a-la-pantalla-grande-con-pepita-la-pistolera-790",
+          "fecha": null,
+          "oficial": false,
+          "aporte": "Aportó el listado de avisos fúnebres y servicios de sepelios informados por la cooperativa local."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
     },
     "1873y7o": {
       "estado": "automatica",
@@ -14001,13 +14073,57 @@
     },
     "1jv9qa4": {
       "estado": "automatica",
-      "titulo": null,
-      "copete": null,
-      "cuerpo": null,
-      "guion": null,
-      "deIA": null,
-      "por": null,
-      "cuando": "2026-09-25T07:11:02.811Z"
+      "titulo": "La Escuela Técnica impulsa una campaña solidaria para arreglar su gimnasio en Balcarce",
+      "copete": "La institución educativa busca la colaboración de la comunidad para poner en valor el edificio. El espacio acumula más de tres décadas de uso intenso.",
+      "cuerpo": "La Escuela de Educación Secundaria Técnica N° 1 puso en marcha una iniciativa solidaria orientada a concretar la puesta en valor de su gimnasio, un sector que cuenta con más de treinta años de antigüedad. El edificio requiere tareas de renovación debido al desgaste generado por la intensa utilización diaria que recibe por parte de la comunidad educativa.\n\nLa campaña apunta a sumar el apoyo de vecinos y entidades locales para reunir los recursos necesarios que permitan mejorar las instalaciones deportivas utilizadas por los estudiantes.",
+      "guion": "La Escuela Técnica impulsa una campaña solidaria para arreglar su gimnasio en Balcarce",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T13:51:22.900Z",
+      "claves": [
+        "La Escuela Técnica N° 1 inició una campaña solidaria.",
+        "El objetivo es la puesta en valor del gimnasio de la institución.",
+        "El espacio tiene más de 30 años de antigüedad.",
+        "Se apela a la colaboración de la comunidad debido al desgaste por su uso."
+      ],
+      "seSabe": [
+        "La Escuela de Educación Secundaria Técnica N° 1 inició una campaña solidaria.",
+        "El proyecto busca la puesta en valor del gimnasio escolar.",
+        "El espacio tiene más de 30 años y requiere renovación por su uso intenso."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "La Escuela Técnica N° 1 puso en marcha una campaña solidaria para poner en valor su gimnasio, un espacio con más de 30 años de antigüedad que requiere obras debido al uso intenso.",
+      "etiquetas": [
+        "Escuela Tecnica 1",
+        "Balcarce",
+        "solidaridad",
+        "educacion",
+        "gimnasio"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/la-escuela-tecnica-busca-poner-en-valor-su-gimnasio-y-apela-a-la-solidaridad-de-la-comunidad-370",
+          "fecha": "2026-09-23T11:52:12.000Z",
+          "oficial": false,
+          "aporte": "Informó sobre el inicio de la campaña solidaria de la Escuela Técnica N° 1 para refaccionar su gimnasio."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "bee599",
+          "titulo": "Habló el empresario cercano a Milei que busca construir una ciudad inteligente: “Queremos crear una comunidad, no un country”",
+          "fecha": "2026-09-23T04:28:32.000Z",
+          "ruta": "/nota/hablo-el-empresario-cercano-a-milei-que-busca-construir-una-ciudad-bee599"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
     },
     "m4p2h": {
       "estado": "automatica",
@@ -14072,13 +14188,45 @@
     },
     "m7523e": {
       "estado": "automatica",
-      "titulo": null,
-      "copete": null,
-      "cuerpo": null,
-      "guion": null,
-      "deIA": null,
-      "por": null,
-      "cuando": "2026-09-25T07:11:08.302Z"
+      "titulo": "El entrenador Omar Arreguito integra una concentración de Los Tigres en Balcarce",
+      "copete": "El técnico balcarceño formó parte de los entrenamientos de la Selección Argentina de Fútbol 7 para personas con parálisis cerebral en el Cenard, como parte de la preparación rumbo a la Copa América.",
+      "cuerpo": "Del encuentro participaron dieciséis jugadores y el cuerpo técnico para realizar tareas de evaluación física y técnico-táctica.\n\nEl seleccionado nacional continúa con su preparación de cara a los compromisos internacionales previstos para el próximo año, entre los que se destaca la Copa América que se disputará en Canadá.\n\nDesde el cuerpo técnico destacaron que cada concentración representa una oportunidad fundamental para seguir creciendo, consolidar la identidad de juego y fortalecer el camino de la selección hacia los próximos desafíos.",
+      "guion": "El entrenador Omar Arreguito integra una concentración de Los Tigres en Balcarce",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T13:51:22.900Z",
+      "claves": [
+        "Omar Arreguito integró el cuerpo técnico de Los Tigres.",
+        "La concentración se desarrolló en el Cenard.",
+        "El equipo se prepara para la Copa América en Canadá.",
+        "Participaron dieciséis jugadores en las prácticas."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El entrenador balcarceño Omar Arreguito formó parte de una nueva concentración de la Selección Argentina de Fútbol 7 para personas con parálisis cerebral en el Cenard, de cara a la Copa América.",
+      "etiquetas": [
+        "Omar Arreguito",
+        "Los Tigres",
+        "futbol 7",
+        "Cenard",
+        "Copa America",
+        "Balcarce"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Municipalidad de Balcarce",
+          "enlace": "https://balcarce.gob.ar/2026/09/23/arreguito-integro-una-nueva-concentracion-de-los-tigres-en-el-cenard/",
+          "fecha": "2026-09-23T14:56:21.000Z",
+          "oficial": true,
+          "aporte": "Informó sobre la participación del entrenador balcarceño Omar Arreguito en la concentración de la selección de fútbol 7 en el Cenard y los preparativos para la Copa América."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Sale de una fuente oficial: Municipalidad de Balcarce.",
+        "sugeridoPorIA": "MEDIA"
+      }
     },
     "pktre7": {
       "estado": "automatica",
@@ -16773,6 +16921,282 @@
         "nivel": "ALTA",
         "porque": "Lo contaron tres medios independientes.",
         "sugeridoPorIA": "ALTA"
+      }
+    },
+    "1mphhlq": {
+      "estado": "automatica",
+      "titulo": "Diego Santilli llega a Balcarce por el automovilismo",
+      "copete": "El jefe de Gabinete nacional visitará la ciudad este fin de semana para presenciar la reinauguración del autódromo Juan Manuel Fangio, donde competirá su hijo.",
+      "cuerpo": "La visita tendrá un motivo personal, ya que su hijo Nicanor Santilli Pazos participará en la competencia de la categoría TC Pista Pick Up, la cual dará inicio a su Copa Coronación en el circuito serrano.\n\nEl piloto competirá al mando de una unidad del equipo Coiro Competición y arribará a la instancia decisiva del campeonato clasificado a la etapa final. Esta reapertura se da luego de que el autódromo volviera a recibir competencias nacionales tras quince años sin actividad oficial, según se informó en coberturas anteriores del circuito local.\n\nLa presencia del funcionario nacional se suma a las actividades institucionales previstas para el fin de semana en torno al regreso del automovilismo grande a la ciudad.",
+      "guion": "Diego Santilli llega a Balcarce por el automovilismo",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T13:51:22.900Z",
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El jefe de Gabinete nacional, Diego Santilli, visitará Balcarce este fin de semana para presenciar la reinauguración del autódromo Juan Manuel Fangio, donde su hijo competirá en la categoría TC Pista Pick Up.",
+      "etiquetas": [
+        "Diego Santilli",
+        "Autodromo Juan Manuel Fangio",
+        "Balcarce",
+        "Automovilismo",
+        "TC Pista Pick Up"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Radio Gabal (FM 104.1)",
+          "enlace": "https://www.radiogabal.com.ar/index.php/comunidad/exclusivo-diego-santilli-llegara-a-balcarce-para-la-reinauguracion-del-autodromo",
+          "fecha": "2026-09-25T13:40:13.000Z",
+          "oficial": false,
+          "aporte": "Informó la llegada de Diego Santilli a Balcarce para la reinauguración del autódromo y la participación de su hijo en el TC Pista Pick Up."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "uj4h1v",
+          "titulo": "Kicillof encabeza la reinauguración del autódromo en Balcarce",
+          "fecha": "2026-09-25T11:53:01.000Z",
+          "ruta": "/nota/kicillof-encabeza-la-reinauguracion-del-autodromo-en-balcarce-uj4h1v"
+        },
+        {
+          "id": "11pnmnw",
+          "titulo": "Axel Kicillof visita Balcarce para la reinauguración del autódromo",
+          "fecha": "2026-09-23T23:52:12.000Z",
+          "ruta": "/nota/kicillof-visitara-balcarce-para-la-reinauguracion-del-autodromo-11pnmnw"
+        },
+        {
+          "id": "11drdvl",
+          "titulo": "Diego Santilli se reunió con Leandro Zdero y cerrará la semana recibiendo a otros dos gobernadores",
+          "fecha": "2026-09-24T22:10:00.000Z",
+          "ruta": "/nota/diego-santilli-se-reunio-con-leandro-zdero-y-cerrara-la-semana-11drdvl"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "1v69v60": {
+      "estado": "automatica",
+      "titulo": "Kicillof visita la vecina ciudad de Loberia",
+      "copete": "El gobernador bonaerense encabeza un acto en Loberia este viernes, donde entrega una ambulancia, escrituras y netbooks en el marco de su recorrida por la region.",
+      "cuerpo": "El gobernador de la Provincia de Buenos Aires, Axel Kicillof, visita este viernes la vecina ciudad de Lobería en una agenda oficial que coincide con su cumpleaños, acompañado por los ministros de Salud, Nicolás Kreplak, y de Hábitat y Desarrollo Urbano, Silvina Batakis. Las actividades se desarrollan en el CEF número 43, donde el mandatario comparte escenario con el intendente local, Pablo Barrena.\n\nEsta recorrida regional del gobernador bonaerense se produce en la misma jornada en la que el mandatario encabeza la reapertura del autódromo Juan Manuel Fangio en el distrito de Balcarce, un acontecimiento institucional que marca el regreso de las competencias nacionales al circuito serrano tras quince años sin actividad oficial, de acuerdo con la información difundida previamente por este medio.",
+      "guion": "Kicillof visita la vecina ciudad de Loberia",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T13:51:22.900Z",
+      "noConfirmado": [
+        "No se detalló el horario exacto en el que se desarrollarán las actividades previstas en el distrito loberense."
+      ],
+      "textoRedes": "El gobernador Axel Kicillof visita este viernes la vecina ciudad de Lobería para entregar equipamiento sanitario, escrituras y computadoras para escuelas en una jornada de recorrida regional.",
+      "etiquetas": [
+        "Axel Kicillof",
+        "Loberia",
+        "Pablo Barrena",
+        "Salud",
+        "Educacion",
+        "Provincia de Buenos Aires"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Sendero Regional",
+          "enlace": "https://www.senderomultimedios.com.ar/kicillof-celebra-su-cumpleanos-en-loberia-y-entregara-una-ambulancia-escrituras-y-netbooks/",
+          "fecha": "2026-09-25T12:55:56.000Z",
+          "oficial": false,
+          "aporte": "Detalló las actividades, funcionarios presentes y equipamiento entregado durante la visita a Lobería."
+        },
+        {
+          "medio": "2261 – Noticias de Lobería",
+          "enlace": "https://www.2261.com.ar/kicillof-visitara-loberia-en-el-dia-de-su-cumpleanos/",
+          "fecha": "2026-09-23T23:52:12.000Z",
+          "oficial": false,
+          "aporte": "Coincidió en la fecha y la particularidad del cumpleaños del mandatario en su recorrida por la zona."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1nuz3q",
+          "titulo": "Kicillof visitará Balcarce: inaugurará obras en el autódromo y entregará escrituras",
+          "fecha": "2026-09-16T13:12:10.873Z",
+          "ruta": "/nota/kicillof-visitara-balcarce-inaugurara-obras-en-el-autodromo-y-1nuz3q"
+        },
+        {
+          "id": "uj4h1v",
+          "titulo": "Kicillof encabeza la reinauguración del autódromo en Balcarce",
+          "fecha": "2026-09-25T11:53:01.000Z",
+          "ruta": "/nota/kicillof-encabeza-la-reinauguracion-del-autodromo-en-balcarce-uj4h1v"
+        },
+        {
+          "id": "1e6tvp9",
+          "titulo": "Kicillof encabeza la reapertura del autódromo Juan Manuel Fangio en Balcarce",
+          "fecha": "2026-09-25T10:15:00.000Z",
+          "ruta": "/nota/el-gobernador-bonaerense-encabeza-la-reapertura-del-autodromo-en-1e6tvp9"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      }
+    },
+    "1rp9xu7": {
+      "estado": "automatica",
+      "titulo": "Franco Colapinto clasifica décimo en el Gran Premio de Azerbaiyán",
+      "copete": "El piloto argentino de Alpine se metió entre los diez mejores en la clasificación en Bakú y largará este sábado en puestos de puntos.",
+      "cuerpo": "El piloto argentino Franco Colapinto (Alpine) consiguió el décimo puesto en la sesión de clasificación del Gran Premio de Azerbaiyán de Fórmula 1 y largará este sábado desde esa posición. En la última tanda, un despiste en su primera vuelta rápida y el desgaste de los neumáticos le impidieron avanzar, según informó un medio digital. La pole position quedó para el británico George Russell (Mercedes).\n\nEl desempeño en la clasificación le permitirá iniciar la competencia en zona de puntuación con la expectativa de escalar posiciones.",
+      "guion": "Franco Colapinto clasifica décimo en el Gran Premio de Azerbaiyán",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T13:51:22.900Z",
+      "claves": [
+        "Colapinto se metió entre los diez mejores en la clasificación de Bakú.",
+        "Largará este sábado desde el décimo lugar en la carrera.",
+        "La pole position quedó en manos del británico George Russell."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Franco Colapinto logró el décimo puesto en la clasificación del Gran Premio de Azerbaiyán de Fórmula 1 y largará este sábado desde los puestos de puntos en el circuito de Bakú.",
+      "etiquetas": [
+        "Franco Colapinto",
+        "Formula 1",
+        "Gran Premio de Azerbaiyán",
+        "Bakú"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "0223 (Mar del Plata)",
+          "enlace": "https://www.0223.com.ar/nota/2026-9-25-10-21-0-otra-vez-entre-los-10-buena-clasificacion-de-colapinto-en-baku",
+          "fecha": "2026-09-25T13:21:00.000Z",
+          "oficial": false,
+          "aporte": "Detalló el desempeño de Franco Colapinto en las tres tandas de clasificación en Bakú y la pole position de George Russell."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "14uc9gg",
+          "titulo": "Franco Colapinto encara la tercera práctica libre y la clasificación en Bakú",
+          "fecha": "2026-09-25T07:57:16.000Z",
+          "ruta": "/nota/franco-colapinto-encara-la-tercera-practica-libre-y-la-clasificacion-14uc9gg"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "1y3aqq8": {
+      "estado": "automatica",
+      "titulo": "Franco Colapinto avanza a la última tanda en el Gran Premio de Azerbaiyán",
+      "copete": "El piloto argentino quedó décimo en la clasificación tras superar la segunda fase con lo justo y sufrir complicaciones en el cierre. Largará este sábado en Bakú.",
+      "cuerpo": "En la instancia decisiva, el deportista no pudo repetir el rendimiento debido a inconvenientes en los frenajes, la gestión de la batería y la falta de succión en las rectas, lo que lo relegó al décimo lugar de partida para la competencia principal de este sábado. Su compañero de equipo, Pierre Gasly, largará desde la séptima posición, según se informó.\n\nLa actividad principal se adelantó para esta ocasión debido a una conmemoración local.",
+      "guion": "Franco Colapinto avanza a la última tanda en el Gran Premio de Azerbaiyán",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T13:51:22.900Z",
+      "claves": [
+        "Franco Colapinto se ubicó décimo en la clasificación del Gran Premio de Azerbaiyán.",
+        "El piloto argentino avanzó a la última tanda con lo justo tras una destacada vuelta en el cierre de la segunda fase.",
+        "La competencia principal se disputará este sábado debido a una conmemoración local en el circuito callejero de Bakú."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Franco Colapinto se metió entre los diez mejores en la clasificación de Bakú y largará este sábado en el Gran Premio de Azerbaiyán, tras superar una compleja sesión con inconvenientes técnicos.",
+      "etiquetas": [
+        "Franco Colapinto",
+        "Gran Premio de Azerbaiyán",
+        "Bakú"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/deportes/2026/09/25/franco-colapinto-hablo-sobre-los-problemas-en-el-final-de-la-qualy-y-dejo-una-advertencia-tras-su-magistral-vuelta-para-avanzar-a-q2/",
+          "fecha": "2026-09-25T13:45:06.000Z",
+          "oficial": false,
+          "aporte": "Detalles sobre la clasificación de Franco Colapinto en Bakú, sus declaraciones sobre los problemas en pista y el décimo puesto de partida."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "8tvpni",
+          "titulo": "Sofía Solá, la hija de Maru Botana, habló sobre los rumores que la vinculan con Franco Colapinto: \"Llegué\"",
+          "fecha": "2026-09-24T22:34:00.000Z",
+          "ruta": "/nota/sofia-sola-la-hija-de-maru-botana-hablo-sobre-los-rumores-que-la-8tvpni"
+        },
+        {
+          "id": "1chse1n",
+          "titulo": "Los problemas de Franco Colapinto en su primer día de acción en Bakú: “No me siento muy cómodo”",
+          "fecha": "2026-09-24T15:12:51.000Z",
+          "ruta": "/nota/los-problemas-de-franco-colapinto-en-su-primer-dia-de-accion-en-baku-1chse1n"
+        },
+        {
+          "id": "ffhx7",
+          "titulo": "Franco Colapinto disputa la clasificación en el Gran Premio de Azerbaiyán",
+          "fecha": "2026-09-25T13:27:00.000Z",
+          "ruta": "/nota/franco-colapinto-disputa-la-clasificacion-en-el-gran-premio-de-ffhx7"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "1v7a52i": {
+      "estado": "automatica",
+      "titulo": "Franco Colapinto avanza a la Q3 en el Gran Premio de Azerbaiyán",
+      "copete": "El piloto argentino logró meterse entre los diez mejores en el circuito de Bakú con el tiempo cumplido. Completó la vuelta decisiva sin la ayuda de una succión en las rectas.",
+      "cuerpo": "El piloto argentino Franco Colapinto completó una vuelta decisiva sobre el cierre de la sesión y se clasificó a la Q3 del Gran Premio de Azerbaiyán, en el circuito callejero de Bakú. El deportista afrontó la segunda tanda sin la succión de su compañero de Alpine, Pierre Gasly, y debió lidiar con ráfagas de viento, tránsito y problemas en la batería que le generaron reducción de potencia.\n\nEn la instancia previa, la Q1 estuvo condicionada por banderas amarillas y el despiste de Kimi Antonelli, aunque Colapinto logró superar el corte tras ubicarse entre los puestos de vanguardia durante el desarrollo de la prueba. Su compañero de equipo había ingresado a la definición tras aprovechar el rebufo brindado por el bonaerense en su salida anterior.",
+      "guion": "Franco Colapinto avanza a la Q3 en el Gran Premio de Azerbaiyán",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T13:51:22.900Z",
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Franco Colapinto se metió en la Q3 del Gran Premio de Azerbaiyán tras una apretada definición en el circuito callejero de Bakú. El piloto argentino logró el objetivo en su última vuelta y sin la succión de su compañero.",
+      "etiquetas": [
+        "Franco Colapinto",
+        "Gran Premio de Azerbaiyán",
+        "Bakú"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/deportes/2026/09/25/la-vuelta-al-limite-de-franco-colapinto-para-avanzar-a-q3-con-el-tiempo-cumplido-y-la-euforia-por-radio/",
+          "fecha": "2026-09-25T13:44:16.000Z",
+          "oficial": false,
+          "aporte": "Detalló el desarrollo de la clasificación en Bakú, el pase de Franco Colapinto a la Q3 y sus declaraciones tras la prueba."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "ffhx7",
+          "titulo": "Franco Colapinto disputa la clasificación en el Gran Premio de Azerbaiyán",
+          "fecha": "2026-09-25T13:27:00.000Z",
+          "ruta": "/nota/franco-colapinto-disputa-la-clasificacion-en-el-gran-premio-de-ffhx7"
+        },
+        {
+          "id": "1s6lb26",
+          "titulo": "Franco Colapinto avanza a la Q3 en el Gran Premio de Azerbaiyán",
+          "fecha": "2026-09-25T13:23:00.000Z",
+          "ruta": "/nota/franco-colapinto-avanza-a-la-q3-en-el-gran-premio-de-azerbaiyan-1s6lb26"
+        },
+        {
+          "id": "repaso20260925manana",
+          "titulo": "El repaso de la mañana en Radar Balcarce: Franco Colapinto y Juan José Mare",
+          "fecha": "2026-09-25T13:04:00.130Z",
+          "ruta": "/nota/el-repaso-de-la-manana-en-radar-balcarce-franco-colapinto-y-juan-jose-repaso20260925manana"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
       }
     }
   },
