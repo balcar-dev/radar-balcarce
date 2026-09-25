@@ -100,7 +100,10 @@ export function FichaDeNota({ nota }) {
     // es del medio que la informó.
     citation: (nota.medios ?? []).map((m) => ({ '@type': 'CreativeWork', name: m })),
     isBasedOn: nota.enlace || undefined,
-    keywords: [nota.seccion, ...(nota.temas ?? [])].join(', '),
+    // Las etiquetas de la nota (desde el 25/09) son palabras clave de verdad.
+    // El nivel de verificación, las claves y lo que falta confirmar NO van
+    // acá: schema.org no tiene una propiedad clara para eso y no se inventa.
+    keywords: [...new Set([nota.seccion, ...(nota.temas ?? []), ...(nota.etiquetas ?? [])])].join(', '),
   };
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: json(datos) }} />;
 }

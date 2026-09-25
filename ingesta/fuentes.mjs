@@ -11,6 +11,10 @@ export const BALCARCE = {
 // tipo: 'rss' | 'atom' | 'scrape'
 // alcance: 'local' | 'region' | 'provincia' | 'pais'
 // peso: cuánto suma a la relevancia cuando la noticia viene de acá
+// oficial: true si es un organismo público (la Municipalidad, un ministerio,
+//   la Policía), no un medio. Además de dar verde en el semáforo, cuenta para
+//   el nivel de verificación de la nota: con una fuente oficial es ALTA
+//   (nivelDeVerificacion en reels/reescritura.mjs). No cambia el peso.
 export const FUENTES = [
   {
     id: 'newsbalcarce',
@@ -438,6 +442,12 @@ export const FUENTES_NACIONALES = [
     temas: ['politica'],
   },
 ];
+
+/** Los nombres de medio (`medio`) de las fuentes oficiales. Sirve para notas
+ *  que no traen la marca `oficial` de cada fuente (las de antes del 25/09). */
+export const MEDIOS_OFICIALES = new Set([...FUENTES, ...FUENTES_NACIONALES]
+  .filter((f) => f.oficial)
+  .map((f) => f.medio ?? f.nombre));
 
 // Candidatos a probar para región, provincia, país, deportes y automovilismo.
 // El probador dice cuáles están vivos; los que sirvan pasan a FUENTES.

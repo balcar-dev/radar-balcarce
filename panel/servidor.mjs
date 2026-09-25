@@ -12,7 +12,9 @@ import {
   CONTACTOS as CONTACTOS_AGENDA, mensajeAgenda,
 } from '../ingesta/agenda.mjs';
 import { NUMEROS, tocaHoy, diaDeEstaSemana } from '../ingesta/utiles.mjs';
-import { reescribirConRespaldo, INSTRUCCION_EDITORIAL, semaforoDeLaReescritura } from '../reels/reescritura.mjs';
+import {
+  reescribirConRespaldo, INSTRUCCION_EDITORIAL, semaforoDeLaReescritura, completarReescritura, antecedentesDe, materialParaVerificar, sinExtras,
+} from '../reels/reescritura.mjs';
 import { claveRedaccion as claveGemini } from '../reels/claves.mjs';
 import {
   sesionDe, entrar, salir, paginaLogin, hayUsuarios,
@@ -23,7 +25,9 @@ import { verificar, resumirProblemas } from '../ingesta/verificar.mjs';
 import { horariosDe, guardarHorario, DIAS as DIAS_SEMANA } from './horarios.mjs';
 import { guionNoticia } from '../reels/plan.mjs';
 import { aplicarAviso } from './avisos.mjs';
-import { camposEditables, decisionParaLaWeb, podarDecisiones } from './notas.mjs';
+import {
+  camposEditables, decisionParaLaWeb, podarDecisiones, conTextoCorregido,
+} from './notas.mjs';
 import { crearSincronizador, ejecutarGit } from './sincronizar.mjs';
 import { respaldar } from './respaldo.mjs';
 import { origenPermitido, probarUrlPermitida } from './seguridad.mjs';
@@ -49,6 +53,10 @@ const PUERTO = 4321;
 // web/data/avisos.json, el mismo archivo que lee el sitio, y se sube solo a
 // GitHub (panel/sincronizar.mjs).
 const F_AVISOS = path.join(AQUI, '..', 'web', 'data', 'avisos.json');
+
+// Lo ya publicado en el sitio: de acá salen los antecedentes que recibe la IA
+// al reescribir (antecedentesDe en reels/reescritura.mjs). Sólo se lee.
+const F_ARCHIVO_WEB = path.join(AQUI, '..', 'web', 'data', 'archivo.json');
 
 // El respaldo mecánico de la reescritura: lo que ya se mostraba antes de que
 // existiera la IA. reescribirConRespaldo cae acá si Gemini falla.
@@ -349,13 +357,20 @@ async function reescribirPendientes() {
   let hechas = 0;
   let rechazadas = 0;
   let fallos = 0;
+  // Los antecedentes salen del archivo del sitio, igual que en GitHub.
+  const archivoWeb = leerJson(F_ARCHIVO_WEB, { notas: [] }).notas ?? [];
   for (const nota of cola) {
-    const r = await reescribirConRespaldo({ ...nota, copete: nota.resumenFuente }, mecanico);
-    if (!r.deIA) {
+    const conAntecedentes = { ...nota, copete: nota.resumenFuente, antecedentes: antecedentesDe(nota, archivoWeb) };
+    const r0 = await reescribirConRespaldo(conAntecedentes, mecanico);
+    if (!r0.deIA) {
       fallos += 1;
       if (fallos >= FALLOS_PARA_CORTAR) break;
       continue; // se deja como estaba y se reintenta en el próximo ciclo
     }
+    // Las partes nuevas, verificadas una por una (la que no cuadra se descarta
+    // sola), con el nivel de verificación calculado.
+    const { extras } = completarReescritura(conAntecedentes, r0);
+    const r = { ...r0, ...extras };
     // Lo que escribió la IA pasa por el semáforo, igual que en GitHub
     // (reels/reescritura.mjs): si nombra algo sensible (un menor, una víctima),
     // no se usa y la nota deja de salir sola hasta que la mire una persona.
@@ -378,7 +393,7 @@ async function reescribirPendientes() {
     // es como salía antes de que existiera la reescritura. Ver
     // ingesta/verificar.mjs para qué se controla y por qué es estricto.
     const control = verificar(
-      { titulo: nota.titulo, resumen: nota.resumenFuente },
+      materialParaVerificar(conAntecedentes),
       {
         titulo: r.titulo, copete: r.copete, guion: r.guion, cuerpo: r.cuerpo,
       },
@@ -405,6 +420,7 @@ async function reescribirPendientes() {
       copete: r.copete,
       guion: r.guion,
       cuerpo: r.cuerpo,
+      ...extras,
       deIA: true,
       por: 'ia',
       cuando: new Date().toISOString(),
@@ -690,23 +706,30 @@ const servidor = http.createServer(async (req, res) => {
       if (!nota) { json(res, { error: 'no existe esa nota' }, 404); return; }
 
       const previo = estado.decisiones[id] ?? {};
-      const r = await reescribirConRespaldo(
-        { ...nota, copete: previo.copete ?? nota.resumenFuente },
-        mecanico,
-      );
+      const conAntecedentes = {
+        ...nota,
+        copete: previo.copete ?? nota.resumenFuente,
+        antecedentes: antecedentesDe(nota, leerJson(F_ARCHIVO_WEB, { notas: [] }).notas ?? []),
+      };
+      const r = await reescribirConRespaldo(conAntecedentes, mecanico);
       // Lo mismo que en la reescritura automática, pero acá no se descarta:
       // lo aprieta una persona y lo va a leer. Se guarda con el aviso de qué
-      // no cuadra con la fuente.
+      // no cuadra con la fuente. Las partes nuevas sí se verifican y se
+      // descartan una por una, igual que en la automática.
+      const material = materialParaVerificar(conAntecedentes);
+      if (previo.copete) material.resumen = `${material.resumen}\n${previo.copete}`;
       const control = r.deIA
-        ? verificar({ titulo: nota.titulo, resumen: previo.copete ?? nota.resumenFuente }, r)
+        ? verificar(material, r)
         : { ok: true, problemas: [] };
+      const { extras } = r.deIA ? completarReescritura(conAntecedentes, r) : { extras: {} };
       estado.decisiones[id] = {
-        ...previo,
+        ...sinExtras(previo),
         estado: previo.estado ?? estadoPorDefecto(nota),
         titulo: r.titulo,
         copete: r.copete,
         guion: r.guion,
         cuerpo: r.cuerpo,
+        ...extras,
         deIA: r.deIA,
         problemasDeLaIA: control.ok ? undefined : control.problemas,
         por: quien,
@@ -769,8 +792,9 @@ const servidor = http.createServer(async (req, res) => {
         delete estado.decisiones[id];
         anotar('devuelta a la cola', nota.titulo, quien);
       } else {
-        estado.decisiones[id] = {
-          ...previo,
+        // Si cambió el título, la bajada o el cuerpo, las partes nuevas que
+        // armó la IA sobre su versión se borran (conTextoCorregido).
+        estado.decisiones[id] = conTextoCorregido(previo, {
           estado: accion === 'editar' ? (previo.estado ?? 'pendiente') : accion,
           titulo: titulo ?? previo.titulo,
           copete: copete ?? previo.copete,
@@ -781,7 +805,7 @@ const servidor = http.createServer(async (req, res) => {
           deIA: guion && guion !== previo.guion ? false : previo.deIA,
           por: quien,
           cuando: new Date().toISOString(),
-        };
+        });
         anotar(accion === 'editar' ? 'editada' : accion, titulo ?? nota.titulo, quien);
       }
       guardarJson(F_ESTADO, estado);

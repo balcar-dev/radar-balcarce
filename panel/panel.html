@@ -221,6 +221,23 @@ function vistaCola() {
   </div>`;
 }
 
+// Lo que la IA arma además del texto (desde el 25/09): el nivel de
+// verificación, las claves, qué falta confirmar y el texto para Facebook. Se
+// muestra, no se edita: si alguien corrige el texto, esto se borra (lo armó
+// la IA sobre su versión) y la nota sale como las de antes.
+function partesDeLaIA(n) {
+  const v = n.verificacion;
+  const lista = (titulo, xs) => (xs && xs.length ? `<div style="margin-top:6px"><b>${titulo}</b><ul style="margin:2px 0 0 18px;padding:0">${xs.map((x) => `<li>${esc(x)}</li>`).join('')}</ul></div>` : '');
+  if (!v && !(n.claves || []).length && !n.textoRedes) return '';
+  return `<div class="mini" style="margin-top:10px;border:1px solid var(--linea, #ddd);border-radius:8px;padding:10px">
+    ${v ? `<div><b>Verificación ${esc(v.nivel)}</b> · ${esc(v.porque)}${v.sugeridoPorIA && v.sugeridoPorIA !== v.nivel ? ` <i>(la IA sugería ${esc(v.sugeridoPorIA)})</i>` : ''}</div>` : ''}
+    ${lista('Claves', n.claves)}
+    ${lista('Qué falta confirmar', n.noConfirmado)}
+    ${n.textoRedes ? `<div style="margin-top:6px"><b>Para Facebook</b><br>${esc(n.textoRedes)}</div>` : ''}
+    <div style="margin-top:6px"><i>Si corregís el título, la bajada o el cuerpo, esto se borra: lo armó la IA sobre su versión.</i></div>
+  </div>`;
+}
+
 function detalle(n) {
   return `<div class="tarjeta">
     <div class="chapa">
@@ -231,7 +248,7 @@ function detalle(n) {
     <div class="acciones" style="margin:0 0 4px">
       <button class="b" id="btnReescribir" data-reescribir="${n.id}" style="flex-grow:1">✨ Reescribir con IA${n.deIA === true ? ' (ya reescrita)' : n.deIA === false ? ' (falló, quedó la mecánica — reintentar)' : ''}</button>
     </div>
-    <label class="campo" for="eT">TÍTULO · <span id="cuenta">0</span> de 65</label>
+    <label class="campo" for="eT">TÍTULO · <span id="cuenta">0</span> (ideal 70, máximo 90)</label>
     <input type="text" id="eT" value="${esc(n.titulo)}">
     <label class="campo" for="eC">COPETE · lo que se ve arriba del todo</label>
     <textarea id="eC" rows="3">${esc(n.copete || '')}</textarea>
@@ -239,6 +256,7 @@ function detalle(n) {
     <textarea id="eB" rows="6">${esc(n.cuerpo || '')}</textarea>
     <label class="campo" for="eG">GUION PARA LA VOZ</label>
     <textarea id="eG" rows="3">${esc(n.guion || '')}</textarea>
+    ${partesDeLaIA(n)}
     <div class="mini" style="margin-top:10px">
       Fuente: ${esc(n.medios.join(' + '))} · ${esc(n.cuando)}<br>
       <a href="${esc(n.enlace)}" target="_blank" rel="noopener">Ver la nota original ↗</a>
@@ -761,7 +779,7 @@ function conectar() {
   const eT = $('#eT');
   if (eT) {
     const cuenta = () => { $('#cuenta').textContent = eT.value.length;
-      $('#cuenta').style.color = eT.value.length > 65 ? 'var(--rojo)' : 'inherit'; };
+      $('#cuenta').style.color = eT.value.length > 90 ? 'var(--rojo)' : 'inherit'; };
     eT.oninput = cuenta; cuenta();
   }
 

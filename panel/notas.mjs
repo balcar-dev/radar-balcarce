@@ -5,8 +5,12 @@
 // que el panel no mostraba el cuerpo de la nota: se había agregado al resto de
 // la cadena y no a esta mezcla. Ahora hay una prueba que lo vigila.
 
+import { extrasDe, sinExtras } from '../reels/reescritura.mjs';
+
 /** El título, el copete, el cuerpo y el guion tal como salen en el panel:
- *  lo decidido manda; si no, lo que trajo la fuente. */
+ *  lo decidido manda; si no, lo que trajo la fuente. Y, si la IA las
+ *  escribió, las partes nuevas (claves, qué se sabe, nivel de verificación…),
+ *  que el panel muestra sin dejarlas editar. */
 export function camposEditables(nota, decision) {
   return {
     titulo: decision?.titulo ?? nota.titulo,
@@ -14,19 +18,34 @@ export function camposEditables(nota, decision) {
     cuerpo: decision?.cuerpo ?? null,
     guion: decision?.guion ?? null,
     deIA: decision?.deIA ?? null,
+    ...extrasDe(decision),
   };
 }
 
 /** Lo que del panel necesita la web (web/data/decisiones.json). Todo lo que se
  *  puede editar en el panel tiene que estar acá: si no, se ve en el tablero y
- *  no llega al sitio. Así pasó con el cuerpo hasta el 24/09. */
+ *  no llega al sitio. Así pasó con el cuerpo hasta el 24/09. Las partes
+ *  nuevas, sólo si existen: no se llena el archivo de nulos. */
 export function decisionParaLaWeb(d) {
   return {
     estado: d.estado,
     ...Object.fromEntries(
       ['titulo', 'copete', 'cuerpo', 'guion', 'deIA', 'por', 'cuando'].map((k) => [k, d[k] ?? null]),
     ),
+    ...extrasDe(d),
   };
+}
+
+/**
+ * La decisión después de que una persona tocó el texto. Las partes nuevas
+ * (claves, qué se sabe, texto para redes…) las escribió la IA sobre SU
+ * versión: si una persona cambia el título, la bajada o el cuerpo, podrían
+ * contradecir la nota corregida, así que se borran. Si sólo apretó
+ * "Publicar" sin cambiar el texto, quedan.
+ */
+export function conTextoCorregido(previo = {}, nuevo = {}) {
+  const cambio = ['titulo', 'copete', 'cuerpo'].some((k) => nuevo[k] != null && nuevo[k] !== previo[k]);
+  return cambio ? { ...sinExtras(previo), ...nuevo } : { ...previo, ...nuevo };
 }
 
 // Cuánto se guarda una decisión en web/data/decisiones.json. Hasta el 25/09

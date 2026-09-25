@@ -17,7 +17,9 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { NUMEROS, tocaHoy, diaDeEstaSemana, diaDeTurno, comoISO, decisionHumana } from '../../ingesta/utiles.mjs';
 import { avisosDelClima } from '../../ingesta/alertas.mjs';
-import { reescribirAutomaticas, previasDeLaPortada } from '../../reels/reescritura.mjs';
+import {
+  reescribirAutomaticas, previasDeLaPortada, extrasParaLaWeb, sinExtras, CAMPOS_EXTRA,
+} from '../../reels/reescritura.mjs';
 import { TEMAS } from '../../ingesta/fuentes.mjs';
 import { pendientesDeLaIngesta } from '../../redes/avisos.mjs';
 import {
@@ -122,7 +124,11 @@ if (enLaNube) {
   const fechaParaLista = (n) => (n.cuando === 'sin fecha en la fuente' ? (vistoAntes[n.id] ?? ahoraISO) : n.fecha);
   const paraReescribir = (ultima.notas ?? [])
     .filter((n) => previas[n.id] || vigenteEnPortada({ fecha: fechaParaLista(n) }));
-  reescritas = await reescribirAutomaticas(paraReescribir, { previas, decisiones: estado.decisiones });
+  // El archivo va también como fuente de ANTECEDENTES: lo que el sitio ya
+  // publicó sobre el mismo tema en los últimos 30 días (EDITORIAL.md).
+  reescritas = await reescribirAutomaticas(paraReescribir, {
+    previas, decisiones: estado.decisiones, archivo: archivoAnterior.notas ?? [],
+  });
   const nuevas = Object.keys(reescritas).filter((id) => !previas[id]).length;
   if (nuevas) console.log(`  ${nuevas} notas reescritas con IA en esta corrida`);
 }
@@ -192,6 +198,12 @@ function notaPublicada(n) {
     // poder ver las otras once.
     temas: n.temas ?? [],
     como: st,
+    // Las partes nuevas (25/09): claves, qué se sabe, qué falta confirmar,
+    // fuentes consultadas, antecedentes, texto para redes, etiquetas y el
+    // nivel de verificación. Sólo en lo reescrito desde ese día: lo de antes
+    // se ve como se veía. Nunca se mezclan las de una persona con las de la
+    // IA (extrasParaLaWeb en reels/reescritura.mjs).
+    ...extrasParaLaWeb(d, auto),
   }, direcciones);
 }
 
@@ -227,7 +239,9 @@ for (const a of archivoAnterior.notas ?? []) {
     if (d.estado !== 'publicada' && d.estado !== 'automatica') retiradas.add(a.id);
     else if (!enIngesta.has(a.id)) {
       corregidas.push({
-        ...a, titulo: d.titulo ?? a.titulo, copete: d.copete ?? a.copete, cuerpo: d.cuerpo ?? a.cuerpo, guion: d.guion ?? a.guion,
+        ...sinExtras(a),
+        ...extrasParaLaWeb(d, a),
+        titulo: d.titulo ?? a.titulo, copete: d.copete ?? a.copete, cuerpo: d.cuerpo ?? a.cuerpo, guion: d.guion ?? a.guion,
       });
     }
   } else if (['rojo', 'amarillo'].includes(enIngesta.get(a.id)?.semaforo)) {
@@ -236,7 +250,11 @@ for (const a of archivoAnterior.notas ?? []) {
 }
 const archivo = actualizarArchivo({
   archivo: archivoAnterior.notas ?? [],
-  publicadas: [...corregidas, ...publicadas].map(sinPuntaje),
+  // Las partes nuevas que hoy no están (una persona corrigió el texto, o la
+  // reescritura se cayó) tampoco quedan de la vez anterior en el archivo: el
+  // `undefined` pisa lo viejo al mezclar y no se escribe.
+  publicadas: [...corregidas, ...publicadas].map(sinPuntaje)
+    .map((n) => ({ ...Object.fromEntries(CAMPOS_EXTRA.map((k) => [k, undefined])), ...n })),
   enPortada: new Set(notas.map((n) => n.id)),
   retiradas,
   enRedes: idsEnRedes(libroRedes),

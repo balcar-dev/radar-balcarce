@@ -5,6 +5,7 @@ import {
   Etiqueta, FilaNota, Cierre, Invitacion, Firma, TemasDeLaNota,
 } from '@/components/piezas';
 import Compartir from '@/components/compartir';
+import VerificacionDeLaNota from '@/components/verificacion';
 import { OG_COMUN } from '@/components/metadatos';
 import { FichaDeNota, Migas } from '@/components/ficha';
 import { notFound } from 'next/navigation';
@@ -99,6 +100,11 @@ export default function PaginaNota({ params }) {
         {n.cuerpo && n.cuerpo.split('\n').map((p) => p.trim()).filter(Boolean).map((parrafo) => (
           <p key={parrafo.slice(0, 40)} style={{ fontSize: 16, lineHeight: 1.7, marginTop: 16, color: 'var(--texto)' }}>{parrafo}</p>
         ))}
+
+        {/* Claves, qué se sabe, qué falta confirmar, fuentes consultadas y el
+            nivel de verificación (desde el 25/09). Las notas de antes no lo
+            traen y no se dibuja nada. */}
+        <VerificacionDeLaNota nota={n} />
 
         {MOSTRAR_TEMAS && <TemasDeLaNota temas={n.temas} catalogo={temas} />}
         <Compartir titulo={n.titulo} />

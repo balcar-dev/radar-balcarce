@@ -187,6 +187,7 @@ publicar piezas a mano. Detalle y horarios en `REDES.md`.
 | que el semáforo mire lo que escribe la IA | `reels/reescritura.mjs` (`semaforoDeLaReescritura`; usa las listas de `REGLAS_SEMAFORO`) |
 | cuánto dura una nota en la portada o en el archivo | `web/lib/archivo.js` (`HORAS_EN_PORTADA`, `DIAS_DE_ARCHIVO`, `MAXIMO_EN_ARCHIVO`) |
 | cambiar el tono o las reglas con que la IA reescribe una nota | `reels/reescritura.mjs` (`INSTRUCCION_EDITORIAL`, `esTemaSerio`) |
+| cambiar cómo se calcula el nivel de verificación, los antecedentes o las partes nuevas (claves, qué se sabe, texto para redes) | `reels/reescritura.mjs` (`nivelDeVerificacion`, `antecedentesDe`, `completarReescritura`); cómo se ven: `web/components/verificacion.js`. Qué fuente es oficial: `oficial: true` en `ingesta/fuentes.mjs` |
 | cambiar cuándo salen las historias | panel → Calendario (`panel/horarios.mjs`) |
 | cambiar qué se publica en Facebook, reels, historias o el podcast | `redes/elegir.mjs` |
 | cambiar a qué hora sale una pieza de Instagram | `redes/piezas.mjs` (ventana) y `reels/plan.mjs` (horarios de reels e historias de notas) |

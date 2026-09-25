@@ -1058,6 +1058,19 @@ export async function ingestar({
       fuentesTexto: g.tambien
         .map((n) => limpiarCopete(n.cuerpo, n.titulo, n.medio))
         .filter(Boolean),
+      // Cada fuente de la noticia, en orden (la principal primero), con su
+      // medio, su enlace, su fecha y si es oficial. Es lo que la IA recibe
+      // numerado ("Fuente 1", "Fuente 2"…), lo que la nota muestra en
+      // "Fuentes consultadas" y con lo que se calcula el nivel de
+      // verificación (reels/reescritura.mjs). El resumen se usa sólo para
+      // escribir: a la web no llega.
+      origenes: [g.principal, ...g.tambien].map((n) => ({
+        medio: n.medio,
+        enlace: n.enlace,
+        fecha: n.fechaEstimada || !(n.fecha instanceof Date) ? null : n.fecha.toISOString(),
+        oficial: !!n.oficial,
+        resumen: limpiarCopete(n.cuerpo, n.titulo, n.medio),
+      })),
       local: esDeBalcarce(g.principal),
       figura: g.principal.figura ?? null,
       alcance: g.principal.alcance,

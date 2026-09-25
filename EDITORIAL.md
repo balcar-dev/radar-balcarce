@@ -63,17 +63,76 @@ que decidan Hernán y Andrés.
 
 ## Cómo se escribe una nota
 
-Toda nota que la IA escribe tiene **tres partes**, y cada una cumple un papel
-distinto (el prompt exacto, con sus reglas, está en `reels/reescritura.mjs` y
-se lee en el panel, pestaña "Cómo escribe la IA"):
+Desde el 25/09 la IA trabaja como **editor digital** (el modelo de prompt que
+mandaron Hernán y Andrés, adaptado): antes de escribir identifica el hecho
+central y **contrasta las fuentes que recibe**, separando lo que confirman
+varias, lo que dice una sola, lo que se contradice, lo que es declaración de
+parte y lo que no se puede verificar. Prioriza lo local, atribuye cada dato a
+la fuente primaria, cuida las fechas y, si hay una sola fuente, no inventa una
+"ampliación". Las 13 reglas fijas de antes siguen enteras (no copiar,
+Campillay, menores y víctimas, tildes, cargos, días, guion = título, no nombrar
+la fuente, los dos tonos). El prompt exacto está en `reels/reescritura.mjs` y
+se lee en el panel, pestaña "Cómo escribe la IA".
+
+Toda nota que la IA escribe tiene estas partes:
 
 | Parte | Qué es | Límite |
 |---|---|---|
-| **Título** | Empieza por lo que pasó, en presente, sin signos de admiración ni pregunta. Se entiende solo en el celular | Hasta 65 caracteres (el verificador rechaza más de 90) |
-| **Copete** | El adelanto: qué pasó, dónde y cuándo. Sin contexto ni antecedentes | Dos líneas como mucho, unas 30 palabras |
-| **Cuerpo** | La nota desarrollada, en **pirámide invertida**: primero el hecho central con el dato que el copete no dio (quién, cuándo, dónde, cuánto); después el contexto que importa; al final, si la fuente da para eso, qué sigue o qué significa para Balcarce | De uno a cuatro párrafos cortos, hasta 1800 caracteres |
+| **Título** | Dice qué pasó, en presente, sin signos de admiración ni pregunta, con "en Balcarce" cuando corresponde. Se entiende solo en el celular | Apunta a unos 70 caracteres; el verificador rechaza más de 90 |
+| **Bajada** (campo `copete`) | Qué pasó, cómo se relaciona con Balcarce y el dato más importante | Dos o tres frases, unas 50 palabras (hasta 360 caracteres) |
+| **Cuerpo** (el "resumen" del modelo) | La nota desarrollada, sólo con información de las fuentes, en **pirámide invertida**: primero el hecho central con el dato que la bajada no dio; después el contexto que importa; al final, si la fuente da para eso, qué sigue o qué significa para Balcarce | De 100 a 180 palabras en uno a tres párrafos; si la fuente es corta, lo que dé, sin relleno (hasta 1800 caracteres) |
+| **Claves** (`claves`) | Lo esencial, en puntos de una línea | De 3 a 5 |
+| **Qué se sabe** (`seSabe`) | Los datos confirmados, atribuidos | Lista |
+| **Qué falta confirmar** (`noConfirmado`) | Lo que no se pudo verificar y lo que las fuentes cuentan distinto. Con una sola fuente, el sistema agrega siempre "No pudo ser contrastado de forma independiente con las fuentes consultadas." (y la saca si hay más de una) | Lista, puede ir vacía |
+| **Fuentes consultadas** | Medio, fecha y enlace de cada fuente (salen de la ingesta, no de la IA) y lo que aportó cada una (`aportes`, lo escribe la IA), más las notas anteriores del sitio que recibió como antecedentes | — |
+| **Texto para redes** (`textoRedes`) | El posteo de Facebook: qué pasó y por qué importa. Sin nombrar al medio de origen, sin hashtags ni enlaces | Hasta 280 caracteres |
+| **Etiquetas** (`etiquetas`) | De qué trata la nota, sin "#". Van a los datos para Google (`keywords`) y dos o tres como hashtags en Facebook | De 3 a 8 |
+| **Guion** | Es el título, dicho tal cual | Unos diez segundos |
 
-**El cuerpo tiene que ser distinto del copete.** No arranca con las mismas
+**Cómo se ve en la web.** Debajo del cuerpo, en bloques chicos con rótulo en
+gris (`web/components/verificacion.js`): el nivel de verificación como una
+etiqueta con su porqué, "Claves", "Qué se sabe" y "Qué falta confirmar" (sólo
+si hay), y "Fuentes consultadas". Después siguen la firma y la atribución, como
+siempre. Las notas reescritas antes del 25/09 no tienen estas partes y se ven
+como se veían: **no se le vuelve a pedir a Gemini una nota ya reescrita para
+llenarlas** (nunca se paga dos veces por lo mismo).
+
+**El nivel de verificación lo calcula el código, no la IA**
+(`nivelDeVerificacion` en `reels/reescritura.mjs`). La IA sugiere uno y queda
+anotado (el panel lo muestra si difiere), pero no manda:
+
+| Nivel | Cuándo | Porqué que se publica (ejemplos) |
+|---|---|---|
+| **ALTA** | Entre las fuentes hay una oficial (`oficial: true` en `ingesta/fuentes.mjs`: hoy la Municipalidad) o dos o más medios distintos. Dos secciones del mismo medio (Clarín y Clarín Política) cuentan como uno | "Lo confirman dos medios independientes y Municipalidad de Balcarce." · "Sale de una fuente oficial: Municipalidad de Balcarce." · "Lo contaron dos medios independientes." |
+| **MEDIA** | Un solo medio, sin confirmación independiente | "La informó un solo medio y todavía no pudo ser contrastada de forma independiente." |
+| **BAJA** | Un solo medio y la nota se apoya en una denuncia o una declaración de parte (denuncia, acusó, habría, presunto, supuesto, "según trascendió", "aseguró que"… en el titular original, el título o la bajada; "según informó el municipio" no cuenta). O, con cualquier cantidad de fuentes, lo que falta confirmar toca el hecho central (comparte con el título dos palabras que dicen algo, o una larga) | "Se apoya en una denuncia o en declaraciones de parte que informó un solo medio, sin confirmación independiente." · "Hay datos centrales de la nota que no pudieron confirmarse con las fuentes consultadas." |
+
+**De dónde salen las "otras fuentes".** Sin búsqueda en internet, a propósito:
+
+1. **Los otros medios que contaron la misma noticia**: el grupo que ya arma la
+   ingesta. Desde el 25/09 cada nota trae `origenes` (medio, enlace, fecha, si
+   es oficial y su resumen), y la IA los recibe numerados ("Fuente 1",
+   "Fuente 2"…), con el texto completo de la principal.
+2. **Los antecedentes**: hasta tres notas que el sitio ya publicó en los
+   últimos 30 días sobre el mismo tema (campo `temas`) o con un titular
+   parecido (`antecedentesDe`, del archivo `web/data/archivo.json`). Van con su
+   fecha y marcadas como **información anterior**. El verificador las cuenta
+   como material recibido, pero un dato que sólo está en un antecedente puede
+   aparecer en el cuerpo, las claves o lo que se sabe **sólo si la oración lo
+   marca como anterior** ("en agosto", "como se había informado", "la semana
+   pasada"), y nunca en el título, la bajada, el guion ni el texto para redes.
+   Un día de la semana de un antecedente no pasa nunca ("el viernes" de hace
+   dos semanas se lee como el que viene).
+
+**La búsqueda web es una etapa 2 posible, no ahora.** Gemini puede buscar en
+Google ("grounding"), pero: (a) tiene costo aparte y la clave que se usa como
+respaldo es paga, y los usuarios no quieren gastar de más; (b) el verificador
+compara contra lo que la IA recibió, y no podría controlar lo que traiga una
+búsqueda — un dato "encontrado" sería imposible de distinguir de uno
+inventado. Si algún día se hace, lo que traiga la búsqueda tendría que llegar
+como texto al verificador, con su fuente, igual que hoy los medios.
+
+**El cuerpo tiene que ser distinto de la bajada.** No arranca con las mismas
 palabras ni lo repite. Si lo repite, el verificador lo rechaza
 (`pruebas/cuerpo.test.mjs`).
 
@@ -86,7 +145,13 @@ hay varias fuentes para la misma noticia, recibe cada una por separado.
 
 1. **Verificador anti-invención** (`ingesta/verificar.mjs`): compara título,
    copete y cuerpo contra todo lo que la IA recibió. Si aparece un número, un
-   nombre, un día o una cita que la fuente no trae, se rechaza.
+   nombre, un día o una cita que la fuente no trae, se rechaza. Las partes
+   nuevas (claves, qué se sabe, qué falta confirmar, lo que aportó cada
+   fuente, el texto para redes) pasan por el mismo control, **cada una por su
+   lado** (`verificarExtras`): la que falla se descarta sola y la nota sale
+   igual, sin pedir otra vez a Gemini. Las etiquetas se sacan de a una. Al
+   texto para redes se le exige además que no nombre al medio de origen y que
+   no traiga hashtags ni enlaces. El semáforo también mira todas las partes.
 2. **Un reintento con corrección**: si la primera respuesta se rechaza, se
    vuelve a pedir diciéndole qué falló ("usá únicamente lo que dice la fuente").
 3. **Si sólo falla el cuerpo** las dos veces, se publica el título y el copete
@@ -95,7 +160,18 @@ hay varias fuentes para la misma noticia, recibe cada una por separado.
 5. El vigilante avisa si menos del 35 % de las notas de las últimas 24 horas
    tienen cuerpo.
 
-Las reglas que esto cuida están en `REGLAS.md` (5 y 6).
+Las reglas que esto cuida están en `REGLAS.md` (5 y 6). Las pruebas del formato
+nuevo están en `pruebas/editor.test.mjs`.
+
+**En Facebook**, si la nota trae texto para redes, el posteo es ese texto, el
+enlace a nuestra nota, "Resumen hecho con IA" y dos o tres hashtags de las
+etiquetas (#Balcarce primero si la nota es local). Si no lo trae, como antes:
+titular y copete (`mensajeDeNota` en `redes/elegir.mjs`).
+
+**Si una persona corrige el texto en el panel** (título, bajada o cuerpo), las
+partes nuevas se borran: las armó la IA sobre su versión y podrían contradecir
+la corregida (`conTextoCorregido` en `panel/notas.mjs`). La nota sale como las
+de antes.
 
 **El guion de voz es el título**, dicho tal cual, y nada más.
 

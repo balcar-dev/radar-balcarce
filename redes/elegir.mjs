@@ -140,7 +140,10 @@ const VACIAS = new Set([
   'sigue', 'siguen', 'vuelve', 'vuelven', 'llega', 'llegan', 'realizo', 'realizara', 'plata', 'aires',
 ]);
 
-const palabrasDeTitular = (titulo = '') => new Set(
+/** Las palabras de un titular que dicen de qué trata (cinco letras o más, sin
+ *  las que están en cualquier titular de acá). También la usa
+ *  reels/reescritura.mjs para buscar antecedentes en el archivo. */
+export const palabrasDeTitular = (titulo = '') => new Set(
   String(titulo).toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').split(/[^a-z0-9]+/)
     .filter((w) => w.length >= 5 && !VACIAS.has(w)),
 );
@@ -191,13 +194,49 @@ export function imagenDeNota(nota, sitio) {
 }
 
 /**
+ * Los hashtags del posteo: #Balcarce primero si la nota es de acá, y después
+ * las etiquetas que escribió la IA (ya verificadas), hasta tres. "obras
+ * públicas" queda #ObrasPúblicas. Sin repetir, aunque cambie la tilde.
+ */
+export function hashtagsDe(nota, cuantos = 3) {
+  const local = !!(nota?.local || nota?.seccion === 'Balcarce');
+  const candidatas = [...(local ? ['Balcarce'] : []), ...(nota?.etiquetas ?? [])];
+  const vistos = new Set();
+  const tags = [];
+  for (const e of candidatas) {
+    const tag = String(e ?? '').replace(/^#+/, '').split(/[^\p{L}\p{N}]+/u).filter(Boolean)
+      .map((p) => p[0].toUpperCase() + p.slice(1)).join('');
+    const clave = tag.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
+    if (!tag || tag.length > 30 || vistos.has(clave)) continue;
+    vistos.add(clave);
+    tags.push(`#${tag}`);
+    if (tags.length >= cuantos) break;
+  }
+  return tags;
+}
+
+/**
  * El texto del posteo: titular, copete y el enlace a la nota completa en
  * NUESTRO sitio. La fuente no se nombra en las redes: la atribución y el
  * enlace al original están en la nota de la web. Cuando la redactó la IA,
  * lo dice: la regla de que cada nota diga quién la escribió vale también
  * afuera del sitio.
+ *
+ * Desde el 25/09, si la nota trae `textoRedes` (lo escribe la IA junto con
+ * la nota y pasa por el verificador, que controla además que no nombre al
+ * medio de origen), el posteo usa ese texto en vez del titular y el copete,
+ * y cierra con dos o tres hashtags. Ese texto siempre lo escribió la IA: si
+ * una persona corrige la nota en el panel, se borra (panel/notas.mjs).
  */
 export function mensajeDeNota(nota, sitio) {
+  if (nota.textoRedes) {
+    const partes = [String(nota.textoRedes).trim()];
+    if (sitio) partes.push(`Leé la nota completa: ${enlaceDeNota(nota, sitio)}`);
+    partes.push('Resumen hecho con IA');
+    const tags = hashtagsDe(nota);
+    if (tags.length) partes.push(tags.join(' '));
+    return partes.join('\n\n');
+  }
   const partes = [nota.titulo];
   const copete = recortar(nota.copete);
   if (copete) partes.push(copete);
