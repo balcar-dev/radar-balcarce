@@ -19,6 +19,11 @@
   "ultimo": "2026-09-25T12:12:18.091Z",
   "motivo": "con cuerpo"
  },
+ "11y9t9h": {
+  "intentos": 1,
+  "ultimo": "2026-09-25T18:30:44.529Z",
+  "motivo": "con cuerpo"
+ },
  "12xkda6": {
   "intentos": 1,
   "ultimo": "2026-09-25T11:38:40.017Z",
@@ -174,6 +179,11 @@
   "ultimo": "2026-09-25T15:30:41.452Z",
   "motivo": "con cuerpo"
  },
+ "1a67hje": {
+  "intentos": 1,
+  "ultimo": "2026-09-25T18:30:44.529Z",
+  "motivo": "semáforo: necesita ojo humano: \"denuncia\", en lo que escribió la IA (título, bajada o texto para redes)"
+ },
  "1a7n1tl": {
   "intentos": 3,
   "ultimo": "2026-09-25T12:12:18.091Z",
@@ -279,6 +289,11 @@
   "ultimo": "2026-09-25T13:30:44.587Z",
   "motivo": "con cuerpo"
  },
+ "1g2gwr2": {
+  "intentos": 1,
+  "ultimo": "2026-09-25T18:30:44.529Z",
+  "motivo": "con cuerpo"
+ },
  "1gw0oi9": {
   "intentos": 1,
   "ultimo": "2026-09-25T13:30:44.587Z",
@@ -308,6 +323,11 @@
   "intentos": 2,
   "ultimo": "2026-09-25T12:00:43.134Z",
   "motivo": "con cuerpo"
+ },
+ "1j2dxp8": {
+  "intentos": 1,
+  "ultimo": "2026-09-25T18:30:44.529Z",
+  "motivo": "Gemini: Expected ',' or ']' after array element in JSON at position 2717 (line 24 column 13)"
  },
  "1j46l05": {
   "intentos": 1,
@@ -440,6 +460,11 @@
   "intentos": 1,
   "ultimo": "2026-09-25T13:30:44.587Z",
   "motivo": "cuerpo: 9 problemas (numero, copia): el cuerpo dice 30 y la fuente no lo dice; sin esas oraciones quedan 64 palabras"
+ },
+ "1q5ciep": {
+  "intentos": 1,
+  "ultimo": "2026-09-25T18:30:44.529Z",
+  "motivo": "con cuerpo"
  },
  "1q76ezk": {
   "intentos": 1,
@@ -694,6 +719,11 @@
   "ultimo": "2026-09-25T12:00:43.134Z",
   "motivo": "con cuerpo"
  },
+ "6ds9wv": {
+  "intentos": 1,
+  "ultimo": "2026-09-25T18:30:44.529Z",
+  "motivo": "con cuerpo"
+ },
  "6jo66i": {
   "intentos": 1,
   "ultimo": "2026-09-25T14:00:47.762Z",
@@ -764,6 +794,16 @@
   "ultimo": "2026-09-25T14:00:47.762Z",
   "motivo": "con cuerpo"
  },
+ "bkxvo1": {
+  "intentos": 1,
+  "ultimo": "2026-09-25T18:30:44.529Z",
+  "motivo": "título o bajada: 1 problema (numero): el copete dice 3 y la fuente no lo dice"
+ },
+ "btxfpt": {
+  "intentos": 1,
+  "ultimo": "2026-09-25T18:30:44.529Z",
+  "motivo": "con cuerpo"
+ },
  "ca1vya": {
   "intentos": 1,
   "ultimo": "2026-09-25T18:00:42.946Z",
@@ -800,6 +840,11 @@
   "intentos": 1,
   "ultimo": "2026-09-25T18:00:42.946Z",
   "motivo": "con cuerpo"
+ },
+ "fda952": {
+  "intentos": 1,
+  "ultimo": "2026-09-25T18:30:44.529Z",
+  "motivo": "cuerpo: 1 problema (repite): el cuerpo repite el copete en vez de desarrollarlo; sin esas oraciones quedan 0 palabras"
  },
  "ffhx7": {
   "intentos": 1,
@@ -880,6 +925,11 @@
   "ultimo": "2026-09-25T12:12:18.091Z",
   "motivo": "semáforo: necesita ojo humano: \"muerte\", en lo que escribió la IA (título, bajada o texto para redes)"
  },
+ "jzo9l4": {
+  "intentos": 1,
+  "ultimo": "2026-09-25T18:30:44.529Z",
+  "motivo": "con cuerpo"
+ },
  "kch30l": {
   "intentos": 2,
   "ultimo": "2026-09-25T14:30:50.886Z",
@@ -939,6 +989,11 @@
   "intentos": 2,
   "ultimo": "2026-09-25T18:00:42.946Z",
   "motivo": "título o bajada: 4 problemas (numero, antecedente): el titulo dice 10 y la fuente no lo dice"
+ },
+ "oopd18": {
+  "intentos": 1,
+  "ultimo": "2026-09-25T18:30:44.529Z",
+  "motivo": "cuerpo: 2 problemas (repite, copia): el cuerpo repite el copete en vez de desarrollarlo; sin esas oraciones quedan 38 palabras"
  },
  "p961ye": {
   "intentos": 1,
@@ -1111,6 +1166,11 @@
   "motivo": "verificación baja: espera a una persona",
   "baja": true,
   "fuentes": 1
+ },
+ "wp9pca": {
+  "intentos": 1,
+  "ultimo": "2026-09-25T18:30:44.529Z",
+  "motivo": "con cuerpo"
  },
  "xb5kod": {
   "intentos": 2,
