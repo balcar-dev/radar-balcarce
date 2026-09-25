@@ -44,11 +44,6 @@ export function TarjetaFarmacia({ farmacia, verLaSemana = true }) {
         </span>
       </div>
 
-      {/* Hasta cuándo. El turno no va de medianoche a medianoche y eso no
-          es obvio: a las dos de la mañana de un lunes la que está abierta
-          es la del domingo. */}
-      <p className="hasta-cuando">El turno termina a las 8:30 de la mañana.</p>
-
       {lista.map((f, i) => {
         const mapa = mapaDe(f.direccion);
         return (
@@ -123,9 +118,9 @@ export function TituloSeccion({ seccion, verTodo = true }) {
 export function FilaNota({ nota }) {
   return (
     <div className="fila-nota">
-      <span className="meta cuando">{cuando(nota)}</span>
+      {cuando(nota) && <span className="meta cuando">{cuando(nota)}</span>}
       <div style={{ flexGrow: 1 }}>
-        <span className="meta cuando-movil">{cuando(nota)}</span>
+        {cuando(nota) && <span className="meta cuando-movil">{cuando(nota)}</span>}
         <h3><a href={nota.ruta}>{nota.titulo}</a></h3>
       </div>
     </div>

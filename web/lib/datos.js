@@ -54,6 +54,7 @@ const VENTANA_HORAS = 24;
  * horas. Si no hay nada de las últimas 24 horas, manda el puntaje a secas.
  */
 export function ordenarPortada(notas = []) {
+  // De la más nueva a la más vieja, siempre.
   const porHora = [...notas].sort((a, b) => new Date(b.fecha) - new Date(a.fecha));
   if (!porHora.length) return { principal: null, resto: [] };
 
@@ -109,8 +110,10 @@ export function haceCuanto(fechaISO) {
  * error nuestro y no le servía a nadie para saber si la nota es de hoy.
  */
 export function cuando(nota) {
-  if (!nota.sinFecha) return haceCuanto(nota.fecha);
-  return nota.visto ? `la vimos ${haceCuanto(nota.visto)}` : 'sin hora';
+  // Sin hora de la fuente no se dice nada: "la vimos hace 2 días" confundía y
+  // no le servía a nadie (24/09). La nota igual se ordena por cuándo apareció.
+  if (nota.sinFecha) return '';
+  return haceCuanto(nota.fecha);
 }
 
 // ---------------------------------------------------------------- contacto

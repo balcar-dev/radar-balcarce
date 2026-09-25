@@ -2,7 +2,8 @@
 // a uno mismo.
 //
 // Cómo se activa (una sola vez, lo hace la persona dueña del número):
-//   1. Agregar el contacto +34 644 51 95 23 (CallMeBot) al teléfono.
+//   1. Agregar al teléfono el contacto de CallMeBot. El número CAMBIA de vez en
+//      cuando (el 24/09 era +34 694 23 41 84): se mira en https://www.callmebot.com
 //   2. Mandarle por WhatsApp: "I allow callmebot to send me messages".
 //   3. Contesta con una clave (apikey). Esa clave y el número van a GitHub
 //      Secrets: WHATSAPP_TELEFONO (con código de país, ej. 5492266123456) y

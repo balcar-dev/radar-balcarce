@@ -80,9 +80,7 @@ export default function Portada() {
             <article className="destacada">
               <div className="chapa-nota">
                 <Etiqueta seccion={principal.seccion} />
-                <span className="meta">{cuando(principal)}</span>
-                <span className="punto">·</span>
-                <span className="meta">{principal.medios.join(' · ')}</span>
+                {cuando(principal) && <span className="meta">{cuando(principal)}</span>}
               </div>
 
               <h2><a href={principal.ruta}>{principal.titulo}</a></h2>

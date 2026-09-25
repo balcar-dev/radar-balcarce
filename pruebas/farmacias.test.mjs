@@ -183,12 +183,13 @@ test('la hora del servidor no cambia el resultado', () => {
   assert.equal(comoISO(diaDeTurno(seisDeLaTarde)), '2026-09-20');
 });
 
-test('la hora de cambio es la que dice la página', () => {
-  // Las 8:30 las dijo Hernán el 21/09. Si la regla cambia, tiene que cambiar
-  // también lo que leen los vecinos: por eso se compara contra los textos.
+test('el turno cambia a las 8:30, pero la web NO lo dice en la tarjeta ni en la página', () => {
+  // Las 8:30 las dijo Hernán el 21/09 y rigen la regla. El 24/09 pidió que la
+  // web deje de decir "el turno termina a las 8:30": es un dato de trámite que
+  // ensucia la tarjeta. La regla sigue; el texto no.
   assert.equal(HORA_DE_CAMBIO * 60 + MINUTO_DE_CAMBIO, 8 * 60 + 30);
-  for (const archivo of ['web/app/farmacias/page.js', 'web/components/piezas.js', 'panel/panel.html']) {
+  for (const archivo of ['web/app/farmacias/page.js', 'web/components/piezas.js']) {
     const texto = fs.readFileSync(new URL(`../${archivo}`, import.meta.url), 'utf8');
-    assert.ok(texto.includes('8:30'), `${archivo} no dice a qué hora cambia el turno`);
+    assert.ok(!/termina a las 8:30|hasta-cuando/.test(texto), `${archivo} vuelve a decir hasta qué hora está de turno`);
   }
 });

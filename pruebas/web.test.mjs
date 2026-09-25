@@ -88,16 +88,16 @@ test('si la fuente dio la hora, se usa esa', () => {
   assert.equal(cuando({ fecha: hace2h, sinFecha: false }), 'hace 2 h');
 });
 
-test('si la fuente no dio la hora, se dice cuándo la vimos', () => {
+test('si la fuente no dio la hora, no se dice nada (ni "la vimos" ni "sin hora")', () => {
   // Decía "sin hora", que se lee como un error nuestro y no le sirve a
   // nadie para saber si la nota es de hoy. Cuándo la vimos aparecer sí lo
   // sabemos, y es honesto decirlo así.
   const hace3h = new Date(Date.now() - 3 * 3600 * 1000).toISOString();
-  assert.equal(cuando({ sinFecha: true, visto: hace3h }), 'la vimos hace 3 h');
+  assert.equal(cuando({ sinFecha: true, visto: hace3h }), '', 'no debe decir "la vimos"');
 });
 
 test('sin fecha y sin avistaje no se inventa nada', () => {
-  assert.equal(cuando({ sinFecha: true }), 'sin hora');
+  assert.equal(cuando({ sinFecha: true }), '');
 });
 
 test('haceCuanto dice lo que corresponde en cada tramo', () => {

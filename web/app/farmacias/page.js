@@ -26,8 +26,7 @@ export default function Farmacias() {
     <div className="envoltura" style={{ maxWidth: 760 }}>
       <h1 className="fraunces" style={{ fontSize: 32 }}>Farmacias de turno</h1>
       <p className="mini" style={{ marginTop: 8, marginBottom: 22 }}>
-        El turno arranca a la mañana y termina a las 8:30 de la mañana del día
-        siguiente. Dato del Colegio de Farmacéuticos de Balcarce.
+        Dato del Colegio de Farmacéuticos de Balcarce.
       </p>
 
       {f?.hoy

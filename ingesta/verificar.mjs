@@ -157,7 +157,7 @@ export const LIMITES = {
  * @param {{ titulo?: string, resumen?: string }} fuente lo que se le dio
  * @param {{ titulo?: string, copete?: string, cuerpo?: string, guion?: string }} nuevo lo que devolvió
  */
-export function verificar(fuente, nuevo) {
+export function verificar(fuente, nuevo, { soloForma = false } = {}) {
   const problemas = [];
   const agregar = (tipo, detalle) => problemas.push({ tipo, detalle });
 
@@ -181,14 +181,17 @@ export function verificar(fuente, nuevo) {
     }
 
     // 2. Números. Cualquier cifra o número en palabras que la fuente no traiga.
-    for (const v of numerosDe(texto)) {
+    // (Con `soloForma` no se compara contra la fuente: se usa para revalidar
+    // lo que ya pasó esa comparación con un texto más completo del que hoy se
+    // tiene a mano.)
+    for (const v of soloForma ? [] : numerosDe(texto)) {
       if (!estaEnLaFuente(v, numerosOrigen)) {
         agregar('numero', `el ${campo} dice ${v.toLocaleString('es-AR')} y la fuente no lo dice`);
       }
     }
 
     // 3. Nombres propios y siglas que la fuente no nombra.
-    for (const nombre of nombresDe(texto)) {
+    for (const nombre of soloForma ? [] : nombresDe(texto)) {
       if (DE_CASA.has(nombre) || CALENDARIO.has(nombre)) continue;
       if (nombresOrigen.has(nombre) || palabrasOrigen.has(nombre)) continue;
       // Un plural o un femenino del mismo nombre no es un nombre nuevo.
@@ -198,14 +201,14 @@ export function verificar(fuente, nuevo) {
     }
 
     // 4. Días y meses. "El viernes" no puede aparecer si la fuente no lo dice.
-    for (const w of palabras(texto)) {
+    for (const w of soloForma ? [] : palabras(texto)) {
       if (CALENDARIO.has(w) && !palabrasOrigen.has(w)) {
         agregar('fecha', `el ${campo} menciona "${w}" y la fuente no`);
       }
     }
 
     // 5. Citas textuales. Una comilla tiene que estar en el original.
-    for (const cita of citasDe(texto)) {
+    for (const cita of soloForma ? [] : citasDe(texto)) {
       if (!origenNorm.includes(sinTildes(cita).trim())) {
         agregar('cita', `el ${campo} pone entre comillas algo que la fuente no dice: "${cita.slice(0, 40)}"`);
       }
@@ -237,6 +240,15 @@ export function verificar(fuente, nuevo) {
     agregar('negacion', 'la fuente niega algo en el título y el texto nuevo no');
   }
 
+  // 7b. El cuerpo tiene que DESARROLLAR el copete, no repetirlo. Si el primer
+  // párrafo dice casi lo mismo que el copete, la nota se lee dos veces igual.
+  if (nuevo?.cuerpo && nuevo?.copete) {
+    const primero = String(nuevo.cuerpo).split(/\n+/)[0];
+    if (similitud(nuevo.copete, primero) >= 0.7 || sinTildes(nuevo.cuerpo).startsWith(sinTildes(nuevo.copete).slice(0, 60))) {
+      agregar('repite', 'el cuerpo repite el copete en vez de desarrollarlo');
+    }
+  }
+
   // 8. Copiar no es reescribir.
   const copiado = Math.max(
     tramoCopiado(origen, nuevo?.titulo ?? ''),
@@ -248,6 +260,16 @@ export function verificar(fuente, nuevo) {
   }
 
   return { ok: problemas.length === 0, problemas };
+}
+
+/** Qué tanto se parecen dos textos, de 0 a 1 (palabras en común sobre el total). */
+export function similitud(a = '', b = '') {
+  const A = new Set(palabras(a).filter((w) => w.length > 3));
+  const B = new Set(palabras(b).filter((w) => w.length > 3));
+  if (!A.size || !B.size) return 0;
+  let comunes = 0;
+  for (const w of A) if (B.has(w)) comunes += 1;
+  return comunes / Math.min(A.size, B.size);
 }
 
 /** Un resumen de una línea, para el registro del panel. */

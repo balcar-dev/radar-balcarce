@@ -137,7 +137,10 @@ function notaPublicada(n) {
     // ley 11.723 cubre el texto, no las fotos. Se guarda sólo el dato de
     // si la fuente tenía imagen, por si algún día sirve para priorizar.
     teniaImagenLaFuente: !!n.imagen,
-    fecha: n.fecha,
+    // La hora para ordenar. Si la fuente no la publica, la ingesta pone la de
+    // ahora en cada corrida: la nota saltaba arriba de todo una y otra vez. En
+    // ese caso manda la primera vez que la vimos, que no cambia.
+    fecha: n.cuando === 'sin fecha en la fuente' ? (vistoAntes[n.id] ?? ahoraISO) : n.fecha,
     // Cuando la fuente no publica la hora, la ingesta pone la de ahora para
     // poder ordenar. Se guarda el aviso para que la web no mienta un
     // "hace 1 minuto" que no es cierto.

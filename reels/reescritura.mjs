@@ -149,13 +149,17 @@ async function pedir({ prompt, entrada, clave, fetchFn, intentos }) {
  * reescribir. Cualquier otro error no reintenta con la otra clave: no tiene
  * sentido pagar por un pedido que ya está mal armado.
  */
-export async function reescribir(nota, { intentos = 3, fetchFn = fetch } = {}) {
+export async function reescribir(nota, { intentos = 3, fetchFn = fetch, correccion = null } = {}) {
   const primera = claveRedaccion();
   const segunda = claveRedes();
   if (!primera && !segunda) throw new Error('falta GEMINI_API_KEY_REDACCION');
 
   const prompt = instruccionPara(nota);
-  const entrada = entradaDe(nota);
+  let entrada = entradaDe(nota);
+  // Segundo intento: se le dice qué inventó y se le pide que lo rehaga sin eso.
+  if (correccion?.length) {
+    entrada += `\n\nCORRECCIÓN OBLIGATORIA: en un intento anterior tu texto tenía estos problemas, y por eso se descartó:\n- ${correccion.join('\n- ')}\nEscribilo de nuevo usando ÚNICAMENTE lo que dice la fuente de arriba: si un nombre, un número, un día o una cita no está ahí, no lo pongas. Si la fuente da poco, el cuerpo puede ser más corto, pero nunca repite el copete.`;
+  }
 
   let res;
   let usada = 'redaccion';
@@ -210,7 +214,7 @@ function mecanicoPorDefecto(nota) {
 // Cuántas se reescriben por corrida. La ingesta corre cada 30 minutos, así
 // que 20 por vuelta son unas 40 por hora: de sobra para lo que Balcarce
 // publica en un día, sin vaciar el cupo gratis de una sola vez.
-export const REESCRITURAS_POR_CORRIDA = 20;
+export const REESCRITURAS_POR_CORRIDA = 40;
 // Si la IA falla tres veces seguidas (Gemini saturado, sin red), se corta:
 // insistir sólo llenaría el registro de errores sin cambiar el resultado.
 const FALLOS_PARA_CORTAR = 3;
@@ -260,6 +264,7 @@ export async function reescribirAutomaticas(notas, {
   let hechas = 0;
   let fallos = 0;
   let rechazadas = 0;
+  let sinCuerpoPorFalla = 0;
   let motivo = null;
 
   const candidatas = [...notas]
@@ -276,11 +281,15 @@ export async function reescribirAutomaticas(notas, {
     // siempre porque "ya estaba hecho".
     if (previas[nota.id]?.titulo) {
       const cacheada = previas[nota.id];
+      // Sólo la forma (largo, tildes, que el cuerpo no repita el copete):
+      // los datos ya se compararon contra el texto completo cuando se escribió,
+      // y ese texto no se vuelve a bajar en cada corrida.
       const control = verificar(
         { titulo: nota.titulo, resumen: nota.resumenFuente },
         {
           titulo: cacheada.titulo, copete: cacheada.copete, guion: cacheada.guion, cuerpo: cacheada.cuerpo,
         },
+        { soloForma: true },
       );
       if (control.ok) { resultado[nota.id] = cacheada; continue; }
       // No entra en resultado: queda el resumen mecánico por ahora, y como
@@ -293,16 +302,29 @@ export async function reescribirAutomaticas(notas, {
     // El texto completo de la nota original, para que el cuerpo salga de
     // hechos reales y no de rellenar. Si no se puede bajar, se sigue sin él.
     const conTexto = { ...nota, textoDeLaFuente: await traer(nota.enlace) };
-    const r = await reescribirConRespaldo(conTexto, mecanicoPorDefecto, opciones);
     hechas += 1;
-    if (!r.deIA) { fallos += 1; motivo ??= r.motivoRespaldo; continue; } // Gemini falló: queda el copete de siempre por ahora
+    const fuente = { titulo: nota.titulo, resumen: fuenteParaVerificar(conTexto) };
+    const comprobar = (x) => verificar(fuente, { titulo: x.titulo, copete: x.copete, guion: x.guion, cuerpo: x.cuerpo });
 
-    const control = verificar(
-      { titulo: nota.titulo, resumen: fuenteParaVerificar(conTexto) },
-      {
-        titulo: r.titulo, copete: r.copete, guion: r.guion, cuerpo: r.cuerpo,
-      },
-    );
+    let r = await reescribirConRespaldo(conTexto, mecanicoPorDefecto, opciones);
+    if (!r.deIA) { fallos += 1; motivo ??= r.motivoRespaldo; continue; } // Gemini falló: queda el copete de siempre por ahora
+    let control = comprobar(r);
+
+    // Segunda oportunidad: se le dice qué inventó y se le pide que lo rehaga.
+    // Antes se tiraba todo apenas aparecía un dato de más, y así sólo 1 de cada
+    // 10 notas llegaba a tener cuerpo.
+    if (!control.ok) {
+      const r2 = await reescribirConRespaldo(conTexto, mecanicoPorDefecto, { ...opciones, correccion: control.problemas.map((p) => p.detalle).slice(0, 6) });
+      if (r2.deIA) { r = r2; control = comprobar(r2); }
+    }
+
+    // Si lo único que falla es el cuerpo, se publica el título y el copete
+    // (que están bien) y la nota queda sin cuerpo: mejor eso que un cuerpo
+    // inventado o que repite el copete.
+    if (!control.ok && r.cuerpo) {
+      const sinCuerpo = { ...r, cuerpo: '' };
+      if (comprobar(sinCuerpo).ok) { r = sinCuerpo; control = { ok: true }; sinCuerpoPorFalla += 1; }
+    }
     if (!control.ok) { rechazadas += 1; continue; } // inventó algo: se descarta, queda el copete de siempre
 
     resultado[nota.id] = {
@@ -310,7 +332,7 @@ export async function reescribirAutomaticas(notas, {
     };
   }
 
-  if (hechas) console.log(`  reescritura: ${hechas} pedidas, ${fallos} fallaron${motivo ? ` (${String(motivo).slice(0, 160)})` : ''}, ${rechazadas} rechazadas por no cuadrar con la fuente`);
+  if (hechas) console.log(`  reescritura: ${hechas} pedidas, ${fallos} fallaron${motivo ? ` (${String(motivo).slice(0, 160)})` : ''}, ${rechazadas} rechazadas por no cuadrar con la fuente, ${sinCuerpoPorFalla} quedaron sin cuerpo`);
   return resultado;
 }
 
