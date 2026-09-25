@@ -1,5 +1,5 @@
 {
-  "exportado": "2026-09-25T08:10:37.273Z",
+  "exportado": "2026-09-25T08:20:44.136Z",
   "decisiones": {
     "1951120": {
       "estado": "automatica",
@@ -11473,6 +11473,16 @@
         "porque": "Lo contaron cuatro medios independientes.",
         "sugeridoPorIA": "ALTA"
       }
+    },
+    "14uc9gg": {
+      "estado": "automatica",
+      "titulo": null,
+      "copete": null,
+      "cuerpo": null,
+      "guion": null,
+      "deIA": null,
+      "por": null,
+      "cuando": "2026-09-25T08:20:44.078Z"
     }
   },
   "horarios": {
