@@ -1,5 +1,5 @@
 {
-  "generado": "2026-09-25T07:31:20.857Z",
+  "generado": "2026-09-25T08:01:10.422Z",
   "notas": [
     {
       "id": "45w2kj",
@@ -79,10 +79,10 @@
     },
     {
       "id": "1mwwyzx",
-      "titulo": "Brasil F1 2005: cuando Fernando Alonso nos hizo grandes",
-      "copete": "Cuando recordamos Hungría 2003 solemos decir que aquel día de agosto Fernando Alonso había puesto a España en el primer escalón de la Fórmula 1 gracias a su primera victoria. Pero si aquello ya dejó un gran sabor de boca, lo que vino el 25 de septiembre de 2005 supo mucho más y…",
-      "cuerpo": null,
-      "guion": null,
+      "titulo": "Fernando Alonso gana el campeonato de formula uno en Brasil",
+      "copete": "Se cumplen años de la consagración del piloto español Fernando Alonso en el automovilismo internacional.",
+      "cuerpo": "",
+      "guion": "Fernando Alonso gana el campeonato de formula uno en Brasil",
       "seccion": "Automovilismo",
       "medios": [
         "Motorsport"
@@ -98,14 +98,77 @@
       "publicadaCuando": "2026-09-25T07:21:28.740Z",
       "temas": [],
       "como": "automatica",
+      "claves": [
+        "El hito deportivo de Fernando Alonso",
+        "El recuerdo de su primera victoria",
+        "El impacto en el automovilismo internacional"
+      ],
+      "seSabe": [
+        "Fernando Alonso logró su primera victoria en Hungría en agosto de 2003.",
+        "La consagración en Brasil ocurrió un 25 de septiembre de 2005."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Se recuerdan los momentos históricos de la trayectoria del piloto Fernando Alonso en la máxima categoría del automovilismo mundial.",
+      "etiquetas": [
+        "Fernando Alonso",
+        "Formula 1"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Motorsport",
+          "enlace": "https://es.motorsport.com/f1/news/alonso-titulo-2005-brasil-mundial/4537644/?utm_source=RSS&utm_medium=referral&utm_campaign=RSS-F1&utm_term=News&utm_content=es",
+          "fecha": "2026-09-25T07:15:09.000Z",
+          "oficial": false,
+          "aporte": "Aportó el recuerdo de la victoria de Fernando Alonso en Hungría 2003 y la fecha de su consagración en Brasil."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "esyk5u",
+          "titulo": "Steiner criticó al presidente de la FIA por Fernando Alonso",
+          "fecha": "2026-09-19T17:59:19.000Z",
+          "ruta": "/nota/steiner-critico-al-presidente-de-la-fia-por-fernando-alonso-esyk5u"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
       "slug": "brasil-f1-2005-cuando-fernando-alonso-nos-hizo-grandes"
     },
     {
+      "id": "n5lm6f",
+      "titulo": "Dólar blue hoy: a cuánto cotiza este viernes 25 de septiembre",
+      "copete": "Mirá la cotización para la compra y venta del dólar blue hoy. La brecha con el dólar oficial.",
+      "cuerpo": null,
+      "guion": null,
+      "seccion": "Economía",
+      "medios": [
+        "Clarín",
+        "Ámbito"
+      ],
+      "enlace": "https://www.clarin.com/economia/dolar-blue-hoy-cotiza-viernes-25-septiembre_0_jYnicQuCEj.html",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-25T07:00:08.000Z",
+      "sinFecha": false,
+      "visto": "2026-09-25T08:00:43.144Z",
+      "relevancia": 49,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": "2026-09-25T07:50:52.816Z",
+      "temas": [],
+      "como": "automatica",
+      "slug": "dolar-blue-hoy-a-cuanto-cotiza-este-viernes-25-de-septiembre"
+    },
+    {
       "id": "g61bzy",
-      "titulo": "Javier Milei y Axel Kicillof anticipan sus postulaciones presidenciales",
-      "copete": "Los dirigentes nacionales ya muestran gestos de campaña para las próximas elecciones presidenciales, según consignaron los medios nacionales.",
-      "cuerpo": "Los principales referentes de la política nacional siguen los pasos habituales de los aspirantes a la presidencia y ya adelantaron sus candidaturas durante la semana, según indicaron las fuentes consultadas. Ambos dirigentes participan activamente con estrategias de comunicación que replican los manuales clásicos de los postulantes.\n\nEste escenario de actividad proselitista anticipada se da en un contexto donde la agenda económica y política nacional continúa marcada por la tensión entre los distintos espacios de poder, de acuerdo con la información difundida.",
-      "guion": "Javier Milei y Axel Kicillof anticipan sus postulaciones presidenciales",
+      "titulo": "Dirigentes nacionales anticipan postulaciones presidenciales",
+      "copete": "Javier Milei y Axel Kicillof habrían adelantado sus postulaciones presidenciales durante la semana, según indicaron publicaciones periodísticas recientes.",
+      "cuerpo": "Los referentes políticos nacionales habrían comenzado a mostrar movimientos típicos de campaña electoral y habrían adelantado sus candidaturas presidenciales durante los últimos días, de acuerdo con los datos difundidos por medios nacionales. La información señala que las figuras públicas reproducen prácticas tradicionales de los postulantes a la máxima magistratura del país.\n\nHasta el momento no se informaron actos formales ni presentaciones oficiales en el distrito de Balcarce vinculadas a estos anuncios, por lo que el impacto local de estas estrategias todavía no se refleja en la agenda política comunal.",
+      "guion": "Dirigentes nacionales anticipan postulaciones presidenciales",
       "seccion": "Política",
       "medios": [
         "La Nación"
@@ -117,27 +180,28 @@
       "visto": "2026-09-25T07:00:45.820Z",
       "relevancia": 43,
       "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
+      "publicadaPor": "ia",
+      "publicadaCuando": "2026-09-25T07:30:49.518Z",
       "temas": [],
       "como": "automatica",
       "claves": [
-        "Javier Milei y Axel Kicillof adelantaron sus postulaciones.",
-        "Los dirigentes aplican estrategias de campaña tradicionales.",
-        "El movimiento político nacional anticipa la discusión electoral."
+        "Javier Milei y Axel Kicillof habrían adelantado postulaciones",
+        "Movimientos atribuidos a estrategias de campaña electoral",
+        "Sin repercusiones formales informadas en el plano local"
       ],
       "seSabe": [
-        "Javier Milei y Axel Kicillof anticiparon sus postulaciones durante la semana, según las fuentes.",
-        "Ambos dirigentes utilizan recursos visuales y estrategias típicas de campaña."
+        "Javier Milei y Axel Kicillof habrían anticipado sus postulaciones presidenciales durante la semana, según las fuentes consultadas."
       ],
       "noConfirmado": [
-        "No se especificaron detalles sobre las fechas exactas de los lanzamientos oficiales ni las alianzas territoriales.",
+        "No se especificaron las fechas exactas en las que se habrían producido los anuncios.",
+        "No se detalló si habrá actos de campaña previstos en la zona de Balcarce.",
         "No pudo ser contrastado de forma independiente con las fuentes consultadas."
       ],
-      "textoRedes": "Javier Milei y Axel Kicillof ya anticiparon sus postulaciones presidenciales en una semana marcada por gestos de campaña.",
+      "textoRedes": "Javier Milei y Axel Kicillof habrían anticipado sus postulaciones presidenciales durante la semana, según informaron medios nacionales en las últimas horas.",
       "etiquetas": [
         "Javier Milei",
-        "Axel Kicillof"
+        "Axel Kicillof",
+        "Balcarce"
       ],
       "fuentesConsultadas": [
         {
@@ -145,12 +209,12 @@
           "enlace": "https://www.lanacion.com.ar/politica/la-campana-se-calienta-la-economia-se-congela-nid24092026/",
           "fecha": "2026-09-25T06:53:32.000Z",
           "oficial": false,
-          "aporte": "Informó que Javier Milei y Axel Kicillof anticiparon sus postulaciones en la semana."
+          "aporte": "Informó que Javier Milei y Axel Kicillof habrían anticipado sus postulaciones presidenciales."
         }
       ],
       "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "nivel": "BAJA",
+        "porque": "Se apoya en una denuncia o en declaraciones de parte que informó un solo medio, sin confirmación independiente.",
         "sugeridoPorIA": "MEDIA"
       },
       "slug": "javier-milei-y-axel-kicillof-anticipan-sus-postulaciones"
@@ -173,7 +237,7 @@
       "relevancia": 48,
       "local": false,
       "publicadaPor": null,
-      "publicadaCuando": null,
+      "publicadaCuando": "2026-09-25T07:30:43.815Z",
       "temas": [],
       "como": "automatica",
       "claves": [
@@ -231,88 +295,6 @@
         "sugeridoPorIA": "MEDIA"
       },
       "slug": "milei-se-reunio-con-netanyahu-en-nueva-york-hablaron-de-malvinas-e"
-    },
-    {
-      "id": "tgkhrm",
-      "titulo": "Donald Trump reúne a líderes tecnológicos y a Xi Jinping en Washington",
-      "copete": "El presidente estadounidense compartió una cena de Estado con el líder chino. Participaron directores de grandes empresas tecnológicas, mientras la inteligencia artificial encabeza la agenda bilateral.",
-      "cuerpo": "El presidente de Estados Unidos, Donald Trump, recibió este jueves al mandatario de China, Xi Jinping, en la Casa Blanca durante una cena de Estado centrada en la carrera por el desarrollo de la inteligencia artificial y el comercio bilateral. Del encuentro participaron Elon Musk, Sam Altman, Greg Brockman, Jensen Huang, Sundar Pichai, Jeff Bezos y Tim Cook.\n\nEn paralelo, el banquete de gala incluyó una recepción oficial con una banda musical en trajes de época, exhibiciones militares y un sobrevuelo de aviones de combate. Trump abogó por un futuro de armonía entre ambas potencias y le regaló a su par una estatua de un águila calva. Por su parte, Xi instó a Washington a actuar con prudencia respecto a la soberanía de Taiwán.\n\nLa cumbre también estuvo marcada por la ausencia de Dario Amodei, fundador de Anthropic y defensor de mayores controles sobre la tecnología, cuya inasistencia destacó frente a la presencia de sus competidores.",
-      "guion": "Donald Trump reúne a líderes tecnológicos y a Xi Jinping en Washington",
-      "seccion": "Tecnología",
-      "medios": [
-        "Clarín"
-      ],
-      "enlace": "https://www.clarin.com/mundo/donald-trump-reunio-gigantes-inteligencia-artificial-xi-jinping-casa-blanca_0_5njMyCe49W.html",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-25T06:43:39.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-25T07:30:42.892Z",
-      "relevancia": 39,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Cena de Estado en la Casa Blanca entre Donald Trump y Xi Jinping.",
-        "Participación de referentes de la industria tecnológica e inteligencia artificial.",
-        "Ausencia del fundador de Anthropic, Dario Amodei, en el banquete.",
-        "Advertencia del mandatario chino sobre la postura de Washington en Taiwán."
-      ],
-      "seSabe": [
-        "Donald Trump y Xi Jinping compartieron una cena de Estado en la Casa Blanca este jueves, según la fuente.",
-        "Estuvieron presentes Elon Musk, Sam Altman, Greg Brockman, Jensen Huang, Sundar Pichai, Jeff Bezos y Tim Cook, de acuerdo con la información oficial.",
-        "Dario Amodei no participó del evento, según reportó el medio.",
-        "Xi Jinping instó a Washington a actuar con prudencia sobre Taiwán, según los datos disponibles."
-      ],
-      "noConfirmado": [
-        "No existe confirmación pública sobre si Dario Amodei recibió o no una invitación formal a la cena.",
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "Donald Trump reunió a Xi Jinping y a los principales referentes de la industria tecnológica en una cena de Estado en la Casa Blanca. La inteligencia artificial y las relaciones bilaterales marcaron el encuentro.",
-      "etiquetas": [
-        "Donald Trump",
-        "Xi Jinping",
-        "Casa Blanca",
-        "inteligencia artificial",
-        "Estados Unidos",
-        "China"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Clarín",
-          "enlace": "https://www.clarin.com/mundo/donald-trump-reunio-gigantes-inteligencia-artificial-xi-jinping-casa-blanca_0_5njMyCe49W.html",
-          "fecha": "2026-09-25T06:43:39.000Z",
-          "oficial": false,
-          "aporte": "Detalló la lista de asistentes a la cena de Estado en la Casa Blanca y los temas abordados entre Trump y Xi Jinping."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "10g2kxu",
-          "titulo": "Cumbre Donald Trump-Xi Jinping: China pidió control humano sobre la inteligencia artificial",
-          "fecha": "2026-09-24T22:04:00.000Z",
-          "ruta": "/nota/cumbre-donald-trump-xi-jinping-china-pidio-control-humano-sobre-la-10g2kxu"
-        },
-        {
-          "id": "17kk9tp",
-          "titulo": "EN VIVO: Donald Trump y Melania reciben a Xi Jinping y a su esposa para una cena de Estado en la Casa Blanca",
-          "fecha": "2026-09-25T00:26:24.000Z",
-          "ruta": "/nota/en-vivo-donald-trump-y-melania-reciben-a-xi-jinping-y-a-su-esposa-17kk9tp"
-        },
-        {
-          "id": "bnv614",
-          "titulo": "Trump buscará un ‘Zar de la IA’ y plantea rebautizar la inteligencia artificial como ‘Inteligencia Superior’",
-          "fecha": "2026-09-23T22:27:26.000Z",
-          "ruta": "/nota/trump-buscara-un-zar-de-la-ia-y-plantea-rebautizar-la-inteligencia-bnv614"
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "donald-trump-reune-a-lideres-tecnologicos-y-a-xi-jinping-en-washington"
     },
     {
       "id": "1dou3ni",
@@ -467,7 +449,7 @@
       "fecha": "2026-09-25T04:39:00.000Z",
       "sinFecha": false,
       "visto": "2026-09-25T05:00:40.179Z",
-      "relevancia": 49,
+      "relevancia": 39,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": "2026-09-25T07:21:40.782Z",
@@ -490,7 +472,7 @@
       "fecha": "2026-09-25T04:38:07.000Z",
       "sinFecha": false,
       "visto": "2026-09-25T05:00:40.179Z",
-      "relevancia": 49,
+      "relevancia": 39,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": "2026-09-25T07:21:46.349Z",
@@ -513,7 +495,7 @@
       "fecha": "2026-09-25T04:37:13.000Z",
       "sinFecha": false,
       "visto": "2026-09-25T05:00:40.179Z",
-      "relevancia": 49,
+      "relevancia": 39,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": "2026-09-25T07:21:51.332Z",
@@ -536,129 +518,13 @@
       "fecha": "2026-09-25T04:36:11.000Z",
       "sinFecha": false,
       "visto": "2026-09-25T05:00:40.179Z",
-      "relevancia": 49,
+      "relevancia": 39,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": "2026-09-25T07:21:53.568Z",
       "temas": [],
       "como": "automatica",
       "slug": "que-autos-importados-pagan-el-arancel-del-35-en-la-argentina-y-por"
-    },
-    {
-      "id": "1wrjo98",
-      "titulo": "Chaco suspende las primarias provinciales y fija los comicios",
-      "copete": "La Legislatura chaqueña suspendió las elecciones primarias a instancias del oficialismo y fijó los comicios generales para septiembre.",
-      "cuerpo": "La Legislatura de la provincia de Chaco decidió suspender las Primarias Abiertas, Simultáneas y Obligatorias para el próximo año. La medida fue impulsada por el oficialismo local y adelanta los tiempos electorales provinciales.\n\nTras esta modificación legislativa, los comicios generales se llevarán a cabo entre mediados y fines de septiembre. La fecha establecida se ubica con casi un mes de anticipación en comparación con los plazos habituales del calendario electoral.",
-      "guion": "Chaco suspende las primarias provinciales y fija los comicios",
-      "seccion": "Política",
-      "medios": [
-        "Infobae"
-      ],
-      "enlace": "https://www.infobae.com/politica/2026/09/25/internas-abiertas-o-congreso-para-definir-listas-chaco-sera-el-laboratorio-del-peronismo-si-milei-logra-cancelar-las-paso-2027/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-25T04:33:32.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-25T05:00:40.179Z",
-      "relevancia": 48,
-      "local": false,
-      "publicadaPor": "ia",
-      "publicadaCuando": "2026-09-25T07:22:02.773Z",
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "La Legislatura chaqueña suspendió las PASO para el próximo año.",
-        "La decisión se tomó a instancias del oficialismo provincial.",
-        "Las elecciones generales se realizarán entre mediados y fines de septiembre."
-      ],
-      "seSabe": [
-        "La Legislatura de Chaco suspendió las PASO provinciales para el año próximo a instancias del oficialismo.",
-        "Las elecciones generales provinciales se programaron entre mediados y fines de septiembre, con casi un mes de anticipación."
-      ],
-      "noConfirmado": [
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "La Legislatura de Chaco suspendió las primarias provinciales para el próximo año a instancias del oficialismo y fijó las elecciones generales entre mediados y fines de septiembre.",
-      "etiquetas": [
-        "Chaco",
-        "PASO",
-        "elecciones",
-        "Legislatura"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Infobae",
-          "enlace": "https://www.infobae.com/politica/2026/09/25/internas-abiertas-o-congreso-para-definir-listas-chaco-sera-el-laboratorio-del-peronismo-si-milei-logra-cancelar-las-paso-2027/",
-          "fecha": "2026-09-25T04:33:32.000Z",
-          "oficial": false,
-          "aporte": "Informó que la Legislatura chaqueña suspendió las PASO y fijó las elecciones generales para septiembre de manera anticipada."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "3g9efc",
-          "titulo": "Javier Milei en Estados Unidos: “Escuchan hoy al peronismo y es como si nos hubieran entregado Suiza, es irritante”",
-          "fecha": "2026-09-23T21:38:46.000Z",
-          "ruta": "/nota/javier-milei-en-estados-unidos-escuchan-hoy-al-peronismo-y-es-como-si-3g9efc"
-        },
-        {
-          "id": "1j01p83",
-          "titulo": "Javier Milei y sus medidas, en vivo: el Presidente consideró como “matices de opinión” las internas en el Ejecutivo",
-          "fecha": "2026-09-22T01:40:36.000Z",
-          "ruta": "/nota/javier-milei-y-sus-medidas-en-vivo-el-presidente-considero-como-1j01p83"
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "chaco-suspende-las-primarias-provinciales-para-el-proximo-ano"
-    },
-    {
-      "id": "1cwdhov",
-      "titulo": "El kirchnerismo busca condicionar al PJ con encuestas de Cristina",
-      "copete": "El sector kirchnerista difundió sondeos que muestran a la exmandataria con alta intención de voto de cara a las próximas elecciones internas.",
-      "cuerpo": "El diputado nacional Máximo Kirchner aseguró en declaraciones radiales que la figura de la ex presidenta mantiene una intención de voto cercana al cuarenta por ciento en escenarios de balotaje y una imagen positiva similar. Desde ese sector interno sostienen que cualquier candidato dentro del peronismo deberá negociar y acordar con ella para definir las listas.\n\nLa estrategia busca mantener peso político frente a sectores del justicialismo que buscan autonomía, especialmente el gobernador bonaerense Axel Kicillof. La relación entre ambos se encuentra debilitada mientras el mandatario provincial consolida su propio armado de cara a los próximos comicios.",
-      "guion": "El kirchnerismo busca condicionar al PJ con encuestas de Cristina",
-      "seccion": "Política",
-      "medios": [
-        "Infobae"
-      ],
-      "enlace": "https://www.infobae.com/politica/2026/09/25/el-kirchnerismo-muestra-encuestas-que-dan-a-cfk-competitiva-para-condicionar-a-kicillof-en-el-armado-del-pj/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-25T04:33:10.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-25T05:00:40.179Z",
-      "relevancia": 48,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": "2026-09-25T07:22:05.608Z",
-      "temas": [],
-      "como": "automatica",
-      "slug": "el-kirchnerismo-busca-condicionar-al-pj-con-encuestas-de-cristina"
-    },
-    {
-      "id": "sadcj1",
-      "titulo": "Javier Milei regresa a la Argentina tras su paso por Estados Unidos",
-      "copete": "El presidente Javier Milei regresa este viernes al país desde Nueva York, donde participó en la Asamblea General de las Naciones Unidas.",
-      "cuerpo": "",
-      "guion": "Javier Milei regresa a la Argentina tras su paso por Estados Unidos",
-      "seccion": "Política",
-      "medios": [
-        "Infobae"
-      ],
-      "enlace": "https://www.infobae.com/politica/2026/09/25/milei-vuelve-a-la-argentina-con-la-economia-bajo-presion-y-un-desafio-politico-contener-a-patricia-bullrich/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-25T04:32:54.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-25T05:00:40.179Z",
-      "relevancia": 48,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "slug": "milei-vuelve-a-la-argentina-con-la-economia-bajo-presion-y-un-desafio"
     },
     {
       "id": "62zh3v",
@@ -675,7 +541,7 @@
       "fecha": "2026-09-25T04:32:05.000Z",
       "sinFecha": false,
       "visto": "2026-09-25T05:00:40.179Z",
-      "relevancia": 95,
+      "relevancia": 85,
       "local": true,
       "publicadaPor": "ia",
       "publicadaCuando": "2026-09-25T05:45:57.304Z",
@@ -701,7 +567,7 @@
       "relevancia": 39,
       "local": false,
       "publicadaPor": null,
-      "publicadaCuando": null,
+      "publicadaCuando": "2026-09-25T07:30:54.170Z",
       "temas": [],
       "como": "automatica",
       "slug": "el-cable-y-el-wifi-definen-su-rendimiento-en-balcarce"
@@ -902,10 +768,10 @@
     },
     {
       "id": "hvo0ic",
-      "titulo": "WhatsApp incorpora el envío de fotos y videos en alta resolución",
-      "copete": "La aplicación de mensajería suma una función para compartir archivos multimedia sin perder calidad.",
-      "cuerpo": "La plataforma de mensajería incorpora una opción para enviar fotos y videos en alta definición sin necesidad de recurrir al truco de adjuntarlos como documento. Hasta ahora, el sistema comprimía el contenido multimedia para ahorrar datos y espacio, lo que reducía la resolución original de forma notable.\n\nPara activar esta alternativa de manera permanente, es necesario ingresar a los ajustes de la aplicación, buscar el apartado de almacenamiento y seleccionar la calidad alta en la carga de archivos. Quienes prefieran mantener la configuración estándar pueden aplicar el modo definición de forma individual al momento de compartir cada imagen o video desde el menú superior de edición.",
-      "guion": "WhatsApp incorpora el envío de fotos y videos en alta resolución",
+      "titulo": "WhatsApp incorpora una nueva función para enviar archivos multimedia en alta definición",
+      "copete": "La aplicación de mensajería sumó un ajuste para enviar fotos y videos con calidad superior de manera directa, sin necesidad de recurrir al truco de adjuntarlos como archivo.",
+      "cuerpo": "La plataforma de mensajería instantánea implementó una herramienta que optimiza el envío de contenido visual. La función de Alta Definición disminuye de forma considerable la compresión que el sistema aplicaba de manera predeterminada a las imágenes y a los videos.\n\nHasta el momento, los usuarios que deseaban compartir archivos multimedia sin perder resolución debían utilizar el recurso de enviarlos como documentos adjuntos para evitar el proceso tradicional de compresión.",
+      "guion": "WhatsApp incorpora una nueva funcion para enviar archivos multimedia en alta definicion",
       "seccion": "Tecnología",
       "medios": [
         "Infobae"
@@ -917,10 +783,42 @@
       "visto": "2026-09-25T02:30:48.531Z",
       "relevancia": 39,
       "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
+      "publicadaPor": "ia",
+      "publicadaCuando": "2026-09-25T07:30:58.618Z",
       "temas": [],
       "como": "automatica",
+      "claves": [
+        "Nueva herramienta de Alta Definición en WhatsApp",
+        "Envío directo de fotos y videos con mayor calidad",
+        "Elimina la necesidad de adjuntar archivos como documentos"
+      ],
+      "seSabe": [
+        "WhatsApp incorporó un ajuste para enviar fotos y videos en alta resolución.",
+        "La función reduce la compresión histórica que aplicaba la aplicación.",
+        "Evita el truco previo de enviar el contenido como documento."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "WhatsApp sumó una función para enviar fotos y videos en alta resolución de forma directa, sin necesidad de adjuntarlos como documentos para evitar la compresión.",
+      "etiquetas": [
+        "WhatsApp",
+        "Aplicaciones"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/tecno/2026/09/25/el-ajuste-de-whatsapp-para-enviar-imagenes-y-videos-en-mayor-resolucion-sin-usar-documentos/",
+          "fecha": "2026-09-25T02:47:59.000Z",
+          "oficial": false,
+          "aporte": "Informó sobre la incorporación de la función de Alta Definición en WhatsApp para enviar fotos y videos sin comprimir."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
       "slug": "el-ajuste-de-whatsapp-para-enviar-imagenes-y-videos-en-mayor"
     },
     {
@@ -941,7 +839,7 @@
       "relevancia": 39,
       "local": false,
       "publicadaPor": null,
-      "publicadaCuando": null,
+      "publicadaCuando": "2026-09-25T07:31:00.675Z",
       "temas": [],
       "como": "automatica",
       "slug": "estos-son-los-dos-juegos-que-epic-games-store-regalara-en-la-primera"
@@ -2272,7 +2170,7 @@
       "fecha": "2026-09-24T19:48:00.000Z",
       "sinFecha": false,
       "visto": "2026-09-25T07:00:45.820Z",
-      "relevancia": 92,
+      "relevancia": 85,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": "2026-09-25T06:50:47.615Z",
@@ -3146,18 +3044,16 @@
         "El Diario Balcarce"
       ],
       "enlace": "https://eldiariobalcarce.com.ar/18-protagonistas-en-las-tc-pick-up-15",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-23T21:31:47.000Z",
-      "sinFecha": false,
+      "teniaImagenLaFuente": false,
+      "fecha": "2026-09-23T21:43:49.924Z",
+      "sinFecha": true,
       "visto": "2026-09-23T21:43:49.924Z",
-      "relevancia": 71,
+      "relevancia": 61,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": "2026-09-24T00:54:48.701Z",
       "temas": [
-        "autodromo",
-        "tc-pick-up",
-        "fangio"
+        "tc-pick-up"
       ],
       "como": "automatica",
       "slug": "el-autodromo-fangio-recibe-a-las-tc-pick-up-en-balcarce"
@@ -3290,6 +3186,29 @@
       "slug": "carrera-homenaje-a-luis-vildoza"
     },
     {
+      "id": "1jv9qa4",
+      "titulo": "Una escuela técnica inicia una campaña solidaria en Balcarce",
+      "copete": "La Escuela de Educación Secundaria Técnica N° 1 lanzó una colecta para pintar su gimnasio de más de treinta años.",
+      "cuerpo": "",
+      "guion": "Una escuela técnica inicia una campaña solidaria en Balcarce",
+      "seccion": "Balcarce",
+      "medios": [
+        "El Diario Balcarce"
+      ],
+      "enlace": "https://eldiariobalcarce.com.ar/la-escuela-tecnica-busca-poner-en-valor-su-gimnasio-y-apela-a-la-solidaridad-de-la-comunidad-370",
+      "teniaImagenLaFuente": false,
+      "fecha": "2026-09-23T14:21:53.516Z",
+      "sinFecha": true,
+      "visto": "2026-09-23T14:21:53.516Z",
+      "relevancia": 53,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": "2026-09-25T07:11:02.811Z",
+      "temas": [],
+      "como": "automatica",
+      "slug": "la-escuela-tecnica-busca-poner-en-valor-su-gimnasio-y-apela-a-la"
+    },
+    {
       "id": "pjnmc",
       "titulo": "Reinauguran el Autódromo Fangio en Balcarce",
       "copete": "El próximo viernes veinticinco de septiembre a las catorce se realiza el acto oficial en el circuito local.",
@@ -3361,29 +3280,6 @@
       "temas": [],
       "como": "automatica",
       "slug": "entre-felicitaciones-y-orgullo-kevin-gomez-compartio-en-quality-su"
-    },
-    {
-      "id": "1jv9qa4",
-      "titulo": "Una escuela técnica inicia una campaña solidaria en Balcarce",
-      "copete": "La Escuela de Educación Secundaria Técnica N° 1 lanzó una colecta para pintar su gimnasio de más de treinta años.",
-      "cuerpo": "",
-      "guion": "Una escuela técnica inicia una campaña solidaria en Balcarce",
-      "seccion": "Balcarce",
-      "medios": [
-        "El Diario Balcarce"
-      ],
-      "enlace": "https://eldiariobalcarce.com.ar/la-escuela-tecnica-busca-poner-en-valor-su-gimnasio-y-apela-a-la-solidaridad-de-la-comunidad-370",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-23T11:52:12.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-23T14:21:53.516Z",
-      "relevancia": 63,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": "2026-09-25T07:11:02.811Z",
-      "temas": [],
-      "como": "automatica",
-      "slug": "la-escuela-tecnica-busca-poner-en-valor-su-gimnasio-y-apela-a-la"
     },
     {
       "id": "1x87c94",
@@ -3481,7 +3377,7 @@
       "id": "19jah2t",
       "titulo": "Periodista de Balcarce cubre el Mundial desde El Salvador",
       "copete": "El periodista balcarceño Claudio Martínez cubre la Copa del Mundo desde El Salvador, país donde reside hace más de dos décadas.",
-      "cuerpo": "El periodista Claudio Martínez, nacido en Balcarce y radicado desde hace veinticuatro años en El Salvador, cubre una nueva Copa del Mundo. Su labor periodística se transmite a través del programa radial \"La Tribu\". Esta cobertura representa su segundo mundial, tras haber participado en Alemania 2006.\n\nTras sus inicios profesionales en Buenos Aires, donde integró la revista El Gráfico, se instaló en Centroamérica. A lo largo de su carrera transitó del periodismo gráfico a la radio y debió adaptarse a las exigencias de las nuevas plataformas digitales.\n\nA pesar de residir en el exterior y de que sus visitas al país son cada vez menos frecuentes, Martínez afirma que mantiene su arraigo y su identidad balcarceña.",
+      "cuerpo": null,
       "guion": "Un periodista nacido en Balcarce radicado en El Salvador vive la experiencia de cubrir mundiales de fútbol desde adentro. Una trayectoria internacional que comenzó en Buenos Aires y hoy lo lleva a los escenarios principales del deporte.",
       "seccion": "Deportes",
       "medios": [
@@ -3522,6 +3418,52 @@
       "temas": [],
       "como": "automatica",
       "slug": "la-sociedad-rural-participa-de-un-encuentro-regional-en-balcarce"
+    },
+    {
+      "id": "1knnogg",
+      "titulo": "Cabaña Los Pinos concreta su remate anual en Balcarce",
+      "copete": "La Cabaña Los Pinos realizó su cuadragésimo primer remate este jueves en la Sociedad Rural.",
+      "cuerpo": "",
+      "guion": "Cabaña Los Pinos concreta su remate anual en Balcarce",
+      "seccion": "Agro",
+      "medios": [
+        "El Diario Balcarce"
+      ],
+      "enlace": "https://eldiariobalcarce.com.ar/cabana-los-pinos-concreto-con-exito-su-41-remate-en-balcarce-277",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-23T03:05:01.594Z",
+      "sinFecha": true,
+      "visto": "2026-09-23T03:05:01.594Z",
+      "relevancia": 63,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": "2026-09-25T07:10:48.047Z",
+      "temas": [],
+      "como": "automatica",
+      "slug": "cabana-los-pinos-concreta-su-remate-anual-en-balcarce"
+    },
+    {
+      "id": "1q76ezk",
+      "titulo": "Remate conjunto de cabañas Angus en Balcarce",
+      "copete": "Las cabañas María Luján y San Antonio realizaron su octavo remate anual conjunto de genética Angus en las instalaciones locales.",
+      "cuerpo": "",
+      "guion": "Remate conjunto de cabañas Angus en Balcarce",
+      "seccion": "Balcarce",
+      "medios": [
+        "El Diario Balcarce"
+      ],
+      "enlace": "https://eldiariobalcarce.com.ar/la-genetica-y-calidad-de-dos-colores-de-una-misma-raza-cotizadas-en-la-pista-968",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-23T03:05:01.594Z",
+      "sinFecha": true,
+      "visto": "2026-09-23T03:05:01.594Z",
+      "relevancia": 63,
+      "local": true,
+      "publicadaPor": "ia",
+      "publicadaCuando": "2026-09-21T01:07:57.100Z",
+      "temas": [],
+      "como": "automatica",
+      "slug": "remate-conjunto-de-cabanas-angus-en-balcarce"
     },
     {
       "id": "v1u9f1",
@@ -3599,6 +3541,29 @@
       "slug": "exitoso-debut-de-las-valkyrias-en-la-liga-mar-y-sierras"
     },
     {
+      "id": "112kb6b",
+      "titulo": "Ferro Básquet busca los octavos en la Liga Mar y Sierras",
+      "copete": "El equipo de Balcarce afronta una nueva temporada con la dirección técnica de Facundo Fernández.",
+      "cuerpo": null,
+      "guion": "El plantel de Ferro ya se encuentra disputando una nueva temporada en la Liga Mar y Sierras. Con la conducción técnica de Facundo Fernández, el equipo apunta alto y busca llegar hasta los octavos de final del certamen.",
+      "seccion": "Deportes",
+      "medios": [
+        "El Diario Balcarce"
+      ],
+      "enlace": "https://eldiariobalcarce.com.ar/fernandez-el-objetivo-es-llegar-a-los-octavos-de-final-de-la-copa-de-oro-515",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-23T03:05:01.594Z",
+      "sinFecha": true,
+      "visto": "2026-09-23T03:05:01.594Z",
+      "relevancia": 63,
+      "local": true,
+      "publicadaPor": "ia",
+      "publicadaCuando": "2026-09-18T17:49:25.672Z",
+      "temas": [],
+      "como": "automatica",
+      "slug": "ferro-basquet-busca-los-octavos-en-la-liga-mar-y-sierras"
+    },
+    {
       "id": "8yoymu",
       "titulo": "Medalla de bronce para Shalom Lescano en atletismo",
       "copete": "La deportista balcarceña Shalom Lescano logró el tercer puesto este domingo en los tres mil metros con obstáculos del torneo nacional de mayores.",
@@ -3620,123 +3585,6 @@
       "temas": [],
       "como": "automatica",
       "slug": "medalla-de-bronce-para-shalom-lescano-en-atletismo"
-    },
-    {
-      "id": "1knnogg",
-      "titulo": "Cabaña Los Pinos concreta su remate anual en Balcarce",
-      "copete": "La Cabaña Los Pinos realizó su cuadragésimo primer remate este jueves en la Sociedad Rural.",
-      "cuerpo": "",
-      "guion": "Cabaña Los Pinos concreta su remate anual en Balcarce",
-      "seccion": "Balcarce",
-      "medios": [
-        "El Diario Balcarce"
-      ],
-      "enlace": "https://eldiariobalcarce.com.ar/cabana-los-pinos-concreto-con-exito-su-41-remate-en-balcarce-277",
-      "teniaImagenLaFuente": false,
-      "fecha": "2026-09-23T03:05:01.594Z",
-      "sinFecha": true,
-      "visto": "2026-09-23T03:05:01.594Z",
-      "relevancia": 53,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": "2026-09-25T07:10:48.047Z",
-      "temas": [],
-      "como": "automatica",
-      "slug": "cabana-los-pinos-concreta-su-remate-anual-en-balcarce"
-    },
-    {
-      "id": "1q76ezk",
-      "titulo": "Remate conjunto de cabañas Angus en Balcarce",
-      "copete": "Las cabañas María Luján y San Antonio realizaron su octavo remate anual conjunto de genética Angus en las instalaciones locales.",
-      "cuerpo": "",
-      "guion": "Remate conjunto de cabañas Angus en Balcarce",
-      "seccion": "Balcarce",
-      "medios": [
-        "El Diario Balcarce"
-      ],
-      "enlace": "https://eldiariobalcarce.com.ar/la-genetica-y-calidad-de-dos-colores-de-una-misma-raza-cotizadas-en-la-pista-968",
-      "teniaImagenLaFuente": false,
-      "fecha": "2026-09-23T03:05:01.594Z",
-      "sinFecha": true,
-      "visto": "2026-09-23T03:05:01.594Z",
-      "relevancia": 53,
-      "local": true,
-      "publicadaPor": "ia",
-      "publicadaCuando": "2026-09-21T01:07:57.100Z",
-      "temas": [],
-      "como": "automatica",
-      "slug": "remate-conjunto-de-cabanas-angus-en-balcarce"
-    },
-    {
-      "id": "q8ze4n",
-      "titulo": "Ferroviarios ganó el Apertura por penales",
-      "copete": "Ferroviarios se consagró campeón del torneo Apertura de fútbol al vencer a Atlético San Manuel en el estadio General Balcarce.",
-      "cuerpo": "El equipo de la Estación se quedó con el título local tras imponerse por diez a nueve en una sufrida definición desde los doce pasos, luego de igualar uno a uno en el tiempo reglamentario. El encuentro decisivo se disputó bajo una intensa lluvia por momentos y contó con el arbitraje de Martín Córdoba.\n\nDurante la primera etapa, Atlético San Manuel abrió el marcador por intermedio de Gonzalo Fernández, pero Ferroviarios llegó rápidamente a la igualdad gracias a un tanto de Luca Ramírez tras un centro de Fernando Telechea. En el complemento el juego se volvió más trabado y, a pesar de algunas situaciones claras en ambos arcos, el marcador no volvió a modificarse.\n\nEn la extensa tanda de penales, donde cada equipo ejecutó doce remates, Ferroviarios estuvo más preciso y festejó el campeonato ante un aceptable marco de público presente en el estadio.",
-      "guion": "Ferroviarios ganó el Apertura por penales",
-      "seccion": "Balcarce",
-      "medios": [
-        "El Diario Balcarce"
-      ],
-      "enlace": "https://eldiariobalcarce.com.ar/desde-los-doce-pasos-ferro-se-llevo-el-apertura-11",
-      "teniaImagenLaFuente": false,
-      "fecha": "2026-09-23T03:05:01.594Z",
-      "sinFecha": true,
-      "visto": "2026-09-23T03:05:01.594Z",
-      "relevancia": 53,
-      "local": true,
-      "publicadaPor": "ia",
-      "publicadaCuando": "2026-09-21T11:54:15.136Z",
-      "temas": [],
-      "como": "automatica",
-      "slug": "ferroviarios-gano-el-apertura-por-penales"
-    },
-    {
-      "id": "10e13dt",
-      "titulo": "Ferroviarios goleó en la final del torneo local",
-      "copete": "Ferroviarios se consagró campeón este fin de semana tras golear en el partido decisivo del Play Off de la Liga Balcarceña de Fútbol.",
-      "cuerpo": "El equipo de la Estación se quedó con el Play Off del torneo Apertura tras una actuación contundente que sentenció con goles de Rodrigo Machado, Fernando Telechea, Fernando Juárez y Franco Córdoba. El encuentro contó con el arbitraje de Lautaro Moyano y dejó sin chances al conjunto rival en una tarde difícil que incluyó la salida por lesión de Fausto Luna.\n\nCon este resultado, Ferroviarios deberá definir el certamen ante Atlético San Manuel, que se consagró como ganador de la etapa regular.",
-      "guion": "Ferroviarios goleó en la final del torneo local",
-      "seccion": "Deportes",
-      "medios": [
-        "El Diario Balcarce"
-      ],
-      "enlace": "https://eldiariobalcarce.com.ar/ferroviarios-goleo-en-la-final-del-play-off-y-definira-con-san-manuel-238",
-      "teniaImagenLaFuente": false,
-      "fecha": "2026-09-23T03:05:01.594Z",
-      "sinFecha": true,
-      "visto": "2026-09-23T03:05:01.594Z",
-      "relevancia": 53,
-      "local": true,
-      "publicadaPor": "ia",
-      "publicadaCuando": "2026-09-20T04:09:39.466Z",
-      "temas": [
-        "ferroviarios"
-      ],
-      "como": "automatica",
-      "slug": "ferroviarios-goleo-en-la-final-del-torneo-local"
-    },
-    {
-      "id": "112kb6b",
-      "titulo": "Ferro Básquet busca los octavos en la Liga Mar y Sierras",
-      "copete": "El equipo de Balcarce afronta una nueva temporada con la dirección técnica de Facundo Fernández.",
-      "cuerpo": "Ferro Básquet afronta una nueva temporada en la Liga Mar y Sierras bajo la dirección técnica de Facundo Fernández, en su debut como entrenador. El plantel se conformó de manera natural manteniendo a la mayoría de los jugadores del año anterior y sumando a deportistas provenientes de la categoría Mayores de 30 y de localidades vecinas como Lobería, Mar del Plata y Tandil. En la actualidad, el equipo cuenta con un plantel de entre 15 y 16 jugadores de los cuales se seleccionan 12 para cada partido.\n\nEn cuanto al rendimiento deportivo, el entrenador explicó que el equipo evoluciona de menor a mayor tras disputar partidos parejos en las primeras fechas frente a rivales de nivel. Asimismo, destacó la cohesión grupal, el compromiso y el desarrollo tanto colectivo como individual de los deportistas, con la meta puesta en la etapa de reclasificación del torneo.",
-      "guion": "El plantel de Ferro ya se encuentra disputando una nueva temporada en la Liga Mar y Sierras. Con la conducción técnica de Facundo Fernández, el equipo apunta alto y busca llegar hasta los octavos de final del certamen.",
-      "seccion": "Balcarce",
-      "medios": [
-        "El Diario Balcarce"
-      ],
-      "enlace": "https://eldiariobalcarce.com.ar/fernandez-el-objetivo-es-llegar-a-los-octavos-de-final-de-la-copa-de-oro-515",
-      "teniaImagenLaFuente": false,
-      "fecha": "2026-09-23T03:05:01.594Z",
-      "sinFecha": true,
-      "visto": "2026-09-23T03:05:01.594Z",
-      "relevancia": 53,
-      "local": true,
-      "publicadaPor": "ia",
-      "publicadaCuando": "2026-09-18T17:49:25.672Z",
-      "temas": [],
-      "como": "automatica",
-      "slug": "ferro-basquet-busca-los-octavos-en-la-liga-mar-y-sierras"
     },
     {
       "id": "jul4yj",
@@ -3888,9 +3736,9 @@
   "secciones": [
     "Política",
     "Automovilismo",
-    "Tecnología",
-    "Agro",
     "Economía",
+    "Agro",
+    "Tecnología",
     "Balcarce",
     "Deportes",
     "Cultura y agenda",
@@ -3900,12 +3748,12 @@
     {
       "nombre": "Fangio",
       "ranura": "fangio",
-      "cuantas": 20
+      "cuantas": 19
     },
     {
       "nombre": "El autódromo",
       "ranura": "autodromo",
-      "cuantas": 19
+      "cuantas": 18
     },
     {
       "nombre": "TC Pick Up",
@@ -3920,7 +3768,7 @@
     {
       "nombre": "Ferroviarios",
       "ranura": "ferroviarios",
-      "cuantas": 4
+      "cuantas": 3
     },
     {
       "nombre": "El INTA",
@@ -3930,10 +3778,10 @@
   ],
   "clima": {
     "ahora": {
-      "temp": 14,
+      "temp": 13,
       "sensacion": 11,
-      "humedad": 72,
-      "viento": 17,
+      "humedad": 75,
+      "viento": 15,
       "rumbo": "SO",
       "cielo": "Mayormente despejado",
       "esDeDia": false
@@ -4329,16 +4177,10 @@
       "motivo": "necesita ojo humano: \"hospital\""
     },
     {
-      "id": "z2ees5",
-      "titulo": "Un encuentro comunitario busca ayudar a Gael, un niño que…",
-      "seccion": "Balcarce",
-      "motivo": "necesita ojo humano: \"hospital\""
-    },
-    {
       "id": "jul4zg",
       "titulo": "Profundo pesar por el fallecimiento de Tulio Crespi.",
       "seccion": "Automovilismo",
-      "motivo": "necesita ojo humano: \"muerte\", en lo que escribió la IA (visto al reescribir)"
+      "motivo": "necesita ojo humano: \"falleció\", en lo que escribió la IA (visto al reescribir)"
     },
     {
       "id": "j7c3tx",
@@ -4363,6 +4205,12 @@
       "titulo": "Concejo Deliberante: este jueves se desarrollará el…",
       "seccion": "Política",
       "motivo": "necesita ojo humano: \"denuncia\", en el texto completo de la fuente (visto al reescribir)"
+    },
+    {
+      "id": "z2ees5",
+      "titulo": "Un encuentro comunitario busca ayudar a Gael, un niño que…",
+      "seccion": "Balcarce",
+      "motivo": "necesita ojo humano: \"hospital\""
     },
     {
       "id": "8hniuy",
@@ -4461,16 +4309,28 @@
       "motivo": "necesita ojo humano: \"denuncia\""
     },
     {
-      "id": "6le03u",
-      "titulo": "Alerta máxima por el temporal en Neuquén: desborde de…",
-      "seccion": "Servicios",
-      "motivo": "necesita ojo humano: \"hospital\""
+      "id": "x3ecof",
+      "titulo": "El Gobierno creó programas para combatir la…",
+      "seccion": "Política",
+      "motivo": "necesita ojo humano: \"investigación\", en el texto completo de la fuente (visto al reescribir)"
     },
     {
       "id": "1xsiv62",
       "titulo": "Colapinto pide que no se insulte a Gasly, pero remarca…",
       "seccion": "Automovilismo",
       "motivo": "necesita ojo humano: \"denunció\""
+    },
+    {
+      "id": "2jnrsk",
+      "titulo": "Bolaños acusa al CGPJ de ralentizar sus quejas contra…",
+      "seccion": "País",
+      "motivo": "necesita ojo humano: \"acusado\""
+    },
+    {
+      "id": "10hgfxc",
+      "titulo": "Muere un adolescente por un ataque de Rusia contra un…",
+      "seccion": "Tecnología",
+      "motivo": "necesita ojo humano: \"denuncia\""
     },
     {
       "id": "q4nd82",
@@ -4491,12 +4351,6 @@
       "motivo": "necesita ojo humano: \"denuncia\""
     },
     {
-      "id": "bjudxk",
-      "titulo": "Cómo hizo Alexander Zverev para llegar a la élite del…",
-      "seccion": "Deportes",
-      "motivo": "necesita ojo humano: \"hospital\""
-    },
-    {
       "id": "10j8d7x",
       "titulo": "Murió Bob Pettit, el primer MVP de la NBA: el recuerdo de…",
       "seccion": "Deportes",
@@ -4507,6 +4361,12 @@
       "titulo": "Qué fue el incidente Hugging Face, el ataque de OpenAI que…",
       "seccion": "Tecnología",
       "motivo": "necesita ojo humano: \"investigación\""
+    },
+    {
+      "id": "bjudxk",
+      "titulo": "Cómo hizo Alexander Zverev para llegar a la élite del…",
+      "seccion": "Deportes",
+      "motivo": "necesita ojo humano: \"hospital\""
     }
   ]
 }
