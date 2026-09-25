@@ -1,5 +1,5 @@
 {
-  "exportado": "2026-09-25T15:03:48.661Z",
+  "exportado": "2026-09-25T15:13:16.938Z",
   "decisiones": {
     "1951120": {
       "estado": "automatica",
@@ -9521,23 +9521,93 @@
     },
     "1ny0yyi": {
       "estado": "automatica",
-      "titulo": null,
-      "copete": null,
-      "cuerpo": null,
-      "guion": null,
-      "deIA": null,
-      "por": null,
-      "cuando": "2026-09-21T06:44:17.612Z"
+      "titulo": "Informan servicios fuesbres de la Cooperativa de Electricidad en Balcarce",
+      "copete": "La Cooperativa de Electricidad \"General Balcarce\" Limitada comunicó los servicios de sepelios correspondientes a los fallecimientos registrados en el distrito en las últimas semanas.",
+      "cuerpo": "La Cooperativa de Electricidad \"General Balcarce\" Limitada dio a conocer los distintos servicios de sepelios y honras fúnebres llevados a cabo en el partido a partir de los decesos informados durante los meses de mayo, agosto y septiembre de 2026.\n\nLos procedimientos incluyeron velatorios en salas locales, oficios religiosos y posteriores inhumaciones en el Cementerio Municipal de Balcarce o cremaciones en el Crematorio Privado de Miramar, según cada caso particular.\n\nLos servicios funerarios se coordinaron a través de la entidad de electricidad local para las familias y allegados de las personas fallecidas en distintos puntos del distrito.",
+      "guion": "Informan servicios fúnebres de la Cooperativa de Electricidad en Balcarce",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T15:13:16.864Z",
+      "claves": [
+        "Cooperativa de Electricidad a cargo de los servicios",
+        "Inhumaciones en el Cementerio Municipal",
+        "Traslados a crematorio privado en Miramar",
+        "Registros de decesos en el distrito"
+      ],
+      "seSabe": [
+        "La Cooperativa de Electricidad \"General Balcarce\" Limitada intervino en los servicios de sepelios.",
+        "Se realizaron inhumaciones en el Cementerio Municipal de Balcarce.",
+        "Algunos restos fueron derivados al Crematorio Privado de Miramar."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "La Cooperativa de Electricidad \"General Balcarce\" Limitada comunicó los servicios de sepelios y traslados correspondientes a los fallecimientos registrados en el distrito durante las últimas semanas.",
+      "etiquetas": [
+        "servicios fúnebres",
+        "Cooperativa de Electricidad",
+        "Balcarce",
+        "fallecimientos",
+        "Cementerio Municipal"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/la-genetica-100-hereford-volvio-a-dar-la-nota-de-la-mano-de-santo-domingo-159",
+          "fecha": null,
+          "oficial": false,
+          "aporte": "Detalló los servicios de sepelios y traslados de la Cooperativa de Electricidad en el distrito."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
     },
     "qad19g": {
       "estado": "automatica",
-      "titulo": "Ventas récord de los Angus de Inambú en Balcarce",
-      "copete": "La cabaña Inambú concretó un remate con valores máximos en Balcarce durante el fin de semana.",
-      "cuerpo": null,
-      "guion": "Ventas récord de los Angus de Inambú en Balcarce",
+      "titulo": "Informan servicios y sepelios de la Cooperativa de Electricidad en Balcarce",
+      "copete": "Se dieron a conocer los distintos servicios de sepelios y despedidas programados por la Cooperativa de Electricidad en el distrito.",
+      "cuerpo": "La Cooperativa de Electricidad \"General Balcarce\" Limitada comunicó los diferentes servicios de sepelios organizados en el distrito durante los últimos meses. Las gestiones incluyeron traslados a salas velatorias, oficios religiosos e inhumaciones en el Cementerio Municipal, además de cremaciones en la vecina localidad de Miramar.\n\nLos avisos recopilaron los servicios brindados desde mayo hasta septiembre de este año, detallando las casas de duelo correspondientes a cada fallecimiento tanto en la planta urbana como en zonas rurales como Los Pinos. Las despedidas se organizaron de acuerdo con los cronogramas establecidos por la entidad de servicios públicos local.\n\nLa información forma parte de los registros habituales que comunican los decesos y las ceremonias de inhumación y cremación previstas para las familias de la comunidad.",
+      "guion": "Informan servicios y sepelios de la Cooperativa de Electricidad en Balcarce",
       "deIA": true,
       "por": "ia",
-      "cuando": "2026-09-21T06:44:18.417Z"
+      "cuando": "2026-09-25T15:13:16.864Z",
+      "claves": [
+        "La Cooperativa de Electricidad informó servicios de sepelios.",
+        "Se detallaron inhumaciones y cremaciones realizadas.",
+        "Los avisos abarcan decesos registrados entre mayo y septiembre."
+      ],
+      "seSabe": [
+        "La Cooperativa de Electricidad \"General Balcarce\" Limitada brindó servicios de sepelios en el distrito.",
+        "Se programaron inhumaciones en el Cementerio Municipal y cremaciones en Miramar.",
+        "Se detallaron las casas de duelo de las personas fallecidas."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "La Cooperativa de Electricidad dio a conocer el detalle de los servicios de sepelios y despedidas organizados en el distrito durante los últimos meses.",
+      "etiquetas": [
+        "sepelios",
+        "Cooperativa de Electricidad",
+        "Balcarce",
+        "servicios"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/ventas-record-de-los-angus-de-inambu-en-el-propio-jardin-de-la-cabana-356",
+          "fecha": null,
+          "oficial": false,
+          "aporte": "Detalló los servicios de sepelios, fechas de inhumación y casas de duelo comunicados por la Cooperativa de Electricidad."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
     },
     "1y4qmot": {
       "estado": "automatica",
@@ -20076,6 +20146,173 @@
           "fecha": "2026-09-25T14:50:24.000Z",
           "oficial": false,
           "aporte": "Aportó el parte sobre la evolución de salud del periodista Yamid Amat difundido por su familia."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "1n5o9jc": {
+      "estado": "automatica",
+      "titulo": "Franco Colapinto larga décimo en el Gran Premio de Azerbaiyán",
+      "copete": "El piloto argentino se metió entre los diez mejores de la clasificación en Bakú tras superar la Q1 y la Q2. En la sesión ayudó a su compañero Pierre Gasly, pero señaló que no recibió la misma colaboración.",
+      "cuerpo": "Franco Colapinto se metió entre los diez mejores de la clasificación de la Fórmula 1 y largará desde la décima posición en el Gran Premio de Azerbaiyán, que se disputará este sábado. En la sesión celebrada en el circuito callejero de Bakú, el argentino cumplió un rol estratégico al tirar en la pista para que su compañero de Alpine, Pierre Gasly, aprovechara la succión y avanzara a la instancia decisiva, donde el francés terminó séptimo.\n\nTras asegurar su propio pase a la Q3 sobre el cierre de la segunda manga con un tiempo de 1m44s683 que lo dejó por delante de Oliver Bearman, Colapinto explicó que debió extremar recaudos sin ayuda en las rectas. \"Fue muy difícil sin la succión porque perdí cuatro o cinco décimas\", indicó el piloto, quien además detalló inconvenientes con la batería y dificultades en las frenadas durante todo el fin de semana.\n\nLa actividad en el trazado azerbaiyano dejó a George Russell con la pole position con Mercedes.",
+      "guion": "Franco Colapinto larga décimo en el Gran Premio de Azerbaiyán",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T15:13:16.864Z",
+      "claves": [
+        "Franco Colapinto partirá desde la décima posición en el Gran Premio de Azerbaiyán.",
+        "El argentino avanzó a la Q3 luego de superar la Q1 y la Q2 en el circuito callejero de Bakú.",
+        "Colapinto asistió a su compañero Pierre Gasly con la succión, pero no recibió la misma ayuda en su vuelta rápida.",
+        "George Russell se quedó con la pole position con Mercedes."
+      ],
+      "seSabe": [
+        "Franco Colapinto largará décimo en la carrera del sábado en el Gran Premio de Azerbaiyán.",
+        "El piloto argentino marcó un tiempo de 1m44s683 en el cierre de la Q2 para meterse en la Q3.",
+        "Pierre Gasly avanzó a la Q3 tras aprovechar la succión del auto de Colapinto y terminó séptimo.",
+        "George Russell obtuvo la pole position con Mercedes."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Franco Colapinto se metió entre los diez mejores de la clasificación y largará décimo este sábado en el Gran Premio de Azerbaiyán de la Fórmula 1, tras una jornada en Bakú donde debió sortear complicaciones en las rectas y en las frenadas.",
+      "etiquetas": [
+        "Franco Colapinto",
+        "Formula 1",
+        "Gran Premio de Azerbaiyán",
+        "Bakú"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/deportes/automovilismo/colapinto-hablo-de-la-ayuda-que-le-dio-a-gasly-para-avanzar-a-la-q3-y-que-no-fue-reciproca-es-muy-nid25092026/",
+          "fecha": "2026-09-25T15:00:42.000Z",
+          "oficial": false,
+          "aporte": "Detalló el desarrollo de la clasificación en Bakú, el rendimiento de Colapinto y sus declaraciones sobre la falta de succión."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "8tvpni",
+          "titulo": "Sofía Solá, la hija de Maru Botana, habló sobre los rumores que la vinculan con Franco Colapinto: \"Llegué\"",
+          "fecha": "2026-09-24T22:34:00.000Z",
+          "ruta": "/nota/sofia-sola-la-hija-de-maru-botana-hablo-sobre-los-rumores-que-la-8tvpni"
+        },
+        {
+          "id": "hgesfo",
+          "titulo": "Franco Colapinto tendrá la ayuda de un ex piloto de F1 que se sumó a Alpine: el rol clave que tendrá en las carreras",
+          "fecha": "2026-09-24T20:26:57.000Z",
+          "ruta": "/nota/franco-colapinto-tendra-la-ayuda-de-un-ex-piloto-de-f1-que-se-sumo-a-hgesfo"
+        },
+        {
+          "id": "9m345n",
+          "titulo": "El fuerte comunicado del presidente de la FIA tras las amenazas a Gasly, compañero de Colapinto",
+          "fecha": "2026-09-23T22:34:00.000Z",
+          "ruta": "/nota/el-fuerte-comunicado-del-presidente-de-la-fia-tras-las-amenazas-a-9m345n"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "qx770i": {
+      "estado": "automatica",
+      "titulo": "Roban herramientas de un comercio en Balcarce",
+      "copete": "Delincuentes rompieron la vidriera de un local comercial de avenida Pueyrredón y calle 8 durante la madrugada y se llevaron herramientas. Los propietarios reclaman mayor iluminación en la zona.",
+      "cuerpo": "Al menos tres personas rompieron la vidriera blindada de un comercio ubicado en la zona de avenida Pueyrredón y calle 8 para sustraer dos motosierras, un kit de herramientas y un atornillador, según relataron los dueños del local. El hecho ocurrió alrededor de la medianoche, cuando los autores ingresaron parcialmente por la abertura tras dañar el vidrio, aunque el faltante fue advertido recién a la mañana por una vecina que pasó por el lugar.\n\nLos propietarios revisaron registros de cámaras de seguridad propias y aportadas por vecinos, material que ahora será presentado ante las autoridades. En las filmaciones se observa que los sospechosos actuaron con el rostro cubierto, se desplazaban en motocicleta e intentan determinar la patente del rodado. Asimismo, desde el comercio advirtieron sobre la falta de iluminación en ese sector de la avenida y señalaron que ya habían recibido comentarios de vecinos sobre hechos delictivos previos en la zona.",
+      "guion": "Roban herramientas de un comercio en Balcarce",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T15:13:16.864Z",
+      "claves": [
+        "Delincuentes rompieron la vidriera de un local en avenida Pueyrredón y calle 8.",
+        "Sustrajeron dos motosierras, un kit de herramientas y un atornillador.",
+        "Los propietarios analizan cámaras de seguridad para identificar a los autores.",
+        "Reclaman mayor iluminación en la zona por antecedentes de inseguridad."
+      ],
+      "noConfirmado": [
+        "No se logró identificar la patente ni los rostros de los sospechosos a través de las cámaras.",
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Delincuentes rompieron la vidriera de un comercio en avenida Pueyrredón y calle 8 durante la madrugada y se llevaron herramientas. Los propietarios reclaman mayor iluminación en la zona.",
+      "etiquetas": [
+        "Inseguridad",
+        "Comercio",
+        "Avenida Pueyrredon",
+        "Balcarce"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/rompieron-la-vidriera-y-se-llevaron-herramientas-de-nacho-hogar-713",
+          "fecha": null,
+          "oficial": false,
+          "aporte": null
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "1a1vwe0": {
+      "estado": "automatica",
+      "titulo": "Patricia Bullrich rechaza el juicio político a juezas que frenaron la ley penal juvenil",
+      "copete": "La senadora nacional se opuso a someter a jury a las magistradas que cuestionaron el régimen penal juvenil. El sector político impulsa estos procesos.",
+      "cuerpo": "La jefa del bloque de senadores de La Libertad Avanza, Patricia Bullrich, se opuso a impulsar un juicio político contra las juezas Marta Pascual y Laura Beatriz De Marinis, quienes fallaron en contra de la aplicación del régimen penal juvenil. Durante su exposición en un congreso realizado en el Automóvil Club Argentino, la exministra de Seguridad cuestionó la posibilidad de remover a magistrados por el contenido de sus sentencias, al sostener que esas decisiones deben resolverse a través de las instancias de apelación de la justicia.\n\nLa postura de la senadora se da en contraste con los planteos de otros dirigentes oficialistas. Previamente, referentes de La Libertad Avanza en la provincia de Buenos Aires y el jefe de Gobierno porteño, Jorge Macri, habían promovido pedidos de jury y presentaciones en el Consejo de la Magistratura contra las magistradas por intentar frenar o declarar inconstitucional la ley que bajó la edad de imputabilidad.\n\nEn la misma presentación, Bullrich marcó diferencias con el oficialismo y se refirió a las causas por corrupción y al rumbo económico del Gobierno. Como se había informado en las últimas jornadas, la tensión interna en el espacio político incluyó debates legislativos y movimientos en torno a la estrategia judicial frente a los fallos sobre el régimen penal juvenil.",
+      "guion": "Patricia Bullrich rechaza el juicio político a juezas que frenaron la ley penal juvenil",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T15:13:16.864Z",
+      "claves": [
+        "Patricia Bullrich rechazó el juicio político a las juezas Marta Pascual y Laura Beatriz De Marinis.",
+        "La senadora sostuvo que las sentencias deben corregirse en las instancias de apelación.",
+        "El sector de La Libertad Avanza bonaerense y Jorge Macri habían impulsado el jury contra las magistradas.",
+        "El planteo de la exministra marca un nuevo distanciamiento dentro del oficialismo."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "etiquetas": [
+        "Patricia Bullrich",
+        "juicio político",
+        "régimen penal juvenil",
+        "La Libertad Avanza",
+        "Justicia"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/politica/patricia-bullrich-se-opuso-al-juicio-politico-contra-las-juezas-que-frenaron-el-regimen-penal-nid25092026/",
+          "fecha": "2026-09-25T15:06:28.000Z",
+          "oficial": false,
+          "aporte": "Detalló las declaraciones de Patricia Bullrich en el Congreso Anticorrupción y las posturas de Sebastián Pareja y Jorge Macri sobre el juicio político a las juezas."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "33v8xa",
+          "titulo": "Avanzan contra las juezas que fallaron contra el Régimen Penal Juvenil, con un jury en la Ciudad y un juicio político en Provincia",
+          "fecha": "2026-09-22T22:25:32.000Z",
+          "ruta": "/nota/avanzan-contra-las-juezas-que-fallaron-contra-el-regimen-penal-33v8xa"
+        },
+        {
+          "id": "17q8eev",
+          "titulo": "Bullrich se opone en impulsar un jury contra las jueces que suspendieron la ley penal juvenil",
+          "fecha": "2026-09-24T22:05:11.000Z",
+          "ruta": "/nota/bullrich-se-opone-en-impulsar-un-jury-contra-las-jueces-que-17q8eev"
+        },
+        {
+          "id": "14e7f85",
+          "titulo": "Tregua en la interna del Gobierno: las oscilaciones de Patricia Bullrich y los pronósticos del grupo de Karina Milei",
+          "fecha": "2026-09-24T14:40:00.000Z",
+          "ruta": "/nota/tregua-en-la-interna-del-gobierno-las-oscilaciones-de-patricia-14e7f85"
         }
       ],
       "verificacion": {
