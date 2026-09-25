@@ -1,6 +1,85 @@
 {
-  "generado": "2026-09-25T22:30:38.229Z",
+  "generado": "2026-09-25T23:00:43.011Z",
   "notas": [
+    {
+      "id": "45w2kj",
+      "titulo": "Las petroleras privadas aumentan los precios de los combustibles",
+      "copete": "Las principales empresas del sector aplicaron subas de hasta el cinco por ciento en surtidores. Los incrementos responden a la subida internacional del petróleo, mientras YPF aguarda para definir su ajuste.",
+      "cuerpo": "Las principales petroleras privadas de la Argentina comenzaron a aumentar los precios de sus combustibles, con subas que alcanzan hasta el cinco por ciento debido a la suba internacional del petróleo, según informó un medio nacional. De acuerdo con datos del mercado, Shell aplicó incrementos del dos por ciento en naftas y del cinco por ciento en gasoil, mientras que Axion ajustó sus naftas un dos por ciento y medio en promedio, y Puma también movió sus valores.\n\nLa decisión de YPF resulta determinante para el mercado debido a su peso en el sector.",
+      "guion": "Las petroleras privadas aumentan los precios de los combustibles",
+      "seccion": "Automovilismo",
+      "medios": [
+        "La Nación"
+      ],
+      "enlace": "https://www.lanacion.com.ar/politica/javier-milei-y-sus-medidas-en-vivo-netanyahu-se-reunio-con-el-presidente-en-la-onu-y-lo-definio-como-nid25092026/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-25T22:40:00.000Z",
+      "sinFecha": false,
+      "visto": "2026-09-25T23:00:42.886Z",
+      "relevancia": 98,
+      "local": true,
+      "publicadaPor": "ia",
+      "publicadaCuando": "2026-09-25T14:22:25.142Z",
+      "temas": [
+        "autodromo",
+        "fangio"
+      ],
+      "como": "automatica",
+      "claves": [
+        "Las principales petroleras privadas aumentaron los combustibles hasta un cinco por ciento.",
+        "Las subas responden a la subida internacional del petróleo.",
+        "Shell, Axion y Puma aplicaron retoques en sus redes de estaciones.",
+        "YPF todavía no definió un ajuste en sus surtidores y aguarda el impacto en el mercado."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Las principales petroleras privadas comenzaron a aumentar los precios de sus combustibles hasta un cinco por ciento por la suba internacional del petróleo, mientras YPF todavía espera para definir su ajuste.",
+      "etiquetas": [
+        "combustibles",
+        "aumento",
+        "petroleras",
+        "YPF",
+        "Shell",
+        "Axion",
+        "economía"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/politica/javier-milei-y-sus-medidas-en-vivo-netanyahu-se-reunio-con-el-presidente-en-la-onu-y-lo-definio-como-nid25092026/",
+          "fecha": "2026-09-25T14:15:00.000Z",
+          "oficial": false,
+          "aporte": "Aportó los porcentajes de aumento de las petroleras privadas y los datos de participación en el mercado de combustibles."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1j01p83",
+          "titulo": "Javier Milei y sus medidas, en vivo: el Presidente consideró como “matices de opinión” las internas en el Ejecutivo",
+          "fecha": "2026-09-22T01:40:36.000Z",
+          "ruta": "/nota/javier-milei-y-sus-medidas-en-vivo-el-presidente-considero-como-1j01p83"
+        },
+        {
+          "id": "1ezdmye",
+          "titulo": "Javier Milei cerró su viaje a Nueva York con una reunión con Benjamin Netanyahu",
+          "fecha": "2026-09-24T23:11:00.000Z",
+          "ruta": "/nota/javier-milei-cerro-su-viaje-a-nueva-york-con-una-reunion-con-benjamin-1ezdmye"
+        },
+        {
+          "id": "1brl04",
+          "titulo": "Javier Milei diserta ante inversionistas y se reúne con Netanyahu en Nueva York antes de volver a Argentina",
+          "fecha": "2026-09-24T09:01:48.000Z",
+          "ruta": "/nota/javier-milei-diserta-ante-inversionistas-y-se-reune-con-netanyahu-en-1brl04"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "las-petroleras-privadas-aumentan-los-precios-de-los-combustibles"
+    },
     {
       "id": "jzo9l4",
       "titulo": "Mauricio Macri encabeza un acto en Jujuy y negocia acuerdos",
@@ -16,7 +95,7 @@
       "fecha": "2026-09-25T22:15:31.000Z",
       "sinFecha": false,
       "visto": "2026-09-25T18:30:44.515Z",
-      "relevancia": 43,
+      "relevancia": 48,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -426,84 +505,6 @@
         "sugeridoPorIA": "MEDIA"
       },
       "slug": "el-concejo-aprueba-pedir-la-baja-de-tasas-a-taxis-y-remises-en"
-    },
-    {
-      "id": "1wzh43l",
-      "titulo": "Advierten por una falsa búsqueda laboral de la empresa McCain en Balcarce",
-      "copete": "Detectan una publicación fraudulenta en redes sociales que ofrece puestos de trabajo a nombre de la empresa McCain utilizando datos incorrectos y herramientas de inteligencia artificial.",
-      "cuerpo": "Una publicación detectada en Facebook promociona falsas ofertas de empleo utilizando la identidad de la empresa McCain. El aviso presenta irregularidades como una dirección errónea del Parque Industrial y el uso de una cuenta de correo electrónico genérica para la postulación.\n\nDesde la compañía advierten que no utilizan casillas de Gmail para sus procesos de selección, no solicitan dinero a los candidatos y realizan siempre entrevistas previas antes de incorporar personal. Ante esta situación, se recomienda a los vecinos no enviar datos personales ni documentación y corroborar las búsquedas exclusivamente en los canales oficiales.",
-      "guion": "Advierten por una falsa búsqueda laboral de la empresa McCain en Balcarce",
-      "seccion": "Policiales",
-      "medios": [
-        "Radio Gabal (FM 104.1)"
-      ],
-      "enlace": "https://www.radiogabal.com.ar/index.php/policiales/advierten-por-una-falsa-busqueda-laboral-de-la-empresa-mccain-en-redes-sociales",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-25T15:36:43.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-25T16:00:39.418Z",
-      "relevancia": 74,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Circula una falsa oferta laboral de McCain en Facebook.",
-        "El aviso utiliza una dirección incorrecta y correo de Gmail.",
-        "La empresa recordó que no solicita dinero ni datos por vías informales."
-      ],
-      "seSabe": [
-        "Circula en Facebook una publicación que ofrece puestos de trabajo a nombre de McCain.",
-        "El aviso utiliza datos incorrectos y fue realizado con inteligencia artificial.",
-        "La empresa advirtió que no utiliza casillas de Gmail para reclutar personal."
-      ],
-      "noConfirmado": [
-        "No se especificó la cantidad de personas que enviaron sus datos a la publicación falsa.",
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "Advierten sobre una falsa búsqueda laboral de la empresa McCain que circula en Facebook con datos incorrectos. Recomiendan no enviar datos personales y verificar las vacantes en los canales oficiales.",
-      "etiquetas": [
-        "McCain",
-        "búsqueda laboral",
-        "redes sociales",
-        "Balcarce"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Radio Gabal (FM 104.1)",
-          "enlace": "https://www.radiogabal.com.ar/index.php/policiales/advierten-por-una-falsa-busqueda-laboral-de-la-empresa-mccain-en-redes-sociales",
-          "fecha": "2026-09-25T15:36:43.000Z",
-          "oficial": false,
-          "aporte": "Detalló las irregularidades de la falsa búsqueda laboral de McCain en redes sociales y las recomendaciones oficiales."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "130mj2j",
-          "titulo": "Briatore, en la polémica por las redes sociales y con un mensaje para los argentinos",
-          "fecha": "2026-09-23T20:10:53.000Z",
-          "ruta": "/nota/briatore-en-la-polemica-por-las-redes-sociales-y-con-un-mensaje-para-130mj2j"
-        },
-        {
-          "id": "6g3j5x",
-          "titulo": "El 60% de las crisis en una empresa inicia por un comentario negativo de un empleado sobre política o temas sociales",
-          "fecha": "2026-09-22T23:21:43.000Z",
-          "ruta": "/nota/el-60-de-las-crisis-en-una-empresa-inicia-por-un-comentario-negativo-6g3j5x"
-        },
-        {
-          "id": "1e9x7vt",
-          "titulo": "¿Qué pasó con Instagram y Facebook? Usuarios de Meta reportan caídas masivas de las redes sociales",
-          "fecha": "2026-09-21T01:24:00.000Z",
-          "ruta": "/nota/que-paso-con-instagram-y-facebook-usuarios-de-meta-reportan-caidas-1e9x7vt"
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "advierten-por-una-falsa-busqueda-laboral-de-la-empresa-mccain-en"
     },
     {
       "id": "1jaqxc4",
@@ -1544,217 +1545,6 @@
       "slug": "karina-lupo-y-mariano-barreiro-ganan-la-media-maraton-en-balcarce"
     },
     {
-      "id": "8hniuy",
-      "titulo": "Un científico formado en Balcarce investiga para la NASA",
-      "copete": "El licenciado en Biotecnología Felipe Vilicich integra un equipo internacional en Nueva York que analiza cómo la vida resiste condiciones extremas mediante inteligencia artificial y financiamiento de la agencia espacial.",
-      "cuerpo": "El investigador Felipe Vilicich, formado en Balcarce y graduado en Biotecnología por la UADE, realiza su doctorado en el Albert Einstein College of Medicine de Nueva York y participa en un proyecto financiado por el Departamento de Exobiología de la NASA. El equipo, que obtuvo una beca de un millón y medio de dólares en 2025, estudia cómo microorganismos de zonas áridas sobreviven al calor y la falta de agua mediante un estado de latencia.\n\nVilicich lidera el análisis masivo de datos con inteligencia artificial para identificar proteínas protectoras en estos organismos, tomando como referencia a los extremófilos como el tardígrado. La investigación busca determinar los mecanismos moleculares que permiten dicha resistencia ambiental.\n\nEl trabajo científico cuenta con aplicaciones tanto para la exploración espacial como para el desarrollo de tecnologías en la Tierra. El investigador prevé finalizar su tesis doctoral durante el transcurso de este año.",
-      "guion": "Un científico formado en Balcarce investiga para la NASA.",
-      "seccion": "Tecnología",
-      "medios": [
-        "El Diario Balcarce"
-      ],
-      "enlace": "https://eldiariobalcarce.com.ar/felipe-vilicich-el-balcarceno-que-investiga-para-la-nasa-como-puede-sobrevivir-la-vida-en-condiciones-extremas-209",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-25T10:47:08.606Z",
-      "sinFecha": true,
-      "visto": "2026-09-25T10:47:08.606Z",
-      "relevancia": 63,
-      "local": true,
-      "publicadaPor": "ia",
-      "publicadaCuando": "2026-09-25T13:02:40.310Z",
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "El balcarceño Felipe Vilicich realiza su doctorado en Nueva York.",
-        "Integra un equipo financiado por la beca de exobiología de la NASA.",
-        "Usa inteligencia artificial para estudiar microorganismos extremófilos.",
-        "Analiza cómo la vida sobrevive a condiciones extremas de calor y sequía."
-      ],
-      "seSabe": [
-        "Felipe Vilicich es licenciado en Biotecnología y se formó en Balcarce.",
-        "Trabaja en el Albert Einstein College of Medicine en Nueva York.",
-        "El proyecto obtuvo una beca de la NASA por un millón y medio de dólares en 2025.",
-        "El investigador utiliza inteligencia artificial para analizar millones de moléculas."
-      ],
-      "noConfirmado": [
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "El científico balcarceño Felipe Vilicich integra un equipo en Nueva York que investiga para la NASA cómo sobreviven los microorganismos en condiciones extremas mediante inteligencia artificial.",
-      "etiquetas": [
-        "Felipe Vilicich",
-        "NASA",
-        "Balcarce",
-        "Biotecnología",
-        "Ciencia",
-        "Inteligencia Artificial"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "El Diario Balcarce",
-          "enlace": "https://eldiariobalcarce.com.ar/felipe-vilicich-el-balcarceno-que-investiga-para-la-nasa-como-puede-sobrevivir-la-vida-en-condiciones-extremas-209",
-          "fecha": null,
-          "oficial": false,
-          "aporte": "Detalló la trayectoria de Felipe Vilicich, su investigación en Nueva York para la NASA y el uso de inteligencia artificial para estudiar la supervivencia en condiciones extremas."
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "un-balcarceno-investiga-sobre-vida-extrema-para-la-nasa"
-    },
-    {
-      "id": "1s8swk5",
-      "titulo": "El Concejo pide informes al Municipio por obras tras una renuncia en Balcarce",
-      "copete": "El cuerpo legislativo aprobó un proyecto para conocer detalles sobre la continuidad del área de Obras y Servicios Públicos y el estado de los trabajos en marcha.",
-      "cuerpo": "La iniciativa, fundamentada por la concejal Sol Di Gerónimo, requiere detalles sobre quién ocupará el reemplazo, las funciones asignadas y el impacto del recambio en la planificación de los trabajos municipales, un sector que actualmente se encuentra bajo la órbita del secretario Gustavo Torres. El pedido también exige un detalle físico y financiero del plan de obras, incluyendo el bacheo urbano, la red vial rural y las delegaciones, además de reclamar precisiones sobre intervenciones prioritarias como el Geriátrico Municipal, el autódromo Juan Manuel Fangio y el Hospital Municipal Subzonal. Por su parte, el concejal Ignacio Capeccio, de la Alianza La Libertad Avanza, acompañó la iniciativa y propuso convocar a Torres a la Comisión de Planeamiento ante las demoras previas en las respuestas del área.",
-      "guion": "El Concejo pide informes al Municipio por obras tras una renuncia en Balcarce.",
-      "seccion": "Política",
-      "medios": [
-        "El Diario Balcarce"
-      ],
-      "enlace": "https://eldiariobalcarce.com.ar/el-concejo-pidio-al-municipio-detalles-sobre-las-obras-y-la-continuidad-del-area-tras-la-renuncia-de-alvarez-quintero-903",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-25T10:47:08.606Z",
-      "sinFecha": true,
-      "visto": "2026-09-25T10:47:08.606Z",
-      "relevancia": 63,
-      "local": true,
-      "publicadaPor": "ia",
-      "publicadaCuando": "2026-09-25T13:14:20.980Z",
-      "temas": [
-        "concejo"
-      ],
-      "como": "automatica",
-      "claves": [
-        "El Concejo Deliberante aprobó un pedido de informes al Ejecutivo municipal.",
-        "La iniciativa surge tras la renuncia del subsecretario de Obras y Servicios Públicos.",
-        "Se solicita información sobre el estado de las obras y la asignación de fondos.",
-        "La Libertad Avanza propuso convocar al secretario Gustavo Torres al recinto."
-      ],
-      "seSabe": [
-        "El Concejo Deliberante aprobó un proyecto de comunicación presentado por el bloque de Fuerza Patria.",
-        "La iniciativa fue impulsada por la concejal Sol Di Gerónimo.",
-        "El área de Obras y Servicios Públicos está a cargo de Gustavo Torres tras la salida del subsecretario Nicolás Álvarez Quintero.",
-        "El concejal Ignacio Capeccio respaldó el pedido y sugirió convocar a Torres a la Comisión de Planeamiento."
-      ],
-      "noConfirmado": [
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "El Concejo Deliberante aprobó un pedido de informes al Municipio sobre la situación del área de Obras y Servicios Públicos y el estado de los trabajos en marcha tras la renuncia del subsecretario del área.",
-      "etiquetas": [
-        "Concejo Deliberante",
-        "Obras Públicas",
-        "Municipalidad de Balcarce"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "El Diario Balcarce",
-          "enlace": "https://eldiariobalcarce.com.ar/el-concejo-pidio-al-municipio-detalles-sobre-las-obras-y-la-continuidad-del-area-tras-la-renuncia-de-alvarez-quintero-903",
-          "fecha": null,
-          "oficial": false,
-          "aporte": "Detalló la aprobación del pedido de informes del Concejo sobre la obra pública tras la salida de Álvarez Quintero."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "1chkxhh",
-          "titulo": "El Concejo Deliberante debate tasas y obras en Balcarce",
-          "fecha": "2026-09-25T02:23:01.000Z",
-          "ruta": "/nota/concejo-deliberante-la-decimocuarta-sesion-tuvo-debates-mas-1chkxhh"
-        },
-        {
-          "id": "1iv58lw",
-          "titulo": "El Concejo Deliberante debate tasas, obras y proyectos en Balcarce",
-          "fecha": "2026-09-24T12:55:31.000Z",
-          "ruta": "/nota/concejo-deliberante-este-jueves-se-desarrollara-el-decimocuarto-1iv58lw"
-        },
-        {
-          "id": "1spjzhb",
-          "titulo": "El Concejo designa Paseo Intendente Juan José Mare a la vuelta interna del Cerro en Balcar",
-          "fecha": "2026-09-25T12:46:51.000Z",
-          "ruta": "/nota/el-concejo-designa-paseo-intendente-juan-jose-mare-a-la-vuelta-1spjzhb"
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "el-concejo-pidio-informes-al-municipio-por-obras-publicas"
-    },
-    {
-      "id": "33h243",
-      "titulo": "Franco Peidón gana el oro nacional en los 800 metros en Balcarce",
-      "copete": "El atleta local se consagró campeón argentino de Mayores en los 800 metros llanos tras quedarse con la medalla de oro en el campeonato disputado en Rosario.",
-      "cuerpo": "El deportista Franco Peidón obtuvo la medalla de oro en los 800 metros llanos y se consagró campeón argentino de Mayores. El logro se concretó este fin de semana en el centésimo sexto Campeonato Nacional de Mayores, desarrollado en la ciudad santafesina de Rosario.\n\nPreviamente, a finales de septiembre, el atleta local había superado la serie clasificatoria para disputar la final de la misma distancia en los Juegos Suramericanos Santa Fe 2026, llevada a cabo en el Centro de Alto Rendimiento Deportivo Pedro Candioti, tal como se había informado en su momento.",
-      "guion": "Franco Peidón gana el oro nacional en los ochocientos metros en Balcarce",
-      "seccion": "Deportes",
-      "medios": [
-        "El Diario Balcarce"
-      ],
-      "enlace": "https://eldiariobalcarce.com.ar/peidon-se-consagro-campeon-nacional-en-los-800-metros-696",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-25T10:47:08.606Z",
-      "sinFecha": true,
-      "visto": "2026-09-25T10:47:08.606Z",
-      "relevancia": 63,
-      "local": true,
-      "publicadaPor": "ia",
-      "publicadaCuando": "2026-09-25T13:24:36.675Z",
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Franco Peidón obtuvo la medalla de oro en los 800 metros llanos.",
-        "El torneo se desarrolló en la ciudad de Rosario, provincia de Santa Fe.",
-        "El atleta local alcanzó el título en el Campeonato Nacional de Mayores."
-      ],
-      "noConfirmado": [
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "etiquetas": [
-        "Franco Peidón",
-        "campeón argentino",
-        "Rosario"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "El Diario Balcarce",
-          "enlace": "https://eldiariobalcarce.com.ar/peidon-se-consagro-campeon-nacional-en-los-800-metros-696",
-          "fecha": null,
-          "oficial": false,
-          "aporte": "Informó que Franco Peidón ganó la medalla de oro en los 800 metros en el Campeonato Nacional de Mayores en Rosario."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "1bglcef",
-          "titulo": "Franco Peidón a la final de los 800 metros en los Juegos Suramericanos",
-          "fecha": "2026-09-22T20:31:49.000Z",
-          "ruta": "/nota/franco-peidon-a-la-final-de-los-800-metros-en-los-juegos-suramericanos-1bglcef"
-        },
-        {
-          "id": "1paz2ii",
-          "titulo": "Atlanta se consagró campeón en la Liga Nacional de béisbol",
-          "fecha": "2026-09-20T22:00:04.000Z",
-          "ruta": "/nota/atlanta-se-consagro-campeon-en-la-liga-nacional-de-beisbol-1paz2ii"
-        },
-        {
-          "id": "1ibi15p",
-          "titulo": "Kevin Gómez se consagró campeón nacional de boxeo",
-          "fecha": "2026-09-20T19:25:07.000Z",
-          "ruta": "/nota/kevin-gomez-se-consagro-campeon-nacional-de-boxeo-1ibi15p"
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "franco-peidon-gano-el-oro-nacional-en-800-metros"
-    },
-    {
       "id": "kiy3gs",
       "titulo": "El Concejo Deliberante realiza este jueves la décima cuarta sesión ordinaria en Balcarce",
       "copete": "El cuerpo legislativo local lleva a cabo este jueves su décima cuarta sesión ordinaria del año con un temario que incluye leasing, obras, transporte y cuestiones ambientales.",
@@ -1836,6 +1626,137 @@
         "sugeridoPorIA": "MEDIA"
       },
       "slug": "el-concejo-deliberante-realiza-este-jueves-su-decimocuarta-sesion"
+    },
+    {
+      "id": "8hniuy",
+      "titulo": "Un científico formado en Balcarce investiga para la NASA",
+      "copete": "El licenciado en Biotecnología Felipe Vilicich integra un equipo internacional en Nueva York que analiza cómo la vida resiste condiciones extremas mediante inteligencia artificial y financiamiento de la agencia espacial.",
+      "cuerpo": "El investigador Felipe Vilicich, formado en Balcarce y graduado en Biotecnología por la UADE, realiza su doctorado en el Albert Einstein College of Medicine de Nueva York y participa en un proyecto financiado por el Departamento de Exobiología de la NASA. El equipo, que obtuvo una beca de un millón y medio de dólares en 2025, estudia cómo microorganismos de zonas áridas sobreviven al calor y la falta de agua mediante un estado de latencia.\n\nVilicich lidera el análisis masivo de datos con inteligencia artificial para identificar proteínas protectoras en estos organismos, tomando como referencia a los extremófilos como el tardígrado. La investigación busca determinar los mecanismos moleculares que permiten dicha resistencia ambiental.\n\nEl trabajo científico cuenta con aplicaciones tanto para la exploración espacial como para el desarrollo de tecnologías en la Tierra. El investigador prevé finalizar su tesis doctoral durante el transcurso de este año.",
+      "guion": "Un científico formado en Balcarce investiga para la NASA.",
+      "seccion": "Tecnología",
+      "medios": [
+        "El Diario Balcarce"
+      ],
+      "enlace": "https://eldiariobalcarce.com.ar/felipe-vilicich-el-balcarceno-que-investiga-para-la-nasa-como-puede-sobrevivir-la-vida-en-condiciones-extremas-209",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-25T10:47:08.606Z",
+      "sinFecha": true,
+      "visto": "2026-09-25T10:47:08.606Z",
+      "relevancia": 63,
+      "local": true,
+      "publicadaPor": "ia",
+      "publicadaCuando": "2026-09-25T13:02:40.310Z",
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "El balcarceño Felipe Vilicich realiza su doctorado en Nueva York.",
+        "Integra un equipo financiado por la beca de exobiología de la NASA.",
+        "Usa inteligencia artificial para estudiar microorganismos extremófilos.",
+        "Analiza cómo la vida sobrevive a condiciones extremas de calor y sequía."
+      ],
+      "seSabe": [
+        "Felipe Vilicich es licenciado en Biotecnología y se formó en Balcarce.",
+        "Trabaja en el Albert Einstein College of Medicine en Nueva York.",
+        "El proyecto obtuvo una beca de la NASA por un millón y medio de dólares en 2025.",
+        "El investigador utiliza inteligencia artificial para analizar millones de moléculas."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El científico balcarceño Felipe Vilicich integra un equipo en Nueva York que investiga para la NASA cómo sobreviven los microorganismos en condiciones extremas mediante inteligencia artificial.",
+      "etiquetas": [
+        "Felipe Vilicich",
+        "NASA",
+        "Balcarce",
+        "Biotecnología",
+        "Ciencia",
+        "Inteligencia Artificial"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/felipe-vilicich-el-balcarceno-que-investiga-para-la-nasa-como-puede-sobrevivir-la-vida-en-condiciones-extremas-209",
+          "fecha": null,
+          "oficial": false,
+          "aporte": "Detalló la trayectoria de Felipe Vilicich, su investigación en Nueva York para la NASA y el uso de inteligencia artificial para estudiar la supervivencia en condiciones extremas."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "un-balcarceno-investiga-sobre-vida-extrema-para-la-nasa"
+    },
+    {
+      "id": "33h243",
+      "titulo": "Franco Peidón gana el oro nacional en los 800 metros en Balcarce",
+      "copete": "El atleta local se consagró campeón argentino de Mayores en los 800 metros llanos tras quedarse con la medalla de oro en el campeonato disputado en Rosario.",
+      "cuerpo": "El deportista Franco Peidón obtuvo la medalla de oro en los 800 metros llanos y se consagró campeón argentino de Mayores. El logro se concretó este fin de semana en el centésimo sexto Campeonato Nacional de Mayores, desarrollado en la ciudad santafesina de Rosario.\n\nPreviamente, a finales de septiembre, el atleta local había superado la serie clasificatoria para disputar la final de la misma distancia en los Juegos Suramericanos Santa Fe 2026, llevada a cabo en el Centro de Alto Rendimiento Deportivo Pedro Candioti, tal como se había informado en su momento.",
+      "guion": "Franco Peidón gana el oro nacional en los ochocientos metros en Balcarce",
+      "seccion": "Deportes",
+      "medios": [
+        "El Diario Balcarce"
+      ],
+      "enlace": "https://eldiariobalcarce.com.ar/peidon-se-consagro-campeon-nacional-en-los-800-metros-696",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-25T10:47:08.606Z",
+      "sinFecha": true,
+      "visto": "2026-09-25T10:47:08.606Z",
+      "relevancia": 63,
+      "local": true,
+      "publicadaPor": "ia",
+      "publicadaCuando": "2026-09-25T13:24:36.675Z",
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Franco Peidón obtuvo la medalla de oro en los 800 metros llanos.",
+        "El torneo se desarrolló en la ciudad de Rosario, provincia de Santa Fe.",
+        "El atleta local alcanzó el título en el Campeonato Nacional de Mayores."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "etiquetas": [
+        "Franco Peidón",
+        "campeón argentino",
+        "Rosario"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/peidon-se-consagro-campeon-nacional-en-los-800-metros-696",
+          "fecha": null,
+          "oficial": false,
+          "aporte": "Informó que Franco Peidón ganó la medalla de oro en los 800 metros en el Campeonato Nacional de Mayores en Rosario."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1bglcef",
+          "titulo": "Franco Peidón a la final de los 800 metros en los Juegos Suramericanos",
+          "fecha": "2026-09-22T20:31:49.000Z",
+          "ruta": "/nota/franco-peidon-a-la-final-de-los-800-metros-en-los-juegos-suramericanos-1bglcef"
+        },
+        {
+          "id": "1paz2ii",
+          "titulo": "Atlanta se consagró campeón en la Liga Nacional de béisbol",
+          "fecha": "2026-09-20T22:00:04.000Z",
+          "ruta": "/nota/atlanta-se-consagro-campeon-en-la-liga-nacional-de-beisbol-1paz2ii"
+        },
+        {
+          "id": "1ibi15p",
+          "titulo": "Kevin Gómez se consagró campeón nacional de boxeo",
+          "fecha": "2026-09-20T19:25:07.000Z",
+          "ruta": "/nota/kevin-gomez-se-consagro-campeon-nacional-de-boxeo-1ibi15p"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "franco-peidon-gano-el-oro-nacional-en-800-metros"
     },
     {
       "id": "19nfzay",
@@ -2492,7 +2413,7 @@
       "fecha": "2026-09-24T22:44:44.000Z",
       "sinFecha": false,
       "visto": "2026-09-24T23:00:51.452Z",
-      "relevancia": 71,
+      "relevancia": 63,
       "local": true,
       "publicadaPor": "ia",
       "publicadaCuando": "2026-09-25T06:21:11.502Z",
@@ -5510,12 +5431,11 @@
     }
   ],
   "secciones": [
+    "Automovilismo",
     "Política",
     "Economía",
     "Balcarce",
-    "Automovilismo",
     "Deportes",
-    "Policiales",
     "Cultura y agenda",
     "Tecnología",
     "Agro"
@@ -5524,12 +5444,12 @@
     {
       "nombre": "El autódromo",
       "ranura": "autodromo",
-      "cuantas": 12
+      "cuantas": 13
     },
     {
       "nombre": "Fangio",
       "ranura": "fangio",
-      "cuantas": 12
+      "cuantas": 13
     },
     {
       "nombre": "TC Pick Up",
@@ -5539,7 +5459,7 @@
     {
       "nombre": "El Concejo Deliberante",
       "ranura": "concejo",
-      "cuantas": 6
+      "cuantas": 5
     },
     {
       "nombre": "Ferroviarios",
@@ -5554,10 +5474,10 @@
   ],
   "clima": {
     "ahora": {
-      "temp": 12,
-      "sensacion": 9,
-      "humedad": 68,
-      "viento": 12,
+      "temp": 11,
+      "sensacion": 8,
+      "humedad": 70,
+      "viento": 11,
       "rumbo": "S",
       "cielo": "Despejado",
       "esDeDia": false
@@ -5953,6 +5873,12 @@
       "motivo": "necesita ojo humano: \"murió\""
     },
     {
+      "id": "1m1iatz",
+      "titulo": "Casetta y Levaggi, protagonistas del podio en los 3000…",
+      "seccion": "Región",
+      "motivo": "sección general, sin regla verde"
+    },
+    {
       "id": "5vh7nw",
       "titulo": null,
       "seccion": "Policiales",
@@ -5961,12 +5887,6 @@
     {
       "id": "yt5735",
       "titulo": "Francisco Cerúndolo cayó en su debut en la Laver Cup: los…",
-      "seccion": "País",
-      "motivo": "sección general, sin regla verde"
-    },
-    {
-      "id": "da6b6d",
-      "titulo": "Lionel Messi compró la casa vecina por US$8 millones: cómo…",
       "seccion": "País",
       "motivo": "sección general, sin regla verde"
     },
@@ -5981,6 +5901,12 @@
       "titulo": "Francisco Cerúndolo perdió con el noruego Casper Ruud en…",
       "seccion": "País",
       "motivo": "parece promoción, no noticia: \"sortea\""
+    },
+    {
+      "id": "oco3mq",
+      "titulo": "Mauricio Macri encabezó un acto en Jujuy y bajó la tensión…",
+      "seccion": "País",
+      "motivo": "sección general, sin regla verde"
     },
     {
       "id": "biqthx",
@@ -6001,9 +5927,51 @@
       "motivo": "necesita ojo humano: \"denunció\""
     },
     {
-      "id": "45w2kj",
-      "titulo": "Javier Milei y sus medidas, en vivo: “Netanyahu es uno de…",
-      "seccion": "Política",
+      "id": "w8iewk",
+      "titulo": "Ricardo Montaner se sumó a los mensajes de despedida para…",
+      "seccion": "Cultura y agenda",
+      "motivo": "necesita ojo humano: \"muerte\""
+    },
+    {
+      "id": "v7gq3b",
+      "titulo": "León XIV cuestionó el laicismo francés, alertó sobre la…",
+      "seccion": "País",
+      "motivo": "necesita ojo humano: \"muerte\""
+    },
+    {
+      "id": "mw5w2p",
+      "titulo": "Un caso en 100 millones: una langosta “fantasma” sorprende…",
+      "seccion": "País",
+      "motivo": "necesita ojo humano: \"investigación\""
+    },
+    {
+      "id": "t6mrfp",
+      "titulo": "La historia de amor del Negro Oro y Bruno Federico: se…",
+      "seccion": "País",
+      "motivo": "necesita ojo humano: \"murió\""
+    },
+    {
+      "id": "1rvvhsx",
+      "titulo": "Consejo de Estado decretó la “muerte política” de Iván…",
+      "seccion": "País",
+      "motivo": "necesita ojo humano: \"muerte\""
+    },
+    {
+      "id": "1xna9h3",
+      "titulo": "Murió Marcos Franchi, histórico representante de Maradona…",
+      "seccion": "Deportes",
+      "motivo": "necesita ojo humano: \"hospital\""
+    },
+    {
+      "id": "1l2niin",
+      "titulo": "Un pitbull atacó a una nena de 2 años: está en terapia…",
+      "seccion": "País",
+      "motivo": "necesita ojo humano: \"hospital\""
+    },
+    {
+      "id": "1dzz7a7",
+      "titulo": "Putin dice que no se está preparando para \"una guerra con…",
+      "seccion": "País",
       "motivo": "internacional: sin relación con Balcarce"
     },
     {
@@ -6013,35 +5981,11 @@
       "motivo": "necesita ojo humano: \"hospital\""
     },
     {
-      "id": "didmd",
-      "titulo": null,
-      "seccion": "País",
-      "motivo": "necesita ojo humano: \"víctima\""
-    },
-    {
-      "id": "1xna9h3",
-      "titulo": "Murió Marcos Franchi, histórico representante de Maradona…",
-      "seccion": "Deportes",
-      "motivo": "necesita ojo humano: \"hospital\""
-    },
-    {
-      "id": "23hmxs",
-      "titulo": "Lula prohíbe las apuestas deportivas online a 9 días de…",
-      "seccion": "Política",
-      "motivo": "internacional: sin relación con Balcarce"
-    },
-    {
-      "id": "scsg6u",
-      "titulo": "Quiniela Nacional: resultado del sorteo de la Vespertina…",
-      "seccion": "País",
-      "motivo": "parece promoción, no noticia: \"sorteo\""
-    },
-    {
       "id": "yjljhn",
       "titulo": "Kicillof en Lobería: “Frente a la mentira y el abandono…",
       "seccion": "Política",
       "motivo": "necesita ojo humano: \"hospital\""
     }
   ],
-  "esperandoCuerpo": 42
+  "esperandoCuerpo": 47
 }
