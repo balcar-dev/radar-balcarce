@@ -1,5 +1,5 @@
 {
-  "exportado": "2026-09-25T07:22:05.669Z",
+  "exportado": "2026-09-25T07:31:00.708Z",
   "decisiones": {
     "1951120": {
       "estado": "automatica",
@@ -11182,6 +11182,186 @@
       "deIA": null,
       "por": null,
       "cuando": "2026-09-25T07:22:05.608Z"
+    },
+    "1rmx26h": {
+      "estado": "automatica",
+      "titulo": null,
+      "copete": null,
+      "cuerpo": null,
+      "guion": null,
+      "deIA": null,
+      "por": null,
+      "cuando": "2026-09-25T07:30:43.815Z"
+    },
+    "sadcj1": {
+      "estado": "automatica",
+      "titulo": null,
+      "copete": null,
+      "cuerpo": null,
+      "guion": null,
+      "deIA": null,
+      "por": null,
+      "cuando": "2026-09-25T07:30:46.520Z"
+    },
+    "g61bzy": {
+      "estado": "automatica",
+      "titulo": "Dirigentes nacionales anticipan postulaciones presidenciales",
+      "copete": "Javier Milei y Axel Kicillof habrían adelantado sus postulaciones presidenciales durante la semana, según indicaron publicaciones periodísticas recientes.",
+      "cuerpo": "Los referentes políticos nacionales habrían comenzado a mostrar movimientos típicos de campaña electoral y habrían adelantado sus candidaturas presidenciales durante los últimos días, de acuerdo con los datos difundidos por medios nacionales. La información señala que las figuras públicas reproducen prácticas tradicionales de los postulantes a la máxima magistratura del país.\n\nHasta el momento no se informaron actos formales ni presentaciones oficiales en el distrito de Balcarce vinculadas a estos anuncios, por lo que el impacto local de estas estrategias todavía no se refleja en la agenda política comunal.",
+      "guion": "Dirigentes nacionales anticipan postulaciones presidenciales",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T07:30:49.518Z",
+      "claves": [
+        "Javier Milei y Axel Kicillof habrían adelantado postulaciones",
+        "Movimientos atribuidos a estrategias de campaña electoral",
+        "Sin repercusiones formales informadas en el plano local"
+      ],
+      "seSabe": [
+        "Javier Milei y Axel Kicillof habrían anticipado sus postulaciones presidenciales durante la semana, según las fuentes consultadas."
+      ],
+      "noConfirmado": [
+        "No se especificaron las fechas exactas en las que se habrían producido los anuncios.",
+        "No se detalló si habrá actos de campaña previstos en la zona de Balcarce.",
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Javier Milei y Axel Kicillof habrían anticipado sus postulaciones presidenciales durante la semana, según informaron medios nacionales en las últimas horas.",
+      "etiquetas": [
+        "Javier Milei",
+        "Axel Kicillof",
+        "Balcarce"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/politica/la-campana-se-calienta-la-economia-se-congela-nid24092026/",
+          "fecha": "2026-09-25T06:53:32.000Z",
+          "oficial": false,
+          "aporte": "Informó que Javier Milei y Axel Kicillof habrían anticipado sus postulaciones presidenciales."
+        }
+      ],
+      "verificacion": {
+        "nivel": "BAJA",
+        "porque": "Se apoya en una denuncia o en declaraciones de parte que informó un solo medio, sin confirmación independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "tgkhrm": {
+      "estado": "automatica",
+      "titulo": null,
+      "copete": null,
+      "cuerpo": null,
+      "guion": null,
+      "deIA": null,
+      "por": null,
+      "cuando": "2026-09-25T07:30:51.584Z"
+    },
+    "l4tkq0": {
+      "estado": "automatica",
+      "titulo": null,
+      "copete": null,
+      "cuerpo": null,
+      "guion": null,
+      "deIA": null,
+      "por": null,
+      "cuando": "2026-09-25T07:30:54.170Z"
+    },
+    "mits95": {
+      "estado": "automatica",
+      "titulo": "Una acusación en redes pone en duda la autoría de una novela en Francia",
+      "copete": "Un señalamiento anónimo en internet cuestiona si el escritor canadiense Thélyson Orélien utilizó inteligencia artificial para redactar su obra más reciente.",
+      "cuerpo": "Una serie de señalamientos anónimos difundidos a través de redes sociales generó controversia en el ámbito literario de Francia al cuestionar la autoría del libro del escritor canadiense Thélyson Orélien. La polémica surgió en torno a una de las publicaciones más comentadas de la actual temporada literaria en el país europeo.\n\nLa controversia gira en torno a la presunta utilización de herramientas de inteligencia artificial generativa para la redacción de su primera novela, un aspecto que despertó debate sobre los límites de la tecnología en la creación artística.",
+      "guion": "Una acusación en redes pone en duda la autoría de una novela en Francia",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T07:30:56.512Z",
+      "claves": [
+        "Acusación anónima en redes sociales contra un escritor canadiense",
+        "Se cuestiona el uso de inteligencia artificial en una novela",
+        "El caso genera polémica en la temporada literaria de Francia",
+        "El autor señalado es Thélyson Orélien"
+      ],
+      "seSabe": [
+        "Una acusación anónima en redes sociales puso en duda la autoría de un libro en Francia, según la fuente.",
+        "El autor señalado es el escritor canadiense Thélyson Orélien, de acuerdo con la información.",
+        "El señalamiento sostiene que se habría utilizado inteligencia artificial generativa para redactar su primera novela."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Una acusación anónima en redes sociales cuestiona si el escritor Thélyson Orélien utilizó inteligencia artificial para redactar su novela, generando controversia en el ámbito literario de Francia.",
+      "etiquetas": [
+        "Thélyson Orélien",
+        "Inteligencia artificial",
+        "Francia",
+        "Polémica"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/tecno/2026/09/25/como-saber-si-una-novela-la-escribio-un-humano-o-una-ia-las-claves-tras-la-polemica-por-las-acusaciones-contra-thelyson-orelien/",
+          "fecha": "2026-09-25T03:43:39.000Z",
+          "oficial": false,
+          "aporte": "Informó sobre la acusación anónima en redes sociales contra Thélyson Orélien por el uso presunto de inteligencia artificial en su novela."
+        }
+      ],
+      "verificacion": {
+        "nivel": "BAJA",
+        "porque": "Se apoya en una denuncia o en declaraciones de parte que informó un solo medio, sin confirmación independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "hvo0ic": {
+      "estado": "automatica",
+      "titulo": "WhatsApp incorpora una nueva función para enviar archivos multimedia en alta definición",
+      "copete": "La aplicación de mensajería sumó un ajuste para enviar fotos y videos con calidad superior de manera directa, sin necesidad de recurrir al truco de adjuntarlos como archivo.",
+      "cuerpo": "La plataforma de mensajería instantánea implementó una herramienta que optimiza el envío de contenido visual. La función de Alta Definición disminuye de forma considerable la compresión que el sistema aplicaba de manera predeterminada a las imágenes y a los videos.\n\nHasta el momento, los usuarios que deseaban compartir archivos multimedia sin perder resolución debían utilizar el recurso de enviarlos como documentos adjuntos para evitar el proceso tradicional de compresión.",
+      "guion": "WhatsApp incorpora una nueva funcion para enviar archivos multimedia en alta definicion",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T07:30:58.618Z",
+      "claves": [
+        "Nueva herramienta de Alta Definición en WhatsApp",
+        "Envío directo de fotos y videos con mayor calidad",
+        "Elimina la necesidad de adjuntar archivos como documentos"
+      ],
+      "seSabe": [
+        "WhatsApp incorporó un ajuste para enviar fotos y videos en alta resolución.",
+        "La función reduce la compresión histórica que aplicaba la aplicación.",
+        "Evita el truco previo de enviar el contenido como documento."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "WhatsApp sumó una función para enviar fotos y videos en alta resolución de forma directa, sin necesidad de adjuntarlos como documentos para evitar la compresión.",
+      "etiquetas": [
+        "WhatsApp",
+        "Aplicaciones"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/tecno/2026/09/25/el-ajuste-de-whatsapp-para-enviar-imagenes-y-videos-en-mayor-resolucion-sin-usar-documentos/",
+          "fecha": "2026-09-25T02:47:59.000Z",
+          "oficial": false,
+          "aporte": "Informó sobre la incorporación de la función de Alta Definición en WhatsApp para enviar fotos y videos sin comprimir."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "8bakdz": {
+      "estado": "automatica",
+      "titulo": null,
+      "copete": null,
+      "cuerpo": null,
+      "guion": null,
+      "deIA": null,
+      "por": null,
+      "cuando": "2026-09-25T07:31:00.675Z"
     }
   },
   "horarios": {
