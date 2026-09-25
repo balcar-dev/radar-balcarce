@@ -241,7 +241,10 @@ export function mensajeDeNota(nota, sitio) {
   const copete = recortar(nota.copete);
   if (copete) partes.push(copete);
   if (sitio) partes.push(`Leé la nota completa: ${enlaceDeNota(nota, sitio)}`);
-  if (nota.publicadaPor === 'ia') partes.push('Resumen hecho con IA');
+  // La IA la reescribió si tiene guion: el mismo criterio que la firma de la
+  // web (components/metadatos.js). `publicadaPor` queda vacío en lo que se
+  // reescribe en la nube, y el 25/09 esos posteos no decían que eran de IA.
+  if (nota.publicadaPor === 'ia' || nota.guion) partes.push('Resumen hecho con IA');
   return partes.join('\n\n');
 }
 

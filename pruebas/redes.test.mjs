@@ -501,3 +501,10 @@ test('si no hay secciones distintas alcanza, se completa por puntaje', () => {
   ];
   assert.equal(elegirParaPodcast(notas, { cuantas: 3 }).length, 3);
 });
+
+test('el posteo de Facebook dice que es de IA también cuando la nota se reescribió en la nube (25/09)', () => {
+  const nota = { id: 'x1', titulo: 'Título', copete: 'Copete.', guion: 'Título', publicadaPor: null };
+  assert.match(mensajeDeNota(nota, 'https://radarbalcarce.com'), /Resumen hecho con IA/);
+  const sinIA = { id: 'x2', titulo: 'Título', copete: 'Copete.', publicadaPor: null };
+  assert.doesNotMatch(mensajeDeNota(sinIA, 'https://radarbalcarce.com'), /Resumen hecho con IA/);
+});
