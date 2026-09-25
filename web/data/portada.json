@@ -1,5 +1,5 @@
 {
-  "generado": "2026-09-25T18:59:13.732Z",
+  "generado": "2026-09-25T19:00:41.358Z",
   "notas": [
     {
       "id": "1plbwti",
@@ -733,7 +733,8 @@
       "medios": [
         "Diario La Vanguardia",
         "0223 (Mar del Plata)",
-        "Radio Gabal (FM 104.1)"
+        "Radio Gabal (FM 104.1)",
+        "Puntonueve (FM 100.9)"
       ],
       "enlace": "https://www.diariolavanguardia.com/noticias/44902-reapertura-del-fangio-horarios-accesos-estacionamiento-y-todo-lo-que-hay-que-saber-para-ingresar/",
       "teniaImagenLaFuente": true,
@@ -1645,86 +1646,6 @@
       "slug": "el-repaso-de-la-manana-en-radar-balcarce-franco-colapinto-y-juan-jose"
     },
     {
-      "id": "1v69v60",
-      "titulo": "Kicillof visita la vecina ciudad de Loberia",
-      "copete": "El gobernador bonaerense encabeza un acto en Loberia este viernes, donde entrega una ambulancia, escrituras y netbooks en el marco de su recorrida por la region.",
-      "cuerpo": "El gobernador de la Provincia de Buenos Aires, Axel Kicillof, visita este viernes la vecina ciudad de Lobería en una agenda oficial que coincide con su cumpleaños, acompañado por los ministros de Salud, Nicolás Kreplak, y de Hábitat y Desarrollo Urbano, Silvina Batakis. Las actividades se desarrollan en el CEF número 43, donde el mandatario comparte escenario con el intendente local, Pablo Barrena.\n\nEsta recorrida regional del gobernador bonaerense se produce en la misma jornada en la que el mandatario encabeza la reapertura del autódromo Juan Manuel Fangio en el distrito de Balcarce, un acontecimiento institucional que marca el regreso de las competencias nacionales al circuito serrano tras quince años sin actividad oficial, de acuerdo con la información difundida previamente por este medio.",
-      "guion": "Kicillof visita la vecina ciudad de Loberia",
-      "seccion": "Política",
-      "medios": [
-        "Sendero Regional",
-        "2261 – Noticias de Lobería"
-      ],
-      "enlace": "https://www.senderomultimedios.com.ar/kicillof-celebra-su-cumpleanos-en-loberia-y-entregara-una-ambulancia-escrituras-y-netbooks/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-25T12:55:56.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-25T14:00:47.747Z",
-      "relevancia": 70,
-      "local": true,
-      "publicadaPor": "ia",
-      "publicadaCuando": "2026-09-25T13:51:22.900Z",
-      "temas": [
-        "autodromo",
-        "fangio"
-      ],
-      "como": "automatica",
-      "noConfirmado": [
-        "No se detalló el horario exacto en el que se desarrollarán las actividades previstas en el distrito loberense."
-      ],
-      "textoRedes": "El gobernador Axel Kicillof visita este viernes la vecina ciudad de Lobería para entregar equipamiento sanitario, escrituras y computadoras para escuelas en una jornada de recorrida regional.",
-      "etiquetas": [
-        "Axel Kicillof",
-        "Loberia",
-        "Pablo Barrena",
-        "Salud",
-        "Educacion",
-        "Provincia de Buenos Aires"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Sendero Regional",
-          "enlace": "https://www.senderomultimedios.com.ar/kicillof-celebra-su-cumpleanos-en-loberia-y-entregara-una-ambulancia-escrituras-y-netbooks/",
-          "fecha": "2026-09-25T12:55:56.000Z",
-          "oficial": false,
-          "aporte": "Detalló las actividades, funcionarios presentes y equipamiento entregado durante la visita a Lobería."
-        },
-        {
-          "medio": "2261 – Noticias de Lobería",
-          "enlace": "https://www.2261.com.ar/kicillof-visitara-loberia-en-el-dia-de-su-cumpleanos/",
-          "fecha": "2026-09-23T23:52:12.000Z",
-          "oficial": false,
-          "aporte": "Coincidió en la fecha y la particularidad del cumpleaños del mandatario en su recorrida por la zona."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "1nuz3q",
-          "titulo": "Kicillof visitará Balcarce: inaugurará obras en el autódromo y entregará escrituras",
-          "fecha": "2026-09-16T13:12:10.873Z",
-          "ruta": "/nota/kicillof-visitara-balcarce-inaugurara-obras-en-el-autodromo-y-1nuz3q"
-        },
-        {
-          "id": "uj4h1v",
-          "titulo": "Kicillof encabeza la reinauguración del autódromo en Balcarce",
-          "fecha": "2026-09-25T11:53:01.000Z",
-          "ruta": "/nota/kicillof-encabeza-la-reinauguracion-del-autodromo-en-balcarce-uj4h1v"
-        },
-        {
-          "id": "1e6tvp9",
-          "titulo": "Kicillof encabeza la reapertura del autódromo Juan Manuel Fangio en Balcarce",
-          "fecha": "2026-09-25T10:15:00.000Z",
-          "ruta": "/nota/el-gobernador-bonaerense-encabeza-la-reapertura-del-autodromo-en-1e6tvp9"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron dos medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "kicillof-visita-la-vecina-ciudad-de-loberia"
-    },
-    {
       "id": "164efaj",
       "titulo": "Solicitan una oficina presencial de Telepase en Balcarce",
       "copete": "Concejales locales plantearon la necesidad de contar con un punto de atención presencial para resolver reclamos y errores de cobro en el sistema de peajes.",
@@ -2104,14 +2025,15 @@
       "guion": "La Escuela Municipal de Basquet compite en un torneo en Mar del Plata en Balcarce",
       "seccion": "Deportes",
       "medios": [
-        "Radio Gabal (FM 104.1)"
+        "Radio Gabal (FM 104.1)",
+        "Puntonueve (FM 100.9)"
       ],
       "enlace": "https://www.radiogabal.com.ar/index.php/deportes/experiencia-internacional-para-las-jugadoras-de-la-escuela-municipal-de-basquet",
       "teniaImagenLaFuente": true,
       "fecha": "2026-09-25T11:46:11.000Z",
       "sinFecha": false,
       "visto": "2026-09-25T12:00:43.124Z",
-      "relevancia": 72,
+      "relevancia": 86,
       "local": true,
       "publicadaPor": "ia",
       "publicadaCuando": "2026-09-25T11:57:25.176Z",
@@ -2220,89 +2142,6 @@
         "sugeridoPorIA": "MEDIA"
       },
       "slug": "karina-lupo-y-mariano-barreiro-ganan-la-media-maraton-en-balcarce"
-    },
-    {
-      "id": "kiy3gs",
-      "titulo": "El Concejo Deliberante realiza este jueves la décima cuarta sesión ordinaria en Balcarce",
-      "copete": "El cuerpo legislativo local lleva a cabo este jueves su décima cuarta sesión ordinaria del año con un temario que incluye leasing, obras, transporte y cuestiones ambientales.",
-      "cuerpo": "Los concejales llevan adelante este jueves la décima cuarta sesión ordinaria del año en Balcarce, con el análisis de un extenso orden del día que abarca expedientes sobre servicios, obras y salud, según informó un medio local.\n\nDurante la jornada, el recinto evalúa convalidar decretos de operaciones de leasing y debate iniciativas vinculadas a taxis, remises y mejoras urbanas. Como se había informado en las reuniones previas de la semana, la agenda legislativa incluye expedientes sobre infraestructura, transporte y un pedido de informes sobre la red de agua potable.",
-      "guion": "El Concejo Deliberante realiza este jueves la décima cuarta sesión ordinaria en Balcarce",
-      "seccion": "Política",
-      "medios": [
-        "Diario La Vanguardia"
-      ],
-      "enlace": "https://www.diariolavanguardia.com/noticias/44885-el-concejo-deliberante-vuelve-a-sesionar-los-principales-temas-que-estaran-en-debate/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-25T10:47:08.606Z",
-      "sinFecha": true,
-      "visto": "2026-09-25T10:47:08.606Z",
-      "relevancia": 63,
-      "local": true,
-      "publicadaPor": "ia",
-      "publicadaCuando": "2026-09-25T13:02:40.310Z",
-      "temas": [
-        "concejo"
-      ],
-      "como": "automatica",
-      "claves": [
-        "El Concejo Deliberante lleva a cabo su décima cuarta sesión ordinaria del año.",
-        "El temario incluye leasing, taxis, remises, obras y proyectos ambientales.",
-        "Se debaten iniciativas sobre salud, transporte y pedidos de informes a servicios públicos.",
-        "Tratan reconocimientos a deportistas, instituciones y establecimientos educativos."
-      ],
-      "seSabe": [
-        "Los concejales llevan adelante este jueves la décima cuarta sesión ordinaria del año, según un medio local.",
-        "El orden del día incluye decretos de leasing con Provincia Leasing S.A. con despacho unánime.",
-        "Se analizan proyectos sobre el Estadio Municipal, forestación, red de gas y reparación de un puente.",
-        "Tratan una propuesta técnica de José Luis Costa para el saneamiento de la Laguna La Brava.",
-        "Se evalúan expedientes sobre salud, campañas de prevención y el Programa de Acompañamiento Alimentario.",
-        "Incluye reconocimientos al boxeador Kevin Facundo Gómez y a distintas instituciones locales."
-      ],
-      "noConfirmado": [
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "El Concejo Deliberante de Balcarce lleva adelante este jueves su décima cuarta sesión ordinaria del año con proyectos sobre leasing, transporte, obras y salud.",
-      "etiquetas": [
-        "Concejo Deliberante",
-        "Balcarce",
-        "sesion ordinaria",
-        "obras"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Diario La Vanguardia",
-          "enlace": "https://www.diariolavanguardia.com/noticias/44885-el-concejo-deliberante-vuelve-a-sesionar-los-principales-temas-que-estaran-en-debate/",
-          "fecha": null,
-          "oficial": false,
-          "aporte": "Detalló el orden del día de la décima cuarta sesión ordinaria del Concejo Deliberante y los expedientes en debate."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "1chkxhh",
-          "titulo": "El Concejo Deliberante debate tasas y obras en Balcarce",
-          "fecha": "2026-09-25T02:23:01.000Z",
-          "ruta": "/nota/concejo-deliberante-la-decimocuarta-sesion-tuvo-debates-mas-1chkxhh"
-        },
-        {
-          "id": "1iv58lw",
-          "titulo": "El Concejo Deliberante debate tasas, obras y proyectos en Balcarce",
-          "fecha": "2026-09-24T12:55:31.000Z",
-          "ruta": "/nota/concejo-deliberante-este-jueves-se-desarrollara-el-decimocuarto-1iv58lw"
-        },
-        {
-          "id": "7c7bdz",
-          "titulo": "El Concejo debate eliminar tasas a taxis y remises en Balcarce",
-          "fecha": "2026-09-23T22:58:23.988Z",
-          "ruta": "/nota/taxis-y-remises-debatiran-la-eliminacion-de-tasas-mientras-el-sector-7c7bdz"
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "el-concejo-deliberante-realiza-este-jueves-su-decimocuarta-sesion"
     },
     {
       "id": "8hniuy",
@@ -2516,6 +2355,89 @@
       "slug": "franco-peidon-gano-el-oro-nacional-en-800-metros"
     },
     {
+      "id": "kiy3gs",
+      "titulo": "El Concejo Deliberante realiza este jueves la décima cuarta sesión ordinaria en Balcarce",
+      "copete": "El cuerpo legislativo local lleva a cabo este jueves su décima cuarta sesión ordinaria del año con un temario que incluye leasing, obras, transporte y cuestiones ambientales.",
+      "cuerpo": "Los concejales llevan adelante este jueves la décima cuarta sesión ordinaria del año en Balcarce, con el análisis de un extenso orden del día que abarca expedientes sobre servicios, obras y salud, según informó un medio local.\n\nDurante la jornada, el recinto evalúa convalidar decretos de operaciones de leasing y debate iniciativas vinculadas a taxis, remises y mejoras urbanas. Como se había informado en las reuniones previas de la semana, la agenda legislativa incluye expedientes sobre infraestructura, transporte y un pedido de informes sobre la red de agua potable.",
+      "guion": "El Concejo Deliberante realiza este jueves la décima cuarta sesión ordinaria en Balcarce",
+      "seccion": "Política",
+      "medios": [
+        "Diario La Vanguardia"
+      ],
+      "enlace": "https://www.diariolavanguardia.com/noticias/44885-el-concejo-deliberante-vuelve-a-sesionar-los-principales-temas-que-estaran-en-debate/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-25T10:47:08.606Z",
+      "sinFecha": true,
+      "visto": "2026-09-25T10:47:08.606Z",
+      "relevancia": 63,
+      "local": true,
+      "publicadaPor": "ia",
+      "publicadaCuando": "2026-09-25T13:02:40.310Z",
+      "temas": [
+        "concejo"
+      ],
+      "como": "automatica",
+      "claves": [
+        "El Concejo Deliberante lleva a cabo su décima cuarta sesión ordinaria del año.",
+        "El temario incluye leasing, taxis, remises, obras y proyectos ambientales.",
+        "Se debaten iniciativas sobre salud, transporte y pedidos de informes a servicios públicos.",
+        "Tratan reconocimientos a deportistas, instituciones y establecimientos educativos."
+      ],
+      "seSabe": [
+        "Los concejales llevan adelante este jueves la décima cuarta sesión ordinaria del año, según un medio local.",
+        "El orden del día incluye decretos de leasing con Provincia Leasing S.A. con despacho unánime.",
+        "Se analizan proyectos sobre el Estadio Municipal, forestación, red de gas y reparación de un puente.",
+        "Tratan una propuesta técnica de José Luis Costa para el saneamiento de la Laguna La Brava.",
+        "Se evalúan expedientes sobre salud, campañas de prevención y el Programa de Acompañamiento Alimentario.",
+        "Incluye reconocimientos al boxeador Kevin Facundo Gómez y a distintas instituciones locales."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El Concejo Deliberante de Balcarce lleva adelante este jueves su décima cuarta sesión ordinaria del año con proyectos sobre leasing, transporte, obras y salud.",
+      "etiquetas": [
+        "Concejo Deliberante",
+        "Balcarce",
+        "sesion ordinaria",
+        "obras"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Diario La Vanguardia",
+          "enlace": "https://www.diariolavanguardia.com/noticias/44885-el-concejo-deliberante-vuelve-a-sesionar-los-principales-temas-que-estaran-en-debate/",
+          "fecha": null,
+          "oficial": false,
+          "aporte": "Detalló el orden del día de la décima cuarta sesión ordinaria del Concejo Deliberante y los expedientes en debate."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1chkxhh",
+          "titulo": "El Concejo Deliberante debate tasas y obras en Balcarce",
+          "fecha": "2026-09-25T02:23:01.000Z",
+          "ruta": "/nota/concejo-deliberante-la-decimocuarta-sesion-tuvo-debates-mas-1chkxhh"
+        },
+        {
+          "id": "1iv58lw",
+          "titulo": "El Concejo Deliberante debate tasas, obras y proyectos en Balcarce",
+          "fecha": "2026-09-24T12:55:31.000Z",
+          "ruta": "/nota/concejo-deliberante-este-jueves-se-desarrollara-el-decimocuarto-1iv58lw"
+        },
+        {
+          "id": "7c7bdz",
+          "titulo": "El Concejo debate eliminar tasas a taxis y remises en Balcarce",
+          "fecha": "2026-09-23T22:58:23.988Z",
+          "ruta": "/nota/taxis-y-remises-debatiran-la-eliminacion-de-tasas-mientras-el-sector-7c7bdz"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "el-concejo-deliberante-realiza-este-jueves-su-decimocuarta-sesion"
+    },
+    {
       "id": "19nfzay",
       "titulo": "Lionel Messi expande su cadena de hoteles y prepara nuevos proyectos",
       "copete": "El capitán argentino avanza con la expansión de su cadena hotelera MiM Hotels tras una reunión en Miami con el presidente de Meliá Hotels International, Gabriel Escarrer, para planificar nuevos proyectos conjuntos.",
@@ -2582,7 +2504,8 @@
       "seccion": "Automovilismo",
       "medios": [
         "La Noticia 1",
-        "LU9 Mar del Plata"
+        "LU9 Mar del Plata",
+        "News Balcarce (FM 91.7)"
       ],
       "enlace": "https://www.lanoticia1.com/noticia/kicillof-reinaugura-el-autodromo-fangio-en-balcarce",
       "teniaImagenLaFuente": true,
@@ -3110,6 +3033,86 @@
       "slug": "el-senado-aprueba-la-reforma-de-zona-fria-en-balcarce"
     },
     {
+      "id": "1tspv07",
+      "titulo": "El Concejo aprueba prorrogar deudas de agua en Balcarce",
+      "copete": "El Concejo Deliberante aprobó una prórroga para el pago de deudas de agua y solicitó información sobre el nuevo gerente de la empresa prestataria.",
+      "cuerpo": "Durante la última sesión del Concejo Deliberante, los ediles aprobaron una extensión en los plazos para regularizar las deudas por el servicio de agua en el distrito. Además, se trató un proyecto de comunicación presentado por la concejal Sol Di Gerónimo, perteneciente al bloque Fuerza Patria, mediante el cual se solicitó que cese el hostigamiento a los vecinos por parte del estudio jurídico encargado de las cobranzas.\n\nEn la misma jornada legislativa, los representantes comunales plantearon la necesidad de conocer formalmente a la nueva autoridad gerencial de la empresa prestataria del servicio sanitario, con el fin de entablar un canal de diálogo institucional ante los reclamos vigentes de la comunidad balcarceña.",
+      "guion": "El Concejo aprueba prorrogar deudas de agua en Balcarce",
+      "seccion": "Política",
+      "medios": [
+        "Puntonueve (FM 100.9)"
+      ],
+      "enlace": "https://puntonueve.com.ar/aprobaron-prorroga-para-deudas-de-agua-y-piden-conocer-al-nuevo-gerente-de-la-empresa/",
+      "teniaImagenLaFuente": false,
+      "fecha": "2026-09-25T00:05:57.000Z",
+      "sinFecha": false,
+      "visto": "2026-09-25T00:30:49.995Z",
+      "relevancia": 67,
+      "local": true,
+      "publicadaPor": "ia",
+      "publicadaCuando": "2026-09-25T06:40:35.389Z",
+      "temas": [
+        "concejo"
+      ],
+      "como": "automatica",
+      "claves": [
+        "El Concejo Deliberante aprobó una prórroga para deudas de agua",
+        "Trataron un proyecto sobre el accionar de un estudio jurídico de cobranzas",
+        "Pidieron precisiones sobre la asunción del nuevo gerente de la empresa"
+      ],
+      "seSabe": [
+        "El Concejo Deliberante aprobó una prórroga para deudas de agua según el informe del medio local",
+        "La concejal Sol Di Gerónimo presentó un proyecto sobre reclamos a vecinos por parte de un estudio jurídico",
+        "Se solicitó conocer la identidad y detalles del nuevo gerente de la empresa prestataria"
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El Concejo Deliberante aprobó una prórroga para el pago de deudas de agua y pidió informes sobre el nuevo gerente de la empresa prestadora.",
+      "etiquetas": [
+        "Concejo Deliberante",
+        "agua",
+        "deudas",
+        "Balcarce",
+        "Fuerza Patria"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Puntonueve (FM 100.9)",
+          "enlace": "https://puntonueve.com.ar/aprobaron-prorroga-para-deudas-de-agua-y-piden-conocer-al-nuevo-gerente-de-la-empresa/",
+          "fecha": "2026-09-25T00:05:57.000Z",
+          "oficial": false,
+          "aporte": "Informó sobre la aprobación de la prórroga para deudas de agua y el proyecto presentado en el Concejo Deliberante."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "yjx2ys",
+          "titulo": "En concurso: una empresa del agro consiguió una prórroga para presentar una propuesta a sus acreedores y hoy factura unos US$20 millones",
+          "fecha": "2026-09-23T21:01:25.000Z",
+          "ruta": "/nota/en-concurso-una-empresa-del-agro-consiguio-una-prorroga-para-yjx2ys"
+        },
+        {
+          "id": "1n4w9ua",
+          "titulo": "Piden instalar un punto presencial para gestionar el TelePASE en Balcarce o en el peaje de la Ruta 226",
+          "fecha": "2026-09-23T14:56:16.191Z",
+          "ruta": "/nota/piden-instalar-un-punto-presencial-para-gestionar-el-telepase-en-1n4w9ua"
+        },
+        {
+          "id": "32591i",
+          "titulo": "Piden un punto TelePASE en Balcarce",
+          "fecha": "2026-09-23T12:51:34.000Z",
+          "ruta": "/nota/piden-un-punto-telepase-en-balcarce-32591i"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "el-concejo-pide-prorroga-para-deudas-de-agua-en-balcarce"
+    },
+    {
       "id": "1mkm1na",
       "titulo": "El autódromo Juan Manuel Fangio abre sus puertas en Balcarce",
       "copete": "El histórico circuito serrano recibe nuevamente al público en la previa de la competencia de TC Pick Up, tras casi quince años sin actividad oficial.",
@@ -3358,6 +3361,221 @@
       "slug": "congelan-las-tarifas-de-la-vtv-en-balcarce"
     },
     {
+      "id": "1muc0dj",
+      "titulo": "El Concejo aprueba denominar Paseo Intendente Juan José Mare al circuito del Cerro El Triu",
+      "copete": "El Concejo Deliberante aprobó la ordenanza para nombrar Paseo Intendente Juan José Mare a la Vuelta Interna del Cerro El Triunfo, por iniciativa del bloque oficialista.",
+      "cuerpo": "La iniciativa fue presentada por la concejal Sandra Divito, integrante del bloque Juntos por el Cambio, y recibió el visto bueno del cuerpo deliberativo en las últimas horas.\n\nDe esta manera, el sector conocido tradicionalmente como la Vuelta Interna dentro del tradicional espacio verde de la ciudad llevará el nombre del exjefe comunal.\n\nLa medida busca homenajear su paso por la función pública en el distrito mediante la nominación oficial de este concurrido circuito recreativo y deportivo.",
+      "guion": "El Concejo aprueba denominar Paseo Intendente Juan José Mare al circuito del Cerro El Triunfo en Balcarce",
+      "seccion": "Política",
+      "medios": [
+        "Puntonueve (FM 100.9)"
+      ],
+      "enlace": "https://puntonueve.com.ar/mare-tendra-su-paseo-en-el-cerro-el-triunfo-tras-la-aprobacion-del-concejo-deliberante/",
+      "teniaImagenLaFuente": false,
+      "fecha": "2026-09-24T23:30:13.000Z",
+      "sinFecha": false,
+      "visto": "2026-09-25T10:47:08.606Z",
+      "relevancia": 67,
+      "local": true,
+      "publicadaPor": "ia",
+      "publicadaCuando": "2026-09-25T06:40:37.679Z",
+      "temas": [
+        "concejo",
+        "cerro"
+      ],
+      "como": "automatica",
+      "claves": [
+        "El Concejo Deliberante aprobó una nueva denominación para el Cerro El Triunfo.",
+        "La Vuelta Interna se llamará Paseo Intendente Juan José Mare.",
+        "El proyecto fue presentado por la concejal Sandra Divito de Juntos por el Cambio."
+      ],
+      "seSabe": [
+        "El Concejo Deliberante aprobó la ordenanza para denominar a la Vuelta Interna del Cerro El Triunfo como Paseo Intendente Juan José Mare.",
+        "El proyecto fue impulsado por la concejal Sandra Divito, perteneciente al bloque Juntos por el Cambio."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El Concejo Deliberante aprobó que la Vuelta Interna del Cerro El Triunfo lleve el nombre de Paseo Intendente Juan José Mare, tras una iniciativa del bloque Juntos por el Cambio.",
+      "etiquetas": [
+        "Concejo Deliberante",
+        "Cerro El Triunfo",
+        "Juan José Mare",
+        "Sandra Divito",
+        "Balcarce"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Puntonueve (FM 100.9)",
+          "enlace": "https://puntonueve.com.ar/mare-tendra-su-paseo-en-el-cerro-el-triunfo-tras-la-aprobacion-del-concejo-deliberante/",
+          "fecha": "2026-09-24T23:30:13.000Z",
+          "oficial": false,
+          "aporte": "Informó la aprobación del Concejo Deliberante para nombrar Paseo Intendente Juan José Mare a la Vuelta Interna del Cerro El Triunfo a propuesta de la concejal Sandra Divito."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "vf07qr",
+          "titulo": "Festejos por el Día del Estudiante en el Cerro El Triunfo",
+          "fecha": "2026-09-18T17:07:18.000Z",
+          "ruta": "/nota/festejos-por-el-dia-del-estudiante-en-el-cerro-el-triunfo-vf07qr"
+        },
+        {
+          "id": "834bwh",
+          "titulo": "Festejos por el Día del Estudiante en el cerro El Triunfo",
+          "fecha": "2026-09-18T15:12:07.000Z",
+          "ruta": "/nota/festejos-por-el-dia-del-estudiante-en-el-cerro-el-triunfo-834bwh"
+        },
+        {
+          "id": "19i5zse",
+          "titulo": "Día del Estudiante: habrá una jornada recreativa y musical en el Cerro El Triunfo",
+          "fecha": "2026-09-18T19:48:36.000Z",
+          "ruta": "/nota/dia-del-estudiante-habra-una-jornada-recreativa-y-musical-en-el-cerro-19i5zse"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "el-concejo-aprueba-denominar-paseo-intendente-juan-jose-mare-al"
+    },
+    {
+      "id": "af5xg4",
+      "titulo": "El Senado aprueba la reforma del régimen de Zona Fría",
+      "copete": "El Senado nacional convirtió en ley la reforma del régimen de Zona Fría. La modificación afecta a Balcarce y a otros distritos bonaerenses que pierden el beneficio automático en las tarifas de gas.",
+      "cuerpo": "Con esta modificación, el esquema vuelve a restringir su alcance territorial a la Patagonia, la Puna y el departamento mendocino de Malargüe.\n\nComo excepción, la normativa contempla un esquema focalizado para hogares cuyos ingresos resulten inferiores a tres Canastas Básicas Totales.\n\nEn la provincia de Buenos Aires, el cambio impactará sobre más de un millón de hogares que perderán la bonificación territorial. El texto establece el reemplazo del beneficio anterior por un criterio socioeconómico directo.",
+      "guion": "El Senado aprueba la reforma del régimen de Zona Fría",
+      "seccion": "Balcarce",
+      "medios": [
+        "Puntonueve (FM 100.9)"
+      ],
+      "enlace": "https://puntonueve.com.ar/es-ley-el-cambio-del-regimen-de-zona-fria-94-municipios-bonaerenses-se-quedan-afuera/",
+      "teniaImagenLaFuente": false,
+      "fecha": "2026-09-24T23:14:55.000Z",
+      "sinFecha": false,
+      "visto": "2026-09-24T23:30:55.262Z",
+      "relevancia": 67,
+      "local": true,
+      "publicadaPor": "ia",
+      "publicadaCuando": "2026-09-25T12:40:18.816Z",
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "El Senado aprobó la reforma del régimen de Zona Fría.",
+        "Balcarce figura entre los distritos que pierden el beneficio automático.",
+        "Se prevé un esquema focalizado según ingresos del hogar."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "etiquetas": [
+        "Zona Fría",
+        "Senado",
+        "Gas",
+        "Balcarce",
+        "Tarifas"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Puntonueve (FM 100.9)",
+          "enlace": "https://puntonueve.com.ar/es-ley-el-cambio-del-regimen-de-zona-fria-94-municipios-bonaerenses-se-quedan-afuera/",
+          "fecha": "2026-09-24T23:14:55.000Z",
+          "oficial": false,
+          "aporte": "Detalló la sanción de la ley en el Senado, los municipios afectados en la provincia de Buenos Aires y los criterios del nuevo esquema focalizado."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "el-senado-aprueba-la-reforma-de-zona-fria-en-balcarce"
+    },
+    {
+      "id": "ntbsnv",
+      "titulo": "Mar del Plata recibe la previa del automovilismo en Balcarce",
+      "copete": "Una conferencia de prensa y una exhibición de TC Pick Up en Mar del Plata marcaron la previa del retorno de la actividad deportiva al autódromo Juan Manuel Fangio.",
+      "cuerpo": "Participaron Sebastián D’Andrea, Christian Ledesma, Juan José Suárez, Diego De Carlo y José Ciantini. Tras el encuentro, una camioneta de TC Pick Up conducida por Ciantini realizó un recorrido por la costa marplatense que partió desde el Torreon del Monje y culminó en la Rotonda del Golf.\n\nEl cronograma continuará en Balcarce este viernes desde las 18:30 con una caravana que iniciará en la estación Shell de avenida San Martín y 107, pasará por Plaza Libertad y finalizará frente al Museo del Automovilismo Juan Manuel Fangio, donde se realizara la conferencia oficial de la octava fecha. Como se había informado a principios de semana, la vuelta de la competencia nacional generó gran expectativa en la region, con largas filas de público en el predio y declaraciones de pilotos locales sobre el significado de correr nuevamente en la ciudad.",
+      "guion": "Mar del plata recibe la previa del automovilismo en Balcarce",
+      "seccion": "Automovilismo",
+      "medios": [
+        "Puntonueve (FM 100.9)"
+      ],
+      "enlace": "https://puntonueve.com.ar/mar-del-plata-vibro-con-la-tc-pick-up-en-la-previa-del-regreso-del-automovilismo-a-balcarce/",
+      "teniaImagenLaFuente": false,
+      "fecha": "2026-09-24T23:08:08.000Z",
+      "sinFecha": false,
+      "visto": "2026-09-24T23:30:55.262Z",
+      "relevancia": 75,
+      "local": true,
+      "publicadaPor": "ia",
+      "publicadaCuando": "2026-09-25T12:06:02.776Z",
+      "temas": [
+        "autodromo",
+        "tc-pick-up",
+        "fangio"
+      ],
+      "como": "automatica",
+      "claves": [
+        "Conferencia de prensa y exhibición de TC Pick Up en Mar del Plata.",
+        "Recorrido de la categoría por la costa marplatense con presencia de pilotos.",
+        "Continuidad de las actividades promocionales este viernes en Balcarce.",
+        "Gran expectativa regional por el regreso de la competencia al autódromo."
+      ],
+      "seSabe": [
+        "Se realizó una conferencia de prensa este jueves en Mar del Plata con autoridades y pilotos.",
+        "Una camioneta de TC Pick Up conducida por José Ciantini recorrió la costa marplatense.",
+        "El cronograma seguirá este viernes en Balcarce con una caravana hacia el Museo Juan Manuel Fangio."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Mar del Plata fue escenario de la previa del regreso del automovilismo a Balcarce con una exhibición de TC Pick Up y una conferencia oficial. Las actividades promocionales continúan este viernes en la ciudad.",
+      "etiquetas": [
+        "Automovilismo",
+        "Autodromo Juan Manuel Fangio",
+        "Balcarce",
+        "Mar del Plata",
+        "TC Pick Up"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Puntonueve (FM 100.9)",
+          "enlace": "https://puntonueve.com.ar/mar-del-plata-vibro-con-la-tc-pick-up-en-la-previa-del-regreso-del-automovilismo-a-balcarce/",
+          "fecha": "2026-09-24T23:08:08.000Z",
+          "oficial": false,
+          "aporte": "Detalló las actividades promocionales previas en Mar del Plata y Balcarce, las autoridades presentes y los recorridos de los vehículos."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "4v2vga",
+          "titulo": "Largas filas en Balcarce por el regreso del automovilismo",
+          "fecha": "2026-09-24T13:34:15.000Z",
+          "ruta": "/nota/largas-filas-en-balcarce-por-el-regreso-del-automovilismo-4v2vga"
+        },
+        {
+          "id": "xtlwre",
+          "titulo": "Largas filas en Balcarce por el regreso del automovilismo en Balcarce",
+          "fecha": "2026-09-24T12:24:00.000Z",
+          "ruta": "/nota/largas-filas-para-ingresar-al-autodromo-fangio-xtlwre"
+        },
+        {
+          "id": "1sjses1",
+          "titulo": "Mangoni palpita el regreso del automovilismo a Balcarce",
+          "fecha": "2026-09-23T22:16:46.000Z",
+          "ruta": "/nota/mangoni-palpita-el-regreso-del-automovilismo-a-balcarce-1sjses1"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "realizan-una-caravana-previa-en-mar-del-plata"
+    },
+    {
       "id": "wwbmd7",
       "titulo": "La familia Crespi confirma que la fábrica sigue en Balcarce",
       "copete": "Los familiares de Tulio Crespi agradecieron el apoyo tras su despedida y aseguraron que la tradicional marca de automóviles continuará en plena actividad.",
@@ -3413,6 +3631,75 @@
         "sugeridoPorIA": "MEDIA"
       },
       "slug": "la-familia-crespi-confirma-que-la-fabrica-sigue-en-balcarce"
+    },
+    {
+      "id": "1d356vs",
+      "titulo": "El Concejo aprueba el proyecto escolar Balcarce se recorre jugando en Balcarce",
+      "copete": "El Concejo Deliberante aprobó por unanimidad la iniciativa impulsada por la Escuela Primaria N° 3 y Turismo para conocer la ciudad mediante un recorrido lúdico por puntos de interés local.",
+      "cuerpo": "El Honorable Concejo Deliberante aprobó por unanimidad el proyecto «Balcarce se recorre jugando», impulsado por la Escuela Primaria N° 3 en conjunto con el área de Turismo, durante la décimo cuarta sesión ordinaria. Previamente al ingreso al recinto, los alumnos entregaron llaveros con el mapa de la ciudad a los ediles.\n\nAdemás, los ediles Paciaroni, Di Gerónimo y Guillén felicitaron a los estudiantes y docentes por el trabajo articulado que busca que el aprendizaje trascienda las aulas.\n\nEn materia legislativa, el cuerpo deliberativo también trató diversas iniciativas sobre tasas, obras y proyectos durante su reunión semanal.",
+      "guion": "El Concejo aprueba el proyecto escolar Balcarce se recorre jugando en Balcarce",
+      "seccion": "Política",
+      "medios": [
+        "Puntonueve (FM 100.9)"
+      ],
+      "enlace": "https://puntonueve.com.ar/balcarce-se-recorre-jugando-el-proyecto-de-la-escuela-primaria-n-3-fue-aprobado-por-unanimidad/",
+      "teniaImagenLaFuente": false,
+      "fecha": "2026-09-24T23:00:34.000Z",
+      "sinFecha": false,
+      "visto": "2026-09-24T23:00:51.452Z",
+      "relevancia": 67,
+      "local": true,
+      "publicadaPor": "ia",
+      "publicadaCuando": "2026-09-25T12:40:18.816Z",
+      "temas": [
+        "concejo"
+      ],
+      "como": "automatica",
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El Concejo Deliberante aprobó por unanimidad el proyecto «Balcarce se recorre jugando», una iniciativa de la Escuela Primaria N° 3 y el área de Turismo para conocer los atractivos locales a través de una experiencia lúdica.",
+      "etiquetas": [
+        "Concejo Deliberante",
+        "Escuela Primaria N° 3",
+        "Turismo",
+        "Balcarce se recorre jugando"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Puntonueve (FM 100.9)",
+          "enlace": "https://puntonueve.com.ar/balcarce-se-recorre-jugando-el-proyecto-de-la-escuela-primaria-n-3-fue-aprobado-por-unanimidad/",
+          "fecha": "2026-09-24T23:00:34.000Z",
+          "oficial": false,
+          "aporte": "Detalló la aprobación unánime del proyecto en el Concejo Deliberante, la presentación a cargo del concejal Paciaroni y el contenido de la iniciativa lúdica y turística."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "e4vkqm",
+          "titulo": "La tecnología, una herramienta para trabajar la convivencia en la Escuela Primaria N° 3",
+          "fecha": "2026-09-21T09:08:05.000Z",
+          "ruta": "/nota/la-tecnologia-una-herramienta-para-trabajar-la-convivencia-en-la-e4vkqm"
+        },
+        {
+          "id": "jul4v3",
+          "titulo": "Hoy Balcarce «se recorre jugando».",
+          "fecha": "2026-09-16T15:09:41.000Z",
+          "ruta": "/nota/hoy-balcarce-se-recorre-jugando-jul4v3"
+        },
+        {
+          "id": "1iv58lw",
+          "titulo": "El Concejo Deliberante debate tasas, obras y proyectos en Balcarce",
+          "fecha": "2026-09-24T12:55:31.000Z",
+          "ruta": "/nota/concejo-deliberante-este-jueves-se-desarrollara-el-decimocuarto-1iv58lw"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "el-concejo-aprueba-un-juego-turistico-escolar-en-balcarce"
     },
     {
       "id": "15fat14",
@@ -4072,6 +4359,200 @@
       "slug": "el-stm-y-el-gobierno-cerraron-un-acuerdo-con-una-recomposicion"
     },
     {
+      "id": "jul3vf",
+      "titulo": "Una referente de disciplinas chinas visita el Municipio en Balcarce",
+      "copete": "La maestra Wu Huimin fue recibida por las autoridades locales en el marco de una jornada abierta a la comunidad dedicada a prácticas corporales tradicionales.",
+      "cuerpo": "El intendente municipal, Esteban Reino, junto al secretario de Gobierno, Ricardo Stoppani, recibió a la maestra Wu Huimin, especialista en disciplinas tradicionales chinas que visita la ciudad para una serie de actividades públicas.\n\nDurante la jornada gratuita destinada a los vecinos, se programó además una presentación de Daoyin Yangsheng Gong a cargo de la maestra Ana Wu, quien posee una amplia trayectoria internacional en artes marciales y Qigong. La especialista cuenta con reconocimientos en el ámbito deportivo y directivo a nivel global, y encabeza instituciones dedicadas a la difusión de estas prácticas orientales.\n\nEstas propuestas recreativas y saludables buscan acercar a la comunidad nuevas alternativas de bienestar integral mediante movimientos corporales suaves, respiración consciente y concentración mental.",
+      "guion": "Una referente de disciplinas chinas visita el Municipio en Balcarce",
+      "seccion": "Política",
+      "medios": [
+        "News Balcarce (FM 91.7)"
+      ],
+      "enlace": "https://newsbalcarce.com.ar/?p=30849",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-24T21:28:44.000Z",
+      "sinFecha": false,
+      "visto": "2026-09-24T21:30:39.193Z",
+      "relevancia": 73,
+      "local": true,
+      "publicadaPor": "ia",
+      "publicadaCuando": "2026-09-25T12:15:37.284Z",
+      "temas": [
+        "autodromo",
+        "fangio"
+      ],
+      "como": "automatica",
+      "claves": [
+        "El intendente Esteban Reino recibió a la maestra Wu Huimin.",
+        "Se programó una clase abierta de Chi Kung en plaza Libertad.",
+        "La actividad cuenta con el apoyo de la Subsecretaría de Deporte y Recreación."
+      ],
+      "seSabe": [
+        "El intendente Esteban Reino y el secretario de Gobierno Ricardo Stoppani recibieron a la maestra Wu Huimin.",
+        "Se realizará una clase abierta de Chi Kung y una presentación de Daoyin Yangsheng Gong en plaza Libertad.",
+        "La actividad cuenta con el auspicio de la Subsecretaría de Deporte y Recreación."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "La referente de disciplinas tradicionales chinas Wu Huimin fue recibida por las autoridades locales y encabeza una jornada abierta con clases gratuitas para los vecinos en plaza Libertad.",
+      "etiquetas": [
+        "Wu Huimin",
+        "Chi Kung",
+        "Deporte",
+        "Plaza Libertad",
+        "Balcarce"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "News Balcarce (FM 91.7)",
+          "enlace": "https://newsbalcarce.com.ar/?p=30849",
+          "fecha": "2026-09-24T21:28:44.000Z",
+          "oficial": false,
+          "aporte": "Detalló la visita institucional de la maestra Wu Huimin y las actividades abiertas a la comunidad programadas en la ciudad."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "86l1ng",
+          "titulo": "Reino recibió a referente de disciplinas tradicionales chinas",
+          "fecha": "2026-09-24T16:09:50.000Z",
+          "ruta": "/nota/reino-recibio-a-referente-de-disciplinas-tradicionales-chinas-86l1ng"
+        },
+        {
+          "id": "1408sz9",
+          "titulo": "El intendente recibe a la maestra Wu Huimin en Balcarce",
+          "fecha": "2026-09-24T20:19:56.506Z",
+          "ruta": "/nota/esteban-reino-recibio-a-la-maestra-wu-huimin-en-balcarce-1408sz9"
+        },
+        {
+          "id": "gfro59",
+          "titulo": "El autódromo Juan Manuel Fangio vuelve a recibir automovilismo nacional en Balcarce",
+          "fecha": "2026-09-24T19:48:00.000Z",
+          "ruta": "/nota/el-autodromo-juan-manuel-fangio-vuelve-a-recibir-automovilismo-gfro59"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "el-intendente-recibe-a-la-maestra-wu-huimin-en-balcarce"
+    },
+    {
+      "id": "1k3g7wg",
+      "titulo": "El intendente recibe a autoridades del Club de Leones en Balcarce",
+      "copete": "El intendente Esteban Reino mantuvo un encuentro protocolar en el Palacio Municipal con representantes del Club de Leones para conversar sobre el trabajo social en la comunidad.",
+      "cuerpo": "De acuerdo con la información oficial y los medios locales, el jefe comunal mantuvo un encuentro protocolar con el gobernador del Distrito O-3 de la organización, Christian Bousquet.\n\nEn el transcurso del encuentro se destacó el rol que cumplen las entidades intermedias y el aporte que realizan mediante acciones solidarias y de servicio. Reino agradeció la visita de las autoridades y valoró la disposición para continuar fortaleciendo los vínculos comunitarios.",
+      "guion": "El intendente recibe a autoridades del Club de Leones en Balcarce",
+      "seccion": "Política",
+      "medios": [
+        "Diario La Vanguardia",
+        "News Balcarce (FM 91.7)",
+        "Infórmese Primero (FM 104.9)",
+        "Puntonueve (FM 100.9)",
+        "Municipalidad de Balcarce"
+      ],
+      "enlace": "https://www.diariolavanguardia.com/noticias/44894-reino-recibio-a-autoridades-del-club-de-leones-en-el-palacio-municipal/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-24T21:18:42.000Z",
+      "sinFecha": false,
+      "visto": "2026-09-24T21:30:39.193Z",
+      "relevancia": 100,
+      "local": true,
+      "publicadaPor": "ia",
+      "publicadaCuando": "2026-09-25T11:57:25.176Z",
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Reino recibió a referentes del Club de Leones en el Palacio Municipal.",
+        "Participó el gobernador del Distrito O-3, Christian Bousquet.",
+        "Dialogaron sobre las iniciativas solidarias en la comunidad."
+      ],
+      "seSabe": [
+        "El intendente Esteban Reino recibió a autoridades del Club de Leones en la Sala de los Intendentes, según informó el municipio.",
+        "Participaron el gobernador del Distrito O-3, Christian Bousquet, y la presidenta local, María de los Ángeles Rodríguez.",
+        "También estuvieron presentes los integrantes Ricardo Cacace y Jorge Baliña.",
+        "Las autoridades dialogaron sobre el trabajo social y las acciones solidarias en la comunidad."
+      ],
+      "textoRedes": "El intendente Esteban Reino recibió a autoridades del Club de Leones en el Palacio Municipal para dialogar sobre el trabajo social y las acciones solidarias que la institución desarrolla en la comunidad.",
+      "etiquetas": [
+        "Reino",
+        "Club de Leones",
+        "Balcarce"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Diario La Vanguardia",
+          "enlace": "https://www.diariolavanguardia.com/noticias/44894-reino-recibio-a-autoridades-del-club-de-leones-en-el-palacio-municipal/",
+          "fecha": "2026-09-24T21:18:42.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "News Balcarce (FM 91.7)",
+          "enlace": "https://newsbalcarce.com.ar/?p=30845",
+          "fecha": "2026-09-24T21:18:42.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Infórmese Primero (FM 104.9)",
+          "enlace": "http://www.blogger.com/feeds/8495648477830064035/posts/default/6360410155648573649",
+          "fecha": "2026-09-24T20:26:07.021Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Puntonueve (FM 100.9)",
+          "enlace": "https://puntonueve.com.ar/reino-recibio-a-autoridades-del-club-de-leones-en-la-sala-de-los-intendentes/",
+          "fecha": "2026-09-24T19:19:45.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Radio Gabal (FM 104.1)",
+          "enlace": "https://www.radiogabal.com.ar/index.php/comunidad/reino-recibio-a-autoridades-del-club-de-leones-en-el-palacio-municipal",
+          "fecha": "2026-09-24T19:00:58.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Municipalidad de Balcarce",
+          "enlace": "https://balcarce.gob.ar/2026/09/24/reino-recibio-a-autoridades-del-club-de-leones/",
+          "fecha": "2026-09-24T16:29:36.000Z",
+          "oficial": true,
+          "aporte": null
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "awfv2d",
+          "titulo": "Reino recibió a autoridades del Club de Leones",
+          "fecha": "2026-09-24T19:19:45.000Z",
+          "ruta": "/nota/reino-recibio-a-autoridades-del-club-de-leones-awfv2d"
+        },
+        {
+          "id": "x1ihjl",
+          "titulo": "Reino recibió a autoridades del Club de Leones",
+          "fecha": "2026-09-24T16:29:36.000Z",
+          "ruta": "/nota/reino-recibio-a-autoridades-del-club-de-leones-x1ihjl"
+        },
+        {
+          "id": "86l1ng",
+          "titulo": "Reino recibió a referente de disciplinas tradicionales chinas",
+          "fecha": "2026-09-24T16:09:50.000Z",
+          "ruta": "/nota/reino-recibio-a-referente-de-disciplinas-tradicionales-chinas-86l1ng"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo confirman cinco medios independientes y Municipalidad de Balcarce.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "esteban-reino-recibe-al-club-de-leones-en-balcarce"
+    },
+    {
       "id": "qx0kz",
       "titulo": "El municipio y el sindicato firman el acuerdo paritario en Balcarce",
       "copete": "El intendente Esteban Reino y la secretaria general del STM, Xoana Martínez, acordaron la pauta salarial para los trabajadores municipales hasta marzo de 2027.",
@@ -4441,117 +4922,6 @@
       "slug": "jovenes-balcarcenas-participaran-de-un-torneo-internacional-de"
     },
     {
-      "id": "1k3g7wg",
-      "titulo": "El intendente recibe a autoridades del Club de Leones en Balcarce",
-      "copete": "El intendente Esteban Reino mantuvo un encuentro protocolar en el Palacio Municipal con representantes del Club de Leones para conversar sobre el trabajo social en la comunidad.",
-      "cuerpo": "De acuerdo con la información oficial y los medios locales, el jefe comunal mantuvo un encuentro protocolar con el gobernador del Distrito O-3 de la organización, Christian Bousquet.\n\nEn el transcurso del encuentro se destacó el rol que cumplen las entidades intermedias y el aporte que realizan mediante acciones solidarias y de servicio. Reino agradeció la visita de las autoridades y valoró la disposición para continuar fortaleciendo los vínculos comunitarios.",
-      "guion": "El intendente recibe a autoridades del Club de Leones en Balcarce",
-      "seccion": "Política",
-      "medios": [
-        "Diario La Vanguardia",
-        "Infórmese Primero (FM 104.9)",
-        "Municipalidad de Balcarce"
-      ],
-      "enlace": "https://www.diariolavanguardia.com/noticias/44894-reino-recibio-a-autoridades-del-club-de-leones-en-el-palacio-municipal/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-24T20:26:07.021Z",
-      "sinFecha": false,
-      "visto": "2026-09-24T21:30:39.193Z",
-      "relevancia": 91,
-      "local": true,
-      "publicadaPor": "ia",
-      "publicadaCuando": "2026-09-25T11:57:25.176Z",
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Reino recibió a referentes del Club de Leones en el Palacio Municipal.",
-        "Participó el gobernador del Distrito O-3, Christian Bousquet.",
-        "Dialogaron sobre las iniciativas solidarias en la comunidad."
-      ],
-      "seSabe": [
-        "El intendente Esteban Reino recibió a autoridades del Club de Leones en la Sala de los Intendentes, según informó el municipio.",
-        "Participaron el gobernador del Distrito O-3, Christian Bousquet, y la presidenta local, María de los Ángeles Rodríguez.",
-        "También estuvieron presentes los integrantes Ricardo Cacace y Jorge Baliña.",
-        "Las autoridades dialogaron sobre el trabajo social y las acciones solidarias en la comunidad."
-      ],
-      "textoRedes": "El intendente Esteban Reino recibió a autoridades del Club de Leones en el Palacio Municipal para dialogar sobre el trabajo social y las acciones solidarias que la institución desarrolla en la comunidad.",
-      "etiquetas": [
-        "Reino",
-        "Club de Leones",
-        "Balcarce"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Diario La Vanguardia",
-          "enlace": "https://www.diariolavanguardia.com/noticias/44894-reino-recibio-a-autoridades-del-club-de-leones-en-el-palacio-municipal/",
-          "fecha": "2026-09-24T21:18:42.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "News Balcarce (FM 91.7)",
-          "enlace": "https://newsbalcarce.com.ar/?p=30845",
-          "fecha": "2026-09-24T21:18:42.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Infórmese Primero (FM 104.9)",
-          "enlace": "http://www.blogger.com/feeds/8495648477830064035/posts/default/6360410155648573649",
-          "fecha": "2026-09-24T20:26:07.021Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Puntonueve (FM 100.9)",
-          "enlace": "https://puntonueve.com.ar/reino-recibio-a-autoridades-del-club-de-leones-en-la-sala-de-los-intendentes/",
-          "fecha": "2026-09-24T19:19:45.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Radio Gabal (FM 104.1)",
-          "enlace": "https://www.radiogabal.com.ar/index.php/comunidad/reino-recibio-a-autoridades-del-club-de-leones-en-el-palacio-municipal",
-          "fecha": "2026-09-24T19:00:58.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Municipalidad de Balcarce",
-          "enlace": "https://balcarce.gob.ar/2026/09/24/reino-recibio-a-autoridades-del-club-de-leones/",
-          "fecha": "2026-09-24T16:29:36.000Z",
-          "oficial": true,
-          "aporte": null
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "awfv2d",
-          "titulo": "Reino recibió a autoridades del Club de Leones",
-          "fecha": "2026-09-24T19:19:45.000Z",
-          "ruta": "/nota/reino-recibio-a-autoridades-del-club-de-leones-awfv2d"
-        },
-        {
-          "id": "x1ihjl",
-          "titulo": "Reino recibió a autoridades del Club de Leones",
-          "fecha": "2026-09-24T16:29:36.000Z",
-          "ruta": "/nota/reino-recibio-a-autoridades-del-club-de-leones-x1ihjl"
-        },
-        {
-          "id": "86l1ng",
-          "titulo": "Reino recibió a referente de disciplinas tradicionales chinas",
-          "fecha": "2026-09-24T16:09:50.000Z",
-          "ruta": "/nota/reino-recibio-a-referente-de-disciplinas-tradicionales-chinas-86l1ng"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo confirman cinco medios independientes y Municipalidad de Balcarce.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "esteban-reino-recibe-al-club-de-leones-en-balcarce"
-    },
-    {
       "id": "1408sz9",
       "titulo": "El intendente recibe a la maestra de disciplinas chinas Wu Huimin en Balcarce",
       "copete": "El intendente Esteban Reino recibió a la referente de disciplinas tradicionales chinas Wu Huimin, quien visitó la ciudad para ofrecer una jornada abierta a la comunidad con clases de Chi Kung.",
@@ -4878,6 +5248,106 @@
         "sugeridoPorIA": "MEDIA"
       },
       "slug": "carta-abierta-de-investigadora-del-inta-balcarce"
+    },
+    {
+      "id": "jul41g",
+      "titulo": "El Autódromo Juan Manuel Fangio reabre este viernes en Balcarce",
+      "copete": "Balcarce será escenario este fin de semana de la octava fecha del TC Pick Up. El evento incluirá la esperada reapertura del autódromo local, exhibiciones callejeras de vehículos y una conferencia oficial.",
+      "cuerpo": "Las actividades comenzarán este viernes a partir de las 14 con el corte de cinta en la pista del Autódromo Municipal Juan Manuel Fangio, un hito que marcará su reapertura oficial con la presencia de autoridades provinciales, municipales y de la ACTC. La agenda continuará a las 17 en una estación de servicio ubicada en avenida San Martín y 107, donde se realizará una firma de autógrafos con los pilotos locales y nacionales. Más tarde, desde las 18:30, las camionetas recorrerán distintos sectores de la ciudad, pasando por la avenida Gonzales Chaves, plaza Libertad y la zona del Museo Fangio, frente al cual se desarrollará la conferencia de presentación a las 19.\n\nEn lo estrictamente deportivo, la actividad competitiva comenzará el sábado a las 9 con entrenamientos y clasificaciones, mientras que el domingo se disputarán las series y finales con transmisión televisiva. Mariano Werner llega como líder del campeonato tras imponerse en dos finales y ganar la Etapa Regular, al tiempo que se confirmó la participación de los pilotos locales Santiago Mangoni, Diego Ciantini, José Ciantini y Juan José Suárez.",
+      "guion": "El Autódromo Juan Manuel Fangio reabre este viernes en Balcarce",
+      "seccion": "Automovilismo",
+      "medios": [
+        "News Balcarce (FM 91.7)",
+        "El Diario Balcarce",
+        "Infórmese Primero (FM 104.9)",
+        "Municipalidad de Balcarce"
+      ],
+      "enlace": "https://newsbalcarce.com.ar/?p=30813",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-24T14:21:16.000Z",
+      "sinFecha": false,
+      "visto": "2026-09-24T15:27:47.939Z",
+      "relevancia": 100,
+      "local": true,
+      "publicadaPor": "ia",
+      "publicadaCuando": "2026-09-25T11:57:25.176Z",
+      "temas": [
+        "autodromo",
+        "fangio"
+      ],
+      "como": "automatica",
+      "claves": [
+        "El autódromo municipal reabre sus puertas este viernes con un acto oficial.",
+        "Habrá firma de autógrafos y una caravana de camionetas por las calles céntricas.",
+        "El sábado y domingo se disputarán los entrenamientos, series y finales.",
+        "Mariano Werner llega como puntero y cuatro pilotos locales competirán en la fecha."
+      ],
+      "noConfirmado": [
+        "No se detalló la nómina completa de las autoridades provinciales y de la ACTC que asistirán al corte de cinta."
+      ],
+      "textoRedes": "Balcarce se prepara para vivir un fin de semana a todo motor con la reapertura del Autódromo Juan Manuel Fangio, la llegada del TC Pick Up, caravanas de camionetas por la ciudad y la presencia de destacados pilotos locales.",
+      "etiquetas": [
+        "Autodromo Juan Manuel Fangio",
+        "TC Pick Up",
+        "Balcarce",
+        "Automovilismo"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "News Balcarce (FM 91.7)",
+          "enlace": "https://newsbalcarce.com.ar/?p=30813",
+          "fecha": "2026-09-24T14:21:16.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/balcarce-se-prepara-para-un-fin-de-semana-historico-475",
+          "fecha": "2026-09-24T12:05:53.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Infórmese Primero (FM 104.9)",
+          "enlace": "http://www.blogger.com/feeds/8495648477830064035/posts/default/4187113007910707683",
+          "fecha": "2026-09-23T15:58:01.847Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Municipalidad de Balcarce",
+          "enlace": "https://balcarce.gob.ar/2026/09/23/balcarce-se-prepara-para-vivir-un-fin-de-semana-a-puro-automovilismo/",
+          "fecha": "2026-09-23T15:49:50.000Z",
+          "oficial": true,
+          "aporte": null
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "4v2vga",
+          "titulo": "Largas filas en Balcarce por el regreso del automovilismo",
+          "fecha": "2026-09-24T13:34:15.000Z",
+          "ruta": "/nota/largas-filas-en-balcarce-por-el-regreso-del-automovilismo-4v2vga"
+        },
+        {
+          "id": "1s3g86p",
+          "titulo": "Viernes a puro motor en Balcarce con el TC Pick Up",
+          "fecha": "2026-09-24T13:09:20.000Z",
+          "ruta": "/nota/viernes-a-puro-motor-en-balcarce-con-el-tc-pick-up-1s3g86p"
+        },
+        {
+          "id": "n331xk",
+          "titulo": "Definieron horarios para el automovilismo en el Fangio",
+          "fecha": "2026-09-24T13:05:55.000Z",
+          "ruta": "/nota/definieron-horarios-para-el-automovilismo-en-el-fangio-n331xk"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo confirman tres medios independientes y Municipalidad de Balcarce.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "balcarce-se-prepara-para-vivir-un-fin-de-semana-a-fondo"
     },
     {
       "id": "12xkda6",
@@ -6956,6 +7426,66 @@
       "slug": "medalla-de-bronce-para-shalom-lescano-en-atletismo"
     },
     {
+      "id": "jul4yj",
+      "titulo": "Aranaga participa en un plenario federal peronista",
+      "copete": "El presidente del Partido Justicialista de Balcarce asistió al encuentro del Movimiento Derecho al Futuro en Avellaneda, que fue encabezado por el gobernador Axel Kicillof.",
+      "cuerpo": "El presidente del Partido Justicialista de Balcarce, Sergio Aranaga, participó en la ciudad de Avellaneda del Plenario Federal del Movimiento Derecho al Futuro. El encuentro, que reunió a dirigentes, militantes y referentes de todo el país, tuvo como eje central la construcción política, territorial y programática de una alternativa nacional.\n\nSegún informó la única fuente disponible, la jornada fue encabezada por el gobernador bonaerense Axel Kicillof. El dirigente local manifestó que se trató de un evento multitudinario y constructivo para debatir y organizar el futuro, y destacó que la participación del espacio balcarceño se dio a partir de una invitación de la secretaría privada del mandatario provincial.",
+      "guion": "Aranaga participa en un plenario federal peronista",
+      "seccion": "Política",
+      "medios": [
+        "News Balcarce (FM 91.7)"
+      ],
+      "enlace": "https://newsbalcarce.com.ar/?p=30746",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-22T21:37:19.000Z",
+      "sinFecha": false,
+      "visto": "2026-09-22T23:46:50.102Z",
+      "relevancia": 65,
+      "local": true,
+      "publicadaPor": "ia",
+      "publicadaCuando": "2026-09-25T12:50:49.506Z",
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Aranaga participó del plenario en Avellaneda",
+        "El encuentro fue encabezado por Axel Kicillof",
+        "El PJ local estuvo presente en la jornada"
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "etiquetas": [
+        "Sergio Aranaga",
+        "PJ Balcarce",
+        "Axel Kicillof",
+        "Avellaneda",
+        "politica"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "News Balcarce (FM 91.7)",
+          "enlace": "https://newsbalcarce.com.ar/?p=30746",
+          "fecha": "2026-09-22T21:37:19.000Z",
+          "oficial": false,
+          "aporte": "Detalles sobre la participación de Sergio Aranaga en el plenario de Avellaneda y sus declaraciones sobre el encuentro."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "wmdo1p",
+          "titulo": "El PJ de Balcarce participó del Plenario Federal del Movimiento Derecho al Futuro",
+          "fecha": "2026-09-21T00:49:24.000Z",
+          "ruta": "/nota/el-pj-de-balcarce-participo-del-plenario-federal-del-movimiento-wmdo1p"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "sergio-aranaga-participa-en-un-plenario-en-avellaneda-en-balcarce"
+    },
+    {
       "id": "cs4hof",
       "titulo": "Nicolás Girotti gana y se afirma en la punta en Balcarce",
       "copete": "El piloto local se impuso en la categoría 150 c.c. Súper Master en el circuito de Rauch y estiró su ventaja en el Play Off del Karting Regional.",
@@ -7024,22 +7554,22 @@
     {
       "nombre": "El autódromo",
       "ranura": "autodromo",
-      "cuantas": 16
+      "cuantas": 18
     },
     {
       "nombre": "Fangio",
       "ranura": "fangio",
-      "cuantas": 16
-    },
-    {
-      "nombre": "TC Pick Up",
-      "ranura": "tc-pick-up",
-      "cuantas": 7
+      "cuantas": 18
     },
     {
       "nombre": "El Concejo Deliberante",
       "ranura": "concejo",
-      "cuantas": 7
+      "cuantas": 10
+    },
+    {
+      "nombre": "TC Pick Up",
+      "ranura": "tc-pick-up",
+      "cuantas": 8
     },
     {
       "nombre": "Ferroviarios",
@@ -7050,13 +7580,18 @@
       "nombre": "El INTA",
       "ranura": "inta",
       "cuantas": 2
+    },
+    {
+      "nombre": "El Cerro El Triunfo",
+      "ranura": "cerro",
+      "cuantas": 2
     }
   ],
   "clima": {
     "ahora": {
-      "temp": 19,
+      "temp": 20,
       "sensacion": 16,
-      "humedad": 45,
+      "humedad": 44,
       "viento": 22,
       "rumbo": "SO",
       "cielo": "Mayormente despejado",
@@ -7067,7 +7602,7 @@
         "fecha": "2026-09-25",
         "dia": "vie",
         "max": 20,
-        "min": 9,
+        "min": 8,
         "lluvia": 27,
         "codigo": 2,
         "viento": 22,
@@ -7077,7 +7612,7 @@
       {
         "fecha": "2026-09-26",
         "dia": "sáb",
-        "max": 17,
+        "max": 18,
         "min": 5,
         "lluvia": 10,
         "codigo": 2,
@@ -7088,7 +7623,7 @@
       {
         "fecha": "2026-09-27",
         "dia": "dom",
-        "max": 17,
+        "max": 16,
         "min": 6,
         "lluvia": 27,
         "codigo": 51,
@@ -7099,7 +7634,7 @@
       {
         "fecha": "2026-09-28",
         "dia": "lun",
-        "max": 16,
+        "max": 15,
         "min": 10,
         "lluvia": 37,
         "codigo": 51,
@@ -7441,6 +7976,12 @@
       "motivo": "necesita ojo humano: \"murió\""
     },
     {
+      "id": "jul3x0",
+      "titulo": "Capacitacion para personal del Hospital.",
+      "seccion": "Cultura y agenda",
+      "motivo": "necesita ojo humano: \"hospital\""
+    },
+    {
       "id": "z2ees5",
       "titulo": "Un encuentro comunitario busca ayudar a Gael, un niño que…",
       "seccion": "Balcarce",
@@ -7565,18 +8106,6 @@
       "titulo": null,
       "seccion": "Policiales",
       "motivo": "necesita ojo humano: \"detenido\""
-    },
-    {
-      "id": "ucqwi7",
-      "titulo": "Violento choque en Quequén: un herido trasladado al hospital",
-      "seccion": "Servicios",
-      "motivo": "necesita ojo humano: \"hospital\""
-    },
-    {
-      "id": "bjudxk",
-      "titulo": "Cómo hizo Alexander Zverev para llegar a la élite del…",
-      "seccion": "Deportes",
-      "motivo": "necesita ojo humano: \"hospital\""
     }
   ],
   "esperandoCuerpo": 17
