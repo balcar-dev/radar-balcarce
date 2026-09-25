@@ -1,5 +1,5 @@
 {
-  "exportado": "2026-09-25T12:06:02.841Z",
+  "exportado": "2026-09-25T12:15:37.333Z",
   "decisiones": {
     "1951120": {
       "estado": "automatica",
@@ -10026,13 +10026,55 @@
     },
     "krgsl6": {
       "estado": "automatica",
-      "titulo": null,
-      "copete": null,
-      "cuerpo": null,
-      "guion": null,
-      "deIA": null,
-      "por": null,
-      "cuando": "2026-09-25T05:46:03.160Z"
+      "titulo": "Jugadoras de básquet de Balcarce compiten en un torneo internacional en Mar del Plata",
+      "copete": "La Escuela Municipal de básquet femenino formará parte de la décimo octava edición del certamen organizado por Cap Eventos. Las categorías U13 y U15 afrontarán tres jornadas de partidos frente a distintos clubes regionales.",
+      "cuerpo": "Un conjunto de deportistas de la Escuela Municipal de básquet de Balcarce competirá en el décimo octavo Torneo Internacional de Básquet en Mar del Plata, organizado por Cap Eventos. La delegación está compuesta por las categorías U13 y U15 para sumar rodaje competitivo frente a rivales de la zona.\n\nComo se había informado en la previa del certamen, esta participación representa una oportunidad para el desarrollo deportivo de las jóvenes locales en el ámbito regional.",
+      "guion": "Jugadoras de básquet de Balcarce compiten en un torneo internacional en Mar del Plata",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T12:15:37.284Z",
+      "claves": [
+        "Jugadoras de la Escuela Municipal participan del torneo internacional en Mar del Plata.",
+        "Intervienen las categorías U13 y U15 en tres jornadas de competencia.",
+        "Los partidos se disputarán en el Club Unión, Complejo Ciromar e Instituto Albert Einstein."
+      ],
+      "seSabe": [
+        "Participan jugadoras de las categorías U13 y U15 de la Escuela Municipal de Básquet de Balcarce.",
+        "El certamen es organizado por Cap Eventos en Mar del Plata.",
+        "Los encuentros se jugarán el viernes y el sábado en distintas sedes marplatenses."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Jugadoras de la Escuela Municipal de básquet femenino de Balcarce participan del décimo octavo Torneo Internacional en Mar del Plata. Las categorías U13 y U15 afrontan distintos encuentros durante tres jornadas competitivas frente a equipos de la región.",
+      "etiquetas": [
+        "basquet",
+        "Balcarce",
+        "Mar del Plata",
+        "torneo internacional"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infórmese Primero (FM 104.9)",
+          "enlace": "http://www.blogger.com/feeds/8495648477830064035/posts/default/2938861296000909462",
+          "fecha": "2026-09-24T20:34:22.895Z",
+          "oficial": false,
+          "aporte": "Detalló el cronograma de partidos, categorías y sedes del torneo internacional de básquet en Mar del Plata."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "47354z",
+          "titulo": "Básquet femenino de Balcarce en torneo internacional",
+          "fecha": "2026-09-24T19:34:56.000Z",
+          "ruta": "/nota/basquet-femenino-de-balcarce-en-torneo-internacional-47354z"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
     },
     "1408sz9": {
       "estado": "automatica",
@@ -10340,13 +10382,69 @@
     },
     "1uf64an": {
       "estado": "automatica",
-      "titulo": null,
-      "copete": null,
-      "cuerpo": null,
-      "guion": null,
-      "deIA": null,
-      "por": null,
-      "cuando": "2026-09-25T05:55:55.978Z"
+      "titulo": "Milei cuestiona a la ONU y reclama por Malvinas",
+      "copete": "El presidente Javier Milei calificó a la Organización de las Naciones Unidas como una organización inútil ante la Asamblea General en Nueva York. Además, reclamó la intervención del organismo por la causa Malvinas.",
+      "cuerpo": "El presidente Javier Milei brindó un discurso ante la Asamblea General de la Organización de las Naciones Unidas en Nueva York, donde criticó con dureza al organismo internacional. El mandatario sostuvo que se transformó en una estructura inútil que únicamente alimenta a una casta de parásitos.\n\nDurante su exposición, como se había informado el 23 de septiembre de 2026, el jefe de Estado también reclamó que la entidad intervenga frente a las acciones unilaterales del Reino Unido en las Islas Malvinas y aseguró que la institución decidió mirar hacia otro lado ante este reclamo soberano.\n\nTras estas declaraciones, dirigentes del ámbito internacional reaccionaron en redes sociales a la postura del mandatario argentino ante la Asamblea.",
+      "guion": "Milei cuestiona a la ONU y reclama por Malvinas",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T12:15:37.284Z",
+      "seSabe": [
+        "El presidente Javier Milei discursó ante la Asamblea General de la ONU en Nueva York",
+        "Calificó al organismo de inútil y de alimentar a una casta de parásitos",
+        "Reclamó por la causa Malvinas y cuestionó la falta de intervención del organismo"
+      ],
+      "noConfirmado": [
+        "No se detallaron las respuestas formales de los representantes de la ONU al discurso presidencial"
+      ],
+      "textoRedes": "El presidente Javier Milei cuestionó a la ONU ante la Asamblea General en Nueva York, calificó al organismo de inútil y reclamó intervención por la causa Malvinas.",
+      "etiquetas": [
+        "Javier Milei",
+        "ONU",
+        "Malvinas",
+        "Asamblea General"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/milei-aseguro-que-la-onu-es-una-casta-de-parasitos-que-ignoro-la-causa-malvinas-789",
+          "fecha": "2026-09-24T12:13:27.000Z",
+          "oficial": false,
+          "aporte": "Informó sobre el discurso de Milei en la ONU y sus críticas a los burócratas del organismo."
+        },
+        {
+          "medio": "Infórmese Primero (FM 104.9)",
+          "enlace": "http://www.blogger.com/feeds/8495648477830064035/posts/default/2392942020566623049",
+          "fecha": "2026-09-24T01:00:00.000Z",
+          "oficial": false,
+          "aporte": "Aportó detalles sobre los cuestionamientos a la organización internacional durante la Asamblea General."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "4q3j6i",
+          "titulo": "Milei aseguró ante la Asamblea General que Malvinas es “una causa nacional” y criticó a la ONU porque “decidió mirar para otro lado”",
+          "fecha": "2026-09-23T17:17:59.000Z",
+          "ruta": "/nota/milei-aseguro-ante-la-asamblea-general-que-malvinas-es-una-causa-4q3j6i"
+        },
+        {
+          "id": "o5or1n",
+          "titulo": "Javier Milei: “La ONU se convirtió en una organización inútil que sólo sirve para alimentar una casta de parásitos, disfrazados de burócratas bien intencionados”",
+          "fecha": "2026-09-23T21:03:08.000Z",
+          "ruta": "/nota/javier-milei-la-onu-se-convirtio-en-una-organizacion-inutil-que-solo-o5or1n"
+        },
+        {
+          "id": "133srku",
+          "titulo": "El impulsor del Brexit pidió al Reino Unido fortalecer militarmente las Malvinas tras el discurso de Javier Milei en la ONU",
+          "fecha": "2026-09-24T00:03:00.000Z",
+          "ruta": "/nota/el-impulsor-del-brexit-pidio-al-reino-unido-fortalecer-militarmente-133srku"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      }
     },
     "11a57qo": {
       "estado": "automatica",
@@ -10423,23 +10521,134 @@
     },
     "1lg4u7s": {
       "estado": "automatica",
-      "titulo": null,
-      "copete": null,
-      "cuerpo": null,
-      "guion": null,
-      "deIA": null,
-      "por": null,
-      "cuando": "2026-09-25T05:56:03.738Z"
+      "titulo": "La actividad económica registra una caída del tres por ciento en julio",
+      "copete": "El Estimador Mensual de Actividad Económica marcó una baja del 2,9 por ciento en julio frente a junio, según informó el INDEC. Se trata de la mayor contracción mensual desde el inicio de la pandemia.",
+      "cuerpo": "El retroceso quedó por encima de las previsiones de las consultoras privadas, que habían estimado una disminución cercana al 0,8%. En la comparación interanual, el indicador mostró una baja del 1,4%.\n\nSiete de los quince sectores analizados presentaron aumentos interanuales, destacándose Pesca y Explotación de minas y canteras, mientras que ocho sectores registraron caídas, con los mayores impactos en Comercio y la Industria manufacturera. De cara a los próximos meses, las proyecciones del Relevamiento de Expectativas de Mercado anticipan una recuperación moderada para el tercer y cuarto trimestre.",
+      "guion": "La actividad económica registra una caída del tres por ciento en julio",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T12:15:37.284Z",
+      "claves": [
+        "El INDEC informó una baja mensual del 2,9% en la actividad económica durante julio.",
+        "Es la mayor contracción desde abril de 2020.",
+        "En la comparación interanual, el EMAE mostró una disminución del 1,4%.",
+        "El Relevamiento de Expectativas de Mercado proyecta una recuperación moderada."
+      ],
+      "seSabe": [
+        "El EMAE cayó un 2,9% en julio en comparación con junio, según el INDEC.",
+        "La baja interanual fue del 1,4%.",
+        "Siete sectores presentaron aumentos y ocho registraron caídas frente a julio del año pasado.",
+        "El Relevamiento de Expectativas de Mercado proyecta un crecimiento del 1,1% para el tercer trimestre."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El INDEC informó que la actividad económica cayó un 2,9% en julio respecto a junio, marcando el mayor retroceso mensual desde abril de 2020.",
+      "etiquetas": [
+        "economia",
+        "indec",
+        "emae",
+        "actividad economica"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infórmese Primero (FM 104.9)",
+          "enlace": "http://www.blogger.com/feeds/8495648477830064035/posts/default/6742032061768893930",
+          "fecha": "2026-09-24T22:00:00.000Z",
+          "oficial": false,
+          "aporte": "Detalló los datos del EMAE de julio informados por el INDEC, el desempeño por sectores y las proyecciones económicas."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "kbtz7w",
+          "titulo": "La actividad económica cayó 2,9% en julio, el mayor retroceso mensual en seis años",
+          "fecha": "2026-09-24T19:02:40.000Z",
+          "ruta": "/nota/la-actividad-economica-cayo-2-9-en-julio-el-mayor-retroceso-mensual-kbtz7w"
+        },
+        {
+          "id": "v2hhk3",
+          "titulo": "La actividad económica se desplomó casi 3% mensual en julio, el peor registro desde la pandemia",
+          "fecha": "2026-09-24T19:24:00.000Z",
+          "ruta": "/nota/la-actividad-economica-se-desplomo-casi-3-mensual-en-julio-el-peor-v2hhk3"
+        },
+        {
+          "id": "1pdf3hp",
+          "titulo": "EMAE: el INDEC publica el dato de actividad económica de julio y los analistas anticipan una caída",
+          "fecha": "2026-09-24T14:15:00.000Z",
+          "ruta": "/nota/emae-el-indec-publica-el-dato-de-actividad-economica-de-julio-y-los-1pdf3hp"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
     },
     "jul3vf": {
       "estado": "automatica",
-      "titulo": null,
-      "copete": null,
-      "cuerpo": null,
-      "guion": null,
-      "deIA": null,
-      "por": null,
-      "cuando": "2026-09-25T05:56:05.476Z"
+      "titulo": "Una referente de disciplinas chinas visita el Municipio en Balcarce",
+      "copete": "La maestra Wu Huimin fue recibida por las autoridades locales en el marco de una jornada abierta a la comunidad dedicada a prácticas corporales tradicionales.",
+      "cuerpo": "El intendente municipal, Esteban Reino, junto al secretario de Gobierno, Ricardo Stoppani, recibió a la maestra Wu Huimin, especialista en disciplinas tradicionales chinas que visita la ciudad para una serie de actividades públicas.\n\nDurante la jornada gratuita destinada a los vecinos, se programó además una presentación de Daoyin Yangsheng Gong a cargo de la maestra Ana Wu, quien posee una amplia trayectoria internacional en artes marciales y Qigong. La especialista cuenta con reconocimientos en el ámbito deportivo y directivo a nivel global, y encabeza instituciones dedicadas a la difusión de estas prácticas orientales.\n\nEstas propuestas recreativas y saludables buscan acercar a la comunidad nuevas alternativas de bienestar integral mediante movimientos corporales suaves, respiración consciente y concentración mental.",
+      "guion": "Una referente de disciplinas chinas visita el Municipio en Balcarce",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T12:15:37.284Z",
+      "claves": [
+        "El intendente Esteban Reino recibió a la maestra Wu Huimin.",
+        "Se programó una clase abierta de Chi Kung en plaza Libertad.",
+        "La actividad cuenta con el apoyo de la Subsecretaría de Deporte y Recreación."
+      ],
+      "seSabe": [
+        "El intendente Esteban Reino y el secretario de Gobierno Ricardo Stoppani recibieron a la maestra Wu Huimin.",
+        "Se realizará una clase abierta de Chi Kung y una presentación de Daoyin Yangsheng Gong en plaza Libertad.",
+        "La actividad cuenta con el auspicio de la Subsecretaría de Deporte y Recreación."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "La referente de disciplinas tradicionales chinas Wu Huimin fue recibida por las autoridades locales y encabeza una jornada abierta con clases gratuitas para los vecinos en plaza Libertad.",
+      "etiquetas": [
+        "Wu Huimin",
+        "Chi Kung",
+        "Deporte",
+        "Plaza Libertad",
+        "Balcarce"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "News Balcarce (FM 91.7)",
+          "enlace": "https://newsbalcarce.com.ar/?p=30849",
+          "fecha": "2026-09-24T21:28:44.000Z",
+          "oficial": false,
+          "aporte": "Detalló la visita institucional de la maestra Wu Huimin y las actividades abiertas a la comunidad programadas en la ciudad."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "86l1ng",
+          "titulo": "Reino recibió a referente de disciplinas tradicionales chinas",
+          "fecha": "2026-09-24T16:09:50.000Z",
+          "ruta": "/nota/reino-recibio-a-referente-de-disciplinas-tradicionales-chinas-86l1ng"
+        },
+        {
+          "id": "1408sz9",
+          "titulo": "El intendente recibe a la maestra Wu Huimin en Balcarce",
+          "fecha": "2026-09-24T20:19:56.506Z",
+          "ruta": "/nota/esteban-reino-recibio-a-la-maestra-wu-huimin-en-balcarce-1408sz9"
+        },
+        {
+          "id": "gfro59",
+          "titulo": "El autódromo Juan Manuel Fangio vuelve a recibir automovilismo nacional en Balcarce",
+          "fecha": "2026-09-24T19:48:00.000Z",
+          "ruta": "/nota/el-autodromo-juan-manuel-fangio-vuelve-a-recibir-automovilismo-gfro59"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
     },
     "qx0kz": {
       "estado": "automatica",
@@ -10538,31 +10747,28 @@
     },
     "1tatbr": {
       "estado": "automatica",
-      "titulo": "Angel Ruiz debuta en el culturismo provincial en Balcarce",
-      "copete": "El deportista local Angel Ruiz debutó en una competencia provincial de culturismo con destacados resultados en varias categorías.",
-      "cuerpo": "El joven balcarceño se presentó por primera vez en una competencia de culturismo de nivel provincial y logró importantes puestos en las distintas categorías de la disciplina. Ruiz se preparó durante más de un año para concretar su primera participación en este tipo de torneos.\n\nEste desempeño inicial representa un paso significativo en la trayectoria deportiva del joven a nivel provincial.",
-      "guion": "Angel Ruiz debuta en el culturismo provincial en Balcarce",
+      "titulo": "Angel Ruiz debuta con podios en culturismo en Balcarce",
+      "copete": "El joven balcarceño de quince anos alcanzo el campeonato juvenil y el subcampeonato en novatos en su primera competencia provincial en Mar del Plata.",
+      "cuerpo": "El deportista local Angel Ruiz logro destacados resultados en su estreno competitivo dentro del culturismo durante el Torneo Fisicos de Playa diez, llevado a cabo el fin de semana pasado en el Teatro San Martin de Mar del Plata. El representante de Olimpo Gym se consagro campeon en la categoria Juvenil y obtuvo el subcampeonato en Novatos Talla Alta.\n\nAdemas de los podios, recibio la distincion al mejor posador y un premio a la disciplina.\n\nEstos reconocimientos marcan un auspicioso inicio en la trayectoria deportiva de Ruiz, quien ahora apunta a nuevos desafios dentro de la disciplina.",
+      "guion": "Angel Ruiz debuta con podios en culturismo en Balcarce",
       "deIA": true,
       "por": "ia",
-      "cuando": "2026-09-25T06:20:42.761Z",
+      "cuando": "2026-09-25T12:15:37.284Z",
       "claves": [
-        "Debut deportivo en culturismo provincial",
-        "Participación en varias categorías",
-        "Preparación previa de más de un año"
-      ],
-      "seSabe": [
-        "El deportista local participó en una competencia provincial de culturismo",
-        "Obtuvo resultados destacados en distintas categorías",
-        "Realiza una preparación desde hace más de un año"
+        "Debut destacado en el culturismo provincial",
+        "Campeon en categoria Juvenil y subcampeon en Novatos",
+        "Distincion al mejor posador y premio a la disciplina",
+        "Preparacion fisica natural junto a sus padres"
       ],
       "noConfirmado": [
         "No pudo ser contrastado de forma independiente con las fuentes consultadas."
       ],
-      "textoRedes": "El deportista balcarceño Angel Ruiz debutó en una competencia provincial de culturismo y obtuvo destacados resultados en distintas categorías tras más de un año de preparación.",
+      "textoRedes": "El deportista balcarceño Angel Ruiz tuvo un destacado debut en el culturismo provincial al consagrarse campeon juvenil y subcampeon en novatos en Mar del Plata.",
       "etiquetas": [
+        "culturismo",
+        "deportes",
         "Angel Ruiz",
-        "Culturismo",
-        "Deportes",
+        "Mar del Plata",
         "Balcarce"
       ],
       "fuentesConsultadas": [
@@ -10571,7 +10777,7 @@
           "enlace": "http://www.blogger.com/feeds/8495648477830064035/posts/default/8316596223955231443",
           "fecha": "2026-09-24T20:55:49.135Z",
           "oficial": false,
-          "aporte": "Informó sobre el debut y los resultados del deportista local en una competencia de culturismo provincial."
+          "aporte": "Detallo los resultados del debut de Angel Ruiz en el torneo de culturismo en Mar del Plata."
         }
       ],
       "verificacion": {
@@ -11141,13 +11347,70 @@
     },
     "m7fmln": {
       "estado": "automatica",
-      "titulo": null,
-      "copete": null,
-      "cuerpo": null,
-      "guion": null,
-      "deIA": null,
-      "por": null,
-      "cuando": "2026-09-25T06:41:00.378Z"
+      "titulo": "Diferencias en los fondos provinciales por las obras en el autódromo en Balcarce",
+      "copete": "La difusión de cifras disímiles sobre la inversión en el autódromo Juan Manuel Fangio genera debate en Balcarce. Las primeras partidas provinciales se giraron a valor nominal.",
+      "cuerpo": "Según la información disponible, los primeros tres desembolsos enviados por la Provincia fueron efectuados a valor nominal, mientras que solo el último tramo pudo ser redeterminado, alcanzando un total de más de mil millones de pesos.\n\nEsta cifra contrasta con los casi tres mil trescientos millones de pesos mencionados públicamente por el ministro de Gobierno bonaerense, Carli Bianco, una diferencia que abre interrogantes sobre los conceptos y valores tenidos en cuenta en cada caso.\n\nPara conocer el costo total del proceso también se deben contemplar los recursos aportados por la Municipalidad mediante personal, maquinaria y trabajos propios, los cuales habrían representado un monto similar a lo recibido desde la Provincia. La precisión sobre estos números resulta relevante en una obra que demandó varios años y que transita su reapertura.",
+      "guion": "Diferencias en los fondos provinciales por las obras en el autódromo en Balcarce",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T12:15:37.284Z",
+      "claves": [
+        "Analizan diferencias en los fondos provinciales para el autódromo.",
+        "Los primeros desembolsos se giraron a valor nominal.",
+        "El ministro Bianco mencionó una cifra cercana a los tres mil millones.",
+        "La Municipalidad aportó recursos propios como maquinaria y mano de obra."
+      ],
+      "seSabe": [
+        "Los primeros tres desembolsos de la Provincia se enviaron a valor nominal.",
+        "El monto de los recursos provinciales con la actualización del último tramo alcanza más de mil millones de pesos.",
+        "El ministro de Gobierno bonaerense, Carli Bianco, mencionó públicamente una inversión cercana a los tres mil trescientos millones de pesos.",
+        "La Municipalidad aportó recursos propios como personal, equipos y movimiento de suelo."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Analizan las diferencias entre los fondos provinciales y los montos difundidos por las obras en el autódromo Juan Manuel Fangio en Balcarce.",
+      "etiquetas": [
+        "Autódromo Juan Manuel Fangio",
+        "Balcarce",
+        "Obras",
+        "Provincia de Buenos Aires",
+        "Carli Bianco"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Diario La Vanguardia",
+          "enlace": "https://www.diariolavanguardia.com/noticias/44892-obras-autodromo-los-primeros-desembolsos-de-la-provincia-fueron-a-valor-nominal-y-crece-la-polemica-por-el-dato-difundido-por-bianco/",
+          "fecha": null,
+          "oficial": false,
+          "aporte": "Detalló el esquema de desembolsos provinciales a valor nominal y la comparación con la cifra mencionada por el ministro Bianco."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "9oermg",
+          "titulo": "Autódromo: Bianco habló de una inversión de $3.300 millones, pero el monto de la obra fue de $1.038 millones",
+          "fecha": "2026-09-25T00:30:34.751Z",
+          "ruta": "/nota/autodromo-bianco-hablo-de-una-inversion-de-3-300-millones-pero-el-9oermg"
+        },
+        {
+          "id": "1k6fg2w",
+          "titulo": "Avanzan las obras en el autódromo porteño",
+          "fecha": "2026-09-18T20:26:04.000Z",
+          "ruta": "/nota/avanzan-las-obras-en-el-autodromo-porteno-1k6fg2w"
+        },
+        {
+          "id": "s1kopx",
+          "titulo": "Avanzan las obras en el autódromo Gálvez para el MotoGP",
+          "fecha": "2026-09-18T18:37:14.000Z",
+          "ruta": "/nota/avanzan-las-obras-en-el-autodromo-galvez-para-el-motogp-s1kopx"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
     },
     "1ss3yj3": {
       "estado": "automatica",
