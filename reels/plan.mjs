@@ -29,7 +29,6 @@ import { HORAS_REELS, colorDelDia, horaHistoriaDeNota, HISTORIAS_DE_NOTAS, notas
 export const REGLAS = {
   reelsPorDia: 3, // techo duro, sólo noticias
   horasEntreReels: 4, // que no salgan pegados
-  relevanciaParaReel: 78,
   historiasPorDia: 6, // clima de la mañana y de la noche, farmacia, y tres de notas
   feedPorDia: 0, // apagado: Instagram no acepta fotos sin alojarlas; todo sale en video
   relevanciaParaHistoria: 62,

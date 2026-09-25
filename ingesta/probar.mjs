@@ -5,16 +5,12 @@
 //   node probar.mjs https://un-medio.com.ar/feed
 
 import { CANDIDATOS, PALABRAS_LOCALES } from './fuentes.mjs';
-import { traer, parsearFeed } from './ingesta.mjs';
+import { traer, parsearFeed, normalizar } from './ingesta.mjs';
 
 const sueltas = process.argv.slice(2).filter((a) => a.startsWith('http'));
 const lista = sueltas.length
   ? sueltas.map((url, i) => ({ id: `suelta${i}`, nombre: url.replace(/^https?:\/\//, '').slice(0, 34), url, alcance: '?' }))
   : CANDIDATOS;
-
-function normalizar(s = '') {
-  return s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
-}
 
 console.log('\n\x1b[1mPROBANDO FUENTES CANDIDATAS\x1b[0m\n');
 console.log(`  ${'FUENTE'.padEnd(28)} ${'ALCANCE'.padEnd(10)} ${'ESTADO'.padEnd(8)} NOTAS  ÚLTIMA        MENCIONAN BALCARCE`);

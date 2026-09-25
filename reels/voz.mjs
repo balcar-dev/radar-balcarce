@@ -8,9 +8,8 @@ import path from 'node:path';
 import { MsEdgeTTS, OUTPUT_FORMAT } from 'msedge-tts';
 
 // Elena es la voz elegida. Se define una sola vez y no se cambia nunca más:
-// la voz es la marca. Tomas es la alternativa masculina.
+// la voz es la marca.
 export const VOZ = 'es-AR-ElenaNeural';
-export const VOZ_ALTERNATIVA = 'es-AR-TomasNeural';
 
 function escaparSsml(t) {
   return t.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');

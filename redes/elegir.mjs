@@ -219,9 +219,7 @@ export function mensajeParaInstagram(nota, sitio) {
 // plan.mjs necesita resvg y ffmpeg instalados y esto se prueba sin nada.
 
 export const REGLAS_PIEZAS = {
-  reelsDeNoticias: 2,      // el tercer reel del día es el podcast
   historiasDeNotas: 3,     // además del clima y la farmacia, que son fijas
-  relevanciaParaReel: 78,
   relevanciaParaHistoria: 62,
   relevanciaParaFeed: 80,
   feedPorDia: 2,
@@ -255,27 +253,6 @@ function sinRepetidos(notas, yaVistas = []) {
   const elegidas = [];
   for (const n of notas) {
     if ([...yaVistas, ...elegidas].some((v) => v.id === n.id || mismoTema(v, n))) continue;
-    elegidas.push(n);
-  }
-  return elegidas;
-}
-
-/**
- * Los reels de noticias del día: los de más gancho, de secciones distintas.
- *
- * "Gancho" acá es lo que se puede medir sin inventar: relevancia alta y que
- * sea de Balcarce. Y que no se repita la sección, porque dos reels seguidos
- * del mismo tema se comen entre ellos y el que ve el segundo ya se aburrió.
- */
-export function elegirReels(notas, reglas = REGLAS_PIEZAS) {
-  const elegidas = [];
-  const secciones = new Set();
-  for (const n of [...notas].filter(sePuedeSola).sort(porRelevancia)) {
-    if (elegidas.length >= reglas.reelsDeNoticias) break;
-    if (!n.local || (n.relevancia ?? 0) < reglas.relevanciaParaReel) continue;
-    if (secciones.has(n.seccion)) continue;
-    if (elegidas.some((e) => mismoTema(e, n))) continue;
-    secciones.add(n.seccion);
     elegidas.push(n);
   }
   return elegidas;

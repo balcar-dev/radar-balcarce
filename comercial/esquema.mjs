@@ -153,11 +153,6 @@ export function desdeOSM(el, ahora = new Date()) {
   };
 }
 
-/** Todos los datos de contacto con los que se puede cruzar/verificar una ficha. */
-export function datosDeContacto(f) {
-  return [f.contacto?.telefono, f.contacto?.whatsapp, f.contacto?.web, f.redes?.instagram, f.redes?.facebook, f.contacto?.email].filter(Boolean);
-}
-
 /** Cuánta información útil tiene la ficha, de 0 a 100. Sirve para saber cuáles
  *  hay que completar primero. */
 export function completitud(f) {

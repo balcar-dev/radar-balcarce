@@ -92,7 +92,7 @@ function bloques(xml, nombre) {
   return xml.match(re) ?? [];
 }
 
-function normalizar(s = '') {
+export function normalizar(s = '') {
   return s.toLowerCase()
     .normalize('NFD').replace(/[̀-ͯ]/g, '')
     .replace(/[^a-z0-9\s]/g, ' ')

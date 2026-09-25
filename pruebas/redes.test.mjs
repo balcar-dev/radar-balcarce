@@ -306,7 +306,7 @@ import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
 import { claveRedaccion, claveRedes, leerVariable } from '../reels/claves.mjs';
-import { elegirReels, elegirHistoriasDeNotas, elegirFeed, guionPodcast, mismoTema, sePuedeSola, estaActivo } from '../redes/elegir.mjs';
+import { elegirHistoriasDeNotas, elegirFeed, guionPodcast, mismoTema, sePuedeSola, estaActivo } from '../redes/elegir.mjs';
 
 /** Un .env de mentira en una carpeta temporal. */
 function envDe(contenido) {
@@ -354,27 +354,9 @@ test('Política y Policiales no se arman solas en ninguna pieza', () => {
     n('b', 'Detuvieron a un hombre por un robo en Balcarce', 'Policiales', 95),
     n('c', 'Kevin Gómez volvió a Balcarce como campeón', 'Balcarce', 90),
   ];
-  assert.deepEqual(elegirReels(notas).map((x) => x.id), ['c']);
   assert.deepEqual(elegirHistoriasDeNotas(notas).map((x) => x.id), ['c']);
   assert.deepEqual(elegirFeed(notas).map((x) => x.id), ['c']);
   assert.equal(sePuedeSola(notas[0]), false);
-});
-
-test('las dos noticias del reel son de secciones distintas', () => {
-  const notas = [
-    n('a', 'Kevin Gómez volvió a Balcarce como campeón', 'Balcarce', 100),
-    n('b', 'El intendente inauguró la nueva plaza del barrio', 'Balcarce', 99),
-    n('c', 'Ferroviarios ganó el Apertura y va por la final', 'Deportes', 90),
-  ];
-  assert.deepEqual(elegirReels(notas).map((x) => x.id), ['a', 'c']);
-});
-
-test('un reel es de Balcarce y de relevancia alta', () => {
-  const notas = [
-    n('a', 'Suben las tasas de interés en todo el país', 'Economía', 99, { local: false }),
-    n('b', 'Una nota floja del barrio', 'Balcarce', 50),
-  ];
-  assert.deepEqual(elegirReels(notas), []);
 });
 
 test('la misma noticia contada por dos medios no sale dos veces', () => {

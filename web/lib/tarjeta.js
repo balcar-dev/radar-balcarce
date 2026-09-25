@@ -21,10 +21,10 @@ import { cuerpo } from './tamano-titulo.js';
 export const TAMANO = { width: 1200, height: 630 };
 // Instagram: 1080x1350 (4:5), lo que recomienda hoy para un posteo. La grilla
 // del perfil lo muestra recortado (cuadrado o 3:4 según la versión de la app),
-// así que TODO lo importante queda en la zona segura del centro: 1012x1080.
+// así que TODO lo importante queda en la zona segura del centro: 1012x1080
+// (la medida está en redes/formatos.mjs).
 // Facebook, en cambio, muestra un enlace con la imagen apaisada de arriba.
 export const TAMANO_INSTAGRAM = { width: 1080, height: 1350 };
-export const ZONA_SEGURA_INSTAGRAM = { ancho: 1012, alto: 1080 };
 export const TIPO = 'image/png';
 
 // Los mismos de globals.css. Están repetidos acá porque esto corre al
