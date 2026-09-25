@@ -1,71 +1,6 @@
 {
   "redirects": [
     {
-      "source": "/nota/m7fmln",
-      "destination": "/nota/obras-autodromo-los-primeros-desembolsos-de-la-provincia-fueron-a-m7fmln",
-      "permanent": true
-    },
-    {
-      "source": "/nota/1ss3yj3",
-      "destination": "/nota/reino-y-ciantini-participaron-en-tandil-de-la-presentacion-de-las-tc-1ss3yj3",
-      "permanent": true
-    },
-    {
-      "source": "/nota/din3cj",
-      "destination": "/nota/desde-rawson-a-balcarce-sonia-y-dario-son-los-primeros-en-la-fila-del-din3cj",
-      "permanent": true
-    },
-    {
-      "source": "/nota/1rh34g1",
-      "destination": "/nota/los-socorristas-voluntarios-estaran-presentes-en-la-reapertura-del-1rh34g1",
-      "permanent": true
-    },
-    {
-      "source": "/nota/1m9oza2",
-      "destination": "/nota/tc-pick-up-en-el-fangio-los-socios-fundadores-deberan-acreditarse-1m9oza2",
-      "permanent": true
-    },
-    {
-      "source": "/nota/1x3bvjs",
-      "destination": "/nota/combustibles-ypf-mantiene-sus-precios-en-balcarce-y-queda-cerca-de-un-1x3bvjs",
-      "permanent": true
-    },
-    {
-      "source": "/nota/rosl57",
-      "destination": "/nota/congelan-el-precio-de-la-vtv-hasta-mediados-de-octubre-rosl57",
-      "permanent": true
-    },
-    {
-      "source": "/nota/wwbmd7",
-      "destination": "/nota/la-familia-crespi-confirmo-que-la-fabrica-seguira-funcionando-crespi-wwbmd7",
-      "permanent": true
-    },
-    {
-      "source": "/nota/1qk6uan",
-      "destination": "/nota/la-justicia-freno-el-aumento-de-luz-de-kicillof-y-ordeno-regresar-al-1qk6uan",
-      "permanent": true
-    },
-    {
-      "source": "/nota/15zqvfd",
-      "destination": "/nota/chi-kung-una-practica-milenaria-que-tambien-gana-espacio-en-balcarce-15zqvfd",
-      "permanent": true
-    },
-    {
-      "source": "/nota/1nt7h0p",
-      "destination": "/nota/el-stm-y-el-gobierno-cerraron-un-acuerdo-con-una-recomposicion-1nt7h0p",
-      "permanent": true
-    },
-    {
-      "source": "/nota/7c7bdz",
-      "destination": "/nota/taxis-y-remises-debatiran-la-eliminacion-de-tasas-mientras-el-sector-7c7bdz",
-      "permanent": true
-    },
-    {
-      "source": "/nota/kiy3gs",
-      "destination": "/nota/el-concejo-deliberante-vuelve-a-sesionar-los-principales-temas-que-kiy3gs",
-      "permanent": true
-    },
-    {
       "source": "/nota/8hniuy",
       "destination": "/nota/un-balcarceno-investiga-sobre-vida-extrema-para-la-nasa-8hniuy",
       "permanent": true
@@ -161,6 +96,86 @@
       "permanent": true
     },
     {
+      "source": "/nota/m7fmln",
+      "destination": "/nota/obras-autodromo-los-primeros-desembolsos-de-la-provincia-fueron-a-m7fmln",
+      "permanent": true
+    },
+    {
+      "source": "/nota/1ss3yj3",
+      "destination": "/nota/reino-y-ciantini-participaron-en-tandil-de-la-presentacion-de-las-tc-1ss3yj3",
+      "permanent": true
+    },
+    {
+      "source": "/nota/din3cj",
+      "destination": "/nota/desde-rawson-a-balcarce-sonia-y-dario-son-los-primeros-en-la-fila-del-din3cj",
+      "permanent": true
+    },
+    {
+      "source": "/nota/1rh34g1",
+      "destination": "/nota/los-socorristas-voluntarios-estaran-presentes-en-la-reapertura-del-1rh34g1",
+      "permanent": true
+    },
+    {
+      "source": "/nota/1m9oza2",
+      "destination": "/nota/tc-pick-up-en-el-fangio-los-socios-fundadores-deberan-acreditarse-1m9oza2",
+      "permanent": true
+    },
+    {
+      "source": "/nota/1x3bvjs",
+      "destination": "/nota/combustibles-ypf-mantiene-sus-precios-en-balcarce-y-queda-cerca-de-un-1x3bvjs",
+      "permanent": true
+    },
+    {
+      "source": "/nota/rosl57",
+      "destination": "/nota/congelan-el-precio-de-la-vtv-hasta-mediados-de-octubre-rosl57",
+      "permanent": true
+    },
+    {
+      "source": "/nota/wwbmd7",
+      "destination": "/nota/la-familia-crespi-confirmo-que-la-fabrica-seguira-funcionando-crespi-wwbmd7",
+      "permanent": true
+    },
+    {
+      "source": "/nota/1qk6uan",
+      "destination": "/nota/la-justicia-freno-el-aumento-de-luz-de-kicillof-y-ordeno-regresar-al-1qk6uan",
+      "permanent": true
+    },
+    {
+      "source": "/nota/15zqvfd",
+      "destination": "/nota/chi-kung-una-practica-milenaria-que-tambien-gana-espacio-en-balcarce-15zqvfd",
+      "permanent": true
+    },
+    {
+      "source": "/nota/1nt7h0p",
+      "destination": "/nota/el-stm-y-el-gobierno-cerraron-un-acuerdo-con-una-recomposicion-1nt7h0p",
+      "permanent": true
+    },
+    {
+      "source": "/nota/7c7bdz",
+      "destination": "/nota/taxis-y-remises-debatiran-la-eliminacion-de-tasas-mientras-el-sector-7c7bdz",
+      "permanent": true
+    },
+    {
+      "source": "/nota/kiy3gs",
+      "destination": "/nota/el-concejo-deliberante-vuelve-a-sesionar-los-principales-temas-que-kiy3gs",
+      "permanent": true
+    },
+    {
+      "source": "/nota/19jld3s",
+      "destination": "/nota/que-son-los-agentes-de-ia-los-sistemas-detras-del-ataque-a-un-portal-19jld3s",
+      "permanent": true
+    },
+    {
+      "source": "/nota/i0mkdz",
+      "destination": "/nota/el-llamativo-salto-patrimonial-de-una-exfuncionaria-del-circulo-de-i0mkdz",
+      "permanent": true
+    },
+    {
+      "source": "/nota/18ey6ht",
+      "destination": "/nota/donald-trump-y-malvinas-javier-milei-no-consiguio-la-senal-que-18ey6ht",
+      "permanent": true
+    },
+    {
       "source": "/nota/8960h0",
       "destination": "/nota/microsoft-estropeo-funcion-de-copia-de-seguridad-de-windows-11-ahora-8960h0",
       "permanent": true
@@ -187,7 +202,7 @@
     },
     {
       "source": "/nota/1juqupr",
-      "destination": "/nota/balcarce-pierde-el-subsidio-general-al-gas-por-nueva-ley-1juqupr",
+      "destination": "/nota/zona-fria-el-senado-aprobo-el-recorte-y-balcarce-perdera-el-subsidio-1juqupr",
       "permanent": true
     },
     {
@@ -197,12 +212,7 @@
     },
     {
       "source": "/nota/yaqf3p",
-      "destination": "/nota/todo-sobre-la-reapertura-del-autodromo-juan-manuel-fangio-yaqf3p",
-      "permanent": true
-    },
-    {
-      "source": "/nota/1t2id66",
-      "destination": "/nota/la-ciudad-desplego-mas-de-1-500-policias-en-15-villas-y-barrios-1t2id66",
+      "destination": "/nota/reapertura-del-fangio-horarios-accesos-estacionamiento-y-todo-lo-que-yaqf3p",
       "permanent": true
     },
     {
@@ -277,12 +287,7 @@
     },
     {
       "source": "/nota/ntbsnv",
-      "destination": "/nota/mar-del-plata-vibro-con-la-tc-pick-up-en-la-previa-del-regreso-del-ntbsnv",
-      "permanent": true
-    },
-    {
-      "source": "/nota/1gpo05h",
-      "destination": "/nota/corrupcion-en-la-afa-la-justicia-de-ee-uu-pidio-datos-sobre-un-ex-1gpo05h",
+      "destination": "/nota/promocionan-el-regreso-del-automovilismo-a-balcarce-ntbsnv",
       "permanent": true
     },
     {
@@ -293,11 +298,6 @@
     {
       "source": "/nota/113bpe",
       "destination": "/nota/el-banco-digital-mas-grande-de-europa-desembarca-en-la-argentina-el-113bpe",
-      "permanent": true
-    },
-    {
-      "source": "/nota/1oyk06k",
-      "destination": "/nota/revolut-el-banco-digital-mas-grande-de-europa-logro-aprobacion-del-1oyk06k",
       "permanent": true
     },
     {
@@ -372,7 +372,7 @@
     },
     {
       "source": "/nota/krgsl6",
-      "destination": "/nota/jovenes-balcarcenas-participaran-de-un-torneo-internacional-de-krgsl6",
+      "destination": "/nota/basquet-local-en-un-torneo-internacional-marplatense-krgsl6",
       "permanent": true
     },
     {
@@ -383,6 +383,16 @@
     {
       "source": "/nota/1408sz9",
       "destination": "/nota/esteban-reino-recibio-a-la-maestra-wu-huimin-en-balcarce-1408sz9",
+      "permanent": true
+    },
+    {
+      "source": "/nota/gq26",
+      "destination": "/nota/gianni-giovanelli-entreno-en-brasilia-con-la-formula-4-gq26",
+      "permanent": true
+    },
+    {
+      "source": "/nota/wq1o1s",
+      "destination": "/nota/portugal-seguira-en-el-calendario-del-motogp-hasta-2029-wq1o1s",
       "permanent": true
     },
     {
@@ -416,6 +426,11 @@
       "permanent": true
     },
     {
+      "source": "/nota/cy1yxa",
+      "destination": "/nota/matias-canapino-con-un-cambio-importante-para-la-recta-final-del-ano-cy1yxa",
+      "permanent": true
+    },
+    {
       "source": "/nota/st1e8r",
       "destination": "/nota/rivola-martin-tiene-dos-ventajas-sobre-bezzecchi-ha-ganado-un-mundial-st1e8r",
       "permanent": true
@@ -436,8 +451,18 @@
       "permanent": true
     },
     {
+      "source": "/nota/gx247j",
+      "destination": "/nota/acto-de-homenaje-a-jose-miguel-herceg-gx247j",
+      "permanent": true
+    },
+    {
       "source": "/nota/9omc0o",
       "destination": "/nota/red-bull-da-un-paso-adelante-en-baku-sus-mejoras-funcionan-y-9omc0o",
+      "permanent": true
+    },
+    {
+      "source": "/nota/l83pn8",
+      "destination": "/nota/fabian-turnes-conto-detalles-de-las-reuniones-para-el-regreso-de-la-l83pn8",
       "permanent": true
     },
     {
@@ -451,6 +476,11 @@
       "permanent": true
     },
     {
+      "source": "/nota/5226gq",
+      "destination": "/nota/martin-saa-con-presente-de-alto-nivel-un-futuro-prometedor-y-una-5226gq",
+      "permanent": true
+    },
+    {
       "source": "/nota/1hh6vil",
       "destination": "/nota/cuanto-cuesta-viajar-al-gp-de-brasil-en-interlagos-para-ver-a-franco-1hh6vil",
       "permanent": true
@@ -461,13 +491,23 @@
       "permanent": true
     },
     {
+      "source": "/nota/942wi7",
+      "destination": "/nota/urcera-y-la-tranquilidad-del-trabajo-a-largo-plazo-con-mercedes-en-tc-942wi7",
+      "permanent": true
+    },
+    {
       "source": "/nota/1li63ec",
       "destination": "/nota/la-carta-de-la-investigadora-virginia-aparicio-y-su-situacion-en-la-1li63ec",
       "permanent": true
     },
     {
       "source": "/nota/jul41g",
-      "destination": "/nota/balcarce-se-prepara-para-vivir-un-fin-de-semana-a-fondo-jul41g",
+      "destination": "/nota/balcarce-reabre-este-viernes-el-autodromo-juan-manuel-fangio-jul41g",
+      "permanent": true
+    },
+    {
+      "source": "/nota/1ctm3pk",
+      "destination": "/nota/el-primer-balance-de-colapinto-en-baku-dimos-un-pasito-con-el-auto-1ctm3pk",
       "permanent": true
     },
     {
@@ -481,6 +521,11 @@
       "permanent": true
     },
     {
+      "source": "/nota/q98w9w",
+      "destination": "/nota/santino-panetta-ya-palpita-la-fecha-de-eurocup-3-q98w9w",
+      "permanent": true
+    },
+    {
       "source": "/nota/8qdpz7",
       "destination": "/nota/colapinto-termino-11-en-la-segunda-practica-del-gran-premio-de-8qdpz7",
       "permanent": true
@@ -488,6 +533,11 @@
     {
       "source": "/nota/s897ks",
       "destination": "/nota/citacion-s897ks",
+      "permanent": true
+    },
+    {
+      "source": "/nota/19q4ui5",
+      "destination": "/nota/la-preparacion-de-henry-martin-para-su-carrera-homenaje-en-tc2000-19q4ui5",
       "permanent": true
     },
     {
