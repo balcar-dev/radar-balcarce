@@ -191,6 +191,7 @@ publicar piezas a mano. Detalle y horarios en `REDES.md`.
 | `INVESTIGACION-COMPETENCIA.md` | Lo que hacen los otros medios, con hecho/pendiente |
 | `POLITICA-PRIVACIDAD.md` | El texto de la política de privacidad del sitio |
 | `PENDIENTES.md` | Qué falta, por categoría |
+| `AUDITORIA.md` | Última auditoría completa (25/09), por urgencia |
 | `IDEAS.md` | Ideas de producto |
 | `NOTAS.md` | Decisiones vigentes (corto) |
 | `HISTORIA.md` | Qué se hizo y por qué, con fecha (histórico) |
