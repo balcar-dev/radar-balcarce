@@ -63,7 +63,7 @@ pega una persona, nunca un chat ni un archivo del repo.**
 |---|---|---|
 | `META_TOKEN` | Secreto | Publicar en Facebook e Instagram, y leer seguidores. No vence. Para vistas, alcance e interacciones le faltan los permisos `read_insights` e `instagram_manage_insights` (al regenerarlo, tildar TODOS los de ahora más esos dos). |
 | `GEMINI_API_KEY_REDES` | Secreto | Voces y reels (clave paga). Sin ella los reels no arrancan. |
-| `GEMINI_API_KEY_REDACCION` | Secreto | Redactar notas. Acepta el nombre viejo `GEMINI_API_KEY`. Hoy la reescritura usa la clave de redes si ésta falta (`PENDIENTES.md`). |
+| `GEMINI_API_KEY_REDACCION` | Secreto | Redactar notas. Acepta el nombre viejo `GEMINI_API_KEY`. **Cargada el 25/09**: la reescritura usa esta primero (gratis) y pasa a la de redes (paga) sólo si se queda sin cupo. El registro de "Actualizar la web" dice cuántos pedidos fueron a cada una. Se prueba con el workflow "Prueba de Gemini". |
 | `CLOUDFLARE_API_TOKEN` | Secreto | Subir el sitio a Cloudflare Pages. |
 | `CLOUDFLARE_ACCOUNT_ID` | Secreto | Idem (también para las estadísticas). |
 | `CLOUDFLARE_ANALYTICS_TOKEN` | Secreto (**falta cargarlo**) | Leer las visitas de Cloudflare Web Analytics para las estadísticas. Token de Cloudflare con permiso *Account · Account Analytics · Read*. Sin él, el resumen dice "falta permiso de Analytics". |

@@ -157,8 +157,11 @@ mañana".
     apagado desde el 25/09 (sin conexión a GitHub, no despliega). Borrar
     también el sitio duplicado de la cuenta vieja
     (`radar-balcarce.vercel.app`).
-39. **Clave gratuita de redacción** (`GEMINI_API_KEY_REDACCION`) sin cargar en
-    GitHub: la reescritura usa la clave paga de redes (decidido el 24/09).
+39. **Clave gratuita de redacción**: cargada el 25/09 (probada con el workflow
+    "Prueba de Gemini"). La redacción usa primero la gratis y sólo pasa a la paga
+    si la gratis se queda sin cupo (429). Tope de 150 notas por día
+    (`REESCRITURA.porDia`). Falta poner un tope de presupuesto en Google Cloud
+    para la clave paga.
 40. **`tocaHoy`** (`ingesta/utiles.mjs`, qué día salen los teléfonos útiles)
     todavía cuenta el día con la zona del servidor, no con la de Balcarce.
 41. `next`/`postcss` con una vulnerabilidad conocida (riesgo bajo: el sitio es
