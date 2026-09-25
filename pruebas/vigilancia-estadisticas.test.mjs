@@ -198,6 +198,12 @@ test('el mensaje muestra la evolución: flechas de la web y seguidores desde aye
   assert.match(t, /Instagram: 312 seguidores \(\+5 desde ayer\) · alcance 800 \(24 h\)/);
 });
 
+test('un solo seguidor es "1 seguidor" (la primera prueba real, del 25/09, decía "1 seguidores")', () => {
+  const t = textoEstadisticas({ punto: { cuando: A('21:00').toISOString(), facebook: { seguidores: 1 }, instagram: { seguidores: 3 } }, ahora: A('21:00') });
+  assert.match(t, /Facebook: 1 seguidor$/m);
+  assert.match(t, /Instagram: 3 seguidores$/m);
+});
+
 test('sin permiso de Cloudflare, el mensaje lo dice con esas palabras', () => {
   const t = textoEstadisticas({ punto: { cuando: A('21:00').toISOString(), cloudflare: 'sin-permiso' }, ahora: A('21:00') });
   assert.match(t, /falta permiso de Analytics en el token de Cloudflare/);

@@ -205,7 +205,7 @@ export async function estadisticasDeMeta({ token, paginaId = PAGINA_ID, ahora = 
       const j = await api.pedir(`${paginaId}/insights`, { ...conPagina, params: { metric: metrica, period: 'day' } });
       const valor = (j.data?.[0]?.values ?? []).at(-1)?.value;
       if (typeof valor === 'number') facebook[clave] = valor;
-      else faltan.push(`Facebook, ${clave} (${metrica}): Meta no devolvió el dato`);
+      else faltan.push(`Facebook, ${clave} (${metrica}): Meta no devolvió el dato (${JSON.stringify(j).slice(0, 160)})`);
     } catch (e) { faltan.push(`Facebook, ${clave} (${metrica}): ${e.message}`); }
   }
 
@@ -225,7 +225,7 @@ export async function estadisticasDeMeta({ token, paginaId = PAGINA_ID, ahora = 
         });
         const valor = j.data?.[0]?.total_value?.value ?? (j.data?.[0]?.values ?? []).at(-1)?.value;
         if (typeof valor === 'number') instagram[clave] = valor;
-        else faltan.push(`Instagram, ${clave} (${metrica}): Meta no devolvió el dato`);
+        else faltan.push(`Instagram, ${clave} (${metrica}): Meta no devolvió el dato (${JSON.stringify(j).slice(0, 160)})`);
       } catch (e) { faltan.push(`Instagram, ${clave} (${metrica}): ${e.message}`); }
     }
   }
@@ -274,6 +274,7 @@ export async function medir({ env = process.env, ahora = new Date(), fetchFn = f
 // ---------------------------------------------------------------- el mensaje
 
 const numero = (n) => Number(n ?? 0).toLocaleString('es-AR');
+const seguidores = (n) => `${numero(n)} ${Number(n) === 1 ? 'seguidor' : 'seguidores'}`;
 
 /** "↑ 12%", "↓ 5%", "=" o "nuevo", comparando con el período anterior. */
 export function variacion(actual, antes) {
@@ -320,12 +321,12 @@ export function textoEstadisticas({ punto, puntos = [], ahora = new Date(), nomb
   const fb = punto.facebook;
   if (fb) {
     const extra = [fb.vistas !== undefined ? `${numero(fb.vistas)} vistas` : '', fb.interacciones !== undefined ? `${numero(fb.interacciones)} interacciones` : ''].filter(Boolean).join(' y ');
-    l.push(`Facebook: ${fb.seguidores !== null && fb.seguidores !== undefined ? `${numero(fb.seguidores)} seguidores${cambio(fb.seguidores, ref?.facebook?.seguidores, desde)}` : 'seguidores sin dato'}${extra ? ` · ${extra} en el último día` : ''}`);
+    l.push(`Facebook: ${fb.seguidores !== null && fb.seguidores !== undefined ? `${seguidores(fb.seguidores)}${cambio(fb.seguidores, ref?.facebook?.seguidores, desde)}` : 'seguidores sin dato'}${extra ? ` · ${extra} en el último día` : ''}`);
   }
   const ig = punto.instagram;
   if (ig) {
     const extra = [ig.alcance !== undefined ? `alcance ${numero(ig.alcance)}` : '', ig.vistas !== undefined ? `${numero(ig.vistas)} vistas` : '', ig.interacciones !== undefined ? `${numero(ig.interacciones)} interacciones` : ''].filter(Boolean).join(', ');
-    l.push(`Instagram: ${ig.seguidores !== null && ig.seguidores !== undefined ? `${numero(ig.seguidores)} seguidores${cambio(ig.seguidores, ref?.instagram?.seguidores, desde)}` : 'seguidores sin dato'}${extra ? ` · ${extra} (24 h)` : ''}`);
+    l.push(`Instagram: ${ig.seguidores !== null && ig.seguidores !== undefined ? `${seguidores(ig.seguidores)}${cambio(ig.seguidores, ref?.instagram?.seguidores, desde)}` : 'seguidores sin dato'}${extra ? ` · ${extra} (24 h)` : ''}`);
   }
   return l.length > 1 ? l.join('\n') : '';
 }
@@ -354,6 +355,13 @@ async function main() {
   console.log('Estadísticas, prueba (no guarda nada ni manda WhatsApp)');
   console.log(`  Cloudflare: cuenta ${process.env.CLOUDFLARE_ACCOUNT_ID ? 'cargada' : 'FALTA'}, token ${token ? `de ${nombre}` : 'FALTA'}`);
   console.log(`  Meta: token ${process.env.META_TOKEN ? 'cargado' : 'FALTA'}`);
+  if (process.env.META_TOKEN) {
+    // Qué permisos tiene el token de Meta: para saber cuál falta pedir.
+    try {
+      const v = await crearCliente({ token: process.env.META_TOKEN, paginaId: process.env.META_PAGE_ID ?? PAGINA_ID, espera: ESPERA }).verificar();
+      console.log(`  Meta: página "${v.pagina}", Instagram @${v.instagram ?? '(ninguno)'}; permisos del token: ${v.permisos?.join(', ') || '(Meta no los informa)'}`);
+    } catch (e) { console.log(`  Meta: no se pudo verificar el token (${e.message})`); }
+  }
   const { punto, faltan } = await medir({ ahora });
   console.log('\nLo medido (lo que se guardaría en web/data/estadisticas.json):');
   console.log(JSON.stringify(punto, null, 2));
