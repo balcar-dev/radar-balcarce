@@ -8,6 +8,7 @@ import { fileURLToPath } from 'node:url';
 import {
   NOMBRES_PROPIOS, FIGURAS, TEMAS, FARMACIAS_A_MANO, PISO_DE_AFUERA, PISO_POR_DEFECTO, CUPO_DE_AFUERA, CUPO_POR_DEFECTO, BALCARCE, FUENTES, FUENTES_NACIONALES, PALABRAS_LOCALES, REGLAS_SECCION, REGLAS_SEMAFORO,
 } from './fuentes.mjs';
+import { diaDeTurno, fechaEnBalcarce } from './utiles.mjs';
 
 export const TODAS_LAS_FUENTES = [...FUENTES, ...FUENTES_NACIONALES];
 
@@ -433,14 +434,37 @@ function clasificar(nota) {
 // el suyo (PISO_DE_AFUERA en fuentes.mjs, con el porqué de cada número).
 const pisoDe = (seccion) => PISO_DE_AFUERA[seccion] ?? PISO_POR_DEFECTO;
 
-function semaforo(nota, seccion, puntaje) {
-  const texto = normalizar(`${nota.titulo} ${nota.cuerpo.slice(0, 600)}`);
+/**
+ * Las listas roja y amarilla del semáforo, pasadas sobre un texto cualquiera.
+ * Devuelve { color, motivo } con lo primero que encuentra (el rojo antes que
+ * el amarillo), o null si no hay nada sensible.
+ *
+ * Aparte del semáforo porque no sólo se usa acá: la ingesta mira el título y
+ * el principio del resumen, pero la IA reescribe con la nota ENTERA
+ * (ingesta/articulo.mjs). Lo que dice el tercer párrafo de la fuente, o lo
+ * que la IA escribió con eso, tiene que pasar por la misma lista antes de
+ * publicarse (reels/reescritura.mjs). Leyes 26.061 y 26.485.
+ *
+ * La lista de promociones no está acá a propósito: es sobre qué ES la nota,
+ * y el texto completo de una página trae "seguinos en" y "suscribite" en
+ * cualquier nota.
+ */
+export function semaforoDelTexto(textoCrudo) {
+  const texto = normalizar(String(textoCrudo ?? ''));
+  if (!texto) return null;
   for (const p of REGLAS_SEMAFORO.rojo) {
     if (contiene(texto, p)) return { color: 'rojo', motivo: `tema sensible: "${p}"` };
   }
   for (const p of REGLAS_SEMAFORO.amarillo) {
     if (contiene(texto, p)) return { color: 'amarillo', motivo: `necesita ojo humano: "${p}"` };
   }
+  return null;
+}
+
+function semaforo(nota, seccion, puntaje) {
+  const sensible = semaforoDelTexto(`${nota.titulo} ${nota.cuerpo.slice(0, 600)}`);
+  if (sensible) return sensible;
+  const texto = normalizar(`${nota.titulo} ${nota.cuerpo.slice(0, 600)}`);
   for (const p of REGLAS_SEMAFORO.promocional ?? []) {
     if (contiene(texto, p)) return { color: 'amarillo', motivo: `parece promoción, no noticia: "${p}"` };
   }
@@ -776,6 +800,21 @@ function directorioDeLaVanguardia(turnos) {
   return directorio;
 }
 
+/**
+ * Control de calidad del cronograma: que sea del mes en curso y llegue hasta
+ * fin de mes. "El mes en curso" es el de Balcarce: con el reloj del servidor
+ * (UTC), el 30 a las 22 ya era el mes siguiente y avisaba de más.
+ */
+function controlDelCronograma({ mes, anio, turnos }, ahora = new Date()) {
+  const delMes = turnos.filter((t) => !mes || t.mes === mes);
+  const ultimoDia = delMes.length ? Math.max(...delMes.map((t) => t.dia)) : 0;
+  const diasEnMes = mes ? new Date(anio, mes, 0).getDate() : 31;
+  const avisos = [];
+  if (mes && mes !== fechaEnBalcarce(ahora).mes) avisos.push(`el cronograma publicado es de ${MESES[mes - 1]}, no del mes en curso`);
+  if (ultimoDia && ultimoDia < diasEnMes) avisos.push(`sólo llega hasta el día ${ultimoDia} de ${diasEnMes}: hay que recargarlo`);
+  return avisos;
+}
+
 async function traerFarmacias() {
   const html = await traer('https://www.colbalcarce.com/');
   const texto = sinEtiquetas(html);
@@ -790,14 +829,7 @@ async function traerFarmacias() {
 
   const { mes, anio, turnos } = parsearCronograma(texto, directorio);
 
-  // Control de calidad: el cronograma tiene que llegar hasta fin de mes.
-  const hoy = new Date();
-  const delMes = turnos.filter((t) => !mes || t.mes === mes);
-  const ultimoDia = delMes.length ? Math.max(...delMes.map((t) => t.dia)) : 0;
-  const diasEnMes = mes ? new Date(anio, mes, 0).getDate() : 31;
-  const avisos = [];
-  if (mes && mes !== hoy.getMonth() + 1) avisos.push(`el cronograma publicado es de ${MESES[mes - 1]}, no del mes en curso`);
-  if (ultimoDia && ultimoDia < diasEnMes) avisos.push(`sólo llega hasta el día ${ultimoDia} de ${diasEnMes}: hay que recargarlo`);
+  const avisos = controlDelCronograma({ mes, anio, turnos });
 
   // Una farmacia sin dirección se publica igual, pero avisando: es preferible
   // dar el nombre solo a inventar una calle.
@@ -848,15 +880,25 @@ async function turnosDeGabal() {
   return turnos;
 }
 
-async function cruzarFarmacias(turnosColegio) {
-  const hoy = new Date().getDate();
+/**
+ * El día que se compara es el del turno que está abierto AHORA (diaDeTurno:
+ * hasta las 8:30 del día siguiente, en hora de Balcarce). Antes era
+ * `new Date().getDate()`, el día del servidor: en GitHub (UTC), de 21 a 24
+ * comparaba la farmacia de mañana, y de 0 a 8:30 la de un día que todavía no
+ * había empezado. `ahora` y las dos fuentes se pueden pasar para probarlo
+ * sin red.
+ */
+async function cruzarFarmacias(turnosColegio, {
+  ahora = new Date(), vanguardia = turnosDeLaVanguardia, gabalFn = turnosDeGabal,
+} = {}) {
+  const hoy = diaDeTurno(ahora).getDate();
   const nuestraDeHoy = turnosColegio.find((t) => t.dia === hoy);
   const nombresNuestros = new Set((nuestraDeHoy?.farmacias ?? []).map((n) => normalizar(n)));
 
   const fuentes = [];
   const discrepancias = [];
 
-  const [vang, gabal] = await Promise.allSettled([turnosDeLaVanguardia(), turnosDeGabal()]);
+  const [vang, gabal] = await Promise.allSettled([vanguardia(), gabalFn()]);
 
   if (vang.status === 'fulfilled') {
     const deHoy = vang.value.filter((t) => t.dia === hoy);
@@ -882,7 +924,9 @@ async function cruzarFarmacias(turnosColegio) {
     fuentes.push({ nombre: 'Radio Gabal', estado: 'error', error: gabal.reason?.message });
   }
 
-  return { fuentes, discrepancias, confirmado: fuentes.some((f) => f.estado === 'ok') && !discrepancias.length };
+  return {
+    dia: hoy, fuentes, discrepancias, confirmado: fuentes.some((f) => f.estado === 'ok') && !discrepancias.length,
+  };
 }
 
 // ------------------------------------------------------------------ correr
@@ -895,7 +939,10 @@ export function aplicarCupos(portada) {
   const usados = {};
   for (const n of portada) {
     if (n.semaforo !== 'verde') continue;
-    if (n.local || n.nombraBalcarce || n.seccion === 'Automovilismo') continue;
+    if (n.local || n.nombraBalcarce) continue;
+    // Automovilismo no tenía cupo hasta el 25/09; ahora tiene el suyo en
+    // CUPO_DE_AFUERA. Sin esa entrada seguiría sin tope, como antes.
+    if (n.seccion === 'Automovilismo' && CUPO_DE_AFUERA.Automovilismo == null) continue;
     usados[n.seccion] = (usados[n.seccion] ?? 0) + 1;
     const cupo = CUPO_DE_AFUERA[n.seccion] ?? CUPO_POR_DEFECTO;
     if (usados[n.seccion] > cupo) {
@@ -1023,7 +1070,7 @@ export async function ingestar({
   // El piso solo no alcanza: un domingo de fútbol tiene treinta notas arriba
   // de 62 puntos y la portada de Balcarce sería la de Olé. Por sección, las
   // de afuera que salen solas son las N de más puntaje; el resto espera.
-  // Lo de Balcarce no entra en la cuenta, y Automovilismo tampoco.
+  // Lo de Balcarce no entra en la cuenta. Automovilismo sí, desde el 25/09.
   aplicarCupos(portada);
 
   // 4. Clima y farmacias
@@ -1065,7 +1112,8 @@ export async function ingestar({
   }
 
   if (farmacias?.turnos.length) {
-    const hoy = new Date().getDate();
+    // El turno abierto ahora, en hora de Balcarce (no el día del servidor).
+    const hoy = diaDeTurno().getDate();
     const deHoy = farmacias.turnos.find((t) => t.dia === hoy);
     log('\n\x1b[1mFARMACIA DE TURNO\x1b[0m');
     log(`  hoy (día ${hoy}): ${deHoy ? `\x1b[1m${deHoy.farmacias.join(' y ')}\x1b[0m` : 'no figura en el cronograma'}`);
@@ -1181,7 +1229,7 @@ function armarPreview(d) {
     <section>
       <h2>Farmacias de turno</h2>
       ${d.farmacias?.turnos?.length
-    ? `<div style="font-size:13px;line-height:1.8">${d.farmacias.turnos.filter((t) => t.dia >= new Date().getDate()).slice(0, 8).map((t) => `<span style="color:var(--suave)">${esc(t.diaSemana)} ${t.dia}</span> · <b>${esc(t.farmacias.join(' y '))}</b>`).join('<br>')}</div>
+    ? `<div style="font-size:13px;line-height:1.8">${d.farmacias.turnos.filter((t) => t.dia >= diaDeTurno().getDate()).slice(0, 8).map((t) => `<span style="color:var(--suave)">${esc(t.diaSemana)} ${t.dia}</span> · <b>${esc(t.farmacias.join(' y '))}</b>`).join('<br>')}</div>
        <div style="margin-top:10px;font-size:11px;color:var(--suave)">De 8:30 de la mañana a 8:30 del día siguiente · Colegio de Farmacéuticos de Balcarce</div>
        ${d.farmacias.avisos.map((a) => `<div style="margin-top:8px;background:#FDF3E2;color:#6B5210;border-radius:4px;padding:8px 10px;font-size:12px">${esc(a)}</div>`).join('')}`
     : '<div style="font-size:13px;color:var(--suave)">El cronograma está en la página del Colegio, pero el formato todavía no se reconoce automáticamente. Mirá <code>salida/farmacias-crudo.txt</code> para ajustar el lector.</div>'}
@@ -1210,6 +1258,7 @@ export const paraPruebas = {
   clasificar, semaforo, limpiarCopete, relevancia, meta, parsearScrape,
   cieloDeSimbolo, haceCuanto, sinEtiquetas, decodificar,
   clavesDe, anotar, buscarFarmacia, directorioDeLaVanguardia, pisoDe,
+  contiene, cruzarFarmacias, controlDelCronograma,
 };
 
 // Sólo corre cuando se lo invoca directo; si lo importa probar.mjs, no.

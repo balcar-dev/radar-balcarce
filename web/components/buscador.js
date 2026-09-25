@@ -84,6 +84,7 @@ export default function Buscador({ notas = [] }) {
             value={texto}
             onChange={(e) => setTexto(e.target.value)}
             placeholder="Buscar una nota…"
+            aria-label="Buscar una nota en Radar Balcarce"
             autoComplete="off"
           />
           <button type="button" onClick={() => setAbierto(false)} className="cerrar">Cerrar</button>

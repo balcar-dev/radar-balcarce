@@ -1,10 +1,12 @@
 import { obtenerDatos, partirFecha } from '@/lib/datos';
 import { Evento, Cierre, Invitacion } from '@/components/piezas';
+import { metadatosDePagina } from '@/components/metadatos';
 
-export const metadata = {
-  title: 'Agenda',
-  description: 'Qué hay para hacer en Balcarce: actos, muestras, ferias, fiestas y encuentros deportivos.',
-};
+export const metadata = metadatosDePagina({
+  titulo: 'Agenda',
+  descripcion: 'Qué hay para hacer en Balcarce: actos, muestras, ferias, fiestas y encuentros deportivos.',
+  camino: '/agenda',
+});
 
 const DIAS = ['domingo', 'lunes', 'martes', 'miércoles', 'jueves', 'viernes', 'sábado'];
 const MESES_LARGOS = ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre'];

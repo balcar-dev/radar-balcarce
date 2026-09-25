@@ -41,14 +41,27 @@ export function sinToken(texto, token) {
 
 const dormir = (ms) => new Promise((r) => setTimeout(r, ms));
 
+// Cuánto se espera a Meta. Sin tiempo máximo, un pedido que Meta deja colgado
+// dejaba el reloj de Redes esperando hasta que GitHub lo mataba (auditoría del
+// 25/09). Un pedido común contesta en uno o dos segundos. La subida de un
+// video es otra cosa: un podcast pesa varios megas y la conexión de GitHub con
+// Meta a veces es lenta, así que tiene diez minutos.
+export const ESPERA_MAXIMA = 60_000;
+export const ESPERA_MAXIMA_SUBIDA = 10 * 60_000;
+
 /**
  * @param {object} o
  * @param {string} o.token          el del usuario del sistema
  * @param {string} o.paginaId       la página de Facebook
  * @param {Function} [o.fetchFn]    para las pruebas
  * @param {Function} [o.esperar]    para las pruebas: no dormir de verdad
+ * @param {number} [o.espera]       tiempo máximo de un pedido común, en ms
+ * @param {number} [o.esperaSubida] tiempo máximo de la subida de un video, en ms
  */
-export function crearCliente({ token, paginaId, fetchFn = fetch, esperar = dormir, version = VERSION }) {
+export function crearCliente({
+  token, paginaId, fetchFn = fetch, esperar = dormir, version = VERSION,
+  espera = ESPERA_MAXIMA, esperaSubida = ESPERA_MAXIMA_SUBIDA,
+}) {
   if (!token) throw new Error('Falta el token de Meta (META_TOKEN).');
   if (!paginaId) throw new Error('Falta el ID de la página de Facebook.');
 
@@ -56,7 +69,7 @@ export function crearCliente({ token, paginaId, fetchFn = fetch, esperar = dormi
 
   async function pedir(camino, { metodo = 'GET', params = {}, conToken = token } = {}) {
     const url = new URL(`${BASE}/${version}/${camino.replace(/^\//, '')}`);
-    const init = { method: metodo, headers: { Authorization: `Bearer ${conToken}` } };
+    const init = { method: metodo, headers: { Authorization: `Bearer ${conToken}` }, signal: AbortSignal.timeout(espera) };
 
     if (metodo === 'GET') {
       for (const [k, v] of Object.entries(params)) url.searchParams.set(k, String(v));
@@ -172,6 +185,7 @@ export function crearCliente({ token, paginaId, fetchFn = fetch, esperar = dormi
         method: 'POST',
         headers: { Authorization: `OAuth ${p.tokenPagina}`, offset: '0', file_size: String(video.length) },
         body: video,
+        signal: AbortSignal.timeout(esperaSubida),
       });
     } catch (e) {
       throw new ErrorMeta(`No se pudo subir el video: ${sinToken(sinToken(e.message, token), p.tokenPagina)}`);
@@ -228,6 +242,7 @@ export function crearCliente({ token, paginaId, fetchFn = fetch, esperar = dormi
         method: 'POST',
         headers: { Authorization: `OAuth ${p.tokenPagina}`, offset: '0', file_size: String(video.length) },
         body: video,
+        signal: AbortSignal.timeout(esperaSubida),
       });
     } catch (e) {
       throw new ErrorMeta(`No se pudo subir el video a Facebook: ${sinToken(sinToken(e.message, token), p.tokenPagina)}`);

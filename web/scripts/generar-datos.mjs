@@ -1,13 +1,10 @@
 // Genera web/data/portada.json a partir de lo que ya decidió el panel.
 //
 // Por qué un archivo estático y no una conexión en vivo al panel: la web
-// se va a desplegar en Vercel, que no puede leer los archivos de tu PC.
-// La forma correcta de resolver esto sin armar una base de datos todavía
-// es la que ya estaba planeada desde el principio (ver HISTORIA.md, fase 2):
-// GitHub Actions corre la ingesta, y en vez de dejarla en tu PC, ACTUALIZA
-// este archivo y lo sube al repo — eso dispara un redeploy automático en
-// Vercel. Mientras tanto, para probar en tu máquina, este script hace lo
-// mismo a mano.
+// es HTML estático en Cloudflare Pages, que no puede leer los archivos de la
+// PC. GitHub Actions corre la ingesta, ACTUALIZA este archivo y lo sube al
+// repo; después "Cloudflare Pages" compila y publica. En la PC, este script
+// hace lo mismo a mano.
 //
 // La lógica de "qué nota está publicada" es la misma que usa
 // panel/servidor.mjs en su función vista() — se repite acá a propósito
@@ -22,10 +19,18 @@ import { NUMEROS, tocaHoy, diaDeEstaSemana, diaDeTurno, comoISO, decisionHumana 
 import { avisosDelClima } from '../../ingesta/alertas.mjs';
 import { reescribirAutomaticas, previasDeLaPortada } from '../../reels/reescritura.mjs';
 import { TEMAS } from '../../ingesta/fuentes.mjs';
+import {
+  vigenteEnPortada, slugsConocidos, fijarSlug, actualizarArchivo, idsEnRedes, sinPuntaje, comoArchivoJson,
+} from '../lib/archivo.js';
 
 const AQUI = import.meta.dirname;
 const DATOS_PANEL = path.join(AQUI, '..', '..', 'panel', 'datos');
 const SALIDA = path.join(AQUI, '..', 'data', 'portada.json');
+// Todo lo publicado, aunque ya no esté en la portada: ver lib/archivo.js.
+const ARCHIVO = path.join(AQUI, '..', 'data', 'archivo.json');
+// El libro de lo publicado en las redes: de ahí salen las direcciones de los
+// enlaces que ya están en Facebook.
+const LIBRO_REDES = path.join(AQUI, '..', 'data', 'redes.json');
 
 function leerJson(archivo, porDefecto = null) {
   try { return JSON.parse(fs.readFileSync(archivo, 'utf8')); } catch { return porDefecto; }
@@ -83,7 +88,10 @@ if (enLaNube) {
 // portada anterior está versionada en el repositorio y corre tanto acá
 // como en GitHub Actions. De ahí sale el primer avistaje, y no se pisa.
 const anterior = leerJson(SALIDA, { notas: [] });
-const vistoAntes = Object.fromEntries((anterior.notas ?? [])
+// El archivo también guarda el primer avistaje: una nota que salió de la
+// portada y vuelve no cambia de hora.
+const archivoAnterior = leerJson(ARCHIVO, { notas: [] });
+const vistoAntes = Object.fromEntries([...(archivoAnterior.notas ?? []), ...(anterior.notas ?? [])]
   .filter((n) => n.visto)
   .map((n) => [n.id, n.visto]));
 const ahoraISO = new Date().toISOString();
@@ -94,17 +102,29 @@ const ahoraISO = new Date().toISOString();
 // gastar cuota dos veces en la misma nota.
 //
 // `previas` es lo que ya se reescribió en una corrida anterior (la portada
-// de la vez pasada): así no se le vuelve a pedir a Gemini la misma nota en
-// cada corrida de acá a que alguien la revise. No hay otro lugar en la nube
-// donde guardar "esto ya está": portada.json, que ya se commitea siempre, es
-// la única memoria entre una corrida y la siguiente.
+// de la vez pasada y, desde el 25/09, el archivo): así no se le vuelve a
+// pedir a Gemini la misma nota en cada corrida de acá a que alguien la
+// revise. Lo de la portada va último para que mande si están en los dos.
+//
+// Lo de más de 72 horas no se reescribe si no estaba hecho: ya no va a salir
+// en ninguna lista, y sería gastar cuota en una nota que nadie va a ver.
 let reescritas = {};
 if (enLaNube) {
-  const previas = previasDeLaPortada(anterior.notas ?? []);
-  reescritas = await reescribirAutomaticas(ultima.notas ?? [], { previas, decisiones: estado.decisiones });
+  const previas = previasDeLaPortada([...(archivoAnterior.notas ?? []), ...(anterior.notas ?? [])]);
+  const fechaParaLista = (n) => (n.cuando === 'sin fecha en la fuente' ? (vistoAntes[n.id] ?? ahoraISO) : n.fecha);
+  const paraReescribir = (ultima.notas ?? [])
+    .filter((n) => previas[n.id] || vigenteEnPortada({ fecha: fechaParaLista(n) }));
+  reescritas = await reescribirAutomaticas(paraReescribir, { previas, decisiones: estado.decisiones });
   const nuevas = Object.keys(reescritas).filter((id) => !previas[id]).length;
   if (nuevas) console.log(`  ${nuevas} notas reescritas con IA en esta corrida`);
 }
+
+// La dirección de cada nota se fija la primera vez que sale y no cambia más,
+// aunque después la IA o una persona le cambien el titular (lib/ruta.js).
+const libroRedes = leerJson(LIBRO_REDES, {});
+const direcciones = slugsConocidos({
+  archivo: archivoAnterior.notas ?? [], anterior: anterior.notas ?? [], libro: libroRedes,
+});
 
 function notaPublicada(n) {
   const d = estado.decisiones[n.id];
@@ -119,7 +139,9 @@ function notaPublicada(n) {
   // Que `guion` tenga algo es justamente la señal que usa <Firma> para decir
   // "esto lo redactó una IA": no hace falta un campo aparte para lo mismo.
   const auto = reescritas[n.id];
-  return {
+  // Con su dirección fijada: la que ya tenía, o la del titular de hoy si es
+  // la primera vez que sale.
+  return fijarSlug({
     id: n.id,
     titulo: d?.titulo ?? auto?.titulo ?? n.titulo,
     copete: d?.copete ?? auto?.copete ?? n.resumenFuente ?? '',
@@ -162,13 +184,60 @@ function notaPublicada(n) {
     // poder ver las otras once.
     temas: n.temas ?? [],
     como: st,
-  };
+  }, direcciones);
 }
 
-const notas = (ultima.notas ?? [])
+const publicadas = (ultima.notas ?? [])
   .map(notaPublicada)
   .filter(Boolean)
   .sort((a, b) => new Date(b.fecha) - new Date(a.fecha));
+
+// Lo que se MUESTRA (portada, secciones, temas, buscador, feed): sólo lo de
+// las últimas 72 horas. El 25/09 la portada tenía 43 notas de más de tres
+// días, porque el panel las archiva sólo cuando la PC está prendida. La
+// página de cada una sigue existiendo: está en el archivo.
+const notas = publicadas.filter((n) => vigenteEnPortada(n));
+
+// ------------------------------------------------------------- el archivo
+//
+// Todo lo publicado, aunque ya no esté en la portada, para que ningún enlace
+// compartido quede roto (lib/archivo.js). Antes de sumar lo de hoy se mira
+// lo ya archivado contra las decisiones de ahora:
+//
+//   · si una persona la bloqueó o la descartó, o el semáforo ahora la pone
+//     en rojo o en amarillo (desde el 25/09 también mira el texto completo y
+//     lo que escribió la IA), sale del archivo y su página deja de existir
+//     hasta que una persona la apruebe;
+//   · si una persona le corrigió el titular o el copete y la ingesta ya no
+//     la trae, la corrección llega igual a la página.
+const enIngesta = new Map((ultima.notas ?? []).map((n) => [n.id, n]));
+const retiradas = new Set();
+const corregidas = [];
+for (const a of archivoAnterior.notas ?? []) {
+  const d = estado.decisiones[a.id];
+  if (decisionHumana(d)) {
+    if (d.estado !== 'publicada' && d.estado !== 'automatica') retiradas.add(a.id);
+    else if (!enIngesta.has(a.id)) {
+      corregidas.push({
+        ...a, titulo: d.titulo ?? a.titulo, copete: d.copete ?? a.copete, cuerpo: d.cuerpo ?? a.cuerpo, guion: d.guion ?? a.guion,
+      });
+    }
+  } else if (['rojo', 'amarillo'].includes(enIngesta.get(a.id)?.semaforo)) {
+    retiradas.add(a.id);
+  }
+}
+const archivo = actualizarArchivo({
+  archivo: archivoAnterior.notas ?? [],
+  publicadas: [...corregidas, ...publicadas].map(sinPuntaje),
+  enPortada: new Set(notas.map((n) => n.id)),
+  retiradas,
+  enRedes: idsEnRedes(libroRedes),
+});
+if (JSON.stringify(archivo) !== JSON.stringify(archivoAnterior.notas ?? [])) {
+  fs.mkdirSync(path.dirname(ARCHIVO), { recursive: true });
+  fs.writeFileSync(ARCHIVO, comoArchivoJson(archivo), 'utf8');
+  console.log(`  archivo.json: ${archivo.length} notas con página (${retiradas.size} retiradas)`);
+}
 
 // Qué farmacia está de turno AHORA. La regla del cambio a las 8:30 de la
 // mañana está en ingesta/utiles.mjs, con su explicación.

@@ -108,6 +108,19 @@ export function diaDeTurno(ahora = new Date()) {
   return dia;
 }
 
+/**
+ * Año, mes (1 a 12) y día de HOY en Balcarce, sea cual sea la zona del
+ * servidor. `new Date().getDate()` da el día del servidor: GitHub Actions
+ * corre en UTC, y de 21 a 24 de Balcarce ahí ya es mañana. Pasaba con la
+ * farmacia (cruzarFarmacias), el control del cronograma y la agenda.
+ */
+export function fechaEnBalcarce(ahora = new Date()) {
+  const partes = Object.fromEntries(new Intl.DateTimeFormat('en-US', {
+    timeZone: 'America/Argentina/Buenos_Aires', year: 'numeric', month: 'numeric', day: 'numeric',
+  }).formatToParts(ahora).map((p) => [p.type, p.value]));
+  return { anio: Number(partes.year), mes: Number(partes.month), dia: Number(partes.day) };
+}
+
 /** La misma fecha en formato 2026-09-20, sin pasar por UTC. */
 export function comoISO(fecha) {
   return [

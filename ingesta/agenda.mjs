@@ -19,6 +19,7 @@
 //    confirmá la fecha real cuando se acerque".
 
 import { traer } from './ingesta.mjs';
+import { fechaEnBalcarce } from './utiles.mjs';
 
 const API = 'https://balcarce.gob.ar/wp-json/tribe/events/v1/events';
 
@@ -200,7 +201,9 @@ export function mesesHastaQueLlegue(desde, hasta) {
 /** Los eventos anuales cuyo mes aproximado cae este mes o el que viene, para
  *  avisar con antelación. Aparte para poder probarla con una fecha fija. */
 export function anualesQueSeAcercan(ahora = new Date()) {
-  const mesActual = ahora.getMonth() + 1;
+  // El mes de Balcarce, no el del servidor: en GitHub (UTC), el último día
+  // del mes a las 21 ya era el mes siguiente.
+  const mesActual = fechaEnBalcarce(ahora).mes;
   return CALENDARIO_ANUAL
     .filter((ev) => mesesHastaQueLlegue(mesActual, ev.mesAproximado) <= 1)
     .map((ev) => ({ ...ev, confirmado: false }));

@@ -566,7 +566,18 @@ export const REGLAS_SEMAFORO = {
   rojo: ['menor de edad', 'abuso sexual', 'suicid', 'se quitó la vida',
     'violación', 'violacion', 'víctima de violencia', 'victima de violencia',
     'violencia de género', 'violencia de genero', 'femicidio', 'niño identificado',
-    'niña identificada', 'abuso infantil', 'grooming'],
+    'niña identificada', 'abuso infantil', 'grooming',
+    // Sumados el 25/09 (auditoría, a pedido de Hernán y Andrés). Sólo frases
+    // que no se pueden leer de otra forma: "trata de personas" NO, porque
+    // "se trata de personas mayores" es castellano de todos los días.
+    // No hace falta escribir la versión sin tilde: el semáforo compara todo
+    // sin tildes. Cada una tiene su ejemplo a favor y en contra en
+    // pruebas/semaforo.test.mjs.
+    'abusó sexualmente', 'abusaron sexualmente', 'abusada sexualmente', 'abusado sexualmente',
+    'agresión sexual', 'agresiones sexuales', 'abuso de menores', 'abuso de un menor',
+    'abuso de una menor', 'corrupción de menores', 'pornografía infantil',
+    'explotación sexual', 'víctimas de trata', 'red de trata', 'delito de trata',
+    'violada', 'violador', 'la violaron', 'estupro'],
   // Espera aprobación.
   //
   // El 21/09 se sacaron de acá "concejo deliberante", "intendente", "gremio",
@@ -583,7 +594,16 @@ export const REGLAS_SEMAFORO = {
     // hace que eso sea seguro: lo grave sigue esperando a una persona.
     'homicidio', 'asesinato', 'asesinado', 'asesinaron', 'cadáver', 'cadaver',
     'víctima', 'victima', 'apuñalado', 'apuñalaron', 'baleado', 'balearon',
-    'adolescente', 'adolescentes', 'niño', 'niña', 'nene', 'nena', 'menores de edad'],
+    'adolescente', 'adolescentes', 'niño', 'niña', 'nene', 'nena', 'menores de edad',
+    // Sumados el 25/09: lo que puede dejar identificado a un chico aunque no
+    // sea un delito. "menor" suelto NO ("un precio menor"): va en frase.
+    // "bebé" suelto tampoco: sin tilde es "bebe", del verbo beber.
+    // "abusó" suelto tampoco: sin tilde es "abuso", y "abuso de poder" no es
+    // esto; van las formas que sí lo son.
+    'un menor de', 'una menor de', 'el menor de', 'la menor de',
+    'un bebé', 'el bebé', 'del bebé', 'una beba', 'la beba', 'bebés',
+    'recién nacido', 'recién nacida', 'alumna de', 'alumno de',
+    'abusado', 'abusada', 'abusador', 'la abusó', 'lo abusó', 'abusaba de'],
   // Todo lo demás sale solo si la sección lo permite.
   //
   // Balcarce entró el 20/09: estaba afuera por prudencia y el resultado era
@@ -761,12 +781,21 @@ export const PISO_POR_DEFECTO = 50;
 // Con el piso no alcanza: un domingo de fútbol tiene treinta notas arriba de
 // 62 puntos, y la portada de Balcarce sería la de Olé. El cupo se queda con
 // las de más puntaje y manda el resto a esperar. Lo de Balcarce no tiene
-// cupo, y Automovilismo tampoco.
+// cupo.
+//
+// Automovilismo no tenía cupo hasta el 25/09, y la portada de ese día tenía
+// 45 notas de fierros (22 de afuera: F1, TC nacional) contra 40 de Balcarce.
+// Un medio de Balcarce no puede tener más Fórmula 1 que Balcarce. Con 12,
+// lo de afuera baja a la mitad y lo local (el autódromo, los pilotos de acá)
+// sigue sin cupo, como siempre: ese día habrían quedado 23 + 12 = 35.
+// Tecnología y Política bajan de 12 a 8: ese día tenían 6 y 4 de afuera, así
+// que no se vacían, pero un día de mucha noticia nacional ya no tapan lo local.
 export const CUPO_DE_AFUERA = {
   Deportes: 10,
   Economía: 12,
-  Tecnología: 12,
-  Política: 12,
+  Tecnología: 8,
+  Política: 8,
   Policiales: 8,
+  Automovilismo: 12,
 };
 export const CUPO_POR_DEFECTO = 15;

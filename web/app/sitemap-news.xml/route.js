@@ -21,7 +21,13 @@ export async function GET() {
   const d = obtenerDatos();
   const ahora = Date.now();
 
-  const recientes = (d.notas ?? []).filter((n) => (ahora - new Date(n.fecha).getTime()) <= DOS_DIAS_MS);
+  // Sólo las notas con fecha real. Cuando la fuente no publica la hora
+  // (`sinFecha`), `fecha` es la primera vez que la vimos, no cuándo salió:
+  // el 25/09 diecinueve notas decían la misma hora de relleno, y Google
+  // Noticias castiga una fecha de publicación que no es cierta.
+  const recientes = (d.notas ?? [])
+    .filter((n) => !n.sinFecha && n.fecha)
+    .filter((n) => (ahora - new Date(n.fecha).getTime()) <= DOS_DIAS_MS);
 
   const esc = (s = '') => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 

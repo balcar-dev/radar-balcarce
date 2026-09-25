@@ -1,7 +1,16 @@
 // El texto fuente de esta página vive en POLITICA-PRIVACIDAD.md, en la raíz
 // del proyecto — se edita ahí y se copia acá (evita meter un parser de
 // markdown sólo para una página que casi no cambia).
-export const metadata = { title: 'Política de privacidad · Radar Balcarce' };
+//
+// El título va sin la marca: la plantilla del layout ya le agrega
+// " · Radar Balcarce" y salía repetida.
+import { metadatosDePagina } from '@/components/metadatos';
+
+export const metadata = metadatosDePagina({
+  titulo: 'Política de privacidad',
+  descripcion: 'Qué datos pedimos en Radar Balcarce, para qué los usamos, cómo medimos las visitas sin cookies y cómo pedir que borremos tus datos.',
+  camino: '/politica-de-privacidad',
+});
 
 export default function PoliticaPrivacidad() {
   return (

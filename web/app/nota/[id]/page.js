@@ -1,17 +1,22 @@
-import { obtenerDatos, obtenerNota, cuando, datosSeccion, nombreCorto, temasVivos } from '@/lib/datos';
+import {
+  obtenerDatos, obtenerNota, todasLasNotas, cuando, datosSeccion, nombreCorto, temasVivos,
+} from '@/lib/datos';
 import {
   Etiqueta, FilaNota, Cierre, Invitacion, Firma, TemasDeLaNota,
 } from '@/components/piezas';
 import Compartir from '@/components/compartir';
+import { OG_COMUN } from '@/components/metadatos';
 import { FichaDeNota, Migas } from '@/components/ficha';
 import { notFound } from 'next/navigation';
 import { parteDeNota } from '@/lib/ruta';
 import { MOSTRAR_TEMAS } from '@/lib/sitio';
-import { recortarEn } from '@/lib/texto';
+import { recortarEn, sinTitularRepetido } from '@/lib/texto';
 
 export function generateStaticParams() {
-  // El parámetro es "titular-en-guiones-id". Ver lib/ruta.js.
-  return obtenerDatos().notas.map((n) => ({ id: parteDeNota(n) }));
+  // El parámetro es "titular-en-guiones-id". Ver lib/ruta.js. Van todas las
+  // que tienen página, no sólo las de la portada: una nota que sale de la
+  // portada no puede dejar un enlace roto en Facebook (lib/archivo.js).
+  return todasLasNotas().map((n) => ({ id: parteDeNota(n) }));
 }
 
 /**
@@ -37,6 +42,7 @@ export function generateMetadata({ params }) {
     description: descripcion,
     alternates: { canonical: camino },
     openGraph: {
+      ...OG_COMUN,
       type: 'article',
       title: n.titulo,
       description: descripcion,
@@ -55,9 +61,13 @@ export default function PaginaNota({ params }) {
 
   const s = datosSeccion(n.seccion);
   const temas = temasVivos();
-  const relacionadas = obtenerDatos().notas
-    .filter((o) => o.seccion === n.seccion && o.id !== n.id)
-    .slice(0, 4);
+  // Sin repetir titulares: dos medios que cuentan lo mismo con las mismas
+  // palabras aparecían dos veces seguidas, o repetían la nota que se está
+  // leyendo con otro identificador.
+  const relacionadas = sinTitularRepetido(
+    obtenerDatos().notas.filter((o) => o.seccion === n.seccion && o.id !== n.id),
+    [n],
+  ).slice(0, 4);
 
   return (
     <div className="envoltura">

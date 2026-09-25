@@ -88,7 +88,12 @@ async function facebook() {
 
     try {
       const r = await api.publicarEnFacebook({ mensaje: mensajeDeNota(nota, SITIO), enlace });
-      anotar(libro, 'facebook', nota.id, { postId: r.id, titulo: nota.titulo });
+      // El enlace y los temas quedan en el libro: el enlace es la dirección que
+      // ya está en Facebook (generar-datos la respeta aunque cambie el titular)
+      // y los temas sirven para no repetir tema al día siguiente.
+      anotar(libro, 'facebook', nota.id, {
+        postId: r.id, titulo: nota.titulo, enlace, temas: nota.temas ?? [],
+      });
       fs.writeFileSync(LIBRO, `${JSON.stringify(libro, null, 2)}\n`);
       console.log(`             publicado: ${r.id}`);
     } catch (e) {
@@ -107,7 +112,7 @@ async function facebook() {
     if (!yaPublicada(libro, 'instagramFeed', nota.id)) {
       try {
         const ri = await api.publicarFotoEnInstagram({ imagenUrl: imagenDeNota(nota, SITIO), pie: mensajeParaInstagram(nota, SITIO) });
-        anotar(libro, 'instagramFeed', nota.id, { mediaId: ri.id, titulo: nota.titulo });
+        anotar(libro, 'instagramFeed', nota.id, { mediaId: ri.id, titulo: nota.titulo, enlace });
         fs.writeFileSync(LIBRO, `${JSON.stringify(libro, null, 2)}\n`);
         console.log(`             + Instagram: ${ri.id}`);
       } catch (e) {

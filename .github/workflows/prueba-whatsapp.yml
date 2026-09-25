@@ -5,9 +5,14 @@ name: Prueba de WhatsApp
 on:
   workflow_dispatch:
 
+# Sólo lee el repositorio: no guarda nada.
+permissions:
+  contents: read
+
 jobs:
   probar:
     runs-on: ubuntu-latest
+    timeout-minutes: 5
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4

@@ -11,6 +11,8 @@
 //   · que el reloj de redes esté corriendo;
 //   · que las piezas fijas del día (clima, farmacia) hayan salido en su hora;
 //   · que `www` redirija al dominio sin `www`;
+//   · lo que vence y hay que renovar a mano (el token de GitHub, el dominio),
+//     con 30 días de aviso;
 //   · que la portada NO vuelva a mostrar lo que se pidió sacar (la fuente arriba
 //     de un título, "la vimos hace…", hasta qué hora está la farmacia), y que
 //     la mayoría de las notas tengan cuerpo. Ver REGLAS.md.
@@ -51,6 +53,12 @@ export const VENCIMIENTOS = [
   {
     clave: 'vence-token-github', fecha: '2027-09-21',
     texto: 'El token de GitHub que usa cron-job.org vence el 21/09/2027. Hay que crear otro (GitHub → Settings → Developer settings → Fine-grained tokens, sólo este repositorio, permiso Actions: lectura y escritura) y pegarlo en los tres trabajos de cron-job.org.',
+  },
+  {
+    // Sumado el 25/09 (auditoría). Si el dominio vence, se cae todo junto: la
+    // web, los enlaces de cada posteo de Facebook y de cada podcast.
+    clave: 'vence-dominio', fecha: '2027-09-21',
+    texto: 'El dominio radarbalcarce.com vence el 21/09/2027. Hay que renovarlo en DonWeb (donde está registrado) antes de esa fecha: si vence, la web y los enlaces de todos los posteos dejan de andar.',
   },
 ];
 export const DIAS_DE_AVISO_ANTES = 30;
@@ -209,7 +217,9 @@ export function revisarPortada(html) {
   const enChapa = MEDIOS.filter((m) => chapas.some((c) => c.toLowerCase().includes(m.toLowerCase())));
   const visible = String(html).replace(/<script[\s\S]*?<\/script>/g, ' ').replace(/<style[\s\S]*?<\/style>/g, ' ').replace(/<[^>]+>/g, ' ');
   return {
-    laVimos: /la vimos hace|sin hora/i.test(visible),
+    // Con palabra entera: "sin hora" suelto encontraba "sin horario" (por
+    // ejemplo, "atención sin horario de cierre") y avisaba en falso.
+    laVimos: /\bla vimos hace\b|\bsin hora\b/i.test(visible),
     horaFarmacia: /turno termina a las|termina a las \d/i.test(visible),
     fuentesEnChapa: enChapa.join(', '),
   };
@@ -292,7 +302,32 @@ async function main() {
     if (r.ok) { estado.ultimoResumen = diaAR(ahora); cambio = true; console.log('  Resumen del día enviado.'); }
   }
   if (cambio) fs.writeFileSync(ESTADO, `${JSON.stringify(estado, null, 2)}\n`);
-  process.exit(problemas.some((p) => p.nivel === 'alta') ? 1 : 0);
+  // Los problemas se anotan arriba de la corrida, pero la corrida termina
+  // bien: el vigilante HIZO su trabajo. Antes terminaba con error cuando
+  // encontraba algo grave, y Actions pintaba de rojo "Vigilancia" como si
+  // la que estuviera rota fuera ella (auditoría del 25/09).
+  for (const p of problemas) console.log(anotacion(p));
+  process.exit(0);
 }
 
-if (process.argv[1] && process.argv[1].endsWith('vigilar.mjs')) await main();
+/**
+ * La línea que GitHub Actions muestra como aviso amarillo arriba de la
+ * corrida. Los saltos de línea y el "%" se escapan como pide GitHub, si no,
+ * el aviso se corta en la primera línea.
+ */
+export function anotacion(problema) {
+  const escapar = (s) => String(s).replace(/%/g, '%25').replace(/\r/g, '%0D').replace(/\n/g, '%0A');
+  // En el título (una "propiedad") también se escapan ":" y ",".
+  const propiedad = (s) => escapar(s).replace(/:/g, '%3A').replace(/,/g, '%2C');
+  const titulo = problema.nivel === 'alta' ? 'Vigilancia: problema' : 'Vigilancia: para mirar';
+  return `::warning title=${propiedad(titulo)}::${escapar(problema.texto)}`;
+}
+
+// Si el que falla es el vigilante mismo (no pudo correr), eso sí termina con
+// error: es lo único que tiene que pintar de rojo esta corrida.
+if (process.argv[1] && process.argv[1].endsWith('vigilar.mjs')) {
+  await main().catch((e) => {
+    console.error(`El vigilante no pudo terminar: ${e?.stack ?? e}`);
+    process.exit(1);
+  });
+}

@@ -1,4 +1,4 @@
-import { obtenerDatos, obtenerNota } from '@/lib/datos';
+import { obtenerNota, notasConImagen } from '@/lib/datos';
 import { tarjeta, TAMANO, TIPO } from '@/lib/tarjeta';
 import { parteDeNota } from '@/lib/ruta';
 
@@ -10,7 +10,9 @@ export const contentType = TIPO;
 export const alt = 'Radar Balcarce';
 
 export function generateStaticParams() {
-  return obtenerDatos().notas.map((n) => ({ id: parteDeNota(n) }));
+  // Las de la portada y las archivadas que salieron en las redes: ver
+  // notasConImagen en lib/datos.js.
+  return notasConImagen().map((n) => ({ id: parteDeNota(n) }));
 }
 
 export default function Imagen({ params }) {

@@ -10,6 +10,7 @@ import {
 } from '@/lib/paginas';
 import { Migas } from '@/components/ficha';
 import { recortarEn } from '@/lib/texto';
+import { OG_COMUN } from '@/components/metadatos';
 
 // Se generan sólo las secciones que hoy tienen notas —no tiene sentido
 // publicar una página vacía de Política si en el día no hubo nada— y una
@@ -47,7 +48,8 @@ export function generateMetadata({ params }) {
     title: titulo,
     description: descripcion,
     alternates: { canonical: camino },
-    openGraph: { type: 'website', title: titulo, description: descripcion, url: camino },
+    // La tarjeta la pone sola opengraph-image.js, que está al lado.
+    openGraph: { ...OG_COMUN, type: 'website', title: titulo, description: descripcion, url: camino },
   };
 }
 

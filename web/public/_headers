@@ -1,0 +1,46 @@
+# Encabezados que Cloudflare Pages agrega a cada respuesta.
+#
+# Next copia web/public/ a web/out/ al compilar, y Cloudflare lee este archivo
+# desde la raíz de lo publicado. Formato: una ruta (con * como comodín) y
+# abajo, con sangría, los encabezados. Si una dirección coincide con varias
+# reglas, se suman.
+#
+# La prueba que lo vigila: pruebas/seo-paginas.test.mjs.
+
+# Seguridad, en todo el sitio.
+# - HSTS: que el navegador no vuelva a probar http:// durante un año.
+# - nosniff: que el navegador no adivine el tipo de un archivo.
+# - SAMEORIGIN / frame-ancestors: nadie puede meter el sitio en un marco
+#   ajeno para hacerlo pasar por otro.
+# - Permissions-Policy: el sitio no usa cámara, micrófono ni ubicación (el
+#   clima es siempre el de Balcarce), así que se apagan.
+# No hay una Content-Security-Policy completa a propósito: el beacon de
+# Cloudflare Web Analytics y los datos estructurados (JSON-LD) van en línea, y
+# una política estricta los rompería sin avisar.
+/*
+  Strict-Transport-Security: max-age=31536000
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: SAMEORIGIN
+  Content-Security-Policy: frame-ancestors 'self'
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
+
+# Las tarjetas para compartir. Se generan como archivos sin extensión y
+# Cloudflare los servía como application/octet-stream (25/09): WhatsApp y
+# Facebook pueden no mostrar una imagen que no dice que es una imagen.
+/opengraph-image
+  Content-Type: image/png
+
+/nota/*/opengraph-image
+  Content-Type: image/png
+
+/seccion/*/opengraph-image
+  Content-Type: image/png
+
+/tema/*/opengraph-image
+  Content-Type: image/png
+
+# Lo que Next genera con un código en el nombre no cambia nunca: si cambia el
+# contenido, cambia el nombre. Se puede guardar un año.
+/_next/static/*
+  Cache-Control: public, max-age=31536000, immutable

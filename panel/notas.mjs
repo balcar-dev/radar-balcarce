@@ -28,3 +28,27 @@ export function decisionParaLaWeb(d) {
     ),
   };
 }
+
+// Cuánto se guarda una decisión en web/data/decisiones.json. Hasta el 25/09
+// no se podaba nunca: 950 decisiones y 437 KB que viajan en cada commit y que
+// "Actualizar la web" lee entero cada media hora, aunque sólo mira las de las
+// notas que la ingesta trae ese día (web/scripts/generar-datos.mjs busca por
+// id de nota). Una nota de hace dos meses ya no vuelve a aparecer.
+export const DIAS_DE_DECISIONES = 60;
+
+// Lo que una persona sacó de circulación se guarda igual, sin importar la
+// fecha: si una portada que no fecha sus notas vuelve a mostrar una vieja,
+// sin la decisión saldría otra vez por el semáforo. Son pocas.
+const SACADAS_A_MANO = new Set(['descartada', 'bloqueada', 'archivada']);
+
+/** Las decisiones sin las de más de `dias` días. Las que no tienen fecha
+ *  (`cuando`) se conservan: no hay cómo saber si son viejas. */
+export function podarDecisiones(decisiones, { ahora = Date.now(), dias = DIAS_DE_DECISIONES } = {}) {
+  const limite = ahora - dias * 86400000;
+  return Object.fromEntries(Object.entries(decisiones ?? {}).filter(([, d]) => {
+    const t = Date.parse(d?.cuando ?? '');
+    if (!Number.isFinite(t) || t >= limite) return true;
+    const humana = !!d.por && d.por !== 'ia';
+    return humana && SACADAS_A_MANO.has(d.estado);
+  }));
+}

@@ -6,34 +6,124 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { rutaDeNota, idDeRuta } from './ruta.js';
+import { vigenteEnPortada } from './archivo.js';
 
-const ARCHIVO = path.join(process.cwd(), 'data', 'portada.json');
+// Se arma en el momento y no al cargar el módulo: las pruebas se paran en
+// otra carpeta para leer datos de mentira.
+const carpetaDeDatos = () => path.join(process.cwd(), 'data');
 
+// Compilar el sitio lee estos archivos miles de veces (cada página, sus
+// metadatos y sus imágenes). El archivo de notas pesa megas: leerlo y
+// parsearlo en cada llamada multiplicaba el tiempo de compilación. Se guarda
+// lo leído mientras el archivo no cambie (fecha y tamaño), así que en
+// `next dev` igual se ve al toque lo que regenera `npm run datos`.
+const memoria = new Map();
+function leerConMemoria(archivo, armar) {
+  let firma;
+  try {
+    const st = fs.statSync(archivo);
+    firma = `${st.mtimeMs}:${st.size}`;
+  } catch {
+    firma = 'no existe';
+  }
+  const guardado = memoria.get(archivo);
+  if (guardado && guardado.firma === firma) return guardado.valor;
+  const valor = armar(firma === 'no existe' ? null : JSON.parse(fs.readFileSync(archivo, 'utf8')));
+  memoria.set(archivo, { firma, valor });
+  return valor;
+}
+
+const VACIO = () => ({
+  generado: null, notas: [], secciones: [], clima: null,
+  farmacias: { hoy: null, proximos: [], avisos: [] },
+  agenda: { municipio: [], proximosAnuales: [] },
+  utiles: { numeros: [], diaDeLaSemana: null, tocaHoy: false },
+});
+
+// La dirección de cada nota se arma acá y no en cada página: ninguna página
+// tiene que saber cómo se arma. Sale del `slug` fijado (ver lib/ruta.js).
+const conRuta = (n) => ({ ...n, ruta: rutaDeNota(n) });
+
+function leerPortada() {
+  return leerConMemoria(path.join(carpetaDeDatos(), 'portada.json'), (crudo) => {
+    if (!crudo) return null;
+    const conPagina = (crudo.notas ?? []).map(conRuta);
+    // Las de más de 72 horas ya las saca generar-datos; esto es por si el
+    // archivo quedó un rato sin regenerar. Salen de las listas, pero la
+    // página sigue (`conPagina`).
+    return { ...crudo, notas: conPagina.filter((n) => vigenteEnPortada(n)), conPagina };
+  });
+}
+
+/**
+ * Lo que muestra el sitio: portada, secciones, temas, buscador, feed. Sólo
+ * trae las notas de las listas (las de las últimas 72 horas); las demás
+ * páginas de notas salen del archivo (`todasLasNotas`).
+ */
 export function obtenerDatos() {
   try {
-    const d = JSON.parse(fs.readFileSync(ARCHIVO, 'utf8'));
-    // La dirección de cada nota se arma acá y no en los datos: así sigue al
-    // titular si se corrige, y ninguna página tiene que saber cómo se arma.
-    d.notas = (d.notas ?? []).map((n) => ({ ...n, ruta: rutaDeNota(n) }));
-    return d;
-  } catch {
+    const d = leerPortada();
     // Sin datos generados todavía: la web no se rompe, muestra vacío.
-    return {
-      generado: null, notas: [], secciones: [], clima: null,
-      farmacias: { hoy: null, proximos: [], avisos: [] },
-      agenda: { municipio: [], proximosAnuales: [] },
-      utiles: { numeros: [], diaDeLaSemana: null, tocaHoy: false },
-    };
+    if (!d) return VACIO();
+    // Una copia por encima, para que ninguna página ensucie lo guardado.
+    const { conPagina, ...resto } = d;
+    return { ...resto, notas: [...d.notas] };
+  } catch {
+    return VACIO();
+  }
+}
+
+/** Las notas de portada.json con página, aunque ya no vayan en las listas. */
+function notasDeLaPortada() {
+  try {
+    return leerPortada()?.conPagina ?? [];
+  } catch {
+    return [];
+  }
+}
+
+/** Las notas archivadas (web/data/archivo.json), con su dirección. */
+export function obtenerArchivo() {
+  try {
+    return leerConMemoria(path.join(carpetaDeDatos(), 'archivo.json'), (crudo) => (crudo?.notas ?? []).map(conRuta));
+  } catch {
+    return [];
   }
 }
 
 /**
+ * Todas las notas que tienen página: las de la portada y las archivadas.
+ * Si una está en los dos lados, manda la de la portada, que es la de esta
+ * corrida.
+ */
+export function todasLasNotas() {
+  const deLaPortada = notasDeLaPortada();
+  const ids = new Set(deLaPortada.map((n) => n.id));
+  return [...deLaPortada, ...obtenerArchivo().filter((n) => !ids.has(n.id))];
+}
+
+/**
+ * Las notas que llevan imagen propia (la de compartir y la de Instagram):
+ * las de la portada y las archivadas que salieron en las redes, que son las
+ * que Facebook o Instagram pueden volver a pedir. Generar dos imágenes por
+ * cada una de las miles de notas archivadas alargaría mucho la compilación
+ * para imágenes que nadie va a pedir.
+ */
+export function notasConImagen() {
+  const deLaPortada = obtenerDatos().notas;
+  const ids = new Set(deLaPortada.map((n) => n.id));
+  return [...deLaPortada, ...obtenerArchivo().filter((n) => n.redes && !ids.has(n.id))];
+}
+
+/**
  * Una nota, por lo que llegó en la dirección: "titular-en-guiones-id" o el
- * id a secas. Se resuelve por el final, no por el titular entero.
+ * id a secas. Se resuelve por el final, no por el titular entero, y se busca
+ * también en el archivo: una nota que salió de la portada sigue teniendo
+ * página.
  */
 export function obtenerNota(parte) {
   const id = idDeRuta(parte);
-  return obtenerDatos().notas.find((n) => n.id === id) ?? null;
+  return todasLasNotas().find((n) => n.id === id) ?? null;
 }
 
 /** Cuántas horas atrás se sigue considerando "de hoy" para la portada. */

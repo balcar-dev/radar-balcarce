@@ -6,6 +6,7 @@ import {
 } from '@/components/piezas';
 import { notFound } from 'next/navigation';
 import { Migas } from '@/components/ficha';
+import { OG_COMUN } from '@/components/metadatos';
 
 // Un tema es una historia que vuelve: el autódromo, el Concejo, Ferroviarios.
 // La sección agrupa por tipo de noticia; el tema, por historia. En un pueblo
@@ -26,7 +27,7 @@ export function generateMetadata({ params }) {
     title: nombre,
     description: descripcion,
     alternates: { canonical: camino },
-    openGraph: { type: 'website', title: nombre, description: descripcion, url: camino },
+    openGraph: { ...OG_COMUN, type: 'website', title: nombre, description: descripcion, url: camino },
   };
 }
 

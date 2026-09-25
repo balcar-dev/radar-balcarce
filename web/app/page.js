@@ -8,11 +8,18 @@ import {
 import { TarjetaClima } from '@/components/clima-vivo';
 import { Aviso } from '@/components/avisos';
 import { MOSTRAR_TEMAS } from '@/lib/sitio';
+import { metadatosDePagina } from '@/components/metadatos';
 
 // El título de la portada dice qué es y de dónde: es lo que se ve en Google.
+// Es la única página con canónico "/": el layout ya no lo pone para todas.
+// Al compartirla, la tarjeta dice sólo el nombre del medio.
 export const metadata = {
+  ...metadatosDePagina({
+    titulo: 'Radar Balcarce',
+    descripcion: 'Las noticias de Balcarce y la región al día, el clima, la farmacia de turno y la agenda de la semana. Se actualiza todo el día, con la fuente siempre a la vista.',
+    camino: '/',
+  }),
   title: { absolute: 'Radar Balcarce · Noticias de Balcarce, clima y farmacia de turno' },
-  description: 'Las noticias de Balcarce y la región al día, el clima, la farmacia de turno y la agenda de la semana. Se actualiza todo el día, con la fuente siempre a la vista.',
 };
 
 export default function Portada() {

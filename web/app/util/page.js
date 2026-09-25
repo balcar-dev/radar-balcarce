@@ -1,10 +1,12 @@
 import { obtenerDatos } from '@/lib/datos';
 import { Cierre, Invitacion } from '@/components/piezas';
+import { metadatosDePagina } from '@/components/metadatos';
 
-export const metadata = {
-  title: 'Teléfonos útiles',
-  description: 'Emergencias, salud, seguridad y oficinas del municipio de Balcarce, en un solo lugar.',
-};
+export const metadata = metadatosDePagina({
+  titulo: 'Teléfonos útiles',
+  descripcion: 'Emergencias, salud, seguridad y oficinas del municipio de Balcarce, en un solo lugar.',
+  camino: '/util',
+});
 
 // Esta página hace UNA cosa: los teléfonos. Antes tenía también la farmacia
 // de turno, la agenda y el clima, y terminaba siendo un cajón de sastre donde

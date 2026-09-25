@@ -18,7 +18,7 @@ export async function GET() {
 
   const texto = `# ${NOMBRE}
 
-> Medio digital de Balcarce (provincia de Buenos Aires, Argentina). Resume lo que publican los medios locales, siempre con el enlace a la nota original. Algunos textos y las voces de los videos se producen con inteligencia artificial, con revisión humana.
+> Medio digital de Balcarce (provincia de Buenos Aires, Argentina). Resume lo que publican los medios locales, siempre con el enlace a la nota original. Los resúmenes los escribe una inteligencia artificial y se verifican automáticamente contra la fuente; lo sensible lo revisa una persona antes de salir. Las voces de los videos también son de IA.
 
 Cubre la actualidad de Balcarce: noticias locales, política, policiales, deportes, automovilismo (Balcarce es la ciudad natal de Juan Manuel Fangio), agro, economía, cultura y tecnología. Se actualiza cada 30 minutos.
 
@@ -31,7 +31,9 @@ ${secciones}
 - [Feed RSS](${enlace('/feed.xml')})
 - [Mapa del sitio](${enlace('/sitemap.xml')})
 - [Agenda de eventos](${enlace('/agenda')})
-- [Política editorial y de privacidad](${enlace('/politica-de-privacidad')})
+- [Quiénes somos y cómo trabajamos](${enlace('/quienes-somos')})
+- [Contacto y pedidos de corrección](${enlace('/contacto')})
+- [Política de privacidad](${enlace('/politica-de-privacidad')})
 
 ## Contacto
 

@@ -1,4 +1,5 @@
 import { sitio, enlace, NOMBRE } from '@/lib/sitio';
+import { autorDeNota } from '@/components/metadatos';
 
 // Los datos estructurados: lo mismo que ya está en la página, pero escrito
 // para que lo lea una máquina.
@@ -26,6 +27,14 @@ export function FichaDelSitio() {
         name: NOMBRE,
         url: base,
         email: 'radarbalcarce@gmail.com',
+        // El logo lo piden Google Noticias y los resultados enriquecidos:
+        // cuadrado, de al menos 112 px. Es el mismo ícono del manifiesto.
+        logo: {
+          '@type': 'ImageObject',
+          url: `${base}/icon-512.png`,
+          width: 512,
+          height: 512,
+        },
         areaServed: {
           '@type': 'City',
           name: 'Balcarce',
@@ -38,7 +47,8 @@ export function FichaDelSitio() {
         },
         // Que lo diga acá también: parte de lo que publicamos lo redacta una
         // máquina, y no es algo para esconder en la letra chica.
-        publishingPrinciples: `${base}/politica-de-privacidad`,
+        publishingPrinciples: `${base}/quienes-somos`,
+        correctionsPolicy: `${base}/contacto`,
       },
       {
         '@type': 'WebSite',
@@ -78,11 +88,10 @@ export function FichaDeNota({ nota }) {
     image: [enlace(`${nota.ruta}/opengraph-image`)],
     isAccessibleForFree: true,
     publisher: { '@id': `${base}/#medio` },
-    // Quién la escribió. Si el resumen lo redactó la IA se dice, igual que
-    // al pie de la nota.
-    author: nota.guion
-      ? { '@type': 'Organization', name: `${NOMBRE} (resumen automático con revisión)`, url: base }
-      : { '@type': 'Organization', name: NOMBRE, url: base },
+    // Quién la escribió: lo mismo que dice la firma al pie de la nota (IA o
+    // fuente, revisada por una persona o publicada sola). Ver
+    // components/metadatos.js.
+    author: autorDeNota(nota, base),
     // De dónde salió. Es la mitad de lo que ofrecemos: el trabajo original
     // es del medio que la informó.
     citation: (nota.medios ?? []).map((m) => ({ '@type': 'CreativeWork', name: m })),

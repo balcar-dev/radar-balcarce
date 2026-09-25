@@ -65,19 +65,36 @@ let enCurso = null;
 let reloj = null;
 const oyentes = new Set();
 
-async function traer() {
+// Cuánto se espera a Open-Meteo. Sin tope, un pedido colgado dejaba `enCurso`
+// ocupado para siempre: todos los pedidos siguientes esperaban a ése y el
+// clima de la pestaña no se actualizaba más hasta recargar (auditoría 25/09).
+export const ESPERA_CLIMA = 15000;
+
+/** Una señal que corta a los `ms`. AbortSignal.timeout no está en todos los
+ *  navegadores viejos: ahí se arma a mano. */
+function senalConTiempo(ms) {
+  if (typeof AbortSignal !== 'undefined' && typeof AbortSignal.timeout === 'function') return AbortSignal.timeout(ms);
+  const control = new AbortController();
+  setTimeout(() => control.abort(), ms);
+  return control.signal;
+}
+
+/** Exportada sólo para las pruebas (fetchFn y espera); la web la usa sin nada. */
+export async function traer({ fetchFn = fetch, espera = ESPERA_CLIMA } = {}) {
   // Si ya hay un pedido volando, los dos componentes esperan el mismo.
   if (enCurso) return enCurso;
   enCurso = (async () => {
     try {
-      const r = await fetch(URL, { cache: 'no-store' });
+      const r = await fetchFn(URL, { cache: 'no-store', signal: senalConTiempo(espera) });
       if (!r.ok) return;
       ultimo = interpretar(await r.json());
       for (const avisar of oyentes) avisar(ultimo);
     } catch {
-      // Si Open-Meteo no contesta se queda el dato que trajo el servidor.
-      // Un número de hace un rato es mejor que una tarjeta rota.
+      // Si Open-Meteo no contesta (o tardó más que ESPERA_CLIMA) se queda el
+      // dato que trajo el servidor. Un número de hace un rato es mejor que
+      // una tarjeta rota.
     } finally {
+      // Pase lo que pase, el próximo pedido puede salir.
       enCurso = null;
     }
   })();

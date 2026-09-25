@@ -9,11 +9,13 @@ const DIA_ESCRITO = {
 };
 import { TarjetaFarmacia, Cierre, Invitacion } from '@/components/piezas';
 import { comoNombre } from '@/lib/texto';
+import { metadatosDePagina } from '@/components/metadatos';
 
-export const metadata = {
-  title: 'Farmacias de turno',
-  description: 'Qué farmacia está de turno hoy en Balcarce y cómo sigue la semana.',
-};
+export const metadata = metadatosDePagina({
+  titulo: 'Farmacias de turno',
+  descripcion: 'Qué farmacia está de turno hoy en Balcarce y cómo sigue la semana.',
+  camino: '/farmacias',
+});
 
 // La farmacia de turno vivía dentro de "Balcarce Útil", mezclada con los
 // teléfonos, la agenda y el clima. Es lo más buscado del sitio: merece su

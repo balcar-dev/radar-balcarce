@@ -33,3 +33,26 @@ export function recortarEn(texto = '', maximo = 60) {
   const ultimo = corte.lastIndexOf(' ');
   return `${corte.slice(0, ultimo > maximo * 0.6 ? ultimo : maximo - 1).replace(/[\s,.;:–—-]+$/, '')}…`;
 }
+
+/**
+ * El titular reducido a lo que dice: minúsculas, sin tildes ni signos. Dos
+ * notas con el mismo titular así son la misma nota contada dos veces (el
+ * 25/09 había dos "El Senado aprueba la reforma de Zona Fría en Balcarce",
+ * de dos medios distintos).
+ */
+export function titularNormalizado(titulo = '') {
+  return String(titulo).toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+    .replace(/[^a-z0-9]+/g, ' ').trim();
+}
+
+/** Saca de la lista las notas con un titular ya visto (en la lista o en
+ *  `yaMostradas`), dejando la primera. */
+export function sinTitularRepetido(notas = [], yaMostradas = []) {
+  const vistos = new Set(yaMostradas.map((n) => titularNormalizado(n.titulo)));
+  return notas.filter((n) => {
+    const t = titularNormalizado(n.titulo);
+    if (vistos.has(t)) return false;
+    vistos.add(t);
+    return true;
+  });
+}

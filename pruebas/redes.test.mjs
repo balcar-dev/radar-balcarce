@@ -9,6 +9,7 @@ import assert from 'node:assert/strict';
 import { crearCliente, ErrorMeta, sinToken } from '../redes/meta.mjs';
 import {
   elegirParaFacebook, mensajeDeNota, mensajeParaInstagram, enlaceDeNota, imagenDeNota, libroNuevo, anotar, yaPublicada, horaAR, REGLAS_FACEBOOK,
+  minutoDelDiaAR, temaParecido,
 } from '../redes/elegir.mjs';
 
 const TOKEN = 'TOKEN-SECRETO-123';
@@ -196,6 +197,73 @@ test('sale de a una por vez, la más fuerte primero', () => {
     notas: [nota({ id: 'a', relevancia: 82 }), nota({ id: 'b', relevancia: 95 })], ahora: AHORA,
   });
   assert.deepEqual(r.map((n) => n.id), ['b']);
+});
+
+// ------------------------------------------- horario y temas repetidos (25/09)
+
+test('Facebook publica hasta las 22:00 en punto, no hasta las 22:59', () => {
+  // Pasó el 24/09: "hasta las 22" se comparaba por hora y salió un posteo a
+  // las 22:25.
+  assert.equal(minutoDelDiaAR(new Date('2026-09-24T22:00:00-03:00')), 22 * 60);
+  const aLas = (hhmm) => {
+    const ahora = new Date(`2026-09-24T${hhmm}:00-03:00`);
+    const n = nota({ publicadaCuando: new Date(ahora.getTime() - 60 * 60000).toISOString() });
+    return elegirParaFacebook({ notas: [n], ahora }).length;
+  };
+  assert.equal(aLas('21:45'), 1);
+  assert.equal(aLas('22:00'), 1);
+  assert.equal(aLas('22:01'), 0);
+  assert.equal(aLas('22:25'), 0, 'salió a las 22:25 como el 24/09');
+  assert.equal(aLas('07:59'), 0);
+  assert.equal(aLas('08:00'), 1);
+});
+
+test('no se publica en Facebook un tema que ya salió en las últimas 24 horas', () => {
+  // El 24/09 salieron tres posteos de la reapertura del autódromo en cuatro
+  // horas. Los titulares son los de ese día, tal cual.
+  const ahora = new Date('2026-09-24T21:25:00-03:00');
+  const libro = libroNuevo();
+  anotar(libro, 'facebook', 'lcvlqf', {
+    titulo: 'Vuelve el TC al tradicional autódromo Juan Manuel Fangio: la categoría Pick Up protagonizará la reapertura del circuito',
+  }, new Date('2026-09-24T17:32:00-03:00'));
+  const otraVez = nota({
+    id: 'yaqf3p', titulo: 'Todo sobre la reapertura del autódromo Juan Manuel Fangio', publicadaCuando: new Date(ahora.getTime() - 60 * 60000).toISOString(),
+  });
+  assert.equal(elegirParaFacebook({ notas: [otraVez], libro, ahora }).length, 0);
+
+  // Otro tema, sí sale.
+  const otra = nota({ id: 'krgsl6', titulo: 'Jóvenes balcarceñas participarán de un torneo internacional de básquet en Mar del Plata', publicadaCuando: otraVez.publicadaCuando });
+  assert.equal(elegirParaFacebook({ notas: [otraVez, otra], libro, ahora }).length, 1);
+  assert.equal(elegirParaFacebook({ notas: [otraVez, otra], libro, ahora })[0].id, 'krgsl6');
+
+  // Pasadas las 24 horas, el tema se puede volver a contar.
+  const alOtroDia = new Date('2026-09-25T18:00:00-03:00');
+  const deManana = { ...otraVez, publicadaCuando: new Date(alOtroDia.getTime() - 60 * 60000).toISOString() };
+  assert.equal(elegirParaFacebook({ notas: [deManana], libro, ahora: alOtroDia }).length, 1);
+});
+
+test('el tema repetido se detecta también con el titular nuevo y los temas de la nota', () => {
+  // El posteo salió con un titular sin pistas ("un fin de semana a fondo");
+  // la IA lo reescribió después y la nota sigue en la portada con el titular
+  // y los temas de ahora: se compara también contra eso.
+  const ahora = new Date('2026-09-24T21:25:00-03:00');
+  const libro = libroNuevo();
+  anotar(libro, 'facebook', 'jul41g', { titulo: 'Balcarce se prepara para vivir un fin de semana «a fondo».' }, new Date('2026-09-24T19:05:00-03:00'));
+  const publicada = nota({ id: 'jul41g', titulo: 'El Autódromo Juan Manuel Fangio reabre sus puertas en Balcarce', temas: ['autodromo', 'fangio'] });
+  const candidata = nota({
+    id: 'yaqf3p', titulo: 'Todo lo que tenés que saber para la reapertura del Fangio', temas: ['autodromo', 'fangio'],
+  });
+  assert.equal(elegirParaFacebook({ notas: [publicada, candidata], libro, ahora }).length, 0);
+});
+
+test('parecido de temas: ni tan estricto que deje pasar lo mismo, ni tan flojo que frene todo', () => {
+  const t = (titulo, temas = []) => ({ titulo, temas });
+  assert.ok(temaParecido(t('Reabre el Autódromo Juan Manuel Fangio en Balcarce'), t('Largas filas para ingresar al autódromo Fangio')));
+  // Un tema en común solo no alcanza: se marca también por el cuerpo.
+  assert.ok(!temaParecido(t('Todo lo que tenés que saber para la reapertura del Fangio', ['autodromo']), t('El intendente recibe a la maestra Wu Huimin en Balcarce', ['autodromo'])));
+  // "Balcarce" y "Mar del Plata" están en todos lados: no dicen que sea lo mismo.
+  assert.ok(!temaParecido(t('Balcarce Básquet sumó dos victorias en Mar del Plata'), t('Jóvenes balcarceñas en un torneo de básquet en Mar del Plata')));
+  assert.ok(!temaParecido(t(undefined), t('Algo')));
 });
 
 // -------------------------------------------------------------- el mensaje

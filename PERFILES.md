@@ -29,16 +29,16 @@ sección B). Nada de acá inventa datos: sólo dice lo que el medio hace hoy.
 | **Historias destacadas fijas** | Farmacia · Teléfonos · Agenda · Clima |
 | **Foto de perfil** | El avatar del medio (`reels/avatar.mjs`) sobre el rojo de la marca, centrado: se muestra redonda (ver medidas) |
 
-**Bio, opción A (118 caracteres)**
+**Bio, opción A (131 caracteres)**
 
 ```
-Noticias de Balcarce, clima y farmacia de turno todos los días. Resumen con IA y revisión humana. Notas en el enlace 👇
+Noticias de Balcarce, clima y farmacia de turno todos los días. Resúmenes con IA verificados contra la fuente. Notas en el enlace 👇
 ```
 
-**Bio, opción B (113 caracteres)**
+**Bio, opción B (126 caracteres)**
 
 ```
-Balcarce al día: noticias, clima, farmacia de turno y agenda. Resumen con IA y revisión humana. Todas las notas 👇
+Balcarce al día: noticias, clima, farmacia de turno y agenda. Resúmenes con IA verificados contra la fuente. Todas las notas 👇
 ```
 
 Se recomienda la **B** porque nombra la agenda y suena más a "lo que pasa
@@ -71,8 +71,10 @@ ciudad y la región, con el enlace a cada nota en radarbalcarce.com. Además:
 el clima, la farmacia de turno, los teléfonos útiles y la agenda de la
 semana.
 
-Algunos textos y las voces de los videos se producen con inteligencia
-artificial, con revisión humana. Si ves un error, escribinos y lo corregimos.
+Los resúmenes y las voces de los videos se producen con inteligencia
+artificial y se verifican automáticamente contra la fuente; lo sensible
+lo revisa una persona antes de salir. Si ves un error, escribinos y lo
+corregimos.
 
 radarbalcarce.com
 ```

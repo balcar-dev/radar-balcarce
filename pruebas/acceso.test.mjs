@@ -11,21 +11,23 @@ import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
 import {
-  _usarCarpetaDeDatos, ponerClave, hayUsuarios, listarUsuarios, entrar, sesionDe, salir, paginaLogin,
+  _usarCarpetaDeDatos, ponerClave, hayUsuarios, listarUsuarios, entrar, sesionDe, salir, paginaLogin, ipDe,
 } from '../panel/acceso.mjs';
 
 before(() => {
   _usarCarpetaDeDatos(fs.mkdtempSync(path.join(os.tmpdir(), 'radar-acceso-')));
 });
 
-/** Un pedido de mentira, con la IP y las cookies que hagan falta. */
-function pedido({ ip = '10.0.0.1', cookie = '', tunel = false } = {}) {
+/** Un pedido de mentira, con la IP y las cookies que hagan falta. Por el
+ *  túnel, la conexión llega desde esta misma PC (127.0.0.1) y la IP de
+ *  verdad viene en X-Forwarded-For, que es como lo entrega Tailscale Funnel. */
+function pedido({ ip = '10.0.0.1', cookie = '', tunel = false, xff } = {}) {
   return {
-    socket: { remoteAddress: ip },
+    socket: { remoteAddress: tunel ? '127.0.0.1' : ip },
     headers: {
       cookie,
       host: tunel ? 'radar-balcarce.tail4f06f0.ts.net' : 'localhost',
-      'x-forwarded-for': tunel ? ip : undefined,
+      'x-forwarded-for': xff ?? (tunel ? ip : undefined),
     },
   };
 }
@@ -125,6 +127,39 @@ test('después de cinco fallos, esa IP queda frenada un rato', () => {
 test('el freno es por IP: a otra IP no le afectan los fallos de la primera', () => {
   const r = entrar({ usuario: 'hernan', clave: 'una-clave-bastante-larga' }, pedido({ ip: '10.0.0.101' }));
   assert.equal(r.ok, true);
+});
+
+// El 25/09 la auditoría encontró que el freno se salteaba: se le creía al
+// X-Forwarded-For con sólo poner un Host terminado en .ts.net, y se tomaba el
+// primer valor, que escribe el que llama. Con una IP inventada por intento no
+// quedaba frenado nunca.
+test('desde otra máquina, un X-Forwarded-For inventado no esquiva el freno', () => {
+  const ip = '10.0.0.200';
+  for (let i = 0; i < 5; i += 1) {
+    const r = pedido({ ip, xff: `198.51.100.${i}` });
+    r.headers.host = 'cualquiera.ts.net';
+    entrar({ usuario: 'hernan', clave: 'mal' }, r);
+  }
+  const r = entrar({ usuario: 'hernan', clave: 'una-clave-bastante-larga' }, pedido({ ip, xff: '198.51.100.99' }));
+  assert.equal(r.ok, false);
+  assert.match(r.error, /Demasiados intentos/);
+});
+
+test('por el túnel cuenta la IP que agregó el túnel (la última), no las de adelante', () => {
+  for (let i = 0; i < 5; i += 1) {
+    entrar({ usuario: 'hernan', clave: 'mal' }, pedido({ tunel: true, xff: `inventada-${i}, 203.0.113.9` }));
+  }
+  const frenada = entrar({ usuario: 'hernan', clave: 'una-clave-bastante-larga' }, pedido({ tunel: true, xff: 'otra-mas, 203.0.113.9' }));
+  assert.equal(frenada.ok, false, 'cambiando la primera IP de la lista se salteaba el freno');
+  const otra = entrar({ usuario: 'hernan', clave: 'una-clave-bastante-larga' }, pedido({ tunel: true, xff: '203.0.113.10' }));
+  assert.equal(otra.ok, true, 'los fallos de uno por el túnel no dejan afuera a los demás');
+});
+
+test('de dónde viene el pedido: el encabezado sólo vale si la conexión es de esta PC', () => {
+  assert.equal(ipDe(pedido({ tunel: true, xff: 'a, b' })), 'b');
+  assert.equal(ipDe(pedido({ ip: '192.168.0.20', xff: '8.8.8.8' })), '192.168.0.20');
+  assert.equal(ipDe({ socket: { remoteAddress: '::1' }, headers: {} }), '::1');
+  assert.equal(ipDe({ socket: { remoteAddress: '::ffff:127.0.0.1' }, headers: { 'x-forwarded-for': '203.0.113.5' } }), '203.0.113.5');
 });
 
 test('la página de login pide crear un usuario si no hay ninguno, o el formulario si ya hay', () => {

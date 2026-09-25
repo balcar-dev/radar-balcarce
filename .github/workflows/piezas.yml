@@ -60,9 +60,18 @@ jobs:
       - name: Instalar
         run: npm ci --no-audit --no-fund
 
+      # Lo que se escribe en "solo" llega por una variable y no pegado en el
+      # comando: pegado, un texto con comillas o un ";" se ejecutaba como
+      # parte del comando (auditoría del 25/09).
       - name: Armar las piezas
-        run: node reels/plan.mjs --generar ${{ inputs.solo != '' && format('--solo={0}', inputs.solo) || '' }}
+        run: |
+          if [ -n "$SOLO" ]; then
+            node reels/plan.mjs --generar "--solo=$SOLO"
+          else
+            node reels/plan.mjs --generar
+          fi
         env:
+          SOLO: ${{ inputs.solo }}
           GEMINI_API_KEY_REDES: ${{ secrets.GEMINI_API_KEY_REDES }}
 
       - name: Dejar las piezas para descargar
@@ -79,8 +88,9 @@ jobs:
 
       - name: Publicar en Instagram y Facebook
         if: ${{ inputs.publicar }}
-        run: node redes/publicar.mjs --piezas --sin-horario --destino=${{ inputs.destino }}
+        run: node redes/publicar.mjs --piezas --sin-horario "--destino=$DESTINO"
         env:
+          DESTINO: ${{ inputs.destino }}
           META_TOKEN: ${{ secrets.META_TOKEN }}
           REDES_ACTIVAS: ${{ vars.REDES_ACTIVAS }}
 

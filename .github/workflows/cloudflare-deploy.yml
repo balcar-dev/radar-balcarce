@@ -1,44 +1,30 @@
-# Sube el sitio a Cloudflare Pages, como alternativa a Vercel.
+# Sube el sitio a Cloudflare Pages, que es quien sirve radarbalcarce.com.
 #
-# Por qué existe: Vercel Hobby (el plan gratis) prohíbe explícitamente
-# publicidad y cualquier uso comercial (ver Fair Use Guidelines de Vercel).
-# El día que haya un aviso pago en la web, seguir en Vercel gratis dejaría
-# de estar permitido. Cloudflare Pages sí lo permite, con ancho de banda
-# ilimitado, y el sitio ya se exporta como archivos estáticos puros (ver
-# next.config.mjs) — no hace falta nada especial de Next.js del lado del
-# hosting.
+# Desde el 24/09 el dominio apunta a Cloudflare (los nameservers de DonWeb se
+# cambiaron a Cloudflare; `www` redirige al dominio sin `www` con una regla de
+# Cloudflare). Vercel está apagado desde el 25/09: no publica ni recibe el
+# dominio.
 #
-# NO corre solo: es a mano, workflow_dispatch únicamente. No reemplaza a
-# Vercel hasta que alguien:
-#   1. Cree una cuenta en Cloudflare (gratis) con radarbalcarce@gmail.com.
-#   2. Cree un proyecto de Pages (el nombre "radar-balcarce", o el que sea:
-#      se usa el mismo en CLOUDFLARE_PROJECT abajo).
-#   3. Genere un token de API: Cloudflare → Mi perfil → Tokens de API →
-#      "Crear token" → plantilla "Edit Cloudflare Workers" (o un token
-#      personalizado con permiso Account.Cloudflare Pages: Edit).
-#   4. Pegue ese token como el secreto CLOUDFLARE_API_TOKEN en GitHub
-#      (Settings → Secrets and variables → Actions), y el ID de cuenta de
-#      Cloudflare (se ve en el panel, a la derecha) como CLOUDFLARE_ACCOUNT_ID.
-#   5. Corra este workflow a mano (Actions → "Cloudflare Pages" → Run
-#      workflow) para probar que el sitio sube bien, ANTES de tocar el DNS.
-#   6. Recién ahí, cambiar el dominio en DonWeb para que apunte a Cloudflare
-#      en vez de a Vercel (y ahí sí, conviene ir con calma: es el paso que
-#      puede dejar el sitio caído un rato si algo sale mal).
+# Por qué Cloudflare: Vercel Hobby (el plan gratis) prohíbe publicidad y
+# cualquier uso comercial; Cloudflare Pages lo permite, con ancho de banda
+# ilimitado. El sitio se exporta como archivos estáticos puros (ver
+# next.config.mjs), así que no hace falta nada especial del lado del hosting.
 #
-# Ninguno de esos seis pasos lo puede hacer un asistente: piden crear una
-# cuenta y pegar credenciales, que sólo puede hacer una persona.
+# Corre solo cada vez que "Actualizar la web" termina bien (cada 30 minutos), y
+# también a mano (Actions → "Cloudflare Pages" → Run workflow).
 #
-# Mientras tanto, esto no afecta en nada a Vercel: son dos despliegues
-# independientes del mismo sitio, y Vercel sigue siendo el que sirve
-# radarbalcarce.com hasta que se decida lo contrario.
+# SECRETOS (Settings → Secrets and variables → Actions; los pega una persona):
+#   CLOUDFLARE_API_TOKEN    token con permiso Account.Cloudflare Pages: Edit
+#   CLOUDFLARE_ACCOUNT_ID   el ID de la cuenta de Cloudflare
+# Variable opcional CLOUDFLARE_PROJECT: el nombre del proyecto de Pages (si no
+# está, "radar-balcarce").
 
 name: Cloudflare Pages
 
 on:
   workflow_dispatch:
   # Cada vez que "Actualizar la web" termina bien (cada 30 minutos), se sube
-  # la versión nueva. Así Cloudflare y Vercel quedan iguales hasta que se
-  # apague uno de los dos.
+  # la versión nueva.
   workflow_run:
     workflows: ['Actualizar la web']
     types: [completed]
@@ -47,10 +33,20 @@ concurrency:
   group: cloudflare-pages
   cancel-in-progress: true
 
+# Sólo lee el repositorio: lo que sube va a Cloudflare con su propio token.
+permissions:
+  contents: read
+
 jobs:
   desplegar:
     if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-latest
+    # Hoy tarda entre uno y uno y medio minutos. Quince es de sobra y corta
+    # una subida colgada.
+    timeout-minutes: 15
+    env:
+      # Que "hoy" y las horas que se compilan sean los de Balcarce, no UTC.
+      TZ: America/Argentina/Buenos_Aires
     steps:
       - uses: actions/checkout@v4
 
@@ -72,9 +68,15 @@ jobs:
       # corra su propio build. Así no cuenta contra el límite de 500 builds
       # gratis por mes — con una corrida cada 30 minutos, lo superaríamos
       # el primer día si Cloudflare tuviera que compilar cada vez.
+      #
+      # La versión de wrangler va fija (la última 4.x al 25/09): con "@4" a
+      # secas, una versión nueva con un cambio de comportamiento podía romper
+      # el despliegue sin que nadie tocara nada. Para subirla, cambiar el
+      # número a mano y correr este workflow a mano para probar.
       - name: Subir a Cloudflare Pages
         working-directory: web
-        run: npx wrangler@4 pages deploy out --project-name="${{ vars.CLOUDFLARE_PROJECT || 'radar-balcarce' }}" --branch=main
+        run: npx --yes wrangler@4.139.0 pages deploy out --project-name="$PROYECTO" --branch=main
         env:
+          PROYECTO: ${{ vars.CLOUDFLARE_PROJECT || 'radar-balcarce' }}
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}

@@ -13,8 +13,9 @@
 #   · Lo que ustedes decidieron a mano se respeta hasta la última vez que el
 #     panel estuvo prendido y sincronizó.
 #
-# Para que esto además PUBLIQUE, el repositorio tiene que estar conectado a
-# Vercel (Settings → Git). Con eso, cada commit de acá dispara el deploy solo.
+# Quien PUBLICA es Cloudflare Pages: cuando esta corrida termina bien, arranca
+# sola "Cloudflare Pages" (cloudflare-deploy.yml), que compila y sube el sitio.
+# Vercel está apagado desde el 25/09 y ya no publica nada.
 
 name: Actualizar la web
 
@@ -38,8 +39,15 @@ concurrency:
 jobs:
   actualizar:
     runs-on: ubuntu-latest
+    # Hoy tarda entre 2 y 3 minutos y medio. Veinte es de sobra, y corta una
+    # corrida colgada (un pedido que no contesta) antes de que se pise con la
+    # de la media hora siguiente.
+    timeout-minutes: 20
     permissions:
       contents: write # para poder commitear portada.json
+    env:
+      # Que "hoy" y las horas sean los de Balcarce y no los de UTC.
+      TZ: America/Argentina/Buenos_Aires
 
     steps:
       - uses: actions/checkout@v4
@@ -80,10 +88,10 @@ jobs:
           GEMINI_API_KEY_REDACCION: ${{ secrets.GEMINI_API_KEY_REDACCION }}
           GEMINI_API_KEY_REDES: ${{ secrets.GEMINI_API_KEY_REDES }}
 
-      # El sitio se compila acá antes de publicar. Hasta ahora, un cambio
-      # que rompía Next llegaba a Vercel y se descubría recién cuando el
-      # deploy fallaba — con la web anterior sirviéndose mientras tanto,
-      # pero sin que nadie se enterara de que dejó de actualizarse.
+      # El sitio se compila acá antes de publicar. Si no, un cambio que
+      # rompía Next se descubría recién cuando fallaba el despliegue — con la
+      # web anterior sirviéndose mientras tanto, pero sin que nadie se
+      # enterara de que dejó de actualizarse.
       #
       # Si no compila, no se commitea: la web se queda como está.
       - name: Compilar el sitio
@@ -102,15 +110,16 @@ jobs:
       - name: Guardar si cambió algo
         run: |
           git config user.name "Radar Balcarce"
-          # Vercel valida la firma del commit contra GitHub antes de publicar,
-          # asi que el mail tiene que ser uno que GitHub reconozca. Este es el
-          # mail interno de la cuenta balcar-dev.
+          # El mail interno de la cuenta balcar-dev, que GitHub reconoce. Lo
+          # pedía Vercel para publicar; se deja igual (ver CLAUDE.md).
           git config user.email "272334999+balcar-dev@users.noreply.github.com"
-          # vercel.json va junto con portada.json a propósito: lo escribió
-          # "Compilar el sitio" recién (scripts/generar-redirects.mjs), y
-          # Vercel necesita leerlo ANTES de su propia compilación, no le
-          # alcanza con que quede en el disco de esta corrida.
-          git add web/data/portada.json web/vercel.json
+          # web/vercel.json ya no se guarda: era para Vercel, apagado desde el
+          # 25/09 (Cloudflare usa public/_redirects, que se arma en cada
+          # compilación). "Compilar el sitio" lo sigue reescribiendo, así que
+          # se descarta ese cambio: con un archivo modificado sin guardar,
+          # el "git pull --rebase" de abajo se niega a correr.
+          git checkout -- web/vercel.json 2>/dev/null || true
+          git add web/data/portada.json web/data/archivo.json
           if git diff --cached --quiet; then
             echo "Sin novedades: no hay nada que publicar."
           else

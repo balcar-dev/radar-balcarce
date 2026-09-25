@@ -10,6 +10,7 @@ import {
 } from '@/lib/datos';
 import { tipoDeCielo } from '@/lib/clima';
 import { comoNombre } from '@/lib/texto';
+import { quienEscribio } from '@/components/metadatos';
 
 const WHATSAPP_VISIBLE = WHATSAPP.visible;
 
@@ -232,8 +233,8 @@ export function TarjetaBuzon() {
  * cuenta va a parecer que lo escondíamos.
  */
 export function Firma({ nota }) {
-  const reescrita = !!nota.guion;
-  const revisada = nota.como === 'publicada';
+  // El mismo criterio que el `author` de los datos estructurados.
+  const { reescrita, revisada } = quienEscribio(nota);
 
   const texto = reescrita
     ? 'El resumen lo redactó una inteligencia artificial a partir de la nota original.'

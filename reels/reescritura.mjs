@@ -13,7 +13,8 @@
 // corregir sin abrir el código.
 
 import { claveRedaccion, claveRedes } from './claves.mjs';
-import { verificar } from '../ingesta/verificar.mjs';
+import { verificar, resumirProblemas } from '../ingesta/verificar.mjs';
+import { semaforoDelTexto } from '../ingesta/ingesta.mjs';
 import { decisionHumana } from '../ingesta/utiles.mjs';
 import { traerTexto } from '../ingesta/articulo.mjs';
 
@@ -45,6 +46,7 @@ Tu trabajo es reescribir una noticia que llegó de otro medio (a veces más de u
 10. Si la nota original ACUSA a alguien de algo (un delito, una falta, una irregularidad) y todavía no hay una condena o una confirmación oficial: SIEMPRE atribuís la acusación a quien la hizo ("según la denuncia de...", "de acuerdo con la Policía...", "según fuentes judiciales...") y usás el modo condicional ("habría", no "hizo"). Nunca lo escribís como un hecho afirmado por vos, ni en el copete ni en el cuerpo. Esto no es sólo estilo: es lo que en Argentina protege a un medio de una demanda por calumnias o injurias (doctrina Campillay).
 11. Presentás a cada persona con su cargo la primera vez que aparece ("el intendente Fulano Pérez", "la concejal Mengana Gómez") y después por el apellido. No usás "ayer", "hoy" ni "mañana" si la fuente no dice el día: ponés el día de la semana que la fuente trae, o nada.
 12. Escribís en castellano correcto, con las tildes y la eñe donde van (últimos, sábado, Napaleofú, señal). Un medio que escribe sin tildes se lee como un mensaje apurado, no como un medio.
+13. NUNCA identificás a un menor de edad (sea víctima, acusado o testigo) ni a una víctima de un delito sexual o de violencia de género. Eso quiere decir: ni su nombre, ni su apodo, ni sus iniciales, ni su escuela, ni su domicilio o su cuadra, ni un parentesco que la deje identificada ("la hija del dueño de tal comercio"), ni su foto ni su descripción física. Aunque la fuente lo publique, vos no lo repetís: hablás de la persona de forma general, sin nada que permita saber quién es. No es estilo: lo exigen las leyes 26.061 y 26.485.
 
 Devolvés SOLO un JSON con esta forma exacta, sin texto alrededor:
 {"titulo": "...", "copete": "...", "cuerpo": "...", "guion": "..."}`;
@@ -88,7 +90,12 @@ export const INSTRUCCION_EDITORIAL = `${instruccionPara({ seccion: '', titulo: '
 Nota aparte, esto no se lo manda a la IA: cuando la noticia es de Policiales, o
 toca inseguridad, robos, choques, accidentes, incendios, cortes de luz o agua,
 conflictos, protestas, reclamos o alguna emergencia, el punto 5 cambia por el
-registro serio de arriba en vez del cercano.`;
+registro serio de arriba en vez del cercano.
+
+Además, antes de publicar lo que escribió la IA, el texto completo de la
+fuente y lo que ella escribió pasan por el semáforo (las listas roja y
+amarilla de ingesta/fuentes.mjs). Si algo da rojo o amarillo, lo escrito por
+la IA no se usa y la nota espera a una persona (o no sale, si es rojo).`;
 
 function limpiarJson(texto) {
   const m = texto.match(/\{[\s\S]*\}/);
@@ -122,18 +129,26 @@ export function fuenteParaVerificar(nota) {
 
 const dormir = (ms) => new Promise((r) => { setTimeout(r, ms); });
 
+// Cuánto se espera a Gemini por pedido. Contesta en unos segundos; un pedido
+// colgado sin límite dejaba a "Actualizar la web" esperando hasta que GitHub
+// la mataba, sin publicar nada de esa corrida.
+export const ESPERA_MAXIMA_GEMINI = 60_000;
+
 /** Un pedido a Gemini con una clave puntual. Devuelve la respuesta cruda
- *  (fetch Response) o lanza si se agotaron los reintentos por saturación. */
+ *  (fetch Response) o lanza si se agotaron los reintentos por saturación.
+ *  La clave va en el encabezado `x-goog-api-key` y no en la dirección
+ *  (`?key=`): una dirección queda en registros y mensajes de error. */
 async function pedir({ prompt, entrada, clave, fetchFn, intentos }) {
   let res;
   for (let i = 1; i <= intentos; i += 1) {
-    res = await fetchFn(`https://generativelanguage.googleapis.com/v1beta/models/${MODELO}:generateContent?key=${clave}`, {
+    res = await fetchFn(`https://generativelanguage.googleapis.com/v1beta/models/${MODELO}:generateContent`, {
       method: 'POST',
-      headers: { 'content-type': 'application/json' },
+      headers: { 'content-type': 'application/json', 'x-goog-api-key': clave },
       body: JSON.stringify({
         contents: [{ parts: [{ text: `${prompt}\n\n---\n\n${entrada}` }] }],
         generationConfig: { responseMimeType: 'application/json', temperature: 0.6 },
       }),
+      signal: AbortSignal.timeout(ESPERA_MAXIMA_GEMINI),
     });
     // 503 es "el modelo está saturado en este instante", no un error nuestro:
     // vale la pena esperar un poco y reintentar antes de resignarse.
@@ -217,36 +232,73 @@ function mecanicoPorDefecto(nota) {
 }
 
 // Cuántas se reescriben por corrida. La ingesta corre cada 30 minutos, así
-// que 20 por vuelta son unas 40 por hora: de sobra para lo que Balcarce
-// publica en un día, sin vaciar el cupo gratis de una sola vez.
+// que 40 por vuelta son unas 80 por hora: de sobra para lo que Balcarce
+// publica en un día. Lo ya reescrito (en caché) no cuenta contra el tope.
 export const REESCRITURAS_POR_CORRIDA = 40;
 // Si la IA falla tres veces seguidas (Gemini saturado, sin red), se corta:
 // insistir sólo llenaría el registro de errores sin cambiar el resultado.
 const FALLOS_PARA_CORTAR = 3;
 
+/** ¿Es de acá? Lo local se reescribe primero (ver reescribirAutomaticas). */
+export function esLocal(nota) {
+  return !!(nota?.local || nota?.seccion === 'Balcarce' || nota?.alcance === 'local');
+}
+
 /**
- * Reescribe con IA, sola y sin que nadie la mire, las notas que van a salir
- * sin revisión humana (semáforo verde y sin que una persona haya decidido
- * algo). Es lo que hace posible que el sitio se actualice con la PC apagada
- * y aun así tenga texto propio, no sólo el resumen de la fuente.
+ * El semáforo pasado sobre todo lo que la ingesta no miró.
  *
- * Nunca pisa lo que ya escribió una persona (`decisiones`), y reusa lo que
- * ya se reescribió en una corrida anterior (`previas`, la portada de la vez
- * pasada) en vez de volver a gastar cuota en la misma nota: la única fuente
- * de "ya está" que existe en la nube es lo que ya quedó publicado.
+ * La ingesta decide el color con el título y los primeros 600 caracteres del
+ * resumen. Pero la IA reescribe con la nota ENTERA (ingesta/articulo.mjs) y
+ * con lo que contaron los otros medios: si el nombre de un chico o de una
+ * víctima está en el tercer párrafo, la IA lo lee, y lo que escribe no volvía
+ * a pasar por ningún filtro. Leyes 26.061 y 26.485: esto no se negocia.
  *
- * Cada resultado pasa por `ingesta/verificar.mjs` antes de aceptarse: si la
- * IA agregó un dato que ninguna fuente trae, se descarta y la nota sigue
- * con el resumen mecánico, como salía antes de que existiera esto.
+ * Mira, en este orden: el texto completo de la fuente, los resúmenes de los
+ * otros medios y lo que escribió la IA (título, copete, cuerpo y guion).
+ * Devuelve { color, motivo } con lo más grave que encontró (el rojo gana), o
+ * null si todo está limpio.
  *
- * @param {object[]} notas
- * @param {object} [o]
- * @param {Record<string, {titulo:string,copete:string,cuerpo?:string,guion:string}>} [o.previas]
- * @param {Record<string, object>} [o.decisiones]
- * @param {number} [o.tope]
- * @param {object} [o.opciones] se le pasa tal cual a reescribir() (fetchFn, intentos)
- * @returns {Promise<Record<string, {titulo:string,copete:string,cuerpo?:string,guion:string,deIA:boolean}>>}
+ * @param {object} nota   con textoDeLaFuente y fuentesTexto, si los hay
+ * @param {object} [escrito]  lo que devolvió la IA
  */
+export function semaforoDeLaReescritura(nota, escrito = null) {
+  const partes = [
+    ['el texto completo de la fuente', nota?.textoDeLaFuente],
+    ['lo que contaron otros medios', (nota?.fuentesTexto ?? []).join('\n')],
+    ['lo que escribió la IA', escrito ? [escrito.titulo, escrito.copete, escrito.cuerpo, escrito.guion].filter(Boolean).join('\n') : ''],
+  ];
+  let peor = null;
+  for (const [donde, texto] of partes) {
+    const s = semaforoDelTexto(texto);
+    if (!s) continue;
+    const conDonde = { color: s.color, motivo: `${s.motivo}, en ${donde}` };
+    if (s.color === 'rojo') return conDonde;
+    peor ??= conDonde;
+  }
+  return peor;
+}
+
+/**
+ * Una nota verde que, mirada entera, resultó sensible deja de ser verde.
+ *
+ * Se cambia el objeto que llegó (no una copia) a propósito: quien llama
+ * (web/scripts/generar-datos.mjs) decide qué se publica mirando
+ * `nota.semaforo` de esas mismas notas DESPUÉS de reescribir. Así, una nota
+ * que pasa a amarillo espera a una persona y una que pasa a rojo no sale,
+ * igual que si la ingesta la hubiera visto así desde el principio.
+ */
+function frenar(nota, s) {
+  nota.semaforo = s.color;
+  nota.motivo = `${s.motivo} (visto al reescribir)`;
+}
+
+/** El motivo de un rechazo del verificador, en una línea corta: el tipo de
+ *  cada problema y el primero, recortado. Nunca el texto entero. */
+export function motivoCorto(problemas = []) {
+  const primero = String(problemas[0]?.detalle ?? '').replace(/\s+/g, ' ').slice(0, 100);
+  return `${resumirProblemas(problemas)}${primero ? `: ${primero}` : ''}`;
+}
+
 /**
  * Lo que la portada de la corrida anterior ya trae reescrito, para no volver
  * a pedírselo a Gemini. La portada no guarda un campo "redactada por IA": la
@@ -262,20 +314,60 @@ export function previasDeLaPortada(notas) {
     }]));
 }
 
+/**
+ * Reescribe con IA, sola y sin que nadie la mire, las notas que van a salir
+ * sin revisión humana (semáforo verde y sin que una persona haya decidido
+ * algo). Es lo que hace posible que el sitio se actualice con la PC apagada
+ * y aun así tenga texto propio, no sólo el resumen de la fuente.
+ *
+ * Nunca pisa lo que ya escribió una persona (`decisiones`), y reusa lo que
+ * ya se reescribió en una corrida anterior (`previas`, la portada de la vez
+ * pasada) en vez de volver a gastar cuota en la misma nota: la única fuente
+ * de "ya está" que existe en la nube es lo que ya quedó publicado.
+ *
+ * Primero lo de Balcarce (esLocal), y dentro de cada grupo, la de más
+ * puntaje: el tope por corrida se gasta en lo que define al medio, no en la
+ * Fórmula 1.
+ *
+ * Antes de pedirle nada a Gemini, el texto completo de la fuente pasa por el
+ * semáforo; y lo que escribe la IA, también (semaforoDeLaReescritura). Si da
+ * rojo o amarillo, no se usa y la nota cambia de color: deja de salir sola.
+ *
+ * Cada resultado pasa por `ingesta/verificar.mjs` antes de aceptarse: si la
+ * IA agregó un dato que ninguna fuente trae, se descarta y la nota sigue
+ * con el resumen mecánico, como salía antes de que existiera esto.
+ *
+ * @param {object[]} notas   OJO: las que resultan sensibles se modifican (frenar)
+ * @param {object} [o]
+ * @param {Record<string, {titulo:string,copete:string,cuerpo?:string,guion:string}>} [o.previas]
+ * @param {Record<string, object>} [o.decisiones]
+ * @param {number} [o.tope]
+ * @param {object} [o.opciones] se le pasa tal cual a reescribir() (fetchFn, intentos)
+ * @returns {Promise<Record<string, {titulo:string,copete:string,cuerpo?:string,guion:string,deIA:boolean}>>}
+ */
 export async function reescribirAutomaticas(notas, {
-  previas = {}, decisiones = {}, tope = REESCRITURAS_POR_CORRIDA, opciones, traer = traerTexto,
+  previas = {}, decisiones = {}, tope = REESCRITURAS_POR_CORRIDA, opciones, traer = traerTexto, registro = console.log,
 } = {}) {
   const resultado = {};
   let hechas = 0;
   let fallos = 0;
   let rechazadas = 0;
+  let frenadas = 0;
   let sinCuerpoPorFalla = 0;
   let motivo = null;
 
   const candidatas = [...notas]
     .filter((n) => n.semaforo === 'verde')
     .filter((n) => !decisionHumana(decisiones[n.id]))
-    .sort((a, b) => (b.relevancia ?? 0) - (a.relevancia ?? 0));
+    .sort((a, b) => (Number(esLocal(b)) - Number(esLocal(a))) || ((b.relevancia ?? 0) - (a.relevancia ?? 0)));
+
+  // En el registro de Actions no va el título de una nota frenada por el
+  // semáforo: si la frenó, puede ser justamente porque identifica a alguien.
+  const frenada = (nota, s) => {
+    frenar(nota, s);
+    frenadas += 1;
+    registro(`  semáforo al reescribir · nota ${nota.id} · ${s.color}: ${s.motivo}`);
+  };
 
   for (const nota of candidatas) {
     // Ya se reescribió en una corrida anterior: se revalida (es local y
@@ -286,6 +378,11 @@ export async function reescribirAutomaticas(notas, {
     // siempre porque "ya estaba hecho".
     if (previas[nota.id]?.titulo) {
       const cacheada = previas[nota.id];
+      // Lo ya publicado también pasa por el semáforo de hoy: si la lista
+      // creció (como el 25/09), lo que ya estaba y ahora da rojo o amarillo
+      // deja de salir solo en esta misma corrida.
+      const sensible = semaforoDeLaReescritura(nota, cacheada);
+      if (sensible) { frenada(nota, sensible); continue; }
       // Sólo la forma (largo, tildes, que el cuerpo no repita el copete):
       // los datos ya se compararon contra el texto completo cuando se escribió,
       // y ese texto no se vuelve a bajar en cada corrida.
@@ -308,6 +405,12 @@ export async function reescribirAutomaticas(notas, {
     // hechos reales y no de rellenar. Si no se puede bajar, se sigue sin él.
     const conTexto = { ...nota, textoDeLaFuente: await traer(nota.enlace) };
     hechas += 1;
+
+    // Antes de gastar un pedido: si la nota entera es sensible, la IA no la
+    // escribe y la nota deja de salir sola.
+    const deLaFuente = semaforoDeLaReescritura(conTexto);
+    if (deLaFuente) { frenada(nota, deLaFuente); continue; }
+
     const fuente = { titulo: nota.titulo, resumen: fuenteParaVerificar(conTexto) };
     const comprobar = (x) => verificar(fuente, { titulo: x.titulo, copete: x.copete, guion: x.guion, cuerpo: x.cuerpo });
 
@@ -330,14 +433,25 @@ export async function reescribirAutomaticas(notas, {
       const sinCuerpo = { ...r, cuerpo: '' };
       if (comprobar(sinCuerpo).ok) { r = sinCuerpo; control = { ok: true }; sinCuerpoPorFalla += 1; }
     }
-    if (!control.ok) { rechazadas += 1; continue; } // inventó algo: se descarta, queda el copete de siempre
+    if (!control.ok) {
+      // Inventó algo: se descarta, queda el copete de siempre. El motivo va
+      // al registro de "Actualizar la web": sin eso, "12 rechazadas" no
+      // decía si era un número, un nombre o una tilde.
+      rechazadas += 1;
+      registro(`  IA rechazada · ${String(nota.titulo).slice(0, 50)} · ${motivoCorto(control.problemas)}`);
+      continue;
+    }
+
+    // Lo que escribió la IA, por el semáforo antes de publicarse.
+    const loEscrito = semaforoDeLaReescritura({}, r);
+    if (loEscrito) { frenada(nota, loEscrito); continue; }
 
     resultado[nota.id] = {
       titulo: r.titulo, copete: r.copete, cuerpo: r.cuerpo, guion: r.guion, deIA: true,
     };
   }
 
-  if (hechas) console.log(`  reescritura: ${hechas} pedidas, ${fallos} fallaron${motivo ? ` (${String(motivo).slice(0, 160)})` : ''}, ${rechazadas} rechazadas por no cuadrar con la fuente, ${sinCuerpoPorFalla} quedaron sin cuerpo`);
+  if (hechas || frenadas) registro(`  reescritura: ${hechas} pedidas, ${fallos} fallaron${motivo ? ` (${String(motivo).slice(0, 160)})` : ''}, ${rechazadas} rechazadas por no cuadrar con la fuente, ${sinCuerpoPorFalla} quedaron sin cuerpo, ${frenadas} frenadas por el semáforo`);
   return resultado;
 }
 

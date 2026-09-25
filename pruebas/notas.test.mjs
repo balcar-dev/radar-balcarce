@@ -8,6 +8,7 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { paraPruebas, aplicarCupos } from '../ingesta/ingesta.mjs';
 import { decisionHumana } from '../ingesta/utiles.mjs';
+import { CUPO_DE_AFUERA } from '../ingesta/fuentes.mjs';
 
 const {
   normalizar, parecido, sentenciar, esDeBalcarce, figuraQueNombra,
@@ -356,13 +357,50 @@ test('el cupo se queda con las de más puntaje', () => {
   assert.match(portada[24].motivo, /cupo/);
 });
 
-test('lo de Balcarce y el automovilismo no tienen cupo', () => {
+test('lo de Balcarce no tiene cupo, ni siquiera en automovilismo', () => {
   const portada = [
     ...Array.from({ length: 30 }, (_, i) => ({ id: 'l' + i, seccion: 'Deportes', semaforo: 'verde', local: true, relevancia: 80 })),
-    ...Array.from({ length: 30 }, (_, i) => ({ id: 'a' + i, seccion: 'Automovilismo', semaforo: 'verde', local: false, relevancia: 60 })),
+    ...Array.from({ length: 30 }, (_, i) => ({ id: 'a' + i, seccion: 'Automovilismo', semaforo: 'verde', local: true, relevancia: 60 })),
   ];
   aplicarCupos(portada);
   assert.equal(portada.filter((n) => n.semaforo === 'verde').length, 60);
+});
+
+test('el automovilismo de afuera tiene cupo desde el 25/09', () => {
+  // Ese día la portada tenía 45 notas de fierros (22 de afuera) contra 40 de
+  // Balcarce: la sección más grande del medio de Balcarce era la Fórmula 1.
+  const portada = Array.from({ length: 30 }, (_, i) => ({
+    id: 'a' + i, seccion: 'Automovilismo', semaforo: 'verde', local: false, nombraBalcarce: false, relevancia: 90 - i,
+  }));
+  aplicarCupos(portada);
+  const salen = portada.filter((n) => n.semaforo === 'verde');
+  assert.equal(salen.length, CUPO_DE_AFUERA.Automovilismo);
+  assert.ok(salen.length > 0, 'la sección no puede quedar vacía');
+  assert.equal(salen[0].id, 'a0', 'se quedan las de más puntaje');
+});
+
+test('con los cupos del 25/09, Balcarce es la sección con más notas', () => {
+  // La portada del 25/09 a la noche, contada por sección: lo local y lo de
+  // afuera. Con los cupos nuevos, lo de afuera no puede pasar a Balcarce.
+  const hoy = {
+    Balcarce: { local: 40, afuera: 0 },
+    Automovilismo: { local: 23, afuera: 22 },
+    Política: { local: 23, afuera: 4 },
+    Deportes: { local: 22, afuera: 1 },
+    Agro: { local: 12, afuera: 0 },
+    Economía: { local: 4, afuera: 6 },
+    Tecnología: { local: 1, afuera: 6 },
+  };
+  const portada = Object.entries(hoy).flatMap(([seccion, { local, afuera }]) => [
+    ...Array.from({ length: local }, (_, i) => ({ id: `${seccion}-l${i}`, seccion, semaforo: 'verde', local: true, relevancia: 70 })),
+    ...Array.from({ length: afuera }, (_, i) => ({ id: `${seccion}-a${i}`, seccion, semaforo: 'verde', local: false, relevancia: 60 - i })),
+  ]);
+  aplicarCupos(portada);
+  const por = {};
+  for (const n of portada.filter((x) => x.semaforo === 'verde')) por[n.seccion] = (por[n.seccion] ?? 0) + 1;
+  const [primera] = Object.entries(por).sort((a, b) => b[1] - a[1]);
+  assert.equal(primera[0], 'Balcarce', JSON.stringify(por));
+  for (const s of Object.keys(hoy)) assert.ok(por[s] > 0, `${s} quedó vacía`);
 });
 
 test('el cupo no toca lo que ya esperaba', () => {

@@ -6,7 +6,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
-import { respaldar, nombreDeCopia } from '../panel/respaldo.mjs';
+import { respaldar, nombreDeCopia, esSecreto } from '../panel/respaldo.mjs';
 
 function carpetaConDatos() {
   const raiz = fs.mkdtempSync(path.join(os.tmpdir(), 'respaldo-'));
@@ -60,4 +60,37 @@ test('sin datos de origen avisa en vez de crear una copia vacía', () => {
 
 test('el nombre es la fecha de Balcarce, no la de UTC', () => {
   assert.equal(nombreDeCopia(new Date('2026-09-25T01:30:00Z')), '2026-09-24');
+});
+
+// El 25/09 la auditoría encontró que el respaldo copiaba también las
+// contraseñas iniciales en texto plano y la firma de las sesiones. Con la
+// carpeta apuntando a Drive, eso terminaba en la nube.
+test('no copia las claves en texto plano ni el secreto de las sesiones', () => {
+  const { origen, destino } = carpetaConDatos();
+  fs.writeFileSync(path.join(origen, 'CLAVES-INICIALES.txt'), 'hernan: una-clave');
+  fs.writeFileSync(path.join(origen, 'secreto.txt'), 'abc123');
+  fs.writeFileSync(path.join(origen, 'sub', 'claves-viejas.txt'), 'x');
+  fs.writeFileSync(path.join(origen, 'usuarios.json'), '{}');
+  fs.writeFileSync(path.join(origen, 'publicaciones.log'), 'log');
+  const r = respaldar({ origen, destino });
+  assert.ok(!fs.existsSync(path.join(r.carpeta, 'CLAVES-INICIALES.txt')));
+  assert.ok(!fs.existsSync(path.join(r.carpeta, 'secreto.txt')));
+  assert.ok(!fs.existsSync(path.join(r.carpeta, 'sub', 'claves-viejas.txt')));
+  assert.ok(fs.existsSync(path.join(r.carpeta, 'usuarios.json')), 'los hashes sí van: sin ellos no se puede restaurar');
+  assert.ok(fs.existsSync(path.join(r.carpeta, 'estado.json')));
+  assert.ok(fs.existsSync(path.join(origen, 'secreto.txt')), 'el original no se toca');
+});
+
+test('si la copia de hoy ya tenía secretos de antes, se los saca', () => {
+  const { origen, destino } = carpetaConDatos();
+  const f = new Date('2026-09-24T15:00:00Z');
+  fs.mkdirSync(path.join(destino, '2026-09-24'), { recursive: true });
+  fs.writeFileSync(path.join(destino, '2026-09-24', 'CLAVES-INICIALES.txt'), 'de antes');
+  const r = respaldar({ origen, destino, fecha: f });
+  assert.ok(!fs.existsSync(path.join(r.carpeta, 'CLAVES-INICIALES.txt')));
+});
+
+test('qué cuenta como secreto', () => {
+  for (const n of ['CLAVES-INICIALES.txt', 'secreto.txt', 'mis-claves.TXT', 'token-meta.txt']) assert.ok(esSecreto(n), n);
+  for (const n of ['estado.json', 'usuarios.json', 'publicaciones.log', 'farmacias-crudo.txt']) assert.ok(!esSecreto(n), n);
 });

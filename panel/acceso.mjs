@@ -24,6 +24,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import crypto from 'node:crypto';
+import { desdeEstaPC } from './seguridad.mjs';
 
 let DATOS = path.join(import.meta.dirname, 'datos');
 let F_USUARIOS = path.join(DATOS, 'usuarios.json');
@@ -194,13 +195,19 @@ function anotarFallo(ip) {
  *  desde 127.0.0.1, así que si se contaran los fallos por esa IP, cualquiera
  *  desde internet podría gastar cinco intentos fallidos y dejar afuera a
  *  Andrés y a Hernán durante quince minutos. El túnel manda la IP verdadera
- *  en X-Forwarded-For, y sólo se le cree cuando el pedido entró por él. */
-function ipDe(req) {
-  const local = req.socket.remoteAddress ?? 'desconocida';
-  const porTunel = String(req.headers.host ?? '').endsWith('.ts.net');
-  if (!porTunel) return local;
-  const cadena = String(req.headers['x-forwarded-for'] ?? '').split(',')[0].trim();
-  return cadena || local;
+ *  en X-Forwarded-For.
+ *
+ *  Hasta el 25/09 se le creía a ese encabezado cuando el Host terminaba en
+ *  .ts.net, y tomando el PRIMER valor. Las dos cosas las escribe el que
+ *  llama: alcanzaba con inventar una IP distinta en cada intento para no
+ *  quedar frenado nunca. Ahora se le cree sólo si la conexión viene de esta
+ *  misma PC (que es por donde entrega el túnel) y se toma el ÚLTIMO valor,
+ *  que es el que agregó el túnel; los de antes los pudo poner cualquiera. */
+export function ipDe(req) {
+  const local = req.socket?.remoteAddress ?? 'desconocida';
+  if (!desdeEstaPC(req)) return local;
+  const lista = String(req.headers['x-forwarded-for'] ?? '').split(',').map((x) => x.trim()).filter(Boolean);
+  return lista.at(-1) || local;
 }
 
 /** Procesa el formulario. Devuelve { ok, error, cookie }. */

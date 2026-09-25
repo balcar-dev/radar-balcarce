@@ -27,14 +27,17 @@ export const metadata = {
   applicationName: NOMBRE,
   icons: { icon: [{ url: '/favicon.ico', sizes: 'any' }, { url: '/icon-192.png', type: 'image/png', sizes: '192x192' }, { url: '/icon-512.png', type: 'image/png', sizes: '512x512' }], apple: '/apple-touch-icon.png' },
   manifest: '/manifest.webmanifest',
-  alternates: { canonical: '/', types: { 'application/rss+xml': '/feed.xml' } },
+  // Sin `canonical` acá: lo que se pone en el layout lo hereda toda página
+  // que no declare el suyo, y el 25/09 /farmacias, /agenda, /util y la
+  // política de privacidad le decían a Google "soy la portada". Cada página
+  // declara su propio canónico (ver components/metadatos.js).
+  alternates: { types: { 'application/rss+xml': '/feed.xml' } },
   openGraph: {
     siteName: NOMBRE,
     title: NOMBRE,
     description: DESCRIPCION,
     locale: 'es_AR',
     type: 'website',
-    url: '/',
   },
   twitter: { card: 'summary_large_image', title: NOMBRE, description: DESCRIPCION },
   // Mientras no estemos en el dominio propio, que no lo indexen: la misma
@@ -76,7 +79,7 @@ export default function RaizLayout({ children }) {
   const navegacion = EN_NAVEGACION.filter((s) => conNotas.has(s)).map(datosSeccion);
 
   return (
-    <html lang="es">
+    <html lang="es-AR">
       <head>
         {/* El feed se anuncia acá y no con un enlace en el pie: al que lo
             tocaba le aparecía una pantalla de código, porque un feed es
@@ -180,6 +183,9 @@ export default function RaizLayout({ children }) {
               <a href="/util">Teléfonos útiles</a> ·{' '}
               <a href="/politica-de-privacidad">Política de privacidad</a>
             </div>
+            <div>
+              <a href="/quienes-somos">Quiénes somos</a> · <a href="/contacto">Contacto y correcciones</a>
+            </div>
             {actualizado && (
               <div className="aclaracion">
                 Las noticias se actualizan solas cada media hora. Esta página se armó
@@ -187,8 +193,10 @@ export default function RaizLayout({ children }) {
               </div>
             )}
             <div className="aclaracion">
-              Algunos resúmenes y las voces de nuestros videos se producen con inteligencia
-              artificial, siempre con revisión humana y con la fuente original enlazada.
+              Los resúmenes los escribe una inteligencia artificial y se verifican
+              automáticamente contra la fuente original, que queda enlazada; lo sensible lo
+              revisa una persona antes de salir. Las voces de nuestros videos también son
+              de IA. Cada nota dice al pie quién la escribió.
               La responsabilidad editorial es de Radar Balcarce. Si publicamos algo sobre
               vos que considerás erróneo, escribinos y lo corregimos.
             </div>

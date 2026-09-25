@@ -82,13 +82,16 @@ export function estadoCuota() {
 // disparar una atrás de la otra.
 let ultimoPedido = 0;
 const ESPACIADO = 2000; // la clave de redes es paga: no hay cupo gratis que cuidar
+// Una voz de diez segundos tarda unos pocos en generarse; un podcast, más.
+// Dos minutos es de sobra, y corta un pedido que se quedó colgado.
+export const ESPERA_MAXIMA_VOZ = 120_000;
 
 /**
  * Sintetiza con Gemini. Devuelve { archivo, duracion, palabras }, con los
  * tiempos de cada palabra resueltos por alineación (ver alinear.mjs).
  */
 export async function decirGemini(texto, destino, {
-  voz = 'Kore', indicacion = INDICACION, intentos = 4,
+  voz = 'Kore', indicacion = INDICACION, intentos = 4, fetchFn = fetch,
 } = {}) {
   const k = clave();
   if (!k) throw new Error('falta GEMINI_API_KEY_REDES (en el entorno o en .env)');
@@ -100,17 +103,31 @@ export async function decirGemini(texto, destino, {
     if (esperar) await dormir(esperar);
     ultimoPedido = Date.now();
 
-    const res = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${MODELO}:generateContent?key=${k}`, {
-      method: 'POST',
-      headers: { 'content-type': 'application/json' },
-      body: JSON.stringify({
-        contents: [{ parts: [{ text: `${indicacion}\n\n${texto}` }] }],
-        generationConfig: {
-          responseModalities: ['AUDIO'],
-          speechConfig: { voiceConfig: { prebuiltVoiceConfig: { voiceName: voz } } },
-        },
-      }),
-    });
+    // La clave va en el encabezado, no en la dirección (`?key=`): una
+    // dirección termina en registros y en mensajes de error. Y el pedido
+    // tiene tiempo máximo: uno colgado dejaba el reloj de Redes esperando
+    // hasta que GitHub lo mataba, sin publicar nada.
+    let res;
+    try {
+      res = await fetchFn(`https://generativelanguage.googleapis.com/v1beta/models/${MODELO}:generateContent`, {
+        method: 'POST',
+        headers: { 'content-type': 'application/json', 'x-goog-api-key': k },
+        body: JSON.stringify({
+          contents: [{ parts: [{ text: `${indicacion}\n\n${texto}` }] }],
+          generationConfig: {
+            responseModalities: ['AUDIO'],
+            speechConfig: { voiceConfig: { prebuiltVoiceConfig: { voiceName: voz } } },
+          },
+        }),
+        signal: AbortSignal.timeout(ESPERA_MAXIMA_VOZ),
+      });
+    } catch (e) {
+      // Sin respuesta (se cortó por tiempo o no hay red): se reintenta como
+      // un 5xx, y si era el último intento, se avisa.
+      ultimoError = new Error(`Gemini no respondió: ${e.name === 'TimeoutError' ? `más de ${ESPERA_MAXIMA_VOZ / 1000} segundos` : e.message}`);
+      if (intento < intentos) { await dormir(4000 * intento); continue; }
+      throw ultimoError;
+    }
 
     if (res.status === 429) {
       anotarPedido(false);

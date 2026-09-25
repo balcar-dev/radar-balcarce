@@ -12,8 +12,7 @@ import {
   CONTACTOS as CONTACTOS_AGENDA, mensajeAgenda,
 } from '../ingesta/agenda.mjs';
 import { NUMEROS, tocaHoy, diaDeEstaSemana } from '../ingesta/utiles.mjs';
-import { reescribirConRespaldo, INSTRUCCION_EDITORIAL } from '../reels/reescritura.mjs';
-import { spawn } from 'node:child_process';
+import { reescribirConRespaldo, INSTRUCCION_EDITORIAL, semaforoDeLaReescritura } from '../reels/reescritura.mjs';
 import { claveRedaccion as claveGemini } from '../reels/claves.mjs';
 import {
   sesionDe, entrar, salir, paginaLogin, hayUsuarios,
@@ -22,12 +21,19 @@ import { TIPOS as TIPOS_BUZON, ESTADOS_SEGUIMIENTO } from './buzon.mjs';
 import { decisionHumana } from '../ingesta/utiles.mjs';
 import { verificar, resumirProblemas } from '../ingesta/verificar.mjs';
 import { horariosDe, guardarHorario, DIAS as DIAS_SEMANA } from './horarios.mjs';
-import { estadoCuota as estadoCuotaVoz } from '../reels/voz-gemini.mjs';
 import { guionNoticia } from '../reels/plan.mjs';
 import { aplicarAviso } from './avisos.mjs';
-import { camposEditables, decisionParaLaWeb } from './notas.mjs';
+import { camposEditables, decisionParaLaWeb, podarDecisiones } from './notas.mjs';
 import { crearSincronizador, ejecutarGit } from './sincronizar.mjs';
 import { respaldar } from './respaldo.mjs';
+import { origenPermitido, probarUrlPermitida } from './seguridad.mjs';
+
+// Nada de reels/ que traiga paquetes instalados (ffmpeg, resvg) se importa
+// arriba: el panel tiene que arrancar sólo con Node (prueba "el motor no
+// necesita nada instalado"). Hasta el 25/09 se importaba reels/voz-gemini.mjs
+// para mostrar la cuota de voz, que arrastraba ffmpeg-static; el tablero no
+// la mostraba en ningún lado, así que se sacó. Si algún día hace falta algo
+// de ahí, va con `await import()` en el momento de usarlo.
 
 const AQUI = import.meta.dirname;
 const DATOS = path.join(AQUI, 'datos');
@@ -100,7 +106,9 @@ function exportarDecisiones(estado) {
     // Sólo lo que la web usa. El historial, el buzón y los contactos se
     // quedan acá: tienen datos de gente que nos escribió.
     const decisiones = {};
-    for (const [id, d] of Object.entries(estado.decisiones ?? {})) {
+    // Las de más de 60 días no se exportan: la web ya no las usa y el
+    // archivo crecía sin fin (ver podarDecisiones en panel/notas.mjs).
+    for (const [id, d] of Object.entries(podarDecisiones(estado.decisiones))) {
       decisiones[id] = decisionParaLaWeb(d);
     }
     fs.mkdirSync(path.dirname(F_DECISIONES), { recursive: true });
@@ -143,6 +151,7 @@ const estado = leerJson(F_ESTADO, null) ?? {
 estado.eventosManual ??= [];
 estado.contactadoEl ??= {}; // { [contactoId]: fecha ISO del último mensaje }
 estado.buzon ??= []; // envíos de la gente: datos, reclamos, opinión, seguimiento
+delete estado.ultimaPublicacion; // de cuando el panel publicaba en Vercel (hasta el 25/09)
 if (!estado.fuentes.length) {
   estado.fuentes = TODAS_LAS_FUENTES.map(deCodigo);
 } else {
@@ -258,10 +267,8 @@ function vista(sesion = null) {
     estadosSeguimiento: ESTADOS_SEGUIMIENTO,
     utiles: { numeros: NUMEROS, diaDeLaSemana: diaDeEstaSemana(), tocaHoy: tocaHoy() },
     horarios: horariosDe(estado),
-    ultimaPublicacion: estado.ultimaPublicacion ?? null,
     piezas: piezasListas(),
     diasSemana: DIAS_SEMANA,
-    cuotaVoz: estadoCuotaVoz(),
     instruccionEditorial: INSTRUCCION_EDITORIAL,
     historial: estado.historial.slice(0, 12),
   };
@@ -326,6 +333,22 @@ async function reescribirPendientes() {
       fallos += 1;
       if (fallos >= FALLOS_PARA_CORTAR) break;
       continue; // se deja como estaba y se reintenta en el próximo ciclo
+    }
+    // Lo que escribió la IA pasa por el semáforo, igual que en GitHub
+    // (reels/reescritura.mjs): si nombra algo sensible (un menor, una víctima),
+    // no se usa y la nota deja de salir sola hasta que la mire una persona.
+    const sensible = semaforoDeLaReescritura({}, r);
+    if (sensible) {
+      estado.decisiones[nota.id] = {
+        ...(estado.decisiones[nota.id] ?? {}),
+        estado: sensible.color === 'rojo' ? 'bloqueada' : 'pendiente',
+        rechazadaPorVerificacion: true,
+        problemasDeLaIA: [sensible.motivo],
+        cuando: new Date().toISOString(),
+      };
+      rechazadas += 1;
+      console.log(`  IA frenada por el semáforo · ${nota.id} · ${sensible.motivo}`);
+      continue;
     }
     // Lo que escribió la IA se compara contra lo que ella recibió. Si aparece
     // un número, un nombre, un día o una cita que la fuente no trae, el texto
@@ -403,74 +426,15 @@ function piezasListas() {
 }
 
 // ------------------------------------------------------ publicar la web
-
-// Cada cuánto se publica solo lo que el panel decidió. Dos horas: las
-// noticias no cambian tanto, y cada publicación compila el sitio entero.
-const HORAS_ENTRE_PUBLICACIONES = 2;
-const F_LOG_PUBLICACION = path.join(DATOS, 'publicaciones.log');
-
-/** Publica la web: regenera los datos, compila y sube a Vercel.
- *
- *  Esto vivía en una tarea del Programador de Windows, y no funcionaba: la
- *  tarea corre con un entorno distinto y la CLI de Vercel no encontraba la
- *  sesión guardada ("No existing credentials found"). Desde acá sí la
- *  encuentra, porque el panel se arranca desde la sesión del usuario.
- *
- *  Y además tiene sentido que viva acá: si el panel está apagado, los datos
- *  no se actualizan, así que publicar no tendría nada nuevo que mostrar. */
-let publicando = false;
-
-function publicarWeb() {
-  // Sin este cerrojo las publicaciones se apilan: compilar y subir puede
-  // tardar varios minutos, y si entra la siguiente antes de que termine la
-  // anterior quedan dos deploys peleándose por el mismo proyecto.
-  if (publicando) { console.log('  ya hay una publicación en curso, se saltea'); return Promise.resolve(); }
-  publicando = true;
-
-  const raiz = path.join(AQUI, '..');
-  const web = path.join(raiz, 'web');
-  const anotarLinea = (t) => fs.appendFileSync(F_LOG_PUBLICACION, t, 'utf8');
-  anotarLinea(`
-===== ${new Date().toLocaleString('es-AR', { timeZone: 'America/Argentina/Buenos_Aires' })} =====
-`);
-
-  const pasos = [
-    { que: 'generar los datos', cmd: 'npm', args: ['run', 'datos'], donde: web },
-    { que: 'compilar el sitio', cmd: 'npm', args: ['run', 'build'], donde: web },
-    { que: 'publicar en Vercel', cmd: 'npx', args: ['--no-install', 'vercel', '--prod', '--yes'], donde: web },
-  ];
-
-  const correr = ({ que, cmd, args, donde }) => new Promise((listo, falla) => {
-    // shell: true porque en Windows npm y npx son .cmd, no ejecutables.
-    const p = spawn(cmd, args, { cwd: donde, shell: true });
-    p.stdout.on('data', (d) => anotarLinea(d.toString()));
-    p.stderr.on('data', (d) => anotarLinea(d.toString()));
-    p.on('close', (codigo) => (codigo === 0 ? listo() : falla(new Error(`falló al ${que} (código ${codigo})`))));
-    p.on('error', (e) => falla(new Error(`no se pudo ${que}: ${e.message}`)));
-  });
-
-  return (async () => {
-    try {
-      for (const paso of pasos) await correr(paso);
-      anotarLinea('----- publicado bien -----\n');
-      console.log('  web publicada');
-      estado.ultimaPublicacion = { cuando: new Date().toISOString(), ok: true, error: null };
-      anotar('la web se publicó sola', '', 'sistema');
-      guardarJson(F_ESTADO, estado);
-    } catch (e) {
-      anotarLinea(`----- ${e.message} -----\n`);
-      console.error(`  no se pudo publicar: ${e.message}`);
-      // Queda registrado para que el panel lo muestre en rojo. El 18/09 la
-      // publicación estuvo siete horas fallando y lo único que lo decía era
-      // un archivo de registro que nadie mira.
-      estado.ultimaPublicacion = { cuando: new Date().toISOString(), ok: false, error: e.message };
-      anotar('la web NO se pudo publicar', e.message.slice(0, 80), 'sistema');
-      guardarJson(F_ESTADO, estado);
-    } finally {
-      publicando = false;
-    }
-  })();
-}
+//
+// El panel ya no publica la web. Hasta el 25/09 cada dos horas regeneraba
+// web/data/portada.json, compilaba y subía con `npx vercel --prod`. Desde el
+// 24/09 el sitio lo sirve Cloudflare Pages y lo arma GitHub Actions cada 30
+// minutos ("Actualizar la web" → cloudflare-deploy.yml), con la PC apagada o
+// prendida; Vercel se apagó el 25/09. Regenerar portada.json acá no servía
+// para nada del tablero (lee panel/datos/ultima.json) y sólo dejaba el
+// archivo modificado en la PC, que es justo el que choca al hacer git pull.
+// Lo que el panel decide llega a la web por panel/sincronizar.mjs.
 
 async function correrIngesta() {
   if (corriendo) return;
@@ -528,6 +492,11 @@ const servidor = http.createServer(async (req, res) => {
   const ruta = url.pathname;
 
   try {
+    // Un pedido que cambia algo y viene de otra página (el navegador lo
+    // marca con Origin) no se atiende: la cookie de sesión viaja sola, y
+    // sin esto cualquier sitio que Hernán abra podría publicar en su nombre.
+    if (!origenPermitido(req)) { json(res, { error: 'pedido de otro origen' }, 403); return; }
+
     // ---------------------------------------------------------- la puerta
     //
     // Todo lo de abajo necesita sesión. Antes no: el panel escuchaba en
@@ -548,7 +517,10 @@ const servidor = http.createServer(async (req, res) => {
       return;
     }
 
+    // Salir es por POST: por GET, cualquier página podía cerrar la sesión con
+    // una imagen que apuntara acá. Un GET (un marcador viejo) vuelve al panel.
     if (ruta === '/salir') {
+      if (req.method !== 'POST') { res.writeHead(302, { location: '/' }); res.end(); return; }
       res.writeHead(302, { 'set-cookie': salir(req), location: '/login' });
       res.end();
       return;
@@ -798,8 +770,12 @@ const servidor = http.createServer(async (req, res) => {
     // Probar una URL antes de sumarla como fuente.
     if (ruta === '/api/probar' && req.method === 'POST') {
       const { url: candidata } = await cuerpoDe(req);
+      // Sólo http(s) y nada de la red de casa: sin este límite, desde afuera
+      // (por el túnel) se podía usar el panel para espiar el router u otra PC.
+      const permitida = await probarUrlPermitida(candidata);
+      if (!permitida.ok) { json(res, { ok: false, motivo: permitida.motivo }); return; }
       try {
-        const xml = await traer(candidata, { timeout: 20000 });
+        const xml = await traer(permitida.url.href, { timeout: 20000 });
         const notas = parsearFeed(xml, { id: 'prueba', medio: 'prueba', alcance: 'local', peso: 10 });
         if (!notas.length) { json(res, { ok: false, motivo: 'responde, pero no encuentro notas adentro' }); return; }
         const ultimaF = notas.map((n) => n.fecha).sort((a, b) => new Date(b) - new Date(a))[0];
@@ -887,10 +863,6 @@ servidor.listen(PUERTO, async () => {
   if (!agenda) { console.log('  trayendo agenda...'); await actualizarAgenda(); }
   // Cada 10 minutos, igual que va a correr en producción.
   setInterval(correrIngesta, 10 * 60 * 1000);
-  // La web se publica sola cada dos horas, y una vez al arrancar (a los
-  // tres minutos, para no pelearle CPU al primer ciclo de ingesta).
-  setTimeout(publicarWeb, 3 * 60 * 1000);
-  setInterval(publicarWeb, HORAS_ENTRE_PUBLICACIONES * 60 * 60 * 1000);
   // La agenda cambia mucho menos que las noticias: alcanza con una vez por hora.
   setInterval(actualizarAgenda, 60 * 60 * 1000);
 });

@@ -12,13 +12,23 @@
 //      confianza en un grupo de WhatsApp que una serie de letras.
 //   3. Es lo que hace un medio.
 //
-// El identificador va AL FINAL y es lo único que cuenta. Si mañana se corrige
-// el titular, la dirección cambia pero sigue apuntando a la misma nota, y el
-// que traiga la vieja llega igual: la página se resuelve por el final y no por
-// el titular entero. Por eso el identificador nunca tiene guiones.
+// La dirección NO cambia cuando cambia el titular. Se arma una sola vez, la
+// primera vez que la nota sale a la web, y queda guardada en la nota
+// (`slug`): generar-datos la trae de la portada anterior o del archivo en cada
+// corrida. Hasta el 25/09 se armaba con el titular del momento, y como la IA
+// reescribe el titular después de publicar, los enlaces que ya estaban en
+// Facebook daban 404: el sitio es HTML estático y la página con la dirección
+// vieja ya no existía. Lo que prometía este comentario ("el que traiga la
+// vieja llega igual") era cierto con un servidor, no con archivos sueltos.
+//
+// El identificador va AL FINAL y es lo que cuenta: si igual llega una
+// dirección que no existe (compartida antes del arreglo, o escrita a mano),
+// la página 404 busca el identificador del final en /nota/indice.json y
+// manda a la dirección que corresponde (`destinoDesde404`, más abajo). Por
+// eso el identificador nunca tiene guiones.
 //
 // Está en un archivo aparte, sin importar nada, para poder probarlo sin
-// levantar el sitio y para usarlo desde los scripts.
+// levantar el sitio y para usarlo desde los scripts y desde redes/.
 
 const MAXIMO = 70;
 
@@ -42,9 +52,12 @@ export function slugDe(titulo = '') {
   return (ultimo > 20 ? corte.slice(0, ultimo) : corte).replace(/-+$/, '');
 }
 
-/** Lo que va después de /nota/: "titular-en-guiones-id". */
+/**
+ * Lo que va después de /nota/: "titular-en-guiones-id". Si la nota ya tiene
+ * su dirección fijada (`slug`), manda esa y no el titular de ahora.
+ */
 export function parteDeNota(nota) {
-  return `${slugDe(nota.titulo)}-${nota.id}`;
+  return `${nota.slug || slugDe(nota.titulo)}-${nota.id}`;
 }
 
 /** La dirección completa de una nota, sin dominio. */
@@ -61,4 +74,29 @@ export function rutaDeNota(nota) {
 export function idDeRuta(parte = '') {
   const s = String(parte);
   return s.slice(s.lastIndexOf('-') + 1);
+}
+
+/**
+ * Adónde mandar a quien cayó en una dirección de nota que no existe.
+ *
+ * `indice` es { id: "titular-en-guiones-id" } (lo sirve /nota/indice.json).
+ * Devuelve la dirección buena, con lo que viniera detrás (/instagram.png), o
+ * null si no hay nada mejor que mostrar el 404.
+ *
+ * Se escribe a la antigua (var, sin flechas) a propósito: la página 404 la
+ * copia tal cual adentro de un <script>, y así corre en cualquier navegador
+ * sin que nada la transforme.
+ */
+export function destinoDesde404(camino, indice) {
+  if (typeof camino !== 'string' || camino.indexOf('/nota/') !== 0 || !indice) return null;
+  var resto = camino.slice(6);
+  var corte = resto.indexOf('/');
+  var parte = corte < 0 ? resto : resto.slice(0, corte);
+  var cola = corte < 0 ? '' : resto.slice(corte);
+  try { parte = decodeURIComponent(parte); } catch (e) { /* queda como vino */ }
+  var id = parte.slice(parte.lastIndexOf('-') + 1);
+  if (!id || !Object.prototype.hasOwnProperty.call(indice, id)) return null;
+  var buena = indice[id];
+  if (!buena || buena === parte) return null;
+  return '/nota/' + buena + cola;
 }

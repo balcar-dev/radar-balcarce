@@ -28,7 +28,11 @@
   --s-politica: #C7381C;
   --s-policiales: #8C2D18;
   --s-deportes: #1E6E4F;
-  --s-automovilismo: #E08A16;
+  /* Naranja oscurecido: el #E08A16 de antes daba 2,69:1 con el texto blanco
+     de la etiqueta (hace falta 4,5:1). Éste da 4,83:1. Todas las --s-* se
+     usan de fondo de texto blanco: si se cambia una, medir el contraste
+     (pruebas/seo-paginas.test.mjs lo vigila). */
+  --s-automovilismo: #A8600E;
   --s-agro: #6B7A2A;
   --s-cultura: #6D4BA0;
   --s-economia: #9A6A12;
@@ -532,7 +536,9 @@ a.telefono:hover { border-color: var(--rojo); color: inherit; }
 }
 .boton-compartir:hover { border-color: var(--tinta); color: var(--tinta); }
 .boton-compartir.whatsapp { border-color: #1DA851; color: #12793A; }
-.boton-compartir.whatsapp:hover { background: #1DA851; border-color: #1DA851; color: #FFFFFF; }
+/* Al pasar el mouse, el verde oscuro del texto y no el #1DA851 del borde:
+   con letra blanca ése daba 3,1:1 de contraste (hace falta 4,5:1). */
+.boton-compartir.whatsapp:hover { background: #12793A; border-color: #12793A; color: #FFFFFF; }
 
 /* La firma al pie de la nota: quién la escribió y quién la revisó. Va en
    gris y en cuerpo chico a propósito — es un dato honesto, no un aviso. */

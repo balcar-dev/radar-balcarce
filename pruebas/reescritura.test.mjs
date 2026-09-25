@@ -8,6 +8,7 @@ import { test, before, after } from 'node:test';
 import assert from 'node:assert/strict';
 import {
   esTemaSerio, reescribir, reescribirConRespaldo, reescribirAutomaticas, previasDeLaPortada,
+  INSTRUCCION_EDITORIAL, semaforoDeLaReescritura, motivoCorto, esLocal,
 } from '../reels/reescritura.mjs';
 
 // claveRedaccion()/claveRedes() leen de process.env primero: alcanza con
@@ -72,7 +73,29 @@ test('reescribe con la clave gratis y no toca la paga si anduvo', async () => {
   assert.equal(r.titulo, 'Título nuevo');
   assert.equal(r.deIA, true);
   assert.equal(pedidos.length, 1);
-  assert.ok(pedidos[0].url.includes('clave-redaccion-de-prueba'));
+  assert.equal(pedidos[0].init.headers['x-goog-api-key'], 'clave-redaccion-de-prueba');
+});
+
+test('la clave de Gemini viaja en el encabezado, nunca en la dirección', async () => {
+  // Con "?key=" la clave quedaba en la dirección, que termina en registros y
+  // en mensajes de error (25/09).
+  const { fn, pedidos } = fetchFalso([respuestaOk('T', 'C', 'T')]);
+  await reescribir(
+    { titulo: 'Original', resumenFuente: 'Pasó tal cosa.', seccion: 'Balcarce', medios: ['El Diario'] },
+    { fetchFn: fn },
+  );
+  assert.ok(!pedidos[0].url.includes('clave-redaccion-de-prueba'), 'la clave no puede ir en la dirección');
+  assert.ok(!/[?&]key=/.test(pedidos[0].url));
+  assert.equal(pedidos[0].init.headers['x-goog-api-key'], 'clave-redaccion-de-prueba');
+});
+
+test('el pedido a Gemini tiene tiempo máximo: uno colgado no traba la corrida', async () => {
+  const { fn, pedidos } = fetchFalso([respuestaOk('T', 'C', 'T')]);
+  await reescribir(
+    { titulo: 'Original', resumenFuente: 'Pasó tal cosa.', seccion: 'Balcarce', medios: ['El Diario'] },
+    { fetchFn: fn },
+  );
+  assert.ok(pedidos[0].init.signal instanceof AbortSignal, 'tiene que llevar una señal de corte');
 });
 
 test('si hay más de una fuente, se le manda cada una por separado, no sólo la principal', async () => {
@@ -102,8 +125,8 @@ test('si la clave gratis dice "sin cupo" (429), reintenta con la paga', async ()
   );
   assert.equal(r.titulo, 'Título pagado');
   assert.equal(pedidos.length, 2);
-  assert.ok(pedidos[0].url.includes('clave-redaccion-de-prueba'));
-  assert.ok(pedidos[1].url.includes('clave-redes-de-prueba'));
+  assert.equal(pedidos[0].init.headers['x-goog-api-key'], 'clave-redaccion-de-prueba');
+  assert.equal(pedidos[1].init.headers['x-goog-api-key'], 'clave-redes-de-prueba');
 });
 
 test('un error que no es de cupo no reintenta con la clave paga', async () => {
@@ -239,4 +262,140 @@ test('la memoria de la portada recuerda lo reescrito, con su cuerpo', () => {
 test('una nota reescrita antes de que existiera el cuerpo se vuelve a reescribir', () => {
   const previas = previasDeLaPortada([{ id: 'a', titulo: 'T', copete: 'C', guion: 'G' }]);
   assert.deepEqual(previas, {});
+});
+
+// ------------------------------------------ el semáforo sobre la nota entera
+//
+// Auditoría del 25/09 (leyes 26.061 y 26.485): la ingesta decide el color con
+// el título y el principio del resumen, pero la IA reescribe con la nota
+// ENTERA. Lo que dice el tercer párrafo, o lo que la IA escribió con eso, no
+// volvía a pasar por el semáforo.
+
+const conTexto = (texto) => async () => texto;
+
+test('las reglas de la IA prohíben identificar a un menor o a una víctima', async () => {
+  assert.match(INSTRUCCION_EDITORIAL, /menor de edad/);
+  assert.match(INSTRUCCION_EDITORIAL, /víctima de un delito sexual o de violencia de género/);
+  assert.match(INSTRUCCION_EDITORIAL, /escuela/);
+  assert.match(INSTRUCCION_EDITORIAL, /26\.061 y 26\.485/);
+  // Y no es sólo lo que muestra el panel: es lo que recibe Gemini.
+  const { fn, pedidos } = fetchFalso([respuestaOk('T', 'C', 'T')]);
+  await reescribir({ titulo: 'Original', resumenFuente: 'Pasó tal cosa.', seccion: 'Policiales', medios: ['El Diario'] }, { fetchFn: fn });
+  assert.match(JSON.parse(pedidos[0].init.body).contents[0].parts[0].text, /NUNCA identificás a un menor de edad/);
+});
+
+test('si la nota entera da rojo, no se le pide nada a Gemini y la nota deja de salir', async () => {
+  const { fn, pedidos } = fetchFalso([]);
+  const n = notaVerde();
+  const r = await reescribirAutomaticas([n], {
+    traer: conTexto('Hubo una reunión en el municipio por el tema del agua. En otro orden, se habló de un caso de grooming en la ciudad.'),
+    opciones: { fetchFn: fn }, registro: () => {},
+  });
+  assert.equal(pedidos.length, 0, 'no se gasta un pedido en algo que no puede salir');
+  assert.equal(r.n1, undefined);
+  assert.equal(n.semaforo, 'rojo', 'la nota que era verde pasa a rojo: no se publica');
+  assert.match(n.motivo, /grooming/);
+  assert.match(n.motivo, /texto completo de la fuente/);
+});
+
+test('si la nota entera da amarillo, espera a una persona', async () => {
+  const { fn, pedidos } = fetchFalso([]);
+  const n = notaVerde();
+  await reescribirAutomaticas([n], {
+    traer: conTexto('Hubo una reunión en el municipio por el tema del agua. Participó una menor de 14 años que vive en el barrio.'),
+    opciones: { fetchFn: fn }, registro: () => {},
+  });
+  assert.equal(pedidos.length, 0);
+  assert.equal(n.semaforo, 'amarillo');
+});
+
+test('lo que contaron los otros medios también pasa por el semáforo', async () => {
+  const { fn, pedidos } = fetchFalso([]);
+  const n = notaVerde({ fuentesTexto: ['El padre del bebé habló con la prensa.'] });
+  await reescribirAutomaticas([n], { traer: conTexto(null), opciones: { fetchFn: fn }, registro: () => {} });
+  assert.equal(pedidos.length, 0);
+  assert.equal(n.semaforo, 'amarillo');
+});
+
+test('si lo que escribió la IA da rojo o amarillo, no se usa y la nota deja de salir sola', async () => {
+  const { fn, pedidos } = fetchFalso([respuestaOk(
+    'El municipio se reunió por el agua',
+    'Se trató el tema del agua en una reunión municipal con un menor de edad presente.',
+    'El municipio se reunió por el agua.',
+  )]);
+  const n = notaVerde();
+  const r = await reescribirAutomaticas([n], { traer: conTexto(null), opciones: { fetchFn: fn }, registro: () => {} });
+  assert.equal(pedidos.length, 1);
+  assert.equal(r.n1, undefined, 'lo que escribió la IA no se publica');
+  assert.equal(n.semaforo, 'rojo', '"menor de edad" es rojo');
+  assert.match(n.motivo, /lo que escribió la IA/);
+});
+
+test('lo ya publicado que hoy da rojo deja de salir, sin gastar un pedido', async () => {
+  // La lista crece (como el 25/09): lo que estaba en caché se vuelve a mirar.
+  const { fn, pedidos } = fetchFalso([]);
+  const n = notaVerde();
+  const previas = { n1: { titulo: 'Un título cualquiera', copete: 'La joven fue violada en el barrio.', cuerpo: '', guion: 'Un título cualquiera.', deIA: true } };
+  const r = await reescribirAutomaticas([n], { previas, opciones: { fetchFn: fn }, registro: () => {} });
+  assert.equal(r.n1, undefined);
+  assert.equal(pedidos.length, 0);
+  assert.equal(n.semaforo, 'rojo');
+});
+
+test('el registro de una nota frenada no muestra su título', async () => {
+  const lineas = [];
+  const n = notaVerde({ titulo: 'Título que no tiene que aparecer en el registro' });
+  await reescribirAutomaticas([n], {
+    traer: conTexto('Un caso de grooming en la ciudad.'), opciones: { fetchFn: fetchFalso([]).fn }, registro: (l) => lineas.push(l),
+  });
+  assert.ok(lineas.some((l) => /semáforo/.test(l) && /n1/.test(l)));
+  assert.ok(!lineas.join('\n').includes('Título que no tiene que aparecer'));
+});
+
+test('semaforoDeLaReescritura: el rojo gana aunque aparezca después de un amarillo', () => {
+  const s = semaforoDeLaReescritura(
+    { textoDeLaFuente: 'La llevaron al hospital.' },
+    { titulo: 'x', copete: 'Fue un caso de grooming.', cuerpo: '', guion: 'x' },
+  );
+  assert.equal(s.color, 'rojo');
+  assert.equal(semaforoDeLaReescritura({ textoDeLaFuente: 'Se inauguró la plaza.' }, { titulo: 'La plaza', copete: 'Nueva.', guion: 'La plaza.' }), null);
+});
+
+// ------------------------------------------------- el registro y el orden
+
+test('el registro dice POR QUÉ el verificador rechazó una nota, sin volcar el texto', async () => {
+  const mala = respuestaOk('Veinte vecinos participaron de la reunión', 'Veinte vecinos se reunieron con el municipio por el agua.', 'Veinte vecinos participaron de la reunión.');
+  const { fn } = fetchFalso([mala, mala]);
+  const lineas = [];
+  await reescribirAutomaticas([notaVerde()], { traer: conTexto(null), opciones: { fetchFn: fn }, registro: (l) => lineas.push(l) });
+  const rechazo = lineas.find((l) => l.includes('IA rechazada'));
+  assert.ok(rechazo, lineas.join('\n'));
+  assert.match(rechazo, /numero/, 'dice qué tipo de problema fue');
+  assert.match(rechazo, /20/, 'y cuál fue el primero');
+  assert.ok(rechazo.length < 260, 'una línea corta, no el texto entero');
+});
+
+test('motivoCorto recorta y dice el tipo', () => {
+  const m = motivoCorto([{ tipo: 'nombre', detalle: `el cuerpo nombra a "Pérez" y la fuente no ${'x'.repeat(300)}` }]);
+  assert.match(m, /1 problema \(nombre\)/);
+  assert.ok(m.length < 160);
+});
+
+test('con el tope justo, se reescribe primero lo de Balcarce aunque lo de afuera tenga más puntaje', async () => {
+  const { fn, pedidos } = fetchFalso([respuestaOk('El municipio se reunió por el agua', 'Se trató el tema del agua en una reunión municipal.', 'El municipio se reunió por el agua.')]);
+  const notas = [
+    notaVerde({ id: 'afuera', titulo: 'Verstappen ganó en Monza', seccion: 'Automovilismo', local: false, alcance: 'pais', relevancia: 95 }),
+    notaVerde({ id: 'local', local: true, relevancia: 60 }),
+  ];
+  const r = await reescribirAutomaticas(notas, { tope: 1, traer: conTexto(null), opciones: { fetchFn: fn }, registro: () => {} });
+  assert.equal(pedidos.length, 1);
+  assert.ok(r.local, 'la local se reescribió');
+  assert.equal(r.afuera, undefined, 'la de afuera espera a la próxima corrida');
+});
+
+test('esLocal reconoce la sección, el alcance o la marca de la ingesta', () => {
+  assert.ok(esLocal({ seccion: 'Balcarce' }));
+  assert.ok(esLocal({ seccion: 'Deportes', local: true }));
+  assert.ok(esLocal({ seccion: 'Política', alcance: 'local' }));
+  assert.ok(!esLocal({ seccion: 'Automovilismo', alcance: 'pais', local: false }));
 });

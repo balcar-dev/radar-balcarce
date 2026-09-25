@@ -33,7 +33,11 @@ export const REGLAS_FACEBOOK = {
   esperaMinutos: 15,       // que el deploy de la web ya haya terminado
   edadMaximaHoras: 8,      // no se publica lo que ya es viejo
   desdeHora: 8,            // horario de Balcarce
-  hastaHora: 22,
+  hastaHora: 22,           // hasta las 22:00 en punto, no hasta las 22:59
+  // Un tema, una vez por día. El 24/09 salieron tres posteos de la reapertura
+  // del autódromo en cuatro horas: para el que sigue la página es la misma
+  // noticia tres veces. Ver temaParecido.
+  horasSinRepetirTema: 24,
   seccionesQueEsperanPersona: SECCIONES_QUE_ESPERAN_PERSONA,
 };
 
@@ -42,6 +46,15 @@ const ZONA = 'America/Argentina/Buenos_Aires';
 /** La hora (0 a 23) en Balcarce. */
 export function horaAR(fecha) {
   return Number(new Intl.DateTimeFormat('en-GB', { hour: '2-digit', hour12: false, timeZone: ZONA }).format(fecha)) % 24;
+}
+
+/** Los minutos desde la medianoche en Balcarce (22:00 es 1320). */
+export function minutoDelDiaAR(fecha) {
+  const partes = new Intl.DateTimeFormat('en-GB', {
+    hour: '2-digit', minute: '2-digit', hour12: false, timeZone: ZONA,
+  }).formatToParts(fecha);
+  const valor = (tipo) => Number(partes.find((p) => p.type === tipo)?.value ?? 0);
+  return (valor('hour') % 24) * 60 + valor('minute');
 }
 
 /** El día en Balcarce como AAAA-MM-DD. */
@@ -73,8 +86,10 @@ const cuandoSalio = (n) => n.publicadaCuando ?? n.fecha ?? null;
  * Puede devolver cero, y casi siempre lo hace: es lo normal.
  */
 export function elegirParaFacebook({ notas, libro = libroNuevo(), ahora = new Date(), reglas = REGLAS_FACEBOOK }) {
-  const hora = horaAR(ahora);
-  if (hora < reglas.desdeHora || hora > reglas.hastaHora) return [];
+  // Se cuenta en minutos: con la hora sola, "hasta las 22" dejaba pasar todo
+  // hasta las 22:59, y el 24/09 salió un posteo a las 22:25.
+  const minutos = minutoDelDiaAR(ahora);
+  if (minutos < reglas.desdeHora * 60 || minutos > reglas.hastaHora * 60) return [];
 
   const hoy = diaAR(ahora);
   const previas = Object.values(libro.facebook ?? {});
@@ -85,10 +100,24 @@ export function elegirParaFacebook({ notas, libro = libroNuevo(), ahora = new Da
   const ultima = previas.reduce((max, p) => Math.max(max, new Date(p.cuando).getTime()), 0);
   if (ultima && (ahora.getTime() - ultima) / 60000 < reglas.minutosEntrePosteos) return [];
 
+  // Lo publicado en Facebook en las últimas 24 horas, para no repetir tema.
+  // Cada posteo se compara con el titular con el que salió (el libro lo
+  // guarda) y, si la nota sigue en la portada, también con el de ahora y con
+  // sus temas: la IA reescribe titulares, y el 24/09 "Balcarce se prepara
+  // para vivir un fin de semana a fondo" era, por sus temas, el autódromo.
+  const porId = new Map(notas.map((n) => [n.id, n]));
+  const recientes = Object.entries(libro.facebook ?? {})
+    .filter(([, p]) => minutosDesde(p.cuando, ahora) <= (reglas.horasSinRepetirTema ?? 24) * 60)
+    .flatMap(([id, p]) => {
+      const hoyEnLaWeb = porId.get(id);
+      return [{ titulo: p.titulo, temas: p.temas ?? hoyEnLaWeb?.temas ?? [] }, ...(hoyEnLaWeb ? [hoyEnLaWeb] : [])];
+    });
+
   const candidatas = notas.filter((n) => {
     if (yaPublicada(libro, 'facebook', n.id)) return false;
     if ((n.relevancia ?? 0) < reglas.relevanciaMinima) return false;
     if (reglas.seccionesQueEsperanPersona.includes(n.seccion)) return false;
+    if (recientes.some((p) => temaParecido(n, p))) return false;
     const salio = cuandoSalio(n);
     if (!salio) return false;
     const edad = minutosDesde(salio, ahora);
@@ -97,6 +126,46 @@ export function elegirParaFacebook({ notas, libro = libroNuevo(), ahora = new Da
 
   candidatas.sort((a, b) => (b.relevancia ?? 0) - (a.relevancia ?? 0));
   return candidatas.slice(0, Math.min(cupo, reglas.porCorrida));
+}
+
+// Palabras de cinco letras o más que no dicen de qué trata una nota: están en
+// cualquier titular de acá.
+const VACIAS = new Set([
+  'balcarce', 'balcarceno', 'balcarcena', 'balcarcenos', 'balcarcenas', 'municipio', 'municipal',
+  'municipalidad', 'provincia', 'provincial', 'ciudad', 'partido', 'argentina', 'argentino', 'nacional',
+  'gobierno', 'vecinos', 'nuevo', 'nueva', 'nuevos', 'nuevas', 'sobre', 'desde', 'hasta', 'entre',
+  'durante', 'luego', 'antes', 'despues', 'cuando', 'donde', 'todos', 'todas', 'tiene', 'tienen',
+  'puede', 'pueden', 'hacer', 'parte', 'semana', 'fecha', 'jornada', 'local', 'locales', 'saber',
+  'tenes', 'otros', 'otras', 'primer', 'primera', 'segundo', 'segunda', 'grande', 'grandes',
+  'sigue', 'siguen', 'vuelve', 'vuelven', 'llega', 'llegan', 'realizo', 'realizara', 'plata', 'aires',
+]);
+
+const palabrasDeTitular = (titulo = '') => new Set(
+  String(titulo).toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').split(/[^a-z0-9]+/)
+    .filter((w) => w.length >= 5 && !VACIAS.has(w)),
+);
+
+/**
+ * ¿Estas dos notas son del mismo tema, para Facebook?
+ *
+ * Sin nada de afuera, a propósito: sus titulares comparten dos palabras que
+ * dicen algo, o una sola si es larga (ocho letras o más: "autodromo",
+ * "reapertura", "presupuesto"), o una palabra y además un tema de los que
+ * sigue el sitio (TEMAS en ingesta/fuentes.mjs). Se prefiere pasarse de
+ * cuidadoso: Facebook publica cinco por día y lo que no sale hoy no se
+ * pierde, sigue en la web.
+ */
+export function temaParecido(a, b) {
+  const A = palabrasDeTitular(a?.titulo);
+  const compartidas = [...palabrasDeTitular(b?.titulo)].filter((w) => A.has(w));
+  if (compartidas.length >= 2 || compartidas.some((w) => w.length >= 8)) return true;
+  // Un tema en común solo no alcanza: los temas se marcan también por el
+  // cuerpo de la nota, y el fin de semana de la reapertura medio sitio
+  // nombraba al autódromo (hasta la visita de una maestra china). Con el
+  // tema y una palabra del titular en común, sí: "la reapertura del Fangio"
+  // y "Reabre el Autódromo Juan Manuel Fangio" son lo mismo.
+  const temasA = new Set(a?.temas ?? []);
+  return compartidas.length >= 1 && (b?.temas ?? []).some((t) => temasA.has(t));
 }
 
 /** El copete cortado en una palabra entera. */
