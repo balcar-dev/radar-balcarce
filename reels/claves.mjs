@@ -6,7 +6,7 @@
 // que nadie se entere.
 //
 //   GEMINI_API_KEY_REDACCION   reescribir y redactar notas (panel/servidor.mjs)
-//   GEMINI_API_KEY_REDES       voces, ilustraciones y reels (reels/)
+//   GEMINI_API_KEY_REDES       voces y reels (reels/)
 //
 // Se leen de una variable de entorno o del archivo .env de la raíz. Nunca se
 // escriben en el código ni se muestran.

@@ -3,8 +3,6 @@ node_modules/
 .env.local
 .env*.local
 reels/salida/
-reels/casting/
-reels/voces/
 # La cortina (marca/cortina.wav) se genera sola con ffmpeg; las tipografías sí
 # se suben, para que GitHub pueda armar las placas (son libres: OFL).
 reels/marca/*
@@ -22,7 +20,6 @@ web/public/_redirects
 # decisiones humanas, y eso se queda en la máquina de quien corre el panel.
 *.log
 .claude/
-reels/canvas-*.png
 # Copias de seguridad del panel (tienen contraseñas con hash y datos del buzón).
 respaldos/
 # Base comercial: el archivo crudo de OpenStreetMap y la vista previa se regeneran.

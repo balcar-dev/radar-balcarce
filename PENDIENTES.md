@@ -155,20 +155,17 @@ mañana".
     GitHub: la reescritura usa la clave paga de redes (decidido el 24/09).
 39. **`tocaHoy`** (`ingesta/utiles.mjs`, qué día salen los teléfonos útiles)
     todavía cuenta el día con la zona del servidor, no con la de Balcarce.
-40. **`reels/ilustrar.mjs`** (un experimento) todavía manda la clave de Gemini
-    en la dirección (`?key=`). Lo demás ya la manda en el encabezado.
-41. `next`/`postcss` con una vulnerabilidad conocida (riesgo bajo: el sitio es
+40. `next`/`postcss` con una vulnerabilidad conocida (riesgo bajo: el sitio es
     estático). Actualizar cuando haya versión.
-42. Una política de seguridad de contenido (CSP) completa en
+41. Una política de seguridad de contenido (CSP) completa en
     `web/public/_headers` (hoy sólo `frame-ancestors`).
-43. `ingesta/ingesta.mjs` es muy largo; hay scripts de experimentos sueltos en
-    `reels/`.
+42. `ingesta/ingesta.mjs` es muy largo.
 
 ## G. Base comercial y publicidad
 
-44. **Completar los 145 comercios**, pedir la lista de socios a la Cámara de
+43. **Completar los 145 comercios**, pedir la lista de socios a la Cámara de
     Comercio y el padrón de habilitaciones al municipio. Todo en `COMERCIAL.md`.
-45. **Cargar el primer aviso** en los tres espacios de la web, preguntar
+44. **Cargar el primer aviso** en los tres espacios de la web, preguntar
     precios en Balcarce y armar la página `/publicidad` y el media kit
     (`PUBLICIDAD.md`).
 

@@ -4,9 +4,6 @@
 // La clave es la de REDES: GEMINI_API_KEY_REDES, en el entorno o en el .env de
 // la raíz. Es distinta de la que redacta las notas (ver claves.mjs), para que
 // los reels no gasten el cupo de la redacción. Nunca se escribe en el código.
-//
-//   node reels/voz-gemini.mjs                    prueba con varias voces
-//   node reels/voz-gemini.mjs "texto a decir"
 
 import fs from 'node:fs';
 import path from 'node:path';
@@ -169,31 +166,4 @@ export async function decirGemini(texto, destino, {
     return { archivo: destino, duracion, palabras, anclasUsadas };
   }
   throw ultimoError ?? new Error('no se pudo sintetizar');
-}
-
-if (process.argv[1] && process.argv[1].endsWith('voz-gemini.mjs')) {
-  const texto = process.argv.slice(2).join(' ') || [
-    'Buen día, Balcarce. Arrancamos con catorce grados y a la tarde levanta hasta veintitrés.',
-    'Racing confirmó la participación de Inter Miami en el Torneo de Fútbol Infantil Ciudad de Balcarce.',
-    'Y si necesitás una farmacia, la de turno es Benites.',
-  ].join(' ');
-
-  const salida = path.join(import.meta.dirname, 'casting');
-  const voces = [
-    { voz: 'Kore', que: 'firme, equilibrada' },
-    { voz: 'Aoede', que: 'liviana, cercana' },
-    { voz: 'Leda', que: 'joven, ágil' },
-    { voz: 'Charon', que: 'grave, varón' },
-  ];
-  console.log(`\n\x1b[1mCASTING GEMINI\x1b[0m  (modelo ${MODELO})\n`);
-  for (const v of voces) {
-    process.stdout.write(`  ${v.voz.padEnd(10)} `);
-    try {
-      await decirGemini(texto, path.join(salida, `g-${v.voz.toLowerCase()}.mp3`), { voz: v.voz });
-      console.log(`\x1b[32mok\x1b[0m · ${v.que}`);
-    } catch (e) {
-      console.log(`\x1b[31mfalla\x1b[0m ${e.message.slice(0, 120)}`);
-    }
-  }
-  console.log('');
 }

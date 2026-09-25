@@ -87,49 +87,6 @@ function paraTextoBlanco(hex, objetivo = 0.16) {
 const esc = (s = '') => String(s)
   .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 
-/**
- * Ilustración de fondo por sección.
- *
- * La idea: NO se genera una imagen por noticia. Se hace UNA ilustración por
- * sección, con nuestra estética, y se reusa siempre. Así la placa deja de ser
- * fría sin que nadie pueda confundirla con la foto del hecho, y sin gastar en
- * generar imágenes todos los días.
- *
- * Basta con dejar el archivo en reels/marca/fondos/<seccion>.png y aparece
- * solo. Si no está, la placa sale como hasta ahora.
- */
-const CARPETA_FONDOS = path.join(import.meta.dirname, 'marca', 'fondos');
-
-export function fondoDeSeccion(seccion) {
-  if (!seccion) return null;
-  const slug = String(seccion).toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '')
-    .replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
-  for (const nombre of [`${slug}.png`, `${slug}.jpg`, 'general.png']) {
-    const ruta = path.join(CARPETA_FONDOS, nombre);
-    if (fs.existsSync(ruta)) {
-      const tipo = nombre.endsWith('.jpg') ? 'jpeg' : 'png';
-      return `data:image/${tipo};base64,${fs.readFileSync(ruta).toString('base64')}`;
-    }
-  }
-  return null;
-}
-
-/** La ilustración a sangre, oscurecida para que el texto siempre se lea. */
-function capaFondo(dataUri) {
-  if (!dataUri) return '';
-  return `
-  <image href="${dataUri}" x="0" y="0" width="${ANCHO}" height="${ALTO}"
-         preserveAspectRatio="xMidYMid slice" opacity="0.55"/>
-  <defs>
-    <linearGradient id="velo" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#14161A" stop-opacity="0.92"/>
-      <stop offset="45%" stop-color="#14161A" stop-opacity="0.70"/>
-      <stop offset="100%" stop-color="#14161A" stop-opacity="0.95"/>
-    </linearGradient>
-  </defs>
-  <rect width="${ANCHO}" height="${ALTO}" fill="url(#velo)"/>`;
-}
-
 /** Corta un texto en renglones de a lo sumo `ancho` caracteres. */
 export function envolver(texto, ancho) {
   const palabras = String(texto).split(/\s+/);
@@ -487,11 +444,10 @@ function repartirTitular(titulo) {
 }
 
 export function placaNoticia({
-  seccion, titulo, cuando = '', hora = '', fondo: ilustracionPedida, color: colorPedido,
+  seccion, titulo, cuando = '', hora = '', color: colorPedido,
 }) {
   // `color` pisa el de la sección: los podcasts llevan el color del día.
   const color = colorPedido ?? COLOR_SECCION[seccion] ?? COLORES.rojo;
-  const ilustracion = ilustracionPedida === undefined ? fondoDeSeccion(seccion) : ilustracionPedida;
 
   // El titular es el protagonista, así que el cuerpo se adapta a su largo.
   //
@@ -513,7 +469,6 @@ export function placaNoticia({
 
   return `<svg xmlns="http://www.w3.org/2000/svg" width="${ANCHO}" height="${ALTO}" viewBox="0 0 ${ANCHO} ${ALTO}">
   ${fondo(color)}
-  ${capaFondo(ilustracion)}
   ${cabecera(hora, color)}
   ${rotulo(seccion, color, 296)}
 
