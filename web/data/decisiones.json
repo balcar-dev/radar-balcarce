@@ -1,5 +1,5 @@
 {
-  "exportado": "2026-09-25T09:10:51.175Z",
+  "exportado": "2026-09-25T09:31:02.788Z",
   "decisiones": {
     "1951120": {
       "estado": "automatica",
@@ -11669,6 +11669,277 @@
       "deIA": null,
       "por": null,
       "cuando": "2026-09-25T09:10:51.122Z"
+    },
+    "1pjzhm6": {
+      "estado": "automatica",
+      "titulo": "José Ciantini presenta una TC Pick Up en Mar del Plata",
+      "copete": "En la previa del regreso del automovilismo nacional al autódromo local, el expiloto José Ciantini recorrió calles marplatenses al volante de una camioneta.",
+      "cuerpo": "El histórico piloto José Ciantini llevó adelante una exhibición por las calles de Mar del Plata a bordo de una unidad de la categoría TC Pick Up. La actividad forma parte de la previa de la competencia nacional que marcará el regreso oficial de la actividad al Autódromo Juan Manuel Fangio.\n\nEl evento automovilístico se concretará este fin de semana en el trazado balcarceño, que vuelve a recibir una categoría nacional tras un proceso de remodelación. La agenda continuará este viernes con una nueva presentación en Balcarce.",
+      "guion": "Jose Ciantini presenta una TC Pick Up en Mar del Plata",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T09:30:36.289Z",
+      "claves": [
+        "José Ciantini recorrió Mar del Plata con una TC Pick Up",
+        "La actividad sirve de previa para la competencia en Balcarce",
+        "El evento principal se realizará este fin de semana en el autódromo local",
+        "Habrá una nueva presentación este viernes en Balcarce"
+      ],
+      "textoRedes": "En la previa del regreso del automovilismo al Autódromo Juan Manuel Fangio, José Ciantini recorrió las calles de Mar del Plata con una TC Pick Up y este viernes la actividad se trasladará a Balcarce.",
+      "etiquetas": [
+        "Automovilismo",
+        "TC Pick Up",
+        "Autodromo Juan Manuel Fangio",
+        "Jose Ciantini",
+        "Balcarce",
+        "Mar del Plata"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Diario La Vanguardia",
+          "enlace": "https://www.diariolavanguardia.com/noticias/44901-el-bocha-ciantini-y-el-intendente-presentaron-en-mar-del-plata-la-actividad-de-las-tc-pick-up/",
+          "fecha": null,
+          "oficial": false,
+          "aporte": "Informó la exhibición de José Ciantini en Mar del Plata con una TC Pick Up y la presentación prevista para este viernes en Balcarce."
+        },
+        {
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/el-bocha-y-diego-ciantini-presentaron-sus-camionetas-450",
+          "fecha": null,
+          "oficial": false,
+          "aporte": "No aportó información útil para la elaboración de la noticia."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1xgs07k",
+          "titulo": "El “Bocha” y Diego Ciantini presentaron sus camionetas",
+          "fecha": "2026-09-21T19:45:23.000Z",
+          "ruta": "/nota/el-bocha-y-diego-ciantini-presentaron-sus-camionetas-1xgs07k"
+        },
+        {
+          "id": "1o216bo",
+          "titulo": "Los Ciantini presentaron las Pick Up para volver a correr en Balcarce",
+          "fecha": "2026-09-21T20:45:01.000Z",
+          "ruta": "/nota/los-ciantini-presentaron-las-pick-up-para-volver-a-correr-en-balcarce-1o216bo"
+        },
+        {
+          "id": "yy4073",
+          "titulo": "Así será el diseño de las Pick Up del “Bocha” y Diego Ciantini para correr en Balcarce",
+          "fecha": "2026-09-21T15:56:43.000Z",
+          "ruta": "/nota/asi-sera-el-diseno-de-las-pick-up-del-bocha-y-diego-ciantini-para-yy4073"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "gvrmid": {
+      "estado": "automatica",
+      "titulo": null,
+      "copete": null,
+      "cuerpo": null,
+      "guion": null,
+      "deIA": null,
+      "por": null,
+      "cuando": "2026-09-25T09:30:39.663Z"
+    },
+    "nrm2b5": {
+      "estado": "automatica",
+      "titulo": "El rechazo a eliminar las PASO cobra fuerza en Balcarce",
+      "copete": "Diversos sectores políticos debaten sobre la posible eliminación de las elecciones primarias, una medida que genera controversia en el distrito.",
+      "cuerpo": "El debate en torno a la posible eliminación de las elecciones primarias, abiertas, simultáneas y obligatorias (PASO) genera distintas posturas en el ámbito político local, mientras se analizan los alcances que esta modificación electoral tendría en los comicios provinciales y nacionales.\n\nLa discusión sobre el futuro del sistema electoral actual suma adhesiones y cuestionamientos entre los dirigentes de distintos espacios partidarios, quienes evalúan el impacto económico y organizativo de mantener o suprimir esta instancia previa a las generales.\n\nPor el momento, los actores políticos locales continúan evaluando las repercusiones de este potencial cambio normativo a la espera de definiciones legislativas que marquen el rumbo definitivo para los próximos procesos electorales.",
+      "guion": "El rechazo a eliminar las pasos cobra fuerza en Balcarce",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T09:30:41.905Z",
+      "claves": [
+        "Debate sobre la continuidad de las PASO.",
+        "Posturas divididas entre los dirigentes locales.",
+        "Evaluación del impacto organizativo y económico."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Crece el rechazo y el debate en torno a la posible eliminación de las PASO en el ámbito político local, con posturas encontradas sobre su impacto en las próximas elecciones.",
+      "etiquetas": [
+        "PASO",
+        "Balcarce"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/el-rechazo-a-eliminar-las-paso-cobra-fuerza-923",
+          "fecha": null,
+          "oficial": false,
+          "aporte": "Informó sobre el crecimiento del rechazo a eliminar las PASO en el ámbito político."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "14hjcia": {
+      "estado": "automatica",
+      "titulo": null,
+      "copete": null,
+      "cuerpo": null,
+      "guion": null,
+      "deIA": null,
+      "por": null,
+      "cuando": "2026-09-25T09:30:45.168Z"
+    },
+    "19znilf": {
+      "estado": "automatica",
+      "titulo": "Preocupan los recortes de PAMI en Balcarce",
+      "copete": "La reducción de coberturas y prestaciones de la obra social genera inquietud entre los afiliados locales. El impacto se siente en el acceso a medicamentos y servicios médicos.",
+      "cuerpo": "Los cambios recientes en las prestaciones y coberturas de la obra social generan incertidumbre en la comunidad de jubilados y pensionados del distrito. Los beneficiarios advierten sobre las dificultades que esto genera para afrontar los gastos en farmacia y atención médica habitual.\n\nLa situación se enmarca en un contexto de revisión de recursos a nivel general que repercute de manera directa en las familias locales dependientes de la entidad.",
+      "guion": "Preocupan los recortes de PAMI en Balcarce",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T09:30:47.439Z",
+      "claves": [
+        "Preocupación por recortes de PAMI",
+        "Impacto en jubilados locales",
+        "Menor cobertura en medicamentos"
+      ],
+      "seSabe": [
+        "Hay inquietud entre los afiliados locales por los recortes de PAMI."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Hay preocupación entre los jubilados de Balcarce por los recortes en las coberturas y prestaciones de PAMI que afectan el acceso a medicamentos y atención médica.",
+      "etiquetas": [
+        "PAMI",
+        "Balcarce",
+        "recortes"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/preocupacion-por-los-recortes-de-pami-y-el-impacto-en-la-atencion-de-pacientes-339",
+          "fecha": null,
+          "oficial": false,
+          "aporte": "Informó sobre la preocupación en la ciudad por los recortes de PAMI."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "1390kus": {
+      "estado": "automatica",
+      "titulo": "El doctor Fernando Garcia sera incorporado en Balcarce",
+      "copete": "El profesional de la salud Fernando Garcia sumara sus servicios en el ambito local. La novedad fue informada por el medio de comunicacion.",
+      "cuerpo": "El doctor Fernando Garcia sera incorporado segun lo informado por el medio de comunicacion local, sumandose a la atencion medica de la comunidad de Balcarce.\n\nHasta el momento no se brindaron mayores detalles acerca del sector especifico donde cumplira funciones ni la fecha exacta de su llegada al distrito.",
+      "guion": "El doctor Fernando Garcia sera incorporado en Balcarce",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T09:30:53.046Z",
+      "claves": [
+        "Incorporacion de un nuevo profesional medico",
+        "Se trata del doctor Fernando Garcia",
+        "La novedad fue dada a conocer por un medio local"
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El doctor Fernando Garcia sera incorporado para prestar servicios en Balcarce, segun la informacion dada a conocer recientemente. Enterate de los detalles en nuestra web.",
+      "etiquetas": [
+        "Balcarce",
+        "Fernando Garcia"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/el-dr-fernando-garcia-sera-incorporado-a-la-academia-nacional-de-agronomia-y-veterinaria-936",
+          "fecha": null,
+          "oficial": false,
+          "aporte": "Informo la incorporacion del doctor Fernando Garcia."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "hcjt9j": {
+      "estado": "automatica",
+      "titulo": "Javier Fornieles habla sobre el estado de la institución en Balcarce",
+      "copete": "Declaraciones de Javier Fornieles sobre la situación actual en el distrito y los desafíos pendientes para la comunidad local.",
+      "cuerpo": "Javier Fornieles se refirió al panorama institucional y los temas que preocupan a los vecinos del partido, en declaraciones difundidas recientemente. El referente analizó el contexto local y los aspectos que requieren atención por parte de las autoridades.\n\nEstas definiciones se conocen en medio del debate público sobre la gestión de los recursos y la marcha de los proyectos previstos para el distrito. La situación genera expectativas en diversos sectores de la comunidad.",
+      "guion": "Javier Fornieles habla sobre el estado de la institucion en Balcarce",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T09:30:55.191Z",
+      "claves": [
+        "Declaraciones de Javier Fornieles",
+        "Análisis de la situación local",
+        "Expectativa en la comunidad"
+      ],
+      "seSabe": [
+        "Javier Fornieles formuló declaraciones sobre la realidad institucional de Balcarce."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Javier Fornieles se refirió a la situación institucional de Balcarce y los temas que preocupan a los vecinos. Enterate de los detalles en la nota.",
+      "etiquetas": [
+        "Javier Fornieles",
+        "Balcarce"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/javier-fornieles-indudablemente-habia-una-necesidad-de-una-jornada-como-esta-para-el-sector-de-la-papa-469",
+          "fecha": null,
+          "oficial": false,
+          "aporte": "Aportó las declaraciones textuales de Javier Fornieles sobre la situación institucional."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "BAJA"
+      }
+    },
+    "4i0gkv": {
+      "estado": "automatica",
+      "titulo": null,
+      "copete": null,
+      "cuerpo": null,
+      "guion": null,
+      "deIA": null,
+      "por": null,
+      "cuando": "2026-09-25T09:30:57.501Z"
+    },
+    "1kcu6a3": {
+      "estado": "automatica",
+      "titulo": null,
+      "copete": null,
+      "cuerpo": null,
+      "guion": null,
+      "deIA": null,
+      "por": null,
+      "cuando": "2026-09-25T09:31:00.467Z"
+    },
+    "1v49rbk": {
+      "estado": "pendiente",
+      "titulo": null,
+      "copete": null,
+      "cuerpo": null,
+      "guion": null,
+      "deIA": null,
+      "por": null,
+      "cuando": "2026-09-25T09:31:02.720Z"
     }
   },
   "horarios": {
