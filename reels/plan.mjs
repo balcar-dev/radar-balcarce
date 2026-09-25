@@ -495,6 +495,10 @@ if (process.argv[1] && process.argv[1].endsWith('plan.mjs')) {
     console.log(`\n  Quedaron en ${SALIDA}\n`);
     // El manifiesto le dice a redes/publicar.mjs qué se armó y a qué hora sale
     // cada pieza. Con --solo se pisa: lista sólo lo que se acaba de hacer.
+    // La carpeta puede no existir: si el reloj pide una pieza que ya no está
+    // ("utiles", sacada el 24/09) no se arma nada y nadie la crea. El 25/09 eso
+    // hizo fallar Redes en cada vuelta desde las 10:05.
+    fs.mkdirSync(SALIDA, { recursive: true });
     fs.writeFileSync(path.join(SALIDA, 'piezas.json'), JSON.stringify(manifiesto, null, 2));
   } else {
     console.log('\n  Para armar los videos:  node reels/plan.mjs --generar\n');

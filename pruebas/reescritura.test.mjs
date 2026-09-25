@@ -410,3 +410,32 @@ test('esLocal reconoce la sección, el alcance o la marca de la ingesta', () => 
   assert.ok(esLocal({ seccion: 'Política', alcance: 'local' }));
   assert.ok(!esLocal({ seccion: 'Automovilismo', alcance: 'pais', local: false }));
 });
+
+// ---------------------------------------------------- el tope de gasto del día
+
+import { pedidasHoy, REESCRITURAS_POR_DIA } from '../reels/reescritura.mjs';
+
+test('pedidasHoy cuenta lo pedido hoy en Balcarce, no lo de otros días', () => {
+  const ahora = Date.parse('2026-09-25T15:00:00Z'); // 12:00 en Balcarce
+  const intentos = {
+    a: { intentos: 1, ultimo: '2026-09-25T12:00:00Z' },
+    b: { intentos: 2, ultimo: '2026-09-25T13:00:00Z' },
+    ayer: { intentos: 1, ultimo: '2026-09-24T18:00:00Z' },
+    // 01:00 UTC del 26 es todavía el 25 a la noche en Balcarce.
+    tarde: { intentos: 1, ultimo: '2026-09-26T01:00:00Z' },
+  };
+  assert.equal(pedidasHoy(intentos, ahora), 4);
+});
+
+test('con el tope del día alcanzado no se le pide nada a la IA (la clave es paga)', async () => {
+  const { fn, pedidos } = fetchFalso([]);
+  const registro = [];
+  const ahora = Date.parse('2026-09-25T15:00:00Z');
+  const intentos = Object.fromEntries(Array.from({ length: REESCRITURAS_POR_DIA }, (_, i) => [`v${i}`, { intentos: 1, ultimo: '2026-09-25T12:00:00Z' }]));
+  const r = await reescribirAutomaticas([notaVerde()], {
+    ...SIN_PISO, opciones: { fetchFn: fn }, intentos, ahora, registro: (l) => registro.push(l),
+  });
+  assert.equal(pedidos.length, 0, 'no debería haber pedido nada');
+  assert.equal(r.n1, undefined);
+  assert.ok(registro.some((l) => /tope del día/.test(l)), 'lo tiene que decir en el registro');
+});

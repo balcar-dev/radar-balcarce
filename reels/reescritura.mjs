@@ -726,6 +726,22 @@ export function previasDeLaPortada(notas) {
  *  Andrés no quieren gastar de más en una nota que no da. */
 export const MAXIMO_DE_INTENTOS = REESCRITURA.intentosMaximos;
 
+/** Cuántas notas se le pueden pedir a la IA en un día (gasto de la clave paga). */
+export const REESCRITURAS_POR_DIA = REESCRITURA.porDia;
+
+/**
+ * Cuántas notas ya se le pidieron a la IA hoy (día de Balcarce), según los
+ * intentos guardados. Cuenta de más si una nota se pidió también otro día:
+ * mejor pasarse de cuidadoso que de gasto.
+ */
+export function pedidasHoy(intentos = {}, ahora = Date.now()) {
+  const dia = (t) => new Date(t).toLocaleDateString('en-CA', { timeZone: ZONA });
+  const hoy = dia(Number(ahora));
+  return Object.values(intentos ?? {})
+    .filter((v) => v?.ultimo && dia(v.ultimo) === hoy)
+    .reduce((suma, v) => suma + (v.intentos ?? 1), 0);
+}
+
 /** Con menos de esto de resumen (sumando todas las fuentes) y sin el texto
  *  completo de ninguna, no hay de dónde escribir una nota: no se le pide
  *  nada a Gemini. */
@@ -833,7 +849,7 @@ function palabrasDeResumenes(nota) {
 export async function reescribirAutomaticas(notas, {
   previas = {}, decisiones = {}, tope = REESCRITURAS_POR_CORRIDA, opciones, traer = traerTexto, registro = console.log,
   archivo = [], ahora = Date.now(), intentos = {}, maximoDeIntentos = MAXIMO_DE_INTENTOS,
-  minimoDeMaterial = PALABRAS_MINIMAS_DE_MATERIAL,
+  minimoDeMaterial = PALABRAS_MINIMAS_DE_MATERIAL, porDia = REESCRITURAS_POR_DIA,
 } = {}) {
   const resultado = {};
   const cuenta = {
@@ -841,6 +857,8 @@ export async function reescribirAutomaticas(notas, {
     oraciones: 0, frenadas: 0, partesDescartadas: 0,
   };
   let motivo = null;
+  const yaPedidasHoy = pedidasHoy(intentos, ahora);
+  let topeDelDia = false;
 
   const candidatas = [...notas]
     .filter((n) => n.semaforo === 'verde')
@@ -899,6 +917,11 @@ export async function reescribirAutomaticas(notas, {
       continue;
     }
     if (cuenta.hechas >= tope || cuenta.fallos >= FALLOS_PARA_CORTAR) continue; // sigue por si algo más abajo está en caché
+    // El tope del día: la clave es paga. Lo que no entra hoy espera a mañana.
+    if (yaPedidasHoy + cuenta.hechas >= porDia) {
+      if (!topeDelDia) { topeDelDia = true; registro(`  tope del día: ya se le pidieron ${yaPedidasHoy + cuenta.hechas} notas a la IA hoy (máximo ${porDia}); el resto espera a mañana`); }
+      continue;
+    }
 
     // Ya se escribió y el código la calificó con verificación BAJA: espera a
     // una persona sin gastar otro pedido, salvo que hoy la cuenten más

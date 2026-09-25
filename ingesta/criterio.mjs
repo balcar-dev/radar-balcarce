@@ -63,6 +63,11 @@ export const REESCRITURA = {
   diasDeIntentos: 7,
   palabrasMinimasDeMaterial: 60,
   porCorrida: 40,
+  // Tope de notas que se le piden a la IA en un día entero (hora de Balcarce).
+  // La clave que se usa es paga y Hernán y Andrés no tienen margen: el 25/09 se
+  // pidieron unas 300 en un día, con muchas corridas a mano. Primero se gasta
+  // en lo de Balcarce (el orden ya lo hace así).
+  porDia: 150,
   caracteresDelTextoCompleto: 4000,
   diasDeAntecedentes: 30,
   antecedentesMaximo: 3,
