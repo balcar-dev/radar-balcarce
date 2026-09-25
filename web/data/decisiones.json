@@ -1,5 +1,5 @@
 {
-  "exportado": "2026-09-25T14:50:21.221Z",
+  "exportado": "2026-09-25T15:03:48.661Z",
   "decisiones": {
     "1951120": {
       "estado": "automatica",
@@ -19940,6 +19940,142 @@
           "fecha": "2026-09-25T14:30:03.000Z",
           "oficial": false,
           "aporte": "Aportó un caso financiero ilustrativo sobre la planificación fiscal en planes de retiro y cuentas de ahorro."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "160531l": {
+      "estado": "automatica",
+      "titulo": "Estados Unidos evalúa impulsar el uso global de stablecoins para fortalecer el dólar",
+      "copete": "La Casa Blanca analiza un plan para promover monedas digitales respaldadas en dólares en el exterior. La medida busca sostener la hegemonía de la moneda estadounidense y aumentar la demanda de bonos del Tesoro.",
+      "cuerpo": "El gobierno de Estados Unidos evalúa un plan para promover la expansión global de stablecoins respaldadas por dólares, según informó Bloomberg. La iniciativa apunta a sostener la preeminencia de la moneda estadounidense y elevar la demanda de bonos del Tesoro mediante empresas conjuntas y actores privados, con la posible participación de los Departamentos del Tesoro y de Estado.\n\nEl secretario del Tesoro, Scott Bessent, señaló que estas herramientas financieras sostienen el dominio del dólar, que interviene en casi el noventa por ciento de las operaciones cambiarias. Como antecedente, la administración impulsó en julio de 2025 la aprobación de la ley Genius Act para regular el sector y ahora impulsa el proyecto Clarity Act.\n\nOrganismos internacionales como el Fondo Monetario Internacional y el Banco de Pagos Internacionales advirtieron que esta adopción masiva puede generar riesgos para economías emergentes, facilitando la salida de capitales y presionando a las monedas locales ante la menor supervisión bancaria tradicional.",
+      "guion": "Estados Unidos evalúa impulsar el uso global de stablecoins para fortalecer el dólar",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T15:03:48.584Z",
+      "claves": [
+        "La Casa Blanca analiza promover stablecoins en el exterior para fortalecer el dólar.",
+        "El secretario del Tesoro aseguró que la medida busca sostener la demanda de bonos.",
+        "El FMI advirtió sobre riesgos de salida de capitales para economías emergentes.",
+        "El gobierno estadounidense impulsa marcos regulatorios como la Genius Act y la Clarity Act."
+      ],
+      "seSabe": [
+        "El gobierno de Estados Unidos evalúa un plan para promover stablecoins respaldadas por dólares en el exterior, según Bloomberg.",
+        "El mercado global de stablecoins supera los doscientos noventa mil millones de dólares, según Coindesk.",
+        "El secretario del Tesoro, Scott Bessent, afirmó que estas criptomonedas sostienen el dominio de la moneda estadounidense.",
+        "El FMI y el BPI advirtieron sobre posibles salidas de capitales en economías emergentes."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Estados Unidos evalúa un plan para promover el uso global de stablecoins respaldadas por dólares con el fin de fortalecer su moneda y aumentar la demanda de bonos. Organismos internacionales advirtieron sobre riesgos para economías emergentes.",
+      "etiquetas": [
+        "stablecoins",
+        "Estados Unidos",
+        "dolar",
+        "criptomonedas",
+        "economia global"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/economia/IA/la-nueva-apuesta-de-trump-por-las-stablecoins-busca-expandirlas-en-el-mundo-para-fortalecer-el-dolar-nid25092026/",
+          "fecha": "2026-09-25T14:49:26.000Z",
+          "oficial": false,
+          "aporte": "Detalles del plan de la Casa Blanca para promover stablecoins en el exterior, declaraciones oficiales del secretario del Tesoro y advertencias de organismos internacionales."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "1j46l05": {
+      "estado": "automatica",
+      "titulo": "Google prueba una herramienta para llamadas automáticas con inteligencia artificial",
+      "copete": "La compañía tecnológica desarrolla una función para que su asistente virtual realice gestiones telefónicas en nombre de los usuarios.",
+      "cuerpo": "Google puso en marcha la fase de prueba de una herramienta llamada \"Llama por mí\", integrada en su sistema Gemini, diseñada para que la inteligencia artificial establezca comunicación directa con empresas y complete gestiones cotidianas por teléfono sin intervención directa de la persona.\n\nLa función permite realizar consultas sobre disponibilidad de productos, efectuar reservas, modificar citas y avanzar en trámites mediante el uso del número telefónico del usuario, mientras este sigue la conversación en una transcripción en tiempo real y puede retomar el control en cualquier momento del proceso.\n\nEl despliegue inicial se realiza de forma limitada en Estados Unidos para determinados dispositivos y suscriptores del servicio, dado que se trata de un experimento y no de una función generalizada, a la espera de evaluar su funcionamiento en situaciones impredecibles antes de una posible expansión a otros mercados.",
+      "guion": "Google prueba una herramienta para llamadas automáticas con inteligencia artificial",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T15:03:48.584Z",
+      "claves": [
+        "Google desarrolla \"Llama por mí\" para realizar llamadas automáticas.",
+        "La función utiliza Gemini para gestionar reservas, citas y consultas.",
+        "El usuario puede supervisar la transcripción en tiempo real y retomar el control.",
+        "Se prueba de manera limitada en Estados Unidos para un grupo reducido de usuarios."
+      ],
+      "seSabe": [
+        "Google desarrolla la función \"Llama por mí\" para su asistente Gemini.",
+        "La herramienta permite realizar llamadas, consultar productos, hacer reservas y modificar citas.",
+        "El usuario puede seguir la gestión mediante una transcripción y retomar el control en cualquier momento.",
+        "La prueba inicial se realiza en Estados Unidos para un grupo reducido de usuarios con dispositivos específicos."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Google desarrolla una nueva función de inteligencia artificial para realizar gestiones y llamadas telefónicas en nombre de los usuarios, en una fase de prueba inicial limitada a Estados Unidos.",
+      "etiquetas": [
+        "tecnología",
+        "inteligencia artificial",
+        "Google",
+        "Gemini"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/tecno/2026/09/25/google-activa-llama-por-mi-la-opcion-para-que-la-ia-haga-llamadas-por-nosotros/",
+          "fecha": "2026-09-25T14:45:14.000Z",
+          "oficial": false,
+          "aporte": "Detalló el funcionamiento, las características y el despliegue limitado de la nueva herramienta de inteligencia artificial de Google."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "ldyp8v": {
+      "estado": "automatica",
+      "titulo": "El periodista Yamid Amat registra una evolución favorable en su internación",
+      "copete": "El reconocido periodista colombiano Yamid Amat muestra una evolución favorable en su estado de salud, según informó su familia desde la clínica donde permanece internado.",
+      "cuerpo": "El periodista Yamid Amat registra una evolución favorable en su estado de salud tras permanecer internado en la Fundación Santa Fe de Bogotá.\n\nEl comunicador señaló que su padre presenta una mejoría importante en las últimas gracias a la atención recibida por parte del equipo médico del centro asistencial y agradeció las expresiones de apoyo recibidas por parte de colegas y ciudadanos desde que se conoció la hospitalización del referente del periodismo, de 84 años.",
+      "guion": "El periodista Yamid Amat registra una evolución favorable en su internación",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T15:03:48.584Z",
+      "claves": [
+        "Evolución favorable en la salud de Yamid Amat",
+        "El parte fue dado por su hijo Yamit Amat Serna",
+        "El periodista permanece internado en la Fundación Santa Fe de Bogotá"
+      ],
+      "seSabe": [
+        "Yamid Amat registra una evolución favorable en su estado de salud según informó su familia.",
+        "El periodista continuaba internado en la Fundación Santa Fe de Bogotá.",
+        "El reporte fue comunicado por su hijo Yamit Amat Serna a través de la red social X."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El periodista Yamid Amat registra una evolución favorable en su salud, según informó su familia desde la clínica donde continúa bajo atención médica.",
+      "etiquetas": [
+        "Yamid Amat",
+        "Salud",
+        "Periodismo"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/colombia/2026/09/25/hijo-de-yamid-amat-entrego-nuevo-reporte-sobre-la-salud-del-periodista-internado-en-la-fundacion-santa-fe-avanzamos-paso-a-paso/",
+          "fecha": "2026-09-25T14:50:24.000Z",
+          "oficial": false,
+          "aporte": "Aportó el parte sobre la evolución de salud del periodista Yamid Amat difundido por su familia."
         }
       ],
       "verificacion": {
