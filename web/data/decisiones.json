@@ -1,5 +1,5 @@
 {
-  "exportado": "2026-09-25T14:13:23.329Z",
+  "exportado": "2026-09-25T14:22:25.210Z",
   "decisiones": {
     "1951120": {
       "estado": "automatica",
@@ -14502,13 +14502,66 @@
     },
     "45w2kj": {
       "estado": "automatica",
-      "titulo": null,
-      "copete": null,
-      "cuerpo": null,
-      "guion": null,
-      "deIA": null,
-      "por": null,
-      "cuando": "2026-09-25T07:21:57.449Z"
+      "titulo": "Las petroleras privadas aumentan los precios de los combustibles",
+      "copete": "Las principales empresas del sector aplicaron subas de hasta el cinco por ciento en surtidores. Los incrementos responden a la subida internacional del petróleo, mientras YPF aguarda para definir su ajuste.",
+      "cuerpo": "Las principales petroleras privadas de la Argentina comenzaron a aumentar los precios de sus combustibles, con subas que alcanzan hasta el cinco por ciento debido a la suba internacional del petróleo, según informó un medio nacional. De acuerdo con datos del mercado, Shell aplicó incrementos del dos por ciento en naftas y del cinco por ciento en gasoil, mientras que Axion ajustó sus naftas un dos por ciento y medio en promedio, y Puma también movió sus valores.\n\nLa decisión de YPF resulta determinante para el mercado debido a su peso en el sector.",
+      "guion": "Las petroleras privadas aumentan los precios de los combustibles",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T14:22:25.142Z",
+      "claves": [
+        "Las principales petroleras privadas aumentaron los combustibles hasta un cinco por ciento.",
+        "Las subas responden a la subida internacional del petróleo.",
+        "Shell, Axion y Puma aplicaron retoques en sus redes de estaciones.",
+        "YPF todavía no definió un ajuste en sus surtidores y aguarda el impacto en el mercado."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Las principales petroleras privadas comenzaron a aumentar los precios de sus combustibles hasta un cinco por ciento por la suba internacional del petróleo, mientras YPF todavía espera para definir su ajuste.",
+      "etiquetas": [
+        "combustibles",
+        "aumento",
+        "petroleras",
+        "YPF",
+        "Shell",
+        "Axion",
+        "economía"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/politica/javier-milei-y-sus-medidas-en-vivo-netanyahu-se-reunio-con-el-presidente-en-la-onu-y-lo-definio-como-nid25092026/",
+          "fecha": "2026-09-25T14:15:00.000Z",
+          "oficial": false,
+          "aporte": "Aportó los porcentajes de aumento de las petroleras privadas y los datos de participación en el mercado de combustibles."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1j01p83",
+          "titulo": "Javier Milei y sus medidas, en vivo: el Presidente consideró como “matices de opinión” las internas en el Ejecutivo",
+          "fecha": "2026-09-22T01:40:36.000Z",
+          "ruta": "/nota/javier-milei-y-sus-medidas-en-vivo-el-presidente-considero-como-1j01p83"
+        },
+        {
+          "id": "1ezdmye",
+          "titulo": "Javier Milei cerró su viaje a Nueva York con una reunión con Benjamin Netanyahu",
+          "fecha": "2026-09-24T23:11:00.000Z",
+          "ruta": "/nota/javier-milei-cerro-su-viaje-a-nueva-york-con-una-reunion-con-benjamin-1ezdmye"
+        },
+        {
+          "id": "1brl04",
+          "titulo": "Javier Milei diserta ante inversionistas y se reúne con Netanyahu en Nueva York antes de volver a Argentina",
+          "fecha": "2026-09-24T09:01:48.000Z",
+          "ruta": "/nota/javier-milei-diserta-ante-inversionistas-y-se-reune-con-netanyahu-en-1brl04"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
     },
     "1wrjo98": {
       "estado": "automatica",
@@ -14963,13 +15016,62 @@
     },
     "1hoob9y": {
       "estado": "automatica",
-      "titulo": null,
-      "copete": null,
-      "cuerpo": null,
-      "guion": null,
-      "deIA": null,
-      "por": null,
-      "cuando": "2026-09-25T08:50:34.845Z"
+      "titulo": "Informan los servicios fúnebres de la comunidad en Balcarce",
+      "copete": "Se dieron a conocer los avisos fúnebres y servicios de sepelios prestados por la Cooperativa de Electricidad de Balcarce correspondientes a las últimas semanas.",
+      "cuerpo": "La Cooperativa de Electricidad General Balcarce Limitada informó los distintos servicios de sepelios correspondientes a los fallecimientos registrados en el distrito durante los meses de mayo, agosto y septiembre de dos mil veintiséis. Los cronogramas incluyeron velatorios, oficios religiosos e inhumaciones tanto en el Cementerio Municipal como en crematorios de la región.\n\nLos avisos detallaron las casas de duelo ubicadas en diferentes puntos de la ciudad, así como en zonas rurales como Los Pinos y en diversos barrios locales. Las ceremonias contaron con la participación de familiares, amigos y allegados de las personas fallecidas, conforme a la información brindada por la entidad de servicios públicos.",
+      "guion": "Informan los servicios fúnebres de la comunidad en Balcarce",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T14:22:25.142Z",
+      "claves": [
+        "La Cooperativa de Electricidad difundió los servicios de sepelios.",
+        "Los decesos se registraron entre mayo y septiembre de dos mil veintiséis.",
+        "Las inhumaciones se realizaron en el Cementerio Municipal y en Miramar.",
+        "Los avisos incluyeron zonas urbanas y rurales del distrito."
+      ],
+      "seSabe": [
+        "La Cooperativa de Electricidad General Balcarce Limitada estuvo a cargo de los servicios de sepelios.",
+        "Se registraron fallecimientos en los meses de mayo, agosto y septiembre de 2026.",
+        "Las casas de duelo incluyeron direcciones en la planta urbana, barrios y la localidad de Los Pinos."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "La Cooperativa de Electricidad dio a conocer el detalle de los servicios de sepelios y avisos fúnebres registrados en el distrito durante las últimas semanas.",
+      "etiquetas": [
+        "servicios fúnebres",
+        "cooperativa de electricidad",
+        "balcarce",
+        "fallecimientos"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/milei-entre-la-defensa-del-modelo-y-el-mensaje-electoral-si-no-ganamos-la-sociedad-esta-eligiendo-sucidarse-977",
+          "fecha": null,
+          "oficial": false,
+          "aporte": "Aportó el listado de los servicios fúnebres y los avisos de decesos de la cooperativa local."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1ffyct5",
+          "titulo": "Milei recibió un premio por su “liderazgo global en la defensa del pueblo judío”",
+          "fecha": "2026-09-23T03:48:57.000Z",
+          "ruta": "/nota/milei-recibio-un-premio-por-su-liderazgo-global-en-la-defensa-del-1ffyct5"
+        },
+        {
+          "id": "1cgrp7o",
+          "titulo": "Milei reivindicó el modelo económico de Pinochet y reiteró que sufrió un intento de golpe de Estado",
+          "fecha": "2026-09-03T18:55:46.000Z",
+          "ruta": "/nota/milei-reivindico-el-modelo-economico-de-pinochet-y-reitero-que-sufrio-1cgrp7o"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
     },
     "5f8lyo": {
       "estado": "automatica",
@@ -17993,6 +18095,404 @@
         "nivel": "MEDIA",
         "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
         "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "qegi2y": {
+      "estado": "automatica",
+      "titulo": "Franco Colapinto termina décimo en la clasificación de la Fórmula 1",
+      "copete": "El piloto argentino se metió por tercera vez consecutiva en el último corte cronometrado en el circuito callejero de Bakú a bordo de su Alpine.",
+      "cuerpo": "Franco Colapinto completó una sólida labor en el trazado callejero de Bakú y se ubicó en la décima posición tras registrar 1m44s963 en su mejor vuelta durante la clasificación del Gran Premio. El piloto argentino logró acceder al último tramo de la sesión tras marcar 1m44s683 en el segundo corte, instancia en la que giró junto a su compañero Pierre Gasly. En el intento final por mejorar su registro, Colapinto se pasó de largo en la zona del Castillo tras un despiste, lo que le impidió escalar posiciones. Previamente, en las sesiones de entrenamientos del fin de semana, el argentino se había posicionado en el décimo lugar.\n\nEn la punta de la sesión, George Russell se quedó con la 'pole' con un tiempo de 1m42s526 a bordo del Mercedes, seguido por Charles Leclerc y Oscar Piastri. Por su parte, el compañero de Russell, Kimi Antonelli, sufrió un despiste en la primera curva que lo dejó en el decimosexto puesto.\n\nLa carrera principal se pondrá en marcha a partir de las 8 de la Argentina, con un recorrido total de 51 vueltas al circuito.",
+      "guion": "Franco Colapinto termina décimo en la clasificación de la Fórmula 1",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T14:22:25.142Z",
+      "claves": [
+        "Colapinto se metió por tercera carrera consecutiva en el Top 10 de clasificación.",
+        "El piloto argentino marcó un tiempo de 1m44s963 en su mejor vuelta en Bakú.",
+        "Un exceso en la zona del Castillo le impidió mejorar su posición final.",
+        "George Russell se quedó con el mejor tiempo de la sesión clasificatoria."
+      ],
+      "seSabe": [
+        "Franco Colapinto finalizó en la décima posición de la clasificación en Bakú.",
+        "El piloto registró 1m44s963 en su mejor vuelta en el circuito callejero.",
+        "George Russell logró la 'pole position' al girar en 1m42s526.",
+        "La carrera principal constará de 51 vueltas y comenzará a las 8 de la Argentina."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Franco Colapinto finalizó en la décima posición de la clasificación en el circuito callejero de Bakú y se metió por tercera vez consecutiva en el último corte cronometrado. La carrera se pondrá en marcha este sábado a las 8 de la Argentina.",
+      "etiquetas": [
+        "Franco Colapinto",
+        "Fórmula 1",
+        "Bakú"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Campeones",
+          "enlace": "https://campeones.com.ar/en-otra-destacada-clasificacion-de-f1-colapinto-quedo-decimo-en-azerbaijan/",
+          "fecha": "2026-09-25T13:10:34.000Z",
+          "oficial": false,
+          "aporte": "Detalla el desempeño de Franco Colapinto en la clasificación de Bakú, sus tiempos y el desarrollo de la sesión."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1xoec9u",
+          "titulo": "GP de Azerbaijan: Colapinto quedó 18.°en la primera práctica de F1",
+          "fecha": "2026-09-24T09:42:32.000Z",
+          "ruta": "/nota/gp-de-azerbaijan-colapinto-quedo-18-en-la-primera-practica-de-f1-1xoec9u"
+        },
+        {
+          "id": "2du9ow",
+          "titulo": "Franco Colapinto termina décimo en la práctica libre en Bakú",
+          "fecha": "2026-09-25T11:38:39.000Z",
+          "ruta": "/nota/franco-colapinto-termina-decimo-en-la-practica-libre-en-baku-2du9ow"
+        },
+        {
+          "id": "1e2jbrs",
+          "titulo": "Franco Colapinto finaliza décimo en la práctica libre en Bakú",
+          "fecha": "2026-09-25T11:00:00.000Z",
+          "ruta": "/nota/franco-colapinto-finaliza-decimo-en-la-practica-libre-en-baku-1e2jbrs"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "y2p14e": {
+      "estado": "automatica",
+      "titulo": "Franco Colapinto termina décimo en la clasificación de Bakú",
+      "copete": "El piloto argentino de Alpine se metió entre los diez mejores en el circuito callejero de Azerbaiyán tras superar la segunda fase con lo justo. Explicó que sufrió complicaciones con los frenos, la batería y la falta de succión.",
+      "cuerpo": "El piloto argentino Franco Colapinto finalizó en el décimo puesto de la sesión de clasificación del Gran Premio de Azerbaiyán de Fórmula 1, desarrollada en el circuito callejero de Bakú. El deportista de Alpine logró avanzar a la última tanda tras completar una vuelta decisiva sobre el final de la segunda fase con un registro de 1:44.683, con el cual superó por escaso margen a Ollie Bearman. Como se había informado, el argentino logró meterse entre los diez mejores en el circuito de Bakú con el tiempo cumplido tras completar la vuelta decisiva sin la ayuda de una succión en las rectas.\n\nDurante la última tanda, el rendimiento decayó y el piloto no pudo repetir la marca. Utilizó un único registro posterior con neumáticos desgastados y cerró su participación con un tiempo de 1:44.963, quedando a escasantes décimas del noveno lugar que ocupó Carlos Sainz. Su compañero de equipo, Pierre Gasly, logró posicionarse en el séptimo lugar de la competencia.\n\nAl finalizar la actividad en pista, el piloto señaló que debió afrontar múltiples inconvenientes a lo largo de la jornada que condicionaron su desempeño. Entre las principales dificultades mencionó los problemas de consistencia en los frenajes, el comportamiento de la batería y la pérdida de velocidad en las rectas por circular sin rebufo. Según explicó, la falta de estabilidad al frenar provocó un calentamiento excesivo en los neumáticos que afectó su andar.",
+      "guion": "Franco Colapinto termina décimo en la clasificación de Baku",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T14:22:25.142Z",
+      "claves": [
+        "Franco Colapinto finalizó décimo en la clasificación del Gran Premio de Azerbaiyán.",
+        "El piloto de Alpine logró meterse en la última tanda sobre el final de la segunda fase.",
+        "Señaló complicaciones con la batería, el rendimiento de los frenos y la falta de succión en las rectas.",
+        "Su compañero Pierre Gasly se ubicó en el séptimo lugar de la sesión."
+      ],
+      "seSabe": [
+        "Franco Colapinto terminó en el décimo puesto de la clasificación en el circuito callejero de Bakú.",
+        "El piloto argentino integra la escudería Alpine.",
+        "Avanzó a la última tanda con un tiempo de 1:44.683 en la fase previa.",
+        "Cerró la última tanda con un registro de 1:44.963.",
+        "Carlos Sainz quedó en el noveno puesto y Pierre Gasly en el séptimo."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Franco Colapinto finalizó décimo en la clasificación del Gran Premio de Azerbaiyán de Fórmula 1 en Bakú. El piloto argentino de Alpine analizó las dificultades con los frenos y la falta de succión que condicionaron su rendimiento en la última tanda.",
+      "etiquetas": [
+        "Franco Colapinto",
+        "Formula 1",
+        "Gran Premio de Azerbaiyán",
+        "Bakú"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Minuto Uno",
+          "enlace": "https://www.minutouno.com/deportes/franco-colapinto-revelo-que-le-impidio-mejorar-azerbaiyan-fue-muy-dificil-la-succion-n6326622",
+          "fecha": "2026-09-25T14:03:00.000Z",
+          "oficial": false,
+          "aporte": "Aportó los detalles sobre el rendimiento del piloto en la clasificación de Bakú, sus declaraciones sobre los problemas de frenos, batería y la falta de succión."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "ffhx7",
+          "titulo": "Franco Colapinto larga décimo en el Gran Premio de Azerbaiyán",
+          "fecha": "2026-09-25T13:50:49.000Z",
+          "ruta": "/nota/franco-colapinto-disputa-la-clasificacion-en-el-gran-premio-de-ffhx7"
+        },
+        {
+          "id": "1y3aqq8",
+          "titulo": "Franco Colapinto avanza a la última tanda en el Gran Premio de Azerbaiyán",
+          "fecha": "2026-09-25T13:45:06.000Z",
+          "ruta": "/nota/franco-colapinto-avanza-a-la-ultima-tanda-en-el-gran-premio-de-1y3aqq8"
+        },
+        {
+          "id": "1v7a52i",
+          "titulo": "Franco Colapinto avanza a la Q3 en el Gran Premio de Azerbaiyán",
+          "fecha": "2026-09-25T13:44:16.000Z",
+          "ruta": "/nota/franco-colapinto-avanza-a-la-q3-en-el-gran-premio-de-azerbaiyan-1v7a52i"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "1alhanq": {
+      "estado": "automatica",
+      "titulo": "El circuito de Bakú reta a la Fórmula 1 con su velocidad",
+      "copete": "La Fórmula 1 compite en el circuito callejero de Bakú, un trazado que combina rectas extensas junto al mar Caspio y calles angostas rodeadas por murallas medievales.",
+      "cuerpo": "Por un lado, cuenta con la recta más larga de la temporada junto al bulevar, donde los monoplazas superan los trescientos kilómetros por hora.\n\nLa complejidad del recorrido genera un desafío permanente para los ingenieros en la búsqueda de equilibrio aerodinámico.\n\nComo se había informado el pasado veintiuno de septiembre, el piloto argentino Franco Colapinto afronta una nueva presentación en este escenario donde supo conseguir sus primeros puntos en la categoría, en el marco de una competencia que este año modificó su cronograma habitual.",
+      "guion": "El circuito de Bakú reta a la Fórmula 1 con su velocidad",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T14:22:25.142Z",
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "La Fórmula 1 compite en el circuito callejero de Bakú, un trazado que combina una recta extensa junto al mar Caspio y calles angostas rodeadas por murallas medievales, donde el piloto argentino Franco Colapinto afronta una nueva presentación.",
+      "etiquetas": [
+        "Fórmula 1",
+        "Bakú",
+        "Franco Colapinto",
+        "Azerbaiyán"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/autos/franco-colapinto-en-la-formula-1-la-historia-detras-del-circuito-mas-impredecible-del-deporte-nid25092026/",
+          "fecha": "2026-09-25T12:53:02.000Z",
+          "oficial": false,
+          "aporte": "Detalló las características técnicas, la historia y el diseño del circuito de Bakú en la Fórmula 1."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "vvob9p",
+          "titulo": "La revelación de Franco Colapinto antes de volver a Bakú: cuánto cobraba en Williams y por qué perdía plata en la Fórmula 1",
+          "fecha": "2026-09-23T01:10:32.000Z",
+          "ruta": "/nota/la-revelacion-de-franco-colapinto-antes-de-volver-a-baku-cuanto-vvob9p"
+        },
+        {
+          "id": "te9rpt",
+          "titulo": "Colapinto vuelve a Bakú, el circuito de su primera gran alegría en la Fórmula 1, para estirar su mejor racha",
+          "fecha": "2026-09-21T08:44:54.000Z",
+          "ruta": "/nota/colapinto-vuelve-a-baku-el-circuito-de-su-primera-gran-alegria-en-la-te9rpt"
+        },
+        {
+          "id": "ups44l",
+          "titulo": "Por qué no corre Franco Colapinto este domingo 20 de septiembre: cuándo vuelve la Fórmula 1",
+          "fecha": "2026-09-20T13:07:00.000Z",
+          "ruta": "/nota/por-que-no-corre-franco-colapinto-este-domingo-20-de-septiembre-ups44l"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "1s6lb26": {
+      "estado": "automatica",
+      "titulo": "Franco Colapinto avanza a la Q3 en el Gran Premio de Azerbaiyán",
+      "copete": "El piloto argentino de Alpine colaboró con su compañero Pierre Gasly mediante el rebufo durante la segunda tanda de clasificación en Bakú, cayó al undécimo puesto y logró recuperarse sin ayuda en su última vuelta para meterse entre los diez mejores.",
+      "cuerpo": "Franco Colapinto protagonizó una destacada recuperación en la segunda tanda de la clasificación del Gran Premio de Azerbaiyán al asegurar su lugar en la Q3.\n\nTras cumplir con esta tarea táctica para la escudería Alpine, el pilarense quedó relegado transitoriamente al undécimo lugar y fuera de la zona de definición. A diferencia del corredor europeo, el sudamericano debió afrontar su intento decisivo sin la asistencia de una succión equivalente en pista.\n\nEse tiempo le permitió escalar al décimo lugar, superando el corte por una diferencia exigua frente a sus perseguidores antes de ingresar a la fase final de la qualy.",
+      "guion": "Franco Colapinto avanza a la Q3 en el Gran Premio de Azerbaiyán.",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T14:22:25.142Z",
+      "claves": [
+        "Franco Colapinto ayudó a su compañero Pierre Gasly con el rebufo en la Q2.",
+        "El piloto argentino quedó relegado al undécimo puesto tras esa asistencia.",
+        "Consiguió una vuelta de 1:44.683 en su cierre para superar el corte sin ayuda.",
+        "Avanzó a la Q3 del Gran Premio de Azerbaiyán en el circuito callejero de Bakú."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Franco Colapinto ayudó a su compañero Pierre Gasly con el rebufo en la Q2, quedó relegado al undécimo puesto y se recuperó sin ayuda en su última vuelta para meterse en la Q3 del Gran Premio de Azerbaiyán en Bakú.",
+      "etiquetas": [
+        "Franco Colapinto",
+        "Alpine",
+        "Bakú"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Minuto Uno",
+          "enlace": "https://www.minutouno.com/deportes/colapinto-hizo-el-trabajo-gasly-y-despues-tuvo-que-salvarse-solo-que-paso-baku-n6326583",
+          "fecha": "2026-09-25T13:23:00.000Z",
+          "oficial": false,
+          "aporte": "Detalló el desarrollo de la Q2 en Bakú, la asistencia de rebufo a Pierre Gasly y la última vuelta de Franco Colapinto para ingresar a la Q3."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "9m345n",
+          "titulo": "El fuerte comunicado del presidente de la FIA tras las amenazas a Gasly, compañero de Colapinto",
+          "fecha": "2026-09-23T22:34:00.000Z",
+          "ruta": "/nota/el-fuerte-comunicado-del-presidente-de-la-fia-tras-las-amenazas-a-9m345n"
+        },
+        {
+          "id": "vw9q5v",
+          "titulo": "Flavio Briatore, sin filtro, contra los fans de Colapinto y sobre el cruce del argentino con Gasly: \"No necesitamos peleas entre nuestros pilotos, no es aceptable\"",
+          "fecha": "2026-09-23T16:53:14.000Z",
+          "ruta": "/nota/flavio-briatore-sin-filtro-contra-los-fans-de-colapinto-y-sobre-el-vw9q5v"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "1vss64j": {
+      "estado": "automatica",
+      "titulo": "La actividad económica cae en julio y frena el repunte",
+      "copete": "La economía nacional registró una caída del 2,9% en julio frente al mes anterior y cortó la recuperación previa, según informó el Indec. El retroceso afectó a ocho de los quince sectores, con fuertes bajas en comercio e industria.",
+      "cuerpo": "La actividad económica nacional cayó un 2,9% en julio en comparación con junio, mes en el que había subido 0,3%, según los datos informados por el Instituto Nacional de Estadística y Censos a través del Estimador Mensual de la Actividad Económica. En la medición interanual, el indicador retrocedió 1,4%, mientras que el acumulado de los primeros siete meses del año mantiene un alza de 1,7%.\n\nEl retroceso afectó a ocho de los quince sectores que integran el índice, destacándose las caídas del comercio con 5,1% y de la industria manufacturera con 4,6%, acompañadas por bajas en la construcción, la intermediación financiera y el transporte. En contraste, siete sectores mostraron aumentos frente a julio del año pasado, impulsados principalmente por la pesca y la explotación de minas y canteras.\n\nAnte estos resultados, el ministro de Economía, Luis Caputo, atribuyó el descenso a diversos factores transitorios como la menor disponibilidad de gas, las condiciones climáticas desfavorables y una menor cantidad de horas trabajadas debido al mundial de fútbol. Por su parte, analistas del mercado señalaron que el desempeño negativo podría revertirse parcialmente en los próximos registros.",
+      "guion": "La actividad económica cae en julio y frena el repunte.",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T14:22:25.142Z",
+      "claves": [
+        "La economía cayó un 2,9% en julio en comparación con junio.",
+        "El Indec informó que el retroceso interanual fue del 1,4%.",
+        "Comercio e industria lideraron las bajas entre los sectores afectados.",
+        "El acumulado de los primeros siete meses registra un alza del 1,7%."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El Indec informó que la actividad económica cayó un 2,9% en julio y cortó la recuperación previa, afectada por retrocesos en la industria y el comercio.",
+      "etiquetas": [
+        "economia",
+        "indec",
+        "actividad economica",
+        "luis caputo"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/economia/la-economia-cayo-29-en-julio-y-borro-el-repunte-del-mes-anterior-nid24092026/",
+          "fecha": "2026-09-25T14:04:04.000Z",
+          "oficial": false,
+          "aporte": "Detalló los datos del EMAE de julio, las variaciones sectoriales y las declaraciones del ministro Caputo y analistas económicos."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1qrbb9h",
+          "titulo": "Datos oficiales: el consumo en supermercados anotó nueva baja en julio, aunque hubo repunte en mayoristas y shoppings",
+          "fecha": "2026-09-23T19:22:00.000Z",
+          "ruta": "/nota/datos-oficiales-el-consumo-en-supermercados-anoto-nueva-baja-en-julio-1qrbb9h"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "1b3gwbu": {
+      "estado": "automatica",
+      "titulo": "Criptomonedas: cotización y características de ethereum",
+      "copete": "La moneda digital ethereum cotiza a más de 2700 dólares por unidad y mantiene su posición como la segunda divisa virtual de mayor capitalización de mercado a nivel global.",
+      "cuerpo": "La criptomoneda ether cotiza a 2716.98 dólares por unidad, con un cambio del 2,9% en las últimas veinticuatro horas y una variación nula en los últimos sesenta minutos, según los datos disponibles para este viernes. La plataforma de bloques de código abierto opera mediante su token nativo para impulsar contratos inteligentes y transacciones autónomas en la red.\n\nComo antecedente, el mercado virtual ya había registrado seguimientos previos sobre la evolución de esta divisa digital durante la jornada de ayer. La criptomoneda alcanzó en su momento un máximo histórico de casi 4900 dólares por unidad y mantiene antecedentes técnicos destacados tras la fusión concretada en septiembre de 2022 para reducir el consumo energético.\n\nLa moneda digital se ubica en el segundo lugar de popularidad en el mercado global y continúa despertando el interés de los creadores de divisas digitales. La información sobre su cotización y funcionamiento se mantiene bajo los parámetros habituales de las plataformas de intercambio sin referencias directas a repercusiones locales en Balcarce.",
+      "guion": "Criptomonedas: cotización y características de ethereum",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T14:22:25.142Z",
+      "claves": [
+        "La cotización de ethereum se ubica en 2716.98 dólares por unidad.",
+        "Registró una variación del 2,9% en las últimas veinticuatro horas.",
+        "Se mantiene como la segunda criptomoneda con mayor capitalización de mercado."
+      ],
+      "seSabe": [
+        "Ether es la segunda moneda virtual en capitalización de mercado.",
+        "El valor registrado corresponde a la medición de este viernes.",
+        "La red utiliza contratos inteligentes de ejecución autónoma."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Conocé la cotización actual de ethereum, la segunda criptomoneda con mayor capitalización de mercado a nivel global, que cotiza a más de 2700 dólares por unidad tras registrar variaciones en las últimas veinticuatro horas.",
+      "etiquetas": [
+        "criptomonedas",
+        "ethereum"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/tecno/2026/09/25/criptomonedas-cual-es-el-valor-de-ethereum-este-viernesbr/",
+          "fecha": "2026-09-25T14:15:59.000Z",
+          "oficial": false,
+          "aporte": "Aportó el valor actual de ethereum, la variación de precios y los datos técnicos sobre su funcionamiento y antecedentes de la red."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1nkovbo",
+          "titulo": "Cómo ha cambiado el valor de la criptomoneda ethereum en las últimas 24 horas",
+          "fecha": "2026-09-24T14:16:07.000Z",
+          "ruta": "/nota/como-ha-cambiado-el-valor-de-la-criptomoneda-ethereum-en-las-ultimas-1nkovbo"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "sc8pro": {
+      "estado": "automatica",
+      "titulo": "Electrolux cierra su planta de Rosario y afecta a cientos de operarios",
+      "copete": "La firma de electrodomésticos Electrolux Group anunció el cierre definitivo de su fábrica en Rosario a partir de mañana. La decisión se da en un contexto de caída del consumo y apertura de importaciones.",
+      "cuerpo": "La empresa comercializa las marcas Electrolux y Gafa, y atribuyó la medida a una revisión estratégica para adoptar un modelo de abastecimiento global.\n\nEl cese de actividades se produce en un escenario de caída del consumo masivo y apertura de importaciones. Según datos de NielsenIQ citados por la compañía, el mercado de tecnología y durables retrocedió cerca del tres por ciento en volumen durante el primer semestre del año.\n\nDesde la compañía aseguraron que cumplirán con las obligaciones legales y mantendrán las operaciones comerciales en el país, además de garantizar el servicio técnico y la disponibilidad de repuestos para los usuarios.",
+      "guion": "Electrolux cierra su planta de Rosario y afecta a cientos de operarios",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T14:22:25.142Z",
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "etiquetas": [
+        "Electrolux",
+        "Rosario",
+        "cierre de planta",
+        "industria",
+        "electrodomésticos"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/economia/2026/09/25/otro-gigante-deja-de-fabricar-en-el-pais-electrolux-cierra-su-planta-en-rosario-donde-trabajan-180-operarios/",
+          "fecha": "2026-09-25T14:04:05.000Z",
+          "oficial": false,
+          "aporte": "Informó sobre el cierre de la planta en Rosario, la cantidad de operarios, la caída del consumo y el comunicado oficial de la empresa."
+        },
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/economia/2026/09/25/otro-gigante-deja-de-fabricar-en-el-pais-electrolux-cierra-su-planta-en-rosario-donde-trabajan-300-operarios/",
+          "fecha": "2026-09-25T13:38:30.000Z",
+          "oficial": false,
+          "aporte": "Aportó detalles sobre la estimación de posibles despidos y los motivos estratégicos del grupo empresario."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1kzeqjl",
+          "titulo": "Cierra la planta de Dánica en Llavallol tras casi noventa años",
+          "fecha": "2026-09-25T12:03:21.000Z",
+          "ruta": "/nota/cierra-la-planta-de-danica-en-llavallol-tras-casi-noventa-anos-1kzeqjl"
+        },
+        {
+          "id": "e6h8p9",
+          "titulo": "Cierra la histórica planta de Dánica en Llavallol y quedan en riesgo 35 puestos de trabajo",
+          "fecha": "2026-09-23T02:02:00.000Z",
+          "ruta": "/nota/cierra-la-historica-planta-de-danica-en-llavallol-y-quedan-en-riesgo-e6h8p9"
+        },
+        {
+          "id": "1xzilre",
+          "titulo": "Dánica cierra definitivamente su planta de Llavallol y desvincula a los últimos 30 trabajadores",
+          "fecha": "2026-09-22T20:48:24.000Z",
+          "ruta": "/nota/danica-cierra-definitivamente-su-planta-de-llavallol-y-desvincula-a-1xzilre"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "ALTA"
       }
     }
   },
