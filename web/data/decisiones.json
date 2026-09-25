@@ -1,5 +1,5 @@
 {
-  "exportado": "2026-09-25T14:22:25.210Z",
+  "exportado": "2026-09-25T14:32:52.895Z",
   "decisiones": {
     "1951120": {
       "estado": "automatica",
@@ -12286,13 +12286,71 @@
     },
     "1s5n48z": {
       "estado": "automatica",
-      "titulo": null,
-      "copete": null,
-      "cuerpo": null,
-      "guion": null,
-      "deIA": null,
-      "por": null,
-      "cuando": "2026-09-25T06:40:41.148Z"
+      "titulo": "Se agotan las entradas para el partido de despedida de Lionel Messi",
+      "copete": "Los tickets para el último encuentro de Lionel Messi con la selección argentina ante Benín se agotaron en pocas horas de forma virtual. El partido se jugará el 6 de octubre en el estadio Monumental.",
+      "cuerpo": "Ante la alta demanda, los usuarios reportaron demoras de más de una hora de espera y quejas en redes sociales.\n\nEn paralelo, el director técnico del seleccionado, Lionel Scaloni, reveló en conferencia de prensa que mantuvo conversaciones para convencer al capitán de participar del homenaje y reconoció que su propia continuidad en el cargo aún debe definirse en una reunión con el presidente de la AFA, Claudio Tapia. Como antecedente, la AFA había confirmado días atrás los detalles de los amistosos y la venta de tickets, y habilitará una zona especial con pantalla gigante en Ciudad Universitaria para quienes no consiguieron su lugar.",
+      "guion": "Se agotan las entradas para el partido de despedida de Lionel Messi",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T14:32:52.839Z",
+      "noConfirmado": [
+        "Todavía quedan tickets disponibles para los partidos frente a Bolivia y Burkina Faso."
+      ],
+      "etiquetas": [
+        "Lionel Messi",
+        "Selección Argentina",
+        "AFA",
+        "Estadio Monumental",
+        "Entradas"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Minuto Uno",
+          "enlace": "https://www.minutouno.com/deportes/locura-lionel-messi-se-agotaron-tiempo-record-las-entradas-su-despedida-la-seleccion-n6326439",
+          "fecha": "2026-09-24T23:25:00.000Z",
+          "oficial": false,
+          "aporte": "Detalló los precios de las entradas, el tiempo de venta, la plataforma utilizada, las declaraciones de Lionel Scaloni y la habilitación de la Fan Zone."
+        },
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/deportes/comenzo-la-venta-de-entradas-para-la-despedida-de-messi-de-la-seleccion-argentina-hay-mas-de-una-nid24092026/",
+          "fecha": "2026-09-24T23:20:11.000Z",
+          "oficial": false,
+          "aporte": "Informó sobre la alta demanda, las demoras en la fila virtual y el agotamiento de los tickets para el partido de despedida."
+        },
+        {
+          "medio": "Clarín",
+          "enlace": "https://www.clarin.com/deportes/hora-media-agotaron-entradas-despedida-lionel-messi-seleccion-indignacion-redes-sociales_0_4evOL2zlPw.html",
+          "fecha": "2026-09-24T23:18:10.000Z",
+          "oficial": false,
+          "aporte": "Confirmó que la venta virtual fue para el partido ante Benín y que aún restan tickets para los encuentros frente a Bolivia y Burkina Faso."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1nud4zm",
+          "titulo": "Entradas para la despedida de Lionel Messi de la Selección Argentina: paso a paso para comprarlas",
+          "fecha": "2026-09-24T19:05:00.000Z",
+          "ruta": "/nota/entradas-para-la-despedida-de-lionel-messi-de-la-seleccion-argentina-1nud4zm"
+        },
+        {
+          "id": "150qeb8",
+          "titulo": "A qué hora venden las entradas para la despedida de Lionel Messi de la Selección Argentina",
+          "fecha": "2026-09-22T21:21:00.000Z",
+          "ruta": "/nota/a-que-hora-venden-las-entradas-para-la-despedida-de-lionel-messi-de-150qeb8"
+        },
+        {
+          "id": "j7ihvi",
+          "titulo": "Comenzó la venta de entradas para la despedida de Messi de la selección argentina: hay más de una hora de espera",
+          "fecha": "2026-09-24T22:58:23.000Z",
+          "ruta": "/nota/comenzo-la-venta-de-entradas-para-la-despedida-de-messi-de-la-j7ihvi"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron tres medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      }
     },
     "af5xg4": {
       "estado": "automatica",
@@ -18493,6 +18551,458 @@
         "nivel": "MEDIA",
         "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
         "sugeridoPorIA": "ALTA"
+      }
+    },
+    "ug5xuk": {
+      "estado": "automatica",
+      "titulo": "La Escuela Municipal de Handball participa de un nuevo torneo en Mar del Plata",
+      "copete": "Cuarenta jugadores balcarceños de distintas categorías formaron parte del sexto Circuito Asabal en el Club Once Unidos. La delegación se prepara para competir en noviembre en el Torneo Internacional Copa Mar del Plata.",
+      "cuerpo": "Unos cuarenta deportistas de la Escuela Municipal de Handball de Balcarce participaron del sexto Circuito Asabal, desarrollado en las instalaciones del Club Once Unidos de Mar del Plata. Del encuentro zonal también formaron parte equipos de Necochea y de la ciudad anfitriona, y el contingente local estuvo coordinado por los profesores Federico Santiago y Maximiliano La Rocca.\n\nDurante la jornada, los jugadores de las categorías infantil y menor compartieron partidos con pares de la región y recibieron obsequios mediante sorteos, además de participar en entrevistas y registros fotográficos organizados por la Liga. Desde el área municipal destacaron que la intervención en el certamen refleja el progreso deportivo individual y grupal de los jóvenes.\n\nEsta competencia forma parte de la preparación de los deportistas locales de cara a su presentación en noviembre en el Torneo Internacional Copa Mar del Plata, instancia en la que se medirán con nuevos planteles para sumar experiencia.",
+      "guion": "La Escuela Municipal de Handball participa de un nuevo torneo en Mar del Plata",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T14:32:52.839Z",
+      "claves": [
+        "Cuarenta jugadores integraron la delegación balcarceña en Mar del Plata.",
+        "El evento se desarrolló en las instalaciones del Club Once Unidos.",
+        "Participaron equipos de Necochea, Mar del Plata y Balcarce.",
+        "El plantel se prepara para competir en noviembre en la Copa Mar del Plata."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Unos cuarenta jugadores de la Escuela Municipal de Handball participaron del sexto Circuito Asabal en Mar del Plata. La delegación local se prepara para competir en noviembre en el Torneo Internacional Copa Mar del Plata.",
+      "etiquetas": [
+        "handball",
+        "Balcarce",
+        "Mar del Plata",
+        "Asabal"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Municipalidad de Balcarce",
+          "enlace": "https://balcarce.gob.ar/2026/09/25/cuarenta-jugadores-participaron-del-6o-circuito-asabal/",
+          "fecha": "2026-09-25T14:23:44.000Z",
+          "oficial": true,
+          "aporte": "Detalló la participación de la Escuela Municipal de Handball en el circuito de Asabal en Mar del Plata."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1pujkam",
+          "titulo": "Casi un centenar de jugadores participaron de una nueva fecha del Prix de Ajedrez del Atlántico",
+          "fecha": "2026-09-22T18:10:50.681Z",
+          "ruta": "/nota/casi-un-centenar-de-jugadores-participaron-de-una-nueva-fecha-del-1pujkam"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Sale de una fuente oficial: Municipalidad de Balcarce.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "dmr1ap": {
+      "estado": "automatica",
+      "titulo": "La selección argentina presenta la camiseta especial para la despedida de Lionel Messi",
+      "copete": "La marca deportiva puso a la venta la indumentaria de edición especial que el capitán vestirá en el partido ante Benín, programado para el seis de octubre en el Monumental.",
+      "cuerpo": "La selección nacional dio a conocer la indumentaria exclusiva que el equipo utilizará en el encuentro despedida de Lionel Messi frente a Benín, previsto para el martes 6 de octubre en el Estadio Monumental. La marca deportiva puso a la venta la indumentaria conmemorativa que vestirá el capitán argentino, un lanzamiento que desató una gran revolución entre los fanáticos albicelestes.\n\nLa colección oficial incluye prendas adaptadas tanto para la alta competencia como para el uso diario, además de complementos de entrenamiento.",
+      "guion": "La selección argentina presenta la camiseta especial para la despedida de Lionel Messi",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T14:32:52.839Z",
+      "claves": [
+        "La selección argentina presentó la camiseta de edición especial para la despedida de Lionel Messi.",
+        "El partido se jugará el seis de octubre ante Benín en el Estadio Monumental.",
+        "La indumentaria rinde tributo a los tres mundiales con detalles dorados y tres estrellas en el escudo.",
+        "Los fanáticos agotaron con rapidez las primeras tandas de la tienda digital de la marca deportiva."
+      ],
+      "seSabe": [
+        "La selección argentina vestirá una camiseta de edición especial en el partido de despedida de Lionel Messi ante Benín.",
+        "El encuentro se jugará el martes 6 de octubre en el Estadio Monumental.",
+        "La indumentaria incluye un tramado especial en tono dorado mate y las tres estrellas bordadas en el escudo."
+      ],
+      "noConfirmado": [
+        "No se detallaron los precios específicos de cada uno de los modelos de la colección lanzada por la marca deportiva."
+      ],
+      "textoRedes": "La selección argentina presentó la camiseta de edición especial que Lionel Messi usará en su partido despedida ante Benín el seis de octubre en el Monumental. La indumentaria ya se encuentra disponible en la tienda digital de la marca deportiva.",
+      "etiquetas": [
+        "Lionel Messi",
+        "Selección Argentina",
+        "Estadio Monumental",
+        "Benín",
+        "camisetas"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Minuto Uno",
+          "enlace": "https://www.minutouno.com/deportes/cuanto-cuesta-la-camiseta-especial-que-lionel-messi-usara-su-partido-despedida-n6326628",
+          "fecha": "2026-09-25T14:14:00.000Z",
+          "oficial": false,
+          "aporte": "Informó sobre el lanzamiento de la indumentaria conmemorativa y los detalles del diseño con tono dorado mate y tres estrellas."
+        },
+        {
+          "medio": "El Eco de Tandil",
+          "enlace": "https://www.eleco.com.ar/deportes/la-seleccion-argentina-presento-la-camiseta-especial-para-la-despedida-de-messi",
+          "fecha": "2026-09-25T12:46:30.000Z",
+          "oficial": false,
+          "aporte": "Confirmó la presentación de la camiseta especial y la fecha del partido despedida ante Benín en el Monumental."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "e7ym9v",
+          "titulo": "La Selección presenta la camiseta especial para la despedida de Messi",
+          "fecha": "2026-09-25T12:46:30.000Z",
+          "ruta": "/nota/la-seleccion-argentina-presento-la-camiseta-especial-para-la-e7ym9v"
+        },
+        {
+          "id": "e3051r",
+          "titulo": "Los hinchas agotan las entradas para la despedida de Lionel Messi",
+          "fecha": "2026-09-25T00:06:00.000Z",
+          "ruta": "/nota/los-hinchas-agotan-las-entradas-para-la-despedida-de-lionel-messi-e3051r"
+        },
+        {
+          "id": "1w7nnsk",
+          "titulo": "A qué hora arranca hoy la venta de entradas para la despedida de Lionel Messi",
+          "fecha": "2026-09-24T19:32:00.000Z",
+          "ruta": "/nota/a-que-hora-arranca-hoy-la-venta-de-entradas-para-la-despedida-de-1w7nnsk"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      }
+    },
+    "pp5xuk": {
+      "estado": "automatica",
+      "titulo": "El segundo lote de seis aviones de combate F-16 viaja hacia la Argentina",
+      "copete": "El Ministerio de Defensa confirmó que seis nuevos aviones de combate F-16 comprados a Dinamarca se encuentran en viaje hacia la Argentina y realizarán escalas en España y Brasil antes de llegar al Área Militar Río Cuarto.",
+      "cuerpo": "Un segundo lote de seis aviones de combate F-16 Fighting Falcon adquiridos a Dinamarca inició su trayecto hacia la Argentina y actualmente realiza una escala técnica en las Islas Canarias, en España, según informó el Ministerio de Defensa. Las aeronaves supersónicas continuarán su recorrido con destino a una escala final en el norte de Brasil para luego aterrizar en el Área Militar Río Cuarto, donde se sumarán a los otros seis aparatos incorporados en diciembre de 2025.\n\nEl traslado de las unidades cuenta con el apoyo logístico de aviones de reabastecimiento de la Fuerza Aérea de Estados Unidos, que proveerán combustible en pleno vuelo durante el cruce del Atlántico. De acuerdo con el cronograma oficial, el reequipamiento militar contempla la llegada de otras doce unidades entre 2027 y 2028, en el marco de un programa que en agosto pasado sumó disposiciones vinculadas al secreto militar para el mantenimiento y la exportación de componentes según el decreto 735/2026.",
+      "guion": "El segundo lote de seis aviones de combate F-16 viaja hacia la Argentina",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T14:32:52.839Z",
+      "seSabe": [
+        "El Ministerio de Defensa aseguró que las seis aeronaves ya se encuentran en viaje hacia la Argentina.",
+        "Los aviones partieron desde la Base Aérea de Skrydstrup, en Dinamarca, y concretaron escalas previas en Zaragoza y en la isla de Gran Canaria.",
+        "Las unidades llegarán al Área Militar Río Cuarto para sumarse al primer lote incorporado en diciembre de 2025.",
+        "El cruce del Atlántico cuenta con el respaldo de aviones KC-135R Stratotanker de la Fuerza Aérea de Estados Unidos para el reabastecimiento en vuelo.",
+        "El gobierno argentino amplió en agosto de 2026 el régimen de secreto militar para el mantenimiento y la exportación de materiales vinculados a estos cazas mediante el decreto 735/2026."
+      ],
+      "noConfirmado": [
+        "No se precisó la fecha exacta del arribo de los aviones a territorio argentino ni el cronograma definitivo de los tramos restantes.",
+        "No se confirmó si el presidente Javier Milei participará en la recepción oficial de las aeronaves en Río Cuarto.",
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El Ministerio de Defensa informó que un nuevo lote de seis aviones de combate F-16 comprados a Dinamarca viaja rumbo a la Argentina y llegará al Área Militar Río Cuarto tras realizar escalas en España y Brasil.",
+      "etiquetas": [
+        "Fuerza Aerea",
+        "Aviones F16",
+        "Ministerio de Defensa",
+        "Dinamarca",
+        "Rio Cuarto"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/politica/ya-vuelan-rumbo-a-la-argentina-otros-seis-aviones-f-16-que-se-sumaran-a-la-fuerza-aerea-nid25092026/",
+          "fecha": "2026-09-25T14:09:48.000Z",
+          "oficial": false,
+          "aporte": "Detalló el traslado del segundo lote de seis aviones F-16 desde Dinamarca, el trayecto con escalas en España y Brasil, el apoyo logístico de Estados Unidos y el contexto normativo del programa militar."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "6jo66i": {
+      "estado": "automatica",
+      "titulo": "Cuestionan al juez que condenó a periodistas en Formosa",
+      "copete": "El magistrado que sancionó a un equipo periodístico por registrar imágenes en un espacio público tiene antecedentes como dirigente y candidato ligado al oficialismo provincial.",
+      "cuerpo": "El juez de paz Omar Padilla, a cargo del juzgado de menor cuantía de Las Lomitas en Formosa, fue cuestionado públicamente tras dictar una condena de cinco días de arresto o una multa contra un grupo de periodistas que realizaban entrevistas en la comunidad San José. Según los registros partidarios, el magistrado ejerció previamente como concejal y dirigente justicialista, y manifestó públicamente su alineación política con el gobernador Gildo Insfrán antes de ser designado en su cargo actual en marzo de 2025 mediante una resolución del Superior Tribunal de Justicia provincial.\n\nEl fallo contra los trabajadores de prensa generó el rechazo de la Asociación de Entidades Periodísticas Argentinas, entidad que calificó la medida como inadmisible y advirtió sobre la afectación a las garantías constitucionales que protegen la labor informativa. La sanción impuesta contempla la posibilidad de sustituir el arresto por el pago de una suma monetaria para cada uno de los afectados.",
+      "guion": "Cuestionan al juez que condenó a periodistas en Formosa.",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T14:32:52.839Z",
+      "claves": [
+        "Un juez de Formosa condenó a periodistas por filmar en la vía pública.",
+        "El magistrado registra un pasado como dirigente y candidato oficialista.",
+        "Entidades de prensa rechazaron el fallo por vulnerar la libertad informativa."
+      ],
+      "seSabe": [
+        "El juez Omar Padilla condenó a un equipo periodístico a cinco días de arresto o una multa económica.",
+        "El magistrado fue designado en su cargo en marzo de 2025 por el Superior Tribunal de Justicia de Formosa.",
+        "Padilla se desempeñó previamente como concejal y dirigente político vinculado al oficialismo provincial.",
+        "La Asociación de Entidades Periodísticas Argentinas expresó su rechazo a la sanción impuesta."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Cuestionan al juez de Formosa que condenó a periodistas por realizar coberturas en espacios públicos. La decisión generó el rechazo de entidades periodísticas que advirtieron sobre restricciones a la labor informativa.",
+      "etiquetas": [
+        "Formosa",
+        "libertad de prensa",
+        "periodistas",
+        "justicia",
+        "Gildo Insfrán"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/politica/el-juez-de-formosa-que-condeno-al-equipo-periodistico-de-la-nacion-es-un-militante-de-gildo-insfran-nid25092026/",
+          "fecha": "2026-09-25T13:43:28.000Z",
+          "oficial": false,
+          "aporte": "Detalló los antecedentes políticos del juez Padilla, los detalles de la condena a los periodistas y el repudio de la asociación de prensa."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "164efaj",
+          "titulo": "Solicitan una oficina presencial de Telepase en Balcarce",
+          "fecha": "2026-09-25T12:48:28.000Z",
+          "ruta": "/nota/solicitan-una-oficina-de-atencion-presencial-para-el-telepase-en-164efaj"
+        },
+        {
+          "id": "1spjzhb",
+          "titulo": "El Concejo designa Paseo Intendente Juan José Mare a la vuelta interna del Cerro en Balcar",
+          "fecha": "2026-09-25T12:46:51.000Z",
+          "ruta": "/nota/el-concejo-designa-paseo-intendente-juan-jose-mare-a-la-vuelta-1spjzhb"
+        },
+        {
+          "id": "1s8swk5",
+          "titulo": "El Concejo pide informes al Municipio por obras tras una renuncia en Balcarce",
+          "fecha": "2026-09-25T10:47:08.606Z",
+          "ruta": "/nota/el-concejo-pidio-informes-al-municipio-por-obras-publicas-1s8swk5"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "tnbxhs": {
+      "estado": "automatica",
+      "titulo": "Una cumbre legislativa bonaerense reúne a todos los bloques",
+      "copete": "Un asado en La Plata reunió a referentes de todos los bloques de la Legislatura bonaerense. Dialogaron sobre reelecciones, vacantes judiciales y la interna provincial.",
+      "cuerpo": "El encuentro, organizado por el senador Sergio Berni, se realizó en el espacio El Amor y la Igualdad e incluyó a unos cuarenta participantes. Durante la reunión se conversó sobre las negociaciones en torno a las reelecciones indefinidas de los intendentes, las vacantes en la Suprema Corte de Justicia y las diferencias internas del peronismo, además de un planteo del legislador Facundo Tignanelli sobre la situación judicial de Cristina Kirchner.\n\nComo saldo de la jornada, los dirigentes evaluaron la posibilidad de repetir estos encuentros una vez por mes para establecer un mecanismo permanente de negociación y definir antes de fin de año las modificaciones en las reglas electorales.",
+      "guion": "Una cumbre legislativa bonaerense reúne a todos los bloques",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T14:32:52.839Z",
+      "claves": [
+        "Asado inédito en La Plata con legisladores de todos los bloques.",
+        "Participaron representantes de La Cámpora, Kicillof, PRO, radicales y libertarios.",
+        "Analizaron reelecciones indefinidas y vacantes en la Suprema Corte.",
+        "Evalúan repetir los encuentros mensuales para negociar temas provinciales."
+      ],
+      "seSabe": [
+        "Un asado en La Plata reunió a referentes de todos los bloques de Diputados y el Senado bonaerense.",
+        "La organización estuvo a cargo del senador Sergio Berni.",
+        "Participaron unos 40 legisladores y autoridades de ambas cámaras.",
+        "Se discutieron reelecciones de intendentes, vacantes judiciales y la situación judicial de Cristina Kirchner."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Un asado en La Plata reunió a legisladores de todos los bloques de la Legislatura bonaerense para debatir sobre reelecciones y vacantes judiciales.",
+      "etiquetas": [
+        "Legislatura bonaerense",
+        "La Plata",
+        "Sergio Berni",
+        "Axel Kicillof",
+        "política"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/politica/2026/09/25/reelecciones-internas-y-cristina-libre-los-secretos-del-inedito-asado-que-reunio-peronistas-libertarios-y-radicales/",
+          "fecha": "2026-09-25T13:35:00.000Z",
+          "oficial": false,
+          "aporte": "Detalló el encuentro de legisladores bonaerenses de todos los bloques en La Plata y los temas discutidos."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "kch30l": {
+      "estado": "automatica",
+      "titulo": "Electrolux cierra su planta en Rosario y pasa a importar",
+      "copete": "La empresa sueca de electrodomésticos dejará de producir en su planta de Rosario y operará exclusivamente con productos importados, en medio de una revisión estratégica.",
+      "cuerpo": "El Grupo Electrolux decidió cerrar su planta de fabricación en la ciudad santafesina de Rosario a partir de este sábado, tras un siglo de operaciones en Argentina. Según la compañía, la medida responde a una revisión estratégica para evolucionar hacia un modelo de abastecimiento global basado en su red internacional de producción, con el objetivo de mejorar la eficiencia y asegurar la sostenibilidad.\n\nRespecto al impacto laboral, medios locales indicaron que unos ochenta puestos de trabajo estarían en riesgo. Por su parte, la empresa evitó precisar cifras sobre posibles despidos, aunque aseguró mediante un comunicado que llevará adelante el proceso conforme a la legislación vigente y con acompañamiento durante la transición. Esta decisión industrial se suma a antecedentes recientes en el sector manufacturero nacional, como el cierre de la planta de Whirlpool en Pilar a fines de 2025 y el cese de actividades en la fábrica de Dánica en Llavallol.",
+      "guion": "Electrolux cierra su planta en Rosario y pasa a importar",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T14:32:52.839Z",
+      "claves": [
+        "El Grupo Electrolux cerrará su planta en Rosario a partir del sábado.",
+        "La empresa operará en el país solo con productos importados.",
+        "Medios locales estiman que hay ochenta puestos de trabajo en peligro.",
+        "La compañía argumenta una revisión estratégica para mejorar la competitividad global."
+      ],
+      "seSabe": [
+        "El Grupo Electrolux cerrará su planta en Rosario a partir del sábado.",
+        "La empresa mantendrá sus operaciones en el país mediante un modelo basado en productos importados.",
+        "La decisión forma parte de una revisión estratégica para un abastecimiento global.",
+        "La compañía aseguró que cumplirá con las obligaciones de la legislación vigente durante el proceso."
+      ],
+      "noConfirmado": [
+        "No se precisó la cantidad exacta de trabajadores afectados por la medida.",
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El Grupo Electrolux anunció el cierre de su planta de fabricación en Rosario y operará en el país exclusivamente con productos importados. La medida forma parte de una revisión estratégica global de la compañía de electrodomésticos.",
+      "etiquetas": [
+        "Electrolux",
+        "Rosario",
+        "industria",
+        "importaciones"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Clarín",
+          "enlace": "https://www.clarin.com/economia/electrolux-cierra-planta-rosario-seguira-vendedor-productos-importados_0_890y98pjyI.html",
+          "fecha": "2026-09-25T13:45:41.000Z",
+          "oficial": false,
+          "aporte": "Detalló el cierre de la planta de Electrolux en Rosario, la transición hacia la importación y los datos sobre los puestos de trabajo en riesgo."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1kzeqjl",
+          "titulo": "Cierra la planta de Dánica en Llavallol tras casi noventa años",
+          "fecha": "2026-09-25T12:03:21.000Z",
+          "ruta": "/nota/cierra-la-planta-de-danica-en-llavallol-tras-casi-noventa-anos-1kzeqjl"
+        },
+        {
+          "id": "e6h8p9",
+          "titulo": "Cierra la histórica planta de Dánica en Llavallol y quedan en riesgo 35 puestos de trabajo",
+          "fecha": "2026-09-23T02:02:00.000Z",
+          "ruta": "/nota/cierra-la-historica-planta-de-danica-en-llavallol-y-quedan-en-riesgo-e6h8p9"
+        },
+        {
+          "id": "1xzilre",
+          "titulo": "Dánica cierra definitivamente su planta de Llavallol y desvincula a los últimos 30 trabajadores",
+          "fecha": "2026-09-22T20:48:24.000Z",
+          "ruta": "/nota/danica-cierra-definitivamente-su-planta-de-llavallol-y-desvincula-a-1xzilre"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "1i50xrf": {
+      "estado": "automatica",
+      "titulo": "Una familia necesitó cinco millones para integrar el sector más rico",
+      "copete": "Un hogar porteño requirió ingresos mensuales de al menos cinco millones de pesos durante el segundo trimestre para pertenecer al diez por ciento con mayor poder adquisitivo en la Ciudad de Buenos Aires.",
+      "cuerpo": "El informe oficial detalló que los ingresos en ese segmento de mayores recursos escalaron hasta un techo de veintitrés millones doscientos mil pesos, con una media de siete millones setecientos cuatro mil pesos.\n\nComo se había informado en un relevamiento anterior sobre la caída de los ingresos frente a la inflación, la distribución refleja una marcada asimetría en el distrito. El estrato superior concentró el treinta por ciento de los ingresos totales de la ciudad, mientras que el sector más pobre debió subsistir con el uno coma ocho por ciento de los recursos. La brecha entre los extremos alcanzó una magnitud de diecisiete a uno.\n\nEl estudio también indicó que la Zona Norte exhibió las cifras más altas de poder adquisitivo, superando a la Zona Sur en las mediciones por persona y de ingresos familiares.",
+      "guion": "Una familia necesitó cinco millones para integrar el sector más rico",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T14:32:52.839Z",
+      "claves": [
+        "Se necesitaron más de cinco millones de pesos mensuales para integrar el diez por ciento más rico de la ciudad.",
+        "El promedio de ingresos en ese sector superior se ubicó en siete millones setecientos mil pesos.",
+        "La brecha entre los extremos de la distribución de ingresos alcanzó una proporción de diecisiete a uno.",
+        "El informe oficial fue elaborado por el Instituto de Estadística y Censos porteño."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "etiquetas": [
+        "Ingresos",
+        "Ciudad de Buenos Aires",
+        "Idecba"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Ámbito",
+          "enlace": "https://www.ambito.com/economia/ingresos-cuanto-tiene-que-ganar-mes-una-familia-integrar-el-10-mas-rico-caba-n6326542",
+          "fecha": "2026-09-25T13:35:00.000Z",
+          "oficial": false,
+          "aporte": "Aportó los datos del informe de distribución del ingreso familiar del Instituto de Estadística y Censos porteño para el segundo trimestre."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "ryudlj",
+          "titulo": "Cuánto tiene que ganar una familia para formar parte del 10% más rico de la Ciudad de Buenos Aires",
+          "fecha": "2026-09-25T10:54:59.000Z",
+          "ruta": "/nota/cuanto-tiene-que-ganar-una-familia-para-formar-parte-del-10-mas-rico-ryudlj"
+        },
+        {
+          "id": "nvz35",
+          "titulo": "Fuerte caída de los ingresos en la Ciudad frente a la inflación: cuánto gana en promedio una familia porteña",
+          "fecha": "2026-09-24T16:36:22.000Z",
+          "ruta": "/nota/fuerte-caida-de-los-ingresos-en-la-ciudad-frente-a-la-inflacion-nvz35"
+        },
+        {
+          "id": "66ksij",
+          "titulo": "Créditos hipotecarios UVA: ¿cuánto hay que ganar para comprar un departamento en septiembre de 2026?",
+          "fecha": "2026-09-23T20:00:00.000Z",
+          "ruta": "/nota/creditos-hipotecarios-uva-cuanto-hay-que-ganar-para-comprar-un-66ksij"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "1b1bhd7": {
+      "estado": "automatica",
+      "titulo": "Un laboratorio argentino exporta vacunas contra la aftosa a Europa",
+      "copete": "La firma Biogénesis Bagó concretó su primer envío de vacunas contra la fiebre aftosa a Chipre para hacer frente a una emergencia sanitaria por el virus SAT1. Se trata de la primera exportación de este tipo de insumos veterinarios nacionales a un país del bloque europeo.",
+      "cuerpo": "Un laboratorio nacional concretó por primera vez el envío de vacunas veterinarias hacia el mercado europeo para asistir a Chipre ante una emergencia sanitaria por una variante exógena del virus de la fiebre aftosa, conocida como SAT1. Según informó la empresa Biogénesis Bagó, la operación se da en el marco de una campaña de inmunización impulsada por las autoridades veterinarias de ese país tras perder su estatus libre de la enfermedad sin vacunación el pasado 19 de febrero. Hasta el momento, el bloque comunitario se abastecía de forma exclusiva con productos de laboratorios europeos.\n\nEl CEO de la firma, Esteban Turic, señaló que la exportación representa un hito debido a la demanda insatisfecha que enfrenta el mundo a causa de los brotes en distintos continentes. La capacidad de respuesta se apoyó en un estudio del laboratorio Wageningen Bioveterinary Research, que validó la efectividad de la fórmula frente al virus.\n\nLa empresa cuenta con presencia internacional en más de setenta países y una capacidad de producción de 450 millones de dosis anuales.",
+      "guion": "Un laboratorio argentino exporta vacunas contra la aftosa a Europa",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T14:32:52.839Z",
+      "claves": [
+        "Biogénesis Bagó concretó el primer envío de vacunas contra la aftosa a Chipre.",
+        "La operación marca la primera exportación de este tipo de productos nacionales a la Unión Europea.",
+        "La medida responde a una emergencia sanitaria por la variante del virus SAT1."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "La empresa argentina Biogénesis Bagó concretó su primer envío de vacunas contra la fiebre aftosa a Chipre para hacer frente a una emergencia sanitaria por la variante SAT1. Es la primera exportación nacional de estos insumos a un país de la Unión Europea.",
+      "etiquetas": [
+        "vacunas",
+        "fiebre aftosa",
+        "exportacion",
+        "biotecnologia",
+        "Europa",
+        "Chipre"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Clarín",
+          "enlace": "https://www.clarin.com/rural/laboratorio-argentino-exporto-vacunas-fiebre-aftosa-primera-vez-pais-europeo_0_kDSJKdOsPl.html",
+          "fecha": "2026-09-25T13:31:24.000Z",
+          "oficial": false,
+          "aporte": "Detalles del envío de vacunas de Biogénesis Bagó a Chipre y declaraciones del CEO Esteban Turic."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "14ht7th",
+          "titulo": "Piden revisar el nuevo esquema de vacunación contra la aftosa en Balcarce",
+          "fecha": "2026-08-31T13:18:07.000Z",
+          "ruta": "/nota/fiebre-aftosa-piden-revisar-el-nuevo-esquema-de-vacunacion-14ht7th"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
       }
     }
   },
