@@ -7,7 +7,7 @@ import { comoNombre } from '../web/lib/texto.js';
 import {
   POR_PAGINA, partirRanura, cuantasPaginas, direccionDePagina,
 } from '../web/lib/paginas.js';
-import { cuando, haceCuanto, ordenarPortada } from '../web/lib/datos.js';
+import { cuando, haceCuanto, ordenarPortada, armarTapa } from '../web/lib/datos.js';
 
 // Las secciones que existen de verdad, para que partirRanura sepa distinguir.
 const esSeccion = (r) => ['deportes', 'balcarce', 'automovilismo', 'agro'].includes(r);
@@ -125,7 +125,7 @@ test('la nota grande es la de más puntaje, no la más nueva', () => {
 });
 
 test('la lista sigue yendo por hora', () => {
-  const { resto } = ordenarPortada([n('a', 3, 50), n('b', 0.5, 40), n('c', 9, 95)]);
+  const { resto } = ordenarPortada([n('a', 3, 50), n('b', 0.5, 40), n('c', 5, 95)]);
   // La grande es "c" (95). El resto va de lo más nuevo a lo más viejo.
   assert.deepEqual(resto.map((x) => x.id), ['b', 'a']);
 });
@@ -163,7 +163,50 @@ test('si no hay nada de hoy, manda el puntaje igual', () => {
   assert.equal(principal.id, 'viejaBuena');
 });
 
+test('la grande compite sólo con las de las últimas 6 horas (25/09: abría una de hace 8 h)', () => {
+  const { principal } = ordenarPortada([n('de-la-manana', 8, 100), n('nueva', 1, 60)]);
+  assert.equal(principal.id, 'nueva');
+});
+
+// -------------------------------------------------------------- la tapa
+
+/** Una nota con sección, horas y puntaje. */
+const t = (id, seccion, horas, relevancia = 60, extra = {}) => ({ ...n(id, horas, relevancia), seccion, local: true, ...extra });
+
+test('las cinco de la tapa son de cinco secciones distintas (25/09: salían 4 de Economía)', () => {
+  const notas = [
+    t('pol', 'Política', 2, 90),
+    t('eco1', 'Economía', 0.2), t('eco2', 'Economía', 0.3), t('eco3', 'Economía', 0.4), t('eco4', 'Economía', 0.5),
+    t('dep', 'Deportes', 1), t('agro', 'Agro', 1.5), t('bal', 'Balcarce', 3),
+  ];
+  const { principal, secundarias } = armarTapa(notas);
+  const secciones = [principal, ...secundarias].map((x) => x.seccion);
+  assert.equal(new Set(secciones).size, secciones.length, secciones.join(', '));
+  assert.equal(secundarias.length, 4);
+  assert.equal(secundarias[0].id, 'eco1', 'de cada sección, la más nueva');
+});
+
+test('en la tapa no va una nota sin hora', () => {
+  const notas = [t('grande', 'Balcarce', 1, 95), t('sinhora', 'Agro', 0.1, 99, { sinFecha: true }), t('dep', 'Deportes', 2)];
+  const { principal, secundarias, bloques } = armarTapa(notas);
+  assert.notEqual(principal.id, 'sinhora');
+  assert.ok(!secundarias.some((x) => x.id === 'sinhora'));
+  assert.ok(bloques.some(([s, lista]) => s === 'Agro' && lista[0].id === 'sinhora'), 'queda en su sección');
+});
+
+test('cada sección muestra sus tres más nuevas, sin repetir las de la tapa', () => {
+  const notas = [
+    t('grande', 'Balcarce', 1, 95),
+    ...[0.5, 2, 3, 4, 5].map((h, i) => t('dep' + i, 'Deportes', h)),
+  ];
+  const { secundarias, bloques } = armarTapa(notas, ['Balcarce', 'Deportes']);
+  assert.equal(secundarias[0].id, 'dep0');
+  const [, deportes] = bloques.find(([s]) => s === 'Deportes');
+  assert.deepEqual(deportes.map((x) => x.id), ['dep1', 'dep2', 'dep3']);
+});
+
 test('sin notas no se rompe', () => {
+  assert.deepEqual(armarTapa([]), { principal: null, secundarias: [], bloques: [] });
   assert.deepEqual(ordenarPortada([]), { principal: null, resto: [] });
   assert.deepEqual(ordenarPortada(), { principal: null, resto: [] });
 });

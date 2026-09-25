@@ -163,8 +163,12 @@ export function anualesConFecha(anuales = [], ahora = Date.now()) {
   return anuales.map((a) => ({ ...a, confirmado: confirmacionDeAnual(a, lista) }));
 }
 
-/** Cuántas horas atrás se sigue considerando "de hoy" para la portada. */
-const VENTANA_HORAS = 24;
+/** Cuántas horas compite una nota por el lugar grande. Eran 24: el 25/09
+ *  la portada abría con una nota de hace 8 horas habiendo nuevas, y Hernán
+ *  y Andrés pidieron priorizar siempre lo nuevo. Con 6, la nota del campeón
+ *  sigue ganándole a la que entró recién con menos puntaje, pero no se queda
+ *  arriba toda la tarde. */
+const VENTANA_HORAS = 6;
 
 /**
  * Elige qué nota va grande arriba, y devuelve el resto en orden de hora.
@@ -201,6 +205,50 @@ export function ordenarPortada(notas = []) {
   const principal = candidatas.reduce((a, b) => (b.relevancia > a.relevancia ? b : a));
 
   return { principal, resto: porHora.filter((n) => n.id !== principal.id) };
+}
+
+/**
+ * La tapa entera: la nota grande, cuatro de abajo y los bloques por sección.
+ *
+ * El 25/09 abajo de la grande salían las cuatro más nuevas a secas, y eran
+ * cuatro de Economía. Lo que pidieron Hernán y Andrés:
+ *   · las cinco de la tapa, de cinco secciones distintas;
+ *   · todas con su hora (una nota cuya fuente no dijo la hora no va a la
+ *     tapa: queda en su sección);
+ *   · cada sección, con sus tres notas más nuevas, sin repetir las de arriba;
+ *   · siempre lo nuevo primero.
+ *
+ * @param {object[]} notas
+ * @param {string[]} [orden]  el orden editorial de las secciones
+ */
+export function armarTapa(notas = [], orden = SECCIONES.map((s) => s.nombre)) {
+  const conHora = notas.filter((n) => !n.sinFecha);
+  const { principal } = ordenarPortada(conHora.length ? conHora : notas);
+  if (!principal) return { principal: null, secundarias: [], bloques: [] };
+
+  const porHora = [...notas].sort((a, b) => new Date(b.fecha) - new Date(a.fecha));
+
+  // La más nueva de cada sección (con hora), sin la de la grande.
+  const usadas = new Set([principal.seccion]);
+  const secundarias = [];
+  for (const n of porHora) {
+    if (secundarias.length === 4) break;
+    if (n.sinFecha || n.id === principal.id || usadas.has(n.seccion)) continue;
+    usadas.add(n.seccion);
+    secundarias.push(n);
+  }
+
+  const enTapa = new Set([principal.id, ...secundarias.map((n) => n.id)]);
+  const porSeccion = {};
+  for (const n of porHora) {
+    if (enTapa.has(n.id)) continue;
+    (porSeccion[n.seccion] ??= []).push(n);
+  }
+  const conocidas = orden.filter((s) => porSeccion[s]?.length);
+  const otras = Object.keys(porSeccion).filter((s) => !orden.includes(s));
+  const bloques = [...conocidas, ...otras].map((s) => [s, porSeccion[s].slice(0, 3)]);
+
+  return { principal, secundarias, bloques };
 }
 
 /** Los temas que hoy tienen notas, del que más tiene al que menos. */

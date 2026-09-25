@@ -1,5 +1,5 @@
 import {
-  obtenerDatos, cuando, ordenarPortada, temasVivos, SECCIONES, proximosEventos,
+  obtenerDatos, cuando, armarTapa, temasVivos, proximosEventos,
 } from '@/lib/datos';
 import {
   TarjetaFarmacia, TarjetaBuzon,
@@ -24,19 +24,10 @@ export const metadata = {
 
 export default function Portada() {
   const d = obtenerDatos();
-  const { principal, resto } = ordenarPortada(d.notas);
-  const secundarias = resto.slice(0, 4);
-  const restoAgrupado = resto.slice(4);
-
-  // Los bloques de abajo salen en el orden editorial de SECCIONES, no en el
-  // orden en que aparecieron las notas: la portada tiene que verse igual
-  // todos los días aunque el día haya sido flojo en una sección.
-  const porSeccion = {};
-  for (const n of restoAgrupado) (porSeccion[n.seccion] ??= []).push(n);
-  const bloques = SECCIONES
-    .map((s) => [s.nombre, porSeccion[s.nombre]])
-    .filter(([, notas]) => notas?.length)
-    .concat(Object.entries(porSeccion).filter(([nombre]) => !SECCIONES.some((s) => s.nombre === nombre)));
+  // La grande, cuatro de secciones distintas y tres por sección, siempre lo
+  // más nuevo primero (lib/datos.js, armarTapa). Los bloques salen en el
+  // orden editorial de SECCIONES: la portada se ve igual todos los días.
+  const { principal, secundarias, bloques } = armarTapa(d.notas);
 
   const temas = MOSTRAR_TEMAS ? temasVivos().slice(0, 8) : [];
 
@@ -117,7 +108,10 @@ export default function Portada() {
               <div className="rejilla-secundarias">
                 {secundarias.map((n) => (
                   <article key={n.id}>
-                    <Etiqueta seccion={n.seccion} />
+                    <div className="chapa-nota">
+                      <Etiqueta seccion={n.seccion} />
+                      {cuando(n) && <span className="meta">{cuando(n)}</span>}
+                    </div>
                     <h3><a href={n.ruta}>{n.titulo}</a></h3>
                     {n.copete && <p>{recortar(n.copete, 150)}</p>}
                   </article>
@@ -133,7 +127,7 @@ export default function Portada() {
                   y en el celular había que pasar veinte titulares para
                   llegar a la sección siguiente. El que quiere más tiene
                   "Ver todo". */}
-              {notas.slice(0, 3).map((n) => <FilaNota nota={n} key={n.id} />)}
+              {notas.map((n) => <FilaNota nota={n} key={n.id} />)}
             </section>
           ))}
 
