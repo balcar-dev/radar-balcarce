@@ -1,5 +1,5 @@
 {
-  "exportado": "2026-09-25T11:30:45.992Z",
+  "exportado": "2026-09-25T11:41:01.147Z",
   "decisiones": {
     "1951120": {
       "estado": "automatica",
@@ -12510,6 +12510,108 @@
       "deIA": null,
       "por": null,
       "cuando": "2026-09-25T11:30:45.952Z"
+    },
+    "12ebsiq": {
+      "estado": "automatica",
+      "titulo": "El Ministerio de Justicia crea programas contra la ciberdelincuencia y sobre régimen penal",
+      "copete": "La cartera nacional oficializó la creación de dos iniciativas mediante resoluciones publicadas este viernes en el Boletín Oficial, orientadas a coordinar políticas criminales y combatir delitos informáticos.",
+      "cuerpo": "El Ministerio de Justicia de la Nación dispuso la creación de dos programas específicos destinados a combatir la ciberdelincuencia y a coordinar la política criminal en materia de régimen penal juvenil. La medida se formalizó a través de las resoluciones 483 y 484, las cuales fueron publicadas este viernes en el Boletín Oficial.\n\nEstas acciones nacionales se dan en un contexto de debates sobre la aplicación de la normativa penal juvenil, que incluyó planteos previos en el ámbito legislativo y judicial bonaerense y porteño contra magistrados por fallos vinculados a esta temática, además de diferencias entre funcionarios sobre los mecanismos de apelación judicial.\n\nLa implementación de estos programas federales busca establecer nuevas herramientas de coordinación para las jurisdicciones provinciales que adhieran a las directrices ministeriales en el abordaje de delitos complejos y causas juveniles.",
+      "guion": "El Ministerio de Justicia crea programas contra la ciberdelincuencia y sobre regimen penal juvenil",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T11:40:43.742Z",
+      "claves": [
+        "Creación de dos programas del Ministerio de Justicia nacional.",
+        "Enfoque en ciberdelincuencia y régimen penal juvenil.",
+        "Formalización mediante las resoluciones 483 y 484 en el Boletín Oficial.",
+        "Antecedentes de debate legislativo y judicial sobre jueces y leyes juveniles."
+      ],
+      "noConfirmado": [
+        "No se detalló el presupuesto asignado para el funcionamiento de los nuevos programas.",
+        "No se especificaron los plazos concretos para la puesta en marcha operativa de las medidas en cada jurisdicción."
+      ],
+      "etiquetas": [
+        "Ministerio de Justicia",
+        "ciberdelincuencia",
+        "régimen penal juvenil",
+        "Boletín Oficial",
+        "política criminal"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Minuto Uno",
+          "enlace": "https://www.minutouno.com/politica/crearon-programas-avanzar-la-implementacion-del-regimen-penal-juvenil-y-combatir-la-ciberdelincuencia-n6326513",
+          "fecha": "2026-09-25T11:29:00.000Z",
+          "oficial": false,
+          "aporte": "Informó la creación de los programas del Ministerio de Justicia para ciberdelincuencia y régimen penal juvenil mediante las resoluciones 483 y 484 en el Boletín Oficial."
+        },
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/politica/2026/09/25/el-gobierno-creo-programas-para-combatir-la-ciberdelincuencia-e-implementar-el-regimen-juvenil/",
+          "fecha": "2026-09-25T07:44:05.000Z",
+          "oficial": false,
+          "aporte": "Confirmó los mismos datos sobre las resoluciones 483 y 484 publicadas este viernes en el Boletín Oficial por el Ministerio de Justicia."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "33v8xa",
+          "titulo": "Avanzan contra las juezas que fallaron contra el Régimen Penal Juvenil, con un jury en la Ciudad y un juicio político en Provincia",
+          "fecha": "2026-09-22T22:25:32.000Z",
+          "ruta": "/nota/avanzan-contra-las-juezas-que-fallaron-contra-el-regimen-penal-33v8xa"
+        },
+        {
+          "id": "17q8eev",
+          "titulo": "Bullrich se opone en impulsar un jury contra las jueces que suspendieron la ley penal juvenil",
+          "fecha": "2026-09-24T22:05:11.000Z",
+          "ruta": "/nota/bullrich-se-opone-en-impulsar-un-jury-contra-las-jueces-que-17q8eev"
+        }
+      ],
+      "verificacion": {
+        "nivel": "BAJA",
+        "porque": "Hay datos centrales de la nota que no pudieron confirmarse con las fuentes consultadas.",
+        "sugeridoPorIA": "ALTA"
+      }
+    },
+    "1adul6g": {
+      "estado": "automatica",
+      "titulo": null,
+      "copete": null,
+      "cuerpo": null,
+      "guion": null,
+      "deIA": null,
+      "por": null,
+      "cuando": "2026-09-25T11:40:47.906Z"
+    },
+    "cdhn55": {
+      "estado": "automatica",
+      "titulo": null,
+      "copete": null,
+      "cuerpo": null,
+      "guion": null,
+      "deIA": null,
+      "por": null,
+      "cuando": "2026-09-25T11:40:50.138Z"
+    },
+    "8cedsq": {
+      "estado": "automatica",
+      "titulo": null,
+      "copete": null,
+      "cuerpo": null,
+      "guion": null,
+      "deIA": null,
+      "por": null,
+      "cuando": "2026-09-25T11:40:57.745Z"
+    },
+    "1hzzxvx": {
+      "estado": "pendiente",
+      "titulo": null,
+      "copete": null,
+      "cuerpo": null,
+      "guion": null,
+      "deIA": null,
+      "por": null,
+      "cuando": "2026-09-25T11:41:01.080Z"
     }
   },
   "horarios": {
