@@ -1,3 +1,15 @@
 {
-  "puntos": []
+  "puntos": [
+    {
+      "cuando": "2026-09-25T12:00:17.311Z",
+      "cloudflare": "error",
+      "facebook": {
+        "seguidores": 1
+      },
+      "instagram": {
+        "seguidores": 3,
+        "publicaciones": 10
+      }
+    }
+  ]
 }
