@@ -312,6 +312,22 @@ campo. Son datos fijos o públicos, se verifican solos y llenan la portada sin
 depender de que otro medio publique. La película y el libro después, cuando
 haya criterio sobre el tono.
 
+## Ideas de sistema, para pensar con calma
+
+Vinieron de `PENDIENTES.md` (25/09). Cambian cómo funciona algo, así que
+conviene decidirlas sin apuro.
+
+- **Un panel de salud del sistema**: hoy hay que mirar tres workflows para
+  saber si algo falló (el vigilante ya cubre gran parte por WhatsApp).
+- **Una vista previa de lo que el reloj va a publicar** en las próximas horas.
+- **Analítica propia sin cookies**, más completa que la de Cloudflare.
+- **Probar los workflows en la máquina** (`act`).
+- **Revisar la accesibilidad** de la web a fondo (el 25/09 se arreglaron el
+  contraste de Automovilismo y el nombre del buscador; falta el resto).
+- **La guía comercial y el mapa de Balcarce** (arriba y en `COMERCIAL.md`),
+  con marketing conjunto y sorteos: la idea más grande y la que más conecta
+  con vender publicidad.
+
 ## Lo que ya se hizo de esta lista
 
 - Los tres avisos fijos de la web, con su pestaña en el panel (23/09).

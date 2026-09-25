@@ -4,7 +4,7 @@
 
 ## 1. La competencia
 
-Se mudó a [`INVESTIGACION-COMPETENCIA.md`](INVESTIGACION-COMPETENCIA.md): qué
+Se mudó a [`docs/historico/INVESTIGACION-COMPETENCIA.md`](docs/historico/INVESTIGACION-COMPETENCIA.md): qué
 hacen El Diario, Punto Nueve y La Vanguardia, los huecos que nadie llena y qué
 de eso ya se hizo.
 

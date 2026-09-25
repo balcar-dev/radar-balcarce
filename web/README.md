@@ -24,7 +24,7 @@ cd web
 npm install          # una sola vez
 npm run dev          # genera los datos y levanta http://localhost:3000
 npm run datos        # sólo regenera data/portada.json y data/archivo.json
-npm run build        # compila (corre `datos` primero)
+npm run build        # compila (arma las redirecciones; NO regenera los datos)
 ```
 
 `npm run datos` (`scripts/generar-datos.mjs`) arma `data/portada.json` y
@@ -40,7 +40,7 @@ la web arranca igual con un aviso.
 | `components/` | Piezas de la interfaz (avisos, buscador, clima, ficha con datos estructurados, compartir) |
 | `lib/` | Direcciones (`ruta.js`), archivo de notas (`archivo.js`), dirección del sitio (`sitio.js`), tarjetas de imagen (`tarjeta.js`) |
 | `data/` | `portada.json`, `archivo.json` y `agenda.json` (los regenera Actions), `decisiones.json`, `avisos.json` y `eventos-panel.json` (los sube el panel), `redes.json` (libro de lo publicado) |
-| `scripts/` | Generar datos y redirecciones, íconos, auditoría de SEO |
+| `scripts/` | Generar datos y redirecciones, íconos, auditoría de SEO y `recuperar-archivo.mjs` (herramienta de rescate: rearma `data/archivo.json` desde el historial de git si se pierde o se rompe) |
 | `public/` | Íconos, manifiesto, `_headers` (la imagen para compartir sale como `image/png`, HSTS y otros encabezados de seguridad, caché de un año para `/_next/static`) y `_redirects` (se genera en cada compilación) |
 
 ## Para saber más
@@ -49,4 +49,3 @@ la web arranca igual con un aviso.
 - Qué reglas se cuidan en la portada: `../REGLAS.md`.
 - SEO y auditoría: `../SEO.md`.
 - Dónde corre y qué se cae: `../INFRAESTRUCTURA.md`.
-- Vercel está apagado desde el 25/09: no despliega nada.

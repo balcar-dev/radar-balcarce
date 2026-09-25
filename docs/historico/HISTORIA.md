@@ -4,9 +4,9 @@
 las secciones viejas puede ya no valer: para saber cómo está todo hoy, leer
 `EMPEZAR-ACA.md` y `CLAUDE.md`. Última entrada: 25/09/2026 (sección 13).
 
-Ver también [`INVESTIGACION.md`](INVESTIGACION.md) — lo legal y lo
+Ver también [`INVESTIGACION.md`](../../INVESTIGACION.md) — lo legal y lo
 competitivo, investigado aparte para no inflar este archivo. Y
-[`PENDIENTES.md`](PENDIENTES.md) — qué falta, por categoría; este archivo es
+[`PENDIENTES.md`](../../PENDIENTES.md) — qué falta, por categoría; este archivo es
 la historia de cómo se llegó hasta acá, no la lista de tareas.
 
 ## Cómo correr todo
@@ -279,7 +279,7 @@ o respuesta y con la normativa de calumnias e injurias. Ver
 
 Lo que salió de esa investigación ya está aplicado, no sólo escrito:
 
-- ✅ **Política de privacidad** — [`POLITICA-PRIVACIDAD.md`](POLITICA-PRIVACIDAD.md),
+- ✅ **Política de privacidad** — [`POLITICA-PRIVACIDAD.md`](../../POLITICA-PRIVACIDAD.md),
   lista para publicar como página del sitio.
 - ✅ **Doctrina Campillay en el prompt editorial** — `reels/reescritura.mjs`
   ahora exige atribuir la fuente y usar condicional en cualquier nota con
@@ -397,7 +397,7 @@ para cuando decidas dónde vive (GitHub, y con qué cuenta).
 ## 10. Redes con Meta y piezas en GitHub (21/09/2026)
 
 Lo que quedó aplicado ese día. El detalle operativo (horarios, reglas, claves,
-archivos) está en [`REDES.md`](REDES.md); acá va lo que se decidió y lo que se
+archivos) está en [`REDES.md`](../../REDES.md); acá va lo que se decidió y lo que se
 aprendió.
 
 **Lo que ya funciona**
@@ -478,7 +478,7 @@ Threads, la categoría de Instagram y las notas largas.
 ## 11. SEO, posicionamiento, biografías y hashtags
 
 Pedido de Hernán del 21/09. La lista completa de qué falta se movió a
-[`PENDIENTES.md`](PENDIENTES.md) (secciones B y C), para no repetirla en dos
+[`PENDIENTES.md`](../../PENDIENTES.md) (secciones B y C), para no repetirla en dos
 lugares. Lo que ya existía y no había que repetir sigue documentado ahí mismo.
 
 ## 12. Auditoría del 22/09/2026: pruebas, un descuido de seguridad y los subtítulos
@@ -516,7 +516,7 @@ código.
 
 **Documentación reorganizada:** los pendientes, que estaban repetidos y
 desactualizados entre `REDES.md`, `NOTAS.md`, `CLAUDE.md` y `EMPEZAR-ACA.md`,
-se juntaron en un solo archivo por categoría: [`PENDIENTES.md`](PENDIENTES.md).
+se juntaron en un solo archivo por categoría: [`PENDIENTES.md`](../../PENDIENTES.md).
 Los demás documentos apuntan ahí en vez de repetir la lista.
 
 **Lo que se dejó sin prueba, a propósito:** los scripts de `reels/` que

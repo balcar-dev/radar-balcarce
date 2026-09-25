@@ -26,7 +26,7 @@ sección B). Nada de acá inventa datos: sólo dice lo que el medio hace hoy.
 | **Enlace** | `https://radarbalcarce.com` |
 | **Categoría** | "Sitio web de noticias y medios de comunicación" (hoy está en "Blog personal"; no se ve en el perfil pero mejora cómo Instagram lo entiende). Se cambia desde el celular: Editar perfil → Categoría |
 | **Botón de contacto** | WhatsApp o correo del medio (el que se decida publicar) |
-| **Historias destacadas fijas** | Farmacia · Teléfonos · Agenda · Clima |
+| **Historias destacadas fijas** | Farmacia · Teléfonos · Agenda · Clima (portada cuadrada que se ve redonda: un ícono simple por tema) |
 | **Foto de perfil** | El avatar del medio (`reels/avatar.mjs`) sobre el rojo de la marca, centrado: se muestra redonda (ver medidas) |
 
 **Bio, opción A (131 caracteres)**
@@ -79,17 +79,12 @@ corregimos.
 radarbalcarce.com
 ```
 
-## Imágenes: medidas y colores
+## Imágenes y colores
 
-Las medidas viven en `redes/formatos.mjs` y se explican en `FORMATOS.md`
-(verificadas el 24/09/2026).
-
-| Imagen | Medida | Nota |
-|---|---|---|
-| Foto de perfil de Instagram | 1080 × 1080 | Se ve redonda: dejar aire en los bordes. **Sin confirmar en fuente oficial** |
-| Foto de perfil de Facebook | 720 × 720 | **Sin confirmar** |
-| Portada de la página de Facebook | 1640 × 624 | Texto en el centro: en el celular se recorta a los costados. **Sin confirmar** |
-| Historias destacadas de Instagram | Portada cuadrada, se muestra redonda | Un ícono simple por tema |
+Las medidas de cada imagen (foto de perfil, portada, historias destacadas)
+están en [`FORMATOS.md`](FORMATOS.md). La foto de perfil se arma con
+`node reels/avatar.mjs` y la portada de la página de Facebook con
+`node reels/portada.mjs`, con las mismas tipografías que las placas y la web.
 
 **Colores** (los de la web, `web/app/globals.css`):
 

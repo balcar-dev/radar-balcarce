@@ -124,19 +124,16 @@ tailscale funnel --https=443 off
 | `MANUAL.md` | Cómo se eligen las noticias: puntaje, semáforo, qué sale solo |
 | `EDITORIAL.md` | Las secciones y **cómo se escriben las notas** |
 | `REDES.md` | Qué se publica en Instagram y Facebook, a qué hora y con qué reglas |
-| `PERFILES.md` | Biografías, imágenes y colores de las redes |
+| `PERFILES.md` | Biografías y colores de las redes |
 | `FORMATOS.md` | Medidas de imágenes y videos, con auditoría semanal |
 | `SEO.md` | Cómo se posiciona la web y cómo se audita |
 | `PANEL.md` | El tablero: pestañas, respaldo, sincronización y cómo pasarlo online |
 | `PUBLICIDAD.md` | Los avisos, la competencia y cómo se piensa ganar plata |
 | `COMERCIAL.md` | La base de comercios, la vigencia y las propuestas |
 | `INVESTIGACION.md` | Lo legal, con las fuentes |
-| `INVESTIGACION-COMPETENCIA.md` | Cómo se ven los otros medios |
 | `PENDIENTES.md` | **Qué falta, por categoría** |
-| `AUDITORIA.md` | La auditoría del 25/09 y qué quedó arreglado |
 | `IDEAS.md` | Ideas de producto |
-| `NOTAS.md` | Decisiones vigentes (corto) |
 | `POLITICA-PRIVACIDAD.md` | El texto de la política de privacidad |
-| `HISTORIA.md` | Qué se hizo y por qué (histórico) |
+| `docs/historico/` | Lo que ya no se mantiene: la historia con fechas (`HISTORIA.md`), la auditoría del 25/09 (`AUDITORIA.md`) y cómo se veían los otros medios (`INVESTIGACION-COMPETENCIA.md`) |
 
-La lista completa, con el mismo orden, está al final de `CLAUDE.md`.
+La lista completa está al final de `CLAUDE.md`.

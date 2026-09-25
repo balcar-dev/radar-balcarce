@@ -2,7 +2,7 @@
 
 // Compartir una nota.
 //
-// Los cinco portales de la zona tienen WhatsApp (INVESTIGACION-COMPETENCIA.md):
+// Los cinco portales de la zona tienen WhatsApp (docs/historico/INVESTIGACION-COMPETENCIA.md):
 // en Argentina es donde vive la conversación del pueblo. Hasta ahora, para
 // pasarle una nota a alguien había que copiar la dirección del navegador a
 // mano, que en el celular es justo lo más incómodo.

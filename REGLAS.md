@@ -51,6 +51,26 @@ Cómo leer la columna "Qué la cuida":
 | 18 | **`ingesta/`, `panel/` y `redes/` no importan nada de afuera de Node.** | Prueba: `pruebas/fuentes.test.mjs` ("el motor no necesita nada instalado", "el detector de imports ve todas las formas de escribirlos"). Desde el 25/09 sigue los imports **en cadena**: antes miraba un solo nivel y no vio que el panel llegaba a `ffmpeg-static` a través de `reels/voz-gemini.mjs`. |
 | 19 | **Cuando se arregla algo que estuvo mal publicado, se escribe una prueba.** | Nada automático: es una costumbre. Es la que sostiene a todas las de arriba. |
 
+## Decisiones que siguen valiendo
+
+No tienen prueba: son de criterio. Se decidieron una vez y no se vuelven a
+discutir salvo que Hernán y Andrés lo pidan.
+
+- **Tecnología es un sello propio.** Ningún medio de Balcarce la cubre con
+  regularidad y conecta con el pueblo (el INTA Balcarce es uno de los centros
+  de investigación agropecuaria más grandes del país).
+- **El buzón tiene cuatro tipos**: dato, reclamo, opinión y seguimiento
+  (`panel/buzon.mjs`). Un reclamo **nunca se publica de un solo lado**: se le
+  pregunta a la otra parte. Una opinión va siempre firmada con nombre real.
+- **Sin fúnebres** (no hay fuente oficial), **sin comentarios** y **sin
+  transmisiones en vivo largas** (`docs/historico/INVESTIGACION-COMPETENCIA.md`).
+- **Facebook no se raspa**: va contra sus términos. Por eso las radios que
+  sólo existen en Facebook no son fuente (las que no entran y por qué:
+  `docs/historico/HISTORIA.md` § 3).
+- **Sin música en las piezas**: sonaba a pitido. Sólo la cortina de sonido.
+- **Lo de `reels/` que depende de la red o de ffmpeg no tiene prueba** a
+  propósito; la lógica pura que tenía adentro sí.
+
 ## Cuando se agrega una regla nueva
 
 1. Escribirla acá con el número siguiente, aunque vaya en otra tabla (los

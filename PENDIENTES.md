@@ -2,7 +2,7 @@
 
 Los otros documentos explican **cómo** funciona cada cosa; éste dice **qué
 falta**. Lo que se exige siempre está en `REGLAS.md`. El estado de la
-auditoría del 25/09, ítem por ítem, está en `AUDITORIA.md`.
+auditoría del 25/09, ítem por ítem, está en `docs/historico/AUDITORIA.md`.
 
 *Última revisión: 25/09/2026.* Lo que ya se hizo está al final ("Ya resuelto").
 Cada cosa figura una sola vez: si está en "Para mañana", no se repite abajo.
@@ -117,76 +117,68 @@ mañana".
 
 29. Mirar cómo salen las notas reescritas con IA (cuerpo distinto del copete,
     sin inventos) y ajustar el prompt si hace falta. Detalle en `EDITORIAL.md`.
-30. **Falsos positivos conocidos del semáforo** (Hernán y Andrés deciden: la
+30. **La clasificación por palabras se equivoca**: un proyecto de una escuela
+    primaria salió en Deportes; noticias de fútbol peruano entran por las
+    fuentes nacionales. Se ajusta agregando o sacando palabras en
+    `REGLAS_SECCION` (`ingesta/fuentes.mjs`); `npm run auditar` muestra qué
+    palabra decidió cada nota.
+31. **Falsos positivos conocidos del semáforo** (Hernán y Andrés deciden: la
     lista no se toca sin preguntar): "violación de la ley" da rojo y "el menor
     de los males" da amarillo. Hoy es preferible pasarse de cuidadoso; si
     frena demasiadas notas, se afina la frase.
-31. **Decidir con números** qué sección puede salir sola, cuál se lee más y si
+32. **Decidir con números** qué sección puede salir sola, cuál se lee más y si
     conviene partir o unir alguna, cuando la analítica de Cloudflare tenga un
     par de semanas de tráfico.
-32. **Fuentes nuevas para evaluar** (faltan confirmar si tienen RSS): **Acción
+33. **Fuentes nuevas para evaluar** (faltan confirmar si tienen RSS): **Acción
     5** (deportivo balcarceño, una segunda voz para Deportes) y el **Boletín
     Oficial Municipal** (`sibom.slyt.gba.gov.ar/bulletins/11595`, fuente
     primaria de las actas del Concejo Deliberante; conecta con `IDEAS.md`).
-33. Lo pendiente de la investigación de la competencia (WhatsApp para
+34. Lo pendiente de la investigación de la competencia (WhatsApp para
     lectores, alertas de clima, "lo más leído", encuestas): ver
-    `INVESTIGACION-COMPETENCIA.md` § 4.
+    `docs/historico/INVESTIGACION-COMPETENCIA.md` § 4.
 
 ## E. Panel
 
-34. **Panel 100% online.** Hoy vive en la PC de Hernán y, con la PC apagada, no
+35. **Panel 100% online.** Hoy vive en la PC de Hernán y, con la PC apagada, no
     se pueden decidir notas amarillas ni cargar avisos. Primero hay que
     decidir cómo se entra (Cloudflare Access o login propio) y que una persona
     cargue el token de GitHub en Cloudflare. Opciones sin costo y con costo en
     `PANEL.md`.
-35. **Apuntar `RESPALDO_CARPETA`** a una carpeta de Drive u OneDrive, para que
+36. **Apuntar `RESPALDO_CARPETA`** a una carpeta de Drive u OneDrive, para que
     el respaldo del panel quede afuera de la PC. Si se rompe el disco hoy, se
     pierde el historial editorial.
-36. Cerrar el túnel de Tailscale (`tailscale funnel --https=443 off`) cuando no
+37. Cerrar el túnel de Tailscale (`tailscale funnel --https=443 off`) cuando no
     haga falta.
 
 ## F. Infraestructura y código
 
-37. **Borrar el proyecto de Vercel y limpiar el DNS que quedó.** Vercel está
+38. **Borrar el proyecto de Vercel y limpiar el DNS que quedó.** Vercel está
     apagado desde el 25/09 (sin conexión a GitHub, no despliega). Borrar
     también el sitio duplicado de la cuenta vieja
     (`radar-balcarce.vercel.app`).
-38. **Clave gratuita de redacción** (`GEMINI_API_KEY_REDACCION`) sin cargar en
+39. **Clave gratuita de redacción** (`GEMINI_API_KEY_REDACCION`) sin cargar en
     GitHub: la reescritura usa la clave paga de redes (decidido el 24/09).
-39. **`tocaHoy`** (`ingesta/utiles.mjs`, qué día salen los teléfonos útiles)
+40. **`tocaHoy`** (`ingesta/utiles.mjs`, qué día salen los teléfonos útiles)
     todavía cuenta el día con la zona del servidor, no con la de Balcarce.
-40. `next`/`postcss` con una vulnerabilidad conocida (riesgo bajo: el sitio es
+41. `next`/`postcss` con una vulnerabilidad conocida (riesgo bajo: el sitio es
     estático). Actualizar cuando haya versión.
-41. Una política de seguridad de contenido (CSP) completa en
+42. Una política de seguridad de contenido (CSP) completa en
     `web/public/_headers` (hoy sólo `frame-ancestors`).
-42. `ingesta/ingesta.mjs` es muy largo.
+43. `ingesta/ingesta.mjs` es muy largo.
 
 ## G. Base comercial y publicidad
 
-43. **Completar los 145 comercios**, pedir la lista de socios a la Cámara de
+44. **Completar los 145 comercios**, pedir la lista de socios a la Cámara de
     Comercio y el padrón de habilitaciones al municipio. Todo en `COMERCIAL.md`.
-44. **Cargar el primer aviso** en los tres espacios de la web, preguntar
+45. **Cargar el primer aviso** en los tres espacios de la web, preguntar
     precios en Balcarce y armar la página `/publicidad` y el media kit
     (`PUBLICIDAD.md`).
 
-## H. Ideas más grandes, para pensar
-
-Cambian cómo funciona algo: conviene decidir con calma.
-
-- **Un panel de salud del sistema**: hoy hay que mirar tres workflows para
-  saber si algo falló (el vigilante ya cubre gran parte por WhatsApp).
-- **Una vista previa de lo que el reloj va a publicar** en las próximas horas.
-- **Analítica propia sin cookies** más completa que la de Cloudflare.
-- **Probar los workflows localmente** (`act`).
-- **Revisar la accesibilidad** de la web a fondo (el 25/09 se arreglaron el
-  contraste de Automovilismo y el nombre del buscador; falta el resto).
-- **La guía comercial y el mapa de Balcarce** con marketing conjunto y
-  sorteos (`IDEAS.md`, `COMERCIAL.md`): la idea más grande y la que más
-  conecta con vender publicidad.
+Las ideas más grandes, que cambian cómo funciona algo, están en `IDEAS.md`.
 
 ## Ya resuelto (para no volver a proponerlo)
 
-- **Arreglos de la auditoría del 25/09** (detalle en `AUDITORIA.md`):
+- **Arreglos de la auditoría del 25/09** (detalle en `docs/historico/AUDITORIA.md`):
   - **WhatsApp de la Vigilancia funcionando** (teléfono completo con 549 y la
     clave correcta; probado con "Prueba de WhatsApp").
   - **Repositorio público**, para no quedarse sin minutos de Actions. Sin
@@ -211,7 +203,7 @@ Cambian cómo funciona algo: conviene decidir con calma.
   - Panel: ya no publica en Vercel, respaldo sin claves, freno de intentos
     firme, control de origen, "Salir" por POST, poda de decisiones a 60 días,
     sin dependencias de afuera (con prueba que sigue los imports en cadena).
-  - Vercel apagado (queda borrar el proyecto: punto 37).
+  - Vercel apagado (queda borrar el proyecto: punto 38).
 - Dominio propio (`radarbalcarce.com`, 21/09) y mudanza a **Cloudflare Pages**
   (24/09), con `www` redirigido y Web Analytics.
 - Search Console verificado y sitemaps enviados (24/09); datos estructurados;

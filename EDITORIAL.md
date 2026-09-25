@@ -97,6 +97,13 @@ hay varias fuentes para la misma noticia, recibe cada una por separado.
 
 Las reglas que esto cuida están en `REGLAS.md` (5 y 6).
 
+**El guion de voz es el título**, dicho tal cual, y nada más.
+
+**Los títulos que los medios publican EN MAYÚSCULAS** se pasan a mayúscula
+inicial, cuidando los nombres propios con la lista `NOMBRES_PROPIOS` de
+`ingesta/fuentes.mjs`. Si un título aparece mal escrito, la palabra se agrega
+a esa lista y se arregla para siempre.
+
 ## La reescritura automática de las notas que salen solas
 
 Hasta el 22/09, una nota automática (verde, sin que nadie la mire) salía con

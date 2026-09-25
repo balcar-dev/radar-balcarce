@@ -25,7 +25,7 @@ el estado.
 | **Idioma y accesibilidad básica** | `lang="es-AR"`; las etiquetas de sección con contraste de al menos 4,5:1; el buscador tiene nombre para lectores de pantalla (25/09) | `pruebas/seo-paginas.test.mjs` |
 | **Search Console** | Propiedad de dominio verificada con un registro TXT en Cloudflare (24/09) | `radarbalcarce@gmail.com` |
 | **Analítica** | Cloudflare Web Analytics (gratis, sin cookies). Vercel Analytics se sacó: en Cloudflare pedía un archivo que no existe | `pruebas/seo-paginas.test.mjs` |
-| **Velocidad** | La portada es HTML estático, sin banners de terceros | ver `INVESTIGACION-COMPETENCIA.md` |
+| **Velocidad** | La portada es HTML estático, sin banners de terceros | ver `docs/historico/INVESTIGACION-COMPETENCIA.md` |
 
 ## Cómo se audita
 

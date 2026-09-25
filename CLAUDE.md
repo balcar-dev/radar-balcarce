@@ -12,7 +12,7 @@ rioplatense, sin voseo forzado.
     reels/     placas, voz y video. SÍ tiene dependencias (resvg, ffmpeg)
     redes/     publicar en Facebook e Instagram (API de Meta). SIN dependencias
     web/       el sitio público (Next.js 15, JavaScript, HTML estático)
-    pruebas/   `npm test`, 680+ pruebas, sin red
+    pruebas/   `npm test`, 770+ pruebas, sin red
 
 Flujo: fuentes → ingesta → clasificar → puntaje → semáforo → `web/data/portada.json`
 → GitHub Actions (cada 30 min) → **Cloudflare Pages** (desde el 24/09). Vercel
@@ -71,7 +71,13 @@ publicar piezas a mano. Detalle y horarios en `REDES.md`.
   nota pasa a rojo o amarillo, o una persona la bloquea, sale del archivo y
   pierde la página. Todo en `web/lib/archivo.js`.
 - **El turno de farmacia dura hasta las 8:30 de la mañana del día siguiente**, no
-  hasta la medianoche. La regla está en `ingesta/utiles.mjs`.
+  hasta la medianoche. La regla está en `ingesta/utiles.mjs`. El turno se
+  cruza contra La Vanguardia y Radio Gabal; la dirección sale del Colegio o de
+  La Vanguardia, y las que no están en ninguno (San José de la Plaza) van en
+  `FARMACIAS_A_MANO`
+  (`ingesta/fuentes.mjs`).
+- **Si Open-Meteo falla, el clima sale de `api.met.no`** (gratis, sin clave).
+  No da sensación térmica: no se inventa.
 - **Las palabras clave cortas engañan.** "gol" encontraba "golpe"; "partido" en
   la provincia es un municipio. Las ambiguas están en `PALABRAS_DEBILES`
   (`ingesta/ingesta.mjs`) y sólo deciden desde el titular.
@@ -83,6 +89,8 @@ publicar piezas a mano. Detalle y horarios en `REDES.md`.
   para redactar las notas (acepta el nombre viejo `GEMINI_API_KEY`) y
   `GEMINI_API_KEY_REDES` para voces y reels (`reels/claves.mjs`). La de redes
   no tiene alternativa: si falta, los reels no arrancan. La de redes es paga.
+  La reescritura usa `gemini-flash-lite-latest`: `gemini-flash-latest` daba
+  503 de alta demanda seguido; si vuelve a fallar, es el primer lugar donde mirar.
 - **En GitHub las piezas se arman con lo ya publicado** (`web/data/portada.json`,
   vía `redes/datos.mjs`), no con los datos del panel. `reels/marca/` está en
   `.gitignore` salvo las tipografías; la cortina de sonido se genera sola.
@@ -195,7 +203,7 @@ publicar piezas a mano. Detalle y horarios en `REDES.md`.
 | Documento | Qué cuenta |
 |---|---|
 | `EMPEZAR-ACA.md` | Enlaces, qué corre solo y qué hay que hacer a mano |
-| `REGLAS.md` | Lo que se exige siempre y la prueba o el chequeo que lo cuida |
+| `REGLAS.md` | Lo que se exige siempre y la prueba o el chequeo que lo cuida; las decisiones que siguen valiendo |
 | `INFRAESTRUCTURA.md` | Qué corre dónde, secretos por nombre, vencimientos, qué se cae y cómo se ve |
 | `MANUAL.md` | Cómo se eligen las noticias: puntaje, semáforo, diseño de la web |
 | `EDITORIAL.md` | Secciones y cómo se escribe una nota (título, copete, cuerpo) |
@@ -207,12 +215,11 @@ publicar piezas a mano. Detalle y horarios en `REDES.md`.
 | `PUBLICIDAD.md` | Avisos, monetización y AdSense |
 | `COMERCIAL.md` | La base de comercios, la vigencia y las propuestas |
 | `INVESTIGACION.md` | Lo legal, con fuentes |
-| `INVESTIGACION-COMPETENCIA.md` | Lo que hacen los otros medios, con hecho/pendiente |
 | `POLITICA-PRIVACIDAD.md` | El texto de la política de privacidad del sitio |
 | `PENDIENTES.md` | Qué falta, por categoría |
-| `AUDITORIA.md` | La auditoría del 25/09 y qué quedó arreglado o pendiente |
-| `AUDITORIA.md` | Última auditoría completa (25/09), por urgencia |
-| `IDEAS.md` | Ideas de producto |
-| `NOTAS.md` | Decisiones vigentes (corto) |
-| `HISTORIA.md` | Qué se hizo y por qué, con fecha (histórico) |
+| `IDEAS.md` | Ideas de producto y de sistema |
+| `ingesta/README.md` | El motor: qué hace cada archivo y cómo correrlo a mano |
 | `web/README.md` | La web: cómo correrla y dónde está cada cosa |
+| `docs/historico/HISTORIA.md` | Qué se hizo y por qué, con fecha (histórico, no se mantiene) |
+| `docs/historico/AUDITORIA.md` | La auditoría del 25/09 y qué quedó arreglado (histórico) |
+| `docs/historico/INVESTIGACION-COMPETENCIA.md` | Lo que hacen los otros medios, con hecho/pendiente (18/09, histórico) |

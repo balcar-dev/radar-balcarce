@@ -17,7 +17,7 @@ documento reúne lo que antes estaba repartido entre `REDES.md` y `IDEAS.md`.
 
 ## La competencia y su plata
 
-Revisado el 18/09/2026 (detalle en `INVESTIGACION-COMPETENCIA.md`):
+Revisado el 18/09/2026 (detalle en `docs/historico/INVESTIGACION-COMPETENCIA.md`):
 
 | | El Diario | Punto Nueve | La Vanguardia |
 |---|---|---|---|
@@ -119,4 +119,4 @@ avisos propios. El mismo pendiente, en `PENDIENTES.md` y `SEO.md`.
 
 `REDES.md` (los podcasts y las historias donde puede haber menciones),
 `COMERCIAL.md` (a quién ofrecerle qué), `IDEAS.md` (guía comercial y contenido
-propio), `PANEL.md`, `INVESTIGACION-COMPETENCIA.md`.
+propio), `PANEL.md`, `docs/historico/INVESTIGACION-COMPETENCIA.md`.

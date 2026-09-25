@@ -7,7 +7,7 @@ ajusta todo.
 
 Los otros documentos: `REGLAS.md` (lo que se exige siempre y qué lo vigila),
 `EDITORIAL.md` (cómo se escribe una nota), `REDES.md`, `INFRAESTRUCTURA.md`,
-`PENDIENTES.md` (qué falta), `NOTAS.md` (decisiones vigentes) e `INVESTIGACION.md`
+`PENDIENTES.md` (qué falta) e `INVESTIGACION.md`
 (lo legal, con fuentes). La lista completa está en `CLAUDE.md`.
 
 ---
@@ -94,7 +94,8 @@ La lista completa y actual está en `REGLAS_SEMAFORO` (`ingesta/fuentes.mjs`).
 Desde el 25/09 el semáforo lee también el texto completo de la fuente y lo
 que escribió la IA. Detalle en `EDITORIAL.md`.
 
-**⚫ Archivada.** A las 72 horas, lo que quedó sin decidir se archiva solo.
+**⚫ Archivada.** A las 72 horas, lo que quedó sin decidir se archiva solo
+(menos las notas sin fecha real).
 Está en la pestaña Archivadas del panel, no se pierde, pero deja de tapar la
 cola. (Eso lo hace el panel. Aparte, desde el 25/09 la portada de la web
 muestra sólo lo de las últimas 72 horas, aunque la PC esté apagada.)
@@ -114,31 +115,8 @@ muestra sólo lo de las últimas 72 horas, aunque la PC esté apagada.)
 
 ## 5. Cómo escribe el editor
 
-El detalle completo, con los dos tonos y cuándo cambia cada uno, está en
-[`EDITORIAL.md`](EDITORIAL.md). El prompt en sí vive en
-`reels/reescritura.mjs` y se lee tal cual en el panel, pestaña "Cómo escribe
-la IA". Lo central:
-
-- Nunca copia el texto original; lo reescribe, cruzando varias fuentes si hay
-  más de una.
-- Título de hasta 65 caracteres, sin signos de admiración.
-- Copete de dos líneas como mucho: qué pasó, dónde y cuándo.
-- Cuerpo: la nota desarrollada, de lo más importante a lo menos (pirámide
-  invertida), **distinta del copete**. Detalle en `EDITORIAL.md` § "Cómo se
-  escribe una nota".
-- **Dos tonos:** cercano y liviano para el día a día; sobrio e institucional
-  para Policiales y para cualquier problemática local (inseguridad, choques,
-  cortes de servicio, emergencias).
-- El guion de voz es el título, dicho tal cual, y nada más.
-- No inventa un dato que no esté en el original: recibe el **texto completo**
-  de la nota (`ingesta/articulo.mjs`) y se verifica contra todo lo que recibió.
-  Desde el 22/09 corre sola, en la nube, para lo que se publica sin revisión
-  humana, no sólo cuando el panel está prendido.
-
-Los títulos que los medios publican EN MAYÚSCULAS se pasan a mayúscula
-inicial, cuidando los nombres propios con la lista `NOMBRES_PROPIOS` de
-`fuentes.mjs`. **Si un título aparece mal escrito, la palabra se agrega a esa
-lista** y se arregla para siempre.
+Está en [`EDITORIAL.md`](EDITORIAL.md): las tres partes de una nota (título,
+copete y cuerpo), los dos tonos y cómo se controla lo que escribe la IA.
 
 ## 6. El diseño de la web
 
@@ -172,8 +150,8 @@ lados para que no se separen.
 
 ## 7. Las pruebas
 
-Se corren con `npm test` desde la carpeta del proyecto. Son más de 300, tardan
-menos de un segundo, no instalan nada y no salen a internet.
+Se corren con `npm test` desde la carpeta del proyecto. Son más de 700, tardan
+unos segundos, no instalan nada y no salen a internet.
 
 **Cada una es un error que ya pasó de verdad**, no un ejercicio: dos
 farmacias de turno mostradas como una sola, un sol dibujado un domingo
@@ -189,32 +167,7 @@ Al agregar una regla nueva —una palabra en `REGLAS_SECCION`, una farmacia en
 `FARMACIAS_A_MANO`— no hace falta escribir una prueba. Cuando se arregla algo
 que estuvo mal publicado, sí: es la única forma de que no vuelva.
 
-## 8. Lo que todavía falla
+## 8. Las redes
 
-- **La clasificación se equivoca.** Un proyecto de una escuela primaria salió
-  en Deportes; noticias de fútbol peruano entran por las fuentes nacionales.
-  Se ajusta agregando o sacando palabras en `REGLAS_SECCION`.
-- **Hay notas sin hora**, las que vienen de fuentes que no la publican. La web
-  dice "sin hora" en vez de inventar un "hace 1 minuto".
-- **Resuelto el 22/09: las notas ya no son sólo el resumen del feed.** Ahora
-  la reescritura con IA arma tres campos separados — título, copete (dos
-  líneas, lo que se ve arriba) y **cuerpo** (de uno a cuatro párrafos, la nota
-  desarrollada, hasta 1800 caracteres) — y la web muestra el cuerpo debajo
-  del copete en la página de cada nota. El guion de la voz sigue siendo sólo
-  el titular: en un reel de cinco segundos no hay tiempo para más. El panel
-  (pestaña "Para decidir") muestra y deja editar los tres campos por
-  separado desde el 23/09.
-- **Resuelto el 24/09: la IA recibe el texto completo de la nota original**
-  (`ingesta/articulo.mjs`), no sólo el resumen del feed. Sigue habiendo notas
-  con poco para trabajar (fuentes que bloquean la lectura o sin texto): ahí el
-  cuerpo puede ser corto o faltar, y el vigilante avisa si menos del 35 % de
-  las notas de las últimas 24 horas tienen cuerpo.
-
-## 9. Las redes
-
-Qué se publica en Facebook e Instagram, a qué hora, con qué voz y qué reglas lo
-frenan está en [`REDES.md`](REDES.md). En una línea: Facebook publica solo una
-nota por vez con enlace a la nota y sin nombrar la fuente; Instagram y la
-página de Facebook reciben **video con voz** (clima, farmacia y tres podcasts
-por día, más historias) armado en GitHub con Gemini; y Política y Policiales
-no salen solas a ninguna red.
+Qué se publica en Facebook e Instagram, a qué hora y con qué reglas está en
+[`REDES.md`](REDES.md).
