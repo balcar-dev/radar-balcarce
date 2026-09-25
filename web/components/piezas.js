@@ -117,12 +117,23 @@ export function TituloSeccion({ seccion, verTodo = true }) {
   );
 }
 
+/**
+ * Cuánto hace que salió la nota, en un <time> con la fecha exacta: lo lee
+ * Google, y components/horas-vivas.js lo recalcula en el navegador para que
+ * no quede congelado desde que se armó la página. Sin hora de la fuente, nada.
+ */
+export function Hace({ nota, className = 'meta' }) {
+  const texto = cuando(nota);
+  if (!texto) return null;
+  return <time className={className} dateTime={new Date(nota.fecha).toISOString()} data-hace="">{texto}</time>;
+}
+
 export function FilaNota({ nota }) {
   return (
     <div className="fila-nota">
-      {cuando(nota) && <span className="meta cuando">{cuando(nota)}</span>}
+      <Hace nota={nota} className="meta cuando" />
       <div style={{ flexGrow: 1 }}>
-        {cuando(nota) && <span className="meta cuando-movil">{cuando(nota)}</span>}
+        <Hace nota={nota} className="meta cuando-movil" />
         <h3><a href={nota.ruta}>{nota.titulo}</a></h3>
       </div>
     </div>
@@ -252,12 +263,14 @@ export function Firma({ nota }) {
   }
 
   const texto = reescrita
-    ? 'El resumen lo redactó una inteligencia artificial a partir de la nota original.'
-    : 'El resumen es el que publicó la fuente. No lo reescribimos.';
+    // Desde el 26/09 es una nota, no un resumen: la IA la escribe con lo que
+    // contaron todas las fuentes y se controla contra ellas (CRITERIO-EDITORIAL.md).
+    ? 'Esta nota la escribió una inteligencia artificial con lo que publicaron las fuentes, y se verificó automáticamente contra ellas: un dato que no estaba se descarta.'
+    : 'El texto es el que publicó la fuente. No lo reescribimos.';
 
   const quien = revisada
     ? 'Lo revisó y lo publicó una persona de la redacción.'
-    : 'Se publicó automáticamente: es una sección y un tema que no piden revisión.';
+    : 'Salió sin revisión humana: la sección y el tema no la piden.';
 
   return (
     <p className="firma-nota">

@@ -122,8 +122,24 @@ jobs:
             echo "Sin novedades: no hay nada que publicar."
           else
             git commit -m "Datos de la portada · $(TZ=America/Argentina/Buenos_Aires date '+%d/%m %H:%M')"
-            # El reloj de las redes también guarda su libro en este repositorio:
-            # se traen sus cambios antes de subir los nuestros.
-            git pull --rebase
-            git push
+            # El reloj de las redes y el panel también guardan en este
+            # repositorio: se traen sus cambios antes de subir los nuestros.
+            # Si chocan en un archivo de datos, gana lo que acaba de armar esta
+            # corrida (en un rebase, "theirs" es el commit propio que se está
+            # reaplicando). El 25/09 un archivo.json subido a mano trabó dos
+            # corridas seguidas. Y si otro sube justo en el medio, se reintenta.
+            for intento in 1 2 3; do
+              if ! git pull --rebase; then
+                # Sólo los archivos en conflicto, y sólo si son de web/data/.
+                chocan=$(git diff --name-only --diff-filter=U)
+                echo "$chocan" | grep -qv "^web/data/" && { echo "Conflicto fuera de web/data: $chocan"; git rebase --abort; exit 1; }
+                echo "$chocan" | xargs -r git checkout --theirs --
+                echo "$chocan" | xargs -r git add --
+                GIT_EDITOR=true git rebase --continue || { git rebase --abort; exit 1; }
+              fi
+              git push && break
+              sleep 5
+            done
+            git fetch -q origin main
+            [ "$(git rev-list --count origin/main..HEAD)" = 0 ] || { echo "No se pudo subir la portada después de tres intentos"; exit 1; }
           fi

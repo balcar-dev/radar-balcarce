@@ -268,14 +268,9 @@ export function porTema(ranura) {
     .sort((a, b) => new Date(b.fecha) - new Date(a.fecha));
 }
 
-export function haceCuanto(fechaISO) {
-  const min = Math.round((Date.now() - new Date(fechaISO).getTime()) / 60000);
-  if (min < 1) return 'recién';
-  if (min < 60) return `hace ${min} min`;
-  if (min < 1440) return `hace ${Math.round(min / 60)} h`;
-  const dias = Math.round(min / 1440);
-  return dias === 1 ? 'ayer' : `hace ${dias} días`;
-}
+// En lib/tiempo.js para que también lo use el navegador (components/horas-vivas.js).
+export { haceCuanto } from './tiempo.js';
+import { haceCuanto } from './tiempo.js';
 
 /**
  * Qué decir en el lugar de la hora.

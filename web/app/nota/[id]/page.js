@@ -1,8 +1,8 @@
 import {
-  obtenerDatos, obtenerNota, todasLasNotas, cuando, datosSeccion, nombreCorto, temasVivos,
+  obtenerDatos, obtenerNota, todasLasNotas, datosSeccion, nombreCorto, temasVivos,
 } from '@/lib/datos';
 import {
-  Etiqueta, FilaNota, Cierre, Invitacion, Firma, TemasDeLaNota,
+  Etiqueta, FilaNota, Cierre, Invitacion, Firma, TemasDeLaNota, Hace,
 } from '@/components/piezas';
 import Compartir from '@/components/compartir';
 import FuentesDeLaNota from '@/components/verificacion';
@@ -81,7 +81,7 @@ export default function PaginaNota({ params }) {
       <article className="cuerpo-nota">
         <div className="chapa-nota">
           <Etiqueta seccion={n.seccion} />
-          <span className="meta">{cuando(n)}</span>
+          <Hace nota={n} />
         </div>
 
         <h1>{n.titulo}</h1>

@@ -7,7 +7,7 @@
     "datos": "node scripts/generar-datos.mjs",
     "dev": "npm run datos && next dev",
     "_comentario_build": "OJO: build NO regenera los datos. scripts/generar-datos.mjs (que lee ../ingesta y ../panel) corre aparte, con `npm run datos`: lo hace GitHub Actions (Actualizar la web), y data/portada.json y data/archivo.json se versionan a proposito. El build (Cloudflare Pages) compila con lo que ya esta. redirects si corre en el build: solo lee esos datos.",
-    "redirects": "node scripts/generar-redirects.mjs",
+    "redirects": "node --no-warnings=MODULE_TYPELESS_PACKAGE_JSON scripts/generar-redirects.mjs",
     "_comentario_dolar": "dolar guarda la foto de la cotizacion en data/dolar.json (scripts/foto-dolar.mjs). Corre en cada build, nunca lo frena y el archivo no se versiona: la pagina /dolar la muestra mientras el navegador consulta la de ahora.",
     "dolar": "node --no-warnings=MODULE_TYPELESS_PACKAGE_JSON scripts/foto-dolar.mjs",
     "build": "npm run dolar && npm run redirects && next build",

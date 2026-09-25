@@ -1,6 +1,7 @@
 import {
-  obtenerDatos, temasVivos, SECCIONES, proximosEventos,
+  obtenerDatos, obtenerArchivo, temasVivos, SECCIONES, proximosEventos,
 } from '@/lib/datos';
+import { tieneCuerpo } from '@/lib/cuerpo';
 import { cuantasPaginas, direccionDePagina } from '@/lib/paginas';
 import { sitio } from '@/lib/sitio';
 
@@ -64,6 +65,20 @@ export default function sitemap() {
     priority: n.local ? 0.9 : 0.6,
   }));
 
+  // Las notas que ya salieron de la portada siguen teniendo página (el
+  // archivo, 180 días). Hasta el 26/09 no estaban acá y Google no encontraba
+  // unas 1.500 páginas propias. Sólo las que tienen cuerpo: una nota de un
+  // párrafo no es algo que valga la pena ofrecerle a un buscador.
+  const enPortada = new Set(notas.map((n) => n.id));
+  const archivadas = obtenerArchivo()
+    .filter((n) => !enPortada.has(n.id) && tieneCuerpo(n))
+    .map((n) => ({
+      url: `${base}${n.ruta}`,
+      lastModified: new Date(n.fecha),
+      changeFrequency: 'monthly',
+      priority: n.local ? 0.5 : 0.3,
+    }));
+
   // Los eventos que vienen, cada uno con su página. Los que ya pasaron siguen
   // teniendo página (los enlaces no se rompen) pero no se ofrecen a Google.
   const deEventos = proximosEventos().map((e) => ({
@@ -73,6 +88,6 @@ export default function sitemap() {
     priority: 0.7,
   }));
 
-  return [...fijas, ...secciones, ...temas, ...deNotas, ...deEventos];
+  return [...fijas, ...secciones, ...temas, ...deNotas, ...archivadas, ...deEventos];
 }
 

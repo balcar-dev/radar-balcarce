@@ -1,9 +1,9 @@
 import {
-  obtenerDatos, cuando, armarTapa, temasVivos, proximosEventos,
+  obtenerDatos, armarTapa, temasVivos, proximosEventos,
 } from '@/lib/datos';
 import {
   TarjetaFarmacia, TarjetaBuzon,
-  Etiqueta, TituloSeccion, FilaNota, Evento,
+  Etiqueta, TituloSeccion, FilaNota, Evento, Hace,
 } from '@/components/piezas';
 import { TarjetaClima } from '@/components/clima-vivo';
 import { Aviso } from '@/components/avisos';
@@ -79,7 +79,7 @@ export default function Portada() {
             <article className="destacada">
               <div className="chapa-nota">
                 <Etiqueta seccion={principal.seccion} />
-                {cuando(principal) && <span className="meta">{cuando(principal)}</span>}
+                <Hace nota={principal} />
               </div>
 
               <h2><a href={principal.ruta}>{principal.titulo}</a></h2>
@@ -110,7 +110,7 @@ export default function Portada() {
                   <article key={n.id}>
                     <div className="chapa-nota">
                       <Etiqueta seccion={n.seccion} />
-                      {cuando(n) && <span className="meta">{cuando(n)}</span>}
+                      <Hace nota={n} />
                     </div>
                     <h3><a href={n.ruta}>{n.titulo}</a></h3>
                     {n.copete && <p>{recortar(n.copete, 150)}</p>}

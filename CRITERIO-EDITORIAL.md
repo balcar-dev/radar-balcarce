@@ -385,10 +385,14 @@ lo que ya publicó, y los botones para verlo en Instagram y Facebook. Si una
 de esas notas se retira después, el repaso se rearma sin ella. Cuáles notas y
 a qué hora: sección 9 y `REDES.md`.
 
-<!-- NOTAS PROPIAS: lugar para completar el criterio de las notas propias del
-dólar y de los podcasts (cómo se escriben, qué datos usan, quién las firma).
-Lo que se escriba acá es criterio editorial: si agrega un número, va también
-a la tabla de la sección 11 y a ingesta/criterio.mjs. -->
+**Cómo se escriben.** La del dólar: título con el día y los dos números que
+más se buscan ("El dólar blue cotiza a $1.560 este viernes 25; el oficial, a
+$1.540"), nunca "abre" ni "en vivo", porque la nota puede salir un rato después
+de la apertura. Sin adjetivos ("se dispara", "se desploma") y sin pronósticos:
+sólo los números y la diferencia en pesos y en porcentaje. La firma dice la hora
+real en que se consultaron los datos. La del repaso: cada nota con su titular
+enlazado y lo que esa nota ya publicó; nunca incluye Política ni Policiales
+(tampoco los podcasts), y sin dos notas con página no hay repaso.
 
 **Quién las firma.** La nota dice que es de Radar Balcarce y de dónde salen
 los datos (por ejemplo, la del repaso: "Nota de Radar Balcarce: el texto del

@@ -1,8 +1,8 @@
 import {
-  obtenerDatos, cuando, porRanura, nombreCorto, ordenarPortada, SECCIONES, proximosEventos,
+  obtenerDatos, porRanura, nombreCorto, ordenarPortada, SECCIONES, proximosEventos,
 } from '@/lib/datos';
 import {
-  PlacaSeccion, Etiqueta, FilaNota, Cierre, Invitacion, Evento,
+  PlacaSeccion, Etiqueta, FilaNota, Cierre, Invitacion, Evento, Hace,
 } from '@/components/piezas';
 import { notFound } from 'next/navigation';
 import {
@@ -98,7 +98,7 @@ export default function PaginaSeccion({ params }) {
         <a href={principal.ruta}><PlacaSeccion seccion={principal.seccion} /></a>
         <div className="chapa-nota" style={{ marginTop: 16 }}>
           <Etiqueta seccion={principal.seccion} />
-          {cuando(principal) && <span className="meta">{cuando(principal)}</span>}
+          <Hace nota={principal} />
         </div>
         <h2><a href={principal.ruta}>{principal.titulo}</a></h2>
         {principal.copete && <p>{principal.copete}</p>}

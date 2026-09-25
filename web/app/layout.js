@@ -8,6 +8,7 @@ import Buscador from '@/components/buscador';
 import { Aviso } from '@/components/avisos';
 import { sitio, enElDominioPropio, NOMBRE } from '@/lib/sitio';
 import { FichaDelSitio } from '@/components/ficha';
+import HorasVivas from '@/components/horas-vivas';
 
 const DESCRIPCION = 'Lo que pasa en Balcarce, la región y el país. Actualizado todo el día, con la fuente siempre a la vista.';
 
@@ -95,6 +96,7 @@ export default function RaizLayout({ children }) {
         />
       </head>
       <body>
+        <HorasVivas />
         {/* La chapa de servicio: clima y farmacia de turno, en todas las
             páginas. Son las dos cosas que la gente viene a buscar sin
             querer leer nada. */}

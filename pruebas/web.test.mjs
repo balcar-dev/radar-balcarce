@@ -210,3 +210,16 @@ test('sin notas no se rompe', () => {
   assert.deepEqual(ordenarPortada([]), { principal: null, resto: [] });
   assert.deepEqual(ordenarPortada(), { principal: null, resto: [] });
 });
+// ------------------------------------------------ las horas no se congelan
+
+test('"hace X" se recalcula en el navegador: el <time> lleva la fecha exacta (26/09)', async () => {
+  const { haceCuanto } = await import('../web/lib/tiempo.js');
+  const hace2h = new Date(Date.now() - 2 * 3600 * 1000).toISOString();
+  assert.equal(haceCuanto(hace2h), 'hace 2 h');
+  assert.equal(haceCuanto(hace2h, Date.now() + 3600 * 1000), 'hace 3 h', 'una hora después dice otra cosa');
+  const fs = await import('node:fs');
+  const piezas = fs.readFileSync(new URL('../web/components/piezas.js', import.meta.url), 'utf8');
+  assert.match(piezas, /<time[^>]*dateTime=[^>]*data-hace/);
+  const layout = fs.readFileSync(new URL('../web/app/layout.js', import.meta.url), 'utf8');
+  assert.match(layout, /<HorasVivas \/>/);
+});
