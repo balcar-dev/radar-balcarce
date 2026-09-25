@@ -18,9 +18,10 @@ import path from 'node:path';
 import { NUMEROS, tocaHoy, diaDeEstaSemana, diaDeTurno, comoISO, decisionHumana } from '../../ingesta/utiles.mjs';
 import { avisosDelClima } from '../../ingesta/alertas.mjs';
 import {
-  reescribirAutomaticas, previasDeLaPortada, extrasParaLaWeb, sinExtras, CAMPOS_EXTRA,
+  reescribirAutomaticas, previasDeLaPortada, extrasParaLaWeb, sinExtras, CAMPOS_EXTRA, podarIntentos,
 } from '../../reels/reescritura.mjs';
-import { TEMAS } from '../../ingesta/fuentes.mjs';
+import { TEMAS, MOTIVO_COTIZACION } from '../../ingesta/fuentes.mjs';
+import { tieneCuerpo } from '../lib/cuerpo.js';
 import { pendientesDeLaIngesta } from '../../redes/avisos.mjs';
 import {
   vigenteEnPortada, slugsConocidos, fijarSlug, actualizarArchivo, idsEnRedes, sinPuntaje, comoArchivoJson,
@@ -41,6 +42,10 @@ const LIBRO_REDES = path.join(AQUI, '..', 'data', 'redes.json');
 const AGENDA_WEB = path.join(AQUI, '..', 'data', 'agenda.json');
 // Lo que el panel publicó en la pestaña Agenda (lo sube panel/sincronizar.mjs).
 const EVENTOS_PANEL = path.join(AQUI, '..', 'data', 'eventos-panel.json');
+// Cuántas veces se le pidió cada nota a Gemini (reels/reescritura.mjs,
+// MAXIMO_DE_INTENTOS): { id: { intentos, ultimo, motivo } }, podado a 7 días.
+// Va versionado: es la única memoria entre corridas de lo que NO salió.
+const INTENTOS_IA = path.join(AQUI, '..', 'data', 'intentos-ia.json');
 
 function leerJson(archivo, porDefecto = null) {
   try { return JSON.parse(fs.readFileSync(archivo, 'utf8')); } catch { return porDefecto; }
@@ -119,6 +124,8 @@ const ahoraISO = new Date().toISOString();
 // Lo de más de 72 horas no se reescribe si no estaba hecho: ya no va a salir
 // en ninguna lista, y sería gastar cuota en una nota que nadie va a ver.
 let reescritas = {};
+const intentosAntes = leerJson(INTENTOS_IA, null);
+const intentos = podarIntentos(intentosAntes ?? {});
 if (enLaNube) {
   const previas = previasDeLaPortada([...(archivoAnterior.notas ?? []), ...(anterior.notas ?? [])]);
   const fechaParaLista = (n) => (n.cuando === 'sin fecha en la fuente' ? (vistoAntes[n.id] ?? ahoraISO) : n.fecha);
@@ -127,10 +134,15 @@ if (enLaNube) {
   // El archivo va también como fuente de ANTECEDENTES: lo que el sitio ya
   // publicó sobre el mismo tema en los últimos 30 días (EDITORIAL.md).
   reescritas = await reescribirAutomaticas(paraReescribir, {
-    previas, decisiones: estado.decisiones, archivo: archivoAnterior.notas ?? [],
+    previas, decisiones: estado.decisiones, archivo: archivoAnterior.notas ?? [], intentos,
   });
   const nuevas = Object.keys(reescritas).filter((id) => !previas[id]).length;
   if (nuevas) console.log(`  ${nuevas} notas reescritas con IA en esta corrida`);
+}
+// Se escribe siempre que falte (el workflow lo suma con `git add`) o cambie.
+const intentosFinal = podarIntentos(intentos);
+if (!intentosAntes || JSON.stringify(intentosFinal) !== JSON.stringify(podarIntentos(intentosAntes))) {
+  fs.writeFileSync(INTENTOS_IA, `${JSON.stringify(intentosFinal, null, 1)}\n`, 'utf8');
 }
 
 // La dirección de cada nota se fija la primera vez que sale y no cambia más,
@@ -140,12 +152,18 @@ const direcciones = slugsConocidos({
   archivo: archivoAnterior.notas ?? [], anterior: anterior.notas ?? [], libro: libroRedes,
 });
 
+// Las notas automáticas que no se publican porque no tienen cuerpo (regla del
+// 25/09, web/lib/cuerpo.js). Sólo las que irían a las listas: el vigilante
+// las cuenta en el resumen de las 21.
+const esperandoCuerpo = [];
+
 function notaPublicada(n) {
   const d = estado.decisiones[n.id];
   // Sólo manda lo que decidió una persona. Lo que guardó la máquina es una
   // foto de un semáforo viejo: ver decisionHumana en ingesta/utiles.mjs.
   const delSemaforo = { verde: 'automatica', rojo: 'bloqueada' }[n.semaforo] ?? 'pendiente';
-  const st = decisionHumana(d) ? d.estado : delSemaforo;
+  const humana = decisionHumana(d);
+  const st = humana ? d.estado : delSemaforo;
   if (st !== 'publicada' && st !== 'automatica') return null;
   // Lo que decidió una persona manda. Si no, lo que ya reescribió la IA sola
   // en esta corrida o en una anterior. Si ninguna de las dos cosas pasó,
@@ -153,18 +171,23 @@ function notaPublicada(n) {
   // Que `guion` tenga algo es justamente la señal que usa <Firma> para decir
   // "esto lo redactó una IA": no hace falta un campo aparte para lo mismo.
   const auto = reescritas[n.id];
+  // De dónde sale el texto: lo de una persona manda siempre. Lo que escribió
+  // la IA desde el panel (una decisión "de la máquina"), sólo si tiene cuerpo
+  // de verdad; si no, lo que se reescribió acá, en la nube. Antes un cuerpo
+  // vacío guardado por el panel tapaba uno bueno escrito en la nube.
+  const deLaDecision = humana || tieneCuerpo(d) || !auto ? d : undefined;
   // Con su dirección fijada: la que ya tenía, o la del titular de hoy si es
   // la primera vez que sale.
-  return fijarSlug({
+  const nota = fijarSlug({
     id: n.id,
-    titulo: d?.titulo ?? auto?.titulo ?? n.titulo,
-    copete: d?.copete ?? auto?.copete ?? n.resumenFuente ?? '',
+    titulo: deLaDecision?.titulo ?? auto?.titulo ?? n.titulo,
+    copete: deLaDecision?.copete ?? auto?.copete ?? n.resumenFuente ?? '',
     // Sólo existe cuando la reescribió la IA (o lo cargó una persona a
     // mano): el resumen mecánico de la fuente no tiene de dónde sacar un
     // cuerpo propio, así que la nota queda con el copete nada más, como
     // siempre — ver EDITORIAL.md.
-    cuerpo: d?.cuerpo ?? auto?.cuerpo ?? null,
-    guion: d?.guion ?? auto?.guion ?? null,
+    cuerpo: deLaDecision?.cuerpo ?? auto?.cuerpo ?? null,
+    guion: deLaDecision?.guion ?? auto?.guion ?? null,
     seccion: n.seccion,
     medios: n.medios,
     enlace: n.enlace,
@@ -203,8 +226,17 @@ function notaPublicada(n) {
     // nivel de verificación. Sólo en lo reescrito desde ese día: lo de antes
     // se ve como se veía. Nunca se mezclan las de una persona con las de la
     // IA (extrasParaLaWeb en reels/reescritura.mjs).
-    ...extrasParaLaWeb(d, auto),
+    ...extrasParaLaWeb(deLaDecision, auto),
   }, direcciones);
+  // SIN CUERPO NO SE PUBLICA (25/09): una nota automática sin cuerpo de
+  // verdad (70 palabras o más, distinto de la bajada) queda "esperando
+  // cuerpo" y no aparece en ninguna lista, ni en el feed, el sitemap o las
+  // redes (todo sale de acá). Lo que publicó una persona se respeta.
+  if (!humana && !tieneCuerpo(nota)) {
+    if (vigenteEnPortada(nota)) esperandoCuerpo.push(n.id);
+    return null;
+  }
+  return nota;
 }
 
 const publicadas = (ultima.notas ?? [])
@@ -244,7 +276,10 @@ for (const a of archivoAnterior.notas ?? []) {
         titulo: d.titulo ?? a.titulo, copete: d.copete ?? a.copete, cuerpo: d.cuerpo ?? a.cuerpo, guion: d.guion ?? a.guion,
       });
     }
-  } else if (['rojo', 'amarillo'].includes(enIngesta.get(a.id)?.semaforo)) {
+  } else if (['rojo', 'amarillo'].includes(enIngesta.get(a.id)?.semaforo)
+    // La cotización del dólar no es sensible: sale de las listas (está en
+    // /dolar) pero su página queda, por si el enlace ya circula.
+    && enIngesta.get(a.id)?.motivo !== MOTIVO_COTIZACION) {
     retiradas.add(a.id);
   }
 }
@@ -327,6 +362,9 @@ const salida = {
   // y sin titular cuando la nota es de Policiales o habla de chicos o de
   // víctimas (redes/avisos.mjs, pendientesDeLaIngesta).
   pendientes: pendientesDeLaIngesta(ultima.notas ?? [], estado.decisiones ?? {}),
+  // Cuántas notas automáticas no salen porque todavía no tienen cuerpo: el
+  // vigilante lo dice en el resumen de las 21 ("Esperando cuerpo: N").
+  esperandoCuerpo: esperandoCuerpo.length,
 };
 
 fs.mkdirSync(path.dirname(SALIDA), { recursive: true });
@@ -364,7 +402,7 @@ function cambioQueImporta(antes, ahora) {
 
 if (cambioQueImporta(anterior, salida)) {
   fs.writeFileSync(SALIDA, JSON.stringify(salida, null, 2), 'utf8');
-  console.log(`  portada.json: ${notas.length} notas publicadas, generado ${salida.generado}`);
+  console.log(`  portada.json: ${notas.length} notas publicadas, ${esperandoCuerpo.length} esperando cuerpo, generado ${salida.generado}`);
 } else {
   console.log('  sin novedades: la portada quedó igual, no se toca el archivo');
 }

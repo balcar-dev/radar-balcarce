@@ -50,6 +50,14 @@ publicar piezas a mano. Detalle y horarios en `REDES.md`.
 - **Lo que escribe la IA se verifica contra la fuente** (`ingesta/verificar.mjs`).
   Si inventó un número, un nombre, un día o una cita, no se usa.
 - **Cada nota dice quién la escribió** (IA o fuente, automática o revisada).
+- **Sin cuerpo no se publica** (25/09). Una nota automática sin cuerpo de al
+  menos 70 palabras no va a ningún lado público (`web/lib/cuerpo.js`); se
+  reintenta hasta tres veces (`web/data/intentos-ia.json`). Lo que publica una
+  persona se respeta, pero el panel pide confirmarlo.
+- **El lector ve la nota, no el análisis** (25/09). La página muestra título,
+  bajada, cuerpo y un desplegable cerrado "Fuentes (N)". Claves, qué se sabe,
+  qué falta confirmar, aportes y nivel de verificación son de uso interno: se
+  ven en el panel. Verificación BAJA y la cotización del dólar no salen solas.
 
 ## Cosas que muerden
 
@@ -168,7 +176,10 @@ publicar piezas a mano. Detalle y horarios en `REDES.md`.
   no se pueden decidir notas amarillas ni cargar avisos.
 - **La IA recibe el texto completo de la nota original** (`ingesta/articulo.mjs`)
   para escribir el cuerpo, y se verifica contra todo lo que recibió. Sin eso
-  inventaba nombres y números y se rechazaba 65% de las notas.
+  inventaba nombres y números y se rechazaba 65% de las notas. Si el cuerpo
+  trae un dato que no cuadra, se sacan esas oraciones (`depurarCuerpo`). Sin
+  texto completo de ninguna fuente y con un resumen corto, no se le pide nada.
+  El panel reescribe con el mismo flujo (`reescribirAutomaticas`).
 - **Todo lo que falta, por categoría, está en [`PENDIENTES.md`](PENDIENTES.md)**
   (redes, SEO, bios, editorial, técnico) y en `IDEAS.md` (ideas de producto).
   Qué se publica y cómo se escribe: `EDITORIAL.md`. Redes: `REDES.md`.
@@ -187,7 +198,10 @@ publicar piezas a mano. Detalle y horarios en `REDES.md`.
 | que el semáforo mire lo que escribe la IA | `reels/reescritura.mjs` (`semaforoDeLaReescritura`; usa las listas de `REGLAS_SEMAFORO`) |
 | cuánto dura una nota en la portada o en el archivo | `web/lib/archivo.js` (`HORAS_EN_PORTADA`, `DIAS_DE_ARCHIVO`, `MAXIMO_EN_ARCHIVO`) |
 | cambiar el tono o las reglas con que la IA reescribe una nota | `reels/reescritura.mjs` (`INSTRUCCION_EDITORIAL`, `esTemaSerio`) |
-| cambiar cómo se calcula el nivel de verificación, los antecedentes o las partes nuevas (claves, qué se sabe, texto para redes) | `reels/reescritura.mjs` (`nivelDeVerificacion`, `antecedentesDe`, `completarReescritura`); cómo se ven: `web/components/verificacion.js`. Qué fuente es oficial: `oficial: true` en `ingesta/fuentes.mjs` |
+| cambiar cómo se calcula el nivel de verificación, los antecedentes o las partes nuevas (claves, qué se sabe, texto para redes) | `reels/reescritura.mjs` (`nivelDeVerificacion`, `antecedentesDe`, `completarReescritura`); se ven en el panel ("Análisis interno", `panel/panel.html`), no en la web. Qué fuente es oficial: `oficial: true` en `ingesta/fuentes.mjs` |
+| cambiar qué ve el lector al pie de la nota (el desplegable de fuentes) | `web/components/verificacion.js` y `web/lib/fuentes-de-la-nota.js` |
+| cambiar cuándo una nota "tiene cuerpo" o cuántos intentos se le dan | `web/lib/cuerpo.js` (`PALABRAS_MINIMAS_CUERPO`) y `reels/reescritura.mjs` (`MAXIMO_DE_INTENTOS`, `PALABRAS_MINIMAS_DE_MATERIAL`) |
+| que la cotización del dólar (u otra cosa que no es nota) no salga | `REGLAS_SEMAFORO.cotizacion` en `ingesta/fuentes.mjs` (mira sólo el título) |
 | cambiar cuándo salen las historias | panel → Calendario (`panel/horarios.mjs`) |
 | cambiar qué se publica en Facebook, reels, historias o el podcast | `redes/elegir.mjs` |
 | cambiar a qué hora sale una pieza de Instagram | `redes/piezas.mjs` (ventana) y `reels/plan.mjs` (horarios de reels e historias de notas) |

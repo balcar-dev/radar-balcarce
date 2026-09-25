@@ -286,3 +286,30 @@ test('un cuerpo corto y fiel a la fuente no tiene ningún problema', () => {
   });
   assert.equal(r.ok, true, JSON.stringify(r.problemas));
 });
+
+// ---------------------------------------------------------------- "en vivo"
+//
+// 25/09: "Dólar hoy y dólar blue en vivo…" salió con ese titular. El sitio no
+// hace coberturas en vivo: ni el título, ni la bajada, ni el guion ni el texto
+// para redes lo pueden decir, aunque la fuente sí.
+
+test('el título o la bajada no pueden decir "en vivo", "minuto a minuto" ni "en directo"', () => {
+  const fuente = { titulo: 'Colapinto en vivo: minuto a minuto de la clasificación', resumen: 'Seguí en vivo la clasificación.' };
+  const base = { titulo: 'Colapinto larga la clasificación', copete: 'La clasificación empieza temprano.', guion: 'x' };
+  for (const [campo, texto] of [['titulo', 'Colapinto en vivo en la clasificación'], ['titulo', 'Minuto a minuto de la clasificación'], ['copete', 'La clasificación, EN DIRECTO.'], ['guion', 'Colapinto, en vivo']]) {
+    const r = verificar(fuente, { ...base, [campo]: texto });
+    assert.ok(r.problemas.some((p) => p.tipo === 'forma' && p.detalle.includes(campo)), `${campo}: ${texto}`);
+  }
+  assert.equal(verificar(fuente, base).ok, true, JSON.stringify(verificar(fuente, base).problemas));
+});
+
+test('un show con música en vivo sí se puede anunciar', () => {
+  const fuente = { titulo: 'Habrá música en vivo en la plaza', resumen: 'El sábado habrá música en vivo en la plaza.' };
+  const r = verificar(fuente, { titulo: 'La plaza tendrá música en vivo el sábado', copete: 'Habrá un show con bandas en vivo.', guion: 'x' });
+  assert.ok(!r.problemas.some((p) => p.tipo === 'forma'), JSON.stringify(r.problemas));
+});
+
+test('la regla de "en vivo" vale también al revalidar lo ya publicado', () => {
+  const r = verificar({}, { titulo: 'Dólar hoy en vivo', copete: 'La cotización.', guion: 'x' }, { soloForma: true });
+  assert.ok(r.problemas.some((p) => p.tipo === 'forma'));
+});

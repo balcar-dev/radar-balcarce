@@ -5,7 +5,7 @@ import {
   Etiqueta, FilaNota, Cierre, Invitacion, Firma, TemasDeLaNota,
 } from '@/components/piezas';
 import Compartir from '@/components/compartir';
-import VerificacionDeLaNota from '@/components/verificacion';
+import FuentesDeLaNota from '@/components/verificacion';
 import { OG_COMUN } from '@/components/metadatos';
 import { FichaDeNota, Migas } from '@/components/ficha';
 import { notFound } from 'next/navigation';
@@ -93,30 +93,24 @@ export default function PaginaNota({ params }) {
             día de mañana hay una foto o ilustración propia de la nota
             (con IA, por ejemplo), va este espacio. */}
 
-        {/* El cuerpo sólo existe si la IA reescribió la nota (o alguien la
-            cargó a mano): el resumen mecánico de la fuente no tiene de dónde
-            sacar más texto propio, así que ahí no se muestra nada acá y la
-            nota queda con el copete nada más. */}
+        {/* El cuerpo: la nota elaborada. Desde el 25/09 una nota automática
+            sin cuerpo no se publica (web/lib/cuerpo.js); sólo puede faltar en
+            lo que publicó una persona a mano o en páginas viejas del archivo. */}
         {n.cuerpo && n.cuerpo.split('\n').map((p) => p.trim()).filter(Boolean).map((parrafo) => (
           <p key={parrafo.slice(0, 40)} style={{ fontSize: 16, lineHeight: 1.7, marginTop: 16, color: 'var(--texto)' }}>{parrafo}</p>
         ))}
 
-        {/* Claves, qué se sabe, qué falta confirmar, fuentes consultadas y el
-            nivel de verificación (desde el 25/09). Las notas de antes no lo
-            traen y no se dibuja nada. */}
-        <VerificacionDeLaNota nota={n} />
+        {/* Lo que ve el lector es la nota: título, bajada y cuerpo. Al pie,
+            las fuentes en un desplegable chico y cerrado (nombre del medio y
+            enlace), que es también la atribución. Las claves, qué se sabe,
+            qué falta confirmar, lo que aportó cada fuente y el nivel de
+            verificación son de uso interno: se usan para escribir la nota y
+            se ven en el panel, no acá (criterio del 25/09, EDITORIAL.md). */}
+        <FuentesDeLaNota nota={n} />
 
         {MOSTRAR_TEMAS && <TemasDeLaNota temas={n.temas} catalogo={temas} />}
         <Compartir titulo={n.titulo} />
         <Firma nota={n} />
-
-        <div className="atribucion">
-          <strong>De dónde sale esta nota.</strong> La informaron{' '}
-          {n.medios.join(' y ')}. Nosotros la resumimos; el trabajo original es de ellos
-          y está completo acá:
-          <br />
-          <a href={n.enlace} target="_blank" rel="noopener noreferrer">Leer la nota original ↗</a>
-        </div>
 
         {relacionadas.length > 0 && (
           <section className="bloque-seccion">

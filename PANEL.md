@@ -44,7 +44,7 @@ Dos usuarios: **Hernán** y **Andrés**. Cada uno con su contraseña.
 
 | Pestaña | Para qué |
 |---|---|
-| **Para decidir** | La cola de notas amarillas (denuncias, detenidos, muertes, chicos, promociones, lo de afuera con poco puntaje y País): publicar, descartar o editar título, copete y cuerpo. Política y Policiales llegan acá sólo si el semáforo las frena: si da verde, salen solas a la web (a las redes, nunca sin una persona) |
+| **Para decidir** | La cola de notas amarillas (denuncias, detenidos, muertes, chicos, promociones, lo de afuera con poco puntaje, País, la cotización del dólar y lo que tiene verificación baja): publicar, descartar o editar título, copete y cuerpo. Política y Policiales llegan acá sólo si el semáforo las frena: si da verde, salen solas a la web (a las redes, nunca sin una persona). Cada nota tiene, plegado, su **análisis interno** (nivel de verificación y porqué, claves, qué se sabe, qué falta confirmar, fuentes con lo que aportó cada una, antecedentes): es para quien decide, no se muestra en la web. Si la nota **no tiene cuerpo** (menos de 70 palabras), lo avisa y "Publicar" pide confirmarlo con el botón "Publicar igual, sin cuerpo" |
 | **Publicadas / Descartadas / Frenadas / Archivadas** | Lo ya decidido. **Frenadas** es el semáforo rojo (menores, víctimas): no se publica ni por error. **Archivadas** son las que pasaron 72 horas sin decidir |
 | **Fuentes** | Las 45 fuentes, con sus pesos y temas |
 | **Clima y farmacias** | Lo que la web muestra hoy |
@@ -66,6 +66,16 @@ la consola y no rompe el panel: el cambio queda en el archivo y se sube en el
 siguiente intento. Se apaga con `SINCRONIZAR_GITHUB=no`. Al exportar,
 `decisiones.json` se poda: se van las decisiones de más de 60 días, salvo lo
 que una persona sacó de circulación.
+
+**La reescritura del panel es la misma que la de la nube** (desde el 25/09):
+`reescribirPendientes` llama a `reescribirAutomaticas` (`reels/reescritura.mjs`)
+con las mismas reglas: texto completo de las fuentes, cuerpo obligatorio,
+oraciones dudosas sacadas, tres intentos por nota (`estado.intentosIA`, en
+`panel/datos/`), semáforo sobre todo lo escrito, verificación baja que espera
+a una persona, la cotización del dólar afuera y nada de "en vivo" en los
+títulos. El botón "Reescribir con IA" también baja el texto completo y saca
+las oraciones que no cuadran. **Después de actualizar el código hay que
+reiniciar el panel** (cerrar su ventana y correr `ARRANCAR.bat`).
 
 **El panel ya no publica la web.** Hasta el 25/09 intentaba subir a Vercel
 cada 2 horas y regeneraba `portada.json`; se sacó. La web la arma y la

@@ -6,7 +6,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import {
-  NOMBRES_PROPIOS, FIGURAS, TEMAS, FARMACIAS_A_MANO, PISO_DE_AFUERA, PISO_POR_DEFECTO, CUPO_DE_AFUERA, CUPO_POR_DEFECTO, BALCARCE, FUENTES, FUENTES_NACIONALES, PALABRAS_LOCALES, PALABRAS_ZONA, REGLAS_SECCION, AMARILLO_MENORES, REGLAS_SEMAFORO,
+  NOMBRES_PROPIOS, FIGURAS, TEMAS, FARMACIAS_A_MANO, PISO_DE_AFUERA, PISO_POR_DEFECTO, CUPO_DE_AFUERA, CUPO_POR_DEFECTO, BALCARCE, FUENTES, FUENTES_NACIONALES, PALABRAS_LOCALES, PALABRAS_ZONA, REGLAS_SECCION, AMARILLO_MENORES, REGLAS_SEMAFORO, MOTIVO_COTIZACION,
 } from './fuentes.mjs';
 import { diaDeTurno, fechaEnBalcarce } from './utiles.mjs';
 
@@ -482,6 +482,11 @@ export function semaforoDelTexto(textoCrudo, { soloMenores = false } = {}) {
 function semaforo(nota, seccion, puntaje) {
   const sensible = semaforoDelTexto(`${nota.titulo} ${nota.cuerpo.slice(0, 600)}`);
   if (sensible) return sensible;
+  // La cotización del dólar no sale como nota: está en /dolar. Sólo el título.
+  const delTitulo = normalizar(String(nota.titulo ?? ''));
+  if ((REGLAS_SEMAFORO.cotizacion ?? []).some((p) => contiene(delTitulo, p))) {
+    return { color: 'amarillo', motivo: MOTIVO_COTIZACION };
+  }
   const texto = normalizar(`${nota.titulo} ${nota.cuerpo.slice(0, 600)}`);
   for (const p of REGLAS_SEMAFORO.promocional ?? []) {
     if (contiene(texto, p)) return { color: 'amarillo', motivo: `parece promoción, no noticia: "${p}"` };

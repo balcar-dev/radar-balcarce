@@ -112,7 +112,10 @@ jobs:
           # El mail interno de la cuenta balcar-dev, que GitHub reconoce. No
           # cambiarlo (ver CLAUDE.md).
           git config user.email "272334999+balcar-dev@users.noreply.github.com"
-          git add web/data/portada.json web/data/archivo.json web/data/agenda.json
+          # intentos-ia.json: cuántas veces se le pidió cada nota a Gemini (tope
+          # de tres por nota, reels/reescritura.mjs). Sin guardarlo, el tope no
+          # existiría: cada corrida empezaría de cero.
+          git add web/data/portada.json web/data/archivo.json web/data/agenda.json web/data/intentos-ia.json
           if git diff --cached --quiet; then
             echo "Sin novedades: no hay nada que publicar."
           else

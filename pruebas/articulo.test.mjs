@@ -43,3 +43,30 @@ test('baja la página y devuelve el texto', async () => {
   const t = await traerTexto('https://x', { fetchFn: async () => ({ ok: true, text: async () => PAGINA }) });
   assert.ok(t.includes(P2));
 });
+
+// 25/09: de 42 notas publicadas sin cuerpo, 21 no tenían el texto completo
+// por culpa de este extractor, no del medio. Dos casos reales:
+
+test('La Nación, Olé, Ámbito…: el primer <article> es una tarjeta, no la nota; igual encuentra la nota', () => {
+  const tarjeta = '<article class="relacionada"><p>Otra nota que no tiene nada que ver con esta y que aparece arriba.</p></article>';
+  const relleno = '<div class="menu">' + 'x'.repeat(8000) + '</div>';
+  const pagina = `<html><body>${tarjeta}${relleno}<div class="cuerpo"><p>${P1}</p><div class="aviso">publicidad</div><p>${P2}</p><p>${P3}</p></div>${relleno}<article><p>Más notas relacionadas con títulos largos para leer después.</p></article></body></html>`;
+  const t = extraerTexto(pagina);
+  assert.ok(t && t.includes(P1) && t.includes(P2) && t.includes(P3), t);
+  assert.ok(!t.includes('Otra nota que no tiene nada que ver'), 'se coló una tarjeta relacionada');
+});
+
+test('Infórmese Primero (Blogger): el enlace es una entrada de feed Atom y el texto viene escapado adentro', () => {
+  const html = `<p></p><div class="separator"><a href="x"><img src="y.jpg" /></a></div>${P1}<p></p><p>${P2}</p><p><b>Un subtítulo</b></p><p>${P3}</p>`;
+  const escapado = html.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+  const xml = `<?xml version='1.0' encoding='UTF-8'?><?xml-stylesheet href="http://www.blogger.com/styles/atom.css" type="text/css"?><entry xmlns='http://www.w3.org/2005/Atom'><title type='text'>Título</title><content type='html'>${escapado}</content><link rel='alternate' type='text/html' href='http://www.informeseprimero.com.ar/x.html'/></entry>`;
+  const t = extraerTexto(xml);
+  assert.ok(t && t.includes(P1) && t.includes(P2) && t.includes(P3), t);
+  assert.ok(!t.includes('<'), 'quedaron etiquetas');
+});
+
+test('sin enlace no sale a buscar nada', async () => {
+  let pidio = false;
+  assert.equal(await traerTexto(undefined, { fetchFn: async () => { pidio = true; return { ok: true, text: async () => PAGINA }; } }), null);
+  assert.equal(pidio, false);
+});

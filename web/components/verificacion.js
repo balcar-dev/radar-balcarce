@@ -1,87 +1,59 @@
-// Lo que la nota sabe y lo que no: las claves, qué se sabe, qué falta
-// confirmar, de dónde sale cada dato y el nivel de verificación.
+// Las fuentes de la nota, en un desplegable chico y cerrado al pie.
 //
-// Existe desde el 25/09, cuando la reescritura pasó a trabajar como "editor
-// digital" (reels/reescritura.mjs). Todo sale de la nota ya verificada: la IA
-// escribió las claves y los puntos, el verificador los comparó contra la
-// fuente y descartó lo que no cuadraba, y el NIVEL lo calculó el código, no
-// la IA (nivelDeVerificacion). Las notas de antes no traen nada de esto y se
-// ven como siempre: el componente no dibuja nada.
+// Criterio de Hernán y Andrés (25/09): el sitio opera como un diario. La
+// redacción recibe la noticia, suma lo que contaron todas las fuentes, lo
+// contrasta y escribe la nota; el lector ve la NOTA (título, bajada y
+// cuerpo), no el análisis. "Una cosa es lo que usemos internamente, otra que
+// se desplieguen infinitas fuentes dentro de la página."
 //
-// Componente de servidor, sin estado: HTML estático como el resto de la nota.
+// Por eso acá va sólo el nombre de cada medio con el enlace a su nota. Las
+// claves, qué se sabe, qué falta confirmar, lo que aportó cada fuente, los
+// antecedentes y el nivel de verificación se siguen generando y guardando
+// (portada.json y archivo.json), pero son de uso interno: se ven en el panel
+// (panel/panel.html), no en la web, y tampoco van a los datos para Google.
+//
+// La atribución no es opcional (ley 11.723): toda nota tiene al menos la
+// fuente principal, aunque sea de antes de que existieran las fuentes
+// consultadas.
+//
+// Componente de servidor, sin estado: <details> de HTML, sin JavaScript.
+// Qué fuentes van sale de lib/fuentes-de-la-nota.js (sin JSX, se prueba).
 
-const ZONA = 'America/Argentina/Buenos_Aires';
+import { fuentesDeLaNota } from '@/lib/fuentes-de-la-nota';
 
-const NOMBRE_DEL_NIVEL = { ALTA: 'Verificación alta', MEDIA: 'Verificación media', BAJA: 'Verificación baja' };
-
-function fechaCorta(iso) {
-  const t = Date.parse(iso ?? '');
-  if (!Number.isFinite(t)) return '';
-  return new Intl.DateTimeFormat('es-AR', {
-    day: 'numeric', month: 'numeric', year: 'numeric', timeZone: ZONA,
-  }).format(new Date(t));
+// Chico y en gris de rótulo: es un dato de apoyo, no otra nota. En el
+// celular, el renglón del desplegable tiene 44 px de alto para el dedo.
+const ESTILO = `
+.fuentes-nota { margin-top: 26px; padding-top: 6px; border-top: 1px solid var(--linea); }
+.fuentes-nota summary {
+  display: flex; align-items: center; gap: 6px; min-height: 44px; cursor: pointer; list-style: none;
+  font-size: 12px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--suave);
 }
+.fuentes-nota summary::-webkit-details-marker { display: none; }
+.fuentes-nota summary::after { content: ""; width: 7px; height: 7px; margin-left: 2px; border-right: 2px solid currentColor; border-bottom: 2px solid currentColor; transform: translateY(-2px) rotate(45deg); transition: transform .15s; }
+.fuentes-nota[open] summary::after { transform: translateY(2px) rotate(-135deg); }
+.fuentes-nota summary:focus-visible { outline: 2px solid var(--rojo); outline-offset: 2px; border-radius: 4px; }
+.fuentes-nota ul { margin: 0 0 8px; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 8px; }
+.fuentes-nota li { font-size: 14px; line-height: 1.45; overflow-wrap: anywhere; }
+.fuentes-nota a { color: var(--rojo); font-weight: 600; }
+`;
 
-function Lista({ titulo, puntos, clase = '' }) {
-  if (!puntos?.length) return null;
+export default function FuentesDeLaNota({ nota }) {
+  const fuentes = fuentesDeLaNota(nota);
+  if (!fuentes.length) return null;
   return (
-    <div className={`bloque-verificacion ${clase}`.trim()}>
-      <h2>{titulo}</h2>
+    <details className="fuentes-nota">
+      <style dangerouslySetInnerHTML={{ __html: ESTILO }} />
+      <summary>Fuentes ({fuentes.length})</summary>
       <ul>
-        {puntos.map((p) => <li key={p}>{p}</li>)}
+        {fuentes.map((f) => (
+          <li key={f.enlace ?? f.medio}>
+            {f.enlace
+              ? <a href={f.enlace} target="_blank" rel="noopener noreferrer">{f.medio ?? 'Nota original'}</a>
+              : <span>{f.medio}</span>}
+          </li>
+        ))}
       </ul>
-    </div>
-  );
-}
-
-/** ¿La nota trae algo de esto? Las de antes del 25/09, no. */
-export function tieneVerificacion(nota) {
-  return Boolean(nota?.verificacion || nota?.claves?.length || nota?.seSabe?.length
-    || nota?.noConfirmado?.length || nota?.fuentesConsultadas?.length);
-}
-
-export default function VerificacionDeLaNota({ nota }) {
-  if (!tieneVerificacion(nota)) return null;
-  const v = nota.verificacion;
-  const fuentes = nota.fuentesConsultadas ?? [];
-  const antecedentes = nota.antecedentes ?? [];
-
-  return (
-    <section className="verificacion-nota" aria-label="Qué se sabe de esta nota y de dónde sale">
-      {v?.nivel && (
-        <p className="nivel-verificacion">
-          <span className={`chapa-nivel nivel-${v.nivel.toLowerCase()}`}>{NOMBRE_DEL_NIVEL[v.nivel] ?? v.nivel}</span>
-          <span>{v.porque}</span>
-        </p>
-      )}
-
-      <Lista titulo="Claves" puntos={nota.claves} />
-      <Lista titulo="Qué se sabe" puntos={nota.seSabe} />
-      <Lista titulo="Qué falta confirmar" puntos={nota.noConfirmado} />
-
-      {(fuentes.length > 0 || antecedentes.length > 0) && (
-        <div className="bloque-verificacion fuentes-consultadas">
-          <h2>Fuentes consultadas</h2>
-          <ul>
-            {fuentes.map((f, i) => (
-              <li key={f.enlace ?? `${f.medio}-${i}`}>
-                {f.enlace
-                  ? <a href={f.enlace} target="_blank" rel="noopener noreferrer">{f.medio ?? 'Nota original'}</a>
-                  : <strong>{f.medio}</strong>}
-                {f.oficial && <span className="dato-fuente"> · fuente oficial</span>}
-                {fechaCorta(f.fecha) && <span className="dato-fuente"> · {fechaCorta(f.fecha)}</span>}
-                {f.aporte && <span className="aporte"> — {f.aporte}</span>}
-              </li>
-            ))}
-            {antecedentes.map((a) => (
-              <li key={a.id ?? a.ruta}>
-                <span className="dato-fuente">Nota anterior de Radar Balcarce{fechaCorta(a.fecha) ? `, del ${fechaCorta(a.fecha)}` : ''}: </span>
-                <a href={a.ruta}>{a.titulo}</a>
-              </li>
-            ))}
-          </ul>
-        </div>
-      )}
-    </section>
+    </details>
   );
 }

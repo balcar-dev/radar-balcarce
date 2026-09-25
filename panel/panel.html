@@ -198,6 +198,7 @@ function tarjeta(n) {
       <span>${esc(n.cuando)}</span>
       ${n.medios.length > 1 ? '<span class="etiq ok">coinciden ' + n.medios.length + '</span>' : ''}
       ${n.nombraBalcarce ? '<span class="etiq ok">nos nombran afuera</span>' : ''}
+      ${n.conCuerpo === false ? '<span class="etiq">sin cuerpo</span>' : ''}
       <span class="rel">${n.relevancia}</span>
     </div>
     <div class="tit">${esc(n.titulo)}</div>
@@ -221,21 +222,43 @@ function vistaCola() {
   </div>`;
 }
 
-// Lo que la IA arma además del texto (desde el 25/09): el nivel de
-// verificación, las claves, qué falta confirmar y el texto para Facebook. Se
-// muestra, no se edita: si alguien corrige el texto, esto se borra (lo armó
-// la IA sobre su versión) y la nota sale como las de antes.
-function partesDeLaIA(n) {
+// El análisis interno de la nota (desde el 25/09): el nivel de verificación
+// y su porqué, las claves, qué se sabe, qué falta confirmar, las fuentes con
+// lo que aportó cada una, los antecedentes y el texto para Facebook. Es para
+// quien decide: en la web el lector ve sólo el título, la bajada, el cuerpo y
+// un desplegable con las fuentes (EDITORIAL.md). Plegado, para no tapar el
+// texto. Se muestra, no se edita: si alguien corrige el texto, esto se borra
+// (lo armó la IA sobre su versión).
+const MINIMO_CUERPO = 70; // web/lib/cuerpo.js, PALABRAS_MINIMAS_CUERPO
+const palabras = (s) => (String(s || '').match(/[\p{L}\p{N}]+/gu) || []).length;
+
+function analisisInterno(n) {
   const v = n.verificacion;
-  const lista = (titulo, xs) => (xs && xs.length ? `<div style="margin-top:6px"><b>${titulo}</b><ul style="margin:2px 0 0 18px;padding:0">${xs.map((x) => `<li>${esc(x)}</li>`).join('')}</ul></div>` : '');
-  if (!v && !(n.claves || []).length && !n.textoRedes) return '';
-  return `<div class="mini" style="margin-top:10px;border:1px solid var(--linea, #ddd);border-radius:8px;padding:10px">
-    ${v ? `<div><b>Verificación ${esc(v.nivel)}</b> · ${esc(v.porque)}${v.sugeridoPorIA && v.sugeridoPorIA !== v.nivel ? ` <i>(la IA sugería ${esc(v.sugeridoPorIA)})</i>` : ''}</div>` : ''}
-    ${lista('Claves', n.claves)}
-    ${lista('Qué falta confirmar', n.noConfirmado)}
-    ${n.textoRedes ? `<div style="margin-top:6px"><b>Para Facebook</b><br>${esc(n.textoRedes)}</div>` : ''}
-    <div style="margin-top:6px"><i>Si corregís el título, la bajada o el cuerpo, esto se borra: lo armó la IA sobre su versión.</i></div>
-  </div>`;
+  const fuentes = n.fuentesConsultadas || [];
+  const antecedentes = n.antecedentes || [];
+  const lista = (titulo, xs) => (xs && xs.length ? `<div style="margin-top:8px"><b>${titulo}</b><ul style="margin:2px 0 0 18px;padding:0">${xs.map((x) => `<li>${esc(x)}</li>`).join('')}</ul></div>` : '');
+  if (!v && !(n.claves || []).length && !(n.seSabe || []).length && !(n.noConfirmado || []).length && !fuentes.length && !n.textoRedes) return '';
+  const fecha = (iso) => (iso ? new Date(iso).toLocaleDateString('es-AR') : '');
+  return `<details class="analisis" style="margin-top:10px;border:1px solid var(--linea, #ddd);border-radius:8px;padding:8px 10px">
+    <summary style="cursor:pointer;font-weight:600;min-height:32px;display:flex;align-items:center">Análisis interno${v ? ` · verificación ${esc(v.nivel).toLowerCase()}` : ''}</summary>
+    <div class="mini" style="margin-top:4px">
+      ${v ? `<div><b>Verificación ${esc(v.nivel)}</b> · ${esc(v.porque)}${v.sugeridoPorIA && v.sugeridoPorIA !== v.nivel ? ` <i>(la IA sugería ${esc(v.sugeridoPorIA)})</i>` : ''}${v.nivel === 'BAJA' ? '<br><b>Con verificación baja no sale sola: espera a una persona.</b>' : ''}</div>` : ''}
+      ${lista('Claves', n.claves)}
+      ${lista('Qué se sabe', n.seSabe)}
+      ${lista('Qué falta confirmar', n.noConfirmado)}
+      ${fuentes.length ? `<div style="margin-top:8px"><b>Fuentes y qué aportó cada una</b><ul style="margin:2px 0 0 18px;padding:0">${fuentes.map((f) => `<li>${f.enlace ? `<a href="${esc(f.enlace)}" target="_blank" rel="noopener">${esc(f.medio || 'Nota original')}</a>` : esc(f.medio || '')}${f.oficial ? ' · oficial' : ''}${f.fecha ? ` · ${esc(fecha(f.fecha))}` : ''}${f.aporte ? ` — ${esc(f.aporte)}` : ''}</li>`).join('')}</ul></div>` : ''}
+      ${antecedentes.length ? `<div style="margin-top:8px"><b>Antecedentes (notas nuestras anteriores)</b><ul style="margin:2px 0 0 18px;padding:0">${antecedentes.map((a) => `<li>${esc(fecha(a.fecha))} · ${esc(a.titulo)}</li>`).join('')}</ul></div>` : ''}
+      ${n.textoRedes ? `<div style="margin-top:8px"><b>Para Facebook</b><br>${esc(n.textoRedes)}</div>` : ''}
+      <div style="margin-top:8px"><i>Esto no se muestra en la web. Si corregís el título, la bajada o el cuerpo, se borra: lo armó la IA sobre su versión.</i></div>
+    </div>
+  </details>`;
+}
+
+/** El aviso de "sin cuerpo" arriba de los botones. */
+function avisoSinCuerpo(n) {
+  const p = palabras(n.cuerpo);
+  if (p >= MINIMO_CUERPO) return '<div id="avisoCuerpo"></div>';
+  return `<div id="avisoCuerpo" class="aviso">Esta nota no tiene cuerpo (${p} palabras; hacen falta ${MINIMO_CUERPO}). Sin cuerpo no sale sola en la web, y publicarla a mano pide confirmarlo.</div>`;
 }
 
 function detalle(n) {
@@ -256,12 +279,13 @@ function detalle(n) {
     <textarea id="eB" rows="6">${esc(n.cuerpo || '')}</textarea>
     <label class="campo" for="eG">GUION PARA LA VOZ</label>
     <textarea id="eG" rows="3">${esc(n.guion || '')}</textarea>
-    ${partesDeLaIA(n)}
+    ${analisisInterno(n)}
     <div class="mini" style="margin-top:10px">
       Fuente: ${esc(n.medios.join(' + '))} · ${esc(n.cuando)}<br>
       <a href="${esc(n.enlace)}" target="_blank" rel="noopener">Ver la nota original ↗</a>
     </div>
     <div class="aviso">${esc(n.motivo)}</div>
+    ${avisoSinCuerpo(n)}
     <div class="acciones">
       <button class="b verde" data-acc="publicada">Publicar</button>
       <button class="b" data-acc="editar">Guardar cambios</button>
@@ -786,9 +810,31 @@ function conectar() {
   document.querySelectorAll('[data-acc]').forEach((b) => {
     b.onclick = async () => {
       b.disabled = true;
-      const d = await api('/api/nota', {
+      const pedido = {
         id: sel, accion: b.dataset.acc, titulo: $('#eT').value, copete: $('#eC').value, cuerpo: $('#eB').value, guion: $('#eG').value,
-      });
+      };
+      const d = await api('/api/nota', pedido);
+      // Sin cuerpo, el servidor no publica: pide confirmarlo acá, con un
+      // botón en la página (no con un cuadro del navegador).
+      if (d.sinCuerpo) {
+        b.disabled = false;
+        const aviso = $('#avisoCuerpo');
+        aviso.className = 'aviso';
+        aviso.innerHTML = `<b>${esc(d.error)}</b><br>Sin cuerpo, el lector ve sólo el título y la bajada. ¿La publicás igual?
+          <div class="acciones" style="margin-top:8px">
+            <button class="b verde" id="btnPublicarSinCuerpo">Publicar igual, sin cuerpo</button>
+            <button class="b" id="btnCancelarSinCuerpo">Mejor no</button>
+          </div>`;
+        aviso.scrollIntoView({ block: 'center', behavior: 'smooth' });
+        $('#btnCancelarSinCuerpo').onclick = () => { aviso.className = ''; aviso.innerHTML = ''; };
+        $('#btnPublicarSinCuerpo').onclick = async () => {
+          $('#btnPublicarSinCuerpo').disabled = true;
+          const r = await api('/api/nota', { ...pedido, confirmarSinCuerpo: true });
+          sel = null;
+          cargar(r);
+        };
+        return;
+      }
       if (b.dataset.acc !== 'editar') sel = null;
       cargar(d);
     };

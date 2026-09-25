@@ -43,7 +43,7 @@ export const LIMITES_AVISOS = {
 /** Lo amarillo que no es para una persona: relleno de afuera que el filtro
  *  ya dejó afuera por puntaje o por cupo. Son decenas por corrida y casi
  *  nunca se aprueban: avisarlas sería ruido. */
-export const MOTIVOS_DE_RELLENO = /de afuera y con poco puntaje|pas[oó] el cupo/i;
+export const MOTIVOS_DE_RELLENO = /de afuera y con poco puntaje|pas[oó] el cupo|cotizaci[oó]n del d[oó]lar/i;
 
 /** Motivos que hablan de chicos o de víctimas: esas notas van SIN titular a
  *  portada.json, que es público (leyes 26.061 y 26.485). */
@@ -261,6 +261,8 @@ export function datosDelDia({ ahora = new Date(), portada = {}, libro = {} }) {
     instagramFotos: Object.values(libro?.instagramFeed ?? {}).filter((p) => esDeHoy(p.cuando)).length,
     piezas: Object.fromEntries(PIEZAS_DEL_RESUMEN.map(([n]) => [n, Boolean(libro?.instagram?.[`${hoy}/${n}`])])),
     pendientes: Array.isArray(portada?.pendientes) ? portada.pendientes.length : null,
+    // Las automáticas que no salen porque no tienen cuerpo (web/lib/cuerpo.js).
+    esperandoCuerpo: Number.isFinite(portada?.esperandoCuerpo) ? portada.esperandoCuerpo : null,
   };
 }
 
@@ -279,6 +281,7 @@ export function textoResumen({ datos, problemas = [], problemasArriba = false, e
   l.push(`• Facebook: ${datos.facebook} posteo(s) · Instagram: ${datos.instagramFotos} foto(s)`);
   l.push(`• Piezas: ${PIEZAS_DEL_RESUMEN.map(([n, nombre]) => `${nombre} ${datos.piezas[n] ? '✓' : '✗'}`).join(' · ')}`);
   if (datos.pendientes !== null && datos.pendientes !== undefined) l.push(`• Esperando a una persona: ${datos.pendientes}`);
+  if (datos.esperandoCuerpo !== null && datos.esperandoCuerpo !== undefined) l.push(`• Esperando cuerpo: ${datos.esperandoCuerpo}`);
   if (web?.actualizado) l.push(`• Web al día (última actualización ${horaCorta(web.actualizado)})`);
   if (!problemas.length) l.push('• Problemas abiertos: ninguno');
   else if (problemasArriba) l.push(`• Problemas abiertos: ${problemas.length} (ver arriba)`);

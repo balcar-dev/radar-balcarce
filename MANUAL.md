@@ -91,7 +91,11 @@ violencia de género, femicidio, grooming, abuso infantil, y desde el 25/09 más
 detenido, acusado, imputado), lo que habla de una muerte y lo que involucra a
 un chico. También lo que **parece promoción y no noticia** (sorteo, "ganá tu
 entrada", "participá del", auspicia): no se bloquea, pero nunca sale solo. Y
-lo de afuera con poco puntaje o fuera del cupo de su sección.
+lo de afuera con poco puntaje o fuera del cupo de su sección. Desde el 25/09,
+también la **cotización del dólar** (si el título es "dólar hoy", "dólar
+blue", "a cuánto cotiza"…: se muestra en `/dolar`) y lo que el código califica
+con **verificación baja** (un solo medio que se apoya en una denuncia o una
+declaración de parte).
 
 **🟢 Verde — sale automático.** Los comunicados oficiales del municipio y todo
 lo demás en diez de las once secciones (todas menos País). Política y
@@ -110,6 +114,13 @@ muestra sólo lo de las últimas 72 horas, aunque la PC esté apagada.)
 
 ## 4. Qué NO se publica, más allá del semáforo
 
+- **Una nota automática sin cuerpo** (desde el 25/09): si la IA no llegó a
+  escribir un cuerpo de al menos 70 palabras, la nota no aparece en ningún
+  lado público hasta tenerlo. Se reintenta hasta tres veces. Ver
+  `EDITORIAL.md` ("Sin cuerpo no se publica").
+- **El análisis interno**: las claves, qué se sabe, qué falta confirmar, lo que
+  aportó cada fuente y el nivel de verificación se usan para escribir y se ven
+  en el panel. El lector ve la nota y un desplegable con las fuentes.
 - **La foto del medio de origen, nunca.** La excepción de "noticias de interés
   general" de la ley 11.723 cubre el texto, no las fotografías. En su lugar va
   una placa tipográfica propia con el color de la sección.
@@ -124,7 +135,8 @@ muestra sólo lo de las últimas 72 horas, aunque la PC esté apagada.)
 ## 5. Cómo escribe el editor
 
 Está en [`EDITORIAL.md`](EDITORIAL.md): las tres partes de una nota (título,
-copete y cuerpo), los dos tonos y cómo se controla lo que escribe la IA.
+copete y cuerpo, que es obligatorio), los dos tonos, cómo se controla lo que
+escribe la IA y qué ve el lector frente a lo que usa la redacción.
 
 ## 6. El diseño de la web
 

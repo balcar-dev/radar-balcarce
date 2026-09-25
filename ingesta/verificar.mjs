@@ -22,6 +22,8 @@
 //     → { ok: boolean, problemas: [{ tipo, detalle }] }
 //   verificarExtras(fuente, { claves, seSabe, noConfirmado, aportes, textoRedes, etiquetas })
 //     → { claves: { ok, problemas }, …, etiquetas: { ok, problemas, validas } }
+//   depurarCuerpo(fuente, { copete, cuerpo })
+//     → { cuerpo, sacadas }: el cuerpo sin las oraciones que no pasan (25/09)
 //
 // Los ANTECEDENTES (desde el 25/09) son notas que el sitio ya publicó sobre el
 // mismo tema, que la IA recibe para dar contexto. Cuentan como material
@@ -299,8 +301,25 @@ function problemasDelTexto(ctx, campo, texto, { soloForma = false, limite = LIMI
   if (/\b(mas|ms)\b/.test(t)) {
     agregar('tilde', `el ${campo} dice "${t.match(/\b(mas|ms)\b/)[0]}" en vez de "más": "${t.slice(0, 60)}"`);
   }
+
+  // 8. "En vivo", "minuto a minuto", "en directo": Radar Balcarce no hace
+  // coberturas en vivo, aunque el medio de origen sí (25/09: "Dólar hoy y
+  // dólar blue en vivo" salió con ese titular). Sólo en lo que se ve primero.
+  if (A_LA_VISTA.has(campo)) {
+    const s = sinTildes(t);
+    const vivo = s.match(EN_VIVO);
+    if (vivo && !EN_VIVO_PERMITIDO.test(s)) {
+      agregar('forma', `el ${campo} dice "${vivo[0]}" y el sitio no hace coberturas en vivo`);
+    }
+  }
   return problemas;
 }
+
+// Lo que se ve primero: el título, la bajada, el guion y el texto para redes.
+const A_LA_VISTA = new Set(['titulo', 'copete', 'guion', 'textoRedes']);
+const EN_VIVO = /\b(en vivo|en directo|minuto a minuto|live)\b/;
+// Un show en vivo es un show con músicos en el escenario, no una cobertura.
+const EN_VIVO_PERMITIDO = /\b(musica|show|shows|banda|bandas|espectaculo|espectaculos|recital|recitales|concierto|conciertos|toca|tocan|tocara|tocaran) en vivo\b/;
 
 /**
  * Compara lo que escribió la IA contra lo que recibió.
@@ -336,11 +355,8 @@ export function verificar(fuente, nuevo, { soloForma = false } = {}) {
 
   // 7b. El cuerpo tiene que DESARROLLAR el copete, no repetirlo. Si el primer
   // párrafo dice casi lo mismo que el copete, la nota se lee dos veces igual.
-  if (nuevo?.cuerpo && nuevo?.copete) {
-    const primero = String(nuevo.cuerpo).split(/\n+/)[0];
-    if (similitud(nuevo.copete, primero) >= 0.7 || sinTildes(nuevo.cuerpo).startsWith(sinTildes(nuevo.copete).slice(0, 60))) {
-      agregar('repite', 'el cuerpo repite el copete en vez de desarrollarlo');
-    }
+  if (repiteCopete(nuevo?.copete, nuevo?.cuerpo)) {
+    agregar('repite', 'el cuerpo repite el copete en vez de desarrollarlo');
   }
 
   // 8. Copiar no es reescribir.
@@ -446,6 +462,48 @@ export function similitud(a = '', b = '') {
   let comunes = 0;
   for (const w of A) if (B.has(w)) comunes += 1;
   return comunes / Math.min(A.size, B.size);
+}
+
+/** ¿El cuerpo dice de nuevo la bajada? Si el primer párrafo se parece mucho,
+ *  o arranca con las mismas palabras, la nota se lee dos veces igual. */
+export function repiteCopete(copete, cuerpo) {
+  if (!cuerpo || !copete) return false;
+  const primero = String(cuerpo).split(/\n+/)[0];
+  return similitud(copete, primero) >= 0.7 || sinTildes(cuerpo).startsWith(sinTildes(copete).slice(0, 60));
+}
+
+/**
+ * Saca del cuerpo las ORACIONES con problemas, en vez de tirar el cuerpo
+ * entero por un dato (25/09: 39 notas reescritas por la IA salieron sin
+ * cuerpo porque una sola oración traía un número o un nombre que la fuente no
+ * tenía).
+ *
+ * Cada oración pasa sola por los mismos controles que el cuerpo (números,
+ * nombres, días, citas, acusaciones, tildes, antecedentes) y por el de copia;
+ * la que falla se va. Si después el primer párrafo repite la bajada, se va
+ * ese párrafo. No decide si lo que queda alcanza: quien llama lo vuelve a
+ * verificar entero y cuenta las palabras (reels/reescritura.mjs).
+ *
+ * @param {{ titulo?: string, resumen?: string, antecedentes?: string }} fuente
+ * @param {{ copete?: string, cuerpo?: string }} nuevo
+ * @returns {{ cuerpo: string, sacadas: { oracion: string, problemas: object[] }[] }}
+ */
+export function depurarCuerpo(fuente, nuevo = {}) {
+  const ctx = contexto(fuente);
+  const sacadas = [];
+  const parrafos = String(nuevo.cuerpo ?? '').split(/\n+/).map((p) => p.trim()).filter(Boolean)
+    .map((p) => oraciones(p).filter((o) => {
+      const problemas = problemasDelTexto(ctx, 'cuerpo', o);
+      const copiado = tramoCopiado(ctx.origen, o);
+      if (copiado > LIMITES.copiaMaxima) problemas.push({ tipo: 'copia', detalle: `copia ${copiado} palabras seguidas del original` });
+      if (problemas.length) sacadas.push({ oracion: o, problemas });
+      return !problemas.length;
+    }).join(' '))
+    .filter(Boolean);
+  while (parrafos.length && repiteCopete(nuevo.copete, parrafos.join('\n\n'))) {
+    sacadas.push({ oracion: parrafos.shift(), problemas: [{ tipo: 'repite', detalle: 'el párrafo repite el copete' }] });
+  }
+  return { cuerpo: parrafos.join('\n\n'), sacadas };
 }
 
 /** Un resumen de una línea, para el registro del panel. */

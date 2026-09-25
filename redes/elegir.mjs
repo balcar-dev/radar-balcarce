@@ -15,8 +15,12 @@
 //   · Una nota se publica una sola vez por red. El libro lo garantiza.
 //   · Se espera un rato antes de publicar: el enlace tiene que existir en la
 //     web, o Facebook guarda una tarjeta de "página no encontrada".
+//   · Una nota que salió sola y no tiene cuerpo no va a ninguna red (25/09,
+//     web/lib/cuerpo.js): el enlace llevaría a una nota de dos renglones.
+//     generar-datos ya no la pone en la portada; esto es la segunda red.
 
 import { rutaDeNota } from '../web/lib/ruta.js';
+import { esperaCuerpo } from '../web/lib/cuerpo.js';
 
 /** Secciones que no salen solas a ninguna red: las decide una persona. */
 export const SECCIONES_QUE_ESPERAN_PERSONA = ['Policiales', 'Política'];
@@ -115,6 +119,7 @@ export function elegirParaFacebook({ notas, libro = libroNuevo(), ahora = new Da
 
   const candidatas = notas.filter((n) => {
     if (yaPublicada(libro, 'facebook', n.id)) return false;
+    if (esperaCuerpo(n)) return false;
     if ((n.relevancia ?? 0) < reglas.relevanciaMinima) return false;
     if (reglas.seccionesQueEsperanPersona.includes(n.seccion)) return false;
     if (recientes.some((p) => temaParecido(n, p))) return false;
@@ -269,7 +274,7 @@ export const REGLAS_PIEZAS = {
 
 /** ¿Se puede armar una pieza sola con esta nota? */
 export function sePuedeSola(nota) {
-  return nota.semaforo !== 'rojo' && !SECCIONES_QUE_ESPERAN_PERSONA.includes(nota.seccion);
+  return nota.semaforo !== 'rojo' && !SECCIONES_QUE_ESPERAN_PERSONA.includes(nota.seccion) && !esperaCuerpo(nota);
 }
 
 const porRelevancia = (a, b) => (b.relevancia ?? 0) - (a.relevancia ?? 0);

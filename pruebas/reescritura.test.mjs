@@ -10,6 +10,7 @@ import {
   esTemaSerio, reescribir, reescribirConRespaldo, reescribirAutomaticas, previasDeLaPortada,
   INSTRUCCION_EDITORIAL, semaforoDeLaReescritura, motivoCorto, esLocal,
 } from '../reels/reescritura.mjs';
+import { CUERPO } from './cuerpo-de-prueba.mjs';
 
 // claveRedaccion()/claveRedes() leen de process.env primero: alcanza con
 // ponerlas acá, sin tocar ningún .env real.
@@ -153,6 +154,11 @@ test('reescribirConRespaldo cae al armado mecánico si la IA falla del todo', as
 
 // ------------------------------------------------------- reescribirAutomaticas()
 
+// Desde el 25/09 sin cuerpo no se publica y, sin texto completo, un resumen
+// corto no se le pide a Gemini. Estas pruebas no son sobre eso: la IA de
+// mentira manda un cuerpo de verdad y el piso de material va en cero.
+const SIN_PISO = { minimoDeMaterial: 0 };
+
 const notaVerde = (extra = {}) => ({
   id: 'n1', titulo: 'Se realizó una reunión en el municipio', resumenFuente: 'Hubo una reunión en el municipio por el tema del agua.',
   seccion: 'Balcarce', medios: ['El Diario'], semaforo: 'verde', relevancia: 80, ...extra,
@@ -177,7 +183,7 @@ test('no toca una nota que no es verde', async () => {
 
 test('reusa lo ya reescrito en una corrida anterior, sin gastar un pedido', async () => {
   const { fn, pedidos } = fetchFalso([]);
-  const previas = { n1: { titulo: 'Ya reescrito', copete: 'Ya.', guion: 'Ya reescrito.', deIA: true } };
+  const previas = { n1: { titulo: 'Ya reescrito', copete: 'Ya.', cuerpo: CUERPO, guion: 'Ya reescrito.', deIA: true } };
   const r = await reescribirAutomaticas([notaVerde()], { previas, opciones: { fetchFn: fn } });
   assert.equal(r.n1.titulo, 'Ya reescrito');
   assert.equal(pedidos.length, 0);
@@ -188,8 +194,9 @@ test('reescribe una nota nueva y la deja si la verificación no encuentra nada r
     'El municipio se reunió por el agua',
     'Se trató el tema del agua en una reunión municipal.',
     'El municipio se reunió por el agua.',
+    CUERPO,
   )]);
-  const r = await reescribirAutomaticas([notaVerde()], { opciones: { fetchFn: fn } });
+  const r = await reescribirAutomaticas([notaVerde()], { ...SIN_PISO, opciones: { fetchFn: fn } });
   assert.equal(r.n1.deIA, true);
   assert.equal(r.n1.titulo, 'El municipio se reunió por el agua');
 });
@@ -199,16 +206,17 @@ test('si la IA inventa un dato que la fuente no trae, se descarta y no queda nad
     'Veinte vecinos participaron de la reunión',
     'Veinte vecinos se reunieron con el municipio por el agua.',
     'Veinte vecinos participaron de la reunión.',
+    CUERPO,
   )]);
-  const r = await reescribirAutomaticas([notaVerde()], { opciones: { fetchFn: fn } });
+  const r = await reescribirAutomaticas([notaVerde()], { ...SIN_PISO, opciones: { fetchFn: fn } });
   assert.equal(r.n1, undefined, 'un dato inventado no debería quedar publicado');
 });
 
 test('no pasa del tope de pedidos nuevos por corrida, pero igual reusa lo que ya está en caché', async () => {
-  const { fn, pedidos } = fetchFalso([respuestaOk('Título nuevo', 'Copete nuevo.', 'Título nuevo.')]);
+  const { fn, pedidos } = fetchFalso([respuestaOk('Título nuevo', 'Copete nuevo.', 'Título nuevo.', CUERPO)]);
   const notas = [notaVerde({ id: 'nuevo', relevancia: 90 }), notaVerde({ id: 'n1', relevancia: 50 })];
-  const previas = { n1: { titulo: 'Cacheada', copete: 'C.', guion: 'Cacheada.', deIA: true } };
-  const r = await reescribirAutomaticas(notas, { previas, tope: 1, opciones: { fetchFn: fn } });
+  const previas = { n1: { titulo: 'Cacheada', copete: 'C.', cuerpo: CUERPO, guion: 'Cacheada.', deIA: true } };
+  const r = await reescribirAutomaticas(notas, { ...SIN_PISO, previas, tope: 1, opciones: { fetchFn: fn } });
   assert.equal(pedidos.length, 1, 'sólo un pedido nuevo, por el tope');
   assert.equal(r.nuevo.titulo, 'Título nuevo');
   assert.equal(r.n1.titulo, 'Cacheada', 'la que ya estaba en caché se reusa igual, sin contar contra el tope');
@@ -219,7 +227,7 @@ test('lo que ya estaba en caché se revalida: si ahora no pasa la verificación,
   // verificar.mjs) ya no dejaría pasar: no debería quedar publicado para
   // siempre sólo porque "ya estaba hecho".
   const { fn, pedidos } = fetchFalso([]);
-  const previas = { n1: { titulo: 'Un título cualquiera', copete: 'Lo esperaban ms de tres mil personas.', guion: 'Un título cualquiera.', deIA: true } };
+  const previas = { n1: { titulo: 'Un título cualquiera', copete: 'Lo esperaban ms de tres mil personas.', cuerpo: CUERPO, guion: 'Un título cualquiera.', deIA: true } };
   const r = await reescribirAutomaticas([notaVerde()], { previas, opciones: { fetchFn: fn } });
   assert.equal(r.n1, undefined, 'lo cacheado que ya no pasa la verificación no debería reusarse');
   assert.equal(pedidos.length, 0, 'tampoco debería gastar un pedido nuevo en la misma corrida');
@@ -227,7 +235,7 @@ test('lo que ya estaba en caché se revalida: si ahora no pasa la verificación,
 
 test('lo que ya estaba en caché y sigue pasando la verificación se reusa igual', () => {
   const { fn, pedidos } = fetchFalso([]);
-  const previas = { n1: { titulo: 'Un título cualquiera', copete: 'Se hizo una reunión por el agua.', guion: 'Un título cualquiera.', deIA: true } };
+  const previas = { n1: { titulo: 'Un título cualquiera', copete: 'Se hizo una reunión por el agua.', cuerpo: CUERPO, guion: 'Un título cualquiera.', deIA: true } };
   return reescribirAutomaticas([notaVerde()], { previas, opciones: { fetchFn: fn } }).then((r) => {
     assert.equal(r.n1.titulo, 'Un título cualquiera');
     assert.equal(pedidos.length, 0);
@@ -252,11 +260,13 @@ test('reescribir() también devuelve el cuerpo cuando la IA lo manda', async () 
 // reescribía de cero en cada corrida, sin acordarse de nada (23/09).
 test('la memoria de la portada recuerda lo reescrito, con su cuerpo', () => {
   const previas = previasDeLaPortada([
-    { id: 'a', titulo: 'T', copete: 'C', cuerpo: 'Cuerpo.', guion: 'G' },
+    { id: 'a', titulo: 'T', copete: 'C', cuerpo: CUERPO, guion: 'G' },
     { id: 'b', titulo: 'T', copete: 'C', cuerpo: null, guion: null },
+    // 25/09: un cuerpo vacío ya no cuenta como "hecho" (se reusaba para siempre).
+    { id: 'c', titulo: 'T', copete: 'C', cuerpo: '', guion: 'G' },
   ]);
   assert.deepEqual(Object.keys(previas), ['a']);
-  assert.equal(previas.a.cuerpo, 'Cuerpo.');
+  assert.equal(previas.a.cuerpo, CUERPO);
 });
 
 test('una nota reescrita antes de que existiera el cuerpo se vuelve a reescribir', () => {
@@ -322,9 +332,10 @@ test('si lo que escribió la IA da rojo o amarillo, no se usa y la nota deja de 
     'El municipio se reunió por el agua',
     'Se trató el tema del agua en una reunión municipal con un menor de edad presente.',
     'El municipio se reunió por el agua.',
+    CUERPO,
   )]);
   const n = notaVerde();
-  const r = await reescribirAutomaticas([n], { traer: conTexto(null), opciones: { fetchFn: fn }, registro: () => {} });
+  const r = await reescribirAutomaticas([n], { ...SIN_PISO, traer: conTexto(null), opciones: { fetchFn: fn }, registro: () => {} });
   assert.equal(pedidos.length, 1);
   assert.equal(r.n1, undefined, 'lo que escribió la IA no se publica');
   assert.equal(n.semaforo, 'rojo', '"menor de edad" es rojo');
@@ -335,7 +346,7 @@ test('lo ya publicado que hoy da rojo deja de salir, sin gastar un pedido', asyn
   // La lista crece (como el 25/09): lo que estaba en caché se vuelve a mirar.
   const { fn, pedidos } = fetchFalso([]);
   const n = notaVerde();
-  const previas = { n1: { titulo: 'Un título cualquiera', copete: 'La joven fue violada en el barrio.', cuerpo: '', guion: 'Un título cualquiera.', deIA: true } };
+  const previas = { n1: { titulo: 'Un título cualquiera', copete: 'La joven fue violada en el barrio.', cuerpo: CUERPO, guion: 'Un título cualquiera.', deIA: true } };
   const r = await reescribirAutomaticas([n], { previas, opciones: { fetchFn: fn }, registro: () => {} });
   assert.equal(r.n1, undefined);
   assert.equal(pedidos.length, 0);
@@ -367,7 +378,7 @@ test('el registro dice POR QUÉ el verificador rechazó una nota, sin volcar el 
   const mala = respuestaOk('Veinte vecinos participaron de la reunión', 'Veinte vecinos se reunieron con el municipio por el agua.', 'Veinte vecinos participaron de la reunión.');
   const { fn } = fetchFalso([mala, mala]);
   const lineas = [];
-  await reescribirAutomaticas([notaVerde()], { traer: conTexto(null), opciones: { fetchFn: fn }, registro: (l) => lineas.push(l) });
+  await reescribirAutomaticas([notaVerde()], { ...SIN_PISO, traer: conTexto(null), opciones: { fetchFn: fn }, registro: (l) => lineas.push(l) });
   const rechazo = lineas.find((l) => l.includes('IA rechazada'));
   assert.ok(rechazo, lineas.join('\n'));
   assert.match(rechazo, /numero/, 'dice qué tipo de problema fue');
@@ -382,12 +393,12 @@ test('motivoCorto recorta y dice el tipo', () => {
 });
 
 test('con el tope justo, se reescribe primero lo de Balcarce aunque lo de afuera tenga más puntaje', async () => {
-  const { fn, pedidos } = fetchFalso([respuestaOk('El municipio se reunió por el agua', 'Se trató el tema del agua en una reunión municipal.', 'El municipio se reunió por el agua.')]);
+  const { fn, pedidos } = fetchFalso([respuestaOk('El municipio se reunió por el agua', 'Se trató el tema del agua en una reunión municipal.', 'El municipio se reunió por el agua.', CUERPO)]);
   const notas = [
     notaVerde({ id: 'afuera', titulo: 'Verstappen ganó en Monza', seccion: 'Automovilismo', local: false, alcance: 'pais', relevancia: 95 }),
     notaVerde({ id: 'local', local: true, relevancia: 60 }),
   ];
-  const r = await reescribirAutomaticas(notas, { tope: 1, traer: conTexto(null), opciones: { fetchFn: fn }, registro: () => {} });
+  const r = await reescribirAutomaticas(notas, { ...SIN_PISO, tope: 1, traer: conTexto(null), opciones: { fetchFn: fn }, registro: () => {} });
   assert.equal(pedidos.length, 1);
   assert.ok(r.local, 'la local se reescribió');
   assert.equal(r.afuera, undefined, 'la de afuera espera a la próxima corrida');

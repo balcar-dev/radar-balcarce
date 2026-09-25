@@ -817,7 +817,21 @@ export const REGLAS_SEMAFORO = {
   promocional: ['sorteo', 'sortea', 'sortearemos', 'ganá tu entrada', 'gana tu entrada',
     'participá del', 'participa del', 'regala las entradas', 'promoción exclusiva',
     'promocion exclusiva', 'suscribite', 'seguinos en', 'auspicia', 'publicidad'],
+  // La cotización del dólar NO es una nota: es un número que cambia cada hora
+  // y el sitio lo muestra en /dolar. El 25/09 salían dos o tres por día ("El
+  // dólar minorista y el dólar blue cotizan este viernes", "Dólar hoy y dólar
+  // blue en vivo…") y ninguna tenía cuerpo. Se mira sólo en el TÍTULO: una
+  // nota de economía que menciona el dólar en el tercer párrafo sí es nota.
+  // No frena como las listas de arriba: queda amarilla, con su motivo, por si
+  // una persona quiere publicarla igual.
+  cotizacion: ['dólar hoy', 'a cuánto cotiza', 'a cuanto cotiza', 'dólar blue', 'cotización del dólar',
+    'dólar oficial', 'dólar mep', 'dólar minorista', 'dólar mayorista', 'dólar tarjeta',
+    'dólar cripto', 'dólar ccl', 'contado con liquidación', 'precio del dólar', 'cotiza el dólar',
+    'cotizó el dólar', 'blue hoy'],
 };
+
+/** El motivo con que queda amarilla una nota de la cotización del dólar. */
+export const MOTIVO_COTIZACION = 'cotización del dólar: se muestra en /dolar';
 
 /** El amarillo que se mira en el texto entero: menores y víctimas. */
 export const AMARILLO_MENORES = REGLAS_SEMAFORO.amarillo.filter((p) => ES_DE_MENORES.test(p));

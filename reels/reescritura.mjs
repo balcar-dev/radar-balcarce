@@ -25,13 +25,16 @@
 // ya publicó sobre el tema en los últimos 30 días (antecedentesDe).
 
 import { claveRedaccion, claveRedes } from './claves.mjs';
-import { verificar, verificarExtras, resumirProblemas } from '../ingesta/verificar.mjs';
+import {
+  verificar, verificarExtras, resumirProblemas, depurarCuerpo,
+} from '../ingesta/verificar.mjs';
 import { semaforoDelTexto } from '../ingesta/ingesta.mjs';
 import { decisionHumana } from '../ingesta/utiles.mjs';
 import { traerTexto } from '../ingesta/articulo.mjs';
 import { MEDIOS_OFICIALES } from '../ingesta/fuentes.mjs';
 import { palabrasDeTitular } from '../redes/elegir.mjs';
 import { rutaDeNota } from '../web/lib/ruta.js';
+import { tieneCuerpo, palabrasDe } from '../web/lib/cuerpo.js';
 
 // "-latest" en vez de un número de versión fijo: la reescritura no necesita
 // la última novedad, necesita no romperse cuando Google jubile un modelo
@@ -57,13 +60,14 @@ H. Si recibiste una sola fuente, no inventás una "ampliación": la nota cuenta 
 Después la escribís, con estas reglas fijas:
 
 1. NUNCA copiás el texto original. Se reescribe con palabras propias, cruzando lo que cuenta cada fuente si hay más de una. Podés citar una frase textual corta si hace falta, entre comillas.
-2. El título apunta a unos 70 caracteres y NUNCA pasa de 90, sin signos de admiración, sin pregunta, y se entiende solo en la pantalla del celular. Dice qué pasó: empieza por el hecho (sujeto y verbo en presente: "El Concejo aprueba…", "Ferroviarios gana…"), no por el lugar ni por una etiqueta. Si el hecho es de Balcarce y el título no lo dice, va "en Balcarce" al final. Nunca "Video:", "Ojo:" ni frases de gancho ("lo que tenés que saber").
+2. El título apunta a unos 70 caracteres y NUNCA pasa de 90, sin signos de admiración, sin pregunta, y se entiende solo en la pantalla del celular. Dice qué pasó: empieza por el hecho (sujeto y verbo en presente: "El Concejo aprueba…", "Ferroviarios gana…"), no por el lugar ni por una etiqueta. Si el hecho es de Balcarce y el título no lo dice, va "en Balcarce" al final. Nunca "Video:", "Ojo:" ni frases de gancho ("lo que tenés que saber"). Nunca "en vivo", "EN VIVO", "minuto a minuto", "en directo" ni nada parecido, ni en el título ni en la bajada, aunque el titular original lo diga: Radar Balcarce no hace coberturas en vivo, cuenta lo que pasó.
 3. La bajada (el campo "copete") son dos o tres frases cortas, unas 50 palabras como mucho: qué pasó, cómo se relaciona con Balcarce y el dato más importante. Nada de "cabe destacar que" ni antecedentes largos: la profundidad va en el cuerpo (punto 4).
-4. Además escribís el cuerpo: el resumen desarrollado de la nota, que es lo que se lee al abrirla, SÓLO con información de las fuentes. Va de 100 a 180 palabras, en uno a tres párrafos cortos separados por un salto de línea en blanco. Si la fuente da poco, escribís lo que dé, sin relleno. Se arma de lo más importante a lo menos:
+4. El cuerpo es OBLIGATORIO: sin cuerpo la nota no se publica. Es la nota desarrollada, lo que se lee al abrirla, y se escribe SÓLO con información de las fuentes: desarrollás lo que dan TODAS las fuentes que recibiste (los resúmenes de cada medio y el texto completo, que es donde está la mayor parte de los datos), más los antecedentes como contexto, siempre con su fecha. Va de 100 a 180 palabras, en uno a tres párrafos cortos separados por un salto de línea en blanco. Nunca lo devolvés vacío, nunca es la bajada dicha de nuevo con otras palabras, y nunca lo rellenás con frases vacías: si falta largo, suma datos de las fuentes (quién, cuándo, dónde, cuánto, qué dijo cada uno), no adjetivos. Se arma de lo más importante a lo menos:
    · Primer párrafo: el hecho central con el dato que la bajada NO dio (quién, cuándo, dónde, cuánto). Nunca arranca con las mismas palabras de la bajada ni la dice de nuevo.
    · Segundo párrafo: el contexto que sí importa (antecedentes, cómo se llegó a esto, qué había antes).
    · Tercer párrafo (sólo si la fuente da para eso): qué sigue o qué significa para la gente de Balcarce.
    Las citas textuales sólo si están en la fuente, entre comillas y atribuidas ("dijo", "explicó"). Nada de conclusiones ni valoraciones al final ("sin dudas", "una gran noticia").
+   El análisis de los pasos A a H se usa PARA ESCRIBIR el cuerpo, no para contarlo aparte: lo que confirman varias fuentes va dicho como hecho; lo que dice una sola, atribuido a esa fuente ("según informó el municipio", "de acuerdo con un medio local"); lo que las fuentes cuentan distinto, con las dos versiones atribuidas; y lo que no se pudo confirmar, dicho como no confirmado ("todavía no se informó…", "no trascendió…"). El lector no ve tu análisis: ve una nota mejor escrita gracias a él.
 {{TONO}}
 6. Los números van redondeados y comparados cuando se pueda ("el triple que el año pasado") antes que un porcentaje con decimales.
 7. El guion para la voz ES EL TÍTULO, dicho tal cual, y nada más. Nada de contexto, nada de cierre, nada de "la nota completa en...". Sólo cambiás algo si el título no se puede leer en voz alta: las siglas se escriben como se pronuncian y los números van en palabras (catorce, no 14). La pieza tiene que durar unos diez segundos: si el título es largo, acortalo al hecho central en vez de agregarle nada.
@@ -144,7 +148,20 @@ El nivel de verificación que se publica NO es el que sugiere la IA: lo calcula
 el sistema. ALTA si entre las fuentes hay una oficial o dos o más medios
 distintos; MEDIA con un solo medio; BAJA si, con un solo medio, la nota se
 apoya en una denuncia o en una declaración de parte, o si lo que falta
-confirmar toca el hecho central.
+confirmar toca el hecho central. Si da BAJA, la nota no sale sola: espera a
+una persona, como una amarilla.
+
+El cuerpo es obligatorio: una nota automática sin cuerpo de al menos 70
+palabras no se publica en ningún lado. Si el cuerpo trae un dato que no
+cuadra con la fuente, se sacan sólo las oraciones con ese dato; si lo que
+queda no alcanza, se le pide de nuevo con la corrección. Cada nota se le pide
+a la IA como mucho tres veces, en corridas distintas. Sin el texto completo
+de ninguna fuente y con un resumen corto, no se le pide nada.
+
+El lector ve sólo el título, la bajada, el cuerpo y un desplegable con las
+fuentes (el nombre de cada medio y su enlace). Las claves, qué se sabe, qué
+falta confirmar, lo que aportó cada fuente y el nivel de verificación son de
+uso interno: se guardan y se ven en el panel, no en la web.
 
 No se busca nada en internet: las otras fuentes son los medios que contaron lo
 mismo y hasta tres notas que el sitio ya publicó sobre el tema en los últimos
@@ -251,7 +268,7 @@ function entradaDe(nota) {
     const datos = [o.medio ?? 'otro medio', o.oficial ? 'fuente oficial' : null, o.fecha ? `publicada el ${fechaCorta(o.fecha)}` : null].filter(Boolean).join(' · ');
     partes.push(`Fuente ${i + 1} (${datos}): ${o.resumen || '(sin resumen)'}`);
   });
-  if (nota.textoDeLaFuente) partes.push(`Texto completo de la Fuente 1 (de acá sale todo lo que podés contar):\n${nota.textoDeLaFuente}`);
+  if (nota.textoDeLaFuente) partes.push(`Texto completo de la Fuente ${nota.fuenteDelTexto ?? 1} (de acá sale la mayor parte de lo que podés contar en el cuerpo):\n${nota.textoDeLaFuente}`);
   if (nota.antecedentes?.length) {
     partes.push(`ANTECEDENTES: notas que Radar Balcarce publicó ANTES sobre el tema. Es información ANTERIOR, no de hoy: si usás algo de acá, va con su fecha o su momento, sólo en el cuerpo, las claves o lo que se sabe.\n${textoDeAntecedentes(nota.antecedentes)}`);
   }
@@ -331,7 +348,7 @@ export async function reescribir(nota, { intentos = 3, fetchFn = fetch, correcci
   let entrada = entradaDe(nota);
   // Segundo intento: se le dice qué inventó y se le pide que lo rehaga sin eso.
   if (correccion?.length) {
-    entrada += `\n\nCORRECCIÓN OBLIGATORIA: en un intento anterior tu texto tenía estos problemas, y por eso se descartó:\n- ${correccion.join('\n- ')}\nEscribilo de nuevo usando ÚNICAMENTE lo que dice la fuente de arriba: si un nombre, un número, un día o una cita no está ahí, no lo pongas. Si la fuente da poco, el cuerpo puede ser más corto, pero nunca repite el copete.`;
+    entrada += `\n\nCORRECCIÓN OBLIGATORIA: en un intento anterior tu texto tenía estos problemas, y por eso se descartó:\n- ${correccion.join('\n- ')}\nEscribilo de nuevo usando ÚNICAMENTE lo que dicen las fuentes de arriba: si un nombre, un número, un día o una cita no está ahí, no lo pongas. El cuerpo sigue siendo obligatorio, de 100 a 180 palabras, desarrollado con lo que SÍ dicen todas las fuentes, y nunca repite el copete.`;
   }
 
   let res;
@@ -746,8 +763,11 @@ export function revalidarExtras(cacheada = {}, nota = {}) {
  * Lo que la portada de la corrida anterior ya trae reescrito, para no volver
  * a pedírselo a Gemini. La portada no guarda un campo "redactada por IA": la
  * señal es que la nota tenga guion (el resumen mecánico de la fuente no lo
- * tiene). Las que no tienen `cuerpo` (de antes de que existiera) quedan
- * afuera a propósito, para que se reescriban de nuevo con cuerpo.
+ * tiene). Las que no tienen CUERPO DE VERDAD (tieneCuerpo: 70 palabras o
+ * más, distinto de la bajada) quedan afuera a propósito, para que se
+ * reescriban de nuevo. Hasta el 25/09 alcanzaba con `cuerpo != null`: un
+ * cuerpo vacío ('') contaba como "ya hecho", se reusaba para siempre y la
+ * nota nunca se volvía a intentar (39 notas sin cuerpo ese día).
  *
  * Las partes nuevas (25/09) viajan con la nota. Lo reescrito antes de que
  * existieran NO se vuelve a pedir para llenarlas: nunca se paga dos veces por
@@ -755,10 +775,67 @@ export function revalidarExtras(cacheada = {}, nota = {}) {
  */
 export function previasDeLaPortada(notas) {
   return Object.fromEntries(notas
-    .filter((n) => n.titulo && n.guion && n.cuerpo != null)
+    .filter((n) => n.titulo && n.guion && tieneCuerpo(n))
     .map((n) => [n.id, {
       titulo: n.titulo, copete: n.copete, cuerpo: n.cuerpo, guion: n.guion, ...extrasDe(n), deIA: true,
     }]));
+}
+
+/** Cuántas veces, como mucho, se le pide una misma nota a Gemini, en
+ *  corridas distintas (25/09). Una nota que no sale con cuerpo después de
+ *  tres intentos queda sin publicar: la clave de respaldo es paga y Hernán y
+ *  Andrés no quieren gastar de más en una nota que no da. */
+export const MAXIMO_DE_INTENTOS = 3;
+
+/** Con menos de esto de resumen (sumando todas las fuentes) y sin el texto
+ *  completo de ninguna, no hay de dónde escribir una nota: no se le pide
+ *  nada a Gemini. */
+export const PALABRAS_MINIMAS_DE_MATERIAL = 60;
+
+/** Criterio de editor (25/09): lo que el código califica con verificación
+ *  BAJA (una denuncia o una declaración de parte que contó un solo medio, o
+ *  datos centrales sin confirmar) no sale solo, aunque el semáforo esté en
+ *  verde: espera a una persona, como una nota amarilla. */
+export const FRENO_POR_VERIFICACION = { color: 'amarillo', motivo: 'verificación baja: espera a una persona' };
+export const esVerificacionBaja = (x) => x?.verificacion?.nivel === 'BAJA';
+
+/** Cuántos días se recuerdan los intentos (web/data/intentos-ia.json). */
+export const DIAS_DE_INTENTOS = 7;
+
+/** Los intentos de hace más de `dias` días ya no sirven: la nota ya no está
+ *  en ninguna lista. Devuelve una copia podada. */
+export function podarIntentos(intentos = {}, ahora = Date.now(), dias = DIAS_DE_INTENTOS) {
+  const corte = Number(ahora) - dias * 86400000;
+  return Object.fromEntries(Object.entries(intentos ?? {})
+    .filter(([, v]) => Date.parse(v?.ultimo ?? '') >= corte)
+    .sort(([a], [b]) => a.localeCompare(b)));
+}
+
+/** Una falla de Gemini que no es culpa de la nota (sin cupo, saturado, sin
+ *  red, sin clave): no cuenta como intento, porque no se gastó nada. */
+const FALLA_DEL_SERVICIO = /falta GEMINI|no se pudo pedir|HTTP (429|5\d\d)|fetch failed|abort|timeout|network|ECONN|ENOTFOUND|EAI_AGAIN/i;
+
+/**
+ * El texto completo de la noticia: el de la nota principal y, si ése no se
+ * pudo bajar, el de alguna de las otras fuentes que contaron lo mismo.
+ * Devuelve { texto, numero } (el número de fuente, como la lee la IA) o
+ * { texto: null }.
+ */
+export async function textoCompletoDe(nota, traer = traerTexto) {
+  const principal = await traer(nota?.enlace);
+  if (principal) return { texto: principal, numero: 1 };
+  const otras = origenesDe(nota)
+    .map((o, i) => ({ enlace: o.enlace, numero: i + 1 }))
+    .filter((o) => o.enlace && o.enlace !== nota?.enlace)
+    .slice(0, 3);
+  const textos = await Promise.all(otras.map((o) => traer(o.enlace)));
+  const i = textos.findIndex(Boolean);
+  return i >= 0 ? { texto: textos[i], numero: otras[i].numero } : { texto: null };
+}
+
+/** Las palabras de todos los resúmenes de las fuentes, sin repetir uno. */
+function palabrasDeResumenes(nota) {
+  return palabrasDe([...new Set(origenesDe(nota).map((o) => o.resumen).filter(Boolean))].join(' '));
 }
 
 /**
@@ -769,8 +846,9 @@ export function previasDeLaPortada(notas) {
  *
  * Nunca pisa lo que ya escribió una persona (`decisiones`), y reusa lo que
  * ya se reescribió en una corrida anterior (`previas`, la portada de la vez
- * pasada) en vez de volver a gastar cuota en la misma nota: la única fuente
- * de "ya está" que existe en la nube es lo que ya quedó publicado.
+ * pasada) en vez de volver a gastar cuota en la misma nota — pero sólo si
+ * tiene cuerpo de verdad (tieneCuerpo): lo que quedó sin cuerpo vuelve a ser
+ * candidata.
  *
  * Primero lo de Balcarce (esLocal), y dentro de cada grupo, la de más
  * puntaje: el tope por corrida se gasta en lo que define al medio, no en la
@@ -780,36 +858,46 @@ export function previasDeLaPortada(notas) {
  * semáforo; y lo que escribe la IA, también (semaforoDeLaReescritura). Si da
  * rojo o amarillo, no se usa y la nota cambia de color: deja de salir sola.
  *
- * Cada resultado pasa por `ingesta/verificar.mjs` antes de aceptarse: si la
- * IA agregó un dato que ninguna fuente trae, se descarta y la nota sigue
- * con el resumen mecánico, como salía antes de que existiera esto.
+ * Desde el 25/09 una nota automática SIN CUERPO no se publica
+ * (web/lib/cuerpo.js). Por eso acá:
+ *   · si no hay texto completo de ninguna fuente y los resúmenes suman menos
+ *     de 60 palabras, no se le pide nada a Gemini ("sin material");
+ *   · si el cuerpo no pasa el verificador, se sacan las ORACIONES con el dato
+ *     que no cuadra (depurarCuerpo) y, si lo que queda pasa y tiene 70
+ *     palabras o más, se usa; si no, un segundo pedido con la corrección, y
+ *     lo mismo;
+ *   · si falla el título, la bajada o el guion, la nota no se usa (como
+ *     siempre);
+ *   · cada nota se intenta como mucho MAXIMO_DE_INTENTOS veces, en corridas
+ *     distintas: los intentos se anotan en `intentos` (que se cambia, a
+ *     propósito: quien llama lo guarda en web/data/intentos-ia.json).
+ * Lo que no sale con cuerpo no entra en el resultado: la nota queda
+ * "esperando cuerpo", sin publicarse.
+ *
+ * Las partes nuevas (claves, qué se sabe, qué falta confirmar, fuentes
+ * consultadas, texto para redes, etiquetas) y el nivel de verificación:
+ * completarReescritura(). Si falla una parte, se descarta esa sola.
  *
  * @param {object[]} notas   OJO: las que resultan sensibles se modifican (frenar)
  * @param {object} [o]
  * @param {Record<string, {titulo:string,copete:string,cuerpo?:string,guion:string}>} [o.previas]
  * @param {Record<string, object>} [o.decisiones]
- * Desde el 25/09, además, las partes nuevas (claves, qué se sabe, qué falta
- * confirmar, fuentes consultadas, texto para redes, etiquetas) y el nivel de
- * verificación: completarReescritura(). Si falla una parte, se descarta esa
- * sola, sin reintentar (un segundo pedido sólo se hace si falla el título, la
- * bajada, el cuerpo o el guion, como antes).
- *
  * @param {number} [o.tope]
  * @param {object[]} [o.archivo] lo ya publicado (web/data/archivo.json), de donde salen los antecedentes
+ * @param {Record<string, {intentos:number, ultimo:string, motivo:string}>} [o.intentos] se cambia
  * @param {object} [o.opciones] se le pasa tal cual a reescribir() (fetchFn, intentos)
- * @returns {Promise<Record<string, {titulo:string,copete:string,cuerpo?:string,guion:string,deIA:boolean}>>}
+ * @returns {Promise<Record<string, {titulo:string,copete:string,cuerpo:string,guion:string,deIA:boolean}>>}
  */
 export async function reescribirAutomaticas(notas, {
   previas = {}, decisiones = {}, tope = REESCRITURAS_POR_CORRIDA, opciones, traer = traerTexto, registro = console.log,
-  archivo = [], ahora = Date.now(),
+  archivo = [], ahora = Date.now(), intentos = {}, maximoDeIntentos = MAXIMO_DE_INTENTOS,
+  minimoDeMaterial = PALABRAS_MINIMAS_DE_MATERIAL,
 } = {}) {
   const resultado = {};
-  let hechas = 0;
-  let fallos = 0;
-  let rechazadas = 0;
-  let frenadas = 0;
-  let sinCuerpoPorFalla = 0;
-  let partesDescartadas = 0;
+  const cuenta = {
+    hechas: 0, conCuerpo: 0, fallos: 0, rechazadas: 0, sinCuerpo: 0, sinMaterial: 0, agotadas: 0,
+    oraciones: 0, frenadas: 0, partesDescartadas: 0,
+  };
   let motivo = null;
 
   const candidatas = [...notas]
@@ -821,24 +909,37 @@ export async function reescribirAutomaticas(notas, {
   // semáforo: si la frenó, puede ser justamente porque identifica a alguien.
   const frenada = (nota, s) => {
     frenar(nota, s);
-    frenadas += 1;
+    cuenta.frenadas += 1;
     registro(`  semáforo al reescribir · nota ${nota.id} · ${s.color}: ${s.motivo}`);
   };
 
+  /** Anota un intento. Si con éste se agotaron, el registro lo dice. */
+  const anotarIntento = (nota, porque, extra = {}) => {
+    const n = (intentos[nota.id]?.intentos ?? 0) + 1;
+    intentos[nota.id] = {
+      intentos: n, ultimo: new Date(Number(ahora)).toISOString(), motivo: String(porque).slice(0, 160), ...extra,
+    };
+    if (porque !== 'con cuerpo' && !extra.baja && n >= maximoDeIntentos) {
+      registro(`  sin cuerpo después de ${n} intentos, no se publica · nota ${nota.id} · ${String(porque).slice(0, 120)}`);
+    }
+  };
+
   for (const nota of candidatas) {
-    // Ya se reescribió en una corrida anterior: se revalida (es local y
-    // gratis, no pide nada a Gemini) y se reusa sin gastar un pedido nuevo.
-    // Así, si mañana se agrega una regla nueva a verificar.mjs, lo que ya
-    // estaba publicado y ahora la incumple se cae solo y se vuelve a
-    // reescribir en una corrida siguiente, en vez de quedar mal para
-    // siempre porque "ya estaba hecho".
-    if (previas[nota.id]?.titulo) {
-      const cacheada = revalidarExtras(previas[nota.id], nota);
+    // Ya se reescribió en una corrida anterior, CON cuerpo: se revalida (es
+    // local y gratis, no pide nada a Gemini) y se reusa sin gastar un pedido
+    // nuevo. Así, si mañana se agrega una regla nueva a verificar.mjs, lo que
+    // ya estaba publicado y ahora la incumple se cae solo y se vuelve a
+    // reescribir en una corrida siguiente, en vez de quedar mal para siempre
+    // porque "ya estaba hecho".
+    const previa = previas[nota.id];
+    if (previa?.titulo && tieneCuerpo(previa)) {
+      const cacheada = revalidarExtras(previa, nota);
       // Lo ya publicado también pasa por el semáforo de hoy: si la lista
       // creció (como el 25/09), lo que ya estaba y ahora da rojo o amarillo
       // deja de salir solo en esta misma corrida.
       const sensible = semaforoDeLaReescritura(nota, cacheada);
       if (sensible) { frenada(nota, sensible); continue; }
+      if (esVerificacionBaja(cacheada)) { frenada(nota, FRENO_POR_VERIFICACION); continue; }
       // Sólo la forma (largo, tildes, que el cuerpo no repita el copete):
       // los datos ya se compararon contra el texto completo cuando se escribió,
       // y ese texto no se vuelve a bajar en cada corrida.
@@ -850,75 +951,144 @@ export async function reescribirAutomaticas(notas, {
         { soloForma: true },
       );
       if (control.ok) { resultado[nota.id] = cacheada; continue; }
-      // No entra en resultado: queda el resumen mecánico por ahora, y como
-      // no aparece acá tampoco va a aparecer en `previas` la próxima vez, así
-      // que se reintenta con Gemini en una corrida futura.
+      // No entra en resultado: no se publica por ahora, y como no aparece
+      // acá tampoco va a aparecer en `previas` la próxima vez, así que se
+      // reintenta con Gemini en una corrida futura.
       continue;
     }
-    if (hechas >= tope || fallos >= FALLOS_PARA_CORTAR) continue; // sigue por si algo más abajo está en caché
+    if (cuenta.hechas >= tope || cuenta.fallos >= FALLOS_PARA_CORTAR) continue; // sigue por si algo más abajo está en caché
 
-    // El texto completo de la nota original, para que el cuerpo salga de
-    // hechos reales y no de rellenar. Si no se puede bajar, se sigue sin él.
-    // Y los antecedentes: lo que el sitio ya publicó sobre el tema.
+    // Ya se escribió y el código la calificó con verificación BAJA: espera a
+    // una persona sin gastar otro pedido, salvo que hoy la cuenten más
+    // fuentes que entonces (con más fuentes el nivel puede subir).
+    const anterior = intentos[nota.id];
+    if (anterior?.baja && origenesDe(nota).length <= (anterior.fuentes ?? 0)) { frenada(nota, FRENO_POR_VERIFICACION); continue; }
+
+    // El tope de intentos por nota: tres corridas y no más.
+    if ((intentos[nota.id]?.intentos ?? 0) >= maximoDeIntentos) { cuenta.agotadas += 1; continue; }
+
+    // El texto completo de la nota original (o de otra fuente que contó lo
+    // mismo), para que el cuerpo salga de hechos reales y no de rellenar. Y
+    // los antecedentes: lo que el sitio ya publicó sobre el tema.
+    const completo = await textoCompletoDe(nota, traer);
     const conTexto = {
-      ...nota, textoDeLaFuente: await traer(nota.enlace), antecedentes: antecedentesDe(nota, archivo, { ahora }),
+      ...nota,
+      textoDeLaFuente: completo.texto,
+      fuenteDelTexto: completo.numero,
+      antecedentes: antecedentesDe(nota, archivo, { ahora }),
     };
-    hechas += 1;
 
     // Antes de gastar un pedido: si la nota entera es sensible, la IA no la
     // escribe y la nota deja de salir sola.
     const deLaFuente = semaforoDeLaReescritura(conTexto);
     if (deLaFuente) { frenada(nota, deLaFuente); continue; }
 
+    // Sin texto completo y con un resumen de dos renglones no hay nota que
+    // escribir: pedírsela a Gemini es pagar por relleno (o por un cuerpo que
+    // el verificador va a tirar). Cuenta como intento: quizás en la corrida
+    // siguiente otro medio cuenta lo mismo y hay material.
+    if (!conTexto.textoDeLaFuente && palabrasDeResumenes(nota) < minimoDeMaterial) {
+      cuenta.sinMaterial += 1;
+      anotarIntento(nota, 'sin material');
+      continue;
+    }
+    cuenta.hechas += 1;
+
     const fuente = materialParaVerificar(conTexto);
-    const comprobar = (x) => verificar(fuente, { titulo: x.titulo, copete: x.copete, guion: x.guion, cuerpo: x.cuerpo });
+    const comprobar = (x) => verificar(fuente, {
+      titulo: x.titulo, copete: x.copete, guion: x.guion, cuerpo: x.cuerpo,
+    });
+
+    /** Lo que se puede publicar de una respuesta: tal cual, o con el cuerpo
+     *  sin las oraciones que no pasan. Nunca sin cuerpo. */
+    const evaluar = (x) => {
+      const control = comprobar(x);
+      const cabeza = comprobar({ ...x, cuerpo: '' });
+      if (!cabeza.ok) return { ok: false, problemas: control.problemas, motivo: `título o bajada: ${motivoCorto(cabeza.problemas)}` };
+      if (control.ok && tieneCuerpo(x)) return { ok: true, r: x, sacadas: [] };
+      const depurado = control.ok ? { cuerpo: x.cuerpo, sacadas: [] } : depurarCuerpo(fuente, x);
+      const limpio = { ...x, cuerpo: depurado.cuerpo };
+      if (depurado.sacadas.length && comprobar(limpio).ok && tieneCuerpo(limpio)) {
+        return { ok: true, r: limpio, sacadas: depurado.sacadas };
+      }
+      const palabras = palabrasDe(depurado.cuerpo);
+      return control.ok
+        ? { ok: false, problemas: [], corto: palabrasDe(x.cuerpo), motivo: `cuerpo corto (${palabrasDe(x.cuerpo)} palabras)` }
+        : { ok: false, problemas: control.problemas, motivo: `cuerpo: ${motivoCorto(control.problemas)}; sin esas oraciones quedan ${palabras} palabras` };
+    };
 
     let r = await reescribirConRespaldo(conTexto, mecanicoPorDefecto, opciones);
-    if (!r.deIA) { fallos += 1; motivo ??= r.motivoRespaldo; continue; } // Gemini falló: queda el copete de siempre por ahora
-    let control = comprobar(r);
-
-    // Segunda oportunidad: se le dice qué inventó y se le pide que lo rehaga.
-    // Antes se tiraba todo apenas aparecía un dato de más, y así sólo 1 de cada
-    // 10 notas llegaba a tener cuerpo.
-    if (!control.ok) {
-      const r2 = await reescribirConRespaldo(conTexto, mecanicoPorDefecto, { ...opciones, correccion: control.problemas.map((p) => p.detalle).slice(0, 6) });
-      if (r2.deIA) { r = r2; control = comprobar(r2); }
-    }
-
-    // Si lo único que falla es el cuerpo, se publica el título y el copete
-    // (que están bien) y la nota queda sin cuerpo: mejor eso que un cuerpo
-    // inventado o que repite el copete.
-    if (!control.ok && r.cuerpo) {
-      const sinCuerpo = { ...r, cuerpo: '' };
-      if (comprobar(sinCuerpo).ok) { r = sinCuerpo; control = { ok: true }; sinCuerpoPorFalla += 1; }
-    }
-    if (!control.ok) {
-      // Inventó algo: se descarta, queda el copete de siempre. El motivo va
-      // al registro de "Actualizar la web": sin eso, "12 rechazadas" no
-      // decía si era un número, un nombre o una tilde.
-      rechazadas += 1;
-      registro(`  IA rechazada · ${String(nota.titulo).slice(0, 50)} · ${motivoCorto(control.problemas)}`);
+    if (!r.deIA) {
+      // Gemini falló. Si fue culpa del servicio (sin cupo, sin red), no se
+      // gastó nada y no cuenta; si contestó algo que no sirve, sí.
+      cuenta.fallos += 1;
+      motivo ??= r.motivoRespaldo;
+      if (!FALLA_DEL_SERVICIO.test(String(r.motivoRespaldo))) anotarIntento(nota, `Gemini: ${r.motivoRespaldo}`);
       continue;
+    }
+    let evaluacion = evaluar(r);
+
+    // Segunda oportunidad: se le dice qué inventó (o que el cuerpo quedó
+    // corto) y se le pide que lo rehaga. Antes se tiraba todo apenas aparecía
+    // un dato de más, y así sólo 1 de cada 10 notas llegaba a tener cuerpo.
+    if (!evaluacion.ok) {
+      const correccion = evaluacion.problemas.map((p) => p.detalle).slice(0, 6);
+      if (evaluacion.corto !== undefined) {
+        correccion.push(`el cuerpo quedó corto (${evaluacion.corto} palabras): es obligatorio y va de 100 a 180 palabras, desarrollado con lo que dicen todas las fuentes`);
+      }
+      const r2 = await reescribirConRespaldo(conTexto, mecanicoPorDefecto, { ...opciones, correccion });
+      if (r2.deIA) { r = r2; evaluacion = evaluar(r2); }
+    }
+
+    if (!evaluacion.ok) {
+      // No se publica: queda "esperando cuerpo" y se reintenta en otra
+      // corrida, hasta el tope. El motivo va al registro de "Actualizar la
+      // web": sin eso, "12 rechazadas" no decía si era un número, un nombre o
+      // una tilde.
+      if (evaluacion.motivo.startsWith('título')) cuenta.rechazadas += 1; else cuenta.sinCuerpo += 1;
+      registro(`  IA rechazada · ${String(nota.titulo).slice(0, 50)} · ${evaluacion.motivo}`);
+      anotarIntento(nota, evaluacion.motivo);
+      continue;
+    }
+    r = evaluacion.r;
+    if (evaluacion.sacadas.length) {
+      cuenta.oraciones += evaluacion.sacadas.length;
+      const tipos = [...new Set(evaluacion.sacadas.flatMap((s) => s.problemas.map((p) => p.tipo)))];
+      registro(`  oraciones sacadas · nota ${nota.id} · ${evaluacion.sacadas.length} (${tipos.join(', ')}), quedan ${palabrasDe(r.cuerpo)} palabras`);
     }
 
     // Las partes nuevas, cada una por el verificador: la que no cuadra se
     // descarta sola. En el registro, el id y no el título.
     const { extras, descartados } = completarReescritura(conTexto, r);
     if (descartados.length) {
-      partesDescartadas += descartados.length;
+      cuenta.partesDescartadas += descartados.length;
       registro(`  partes descartadas · nota ${nota.id} · ${descartados.map((d) => `${d.campo}: ${motivoCorto(d.problemas)}`).join(' · ')}`);
     }
 
     // Lo que escribió la IA, todo, por el semáforo antes de publicarse.
     const loEscrito = semaforoDeLaReescritura({}, { ...r, ...extras });
-    if (loEscrito) { frenada(nota, loEscrito); continue; }
+    if (loEscrito) { frenada(nota, loEscrito); anotarIntento(nota, `semáforo: ${loEscrito.motivo}`); continue; }
 
+    // Criterio de editor: con verificación BAJA no sale sola.
+    if (esVerificacionBaja(extras)) {
+      frenada(nota, FRENO_POR_VERIFICACION);
+      anotarIntento(nota, FRENO_POR_VERIFICACION.motivo, { baja: true, fuentes: origenesDe(nota).length });
+      continue;
+    }
+
+    anotarIntento(nota, 'con cuerpo');
+    cuenta.conCuerpo += 1;
     resultado[nota.id] = {
       titulo: r.titulo, copete: r.copete, cuerpo: r.cuerpo, guion: r.guion, ...extras, deIA: true,
     };
   }
 
-  if (hechas || frenadas) registro(`  reescritura: ${hechas} pedidas, ${fallos} fallaron${motivo ? ` (${String(motivo).slice(0, 160)})` : ''}, ${rechazadas} rechazadas por no cuadrar con la fuente, ${sinCuerpoPorFalla} quedaron sin cuerpo, ${partesDescartadas} partes nuevas descartadas, ${frenadas} frenadas por el semáforo`);
+  if (cuenta.hechas || cuenta.frenadas || cuenta.sinMaterial || cuenta.agotadas) {
+    registro(`  reescritura: ${cuenta.hechas} pedidas, ${cuenta.conCuerpo} con cuerpo, ${cuenta.fallos} fallaron${motivo ? ` (${String(motivo).slice(0, 160)})` : ''}, `
+      + `${cuenta.sinCuerpo} sin cuerpo que sirva, ${cuenta.rechazadas} rechazadas por el título o la bajada, ${cuenta.sinMaterial} sin material, `
+      + `${cuenta.oraciones} oraciones sacadas, ${cuenta.agotadas} ya agotaron los ${maximoDeIntentos} intentos, `
+      + `${cuenta.partesDescartadas} partes nuevas descartadas, ${cuenta.frenadas} frenadas por el semáforo`);
+  }
   return resultado;
 }
 

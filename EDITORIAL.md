@@ -45,7 +45,18 @@ del semáforo. Hernán y Andrés tienen que decidir si en la web también espera
   imputado), involucra una muerte, o nombra a un menor sin ser el caso de
   arriba. Se revisa a mano en el panel.
 - **Verde, sale solo:** todo lo demás, si la sección lo permite (todas menos
-  País) y si pasa el piso y el cupo de lo de afuera.
+  País) y si pasa el piso y el cupo de lo de afuera. **Y si tiene cuerpo**
+  (ver "Sin cuerpo no se publica", abajo).
+- **La cotización del dólar no es una nota** (25/09): si el **título** dice
+  "dólar hoy", "a cuánto cotiza", "dólar blue", "cotización del dólar", "dólar
+  oficial", "dólar MEP" y parecidas (lista `cotizacion` de `REGLAS_SEMAFORO`),
+  queda amarilla con el motivo "cotización del dólar: se muestra en /dolar".
+  No se avisa por WhatsApp (es relleno) y, si ya tenía página, la conserva.
+- **Verificación baja, espera a una persona** (criterio de editor, 25/09): si
+  el nivel de verificación que calcula el código es BAJA (ver abajo), la nota
+  no sale sola aunque el semáforo esté en verde: queda amarilla con el motivo
+  "verificación baja: espera a una persona", y no se le vuelve a pedir a
+  Gemini salvo que aparezcan más fuentes.
 
 **Qué lee el semáforo.** Desde el 25/09 no alcanza con el título y el
 comienzo del resumen: mira también el **texto completo de la nota original**
@@ -74,27 +85,38 @@ Campillay, menores y víctimas, tildes, cargos, días, guion = título, no nombr
 la fuente, los dos tonos). El prompt exacto está en `reels/reescritura.mjs` y
 se lee en el panel, pestaña "Cómo escribe la IA".
 
-Toda nota que la IA escribe tiene estas partes:
+Toda nota que la IA escribe tiene estas partes (las tres primeras son la nota que ve el lector; el resto es de uso interno, ver "Lo que ve el lector y lo que usa la redacción"):
 
 | Parte | Qué es | Límite |
 |---|---|---|
-| **Título** | Dice qué pasó, en presente, sin signos de admiración ni pregunta, con "en Balcarce" cuando corresponde. Se entiende solo en el celular | Apunta a unos 70 caracteres; el verificador rechaza más de 90 |
+| **Título** | Dice qué pasó, en presente, sin signos de admiración ni pregunta, con "en Balcarce" cuando corresponde. Se entiende solo en el celular. **Nunca "en vivo", "minuto a minuto", "en directo"** ni parecidos aunque el medio de origen lo diga: el sitio no hace coberturas en vivo (el verificador lo rechaza en el título, la bajada, el guion y el texto para redes; "música en vivo" sí pasa) | Apunta a unos 70 caracteres; el verificador rechaza más de 90 |
 | **Bajada** (campo `copete`) | Qué pasó, cómo se relaciona con Balcarce y el dato más importante | Dos o tres frases, unas 50 palabras (hasta 360 caracteres) |
-| **Cuerpo** (el "resumen" del modelo) | La nota desarrollada, sólo con información de las fuentes, en **pirámide invertida**: primero el hecho central con el dato que la bajada no dio; después el contexto que importa; al final, si la fuente da para eso, qué sigue o qué significa para Balcarce | De 100 a 180 palabras en uno a tres párrafos; si la fuente es corta, lo que dé, sin relleno (hasta 1800 caracteres) |
+| **Cuerpo** (el "resumen" del modelo) | **Obligatorio.** La nota desarrollada con lo que dan TODAS las fuentes recibidas (y los antecedentes como contexto fechado), en **pirámide invertida**: primero el hecho central con el dato que la bajada no dio; después el contexto que importa; al final, si la fuente da para eso, qué sigue o qué significa para Balcarce. El análisis se nota acá: lo que confirman varias fuentes va como hecho, lo de una sola atribuido, lo contradictorio con las dos versiones, lo no confirmado dicho como tal | De 100 a 180 palabras en uno a tres párrafos (hasta 1800 caracteres). **Con menos de 70 palabras la nota no se publica** |
 | **Claves** (`claves`) | Lo esencial, en puntos de una línea | De 3 a 5 |
 | **Qué se sabe** (`seSabe`) | Los datos confirmados, atribuidos | Lista |
 | **Qué falta confirmar** (`noConfirmado`) | Lo que no se pudo verificar y lo que las fuentes cuentan distinto. Con una sola fuente, el sistema agrega siempre "No pudo ser contrastado de forma independiente con las fuentes consultadas." (y la saca si hay más de una) | Lista, puede ir vacía |
-| **Fuentes consultadas** | Medio, fecha y enlace de cada fuente (salen de la ingesta, no de la IA) y lo que aportó cada una (`aportes`, lo escribe la IA), más las notas anteriores del sitio que recibió como antecedentes | — |
+| **Fuentes consultadas** | Medio, fecha y enlace de cada fuente (salen de la ingesta, no de la IA) y lo que aportó cada una (`aportes`, lo escribe la IA), más las notas anteriores del sitio que recibió como antecedentes. Todo eso es de uso interno (panel): el lector ve sólo el nombre de cada medio y su enlace | — |
 | **Texto para redes** (`textoRedes`) | El posteo de Facebook: qué pasó y por qué importa. Sin nombrar al medio de origen, sin hashtags ni enlaces | Hasta 280 caracteres |
 | **Etiquetas** (`etiquetas`) | De qué trata la nota, sin "#". Van a los datos para Google (`keywords`) y dos o tres como hashtags en Facebook | De 3 a 8 |
 | **Guion** | Es el título, dicho tal cual | Unos diez segundos |
 
-**Cómo se ve en la web.** Debajo del cuerpo, en bloques chicos con rótulo en
-gris (`web/components/verificacion.js`): el nivel de verificación como una
-etiqueta con su porqué, "Claves", "Qué se sabe" y "Qué falta confirmar" (sólo
-si hay), y "Fuentes consultadas". Después siguen la firma y la atribución, como
-siempre. Las notas reescritas antes del 25/09 no tienen estas partes y se ven
-como se veían: **no se le vuelve a pedir a Gemini una nota ya reescrita para
+### Lo que ve el lector y lo que usa la redacción
+
+Criterio de Hernán y Andrés (25/09): el sitio opera como un diario. "Una cosa
+es lo que usemos internamente, otra que se desplieguen infinitas fuentes
+dentro de la página." La redacción (la IA) recibe la noticia, suma lo que
+contaron todas las fuentes, lo contrasta y escribe la nota; el análisis se
+nota en la calidad de la nota, no en bloques aparte.
+
+| | Qué es | Dónde se ve |
+|---|---|---|
+| **Lo que ve el lector** | Título, bajada, cuerpo y, al pie, un desplegable chico y **cerrado** "Fuentes (N)" con el nombre de cada medio y el enlace a su nota (`web/components/verificacion.js`, `web/lib/fuentes-de-la-nota.js`). Después, compartir y la firma (quién la escribió) | La web |
+| **Lo que usa la redacción** | Claves, qué se sabe, qué falta confirmar, lo que aportó cada fuente, los antecedentes, el nivel de verificación y su porqué, el texto para redes | Se genera y se guarda (`portada.json`, `archivo.json`, las decisiones del panel) y se ve **en el panel**, plegado en "Análisis interno". **No** va a la web ni a los datos para Google (las etiquetas sí, como `keywords`) |
+
+El desplegable de fuentes es también la **atribución** (ley 11.723): toda nota
+tiene al menos la fuente principal, aunque sea de antes de que existieran las
+fuentes consultadas. Las notas reescritas antes del 25/09 no tienen las
+partes internas: **no se le vuelve a pedir a Gemini una nota ya reescrita para
 llenarlas** (nunca se paga dos veces por lo mismo).
 
 **El nivel de verificación lo calcula el código, no la IA**
@@ -132,14 +154,46 @@ búsqueda — un dato "encontrado" sería imposible de distinguir de uno
 inventado. Si algún día se hace, lo que traiga la búsqueda tendría que llegar
 como texto al verificador, con su fuente, igual que hoy los medios.
 
+**Sin cuerpo no se publica** (25/09, regla 23 de `REGLAS.md`). Ese día 42 de
+las 89 notas de la portada salieron con el título y la bajada nada más (39
+escritas por la IA): si el cuerpo no pasaba el verificador, se publicaba igual
+con el cuerpo vacío, y ese cuerpo vacío contaba como "ya hecho" y no se volvía
+a intentar nunca. Desde entonces:
+
+- Una nota **automática** (sin decisión de una persona) sólo se publica — en la
+  portada, las secciones, los temas, el feed, el sitemap y las redes — si
+  tiene **cuerpo de verdad**: 70 palabras o más y distinto de la bajada
+  (`tieneCuerpo` en `web/lib/cuerpo.js`). Si no, queda **"esperando
+  cuerpo"**: no aparece en ningún lado público. `portada.json` guarda cuántas
+  esperan (`esperandoCuerpo`) y el resumen de las 21 lo dice ("Esperando
+  cuerpo: N").
+- Lo que **publicó una persona** desde el panel se respeta aunque no tenga
+  cuerpo, pero el panel pide confirmarlo con un botón ("Publicar igual, sin
+  cuerpo").
+- Las páginas del archivo que ya existían sin cuerpo **conservan su página**
+  (un enlace que circula no se rompe, regla 20), pero no vuelven a las listas.
+- La farmacia, el clima y la agenda no son notas: no les toca esta regla.
+
 **El cuerpo tiene que ser distinto de la bajada.** No arranca con las mismas
 palabras ni lo repite. Si lo repite, el verificador lo rechaza
 (`pruebas/cuerpo.test.mjs`).
 
 **Con qué material trabaja.** La IA recibe el **texto completo de la nota
 original** (`ingesta/articulo.mjs`, hasta 4000 caracteres), no sólo el resumen del
-feed. Sin eso inventaba nombres y números y se rechazaba 65 % de las notas. Si
+feed; si el de la principal no se puede bajar, el de otra fuente que contó lo
+mismo. Sin eso inventaba nombres y números y se rechazaba 65 % de las notas. Si
 hay varias fuentes para la misma noticia, recibe cada una por separado.
+**Sin el texto completo de ninguna fuente y con menos de 60 palabras de
+resumen, no se le pide nada a Gemini**: no hay de dónde escribir una nota
+(cuenta como intento, "sin material"; si en una corrida siguiente otro medio
+cuenta lo mismo, puede aparecer material).
+
+El 25/09 se midió con las 42 notas sin cuerpo: 19 tenían el texto completo al
+alcance, 21 no por culpa del extractor (La Nación, Ámbito, Minuto Uno, Olé y
+Campeones tienen varios `<article>` y se tomaba el primero, que es una tarjeta;
+Infórmese Primero enlaza la entrada del feed de Blogger, que es XML), una por
+bloqueo (Motorsport, 403) y una porque era de dos renglones. Arreglado el
+extractor, se bajan 40 de 42.
 
 **Cómo se controla:**
 
@@ -152,15 +206,27 @@ hay varias fuentes para la misma noticia, recibe cada una por separado.
    igual, sin pedir otra vez a Gemini. Las etiquetas se sacan de a una. Al
    texto para redes se le exige además que no nombre al medio de origen y que
    no traiga hashtags ni enlaces. El semáforo también mira todas las partes.
-2. **Un reintento con corrección**: si la primera respuesta se rechaza, se
-   vuelve a pedir diciéndole qué falló ("usá únicamente lo que dice la fuente").
-3. **Si sólo falla el cuerpo** las dos veces, se publica el título y el copete
-   y la nota queda sin cuerpo: mejor eso que un cuerpo inventado.
-4. **Si falla todo**, la nota sale con el resumen mecánico de siempre.
-5. El vigilante avisa si menos del 35 % de las notas de las últimas 24 horas
-   tienen cuerpo.
+2. **No se tira el cuerpo entero por un dato** (25/09): si el verificador
+   rechaza el cuerpo, se sacan **sólo las oraciones** que traen el dato que no
+   cuadra (`depurarCuerpo`); si lo que queda pasa y tiene 70 palabras o más,
+   se usa. El registro dice cuántas oraciones se sacaron y por qué.
+3. **Un reintento con corrección**: si igual no alcanza (o el cuerpo quedó
+   corto), se vuelve a pedir diciéndole qué falló ("usá únicamente lo que dice
+   la fuente", "el cuerpo es obligatorio, de 100 a 180 palabras"), y con la
+   respuesta nueva, lo mismo.
+4. **Si falla el título, la bajada o el guion**, la nota no se usa. **Si el
+   cuerpo no alcanza**, tampoco: queda esperando cuerpo, sin publicarse.
+5. **Tres intentos por nota, como mucho**, en corridas distintas
+   (`MAXIMO_DE_INTENTOS`): la clave de respaldo es paga y no se gasta de más en
+   una nota que no da. Se guardan en `web/data/intentos-ia.json` (`{ id: {
+   intentos, ultimo, motivo } }`, podado a 7 días; el panel usa los suyos). Una
+   falla del servicio (sin cupo, saturado, sin red) no cuenta. Cuando una nota
+   agota los intentos, el registro de "Actualizar la web" lo dice con el
+   motivo.
+6. El vigilante avisa si menos del 35 % de las notas de las últimas 24 horas
+   tienen cuerpo, y el resumen de las 21 dice cuántas esperan cuerpo.
 
-Las reglas que esto cuida están en `REGLAS.md` (5 y 6). Las pruebas del formato
+Las reglas que esto cuida están en `REGLAS.md` (5, 6, 23, 24 y 25). Las pruebas del formato
 nuevo están en `pruebas/editor.test.mjs`.
 
 **En Facebook**, si la nota trae texto para redes, el posteo es ese texto, el
@@ -208,20 +274,27 @@ esté prendido.
      sobrio, sin calidez, sólo los hechos.
 4. **Se verifica antes de publicarse** (`ingesta/verificar.mjs`): si la IA
    agrega un número, un nombre, una fecha o una cita que ninguna fuente trae
-   — o si escribe "más" mal (cambia el sentido) — se descarta y la nota sale
-   con el resumen mecánico de siempre. Ser estricto acá cuesta poco: peor es
-   publicar algo inventado.
+   — o si escribe "más" mal (cambia el sentido) — se saca esa oración o, si es
+   el título o la bajada, se descarta todo. Desde el 25/09 la nota ya no sale
+   con el resumen mecánico: sin cuerpo, espera. Ser estricto acá cuesta poco:
+   peor es publicar algo inventado.
 5. **Primero lo local.** Hay un tope de pedidos por corrida: con el tope
    justo, se reescribe primero lo de Balcarce aunque lo de afuera tenga más
    puntaje (desde el 25/09).
-6. **Nunca se paga dos veces por lo mismo.** Lo ya reescrito se reusa de la
-   portada anterior; sólo se le vuelve a pedir a Gemini si es nueva. Y lo
-   reusado se revalida igual contra las reglas de hoy: si una regla nueva ya
-   no lo dejaría pasar, se descarta y se reintenta en una corrida futura.
-7. **Si Gemini falla o no hay cupo**, la nota sale igual con el resumen
-   mecánico — nunca se cae una publicación por esto. Primero se intenta con
-   la clave de redacción (gratis); si se queda sin cupo (429), reintenta una
-   vez con la de redes (paga) antes de resignarse.
+6. **Nunca se paga dos veces por lo mismo.** Lo ya reescrito **con cuerpo** se
+   reusa de la portada anterior; sólo se le vuelve a pedir a Gemini si es
+   nueva o si quedó sin cuerpo (hasta tres intentos). Y lo reusado se revalida
+   igual contra las reglas de hoy: si una regla nueva ya no lo dejaría pasar,
+   se descarta y se reintenta en una corrida futura.
+7. **Si Gemini falla o no hay cupo**, esa nota no sale en esta corrida (sin
+   cuerpo no se publica) y se reintenta en la siguiente; la falla del servicio
+   no cuenta como intento. Primero se intenta con la clave de redacción
+   (gratis); si se queda sin cupo (429), reintenta una vez con la de redes
+   (paga) antes de resignarse. **Si la clave se queda sin cupo un día entero,
+   ese día sólo salen las notas ya escritas y las que publique una persona.**
+8. **El panel usa exactamente el mismo flujo** (`reescribirAutomaticas`),
+   con sus propios intentos: lo que escribe en la PC cumple las mismas reglas
+   que lo que se escribe en la nube.
 
 **Quién la escribió se dice siempre**, en la nota (componente `<Firma>`): si
 la reescribió la IA, y si la publicó una persona o salió sola. No es letra

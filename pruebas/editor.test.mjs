@@ -21,6 +21,8 @@ import { verificar, verificarExtras } from '../ingesta/verificar.mjs';
 import { MEDIOS_OFICIALES } from '../ingesta/fuentes.mjs';
 import { mensajeDeNota, hashtagsDe } from '../redes/elegir.mjs';
 import { camposEditables, decisionParaLaWeb, conTextoCorregido } from '../panel/notas.mjs';
+import { fuentesDeLaNota } from '../web/lib/fuentes-de-la-nota.js';
+import { CUERPO } from './cuerpo-de-prueba.mjs';
 
 const RAIZ = path.join(import.meta.dirname, '..');
 const leer = (r) => fs.readFileSync(path.join(RAIZ, r), 'utf8');
@@ -52,7 +54,7 @@ const NOTA = {
 const BUENA = {
   titulo: 'El Concejo aprueba la ordenanza de tránsito en Balcarce',
   copete: 'El Concejo Deliberante aprobó la nueva norma de tránsito. Ordena el estacionamiento del centro.',
-  cuerpo: 'Además de regular dónde se puede dejar el auto en el centro, la ordenanza establece sanciones económicas para quienes estacionen mal sobre la avenida principal.',
+  cuerpo: CUERPO,
   guion: 'El Concejo aprueba la ordenanza de tránsito en Balcarce',
   claves: ['El Concejo Deliberante aprobó la ordenanza de tránsito.', 'Ordena el estacionamiento en el centro.', 'Fija multas en la avenida principal.'],
   seSabe: ['La ordenanza se aprobó con el voto de la mayoría.'],
@@ -66,8 +68,9 @@ const sinTexto = async () => null;
 const correr = (respuestas, extra = {}) => {
   const g = gemini(respuestas);
   const lineas = [];
+  // El piso de material en cero: estas pruebas son sobre las partes nuevas.
   return reescribirAutomaticas([{ ...NOTA, ...extra }], {
-    traer: sinTexto, opciones: { fetchFn: g.fetchFn, intentos: 1 }, registro: (l) => lineas.push(l),
+    traer: sinTexto, minimoDeMaterial: 0, opciones: { fetchFn: g.fetchFn, intentos: 1 }, registro: (l) => lineas.push(l),
   }).then((r) => ({ r, pedidos: g.pedidos, lineas }));
 };
 
@@ -179,7 +182,9 @@ test('una etiqueta que nombra a alguien que no está en la fuente se saca sola',
 test('las partes nuevas pasan por el semáforo: un menor en las claves frena la nota', async () => {
   const n = { ...NOTA };
   const g = gemini([{ ...BUENA, claves: ['Un menor de edad participó de la sesión.'] }]);
-  const r = await reescribirAutomaticas([n], { traer: sinTexto, opciones: { fetchFn: g.fetchFn, intentos: 1 }, registro: () => {} });
+  const r = await reescribirAutomaticas([n], {
+    traer: sinTexto, minimoDeMaterial: 0, opciones: { fetchFn: g.fetchFn, intentos: 1 }, registro: () => {},
+  });
   assert.equal(r.n1, undefined);
   assert.equal(n.semaforo, 'rojo');
   assert.ok(semaforoDeLaReescritura({}, { titulo: 'x', textoRedes: 'Un caso de grooming.' }));
@@ -328,17 +333,37 @@ test('las partes de una persona y las de la IA no se mezclan', () => {
   assert.deepEqual(extrasParaLaWeb({ titulo: 'De la IA en el panel', por: 'ia', claves: ['del panel'] }, auto), { claves: ['del panel'] });
 });
 
-test('la página de la nota muestra claves, qué se sabe, qué falta confirmar, fuentes y nivel', () => {
+// Criterio del 25/09: el lector ve la nota (título, bajada y cuerpo) y un
+// desplegable chico y cerrado con las fuentes. El análisis es de uso interno.
+test('la página de la nota muestra sólo la nota y un desplegable cerrado "Fuentes (N)"; el análisis no', () => {
   const pagina = leer('web/app/nota/[id]/page.js');
   const componente = leer('web/components/verificacion.js');
-  assert.match(pagina, /<VerificacionDeLaNota nota=\{n\} \/>/);
+  assert.match(pagina, /<FuentesDeLaNota nota=\{n\} \/>/);
   assert.match(pagina, /<Firma nota=\{n\} \/>/, 'la firma sigue');
-  for (const t of ['Claves', 'Qué se sabe', 'Qué falta confirmar', 'Fuentes consultadas', 'Nota anterior de Radar Balcarce']) {
-    assert.ok(componente.includes(t), `falta "${t}"`);
+  assert.match(componente, /<details className="fuentes-nota">/);
+  assert.ok(!/<details[^>]*\bopen\b/.test(componente), 'el desplegable arranca cerrado');
+  assert.match(componente, /Fuentes \(\{fuentes\.length\}\)/);
+  const sinComentarios = (t) => t.replace(/^import .*$/gm, '').replace(/\/\/.*$/gm, '').replace(/\{\/\*[\s\S]*?\*\/\}/g, '');
+  for (const t of ['claves', 'seSabe', 'noConfirmado', 'verificacion', 'aporte', 'antecedentes', 'Qué falta confirmar', 'Nota anterior']) {
+    assert.ok(!sinComentarios(componente).includes(t), `el componente vuelve a mostrar "${t}"`);
+    assert.ok(!sinComentarios(pagina).includes(t), `la página vuelve a mostrar "${t}"`);
   }
-  // Las notas de antes no traen nada y no se dibuja nada.
-  assert.match(componente, /if \(!tieneVerificacion\(nota\)\) return null/);
-  assert.match(leer('web/app/globals.css'), /\.verificacion-nota/);
+  // El orden: cuerpo → fuentes → compartir → firma.
+  const orden = ['n.cuerpo &&', '<FuentesDeLaNota', '<Compartir', '<Firma'].map((t) => pagina.indexOf(t));
+  assert.ok(orden.every((x, i) => x > 0 && (i === 0 || x > orden[i - 1])), `orden: ${orden}`);
+});
+
+test('las fuentes del lector: nombre del medio y enlace, sin repetir, y siempre al menos la principal', () => {
+  const conConsultadas = fuentesDeLaNota({
+    fuentesConsultadas: [
+      { medio: 'A', enlace: 'https://a/1', aporte: 'no se muestra', fecha: 'x' },
+      { medio: 'A', enlace: 'https://a/1' },
+      { medio: 'B', enlace: 'https://b/2', oficial: true },
+    ],
+  });
+  assert.deepEqual(conConsultadas, [{ medio: 'A', enlace: 'https://a/1' }, { medio: 'B', enlace: 'https://b/2' }]);
+  // Una nota de antes, sin fuentes consultadas: la atribución sale de la ingesta.
+  assert.deepEqual(fuentesDeLaNota({ medios: ['A', 'B'], enlace: 'https://a/1' }), [{ medio: 'A', enlace: 'https://a/1' }, { medio: 'B', enlace: null }]);
 });
 
 test('los datos para Google no inventan propiedades: las etiquetas van en keywords y nada más', () => {
@@ -349,7 +374,7 @@ test('los datos para Google no inventan propiedades: las etiquetas van en keywor
 
 test('generar-datos publica las partes nuevas y le pasa el archivo a la reescritura', () => {
   const g = leer('web/scripts/generar-datos.mjs');
-  assert.match(g, /\.\.\.extrasParaLaWeb\(d, auto\)/);
+  assert.match(g, /\.\.\.extrasParaLaWeb\(deLaDecision, auto\)/);
   assert.match(g, /archivo: archivoAnterior\.notas/);
 });
 
@@ -389,17 +414,80 @@ test('el panel guarda y exporta las partes nuevas, y las borra si una persona co
   assert.equal(conTextoCorregido(d, { cuerpo: 'Otro cuerpo' }).verificacion, undefined);
 });
 
-test('el panel muestra las partes nuevas y sigue mostrando la instrucción', () => {
+test('el panel muestra el análisis interno (plegado) y sigue mostrando la instrucción', () => {
   const html = leer('panel/panel.html');
   const servidor = leer('panel/servidor.mjs');
-  assert.match(html, /\$\{partesDeLaIA\(n\)\}/);
+  assert.match(html, /\$\{analisisInterno\(n\)\}/);
+  assert.match(html, /<details class="analisis"/);
+  for (const t of ['Qué se sabe', 'Qué falta confirmar', 'Fuentes y qué aportó cada una', 'Antecedentes']) assert.ok(html.includes(t), `falta "${t}"`);
   assert.match(servidor, /instruccionEditorial: INSTRUCCION_EDITORIAL/);
-  assert.match(servidor, /completarReescritura\(conAntecedentes, r0\)/);
+  assert.match(servidor, /completarReescritura\(conAntecedentes, r\)/);
   assert.match(servidor, /conTextoCorregido\(previo,/);
+});
+
+test('el panel reescribe con el MISMO flujo que la nube, sin una copia propia de la lógica', () => {
+  const servidor = leer('panel/servidor.mjs');
+  assert.match(servidor, /await reescribirAutomaticas\(cola, \{/);
+  assert.match(servidor, /intentos: estado\.intentosIA/);
+  // La copia vieja verificaba a mano y marcaba "rechazadaPorVerificacion" para no reintentar nunca.
+  assert.ok(!/rechazadaPorVerificacion: true/.test(servidor));
+});
+
+test('desde el panel no se publica una nota sin cuerpo sin confirmarlo con un botón de la página', () => {
+  const servidor = leer('panel/servidor.mjs');
+  const html = leer('panel/panel.html');
+  assert.match(servidor, /accion === 'publicada' && !confirmarSinCuerpo && !tieneCuerpo\(cuerpoFinal\)/);
+  assert.match(servidor, /sinCuerpo: true/);
+  assert.match(html, /Publicar igual, sin cuerpo/);
+  assert.match(html, /confirmarSinCuerpo: true/);
+  const bloque = html.slice(html.indexOf('if (d.sinCuerpo)'), html.indexOf('if (d.sinCuerpo)') + 1500);
+  assert.ok(!/confirm\(/.test(bloque), 'con un botón en la página, no con confirm()');
 });
 
 test('completarReescritura con una nota de antes (sin origenes) no inventa el medio de las otras fuentes', () => {
   const { extras } = completarReescritura({ titulo: 'x', resumenFuente: RESUMEN, fuentesTexto: ['otro resumen'], medios: ['A', 'B'], enlace: 'https://a' }, { titulo: 'x', copete: 'y' });
   assert.deepEqual(extras.fuentesConsultadas.map((f) => f.medio), ['A']);
   assert.equal(extras.verificacion.nivel, 'ALTA', 'dos medios distintos según la ingesta');
+});
+
+// --------------------------------------------- criterio de editor: BAJA
+
+test('con verificación BAJA la nota no sale sola: queda amarilla, esperando a una persona', async () => {
+  // Un solo medio y una declaración de parte ("habría") en la bajada.
+  const n = { ...NOTA };
+  const g = gemini([{ ...BUENA, copete: 'El Concejo habría aprobado la ordenanza de tránsito del centro.' }]);
+  const intentos = {};
+  const r = await reescribirAutomaticas([n], {
+    traer: sinTexto, minimoDeMaterial: 0, intentos, opciones: { fetchFn: g.fetchFn, intentos: 1 }, registro: () => {},
+  });
+  assert.equal(r.n1, undefined, 'salió sola con verificación baja');
+  assert.equal(n.semaforo, 'amarillo');
+  assert.match(n.motivo, /verificación baja: espera a una persona/);
+  assert.equal(intentos.n1.baja, true);
+  // En la corrida siguiente no se gasta otro pedido: sigue esperando.
+  const otra = { ...NOTA };
+  const g2 = gemini([BUENA]);
+  await reescribirAutomaticas([otra], {
+    traer: sinTexto, minimoDeMaterial: 0, intentos, opciones: { fetchFn: g2.fetchFn, intentos: 1 }, registro: () => {},
+  });
+  assert.equal(g2.pedidos.length, 0);
+  assert.equal(otra.semaforo, 'amarillo');
+});
+
+test('lo ya publicado con verificación BAJA deja de salir solo, sin pedir nada', async () => {
+  const previas = { n1: { ...BUENA, verificacion: { nivel: 'BAJA', porque: 'x' }, deIA: true } };
+  const n = { ...NOTA };
+  const g = gemini([]);
+  const r = await reescribirAutomaticas([n], { previas, traer: sinTexto, opciones: { fetchFn: g.fetchFn }, registro: () => {} });
+  assert.equal(r.n1, undefined);
+  assert.equal(n.semaforo, 'amarillo');
+  assert.equal(g.pedidos.length, 0);
+});
+
+test('el prompt pide usar el análisis para escribir el cuerpo, que es obligatorio, y prohíbe "en vivo" en el título', () => {
+  assert.match(INSTRUCCION_EDITORIAL, /El cuerpo es OBLIGATORIO/);
+  assert.match(INSTRUCCION_EDITORIAL, /TODAS las fuentes/);
+  assert.match(INSTRUCCION_EDITORIAL, /lo que confirman varias fuentes va dicho como hecho/);
+  assert.match(INSTRUCCION_EDITORIAL, /con las dos versiones atribuidas/);
+  assert.match(INSTRUCCION_EDITORIAL, /Nunca "en vivo", "EN VIVO", "minuto a minuto", "en directo"/);
 });

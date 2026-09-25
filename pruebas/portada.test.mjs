@@ -23,7 +23,10 @@ test('la portada, las secciones y los temas no muestran la fuente arriba del tí
 });
 
 test('la fuente sí queda en la página de cada nota (la atribución va ahí)', () => {
-  assert.match(leer('web/app/nota/[id]/page.js'), /n\.medios\.join/);
+  // Desde el 25/09, en un desplegable chico al pie: "Fuentes (N)", con el
+  // nombre de cada medio y su enlace (EDITORIAL.md).
+  assert.match(leer('web/app/nota/[id]/page.js'), /<FuentesDeLaNota nota=\{n\} \/>/);
+  assert.match(leer('web/lib/fuentes-de-la-nota.js'), /nota\?\.medios/);
 });
 
 // -------------------------------------------------- "la vimos hace…"

@@ -13,7 +13,7 @@
 
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { REGLAS_SEMAFORO } from '../ingesta/fuentes.mjs';
+import { REGLAS_SEMAFORO, MOTIVO_COTIZACION } from '../ingesta/fuentes.mjs';
 import { paraPruebas, semaforoDelTexto } from '../ingesta/ingesta.mjs';
 
 const { semaforo, normalizar } = paraPruebas;
@@ -121,4 +121,33 @@ test('semaforoDelTexto devuelve null si no hay nada sensible, y el rojo antes qu
 
 test('semaforoDelTexto no mira las promociones: una página entera siempre dice "seguinos en"', () => {
   assert.equal(semaforoDelTexto('Se inauguró la plaza. Seguinos en Instagram. Suscribite.'), null);
+});
+
+// ------------------------------------------------ la cotización del dólar
+//
+// 25/09: salían dos o tres notas por día que eran sólo la cotización ("El
+// dólar minorista y el dólar blue cotizan este viernes"), sin cuerpo. La
+// cotización se muestra en /dolar: esas notas quedan amarillas, sin salir.
+
+test('una nota de la cotización del dólar no sale sola: queda amarilla con su motivo', () => {
+  const s = semaforo({
+    titulo: 'El dólar minorista y el dólar blue cotizan este viernes', cuerpo: '', categorias: [], peso: 20, alcance: 'pais', local: false, fecha: new Date(), imagen: null,
+  }, 'Economía', 100);
+  assert.equal(s.color, 'amarillo');
+  assert.equal(s.motivo, MOTIVO_COTIZACION);
+  for (const t of ['Dólar hoy: a cuánto cotiza el oficial', 'Dólar blue hoy en vivo', 'Cotización del dólar este lunes', 'El dólar MEP cerró en alza']) {
+    assert.equal(colorDe(t), 'amarillo', t);
+  }
+});
+
+test('lo que habla de plata pero no es la cotización sí sale', () => {
+  assert.equal(colorDe('El Concejo aprobó el presupuesto en pesos'), 'verde');
+  // Sólo el título: el dólar en el cuerpo de una nota de economía no la frena.
+  assert.equal(colorDe('Suben las exportaciones del partido', 'Los productores cobran en dólar oficial.'), 'verde');
+});
+
+test('cada término de la lista de la cotización, en un titular, da amarillo', () => {
+  for (const termino of REGLAS_SEMAFORO.cotizacion) {
+    assert.equal(colorDe(`Balcarce: ${termino} en el barrio`), 'amarillo', termino);
+  }
 });

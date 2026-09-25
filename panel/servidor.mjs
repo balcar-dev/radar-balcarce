@@ -13,15 +13,17 @@ import {
 } from '../ingesta/agenda.mjs';
 import { NUMEROS, tocaHoy, diaDeEstaSemana } from '../ingesta/utiles.mjs';
 import {
-  reescribirConRespaldo, INSTRUCCION_EDITORIAL, semaforoDeLaReescritura, completarReescritura, antecedentesDe, materialParaVerificar, sinExtras,
+  reescribirConRespaldo, INSTRUCCION_EDITORIAL, completarReescritura, antecedentesDe, materialParaVerificar, sinExtras,
+  reescribirAutomaticas, podarIntentos, textoCompletoDe, extrasDe,
 } from '../reels/reescritura.mjs';
+import { tieneCuerpo, palabrasDe, PALABRAS_MINIMAS_CUERPO } from '../web/lib/cuerpo.js';
 import { claveRedaccion as claveGemini } from '../reels/claves.mjs';
 import {
   sesionDe, entrar, salir, paginaLogin, hayUsuarios,
 } from './acceso.mjs';
 import { TIPOS as TIPOS_BUZON, ESTADOS_SEGUIMIENTO } from './buzon.mjs';
 import { decisionHumana } from '../ingesta/utiles.mjs';
-import { verificar, resumirProblemas } from '../ingesta/verificar.mjs';
+import { verificar, resumirProblemas, depurarCuerpo } from '../ingesta/verificar.mjs';
 import { horariosDe, guardarHorario, DIAS as DIAS_SEMANA } from './horarios.mjs';
 import { guionNoticia } from '../reels/plan.mjs';
 import { aplicarAviso } from './avisos.mjs';
@@ -260,6 +262,9 @@ function vista(sesion = null) {
       estado: decisionHumana(d) ? d.estado : estadoPorDefecto(n),
       decidioQuien: d?.por ?? null,
       decidioCuando: d?.cuando ?? null,
+      // ¿Tiene cuerpo de verdad? Sin cuerpo no sale sola, y publicarla a mano
+      // pide una confirmación (web/lib/cuerpo.js).
+      conCuerpo: tieneCuerpo(camposEditables(n, d)),
       archivadaPorTiempo: !decisionHumana(d) && esVieja(n),
     };
   });
@@ -321,10 +326,8 @@ function fuentesParaIngestar() {
 // en un día entero, y sin vaciar el cupo gratis de golpe.
 const REESCRITURAS_POR_CICLO = 12;
 
-// Si la IA falla tres veces seguidas, se corta y se sigue en el próximo ciclo.
-// Cuando Gemini está saturado falla para todas por igual, y lo único que se
-// consigue insistiendo es llenar el historial de errores.
-const FALLOS_PARA_CORTAR = 3;
+// Si la IA falla tres veces seguidas, se corta y se sigue en el próximo ciclo:
+// lo hace reescribirAutomaticas (reels/reescritura.mjs), igual que en la nube.
 
 /** Reescribe sola lo que va a salir sin que nadie lo mire.
  *
@@ -332,105 +335,79 @@ const FALLOS_PARA_CORTAR = 3;
  *  son justamente las que nadie va a corregir a mano. Lo amarillo espera
  *  aprobación y ahí ya hay un humano que puede apretar el botón.
  *
+ *  Desde el 25/09 usa EXACTAMENTE el mismo flujo que la nube:
+ *  reescribirAutomaticas (reels/reescritura.mjs), con el texto completo de
+ *  las fuentes, el cuerpo obligatorio (70 palabras o más), las oraciones
+ *  dudosas sacadas, el tope de tres intentos por nota (estado.intentosIA),
+ *  el semáforo sobre todo lo escrito y el freno por verificación baja. Antes
+ *  tenía su propia copia de la lógica, que se quedó atrás: publicaba sin
+ *  cuerpo y nunca reintentaba una nota rechazada.
+ *
  *  Nunca pisa algo que escribió una persona: si la decisión guardada no vino
  *  de la IA, se respeta. Y el estado que deja es el que la nota habría tenido
  *  igual (estadoPorDefecto), para no cambiar sin querer qué se publica. */
 async function reescribirPendientes() {
   if (!claveGemini()) return;
-
-  const cola = (ultima?.notas ?? [])
-    .filter((n) => n.semaforo === 'verde')
-    .filter((n) => {
-      const d = estado.decisiones[n.id];
-      if (!d) return true;              // sin tocar: se reescribe
-      if (d.deIA) return false;         // ya la reescribió la IA
-      if (d.rechazadaPorVerificacion) return false; // la IA inventó algo: no se reintenta
-      if (d.por && d.por !== 'ia') return false; // la tocó una persona
-      return !d.guion;
-    })
-    .filter((n) => !esVieja(n))
-    .sort((a, b) => b.relevancia - a.relevancia)
-    .slice(0, REESCRITURAS_POR_CICLO);
-
+  const cola = (ultima?.notas ?? []).filter((n) => n.semaforo === 'verde').filter((n) => !esVieja(n));
   if (!cola.length) return;
 
-  let hechas = 0;
-  let rechazadas = 0;
-  let fallos = 0;
-  // Los antecedentes salen del archivo del sitio, igual que en GitHub.
-  const archivoWeb = leerJson(F_ARCHIVO_WEB, { notas: [] }).notas ?? [];
-  for (const nota of cola) {
-    const conAntecedentes = { ...nota, copete: nota.resumenFuente, antecedentes: antecedentesDe(nota, archivoWeb) };
-    const r0 = await reescribirConRespaldo(conAntecedentes, mecanico);
-    if (!r0.deIA) {
-      fallos += 1;
-      if (fallos >= FALLOS_PARA_CORTAR) break;
-      continue; // se deja como estaba y se reintenta en el próximo ciclo
-    }
-    // Las partes nuevas, verificadas una por una (la que no cuadra se descarta
-    // sola), con el nivel de verificación calculado.
-    const { extras } = completarReescritura(conAntecedentes, r0);
-    const r = { ...r0, ...extras };
-    // Lo que escribió la IA pasa por el semáforo, igual que en GitHub
-    // (reels/reescritura.mjs): si nombra algo sensible (un menor, una víctima),
-    // no se usa y la nota deja de salir sola hasta que la mire una persona.
-    const sensible = semaforoDeLaReescritura({}, r);
-    if (sensible) {
-      estado.decisiones[nota.id] = {
-        ...(estado.decisiones[nota.id] ?? {}),
-        estado: sensible.color === 'rojo' ? 'bloqueada' : 'pendiente',
-        rechazadaPorVerificacion: true,
-        problemasDeLaIA: [sensible.motivo],
-        cuando: new Date().toISOString(),
-      };
-      rechazadas += 1;
-      console.log(`  IA frenada por el semáforo · ${nota.id} · ${sensible.motivo}`);
-      continue;
-    }
-    // Lo que escribió la IA se compara contra lo que ella recibió. Si aparece
-    // un número, un nombre, un día o una cita que la fuente no trae, el texto
-    // NO se usa: la nota sigue saliendo con el resumen del medio original, que
-    // es como salía antes de que existiera la reescritura. Ver
-    // ingesta/verificar.mjs para qué se controla y por qué es estricto.
-    const control = verificar(
-      materialParaVerificar(conAntecedentes),
-      {
-        titulo: r.titulo, copete: r.copete, guion: r.guion, cuerpo: r.cuerpo,
-      },
-    );
-    if (!control.ok) {
-      const previoRechazada = estado.decisiones[nota.id] ?? {};
-      estado.decisiones[nota.id] = {
-        ...previoRechazada,
-        estado: previoRechazada.estado ?? estadoPorDefecto(nota),
-        rechazadaPorVerificacion: true,
-        problemasDeLaIA: control.problemas,
-        cuando: new Date().toISOString(),
-      };
-      rechazadas += 1;
-      console.log(`  IA rechazada · ${nota.titulo.slice(0, 50)} · ${resumirProblemas(control.problemas)}`);
-      continue;
-    }
-
-    const previo = estado.decisiones[nota.id] ?? {};
-    estado.decisiones[nota.id] = {
-      ...previo,
-      estado: previo.estado ?? estadoPorDefecto(nota),
-      titulo: r.titulo,
-      copete: r.copete,
-      guion: r.guion,
-      cuerpo: r.cuerpo,
-      ...extras,
-      deIA: true,
-      por: 'ia',
-      cuando: new Date().toISOString(),
-    };
-    hechas += 1;
+  // Lo que la IA ya escribió CON cuerpo se reusa (y se revalida) sin pedir
+  // nada; lo que quedó sin cuerpo vuelve a ser candidata, hasta el tope.
+  const previas = {};
+  for (const n of cola) {
+    const d = estado.decisiones[n.id];
+    if (d && !decisionHumana(d) && d.guion && tieneCuerpo(d)) previas[n.id] = { ...d };
   }
+  const intentosAntes = JSON.stringify(estado.intentosIA ?? {});
+  estado.intentosIA = podarIntentos(estado.intentosIA ?? {});
+  const colores = new Map(cola.map((n) => [n.id, n.semaforo]));
+  const resultado = await reescribirAutomaticas(cola, {
+    previas,
+    decisiones: estado.decisiones,
+    tope: REESCRITURAS_POR_CICLO,
+    archivo: leerJson(F_ARCHIVO_WEB, { notas: [] }).notas ?? [],
+    intentos: estado.intentosIA,
+  });
 
-  if (hechas || fallos || rechazadas) {
-    guardarJson(F_ESTADO, estado);
-    console.log(`  reescritas ${hechas}${fallos ? ` · ${fallos} sin poder` : ''}${rechazadas ? ` · ${rechazadas} rechazadas por la verificación` : ''}`);
+  let hechas = 0;
+  let caidas = 0;
+  for (const n of cola) {
+    const r = resultado[n.id];
+    const previo = estado.decisiones[n.id] ?? {};
+    if (r && !previas[n.id]) {
+      const resto = sinExtras(previo);
+      delete resto.rechazadaPorVerificacion;
+      delete resto.problemasDeLaIA;
+      estado.decisiones[n.id] = {
+        ...resto,
+        estado: previo.estado ?? estadoPorDefecto(n),
+        titulo: r.titulo,
+        copete: r.copete,
+        guion: r.guion,
+        cuerpo: r.cuerpo,
+        ...extrasDe(r),
+        deIA: true,
+        por: 'ia',
+        cuando: new Date().toISOString(),
+      };
+      hechas += 1;
+    } else if (!r && previas[n.id] && n.semaforo === colores.get(n.id)) {
+      // Lo que ya estaba escrito y hoy no pasa la revalidación (una regla
+      // nueva, como la de "en vivo"): se borra el texto de la IA para que se
+      // vuelva a escribir, en vez de quedar publicado mal.
+      const { titulo, copete, cuerpo, guion, ...resto } = sinExtras(previo);
+      estado.decisiones[n.id] = { ...resto, deIA: null, cuando: new Date().toISOString() };
+      caidas += 1;
+    }
+  }
+  // Las que el semáforo o la verificación baja frenaron cambiaron de color
+  // en `ultima` (reels/reescritura.mjs, frenar): se guarda para que el
+  // tablero las muestre esperando a una persona hasta la próxima búsqueda.
+  const frenadas = cola.filter((n) => n.semaforo !== colores.get(n.id)).length;
+  if (frenadas) guardarJson(F_ULTIMA, ultima);
+  if (hechas || caidas || intentosAntes !== JSON.stringify(estado.intentosIA)) guardarJson(F_ESTADO, estado);
+  if (hechas || caidas || frenadas) {
+    console.log(`  reescritas ${hechas}${caidas ? ` · ${caidas} para rehacer` : ''}${frenadas ? ` · ${frenadas} esperan a una persona` : ''}`);
   }
   if (hechas) {
     anotar(`reescribió ${hechas} ${hechas === 1 ? 'nota' : 'notas'} automáticas`, '', 'ia');
@@ -706,21 +683,39 @@ const servidor = http.createServer(async (req, res) => {
       if (!nota) { json(res, { error: 'no existe esa nota' }, 404); return; }
 
       const previo = estado.decisiones[id] ?? {};
+      // Con el texto completo de las fuentes, como en la reescritura
+      // automática: sin eso la IA no tiene de dónde escribir el cuerpo.
+      const completo = await textoCompletoDe(nota);
       const conAntecedentes = {
         ...nota,
         copete: previo.copete ?? nota.resumenFuente,
+        textoDeLaFuente: completo.texto,
+        fuenteDelTexto: completo.numero,
         antecedentes: antecedentesDe(nota, leerJson(F_ARCHIVO_WEB, { notas: [] }).notas ?? []),
       };
-      const r = await reescribirConRespaldo(conAntecedentes, mecanico);
+      let r = await reescribirConRespaldo(conAntecedentes, mecanico);
       // Lo mismo que en la reescritura automática, pero acá no se descarta:
       // lo aprieta una persona y lo va a leer. Se guarda con el aviso de qué
       // no cuadra con la fuente. Las partes nuevas sí se verifican y se
       // descartan una por una, igual que en la automática.
       const material = materialParaVerificar(conAntecedentes);
       if (previo.copete) material.resumen = `${material.resumen}\n${previo.copete}`;
-      const control = r.deIA
+      let control = r.deIA
         ? verificar(material, r)
         : { ok: true, problemas: [] };
+      // Como en la automática: si el cuerpo trae un dato que no cuadra, se
+      // sacan esas oraciones; si lo que queda pasa y alcanza, se usa eso.
+      if (r.deIA && !control.ok) {
+        const depurado = { ...r, cuerpo: depurarCuerpo(material, r).cuerpo };
+        const otra = verificar(material, depurado);
+        if (otra.ok && tieneCuerpo(depurado)) { r = depurado; control = otra; }
+      }
+      if (r.deIA && !tieneCuerpo(r)) {
+        control = {
+          ok: false,
+          problemas: [...control.problemas, { tipo: 'cuerpo', detalle: `el cuerpo tiene ${palabrasDe(r.cuerpo)} palabras: sin ${PALABRAS_MINIMAS_CUERPO} no sale sola` }],
+        };
+      }
       const { extras } = r.deIA ? completarReescritura(conAntecedentes, r) : { extras: {} };
       estado.decisiones[id] = {
         ...sinExtras(previo),
@@ -779,7 +774,7 @@ const servidor = http.createServer(async (req, res) => {
     // Decidir sobre una nota: publicar, descartar, volver a la cola, editar.
     if (ruta === '/api/nota' && req.method === 'POST') {
       const {
-        id, accion, titulo, copete, guion, cuerpo,
+        id, accion, titulo, copete, guion, cuerpo, confirmarSinCuerpo,
       } = await cuerpoDe(req);
       // Quién hizo esto sale de la sesión, no de lo que diga el navegador:
       // antes el panel lo mandaba en el cuerpo y era a confianza.
@@ -788,6 +783,16 @@ const servidor = http.createServer(async (req, res) => {
       if (!nota) { json(res, { error: 'no existe esa nota' }, 404); return; }
 
       const previo = estado.decisiones[id] ?? {};
+      // Sin cuerpo no se publica sin que una persona lo confirme con el botón
+      // de la página ("Publicar igual, sin cuerpo"): 25/09.
+      const cuerpoFinal = { cuerpo: cuerpo ?? previo.cuerpo, copete: copete ?? previo.copete ?? nota.resumenFuente };
+      if (accion === 'publicada' && !confirmarSinCuerpo && !tieneCuerpo(cuerpoFinal)) {
+        json(res, {
+          error: `Esta nota no tiene cuerpo (${palabrasDe(cuerpoFinal.cuerpo)} palabras; hacen falta ${PALABRAS_MINIMAS_CUERPO}).`,
+          sinCuerpo: true,
+        }, 409);
+        return;
+      }
       if (accion === 'pendiente') {
         delete estado.decisiones[id];
         anotar('devuelta a la cola', nota.titulo, quien);
@@ -816,8 +821,12 @@ const servidor = http.createServer(async (req, res) => {
     // Decidir de a montones: la primera corrida trae todo el archivo que haya
     // en las portadas, y no tiene sentido tocar cien botones.
     if (ruta === '/api/lote' && req.method === 'POST') {
-      const { ids = [], accion } = await cuerpoDe(req);
+      const { ids: pedidos = [], accion } = await cuerpoDe(req);
       const quien = sesion.nombre;
+      // En lote no se publica nada sin cuerpo: eso se confirma de a una.
+      const ids = accion === 'publicada'
+        ? pedidos.filter((id) => tieneCuerpo(camposEditables(ultima?.notas?.find((n) => n.id === id) ?? {}, estado.decisiones[id])))
+        : pedidos;
       for (const id of ids) {
         estado.decisiones[id] = { estado: accion, por: quien, cuando: new Date().toISOString() };
       }
