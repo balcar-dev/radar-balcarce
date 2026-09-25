@@ -19,7 +19,7 @@ import {
   elegirHistoriasDeNotas, elegirFeed, elegirParaPodcast, guionRepaso, guionPodcast, enlaceDeNota,
 } from '../redes/elegir.mjs';
 import { datosDeLaWeb } from '../redes/datos.mjs';
-import { HORAS_REELS, horaHistoriaDeNota, HISTORIAS_DE_NOTAS, notasUsadasHoy, piezasPublicadasHoy } from '../redes/piezas.mjs';
+import { HORAS_REELS, colorDelDia, horaHistoriaDeNota, HISTORIAS_DE_NOTAS, notasUsadasHoy, piezasPublicadasHoy } from '../redes/piezas.mjs';
 
 // El cupo de reels es el recurso escaso del día, así que NO se gasta en lo que
 // se repite todas las mañanas. Clima, farmacia y agenda van a historias, que
@@ -400,8 +400,8 @@ export function planDelDia(datos, { libro = null } = {}) {
       titulo: ronda.titulo,
       motivo: `podcast de ${elegidas.length} notas, las de más puntaje de temas distintos`,
       seccion: 'Balcarce', guion,
-      svg: placaNoticia({ seccion: 'Balcarce', titulo: ronda.titulo, cuando: fechaLarga() }),
-      acento: '#A8371F',
+      svg: placaNoticia({ seccion: 'Balcarce', titulo: ronda.titulo, cuando: fechaLarga(), color: colorDelDia() }),
+      acento: colorDelDia(),
     });
   });
 
@@ -417,8 +417,8 @@ export function planDelDia(datos, { libro = null } = {}) {
       items: delDia.map((n) => ({ titulo: n.titulo, enlace: enlaceDeNota(n, SITIO) })),
       titulo: 'El repaso del día', motivo: 'el podcast diario: los titulares más fuertes, un solo audio',
       seccion: 'Balcarce', guion: repaso,
-      svg: placaNoticia({ seccion: 'Balcarce', titulo: 'El repaso del día', cuando: fechaLarga() }),
-      acento: '#A8371F',
+      svg: placaNoticia({ seccion: 'Balcarce', titulo: 'El repaso del día', cuando: fechaLarga(), color: colorDelDia() }),
+      acento: colorDelDia(),
     });
   }
 

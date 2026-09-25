@@ -146,7 +146,7 @@ export const LIMITES = {
   guion: 200,
   // Uno a tres párrafos cortos: alcanza y sobra con esto. Es la nota, no una
   // crónica.
-  cuerpo: 1200,
+  cuerpo: 1800,
   // Más de esto seguido, palabra por palabra, es copiar y no reescribir.
   copiaMaxima: 12,
 };

@@ -256,3 +256,54 @@ test('pasada la fecha dice que ya venció', () => {
 test('el vencimiento apunta al 21/09/2027, como dice REDES.md', () => {
   assert.equal(VENCIMIENTOS.find((v) => v.clave === 'vence-token-github').fecha, '2027-09-21');
 });
+
+// ------------------------------------- lo que se pidió que NO aparezca
+
+import { revisarPortada } from '../redes/vigilar.mjs';
+
+const PORTADA_BUENA = '<div class="chapa-nota"><span>Automovilismo</span><span class="meta">hace 1 h</span></div><h2>Reapertura del Fangio</h2><div class="tarjeta"><p>Farmacia de turno</p><p>Marioli</p></div>';
+
+test('una portada como se pidió no tiene problemas de contenido', () => {
+  assert.deepEqual(revisarPortada(PORTADA_BUENA), { laVimos: false, horaFarmacia: false, fuentesEnChapa: '' });
+});
+
+test('si vuelve "la vimos hace…", se detecta', () => {
+  assert.equal(revisarPortada('<span class="meta">la vimos hace 2 días</span>').laVimos, true);
+  assert.equal(revisarPortada('<span>sin hora</span>').laVimos, true);
+});
+
+test('si la farmacia vuelve a decir hasta qué hora, se detecta', () => {
+  assert.equal(revisarPortada('<p class="hasta-cuando">El turno termina a las 8:30 de la mañana.</p>').horaFarmacia, true);
+});
+
+test('si vuelve la fuente arriba del título, se detecta y dice cuál', () => {
+  const h = '<div class="chapa-nota"><span>Automovilismo</span><span class="meta">DIARIO LA VANGUARDIA · PUNTONUEVE (FM 100.9)</span></div>';
+  const r = revisarPortada(h);
+  assert.match(r.fuentesEnChapa, /La Vanguardia/);
+  assert.match(r.fuentesEnChapa, /Puntonueve/);
+});
+
+test('un titular que nombra a un medio no es una fuente en la cabecera', () => {
+  const h = '<div class="chapa-nota"><span>Política</span></div><h2>Infobae publicó una encuesta sobre Balcarce</h2>';
+  assert.equal(revisarPortada(h).fuentesEnChapa, '');
+});
+
+test('evaluar avisa de cada regla que se rompe, como grave', () => {
+  const o = sano(A('12:00'));
+  o.contenido = { home: { laVimos: true, horaFarmacia: true, fuentesEnChapa: 'Puntonueve' } };
+  const r = evaluar(o);
+  assert.deepEqual(claves(r).sort(), ['regla-fuentes', 'regla-hora-farmacia', 'regla-la-vimos']);
+  assert.ok(r.every((p) => p.nivel === 'alta'));
+});
+
+test('con pocas notas con cuerpo se avisa; con muchas, no', () => {
+  const pocas = sano(A('12:00')); pocas.contenido = { cuerpos: { total: 40, conCuerpo: 5 } };
+  assert.ok(claves(evaluar(pocas)).includes('pocos-cuerpos'));
+  const buenas = sano(A('12:00')); buenas.contenido = { cuerpos: { total: 40, conCuerpo: 27 } };
+  assert.ok(!claves(evaluar(buenas)).includes('pocos-cuerpos'));
+});
+
+test('con muy pocas notas no se juzga el cuerpo (no hay de qué sacar un porcentaje)', () => {
+  const o = sano(A('12:00')); o.contenido = { cuerpos: { total: 4, conCuerpo: 0 } };
+  assert.ok(!claves(evaluar(o)).includes('pocos-cuerpos'));
+});

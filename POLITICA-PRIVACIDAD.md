@@ -1,9 +1,10 @@
 # Política de privacidad de Radar Balcarce
 
-*Texto listo para publicar como página del sitio (`/privacidad` o similar)
-apenas exista la web. Mientras tanto, es la referencia interna de qué se
-hace con los datos que llegan por el buzón. Ver `INVESTIGACION.md`,
-sección 5, para el marco legal (Ley 25.326).*
+*Es la copia de referencia del texto que ve el público en
+`/politica-de-privacidad` (la fuente es `web/app/politica-de-privacidad/page.js`:
+si se cambia una, se cambia la otra). También explica qué se hace con los
+datos que llegan por el buzón. Ver `INVESTIGACION.md`, sección 5, para el
+marco legal (Ley 25.326).*
 
 ---
 
@@ -25,10 +26,10 @@ opinión personal, no un dato anónimo.
 Contamos cuánta gente entra y qué notas se leen. Es lo único que nos permite
 saber qué le interesa a Balcarce y qué no.
 
-Lo hacemos con la medición de Vercel, la empresa donde vive el sitio, elegida
-a propósito: **no usa cookies, no guarda direcciones IP y no sigue a nadie a
-otros sitios**. Sabemos que alguien entró, desde qué tipo de dispositivo y qué
-página miró. Nada más.
+Lo hacemos con Cloudflare Web Analytics, de Cloudflare, la empresa donde vive
+el sitio, elegida a propósito: **no usa cookies, no arma un perfil de cada
+persona y no la sigue a otros sitios**. Sabemos que alguien entró, desde qué
+tipo de dispositivo y qué página miró. Nada más.
 
 No usamos Google Analytics ni ninguna herramienta de una red publicitaria. Un
 medio que promete cuidar a sus lectores no puede estar entregándoselos a otro.
@@ -66,4 +67,4 @@ algo apurado que después haya que corregir.
 
 ---
 
-*Última actualización: 18 de septiembre de 2026.*
+*Última actualización: 24 de septiembre de 2026.*

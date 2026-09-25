@@ -29,10 +29,10 @@ export default function PoliticaPrivacidad() {
           qué le interesa a Balcarce y qué no, y decidir dónde poner el esfuerzo.
         </p>
         <p>
-          Lo hacemos con la medición de Vercel, la empresa donde vive este sitio, y elegimos
-          ésa a propósito: <strong>no usa cookies, no guarda tu dirección IP y no te sigue a
-          otros sitios</strong>. No sabemos quién sos ni podemos saberlo. Sabemos que alguien
-          entró, desde qué tipo de dispositivo y qué página miró — nada más.
+          Lo hacemos con Cloudflare Web Analytics, de Cloudflare, la empresa donde vive este
+          sitio, y elegimos ésa a propósito: <strong>no usa cookies, no arma un perfil tuyo y no
+          te sigue a otros sitios</strong>. No sabemos quién sos ni podemos saberlo. Sabemos que
+          alguien entró, desde qué tipo de dispositivo y qué página miró — nada más.
         </p>
         <p>
           No usamos Google Analytics ni ninguna herramienta de una red publicitaria. Un medio
@@ -71,7 +71,7 @@ export default function PoliticaPrivacidad() {
           protege a nosotros y a vos de publicar algo apurado que después haya que corregir.
         </p>
 
-        <p className="mini" style={{ marginTop: 30 }}>Última actualización: 18 de septiembre de 2026.</p>
+        <p className="mini" style={{ marginTop: 30 }}>Última actualización: 24 de septiembre de 2026.</p>
       </div>
     </div>
   );

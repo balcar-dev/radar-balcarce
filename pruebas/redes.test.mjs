@@ -217,10 +217,10 @@ test('el enlace es de nuestro sitio, con el titular adentro', () => {
   );
 });
 
-test('la imagen del posteo es la tarjeta propia de la nota, no una foto ajena', () => {
+test('la imagen del posteo de Instagram es la tarjeta propia y VERTICAL (4:5) de la nota, no una foto ajena', () => {
   assert.equal(
     imagenDeNota({ id: 'abc', titulo: 'Nuevo mural de Fangio' }, 'https://radarbalcarce.com/'),
-    'https://radarbalcarce.com/nota/nuevo-mural-de-fangio-abc/opengraph-image',
+    'https://radarbalcarce.com/nota/nuevo-mural-de-fangio-abc/instagram.png',
   );
 });
 

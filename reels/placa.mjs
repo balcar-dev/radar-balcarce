@@ -487,9 +487,10 @@ function repartirTitular(titulo) {
 }
 
 export function placaNoticia({
-  seccion, titulo, cuando = '', hora = '', fondo: ilustracionPedida,
+  seccion, titulo, cuando = '', hora = '', fondo: ilustracionPedida, color: colorPedido,
 }) {
-  const color = COLOR_SECCION[seccion] ?? COLORES.rojo;
+  // `color` pisa el de la sección: los podcasts llevan el color del día.
+  const color = colorPedido ?? COLOR_SECCION[seccion] ?? COLORES.rojo;
   const ilustracion = ilustracionPedida === undefined ? fondoDeSeccion(seccion) : ilustracionPedida;
 
   // El titular es el protagonista, así que el cuerpo se adapta a su largo.

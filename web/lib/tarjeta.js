@@ -19,6 +19,12 @@ import { cuerpo } from './tamano-titulo.js';
 // estáticos: no hay nada corriendo cuando alguien comparte.
 
 export const TAMANO = { width: 1200, height: 630 };
+// Instagram: 1080x1350 (4:5), lo que recomienda hoy para un posteo. La grilla
+// del perfil lo muestra recortado (cuadrado o 3:4 según la versión de la app),
+// así que TODO lo importante queda en la zona segura del centro: 1012x1080.
+// Facebook, en cambio, muestra un enlace con la imagen apaisada de arriba.
+export const TAMANO_INSTAGRAM = { width: 1080, height: 1350 };
+export const ZONA_SEGURA_INSTAGRAM = { ancho: 1012, alto: 1080 };
 export const TIPO = 'image/png';
 
 // Los mismos de globals.css. Están repetidos acá porque esto corre al
@@ -46,7 +52,12 @@ const leer = (archivo) => fs.readFileSync(path.join(FUENTES, archivo));
  *
  * @param {{ titulo?: string, seccion?: string, copete?: string }} nota
  */
-export function tarjeta(nota = {}) {
+export function tarjeta(nota = {}, { instagram = false } = {}) {
+  // Instagram recorta la imagen en la grilla del perfil: una tarjeta apaisada
+  // (1200x630) perdía los costados del titular. La de Instagram es vertical
+  // 4:5 (1080x1350) con el texto en la zona segura del centro; la apaisada
+  // es para compartir enlaces por WhatsApp y Facebook.
+  const e = instagram ? 1.25 : 1;
   const titulo = nota.titulo ?? 'Lo que pasa en Balcarce';
   const seccion = nota.seccion ?? null;
   const acento = COLOR[seccion] ?? POR_DEFECTO;
@@ -62,16 +73,23 @@ export function tarjeta(nota = {}) {
           flexDirection: 'column',
           backgroundColor: '#14161A',
           // La franja de color de la sección, arriba, como en las placas.
-          borderTop: `18px solid ${acento}`,
-          padding: '56px 64px 48px',
+          // En Instagram la franja de color va adentro de la zona segura (una
+          // en el borde se pierde con el recorte de la grilla).
+          ...(instagram ? {} : { borderTop: `18px solid ${acento}` }),
+          // 135px arriba y abajo: lo que se recorta en la grilla cuadrada.
+          padding: instagram ? '200px 96px 190px' : '56px 64px 48px',
           fontFamily: 'Plex',
         },
         children: [
+          instagram && {
+            type: 'div',
+            props: { style: { width: 132, height: 12, backgroundColor: acento, marginBottom: 26, display: 'flex' } },
+          },
           seccion && {
             type: 'div',
             props: {
               style: {
-                fontSize: 26,
+                fontSize: Math.round(26 * e),
                 fontWeight: 600,
                 letterSpacing: '0.14em',
                 textTransform: 'uppercase',
@@ -95,7 +113,7 @@ export function tarjeta(nota = {}) {
                 props: {
                   style: {
                     fontFamily: 'Fraunces',
-                    fontSize: cuerpo(titulo),
+                    fontSize: Math.round(cuerpo(titulo) * (instagram ? 1.2 : 1)),
                     fontWeight: 900,
                     lineHeight: 1.12,
                     letterSpacing: '-0.02em',
@@ -125,7 +143,7 @@ export function tarjeta(nota = {}) {
                   props: {
                     style: {
                       fontFamily: 'Fraunces',
-                      fontSize: 30,
+                      fontSize: Math.round(30 * e),
                       fontWeight: 900,
                       color: '#F7F5EF',
                       display: 'flex',
@@ -138,7 +156,7 @@ export function tarjeta(nota = {}) {
                   props: {
                     style: {
                       fontFamily: 'Fraunces',
-                      fontSize: 30,
+                      fontSize: Math.round(30 * e),
                       fontWeight: 900,
                       color: '#E0553A',
                       display: 'flex',
@@ -152,7 +170,7 @@ export function tarjeta(nota = {}) {
                     style: {
                       flexGrow: 1,
                       textAlign: 'right',
-                      fontSize: 22,
+                      fontSize: Math.round(22 * e),
                       color: '#9FA39D',
                       display: 'flex',
                       justifyContent: 'flex-end',
@@ -167,7 +185,7 @@ export function tarjeta(nota = {}) {
       },
     },
     {
-      ...TAMANO,
+      ...(instagram ? TAMANO_INSTAGRAM : TAMANO),
       fonts: [
         { name: 'Fraunces', data: leer('Fraunces-900.ttf'), weight: 900, style: 'normal' },
         { name: 'Plex', data: leer('IBMPlexSans-600.ttf'), weight: 600, style: 'normal' },

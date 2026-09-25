@@ -10,7 +10,10 @@
 //   · que las corridas de GitHub (web, redes, Cloudflare) no estén fallando;
 //   · que el reloj de redes esté corriendo;
 //   · que las piezas fijas del día (clima, farmacia) hayan salido en su hora;
-//   · que `www` redirija al dominio sin `www`.
+//   · que `www` redirija al dominio sin `www`;
+//   · que la portada NO vuelva a mostrar lo que se pidió sacar (la fuente arriba
+//     de un título, "la vimos hace…", hasta qué hora está la farmacia), y que
+//     la mayoría de las notas tengan cuerpo. Ver REGLAS.md.
 //
 // Los problemas se avisan una vez cada seis horas (no un mensaje cada media
 // hora por lo mismo), y a las 21 sale un resumen "todo bien" si no hay nada.
@@ -26,6 +29,7 @@ import path from 'node:path';
 import { cronogramaDelDia, ventanaDe, claveDePieza } from './piezas.mjs';
 import { yaPublicada, horaAR, diaAR } from './elegir.mjs';
 import { enviarWhatsApp } from './whatsapp.mjs';
+import { auditoriaVencida } from './auditar.mjs';
 
 /** Las piezas que tienen que salir todos los días: si no salió una, es un
  *  problema. Los podcasts no están: dependen de que haya notas para contar. */
@@ -35,6 +39,7 @@ export const LIMITES = {
   minutosSinActualizar: 100,   // la web se arma cada 30
   minutosSinReloj: 100,        // el reloj de redes corre cada 30
   horasEntreAvisos: 6,
+  minimoDeNotasConCuerpo: 0.35, // de las últimas 24 horas; con 10 notas o más
   horaDelResumen: 21,
 };
 
@@ -63,7 +68,9 @@ const minutos = (desde, ahora) => (ahora.getTime() - new Date(desde).getTime()) 
  * @param {object} o.libro  web/data/redes.json
  * @returns {{ clave: string, nivel: 'alta'|'media', texto: string }[]}
  */
-export function evaluar({ ahora, web, www = null, corridas = {}, libro = {} }) {
+export function evaluar({
+  ahora, web, www = null, corridas = {}, libro = {}, contenido = null, auditoria = null,
+}) {
   const problemas = [];
   const de = (clave, nivel, texto) => problemas.push({ clave, nivel, texto });
   const hora = horaAR(ahora);
@@ -80,6 +87,25 @@ export function evaluar({ ahora, web, www = null, corridas = {}, libro = {} }) {
     }
   }
   if (www && !www.redirige) de('www', 'media', 'www.radarbalcarce.com ya no redirige al dominio sin www.');
+
+  // --- lo que se pidió que NO aparezca (REGLAS.md): si vuelve, se avisa
+  if (contenido?.home) {
+    const h = contenido.home;
+    if (h.laVimos) de('regla-la-vimos', 'alta', 'La portada volvió a decir "la vimos hace…" o "sin hora". Se pidió sacarlo (REGLAS.md).');
+    if (h.horaFarmacia) de('regla-hora-farmacia', 'alta', 'La tarjeta de la farmacia volvió a decir hasta qué hora está de turno. Se pidió sacarlo (REGLAS.md).');
+    if (h.fuentesEnChapa) de('regla-fuentes', 'alta', `La portada volvió a mostrar la fuente arriba de los títulos (${h.fuentesEnChapa}). Se pidió sacarlas (REGLAS.md).`);
+  }
+  if (contenido?.cuerpos && contenido.cuerpos.total >= 10) {
+    const { total, conCuerpo } = contenido.cuerpos;
+    if (conCuerpo / total < LIMITES.minimoDeNotasConCuerpo) {
+      de('pocos-cuerpos', 'media', `Sólo ${conCuerpo} de ${total} notas de las últimas 24 horas tienen cuerpo. Miré la reescritura en "Actualizar la web" (clave de Gemini, cuota, verificador).`);
+    }
+  }
+
+  // --- que la auditoría semanal siga corriendo
+  if (auditoriaVencida(auditoria, ahora)) {
+    de('auditoria-vencida', 'media', 'La auditoría semanal no corre hace más de 10 días. Revisá el workflow "Auditoría" en GitHub Actions.');
+  }
 
   // --- lo que vence
   for (const v of VENCIMIENTOS) {
@@ -170,6 +196,25 @@ async function pedir(url, opciones = {}) {
   }
 }
 
+/** Los nombres de los medios que no deben aparecer arriba de un título. */
+export const MEDIOS = ['Puntonueve', 'Punto Nueve', 'La Vanguardia', 'Infórmese', 'Informese', 'Radio Gabal', 'News Balcarce', 'El Diario', 'Sendero', 'Clarín', 'Infobae', 'La Nación', 'Página 12', 'Ámbito', 'Olé', 'Minuto Uno', 'Motorsport', 'Carburando', '0223', 'La Capital', 'Retrato de Hoy'];
+
+/**
+ * Mira el HTML de la portada y devuelve qué encontró de lo que se pidió sacar.
+ * Sólo se buscan las cabeceras de las notas (class="chapa-nota"), no el texto:
+ * un titular puede nombrar a un medio sin que sea una fuente en el encabezado.
+ */
+export function revisarPortada(html) {
+  const chapas = [...String(html).matchAll(/<div class="chapa-nota"[^>]*>([\s\S]*?)<\/div>/g)].map((m) => m[1].replace(/<[^>]+>/g, ' '));
+  const enChapa = MEDIOS.filter((m) => chapas.some((c) => c.toLowerCase().includes(m.toLowerCase())));
+  const visible = String(html).replace(/<script[\s\S]*?<\/script>/g, ' ').replace(/<style[\s\S]*?<\/style>/g, ' ').replace(/<[^>]+>/g, ' ');
+  return {
+    laVimos: /la vimos hace|sin hora/i.test(visible),
+    horaFarmacia: /turno termina a las|termina a las \d/i.test(visible),
+    fuentesEnChapa: enChapa.join(', '),
+  };
+}
+
 export async function observar({ sitio, repo, token, ahora = new Date() }) {
   const portada = await pedir(`${sitio}/sitemap.xml`);
   let actualizado = null;
@@ -178,6 +223,7 @@ export async function observar({ sitio, repo, token, ahora = new Date() }) {
     actualizado = (await portada.text()).match(/<lastmod>([^<]+)<\/lastmod>/)?.[1] ?? null;
   }
   const inicio = await pedir(`${sitio}/`);
+  const html = inicio?.ok ? await inicio.text() : '';
   const www = await pedir(sitio.replace('://', '://www.'), { redirect: 'manual' });
 
   const corridas = {};
@@ -197,6 +243,7 @@ export async function observar({ sitio, repo, token, ahora = new Date() }) {
     ahora,
     web: { estado: inicio?.status ?? 0, actualizado: portada?.ok ? actualizado : null },
     www: www ? { redirige: [301, 302, 307, 308].includes(www.status) } : null,
+    contenido: html ? { home: revisarPortada(html) } : null,
     corridas,
   };
 }
@@ -213,7 +260,13 @@ async function main() {
   const estado = leer(ESTADO, { avisos: {} });
 
   const obs = await observar({ sitio, repo: process.env.GITHUB_REPOSITORY, token: process.env.GITHUB_TOKEN, ahora });
-  const problemas = evaluar({ ...obs, libro });
+  // Cuántas notas de las últimas 24 horas tienen cuerpo (de lo ya publicado).
+  const portada = leer(path.join(RAIZ, 'web', 'data', 'portada.json'), { notas: [] });
+  const desde = Date.now() - 24 * 3600e3;
+  const recientes = (portada.notas ?? []).filter((n) => new Date(n.fecha).getTime() >= desde);
+  const cuerpos = { total: recientes.length, conCuerpo: recientes.filter((n) => n.cuerpo).length };
+  const auditoria = leer(path.join(RAIZ, 'web', 'data', 'auditoria.json'), null);
+  const problemas = evaluar({ ...obs, libro, auditoria, contenido: { ...(obs.contenido ?? {}), cuerpos } });
 
   console.log(`  ${problemas.length ? `${problemas.length} problema(s):` : 'Todo en orden.'}`);
   for (const p of problemas) console.log(`   [${p.nivel}] ${p.texto}`);

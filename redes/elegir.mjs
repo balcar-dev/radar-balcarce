@@ -112,12 +112,13 @@ export function enlaceDeNota(nota, sitio) {
   return `${String(sitio).replace(/\/+$/, '')}${rutaDeNota(nota)}`;
 }
 
-/** La tarjeta que ya se genera para compartir por WhatsApp (web/lib/tarjeta.js,
- *  servida en /nota/ID/opengraph-image): es una imagen propia, pública y ya
- *  alojada — exactamente lo que pide Instagram para un posteo de foto, sin
- *  tener que alojar nada nuevo. */
+/** La tarjeta de la nota para INSTAGRAM (web/lib/tarjeta.js, servida en
+ *  /nota/ID/instagram.png): una imagen propia, pública y ya alojada — lo que
+ *  pide Instagram para un posteo de foto, sin alojar nada nuevo. Es vertical
+ *  (1080x1350, 4:5) con el texto en el centro, porque la grilla del perfil la
+ *  recorta. Facebook usa otra: la apaisada del enlace (opengraph-image). */
 export function imagenDeNota(nota, sitio) {
-  return `${enlaceDeNota(nota, sitio)}/opengraph-image`;
+  return `${enlaceDeNota(nota, sitio)}/instagram.png`;
 }
 
 /**
