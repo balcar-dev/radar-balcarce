@@ -164,7 +164,11 @@ header.principal .envoltura {
 
 /* ------------------------------------------------------------ navegación */
 
-nav.principal { border-top: 2px solid var(--tinta); border-bottom: 1px solid var(--linea); background: var(--papel); position: sticky; top: 0; z-index: 20; }
+nav.principal { border-top: 2px solid var(--tinta); border-bottom: 1px solid var(--linea); background: var(--papel); position: static; z-index: 20; }
+/* Fija arriba sólo en pantalla grande. En el celular envuelve en tres o
+   cuatro renglones (con Dólar, desde el 26/09) y fija se comía un cuarto de la
+   pantalla mientras se leía una nota. */
+@media (min-width: 900px) { nav.principal { position: sticky; top: 0; } }
 /* En el celular la navegación ENVUELVE en dos renglones en vez de
    deslizarse: una barra que se desliza esconde secciones enteras y nada
    avisa que hay más a la derecha. En pantalla grande entra todo en una
