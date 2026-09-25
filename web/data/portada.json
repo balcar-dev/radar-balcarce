@@ -1,6 +1,84 @@
 {
-  "generado": "2026-09-25T21:00:41.688Z",
+  "generado": "2026-09-25T21:30:42.354Z",
   "notas": [
+    {
+      "id": "jzo9l4",
+      "titulo": "Mauricio Macri encabeza un acto en Jujuy y negocia acuerdos",
+      "copete": "El expresidente encabeza un encuentro partidario en Jujuy tras tres meses de perfil bajo. La actividad ocurre en medio de negociaciones y tensiones con La Libertad Avanza por un posible acuerdo electoral.",
+      "cuerpo": "El expresidente Mauricio Macri encabeza un acto partidario en San Salvador de Jujuy en el marco de su gira federal, tras mantenerse tres meses sin declaraciones públicas políticas. La actividad reúne a dirigentes del noroeste argentino y cuenta con la presencia del secretario general de Pro, Fernando de Andreis, según informó la fuente consultada. Por su parte, la precandidatura presidencial de Hernán Lacunza genera divisiones internas en el espacio político.\n\nEstas actividades se desarrollan un día después de que referentes partidarios afirmaran que se encuentran lejos de cerrar un entendimiento electoral con La Libertad Avanza, tras la cuarta reunión mantenida con representantes del oficialismo nacional. Entre los puntos de fricción figuran las diferencias sobre la gestión en la ciudad de Buenos Aires y la intención del Gobierno nacional de eliminar las PASO.\n\nNo se reportaron repercusiones directas sobre este escenario político en el ámbito local de Balcarce, más allá de la sede partidaria mencionada en el informe de origen.",
+      "guion": "Mauricio Macri encabeza un acto en Jujuy y negocia acuerdos",
+      "seccion": "Política",
+      "medios": [
+        "La Nación"
+      ],
+      "enlace": "https://www.lanacion.com.ar/politica/mauricio-macri-reaparece-con-un-acto-de-pro-en-jujuy-y-negocia-un-acuerdo-electoral-con-la-libertad-nid25092026/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-25T21:29:01.000Z",
+      "sinFecha": false,
+      "visto": "2026-09-25T18:30:44.515Z",
+      "relevancia": 48,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Mauricio Macri encabeza un acto político en la provincia de Jujuy.",
+        "El espacio político mantiene negociaciones con el oficialismo nacional para 2027.",
+        "Dirigentes partidarios señalaron que aún están lejos de un acuerdo electoral.",
+        "Diferencias en torno a la gestión porteña y las PASO marcan el vínculo con La Libertad Avanza."
+      ],
+      "seSabe": [
+        "Mauricio Macri encabeza un acto en San Salvador de Jujuy junto a Fernando de Andreis, según la fuente consultada.",
+        "Diputados nacionales de Pro afirmaron que están lejos de un acuerdo electoral con La Libertad Avanza tras la cuarta reunión oficial.",
+        "Hernán Lacunza lanzó su precandidatura presidencial, generando diversas reacciones internas."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El expresidente Mauricio Macri encabeza un acto político en Jujuy en medio de las negociaciones y tensiones entre Pro y La Libertad Avanza por un posible acuerdo electoral de cara al futuro.",
+      "etiquetas": [
+        "Mauricio Macri",
+        "Pro",
+        "Jujuy",
+        "La Libertad Avanza"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/politica/mauricio-macri-reaparece-con-un-acto-de-pro-en-jujuy-y-negocia-un-acuerdo-electoral-con-la-libertad-nid25092026/",
+          "fecha": "2026-09-25T18:06:20.000Z",
+          "oficial": false,
+          "aporte": "Detalló la actividad partidaria de Mauricio Macri en Jujuy, las negociaciones con La Libertad Avanza y la situación interna de Pro."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "oco3mq",
+          "titulo": "Mauricio Macri encabeza un acto en Jujuy en medio de tensiones entre el PRO y La Libertad ",
+          "fecha": "2026-09-25T12:22:13.000Z",
+          "ruta": "/nota/mauricio-macri-encabeza-un-acto-en-jujuy-en-medio-de-tensiones-entre-oco3mq"
+        },
+        {
+          "id": "by0a7r",
+          "titulo": "\"Estamos lejos de un acuerdo electoral\", el balance del PRO después de una nueva reunión con La Libertad Avanza",
+          "fecha": "2026-09-24T21:30:23.000Z",
+          "ruta": "/nota/estamos-lejos-de-un-acuerdo-electoral-el-balance-del-pro-despues-de-by0a7r"
+        },
+        {
+          "id": "r0i8at",
+          "titulo": "Pro, tras la cuarta reunión con el Gobierno: “Estamos lejos del acuerdo electoral”",
+          "fecha": "2026-09-24T21:38:45.000Z",
+          "ruta": "/nota/pro-tras-la-cuarta-reunion-con-el-gobierno-estamos-lejos-del-acuerdo-r0i8at"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "mauricio-macri-encabeza-un-acto-en-jujuy-y-negocia-acuerdos"
+    },
     {
       "id": "vn0qei",
       "titulo": "Los bonos y la Bolsa porteña operan a la baja y el riesgo país se acerca a los 600 puntos",
@@ -16,7 +94,7 @@
       "fecha": "2026-09-25T20:58:03.000Z",
       "sinFecha": false,
       "visto": "2026-09-25T15:00:50.432Z",
-      "relevancia": 43,
+      "relevancia": 49,
       "local": false,
       "publicadaPor": "ia",
       "publicadaCuando": "2026-09-25T14:43:47.405Z",
@@ -73,84 +151,6 @@
         "sugeridoPorIA": "MEDIA"
       },
       "slug": "los-bonos-y-la-bolsa-portena-operan-a-la-baja-y-el-riesgo-pais-se"
-    },
-    {
-      "id": "1mkm1na",
-      "titulo": "El autódromo Juan Manuel Fangio abre sus puertas en Balcarce",
-      "copete": "El histórico circuito serrano recibe nuevamente al público en la previa de la competencia de TC Pick Up, tras casi quince años sin actividad oficial.",
-      "cuerpo": "El autódromo Juan Manuel Fangio de Balcarce abrió sus puertas este viernes en la antesala de la competencia de TC Pick Up. Desde las primeras horas, los fanáticos comenzaron a llegar al predio y a ocupar distintos sectores de la sierra La Barrosa para vivir el regreso de la actividad oficial, que no se registraba desde noviembre de 2011.\n\nLa reapertura del circuito demandó años de obras y trabajos de recuperación. Como se había informado, el fin de semana del 26 y 27 de septiembre marcará el retorno de las categorías nacionales a la ciudad, con la presencia del piloto local Juan José Suárez compitiendo en TC Pista Pick Up.\n\nEste regreso significa para los balcarceños la recuperación de uno de sus escenarios más emblemáticos, estrechamente ligado a la identidad deportiva y turística local. Las autoridades municipales habían solicitado prestar especial atención a los accesos y al sentido de circulación establecido para el ingreso al predio.",
-      "guion": "El autódromo Juan Manuel Fangio abre sus puertas en Balcarce",
-      "seccion": "Automovilismo",
-      "medios": [
-        "Diario La Vanguardia",
-        "Radio Gabal (FM 104.1)",
-        "Puntonueve (FM 100.9)",
-        "Municipalidad de Balcarce"
-      ],
-      "enlace": "https://www.diariolavanguardia.com/noticias/44903-dia-historico-el-autodromo-juan-manuel-fangio-volvio-a-abrir-sus-puertas-despues-de-casi-15-anos/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-25T20:35:22.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-25T14:30:50.868Z",
-      "relevancia": 100,
-      "local": true,
-      "publicadaPor": "ia",
-      "publicadaCuando": "2026-09-25T14:13:23.260Z",
-      "temas": [
-        "autodromo",
-        "tc-pick-up",
-        "fangio"
-      ],
-      "como": "automatica",
-      "textoRedes": "El autódromo Juan Manuel Fangio volvió a abrir sus puertas en Balcarce este viernes después de casi quince años sin actividad oficial, en la previa de la llegada de las TC Pick Up y el fin de semana de competencias nacionales.",
-      "etiquetas": [
-        "Autodromo Juan Manuel Fangio",
-        "Balcarce",
-        "TC Pick Up",
-        "Automovilismo"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Diario La Vanguardia",
-          "enlace": "https://www.diariolavanguardia.com/noticias/44903-dia-historico-el-autodromo-juan-manuel-fangio-volvio-a-abrir-sus-puertas-despues-de-casi-15-anos/",
-          "fecha": "2026-09-25T00:03:22.000Z",
-          "oficial": false,
-          "aporte": "Detalló la llegada de los fanáticos al circuito y el significado histórico del regreso tras casi quince años sin actividad."
-        },
-        {
-          "medio": "Municipalidad de Balcarce",
-          "enlace": "https://balcarce.gob.ar/2026/09/24/reapertura-del-autodromo-juan-manuel-fangio-informacion-para-los-asistentes/",
-          "fecha": "2026-09-25T00:03:22.000Z",
-          "oficial": true,
-          "aporte": "Informó el horario de apertura del predio y solicitó atención a los accesos y la circulación."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "gfro59",
-          "titulo": "El autódromo Juan Manuel Fangio vuelve a recibir automovilismo nacional en Balcarce",
-          "fecha": "2026-09-24T19:48:00.000Z",
-          "ruta": "/nota/el-autodromo-juan-manuel-fangio-vuelve-a-recibir-automovilismo-gfro59"
-        },
-        {
-          "id": "1b3p6ze",
-          "titulo": "Juan José Suárez corre en el Autódromo Juan Manuel Fangio en Balcarce",
-          "fecha": "2026-09-24T19:08:06.000Z",
-          "ruta": "/nota/suarez-acelera-en-casa-es-un-sueno-correr-en-balcarce-1b3p6ze"
-        },
-        {
-          "id": "lcvlqf",
-          "titulo": "Vuelve el TC al tradicional autódromo Juan Manuel Fangio: la categoría Pick Up protagonizará la reapertura del circuito",
-          "fecha": "2026-09-24T17:08:37.000Z",
-          "ruta": "/nota/vuelve-el-tc-al-tradicional-autodromo-juan-manuel-fangio-la-categoria-lcvlqf"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo informaron Municipalidad de Balcarce y un medio independiente.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "el-autodromo-juan-manuel-fangio-abre-sus-puertas-en-balcarce"
     },
     {
       "id": "repaso20260925tarde",
@@ -847,6 +847,92 @@
       "slug": "diego-santilli-llega-a-balcarce-por-el-automovilismo"
     },
     {
+      "id": "yaqf3p",
+      "titulo": "El autódromo Juan Manuel Fangio abre sus puertas este viernes en Balcarce",
+      "copete": "El histórico circuito vuelve a recibir actividad automovilística este viernes con un operativo especial de tránsito, accesos diferenciados desde las 8 y venta de entradas en el predio.",
+      "cuerpo": "Las puertas del Autódromo Juan Manuel Fangio abrirán este viernes desde las 8 en lo que representa una jornada histórica para Balcarce y el automovilismo nacional, tras más de una década sin actividad oficial en el circuito principal. La organización estableció ingresos diferenciados: el público general entrará exclusivamente por la Puerta 1 sobre calle 63, mientras que los boxes y acreditaciones especiales lo harán por calle 79 a través del ingreso al Kartódromo. Dentro del predio habrá circulación en sentido único en el sector superior, estacionamiento arancelado y boletería habilitada las 24 horas.\n\nEl operativo incluye baños químicos, puestos gastronómicos y asistencia sanitaria con postas de salud y socorristas. Para ordenar el flujo vehicular y prevenir inconvenientes, participarán agentes de Control y Movilidad Urbana, Gendarmería Nacional, Policía y el Ministerio de Transporte bonaerense.",
+      "guion": "El autódromo Juan Manuel Fangio abre sus puertas este viernes en Balcarce",
+      "seccion": "Automovilismo",
+      "medios": [
+        "Diario La Vanguardia",
+        "Radio Gabal (FM 104.1)",
+        "Puntonueve (FM 100.9)"
+      ],
+      "enlace": "https://www.diariolavanguardia.com/noticias/44902-reapertura-del-fangio-horarios-accesos-estacionamiento-y-todo-lo-que-hay-que-saber-para-ingresar/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-25T13:35:22.000Z",
+      "sinFecha": false,
+      "visto": "2026-09-25T01:00:57.004Z",
+      "relevancia": 100,
+      "local": true,
+      "publicadaPor": "ia",
+      "publicadaCuando": "2026-09-25T11:57:25.176Z",
+      "temas": [
+        "autodromo",
+        "fangio"
+      ],
+      "como": "automatica",
+      "seSabe": [
+        "Las puertas del autódromo abrirán al público a partir de las 8 de la mañana.",
+        "El ingreso general será por la Puerta 1 en la calle 63.",
+        "El acceso a boxes y acreditaciones especiales se realizará por la calle 79 a través del Kartódromo.",
+        "La venta de entradas funcionará las 24 horas en las puertas de ingreso.",
+        "El predio contará con baños químicos, puestos gastronómicos y un operativo sanitario.",
+        "Participarán del operativo vial Gendarmería Nacional, Policía, Transporte provincial y agentes municipales."
+      ],
+      "noConfirmado": [
+        "No se informaron en el reporte las tarifas específicas correspondientes al estacionamiento arancelado."
+      ],
+      "textoRedes": "El Autódromo Juan Manuel Fangio reabre este viernes desde las 8 con accesos diferenciados, estacionamiento y venta de entradas. Conocé los detalles del operativo de tránsito y seguridad dispuesto para el histórico regreso del automovilismo a Balcarce.",
+      "etiquetas": [
+        "Autódromo Juan Manuel Fangio",
+        "Balcarce",
+        "automovilismo"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Diario La Vanguardia",
+          "enlace": "https://www.diariolavanguardia.com/noticias/44902-reapertura-del-fangio-horarios-accesos-estacionamiento-y-todo-lo-que-hay-que-saber-para-ingresar/",
+          "fecha": "2026-09-25T00:21:50.000Z",
+          "oficial": false,
+          "aporte": "Detalló los horarios, los accesos diferenciados, la circulación interna, el estacionamiento, los servicios y el operativo de seguridad y salud."
+        },
+        {
+          "medio": "Puntonueve (FM 100.9)",
+          "enlace": "https://puntonueve.com.ar/reapertura-del-fangio-horarios-accesos-estacionamiento-y-recomendaciones-para-el-publico/",
+          "fecha": "2026-09-25T00:21:50.000Z",
+          "oficial": false,
+          "aporte": "Confirmó que la reapertura oficial se llevará adelante este viernes en una jornada especial para la ciudad y el automovilismo."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "lcvlqf",
+          "titulo": "Vuelve el TC al tradicional autódromo Juan Manuel Fangio: la categoría Pick Up protagonizará la reapertura del circuito",
+          "fecha": "2026-09-24T17:08:37.000Z",
+          "ruta": "/nota/vuelve-el-tc-al-tradicional-autodromo-juan-manuel-fangio-la-categoria-lcvlqf"
+        },
+        {
+          "id": "jul41g",
+          "titulo": "Balcarce se prepara para la reapertura del autódromo Juan Manuel Fangio",
+          "fecha": "2026-09-24T14:21:16.000Z",
+          "ruta": "/nota/balcarce-se-prepara-para-vivir-un-fin-de-semana-a-fondo-jul41g"
+        },
+        {
+          "id": "n331xk",
+          "titulo": "Definieron horarios para el automovilismo en el Fangio",
+          "fecha": "2026-09-24T13:05:55.000Z",
+          "ruta": "/nota/definieron-horarios-para-el-automovilismo-en-el-fangio-n331xk"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "todo-sobre-la-reapertura-del-autodromo-juan-manuel-fangio"
+    },
+    {
       "id": "5agvfd",
       "titulo": "El autódromo de Balcarce vuelve a recibir al automovilismo nacional en Balcarce",
       "copete": "El circuito Juan Manuel Fangio recupera las competencias nacionales este fin de semana con el TC Pick Up como categoría principal, tras casi quince años de inactividad oficial.",
@@ -1458,159 +1544,6 @@
       "slug": "karina-lupo-y-mariano-barreiro-ganan-la-media-maraton-en-balcarce"
     },
     {
-      "id": "kiy3gs",
-      "titulo": "El Concejo Deliberante realiza este jueves la décima cuarta sesión ordinaria en Balcarce",
-      "copete": "El cuerpo legislativo local lleva a cabo este jueves su décima cuarta sesión ordinaria del año con un temario que incluye leasing, obras, transporte y cuestiones ambientales.",
-      "cuerpo": "Los concejales llevan adelante este jueves la décima cuarta sesión ordinaria del año en Balcarce, con el análisis de un extenso orden del día que abarca expedientes sobre servicios, obras y salud, según informó un medio local.\n\nDurante la jornada, el recinto evalúa convalidar decretos de operaciones de leasing y debate iniciativas vinculadas a taxis, remises y mejoras urbanas. Como se había informado en las reuniones previas de la semana, la agenda legislativa incluye expedientes sobre infraestructura, transporte y un pedido de informes sobre la red de agua potable.",
-      "guion": "El Concejo Deliberante realiza este jueves la décima cuarta sesión ordinaria en Balcarce",
-      "seccion": "Política",
-      "medios": [
-        "Diario La Vanguardia"
-      ],
-      "enlace": "https://www.diariolavanguardia.com/noticias/44885-el-concejo-deliberante-vuelve-a-sesionar-los-principales-temas-que-estaran-en-debate/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-25T10:47:08.606Z",
-      "sinFecha": true,
-      "visto": "2026-09-25T10:47:08.606Z",
-      "relevancia": 63,
-      "local": true,
-      "publicadaPor": "ia",
-      "publicadaCuando": "2026-09-25T13:02:40.310Z",
-      "temas": [
-        "concejo"
-      ],
-      "como": "automatica",
-      "claves": [
-        "El Concejo Deliberante lleva a cabo su décima cuarta sesión ordinaria del año.",
-        "El temario incluye leasing, taxis, remises, obras y proyectos ambientales.",
-        "Se debaten iniciativas sobre salud, transporte y pedidos de informes a servicios públicos.",
-        "Tratan reconocimientos a deportistas, instituciones y establecimientos educativos."
-      ],
-      "seSabe": [
-        "Los concejales llevan adelante este jueves la décima cuarta sesión ordinaria del año, según un medio local.",
-        "El orden del día incluye decretos de leasing con Provincia Leasing S.A. con despacho unánime.",
-        "Se analizan proyectos sobre el Estadio Municipal, forestación, red de gas y reparación de un puente.",
-        "Tratan una propuesta técnica de José Luis Costa para el saneamiento de la Laguna La Brava.",
-        "Se evalúan expedientes sobre salud, campañas de prevención y el Programa de Acompañamiento Alimentario.",
-        "Incluye reconocimientos al boxeador Kevin Facundo Gómez y a distintas instituciones locales."
-      ],
-      "noConfirmado": [
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "El Concejo Deliberante de Balcarce lleva adelante este jueves su décima cuarta sesión ordinaria del año con proyectos sobre leasing, transporte, obras y salud.",
-      "etiquetas": [
-        "Concejo Deliberante",
-        "Balcarce",
-        "sesion ordinaria",
-        "obras"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Diario La Vanguardia",
-          "enlace": "https://www.diariolavanguardia.com/noticias/44885-el-concejo-deliberante-vuelve-a-sesionar-los-principales-temas-que-estaran-en-debate/",
-          "fecha": null,
-          "oficial": false,
-          "aporte": "Detalló el orden del día de la décima cuarta sesión ordinaria del Concejo Deliberante y los expedientes en debate."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "1chkxhh",
-          "titulo": "El Concejo Deliberante debate tasas y obras en Balcarce",
-          "fecha": "2026-09-25T02:23:01.000Z",
-          "ruta": "/nota/concejo-deliberante-la-decimocuarta-sesion-tuvo-debates-mas-1chkxhh"
-        },
-        {
-          "id": "1iv58lw",
-          "titulo": "El Concejo Deliberante debate tasas, obras y proyectos en Balcarce",
-          "fecha": "2026-09-24T12:55:31.000Z",
-          "ruta": "/nota/concejo-deliberante-este-jueves-se-desarrollara-el-decimocuarto-1iv58lw"
-        },
-        {
-          "id": "7c7bdz",
-          "titulo": "El Concejo debate eliminar tasas a taxis y remises en Balcarce",
-          "fecha": "2026-09-23T22:58:23.988Z",
-          "ruta": "/nota/taxis-y-remises-debatiran-la-eliminacion-de-tasas-mientras-el-sector-7c7bdz"
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "el-concejo-deliberante-realiza-este-jueves-su-decimocuarta-sesion"
-    },
-    {
-      "id": "33h243",
-      "titulo": "Franco Peidón gana el oro nacional en los 800 metros en Balcarce",
-      "copete": "El atleta local se consagró campeón argentino de Mayores en los 800 metros llanos tras quedarse con la medalla de oro en el campeonato disputado en Rosario.",
-      "cuerpo": "El deportista Franco Peidón obtuvo la medalla de oro en los 800 metros llanos y se consagró campeón argentino de Mayores. El logro se concretó este fin de semana en el centésimo sexto Campeonato Nacional de Mayores, desarrollado en la ciudad santafesina de Rosario.\n\nPreviamente, a finales de septiembre, el atleta local había superado la serie clasificatoria para disputar la final de la misma distancia en los Juegos Suramericanos Santa Fe 2026, llevada a cabo en el Centro de Alto Rendimiento Deportivo Pedro Candioti, tal como se había informado en su momento.",
-      "guion": "Franco Peidón gana el oro nacional en los ochocientos metros en Balcarce",
-      "seccion": "Deportes",
-      "medios": [
-        "El Diario Balcarce"
-      ],
-      "enlace": "https://eldiariobalcarce.com.ar/peidon-se-consagro-campeon-nacional-en-los-800-metros-696",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-25T10:47:08.606Z",
-      "sinFecha": true,
-      "visto": "2026-09-25T10:47:08.606Z",
-      "relevancia": 63,
-      "local": true,
-      "publicadaPor": "ia",
-      "publicadaCuando": "2026-09-25T13:24:36.675Z",
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Franco Peidón obtuvo la medalla de oro en los 800 metros llanos.",
-        "El torneo se desarrolló en la ciudad de Rosario, provincia de Santa Fe.",
-        "El atleta local alcanzó el título en el Campeonato Nacional de Mayores."
-      ],
-      "noConfirmado": [
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "etiquetas": [
-        "Franco Peidón",
-        "campeón argentino",
-        "Rosario"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "El Diario Balcarce",
-          "enlace": "https://eldiariobalcarce.com.ar/peidon-se-consagro-campeon-nacional-en-los-800-metros-696",
-          "fecha": null,
-          "oficial": false,
-          "aporte": "Informó que Franco Peidón ganó la medalla de oro en los 800 metros en el Campeonato Nacional de Mayores en Rosario."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "1bglcef",
-          "titulo": "Franco Peidón a la final de los 800 metros en los Juegos Suramericanos",
-          "fecha": "2026-09-22T20:31:49.000Z",
-          "ruta": "/nota/franco-peidon-a-la-final-de-los-800-metros-en-los-juegos-suramericanos-1bglcef"
-        },
-        {
-          "id": "1paz2ii",
-          "titulo": "Atlanta se consagró campeón en la Liga Nacional de béisbol",
-          "fecha": "2026-09-20T22:00:04.000Z",
-          "ruta": "/nota/atlanta-se-consagro-campeon-en-la-liga-nacional-de-beisbol-1paz2ii"
-        },
-        {
-          "id": "1ibi15p",
-          "titulo": "Kevin Gómez se consagró campeón nacional de boxeo",
-          "fecha": "2026-09-20T19:25:07.000Z",
-          "ruta": "/nota/kevin-gomez-se-consagro-campeon-nacional-de-boxeo-1ibi15p"
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "franco-peidon-gano-el-oro-nacional-en-800-metros"
-    },
-    {
       "id": "8hniuy",
       "titulo": "Un científico formado en Balcarce investiga para la NASA",
       "copete": "El licenciado en Biotecnología Felipe Vilicich integra un equipo internacional en Nueva York que analiza cómo la vida resiste condiciones extremas mediante inteligencia artificial y financiamiento de la agencia espacial.",
@@ -1750,6 +1683,159 @@
         "sugeridoPorIA": "MEDIA"
       },
       "slug": "el-concejo-pidio-informes-al-municipio-por-obras-publicas"
+    },
+    {
+      "id": "33h243",
+      "titulo": "Franco Peidón gana el oro nacional en los 800 metros en Balcarce",
+      "copete": "El atleta local se consagró campeón argentino de Mayores en los 800 metros llanos tras quedarse con la medalla de oro en el campeonato disputado en Rosario.",
+      "cuerpo": "El deportista Franco Peidón obtuvo la medalla de oro en los 800 metros llanos y se consagró campeón argentino de Mayores. El logro se concretó este fin de semana en el centésimo sexto Campeonato Nacional de Mayores, desarrollado en la ciudad santafesina de Rosario.\n\nPreviamente, a finales de septiembre, el atleta local había superado la serie clasificatoria para disputar la final de la misma distancia en los Juegos Suramericanos Santa Fe 2026, llevada a cabo en el Centro de Alto Rendimiento Deportivo Pedro Candioti, tal como se había informado en su momento.",
+      "guion": "Franco Peidón gana el oro nacional en los ochocientos metros en Balcarce",
+      "seccion": "Deportes",
+      "medios": [
+        "El Diario Balcarce"
+      ],
+      "enlace": "https://eldiariobalcarce.com.ar/peidon-se-consagro-campeon-nacional-en-los-800-metros-696",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-25T10:47:08.606Z",
+      "sinFecha": true,
+      "visto": "2026-09-25T10:47:08.606Z",
+      "relevancia": 63,
+      "local": true,
+      "publicadaPor": "ia",
+      "publicadaCuando": "2026-09-25T13:24:36.675Z",
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Franco Peidón obtuvo la medalla de oro en los 800 metros llanos.",
+        "El torneo se desarrolló en la ciudad de Rosario, provincia de Santa Fe.",
+        "El atleta local alcanzó el título en el Campeonato Nacional de Mayores."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "etiquetas": [
+        "Franco Peidón",
+        "campeón argentino",
+        "Rosario"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/peidon-se-consagro-campeon-nacional-en-los-800-metros-696",
+          "fecha": null,
+          "oficial": false,
+          "aporte": "Informó que Franco Peidón ganó la medalla de oro en los 800 metros en el Campeonato Nacional de Mayores en Rosario."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1bglcef",
+          "titulo": "Franco Peidón a la final de los 800 metros en los Juegos Suramericanos",
+          "fecha": "2026-09-22T20:31:49.000Z",
+          "ruta": "/nota/franco-peidon-a-la-final-de-los-800-metros-en-los-juegos-suramericanos-1bglcef"
+        },
+        {
+          "id": "1paz2ii",
+          "titulo": "Atlanta se consagró campeón en la Liga Nacional de béisbol",
+          "fecha": "2026-09-20T22:00:04.000Z",
+          "ruta": "/nota/atlanta-se-consagro-campeon-en-la-liga-nacional-de-beisbol-1paz2ii"
+        },
+        {
+          "id": "1ibi15p",
+          "titulo": "Kevin Gómez se consagró campeón nacional de boxeo",
+          "fecha": "2026-09-20T19:25:07.000Z",
+          "ruta": "/nota/kevin-gomez-se-consagro-campeon-nacional-de-boxeo-1ibi15p"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "franco-peidon-gano-el-oro-nacional-en-800-metros"
+    },
+    {
+      "id": "kiy3gs",
+      "titulo": "El Concejo Deliberante realiza este jueves la décima cuarta sesión ordinaria en Balcarce",
+      "copete": "El cuerpo legislativo local lleva a cabo este jueves su décima cuarta sesión ordinaria del año con un temario que incluye leasing, obras, transporte y cuestiones ambientales.",
+      "cuerpo": "Los concejales llevan adelante este jueves la décima cuarta sesión ordinaria del año en Balcarce, con el análisis de un extenso orden del día que abarca expedientes sobre servicios, obras y salud, según informó un medio local.\n\nDurante la jornada, el recinto evalúa convalidar decretos de operaciones de leasing y debate iniciativas vinculadas a taxis, remises y mejoras urbanas. Como se había informado en las reuniones previas de la semana, la agenda legislativa incluye expedientes sobre infraestructura, transporte y un pedido de informes sobre la red de agua potable.",
+      "guion": "El Concejo Deliberante realiza este jueves la décima cuarta sesión ordinaria en Balcarce",
+      "seccion": "Política",
+      "medios": [
+        "Diario La Vanguardia"
+      ],
+      "enlace": "https://www.diariolavanguardia.com/noticias/44885-el-concejo-deliberante-vuelve-a-sesionar-los-principales-temas-que-estaran-en-debate/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-25T10:47:08.606Z",
+      "sinFecha": true,
+      "visto": "2026-09-25T10:47:08.606Z",
+      "relevancia": 63,
+      "local": true,
+      "publicadaPor": "ia",
+      "publicadaCuando": "2026-09-25T13:02:40.310Z",
+      "temas": [
+        "concejo"
+      ],
+      "como": "automatica",
+      "claves": [
+        "El Concejo Deliberante lleva a cabo su décima cuarta sesión ordinaria del año.",
+        "El temario incluye leasing, taxis, remises, obras y proyectos ambientales.",
+        "Se debaten iniciativas sobre salud, transporte y pedidos de informes a servicios públicos.",
+        "Tratan reconocimientos a deportistas, instituciones y establecimientos educativos."
+      ],
+      "seSabe": [
+        "Los concejales llevan adelante este jueves la décima cuarta sesión ordinaria del año, según un medio local.",
+        "El orden del día incluye decretos de leasing con Provincia Leasing S.A. con despacho unánime.",
+        "Se analizan proyectos sobre el Estadio Municipal, forestación, red de gas y reparación de un puente.",
+        "Tratan una propuesta técnica de José Luis Costa para el saneamiento de la Laguna La Brava.",
+        "Se evalúan expedientes sobre salud, campañas de prevención y el Programa de Acompañamiento Alimentario.",
+        "Incluye reconocimientos al boxeador Kevin Facundo Gómez y a distintas instituciones locales."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El Concejo Deliberante de Balcarce lleva adelante este jueves su décima cuarta sesión ordinaria del año con proyectos sobre leasing, transporte, obras y salud.",
+      "etiquetas": [
+        "Concejo Deliberante",
+        "Balcarce",
+        "sesion ordinaria",
+        "obras"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Diario La Vanguardia",
+          "enlace": "https://www.diariolavanguardia.com/noticias/44885-el-concejo-deliberante-vuelve-a-sesionar-los-principales-temas-que-estaran-en-debate/",
+          "fecha": null,
+          "oficial": false,
+          "aporte": "Detalló el orden del día de la décima cuarta sesión ordinaria del Concejo Deliberante y los expedientes en debate."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1chkxhh",
+          "titulo": "El Concejo Deliberante debate tasas y obras en Balcarce",
+          "fecha": "2026-09-25T02:23:01.000Z",
+          "ruta": "/nota/concejo-deliberante-la-decimocuarta-sesion-tuvo-debates-mas-1chkxhh"
+        },
+        {
+          "id": "1iv58lw",
+          "titulo": "El Concejo Deliberante debate tasas, obras y proyectos en Balcarce",
+          "fecha": "2026-09-24T12:55:31.000Z",
+          "ruta": "/nota/concejo-deliberante-este-jueves-se-desarrollara-el-decimocuarto-1iv58lw"
+        },
+        {
+          "id": "7c7bdz",
+          "titulo": "El Concejo debate eliminar tasas a taxis y remises en Balcarce",
+          "fecha": "2026-09-23T22:58:23.988Z",
+          "ruta": "/nota/taxis-y-remises-debatiran-la-eliminacion-de-tasas-mientras-el-sector-7c7bdz"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "el-concejo-deliberante-realiza-este-jueves-su-decimocuarta-sesion"
     },
     {
       "id": "19nfzay",
@@ -2989,7 +3075,7 @@
       "fecha": "2026-09-24T21:28:44.000Z",
       "sinFecha": false,
       "visto": "2026-09-24T21:30:39.193Z",
-      "relevancia": 73,
+      "relevancia": 65,
       "local": true,
       "publicadaPor": "ia",
       "publicadaCuando": "2026-09-25T12:15:37.284Z",
@@ -3073,7 +3159,7 @@
       "fecha": "2026-09-24T21:18:42.000Z",
       "sinFecha": false,
       "visto": "2026-09-24T21:30:39.193Z",
-      "relevancia": 100,
+      "relevancia": 93,
       "local": true,
       "publicadaPor": "ia",
       "publicadaCuando": "2026-09-25T11:57:25.176Z",
@@ -3182,7 +3268,7 @@
       "fecha": "2026-09-24T21:08:28.050Z",
       "sinFecha": false,
       "visto": "2026-09-24T22:30:48.434Z",
-      "relevancia": 73,
+      "relevancia": 65,
       "local": true,
       "publicadaPor": "ia",
       "publicadaCuando": "2026-09-25T12:26:55.301Z",
@@ -3863,105 +3949,6 @@
         "sugeridoPorIA": "MEDIA"
       },
       "slug": "carta-abierta-de-investigadora-del-inta-balcarce"
-    },
-    {
-      "id": "jul41g",
-      "titulo": "El Autódromo Juan Manuel Fangio reabre este viernes en Balcarce",
-      "copete": "Balcarce será escenario este fin de semana de la octava fecha del TC Pick Up. El evento incluirá la esperada reapertura del autódromo local, exhibiciones callejeras de vehículos y una conferencia oficial.",
-      "cuerpo": "Las actividades comenzarán este viernes a partir de las 14 con el corte de cinta en la pista del Autódromo Municipal Juan Manuel Fangio, un hito que marcará su reapertura oficial con la presencia de autoridades provinciales, municipales y de la ACTC. La agenda continuará a las 17 en una estación de servicio ubicada en avenida San Martín y 107, donde se realizará una firma de autógrafos con los pilotos locales y nacionales. Más tarde, desde las 18:30, las camionetas recorrerán distintos sectores de la ciudad, pasando por la avenida Gonzales Chaves, plaza Libertad y la zona del Museo Fangio, frente al cual se desarrollará la conferencia de presentación a las 19.\n\nEn lo estrictamente deportivo, la actividad competitiva comenzará el sábado a las 9 con entrenamientos y clasificaciones, mientras que el domingo se disputarán las series y finales con transmisión televisiva. Mariano Werner llega como líder del campeonato tras imponerse en dos finales y ganar la Etapa Regular, al tiempo que se confirmó la participación de los pilotos locales Santiago Mangoni, Diego Ciantini, José Ciantini y Juan José Suárez.",
-      "guion": "El Autódromo Juan Manuel Fangio reabre este viernes en Balcarce",
-      "seccion": "Automovilismo",
-      "medios": [
-        "News Balcarce (FM 91.7)",
-        "El Diario Balcarce",
-        "Municipalidad de Balcarce"
-      ],
-      "enlace": "https://newsbalcarce.com.ar/?p=30813",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-24T14:21:16.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-24T15:27:47.939Z",
-      "relevancia": 93,
-      "local": true,
-      "publicadaPor": "ia",
-      "publicadaCuando": "2026-09-25T11:57:25.176Z",
-      "temas": [
-        "autodromo",
-        "fangio"
-      ],
-      "como": "automatica",
-      "claves": [
-        "El autódromo municipal reabre sus puertas este viernes con un acto oficial.",
-        "Habrá firma de autógrafos y una caravana de camionetas por las calles céntricas.",
-        "El sábado y domingo se disputarán los entrenamientos, series y finales.",
-        "Mariano Werner llega como puntero y cuatro pilotos locales competirán en la fecha."
-      ],
-      "noConfirmado": [
-        "No se detalló la nómina completa de las autoridades provinciales y de la ACTC que asistirán al corte de cinta."
-      ],
-      "textoRedes": "Balcarce se prepara para vivir un fin de semana a todo motor con la reapertura del Autódromo Juan Manuel Fangio, la llegada del TC Pick Up, caravanas de camionetas por la ciudad y la presencia de destacados pilotos locales.",
-      "etiquetas": [
-        "Autodromo Juan Manuel Fangio",
-        "TC Pick Up",
-        "Balcarce",
-        "Automovilismo"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "News Balcarce (FM 91.7)",
-          "enlace": "https://newsbalcarce.com.ar/?p=30813",
-          "fecha": "2026-09-24T14:21:16.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "El Diario Balcarce",
-          "enlace": "https://eldiariobalcarce.com.ar/balcarce-se-prepara-para-un-fin-de-semana-historico-475",
-          "fecha": "2026-09-24T12:05:53.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Infórmese Primero (FM 104.9)",
-          "enlace": "http://www.blogger.com/feeds/8495648477830064035/posts/default/4187113007910707683",
-          "fecha": "2026-09-23T15:58:01.847Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Municipalidad de Balcarce",
-          "enlace": "https://balcarce.gob.ar/2026/09/23/balcarce-se-prepara-para-vivir-un-fin-de-semana-a-puro-automovilismo/",
-          "fecha": "2026-09-23T15:49:50.000Z",
-          "oficial": true,
-          "aporte": null
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "4v2vga",
-          "titulo": "Largas filas en Balcarce por el regreso del automovilismo",
-          "fecha": "2026-09-24T13:34:15.000Z",
-          "ruta": "/nota/largas-filas-en-balcarce-por-el-regreso-del-automovilismo-4v2vga"
-        },
-        {
-          "id": "1s3g86p",
-          "titulo": "Viernes a puro motor en Balcarce con el TC Pick Up",
-          "fecha": "2026-09-24T13:09:20.000Z",
-          "ruta": "/nota/viernes-a-puro-motor-en-balcarce-con-el-tc-pick-up-1s3g86p"
-        },
-        {
-          "id": "n331xk",
-          "titulo": "Definieron horarios para el automovilismo en el Fangio",
-          "fecha": "2026-09-24T13:05:55.000Z",
-          "ruta": "/nota/definieron-horarios-para-el-automovilismo-en-el-fangio-n331xk"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo confirman tres medios independientes y Municipalidad de Balcarce.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "balcarce-se-prepara-para-vivir-un-fin-de-semana-a-fondo"
     },
     {
       "id": "12xkda6",
@@ -4652,6 +4639,368 @@
       "slug": "entre-felicitaciones-y-orgullo-kevin-gomez-compartio-en-quality-su"
     },
     {
+      "id": "1x87c94",
+      "titulo": "Se registran servicios de sepelios en Balcarce",
+      "copete": "La Cooperativa de Electricidad local informó el cronograma de servicios fúnebres correspondientes a vecinos fallecidos en las últimas semanas en el distrito.",
+      "cuerpo": "Durante las últimas semanas se llevaron adelante distintos servicios de sepelios en el distrito, según los registros brindados por la Cooperativa de Electricidad \"General Balcarce\" Limitada. Las inhumaciones y cremaciones se concretaron tanto en el Cementerio Municipal como en instalaciones privadas.\n\nLos procedimientos se cumplimentaron tras los respectivos oficios religiosos en las salas velatorias habilitadas, abarcando a personas fallecidas en fechas recientes en la ciudad y zonas de influencia como Los Pinos.\n\nLas ceremonias y traslados de los restos se desarrollaron conforme a los cronogramas organizados por la entidad de servicios públicos para los familiares y deudos.",
+      "guion": "Se registran servicios de sepelios en Balcarce.",
+      "seccion": "Agro",
+      "medios": [
+        "El Diario Balcarce"
+      ],
+      "enlace": "https://eldiariobalcarce.com.ar/le-seguiremos-demandando-al-gobierno-nacional-que-reduzca-la-carga-impositiva-193",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-23T03:05:01.594Z",
+      "sinFecha": true,
+      "visto": "2026-09-23T03:05:01.594Z",
+      "relevancia": 63,
+      "local": true,
+      "publicadaPor": "ia",
+      "publicadaCuando": "2026-09-25T13:02:40.310Z",
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Servicios fúnebres de la Cooperativa de Electricidad",
+        "Inhumaciones en el Cementerio Municipal",
+        "Atención a deudos en salas velatorias locales"
+      ],
+      "seSabe": [
+        "La Cooperativa de Electricidad \"General Balcarce\" Limitada informó los servicios de sepelios.",
+        "Los restos fueron velados en salas locales antes de su inhumación o cremación."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "La Cooperativa de Electricidad de Balcarce informó el detalle de los servicios de sepelios llevados a cabo en el distrito durante las últimas semanas.",
+      "etiquetas": [
+        "sepelios",
+        "fallecimientos",
+        "Balcarce",
+        "cooperativa de electricidad"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/le-seguiremos-demandando-al-gobierno-nacional-que-reduzca-la-carga-impositiva-193",
+          "fecha": null,
+          "oficial": false,
+          "aporte": "Detalló los avisos fúnebres y servicios de sepelios prestados en el distrito."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "reclamos-del-campo-al-gobierno-por-impuestos"
+    },
+    {
+      "id": "ts9zo0",
+      "titulo": "Comienza una nueva etapa pastoral en la Iglesia católica en Balcarce",
+      "copete": "Las comunidades locales inician un periodo de renovación espiritual con la llegada de nuevas autoridades eclesiásticas para fortalecer el trabajo pastoral conjunto.",
+      "cuerpo": "La Iglesia católica local inicia una nueva etapa con la incorporación de nuevos referentes religiosos destinados a guiar las actividades pastorales de la comunidad. Esta renovación busca fortalecer el acompañamiento espiritual y la cercanía con los fieles en las distintas parroquias del distrito.\n\nLa llegada de los sacerdotes marca el comienzo de un ciclo enfocado en el trabajo conjunto y la participación activa de los vecinos en la vida eclesiástica. Las tareas se centrarán en atender las necesidades espirituales y consolidar el vínculo con la comunidad.\n\nEstas acciones pastorales forman parte de la reorganización habitual que implementa la institución religiosa para dinamizar su labor en la región.",
+      "guion": "Comienza una nueva etapa pastoral en la Iglesia católica en Balcarce",
+      "seccion": "Balcarce",
+      "medios": [
+        "El Diario Balcarce"
+      ],
+      "enlace": "https://eldiariobalcarce.com.ar/una-nueva-etapa-para-la-comunidad-catolica-fe-cercania-y-el-desafio-de-caminar-juntos-943",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-23T03:05:01.594Z",
+      "sinFecha": true,
+      "visto": "2026-09-23T03:05:01.594Z",
+      "relevancia": 63,
+      "local": true,
+      "publicadaPor": "ia",
+      "publicadaCuando": "2026-09-25T13:33:00.780Z",
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Llegan nuevos referentes a la Iglesia católica local",
+        "Se inicia una etapa enfocada en la cercanía pastoral",
+        "Participan las comunidades de la región"
+      ],
+      "seSabe": [
+        "Se registra la llegada de nuevos sacerdotes a la comunidad católica local.",
+        "La iniciativa apunta a fortalecer la vida pastoral de la institución."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "La Iglesia católica local inicia una nueva etapa pastoral con la llegada de nuevos presbíteros para fortalecer el trabajo junto a la comunidad.",
+      "etiquetas": [
+        "Iglesia católica",
+        "Balcarce",
+        "comunidad",
+        "pastoral"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/una-nueva-etapa-para-la-comunidad-catolica-fe-cercania-y-el-desafio-de-caminar-juntos-943",
+          "fecha": null,
+          "oficial": false,
+          "aporte": "Informó sobre la incorporación de nuevos presbíteros a las comunidades católicas locales."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "nuevos-sacerdotes-asumen-en-parroquias-locales"
+    },
+    {
+      "id": "14m0mm5",
+      "titulo": "Actualizan los servicios de sepelios de la Cooperativa en Balcarce",
+      "copete": "La Cooperativa de Electricidad emitió el listado con los recientes servicios de sepelios correspondientes a los fallecimientos registrados en el distrito.",
+      "cuerpo": "La Cooperativa de Electricidad «General Balcarce» Limitada informó los detalles de los servicios de sepelios prestados a lo largo de los últimos meses en el distrito. La información comprende los cronogramas de los velatorios, los oficios religiosos y los destinos de los restos en cada caso.\n\nLos procedimientos incluyeron inhumaciones en el Cementerio Municipal y cremaciones en el Crematorio Privado de Miramar, según los requerimientos de las familias. Las ceremonias contaron con el acompañamiento de familiares y allegados en las salas velatorias habilitadas.\n\nLos servicios se coordinaron a través de la entidad local, que centraliza las prestaciones funerarias y la atención a los deudos en las diferentes casas de duelo dispuestas tanto en la zona urbana como en áreas rurales del partido.",
+      "guion": "Actualizan los servicios de sepelios de la Cooperativa en Balcarce",
+      "seccion": "Balcarce",
+      "medios": [
+        "El Diario Balcarce"
+      ],
+      "enlace": "https://eldiariobalcarce.com.ar/tato-melucci-vuelve-a-balcarce-con-una-obra-atravesada-por-la-memoria-de-su-padre-997",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-23T03:05:01.594Z",
+      "sinFecha": true,
+      "visto": "2026-09-23T03:05:01.594Z",
+      "relevancia": 63,
+      "local": true,
+      "publicadaPor": "ia",
+      "publicadaCuando": "2026-09-25T13:14:20.979Z",
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "La Cooperativa de Electricidad informó sobre los servicios de sepelios prestados.",
+        "Se detallaron los cronogramas de velatorios y traslados a cementerios.",
+        "Las familias participaron de las ceremonias de inhumación y cremación."
+      ],
+      "seSabe": [
+        "La Cooperativa de Electricidad «General Balcarce» Limitada estuvo a cargo de los servicios de sepelios.",
+        "Los restos fueron destinados al Cementerio Municipal y al Crematorio Privado de Miramar según cada caso."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "La Cooperativa de Electricidad dio a conocer el detalle de los recientes servicios de sepelios prestados en el distrito.",
+      "etiquetas": [
+        "servicios de sepelios",
+        "Cooperativa de Electricidad",
+        "Balcarce",
+        "fallecimientos"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/tato-melucci-vuelve-a-balcarce-con-una-obra-atravesada-por-la-memoria-de-su-padre-997",
+          "fecha": null,
+          "oficial": false,
+          "aporte": "Aportó el registro de los servicios de sepelios y los detalles de los fallecimientos en el distrito."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "tato-melucci-presenta-su-nueva-obra-teatral-en-balcarce"
+    },
+    {
+      "id": "18iooyc",
+      "titulo": "Informan servicios fúnebres de la comunidad en Balcarce",
+      "copete": "La Cooperativa de Electricidad General Balcarce dio a conocer los servicios de sepelios correspondientes a los fallecimientos registrados en el distrito durante los últimos meses.",
+      "cuerpo": "La Cooperativa de Electricidad General Balcarce Limitada informó los detalles de los servicios fúnebres y traslados al Cementerio Municipal realizados en la ciudad y en la zona rural. De acuerdo con los avisos difundidos, las inhumaciones y cremaciones se llevaron a cabo tras los respectivos oficios religiosos en salas velatorias locales, con participación de familiares y allegados.\n\nLos registros abarcan decesos ocurridos desde mayo hasta septiembre de este año en distintos puntos del partido, incluyendo domicilios urbanos y zonas como Los Pinos. Los servicios estuvieron a cargo de la entidad de electricidad local, que centraliza las prestaciones de sepelios en el distrito.",
+      "guion": "Informan servicios fúnebres de la comunidad en Balcarce",
+      "seccion": "Agro",
+      "medios": [
+        "El Diario Balcarce"
+      ],
+      "enlace": "https://eldiariobalcarce.com.ar/luis-ispizua-el-gobierno-entendio-que-el-campo-es-el-motor-del-pais-969",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-23T03:05:01.594Z",
+      "sinFecha": true,
+      "visto": "2026-09-23T03:05:01.594Z",
+      "relevancia": 63,
+      "local": true,
+      "publicadaPor": "ia",
+      "publicadaCuando": "2026-09-25T13:33:00.780Z",
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "La Cooperativa de Electricidad informó los servicios fúnebres",
+        "Los decesos se registraron en distintos puntos del distrito",
+        "Las inhumaciones se realizaron en el Cementerio Municipal"
+      ],
+      "seSabe": [
+        "La Cooperativa de Electricidad General Balcarce Limitada prestó los servicios de sepelios.",
+        "Se registraron fallecimientos en Balcarce y Los Pinos entre mayo y septiembre de 2026.",
+        "Los restos fueron inhumados en el Cementerio Municipal o cremados según cada caso."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "La Cooperativa de Electricidad General Balcarce dio a conocer los servicios fúnebres y los detalles de las inhumaciones realizadas en el distrito en los últimos meses.",
+      "etiquetas": [
+        "servicios funebres",
+        "cooperativa de electricidad",
+        "fallecimientos",
+        "Balcarce"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/luis-ispizua-el-gobierno-entendio-que-el-campo-es-el-motor-del-pais-969",
+          "fecha": null,
+          "oficial": false,
+          "aporte": "Detalló los avisos de fallecimiento y los servicios de sepelios brindados por la cooperativa local."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "luis-ispizua-destaco-el-rol-del-campo-para-la-economia"
+    },
+    {
+      "id": "19jah2t",
+      "titulo": "Un periodista nacido en Balcarce cubre un nuevo Mundial",
+      "copete": "El periodista Claudio Martínez, radicado en El Salvador y con pasado en la revista El Gráfico, cubre la Copa del Mundo para un programa radial. A pesar de los años fuera de la ciudad, mantiene su arraigo local.",
+      "cuerpo": "El periodista deportivo Claudio Martínez, nacido en Balcarce y radicado desde hace veinticuatro años en El Salvador, cubre una nueva Copa del Mundo para el programa radial La Tribu.\n\nDurante su carrera cubrió Juegos Olímpicos y competencias internacionales, aunque destaca que el torneo de fútbol conserva una fiesta y un color únicos en las tribunas. Además, señaló los cambios tecnológicos en la profesión, que pasó de la labor escrita a la producción multimedia simultánea para radio y plataformas digitales.\n\nAunque sus visitas a la ciudad son menos frecuentes y suele encontrarse con amigos en Mar del Plata, Martínez remarca su identidad balcarceña.",
+      "guion": "Un periodista nacido en Balcarce cubre un nuevo Mundial",
+      "seccion": "Deportes",
+      "medios": [
+        "El Diario Balcarce"
+      ],
+      "enlace": "https://eldiariobalcarce.com.ar/de-balcarce-al-mundial-la-historia-del-periodista-que-vive-el-futbol-desde-adentro-899",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-23T03:05:01.594Z",
+      "sinFecha": true,
+      "visto": "2026-09-23T03:05:01.594Z",
+      "relevancia": 63,
+      "local": true,
+      "publicadaPor": "ia",
+      "publicadaCuando": "2026-09-25T13:14:20.979Z",
+      "temas": [],
+      "como": "automatica",
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El periodista deportivo Claudio Martínez, nacido en Balcarce, cubre su segundo Mundial desde El Salvador para un ciclo radial. Con pasado en El Gráfico y una trayectoria consolidada en Centroamérica, mantiene intacto su arraigo con la ciudad.",
+      "etiquetas": [
+        "Claudio Martínez",
+        "Periodismo",
+        "Mundial",
+        "Deportes",
+        "El Salvador"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/de-balcarce-al-mundial-la-historia-del-periodista-que-vive-el-futbol-desde-adentro-899",
+          "fecha": null,
+          "oficial": false,
+          "aporte": "Detalla la trayectoria del periodista Claudio Martínez, su cobertura del Mundial desde El Salvador y su vínculo con Balcarce."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "5evl6s",
+          "titulo": "De Balcarce al Mundial: la historia del periodista que vive el fútbol desde adentro",
+          "fecha": "2026-09-18T05:43:46.737Z",
+          "ruta": "/nota/de-balcarce-al-mundial-la-historia-del-periodista-que-vive-el-futbol-5evl6s"
+        },
+        {
+          "id": "1s6jmdm",
+          "titulo": "La mexicana Rosa María Guerrero hace historia y se lleva el oro al imponer récord mundial de Para Atletismo",
+          "fecha": "2026-09-19T06:13:33.000Z",
+          "ruta": "/nota/la-mexicana-rosa-maria-guerrero-hace-historia-y-se-lleva-el-oro-al-1s6jmdm"
+        },
+        {
+          "id": "4nzjd0",
+          "titulo": "Yamal se tiró flores por el gol de Ferrán en la final del Mundial: \"La gente no se da cuenta\" y \"los que saben de fútbol lo valoran\"",
+          "fecha": "2026-09-18T16:35:57.000Z",
+          "ruta": "/nota/yamal-se-tiro-flores-por-el-gol-de-ferran-en-la-final-del-mundial-la-4nzjd0"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "periodista-de-balcarce-cubre-el-mundial-desde-el-salvador"
+    },
+    {
+      "id": "1pr955",
+      "titulo": "Kreplak asiste al Senado para defender proyectos sanitarios",
+      "copete": "El ministro de Salud bonaerense acude al Senado para respaldar iniciativas sobre política sanitaria impulsadas por el Ejecutivo.",
+      "cuerpo": "El ministro de Salud, Nicolás Kreplak, asiste al Senado para defender proyectos de ley sobre política sanitaria considerados clave por el gobierno provincial. Las iniciativas se encuentran trabadas en la Legislatura e incluyen la creación de una empresa de medicamentos.\n\nPor otra parte, la oposición cruza al ministro durante su presentación en el debate parlamentario.\n\nEstas discusiones legislativas ocurren en el contexto del tratamiento de proyectos sanitarios impulsados por la administración provincial en la cámara alta.",
+      "guion": "Kreplak asiste al Senado para defender proyectos sanitarios",
+      "seccion": "Política",
+      "medios": [
+        "El Diario Balcarce"
+      ],
+      "enlace": "https://eldiariobalcarce.com.ar/kreplak-fue-al-senado-a-defender-dos-proyectos-del-ejecutivo-pero-la-oposicion-lo-cruzo-por-ioma-925",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-23T03:05:01.594Z",
+      "sinFecha": true,
+      "visto": "2026-09-23T03:05:01.594Z",
+      "relevancia": 63,
+      "local": true,
+      "publicadaPor": "ia",
+      "publicadaCuando": "2026-09-25T13:14:20.980Z",
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "El ministro de Salud concurrió al Senado",
+        "Defendió proyectos de ley sanitarios del Ejecutivo",
+        "Las iniciativas están trabadas en la Legislatura",
+        "La oposición cuestionó al funcionario"
+      ],
+      "seSabe": [
+        "El ministro de Salud, Nicolás Kreplak, acudió al Senado.",
+        "El funcionario defendió proyectos de ley sobre política sanitaria.",
+        "Las iniciativas del Ejecutivo están trabadas en la Legislatura.",
+        "Uno de los proyectos busca crear una empresa de medicamentos.",
+        "La oposición cruzó al ministro por IOMA."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El ministro de Salud bonaerense, Nicolás Kreplak, concurrió al Senado para defender proyectos clave del Ejecutivo vinculados a la política sanitaria que se encuentran trabados en la Legislatura.",
+      "etiquetas": [
+        "Kreplak",
+        "Senado",
+        "Salud",
+        "Legislatura",
+        "IOMA"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/kreplak-fue-al-senado-a-defender-dos-proyectos-del-ejecutivo-pero-la-oposicion-lo-cruzo-por-ioma-925",
+          "fecha": null,
+          "oficial": false,
+          "aporte": "Informó la visita del ministro Nicolás Kreplak al Senado para defender proyectos sanitarios y las críticas de la oposición."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "4y8q12",
+          "titulo": "Senado: sin la oposición en el recinto, el Gobierno convirtió en ley la reforma del régimen de zona fría",
+          "fecha": "2026-09-24T22:21:00.000Z",
+          "ruta": "/nota/senado-sin-la-oposicion-en-el-recinto-el-gobierno-convirtio-en-ley-la-4y8q12"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "kreplak-fue-al-senado-a-defender-dos-proyectos-del-ejecutivo-pero-la"
+    },
+    {
       "id": "hcjt9j",
       "titulo": "Javier Fornieles habla sobre el estado de la institución en Balcarce",
       "copete": "Declaraciones de Javier Fornieles sobre la situación actual en el distrito y los desafíos pendientes para la comunidad local.",
@@ -5231,368 +5580,6 @@
       "slug": "medalla-de-bronce-para-shalom-lescano-en-atletismo"
     },
     {
-      "id": "1x87c94",
-      "titulo": "Se registran servicios de sepelios en Balcarce",
-      "copete": "La Cooperativa de Electricidad local informó el cronograma de servicios fúnebres correspondientes a vecinos fallecidos en las últimas semanas en el distrito.",
-      "cuerpo": "Durante las últimas semanas se llevaron adelante distintos servicios de sepelios en el distrito, según los registros brindados por la Cooperativa de Electricidad \"General Balcarce\" Limitada. Las inhumaciones y cremaciones se concretaron tanto en el Cementerio Municipal como en instalaciones privadas.\n\nLos procedimientos se cumplimentaron tras los respectivos oficios religiosos en las salas velatorias habilitadas, abarcando a personas fallecidas en fechas recientes en la ciudad y zonas de influencia como Los Pinos.\n\nLas ceremonias y traslados de los restos se desarrollaron conforme a los cronogramas organizados por la entidad de servicios públicos para los familiares y deudos.",
-      "guion": "Se registran servicios de sepelios en Balcarce.",
-      "seccion": "Agro",
-      "medios": [
-        "El Diario Balcarce"
-      ],
-      "enlace": "https://eldiariobalcarce.com.ar/le-seguiremos-demandando-al-gobierno-nacional-que-reduzca-la-carga-impositiva-193",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-23T03:05:01.594Z",
-      "sinFecha": true,
-      "visto": "2026-09-23T03:05:01.594Z",
-      "relevancia": 63,
-      "local": true,
-      "publicadaPor": "ia",
-      "publicadaCuando": "2026-09-25T13:02:40.310Z",
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Servicios fúnebres de la Cooperativa de Electricidad",
-        "Inhumaciones en el Cementerio Municipal",
-        "Atención a deudos en salas velatorias locales"
-      ],
-      "seSabe": [
-        "La Cooperativa de Electricidad \"General Balcarce\" Limitada informó los servicios de sepelios.",
-        "Los restos fueron velados en salas locales antes de su inhumación o cremación."
-      ],
-      "noConfirmado": [
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "La Cooperativa de Electricidad de Balcarce informó el detalle de los servicios de sepelios llevados a cabo en el distrito durante las últimas semanas.",
-      "etiquetas": [
-        "sepelios",
-        "fallecimientos",
-        "Balcarce",
-        "cooperativa de electricidad"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "El Diario Balcarce",
-          "enlace": "https://eldiariobalcarce.com.ar/le-seguiremos-demandando-al-gobierno-nacional-que-reduzca-la-carga-impositiva-193",
-          "fecha": null,
-          "oficial": false,
-          "aporte": "Detalló los avisos fúnebres y servicios de sepelios prestados en el distrito."
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "reclamos-del-campo-al-gobierno-por-impuestos"
-    },
-    {
-      "id": "ts9zo0",
-      "titulo": "Comienza una nueva etapa pastoral en la Iglesia católica en Balcarce",
-      "copete": "Las comunidades locales inician un periodo de renovación espiritual con la llegada de nuevas autoridades eclesiásticas para fortalecer el trabajo pastoral conjunto.",
-      "cuerpo": "La Iglesia católica local inicia una nueva etapa con la incorporación de nuevos referentes religiosos destinados a guiar las actividades pastorales de la comunidad. Esta renovación busca fortalecer el acompañamiento espiritual y la cercanía con los fieles en las distintas parroquias del distrito.\n\nLa llegada de los sacerdotes marca el comienzo de un ciclo enfocado en el trabajo conjunto y la participación activa de los vecinos en la vida eclesiástica. Las tareas se centrarán en atender las necesidades espirituales y consolidar el vínculo con la comunidad.\n\nEstas acciones pastorales forman parte de la reorganización habitual que implementa la institución religiosa para dinamizar su labor en la región.",
-      "guion": "Comienza una nueva etapa pastoral en la Iglesia católica en Balcarce",
-      "seccion": "Balcarce",
-      "medios": [
-        "El Diario Balcarce"
-      ],
-      "enlace": "https://eldiariobalcarce.com.ar/una-nueva-etapa-para-la-comunidad-catolica-fe-cercania-y-el-desafio-de-caminar-juntos-943",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-23T03:05:01.594Z",
-      "sinFecha": true,
-      "visto": "2026-09-23T03:05:01.594Z",
-      "relevancia": 63,
-      "local": true,
-      "publicadaPor": "ia",
-      "publicadaCuando": "2026-09-25T13:33:00.780Z",
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Llegan nuevos referentes a la Iglesia católica local",
-        "Se inicia una etapa enfocada en la cercanía pastoral",
-        "Participan las comunidades de la región"
-      ],
-      "seSabe": [
-        "Se registra la llegada de nuevos sacerdotes a la comunidad católica local.",
-        "La iniciativa apunta a fortalecer la vida pastoral de la institución."
-      ],
-      "noConfirmado": [
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "La Iglesia católica local inicia una nueva etapa pastoral con la llegada de nuevos presbíteros para fortalecer el trabajo junto a la comunidad.",
-      "etiquetas": [
-        "Iglesia católica",
-        "Balcarce",
-        "comunidad",
-        "pastoral"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "El Diario Balcarce",
-          "enlace": "https://eldiariobalcarce.com.ar/una-nueva-etapa-para-la-comunidad-catolica-fe-cercania-y-el-desafio-de-caminar-juntos-943",
-          "fecha": null,
-          "oficial": false,
-          "aporte": "Informó sobre la incorporación de nuevos presbíteros a las comunidades católicas locales."
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "nuevos-sacerdotes-asumen-en-parroquias-locales"
-    },
-    {
-      "id": "14m0mm5",
-      "titulo": "Actualizan los servicios de sepelios de la Cooperativa en Balcarce",
-      "copete": "La Cooperativa de Electricidad emitió el listado con los recientes servicios de sepelios correspondientes a los fallecimientos registrados en el distrito.",
-      "cuerpo": "La Cooperativa de Electricidad «General Balcarce» Limitada informó los detalles de los servicios de sepelios prestados a lo largo de los últimos meses en el distrito. La información comprende los cronogramas de los velatorios, los oficios religiosos y los destinos de los restos en cada caso.\n\nLos procedimientos incluyeron inhumaciones en el Cementerio Municipal y cremaciones en el Crematorio Privado de Miramar, según los requerimientos de las familias. Las ceremonias contaron con el acompañamiento de familiares y allegados en las salas velatorias habilitadas.\n\nLos servicios se coordinaron a través de la entidad local, que centraliza las prestaciones funerarias y la atención a los deudos en las diferentes casas de duelo dispuestas tanto en la zona urbana como en áreas rurales del partido.",
-      "guion": "Actualizan los servicios de sepelios de la Cooperativa en Balcarce",
-      "seccion": "Balcarce",
-      "medios": [
-        "El Diario Balcarce"
-      ],
-      "enlace": "https://eldiariobalcarce.com.ar/tato-melucci-vuelve-a-balcarce-con-una-obra-atravesada-por-la-memoria-de-su-padre-997",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-23T03:05:01.594Z",
-      "sinFecha": true,
-      "visto": "2026-09-23T03:05:01.594Z",
-      "relevancia": 63,
-      "local": true,
-      "publicadaPor": "ia",
-      "publicadaCuando": "2026-09-25T13:14:20.979Z",
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "La Cooperativa de Electricidad informó sobre los servicios de sepelios prestados.",
-        "Se detallaron los cronogramas de velatorios y traslados a cementerios.",
-        "Las familias participaron de las ceremonias de inhumación y cremación."
-      ],
-      "seSabe": [
-        "La Cooperativa de Electricidad «General Balcarce» Limitada estuvo a cargo de los servicios de sepelios.",
-        "Los restos fueron destinados al Cementerio Municipal y al Crematorio Privado de Miramar según cada caso."
-      ],
-      "noConfirmado": [
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "La Cooperativa de Electricidad dio a conocer el detalle de los recientes servicios de sepelios prestados en el distrito.",
-      "etiquetas": [
-        "servicios de sepelios",
-        "Cooperativa de Electricidad",
-        "Balcarce",
-        "fallecimientos"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "El Diario Balcarce",
-          "enlace": "https://eldiariobalcarce.com.ar/tato-melucci-vuelve-a-balcarce-con-una-obra-atravesada-por-la-memoria-de-su-padre-997",
-          "fecha": null,
-          "oficial": false,
-          "aporte": "Aportó el registro de los servicios de sepelios y los detalles de los fallecimientos en el distrito."
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "tato-melucci-presenta-su-nueva-obra-teatral-en-balcarce"
-    },
-    {
-      "id": "18iooyc",
-      "titulo": "Informan servicios fúnebres de la comunidad en Balcarce",
-      "copete": "La Cooperativa de Electricidad General Balcarce dio a conocer los servicios de sepelios correspondientes a los fallecimientos registrados en el distrito durante los últimos meses.",
-      "cuerpo": "La Cooperativa de Electricidad General Balcarce Limitada informó los detalles de los servicios fúnebres y traslados al Cementerio Municipal realizados en la ciudad y en la zona rural. De acuerdo con los avisos difundidos, las inhumaciones y cremaciones se llevaron a cabo tras los respectivos oficios religiosos en salas velatorias locales, con participación de familiares y allegados.\n\nLos registros abarcan decesos ocurridos desde mayo hasta septiembre de este año en distintos puntos del partido, incluyendo domicilios urbanos y zonas como Los Pinos. Los servicios estuvieron a cargo de la entidad de electricidad local, que centraliza las prestaciones de sepelios en el distrito.",
-      "guion": "Informan servicios fúnebres de la comunidad en Balcarce",
-      "seccion": "Agro",
-      "medios": [
-        "El Diario Balcarce"
-      ],
-      "enlace": "https://eldiariobalcarce.com.ar/luis-ispizua-el-gobierno-entendio-que-el-campo-es-el-motor-del-pais-969",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-23T03:05:01.594Z",
-      "sinFecha": true,
-      "visto": "2026-09-23T03:05:01.594Z",
-      "relevancia": 63,
-      "local": true,
-      "publicadaPor": "ia",
-      "publicadaCuando": "2026-09-25T13:33:00.780Z",
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "La Cooperativa de Electricidad informó los servicios fúnebres",
-        "Los decesos se registraron en distintos puntos del distrito",
-        "Las inhumaciones se realizaron en el Cementerio Municipal"
-      ],
-      "seSabe": [
-        "La Cooperativa de Electricidad General Balcarce Limitada prestó los servicios de sepelios.",
-        "Se registraron fallecimientos en Balcarce y Los Pinos entre mayo y septiembre de 2026.",
-        "Los restos fueron inhumados en el Cementerio Municipal o cremados según cada caso."
-      ],
-      "noConfirmado": [
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "La Cooperativa de Electricidad General Balcarce dio a conocer los servicios fúnebres y los detalles de las inhumaciones realizadas en el distrito en los últimos meses.",
-      "etiquetas": [
-        "servicios funebres",
-        "cooperativa de electricidad",
-        "fallecimientos",
-        "Balcarce"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "El Diario Balcarce",
-          "enlace": "https://eldiariobalcarce.com.ar/luis-ispizua-el-gobierno-entendio-que-el-campo-es-el-motor-del-pais-969",
-          "fecha": null,
-          "oficial": false,
-          "aporte": "Detalló los avisos de fallecimiento y los servicios de sepelios brindados por la cooperativa local."
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "luis-ispizua-destaco-el-rol-del-campo-para-la-economia"
-    },
-    {
-      "id": "19jah2t",
-      "titulo": "Un periodista nacido en Balcarce cubre un nuevo Mundial",
-      "copete": "El periodista Claudio Martínez, radicado en El Salvador y con pasado en la revista El Gráfico, cubre la Copa del Mundo para un programa radial. A pesar de los años fuera de la ciudad, mantiene su arraigo local.",
-      "cuerpo": "El periodista deportivo Claudio Martínez, nacido en Balcarce y radicado desde hace veinticuatro años en El Salvador, cubre una nueva Copa del Mundo para el programa radial La Tribu.\n\nDurante su carrera cubrió Juegos Olímpicos y competencias internacionales, aunque destaca que el torneo de fútbol conserva una fiesta y un color únicos en las tribunas. Además, señaló los cambios tecnológicos en la profesión, que pasó de la labor escrita a la producción multimedia simultánea para radio y plataformas digitales.\n\nAunque sus visitas a la ciudad son menos frecuentes y suele encontrarse con amigos en Mar del Plata, Martínez remarca su identidad balcarceña.",
-      "guion": "Un periodista nacido en Balcarce cubre un nuevo Mundial",
-      "seccion": "Deportes",
-      "medios": [
-        "El Diario Balcarce"
-      ],
-      "enlace": "https://eldiariobalcarce.com.ar/de-balcarce-al-mundial-la-historia-del-periodista-que-vive-el-futbol-desde-adentro-899",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-23T03:05:01.594Z",
-      "sinFecha": true,
-      "visto": "2026-09-23T03:05:01.594Z",
-      "relevancia": 63,
-      "local": true,
-      "publicadaPor": "ia",
-      "publicadaCuando": "2026-09-25T13:14:20.979Z",
-      "temas": [],
-      "como": "automatica",
-      "noConfirmado": [
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "El periodista deportivo Claudio Martínez, nacido en Balcarce, cubre su segundo Mundial desde El Salvador para un ciclo radial. Con pasado en El Gráfico y una trayectoria consolidada en Centroamérica, mantiene intacto su arraigo con la ciudad.",
-      "etiquetas": [
-        "Claudio Martínez",
-        "Periodismo",
-        "Mundial",
-        "Deportes",
-        "El Salvador"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "El Diario Balcarce",
-          "enlace": "https://eldiariobalcarce.com.ar/de-balcarce-al-mundial-la-historia-del-periodista-que-vive-el-futbol-desde-adentro-899",
-          "fecha": null,
-          "oficial": false,
-          "aporte": "Detalla la trayectoria del periodista Claudio Martínez, su cobertura del Mundial desde El Salvador y su vínculo con Balcarce."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "5evl6s",
-          "titulo": "De Balcarce al Mundial: la historia del periodista que vive el fútbol desde adentro",
-          "fecha": "2026-09-18T05:43:46.737Z",
-          "ruta": "/nota/de-balcarce-al-mundial-la-historia-del-periodista-que-vive-el-futbol-5evl6s"
-        },
-        {
-          "id": "1s6jmdm",
-          "titulo": "La mexicana Rosa María Guerrero hace historia y se lleva el oro al imponer récord mundial de Para Atletismo",
-          "fecha": "2026-09-19T06:13:33.000Z",
-          "ruta": "/nota/la-mexicana-rosa-maria-guerrero-hace-historia-y-se-lleva-el-oro-al-1s6jmdm"
-        },
-        {
-          "id": "4nzjd0",
-          "titulo": "Yamal se tiró flores por el gol de Ferrán en la final del Mundial: \"La gente no se da cuenta\" y \"los que saben de fútbol lo valoran\"",
-          "fecha": "2026-09-18T16:35:57.000Z",
-          "ruta": "/nota/yamal-se-tiro-flores-por-el-gol-de-ferran-en-la-final-del-mundial-la-4nzjd0"
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "periodista-de-balcarce-cubre-el-mundial-desde-el-salvador"
-    },
-    {
-      "id": "1pr955",
-      "titulo": "Kreplak asiste al Senado para defender proyectos sanitarios",
-      "copete": "El ministro de Salud bonaerense acude al Senado para respaldar iniciativas sobre política sanitaria impulsadas por el Ejecutivo.",
-      "cuerpo": "El ministro de Salud, Nicolás Kreplak, asiste al Senado para defender proyectos de ley sobre política sanitaria considerados clave por el gobierno provincial. Las iniciativas se encuentran trabadas en la Legislatura e incluyen la creación de una empresa de medicamentos.\n\nPor otra parte, la oposición cruza al ministro durante su presentación en el debate parlamentario.\n\nEstas discusiones legislativas ocurren en el contexto del tratamiento de proyectos sanitarios impulsados por la administración provincial en la cámara alta.",
-      "guion": "Kreplak asiste al Senado para defender proyectos sanitarios",
-      "seccion": "Política",
-      "medios": [
-        "El Diario Balcarce"
-      ],
-      "enlace": "https://eldiariobalcarce.com.ar/kreplak-fue-al-senado-a-defender-dos-proyectos-del-ejecutivo-pero-la-oposicion-lo-cruzo-por-ioma-925",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-23T03:05:01.594Z",
-      "sinFecha": true,
-      "visto": "2026-09-23T03:05:01.594Z",
-      "relevancia": 63,
-      "local": true,
-      "publicadaPor": "ia",
-      "publicadaCuando": "2026-09-25T13:14:20.980Z",
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "El ministro de Salud concurrió al Senado",
-        "Defendió proyectos de ley sanitarios del Ejecutivo",
-        "Las iniciativas están trabadas en la Legislatura",
-        "La oposición cuestionó al funcionario"
-      ],
-      "seSabe": [
-        "El ministro de Salud, Nicolás Kreplak, acudió al Senado.",
-        "El funcionario defendió proyectos de ley sobre política sanitaria.",
-        "Las iniciativas del Ejecutivo están trabadas en la Legislatura.",
-        "Uno de los proyectos busca crear una empresa de medicamentos.",
-        "La oposición cruzó al ministro por IOMA."
-      ],
-      "noConfirmado": [
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "El ministro de Salud bonaerense, Nicolás Kreplak, concurrió al Senado para defender proyectos clave del Ejecutivo vinculados a la política sanitaria que se encuentran trabados en la Legislatura.",
-      "etiquetas": [
-        "Kreplak",
-        "Senado",
-        "Salud",
-        "Legislatura",
-        "IOMA"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "El Diario Balcarce",
-          "enlace": "https://eldiariobalcarce.com.ar/kreplak-fue-al-senado-a-defender-dos-proyectos-del-ejecutivo-pero-la-oposicion-lo-cruzo-por-ioma-925",
-          "fecha": null,
-          "oficial": false,
-          "aporte": "Informó la visita del ministro Nicolás Kreplak al Senado para defender proyectos sanitarios y las críticas de la oposición."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "4y8q12",
-          "titulo": "Senado: sin la oposición en el recinto, el Gobierno convirtió en ley la reforma del régimen de zona fría",
-          "fecha": "2026-09-24T22:21:00.000Z",
-          "ruta": "/nota/senado-sin-la-oposicion-en-el-recinto-el-gobierno-convirtio-en-ley-la-4y8q12"
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "kreplak-fue-al-senado-a-defender-dos-proyectos-del-ejecutivo-pero-la"
-    },
-    {
       "id": "jul4zc",
       "titulo": "Reinauguran el Autodromo Municipal Juan Manuel Fangio en Balcarce",
       "copete": "El autódromo Juan Manuel Fangio reabre sus puertas este viernes en una ceremonia oficial. El evento marca un hito histórico para el automovilismo local.",
@@ -5734,11 +5721,11 @@
     }
   ],
   "secciones": [
-    "Economía",
-    "Automovilismo",
-    "Balcarce",
-    "Deportes",
     "Política",
+    "Economía",
+    "Balcarce",
+    "Automovilismo",
+    "Deportes",
     "Policiales",
     "Cultura y agenda",
     "Tecnología",
@@ -5748,17 +5735,17 @@
     {
       "nombre": "El autódromo",
       "ranura": "autodromo",
-      "cuantas": 14
+      "cuantas": 13
     },
     {
       "nombre": "Fangio",
       "ranura": "fangio",
-      "cuantas": 14
+      "cuantas": 13
     },
     {
       "nombre": "TC Pick Up",
       "ranura": "tc-pick-up",
-      "cuantas": 7
+      "cuantas": 6
     },
     {
       "nombre": "El Concejo Deliberante",
@@ -5778,12 +5765,12 @@
   ],
   "clima": {
     "ahora": {
-      "temp": 15,
-      "sensacion": 11,
-      "humedad": 59,
-      "viento": 18,
+      "temp": 14,
+      "sensacion": 10,
+      "humedad": 62,
+      "viento": 15,
       "rumbo": "S",
-      "cielo": "Parcialmente nublado",
+      "cielo": "Mayormente despejado",
       "esDeDia": true
     },
     "dias": [
@@ -6171,12 +6158,6 @@
       "motivo": "necesita ojo humano: \"hospital\""
     },
     {
-      "id": "1jgrepa",
-      "titulo": "La Caravana de la Alegría cambia de escenario y prepara su…",
-      "seccion": "Agro",
-      "motivo": "parece promoción, no noticia: \"sorteo\""
-    },
-    {
       "id": "12dbj67",
       "titulo": "Murió Rubén Rada, una de las figuras de la música popular…",
       "seccion": "Balcarce",
@@ -6193,12 +6174,6 @@
       "titulo": "Lionel Messi compró la casa vecina por US$8 millones: cómo…",
       "seccion": "País",
       "motivo": "sección general, sin regla verde"
-    },
-    {
-      "id": "1po3xp7",
-      "titulo": "Federico Martín Aramburú: por qué las penas fueron de 26 y…",
-      "seccion": "Automovilismo",
-      "motivo": "necesita ojo humano: \"acusado\""
     },
     {
       "id": "s98u2k",
@@ -6219,6 +6194,12 @@
       "motivo": "necesita ojo humano: \"muerte\""
     },
     {
+      "id": "1po3xp7",
+      "titulo": "Federico Martín Aramburú: por qué las penas fueron de 26 y…",
+      "seccion": "Automovilismo",
+      "motivo": "necesita ojo humano: \"acusado\""
+    },
+    {
       "id": "1jktaf1",
       "titulo": "Fanático de Cristiano Ronaldo, enfrentó a Lionel Messi con…",
       "seccion": "País",
@@ -6231,10 +6212,16 @@
       "motivo": "necesita ojo humano: \"denunció\""
     },
     {
-      "id": "45w2kj",
-      "titulo": "Javier Milei y sus medidas, en vivo: “Netanyahu es uno de…",
-      "seccion": "Política",
-      "motivo": "internacional: sin relación con Balcarce"
+      "id": "1hhzl9h",
+      "titulo": "Por qué la comunicación con agentes de IA puede impactar…",
+      "seccion": "Tecnología",
+      "motivo": "necesita ojo humano: \"investigación\""
+    },
+    {
+      "id": "x1rf2z",
+      "titulo": "Asesinato de Aramburu: 26 y 19 años de cárcel para los dos…",
+      "seccion": "Deportes",
+      "motivo": "necesita ojo humano: \"acusado\""
     },
     {
       "id": "k6g2m5",
@@ -6249,28 +6236,10 @@
       "motivo": "necesita ojo humano: \"muerte\""
     },
     {
-      "id": "fvf6o",
-      "titulo": "Manchester City fue declarado culpable de 114 infracciones…",
-      "seccion": "Cultura y agenda",
-      "motivo": "necesita ojo humano: \"investigación\""
-    },
-    {
       "id": "g0la91",
       "titulo": "Christian von Wernich: el capellán de la Policía…",
       "seccion": "Política",
       "motivo": "necesita ojo humano: \"acusado\""
-    },
-    {
-      "id": "o5cvy5",
-      "titulo": "Juez impone prisión preventiva a Miguel Sánchez, alcalde…",
-      "seccion": "País",
-      "motivo": "necesita ojo humano: \"imputado\""
-    },
-    {
-      "id": "1clfm3b",
-      "titulo": "Pilar Sordo, psicóloga y escritora chilena: “La única…",
-      "seccion": "País",
-      "motivo": "necesita ojo humano: \"muerte\""
     },
     {
       "id": "1xna9h3",
@@ -6279,16 +6248,10 @@
       "motivo": "necesita ojo humano: \"hospital\""
     },
     {
-      "id": "p9h9ae",
-      "titulo": "El fuerte cruce de un vocal de River con un exvocero de…",
-      "seccion": "Deportes",
-      "motivo": "necesita ojo humano: \"acusado\""
-    },
-    {
-      "id": "zs8pam",
-      "titulo": "Investigan a exfiscal general de Guatemala por presuntas…",
+      "id": "1612j5i",
+      "titulo": "Quiniela de Córdoba: resultado del sorteo de la Nocturna…",
       "seccion": "País",
-      "motivo": "necesita ojo humano: \"denunció\""
+      "motivo": "parece promoción, no noticia: \"sorteo\""
     },
     {
       "id": "yjljhn",
@@ -6297,5 +6260,5 @@
       "motivo": "necesita ojo humano: \"hospital\""
     }
   ],
-  "esperandoCuerpo": 45
+  "esperandoCuerpo": 43
 }
