@@ -46,7 +46,7 @@
  },
  "166gwjw": {
   "intentos": 1,
-  "ultimo": "2026-09-25T12:29:53.106Z",
+  "ultimo": "2026-09-25T12:32:06.257Z",
   "motivo": "con cuerpo"
  },
  "16blvbm": {
@@ -101,8 +101,8 @@
  },
  "1cwdhov": {
   "intentos": 2,
-  "ultimo": "2026-09-25T12:29:53.106Z",
-  "motivo": "título o bajada: 3 problemas (nombre): el titulo nombra a \"fernandez\" y la fuente no"
+  "ultimo": "2026-09-25T12:32:06.257Z",
+  "motivo": "con cuerpo"
  },
  "1czdwgt": {
   "intentos": 2,
@@ -136,8 +136,8 @@
  },
  "1knnogg": {
   "intentos": 3,
-  "ultimo": "2026-09-25T12:29:53.106Z",
-  "motivo": "cuerpo: 3 problemas (antecedente, repite, copia): el cuerpo usa \"domingo\", que sale de una nota anterior, como si fuera de hoy; sin esas oraciones quedan 48 pal"
+  "ultimo": "2026-09-25T12:32:06.257Z",
+  "motivo": "título o bajada: 1 problema (copia): copia 13 palabras seguidas del original"
  },
  "1kpxt2v": {
   "intentos": 1,
@@ -160,6 +160,11 @@
   "motivo": "verificación baja: espera a una persona",
   "baja": true,
   "fuentes": 1
+ },
+ "1lmp9f0": {
+  "intentos": 1,
+  "ultimo": "2026-09-25T12:32:06.257Z",
+  "motivo": "cuerpo: 15 problemas (numero, nombre): el cuerpo dice 13 y la fuente no lo dice; sin esas oraciones quedan 41 palabras"
  },
  "1m6wyz8": {
   "intentos": 3,
@@ -200,13 +205,13 @@
  },
  "1tikr3f": {
   "intentos": 3,
-  "ultimo": "2026-09-25T12:29:53.106Z",
+  "ultimo": "2026-09-25T12:32:06.257Z",
   "motivo": "sin material"
  },
  "1uf58u7": {
   "intentos": 2,
-  "ultimo": "2026-09-25T12:29:53.106Z",
-  "motivo": "título o bajada: 7 problemas (numero): el titulo dice 70 y la fuente no lo dice"
+  "ultimo": "2026-09-25T12:32:06.257Z",
+  "motivo": "título o bajada: 4 problemas (numero): el titulo dice 70 y la fuente no lo dice"
  },
  "1uf64an": {
   "intentos": 1,
@@ -262,7 +267,7 @@
  },
  "45w2kj": {
   "intentos": 1,
-  "ultimo": "2026-09-25T12:29:53.106Z",
+  "ultimo": "2026-09-25T12:32:06.257Z",
   "motivo": "con cuerpo"
  },
  "4kdclu": {
@@ -272,7 +277,7 @@
  },
  "52q3fj": {
   "intentos": 3,
-  "ultimo": "2026-09-25T12:29:53.106Z",
+  "ultimo": "2026-09-25T12:32:06.257Z",
   "motivo": "con cuerpo"
  },
  "5tyfmu": {
@@ -287,7 +292,7 @@
  },
  "7zv9na": {
   "intentos": 1,
-  "ultimo": "2026-09-25T12:29:53.106Z",
+  "ultimo": "2026-09-25T12:32:06.257Z",
   "motivo": "con cuerpo"
  },
  "8cedsq": {
@@ -305,10 +310,22 @@
   "ultimo": "2026-09-25T12:00:43.134Z",
   "motivo": "con cuerpo"
  },
+ "ag09m8": {
+  "intentos": 1,
+  "ultimo": "2026-09-25T12:32:06.257Z",
+  "motivo": "con cuerpo"
+ },
  "cdhn55": {
   "intentos": 1,
   "ultimo": "2026-09-25T12:00:43.134Z",
   "motivo": "con cuerpo"
+ },
+ "dfel5s": {
+  "intentos": 1,
+  "ultimo": "2026-09-25T12:32:06.257Z",
+  "motivo": "verificación baja: espera a una persona",
+  "baja": true,
+  "fuentes": 1
  },
  "ffhx7": {
   "intentos": 1,
@@ -317,13 +334,13 @@
  },
  "hfo2c8": {
   "intentos": 1,
-  "ultimo": "2026-09-25T12:29:53.106Z",
+  "ultimo": "2026-09-25T12:32:06.257Z",
   "motivo": "con cuerpo"
  },
  "hiujlp": {
   "intentos": 1,
-  "ultimo": "2026-09-25T12:29:53.106Z",
-  "motivo": "título o bajada: 3 problemas (nombre, negacion): el titulo nombra a \"espana\" y la fuente no"
+  "ultimo": "2026-09-25T12:32:06.257Z",
+  "motivo": "título o bajada: 1 problema (negacion): la fuente niega algo en el título y el texto nuevo no"
  },
  "jul3vf": {
   "intentos": 1,
@@ -362,7 +379,7 @@
  },
  "oco3mq": {
   "intentos": 1,
-  "ultimo": "2026-09-25T12:29:53.106Z",
+  "ultimo": "2026-09-25T12:32:06.257Z",
   "motivo": "con cuerpo"
  },
  "p961ye": {
@@ -402,7 +419,7 @@
  },
  "rq3d6w": {
   "intentos": 2,
-  "ultimo": "2026-09-25T12:29:53.106Z",
+  "ultimo": "2026-09-25T12:32:06.257Z",
   "motivo": "sin material"
  },
  "ryudlj": {
@@ -412,12 +429,12 @@
  },
  "s897ks": {
   "intentos": 3,
-  "ultimo": "2026-09-25T12:29:53.106Z",
+  "ultimo": "2026-09-25T12:32:06.257Z",
   "motivo": "sin material"
  },
  "ssf8wu": {
   "intentos": 1,
-  "ultimo": "2026-09-25T12:29:53.106Z",
+  "ultimo": "2026-09-25T12:32:06.257Z",
   "motivo": "con cuerpo"
  },
  "t3o3tt": {
@@ -432,7 +449,7 @@
  },
  "uj4h1v": {
   "intentos": 1,
-  "ultimo": "2026-09-25T12:29:53.106Z",
+  "ultimo": "2026-09-25T12:32:06.257Z",
   "motivo": "con cuerpo"
  },
  "uukxzs": {
@@ -445,6 +462,11 @@
   "ultimo": "2026-09-25T12:12:18.091Z",
   "motivo": "con cuerpo"
  },
+ "vsvyus": {
+  "intentos": 1,
+  "ultimo": "2026-09-25T12:32:06.257Z",
+  "motivo": "con cuerpo"
+ },
  "w1stq6": {
   "intentos": 1,
   "ultimo": "2026-09-25T12:00:43.134Z",
@@ -453,11 +475,6 @@
  "wmweq4": {
   "intentos": 1,
   "ultimo": "2026-09-25T11:38:40.017Z",
-  "motivo": "con cuerpo"
- },
- "xpr0le": {
-  "intentos": 1,
-  "ultimo": "2026-09-25T12:29:53.106Z",
   "motivo": "con cuerpo"
  },
  "xtbw5": {

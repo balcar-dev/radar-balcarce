@@ -1,6 +1,62 @@
 {
-  "generado": "2026-09-25T12:30:47.307Z",
+  "generado": "2026-09-25T12:33:29.412Z",
   "notas": [
+    {
+      "id": "vsvyus",
+      "titulo": "El clima se presenta estable y con una máxima templada en Balcarce",
+      "copete": "Balcarce transita este viernes con buenas condiciones meteorológicas, cielo parcialmente nublado y temperaturas que alcanzarán los veinticuatro grados en la previa del fin de semana.",
+      "cuerpo": "Balcarce registra este viernes condiciones meteorológicas estables y favorables, en la previa de las actividades previstas para el fin de semana automovilístico en la ciudad. La jornada comenzó con un ambiente fresco por la mañana y cielo entre despejado y parcialmente nublado.\n\nDurante la tarde, la temperatura ascenderá hasta una máxima que se ubicará entre los veintiuno y los veinticuatro grados, de acuerdo con los servicios meteorológicos consultados. Asimismo, el Servicio Meteorológico Nacional anticipa baja o nula probabilidad de precipitaciones y un incremento del viento desde el sector oeste y sudoeste.\n\nHacia la noche se prevé la continuidad del tiempo estable, sin lluvias y con un descenso gradual de la temperatura.",
+      "guion": "El clima se presenta estable y con una máxima templada en Balcarce",
+      "seccion": "Balcarce",
+      "medios": [
+        "Radio Gabal (FM 104.1)"
+      ],
+      "enlace": "https://www.radiogabal.com.ar/index.php/comunidad/viernes-agradable-sin-lluvias-y-con-una-maxima-que-podria-superar-los-20-grados",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-25T12:29:42.000Z",
+      "sinFecha": false,
+      "visto": "2026-09-25T12:32:06.244Z",
+      "relevancia": 84,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Jornada estable y sin lluvias en la ciudad",
+        "Temperatura máxima estimada entre veintiuno y veinticuatro grados",
+        "Aumento del viento desde el oeste y sudoeste por la tarde"
+      ],
+      "seSabe": [
+        "El clima se mantendrá estable durante todo el día",
+        "No se esperan precipitaciones en la ciudad",
+        "La temperatura máxima se ubicará entre los veintiuno y veinticuatro grados"
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Balcarce vive este viernes una jornada con tiempo estable, cielo parcialmente nublado y una temperatura máxima que podría alcanzar los veinticuatro grados, sin probabilidad de lluvias para la previa del fin de semana.",
+      "etiquetas": [
+        "temperatura",
+        "Balcarce",
+        "fin de semana"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Radio Gabal (FM 104.1)",
+          "enlace": "https://www.radiogabal.com.ar/index.php/comunidad/viernes-agradable-sin-lluvias-y-con-una-maxima-que-podria-superar-los-20-grados",
+          "fecha": "2026-09-25T12:29:42.000Z",
+          "oficial": false,
+          "aporte": "Aportó el pronóstico del tiempo para este viernes en Balcarce, con detalles sobre la temperatura máxima, el viento y la ausencia de precipitaciones."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "el-clima-se-presenta-estable-y-con-una-maxima-templada-en-balcarce"
+    },
     {
       "id": "ffhx7",
       "titulo": "Franco Colapinto disputa la clasificación en el Gran Premio de Azerbaiyán",
@@ -12,11 +68,12 @@
         "La Nación",
         "Infobae",
         "Ámbito",
+        "Minuto Uno",
         "Clarín"
       ],
       "enlace": "https://www.lanacion.com.ar/deportes/automovilismo/franco-colapinto-en-la-formula-1-en-vivo-nid25092026/",
       "teniaImagenLaFuente": true,
-      "fecha": "2026-09-25T12:26:17.000Z",
+      "fecha": "2026-09-25T12:29:16.000Z",
       "sinFecha": false,
       "visto": "2026-09-25T12:12:18.079Z",
       "relevancia": 100,
@@ -120,10 +177,10 @@
     },
     {
       "id": "7zv9na",
-      "titulo": "Los precios de combustibles muestran diferencias en Lima",
-      "copete": "Los valores de los combustibles en Lima registran diferencias de hasta S/ 3,80 por galón según la plataforma oficial Facilito. La herramienta permite comparar tarifas, ubicación y disponibilidad en las estaciones.",
-      "cuerpo": "La herramienta oficial permite a los conductores comparar precios de gasohol, diésel, Gas Natural Vehicular y Gas Licuado de Petróleo antes de concurrir a los grifos.\n\nPor su parte, el diésel B5 registró valores desde S/ 23,19 hasta S/ 26,99 por galón. Los operadores son quienes declaran los montos, por lo que las cifras pueden modificarse durante la jornada y se aconseja verificar la condición operativa de los establecimientos.\n\nEl organismo regulador indicó que los usuarios pueden reportar discrepancias entre los montos exhibidos en los surtidores y los publicados en el sistema a través de los canales oficiales de atención.",
-      "guion": "Los precios de combustibles muestran diferencias en Lima",
+      "titulo": "Registran diferencias de precios de combustibles en Lima",
+      "copete": "Los valores de los combustibles en estaciones de servicio de Lima presentan variaciones según la plataforma oficial de control energético. La herramienta digital permite comparar tarifas y disponibilidad.",
+      "cuerpo": "La herramienta permite comparar las tarifas de gasohol, diésel, Gas Natural Vehicular y Gas Licuado de Petróleo antes de concurrir a los establecimientos.\n\nEl cálculo final para los conductores depende también del trayecto y la distancia hasta el grifo seleccionado.\n\nLa plataforma reúne información sobre establecimientos formales y permite ordenar los datos por precio y ubicación. Osinergmin señala que los usuarios pueden reportar diferencias entre el valor exhibido en los surtidores y el declarado en el sistema.",
+      "guion": "Registran diferencias de precios de combustibles en Lima",
       "seccion": "Economía",
       "medios": [
         "Infobae"
@@ -132,7 +189,7 @@
       "teniaImagenLaFuente": true,
       "fecha": "2026-09-25T12:25:56.000Z",
       "sinFecha": false,
-      "visto": "2026-09-25T12:29:53.093Z",
+      "visto": "2026-09-25T12:32:06.244Z",
       "relevancia": 43,
       "local": false,
       "publicadaPor": null,
@@ -140,20 +197,24 @@
       "temas": [],
       "como": "automatica",
       "claves": [
-        "Diferencias de hasta S/ 3,80 por galón en Lima",
-        "Uso de la plataforma oficial Facilito",
-        "Variación de precios según el tipo de combustible",
-        "Revisión de disponibilidad antes de cargar"
+        "Diferencias de tarifas en estaciones de Lima",
+        "Plataforma oficial para comparar precios",
+        "Variaciones según la ubicación del grifo"
+      ],
+      "seSabe": [
+        "Los precios de los combustibles en Lima muestran diferencias de hasta S/ 3,80 por galón.",
+        "La información surge de la plataforma Facilito de Osinergmin.",
+        "El gasohol regular se ubica entre S/ 19,75 y S/ 22,29 por galón."
       ],
       "noConfirmado": [
         "No pudo ser contrastado de forma independiente con las fuentes consultadas."
       ],
-      "textoRedes": "Las tarifas de combustibles en Lima registran diferencias de hasta S/ 3,80 por galón entre estaciones de servicio, según los datos de la plataforma oficial Facilito de Osinergmin.",
+      "textoRedes": "Las estaciones de servicio de Lima registran diferencias de precios en los combustibles según los datos declarados en la plataforma oficial Facilito de Osinergmin.",
       "etiquetas": [
         "combustibles",
         "Lima",
-        "precios",
-        "Osinergmin"
+        "Osinergmin",
+        "precios"
       ],
       "fuentesConsultadas": [
         {
@@ -161,7 +222,7 @@
           "enlace": "https://www.infobae.com/peru/2026/09/25/precios-del-gnv-glp-diesel-y-gasolina-en-peru-para-el-viernes-25-de-septiembre-de-2026/",
           "fecha": "2026-09-25T12:25:56.000Z",
           "oficial": false,
-          "aporte": "Detalló las variaciones de precios de combustibles en Lima y el funcionamiento de la plataforma Facilito de Osinergmin."
+          "aporte": "Detalla las variaciones de precios de combustibles en Lima y el funcionamiento de la plataforma Facilito de Osinergmin."
         }
       ],
       "antecedentes": [
@@ -177,14 +238,14 @@
         "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
         "sugeridoPorIA": "MEDIA"
       },
-      "slug": "los-precios-de-combustibles-muestran-diferencias-en-lima"
+      "slug": "registran-diferencias-de-precios-de-combustibles-en-lima"
     },
     {
       "id": "45w2kj",
-      "titulo": "El Senado aprueba la reforma de la ley de zonas frias",
-      "copete": "El Senado sanciono el proyecto que reforma la ley de zonas frias para recortar subsidios al gas. La medida afectara a millones de hogares en el pais y en la provincia de Buenos Aires.",
-      "cuerpo": "El Senado aprobo y sanciono la reforma de la ley de zonas frias tras un debate abreviado por la retirada masiva de senadores que rechazaban la iniciativa. La medida impulsada por el gobierno de Javier Milei busca recortar subsidios al gas para sostener el equilibrio fiscal.\n\nEn paralelo, el presidente Milei mantuvo un encuentro bilateral en Nueva York con el primer ministro de Israel, Benjamin Netanyahu, tras participar de la Asamblea General de la ONU. El canciller Pablo Quirno confirmo que conversaron sobre la situacion de las Islas Malvinas y las acciones judiciales contra la empresa Navitas Petroleum.",
-      "guion": "El Senado aprueba la reforma de la ley de zonas frias",
+      "titulo": "El Senado aprueba la reforma de la ley de zonas frías en Balcarce",
+      "copete": "El Senado aprobó la iniciativa para recortar subsidios al gas con el fin de sostener el equilibrio fiscal. La provincia de Buenos Aires figura entre los distritos más afectados por la medida.",
+      "cuerpo": "El Senado aprobó la reforma de la ley de zonas frías tras la retirada masiva de los legisladores que rechazaban la iniciativa, lo que redujo el tiempo del debate. Con esta norma impulsada por el gobierno nacional, más de tres millones de hogares perderán el subsidio al gas de manera automática, según informó la secretaria de Energía, María Carmen Tetamantti, ante las comisiones del Senado, siendo la provincia de Buenos Aires el distrito más perjudicado.\n\nEn paralelo, el presidente Javier Milei mantuvo un encuentro bilateral de veinte minutos con el primer ministro israelí, Benjamin Netanyahu, en la sede de las Naciones Unidas en Nueva York, tras participar de la Asamblea General. Según confirmó el canciller Pablo Quirno, ambos mandatarios conversaron sobre la situación de las Islas Malvinas en el marco de las acciones judiciales argentinas contra la empresa Navitas Petroleum por la exploración en la zona.",
+      "guion": "El Senado aprueba la reforma de la ley de zonas frías en Balcarce",
       "seccion": "Política",
       "medios": [
         "La Nación"
@@ -193,7 +254,7 @@
       "teniaImagenLaFuente": true,
       "fecha": "2026-09-25T12:22:43.000Z",
       "sinFecha": false,
-      "visto": "2026-09-25T12:29:53.093Z",
+      "visto": "2026-09-25T12:32:06.244Z",
       "relevancia": 43,
       "local": false,
       "publicadaPor": null,
@@ -203,15 +264,18 @@
       ],
       "como": "automatica",
       "noConfirmado": [
+        "No se especificó la cantidad exacta de hogares afectados en el partido de Balcarce.",
         "No pudo ser contrastado de forma independiente con las fuentes consultadas."
       ],
+      "textoRedes": "El Senado aprobó la reforma de la ley de zonas frías y más de tres millones de hogares perderán el subsidio al gas, con la provincia de Buenos Aires como el distrito más afectado por la medida nacional.",
       "etiquetas": [
-        "zonas frias",
+        "zonas frías",
         "Senado",
         "subsidios",
         "gas",
         "provincia de Buenos Aires",
-        "Javier Milei"
+        "Javier Milei",
+        "pobreza"
       ],
       "fuentesConsultadas": [
         {
@@ -219,7 +283,7 @@
           "enlace": "https://www.lanacion.com.ar/politica/javier-milei-y-sus-medidas-en-vivo-netanyahu-se-reunio-con-el-presidente-en-la-onu-y-lo-definio-como-nid25092026/",
           "fecha": "2026-09-25T12:22:43.000Z",
           "oficial": false,
-          "aporte": "Detallo la aprobacion de la ley de zonas frias, el impacto en los subsidios al gas segun la Secretaria de Energia y la reunion de Milei con Netanyahu."
+          "aporte": "Aportó los detalles sobre la aprobación de la ley de zonas frías, las declaraciones de la secretaría de Energía, el encuentro de Javier Milei con Benjamin Netanyahu en Nueva York y los datos oficiales de pobreza."
         }
       ],
       "antecedentes": [
@@ -247,14 +311,14 @@
         "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
         "sugeridoPorIA": "ALTA"
       },
-      "slug": "el-senado-aprueba-la-reforma-de-la-ley-de-zonas-frias"
+      "slug": "el-senado-aprueba-la-reforma-de-la-ley-de-zonas-frias-en-balcarce"
     },
     {
       "id": "oco3mq",
-      "titulo": "Mauricio Macri encabeza un acto del PRO en Jujuy",
-      "copete": "El expresidente lidera este viernes la sexta edición del ciclo federal del PRO en San Salvador de Jujuy, en un momento marcado por las tensiones con La Libertad Avanza y las negociaciones en el Congreso.",
-      "cuerpo": "Previamente, el expresidente mantendrá un encuentro institucional con el gobernador Carlos Sadir en la sede de la gobernación provincial y liderará una reunión con referentes regionales del espacio.\n\nEl vínculo entre ambos sectores atravesó momentos de tirantez luego de que el PRO difundiera un comunicado con cuestionamientos al oficialismo por el manejo de las políticas de discapacidad, un sector que afecta a casi el trece por ciento de la población.\n\nTras las diferencias planteadas, el oficialismo impulsó una iniciativa alternativa que mantiene el nomenclador de prestaciones, incorpora actualizaciones mensuales por inflación para las pensiones y asegura la continuidad de la cobertura médica.",
-      "guion": "Mauricio Macri encabeza un acto del PRO en Jujuy",
+      "titulo": "Mauricio Macri encabeza un acto en Jujuy en medio de tensiones entre el PRO y La Libertad ",
+      "copete": "El expresidente lidera este viernes el sexto ciclo de encuentros federales del PRO en San Salvador de Jujuy. La actividad se da tras cruces políticos por recortes en discapacidad y la falta de acuerdos electorales entre ambos espacios.",
+      "cuerpo": "Mauricio Macri encabeza este viernes la sexta edición del ciclo de encuentros federales del PRO en San Salvador de Jujuy.\n\nEl evento se produce en un clima de tensión política entre el PRO y La Libertad Avanza, motivado por diferencias en torno a los recortes en materia de discapacidad incluidos en el Presupuesto 2027 y por la falta de alianzas en distintos distritos. Como antecedente, ambos espacios habían mantenido una reunión este jueves en la Casa Rosada para encauzar el diálogo institucional, en la que también se abordaron los índices de pobreza del primer semestre informados por el Indec.\n\nLa controversia legislativa sobre discapacidad se destrabó luego de que la Casa Rosada presentara una iniciativa alternativa con actualizaciones mensuales y cobertura médica, lo que permitió lograr un dictamen de mayoría en el Congreso con el respaldo del PRO, la UCR y otros sectores.",
+      "guion": "Mauricio Macri encabeza un acto en Jujuy en medio de tensiones entre el PRO y La Libertad Avanza",
       "seccion": "Política",
       "medios": [
         "Infobae"
@@ -263,7 +327,7 @@
       "teniaImagenLaFuente": true,
       "fecha": "2026-09-25T12:22:13.000Z",
       "sinFecha": false,
-      "visto": "2026-09-25T12:29:53.093Z",
+      "visto": "2026-09-25T12:32:06.244Z",
       "relevancia": 48,
       "local": false,
       "publicadaPor": null,
@@ -271,21 +335,22 @@
       "temas": [],
       "como": "automatica",
       "claves": [
-        "Mauricio Macri encabeza este viernes la sexta edición del ciclo \"Próximo Paso\" del PRO en San Salvador de Jujuy.",
-        "El encuentro se realiza en medio de tensiones políticas entre el PRO y La Libertad Avanza por los recortes en discapacidad.",
-        "El oficialismo dio marcha atrás con los cambios polémicos en el Presupuesto 2027 y el PRO acompañó un nuevo dictamen en Diputados.",
-        "Como antecedente, funcionarios nacionales y legisladores del PRO se reunieron el jueves pasado en la Casa Rosada."
+        "Mauricio Macri encabeza este viernes un acto político del PRO en San Salvador de Jujuy.",
+        "La actividad ocurre en medio de tensiones entre el PRO y La Libertad Avanza por recortes en discapacidad.",
+        "El oficialismo dio marcha atrás con los cambios originales y sumó el apoyo del PRO en el Congreso.",
+        "El jueves se había realizado una reunión de diálogo entre referentes de ambos espacios en la Casa Rosada."
       ],
       "noConfirmado": [
         "No pudo ser contrastado de forma independiente con las fuentes consultadas."
       ],
-      "textoRedes": "Mauricio Macri encabeza este viernes un acto del PRO en Jujuy en medio de las tensiones con La Libertad Avanza por el presupuesto de discapacidad y las negociaciones en el Congreso.",
+      "textoRedes": "Mauricio Macri encabeza este viernes un acto del PRO en Jujuy en medio de tensiones con La Libertad Avanza por el presupuesto de discapacidad y la falta de acuerdos electorales, tras una serie de reuniones en la Casa Rosada y cambios legislativos.",
       "etiquetas": [
         "Mauricio Macri",
         "PRO",
+        "La Libertad Avanza",
         "Jujuy",
-        "Politica",
-        "Presupuesto 2027"
+        "Presupuesto 2027",
+        "Congreso"
       ],
       "fuentesConsultadas": [
         {
@@ -293,7 +358,7 @@
           "enlace": "https://www.infobae.com/politica/2026/09/25/mauricio-macri-encabezara-un-acto-en-jujuy-en-medio-de-un-clima-de-tension-entre-el-pro-y-lla/",
           "fecha": "2026-09-25T12:22:13.000Z",
           "oficial": false,
-          "aporte": "Detalló la agenda de Mauricio Macri en Jujuy, las tensiones con La Libertad Avanza por el presupuesto de discapacidad y las negociaciones legislativas en la Casa Rosada."
+          "aporte": "Detalló las actividades de Mauricio Macri en Jujuy, las tensiones entre el PRO y La Libertad Avanza por el presupuesto de discapacidad y las negociaciones parlamentarias."
         }
       ],
       "antecedentes": [
@@ -309,14 +374,82 @@
         "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
         "sugeridoPorIA": "MEDIA"
       },
-      "slug": "mauricio-macri-encabeza-un-acto-del-pro-en-jujuy"
+      "slug": "mauricio-macri-encabeza-un-acto-en-jujuy-en-medio-de-tensiones-entre"
+    },
+    {
+      "id": "ag09m8",
+      "titulo": "El Senado aprueba la reforma al régimen de zonas frías",
+      "copete": "El Senado convirtió en ley la reforma del régimen de zona fría impulsada por el Gobierno. La medida modifica los subsidios al gas y afecta a más de un millón y medio de hogares.",
+      "cuerpo": "El Senado de la Nación convirtió en ley la reforma del régimen de zona fría, una iniciativa impulsada por el gobierno de Javier Milei para profundizar el ajuste mediante la reducción de los subsidios energéticos.\n\nEl texto mantiene el beneficio de forma automática para la Patagonia, Malargüe y la Puna.\n\nDe esta manera, más de un millón y medio de hogares en más de noventa municipios de Buenos Aires, Córdoba, Santa Fe y Mendoza podrían perder la asistencia tarifaria si no cumplen con los requisitos socioeconómicos y de ingresos establecidos.",
+      "guion": "El Senado aprueba la reforma al régimen de zonas frías",
+      "seccion": "Política",
+      "medios": [
+        "Minuto Uno"
+      ],
+      "enlace": "https://www.minutouno.com/politica/zonas-frias-que-senadores-votaron-favor-del-recorte-se-subsidios-al-gas-mas-16-millones-hogares-n6326527",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-25T12:20:00.000Z",
+      "sinFecha": false,
+      "visto": "2026-09-25T12:32:06.244Z",
+      "relevancia": 44,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El Senado convirtió en ley la reforma del régimen de zona fría y modificó el sistema de subsidios al gas. La medida afecta a más de un millón y medio de hogares en distintas provincias que deberán cumplir nuevos requisitos para mantener la asistencia tarifaria.",
+      "etiquetas": [
+        "Senado",
+        "subsidios al gas",
+        "zonas frias",
+        "tarifas",
+        "Gobierno nacional"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Minuto Uno",
+          "enlace": "https://www.minutouno.com/politica/zonas-frias-que-senadores-votaron-favor-del-recorte-se-subsidios-al-gas-mas-16-millones-hogares-n6326527",
+          "fecha": "2026-09-25T12:20:00.000Z",
+          "oficial": false,
+          "aporte": "Detalló la aprobación de la ley en el Senado, los cambios en los subsidios y las regiones afectadas."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1sk5z23",
+          "titulo": "Senado: se aprobó el recorte de subsidios en zonas frías y el Gobierno sumó una victoria en el Congreso",
+          "fecha": "2026-09-24T23:16:57.000Z",
+          "ruta": "/nota/senado-se-aprobo-el-recorte-de-subsidios-en-zonas-frias-y-el-gobierno-1sk5z23"
+        },
+        {
+          "id": "3fugg2",
+          "titulo": "Uno por uno, cómo votaron los senadores los cambios en la ley de Zonas Frías",
+          "fecha": "2026-09-24T22:55:04.000Z",
+          "ruta": "/nota/uno-por-uno-como-votaron-los-senadores-los-cambios-en-la-ley-de-zonas-3fugg2"
+        },
+        {
+          "id": "1q3000s",
+          "titulo": "Senado, en vivo: comenzó el debate por el recorte de subsidios al gas para zonas frías y se espera que se vote pasada la medianoche",
+          "fecha": "2026-09-24T21:11:44.000Z",
+          "ruta": "/nota/senado-en-vivo-comenzo-el-debate-por-el-recorte-de-subsidios-al-gas-1q3000s"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "el-senado-aprueba-la-reforma-al-regimen-de-zonas-frias"
     },
     {
       "id": "hfo2c8",
-      "titulo": "Inteligencia artificial descubre un sistema genético similar a CRISPR",
-      "copete": "Agentes del modelo Claude de Anthropic identificaron una estructura enzimática en virus que infectan bacterias, aunque todavía no se conoce su función exacta.",
-      "cuerpo": "Un grupo de agentes del modelo de inteligencia artificial Claude, desarrollado por la empresa Anthropic, detectó un sistema enzimático desconocido en el ADN de virus que atacan bacterias, cuya estructura recuerda a la de la herramienta de edición genética CRISPR. Según informó la compañía, el hallazgo se produjo tras revisar más de doscientos mil registros durante veintiuna horas y dio lugar a un sistema bautizado como ART, localizado en bacteriófagos del género Staphylococcus. El descubrimiento se dio a conocer a través de un comunicado oficial y un estudio preliminar.\n\nEl anuncio generó distintas reacciones en la comunidad científica. Feng Zhang, especialista del Instituto Tecnológico de Massachusetts, destacó el aporte de la inteligencia artificial en la investigación biológica, mientras que otros expertos, como Dimitri Perrin de la Universidad Tecnológica de Queensland y el microbiólogo Kevin Blake, señalaron que la enzima central ya era conocida y advirtieron que no existen indicios de que pueda competir con CRISPR o convertirse en un tratamiento. Por su parte, la empresa reconoció una limitación al repetir la prueba y no volver a hallar el patrón repetitivo en corridas posteriores, lo que atribuyó a la variabilidad de sus agentes.\n\nEste hallazgo se suma a los recientes anuncios de la compañía, que a principios de semana había lanzado una nueva versión de su modelo y había comenzado a implementar marcas de agua invisibles en los textos generados por su plataforma, según se informó oportunamente.",
-      "guion": "Inteligencia artificial descubre un sistema genético similar a CRISPR",
+      "titulo": "Inteligencia artificial halla un sistema genético similar a CRISPR",
+      "copete": "Agentes del modelo Claude de Anthropic descubrieron un sistema enzimático en el ADN de virus bacterianos con una estructura parecida a CRISPR. La empresa desconoce su función exacta y no pudo replicar el hallazgo.",
+      "cuerpo": "Según informó Anthropic, cerca de mil agentes revisaron doscientos mil tipos de transcriptasas reversas durante veintiuna horas para identificar sistemas candidatos. El sistema resultante, bautizado como ART, se localiza en bacteriófagos de bacterias del género Staphylococcus y combina una enzima con repeticiones de ADN espaciadas.\n\nEl hallazgo se conoció a través de un comunicado y un estudio preliminar, tras una semana de la confirmación del laboratorio de biología de la empresa. Especialistas externos mostraron visiones divididas sobre la relevancia del descubrimiento, mientras que la propia compañía reconoció limitaciones al no poder repetir el resultado en pruebas posteriores. Previamente, la firma había lanzado versiones actualizadas de su sistema de chat e implementado marcas de agua en sus textos.",
+      "guion": "Inteligencia artificial halla un sistema genético similar a CRISPR",
       "seccion": "Tecnología",
       "medios": [
         "Infobae"
@@ -325,7 +458,7 @@
       "teniaImagenLaFuente": true,
       "fecha": "2026-09-25T12:18:37.000Z",
       "sinFecha": false,
-      "visto": "2026-09-25T12:29:53.093Z",
+      "visto": "2026-09-25T12:32:06.244Z",
       "relevancia": 49,
       "local": false,
       "publicadaPor": null,
@@ -333,29 +466,27 @@
       "temas": [],
       "como": "automatica",
       "claves": [
-        "Agentes de Claude detectaron una enzima en virus bacterianos con una estructura similar a CRISPR.",
-        "El sistema fue denominado ART y se ubica en bacteriófagos que afectan a bacterias del género Staphylococcus.",
-        "Científicos externos cuestionaron la novedad y aclararon que la enzima ya era conocida.",
-        "La empresa admitió que no logró replicar el hallazgo al repetir la búsqueda en diez oportunidades."
+        "Agentes de Claude detectaron un sistema en virus bacterianos.",
+        "Presenta una estructura parecida a CRISPR.",
+        "Anthropic desconoce la utilidad exacta del hallazgo.",
+        "La empresa no logró replicar el resultado en búsquedas posteriores."
       ],
       "seSabe": [
-        "Agentes de inteligencia artificial de Claude analizaron más de doscientos mil registros durante veintiuna horas, según informó Anthropic.",
-        "El sistema detectado fue bautizado como ART y se encuentra en virus que atacan bacterias del género Staphylococcus.",
-        "El director ejecutivo de Anthropic, Dario Amodei, difundió el hallazgo antes de exponer ante el Consejo de Seguridad de la ONU.",
-        "La compañía reconoció que las pruebas posteriores no lograron encontrar nuevamente el arreglo repetitivo."
+        "Agentes del modelo Claude de Anthropic hallaron un sistema enzimático en virus que infectan bacterias.",
+        "El sistema fue bautizado como ART y se encuentra en bacteriófagos de bacterias del género Staphylococcus.",
+        "La empresa indicó que todavía no sabe para qué sirve el sistema encontrado.",
+        "La compañía reconoció que al repetir la búsqueda diez veces más, ninguna corrida volvió a encontrar el arreglo repetitivo."
       ],
       "noConfirmado": [
-        "No se pudo determinar todavía cuál es la función específica del sistema enzimático descubierto.",
         "No pudo ser contrastado de forma independiente con las fuentes consultadas."
       ],
-      "textoRedes": "Agentes del modelo de inteligencia artificial Claude descubrieron un sistema enzimático en virus bacterianos con una estructura similar a CRISPR. La empresa Anthropic informó el hallazgo, aunque los científicos advirtieron que todavía se desconoce su utilidad.",
+      "textoRedes": "Agentes del modelo Claude de Anthropic descubrieron un sistema enzimático en el ADN de virus bacterianos con una estructura parecida a CRISPR. La empresa desconoce su función exacta y no pudo replicar el hallazgo en pruebas posteriores.",
       "etiquetas": [
         "Inteligencia artificial",
         "Claude",
         "Anthropic",
         "CRISPR",
-        "Bacterias",
-        "Tecnología"
+        "Bacterias"
       ],
       "fuentesConsultadas": [
         {
@@ -363,7 +494,7 @@
           "enlace": "https://www.infobae.com/tecno/2026/09/25/claude-hallo-un-sistema-enzimatico-parecido-a-crispr-pero-anthropic-no-sabe-para-que-sirve/",
           "fecha": "2026-09-25T12:18:37.000Z",
           "oficial": false,
-          "aporte": "Detalló el descubrimiento de un sistema enzimático similar a CRISPR por parte de agentes de inteligencia artificial de Claude y las reacciones de la comunidad científica."
+          "aporte": "Detalló el descubrimiento de un sistema enzimático similar a CRISPR por parte de los agentes de Claude y las limitaciones de replicación."
         }
       ],
       "antecedentes": [
@@ -385,14 +516,14 @@
         "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
         "sugeridoPorIA": "MEDIA"
       },
-      "slug": "inteligencia-artificial-descubre-un-sistema-genetico-similar-a-crispr"
+      "slug": "inteligencia-artificial-halla-un-sistema-genetico-similar-a-crispr"
     },
     {
       "id": "166gwjw",
-      "titulo": "Gabriel Rubinstein advierte que el dólar está bajo en Argentina",
-      "copete": "El exviceministro de Economía cuestionó el esquema cambiario actual y advirtió sobre un bajo crecimiento de la actividad de cara al proceso electoral de 2027.",
-      "cuerpo": "Durante su análisis, el economista estimó que la actividad económica crecerá este año 1,4% y anticipó un escenario de bajo dinamismo de cara a las elecciones de 2027, al señalar que la economía llegará \"lánguida\". Asimismo, consideró que el desempeño actual se ubica por debajo de lo que permitirían sectores como Vaca Muerta, la minería y el RIGI.\n\nPor último, el exfuncionario advirtió sobre la fragilidad ante una eventual corrida cambiaria previa a los comicios y desestimó la utilidad del swap de monedas con China como herramienta de contención financiera.",
-      "guion": "Gabriel Rubinstein advierte que el dolar esta bajo en Argentina",
+      "titulo": "Gabriel Rubinstein cuestiona el nivel actual del tipo de cambio",
+      "copete": "El exviceministro de Economía advirtió que el dólar está demasiado bajo y proyectó un crecimiento económico escaso de cara al proceso electoral de dos mil veintisiete.",
+      "cuerpo": "El exviceministro de Economía Gabriel Rubinstein cuestionó el esquema cambiario actual al señalar que el dólar se encuentra demasiado bajo para las condiciones del país y que el Gobierno debería avanzar hacia una depreciación del peso. Durante una evaluación sobre la marcha de la economía, el economista indicó que el tipo de cambio real debería ubicarse en niveles más elevados y advirtió sobre la necesidad de aplicar mecanismos que eviten una aceleración inflacionaria. \n\nEn paralelo, el exfuncionario proyectó un escenario de bajo dinamismo para el año próximo y estimó que la actividad mostrará un crecimiento moderado durante el período en curso. Asimismo, mencionó que sectores como la minería y la energía ofrecen condiciones favorables que, a su entender, deberían permitir tasas de expansión más elevadas.\n\nPor último, el especialista advirtió sobre la fragilidad ante eventuales tensiones financieras previas a los próximos comicios y restó peso a la utilidad de determinados instrumentos de respaldo monetario internacional.",
+      "guion": "Gabriel Rubinstein cuestiona el nivel actual del tipo de cambio",
       "seccion": "Economía",
       "medios": [
         "Infobae"
@@ -401,7 +532,7 @@
       "teniaImagenLaFuente": true,
       "fecha": "2026-09-25T12:15:00.000Z",
       "sinFecha": false,
-      "visto": "2026-09-25T12:29:53.093Z",
+      "visto": "2026-09-25T12:32:06.244Z",
       "relevancia": 49,
       "local": false,
       "publicadaPor": null,
@@ -409,24 +540,19 @@
       "temas": [],
       "como": "automatica",
       "claves": [
-        "El exviceministro de Economía criticó el nivel del tipo de cambio.",
-        "Señaló que la actividad crecerá 1,4% este año.",
-        "Advirtió sobre una posible fragilidad cambiaria hacia 2027."
-      ],
-      "seSabe": [
-        "El exviceministro de Economía Gabriel Rubinstein cuestionó el esquema cambiario actual.",
-        "El economista estimó que la economía crecerá 1,4% este año.",
-        "Rubinstein mencionó sectores como Vaca Muerta y el RIGI."
+        "El exviceministro sostuvo que el dólar se encuentra demasiado bajo.",
+        "Plantearon la necesidad de una depreciación sin acelerar la inflación.",
+        "Proyectaron un crecimiento económico moderado para el período actual."
       ],
       "noConfirmado": [
         "No pudo ser contrastado de forma independiente con las fuentes consultadas."
       ],
-      "textoRedes": "El exviceministro de Economía Gabriel Rubinstein cuestionó el esquema cambiario y advirtió que el dólar se encuentra demasiado bajo para la economía nacional.",
+      "textoRedes": "El exviceministro de Economía Gabriel Rubinstein advirtió que el dólar se encuentra demasiado bajo y proyectó un crecimiento moderado de la actividad para los próximos períodos.",
       "etiquetas": [
-        "Gabriel Rubinstein",
-        "dólar",
-        "economía",
-        "Gobierno nacional"
+        "economia",
+        "dolar",
+        "gabriel rubinstein",
+        "tipo de cambio"
       ],
       "fuentesConsultadas": [
         {
@@ -434,7 +560,7 @@
           "enlace": "https://www.infobae.com/economia/2026/09/25/el-economista-gabriel-rubinstein-critico-el-esquema-cambiario-el-dolar-les-quedo-demasiado-bajo/",
           "fecha": "2026-09-25T12:15:00.000Z",
           "oficial": false,
-          "aporte": "Aportó las declaraciones del exviceministro de Economía Gabriel Rubinstein sobre el tipo de cambio, el crecimiento económico y las proyecciones electorales."
+          "aporte": "Aportó las declaraciones del exviceministro Gabriel Rubinstein sobre el tipo de cambio y las perspectivas económicas."
         }
       ],
       "verificacion": {
@@ -442,7 +568,7 @@
         "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
         "sugeridoPorIA": "MEDIA"
       },
-      "slug": "gabriel-rubinstein-advierte-que-el-dolar-esta-bajo-en-argentina"
+      "slug": "gabriel-rubinstein-cuestiona-el-nivel-actual-del-tipo-de-cambio"
     },
     {
       "id": "11pso59",
@@ -1104,7 +1230,7 @@
       "teniaImagenLaFuente": true,
       "fecha": "2026-09-25T11:53:01.000Z",
       "sinFecha": false,
-      "visto": "2026-09-25T12:29:53.093Z",
+      "visto": "2026-09-25T12:32:06.244Z",
       "relevancia": 100,
       "local": true,
       "publicadaPor": "ia",
@@ -1433,8 +1559,8 @@
     {
       "id": "ssf8wu",
       "titulo": "Las hipotecas en Estados Unidos llegan al siete por ciento",
-      "copete": "La tasa promedio de los créditos a 30 años en Estados Unidos alcanzó su nivel más alto desde principios de 2025. El incremento responde a la suba en los costos energéticos y del financiamiento estatal.",
-      "cuerpo": "La tasa promedio de los créditos hipotecarios a 30 años en Estados Unidos llegó a 7,03%, el nivel más registrado desde enero de 2025, según datos de Freddie Mac. En paralelo, la Reserva Federal elevó las tasas de interés este mes, mientras que la inflación anual alcanzó el 3,4% en agosto.\n\nEl encarecimiento del crédito impactó en el mercado inmobiliario, donde las ventas de viviendas usadas cayeron un 2% en agosto respecto al mes anterior, su registro más bajo desde junio del año pasado. Por su parte, la National Association of Home Builders señaló que las mayores tasas y el costo de financiamiento para la construcción afectan el ritmo de las nuevas obras, mientras que especialistas prevén una desaceleración en las operaciones y refinanciaciones para el resto del año.",
+      "copete": "La tasa promedio de los créditos a treinta años en Estados Unidos trepó a poco más del siete por ciento, su nivel más alto desde enero del año pasado. La suba afecta al mercado inmobiliario y frena las operaciones.",
+      "cuerpo": "La tasa promedio de los créditos hipotecarios a treinta años en Estados Unidos alcanzó esta semana el siete por ciento, según datos difundidos por la entidad Freddie Mac.\n\nEl encarecimiento del financiamiento desaceleró el mercado inmobiliario, con una caída del dos por ciento en las ventas de viviendas usadas durante agosto respecto al mes anterior, mientras los precios continuaron en alza. Analistas del sector prevén una menor actividad para el resto del año, aunque el alto nivel de patrimonio acumulado por los propietarios amortigua parcialmente el impacto.",
       "guion": "Las hipotecas en Estados Unidos llegan al siete por ciento",
       "seccion": "Economía",
       "medios": [
@@ -1444,7 +1570,7 @@
       "teniaImagenLaFuente": true,
       "fecha": "2026-09-25T11:40:35.000Z",
       "sinFecha": false,
-      "visto": "2026-09-25T12:29:53.093Z",
+      "visto": "2026-09-25T12:32:06.244Z",
       "relevancia": 45,
       "local": false,
       "publicadaPor": null,
@@ -1452,24 +1578,26 @@
       "temas": [],
       "como": "automatica",
       "claves": [
-        "La tasa hipotecaria a 30 años trepó al 7,03 por ciento en Estados Unidos.",
+        "La tasa hipotecaria a treinta años trepó al siete por ciento en Estados Unidos.",
+        "El aumento responde a la suba en los costos energéticos y del bono del Tesoro.",
         "Las ventas de viviendas usadas cayeron un dos por ciento en agosto.",
-        "El incremento responde al impacto del conflicto energético y la suba de bonos."
+        "Analistas prevén una menor actividad en el mercado inmobiliario."
       ],
       "seSabe": [
-        "La tasa promedio de los créditos a 30 años llegó al 7,03% según Freddie Mac.",
-        "La inflación anual en Estados Unidos fue del 3,4% en agosto.",
-        "Las ventas de viviendas usadas cayeron un 2% en agosto frente a julio."
+        "La tasa promedio de los créditos hipotecarios a treinta años en Estados Unidos llegó a 7,03% esta semana, según datos de Freddie Mac.",
+        "El rendimiento del bono del Tesoro a diez años superó el 5%.",
+        "Las ventas de viviendas usadas cayeron 2% en agosto frente a julio, según la National Association of Realtors."
       ],
       "noConfirmado": [
         "No pudo ser contrastado de forma independiente con las fuentes consultadas."
       ],
-      "textoRedes": "Las tasas de los créditos hipotecarios a 30 años en Estados Unidos treparon al 7,03 por ciento y alcanzaron su nivel más alto desde principios de 2025, lo que genera una fuerte desaceleración en el volumen de operaciones del mercado inmobiliario norteamericano.",
+      "textoRedes": "Las tasas de los créditos hipotecarios a treinta años en Estados Unidos llegaron al siete por ciento y frenaron el ritmo de operaciones en el mercado inmobiliario.",
       "etiquetas": [
         "hipotecas",
         "Estados Unidos",
         "mercado inmobiliario",
-        "economía internacional"
+        "tasas de interes",
+        "economia internacional"
       ],
       "fuentesConsultadas": [
         {
@@ -1477,7 +1605,7 @@
           "enlace": "https://www.clarin.com/economia/hipotecas-estados-unidos-vuelven-7-mercado-inmobiliario-pierde-impulso_0_tUOYZREHeb.html",
           "fecha": "2026-09-25T11:40:35.000Z",
           "oficial": false,
-          "aporte": "Detalló el aumento de las tasas hipotecarias al 7,03% y su impacto en el mercado inmobiliario estadounidense."
+          "aporte": "Aportó los datos sobre la suba de tasas hipotecarias en Estados Unidos, el impacto de la energía y los indicadores del mercado inmobiliario."
         }
       ],
       "antecedentes": [
@@ -1552,6 +1680,67 @@
       "slug": "karina-lupo-y-mariano-barreiro-ganan-la-media-maraton-en-balcarce"
     },
     {
+      "id": "1cwdhov",
+      "titulo": "El kirchnerismo busca condicionar al gobernador bonaerense con encuestas",
+      "copete": "El sector que responde a la exmandataria exhibe sondeos que la muestran competitiva de cara a las próximas elecciones y presiona en la interna para definir candidaturas en el PJ.",
+      "cuerpo": "Según declaraciones brindadas a un medio radial por el dirigente Máximo Kirchner, el sector reclama que sea candidata y cuestiona la existencia de internas en el peronismo y tensiones con el gobernador provincial Axel Kicillof.\n\nEsta disputa interna se desarrolla mientras el mandatario bonaerense consolida su armado propio hacia los comicios, tal como se había informado en un plenario realizado en Avellaneda a principios de semana. La estrategia del sector cristinista apunta a mantener peso específico en la negociación de listas y candidaturas frente al posicionamiento del gobernador.\n\nLa situación expone diferencias en la conducción del espacio opositor, donde la figura de la exmandataria conserva influencia en el armado electoral a pesar de las limitaciones políticas actuales y de la distancia evidenciada con el mandatario provincial.",
+      "guion": "El kirchnerismo busca condicionar al gobernador bonaerense con encuestas",
+      "seccion": "Política",
+      "medios": [
+        "Infobae"
+      ],
+      "enlace": "https://www.infobae.com/politica/2026/09/25/el-kirchnerismo-muestra-encuestas-que-dan-a-cfk-competitiva-para-condicionar-a-kicillof-en-el-armado-del-pj/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-25T11:06:44.000Z",
+      "sinFecha": false,
+      "visto": "2026-09-25T11:30:36.900Z",
+      "relevancia": 48,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": "2026-09-25T07:22:05.608Z",
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "El sector kirchnerista exhibe sondeos que muestran competitiva a la exmandataria.",
+        "Máximo Kirchner reclamó que sea candidata y cuestionó internas en el peronismo.",
+        "La estrategia busca tener peso en la negociación de candidaturas frente a Kicillof."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El kirchnerismo exhibe sondeos que muestran competitiva a la exmandataria para negociar candidaturas en la interna del peronismo frente a Axel Kicillof.",
+      "etiquetas": [
+        "kirchnerismo",
+        "elecciones",
+        "encuestas",
+        "peronismo",
+        "Axel Kicillof"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/politica/2026/09/25/el-kirchnerismo-muestra-encuestas-que-dan-a-cfk-competitiva-para-condicionar-a-kicillof-en-el-armado-del-pj/",
+          "fecha": "2026-09-25T11:06:44.000Z",
+          "oficial": false,
+          "aporte": "Aportó las declaraciones de Máximo Kirchner sobre las encuestas, la situación interna del peronismo y los cruces con el sector de Kicillof."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "jaaaux",
+          "titulo": "Axel Kicillof lanza su armado federal hacia dos mil veintisiete",
+          "fecha": "2026-09-23T03:05:01.594Z",
+          "ruta": "/nota/kicillof-lanzo-su-armado-federal-con-un-mensaje-claro-para-2027-jaaaux"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "el-kirchnerismo-busca-condicionar-al-gobernador-en-balcarce"
+    },
+    {
       "id": "r0e52q",
       "titulo": "El Gobierno elimina el subsidio a zonas frías y prepara subas",
       "copete": "El Gobierno nacional aprobó el recorte del beneficio en zonas frías y afectará a decenas de municipios bonaerenses. La medida implicará subas en las facturas.",
@@ -1605,6 +1794,87 @@
         "sugeridoPorIA": "MEDIA"
       },
       "slug": "el-gobierno-elimina-el-subsidio-a-zonas-frias-y-prepara-subas"
+    },
+    {
+      "id": "kiy3gs",
+      "titulo": "El Concejo Deliberante realiza este jueves su decimocuarta sesión ordinaria en Balcarce",
+      "copete": "El Concejo Deliberante lleva a cabo este jueves su 14ª sesión ordinaria del año. El temario incluye expedientes sobre leasing municipal, transporte, obras de infraestructura, ambiente y diversos pedidos de informes.",
+      "cuerpo": "Los ediles locales llevan adelante este jueves la décima cuarta sesión ordinaria del año con una variada agenda de expedientes y proyectos para su análisis en el recinto legislativo de la ciudad.\n\nEl orden del día contempla la convalidación de decretos sobre operaciones de leasing con Provincia Leasing y asuntos vinculados al funcionamiento de taxis y remises. En materia de infraestructura, se tratan iniciativas sobre la puesta en valor del Estadio Municipal, forestación urbana, ampliación de redes de gas y la reparación de un puente en el Cuartel III, además de propuestas de denominación de espacios públicos y saneamiento ambiental.\n\nAsimismo, el temario incluye pedidos de informe sobre salud, acción social, servicios sanitarios y tránsito, junto con declaraciones de interés legislativo y reconocimientos a instituciones educativas, culturales y deportivas locales.",
+      "guion": "El Concejo Deliberante realiza este jueves su decimocuarta sesión ordinaria en Balcarce",
+      "seccion": "Política",
+      "medios": [
+        "Diario La Vanguardia"
+      ],
+      "enlace": "https://www.diariolavanguardia.com/noticias/44885-el-concejo-deliberante-vuelve-a-sesionar-los-principales-temas-que-estaran-en-debate/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-25T10:47:08.606Z",
+      "sinFecha": true,
+      "visto": "2026-09-25T10:47:08.606Z",
+      "relevancia": 63,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": "2026-09-25T07:10:46.252Z",
+      "temas": [
+        "concejo"
+      ],
+      "como": "automatica",
+      "claves": [
+        "Se lleva a cabo la 14ª sesión ordinaria del año.",
+        "Tratan expedientes sobre leasing y transporte.",
+        "Analizan obras de infraestructura y ambiente.",
+        "Incluye pedidos de informe y reconocimientos."
+      ],
+      "seSabe": [
+        "El Concejo Deliberante realiza este jueves su 14ª sesión ordinaria del año.",
+        "El temario incluye decretos de leasing con Provincia Leasing S.A. con despacho de la Comisión de Presupuesto y Hacienda.",
+        "Tratan proyectos sobre taxis y remises, infraestructura, salud, servicios públicos y ambiente.",
+        "Prevén reconocimientos a deportistas, escuelas y entidades locales."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El Concejo Deliberante lleva a cabo este jueves su 14ª sesión ordinaria con proyectos sobre leasing, transporte, obras, ambiente y diversos pedidos de informes en el distrito.",
+      "etiquetas": [
+        "Concejo Deliberante",
+        "sesion ordinaria",
+        "Balcarce",
+        "politica municipal"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Diario La Vanguardia",
+          "enlace": "https://www.diariolavanguardia.com/noticias/44885-el-concejo-deliberante-vuelve-a-sesionar-los-principales-temas-que-estaran-en-debate/",
+          "fecha": null,
+          "oficial": false,
+          "aporte": "Detalló el orden del día y los temas principales de la 14ª sesión ordinaria del Concejo Deliberante."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1li63ec",
+          "titulo": "El Concejo debate la situación de una investigadora en Balcarce",
+          "fecha": "2026-09-24T14:26:48.000Z",
+          "ruta": "/nota/el-concejo-debate-la-situacion-de-una-investigadora-en-balcarce-1li63ec"
+        },
+        {
+          "id": "7c7bdz",
+          "titulo": "El Concejo debate eliminar tasas a taxis y remises en Balcarce",
+          "fecha": "2026-09-23T22:58:23.988Z",
+          "ruta": "/nota/taxis-y-remises-debatiran-la-eliminacion-de-tasas-mientras-el-sector-7c7bdz"
+        },
+        {
+          "id": "11a57qo",
+          "titulo": "El Concejo aprueba el Paseo Intendente Juan José Mare en Balcarce",
+          "fecha": "2026-09-25T00:52:49.160Z",
+          "ruta": "/nota/el-cerro-el-triunfo-tendra-el-paseo-juan-jose-mare-11a57qo"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "el-concejo-deliberante-realiza-este-jueves-su-decimocuarta-sesion"
     },
     {
       "id": "8hniuy",
@@ -1728,87 +1998,6 @@
         "sugeridoPorIA": "MEDIA"
       },
       "slug": "franco-peidon-gano-el-oro-nacional-en-800-metros"
-    },
-    {
-      "id": "kiy3gs",
-      "titulo": "El Concejo Deliberante realiza este jueves su decimocuarta sesión ordinaria en Balcarce",
-      "copete": "El Concejo Deliberante lleva a cabo este jueves su 14ª sesión ordinaria del año. El temario incluye expedientes sobre leasing municipal, transporte, obras de infraestructura, ambiente y diversos pedidos de informes.",
-      "cuerpo": "Los ediles locales llevan adelante este jueves la décima cuarta sesión ordinaria del año con una variada agenda de expedientes y proyectos para su análisis en el recinto legislativo de la ciudad.\n\nEl orden del día contempla la convalidación de decretos sobre operaciones de leasing con Provincia Leasing y asuntos vinculados al funcionamiento de taxis y remises. En materia de infraestructura, se tratan iniciativas sobre la puesta en valor del Estadio Municipal, forestación urbana, ampliación de redes de gas y la reparación de un puente en el Cuartel III, además de propuestas de denominación de espacios públicos y saneamiento ambiental.\n\nAsimismo, el temario incluye pedidos de informe sobre salud, acción social, servicios sanitarios y tránsito, junto con declaraciones de interés legislativo y reconocimientos a instituciones educativas, culturales y deportivas locales.",
-      "guion": "El Concejo Deliberante realiza este jueves su decimocuarta sesión ordinaria en Balcarce",
-      "seccion": "Política",
-      "medios": [
-        "Diario La Vanguardia"
-      ],
-      "enlace": "https://www.diariolavanguardia.com/noticias/44885-el-concejo-deliberante-vuelve-a-sesionar-los-principales-temas-que-estaran-en-debate/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-25T10:47:08.606Z",
-      "sinFecha": true,
-      "visto": "2026-09-25T10:47:08.606Z",
-      "relevancia": 63,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": "2026-09-25T07:10:46.252Z",
-      "temas": [
-        "concejo"
-      ],
-      "como": "automatica",
-      "claves": [
-        "Se lleva a cabo la 14ª sesión ordinaria del año.",
-        "Tratan expedientes sobre leasing y transporte.",
-        "Analizan obras de infraestructura y ambiente.",
-        "Incluye pedidos de informe y reconocimientos."
-      ],
-      "seSabe": [
-        "El Concejo Deliberante realiza este jueves su 14ª sesión ordinaria del año.",
-        "El temario incluye decretos de leasing con Provincia Leasing S.A. con despacho de la Comisión de Presupuesto y Hacienda.",
-        "Tratan proyectos sobre taxis y remises, infraestructura, salud, servicios públicos y ambiente.",
-        "Prevén reconocimientos a deportistas, escuelas y entidades locales."
-      ],
-      "noConfirmado": [
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "El Concejo Deliberante lleva a cabo este jueves su 14ª sesión ordinaria con proyectos sobre leasing, transporte, obras, ambiente y diversos pedidos de informes en el distrito.",
-      "etiquetas": [
-        "Concejo Deliberante",
-        "sesion ordinaria",
-        "Balcarce",
-        "politica municipal"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Diario La Vanguardia",
-          "enlace": "https://www.diariolavanguardia.com/noticias/44885-el-concejo-deliberante-vuelve-a-sesionar-los-principales-temas-que-estaran-en-debate/",
-          "fecha": null,
-          "oficial": false,
-          "aporte": "Detalló el orden del día y los temas principales de la 14ª sesión ordinaria del Concejo Deliberante."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "1li63ec",
-          "titulo": "El Concejo debate la situación de una investigadora en Balcarce",
-          "fecha": "2026-09-24T14:26:48.000Z",
-          "ruta": "/nota/el-concejo-debate-la-situacion-de-una-investigadora-en-balcarce-1li63ec"
-        },
-        {
-          "id": "7c7bdz",
-          "titulo": "El Concejo debate eliminar tasas a taxis y remises en Balcarce",
-          "fecha": "2026-09-23T22:58:23.988Z",
-          "ruta": "/nota/taxis-y-remises-debatiran-la-eliminacion-de-tasas-mientras-el-sector-7c7bdz"
-        },
-        {
-          "id": "11a57qo",
-          "titulo": "El Concejo aprueba el Paseo Intendente Juan José Mare en Balcarce",
-          "fecha": "2026-09-25T00:52:49.160Z",
-          "ruta": "/nota/el-cerro-el-triunfo-tendra-el-paseo-juan-jose-mare-11a57qo"
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "el-concejo-deliberante-realiza-este-jueves-su-decimocuarta-sesion"
     },
     {
       "id": "1bpz68u",
@@ -2975,6 +3164,31 @@
       "slug": "el-concejo-aprueba-denominar-paseo-intendente-juan-jose-mare-al"
     },
     {
+      "id": "1s5n48z",
+      "titulo": "Se agotan las entradas para el partido de Lionel Messi",
+      "copete": "Los tickets virtuales para la despedida de Lionel Messi de la selección argentina se terminaron en tiempo récord, con demoras y quejas en redes sociales.",
+      "cuerpo": "Las localidades para el encuentro del seis de octubre frente a Benín en el estadio Monumental volaron a través de la plataforma Deportick tras largas filas virtuales de más de una hora. La jornada incluirá además propuestas gastronómicas, juegos y espectáculos musicales con transmisión del partido en pantalla gigante.\n\nA pesar de la alta demanda que dejó sin lugares a miles de hinchas, la venta continúa abierta para los próximos compromisos del combinado nacional frente a los seleccionados de Bolivia y Burkina Faso.",
+      "guion": "Se agotan las entradas para el partido de Lionel Messi",
+      "seccion": "Deportes",
+      "medios": [
+        "Minuto Uno",
+        "La Nación",
+        "Clarín"
+      ],
+      "enlace": "https://www.minutouno.com/deportes/locura-lionel-messi-se-agotaron-tiempo-record-las-entradas-su-despedida-la-seleccion-n6326439",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-24T23:25:00.000Z",
+      "sinFecha": false,
+      "visto": "2026-09-25T03:30:48.261Z",
+      "relevancia": 67,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": "2026-09-25T06:40:41.148Z",
+      "temas": [],
+      "como": "automatica",
+      "slug": "agotaron-las-entradas-para-la-despedida-de-lionel-messi"
+    },
+    {
       "id": "af5xg4",
       "titulo": "El Senado aprueba la reforma de Zona Fría y Balcarce pierde el beneficio en el servicio de",
       "copete": "El Senado de la Nación convirtió en ley la reforma del régimen de Zona Fría. La medida elimina el beneficio automático para Balcarce y otros distritos bonaerenses, y establece un esquema focalizado por ingresos.",
@@ -3859,6 +4073,200 @@
       "slug": "el-stm-y-el-gobierno-cerraron-un-acuerdo-con-una-recomposicion"
     },
     {
+      "id": "jul3vf",
+      "titulo": "Una referente de disciplinas chinas visita el Municipio en Balcarce",
+      "copete": "La maestra Wu Huimin fue recibida por las autoridades locales en el marco de una jornada abierta a la comunidad dedicada a prácticas corporales tradicionales.",
+      "cuerpo": "El intendente municipal, Esteban Reino, junto al secretario de Gobierno, Ricardo Stoppani, recibió a la maestra Wu Huimin, especialista en disciplinas tradicionales chinas que visita la ciudad para una serie de actividades públicas.\n\nDurante la jornada gratuita destinada a los vecinos, se programó además una presentación de Daoyin Yangsheng Gong a cargo de la maestra Ana Wu, quien posee una amplia trayectoria internacional en artes marciales y Qigong. La especialista cuenta con reconocimientos en el ámbito deportivo y directivo a nivel global, y encabeza instituciones dedicadas a la difusión de estas prácticas orientales.\n\nEstas propuestas recreativas y saludables buscan acercar a la comunidad nuevas alternativas de bienestar integral mediante movimientos corporales suaves, respiración consciente y concentración mental.",
+      "guion": "Una referente de disciplinas chinas visita el Municipio en Balcarce",
+      "seccion": "Política",
+      "medios": [
+        "News Balcarce (FM 91.7)"
+      ],
+      "enlace": "https://newsbalcarce.com.ar/?p=30849",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-24T21:28:44.000Z",
+      "sinFecha": false,
+      "visto": "2026-09-24T21:30:39.193Z",
+      "relevancia": 73,
+      "local": true,
+      "publicadaPor": "ia",
+      "publicadaCuando": "2026-09-25T12:15:37.284Z",
+      "temas": [
+        "autodromo",
+        "fangio"
+      ],
+      "como": "automatica",
+      "claves": [
+        "El intendente Esteban Reino recibió a la maestra Wu Huimin.",
+        "Se programó una clase abierta de Chi Kung en plaza Libertad.",
+        "La actividad cuenta con el apoyo de la Subsecretaría de Deporte y Recreación."
+      ],
+      "seSabe": [
+        "El intendente Esteban Reino y el secretario de Gobierno Ricardo Stoppani recibieron a la maestra Wu Huimin.",
+        "Se realizará una clase abierta de Chi Kung y una presentación de Daoyin Yangsheng Gong en plaza Libertad.",
+        "La actividad cuenta con el auspicio de la Subsecretaría de Deporte y Recreación."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "La referente de disciplinas tradicionales chinas Wu Huimin fue recibida por las autoridades locales y encabeza una jornada abierta con clases gratuitas para los vecinos en plaza Libertad.",
+      "etiquetas": [
+        "Wu Huimin",
+        "Chi Kung",
+        "Deporte",
+        "Plaza Libertad",
+        "Balcarce"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "News Balcarce (FM 91.7)",
+          "enlace": "https://newsbalcarce.com.ar/?p=30849",
+          "fecha": "2026-09-24T21:28:44.000Z",
+          "oficial": false,
+          "aporte": "Detalló la visita institucional de la maestra Wu Huimin y las actividades abiertas a la comunidad programadas en la ciudad."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "86l1ng",
+          "titulo": "Reino recibió a referente de disciplinas tradicionales chinas",
+          "fecha": "2026-09-24T16:09:50.000Z",
+          "ruta": "/nota/reino-recibio-a-referente-de-disciplinas-tradicionales-chinas-86l1ng"
+        },
+        {
+          "id": "1408sz9",
+          "titulo": "El intendente recibe a la maestra Wu Huimin en Balcarce",
+          "fecha": "2026-09-24T20:19:56.506Z",
+          "ruta": "/nota/esteban-reino-recibio-a-la-maestra-wu-huimin-en-balcarce-1408sz9"
+        },
+        {
+          "id": "gfro59",
+          "titulo": "El autódromo Juan Manuel Fangio vuelve a recibir automovilismo nacional en Balcarce",
+          "fecha": "2026-09-24T19:48:00.000Z",
+          "ruta": "/nota/el-autodromo-juan-manuel-fangio-vuelve-a-recibir-automovilismo-gfro59"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "el-intendente-recibe-a-la-maestra-wu-huimin-en-balcarce"
+    },
+    {
+      "id": "1k3g7wg",
+      "titulo": "El intendente recibe a autoridades del Club de Leones en Balcarce",
+      "copete": "El intendente Esteban Reino mantuvo un encuentro protocolar en el Palacio Municipal con representantes del Club de Leones para conversar sobre el trabajo social en la comunidad.",
+      "cuerpo": "De acuerdo con la información oficial y los medios locales, el jefe comunal mantuvo un encuentro protocolar con el gobernador del Distrito O-3 de la organización, Christian Bousquet.\n\nEn el transcurso del encuentro se destacó el rol que cumplen las entidades intermedias y el aporte que realizan mediante acciones solidarias y de servicio. Reino agradeció la visita de las autoridades y valoró la disposición para continuar fortaleciendo los vínculos comunitarios.",
+      "guion": "El intendente recibe a autoridades del Club de Leones en Balcarce",
+      "seccion": "Política",
+      "medios": [
+        "Diario La Vanguardia",
+        "News Balcarce (FM 91.7)",
+        "Infórmese Primero (FM 104.9)",
+        "Puntonueve (FM 100.9)",
+        "Municipalidad de Balcarce"
+      ],
+      "enlace": "https://www.diariolavanguardia.com/noticias/44894-reino-recibio-a-autoridades-del-club-de-leones-en-el-palacio-municipal/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-24T21:18:42.000Z",
+      "sinFecha": false,
+      "visto": "2026-09-24T21:30:39.193Z",
+      "relevancia": 100,
+      "local": true,
+      "publicadaPor": "ia",
+      "publicadaCuando": "2026-09-25T11:57:25.176Z",
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Reino recibió a referentes del Club de Leones en el Palacio Municipal.",
+        "Participó el gobernador del Distrito O-3, Christian Bousquet.",
+        "Dialogaron sobre las iniciativas solidarias en la comunidad."
+      ],
+      "seSabe": [
+        "El intendente Esteban Reino recibió a autoridades del Club de Leones en la Sala de los Intendentes, según informó el municipio.",
+        "Participaron el gobernador del Distrito O-3, Christian Bousquet, y la presidenta local, María de los Ángeles Rodríguez.",
+        "También estuvieron presentes los integrantes Ricardo Cacace y Jorge Baliña.",
+        "Las autoridades dialogaron sobre el trabajo social y las acciones solidarias en la comunidad."
+      ],
+      "textoRedes": "El intendente Esteban Reino recibió a autoridades del Club de Leones en el Palacio Municipal para dialogar sobre el trabajo social y las acciones solidarias que la institución desarrolla en la comunidad.",
+      "etiquetas": [
+        "Reino",
+        "Club de Leones",
+        "Balcarce"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Diario La Vanguardia",
+          "enlace": "https://www.diariolavanguardia.com/noticias/44894-reino-recibio-a-autoridades-del-club-de-leones-en-el-palacio-municipal/",
+          "fecha": "2026-09-24T21:18:42.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "News Balcarce (FM 91.7)",
+          "enlace": "https://newsbalcarce.com.ar/?p=30845",
+          "fecha": "2026-09-24T21:18:42.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Infórmese Primero (FM 104.9)",
+          "enlace": "http://www.blogger.com/feeds/8495648477830064035/posts/default/6360410155648573649",
+          "fecha": "2026-09-24T20:26:07.021Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Puntonueve (FM 100.9)",
+          "enlace": "https://puntonueve.com.ar/reino-recibio-a-autoridades-del-club-de-leones-en-la-sala-de-los-intendentes/",
+          "fecha": "2026-09-24T19:19:45.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Radio Gabal (FM 104.1)",
+          "enlace": "https://www.radiogabal.com.ar/index.php/comunidad/reino-recibio-a-autoridades-del-club-de-leones-en-el-palacio-municipal",
+          "fecha": "2026-09-24T19:00:58.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Municipalidad de Balcarce",
+          "enlace": "https://balcarce.gob.ar/2026/09/24/reino-recibio-a-autoridades-del-club-de-leones/",
+          "fecha": "2026-09-24T16:29:36.000Z",
+          "oficial": true,
+          "aporte": null
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "awfv2d",
+          "titulo": "Reino recibió a autoridades del Club de Leones",
+          "fecha": "2026-09-24T19:19:45.000Z",
+          "ruta": "/nota/reino-recibio-a-autoridades-del-club-de-leones-awfv2d"
+        },
+        {
+          "id": "x1ihjl",
+          "titulo": "Reino recibió a autoridades del Club de Leones",
+          "fecha": "2026-09-24T16:29:36.000Z",
+          "ruta": "/nota/reino-recibio-a-autoridades-del-club-de-leones-x1ihjl"
+        },
+        {
+          "id": "86l1ng",
+          "titulo": "Reino recibió a referente de disciplinas tradicionales chinas",
+          "fecha": "2026-09-24T16:09:50.000Z",
+          "ruta": "/nota/reino-recibio-a-referente-de-disciplinas-tradicionales-chinas-86l1ng"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo confirman cinco medios independientes y Municipalidad de Balcarce.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "esteban-reino-recibe-al-club-de-leones-en-balcarce"
+    },
+    {
       "id": "4tauw0",
       "titulo": "El Municipio de Balcarce y el sindicato avanzan en un acuerdo salarial",
       "copete": "El Sindicato de Trabajadores Municipales y la comuna negocian un incremento escalonado que se extendería hasta marzo de 2027. El entendimiento contempla porcentajes superiores a la inflación en ciertos tramos y una mesa técnica de revisión.",
@@ -4095,10 +4503,10 @@
     },
     {
       "id": "52q3fj",
-      "titulo": "Franco Colapinto busca mejorar su rendimiento en el Gran Premio de Azerbaiyán",
-      "copete": "El piloto argentino finalizó undécimo en la segunda práctica libre en Bakú y confía en avanzar en la clasificación de este viernes para sumar puntos en la Fórmula 1.",
-      "cuerpo": "Franco Colapinto completó la primera jornada de entrenamientos para el Gran Premio de Azerbaiyán con sensaciones mixtas tras finalizar en el undécimo puesto. El piloto argentino reconoció dificultades con el rendimiento de su Alpine y admitió falta de consistencia en las curvas y los frenajes respecto a fechas anteriores.\n\nEn la misma sesión, su compañero Pierre Gasly se ubicó séptimo como el mejor de la escudería, mientras que los Mercedes de George Russell y Kimi Antonelli dominaron los tiempos. Como se había informado el 24 de septiembre, el pilarense mantiene el objetivo de meterse en la Q3 y pelear por los puntos este viernes.\n\nLa actividad en el circuito callejero de Bakú continuará con la prueba de clasificación previa a la carrera del fin de semana.",
-      "guion": "Franco Colapinto busca mejorar su rendimiento en el Gran Premio de Azerbaiyán.",
+      "titulo": "Franco Colapinto busca mejorar en Bakú tras un inicio difícil",
+      "copete": "El piloto argentino quedó undécimo en la primera jornada de entrenamientos del Gran Premio de Azerbaiyán de Fórmula 1. Reconoció complicaciones con el auto pero confía en avanzar.",
+      "cuerpo": "Franco Colapinto finalizó undécimo en la primera jornada de entrenamientos libres del Gran Premio de Azerbaiyán de Fórmula 1, disputada en el circuito callejero de Bakú. Durante las prácticas con su Alpine, el piloto argentino admitió que el vehículo le resultó incómodo y que le costó extraer rendimiento en los frenajes y las entradas de curva, aunque confía en mejorar de cara a la clasificación y la zona de puntos.\n\nEn la actividad inicial, los Mercedes de George Russell y Kimi Antonelli dominaron la jornada. Por su parte, el compañero de equipo de Colapinto, Pierre Gasly, se ubicó séptimo. El argentino reconoció ante la televisión que le falta consistencia respecto a otras competencias, mientras el equipo trabajó en la puesta a punto con diferentes compuestos de neumáticos.\n\nComo antecedente, el piloto había señalado días atrás su expectativa de meterse en la Q3 y sumar puntos en el trazado donde consiguió sus primeras unidades en la categoría durante la temporada 2024.",
+      "guion": "Franco Colapinto busca mejorar en Baku tras un inicio dificil",
       "seccion": "Automovilismo",
       "medios": [
         "La Nación"
@@ -4115,25 +4523,23 @@
       "temas": [],
       "como": "automatica",
       "claves": [
-        "Franco Colapinto quedó undécimo en la segunda práctica libre en Bakú.",
-        "El piloto argentino reconoció problemas de comodidad con su Alpine.",
-        "Pierre Gasly fue séptimo y lideró al equipo en la primera jornada.",
-        "La prueba de clasificación se disputa este viernes."
+        "Colapinto quedó undécimo en las prácticas libres de Bakú.",
+        "El piloto argentino reconoció dificultades con el balance del Alpine.",
+        "Mercedes dominó el inicio de la actividad en el circuito callejero."
       ],
       "seSabe": [
-        "Pierre Gasly fue el piloto más rápido de Alpine al finalizar séptimo en la primera jornada en Bakú.",
-        "Franco Colapinto quedó en el undécimo puesto de la sesión con diferencias respecto a su compañero.",
-        "George Russell y Kimi Antonelli dominaron los entrenamientos con los Mercedes.",
-        "Flavio Briatore cuestionó los mensajes de odio en redes sociales hacia Gasly y su familia."
+        "Franco Colapinto se ubicó undécimo en la primera jornada de entrenamientos en Bakú, según informó la fuente consultada.",
+        "El piloto argentino declaró que el auto le resultó incómodo y le costó extraer rendimiento en frenajes y curvas.",
+        "George Russell y Kimi Antonelli dominaron la jornada con los vehículos de Mercedes.",
+        "Pierre Gasly se ubicó séptimo como el piloto más rápido de Alpine."
       ],
       "noConfirmado": [
         "No pudo ser contrastado de forma independiente con las fuentes consultadas."
       ],
-      "textoRedes": "Franco Colapinto completó los entrenamientos en Bakú con un undécimo puesto y busca mejorar su rendimiento para la clasificación del Gran Premio de Azerbaiyán.",
+      "textoRedes": "Franco Colapinto finalizó undécimo en los entrenamientos libres del Gran Premio de Azerbaiyán de Fórmula 1. El piloto argentino reconoció dificultades con el rendimiento de su Alpine en Bakú pero confía en avanzar hacia la clasificación y la zona de puntos.",
       "etiquetas": [
         "Franco Colapinto",
         "Formula 1",
-        "Gran Premio de Azerbaiyán",
         "Bakú"
       ],
       "fuentesConsultadas": [
@@ -4142,7 +4548,7 @@
           "enlace": "https://www.lanacion.com.ar/deportes/automovilismo/colapinto-paso-momentos-de-incomodidad-en-baku-pero-pone-el-foco-en-la-q3-y-en-los-puntos-nid24092026/",
           "fecha": "2026-09-24T20:49:55.000Z",
           "oficial": false,
-          "aporte": "Detalló los resultados de las prácticas libres en Bakú, las declaraciones de Franco Colapinto y la advertencia de Flavio Briatore."
+          "aporte": "Detalles de los entrenamientos de la Fórmula 1 en Bakú, los tiempos de Colapinto y Gasly, y declaraciones del piloto argentino sobre el rendimiento del auto."
         }
       ],
       "antecedentes": [
@@ -4364,119 +4770,6 @@
       "slug": "jovenes-balcarcenas-participaran-de-un-torneo-internacional-de"
     },
     {
-      "id": "1k3g7wg",
-      "titulo": "El intendente recibe a autoridades del Club de Leones en Balcarce",
-      "copete": "El intendente Esteban Reino mantuvo un encuentro protocolar en el Palacio Municipal con representantes del Club de Leones para conversar sobre el trabajo social en la comunidad.",
-      "cuerpo": "De acuerdo con la información oficial y los medios locales, el jefe comunal mantuvo un encuentro protocolar con el gobernador del Distrito O-3 de la organización, Christian Bousquet.\n\nEn el transcurso del encuentro se destacó el rol que cumplen las entidades intermedias y el aporte que realizan mediante acciones solidarias y de servicio. Reino agradeció la visita de las autoridades y valoró la disposición para continuar fortaleciendo los vínculos comunitarios.",
-      "guion": "El intendente recibe a autoridades del Club de Leones en Balcarce",
-      "seccion": "Política",
-      "medios": [
-        "Diario La Vanguardia",
-        "Infórmese Primero (FM 104.9)",
-        "Puntonueve (FM 100.9)",
-        "Radio Gabal (FM 104.1)",
-        "Municipalidad de Balcarce"
-      ],
-      "enlace": "https://www.diariolavanguardia.com/noticias/44894-reino-recibio-a-autoridades-del-club-de-leones-en-el-palacio-municipal/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-24T20:26:07.021Z",
-      "sinFecha": false,
-      "visto": "2026-09-24T21:30:39.193Z",
-      "relevancia": 100,
-      "local": true,
-      "publicadaPor": "ia",
-      "publicadaCuando": "2026-09-25T11:57:25.176Z",
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Reino recibió a referentes del Club de Leones en el Palacio Municipal.",
-        "Participó el gobernador del Distrito O-3, Christian Bousquet.",
-        "Dialogaron sobre las iniciativas solidarias en la comunidad."
-      ],
-      "seSabe": [
-        "El intendente Esteban Reino recibió a autoridades del Club de Leones en la Sala de los Intendentes, según informó el municipio.",
-        "Participaron el gobernador del Distrito O-3, Christian Bousquet, y la presidenta local, María de los Ángeles Rodríguez.",
-        "También estuvieron presentes los integrantes Ricardo Cacace y Jorge Baliña.",
-        "Las autoridades dialogaron sobre el trabajo social y las acciones solidarias en la comunidad."
-      ],
-      "textoRedes": "El intendente Esteban Reino recibió a autoridades del Club de Leones en el Palacio Municipal para dialogar sobre el trabajo social y las acciones solidarias que la institución desarrolla en la comunidad.",
-      "etiquetas": [
-        "Reino",
-        "Club de Leones",
-        "Balcarce"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Diario La Vanguardia",
-          "enlace": "https://www.diariolavanguardia.com/noticias/44894-reino-recibio-a-autoridades-del-club-de-leones-en-el-palacio-municipal/",
-          "fecha": "2026-09-24T21:18:42.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "News Balcarce (FM 91.7)",
-          "enlace": "https://newsbalcarce.com.ar/?p=30845",
-          "fecha": "2026-09-24T21:18:42.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Infórmese Primero (FM 104.9)",
-          "enlace": "http://www.blogger.com/feeds/8495648477830064035/posts/default/6360410155648573649",
-          "fecha": "2026-09-24T20:26:07.021Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Puntonueve (FM 100.9)",
-          "enlace": "https://puntonueve.com.ar/reino-recibio-a-autoridades-del-club-de-leones-en-la-sala-de-los-intendentes/",
-          "fecha": "2026-09-24T19:19:45.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Radio Gabal (FM 104.1)",
-          "enlace": "https://www.radiogabal.com.ar/index.php/comunidad/reino-recibio-a-autoridades-del-club-de-leones-en-el-palacio-municipal",
-          "fecha": "2026-09-24T19:00:58.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Municipalidad de Balcarce",
-          "enlace": "https://balcarce.gob.ar/2026/09/24/reino-recibio-a-autoridades-del-club-de-leones/",
-          "fecha": "2026-09-24T16:29:36.000Z",
-          "oficial": true,
-          "aporte": null
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "awfv2d",
-          "titulo": "Reino recibió a autoridades del Club de Leones",
-          "fecha": "2026-09-24T19:19:45.000Z",
-          "ruta": "/nota/reino-recibio-a-autoridades-del-club-de-leones-awfv2d"
-        },
-        {
-          "id": "x1ihjl",
-          "titulo": "Reino recibió a autoridades del Club de Leones",
-          "fecha": "2026-09-24T16:29:36.000Z",
-          "ruta": "/nota/reino-recibio-a-autoridades-del-club-de-leones-x1ihjl"
-        },
-        {
-          "id": "86l1ng",
-          "titulo": "Reino recibió a referente de disciplinas tradicionales chinas",
-          "fecha": "2026-09-24T16:09:50.000Z",
-          "ruta": "/nota/reino-recibio-a-referente-de-disciplinas-tradicionales-chinas-86l1ng"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo confirman cinco medios independientes y Municipalidad de Balcarce.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "esteban-reino-recibe-al-club-de-leones-en-balcarce"
-    },
-    {
       "id": "1408sz9",
       "titulo": "El intendente recibe a la maestra de disciplinas chinas Wu Huimin en Balcarce",
       "copete": "El intendente Esteban Reino recibió a la referente de disciplinas tradicionales chinas Wu Huimin, quien visitó la ciudad para ofrecer una jornada abierta a la comunidad con clases de Chi Kung.",
@@ -4589,32 +4882,6 @@
       "temas": [],
       "como": "automatica",
       "slug": "kevin-gomez-proyecta-nuevos-desafios-tras-ganar-el-titulo"
-    },
-    {
-      "id": "1b3p6ze",
-      "titulo": "Juan José Suárez corre en el Autódromo Juan Manuel Fangio en Balcarce",
-      "copete": "El piloto local compite este fin de semana en la TC Pista Pick Up durante el regreso de una categoría nacional.",
-      "cuerpo": "El automovilista Juan José Suárez visitó los estudios radiales en la previa del regreso de una categoría nacional al trazado local. “Es un sueño poder estar en la pista compitiendo en Balcarce”, expresó el deportista sobre la expectativa generada por el evento.\n\nEl Autódromo Juan Manuel Fangio recibe este fin de semana histórico a la categoría TC Pista Pick Up. La llegada de la competencia genera gran emoción en el ámbito deportivo y en los vecinos de la ciudad.",
-      "guion": "Juan Jose Suarez corre en el Autodromo Juan Manuel Fangio en Balcarce",
-      "seccion": "Automovilismo",
-      "medios": [
-        "Radio Gabal (FM 104.1)"
-      ],
-      "enlace": "https://www.radiogabal.com.ar/index.php/comunidad/juan-jose-suarez-es-un-sueno-poder-estar-en-la-pista-compitiendo-en-balcarce",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-24T19:08:06.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-24T19:28:10.118Z",
-      "relevancia": 75,
-      "local": true,
-      "publicadaPor": "ia",
-      "publicadaCuando": "2026-09-25T05:55:53.537Z",
-      "temas": [
-        "autodromo",
-        "fangio"
-      ],
-      "como": "automatica",
-      "slug": "suarez-acelera-en-casa-es-un-sueno-correr-en-balcarce"
     },
     {
       "id": "m7fmln",
@@ -4933,6 +5200,106 @@
         "sugeridoPorIA": "MEDIA"
       },
       "slug": "carta-abierta-de-investigadora-del-inta-balcarce"
+    },
+    {
+      "id": "jul41g",
+      "titulo": "El Autódromo Juan Manuel Fangio reabre este viernes en Balcarce",
+      "copete": "Balcarce será escenario este fin de semana de la octava fecha del TC Pick Up. El evento incluirá la esperada reapertura del autódromo local, exhibiciones callejeras de vehículos y una conferencia oficial.",
+      "cuerpo": "Las actividades comenzarán este viernes a partir de las 14 con el corte de cinta en la pista del Autódromo Municipal Juan Manuel Fangio, un hito que marcará su reapertura oficial con la presencia de autoridades provinciales, municipales y de la ACTC. La agenda continuará a las 17 en una estación de servicio ubicada en avenida San Martín y 107, donde se realizará una firma de autógrafos con los pilotos locales y nacionales. Más tarde, desde las 18:30, las camionetas recorrerán distintos sectores de la ciudad, pasando por la avenida Gonzales Chaves, plaza Libertad y la zona del Museo Fangio, frente al cual se desarrollará la conferencia de presentación a las 19.\n\nEn lo estrictamente deportivo, la actividad competitiva comenzará el sábado a las 9 con entrenamientos y clasificaciones, mientras que el domingo se disputarán las series y finales con transmisión televisiva. Mariano Werner llega como líder del campeonato tras imponerse en dos finales y ganar la Etapa Regular, al tiempo que se confirmó la participación de los pilotos locales Santiago Mangoni, Diego Ciantini, José Ciantini y Juan José Suárez.",
+      "guion": "El Autódromo Juan Manuel Fangio reabre este viernes en Balcarce",
+      "seccion": "Automovilismo",
+      "medios": [
+        "News Balcarce (FM 91.7)",
+        "El Diario Balcarce",
+        "Infórmese Primero (FM 104.9)",
+        "Municipalidad de Balcarce"
+      ],
+      "enlace": "https://newsbalcarce.com.ar/?p=30813",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-24T14:21:16.000Z",
+      "sinFecha": false,
+      "visto": "2026-09-24T15:27:47.939Z",
+      "relevancia": 100,
+      "local": true,
+      "publicadaPor": "ia",
+      "publicadaCuando": "2026-09-25T11:57:25.176Z",
+      "temas": [
+        "autodromo",
+        "fangio"
+      ],
+      "como": "automatica",
+      "claves": [
+        "El autódromo municipal reabre sus puertas este viernes con un acto oficial.",
+        "Habrá firma de autógrafos y una caravana de camionetas por las calles céntricas.",
+        "El sábado y domingo se disputarán los entrenamientos, series y finales.",
+        "Mariano Werner llega como puntero y cuatro pilotos locales competirán en la fecha."
+      ],
+      "noConfirmado": [
+        "No se detalló la nómina completa de las autoridades provinciales y de la ACTC que asistirán al corte de cinta."
+      ],
+      "textoRedes": "Balcarce se prepara para vivir un fin de semana a todo motor con la reapertura del Autódromo Juan Manuel Fangio, la llegada del TC Pick Up, caravanas de camionetas por la ciudad y la presencia de destacados pilotos locales.",
+      "etiquetas": [
+        "Autodromo Juan Manuel Fangio",
+        "TC Pick Up",
+        "Balcarce",
+        "Automovilismo"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "News Balcarce (FM 91.7)",
+          "enlace": "https://newsbalcarce.com.ar/?p=30813",
+          "fecha": "2026-09-24T14:21:16.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/balcarce-se-prepara-para-un-fin-de-semana-historico-475",
+          "fecha": "2026-09-24T12:05:53.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Infórmese Primero (FM 104.9)",
+          "enlace": "http://www.blogger.com/feeds/8495648477830064035/posts/default/4187113007910707683",
+          "fecha": "2026-09-23T15:58:01.847Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Municipalidad de Balcarce",
+          "enlace": "https://balcarce.gob.ar/2026/09/23/balcarce-se-prepara-para-vivir-un-fin-de-semana-a-puro-automovilismo/",
+          "fecha": "2026-09-23T15:49:50.000Z",
+          "oficial": true,
+          "aporte": null
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "4v2vga",
+          "titulo": "Largas filas en Balcarce por el regreso del automovilismo",
+          "fecha": "2026-09-24T13:34:15.000Z",
+          "ruta": "/nota/largas-filas-en-balcarce-por-el-regreso-del-automovilismo-4v2vga"
+        },
+        {
+          "id": "1s3g86p",
+          "titulo": "Viernes a puro motor en Balcarce con el TC Pick Up",
+          "fecha": "2026-09-24T13:09:20.000Z",
+          "ruta": "/nota/viernes-a-puro-motor-en-balcarce-con-el-tc-pick-up-1s3g86p"
+        },
+        {
+          "id": "n331xk",
+          "titulo": "Definieron horarios para el automovilismo en el Fangio",
+          "fecha": "2026-09-24T13:05:55.000Z",
+          "ruta": "/nota/definieron-horarios-para-el-automovilismo-en-el-fangio-n331xk"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo confirman tres medios independientes y Municipalidad de Balcarce.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "balcarce-se-prepara-para-vivir-un-fin-de-semana-a-fondo"
     },
     {
       "id": "12xkda6",
@@ -5397,91 +5764,6 @@
         "sugeridoPorIA": "ALTA"
       },
       "slug": "milei-cuestiona-a-la-onu-y-reclama-por-malvinas"
-    },
-    {
-      "id": "xpr0le",
-      "titulo": "Balcarce recibe la previa de una nueva fecha del TC Pick Up en en Balcarce",
-      "copete": "Balcarce se prepara para recibir la octava fecha del TC Pick Up con diversas actividades promocionales en la región y en el distrito.",
-      "cuerpo": "Balcarce se convierte en el escenario central de las actividades previas a la octava fecha del TC Pick Up, un evento que vuelve a posicionar a la ciudad en el centro de la escena del automovilismo nacional. La promoción de la competencia recorre distintos puntos de la región con acciones destinadas a convocar al público.\n\nLas actividades forman parte de la antesala de la jornada automovilística que tendrá lugar en el distrito, mientras continúan los preparativos generales en la ciudad.",
-      "guion": "Balcarce recibe la previa de una nueva fecha del TC Pick Up",
-      "seccion": "Automovilismo",
-      "medios": [
-        "El Diario Balcarce",
-        "Infórmese Primero (FM 104.9)",
-        "Municipalidad de Balcarce"
-      ],
-      "enlace": "https://eldiariobalcarce.com.ar/balcarce-se-prepara-para-un-fin-de-semana-historico-475",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-24T12:05:53.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-25T11:30:36.900Z",
-      "relevancia": 91,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [
-        "autodromo",
-        "fangio"
-      ],
-      "como": "automatica",
-      "noConfirmado": [
-        "No se detalló el cronograma completo de las actividades promocionales previstas para los próximos días en la ciudad."
-      ],
-      "textoRedes": "Balcarce es el escenario central de las actividades previas a la octava fecha del TC Pick Up con propuestas promocionales en la región.",
-      "etiquetas": [
-        "TC Pick Up",
-        "Automovilismo",
-        "Balcarce"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "El Diario Balcarce",
-          "enlace": "https://eldiariobalcarce.com.ar/balcarce-se-prepara-para-un-fin-de-semana-historico-475",
-          "fecha": "2026-09-24T12:05:53.000Z",
-          "oficial": false,
-          "aporte": "Mencionó la expectativa general en la ciudad por el fin de semana automovilístico."
-        },
-        {
-          "medio": "Infórmese Primero (FM 104.9)",
-          "enlace": "http://www.informeseprimero.com.ar/2026/09/balcarce-se-prepara-para-vivir-un-fin.html",
-          "fecha": "2026-09-23T15:58:01.847Z",
-          "oficial": false,
-          "aporte": "Informó sobre la promoción de la octava fecha del TC Pick Up en la región."
-        },
-        {
-          "medio": "Municipalidad de Balcarce",
-          "enlace": "https://balcarce.gob.ar/2026/09/23/balcarce-se-prepara-para-vivir-un-fin-de-semana-a-puro-automovilismo/",
-          "fecha": "2026-09-23T15:49:50.000Z",
-          "oficial": true,
-          "aporte": "Confirmó oficialmente que Balcarce será el escenario central de las actividades previas."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "1w1lluz",
-          "titulo": "MotoGP anuncia que seguirá yendo a Portimao hasta 2029",
-          "fecha": "2026-09-24T10:06:51.000Z",
-          "ruta": "/nota/motogp-anuncia-que-seguira-yendo-a-portimao-hasta-2029-1w1lluz"
-        },
-        {
-          "id": "1ss3yj3",
-          "titulo": "Reino y Ciantini participan en Tandil",
-          "fecha": "2026-09-24T00:23:50.055Z",
-          "ruta": "/nota/reino-y-ciantini-participan-en-tandil-1ss3yj3"
-        },
-        {
-          "id": "11pnmnw",
-          "titulo": "Kicillof visitará Balcarce para la reinauguración del autódromo",
-          "fecha": "2026-09-23T23:52:12.000Z",
-          "ruta": "/nota/kicillof-visitara-balcarce-para-la-reinauguracion-del-autodromo-11pnmnw"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo confirman dos medios independientes y Municipalidad de Balcarce.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "el-tc-pick-up-realiza-una-firma-de-autografos-en-balcarce"
     },
     {
       "id": "11nk8l",
@@ -7090,6 +7372,109 @@
       "slug": "medalla-de-bronce-para-shalom-lescano-en-atletismo"
     },
     {
+      "id": "jul4zc",
+      "titulo": "Reinauguran el Autodromo Municipal Juan Manuel Fangio en Balcarce",
+      "copete": "El autódromo Juan Manuel Fangio reabre sus puertas este viernes en una ceremonia oficial. El evento marca un hito histórico para el automovilismo local.",
+      "cuerpo": "El acto de reinauguración del Autódromo Municipal Juan Manuel Fangio se llevará a cabo este viernes a las catorce horas. Este acontecimiento representa un hito de especial relevancia para la ciudad y para la historia del automovilismo argentino.\n\nComo se había informado a principios de semana, la reapertura del circuito local se da en paralelo a trabajos artísticos en las instalaciones, como la pintura de un mural del quíntuple campeón a cargo del artista Nico Lahitte en la zona de los boxes.",
+      "guion": "Reinauguran el Autodromo Municipal Juan Manuel Fangio en Balcarce",
+      "seccion": "Automovilismo",
+      "medios": [
+        "News Balcarce (FM 91.7)"
+      ],
+      "enlace": "https://newsbalcarce.com.ar/?p=30754",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-22T22:14:09.000Z",
+      "sinFecha": false,
+      "visto": "2026-09-25T02:00:53.592Z",
+      "relevancia": 73,
+      "local": true,
+      "publicadaPor": "ia",
+      "publicadaCuando": "2026-09-25T10:20:38.199Z",
+      "temas": [
+        "autodromo",
+        "fangio"
+      ],
+      "como": "automatica",
+      "claves": [
+        "Reinauguración oficial del autódromo municipal este viernes a las catorce horas.",
+        "El circuito lleva el nombre del quíntuple campeón Juan Manuel Fangio.",
+        "Se realizaron trabajos artísticos recientes en el sector de los boxes."
+      ],
+      "seSabe": [
+        "El acto de reapertura del Autódromo Municipal se programó para el viernes 25 de septiembre a las 14 horas.",
+        "El predio lleva el nombre de Juan Manuel Fangio."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Este viernes a las 14 horas se realizará la reinauguración oficial del Autódromo Municipal Juan Manuel Fangio en Balcarce, un acontecimiento histórico para la ciudad y el automovilismo.",
+      "etiquetas": [
+        "autodromo",
+        "juan manuel fangio",
+        "automovilismo",
+        "balcarce",
+        "reinauguracion"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "News Balcarce (FM 91.7)",
+          "enlace": "https://newsbalcarce.com.ar/?p=30754",
+          "fecha": "2026-09-22T22:14:09.000Z",
+          "oficial": false,
+          "aporte": "Informó la fecha, hora y relevancia del acto de reinauguración del Autódromo Municipal."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "5yolmk",
+          "titulo": "El Autódromo Juan Manuel Fangio será reinaugurado este viernes",
+          "fecha": "2026-09-22T19:26:50.000Z",
+          "ruta": "/nota/el-autodromo-juan-manuel-fangio-sera-reinaugurado-este-viernes-5yolmk"
+        },
+        {
+          "id": "1crfv0z",
+          "titulo": "La Fórmula 3 Metropolitana debuta en el autódromo de Rosario",
+          "fecha": "2026-09-22T21:17:44.000Z",
+          "ruta": "/nota/la-formula-3-metropolitana-debuta-en-el-autodromo-de-rosario-1crfv0z"
+        },
+        {
+          "id": "1tftag2",
+          "titulo": "Nuevo mural de Fangio en el autódromo local",
+          "fecha": "2026-09-22T21:12:28.452Z",
+          "ruta": "/nota/nuevo-mural-de-fangio-en-el-autodromo-local-1tftag2"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "el-viernes-se-reinaugura-el-autodromo"
+    },
+    {
+      "id": "jul4yj",
+      "titulo": "Sergio Aranaga participa en un plenario en Avellaneda en Balcarce",
+      "copete": "El titular del PJ local asistió este fin de semana al encuentro encabezado por Axel Kicillof en la provincia.",
+      "cuerpo": "El presidente del Partido Justicialista de Balcarce, Sergio Aranaga, formó parte del Plenario Federal del Movimiento Derecho al Futuro que se llevó a cabo en Avellaneda. La jornada reunió a dirigentes y referentes de distintos puntos del país con el objetivo de debatir sobre la construcción política y programática de una alternativa nacional.\n\nEl dirigente local participó tras recibir una invitación de la secretaría privada del gobernador bonaerense. Tras el evento, destacó que se trató de un espacio constructivo para la organización colectiva y remarcó el respaldo al mandatario provincial desde el peronismo distrital.",
+      "guion": "Sergio Aranaga participa en un plenario en Avellaneda en Balcarce",
+      "seccion": "Política",
+      "medios": [
+        "News Balcarce (FM 91.7)"
+      ],
+      "enlace": "https://newsbalcarce.com.ar/?p=30746",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-22T21:37:19.000Z",
+      "sinFecha": false,
+      "visto": "2026-09-22T23:46:50.102Z",
+      "relevancia": 65,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": "2026-09-25T07:01:00.319Z",
+      "temas": [],
+      "como": "automatica",
+      "slug": "sergio-aranaga-participa-en-un-plenario-en-avellaneda-en-balcarce"
+    },
+    {
       "id": "cs4hof",
       "titulo": "Nicolás Girotti gana y se afirma en la punta en Balcarce",
       "copete": "El Karting Regional disputó la séptima fecha en Rauch con saldo positivo para los pilotos locales.",
@@ -7203,11 +7588,11 @@
     }
   ],
   "secciones": [
+    "Balcarce",
     "Automovilismo",
     "Economía",
     "Política",
     "Tecnología",
-    "Balcarce",
     "Cultura y agenda",
     "Deportes",
     "Agro"
@@ -7216,12 +7601,12 @@
     {
       "nombre": "El autódromo",
       "ranura": "autodromo",
-      "cuantas": 19
+      "cuantas": 20
     },
     {
       "nombre": "Fangio",
       "ranura": "fangio",
-      "cuantas": 18
+      "cuantas": 19
     },
     {
       "nombre": "El Concejo Deliberante",
@@ -7253,7 +7638,7 @@
     "ahora": {
       "temp": 16,
       "sensacion": 13,
-      "humedad": 65,
+      "humedad": 63,
       "viento": 18,
       "rumbo": "O",
       "cielo": "Despejado",
@@ -7289,7 +7674,7 @@
         "min": 6,
         "lluvia": 17,
         "codigo": 51,
-        "viento": 21,
+        "viento": 22,
         "milimetros": 0,
         "cielo": "Llovizna leve"
       },
@@ -7614,6 +7999,12 @@
       "motivo": "necesita ojo humano: \"menores de edad\", en el texto completo de la fuente (visto al reescribir)"
     },
     {
+      "id": "dfel5s",
+      "titulo": "Baca cuestionó la habilitación del autódromo de Balcarce…",
+      "seccion": "Automovilismo",
+      "motivo": "verificación baja: espera a una persona (visto al reescribir)"
+    },
+    {
       "id": "srztow",
       "titulo": "El Hospital Fossati capacitó a trabajadores en higiene…",
       "seccion": "Balcarce",
@@ -7632,16 +8023,22 @@
       "motivo": "necesita ojo humano: \"adolescente\", en el texto completo de la fuente (visto al reescribir)"
     },
     {
+      "id": "jul3x0",
+      "titulo": "Capacitacion para personal del Hospital.",
+      "seccion": "Cultura y agenda",
+      "motivo": "necesita ojo humano: \"hospital\""
+    },
+    {
       "id": "j7c3tx",
       "titulo": null,
       "seccion": "Policiales",
       "motivo": "necesita ojo humano: \"imputado\""
     },
     {
-      "id": "1li63ec",
-      "titulo": "La carta de la investigadora Virginia Aparicio y su…",
-      "seccion": "Balcarce",
-      "motivo": "verificación baja: espera a una persona (visto al reescribir)"
+      "id": "jul4xl",
+      "titulo": "Murio Tulio Crespi, una Leyenda del Automovilismo.",
+      "seccion": "Automovilismo",
+      "motivo": "necesita ojo humano: \"falleció\""
     },
     {
       "id": "z2ees5",
@@ -7690,6 +8087,12 @@
       "titulo": "Gasly denunció que recibe amenazas en redes sociales por…",
       "seccion": "Automovilismo",
       "motivo": "necesita ojo humano: \"denunció\""
+    },
+    {
+      "id": "vo3j62",
+      "titulo": null,
+      "seccion": "Policiales",
+      "motivo": "necesita ojo humano: \"acusado\""
     },
     {
       "id": "1ipsosn",
@@ -7746,12 +8149,6 @@
       "motivo": "necesita ojo humano: \"víctima\""
     },
     {
-      "id": "vo3j62",
-      "titulo": null,
-      "seccion": "Policiales",
-      "motivo": "necesita ojo humano: \"acusado\""
-    },
-    {
       "id": "q4nd82",
       "titulo": null,
       "seccion": "País",
@@ -7800,5 +8197,5 @@
       "motivo": "necesita ojo humano: \"hospital\""
     }
   ],
-  "esperandoCuerpo": 10
+  "esperandoCuerpo": 11
 }
