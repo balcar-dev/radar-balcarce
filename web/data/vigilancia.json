@@ -1,5 +1,7 @@
 {
-  "avisos": {},
+  "avisos": {
+    "falla-Redes": "2026-09-25T14:30:19.121Z"
+  },
   "importantes": {
     "avisadas": {
       "1juqupr": {
@@ -16,42 +18,40 @@
   },
   "pendientes": {
     "avisados": [
+      "t9doh1",
       "1yy5hcd",
       "srztow",
-      "1mhp0n8",
+      "1nyse71",
       "jul3x0",
       "j7c3tx",
       "jul4xl",
-      "s98u2k",
+      "1mhp0n8",
       "z2ees5",
-      "119oqdp",
-      "1kpxt2v",
       "1jgrepa",
       "11i0teb",
-      "1gavwtu",
       "5vh7nw",
-      "19nfzay",
-      "1211veu",
+      "jl7b08",
+      "1x46gom",
+      "s98u2k",
+      "vo3j62",
+      "v5lod6",
+      "xisenu",
       "1jktaf1",
-      "1w3n3ul",
-      "br8sbu",
       "1xna9h3",
-      "3gr4lt",
-      "1fxbp39",
+      "1211veu",
+      "1n8iuyx",
       "1xsiv62",
-      "rsitre",
-      "1msoe71",
+      "2i6eah",
       "q4nd82",
-      "e8nfg9",
-      "mits95",
+      "ucqwi7",
       "ulytxr",
       "10j8d7x",
       "bjudxk"
     ],
-    "ultimo": "2026-09-25T11:00:19.012Z"
+    "ultimo": "2026-09-25T14:30:19.121Z"
   },
   "redes": {
-    "hasta": "2026-09-25T13:06:05.492Z"
+    "hasta": "2026-09-25T14:05:26.593Z"
   },
   "ultimaMedicion": "2026-09-25/9"
 }
