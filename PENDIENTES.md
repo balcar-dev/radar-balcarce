@@ -5,6 +5,32 @@ falta**. Lo que se exige siempre está en `REGLAS.md`.
 
 *Última revisión: 25/09/2026.* Lo que ya se hizo está al final ("Ya resuelto").
 
+## PARA MAÑANA (26/09), en este orden
+
+1. **WhatsApp NO está andando.** El 25/09 el workflow "Prueba de WhatsApp"
+   (Actions → Run workflow) mostró que CallMeBot contesta **"APIKey is
+   invalid"** y que el secreto `WHATSAPP_TELEFONO` tiene **7 dígitos** (tiene
+   que ser el número completo con código de país, sin + ni espacios, el mismo
+   con el que se activó CallMeBot). Hay que cargar de nuevo los dos secretos
+   (los pega una persona) y volver a correr "Prueba de WhatsApp" hasta que
+   llegue el mensaje al celular. Ojo: durante unas horas el código dio ese
+   error por bueno (arreglado el 25/09, con prueba); nunca llegó ningún aviso.
+2. **Ver que la portada quedó bien** con el deploy nuevo (sin fuentes arriba
+   de los títulos, sin "la vimos hace", farmacia sin hora, más nuevas primero)
+   y que el vigilante ya no detecta esas reglas. El 25/09 a la noche estaba bien.
+3. **Cuerpos de las notas:** el 24/09 sólo 15 de 115 notas tenían cuerpo. Mirar
+   si sube (log de "Actualizar la web": clave de Gemini, cuota, verificador).
+4. **Google AdSense** (lo pidió el usuario para mañana).
+5. **Panel online** (`PANEL.md`): decidir cómo se entra (Cloudflare Access o
+   login propio) y que una persona cargue el token de GitHub en Cloudflare.
+6. Cloudflare Web Analytics: el código ya está en el sitio; mirar en el panel
+   de Cloudflare que estén llegando visitas.
+7. Perfiles: aplicar las biografías de `PERFILES.md` (Instagram sólo desde el
+   celular) y hacer avatar/portada; confirmar nombre y categoría.
+8. Comercial: campo "tipo de actividad" y micro-SAS/SAS en el catálogo.
+9. Borrar `panel/datos/CLAVES-INICIALES.txt` cuando las claves nuevas del panel
+   (cambiadas el 25/09) estén guardadas en otro lado.
+
 ## A. Redes y automatización
 
 1. **Mirar los primeros días** que salgan bien los tres podcasts, el enlace en
@@ -88,7 +114,7 @@ Lo hecho y lo que falta, en detalle, en `SEO.md`.
 
 ## F. Infraestructura
 
-28. **Apagar Vercel y limpiar el DNS que quedó de Vercel.** El dominio ya lo
+28. **(Vercel apagado el 25/09: se le sacó la conexión con GitHub, ya no despliega; el proyecto sigue ahí por si hay que volver.) Falta borrar el proyecto y limpiar el DNS que quedó de Vercel.** El dominio ya lo
     sirve Cloudflare desde el 24/09; Vercel sólo queda de respaldo. Borrar
     también el sitio duplicado de la cuenta vieja (`radar-balcarce.vercel.app`).
 29. **Activar el WhatsApp de la vigilancia** si todavía no llega el resumen de

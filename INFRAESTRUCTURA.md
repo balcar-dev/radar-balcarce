@@ -27,7 +27,7 @@ PC de Hernán: el panel (puerto 4321) ── sincroniza decisiones a GitHub
 |---|---|---|
 | **GitHub Actions** (repo `balcar-dev/radar-balcarce`) | Todo el trabajo automático. La PC apagada no importa. | `balcardev@gmail.com` |
 | **Cloudflare Pages** | Sirve la web (`radarbalcarce.com` y `www`, que redirige con 301 al dominio sin `www`). El DNS del dominio también está en Cloudflare. Web Analytics activado. | `radarbalcarce@gmail.com` |
-| **Vercel** | Respaldo: sigue desplegando lo mismo, pero ya no recibe el dominio. Se puede apagar (`PENDIENTES.md`). El plan Hobby no permite publicidad. | `radarbalcarce@gmail.com` |
+| **Vercel** | APAGADO el 25/09 (se le sacó la conexión con GitHub: ya no despliega ni recibe el dominio; el proyecto sigue ahí por si hay que volver) (`PENDIENTES.md`). El plan Hobby no permite publicidad. | `radarbalcarce@gmail.com` |
 | **cron-job.org** | Dispara tres trabajos en GitHub cada 30 minutos: "Actualizar la web", el reloj de "Redes" y "Vigilancia". | `radarbalcarce@gmail.com` |
 | **Meta** (app "Radar Balcarce Publicador") | Publicar en la página de Facebook "Radar Balcarce" y en Instagram `@radarbalcarce`. Usuario del sistema `publicador-radar`, token sin vencimiento. | `radarbalcarce@gmail.com` |
 | **Gemini** (Google) | Dos claves separadas: una para redactar las notas y otra (paga) para las voces y los reels. | `radarbalcarce@gmail.com` |

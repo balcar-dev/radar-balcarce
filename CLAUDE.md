@@ -15,7 +15,7 @@ rioplatense, sin voseo forzado.
     pruebas/   `npm test`, 300+ pruebas, sin red
 
 Flujo: fuentes → ingesta → clasificar → puntaje → semáforo → `web/data/portada.json`
-→ GitHub Actions (cada 30 min) → **Cloudflare Pages** (desde el 24/09; Vercel queda
+→ GitHub Actions (cada 30 min) → **Cloudflare Pages** (desde el 24/09; Vercel APAGADO el 25/09, queda
 de respaldo). **La web se actualiza con la PC apagada.**
 
 Redes (todo desde GitHub, con la PC apagada): `redes.yml` es el reloj. Varias veces
@@ -97,8 +97,8 @@ publicar piezas a mano. Detalle y horarios en `REDES.md`.
 - Sitio: **`radarbalcarce.com`**, servido por **Cloudflare Pages** desde el
   24/09 (nameservers de DonWeb → Cloudflare; `www` también). Se despliega solo
   después de cada "Actualizar la web" (`cloudflare-deploy.yml`, con los
-  secretos `CLOUDFLARE_API_TOKEN` y `CLOUDFLARE_ACCOUNT_ID`). Vercel sigue
-  desplegando lo mismo pero ya no recibe el dominio: se puede apagar. `www`
+  secretos `CLOUDFLARE_API_TOKEN` y `CLOUDFLARE_ACCOUNT_ID`). Vercel (apagado el 25/09: sin conexión a GitHub) ya no
+  despliega ni recibe el dominio; falta borrar el proyecto. `www`
   redirige (301) al dominio sin `www` con una regla de Cloudflare. Web
   Analytics de Cloudflare está activado. Search Console verificado y con los
   dos sitemaps enviados (24/09). Cloudflare permite publicidad; Vercel Hobby no.
