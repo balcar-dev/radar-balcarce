@@ -1,5 +1,5 @@
 {
-  "exportado": "2026-09-25T08:50:34.893Z",
+  "exportado": "2026-09-25T09:00:37.194Z",
   "decisiones": {
     "1951120": {
       "estado": "automatica",
@@ -11576,6 +11576,49 @@
       "deIA": null,
       "por": null,
       "cuando": "2026-09-25T08:50:34.845Z"
+    },
+    "5f8lyo": {
+      "estado": "automatica",
+      "titulo": "Toprak Razgatlioglu analiza retirarse en Austria por falta de agarre",
+      "copete": "El piloto turco confesó su profunda frustración con el rendimiento de los neumáticos en el Red Bull Ring y admitió que continuó en competencia únicamente por respeto a su escudería.",
+      "cuerpo": "El piloto Toprak Razgatlioglu manifestó su enojo durante el Gran Premio de Austria al sufrir una notable falta de agarre en los neumáticos provistos por Michelin en el circuito Red Bull Ring. La situación generó tanta frustración en el deportista que evaluó abandonar la competencia de manera anticipada.\n\nA pesar de mostrar algunos destellos de buen ritmo durante las sesiones, el vigente competidor reconoció que su decisión final de mantenerse en la pista respondió exclusivamente a un gesto de respeto hacia la marca Yamaha, fabricante de su motocicleta.\n\nEl episodio expone las dificultades técnicas que atraviesa el equipo en el campeonato y abre interrogantes sobre el rendimiento de los compuestos para las próximas fechas del calendario internacional.",
+      "guion": "Toprak Razgatlioglu analiza retirarse en Austria por falta de agarre",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T09:00:37.144Z",
+      "claves": [
+        "El piloto experimentó problemas graves de agarre con los neumáticos.",
+        "Evaluó abandonar el Gran Premio de Austria en pleno desarrollo.",
+        "Decidió seguir compitiendo por respeto a su equipo, Yamaha."
+      ],
+      "seSabe": [
+        "Toprak Razgatlioglu se sintió frustrado por la falta de agarre en el Red Bull Ring.",
+        "El piloto consideró dejar el Gran Premio de Austria antes de finalizar.",
+        "Continuó participando en la competencia por respeto a Yamaha."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Toprak Razgatlioglu evaluó abandonar el Gran Premio de Austria debido a la falta de agarre de los neumáticos en el Red Bull Ring. El piloto continuó compitiendo únicamente por respeto a Yamaha.",
+      "etiquetas": [
+        "Toprak Razgatlioglu",
+        "Red Bull Ring",
+        "Yamaha"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Motorsport",
+          "enlace": "https://es.motorsport.com/motogp/news/razgatlioglu-enfadado-termino-carreras-respeto-yamaha/10858498/?utm_source=RSS&utm_medium=referral&utm_campaign=RSS-MOTOGP&utm_term=News&utm_content=es",
+          "fecha": "2026-09-25T08:50:07.000Z",
+          "oficial": false,
+          "aporte": "Informó sobre la frustración de Toprak Razgatlioglu con los neumáticos Michelin y su intención inicial de retirarse en Austria."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
     }
   },
   "horarios": {
