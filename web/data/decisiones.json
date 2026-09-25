@@ -1,5 +1,5 @@
 {
-  "exportado": "2026-09-25T06:51:14.706Z",
+  "exportado": "2026-09-25T07:01:15.372Z",
   "decisiones": {
     "1951120": {
       "estado": "automatica",
@@ -10481,6 +10481,278 @@
       "deIA": null,
       "por": null,
       "cuando": "2026-09-25T06:51:14.677Z"
+    },
+    "1a7n1tl": {
+      "estado": "automatica",
+      "titulo": null,
+      "copete": null,
+      "cuerpo": null,
+      "guion": null,
+      "deIA": null,
+      "por": null,
+      "cuando": "2026-09-25T07:00:38.806Z"
+    },
+    "1iv58lw": {
+      "estado": "automatica",
+      "titulo": null,
+      "copete": null,
+      "cuerpo": null,
+      "guion": null,
+      "deIA": null,
+      "por": null,
+      "cuando": "2026-09-25T07:00:41.253Z"
+    },
+    "11pnmnw": {
+      "estado": "automatica",
+      "titulo": null,
+      "copete": null,
+      "cuerpo": null,
+      "guion": null,
+      "deIA": null,
+      "por": null,
+      "cuando": "2026-09-25T07:00:48.198Z"
+    },
+    "52q3fj": {
+      "estado": "automatica",
+      "titulo": null,
+      "copete": null,
+      "cuerpo": null,
+      "guion": null,
+      "deIA": null,
+      "por": null,
+      "cuando": "2026-09-25T07:00:51.607Z"
+    },
+    "11nk8l": {
+      "estado": "automatica",
+      "titulo": null,
+      "copete": null,
+      "cuerpo": null,
+      "guion": null,
+      "deIA": null,
+      "por": null,
+      "cuando": "2026-09-25T07:00:55.074Z"
+    },
+    "159jwak": {
+      "estado": "automatica",
+      "titulo": null,
+      "copete": null,
+      "cuerpo": null,
+      "guion": null,
+      "deIA": null,
+      "por": null,
+      "cuando": "2026-09-25T07:00:57.727Z"
+    },
+    "jul4yj": {
+      "estado": "automatica",
+      "titulo": null,
+      "copete": null,
+      "cuerpo": null,
+      "guion": null,
+      "deIA": null,
+      "por": null,
+      "cuando": "2026-09-25T07:01:00.319Z"
+    },
+    "1x3bvjs": {
+      "estado": "automatica",
+      "titulo": "YPF mantiene precios en Balcarce y queda por debajo de las privadas",
+      "copete": "Mientras las petroleras privadas aplicaron subas de hasta un cinco por ciento en los surtidores, YPF conserva sus valores y se posiciona un ocho por ciento más barata en Balcarce.",
+      "cuerpo": "Las estaciones de servicio de YPF en Balcarce conservan sus valores habituales, mientras que las compañías privadas Shell, Axion y Puma aplicaron incrementos de entre el dos y el cinco por ciento en sus combustibles. Esta diferencia deja a la petrolera estatal aproximadamente un ocho por ciento por debajo de sus competidoras en el mercado local.\n\nEsta situación se da en un contexto de escalada del precio internacional del petróleo crudo, que se aproximaba a los ciento cinco dólares, según se informó en notas publicadas a principios de la semana.",
+      "guion": "YPF mantiene precios en Balcarce y queda por debajo de las privadas",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T07:01:04.328Z",
+      "claves": [
+        "YPF mantiene sus precios sin cambios en las estaciones locales.",
+        "Las petroleras privadas aumentaron entre un dos y un cinco por ciento.",
+        "La petrolera estatal quedó cerca de un ocho por ciento más barata.",
+        "Los ajustes ocurren en medio de la suba del crudo a nivel internacional."
+      ],
+      "seSabe": [
+        "Shell, Axion y Puma aumentaron sus precios entre un dos y un cinco por ciento.",
+        "YPF todavía no modificó sus valores en las estaciones de Balcarce.",
+        "YPF quedó cerca de un ocho por ciento por debajo de las petroleras privadas.",
+        "El contexto internacional registra una escalada en el precio del petróleo crudo."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "YPF mantiene sus precios en Balcarce y queda un ocho por ciento por debajo de las petroleras privadas, que aplicaron aumentos de hasta el cinco por ciento en medio de la suba del petróleo internacional.",
+      "etiquetas": [
+        "YPF",
+        "combustibles",
+        "aumento",
+        "precios",
+        "Balcarce"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Diario La Vanguardia",
+          "enlace": "https://www.diariolavanguardia.com/noticias/44897-combustibles-ypf-mantiene-sus-precios-en-balcarce-y-queda-cerca-de-un-8-por-debajo-de-las-petroleras-privadas/",
+          "fecha": null,
+          "oficial": false,
+          "aporte": "Indicó que YPF mantiene sus precios en Balcarce mientras las privadas aumentaron entre un 2% y un 5%."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "18o7aeq",
+          "titulo": "Las petroleras privadas aumentaron 5% los combustibles, mientras YPF espera: cómo quedaron los precios",
+          "fecha": "2026-09-24T18:26:39.000Z",
+          "ruta": "/nota/las-petroleras-privadas-aumentaron-5-los-combustibles-mientras-ypf-18o7aeq"
+        },
+        {
+          "id": "18bahep",
+          "titulo": "Sube la nafta: Shell, Axion y Puma aumentaron entre 2 y 5 por ciento los precios de sus combustibles",
+          "fecha": "2026-09-24T18:37:43.000Z",
+          "ruta": "/nota/sube-la-nafta-shell-axion-y-puma-aumentaron-entre-2-y-5-por-ciento-18bahep"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "rosl57": {
+      "estado": "automatica",
+      "titulo": null,
+      "copete": null,
+      "cuerpo": null,
+      "guion": null,
+      "deIA": null,
+      "por": null,
+      "cuando": "2026-09-25T07:01:07.831Z"
+    },
+    "wwbmd7": {
+      "estado": "automatica",
+      "titulo": "La familia Crespi confirma que la fábrica sigue en Balcarce",
+      "copete": "Los familiares de Tulio Crespi agradecieron el apoyo tras su despedida y aseguraron que la tradicional marca de automóviles continuará en plena actividad.",
+      "cuerpo": "Los familiares de Tulio Crespi anunciaron que la tradicional fábrica de automóviles continuará en funcionamiento en la ciudad. Sandro, Matías y Luciano expresaron su agradecimiento por el acompañamiento recibido de la comunidad durante la despedida del histórico constructor.\n\nLa decisión garantiza la continuidad de la marca y de los proyectos industriales que Crespi había iniciado. Además, adelantaron que su última obra maestra llevará su nombre como homenaje a su trayectoria.",
+      "guion": "La familia Crespi confirma que la fábrica sigue en Balcarce",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T07:01:10.012Z",
+      "claves": [
+        "La familia de Tulio Crespi confirmó que la fábrica seguirá funcionando.",
+        "Agradecieron el acompañamiento de la comunidad en la despedida.",
+        "Continuarán con la marca y los proyectos iniciados por el constructor.",
+        "La última obra maestra del histórico fabricante llevará su nombre."
+      ],
+      "seSabe": [
+        "Sandro, Matías y Luciano Crespi confirmaron que la fábrica continuará en actividad, según informó la familia.",
+        "La familia agradeció el acompañamiento recibido durante la despedida de Tulio Crespi.",
+        "La última obra maestra del constructor llevará su nombre, de acuerdo con lo anunciado."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "La familia Crespi confirmó que la tradicional fábrica de automóviles seguirá funcionando en Balcarce y continuará con los proyectos del histórico constructor.",
+      "etiquetas": [
+        "Tulio Crespi",
+        "fábrica",
+        "Balcarce"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Diario La Vanguardia",
+          "enlace": "https://www.diariolavanguardia.com/noticias/44899-la-familia-crespi-confirmo-que-la-fabrica-seguira-funcionando-crespi-sigue/",
+          "fecha": null,
+          "oficial": false,
+          "aporte": "Confirmó la continuidad de la fábrica y la marca tras el fallecimiento de Tulio Crespi, y adelantó que su última obra llevará su nombre."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "1qk6uan": {
+      "estado": "automatica",
+      "titulo": "La Justicia frena el aumento de la tarifa eléctrica en Balcarce",
+      "copete": "Un fallo judicial suspende la suba de luz dispuesta por la provincia de Buenos Aires e incluye a las cooperativas que brindan el servicio.",
+      "cuerpo": "El Juzgado en lo Contencioso Administrativo N°1 de Bahía Blanca determinó que la medida cautelar que frena la Resolución provincial se aplica también a las entidades cooperativas que prestan suministro eléctrico bajo jurisdicción municipal y provincial.\n\nEl organismo de control del sector eléctrico provincial deberá notificar formalmente esta decisión a las prestatarias para retrotraer los valores al cuadro tarifario anterior, una medida que impacta directamente en la facturación de los usuarios locales.",
+      "guion": "La Justicia frena el aumento de la tarifa electrica en Balcarce",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T07:01:13.246Z",
+      "claves": [
+        "La Justicia frenó el aumento de la luz en la provincia.",
+        "La medida incluye a las cooperativas eléctricas.",
+        "El OCEBA debe comunicar formalmente la decisión."
+      ],
+      "seSabe": [
+        "El Juzgado en lo Contencioso Administrativo N°1 de Bahía Blanca dictó que la cautelar contra la Resolución 585/2026 comprende a las cooperativas eléctricas.",
+        "El OCEBA debe realizar una comunicación formal al respecto, según informó el medio."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "La Justicia frenó el aumento de la luz y la medida alcanza a las cooperativas eléctricas que prestan servicio en el distrito. El OCEBA deberá notificar la decisión para retrotraer las tarifas.",
+      "etiquetas": [
+        "tarifa electrica",
+        "aumento de luz",
+        "cooperativa de electricidad",
+        "Justicia",
+        "OCEBA",
+        "Balcarce"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Diario La Vanguardia",
+          "enlace": "https://www.diariolavanguardia.com/noticias/44896-la-justicia-freno-el-aumento-de-luz-de-kicillof-y-ordeno-regresar-al-cuadro-tarifario-anterior/",
+          "fecha": null,
+          "oficial": false,
+          "aporte": "Informó que la cautelar judicial sobre la tarifa eléctrica alcanza a las cooperativas y que el OCEBA debe notificar la medida."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "15zqvfd": {
+      "estado": "automatica",
+      "titulo": "El Chi Kung gana espacio como disciplina milenaria en Balcarce",
+      "copete": "La visita de referentes de disciplinas tradicionales chinas impulsó el conocimiento del Chi Kung en la ciudad.",
+      "cuerpo": "La práctica de Chi Kung, que combina movimientos corporales, técnicas de respiración y concentración mental, cuenta con diversos espacios dedicados a su enseñanza en el ámbito local. La difusión de esta disciplina milenaria se vio reforzada recientemente por la llegada de referentes especializados en artes tradicionales chinas a la ciudad.\n\nA partir de esta visita, los espacios locales que ofrecen clases de la actividad lograron mayor visibilidad, acercando a los vecinos una alternativa enfocada en el bienestar físico y mental mediante el trabajo coordinado de la respiración y la postura.",
+      "guion": "El Chi Kung gana espacio como disciplina milenaria en Balcarce",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T07:01:15.342Z",
+      "claves": [
+        "Disciplina milenaria centrada en movimiento y respiración",
+        "Presencia de espacios de enseñanza en Balcarce",
+        "Visita de referentes de disciplinas chinas"
+      ],
+      "seSabe": [
+        "Existen espacios de enseñanza de Chi Kung en Balcarce",
+        "La disciplina combina movimiento, respiración y concentración",
+        "Referentes de disciplinas tradicionales chinas visitaron la ciudad"
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El Chi Kung gana espacio en Balcarce con propuestas de enseñanza que combinan movimiento, respiración y concentración, impulsadas por la visita de referentes de disciplinas tradicionales chinas.",
+      "etiquetas": [
+        "Chi Kung",
+        "Balcarce"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Diario La Vanguardia",
+          "enlace": "https://www.diariolavanguardia.com/noticias/44895-chi-kung-una-practica-milenaria-que-tambien-gana-espacio-en-balcarce/",
+          "fecha": null,
+          "oficial": false,
+          "aporte": "Informó sobre la presencia de espacios de enseñanza de Chi Kung en Balcarce y la visita de referentes de disciplinas tradicionales chinas."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
     }
   },
   "horarios": {
