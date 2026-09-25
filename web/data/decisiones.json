@@ -1,5 +1,5 @@
 {
-  "exportado": "2026-09-25T06:21:38.169Z",
+  "exportado": "2026-09-25T06:41:02.795Z",
   "decisiones": {
     "1951120": {
       "estado": "automatica",
@@ -10023,6 +10023,344 @@
       "deIA": null,
       "por": null,
       "cuando": "2026-09-25T06:21:38.138Z"
+    },
+    "1tspv07": {
+      "estado": "automatica",
+      "titulo": "El Concejo aprueba prorrogar deudas de agua en Balcarce",
+      "copete": "El Concejo Deliberante aprobó una prórroga para el pago de deudas de agua y solicitó información sobre el nuevo gerente de la empresa prestataria.",
+      "cuerpo": "Durante la última sesión del Concejo Deliberante, los ediles aprobaron una extensión en los plazos para regularizar las deudas por el servicio de agua en el distrito. Además, se trató un proyecto de comunicación presentado por la concejal Sol Di Gerónimo, perteneciente al bloque Fuerza Patria, mediante el cual se solicitó que cese el hostigamiento a los vecinos por parte del estudio jurídico encargado de las cobranzas.\n\nEn la misma jornada legislativa, los representantes comunales plantearon la necesidad de conocer formalmente a la nueva autoridad gerencial de la empresa prestataria del servicio sanitario, con el fin de entablar un canal de diálogo institucional ante los reclamos vigentes de la comunidad balcarceña.",
+      "guion": "El Concejo aprueba prorrogar deudas de agua en Balcarce",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T06:40:35.389Z",
+      "claves": [
+        "El Concejo Deliberante aprobó una prórroga para deudas de agua",
+        "Trataron un proyecto sobre el accionar de un estudio jurídico de cobranzas",
+        "Pidieron precisiones sobre la asunción del nuevo gerente de la empresa"
+      ],
+      "seSabe": [
+        "El Concejo Deliberante aprobó una prórroga para deudas de agua según el informe del medio local",
+        "La concejal Sol Di Gerónimo presentó un proyecto sobre reclamos a vecinos por parte de un estudio jurídico",
+        "Se solicitó conocer la identidad y detalles del nuevo gerente de la empresa prestataria"
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El Concejo Deliberante aprobó una prórroga para el pago de deudas de agua y pidió informes sobre el nuevo gerente de la empresa prestadora.",
+      "etiquetas": [
+        "Concejo Deliberante",
+        "agua",
+        "deudas",
+        "Balcarce",
+        "Fuerza Patria"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Puntonueve (FM 100.9)",
+          "enlace": "https://puntonueve.com.ar/aprobaron-prorroga-para-deudas-de-agua-y-piden-conocer-al-nuevo-gerente-de-la-empresa/",
+          "fecha": "2026-09-25T00:05:57.000Z",
+          "oficial": false,
+          "aporte": "Informó sobre la aprobación de la prórroga para deudas de agua y el proyecto presentado en el Concejo Deliberante."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "yjx2ys",
+          "titulo": "En concurso: una empresa del agro consiguió una prórroga para presentar una propuesta a sus acreedores y hoy factura unos US$20 millones",
+          "fecha": "2026-09-23T21:01:25.000Z",
+          "ruta": "/nota/en-concurso-una-empresa-del-agro-consiguio-una-prorroga-para-yjx2ys"
+        },
+        {
+          "id": "1n4w9ua",
+          "titulo": "Piden instalar un punto presencial para gestionar el TelePASE en Balcarce o en el peaje de la Ruta 226",
+          "fecha": "2026-09-23T14:56:16.191Z",
+          "ruta": "/nota/piden-instalar-un-punto-presencial-para-gestionar-el-telepase-en-1n4w9ua"
+        },
+        {
+          "id": "32591i",
+          "titulo": "Piden un punto TelePASE en Balcarce",
+          "fecha": "2026-09-23T12:51:34.000Z",
+          "ruta": "/nota/piden-un-punto-telepase-en-balcarce-32591i"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "1muc0dj": {
+      "estado": "automatica",
+      "titulo": "El Concejo aprueba denominar Paseo Intendente Juan José Mare al circuito del Cerro El Triu",
+      "copete": "El Concejo Deliberante aprobó la ordenanza para nombrar Paseo Intendente Juan José Mare a la Vuelta Interna del Cerro El Triunfo, por iniciativa del bloque oficialista.",
+      "cuerpo": "La iniciativa fue presentada por la concejal Sandra Divito, integrante del bloque Juntos por el Cambio, y recibió el visto bueno del cuerpo deliberativo en las últimas horas.\n\nDe esta manera, el sector conocido tradicionalmente como la Vuelta Interna dentro del tradicional espacio verde de la ciudad llevará el nombre del exjefe comunal.\n\nLa medida busca homenajear su paso por la función pública en el distrito mediante la nominación oficial de este concurrido circuito recreativo y deportivo.",
+      "guion": "El Concejo aprueba denominar Paseo Intendente Juan José Mare al circuito del Cerro El Triunfo en Balcarce",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T06:40:37.679Z",
+      "claves": [
+        "El Concejo Deliberante aprobó una nueva denominación para el Cerro El Triunfo.",
+        "La Vuelta Interna se llamará Paseo Intendente Juan José Mare.",
+        "El proyecto fue presentado por la concejal Sandra Divito de Juntos por el Cambio."
+      ],
+      "seSabe": [
+        "El Concejo Deliberante aprobó la ordenanza para denominar a la Vuelta Interna del Cerro El Triunfo como Paseo Intendente Juan José Mare.",
+        "El proyecto fue impulsado por la concejal Sandra Divito, perteneciente al bloque Juntos por el Cambio."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El Concejo Deliberante aprobó que la Vuelta Interna del Cerro El Triunfo lleve el nombre de Paseo Intendente Juan José Mare, tras una iniciativa del bloque Juntos por el Cambio.",
+      "etiquetas": [
+        "Concejo Deliberante",
+        "Cerro El Triunfo",
+        "Juan José Mare",
+        "Sandra Divito",
+        "Balcarce"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Puntonueve (FM 100.9)",
+          "enlace": "https://puntonueve.com.ar/mare-tendra-su-paseo-en-el-cerro-el-triunfo-tras-la-aprobacion-del-concejo-deliberante/",
+          "fecha": "2026-09-24T23:30:13.000Z",
+          "oficial": false,
+          "aporte": "Informó la aprobación del Concejo Deliberante para nombrar Paseo Intendente Juan José Mare a la Vuelta Interna del Cerro El Triunfo a propuesta de la concejal Sandra Divito."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "vf07qr",
+          "titulo": "Festejos por el Día del Estudiante en el Cerro El Triunfo",
+          "fecha": "2026-09-18T17:07:18.000Z",
+          "ruta": "/nota/festejos-por-el-dia-del-estudiante-en-el-cerro-el-triunfo-vf07qr"
+        },
+        {
+          "id": "834bwh",
+          "titulo": "Festejos por el Día del Estudiante en el cerro El Triunfo",
+          "fecha": "2026-09-18T15:12:07.000Z",
+          "ruta": "/nota/festejos-por-el-dia-del-estudiante-en-el-cerro-el-triunfo-834bwh"
+        },
+        {
+          "id": "19i5zse",
+          "titulo": "Día del Estudiante: habrá una jornada recreativa y musical en el Cerro El Triunfo",
+          "fecha": "2026-09-18T19:48:36.000Z",
+          "ruta": "/nota/dia-del-estudiante-habra-una-jornada-recreativa-y-musical-en-el-cerro-19i5zse"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "1s5n48z": {
+      "estado": "automatica",
+      "titulo": null,
+      "copete": null,
+      "cuerpo": null,
+      "guion": null,
+      "deIA": null,
+      "por": null,
+      "cuando": "2026-09-25T06:40:41.148Z"
+    },
+    "af5xg4": {
+      "estado": "automatica",
+      "titulo": null,
+      "copete": null,
+      "cuerpo": null,
+      "guion": null,
+      "deIA": null,
+      "por": null,
+      "cuando": "2026-09-25T06:40:43.566Z"
+    },
+    "1d356vs": {
+      "estado": "automatica",
+      "titulo": null,
+      "copete": null,
+      "cuerpo": null,
+      "guion": null,
+      "deIA": null,
+      "por": null,
+      "cuando": "2026-09-25T06:40:46.256Z"
+    },
+    "1k3dzvz": {
+      "estado": "automatica",
+      "titulo": null,
+      "copete": null,
+      "cuerpo": null,
+      "guion": null,
+      "deIA": null,
+      "por": null,
+      "cuando": "2026-09-25T06:40:48.187Z"
+    },
+    "1dou3ni": {
+      "estado": "automatica",
+      "titulo": "Estudian el costo operativo de usar drones para pulverizar papa en Balcarce",
+      "copete": "Un informe de INTA Balcarce analizó el valor de aplicar agroquímicos con drones propios en campos de papa de escala media del sudeste bonaerense.",
+      "cuerpo": "Un trabajo del INTA Balcarce analizó los gastos que demanda incorporar un dron agrícola propio para pulverizar cultivos de papa en una explotación mediana de la región. El estudio determinó que la viabilidad económica de la tecnología está sujeta al uso continuo que se le dé al equipo durante el año y a la recuperación de la inversión inicial.\n\nLa incorporación de esta herramienta aérea busca optimizar las tareas de cuidado en los lotes paperos del sudeste bonaerense, donde el manejo de costos resulta clave para la rentabilidad del sector agropecuario local.",
+      "guion": "Estudian el costo operativo de usar drones para pulverizar papa en Balcarce",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T06:40:50.774Z",
+      "claves": [
+        "El INTA Balcarce analizó costos de drones aplicadores en papa",
+        "El gasto depende del uso anual y la amortización del equipo",
+        "Apunta a explotaciones medianas del sudeste bonaerense"
+      ],
+      "seSabe": [
+        "El INTA Balcarce evaluó el costo operativo de usar un dron propio para pulverizar papa",
+        "El resultado depende del aprovechamiento anual y la amortización del equipo",
+        "El análisis se centró en una explotación papera de escala media"
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Un informe del INTA Balcarce analizó el costo operativo de utilizar drones propios para pulverizar cultivos de papa en establecimientos medianos de la región.",
+      "etiquetas": [
+        "Papa",
+        "INTA Balcarce",
+        "Drones",
+        "Sudeste bonaerense"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Argenpapa",
+          "enlace": "https://www.argenpapa.com.ar/noticia/17680-argentina-drones-aplicadores-iquest-cuanto-cuesta-pulverizar-una-hectarea-de-papa-en-el-sudeste-bonaerense",
+          "fecha": null,
+          "oficial": false,
+          "aporte": "Aportó los detalles del análisis del INTA Balcarce sobre el costo de usar drones para pulverizar papa."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "jd35eq",
+          "titulo": "Pocho Lavezzi, Julián Álvarez, Mario Pergolini, Tini y la depresión: ¿cuánto cuesta un psicólogo en Argentina en septiembre 2026?",
+          "fecha": "2026-09-20T20:00:00.000Z",
+          "ruta": "/nota/pocho-lavezzi-julian-alvarez-mario-pergolini-tini-y-la-depresion-jd35eq"
+        },
+        {
+          "id": "16pajho",
+          "titulo": "Cuánto cuesta ir a ver a Franco Colapinto al Gran Premio de Brasil en noviembre",
+          "fecha": "2026-09-17T18:33:09.000Z",
+          "ruta": "/nota/cuanto-cuesta-ir-a-ver-a-franco-colapinto-al-gran-premio-de-brasil-en-16pajho"
+        },
+        {
+          "id": "1li63ec",
+          "titulo": "El Concejo debate la situación de una investigadora en Balcarce",
+          "fecha": "2026-09-24T14:26:48.000Z",
+          "ruta": "/nota/el-concejo-debate-la-situacion-de-una-investigadora-en-balcarce-1li63ec"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "165tzq5": {
+      "estado": "automatica",
+      "titulo": null,
+      "copete": null,
+      "cuerpo": null,
+      "guion": null,
+      "deIA": null,
+      "por": null,
+      "cuando": "2026-09-25T06:40:53.217Z"
+    },
+    "v7ui9o": {
+      "estado": "automatica",
+      "titulo": "Ana Wu brinda una clase abierta de Chi Kung en Balcarce",
+      "copete": "La instructora ofrecerá una práctica gratuita y sin inscripción previa este jueves frente al Museo Juan Manuel Fangio, abierta a toda la comunidad local.",
+      "cuerpo": "La actividad comenzará este jueves a partir de las 15:30 en el espacio público ubicado frente al Museo Juan Manuel Fangio. La propuesta está coordinada por la maestra Ana Wu y apunta a la participación general de los vecinos.\n\nDesde la organización detallaron que la clase no tiene costo alguno y que los asistentes no precisan contar con conocimientos previos en la disciplina para sumarse a la práctica al aire libre.",
+      "guion": "Ana Wu brinda una clase abierta de Chi Kung en Balcarce",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T06:40:55.106Z",
+      "claves": [
+        "La clase será este jueves a las 15:30",
+        "El punto de encuentro es frente al Museo Fangio",
+        "La actividad es gratuita y sin experiencia previa"
+      ],
+      "seSabe": [
+        "La instructora Ana Wu dictará una clase abierta de Chi Kung",
+        "La cita es este jueves desde las 15:30 frente al Museo Juan Manuel Fangio",
+        "La propuesta es gratuita y no requiere experiencia previa"
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Este jueves por la tarde habrá una clase abierta y gratuita de Chi Kung frente al Museo Fangio, dictada por la maestra Ana Wu y destinada a toda la comunidad sin necesidad de experiencia previa.",
+      "etiquetas": [
+        "Chi Kung",
+        "Plaza Libertad",
+        "Museo Fangio",
+        "actividades",
+        "Balcarce"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Radio Gabal (FM 104.1)",
+          "enlace": "https://www.radiogabal.com.ar/index.php/deportes/la-maestra-ana-wu-brindara-una-clase-abierta-de-chi-kung-en-plaza-libertad",
+          "fecha": "2026-09-24T12:44:24.000Z",
+          "oficial": false,
+          "aporte": "Aportó los detalles sobre el horario, la ubicación, la gratuidad y los requisitos de la clase abierta de Chi Kung."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "5ey0em",
+          "titulo": "Julián Santero achicó la diferencia en el campeonato de TN Clase 3",
+          "fecha": "2026-09-21T19:22:47.000Z",
+          "ruta": "/nota/julian-santero-achico-la-diferencia-en-el-campeonato-de-tn-clase-3-5ey0em"
+        },
+        {
+          "id": "rrmbvd",
+          "titulo": "Iansa ganó en la Clase 2 del TN en Río Cuarto",
+          "fecha": "2026-09-20T16:37:21.000Z",
+          "ruta": "/nota/iansa-gano-en-la-clase-2-del-tn-en-rio-cuarto-rrmbvd"
+        },
+        {
+          "id": "xtlwre",
+          "titulo": "Largas filas para ingresar al autódromo Fangio",
+          "fecha": "2026-09-24T12:24:00.000Z",
+          "ruta": "/nota/largas-filas-para-ingresar-al-autodromo-fangio-xtlwre"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "wra9xv": {
+      "estado": "automatica",
+      "titulo": null,
+      "copete": null,
+      "cuerpo": null,
+      "guion": null,
+      "deIA": null,
+      "por": null,
+      "cuando": "2026-09-25T06:40:57.508Z"
+    },
+    "m7fmln": {
+      "estado": "automatica",
+      "titulo": null,
+      "copete": null,
+      "cuerpo": null,
+      "guion": null,
+      "deIA": null,
+      "por": null,
+      "cuando": "2026-09-25T06:41:00.378Z"
+    },
+    "1ss3yj3": {
+      "estado": "automatica",
+      "titulo": null,
+      "copete": null,
+      "cuerpo": null,
+      "guion": null,
+      "deIA": null,
+      "por": null,
+      "cuando": "2026-09-25T06:41:02.735Z"
     }
   },
   "horarios": {
