@@ -1,5 +1,5 @@
 {
-  "exportado": "2026-09-25T11:21:02.893Z",
+  "exportado": "2026-09-25T11:30:45.992Z",
   "decisiones": {
     "1951120": {
       "estado": "automatica",
@@ -12413,6 +12413,103 @@
       "deIA": null,
       "por": null,
       "cuando": "2026-09-25T11:21:02.830Z"
+    },
+    "1e2jbrs": {
+      "estado": "automatica",
+      "titulo": null,
+      "copete": null,
+      "cuerpo": null,
+      "guion": null,
+      "deIA": null,
+      "por": null,
+      "cuando": "2026-09-25T11:30:36.649Z"
+    },
+    "7ihatv": {
+      "estado": "automatica",
+      "titulo": null,
+      "copete": null,
+      "cuerpo": null,
+      "guion": null,
+      "deIA": null,
+      "por": null,
+      "cuando": "2026-09-25T11:30:39.391Z"
+    },
+    "pwq91n": {
+      "estado": "pendiente",
+      "titulo": null,
+      "copete": null,
+      "cuerpo": null,
+      "guion": null,
+      "deIA": null,
+      "por": null,
+      "cuando": "2026-09-25T11:30:41.475Z"
+    },
+    "e2kylj": {
+      "estado": "automatica",
+      "titulo": "Se prevé una jornada con alta circulación vehicular en Ciudad de México",
+      "copete": "La Secretaría de Seguridad Ciudadana de Ciudad de México anticipa una jornada con protestas, concentraciones y eventos masivos que afectarán el tránsito.",
+      "cuerpo": "La Secretaría de Seguridad Ciudadana (SSC) informó que se espera una jornada con gran movimiento en la Ciudad de México, la cual incluirá concentraciones, citas agendadas, rodadas de motociclistas y ciclistas, y eventos masivos como un concierto del grupo Stray Kids. Las autoridades prevén posibles complicaciones en la circulación vehicular a lo largo del día debido a estas actividades en la vía pública.\n\nEn jornadas anteriores, la misma dependencia había reportado operativos similares con múltiples concentraciones y marchas en distintas alcaldías de la capital del país. Estas previsiones forman parte de los reportes diarios de movilidad y seguridad vial que emite el organismo gubernamental.\n\nEstas medidas informativas buscan alertar a los conductores y transeúntes sobre los puntos de mayor congestión para evitar demoras en los desplazamientos urbanos.",
+      "guion": "Se prevé una jornada con alta circulación vehicular en Ciudad de México",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T11:30:43.845Z",
+      "claves": [
+        "La SSC anticipa gran movimiento en Ciudad de México",
+        "Se prevén concentraciones y rodadas de ciclistas y motos",
+        "Habrá eventos masivos, incluyendo un concierto",
+        "Se estiman posibles afectaciones viales"
+      ],
+      "seSabe": [
+        "La Secretaría de Seguridad Ciudadana prevé una jornada con alto movimiento en Ciudad de México, según informó la propia dependencia.",
+        "Se esperan concentraciones, citas agendadas, rodadas de motociclistas y ciclistas, y eventos masivos como el concierto de Stray Kids."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "La Secretaría de Seguridad Ciudadana de Ciudad de México anticipa una jornada con concentraciones, rodadas y eventos masivos que afectarán el tránsito vehicular.",
+      "etiquetas": [
+        "Ciudad de México",
+        "manifestaciones",
+        "seguridad vial"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/mexico/2026/09/25/en-vivo-bloqueos-en-carreteras-accidentes-y-manifestaciones-hoy-25-de-septiembre/",
+          "fecha": "2026-09-25T11:25:43.000Z",
+          "oficial": false,
+          "aporte": null
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1nudvd3",
+          "titulo": "EN VIVO | Bloqueos en carreteras, accidentes y manifestaciones hoy 24 de septiembre",
+          "fecha": "2026-09-24T20:54:21.000Z",
+          "ruta": "/nota/en-vivo-bloqueos-en-carreteras-accidentes-y-manifestaciones-hoy-24-de-1nudvd3"
+        },
+        {
+          "id": "5e4vhj",
+          "titulo": "EN VIVO | Bloqueos en carreteras, accidentes y manifestaciones hoy 23 de septiembre",
+          "fecha": "2026-09-23T22:46:57.000Z",
+          "ruta": "/nota/en-vivo-bloqueos-en-carreteras-accidentes-y-manifestaciones-hoy-23-de-5e4vhj"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "3oy62j": {
+      "estado": "automatica",
+      "titulo": null,
+      "copete": null,
+      "cuerpo": null,
+      "guion": null,
+      "deIA": null,
+      "por": null,
+      "cuando": "2026-09-25T11:30:45.952Z"
     }
   },
   "horarios": {
