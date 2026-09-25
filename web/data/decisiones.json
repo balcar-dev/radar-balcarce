@@ -1,5 +1,5 @@
 {
-  "exportado": "2026-09-25T13:33:00.843Z",
+  "exportado": "2026-09-25T13:44:02.436Z",
   "decisiones": {
     "1951120": {
       "estado": "automatica",
@@ -12920,13 +12920,50 @@
     },
     "wmweq4": {
       "estado": "automatica",
-      "titulo": null,
-      "copete": null,
-      "cuerpo": null,
-      "guion": null,
-      "deIA": null,
-      "por": null,
-      "cuando": "2026-09-25T06:51:06.262Z"
+      "titulo": "El Club Sportivo Trabajo recibe una nueva fecha del Prix de Ajedrez en Balcarce",
+      "copete": "Casi cien jugadores compitieron en la cuarta fecha del Prix de Ajedrez del Atlántico. El certamen se desarrolló en las instalaciones de la entidad balcarceña por tercer año consecutivo.",
+      "cuerpo": "El Club Sportivo Trabajo fue escenario de la cuarta fecha del Prix de Ajedrez del Atlántico, consolidándose como sede del certamen por tercer año consecutivo.\n\nLa competencia convocó a jugadores de Balcarce, Mar del Plata, Miramar y Necochea, quienes disputaron las diferentes instancias del torneo en las instalaciones de la institución local.\n\nLa realización de esta nueva jornada deportiva reafirma la presencia del circuito regional en el distrito, congregando a destacados exponentes de la disciplina en un encuentro que ya es habitual en el calendario anual de la entidad.",
+      "guion": "El Club Sportivo Trabajo recibe una nueva fecha del Prix de Ajedrez en Balcarce",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T13:44:02.378Z",
+      "claves": [
+        "El Club Sportivo Trabajo fue sede del Prix de Ajedrez del Atlántico.",
+        "Se trató de la cuarta fecha del certamen regional.",
+        "Participaron casi cien jugadores de la zona.",
+        "Es el tercer año consecutivo que la entidad recibe el torneo."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "etiquetas": [
+        "ajedrez",
+        "Club Sportivo Trabajo",
+        "Prix de Ajedrez del Atlántico",
+        "Balcarce"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/casi-cien-jugadores-reunio-el-prix-de-ajedrez-del-atlantico-482",
+          "fecha": "2026-09-24T12:20:17.000Z",
+          "oficial": false,
+          "aporte": "Informó sobre la realización de la cuarta fecha del Prix de Ajedrez del Atlántico en el Club Sportivo Trabajo con la participación de 96 jugadores de la región."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1pujkam",
+          "titulo": "Casi un centenar de jugadores participaron de una nueva fecha del Prix de Ajedrez del Atlántico",
+          "fecha": "2026-09-22T18:10:50.681Z",
+          "ruta": "/nota/casi-un-centenar-de-jugadores-participaron-de-una-nueva-fecha-del-1pujkam"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
     },
     "cs4hof": {
       "estado": "automatica",
@@ -14045,13 +14082,51 @@
     },
     "pktre7": {
       "estado": "automatica",
-      "titulo": null,
-      "copete": null,
-      "cuerpo": null,
-      "guion": null,
-      "deIA": null,
-      "por": null,
-      "cuando": "2026-09-25T07:21:20.375Z"
+      "titulo": "Organizan la segunda edición de la carrera homenaje a Luis Vildoza en Balcarce",
+      "copete": "La Subsecretaría de Deporte planifica la segunda competencia atlética en memoria del profesor Luis Vildoza. Será el próximo primero de noviembre con pruebas de 10 y 5 kilómetros en las calles céntricas.",
+      "cuerpo": "La Subsecretaría de Deporte comenzó los preparativos para la segunda edición de la competencia atlética en homenaje al recordado profesor Luis Vildoza. La actividad se llevará a cabo el próximo primero de noviembre y tendrá como punto de largada y llegada la avenida Suipacha, entre las calles veintisiete y veintinueve.\n\nDesde el área comunal informaron que en los próximos días se darán a conocer los detalles correspondientes para formalizar la inscripción de los atletas y vecinos interesados en sumarse a la jornada.",
+      "guion": "Organizan la segunda edición de la carrera homenaje a Luis Vildoza en Balcarce",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T13:44:02.378Z",
+      "claves": [
+        "Homenaje al profesor Luis Vildoza",
+        "Competencia prevista para el primero de noviembre",
+        "Pruebas de diez y cinco kilómetros",
+        "Inscripciones a confirmar en los próximos días"
+      ],
+      "seSabe": [
+        "La organización está a cargo de la Subsecretaría de Deporte municipal",
+        "Se realizará la segunda edición de la carrera en homenaje al profesor Luis Vildoza",
+        "La cita será el primero de noviembre",
+        "El punto de partida se ubicará en la avenida Suipacha entre veintisiete y veintinueve",
+        "Habrá una competencia de diez kilómetros y una correcaminata de cinco kilómetros"
+      ],
+      "noConfirmado": [
+        "Los detalles y requisitos sobre el proceso de inscripción todavía no fueron informados.",
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "La Subsecretaría de Deporte organiza la segunda edición de la carrera en homenaje al profesor Luis Vildoza, que se realizará el próximo primero de noviembre en Balcarce con pruebas de diez y cinco kilómetros.",
+      "etiquetas": [
+        "Deportes",
+        "Luis Vildoza",
+        "Balcarce",
+        "Subsecretaria de Deporte"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Municipalidad de Balcarce",
+          "enlace": "https://balcarce.gob.ar/2026/09/23/carrera-homenaje-a-luis-vildoza/",
+          "fecha": "2026-09-23T14:38:41.000Z",
+          "oficial": true,
+          "aporte": "Informó la organización de la segunda carrera homenaje a Luis Vildoza por parte de la Subsecretaría de Deporte para el primero de noviembre con distancias de 10K y 5K."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Sale de una fuente oficial: Municipalidad de Balcarce.",
+        "sugeridoPorIA": "ALTA"
+      }
     },
     "8qdpz7": {
       "estado": "automatica",
@@ -16412,6 +16487,292 @@
         "nivel": "ALTA",
         "porque": "Sale de una fuente oficial: Municipalidad de Balcarce.",
         "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "ffhx7": {
+      "estado": "automatica",
+      "titulo": "Franco Colapinto larga décimo en el Gran Premio de Azerbaiyán",
+      "copete": "El piloto argentino de Alpine se metió entre los diez mejores de la clasificación en el circuito callejero de Bakú. George Russell se quedó con la pole position.",
+      "cuerpo": "El piloto argentino Franco Colapinto completó una destacada actuación en la clasificación del Gran Premio de Azerbaiyán y este sábado largará desde la décima posición en el circuito callejero de Bakú. El representante de Alpine logró avanzar a la última instancia de la sesión tras una buena labor en la Q2, aunque en la Q3 experimentó dificultades con los frenajes y la batería, además de sufrir un despiste que le impidió mejorar su registro con neumáticos gastados. Su compañero de equipo, el francés Pierre Gasly, partirá desde el séptimo cajón de la parrilla.\n\nComo hecho destacado, el líder del campeonato, el italiano Kimi Antonelli, sufrió un incidente en la Q1 al golpear contra el muro, quedó relegado al decimosexto lugar y no pudo disputar la fase final.\n\nLa carrera principal se disputará este sábado en el trazado urbano de Azerbaiyán, donde el piloto nacional buscará avanzar posiciones en una de las competencias más exigentes del calendario de la máxima categoría del automovilismo mundial.",
+      "guion": "Franco Colapinto larga décimo en el Gran Premio de Azerbaiyán",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T13:44:02.377Z",
+      "claves": [
+        "Franco Colapinto clasificó a la Q3 y largará décimo en Bakú.",
+        "George Russell se quedó con la pole position con el Mercedes.",
+        "El líder del campeonato, Kimi Antonelli, chocó en la Q1 y largará decimosexto."
+      ],
+      "seSabe": [
+        "George Russell se quedó con la pole position del Gran Premio de Azerbaiyán en el circuito callejero de Bakú.",
+        "Franco Colapinto logró meterse en la Q3 y largará desde el décimo puesto con el Alpine.",
+        "Pierre Gasly, compañero de equipo de Colapinto, partirá desde la séptima posición.",
+        "Kimi Antonelli sufrió un accidente en la Q1 que lo relegó al decimosexto lugar de la parrilla."
+      ],
+      "noConfirmado": [
+        "Evolución final del rendimiento del monoplaza de Alpine de cara al ritmo de carrera."
+      ],
+      "textoRedes": "Franco Colapinto se metió en la Q3 y largará desde la décima posición en el Gran Premio de Azerbaiyán de Fórmula 1. La competencia principal se disputará este sábado en el circuito callejero de Bakú.",
+      "etiquetas": [
+        "Franco Colapinto",
+        "Formula 1",
+        "Bakú"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/deportes/automovilismo/franco-colapinto-en-la-formula-1-en-vivo-nid25092026/",
+          "fecha": "2026-09-25T13:36:49.000Z",
+          "oficial": false,
+          "aporte": "Detalles de la clasificación de George Russell y el incidente de Kimi Antonelli."
+        },
+        {
+          "medio": "Minuto Uno",
+          "enlace": "https://www.minutouno.com/deportes/franco-colapinto-el-gran-premio-azerbaiyan-la-formula-1-seguilo-vivo-minuto-minuto-n6326067",
+          "fecha": "2026-09-25T13:30:00.000Z",
+          "oficial": false,
+          "aporte": "Posiciones iniciales de las prácticas libres."
+        },
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/deportes/2026/09/25/franco-colapinto-afronta-la-ultima-practica-libre-en-el-gran-premio-de-baku/",
+          "fecha": "2026-09-25T13:19:24.000Z",
+          "oficial": false,
+          "aporte": "Tiempos de referencia de la clasificación en el circuito de Bakú."
+        },
+        {
+          "medio": "Ecos Diarios (Necochea)",
+          "enlace": "https://elecos.com.ar/formula-1-franco-colapinto-largara-en-el-10-lugar-en-azerbaiyan",
+          "fecha": "2026-09-25T13:14:02.000Z",
+          "oficial": false,
+          "aporte": "Confirmación de la décima posición de largada para Franco Colapinto."
+        },
+        {
+          "medio": "Olé",
+          "enlace": "https://www.ole.com.ar/autos/formula1-gran-premio-deazerbaiyan-2026-clasificacion-vivo-franco-colapinto-alpine_0_SGTtDR8tCI.html",
+          "fecha": "2026-09-25T12:55:00.000Z",
+          "oficial": false,
+          "aporte": "Incidencias de la vuelta rápida de Colapinto y la posición de Gasly."
+        },
+        {
+          "medio": "El Eco de Tandil",
+          "enlace": "https://www.eleco.com.ar/deportes/colapinto-finalizo-decimo-en-la-tercera-practica-libre-del-gran-premio-de-azerbaiyan",
+          "fecha": "2026-09-25T11:38:39.000Z",
+          "oficial": false,
+          "aporte": "Registros de tiempos en la tercera práctica libre."
+        },
+        {
+          "medio": "Clarín",
+          "enlace": "https://www.clarin.com/deportes/f1-gp-azerbaiyan-franco-colapinto-vivo-horario-fp3-clasificacion-ver-formula-1-baku_0_Jx2MWC16zZ.html",
+          "fecha": "2026-09-25T03:01:54.000Z",
+          "oficial": false,
+          "aporte": "Modificación del cronograma del fin de semana."
+        },
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/deportes/automovilismo/franco-colapinto-en-vivo-nid24092026/",
+          "fecha": "2026-09-24T13:29:49.000Z",
+          "oficial": false,
+          "aporte": null
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1v7a52i",
+          "titulo": "Franco Colapinto avanza a la Q3 en el Gran Premio de Azerbaiyán",
+          "fecha": "2026-09-25T13:24:51.000Z",
+          "ruta": "/nota/franco-colapinto-avanza-a-la-q3-en-el-gran-premio-de-azerbaiyan-1v7a52i"
+        },
+        {
+          "id": "1s6lb26",
+          "titulo": "Franco Colapinto avanza a la Q3 en el Gran Premio de Azerbaiyán",
+          "fecha": "2026-09-25T13:23:00.000Z",
+          "ruta": "/nota/franco-colapinto-avanza-a-la-q3-en-el-gran-premio-de-azerbaiyan-1s6lb26"
+        },
+        {
+          "id": "i36jmo",
+          "titulo": "Franco Colapinto compite en el Gran Premio de Azerbaiyán",
+          "fecha": "2026-09-25T03:46:00.000Z",
+          "ruta": "/nota/franco-colapinto-compite-en-el-gran-premio-de-azerbaiyan-i36jmo"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron 7 medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      }
+    },
+    "e7ym9v": {
+      "estado": "automatica",
+      "titulo": "La Selección presenta la camiseta especial para la despedida de Messi",
+      "copete": "La Asociación del Fútbol Argentino dio a conocer la indumentaria exclusiva que el capitán usará el 6 de octubre en el Monumental ante Benín. Las entradas se agotaron en pocas horas.",
+      "cuerpo": "La prenda tiene al Sol de Mayo como figura central y suma detalles en dorado en el escudo, la numeración y los remates. Además, la indumentaria incluye short y medias especiales, una campera de salida, una camiseta de calentamiento y una de arquero verde.\n\nEl entrenador Lionel Scaloni señaló sobre el homenaje que las puertas no están cerradas pero que el momento indicado es ahora.\n\nLa Asociación del Fútbol Argentino prepara un espectáculo previo al inicio del encuentro que reunirá a los campeones del mundo de Qatar 2022. El capitán no integrará la nómina para los amistosos previos frente a Bolivia en Córdoba y Burkina Faso en el Monumental, pero estará disponible de manera exclusiva para su despedida junto a otros referentes como Rodrigo De Paul, Giovani Lo Celso y Nicolás Otamendi.",
+      "guion": "La Selección presenta la camiseta especial para la despedida de Messi",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T13:44:02.378Z",
+      "noConfirmado": [
+        "No se informaron detalles sobre posibles remanentes de entradas tras el agotar los tickets iniciales."
+      ],
+      "textoRedes": "La selección argentina dio a conocer la camiseta especial que usará Lionel Messi en su despedida ante Benín, prevista para el 6 de octubre en el Monumental. Los tickets se agotaron en pocas horas y la Asociación del Fútbol Argentino prepara un show con los campeones mundiales.",
+      "etiquetas": [
+        "Selección Argentina",
+        "Lionel Messi",
+        "Estadio Monumental",
+        "Benín",
+        "Asociación del Fútbol Argentino",
+        "Deportes"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Eco de Tandil",
+          "enlace": "https://www.eleco.com.ar/deportes/la-seleccion-argentina-presento-la-camiseta-especial-para-la-despedida-de-messi",
+          "fecha": "2026-09-25T12:46:30.000Z",
+          "oficial": false,
+          "aporte": "Aportó los detalles sobre la camiseta especial, el diseño con el Sol de Mayo y las declaraciones del entrenador Lionel Scaloni."
+        },
+        {
+          "medio": "Olé",
+          "enlace": "https://www.ole.com.ar/seleccion/messi-camiseta-coleccion-despedida_0_ktr25EYX07.html",
+          "fecha": "2026-09-25T12:18:25.000Z",
+          "oficial": false,
+          "aporte": "Confirmó la fecha del último partido de Lionel Messi con la Selección."
+        },
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/deportes/comenzo-la-venta-de-entradas-para-la-despedida-de-messi-de-la-seleccion-argentina-hay-mas-de-una-nid24092026/",
+          "fecha": "2026-09-24T23:20:11.000Z",
+          "oficial": false,
+          "aporte": "Informó sobre la venta de entradas a través de Deportick y las quejas de los usuarios por las demoras."
+        },
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/deportes/futbol/a-que-hora-empieza-hoy-la-venta-de-entradas-para-la-despedida-de-messi-de-la-seleccion-argentina-nid24092026/",
+          "fecha": "2026-09-24T18:59:40.000Z",
+          "oficial": false,
+          "aporte": "Señaló que Messi anunció su retiro tras perder la final del Mundial 2026."
+        },
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/deportes/futbol/deportick-asi-es-el-registro-en-el-sitio-para-comprar-entradas-para-la-despedida-de-messi-de-la-nid24092026/",
+          "fecha": "2026-09-24T15:00:00.000Z",
+          "oficial": false,
+          "aporte": "Detalló los próximos partidos de la fecha FIFA ante Bolivia y Burkina Faso."
+        },
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/deportes/futbol/hay-entradas-para-la-despedida-de-messi-de-la-seleccion-argentina-lo-que-se-sabe-del-amistoso-vs-nid22092026/",
+          "fecha": "2026-09-22T17:39:10.000Z",
+          "oficial": false,
+          "aporte": "Indicó la gran expectativa general por el acontecimiento deportivo."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1if2xbk",
+          "titulo": "Se agotaron las entradas para la despedida de Messi de la selección argentina",
+          "fecha": "2026-09-24T23:34:05.000Z",
+          "ruta": "/nota/se-agotaron-las-entradas-para-la-despedida-de-messi-de-la-seleccion-1if2xbk"
+        },
+        {
+          "id": "j7ihvi",
+          "titulo": "Comenzó la venta de entradas para la despedida de Messi de la selección argentina: hay más de una hora de espera",
+          "fecha": "2026-09-24T22:58:23.000Z",
+          "ruta": "/nota/comenzo-la-venta-de-entradas-para-la-despedida-de-messi-de-la-j7ihvi"
+        },
+        {
+          "id": "1nud4zm",
+          "titulo": "Entradas para la despedida de Lionel Messi de la Selección Argentina: paso a paso para comprarlas",
+          "fecha": "2026-09-24T19:05:00.000Z",
+          "ruta": "/nota/entradas-para-la-despedida-de-lionel-messi-de-la-seleccion-argentina-1nud4zm"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron tres medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      }
+    },
+    "16sx9jq": {
+      "estado": "automatica",
+      "titulo": "El MotoGP confirma su regreso a Buenos Aires para 2027",
+      "copete": "El Campeonato Mundial de Motociclismo oficializó su calendario para 2027 e incluirá una fecha en el Autódromo Oscar y Juan Gálvez. La competencia se disputará en abril y marcará el retorno de la categoría a la capital tras 28 años.",
+      "cuerpo": "Según se informó, la competencia se disputará entre el nueve y el once de abril y será la cuarta fecha del certamen, ubicada entre las pruebas de Brasil y Estados Unidos.\n\nEl regreso de la máxima categoría del motociclismo a territorio porteño estará acompañado por una renovación profunda del predio en Villa Riachuelo, cuyas obras superan el sesenta por ciento de avance. Los trabajos contemplan la modificación de la pista con una nueva horquilla, la construcción de un túnel en la curva uno y la incorporación de nuevos boxes y espacios para el público.\n\nLa venta general de entradas se iniciará el ocho de octubre a través del sitio oficial de la categoría, mientras que la preventa exclusiva para clientes de una entidad bancaria se desarrollará entre el uno y el siete de octubre con la opción de abonar en cuotas.",
+      "guion": "El MotoGP confirma su regreso a Buenos Aires para 2027",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T13:44:02.378Z",
+      "claves": [
+        "El MotoGP volverá a disputarse en Buenos Aires en 2027 tras 28 años.",
+        "La competencia se llevará a cabo entre el 9 y el 11 de abril en el autódromo Gálvez.",
+        "Las obras de modernización en el circuito superan el 60 por ciento de avance.",
+        "Las entradas generales saldrán a la venta el 8 de octubre."
+      ],
+      "seSabe": [
+        "Liberty Media oficializó el calendario de la temporada 2027 de MotoGP con 22 fechas.",
+        "El Gran Premio de Argentina se disputará en el Autódromo Oscar y Juan Gálvez entre el 9 y el 11 de abril de 2027.",
+        "La competencia será la cuarta fecha del campeonato, entre las carreras de Brasil y Estados Unidos.",
+        "Las obras de remodelación del autódromo porteño superan el 60% de avance e incluyen una nueva horquilla y un túnel en la curva 1.",
+        "La preventa de entradas para clientes de un banco específico será del 1 al 7 de octubre y la venta general comenzará el 8 de octubre."
+      ],
+      "noConfirmado": [
+        "No se especificaron los precios de las localidades para las distintas ubicaciones del autódromo."
+      ],
+      "textoRedes": "El MotoGP oficializó su calendario para 2027 y confirmó el regreso del Gran Premio de Argentina al Autódromo Oscar y Juan Gálvez de Buenos Aires tras 28 años. La competencia se disputará del 9 al 11 de abril y las entradas se pondrán a la venta en octubre.",
+      "etiquetas": [
+        "MotoGP",
+        "Buenos Aires",
+        "Autodromo Oscar y Juan Galvez",
+        "Automovilismo",
+        "Calendario 2027"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Minuto Uno",
+          "enlace": "https://www.minutouno.com/deportes/el-motogp-vuelve-buenos-aires-cuando-sera-la-carrera-y-como-quedo-el-calendario-2027-n6326605",
+          "fecha": "2026-09-25T13:35:00.000Z",
+          "oficial": false,
+          "aporte": "Informó la oficialización del calendario 2027 de MotoGP, las fechas del Gran Premio de Argentina y los detalles de la venta de entradas."
+        },
+        {
+          "medio": "Campeones",
+          "enlace": "https://campeones.com.ar/sera-en-abril-motogp-anuncio-el-calendario-2027-con-el-gp-de-argentina/",
+          "fecha": "2026-09-25T10:58:18.000Z",
+          "oficial": false,
+          "aporte": "Aportó datos sobre la oficialización del calendario de la temporada 2027 de la categoría."
+        },
+        {
+          "medio": "Motorsport",
+          "enlace": "https://es.motorsport.com/motogp/news/desvelado-calendario-motogp-2027-fechas-circuitos/10858810/?utm_source=RSS&utm_medium=referral&utm_campaign=RSS-MOTOGP&utm_term=News&utm_content=es",
+          "fecha": "2026-09-25T10:02:51.000Z",
+          "oficial": false,
+          "aporte": "Detalló que el calendario tendrá 22 grandes premios distribuidos en 19 países diferentes."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "17xuzt7",
+          "titulo": "Bezzecchi admitió su error en la carrera de MotoGP",
+          "fecha": "2026-09-20T14:20:01.000Z",
+          "ruta": "/nota/bezzecchi-admitio-su-error-en-la-carrera-de-motogp-17xuzt7"
+        },
+        {
+          "id": "1vws342",
+          "titulo": "A qué hora es hoy la carrera de MotoGP en Austria (Red Bull Ring) y cómo verla en TV",
+          "fecha": "2026-09-20T07:01:29.000Z",
+          "ruta": "/nota/a-que-hora-es-hoy-la-carrera-de-motogp-en-austria-red-bull-ring-y-1vws342"
+        },
+        {
+          "id": "v60zjk",
+          "titulo": "Jorge Martin gano la carrera Sprint de MotoGP en Austria",
+          "fecha": "2026-09-19T13:30:25.000Z",
+          "ruta": "/nota/jorge-martin-gano-la-carrera-sprint-de-motogp-en-austria-v60zjk"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron tres medios independientes.",
+        "sugeridoPorIA": "ALTA"
       }
     }
   },
