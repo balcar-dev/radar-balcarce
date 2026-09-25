@@ -1,5 +1,5 @@
 {
-  "exportado": "2026-09-25T13:14:21.033Z",
+  "exportado": "2026-09-25T13:24:36.728Z",
   "decisiones": {
     "1951120": {
       "estado": "automatica",
@@ -425,63 +425,350 @@
     },
     "v1u9f1": {
       "estado": "automatica",
-      "titulo": "Ferroviarios ganó la primera final de la Copa de Plata",
-      "copete": "El conjunto de primera división de Ferroviarios se impuso como visitante ante Urquiza en el primer partido definitorio de la Superliga Atlántica.",
-      "cuerpo": null,
-      "guion": "En el básquetbol regional, Ferroviarios dio el primer paso hacia el título. El equipo de nuestra ciudad le ganó como visitante a Urquiza en la final de ida de la Copa de Plata.",
+      "titulo": "Ferroviarios gana la primera final de la Copa de Plata en Balcarce",
+      "copete": "El equipo de primera división de Ferroviarios se impuso en condición de visitante frente a Urquiza. Fue en el partido de ida de la definición de la Superliga Atlántica de Básquetbol.",
+      "cuerpo": "El plantel de primera división del Club Atlético Ferroviarios logró un importante triunfo en el primer punto de la final de la Copa de Plata correspondiente a la Superliga Atlántica de Básquetbol. El conjunto balcarceño se impuso como visitante ante Urquiza y dio el primer paso en la serie definitoria del certamen.\n\nCon este resultado favorable fuera de casa, Ferroviarios buscará sentenciar la serie en condición de local para quedarse con el título de la Copa de Plata que organiza la Superliga Atlántica de Básquetbol.",
+      "guion": "Ferroviarios gana la primera final de la Copa de Plata en Balcarce",
       "deIA": true,
       "por": "ia",
-      "cuando": "2026-09-18T17:38:57.604Z"
+      "cuando": "2026-09-25T13:24:36.675Z",
+      "claves": [
+        "Ferroviarios venció a Urquiza como visitante.",
+        "Es el primer punto de la final de la Copa de Plata.",
+        "El torneo pertenece a la Superliga Atlántica de Básquetbol."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "etiquetas": [
+        "Ferroviarios",
+        "Basquet",
+        "Copa de Plata",
+        "Superliga Atlantica",
+        "Urquiza",
+        "Balcarce"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/ferroviarios-gano-la-primera-final-de-la-copa-de-plata-878",
+          "fecha": null,
+          "oficial": false,
+          "aporte": "Informó la victoria de Ferroviarios como visitante frente a Urquiza en la primera final de la Copa de Plata de la Superliga Atlántica de Básquetbol."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1gk282j",
+          "titulo": "Ferroviarios ganó la final del Apertura por penales",
+          "fecha": "2026-09-21T00:42:06.000Z",
+          "ruta": "/nota/ferroviarios-gano-la-final-del-apertura-por-penales-1gk282j"
+        },
+        {
+          "id": "1o4iueo",
+          "titulo": "Ferroviarios ganó por penales y jugará la final anual",
+          "fecha": "2026-09-20T21:27:04.570Z",
+          "ruta": "/nota/ferroviarios-gano-por-penales-y-jugara-la-final-anual-1o4iueo"
+        },
+        {
+          "id": "10e13dt",
+          "titulo": "Ferroviarios goleó en la final del torneo local",
+          "fecha": "2026-09-14T00:33:24.000Z",
+          "ruta": "/nota/ferroviarios-goleo-en-la-final-del-torneo-local-10e13dt"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
     },
     "1av7fh9": {
       "estado": "automatica",
-      "titulo": "Ferroviarios se consagró campeón en básquet",
-      "copete": "El plantel Más 40 del Club Atlético Ferroviarios ganó la Copa de Bronce de la Liga Mar y Sierras tras superar a Club Teléfonos.",
-      "cuerpo": null,
-      "guion": "El equipo senior de básquet de Ferroviarios logró el campeonato de la Copa de Bronce en la Liga Mar y Sierras. En la final vencieron al conjunto marplatense de Teléfonos tras un partido muy disputado.",
+      "titulo": "Ferroviarios gana la Copa de Bronce en Balcarce",
+      "copete": "El equipo Más 40 del Club Atlético Ferroviarios se consagró campeón de la Liga Mar y Sierras de Básquet. Superó en el partido definitorio a Club Teléfonos.",
+      "cuerpo": "El plantel de Ferroviarios cerró de esta manera su participación en el certamen regional con la obtención de este título en la categoría. La definición se disputó en el marco de un encuentro decisivo que consagró al representante balcarceño en tierras marplatenses.\n\nNo trascendieron mayores detalles acerca del marcador final registrado en el encuentro ni de las estadísticas que dejó el partido decisivo para la consagración del conjunto local en esta competencia regional de básquetbol.",
+      "guion": "Ferroviarios gana la Copa de Bronce en Balcarce",
       "deIA": true,
       "por": "ia",
-      "cuando": "2026-09-18T17:48:55.625Z"
+      "cuando": "2026-09-25T13:24:36.675Z",
+      "claves": [
+        "Ferroviarios campeón en Más 40",
+        "Se quedó con la Copa de Bronce",
+        "Superó a Club Teléfonos en la final"
+      ],
+      "seSabe": [
+        "El equipo Más 40 de Ferroviarios ganó la Copa de Bronce de la Liga Mar y Sierras.",
+        "El conjunto balcarceño venció a Club Teléfonos de Mar del Plata en el partido definitorio."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El equipo Más 40 del Club Atlético Ferroviarios se consagró campeón de la Copa de Bronce en la Liga Mar y Sierras de básquet tras superar a Club Teléfonos en el partido definitorio.",
+      "etiquetas": [
+        "Ferroviarios",
+        "basquet",
+        "Liga Mar y Sierras",
+        "Copa de Bronce",
+        "Balcarce"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/ferroviarios-campeon-de-copa-de-bronce-585",
+          "fecha": null,
+          "oficial": false,
+          "aporte": "Informó que el equipo Más 40 de Ferroviarios ganó la Copa de Bronce de la Liga Mar y Sierras al vencer a Club Teléfonos."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1o1444s",
+          "titulo": "Ferroviarios campeón de Copa de Bronce...",
+          "fecha": "2026-09-18T05:43:46.737Z",
+          "ruta": "/nota/ferroviarios-campeon-de-copa-de-bronce-1o1444s"
+        },
+        {
+          "id": "v1u9f1",
+          "titulo": "Ferroviarios gana la primera final de la Copa de Plata en Balcarce",
+          "fecha": "2026-09-23T03:05:01.594Z",
+          "ruta": "/nota/ferroviarios-gano-la-primera-final-de-la-copa-de-plata-v1u9f1"
+        },
+        {
+          "id": "q8ze4n",
+          "titulo": "Ferroviarios ganó el Apertura por penales",
+          "fecha": "2026-09-21T11:53:53.000Z",
+          "ruta": "/nota/ferroviarios-gano-el-apertura-por-penales-q8ze4n"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
     },
     "1y62trk": {
       "estado": "automatica",
-      "titulo": "Exitoso debut de Las Valkyrias en la Liga Mar y Sierras",
-      "copete": "Las Valkyrias, el equipo femenino de la Escuela de Básquet de Ferroviarios, ganaron en su presentación en la Primera división de la Liga Mar y Sierras.",
-      "cuerpo": null,
-      "guion": "Las Valkyrias tuvieron un comienzo ganador en la Liga Mar y Sierras. El equipo de Ferroviarios venció a SMATA en su primera presentación dentro de la máxima categoría.",
+      "titulo": "Las Valkyrias debutan con triunfo en la Liga Mar y Sierras en Balcarce",
+      "copete": "El equipo femenino de básquet de Ferroviarios se impuso en su presentación en la Primera división del certamen regional ante SMATA.",
+      "cuerpo": "El plantel femenino de la Escuela de Básquet de Ferroviarios, conocido como Las Valkyrias, concretó una victoria en su estreno dentro de la máxima categoría de la Liga Mar y Sierras frente al conjunto de SMATA, que también disputaba su primer encuentro en el torneo.\n\nEl equipo es dirigido tácticamente por Jonathan López y comenzó su participación en la competencia regional con un resultado favorable ante un rival que también se presentaba por primera vez en el certamen.",
+      "guion": "Las Valkyrias debutan con triunfo en la Liga Mar y Sierras en Balcarce",
       "deIA": true,
       "por": "ia",
-      "cuando": "2026-09-18T17:49:16.781Z"
+      "cuando": "2026-09-25T13:24:36.675Z",
+      "claves": [
+        "Las Valkyrias debutaron en la Primera división de la Liga Mar y Sierras.",
+        "El equipo de Ferroviarios venció a SMATA en su presentación.",
+        "El conjunto es dirigido por el entrenador Jonathan López."
+      ],
+      "seSabe": [
+        "Las Valkyrias integran la Primera división de la Liga Mar y Sierras.",
+        "El equipo es dirigido por Jonathan López.",
+        "Ferroviarios venció a SMATA en su debut."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Las Valkyrias, el equipo femenino de básquet de Ferroviarios, ganaron en su debut en la Primera división de la Liga Mar y Sierras frente a SMATA bajo la dirección técnica de Jonathan López.",
+      "etiquetas": [
+        "Las Valkyrias",
+        "Ferroviarios",
+        "basquet",
+        "Liga Mar y Sierras",
+        "Balcarce"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/exitoso-debut-de-las-valkyrias-en-la-liga-mar-y-sierras-782",
+          "fecha": null,
+          "oficial": false,
+          "aporte": "Informó sobre el triunfo de Las Valkyrias ante SMATA en el debut de la Liga Mar y Sierras y mencionó al director técnico Jonathan López."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "s54qzl",
+          "titulo": "Exitoso debut de Las Valkyrias en la Liga M...",
+          "fecha": "2026-09-18T05:43:46.737Z",
+          "ruta": "/nota/exitoso-debut-de-las-valkyrias-en-la-liga-m-s54qzl"
+        },
+        {
+          "id": "v1u9f1",
+          "titulo": "Ferroviarios gana la primera final de la Copa de Plata en Balcarce",
+          "fecha": "2026-09-23T03:05:01.594Z",
+          "ruta": "/nota/ferroviarios-gano-la-primera-final-de-la-copa-de-plata-v1u9f1"
+        },
+        {
+          "id": "1av7fh9",
+          "titulo": "Ferroviarios gana la Copa de Bronce en Balcarce",
+          "fecha": "2026-09-23T03:05:01.594Z",
+          "ruta": "/nota/ferroviarios-se-consagro-campeon-en-basquet-1av7fh9"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
     },
     "112kb6b": {
       "estado": "automatica",
-      "titulo": "Ferro Básquet busca los octavos en la Liga Mar y Sierras",
-      "copete": "El equipo de Balcarce afronta una nueva temporada con la dirección técnica de Facundo Fernández.",
-      "cuerpo": null,
-      "guion": "El plantel de Ferro ya se encuentra disputando una nueva temporada en la Liga Mar y Sierras. Con la conducción técnica de Facundo Fernández, el equipo apunta alto y busca llegar hasta los octavos de final del certamen.",
+      "titulo": "Facundo Fernández detalla el presente de Ferro Básquet en Balcarce",
+      "copete": "El entrenador Facundo Fernández analizó el armado del plantel, el rendimiento colectivo y las metas de Ferro Básquet en la Liga Mar y Sierras.",
+      "cuerpo": "Ferro Básquet transcurre una nueva temporada en la Liga Mar y Sierras bajo la dirección técnica de Facundo Fernández, quien asumió este rol por primera vez. El equipo se estructuró sobre la base del año anterior, complementado con la incorporación de jugadores provenientes de la categoría Mayores de 30 —la cual no presentó equipo este año— y jóvenes llegados a Balcarce para estudiar desde localidades de la región como Lobería, Mar del Plata y Tandil.\n\nEl plantel actual cuenta con entre quince y dieciséis jugadores, de los cuales doce integran la planilla en cada presentación. En cuanto al rendimiento, Fernández señaló que el conjunto evolucionó de menor a mayor tras enfrentar en las primeras fechas a rivales exigentes de la zona, ante los cuales cayó por diferencias menores a diez puntos.\n\nDe cara al futuro, el director técnico indicó que el objetivo central de la institución deportiva es alcanzar los octavos de final de la Copa de Oro, consolidando el funcionamiento colectivo y el compromiso grupal.",
+      "guion": "Facundo Fernández detalla el presente de Ferro Básquet en Balcarce",
       "deIA": true,
       "por": "ia",
-      "cuando": "2026-09-18T17:49:25.672Z"
+      "cuando": "2026-09-25T13:24:36.675Z",
+      "claves": [
+        "Ferro Básquet afronta la Liga Mar y Sierras con el debut técnico de Facundo Fernández.",
+        "El plantel se armó con la base anterior, exjugadores de Mayores de 30 y estudiantes de la región.",
+        "El equipo busca afianzar su juego colectivo para llegar a los octavos de final de la Copa de Oro."
+      ],
+      "seSabe": [
+        "El plantel está conformado por entre quince y dieciséis jugadores según informó el director técnico.",
+        "El equipo compite en la Liga Mar y Sierras bajo la conducción de Facundo Fernández.",
+        "El objetivo deportivo es avanzar a los octavos de final de la Copa de Oro."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Facundo Fernández analizó el armado del plantel y los objetivos de Ferro Básquet en la Liga Mar y Sierras. El equipo busca afianzar su rendimiento colectivo para llegar a los octavos de final de la Copa de Oro.",
+      "etiquetas": [
+        "Ferro Básquet",
+        "Liga Mar y Sierras",
+        "Facundo Fernández",
+        "Balcarce"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/fernandez-el-objetivo-es-llegar-a-los-octavos-de-final-de-la-copa-de-oro-515",
+          "fecha": null,
+          "oficial": false,
+          "aporte": "Detalles sobre el armado del plantel, el análisis del rendimiento y los objetivos del equipo en la Liga Mar y Sierras."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
     },
     "33h243": {
       "estado": "automatica",
-      "titulo": "Franco Peidón ganó el oro nacional en 800 metros",
-      "copete": "El atleta local Franco Peidón obtuvo la medalla de oro en los ochocientos metros durante el Campeonato Nacional de Mayores en Rosario.",
-      "cuerpo": null,
-      "guion": "El atleta local Franco Peidón se consagró campeón argentino de ochocientos metros llanos. Fue durante el centésimo sexto Campeonato Nacional de Mayores que se llevó a cabo este fin de semana en la ciudad santafesina de Rosario.",
+      "titulo": "Franco Peidón gana el oro nacional en los 800 metros en Balcarce",
+      "copete": "El atleta local se consagró campeón argentino de Mayores en los 800 metros llanos tras quedarse con la medalla de oro en el campeonato disputado en Rosario.",
+      "cuerpo": "El deportista Franco Peidón obtuvo la medalla de oro en los 800 metros llanos y se consagró campeón argentino de Mayores. El logro se concretó este fin de semana en el centésimo sexto Campeonato Nacional de Mayores, desarrollado en la ciudad santafesina de Rosario.\n\nPreviamente, a finales de septiembre, el atleta local había superado la serie clasificatoria para disputar la final de la misma distancia en los Juegos Suramericanos Santa Fe 2026, llevada a cabo en el Centro de Alto Rendimiento Deportivo Pedro Candioti, tal como se había informado en su momento.",
+      "guion": "Franco Peidón gana el oro nacional en los ochocientos metros en Balcarce",
       "deIA": true,
       "por": "ia",
-      "cuando": "2026-09-18T17:49:26.848Z"
+      "cuando": "2026-09-25T13:24:36.675Z",
+      "claves": [
+        "Franco Peidón obtuvo la medalla de oro en los 800 metros llanos.",
+        "El torneo se desarrolló en la ciudad de Rosario, provincia de Santa Fe.",
+        "El atleta local alcanzó el título en el Campeonato Nacional de Mayores."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "etiquetas": [
+        "Franco Peidón",
+        "campeón argentino",
+        "Rosario"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/peidon-se-consagro-campeon-nacional-en-los-800-metros-696",
+          "fecha": null,
+          "oficial": false,
+          "aporte": "Informó que Franco Peidón ganó la medalla de oro en los 800 metros en el Campeonato Nacional de Mayores en Rosario."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1bglcef",
+          "titulo": "Franco Peidón a la final de los 800 metros en los Juegos Suramericanos",
+          "fecha": "2026-09-22T20:31:49.000Z",
+          "ruta": "/nota/franco-peidon-a-la-final-de-los-800-metros-en-los-juegos-suramericanos-1bglcef"
+        },
+        {
+          "id": "1paz2ii",
+          "titulo": "Atlanta se consagró campeón en la Liga Nacional de béisbol",
+          "fecha": "2026-09-20T22:00:04.000Z",
+          "ruta": "/nota/atlanta-se-consagro-campeon-en-la-liga-nacional-de-beisbol-1paz2ii"
+        },
+        {
+          "id": "1ibi15p",
+          "titulo": "Kevin Gómez se consagró campeón nacional de boxeo",
+          "fecha": "2026-09-20T19:25:07.000Z",
+          "ruta": "/nota/kevin-gomez-se-consagro-campeon-nacional-de-boxeo-1ibi15p"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
     },
     "8yoymu": {
       "estado": "automatica",
-      "titulo": "Medalla de bronce para Shalom Lescano en atletismo",
-      "copete": "La deportista balcarceña Shalom Lescano logró el tercer puesto este domingo en los tres mil metros con obstáculos del torneo nacional de mayores.",
-      "cuerpo": null,
-      "guion": "Nueva medalla para el deporte local. Shalom Lescano obtuvo el tercer puesto en el torneo nacional de mayores disputado este fin de semana, tras competir en la prueba de tres mil metros con obstáculos.",
+      "titulo": "Shalom Lescano gana la medalla de bronce en el Nacional de Mayores en Balcarce",
+      "copete": "La atleta balcarceña Shalom Lescano obtuvo el tercer puesto en la prueba de los tres mil metros con obstáculos durante el campeonato nacional.",
+      "cuerpo": "La atleta balcarceña Shalom Lescano logró subirse nuevamente al podio en una competencia de nivel nacional al conseguir la medalla de bronce en los tres mil metros con obstáculos. El desempeño se concretó en el marco del centésimo sexto Campeonato Nacional de Mayores de Pista y Campo.\n\nEste nuevo logro se suma a las recientes actuaciones deportivas de la deportista local, quien a principios de semana había alcanzado el segundo puesto en la clasificación general y la victoria en su categoría durante la competencia de diez kilómetros disputada en la localidad de Comandante Nicanor Otamendi.",
+      "guion": "Shalom Lescano gana la medalla de bronce en el Nacional de Mayores en Balcarce",
       "deIA": true,
       "por": "ia",
-      "cuando": "2026-09-18T17:50:01.737Z"
+      "cuando": "2026-09-25T13:24:36.675Z",
+      "seSabe": [
+        "Shalom Lescano logró el tercer puesto en los tres mil metros con obstáculos.",
+        "La competencia fue el centésimo sexto Campeonato Nacional de Mayores de Pista y Campo."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "La atleta balcarceña Shalom Lescano obtuvo la medalla de bronce en los tres mil metros con obstáculos durante el centésimo sexto Campeonato Nacional de Mayores de Pista y Campo.",
+      "etiquetas": [
+        "Shalom Lescano",
+        "Balcarce",
+        "Campeonato Nacional"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/en-los-3000-metros-con-obstaculos-obtuvo-medalla-de-bronce-shalom-lescano-330",
+          "fecha": null,
+          "oficial": false,
+          "aporte": "Informó que la atleta balcarceña Shalom Lescano obtuvo la medalla de bronce en los tres mil metros con obstáculos en el Campeonato Nacional de Mayores de Pista y Campo."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1msbj8p",
+          "titulo": "Gabriel Robledo gana medalla de bronce en Mar del Plata",
+          "fecha": "2026-09-23T03:05:01.594Z",
+          "ruta": "/nota/bronce-para-gabriel-robledo-en-el-provincial-de-pista-y-campo-1msbj8p"
+        },
+        {
+          "id": "8qlok6",
+          "titulo": "Shalom Lescano fue segunda en los diezK de Otamendi",
+          "fecha": "2026-09-22T20:23:44.000Z",
+          "ruta": "/nota/shalom-lescano-fue-segunda-en-los-diezk-de-otamendi-8qlok6"
+        },
+        {
+          "id": "1ls3nd7",
+          "titulo": "Podio para Shalom Lescano",
+          "fecha": "2026-09-22T13:43:06.000Z",
+          "ruta": "/nota/podio-para-shalom-lescano-1ls3nd7"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
     },
     "wp9pca": {
       "estado": "automatica",
@@ -8505,13 +8792,54 @@
     },
     "jje778": {
       "estado": "automatica",
-      "titulo": null,
-      "copete": null,
-      "cuerpo": null,
-      "guion": null,
-      "deIA": null,
-      "por": null,
-      "cuando": "2026-09-21T03:54:12.174Z"
+      "titulo": "La Sociedad Rural de Balcarce participa de una reunión regional",
+      "copete": "La entidad local formó parte del encuentro mensual de las Sociedades Rurales de la Zona VI de Carbap. La jornada se llevó a cabo en la ciudad de Benito Juárez con la presencia de referentes del sector agropecuario.",
+      "cuerpo": "La Sociedad Rural de Balcarce formó parte de la reunión mensual correspondiente a las Sociedades Rurales de la Zona VI de Carbap, desarrollada el último sábado en la ciudad bonaerense de Benito Juárez. El encuentro contó con la asistencia de representantes de distintas entidades del Sudeste de la provincia para abordar temas vinculados a la producción y la seguridad en la región.\n\nComo se había informado en septiembre, la institución local mantiene una activa participación en los espacios de debate y articulación regional del sector agropecuario junto a las delegaciones vecinas.",
+      "guion": "La Sociedad Rural de Balcarce participa de una reunión regional",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T13:24:36.675Z",
+      "claves": [
+        "La Sociedad Rural de Balcarce asistió a la reunión mensual de la Zona VI de Carbap.",
+        "El encuentro regional se llevó a cabo el sábado en la ciudad de Benito Juárez.",
+        "Participaron referentes de distintas entidades del Sudeste bonaerense para tratar temas de producción y seguridad."
+      ],
+      "seSabe": [
+        "La Sociedad Rural de Balcarce participó de la reunión de la Zona VI de Carbap, según el medio local.",
+        "El encuentro regional se desarrolló en Benito Juárez con presencia de entidades del Sudeste bonaerense."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "La Sociedad Rural de Balcarce participó de la reunión mensual de la Zona VI de Carbap en Benito Juárez junto a entidades de la región.",
+      "etiquetas": [
+        "Sociedad Rural de Balcarce",
+        "Carbap",
+        "Benito Juarez",
+        "Seguridad"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/la-sociedad-rural-de-balcarce-participo-de-una-reunion-regional-sobre-seguridad-y-produccion-724",
+          "fecha": null,
+          "oficial": false,
+          "aporte": "Informó la participación de la Sociedad Rural de Balcarce en el encuentro regional de Carbap en Benito Juárez."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1d9gcjp",
+          "titulo": "La Sociedad Rural de Balcarce participó de...",
+          "fecha": "2026-09-18T05:43:46.736Z",
+          "ruta": "/nota/la-sociedad-rural-de-balcarce-participo-de-1d9gcjp"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
     },
     "1altd98": {
       "estado": "automatica",
@@ -13350,13 +13678,55 @@
     },
     "1knnogg": {
       "estado": "automatica",
-      "titulo": null,
-      "copete": null,
-      "cuerpo": null,
-      "guion": null,
-      "deIA": null,
-      "por": null,
-      "cuando": "2026-09-25T07:10:48.047Z"
+      "titulo": "Cabaña Los Pinos realiza su cuadragésimo primer remate en Balcarce",
+      "copete": "La Cabaña Los Pinos concretó la cuadragésima primera edición de su tradicional remate de hacienda en las instalaciones de la Sociedad Rural local, con una importante convocatoria de productores y compradores de la región.",
+      "cuerpo": "El encuentro ganadero se llevó a cabo un jueves veinte de agosto, según informó la fuente consultada, reuniendo a numerosos compradores y productores provenientes de distintas localidades de la zona en el predio de la Sociedad Rural de Balcarce. Durante la jornada se desarrolló la subasta anual de la cabaña, un evento tradicional para el sector agropecuario del distrito que convoca año tras año a referentes de la actividad ganadera regional.\n\nEste tipo de eventos comerciales organizados por las cabañas de la zona dinamizan la actividad económica rural y permiten la incorporación de genética bovina en los establecimientos productivos de la región.",
+      "guion": "Cabaña Los Pinos realiza su cuadragésimo primer remate en Balcarce",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T13:24:36.675Z",
+      "claves": [
+        "La Cabaña Los Pinos realizó su cuadragésimo primer remate.",
+        "El encuentro tuvo lugar en la Sociedad Rural de Balcarce.",
+        "Participaron compradores y productores de distintas localidades de la zona.",
+        "La subasta se desarrolló el jueves veinte de agosto."
+      ],
+      "seSabe": [
+        "La Cabaña Los Pinos concretó su cuadragésimo primer remate el jueves veinte de agosto, según la fuente.",
+        "El evento se desarrolló en las instalaciones de la Sociedad Rural de Balcarce.",
+        "La convocatoria reunió a compradores y productores de diferentes localidades de la zona."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "etiquetas": [
+        "Cabaña Los Pinos",
+        "Sociedad Rural",
+        "remate",
+        "Balcarce"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/cabana-los-pinos-concreto-con-exito-su-41-remate-en-balcarce-277",
+          "fecha": null,
+          "oficial": false,
+          "aporte": null
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1ny0yyi",
+          "titulo": "Cabaña Santo Domingo realiza su sexto remate en Balcarce",
+          "fecha": "2026-08-31T12:21:37.000Z",
+          "ruta": "/nota/la-genetica-100-hereford-volvio-a-dar-la-nota-de-la-mano-de-santo-1ny0yyi"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
     },
     "1helk": {
       "estado": "automatica",
@@ -15781,6 +16151,51 @@
       "verificacion": {
         "nivel": "MEDIA",
         "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "1ft3pp0": {
+      "estado": "automatica",
+      "titulo": "Las cajas municipales cierran antes por el balance en Balcarce",
+      "copete": "La Secretaría de Hacienda dispuso la finalización anticipada de la atención para el próximo miércoles 30 de septiembre debido al balance trimestral.",
+      "cuerpo": "La Secretaría de Hacienda informó que el miércoles 30 de septiembre se registrará el cierre anticipado de las cajas municipales a las diez de la mañana. La medida fue adoptada en el marco de la realización del balance trimestral correspondiente a la administración local.\n\nDesde el área comunal se solicitó a los vecinos y contribuyentes que tengan la necesidad de efectuar trámites o realizar pagos de forma presencial que procuren concretar sus gestiones con anterioridad a ese horario, con el propósito fundamental de evitar inconvenientes en las dependencias.\n\nEsta modificación temporal en la atención al público afectará exclusivamente a la jornada mencionada, retomando el funcionamiento habitual en los días posteriores según lo establecido por el municipio.",
+      "guion": "Las cajas municipales cierran antes por el balance en Balcarce",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T13:24:36.675Z",
+      "claves": [
+        "Cierre anticipado de cajas municipales",
+        "Medida prevista para el 30 de septiembre",
+        "Atención disponible hasta las diez horas",
+        "Solicitud de trámites previos a vecinos"
+      ],
+      "seSabe": [
+        "Las cajas municipales cerrarán a las 10 de la mañana el miércoles 30 de septiembre",
+        "La medida responde a la realización del balance trimestral",
+        "La Secretaría de Hacienda pidió a los contribuyentes realizar trámites antes de ese horario"
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Las cajas municipales de Balcarce cerrarán a las 10 de la mañana el próximo miércoles 30 de septiembre debido a la realización del balance trimestral. Solicitan a los vecinos realizar trámites y pagos presenciales antes de ese horario para evitar inconvenientes.",
+      "etiquetas": [
+        "Balcarce",
+        "Hacienda",
+        "Trámites",
+        "Pagos"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Municipalidad de Balcarce",
+          "enlace": "https://balcarce.gob.ar/2026/09/25/cierre-anticipado-de-cajas-por-balance-trimestral/",
+          "fecha": "2026-09-25T13:13:45.000Z",
+          "oficial": true,
+          "aporte": "Informó el horario y el motivo del cierre anticipado de las cajas municipales"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Sale de una fuente oficial: Municipalidad de Balcarce.",
         "sugeridoPorIA": "MEDIA"
       }
     }
