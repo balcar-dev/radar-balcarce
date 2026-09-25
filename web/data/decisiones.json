@@ -1,5 +1,5 @@
 {
-  "exportado": "2026-09-25T13:51:22.955Z",
+  "exportado": "2026-09-25T14:02:59.690Z",
   "decisiones": {
     "1951120": {
       "estado": "automatica",
@@ -7902,13 +7902,60 @@
     },
     "4retlk": {
       "estado": "automatica",
-      "titulo": "Kevin Gómez volvió a Balcarce tras ser campeón argentino",
-      "copete": "El flamante campeón argentino supermediano regresó este lunes a Balcarce tras su victoria por nocaut y fue recibido por funcionarios y familiares.",
-      "cuerpo": null,
-      "guion": "Kevin Gómez volvió a Balcarce tras ser campeón argentino",
+      "titulo": "Kevin Gómez destaca el apoyo de Balcarce tras su campeonato argentino",
+      "copete": "El boxeador local valoró el afecto recibido por la comunidad tras consagrarse campeón nacional de los supermedianos. Continúa analizando su futuro deportivo.",
+      "cuerpo": "El boxeador Kevin Gómez expresó su gratitud hacia la comunidad local tras obtener el título nacional de la categoría supermediano. El deportista manifestó su orgullo por representar a la ciudad y el fuerte respaldo recibido por los vecinos.\n\nComo se había informado a principios de semana, el flamante campeón argentino tuvo un cálido recibimiento por parte de una multitud en el acceso a las rutas 226 y 55, y posteriormente visitó su gimnasio habitual para exhibir el cinturón obtenido tras vencer por nocaut a Santiago Fernández.",
+      "guion": "Kevin Gómez destaca el apoyo de Balcarce tras su campeonato argentino",
       "deIA": true,
       "por": "ia",
-      "cuando": "2026-09-21T00:56:25.346Z"
+      "cuando": "2026-09-25T14:02:59.614Z",
+      "claves": [
+        "El boxeador local valoró el afecto de la comunidad tras su consagración",
+        "Gómez se consagró campeón argentino de los supermedianos tras vencer por nocaut",
+        "El deportista analiza realizar futuros entrenamientos fuera de la ciudad"
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El boxeador Kevin Gómez expresó su agradecimiento a la comunidad de Balcarce tras consagrarse campeón argentino de los supermedianos. El deportista valoró el afecto recibido y analiza los próximos pasos de su carrera deportiva.",
+      "etiquetas": [
+        "Kevin Gómez",
+        "Balcarce"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/kevin-gomez-me-siento-muy-apreciado-por-balcarce-y-me-llena-el-corazon-representarlo-106",
+          "fecha": null,
+          "oficial": false,
+          "aporte": "Aportó las declaraciones del boxeador Kevin Gómez sobre su agradecimiento a la comunidad local."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "wra9xv",
+          "titulo": "Kevin Gómez analiza entrenar fuera de Balcarce tras su título nacional",
+          "fecha": "2026-09-24T19:11:20.000Z",
+          "ruta": "/nota/kevin-gomez-proyecta-nuevos-desafios-tras-ganar-el-titulo-wra9xv"
+        },
+        {
+          "id": "1vgvciw",
+          "titulo": "Kevin Gomez festeja su titulo argentino de boxeo en Balcarce",
+          "fecha": "2026-09-23T11:53:31.000Z",
+          "ruta": "/nota/entre-felicitaciones-y-orgullo-kevin-gomez-compartio-en-quality-su-1vgvciw"
+        },
+        {
+          "id": "10x98wn",
+          "titulo": "Caravana y recibimiento para el boxeador Kevin Gómez",
+          "fecha": "2026-09-22T23:46:36.443Z",
+          "ruta": "/nota/caravana-y-recibimiento-para-el-boxeador-kevin-gomez-10x98wn"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
     },
     "22lrvf": {
       "estado": "automatica",
@@ -8910,13 +8957,47 @@
     },
     "1altd98": {
       "estado": "automatica",
-      "titulo": null,
-      "copete": null,
-      "cuerpo": null,
-      "guion": null,
-      "deIA": null,
-      "por": null,
-      "cuando": "2026-09-21T04:04:12.112Z"
+      "titulo": "Informan los servicios de sepelios de la cooperativa en Balcarce",
+      "copete": "Se dieron a conocer los avisos fúnebres y los servicios de sepelios prestados por la Cooperativa de Electricidad General Balcarce en las últimas semanas.",
+      "cuerpo": "La Cooperativa de Electricidad General Balcarce Limitada comunicó los diferentes servicios de sepelios correspondientes a los fallecimientos registrados en el distrito durante los meses de mayo, agosto y septiembre de dos mil veintiséis.\n\nLos cronogramas informados por la entidad detallaron los horarios de los oficios religiosos, los traslados hacia el Cementerio Municipal o crematorios privados, así como las respectivas casas de duelo ubicadas tanto en la ciudad cabecera como en localidades del partido.\n\nEstos partes de servicios se emiten de manera habitual para la comunidad local a través de las gacetillas institucionales de la entidad encargada de las prestaciones exequiales.",
+      "guion": "Informan los servicios de sepelios de la cooperativa en Balcarce",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T14:02:59.614Z",
+      "claves": [
+        "Se difundieron los avisos fúnebres de los últimos meses.",
+        "Las prestaciones estuvieron a cargo de la cooperativa eléctrica.",
+        "Se detallaron los traslados al cementerio municipal y crematorios.",
+        "Los avisos incluyeron domicilios de duelo en el distrito."
+      ],
+      "seSabe": [
+        "La Cooperativa de Electricidad General Balcarce Limitada informó los servicios de sepelios correspondientes a diversos fallecimientos.",
+        "Los procedimientos incluyeron velatorios, oficios religiosos e inhumaciones en el Cementerio Municipal o crematorios."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "La cooperativa eléctrica dio a conocer los detalles de los servicios de sepelios y avisos fúnebres registrados en el distrito durante las últimas semanas.",
+      "etiquetas": [
+        "sepelios",
+        "cooperativa de electricidad",
+        "fallecimientos",
+        "balcarce"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/kicillof-nos-vamos-a-organizar-para-construir-un-espacio-que-transforme-a-la-argentina-272",
+          "fecha": null,
+          "oficial": false,
+          "aporte": "Aportó el listado de servicios de sepelios y avisos fúnebres de la cooperativa eléctrica local."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
     },
     "mwf78a": {
       "estado": "automatica",
@@ -17191,6 +17272,268 @@
           "titulo": "El repaso de la mañana en Radar Balcarce: Franco Colapinto y Juan José Mare",
           "fecha": "2026-09-25T13:04:00.130Z",
           "ruta": "/nota/el-repaso-de-la-manana-en-radar-balcarce-franco-colapinto-y-juan-jose-repaso20260925manana"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "t599ck": {
+      "estado": "automatica",
+      "titulo": "Lionel Scaloni designa a Cuti Romero como nuevo capitán de la Selección Argentina",
+      "copete": "El director técnico de la Selección Argentina confirmó que el defensor Cristian Romero heredará la cinta de liderazgo tras el ciclo de Lionel Messi, en la previa de los próximos encuentros amistosos.",
+      "cuerpo": "El entrenador Lionel Scaloni confirmó que el defensor Cristian Romero será el próximo capitán de la Selección Argentina tras el ciclo de Lionel Messi.\n\nScaloni explicó que la elección responde al peso futbolístico y al rol que el marcador central ya cumple dentro del plantel. El técnico detalló que el defensor ya había lucido la capitanía en partidos previos disputados en 2025 frente a Chile y Venezuela, además de un encuentro ante Mauritania. A su vez, el conductor táctico mencionó como alternativas para llevar el brazalete a Emiliano Martínez, Rodrigo De Paul y Lautaro Martínez.\n\nEste anuncio se da en el marco de la preparación para los encuentros amistosos frente a Bolivia, Burkina Faso y Benín. El duelo ante Benín, pautado para el próximo 6 de octubre, marcará la despedida oficial de Messi del seleccionado nacional.",
+      "guion": "Lionel Scaloni designa a Cuti Romero como nuevo capitán de la Seleccion Argentina",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T14:02:59.613Z",
+      "claves": [
+        "Cristian Romero será el nuevo capitán de la Selección Argentina.",
+        "La decisión fue anunciada por el director técnico Lionel Scaloni.",
+        "El plantel se prepara para los amistosos y la despedida de Lionel Messi.",
+        "El partido de despedida ante Benín está programado para el 6 de octubre."
+      ],
+      "seSabe": [
+        "Lionel Scaloni confirmó a Cristian Romero como el próximo capitán del equipo nacional.",
+        "El anuncio se realizó en una conferencia de prensa en el predio de la AFA.",
+        "Romero ya había portado la cinta de capitán en partidos disputados durante 2025 ante Chile, Venezuela y Mauritania.",
+        "El entrenador mencionó a Emiliano Martínez, Rodrigo De Paul y Lautaro Martínez como otros referentes que pueden llevar la cinta.",
+        "La Selección Argentina disputará amistosos frente a Bolivia, Burkina Faso y Benín, con la despedida de Lionel Messi fijada para el 6 de octubre."
+      ],
+      "noConfirmado": [
+        "No se especificó la fecha exacta en la que se producirá el traspaso definitivo de la capitanía tras el alejamiento de Lionel Messi."
+      ],
+      "textoRedes": "El director técnico Lionel Scaloni confirmó que Cristian Romero será el próximo capitán de la Selección Argentina tras la salida de Lionel Messi. El anuncio se realizó en la previa de los amistosos y la despedida del rosarino programada para el 6 de octubre.",
+      "etiquetas": [
+        "Selección Argentina",
+        "Lionel Scaloni",
+        "Cuti Romero",
+        "Lionel Messi",
+        "Fútbol"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Minuto Uno",
+          "enlace": "https://www.minutouno.com/deportes/lionel-scaloni-confirmo-al-cuti-romero-como-nuevo-capitan-la-seleccion-argentina-n6326615",
+          "fecha": "2026-09-25T13:51:57.000Z",
+          "oficial": false,
+          "aporte": "Detalló los dichos de Lionel Scaloni en conferencia de prensa sobre la elección de Cristian Romero como capitán y los antecedentes en partidos previos."
+        },
+        {
+          "medio": "El Eco de Tandil",
+          "enlace": "https://www.eleco.com.ar/deportes/scaloni-confirmo-al-futuro-capitan-de-la-seleccion-argentina-quien-sera",
+          "fecha": "2026-09-25T12:23:14.000Z",
+          "oficial": false,
+          "aporte": "Aportó el contexto general sobre la preparación del seleccionado y la agenda de partidos amistosos previos a la despedida de Lionel Messi."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "163jy6m",
+          "titulo": "Cristian Romero será el próximo capitán de la Selección Argentina",
+          "fecha": "2026-09-25T12:23:14.000Z",
+          "ruta": "/nota/cristian-romero-sera-el-proximo-capitan-de-la-seleccion-argentina-163jy6m"
+        },
+        {
+          "id": "tq5bez",
+          "titulo": "Ángel Di María confirmó que acompañará a Lionel Messi en la despedida con la selección argentina",
+          "fecha": "2026-09-21T15:42:06.000Z",
+          "ruta": "/nota/angel-di-maria-confirmo-que-acompanara-a-lionel-messi-en-la-despedida-tq5bez"
+        },
+        {
+          "id": "pqjedg",
+          "titulo": "Lionel Scaloni, Aimar, Samuel y todo el cuerpo técnico de la Selección vieron la victoria de Argentina sobre Uruguay en los Suramericanos",
+          "fecha": "2026-09-19T19:10:27.000Z",
+          "ruta": "/nota/lionel-scaloni-aimar-samuel-y-todo-el-cuerpo-tecnico-de-la-seleccion-pqjedg"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      }
+    },
+    "1mqxijp": {
+      "estado": "automatica",
+      "titulo": "Lionel Scaloni y el cuerpo técnico cenaron en Buenos Aires",
+      "copete": "El entrenador y sus colaboradores cenaron en un restaurante del barrio porteño de Belgrano. La presencia del cuerpo técnico causó revuelo entre los vecinos.",
+      "cuerpo": "El entrenador Lionel Scaloni y su cuerpo técnico cenaron el miércoles por la noche en el restaurante Casa Cuba, ubicado en el barrio porteño de Belgrano, durante la preparación para los amistosos de la fecha FIFA. Del encuentro participaron los ayudantes de campo Walter Samuel, Pablo Aimar y Roberto Ayala, el entrenador de arqueros Martín Tocalli, los preparadores físicos Luis Martín y Juan Tamone, y el videoanalista Matías Manna.\n\nLa presencia del grupo sorprendió a los vecinos, quienes se acercaron al local para saludarlos, pedir autógrafos y tomarse fotografías antes de que se retiraran. El restaurante difundió imágenes de la cena en sus redes sociales. En tanto, Scaloni mantiene abierta la definición sobre su continuidad al frente del equipo nacional y señaló que dialogará próximamente con el presidente de la AFA, Claudio Tapia, para evaluar la situación tras la final del Mundial disputada en julio.",
+      "guion": "Lionel Scaloni y el cuerpo técnico cenaron en Buenos Aires",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T14:02:59.613Z",
+      "claves": [
+        "El cuerpo técnico de la selección argentina cenó en un restaurante de Belgrano.",
+        "Vecinos se acercaron al lugar para tomarse fotos y pedir autógrafos.",
+        "Scaloni confirmó que dialogará con la AFA sobre su continuidad en el cargo.",
+        "El seleccionado disputará tres amistosos en los próximos días, con la despedida de Messi."
+      ],
+      "textoRedes": "Lionel Scaloni y su cuerpo técnico cenaron en un restaurante porteño y causaron furor entre los vecinos en la previa de los próximos amistosos de la selección argentina.",
+      "etiquetas": [
+        "Lionel Scaloni",
+        "Selección Argentina",
+        "AFA",
+        "Lionel Messi",
+        "Fútbol"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/deportes/2026/09/25/con-lionel-scaloni-a-la-cabeza-el-cuerpo-tecnico-de-la-seleccion-argentina-sorprendio-a-todos-al-cenar-en-un-restaurante-porteno/",
+          "fecha": "2026-09-25T13:00:54.000Z",
+          "oficial": false,
+          "aporte": "Detalló el lugar de la cena, los integrantes presentes, las declaraciones de Scaloni sobre su continuidad y el cronograma de amistosos."
+        },
+        {
+          "medio": "Minuto Uno",
+          "enlace": "https://www.minutouno.com/deportes/la-salida-lionel-scaloni-y-su-cuerpo-tecnico-belgrano-que-sorprendio-los-vecinos-n6326399",
+          "fecha": "2026-09-24T22:28:00.000Z",
+          "oficial": false,
+          "aporte": "Indicó que la presencia del DT en un restaurante de Buenos Aires generó furor en la antesala de la fecha FIFA."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "pqjedg",
+          "titulo": "Lionel Scaloni, Aimar, Samuel y todo el cuerpo técnico de la Selección vieron la victoria de Argentina sobre Uruguay en los Suramericanos",
+          "fecha": "2026-09-19T19:10:27.000Z",
+          "ruta": "/nota/lionel-scaloni-aimar-samuel-y-todo-el-cuerpo-tecnico-de-la-seleccion-pqjedg"
+        },
+        {
+          "id": "n1lrk8",
+          "titulo": "Lionel Scaloni, sobre su continuidad en la Selección Argentina: \"Lo intentaremos, estemos o no nosotros\"",
+          "fecha": "2026-09-19T12:51:15.000Z",
+          "ruta": "/nota/lionel-scaloni-sobre-su-continuidad-en-la-seleccion-argentina-lo-n1lrk8"
+        },
+        {
+          "id": "1nud4zm",
+          "titulo": "Entradas para la despedida de Lionel Messi de la Selección Argentina: paso a paso para comprarlas",
+          "fecha": "2026-09-24T19:05:00.000Z",
+          "ruta": "/nota/entradas-para-la-despedida-de-lionel-messi-de-la-seleccion-argentina-1nud4zm"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "24vfqp": {
+      "estado": "automatica",
+      "titulo": "Franco Colapinto finaliza décimo en la última práctica en Bakú",
+      "copete": "El piloto argentino completó la tercera práctica libre del Gran Premio de Azerbaiyán de Fórmula 1 y se ubicó en el décimo puesto. El más rápido del entrenamiento fue el neerlandés Max Verstappen.",
+      "cuerpo": "El más rápido de la sesión fue el neerlandés Max Verstappen con un registro de 1:43.922 con su Red Bull, seguido por el británico George Russell y el británico Lewis Hamilton. La competencia en Bakú corresponde a la decimoquinta fecha del campeonato, tras la modificación del cronograma motivada por la conmemoración del Día del Recuerdo en Azerbaiyán.\n\nComo antecedentes inmediatos de la misma fecha, el piloto argentino había terminado en el décimo octavo lugar en la primera práctica libre disputada en el circuito callejero, según los registros previos informados por el medio.\n\nEn la previa de la actividad en Bakú, el compañero de equipo Pierre Gasly denunció haber recibido amenazas dirigidas a su familia y a su pareja en redes sociales, tras una polémica maniobra con el argentino en el Gran Premio de España.",
+      "guion": "Franco Colapinto finaliza décimo en la última práctica en Bakú",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T14:02:59.613Z",
+      "claves": [
+        "Colapinto terminó décimo en el tercer entrenamiento en Bakú.",
+        "Max Verstappen marcó el tiempo más rápido de la sesión.",
+        "La actividad se reprogramó por el Día del Recuerdo local."
+      ],
+      "seSabe": [
+        "Franco Colapinto finalizó en el décimo lugar de la tercera práctica libre en Bakú con un tiempo de 1:45.592.",
+        "Max Verstappen marcó el mejor tiempo de la sesión con un registro de 1:43.922 con su Red Bull.",
+        "George Russell y Lewis Hamilton completaron los primeros puestos del entrenamiento.",
+        "Lance Stroll debió abandonar la práctica tras golpear su auto contra una pared interior.",
+        "Pierre Gasly denunció haber recibido amenazas en redes sociales tras una maniobra en el Gran Premio de España."
+      ],
+      "noConfirmado": [
+        "No se especificaron detalles adicionales sobre las medidas que tomarán las autoridades ante las amenazas denunciadas por Pierre Gasly.",
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "etiquetas": [
+        "Franco Colapinto",
+        "Formula 1",
+        "Azerbaiyan"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/deportes/colapinto-termino-10-en-la-tercera-practica-de-azerbaiyan-y-el-mas-rapido-fue-verstappen-nid25092026/",
+          "fecha": "2026-09-25T12:03:28.000Z",
+          "oficial": false,
+          "aporte": "Detalles del resultado de Franco Colapinto, los tiempos de la tercera práctica en Bakú y la denuncia por amenazas de Pierre Gasly."
+        },
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/deportes/automovilismo/colapinto-termino-18-en-la-primera-practica-del-gp-de-azerbaiyan-y-el-mas-rapido-fue-russell-nid24092026/",
+          "fecha": "2026-09-24T12:56:04.000Z",
+          "oficial": false,
+          "aporte": "Datos históricos de la primera práctica libre disputada en el circuito callejero."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "y8hgj",
+          "titulo": "Colapinto terminó 18 en la primera práctica del GP de Azerbaiyán y el más rápido fue Russell",
+          "fecha": "2026-09-24T10:07:22.000Z",
+          "ruta": "/nota/colapinto-termino-18-en-la-primera-practica-del-gp-de-azerbaiyan-y-el-y8hgj"
+        },
+        {
+          "id": "14uc9gg",
+          "titulo": "Franco Colapinto encara la tercera práctica libre y la clasificación en Bakú",
+          "fecha": "2026-09-25T07:57:16.000Z",
+          "ruta": "/nota/franco-colapinto-encara-la-tercera-practica-libre-y-la-clasificacion-14uc9gg"
+        },
+        {
+          "id": "2du9ow",
+          "titulo": "Franco Colapinto termina décimo en la práctica libre en Bakú",
+          "fecha": "2026-09-25T11:38:39.000Z",
+          "ruta": "/nota/franco-colapinto-termina-decimo-en-la-practica-libre-en-baku-2du9ow"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "ALTA"
+      }
+    },
+    "ioxucv": {
+      "estado": "automatica",
+      "titulo": "El Enrege rectifica un informe oficial de cortes de luz tras un reclamo",
+      "copete": "El Ente Regulador de Electricidad modificó un informe oficial sobre la calidad del servicio en el AMBA tras un reclamo de Edenor, reduciendo las interrupciones atribuidas a la empresa.",
+      "cuerpo": "Según informó el organismo, la medida respondió a la detección de un “error material” en el documento original. Con la actualización, bajaron la cantidad promedio de interrupciones de 1,93 a 1,58 y las horas sin suministro de 3,65 a 2,91 para esa distribuidora, y desaparecieron casi todos los incumplimientos que se le señalaban, aunque se mantuvieron sin cambios las bonificaciones que deberá entregar a los usuarios. Los datos correspondientes a Edesur no sufrieron modificaciones, manteniendo promedios que triplican los registros de la otra empresa.",
+      "guion": "El Enrege rectifica un informe oficial de cortes de luz tras un reclamo",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T14:02:59.614Z",
+      "claves": [
+        "El Enrege rectificó un informe oficial sobre el servicio eléctrico en el AMBA.",
+        "La corrección se realizó tras una presentación de la empresa Edenor.",
+        "Se redujeron las interrupciones y horas sin suministro atribuidas a Edenor.",
+        "Los indicadores y las bonificaciones para los usuarios de Edesur no sufrieron modificaciones."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El Ente Regulador de Electricidad rectificó un informe oficial sobre la calidad del servicio eléctrico en el AMBA tras un reclamo de Edenor y redujo las interrupciones y horas sin suministro atribuidas a la empresa, mientras que los datos de Edesur no sufrieron cambios.",
+      "etiquetas": [
+        "cortes de luz",
+        "Enrege",
+        "Edenor",
+        "Edesur",
+        "AMBA",
+        "servicios públicos"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/economia/polemica-por-los-cortes-de-luz-un-organismo-del-gobierno-rectifico-un-informe-oficial-tras-un-nid25092026/",
+          "fecha": "2026-09-25T13:38:11.000Z",
+          "oficial": false,
+          "aporte": "Detalla la rectificación del informe oficial de servicios eléctricos tras el reclamo de Edenor."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "l2710w",
+          "titulo": "Javier Milei reclamó al Reino Unido por Malvinas y calificó de organismo \"inútil\" a las Naciones Unidas",
+          "fecha": "2026-09-23T16:35:12.000Z",
+          "ruta": "/nota/javier-milei-reclamo-al-reino-unido-por-malvinas-y-califico-de-l2710w"
         }
       ],
       "verificacion": {
