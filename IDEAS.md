@@ -328,6 +328,45 @@ conviene decidirlas sin apuro.
   con marketing conjunto y sorteos: la idea más grande y la que más conecta
   con vender publicidad.
 
+## Después de la auditoría (25/09): lo que haría ahora
+
+Ordenadas por lo que rinde contra lo que cuesta. Las tres primeras son las
+que más se notan.
+
+1. **Aprobar notas desde el celular (mini app gratis en Cloudflare).** Una
+   página con las notas que esperan y tres botones: Aprobar, Rechazar,
+   Corregir título. Se instala como app, se entra con un código al mail
+   (Cloudflare Access, gratis hasta 50 personas), y lo decidido va a GitHub
+   igual que desde el panel. El WhatsApp de "N notas esperando" trae el
+   enlace. Hoy 36 notas esperan y sólo se decide con la PC prendida.
+2. **Que las notas archivadas estén en el sitemap.** Desde el 25/09 hay unas
+   1.500 páginas de notas que siguen existiendo, pero el sitemap sólo lista
+   las de 72 h: Google no las encuentra. Es una línea de cambio y es
+   contenido que ya está hecho.
+3. **Buscar en todo el archivo, no sólo en la portada.** El buscador busca
+   entre las notas de hoy. Con un índice liviano (título, sección, fecha) que
+   se baja sólo cuando alguien escribe, se busca en los 180 días.
+4. **Un aviso cuando una fuente deja de traer notas.** El 25/09 El Diario
+   Balcarce le contestó 403 a GitHub en una corrida; si pasara siempre, nadie
+   se enteraría hasta ver la portada rara. El vigilante puede avisar "tal
+   medio no trae nada hace 12 horas".
+5. **Ser buen vecino con los medios.** Guardar el texto completo de cada nota
+   ya leída (no volver a pedirla en cada corrida) y espaciar los pedidos al
+   mismo sitio. Menos riesgo de que un medio nos bloquee.
+6. **"Qué dijo cada medio".** En las notas con dos o más fuentes, un bloque
+   corto al pie con una línea por medio y su enlace. Es transparencia, suma
+   valor propio y es lo que hacen los agregadores serios.
+7. **Una página pública de correcciones** (`/correcciones`): qué se corrigió,
+   cuándo y por qué. Da confianza y lo piden Google Noticias y AdSense.
+8. **Tipografías servidas por el propio sitio.** Hoy la web las pide a Google
+   Fonts, que ve la IP de cada lector; la política de privacidad promete
+   cuidar eso. Los archivos ya están en `web/fuentes/`.
+9. **Estadísticas en el panel.** Una pestaña con la evolución de
+   `web/data/estadisticas.json` (visitas, seguidores), además del WhatsApp.
+10. **Anotar el sitio en Google Noticias** (Publisher Center) cuando las
+    notas con cuerpo pasen del 60 %: ya están "Quiénes somos", "Contacto" y
+    el sitemap de noticias.
+
 ## Lo que ya se hizo de esta lista
 
 - Los tres avisos fijos de la web, con su pestaña en el panel (23/09).
