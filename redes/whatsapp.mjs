@@ -34,12 +34,14 @@ export async function enviarWhatsApp({ telefono, apikey, texto, fetchFn = fetch 
   try {
     const r = await fetchFn(url, { signal: AbortSignal.timeout(20000) });
     const cuerpo = await r.text();
-    // CallMeBot contesta 200 (o 203) aun con un error en el texto. Cuando acepta el
-    // mensaje repite el destino y el texto que mandamos y dice "queued": el eco
-    // NO se mira, porque el propio mensaje puede tener la palabra "error".
-    const propio = cuerpo.split(/Text to send:/i)[0];
-    const encolado = /queued|will receive/i.test(cuerpo);
-    if (!r.ok || (!encolado && /error|apikey is invalid|not activated/i.test(propio))) {
+    // CallMeBot contesta 200 o 203 SIEMPRE, con el error o el éxito en el texto, y en
+    // los dos casos repite el destino y el mensaje que mandamos. Sólo es éxito si
+    // dice que quedó en cola; el eco de nuestro texto se saca antes de mirar, porque
+    // el propio mensaje puede decir "error". (El 25/09 se dio por bueno un
+    // "APIKey is invalid" y nunca llegó ningún aviso.)
+    const sinEco = cuerpo.replace(/Text to send:.*?(?=(APIKey|Message queued|You will|Please|$))/is, ' ');
+    const encolado = /message queued|you will receive/i.test(sinEco);
+    if (!r.ok || !encolado || /error|invalid|not activated|blocked/i.test(sinEco)) {
       return { ok: false, error: sinSecretos(`HTTP ${r.status} ${cuerpo.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim().slice(-160)}`, apikey, numero) };
     }
     return { ok: true };

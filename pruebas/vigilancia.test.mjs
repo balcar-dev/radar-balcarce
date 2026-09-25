@@ -316,10 +316,19 @@ test('CallMeBot acepta con 203 y repite el mensaje: aunque el texto diga "error"
   assert.equal(r.ok, true);
 });
 
-test('CallMeBot con el eco del mensaje pero sin "queued" ni error propio tampoco se toma como error por el texto enviado', async () => {
+test('CallMeBot con 203 y "APIKey is invalid" NO es un éxito (ocurrió el 25/09: los avisos no llegaban)', async () => {
   const r = await enviarWhatsApp({
-    telefono: '5492266123456', apikey: 'K', texto: 'error de mi mensaje',
-    fetchFn: async () => ({ ok: true, status: 203, text: async () => 'Message to: +5492266123456 Text to send: error de mi mensaje' }),
+    telefono: '5492266123456', apikey: 'K', texto: 'hola',
+    fetchFn: async () => ({ ok: true, status: 203, text: async () => 'Message to: +5492266123456 Text to send: hola APIKey is invalid. Please create a new one or contact support if you lost it.' }),
   });
-  assert.equal(r.ok, true);
+  assert.equal(r.ok, false);
+  assert.match(r.error, /invalid/i);
+});
+
+test('una respuesta que no dice que quedó en cola no se da por buena', async () => {
+  const r = await enviarWhatsApp({
+    telefono: '5492266123456', apikey: 'K', texto: 'x',
+    fetchFn: async () => ({ ok: true, status: 200, text: async () => 'algo raro' }),
+  });
+  assert.equal(r.ok, false);
 });
