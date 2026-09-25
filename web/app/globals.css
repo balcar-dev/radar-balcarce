@@ -499,6 +499,44 @@ a.telefono:hover { border-color: var(--rojo); color: inherit; }
 .telefono .nombre { font-size: 13.5px; color: var(--suave); }
 .telefono .numero { font-size: 19px; font-weight: 700; margin-top: 2px; }
 
+/* ------------------------------------------------------------------- dólar */
+
+/* La página /dolar (components/dolar-vivo.js). La línea de estado dice de
+   cuándo es el dato: con borde verde si el navegador lo acaba de traer, con
+   borde ámbar si es la foto guardada al compilar o si no se pudo actualizar. */
+.estado-dolar {
+  display: flex; align-items: baseline; gap: 10px;
+  background: var(--crema); border-radius: 10px; border-left: 4px solid var(--ambar);
+  padding: 12px 14px; font-size: 15px; line-height: 1.4;
+}
+.estado-dolar.al-dia { border-left-color: #2E9D5B; }
+.estado-dolar .mini { margin-top: 3px; }
+.brecha-dolar { margin: 14px 0 0; font-size: 15.5px; line-height: 1.5; }
+.brecha-dolar strong { font-variant-numeric: tabular-nums; }
+.brecha-dolar .apagado { color: var(--suave); font-size: 13.5px; }
+.rejilla-dolar { display: grid; grid-template-columns: minmax(0, 1fr); gap: 10px; margin-top: 16px; }
+@media (min-width: 620px) { .rejilla-dolar { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.tarjeta-dolar { background: var(--papel); border: 1px solid var(--linea); border-radius: 10px; padding: 14px 16px; }
+.tarjeta-dolar.destacada { border: 2px solid var(--tinta); padding: 13px 15px; }
+.cabeza-dolar { display: flex; align-items: baseline; justify-content: space-between; gap: 8px; }
+.cabeza-dolar h2 { font-family: "IBM Plex Sans", system-ui, sans-serif; font-size: 16px; font-weight: 700; }
+.hora-dolar { font-size: 11.5px; color: var(--suave); white-space: nowrap; font-variant-numeric: tabular-nums; }
+.precios-dolar { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; margin-top: 8px; }
+.precios-dolar .rotulo { font-size: 11px; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; color: var(--suave); }
+.precios-dolar .precio {
+  font-size: 26px; font-weight: 700; line-height: 1.15; letter-spacing: -0.01em;
+  font-variant-numeric: tabular-nums; color: var(--tinta);
+}
+@media (min-width: 720px) { .precios-dolar .precio { font-size: 28px; } }
+.enlace-fuente { color: var(--rojo); font-weight: 600; }
+.que-es-dolar { margin-top: 26px; border-top: 1px solid var(--linea-suave); padding-top: 14px; }
+.que-es-dolar summary { cursor: pointer; font-size: 15px; font-weight: 600; color: var(--texto); }
+.que-es-dolar dl { margin: 10px 0 0; }
+.que-es-dolar dl > div { padding: 9px 0; border-bottom: 1px solid var(--linea-suave); }
+.que-es-dolar dt { font-size: 14px; font-weight: 700; }
+.que-es-dolar dd { margin: 2px 0 0; font-size: 14.5px; line-height: 1.55; color: var(--texto); }
+.que-es-dolar .mini { margin-top: 10px; }
+
 /* Pasar de página en una sección. Los extremos vacíos se rellenan con un
    <span/> para que el número quede siempre en el centro. */
 .paginacion {

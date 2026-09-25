@@ -36,12 +36,27 @@ la web arranca igual con un aviso.
 
 | Carpeta | Qué hay |
 |---|---|
-| `app/` | Las páginas: portada, `nota/`, `seccion/`, `tema/`, `agenda/` (y `agenda/[id]`, cada evento con su `.ics`), `farmacias/`, `util/`, `politica-de-privacidad/`, `quienes-somos/`, `contacto/`, la 404 (`not-found.js`, rescata direcciones viejas con `nota/indice.json`), más `sitemap`, `sitemap-news.xml`, `robots`, `feed.xml` y `llms.txt` |
+| `app/` | Las páginas: portada, `nota/`, `seccion/`, `tema/`, `agenda/` (y `agenda/[id]`, cada evento con su `.ics`), `farmacias/`, `dolar/` (la cotización, que se pide en el navegador), `util/`, `politica-de-privacidad/`, `quienes-somos/`, `contacto/`, la 404 (`not-found.js`, rescata direcciones viejas con `nota/indice.json`), más `sitemap`, `sitemap-news.xml`, `robots`, `feed.xml` y `llms.txt` |
 | `components/` | Piezas de la interfaz (avisos, buscador, clima, ficha con datos estructurados, compartir) |
 | `lib/` | Direcciones (`ruta.js`), archivo de notas (`archivo.js`), dirección del sitio (`sitio.js`), tarjetas de imagen (`tarjeta.js`) |
-| `data/` | `portada.json`, `archivo.json` y `agenda.json` (los regenera Actions), `decisiones.json`, `avisos.json` y `eventos-panel.json` (los sube el panel), `redes.json` (libro de lo publicado) |
+| `data/` | `portada.json`, `archivo.json` y `agenda.json` (los regenera Actions), `decisiones.json`, `avisos.json` y `eventos-panel.json` (los sube el panel), `redes.json` (libro de lo publicado); `dolar.json` es la foto del dólar que guarda cada build (no se versiona) |
 | `scripts/` | Generar datos y redirecciones, íconos, auditoría de SEO y `recuperar-archivo.mjs` (herramienta de rescate: rearma `data/archivo.json` desde el historial de git si se pierde o se rompe) |
 | `public/` | Íconos, manifiesto, `_headers` (la imagen para compartir sale como `image/png`, HSTS y otros encabezados de seguridad, caché de un año para `/_next/static`) y `_redirects` (se genera en cada compilación) |
+
+## El dólar (`/dolar`)
+
+La cotización se pide **en el navegador** de quien abre la página, a
+[DolarApi.com](https://dolarapi.com) (`/v1/dolares`), y cada 5 minutos
+mientras sigue abierta; si no contesta, a [Bluelytics](https://bluelytics.com.ar)
+(sólo oficial y blue). Las dos son gratis, sin clave y con CORS abierto.
+
+Mientras tanto, o si las dos fallan, se ve la foto que guardó el build
+(`scripts/foto-dolar.mjs` → `data/dolar.json`, corre al principio de
+`npm run build`, nunca lo frena y no se versiona), marcada con su hora y
+"no se pudo actualizar". La página **nunca** dice "en vivo": el punto verde y
+"Actualizado a las…" aparecen sólo cuando la fuente contestó en el navegador,
+y la hora es la que informa la fuente. Lógica y textos en `lib/dolar.js`,
+tarjetas en `components/dolar-vivo.js`, pruebas en `../pruebas/dolar.test.mjs`.
 
 ## Para saber más
 

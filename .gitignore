@@ -15,6 +15,10 @@ web/out/
 # public/_redirects lo escribe scripts/generar-redirects.mjs en cada build,
 # a partir de portada.json: no es código, es un artefacto más, como .next/.
 web/public/_redirects
+# La foto del dólar la guarda scripts/foto-dolar.mjs al principio de cada
+# build: también es un artefacto (si se versionara, ensuciaría el árbol en
+# Actions y trabaría el `git pull --rebase` de "Actualizar la web").
+web/data/dolar.json
 # web/data/portada.json SÍ se versiona a propósito: es el artefacto que
 # lee el sitio público. panel/datos/ (arriba) es distinto — ahí viven las
 # decisiones humanas, y eso se queda en la máquina de quien corre el panel.

@@ -156,6 +156,7 @@ export default function RaizLayout({ children }) {
             <span className="crece" />
             <a href="/agenda" className="servicio">Agenda</a>
             <a href="/farmacias" className="servicio">Farmacias</a>
+            <a href="/dolar" className="servicio">Dólar</a>
             <a href="/util" className="servicio">Teléfonos</a>
           </div>
         </nav>
@@ -185,6 +186,7 @@ export default function RaizLayout({ children }) {
             </div>
             <div>
               <a href="/agenda">Agenda</a> · <a href="/farmacias">Farmacias</a> ·{' '}
+              <a href="/dolar">Dólar</a> ·{' '}
               <a href="/util">Teléfonos útiles</a> ·{' '}
               <a href="/politica-de-privacidad">Política de privacidad</a>
             </div>

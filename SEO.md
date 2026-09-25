@@ -21,6 +21,7 @@ el estado.
 | **`llms.txt`** | Descripción del sitio para buscadores con IA | `web/app/llms.txt` |
 | **Política de privacidad** | Página pública | `web/app/politica-de-privacidad`, `POLITICA-PRIVACIDAD.md` |
 | **Páginas de confianza** | "Quiénes somos" y "Contacto" (25/09), enlazadas desde el pie y en el sitemap. El pie ya no promete "revisión humana": dice que los resúmenes los escribe una IA, se verifican solos contra la fuente y lo sensible lo revisa una persona | `web/app/quienes-somos`, `web/app/contacto`, `pruebas/seo-paginas.test.mjs` |
+| **Dólar** (`/dolar`, 25/09) | Página de servicio como Farmacias: título "Dólar hoy en Balcarce: oficial, blue y MEP", canónico propio y en el sitemap (`hourly`). El HTML estático trae la foto guardada al compilar, con su hora; la cotización se actualiza en el navegador y la página nunca dice "en vivo" | `web/app/dolar/page.js`, `pruebas/dolar.test.mjs` |
 | **Encabezados** (`_headers`) | La imagen para compartir sale como `image/png` (antes `application/octet-stream`: Facebook y WhatsApp podían no mostrarla); HSTS, `nosniff`, `frame-ancestors` y otros de seguridad; caché de un año para `/_next/static` (25/09) | `web/public/_headers`, `pruebas/seo-paginas.test.mjs` |
 | **Idioma y accesibilidad básica** | `lang="es-AR"`; las etiquetas de sección con contraste de al menos 4,5:1; el buscador tiene nombre para lectores de pantalla (25/09) | `pruebas/seo-paginas.test.mjs` |
 | **Search Console** | Propiedad de dominio verificada con un registro TXT en Cloudflare (24/09) | `radarbalcarce@gmail.com` |
