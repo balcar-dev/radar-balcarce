@@ -47,10 +47,11 @@ export default function QuienesSomos() {
             enlaza a la nota original. El trabajo periodístico es de ese medio.
           </li>
           <li>
-            <strong>Los resúmenes los escribe una inteligencia artificial</strong> a partir de la
-            nota original, y un segundo programa los verifica contra la fuente antes de publicarlos:
-            si aparece un número, un nombre, una fecha o una cita que la fuente no trae, el texto se
-            descarta y queda el resumen de la fuente.
+            <strong>Las notas las escribe una inteligencia artificial</strong> con lo que publicaron
+            las fuentes (si varios medios contaron lo mismo, las junta), con palabras propias y sin
+            copiar. Un segundo programa las verifica contra esas fuentes antes de publicarlas: si
+            aparece un número, un nombre, una fecha o una cita que ninguna trae, esa parte se
+            descarta. Una nota que no llega a tener un cuerpo completo no se publica.
           </li>
           <li>
             <strong>Lo sensible lo revisa una persona.</strong> Una nota que acusa a alguien, que
@@ -59,8 +60,10 @@ export default function QuienesSomos() {
             nuestras redes.
           </li>
           <li>
-            <strong>Cada nota dice quién la escribió:</strong> si el resumen es de la fuente o de la
-            IA, y si salió sola o la publicó una persona.
+            <strong>Cada nota dice quién la escribió</strong>, en una línea al pie, junto al botón
+            de fuentes: si la redactó la IA, si la revisó la redacción o si el texto es el de la
+            fuente. Las fichas de la agenda y las notas propias (como la del dólar) se arman con
+            datos, sin IA, y también lo dicen.
           </li>
           <li>
             Las voces de nuestros videos también se producen con inteligencia artificial.
