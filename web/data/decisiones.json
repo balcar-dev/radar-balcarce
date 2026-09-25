@@ -1,5 +1,5 @@
 {
-  "exportado": "2026-09-25T12:50:49.559Z",
+  "exportado": "2026-09-25T13:02:40.370Z",
   "decisiones": {
     "1951120": {
       "estado": "automatica",
@@ -273,13 +273,46 @@
     },
     "1x87c94": {
       "estado": "automatica",
-      "titulo": "Reclamos del campo al Gobierno por impuestos",
-      "copete": "La Exposición Rural de Palermo cerró hace dos semanas con fuertes pedidos del sector agropecuario para reducir la carga impositiva nacional.",
-      "cuerpo": null,
-      "guion": "La última Exposición Rural de Palermo dejó nuevos reclamos del campo. El sector agropecuario le exigió al Gobierno nacional una baja en la carga impositiva.",
+      "titulo": "Se registran servicios de sepelios en Balcarce",
+      "copete": "La Cooperativa de Electricidad local informó el cronograma de servicios fúnebres correspondientes a vecinos fallecidos en las últimas semanas en el distrito.",
+      "cuerpo": "Durante las últimas semanas se llevaron adelante distintos servicios de sepelios en el distrito, según los registros brindados por la Cooperativa de Electricidad \"General Balcarce\" Limitada. Las inhumaciones y cremaciones se concretaron tanto en el Cementerio Municipal como en instalaciones privadas.\n\nLos procedimientos se cumplimentaron tras los respectivos oficios religiosos en las salas velatorias habilitadas, abarcando a personas fallecidas en fechas recientes en la ciudad y zonas de influencia como Los Pinos.\n\nLas ceremonias y traslados de los restos se desarrollaron conforme a los cronogramas organizados por la entidad de servicios públicos para los familiares y deudos.",
+      "guion": "Se registran servicios de sepelios en Balcarce.",
       "deIA": true,
       "por": "ia",
-      "cuando": "2026-09-18T17:38:53.363Z"
+      "cuando": "2026-09-25T13:02:40.310Z",
+      "claves": [
+        "Servicios fúnebres de la Cooperativa de Electricidad",
+        "Inhumaciones en el Cementerio Municipal",
+        "Atención a deudos en salas velatorias locales"
+      ],
+      "seSabe": [
+        "La Cooperativa de Electricidad \"General Balcarce\" Limitada informó los servicios de sepelios.",
+        "Los restos fueron velados en salas locales antes de su inhumación o cremación."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "La Cooperativa de Electricidad de Balcarce informó el detalle de los servicios de sepelios llevados a cabo en el distrito durante las últimas semanas.",
+      "etiquetas": [
+        "sepelios",
+        "fallecimientos",
+        "Balcarce",
+        "cooperativa de electricidad"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/le-seguiremos-demandando-al-gobierno-nacional-que-reduzca-la-carga-impositiva-193",
+          "fecha": null,
+          "oficial": false,
+          "aporte": "Detalló los avisos fúnebres y servicios de sepelios prestados en el distrito."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
     },
     "19jah2t": {
       "estado": "automatica",
@@ -8143,13 +8176,51 @@
     },
     "8hniuy": {
       "estado": "automatica",
-      "titulo": "Un balcarceño investiga sobre vida extrema para la NASA",
-      "copete": "El científico local Felipe Vilicich estudia organismos capaces de sobrevivir en condiciones extremas para los proyectos de la agencia espacial.",
-      "cuerpo": null,
-      "guion": "Un balcarceño investiga sobre vida extrema para la NASA",
+      "titulo": "Un científico formado en Balcarce investiga para la NASA",
+      "copete": "El licenciado en Biotecnología Felipe Vilicich integra un equipo internacional en Nueva York que analiza cómo la vida resiste condiciones extremas mediante inteligencia artificial y financiamiento de la agencia espacial.",
+      "cuerpo": "El investigador Felipe Vilicich, formado en Balcarce y graduado en Biotecnología por la UADE, realiza su doctorado en el Albert Einstein College of Medicine de Nueva York y participa en un proyecto financiado por el Departamento de Exobiología de la NASA. El equipo, que obtuvo una beca de un millón y medio de dólares en 2025, estudia cómo microorganismos de zonas áridas sobreviven al calor y la falta de agua mediante un estado de latencia.\n\nVilicich lidera el análisis masivo de datos con inteligencia artificial para identificar proteínas protectoras en estos organismos, tomando como referencia a los extremófilos como el tardígrado. La investigación busca determinar los mecanismos moleculares que permiten dicha resistencia ambiental.\n\nEl trabajo científico cuenta con aplicaciones tanto para la exploración espacial como para el desarrollo de tecnologías en la Tierra. El investigador prevé finalizar su tesis doctoral durante el transcurso de este año.",
+      "guion": "Un científico formado en Balcarce investiga para la NASA.",
       "deIA": true,
       "por": "ia",
-      "cuando": "2026-09-21T03:14:13.747Z"
+      "cuando": "2026-09-25T13:02:40.310Z",
+      "claves": [
+        "El balcarceño Felipe Vilicich realiza su doctorado en Nueva York.",
+        "Integra un equipo financiado por la beca de exobiología de la NASA.",
+        "Usa inteligencia artificial para estudiar microorganismos extremófilos.",
+        "Analiza cómo la vida sobrevive a condiciones extremas de calor y sequía."
+      ],
+      "seSabe": [
+        "Felipe Vilicich es licenciado en Biotecnología y se formó en Balcarce.",
+        "Trabaja en el Albert Einstein College of Medicine en Nueva York.",
+        "El proyecto obtuvo una beca de la NASA por un millón y medio de dólares en 2025.",
+        "El investigador utiliza inteligencia artificial para analizar millones de moléculas."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El científico balcarceño Felipe Vilicich integra un equipo en Nueva York que investiga para la NASA cómo sobreviven los microorganismos en condiciones extremas mediante inteligencia artificial.",
+      "etiquetas": [
+        "Felipe Vilicich",
+        "NASA",
+        "Balcarce",
+        "Biotecnología",
+        "Ciencia",
+        "Inteligencia Artificial"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/felipe-vilicich-el-balcarceno-que-investiga-para-la-nasa-como-puede-sobrevivir-la-vida-en-condiciones-extremas-209",
+          "fecha": null,
+          "oficial": false,
+          "aporte": "Detalló la trayectoria de Felipe Vilicich, su investigación en Nueva York para la NASA y el uso de inteligencia artificial para estudiar la supervivencia en condiciones extremas."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
     },
     "4ravs2": {
       "estado": "automatica",
@@ -12222,13 +12293,75 @@
     },
     "1837g46": {
       "estado": "automatica",
-      "titulo": null,
-      "copete": null,
-      "cuerpo": null,
-      "guion": null,
-      "deIA": null,
-      "por": null,
-      "cuando": "2026-09-25T06:51:12.140Z"
+      "titulo": "Kevin Gómez recibe un reconocimiento tras ser campeón argentino en Balcarce",
+      "copete": "El boxeador local fue homenajeado en el Museo Juan Manuel Fangio tras consagrarse campeón argentino de la categoría supermediano.",
+      "cuerpo": "El deportista Kevin Gómez fue reconocido en las últimas horas en el Museo Juan Manuel Fangio, luego de consagrarse campeón argentino de boxeo en la categoría supermediano. Del encuentro participaron el titular del espacio, Juan José Carli, y el responsable de Relaciones Institucionales.\n\nTras aquella consagración obtenida en septiembre, el boxeador regresó a la ciudad y mantuvo distintos encuentros con allegados y autoridades.\n\nEl homenaje pone en valor la trayectoria deportiva del púgil balcarceño, quien continúa recibiendo muestras de reconocimiento en el ámbito local tras la obtención del título nacional.",
+      "guion": "Kevin Gómez recibe un reconocimiento tras ser campeón argentino en Balcarce",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T13:02:40.310Z",
+      "claves": [
+        "El boxeador Kevin Gómez fue homenajeado en el Museo Juan Manuel Fangio.",
+        "El reconocimiento llega tras consagrarse campeón argentino supermediano.",
+        "El deportista venció previamente a Santiago Fernández por nocaut."
+      ],
+      "seSabe": [
+        "Kevin Gómez fue recibido y homenajeado en el Museo Juan Manuel Fangio.",
+        "Del encuentro participaron Juan José Carli y el responsable de Relaciones Institucionales.",
+        "El deportista obtuvo el título argentino de la categoría supermediano al vencer por nocaut a Santiago Fernández."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El boxeador Kevin Gómez fue homenajeado en el Museo Juan Manuel Fangio tras consagrarse campeón argentino de la categoría supermediano.",
+      "etiquetas": [
+        "Kevin Gómez",
+        "boxeo",
+        "campeón argentino",
+        "Museo Fangio",
+        "Balcarce"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/el-pugilista-kevin-gomez-recibio-un-reconocimiento-tras-consagrarse-campeon-argentino-271",
+          "fecha": "2026-09-22T15:10:53.000Z",
+          "oficial": false,
+          "aporte": "Informó sobre el reconocimiento brindado a Kevin Gómez en el Museo Juan Manuel Fangio."
+        },
+        {
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/kevin-gomez-es-el-nuevo-campeon-de-supermedianos-997",
+          "fecha": "2026-09-20T20:08:59.000Z",
+          "oficial": false,
+          "aporte": "Detalló la consagración del boxeador como campeón argentino supermediano tras vencer a Santiago Fernández."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "4retlk",
+          "titulo": "Kevin Gómez volvió a Balcarce tras ser campeón argentino",
+          "fecha": "2026-09-20T20:51:56.000Z",
+          "ruta": "/nota/kevin-gomez-volvio-a-balcarce-tras-ser-campeon-argentino-4retlk"
+        },
+        {
+          "id": "1ibi15p",
+          "titulo": "Kevin Gómez se consagró campeón nacional de boxeo",
+          "fecha": "2026-09-20T19:25:07.000Z",
+          "ruta": "/nota/kevin-gomez-se-consagro-campeon-nacional-de-boxeo-1ibi15p"
+        },
+        {
+          "id": "1dmj600",
+          "titulo": "Kevin Gómez se consagró campeón argentino de boxeo",
+          "fecha": "2026-09-20T04:57:04.000Z",
+          "ruta": "/nota/kevin-gomez-se-consagro-campeon-argentino-de-boxeo-1dmj600"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
     },
     "1li63ec": {
       "estado": "automatica",
@@ -12605,13 +12738,43 @@
     },
     "rosl57": {
       "estado": "automatica",
-      "titulo": null,
-      "copete": null,
-      "cuerpo": null,
-      "guion": null,
-      "deIA": null,
-      "por": null,
-      "cuando": "2026-09-25T07:01:07.831Z"
+      "titulo": "Congelan el precio de la VTV hasta mediados de octubre en Balcarce",
+      "copete": "El Gobierno bonaerense oficializó el congelamiento por noventa días en las tarifas de la Verificación Técnica Vehicular, por lo que se postergó el incremento previsto para el segundo semestre.",
+      "cuerpo": "El Ministerio de Transporte de la provincia de Buenos Aires oficializó la suspensión por noventa días en las tarifas de la Verificación Técnica Vehicular, una medida que mantiene sin cambios los valores vigentes hasta el 14 de octubre de 2026. La decisión postergó la actualización del diecisiete por ciento que las empresas concesionarias habían solicitado para el segundo semestre, que iba a llevar la tarifa básica a ciento catorce mil pesos de acuerdo con la evolución salarial.\n\nLa resolución provincial explicó que la postergación se acordó para evitar un impacto negativo en los automovilistas frente a la situación económica actual. Una vez concluido el plazo en octubre, deberá definirse una nueva tarifa tomando como referencia el salario vigente en ese momento del sector.",
+      "guion": "Congelan el precio de la VTV hasta mediados de octubre en Balcarce",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T13:02:40.310Z",
+      "claves": [
+        "El Gobierno bonaerense congeló la VTV por noventa días.",
+        "La medida frena un aumento del diecisiete por ciento.",
+        "La tarifa básica de los autos continúa en noventa y siete mil pesos."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El Gobierno bonaerense oficializó el congelamiento por noventa días en las tarifas de la Verificación Técnica Vehicular. De esta manera, los valores se mantendrán sin cambios hasta mediados de octubre para todos los vehículos.",
+      "etiquetas": [
+        "VTV",
+        "transporte",
+        "tarifas",
+        "provincia de Buenos Aires",
+        "Balcarce"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Diario La Vanguardia",
+          "enlace": "https://www.diariolavanguardia.com/noticias/44900-congelan-el-precio-de-la-vtv-hasta-mediados-de-octubre/",
+          "fecha": null,
+          "oficial": false,
+          "aporte": "Detalló los nuevos valores de la VTV y los plazos del congelamiento dispuesto por la Provincia."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
     },
     "wwbmd7": {
       "estado": "automatica",
@@ -12746,33 +12909,197 @@
     },
     "1nt7h0p": {
       "estado": "automatica",
-      "titulo": null,
-      "copete": null,
-      "cuerpo": null,
-      "guion": null,
-      "deIA": null,
-      "por": null,
-      "cuando": "2026-09-25T07:10:38.207Z"
+      "titulo": "El municipio y el sindicato cierran un acuerdo paritario en Balcarce",
+      "copete": "El Sindicato de Trabajadores Municipales y la comuna alcanzaron un entendimiento salarial con aumentos escalonados hasta marzo de 2027 que superan al Índice de Precios al Consumidor en determinados tramos.",
+      "cuerpo": "El Sindicato de Trabajadores Municipales y el Municipio de Balcarce acordaron una recomposición salarial que se extenderá hasta marzo de 2027, tras las negociaciones avanzadas informadas a fines de septiembre. El esquema contempla incrementos sobre el salario básico desde septiembre, con porcentajes que incluyen subas por encima de la inflación en ciertos tramos para recuperar poder adquisitivo.\n\nEl entendimiento prevé un 3,2% de aumento para septiembre sobre el básico de agosto, un 2,2% para octubre con el IPC de agosto más un 0,5%, y un 2,3% para noviembre con el IPC de septiembre más un 0,5%. Los meses siguientes se ajustarán según los índices de inflación, incluyendo un 0,5% adicional en marzo de 2027 por el diferimiento del pago.\n\nAdemás, se estableció una cláusula para convocar a una mesa técnica el 15 de febrero de 2027. Este espacio evaluará los ingresos por coparticipación frente a la inflación anual para analizar un posible complemento extraordinario y fijar la base de discusión paritaria de abril.",
+      "guion": "El municipio y el sindicato cierran un acuerdo paritario en Balcarce",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T13:02:40.310Z",
+      "claves": [
+        "Aumentos salariales escalonados hasta marzo de 2027.",
+        "Porcentajes por encima de la inflación en determinados tramos.",
+        "Mesa técnica de revisión prevista para febrero de 2027.",
+        "Nueva base de negociación paritaria fijada para abril."
+      ],
+      "seSabe": [
+        "El Sindicato de Trabajadores Municipales y el Municipio negocian un incremento escalonado hasta marzo de 2027.",
+        "El esquema contempla aumentos sobre el salario básico desde septiembre de 2026.",
+        "Se incorporó una cláusula para una mesa técnica el 15 de febrero de 2027.",
+        "Como se había informado el 24 de septiembre, las partes avanzaban en este entendimiento salarial."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El municipio y el Sindicato de Trabajadores Municipales alcanzaron un acuerdo paritario con aumentos escalonados hasta marzo de 2027 que superan al Índice de Precios al Consumidor en determinados tramos e incorporan una mesa de revisión técnica.",
+      "etiquetas": [
+        "sindicato de trabajadores municipales",
+        "municipio de balcarce",
+        "paritarias",
+        "salarios",
+        "aumento"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Diario La Vanguardia",
+          "enlace": "https://www.diariolavanguardia.com/noticias/44891-el-stm-y-el-gobierno-cerraron-un-acuerdo-con-una-recomposicion-salarial-que-supera-al-ipc-y-se-extiende-hasta-marzo/",
+          "fecha": null,
+          "oficial": false,
+          "aporte": "Detalló los porcentajes de aumento salarial por mes y la cláusula de revisión técnica para febrero de 2027."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "qxe9vk",
+          "titulo": "El STM y el gobierno cerca de cerrar una recomposición salarial que supera al IPC y se extiende hasta marzo",
+          "fecha": "2026-09-24T21:00:38.210Z",
+          "ruta": "/nota/el-stm-y-el-gobierno-cerca-de-cerrar-una-recomposicion-salarial-que-qxe9vk"
+        },
+        {
+          "id": "4tauw0",
+          "titulo": "El Municipio de Balcarce y el sindicato avanzan en un acuerdo salarial",
+          "fecha": "2026-09-24T21:09:33.000Z",
+          "ruta": "/nota/el-municipio-y-el-sindicato-avanzan-en-un-acuerdo-salarial-en-balcarce-4tauw0"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
     },
     "7c7bdz": {
       "estado": "automatica",
-      "titulo": null,
-      "copete": null,
-      "cuerpo": null,
-      "guion": null,
-      "deIA": null,
-      "por": null,
-      "cuando": "2026-09-25T07:10:42.344Z"
+      "titulo": "El Concejo debate eliminar tasas a taxis y remises en Balcarce",
+      "copete": "El Concejo Deliberante trata este jueves un proyecto para eliminar tasas y cánones a taxis y remises desde 2027. La medida busca equilibrar el sector frente al avance de las aplicaciones de transporte.",
+      "cuerpo": "El Concejo Deliberante debate este jueves en su décima cuarta sesión ordinaria un proyecto para eliminar distintas tasas, derechos y cánones municipales que alcanzan a taxis y remises a partir de 2027. La iniciativa, presentada por los concejales Ignacio Capeccio, Alejandra Marchegiani y Enrique Guillén, cuenta con despacho aprobatorio de comisión, aunque dejó expuestas diferencias internas tras registrarse abstenciones.\n\nEl tratamiento legislativo se da tras una protesta de trabajadores del sector frente al Palacio Municipal para reclamar igualdad de condiciones frente a los vehículos que operan mediante plataformas digitales.\n\nLa discusión tributaria se cruza con otro expediente en curso presentado en junio por el concejal Facundo Lazo para crear la figura de Autos de Transporte Privado, que busca unificar bajo un mismo esquema a taxis, remises y aplicaciones.",
+      "guion": "El Concejo debate eliminar tasas a taxis y remises en Balcarce",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T13:02:40.310Z",
+      "claves": [
+        "El Concejo Deliberante trata un proyecto para eliminar tasas a taxis y remises desde 2027.",
+        "La iniciativa fue impulsada por los concejales Capeccio, Marchegiani y Guillén.",
+        "El sector había protestado frente al municipio en reclamo de igualdad frente a las aplicaciones."
+      ],
+      "seSabe": [
+        "El proyecto llega al recinto este jueves con despacho aprobatorio de comisión, con algunas abstenciones.",
+        "La medida propone quitar más de diez conceptos entre tasas, derechos y cánones para el sector.",
+        "Existe un proyecto previo de junio impulsado por el concejal Facundo Lazo para regular las aplicaciones de transporte."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El Concejo Deliberante debate este jueves un proyecto para eliminar tasas y cánones a taxis y remises desde 2027 en medio de los reclamos del sector por la competencia de las aplicaciones de transporte en la ciudad.",
+      "etiquetas": [
+        "Concejo Deliberante",
+        "taxis y remises",
+        "transporte",
+        "tasas municipales",
+        "Balcarce"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Diario La Vanguardia",
+          "enlace": "https://www.diariolavanguardia.com/noticias/44886-taxis-y-remises-debatiran-la-eliminacion-de-tasas-mientras-el-sector-reclama-igualdad-frente-a-las-aplicaciones/",
+          "fecha": null,
+          "oficial": false,
+          "aporte": "Detalló el tratamiento del proyecto de eximición de tasas para taxis y remises en la sesión del Concejo Deliberante y los reclamos del sector."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1q0vr9a",
+          "titulo": "La Libertad Avanza propone eliminar tasas municipales para taxis y remises desde 2027",
+          "fecha": "2026-09-17T18:02:03.000Z",
+          "ruta": "/nota/la-libertad-avanza-propone-eliminar-tasas-municipales-para-taxis-y-1q0vr9a"
+        },
+        {
+          "id": "1chkxhh",
+          "titulo": "El Concejo Deliberante debate tasas y obras en Balcarce",
+          "fecha": "2026-09-25T02:23:01.000Z",
+          "ruta": "/nota/concejo-deliberante-la-decimocuarta-sesion-tuvo-debates-mas-1chkxhh"
+        },
+        {
+          "id": "1iv58lw",
+          "titulo": "El Concejo Deliberante debate tasas, obras y proyectos en Balcarce",
+          "fecha": "2026-09-24T12:55:31.000Z",
+          "ruta": "/nota/concejo-deliberante-este-jueves-se-desarrollara-el-decimocuarto-1iv58lw"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
     },
     "kiy3gs": {
       "estado": "automatica",
-      "titulo": null,
-      "copete": null,
-      "cuerpo": null,
-      "guion": null,
-      "deIA": null,
-      "por": null,
-      "cuando": "2026-09-25T07:10:46.252Z"
+      "titulo": "El Concejo Deliberante realiza este jueves la décima cuarta sesión ordinaria en Balcarce",
+      "copete": "El cuerpo legislativo local lleva a cabo este jueves su décima cuarta sesión ordinaria del año con un temario que incluye leasing, obras, transporte y cuestiones ambientales.",
+      "cuerpo": "Los concejales llevan adelante este jueves la décima cuarta sesión ordinaria del año en Balcarce, con el análisis de un extenso orden del día que abarca expedientes sobre servicios, obras y salud, según informó un medio local.\n\nDurante la jornada, el recinto evalúa convalidar decretos de operaciones de leasing y debate iniciativas vinculadas a taxis, remises y mejoras urbanas. Como se había informado en las reuniones previas de la semana, la agenda legislativa incluye expedientes sobre infraestructura, transporte y un pedido de informes sobre la red de agua potable.",
+      "guion": "El Concejo Deliberante realiza este jueves la décima cuarta sesión ordinaria en Balcarce",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T13:02:40.310Z",
+      "claves": [
+        "El Concejo Deliberante lleva a cabo su décima cuarta sesión ordinaria del año.",
+        "El temario incluye leasing, taxis, remises, obras y proyectos ambientales.",
+        "Se debaten iniciativas sobre salud, transporte y pedidos de informes a servicios públicos.",
+        "Tratan reconocimientos a deportistas, instituciones y establecimientos educativos."
+      ],
+      "seSabe": [
+        "Los concejales llevan adelante este jueves la décima cuarta sesión ordinaria del año, según un medio local.",
+        "El orden del día incluye decretos de leasing con Provincia Leasing S.A. con despacho unánime.",
+        "Se analizan proyectos sobre el Estadio Municipal, forestación, red de gas y reparación de un puente.",
+        "Tratan una propuesta técnica de José Luis Costa para el saneamiento de la Laguna La Brava.",
+        "Se evalúan expedientes sobre salud, campañas de prevención y el Programa de Acompañamiento Alimentario.",
+        "Incluye reconocimientos al boxeador Kevin Facundo Gómez y a distintas instituciones locales."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El Concejo Deliberante de Balcarce lleva adelante este jueves su décima cuarta sesión ordinaria del año con proyectos sobre leasing, transporte, obras y salud.",
+      "etiquetas": [
+        "Concejo Deliberante",
+        "Balcarce",
+        "sesion ordinaria",
+        "obras"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Diario La Vanguardia",
+          "enlace": "https://www.diariolavanguardia.com/noticias/44885-el-concejo-deliberante-vuelve-a-sesionar-los-principales-temas-que-estaran-en-debate/",
+          "fecha": null,
+          "oficial": false,
+          "aporte": "Detalló el orden del día de la décima cuarta sesión ordinaria del Concejo Deliberante y los expedientes en debate."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1chkxhh",
+          "titulo": "El Concejo Deliberante debate tasas y obras en Balcarce",
+          "fecha": "2026-09-25T02:23:01.000Z",
+          "ruta": "/nota/concejo-deliberante-la-decimocuarta-sesion-tuvo-debates-mas-1chkxhh"
+        },
+        {
+          "id": "1iv58lw",
+          "titulo": "El Concejo Deliberante debate tasas, obras y proyectos en Balcarce",
+          "fecha": "2026-09-24T12:55:31.000Z",
+          "ruta": "/nota/concejo-deliberante-este-jueves-se-desarrollara-el-decimocuarto-1iv58lw"
+        },
+        {
+          "id": "7c7bdz",
+          "titulo": "El Concejo debate eliminar tasas a taxis y remises en Balcarce",
+          "fecha": "2026-09-23T22:58:23.988Z",
+          "ruta": "/nota/taxis-y-remises-debatiran-la-eliminacion-de-tasas-mientras-el-sector-7c7bdz"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
     },
     "1knnogg": {
       "estado": "automatica",
@@ -15142,6 +15469,71 @@
       "verificacion": {
         "nivel": "ALTA",
         "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "164efaj": {
+      "estado": "automatica",
+      "titulo": "Solicitan una oficina presencial de Telepase en Balcarce",
+      "copete": "Concejales locales plantearon la necesidad de contar con un punto de atención presencial para resolver reclamos y errores de cobro en el sistema de peajes.",
+      "cuerpo": "La concejal de Juntos, Florencia Martínez, explicó que actualmente los usuarios deben viajar a Mar del Plata o gestionar de manera virtual, y advirtió que una pasada no registrada puede derivar en deudas y multas. A su vez, el concejal del Frente Potencia, Gabriel Petruccelli, sumó reclamos por cobros incorrectos de peajes por los que los conductores aseguran no haber circulado. En tanto, el edil de La Libertad Avanza, Enrique Guillén, indicó que los usuarios pueden reclamar ante la concesionaria y planteó que Corresur debería disponer personal en los peajes. Como se había informado a principios de semana, el pedido busca dar respuesta a los inconvenientes con las obleas y los cobros en la Ruta 226.",
+      "guion": "Solicitan una oficina presencial de Telepase en Balcarce",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T13:02:40.310Z",
+      "claves": [
+        "El Concejo Deliberante debatió la falta de atención presencial para el Telepase.",
+        "Concejales señalaron fallas en las obleas y cobros incorrectos en peajes.",
+        "Proponen que la concesionaria disponga personal para la atención de los usuarios."
+      ],
+      "seSabe": [
+        "El reclamo se planteó durante la decimocuarta sesión ordinaria del Concejo Deliberante.",
+        "Participaron los concejales Florencia Martínez, Gabriel Petruccelli, Enrique Guillén y Sol Di Gerónimo.",
+        "Se registraron cuestionamientos por cobros erróneos, falta de difusión y dificultades para realizar gestiones."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Concejales de Balcarce pidieron la instalación de una oficina presencial para resolver reclamos por fallas y cobros incorrectos en el sistema de Telepase.",
+      "etiquetas": [
+        "Concejo Deliberante",
+        "Telepase",
+        "Balcarce",
+        "reclamos",
+        "trámites"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Radio Gabal (FM 104.1)",
+          "enlace": "https://www.radiogabal.com.ar/index.php/politica/solicitan-una-oficina-presencial-para-atender-reclamos-por-el-telepase",
+          "fecha": "2026-09-25T12:48:28.000Z",
+          "oficial": false,
+          "aporte": "Detalló los reclamos planteados por los concejales en el Concejo Deliberante sobre las fallas y cobros del Telepase."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1n4w9ua",
+          "titulo": "Piden instalar un punto presencial para gestionar el TelePASE en Balcarce o en el peaje de la Ruta 226",
+          "fecha": "2026-09-23T14:56:16.191Z",
+          "ruta": "/nota/piden-instalar-un-punto-presencial-para-gestionar-el-telepase-en-1n4w9ua"
+        },
+        {
+          "id": "32591i",
+          "titulo": "Piden un punto TelePASE en Balcarce",
+          "fecha": "2026-09-23T12:51:34.000Z",
+          "ruta": "/nota/piden-un-punto-telepase-en-balcarce-32591i"
+        },
+        {
+          "id": "1s8swk5",
+          "titulo": "El Concejo pidió informes al Municipio por obras públicas",
+          "fecha": "2026-09-25T10:47:08.606Z",
+          "ruta": "/nota/el-concejo-pidio-informes-al-municipio-por-obras-publicas-1s8swk5"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
         "sugeridoPorIA": "MEDIA"
       }
     }
