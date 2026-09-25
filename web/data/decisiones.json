@@ -1,5 +1,5 @@
 {
-  "exportado": "2026-09-25T07:01:15.372Z",
+  "exportado": "2026-09-25T07:11:08.334Z",
   "decisiones": {
     "1951120": {
       "estado": "automatica",
@@ -10753,6 +10753,205 @@
         "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
         "sugeridoPorIA": "MEDIA"
       }
+    },
+    "1nt7h0p": {
+      "estado": "automatica",
+      "titulo": null,
+      "copete": null,
+      "cuerpo": null,
+      "guion": null,
+      "deIA": null,
+      "por": null,
+      "cuando": "2026-09-25T07:10:38.207Z"
+    },
+    "7c7bdz": {
+      "estado": "automatica",
+      "titulo": null,
+      "copete": null,
+      "cuerpo": null,
+      "guion": null,
+      "deIA": null,
+      "por": null,
+      "cuando": "2026-09-25T07:10:42.344Z"
+    },
+    "kiy3gs": {
+      "estado": "automatica",
+      "titulo": null,
+      "copete": null,
+      "cuerpo": null,
+      "guion": null,
+      "deIA": null,
+      "por": null,
+      "cuando": "2026-09-25T07:10:46.252Z"
+    },
+    "1knnogg": {
+      "estado": "automatica",
+      "titulo": null,
+      "copete": null,
+      "cuerpo": null,
+      "guion": null,
+      "deIA": null,
+      "por": null,
+      "cuando": "2026-09-25T07:10:48.047Z"
+    },
+    "1helk": {
+      "estado": "automatica",
+      "titulo": null,
+      "copete": null,
+      "cuerpo": null,
+      "guion": null,
+      "deIA": null,
+      "por": null,
+      "cuando": "2026-09-25T07:10:50.856Z"
+    },
+    "s897ks": {
+      "estado": "automatica",
+      "titulo": null,
+      "copete": null,
+      "cuerpo": null,
+      "guion": null,
+      "deIA": null,
+      "por": null,
+      "cuando": "2026-09-25T07:10:53.243Z"
+    },
+    "pd6ls9": {
+      "estado": "automatica",
+      "titulo": "Investigadores del CONICET revelan un mecanismo del cáncer de páncreas en Balcarce",
+      "copete": "Científicos del CONICET descubrieron un mecanismo de comunicación entre células del cáncer de páncreas que les permite sobrevivir.",
+      "cuerpo": "Un equipo de investigadores del CONICET y de distintas instituciones logró identificar un proceso mediante el cual las células del adenocarcinoma ductal pancreático, el tipo más frecuente de cáncer de páncreas, logran comunicarse para asegurar su supervivencia. El hallazgo aporta nueva información sobre el comportamiento de este tipo tumoral complejo y abre posibles vías de estudio para futuros tratamientos médicos a nivel general.",
+      "guion": "Investigadores del CONICET revelan un mecanismo del cáncer de páncreas en Balcarce",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T07:10:55.263Z",
+      "claves": [
+        "Participaron investigadores del CONICET y otras instituciones.",
+        "El estudio se enfoca en el adenocarcinoma ductal pancreático.",
+        "Se identificó cómo se comunican las células tumorales para sobrevivir."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Investigadores del CONICET y de diversas instituciones descubrieron un mecanismo que permite a las células del cáncer de páncreas comunicarse para sobrevivir.",
+      "etiquetas": [
+        "CONICET",
+        "cancer de pancreas",
+        "Balcarce"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/investigadores-del-conicet-revelan-como-celulas-de-cancer-pancreatico-se-comunican-para-sobrevivir-594",
+          "fecha": "2026-09-23T21:29:29.000Z",
+          "oficial": false,
+          "aporte": "Aportó la información sobre el descubrimiento del mecanismo de comunicación celular en el cáncer de páncreas realizado por investigadores del CONICET."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "myfrfq": {
+      "estado": "automatica",
+      "titulo": null,
+      "copete": null,
+      "cuerpo": null,
+      "guion": null,
+      "deIA": null,
+      "por": null,
+      "cuando": "2026-09-25T07:10:57.625Z"
+    },
+    "1vgvciw": {
+      "estado": "automatica",
+      "titulo": null,
+      "copete": null,
+      "cuerpo": null,
+      "guion": null,
+      "deIA": null,
+      "por": null,
+      "cuando": "2026-09-25T07:10:59.899Z"
+    },
+    "1jv9qa4": {
+      "estado": "automatica",
+      "titulo": null,
+      "copete": null,
+      "cuerpo": null,
+      "guion": null,
+      "deIA": null,
+      "por": null,
+      "cuando": "2026-09-25T07:11:02.811Z"
+    },
+    "m4p2h": {
+      "estado": "automatica",
+      "titulo": "Nadadores de la EMDAB compiten en un torneo nacional en Balcarce",
+      "copete": "Integrantes de la Escuela Municipal de Deporte Adaptado participaron de una competencia en Necochea. El evento reunió a deportistas de más de ocho ciudades en doble jornada.",
+      "cuerpo": "Nadadores locales que forman parte de la Escuela Municipal de Deporte Adaptado Balcarce compitieron en un certamen nacional desarrollado en un complejo deportivo de la vecina ciudad de Necochea. La actividad se llevó a cabo durante una doble jornada de programación.\n\nEl torneo reunió a representantes de más de ocho ciudades en el marco de la octava edición de la competencia. La delegación local sumó experiencia en este encuentro deportivo de carácter nacional.\n\nLa participación de los deportistas locales en este tipo de eventos fomenta la inclusión y el desarrollo deportivo en la comunidad.",
+      "guion": "Nadadores de la EMDAB compiten en un torneo nacional en Balcarce",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T07:11:05.238Z",
+      "claves": [
+        "Participación de la Escuela Municipal de Deporte Adaptado",
+        "Competencia desarrollada en la vecina ciudad de Necochea",
+        "Presencia de delegaciones de más de ocho ciudades",
+        "Actividad desarrollada en doble jornada"
+      ],
+      "seSabe": [
+        "Integrantes de la EMDAB participaron de un torneo nacional de natación",
+        "El certamen se desarrolló en un complejo deportivo de Necochea",
+        "La competencia reunió a deportistas de más de ocho ciudades",
+        "Las actividades se concretaron en doble jornada"
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Integrantes de la Escuela Municipal de Deporte Adaptado participaron de un torneo nacional de natación en Necochea con representantes de más de ocho ciudades.",
+      "etiquetas": [
+        "EMDAB",
+        "natación",
+        "deporte adaptado",
+        "Necochea",
+        "Balcarce"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/destacada-participacion-de-la-emdab-en-torneo-nacional-de-natacion-684",
+          "fecha": "2026-09-22T12:10:01.000Z",
+          "oficial": false,
+          "aporte": "Informó la participación del grupo de natación de la EMDAB en el torneo nacional de Necochea."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "hf1e85",
+          "titulo": "Destacada participación de nadadores de EMDAB en un torneo nacional en Necochea",
+          "fecha": "2026-09-21T20:20:34.000Z",
+          "ruta": "/nota/destacada-participacion-de-nadadores-de-emdab-en-un-torneo-nacional-hf1e85"
+        },
+        {
+          "id": "x9lsqs",
+          "titulo": "Destacada actuación de nadadores de EMDAB en un torneo nacional",
+          "fecha": "2026-09-21T13:12:00.000Z",
+          "ruta": "/nota/destacada-actuacion-de-nadadores-de-emdab-en-un-torneo-nacional-x9lsqs"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "m7523e": {
+      "estado": "automatica",
+      "titulo": null,
+      "copete": null,
+      "cuerpo": null,
+      "guion": null,
+      "deIA": null,
+      "por": null,
+      "cuando": "2026-09-25T07:11:08.302Z"
     }
   },
   "horarios": {
