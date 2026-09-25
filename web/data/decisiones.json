@@ -1,5 +1,5 @@
 {
-  "exportado": "2026-09-25T15:20:49.888Z",
+  "exportado": "2026-09-25T15:30:37.819Z",
   "decisiones": {
     "1951120": {
       "estado": "automatica",
@@ -10321,13 +10321,55 @@
     },
     "6sz9pj": {
       "estado": "automatica",
-      "titulo": null,
-      "copete": null,
-      "cuerpo": null,
-      "guion": null,
-      "deIA": null,
-      "por": null,
-      "cuando": "2026-09-21T12:04:24.265Z"
+      "titulo": "Registran los avisos fúnebres de las últimas semanas en Balcarce",
+      "copete": "Se difundieron los servicios de sepelios y las inhumaciones correspondientes a vecinos fallecidos en el distrito durante los últimos meses, según informó la Cooperativa de Electricidad.",
+      "cuerpo": "La Cooperativa de Electricidad «General Balcarce» Limitada dio a conocer los distintos servicios de sepelios realizados en la ciudad a lo largo de las últimas semanas. Los partes informan sobre los decesos registrados desde mayo hasta septiembre, detallando las fechas de los fallecimientos, las casas de duelo y los destinos de los restos.\n\nLos procedimientos incluyeron velatorios en salas locales y posteriores inhumaciones en el Cementerio Municipal, así como traslados a un crematorio privado en el partido de Miramar. Los servicios abarcaron tanto a residentes de la zona céntrica como de distintos barrios y localidades del partido, entre ellos Los Pinos.",
+      "guion": "Registran los avisos fúnebres de las últimas semanas en Balcarce",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T15:30:37.726Z",
+      "claves": [
+        "Difunden los servicios de sepelios de la Cooperativa de Electricidad.",
+        "Incluye registros de decesos ocurridos entre mayo y septiembre de dos mil veintiséis.",
+        "Detallan traslados al Cementerio Municipal y a un crematorio en Miramar."
+      ],
+      "seSabe": [
+        "La Cooperativa de Electricidad «General Balcarce» Limitada estuvo a cargo de los servicios de sepelios.",
+        "Los avisos corresponden a fallecimientos ocurridos en los meses de mayo, agosto y septiembre de dos mil veintiséis.",
+        "Se realizaron inhumaciones en el Cementerio Municipal y cremaciones en Miramar."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Difunden los servicios de sepelios y el detalle de las inhumaciones correspondientes a vecinos fallecidos en el distrito durante los últimos meses, según los registros de la Cooperativa de Electricidad.",
+      "etiquetas": [
+        "fallecimientos",
+        "Cooperativa de Electricidad",
+        "Balcarce",
+        "sepelios"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/amigos-unidos-vencio-a-los-patos-y-obtuvo-el-torneo-apertura-762",
+          "fecha": null,
+          "oficial": false,
+          "aporte": "Aportó el listado completo de los avisos fúnebres y servicios de sepelios informados por la cooperativa."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "15u7qbh",
+          "titulo": "Amigos Unidos y Los Patos jugarán la final del Play OFF",
+          "fecha": "2026-09-07T19:14:09.000Z",
+          "ruta": "/nota/amigos-unidos-y-los-patos-jugaran-la-final-del-play-off-15u7qbh"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
     },
     "1cgrp7o": {
       "estado": "automatica",
@@ -15128,31 +15170,26 @@
     },
     "osfsql": {
       "estado": "automatica",
-      "titulo": "Los Aventureros del Aire regresan para recorrer el mundo en Balcarce",
-      "copete": "Claudio y Betina Robetto retomaron sus travesías internacionales a bordo de su aeronave, llevando el espíritu de la aventura desde el distrito hacia distintos puntos del planeta.",
-      "cuerpo": "Los conocidos referentes aeronáuticos locales Claudio y Betina Robetto emprendieron una nueva etapa de sus habituales travesías globales a bordo de su avión, según informó la prensa local. La pareja, identificada como Los Aventureros del Aire, retomó sus vuelos internacionales.\n\nEl recorrido forma parte de las expediciones que realizan habitualmente, sumando millas y representando al distrito en el ámbito de la aviación recreativa y de aventura a nivel internacional.",
-      "guion": "Los Aventureros del Aire regresan para recorrer el mundo en Balcarce",
+      "titulo": "Informan los servicios de sepelios en Balcarce",
+      "copete": "Se difunden los servicios de sepelios y las inhumaciones correspondientes a vecinos fallecidos en el partido de Balcarce informados por la entidad local.",
+      "cuerpo": "La Cooperativa de Electricidad General Balcarce dio a conocer el detalle de los servicios de sepelios y honras fúnebres llevados a cabo en el distrito correspondientes a las últimas semanas.\n\nLos procedimientos incluyeron traslados a sala velatoria, oficios religiosos e inhumaciones en el Cementerio Municipal, así como derivaciones a crematorios privados en la región según cada caso, de acuerdo con la información brindada por la prestataria de servicios públicos.\n\nEstas comunicaciones habituales permiten a familiares y allegados conocer los cronogramas de despedida de los vecinos fallecidos en la comunidad.",
+      "guion": "Informan los servicios de sepelios en Balcarce",
       "deIA": true,
       "por": "ia",
-      "cuando": "2026-09-25T08:30:35.044Z",
+      "cuando": "2026-09-25T15:30:37.726Z",
       "claves": [
-        "Claudio y Betina Robetto retomaron sus viajes internacionales",
-        "Son conocidos como Los Aventureros del Aire",
-        "Realizan las travesías a bordo de su propia aeronave"
-      ],
-      "seSabe": [
-        "Claudio y Betina Robetto volvieron a recorrer el mundo",
-        "Realizan las travesías a bordo de una aeronave"
+        "Cronograma de servicios fúnebres en Balcarce",
+        "Información brindada por la cooperativa eléctrica",
+        "Inhumaciones y traslados en el Cementerio Municipal"
       ],
       "noConfirmado": [
         "No pudo ser contrastado de forma independiente con las fuentes consultadas."
       ],
-      "textoRedes": "Claudio y Betina Robetto, conocidos como Los Aventureros del Aire, retomaron sus travesías internacionales a bordo de su aeronave para recorrer distintos puntos del planeta.",
+      "textoRedes": "La cooperativa eléctrica local difundió el detalle de los servicios de sepelios y cronogramas de inhumaciones realizados en el distrito.",
       "etiquetas": [
-        "Aventureros del Aire",
-        "Claudio Robetto",
-        "Betina Robetto",
-        "Balcarce"
+        "Sepelios",
+        "Balcarce",
+        "Cooperativa de Electricidad"
       ],
       "fuentesConsultadas": [
         {
@@ -15160,7 +15197,7 @@
           "enlace": "https://eldiariobalcarce.com.ar/los-aventureros-del-aire-claudio-y-betina-robetto-volvieron-a-recorrer-el-mundo-460",
           "fecha": null,
           "oficial": false,
-          "aporte": "Informó sobre el regreso de Claudio y Betina Robetto a los recorridos internacionales por el mundo."
+          "aporte": "Aportó el listado de servicios de sepelios y cronogramas de inhumaciones informados por la entidad local."
         }
       ],
       "verificacion": {
@@ -20614,6 +20651,112 @@
           "fecha": "2026-09-25T15:12:57.000Z",
           "oficial": false,
           "aporte": "Detalló los asistentes, los temas debatidos y los acuerdos alcanzados en la cumbre legislativa bonaerense."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "1opixil": {
+      "estado": "automatica",
+      "titulo": "Donald Trump califica de productiva la visita del líder chino",
+      "copete": "El presidente de Estados Unidos y su par de China mantuvieron un encuentro en Washington. Xi propuso nuevos encuentros para este año.",
+      "cuerpo": "El presidente de Estados Unidos, Donald Trump, calificó este viernes como muy productiva su reunión con el mandatario de China, Xi Jinping, durante el cierre de la visita oficial a Washington.\n\nComo se había informado en las cenas y encuentros previos de esta semana, los mandatarios mantuvieron diversas actividades oficiales en la Casa Blanca. Durante la jornada, Xi propuso celebrar dos reuniones más este año, una en la cumbre de la APEC en China y otra en la del G20 en Estados Unidos.\n\nPor su parte, Trump propuso rebautizar la inteligencia artificial como superinteligencia y tenía previsto finalizar la agenda con una visita a los Archivos Nacionales.",
+      "guion": "Donald Trump califica de productiva la visita del líder chino",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T15:30:37.726Z",
+      "claves": [
+        "Trump calificó de productiva su reunión con Xi Jinping.",
+        "El líder chino propuso dos nuevos encuentros bilaterales para este año.",
+        "La agenda incluyó una visita final a los Archivos Nacionales de Washington."
+      ],
+      "seSabe": [
+        "Trump calificó de muy productiva su reunión con Xi Jinping en la Casa Blanca.",
+        "Xi Jinping propuso dos nuevos encuentros bilaterales para el resto del año en la APEC y el G20.",
+        "Trump propuso renombrar la inteligencia artificial como superinteligencia.",
+        "El mandatario estadounidense tenía previsto mostrar a su par chino documentos históricos en los Archivos Nacionales."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El presidente de Estados Unidos, Donald Trump, calificó de productiva su reunión con su par chino, Xi Jinping, en el cierre de la visita oficial en Washington.",
+      "etiquetas": [
+        "Donald Trump",
+        "Xi Jinping",
+        "Estados Unidos",
+        "China",
+        "Casa Blanca"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/america/mundo/2026/09/25/donald-trump-cierra-la-visita-de-xi-jinping-a-estados-unidos-se-avecinan-cosas-fantasticas/",
+          "fecha": "2026-09-25T15:23:02.000Z",
+          "oficial": false,
+          "aporte": "Detalló las declaraciones de Trump y Xi Jinping sobre los resultados de la visita oficial a Washington."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "17kk9tp",
+          "titulo": "EN VIVO: Donald Trump y Melania reciben a Xi Jinping y a su esposa para una cena de Estado en la Casa Blanca",
+          "fecha": "2026-09-25T00:26:24.000Z",
+          "ruta": "/nota/en-vivo-donald-trump-y-melania-reciben-a-xi-jinping-y-a-su-esposa-17kk9tp"
+        },
+        {
+          "id": "2kpa3m",
+          "titulo": "Empresarios globales participan de la cena entre Trump y Xi Jinping",
+          "fecha": "2026-09-25T13:50:00.000Z",
+          "ruta": "/nota/empresarios-globales-participan-de-la-cena-entre-trump-y-xi-jinping-2kpa3m"
+        },
+        {
+          "id": "1lk8tof",
+          "titulo": "Trump anuncia cambios tras una reunión con su par chino",
+          "fecha": "2026-09-25T13:20:13.000Z",
+          "ruta": "/nota/trump-anuncia-cambios-tras-una-reunion-con-su-par-chino-1lk8tof"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "6a496x": {
+      "estado": "automatica",
+      "titulo": "Volkswagen y Audi llaman a revisión a tres millones de autos",
+      "copete": "Las automotrices dispusieron una revisión global para casi tres millones de rodados por un posible inconveniente en la dirección. La medida comprende a unidades fabricadas desde 2013.",
+      "cuerpo": "Las automotrices Volkswagen y Audi convocaron a una revisión global para casi tres millones de vehículos debido a un potencial desperfecto en un perno del sistema de dirección.\n\nEl organismo federal de vehículos a motor de Alemania indicó que el problema radica en un tornillo que puede deteriorarse por la corrosión ambiental y comprometer el manejo, aunque aclaró que hasta el momento no se registraron accidentes ni personas lesionadas. Las empresas informaron que la reparación será sin costo para los propietarios y consistirá en el reemplazo del componente afectado por uno de mayor resistencia.\n\nLa medida comprende a modelos como el Tiguan, Touran, Golf y Caddy en la marca principal, además del Q3 en el caso de Audi. Ambas firmas estiman que la falla podría presentarse en un porcentaje mínimo de los rodados y prevén notificar a los titulares por correo postal, mientras que el organismo regulador mantiene el caso bajo investigación.",
+      "guion": "Volkswagen y Audi llaman a revisión a tres millones de autos",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T15:30:37.726Z",
+      "claves": [
+        "Revisión global para tres millones de vehículos",
+        "Posible fallo por corrosión en la dirección",
+        "Afecta a modelos fabricados desde 2013",
+        "La reparación será gratuita en talleres"
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Volkswagen y Audi convocaron a una revisión global para casi tres millones de vehículos por un posible fallo en la dirección. La medida abarca a unidades fabricadas desde 2013 y la reparación será gratuita.",
+      "etiquetas": [
+        "Volkswagen",
+        "Audi",
+        "vehículos",
+        "llamado a revisión"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/espana/2026/09/25/volkswagen-y-audi-llaman-a-revision-a-casi-tres-millones-de-vehiculos-por-un-posible-fallo-en-la-direccion-estos-son-los-modelos-afectados/",
+          "fecha": "2026-09-25T15:20:21.000Z",
+          "oficial": false,
+          "aporte": "Aportó los detalles sobre la llamada a revisión de casi tres millones de vehículos de Volkswagen y Audi, los modelos afectados, las causas técnicas del fallo y las estimaciones de las marcas."
         }
       ],
       "verificacion": {
