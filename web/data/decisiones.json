@@ -1,5 +1,5 @@
 {
-  "exportado": "2026-09-25T14:32:52.895Z",
+  "exportado": "2026-09-25T14:43:47.493Z",
   "decisiones": {
     "1951120": {
       "estado": "automatica",
@@ -8369,13 +8369,47 @@
     },
     "jaaaux": {
       "estado": "automatica",
-      "titulo": null,
-      "copete": null,
-      "cuerpo": null,
-      "guion": null,
-      "deIA": null,
-      "por": null,
-      "cuando": "2026-09-21T02:44:14.075Z"
+      "titulo": "Axel Kicillof lanza su espacio político de cara a dos mil veintisiete",
+      "copete": "El gobernador bonaerense encabezó un plenario federal donde expresó su voluntad de competir como alternativa electoral y cuestionó al gobierno nacional por el impacto económico.",
+      "cuerpo": "El gobernador bonaerense Axel Kicillof participó en el cierre de un plenario federal del Movimiento Derecho al Futuro, donde manifestó su intención de construir una propuesta electoral para el próximo año. Durante su discurso, el mandatario cuestionó las políticas de la gestión de Javier Milei y sostuvo que la administración nacional abandonó a las provincias.\n\nEn su mensaje ante la dirigencia, Kicillof señaló que la oposición debe articular un modelo diferente y afirmó que el peronismo debe ser la base de esa construcción, aunque advirtió que no alcanzará por sí solo. Asimismo, cuestionó las conducciones distantes y expresó su postura respecto a la interna partidaria.",
+      "guion": "Axel Kicillof lanza su espacio político de cara a dos mil veintisiete",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T14:43:47.405Z",
+      "claves": [
+        "Kicillof participó en un plenario federal del Movimiento Derecho al Futuro.",
+        "El mandatario expresó su voluntad de ofrecer una alternativa electoral para el próximo año.",
+        "Cuestionó las políticas del gobierno nacional y el impacto en las provincias.",
+        "Se refirió a la interna partidaria y a la necesidad de una apertura política."
+      ],
+      "seSabe": [
+        "Axel Kicillof encabezó el cierre de un plenario del Movimiento Derecho al Futuro.",
+        "El gobernador cuestionó las políticas de la administración de Javier Milei.",
+        "El mandatario afirmó que se debe construir una alternativa política de cara al año próximo."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Axel Kicillof encabezó el cierre de un plenario político y dejó en claro su voluntad de construir una alternativa electoral para el próximo año. Durante su discurso cuestionó las políticas de la gestión nacional y se refirió a la interna del espacio.",
+      "etiquetas": [
+        "Axel Kicillof",
+        "Movimiento Derecho al Futuro",
+        "política"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/kicillof-lanzo-su-armado-federal-con-un-mensaje-claro-para-2027-cuenten-conmigo-995",
+          "fecha": null,
+          "oficial": false,
+          "aporte": "Detalló los dichos de Axel Kicillof durante su participación en el plenario político."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
     },
     "1j6eaob": {
       "estado": "automatica",
@@ -8678,13 +8712,46 @@
     },
     "1yhd0gw": {
       "estado": "automatica",
-      "titulo": "Legislaturas provinciales: el costo por cada banca",
-      "copete": "Cada legislador provincial demandará este año un gasto promedio de más de mil quinientos millones de pesos en el país.",
-      "cuerpo": null,
-      "guion": "Legislaturas provinciales el costo por cada banca",
+      "titulo": "Legisladores provinciales cuestan más de mil millones al año",
+      "copete": "Un estudio privado revela que cada representante provincial demanda un promedio de más de mil quinientos millones de pesos anuales en el país, con grandes diferencias entre distritos.",
+      "cuerpo": "La cifra surge de dividir las partidas previstas en los presupuestos de las veinticuatro jurisdicciones para este año por la cantidad de integrantes de cada cámara parlamentaria.\n\nEl relevamiento detalla que los montos varían de forma significativa entre las provincias. Tucumán encabeza el listado con el mayor costo por representante, seguida por la Ciudad de Buenos Aires y Chaco, mientras que en el otro extremo se ubican San Luis y Santiago del Estero.\n\nDesde la entidad organizadora señalaron que la política no puede quedar al margen del esfuerzo económico que se le pide a los ciudadanos y remarcaron la necesidad de revisar los gastos y eliminar privilegios en las estructuras parlamentarias provinciales.",
+      "guion": "Legisladores provinciales cuestan más de mil millones al año",
       "deIA": true,
       "por": "ia",
-      "cuando": "2026-09-21T03:04:17.204Z"
+      "cuando": "2026-09-25T14:43:47.405Z",
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Un informe privado revela que cada legislador provincial demanda un promedio superior a los mil quinientos millones de pesos al año en el país, con marcadas diferencias presupuestarias entre las distintas jurisdicciones.",
+      "etiquetas": [
+        "legislaturas",
+        "presupuesto",
+        "provincias",
+        "gasto público",
+        "fundación libertad"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/politica/2026/09/21/el-gasto-de-las-legislaturas-cada-representante-provincial-cuesta-mas-de-1500-millones-en-promedio-al-ano/",
+          "fecha": "2026-09-25T14:26:56.000Z",
+          "oficial": false,
+          "aporte": "Aportó los datos sobre el costo promedio de los legisladores provinciales, el presupuesto total de las cámaras y las diferencias presupuestarias entre distritos según el informe de la Fundación Libertad."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "9yjs8k",
+          "titulo": "Una \"discreta\" sanción europea ya le cuesta 2.500 millones de dólares a Israel",
+          "fecha": "2026-09-24T18:01:48.000Z",
+          "ruta": "/nota/una-discreta-sancion-europea-ya-le-cuesta-2-500-millones-de-dolares-a-9yjs8k"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
     },
     "10odjov": {
       "estado": "automatica",
@@ -15292,13 +15359,55 @@
     },
     "gvrmid": {
       "estado": "automatica",
-      "titulo": null,
-      "copete": null,
-      "cuerpo": null,
-      "guion": null,
-      "deIA": null,
-      "por": null,
-      "cuando": "2026-09-25T09:30:39.663Z"
+      "titulo": "Informan servicios de sepelios y fallecimientos en Balcarce",
+      "copete": "La Cooperativa de Electricidad comunicó los servicios de sepelios correspondientes a los últimos meses en el partido de Balcarce.",
+      "cuerpo": "La Cooperativa de Electricidad General Balcarce Limitada informó los distintos servicios de sepelios y fallecimientos registrados en el distrito durante los meses de mayo, agosto y septiembre de 2026. Los avisos detallan las fechas de los decesos, las casas de duelo ubicadas en diferentes zonas de la ciudad y localidades como Los Pinos, y los horarios previstos para los oficios religiosos previos a las inhumaciones en el Cementerio Municipal o cremaciones en Miramar.\n\nEstas publicaciones habituales de la entidad cooperativa permiten a familiares y allegados conocer los detalles de las exequias y los lugares habilitados para las salas velatorias en el partido de Balcarce.",
+      "guion": "Informan servicios de sepelios y fallecimientos en Balcarce",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T14:43:47.405Z",
+      "claves": [
+        "La cooperativa eléctrica difundió los servicios de sepelios.",
+        "Los avisos corresponden a decesos ocurridos entre mayo y septiembre.",
+        "Se detallan las salas velatorias y el destino de los restos."
+      ],
+      "seSabe": [
+        "La Cooperativa de Electricidad General Balcarce Limitada informó sobre fallecimientos y servicios de sepelios.",
+        "Se registraron decesos en los meses de mayo, agosto y septiembre de 2026.",
+        "Los servicios incluyeron inhumaciones en el Cementerio Municipal y cremaciones en Miramar."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "La Cooperativa de Electricidad difundió el detalle de los servicios de sepelios y fallecimientos registrados en los últimos meses en Balcarce.",
+      "etiquetas": [
+        "sepelios",
+        "Balcarce",
+        "Cooperativa de Electricidad",
+        "fallecimientos"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/renuncio-el-secretario-nacional-de-discapacidad-en-medio-de-la-disputa-por-el-presupuesto-2027-425",
+          "fecha": null,
+          "oficial": false,
+          "aporte": "Detalló los avisos de fallecimientos y servicios de sepelios de la cooperativa eléctrica."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "2z4sjg",
+          "titulo": "Renunció el Secretario Nacional de Discapacidad en medio de la discusión por el Presupuesto 2027",
+          "fecha": "2026-09-22T02:35:00.000Z",
+          "ruta": "/nota/renuncio-el-secretario-nacional-de-discapacidad-en-medio-de-la-2z4sjg"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
     },
     "nrm2b5": {
       "estado": "automatica",
@@ -18997,6 +19106,282 @@
           "titulo": "Piden revisar el nuevo esquema de vacunación contra la aftosa en Balcarce",
           "fecha": "2026-08-31T13:18:07.000Z",
           "ruta": "/nota/fiebre-aftosa-piden-revisar-el-nuevo-esquema-de-vacunacion-14ht7th"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "1mr981m": {
+      "estado": "automatica",
+      "titulo": "Franco Colapinto larga décimo en el Gran Premio de Azerbaiyán",
+      "copete": "El piloto argentino se metió entre los diez mejores en la clasificación de la Fórmula 1 en Bakú. George Russell se quedó con la pole position.",
+      "cuerpo": "El piloto nacional alcanzó la instancia decisiva tras una sólida vuelta en el cierre de la segunda fase y largará desde la décima posición en la carrera principal del sábado. Durante la última tanda, un error en el primer intento rápido y una salida de pista condicionaron su rendimiento final con el monoplaza de Alpine.\n\nPor su parte, el británico George Russell se adueñó de la pole position en el circuito callejero tras marcar el mejor tiempo. El compañero de escudería del argentino, Pierre Gasly, finalizó séptimo, mientras que Charles Leclerc culminó como escolta en la sesión desarrollada en Azerbaiyán.\n\nLa actividad continuará este sábado desde las ocho de la mañana en el trazado urbano, donde el deportista buscará avanzar puestos luego de las dificultades registradas en los frenajes y en la gestión de los neumáticos durante la prueba clasificatoria.",
+      "guion": "Franco Colapinto larga decimo en el Gran Premio de Azerbaiyan",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T14:43:47.404Z",
+      "claves": [
+        "Franco Colapinto clasificó a la última tanda en Bakú.",
+        "El argentino largará desde la décima posición este sábado.",
+        "George Russell consiguió el mejor tiempo y partirá primero."
+      ],
+      "seSabe": [
+        "Franco Colapinto avanzó a la Q3 y largará décimo en el Gran Premio de Azerbaiyán.",
+        "George Russell se quedó con la pole position con un tiempo de 1:42.526.",
+        "Pierre Gasly finalizó séptimo con el otro monoplaza."
+      ],
+      "textoRedes": "Franco Colapinto se metió en la última tanda de clasificación y largará desde la décima posición este sábado en el Gran Premio de Azerbaiyán de la Fórmula 1. La pole position quedó en manos de George Russell en el circuito callejero de Bakú.",
+      "etiquetas": [
+        "Franco Colapinto",
+        "Formula 1",
+        "Gran Premio de Azerbaiyán"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "QZ Noticias (Mar del Plata)",
+          "enlace": "https://www.qznoticias.com/deportes/franco-colapinto-largara-10-en-el-gran-premio-de-azerbaiyan",
+          "fecha": "2026-09-25T14:30:27.000Z",
+          "oficial": false,
+          "aporte": "Detalló los tiempos de Colapinto y el desarrollo de la sesión en el circuito callejero de Bakú."
+        },
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/deportes/automovilismo/franco-colapinto-en-la-formula-1-en-vivo-nid25092026/",
+          "fecha": "2026-09-25T14:09:23.000Z",
+          "oficial": false,
+          "aporte": "Confirmó la pole position de George Russell y los datos generales de la competencia."
+        },
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/deportes/2026/09/25/franco-colapinto-afronta-la-ultima-practica-libre-en-el-gran-premio-de-baku/",
+          "fecha": "2026-09-25T13:56:15.000Z",
+          "oficial": false,
+          "aporte": "Informó el registro exacto de Russell y la diferencia con el segundo puesto."
+        },
+        {
+          "medio": "Olé",
+          "enlace": "https://www.ole.com.ar/autos/formula1-gran-premio-deazerbaiyan-2026-clasificacion-vivo-franco-colapinto-alpine_0_SGTtDR8tCI.html",
+          "fecha": "2026-09-25T13:38:00.000Z",
+          "oficial": false,
+          "aporte": "Mencionó el despiste de Colapinto en su intento por buscar una vuelta rápida."
+        },
+        {
+          "medio": "Ecos Diarios (Necochea)",
+          "enlace": "https://elecos.com.ar/formula-1-franco-colapinto-largara-en-el-10-lugar-en-azerbaiyan",
+          "fecha": "2026-09-25T13:14:02.000Z",
+          "oficial": false,
+          "aporte": "Indicó el horario de inicio para la carrera principal del sábado."
+        },
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/deportes/automovilismo/franco-colapinto-en-vivo-nid24092026/",
+          "fecha": "2026-09-24T13:29:49.000Z",
+          "oficial": false,
+          "aporte": "Aportó registros previos sobre el desempeño del piloto en las prácticas libres."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "ffhx7",
+          "titulo": "Franco Colapinto larga décimo en el Gran Premio de Azerbaiyán",
+          "fecha": "2026-09-25T13:50:49.000Z",
+          "ruta": "/nota/franco-colapinto-disputa-la-clasificacion-en-el-gran-premio-de-ffhx7"
+        },
+        {
+          "id": "1y3aqq8",
+          "titulo": "Franco Colapinto avanza a la última tanda en el Gran Premio de Azerbaiyán",
+          "fecha": "2026-09-25T13:45:06.000Z",
+          "ruta": "/nota/franco-colapinto-avanza-a-la-ultima-tanda-en-el-gran-premio-de-1y3aqq8"
+        },
+        {
+          "id": "1v7a52i",
+          "titulo": "Franco Colapinto avanza a la Q3 en el Gran Premio de Azerbaiyán",
+          "fecha": "2026-09-25T13:24:51.000Z",
+          "ruta": "/nota/franco-colapinto-avanza-a-la-q3-en-el-gran-premio-de-azerbaiyan-1v7a52i"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron cinco medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      }
+    },
+    "vn0qei": {
+      "estado": "automatica",
+      "titulo": "Los bonos y la Bolsa porteña operan a la baja y el riesgo país se acerca a los 600 puntos",
+      "copete": "La Bolsa de Comercio de Buenos Aires registra una nueva baja y los bonos soberanos en dólares retroceden, mientras el riesgo país se ubica en 591 puntos básicos, en una jornada con impacto en los mercados internacionales.",
+      "cuerpo": "En paralelo, las acciones de empresas argentinas que cotizan en Wall Street exhiben mayoría de pérdidas, con caídas destacadas en el sector energético.\n\nEsta tendencia negativa da continuidad al comportamiento financiero de las jornadas previas, cuando el riesgo país ya había experimentado incrementos y los activos locales operaron con mayoría de bajas en un contexto de caída de la actividad económica y volatilidad en los mercados internacionales.\n\nLa evolución de los indicadores financieros internacionales mantiene en atención a los inversores locales, en una semana marcada por la discusión sobre instrumentos de deuda, la agenda presidencial en Nueva York y la actividad petrolera global.",
+      "guion": "Los bonos y la Bolsa porteña operan a la baja y el riesgo país se acerca a los seiscientos puntos",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T14:43:47.405Z",
+      "claves": [
+        "La Bolsa porteña y los bonos en dólares operan con bajas.",
+        "El riesgo país se ubica en 591 puntos básicos.",
+        "Las acciones argentinas en Wall Street registran mayoría de pérdidas.",
+        "La actividad económica y los mercados internacionales marcan el contexto financiero."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Los bonos y la Bolsa porteña operan a la baja y el riesgo país se acerca a los 600 puntos básicos, en una jornada con impacto en los mercados internacionales y los activos locales.",
+      "etiquetas": [
+        "economía",
+        "bolsa",
+        "riesgo país",
+        "bonos"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/economia/2026/09/25/mercados-la-bolsa-portena-cae-por-quinto-dia-y-el-riesgo-pais-se-acerca-a-los-600-puntos/",
+          "fecha": "2026-09-25T14:31:06.000Z",
+          "oficial": false,
+          "aporte": "Detalló la caída de los bonos, del S&P Merval, el nivel del riesgo país, las bajas en Wall Street y los factores económicos nacionales e internacionales."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1gso9lv",
+          "titulo": "Jornada financiera: el riesgo país rozó los 580 puntos y las acciones argentinas volvieron a caer",
+          "fecha": "2026-09-24T21:37:42.000Z",
+          "ruta": "/nota/jornada-financiera-el-riesgo-pais-rozo-los-580-puntos-y-las-acciones-1gso9lv"
+        },
+        {
+          "id": "yoe8s9",
+          "titulo": "Mercados: cayeron las acciones y los bonos argentinos y volvió a subir el riesgo país",
+          "fecha": "2026-09-24T20:38:14.000Z",
+          "ruta": "/nota/mercados-cayeron-las-acciones-y-los-bonos-argentinos-y-volvio-a-subir-yoe8s9"
+        },
+        {
+          "id": "1kwaj1a",
+          "titulo": "El riesgo país no encuentra techo y alcanza los 570 puntos, mientras el S&P Merval cae por quinta rueda al hilo",
+          "fecha": "2026-09-24T19:30:00.000Z",
+          "ruta": "/nota/el-riesgo-pais-no-encuentra-techo-y-alcanza-los-570-puntos-mientras-1kwaj1a"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "1azxag8": {
+      "estado": "automatica",
+      "titulo": "El personal de casas particulares tendrá un nuevo aumento en octubre",
+      "copete": "El personal de casas particulares tendrá una suba salarial del 1,7% en octubre y la incorporación parcial de una suma no remunerativa. La medida impacta en los trabajadores de Balcarce.",
+      "cuerpo": "La medida establece una suba del 1,7% en los salarios básicos respecto a septiembre y la incorporación al básico de la mitad de la suma no remunerativa otorgada en agosto.\n\nLa normativa contempla cinco categorías y detalla los pagos según la modalidad mensual o por hora, además de fijar recargos por horas extra del 50% en días comunes y del 100% los fines de semana o feriados. También prevé un adicional del 31% por zona desfavorable para la región patagónica y el partido de Patagones, y un 1% anual por antigüedad.\n\nLos haberes deben abonarse mediante cuenta sueldo bancaria, salvo solicitud de pago en efectivo en días hábiles y en el lugar de trabajo. Para los trabajadores de Balcarce, estos nuevos valores regirán desde el próximo mes según cada categoría y modalidad de contratación.",
+      "guion": "El personal de casas particulares tendrá un nuevo aumento en octubre",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T14:43:47.405Z",
+      "claves": [
+        "El incremento salarial básico será del 1,7% respecto a septiembre.",
+        "Se incorpora al básico la mitad de la suma no remunerativa de agosto.",
+        "La escala contempla cinco categorías y modalidades con y sin retiro.",
+        "Se fijan recargos por horas extra y adicionales por antigüedad y zona desfavorable."
+      ],
+      "seSabe": [
+        "Rige desde octubre el tercer incremento de la Comisión Nacional de Trabajo en Casas Particulares según la Resolución 6/2026.",
+        "El aumento básico es del 1,7% en relación con los valores de septiembre.",
+        "Se suma al básico el 50% de la asignación no remunerativa entregada en agosto.",
+        "Los pagos deben realizarse en cuentas sueldo bancarias o en efectivo si el trabajador lo solicita en días hábiles."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El personal de casas particulares tendrá una suba salarial del 1,7% en octubre y sumará parte de la asignación no remunerativa de agosto. Conocé cómo impacta la nueva escala y cuáles son las modalidades de pago vigentes.",
+      "etiquetas": [
+        "empleadas domesticas",
+        "casas particulares",
+        "salarios",
+        "octubre",
+        "balcarce"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/economia/2026/09/25/empleadas-domesticas-cuanto-cobraran-en-octubre-segun-cada-categoria/",
+          "fecha": "2026-09-25T14:26:34.000Z",
+          "oficial": false,
+          "aporte": "Detalló los porcentajes de aumento, la incorporación de sumas no remunerativas, las modalidades de pago y los adicionales vigentes."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1dyqg94",
+          "titulo": "Jubilaciones de Anses: cuánto se cobra en octubre 2026, con el bono y el aumento confirmado",
+          "fecha": "2026-09-23T23:05:03.000Z",
+          "ruta": "/nota/jubilaciones-de-anses-cuanto-se-cobra-en-octubre-2026-con-el-bono-y-1dyqg94"
+        },
+        {
+          "id": "10rvby7",
+          "titulo": "Oficializaron el aumento para jubilaciones, pensiones y asignaciones: de cuánto será la mínima en octubre",
+          "fecha": "2026-09-23T06:53:12.000Z",
+          "ruta": "/nota/oficializaron-el-aumento-para-jubilaciones-pensiones-y-asignaciones-10rvby7"
+        },
+        {
+          "id": "ujkaqh",
+          "titulo": "Pagos Anses: a cuánto llega la PUAM en octubre de 2026 con el aumento confirmado",
+          "fecha": "2026-09-22T23:24:06.000Z",
+          "ruta": "/nota/pagos-anses-a-cuanto-llega-la-puam-en-octubre-de-2026-con-el-aumento-ujkaqh"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "17gsdsi": {
+      "estado": "automatica",
+      "titulo": "Javier Milei visita la Tumba del Rebe en Nueva York",
+      "copete": "Tras finalizar su agenda oficial en Nueva York y reunirse con el primer ministro israelí Benjamín Netanyahu, el presidente Javier Milei visitó la tumba del Rebe Menajem Mendel Schneerson antes de regresar a Buenos Aires.",
+      "cuerpo": "El presidente Javier Milei concluyó su actividad en Nueva York con una visita a la tumba del Rebe Menajem Mendel Schneerson en el cementerio de Montefiore, ubicado en Estados Unidos. El mandatario estuvo cerca de una hora en ese sitio de inspiración para la religión judía, donde repasó enseñanzas y realizó oraciones. Durante su recorrido por el lugar sagrado, el jefe de Estado estuvo acompañado por el canciller Pablo Quirno y el ministro de Economía, Luis Caputo, y fue recibido por el rabino Mendy Kotlarsky para dialogar sobre la vida judía y la lucha contra el antisemitismo.\n\nPreviamente, el mandatario mantuvo un encuentro a puertas cerradas con el premier israelí Benjamín Netanyahu en las sedes de las Naciones Unidas. Ambas autoridades repasaron la situación en Medio Oriente y reafirmaron su alianza geopolítica, además de conversar sobre las Islas Malvinas y la actividad de empresas en el área.",
+      "guion": "Javier Milei visita la Tumba del Rebe en Nueva York",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T14:43:47.405Z",
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Antes de regresar a Buenos Aires, el presidente Javier Milei visitó la tumba del Rebe Menajem Mendel Schneerson en Nueva York tras mantener un encuentro bilateral con el primer ministro israelí Benjamín Netanyahu.",
+      "etiquetas": [
+        "Javier Milei",
+        "Nueva York",
+        "Estados Unidos",
+        "Benjamín Netanyahu"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/politica/2026/09/25/javier-milei-visito-la-tumba-del-rebe-en-new-york-antes-de-regresar-a-buenos-aires/",
+          "fecha": "2026-09-25T13:41:27.000Z",
+          "oficial": false,
+          "aporte": "Detalla la visita del presidente Javier Milei a la tumba del Rebe en Nueva York y su reunión previa con Benjamín Netanyahu."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "7kc7ex",
+          "titulo": "Javier Milei fantaseó con tener un Cybertruck y manejarlo por Buenos Aires: \"Una cosa maravillosa, tipo Batman\"",
+          "fecha": "2026-09-24T23:03:00.000Z",
+          "ruta": "/nota/javier-milei-fantaseo-con-tener-un-cybertruck-y-manejarlo-por-buenos-7kc7ex"
+        },
+        {
+          "id": "fzmfy4",
+          "titulo": "Gira por New York: Milei se reunirá con Netanyahu y disertará en el Club Económico antes de regresar a Buenos Aires",
+          "fecha": "2026-09-24T07:37:23.000Z",
+          "ruta": "/nota/gira-por-new-york-milei-se-reunira-con-netanyahu-y-disertara-en-el-fzmfy4"
+        },
+        {
+          "id": "gdzyk4",
+          "titulo": "Javier Milei prepara su próximo viaje a Francia tras su paso por Nueva York",
+          "fecha": "2026-09-25T12:00:46.000Z",
+          "ruta": "/nota/javier-milei-prepara-su-proximo-viaje-a-francia-tras-su-paso-por-gdzyk4"
         }
       ],
       "verificacion": {
