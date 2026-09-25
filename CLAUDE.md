@@ -36,20 +36,22 @@ publicar piezas a mano. Detalle y horarios en `REDES.md`.
   que lo vigila. Dos veces se coló un import pesado y las pruebas rompieron en
   GitHub Actions andando en la máquina.
 - **Cuando se arregla algo que estuvo mal publicado, se escribe una prueba.**
-- **Nada sensible sale solo a las redes.** Política y Policiales esperan a una
-  persona en TODAS las piezas (`redes/elegir.mjs`), aunque en la web salgan por
-  el semáforo.
+- **El criterio editorial es uno solo: [`CRITERIO-EDITORIAL.md`](CRITERIO-EDITORIAL.md).**
+  Qué se publica, cómo se escribe (título, bajada, cuerpo), cómo se trabaja con
+  las fuentes, cómo se verifica, qué ve el lector, redes, firma. La IA lee su
+  sección 12 **tal cual** (`ingesta/prompt-editorial.mjs`; si falta, la
+  reescritura no arranca) y sus números están en `ingesta/criterio.mjs`,
+  controlados contra la tabla del documento (`pruebas/criterio.test.mjs`). Un
+  cambio de criterio se hace ahí, no en el código ni en otro documento. Lo que
+  nunca se rompe al tocar código: nunca identificar a un menor ni a una
+  víctima (el semáforo rojo; no tocar esa lista sin preguntar), nunca la foto
+  de otro medio, lo que escribe la IA se verifica contra la fuente, cada nota
+  dice quién la escribió, y Política y Policiales esperan a una persona en
+  TODAS las piezas de redes.
 - **Todo lo que va a Instagram es video con voz.** La API no acepta una imagen
   si no está en una dirección pública, y no alojamos archivos.
 - **Tokens y claves nunca en un chat ni en el código.** Van a GitHub Secrets o
   al `.env`. Quien los pega es una persona.
-- **Nunca la foto de otro medio.** La ley 11.723 cubre el texto, no las fotos.
-  Va una placa propia con el titular.
-- **Nunca identificar a un menor ni a una víctima** (leyes 26.061 y 26.485). El
-  semáforo rojo lo frena; no tocar esa lista sin preguntar.
-- **Lo que escribe la IA se verifica contra la fuente** (`ingesta/verificar.mjs`).
-  Si inventó un número, un nombre, un día o una cita, no se usa.
-- **Cada nota dice quién la escribió** (IA o fuente, automática o revisada).
 - **Sin cuerpo no se publica** (25/09). Una nota automática sin cuerpo de al
   menos 70 palabras no va a ningún lado público (`web/lib/cuerpo.js`); se
   reintenta hasta tres veces (`web/data/intentos-ia.json`). Lo que publica una
@@ -147,7 +149,7 @@ publicar piezas a mano. Detalle y horarios en `REDES.md`.
   "Actualizar la web" (no sólo cuando el panel está prendido), cruzando
   varias fuentes cuando hay más de una, con un tono distinto para lo serio
   (Policiales, inseguridad, emergencias) que para el resto, y verificado
-  contra la fuente antes de aceptarse. Detalle completo: `EDITORIAL.md`.
+  contra la fuente antes de aceptarse. Detalle completo: `CRITERIO-EDITORIAL.md`.
 - **Analítica: Cloudflare Web Analytics** (dash.cloudflare.com, gratis y sin
   cookies). Las analíticas de Vercel se sacaron al mudar el sitio. Todavía hay
   poco tráfico para sacar conclusiones.
@@ -182,7 +184,7 @@ publicar piezas a mano. Detalle y horarios en `REDES.md`.
   El panel reescribe con el mismo flujo (`reescribirAutomaticas`).
 - **Todo lo que falta, por categoría, está en [`PENDIENTES.md`](PENDIENTES.md)**
   (redes, SEO, bios, editorial, técnico) y en `IDEAS.md` (ideas de producto).
-  Qué se publica y cómo se escribe: `EDITORIAL.md`. Redes: `REDES.md`.
+  Qué se publica y cómo se escribe: `CRITERIO-EDITORIAL.md`. Redes: `REDES.md`.
   Documentación del proyecto: `MANUAL.md`.
 
 ## Dónde tocar cada cosa
@@ -192,12 +194,14 @@ publicar piezas a mano. Detalle y horarios en `REDES.md`.
 | agregar una fuente o cambiar un peso | `ingesta/fuentes.mjs` |
 | que una palabra mande una nota a otra sección | `REGLAS_SECCION`, mismo archivo |
 | que algo espere aprobación o nunca salga | `REGLAS_SEMAFORO`, mismo archivo |
-| cambiar cuánto puntaje pide cada sección | `PISO_DE_AFUERA` y `CUPO_DE_AFUERA`, mismo archivo |
+| cambiar el criterio editorial, el tono o las reglas de escritura | `CRITERIO-EDITORIAL.md` (la IA lo lee tal cual; reiniciar el panel) |
+| cambiar un número del criterio (largos, intentos, cupos, pisos, Facebook, podcasts) | `ingesta/criterio.mjs` **y** la tabla "Los números" de `CRITERIO-EDITORIAL.md` (una prueba controla que digan lo mismo) |
+| cambiar cuánto puntaje pide cada sección | `PISO_DE_AFUERA` y `CUPO_DE_AFUERA`, en `ingesta/criterio.mjs` (y en `CRITERIO-EDITORIAL.md`) |
 | agregar un tema que se sigue | `TEMAS`, mismo archivo |
 | ajustar el filtro de la IA | `ingesta/verificar.mjs` |
 | que el semáforo mire lo que escribe la IA | `reels/reescritura.mjs` (`semaforoDeLaReescritura`; usa las listas de `REGLAS_SEMAFORO`) |
 | cuánto dura una nota en la portada o en el archivo | `web/lib/archivo.js` (`HORAS_EN_PORTADA`, `DIAS_DE_ARCHIVO`, `MAXIMO_EN_ARCHIVO`) |
-| cambiar el tono o las reglas con que la IA reescribe una nota | `reels/reescritura.mjs` (`INSTRUCCION_EDITORIAL`, `esTemaSerio`) |
+| que una palabra pida el tono serio | `CRITERIO-EDITORIAL.md`, sección 4 ("Los dos tonos") |
 | cambiar cómo se calcula el nivel de verificación, los antecedentes o las partes nuevas (claves, qué se sabe, texto para redes) | `reels/reescritura.mjs` (`nivelDeVerificacion`, `antecedentesDe`, `completarReescritura`); se ven en el panel ("Análisis interno", `panel/panel.html`), no en la web. Qué fuente es oficial: `oficial: true` en `ingesta/fuentes.mjs` |
 | cambiar qué ve el lector al pie de la nota (el desplegable de fuentes) | `web/components/verificacion.js` y `web/lib/fuentes-de-la-nota.js` |
 | cambiar cuándo una nota "tiene cuerpo" o cuántos intentos se le dan | `web/lib/cuerpo.js` (`PALABRAS_MINIMAS_CUERPO`) y `reels/reescritura.mjs` (`MAXIMO_DE_INTENTOS`, `PALABRAS_MINIMAS_DE_MATERIAL`) |
@@ -212,7 +216,7 @@ publicar piezas a mano. Detalle y horarios en `REDES.md`.
 | cambiar una medida de imagen de Instagram/Facebook | `redes/formatos.mjs` (fuente única, con fecha de verificación) y `FORMATOS.md`. Los lunes `redes/auditar.mjs` audita lo publicado y avisa por WhatsApp si algo se desvió o los datos pasaron de 90 días |
 | cambiar qué revisa el vigilante o cuándo avisa | `redes/vigilar.mjs` |
 | sumar o completar comercios | `comercial/` (ver `COMERCIAL.md`) |
-| publicar un evento, su página en la web o a quién pedirle fechas | panel → Agenda (`panel/agenda.mjs`); la página, `web/lib/eventos.js` y `web/app/agenda/[id]`; los contactos, `ingesta/contactos-agenda.json` (ver `EDITORIAL.md` y `PANEL.md`) |
+| publicar un evento, su página en la web o a quién pedirle fechas | panel → Agenda (`panel/agenda.mjs`); la página, `web/lib/eventos.js` y `web/app/agenda/[id]`; los contactos, `ingesta/contactos-agenda.json` (ver `CRITERIO-EDITORIAL.md` § 8 y `PANEL.md`) |
 
 ## Dónde está cada documento
 
@@ -222,7 +226,7 @@ publicar piezas a mano. Detalle y horarios en `REDES.md`.
 | `REGLAS.md` | Lo que se exige siempre y la prueba o el chequeo que lo cuida; las decisiones que siguen valiendo |
 | `INFRAESTRUCTURA.md` | Qué corre dónde, secretos por nombre, vencimientos, qué se cae y cómo se ve |
 | `MANUAL.md` | Cómo se eligen las noticias: puntaje, semáforo, diseño de la web |
-| `EDITORIAL.md` | Secciones y cómo se escribe una nota (título, copete, cuerpo) |
+| `CRITERIO-EDITORIAL.md` | **El criterio editorial único**: qué entra, semáforo, cómo se escribe (título, bajada, cuerpo), fuentes, verificación, qué ve el lector, notas propias, redes, firma, los números y la instrucción exacta de la IA |
 | `REDES.md` | Qué se publica en Instagram y Facebook, cuándo y con qué reglas |
 | `PERFILES.md` | Biografías, categorías y colores de las redes |
 | `FORMATOS.md` | Medidas de imágenes y videos, con la auditoría semanal |

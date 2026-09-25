@@ -49,7 +49,7 @@ el estado.
 | **Google Business Profile** | Aparecer en el mapa y en "cerca de mí" | Si corresponde |
 | **Google AdSense** | Monetizar con avisos de Google | **Para mañana** (`PENDIENTES.md`). Falta: que una persona abra la cuenta (datos fiscales), `ads.txt` con el ID de editor que da AdSense (sin el ID no se puede armar) y más notas con cuerpo. La aprobación tarda de días a semanas. Ver `PUBLICIDAD.md` |
 | **Notas con cuerpo** | Google y AdSense premian el contenido propio | Hoy sólo el 19 % tiene cuerpo. La IA reescribe primero lo local desde el 25/09: mirar si sube |
-| **Política editorial** como página | Lo que Google y las IA miran para decidir si un medio es confiable | "Quiénes somos" y "Contacto" ya están. Falta la política editorial: sacar de `EDITORIAL.md` lo que se puede publicar. Y confirmar el texto de "Quiénes somos" |
+| **Política editorial** como página | Lo que Google y las IA miran para decidir si un medio es confiable | "Quiénes somos" y "Contacto" ya están. Falta la política editorial: sacar de `CRITERIO-EDITORIAL.md` lo que se puede publicar. Y confirmar el texto de "Quiénes somos" |
 | **CSP completa** | Seguridad | Hoy `_headers` sólo trae `frame-ancestors` |
 | **Rastreadores de IA** (GPTBot, ClaudeBot, PerplexityBot, Google-Extended) | Permitirlos da visibilidad y citas; bloquearlos protege el contenido | Decisión editorial, no técnica. Hoy `robots.txt` no distingue |
 | **PageSpeed / Core Web Vitals** | Posicionamiento y experiencia en celulares con mala señal | Medir y ajustar |

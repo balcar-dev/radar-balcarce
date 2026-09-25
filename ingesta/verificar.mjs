@@ -16,7 +16,9 @@
 // igual, con el resumen del medio original, que es como salía antes de que
 // existiera la reescritura. Un falso negativo es publicar una mentira.
 //
-// Sin dependencias: corre en GitHub Actions sin instalar nada.
+// Sin dependencias: corre en GitHub Actions sin instalar nada. Los límites de
+// largo salen de ingesta/criterio.mjs, los números del criterio editorial
+// (CRITERIO-EDITORIAL.md, sección 11).
 //
 //   verificar({ titulo, resumen, antecedentes? }, { titulo, copete, cuerpo, guion })
 //     → { ok: boolean, problemas: [{ tipo, detalle }] }
@@ -32,6 +34,10 @@
 // si la oración lo marca como anterior ("en agosto", "como se había
 // informado", "la semana pasada"); nunca en el título, la bajada, el guion ni
 // el texto para redes, que por definición cuentan lo de hoy.
+
+import {
+  TITULO, BAJADA, CUERPO, GUION, PARTES, COPIA_MAXIMA,
+} from './criterio.mjs';
 
 const sinTildes = (s = '') => String(s)
   .toLowerCase()
@@ -155,21 +161,21 @@ function tramoCopiado(original, nuevo) {
 
 export const LIMITES = {
   // El tope duro. La instrucción pide unos 70; más de 90 no entra en el celular.
-  titulo: 90,
+  titulo: TITULO.maximo,
   // La bajada: dos o tres frases (desde el 25/09; antes, dos líneas y 280).
-  copete: 360,
-  guion: 200,
+  copete: BAJADA.maximo,
+  guion: GUION.maximo,
   // De 100 a 180 palabras en uno a tres párrafos: con esto sobra. Es la nota,
   // no una crónica.
-  cuerpo: 1800,
+  cuerpo: CUERPO.maximo,
   // Las partes nuevas (25/09): cada punto de una lista, y el texto para redes.
-  clave: 180,
-  dato: 260,
-  aporte: 220,
-  textoRedes: 280,
-  etiqueta: 40,
+  clave: PARTES.clave,
+  dato: PARTES.dato,
+  aporte: PARTES.aporte,
+  textoRedes: PARTES.textoRedes,
+  etiqueta: PARTES.etiqueta,
   // Más de esto seguido, palabra por palabra, es copiar y no reescribir.
-  copiaMaxima: 12,
+  copiaMaxima: COPIA_MAXIMA,
 };
 
 // ------------------------------------------------------------ los antecedentes

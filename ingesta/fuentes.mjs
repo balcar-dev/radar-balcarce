@@ -963,50 +963,10 @@ export const FARMACIAS_A_MANO = {
 };
 
 
-// Cuánto puntaje necesita una nota de AFUERA para salir sola, por sección.
-//
-// Lo de Balcarce no tiene piso. Lo de afuera sí, porque las fuentes
-// nacionales tiran cincuenta notas por vuelta y sólo unas pocas le importan
-// a alguien de acá. El piso no es igual para todas:
-//
-//   · Deportes sube: es casi un tercio de todo lo que entra y no es lo que
-//     define a un medio de Balcarce. Queda lo que ya vale mucho — Messi,
-//     Colapinto, la Selección — y lo de la zona.
-//   · Economía, Tecnología, Política y Policiales bajan: las fuentes de
-//     esas secciones son pocas y de peso parejo, y con el piso general de
-//     50 no habría pasado casi nada.
-export const PISO_DE_AFUERA = {
-  Deportes: 62,
-  Economía: 38,
-  Tecnología: 38,
-  Política: 40,
-  Policiales: 40,
-};
-export const PISO_POR_DEFECTO = 50;
-
-// Cuántas notas de AFUERA salen solas por sección, como máximo.
-//
-// Con el piso no alcanza: un domingo de fútbol tiene treinta notas arriba de
-// 62 puntos, y la portada de Balcarce sería la de Olé. El cupo se queda con
-// las de más puntaje y manda el resto a esperar. Lo de Balcarce no tiene
-// cupo.
-//
-// Automovilismo no tenía cupo hasta el 25/09, y la portada de ese día tenía
-// 45 notas de fierros (22 de afuera: F1, TC nacional) contra 40 de Balcarce.
-// Un medio de Balcarce no puede tener más Fórmula 1 que Balcarce. Con 12,
-// lo de afuera baja a la mitad y lo local (el autódromo, los pilotos de acá)
-// sigue sin cupo, como siempre: ese día habrían quedado 23 + 12 = 35.
-// Tecnología y Política bajan de 12 a 8: ese día tenían 6 y 4 de afuera, así
-// que no se vacían, pero un día de mucha noticia nacional ya no tapan lo local.
-// Automovilismo bajó otra vez, de 12 a 6, esa misma madrugada: con la portada
-// de 72 h quedaban 16 locales (semana del autódromo) + 12 de afuera (semana de
-// F1) = 28, contra 24 de Balcarce. Con 6, las mejores de la F1 siguen saliendo.
-export const CUPO_DE_AFUERA = {
-  Deportes: 10,
-  Economía: 12,
-  Tecnología: 8,
-  Política: 8,
-  Policiales: 8,
-  Automovilismo: 6,
-};
-export const CUPO_POR_DEFECTO = 15;
+// Cuánto puntaje necesita una nota de AFUERA para salir sola (el piso) y
+// cuántas de afuera salen solas por sección (el cupo): son números del
+// criterio editorial, y viven en ingesta/criterio.mjs, con el porqué de cada
+// uno, y en la tabla "Los números" de CRITERIO-EDITORIAL.md. Se cambian ahí.
+export {
+  PISO_DE_AFUERA, PISO_POR_DEFECTO, CUPO_DE_AFUERA, CUPO_POR_DEFECTO,
+} from './criterio.mjs';

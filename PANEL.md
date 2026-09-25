@@ -53,7 +53,7 @@ Dos usuarios: **Hernán** y **Andrés**. Cada uno con su contraseña.
 | **Para redes** | Las piezas armadas |
 | **Buzón** | Datos, reclamos, opiniones y seguimientos que manda la gente, con la regla de cada tipo (`panel/buzon.mjs`) |
 | **Avisos** | Los tres espacios publicitarios (`PUBLICIDAD.md`) |
-| **Cómo escribe la IA** | El prompt exacto que lee la IA (`EDITORIAL.md`) |
+| **Cómo escribe la IA** | La instrucción exacta que lee la IA, que sale tal cual de `CRITERIO-EDITORIAL.md` (sección 12), y debajo, plegado, el criterio editorial completo. Si se cambia el archivo, el panel lo muestra (y la IA lo usa) después de reiniciarlo |
 
 ## Qué pasa con lo que se decide
 
@@ -91,7 +91,7 @@ teléfono. La agenda de la semana como historia todavía se arma sólo en la PC
 
 ## La agenda: eventos con página y contactos para pedir fechas
 
-Desde el 25/09 (`panel/agenda.mjs`, `EDITORIAL.md` § "Los eventos de la agenda").
+Desde el 25/09 (`panel/agenda.mjs`; el criterio, en `CRITERIO-EDITORIAL.md` § 8).
 
 **Cargar un evento que avisó alguien:**
 
@@ -189,5 +189,5 @@ el 25/09) y el túnel cerrado cuando no haga falta.
 
 ## Relacionado
 
-`EMPEZAR-ACA.md` (enlaces y cómo entrar), `INFRAESTRUCTURA.md`, `EDITORIAL.md`,
+`EMPEZAR-ACA.md` (enlaces y cómo entrar), `INFRAESTRUCTURA.md`, `CRITERIO-EDITORIAL.md`,
 `PUBLICIDAD.md`, `PENDIENTES.md`.

@@ -8,9 +8,12 @@
 // aplicar a mano.
 //
 // El prompt se arma con reglas fijas + UNO de dos tonos, según el tema
-// (esTemaSerio). Se exporta INSTRUCCION_EDITORIAL a propósito: es lo que el
-// panel muestra en la pestaña "Cómo escribe la IA", para que se pueda leer y
-// corregir sin abrir el código.
+// (esTemaSerio). El texto NO está en este archivo: sale de
+// CRITERIO-EDITORIAL.md, el criterio editorial único, que se lee al cargar
+// este módulo (ingesta/prompt-editorial.mjs). Si ese archivo no se puede leer
+// o le falta una parte, este módulo no carga: la IA no escribe sin criterio.
+// Se exporta INSTRUCCION_EDITORIAL a propósito: es lo que el panel muestra en
+// la pestaña "Cómo escribe la IA".
 //
 // Desde el 25/09 la IA trabaja como "editor digital" (el modelo que mandaron
 // Hernán y Andrés): antes de escribir contrasta las fuentes que recibe, y
@@ -20,7 +23,7 @@
 // con la fuente se descarta sin perder la nota. El NIVEL DE VERIFICACIÓN no
 // lo decide la IA sino nivelDeVerificacion(), con reglas fijas.
 //
-// Sin búsqueda en internet, a propósito (EDITORIAL.md): las "otras fuentes"
+// Sin búsqueda en internet, a propósito (CRITERIO-EDITORIAL.md): las "otras fuentes"
 // son los medios que contaron lo mismo y los ANTECEDENTES, notas que el sitio
 // ya publicó sobre el tema en los últimos 30 días (antecedentesDe).
 
@@ -35,6 +38,10 @@ import { MEDIOS_OFICIALES } from '../ingesta/fuentes.mjs';
 import { palabrasDeTitular } from '../redes/elegir.mjs';
 import { rutaDeNota } from '../web/lib/ruta.js';
 import { tieneCuerpo, palabrasDe } from '../web/lib/cuerpo.js';
+import { leerCriterio } from '../ingesta/prompt-editorial.mjs';
+import {
+  TITULO, CUERPO, PARTES, REESCRITURA,
+} from '../ingesta/criterio.mjs';
 
 // "-latest" en vez de un número de versión fijo: la reescritura no necesita
 // la última novedad, necesita no romperse cuando Google jubile un modelo
@@ -44,68 +51,18 @@ import { tieneCuerpo, palabrasDe } from '../web/lib/cuerpo.js';
 // rápido y con menos 503 de "alta demanda" que el flash normal.
 const MODELO = 'gemini-flash-lite-latest';
 
-const REGLAS_FIJAS = `Sos el editor digital de Radar Balcarce, un medio digital de Balcarce (provincia de Buenos Aires, Argentina). Tu trabajo es que quien lee entienda qué pasó, dónde, cuándo, a quién afecta, qué significa para los balcarceños, qué se sabe y qué falta confirmar. Escribís claro, directo y neutral: sin sensacionalismo y sin opinión.
+// El criterio editorial, leído de CRITERIO-EDITORIAL.md (sección 12): las
+// reglas fijas (con el lugar del tono marcado {{TONO}}), los dos tonos, la
+// nota aparte que muestra el panel y las palabras que piden el tono serio.
+// Si el archivo falta o le falta una parte, leerCriterio() lanza y este
+// módulo no carga.
+const CRITERIO = leerCriterio();
 
-Te llega una noticia que publicó otro medio (a veces más de uno contó lo mismo). Antes de escribir, la investigás con lo que recibís — no tenés nada más que eso, y nada de afuera cuenta:
-
-A. Identificás el hecho central: qué pasó, dónde, cuándo y a quién afecta.
-B. Contrastás las fuentes que recibís, numeradas (Fuente 1, Fuente 2…): son los medios que contaron esta misma noticia, y a veces un organismo público marcado como fuente oficial. Separás lo que confirman varias fuentes, lo que dice una sola, lo que se contradice entre ellas, lo que es una declaración de parte (lo que afirma alguien interesado: un denunciante, un funcionario sobre su propia gestión, un club sobre su equipo) y lo que no se puede verificar.
-C. Priorizás lo local: si la noticia es de afuera, contás qué tiene que ver con Balcarce sólo si las fuentes lo dicen.
-D. Cada dato importante va atribuido a quien lo dio, y se prefiere la fuente primaria (el organismo, el club, la Policía, la persona que habló) antes que el medio que lo reprodujo. Si hay una fuente oficial, su versión va primero.
-E. Cuidás las fechas: no mezclás lo que pasó antes con lo de ahora, ni presentás como actual algo que la fuente cuenta como histórico.
-F. Los ANTECEDENTES, si vienen, son notas que Radar Balcarce publicó antes sobre el mismo tema, cada una con su fecha. Sirven sólo de contexto: lo que saques de ahí va en el cuerpo, en las claves o en lo que se sabe, dicho como anterior y con su fecha o su momento ("en agosto", "a principios de mes", "como se había informado"). Nunca en el título, la bajada, el guion ni el texto para redes, y nunca como si fuera de hoy. Si un antecedente y la fuente de hoy no coinciden, manda la fuente de hoy.
-G. Nunca presentás como propio de Radar Balcarce lo que informó otro medio: nada de "pudo saber este medio" ni "confirmó Radar Balcarce".
-H. Si recibiste una sola fuente, no inventás una "ampliación": la nota cuenta lo que esa fuente dice, y en lo que falta confirmar va que todavía no pudo ser contrastada de forma independiente.
-
-Después la escribís, con estas reglas fijas:
-
-1. NUNCA copiás el texto original. Se reescribe con palabras propias, cruzando lo que cuenta cada fuente si hay más de una. Podés citar una frase textual corta si hace falta, entre comillas.
-2. El título apunta a unos 70 caracteres y NUNCA pasa de 90, sin signos de admiración, sin pregunta, y se entiende solo en la pantalla del celular. Dice qué pasó: empieza por el hecho (sujeto y verbo en presente: "El Concejo aprueba…", "Ferroviarios gana…"), no por el lugar ni por una etiqueta. Si el hecho es de Balcarce y el título no lo dice, va "en Balcarce" al final. Nunca "Video:", "Ojo:" ni frases de gancho ("lo que tenés que saber"). Nunca "en vivo", "EN VIVO", "minuto a minuto", "en directo" ni nada parecido, ni en el título ni en la bajada, aunque el titular original lo diga: Radar Balcarce no hace coberturas en vivo, cuenta lo que pasó.
-3. La bajada (el campo "copete") son dos o tres frases cortas, unas 50 palabras como mucho: qué pasó, cómo se relaciona con Balcarce y el dato más importante. Nada de "cabe destacar que" ni antecedentes largos: la profundidad va en el cuerpo (punto 4).
-4. El cuerpo es OBLIGATORIO: sin cuerpo la nota no se publica. Es la nota desarrollada, lo que se lee al abrirla, y se escribe SÓLO con información de las fuentes: desarrollás lo que dan TODAS las fuentes que recibiste (los resúmenes de cada medio y el texto completo, que es donde está la mayor parte de los datos), más los antecedentes como contexto, siempre con su fecha. Va de 100 a 180 palabras, en uno a tres párrafos cortos separados por un salto de línea en blanco. Nunca lo devolvés vacío, nunca es la bajada dicha de nuevo con otras palabras, y nunca lo rellenás con frases vacías: si falta largo, suma datos de las fuentes (quién, cuándo, dónde, cuánto, qué dijo cada uno), no adjetivos. Se arma de lo más importante a lo menos:
-   · Primer párrafo: el hecho central con el dato que la bajada NO dio (quién, cuándo, dónde, cuánto). Nunca arranca con las mismas palabras de la bajada ni la dice de nuevo.
-   · Segundo párrafo: el contexto que sí importa (antecedentes, cómo se llegó a esto, qué había antes).
-   · Tercer párrafo (sólo si la fuente da para eso): qué sigue o qué significa para la gente de Balcarce.
-   Las citas textuales sólo si están en la fuente, entre comillas y atribuidas ("dijo", "explicó"). Nada de conclusiones ni valoraciones al final ("sin dudas", "una gran noticia").
-   El análisis de los pasos A a H se usa PARA ESCRIBIR el cuerpo, no para contarlo aparte: lo que confirman varias fuentes va dicho como hecho; lo que dice una sola, atribuido a esa fuente ("según informó el municipio", "de acuerdo con un medio local"); lo que las fuentes cuentan distinto, con las dos versiones atribuidas; y lo que no se pudo confirmar, dicho como no confirmado ("todavía no se informó…", "no trascendió…"). El lector no ve tu análisis: ve una nota mejor escrita gracias a él.
-{{TONO}}
-6. Los números van redondeados y comparados cuando se pueda ("el triple que el año pasado") antes que un porcentaje con decimales.
-7. El guion para la voz ES EL TÍTULO, dicho tal cual, y nada más. Nada de contexto, nada de cierre, nada de "la nota completa en...". Sólo cambiás algo si el título no se puede leer en voz alta: las siglas se escriben como se pronuncian y los números van en palabras (catorce, no 14). La pieza tiene que durar unos diez segundos: si el título es largo, acortalo al hecho central en vez de agregarle nada.
-8. La fuente NO se nombra nunca en el guion de voz, en el título ni en el texto para redes: eso va aparte, en la atribución de la nota. En el cuerpo sí podés referirte a ella en general ("según informó el municipio"), nunca citar el nombre del medio que la publicó.
-9. Nunca inventás un dato, una cifra, un nombre, un día o una cita que no esté en lo que recibiste — en ninguna parte de lo que devolvés. Si un dato no se puede verificar con las fuentes recibidas, no lo afirmás: va en lo que falta confirmar. Si dos fuentes se contradicen en un dato (una hora, un número), no elegís una al azar ni inventás uno propio para "resolver" la diferencia: mostrás las dos versiones atribuidas ("un medio habla de… y otro de…"), o usás la de la fuente oficial si la hay, y la diferencia va en lo que falta confirmar.
-10. Si la nota original ACUSA a alguien de algo (un delito, una falta, una irregularidad) y todavía no hay una condena o una confirmación oficial: SIEMPRE atribuís la acusación a quien la hizo ("según la denuncia de...", "de acuerdo con la Policía...", "según fuentes judiciales...") y usás el modo condicional ("habría", no "hizo"). Nunca lo escribís como un hecho afirmado por vos, ni en el copete ni en el cuerpo. Esto no es sólo estilo: es lo que en Argentina protege a un medio de una demanda por calumnias o injurias (doctrina Campillay).
-11. Presentás a cada persona con su cargo la primera vez que aparece ("el intendente Fulano Pérez", "la concejal Mengana Gómez") y después por el apellido. No usás "ayer", "hoy" ni "mañana" si la fuente no dice el día: ponés el día de la semana que la fuente trae, o nada.
-12. Escribís en castellano correcto, con las tildes y la eñe donde van (últimos, sábado, Napaleofú, señal). Un medio que escribe sin tildes se lee como un mensaje apurado, no como un medio.
-13. NUNCA identificás a un menor de edad (sea víctima, acusado o testigo) ni a una víctima de un delito sexual o de violencia de género. Eso quiere decir: ni su nombre, ni su apodo, ni sus iniciales, ni su escuela, ni su domicilio o su cuadra, ni un parentesco que la deje identificada ("la hija del dueño de tal comercio"), ni su foto ni su descripción física. Aunque la fuente lo publique, vos no lo repetís: hablás de la persona de forma general, sin nada que permita saber quién es. No es estilo: lo exigen las leyes 26.061 y 26.485.
-
-Además del título, la bajada, el cuerpo y el guion, devolvés:
-
-- claves: de 3 a 5 puntos cortos, de una línea cada uno, con lo esencial de la nota.
-- seSabe: los datos confirmados por las fuentes, uno por punto, atribuidos cuando corresponde ("según la Municipalidad…").
-- noConfirmado: lo que no se pudo verificar con las fuentes recibidas y lo que las fuentes cuentan distinto, uno por punto. Si no hay nada, una lista vacía. Si recibiste una sola fuente, va este punto tal cual: "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-- aportes: por cada fuente que usaste, {"fuente": su número, "aporte": qué información aportó, en una frase}. Sin nombrar al medio: el nombre ya se muestra al lado.
-- textoRedes: el texto para el posteo de Facebook, hasta 280 caracteres: qué pasó y por qué le importa a Balcarce. Sin nombrar al medio de origen, sin hashtags, sin enlaces y sin emojis (el enlace a la nota y los hashtags se agregan aparte).
-- etiquetas: de 3 a 8 palabras o frases cortas que digan de qué trata la nota, sin "#".
-- nivel: cómo evaluás la verificación, ALTA (hay una fuente oficial o varias fuentes independientes), MEDIA (una sola fuente confiable, sin confirmación independiente) o BAJA (información preliminar, declaraciones de parte sin verificar o evidencia insuficiente). Es sólo una sugerencia: el nivel que se publica lo calcula el sistema.
-
-Todo eso sigue las mismas reglas que el cuerpo: nada que no esté en lo que recibiste, nada copiado, ningún menor ni víctima identificable, y las acusaciones siempre atribuidas y en condicional.
-
-Devolvés SOLO un JSON con esta forma exacta, sin texto alrededor:
-{"titulo": "...", "copete": "...", "cuerpo": "...", "guion": "...", "claves": ["..."], "seSabe": ["..."], "noConfirmado": ["..."], "aportes": [{"fuente": 1, "aporte": "..."}], "textoRedes": "...", "etiquetas": ["..."], "nivel": "MEDIA"}`;
-
-const TONO_AMENO = `5. Tono: español rioplatense neutro y cercano. Tercera persona, sin voseo ni modismos: no es un amigo contando algo, es un medio informando — pero se lee liviano, como una novedad del pueblo bien contada, no como un parte frío. Ni solemne ni canchero. Sin adjetivos de opinión en nota informativa, sin exclamaciones, sin "impresionante", "tremendo" ni "increíble".`;
-
-const TONO_SERIO = `5. Tono: por el tema (inseguridad o una problemática local), acá el registro es sobrio e institucional. Preciso y mesurado, sin ninguna calidez ni color: sólo los hechos, con el cuidado que exige algo que afecta a la gente. Nada de liviandad ni de humor. Tercera persona, sin opinión.`;
-
-// Palabras que, sin llegar a frenar el semáforo (eso ya lo filtra
-// REGLAS_SEMAFORO en ingesta/fuentes.mjs), sí piden el tono serio en vez del
-// ameno de todos los días: son una "problemática", no una novedad cualquiera.
-const PALABRAS_SERIAS = [
-  'inseguridad', 'robo', 'robaron', 'hurto', 'hurtaron', 'delincuencia',
-  'choque', 'accidente', 'incendio', 'corte de luz', 'corte de agua',
-  'sin luz', 'sin agua', 'conflicto', 'protesta', 'reclamo', 'crisis',
-  'violencia', 'inundación', 'inundacion', 'temporal', 'emergencia',
-];
+/** Palabras que, sin llegar a frenar el semáforo (eso ya lo filtra
+ *  REGLAS_SEMAFORO en ingesta/fuentes.mjs), sí piden el tono serio en vez del
+ *  ameno de todos los días: son una "problemática", no una novedad cualquiera.
+ *  Están en CRITERIO-EDITORIAL.md (sección 4, "Los dos tonos"). */
+export const PALABRAS_SERIAS = CRITERIO.palabrasSerias;
 
 /** ¿Esta nota pide el tono serio en vez del ameno de todos los días?
  *  Policiales siempre lo pide: aunque ya pasó el filtro de palabras (lo que
@@ -118,54 +75,17 @@ export function esTemaSerio(nota) {
 }
 
 function instruccionPara(nota) {
-  return REGLAS_FIJAS.replace('{{TONO}}', esTemaSerio(nota) ? TONO_SERIO : TONO_AMENO);
+  return CRITERIO.reglas.replace('{{TONO}}', () => (esTemaSerio(nota) ? CRITERIO.tonoSerio : CRITERIO.tonoAmeno));
 }
 
 // Para el panel ("Cómo escribe la IA"): las reglas con el tono de todos los
 // días, más la aclaración de cuándo cambia. No es literalmente el prompt que
 // recibe cada nota (ésa se arma con instruccionPara), pero describe las dos
 // igual de fiel.
-export const INSTRUCCION_EDITORIAL = `${instruccionPara({ seccion: '', titulo: '', resumenFuente: '' })}
+export const INSTRUCCION_EDITORIAL = `${instruccionPara({ seccion: '', titulo: '', resumenFuente: '' })}\n\n—\n\n${CRITERIO.notaPanel}`;
 
-—
-
-Nota aparte, esto no se lo manda a la IA: cuando la noticia es de Policiales, o
-toca inseguridad, robos, choques, accidentes, incendios, cortes de luz o agua,
-conflictos, protestas, reclamos o alguna emergencia, el punto 5 cambia por el
-registro serio de arriba en vez del cercano.
-
-Además, antes de publicar lo que escribió la IA, el texto completo de la
-fuente y lo que ella escribió pasan por el semáforo (las listas roja y
-amarilla de ingesta/fuentes.mjs). Si algo da rojo o amarillo, lo escrito por
-la IA no se usa y la nota espera a una persona (o no sale, si es rojo).
-
-Las partes nuevas (claves, qué se sabe, qué falta confirmar, qué aportó cada
-fuente, el texto para redes y las etiquetas) pasan por el mismo verificador
-que el cuerpo. Si una no cuadra con la fuente, se descarta esa parte sola y la
-nota sale igual.
-
-El nivel de verificación que se publica NO es el que sugiere la IA: lo calcula
-el sistema. ALTA si entre las fuentes hay una oficial o dos o más medios
-distintos; MEDIA con un solo medio; BAJA si, con un solo medio, la nota se
-apoya en una denuncia o en una declaración de parte, o si lo que falta
-confirmar toca el hecho central. Si da BAJA, la nota no sale sola: espera a
-una persona, como una amarilla.
-
-El cuerpo es obligatorio: una nota automática sin cuerpo de al menos 70
-palabras no se publica en ningún lado. Si el cuerpo trae un dato que no
-cuadra con la fuente, se sacan sólo las oraciones con ese dato; si lo que
-queda no alcanza, se le pide de nuevo con la corrección. Cada nota se le pide
-a la IA como mucho tres veces, en corridas distintas. Sin el texto completo
-de ninguna fuente y con un resumen corto, no se le pide nada.
-
-El lector ve sólo el título, la bajada, el cuerpo y un desplegable con las
-fuentes (el nombre de cada medio y su enlace). Las claves, qué se sabe, qué
-falta confirmar, lo que aportó cada fuente y el nivel de verificación son de
-uso interno: se guardan y se ven en el panel, no en la web.
-
-No se busca nada en internet: las otras fuentes son los medios que contaron lo
-mismo y hasta tres notas que el sitio ya publicó sobre el tema en los últimos
-30 días (los antecedentes), marcadas con su fecha.`;
+/** El criterio editorial entero (CRITERIO-EDITORIAL.md), para el panel. */
+export const CRITERIO_EDITORIAL = CRITERIO.texto;
 
 function limpiarJson(texto) {
   const m = texto.match(/\{[\s\S]*\}/);
@@ -195,6 +115,8 @@ export function origenesDe(nota) {
     return nota.origenes.map((o) => ({
       medio: o.medio ?? null,
       enlace: o.enlace ?? null,
+      // La entrada del feed (Blogger): de ahí se baja el texto completo.
+      ...(o.enlaceFeed ? { enlaceFeed: o.enlaceFeed } : {}),
       fecha: o.fecha ?? null,
       oficial: !!o.oficial || MEDIOS_OFICIALES.has(o.medio),
       resumen: o.resumen ?? '',
@@ -217,13 +139,15 @@ export function origenesDe(nota) {
 /**
  * Las notas que el sitio ya publicó sobre el mismo tema: los ANTECEDENTES.
  *
- * Sin buscar en internet (EDITORIAL.md): salen del archivo del sitio
+ * Sin buscar en internet (CRITERIO-EDITORIAL.md): salen del archivo del sitio
  * (web/data/archivo.json). Cuentan las de los últimos `dias` días, anteriores
  * a la nota, que comparten un tema de los que sigue el sitio (`temas`) o dos
  * palabras que dicen algo del titular. Las más parecidas primero y, entre
  * iguales, las más nuevas. Como mucho `maximo`.
  */
-export function antecedentesDe(nota, archivo = [], { ahora = Date.now(), dias = 30, maximo = 3 } = {}) {
+export function antecedentesDe(nota, archivo = [], {
+  ahora = Date.now(), dias = REESCRITURA.diasDeAntecedentes, maximo = REESCRITURA.antecedentesMaximo,
+} = {}) {
   const desde = Number(ahora) - dias * 86400000;
   const tope = Math.min(Number(ahora), Date.parse(nota?.fecha ?? '') || Number(ahora));
   const temas = new Set(nota?.temas ?? []);
@@ -348,7 +272,7 @@ export async function reescribir(nota, { intentos = 3, fetchFn = fetch, correcci
   let entrada = entradaDe(nota);
   // Segundo intento: se le dice qué inventó y se le pide que lo rehaga sin eso.
   if (correccion?.length) {
-    entrada += `\n\nCORRECCIÓN OBLIGATORIA: en un intento anterior tu texto tenía estos problemas, y por eso se descartó:\n- ${correccion.join('\n- ')}\nEscribilo de nuevo usando ÚNICAMENTE lo que dicen las fuentes de arriba: si un nombre, un número, un día o una cita no está ahí, no lo pongas. El cuerpo sigue siendo obligatorio, de 100 a 180 palabras, desarrollado con lo que SÍ dicen todas las fuentes, y nunca repite el copete.`;
+    entrada += `\n\nCORRECCIÓN OBLIGATORIA: en un intento anterior tu texto tenía estos problemas, y por eso se descartó:\n- ${correccion.join('\n- ')}\nEscribilo de nuevo usando ÚNICAMENTE lo que dicen las fuentes de arriba: si un nombre, un número, un día o una cita no está ahí, no lo pongas. El cuerpo sigue siendo obligatorio, de ${CUERPO.palabrasPedidasMinimo} a ${CUERPO.palabrasPedidasMaximo} palabras, desarrollado con lo que SÍ dicen todas las fuentes, y nunca repite el copete.`;
   }
 
   let res;
@@ -369,7 +293,7 @@ export async function reescribir(nota, { intentos = 3, fetchFn = fetch, correcci
   if (!salida.titulo || !salida.guion) throw new Error('la respuesta no trae título o guion');
 
   return {
-    titulo: salida.titulo.trim().slice(0, 90),
+    titulo: salida.titulo.trim().slice(0, TITULO.maximo),
     copete: (salida.copete ?? '').trim(),
     cuerpo: (salida.cuerpo ?? '').trim(),
     guion: salida.guion.trim(),
@@ -396,7 +320,7 @@ function listaDeTextos(valor, max) {
  */
 export function extrasDeLaRespuesta(salida = {}) {
   const extras = {};
-  const claves = listaDeTextos(salida.claves, 5);
+  const claves = listaDeTextos(salida.claves, PARTES.clavesMaximo);
   const seSabe = listaDeTextos(salida.seSabe, 6);
   const noConfirmado = listaDeTextos(salida.noConfirmado, 6);
   const aportes = (Array.isArray(salida.aportes) ? salida.aportes : [])
@@ -404,7 +328,7 @@ export function extrasDeLaRespuesta(salida = {}) {
     .filter((a) => Number.isInteger(a.fuente) && a.fuente >= 1 && a.aporte)
     .slice(0, 8);
   const etiquetas = listaDeTextos((Array.isArray(salida.etiquetas) ? salida.etiquetas : [])
-    .map((e) => String(e ?? '').replace(/^#+/, '')), 8);
+    .map((e) => String(e ?? '').replace(/^#+/, '')), PARTES.etiquetasMaximo);
   const textoRedes = String(salida.textoRedes ?? '').replace(/\s+/g, ' ').trim();
   const nivel = String(salida.nivel ?? '').trim().toUpperCase();
 
@@ -445,7 +369,7 @@ function mecanicoPorDefecto(nota) {
 // Cuántas se reescriben por corrida. La ingesta corre cada 30 minutos, así
 // que 40 por vuelta son unas 80 por hora: de sobra para lo que Balcarce
 // publica en un día. Lo ya reescrito (en caché) no cuenta contra el tope.
-export const REESCRITURAS_POR_CORRIDA = 40;
+export const REESCRITURAS_POR_CORRIDA = REESCRITURA.porCorrida;
 // Si la IA falla tres veces seguidas (Gemini saturado, sin red), se corta:
 // insistir sólo llenaría el registro de errores sin cambiar el resultado.
 const FALLOS_PARA_CORTAR = 3;
@@ -730,12 +654,26 @@ export function completarReescritura(nota, r) {
 }
 
 /**
+ * Las fuentes consultadas con el enlace que ve el lector: la página de la
+ * nota original. Hasta el 25/09 las de Infórmese Primero (Blogger) guardaban
+ * la entrada del feed, que es XML; la ingesta ahora da la página y guarda
+ * aquélla como `enlaceFeed`. Lo ya escrito con el enlace viejo se corrige acá
+ * con los orígenes de hoy, sin pedir nada a Gemini.
+ */
+export function conEnlacesDelLector(fuentes = [], nota = {}) {
+  const deHoy = [...(nota?.origenes ?? []), nota ?? {}].filter((o) => o?.enlaceFeed && o.enlace);
+  if (!deHoy.length) return fuentes;
+  const mapa = new Map(deHoy.map((o) => [o.enlaceFeed, o.enlace]));
+  return fuentes.map((f) => (f?.enlace && mapa.has(f.enlace) ? { ...f, enlace: mapa.get(f.enlace) } : f));
+}
+
+/**
  * Lo ya publicado, revalidado con las reglas de forma de hoy (largo, tildes,
  * acusaciones, que el texto para redes no nombre al medio): la parte que ya
  * no pasa se saca, sin tocar el resto ni pedir nada a Gemini.
  */
 export function revalidarExtras(cacheada = {}, nota = {}) {
-  const fuentes = cacheada.fuentesConsultadas ?? [];
+  const fuentes = conEnlacesDelLector(cacheada.fuentesConsultadas ?? [], nota);
   const pedidos = {
     claves: cacheada.claves,
     seSabe: cacheada.seSabe,
@@ -748,6 +686,7 @@ export function revalidarExtras(cacheada = {}, nota = {}) {
     soloForma: true, medios: mediosQueNoSeNombran(nota, fuentes),
   });
   const limpia = { ...cacheada };
+  if (cacheada.fuentesConsultadas) limpia.fuentesConsultadas = fuentes;
   for (const campo of ['claves', 'seSabe', 'noConfirmado', 'textoRedes']) {
     if (control[campo] && !control[campo].ok) delete limpia[campo];
   }
@@ -785,12 +724,12 @@ export function previasDeLaPortada(notas) {
  *  corridas distintas (25/09). Una nota que no sale con cuerpo después de
  *  tres intentos queda sin publicar: la clave de respaldo es paga y Hernán y
  *  Andrés no quieren gastar de más en una nota que no da. */
-export const MAXIMO_DE_INTENTOS = 3;
+export const MAXIMO_DE_INTENTOS = REESCRITURA.intentosMaximos;
 
 /** Con menos de esto de resumen (sumando todas las fuentes) y sin el texto
  *  completo de ninguna, no hay de dónde escribir una nota: no se le pide
  *  nada a Gemini. */
-export const PALABRAS_MINIMAS_DE_MATERIAL = 60;
+export const PALABRAS_MINIMAS_DE_MATERIAL = REESCRITURA.palabrasMinimasDeMaterial;
 
 /** Criterio de editor (25/09): lo que el código califica con verificación
  *  BAJA (una denuncia o una declaración de parte que contó un solo medio, o
@@ -800,7 +739,7 @@ export const FRENO_POR_VERIFICACION = { color: 'amarillo', motivo: 'verificació
 export const esVerificacionBaja = (x) => x?.verificacion?.nivel === 'BAJA';
 
 /** Cuántos días se recuerdan los intentos (web/data/intentos-ia.json). */
-export const DIAS_DE_INTENTOS = 7;
+export const DIAS_DE_INTENTOS = REESCRITURA.diasDeIntentos;
 
 /** Los intentos de hace más de `dias` días ya no sirven: la nota ya no está
  *  en ninguna lista. Devuelve una copia podada. */
@@ -822,11 +761,14 @@ const FALLA_DEL_SERVICIO = /falta GEMINI|no se pudo pedir|HTTP (429|5\d\d)|fetch
  * { texto: null }.
  */
 export async function textoCompletoDe(nota, traer = traerTexto) {
-  const principal = await traer(nota?.enlace);
+  // Si la fuente es un feed de Blogger, el texto se baja de la entrada del
+  // feed (`enlaceFeed`), que lo trae entero; el enlace es la página.
+  const dePrincipal = nota?.enlaceFeed ?? nota?.enlace;
+  const principal = await traer(dePrincipal);
   if (principal) return { texto: principal, numero: 1 };
   const otras = origenesDe(nota)
-    .map((o, i) => ({ enlace: o.enlace, numero: i + 1 }))
-    .filter((o) => o.enlace && o.enlace !== nota?.enlace)
+    .map((o, i) => ({ enlace: o.enlaceFeed ?? o.enlace, numero: i + 1 }))
+    .filter((o) => o.enlace && o.enlace !== dePrincipal)
     .slice(0, 3);
   const textos = await Promise.all(otras.map((o) => traer(o.enlace)));
   const i = textos.findIndex(Boolean);
@@ -1034,7 +976,7 @@ export async function reescribirAutomaticas(notas, {
     if (!evaluacion.ok) {
       const correccion = evaluacion.problemas.map((p) => p.detalle).slice(0, 6);
       if (evaluacion.corto !== undefined) {
-        correccion.push(`el cuerpo quedó corto (${evaluacion.corto} palabras): es obligatorio y va de 100 a 180 palabras, desarrollado con lo que dicen todas las fuentes`);
+        correccion.push(`el cuerpo quedó corto (${evaluacion.corto} palabras): es obligatorio y va de ${CUERPO.palabrasPedidasMinimo} a ${CUERPO.palabrasPedidasMaximo} palabras, desarrollado con lo que dicen todas las fuentes`);
       }
       const r2 = await reescribirConRespaldo(conTexto, mecanicoPorDefecto, { ...opciones, correccion });
       if (r2.deIA) { r = r2; evaluacion = evaluar(r2); }

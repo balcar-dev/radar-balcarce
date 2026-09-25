@@ -5,7 +5,7 @@ import { metadatosDePagina } from '@/components/metadatos';
 // Es lo primero que miran Google, AdSense y cualquier lector desconfiado
 // para decidir si un medio es confiable: quién lo hace, cómo elige qué
 // publicar, qué parte hace una máquina y qué parte una persona. Todo lo que
-// dice acá tiene que ser cierto hoy; si cambia cómo trabajamos (EDITORIAL.md),
+// dice acá tiene que ser cierto hoy; si cambia cómo trabajamos (CRITERIO-EDITORIAL.md),
 // se cambia esta página.
 //
 // Sin datos personales de más: nombres de pila y nada de apellidos,

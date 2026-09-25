@@ -13,7 +13,7 @@ import {
 } from '../ingesta/agenda.mjs';
 import { NUMEROS, tocaHoy, diaDeEstaSemana } from '../ingesta/utiles.mjs';
 import {
-  reescribirConRespaldo, INSTRUCCION_EDITORIAL, completarReescritura, antecedentesDe, materialParaVerificar, sinExtras,
+  reescribirConRespaldo, INSTRUCCION_EDITORIAL, CRITERIO_EDITORIAL, completarReescritura, antecedentesDe, materialParaVerificar, sinExtras,
   reescribirAutomaticas, podarIntentos, textoCompletoDe, extrasDe,
 } from '../reels/reescritura.mjs';
 import { tieneCuerpo, palabrasDe, PALABRAS_MINIMAS_CUERPO } from '../web/lib/cuerpo.js';
@@ -305,6 +305,9 @@ function vista(sesion = null) {
     piezas: piezasListas(),
     diasSemana: DIAS_SEMANA,
     instruccionEditorial: INSTRUCCION_EDITORIAL,
+    // El documento editorial entero (CRITERIO-EDITORIAL.md): la instrucción
+    // de arriba sale de ahí, y el panel lo muestra debajo.
+    criterioEditorial: CRITERIO_EDITORIAL,
     historial: estado.historial.slice(0, 12),
   };
 }

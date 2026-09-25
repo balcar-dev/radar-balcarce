@@ -10,7 +10,7 @@ a nada: lee dos archivos que regenera GitHub Actions cada 30 minutos
 - `data/agenda.json`: los **eventos de la agenda**, cada uno con su página
   (`/agenda/<nombre>-<id>`): los del municipio y los que se publican desde el
   panel (llegan por `data/eventos-panel.json`), hasta 60 días después de que
-  pasan. Reglas en `lib/eventos.js` y `../EDITORIAL.md`.
+  pasan. Reglas en `lib/eventos.js` y `../CRITERIO-EDITORIAL.md` (sección 8).
 - `data/archivo.json`: lo que tiene **página**. Todo lo publicado de los
   últimos 180 días (hasta 2500 notas). Así una nota que sale de la portada
   sigue teniendo su página y los enlaces que circulan no se rompen. La
@@ -88,7 +88,7 @@ lo que va después del último guion, `lib/ruta.js`). La firma sale de
 
 ## Para saber más
 
-- Cómo se eligen y escriben las notas: `../MANUAL.md`, `../EDITORIAL.md`.
+- Cómo se eligen y escriben las notas: `../CRITERIO-EDITORIAL.md` (el criterio) y `../MANUAL.md` (lo técnico).
 - Qué reglas se cuidan en la portada: `../REGLAS.md`.
 - SEO y auditoría: `../SEO.md`.
 - Dónde corre y qué se cae: `../INFRAESTRUCTURA.md`.

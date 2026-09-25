@@ -226,7 +226,7 @@ function vistaCola() {
 // y su porqué, las claves, qué se sabe, qué falta confirmar, las fuentes con
 // lo que aportó cada una, los antecedentes y el texto para Facebook. Es para
 // quien decide: en la web el lector ve sólo el título, la bajada, el cuerpo y
-// un desplegable con las fuentes (EDITORIAL.md). Plegado, para no tapar el
+// un desplegable con las fuentes (CRITERIO-EDITORIAL.md). Plegado, para no tapar el
 // texto. Se muestra, no se edita: si alguien corrige el texto, esto se borra
 // (lo armó la IA sobre su versión).
 const MINIMO_CUERPO = 70; // web/lib/cuerpo.js, PALABRAS_MINIMAS_CUERPO
@@ -745,8 +745,9 @@ function vistaEditorial() {
   return `<div class="dos">
     <div>
       <h2>La instrucción exacta que lee la IA</h2>
-      <div class="mini" style="margin-bottom:12px">Esto no es un resumen: es el texto completo que se le manda a Gemini antes de cada noticia. Si algo suena mal en un guion, se corrige acá (en <code>reels/reescritura.mjs</code>), no adivinando.</div>
+      <div class="mini" style="margin-bottom:12px">Esto no es un resumen: es el texto completo que se le manda a Gemini antes de cada noticia, y sale tal cual de <code>CRITERIO-EDITORIAL.md</code>, el criterio editorial único (sección 12). Si algo suena mal, se corrige en ese archivo, no adivinando; el panel toma el cambio después de reiniciarlo.</div>
       <div class="tarjeta"><pre style="white-space:pre-wrap;font-family:'IBM Plex Sans',sans-serif;font-size:12.5px;line-height:1.6;margin:0">${esc(D.instruccionEditorial || 'Todavía no se cargó.')}</pre></div>
+      <details class="tarjeta" style="margin-top:12px"><summary style="cursor:pointer;font-weight:600;min-height:32px;display:flex;align-items:center">El criterio editorial completo (CRITERIO-EDITORIAL.md)</summary><pre style="white-space:pre-wrap;font-family:'IBM Plex Sans',sans-serif;font-size:12.5px;line-height:1.6;margin:8px 0 0">${esc(D.criterioEditorial || 'Todavía no se cargó.')}</pre></details>
     </div>
     <div class="lateral">
       <div class="tarjeta">

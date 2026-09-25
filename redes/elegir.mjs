@@ -25,31 +25,36 @@
 
 import { rutaDeNota } from '../web/lib/ruta.js';
 import { esperaCuerpo } from '../web/lib/cuerpo.js';
+import { FACEBOOK, PIEZAS, SECCIONES_QUE_ESPERAN_PERSONA } from '../ingesta/criterio.mjs';
+
+// Los números de las redes son parte del criterio editorial: están en
+// ingesta/criterio.mjs y en la tabla "Los números" de CRITERIO-EDITORIAL.md,
+// y se cambian ahí (pruebas/criterio.test.mjs controla que digan lo mismo).
 
 /** ¿Es una nota propia del sitio (la del dólar o la de un podcast)? Las marca
  *  web/lib/notas-propias.js con `propia`. */
 export const esNotaPropia = (n) => Boolean(n?.propia);
 
 /** Secciones que no salen solas a ninguna red: las decide una persona. */
-export const SECCIONES_QUE_ESPERAN_PERSONA = ['Policiales', 'Política'];
+export { SECCIONES_QUE_ESPERAN_PERSONA };
 
 export const REGLAS_FACEBOOK = {
   // Conservador a propósito (decisión del 21/09): en las últimas 24 horas la web
   // publicó unas 100 notas y publicar todas en Facebook sería ruido: una página
   // nueva con 90 posteos por día pierde alcance y parece un robot. Cinco buenas
   // por día, y más adelante se mezclan con las notas propias y originales.
-  porDia: 5,
-  relevanciaMinima: 75,
+  porDia: FACEBOOK.porDia,
+  relevanciaMinima: FACEBOOK.relevanciaMinima,
   porCorrida: 1,           // así no salen dos pegadas
-  minutosEntrePosteos: 90,
-  esperaMinutos: 15,       // que el deploy de la web ya haya terminado
-  edadMaximaHoras: 8,      // no se publica lo que ya es viejo
-  desdeHora: 8,            // horario de Balcarce
-  hastaHora: 22,           // hasta las 22:00 en punto, no hasta las 22:59
+  minutosEntrePosteos: FACEBOOK.minutosEntrePosteos,
+  esperaMinutos: FACEBOOK.esperaMinutos,       // que el deploy de la web ya haya terminado
+  edadMaximaHoras: FACEBOOK.edadMaximaHoras,   // no se publica lo que ya es viejo
+  desdeHora: FACEBOOK.desdeHora,               // horario de Balcarce
+  hastaHora: FACEBOOK.hastaHora,               // hasta las 22:00 en punto, no hasta las 22:59
   // Un tema, una vez por día. El 24/09 salieron tres posteos de la reapertura
   // del autódromo en cuatro horas: para el que sigue la página es la misma
   // noticia tres veces. Ver temaParecido.
-  horasSinRepetirTema: 24,
+  horasSinRepetirTema: FACEBOOK.horasSinRepetirTema,
   seccionesQueEsperanPersona: SECCIONES_QUE_ESPERAN_PERSONA,
 };
 
@@ -275,10 +280,10 @@ export function mensajeParaInstagram(nota, sitio) {
 // plan.mjs necesita resvg y ffmpeg instalados y esto se prueba sin nada.
 
 export const REGLAS_PIEZAS = {
-  historiasDeNotas: 3,     // además del clima y la farmacia, que son fijas
-  relevanciaParaHistoria: 62,
-  relevanciaParaFeed: 80,
-  feedPorDia: 2,
+  historiasDeNotas: PIEZAS.historiasDeNotas,     // además del clima y la farmacia, que son fijas
+  relevanciaParaHistoria: PIEZAS.relevanciaPodcast,
+  relevanciaParaFeed: PIEZAS.relevanciaFeed,
+  feedPorDia: PIEZAS.feedPorDia,
 };
 
 /** ¿Se puede armar una pieza sola con esta nota? */
@@ -352,7 +357,7 @@ export function primeraOracion(texto = '', maximo = 150) {
  *  una por sección, para que un podcast no sea tres notas del mismo evento
  *  (el 24/09 salían tres del autódromo); si sobra lugar, se completa por
  *  puntaje. */
-export function elegirParaPodcast(notas, { cuantas = 3, excluir = [] } = {}, reglas = REGLAS_PIEZAS) {
+export function elegirParaPodcast(notas, { cuantas = PIEZAS.notasPorPodcast, excluir = [] } = {}, reglas = REGLAS_PIEZAS) {
   const candidatas = sinRepetidos(
     [...notas]
       .filter(sePuedeSola)
@@ -377,7 +382,7 @@ export function elegirParaPodcast(notas, { cuantas = 3, excluir = [] } = {}, reg
  * nombra nunca. Con menos de dos noticias no es un repaso: devuelve null.
  */
 export function guionRepaso(elegidas, { saludo, cierre = 'Todas las notas, en radar balcarce punto com.' }) {
-  if (elegidas.length < 2) return null;
+  if (elegidas.length < PIEZAS.notasMinimasPodcast) return null;
   const marca = (i) => (i === elegidas.length - 1 ? 'Y para cerrar' : ['Primero', 'Después', 'Además'][i]);
   const cuerpo = elegidas.map((n, i) => {
     const titular = String(n.titulo).replace(/\s+/g, ' ').trim().replace(/[.:]+$/, '');
@@ -391,7 +396,7 @@ export function guionRepaso(elegidas, { saludo, cierre = 'Todas las notas, en ra
  * El podcast de la noche: el repaso de lo más importante del día, dicho por
  * la voz de siempre.
  */
-export function guionPodcast(notas, { cuantas = 4, fecha = new Date() } = {}) {
+export function guionPodcast(notas, { cuantas = PIEZAS.notasPodcastNoche, fecha = new Date() } = {}) {
   const dia = new Intl.DateTimeFormat('es-AR', { weekday: 'long', timeZone: ZONA }).format(fecha);
   const elegidas = elegirParaPodcast(notas, { cuantas }, { ...REGLAS_PIEZAS, relevanciaParaHistoria: 0 });
   return guionRepaso(elegidas, { saludo: `Buenas, Balcarce. Este es el repaso de este ${dia}.` });

@@ -92,6 +92,20 @@ function bloques(xml, nombre) {
   return xml.match(re) ?? [];
 }
 
+/** El enlace a la PÁGINA de una entrada de Atom: el <link rel="alternate">
+ *  de tipo HTML, con los atributos en cualquier orden. Sin `rel`, Atom lo da
+ *  por "alternate"; sin `type`, se lo toma como página. Vacío si no hay. */
+export function enlaceAlternativo(xml) {
+  for (const m of String(xml).matchAll(/<link\b[^>]*>/gi)) {
+    const valor = (attr) => m[0].match(new RegExp(`\\s${attr}=["']([^"']*)["']`, 'i'))?.[1];
+    const rel = (valor('rel') ?? 'alternate').toLowerCase();
+    const tipo = (valor('type') ?? 'text/html').toLowerCase();
+    const href = valor('href');
+    if (href && rel === 'alternate' && tipo.includes('html')) return decodificar(href).trim();
+  }
+  return '';
+}
+
 export function normalizar(s = '') {
   return s.toLowerCase()
     .normalize('NFD').replace(/[̀-ͯ]/g, '')
@@ -159,8 +173,19 @@ export function parsearFeed(xml, fuente) {
     const titulo = sinEtiquetas(etiqueta(b, 'title'));
 
     let enlace = '';
+    // En Atom, el primer enlace de la entrada puede no ser la página. Blogger
+    // (Infórmese Primero) pone primero la entrada del feed, que es XML, y la
+    // nota va en <link rel="alternate" type="text/html">: hasta el 25/09 el
+    // lector veía el XML en el desplegable de fuentes. Ahora el enlace es la
+    // página, y el primero se guarda aparte como `enlaceFeed`: con él se
+    // sigue calculando el identificador de la nota (no cambia el de ninguna
+    // ya publicada o decidida) y de ahí se baja el texto completo, que en
+    // Blogger viene entero adentro de la entrada (ingesta/articulo.mjs).
+    let enlaceFeed = '';
     if (esAtom) {
-      enlace = atributo(b, 'link', 'href') || etiqueta(b, 'id');
+      const primero = (atributo(b, 'link', 'href') || etiqueta(b, 'id')).trim();
+      enlace = enlaceAlternativo(b) || primero;
+      if (primero && primero !== enlace.trim()) enlaceFeed = primero;
     } else {
       enlace = etiqueta(b, 'link') || atributo(b, 'link', 'href') || etiqueta(b, 'guid');
     }
@@ -183,6 +208,7 @@ export function parsearFeed(xml, fuente) {
     return {
       titulo,
       enlace: enlace.trim(),
+      ...(enlaceFeed ? { enlaceFeed } : {}),
       fecha: Number.isNaN(fecha.getTime()) ? new Date() : fecha,
       cuerpo,
       textoCompleto: cuerpo.length > 400,
@@ -1065,9 +1091,12 @@ export async function ingestar({
     const rel = relevancia(g.principal, seccion, g.medios.length);
     const sem = semaforo(g.principal, seccion, rel);
     return {
-      id: idDe(g.principal.enlace),
+      // Con el enlace del feed si lo hay (Blogger): así el identificador es el
+      // mismo que antes de que el enlace pasara a ser la página de la nota.
+      id: idDe(g.principal.enlaceFeed ?? g.principal.enlace),
       titulo: sentenciar(g.principal.titulo, g.principal.cuerpo),
       enlace: g.principal.enlace,
+      ...(g.principal.enlaceFeed ? { enlaceFeed: g.principal.enlaceFeed } : {}),
       fecha: g.principal.fecha.toISOString(),
       cuando: g.principal.fechaEstimada ? 'sin fecha en la fuente' : haceCuanto(g.principal.fecha),
       medio: g.principal.medio,
@@ -1094,6 +1123,7 @@ export async function ingestar({
       origenes: [g.principal, ...g.tambien].map((n) => ({
         medio: n.medio,
         enlace: n.enlace,
+        ...(n.enlaceFeed ? { enlaceFeed: n.enlaceFeed } : {}),
         fecha: n.fechaEstimada || !(n.fecha instanceof Date) ? null : n.fecha.toISOString(),
         oficial: !!n.oficial,
         resumen: limpiarCopete(n.cuerpo, n.titulo, n.medio),

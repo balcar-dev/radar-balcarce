@@ -122,7 +122,7 @@ tailscale funnel --https=443 off
 | **`REGLAS.md`** | **Lo que se pidió que se cumpla siempre** (y las pruebas que lo vigilan) |
 | `INFRAESTRUCTURA.md` | Dónde vive cada cosa, los relojes, los secretos y la vigilancia |
 | `MANUAL.md` | Cómo se eligen las noticias: puntaje, semáforo, qué sale solo |
-| `EDITORIAL.md` | Las secciones y **cómo se escriben las notas** |
+| `CRITERIO-EDITORIAL.md` | **El criterio editorial único**: qué se publica, **cómo se escriben las notas**, cómo se verifican y la instrucción exacta que lee la IA |
 | `REDES.md` | Qué se publica en Instagram y Facebook, a qué hora y con qué reglas |
 | `PERFILES.md` | Biografías y colores de las redes |
 | `FORMATOS.md` | Medidas de imágenes y videos, con auditoría semanal |

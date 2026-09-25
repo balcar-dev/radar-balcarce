@@ -124,7 +124,7 @@ export default function PaginaNota({ params }) {
             enlace), que es también la atribución. Las claves, qué se sabe,
             qué falta confirmar, lo que aportó cada fuente y el nivel de
             verificación son de uso interno: se usan para escribir la nota y
-            se ven en el panel, no acá (criterio del 25/09, EDITORIAL.md). */}
+            se ven en el panel, no acá (CRITERIO-EDITORIAL.md, sección 7). */}
         <FuentesDeLaNota nota={n} />
 
         {MOSTRAR_TEMAS && <TemasDeLaNota temas={n.temas} catalogo={temas} />}

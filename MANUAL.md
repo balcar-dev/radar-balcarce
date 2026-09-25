@@ -1,14 +1,15 @@
 # Cómo funciona Radar Balcarce
 
-Este archivo explica el criterio: cómo se eligen las noticias, cómo se
-puntúan, qué sale solo, qué espera aprobación y qué no sale nunca. Es el
-documento para leer antes de tocar `ingesta/fuentes.mjs`, que es donde se
-ajusta todo.
+Este archivo explica la parte técnica: el recorrido de una noticia, cómo se
+puntúa y cómo está hecha la web. Es el documento para leer antes de tocar
+`ingesta/fuentes.mjs`.
 
-Los otros documentos: `REGLAS.md` (lo que se exige siempre y qué lo vigila),
-`EDITORIAL.md` (cómo se escribe una nota), `REDES.md`, `INFRAESTRUCTURA.md`,
-`PENDIENTES.md` (qué falta) e `INVESTIGACION.md`
-(lo legal, con fuentes). La lista completa está en `CLAUDE.md`.
+**El criterio editorial** (qué se publica, qué espera, qué no sale nunca y
+cómo se escribe) **está en un solo lugar: [`CRITERIO-EDITORIAL.md`](CRITERIO-EDITORIAL.md)**.
+Acá no se repite. Los otros documentos: `REGLAS.md` (lo que se exige siempre
+y qué lo vigila), `REDES.md`, `INFRAESTRUCTURA.md`, `PENDIENTES.md` (qué
+falta) e `INVESTIGACION.md` (lo legal, con fuentes). La lista completa está en
+`CLAUDE.md`.
 
 ---
 
@@ -70,75 +71,30 @@ una que sí tiene hora.
 Para qué sirve el número:
 
 - **Ordena la portada**, junto con la fecha.
-- **Decide qué se cuenta en las redes.** Facebook pide relevancia de 75 o
-  más; los podcasts, 62 o más. Ya no salen noticias sueltas: son **tres
-  podcasts por día** (mañana, tarde y noche) con notas de temas distintos.
-  Política y Policiales no se arman solas en ninguna pieza. El clima y la
-  farmacia van como **historias**. Horarios y reglas completas en `REDES.md`.
+- **Decide si lo de afuera sale solo** (el piso y el cupo por sección) y **qué
+  se cuenta en las redes** (la relevancia mínima de Facebook y de los
+  podcasts). Esos umbrales son criterio editorial: están en la tabla "Los
+  números" de `CRITERIO-EDITORIAL.md` y en `ingesta/criterio.mjs`.
 
-## 3. El semáforo
+## 3. El semáforo, lo que no se publica y cómo se escribe
 
-Se evalúa sobre el título, el comienzo del resumen y, desde el 25/09, el texto completo de la nota original y lo que escribe la IA.
+Es criterio editorial y está en [`CRITERIO-EDITORIAL.md`](CRITERIO-EDITORIAL.md):
+el semáforo (sección 3), lo que no entra nunca (sección 2), cómo se escribe
+una nota (sección 4), cómo se verifica (sección 6) y qué ve el lector
+(sección 7). Lo técnico:
 
-**🔴 Rojo — no se publica nunca.** No es criterio editorial, es la ley:
-identificar a un menor en un hecho policial o judicial (ley 26.061) o a una
-víctima de violencia de género o de un delito sexual (ley 26.485) es ilegal
-para un medio. Palabras: menor de edad, abuso sexual, suicidio, violación,
-violencia de género, femicidio, grooming, abuso infantil, y desde el 25/09 más frases (la lista completa está en `REGLAS_SEMAFORO`). Detalle en
-`INVESTIGACION.md` § 6.
+- Las listas del semáforo están en `REGLAS_SEMAFORO` (`ingesta/fuentes.mjs`),
+  cada término con su prueba en `pruebas/semaforo.test.mjs`.
+- El semáforo corre en la ingesta (`semaforo` y `semaforoDelTexto` en
+  `ingesta/ingesta.mjs`) y otra vez sobre lo que escribe la IA
+  (`semaforoDeLaReescritura` en `reels/reescritura.mjs`).
+- **Archivada.** A las 72 horas, lo que quedó sin decidir se archiva solo
+  (menos las notas sin fecha real). Está en la pestaña Archivadas del panel,
+  no se pierde, pero deja de tapar la cola. Eso lo hace el panel; aparte, la
+  portada de la web muestra sólo lo de las últimas 72 horas aunque la PC esté
+  apagada (`web/lib/archivo.js`).
 
-**🟡 Amarillo — espera que alguien apruebe.** Lo que acusa (denuncia,
-detenido, acusado, imputado), lo que habla de una muerte y lo que involucra a
-un chico. También lo que **parece promoción y no noticia** (sorteo, "ganá tu
-entrada", "participá del", auspicia): no se bloquea, pero nunca sale solo. Y
-lo de afuera con poco puntaje o fuera del cupo de su sección. Desde el 25/09,
-también la **cotización del dólar** (si el título es "dólar hoy", "dólar
-blue", "a cuánto cotiza"…: se muestra en `/dolar`) y lo que el código califica
-con **verificación baja** (un solo medio que se apoya en una denuncia o una
-declaración de parte).
-
-**🟢 Verde — sale automático.** Los comunicados oficiales del municipio y todo
-lo demás en diez de las once secciones (todas menos País). Política y
-Policiales salen solas en la web si el semáforo da verde, pero en las redes
-siempre esperan a una persona.
-
-La lista completa y actual está en `REGLAS_SEMAFORO` (`ingesta/fuentes.mjs`).
-Desde el 25/09 el semáforo lee también el texto completo de la fuente y lo
-que escribió la IA. Detalle en `EDITORIAL.md`.
-
-**⚫ Archivada.** A las 72 horas, lo que quedó sin decidir se archiva solo
-(menos las notas sin fecha real).
-Está en la pestaña Archivadas del panel, no se pierde, pero deja de tapar la
-cola. (Eso lo hace el panel. Aparte, desde el 25/09 la portada de la web
-muestra sólo lo de las últimas 72 horas, aunque la PC esté apagada.)
-
-## 4. Qué NO se publica, más allá del semáforo
-
-- **Una nota automática sin cuerpo** (desde el 25/09): si la IA no llegó a
-  escribir un cuerpo de al menos 70 palabras, la nota no aparece en ningún
-  lado público hasta tenerlo. Se reintenta hasta tres veces. Ver
-  `EDITORIAL.md` ("Sin cuerpo no se publica").
-- **El análisis interno**: las claves, qué se sabe, qué falta confirmar, lo que
-  aportó cada fuente y el nivel de verificación se usan para escribir y se ven
-  en el panel. El lector ve la nota y un desplegable con las fuentes.
-- **La foto del medio de origen, nunca.** La excepción de "noticias de interés
-  general" de la ley 11.723 cubre el texto, no las fotografías. En su lugar va
-  una placa tipográfica propia con el color de la sección.
-- **El nombre de la fuente en el reel, la placa, la voz ni el posteo de las
-  redes.** La atribución va en la nota de la web, con el enlace al original;
-  las redes enlazan a **nuestra** nota.
-- **Una acusación como hecho.** Si hay una denuncia sin condena, se atribuye a
-  quien la hizo y se usa el condicional ("habría", no "hizo"). Es la doctrina
-  Campillay, y es lo que protege a un medio de una demanda por calumnias e
-  injurias.
-
-## 5. Cómo escribe el editor
-
-Está en [`EDITORIAL.md`](EDITORIAL.md): las tres partes de una nota (título,
-copete y cuerpo, que es obligatorio), los dos tonos, cómo se controla lo que
-escribe la IA y qué ve el lector frente a lo que usa la redacción.
-
-## 6. El diseño de la web
+## 4. El diseño de la web
 
 Criterio: portal de noticias, no diario solemne. Fondo blanco, Fraunces en
 los títulos, color por sección, y movimiento sólo en las dos piezas que se
@@ -162,13 +118,14 @@ miran todos los días.
   de eso (`prefers-reduced-motion`).
 - **Farmacia de turno**: nombre, dirección, teléfono y "Cómo llegar" a Google
   Maps.
-- **La placa de sección** reemplaza a la foto (ver § 4).
+- **La placa de sección** reemplaza a la foto: nunca la foto de otro medio
+  (`CRITERIO-EDITORIAL.md`, sección 2).
 
 El lienzo de diseño (portada de escritorio, de celular y la tarjeta del clima)
 está publicado como artefacto; si se cambia el aspecto, se cambia en los dos
 lados para que no se separen.
 
-## 7. Las pruebas
+## 5. Las pruebas
 
 Se corren con `npm test` desde la carpeta del proyecto. Son más de 700, tardan
 unos segundos, no instalan nada y no salen a internet.
@@ -187,7 +144,7 @@ Al agregar una regla nueva —una palabra en `REGLAS_SECCION`, una farmacia en
 `FARMACIAS_A_MANO`— no hace falta escribir una prueba. Cuando se arregla algo
 que estuvo mal publicado, sí: es la única forma de que no vuelva.
 
-## 8. Las redes
+## 6. Las redes
 
 Qué se publica en Facebook e Instagram, a qué hora y con qué reglas está en
 [`REDES.md`](REDES.md).

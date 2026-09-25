@@ -22,6 +22,8 @@
 //     (XML de Atom), no una página: el texto viene escapado adentro de
 //     <content type="html"> y casi sin <p>. Ahora se lee de ahí.
 
+import { REESCRITURA } from './criterio.mjs';
+
 const ENTIDADES = {
   '&nbsp;': ' ', '&amp;': '&', '&quot;': '"', '&#39;': "'", '&apos;': "'", '&lt;': '<', '&gt;': '>',
   '&aacute;': 'á', '&eacute;': 'é', '&iacute;': 'í', '&oacute;': 'ó', '&uacute;': 'ú', '&ntilde;': 'ñ',
@@ -100,7 +102,7 @@ const esEntradaDeFeed = (texto) => /^\s*(<\?xml[^>]*\?>\s*)*<entry[\s>]/i.test(t
  * @param {string} html
  * @param {{ max?: number, minimo?: number }} [o]
  */
-export function extraerTexto(html, { max = 4000, minimo = 300 } = {}) {
+export function extraerTexto(html, { max = REESCRITURA.caracteresDelTextoCompleto, minimo = 300 } = {}) {
   const crudo = String(html ?? '');
   const parrafos = esEntradaDeFeed(crudo)
     ? (parrafosDeAtom(crudo) ?? [])

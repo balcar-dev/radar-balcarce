@@ -116,7 +116,8 @@ mañana".
 ## D. Editorial y contenido
 
 29. Mirar cómo salen las notas reescritas con IA (cuerpo distinto del copete,
-    sin inventos) y ajustar el prompt si hace falta. Detalle en `EDITORIAL.md`.
+    sin inventos) y ajustar el prompt si hace falta: se corrige en
+    `CRITERIO-EDITORIAL.md`, sección 12.
 30. **La clasificación por palabras se equivoca**: un proyecto de una escuela
     primaria salió en Deportes; noticias de fútbol peruano entran por las
     fuentes nacionales. Se ajusta agregando o sacando palabras en

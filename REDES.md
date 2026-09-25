@@ -1,6 +1,6 @@
 # Redes
 
-*Actualizado el 25/09/2026.* Qué se publica en Instagram y Facebook, cómo y cuándo. Las reglas que siempre se cumplen y qué las vigila están en `REGLAS.md`; dónde corre todo, en `INFRAESTRUCTURA.md`; los textos de los perfiles, en `PERFILES.md`; las medidas de las imágenes, en `FORMATOS.md`.
+*Actualizado el 25/09/2026.* Qué se publica en Instagram y Facebook, cómo y cuándo. El criterio editorial (qué se publica, qué nunca sale solo, cómo se escribe, los números) está en [`CRITERIO-EDITORIAL.md`](CRITERIO-EDITORIAL.md): los números de esta página salen de ahí (`ingesta/criterio.mjs`) y se cambian ahí. Las reglas que siempre se cumplen y qué las vigila están en `REGLAS.md`; dónde corre todo, en `INFRAESTRUCTURA.md`; los textos de los perfiles, en `PERFILES.md`; las medidas de las imágenes, en `FORMATOS.md`.
 
 ## 1. La competencia
 
@@ -269,8 +269,7 @@ vigente es medir con números: `PENDIENTES.md`, secciones A y D.
 
 ### El tono
 
-El mismo que en la web: informar, no gritar. Sin "IMPACTANTE", sin "MIRÁ LO
-QUE PASÓ", sin cebar el clic. En un pueblo el que exagera se quema rápido.
+El mismo que en la web (`CRITERIO-EDITORIAL.md`, secciones 1 y 4).
 
 ### Lo que hay que decir siempre
 

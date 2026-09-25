@@ -140,7 +140,7 @@ if (enLaNube) {
   const paraReescribir = (ultima.notas ?? [])
     .filter((n) => previas[n.id] || vigenteEnPortada({ fecha: fechaParaLista(n) }));
   // El archivo va también como fuente de ANTECEDENTES: lo que el sitio ya
-  // publicó sobre el mismo tema en los últimos 30 días (EDITORIAL.md).
+  // publicó sobre el mismo tema en los últimos 30 días (CRITERIO-EDITORIAL.md).
   reescritas = await reescribirAutomaticas(paraReescribir, {
     previas, decisiones: estado.decisiones, archivo: archivoAnterior.notas ?? [], intentos,
   });
@@ -193,7 +193,7 @@ function notaPublicada(n) {
     // Sólo existe cuando la reescribió la IA (o lo cargó una persona a
     // mano): el resumen mecánico de la fuente no tiene de dónde sacar un
     // cuerpo propio, así que la nota queda con el copete nada más, como
-    // siempre — ver EDITORIAL.md.
+    // siempre — ver CRITERIO-EDITORIAL.md.
     cuerpo: deLaDecision?.cuerpo ?? auto?.cuerpo ?? null,
     guion: deLaDecision?.guion ?? auto?.guion ?? null,
     seccion: n.seccion,
