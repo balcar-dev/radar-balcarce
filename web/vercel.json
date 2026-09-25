@@ -1,101 +1,6 @@
 {
   "redirects": [
     {
-      "source": "/nota/1s8swk5",
-      "destination": "/nota/el-concejo-pidio-informes-al-municipio-por-obras-publicas-1s8swk5",
-      "permanent": true
-    },
-    {
-      "source": "/nota/119oqdp",
-      "destination": "/nota/exito-de-la-gala-solidaria-por-la-infancia-en-el-teatro-119oqdp",
-      "permanent": true
-    },
-    {
-      "source": "/nota/jje778",
-      "destination": "/nota/la-sociedad-rural-de-balcarce-participo-de-una-reunion-regional-sobre-jje778",
-      "permanent": true
-    },
-    {
-      "source": "/nota/1knnogg",
-      "destination": "/nota/cabana-los-pinos-concreto-con-exito-su-41-remate-en-balcarce-1knnogg",
-      "permanent": true
-    },
-    {
-      "source": "/nota/1q76ezk",
-      "destination": "/nota/remate-conjunto-de-cabanas-angus-en-balcarce-1q76ezk",
-      "permanent": true
-    },
-    {
-      "source": "/nota/v1u9f1",
-      "destination": "/nota/ferroviarios-gano-la-primera-final-de-la-copa-de-plata-v1u9f1",
-      "permanent": true
-    },
-    {
-      "source": "/nota/1av7fh9",
-      "destination": "/nota/ferroviarios-se-consagro-campeon-en-basquet-1av7fh9",
-      "permanent": true
-    },
-    {
-      "source": "/nota/1y62trk",
-      "destination": "/nota/exitoso-debut-de-las-valkyrias-en-la-liga-mar-y-sierras-1y62trk",
-      "permanent": true
-    },
-    {
-      "source": "/nota/112kb6b",
-      "destination": "/nota/ferro-basquet-busca-los-octavos-en-la-liga-mar-y-sierras-112kb6b",
-      "permanent": true
-    },
-    {
-      "source": "/nota/1kpxt2v",
-      "destination": "/nota/karina-lupo-y-mariano-barreiro-ganaron-la-media-maraton-1kpxt2v",
-      "permanent": true
-    },
-    {
-      "source": "/nota/33h243",
-      "destination": "/nota/franco-peidon-gano-el-oro-nacional-en-800-metros-33h243",
-      "permanent": true
-    },
-    {
-      "source": "/nota/8yoymu",
-      "destination": "/nota/medalla-de-bronce-para-shalom-lescano-en-atletismo-8yoymu",
-      "permanent": true
-    },
-    {
-      "source": "/nota/8hniuy",
-      "destination": "/nota/un-balcarceno-investiga-sobre-vida-extrema-para-la-nasa-8hniuy",
-      "permanent": true
-    },
-    {
-      "source": "/nota/1x87c94",
-      "destination": "/nota/reclamos-del-campo-al-gobierno-por-impuestos-1x87c94",
-      "permanent": true
-    },
-    {
-      "source": "/nota/ts9zo0",
-      "destination": "/nota/nuevos-sacerdotes-asumen-en-parroquias-locales-ts9zo0",
-      "permanent": true
-    },
-    {
-      "source": "/nota/5tyfmu",
-      "destination": "/nota/la-historia-del-padre-ezequiel-kseim-y-sus-raices-5tyfmu",
-      "permanent": true
-    },
-    {
-      "source": "/nota/14m0mm5",
-      "destination": "/nota/tato-melucci-presenta-su-nueva-obra-teatral-en-balcarce-14m0mm5",
-      "permanent": true
-    },
-    {
-      "source": "/nota/18iooyc",
-      "destination": "/nota/luis-ispizua-destaco-el-rol-del-campo-para-la-economia-18iooyc",
-      "permanent": true
-    },
-    {
-      "source": "/nota/19jah2t",
-      "destination": "/nota/periodista-de-balcarce-cubre-el-mundial-desde-el-salvador-19jah2t",
-      "permanent": true
-    },
-    {
       "source": "/nota/m7fmln",
       "destination": "/nota/obras-autodromo-los-primeros-desembolsos-de-la-provincia-fueron-a-m7fmln",
       "permanent": true
@@ -171,28 +76,183 @@
       "permanent": true
     },
     {
+      "source": "/nota/8hniuy",
+      "destination": "/nota/un-balcarceno-investiga-sobre-vida-extrema-para-la-nasa-8hniuy",
+      "permanent": true
+    },
+    {
+      "source": "/nota/1x87c94",
+      "destination": "/nota/reclamos-del-campo-al-gobierno-por-impuestos-1x87c94",
+      "permanent": true
+    },
+    {
+      "source": "/nota/ts9zo0",
+      "destination": "/nota/nuevos-sacerdotes-asumen-en-parroquias-locales-ts9zo0",
+      "permanent": true
+    },
+    {
+      "source": "/nota/5tyfmu",
+      "destination": "/nota/la-historia-del-padre-ezequiel-kseim-y-sus-raices-5tyfmu",
+      "permanent": true
+    },
+    {
+      "source": "/nota/14m0mm5",
+      "destination": "/nota/tato-melucci-presenta-su-nueva-obra-teatral-en-balcarce-14m0mm5",
+      "permanent": true
+    },
+    {
+      "source": "/nota/18iooyc",
+      "destination": "/nota/luis-ispizua-destaco-el-rol-del-campo-para-la-economia-18iooyc",
+      "permanent": true
+    },
+    {
+      "source": "/nota/19jah2t",
+      "destination": "/nota/periodista-de-balcarce-cubre-el-mundial-desde-el-salvador-19jah2t",
+      "permanent": true
+    },
+    {
+      "source": "/nota/1s8swk5",
+      "destination": "/nota/el-concejo-pidio-informes-al-municipio-por-obras-publicas-1s8swk5",
+      "permanent": true
+    },
+    {
+      "source": "/nota/119oqdp",
+      "destination": "/nota/exito-de-la-gala-solidaria-por-la-infancia-en-el-teatro-119oqdp",
+      "permanent": true
+    },
+    {
+      "source": "/nota/jje778",
+      "destination": "/nota/la-sociedad-rural-de-balcarce-participo-de-una-reunion-regional-sobre-jje778",
+      "permanent": true
+    },
+    {
+      "source": "/nota/1knnogg",
+      "destination": "/nota/cabana-los-pinos-concreto-con-exito-su-41-remate-en-balcarce-1knnogg",
+      "permanent": true
+    },
+    {
+      "source": "/nota/1q76ezk",
+      "destination": "/nota/remate-conjunto-de-cabanas-angus-en-balcarce-1q76ezk",
+      "permanent": true
+    },
+    {
+      "source": "/nota/v1u9f1",
+      "destination": "/nota/ferroviarios-gano-la-primera-final-de-la-copa-de-plata-v1u9f1",
+      "permanent": true
+    },
+    {
+      "source": "/nota/1av7fh9",
+      "destination": "/nota/ferroviarios-se-consagro-campeon-en-basquet-1av7fh9",
+      "permanent": true
+    },
+    {
+      "source": "/nota/1y62trk",
+      "destination": "/nota/exitoso-debut-de-las-valkyrias-en-la-liga-mar-y-sierras-1y62trk",
+      "permanent": true
+    },
+    {
+      "source": "/nota/112kb6b",
+      "destination": "/nota/ferro-basquet-busca-los-octavos-en-la-liga-mar-y-sierras-112kb6b",
+      "permanent": true
+    },
+    {
+      "source": "/nota/1kpxt2v",
+      "destination": "/nota/karina-lupo-y-mariano-barreiro-ganaron-la-media-maraton-1kpxt2v",
+      "permanent": true
+    },
+    {
+      "source": "/nota/33h243",
+      "destination": "/nota/franco-peidon-gano-el-oro-nacional-en-800-metros-33h243",
+      "permanent": true
+    },
+    {
+      "source": "/nota/8yoymu",
+      "destination": "/nota/medalla-de-bronce-para-shalom-lescano-en-atletismo-8yoymu",
+      "permanent": true
+    },
+    {
+      "source": "/nota/q8eb1k",
+      "destination": "/nota/meta-lanzara-en-2027-unas-gafas-vr-ultraligeras-de-100-gramos-precio-q8eb1k",
+      "permanent": true
+    },
+    {
+      "source": "/nota/17kk9tp",
+      "destination": "/nota/en-vivo-donald-trump-y-melania-reciben-a-xi-jinping-y-a-su-esposa-17kk9tp",
+      "permanent": true
+    },
+    {
+      "source": "/nota/scgbup",
+      "destination": "/nota/la-universidad-de-stanford-uso-ia-para-reemplazar-a-un-estudiante-scgbup",
+      "permanent": true
+    },
+    {
+      "source": "/nota/1tvsag9",
+      "destination": "/nota/la-inteligencia-artificial-revelo-cuales-son-las-seis-palabras-que-1tvsag9",
+      "permanent": true
+    },
+    {
+      "source": "/nota/1synfb5",
+      "destination": "/nota/reapertura-del-fangio-horarios-accesos-estacionamiento-y-1synfb5",
+      "permanent": true
+    },
+    {
+      "source": "/nota/1on0ddi",
+      "destination": "/nota/los-250-constructores-de-negocios-mas-grandes-de-ee-uu-segun-forbes-1on0ddi",
+      "permanent": true
+    },
+    {
+      "source": "/nota/g61bzy",
+      "destination": "/nota/la-campana-se-calienta-la-economia-se-congela-g61bzy",
+      "permanent": true
+    },
+    {
+      "source": "/nota/e3051r",
+      "destination": "/nota/agotaron-las-entradas-para-la-despedida-de-lionel-messi-e3051r",
+      "permanent": true
+    },
+    {
+      "source": "/nota/1tspv07",
+      "destination": "/nota/aprobaron-prorroga-para-deudas-de-agua-y-piden-conocer-al-nuevo-1tspv07",
+      "permanent": true
+    },
+    {
+      "source": "/nota/4ip88d",
+      "destination": "/nota/el-gobierno-avalo-paritarias-y-un-gremio-tendra-salario-basico-4ip88d",
+      "permanent": true
+    },
+    {
+      "source": "/nota/30tlwf",
+      "destination": "/nota/reapertura-del-autodromo-juan-manuel-fangio-informacion-para-los-30tlwf",
+      "permanent": true
+    },
+    {
+      "source": "/nota/13nkxw3",
+      "destination": "/nota/hb-1293-en-florida-la-ley-que-crea-el-delito-de-ingreso-fraudulento-a-13nkxw3",
+      "permanent": true
+    },
+    {
+      "source": "/nota/ejorlh",
+      "destination": "/nota/javier-milei-y-sus-medidas-en-vivo-la-explicacion-de-luis-caputo-ejorlh",
+      "permanent": true
+    },
+    {
+      "source": "/nota/tbe3z6",
+      "destination": "/nota/como-voto-cada-senador-la-modificacion-de-la-ley-de-zonas-frias-tbe3z6",
+      "permanent": true
+    },
+    {
       "source": "/nota/1kcu6a3",
       "destination": "/nota/michael-jordan-dono-mas-de-17-millones-de-dolares-para-la-1kcu6a3",
       "permanent": true
     },
     {
-      "source": "/nota/w8qafd",
-      "destination": "/nota/elecciones-en-la-argentina-2027-fechas-cargos-que-se-renuevan-y-todo-w8qafd",
-      "permanent": true
-    },
-    {
-      "source": "/nota/tqg6a4",
-      "destination": "/nota/elecciones-2027-cuando-son-las-proximas-elecciones-presidenciales-en-tqg6a4",
+      "source": "/nota/iiw0oc",
+      "destination": "/nota/nuevas-escalas-y-aumentos-para-nineras-y-cuidadores-iiw0oc",
       "permanent": true
     },
     {
       "source": "/nota/1azjxrx",
       "destination": "/nota/google-lanzara-su-primer-satelite-con-chips-de-ia-para-probar-centros-1azjxrx",
-      "permanent": true
-    },
-    {
-      "source": "/nota/1if2xbk",
-      "destination": "/nota/se-agotaron-las-entradas-para-la-despedida-de-messi-de-la-seleccion-1if2xbk",
       "permanent": true
     },
     {
@@ -202,7 +262,7 @@
     },
     {
       "source": "/nota/1muc0dj",
-      "destination": "/nota/el-cerro-el-triunfo-tendra-el-paseo-juan-jose-mare-1muc0dj",
+      "destination": "/nota/mare-tendra-su-paseo-en-el-cerro-el-triunfo-tras-la-aprobacion-del-1muc0dj",
       "permanent": true
     },
     {
@@ -211,38 +271,13 @@
       "permanent": true
     },
     {
-      "source": "/nota/6hse8q",
-      "destination": "/nota/trump-y-melania-reciben-a-xi-y-a-su-esposa-para-una-cena-de-estado-en-6hse8q",
-      "permanent": true
-    },
-    {
-      "source": "/nota/1sk5z23",
-      "destination": "/nota/senado-se-aprobo-el-recorte-de-subsidios-en-zonas-frias-y-el-gobierno-1sk5z23",
-      "permanent": true
-    },
-    {
       "source": "/nota/af5xg4",
       "destination": "/nota/es-ley-el-cambio-del-regimen-de-zona-fria-94-municipios-bonaerenses-af5xg4",
       "permanent": true
     },
     {
-      "source": "/nota/1ezdmye",
-      "destination": "/nota/javier-milei-cerro-su-viaje-a-nueva-york-con-una-reunion-con-benjamin-1ezdmye",
-      "permanent": true
-    },
-    {
-      "source": "/nota/1efmvel",
-      "destination": "/nota/funcionarios-electorales-dicen-que-nuevo-plan-de-ciberseguridad-de-1efmvel",
-      "permanent": true
-    },
-    {
       "source": "/nota/ntbsnv",
       "destination": "/nota/mar-del-plata-vibro-con-la-tc-pick-up-en-la-previa-del-regreso-del-ntbsnv",
-      "permanent": true
-    },
-    {
-      "source": "/nota/o0mo4p",
-      "destination": "/nota/gianni-infantino-hablo-de-su-futuro-en-la-fifa-y-sus-ganas-de-debatir-o0mo4p",
       "permanent": true
     },
     {
@@ -271,16 +306,6 @@
       "permanent": true
     },
     {
-      "source": "/nota/1g7p9hj",
-      "destination": "/nota/descolgaron-el-cuadro-de-ricardo-echegaray-de-los-pasillos-de-arca-1g7p9hj",
-      "permanent": true
-    },
-    {
-      "source": "/nota/1wacxr8",
-      "destination": "/nota/ciberdelincuente-uso-agentes-de-ia-para-robar-datos-de-mas-de-600-mil-1wacxr8",
-      "permanent": true
-    },
-    {
       "source": "/nota/113bpe",
       "destination": "/nota/el-banco-digital-mas-grande-de-europa-desembarca-en-la-argentina-el-113bpe",
       "permanent": true
@@ -291,13 +316,13 @@
       "permanent": true
     },
     {
-      "source": "/nota/1oyk06k",
-      "destination": "/nota/revolut-el-banco-digital-mas-grande-de-europa-logro-aprobacion-del-1oyk06k",
+      "source": "/nota/1m6wyz8",
+      "destination": "/nota/milei-afirmo-ante-inversores-que-2028-sera-el-mejor-ano-economico-de-1m6wyz8",
       "permanent": true
     },
     {
-      "source": "/nota/1m6wyz8",
-      "destination": "/nota/milei-afirmo-ante-inversores-que-2028-sera-el-mejor-ano-economico-de-1m6wyz8",
+      "source": "/nota/8oikhq",
+      "destination": "/nota/despues-de-messi-el-nuevo-mapa-de-liderazgo-de-la-seleccion-argentina-8oikhq",
       "permanent": true
     },
     {
@@ -313,11 +338,6 @@
     {
       "source": "/nota/1nyse71",
       "destination": "/nota/la-pobreza-subio-a-casi-un-tercio-de-la-poblacion-1nyse71",
-      "permanent": true
-    },
-    {
-      "source": "/nota/cuz29x",
-      "destination": "/nota/nuevos-juegos-gratis-en-epic-games-store-reclama-titulos-de-fantasia-cuz29x",
       "permanent": true
     },
     {
@@ -346,11 +366,6 @@
       "permanent": true
     },
     {
-      "source": "/nota/15vd257",
-      "destination": "/nota/pobreza-para-la-uca-la-mejora-se-agoto-y-persiste-un-nucleo-15vd257",
-      "permanent": true
-    },
-    {
       "source": "/nota/jul3vf",
       "destination": "/nota/referente-de-disciplina-china-visito-el-municipio-jul3vf",
       "permanent": true
@@ -358,11 +373,6 @@
     {
       "source": "/nota/1u5vdom",
       "destination": "/nota/reforma-del-bcra-cual-es-el-cambio-clave-que-obliga-al-proyecto-del-1u5vdom",
-      "permanent": true
-    },
-    {
-      "source": "/nota/46hqrw",
-      "destination": "/nota/el-peronismo-propone-un-iva-dual-y-poner-en-marcha-un-pix-a-la-46hqrw",
       "permanent": true
     },
     {
@@ -397,7 +407,7 @@
     },
     {
       "source": "/nota/krgsl6",
-      "destination": "/nota/basquet-local-en-un-torneo-internacional-marplatense-krgsl6",
+      "destination": "/nota/jovenes-balcarcenas-participaran-de-un-torneo-internacional-de-krgsl6",
       "permanent": true
     },
     {
@@ -471,11 +481,6 @@
       "permanent": true
     },
     {
-      "source": "/nota/lcvlqf",
-      "destination": "/nota/vuelve-el-tc-al-tradicional-autodromo-juan-manuel-fangio-la-categoria-lcvlqf",
-      "permanent": true
-    },
-    {
       "source": "/nota/nt4ftf",
       "destination": "/nota/alpine-marca-donde-deberia-estar-colapinto-en-baku-gasly-refleja-el-nt4ftf",
       "permanent": true
@@ -532,7 +537,7 @@
     },
     {
       "source": "/nota/jul41g",
-      "destination": "/nota/balcarce-reabre-este-viernes-el-autodromo-juan-manuel-fangio-jul41g",
+      "destination": "/nota/balcarce-se-prepara-para-vivir-un-fin-de-semana-a-fondo-jul41g",
       "permanent": true
     },
     {
@@ -553,11 +558,6 @@
     {
       "source": "/nota/q98w9w",
       "destination": "/nota/santino-panetta-ya-palpita-la-fecha-de-eurocup-3-q98w9w",
-      "permanent": true
-    },
-    {
-      "source": "/nota/4v2vga",
-      "destination": "/nota/largas-filas-en-balcarce-por-el-regreso-del-automovilismo-4v2vga",
       "permanent": true
     },
     {
@@ -583,6 +583,11 @@
     {
       "source": "/nota/v7ui9o",
       "destination": "/nota/habra-una-clase-abierta-de-chi-kung-en-plaza-libertad-v7ui9o",
+      "permanent": true
+    },
+    {
+      "source": "/nota/xtlwre",
+      "destination": "/nota/largas-filas-para-ingresar-al-autodromo-fangio-xtlwre",
       "permanent": true
     },
     {
@@ -707,7 +712,7 @@
     },
     {
       "source": "/nota/1pjzhm6",
-      "destination": "/nota/las-tc-pick-up-se-presentaron-en-mar-del-plata-1pjzhm6",
+      "destination": "/nota/el-bocha-ciantini-y-el-intendente-presentaron-en-mar-del-plata-la-1pjzhm6",
       "permanent": true
     },
     {
