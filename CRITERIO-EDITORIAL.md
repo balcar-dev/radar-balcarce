@@ -1,6 +1,6 @@
 # Criterio editorial de Radar Balcarce
 
-*Actualizado el 25/09/2026.* Éste es **el** criterio editorial del medio: qué
+*Actualizado el 26/09/2026.* Éste es **el** criterio editorial del medio: qué
 se publica, cómo se escribe, cómo se trabaja con las fuentes y cómo se
 verifica. Hay uno solo y está acá. Todo lo demás lo respeta:
 
@@ -357,6 +357,48 @@ original**, nunca un archivo interno del medio (hasta el 25/09, las notas de
 Infórmese Primero enlazaban la entrada del feed de Blogger, que es XML: ahora
 enlazan la página, y si alguna quedó con el enlace viejo se muestra el medio
 sin enlace).
+
+### Cómo se presenta: lo que respeta TODA página del sitio
+
+Vale igual para una nota de una fuente, la nota del dólar, el repaso de un
+podcast, la ficha de un evento y las páginas de servicio (farmacias, dólar,
+teléfonos útiles). Está cuidado por pruebas (`pruebas/seo-paginas.test.mjs`,
+`pruebas/tipografia.test.mjs`, `pruebas/eventos.test.mjs`) y por la auditoría
+del 26/09, que recorrió las 300 páginas publicadas.
+
+1. **Una sola línea de firma.** Corta, gris, pegada al desplegable "Fuentes".
+   Nunca un párrafo explicando quién la escribió o si la revisó una persona
+   (eso está en `/quienes-somos`).
+2. **Las fuentes, plegadas.** Un botón chico y cerrado "Fuentes (N)" con el
+   nombre y el enlace. Nunca "Lo que cuenta el medio…", ni "De dónde sale esta
+   nota" a la vista.
+3. **El análisis es interno.** Claves, qué se sabe, qué falta confirmar, lo
+   que aportó cada fuente y el nivel de verificación se ven en el panel, no en
+   la web.
+4. **No se copia texto de otro.** Ni en una nota ni en una ficha de evento: los
+   datos van con palabras nuestras (plantilla o IA verificada), nunca la
+   descripción cruda de la fuente, con sus mayúsculas y sus frases de venta.
+5. **Nada de "en vivo"** si no está en vivo. Los datos que se actualizan en
+   el navegador (dólar, clima, "hace X") dicen la hora real de su última
+   actualización.
+6. **Sin promoción ni mayúsculas sostenidas ni signos dobles** en ningún
+   título ni texto ("¡¡¡INFORMACIÓN IMPORTANTE!!!"). Los nombres que llegan mal
+   de una fuente se corrigen (tildes, mayúsculas) antes de mostrarse.
+7. **Una tipografía, un sistema.** Fraunces sólo para títulos de nota, de
+   sección y de tarjeta, y la marca. Todo dato, cifra y etiqueta va en IBM Plex
+   Sans, con cifras tabulares. Cada tarjeta (clima, farmacia, dólar, agenda,
+   buzón, números útiles) usa la misma etiqueta, el mismo dato principal, el
+   mismo texto secundario y las mismas acciones ("Ver la semana →"). El detalle
+   y las variables están en `web/README.md` ("Sistema tipográfico") y al
+   principio del bloque de tarjetas de `web/app/globals.css`.
+8. **Todo se ve bien en cualquier tamaño.** Sin desborde horizontal, sin
+   texto cortado ni pisado, columnas alineadas, contraste de 4,5:1 o más, de
+   320 a 1440 píxeles. La columna de la derecha es una sola pila continua
+   (clima, farmacia, dólar, agenda, buzón, útiles), sin huecos.
+9. **Una nota por tema.** Dos notas con el mismo título (o casi) no conviven en
+   la portada: se queda la más relevante y la otra conserva su página.
+10. **Siempre lo nuevo primero**, cada sección con sus tres más recientes, la
+    tapa con cinco notas de cinco secciones distintas y todas con su hora.
 
 ## 8. Notas propias: el dólar, los podcasts y la agenda
 

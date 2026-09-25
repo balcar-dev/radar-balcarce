@@ -324,3 +324,30 @@ test('el sitemap de noticias deja afuera las notas sin fecha real', () => {
   // 25/09 diecinueve notas salían con la misma hora de relleno.
   assert.match(leer('app/sitemap-news.xml/route.js'), /\.filter\(\(n\) => !n\.sinFecha/);
 });
+
+// ------------------------------- el criterio de presentación (26/09)
+
+test('el criterio editorial recoge las reglas de presentación de toda página', async () => {
+  const fs = await import('node:fs');
+  const md = fs.readFileSync(new URL('../CRITERIO-EDITORIAL.md', import.meta.url), 'utf8');
+  for (const frase of ['Una sola línea de firma', 'Las fuentes, plegadas', 'El análisis es interno', 'No se copia texto de otro', 'Nada de "en vivo"', 'Una tipografía, un sistema']) {
+    assert.ok(md.includes(frase), `falta en el criterio: ${frase}`);
+  }
+});
+
+test('ninguna página del sitio lleva la firma larga ni "en vivo" (fuente: el código)', async () => {
+  const fs = await import('node:fs');
+  const path = await import('node:path');
+  const recorrer = (dir) => fs.readdirSync(dir, { withFileTypes: true }).flatMap((e) => {
+    const p = path.join(dir, e.name);
+    return e.isDirectory() ? recorrer(p) : /\.(js|mjs)$/.test(e.name) ? [p] : [];
+  });
+  const { fileURLToPath } = await import('node:url');
+  const raiz = fileURLToPath(new URL('../web/', import.meta.url));
+  const archivos = [...recorrer(path.join(raiz, 'app')), ...recorrer(path.join(raiz, 'components'))];
+  const prohibidas = [/Esta ficha se arm/, /Salió sin revisión humana/, /No la escribió una inteligencia/, /De dónde sale esta nota/, /Lo que cuenta la Municipalidad/];
+  for (const a of archivos) {
+    const texto = fs.readFileSync(a, 'utf8');
+    for (const re of prohibidas) assert.ok(!re.test(texto), `${path.relative(raiz, a)} tiene un texto que ya no va: ${re}`);
+  }
+});
