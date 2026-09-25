@@ -1,5 +1,5 @@
 {
-  "exportado": "2026-09-25T11:44:03.532Z",
+  "exportado": "2026-09-25T11:57:25.226Z",
   "decisiones": {
     "1951120": {
       "estado": "automatica",
@@ -9503,13 +9503,99 @@
     },
     "1k3g7wg": {
       "estado": "automatica",
-      "titulo": null,
-      "copete": null,
-      "cuerpo": null,
-      "guion": null,
-      "deIA": null,
-      "por": null,
-      "cuando": "2026-09-25T05:45:48.944Z"
+      "titulo": "El intendente recibe a autoridades del Club de Leones en Balcarce",
+      "copete": "El intendente Esteban Reino mantuvo un encuentro protocolar en el Palacio Municipal con representantes del Club de Leones para conversar sobre el trabajo social en la comunidad.",
+      "cuerpo": "De acuerdo con la información oficial y los medios locales, el jefe comunal mantuvo un encuentro protocolar con el gobernador del Distrito O-3 de la organización, Christian Bousquet.\n\nEn el transcurso del encuentro se destacó el rol que cumplen las entidades intermedias y el aporte que realizan mediante acciones solidarias y de servicio. Reino agradeció la visita de las autoridades y valoró la disposición para continuar fortaleciendo los vínculos comunitarios.",
+      "guion": "El intendente recibe a autoridades del Club de Leones en Balcarce",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T11:57:25.176Z",
+      "claves": [
+        "Reino recibió a referentes del Club de Leones en el Palacio Municipal.",
+        "Participó el gobernador del Distrito O-3, Christian Bousquet.",
+        "Dialogaron sobre las iniciativas solidarias en la comunidad."
+      ],
+      "seSabe": [
+        "El intendente Esteban Reino recibió a autoridades del Club de Leones en la Sala de los Intendentes, según informó el municipio.",
+        "Participaron el gobernador del Distrito O-3, Christian Bousquet, y la presidenta local, María de los Ángeles Rodríguez.",
+        "También estuvieron presentes los integrantes Ricardo Cacace y Jorge Baliña.",
+        "Las autoridades dialogaron sobre el trabajo social y las acciones solidarias en la comunidad."
+      ],
+      "textoRedes": "El intendente Esteban Reino recibió a autoridades del Club de Leones en el Palacio Municipal para dialogar sobre el trabajo social y las acciones solidarias que la institución desarrolla en la comunidad.",
+      "etiquetas": [
+        "Reino",
+        "Club de Leones",
+        "Balcarce"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Diario La Vanguardia",
+          "enlace": "https://www.diariolavanguardia.com/noticias/44894-reino-recibio-a-autoridades-del-club-de-leones-en-el-palacio-municipal/",
+          "fecha": "2026-09-24T21:18:42.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "News Balcarce (FM 91.7)",
+          "enlace": "https://newsbalcarce.com.ar/?p=30845",
+          "fecha": "2026-09-24T21:18:42.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Infórmese Primero (FM 104.9)",
+          "enlace": "http://www.blogger.com/feeds/8495648477830064035/posts/default/6360410155648573649",
+          "fecha": "2026-09-24T20:26:07.021Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Puntonueve (FM 100.9)",
+          "enlace": "https://puntonueve.com.ar/reino-recibio-a-autoridades-del-club-de-leones-en-la-sala-de-los-intendentes/",
+          "fecha": "2026-09-24T19:19:45.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Radio Gabal (FM 104.1)",
+          "enlace": "https://www.radiogabal.com.ar/index.php/comunidad/reino-recibio-a-autoridades-del-club-de-leones-en-el-palacio-municipal",
+          "fecha": "2026-09-24T19:00:58.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Municipalidad de Balcarce",
+          "enlace": "https://balcarce.gob.ar/2026/09/24/reino-recibio-a-autoridades-del-club-de-leones/",
+          "fecha": "2026-09-24T16:29:36.000Z",
+          "oficial": true,
+          "aporte": null
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "awfv2d",
+          "titulo": "Reino recibió a autoridades del Club de Leones",
+          "fecha": "2026-09-24T19:19:45.000Z",
+          "ruta": "/nota/reino-recibio-a-autoridades-del-club-de-leones-awfv2d"
+        },
+        {
+          "id": "x1ihjl",
+          "titulo": "Reino recibió a autoridades del Club de Leones",
+          "fecha": "2026-09-24T16:29:36.000Z",
+          "ruta": "/nota/reino-recibio-a-autoridades-del-club-de-leones-x1ihjl"
+        },
+        {
+          "id": "86l1ng",
+          "titulo": "Reino recibió a referente de disciplinas tradicionales chinas",
+          "fecha": "2026-09-24T16:09:50.000Z",
+          "ruta": "/nota/reino-recibio-a-referente-de-disciplinas-tradicionales-chinas-86l1ng"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo confirman cinco medios independientes y Municipalidad de Balcarce.",
+        "sugeridoPorIA": "ALTA"
+      }
     },
     "1yy5hcd": {
       "estado": "automatica",
@@ -9523,33 +9609,234 @@
     },
     "jul41g": {
       "estado": "automatica",
-      "titulo": null,
-      "copete": null,
-      "cuerpo": null,
-      "guion": null,
-      "deIA": null,
-      "por": null,
-      "cuando": "2026-09-25T05:45:51.304Z"
+      "titulo": "El Autódromo Juan Manuel Fangio reabre este viernes en Balcarce",
+      "copete": "Balcarce será escenario este fin de semana de la octava fecha del TC Pick Up. El evento incluirá la esperada reapertura del autódromo local, exhibiciones callejeras de vehículos y una conferencia oficial.",
+      "cuerpo": "Las actividades comenzarán este viernes a partir de las 14 con el corte de cinta en la pista del Autódromo Municipal Juan Manuel Fangio, un hito que marcará su reapertura oficial con la presencia de autoridades provinciales, municipales y de la ACTC. La agenda continuará a las 17 en una estación de servicio ubicada en avenida San Martín y 107, donde se realizará una firma de autógrafos con los pilotos locales y nacionales. Más tarde, desde las 18:30, las camionetas recorrerán distintos sectores de la ciudad, pasando por la avenida Gonzales Chaves, plaza Libertad y la zona del Museo Fangio, frente al cual se desarrollará la conferencia de presentación a las 19.\n\nEn lo estrictamente deportivo, la actividad competitiva comenzará el sábado a las 9 con entrenamientos y clasificaciones, mientras que el domingo se disputarán las series y finales con transmisión televisiva. Mariano Werner llega como líder del campeonato tras imponerse en dos finales y ganar la Etapa Regular, al tiempo que se confirmó la participación de los pilotos locales Santiago Mangoni, Diego Ciantini, José Ciantini y Juan José Suárez.",
+      "guion": "El Autódromo Juan Manuel Fangio reabre este viernes en Balcarce",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T11:57:25.176Z",
+      "claves": [
+        "El autódromo municipal reabre sus puertas este viernes con un acto oficial.",
+        "Habrá firma de autógrafos y una caravana de camionetas por las calles céntricas.",
+        "El sábado y domingo se disputarán los entrenamientos, series y finales.",
+        "Mariano Werner llega como puntero y cuatro pilotos locales competirán en la fecha."
+      ],
+      "noConfirmado": [
+        "No se detalló la nómina completa de las autoridades provinciales y de la ACTC que asistirán al corte de cinta."
+      ],
+      "textoRedes": "Balcarce se prepara para vivir un fin de semana a todo motor con la reapertura del Autódromo Juan Manuel Fangio, la llegada del TC Pick Up, caravanas de camionetas por la ciudad y la presencia de destacados pilotos locales.",
+      "etiquetas": [
+        "Autodromo Juan Manuel Fangio",
+        "TC Pick Up",
+        "Balcarce",
+        "Automovilismo"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "News Balcarce (FM 91.7)",
+          "enlace": "https://newsbalcarce.com.ar/?p=30813",
+          "fecha": "2026-09-24T14:21:16.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/balcarce-se-prepara-para-un-fin-de-semana-historico-475",
+          "fecha": "2026-09-24T12:05:53.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Infórmese Primero (FM 104.9)",
+          "enlace": "http://www.blogger.com/feeds/8495648477830064035/posts/default/4187113007910707683",
+          "fecha": "2026-09-23T15:58:01.847Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Municipalidad de Balcarce",
+          "enlace": "https://balcarce.gob.ar/2026/09/23/balcarce-se-prepara-para-vivir-un-fin-de-semana-a-puro-automovilismo/",
+          "fecha": "2026-09-23T15:49:50.000Z",
+          "oficial": true,
+          "aporte": null
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "4v2vga",
+          "titulo": "Largas filas en Balcarce por el regreso del automovilismo",
+          "fecha": "2026-09-24T13:34:15.000Z",
+          "ruta": "/nota/largas-filas-en-balcarce-por-el-regreso-del-automovilismo-4v2vga"
+        },
+        {
+          "id": "1s3g86p",
+          "titulo": "Viernes a puro motor en Balcarce con el TC Pick Up",
+          "fecha": "2026-09-24T13:09:20.000Z",
+          "ruta": "/nota/viernes-a-puro-motor-en-balcarce-con-el-tc-pick-up-1s3g86p"
+        },
+        {
+          "id": "n331xk",
+          "titulo": "Definieron horarios para el automovilismo en el Fangio",
+          "fecha": "2026-09-24T13:05:55.000Z",
+          "ruta": "/nota/definieron-horarios-para-el-automovilismo-en-el-fangio-n331xk"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo confirman tres medios independientes y Municipalidad de Balcarce.",
+        "sugeridoPorIA": "ALTA"
+      }
     },
     "1juqupr": {
       "estado": "automatica",
-      "titulo": null,
-      "copete": null,
-      "cuerpo": null,
-      "guion": null,
-      "deIA": null,
-      "por": null,
-      "cuando": "2026-09-25T05:45:52.626Z"
+      "titulo": "El Senado aprueba la reforma de Zona Fría y Balcarce pierde el subsidio al gas",
+      "copete": "La Cámara alta convirtió en ley la reducción del régimen de Zona Fría impulsada por el Gobierno nacional. Balcarce dejará de recibir el beneficio general en las facturas de gas y los usuarios deberán cumplir nuevos requisitos.",
+      "cuerpo": "El Senado de la Nación convirtió en ley la reforma del régimen de Zona Fría impulsada por el Gobierno nacional, una medida que afecta de forma directa a Balcarce al eliminar el beneficio general sobre las facturas de gas. La iniciativa obtuvo treinta y ocho votos a favor y ocho en contra, y retrotrae la ampliación territorial que se había aprobado en 2021 durante la gestión de Alberto Fernández.\n\nCon el nuevo esquema, vivir en la ciudad ya no será suficiente para acceder a la tarifa diferencial de manera automática. El subsidio pasará a tener un criterio de focalización y se calculará exclusivamente sobre el precio del gas, dejando afuera el transporte y la distribución. Los hogares que superen determinados niveles de ingresos perderán la bonificación, mientras que podrán conservarla quienes cumplan con los parámetros del régimen de Subsidios Energéticos Focalizados, con un tope de referencia de ingresos familiares de hasta tres Canastas Básicas Totales.\n\nPara los vecinos de Balcarce, el impacto concreto dependerá de la situación económica particular de cada grupo familiar y de los requerimientos de reempadronamiento que se establezcan. El Gobierno nacional defendió la medida con el argumento de ordenar el sistema energético, reducir el déficit fiscal y concentrar los recursos en los sectores de mayores necesidades.",
+      "guion": "El Senado aprueba la reforma de Zona Fría y Balcarce pierde el subsidio al gas",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T11:57:25.176Z",
+      "claves": [
+        "El Senado aprobó la reforma del régimen de Zona Fría con treinta y ocho votos a favor.",
+        "Balcarce dejará de recibir el beneficio general en las facturas de gas.",
+        "Los usuarios deberán cumplir requisitos de ingresos para conservar una bonificación.",
+        "El descuento se calculará solo sobre el precio del gas y no sobre la tarifa final."
+      ],
+      "seSabe": [
+        "El Senado de la Nación aprobó la reforma del régimen de Zona Fría con 38 votos a favor y 8 en contra.",
+        "Balcarce está entre los municipios bonaerenses que pierden el beneficio general en las facturas de gas.",
+        "La normativa retrotrae la ampliación territorial aprobada en 2021.",
+        "Los hogares podrán conservar el beneficio si cumplen con los parámetros del régimen de Subsidios Energéticos Focalizados y tienen ingresos de hasta tres Canastas Básicas Totales."
+      ],
+      "noConfirmado": [
+        "No se detallaron los plazos exactos en los que se implementará el reempadronamiento para los usuarios locales."
+      ],
+      "textoRedes": "El Senado aprobó la ley que recorta el régimen de Zona Fría y Balcarce dejará de recibir el beneficio general en el gas. El subsidio se focalizará según ingresos.",
+      "etiquetas": [
+        "Zona Fría",
+        "gas",
+        "subsidio",
+        "Senado",
+        "Balcarce",
+        "tarifas"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Diario La Vanguardia",
+          "enlace": "https://www.diariolavanguardia.com/noticias/44898-zona-fria-el-senado-aprobo-el-recorte-y-balcarce-perdera-el-subsidio-general-al-gas/",
+          "fecha": "2026-09-25T02:04:56.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Radio Gabal (FM 104.1)",
+          "enlace": "https://www.radiogabal.com.ar/index.php/politica/zona-fria-el-senado-aprobo-la-reduccion-y-balcarce-quedo-afuera-del-beneficio",
+          "fecha": "2026-09-25T02:04:56.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Infórmese Primero (FM 104.9)",
+          "enlace": "http://www.blogger.com/feeds/8495648477830064035/posts/default/5163755947024811073",
+          "fecha": "2026-09-25T00:37:16.160Z",
+          "oficial": false,
+          "aporte": null
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1sk5z23",
+          "titulo": "Senado: se aprobó el recorte de subsidios en zonas frías y el Gobierno sumó una victoria en el Congreso",
+          "fecha": "2026-09-24T23:16:57.000Z",
+          "ruta": "/nota/senado-se-aprobo-el-recorte-de-subsidios-en-zonas-frias-y-el-gobierno-1sk5z23"
+        },
+        {
+          "id": "xcarxn",
+          "titulo": "Zona Fría: el Senado vuelve a debatir el recorte al subsidio al gas que alcanzaría a Balcarce",
+          "fecha": "2026-09-23T14:55:55.000Z",
+          "ruta": "/nota/zona-fria-el-senado-vuelve-a-debatir-el-recorte-al-subsidio-al-gas-xcarxn"
+        },
+        {
+          "id": "1q3000s",
+          "titulo": "Senado, en vivo: comenzó el debate por el recorte de subsidios al gas para zonas frías y se espera que se vote pasada la medianoche",
+          "fecha": "2026-09-24T21:11:44.000Z",
+          "ruta": "/nota/senado-en-vivo-comenzo-el-debate-por-el-recorte-de-subsidios-al-gas-1q3000s"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron tres medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      }
     },
     "yaqf3p": {
       "estado": "automatica",
-      "titulo": null,
-      "copete": null,
-      "cuerpo": null,
-      "guion": null,
-      "deIA": null,
-      "por": null,
-      "cuando": "2026-09-25T05:45:54.340Z"
+      "titulo": "El autódromo Juan Manuel Fangio abre sus puertas este viernes en Balcarce",
+      "copete": "El histórico circuito vuelve a recibir actividad automovilística este viernes con un operativo especial de tránsito, accesos diferenciados desde las 8 y venta de entradas en el predio.",
+      "cuerpo": "Las puertas del Autódromo Juan Manuel Fangio abrirán este viernes desde las 8 en lo que representa una jornada histórica para Balcarce y el automovilismo nacional, tras más de una década sin actividad oficial en el circuito principal. La organización estableció ingresos diferenciados: el público general entrará exclusivamente por la Puerta 1 sobre calle 63, mientras que los boxes y acreditaciones especiales lo harán por calle 79 a través del ingreso al Kartódromo. Dentro del predio habrá circulación en sentido único en el sector superior, estacionamiento arancelado y boletería habilitada las 24 horas.\n\nEl operativo incluye baños químicos, puestos gastronómicos y asistencia sanitaria con postas de salud y socorristas. Para ordenar el flujo vehicular y prevenir inconvenientes, participarán agentes de Control y Movilidad Urbana, Gendarmería Nacional, Policía y el Ministerio de Transporte bonaerense.",
+      "guion": "El autódromo Juan Manuel Fangio abre sus puertas este viernes en Balcarce",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T11:57:25.176Z",
+      "seSabe": [
+        "Las puertas del autódromo abrirán al público a partir de las 8 de la mañana.",
+        "El ingreso general será por la Puerta 1 en la calle 63.",
+        "El acceso a boxes y acreditaciones especiales se realizará por la calle 79 a través del Kartódromo.",
+        "La venta de entradas funcionará las 24 horas en las puertas de ingreso.",
+        "El predio contará con baños químicos, puestos gastronómicos y un operativo sanitario.",
+        "Participarán del operativo vial Gendarmería Nacional, Policía, Transporte provincial y agentes municipales."
+      ],
+      "noConfirmado": [
+        "No se informaron en el reporte las tarifas específicas correspondientes al estacionamiento arancelado."
+      ],
+      "textoRedes": "El Autódromo Juan Manuel Fangio reabre este viernes desde las 8 con accesos diferenciados, estacionamiento y venta de entradas. Conocé los detalles del operativo de tránsito y seguridad dispuesto para el histórico regreso del automovilismo a Balcarce.",
+      "etiquetas": [
+        "Autódromo Juan Manuel Fangio",
+        "Balcarce",
+        "automovilismo"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Diario La Vanguardia",
+          "enlace": "https://www.diariolavanguardia.com/noticias/44902-reapertura-del-fangio-horarios-accesos-estacionamiento-y-todo-lo-que-hay-que-saber-para-ingresar/",
+          "fecha": "2026-09-25T00:21:50.000Z",
+          "oficial": false,
+          "aporte": "Detalló los horarios, los accesos diferenciados, la circulación interna, el estacionamiento, los servicios y el operativo de seguridad y salud."
+        },
+        {
+          "medio": "Puntonueve (FM 100.9)",
+          "enlace": "https://puntonueve.com.ar/reapertura-del-fangio-horarios-accesos-estacionamiento-y-recomendaciones-para-el-publico/",
+          "fecha": "2026-09-25T00:21:50.000Z",
+          "oficial": false,
+          "aporte": "Confirmó que la reapertura oficial se llevará adelante este viernes en una jornada especial para la ciudad y el automovilismo."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "lcvlqf",
+          "titulo": "Vuelve el TC al tradicional autódromo Juan Manuel Fangio: la categoría Pick Up protagonizará la reapertura del circuito",
+          "fecha": "2026-09-24T17:08:37.000Z",
+          "ruta": "/nota/vuelve-el-tc-al-tradicional-autodromo-juan-manuel-fangio-la-categoria-lcvlqf"
+        },
+        {
+          "id": "jul41g",
+          "titulo": "Balcarce se prepara para la reapertura del autódromo Juan Manuel Fangio",
+          "fecha": "2026-09-24T14:21:16.000Z",
+          "ruta": "/nota/balcarce-se-prepara-para-vivir-un-fin-de-semana-a-fondo-jul41g"
+        },
+        {
+          "id": "n331xk",
+          "titulo": "Definieron horarios para el automovilismo en el Fangio",
+          "fecha": "2026-09-24T13:05:55.000Z",
+          "ruta": "/nota/definieron-horarios-para-el-automovilismo-en-el-fangio-n331xk"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      }
     },
     "30tlwf": {
       "estado": "automatica",
@@ -9563,13 +9850,62 @@
     },
     "62zh3v": {
       "estado": "automatica",
-      "titulo": "Iglesia y movimientos sociales presentan proyecto de financiamiento",
-      "copete": "Presentarán un proyecto para financiar barrios populares en Buenos Aires, de cara a la visita papal.",
-      "cuerpo": "La sede de Cáritas Argentina, situada en la calle Balcarce en la Ciudad de Buenos Aires, será el escenario donde la Iglesia, movimientos sociales y diputados darán a conocer la iniciativa el miércoles treinta de septiembre. El reclamo se realiza a menos de un mes y medio de la primera visita del papa León XIV al país.",
-      "guion": "Iglesia y movimientos sociales presentan proyecto de financiamiento",
+      "titulo": "Presentan proyecto para financiar barrios populares en Buenos Aires",
+      "copete": "Legisladores, organizaciones y la Iglesia impulsarán una ley para garantizar fondos a obras de integración urbana. Será en la sede de Cáritas en Buenos Aires.",
+      "cuerpo": "Diputados nacionales de doce bloques, organizaciones sociales y representantes de la Iglesia católica presentarán un proyecto de Ley de Emergencia en Barrios Populares. La iniciativa busca garantizar por diez años el financiamiento de obras de integración socio-urbana en más de seis mil barrios del país.\n\nEl encuentro se realizará el miércoles treinta de septiembre a las diez en la sede de Cáritas Argentina, ubicada en la Ciudad de Buenos Aires. Entre los impulsores figuran legisladores nacionales y monseñor Gustavo Carrara, arzobispo de La Plata y presidente de la institución.\n\nLos organizadores señalaron que la propuesta surge tras la caída del financiamiento de las obras y la falta de partidas específicas en el proyecto de Presupuesto. Según datos oficiales, la ejecución de trabajos cayó de forma significativa en los últimos años tras la modificación de los recursos asignados al fondo específico.",
+      "guion": "Presentan proyecto para financiar barrios populares en Buenos Aires",
       "deIA": true,
       "por": "ia",
-      "cuando": "2026-09-25T05:45:57.304Z"
+      "cuando": "2026-09-25T11:57:25.177Z",
+      "claves": [
+        "Presentarán un proyecto de ley para financiar barrios populares.",
+        "La convocatoria será el miércoles treinta de septiembre en la sede de Cáritas.",
+        "Participan legisladores de doce bloques, organizaciones y la Iglesia.",
+        "Buscan garantizar recursos por diez años para obras de integración."
+      ],
+      "seSabe": [
+        "El proyecto de ley será presentado el miércoles treinta de septiembre en la Ciudad de Buenos Aires.",
+        "La iniciativa cuenta con el respaldo de legisladores de doce bloques políticos y referentes de la Iglesia.",
+        "El texto busca garantizar el financiamiento de obras de integración socio-urbana por diez años."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Legisladores, organizaciones sociales y la Iglesia presentarán un proyecto de ley para garantizar financiamiento por diez años para obras en barrios populares.",
+      "etiquetas": [
+        "barrios populares",
+        "Cáritas",
+        "Congreso",
+        "integración urbana"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/politica/2026/09/25/iglesia-movimientos-sociales-y-diputados-presentaran-un-proyecto-para-el-financiamiento-de-los-barrios-populares/",
+          "fecha": "2026-09-25T04:32:05.000Z",
+          "oficial": false,
+          "aporte": "Detalla la presentación de un proyecto de ley para el financiamiento de barrios populares en la sede de Cáritas Argentina."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1u5vdom",
+          "titulo": "Reforma del BCRA: cuál es el cambio clave que obliga al proyecto del oficialismo a volver a Diputados",
+          "fecha": "2026-09-24T21:27:42.000Z",
+          "ruta": "/nota/reforma-del-bcra-cual-es-el-cambio-clave-que-obliga-al-proyecto-del-1u5vdom"
+        },
+        {
+          "id": "14obmgn",
+          "titulo": "El Senado sesiona este jueves para convertir en ley Zonas Frías y el proyecto del BCRA, que tendrá que volver a Diputados",
+          "fecha": "2026-09-23T20:10:54.000Z",
+          "ruta": "/nota/el-senado-sesiona-este-jueves-para-convertir-en-ley-zonas-frias-y-el-14obmgn"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
     },
     "1m6wyz8": {
       "estado": "automatica",
@@ -9613,13 +9949,70 @@
     },
     "942wi7": {
       "estado": "automatica",
-      "titulo": null,
-      "copete": null,
-      "cuerpo": null,
-      "guion": null,
-      "deIA": null,
-      "por": null,
-      "cuando": "2026-09-25T05:46:05.873Z"
+      "titulo": "Mercedes confirma su continuidad en el Turismo Carretera en Balcarce",
+      "copete": "La marca alemana aseguró su permanencia para la temporada próxima con sus tres pilotos actuales, en el marco de una recorrida por la planta local Juan Manuel Fangio.",
+      "cuerpo": "El plantel continuará integrado por Otto Fritzler, Diego Azar y el rionegrino José Manuel Urcera, quienes compiten bajo la estructura del Maquin Parts Racing. Urcera destacó la importancia de planificar a largo plazo para reducir la tensión deportiva y tomar mejores decisiones, aunque reconoció que el rendimiento del vehículo aún presenta fluctuaciones que el equipo busca resolver.\n\nComo antecedente, el autódromo local fue escenario de recientes actividades vinculadas al regreso del automovilismo nacional, generando gran expectativa en la comunidad con la presencia de categorías y pilotos destacados.",
+      "guion": "Mercedes confirma su continuidad en el Turismo Carretera en Balcarce",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T11:57:25.177Z",
+      "claves": [
+        "Mercedes-Benz confirmó su continuidad en el Turismo Carretera para 2027.",
+        "La confirmación se realizó durante una recorrida por la planta Juan Manuel Fangio en Balcarce.",
+        "Los tres pilotos actuales seguirán bajo la estructura del Maquin Parts Racing.",
+        "Urcera destacó las ventajas de contar con un proyecto a largo plazo."
+      ],
+      "seSabe": [
+        "Daniel Herrero confirmó la continuidad del proyecto de Mercedes-Benz en el TC para 2027.",
+        "Los tres pilotos de la actual temporada se mantendrán en el equipo.",
+        "La estructura técnica y deportiva sigue a cargo del Maquin Parts Racing.",
+        "El anuncio se comunicó en el marco de una recorrida por la planta Juan Manuel Fangio."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Mercedes-Benz confirmó su continuidad en el Turismo Carretera para 2027 con sus tres pilotos actuales. El anuncio se realizó durante una recorrida por la planta Juan Manuel Fangio en Balcarce.",
+      "etiquetas": [
+        "Automovilismo",
+        "Turismo Carretera",
+        "Mercedes-Benz",
+        "Balcarce",
+        "José Manuel Urcera"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Campeones",
+          "enlace": "https://campeones.com.ar/urcera-y-la-tranquilidad-del-trabajo-a-largo-plazo-con-mercedes-en-tc/",
+          "fecha": "2026-09-24T14:27:10.000Z",
+          "oficial": false,
+          "aporte": "Detalló la confirmación de la continuidad de Mercedes en el TC para 2027 y las declaraciones de los protagonistas."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "jul41g",
+          "titulo": "Balcarce se prepara para la reapertura del autódromo Juan Manuel Fangio",
+          "fecha": "2026-09-24T14:21:16.000Z",
+          "ruta": "/nota/balcarce-se-prepara-para-vivir-un-fin-de-semana-a-fondo-jul41g"
+        },
+        {
+          "id": "xpr0le",
+          "titulo": "El TC Pick Up realiza una firma de autógrafos en Balcarce",
+          "fecha": "2026-09-24T14:21:16.000Z",
+          "ruta": "/nota/el-tc-pick-up-realiza-una-firma-de-autografos-en-balcarce-xpr0le"
+        },
+        {
+          "id": "4v2vga",
+          "titulo": "Largas filas en Balcarce por el regreso del automovilismo",
+          "fecha": "2026-09-24T13:34:15.000Z",
+          "ruta": "/nota/largas-filas-en-balcarce-por-el-regreso-del-automovilismo-4v2vga"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
     },
     "pjnmc": {
       "estado": "automatica",
@@ -11963,13 +12356,71 @@
     },
     "h30g4e": {
       "estado": "automatica",
-      "titulo": null,
-      "copete": null,
-      "cuerpo": null,
-      "guion": null,
-      "deIA": null,
-      "por": null,
-      "cuando": "2026-09-25T09:50:37.675Z"
+      "titulo": "El TC Pick Up marcará la reapertura del autódromo en Balcarce",
+      "copete": "Las camionetas de competición se presentaron en Tandil como previa del regreso oficial de la actividad al autódromo Juan Manuel Fangio, tras un trabajo conjunto entre la Provincia y el Municipio.",
+      "cuerpo": "La ciudad de Tandil recibió la presentación oficial de las TC Pick Up como antesala del regreso de la actividad oficial al autódromo Juan Manuel Fangio de Balcarce. El evento reunió a autoridades locales, referentes de la Cámara Empresaria y pilotos, destacando el valor histórico del escenario y el trabajo conjunto entre el Gobierno bonaerense y el Municipio para recuperar el trazado.\n\nEl intendente de Balcarce, Andrés Reino, remarcó que el circuito renovado es más moderno, seguro y prolijo, y subrayó que el movimiento turístico y productivo del fin de semana permitirá recuperar la inversión realizada en el predio. Como se había informado el 24 de septiembre, el regreso de la categoría marcará la reapertura del autódromo tras más de una década sin competencias oficiales en su circuito principal.\n\nDurante la jornada desarrollada en Tandil, que incluyó una muestra estática y una vuelta simbólica alrededor del Lago del Fuerte, el piloto local Gonzalo Aramburu expresó sus expectativas por competir en el trazado. Del mismo modo, el director de Deportes tandilense, Carlos Ilero, valoró la apuesta del Municipio vecino para fomentar el desarrollo turístico y gastronómico de la región.",
+      "guion": "El TC Pick Up marcará la reapertura del autódromo en Balcarce",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T11:57:25.176Z",
+      "claves": [
+        "Las TC Pick Up se presentaron en Tandil como previa al regreso al autódromo Juan Manuel Fangio.",
+        "El intendente Andrés Reino destacó la modernización, seguridad e impacto económico del predio.",
+        "El piloto local Gonzalo Aramburu participó de la muestra estática y la exhibición en el Lago del Fuerte.",
+        "La competencia marcará la vuelta oficial de las carreras al circuito balcarceño tras más de una década."
+      ],
+      "seSabe": [
+        "Las TC Pick Up se presentaron en Tandil como previa a la competencia en el autódromo de Balcarce, según informó el medio de origen.",
+        "El intendente de Balcarce, Andrés Reino, afirmó que el circuito es más moderno y seguro, y que el movimiento turístico permitirá recuperar la inversión.",
+        "El director de Deportes de Tandil, Carlos Ilero, destacó el trabajo conjunto entre los municipios y el impacto en turismo y gastronomía.",
+        "El piloto Gonzalo Aramburu participó de la presentación oficial con su camioneta en Tandil."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Las TC Pick Up se presentaron en Tandil como antesala del regreso oficial de la actividad al autódromo Juan Manuel Fangio de Balcarce. El intendente Andrés Reino destacó que el circuito renovado impulsará el turismo y la economía regional.",
+      "etiquetas": [
+        "TC Pick Up",
+        "Autódromo Juan Manuel Fangio",
+        "Balcarce",
+        "Andrés Reino",
+        "Automovilismo",
+        "Tandil"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Eco de Tandil",
+          "enlace": "https://www.eleco.com.ar/deportes/el-tc-pick-up-marcara-la-reinauguracion-del-circuito-de-balcarce",
+          "fecha": "2026-09-25T09:46:26.000Z",
+          "oficial": false,
+          "aporte": null
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "lcvlqf",
+          "titulo": "Vuelve el TC al tradicional autódromo Juan Manuel Fangio: la categoría Pick Up protagonizará la reapertura del circuito",
+          "fecha": "2026-09-24T17:08:37.000Z",
+          "ruta": "/nota/vuelve-el-tc-al-tradicional-autodromo-juan-manuel-fangio-la-categoria-lcvlqf"
+        },
+        {
+          "id": "11pnmnw",
+          "titulo": "Kicillof visitará Balcarce para la reinauguración del autódromo",
+          "fecha": "2026-09-23T23:52:12.000Z",
+          "ruta": "/nota/kicillof-visitara-balcarce-para-la-reinauguracion-del-autodromo-11pnmnw"
+        },
+        {
+          "id": "15sf1ir",
+          "titulo": "Una vuelta al renovado circuito de Río Cuarto",
+          "fecha": "2026-09-21T19:42:46.000Z",
+          "ruta": "/nota/una-vuelta-al-renovado-circuito-de-rio-cuarto-15sf1ir"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
     },
     "j3h6bv": {
       "estado": "automatica",
@@ -12147,13 +12598,94 @@
     },
     "1e6tvp9": {
       "estado": "automatica",
-      "titulo": null,
-      "copete": null,
-      "cuerpo": null,
-      "guion": null,
-      "deIA": null,
-      "por": null,
-      "cuando": "2026-09-25T10:30:37.499Z"
+      "titulo": "Kicillof encabeza la reapertura del autódromo Juan Manuel Fangio en Balcarce",
+      "copete": "El gobernador bonaerense y el intendente Esteban Reino participan de la reinauguración del circuito serrano. Tras quince años sin actividad oficial, el trazado vuelve a recibir competencias nacionales este fin de semana.",
+      "cuerpo": "El gobernador de la provincia de Buenos Aires, Axel Kicillof, y el intendente de Balcarce, Esteban Reino, encabezan este viernes a las 14 el acto formal de reinauguración del autódromo municipal “Juan Manuel Fangio”, ubicado en el sector de boxes de la sierra La Barrosa. De la ceremonia también participan el presidente de la ACTC, Hugo Mazzacane, autoridades provinciales y municipales. El ingreso del público al predio está habilitado desde las 8 por la calle 79.\n\nLa reapertura del circuito se concretó tras quince años sin actividad oficial, un período marcado por la inactividad posterior al trágico accidente de Guido Falaschi en noviembre de 2011 y diversas dificultades topográficas e inflacionarias. El jefe comunal reconoció que el proyecto requirió un esfuerzo de muchos años y destacó que la Provincia destinó más de mil millones de pesos, complementados con maquinaria y recursos municipales.\n\nAnte la llegada de visitantes, el intendente indicó que la reserva hotelera alcanza el ciento por ciento y señaló que el objetivo es que el autódromo funcione todo el año con competencias, track days y encuentros de clubes.",
+      "guion": "Kicillof encabeza la reapertura del autódromo Juan Manuel Fangio en Balcarce",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T11:57:25.176Z",
+      "noConfirmado": [
+        "No se detalló el cronograma exacto de las actividades posteriores al fin de semana de apertura."
+      ],
+      "textoRedes": "Con la presencia del gobernador Axel Kicillof y el intendente Esteban Reino, el autódromo Juan Manuel Fangio reabre este viernes tras quince años sin actividad oficial. El fin de semana vuelven las competencias nacionales con categorías como las TC Pick Up.",
+      "etiquetas": [
+        "autodromo",
+        "Juan Manuel Fangio",
+        "Balcarce",
+        "Axel Kicillof",
+        "Esteban Reino",
+        "automovilismo"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Diputados Bonaerenses",
+          "enlace": "https://diputadosbsas.com.ar/kicillof-llega-balcarce-reinauguracion-fangio/",
+          "fecha": "2026-09-25T10:15:00.000Z",
+          "oficial": false,
+          "aporte": "Aportó los detalles sobre la llegada de Axel Kicillof, el horario del acto, la presencia de Hugo Mazzacane y las declaraciones del intendente Esteban Reino sobre la inversión provincial y la ocupación hotelera."
+        },
+        {
+          "medio": "La Noticia 1",
+          "enlace": "https://www.lanoticia1.com/noticia/kicillof-reinaugura-el-autodromo-fangio-en-balcarce",
+          "fecha": "2026-09-25T08:03:43.000Z",
+          "oficial": false,
+          "aporte": "Confirmó la presencia del gobernador y del intendente Esteban Reino para poner en marcha el autódromo municipal."
+        },
+        {
+          "medio": "Municipalidad de Balcarce",
+          "enlace": "https://balcarce.gob.ar/2026/09/24/reapertura-del-autodromo-juan-manuel-fangio-informacion-para-los-asistentes/",
+          "fecha": "2026-09-25T00:03:22.000Z",
+          "oficial": true,
+          "aporte": "Informó que las puertas del predio abren a las 8 de la mañana y solicitó prestar atención a los accesos y al sentido de circulación."
+        },
+        {
+          "medio": "LU9 Mar del Plata",
+          "enlace": "https://www.lu9mardelplata.com.ar/reabre-el-autodromo-juan-manuel-fangio-de-balcarce-jamas-vi-el-autodromo-como-esta-hoy-dijo-esteban-reino",
+          "fecha": "2026-09-24T12:44:10.000Z",
+          "oficial": false,
+          "aporte": "Precisó que pasaron 15 años sin carreras y detalló las categorías que compiten este fin de semana, además de las declaraciones del intendente en LU9."
+        },
+        {
+          "medio": "Municipalidad de Balcarce",
+          "enlace": "https://balcarce.gob.ar/2026/09/23/acreditacion-para-socios-fundadores-del-autodromo-juan-manuel-fangio/",
+          "fecha": "2026-09-23T13:13:26.000Z",
+          "oficial": true,
+          "aporte": "Indicó que los socios fundadores del autódromo deben realizar un trámite previo de acreditación para asistir a la competencia."
+        },
+        {
+          "medio": "Sendero Regional",
+          "enlace": "https://www.senderomultimedios.com.ar/balcarce-reinaugura-el-autodromo-fangio-con-la-presencia-de-kicillof/",
+          "fecha": "2026-09-23T12:30:43.000Z",
+          "oficial": false,
+          "aporte": "Confirmó que el acto de reinauguración se realiza el viernes a las 14 horas."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1hm23zx",
+          "titulo": "El autódromo Juan Manuel Fangio reabre sus puertas en Balcarce",
+          "fecha": "2026-09-25T08:03:43.000Z",
+          "ruta": "/nota/el-autodromo-juan-manuel-fangio-reabre-sus-puertas-en-balcarce-1hm23zx"
+        },
+        {
+          "id": "mayad0",
+          "titulo": "El autódromo Juan Manuel Fangio reabre tras una década en Balcarce",
+          "fecha": "2026-09-25T02:56:25.783Z",
+          "ruta": "/nota/el-autodromo-juan-manuel-fangio-reabre-sus-puertas-en-balcarce-mayad0"
+        },
+        {
+          "id": "30tlwf",
+          "titulo": "Reabre el Autódromo Juan Manuel Fangio en Balcarce",
+          "fecha": "2026-09-25T00:03:22.000Z",
+          "ruta": "/nota/reabre-el-autodromo-juan-manuel-fangio-en-balcarce-30tlwf"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo confirman cuatro medios independientes y Municipalidad de Balcarce.",
+        "sugeridoPorIA": "ALTA"
+      }
     },
     "t7n982": {
       "estado": "automatica",
@@ -12612,6 +13144,137 @@
       "deIA": null,
       "por": null,
       "cuando": "2026-09-25T11:41:01.080Z"
+    },
+    "1sus6ai": {
+      "estado": "automatica",
+      "titulo": "Comienza la actividad previa al TC Pick Up en Balcarce",
+      "copete": "Comienza la actividad previa a la octava fecha de las TC Pick Up en el autódromo Juan Manuel Fangio, con firma de autógrafos, exhibición de unidades y un acto en el Museo Fangio.",
+      "cuerpo": "Las actividades de la jornada incluyen una firma de autógrafos, exhibición de unidades y un acto oficial en el Museo Fangio.\n\nComo se había informado el veinticuatro de septiembre, la categoría nacional organizó una presentación previa con pilotos en una estación de servicio local durante la tarde del jueves.\n\nEsta competencia marca el regreso oficial de las categorías nacionales al trazado local, generando expectativa en la comunidad deportiva y en los fanáticos del automovilismo de la región.",
+      "guion": "Comienza la actividad previa al TC Pick Up en Balcarce",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T11:57:25.176Z",
+      "claves": [
+        "Comienza la actividad previa del TC Pick Up en Balcarce",
+        "El autódromo vuelve a recibir categorías nacionales tras quince años",
+        "La programación incluye exhibición de unidades y un acto en el Museo Fangio"
+      ],
+      "seSabe": [
+        "Comienza a desarrollarse hoy la actividad previa al TC Pick Up en Balcarce.",
+        "El autódromo Juan Manuel Fangio vuelve a recibir una categoría nacional tras quince años.",
+        "Se programaron firma de autógrafos, exhibición de unidades y un acto en el Museo Fangio."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Comienza la actividad previa a la octava fecha de las TC Pick Up en el autódromo Juan Manuel Fangio de Balcarce con firma de autógrafos, exhibición de unidades y un acto en el Museo Fangio.",
+      "etiquetas": [
+        "TC Pick Up",
+        "Autodromo Juan Manuel Fangio",
+        "Balcarce"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/firma-de-autografos-exhibicion-de-unidades-y-acto-en-el-museo-fangio-810",
+          "fecha": "2026-09-25T11:53:19.000Z",
+          "oficial": false,
+          "aporte": "Informó el inicio de la actividad previa a la octava fecha del TC Pick Up con firma de autógrafos, exhibición de unidades y acto en el Museo Fangio."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "xpr0le",
+          "titulo": "El TC Pick Up realiza una firma de autógrafos en Balcarce",
+          "fecha": "2026-09-24T14:21:16.000Z",
+          "ruta": "/nota/el-tc-pick-up-realiza-una-firma-de-autografos-en-balcarce-xpr0le"
+        },
+        {
+          "id": "mvz4ty",
+          "titulo": "Reconocieron a Kevin Gómez en el Museo Fangio",
+          "fecha": "2026-09-22T19:54:30.000Z",
+          "ruta": "/nota/reconocieron-a-kevin-gomez-en-el-museo-fangio-mvz4ty"
+        },
+        {
+          "id": "1hm23zx",
+          "titulo": "El autódromo Juan Manuel Fangio reabre sus puertas en Balcarce",
+          "fecha": "2026-09-25T08:03:43.000Z",
+          "ruta": "/nota/el-autodromo-juan-manuel-fangio-reabre-sus-puertas-en-balcarce-1hm23zx"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "p961ye": {
+      "estado": "automatica",
+      "titulo": "La Escuela Municipal de Básquet compite en un torneo en Mar del Plata en Balcarce",
+      "copete": "Jugadoras de las categorías U13 y U15 de la Escuela Municipal de Básquet participan este fin de semana de un torneo internacional en Mar del Plata para sumar minutos de competencia.",
+      "cuerpo": "Un grupo de jugadoras de la Escuela Municipal de Básquet participará durante tres días del decimoctavo Torneo Internacional de Básquet en Mar del Plata, organizado por CAP Eventos.\n\nLa actividad comenzará este viernes en el Club Unión, donde las categorías U15 y U13 se enfrentarán a Quilmes. El sábado, los partidos continuarán en el Complejo Ciromar ante Peñarol y por la tarde en el Instituto Albert Einstein frente a Comunicaciones.\n\nComo antecedente, los equipos locales habían disputado días atrás una nueva fecha de la Asociación de Básquet de Mar del Plata en el gimnasio del Club Ferroviarios, según se informó oportunamente.",
+      "guion": "La Escuela Municipal de Basquet compite en un torneo en Mar del Plata en Balcarce",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-25T11:57:25.176Z",
+      "claves": [
+        "Jugadoras de U13 y U15 participan de un torneo internacional.",
+        "El certamen se desarrolla en Mar del Plata durante tres días.",
+        "La agenda incluye partidos ante Quilmes, Peñarol y Comunicaciones.",
+        "El objetivo es sumar minutos de competencia y experiencia."
+      ],
+      "seSabe": [
+        "Las jugadoras de las categorías U13 y U15 de la Escuela Municipal de Básquet participan del torneo internacional organizado por CAP Eventos en Mar del Plata.",
+        "Los encuentros comienzan este viernes ante Quilmes en el Club Unión.",
+        "El sábado la competencia sigue frente a Peñarol en el Complejo Ciromar y ante Comunicaciones en el Instituto Albert Einstein."
+      ],
+      "textoRedes": "Jugadoras de las categorías U13 y U15 de la Escuela Municipal de Básquet participan este fin de semana de un torneo internacional en Mar del Plata para sumar minutos de competencia.",
+      "etiquetas": [
+        "Escuela Municipal de Basquet",
+        "Mar del Plata",
+        "basquet femenino"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Radio Gabal (FM 104.1)",
+          "enlace": "https://www.radiogabal.com.ar/index.php/deportes/experiencia-internacional-para-las-jugadoras-de-la-escuela-municipal-de-basquet",
+          "fecha": "2026-09-25T11:46:11.000Z",
+          "oficial": false,
+          "aporte": "Aportó el cronograma detallado de partidos para el viernes y el sábado en los distintos clubes de Mar del Plata."
+        },
+        {
+          "medio": "Puntonueve (FM 100.9)",
+          "enlace": "https://puntonueve.com.ar/la-escuela-municipal-de-basquet-participara-de-un-torneo-internacional-en-mar-del-plata/",
+          "fecha": "2026-09-24T19:34:56.000Z",
+          "oficial": false,
+          "aporte": "Aportó la confirmación inicial sobre la participación de las categorías U13 y U15 en el torneo internacional."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "krgsl6",
+          "titulo": "Jugadoras locales participan de un torneo internacional de básquet",
+          "fecha": "2026-09-24T20:34:22.895Z",
+          "ruta": "/nota/jovenes-balcarcenas-participaran-de-un-torneo-internacional-de-krgsl6"
+        },
+        {
+          "id": "47354z",
+          "titulo": "Básquet femenino de Balcarce en torneo internacional",
+          "fecha": "2026-09-24T19:34:56.000Z",
+          "ruta": "/nota/basquet-femenino-de-balcarce-en-torneo-internacional-47354z"
+        },
+        {
+          "id": "19oirfx",
+          "titulo": "La Escuela Municipal de Básquet disputó una nueva fecha",
+          "fecha": "2026-09-21T13:37:32.000Z",
+          "ruta": "/nota/la-escuela-municipal-de-basquet-disputo-una-nueva-fecha-19oirfx"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "MEDIA"
+      }
     }
   },
   "horarios": {
