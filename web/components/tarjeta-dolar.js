@@ -9,7 +9,7 @@
 // Una sola consulta por página (usar-dolar.js).
 
 import useDolar from '@/components/usar-dolar';
-import { filasDelPanel, horaDelPanel, pesos } from '@/lib/dolar';
+import { filasDelPanel, horaDelPanel, pesosEnteros } from '@/lib/dolar';
 
 export default function TarjetaDolar({ foto }) {
   const { datos, estado, ahora } = useDolar(foto);
@@ -19,13 +19,17 @@ export default function TarjetaDolar({ foto }) {
 
   return (
     <section className="tarjeta panel-dolar" aria-label="Dólar">
-      <div className="meta">Dólar</div>
+      <div className="cabecera-tarjeta">
+        {estado === 'vivo' && <span className="punto-vivo" aria-hidden="true" />}
+        <span className="etiqueta">Dólar</span>
+      </div>
       <div className="filas-panel-dolar">
         {filas.map((f) => (
           <div className="fila-panel-dolar" key={f.casa}>
             <span className="nombre">{f.nombre}</span>
-            {f.compra != null && <span className="compra">compra {pesos(f.compra)}</span>}
-            <span className="venta">{pesos(f.venta)}</span>
+            {/* Sin compra, la celda queda vacía: la grilla no se corre. */}
+            <span className="compra">{f.compra != null ? `compra ${pesosEnteros(f.compra)}` : ''}</span>
+            <span className="venta">{pesosEnteros(f.venta)}</span>
           </div>
         ))}
       </div>

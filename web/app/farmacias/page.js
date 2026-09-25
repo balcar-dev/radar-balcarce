@@ -54,7 +54,7 @@ export default function Farmacias() {
                 <span className="meta cuando" style={{ width: 130 }}>{dia}</span>
                 <div style={{ flexGrow: 1 }}>
                   <span className="meta cuando-movil">{dia}</span>
-                  <div style={{ fontSize: 16, fontWeight: 600 }}>{nombres}</div>
+                  <div className="dato">{nombres}</div>
                 </div>
               </div>
             );

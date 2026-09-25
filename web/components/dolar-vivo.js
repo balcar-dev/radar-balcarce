@@ -13,7 +13,7 @@
 
 import useDolar from '@/components/usar-dolar';
 import {
-  textoDeEstado, brecha, pesos, porcentaje, momento, datosDeCasa, FUENTES,
+  textoDeEstado, brecha, pesos, porcentaje, momento, datosDeCasa, hayCentavos, FUENTES,
 } from '@/lib/dolar';
 
 function HoraDeTarjeta({ fecha, ahora }) {
@@ -28,6 +28,8 @@ export default function DolarVivo({ foto }) {
   const estadoTexto = textoDeEstado({ estado, datos, ahora });
   const b = brecha(lista);
   const fuente = FUENTES[datos?.fuente];
+  // Si algún valor tiene centavos, todos llevan dos decimales: las cifras alinean.
+  const opciones = hayCentavos(lista) ? { centavos: 'siempre' } : undefined;
 
   return (
     <>
@@ -58,11 +60,11 @@ export default function DolarVivo({ foto }) {
               <div className="precios-dolar">
                 <div>
                   <div className="rotulo">Compra</div>
-                  <div className="precio">{pesos(c.compra)}</div>
+                  <div className="precio">{pesos(c.compra, opciones)}</div>
                 </div>
                 <div>
                   <div className="rotulo">Venta</div>
-                  <div className="precio">{pesos(c.venta)}</div>
+                  <div className="precio">{pesos(c.venta, opciones)}</div>
                 </div>
               </div>
             </div>

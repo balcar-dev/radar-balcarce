@@ -24,7 +24,7 @@ import { useClimaVivo } from '@/lib/pedir-clima';
 // De noche el fondo también baja: una tarjeta celeste a las dos de la
 // mañana se ve fuera de lugar.
 const FONDO_CIELO = {
-  sol: '#2A6E8C', nube: '#1D4F63', cubierto: '#1D4F63', lluvia: '#243D52',
+  sol: '#245F7A', nube: '#1D4F63', cubierto: '#1D4F63', lluvia: '#243D52',
   luna: '#1B2A44', 'luna-nube': '#1A2438',
 };
 
@@ -141,13 +141,13 @@ export function TarjetaClima({ clima }) {
       {/* El numero, el estado del cielo y el dibujo en una sola fila. Antes
           iban uno debajo del otro y la tarjeta se comia media pantalla de
           celular antes de la primera noticia. */}
+      <div className="cabecera-tarjeta">
+        {enVivo && <span className="punto-vivo" title="Se actualiza cada 10 minutos" />}
+        <span className="etiqueta">El clima ahora</span>
+      </div>
       <div className="ahora-clima">
         <div className="temp">{a.temp}°</div>
         <div className="que-hace">
-          <div className="titulo">
-            El clima ahora
-            {enVivo && <span className="en-vivo" title="Se actualiza cada 10 minutos" />}
-          </div>
           <div className="cielo">{a.cielo}</div>
         </div>
         <IconoCielo cielo={a.cielo} esDeDia={a.esDeDia !== false} tamano={62} />

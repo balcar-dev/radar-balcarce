@@ -58,6 +58,46 @@ Mientras tanto, o si las dos fallan, se ve la foto que guardó el build
 y la hora es la que informa la fuente. Lógica y textos en `lib/dolar.js`,
 tarjetas en `components/dolar-vivo.js`, pruebas en `../pruebas/dolar.test.mjs`.
 
+## Sistema tipográfico
+
+Las tarjetas de servicio (clima, farmacia, dólar, agenda, buzón, números útiles)
+y las páginas `/farmacias`, `/dolar`, `/agenda` y `/util` comparten UN sistema,
+definido con variables en `app/globals.css` (bloque "sistema tipográfico").
+Nada de tamaños sueltos: se usa una variable.
+
+| Rol | Variable | Valor | Se usa en |
+|---|---|---|---|
+| Etiqueta | `--t-etiqueta` + `--ls-etiqueta` | 11px, 600, mayúsculas, letra abierta, gris | Primera línea de cada tarjeta (`.etiqueta` dentro de `.cabecera-tarjeta`) |
+| Meta | `--t-meta` | 12,5px, gris | Hora, aclaraciones, "compra $1.495" |
+| Texto | `--t-texto` | 14px | Dirección, descripción, números útiles |
+| Acción | `--t-accion` | 13px, 600, rojo, con "→" | "Ver la semana →", "Ver todos los dólares →", "Toda la guía →", "Toda la agenda →" (`.accion`) |
+| Dato | `--t-dato` | 16px, 700 | Nombre de la farmacia, estado del cielo, tipo de dólar |
+| Dato grande | `--t-dato-grande` | 22px, 700, tabular | Venta del dólar, número de teléfono |
+| Cifra | `--t-cifra` | 44px, 700, tabular | Sólo la temperatura |
+| Título de tarjeta | `--t-titulo-tarjeta` | 19px, Fraunces 700 | Buzón e invitaciones ("¿Viste algo en el barrio?") |
+
+Familias: **Fraunces** sólo para títulos de nota, de sección y de tarjeta y para el
+nombre de marca; **IBM Plex Sans** para todo lo demás (etiquetas, datos, cifras,
+texto). Nunca una cifra ni un nombre de servicio en Fraunces (el "wonk" tuerce la
+J y las S y los dígitos quedan de ancho distinto). Las cifras llevan
+`font-variant-numeric: tabular-nums`. No se carga IBM Plex Mono: no hace falta.
+
+- **El nombre de la farmacia es un dato, no un titular**: mismo tamaño y peso que
+  cualquier dato y en tinta. El rojo es el acento de las acciones. "Cómo llegar"
+  lleva el pin del mapa en lugar de la flecha porque abre otra aplicación.
+- **Puntito de estado** (`.punto-vivo`, 6px, verde): siempre a la izquierda de la
+  etiqueta y sólo cuando el dato está confirmado al día (farmacia del día; clima y
+  dólar cuando el navegador ya consultó la fuente).
+- **Tarjeta del dólar de la portada**: grilla de tres columnas compartida por las
+  filas (`subgrid`): nombre | compra | venta. Cada columna toma el ancho de su
+  contenido más largo, así que las tres filas alinean aunque un monto tenga más
+  dígitos o falte la compra (la celda queda vacía). Pesos enteros
+  (`pesosEnteros`); los centavos se ven en `/dolar`, donde si algún valor los
+  tiene, todos llevan dos decimales para que las cifras alineen. El tamaño de las
+  ventas es fluido (`cqw`, container query) y el mismo en todas las filas.
+- **Cambiar un tamaño** = cambiar la variable, no la tarjeta. Pruebas:
+  `../pruebas/tipografia.test.mjs`.
+
 ## Las notas propias (`lib/notas-propias.js`)
 
 Notas que arma el sitio con datos propios, **sin IA**: texto de plantilla

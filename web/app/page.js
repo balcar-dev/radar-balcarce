@@ -85,9 +85,9 @@ export default function Portada() {
         <aside className="lateral">
           {eventos.length > 0 && (
             <div className="tarjeta" style={{ paddingBottom: 8 }}>
-              <div style={{ display: 'flex', alignItems: 'center' }}>
-                <h3 style={{ flexGrow: 1 }}>Agenda de Balcarce</h3>
-                <a href="/agenda" style={{ fontSize: 12.5, fontWeight: 600, color: 'var(--rojo)' }}>Todo →</a>
+              <div className="cabecera-tarjeta">
+                <span className="etiqueta">Agenda de Balcarce</span>
+                <a href="/agenda" className="accion">Toda la agenda →</a>
               </div>
               {eventos.map((e) => <Evento evento={e} key={e.id} />)}
             </div>
@@ -96,8 +96,8 @@ export default function Portada() {
           <TarjetaBuzon />
 
           {d.utiles?.numeros?.length > 0 && (
-            <div style={{ borderRadius: 12, border: '1px dashed #C9C4B6', padding: 16 }}>
-              <div className="meta">Números útiles</div>
+            <div className="tarjeta tarjeta-util">
+              <div className="cabecera-tarjeta"><span className="etiqueta">Números útiles</span></div>
               <div className="chips">
                 {/* Sólo los que son un número solo: varios de la lista oficial
                     traen tres o cuatro líneas separadas por barras y no sirven
@@ -109,7 +109,7 @@ export default function Portada() {
                 ))}
               </div>
               <div style={{ marginTop: 12 }}>
-                <a href="/util" style={{ fontSize: 12.5, fontWeight: 600, color: 'var(--rojo)' }}>Toda la guía →</a>
+                <a href="/util" className="accion">Toda la guía →</a>
               </div>
             </div>
           )}

@@ -109,15 +109,28 @@ export function brecha(cotizaciones = []) {
   };
 }
 
-/** "$1.540" o "$1.545,60": los centavos sólo cuando los hay. */
-export function pesos(n) {
+/** "$1.540" o "$1.545,60": los centavos sólo cuando los hay. Con
+ *  { centavos: 'siempre' } lleva siempre dos decimales, para que una columna de
+ *  cifras alinee (la usa /dolar cuando algún valor tiene centavos). */
+export function pesos(n, { centavos = 'si-hay' } = {}) {
   if (typeof n !== 'number' || !Number.isFinite(n)) return '—';
-  const conCentavos = Math.round(n * 100) % 100 !== 0;
+  const conCentavos = centavos === 'siempre' || Math.round(n * 100) % 100 !== 0;
   const texto = Math.abs(n).toLocaleString('es-AR', {
     minimumFractionDigits: conCentavos ? 2 : 0, maximumFractionDigits: 2,
   });
   return `${n < 0 ? '−' : ''}$${texto}`;
 }
+
+/** Pesos redondeados, sin decimales: "$1.550". Es el formato de la tarjeta de la
+ *  portada (todas las filas iguales); los centavos se ven en /dolar. */
+export function pesosEnteros(n) {
+  if (typeof n !== 'number' || !Number.isFinite(n)) return '—';
+  return `${n < 0 ? '−' : ''}$${Math.abs(Math.round(n)).toLocaleString('es-AR', { maximumFractionDigits: 0 })}`;
+}
+
+/** true si algún valor de la lista de cotizaciones tiene centavos. */
+export const hayCentavos = (cotizaciones = []) => cotizaciones.some((c) => [c.compra, c.venta]
+  .some((v) => typeof v === 'number' && Number.isFinite(v) && Math.round(v * 100) % 100 !== 0));
 
 /** "1,3%" */
 export const porcentaje = (n) => `${n.toLocaleString('es-AR', { minimumFractionDigits: 1, maximumFractionDigits: 1 })}%`;

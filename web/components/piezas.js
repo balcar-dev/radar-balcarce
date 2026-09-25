@@ -38,9 +38,9 @@ export function TarjetaFarmacia({ farmacia, verLaSemana = true }) {
 
   return (
     <div className="tarjeta">
-      <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-        <span className="punto-vivo" />
-        <span className="meta">
+      <div className="cabecera-tarjeta">
+        <span className="punto-vivo" aria-hidden="true" />
+        <span className="etiqueta">
           {lista.length > 1 ? 'Farmacias de turno' : 'Farmacia de turno'}
         </span>
       </div>
@@ -157,7 +157,7 @@ export function Evento({ evento }) {
         <div className="mes">{f?.mes ?? ''}</div>
         <div className="dia">{f?.dia ?? '·'}</div>
       </div>
-      <div style={{ flexGrow: 1 }}>
+      <div className="cuerpo-evento">
         <div className="que">{evento.ruta ? <a href={evento.ruta}>{nombre}</a> : nombre}</div>
         <div className="donde">
           {f?.hora && !evento.todoElDia ? `${f.hora} · ` : ''}{nombreDeEvento(evento.lugar || '') || 'Balcarce'}
@@ -205,7 +205,7 @@ export function Cierre({ enlaces = [], children, fuente = null }) {
 export function Invitacion({ titulo, texto, boton, asunto, mensaje }) {
   return (
     <div className="tarjeta-buzon">
-      <h3 style={{ fontSize: 19, fontWeight: 700 }}>{titulo}</h3>
+      <h3 className="titulo-tarjeta">{titulo}</h3>
       <p>{texto}</p>
       <a href={whatsapp(mensaje ?? asunto)} className="boton rojo ancho" target="_blank" rel="noopener noreferrer">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -225,7 +225,7 @@ export function Invitacion({ titulo, texto, boton, asunto, mensaje }) {
 export function TarjetaBuzon() {
   return (
     <div className="tarjeta-buzon" id="buzon">
-      <h3 style={{ fontSize: 19, fontWeight: 700 }}>¿Viste algo en el barrio?</h3>
+      <h3 className="titulo-tarjeta">¿Viste algo en el barrio?</h3>
       <p>
         Mandanos la foto o el dato por WhatsApp. Lo chequeamos antes de publicarlo
         y, si lo pedís, no ponemos tu nombre.

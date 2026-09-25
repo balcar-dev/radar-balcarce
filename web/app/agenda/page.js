@@ -89,7 +89,7 @@ export default function PaginaAgenda() {
                     <span className="meta cuando" style={{ width: 120 }}>{cuando}</span>
                     <div style={{ flexGrow: 1 }}>
                       <span className="meta cuando-movil">{cuando}</span>
-                      <h3 style={{ fontFamily: 'inherit', fontSize: 15.5 }}>
+                      <h3 className="dato">
                         {a.confirmado ? <a href={a.confirmado.ruta}>{a.nombre}</a> : a.nombre}
                       </h3>
                       {a.nota && <div className="mini" style={{ marginTop: 3 }}>{a.nota}</div>}
