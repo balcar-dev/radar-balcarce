@@ -171,25 +171,17 @@ export function Evento({ evento }) {
 //
 // Todas las páginas internas terminan igual, en este orden:
 //
-//   1. una línea, y los botones: "← Portada" primero, después dos atajos
-//      a las páginas hermanas que tengan sentido desde donde estás;
-//   2. una tarjeta que invita a escribirnos, con el pedido que corresponde
+//   1. una tarjeta que invita a escribirnos, con el pedido que corresponde
 //      a esa página;
-//   3. si el dato viene de algún lado, una línea diciendo de dónde.
+//   2. si el dato viene de algún lado, una línea diciendo de dónde.
 //
 // Antes cada página terminaba a su manera — una con "Volver a la portada",
 // otra con "Portada", una con tarjeta y otra sin — y eso hace que el sitio
 // se sienta armado por partes.
 
-export function Cierre({ enlaces = [], children, fuente = null }) {
+export function Cierre({ children, fuente = null }) {
   return (
     <section className="cierre-pagina">
-      <div className="botonera">
-        <a href="/" className="boton borde">← Portada</a>
-        {enlaces.map((e) => (
-          <a key={e.href} href={e.href} className="boton borde">{e.texto}</a>
-        ))}
-      </div>
       {children}
       {fuente && <p className="nota-fuente">{fuente}</p>}
     </section>

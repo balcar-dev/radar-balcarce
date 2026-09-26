@@ -1,5 +1,5 @@
 import {
-  obtenerDatos, armarTapa, temasVivos, proximosEventos, fotoDelDolar,
+  obtenerDatos, obtenerArchivo, armarTapa, temasVivos, proximosEventos, fotoDelDolar,
 } from '@/lib/datos';
 import {
   TarjetaFarmacia, TarjetaBuzon,
@@ -28,7 +28,7 @@ export default function Portada() {
   // La grande, cuatro de secciones distintas y tres por sección, siempre lo
   // más nuevo primero (lib/datos.js, armarTapa). Los bloques salen en el
   // orden editorial de SECCIONES: la portada se ve igual todos los días.
-  const { principal, secundarias, bloques } = armarTapa(d.notas);
+  const { principal, secundarias, bloques } = armarTapa(d.notas, undefined, { archivo: obtenerArchivo() });
 
   const temas = MOSTRAR_TEMAS ? temasVivos().slice(0, 8) : [];
 

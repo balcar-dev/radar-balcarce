@@ -1,5 +1,5 @@
 import {
-  obtenerDatos, obtenerNota, todasLasNotas, datosSeccion, nombreCorto, temasVivos,
+  obtenerDatos, obtenerArchivo, obtenerNota, todasLasNotas, datosSeccion, temasVivos,
 } from '@/lib/datos';
 import {
   Etiqueta, FilaNota, Cierre, Invitacion, TemasDeLaNota, Hace,
@@ -11,7 +11,8 @@ import { FichaDeNota, Migas } from '@/components/ficha';
 import { notFound } from 'next/navigation';
 import { parteDeNota } from '@/lib/ruta';
 import { MOSTRAR_TEMAS } from '@/lib/sitio';
-import { recortarEn, sinTitularRepetido } from '@/lib/texto';
+import { recortarEn } from '@/lib/texto';
+import { seguirLeyendo } from '@/lib/seguir-leyendo';
 import { parrafosConEnlaces } from '@/lib/enlaces-en-texto';
 
 export function generateStaticParams() {
@@ -63,13 +64,11 @@ export default function PaginaNota({ params }) {
 
   const s = datosSeccion(n.seccion);
   const temas = temasVivos();
-  // Sin repetir titulares: dos medios que cuentan lo mismo con las mismas
-  // palabras aparecían dos veces seguidas, o repetían la nota que se está
-  // leyendo con otro identificador.
-  const relacionadas = sinTitularRepetido(
-    obtenerDatos().notas.filter((o) => o.seccion === n.seccion && o.id !== n.id),
-    [n],
-  ).slice(0, 4);
+  // "Seguí leyendo": siempre cuatro notas distintas entre sí y de ésta, con su
+  // hora, dos de la misma sección y dos de otras (lib/seguir-leyendo.js). Si
+  // las últimas 72 horas no alcanzan, se completa con el archivo.
+  const recientes = obtenerDatos().notas;
+  const relacionadas = seguirLeyendo(n, recientes, obtenerArchivo());
 
   return (
     <div className="envoltura">
@@ -141,12 +140,7 @@ export default function PaginaNota({ params }) {
             {relacionadas.map((o) => <FilaNota nota={o} key={o.id} />)}
           </section>
         )}
-        <Cierre
-          enlaces={[
-            { href: `/seccion/${s.ranura}`, texto: `Más de ${nombreCorto(n.seccion)}` },
-            { href: '/agenda', texto: 'Agenda' },
-          ]}
-        >
+        <Cierre>
           <Invitacion
             titulo="¿Tenés más información sobre esto?"
             texto="Si sabés algo que falta en esta nota, o si algo está mal, escribinos. Corregimos rápido y a la vista."

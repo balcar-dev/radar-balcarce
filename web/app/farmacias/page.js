@@ -63,10 +63,6 @@ export default function Farmacias() {
       )}
 
       <Cierre
-        enlaces={[
-          { href: '/util', texto: 'Teléfonos' },
-          { href: '/agenda', texto: 'Agenda' },
-        ]}
         fuente={[
           'El turno lo publica el Colegio de Farmacéuticos de Balcarce.',
           ...(f?.avisos ?? []),

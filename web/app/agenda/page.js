@@ -101,10 +101,6 @@ export default function PaginaAgenda() {
           )}
 
       <Cierre
-        enlaces={[
-          { href: '/farmacias', texto: 'Farmacias' },
-          { href: '/util', texto: 'Teléfonos' },
-        ]}
         fuente="Los eventos salen de la agenda oficial del Municipio de Balcarce y de lo que nos acercan las instituciones."
       >
         <Invitacion

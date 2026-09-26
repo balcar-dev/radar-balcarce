@@ -57,10 +57,6 @@ export default function BalcarceUtil() {
       ))}
 
       <Cierre
-        enlaces={[
-          { href: '/farmacias', texto: 'Farmacias' },
-          { href: '/agenda', texto: 'Agenda' },
-        ]}
         fuente="Los teléfonos salen de la lista oficial de la Municipalidad de Balcarce."
       >
         <Invitacion

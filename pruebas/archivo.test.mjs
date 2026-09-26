@@ -252,5 +252,6 @@ test('"Seguí leyendo" no repite una nota con el mismo titular', () => {
   ];
   assert.deepEqual(sinTitularRepetido(lista, [{ id: 'x', titulo: 'La que se está leyendo' }]).map((n) => n.id), ['a', 'c']);
   assert.equal(titularNormalizado('¡Hola, Fangio!'), 'hola fangio');
-  assert.match(leer('web/app/nota/[id]/page.js'), /sinTitularRepetido\(/);
+  // Desde el 25/09 la página usa seguirLeyendo (pruebas/seguir-leyendo.test.mjs), que compara con mismaHistoria.
+  assert.match(leer('web/app/nota/[id]/page.js'), /seguirLeyendo\(/);
 });

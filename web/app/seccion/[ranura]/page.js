@@ -133,12 +133,7 @@ export default function PaginaSeccion({ params }) {
         </nav>
       )}
 
-      <Cierre
-        enlaces={[
-          { href: '/agenda', texto: 'Agenda' },
-          { href: '/farmacias', texto: 'Farmacias' },
-        ]}
-      >
+      <Cierre>
         <Invitacion
           titulo="¿Viste algo en el barrio?"
           texto="Mandanos la foto o el dato por WhatsApp. Lo chequeamos antes de publicarlo y, si lo pedís, no ponemos tu nombre."

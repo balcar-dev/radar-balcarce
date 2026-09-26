@@ -43,10 +43,6 @@ export default function Dolar() {
       </details>
 
       <Cierre
-        enlaces={[
-          { href: '/farmacias', texto: 'Farmacias' },
-          { href: '/util', texto: 'Teléfonos' },
-        ]}
         fuente="Las cotizaciones son de DolarApi.com (y de Bluelytics si DolarApi no contesta). Son precios de referencia: en cada banco o casa de cambio pueden ser otros."
       />
     </div>

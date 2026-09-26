@@ -104,3 +104,27 @@ export function sinNotasRepetidas(notas = []) {
   const ids = new Set(quedan);
   return notas.filter((n) => ids.has(n));
 }
+/**
+ * ¿Dos notas cuentan la misma historia, aunque el titular sea distinto?
+ *
+ * Más flojo que `titularesParecidos`, que sólo junta las que dicen lo mismo con
+ * las mismas palabras: "Diego Santilli visita Balcarce por la reinauguración
+ * del autódromo" y "Diego Santilli llega a Balcarce por el automovilismo" son
+ * la misma visita y salían las dos en "Seguí leyendo" (25/09). Es la misma
+ * historia si son titulares parecidos, si comparten un tema de los que se
+ * siguen, o si comparten tres palabras que cuentan (o dos, cuando son la
+ * mitad del titular más corto). "Balcarce" no cuenta: está en todo.
+ */
+export function mismaHistoria(a, b) {
+  if (!a || !b) return false;
+  if (titularesParecidos(a.titulo, b.titulo)) return true;
+  if ((a.temas ?? []).some((t) => (b.temas ?? []).includes(t))) return true;
+  const FA = fichasDeTitular(a.titulo);
+  const FB = fichasDeTitular(b.titulo);
+  FA.delete('balcarce');
+  FB.delete('balcarce');
+  let comunes = 0;
+  for (const w of FA) if (FB.has(w)) comunes += 1;
+  if (comunes >= 3) return true;
+  return comunes >= 2 && comunes / Math.max(1, Math.min(FA.size, FB.size)) >= 0.5;
+}

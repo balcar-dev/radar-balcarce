@@ -7,7 +7,8 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { rutaDeNota, idDeRuta } from './ruta.js';
 import { vigenteEnPortada } from './archivo.js';
-import { sinNotasRepetidas } from './texto.js';
+import { sinNotasRepetidas, titularesParecidos } from './texto.js';
+import { tieneCuerpo } from './cuerpo.js';
 import { interpretarDolarApi } from './dolar.js';
 import {
   rutaDeEvento, claveDeEvento, claveDeRuta, proximos, confirmacionDeAnual,
@@ -229,6 +230,11 @@ export function ordenarPortada(notas = []) {
   return { principal, resto: porHora.filter((n) => n.id !== principal.id) };
 }
 
+/** Hasta cuántos días atrás se va al archivo a completar una sección. */
+export const DIAS_PARA_COMPLETAR = 14;
+/** Cuántas notas muestra cada sección de la portada. */
+export const NOTAS_POR_SECCION = 3;
+
 /**
  * La tapa entera: la nota grande, cuatro de abajo y los bloques por sección.
  *
@@ -237,13 +243,19 @@ export function ordenarPortada(notas = []) {
  *   · las cinco de la tapa, de cinco secciones distintas;
  *   · todas con su hora (una nota cuya fuente no dijo la hora no va a la
  *     tapa: queda en su sección);
- *   · cada sección, con sus tres notas más nuevas, sin repetir las de arriba;
+ *   · cada sección, con SIEMPRE tres notas (las más nuevas, sin repetir las
+ *     de arriba). La tapa sólo usa lo de las últimas 72 horas; si una sección
+ *     tiene menos de tres ahí, se completa con lo más nuevo del archivo
+ *     (hasta 14 días atrás, sólo con cuerpo, sin repetidas), y cada una
+ *     muestra su hora real ("hace 5 días"): nunca se inventa frescura. Si ni
+ *     así hay tres, van las que haya, y una sección sin ninguna no se dibuja;
  *   · siempre lo nuevo primero.
  *
  * @param {object[]} notas
  * @param {string[]} [orden]  el orden editorial de las secciones
+ * @param {{archivo?: object[], ahora?: number}} [opciones]
  */
-export function armarTapa(notasSueltas = [], orden = SECCIONES.map((s) => s.nombre)) {
+export function armarTapa(notasSueltas = [], orden = SECCIONES.map((s) => s.nombre), { archivo = [], ahora = Date.now() } = {}) {
   // Por si acaso: generar-datos ya saca las repetidas de la portada.
   const notas = sinNotasRepetidas(notasSueltas);
   const conHora = notas.filter((n) => !n.sinFecha);
@@ -268,9 +280,33 @@ export function armarTapa(notasSueltas = [], orden = SECCIONES.map((s) => s.nomb
     if (enTapa.has(n.id)) continue;
     (porSeccion[n.seccion] ??= []).push(n);
   }
-  const conocidas = orden.filter((s) => porSeccion[s]?.length);
-  const otras = Object.keys(porSeccion).filter((s) => !orden.includes(s));
-  const bloques = [...conocidas, ...otras].map((s) => [s, porSeccion[s].slice(0, 3)]);
+
+  // Del archivo: lo que no está en la portada, con hora, con cuerpo de verdad,
+  // no propio (una nota del dólar de hace cinco días no completa nada), de los
+  // últimos 14 días. Ya viene sin lo que el semáforo retiró (lib/archivo.js).
+  const corte = Number(ahora) - DIAS_PARA_COMPLETAR * 24 * 3600e3;
+  const idsPortada = new Set(notas.map((n) => n.id));
+  const viejas = archivo
+    .filter((n) => n?.id && !idsPortada.has(n.id) && !n.sinFecha && !n.propia
+      && tieneCuerpo(n) && new Date(n.fecha).getTime() >= corte)
+    .sort((a, b) => new Date(b.fecha) - new Date(a.fecha));
+
+  const secciones = [...new Set([...orden, ...Object.keys(porSeccion)])];
+  const bloques = [];
+  for (const s of secciones) {
+    const suyas = (porSeccion[s] ?? []).slice(0, NOTAS_POR_SECCION);
+    if (suyas.length < NOTAS_POR_SECCION) {
+      // Sin repetir historia con nada de lo que ya está en la portada ni con lo
+      // que se va sumando.
+      for (const v of viejas) {
+        if (suyas.length >= NOTAS_POR_SECCION) break;
+        if (v.seccion !== s) continue;
+        if ([...notas, ...suyas].some((o) => titularesParecidos(o.titulo, v.titulo))) continue;
+        suyas.push(v);
+      }
+    }
+    if (suyas.length) bloques.push([s, suyas.sort((a, b) => new Date(b.fecha) - new Date(a.fecha))]);
+  }
 
   return { principal, secundarias, bloques };
 }
@@ -297,16 +333,18 @@ export { haceCuanto } from './tiempo.js';
 import { haceCuanto } from './tiempo.js';
 
 /**
- * Qué decir en el lugar de la hora.
+ * Qué decir en el lugar de la hora: SIEMPRE lo mismo, con una sola escala
+ * ("recién", "hace N min", "hace N h", "ayer", "hace N días").
  *
- * Si la fuente publicó la hora, esa. Si no, cuándo la vimos nosotros, que
- * es lo único que sabemos de verdad. Decía "sin hora", que parecía un
- * error nuestro y no le servía a nadie para saber si la nota es de hoy.
+ * Sale de `fecha`. Si la fuente publicó la hora, es la de la fuente; si no
+ * (`sinFecha`), `fecha` es la primera vez que la nota apareció en Radar
+ * Balcarce, y "hace X" es desde que está en el sitio: honesto para el lector.
+ * Hasta el 25/09 esas notas salían sin nada y la lista quedaba a medias (una
+ * con "hace 15 h", otra con "ayer" y otra en blanco). Sólo queda vacío si la
+ * nota no trae ninguna fecha válida.
  */
 export function cuando(nota) {
-  // Sin hora de la fuente no se dice nada: "la vimos hace 2 días" confundía y
-  // no le servía a nadie (24/09). La nota igual se ordena por cuándo apareció.
-  if (nota.sinFecha) return '';
+  if (!nota?.fecha || !Number.isFinite(new Date(nota.fecha).getTime())) return '';
   return haceCuanto(nota.fecha);
 }
 

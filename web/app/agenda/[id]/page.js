@@ -167,12 +167,7 @@ export default function PaginaEvento({ params }) {
           </section>
         )}
 
-        <Cierre
-          enlaces={[
-            { href: '/agenda', texto: 'Agenda' },
-            { href: '/farmacias', texto: 'Farmacias' },
-          ]}
-        >
+        <Cierre>
           <Invitacion
             titulo="¿Algo cambió en este evento?"
             texto="Si sos de la organización o sabés que cambió la fecha, el lugar o la entrada, escribinos y lo corregimos."

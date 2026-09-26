@@ -32,9 +32,9 @@ test('la fuente sí queda en la página de cada nota (la atribución va ahí)', 
 
 // -------------------------------------------------- "la vimos hace…"
 
-test('una nota sin hora de la fuente no muestra nada en el lugar de la hora', () => {
-  assert.equal(cuando({ sinFecha: true, visto: new Date().toISOString() }), '');
-  assert.equal(cuando({ sinFecha: true }), '');
+test('una nota sin hora de la fuente muestra desde cuándo está en el sitio, nunca queda en blanco', () => {
+  assert.match(cuando({ sinFecha: true, fecha: new Date(Date.now() - 26 * 3600e3).toISOString() }), /ayer/);
+  assert.equal(cuando({ sinFecha: true }), '', 'sin ninguna fecha válida no se inventa');
   assert.ok(!/la vimos|sin hora/i.test(leer('web/lib/datos.js').replace(/\/\/.*$/gm, '').replace(/\/\*[\s\S]*?\*\//g, '')));
 });
 
@@ -119,7 +119,7 @@ test('en escritorio la columna de la hora se reserva siempre, con hora o sin ell
   const css = leer('web/app/globals.css');
   assert.match(css, /\.fila-nota \.col-hora \{ width: 96px; flex-shrink: 0; display: none; \}/);
   assert.match(css, /@media \(min-width: 620px\) \{ \.fila-nota \.col-hora \{ display: block; \} \}/);
-  // Sin hora no se inventa ninguna: Hace no dibuja nada.
+  // Con fecha válida siempre hay tiempo; la columna sólo queda vacía si la nota no trae fecha.
   assert.equal(cuando({ sinFecha: true }), '');
 });
 

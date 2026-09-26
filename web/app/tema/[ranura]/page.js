@@ -67,12 +67,7 @@ export default function PaginaTema({ params }) {
         </div>
       )}
 
-      <Cierre
-        enlaces={[
-          { href: '/', texto: 'Portada' },
-          { href: '/agenda', texto: 'Agenda' },
-        ]}
-      >
+      <Cierre>
         <Invitacion
           titulo={`¿Sabés algo de ${nombre.toLowerCase()}?`}
           texto="Si tenés un dato, una foto o algo que nos falta contar de este tema, escribinos. Lo chequeamos antes de publicarlo."
