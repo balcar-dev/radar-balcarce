@@ -1,5 +1,5 @@
 {
-  "exportado": "2026-09-26T08:53:22.003Z",
+  "exportado": "2026-09-26T09:03:02.665Z",
   "decisiones": {
     "1951120": {
       "estado": "automatica",
@@ -24687,6 +24687,113 @@
           "titulo": "Kevin Gómez se consagró campeón argentino de boxeo",
           "fecha": "2026-09-20T04:57:04.000Z",
           "ruta": "/nota/kevin-gomez-se-consagro-campeon-argentino-de-boxeo-1dmj600"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "1httkp8": {
+      "estado": "automatica",
+      "titulo": "Pronóstico agropecuario con buenas condiciones climáticas",
+      "copete": "El clima en distintas regiones del país presenta condiciones favorables para las labores agrícolas. Con catorce grados de mínima en Tucumán y cielo despejado en Córdoba.",
+      "cuerpo": "Las condiciones meteorológicas en varias provincias muestran un panorama favorable para las labores agropecuarias. Según los datos difundidos, Córdoba registra un cielo despejado con temperaturas agradables y ausencia de precipitaciones, lo que favorece el desarrollo de los cultivos y las tareas rurales en la zona núcleo.\n\nPor su parte, Tucumán cuenta con un pronóstico que indica una temperatura mínima de catorce grados y una máxima que alcanza los treinta grados. En tanto, Mendoza presenta una jornada soleada y cálida con una mínima de diecisiete grados y una máxima de veinticinco grados, acompañada por vientos leves.\n\nEstas condiciones estables permiten a los productores planificar las actividades al aire libre sin inconvenientes vinculados a tormentas o humedad excesiva en las regiones mencionadas.",
+      "guion": "Pronóstico agropecuario con buenas condiciones climáticas",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-26T09:03:02.611Z",
+      "claves": [
+        "Cielo despejado y temperaturas agradables en Córdoba.",
+        "Tucumán registra una mínima de catorce grados y máxima de treinta.",
+        "Mendoza presenta una jornada soleada y cálida."
+      ],
+      "seSabe": [
+        "Córdoba presenta cielo despejado y condiciones óptimas para el agro.",
+        "Tucumán registra una temperatura mínima de catorce grados y máxima de treinta.",
+        "Mendoza cuenta con un día soleado y cálido con temperatura máxima de veinticinco grados."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Las principales regiones productivas del país registran buenas condiciones climáticas para el trabajo en el campo, con cielo despejado en Córdoba y temperaturas cálidas en Mendoza y Tucumán.",
+      "etiquetas": [
+        "Clima",
+        "Zona núcleo"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infocampo",
+          "enlace": "https://www.infocampo.com.ar/clima-en-cordoba-hoy-26-septiembre-2026/",
+          "fecha": "2026-09-26T09:00:11.000Z",
+          "oficial": false,
+          "aporte": "Informó sobre el pronóstico del tiempo y las condiciones agropecuarias en Córdoba."
+        },
+        {
+          "medio": "Infocampo",
+          "enlace": "https://www.infocampo.com.ar/clima-en-tucuman-hoy-26-septiembre-2026/",
+          "fecha": "2026-09-26T09:00:11.000Z",
+          "oficial": false,
+          "aporte": "Aportó los datos de temperatura mínima y máxima para la provincia de Tucumán."
+        },
+        {
+          "medio": "Infocampo",
+          "enlace": "https://www.infocampo.com.ar/clima-en-mendoza-hoy-26-septiembre-2026/",
+          "fecha": "2026-09-26T09:00:11.000Z",
+          "oficial": false,
+          "aporte": "Detalló las condiciones meteorológicas y de viento para la provincia de Mendoza."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "1goa5of": {
+      "estado": "automatica",
+      "titulo": "Comienza la Marcha por la Dignidad en Madrid",
+      "copete": "Miles de personas marchan este sábado en Madrid convocadas por entidades civiles y con participación de dirigentes de distintos partidos para pedir elecciones anticipadas.",
+      "cuerpo": "Miles de personas participan este sábado en la segunda edición de la Marcha por la Dignidad en el centro de Madrid para exigir la convocatoria inmediata de elecciones generales y denunciar la gestión de la crisis de Ceuta. La movilización, impulsada por Sociedad Civil Española y más de 150 asociaciones, comenzó a las 10 en la plaza de Cibeles y finalizará en el Arco de la Victoria, según informaron las fuentes.\n\nA la protesta se sumaron referentes políticos. Por parte del Partido Popular asisten el secretario general, Miguel Tellado, y la portavoz en el Senado, Alicia García, mientras que por Vox concurre su presidente, Santiago Abascal. También participan el exdiputado Marcos de Quinto y el cofundador de Vox Alejo Vidal Cuadras.\n\nPreviamente, Abascal había respaldado la movilización y señalado que busca manifestar apoyo a los vecinos de Ceuta frente a la gestión del gobierno nacional.",
+      "guion": "Comienza la Marcha por la Dignidad en Madrid",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-26T09:03:02.611Z",
+      "claves": [
+        "Miles de personas marchan en el centro de Madrid",
+        "Participan referentes del Partido Popular y de Vox",
+        "Exigen elecciones generales y reclaman por Ceuta"
+      ],
+      "seSabe": [
+        "La movilización comenzó a las 10 en la plaza de Cibeles y prevé finalizar a las 14 en el Arco de la Victoria.",
+        "Participan el secretario general del Partido Popular, Miguel Tellado, y la portavoz en el Senado, Alicia García.",
+        "Asiste el presidente de Vox, Santiago Abascal, junto a otros dirigentes."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Miles de personas participan este sábado en Madrid de la segunda Marcha por la Dignidad para pedir elecciones anticipadas y reclamar garantías institucionales con la presencia de dirigentes opositores.",
+      "etiquetas": [
+        "España",
+        "Madrid",
+        "protesta",
+        "elecciones"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/espana/2026/09/26/arranca-la-marcha-por-la-dignidad-en-madrid-con-dirigentes-de-pp-y-vox-que-pide-elecciones-inmediatas-juzgar-a-sanchez-por-traicion-y-medidas-para-ceuta/",
+          "fecha": "2026-09-26T08:47:43.000Z",
+          "oficial": false,
+          "aporte": "Aportó detalles sobre el recorrido, el horario y la participación de dirigentes del Partido Popular y de Vox."
+        },
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/espana/agencias/2026/09/26/arranca-la-marcha-por-la-dignidad-en-apoyo-a-ceuta-apoyada-por-pp-y-vox/",
+          "fecha": "2026-09-26T08:46:49.000Z",
+          "oficial": false,
+          "aporte": "Aportó información sobre la convocatoria de Sociedad Civil Española y los motivos vinculados a Ceuta y al gobierno nacional."
         }
       ],
       "verificacion": {
