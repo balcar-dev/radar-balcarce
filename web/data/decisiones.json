@@ -1,5 +1,5 @@
 {
-  "exportado": "2026-09-26T06:22:45.710Z",
+  "exportado": "2026-09-26T07:03:52.090Z",
   "decisiones": {
     "1951120": {
       "estado": "automatica",
@@ -21152,6 +21152,557 @@
         "nivel": "ALTA",
         "porque": "Lo confirman 7 medios independientes y Municipalidad de Balcarce.",
         "sugeridoPorIA": "ALTA"
+      }
+    },
+    "7qxthx": {
+      "estado": "automatica",
+      "titulo": "Kicillof encabeza la reinauguración del autódromo en Balcarce",
+      "copete": "El gobernador bonaerense y el intendente Esteban Reino participaron de la reapertura del autódromo Juan Manuel Fangio. El circuito vuelve a recibir competencias nacionales tras quince años.",
+      "cuerpo": "Conti». Durante la ceremonia, de la que participó el presidente de la ACTC, Hugo Mazzacane, el mandatario provincial destacó que el circuito es un símbolo para el automovilismo nacional y resaltó el trabajo conjunto entre la Provincia y el municipio para finalizar las obras de mejora en la pista y la infraestructura.\n\nLa reapertura del trazado serrano marca el retorno de las competencias nacionales al distrito luego de quince años de inactividad oficial.\n\nPara los vecinos de Balcarce, la puesta en valor del escenario deportivo representa un motivo de orgullo y un impulso para la actividad local, según remarcó el gobernador durante su visita institucional al distrito.",
+      "guion": "Kicillof encabeza la reinauguración del autódromo en Balcarce",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-26T07:03:52.036Z",
+      "seSabe": [
+        "El gobernador Axel Kicillof y el intendente Esteban Reino participaron de la entrega de escrituras y la reinauguración del autódromo, según la información oficial.",
+        "El acto de entrega de escrituras se realizó en el Teatro Municipal Luis A. Conti, de acuerdo con la fuente oficial.",
+        "Del evento participó el presidente de la ACTC, Hugo Mazzacane, según indicaron los reportes.",
+        "Las obras incluyeron mejoras en la pista, curvas, seguridad e infraestructura, según detalló el mandatario provincial.",
+        "El autódromo vuelve a recibir competencias nacionales tras quince años, según los antecedentes y las fuentes."
+      ],
+      "noConfirmado": [
+        "No se detalló la cantidad exacta de familias beneficiadas en la entrega de escrituras de propiedad."
+      ],
+      "textoRedes": "El gobernador Axel Kicillof y el intendente Esteban Reino encabezaron la reinauguración del autódromo Juan Manuel Fangio en Balcarce. Tras quince años sin actividad oficial, el circuito vuelve a recibir competencias nacionales de automovilismo este fin de semana.",
+      "etiquetas": [
+        "Automovilismo",
+        "Autodromo Juan Manuel Fangio",
+        "Axel Kicillof",
+        "Esteban Reino",
+        "Balcarce"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Sendero Regional",
+          "enlace": "https://www.senderomultimedios.com.ar/kicillof-el-fangio-es-un-simbolo-del-automovilismo-y-de-balcarce/",
+          "fecha": "2026-09-26T02:38:34.000Z",
+          "oficial": false,
+          "aporte": "Aportó los dichos de Axel Kicillof sobre la importancia del autódromo, los detalles de las obras y el trabajo conjunto entre Provincia y municipio."
+        },
+        {
+          "medio": "Municipalidad de Balcarce",
+          "enlace": "https://balcarce.gob.ar/2026/09/25/un-dia-historico-para-balcarce-kicillof-y-reino-encabezaron-la-entrega-de-escrituras-y-la-reinauguracion-del-autodromo-fangio/",
+          "fecha": "2026-09-25T21:30:55.000Z",
+          "oficial": true,
+          "aporte": "Aportó la información institucional sobre la presencia del gobernador y el intendente en la entrega de escrituras y la reinauguración."
+        },
+        {
+          "medio": "Puntonueve (FM 100.9)",
+          "enlace": "https://puntonueve.com.ar/kicillof-entrego-escrituras-a-familias-de-balcarce-y-luego-participo-de-la-reapertura-del-fangio/",
+          "fecha": "2026-09-25T19:54:51.000Z",
+          "oficial": false,
+          "aporte": "Aportó el dato de que la entrega de escrituras se realizó en las instalaciones del Teatro Municipal Luis A. Conti."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1rzhnh1",
+          "titulo": "Kicillof reinaugura el autódromo Juan Manuel Fangio en Balcarce",
+          "fecha": "2026-09-25T22:52:06.000Z",
+          "ruta": "/nota/kicillof-reinaugura-el-autodromo-juan-manuel-fangio-en-balcarce-1rzhnh1"
+        },
+        {
+          "id": "1e6tvp9",
+          "titulo": "Kicillof encabeza la reapertura del autódromo Juan Manuel Fangio en Balcarce",
+          "fecha": "2026-09-25T10:15:00.000Z",
+          "ruta": "/nota/el-gobernador-bonaerense-encabeza-la-reapertura-del-autodromo-en-1e6tvp9"
+        },
+        {
+          "id": "gfro59",
+          "titulo": "El autódromo Juan Manuel Fangio vuelve a recibir automovilismo nacional en Balcarce",
+          "fecha": "2026-09-24T19:48:00.000Z",
+          "ruta": "/nota/el-autodromo-juan-manuel-fangio-vuelve-a-recibir-automovilismo-gfro59"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo confirman dos medios independientes y Municipalidad de Balcarce.",
+        "sugeridoPorIA": "ALTA"
+      }
+    },
+    "1iq1m6a": {
+      "estado": "automatica",
+      "titulo": "Advierten sobre una falsa búsqueda laboral de la empresa McCain en Balcarce",
+      "copete": "Detectan una publicación fraudulenta en redes sociales que ofrece puestos de trabajo a nombre de la firma McCain con datos incorrectos.",
+      "cuerpo": "Una falsa convocatoria laboral de la empresa McCain comenzó a circular en las redes sociales y generó preocupación entre quienes buscan empleo. La publicación fraudulenta utiliza datos apócrifos y herramientas de inteligencia artificial para ofrecer puestos de trabajo, según informaron los medios y la propia compañía.\n\nDesde la firma se des Se despegaron públicamente del aviso difundido en Facebook y remarcaron diversas irregularidades. Entre los principales indicios detectados figuran la utilización de una dirección incorrecta para la planta de Balcarce, ubicada en el kilómetro 64,5 del parque industrial, y el empleo de una cuenta de correo electrónico de Gmail para la recepción de antecedentes, un canal que la compañía no utiliza para sus comunicaciones de recursos humanos.\n\nAnte esta situación, se recomienda a la comunidad no enviar datos personales ni información sensible a los contactos indicados en el aviso y canalizar las postulaciones exclusivamente a través de los canales oficiales. Asimismo, la empresa aclaró que no realiza ofrecimientos sin un proceso previo de selección ni solicita dinero a los postulantes.",
+      "guion": "Advierten sobre una falsa búsqueda laboral de la empresa McCain en Balcarce",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-26T07:03:52.036Z",
+      "claves": [
+        "Detectan una publicación fraudulenta de empleo a nombre de McCain en redes sociales.",
+        "La firma aclaró que el aviso es falso y utiliza datos erróneos de la planta local.",
+        "Recomiendan no enviar datos personales y postularse solo por canales oficiales."
+      ],
+      "seSabe": [
+        "Circula en Facebook una falsa búsqueda laboral que utiliza el nombre de la empresa McCain.",
+        "La publicación utiliza una dirección incorrecta de la planta de Balcarce y un correo de Gmail.",
+        "La compañía advirtió que no utiliza cuentas de Gmail para recursos humanos ni pide dinero a los postulantes."
+      ],
+      "noConfirmado": [
+        "No se especificó la cantidad de personas que enviaron sus datos a la publicación fraudulenta."
+      ],
+      "textoRedes": "Advierten sobre una falsa búsqueda laboral de la empresa McCain que circula en redes sociales con datos incorrectos. Recomiendan no enviar información personal y utilizar solo los canales oficiales.",
+      "etiquetas": [
+        "McCain",
+        "búsqueda laboral",
+        "redes sociales",
+        "Balcarce"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "0223 (Mar del Plata)",
+          "enlace": "https://www.0223.com.ar/nota/2026-9-25-19-53-0-advierten-por-la-falsa-busqueda-laboral-de-una-reconocida-empresa-que-circula-en-facebook-estamos-contratando",
+          "fecha": "2026-09-25T22:53:00.000Z",
+          "oficial": false,
+          "aporte": "Detalló que la falsa convocatoria circuló en Facebook, alertó a la empresa y señaló el uso de una dirección errónea y un correo de Gmail."
+        },
+        {
+          "medio": "Radio Gabal (FM 104.1)",
+          "enlace": "https://www.radiogabal.com.ar/index.php/policiales/advierten-por-una-falsa-busqueda-laboral-de-la-empresa-mccain-en-redes-sociales",
+          "fecha": "2026-09-25T15:36:43.000Z",
+          "oficial": false,
+          "aporte": "Indicó que la publicación en redes sociales utiliza datos erróneos y apócrifos para ofrecer puestos de trabajo."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1wzh43l",
+          "titulo": "Advierten por una falsa búsqueda laboral de la empresa McCain en Balcarce",
+          "fecha": "2026-09-25T15:36:43.000Z",
+          "ruta": "/nota/advierten-por-una-falsa-busqueda-laboral-de-la-empresa-mccain-en-1wzh43l"
+        },
+        {
+          "id": "1pjgnu4",
+          "titulo": "McCain advierte sobre una falsa convocatoria laboral en Balcarce",
+          "fecha": "2026-09-25T19:10:29.000Z",
+          "ruta": "/nota/mccain-advierte-sobre-una-falsa-convocatoria-laboral-en-balcarce-1pjgnu4"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      }
+    },
+    "1rqdi5z": {
+      "estado": "automatica",
+      "titulo": "Kicillof encabeza la reinauguración del autódromo Juan Manuel Fangio en Balcarce",
+      "copete": "El gobernador bonaerense participó de la reapertura del circuito local tras quince años sin actividad oficial. Destacó el impacto económico de la obra y la primera competencia prevista para este fin de semana.",
+      "cuerpo": "Durante la ceremonia, Kicillof afirmó que \"el autódromo se paga solo\" al referirse a la inversión realizada y explicó que el dinero regresa a través del movimiento turístico y comercial en la región, con una capacidad hotelera completa. El circuito local permanecía cerrado desde 2011, un período de quince años en el cual el proyecto atravesó dificultades técnicas como el hundimiento del asfalto, exigencias rigurosas de seguridad y la ampliación de una curva que requirió grandes movimientos de suelo sobre la sierra.\n\nLa reapertura habilita al trazado serrano a recibir competencias nacionales automovilísticas a partir de este domingo. El mandatario provincial sostuvo que la obra pública permitió impulsar la actividad privada en la zona y calificó al escenario deportivo como una catedral del automovilismo.",
+      "guion": "Kicillof encabeza la reinauguración del autódromo Juan Manuel Fangio en Balcarce",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-26T07:03:52.036Z",
+      "claves": [
+        "Kicillof y Reino participaron de la reapertura del autódromo Juan Manuel Fangio.",
+        "El circuito local volvió a quedar operativo tras quince años sin competencias oficiales.",
+        "El gobernador bonaerense destacó que la inversión genera movimiento turístico y comercial en la región.",
+        "La primera carrera de esta nueva etapa se realizará este domingo."
+      ],
+      "seSabe": [
+        "El gobernador Axel Kicillof encabezó la reinauguración del autódromo Juan Manuel Fangio en Balcarce.",
+        "Participaron del acto el intendente Esteban Reino, el presidente de la ACTC Hugo Mazzacane y el ministro de Gobierno Carlos Bianco.",
+        "El circuito permanecía cerrado desde 2011 debido a distintas dificultades técnicas y de infraestructura.",
+        "La primera competencia oficial de la nueva etapa se programó para el domingo."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El gobernador Axel Kicillof y el intendente Esteban Reino encabezaron la reinauguración del autódromo Juan Manuel Fangio de Balcarce. El circuito vuelve a recibir competencias nacionales tras quince años sin actividad.",
+      "etiquetas": [
+        "autodromo Juan Manuel Fangio",
+        "Axel Kicillof",
+        "Esteban Reino",
+        "Balcarce",
+        "automovilismo",
+        "Turismo Carretera"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Ecos Diarios (Necochea)",
+          "enlace": "https://elecos.com.ar/este-autodromo-se-paga-solo",
+          "fecha": "2026-09-25T19:59:58.000Z",
+          "oficial": false,
+          "aporte": "Detalles del acto de reinauguración del autódromo, declaraciones del gobernador sobre la inversión y los trabajos realizados."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "uj4h1v",
+          "titulo": "Kicillof encabeza la reinauguración del autódromo en Balcarce",
+          "fecha": "2026-09-25T11:53:01.000Z",
+          "ruta": "/nota/kicillof-encabeza-la-reinauguracion-del-autodromo-en-balcarce-uj4h1v"
+        },
+        {
+          "id": "1e6tvp9",
+          "titulo": "Kicillof encabeza la reapertura del autódromo Juan Manuel Fangio en Balcarce",
+          "fecha": "2026-09-25T10:15:00.000Z",
+          "ruta": "/nota/el-gobernador-bonaerense-encabeza-la-reapertura-del-autodromo-en-1e6tvp9"
+        },
+        {
+          "id": "11pnmnw",
+          "titulo": "Axel Kicillof visita Balcarce para la reinauguración del autódromo",
+          "fecha": "2026-09-23T23:52:12.000Z",
+          "ruta": "/nota/kicillof-visitara-balcarce-para-la-reinauguracion-del-autodromo-11pnmnw"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "y7cahl": {
+      "estado": "automatica",
+      "titulo": "El autódromo de Balcarce reabre tras quince años",
+      "copete": "El Autódromo Municipal Juan Manuel Fangio quedó inaugurado este viernes con la presencia de autoridades provinciales y locales. El circuito recibirá este fin de semana a las TC Pick Up en su regreso oficial.",
+      "cuerpo": "El Autódromo Municipal Juan Manuel Fangio de Balcarce vivió una jornada histórica este viernes 25 de septiembre con el acto oficial de reinauguración, tras permanecer cerrado durante quince años. Del evento participaron el gobernador bonaerense, Axel Kicillof, y el intendente municipal, Esteban Reino, quienes realizaron el tradicional corte de cintas en la sierra La Barrosa junto al ministro de Gobierno provincial, Carlos Bianco, y el presidente de la Asociación Corredores de Turismo Carretera, Hugo Mazzacane.\n\nEl predio se prepara para albergar este fin de semana la octava fecha del campeonato y la primera edición de la Copa de las TC Pick Up y TC Pista Pick Up.\n\nLa reactivación del emblemático escenario deportivo genera gran expectativa en la comunidad local y en los fanáticos del automovilismo nacional, quienes podrán disfrutar de actividades en pista, propuestas gastronómicas y un ambiente familiar durante todo el fin de semana.",
+      "guion": "El autódromo de Balcarce reabre tras quince años",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-26T07:03:52.036Z",
+      "claves": [
+        "Reinauguración oficial del Autódromo Juan Manuel Fangio tras quince años.",
+        "Presencia del gobernador Axel Kicillof y el intendente Esteban Reino.",
+        "Competencia de las TC Pick Up durante el fin de semana en el circuito.",
+        "Detalles de las obras a cargo de la Asociación Corredores de Turismo Carretera."
+      ],
+      "seSabe": [
+        "El acto oficial de reinauguración se realizó el viernes 25 de septiembre.",
+        "Participaron el gobernador Axel Kicillof y el intendente Esteban Reino.",
+        "El autódromo estuvo cerrado durante quince años.",
+        "El circuito recibirá a las TC Pick Up y TC Pista Pick Up este fin de semana."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El Autódromo Juan Manuel Fangio de Balcarce reabrió sus puertas este viernes tras quince años de inactividad con un acto oficial encabezado por autoridades provinciales y locales. El histórico circuito recibirá este fin de semana a las TC Pick Up.",
+      "etiquetas": [
+        "autodromo",
+        "Balcarce",
+        "automovilismo",
+        "Juan Manuel Fangio",
+        "TC Pick Up",
+        "Axel Kicillof",
+        "Esteban Reino"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Agencia DIB",
+          "enlace": "https://dib.com.ar/sociedad/el-autodromo-balcarce-vuelve-rugir-las-obras-que-permitiran-girar-las-tc-pick-up-el-fin-semana-n56039",
+          "fecha": "2026-09-25T23:08:00.000Z",
+          "oficial": false,
+          "aporte": "Detalló la reinauguración del autódromo, las autoridades presentes y la actividad deportiva prevista para el fin de semana."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "m7fmln",
+          "titulo": "Diferencias en los fondos provinciales por las obras en el autódromo en Balcarce",
+          "fecha": "2026-09-24T15:27:47.939Z",
+          "ruta": "/nota/surgen-diferencias-por-los-fondos-del-autodromo-en-balcarce-m7fmln"
+        },
+        {
+          "id": "1k6fg2w",
+          "titulo": "Avanzan las obras en el autódromo porteño",
+          "fecha": "2026-09-18T20:26:04.000Z",
+          "ruta": "/nota/avanzan-las-obras-en-el-autodromo-porteno-1k6fg2w"
+        },
+        {
+          "id": "s1kopx",
+          "titulo": "Avanzan las obras en el autódromo Gálvez para el MotoGP",
+          "fecha": "2026-09-18T18:37:14.000Z",
+          "ruta": "/nota/avanzan-las-obras-en-el-autodromo-galvez-para-el-motogp-s1kopx"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "1r5sphv": {
+      "estado": "automatica",
+      "titulo": "El TC Mouras inicia en Rosario su novena fecha",
+      "copete": "El autódromo de Rosario recibe la novena fecha de TC Mouras y Pista Mouras tras el cambio de sede. Las categorías realizan ensayos para definir su Etapa Regular.",
+      "cuerpo": "El autódromo de Rosario es el escenario de la novena fecha de TC Mouras y Pista Mouras, categorías que debieron modificar su destino inicial en La Plata debido a la clausura del circuito bonaerense.\n\nDebido a que se trata de un circuito desconocido para gran parte de los participantes, la organización habilitó dos tandas de ensayos previos. En TC Mouras, el piloto Santiago Arrigoni registró el tiempo más veloz del día al cronometrar 1m41s con un Dodge, seguido por Valentino Alaux y por el líder del campeonato, Francisco Luengo. En tanto, en Pista Mouras, las pruebas libres tuvieron al frente a los representantes de esa divisional durante las prácticas del viernes.\n\nLas actividades continuarán durante el fin de semana con nuevos entrenamientos matutinos programados para ambas categorías en el circuito santafesino.",
+      "guion": "El TC Mouras inicia en Rosario su novena fecha",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-26T07:03:52.036Z",
+      "claves": [
+        "Rosario recibe la novena fecha de TC Mouras y Pista Mouras.",
+        "El cambio de sede se debió a la clausura del autódromo de La Plata.",
+        "Santiago Arrigoni dominó las pruebas libres del TC Mouras."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El TC Mouras y el Pista Mouras disputan su novena fecha en el autódromo de Rosario tras el cambio de sede por la clausura del circuito platense. Las categorías desarrollaron ensayos previos para definir su Etapa Regular.",
+      "etiquetas": [
+        "TC Mouras",
+        "Pista Mouras",
+        "Rosario"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Campeones",
+          "enlace": "https://campeones.com.ar/tc-mouras-y-pista-mouras-pusieron-primera-en-rosario/",
+          "fecha": "2026-09-25T19:48:13.000Z",
+          "oficial": false,
+          "aporte": "Informó los resultados de las pruebas de entrenamiento y el cambio de sede a Rosario para el TC Mouras y Pista Mouras."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1iz15k7",
+          "titulo": "Rosario siempre estuvo cerca: inscriptos para la visita de TC Mouras",
+          "fecha": "2026-09-23T11:30:25.000Z",
+          "ruta": "/nota/rosario-siempre-estuvo-cerca-inscriptos-para-la-visita-de-tc-mouras-1iz15k7"
+        },
+        {
+          "id": "8hnmar",
+          "titulo": "Rosario reemplaza a La Plata para la fecha de TC Mouras, F3 Metropolitana y T4000 Argentino",
+          "fecha": "2026-09-19T16:01:13.000Z",
+          "ruta": "/nota/rosario-reemplaza-a-la-plata-para-la-fecha-de-tc-mouras-f3-8hnmar"
+        },
+        {
+          "id": "1crfv0z",
+          "titulo": "La Fórmula 3 Metropolitana debuta en el autódromo de Rosario",
+          "fecha": "2026-09-22T21:17:44.000Z",
+          "ruta": "/nota/la-formula-3-metropolitana-debuta-en-el-autodromo-de-rosario-1crfv0z"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "1n2zzdt": {
+      "estado": "automatica",
+      "titulo": "El Gobierno prepara anuncios económicos para su viaje a París",
+      "copete": "La administración nacional ultima los detalles de la segunda edición de la Argentina Week en Francia. El presidente Javier Milei buscará generar confianza tras la suba del riesgo país.",
+      "cuerpo": "El Gobierno nacional ultima los detalles de la segunda edición de la Argentina Week en París, un evento de promoción que incluirá la firma de un convenio con el GAFI y nuevas medidas vinculadas al RIGI.\n\nEl viaje tendrá un fuerte costado político en medio de la discusión por la suspensión o eliminación de las PASO y el Presupuesto 2027. Desde la Casa Rosada indicaron que buscarán sumar a la mayor cantidad de gobernadores aliados para conseguir apoyos legislativos. Entre los mandatarios provinciales que confirmaron su asistencia se encuentran Jorge Macri, Alfredo Cornejo, Marcelo Orrego, Ignacio Torres, Rogelio Frigerio, Alberto Weretilneck, Rolando Figueroa, Gustavo Sáenz, Raúl Jalil, Carlos Sadir, Martín Llaryora, Leandro Zdero, Juan Pablo Valdés y Claudio Vidal. En tanto, desde las provincias aclararon que el viaje busca reforzar vínculos con el sector privado y no implica necesariamente un alineamiento legislativo automático con el oficialismo.",
+      "guion": "El Gobierno prepara anuncios económicos para su viaje a París.",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-26T07:03:52.036Z",
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El Gobierno nacional ultima los detalles de la Argentina Week en París, donde el presidente Javier Milei prevé anunciar medidas económicas y buscará el apoyo de gobernadores aliados en medio de la discusión legislativa.",
+      "etiquetas": [
+        "Gobierno nacional",
+        "Javier Milei",
+        "Francia",
+        "Argentina Week",
+        "Economía",
+        "Política"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/politica/2026/09/26/argentina-week-milei-prepara-anuncios-concretos-para-paliar-la-suba-del-riesgo-pais-y-encaminar-la-negociacion-por-la-paso/",
+          "fecha": "2026-09-26T03:50:04.000Z",
+          "oficial": false,
+          "aporte": "Aportó los detalles sobre la agenda del viaje presidencial a París, las medidas económicas previstas, la lista de gobernadores confirmados y el contexto político nacional."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "11nk8l",
+          "titulo": "Milei cruza a Kicillof en Estados Unidos y lo culpa por el riesgo país",
+          "fecha": "2026-09-24T01:04:00.000Z",
+          "ruta": "/nota/milei-critico-a-kicillof-por-el-riesgo-pais-en-nueva-york-11nk8l"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "152hhps": {
+      "estado": "automatica",
+      "titulo": "Alumnos de la Escuela Nº 13 visitan un medio en Necochea",
+      "copete": "Estudiantes de sexto año de la Escuela Primaria Nº 13 de Balcarce viajaron a Necochea en el marco de una actividad educativa. Durante la jornada, recorrieron las instalaciones de un medio gráfico y participaron de programas de radio.",
+      "cuerpo": "Más de setenta alumnos de sexto año de la Escuela Primaria Nº 13 de Balcarce realizaron este viernes un viaje educativo a la ciudad de Necochea. Durante la visita, el contingente escolar recorrió la redacción, el archivo histórico y la planta impresora de un medio local, donde conocieron el proceso de elaboración de las noticias y observaron ejemplares gráficos de distintas épocas. Además, los estudiantes tomaron parte de entrevistas en dos espacios radiales de la emisora.\n\nTras completar la recorrida por las instalaciones periodísticas, el grupo de docentes y alumnos se trasladó al Lago de los Cisnes para pasar la tarde y disfrutar de los entretenimientos que ofrece el paseo recreativo en la vecina localidad.",
+      "guion": "Alumnos de la Escuela número trece visitan un medio en Necochea",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-26T07:03:52.036Z",
+      "claves": [
+        "Más de setenta alumnos de la Escuela Primaria Nº 13 de Balcarce viajaron a Necochea.",
+        "Recorrieron la redacción, el archivo y la planta impresora de un medio local.",
+        "Participaron de entrevistas en dos programas de radio y visitaron el Lago de los Cisnes."
+      ],
+      "seSabe": [
+        "Más de 70 alumnos de sexto año de la Escuela Primaria Nº 13 de Balcarce realizaron un viaje educativo a Necochea.",
+        "Visitaron la redacción, el archivo y la planta impresora del multimedio.",
+        "Participaron de entrevistas en dos programas de radio.",
+        "Pasaron la tarde en el Lago de los Cisnes."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Alumnos de sexto año de la Escuela Primaria Nº 13 de Balcarce realizaron un viaje educativo a Necochea, donde recorrieron las instalaciones de un medio local, participaron de programas de radio y visitaron el Lago de los Cisnes.",
+      "etiquetas": [
+        "Escuela Nº 13",
+        "Balcarce",
+        "Necochea",
+        "viaje educativo",
+        "alumnos"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Ecos Diarios (Necochea)",
+          "enlace": "https://elecos.com.ar/alumnos-de-la-escuela-no-13-de-balcarce-visitaron-ecos-diarios",
+          "fecha": "2026-09-25T22:39:18.000Z",
+          "oficial": false,
+          "aporte": "Informó sobre el viaje educativo de los alumnos de la Escuela Nº 13 de Balcarce a Necochea y su recorrido por las instalaciones del multimedio y el Lago de los Cisnes."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "1iyhhh6": {
+      "estado": "automatica",
+      "titulo": "Campo de Pato afronta una intensa doble fecha de hockey en Balcarce",
+      "copete": "El Club Social y Campo de Pato fue escenario de partidos frente a Del Valle de Necochea y Polideportivo Villa Gesell por el Torneo AB, con actividad en todas las categorías.",
+      "cuerpo": "El Club Social y Campo de Pato albergó el pasado fin de semana dos jornadas de hockey sobre césped correspondientes al Torneo AB de la Asociación Amateur Marplatense. El sábado, el conjunto local recibió a Del Valle de Necochea con actividad que incluyó a más de 60 jugadoras infantiles, reflejando el crecimiento del semillero institucional. En la tira competitiva, la séptima división se impuso por 3 a 2, la sexta igualó 3 a 3 pero cayó por penales australianos, la intermedia ganó por 1 a 0, la quinta perdió 3 a 2 y la primera cayó por 3 a 1.\n\nA pesar de las condiciones climáticas adversas, la actividad continuó el domingo con el adelento de parte de la duodécima fecha frente a Polideportivo Villa Gesell.\n\nComo se había informado en las coberturas del fin de semana anterior, la institución local mantiene una participación sostenida en el certamen regional. Tras estos encuentros, la próxima fecha del torneo se disputará en Mar del Plata, donde Campo de Pato se medirá ante Biguá.",
+      "guion": "Campo de Pato afronta una intensa doble fecha de hockey en Balcarce",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-26T07:03:52.036Z",
+      "claves": [
+        "Campo de Pato disputó una doble fecha como local por el Torneo AB.",
+        "El sábado enfrentó a Del Valle de Necochea con resultados dispares.",
+        "El domingo recibió a Polideportivo Villa Gesell a pesar del clima adverso.",
+        "La próxima presentación del equipo balcarceño será en Mar del Plata ante Biguá."
+      ],
+      "textoRedes": "El Club Social y Campo de Pato recibió una doble fecha de hockey sobre césped por el Torneo AB con partidos frente a Del Valle de Necochea y Polideportivo Villa Gesell. Repasá los resultados de las distintas categorías de la institución balcarceña.",
+      "etiquetas": [
+        "hockey",
+        "Campo de Pato",
+        "Torneo AB",
+        "deportes",
+        "Balcarce"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infórmese Primero (FM 104.9)",
+          "enlace": "http://www.informeseprimero.com.ar/2026/09/doble-fecha-de-hockey-para-campo-de-pato.html",
+          "fecha": "2026-09-25T16:18:25.329Z",
+          "oficial": false,
+          "aporte": "Detalló los resultados y autores de los goles en las distintas categorías frente a Del Valle de Necochea y Polideportivo Villa Gesell."
+        },
+        {
+          "medio": "Municipalidad de Balcarce",
+          "enlace": "https://balcarce.gob.ar/2026/09/25/doble-fecha-de-hockey-para-campo-de-pato/",
+          "fecha": "2026-09-25T13:28:23.000Z",
+          "oficial": true,
+          "aporte": "Confirmó la realización de la doble fecha de hockey sobre césped en el club local por el Torneo AB."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1825h24",
+          "titulo": "Campo de Pato disputa una doble fecha de hockey en Balcarce",
+          "fecha": "2026-09-25T13:28:23.000Z",
+          "ruta": "/nota/campo-de-pato-disputa-una-doble-fecha-de-hockey-en-balcarce-1825h24"
+        },
+        {
+          "id": "acvevu",
+          "titulo": "Hockey: Campo de Pato disputó dos fechas del Torneo AB",
+          "fecha": "2026-09-21T18:10:52.000Z",
+          "ruta": "/nota/hockey-campo-de-pato-disputo-dos-fechas-del-torneo-ab-acvevu"
+        },
+        {
+          "id": "zmbe8t",
+          "titulo": "Rugby: doble triunfo para Campo de Pato en el Torneo Desarrollo",
+          "fecha": "2026-09-21T18:02:31.000Z",
+          "ruta": "/nota/rugby-doble-triunfo-para-campo-de-pato-en-el-torneo-desarrollo-zmbe8t"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo informaron Municipalidad de Balcarce y un medio independiente.",
+        "sugeridoPorIA": "ALTA"
+      }
+    },
+    "p7nd3j": {
+      "estado": "automatica",
+      "titulo": "Balcarce palpita el regreso del automovilismo nacional en Balcarce",
+      "copete": "Miles de personas participaron de la presentación oficial de las TC Pick Up en el Autódromo Juan Manuel Fangio con una firma de autógrafos y una caravana por la ciudad.",
+      "cuerpo": "La actividad comenzó por la tarde con una firma de autógrafos en una estación de servicio local con pilotos como Omar Martínez, Santiago Mangoni, José Ciantini, Diego Ciantini y Juan José Suárez, donde se exhibieron vehículos de competición.\n\nPosteriormente, las unidades realizaron un recorrido por las calles locales hasta el Museo Fangio frente a la plaza principal, sede de la conferencia de prensa oficial. Del encuentro participaron figuras como Agustín Canapino y Mariano Werner, el gerente general de la ACTC, Fernando Miori, y el intendente local, Esteban Reino. Como antesala, la categoría había recorrido previamente ciudades de la región como Tandil y Mar del Plata.\n\nEste sábado se pondrá en marcha la actividad oficial en el circuito balcarceño, mientras que el domingo se disputarán las finales que coronarán el fin de semana deportivo.",
+      "guion": "Balcarce palpita el regreso del automovilismo nacional en Balcarce",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-26T07:03:52.036Z",
+      "claves": [
+        "Miles de personas participaron de la previa de las TC Pick Up",
+        "El evento incluyó firma de autógrafos y una caravana hacia el Museo Fangio",
+        "Participaron autoridades y reconocidos pilotos del automovilismo nacional",
+        "Este fin de semana se disputará la competencia en el Autódromo Juan Manuel Fangio"
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Balcarce vivió una masiva jornada previa al regreso de las TC Pick Up al Autódromo Juan Manuel Fangio con firma de autógrafos, exhibición de vehículos y una conferencia de prensa en el Museo Fangio. Este fin de semana se disputará la competencia oficial.",
+      "etiquetas": [
+        "automovilismo",
+        "TC Pick Up",
+        "Autodromo Juan Manuel Fangio",
+        "Balcarce"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Puntonueve (FM 100.9)",
+          "enlace": "https://puntonueve.com.ar/balcarce-vivio-una-jornada-multitudinaria-en-la-previa-del-regreso-de-las-tc-pick-up/",
+          "fecha": "2026-09-26T01:13:28.000Z",
+          "oficial": false,
+          "aporte": "Detalló las actividades previas, cronograma, participación de pilotos y autoridades en la presentación de las TC Pick Up en Balcarce."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1sus6ai",
+          "titulo": "Comienza la actividad previa al TC Pick Up en Balcarce",
+          "fecha": "2026-09-25T11:53:19.000Z",
+          "ruta": "/nota/comienza-la-actividad-previa-al-tc-pick-up-en-balcarce-1sus6ai"
+        },
+        {
+          "id": "ntbsnv",
+          "titulo": "Mar del Plata recibe la previa del automovilismo en Balcarce",
+          "fecha": "2026-09-24T23:08:08.000Z",
+          "ruta": "/nota/realizan-una-caravana-previa-en-mar-del-plata-ntbsnv"
+        },
+        {
+          "id": "4v2vga",
+          "titulo": "Largas filas en Balcarce por el regreso del automovilismo",
+          "fecha": "2026-09-24T13:34:15.000Z",
+          "ruta": "/nota/largas-filas-en-balcarce-por-el-regreso-del-automovilismo-4v2vga"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
       }
     }
   },
