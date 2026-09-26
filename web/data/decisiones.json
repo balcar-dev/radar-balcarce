@@ -1,5 +1,5 @@
 {
-  "exportado": "2026-09-26T09:53:12.375Z",
+  "exportado": "2026-09-26T10:03:05.323Z",
   "decisiones": {
     "1951120": {
       "estado": "automatica",
@@ -25539,6 +25539,218 @@
         "nivel": "MEDIA",
         "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
         "sugeridoPorIA": "ALTA"
+      }
+    },
+    "1iaq66c": {
+      "estado": "automatica",
+      "titulo": "Franco Colapinto larga noveno en el Gran Premio de Azerbaiyán",
+      "copete": "El piloto argentino avanzó a la Q3 en el circuito callejero de Bakú y subió un puesto en la grilla tras una sanción a Carlos Sainz. La competencia principal se largará este sábado a las ocho de la mañana.",
+      "cuerpo": "Franco Colapinto avanzó hasta la Q3 en el circuito callejero de Bakú y largará noveno este sábado en el Gran Premio de Azerbaiyán, la fecha quince de la temporada de la Fórmula 1. El piloto argentino se metió entre los mejores tras una penalización que recibió Carlos Sainz, lo que le permitió subir un lugar en la grilla de partida que liderará George Russell luego de la clasificación.\n\nTras la sesión, el deportista analizó su rendimiento y señaló que debió lidiar con inconvenientes en la batería, vibraciones y problemas con los frenajes durante la última tanda cronometrada. La competencia principal en Bakú comenzará a las ocho de la mañana de Argentina y se podrá seguir a través de diferentes señales televisivas y plataformas de streaming.\n\nComo se había informado, la actividad en pista se adelantó debido a una festividad local en Azerbaiyán. Hasta el momento, el piloto se mantiene en el puesto doce del campeonato con veintisiete unidades, acumuladas a lo largo de las fechas previas del año.",
+      "guion": "Franco Colapinto larga noveno en el Gran Premio de Azerbaiyán",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-26T10:03:05.247Z",
+      "claves": [
+        "El piloto argentino largará desde la novena posición en el circuito callejero de Bakú.",
+        "La clasificación le permitió avanzar hasta la Q3 tras una penalización a Carlos Sainz.",
+        "George Russell se quedó con la pole position para la competencia de este sábado.",
+        "La carrera principal se pondrá en marcha a las ocho de la mañana de nuestro país."
+      ],
+      "seSabe": [
+        "Franco Colapinto se metió en la Q3 y largará en la novena posición tras una sanción a Carlos Sainz.",
+        "George Russell logró la pole position en el circuito callejero de Bakú.",
+        "La competencia principal de la Fórmula 1 se largará este sábado a las ocho de la mañana de Argentina.",
+        "El piloto argentino se ubica en el puesto doce del campeonato con veintisiete unidades."
+      ],
+      "textoRedes": "Franco Colapinto se metió en la Q3 y largará noveno este sábado en el Gran Premio de Azerbaiyán de la Fórmula 1 tras una penalización a Carlos Sainz. La carrera principal en el circuito callejero de Bakú se pondrá en marcha a las ocho de la mañana.",
+      "etiquetas": [
+        "Franco Colapinto",
+        "Formula 1",
+        "Gran Premio de Azerbaiyán",
+        "Automovilismo",
+        "Bakú"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/deportes/automovilismo/franco-colapinto-en-el-gran-premio-de-azerbaiyan-en-vivo-nid26092026/",
+          "fecha": "2026-09-26T09:58:43.000Z",
+          "oficial": false,
+          "aporte": "Detalló las sensaciones de Colapinto tras la clasificación y los problemas mecánicos con la batería y los frenos."
+        },
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/deportes/2026/09/26/franco-colapinto-largara-9-en-el-circuito-callejero-de-baku-del-gran-premio-de-azerbaiyan-de-formula-1-hora-tv-y-la-grilla-de-largada/",
+          "fecha": "2026-09-26T09:40:25.000Z",
+          "oficial": false,
+          "aporte": "Informó el horario de la carrera y las señales de televisión y streaming para ver el Gran Premio."
+        },
+        {
+          "medio": "Clarín",
+          "enlace": "https://www.clarin.com/deportes/f1-gp-azerbaiyan-franco-colapinto-vivo-horario-ver-carrera-formula-1_0_pgwQ5yEYAA.html",
+          "fecha": "2026-09-26T08:00:11.000Z",
+          "oficial": false,
+          "aporte": "Indicó la penalización a Sainz y la posición de largada del piloto argentino."
+        },
+        {
+          "medio": "Olé",
+          "enlace": "https://www.ole.com.ar/autos/gran-premio-azerbaiyan-carrera-franco-colapinto-hoy-vivo-online-horario-ver_0_ptdVDl4M25.html",
+          "fecha": "2026-09-26T07:18:08.000Z",
+          "oficial": false,
+          "aporte": "Confirmó el ingreso a la Q3 y el objetivo de sumar puntos en la competencia de Bakú."
+        },
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/deportes/automovilismo/franco-colapinto-en-la-formula-1-en-vivo-nid25092026/",
+          "fecha": "2026-09-25T16:22:15.000Z",
+          "oficial": false,
+          "aporte": "Mencionó que la prueba en Azerbaiyán es la decimoquinta de la temporada."
+        },
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/deportes/automovilismo/franco-colapinto-en-vivo-nid24092026/",
+          "fecha": "2026-09-24T13:29:49.000Z",
+          "oficial": false,
+          "aporte": "Aportó datos sobre la ubicación previa de Colapinto en el campeonato mundial."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "150923r",
+          "titulo": "Franco Colapinto larga noveno en el Gran Premio de Azerbaiyán",
+          "fecha": "2026-09-26T09:20:14.000Z",
+          "ruta": "/nota/franco-colapinto-larga-noveno-en-el-gran-premio-de-azerbaiyan-150923r"
+        },
+        {
+          "id": "l3ky37",
+          "titulo": "Franco Colapinto largará noveno en el Gran Premio de Azerbaiyán",
+          "fecha": "2026-09-26T08:00:11.000Z",
+          "ruta": "/nota/franco-colapinto-largara-noveno-en-el-gran-premio-de-azerbaiyan-l3ky37"
+        },
+        {
+          "id": "11s68mw",
+          "titulo": "Franco Colapinto larga noveno en el Gran Premio de Azerbaiyán",
+          "fecha": "2026-09-26T07:18:08.000Z",
+          "ruta": "/nota/franco-colapinto-larga-noveno-en-el-gran-premio-de-azerbaiyan-11s68mw"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron cuatro medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      }
+    },
+    "he08gv": {
+      "estado": "automatica",
+      "titulo": "Franco Colapinto larga noveno en el Gran Premio de Azerbaiyán",
+      "copete": "La Fórmula 1 disputa este sábado la decimosexta fecha en el circuito callejero de Bakú. El piloto argentino Franco Colapinto partirá desde el noveno puesto.",
+      "cuerpo": "Este sábado se lleva a cabo la decimosexta fecha del Campeonato Mundial de la Fórmula 1 en el circuito callejero de Bakú con el Gran Premio de Azerbaiyán, que modificó su cronograma habitual debido a un feriado nacional en ese país. La carrera principal comienza a las ocho de la mañana en horario argentino y se transmite por televisión a través de Fox Sports y mediante las plataformas de streaming Disney+ y F1 TV Pro.\n\nLa «pole position» quedó en manos del británico George Russell, compañero de equipo de Andrea Kimi Antonelli en Mercedes, quien lidera el campeonato de pilotos pero largará en el decimosexto lugar. Como se había informado, la actividad en pista comenzó con los entrenamientos libres de los días previos, donde el representante nacional mostró ritmo competitivo tras superar las instancias iniciales.\n\nPara los seguidores locales del automovilismo, la competencia puede seguirse en directo por las señales habilitadas, mientras las plataformas de pronósticos ubican a Russell como el principal candidato al triunfo en el callejero azerbaiyano.",
+      "guion": "Franco Colapinto larga noveno en el Gran Premio de Azerbaiyán",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-26T10:03:05.247Z",
+      "claves": [
+        "La decimosexta fecha de la Fórmula 1 se disputa este sábado en Bakú.",
+        "Franco Colapinto parte desde el noveno lugar de la parrilla.",
+        "La transmisión en Argentina es por Fox Sports, Disney+ y F1 TV Pro.",
+        "George Russell largará desde la primera posición tras la clasificación."
+      ],
+      "seSabe": [
+        "La carrera del Gran Premio de Azerbaiyán se disputa este sábado a las 8 de la Argentina.",
+        "La competencia tiene lugar en el circuito callejero de Bakú.",
+        "El piloto argentino Franco Colapinto largará en el noveno puesto.",
+        "George Russell consiguió la «pole position» para la competencia.",
+        "La transmisión en el país se realiza a través de Fox Sports, Disney+ y F1 TV Pro."
+      ],
+      "noConfirmado": [
+        "No se informaron modificaciones adicionales en el cronograma oficial de la categoría para las próximas fechas.",
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "etiquetas": [
+        "Automovilismo",
+        "Formula 1",
+        "Franco Colapinto",
+        "Gran Premio de Azerbaiyán"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/deportes/automovilismo/en-que-canal-pasan-el-gp-de-azerbaiyan-de-la-formula-1-hoy-nid26092026/",
+          "fecha": "2026-09-26T09:30:00.000Z",
+          "oficial": false,
+          "aporte": "Detalló las opciones de televisación, streaming y las penalizaciones en la clasificación."
+        },
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/deportes/automovilismo/por-donde-pasan-la-carrera-de-la-formula-1-y-que-canal-la-transmite-en-vivo-nid26092026/",
+          "fecha": "2026-09-26T09:00:00.000Z",
+          "oficial": false,
+          "aporte": "Confirmó el horario de inicio de la competencia para las 8 de la Argentina."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1n5o9jc",
+          "titulo": "Franco Colapinto parte noveno en la Formula 1 en Azerbaiyán",
+          "fecha": "2026-09-25T17:34:57.000Z",
+          "ruta": "/nota/franco-colapinto-parte-noveno-en-el-gran-premio-de-azerbaiyan-1n5o9jc"
+        },
+        {
+          "id": "t7n982",
+          "titulo": "El Gran Premio de Azerbaiyán de la Fórmula 1 modifica su cronograma",
+          "fecha": "2026-09-25T10:00:00.000Z",
+          "ruta": "/nota/el-gran-premio-de-azerbaiyan-de-la-formula-1-modifica-su-cronograma-t7n982"
+        },
+        {
+          "id": "p2n4gt",
+          "titulo": "F1 GP de Azerbaiyán , EN VIVO: cómo salió Colapinto hoy, resultados de las practicas libres en Bakú y dónde ver la Fórmula 1",
+          "fecha": "2026-09-24T03:01:36.000Z",
+          "ruta": "/nota/f1-gp-de-azerbaiyan-en-vivo-como-salio-colapinto-hoy-resultados-de-p2n4gt"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "ALTA"
+      }
+    },
+    "1w7a1xs": {
+      "estado": "automatica",
+      "titulo": "Metro de Madrid corta tramos de la Línea seis por pruebas técnicas",
+      "copete": "La red de subterráneos madrileña suspende el servicio en un sector de su línea circular durante este fin de semana por trabajos previos a la automatización de los trenes.",
+      "cuerpo": "Metro de Madrid interrumpe la circulación en un tramo de la Línea seis durante este sábado y domingo como parte de las pruebas de seguridad orientadas a lograr la automatización integral del servicio. La medida afecta el sector comprendido entre las estaciones de Cuatro Caminos y Lucero, que permanecerán sin servicio junto a otras seis paradas intermedias, mientras que las cabeceras provisionales continúan operando.\n\nLas obras forman parte de un plan iniciado a finales de mayo del año pasado con una inversión de ochocientos millones de euros para renovar vías, señalización y sistemas eléctricos. Como parte de estos ensayos, dos de los nuevos convoyes automáticos circulan por el tramo afectado a distintas velocidades para verificar su comportamiento operativo.\n\nPara mitigar las molestias a los usuarios, que rondan los cuatrocientos diarios en toda la línea, la empresa pública dispuso colectivos gratuitos que replican el recorrido en superficie. El cronograma de cortes continuará los días tres y cuatro de octubre, y se extenderá durante los fines de semana hasta diciembre.",
+      "guion": "Metro de Madrid corta tramos de la Línea seis por pruebas técnicas",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-26T10:03:05.247Z",
+      "claves": [
+        "Corte parcial en la Línea seis de Metro de Madrid este fin de semana.",
+        "Afecta a ocho estaciones entre Cuatro Caminos y Lucero.",
+        "Trabajos orientados a la automatización integral de la red.",
+        "Servicio gratuito de colectivos para reemplazar el tramo interrumpido."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Metro de Madrid suspende el servicio en un tramo de su Línea 6 durante este fin de semana por obras de automatización, con un servicio especial de colectivos para los pasajeros.",
+      "etiquetas": [
+        "Metro de Madrid",
+        "Automatización",
+        "Obras"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/espana/2026/09/26/metro-de-madrid-cierra-la-linea-6-este-fin-de-semana-estos-son-los-tramos-cortados-y-las-alternativas/",
+          "fecha": "2026-09-26T09:53:56.000Z",
+          "oficial": false,
+          "aporte": "Detalló el cronograma de cortes, las estaciones afectadas, las alternativas de transporte y los planes de automatización de la red."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
       }
     }
   },
