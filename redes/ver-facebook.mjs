@@ -42,6 +42,6 @@ async function seccion(titulo, camino, campos, mostrar) {
 }
 
 await seccion('Posteos del feed', 'published_posts', 'created_time,message,permalink_url,is_published', (d) => `${corto(d.message)} ${d.permalink_url ?? ''}`);
-await seccion('Reels', 'video_reels', 'created_time,description,permalink_url,status', (d) => `${corto(d.description)} ${d.permalink_url ?? ''}`);
+await seccion('Reels', 'video_reels', 'created_time,description,permalink_url,status,length', (d) => `${corto(d.description)} ${d.permalink_url ?? ''} estado=${JSON.stringify(d.status ?? {}).slice(0, 160)} duración=${d.length ?? '?'}s`);
 await seccion('Videos', 'videos', 'created_time,description,permalink_url', (d) => `${corto(d.description)} ${d.permalink_url ?? ''}`);
 await seccion('Historias', 'stories', 'creation_time,status,url', (d) => `${d.status ?? ''} ${d.url ?? ''}`);
