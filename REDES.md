@@ -49,6 +49,64 @@ posteo vertical y en la grilla del perfil lo recorta: todo el texto queda en
 la **zona segura** del centro (1012 × 1080). Facebook usa la apaisada porque
 así muestra Facebook un enlace. Por qué y cómo se vigila: `FORMATOS.md`.
 
+### El contrato del día
+
+Lo que **tiene** que salir cada día, en cada red, en hora de Balcarce. Es lo que
+el vigilante cuenta a las 21, lo que audita contra Meta a las 23:30 y lo que
+puede correr a mano Hernán o Andrés (Actions → **Auditar redes**).
+
+| Pieza | Facebook | Instagram | Hora | Ventana |
+|---|---|---|---|---|
+| Reel: podcast de la mañana | 1 | 1 | 10:00 | hasta las 15:00 |
+| Reel: podcast de la tarde | 1 | 1 | 15:00 | hasta las 20:00 |
+| Reel: podcast de la noche | 1 | 1 | 20:30 | hasta las 24:00 |
+| Historia: el mismo podcast de la mañana, la tarde y la noche (3) | 3 | 3 | la del reel | se sube en el mismo momento que el reel |
+| Historia: clima de la mañana | 1 | 1 | 7:30 | hasta las 11:30 |
+| Historia: clima de la noche | 1 | 1 | 20:00 | hasta las 24:00 |
+| Historia: farmacia de turno | 1 | 1 | 19:00 | hasta las 24:00 |
+| Posteos de notas | hasta 5 | hasta 5 (el espejo, como foto) | de 8 a 22 | los 5 son un tope |
+
+Eso da, por red y por día: **3 reels, 6 historias (3 de podcast, 2 de clima, 1 de
+farmacia) y hasta 5 posteos**. Los números están en `CONTRATO_DIARIO`
+(`ingesta/criterio.mjs`) y en la tabla "Los números" de `CRITERIO-EDITORIAL.md`;
+las horas y las ventanas, en `redes/piezas.mjs`. Vale desde el 25/09
+(`CONTRATO_DESDE`): antes las historias eran de notas sueltas.
+
+- **Semanales, aparte** (no cuentan en las 6): los teléfonos útiles un día por
+  semana y la agenda del jueves (ésta sólo se arma en la PC de Hernán).
+- **Los posteos pueden ser menos de 5** si no hubo candidatas (relevancia de 75 o
+  más, tema no repetido, sección que sale sola, con cuerpo, entre las 8 y las 22).
+  La auditoría lo distingue: "sin más candidatas" es normal; "FALLA: había N
+  candidata(s)" no.
+- **Nunca más de uno por pieza y día.** El 25/09 el repaso de la mañana salió
+  dos veces (10:04 y 10:08 en Facebook, 10:03 y 10:07 en Instagram, y la historia
+  de Facebook también) por un `checkout` viejo. El libro guarda una entrada por
+  pieza y no puede mostrarlo: **sólo lo ve la auditoría contra Meta**.
+- **Una pieza sin salir** es "pendiente" mientras está a tiempo (todavía no es su
+  hora, o está dentro de su ventana) y "falta" cuando la ventana se cerró. La
+  historia de un podcast cuyo reel ya salió hace más de 15 minutos es "falta" de
+  inmediato: el reloj no vuelve a armar un podcast que ya salió, así que no hay
+  reintento.
+
+**Quién mira qué** (todo sólo lee; el código está en `redes/contrato.mjs`,
+`redes/auditar-redes.mjs` y `redes/vigilar.mjs`):
+
+| Cuándo | Qué | Cómo se entera uno |
+|---|---|---|
+| Cada corrida (30 min) | Un duplicado en el libro, un podcast o una historia que se cerró sin salir, un posteo sin su foto en Instagram | WhatsApp de problemas (una vez cada 6 h; el duplicado, de prioridad alta) |
+| 21:00 | El contrato completo por red, con "falta" y "pendiente": `Facebook: posteos 4/5 · reels 2/3 (falta: tarde) · historias 4/6 (falta: farmacia · pendiente: podcast noche)` | El resumen del día |
+| 23:30 (una vez por día) | **El cierre**: el día contra lo que Meta tiene publicado de verdad (faltantes, duplicados, libro sin Meta, Meta sin libro) | WhatsApp **sólo si hay discrepancias**. Si todo cuadra no hay mensaje: "Cierre del día: Facebook e Instagram completos ✓" viaja dentro del próximo mensaje normal |
+| A mano | Actions → **Auditar redes**: hoy, ayer, la semana (% de cumplimiento por red y pieza) y lo que devuelve Meta sin interpretar | El registro del workflow (no manda WhatsApp) |
+| Lunes 9:00 | La semana, en el registro de la **Auditoría** | El registro |
+
+Límite de lo que Meta deja ver: las **historias** sólo se ven mientras están
+activas (24 horas). Por eso el cierre es a las 23:30 y la auditoría de días
+anteriores cuenta las historias por el libro, y lo dice.
+
+Para probar el cierre sin mandar nada: Actions → Vigilancia → Run workflow →
+`probar-cierre`. Por consola: `node redes/auditar-redes.mjs [--semana] [--fecha=AAAA-MM-DD] [--sin-meta]`
+(con `META_TOKEN` en el entorno para consultar Meta).
+
 ### Qué sale hoy y a qué hora (hora de Balcarce)
 
 **Facebook, automático.** Cada 30 minutos (a los :10 y :40) el sistema mira
@@ -243,7 +301,7 @@ piezas fijas del día (clima y farmacia) hayan salido, y que la portada no
 vuelva a mostrar lo que se pidió sacar (`REGLAS.md`). Avisa por **WhatsApp**
 (`redes/whatsapp.mjs`, CallMeBot, secretos `WHATSAPP_TELEFONO` y
 `WHATSAPP_APIKEY`; **funciona desde el 25/09**) una vez cada 6 horas por
-problema, y a las 21 manda un resumen "todo bien". También avisa 30 días antes
+problema, y a las 21 manda el resumen del día con el **contrato del día** (ver arriba); a las 23:30 audita el día contra Meta y avisa si algo no cuadra. También avisa 30 días antes
 de que venzan el token de GitHub y el dominio. Cada lunes, la **Auditoría** (`redes/auditar.mjs`) mide
 las imágenes publicadas. Detalle en `INFRAESTRUCTURA.md`.
 

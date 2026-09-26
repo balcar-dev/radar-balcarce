@@ -75,6 +75,39 @@ Cada cosa figura una sola vez: si está en "Para mañana", no se repite abajo.
     la sección durante dos semanas y comparar el alcance con números propios.
 16. Permiso `instagram_manage_insights` para leer qué rinde cada red.
 
+Encontrado al auditar el contrato del día (26/09, `redes/contrato.mjs`); lo que
+sigue es de `reels/` y de `redes/publicar-piezas.mjs`, y no está arreglado:
+
+- **16a. Las historias de los podcasts largos no salen (ALTA).** Una historia
+  acepta hasta 60 segundos (Instagram: "Max duration for stories is 61.0";
+  Facebook la rechaza también). El podcast de la noche, con 4 notas, duró
+  62,7 s el 25/09 y **su historia no salió en ninguna de las dos redes**; el
+  reel sí. Los de la mañana y la tarde (3 notas) van justos. Arreglo: al armar
+  el podcast, si pasa de 58 s, hacer para la historia un corte de 58 s
+  (`ffmpeg -t 58`, con un cierre corto) y usarlo sólo para `STORIES`, o bajar
+  las notas del podcast de la noche a 3. Mientras tanto el vigilante avisa
+  "no salió la historia de podcast noche… no se reintenta".
+- **16b. La historia de un reel, y la copia en la segunda red, no se
+  reintentan (MEDIA).** `piezasQueTocan` mira sólo la red que manda
+  (Instagram): en cuanto el reel salió, la pieza ya no "toca", así que si la
+  historia falló (o Facebook falló después de tres intentos) no hay otra
+  vuelta. Arreglo: guardar en el libro qué falta de cada pieza y rearmarla sólo
+  si falta algo; o subir la historia con tres intentos y un corte automático
+  (ver 16a).
+- **16c. Los teléfonos útiles no salen los días que rota (MEDIA).**
+  `redes/piezas.mjs` (`diaRotativoDeUtiles`) decide el día de la semana, pero
+  `reels/plan.mjs` usa el de `panel/horarios.mjs` (martes) y sólo arma la pieza
+  ese día. El 25/09 (viernes) el reloj dijo "tocan: utiles" cada 30 minutos de
+  11:00 a 16:00 y nunca se armó; hasta las 15:49 eso además hacía fallar la
+  corrida de Redes. Arreglo: que `plan.mjs` use el mismo día que el reloj.
+  Mientras, la auditoría muestra "semanal teléfonos útiles: falta".
+- **16d. `historiasPorDia: 6` de `reels/plan.mjs` no se aplica (BAJA).** Sólo se
+  imprime. Con los útiles y la agenda pueden salir 7 u 8 historias en un día:
+  no hay nada que las frene, y el contrato del día las cuenta aparte.
+- **16e. Sin `REDES_ACTIVAS` todo parece faltar (BAJA).** Con el interruptor
+  apagado el libro no se escribe y el vigilante avisa de cada pieza que falta.
+  Es lo esperable, pero el aviso no lo dice.
+
 ## B. Perfiles y medidas
 
 17. **Aplicar a mano las biografías** de Instagram y Facebook (las nuevas ya

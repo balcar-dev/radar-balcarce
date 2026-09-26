@@ -15,6 +15,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { crearCliente, ErrorMeta, sinToken } from './meta.mjs';
 import { publicarPiezas, completarEnlaces } from './publicar-piezas.mjs';
+import { espejosPendientes } from './espejo.mjs';
 import {
   elegirParaFacebook, mensajeDeNota, mensajeParaInstagram, enlaceDeNota, imagenDeNota, libroNuevo, anotar, yaPublicada, estaActivo,
 } from './elegir.mjs';
@@ -72,6 +73,33 @@ async function facebook() {
   // se publicó ahí.
   libro.instagramFeed ??= {};
 
+  /** El espejo de un posteo en el feed de Instagram. Si falla, queda anotado el
+   *  intento en el posteo de Facebook: se reintenta en las vueltas siguientes
+   *  (espejosPendientes) hasta un tope. */
+  async function espejar(nota, enlace) {
+    try {
+      const ri = await api.publicarFotoEnInstagram({ imagenUrl: imagenDeNota(nota, SITIO), pie: mensajeParaInstagram(nota, SITIO) });
+      anotar(libro, 'instagramFeed', nota.id, { mediaId: ri.id, titulo: nota.titulo, enlace });
+      fs.writeFileSync(LIBRO, `${JSON.stringify(libro, null, 2)}\n`);
+      console.log(`             + Instagram: ${ri.id}`);
+    } catch (e) {
+      if (libro.facebook[nota.id]) {
+        libro.facebook[nota.id].intentosEspejo = (libro.facebook[nota.id].intentosEspejo ?? 0) + 1;
+        fs.writeFileSync(LIBRO, `${JSON.stringify(libro, null, 2)}\n`);
+      }
+      console.error(`             Instagram (feed) falló, queda sólo en Facebook (se reintenta): ${sinToken(e.message, token)}`);
+    }
+  }
+
+  // Los espejos que quedaron pendientes en vueltas anteriores (25/09: el del
+  // posteo de las 22:25 falló y nunca se reintentaba).
+  if (ACTIVO) {
+    for (const nota of espejosPendientes({ notas: portada.notas ?? [], libro })) {
+      console.log(`  Instagram (feed) · reintento · ${nota.titulo}`);
+      await espejar(nota, libro.facebook[nota.id]?.enlace ?? enlaceDeNota(nota, SITIO));
+    }
+  }
+
   const elegidas = elegirParaFacebook({ notas: portada.notas ?? [], libro });
   if (!elegidas.length) {
     console.log('  Nada para publicar en Facebook ahora.');
@@ -111,16 +139,7 @@ async function facebook() {
     // El espejo en Instagram: si falla, se avisa pero no se cuenta como un
     // fallo del posteo en sí — ya quedó publicado en Facebook, que es lo
     // principal.
-    if (!yaPublicada(libro, 'instagramFeed', nota.id)) {
-      try {
-        const ri = await api.publicarFotoEnInstagram({ imagenUrl: imagenDeNota(nota, SITIO), pie: mensajeParaInstagram(nota, SITIO) });
-        anotar(libro, 'instagramFeed', nota.id, { mediaId: ri.id, titulo: nota.titulo, enlace });
-        fs.writeFileSync(LIBRO, `${JSON.stringify(libro, null, 2)}\n`);
-        console.log(`             + Instagram: ${ri.id}`);
-      } catch (e) {
-        console.error(`             Instagram (feed) falló, queda sólo en Facebook: ${sinToken(e.message, token)}`);
-      }
-    }
+    if (!yaPublicada(libro, 'instagramFeed', nota.id)) await espejar(nota, enlace);
   }
   if (fallo) process.exit(1);
 }

@@ -44,9 +44,10 @@ PC de Hernán: el panel (puerto 4321) ── sincroniza decisiones a GitHub
 | `redes.yml` · Redes | cron-job.org cada 30 min, de 7 a 23 (y al terminar "Actualizar la web") | Publica en Facebook y, si a esa hora toca una pieza, la arma con la voz de Gemini y la sube a Instagram y a la página. |
 | `piezas.yml` · Piezas | A mano (Actions → Piezas → Run workflow) | Armar o publicar una pieza puntual. |
 | `vigilancia.yml` · Vigilancia | cron-job.org cada 30 min (y un `schedule` propio como respaldo) | Corre `redes/vigilar.mjs`. Si encuentra un problema deja un aviso amarillo en Actions (no una falla roja) y manda el WhatsApp. |
+| `auditar-redes.yml` · Auditar redes | A mano (Actions → Auditar redes → Run workflow) | Audita el contrato del día de Facebook e Instagram contra lo que Meta tiene publicado (hoy, ayer, la semana y lo que devuelve Meta). **Sólo lee, no manda WhatsApp.** Necesita `META_TOKEN`. Ver `REDES.md`, "El contrato del día". |
 | `prueba-estadisticas.yml` · Prueba de estadísticas | A mano | Muestra las visitas de la web y los números de Facebook e Instagram, y qué permisos faltan. No guarda ni avisa. |
 | `prueba-whatsapp.yml` · Prueba de WhatsApp | A mano (Actions → Prueba de WhatsApp → Run workflow) | Manda un mensaje de prueba. Sirve para ver que los secretos de WhatsApp están bien. |
-| `auditoria.yml` · Auditoría | Lunes, 12:00 UTC (9:00 en Balcarce) | Corre `redes/auditar.mjs`: medidas de imágenes, íconos, SEO en vivo y antigüedad de `FORMATOS.md`. |
+| `auditoria.yml` · Auditoría | Lunes, 12:00 UTC (9:00 en Balcarce) | Corre `redes/auditar.mjs`: medidas de imágenes, íconos, SEO en vivo y antigüedad de `FORMATOS.md`. Y `redes/auditar-redes.mjs --semana`: el contrato de las redes de los últimos 7 días (sólo en el registro). |
 
 Todos comparten el huso horario de Balcarce (`TZ: America/Argentina/Buenos_Aires`)
 donde importa la hora, porque el servidor corre en UTC. Los que no necesitan
@@ -61,7 +62,7 @@ pega una persona, nunca un chat ni un archivo del repo.**
 
 | Nombre | Tipo | Para qué |
 |---|---|---|
-| `META_TOKEN` | Secreto | Publicar en Facebook e Instagram, y leer seguidores. No vence. Para vistas, alcance e interacciones le faltan los permisos `read_insights` e `instagram_manage_insights` (al regenerarlo, tildar TODOS los de ahora más esos dos). |
+| `META_TOKEN` | Secreto | Publicar en Facebook e Instagram, leer seguidores y **auditar lo publicado** (el cierre de las 23:30 y "Auditar redes" sólo leen). No vence. Para vistas, alcance e interacciones le faltan los permisos `read_insights` e `instagram_manage_insights` (al regenerarlo, tildar TODOS los de ahora más esos dos). |
 | `GEMINI_API_KEY_REDES` | Secreto | Voces y reels (clave paga). Sin ella los reels no arrancan. |
 | `GEMINI_API_KEY_REDACCION` | Secreto | Redactar notas. Acepta el nombre viejo `GEMINI_API_KEY`. **Cargada el 25/09**: la reescritura usa esta primero (gratis) y pasa a la de redes (paga) sólo si se queda sin cupo. El registro de "Actualizar la web" dice cuántos pedidos fueron a cada una. Se prueba con el workflow "Prueba de Gemini". |
 | `CLOUDFLARE_API_TOKEN` | Secreto | Subir el sitio a Cloudflare Pages. |
@@ -83,10 +84,11 @@ WhatsApp por corrida**, con los problemas primero:
 - **Noticia de Balcarce muy importante**: relevancia 100 y la misma noticia en 3 medios o más; 2 por día como mucho.
 - **Lo que salió en redes** desde la corrida anterior, en una línea por pieza.
 - **Estadísticas** a las 9 (`redes/estadisticas.mjs`; historia en `web/data/estadisticas.json`, sólo números).
-- **Resumen del día** a las 21, siempre: notas, redes, piezas, pendientes, problemas y estadísticas.
+- **Resumen del día** a las 21, siempre: notas, el **contrato del día** de Facebook e Instagram (posteos, reels e historias, con lo que falta y lo que está a tiempo), pendientes, problemas y estadísticas.
+- **Cierre del día** a las 23:30, una vez por día (`fechaDelCierre` en `redes/vigilar.mjs`): compara el contrato con lo que Meta tiene publicado de verdad. **Sólo avisa si hay discrepancias**; si todo cuadra, la línea "completos ✓" viaja en el próximo mensaje normal. Usa `META_TOKEN` (sólo lee; nunca se imprime). El duplicado en el libro no espera al cierre: es un problema de prioridad alta en la corrida.
 
-Lo ya avisado se guarda en `web/data/vigilancia.json`. Para ver cómo llega el
-resumen sin guardar nada: Actions → Vigilancia → Run workflow → modo "probar-resumen".
+Lo ya avisado se guarda en `web/data/vigilancia.json` (también `ultimoCierre` y `cierreOk`). Para ver cómo llega el
+resumen sin guardar nada: Actions → Vigilancia → Run workflow → modo "probar-resumen"; para el cierre, "probar-cierre" (muestra el informe contra Meta y el WhatsApp que saldría, sin mandarlo).
 
 Fuera de GitHub:
 

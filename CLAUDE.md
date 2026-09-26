@@ -216,6 +216,8 @@ publicar piezas a mano. Detalle y horarios en `REDES.md`.
 | cambiar la página del dólar (fuentes, tipos, textos de "actualizado") | `web/lib/dolar.js` y `web/components/dolar-vivo.js`; la foto de respaldo la guarda `web/scripts/foto-dolar.mjs` en cada build. Nunca decir "en vivo" |
 | cambiar una medida de imagen de Instagram/Facebook | `redes/formatos.mjs` (fuente única, con fecha de verificación) y `FORMATOS.md`. Los lunes `redes/auditar.mjs` audita lo publicado y avisa por WhatsApp si algo se desvió o los datos pasaron de 90 días |
 | cambiar qué revisa el vigilante o cuándo avisa | `redes/vigilar.mjs` |
+| cambiar qué tiene que salir cada día en Facebook e Instagram (el contrato: 3 reels, 6 historias, 5 posteos) | `redes/contrato.mjs` (piezas y estados), los números en `CONTRATO_DIARIO` (`ingesta/criterio.mjs` **y** la tabla de `CRITERIO-EDITORIAL.md`), las horas y ventanas en `redes/piezas.mjs`; se documenta en `REDES.md` ("El contrato del día") |
+| auditar lo publicado contra Meta (duplicados, faltantes, libro sin Meta, % de la semana) | `redes/auditar-redes.mjs`; a mano, workflow "Auditar redes"; el cierre de las 23:30 está en `redes/vigilar.mjs` (`fechaDelCierre`, `cierreDelDia`) |
 | sumar o completar comercios | `comercial/` (ver `COMERCIAL.md`) |
 | publicar un evento, su página en la web o a quién pedirle fechas | panel → Agenda (`panel/agenda.mjs`); la página, `web/lib/eventos.js` y `web/app/agenda/[id]`; los contactos, `ingesta/contactos-agenda.json` (ver `CRITERIO-EDITORIAL.md` § 8 y `PANEL.md`) |
 
