@@ -1,0 +1,66 @@
+# Audita, a mano, el contrato del día de Facebook e Instagram contra lo que Meta
+# tiene publicado de verdad (redes/auditar-redes.mjs). SÓLO LEE: no publica y no
+# manda WhatsApp. Es para que Hernán y Andrés la corran cuando quieran:
+# Actions → "Auditar redes" → Run workflow. El resultado se lee en el registro.
+#
+#   hoy       las piezas del día contra el contrato, el libro y Meta
+#   ayer      lo mismo del día anterior
+#   semana    los últimos 7 días: porcentaje de cumplimiento por red y por pieza
+#   crudo     lo que devuelve Meta, sin interpretar (por si algo no cuadra)
+#
+# El contrato del día está en REDES.md ("El contrato del día"). El vigilante
+# hace la misma auditoría solo, todos los días a las 23:30 (redes/vigilar.mjs).
+#
+# SECRETO: META_TOKEN (el mismo que publica; nunca se imprime).
+
+name: Auditar redes
+
+on:
+  workflow_dispatch:
+    inputs:
+      desde:
+        description: 'Semana: contar desde este día (AAAA-MM-DD). Vacío = desde que rige el contrato (25/09)'
+        required: false
+        default: ''
+
+permissions:
+  contents: read
+
+jobs:
+  auditar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      # Que "hoy" sea el de Balcarce.
+      TZ: America/Argentina/Buenos_Aires
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Hoy
+        run: node redes/auditar-redes.mjs
+        env:
+          META_TOKEN: ${{ secrets.META_TOKEN }}
+
+      - name: Ayer
+        if: always()
+        run: node redes/auditar-redes.mjs --fecha=$(date -d 'yesterday' +%F)
+        env:
+          META_TOKEN: ${{ secrets.META_TOKEN }}
+
+      - name: La semana
+        if: always()
+        run: node redes/auditar-redes.mjs --semana ${{ github.event.inputs.desde != '' && format('--desde={0}', github.event.inputs.desde) || '' }}
+        env:
+          META_TOKEN: ${{ secrets.META_TOKEN }}
+
+      - name: Lo que devuelve Meta (crudo)
+        if: always()
+        run: node redes/auditar-redes.mjs --crudo
+        env:
+          META_TOKEN: ${{ secrets.META_TOKEN }}

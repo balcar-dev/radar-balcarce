@@ -163,6 +163,25 @@ export const PIEZAS = {
   notasMinimasPodcast: 2,
 };
 
+/**
+ * El contrato del día en Facebook e Instagram (25/09): lo que TIENE que salir
+ * cada día, en cada red, y lo que se audita (redes/contrato.mjs,
+ * redes/auditar-redes.mjs, el resumen de las 21 y el cierre de las 23:30 del
+ * vigilante). Qué pieza sale a qué hora está en redes/piezas.mjs; acá sólo van
+ * los números.
+ */
+export const CONTRATO_DIARIO = {
+  posteosPorDia: 5,          // notas con enlace (Facebook) y su espejo en el feed (Instagram): como máximo
+  reelsPorDia: 3,            // los podcasts de la mañana, la tarde y la noche
+  historiasDePodcast: 3,     // cada podcast se sube también como historia
+  historiasDeClima: 2,       // la de la mañana y la de la noche
+  historiasDeFarmacia: 1,
+  historiasPorDia: 6,        // la suma de las tres de arriba (las semanales van aparte)
+  cierreMinutoDelDia: 1410,  // 23:30: el cierre del día contra lo que Meta tiene de verdad
+  toleranciaDeHoraMinutos: 20, // cuánto pueden diferir la hora del libro y la de Meta para ser la misma pieza
+  diasDeAuditoriaSemanal: 7,
+};
+
 /** Todos los números juntos, por nombre: es lo que la prueba compara con la
  *  tabla del documento (`TITULO.maximo`, `CUPO_DE_AFUERA.Deportes`…). */
 export const NUMEROS_DEL_CRITERIO = {
@@ -180,4 +199,5 @@ export const NUMEROS_DEL_CRITERIO = {
   CUPO_POR_DEFECTO,
   FACEBOOK,
   PIEZAS,
+  CONTRATO_DIARIO,
 };

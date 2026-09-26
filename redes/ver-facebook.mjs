@@ -17,7 +17,12 @@ async function pedir(camino, params = {}, conToken = token) {
   if (!r.ok || j.error) throw new Error(sinToken(sinToken(j.error?.message ?? `HTTP ${r.status}`, token), conToken));
   return j;
 }
-const hora = (t) => new Date(t).toLocaleString('es-AR', { timeZone: 'America/Argentina/Buenos_Aires', day: '2-digit', month: '2-digit', hour: '2-digit', minute: '2-digit' });
+// Meta manda la hora de los posteos como texto ISO (con "+0000") y la de las
+// historias de Facebook (`creation_time`) como segundos Unix: sin distinguir,
+// salía "Invalid Date".
+const aFecha = (t) => new Date(typeof t === 'number' || /^\d{9,11}$/.test(String(t)) ? Number(t) * 1000 : String(t).replace(/([+-]\d\d)(\d\d)$/, '$1:$2'));
+const hora = (t) => aFecha(t).toLocaleString('es-AR', { timeZone: 'America/Argentina/Buenos_Aires', day: '2-digit', month: '2-digit', hour: '2-digit', minute: '2-digit', hour12: false });
+const dia = (t) => aFecha(t).toLocaleDateString('es-AR', { timeZone: 'America/Argentina/Buenos_Aires', day: '2-digit', month: '2-digit' });
 const corto = (t) => String(t ?? '').replace(/\s+/g, ' ').slice(0, 70);
 
 const pag = await pedir(PAGINA, { fields: 'name,fan_count,followers_count,access_token' });
@@ -30,7 +35,7 @@ async function seccion(titulo, camino, campos, mostrar) {
     const datos = j.data ?? [];
     console.log(`\n${titulo}: ${datos.length} (los últimos 30)`);
     const porDia = {};
-    for (const d of datos) { const k = hora(d.created_time ?? d.creation_time ?? d.updated_time).slice(0, 5); porDia[k] = (porDia[k] || 0) + 1; }
+    for (const d of datos) { const k = dia(d.created_time ?? d.creation_time ?? d.updated_time); porDia[k] = (porDia[k] || 0) + 1; }
     console.log('  por día:', JSON.stringify(porDia));
     for (const d of datos.slice(0, 6)) console.log('  ·', hora(d.created_time ?? d.creation_time ?? d.updated_time), mostrar(d));
   } catch (e) { console.log(`\n${titulo}: no se pudo leer (${e.message.slice(0, 140)})`); }

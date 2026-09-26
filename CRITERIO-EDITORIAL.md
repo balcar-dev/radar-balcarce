@@ -696,6 +696,15 @@ instrucción de la IA (70, 90, 100 a 180…) también se controlan.
 | Podcast de la mañana y de la tarde: notas | 3 | `PIEZAS.notasPorPodcast` |
 | Podcast de la noche: notas | 4 | `PIEZAS.notasPodcastNoche` |
 | Podcast: notas mínimas para que salga | 2 | `PIEZAS.notasMinimasPodcast` |
+| Contrato del día: posteos de notas, como máximo | 5 | `CONTRATO_DIARIO.posteosPorDia` |
+| Contrato del día: reels (los tres podcasts) | 3 | `CONTRATO_DIARIO.reelsPorDia` |
+| Contrato del día: historias de podcast | 3 | `CONTRATO_DIARIO.historiasDePodcast` |
+| Contrato del día: historias de clima | 2 | `CONTRATO_DIARIO.historiasDeClima` |
+| Contrato del día: historias de farmacia | 1 | `CONTRATO_DIARIO.historiasDeFarmacia` |
+| Contrato del día: historias en total | 6 | `CONTRATO_DIARIO.historiasPorDia` |
+| Contrato del día: minuto del cierre (23:30) | 1410 | `CONTRATO_DIARIO.cierreMinutoDelDia` |
+| Contrato del día: minutos de diferencia entre el libro y Meta | 20 | `CONTRATO_DIARIO.toleranciaDeHoraMinutos` |
+| Contrato del día: días de la auditoría semanal | 7 | `CONTRATO_DIARIO.diasDeAuditoriaSemanal` |
 <!-- NUMEROS:FIN -->
 
 ## 12. La instrucción de la IA
