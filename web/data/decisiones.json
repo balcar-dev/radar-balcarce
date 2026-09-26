@@ -1,5 +1,5 @@
 {
-  "exportado": "2026-09-26T07:44:00.263Z",
+  "exportado": "2026-09-26T07:53:49.480Z",
   "decisiones": {
     "1951120": {
       "estado": "automatica",
@@ -23185,6 +23185,244 @@
           "fecha": "2026-09-26T01:56:42.000Z",
           "oficial": false,
           "aporte": "Detalló las estadísticas de seguridad vial y los cuestionamientos de especialistas sobre los vehículos autónomos."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "oqg5c6": {
+      "estado": "automatica",
+      "titulo": "El presidente de Corea del Sur asiste a un concierto de Stray Kids",
+      "copete": "El mandatario surcoreano Lee Jae-myung presenció el show del grupo de K-pop en Ciudad de México, tras reunirse con la presidenta Claudia Sheinbaum.",
+      "cuerpo": "El presidente de Corea del Sur, Lee Jae-myung, asistió junto a su esposa, Kim Hye Kyung, al concierto del grupo de K-pop Stray Kids en el Estadio GNP Seguros de Ciudad de México. La aparición del mandatario ocurrió durante su visita de Estado al país, pocas horas después de su encuentro oficial en el Palacio Nacional con la presidenta Claudia Sheinbaum.\n\nDurante el evento, que forma parte de las dos presentaciones programadas por la banda para el 25 y 26 de septiembre, el fundador de la agencia JYP Entertainment reveló la presencia del jefe de Estado ante el público. Las pantallas del recinto mostraron al presidente y a su esposa con un bastón de luz característico de la agrupación, antes de que el líder del conjunto, Bang Chan, saludara a los asistentes.\n\nLa visita oficial incluyó la firma de numerosos memorandos de entendimiento en áreas como comercio, tecnología, cultura y seguridad, en el marco de los 64 años de relaciones diplomáticas bilaterales. Lee destacó la gran recepción que la cultura surcoreana tiene en territorio mexicano.",
+      "guion": "El presidente de Corea del Sur asiste a un concierto de Stray Kids",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-26T07:53:49.392Z",
+      "claves": [
+        "El presidente surcoreano asistió al show de Stray Kids en Ciudad de México.",
+        "La aparición ocurrió durante su visita oficial y su encuentro con Claudia Sheinbaum.",
+        "Ambos gobiernos firmaron convenios de cooperación cultural y comercial."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El presidente de Corea del Sur, Lee Jae-myung, asistió al show de Stray Kids en Ciudad de México tras reunirse con Claudia Sheinbaum.",
+      "etiquetas": [
+        "Corea del Sur",
+        "Stray Kids",
+        "K-pop",
+        "Claudia Sheinbaum",
+        "Ciudad de México",
+        "Concierto"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/mexico/2026/09/26/presidente-de-corea-del-sur-asiste-al-concierto-de-stray-kids-en-el-estadio-gnp/",
+          "fecha": "2026-09-26T07:49:29.000Z",
+          "oficial": false,
+          "aporte": "Detalló la asistencia del presidente surcoreano al concierto de Stray Kids y su visita oficial a México."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "1gzq987": {
+      "estado": "automatica",
+      "titulo": "El Gobierno convoca al campo y a la industria por la ley de semillas",
+      "copete": "El Instituto Nacional de Semillas reunirá a técnicos rurales e industriales para definir puntos clave antes de enviar el proyecto al Congreso en un mes.",
+      "cuerpo": "El Instituto Nacional de Semillas convocó para el próximo lunes a la Mesa de Enlace y a la Asociación de Semilleros Argentinos a una reunión en la Secretaría de Agricultura. El objetivo es conocer los resultados de las conversaciones mantenidas para acercar posiciones sobre el uso propio de semillas de soja, trigo, algodón y legumbres, y redactar un proyecto que el Gobierno prevé enviar al Congreso en un plazo de un mes. \n\nDurante las últimas semanas, las negociaciones avanzaron hacia el uso de los deciles de superficie del Sistema de Información Simplificado Agrícola para ordenar el debate, tras descartar la propuesta inicial de una excepción general de quinientas hectáreas. Las partes buscan llegar con consensos sobre las condiciones y excepciones aplicables al uso propio gratuito y oneroso, según informó el medio periodístico nacional que dio a conocer la convocatoria oficial.",
+      "guion": "El Gobierno convoca al campo y a la industria por la ley de semillas",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-26T07:53:49.392Z",
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El Instituto Nacional de Semillas convocó al campo y a la industria a una reunión clave para definir el uso propio de semillas y avanzar en la redacción de un proyecto que el Gobierno prevé enviar al Congreso dentro de un mes.",
+      "etiquetas": [
+        "ley de semillas",
+        "gobierno nacional",
+        "campo",
+        "industria",
+        "congreso"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/economia/campo/ley-de-semillas-el-gobierno-convoca-al-campo-y-a-la-industria-para-enviar-el-proyecto-al-congreso-en-nid25092026/",
+          "fecha": "2026-09-25T22:09:52.000Z",
+          "oficial": false,
+          "aporte": "Detalló la convocatoria del Instituto Nacional de Semillas a la Mesa de Enlace y a la industria para discutir el uso propio de semillas y enviar el proyecto al Congreso en un mes."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1l7pv3u",
+          "titulo": "La industria autopartista encendió una alerta en el Congreso por el avance de piezas importadas en los autos nacionales",
+          "fecha": "2026-09-24T05:03:36.000Z",
+          "ruta": "/nota/la-industria-autopartista-encendio-una-alerta-en-el-congreso-por-el-1l7pv3u"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "18ldbf4": {
+      "estado": "automatica",
+      "titulo": "Javier Milei revela cuál es el vehículo de sus sueños",
+      "copete": "El presidente Javier Milei confesó en una entrevista en Estados Unidos su interés por adquirir una camioneta eléctrica de Tesla y detalló cómo le gustaría personalizarla.",
+      "cuerpo": "El mandatario ya había manifestado su interés por este vehículo en abril, cuando mantuvo un encuentro con el empresario Elon Musk en Estados Unidos.\n\nEl modelo cuenta con tres configuraciones mecánicas en el mercado estadounidense, cuyos precios varían entre los 75.000 y los 100.000 dólares. Su importación hacia la Argentina requiere atravesar un régimen particular debido a la ausencia de distribución oficial de la marca en el país, lo que eleva de manera considerable el costo final por la aplicación de aranceles e impuestos aduaneros.",
+      "guion": "Javier Milei revela cual es el vehiculo de sus suenos",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-26T07:53:49.392Z",
+      "claves": [
+        "Javier Milei expresó su deseo de tener una Cybertruck de Tesla.",
+        "El mandatario indicó que le gustaría pintarla de negro con un león dorado.",
+        "Los precios de este modelo eléctrico varían entre los 75.000 y los 100.000 dólares en Estados Unidos.",
+        "Su importación a la Argentina incrementa notablemente el valor final por aranceles e impuestos."
+      ],
+      "seSabe": [
+        "Javier Milei reveló su interés por una Cybertruck de Tesla durante una entrevista en Nueva York.",
+        "El presidente mencionó que le gustaría personalizar el vehículo con color negro y un león dorado.",
+        "La camioneta eléctrica cuenta con tres versiones en el mercado estadounidense y diferentes rangos de autonomía y precios."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El presidente Javier Milei reveló en una entrevista en Nueva York cuál es el vehículo de sus sueños, detallando el modelo que le gustaría tener y cómo lo personalizaría.",
+      "etiquetas": [
+        "Javier Milei",
+        "Tesla",
+        "Cybertruck",
+        "Estados Unidos",
+        "Economia"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/economia/2026/09/26/javier-milei-revelo-cual-es-el-auto-de-sus-suenos-que-modelo-eligio-cuanto-cuesta-y-como-lo-tunearia/",
+          "fecha": "2026-09-26T04:01:13.000Z",
+          "oficial": false,
+          "aporte": "Detalló las declaraciones de Javier Milei sobre su interés en una camioneta Tesla, los precios en Estados Unidos y los costos estimados de importación a la Argentina."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "17gsdsi",
+          "titulo": "Javier Milei visita la Tumba del Rebe en Nueva York",
+          "fecha": "2026-09-25T13:41:27.000Z",
+          "ruta": "/nota/el-presidente-visita-nueva-york-antes-de-regresar-al-pais-17gsdsi"
+        },
+        {
+          "id": "1gmeeme",
+          "titulo": "Javier Milei regresa de Estados Unidos sin concretar un encuentro con Donald Trump",
+          "fecha": "2026-09-25T10:00:00.000Z",
+          "ruta": "/nota/javier-milei-regresa-de-estados-unidos-sin-concretar-un-encuentro-con-1gmeeme"
+        },
+        {
+          "id": "sadcj1",
+          "titulo": "Javier Milei regresa a la Argentina tras su paso por Estados Unidos",
+          "fecha": "2026-09-25T04:32:54.000Z",
+          "ruta": "/nota/milei-vuelve-a-la-argentina-con-la-economia-bajo-presion-y-un-desafio-sadcj1"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "i2i6js": {
+      "estado": "automatica",
+      "titulo": "Johnny Depp debuta como escultor en Estambul con The Bunnyman",
+      "copete": "El actor Johnny Depp presenta su primera escultura en la feria Contemporary Istanbul, una pieza de dos metros inspirada en un dibujo de su infancia y en un sueño recurrente.",
+      "cuerpo": "El evento reúne a más de setecientas artistas y setenta galerías de dieciséis países en un antiguo astillero otomano a orillas del Cuerno de Oro. Ali Güreli, presidente y fundador del encuentro, remarcó durante la conferencia inaugural el desafío de poner el foco en Asia y destacó la importancia de la confluencia entre artistas, galerías y coleccionistas en Turquía.\n\nLa muestra también incluye obras de Yayoi Kusama y una instalación monumental de Chisato Matsumoto.",
+      "guion": "Johnny Depp debuta como escultor en Estambul con The Bunnyman",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-26T07:53:49.392Z",
+      "claves": [
+        "Johnny Depp presenta su primera escultura en la feria Contemporary Istanbul.",
+        "La obra se llama The Bunnyman y mide dos metros en bronce blanco.",
+        "La figura está inspirada en un dibujo de su hijo y en un sueño de su infancia.",
+        "La feria reúne a más de setecientas artistas y setenta galerías internacionales."
+      ],
+      "seSabe": [
+        "Johnny Depp presenta la escultura The Bunnyman en la feria Contemporary Istanbul.",
+        "La pieza mide dos metros, es de bronce blanco y representa a un guardián mitad humano y mitad conejo.",
+        "La obra está inspirada en un dibujo de su hijo y en un sueño de la infancia del actor.",
+        "La feria se realiza en el distrito de Tersane y convoca a setenta galerías y más de setecientas artistas."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Johnny Depp presenta su primera escultura, llamada The Bunnyman, en la feria Contemporary Istanbul en Turquía. La obra de dos metros está inspirada en un dibujo de su infancia y en un sueño recurrente.",
+      "etiquetas": [
+        "Johnny Depp",
+        "Estambul",
+        "escultura",
+        "arte contemporáneo"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/cultura/con-the-bunnyman-un-guardian-mitad-humano-y-mitad-conejo-johnny-depp-debuta-como-escultor-en-la-nid25092026/",
+          "fecha": "2026-09-25T23:04:31.000Z",
+          "oficial": false,
+          "aporte": "Detalles sobre la escultura de Johnny Depp en la feria Contemporary Istanbul y características del evento."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "1vponx3": {
+      "estado": "automatica",
+      "titulo": "Las tecnológicas chinas desarrollan modelos masivos de inteligencia artificial",
+      "copete": "Las empresas tecnológicas chinas impulsan la creación de modelos de inteligencia artificial de gran escala y millones de parámetros, mientras continúan con el desarrollo de versiones compactas para dispositivos.",
+      "cuerpo": "A su vez, Alibaba situó a Qwen3.8-Max en dos coma cuatro billones de parámetros.\n\nEl tamaño total no determina por sí solo la precisión del modelo, ya que intervienen factores como la calidad de los datos de entrenamiento.\n\nLa próxima frontera apunta a modelos de entre cinco y diez billones de parámetros, según indicó Alibaba respecto al desarrollo de Qwen 4 y sus sucesores. En paralelo, persisten los desarrollos de sistemas pequeños orientados a la eficiencia en dispositivos personales con menores recursos de cálculo.",
+      "guion": "Las tecnológicas chinas desarrollan modelos masivos de inteligencia artificial",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-26T07:53:49.392Z",
+      "claves": [
+        "Empresas chinas desarrollan modelos colosales de inteligencia artificial.",
+        "Sistemas como Qwen3.8-Max y Kimi K3 alcanzan escalas multimillonarias.",
+        "La arquitectura de mezcla de expertos activa solo una parte de los parámetros.",
+        "Alibaba proyecta modelos de hasta diez billones de parámetros para el futuro."
+      ],
+      "noConfirmado": [
+        "No se confirmó públicamente si ByteDance persigue una escala similar a la de Alibaba.",
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Las empresas tecnológicas chinas avanzan en el desarrollo de modelos masivos de inteligencia artificial con billones de parámetros, combinando sistemas colosales con versiones compactas para dispositivos.",
+      "etiquetas": [
+        "inteligencia artificial",
+        "China",
+        "tecnología",
+        "Alibaba",
+        "DeepSeek"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Xataka",
+          "enlace": "https://www.xataka.com/robotica-e-ia/empresas-chinas-lleva-delantera-modelos-pequenos-ia-quieren-justo-contrario-modelos-colosales",
+          "fecha": "2026-09-25T21:48:17.000Z",
+          "oficial": false,
+          "aporte": "Detalló el desarrollo de modelos de inteligencia artificial de gran escala en empresas chinas y sus características técnicas."
         }
       ],
       "verificacion": {
