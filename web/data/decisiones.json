@@ -1,5 +1,5 @@
 {
-  "exportado": "2026-09-26T09:13:16.199Z",
+  "exportado": "2026-09-26T09:22:59.423Z",
   "decisiones": {
     "1951120": {
       "estado": "automatica",
@@ -16480,13 +16480,47 @@
     },
     "pwq91n": {
       "estado": "pendiente",
-      "titulo": null,
-      "copete": null,
-      "cuerpo": null,
-      "guion": null,
-      "deIA": null,
-      "por": null,
-      "cuando": "2026-09-25T11:30:41.475Z"
+      "titulo": "Informan los servicios de sepelios de la Cooperativa de Electricidad en Balcarce",
+      "copete": "La Cooperativa de Electricidad de Balcarce dio a conocer los avisos fúnebres y servicios de sepelios correspondientes a los últimos meses en el distrito.",
+      "cuerpo": "Durante las últimas semanas se registraron diversos servicios de sepelios e inhumaciones en el partido de Balcarce, según la información brindada por los servicios fúnebres de la Cooperativa de Electricidad «General Balcarce» Limitada. Los procedimientos incluyeron traslados a salas velatorias, oficios religiosos y posteriores inhumaciones en el Cementerio Municipal, así como cremaciones en el partido de Miramar.\n\nLos avisos publicados detallan las casas de duelo correspondientes a cada fallecimiento ocurrido en distintas fechas a lo largo de los meses previos, abarcando domicilios tanto en la planta urbana como en zonas rurales del distrito como Los Pinos.",
+      "guion": "Informan los servicios de sepelios de la Cooperativa de Electricidad en Balcarce",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-26T09:22:59.365Z",
+      "claves": [
+        "La Cooperativa de Electricidad informó los servicios de sepelios.",
+        "Los procedimientos incluyeron inhumaciones y cremaciones.",
+        "Los avisos abarcan decesos registrados en los últimos meses en el distrito."
+      ],
+      "seSabe": [
+        "La Cooperativa de Electricidad «General Balcarce» Limitada estuvo a cargo de los servicios de sepelios.",
+        "Se realizaron inhumaciones en el Cementerio Municipal y cremaciones en Miramar según cada caso.",
+        "Los avisos corresponden a fallecimientos registrados en distintas fechas a lo largo del año."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Conocé los detalles sobre los servicios de sepelios informados por la Cooperativa de Electricidad de Balcarce correspondientes a los últimos meses.",
+      "etiquetas": [
+        "sepelios",
+        "cooperativa de electricidad",
+        "balcarce",
+        "fallecimientos"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/dolor-en-el-periodismo-a-los-82-anos-murio-chiche-gelblung-655",
+          "fecha": null,
+          "oficial": false,
+          "aporte": "Detalló el listado de servicios de sepelios, fechas de deceso y casas de duelo gestionadas por la cooperativa local."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
     },
     "e2kylj": {
       "estado": "automatica",
@@ -25058,6 +25092,74 @@
         "nivel": "MEDIA",
         "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
         "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "150923r": {
+      "estado": "automatica",
+      "titulo": "Franco Colapinto larga noveno en el Gran Premio de Azerbaiyán",
+      "copete": "El piloto argentino afrontará este sábado la carrera en el circuito callejero de Bakú por una fecha de la Fórmula 1. La competencia principal se adelantó debido a una festividad local.",
+      "cuerpo": "El piloto argentino Franco Colapinto largará este sábado desde la novena posición en el Gran Premio de Azerbaiyán, la décimo quinta prueba de la temporada de la Fórmula 1 que se disputa en el circuito callejero de Bakú.\n\nLa actividad en pista se adelantó un día respecto del cronograma habitual debido a una conmemoración local en Azerbaiyán.\n\nEn paralelo a la competencia, el mercado de pilotos sumó novedades luego de que Esteban Ocon confirmara su condición de agente libre para la próxima temporada. La carrera representa una nueva oportunidad para el representante nacional dentro de la máxima categoría del automovilismo mundial.",
+      "guion": "Franco Colapinto larga noveno en el Gran Premio de Azerbaiyán",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-26T09:22:59.364Z",
+      "noConfirmado": [
+        "Todavía no hay definiciones oficiales sobre la conformación de la dupla de pilotos de la escudería Haas para la próxima temporada."
+      ],
+      "textoRedes": "Franco Colapinto largará noveno este sábado en el Gran Premio de Azerbaiyán de Fórmula 1. La competencia en el circuito callejero de Bakú se adelantó por una festividad local y se puede ver desde las ocho de la mañana.",
+      "etiquetas": [
+        "Franco Colapinto",
+        "Formula 1",
+        "Gran Premio de Azerbaiyán",
+        "Bakú"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/deportes/2026/09/26/franco-colapinto-largara-9-en-el-circuito-callejero-de-baku-del-gran-premio-de-azerbaiyan-de-formula-1-hora-tv-y-la-grilla-de-largada/",
+          "fecha": "2026-09-26T09:20:14.000Z",
+          "oficial": false,
+          "aporte": "Detalló el horario de la carrera, las opciones de transmisión televisiva y las declaraciones de Esteban Ocon sobre su futuro."
+        },
+        {
+          "medio": "Motorsport",
+          "enlace": "https://es.motorsport.com/f1/news/hora-carrera-sabado-baku-azerbaiyan-como-ver-2026/10858841/?utm_source=RSS&utm_medium=referral&utm_campaign=RSS-F1&utm_term=News&utm_content=es",
+          "fecha": "2026-09-26T06:38:38.000Z",
+          "oficial": false,
+          "aporte": "Explicó que la modificación del cronograma al día sábado responde a una festividad local en Azerbaiyán."
+        },
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/deportes/automovilismo/franco-colapinto-en-la-formula-1-en-vivo-nid25092026/",
+          "fecha": "2026-09-25T16:22:15.000Z",
+          "oficial": false,
+          "aporte": "Confirmó la posición de largada de Franco Colapinto y la pole position obtenida por George Russell."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "l3ky37",
+          "titulo": "Franco Colapinto largará noveno en el Gran Premio de Azerbaiyán",
+          "fecha": "2026-09-26T08:00:11.000Z",
+          "ruta": "/nota/franco-colapinto-largara-noveno-en-el-gran-premio-de-azerbaiyan-l3ky37"
+        },
+        {
+          "id": "1ry7mu3",
+          "titulo": "Franco Colapinto largará noveno en el Gran Premio de Azerbaiyán",
+          "fecha": "2026-09-25T19:24:40.000Z",
+          "ruta": "/nota/franco-colapinto-larga-noveno-en-el-gran-premio-de-azerbaiyan-1ry7mu3"
+        },
+        {
+          "id": "xtbw5",
+          "titulo": "Franco Colapinto largara noveno el Gran Premio de Azerbaiyan",
+          "fecha": "2026-09-25T19:13:53.000Z",
+          "ruta": "/nota/franco-colapinto-largara-noveno-el-gran-premio-de-azerbaiyan-xtbw5"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron tres medios independientes.",
+        "sugeridoPorIA": "ALTA"
       }
     }
   },
