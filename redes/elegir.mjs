@@ -30,6 +30,7 @@ import {
 } from '../ingesta/criterio.mjs';
 import { armarPodcast, variante, segundosDePodcast } from './guiones.mjs';
 import { MEDIO } from './prompt-redes.mjs';
+import { diaAR, minutoDelDiaAR } from '../ingesta/zona.mjs';
 
 // Los números de las redes son parte del criterio editorial: están en
 // ingesta/criterio.mjs y en la tabla "Los números" de CRITERIO-EDITORIAL.md,
@@ -61,27 +62,6 @@ export const REGLAS_FACEBOOK = {
   horasSinRepetirTema: FACEBOOK.horasSinRepetirTema,
   seccionesQueEsperanPersona: SECCIONES_QUE_ESPERAN_PERSONA,
 };
-
-const ZONA = 'America/Argentina/Buenos_Aires';
-
-/** La hora (0 a 23) en Balcarce. */
-export function horaAR(fecha) {
-  return Number(new Intl.DateTimeFormat('en-GB', { hour: '2-digit', hour12: false, timeZone: ZONA }).format(fecha)) % 24;
-}
-
-/** Los minutos desde la medianoche en Balcarce (22:00 es 1320). */
-export function minutoDelDiaAR(fecha) {
-  const partes = new Intl.DateTimeFormat('en-GB', {
-    hour: '2-digit', minute: '2-digit', hour12: false, timeZone: ZONA,
-  }).formatToParts(fecha);
-  const valor = (tipo) => Number(partes.find((p) => p.type === tipo)?.value ?? 0);
-  return (valor('hour') % 24) * 60 + valor('minute');
-}
-
-/** El día en Balcarce como AAAA-MM-DD. */
-export function diaAR(fecha) {
-  return new Intl.DateTimeFormat('en-CA', { timeZone: ZONA }).format(fecha);
-}
 
 /** El libro vacío. */
 export const libroNuevo = () => ({ facebook: {}, instagram: {} });

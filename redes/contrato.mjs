@@ -35,7 +35,8 @@
 // Sin dependencias: sólo lo que trae Node. Sin red y sin reloj propio.
 
 import { CONTRATO_DIARIO, FACEBOOK, SECCIONES_QUE_ESPERAN_PERSONA } from '../ingesta/criterio.mjs';
-import { diaAR, minutoDelDiaAR, temaParecido, esNotaPropia } from './elegir.mjs';
+import { temaParecido, esNotaPropia } from './elegir.mjs';
+import { diaAR, minutoDelDiaAR } from '../ingesta/zona.mjs';
 import { cronogramaDelDia, ventanaDe, HORAS_REELS } from './piezas.mjs';
 import { esperaCuerpo } from '../web/lib/cuerpo.js';
 

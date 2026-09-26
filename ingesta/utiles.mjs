@@ -6,6 +6,8 @@
 // puede adivinar, para que no sea "todos los martes a las tres" y la gente
 // deje de mirarla por previsible.
 
+import { ZONA, diaAR, diaSemanaAR } from './zona.mjs';
+
 // Tomados el 18/09/2026 de la página oficial del municipio
 // (balcarce.gob.ar/telefonos-utiles/), que es justamente una lista de
 // teléfonos útiles ya armada por ellos. Los nacionales (911, 107) no están
@@ -42,17 +44,8 @@ export const FUENTE = 'balcarce.gob.ar/telefonos-utiles';
 
 const DIAS = ['domingo', 'lunes', 'martes', 'miércoles', 'jueves', 'viernes', 'sábado'];
 
-const ZONA = 'America/Argentina/Buenos_Aires';
 const DIA_MS = 24 * 60 * 60 * 1000;
 const SEMANA_MS = 7 * DIA_MS;
-
-/** El día de Balcarce como AAAA-MM-DD. */
-const diaAR = (fecha) => new Intl.DateTimeFormat('en-CA', { timeZone: ZONA }).format(fecha);
-
-/** El día de la semana en Balcarce, con 0 = domingo como Date#getDay(). */
-export const diaSemanaAR = (fecha = new Date()) => ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'].indexOf(
-  new Intl.DateTimeFormat('en-US', { weekday: 'short', timeZone: ZONA }).format(fecha),
-);
 
 /**
  * Qué día (lunes a viernes, 1 a 5) le toca a los teléfonos útiles esta semana.
@@ -118,7 +111,7 @@ export const MINUTO_DE_CAMBIO = 30;
  * a las seis de la tarde.
  */
 export function diaDeTurno(ahora = new Date()) {
-  const enBalcarce = new Date(ahora.toLocaleString('en-US', { timeZone: 'America/Argentina/Buenos_Aires' }));
+  const enBalcarce = new Date(ahora.toLocaleString('en-US', { timeZone: ZONA }));
   const dia = new Date(enBalcarce);
   const minutos = enBalcarce.getHours() * 60 + enBalcarce.getMinutes();
   if (minutos < HORA_DE_CAMBIO * 60 + MINUTO_DE_CAMBIO) dia.setDate(dia.getDate() - 1);
@@ -133,7 +126,7 @@ export function diaDeTurno(ahora = new Date()) {
  */
 export function fechaEnBalcarce(ahora = new Date()) {
   const partes = Object.fromEntries(new Intl.DateTimeFormat('en-US', {
-    timeZone: 'America/Argentina/Buenos_Aires', year: 'numeric', month: 'numeric', day: 'numeric',
+    timeZone: ZONA, year: 'numeric', month: 'numeric', day: 'numeric',
   }).formatToParts(ahora).map((p) => [p.type, p.value]));
   return { anio: Number(partes.year), mes: Number(partes.month), dia: Number(partes.day) };
 }

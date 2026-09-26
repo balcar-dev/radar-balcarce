@@ -14,7 +14,8 @@
 //
 // Sin red y sin reloj propio: se prueba entera.
 
-import { diaAR, horaAR, yaPublicada } from './elegir.mjs';
+import { yaPublicada } from './elegir.mjs';
+import { diaAR, horaAR, minutoDelDiaAR, diaSemanaAR } from '../ingesta/zona.mjs';
 import { horariosDe, toca } from '../panel/horarios.mjs';
 import { diaRotativoDeUtiles } from '../ingesta/utiles.mjs';
 import { CONTRATO_DIARIO } from '../ingesta/criterio.mjs';
@@ -126,15 +127,6 @@ const aMinutos = (hhmm) => {
   return h * 60 + (m || 0);
 };
 
-const minutosAR = (fecha) => horaAR(fecha) * 60 + Number(
-  new Intl.DateTimeFormat('en-GB', { minute: '2-digit', timeZone: 'America/Argentina/Buenos_Aires' }).format(fecha),
-);
-
-/** El día de la semana en Balcarce, con 0 = domingo como Date#getDay(). */
-const diaSemanaAR = (fecha) => ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'].indexOf(
-  new Intl.DateTimeFormat('en-US', { weekday: 'short', timeZone: 'America/Argentina/Buenos_Aires' }).format(fecha),
-);
-
 // Los teléfonos útiles rotan de lunes a viernes, una semana distinta cada vez
 // (ingesta/utiles.mjs). Esa regla es la única: la usan también reels/plan.mjs y
 // el panel, vía `toca` de panel/horarios.mjs. Se re-exporta con el nombre de
@@ -195,7 +187,7 @@ export function cronogramaDelDia(fecha = new Date(), { estado = {} } = {}) {
 /** ¿Está dentro de su hora? Desde que le toca hasta que vence la ventana. */
 function enHora(hora, ahora, ventana) {
   const desde = aMinutos(hora);
-  const ahoraMin = minutosAR(ahora);
+  const ahoraMin = minutoDelDiaAR(ahora);
   return ahoraMin >= desde && ahoraMin < desde + ventana;
 }
 

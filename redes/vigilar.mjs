@@ -39,7 +39,8 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { cronogramaDelDia, ventanaDe, claveDePieza } from './piezas.mjs';
-import { yaPublicada, horaAR, diaAR, minutoDelDiaAR, estaActivo } from './elegir.mjs';
+import { yaPublicada, estaActivo } from './elegir.mjs';
+import { horaAR, diaAR, minutoDelDiaAR } from '../ingesta/zona.mjs';
 import { enviarWhatsApp, sinSecretos } from './whatsapp.mjs';
 import { auditoriaVencida } from './auditar.mjs';
 import { contratoDelDia, CONTRATO_DESDE } from './contrato.mjs';
@@ -200,7 +201,7 @@ export function evaluar({
       if (!PIEZAS_FIJAS.includes(p.nombre)) continue;
       const [h, m] = p.hora.split(':').map(Number);
       const cierre = h * 60 + m + ventanaDe(p.nombre);
-      const ahoraMin = hora * 60 + Number(new Intl.DateTimeFormat('en-GB', { minute: '2-digit', timeZone: 'America/Argentina/Buenos_Aires' }).format(ahora));
+      const ahoraMin = minutoDelDiaAR(ahora);
       if (ahoraMin < cierre + 15) continue; // todavía está a tiempo
       if (!yaPublicada(libro, 'instagram', claveDePieza(p.nombre, ahora))) {
         de(`pieza-${p.nombre}`, 'alta', `No salió la pieza "${p.nombre}" de las ${p.hora}, y ya se cerró su ventana.`);

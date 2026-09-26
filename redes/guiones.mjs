@@ -13,13 +13,10 @@
 
 import { VOZ, CLIMA_VOZ, PODCAST_VOZ, PIEZA_FIJA_VOZ } from '../ingesta/criterio.mjs';
 import { MEDIO, SITIO_DICHO } from './prompt-redes.mjs';
+import { ZONA, diaAR } from '../ingesta/zona.mjs';
 
-const ZONA = 'America/Argentina/Buenos_Aires';
 
 // --- la semilla ------------------------------------------------------------
-
-/** El día en Balcarce como AAAA-MM-DD. */
-export const diaDe = (fecha = new Date()) => new Intl.DateTimeFormat('en-CA', { timeZone: ZONA }).format(fecha);
 
 /** El día de la semana en Balcarce ("lunes", "viernes"…). */
 export const diaDeLaSemana = (fecha = new Date()) => new Intl.DateTimeFormat('es-AR', { weekday: 'long', timeZone: ZONA }).format(fecha);
@@ -35,7 +32,7 @@ export function hash(texto) {
 }
 
 /** La semilla de una pieza en un día. */
-export const semillaDe = (pieza, fecha = new Date()) => `${diaDe(fecha)}|${pieza}`;
+export const semillaDe = (pieza, fecha = new Date()) => `${diaAR(fecha)}|${pieza}`;
 
 /** Elige una entrada del banco para un lugar (`ranura`) de la pieza. */
 export const variante = (banco, semilla, ranura) => banco[hash(`${semilla}|${ranura}`) % banco.length];

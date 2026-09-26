@@ -32,7 +32,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { crearCliente } from './meta.mjs';
 import { sinSecretos } from './whatsapp.mjs';
-import { diaAR, horaAR } from './elegir.mjs';
+import { diaAR, horaAR } from '../ingesta/zona.mjs';
 import { idDeRuta } from '../web/lib/ruta.js';
 
 export const SITIO = 'radarbalcarce.com';

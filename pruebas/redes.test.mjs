@@ -8,9 +8,10 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { crearCliente, ErrorMeta, sinToken } from '../redes/meta.mjs';
 import {
-  elegirParaFacebook, mensajeDeNota, mensajeParaInstagram, enlaceDeNota, imagenDeNota, libroNuevo, anotar, yaPublicada, horaAR, REGLAS_FACEBOOK,
-  minutoDelDiaAR, temaParecido,
+  elegirParaFacebook, mensajeDeNota, mensajeParaInstagram, enlaceDeNota, imagenDeNota, libroNuevo, anotar, yaPublicada, REGLAS_FACEBOOK,
+  temaParecido,
 } from '../redes/elegir.mjs';
+import { horaAR, minutoDelDiaAR } from '../ingesta/zona.mjs';
 
 const TOKEN = 'TOKEN-SECRETO-123';
 

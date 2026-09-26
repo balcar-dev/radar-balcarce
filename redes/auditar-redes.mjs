@@ -35,18 +35,16 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { CONTRATO_DIARIO } from '../ingesta/criterio.mjs';
-import { diaAR } from './elegir.mjs';
+import { diaAR, horaCortaAR as hhmm } from '../ingesta/zona.mjs';
 import { crearCliente, sinToken } from './meta.mjs';
 import {
   contratoDelDia, lineaDeRed, CONTRATO_DESDE, REDES_DEL_CONTRATO,
 } from './contrato.mjs';
 
-const ZONA = 'America/Argentina/Buenos_Aires';
 const TOLERANCIA_MIN = CONTRATO_DIARIO.toleranciaDeHoraMinutos;
 /** A qué distancia de una publicación del libro otra igual se considera repetida. */
 const RADIO_DE_DUPLICADO_MIN = 30;
 
-const hhmm = (iso) => new Date(iso).toLocaleTimeString('es-AR', { hour: '2-digit', minute: '2-digit', hour12: false, timeZone: ZONA });
 const minutosEntre = (a, b) => Math.abs(new Date(a).getTime() - new Date(b).getTime()) / 60000;
 
 // ---------------------------------------------------------- lo que dice Meta

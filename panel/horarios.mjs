@@ -8,7 +8,8 @@
 // Lo que se guarda vive en panel/datos/estado.json, que no se versiona: son
 // decisiones de la redacción, no del proyecto.
 
-import { diaRotativoDeUtiles, diaSemanaAR } from '../ingesta/utiles.mjs';
+import { diaRotativoDeUtiles } from '../ingesta/utiles.mjs';
+import { diaSemanaAR } from '../ingesta/zona.mjs';
 
 // Los días de la semana como los devuelve Date#getDay(): 0 es domingo.
 export const DIAS = [

@@ -14,14 +14,13 @@
 // Funciones puras: reciben lo observado y el estado guardado, y devuelven qué
 // decir. Se prueban sin red. Sin dependencias: sólo lo que trae Node.
 
-import { diaAR, enlaceDeNota, temaParecido } from './elegir.mjs';
+import { enlaceDeNota, temaParecido } from './elegir.mjs';
+import { diaAR, horaCortaAR as horaCorta } from '../ingesta/zona.mjs';
 import { decisionHumana } from '../ingesta/utiles.mjs';
 import { LARGO_MAXIMO } from './whatsapp.mjs';
 import { contratoDelDia, textoContrato, contratoCompleto } from './contrato.mjs';
 
-const ZONA = 'America/Argentina/Buenos_Aires';
 const minutos = (desde, ahora) => (ahora.getTime() - new Date(desde).getTime()) / 60000;
-const horaCorta = (iso) => new Date(iso).toLocaleTimeString('es-AR', { hour: '2-digit', minute: '2-digit', hour12: false, timeZone: ZONA });
 
 /** Un texto cortado en una palabra entera, con "…" si hizo falta cortar. */
 export function recortar(texto = '', maximo = 60) {

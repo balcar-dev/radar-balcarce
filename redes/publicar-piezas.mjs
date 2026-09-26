@@ -15,7 +15,8 @@
 //     vez). Si falla una de las siguientes, se reintenta en el momento y, si
 //     igual no anda, se avisa y se sigue: no se pierde lo que ya salió.
 
-import { anotar, diaAR } from './elegir.mjs';
+import { anotar } from './elegir.mjs';
+import { diaAR } from '../ingesta/zona.mjs';
 import { claveDePieza, piezasQueTocan, tipoInstagram, pieDePieza } from './piezas.mjs';
 
 /** Cómo se llama cada red en el libro y qué método del cliente la publica. */

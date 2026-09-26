@@ -33,6 +33,7 @@ import {
 } from '../ingesta/verificar.mjs';
 import { semaforoDelTexto } from '../ingesta/ingesta.mjs';
 import { decisionHumana } from '../ingesta/utiles.mjs';
+import { ZONA } from '../ingesta/zona.mjs';
 import { traerTexto } from '../ingesta/articulo.mjs';
 import { MEDIOS_OFICIALES } from '../ingesta/fuentes.mjs';
 import { palabrasDeTitular } from '../redes/elegir.mjs';
@@ -92,8 +93,6 @@ function limpiarJson(texto) {
   if (!m) throw new Error('la respuesta no trae un JSON reconocible');
   return JSON.parse(m[0]);
 }
-
-const ZONA = 'America/Argentina/Buenos_Aires';
 
 /** "24/09/2026", en la hora de Balcarce. Vacío si no hay fecha. */
 export function fechaCorta(iso) {
