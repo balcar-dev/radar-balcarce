@@ -17,15 +17,19 @@
 export const VIGENCIA_DIAS = 90;
 
 /** Cuándo se verificaron por última vez estas medidas (AAAA-MM-DD). */
-export const VERIFICADO = '2026-09-24';
+export const VERIFICADO = '2026-09-25';
 
-/** De dónde salieron (consultadas el 24/09/2026). */
+/** De dónde salieron (consultadas el 24/09/2026 y, la portada de Facebook, el 25/09/2026). */
 export const FUENTES = [
   'https://buffer.com/resources/instagram-image-size/',
   'https://influencermarketinghub.com/instagram-image-sizes/',
   'https://yoursocial.team/blog/instagram-new-grid-format',
   'https://buffer.com/resources/social-media-image-sizes/',
   'https://blog.hootsuite.com/social-media-image-sizes-guide/',
+  // Portada de Facebook (25/09/2026): 820x312 en computadora y 640x360 en celular.
+  'https://socialsizes.io/facebook-cover-photo-size/',
+  'https://www.brandwatch.com/blog/facebook-cover-photo-size/',
+  'https://whatdimensions.com/photo-image-sizes/dimensions-for-facebook-cover-photo',
 ];
 
 export const FORMATOS = {
@@ -55,9 +59,14 @@ export const FORMATOS = {
     foto: { ancho: 1080, alto: 1350, proporcion: '4:5', verificado: true },
     historia: { ancho: 1080, alto: 1920, proporcion: '9:16', verificado: true },
     reel: { ancho: 1080, alto: 1920, proporcion: '9:16', verificado: true },
-    // Portada de la página: se ve distinto en escritorio y en celular; se hace
-    // al doble de la base (820x312) y con el texto al centro.
-    portada: { ancho: 1640, alto: 624, proporcion: '2.63:1', zonaSegura: { ancho: 640, alto: 312 }, verificado: false },
+    // Portada de la página (verificado 25/09/2026 en guías; la ayuda oficial de
+    // Meta no se pudo leer entera): computadora 820x312 (2,63:1), celular 640x360
+    // (16:9). Una sola imagen 16:9 al doble (1640x924): en escritorio se recorta
+    // arriba y abajo a 2,63:1 (quedan las filas 150 a 774) y en el celular se ve
+    // entera, con el avatar tapando el centro-abajo (desde ~54 % de la altura;
+    // medido en una captura real, no documentado por Meta). El texto va en la zona
+    // segura común (ver reels/portada.mjs y FORMATOS.md).
+    portada: { ancho: 1640, alto: 924, proporcion: '16:9', escritorio: { ancho: 820, alto: 312 }, celular: { ancho: 640, alto: 360 }, zonaSegura: { x: 220, y: 190, ancho: 1200, alto: 235 }, verificado: true },
     perfil: { ancho: 720, alto: 720, proporcion: '1:1', redonda: true, verificado: false },
   },
   web: {

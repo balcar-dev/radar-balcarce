@@ -84,10 +84,17 @@ Cada cosa figura una sola vez: si está en "Para mañana", no se repite abajo.
     Instagram sólo se edita desde el celular; Facebook, desde Meta Business
     Suite.
 18. **Confirmar las medidas de `FORMATOS.md` que no tienen fuente oficial**:
-    foto de perfil de Instagram (1080 × 1080), portada de la página de Facebook
-    (1640 × 624) y foto de perfil de Facebook (720 × 720). Están marcadas
+    foto de perfil de Instagram (1080 × 1080) y foto de perfil de Facebook
+    (720 × 720). Están marcadas
     `verificado: false` en `redes/formatos.mjs`. Además, volver a mirar todas
     cada 90 días (la auditoría avisa).
+
+18b. **Subir a mano la portada nueva de Facebook** (25/09): la anterior se veía
+    cortada en el celular ("ADAR BALCARC") y con la bajada tapada por el avatar.
+    La nueva es 16:9, 1640 × 924: `node reels/portada.mjs` genera
+    `reels/salida/portada-facebook.png`. Se sube sólo desde la app o el
+    navegador (Meta no deja por API con el token actual). Revisar cómo queda en
+    el celular y en la compu.
 
 ## C. SEO y posicionamiento
 

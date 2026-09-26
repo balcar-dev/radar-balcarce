@@ -86,7 +86,7 @@ test('la fecha de verificación es una fecha, y el aviso de vencimiento funciona
 
 test('lo que no se pudo confirmar queda listado para volver a mirarlo', () => {
   const s = sinConfirmar();
-  assert.ok(s.includes('facebook.portada'));
+  assert.ok(s.includes('facebook.perfil'));
   assert.ok(s.every((x) => /^(instagram|facebook|web)\./.test(x)));
 });
 
@@ -135,4 +135,35 @@ test('el vigilante avisa si la auditoría semanal dejó de correr', () => {
   assert.ok(claves(evaluar({ ...base, auditoria: vieja })).includes('auditoria-vencida'));
   assert.ok(!claves(evaluar({ ...base, auditoria: reciente })).includes('auditoria-vencida'));
   assert.equal(auditoriaVencida(null, HOY), false, 'todavía no corrió nunca: no se avisa');
+});
+
+// ---------------------------------------------------------------- portada de Facebook
+
+import { ANCHO as PW, ALTO as PH, ZONA_SEGURA, RECORTE_ESCRITORIO, AVATAR_CELULAR, cajasDeTexto, renderPortada } from '../reels/portada.mjs';
+
+test('la portada de Facebook se genera con la medida documentada', () => {
+  const f = FORMATOS.facebook.portada;
+  assert.deepEqual(medidaDePng(renderPortada()), { ancho: f.ancho, alto: f.alto });
+  assert.equal(PW, f.ancho);
+  assert.equal(PH, f.alto);
+  assert.deepEqual(ZONA_SEGURA, { x: f.zonaSegura.x, y: f.zonaSegura.y, ancho: f.zonaSegura.ancho, alto: f.zonaSegura.alto });
+});
+
+test('la portada: el recorte de escritorio es 2,63:1 y el celular es 16:9', () => {
+  const f = FORMATOS.facebook.portada;
+  assert.ok(Math.abs(f.ancho / RECORTE_ESCRITORIO.alto - f.escritorio.ancho / f.escritorio.alto) < 0.01);
+  assert.ok(Math.abs(f.ancho / f.alto - f.celular.ancho / f.celular.alto) < 0.01);
+});
+
+test('la marca y la bajada de la portada caen dentro de la zona segura, arriba del avatar del celular', () => {
+  const z = ZONA_SEGURA;
+  const { marca, bajada } = cajasDeTexto();
+  for (const [nombre, c] of Object.entries({ marca, bajada })) {
+    assert.ok(c.ancho > 100, `${nombre}: no se midió (¿faltan las tipografías?)`);
+    assert.ok(c.x >= z.x && c.x + c.ancho <= z.x + z.ancho, `${nombre} se sale de la zona segura a los costados`);
+    assert.ok(c.y >= z.y && c.y + c.alto <= z.y + z.alto, `${nombre} se sale de la zona segura arriba o abajo`);
+  }
+  // Dentro del recorte de escritorio y por arriba del avatar del celular.
+  assert.ok(z.y >= RECORTE_ESCRITORIO.y && z.y + z.alto <= RECORTE_ESCRITORIO.y + RECORTE_ESCRITORIO.alto);
+  assert.ok(z.y + z.alto <= AVATAR_CELULAR.cy - AVATAR_CELULAR.r);
 });

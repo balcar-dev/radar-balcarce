@@ -84,7 +84,14 @@ radarbalcarce.com
 Las medidas de cada imagen (foto de perfil, portada, historias destacadas)
 están en [`FORMATOS.md`](FORMATOS.md). La foto de perfil se arma con
 `node reels/avatar.mjs` y la portada de la página de Facebook con
-`node reels/portada.mjs`, con las mismas tipografías que las placas y la web.
+`node reels/portada.mjs` (genera `reels/salida/portada-facebook.png`, 1640 × 924,
+16:9; ver "La portada de Facebook" en `FORMATOS.md`), con las mismas tipografías
+que las placas y la web.
+
+**Cómo se sube la portada:** sólo a mano, desde la app de Facebook o desde el
+navegador (página → Editar portada → Subir foto), con ese archivo. Meta no deja
+hacerlo por API con el token actual. Después mirarla en el celular y en la
+compu: la marca tiene que verse entera.
 
 **Colores** (los de la web, `web/app/globals.css`):
 
