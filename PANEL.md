@@ -1,6 +1,6 @@
 # El panel
 
-*Actualizado el 25/09/2026.* El tablero editorial: donde Hernán y Andrés
+*Actualizado el 26/09/2026.* El tablero editorial: donde Hernán y Andrés
 deciden qué se publica, cargan avisos y miran el buzón.
 
 ## Qué es y dónde vive

@@ -4,7 +4,8 @@ El motor: lee las fuentes, agrupa la misma noticia contada por varios medios,
 la clasifica, le pone el semáforo y le calcula el puntaje. **Sin
 dependencias**: sólo lo que trae Node (hay una prueba que lo vigila). Corre
 sola en GitHub Actions cada 30 minutos ("Actualizar la web") y en el panel,
-mientras está prendido. El criterio está en `../MANUAL.md`.
+mientras está prendido. El recorrido técnico y el puntaje están en `../MANUAL.md`
+y el criterio editorial, en `../CRITERIO-EDITORIAL.md`.
 
 ```bash
 node ingesta/ingesta.mjs                   # corre todo y deja ingesta/salida/portada.json y preview.html
@@ -17,7 +18,9 @@ node ingesta/probar.mjs https://medio.com/feed   # prueba una URL suelta
 
 | Archivo | Qué hace |
 |---|---|
-| `fuentes.mjs` | Lo que se toca: fuentes y pesos, palabras por sección, semáforo, cupos y temas |
+| `fuentes.mjs` | Lo que se toca: fuentes y pesos, palabras por sección, semáforo y temas |
+| `criterio.mjs` | Los números del criterio (largos, intentos, pisos y cupos de afuera, Facebook, podcasts, contrato del día): tienen que coincidir con las tablas de `../CRITERIO-EDITORIAL.md` y `../CRITERIO-REDES.md` |
+| `prompt-editorial.mjs` | Lee la sección 12 de `../CRITERIO-EDITORIAL.md`: es la instrucción exacta que recibe la IA; si el archivo falta, la reescritura no arranca |
 | `ingesta.mjs` | Bajar, parsear, agrupar, clasificar y puntuar |
 | `articulo.mjs` | El texto completo de la nota original, para la IA |
 | `verificar.mjs` | Rechaza lo que la IA inventó (números, nombres, días, citas) |

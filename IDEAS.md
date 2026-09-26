@@ -216,8 +216,9 @@ Ya está descripta más arriba (mapa + catálogo de venta). Esto es el **cómo**
 pensado para empezar chico y que se pueda dejar de hacer sin que rompa nada:
 
 1. **Datos mínimos por comercio:** nombre, rubro, dirección, teléfono,
-   horario, y si quiere, WhatsApp e Instagram. Un archivo (`web/data/comercios.json`)
-   que se edita desde el panel, igual que los avisos.
+   horario, y si quiere, WhatsApp e Instagram. Hoy la base vive en
+   `comercial/datos/comercios.json`; para la web haría falta un archivo en
+   `web/data/` que se edite desde el panel, igual que los avisos.
 2. **Cómo cargarlos sin ser una carga eterna:** salir con un formulario de
    papel o un mensaje de WhatsApp de una línea ("nombre, rubro, dirección,
    horario"). El comerciante lo manda, alguien del equipo lo pasa al panel.

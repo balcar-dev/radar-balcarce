@@ -1,6 +1,6 @@
 # SEO: cómo se posiciona la web
 
-*Actualizado el 25/09/2026.* Qué está hecho, cómo se audita y qué falta. La
+*Actualizado el 26/09/2026.* Qué está hecho, cómo se audita y qué falta. La
 lista completa de pendientes está en `PENDIENTES.md` (sección C); acá se explica
 el estado.
 
@@ -47,8 +47,8 @@ el estado.
 | **Mirar qué indexó Google** | El sitemap se envió el 24/09 | Revisar en Search Console en unos días |
 | **Google Publisher Center** (Google Noticias y Discover) | El sitemap de noticias ya está; falta el alta manual | Discover pide imágenes de al menos 1200 px |
 | **Google Business Profile** | Aparecer en el mapa y en "cerca de mí" | Si corresponde |
-| **Google AdSense** | Monetizar con avisos de Google | **Para mañana** (`PENDIENTES.md`). Falta: que una persona abra la cuenta (datos fiscales), `ads.txt` con el ID de editor que da AdSense (sin el ID no se puede armar) y más notas con cuerpo. La aprobación tarda de días a semanas. Ver `PUBLICIDAD.md` |
-| **Notas con cuerpo** | Google y AdSense premian el contenido propio | Hoy sólo el 19 % tiene cuerpo. La IA reescribe primero lo local desde el 25/09: mirar si sube |
+| **Google AdSense** | Monetizar con avisos de Google | Pendiente (`PENDIENTES.md`). Falta: que una persona abra la cuenta (datos fiscales), `ads.txt` con el ID de editor que da AdSense (sin el ID no se puede armar) y sostener las notas con cuerpo. La aprobación tarda de días a semanas. Ver `PUBLICIDAD.md` |
+| **Notas con cuerpo** | Google y AdSense premian el contenido propio | Desde el 25/09 una nota automática sin cuerpo no se publica (`REGLAS.md`, regla 23): toda nota visible tiene cuerpo (el 26/09 a las 00:33, las 94 de la portada; 21 esperaban cuerpo). El 25/09 a la mañana sólo el 19 % lo tenía. Mirar que siga así |
 | **Política editorial** como página | Lo que Google y las IA miran para decidir si un medio es confiable | "Quiénes somos" y "Contacto" ya están. Falta la política editorial: sacar de `CRITERIO-EDITORIAL.md` lo que se puede publicar. Y confirmar el texto de "Quiénes somos" |
 | **CSP completa** | Seguridad | Hoy `_headers` sólo trae `frame-ancestors` |
 | **Rastreadores de IA** (GPTBot, ClaudeBot, PerplexityBot, Google-Extended) | Permitirlos da visibilidad y citas; bloquearlos protege el contenido | Decisión editorial, no técnica. Hoy `robots.txt` no distingue |
@@ -57,7 +57,8 @@ el estado.
 | **Parámetros UTM** en los enlaces de redes | Saber cuánta gente llega desde cada red | Con la analítica sin cookies |
 | **Enlaces internos entre notas** | Ahora las etiquetas de temas están apagadas (`MOSTRAR_TEMAS`) | Pensar una alternativa |
 | **Resumen claro al abrir cada nota** | Es lo que una IA cita | Ya lo hace el copete; falta revisar fecha y autor visibles |
-| **Permiso `instagram_manage_insights`** | Leer qué rinde cada red | Con Meta |
+| **Permisos `read_insights` e `instagram_manage_insights`** | Leer qué rinde cada red | Con Meta: regenerar `META_TOKEN` (`INFRAESTRUCTURA.md`) |
+| **Token de Cloudflare Analytics** | Que el resumen de WhatsApp traiga las visitas | Cargar el secreto `CLOUDFLARE_ANALYTICS_TOKEN` (`INFRAESTRUCTURA.md`) |
 
 ## Reglas a cuidar
 

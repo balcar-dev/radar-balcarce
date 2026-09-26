@@ -1,6 +1,6 @@
 # Publicidad y monetización
 
-*Actualizado el 25/09/2026.* Cómo se piensa ganar plata sin arruinar lo que
+*Actualizado el 26/09/2026.* Cómo se piensa ganar plata sin arruinar lo que
 hace distinto al medio (una portada liviana, sin banners de terceros). Este
 documento reúne lo que antes estaba repartido entre `REDES.md` y `IDEAS.md`.
 
@@ -11,7 +11,7 @@ documento reúne lo que antes estaba repartido entre `REDES.md` y `IDEAS.md`.
 - Los precios **no están escritos a propósito**: hay que salir a preguntar qué
   paga hoy un comercio de Balcarce en la radio y en los otros medios, y arrancar
   por debajo. Se decide con la realidad, no acá.
-- **Google AdSense se empieza el 26/09** (lo pidieron Hernán y Andrés; es el punto 6 de "Para mañana" en `PENDIENTES.md`). Ver el final.
+- **Google AdSense** lo pidieron Hernán y Andrés. Todavía no se abrió la cuenta: la abre una persona (`PENDIENTES.md`). Ver el final.
 - El hosting ya permite publicidad: Cloudflare Pages sí; Vercel Hobby no (por
   eso se mudó el 24/09).
 
@@ -84,7 +84,7 @@ vecino los vea**, en el lugar donde ya mira.
 | 8 | **Contenido patrocinado**, siempre marcado | Nota con etiqueta "Contenido patrocinado" | Con las reglas de arriba |
 | 9 | **Pauta oficial** (vacunación, cortes de servicio) | Igual que un aviso | Depende de la relación con el municipio |
 | 10 | **Socios lectores** (aporte voluntario mensual, tipo Cafecito) | Un botón | Cuando haya lectores que lo pidan |
-| 11 | **AdSense** en un cuarto espacio | Script de Google | **En trámite desde el 26/09** |
+| 11 | **AdSense** en un cuarto espacio | Script de Google | Pendiente: falta abrir la cuenta y el `ads.txt` |
 
 **El catálogo comercial** (qué servicios se ofrecen a un comercio y con qué
 mensaje) está en `comercial/propuestas.mjs` y se explica en `COMERCIAL.md`.
@@ -101,11 +101,12 @@ mensaje) está en `comercial/propuestas.mjs` y se explica en `COMERCIAL.md`.
 
 ## Google AdSense
 
-Se empieza el 26/09. Lo que falta, en orden:
+Lo que falta, en orden:
 
 1. Que una persona abra la cuenta (pide datos fiscales) y pida la revisión.
 2. `ads.txt` con el ID de editor que da AdSense. Sin el ID no se puede armar.
-3. Más notas con cuerpo: hoy sólo el 19 % tiene. AdSense rechaza sitios con
+3. Sostener las notas con cuerpo: desde el 25/09 una nota automática sin cuerpo
+   no se publica, así que toda nota visible lo tiene. AdSense rechaza sitios con
    poco contenido propio.
 
 "Quiénes somos", "Contacto" y la política de privacidad ya están (25/09). La

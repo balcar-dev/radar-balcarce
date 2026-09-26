@@ -14,7 +14,7 @@ rioplatense, sin voseo forzado.
     reels/     placas, voz y video. SÍ tiene dependencias (resvg, ffmpeg)
     redes/     publicar en Facebook e Instagram (API de Meta). SIN dependencias
     web/       el sitio público (Next.js 15, JavaScript, HTML estático)
-    pruebas/   `npm test`, más de 1.100 pruebas (1113 al 26/09), sin red
+    pruebas/   `npm test`, más de 1.100 pruebas, sin red
 
 Flujo: fuentes → ingesta → clasificar → puntaje → semáforo → `web/data/portada.json`
 → GitHub Actions (cada 30 min) → **Cloudflare Pages** (desde el 24/09). Vercel

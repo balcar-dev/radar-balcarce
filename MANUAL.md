@@ -1,6 +1,6 @@
 # Cómo funciona Radar Balcarce
 
-Este archivo explica la parte técnica: el recorrido de una noticia, cómo se
+*Actualizado el 26/09/2026.* Este archivo explica la parte técnica: el recorrido de una noticia, cómo se
 puntúa y cómo está hecha la web. Es el documento para leer antes de tocar
 `ingesta/fuentes.mjs`.
 
@@ -33,7 +33,7 @@ falta) e `INVESTIGACION.md` (lo legal, con fuentes). La lista completa está en
    (`PALABRAS_ZONA`, en `ingesta/fuentes.mjs`). Pesan poco para no ganarle a lo
    local, y lo de afuera que nombra a Balcarce va a la sección Balcarce.
    **Secciones flacas (26/09).** Hernán y Andrés piden tres notas por sección
-   en la portada. Por eso hay 13 fuentes más (16 hasta que se sacaron las de Policiales), todas de afuera y con la sección
+   en la portada. Por eso hay 13 fuentes más, todas de afuera y con la sección
    fija (el feed ya viene separado por tema), peso 11 a 14 y `maxItems` de 2 o 3:
    Cultura y agenda (Infobae Teleshow y Cultura, Ámbito y Minuto Uno
    Espectáculos, La Nación Cultura: lo que más se lee en los diarios
@@ -50,9 +50,13 @@ falta) e `INVESTIGACION.md` (lo legal, con fuentes). La lista completa está en
    fuentes, no dos notas. Se comparan los títulos por similitud (Jaccard,
    umbral 0,55). Que varios medios la tengan es señal de que importa, y suma
    puntos.
-3. **Clasificar.** Por palabras clave, en este orden: Automovilismo, Deportes,
-   Cultura, Agro, Política, Servicios, Tecnología. El orden importa: una nota
-   de un piloto local es Automovilismo, no Deportes.
+3. **Clasificar** (`clasificar`, `ingesta/ingesta.mjs`). Automovilismo gana
+   siempre (en Balcarce es sección propia). Después, si la fuente ya viene
+   separada por sección, se le cree, salvo en Tecnología, que se confirma con el
+   título (`PALABRAS_DE_TECNOLOGIA_EN_EL_TITULO`). Y si no, por palabras clave
+   (`REGLAS_SECCION`): gana la coincidencia más larga y, si empatan, el orden de
+   las reglas. Las palabras cortas o ambiguas (`PALABRAS_DEBILES`) sólo deciden
+   desde el titular.
 4. **Puntuar.** Un número de 0 a 100 (abajo, sección 2).
 5. **Semáforo.** Verde / amarillo / rojo (sección 3).
 6. **Decidir.** En el panel (localhost:4321, `PANEL.md`). Lo verde sale solo; lo
@@ -62,8 +66,8 @@ falta) e `INVESTIGACION.md` (lo legal, con fuentes). La lista completa está en
 
 ## 2. El puntaje
 
-Arranca en el **peso de la fuente** (del 15 al 30: los medios locales pesan
-más que los nacionales) y suma:
+Arranca en el **peso de la fuente** (de 7 a 30: los medios locales pesan más
+que los nacionales y los de afuera pesan poco) y suma:
 
 | Qué | Cuánto |
 |---|---|
@@ -72,6 +76,7 @@ más que los nacionales) y suma:
 | Entre 3 y 12 h | +15 |
 | Entre 12 y 24 h | +8 |
 | Un medio nacional la nombra a Balcarce | +22 |
+| Nombra a una figura argentina (`FIGURAS`) | +16 |
 | Cada medio extra que la cuenta | +10 |
 | Es de Automovilismo | +8 |
 | Es de Servicios | +6 |
@@ -141,7 +146,7 @@ lados para que no se separen.
 
 ## 5. Las pruebas
 
-Se corren con `npm test` desde la carpeta del proyecto. Son más de 700, tardan
+Se corren con `npm test` desde la carpeta del proyecto. Son más de 1.100, tardan
 unos segundos, no instalan nada y no salen a internet.
 
 **Cada una es un error que ya pasó de verdad**, no un ejercicio: dos
