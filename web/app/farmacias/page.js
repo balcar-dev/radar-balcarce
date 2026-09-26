@@ -9,6 +9,7 @@ const DIA_ESCRITO = {
 };
 import { TarjetaFarmacia, Cierre, Invitacion } from '@/components/piezas';
 import { comoNombre } from '@/lib/texto';
+import { enlaceDeLlamada } from '@/lib/farmacias';
 import { metadatosDePagina } from '@/components/metadatos';
 
 export const metadata = metadatosDePagina({
@@ -23,6 +24,7 @@ export const metadata = metadatosDePagina({
 export default function Farmacias() {
   const d = obtenerDatos();
   const f = d.farmacias;
+  const semana = (f?.proximos ?? []).filter((t) => !f?.hoy || t.fecha !== f.hoy.fecha);
 
   return (
     <div className="envoltura" style={{ maxWidth: 760 }}>
@@ -35,26 +37,42 @@ export default function Farmacias() {
         ? <TarjetaFarmacia farmacia={f.hoy} verLaSemana={false} />
         : <div className="tarjeta"><strong>Todavía no tenemos el turno de hoy.</strong></div>}
 
-      {f?.proximos?.length > 0 && (
-        <section style={{ marginTop: 34 }}>
+      {/* La semana, ordenada: un día por renglón con su tacito verde, sus
+          farmacias con la dirección y el teléfono que llama. El día de hoy ya
+          está arriba, en la tarjeta grande: no se repite. */}
+      {semana.length > 0 && (
+        <section className="semana-farmacias">
           <div className="titulo-seccion" style={{ borderBottomWidth: 1 }}>
-            <span className="barra" style={{ background: 'var(--s-farmacias, var(--rojo))' }} />
+            <span className="barra" style={{ background: 'var(--farmacia)' }} />
             <h2 style={{ fontSize: 19 }}>Cómo sigue la semana</h2>
           </div>
-          {f.proximos.map((t) => {
+          {semana.map((t) => {
             // El cronograma llega todo en mayúsculas y sin acentos. Los
             // nombres se toman del detalle, que es el directorio del Colegio,
             // y el día se escribe como se escribe.
             const nombreDia = DIA_ESCRITO[String(t.diaSemana).toLowerCase()] ?? comoNombre(t.diaSemana);
-            const dia = `${nombreDia} ${t.dia}`;
-            const nombres = (t.detalle?.length ? t.detalle.map((x) => x.nombre) : t.farmacias)
-              .map(comoNombre).join(' y ');
+            const turnos = t.detalle?.length ? t.detalle : (t.farmacias ?? []).map((n) => ({ nombre: n }));
             return (
-              <div className="fila-nota" key={t.fecha ?? t.dia}>
-                <span className="meta cuando" style={{ width: 130 }}>{dia}</span>
-                <div style={{ flexGrow: 1 }}>
-                  <span className="meta cuando-movil">{dia}</span>
-                  <div className="dato">{nombres}</div>
+              <div className="dia-turno" key={t.fecha ?? t.dia}>
+                <div className="taco-turno" aria-label={`${nombreDia} ${t.dia}`}>
+                  <div className="mes">{nombreDia.slice(0, 3)}</div>
+                  <div className="dia">{t.dia}</div>
+                </div>
+                <div className="turnos-del-dia">
+                  {turnos.map((x) => {
+                    const llamar = enlaceDeLlamada(x.telefono);
+                    return (
+                      <div className="turno-farmacia" key={x.nombre}>
+                        <span className="dato">{comoNombre(x.nombre)}</span>
+                        {x.direccion && (
+                          <div className="donde-farmacia">
+                            {x.direccion}
+                            {x.telefono && (llamar ? <>{' · '}<a href={llamar}>Tel. {x.telefono}</a></> : ` · Tel. ${x.telefono}`)}
+                          </div>
+                        )}
+                      </div>
+                    );
+                  })}
                 </div>
               </div>
             );

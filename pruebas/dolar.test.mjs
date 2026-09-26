@@ -210,7 +210,7 @@ test('/dolar tiene canónico propio, h1, fuente con enlace, y está en el sitema
   assert.equal(FUENTES.dolarapi.url, 'https://dolarapi.com');
   assert.ok(leer('web/app/sitemap.js').includes('${base}/dolar'));
   const l = leer('web/app/layout.js');
-  assert.ok(l.includes('<a href="/dolar" className="servicio">Dólar</a>'), 'falta Dólar en la navegación');
+  assert.ok(l.includes("{ href: '/dolar', nombre: 'Dólar' }"), 'falta Dólar en la navegación');
 });
 
 test('la foto se guarda en cada build, no lo frena y no se versiona', () => {

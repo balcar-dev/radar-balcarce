@@ -59,7 +59,7 @@ test('todas las tarjetas usan la etiqueta única y el enlace de acción único',
   const accion = css.match(/\n\.accion,[^{]*\{([^}]*)\}/)?.[1] ?? '';
   assert.match(accion, /font-size:\s*var\(--t-accion\)/);
   assert.match(accion, /color:\s*var\(--rojo\)/);
-  for (const clase of ['.ver-todo', '.ir-al-mapa', '.ver-semana', '.pie-panel-dolar a']) {
+  for (const clase of ['.ver-todo', '.ver-semana', '.pie-panel-dolar a']) {
     assert.ok(css.match(/\n\.accion,[^{]*/)[0].includes(clase), `${clase} comparte el estilo de la acción`);
   }
   // Los componentes usan la etiqueta y la cabecera común, sin tamaños a mano.
@@ -74,7 +74,7 @@ test('todas las tarjetas usan la etiqueta única y el enlace de acción único',
   assert.ok(!/fontSize:\s*12\.5/.test(pagina), 'la portada no tiene tamaños sueltos en las acciones');
   assert.match(pagina, /className="accion">Toda la guía →/);
   assert.match(pagina, /className="accion">Toda la agenda →/);
-  assert.match(piezas, /className="ver-semana">Ver la semana →/);
+  assert.match(piezas, /className="accion ver-semana"><span className="solo-lg">Ver <\/span>la semana →/);
   assert.match(dolar, /Ver todos los dólares →/);
 });
 
@@ -149,8 +149,8 @@ test('/dolar y la tarjeta siguen sin decir "en vivo"', () => {
 });
 
 test('la barra de navegación no se pasa del ancho entre 900 y 1180px', () => {
-  assert.match(css, /@media \(min-width: 1180px\) \{\s*nav\.principal \.envoltura \{ height: 52px; flex-wrap: nowrap;/);
-  assert.match(css, /@media \(min-width: 1180px\) \{ nav\.principal \{ position: sticky;/);
+  // Desde 900px envuelve; sólo desde 1180px entra todo en una línea y queda fija arriba.
+  assert.match(css, /@media \(min-width: 1180px\) \{\s*nav\.principal \{ position: sticky;[^}]*\}\s*nav\.principal \.envoltura \{ height: 52px; flex-wrap: nowrap;/);
 });
 
 test('el HTML compilado tiene las clases del sistema (si ya se compiló)', (t) => {

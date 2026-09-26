@@ -9,6 +9,7 @@ import { Aviso } from '@/components/avisos';
 import { sitio, enElDominioPropio, NOMBRE } from '@/lib/sitio';
 import { FichaDelSitio } from '@/components/ficha';
 import HorasVivas from '@/components/horas-vivas';
+import Navegacion from '@/components/navegacion';
 
 const DESCRIPCION = 'Lo que pasa en Balcarce, la región y el país. Actualizado todo el día, con la fuente siempre a la vista.';
 
@@ -90,9 +91,13 @@ export default function RaizLayout({ children }) {
         <link rel="alternate" type="application/rss+xml" title="Radar Balcarce" href="/feed.xml" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        {/* Fraunces con el eje WONK (0 a 1) a propósito: sin pedirlo, Google sirve la
+            fuente con las formas "wonky" (h, n, m inclinadas) fijas en los tamaños
+            grandes, y no hay forma de apagarlas desde el CSS. Con el eje disponible,
+            globals.css lo pone en 0. Pesa lo mismo que antes. */}
         <link
           rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700;9..144,900&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,WONK@9..144,500..900,0..1&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap"
         />
       </head>
       <body>
@@ -147,21 +152,18 @@ export default function RaizLayout({ children }) {
           </div>
         </header>
 
-        {/* Navegación por secciones reales. Agenda y Balcarce Útil van a la
-            derecha y en verde: son servicios, no secciones de noticias. */}
-        <nav className="principal">
-          <div className="envoltura">
-            <a href="/">Portada</a>
-            {navegacion.map((s) => (
-              <a key={s.ranura} href={`/seccion/${s.ranura}`}>{nombreCorto(s.nombre)}</a>
-            ))}
-            <span className="crece" />
-            <a href="/agenda" className="servicio">Agenda</a>
-            <a href="/farmacias" className="servicio">Farmacias</a>
-            <a href="/dolar" className="servicio">Dólar</a>
-            <a href="/util" className="servicio">Teléfonos</a>
-          </div>
-        </nav>
+        {/* Navegación por secciones reales. Agenda, Farmacias, Dólar y Teléfonos
+            van al final y en verde: son servicios, no secciones de noticias. En
+            el celular es una sola fila que se desliza (components/navegacion.js). */}
+        <Navegacion
+          secciones={navegacion.map((s) => ({ href: `/seccion/${s.ranura}`, nombre: nombreCorto(s.nombre) }))}
+          servicios={[
+            { href: '/agenda', nombre: 'Agenda' },
+            { href: '/farmacias', nombre: 'Farmacias' },
+            { href: '/dolar', nombre: 'Dólar' },
+            { href: '/util', nombre: 'Teléfonos' },
+          ]}
+        />
 
         <main>{children}</main>
 

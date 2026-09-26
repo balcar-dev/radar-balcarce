@@ -11,6 +11,7 @@ import {
 import { tipoDeCielo } from '@/lib/clima';
 import { comoNombre } from '@/lib/texto';
 import { nombreDeEvento } from '@/lib/eventos';
+import { enlaceDeLlamada } from '@/lib/farmacias';
 
 const WHATSAPP_VISIBLE = WHATSAPP.visible;
 
@@ -19,6 +20,27 @@ const WHATSAPP_VISIBLE = WHATSAPP.visible;
 // La tarjeta del clima se mudó a clima-vivo.js, que corre en el navegador y
 // se actualiza sola cada diez minutos. Acá queda sólo el sol chiquito de la
 // chapa de arriba, que es decorativo y no muestra ningún dato.
+
+/** La cruz de farmacia: verde, limpia, dibujada acá (sin imágenes de afuera). */
+export function CruzFarmacia({ tamano = 40 }) {
+  return (
+    <svg className="cruz-farmacia" width={tamano} height={tamano} viewBox="0 0 40 40" aria-hidden="true">
+      <rect width="40" height="40" rx="10" fill="currentColor" />
+      <path fill="#fff" d="M16 8h8v8h8v8h-8v8h-8v-8H8v-8h8z" />
+    </svg>
+  );
+}
+
+const PIN = (
+  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" /><circle cx="12" cy="10" r="3" />
+  </svg>
+);
+const TUBO = (
+  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    <path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z" />
+  </svg>
+);
 
 export function TarjetaFarmacia({ farmacia, verLaSemana = true }) {
   if (!farmacia) return null;
@@ -36,47 +58,48 @@ export function TarjetaFarmacia({ farmacia, verLaSemana = true }) {
     ? `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${direccion}, Balcarce, Buenos Aires`)}`
     : null);
 
+  // La identidad de la tarjeta: cruz y verde farmacia, la píldora "Farmacia de
+  // turno" (es la etiqueta de siempre, con otro color) y el teléfono como
+  // botón "Llamar". Los tamaños siguen siendo los del sistema tipográfico.
   return (
-    <div className="tarjeta">
-      <div className="cabecera-tarjeta">
-        <span className="punto-vivo" aria-hidden="true" />
-        <span className="etiqueta">
-          {lista.length > 1 ? 'Farmacias de turno' : 'Farmacia de turno'}
-        </span>
-      </div>
-
+    <div className="tarjeta tarjeta-farmacia">
       {lista.map((f, i) => {
         const mapa = mapaDe(f.direccion);
+        const llamar = enlaceDeLlamada(f.telefono);
         return (
           <div className="una-farmacia" key={f.nombre ?? i}>
-            {/* El nombre y el enlace al mapa en la misma línea. "Cómo
-                llegar" era un botón de 38px de alto por farmacia, y con dos
-                de turno la tarjeta se estiraba de más en el celular. */}
-            <div className="cabeza-farmacia">
-              <span className="nombre-farmacia">{comoNombre(f.nombre)}</span>
-              {mapa && (
-                <a href={mapa} target="_blank" rel="noopener noreferrer" className="ir-al-mapa">
-                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" /><circle cx="12" cy="10" r="3" />
-                  </svg>
-                  Cómo llegar
-                </a>
-              )}
-            </div>
-            {f.direccion
-              ? (
-                <div className="donde-farmacia">
-                  {f.direccion}{f.telefono ? ` · Tel. ${f.telefono}` : ''}
+            <CruzFarmacia />
+            <div className="cuerpo-farmacia">
+              {i === 0 && (
+                <div className="cabecera-tarjeta">
+                  <span className="pastilla-turno">
+                    <span className="punto-vivo" aria-hidden="true" />
+                    <span className="etiqueta">{lista.length > 1 ? 'Farmacias de turno' : 'Farmacia de turno'}</span>
+                  </span>
+                  {verLaSemana && (
+                    <a href="/farmacias" className="accion ver-semana"><span className="solo-lg">Ver </span>la semana →</a>
+                  )}
                 </div>
-              )
-              : <div className="donde-farmacia sin-dato">Dirección no publicada</div>}
+              )}
+              <div className="nombre-farmacia">{comoNombre(f.nombre)}</div>
+              {f.direccion
+                ? (
+                  <div className="donde-farmacia">
+                    {f.direccion}
+                    {f.telefono && <>{' · '}<span className="sin-corte">Tel. {f.telefono}</span></>}
+                  </div>
+                )
+                : <div className="donde-farmacia sin-dato">Dirección no publicada</div>}
+            </div>
+            {(llamar || mapa) && (
+              <div className="acciones-farmacia">
+                {llamar && <a href={llamar} className="boton-farmacia llenar">{TUBO}Llamar</a>}
+                {mapa && <a href={mapa} target="_blank" rel="noopener noreferrer" className="boton-farmacia">{PIN}Cómo llegar</a>}
+              </div>
+            )}
           </div>
         );
       })}
-
-      {verLaSemana && (
-        <a href="/farmacias" className="ver-semana">Ver la semana →</a>
-      )}
     </div>
   );
 }

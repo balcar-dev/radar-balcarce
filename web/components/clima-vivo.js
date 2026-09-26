@@ -129,6 +129,16 @@ export function IconoCielo({ cielo, esDeDia = true, tamano = 92 }) {
   );
 }
 
+function textoDetalle(a) {
+  return (
+    <>
+      <span>Sensación {a.sensacion}°</span>{' · '}
+      <span>Viento {a.rumbo} {a.viento} km/h</span>{' · '}
+      <span>Humedad {a.humedad}%</span>
+    </>
+  );
+}
+
 export function TarjetaClima({ clima }) {
   const [datos, enVivo] = useClimaVivo(clima);
 
@@ -156,21 +166,21 @@ export function TarjetaClima({ clima }) {
           grande y el dibujo quedaba una columna angosta y los tres datos
           caían en tres renglones. Cada uno en su span para que el corte
           pase entre datos y no en el medio de "14 km/h". */}
-      <div className="detalle">
-        <span>Sensación {a.sensacion}°</span>{' · '}
-        <span>Viento {a.rumbo} {a.viento} km/h</span>{' · '}
-        <span>Humedad {a.humedad}%</span>
-      </div>
+      <div className="detalle">{textoDetalle(a)}</div>
 
       {dias.length > 0 && (
         <div className="tira-dias">
           {dias.map((d) => (
             <div key={d.fecha}>
-              <div className="dia">{d.dia}</div>
+              <div className="dia">
+                {d.dia}
+                {/* Sólo en el celular: la probabilidad va al lado del día. */}
+                {d.lluvia >= 40 && <span className="lluvia-chica" title={`${d.lluvia}% de lluvia`}>{d.lluvia}%</span>}
+              </div>
               <div className="max">{d.max}°</div>
-              {d.lluvia >= 40
-                ? <div className="lluvia">{d.lluvia}% lluvia</div>
-                : <div className="min">{d.min}°</div>}
+              {/* Con lluvia, en pantalla grande la mínima cede su lugar al aviso. */}
+              <div className={d.lluvia >= 40 ? 'min con-lluvia' : 'min'}>{d.min}°</div>
+              {d.lluvia >= 40 && <div className="lluvia">{d.lluvia}% lluvia</div>}
             </div>
           ))}
         </div>

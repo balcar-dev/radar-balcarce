@@ -65,9 +65,9 @@
      --t-texto    14px  texto corrido de la tarjeta (dirección, descripción).
      --t-accion   13px  600, rojo, con flecha "→": "Ver la semana →",
                         "Ver todos los dólares →", "Toda la guía →". Clase
-                        .accion (y .ver-todo, .ir-al-mapa, .ver-semana). La única
-                        excepción es "Cómo llegar", que lleva el pin del mapa en
-                        vez de flecha porque abre otra aplicación.
+                        .accion (y .ver-todo, .ver-semana). Los botones "Llamar" y "Cómo
+                        llegar" de la farmacia llevan su ícono en vez de flecha
+                        porque abren otra aplicación.
      --t-dato     16px  700 (600 en las filas): EL dato de servicio. El nombre
                         de la farmacia, el estado del cielo, el tipo de dólar.
                         Va en tinta: el rojo es el acento de las ACCIONES, no
@@ -115,6 +115,12 @@
   .solo-chico.solo-chico { display: none; }
 }
 
+/* Fraunces sin las formas "wonky" (la h, la n y la m inclinadas) ni el redondeo
+   "soft": a tamaños grandes se veían como letras raras. WONK 0 sólo se puede
+   apagar porque el <link> de la fuente (layout.js) pide ese eje. Se hereda a
+   todo lo que use Fraunces; IBM Plex Sans no tiene esos ejes y lo ignora. */
+html { font-variation-settings: "WONK" 0, "SOFT" 0; }
+
 html, body {
   margin: 0;
   padding: 0;
@@ -130,6 +136,10 @@ h1, h2, h3, .fraunces {
   font-family: "Fraunces", Georgia, serif;
   letter-spacing: -0.02em;
   margin: 0;
+  /* Cifras de la altura de las mayúsculas y de ancho propio: un "$1.560" o un
+     "25" en un titular no quedan con huecos ni con formas de texto antiguo.
+     (Las cifras de las tarjetas van en IBM Plex Sans, tabulares.) */
+  font-variant-numeric: lining-nums proportional-nums;
 }
 
 a { color: inherit; text-decoration: none; }
@@ -228,32 +238,57 @@ header.principal .envoltura {
 
 /* ------------------------------------------------------------ navegación */
 
-nav.principal { border-top: 2px solid var(--tinta); border-bottom: 1px solid var(--linea); background: var(--papel); position: static; z-index: 20; }
-/* Fija arriba sólo en pantalla grande. En el celular envuelve en tres o
-   cuatro renglones (con Dólar, desde el 26/09) y fija se comía un cuarto de la
-   pantalla mientras se leía una nota. */
-@media (min-width: 1180px) { nav.principal { position: sticky; top: 0; } }
-/* En el celular la navegación ENVUELVE en dos renglones en vez de
-   deslizarse: una barra que se desliza esconde secciones enteras y nada
-   avisa que hay más a la derecha. En pantalla grande entra todo en una
-   línea y vuelve a ser una barra normal. */
+nav.principal { position: relative; border-top: 2px solid var(--tinta); border-bottom: 1px solid var(--linea); background: var(--papel); z-index: 20; }
+/* En el celular es UNA fila que se desliza (scroll-snap, sin barra), con un
+   degradé a la derecha que avisa que hay más (components/navegacion.js lo
+   prende y lo apaga) y con la sección actual centrada. Antes envolvía en
+   cuatro o cinco renglones y se comía media pantalla antes de la primera nota.
+   Cada toque mide 44px de alto. */
 nav.principal .envoltura {
-  display: flex; align-items: center; gap: 12px 16px;
-  flex-wrap: wrap; padding-top: 11px; padding-bottom: 11px;
+  display: flex; align-items: center; gap: 2px; flex-wrap: nowrap;
+  padding-top: 0; padding-bottom: 0; padding-left: 10px; padding-right: 10px;
+  overflow-x: auto; overscroll-behavior-x: contain; scroll-snap-type: x proximity;
+  scrollbar-width: none; -ms-overflow-style: none;
 }
+nav.principal .envoltura::-webkit-scrollbar { display: none; }
+nav.principal::after {
+  content: ''; position: absolute; top: 0; right: 0; bottom: 0; width: 44px; pointer-events: none;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), var(--papel) 85%);
+  opacity: 0; transition: opacity 0.15s;
+}
+nav.principal.hay-mas::after { opacity: 1; }
 nav.principal .crece { display: none; }
-/* Con los servicios (Agenda, Farmacias, Dólar, Teléfonos) la barra necesita
-   unos 1130px para entrar en una línea: antes, entre 900 y 1130px se pasaba del
-   ancho y la página se corría de costado. Por debajo de 1180px envuelve. */
-@media (min-width: 900px) { nav.principal .crece { display: block; flex-grow: 1; } }
-@media (min-width: 1180px) {
-  nav.principal .envoltura { height: 52px; flex-wrap: nowrap; padding-top: 0; padding-bottom: 0; }
+nav.principal a {
+  flex: none; display: inline-flex; align-items: center; min-height: 44px; padding: 0 10px;
+  scroll-snap-align: center; white-space: nowrap; font-weight: 600; font-size: 14px;
 }
-nav.principal a { font-weight: 600; font-size: 13.5px; }
-@media (min-width: 900px) { nav.principal a { font-size: 14px; } }
-nav.principal a.activo { color: var(--rojo); border-bottom: 3px solid var(--rojo); height: 51px; display: flex; align-items: center; }
+nav.principal a.activo { color: var(--rojo); box-shadow: inset 0 -3px 0 var(--rojo); }
 nav.principal .servicio { color: var(--verde); }
-nav.principal .crece { flex-grow: 1; }
+nav.principal .servicio.activo { color: var(--verde); box-shadow: inset 0 -3px 0 var(--verde); }
+/* Un hilo fino separa las secciones de los servicios. */
+nav.principal .primero-servicio { margin-left: 8px; position: relative; }
+nav.principal .primero-servicio::before { content: ''; position: absolute; left: -5px; top: 12px; bottom: 12px; width: 1px; background: var(--linea); }
+
+/* En escritorio (900px o más) vuelve a ser una barra normal que envuelve si
+   no entra; con los servicios necesita unos 1130px para una sola línea, así que
+   por debajo de 1180px se acomoda en dos renglones. */
+@media (min-width: 900px) {
+  nav.principal::after { display: none; }
+  nav.principal .envoltura {
+    flex-wrap: wrap; gap: 4px 16px; padding: 4px 50px; overflow: visible; scroll-snap-type: none;
+  }
+  nav.principal .crece { display: block; flex-grow: 1; }
+  nav.principal a { min-height: 40px; padding: 0; font-size: 14px; }
+  nav.principal .primero-servicio { margin-left: 0; }
+  nav.principal .primero-servicio::before { display: none; }
+}
+/* Fija arriba sólo en pantalla grande: en el celular se comía un cuarto de la
+   pantalla mientras se leía una nota. */
+@media (min-width: 1180px) {
+  nav.principal { position: sticky; top: 0; }
+  nav.principal .envoltura { height: 52px; flex-wrap: nowrap; padding-top: 0; padding-bottom: 0; }
+  nav.principal a { min-height: 52px; }
+}
 
 /* --------------------------------------------------------------- estructura */
 
@@ -387,11 +422,11 @@ main { padding: 24px 0 10px; }
 .cabecera-tarjeta .accion { margin-left: auto; }
 
 /* Las acciones de las tarjetas: un solo estilo. */
-.accion, .ver-todo, .ir-al-mapa, .ver-semana, .pie-panel-dolar a {
+.accion, .ver-todo, .ver-semana, .pie-panel-dolar a {
   font-family: var(--f-texto); font-size: var(--t-accion); font-weight: 600; line-height: 1.4;
   color: var(--rojo); text-decoration: none;
 }
-.accion:hover, .ver-todo:hover, .ir-al-mapa:hover, .ver-semana:hover, .pie-panel-dolar a:hover {
+.accion:hover, .ver-todo:hover, .ver-semana:hover, .pie-panel-dolar a:hover {
   color: var(--rojo-oscuro); text-decoration: underline;
 }
 
@@ -498,6 +533,9 @@ main { padding: 24px 0 10px; }
 .tira-dias .max { font-size: var(--t-dato); font-weight: 700; margin-top: 3px; }
 .tira-dias .min { font-size: var(--t-meta); color: var(--suave-oscuro); }
 .tira-dias .lluvia { font-size: var(--t-etiqueta); color: #8CC6EE; white-space: nowrap; }
+/* Con lluvia, en pantalla grande la mínima cede su lugar al aviso. */
+.tira-dias .min.con-lluvia { display: none; }
+.tira-dias .lluvia-chica { display: none; }
 
 /* El sol gira despacio, la nube va y viene y las gotas caen: se nota si lo
    mirás y no molesta si estás leyendo al lado. Quien pidió menos movimiento
@@ -523,32 +561,68 @@ main { padding: 24px 0 10px; }
 
 /* ---------------------------------------------------------------- farmacia */
 
+/* La identidad de la farmacia: cruz verde, borde verde arriba, la etiqueta
+   "Farmacia de turno" en una píldora verde y el teléfono como botón "Llamar".
+   Sólo cambian los colores y la forma: los tamaños y las familias son los del
+   sistema tipográfico. Sin imágenes de afuera (la cruz es un SVG propio).
+   Los dos verdes dan más de 4,5:1 con texto blanco / sobre el fondo claro. */
+:root { --farmacia: #0E7C45; --farmacia-oscuro: #0A5F34; --farmacia-fondo: #E6F4EC; }
+.tarjeta-farmacia { border-top: 4px solid var(--farmacia); }
+.una-farmacia { display: grid; grid-template-columns: 40px minmax(0, 1fr); column-gap: 12px; align-items: start; }
+.una-farmacia + .una-farmacia { margin-top: 14px; padding-top: 14px; border-top: 1px solid var(--linea-suave); }
+.cruz-farmacia { color: var(--farmacia); flex: none; }
+.cuerpo-farmacia { min-width: 0; }
+.tarjeta-farmacia .cabecera-tarjeta { justify-content: space-between; flex-wrap: wrap; gap: 2px 10px; margin-bottom: 4px; }
+.pastilla-turno {
+  display: inline-flex; align-items: center; gap: 6px;
+  background: var(--farmacia-fondo); border-radius: 999px; padding: 3px 10px 3px 8px;
+}
+.pastilla-turno .etiqueta { color: var(--farmacia-oscuro); white-space: nowrap; }
+.pastilla-turno .punto-vivo { background: var(--farmacia); }
+.tarjeta-farmacia .ver-semana { white-space: nowrap; }
+
 /* El nombre de la farmacia es un DATO de servicio, no un titular: IBM Plex Sans
    en el mismo tamaño y peso que cualquier otro dato (--t-dato), en tinta.
-   Antes iba en rojo y más grande, y desentonaba con el resto de las tarjetas.
    (Fraunces tiene un rasgo de diseño, el "wonk", que tuerce la J y las S en un
    nombre corto y grande.) Un nombre largo baja de renglón, nunca se corta. */
 .nombre-farmacia {
   font-family: var(--f-texto); font-size: var(--t-dato); font-weight: 700; color: var(--tinta);
   line-height: 1.25; min-width: 0; overflow-wrap: anywhere;
 }
-
-/* Cada farmacia de turno, con su dirección y su enlace al mapa. */
-.hasta-cuando { margin: 6px 0 0; font-size: var(--t-meta); color: var(--suave); }
-.una-farmacia + .una-farmacia { margin-top: 12px; padding-top: 12px; border-top: 1px solid var(--linea-suave); }
-/* El nombre y "Cómo llegar" comparten renglón; si el nombre es largo, el
-   enlace baja en vez de apretarse. */
-.cabeza-farmacia {
-  display: flex; align-items: baseline; justify-content: space-between;
-  gap: 2px 12px; flex-wrap: wrap;
-}
-.cabeza-farmacia .nombre-farmacia { flex: 1 1 9rem; }
-.ir-al-mapa { display: inline-flex; align-items: center; gap: 5px; flex: none; white-space: nowrap; }
-.ver-semana { display: inline-block; margin-top: 12px; }
-.donde-farmacia { font-size: var(--t-texto); color: var(--texto); margin-top: 3px; line-height: 1.45; overflow-wrap: anywhere; }
+.donde-farmacia { font-size: var(--t-texto); color: var(--texto); margin-top: 2px; line-height: 1.4; overflow-wrap: anywhere; }
+.sin-corte { white-space: nowrap; }
 .donde-farmacia.sin-dato { color: var(--suave); font-style: italic; }
+
+/* "Llamar" (relleno) y "Cómo llegar" (borde): dos toques de 40px de alto que
+   se reparten el ancho. */
+.acciones-farmacia { grid-column: 1 / -1; display: flex; gap: 8px; margin-top: 10px; }
+.boton-farmacia {
+  flex: 1 1 0; display: inline-flex; align-items: center; justify-content: center; gap: 7px;
+  min-height: 40px; padding: 0 12px; border-radius: 20px; white-space: nowrap;
+  font-family: var(--f-texto); font-size: var(--t-accion); font-weight: 600; line-height: 1;
+  border: 1.5px solid var(--farmacia); color: var(--farmacia-oscuro); background: var(--papel);
+}
+.boton-farmacia:hover { background: var(--farmacia-fondo); color: var(--farmacia-oscuro); }
+.boton-farmacia.llenar { background: var(--farmacia); color: #fff; }
+.boton-farmacia.llenar:hover { background: var(--farmacia-oscuro); color: #fff; }
 .boton.chico { height: 38px; padding: 0 14px; font-size: 13px; margin-top: 10px; }
 .boton.ancho { width: 100%; }
+
+/* La semana en /farmacias: cada día con su tacito verde y sus farmacias, con
+   la dirección y el teléfono (que llama). */
+.semana-farmacias { margin-top: 34px; }
+.dia-turno { display: flex; gap: 14px; padding: 14px 0; border-bottom: 1px solid var(--linea-suave); }
+.dia-turno:last-child { border-bottom: none; }
+.taco-turno {
+  flex: none; width: 52px; align-self: flex-start; text-align: center; border-radius: 8px;
+  background: var(--farmacia-fondo); color: var(--farmacia-oscuro); padding: 6px 0;
+}
+.taco-turno .mes { font-size: 10px; font-weight: 700; letter-spacing: var(--ls-etiqueta); text-transform: uppercase; }
+.taco-turno .dia { font-family: var(--f-texto); font-size: 20px; font-weight: 700; line-height: 1.15; font-variant-numeric: tabular-nums; }
+.turnos-del-dia { flex-grow: 1; min-width: 0; display: flex; flex-direction: column; gap: 10px; }
+.turno-farmacia .dato { display: block; }
+.turno-farmacia .donde-farmacia { margin-top: 1px; }
+.turno-farmacia .donde-farmacia a { color: var(--farmacia-oscuro); font-weight: 600; text-decoration: underline; text-underline-offset: 2px; }
 
 /* ------------------------------------------------------------------ agenda */
 
@@ -730,7 +804,6 @@ a.telefono:hover { border-color: var(--rojo); color: inherit; }
   margin-top: 40px; padding-top: 26px; border-top: 1px solid var(--linea);
   display: flex; flex-direction: column; gap: 20px;
 }
-.cierre-pagina .botonera { display: flex; gap: 10px; flex-wrap: wrap; }
 .cierre-pagina .tarjeta-buzon { max-width: 520px; }
 .nota-fuente { font-size: 13px; color: var(--suave); line-height: 1.6; margin: 0; max-width: 560px; }
 .nota-fuente a { color: var(--rojo); font-weight: 600; }
@@ -780,3 +853,58 @@ footer.principal .aclaracion { max-width: 760px; line-height: 1.6; border-top: 1
 .nivel-alta { color: var(--verde); }
 .nivel-media { color: #8A5A0B; }
 .nivel-baja { color: var(--rojo); }
+
+/* ------------------------------------------------ servicios en el celular */
+
+/* Clima, farmacia y dólar ocupaban casi dos pantallas antes de la primera
+   noticia (25/09). En el celular (menos de 620px) se compactan: mismos datos,
+   misma escala tipográfica, menos aire. Objetivo: las tres juntas en menos de
+   420px de alto a 375px de ancho. Se eligió apilarlas y no un carrusel porque
+   así nada queda escondido detrás de un gesto: la farmacia de turno es lo más
+   buscado del sitio. El MEP se ve en escritorio y en /dolar; en el celular
+   quedan Oficial y Blue, que son los que la gente mira. En escritorio (columna
+   derecha) no cambia nada. Va al final de la hoja para ganarle a las reglas base. */
+.solo-lg { display: none; }
+@media (min-width: 620px) { .solo-lg { display: inline; } }
+@media (max-width: 619px) {
+  .dos-columnas .servicios { gap: 8px; --pad-tarjeta: 12px; }
+  main { padding-top: 16px; }
+
+  /* Clima: número, cielo y dibujo en una fila; el detalle en un renglón; los
+     cuatro días en una fila baja (el día, la máxima y la mínima). */
+  .tarjeta-clima { padding: 8px 12px 10px; }
+  .tarjeta-clima .cabecera-tarjeta { min-height: 14px; margin-bottom: 2px; }
+  .ahora-clima { gap: 10px; }
+  .ahora-clima svg { width: 42px; height: 42px; }
+  .tarjeta-clima .temp { font-size: 36px; }
+  .tarjeta-clima .cielo { margin-top: 0; }
+  .tarjeta-clima .detalle { margin-top: 4px; line-height: 1.3; }
+  .tira-dias { margin-top: 6px; gap: 5px; }
+  .tira-dias > div {
+    display: grid; grid-template-columns: auto auto; justify-content: center; align-items: baseline;
+    column-gap: 5px; padding: 3px 2px 4px;
+  }
+  .tira-dias .dia { grid-column: 1 / -1; line-height: 1.3; }
+  .tira-dias .lluvia-chica { display: inline; margin-left: 4px; color: #8CC6EE; font-weight: 600; letter-spacing: 0; }
+  .tira-dias .max { margin-top: 0; }
+  .tira-dias .min.con-lluvia { display: block; }
+  .tira-dias .lluvia { display: none; }
+
+  /* Farmacia: cruz, píldora, nombre y dirección arriba; los dos botones abajo. */
+  .tarjeta-farmacia { padding-top: 10px; padding-bottom: 10px; }
+  .una-farmacia { grid-template-columns: 36px minmax(0, 1fr); column-gap: 10px; }
+  .cruz-farmacia { width: 36px; height: 36px; }
+  .acciones-farmacia { margin-top: 6px; }
+  .boton-farmacia { min-height: 40px; }
+
+  /* Dólar: Oficial y Blue más juntos; la hora y el enlace, en un renglón. */
+  .panel-dolar { padding-top: 8px; padding-bottom: 8px; }
+  .panel-dolar .cabecera-tarjeta { margin-bottom: 0; }
+  .fila-panel-dolar { padding: 2px 0; }
+  .fila-panel-dolar:nth-child(n+3) { display: none; }
+  .filas-panel-dolar { --cifra: clamp(17px, 6.2cqw, 20px); }
+  .fila-panel-dolar .venta { line-height: 1.15; }
+  .pie-panel-dolar { margin-top: 2px; flex-wrap: nowrap; }
+  .pie-panel-dolar > span { min-width: 0; }
+  .pie-panel-dolar a { white-space: nowrap; }
+}
