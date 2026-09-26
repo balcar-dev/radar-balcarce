@@ -34,9 +34,9 @@ sección B). Nada de acá inventa datos: sólo dice lo que el medio hace hoy.
 **Bio de Instagram (máx. 150 caracteres)**
 
 ```
-Noticias de Balcarce, la región y el país.
-Clima, agenda y lo que pasa hoy.
-radarbalcarce.com
+Lo que pasa en Balcarce, la región y el país.
+Noticias, clima y agenda, todos los días.
+Todo en radarbalcarce.com
 ```
 
 Tres renglones, sin emojis ni promesas. Si se cambia una palabra, volver a
@@ -58,21 +58,21 @@ contar: el límite es 150 (una prueba lo cuida).
 **Información breve de Facebook (máx. 101 caracteres)**
 
 ```
-Noticias de Balcarce, la región y el país. Clima y agenda. radarbalcarce.com
+Lo que pasa en Balcarce, la región y el país, todos los días. Todo en radarbalcarce.com
 ```
 
 **Descripción larga de Facebook**
 
 ```
-Radar Balcarce es un medio digital de Balcarce. Reunimos lo que pasa en la
-ciudad, la región y el país, con la fuente siempre a la vista, y sumamos el
-clima, la agenda y los teléfonos útiles.
+Radar Balcarce es el medio digital que sigue lo que pasa en Balcarce, la
+región y el país. Cada día reunimos las noticias con la fuente siempre a la
+vista, y sumamos el clima, la agenda y los teléfonos útiles.
 
-Las notas las escribe una inteligencia artificial y se verifican contra las
+Las notas se escriben con inteligencia artificial y se verifican contra las
 fuentes; lo sensible lo revisa una persona antes de salir. Si ves un error,
 escribinos y lo corregimos.
 
-Todas las notas en radarbalcarce.com
+Todas las notas, la agenda y el clima, en radarbalcarce.com
 ```
 
 ## Imágenes y colores
