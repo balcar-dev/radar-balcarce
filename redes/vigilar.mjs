@@ -221,7 +221,7 @@ export function problemasDelContrato(contrato) {
         clave: `falta-${red.red}-${p.id}`,
         nivel: p.grupo === 'reel' || p.fase === 'no-se-reintenta' ? 'alta' : 'media',
         texto: p.fase === 'no-se-reintenta'
-          ? `${red.nombre}: no salió ${que} de ${p.etiqueta} (su reel sí salió y la historia no se reintenta). Miré el registro de "Redes": las historias de Meta aceptan hasta 60 segundos.`
+          ? `${red.nombre}: no salió ${que} de ${p.etiqueta} (su reel sí salió y la historia no se reintenta). Mirá el registro de "Redes": las historias de Meta aceptan hasta 60 segundos.`
           : `${red.nombre}: no salió ${que} de ${p.etiqueta} de las ${p.hora}, y ya se cerró su ventana. Si ese día no había notas para contar, es normal.`,
       });
     }
