@@ -6,7 +6,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import {
-  NOMBRES_PROPIOS, FIGURAS, TEMAS, FARMACIAS_A_MANO, PISO_DE_AFUERA, PISO_POR_DEFECTO, CUPO_DE_AFUERA, CUPO_POR_DEFECTO, BALCARCE, FUENTES, FUENTES_NACIONALES, PALABRAS_LOCALES, PALABRAS_ZONA, REGLAS_SECCION, AMARILLO_MENORES, REGLAS_SEMAFORO, MOTIVO_COTIZACION,
+  NOMBRES_PROPIOS, FIGURAS, TEMAS, FARMACIAS_A_MANO, PISO_DE_AFUERA, PISO_POR_DEFECTO, CUPO_DE_AFUERA, CUPO_POR_DEFECTO, BALCARCE, FUENTES, FUENTES_NACIONALES, PALABRAS_LOCALES, PALABRAS_ZONA, REGLAS_SECCION, AMARILLO_MENORES, REGLAS_SEMAFORO, MOTIVO_COTIZACION, MOTIVO_POLICIAL_DE_AFUERA,
   MOTIVO_INTERNACIONAL, PALABRAS_DE_TECNOLOGIA_EN_EL_TITULO,
 } from './fuentes.mjs';
 import { diaDeTurno, fechaEnBalcarce } from './utiles.mjs';
@@ -530,6 +530,13 @@ function semaforo(nota, seccion, puntaje) {
     return { color: 'amarillo', motivo: MOTIVO_INTERNACIONAL };
   }
   const texto = normalizar(`${nota.titulo} ${nota.cuerpo.slice(0, 600)}`);
+  // Un policial de otro lugar con violencia o acusados espera a una persona
+  // (26/09): las fuentes nacionales de policiales traen crímenes de todo el país.
+  if (seccion === 'Policiales' && nota.alcance !== 'local' && !nota.nombraBalcarce && !esDeBalcarce(nota)) {
+    if ((REGLAS_SEMAFORO.policialDeAfuera ?? []).some((p) => contiene(texto, p))) {
+      return { color: 'amarillo', motivo: MOTIVO_POLICIAL_DE_AFUERA };
+    }
+  }
   for (const p of REGLAS_SEMAFORO.promocional ?? []) {
     if (contiene(texto, p)) return { color: 'amarillo', motivo: `parece promoción, no noticia: "${p}"` };
   }

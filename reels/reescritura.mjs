@@ -803,6 +803,40 @@ function palabrasDeResumenes(nota) {
 }
 
 /**
+ * En qué orden se gasta el tope de pedidos a la IA (26/09).
+ *
+ * Primero lo de Balcarce, como siempre. Después lo de afuera, pero ya no
+ * sólo por puntaje: el puntaje solo dejaba sin cuerpo a las secciones flacas
+ * (Cultura y agenda, Tecnología, Policiales, Agro), porque Política,
+ * Economía y Deportes siempre tienen más notas con más puntos, y una nota sin
+ * cuerpo no se publica. Los usuarios piden tres notas por sección. Entonces
+ * la sección con MENOS notas ya escritas pasa primero: a cada nota se le
+ * asigna el "lugar" que ocuparía en su sección (las que ya tienen cuerpo de
+ * una corrida anterior cuentan como lugares ocupados) y se reescribe por
+ * lugar, de menor a mayor, y a igual lugar por puntaje.
+ *
+ * No cambia CUÁNTO se le pide a la IA (el tope por corrida y por día siguen
+ * igual): sólo QUÉ se le pide primero. Lo ya escrito no gasta nada.
+ */
+export function ordenarParaReescribir(notas, previas = {}) {
+  const porPuntaje = (a, b) => (b.relevancia ?? 0) - (a.relevancia ?? 0);
+  const yaEscrita = (n) => !!(previas[n.id]?.titulo && tieneCuerpo(previas[n.id]));
+  const locales = notas.filter(esLocal).sort(porPuntaje);
+  const deAfuera = notas.filter((n) => !esLocal(n)).sort(porPuntaje);
+  const ocupados = {};
+  for (const n of [...locales, ...deAfuera]) if (yaEscrita(n)) ocupados[n.seccion] = (ocupados[n.seccion] ?? 0) + 1;
+  const lugar = new Map();
+  const vistos = {};
+  for (const n of deAfuera) {
+    if (yaEscrita(n)) { lugar.set(n, -1); continue; }
+    vistos[n.seccion] = (vistos[n.seccion] ?? 0) + 1;
+    lugar.set(n, (ocupados[n.seccion] ?? 0) + vistos[n.seccion]);
+  }
+  deAfuera.sort((a, b) => (lugar.get(a) - lugar.get(b)) || porPuntaje(a, b));
+  return [...locales, ...deAfuera];
+}
+
+/**
  * Reescribe con IA, sola y sin que nadie la mire, las notas que van a salir
  * sin revisión humana (semáforo verde y sin que una persona haya decidido
  * algo). Es lo que hace posible que el sitio se actualice con la PC apagada
@@ -814,8 +848,9 @@ function palabrasDeResumenes(nota) {
  * tiene cuerpo de verdad (tieneCuerpo): lo que quedó sin cuerpo vuelve a ser
  * candidata.
  *
- * Primero lo de Balcarce (esLocal), y dentro de cada grupo, la de más
- * puntaje: el tope por corrida se gasta en lo que define al medio, no en la
+ * Primero lo de Balcarce (esLocal) y, en lo de afuera, la sección con menos
+ * notas escritas (ordenarParaReescribir): el tope por corrida se gasta en lo
+ * que define al medio y en que ninguna sección quede vacía, no en la
  * Fórmula 1.
  *
  * Antes de pedirle nada a Gemini, el texto completo de la fuente pasa por el
@@ -866,10 +901,12 @@ export async function reescribirAutomaticas(notas, {
   const yaPedidasHoy = pedidasHoy(intentos, ahora);
   let topeDelDia = false;
 
-  const candidatas = [...notas]
-    .filter((n) => n.semaforo === 'verde')
-    .filter((n) => !decisionHumana(decisiones[n.id]))
-    .sort((a, b) => (Number(esLocal(b)) - Number(esLocal(a))) || ((b.relevancia ?? 0) - (a.relevancia ?? 0)));
+  const candidatas = ordenarParaReescribir(
+    [...notas]
+      .filter((n) => n.semaforo === 'verde')
+      .filter((n) => !decisionHumana(decisiones[n.id])),
+    previas,
+  );
 
   // En el registro de Actions no va el título de una nota frenada por el
   // semáforo: si la frenó, puede ser justamente porque identifica a alguien.

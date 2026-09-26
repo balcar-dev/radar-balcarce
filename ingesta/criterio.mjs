@@ -95,9 +95,14 @@ export const PORTADA = {
 export const PISO_DE_AFUERA = {
   Deportes: 62,
   Economía: 38,
-  Tecnología: 38,
+  // 26/09: 38 dejaba afuera a Hipertextual y Xataka (36); es una sección flaca.
+  Tecnología: 34,
   Política: 40,
   Policiales: 40,
+  // 26/09: las secciones flacas. Con el piso de 50, las notas frescas de
+  // espectáculos y de agro de afuera (unos 45 puntos) quedaban todas esperando.
+  'Cultura y agenda': 38,
+  Agro: 38,
 };
 export const PISO_POR_DEFECTO = 50;
 
@@ -125,6 +130,9 @@ export const CUPO_DE_AFUERA = {
   Política: 8,
   Policiales: 8,
   Automovilismo: 6,
+  // 26/09: Cultura y agenda tenía el cupo de todas (15); con los espectáculos de
+  // los diarios nacionales, la agenda de Balcarce quedaría tapada por la farándula.
+  'Cultura y agenda': 8,
 };
 export const CUPO_POR_DEFECTO = 15;
 

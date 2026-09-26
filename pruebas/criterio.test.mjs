@@ -43,7 +43,7 @@ function filasDeLaTabla() {
   const b = DOC.indexOf('<!-- NUMEROS:FIN -->');
   assert.ok(a >= 0 && b > a, 'falta la tabla "Los números" entre sus marcas');
   return DOC.slice(a, b).split('\n')
-    .map((l) => l.match(/^\|\s*[^|]+\|\s*([\d.]+)\s*\|\s*`([\p{L}_]+(?:\.[\p{L}_]+)?)`\s*\|\s*$/u))
+    .map((l) => l.match(/^\|\s*[^|]+\|\s*([\d.]+)\s*\|\s*`([\p{L}_]+(?:\.[\p{L}_ ]+)?)`\s*\|\s*$/u))
     .filter(Boolean)
     .map((m) => ({ numero: Number(m[1]), clave: m[2] }));
 }

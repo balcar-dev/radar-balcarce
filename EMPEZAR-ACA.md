@@ -36,7 +36,7 @@ cambia y listo. Y se borra `panel/datos/CLAVES-INICIALES.txt` si todavía existe
 
 Todo esto corre en GitHub, **con la PC apagada**:
 
-- **Cada 30 minutos:** busca noticias en 45 fuentes, las agrupa, las clasifica,
+- **Cada 30 minutos:** busca noticias en 61 fuentes, las agrupa, las clasifica,
   reescribe con IA las que van a salir sin revisión (título, copete y cuerpo),
   arma la web y la publica en Cloudflare Pages.
 - **Varias veces por día (el reloj de las redes):** publica en Facebook y arma

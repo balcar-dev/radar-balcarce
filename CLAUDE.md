@@ -1,6 +1,6 @@
 # Radar Balcarce
 
-Medio digital automático de Balcarce (Buenos Aires). Lee 45 fuentes cada media
+Medio digital automático de Balcarce (Buenos Aires). Lee 61 fuentes cada media
 hora, decide qué publicar, arma el sitio y lo sube, sin que haya nadie
 despierto. Los usuarios son Hernán y Andrés; escribir siempre en castellano
 rioplatense, sin voseo forzado.

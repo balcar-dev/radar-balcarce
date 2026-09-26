@@ -65,6 +65,18 @@ entra sólo lo que nombra a Balcarce, a una figura de acá o a la zona (la ruta
 **piso de puntaje** y un **cupo** (cuántas pueden salir solas): los números
 están en la sección 11. Lo de Balcarce no tiene piso ni cupo.
 
+**Las secciones flacas (26/09).** La portada tiene que tener tres notas por
+sección, y para eso hay fuentes de afuera con la sección fija: **lo que le gusta
+a la gente** en otros medios (espectáculos, cultura, tecnología, el campo y
+la economía de los diarios nacionales) y los policiales de los diarios
+nacionales. Cuentan igual que cualquier nota de afuera: peso bajo, pocas por
+vuelta, piso y cupo de su sección, semáforo, verificación contra la fuente y
+cuerpo. Lo internacional sin relación con Balcarce sigue esperando. Cuando
+falta material para una sección se suman fuentes o se baja el piso de esa
+sección (nunca el de Deportes ni el semáforo); no se sube el tope de pedidos
+a la IA. Para gastar ese tope, se reescribe primero lo de Balcarce y, después,
+la sección con menos notas escritas.
+
 ### Las secciones
 
 | Sección | ¿Sale sola? |
@@ -93,6 +105,7 @@ están en la sección 11. Lo de Balcarce no tiene piso ni cupo.
 | **Una acusación dicha como hecho.** Sin condena o confirmación oficial, se atribuye a quien acusó y va en condicional ("habría") | Doctrina Campillay: es lo que protege al medio de una demanda por calumnias o injurias |
 | **La cotización del dólar como nota de otro medio.** Si el título es "dólar hoy", "dólar blue", "a cuánto cotiza"… la nota no sale sola | La cotización se muestra en `/dolar`, que se actualiza sola, y el sitio arma su propia nota del dólar una vez por día hábil (sección 8). Una nota ajena por cada cotización es relleno |
 | **Política o economía de otros países sin relación con Balcarce.** Si el título nombra a Trump, Xi Jinping, Putin, la Casa Blanca, Gaza, Ucrania, el G20… y la nota no nombra a Balcarce, no sale sola | No le importa a nadie de acá: el 26/09 la cumbre Trump–Xi salió sola. Queda amarilla con el motivo "internacional: sin relación con Balcarce", por si una persona quiere publicarla (por ejemplo, si afecta a la papa). La lista es `REGLAS_SEMAFORO.internacional`, y sólo mira el título |
+| **Un policial de otro lugar con violencia o acusados.** Si la nota es de Policiales, no nombra a Balcarce y el título o el comienzo dicen "mató", "crimen", "detuvieron", "condenado", "prófugo", "juicio", "fiscal"…, no sale sola | Los diarios nacionales traen crímenes y causas de todo el país, con nombres de acusados, y un medio de Balcarce no tiene por qué darles lugar sin que una persona los mire (26/09: "Mató a su mujer embarazada…" salía verde). Queda amarilla con el motivo "policial de afuera con violencia o acusados". La lista es `REGLAS_SEMAFORO.policialDeAfuera`; no toca lo de Balcarce ni el resto del semáforo |
 | **Una nota en Tecnología que no habla de tecnología.** Las fuentes de tecnología de los diarios traen de todo | La sección se confirma con el título (`PALABRAS_DE_TECNOLOGIA_EN_EL_TITULO`): si no nombra nada de tecnología, no se le cree a la fuente y se clasifica por lo que dice |
 | **"En vivo", "minuto a minuto", "en directo"** en el título, la bajada, el guion o el texto para redes, aunque el medio de origen lo diga ("música en vivo" sí) | Radar Balcarce no hace coberturas en vivo: cuenta lo que pasó |
 | **Una nota automática sin cuerpo** | Una nota de dos renglones no es una nota. Queda "esperando cuerpo" hasta tenerlo (sección 4) |
@@ -599,9 +612,11 @@ instrucción de la IA (70, 90, 100 a 180…) también se controlan.
 | Días que dura la página de una nota | 180 | `PORTADA.diasDeArchivo` |
 | Piso de lo de afuera: Deportes | 62 | `PISO_DE_AFUERA.Deportes` |
 | Piso de lo de afuera: Economía | 38 | `PISO_DE_AFUERA.Economía` |
-| Piso de lo de afuera: Tecnología | 38 | `PISO_DE_AFUERA.Tecnología` |
+| Piso de lo de afuera: Tecnología | 34 | `PISO_DE_AFUERA.Tecnología` |
 | Piso de lo de afuera: Política | 40 | `PISO_DE_AFUERA.Política` |
 | Piso de lo de afuera: Policiales | 40 | `PISO_DE_AFUERA.Policiales` |
+| Piso de lo de afuera: Cultura y agenda | 38 | `PISO_DE_AFUERA.Cultura y agenda` |
+| Piso de lo de afuera: Agro | 38 | `PISO_DE_AFUERA.Agro` |
 | Piso de lo de afuera: el resto de las secciones | 50 | `PISO_POR_DEFECTO` |
 | Cupo de lo de afuera: Deportes | 10 | `CUPO_DE_AFUERA.Deportes` |
 | Cupo de lo de afuera: Economía | 12 | `CUPO_DE_AFUERA.Economía` |
@@ -609,6 +624,7 @@ instrucción de la IA (70, 90, 100 a 180…) también se controlan.
 | Cupo de lo de afuera: Política | 8 | `CUPO_DE_AFUERA.Política` |
 | Cupo de lo de afuera: Policiales | 8 | `CUPO_DE_AFUERA.Policiales` |
 | Cupo de lo de afuera: Automovilismo | 6 | `CUPO_DE_AFUERA.Automovilismo` |
+| Cupo de lo de afuera: Cultura y agenda | 8 | `CUPO_DE_AFUERA.Cultura y agenda` |
 | Cupo de lo de afuera: el resto de las secciones | 15 | `CUPO_POR_DEFECTO` |
 | Facebook: notas por día, como máximo | 5 | `FACEBOOK.porDia` |
 | Facebook: relevancia mínima | 75 | `FACEBOOK.relevanciaMinima` |

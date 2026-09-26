@@ -604,6 +604,229 @@ export const FUENTES_NACIONALES = [
     maxItems: 3,
     temas: ['politica'],
   },
+  // --- Secciones flacas: más fuentes y lo que le gusta a la gente (26/09) ------
+  //
+  // Hernán y Andrés pidieron que cada categoría de la portada tenga siempre
+  // tres notas, "sumando fuentes o investigando lo que le gusta a la gente y es
+  // popular en otros medios". El 25/09 la portada de 72 h tenía Cultura y agenda
+  // 1, Tecnología 1 y Policiales 0. Se probaron ~100 feeds ese día; éstos
+  // respondieron con notas de las últimas horas.
+  //
+  // Todas van con `seccion` fija (el feed ya viene separado por tema) y con
+  // pesos bajos (11 a 14) y `maxItems` chico: lo local sigue ganando. Lo que
+  // frena lo de afuera es el piso y el cupo de cada sección (criterio.mjs), y
+  // el semáforo manda igual: lo sensible sigue esperando a una persona, y lo
+  // internacional sin relación con Balcarce, también.
+  //
+  // Espectáculos y cultura: es lo más leído de los diarios nacionales. Va a
+  // Cultura y agenda con cupo propio, para que no tape la agenda de Balcarce.
+  {
+    id: 'infobae-teleshow',
+    nombre: 'Infobae · Teleshow',
+    medio: 'Infobae',
+    url: 'https://www.infobae.com/arc/outboundfeeds/rss/category/teleshow/?outputType=xml',
+    tipo: 'rss',
+    alcance: 'pais',
+    seccion: 'Cultura y agenda',
+    peso: 12,
+    maxItems: 3,
+    temas: ['espectaculos', 'popular'],
+    nota: 'Farándula, música y televisión: 36 notas por día, con el texto completo.',
+  },
+  {
+    id: 'infobae-cultura',
+    nombre: 'Infobae · Cultura',
+    medio: 'Infobae',
+    url: 'https://www.infobae.com/arc/outboundfeeds/rss/category/cultura/?outputType=xml',
+    tipo: 'rss',
+    alcance: 'pais',
+    seccion: 'Cultura y agenda',
+    peso: 13,
+    maxItems: 2,
+    temas: ['cultura', 'libros', 'teatro'],
+  },
+  {
+    id: 'ambito-espectaculos',
+    nombre: 'Ámbito · Espectáculos',
+    medio: 'Ámbito',
+    url: 'https://www.ambito.com/rss/pages/espectaculos.xml',
+    tipo: 'rss',
+    alcance: 'pais',
+    seccion: 'Cultura y agenda',
+    peso: 12,
+    maxItems: 2,
+    temas: ['espectaculos', 'cine', 'series'],
+  },
+  {
+    id: 'minutouno-espectaculos',
+    nombre: 'Minuto Uno · Espectáculos',
+    medio: 'Minuto Uno',
+    url: 'https://www.minutouno.com/rss/pages/espectaculos.xml',
+    tipo: 'rss',
+    alcance: 'pais',
+    seccion: 'Cultura y agenda',
+    peso: 12,
+    maxItems: 2,
+    temas: ['espectaculos', 'popular'],
+  },
+  {
+    id: 'lanacion-cultura',
+    nombre: 'La Nación · Cultura',
+    medio: 'La Nación',
+    url: 'https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/cultura/',
+    tipo: 'rss',
+    alcance: 'pais',
+    seccion: 'Cultura y agenda',
+    peso: 13,
+    maxItems: 2,
+    temas: ['cultura', 'arte', 'libros'],
+  },
+  // Policiales: lo grave (muertes, chicos, delitos sexuales) lo frena el
+  // semáforo como siempre; acá entra lo que el semáforo deja pasar. Sin
+  // Clarín Policiales (pocas notas por día y resumen de una línea).
+  {
+    id: 'lanacion-seguridad',
+    nombre: 'La Nación · Seguridad',
+    medio: 'La Nación',
+    url: 'https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/seguridad/',
+    tipo: 'rss',
+    alcance: 'pais',
+    seccion: 'Policiales',
+    peso: 13,
+    maxItems: 2,
+    temas: ['policiales', 'seguridad'],
+  },
+  {
+    id: 'tn-policiales',
+    nombre: 'TN · Policiales',
+    medio: 'TN',
+    url: 'https://tn.com.ar/arc/outboundfeeds/rss/category/policiales/?outputType=xml',
+    tipo: 'rss',
+    alcance: 'pais',
+    seccion: 'Policiales',
+    peso: 12,
+    maxItems: 2,
+    temas: ['policiales'],
+  },
+  {
+    id: 'infobae-policiales',
+    nombre: 'Infobae · Policiales',
+    medio: 'Infobae',
+    url: 'https://www.infobae.com/arc/outboundfeeds/rss/category/sociedad/policiales/?outputType=xml',
+    tipo: 'rss',
+    alcance: 'pais',
+    seccion: 'Policiales',
+    peso: 13,
+    maxItems: 2,
+    temas: ['policiales'],
+    nota: 'Con el texto completo. La categoría /policiales/ a secas viene vacía: el feed es el de Sociedad > Policiales.',
+  },
+  // Tecnología (y ciencia): la sección se confirma con el título, así que lo
+  // que no habla de tecnología se clasifica por lo que dice.
+  {
+    id: 'lanacion-tecnologia',
+    nombre: 'La Nación · Tecnología',
+    medio: 'La Nación',
+    url: 'https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/tecnologia/',
+    tipo: 'rss',
+    alcance: 'pais',
+    seccion: 'Tecnología',
+    peso: 14,
+    maxItems: 3,
+    temas: ['tecnologia'],
+  },
+  {
+    id: 'hipertextual',
+    nombre: 'Hipertextual',
+    medio: 'Hipertextual',
+    url: 'https://hipertextual.com/feed',
+    tipo: 'rss',
+    alcance: 'pais',
+    seccion: 'Tecnología',
+    peso: 11,
+    maxItems: 2,
+    temas: ['tecnologia', 'ciencia'],
+    nota: 'Medio de tecnología en castellano (no es argentino). Con el texto completo.',
+  },
+  {
+    id: 'xataka',
+    nombre: 'Xataka',
+    medio: 'Xataka',
+    url: 'https://www.xataka.com/feedburner.xml',
+    tipo: 'rss',
+    alcance: 'pais',
+    seccion: 'Tecnología',
+    peso: 11,
+    maxItems: 2,
+    temas: ['tecnologia', 'ia'],
+    nota: 'Medio de tecnología en castellano (no es argentino). La edición argentina (xataka.com.ar/feed) da 404.',
+  },
+  // Agro: la papa, la carne y el clima de la pampa húmeda. INTA es organismo
+  // público y Balcarce tiene una de sus estaciones más grandes.
+  {
+    id: 'clarin-rural',
+    nombre: 'Clarín · Rural',
+    medio: 'Clarín',
+    url: 'https://www.clarin.com/rss/rural/',
+    tipo: 'rss',
+    alcance: 'pais',
+    seccion: 'Agro',
+    peso: 12,
+    maxItems: 3,
+    temas: ['agro', 'campo'],
+  },
+  {
+    id: 'infocampo',
+    nombre: 'Infocampo',
+    medio: 'Infocampo',
+    url: 'https://www.infocampo.com.ar/feed/',
+    tipo: 'rss',
+    alcance: 'pais',
+    seccion: 'Agro',
+    peso: 12,
+    maxItems: 3,
+    temas: ['agro', 'granos', 'carne'],
+    nota: 'Con el texto completo. También publica cotizaciones ("Euro blue hoy"): las frena la regla de cotización.',
+  },
+  {
+    id: 'bichosdecampo',
+    nombre: 'Bichos de Campo',
+    medio: 'Bichos de Campo',
+    url: 'https://bichosdecampo.com/feed/',
+    tipo: 'rss',
+    alcance: 'pais',
+    seccion: 'Agro',
+    peso: 12,
+    maxItems: 3,
+    temas: ['agro', 'productores'],
+    nota: 'Con el texto completo.',
+  },
+  {
+    id: 'inta',
+    nombre: 'INTA · Noticias',
+    medio: 'INTA',
+    url: 'https://www.argentina.gob.ar/inta/noticias/rss',
+    tipo: 'rss',
+    alcance: 'pais',
+    seccion: 'Agro',
+    peso: 12,
+    maxItems: 2,
+    temas: ['agro', 'inta'],
+    nota: 'Organismo público, una o dos notas por día. Sin la marca oficial a propósito: con oficial y maxItems saltearía el piso (ver pruebas/zona.test.mjs).',
+  },
+  // Economía: la más leída de las que faltaban.
+  {
+    id: 'perfil-economia',
+    nombre: 'Perfil · Economía',
+    medio: 'Perfil',
+    url: 'https://www.perfil.com/feed/economia',
+    tipo: 'rss',
+    alcance: 'pais',
+    seccion: 'Economía',
+    peso: 13,
+    maxItems: 3,
+    temas: ['economia'],
+  },
 ];
 
 /** Los nombres de medio (`medio`) de las fuentes oficiales. Sirve para notas
@@ -837,10 +1060,26 @@ export const REGLAS_SEMAFORO = {
     'kremlin', 'hamas', 'franja de gaza', 'ucrania', 'otan', 'brics', 'g20', 'g7',
     'unión europea', 'union europea', 'parlamento europeo', 'macron', 'starmer', 'sheinbaum', 'lula',
     'maduro', 'petro', 'boric', 'erdogan', 'kim jong'],
+  // Policiales de OTRO lugar (26/09). Las fuentes nacionales de policiales
+  // (La Nación Seguridad, TN, Infobae) traen crímenes y causas de todo el
+  // país: "Mató a su mujer embarazada, se escapó de la cárcel…" salía verde
+  // porque "mató" no estaba en el amarillo. Lo de acá no cambia: esta lista
+  // sólo se aplica a Policiales que NO es de Balcarce (ni la nombra ni es de
+  // una fuente local) y mira el título y el comienzo del resumen. Queda
+  // amarilla, con su motivo. Lo que sale solo de afuera es lo neutro: un
+  // decomiso, una estafa, un robo sin nombres, la seguridad vial.
+  policialDeAfuera: ['mató', 'mataron', 'matar', 'crimen', 'detuvieron', 'detuvo', 'detienen',
+    'arrestaron', 'prófugo', 'condenaron', 'condenado', 'condena', 'acosador', 'acoso',
+    'sospechoso', 'sospechosos', 'balacera', 'tiroteo', 'secuestraron', 'rehén', 'disparó',
+    'disparos', 'muerto', 'muertos', 'murieron', 'mueren', 'cárcel', 'preso', 'presos',
+    'prisión', 'juicio', 'fiscal', 'apuñaló', 'degolló', 'atropelló'],
 };
 
 /** El motivo con que queda amarilla una nota internacional sin relación con Balcarce. */
 export const MOTIVO_INTERNACIONAL = 'internacional: sin relación con Balcarce';
+
+/** El motivo con que queda amarilla una nota policial de otro lugar con violencia o acusados. */
+export const MOTIVO_POLICIAL_DE_AFUERA = 'policial de afuera con violencia o acusados: espera a una persona';
 
 // Las fuentes de tecnología de los diarios nacionales traen de todo (esa
 // cumbre, un partido, una serie): no alcanza con que el feed diga "Tecnología".
