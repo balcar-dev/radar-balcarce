@@ -1,5 +1,5 @@
 {
-  "exportado": "2026-09-26T08:43:31.185Z",
+  "exportado": "2026-09-26T08:53:22.003Z",
   "decisiones": {
     "1951120": {
       "estado": "automatica",
@@ -24486,6 +24486,207 @@
           "fecha": "2026-09-26T08:30:00.000Z",
           "oficial": false,
           "aporte": "Aportó el análisis sobre variables internacionales, reportes del USDA y proyecciones para el ciclo comercial 2026/27."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "l3ky37": {
+      "estado": "automatica",
+      "titulo": "Franco Colapinto largará noveno en el Gran Premio de Azerbaiyán",
+      "copete": "El piloto argentino avanzó a la Q3 en el circuito callejero de Bakú y subió un puesto en la grilla tras una sanción. La competencia se adelantó al sábado por una conmemoración local.",
+      "cuerpo": "El británico George Russell se quedó con la pole position con un tiempo de 1m42s526, aprovechando también un despiste de Kimi Antonelli en el cierre de la primera tanda.\n\nA diferencia del cronograma habitual de la categoría, la carrera se disputará este sábado a partir de las 8 de la Argentina debido a una festividad local en Azerbaiyán por el Día del Recuerdo. Como se había informado en las previas del fin de semana, la actividad en pista presentó modificaciones en sus días tradicionales y podrá seguirse a través de Fox Sports, Disney+ y F1 TV.\n\nPara los seguidores del automovilismo en Balcarce y el país, la decimosenta prueba de la temporada ofrece una oportunidad para que el piloto nacional busque sumar nuevos puntos en el campeonato tras una sólida actuación donde superó el corte con un registro de 1m44s683 en la segunda fase.",
+      "guion": "Franco Colapinto largara noveno en el Gran Premio de Azerbaiyan",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-26T08:53:21.927Z",
+      "claves": [
+        "Colapinto largará noveno en el circuito callejero de Bakú.",
+        "La carrera de la Fórmula 1 se adelantó al sábado por una fecha nacional.",
+        "George Russell se quedó con la pole position de la competencia.",
+        "El piloto argentino avanzó un lugar en la grilla por una sanción a Sainz."
+      ],
+      "seSabe": [
+        "Franco Colapinto largará noveno en el Gran Premio de Azerbaiyán.",
+        "George Russell conquistó la pole position de la clasificación.",
+        "La carrera se disputará este sábado a las 8 de la Argentina.",
+        "La competencia se adelantó un día por la conmemoración del Día del Recuerdo en Azerbaiyán."
+      ],
+      "textoRedes": "Franco Colapinto largará noveno este sábado en el Gran Premio de Azerbaiyán de la Fórmula 1 tras avanzar a la Q3 en Bakú. La carrera se adelantó un día por una festividad local y comenzará a las 8 de la Argentina.",
+      "etiquetas": [
+        "Franco Colapinto",
+        "Formula 1",
+        "Gran Premio de Azerbaiyán",
+        "Bakú"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Clarín",
+          "enlace": "https://www.clarin.com/deportes/f1-gp-azerbaiyan-franco-colapinto-vivo-horario-ver-carrera-formula-1_0_pgwQ5yEYAA.html",
+          "fecha": "2026-09-26T08:00:11.000Z",
+          "oficial": false,
+          "aporte": "Detalles de los tiempos de clasificación, la penalización a Sainz y los horarios de transmisión."
+        },
+        {
+          "medio": "Olé",
+          "enlace": "https://www.ole.com.ar/autos/gran-premio-azerbaiyan-carrera-franco-colapinto-hoy-vivo-online-horario-ver_0_ptdVDl4M25.html",
+          "fecha": "2026-09-26T07:18:08.000Z",
+          "oficial": false,
+          "aporte": "El ingreso a la Q3 y la búsqueda de sumar puntos en la competencia."
+        },
+        {
+          "medio": "Motorsport",
+          "enlace": "https://es.motorsport.com/f1/news/hora-carrera-sabado-baku-azerbaiyan-como-ver-2026/10858841/?utm_source=RSS&utm_medium=referral&utm_campaign=RSS-F1&utm_term=News&utm_content=es",
+          "fecha": "2026-09-26T06:38:38.000Z",
+          "oficial": false,
+          "aporte": "El motivo del cambio de día de la carrera debido a una festividad local en Azerbaiyán."
+        },
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/deportes/automovilismo/franco-colapinto-en-la-formula-1-en-vivo-nid25092026/",
+          "fecha": "2026-09-25T16:22:15.000Z",
+          "oficial": false,
+          "aporte": "Información previa sobre la ubicación de partida en la décima quinta prueba de la temporada."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1n5o9jc",
+          "titulo": "Franco Colapinto parte noveno en la Formula 1 en Azerbaiyán",
+          "fecha": "2026-09-25T17:34:57.000Z",
+          "ruta": "/nota/franco-colapinto-parte-noveno-en-el-gran-premio-de-azerbaiyan-1n5o9jc"
+        },
+        {
+          "id": "11s68mw",
+          "titulo": "Franco Colapinto larga noveno en el Gran Premio de Azerbaiyán",
+          "fecha": "2026-09-26T07:18:08.000Z",
+          "ruta": "/nota/franco-colapinto-larga-noveno-en-el-gran-premio-de-azerbaiyan-11s68mw"
+        },
+        {
+          "id": "1ry7mu3",
+          "titulo": "Franco Colapinto largará noveno en el Gran Premio de Azerbaiyán",
+          "fecha": "2026-09-25T19:24:40.000Z",
+          "ruta": "/nota/franco-colapinto-larga-noveno-en-el-gran-premio-de-azerbaiyan-1ry7mu3"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron cuatro medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      }
+    },
+    "x1k8x1": {
+      "estado": "automatica",
+      "titulo": "El valor de la carne vacuna supera al de la exportación automotriz",
+      "copete": "Una tonelada de carne vacuna destinada a la Cuota Hilton supera en valor a una pick-up nacional. El sector exportador registra un incremento en la liquidación de divisas.",
+      "cuerpo": "El presidente de la Asociación Argentina de Angus, Amadeo Derito, señaló durante la apertura de la exposición de la raza en Cañuelas que exportar una tonelada de carne vacuna para la Cuota Hilton alcanza los veintidós mil dólares, superando en un cuarenta por ciento el valor de una pick-up de dos toneladas.\n\nEn tanto, el consultor Javier Preciado Patiño advirtió que la mayor parte de las exportaciones hacia Estados Unidos correspondieron a carne congelada, mientras que la participación de la carne enfriada se ubicó entre el diez y el quince por ciento.",
+      "guion": "El valor de la carne vacuna supera al de la exportación automotriz",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-26T08:53:21.927Z",
+      "seSabe": [
+        "Una tonelada de carne vacuna para la Cuota Hilton cotiza a veintidós mil dólares, según informó el presidente de la Asociación Argentina de Angus, Amadeo Derito.",
+        "El ingreso de dólares por ventas externas de carne vacuna subió un once por ciento en agosto, de acuerdo con el Consorcio ABC.",
+        "Las exportaciones de carne vacuna sumaron casi quinientas mil toneladas en los primeros ocho meses del año, según datos del sector exportador."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Un informe sectorial destaca que el valor de exportación de la carne vacuna supera al de la industria automotriz y detalla el crecimiento en el ingreso de divisas durante los primeros ocho meses del año.",
+      "etiquetas": [
+        "carne vacuna",
+        "exportaciones",
+        "industria automotriz",
+        "Cuota Hilton",
+        "economia"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Clarín",
+          "enlace": "https://www.clarin.com/rural/carne-autos-pesos-dolares-sorprenden_0_8gNUkPqXw1.html",
+          "fecha": "2026-09-26T08:24:12.000Z",
+          "oficial": false,
+          "aporte": "Aportó datos sobre la comparación de precios entre exportaciones de carne y vehículos, la evolución de la liquidación de divisas y las declaraciones de referentes del sector agropecuario."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "ym16jo",
+          "titulo": "El Gobierno habilita los prestamos en dolares a empresas con ingresos en pesos",
+          "fecha": "2026-09-26T03:59:54.000Z",
+          "ruta": "/nota/el-gobierno-habilita-los-prestamos-en-dolares-a-empresas-con-ingresos-ym16jo"
+        },
+        {
+          "id": "s5m6up",
+          "titulo": "La Corte falló a favor de una textil y marcó un precedente en la aplicación de tasas para deudas en pesos y dólares",
+          "fecha": "2026-09-23T22:15:57.000Z",
+          "ruta": "/nota/la-corte-fallo-a-favor-de-una-textil-y-marco-un-precedente-en-la-s5m6up"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "1aa6w2s": {
+      "estado": "automatica",
+      "titulo": "Cabaña Don Cholo gana el Gran Campeón Macho de la Semana Angus",
+      "copete": "La caballa Don Cholo obtuvo el máximo galardón con el toro \"Josecito\" en la Exposición Nacional Angus de Primavera realizada en Cañuelas.",
+      "cuerpo": "El toro \"Josecito\", de la cabaña Don Cholo, se consagró como Gran Campeón Macho de la cuadragésima séptima Exposición Nacional Angus de Primavera, desarrollada en Cañuelas en el cierre de la Semana Angus. La jura de machos a bozal estuvo a cargo de Julio Fernández, quien destacó la calidad y el balance del ejemplar ganador tras una competencia muy reñida.\n\nCarlos Ojea Rullán, socio de la cabaña ganadora, señaló que el logro es fruto de años de planificación genética y del trabajo cotidiano de todo el equipo de cabañeros, veterinarios y encargados de campo. Por su parte, la vigesimosexta Exposición del Ternero coronó a los mejores ejemplares bajo la evaluación del jurado Emanuel Canale, en una jornada que reunió a gran cantidad de público y contó con el respaldo de la Asociación Argentina de Angus.",
+      "guion": "Cabaña Don Cholo gana el Gran Campeón Macho de la Semana Angus",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-26T08:53:21.927Z",
+      "claves": [
+        "El toro \"Josecito\", de Don Cholo, fue elegido Gran Campeón Macho.",
+        "La jura se realizó en Cañuelas durante la Semana Angus de Primavera.",
+        "Julio Fernández destacó el nivel y la paridad entre los animales presentados."
+      ],
+      "seSabe": [
+        "El toro \"Josecito\", de la cabaña Don Cholo, ganó el Gran Campeón Macho en la Exposición Nacional Angus de Primavera.",
+        "Julio Fernández ejerció como jurado de la jura de machos a bozal en Cañuelas.",
+        "Carlos Ojea Rullán destacó el trabajo del equipo de campo y los años de planificación genética."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "La cabaña Don Cholo se consagró con el toro Josecito como Gran Campeón Macho en la Exposición Nacional Angus de Primavera en Cañuelas.",
+      "etiquetas": [
+        "Semana Angus",
+        "Cañuelas",
+        "Don Cholo"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Clarín",
+          "enlace": "https://www.clarin.com/rural/don-cholo-consagro-gran-campeon-macho-primavera-juanita-logro-gran-campeon-ternero_0_aIaRZA7AUo.html",
+          "fecha": "2026-09-26T08:12:12.000Z",
+          "oficial": false,
+          "aporte": "Detalló los resultados de la Exposición Angus de Primavera y las declaraciones de los jurados y organizadores."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1paz2ii",
+          "titulo": "Atlanta se consagró campeón en la Liga Nacional de béisbol",
+          "fecha": "2026-09-20T22:00:04.000Z",
+          "ruta": "/nota/atlanta-se-consagro-campeon-en-la-liga-nacional-de-beisbol-1paz2ii"
+        },
+        {
+          "id": "1ibi15p",
+          "titulo": "Kevin Gómez se consagró campeón nacional de boxeo",
+          "fecha": "2026-09-20T19:25:07.000Z",
+          "ruta": "/nota/kevin-gomez-se-consagro-campeon-nacional-de-boxeo-1ibi15p"
+        },
+        {
+          "id": "1dmj600",
+          "titulo": "Kevin Gómez se consagró campeón argentino de boxeo",
+          "fecha": "2026-09-20T04:57:04.000Z",
+          "ruta": "/nota/kevin-gomez-se-consagro-campeon-argentino-de-boxeo-1dmj600"
         }
       ],
       "verificacion": {
