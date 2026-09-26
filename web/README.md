@@ -98,6 +98,61 @@ J y las S y los dígitos quedan de ancho distinto). Las cifras llevan
 - **Cambiar un tamaño** = cambiar la variable, no la tarjeta. Pruebas:
   `../pruebas/tipografia.test.mjs`.
 
+### Tipografía: Fraunces sin "wonk"
+
+El `<link>` de Google Fonts (`app/layout.js`) pide `Fraunces:opsz,wght,WONK@9..144,500..900,0..1`.
+Con sólo `opsz` y `wght` Google sirve la fuente con las formas "wonky" (h, n, m
+inclinadas) puestas de fábrica en los tamaños grandes, y el CSS no las puede
+apagar. Con el eje WONK disponible, `globals.css` pone `html { font-variation-settings:
+"WONK" 0, "SOFT" 0 }` (IBM Plex Sans no tiene esos ejes y lo ignora) y los titulares
+llevan `font-variant-numeric: lining-nums proportional-nums`. El archivo pesa lo
+mismo que antes (unos 60 KB el subconjunto latino). Las imágenes para compartir
+(`lib/tarjeta.js`) usan su propio archivo, `fuentes/Fraunces-900.ttf`, y no cambian.
+
+### El menú de secciones (`components/navegacion.js`)
+
+Componente de cliente: el HTML ya viene armado (funciona sin JavaScript) y sólo
+agrega tres cosas: marca la página actual (`aria-current`), la centra en la fila
+y prende el degradé de la derecha (`.hay-mas`) mientras quede menú por ver. Menos
+de 900 px: una fila que se desliza (`overflow-x: auto`, `scroll-snap`, sin barra),
+toques de 44 px, servicios al final en verde. Desde 900 px envuelve como siempre y
+desde 1180 px queda fija arriba.
+
+### Servicios en el celular (menos de 620 px)
+
+El bloque "servicios en el celular" **al final** de `globals.css` compacta clima,
+farmacia y dólar (objetivo: menos de 420 px entre las tres a 375 px de ancho; se mide
+en el navegador con `getBoundingClientRect` sobre `.servicios`). Se apilan, no van
+en carrusel: nada queda escondido detrás de un gesto. El clima muestra los días en
+una fila baja (con la probabilidad de lluvia junto al día, `.lluvia-chica`); el dólar
+oculta el MEP (`.fila-panel-dolar:nth-child(n+3)`) pero conserva la grilla de tres
+columnas alineadas. En escritorio no cambia nada. Va al final de la hoja para ganarle
+a las reglas base.
+
+### La farmacia (`components/piezas.js`, `lib/farmacias.js`)
+
+`TarjetaFarmacia` lleva la identidad: `CruzFarmacia` (SVG propio), borde de arriba
+y píldora en verde farmacia (`--farmacia`, `--farmacia-oscuro`, `--farmacia-fondo`),
+y los botones "Llamar" y "Cómo llegar". `enlaceDeLlamada` arma el `tel:` completo
+("42-2106" pasa a `tel:+542266422106`; un celular con 15, a `+549 2266…`). `/farmacias`
+muestra la de turno con la misma tarjeta y la semana ordenada, sin repetir hoy.
+
+### Cómo se elige lo que se ve (tapa, secciones, "Seguí leyendo")
+
+- `armarTapa(notas, orden, { archivo })` (`lib/datos.js`): la grande y cuatro
+  secundarias salen sólo de las últimas 72 horas; cada sección muestra tres notas y,
+  si en 72 horas hay menos, se completa con el archivo (hasta 14 días, con cuerpo,
+  sin repetidas ni notas propias) con su fecha real. Sección sin nada: no se dibuja.
+- `seguirLeyendo(nota, recientes, archivo)` (`lib/seguir-leyendo.js`): siempre cuatro
+  notas distintas entre sí y de la actual (`mismaHistoria`), dos de la misma sección y
+  dos de otras, con hora, lo más nuevo primero, sin notas propias mientras haya otra.
+- `cuando(nota)` (`lib/datos.js`): el tiempo de cada nota con la escala única "recién",
+  "hace N min", "hace N h", "ayer", "hace N días"; sale de `fecha` (para las notas sin
+  hora de la fuente, la primera vez que aparecieron en el sitio). Nunca una fila sin tiempo.
+- Ninguna página termina con botones de navegación (`Cierre` sólo lleva la invitación
+  y la fuente).
+- Pruebas: `../pruebas/seguir-leyendo.test.mjs`, `../pruebas/presentacion-celular.test.mjs`.
+
 ## Las notas propias (`lib/notas-propias.js`)
 
 Notas que arma el sitio con datos propios, **sin IA**: texto de plantilla

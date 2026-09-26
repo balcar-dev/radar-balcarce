@@ -408,7 +408,11 @@ del 26/09, que recorrió las 300 páginas publicadas.
    sección y de tarjeta, y la marca. Todo dato, cifra y etiqueta va en IBM Plex
    Sans, con cifras tabulares. Cada tarjeta (clima, farmacia, dólar, agenda,
    buzón, números útiles) usa la misma etiqueta, el mismo dato principal, el
-   mismo texto secundario y las mismas acciones ("Ver la semana →"). El detalle
+   mismo texto secundario y las mismas acciones ("Ver la semana →"). Fraunces
+   se pide a Google con el eje WONK y se usa con WONK 0 y SOFT 0: sin eso, a
+   tamaños grandes salían las formas "wonky" (h, n, m inclinadas) y las letras
+   se veían raras. En los titulares, las cifras van a la altura de las
+   mayúsculas y de ancho propio (`lining-nums proportional-nums`). El detalle
    y las variables están en `web/README.md` ("Sistema tipográfico") y al
    principio del bloque de tarjetas de `web/app/globals.css`.
 8. **Todo se ve bien en cualquier tamaño.** Sin desborde horizontal, sin
@@ -417,8 +421,52 @@ del 26/09, que recorrió las 300 páginas publicadas.
    (clima, farmacia, dólar, agenda, buzón, útiles), sin huecos.
 9. **Una nota por tema.** Dos notas con el mismo título (o casi) no conviven en
    la portada: se queda la más relevante y la otra conserva su página.
-10. **Siempre lo nuevo primero**, cada sección con sus tres más recientes, la
-    tapa con cinco notas de cinco secciones distintas y todas con su hora.
+10. **Siempre lo nuevo primero, y cada nota con su tiempo.** La tapa lleva
+    cinco notas de cinco secciones distintas, todas con la hora de la fuente
+    (una nota cuya fuente no dijo la hora no compite por la tapa: queda en su
+    sección). Donde se lista una nota —tapa, secciones, temas, "Seguí leyendo"
+    y la página de la nota— se dice hace cuánto salió, con UNA sola escala:
+    "recién", "hace N min", "hace N h", "ayer", "hace N días". Si la fuente no
+    fechó la nota, cuenta desde que apareció en el sitio (es lo honesto para
+    el lector). Nunca una fila sin tiempo, ni frases como "la vimos hace".
+11. **Cada sección de la portada muestra tres notas, siempre.** Las tres más
+    nuevas de esa sección, sin repetir las de la tapa. La tapa (la grande y las
+    cuatro de abajo) usa sólo lo de las últimas 72 horas; si una sección tiene
+    menos de tres ahí, se completa con lo más nuevo del archivo: hasta 14 días
+    atrás, sólo notas con cuerpo, sin repetidas, sin notas propias y sin lo que
+    el semáforo retiró, y cada una **muestra su tiempo real** ("ayer", "hace 5
+    días"): nunca se inventa frescura. Si ni así hay tres, van las que haya; una
+    sección sin ninguna no se dibuja (`armarTapa`, `web/lib/datos.js`).
+12. **"Seguí leyendo" siempre está y nunca repite.** Cuatro notas: dos de la
+    misma sección y dos de otras (de secciones distintas entre sí), todas con
+    su hora y de la más nueva a la más vieja. Son distintas entre sí y de la
+    nota que se lee: mismo titular, mismo tema o las mismas palabras cuentan
+    como la misma historia (`mismaHistoria`, `web/lib/texto.js`). No entra la
+    nota del dólar ni un repaso mientras haya otra cosa, ni notas sin hora salvo
+    que no quede nada más. Si las últimas 72 horas no alcanzan, se completa con
+    el archivo, con su fecha real (`web/lib/seguir-leyendo.js`).
+13. **Sin botones sobrantes al pie.** Ninguna página termina con "← Portada",
+    "Más de…" o "Agenda": la navegación ya está arriba. El final de una página es,
+    en este orden: "Seguí leyendo" (en las notas), la invitación a escribirnos y,
+    si hace falta, de dónde sale el dato. Una sección larga se recorre con "Ver
+    todo →" del título y con la paginación.
+14. **El menú, en una sola fila en el celular.** Con menos de 900 píxeles es una
+    fila que se desliza (scroll-snap, sin barra visible), con un degradé en el
+    borde derecho que avisa que hay más, la sección actual marcada y centrada,
+    y Agenda, Farmacias, Dólar y Teléfonos al final, en verde. Cada toque mide
+    44 px de alto. En escritorio queda como estaba.
+15. **Los servicios, compactos en el celular.** Clima, farmacia y dólar juntos no
+    pasan de 420 px de alto a 375 px de ancho (se miden: hoy 418). Van
+    apilados y no en un carrusel, para que nada quede escondido detrás de un
+    gesto. En el dólar, el celular muestra Oficial y Blue; el MEP se ve en
+    escritorio y en `/dolar`. La columna de escritorio no se achica.
+16. **La farmacia tiene identidad propia.** Cruz de farmacia (SVG propio), verde
+    farmacia de acento (borde de arriba, cruz, píldora "Farmacia de turno"),
+    y dos botones: "Llamar" (enlace `tel:` con el número completo, para marcar
+    desde un celular) y "Cómo llegar". `/farmacias` usa la misma tarjeta arriba y
+    ordena la semana (cada día con su tacito verde, sus farmacias con la
+    dirección y el teléfono que llama), sin repetir el día de hoy. Sin imágenes de
+    afuera, y con los tamaños y familias del sistema tipográfico.
 
 ## 8. Notas propias: el dólar, los podcasts y la agenda
 
