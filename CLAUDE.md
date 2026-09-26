@@ -1,5 +1,7 @@
 # Radar Balcarce
 
+*Actualizado el 26/09/2026.*
+
 Medio digital automático de Balcarce (Buenos Aires). Lee 58 fuentes cada media
 hora, decide qué publicar, arma el sitio y lo sube, sin que haya nadie
 despierto. Los usuarios son Hernán y Andrés; escribir siempre en castellano
@@ -12,7 +14,7 @@ rioplatense, sin voseo forzado.
     reels/     placas, voz y video. SÍ tiene dependencias (resvg, ffmpeg)
     redes/     publicar en Facebook e Instagram (API de Meta). SIN dependencias
     web/       el sitio público (Next.js 15, JavaScript, HTML estático)
-    pruebas/   `npm test`, 770+ pruebas, sin red
+    pruebas/   `npm test`, más de 1.100 pruebas (1113 al 26/09), sin red
 
 Flujo: fuentes → ingesta → clasificar → puntaje → semáforo → `web/data/portada.json`
 → GitHub Actions (cada 30 min) → **Cloudflare Pages** (desde el 24/09). Vercel
@@ -22,7 +24,9 @@ la PC apagada.**
 Redes (todo desde GitHub, con la PC apagada): `redes.yml` es el reloj. Varias veces
 por día publica en Facebook y, si a esa hora le toca una historia o reel, la arma
 con la voz de Gemini y la sube a Instagram. `piezas.yml` sirve para armar o
-publicar piezas a mano. Detalle y horarios en `REDES.md`.
+publicar piezas a mano. Detalle y horarios en `REDES.md`; cómo suenan y qué dicen
+las piezas, en `CRITERIO-REDES.md`. La lista de todos los workflows (qué hace
+cada uno, cuándo corre y si cuesta plata), en `INFRAESTRUCTURA.md`.
 
 ## Comandos
 
@@ -99,6 +103,9 @@ publicar piezas a mano. Detalle y horarios en `REDES.md`.
   para redactar las notas (acepta el nombre viejo `GEMINI_API_KEY`) y
   `GEMINI_API_KEY_REDES` para voces y reels (`reels/claves.mjs`). La de redes
   no tiene alternativa: si falta, los reels no arrancan. La de redes es paga.
+  La de redacción es **gratis y está cargada y probada desde el 25/09**: la
+  reescritura la usa primero y pasa a la de redes (paga) sólo si se queda sin
+  cupo (429). Tope de 150 notas por día (`REESCRITURA.porDia`).
   La reescritura usa `gemini-flash-lite-latest`: `gemini-flash-latest` daba
   503 de alta demanda seguido; si vuelve a fallar, es el primer lugar donde mirar.
 - **En GitHub las piezas se arman con lo ya publicado** (`web/data/portada.json`,
@@ -115,8 +122,11 @@ publicar piezas a mano. Detalle y horarios en `REDES.md`.
   los públicos no pagan minutos. Se revisó todo el historial: no hay ninguna
   clave. Por eso, más que nunca, nada sensible en el repo.
 - **Todo lo demás:** `radarbalcarce@gmail.com` (Cloudflare, Vercel, Google/Gemini, Meta, Instagram).
-- **Meta:** app "Radar Balcarce Publicador" (ID 2302218363874399), usuario del
-  sistema `publicador-radar`, token sin vencimiento en el secreto `META_TOKEN`.
+- **Meta:** app "Radar Balcarce Publicador" (ID 2302218363874399), **publicada
+  (modo activo) el 26/09**: antes estaba en modo desarrollo y por eso el
+  público no veía los posteos ni los reels de Facebook (las historias sí).
+  Usuario del sistema `publicador-radar`, token sin vencimiento en el secreto
+  `META_TOKEN`.
   Página de Facebook "Radar Balcarce"; su ID para la API es **1254237411116171**
   (no el número de la dirección de Facebook). Instagram `@radarbalcarce`.
 - El correo de los commits automáticos es el noreply de GitHub (lo pedía
@@ -133,7 +143,9 @@ publicar piezas a mano. Detalle y horarios en `REDES.md`.
   redirige (301) al dominio sin `www` con una regla de Cloudflare. Web
   Analytics de Cloudflare está activado. Search Console verificado y con los
   dos sitemaps enviados (24/09). Cloudflare permite publicidad; Vercel Hobby no.
-- **Redes, al 24/09: andando.** Meta destrabó la cuenta; Redes y Piezas están
+- **Redes, al 26/09: andando y visibles.** Meta destrabó la cuenta el 24/09 y
+  el 26/09 se publicó la app (falta comprobar con alguien que no sea
+  administrador que ya se ven los posteos y los reels: `PENDIENTES.md`). Redes y Piezas están
   prendidos y los dispara cron-job.org (tres trabajos: "Actualizar la web",
   el reloj de Redes y "Vigilancia"; si un trabajo falla varias veces
   cron-job.org lo **desactiva solo**: revisarlos si algo deja de salir).
@@ -152,7 +164,10 @@ publicar piezas a mano. Detalle y horarios en `REDES.md`.
   contra la fuente antes de aceptarse. Detalle completo: `CRITERIO-EDITORIAL.md`.
 - **Analítica: Cloudflare Web Analytics** (dash.cloudflare.com, gratis y sin
   cookies). Las analíticas de Vercel se sacaron al mudar el sitio. Todavía hay
-  poco tráfico para sacar conclusiones.
+  poco tráfico para sacar conclusiones. **Faltan** el secreto
+  `CLOUDFLARE_ANALYTICS_TOKEN` y los permisos `read_insights` e
+  `instagram_manage_insights` en `META_TOKEN`: sin ellos el resumen de las
+  9 dice qué le falta (`INFRAESTRUCTURA.md`, `PENDIENTES.md`).
 - **Los tres avisos publicitarios se cargan desde el panel** (pestaña Avisos,
   23/09), no editando `web/data/avisos.json` a mano. Detalle: `PUBLICIDAD.md`.
 - **Vigilancia** (`redes/vigilar.mjs`, workflow "Vigilancia", tercer trabajo de
@@ -208,6 +223,11 @@ publicar piezas a mano. Detalle y horarios en `REDES.md`.
 | que la cotización del dólar (u otra cosa que no es nota) no salga | `REGLAS_SEMAFORO.cotizacion` en `ingesta/fuentes.mjs` (mira sólo el título) |
 | cambiar cuándo salen las historias | panel → Calendario (`panel/horarios.mjs`) |
 | cambiar qué se publica en Facebook, reels, historias o el podcast | `redes/elegir.mjs` |
+| ver qué hay publicado de verdad en la página de Facebook (posteos, reels, historias) | workflow manual "Ver Facebook" (`redes/ver-facebook.mjs`); sólo lee |
+| cambiar las estadísticas de los resúmenes de las 9 y de las 21 (visitas, seguidores) | `redes/estadisticas.mjs` (historia en `web/data/estadisticas.json`); a mano, workflow "Prueba de estadísticas" |
+| cambiar el reintento del espejo de Instagram (la foto de un posteo de Facebook) | `redes/espejo.mjs` |
+| cambiar qué notas propone "Seguí leyendo" o cómo se arma la tapa | `web/lib/seguir-leyendo.js` y `armarTapa` en `web/lib/datos.js` (reglas en `CRITERIO-EDITORIAL.md` § 7) |
+| cambiar las notas propias (el dólar del día, el repaso de cada podcast) | `web/lib/notas-propias.js` (`CRITERIO-EDITORIAL.md` § 8; `web/README.md`) |
 | cambiar cómo suenan o qué dicen las piezas de redes (la voz, saludos, cierres, cuándo se dice la dirección, largos) | `CRITERIO-REDES.md` (la identidad y las instrucciones de voz se leen de ahí; los bancos de frases, en `redes/guiones.mjs`; reiniciar el panel). Se controla con `npm test` y, para la voz de verdad, con el workflow manual "Auditar voz" |
 | cambiar a qué hora sale una pieza de Instagram | `redes/piezas.mjs` (ventana) y `reels/plan.mjs` (horarios de reels e historias de notas) |
 | prender o apagar la publicación en redes | variable `REDES_ACTIVAS` en GitHub |

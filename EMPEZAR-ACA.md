@@ -1,7 +1,8 @@
 # Radar Balcarce — empezar acá
 
-*Actualizado el 25/09/2026. Es una hoja de enlaces y de "qué hago yo": cómo
-funciona cada cosa está en los otros documentos (ver el índice al final).*
+*Actualizado el 26/09/2026. Es una hoja de enlaces y de "qué hago yo": cómo
+funciona cada cosa está en los otros documentos (ver el índice al final).
+Lo que falta hacer, por persona y en orden, está en `PENDIENTES.md`.*
 
 ## Los enlaces
 
@@ -9,7 +10,7 @@ funciona cada cosa está en los otros documentos (ver el índice al final).*
 |---|---|---|
 | **La web** | https://radarbalcarce.com | Cualquiera |
 | Instagram | https://www.instagram.com/radarbalcarce | Cualquiera |
-| Facebook | La página "Radar Balcarce" | Cualquiera |
+| Facebook | La página "Radar Balcarce" (buscarla por el nombre; su ID para la API está en `REDES.md`) | Cualquiera |
 | **El panel** | La dirección del túnel está en `panel/datos/DIRECCION-DEL-PANEL.txt`, en la PC (no va en el repo, que es público) | Andrés y Hernán |
 | El panel, desde la PC | http://localhost:4321 | Igual |
 | El código | https://github.com/balcar-dev/radar-balcarce | Público desde el 25/09 (no tiene ninguna clave) |
@@ -41,7 +42,9 @@ Todo esto corre en GitHub, **con la PC apagada**:
   arma la web y la publica en Cloudflare Pages.
 - **Varias veces por día (el reloj de las redes):** publica en Facebook y arma
   y sube a Instagram y a la página de Facebook lo que toca a esa hora: el clima,
-  la farmacia, y tres podcasts de noticias (mañana, tarde y noche).
+  la farmacia, y tres podcasts de noticias (mañana, tarde y noche). Cada día
+  tiene que salir lo mismo en las dos redes (el "contrato del día", en `REDES.md`)
+  y a las 23:30 el sistema lo compara con lo que Meta tiene publicado de verdad.
 - **Cada 30 minutos (Vigilancia):** revisa que todo lo anterior ande y te
   escribe por WhatsApp si algo falla (anda desde el 25/09; a las 21 manda un
   resumen). Detalle: `INFRAESTRUCTURA.md`.
@@ -66,11 +69,15 @@ cuando algo deja de salir.
   publica; con otra cosa, sólo simula).
 - **Publicar una pieza a mano:** GitHub → Actions → **Piezas** → Run workflow.
 
-Dos palabras que aparecen todo el tiempo: un **workflow** es una tarea
+Tres palabras que aparecen todo el tiempo: un **workflow** es una tarea
 automática de GitHub (se ven en la pestaña Actions del repositorio; cada vez
 que corre queda una "corrida" en verde, amarillo o rojo). Un **secreto** es una
 clave guardada en GitHub (Settings → Secrets and variables → Actions) que los
-workflows usan sin que nadie la vea; los carga una persona.
+workflows usan sin que nadie la vea; los carga una persona. Un **token** es una
+clave especial que le da permiso a un programa para hacer algo en otro servicio
+(publicar en Facebook, subir la web a Cloudflare): se trata igual que una
+contraseña, y nunca se pega en un chat. La lista de todos los workflows y de
+todos los secretos, con su estado, está en `INFRAESTRUCTURA.md`.
 
 ## Si algo dejó de salir
 
@@ -88,7 +95,11 @@ En este orden:
    simulan.
 5. **¿La PC está prendida?** Sólo importa para el panel (decidir notas, cargar
    avisos). La web y las redes no la necesitan.
-6. Si nada de eso explica la falla: la tabla "Qué se cae y cómo se ve" de
+6. **Si se publica pero nadie lo ve en Facebook:** correr el workflow **Ver
+   Facebook** y mirar la página desde una cuenta que no sea administradora. Hasta
+   el 26/09 la app de Meta estaba en modo desarrollo y el público no veía los
+   posteos ni los reels (`PENDIENTES.md`).
+7. Si nada de eso explica la falla: la tabla "Qué se cae y cómo se ve" de
    `INFRAESTRUCTURA.md`.
 
 ## Las dos cosas que hay que entender
@@ -123,7 +134,8 @@ tailscale funnel --https=443 off
 | `INFRAESTRUCTURA.md` | Dónde vive cada cosa, los relojes, los secretos y la vigilancia |
 | `MANUAL.md` | Cómo se eligen las noticias: puntaje, semáforo, qué sale solo |
 | `CRITERIO-EDITORIAL.md` | **El criterio editorial único**: qué se publica, **cómo se escriben las notas**, cómo se verifican y la instrucción exacta que lee la IA |
-| `REDES.md` | Qué se publica en Instagram y Facebook, a qué hora y con qué reglas |
+| `REDES.md` | Qué se publica en Instagram y Facebook, a qué hora y cómo se publica (horarios, contrato del día, infraestructura) |
+| `CRITERIO-REDES.md` | **El criterio único de las redes**: cómo suena la voz, qué dice cada pieza y qué no dice nunca |
 | `PERFILES.md` | Biografías y colores de las redes |
 | `FORMATOS.md` | Medidas de imágenes y videos, con auditoría semanal |
 | `SEO.md` | Cómo se posiciona la web y cómo se audita |
