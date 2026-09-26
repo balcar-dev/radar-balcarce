@@ -215,7 +215,9 @@ test('resumen: con problemas abiertos los lista, y trae las estadísticas', () =
   assert.match(m, /Notas nuevas hoy: 2 \(1 de Balcarce\), 1 con cuerpo/);
   assert.match(m, /Esperando a una persona: 3/);
   assert.match(m, /Problemas abiertos \(1\):\n {2}- La web no responde\./);
-  assert.match(m, /podcast noche ✓/);
+  // El contrato del día, una línea por red (redes/contrato.mjs).
+  assert.match(m, /• Facebook: posteos 1\/5 · reels 1\/3 \(falta: mañana, tarde\) · historias 0\/6/);
+  assert.match(m, /• Instagram: fotos 1\/5 · reels 1\/3 .* historias 1\/6/);
   assert.match(m, /📊 Estadísticas/);
 });
 

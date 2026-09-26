@@ -17,6 +17,7 @@
 import { diaAR, enlaceDeNota, temaParecido } from './elegir.mjs';
 import { decisionHumana } from '../ingesta/utiles.mjs';
 import { LARGO_MAXIMO } from './whatsapp.mjs';
+import { contratoDelDia, textoContrato, contratoCompleto } from './contrato.mjs';
 
 const ZONA = 'America/Argentina/Buenos_Aires';
 const minutos = (desde, ahora) => (ahora.getTime() - new Date(desde).getTime()) / 60000;
@@ -260,6 +261,9 @@ export function datosDelDia({ ahora = new Date(), portada = {}, libro = {} }) {
     facebook: Object.values(libro?.facebook ?? {}).filter((p) => esDeHoy(p.cuando)).length,
     instagramFotos: Object.values(libro?.instagramFeed ?? {}).filter((p) => esDeHoy(p.cuando)).length,
     piezas: Object.fromEntries(PIEZAS_DEL_RESUMEN.map(([n]) => [n, Boolean(libro?.instagram?.[`${hoy}/${n}`])])),
+    // El contrato del día completo, por red (redes/contrato.mjs): lo que salió,
+    // lo que falta, lo que todavía está a tiempo.
+    contrato: contratoDelDia({ libro, ahora, portada }),
     pendientes: Array.isArray(portada?.pendientes) ? portada.pendientes.length : null,
     // Las automáticas que no salen porque no tienen cuerpo (web/lib/cuerpo.js).
     esperandoCuerpo: Number.isFinite(portada?.esperandoCuerpo) ? portada.esperandoCuerpo : null,
@@ -275,11 +279,18 @@ export function datosDelDia({ ahora = new Date(), portada = {}, libro = {} }) {
  * @param {string} [o.estadisticas]    el texto de las estadísticas, si hay
  */
 export function textoResumen({ datos, problemas = [], problemasArriba = false, estadisticas = '', web = null }) {
-  const cab = problemas.length ? '📋 Radar Balcarce: resumen del día' : '✅ Radar Balcarce: todo bien. Resumen del día';
+  // "Todo bien" sólo si no hay problemas y el contrato del día está completo.
+  const incompleto = datos.contrato ? !contratoCompleto(datos.contrato) : false;
+  const cab = problemas.length || incompleto ? '📋 Radar Balcarce: resumen del día' : '✅ Radar Balcarce: todo bien. Resumen del día';
   const l = [cab, ''];
   l.push(`• Notas nuevas hoy: ${datos.notas} (${datos.locales} de Balcarce), ${datos.conCuerpo} con cuerpo`);
-  l.push(`• Facebook: ${datos.facebook} posteo(s) · Instagram: ${datos.instagramFotos} foto(s)`);
-  l.push(`• Piezas: ${PIEZAS_DEL_RESUMEN.map(([n, nombre]) => `${nombre} ${datos.piezas[n] ? '✓' : '✗'}`).join(' · ')}`);
+  // El contrato del día (25/09): una línea por red, con lo que falta y lo que
+  // todavía está a tiempo ("pendiente"). Reemplaza al conteo suelto de antes.
+  if (datos.contrato) l.push(textoContrato(datos.contrato));
+  else {
+    l.push(`• Facebook: ${datos.facebook} posteo(s) · Instagram: ${datos.instagramFotos} foto(s)`);
+    l.push(`• Piezas: ${PIEZAS_DEL_RESUMEN.map(([n, nombre]) => `${nombre} ${datos.piezas[n] ? '✓' : '✗'}`).join(' · ')}`);
+  }
   if (datos.pendientes !== null && datos.pendientes !== undefined) l.push(`• Esperando a una persona: ${datos.pendientes}`);
   if (datos.esperandoCuerpo !== null && datos.esperandoCuerpo !== undefined) l.push(`• Esperando cuerpo: ${datos.esperandoCuerpo}`);
   if (web?.actualizado) l.push(`• Web al día (última actualización ${horaCorta(web.actualizado)})`);
@@ -302,7 +313,7 @@ export function textoResumen({ datos, problemas = [], problemasArriba = false, e
  * @returns {{ texto: string, incluidas: string[] }}
  */
 export function armarMensaje(secciones = [], maximo = LARGO_MAXIMO) {
-  const conCabecera = ['problemas', 'resumen'];
+  const conCabecera = ['problemas', 'resumen', 'cierre'];
   const partes = [];
   const incluidas = [];
   for (const s of secciones.filter((x) => x?.texto)) {

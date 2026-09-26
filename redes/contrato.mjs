@@ -257,7 +257,8 @@ export function contratoDelDia({ libro = {}, fecha, ahora = new Date(), portada 
 
 // ------------------------------------------------------------------ los textos
 
-const nombresDe = (lista) => lista.map((p) => p.etiqueta);
+// En la línea de los reels alcanza con "mañana": el grupo ya dice que es un podcast.
+const nombresDe = (lista) => lista.map((p) => (p.grupo === 'reel' ? p.etiqueta.replace('podcast ', '') : p.etiqueta));
 
 /** Una red en una línea, para WhatsApp: "posteos 4/5 · reels 2/3 · historias 4/6 (faltan: farmacia · pendiente: podcast noche)". */
 export function lineaDeRed(c) {

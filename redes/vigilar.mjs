@@ -39,9 +39,14 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { cronogramaDelDia, ventanaDe, claveDePieza } from './piezas.mjs';
-import { yaPublicada, horaAR, diaAR } from './elegir.mjs';
+import { yaPublicada, horaAR, diaAR, minutoDelDiaAR } from './elegir.mjs';
 import { enviarWhatsApp, sinSecretos } from './whatsapp.mjs';
 import { auditoriaVencida } from './auditar.mjs';
+import { contratoDelDia, CONTRATO_DESDE } from './contrato.mjs';
+import {
+  consultarMeta, informeDelDia, textoCierre, lineaDeCierreCompleto, textoInforme,
+} from './auditar-redes.mjs';
+import { CONTRATO_DIARIO } from '../ingesta/criterio.mjs';
 import {
   importantesAAvisar, textoImportantes, anotarImportantes, pendientesAAvisar, textoPendientes,
   anotarPendientes, novedadesEnRedes, textoRedes, datosDelDia, textoResumen, armarMensaje,
@@ -94,7 +99,7 @@ const minutos = (desde, ahora) => (ahora.getTime() - new Date(desde).getTime()) 
  * @returns {{ clave: string, nivel: 'alta'|'media', texto: string }[]}
  */
 export function evaluar({
-  ahora, web, www = null, corridas = {}, libro = {}, contenido = null, auditoria = null,
+  ahora, web, www = null, corridas = {}, libro = {}, contenido = null, auditoria = null, contrato = null,
 }) {
   const problemas = [];
   const de = (clave, nivel, texto) => problemas.push({ clave, nivel, texto });
@@ -179,7 +184,52 @@ export function evaluar({
       }
     }
   }
+
+  // --- el contrato del día (redes/contrato.mjs)
+  if (contrato) problemas.push(...problemasDelContrato(contrato));
   return problemas;
+}
+
+/** Las piezas fijas de Instagram que ya mira `evaluar` con su propia clave. */
+const YA_VIGILADAS_EN_INSTAGRAM = ['clima-manana', 'farmacia', 'clima-noche'];
+
+/**
+ * Lo que el contrato del día (redes/contrato.mjs) tiene para decir:
+ *
+ *   · un duplicado en el libro es de prioridad ALTA y se avisa enseguida, sin
+ *     esperar al cierre (dos publicaciones iguales en una página de 1 seguidor
+ *     parecen un robot roto);
+ *   · una pieza cuya ventana se cerró sin salir (los podcasts, sus historias y
+ *     todo lo de Facebook, que antes nadie miraba) y una historia de un podcast
+ *     cuyo reel ya salió: no se reintenta, así que no hay que esperar;
+ *   · un posteo de Facebook sin su foto en Instagram.
+ *
+ * Los que ya mira `evaluar` (clima y farmacia en Instagram) no se repiten.
+ * Los posteos que quedan cortos NO son un problema acá: pueden no haber tenido
+ * candidatas; eso lo distingue el cierre de las 23:30.
+ */
+export function problemasDelContrato(contrato) {
+  const lista = [];
+  for (const red of [contrato.facebook, contrato.instagram]) {
+    for (const d of red.duplicadas) {
+      lista.push({ clave: `duplicado-${red.red}-${d.claves.join('+')}`, nivel: 'alta', texto: `${red.nombre}: DUPLICADO. ${d.texto}. Revisá la página y borrá la copia (REGLAS.md, "una pieza por día").` });
+    }
+    for (const p of red.faltan) {
+      if (red.red === 'instagram' && p.tipo === 'STORIES' && YA_VIGILADAS_EN_INSTAGRAM.includes(p.nombre) && p.grupo !== 'historia-podcast') continue;
+      const que = p.grupo === 'reel' ? 'el reel' : 'la historia';
+      lista.push({
+        clave: `falta-${red.red}-${p.id}`,
+        nivel: p.grupo === 'reel' || p.fase === 'no-se-reintenta' ? 'alta' : 'media',
+        texto: p.fase === 'no-se-reintenta'
+          ? `${red.nombre}: no salió ${que} de ${p.etiqueta} (su reel sí salió y la historia no se reintenta). Miré el registro de "Redes": las historias de Meta aceptan hasta 60 segundos.`
+          : `${red.nombre}: no salió ${que} de ${p.etiqueta} de las ${p.hora}, y ya se cerró su ventana. Si ese día no había notas para contar, es normal.`,
+      });
+    }
+    if (red.posteos.sinEspejo.length) {
+      lista.push({ clave: `sin-espejo-${red.red}`, nivel: 'media', texto: `Instagram: ${red.posteos.sinEspejo.length} posteo(s) de Facebook de hoy no tienen su foto en el feed (${red.posteos.sinEspejo.map((e) => e.titulo).join(' | ').slice(0, 90)}).` });
+    }
+  }
+  return lista;
 }
 
 /** Cuáles de los problemas hay que avisar ahora (no repetir lo ya avisado). */
@@ -209,6 +259,46 @@ export function mensajeDelResumen({
   return textoResumen({ datos: datosDelDia({ ahora, portada, libro }), problemas, problemasArriba, estadisticas, web });
 }
 
+/**
+ * ¿Toca el cierre del día? Devuelve el día a cerrar (AAAA-MM-DD) o null.
+ *
+ * Una vez por día, a partir de las 23:30. Si la corrida de las 23:30 se
+ * demoró y llegó pasada la medianoche, cierra el día de AYER (hasta las 3:00;
+ * las historias de Meta duran 24 horas, así que todavía se las puede ver).
+ * `estado.ultimoCierre` es el último día cerrado: no se repite.
+ */
+export function fechaDelCierre(ahora, estado = {}) {
+  const minuto = minutoDelDiaAR(ahora);
+  const hoy = diaAR(ahora);
+  let dia = null;
+  if (minuto >= CONTRATO_DIARIO.cierreMinutoDelDia) dia = hoy;
+  else if (minuto < 3 * 60) dia = diaAR(new Date(ahora.getTime() - 86400e3));
+  if (!dia || dia < CONTRATO_DESDE) return null;
+  return estado.ultimoCierre && estado.ultimoCierre >= dia ? null : dia;
+}
+
+/**
+ * El cierre del día: el informe contra el contrato y contra Meta. No manda
+ * nada: devuelve qué decir.
+ *
+ *   ok: true   todo cuadra: no hay mensaje; la línea de "completos ✓" viaja
+ *              dentro del próximo mensaje normal (planDeAvisos, `cierreOk`);
+ *   ok: false  hay discrepancias: `texto` es el WhatsApp.
+ *
+ * Al cerrar se toma el día como terminado: lo que estaba "a tiempo" a las 23:30
+ * ya no va a salir (nada sale al día siguiente).
+ */
+export function cierreDelDia({ fecha, ahora, libro, portada = null, meta = null }) {
+  // El fin del día: las 24:00, cuando ya no puede salir nada más de esa fecha.
+  const finDelDia = new Date(new Date(`${fecha}T23:59:59-03:00`).getTime() + 1000);
+  const informe = informeDelDia({ libro, meta, fecha, ahora: ahora > finDelDia ? ahora : finDelDia, portada });
+  return {
+    fecha, informe, ok: informe.ok,
+    texto: informe.ok ? '' : textoCierre(informe),
+    linea: informe.ok ? lineaDeCierreCompleto(informe) : '',
+  };
+}
+
 /** ¿Toca mandar el resumen? Una vez por día, a partir de las 21. */
 export function tocaResumen(ahora, estado = {}) {
   return horaAR(ahora) >= LIMITES.horaDelResumen && estado.ultimoResumen !== diaAR(ahora);
@@ -230,7 +320,7 @@ export function tocaResumen(ahora, estado = {}) {
  */
 export function planDeAvisos({
   ahora, problemas = [], estado = {}, portada = {}, libro = {}, web = null,
-  estadisticas = '', soloResumen = false, sitio = 'https://radarbalcarce.com',
+  estadisticas = '', soloResumen = false, sitio = 'https://radarbalcarce.com', cierre = null,
 }) {
   const secciones = [];
   const hechos = {};
@@ -239,6 +329,12 @@ export function planDeAvisos({
   if (nuevos.length) {
     secciones.push({ clave: 'problemas', texto: mensajeDeProblemas(nuevos) });
     hechos.problemas = (e) => { e.avisos ??= {}; for (const p of nuevos) e.avisos[p.clave] = ahora.toISOString(); };
+  }
+
+  // El cierre del día con discrepancias: prioridad alta, va detrás de los problemas.
+  if (!soloResumen && cierre && !cierre.ok && cierre.texto) {
+    secciones.push({ clave: 'cierre', texto: cierre.texto });
+    hechos.cierre = (e) => { e.ultimoCierre = cierre.fecha; delete e.cierreOk; };
   }
 
   const importantes = soloResumen ? [] : importantesAAvisar(portada.notas, estado.importantes, ahora);
@@ -271,6 +367,13 @@ export function planDeAvisos({
       secciones.push({ clave: 'redes', texto: textoRedes(red.items) });
       hechos.redes = (e) => { e.redes = { hasta: red.hasta }; };
     }
+  }
+
+  // Si el cierre anterior salió limpio, no hay mensaje propio: la línea viaja
+  // dentro del próximo mensaje normal que salga (nunca uno extra).
+  if (!soloResumen && estado.cierreOk?.linea && secciones.length && !secciones.some((x) => x.clave === 'cierre')) {
+    secciones.push({ clave: 'cierre-ok', texto: `✓ ${estado.cierreOk.linea}` });
+    hechos['cierre-ok'] = (e) => { delete e.cierreOk; };
   }
 
   return {
@@ -372,6 +475,9 @@ async function main() {
   // las estadísticas medidas en el momento), para ver cómo llega. No guarda
   // nada: ni el estado de los avisos ni la medición.
   const probarResumen = process.argv.includes('--probar-resumen');
+  // Corre el cierre del día de hoy contra Meta y muestra el informe y el
+  // WhatsApp que saldría. No manda nada y no guarda nada.
+  const probarCierre = process.argv.includes('--probar-cierre');
 
   const sitio = (process.env.SITIO ?? 'https://radarbalcarce.com').replace(/\/$/, '');
   const ahora = new Date();
@@ -386,7 +492,20 @@ async function main() {
   const recientes = (portada.notas ?? []).filter((n) => new Date(n.fecha).getTime() >= desde);
   const cuerpos = { total: recientes.length, conCuerpo: recientes.filter((n) => n.cuerpo).length };
   const auditoria = leer(path.join(RAIZ, 'web', 'data', 'auditoria.json'), null);
-  const problemas = evaluar({ ...obs, libro, auditoria, contenido: { ...(obs.contenido ?? {}), cuerpos } });
+  const contrato = contratoDelDia({ libro, ahora, portada });
+  const problemas = evaluar({ ...obs, libro, auditoria, contrato, contenido: { ...(obs.contenido ?? {}), cuerpos } });
+
+  if (probarCierre) {
+    const meta = await consultarMeta({ ahora, dias: 2 });
+    const c = cierreDelDia({ fecha: diaAR(ahora), ahora, libro, portada, meta });
+    console.log(textoInforme(c.informe));
+    console.log(c.ok ? `
+  Saldría (dentro del próximo mensaje normal): ${c.linea}` : `
+  Saldría este WhatsApp (${c.texto.length} caracteres):
+
+${c.texto}`);
+    process.exit(0);
+  }
 
   console.log(`  ${problemas.length ? `${problemas.length} problema(s):` : 'Todo en orden.'}`);
   for (const p of problemas) console.log(`   [${p.nivel}] ${p.texto}`);
@@ -418,9 +537,27 @@ async function main() {
     }
   }
 
+  // --- el cierre del día (23:30): contra lo que Meta tiene de verdad
+  let cierre = null;
+  const diaDelCierre = probarResumen ? null : fechaDelCierre(ahora, estado);
+  if (diaDelCierre) {
+    console.log(`  Cerrando el día ${diaDelCierre} contra Meta…`);
+    const meta = await consultarMeta({ ahora, dias: 2 });
+    cierre = cierreDelDia({ fecha: diaDelCierre, ahora, libro, portada, meta });
+    console.log(textoInforme(cierre.informe).split('\n').map((l) => `    ${l}`).join('\n'));
+    if (cierre.ok && !sinAvisar) {
+      // Nada que avisar: se anota el día y la línea espera al próximo mensaje normal.
+      estado.ultimoCierre = diaDelCierre;
+      estado.cierreOk = { fecha: diaDelCierre, linea: cierre.linea };
+      cambio = true;
+    }
+  }
+  // Una línea de "todo bien" que nunca salió y ya es vieja no sirve: se descarta.
+  if (estado.cierreOk && diaAR(new Date(ahora.getTime() - 3 * 86400e3)) > estado.cierreOk.fecha) { delete estado.cierreOk; cambio = true; }
+
   // --- un solo mensaje con todo lo que haya para decir
   const plan = planDeAvisos({
-    ahora, problemas, estado, portada, libro, web: obs.web, estadisticas: textoStats, soloResumen: probarResumen, sitio,
+    ahora, problemas, estado, portada, libro, web: obs.web, estadisticas: textoStats, soloResumen: probarResumen, sitio, cierre,
   });
   const { texto, incluidas } = armarMensaje(plan.secciones);
   const afuera = plan.secciones.map((s) => s.clave).filter((c) => !incluidas.includes(c));

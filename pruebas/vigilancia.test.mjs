@@ -168,11 +168,12 @@ test('el resumen de las 21 cuenta lo que salió hoy', () => {
     facebook: { a: { cuando: ahora.toISOString() }, b: { cuando: '2026-09-23T15:00:00Z' } },
   };
   const m = mensajeDelResumen({ ahora, libro, web: { actualizado: hace(ahora, 15) } });
-  assert.match(m, /todo bien/);
-  assert.match(m, /Facebook: 1 posteo\(s\)/);
-  assert.match(m, /clima mañana ✓/);
-  assert.match(m, /farmacia ✓/);
-  assert.match(m, /clima noche ✗/);
+  // El contrato del día: lo que salió, y lo que falta o todavía está a tiempo.
+  assert.match(m, /Facebook: posteos 1\/5/);
+  assert.match(m, /Instagram: fotos 0\/5 · reels 0\/3 .* historias 2\/6/);
+  assert.match(m, /Instagram:.*pendiente: clima noche, podcast noche/);
+  assert.doesNotMatch(m.split('\n').find((l) => l.startsWith('• Instagram')), /falta:[^)]*(farmacia|clima mañana)/);
+  assert.match(m, /^📋/, 'con el contrato incompleto no dice "todo bien"');
 });
 
 test('el resumen sale una sola vez por día, desde las 21', () => {

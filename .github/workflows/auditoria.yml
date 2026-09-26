@@ -4,6 +4,7 @@
 # mal. Si esta auditoría deja de correr, el vigilante lo avisa (redes/vigilar.mjs).
 #
 # Los lunes a las 9 (hora de Balcarce). También se puede correr a mano.
+# Suma la auditoría de la semana del contrato de las redes (redes/auditar-redes.mjs).
 
 name: Auditoría
 
@@ -34,6 +35,17 @@ jobs:
         env:
           WHATSAPP_TELEFONO: ${{ secrets.WHATSAPP_TELEFONO }}
           WHATSAPP_APIKEY: ${{ secrets.WHATSAPP_APIKEY }}
+      # El contrato de Facebook e Instagram de los últimos 7 días contra lo que
+      # Meta tiene publicado de verdad: porcentaje de cumplimiento por red y por
+      # pieza, y qué días fallaron. Sólo se ve en el registro (no manda WhatsApp:
+      # a las 9 ya sale el mensaje de las estadísticas y CallMeBot bloquea si se
+      # abusa). No frena la auditoría si Meta no contesta.
+      - name: Auditar el contrato de las redes (semana)
+        continue-on-error: true
+        run: node redes/auditar-redes.mjs --semana
+        env:
+          META_TOKEN: ${{ secrets.META_TOKEN }}
+
       - name: Guardar el resultado
         if: always()
         run: |

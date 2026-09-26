@@ -13,7 +13,14 @@
 #
 # A mano (Actions → Vigilancia → Run workflow) se puede elegir "probar-resumen":
 # manda UN WhatsApp con el resumen de las 21 tal cual, para ver cómo llega, y
-# no guarda nada.
+# no guarda nada. Con "probar-cierre" corre el cierre del día de hoy contra Meta
+# y muestra el informe y el WhatsApp que saldría, sin mandarlo ni guardar nada.
+#
+# EL CIERRE DEL DÍA (redes/vigilar.mjs, fechaDelCierre): a partir de las 23:30
+# audita el contrato del día contra lo que Meta tiene publicado de verdad
+# (redes/auditar-redes.mjs). Avisa por WhatsApp SÓLO si hay discrepancias
+# (faltantes, duplicados, o libro y Meta que no coinciden); si todo cuadra, no
+# manda nada: la línea "completos" viaja en el próximo mensaje normal.
 #
 # SECRETOS (Settings → Secrets and variables → Actions):
 #   WHATSAPP_TELEFONO   el número con código de país, sin + ni espacios
@@ -21,7 +28,8 @@
 #   CLOUDFLARE_ACCOUNT_ID       el ID de la cuenta de Cloudflare (ya estaba)
 #   CLOUDFLARE_ANALYTICS_TOKEN  un token con permiso "Account Analytics: Read"
 #                               (si no está, se prueba con CLOUDFLARE_API_TOKEN)
-#   META_TOKEN          el mismo que publica: seguidores y estadísticas de redes
+#   META_TOKEN          el mismo que publica: seguidores y estadísticas de redes, y
+#                       el cierre del día (sólo lee; nunca se imprime)
 # Sin ellos, corre igual y deja el resultado en el registro; sólo no avisa o no
 # mide lo que le falta.
 
@@ -33,7 +41,7 @@ on:
       modo:
         description: 'Qué hacer'
         type: choice
-        options: [vigilar, probar-resumen]
+        options: [vigilar, probar-resumen, probar-cierre]
         default: vigilar
   schedule:
     - cron: '17 */3 * * *'
@@ -54,14 +62,18 @@ jobs:
       # Que "hoy" y las horas (las 9, las 21) sean las de Balcarce.
       TZ: America/Argentina/Buenos_Aires
     steps:
+      # Siempre la última versión de main: el cierre del día compara contra el
+      # libro, y un libro viejo lo haría avisar de más.
       - uses: actions/checkout@v4
+        with:
+          ref: main
 
       - uses: actions/setup-node@v4
         with:
           node-version: '24'
 
       - name: Revisar y avisar
-        run: node redes/vigilar.mjs ${{ github.event.inputs.modo == 'probar-resumen' && '--probar-resumen' || '' }}
+        run: node redes/vigilar.mjs ${{ github.event.inputs.modo == 'probar-resumen' && '--probar-resumen' || github.event.inputs.modo == 'probar-cierre' && '--probar-cierre' || '' }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITHUB_REPOSITORY: ${{ github.repository }}
@@ -73,7 +85,7 @@ jobs:
           META_TOKEN: ${{ secrets.META_TOKEN }}
 
       - name: Guardar lo avisado y lo medido
-        if: always() && github.event.inputs.modo != 'probar-resumen'
+        if: always() && github.event.inputs.modo != 'probar-resumen' && github.event.inputs.modo != 'probar-cierre'
         run: |
           git config user.name "Radar Balcarce"
           git config user.email "272334999+balcar-dev@users.noreply.github.com"
