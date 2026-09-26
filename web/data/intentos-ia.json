@@ -194,6 +194,11 @@
   "ultimo": "2026-09-26T03:00:42.173Z",
   "motivo": "con cuerpo"
  },
+ "18ldbf4": {
+  "intentos": 1,
+  "ultimo": "2026-09-26T04:30:43.593Z",
+  "motivo": "con cuerpo"
+ },
  "19081yr": {
   "intentos": 1,
   "ultimo": "2026-09-26T03:30:38.780Z",
@@ -249,6 +254,11 @@
  "1adul6g": {
   "intentos": 1,
   "ultimo": "2026-09-25T12:00:43.134Z",
+  "motivo": "con cuerpo"
+ },
+ "1aguy56": {
+  "intentos": 1,
+  "ultimo": "2026-09-26T04:30:43.593Z",
   "motivo": "con cuerpo"
  },
  "1alhanq": {
@@ -388,10 +398,15 @@
   "ultimo": "2026-09-26T03:30:38.780Z",
   "motivo": "con cuerpo"
  },
+ "1g8af3o": {
+  "intentos": 1,
+  "ultimo": "2026-09-26T04:30:43.593Z",
+  "motivo": "con cuerpo"
+ },
  "1gry8t4": {
-  "intentos": 2,
-  "ultimo": "2026-09-26T04:00:50.275Z",
-  "motivo": "título o bajada: 2 problemas (numero): el titulo dice 2 y la fuente no lo dice"
+  "intentos": 3,
+  "ultimo": "2026-09-26T04:30:43.593Z",
+  "motivo": "título o bajada: 1 problema (numero): el copete dice 2 y la fuente no lo dice"
  },
  "1gw0oi9": {
   "intentos": 1,
@@ -429,8 +444,8 @@
   "motivo": "con cuerpo"
  },
  "1it9yw9": {
-  "intentos": 2,
-  "ultimo": "2026-09-26T04:00:50.275Z",
+  "intentos": 3,
+  "ultimo": "2026-09-26T04:30:43.593Z",
   "motivo": "semáforo: necesita ojo humano: \"denuncia\", en lo que escribió la IA (título, bajada o texto para redes)"
  },
  "1iv58lw": {
@@ -566,9 +581,9 @@
   "motivo": "con cuerpo"
  },
  "1n2zzdt": {
-  "intentos": 1,
-  "ultimo": "2026-09-26T04:00:50.275Z",
-  "motivo": "título o bajada: 2 problemas (nombre): el copete nombra a \"poder\" y la fuente no"
+  "intentos": 2,
+  "ultimo": "2026-09-26T04:30:43.593Z",
+  "motivo": "con cuerpo"
  },
  "1n5o9jc": {
   "intentos": 1,
@@ -833,6 +848,11 @@
   "ultimo": "2026-09-26T03:30:38.780Z",
   "motivo": "con cuerpo"
  },
+ "1weuz84": {
+  "intentos": 1,
+  "ultimo": "2026-09-26T04:30:43.593Z",
+  "motivo": "con cuerpo"
+ },
  "1wk5xnv": {
   "intentos": 1,
   "ultimo": "2026-09-25T17:00:45.979Z",
@@ -914,9 +934,9 @@
   "motivo": "con cuerpo"
  },
  "4j0jsg": {
-  "intentos": 1,
-  "ultimo": "2026-09-26T04:00:50.275Z",
-  "motivo": "título o bajada: 2 problemas (antecedente): el titulo usa \"azerbaiyan\", que sale de una nota anterior, como si fuera de hoy"
+  "intentos": 2,
+  "ultimo": "2026-09-26T04:30:43.593Z",
+  "motivo": "con cuerpo"
  },
  "4kdclu": {
   "intentos": 1,
@@ -932,6 +952,11 @@
   "intentos": 1,
   "ultimo": "2026-09-25T15:30:41.452Z",
   "motivo": "con cuerpo"
+ },
+ "57ri5l": {
+  "intentos": 1,
+  "ultimo": "2026-09-26T04:30:43.593Z",
+  "motivo": "cuerpo: 4 problemas (numero): el cuerpo dice 40 y la fuente no lo dice; sin esas oraciones quedan 22 palabras"
  },
  "5agvfd": {
   "intentos": 1,
@@ -977,6 +1002,11 @@
   "intentos": 1,
   "ultimo": "2026-09-25T17:00:45.979Z",
   "motivo": "con cuerpo"
+ },
+ "74i5kc": {
+  "intentos": 1,
+  "ultimo": "2026-09-26T04:30:43.593Z",
+  "motivo": "título o bajada: 1 problema (antecedente): el copete usa \"onu\", que sale de una nota anterior, como si fuera de hoy"
  },
  "7qxthx": {
   "intentos": 1,
@@ -1069,9 +1099,9 @@
   "motivo": "título o bajada: 1 problema (negacion): la fuente niega algo en el título y el texto nuevo no"
  },
  "cxtl84": {
-  "intentos": 1,
-  "ultimo": "2026-09-26T04:00:50.275Z",
-  "motivo": "título o bajada: 1 problema (tilde): el copete dice \"mas\" en vez de \"más\": \"La Sindicatura General de la Nacion renuevo las normas de au\""
+  "intentos": 2,
+  "ultimo": "2026-09-26T04:30:43.593Z",
+  "motivo": "Gemini: Unexpected token ']', ...\"92/2026.\",], \"noConf\"... is not valid JSON"
  },
  "d2elpy": {
   "intentos": 1,
@@ -1134,6 +1164,11 @@
   "intentos": 1,
   "ultimo": "2026-09-25T16:00:39.434Z",
   "motivo": "Gemini: Bad Unicode escape in JSON at position 169 (line 1 column 170)"
+ },
+ "g6g5lh": {
+  "intentos": 1,
+  "ultimo": "2026-09-26T04:30:43.593Z",
+  "motivo": "cuerpo: 3 problemas (antecedente, acusacion, copia): el cuerpo usa \"unidos\", que sale de una nota anterior, como si fuera de hoy; sin esas oraciones quedan 61 p"
  },
  "g9u419": {
   "intentos": 2,
