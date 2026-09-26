@@ -1,5 +1,5 @@
 {
-  "exportado": "2026-09-26T07:14:26.936Z",
+  "exportado": "2026-09-26T07:24:59.491Z",
   "decisiones": {
     "1951120": {
       "estado": "automatica",
@@ -22125,6 +22125,438 @@
           "titulo": "El Concejo aprueba pedir la baja de tasas a taxis y remises en Balcarce",
           "fecha": "2026-09-25T16:08:22.000Z",
           "ruta": "/nota/el-concejo-aprueba-pedir-la-baja-de-tasas-a-taxis-y-remises-en-2olgpl"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "1rzhnh1": {
+      "estado": "automatica",
+      "titulo": "Kicillof reinaugura el autódromo de Balcarce",
+      "copete": "El gobernador bonaerense encabezó la reapertura del autódromo Juan Manuel Fangio. El circuito vuelve a recibir competencias nacionales este fin de semana con la presentación de las TC Pick Up.",
+      "cuerpo": "Durante el acto, el mandatario destacó el impacto económico y turístico que generan los eventos deportivos en la región y remarcó la importancia de la inversión estatal en infraestructura.\n\nEl circuito vuelve a recibir competencias de alcance nacional tras un largo período sin actividad de estas características.\n\nLa reapertura genera expectativas en sectores como la hotelería, la gastronomía y el comercio por la llegada de visitantes de todo el país.",
+      "guion": "Kicillof reinaugura el autódromo de Balcarce",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-26T07:24:59.436Z",
+      "claves": [
+        "Axel Kicillof reinauguró el autódromo Juan Manuel Fangio.",
+        "El circuito vuelve a recibir automovilismo nacional.",
+        "Participaron Esteban Reino y Hugo Mazzacane.",
+        "Se destaca el impacto turístico y económico regional."
+      ],
+      "seSabe": [
+        "El gobernador Axel Kicillof reinauguró este viernes el autódromo Juan Manuel Fangio de Balcarce.",
+        "Estuvieron presentes el ministro Carlos Bianco, el intendente Esteban Reino y el presidente de la ACTC, Hugo Mazzacane.",
+        "El fin de semana se presentan las TC Pick Up en el circuito.",
+        "Se destacó el impacto positivo en la hotelería, la gastronomía y los comercios de la región."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El gobernador Axel Kicillof encabezó la reinauguración del autódromo Juan Manuel Fangio de Balcarce. El histórico circuito vuelve a recibir competencias nacionales este fin de semana con la llegada de las TC Pick Up y visitantes de todo el país.",
+      "etiquetas": [
+        "Autódromo Juan Manuel Fangio",
+        "Axel Kicillof",
+        "Esteban Reino",
+        "TC Pick Up",
+        "Automovilismo",
+        "Balcarce"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Eco de Tandil",
+          "enlace": "https://www.eleco.com.ar/la-region/kicillof-reinauguro-el-autodromo-de-balcarce-y-destaco-el-impacto-turistico-en-la-region",
+          "fecha": "2026-09-25T22:52:06.000Z",
+          "oficial": false,
+          "aporte": "Detalló la reinauguración del autódromo, las declaraciones del gobernador y las autoridades presentes en el acto."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "uj4h1v",
+          "titulo": "Kicillof encabeza la reinauguración del autódromo en Balcarce",
+          "fecha": "2026-09-25T11:53:01.000Z",
+          "ruta": "/nota/kicillof-encabeza-la-reinauguracion-del-autodromo-en-balcarce-uj4h1v"
+        },
+        {
+          "id": "1e6tvp9",
+          "titulo": "Kicillof encabeza la reapertura del autódromo Juan Manuel Fangio en Balcarce",
+          "fecha": "2026-09-25T10:15:00.000Z",
+          "ruta": "/nota/el-gobernador-bonaerense-encabeza-la-reapertura-del-autodromo-en-1e6tvp9"
+        },
+        {
+          "id": "11pnmnw",
+          "titulo": "Axel Kicillof visita Balcarce para la reinauguración del autódromo",
+          "fecha": "2026-09-23T23:52:12.000Z",
+          "ruta": "/nota/kicillof-visitara-balcarce-para-la-reinauguracion-del-autodromo-11pnmnw"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "1s9so2g": {
+      "estado": "automatica",
+      "titulo": "El Concejo aprueba pedir suspensión de intimaciones de OSEBAL en Balcarce",
+      "copete": "El Concejo Deliberante aprobó por unanimidad solicitar al Departamento Ejecutivo que gestione la suspensión de las intimaciones enviadas por la empresa de agua.",
+      "cuerpo": "Como se había informado a fines de septiembre, el cuerpo legislativo ya había abordado reclamos vinculados a las deudas de la empresa y solicitado prórrogas para regularizar los pagos, además de pedir explicaciones a la firma prestadora del servicio en el distrito.\n\nCon esta nueva medida aprobada por los ediles, se busca frenar temporalmente los reclamos a los vecinos mientras se continúan evaluando alternativas para facilitar la situación de los usuarios afectados por las notificaciones de deuda enviadas recientemente.",
+      "guion": "El Concejo aprueba pedir suspensión de intimaciones de OSEBAL en Balcarce",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-26T07:24:59.436Z",
+      "claves": [
+        "El Concejo Deliberante aprobó un proyecto por unanimidad.",
+        "Se pide frenar las intimaciones enviadas por OSEBAL SAPEM.",
+        "La solicitud apunta a gestiones del Departamento Ejecutivo."
+      ],
+      "seSabe": [
+        "El Concejo Deliberante aprobó por unanimidad un proyecto de Comunicación.",
+        "Se solicita al Departamento Ejecutivo realizar gestiones ante OSEBAL SAPEM Aguas de la Ciudad.",
+        "La medida pide suspender el envío de intimaciones prejudiciales."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El Concejo Deliberante aprobó por unanimidad un proyecto para solicitar que se suspendan las intimaciones prejudiciales enviadas por OSEBAL SAPEM Aguas de la Ciudad en el distrito.",
+      "etiquetas": [
+        "Concejo Deliberante",
+        "OSEBAL",
+        "Balcarce",
+        "servicios",
+        "intimaciones"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/el-concejo-aprobo-pedir-una-suspension-de-180-dias-para-las-intimaciones-de-osebal-299",
+          "fecha": "2026-09-25T23:02:57.000Z",
+          "oficial": false,
+          "aporte": "Informó que el Concejo Deliberante aprobó un proyecto para pedir la suspensión de intimaciones de OSEBAL."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "ntjgh8",
+          "titulo": "El Concejo aprueba pedir la baja de tasas a taxis y remises en Balcarce",
+          "fecha": "2026-09-25T22:43:54.000Z",
+          "ruta": "/nota/el-concejo-aprueba-pedir-la-baja-de-tasas-a-taxis-y-remises-en-ntjgh8"
+        },
+        {
+          "id": "2olgpl",
+          "titulo": "El Concejo aprueba pedir la baja de tasas a taxis y remises en Balcarce",
+          "fecha": "2026-09-25T16:08:22.000Z",
+          "ruta": "/nota/el-concejo-aprueba-pedir-la-baja-de-tasas-a-taxis-y-remises-en-2olgpl"
+        },
+        {
+          "id": "clgr2q",
+          "titulo": "El Concejo pide frenar reclamos a vecinos y prorrogar deudas de OSeBal en Balcarce",
+          "fecha": "2026-09-25T13:00:52.110Z",
+          "ruta": "/nota/el-concejo-pide-frenar-reclamos-a-vecinos-y-prorrogar-deudas-de-clgr2q"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "16exwiu": {
+      "estado": "automatica",
+      "titulo": "Kicillof entrega trescientas siete escrituras en Balcarce",
+      "copete": "El gobernador bonaerense encabezó un acto en el distrito para otorgar títulos de propiedad a familias locales a través del programa provincial \"Mi Escritura, Mi Casa\".",
+      "cuerpo": "La actividad se llevó a cabo en el marco del programa provincial \"Mi Escritura, Mi Casa\".\n\nComo se había informado en la agenda oficial, esta entrega de títulos de propiedad se concretó en el distrito durante una visita institucional que incluyó actividades vinculadas al desarrollo deportivo y la infraestructura local.\n\nDurante la jornada, el mandatario provincial sostuvo que la iniciativa representa al Estado saldando un derecho para las familias beneficiarias de la región.",
+      "guion": "Kicillof entrega trescientas siete escrituras en Balcarce",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-26T07:24:59.436Z",
+      "claves": [
+        "El gobernador Axel Kicillof entregó 307 escrituras en Balcarce",
+        "La entrega se realizó en el marco del programa Mi Escritura, Mi Casa",
+        "La actividad formó parte de una visita institucional al distrito"
+      ],
+      "seSabe": [
+        "El gobernador Axel Kicillof entregó 307 escrituras en Balcarce este viernes",
+        "La entrega se realizó a través del programa provincial \"Mi Escritura, Mi Casa\""
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "etiquetas": [
+        "Axel Kicillof",
+        "escrituras",
+        "Balcarce",
+        "Mi Escritura Mi Casa",
+        "provincia de Buenos Aires"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/es-el-estado-que-esta-saldando-un-derecho-sostuvo-kicillof-al-entregar-307-escrituras-en-balcarce-83",
+          "fecha": "2026-09-25T22:37:38.000Z",
+          "oficial": false,
+          "aporte": "Informó que el gobernador Axel Kicillof entregó 307 escrituras en Balcarce este viernes mediante el programa \"Mi Escritura, Mi Casa\" y consignó una declaración sobre el derecho a la vivienda."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "188nlc0",
+          "titulo": "Kicillof encabeza la entrega de escrituras en el Teatro Municipal en Balcarce",
+          "fecha": "2026-09-25T19:51:45.000Z",
+          "ruta": "/nota/kicillof-encabeza-la-entrega-de-escrituras-en-el-teatro-municipal-en-188nlc0"
+        },
+        {
+          "id": "10vh1ng",
+          "titulo": "Kicillof encabeza en Balcarce la entrega de casi cuatrocientas escrituras",
+          "fecha": "2026-09-25T19:41:47.274Z",
+          "ruta": "/nota/kicillof-encabeza-en-balcarce-la-entrega-de-casi-cuatrocientas-10vh1ng"
+        },
+        {
+          "id": "1nuz3q",
+          "titulo": "Kicillof visitará Balcarce: inaugurará obras en el autódromo y entregará escrituras",
+          "fecha": "2026-09-16T13:12:10.873Z",
+          "ruta": "/nota/kicillof-visitara-balcarce-inaugurara-obras-en-el-autodromo-y-1nuz3q"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "12gu063": {
+      "estado": "automatica",
+      "titulo": "Gastón Venturi advierte sobre una situacion grave en PAMI",
+      "copete": "El secretario general de SUTEPA en Mar del Plata advirtió sobre la compleja situación que atraviesa la obra social y el impacto en la atención de los jubilados.",
+      "cuerpo": "Venturi sostuvo que el Sanatorio Belgrano dejó de prestar servicios a miles de afiliados y que la Clínica Mar del Plata atravesó restricciones, lo que incrementó la demanda sobre el sistema.\n\nPor otra parte, el Ministerio de Salud bonaerense informó previamente que el rechazo de coberturas y la sobrecarga del sector privado dejan sin camas al Hospital Alende de Mar del Plata. El referente gremial también cuestionó el actual esquema de financiamiento de la obra social y reclamó discutir nuevas fuentes de recursos ante la dependencia estatal.",
+      "guion": "Gastón Venturi advierte sobre una situacion grave en PAMI",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-26T07:24:59.436Z",
+      "claves": [
+        "El dirigente gremial Gastón Venturi advirtió sobre la situación crítica del PAMI.",
+        "Señaló que el Hospital Houssay tiene veinticinco camas sin usar por falta de personal.",
+        "Mencionó recortes prestacionales en sanatorios privados y cierres de oficinas de atención."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El secretario general de SUTEPA advirtió sobre la situación crítica que atraviesa el PAMI y el impacto en la atención de los jubilados de la región.",
+      "etiquetas": [
+        "PAMI",
+        "SUTEPA",
+        "Gastón Venturi",
+        "Mar del Plata",
+        "jubilados",
+        "salud"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infórmese Primero (FM 104.9)",
+          "enlace": "http://www.informeseprimero.com.ar/2026/09/la-situacion-es-grave-y-esto-ya-esta.html",
+          "fecha": "2026-09-25T16:53:13.168Z",
+          "oficial": false,
+          "aporte": "Detalló el estado crítico de la atención del PAMI, la falta de personal y el cierre de bocas de atención en la región."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "i3pe4a": {
+      "estado": "automatica",
+      "titulo": "La Cámpora rechaza la eliminación de la Zona Fría en Balcarce",
+      "copete": "La organización política cuestionó la quita del beneficio tarifario tras su aprobación en el Senado. Advirtió que las boletas de gas aumentarán un cincuenta por ciento.",
+      "cuerpo": "La Cámpora Balcarce expresó su rechazo a la eliminación del régimen de Zona Fría, aprobada recientemente en el Senado nacional.\n\nDesde el espacio político indicaron que en las semanas previas impulsaron diversas acciones para visibilizar el reclamo, lo que incluyó tareas informativas en la vía pública y una recolección de firmas destinada a evitar la exclusión de la ciudad del beneficio tarifario. En el mismo texto, cuestionaron el rol de distintos sectores y apuntaron contra los radicales, la gestión del intendente municipal y la postura de referentes de otros espacios.\n\nPor último, la organización partidaria ratificó que mantendrá su labor en torno a las dificultades económicas que atraviesan los vecinos y adelantó que continuará realizando gestiones orientadas a mejorar la calidad de vida en el distrito.",
+      "guion": "La Cámpora rechaza la eliminación de la Zona Fría en Balcarce",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-26T07:24:59.436Z",
+      "claves": [
+        "Rechazo a la quita de la Zona Fría",
+        "Advierten una suba del cincuenta por ciento en el gas",
+        "Críticas a dirigentes locales y nacionales"
+      ],
+      "seSabe": [
+        "El Senado aprobó la eliminación del régimen de Zona Fría.",
+        "La Cámpora Balcarce difundió un comunicado en rechazo a la medida.",
+        "La agrupación juntó firmas e informó a los vecinos en las últimas semanas."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "La Cámpora cuestionó la eliminación de la Zona Fría y advirtió que las boletas de gas aumentarán un cincuenta por ciento en Balcarce.",
+      "etiquetas": [
+        "La Cámpora",
+        "Zona Fría",
+        "gas",
+        "Balcarce",
+        "Senado"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infórmese Primero (FM 104.9)",
+          "enlace": "http://www.informeseprimero.com.ar/2026/09/la-campora-balcarce-cuestiono-la.html",
+          "fecha": "2026-09-25T16:41:49.656Z",
+          "oficial": false,
+          "aporte": "Informó sobre el comunicado de La Cámpora Balcarce tras la eliminación de la Zona Fría y sus críticas a la dirigencia."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "d2elpy": {
+      "estado": "automatica",
+      "titulo": "La comunidad sorda celebra su día en el Complejo Polideportivo Municipal en Balcarce",
+      "copete": "Integrantes de la comunidad sorda local y de la región se reúnen en el Complejo Polideportivo Municipal para celebrar su día, promover la inclusión y visibilizar la Lengua de Señas.",
+      "cuerpo": "Vecinos locales y visitantes provenientes de Mar del Plata y Miramar participan este viernes de un encuentro de camaradería en el Complejo Polideportivo Municipal, en el marco de las actividades por el Día de las Personas Sordas, conmemorado el pasado sábado 19 de septiembre.\n\nLa jornada apunta a visibilizar la importancia de la Lengua de Señas, la accesibilidad y la inclusión, además de destacar la cultura de la comunidad sorda mediante un espacio de intercambio entre distintas localidades de la región.\n\nEl evento se desarrolla en un clima de celebración con el objetivo de fortalecer los lazos entre los participantes y fomentar nuevos espacios de expresión y participación.",
+      "guion": "La comunidad sorda celebra su día en el Complejo Polideportivo Municipal en Balcarce",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-26T07:24:59.436Z",
+      "claves": [
+        "Encuentro en el Complejo Polideportivo Municipal",
+        "Participan vecinos de Balcarce, Mar del Plata y Miramar",
+        "Busca visibilizar la Lengua de Señas y la inclusión"
+      ],
+      "seSabe": [
+        "El encuentro se realiza en el Complejo Polideportivo Municipal",
+        "Participan personas de la comunidad local, Mar del Plata y Miramar",
+        "La jornada busca visibilizar la Lengua de Señas, la inclusión y la accesibilidad"
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Integrantes de la comunidad sorda local y de la región se reúnen en el Complejo Polideportivo Municipal para celebrar su día, visibilizar la Lengua de Señas y promover la inclusión.",
+      "etiquetas": [
+        "Comunidad sorda",
+        "Polideportivo Municipal",
+        "Inclusión",
+        "Lengua de Señas",
+        "Balcarce"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infórmese Primero (FM 104.9)",
+          "enlace": "http://www.informeseprimero.com.ar/2026/09/la-comunidad-sorda-se-reune-en-el.html",
+          "fecha": "2026-09-25T16:38:00.000Z",
+          "oficial": false,
+          "aporte": "Informó sobre el encuentro de la comunidad sorda en el Polideportivo y la participación de visitantes regionales."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "1fu8eca": {
+      "estado": "automatica",
+      "titulo": "El handball de Balcarce compitió en una nueva fecha del circuito en Mar del Plata",
+      "copete": "La Escuela Municipal de Handball participó del sexto Circuito AsABal en el club Once Unidos con una delegación de unos cuarenta jugadores de diversas categorías.",
+      "cuerpo": "El contingente estuvo a cargo de los profesores Federico Santiago y Maximiliano La Rocca. Durante el encuentro, los deportistas locales disputaron distintos partidos para mostrar el crecimiento individual y colectivo en la disciplina, además de recibir obsequios en sorteos y participar en producciones fotográficas y entrevistas de la Liga.\n\nEsta competencia funcionó como preparación de cara a los compromisos de noviembre, cuando los representantes de la Escuela Municipal compitan en el Torneo Internacional Copa Mar del Plata para continuar sumando experiencia frente a nuevos equipos de la región.",
+      "guion": "El handball de Balcarce compitió en una nueva fecha del circuito en Mar del Plata",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-26T07:24:59.436Z",
+      "seSabe": [
+        "La Escuela Municipal de Handball participó del sexto Circuito AsABal en Mar del Plata.",
+        "La delegación estuvo integrada por aproximadamente 40 jugadores de distintas categorías.",
+        "Los profesores a cargo del contingente fueron Federico Santiago y Maximiliano La Rocca.",
+        "La actividad sirvió como preparación para el Torneo Internacional Copa Mar del Plata de noviembre."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "La Escuela Municipal de Handball de Balcarce formó parte de una nueva jornada del Circuito AsABal en Mar del Plata con una delegación de cuarenta jugadores de distintas categorías.",
+      "etiquetas": [
+        "handball",
+        "deportes",
+        "Balcarce",
+        "Mar del Plata",
+        "AsABal"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infórmese Primero (FM 104.9)",
+          "enlace": "http://www.informeseprimero.com.ar/2026/09/el-handball-balcarceno-tuvo-una-nueva.html",
+          "fecha": "2026-09-25T16:25:28.285Z",
+          "oficial": false,
+          "aporte": "Informó la participación de la Escuela Municipal de Handball en el circuito AsABal en Mar del Plata y detalló el listado de jugadores y entrenadores."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "e6im4b": {
+      "estado": "automatica",
+      "titulo": "Las TC Pick Up realizan su presentación oficial en Balcarce",
+      "copete": "Una multitud acompañó la presentación de la octava fecha de las TC Pick Up con actividades en una estación de servicio y un recorrido hacia el Museo Fangio.",
+      "cuerpo": "La octava fecha de las TC Pick Up tuvo su presentación oficial con una jornada que comenzó con la firma de autógrafos en una estación de servicio ubicada en avenida San Martín y 107. Del encuentro participaron pilotos locales y figuras del automovilismo nacional ante una multitud de fanáticos.\n\nParticiparon el intendente Esteban Reino y el gerente general de la ACTC, Fernando Miori.\n\nEsta actividad forma parte de la previa del regreso de las categorías nacionales al circuito local después de quince años, tras las acciones promocionales realizadas previamente en Tandil y Mar del Plata.",
+      "guion": "Las TC Pick Up realizan su presentación oficial en Balcarce",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-26T07:24:59.436Z",
+      "claves": [
+        "Presentaron oficialmente la octava fecha de las TC Pick Up.",
+        "Pilotos y fanáticos participaron de actividades en la ciudad.",
+        "El evento anticipa la competencia en el autódromo local."
+      ],
+      "seSabe": [
+        "Las actividades comenzaron con una firma de autógrafos en una estación de servicio.",
+        "Las camionetas recorrieron las calles hasta el Museo Fangio para una conferencia.",
+        "Participaron referentes locales, pilotos nacionales, el intendente y autoridades de la ACTC."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Las TC Pick Up tuvieron su presentación oficial en las calles locales con una masiva convocatoria de vecinos y fanáticos en la previa de la competencia en el autódromo.",
+      "etiquetas": [
+        "TC Pick Up",
+        "Automovilismo",
+        "Autodromo Juan Manuel Fangio",
+        "Balcarce"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Diario La Vanguardia",
+          "enlace": "https://www.diariolavanguardia.com/noticias/44908-una-gran-marco-de-publico-acompano-la-presentacion-de-las-tc-pick-up-en-balcarce/",
+          "fecha": null,
+          "oficial": false,
+          "aporte": "Detalló el recorrido de la presentación oficial de las TC Pick Up y las actividades en la ciudad."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1synfb5",
+          "titulo": "Reapertura del Fangio: horarios, accesos, estacionamiento y recomendaciones para el público",
+          "fecha": "2026-09-25T00:21:50.000Z",
+          "ruta": "/nota/reapertura-del-fangio-horarios-accesos-estacionamiento-y-1synfb5"
+        },
+        {
+          "id": "1ss3yj3",
+          "titulo": "Reino y Ciantini participan en Tandil de la presentación de las TC Pick Up en Balcarce",
+          "fecha": "2026-09-24T00:23:50.055Z",
+          "ruta": "/nota/reino-y-ciantini-participan-en-tandil-1ss3yj3"
+        },
+        {
+          "id": "7qxthx",
+          "titulo": "Kicillof encabeza la reapertura del autódromo Juan Manuel Fangio en Balcarce",
+          "fecha": "2026-09-26T02:38:34.000Z",
+          "ruta": "/nota/kicillof-encabeza-la-reapertura-del-autodromo-juan-manuel-fangio-en-7qxthx"
         }
       ],
       "verificacion": {
