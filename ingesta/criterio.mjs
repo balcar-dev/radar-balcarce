@@ -201,3 +201,36 @@ export const NUMEROS_DEL_CRITERIO = {
   PIEZAS,
   CONTRATO_DIARIO,
 };
+
+// ---------------------------------------------------------------------------
+// La voz y los textos de las redes: CRITERIO-REDES.md (sección 5, "Los números").
+// La prueba pruebas/redes-criterio.test.mjs compara este bloque con esa tabla.
+// Está aparte de NUMEROS_DEL_CRITERIO a propósito: ésa se compara con la tabla de
+// CRITERIO-EDITORIAL.md y son dos documentos distintos.
+
+/** La voz: ritmo de locución y cuántas veces se dice la dirección. */
+export const VOZ = {
+  palabrasPorSegundo: 2.5,
+  // 1 = los podcasts dicen "Radar Balcarce punto com" siempre al cerrar; 0 = nunca.
+  direccionEnPodcasts: 1,
+  // El clima, la farmacia y las piezas semanales la dicen 1 de cada N días
+  // (lo decide la fecha, no el azar). 0 = nunca.
+  direccionUnaDeCada: 3,
+};
+
+/** Cuánto dura un clima, en segundos (se apunta a 10 a 20). */
+export const CLIMA_VOZ = { segundosMinimo: 8, segundosMaximo: 25 };
+
+/** Cuánto dura un podcast, en segundos (se apunta a 45 a 75 con tres notas). */
+export const PODCAST_VOZ = { segundosMinimo: 20, segundosMaximo: 100 };
+
+/** Cuánto dura la farmacia o una pieza semanal, en segundos. */
+export const PIEZA_FIJA_VOZ = { segundosMinimo: 6, segundosMaximo: 25 };
+
+/** El texto de un posteo de una nota. */
+export const POSTEO = { hashtagsMaximo: 3 };
+
+/** Los números de las redes por nombre, como los nombra la tabla de CRITERIO-REDES.md. */
+export const NUMEROS_DE_REDES = {
+  VOZ, CLIMA_VOZ, PODCAST_VOZ, PIEZA_FIJA_VOZ, POSTEO,
+};

@@ -16,6 +16,7 @@
 
 import { diaAR, horaAR, yaPublicada } from './elegir.mjs';
 import { horariosDe } from '../panel/horarios.mjs';
+import { SITIO } from './prompt-redes.mjs';
 
 /** Cuánto tiempo después de su hora una pieza todavía vale la pena. Un clima
  *  de las 7:30 a las 15:00 ya no es el clima.
@@ -110,12 +111,12 @@ export function pieDePieza(pieza) {
   // no se nombra: eso está en la nota de la web.
   if (pieza.items?.length) {
     const lista = pieza.items.map((i) => `• ${i.titulo}${i.enlace ? `\n  ${i.enlace}` : ''}`).join('\n');
-    return `${pieza.titulo}\n\n${lista}\n\nMás en radarbalcarce.com`;
+    return `${pieza.titulo}\n\n${lista}\n\nMás en ${SITIO}`;
   }
   if (pieza.nombre === 'podcast') {
-    return 'El repaso del día en Balcarce.\n\nLas notas, con la fuente, en radarbalcarce.com';
+    return `El repaso del día en Balcarce.\n\nLas notas, con la fuente, en ${SITIO}`;
   }
-  return `${pieza.titulo}\n\nMás en radarbalcarce.com`;
+  return `${pieza.titulo}\n\nMás en ${SITIO}`;
 }
 
 const aMinutos = (hhmm) => {

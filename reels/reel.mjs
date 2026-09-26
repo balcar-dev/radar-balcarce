@@ -8,7 +8,8 @@ import { promisify } from 'node:util';
 import ffmpeg from 'ffmpeg-static';
 import { decir, paraLeer, enCarteles } from './voz.mjs';
 import { aPng } from './placa.mjs';
-import { decirGemini, INDICACION } from './voz-gemini.mjs';
+import { decirGemini, VOZ_DEL_MEDIO } from './voz-gemini.mjs';
+import { componerIndicacion } from '../redes/prompt-redes.mjs';
 import { ARCHIVO as CORTINA, generar as generarCortina } from './cortina.mjs';
 
 const correr = promisify(execFile);
@@ -95,7 +96,9 @@ export async function armarReel({
   // diarios y las piezas fijas son 4, así que entra holgado — y si se acaba,
   // el respaldo de abajo lee con Elena y la pieza sale igual.
   // Para forzar una u otra: VOZ=edge o VOZ=gemini.
-  proveedor = process.env.VOZ ?? 'gemini', vozGemini = process.env.VOZ_GEMINI ?? 'Kore',
+  // La voz es siempre la misma (Kore, de CRITERIO-REDES.md): no se cambia por
+  // variable de entorno. VOZ=edge sólo fuerza el respaldo.
+  proveedor = process.env.VOZ ?? 'gemini', vozGemini = VOZ_DEL_MEDIO,
 }, dir) {
   fs.mkdirSync(dir, { recursive: true });
   const png = path.join(dir, `${nombre}.png`);
@@ -118,7 +121,7 @@ export async function armarReel({
       voz = await decirGemini(texto, mp3, {
         voz: vozGemini,
         // La de siempre más la del momento del día (mañana, tarde o noche).
-        ...(indicacion ? { indicacion: `${INDICACION} ${indicacion}` } : {}),
+        indicacion: componerIndicacion(indicacion),
       });
     } catch (e) {
       console.log(`\n    \x1b[33mGemini no respondió (${e.message.slice(0, 60)}…), va con Elena\x1b[0m`);

@@ -388,7 +388,7 @@ test('Facebook usa el texto para redes, el enlace a nuestra nota y hashtags, sin
   };
   const m = mensajeDeNota(nota, 'https://radarbalcarce.com');
   assert.ok(m.startsWith('El Concejo aprobó la ordenanza de tránsito.'));
-  assert.match(m, /Leé la nota completa: https:\/\/radarbalcarce\.com\/nota\/un-titular-abc/);
+  assert.match(m, /\n\n[^\n]+ https:\/\/radarbalcarce\.com\/nota\/un-titular-abc/);
   assert.doesNotMatch(m, /Resumen hecho con IA/, "los posteos ya no dicen eso (26/09)");
   assert.ok(m.endsWith('#Balcarce #Tránsito #ConcejoDeliberante'), m);
   assert.ok(!m.includes('Puntonueve'));

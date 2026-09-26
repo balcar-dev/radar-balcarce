@@ -270,7 +270,7 @@ test('parecido de temas: ni tan estricto que deje pasar lo mismo, ni tan flojo q
 
 test('el mensaje lleva el enlace a la nota, no dice "Resumen hecho con IA" y NO nombra la fuente', () => {
   const m = mensajeDeNota(nota({ id: 'abc', titulo: 'Un titular' }), 'https://radarbalcarce.com');
-  assert.equal(m, 'Un titular\n\nUn copete\n\nLeé la nota completa: https://radarbalcarce.com/nota/un-titular-abc');
+  assert.match(m, /^Un titular\n\nUn copete\n\n[^\n]+ https:\/\/radarbalcarce\.com\/nota\/un-titular-abc$/);
   assert.ok(!/Fuente|Vanguardia/i.test(m), 'nombró la fuente en una red social');
 });
 
@@ -389,9 +389,9 @@ test('el podcast repasa los titulares del día y no inventa nada', () => {
     n('c', 'Petruccelli pidió informes sobre el programa', 'Política', 99),
   ];
   const g = guionPodcast(notas, { fecha: new Date('2026-09-21T12:00:00-03:00') });
-  assert.match(g, /repaso de este lunes/);
-  assert.match(g, /Primero: Kevin Gómez volvió a Balcarce como campeón\./);
-  assert.match(g, /Y para cerrar: Ferroviarios ganó el Apertura y va por la final\./);
+  assert.match(g, /lunes/);
+  assert.match(g, /: Kevin Gómez volvió a Balcarce como campeón\./);
+  assert.match(g, /: Ferroviarios ganó el Apertura y va por la final\./);
   assert.ok(!g.includes('Petruccelli'), 'coló una nota de Política');
 });
 
@@ -441,13 +441,13 @@ test('el podcast lee el copete sólo de las notas propias, y sin nombrar la fuen
     nn('a', 'Se reinaugura el autódromo', 'Automovilismo', 90, { guion: 'x', copete: 'El viernes habrá acto oficial. Y después más cosas.', medios: ['Puntonueve'] }),
     nn('b', 'Cortan el agua en el centro', 'Servicios', 80, { copete: 'Resumen copiado del medio de origen.', medios: ['El Diario'] }),
   ], { saludo: 'Buen día, Balcarce.' });
-  assert.match(g, /^Buen día, Balcarce\. Primero: Se reinaugura el autódromo\. El viernes habrá acto oficial\. Y para cerrar: Cortan el agua en el centro\. Todas las notas/);
+  assert.match(g, /^Buen día, Balcarce\. .*: Se reinaugura el autódromo\. El viernes habrá acto oficial\. .*: Cortan el agua en el centro\. .*Radar Balcarce/);
   assert.ok(!g.includes('copiado'), 'leyó el copete de una nota que no es nuestra');
   assert.ok(!/Puntonueve|El Diario|fuente/i.test(g));
 });
 
 test('un podcast con menos de dos notas no existe', () => {
-  assert.equal(guionRepaso([nn('a', 'Sola', 'Balcarce', 90)], { saludo: 'Hola.' }), null);
+  assert.equal(guionRepaso([nn('a', 'Sola', 'Balcarce', 90)], { momento: 'manana' }), null);
 });
 
 test('los podcasts del día no repiten notas ni temas entre sí', () => {
@@ -516,16 +516,16 @@ const dosNotas = [
   { id: 'b', titulo: 'Segunda nota del día', seccion: 'Deportes', local: true, relevancia: 70, temas: [] },
 ];
 
-test('el guion de un podcast nunca dice la dirección del sitio en voz alta (la voz agregaba ".ar")', () => {
-  const g = guionRepaso(dosNotas, { saludo: 'Buen día, Balcarce.' });
+test('el guion de un podcast dice la dirección como "Radar Balcarce punto com" y nunca con ".ar" (la voz lo agregaba)', () => {
+  const g = guionRepaso(dosNotas, { momento: 'manana' });
   assert.ok(g, 'tiene que armar el guion');
-  assert.doesNotMatch(g, /punto\s+com|\.com|punto\s+ar/i);
-  assert.match(g, /Radar Balcarce\.$/);
+  assert.match(g, /Radar Balcarce punto com\.$/);
+  assert.doesNotMatch(g, /\.com|punto\s+ar|punto\s+a\s+ere|\.ar\b/i);
 });
 
 test('el podcast de la noche saluda de noche, no de día', () => {
   const g = guionPodcast(dosNotas, { fecha: new Date('2026-09-25T23:00:00Z') });
   assert.match(g, /^Buenas noches, Balcarce/);
-  assert.match(g, /Buenas noches, y hasta mañana\.$/);
+  assert.match(g, /Radar Balcarce punto com\.$/);
   assert.doesNotMatch(g, /buen d[ií]a/i);
 });

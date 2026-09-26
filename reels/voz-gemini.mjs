@@ -12,6 +12,7 @@ import { promisify } from 'node:util';
 import ffmpeg from 'ffmpeg-static';
 import { alinear } from './alinear.mjs';
 import { claveRedes } from './claves.mjs';
+import { VOZ_NOMBRE, INDICACION_BASE } from '../redes/prompt-redes.mjs';
 
 const correr = promisify(execFile);
 const RAIZ = path.join(import.meta.dirname, '..');
@@ -21,11 +22,10 @@ export function clave() {
   return claveRedes();
 }
 
-// Cómo queremos que suene el medio. Esto es lo que ninguna voz de catálogo
-// te deja pedir.
-export const INDICACION = 'Leé esto como locutora de una radio de pueblo en la provincia '
-  + 'de Buenos Aires: cercana, tranquila, con acento rioplatense, sin solemnidad y sin '
-  + 'exagerar. Ritmo parejo, como quien le cuenta algo a un vecino.';
+// Cómo suena el medio: la voz (Kore) y la indicación de siempre se leen de
+// CRITERIO-REDES.md (sección 6) y no se repiten acá: hay UNA sola locutora.
+export const VOZ_DEL_MEDIO = VOZ_NOMBRE;
+export const INDICACION = INDICACION_BASE;
 
 const dormir = (ms) => new Promise((r) => { setTimeout(r, ms); });
 
@@ -88,7 +88,7 @@ export const ESPERA_MAXIMA_VOZ = 120_000;
  * tiempos de cada palabra resueltos por alineación (ver alinear.mjs).
  */
 export async function decirGemini(texto, destino, {
-  voz = 'Kore', indicacion = INDICACION, intentos = 4, fetchFn = fetch,
+  voz = VOZ_DEL_MEDIO, indicacion = INDICACION, intentos = 4, fetchFn = fetch,
 } = {}) {
   const k = clave();
   if (!k) throw new Error('falta GEMINI_API_KEY_REDES (en el entorno o en .env)');

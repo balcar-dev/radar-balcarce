@@ -25,7 +25,11 @@
 
 import { rutaDeNota } from '../web/lib/ruta.js';
 import { esperaCuerpo } from '../web/lib/cuerpo.js';
-import { FACEBOOK, PIEZAS, SECCIONES_QUE_ESPERAN_PERSONA } from '../ingesta/criterio.mjs';
+import {
+  FACEBOOK, PIEZAS, POSTEO, SECCIONES_QUE_ESPERAN_PERSONA,
+} from '../ingesta/criterio.mjs';
+import { armarPodcast, variante } from './guiones.mjs';
+import { MEDIO } from './prompt-redes.mjs';
 
 // Los números de las redes son parte del criterio editorial: están en
 // ingesta/criterio.mjs y en la tabla "Los números" de CRITERIO-EDITORIAL.md,
@@ -217,7 +221,7 @@ export function imagenDeNota(nota, sitio) {
  * las etiquetas que escribió la IA (ya verificadas), hasta tres. "obras
  * públicas" queda #ObrasPúblicas. Sin repetir, aunque cambie la tilde.
  */
-export function hashtagsDe(nota, cuantos = 3) {
+export function hashtagsDe(nota, cuantos = POSTEO.hashtagsMaximo) {
   const local = !!(nota?.local || nota?.seccion === 'Balcarce');
   const candidatas = [...(local ? ['Balcarce'] : []), ...(nota?.etiquetas ?? [])];
   const vistos = new Set();
@@ -233,6 +237,18 @@ export function hashtagsDe(nota, cuantos = 3) {
   }
   return tags;
 }
+
+/** La línea que lleva al enlace de nuestra nota: cambia de frase de una nota a
+ *  otra (se elige con el identificador de la nota, así que es siempre la misma
+ *  para la misma nota) para que la página no suene a plantilla. */
+export const FRASES_DEL_ENLACE = [
+  'Leé la nota completa:',
+  'Toda la nota acá:',
+  `Seguí leyendo en ${MEDIO}:`,
+  `La nota completa, en ${MEDIO}:`,
+];
+
+const lineaDelEnlace = (nota, sitio) => `${variante(FRASES_DEL_ENLACE, `nota|${nota.id ?? nota.titulo}`, 'enlace')} ${enlaceDeNota(nota, sitio)}`;
 
 /**
  * El texto del posteo: titular, copete y el enlace a la nota completa en
@@ -250,7 +266,7 @@ export function hashtagsDe(nota, cuantos = 3) {
 export function mensajeDeNota(nota, sitio) {
   if (nota.textoRedes) {
     const partes = [String(nota.textoRedes).trim()];
-    if (sitio) partes.push(`Leé la nota completa: ${enlaceDeNota(nota, sitio)}`);
+    if (sitio) partes.push(lineaDelEnlace(nota, sitio));
     const tags = hashtagsDe(nota);
     if (tags.length) partes.push(tags.join(' '));
     return partes.join('\n\n');
@@ -258,7 +274,7 @@ export function mensajeDeNota(nota, sitio) {
   const partes = [nota.titulo];
   const copete = recortar(nota.copete);
   if (copete) partes.push(copete);
-  if (sitio) partes.push(`Leé la nota completa: ${enlaceDeNota(nota, sitio)}`);
+  if (sitio) partes.push(lineaDelEnlace(nota, sitio));
   // Sin "Resumen hecho con IA" (desde el 26/09, a pedido de Hernán y Andrés):
   // quién escribió la nota se dice en la nota, en la web.
   return partes.join('\n\n');
@@ -373,20 +389,27 @@ export function elegirParaPodcast(notas, { cuantas = PIEZAS.notasPorPodcast, exc
 }
 
 /**
- * El guion de un podcast: un saludo, cada noticia con su titular y, si el
- * texto es propio, una oración más de contexto, y el cierre. Todo sale de lo
- * ya publicado: no hay nada que la IA pueda inventar acá. La fuente no se
- * nombra nunca. Con menos de dos noticias no es un repaso: devuelve null.
+ * El guion de un podcast: el saludo de su hora, cada noticia con su titular y, si
+ * el texto es propio, una oración más de contexto, y el cierre de su hora. Todo
+ * sale de lo ya publicado: no hay nada que la IA pueda inventar acá. La fuente no
+ * se nombra nunca. Con menos de dos noticias no es un repaso: devuelve null.
+ *
+ * Cómo suena (saludos, conectores, cierres, la dirección dicha) sale del libro de
+ * recursos de redes/guiones.mjs, según CRITERIO-REDES.md, con una semilla de
+ * fecha y momento: el mismo día y el mismo podcast dan siempre el mismo texto.
+ * `saludo` y `cierre` sólo se pasan para forzarlos (pruebas).
  */
-export function guionRepaso(elegidas, { saludo, cierre = 'Todas las notas, en Radar Balcarce.' }) {
+export function guionRepaso(elegidas, {
+  momento = 'manana', fecha = new Date(), saludo, cierre, direccion,
+} = {}) {
   if (elegidas.length < PIEZAS.notasMinimasPodcast) return null;
-  const marca = (i) => (i === elegidas.length - 1 ? 'Y para cerrar' : ['Primero', 'Después', 'Además'][i]);
-  const cuerpo = elegidas.map((n, i) => {
-    const titular = String(n.titulo).replace(/\s+/g, ' ').trim().replace(/[.:]+$/, '');
-    const detalle = esPropia(n) ? primeraOracion(n.copete) : '';
-    return `${marca(i)}: ${titular}.${detalle ? ` ${detalle}` : ''}`;
-  }).join(' ');
-  return `${saludo} ${cuerpo} ${cierre}`;
+  const items = elegidas.map((n) => ({
+    titular: n.titulo,
+    detalle: esPropia(n) ? primeraOracion(n.copete) : '',
+  }));
+  return armarPodcast(items, {
+    momento, fecha, saludo, cierre, direccion,
+  });
 }
 
 /**
@@ -394,12 +417,8 @@ export function guionRepaso(elegidas, { saludo, cierre = 'Todas las notas, en Ra
  * la voz de siempre.
  */
 export function guionPodcast(notas, { cuantas = PIEZAS.notasPodcastNoche, fecha = new Date() } = {}) {
-  const dia = new Intl.DateTimeFormat('es-AR', { weekday: 'long', timeZone: ZONA }).format(fecha);
   const elegidas = elegirParaPodcast(notas, { cuantas }, { ...REGLAS_PIEZAS, relevanciaParaHistoria: 0 });
-  return guionRepaso(elegidas, {
-    saludo: `Buenas noches, Balcarce. Este es el repaso de este ${dia}.`,
-    cierre: 'Todas las notas, en Radar Balcarce. Buenas noches, y hasta mañana.',
-  });
+  return guionRepaso(elegidas, { momento: 'noche', fecha });
 }
 
 /** ¿Está prendido el interruptor de publicar? Acepta "si", "Si", "SÍ", "sí"…

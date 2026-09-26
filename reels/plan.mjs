@@ -19,6 +19,10 @@ import {
   elegirHistoriasDeNotas, elegirFeed, elegirParaPodcast, guionRepaso, guionPodcast, enlaceDeNota,
 } from '../redes/elegir.mjs';
 import { datosDeLaWeb } from '../redes/datos.mjs';
+import {
+  guionClima, guionClimaNoche, guionFarmacia, guionUtiles, guionAgenda, comoNombre,
+} from '../redes/guiones.mjs';
+import { INDICACIONES, momentoDeHora } from '../redes/prompt-redes.mjs';
 import { HORAS_REELS, colorDelDia, horaHistoriaDeNota, HISTORIAS_DE_NOTAS, notasUsadasHoy, piezasPublicadasHoy } from '../redes/piezas.mjs';
 
 // El cupo de reels es el recurso escaso del día, así que NO se gasta en lo que
@@ -83,15 +87,6 @@ function eventosProximos(dias = 4) {
   }).filter(Boolean).sort((a, b) => a.orden - b.orden);
 }
 
-function guionAgenda(eventos) {
-  if (!eventos.length) return '';
-  const primero = eventos[0];
-  const cuantos = eventos.length;
-  return `Hay ${cuantos === 1 ? 'una actividad' : `${cuantos} actividades`} en Balcarce estos días. `
-    + `${primero.nombre}, el ${primero.cuando}${primero.lugar ? `, en ${primero.lugar}` : ''}. `
-    + 'La agenda completa está en nuestra página.';
-}
-
 const PORTADA_WEB = path.join(import.meta.dirname, '..', 'web', 'data', 'portada.json');
 const LIBRO_REDES = path.join(import.meta.dirname, '..', 'web', 'data', 'redes.json');
 
@@ -118,90 +113,18 @@ function leerDatos() {
 // 2. La fuente no se nombra nunca en redes. La atribución y el link van en la
 //    nota de la página, que es donde corresponde.
 
-// El cronograma del Colegio viene todo en mayúsculas y así el sintetizador
-// tiende a deletrear o a gritar: lo pasamos a nombre propio antes de leerlo.
-const comoNombre = (s) => String(s).toLowerCase()
-  .replace(/(^|\s|-)([a-záéíóúñ])/g, (_, a, b) => a + b.toUpperCase());
+// Los guiones de las piezas fijas (clima, farmacia, teléfonos, agenda) y de los
+// podcasts viven en redes/guiones.mjs, con su libro de recursos y el criterio de
+// CRITERIO-REDES.md. Se re-exportan acá porque otros los importan de plan.mjs.
+export {
+  guionClima, guionClimaNoche, guionFarmacia, guionUtiles, guionAgenda,
+};
 
-// Cómo suena cada podcast según la hora (se suma a la indicación de siempre,
-// reels/voz-gemini.mjs). Aquí y no en voz-gemini.mjs: el panel importa este
-// archivo y no puede traer ffmpeg.
-export const TONO_DE_LA_MANANA = 'Es de mañana: sonás fresca y con energía tranquila, como quien arranca el día. Si saludás, es con "buen día".';
-export const TONO_DE_LA_TARDE = 'Es de tarde: sonás pareja y cálida, sin apuro. Si saludás, es con "buenas tardes", nunca "buen día".';
-export const TONO_DE_LA_NOCHE = 'Es de noche: sonás más pausada, más baja y calma, como quien cierra el día. Si saludás, es con "buenas noches", nunca "buen día". Decí sólo "Radar Balcarce" cuando nombres el medio: no leas ninguna dirección web.';
-
-export function guionClima(clima, turno) {
-  const c = clima.ahora;
-  const hoy = clima.dias[0];
-  const partes = [`Buen día, Balcarce. Arrancamos con ${c.temp} grados.`];
-
-  if (hoy.min <= 6) partes.push('Mañana fría: salí abrigado.');
-  else if (hoy.min <= 11) partes.push('Está fresco temprano, pero afloja.');
-
-  if (hoy.max >= 28) partes.push(`A la tarde aprieta: vamos a ${hoy.max} grados.`);
-  else if (hoy.max - hoy.min >= 12) partes.push(`A la tarde levanta hasta ${hoy.max}, así que el abrigo te va a sobrar.`);
-  else partes.push(`La máxima de hoy es de ${hoy.max} grados.`);
-
-  if (hoy.lluvia >= 50) partes.push(`Hay muchas chances de lluvia, ${hoy.lluvia} por ciento: llevate el paraguas.`);
-  else if (hoy.lluvia >= 25) partes.push('Puede caer algo suelto a la tarde.');
-  else partes.push('No se espera lluvia.');
-
-  if (c.viento >= 30) partes.push(`Ojo con el viento, que sopla a ${c.viento} kilómetros por hora.`);
-
-  // La farmacia NO va acá: tiene su propia pieza a la tarde. Mezclarlas hace
-  // que ninguna de las dos se recuerde.
-  partes.push('Buen día.');
-  return partes.join(' ');
-}
-
-// El segundo pase del clima no repite el de la mañana: mira para adelante.
-export function guionClimaTarde(clima) {
-  const c = clima.ahora;
-  const hoy = clima.dias[0];
-  const manana = clima.dias[1];
-  // Sale a las 20: ya es de noche.
-  const partes = [`Buenas noches, Balcarce. En este momento hay ${c.temp} grados.`];
-
-  if (hoy.min <= 8) partes.push(`Esta noche refresca fuerte, baja hasta ${hoy.min}.`);
-  else partes.push(`Esta noche la mínima va a ser de ${hoy.min} grados.`);
-
-  if (manana) {
-    if (manana.lluvia >= 50) partes.push(`Y ojo mañana, que se viene agua: ${manana.lluvia} por ciento de probabilidad.`);
-    else if (manana.max - hoy.max >= 4) partes.push(`Mañana levanta: máxima de ${manana.max} grados.`);
-    else if (hoy.max - manana.max >= 4) partes.push(`Mañana baja un poco, máxima de ${manana.max}.`);
-    else partes.push(`Mañana, parecido: máxima de ${manana.max} grados.`);
-  }
-  partes.push('Seguimos actualizando en radar balcarce punto com punto a ere.');
-  return partes.join(' ');
-}
-
-export function guionFarmacia(turno) {
-  const lista = turno.detalle?.length ? turno.detalle : turno.farmacias.map((n) => ({ nombre: n }));
-  const dichas = lista.map((f) => {
-    const n = comoNombre(f.nombre);
-    // La dirección se dice, no sólo se muestra: mucha gente escucha el reel
-    // mientras hace otra cosa.
-    return f.direccion ? `${n}, en ${f.direccion.replace(/N°/g, 'número').replace(/e\//g, 'entre')}` : n;
-  });
-  const cual = dichas.length > 1
-    ? `hay dos de turno: ${dichas.join(', y también ')}`
-    : `la de turno es ${dichas[0]}`;
-  // No dice hasta qué hora está abierta: ese dato es para la web. Acá alcanza
-  // con decir cuál es la de turno.
-  return `Si esta noche necesitás una farmacia en Balcarce, ${cual}. `
-    + 'Guardá el dato, que te puede salvar una madrugada.';
-}
-
-const COLOR_UTILES_ACENTO = '#8C2D18';
-
-// Nada de "esta semana" ni "una vez por semana": son los mismos teléfonos
-// siempre, la única variable es cuándo sale la pieza. Decir que son "de
-// esta semana" da a entender que cambian, y no es así.
-export function guionUtiles() {
-  return 'Te dejamos los teléfonos que sirve tener a mano en Balcarce: '
-    + 'emergencias, el hospital, la comisaría y los servicios del municipio. '
-    + 'Guardalos ahora, que después te olvidás. Los demás números están en la página.';
-}
+// Cómo suena cada podcast según la hora se lee de CRITERIO-REDES.md (sección 6);
+// se suma a la indicación de siempre. Se exportan con los nombres de siempre.
+export const TONO_DE_LA_MANANA = INDICACIONES.manana;
+export const TONO_DE_LA_TARDE = INDICACIONES.tarde;
+export const TONO_DE_LA_NOCHE = INDICACIONES.noche;
 
 export function guionNoticia(n) {
   // La voz dice el MISMO titular que está en la placa, y nada más.
@@ -286,6 +209,7 @@ export function planDelDia(datos, { libro = null } = {}) {
       tipo: 'historia', hora: cuando['clima-manana'].hora, nombre: 'clima-manana', titulo: 'El clima de hoy',
       motivo: 'servicio fijo · no gasta cupo de reel', seccion: 'Clima',
       guion: guionClima(datos.clima, turno),
+      momento: 'manana', indicacion: INDICACIONES.manana,
       svg: placaClima({
         temp: c.temp,
         cielo: c.cielo,
@@ -308,7 +232,8 @@ export function planDelDia(datos, { libro = null } = {}) {
     if (toca(cuando['clima-noche'])) piezas.push({
       tipo: 'historia', hora: cuando['clima-noche'].hora, nombre: 'clima-noche', titulo: 'Cómo sigue el día',
       motivo: 'segundo pase del clima · mira para adelante', seccion: 'Clima',
-      guion: guionClimaTarde(datos.clima),
+      guion: guionClimaNoche(datos.clima),
+      momento: 'noche', indicacion: INDICACIONES.noche,
       svg: placaClima({
         temp: c.temp,
         cielo: c.cielo,
@@ -332,7 +257,8 @@ export function planDelDia(datos, { libro = null } = {}) {
     piezas.push({
       tipo: 'historia', hora: cuando.farmacia.hora, nombre: 'farmacia', titulo: `Farmacia de turno: ${comoNombre(turno.farmacias.join(' y '))}`,
       motivo: 'a la hora en que cierran las demás', seccion: 'Farmacias',
-      guion: guionFarmacia(turno),
+      guion: guionFarmacia(turno, { momento: momentoDeHora(cuando.farmacia.hora) }),
+      momento: momentoDeHora(cuando.farmacia.hora), indicacion: INDICACIONES[momentoDeHora(cuando.farmacia.hora)],
       svg: placaFarmacia({
         detalle: turno.detalle, farmacias: turno.farmacias, dia: turno.dia, diaSemana: turno.diaSemana,
       }),
@@ -350,7 +276,8 @@ export function planDelDia(datos, { libro = null } = {}) {
       tipo: 'historia', hora: cuando.utiles.hora, nombre: 'utiles',
       titulo: 'Teléfonos útiles de Balcarce', motivo: 'una vez por semana, día variable',
       seccion: 'Servicios',
-      guion: guionUtiles(),
+      guion: guionUtiles({ momento: momentoDeHora(cuando.utiles.hora) }),
+      momento: momentoDeHora(cuando.utiles.hora), indicacion: INDICACIONES[momentoDeHora(cuando.utiles.hora)],
       svg: placaUtiles({ grupos }),
       acento: COLOR_UTILES_ACENTO,
     });
@@ -365,7 +292,8 @@ export function planDelDia(datos, { libro = null } = {}) {
       tipo: 'historia', hora: cuando.agenda.hora, nombre: 'agenda',
       titulo: 'Qué hacer este fin de semana', motivo: 'los jueves, si hay eventos cargados',
       seccion: 'Cultura y agenda',
-      guion: guionAgenda(deLaAgenda),
+      guion: guionAgenda(deLaAgenda, { momento: momentoDeHora(cuando.agenda.hora) }),
+      momento: momentoDeHora(cuando.agenda.hora), indicacion: INDICACIONES[momentoDeHora(cuando.agenda.hora)],
       svg: placaAgenda({ eventos: deLaAgenda }),
       acento: '#6D4BA0',
     });
@@ -390,33 +318,23 @@ export function planDelDia(datos, { libro = null } = {}) {
   // y sin nombrar la fuente. Cada podcast se sube también como historia.
   const SITIO = process.env.SITIO ?? 'https://radarbalcarce.com';
   const RONDAS = [
-    // Cada uno habla como corresponde a su hora: saludo, cierre y tono (el 25/09
-    // los usuarios pidieron que no digan "buen día" los tres).
-    {
-      nombre: 'noticia1', titulo: 'El repaso de la mañana',
-      saludo: 'Buen día, Balcarce. Esto es lo que hay para saber esta mañana.',
-      cierre: 'Todas las notas, en Radar Balcarce. Que tengan un buen día.',
-      indicacion: TONO_DE_LA_MANANA,
-    },
-    {
-      nombre: 'noticia2', titulo: 'El repaso de la tarde',
-      saludo: 'Buenas tardes, Balcarce. Repasamos lo que fue pasando hoy.',
-      cierre: 'Todas las notas, en Radar Balcarce. Que sigan bien la tarde.',
-      indicacion: TONO_DE_LA_TARDE,
-    },
+    // Cada uno habla como corresponde a su hora: el saludo, el cierre y el tono
+    // salen de CRITERIO-REDES.md, con variedad por fecha (redes/guiones.mjs).
+    { nombre: 'noticia1', titulo: 'El repaso de la mañana', momento: 'manana' },
+    { nombre: 'noticia2', titulo: 'El repaso de la tarde', momento: 'tarde' },
   ];
   const yaContadas = [];
   RONDAS.forEach((ronda, i) => {
     if (hechas.has(ronda.nombre)) return;
     const elegidas = elegirParaPodcast(libres, { cuantas: 3, excluir: yaContadas });
-    const guion = guionRepaso(elegidas, { saludo: ronda.saludo, cierre: ronda.cierre });
+    const guion = guionRepaso(elegidas, { momento: ronda.momento });
     if (!guion) return; // un podcast de una sola noticia no es un repaso
     yaContadas.push(...elegidas);
     piezas.push({
       tipo: 'reel', hora: REGLAS.horariosReel[i] ?? '21:00', nombre: ronda.nombre, notaId: elegidas[0].id,
       notaIds: elegidas.map((n) => n.id),
       items: elegidas.map((n) => ({ titulo: n.titulo, enlace: enlaceDeNota(n, SITIO) })),
-      titulo: ronda.titulo, indicacion: ronda.indicacion,
+      titulo: ronda.titulo, momento: ronda.momento, indicacion: INDICACIONES[ronda.momento],
       motivo: `podcast de ${elegidas.length} notas, las de más puntaje de temas distintos`,
       seccion: 'Balcarce', guion,
       svg: placaNoticia({ seccion: 'Balcarce', titulo: ronda.titulo, cuando: fechaLarga(), color: colorDelDia() }),
@@ -435,7 +353,7 @@ export function planDelDia(datos, { libro = null } = {}) {
       notaIds: delDia.map((n) => n.id),
       items: delDia.map((n) => ({ titulo: n.titulo, enlace: enlaceDeNota(n, SITIO) })),
       titulo: 'El repaso del día', motivo: 'el podcast diario: los titulares más fuertes, un solo audio',
-      seccion: 'Balcarce', guion: repaso, indicacion: TONO_DE_LA_NOCHE,
+      seccion: 'Balcarce', guion: repaso, momento: 'noche', indicacion: INDICACIONES.noche,
       svg: placaNoticia({ seccion: 'Balcarce', titulo: 'El repaso del día', cuando: fechaLarga(), color: colorDelDia() }),
       acento: colorDelDia(),
     });

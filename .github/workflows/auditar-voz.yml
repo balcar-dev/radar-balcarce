@@ -1,0 +1,43 @@
+# La auditoría de voz: genera unos clips cortos con la voz de siempre, le pide a
+# Gemini la transcripción literal y comprueba que diga "Radar Balcarce", que la
+# dirección termine en "punto com" (nunca "punto ar") y que el saludo sea el de la
+# hora. Imprime un cuadro PASA/FALLA y falla si algún clip falla.
+#
+# SE CORRE A MANO (Actions → "Auditar voz" → Run workflow). Gasta unos pocos
+# audios cortos y sus transcripciones (centavos): no se dispara solo ni se repite.
+# Detalle: CRITERIO-REDES.md, sección 7.
+#
+# SECRETO: GEMINI_API_KEY_REDES.
+
+name: Auditar voz
+
+on:
+  workflow_dispatch:
+    inputs:
+      explorar:
+        description: 'Probar además formas alternativas de decir la dirección (gasta un poco más)'
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+
+jobs:
+  auditar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+
+      # ffmpeg (para pasar el audio a mp3 y alinear) viene con las dependencias.
+      - run: npm ci --no-audit --no-fund
+
+      - name: Auditar la voz
+        run: node reels/auditar-voz.mjs ${{ github.event.inputs.explorar == 'true' && '--explorar' || '' }}
+        env:
+          GEMINI_API_KEY_REDES: ${{ secrets.GEMINI_API_KEY_REDES }}

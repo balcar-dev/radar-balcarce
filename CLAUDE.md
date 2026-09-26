@@ -208,6 +208,7 @@ publicar piezas a mano. Detalle y horarios en `REDES.md`.
 | que la cotización del dólar (u otra cosa que no es nota) no salga | `REGLAS_SEMAFORO.cotizacion` en `ingesta/fuentes.mjs` (mira sólo el título) |
 | cambiar cuándo salen las historias | panel → Calendario (`panel/horarios.mjs`) |
 | cambiar qué se publica en Facebook, reels, historias o el podcast | `redes/elegir.mjs` |
+| cambiar cómo suenan o qué dicen las piezas de redes (la voz, saludos, cierres, cuándo se dice la dirección, largos) | `CRITERIO-REDES.md` (la identidad y las instrucciones de voz se leen de ahí; los bancos de frases, en `redes/guiones.mjs`; reiniciar el panel). Se controla con `npm test` y, para la voz de verdad, con el workflow manual "Auditar voz" |
 | cambiar a qué hora sale una pieza de Instagram | `redes/piezas.mjs` (ventana) y `reels/plan.mjs` (horarios de reels e historias de notas) |
 | prender o apagar la publicación en redes | variable `REDES_ACTIVAS` en GitHub |
 | cambiar cómo se habla con Meta | `redes/meta.mjs` |
@@ -227,7 +228,8 @@ publicar piezas a mano. Detalle y horarios en `REDES.md`.
 | `INFRAESTRUCTURA.md` | Qué corre dónde, secretos por nombre, vencimientos, qué se cae y cómo se ve |
 | `MANUAL.md` | Cómo se eligen las noticias: puntaje, semáforo, diseño de la web |
 | `CRITERIO-EDITORIAL.md` | **El criterio editorial único**: qué entra, semáforo, cómo se escribe (título, bajada, cuerpo), fuentes, verificación, qué ve el lector, notas propias, redes, firma, los números y la instrucción exacta de la IA |
-| `REDES.md` | Qué se publica en Instagram y Facebook, cuándo y con qué reglas |
+| `CRITERIO-REDES.md` | **El criterio único de las redes**: identidad ("Radar Balcarce", `radarbalcarce.com`), la voz (siempre la misma locutora), una ficha por pieza, las reglas de toda pieza, los números y las instrucciones exactas de voz |
+| `REDES.md` | Qué se publica en Instagram y Facebook, cuándo y con qué reglas (horarios e infraestructura; cómo suena, en `CRITERIO-REDES.md`) |
 | `PERFILES.md` | Biografías, categorías y colores de las redes |
 | `FORMATOS.md` | Medidas de imágenes y videos, con la auditoría semanal |
 | `SEO.md` | Posicionamiento: qué está hecho, cómo se audita, qué falta |

@@ -70,12 +70,15 @@ hecho con IA"** (desde el 26/09, a pedido de Hernán y Andrés): quién escribi�
 nota se dice en la nota, en la web. **La fuente no se nombra en las redes**
 (desde el 24/09): eso está en la nota de la web.
 
-**Cada podcast habla según su hora** (26/09): el de la mañana saluda con "buen
-día" y cierra con "que tengan un buen día"; el de la tarde, "buenas tardes"; el
-de la noche, "buenas noches" y "hasta mañana", más pausado. Y **nunca dice la
-dirección del sitio en voz alta**: la voz agregaba un ".ar" que no existe. Cierra
-con "Todas las notas, en Radar Balcarce" y el enlace va escrito en el posteo
-(`reels/plan.mjs`, `redes/elegir.mjs`, con pruebas en `pruebas/redes.test.mjs`).
+**Cada pieza habla según su hora, con la misma locutora** (26/09): saludo, cierre
+y tono son los de su horario (mañana "buen día", tarde "buenas tardes", noche
+"buenas noches"), los textos varían de un día al otro dentro del criterio, y la
+página se dice "Radar Balcarce punto com" (nunca ".ar": la voz lo agregaba una vez)
+siempre al cerrar los podcasts y algunos días en el clima y la farmacia. Todo eso
+está en [`CRITERIO-REDES.md`](CRITERIO-REDES.md); el código, en
+`redes/guiones.mjs` y `redes/prompt-redes.mjs`, con pruebas en
+`pruebas/redes-criterio.test.mjs`. La voz de verdad se comprueba a mano con el
+workflow **Auditar voz** (`reels/auditar-voz.mjs`).
 
 **El enlace no se rompe** (desde el 25/09). La dirección de cada nota queda
 fija desde la primera vez que sale, aunque la IA cambie el titular después. Y
@@ -276,9 +279,13 @@ los pesos de `ingesta/fuentes.mjs`. Lo de las tres primeras semanas ya corre
 solo o cambió (los podcasts reemplazaron a las noticias sueltas). Lo que sigue
 vigente es medir con números: `PENDIENTES.md`, secciones A y D.
 
-### El tono
+### El tono y la voz
 
-El mismo que en la web (`CRITERIO-EDITORIAL.md`, secciones 1 y 4).
+Todo lo que tiene que ver con **cómo suenan y qué dicen las piezas** (la locutora,
+los saludos por horario, cuándo se dice la dirección, los largos, una ficha por
+pieza) está en **[`CRITERIO-REDES.md`](CRITERIO-REDES.md)**, el documento único de
+las redes. Acá quedan los horarios y la infraestructura. El tono de las notas es
+el de la web (`CRITERIO-EDITORIAL.md`, secciones 1 y 4).
 
 ### Lo que hay que decir siempre
 
@@ -341,6 +348,9 @@ tiene alternativa: si falta, los reels no arrancan. Los tokens y las claves
 | `redes/elegir.mjs` | Qué se publica: reglas de Facebook, reels, historias, podcast, interruptor |
 | `redes/piezas.mjs` | Qué pieza le toca a cada hora y hasta cuándo vale (`VENTANAS`; 2 horas si no tiene una propia) |
 | `redes/publicar-piezas.mjs` | Publica en Instagram y guarda el libro después de cada una |
+| `redes/prompt-redes.mjs` | Lee de `CRITERIO-REDES.md` la identidad ("Radar Balcarce", `radarbalcarce.com`) y las instrucciones de la voz |
+| `redes/guiones.mjs` | El libro de recursos: saludos, aperturas, conectores, cierres y guiones del clima, la farmacia, lo semanal y los podcasts, con variedad por fecha; y `revisarTexto`, las reglas de toda pieza |
+| `redes/auditoria-voz.mjs` y `reels/auditar-voz.mjs` | La auditoría de voz (clips de prueba, transcripción y juicio) |
 | `redes/publicar.mjs` | El programa: `--verificar`, `--facebook`, `--enlaces` (la dirección pública de los podcasts), `--piezas [--sin-horario]` |
 | `redes/datos.mjs` | Arma los datos del día desde la web, para generar sin panel |
 | `reels/claves.mjs` | Las dos claves de Gemini |

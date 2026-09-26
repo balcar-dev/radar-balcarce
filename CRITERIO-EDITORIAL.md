@@ -558,7 +558,10 @@ página (`/agenda/<nombre>-<id>`), armada con los datos y una plantilla
 
 ## 9. Las redes
 
-Resumen del criterio. Los horarios, las piezas y cómo se publica, en
+Resumen del criterio. **Cómo suenan y qué dicen las piezas de redes (la voz, los
+saludos, la dirección, una ficha por pieza) está en
+[`CRITERIO-REDES.md`](CRITERIO-REDES.md)**: es el documento único de las redes y
+manda sobre lo que se repita acá. Los horarios, las piezas y cómo se publica, en
 [`REDES.md`](REDES.md).
 
 - **Sólo sale lo que ya está publicado en la web.** Lo que el semáforo frenó no
@@ -569,9 +572,9 @@ Resumen del criterio. Los horarios, las piezas y cómo se publica, en
 - **Facebook:** hasta **5 notas por día**, con relevancia **75 o más**, de 8
   a **22:00 en punto**, con 90 minutos entre una y otra, y **sin repetir un
   tema** publicado en las últimas 24 horas. El posteo lleva el texto para
-  redes (o el título y la bajada), **el enlace a nuestra nota**, "Resumen
-  hecho con IA" si la escribió la IA y dos o tres hashtags. **Nunca nombra la
-  fuente**: eso está en la nota de la web.
+  redes (o el título y la bajada), **el enlace a nuestra nota**
+  (`radarbalcarce.com/…`) y hasta tres hashtags. **Nunca nombra la fuente** (eso
+  está en la nota de la web) **ni dice "Resumen hecho con IA"** (desde el 26/09).
 - **Instagram** recibe video con voz (historias y reels) y el espejo de cada
   posteo de Facebook como tarjeta propia. Nunca la foto de otro medio.
 - **Podcasts en vez de noticias sueltas:** tres por día, con notas de
@@ -598,8 +601,8 @@ La explicación larga ("la escribió una inteligencia artificial con lo que
 publicaron las fuentes, y se verificó automáticamente contra ellas: un dato que
 no estaba se descarta", más el enlace a *Quiénes somos*) se ve sólo al abrir el
 desplegable. Nunca se dice "sin revisión humana": es un dato interno, y el
-sitio nunca promete una revisión que no hubo. En Facebook, "Resumen hecho con
-IA". El pie de la web lo dice para todo el sitio: los textos los escribe una IA
+sitio nunca promete una revisión que no hubo. En las redes no se repite: quién
+escribió la nota se dice en la nota. El pie de la web lo dice para todo el sitio: los textos los escribe una IA
 y se verifican automáticamente contra la fuente, que queda enlazada; lo
 sensible lo revisa una persona antes de salir; las voces de los videos
 también son de IA.
