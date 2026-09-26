@@ -1,5 +1,5 @@
 {
-  "exportado": "2026-09-26T07:03:52.090Z",
+  "exportado": "2026-09-26T07:14:26.936Z",
   "decisiones": {
     "1951120": {
       "estado": "automatica",
@@ -21697,6 +21697,434 @@
           "titulo": "Largas filas en Balcarce por el regreso del automovilismo",
           "fecha": "2026-09-24T13:34:15.000Z",
           "ruta": "/nota/largas-filas-en-balcarce-por-el-regreso-del-automovilismo-4v2vga"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "1chec7e": {
+      "estado": "automatica",
+      "titulo": "Carlos Bianco detalla la inversión en la reinauguración del autódromo",
+      "copete": "El ministro de Gobierno bonaerense participó de la reapertura del Autódromo Juan Manuel Fangio, repasó los trabajos realizados junto al Municipio y explicó las cifras destinadas a las obras.",
+      "cuerpo": "Durante la reinauguración del Autódromo Juan Manuel Fangio, el ministro de Gobierno bonaerense, Carlos Bianco, destacó la recuperación del circuito local y repasó el trabajo conjunto con la administración comunal para lograr el regreso de la actividad nacional tras quince años.\n\nEl titular de la cartera de Gobierno acompañó al gobernador Axel Kicillof y al intendente Esteban Reino en la ceremonia oficial, donde recordó su vínculo personal con el trazado automovilístico local y recorrió las instalaciones. Ante las consultas sobre el financiamiento, el funcionario descartó la existencia de irregularidades y diferenció el proceso de obra balcarceño de otras controversias de la política nacional. Como se había informado a principios de semana, la Provincia y el Municipio coordinaron la puesta en valor del escenario deportivo en la previa del desembarco de las categorías de la ACTC.",
+      "guion": "Carlos Bianco detalla la inversión en la reinauguración del autódromo",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-26T07:14:26.882Z",
+      "claves": [
+        "El ministro Carlos Bianco participó de la reinauguración del Autódromo Juan Manuel Fangio.",
+        "Precisó que la inversión total a valor actualizado alcanza los 3.300 millones de pesos.",
+        "Indicó que los desembolsos nominales de los últimos tres años sumaron 1.300 millones.",
+        "El funcionario descartó irregularidades y destacó el trabajo conjunto con el Municipio."
+      ],
+      "seSabe": [
+        "Carlos Bianco participó de la reinauguración del Autódromo Juan Manuel Fangio junto al gobernador Axel Kicillof y el intendente Esteban Reino.",
+        "El ministro de Gobierno bonaerense explicó que el valor actualizado de las obras es de 3.300 millones de pesos.",
+        "Los desembolsos nominales realizados en los últimos tres años totalizaron aproximadamente 1.300 millones de pesos, según detalló el funcionario.",
+        "La intervención permitió recuperar el circuito local para el regreso del automovilismo nacional tras quince años."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El ministro Carlos Bianco participó de la reinauguración del Autódromo Juan Manuel Fangio y detalló las cifras destinadas a la obra que permitió el regreso del automovilismo nacional a Balcarce.",
+      "etiquetas": [
+        "Carlos Bianco",
+        "Autodromo Juan Manuel Fangio",
+        "Balcarce",
+        "Automovilismo",
+        "Obras"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Radio Gabal (FM 104.1)",
+          "enlace": "https://www.radiogabal.com.ar/index.php/comunidad/carlos-bianco-destaco-la-reinauguracion-del-fangio-y-explico-la-inversion-realizada",
+          "fecha": "2026-09-26T00:15:11.000Z",
+          "oficial": false,
+          "aporte": null
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "9oermg",
+          "titulo": "Autódromo: Bianco habló de una inversión de $3.300 millones, pero el monto de la obra fue de $1.038 millones",
+          "fecha": "2026-09-25T00:30:34.751Z",
+          "ruta": "/nota/autodromo-bianco-hablo-de-una-inversion-de-3-300-millones-pero-el-9oermg"
+        },
+        {
+          "id": "1rzhnh1",
+          "titulo": "Kicillof reinaugura el autódromo Juan Manuel Fangio en Balcarce",
+          "fecha": "2026-09-25T22:52:06.000Z",
+          "ruta": "/nota/kicillof-reinaugura-el-autodromo-juan-manuel-fangio-en-balcarce-1rzhnh1"
+        },
+        {
+          "id": "1fq9x2v",
+          "titulo": "Diego Santilli visita Balcarce por la reinauguración del autódromo",
+          "fecha": "2026-09-25T15:00:50.432Z",
+          "ruta": "/nota/diego-santilli-visita-balcarce-por-la-reinauguracion-del-autodromo-1fq9x2v"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "go2o8z": {
+      "estado": "automatica",
+      "titulo": "Kicillof recordó a Tulio Crespi en la reapertura del autódromo en Balcarce",
+      "copete": "Durante la reinauguración del Autódromo Juan Manuel Fangio, el gobernador bonaerense Axel Kicillof recordó al constructor Tulio Crespi y dedicó la jornada a su memoria.",
+      "cuerpo": "El gobernador de la provincia de Buenos Aires, Axel Kicillof, encabezó la reinauguración del Autódromo Juan Manuel Fangio en Balcarce, un hecho histórico que marca el regreso de la actividad nacional al circuito serrano tras quince años sin competencias oficiales.\n\nDurante su discurso sobre el escenario, el mandatario tuvo un momento de emoción al recordar al reconocido constructor y referente del automovilismo argentino Tulio Crespi, fallecido días atrás, a quien definió como una figura emblemática.\n\n\"Falleció alguien que es también emblemático, Tulio Crespi. Días atrás, el integrante de la Asociación Autódromo Mario Alberghini también había recordado al constructor, a quien definió como una figura paternal en el automovilismo.",
+      "guion": "Kicillof recordó a Tulio Crespi en la reapertura del autódromo en Balcarce",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-26T07:14:26.882Z",
+      "claves": [
+        "Axel Kicillof recordó a Tulio Crespi durante la reinauguración del autódromo.",
+        "El circuito de Balcarce volvió a recibir actividad nacional tras quince años.",
+        "El gobernador dedicó la jornada en memoria del reconocido constructor."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El gobernador Axel Kicillof recordó al constructor Tulio Crespi durante la reinauguración del Autódromo Juan Manuel Fangio en Balcarce, que marcó el regreso de la actividad nacional al circuito tras quince años.",
+      "etiquetas": [
+        "Axel Kicillof",
+        "Tulio Crespi",
+        "Autodromo Juan Manuel Fangio",
+        "Balcarce",
+        "Automovilismo"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Radio Gabal (FM 104.1)",
+          "enlace": "https://www.radiogabal.com.ar/index.php/comunidad/kicillof-recordo-a-tulio-crespi-durante-la-reinauguracion-del-fangio",
+          "fecha": "2026-09-26T00:09:33.000Z",
+          "oficial": false,
+          "aporte": "Informó el discurso del gobernador Axel Kicillof durante la reinauguración del autódromo y el recuerdo dedicado a Tulio Crespi."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "fcnceu",
+          "titulo": "Mario Alberghini recordó a Tulio Crespi: “Para mí fue como un padre en el automovilismo”",
+          "fecha": "2026-09-22T18:30:47.000Z",
+          "ruta": "/nota/mario-alberghini-recordo-a-tulio-crespi-para-mi-fue-como-un-padre-en-fcnceu"
+        },
+        {
+          "id": "1rzhnh1",
+          "titulo": "Kicillof reinaugura el autódromo Juan Manuel Fangio en Balcarce",
+          "fecha": "2026-09-25T22:52:06.000Z",
+          "ruta": "/nota/kicillof-reinaugura-el-autodromo-juan-manuel-fangio-en-balcarce-1rzhnh1"
+        },
+        {
+          "id": "uj4h1v",
+          "titulo": "Kicillof encabeza la reinauguración del autódromo en Balcarce",
+          "fecha": "2026-09-25T11:53:01.000Z",
+          "ruta": "/nota/kicillof-encabeza-la-reinauguracion-del-autodromo-en-balcarce-uj4h1v"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "uukabt": {
+      "estado": "automatica",
+      "titulo": "Kicillof destaca la reinauguración del autódromo Juan Manuel Fangio en Balcarce",
+      "copete": "El gobernador bonaerense encabezó la reapertura del circuito local y remarcó el impacto que la obra tendrá para el distrito en materia turística y económica.",
+      "cuerpo": "Durante su alocución, el mandatario provincial recordó sus primeras visitas al lugar y sostuvo que se cumplió un anhelo para la actividad. Asimismo, remarcó que los trabajos demandaron años para cumplir con las exigencias actuales de seguridad y señaló que en la recuperación colaboraron el municipio, la administración bonaerense, la ACTC, la Fundación Fangio y diversos sectores de la comunidad.\n\nKicillof advirtió que de no mediar una decisión política el predio habría permanecido inactivo durante largo tiempo y afirmó que la puesta en valor posicionará a la ciudad bajo el reflector nacional y provincial debido al movimiento turístico y productivo que generará.",
+      "guion": "Kicillof destaca la reinauguración del autódromo Juan Manuel Fangio en Balcarce",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-26T07:14:26.882Z",
+      "claves": [
+        "Axel Kicillof encabezó la reinauguración del autódromo Juan Manuel Fangio.",
+        "El gobernador destacó que la obra requirió años de trabajo conjunto.",
+        "Señaló que el circuito potenciará el turismo y la economía local."
+      ],
+      "seSabe": [
+        "El gobernador Axel Kicillof participó de la reinauguración del autódromo Juan Manuel Fangio.",
+        "Kicillof afirmó que la recuperación del circuito requirió años de trabajo para cumplir con exigencias de seguridad.",
+        "El mandatario provincial destacó la participación conjunta del municipio, la provincia, la ACTC, la Fundación Fangio y la comunidad.",
+        "El gobernador sostuvo que la reapertura impulsará el turismo, la producción y la economía de Balcarce."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El gobernador Axel Kicillof encabezó la reinauguración del autódromo Juan Manuel Fangio y destacó el impacto que la recuperación del histórico circuito tendrá para el turismo y la economía de Balcarce.",
+      "etiquetas": [
+        "autodromo",
+        "juan manuel fangio",
+        "axel kicillof",
+        "balcarce",
+        "automovilismo"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Radio Gabal (FM 104.1)",
+          "enlace": "https://www.radiogabal.com.ar/index.php/politica/kicillof-tras-la-reinauguracion-del-fangio-es-magico-es-hermoso-y-habia-que-volver-a-inaugurarlo",
+          "fecha": "2026-09-26T00:07:31.000Z",
+          "oficial": false,
+          "aporte": "Detalles del discurso de Axel Kicillof durante la reinauguración del autódromo Juan Manuel Fangio."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1rzhnh1",
+          "titulo": "Kicillof reinaugura el autódromo Juan Manuel Fangio en Balcarce",
+          "fecha": "2026-09-25T22:52:06.000Z",
+          "ruta": "/nota/kicillof-reinaugura-el-autodromo-juan-manuel-fangio-en-balcarce-1rzhnh1"
+        },
+        {
+          "id": "uj4h1v",
+          "titulo": "Kicillof encabeza la reinauguración del autódromo en Balcarce",
+          "fecha": "2026-09-25T11:53:01.000Z",
+          "ruta": "/nota/kicillof-encabeza-la-reinauguracion-del-autodromo-en-balcarce-uj4h1v"
+        },
+        {
+          "id": "1e6tvp9",
+          "titulo": "Kicillof encabeza la reapertura del autódromo Juan Manuel Fangio en Balcarce",
+          "fecha": "2026-09-25T10:15:00.000Z",
+          "ruta": "/nota/el-gobernador-bonaerense-encabeza-la-reapertura-del-autodromo-en-1e6tvp9"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "188nlc0": {
+      "estado": "automatica",
+      "titulo": "Kicillof entrega casi cuatrocientas escrituras en Balcarce",
+      "copete": "El gobernador bonaerense encabezó el acto en el Teatro Municipal junto al intendente local. Cientos de familias recibieron la documentación de sus viviendas en una jornada que incluyó el festejo de su cumpleaños.",
+      "cuerpo": "Durante el acto, que formó parte de la previa de la reinauguración del autódromo Juan Manuel Fangio, Kicillof señaló que algunas familias aguardaron hasta 40 años para obtener los títulos de propiedad a través del programa gratuito \"Mi Escritura, Mi Casa\". Reino remarcó que la documentación otorga tranquilidad para la proyección familiar.\n\nLa jornada continuó con actividades vinculadas al desarrollo deportivo y de infraestructura en la ciudad, en el marco de la agenda institucional que se había anunciado a mediados de mes.",
+      "guion": "Kicillof entrega casi cuatrocientas escrituras en Balcarce",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-26T07:14:26.882Z",
+      "claves": [
+        "Kicillof y Reino entregaron casi cuatrocientas escrituras gratuitas en el Teatro Municipal.",
+        "El gobernador destacó que algunas familias esperaron hasta 40 años.",
+        "La visita incluyó un festejo de cumpleaños en el escenario con un Postre Balcarce.",
+        "El acto se realizó en la previa de la reinauguración del autódromo local."
+      ],
+      "seSabe": [
+        "Se entregaron 396 escrituras a vecinos en el Teatro Municipal.",
+        "Participaron el gobernador Axel Kicillof y el intendente Esteban Reino.",
+        "Estuvieron presentes los ministros provinciales Juan Martín Mena, Nicolás Kreplak y Silvina Batakis.",
+        "El gobernador cumplió 55 años y recibió un Postre Balcarce de parte de la concejal Sol Di Gerónimo.",
+        "La entrega se enmarcó en el programa provincial \"Mi Escritura, Mi Casa\"."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El gobernador Axel Kicillof entregó este viernes casi cuatrocientas escrituras a familias de Balcarce en el Teatro Municipal, en un acto compartido con el intendente Esteban Reino que incluyó la entrega de títulos gratuitos y actividades oficiales.",
+      "etiquetas": [
+        "Axel Kicillof",
+        "Esteban Reino",
+        "escrituras",
+        "Teatro Municipal",
+        "Balcarce",
+        "autódromo"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Radio Gabal (FM 104.1)",
+          "enlace": "https://www.radiogabal.com.ar/index.php/politica/el-gobernador-kicillof-comando-la-entrega-de-mas-de-300-escrituras-en-el-teatro-municipal",
+          "fecha": "2026-09-25T19:51:45.000Z",
+          "oficial": false,
+          "aporte": "Detalló la entrega de 396 escrituras en el Teatro Municipal con la presencia de funcionarios provinciales y locales, el festejo de cumpleaños del gobernador y las declaraciones de las autoridades."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "10vh1ng",
+          "titulo": "Kicillof encabeza en Balcarce la entrega de casi cuatrocientas escrituras",
+          "fecha": "2026-09-25T19:41:47.274Z",
+          "ruta": "/nota/kicillof-encabeza-en-balcarce-la-entrega-de-casi-cuatrocientas-10vh1ng"
+        },
+        {
+          "id": "101q9i9",
+          "titulo": "Sol Di Geronimo sobre la visita de Kicillof: “Es muy importante recibir al gobernador en épocas no electorales”",
+          "fecha": "2026-09-23T11:30:08.000Z",
+          "ruta": "/nota/sol-di-geronimo-sobre-la-visita-de-kicillof-es-muy-importante-recibir-101q9i9"
+        },
+        {
+          "id": "1nuz3q",
+          "titulo": "Kicillof visitará Balcarce: inaugurará obras en el autódromo y entregará escrituras",
+          "fecha": "2026-09-16T13:12:10.873Z",
+          "ruta": "/nota/kicillof-visitara-balcarce-inaugurara-obras-en-el-autodromo-y-1nuz3q"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "6m9ixr": {
+      "estado": "automatica",
+      "titulo": "Fijan precios sugeridos para alquilar en Mar del Plata este verano",
+      "copete": "El Colegio de Martilleros de Mar del Plata estableció los valores orientativos para la temporada de verano 2026-27 con un incremento del veinticinco por ciento respecto al año anterior, una referencia de interés para los balcarceños que vacacionan en la costa.",
+      "cuerpo": "A poco más de dos meses del inicio de la temporada de verano 2026-27, el Colegio de Martilleros y Corredores Públicos de Mar del Plata dio a conocer los precios sugeridos para el alquiler de departamentos y casas.\n\nLos montos varían según la ubicación, la calidad y el estado de cada inmueble.\n\nEl presidente de la institución, Guillermo Rossi, señaló que las expectativas para el período estival son buenas, aunque advirtió que el éxito de la temporada dependerá de la prudencia de los operadores turísticos debido a la situación económica y la competencia de países vecinos. Asimismo, aconsejaron que las operaciones se pacten en pesos y remarcaron que los martilleros no son formadores de precios.",
+      "guion": "Fijan precios sugeridos para alquilar en Mar del Plata este verano",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-26T07:14:26.882Z",
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El Colegio de Martilleros de Mar del Plata estableció los precios sugeridos para los alquileres de la próxima temporada de verano con un incremento del veinticinco por ciento, una referencia clave para planificar las vacaciones de los balcarceños en la costa atlántica.",
+      "etiquetas": [
+        "Mar del Plata",
+        "verano",
+        "alquileres",
+        "Colegio de Martilleros"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infórmese Primero (FM 104.9)",
+          "enlace": "http://www.informeseprimero.com.ar/2026/09/mar-del-plata-cuanto-costara-alquilar.html",
+          "fecha": "2026-09-25T19:51:09.255Z",
+          "oficial": false,
+          "aporte": "Informó los valores orientativos de alquileres en la costa y las declaraciones del presidente del Colegio de Martilleros."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "66ksij",
+          "titulo": "Créditos hipotecarios UVA: ¿cuánto hay que ganar para comprar un departamento en septiembre de 2026?",
+          "fecha": "2026-09-23T20:00:00.000Z",
+          "ruta": "/nota/creditos-hipotecarios-uva-cuanto-hay-que-ganar-para-comprar-un-66ksij"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "10vh1ng": {
+      "estado": "automatica",
+      "titulo": "Kicillof encabeza en Balcarce la entrega de casi cuatrocientas escrituras",
+      "copete": "El gobernador bonaerense entregó títulos de propiedad en el Teatro Municipal y recorrió el Autódromo, en el marco de su visita oficial a la ciudad.",
+      "cuerpo": "El acto se desarrolló en el Teatro Municipal Luis Conti mediante el programa provincial de regularización dominial gratuita.\n\nEsta entrega otorga seguridad jurídica a los vecinos, posibilita trámites como la afectación a vivienda y el acceso a créditos, y condona deudas del impuesto inmobiliario. Durante la ceremonia, que coincidió con el cumpleaños del mandatario, se entonó el tradicional saludo y se le entregó una torta alegórica.\n\nPosteriormente, la agenda oficial se modificó por cuestiones de tiempo y se canceló la recorrida prevista por la obra de la avenida Centenario y la Ruta Provincial 55. En tanto, la comitiva se trasladó al Autódromo Municipal Juan Manuel Fangio para participar de la reapertura del histórico trazado, tal como se había anticipado a mediados de septiembre.",
+      "guion": "Kicillof encabeza en Balcarce la entrega de casi cuatrocientas escrituras",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-26T07:14:26.882Z",
+      "claves": [
+        "El gobernador bonaerense entregó casi cuatrocientas escrituras gratuitas en el Teatro Municipal.",
+        "La iniciativa forma parte del programa provincial Mi Escritura, Mi Casa para brindar seguridad jurídica.",
+        "La agenda oficial incluyó una visita institucional al Autódromo Municipal Juan Manuel Fangio.",
+        "Se suspendió la recorrida prevista por la obra de la avenida Centenario debido a cuestiones de tiempo."
+      ],
+      "seSabe": [
+        "El gobernador Axel Kicillof visitó Balcarce este viernes para entregar 397 escrituras de propiedad inmueble.",
+        "La actividad central se realizó en el Teatro Municipal Luis Conti a través del programa provincial \"Mi Escritura, Mi Casa\".",
+        "La entrega de títulos permite a los beneficiarios acceder a créditos, realizar trámites y obtener la condonación de deudas del impuesto inmobiliario.",
+        "La agenda incluyó el paso de la comitiva por el Autódromo Municipal Juan Manuel Fangio y la cancelación de la recorrida por la avenida Centenario."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El gobernador Axel Kicillof encabezó este viernes en Balcarce la entrega de casi cuatrocientas escrituras gratuitas a familias locales. La actividad se desarrolló en el Teatro Municipal y la agenda oficial incluyó el paso de la comitiva por el Autódromo Municipal.",
+      "etiquetas": [
+        "Axel Kicillof",
+        "escrituras",
+        "Teatro Municipal Luis Conti",
+        "Autódromo Juan Manuel Fangio",
+        "Balcarce"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infórmese Primero (FM 104.9)",
+          "enlace": "http://www.informeseprimero.com.ar/2026/09/kicillof-encabezo-en-balcarce-la.html",
+          "fecha": "2026-09-25T19:41:47.274Z",
+          "oficial": false,
+          "aporte": "Detalló la entrega de escrituras, la suspensión de la recorrida en la avenida Centenario y la visita al autódromo."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1nuz3q",
+          "titulo": "Kicillof visitará Balcarce: inaugurará obras en el autódromo y entregará escrituras",
+          "fecha": "2026-09-16T13:12:10.873Z",
+          "ruta": "/nota/kicillof-visitara-balcarce-inaugurara-obras-en-el-autodromo-y-1nuz3q"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "ntjgh8": {
+      "estado": "automatica",
+      "titulo": "El Concejo aprueba reducir tributos a taxis y remises en Balcarce",
+      "copete": "El Deliberante solicitó al Ejecutivo municipal que contemple una baja o eliminación de tasas para taxis y remises en el presupuesto del próximo año.",
+      "cuerpo": "El Concejo Deliberante aprobó un proyecto de Comunicación para solicitar al Departamento Ejecutivo que contemple una reducción o eliminación de tasas, derechos y cánones para taxis y remises dentro del Presupuesto y de la Ordenanza Fiscal e Impositiva correspondientes al año 2027.\n\nLa iniciativa había comenzado a tratarse en el ámbito legislativo días atrás, luego de ser presentada por un bloque político con el objetivo de equilibrar la actividad del sector frente al avance de las aplicaciones de transporte en el distrito.\n\nLa medida aprobada tiene carácter de solicitud hacia el municipio, por lo que ahora resta definir si el Ejecutivo incluirá estas modificaciones impositivas en la diagramación de los gastos y tributos proyectados para el próximo año.",
+      "guion": "El Concejo aprueba reducir tributos a taxis y remises en Balcarce",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-26T07:14:26.882Z",
+      "claves": [
+        "El Concejo aprobó un proyecto de Comunicación al Ejecutivo.",
+        "Buscan reducir o eliminar tasas para taxis y remises desde 2027.",
+        "La medida apunta a equiparar al sector frente a las aplicaciones de transporte.",
+        "El pedido deberá evaluarse para la próxima Ordenanza Fiscal e Impositiva."
+      ],
+      "seSabe": [
+        "El Concejo Deliberante aprobó un proyecto de Comunicación.",
+        "Se solicita al Ejecutivo reducir o eliminar tasas y cánones para taxis y remises.",
+        "La solicitud apunta al Presupuesto y a la Ordenanza Fiscal e Impositiva de 2027.",
+        "El proyecto se vincula con la situación del sector ante las aplicaciones de transporte, según antecedentes legislativos."
+      ],
+      "noConfirmado": [
+        "No se informó si el Departamento Ejecutivo aceptará el pedido del cuerpo deliberativo.",
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El Concejo Deliberante aprobó un pedido para que el Ejecutivo evalúe reducir o eliminar tasas a taxis y remises en el presupuesto y la ordenanza fiscal del próximo año, con el fin de equiparar al sector frente a las aplicaciones de transporte.",
+      "etiquetas": [
+        "Concejo Deliberante",
+        "taxis",
+        "remises",
+        "tasas municipales",
+        "presupuesto",
+        "Balcarce"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/solicitan-reducir-y-eliminar-tributos-para-taxis-y-remises-en-el-presupuesto-2027-918",
+          "fecha": "2026-09-25T22:43:54.000Z",
+          "oficial": false,
+          "aporte": "Informó la aprobación en el Concejo Deliberante del proyecto de Comunicación dirigido al Departamento Ejecutivo sobre los tributos a taxis y remises."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "7c7bdz",
+          "titulo": "El Concejo debate eliminar tasas a taxis y remises en Balcarce",
+          "fecha": "2026-09-23T22:58:23.988Z",
+          "ruta": "/nota/taxis-y-remises-debatiran-la-eliminacion-de-tasas-mientras-el-sector-7c7bdz"
+        },
+        {
+          "id": "1q0vr9a",
+          "titulo": "La Libertad Avanza propone eliminar tasas municipales para taxis y remises desde 2027",
+          "fecha": "2026-09-17T18:02:03.000Z",
+          "ruta": "/nota/la-libertad-avanza-propone-eliminar-tasas-municipales-para-taxis-y-1q0vr9a"
+        },
+        {
+          "id": "2olgpl",
+          "titulo": "El Concejo aprueba pedir la baja de tasas a taxis y remises en Balcarce",
+          "fecha": "2026-09-25T16:08:22.000Z",
+          "ruta": "/nota/el-concejo-aprueba-pedir-la-baja-de-tasas-a-taxis-y-remises-en-2olgpl"
         }
       ],
       "verificacion": {
