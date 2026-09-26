@@ -1,5 +1,5 @@
 {
-  "exportado": "2026-09-26T08:13:17.483Z",
+  "exportado": "2026-09-26T08:23:16.495Z",
   "decisiones": {
     "1951120": {
       "estado": "automatica",
@@ -23872,6 +23872,52 @@
           "titulo": "Estados Unidos y China abrirán un canal de comunicación para incidentes",
           "fecha": "2026-09-26T05:00:18.000Z",
           "ruta": "/nota/estados-unidos-y-china-abriran-un-canal-de-comunicacion-para-oz017v"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "11vmu4p": {
+      "estado": "automatica",
+      "titulo": "Conmemoran los noventa años del Nobel a Saavedra Lamas",
+      "copete": "Se cumplen noventa años de la entrega del premio a Carlos Saavedra Lamas por su rol en la Guerra del Chaco. La figura del médico argentino Esteban Maradona también marcó el conflicto bélico.",
+      "cuerpo": "Se cumplen noventa años desde que Carlos Saavedra Lamas recibió el Premio Nobel de la Paz por su intervención para finalizar la Guerra del Chaco, desarrollada entre 1932 y 1935 por una disputa limítrofe entre Bolivia y Paraguay. El enfrentamiento por el Chaco Boreal estuvo marcado por la escasez de recursos, la hostilidad del entorno y la participación del médico rural argentino Esteban Laureano Maradona, quien asistió a heridos de ambos bandos.\n\nDurante la contienda bélica, Maradona prestó servicios sanitarios en la zona de combate, donde debió afrontar la pérdida de su pareja a causa de la fiebre tifoidea antes de retornar a la Argentina al término de los enfrentamientos. El conflicto armado dejó un saldo superior a los cien mil fallecidos y profundizó la situación económica de ambas naciones sudamericanas.",
+      "guion": "Conmemoran los noventa años del Nobel a Saavedra Lamas",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-26T08:23:16.425Z",
+      "claves": [
+        "Se cumplen noventa años del Nobel a Carlos Saavedra Lamas.",
+        "El reconocimiento destaca su mediación en la Guerra del Chaco.",
+        "El médico argentino Esteban Maradona asistió a heridos de ambos bandos.",
+        "El conflicto bélico dejó más de cien mil muertos entre Bolivia y Paraguay."
+      ],
+      "seSabe": [
+        "Se cumple el noventa aniversario del Premio Nobel de la Paz otorgado a Carlos Saavedra Lamas.",
+        "La Guerra del Chaco se libró entre Bolivia y Paraguay entre 1932 y 1935 por el Chaco Boreal.",
+        "El médico argentino Esteban Maradona atendió a heridos de ambos bandos durante el conflicto."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Se cumplen noventa años del Premio Nobel de la Paz a Carlos Saavedra Lamas por su rol en el fin de la Guerra del Chaco, un conflicto que también contó con la labor humanitaria del médico argentino Esteban Maradona.",
+      "etiquetas": [
+        "Premio Nobel",
+        "Carlos Saavedra Lamas",
+        "Esteban Maradona",
+        "Guerra del Chaco",
+        "Historia"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/economia/campo/dos-argentinos-ilustres-en-una-guerra-fratricida-en-una-zona-de-fuerte-raigambre-rural-nid26092026/",
+          "fecha": "2026-09-26T08:15:00.000Z",
+          "oficial": false,
+          "aporte": "Detalla el aniversario del Nobel de Carlos Saavedra Lamas y la participación del médico Esteban Maradona."
         }
       ],
       "verificacion": {
