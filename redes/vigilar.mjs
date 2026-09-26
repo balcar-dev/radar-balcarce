@@ -41,6 +41,7 @@ import path from 'node:path';
 import { cronogramaDelDia, ventanaDe, claveDePieza } from './piezas.mjs';
 import { yaPublicada, estaActivo } from './elegir.mjs';
 import { horaAR, diaAR, minutoDelDiaAR } from '../ingesta/zona.mjs';
+import { leerJson as leer } from '../ingesta/json.mjs';
 import { enviarWhatsApp, sinSecretos } from './whatsapp.mjs';
 import { auditoriaVencida } from './auditar.mjs';
 import { contratoDelDia, CONTRATO_DESDE } from './contrato.mjs';
@@ -500,7 +501,6 @@ async function main() {
   const RAIZ = path.join(import.meta.dirname, '..');
   const ESTADO = path.join(RAIZ, 'web', 'data', 'vigilancia.json');
   const ESTADISTICAS = path.join(RAIZ, 'web', 'data', 'estadisticas.json');
-  const leer = (f, defecto) => { try { return JSON.parse(fs.readFileSync(f, 'utf8')); } catch { return defecto; } };
   const sinAvisar = process.argv.includes('--sin-avisar');
   // Manda UN WhatsApp con el resumen del día tal como saldría a las 21 (con
   // las estadísticas medidas en el momento), para ver cómo llega. No guarda

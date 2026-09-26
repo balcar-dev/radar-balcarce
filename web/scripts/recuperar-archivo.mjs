@@ -22,6 +22,7 @@
 
 import fs from 'node:fs';
 import path from 'node:path';
+import { leerJson } from '../../ingesta/json.mjs';
 import { execFileSync } from 'node:child_process';
 import {
   slugsConocidos, fijarSlug, actualizarArchivo, idsEnRedes, sinPuntaje, comoArchivoJson,
@@ -31,10 +32,6 @@ const AQUI = import.meta.dirname;
 const RAIZ_REPO = path.join(AQUI, '..', '..');
 const DATOS = path.join(AQUI, '..', 'data');
 const PORTADA_EN_GIT = 'web/data/portada.json';
-
-function leerJson(archivo, porDefecto) {
-  try { return JSON.parse(fs.readFileSync(archivo, 'utf8')); } catch { return porDefecto; }
-}
 
 const git = (...args) => execFileSync('git', args, { cwd: RAIZ_REPO, encoding: 'utf8', maxBuffer: 64 * 1024 * 1024 });
 

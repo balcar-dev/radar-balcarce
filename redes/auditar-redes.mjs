@@ -32,8 +32,8 @@
 //
 // Sin dependencias: sólo lo que trae Node.
 
-import fs from 'node:fs';
 import path from 'node:path';
+import { leerJson } from '../ingesta/json.mjs';
 import { CONTRATO_DIARIO } from '../ingesta/criterio.mjs';
 import { diaAR, horaCortaAR as hhmm } from '../ingesta/zona.mjs';
 import { crearCliente, sinToken } from './meta.mjs';
@@ -441,7 +441,7 @@ export async function consultarMeta({ token = process.env.META_TOKEN, paginaId =
 
 async function main() {
   const RAIZ = path.join(import.meta.dirname, '..');
-  const leer = (f, defecto) => { try { return JSON.parse(fs.readFileSync(path.join(RAIZ, f), 'utf8')); } catch { return defecto; } };
+  const leer = (f, defecto) => leerJson(path.join(RAIZ, f), defecto);
   const arg = (n) => process.argv.find((a) => a.startsWith(`--${n}=`))?.slice(n.length + 3);
   const libro = leer('web/data/redes.json', {});
   const portada = leer('web/data/portada.json', null);

@@ -13,14 +13,11 @@
 
 import fs from 'node:fs';
 import path from 'node:path';
+import { leerJson } from '../../ingesta/json.mjs';
 import { rutaDeNota } from '../lib/ruta.js';
 
 const AQUI = import.meta.dirname;
 const RAIZ = path.join(AQUI, '..');
-
-function leerJson(archivo, porDefecto) {
-  try { return JSON.parse(fs.readFileSync(archivo, 'utf8')); } catch { return porDefecto; }
-}
 
 // Cloudflare Pages acepta hasta 2.000 redirecciones fijas: las que pasan de
 // ahí las ignora. Con el archivo de notas (lib/archivo.js) puede haber más

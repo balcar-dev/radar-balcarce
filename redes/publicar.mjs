@@ -14,6 +14,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { crearCliente, ErrorMeta, sinToken } from './meta.mjs';
+import { leerJson as leer } from '../ingesta/json.mjs';
 import { publicarPiezas, completarEnlaces } from './publicar-piezas.mjs';
 import { espejosPendientes } from './espejo.mjs';
 import {
@@ -30,10 +31,6 @@ const SITIO = process.env.SITIO ?? 'https://radarbalcarce.com';
 // Páginas → "Identificador".
 const PAGINA = process.env.META_PAGE_ID ?? '1254237411116171';
 const ACTIVO = estaActivo(process.env.REDES_ACTIVAS);
-
-function leer(archivo, porDefecto) {
-  try { return JSON.parse(fs.readFileSync(archivo, 'utf8')); } catch { return porDefecto; }
-}
 
 function cliente() {
   const token = process.env.META_TOKEN;

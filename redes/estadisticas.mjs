@@ -28,11 +28,11 @@
 //
 // Sin dependencias: sólo fetch, con tiempo máximo.
 
-import fs from 'node:fs';
 import path from 'node:path';
 import { crearCliente } from './meta.mjs';
 import { sinSecretos } from './whatsapp.mjs';
 import { diaAR, horaAR } from '../ingesta/zona.mjs';
+import { leerJson as leer } from '../ingesta/json.mjs';
 import { idDeRuta } from '../web/lib/ruta.js';
 
 export const SITIO = 'radarbalcarce.com';
@@ -349,7 +349,6 @@ export function nombresDeCaminos(notas = []) {
 
 async function main() {
   const RAIZ = path.join(import.meta.dirname, '..');
-  const leer = (f, d) => { try { return JSON.parse(fs.readFileSync(f, 'utf8')); } catch { return d; } };
   const ahora = new Date();
   const { token, nombre } = tokenDeCloudflare(process.env);
   console.log('Estadísticas, prueba (no guarda nada ni manda WhatsApp)');

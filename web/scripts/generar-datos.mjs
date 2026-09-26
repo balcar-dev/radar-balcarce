@@ -15,6 +15,7 @@
 
 import fs from 'node:fs';
 import path from 'node:path';
+import { leerJson } from '../../ingesta/json.mjs';
 import { NUMEROS, tocaHoy, diaDeEstaSemana, diaDeTurno, comoISO, decisionHumana } from '../../ingesta/utiles.mjs';
 import { avisosDelClima } from '../../ingesta/alertas.mjs';
 import {
@@ -55,10 +56,6 @@ const INTENTOS_IA = path.join(AQUI, '..', 'data', 'intentos-ia.json');
 // nota propia del dólar y su comparación con días anteriores
 // (lib/notas-propias.js). Va versionado, como intentos-ia.json.
 const HISTORIA_DOLAR = path.join(AQUI, '..', 'data', 'dolar-historia.json');
-
-function leerJson(archivo, porDefecto = null) {
-  try { return JSON.parse(fs.readFileSync(archivo, 'utf8')); } catch { return porDefecto; }
-}
 
 // Este script corre en dos lugares distintos:
 //

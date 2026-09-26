@@ -6,6 +6,7 @@
 import http from 'node:http';
 import fs from 'node:fs';
 import path from 'node:path';
+import { leerJson } from '../ingesta/json.mjs';
 import { ingestar, traer, parsearFeed, TODAS_LAS_FUENTES } from '../ingesta/ingesta.mjs';
 import {
   agendaCompleta, CATEGORIAS as CATEGORIAS_AGENDA, CALENDARIO_ANUAL,
@@ -73,10 +74,6 @@ function mecanico(nota) {
 fs.mkdirSync(DATOS, { recursive: true });
 
 // --------------------------------------------------------------- estado
-
-function leerJson(archivo, porDefecto) {
-  try { return JSON.parse(fs.readFileSync(archivo, 'utf8')); } catch { return porDefecto; }
-}
 
 // Lo que el panel decide se sube solo a GitHub unos segundos después del
 // último cambio (panel/sincronizar.mjs). Se apaga con SINCRONIZAR_GITHUB=no.
