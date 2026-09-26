@@ -1,5 +1,5 @@
 {
-  "exportado": "2026-09-26T09:03:02.665Z",
+  "exportado": "2026-09-26T09:13:16.199Z",
   "decisiones": {
     "1951120": {
       "estado": "automatica",
@@ -24794,6 +24794,264 @@
           "fecha": "2026-09-26T08:46:49.000Z",
           "oficial": false,
           "aporte": "Aportó información sobre la convocatoria de Sociedad Civil Española y los motivos vinculados a Ceuta y al gobierno nacional."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "1m6wkoe": {
+      "estado": "automatica",
+      "titulo": "Franco Colapinto larga noveno en el Gran Premio de Azerbaiyán",
+      "copete": "El piloto argentino comenzará desde la novena posición este sábado en el circuito callejero de Bakú. La competencia se adelantó al sábado por un feriado nacional en Azerbaiyán y se transmite por televisión y streaming.",
+      "cuerpo": "Este sábado a las ocho de la Argentina se disputa la décima sexta fecha del Campeonato Mundial de Fórmula 1 en el circuito callejero de Bakú, en Azerbaiyán. La «pole position» quedó en manos de George Russell (Mercedes), quien saldrá desde el primer lugar tras un error de Andrea Kimi Antonelli en la clasificación.\n\nLa competencia se programó para este sábado y no el domingo, como es habitual, debido a la conmemoración del día de los caídos en la guerra de Nagorno-Karabaj en el país anfitrión, tal como se había informado en la previa de la competencia.\n\nPara los seguidores del automovilismo en Balcarce, las instancias de la decimosexta fecha del torneo internacional se pueden seguir por televisión a través de la señal de Fox Sports y mediante las plataformas de streaming Disney+ Premium y F1 TV Pro.",
+      "guion": "Franco Colapinto larga noveno en el Gran Premio de Azerbaiyán",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-26T09:13:16.094Z",
+      "claves": [
+        "El Gran Premio de Azerbaiyán se disputa este sábado a las ocho de la Argentina.",
+        "El piloto argentino Franco Colapinto largará noveno tras una penalización a Sainz.",
+        "George Russell logró la \"pole position\" y partirá desde el primer lugar en Bakú.",
+        "La carrera se adelantó al sábado por un feriado nacional en el país organizador."
+      ],
+      "seSabe": [
+        "La carrera se corre este sábado en el circuito callejero de Bakú.",
+        "El piloto argentino Franco Colapinto saldrá desde la novena posición.",
+        "George Russell logró la \"pole position\" y largará primero.",
+        "La transmisión en Argentina se realiza a través de Fox Sports, Disney+ Premium y F1 TV Pro.",
+        "El cambio de día al sábado responde a un feriado nacional en Azerbaiyán."
+      ],
+      "etiquetas": [
+        "Franco Colapinto",
+        "Formula 1",
+        "Gran Premio de Azerbaiyán",
+        "Automovilismo",
+        "Bakú"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/deportes/automovilismo/por-donde-pasan-la-carrera-de-la-formula-1-y-que-canal-la-transmite-en-vivo-nid26092026/",
+          "fecha": "2026-09-26T09:00:00.000Z",
+          "oficial": false,
+          "aporte": "Aportó los horarios, el canal de transmisión, la ubicación del circuito y los detalles sobre los ganadores del año."
+        },
+        {
+          "medio": "Clarín",
+          "enlace": "https://www.clarin.com/deportes/f1-gp-azerbaiyan-franco-colapinto-vivo-horario-ver-carrera-formula-1_0_pgwQ5yEYAA.html",
+          "fecha": "2026-09-26T08:00:11.000Z",
+          "oficial": false,
+          "aporte": "Aportó la posición de largada de Franco Colapinto, la penalización a Sainz y la pole position de George Russell."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1ngsovr",
+          "titulo": "F1 GP de Azerbaiyán: horarios de la carrera, cómo y dónde ver la Fórmula 1",
+          "fecha": "2026-09-19T16:09:55.000Z",
+          "ruta": "/nota/f1-gp-de-azerbaiyan-horarios-de-la-carrera-como-y-donde-ver-la-1ngsovr"
+        },
+        {
+          "id": "1b9ah19",
+          "titulo": "El código secreto que definió la carrera de Fórmula 1 en Madrid",
+          "fecha": "2026-09-18T13:38:39.000Z",
+          "ruta": "/nota/el-codigo-secreto-que-definio-la-carrera-de-formula-1-en-madrid-1b9ah19"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      }
+    },
+    "mfyplb": {
+      "estado": "automatica",
+      "titulo": "Expertos debaten sobre el impacto de la inteligencia artificial",
+      "copete": "Diversas figuras del sector tecnológico y referentes globales advierten sobre los riesgos asociados al desarrollo de la inteligencia artificial y su posible impacto en el futuro de la humanidad.",
+      "cuerpo": "Especialistas y directivos de compañías tecnológicas manifestaron su preocupación respecto al avance de la inteligencia artificial y señalaron que existen riesgos vinculados a su autonomía y capacidad de daño, según publicaciones recientes en redes sociales y declaraciones reproducidas en medios nacionales. El debate incluye pronósticos sobre el desarrollo de sistemas avanzados y llamados a regular el sector.\n\nLa discusión actual sobre la inteligencia artificial combina elementos de ciencia ficción, intereses económicos y estrategias de comunicación en plataformas digitales, mientras diversos actores globales continúan evaluando las consecuencias de estas tecnologías.",
+      "guion": "Expertos debaten sobre el impacto de la inteligencia artificial",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-26T09:13:16.094Z",
+      "claves": [
+        "Declaraciones de referentes tecnológicos sobre los riesgos de la inteligencia artificial.",
+        "Debate en torno a la regulación y el desarrollo de sistemas autónomos.",
+        "Antecedentes históricos de relatos sobre el fin de la humanidad en la literatura y la cultura.",
+        "Influencia de las narrativas digitales y los mensajes breves en la difusión del tema."
+      ],
+      "seSabe": [
+        "Según una publicación en la red social X de Jacob Coxon, exinvestigador de Anthropic, la inteligencia artificial podría representar riesgos significativos antes de que termine la década.",
+        "Evan Hubingher estimó que la posibilidad de un impacto grave supera el diez por ciento en la próxima década.",
+        "Diversos directivos de empresas tecnológicas han emitido declaraciones sobre el desarrollo del sector y la necesidad de regulaciones."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Especialistas y referentes del sector tecnológico discuten sobre los riesgos y el futuro del desarrollo de la inteligencia artificial en el contexto actual.",
+      "etiquetas": [
+        "inteligencia artificial",
+        "tecnología"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/economia/negocios/el-fin-del-mundo-en-la-era-del-microdrama-nid26092026/",
+          "fecha": "2026-09-26T09:10:00.000Z",
+          "oficial": false,
+          "aporte": "Aportó declaraciones de referentes tecnológicos sobre los riesgos de la inteligencia artificial y un recorrido histórico sobre los relatos apocalípticos."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "11ulzsi": {
+      "estado": "automatica",
+      "titulo": "Empresarios del agro analizan la eficiencia del sector",
+      "copete": "Referentes del sector agroindustrial debatieron sobre los desafíos de la rentabilidad y la competitividad en un encuentro nacional.",
+      "cuerpo": "Durante el cierre del Foro Nacional de Agronegocios realizado en Puerto Madero, tres referentes del sector analizaron la situación productiva y económica actual. El evento contó con la participación de Alejandro Elsztain, de Cresud; Ignacio Bartolomé, de GDM; y e Ignacio Lartirigoyen, de Lartirigoyen.\n\nEl panel abordó las dificultades que afronta la actividad debido a las presiones impositivas y los riesgos climáticos. Según se detalló, la última campaña dejó más de cuarenta mil millones de dólares en divisas y la temporada actual proyecta buenas expectativas, aunque persisten los desafíos vinculados a los costos crecientes.\n\nLos empresarios destacaron que la escasez impulsó al productor local a desarrollar una alta eficiencia hacia adentro de los establecimientos. Asimismo, señalaron que la falta de herramientas comparables con las del mercado global y la necesidad de actualizar la legislación sobre semillas condicionan la competitividad frente a otros países de la región.",
+      "guion": "Empresarios del agro analizan la eficiencia del sector",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-26T09:13:16.094Z",
+      "claves": [
+        "Tres referentes del agro participaron del cierre del Foro Nacional de Agronegocios.",
+        "Se analizó la eficiencia productiva frente a la presión impositiva y climática.",
+        "Cuestionaron la obsolescencia de la legislación sobre semillas en comparación con la región."
+      ],
+      "seSabe": [
+        "El Foro Nacional de Agronegocios se realizó en Puerto Madero con la presencia de referentes del sector.",
+        "La última campaña agrícola aportó más de cuarenta mil millones de dólares en divisas, según se informó en el panel.",
+        "Los empresarios señalaron que la brecha cambiaria y las retenciones fueron los principales problemas de los últimos años."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Referentes del sector agroindustrial debatieron sobre la eficiencia productiva, los desafíos económicos y la necesidad de actualizar herramientas tecnológicas en un encuentro nacional.",
+      "etiquetas": [
+        "agro",
+        "eficiencia",
+        "agronegocios",
+        "producción",
+        "tecnología"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infocampo",
+          "enlace": "https://www.infocampo.com.ar/el-productor-se-ha-defendido-tanto-que-hoy-tiene-una-posicion-privilegiada-para-competir-con-eficiencia/",
+          "fecha": "2026-09-26T09:11:02.000Z",
+          "oficial": false,
+          "aporte": "Detalló las declaraciones de los empresarios del agro sobre rentabilidad, eficiencia y tecnología durante el Foro Nacional de Agronegocios."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "bqz3a6": {
+      "estado": "automatica",
+      "titulo": "Productores del sudeste alertan por diferencias en el agro en Balcarce",
+      "copete": "El sector rural advierte sobre la brecha entre quienes producen para el mercado externo y el interno. Un referente local señaló dificultades por la infraestructura y el financiamiento.",
+      "cuerpo": "Los cambios en la economía generan una brecha en la actividad agropecuaria entre la producción orientada al mercado externo y la destinada al mercado interno, según advirtieron entidades del sector. El informe de Coninagro refleja que diversas economías regionales atraviesan crisis o alertas por la caída de ventas y el incremento de costos.\n\nEn el marco del aniversario de la entidad, el productor de papa del sudeste bonaerense Mario Raitieri advirtió que los beneficios macroeconómicos todavía no llegan a la microeconomía y señaló problemas con la infraestructura, el tipo de cambio y el financiamiento. A su vez, referentes de otras actividades expusieron situaciones similares en vitivinicultura, cítricos y yerba mate.\n\nFrente a este escenario de descapitalización y riesgo para los productores, desde la conducción de la entidad remarcaron que el modelo cooperativo permite amortiguar las crisis y sostener el arraigo y el trabajo en las diferentes regiones.",
+      "guion": "Productores del sudeste alertan por diferencias en el agro en Balcarce",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-26T09:13:16.094Z",
+      "claves": [
+        "Advierten sobre diferencias entre mercado interno y externo en el agro.",
+        "Un productor de papa local señaló problemas de infraestructura y financiamiento.",
+        "Coninagro alertó sobre economías regionales en crisis o con señales de alarma.",
+        "Destacan el rol del cooperativismo para amortiguar las dificultades del sector."
+      ],
+      "seSabe": [
+        "Según Coninagro, existen economías regionales con déficit, alertas y crisis.",
+        "Mario Raitieri advirtió sobre la falta de llegada de beneficios macroeconómicos a la microeconomía en el sudeste bonaerense.",
+        "Marcelo Federici detalló la caída de ventas en vitivinicultura por la reducción del poder de compra.",
+        "Nicolás Carlino expuso la caída interanual en el consumo interno y exportación de cítricos dulces."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Productores locales advierten sobre la brecha entre el mercado interno y externo en el agro. Un referente de la región señaló dificultades de infraestructura y financiamiento.",
+      "etiquetas": [
+        "Agro",
+        "Balcarce",
+        "Coninagro",
+        "Economías regionales",
+        "Producción"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/economia/campo/el-riesgo-de-plantear-un-agro-de-dos-velocidades-diferentes-nid26092026/",
+          "fecha": "2026-09-26T09:00:01.000Z",
+          "oficial": false,
+          "aporte": "Aportó el análisis sobre la brecha en el agro, el informe de Coninagro y las declaraciones de los dirigentes sectoriales."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "18u9gg8": {
+      "estado": "automatica",
+      "titulo": "Destacan el valor de las exportaciones de carne vacuna",
+      "copete": "El sector ganadero registra un incremento en las inversiones destinadas a infraestructura, pasturas y genética. Desde la actividad señalan que los embarques superan en valor por tonelada a otros rubros industriales.",
+      "cuerpo": "Los indicadores del sector ganadero argentino muestran señales positivas impulsadas por la renovación de alambrados, la incorporación de tecnología y el desarrollo de pasturas. Durante la Exposición Angus de Primavera realizada en Cañuelas, el presidente de la Asociación Argentina de Angus, Amadeo Derito, señaló que el productor vuelve a invertir cuando dispone de recursos y destacó el potencial exportador de la actividad. En la misma línea, el consignatario Hernán Sánchez afirmó que los remates reflejan una mayor demanda de reproductores y mejoras en los campos.",
+      "guion": "Destacan el valor de las exportaciones de carne vacuna",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-26T09:13:16.094Z",
+      "claves": [
+        "Crecen las inversiones en infraestructura y genética en la ganadería.",
+        "Destacan el valor por tonelada de las exportaciones cárnicas.",
+        "Aumenta la demanda de reproductores en los remates de hacienda."
+      ],
+      "seSabe": [
+        "Se registra un incremento en las inversiones de los productores ganaderos en infraestructura, pasturas y tecnología.",
+        "Amadeo Derito preside la Asociación Argentina de Angus.",
+        "Hernán Sánchez se desempeña como consignatario de hacienda en Tapalqué.",
+        "La Exposición Angus de Primavera se llevó a cabo en el predio de la raza en Cañuelas."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El sector ganadero registra un incremento en las inversiones en infraestructura y genética. Desde la actividad destacan el nivel de valor agregado y el potencial exportador de la carne vacuna frente a otros rubros.",
+      "etiquetas": [
+        "ganadería",
+        "carne vacuna",
+        "economía"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Clarín",
+          "enlace": "https://www.clarin.com/rural/motor-economia-actividad-exporta-valor-tonelada-industria-automotriz_0_T50y3dlfit.html",
+          "fecha": "2026-09-26T08:40:25.000Z",
+          "oficial": false,
+          "aporte": "Aportó declaraciones de referentes del sector ganadero sobre la recuperación de inversiones, el mercado de reproductores y la comparación del valor de exportación de la carne."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "x1k8x1",
+          "titulo": "El valor de la carne vacuna supera al de la exportación automotriz",
+          "fecha": "2026-09-26T08:24:12.000Z",
+          "ruta": "/nota/el-valor-de-la-carne-vacuna-supera-al-de-la-exportacion-automotriz-x1k8x1"
+        },
+        {
+          "id": "1m0buzu",
+          "titulo": "De potencia petrolera a fabricante de autos eléctricos: cuál es el país que se lanza a competir en la industria automotriz",
+          "fecha": "2026-09-23T04:29:03.000Z",
+          "ruta": "/nota/de-potencia-petrolera-a-fabricante-de-autos-electricos-cual-es-el-1m0buzu"
         }
       ],
       "verificacion": {
