@@ -1,330 +1,212 @@
 # Pendientes: todo en un solo lugar
 
-Los otros documentos explican **cómo** funciona cada cosa; éste dice **qué
-falta**. Lo que se exige siempre está en `REGLAS.md`. El estado de la
-auditoría del 25/09, ítem por ítem, está en `docs/historico/AUDITORIA.md`.
+*Actualizado el 26/09/2026.* Los otros documentos explican **cómo** funciona
+cada cosa; éste dice **qué falta**. Lo que se exige siempre está en `REGLAS.md`.
+Lo que ya se hizo está al final ("Ya resuelto"). Cada cosa figura una sola vez.
 
-*Última revisión: 25/09/2026.* Lo que ya se hizo está al final ("Ya resuelto").
-Cada cosa figura una sola vez: si está en "Para mañana", no se repite abajo.
+Cada pendiente dice **quién** lo hace (Hernán, Andrés, "los dos" o Claude) y
+**qué tan urgente** es (alta, media o baja). Lo que sólo puede hacer una persona
+(abrir cuentas, cargar claves, decidir criterio) nunca lo hace Claude.
 
-## LO PRIMERO DEL 26/09: comprobar que Facebook ya se ve
+## Lo primero del 26/09: comprobar que Facebook ya se ve
 
-La app de Meta "Radar Balcarce Publicador" estaba en **modo desarrollo**: sus
-posteos y reels sólo los veían quienes tienen un rol en la app (las historias
-sí). El 26/09 a la noche se **publicó** (modo activo). Hay que comprobar,
-con una persona que **no sea administradora** de la página, que ahora ve los
-posteos y los reels nuevos (el primer posteo sale desde las 8:10). Si los de
-antes siguen ocultos, hay que volver a publicar lo importante. `redes/ver-facebook.mjs`
-(workflow "Ver Facebook") muestra lo que Meta tiene publicado.
+**Los dos · alta.** La app de Meta "Radar Balcarce Publicador" estaba en **modo
+desarrollo**: sus posteos y reels sólo los veían quienes tienen un rol en la
+app (las historias sí). El 26/09 se **publicó** (modo activo). Hay que
+comprobar, con una persona que **no sea administradora** de la página, que ahora
+ve los posteos y los reels nuevos (el primer posteo sale desde las 8:10). Si los
+de antes siguen ocultos, hay que volver a publicar lo importante. El workflow
+**Ver Facebook** (`redes/ver-facebook.mjs`) muestra lo que Meta tiene publicado.
 
-## PARA MAÑANA (26/09), en este orden
+## Para Hernán y Andrés (a mano)
 
-1. **Reiniciar el panel** (cerrar su ventana y doble clic en `ARRANCAR.bat`).
-   Sin eso sigue con el código viejo: publica en Vercel, respalda las claves y
-   no tiene los arreglos de seguridad del 25/09.
-2. **Borrar las claves en texto plano.** `panel/datos/CLAVES-INICIALES.txt`
-   (una vez que las contraseñas nuevas estén guardadas en otro lado) y, en las
-   copias viejas de `respaldos/`, los `CLAVES-INICIALES.txt` y `secreto.txt`
-   que quedaron de antes del 25/09. Las copias nuevas ya no los llevan.
-3. **Decidir si Política y Policiales esperan a una persona también en la
-   web** (Hernán y Andrés). Hoy, en la web, salen solas si el semáforo da
-   verde; en las redes siempre esperan a una persona. Si se decide que
-   esperen, es sacarlas de `verdeSecciones` en `ingesta/fuentes.mjs`.
-4. **Confirmar el texto de "Quiénes somos"** (`/quienes-somos`): dice "Lo
-   hacen Hernán y Andrés, dos vecinos de Balcarce". Si no los representa, se
-   cambia en `web/app/quienes-somos/page.js`.
-5. **Cuerpos de las notas:** el 25/09 a la mañana tenía cuerpo el 19 %; a la
-   madrugada, con la portada de 72 h y la IA primero en lo local, 62 de 104
-   (60 %). El vigilante pide 35 %. Es lo que más pesa para Google y para AdSense. Mirar si sube con la
-   IA reescribiendo primero lo local (log de "Actualizar la web": clave de
-   Gemini, cuota y por qué rechaza el verificador, que ahora lo dice).
-6. **Google AdSense** (lo pidieron Hernán y Andrés). Lo que falta:
-   - una persona abre la cuenta (pide datos fiscales) y pide la revisión;
-   - `ads.txt` con el ID de editor que da AdSense (sin el ID no se puede
-     armar);
-   - más notas con cuerpo (el punto 5): AdSense rechaza sitios con poco
-     contenido propio.
-   "Quiénes somos", "Contacto" y la política de privacidad ya están. La
-   aprobación tarda de días a semanas. Detalle en `PUBLICIDAD.md`.
-7. **Permisos para las estadísticas** (las pide el resumen de WhatsApp; los
-   seguidores ya llegan):
-   - Cloudflare: crear un token con *Account · Account Analytics · Read* y
-     guardarlo como secreto `CLOUDFLARE_ANALYTICS_TOKEN` (pasos en
-     `INFRAESTRUCTURA.md`).
-   - Meta: regenerar el token del usuario del sistema `publicador-radar` con
-     todos los permisos de ahora **más** `read_insights` e
-     `instagram_manage_insights`, y reemplazar `META_TOKEN`.
-   - Probar con Actions → "Prueba de estadísticas".
-8. **Comercial:** campo "tipo de actividad" y micro-SAS/SAS en el catálogo.
+Ordenadas por urgencia. Ninguna la puede hacer Claude: piden una cuenta, una
+clave o una decisión.
 
-## A. Redes y automatización
+| # | Qué | Quién | Urgencia |
+|---|---|---|---|
+| 1 | **Reiniciar el panel** (cerrar su ventana y doble clic en `ARRANCAR.bat`). Node carga el código al arrancar: sin reiniciar, el panel sigue con el código viejo (sin los arreglos de seguridad del 25/09 y sin lo que se cambió desde entonces) | Hernán | Alta |
+| 2 | **Tope de presupuesto en Google Cloud** para la clave paga de Gemini (voces y reels). Sin tope, un error puede gastar de más. La clave de redacción es gratis | Los dos | Alta |
+| 3 | **Borrar las claves en texto plano**: `panel/datos/CLAVES-INICIALES.txt` (cuando las contraseñas nuevas estén guardadas en otro lado) y, en las copias viejas de `respaldos/`, los `CLAVES-INICIALES.txt` y `secreto.txt` de antes del 25/09. **No** borrar `panel/datos/secreto.txt`: es la firma de las sesiones del panel. Las copias nuevas ya no los llevan | Hernán | Alta |
+| 4 | **Decidir si Política y Policiales esperan a una persona también en la web.** Hoy, en la web, salen solas si el semáforo da verde; en las redes siempre esperan. Si se decide que esperen, es sacarlas de `verdeSecciones` en `ingesta/fuentes.mjs` | Los dos | Media |
+| 5 | **Subir la portada nueva de Facebook**: `node reels/portada.mjs` genera `reels/salida/portada-facebook.png` (16:9, 1640 × 924; la anterior se veía cortada en el celular). Se sube sólo desde la app o el navegador (Meta no deja por API con el token actual). Después mirar cómo queda en el celular y en la compu | Los dos | Media |
+| 6 | **Pegar las biografías** de Instagram y Facebook (textos en `PERFILES.md`), la categoría, el botón de contacto y las historias destacadas; hacer el avatar. Instagram sólo se edita desde el celular; Facebook, desde Meta Business Suite | Los dos | Media |
+| 7 | **Permisos de estadísticas** (los pide el resumen de WhatsApp; los seguidores ya llegan). Cloudflare: token con *Account · Account Analytics · Read* guardado como secreto `CLOUDFLARE_ANALYTICS_TOKEN`. Meta: regenerar el token de `publicador-radar` con los permisos de ahora **más** `read_insights` e `instagram_manage_insights` y reemplazar `META_TOKEN`. Probar con Actions → "Prueba de estadísticas" | Los dos | Media |
+| 8 | **Borrar el proyecto de Vercel** y limpiar el DNS que quedó (también el sitio duplicado de la cuenta vieja, `radar-balcarce.vercel.app`). Vercel está apagado desde el 25/09 | Los dos | Media |
+| 9 | **Google AdSense**: una persona abre la cuenta (pide datos fiscales) y pide la revisión; después, `ads.txt` con el ID de editor que da AdSense (sin el ID no se puede armar). La aprobación tarda de días a semanas. Detalle en `PUBLICIDAD.md` | Los dos | Media |
+| 10 | **Apuntar `RESPALDO_CARPETA`** a una carpeta de Drive u OneDrive, para que el respaldo del panel quede afuera de la PC. Si se rompe el disco hoy, se pierde el historial editorial | Hernán | Media |
+| 11 | **Confirmar el texto de "Quiénes somos"** (`/quienes-somos`): dice "Lo hacen Hernán y Andrés, dos vecinos de Balcarce". Si no los representa, se cambia en `web/app/quienes-somos/page.js` | Los dos | Baja |
+| 12 | **Borrar el repaso duplicado de las 10:08 del 25/09** (Facebook e Instagram). **Preguntar antes**: es borrar algo publicado y no se puede deshacer | Los dos | Baja |
+| 13 | **Dominios de la app de Meta**: el campo quedó vacío y no lo exigieron. Decidir si se completa con `radarbalcarce.com` | Los dos | Baja |
+| 14 | **Confirmar las medidas sin fuente oficial** de `FORMATOS.md` (foto de perfil de Instagram 1080 × 1080 y de Facebook 720 × 720; están `verificado: false` en `redes/formatos.mjs`) y volver a mirar todas cada 90 días (la auditoría avisa) | Los dos | Baja |
+| 15 | **Cerrar el túnel de Tailscale** (`tailscale funnel --https=443 off`) cuando no haga falta | Hernán | Baja |
+| 16 | **Renovar el token de GitHub de cron-job.org antes del 21/09/2027** (lo usa en sus tres trabajos; el vigilante avisa 30 días antes). El dominio vence el mismo día | Los dos | Fecha fija |
 
-9. **Mirar los primeros días** que salgan bien los tres podcasts, el enlace en
-   los posteos de Facebook y el espejo a Instagram. Si algo deja de salir,
-   seguir los pasos de "Si algo dejó de salir" en `EMPEZAR-ACA.md`.
-10. **Avisos nuevos por WhatsApp** (andando desde el 25/09, ver
-    `INFRAESTRUCTURA.md`): mirar los primeros días que no sean demasiados ni
-    muy pocos, y ajustar los umbrales en `redes/avisos.mjs`.
-11. **Renovar el token de GitHub antes del 21/09/2027.** Lo usa cron-job.org
-    en sus tres trabajos. El vigilante avisa por WhatsApp 30 días antes.
-12. **Threads**: pide su propio token, distinto del de Facebook e Instagram.
-13. **La agenda de la semana en historia** todavía se arma sólo en la PC
-    (`reels/plan.mjs` lee `panel/datos/agenda.json`). Desde el 25/09 los eventos
-    ya están en GitHub con su página (`web/data/agenda.json`: los del municipio
-    y los que se publican desde el panel), así que falta poco: que
-    `reels/plan.mjs` los lea de ahí (con el enlace a cada página) y sacar
-    `agenda` de `SOLO_EN_LA_PC` en `redes/piezas.mjs`. Además, **revisar la
-    base de contactos** (`ingesta/contactos-agenda.json`, 43 instituciones):
-    lo dudoso está anotado en `nota` (Cámara de Comercio y Museo Histórico con
-    teléfonos de guías, Escuela de Estética con datos de 2013, varios clubes
-    sólo con Instagram, clubes que no se pudieron confirmar). Y empezar a
-    escribirles desde "A quién escribir este mes" (`PANEL.md`).
-14. Mirar cómo salieron las primeras tandas (voz, horarios, cantidad) y ajustar
-    `redes/elegir.mjs` / `redes/piezas.mjs` según rinda.
-15. **Hashtags**: hoy las piezas salen sin ninguno. Probar `#Balcarce` + uno de
-    la sección durante dos semanas y comparar el alcance con números propios.
-16. Permiso `instagram_manage_insights` para leer qué rinde cada red.
+## Decisiones de criterio que esperan a los dos
 
-Encontrado al auditar el contrato del día (26/09, `redes/contrato.mjs`), de
-`reels/` y de `redes/publicar-piezas.mjs`. **Arreglado el mismo día** (reglas 36 a
-40 de `REGLAS.md`, `pruebas/historias-largas.test.mjs`); queda anotado qué no cubre:
+- **Falsos positivos conocidos del semáforo.** "Violación de la ley" da rojo y
+  "el menor de los males" da amarillo. Hoy es preferible pasarse de cuidadoso;
+  si frena demasiadas notas, se afina la frase. La lista no se toca sin
+  preguntar.
+- **Rastreadores de IA en `robots.txt`** (GPTBot, ClaudeBot, PerplexityBot,
+  Google-Extended): permitirlos da visibilidad y citas; bloquearlos protege el
+  contenido. Decisión editorial, no técnica.
+- **Qué sección puede salir sola, cuál se lee más, si conviene partir o unir
+  alguna:** decidir con números cuando la analítica de Cloudflare tenga un par
+  de semanas de tráfico.
+- **Panel 100% online.** Hoy vive en la PC de Hernán y, con la PC apagada, no se
+  pueden decidir notas amarillas ni cargar avisos. Primero hay que decidir cómo
+  se entra (Cloudflare Access o login propio) y que una persona cargue el token
+  de GitHub en Cloudflare. Opciones en `PANEL.md`.
+- **Primer aviso publicitario**: cargarlo en los tres espacios, preguntar
+  precios en Balcarce y armar la página `/publicidad` y el media kit
+  (`PUBLICIDAD.md`).
+- **Base comercial** (`COMERCIAL.md`): completar los 145 comercios, pedir la
+  lista de socios a la Cámara de Comercio y el padrón de habilitaciones al
+  municipio, sumar el campo "tipo de actividad" y micro-SAS/SAS.
+- **Base de contactos de la agenda** (`ingesta/contactos-agenda.json`, 43
+  instituciones): revisar lo dudoso, que está anotado en `nota` (Cámara de
+  Comercio y Museo Histórico con teléfonos de guías, Escuela de Estética con
+  datos de 2013, clubes sólo con Instagram o sin confirmar), y empezar a
+  escribirles desde "A quién escribir este mes" (`PANEL.md`).
 
-- **16a. Las historias de los podcasts largos no salen (ALTA). RESUELTO.** Una historia
-  acepta hasta 60 segundos (Instagram: "Max duration for stories is 61.0";
-  Facebook la rechaza también). El podcast de la noche, con 4 notas, duró
-  62,7 s el 25/09 y **su historia no salió en ninguna de las dos redes**; el
-  reel sí. Los de la mañana y la tarde (3 notas) van justos. Arreglo: al armar
-  el podcast, si pasa de 58 s, hacer para la historia un corte de 58 s
-  (`ffmpeg -t 58`, con un cierre corto) y usarlo sólo para `STORIES`, o bajar
-  las notas del podcast de la noche a 3. Mientras tanto el vigilante avisa
-  "no salió la historia de podcast noche… no se reintenta".
-  **Hecho:** el guion tiene presupuesto de 55 s (`repasoConPresupuesto`: saca el
-  contexto y después notas, mínimo 2) y, como red de seguridad, la historia sube
-  una copia cortada en 58 s con fundido (`reels/duracion.mjs`, `reels/reel.mjs`);
-  el reel sube entero. Con los datos del 25/09 a la noche: 153 palabras, ~65 s
-  estimados (62,7 reales) → 112 palabras, ~48 s. Se verificó el corte con ffmpeg
-  de verdad sobre un video de 62,7 s (queda en 58,0 y el reel no cambia).
-  **Sin cubrir:** el ritmo (2,4 palabras por segundo) es una medición de tres días;
-  si la voz se enlentece, el corte de 58 s la ataja, pero conviene mirar los avisos
-  amarillos de "Redes" ("la historia sube recortada").
-- **16b. La historia de un reel, y la copia en la segunda red, no se
-  reintentan (MEDIA). RESUELTO EN PARTE.** `piezasQueTocan` mira sólo la red que manda
-  (Instagram): en cuanto el reel salió, la pieza ya no "toca", así que si la
-  historia falló (o Facebook falló después de tres intentos) no hay otra
-  vuelta. Arreglo: guardar en el libro qué falta de cada pieza y rearmarla sólo
-  si falta algo; o subir la historia con tres intentos y un corte automático
-  (ver 16a).
-  **Hecho:** la historia se intenta tres veces en la misma corrida (con espera),
-  sin volver a armar el video ni pedir la voz. **Sin cubrir:** si falla las tres
-  veces, no se reintenta en las corridas siguientes ni se reintenta la copia de
-  Facebook de un reel que falló: el video no se guarda entre corridas y armarlo de
-  nuevo gasta la voz de Gemini (y `plan.mjs` podría elegir otras notas, con lo que
-  la historia contaría otra cosa que el reel). Para cubrirlo habría que guardar el
-  `.mp4` (artefacto de Actions o Release) y bajarlo en la corrida siguiente; no se
-  hizo por costo y por no poder probarlo sin publicar.
-- **16c. Los teléfonos útiles no salen los días que rota (MEDIA). RESUELTO.**
-  `redes/piezas.mjs` (`diaRotativoDeUtiles`) decide el día de la semana, pero
-  `reels/plan.mjs` usa el de `panel/horarios.mjs` (martes) y sólo arma la pieza
-  ese día. El 25/09 (viernes) el reloj dijo "tocan: utiles" cada 30 minutos de
-  11:00 a 16:00 y nunca se armó; hasta las 15:49 eso además hacía fallar la
-  corrida de Redes. Arreglo: que `plan.mjs` use el mismo día que el reloj.
-  Mientras, la auditoría muestra "semanal teléfonos útiles: falta".
-  **Hecho:** una sola regla (`diaRotativoDeUtiles` en `ingesta/utiles.mjs`, aplicada
-  por `toca` de `panel/horarios.mjs`) para el reloj, el plan y el panel; si se fija
-  el día a mano en el panel, manda ese. Además `plan.mjs` tenía perdida la constante
-  `COLOR_UTILES_ACENTO` (se cayó con ReferenceError el primer día que la pieza tocó
-  de verdad): se repuso. El panel mostraba "esta semana: X" con una tercera regla
-  (`tocaHoy` de `utiles.mjs`, azarosa, incluso sábado o domingo): ahora es la misma.
-- **16d. `historiasPorDia: 6` de `reels/plan.mjs` no se aplica (BAJA). RESUELTO.** Sólo se
-  imprime. Con los útiles y la agenda pueden salir 7 u 8 historias en un día:
-  no hay nada que las frene, y el contrato del día las cuenta aparte.
-  **Hecho:** techo de 8 (6 + 2 extras, `CONTRATO_DIARIO.historiasMaximasPorDia`);
-  si se pasa, salen primero los útiles y después la agenda.
-- **16e. Sin `REDES_ACTIVAS` todo parece faltar (BAJA). RESUELTO.** Con el interruptor
-  apagado el libro no se escribe y el vigilante avisa de cada pieza que falta.
-  Es lo esperable, pero el aviso no lo dice.
-  **Hecho:** `vigilancia.yml` le pasa la variable; el vigilante dice una vez por día
-  "las redes están apagadas: es esperable que no salga nada", el resumen de las 21
-  lo dice en su línea y el cierre de las 23:30 se saltea.
+## Para Claude (código y seguimiento)
 
-## B. Perfiles y medidas
+**Alta**
 
-17. **Aplicar a mano las biografías** de Instagram y Facebook (las nuevas ya
-    no prometen "revisión humana" en todo), la categoría, el botón de
-    contacto y las historias destacadas fijas; hacer avatar y portada;
-    confirmar nombre y categoría. Los textos están listos en `PERFILES.md`.
-    Instagram sólo se edita desde el celular; Facebook, desde Meta Business
-    Suite.
-18. **Confirmar las medidas de `FORMATOS.md` que no tienen fuente oficial**:
-    foto de perfil de Instagram (1080 × 1080) y foto de perfil de Facebook
-    (720 × 720). Están marcadas
-    `verificado: false` en `redes/formatos.mjs`. Además, volver a mirar todas
-    cada 90 días (la auditoría avisa).
+- **Mirar los primeros días de redes.** Que salgan bien los tres podcasts, el
+  enlace en los posteos de Facebook y el espejo a Instagram; que el contrato del
+  día cierre completo (`REDES.md`). Si algo deja de salir, seguir "Si algo dejó
+  de salir" en `EMPEZAR-ACA.md`.
+- **Mirar los avisos nuevos por WhatsApp** (andan desde el 25/09): que no sean
+  demasiados ni muy pocos, y ajustar los umbrales en `redes/avisos.mjs`.
 
-18b. **Subir a mano la portada nueva de Facebook** (25/09): la anterior se veía
-    cortada en el celular ("ADAR BALCARC") y con la bajada tapada por el avatar.
-    La nueva es 16:9, 1640 × 924: `node reels/portada.mjs` genera
-    `reels/salida/portada-facebook.png`. Se sube sólo desde la app o el
-    navegador (Meta no deja por API con el token actual). Revisar cómo queda en
-    el celular y en la compu.
+**Media**
 
-## C. SEO y posicionamiento
+- **La historia de un reel no se reintenta entre corridas (16b, resuelto en
+  parte).** La historia se intenta tres veces en la misma corrida. Si falla las
+  tres, no se reintenta en las siguientes ni tampoco la copia de Facebook de un
+  reel que falló: el video no se guarda entre corridas y armarlo de nuevo gasta
+  la voz de Gemini (y `plan.mjs` podría elegir otras notas). Para cubrirlo habría
+  que guardar el `.mp4` (artefacto de Actions o Release) y bajarlo en la corrida
+  siguiente; no se hizo por costo y por no poder probarlo sin publicar. Mientras
+  tanto el vigilante avisa "no salió la historia de…".
+- **El ritmo de la voz** (2,4 palabras por segundo) es una medición de tres
+  días. Si la voz se enlentece, el corte de 58 s de las historias la ataja, pero
+  hay que mirar los avisos amarillos de "Redes" ("la historia sube recortada").
+- **La agenda de la semana en historia** todavía se arma sólo en la PC
+  (`reels/plan.mjs` lee `panel/datos/agenda.json`). Los eventos ya están en
+  GitHub con su página (`web/data/agenda.json`), así que falta que `plan.mjs` los
+  lea de ahí (con el enlace a cada página) y sacar `agenda` de `SOLO_EN_LA_PC` en
+  `redes/piezas.mjs`.
+- **Fuente local de Policiales.** Se sacaron las 3 fuentes nacionales, el cupo
+  de afuera es 0 y hay palabras locales nuevas. Sin feed usable: Bomberos
+  Voluntarios (salen en La Vanguardia y Puntonueve), Policía Comunal, Jefatura y
+  Defensa Civil (ya entran por el feed general del municipio). Falta seguir
+  cazando fuentes (la Comisaría y Bomberos no tienen feed; Tránsito publica
+  operativos en la categoría Movilidad y Control Urbano).
+- **Fuentes nuevas para evaluar** (falta confirmar si tienen RSS): **Acción 5**
+  (deportivo balcarceño) y el **Boletín Oficial Municipal**
+  (`sibom.slyt.gba.gov.ar/bulletins/11595`, fuente primaria de las actas del
+  Concejo; conecta con `IDEAS.md`).
+- **Mirar cómo salen las notas reescritas con IA** (cuerpo distinto de la
+  bajada, sin inventos) y ajustar el prompt si hace falta: se corrige en
+  `CRITERIO-EDITORIAL.md`, sección 12. El 26/09 a las 00:33 las 94 notas de la
+  portada tenían cuerpo y 21 esperaban; el vigilante pide que al menos el 35 %
+  de las últimas 24 horas lo tenga.
+- **La clasificación por palabras se equivoca a veces**: un proyecto de una
+  escuela primaria salió en Deportes; noticias de fútbol peruano entran por las
+  fuentes nacionales. Se ajusta con `REGLAS_SECCION` (`ingesta/fuentes.mjs`);
+  `npm run auditar` muestra qué palabra decidió cada nota.
+- **Nota duplicada con dos direcciones** ("Zona Fría"): el agrupamiento todavía
+  no las une.
 
-Lo hecho y lo que falta, en detalle, en `SEO.md`. AdSense está en "Para
-mañana".
+**Baja**
 
-19. **Bing Webmaster Tools** (se puede importar desde Search Console; pide un
-    permiso de Google, lo hace una persona).
-20. Mirar en Search Console qué páginas indexó Google (el sitemap se envió el
-    24/09).
-21. **Google Publisher Center** (Google Noticias y Discover): alta manual e
-    imágenes de al menos 1200 px.
-22. **Política editorial** como página pública ("Quiénes somos" y "Contacto"
-    ya están desde el 25/09).
-23. Medir con PageSpeed Insights (Core Web Vitals) y ajustar.
-24. Depurador de Facebook y Twitter Cards en todas las páginas; parámetros UTM
-    en los enlaces de redes.
-25. Enlaces internos entre notas mientras las etiquetas de temas estén
-    apagadas (`MOSTRAR_TEMAS`).
-26. Decidir en `robots.txt` si se permite a los rastreadores de IA (GPTBot,
-    ClaudeBot, PerplexityBot, Google-Extended). Decisión editorial.
-27. Google Business Profile, si corresponde.
-28. Nota duplicada con dos direcciones ("Zona Fría"): el agrupamiento todavía
-    no las une.
-
-## D. Editorial y contenido
-
-- **Fuente local de Policiales (26/09).** Hecho: se sacaron las 3 fuentes nacionales;
-  cupo de afuera 0; palabras locales nuevas (incendio, asalto, ladrón, robaron,
-  estafa, alcoholemia, persecución). Revisado y sin feed usable: Bomberos
-  Voluntarios (sin sitio propio; salen en La Vanguardia y Puntonueve), Policía
-  Comunal / Jefatura / Defensa Civil (categorías del WordPress de la Municipalidad:
-  1 a 18 notas en total y casi ninguna policial; ya entran por el feed general del
-  municipio). Falta: seguir cazando fuentes (Facebook de la Comisaría y de Bomberos
-  no tienen feed; Tránsito publica operativos cada tanto en la categoría Movilidad
-  y Control Urbano).
-
-29. Mirar cómo salen las notas reescritas con IA (cuerpo distinto del copete,
-    sin inventos) y ajustar el prompt si hace falta: se corrige en
-    `CRITERIO-EDITORIAL.md`, sección 12.
-30. **La clasificación por palabras se equivoca**: un proyecto de una escuela
-    primaria salió en Deportes; noticias de fútbol peruano entran por las
-    fuentes nacionales. Se ajusta agregando o sacando palabras en
-    `REGLAS_SECCION` (`ingesta/fuentes.mjs`); `npm run auditar` muestra qué
-    palabra decidió cada nota.
-31. **Falsos positivos conocidos del semáforo** (Hernán y Andrés deciden: la
-    lista no se toca sin preguntar): "violación de la ley" da rojo y "el menor
-    de los males" da amarillo. Hoy es preferible pasarse de cuidadoso; si
-    frena demasiadas notas, se afina la frase.
-32. **Decidir con números** qué sección puede salir sola, cuál se lee más y si
-    conviene partir o unir alguna, cuando la analítica de Cloudflare tenga un
-    par de semanas de tráfico.
-33. **Fuentes nuevas para evaluar** (faltan confirmar si tienen RSS): **Acción
-    5** (deportivo balcarceño, una segunda voz para Deportes) y el **Boletín
-    Oficial Municipal** (`sibom.slyt.gba.gov.ar/bulletins/11595`, fuente
-    primaria de las actas del Concejo Deliberante; conecta con `IDEAS.md`).
-34. Lo pendiente de la investigación de la competencia (WhatsApp para
-    lectores, alertas de clima, "lo más leído", encuestas): ver
-    `docs/historico/INVESTIGACION-COMPETENCIA.md` § 4.
-
-## E. Panel
-
-35. **Panel 100% online.** Hoy vive en la PC de Hernán y, con la PC apagada, no
-    se pueden decidir notas amarillas ni cargar avisos. Primero hay que
-    decidir cómo se entra (Cloudflare Access o login propio) y que una persona
-    cargue el token de GitHub en Cloudflare. Opciones sin costo y con costo en
-    `PANEL.md`.
-36. **Apuntar `RESPALDO_CARPETA`** a una carpeta de Drive u OneDrive, para que
-    el respaldo del panel quede afuera de la PC. Si se rompe el disco hoy, se
-    pierde el historial editorial.
-37. Cerrar el túnel de Tailscale (`tailscale funnel --https=443 off`) cuando no
-    haga falta.
-
-## F. Infraestructura y código
-
-38. **Borrar el proyecto de Vercel y limpiar el DNS que quedó.** Vercel está
-    apagado desde el 25/09 (sin conexión a GitHub, no despliega). Borrar
-    también el sitio duplicado de la cuenta vieja
-    (`radar-balcarce.vercel.app`).
-39. **Clave gratuita de redacción**: cargada el 25/09 (probada con el workflow
-    "Prueba de Gemini"). La redacción usa primero la gratis y sólo pasa a la paga
-    si la gratis se queda sin cupo (429). Tope de 150 notas por día
-    (`REESCRITURA.porDia`). Falta poner un tope de presupuesto en Google Cloud
-    para la clave paga.
-40. **`tocaHoy`** (`ingesta/utiles.mjs`, qué día salen los teléfonos útiles)
-    todavía cuenta el día con la zona del servidor, no con la de Balcarce.
-41. `next`/`postcss` con una vulnerabilidad conocida (riesgo bajo: el sitio es
-    estático). Actualizar cuando haya versión.
-42. Una política de seguridad de contenido (CSP) completa en
-    `web/public/_headers` (hoy sólo `frame-ancestors`).
-43. `ingesta/ingesta.mjs` es muy largo.
-
-## G. Base comercial y publicidad
-
-44. **Completar los 145 comercios**, pedir la lista de socios a la Cámara de
-    Comercio y el padrón de habilitaciones al municipio. Todo en `COMERCIAL.md`.
-45. **Cargar el primer aviso** en los tres espacios de la web, preguntar
-    precios en Balcarce y armar la página `/publicidad` y el media kit
-    (`PUBLICIDAD.md`).
+- **Threads**: pide su propio token, distinto del de Facebook e Instagram.
+- **Hashtags**: hoy las piezas de video salen sin ninguno. Probar `#Balcarce`
+  más uno de la sección durante dos semanas y comparar el alcance con números
+  propios.
+- **SEO** (detalle en `SEO.md`): Bing Webmaster Tools (importa de Search Console,
+  pide un permiso de Google que da una persona); mirar qué indexó Google (el
+  sitemap se envió el 24/09); Google Publisher Center (alta manual, imágenes de
+  al menos 1200 px); política editorial como página pública; PageSpeed y Core Web
+  Vitals; depurador de Facebook y Twitter Cards; parámetros UTM en los enlaces de
+  redes; enlaces internos mientras las etiquetas de temas estén apagadas
+  (`MOSTRAR_TEMAS`); Google Business Profile, si corresponde.
+- **Técnico**: `next` y `postcss` con una vulnerabilidad conocida (riesgo bajo:
+  el sitio es estático); una política de seguridad de contenido (CSP) completa en
+  `web/public/_headers` (hoy sólo `frame-ancestors`); `ingesta/ingesta.mjs` es
+  muy largo.
+- **Lo pendiente de la investigación de la competencia** (WhatsApp para
+  lectores, encuestas, "lo más leído"): `docs/historico/INVESTIGACION-COMPETENCIA.md`, § 4.
 
 Las ideas más grandes, que cambian cómo funciona algo, están en `IDEAS.md`.
 
 ## Ya resuelto (para no volver a proponerlo)
 
-- **Arreglos de la auditoría del 25/09** (detalle en `docs/historico/AUDITORIA.md`):
+- **26/09:** la app de Meta se **publicó** (modo activo); Policiales sólo de
+  Balcarce y la zona; secciones flacas con 13 fuentes nuevas, pisos y cupos por
+  sección (58 fuentes en total); una sola hora de Balcarce para todo el código
+  (`ingesta/zona.mjs`, incluye los teléfonos útiles) y una sola lectura de JSON
+  (`ingesta/json.mjs`); se sacó "Resumen hecho con IA" de los posteos de redes.
+- **26/09, contrato del día y reels** (reglas 33 a 40 de `REGLAS.md`): historias
+  de podcast de hasta 58 s, con presupuesto de 55 s en el guion y corte de
+  seguridad (`reels/duracion.mjs`); los teléfonos útiles con una sola regla de
+  "¿toca hoy?" (el 25/09 nunca se armaron); techo de 8 historias por día; con las
+  redes apagadas el vigilante lo dice una vez por día; espejo de Instagram con
+  reintento; reintento de la historia de un reel en la misma corrida.
+- **25/09, la auditoría** (detalle en `docs/historico/AUDITORIA.md`):
+  - **Repositorio público**, para no quedarse sin minutos de Actions. Sin claves
+    en el historial.
   - **WhatsApp de la Vigilancia funcionando** (teléfono completo con 549 y la
-    clave correcta; probado con "Prueba de WhatsApp").
-  - **Repositorio público**, para no quedarse sin minutos de Actions. Sin
-    claves en el historial.
+    clave correcta; probado con "Prueba de WhatsApp"), con avisos nuevos y
+    estadísticas.
+  - **Clave gratis de redacción** cargada y probada (25/09): la redacción la usa
+    primero y sólo pasa a la paga si se queda sin cupo (429). Tope de 150 notas
+    por día (`REESCRITURA.porDia`).
   - **Enlaces de redes que no se rompen**: dirección fija desde la primera
-    publicación, archivo de 180 días (`web/data/archivo.json`) y rescate en
-    la 404. Se recuperaron 1556 notas.
-  - **Portada sólo con notas de las últimas 72 h**, ahora en la nube (antes
-    sólo con la PC prendida). Se vio que la portada quedó bien.
-  - **Semáforo más estricto**: mira el texto completo y lo que escribe la IA;
-    términos nuevos con una prueba por término; la IA tiene prohibido
-    identificar menores y víctimas.
-  - Cupos de afuera (Automovilismo 12, Tecnología 8, Política 8) y la IA
-    reescribe primero lo local.
-  - Facebook no repite tema en 24 h y publica hasta las 22:00 en punto.
-  - Web: canónico propio en Farmacias, Agenda, Útil y Privacidad; "Quiénes
-    somos" y "Contacto"; pie honesto sobre la revisión; `_headers`; logo en
-    el JSON-LD; `es-AR`; sitemap de noticias sin fechas de relleno.
-  - Workflows con hora de Balcarce, tiempos máximos, `wrangler` fijo y
-    permisos justos; la Vigilancia avisa el vencimiento del dominio y ya no
-    pinta de rojo.
+    publicación, archivo de 180 días (`web/data/archivo.json`) y rescate en la
+    404. Se recuperaron 1556 notas. Las notas archivadas ya están en el sitemap.
+  - **Portada sólo con las últimas 72 h**, ahora en la nube.
+  - **Semáforo más estricto**: mira el texto completo y lo que escribe la IA; la
+    IA tiene prohibido identificar menores y víctimas.
+  - **Sin cuerpo no se publica** y el lector ve la nota, no el análisis
+    (`REGLAS.md`, reglas 23 y 24); la IA trabaja como editor digital (claves,
+    qué se sabe, verificación).
+  - **Criterio editorial único** (`CRITERIO-EDITORIAL.md`, que la IA lee tal
+    cual) y **criterio único de las redes** (`CRITERIO-REDES.md`, una sola
+    locutora y una auditoría de voz).
+  - **Notas propias**: el dólar de cada día hábil y una nota por cada podcast;
+    página `/dolar`; agenda con una página por evento y base de contactos.
+  - **Tapa y celular**: tapa de cinco secciones distintas, tres notas por
+    sección, "Seguí leyendo", hora en todas las notas, menú en una fila y
+    servicios compactos, sistema tipográfico único.
+  - Cupos de afuera (Automovilismo 6, Tecnología 8, Política 8) y la IA
+    reescribe primero lo local; Facebook no repite tema en 24 h y publica hasta
+    las 22:00 en punto.
+  - Web: canónico propio en cada página, "Quiénes somos" y "Contacto", pie
+    honesto sobre la revisión, `_headers`, logo en el JSON-LD, `es-AR`.
+  - Workflows con hora de Balcarce, tiempos máximos, `wrangler` fijo y permisos
+    justos; la Vigilancia avisa el vencimiento del dominio.
   - Panel: ya no publica en Vercel, respaldo sin claves, freno de intentos
     firme, control de origen, "Salir" por POST, poda de decisiones a 60 días,
-    sin dependencias de afuera (con prueba que sigue los imports en cadena).
-  - Vercel apagado (queda borrar el proyecto: punto 38).
-- Dominio propio (`radarbalcarce.com`, 21/09) y mudanza a **Cloudflare Pages**
-  (24/09), con `www` redirigido y Web Analytics.
-- Search Console verificado y sitemaps enviados (24/09); datos estructurados;
-  `sitemap-news.xml` y `llms.txt` (23/09).
-- Redes con Meta: página, Instagram, app, usuario del sistema y token sin
-  vencimiento (21/09). **Meta destrabó la cuenta y Redes y Piezas andan** (24/09).
-- Dos claves de Gemini separadas (21/09).
-- El reloj publica con un disparador externo confiable, cron-job.org (21/09).
-- Historias y reels en la página de Facebook además de Instagram (21/09).
-- **Tres podcasts por día** en lugar de noticias sueltas, con un color distinto
-  cada día, el enlace a la nota y sin nombrar la fuente (23 y 24/09).
-- Posteo de Instagram vertical 1080 × 1350 con zona segura, Facebook 1200 × 630,
-  y **auditoría semanal** de las medidas (24/09, `FORMATOS.md`).
-- **Vigilancia por WhatsApp** (CallMeBot) con chequeos de las reglas de
-  contenido (24/09, `redes/vigilar.mjs`).
-- **La IA recibe el texto completo de la fuente** (`ingesta/articulo.mjs`); el
-  cuerpo es la nota desarrollada y distinta del copete, con verificador
-  anti-invención y un reintento con corrección (24/09).
-- Portada sin fuentes arriba de los títulos, sin "la vimos hace…", con la
-  farmacia sin hora de cierre y las notas de la más nueva a la más vieja (24/09).
-- Reescritura con IA 100 % en la nube (22/09) y cuerpo visible y editable en
-  el panel (23/09).
-- Los tres espacios de publicidad se cargan desde el panel (23/09).
-- Facebook espeja cada posteo como foto en el feed de Instagram (23/09).
-- El turno de farmacia cambia a las 8:30, no a las 9.
-- Etiquetas de temas apagadas en la web (cargaban la página).
-- Subtítulos sincronizados con la voz (22/09).
-- **El panel sube solo sus decisiones a GitHub** (`panel/sincronizar.mjs`) y
-  se respalda solo (`panel/respaldo.mjs`) (24/09).
-- Contraseñas del panel cambiadas (25/09).
-- Base comercial armada con 145 comercios de OpenStreetMap (24/09).
+    sin dependencias de afuera. Vercel apagado (queda borrar el proyecto: punto
+    8 de la tabla).
+  - Contraseñas del panel cambiadas.
+- **24/09:** mudanza a **Cloudflare Pages** (`www` redirigido, Web Analytics);
+  Search Console verificado y sitemaps enviados; Meta destrabó la cuenta y
+  Redes y Piezas andan; **tres podcasts por día** en lugar de noticias sueltas;
+  posteo de Instagram 4:5 con zona segura, Facebook 1200 × 630 y auditoría
+  semanal de las medidas (`FORMATOS.md`); **Vigilancia por WhatsApp**; la IA
+  recibe el texto completo de la fuente; el panel sube solo sus decisiones a
+  GitHub y se respalda solo; base comercial con 145 comercios de OpenStreetMap;
+  portada sin fuentes arriba de los títulos, sin "la vimos hace…", con la
+  farmacia sin hora de cierre.
+- **21 al 23/09:** dominio propio (`radarbalcarce.com`); redes con Meta (página,
+  Instagram, app, usuario del sistema y token sin vencimiento); dos claves de
+  Gemini separadas; el reloj con un disparador externo confiable (cron-job.org);
+  historias y reels también en la página de Facebook; reescritura con IA 100 %
+  en la nube; los tres espacios de publicidad se cargan desde el panel; Facebook
+  espeja cada posteo como foto en Instagram; el turno de farmacia cambia a las
+  8:30; subtítulos sincronizados con la voz; etiquetas de temas apagadas.

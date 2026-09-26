@@ -577,3 +577,43 @@ imports en cadena para que no se cuele una dependencia de afuera.
 `ads.txt`, decidir si Política y Policiales esperan también en la web,
 confirmar el texto de "Quiénes somos", borrar las claves viejas y reiniciar el
 panel. Todo en `PENDIENTES.md`.
+
+## 14. 25 y 26/09/2026: notas con cuerpo, criterio único y redes con contrato
+
+Después de la auditoría del 25/09 (sección 13) el proyecto cambió de forma en
+dos días. Las pruebas pasaron de 684 a más de 1.100. Lo importante, sin orden
+de hora:
+
+- **Notas.** Sin cuerpo no se publica y el lector ve la nota, no el análisis
+  (`6ada1e0`); la IA trabaja como editor digital, con claves, qué se sabe y un
+  nivel de verificación que calcula el código (`c2421d8`). El criterio quedó en
+  un solo documento, `CRITERIO-EDITORIAL.md`, que la IA lee tal cual (`d9e543d`).
+- **Clave gratis de redacción** cargada y probada, con tope de 150 notas por día;
+  la clave paga queda de respaldo (`87939e4`, `7c6463e`).
+- **Fuentes.** Doce de la región y la provincia el 25/09 (`ce43fd7`). El 26/09,
+  16 nuevas para las secciones flacas (61 en total) y, a pedido de Hernán y
+  Andrés, Policiales sólo de Balcarce y la zona: se sacaron las 3 nacionales y
+  quedaron **58** (`def9b05`, `6da8762`).
+- **Web.** Página `/dolar` y una nota propia del dólar por día hábil; una nota
+  por cada podcast; agenda con una página por evento y base de contactos
+  (`6cf54e4`, `b98bfa5`, `b8244ed`). Tapa de cinco secciones distintas, tres notas
+  por sección, "Seguí leyendo", hora en todas las notas, menú en una fila en el
+  celular y sistema tipográfico único (`f7425e5`, `00a156f`, `3ad5ee0`).
+- **Repositorio público** desde el 25/09, con la dirección del panel fuera del
+  repo (`127bb45`); Vercel apagado, Cloudflare Pages sirve el sitio.
+- **Redes.** Criterio único de las redes, con una sola locutora y una auditoría
+  de voz (`b17f895`); se sacó "Resumen hecho con IA" de los posteos y el repaso
+  ya no sale duplicado (`694356e`). **El contrato del día** (3 reels, 6 historias
+  y hasta 5 posteos por red) con auditoría contra lo que Meta tiene publicado y
+  cierre a las 23:30 (`59a1931`, `ac1eba3`); espejo de Instagram con reintento
+  (`93ee954`); historias de podcast de hasta 58 s, teléfonos útiles con una sola
+  regla y techo de 8 historias (`a88e825`).
+- **La app de Meta se publicó el 26/09.** El workflow "Ver Facebook" mostró que
+  la app estaba en modo desarrollo: el público no veía los posteos ni los reels
+  (las historias sí). Falta comprobar que ya se ven (`f15ee95`).
+- **Perfiles y portada.** Textos de Instagram y Facebook sin farmacias y con
+  `radarbalcarce.com`, y portada de Facebook 16:9 (`2786dd1`, `22bd3b3`); todavía
+  sin aplicar a mano.
+- **Orden del código.** Una sola hora de Balcarce (`ingesta/zona.mjs`), una sola
+  lectura de JSON y limpieza de código sin uso (`df455dd`, `66b37d2`, `964bdc8`).
+- **Lo que quedó para una persona:** todo en `PENDIENTES.md`.

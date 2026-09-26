@@ -23,6 +23,8 @@ node ingesta/probar.mjs https://medio.com/feed   # prueba una URL suelta
 | `prompt-editorial.mjs` | Lee la sección 12 de `../CRITERIO-EDITORIAL.md`: es la instrucción exacta que recibe la IA; si el archivo falta, la reescritura no arranca |
 | `ingesta.mjs` | Bajar, parsear, agrupar, clasificar y puntuar |
 | `articulo.mjs` | El texto completo de la nota original, para la IA |
+| `zona.mjs` | La hora de Balcarce: la única que usan la ingesta, el panel, las redes y los reels (el servidor de GitHub corre en UTC) |
+| `json.mjs` | Leer un JSON sin que un archivo faltante o roto tire abajo el proceso |
 | `verificar.mjs` | Rechaza lo que la IA inventó (números, nombres, días, citas) |
 | `utiles.mjs` | Teléfonos útiles y la farmacia de turno (cambia a las 8:30) |
 | `agenda.mjs` | Los eventos de la agenda |
