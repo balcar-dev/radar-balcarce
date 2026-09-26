@@ -1,5 +1,5 @@
 {
-  "exportado": "2026-09-26T09:22:59.423Z",
+  "exportado": "2026-09-26T09:32:55.556Z",
   "decisiones": {
     "1951120": {
       "estado": "automatica",
@@ -241,13 +241,46 @@
     },
     "1kyolt": {
       "estado": "automatica",
-      "titulo": "Santiago Lantella ganó en la Monomarca del Salado",
-      "copete": "El piloto balcarceño se impuso como invitado de Oscar Garay en la sexta fecha disputada en el autódromo de Mar del Plata.",
-      "cuerpo": null,
-      "guion": "En el automovilismo zonal, Santiago Lantella se quedó con la victoria como invitado en una de las finales de la Monomarca del Salado. La competencia se disputó en el autódromo de Mar del Plata.",
+      "titulo": "Se registran los servicios de sepelios en Balcarce",
+      "copete": "La Cooperativa de Electricidad local informó los distintos servicios de inhumación y cremación realizados en las últimas semanas en el distrito.",
+      "cuerpo": "La Cooperativa de Electricidad General Balcarce dio a conocer los avisos fúnebres correspondientes a los servicios de sepelios llevados a cabo en el partido. Las gacetillas detallan las fechas de los fallecimientos, las salas velatorias y los destinos de los restos en el Cementerio Municipal o crematorios privados.\n\nLos registros difundidos abarcan diferentes decesos ocurridos a lo largo de los meses de mayo, agosto y septiembre de este año. Los servicios incluyeron traslados desde casas de duelo ubicadas tanto en la zona céntrica como en barrios y localidades rurales del partido.\n\nEstas comunicaciones habituales permiten a familiares y allegados conocer los cronogramas de los oficios religiosos y las inhumaciones dispuestas por la entidad de servicios públicos.",
+      "guion": "Se registran los servicios de sepelios en Balcarce",
       "deIA": true,
       "por": "ia",
-      "cuando": "2026-09-18T17:29:44.886Z"
+      "cuando": "2026-09-26T09:32:55.494Z",
+      "claves": [
+        "La Cooperativa de Electricidad informó los servicios fúnebres.",
+        "Se detallaron inhumaciones y cremaciones en el distrito.",
+        "Los avisos corresponden a decesos de los últimos meses."
+      ],
+      "seSabe": [
+        "La Cooperativa de Electricidad General Balcarce informó los servicios de sepelios realizados en el distrito.",
+        "Se detallaron los cronogramas de inhumaciones y cremaciones para distintos decesos ocurridos entre mayo y septiembre de 2026."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "La Cooperativa de Electricidad dio a conocer el detalle de los servicios de sepelios e inhumaciones realizados en las últimas semanas en el distrito.",
+      "etiquetas": [
+        "servicios fúnebres",
+        "cooperativa de electricidad",
+        "Balcarce",
+        "sepelios"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/santiago-lantella-gano-y-pelea-por-el-titulo-en-la-monomarca-del-salado-961",
+          "fecha": null,
+          "oficial": false,
+          "aporte": "Aportó el listado completo de los avisos fúnebres y servicios de sepelios informados por la cooperativa local."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
     },
     "1od3ckv": {
       "estado": "automatica",
