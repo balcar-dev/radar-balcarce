@@ -1,5 +1,5 @@
 {
-  "generado": "2026-09-26T23:00:40.291Z",
+  "generado": "2026-09-26T23:30:44.605Z",
   "notas": [
     {
       "id": "11vmu4p",
@@ -701,7 +701,7 @@
       "fecha": "2026-09-25T23:02:57.000Z",
       "sinFecha": false,
       "visto": "2026-09-26T03:00:42.156Z",
-      "relevancia": 71,
+      "relevancia": 63,
       "local": true,
       "publicadaPor": "ia",
       "publicadaCuando": "2026-09-26T07:24:59.436Z",
@@ -4226,10 +4226,10 @@
   "clima": {
     "ahora": {
       "temp": 9,
-      "sensacion": 6,
-      "humedad": 75,
-      "viento": 17,
-      "rumbo": "E",
+      "sensacion": 5,
+      "humedad": 78,
+      "viento": 16,
+      "rumbo": "NE",
       "cielo": "Despejado",
       "esDeDia": false
     },
@@ -4637,28 +4637,10 @@
       "motivo": "sección general, sin regla verde"
     },
     {
-      "id": "1oevhxb",
-      "titulo": "Rosario Central, campeón de la Supercopa Internacional…",
-      "seccion": "País",
-      "motivo": "sección general, sin regla verde"
-    },
-    {
-      "id": "17qflh0",
-      "titulo": "Así quedó el medallero de los Juegos Suramericanos Santa…",
-      "seccion": "País",
-      "motivo": "sección general, sin regla verde"
-    },
-    {
       "id": "aj6czm",
       "titulo": null,
       "seccion": "Policiales",
       "motivo": "necesita ojo humano: \"homicidio\""
-    },
-    {
-      "id": "jw7wmv",
-      "titulo": "Rosario Central - Estudiantes: el fuerte mensaje de…",
-      "seccion": "País",
-      "motivo": "sección general, sin regla verde"
     },
     {
       "id": "s98u2k",
@@ -4691,10 +4673,10 @@
       "motivo": "Policiales de afuera: la sección es sólo de Balcarce y la zona"
     },
     {
-      "id": "a1vr8e",
-      "titulo": "El régimen de Venezuela libera a decenas de presos…",
-      "seccion": "Política",
-      "motivo": "necesita ojo humano: \"detenido\""
+      "id": "8us7e5",
+      "titulo": "Hace 9 años baleó a empresarios en Villa El Salvador para…",
+      "seccion": "País",
+      "motivo": "necesita ojo humano: \"baleado\""
     },
     {
       "id": "1m7xi9h",
@@ -4709,10 +4691,10 @@
       "motivo": "parece promoción, no noticia: \"sortea\""
     },
     {
-      "id": "1m2d8c1",
-      "titulo": "Quiniela de la Provincia: resultado del sorteo de la…",
-      "seccion": "País",
-      "motivo": "parece promoción, no noticia: \"sorteo\""
+      "id": "3w01m5",
+      "titulo": "Un pleno a Trump que la economía no registra",
+      "seccion": "Política",
+      "motivo": "internacional: sin relación con Balcarce"
     },
     {
       "id": "4yj3vi",
