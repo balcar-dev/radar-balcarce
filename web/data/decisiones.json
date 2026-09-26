@@ -1,5 +1,5 @@
 {
-  "exportado": "2026-09-26T09:43:04.680Z",
+  "exportado": "2026-09-26T09:53:12.375Z",
   "decisiones": {
     "1951120": {
       "estado": "automatica",
@@ -10406,13 +10406,47 @@
     },
     "q8ze4n": {
       "estado": "automatica",
-      "titulo": "Ferroviarios ganó el Apertura por penales",
-      "copete": "Ferroviarios se consagró campeón del torneo Apertura de fútbol al vencer a Atlético San Manuel en el estadio General Balcarce.",
-      "cuerpo": null,
-      "guion": "Ferroviarios ganó el Apertura por penales",
+      "titulo": "Informan servicios fúnebres y sepelios en Balcarce",
+      "copete": "Se dieron a conocer los avisos fúnebres y los cronogramas de servicios de sepelios prestados en el distrito.",
+      "cuerpo": "La Cooperativa de Electricidad General Balcarce dio a conocer el detalle de los servicios de sepelios y traslados correspondientes a las personas fallecidas en las últimas semanas en el distrito. Los procedimientos incluyeron los tradicionales velatorios en salas habilitadas, oficios religiosos y posteriores inhumaciones en el Cementerio Municipal o cremaciones en instalaciones privadas según cada caso.\n\nLos avisos fúnebres reflejan las participaciones emitidas por familiares, allegados y la propia entidad prestadora de servicios, detallando las casas de duelo ubicadas tanto en distintos puntos de la planta urbana de Balcarce como en zonas rurales del partido.\n\nEste tipo de publicaciones de carácter institucional se emite de forma periódica para informar a la comunidad sobre los cronogramas de despedida y acompañar a los deudos en los servicios fúnebres locales.",
+      "guion": "Informan servicios fúnebres y sepelios en Balcarce",
       "deIA": true,
       "por": "ia",
-      "cuando": "2026-09-21T11:54:15.136Z"
+      "cuando": "2026-09-26T09:53:12.306Z",
+      "claves": [
+        "Cooperativa de Electricidad informó servicios",
+        "Detalle de inhumaciones y cremaciones",
+        "Avisos de deudos en el distrito"
+      ],
+      "seSabe": [
+        "Se registraron los avisos fúnebres de personas fallecidas en Balcarce.",
+        "La Cooperativa de Electricidad General Balcarce brindó los servicios de sepelios.",
+        "Se detallaron las casas de duelo y los destinos de los restos."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "La Cooperativa de Electricidad General Balcarce difundió el detalle de los servicios fúnebres y los cronogramas de inhumaciones correspondientes a las últimas semanas en el distrito.",
+      "etiquetas": [
+        "servicios funebres",
+        "sepelios",
+        "cooperativa de electricidad",
+        "balcarce"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/desde-los-doce-pasos-ferro-se-llevo-el-apertura-11",
+          "fecha": null,
+          "oficial": false,
+          "aporte": "Aportó los avisos fúnebres y detalles de los servicios de sepelios en el distrito."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
     },
     "32vo3q": {
       "estado": "automatica",
@@ -25337,6 +25371,174 @@
         "nivel": "MEDIA",
         "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
         "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "sygix1": {
+      "estado": "automatica",
+      "titulo": "Agencias publicitarias adoptan inteligencia artificial para reducir costos",
+      "copete": "La industria audiovisual publicitaria implementa herramientas de inteligencia artificial para generar contenidos y automatizar procesos, lo que reduce costos y tiempos de producción.",
+      "cuerpo": "El sector publicitario atraviesa una transformación a partir de la adopción de herramientas de inteligencia artificial para el desarrollo de campañas comerciales y contenidos audiovisuales. Según indicaron referentes del sector, la tecnología permite prescindir de despliegues tradicionales como cámaras y locaciones múltiples para realizar piezas generadas enteramente de forma digital, lo que achica los presupuestos y acelera los plazos de entrega.\n\nEstudios especializados señalaron que la demanda de este tipo de servicios se incrementó debido a la capacidad de crear escenarios complejos y personajes surrealistas con mayor velocidad. Asimismo, las agencias utilizan los sistemas informáticos para ordenar métricas y automatizar procesos internos de organización.\n\nSi bien la adopción tecnológica generó inicialmente resistencia en el público por la distinción visual, los especialistas destacaron que la mejora en las actualizaciones superó esa brecha y optimizó el rendimiento de las producciones para primeras marcas.",
+      "guion": "Agencias publicitarias adoptan inteligencia artificial para reducir costos",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-26T09:53:12.306Z",
+      "claves": [
+        "La inteligencia artificial se consolida en la producción publicitaria.",
+        "Estudios del sector reducen costos y tiempos de entrega.",
+        "Se automatizan procesos y generación de contenidos complejos."
+      ],
+      "seSabe": [
+        "La inteligencia artificial se utiliza para generar piezas publicitarias sin uso de cámaras.",
+        "Las agencias reducen costos y tiempos de producción en sus trabajos.",
+        "La tecnología permite crear escenarios complejos y personajes surrealistas."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "La industria publicitaria implementa inteligencia artificial para generar campañas sin cámaras, lo que reduce costos y tiempos de producción en el sector.",
+      "etiquetas": [
+        "inteligencia artificial",
+        "publicidad",
+        "industria audiovisual",
+        "producción"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/tecnologia/estamos-haciendo-campanas-100-prompteadas-sin-prender-camaras-el-detras-de-escena-de-una-industria-nid26092026/",
+          "fecha": "2026-09-26T09:48:00.000Z",
+          "oficial": false,
+          "aporte": "Detalló cómo la inteligencia artificial transforma la industria publicitaria y reduce costos."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "80ywkb": {
+      "estado": "automatica",
+      "titulo": "Una de cada tres entidades de crédito registra mora alta",
+      "copete": "Un tercio de las instituciones financieras habilitadas en el país supera el cincuenta por ciento de retrasos en los pagos. La situación afecta a fintech, casas de crédito y cadenas comerciales.",
+      "cuerpo": "Un tercio de las entidades habilitadas por el Banco Central para otorgar préstamos a las familias registra niveles de mora superiores al cincuenta por ciento, de acuerdo con datos oficiales.\n\nAdemás, la autoridad monetaria dio de baja a sesenta y ocho entidades registradas para dar préstamos desde que comenzó a escalar la morosidad, sin especificar los motivos. Por su parte, la deuda empresarial con mora a noventa días se multiplicó de manera significativa desde el año anterior, con mayor impacto en los rubros textil, papel y construcción.",
+      "guion": "Una de cada tres entidades de crédito registra mora alta",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-26T09:53:12.306Z",
+      "claves": [
+        "Un tercio de las entidades de crédito supera el cincuenta por ciento de mora.",
+        "El Banco Central contabiliza cuatrocientas ocho entidades prestamistas.",
+        "Sesenta y ocho prestamistas fueron dados de baja desde el inicio de la suba de mora."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Un tercio de las entidades que otorgan créditos en el país supera el cincuenta por ciento de mora en los pagos. La medida abarca a fintech, bancos digitales y casas comerciales.",
+      "etiquetas": [
+        "morosidad",
+        "creditos",
+        "banco central",
+        "economia"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Clarín",
+          "enlace": "https://www.clarin.com/economia/morosidad-entidades-dan-creditos-50-prestamos-atraso-pago_0_956Fc26TTs.html",
+          "fecha": "2026-09-26T09:00:17.000Z",
+          "oficial": false,
+          "aporte": "Aportó los datos del Banco Central sobre el nivel de morosidad en entidades de crédito, las bajas de prestamistas y la situación del endeudamiento empresarial y familiar."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1eh79gq",
+          "titulo": "Alta morosidad en créditos de menores de veinticuatro años",
+          "fecha": "2026-09-20T10:31:10.000Z",
+          "ruta": "/nota/alta-morosidad-en-creditos-de-menores-de-veinticuatro-anos-1eh79gq"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "usv1or": {
+      "estado": "automatica",
+      "titulo": "Se cumplen setenta años del ingreso de la Argentina al FMI",
+      "copete": "Se conmemora el aniversario de la adhesión formal de la Argentina al Fondo Monetario Internacional, concretada en Washington en septiembre de 1956.",
+      "cuerpo": "La Argentina se convirtió en el quincuagésimo noveno miembro del Fondo Monetario Internacional el veinte de septiembre de 1956, tras una ceremonia en el Departamento de Estado en Washington donde el embajador Adolfo Vicchi firmó los estatutos.\n\nEl proceso formal comenzó con decretos previos de abril y agosto de ese año durante la presidencia de Pedro Eugenio Aramburu, tras un trabajo de recopilación de informes sobre gestiones anteriores. La investigadora Claudia Kedar, de la Universidad de Tel Aviv, señaló que existían contactos previos con las instituciones de Bretton Woods.",
+      "guion": "Se cumplen setenta años del ingreso de la Argentina al FMI",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-26T09:53:12.306Z",
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "etiquetas": [
+        "FMI",
+        "Argentina",
+        "historia",
+        "economia"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Clarín",
+          "enlace": "https://www.clarin.com/economia/70-anos-ingreso-argentina-fmi-previa-dia-ceremonia_0_zyo85aqOjU.html",
+          "fecha": "2026-09-26T09:00:16.000Z",
+          "oficial": false,
+          "aporte": null
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "2l636": {
+      "estado": "automatica",
+      "titulo": "Los pagos con QR crecen en el país y baja el uso de tarjetas",
+      "copete": "Los pagos mediante códigos QR interoperables aumentaron en agosto en comparación con el año anterior, mientras que el uso de tarjetas de débito y crédito registró una caída, de acuerdo con un informe oficial.",
+      "cuerpo": "En paralelo, el informe oficial detalla que el uso de tarjetas de débito y crédito mostró una disminución en el último dato disponible correspondiente a julio, con bajas tanto en la cantidad de transacciones como en los montos operados. El avance de las herramientas digitales también abarcó el sector del transporte, donde se registraron millones de viajes abonados mediante códigos QR en colectivos y subterráneos.\n\nEste cambio en los hábitos de consumo se completa con un aumento en las transferencias inmediatas y el uso de billeteras digitales en el sistema financiero nacional.",
+      "guion": "Los pagos con QR crecen en el país y baja el uso de tarjetas",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-26T09:53:12.306Z",
+      "claves": [
+        "El Banco Central informó un fuerte incremento interanual en los pagos con QR durante agosto.",
+        "Las operaciones con tarjetas de débito y crédito registraron caídas en cantidad y montos.",
+        "El uso de códigos QR también se extendió al pago de pasajes en colectivos y subtes."
+      ],
+      "seSabe": [
+        "En agosto se realizaron ciento diecitres millones de pagos con transferencia, de los cuales casi la totalidad se inició con código QR.",
+        "Las cuentas bancarias concentraron poco más de la mitad de las operaciones, mientras que el resto se hizo desde cuentas de pago.",
+        "Las tarjetas de débito y crédito sufrieron bajas interanuales en julio tanto en operaciones como en montos reales."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Un informe oficial muestra que los pagos con código QR aumentaron de forma interanual en el país, mientras que el uso de tarjetas de débito y crédito registró una baja en las operaciones y en los montos durante los últimos meses.",
+      "etiquetas": [
+        "pagos con QR",
+        "Banco Central",
+        "tarjetas de credito",
+        "tarjetas de debito"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Clarín",
+          "enlace": "https://www.clarin.com/economia/boom-pagos-qr-crecieron-67-ano-desploma-uso-tarjetas_0_autliCGuvB.html",
+          "fecha": "2026-09-26T09:00:16.000Z",
+          "oficial": false,
+          "aporte": "Aportó los datos del informe del Banco Central sobre el crecimiento de los pagos con QR y la caída en el uso de tarjetas."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "ALTA"
       }
     }
   },
