@@ -1,5 +1,5 @@
 {
-  "exportado": "2026-09-26T08:33:05.600Z",
+  "exportado": "2026-09-26T08:43:31.185Z",
   "decisiones": {
     "1951120": {
       "estado": "automatica",
@@ -113,13 +113,44 @@
     },
     "495bur": {
       "estado": "automatica",
-      "titulo": "Marcio Amado Cunqueiro correrá en el TSC en Balcarce",
-      "copete": "El piloto confirmó su presencia para la histórica reapertura del autódromo Juan Manuel Fangio, que se disputará este fin de semana.",
-      "cuerpo": null,
-      "guion": "El Turismo Special de la Costa sumó un nuevo protagonista. Marcio Amado Cunqueiro estará presente en la esperada reapertura del autódromo Juan Manuel Fangio durante este fin de semana.",
+      "titulo": "Informan los servicios fúnebres de la comunidad en Balcarce",
+      "copete": "Se dieron a conocer los avisos fúnebres y servicios de sepelio correspondientes a vecinos de la comunidad local.",
+      "cuerpo": "La Cooperativa de Electricidad General Balcarce Limitada informó los detalles de los servicios de sepelios y traslados al Cementerio Municipal registrados en el distrito durante las últimas semanas, según los avisos publicados para despedir a los vecinos fallecidos.\n\nLos cronogramas incluyeron los servicios de sala velatoria y las inhumaciones correspondientes a personas de distintos puntos de la ciudad y de la zona rural, como la localidad de Los Pinos, de acuerdo con los partes oficiales brindados por la entidad prestadora.\n\nLas ceremonias se llevaron a llevar a cabo en las salas habilitadas y en el Cementerio Municipal, mientras que otros servicios contemplaron el traslado hacia crematorios de la región según las disposiciones de cada familia.",
+      "guion": "Informan los servicios fúnebres de la comunidad en Balcarce",
       "deIA": true,
       "por": "ia",
-      "cuando": "2026-09-18T17:29:27.808Z"
+      "cuando": "2026-09-26T08:43:31.115Z",
+      "claves": [
+        "La Cooperativa de Electricidad difundió los servicios fúnebres.",
+        "Se detallaron las inhumaciones en el Cementerio Municipal.",
+        "Los partes incluyeron sepelios en la ciudad y zonas rurales."
+      ],
+      "seSabe": [
+        "La Cooperativa de Electricidad General Balcarce Limitada estuvo a cargo de los servicios de sepelios.",
+        "Se registraron distintos servicios de inhumación y traslados al Cementerio Municipal."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "La Cooperativa de Electricidad dio a conocer los detalles sobre los servicios fúnebres y las inhumaciones realizadas en el Cementerio Municipal de Balcarce.",
+      "etiquetas": [
+        "Balcarce",
+        "cooperativa"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/marcio-amado-cunqueiro-tambien-estara-en-el-tsc-en-el-juan-manuel-fangio-467",
+          "fecha": null,
+          "oficial": false,
+          "aporte": "Aportó el listado de servicios fúnebres y traslados informados por la cooperativa local."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
     },
     "lej1o7": {
       "estado": "automatica",
@@ -163,13 +194,50 @@
     },
     "sx0ehz": {
       "estado": "automatica",
-      "titulo": "Podios y triunfos balcarceños en Mar del Plata",
-      "copete": "Pilotos de Balcarce sumaron victorias y clasificaciones al Play Off durante la doble fecha del Zonal del Atlántico en Mar del Plata.",
-      "cuerpo": null,
-      "guion": "El automovilismo zonal tuvo acción en Mar del Plata. Varios pilotos locales consiguieron triunfos y aseguraron su lugar en el Play Off de la Monomarca.",
+      "titulo": "Pilotos de Balcarce clasifican al Play Off de la Monomarca en Balcarce",
+      "copete": "Pilotos locales aseguraron su lugar en el Play Off de la Monomarca tras una doble fecha del Zonal del Atlántico en Mar del Plata. Además, la actividad motorsport se prepara para la llegada del TC Pick Up a Balcarce.",
+      "cuerpo": "Pilotos balcarceños aseguraron su clasificación al Play Off de la Monomarca tras una doble fecha disputada en el autódromo Ciudad de Mar del Plata por el Zonal del Atlántico. Entre los clasificados se encuentran Diego Petrantonio, Santiago Lantella, Tomás Massa, Mario Castaño y Nahuel Di Cicco.\n\nLa jornada automovilística incluyó además las competencias de la Promocional, donde Braian Hernández se quedó con la victoria y lidera el torneo, y del TC 2000 del Atlántico, que tuvo como ganadores a Braian De Palma y Alan Adolfo, posicionando a De Palma en la cima del campeonato.\n\nEn cuanto a la actividad regional, el Turismo Special de la Costa no participó de esta fecha en Mar del Plata debido a su próxima presentación en el autódromo Juan Manuel Fangio, donde acompañará a las TC Pick Up en la reapertura del escenario serrano.",
+      "guion": "Pilotos de Balcarce clasifican al Play Off de la Monomarca en Balcarce",
       "deIA": true,
       "por": "ia",
-      "cuando": "2026-09-18T17:29:43.972Z"
+      "cuando": "2026-09-26T08:43:31.115Z",
+      "claves": [
+        "Pilotos locales clasificaron al Play Off de la Monomarca.",
+        "La competencia se desarrolló en el autódromo Ciudad de Mar del Plata.",
+        "El Zonal del Atlántico incluyó carreras de Promocional y TC 2000.",
+        "El escenario serrano se prepara para la llegada del TC Pick Up."
+      ],
+      "seSabe": [
+        "Diego Petrantonio, Santiago Lantella, Tomás Massa, Mario Castaño y Nahuel Di Cicco clasificaron al Play Off de la Monomarca.",
+        "El Zonal del Atlántico compitió en el autódromo Ciudad de Mar del Plata.",
+        "Braian Hernández ganó en la Promocional y lidera el torneo.",
+        "Braian De Palma y Alan Adolfo ganaron en el TC 2000 del Atlántico.",
+        "El Turismo Special de la Costa competirá en el autódromo Juan Manuel Fangio junto a las TC Pick Up."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Pilotos locales aseguraron su clasificación al Play Off de la Monomarca tras disputarse una nueva fecha del Zonal del Atlántico en Mar del Plata. La actividad automovilística regional se prepara para la próxima llegada de las TC Pick Up al autódromo serrano.",
+      "etiquetas": [
+        "Monomarca",
+        "Zonal del Atlántico",
+        "Balcarce",
+        "autódromo Juan Manuel Fangio"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/petrantonio-lantella-massa-y-castano-di-cicco-al-play-off-de-la-monomarca-874",
+          "fecha": null,
+          "oficial": false,
+          "aporte": "Informó los resultados y clasificaciones del Zonal del Atlántico en Mar del Plata."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
     },
     "1kyolt": {
       "estado": "automatica",
@@ -8443,13 +8511,47 @@
     },
     "k12eig": {
       "estado": "automatica",
-      "titulo": "Detienen a dos marplatenses tras una persecución en Balcarce",
-      "copete": "Dos hombres oriundos de Mar del Plata fueron aprehendidos este fin de semana tras una persecución policial, según informaron fuentes oficiales.",
-      "cuerpo": null,
-      "guion": "Detienen a dos marplatenses tras una persecución en Balcarce",
+      "titulo": "Informan los servicios de sepelios de la Cooperativa de Electricidad en Balcarce",
+      "copete": "Se registran los avisos fúnebres informados por la Cooperativa de Electricidad \"General Balcarce\" correspondientes a los meses recientes.",
+      "cuerpo": "La Cooperativa de Electricidad \"General Balcarce\" Limitada dio a conocer los servicios de sepelios correspondientes a distintos fallecimientos registrados en el partido a lo largo de los últimos meses, según los avisos publicados en las últimas semanas.\n\nLos reportes detallan las inhumaciones y cremaciones realizadas tanto en el Cementerio Municipal como en instalaciones de la región, especificando las fechas de los decesos y las casas de duelo correspondientes.\n\nLas ceremonias se llevaron a cabo con la organización de la entidad prestadora de servicios eléctricos y sociales de la ciudad.",
+      "guion": "Informan los servicios de sepelios de la Cooperativa de Electricidad en Balcarce",
       "deIA": true,
       "por": "ia",
-      "cuando": "2026-09-21T02:44:17.852Z"
+      "cuando": "2026-09-26T08:43:31.115Z",
+      "claves": [
+        "Se registran los avisos fúnebres de la Cooperativa de Electricidad.",
+        "Los servicios incluyen inhumaciones y cremaciones.",
+        "Los procedimientos se realizan en el Cementerio Municipal."
+      ],
+      "seSabe": [
+        "La Cooperativa de Electricidad \"General Balcarce\" Limitada informó los servicios de sepelios correspondientes a varios fallecimientos en el partido.",
+        "Los procedimientos incluyen traslados al Cementerio Municipal y crematorios de la zona."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "La Cooperativa de Electricidad \"General Balcarce\" dio a conocer los avisos de sepelios correspondientes a distintos fallecimientos registrados en el partido durante los últimos meses.",
+      "etiquetas": [
+        "sepelios",
+        "fallecimientos",
+        "Cooperativa de Electricidad",
+        "Balcarce",
+        "servicios fúnebres"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/dos-marplatenses-aprehendidos-tras-una-persecucion-llevaban-herramientas-y-plantillas-para-adulterar-patentes-802",
+          "fecha": null,
+          "oficial": false,
+          "aporte": "Detalla los avisos de fallecimientos y servicios de sepelios informados por la Cooperativa de Electricidad."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
     },
     "1hhm88m": {
       "estado": "automatica",
@@ -24081,6 +24183,315 @@
         "nivel": "MEDIA",
         "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
         "sugeridoPorIA": "ALTA"
+      }
+    },
+    "m4uuwq": {
+      "estado": "automatica",
+      "titulo": "Deportistas de la EMDAB consiguen tres podios en Mar del Plata en Balcarce",
+      "copete": "La Escuela Municipal de Deporte Adaptado de Balcarce logró dos terceros puestos y un segundo lugar en un certamen de fútbol disputado en Mar del Plata.",
+      "cuerpo": "Los equipos representativos de la Escuela Municipal de Deporte Adaptado de Balcarce compitieron en un certamen futbolístico llevado a cabo en el complejo Punto Sur de la ciudad de Mar del Plata. El evento deportivo fue organizado por el Centro Recreativo Deportivo Especial.\n\nTras el desarrollo de los encuentros en las diferentes categorías, la delegación balcarceña completó una notable participación al cosechar dos terceras posiciones y un segundo lugar. Desde la entidad organizadora resaltaron la importancia de propiciar estos espacios para fomentar la actividad física, afianzar los lazos comunitarios y respaldar el desarrollo de los atletas.\n\nEste nuevo resultado positivo se suma a las recientes participaciones destacadas de las distintas disciplinas que representan al distrito en competencias de la región.",
+      "guion": "Deportistas de la EMDAB consiguen tres podios en Mar del Plata en Balcarce",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-26T08:43:31.114Z",
+      "claves": [
+        "La EMDAB compitió en un torneo de fútbol adaptado en Mar del Plata.",
+        "La delegación local obtuvo dos terceros puestos y un segundo lugar.",
+        "El certamen fue organizado por el Centro Recreativo Deportivo Especial."
+      ],
+      "seSabe": [
+        "Los equipos de la EMDAB participaron en un torneo en las instalaciones de Punto Sur, en Mar del Plata.",
+        "El certamen fue organizado por el Centro Recreativo Deportivo Especial.",
+        "La representación balcarceña obtuvo dos terceros puestos y un segundo lugar.",
+        "La institución organizadora destacó el valor de promover la práctica deportiva y fortalecer vínculos."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "La Escuela Municipal de Deporte Adaptado de Balcarce logró tres podios en un torneo de fútbol disputado en Mar del Plata. La delegación consiguió dos terceros puestos y un segundo lugar en el certamen organizado por el CREDE.",
+      "etiquetas": [
+        "EMDAB",
+        "deporte adaptado",
+        "futbol",
+        "Mar del Plata",
+        "Balcarce"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infórmese Primero (FM 104.9)",
+          "enlace": "http://www.informeseprimero.com.ar/2026/09/futbol-adaptado-emdab-logro-tres-podios.html",
+          "fecha": "2026-09-25T16:29:40.684Z",
+          "oficial": false,
+          "aporte": "Informó la participación y los resultados de los equipos de la EMDAB en el torneo de fútbol en Mar del Plata."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1uwv7rc",
+          "titulo": "Deportistas de la EMDAB logran podios en un torneo de fútbol en Mar del Plata",
+          "fecha": "2026-09-25T16:25:29.000Z",
+          "ruta": "/nota/deportistas-de-la-emdab-logran-podios-en-un-torneo-de-futbol-en-mar-1uwv7rc"
+        },
+        {
+          "id": "yt2niw",
+          "titulo": "Nadadores de la EMDAB cosecharon podios en Necochea",
+          "fecha": "2026-09-21T15:00:00.000Z",
+          "ruta": "/nota/nadadores-de-la-emdab-cosecharon-podios-en-necochea-yt2niw"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "1uwv7rc": {
+      "estado": "automatica",
+      "titulo": "Equipos de la Escuela Municipal de Deporte Adaptado logran podios en Mar del Plata",
+      "copete": "Los conjuntos balcarceños de fútbol alcanzaron dos terceros puestos y un segundo lugar en una competencia disputada en Mar del Plata.",
+      "cuerpo": "Los conjuntos de fútbol de la Escuela Municipal de Deporte Adaptado de Balcarce completaron su participación en un certamen organizado por el Centro Recreativo Deportivo Especial en Mar del Plata. Las competencias tuvieron lugar en las instalaciones de Punto Sur.\n\nLa delegación local logró dos terceros puestos y un segundo lugar en las diferentes categorías del torneo. Estos resultados reflejan el esfuerzo y la constancia de los jóvenes que integran el espacio deportivo, así como el progreso sostenido dentro de la disciplina.\n\nPreviamente, a comienzos de mes, otros integrantes de la misma escuela municipal compitieron en una disciplina distinta durante un torneo nacional desarrollado en la ciudad de Necochea.",
+      "guion": "Equipos de la Escuela Municipal de Deporte Adaptado logran podios en Mar del Plata",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-26T08:43:31.114Z",
+      "claves": [
+        "Los equipos de fútbol de EMDAB participaron en Mar del Plata.",
+        "Lograron dos terceros puestos y un segundo lugar.",
+        "El torneo fue organizado por el Centro Recreativo Deportivo Especial."
+      ],
+      "seSabe": [
+        "Los conjuntos de fútbol de la Escuela Municipal de Deporte Adaptado de Balcarce compitieron en Mar del Plata.",
+        "El torneo se desarrolló en las instalaciones de Punto Sur.",
+        "La organización estuvo a cargo del Centro Recreativo Deportivo Especial.",
+        "La delegación obtuvo dos terceros puestos y un segundo lugar."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Los equipos de fútbol de la Escuela Municipal de Deporte Adaptado consiguieron dos terceros puestos y un segundo lugar en un torneo disputado en Mar del Plata.",
+      "etiquetas": [
+        "Deporte adaptado",
+        "Balcarce",
+        "Mar del Plata",
+        "Fútbol"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Radio Gabal (FM 104.1)",
+          "enlace": "https://www.radiogabal.com.ar/index.php/deportes/buen-desempeno-de-emdab-en-un-torneo-de-futbol-en-mar-del-plata",
+          "fecha": "2026-09-25T16:25:29.000Z",
+          "oficial": false,
+          "aporte": "Informó sobre la participación y los podios de los equipos de fútbol de EMDAB en el torneo de Mar del Plata."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "m4p2h",
+          "titulo": "Nadadores de la EMDAB compiten en un torneo nacional en Balcarce",
+          "fecha": "2026-09-22T12:10:01.000Z",
+          "ruta": "/nota/destacada-participacion-de-la-emdab-en-torneo-nacional-de-natacion-m4p2h"
+        },
+        {
+          "id": "hf1e85",
+          "titulo": "Destacada participación de nadadores de EMDAB en un torneo nacional en Necochea",
+          "fecha": "2026-09-21T20:20:34.000Z",
+          "ruta": "/nota/destacada-participacion-de-nadadores-de-emdab-en-un-torneo-nacional-hf1e85"
+        },
+        {
+          "id": "x9lsqs",
+          "titulo": "Destacada actuación de nadadores de EMDAB en un torneo nacional",
+          "fecha": "2026-09-21T13:12:00.000Z",
+          "ruta": "/nota/destacada-actuacion-de-nadadores-de-emdab-en-un-torneo-nacional-x9lsqs"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "rbsr6m": {
+      "estado": "automatica",
+      "titulo": "El Corte Inglés lanza nuevas ofertas en tecnología en el exterior",
+      "copete": "El comercio español El Corte Inglés presentó una nueva ronda de rebajas en dispositivos de tecnología y entretenimiento, que incluye cafeteras, teléfonos y televisores.",
+      "cuerpo": "El comercio español El Corte Inglés lanzó una nueva ronda de descuentos en tecnología y entretenimiento que incluye una cafetera superautomática De'Longhi por 270 euros y el teléfono iPhone 17 Pro de 256 gigabytes a 1.179 euros. Entre las opciones figuran también un monitor gaming HP por 109 euros y un televisor Samsung de 65 pulgadas a 699 euros, además del videojuego Marvel's Spider-Man 2 en formato físico por 39,90 euros. Las rebajas llegan tras los Súper Tecnoprecios difundidos la semana anterior.",
+      "guion": "El Corte Inglés lanza nuevas ofertas en tecnología en el exterior",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-26T08:43:31.115Z",
+      "claves": [
+        "Nueva ronda de descuentos en tecnología y entretenimiento",
+        "Incluye cafeteras, teléfonos, monitores y televisores",
+        "Los precios varían según la disponibilidad de stock"
+      ],
+      "seSabe": [
+        "El comercio El Corte Inglés publicó una lista con rebajas en tecnología.",
+        "Entre los productos rebajados figuran una cafetera, un teléfono, un monitor, un televisor y un videojuego."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El comercio El Corte Inglés lanzó una nueva ronda de ofertas en tecnología y entretenimiento que incluye descuentos en cafeteras, teléfonos, monitores y televisores.",
+      "etiquetas": [
+        "tecnología",
+        "ofertas",
+        "El Corte Inglés"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Xataka",
+          "enlace": "https://www.xataka.com/seleccion/mejores-ofertas-corte-ingles-tecnologia-entretenimiento-hoy-26-septiembre",
+          "fecha": "2026-09-26T08:30:17.000Z",
+          "oficial": false,
+          "aporte": "Detalló los precios y modelos de la nueva ronda de ofertas en tecnología de El Corte Inglés."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1lyz3un",
+          "titulo": "Los mejores seguros de viaje en septiembre 2026: comparativa y análisis de cobertura",
+          "fecha": "2026-09-22T18:00:00.000Z",
+          "ruta": "/nota/los-mejores-seguros-de-viaje-en-septiembre-2026-comparativa-y-1lyz3un"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "1f6kual": {
+      "estado": "automatica",
+      "titulo": "Stray Kids reúne a miles de personas en su show en México",
+      "copete": "La banda surcoreana se presentó ante un estadio lleno en México en una fecha que contó con la presencia del presidente de Corea del Sur en las gradas.",
+      "cuerpo": "La banda surcoreana Stray Kids se presentó el veinticinco de septiembre en el Estadio GNP Seguros de México ante un recinto completamente lleno, en un espectáculo que marcó el inicio del festival STRAYCITY. El evento reunió a miles de personas e incluyó las actuaciones de RENEE, NEXZ y Andrés Obregón.\n\nEl show contó con la presencia del presidente de Corea del Sur, Lee Jae-myung, y la primera dama, Kim Hye-kyung, quienes vieron el concierto desde las gradas junto a la secretaria de Cultura de México, Claudia Curiel de Icaza. La visita del mandatario se da en el marco de su viaje oficial al país para reunirse con la presidenta Claudia Sheinbaum.\n\nEl recital de la banda principal comenzó pasadas las nueve de la noche con despliegue de pirotecnia y mensajes en español de sus integrantes, en una jornada que se extendió por varias horas y alcanzó un récord preliminar de asistencia para un acto asiático en el país.",
+      "guion": "Stray Kids reúne a miles de personas en su show en México",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-26T08:43:31.115Z",
+      "claves": [
+        "La banda surcoreana se presentó en el Estadio GNP Seguros.",
+        "El presidente de Corea del Sur presenció el show desde las gradas.",
+        "El festival incluyó las actuaciones de RENEE, NEXZ y Andrés Obregón."
+      ],
+      "seSabe": [
+        "El show se realizó el 25 de septiembre en el Estadio GNP Seguros de México, según la fuente.",
+        "El presidente de Corea del Sur, Lee Jae-myung, asistió al concierto junto a su esposa.",
+        "El evento contó con las actuaciones previas de RENEE, NEXZ y Andrés Obregón."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "La banda surcoreana Stray Kids brindó un show multitudinario en México con la presencia del presidente de su país en las gradas.",
+      "etiquetas": [
+        "Stray Kids",
+        "México",
+        "K-pop",
+        "Estadio GNP Seguros",
+        "Lee Jae-myung"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/mexico/2026/09/26/asi-fue-la-primera-noche-de-stray-kids-en-el-estadio-gnp-seguros-pirotecnia-mensajes-en-espanol-y-una-visita-presidencial/",
+          "fecha": "2026-09-26T08:40:18.000Z",
+          "oficial": false,
+          "aporte": "Detalles del festival STRAYCITY, asistencia de autoridades y cronograma del show."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "1js0h6t": {
+      "estado": "automatica",
+      "titulo": "Las Pymes argentinas suman clientes por la recomendación de la inteligencia artificial",
+      "copete": "Pequeñas y medianas empresas locales reciben clientes gracias a las sugerencias de la inteligencia artificial. El fenómeno transforma el marketing digital sin inversión en publicidad.",
+      "cuerpo": "Pequeñas y medianas empresas argentinas suman clientes a través de recomendaciones espontáneas generadas por la inteligencia artificial, según relevamientos recientes de firmas especializadas en marketing y consumo. El estudio Consumer Pulse 2026 de Bain & Company indica que siete de cada diez consumidores locales usan estas herramientas para informarse, estudiar o trabajar.\n\nEmpresarios de distintos rubros señalan que este canal gratuito genera consultas diarias de compradores que llegan convencidos por la elección del sistema. Sin embargo, la contracara muestra que la visibilidad es reducida: datos de SOCi detallan que ChatGPT recomienda a algo más del uno por ciento de los negocios locales, mientras que los motores de Google alcanzan una porción mayor. Las métricas reflejan además que gran parte de las marcas con buen posicionamiento tradicional resultan invisibles para la inteligencia artificial.\n\nEn el mercado nacional todavía no existen espacios publicitarios comercializables en estos asistentes virtuales, por lo que la reputación depende de la información disponible en Internet, mapas digitales y redes sociales. Ante este escenario surge la disciplina GEO, orientada a optimizar la presencia digital mediante contenidos claros, reseñas sostenidas y datos de contacto consistentes.",
+      "guion": "Las Pymes argentinas suman clientes por la recomendación de la inteligencia artificial",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-26T08:43:31.115Z",
+      "claves": [
+        "El crecimiento del uso de la inteligencia artificial por parte de los consumidores.",
+        "La preferencia de los compradores por las marcas sugeridas por los asistentes.",
+        "La baja visibilidad de los negocios en las respuestas automáticas frente a los buscadores.",
+        "La aparición de nuevas técnicas para posicionar empresas en los motores generativos."
+      ],
+      "seSabe": [
+        "Siete de cada diez consumidores argentinos usan la inteligencia artificial para informarse, estudiar o trabajar, según Bain & Company.",
+        "ChatGPT recomienda a una porción menor al dos por ciento de los negocios locales analizados por SOCi.",
+        "Las recomendaciones de los asistentes virtuales no cuentan con espacios publicitarios comerciales en el país."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Las Pymes argentinas suman clientes gracias a las recomendaciones espontáneas de la inteligencia artificial. Sin pauta publicitaria ni campañas, los asistentes virtuales eligen negocios y transforman el marketing digital.",
+      "etiquetas": [
+        "Inteligencia artificial",
+        "Pymes",
+        "Marketing digital",
+        "Consumo"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/economia/el-vendedor-que-nadie-contrato-nid26092026/",
+          "fecha": "2026-09-26T08:34:00.000Z",
+          "oficial": false,
+          "aporte": "Aportó datos sobre el aumento de consultas comerciales generadas por la inteligencia artificial y estadísticas de visibilidad de las empresas."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "ALTA"
+      }
+    },
+    "5fvcjp": {
+      "estado": "automatica",
+      "titulo": "El sector agropecuario analiza estrategias comerciales ante un escenario de alta volatilid",
+      "copete": "Especialistas recomiendan diseñar estrategias comerciales flexibles para la campaña actual debido a la volatilidad internacional y los factores climáticos.",
+      "cuerpo": "El análisis del mercado agropecuario global muestra la necesidad de implementar herramientas de cobertura flexibles ante los diversos factores que influyen en las cotizaciones internacionales. Durante los últimos meses, el comportamiento de los precios estuvo condicionado por la cosecha récord en Sudamérica, las tensiones geopolíticas en Medio Oriente, los conflictos logísticos derivados de ataques en la región del mar Negro y las irregularidades climáticas en Estados Unidos y Europa. \n\nLos reportes recientes del Departamento de Agricultura de Estados Unidos mostraron ajustes moderados en las proyecciones de oferta y demanda para maíz y soja, mientras el mercado aguarda los próximos informes sobre stocks trimestrales y el avance de la cosecha. \n\nHacia adelante, el ciclo comercial 2026/27 plantea nuevos desafíos vinculados al comportamiento climático en las principales regiones productoras de Sudamérica, incluido Brasil, y las condiciones de la primavera en el plano local para definir los volúmenes finales de producción.",
+      "guion": "El sector agropecuario analiza estrategias comerciales ante un escenario de alta volatilidad.",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-26T08:43:31.115Z",
+      "claves": [
+        "Recomiendan estrategias flexibles de cobertura comercial",
+        "Factores internacionales condicionan las cotizaciones",
+        "Próximos informes del USDA marcarán el rumbo del mercado",
+        "El clima en Sudamérica será clave para la campaña 2026/27"
+      ],
+      "seSabe": [
+        "Se registraron variables internacionales que afectaron el mercado de granos durante el año.",
+        "El USDA recortó la proyección de rinde de maíz y aumentó la de soja en septiembre.",
+        "El ciclo comercial 2026/27 transita sus primeras etapas con pronósticos climáticos diversos en Sudamérica."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Especialistas señalan que es momento de diseñar estrategias comerciales flexibles en el sector agropecuario ante la volatilidad internacional y los desafíos climáticos.",
+      "etiquetas": [
+        "mercado de granos",
+        "USDA",
+        "clima"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/economia/campo/agricultura/estamos-en-momentos-adecuados-para-tomar-decisiones-comerciales-nid26092026/",
+          "fecha": "2026-09-26T08:30:00.000Z",
+          "oficial": false,
+          "aporte": "Aportó el análisis sobre variables internacionales, reportes del USDA y proyecciones para el ciclo comercial 2026/27."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
       }
     }
   },
