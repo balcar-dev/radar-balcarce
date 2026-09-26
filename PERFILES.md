@@ -1,18 +1,20 @@
 # Perfiles de Instagram y Facebook
 
-*Actualizado el 25/09/2026.* Reemplaza a `BIOS.md`. Los textos **todavía no
+*Actualizado el 26/09/2026.* Reemplaza a `BIOS.md`. Los textos **todavía no
 están aplicados**: hay que cambiarlos a mano en cada red (`PENDIENTES.md`,
 sección B). Nada de acá inventa datos: sólo dice lo que el medio hace hoy.
 
 ## Qué tiene que decir un perfil
 
 1. **Qué es**: un medio digital de Balcarce.
-2. **Qué se encuentra**: noticias, clima, farmacia de turno y agenda (lo que
-   más se busca a diario).
-3. **Que hay IA, sin esconderla y sin hacerla protagonista**: una línea.
-   Es la misma transparencia que pide `REGLAS.md` (cada nota dice quién la
-   escribió).
-4. **Adónde ir**: `radarbalcarce.com`.
+2. **Qué se encuentra**: noticias, clima y agenda. **No se nombran las
+   farmacias** (decisión del 26/09: es una pieza diaria, no la identidad).
+3. **Que hay IA, sin esconderla y sin hacerla protagonista**: una línea, en la
+   descripción larga de Facebook y en `/quienes-somos`. La bio de Instagram
+   tiene poco lugar y va sin ella. Es la misma transparencia que pide
+   `REGLAS.md` (cada nota dice quién la escribió).
+4. **Adónde ir**: `radarbalcarce.com`, **en los dos perfiles**, siempre
+   escrito así (nunca `.com.ar`).
 5. **Tono**: el del medio (`REDES.md` § "El tono"). Sin "IMPACTANTE", sin
    promesas.
 
@@ -29,20 +31,16 @@ sección B). Nada de acá inventa datos: sólo dice lo que el medio hace hoy.
 | **Historias destacadas fijas** | Farmacia · Teléfonos · Agenda · Clima (portada cuadrada que se ve redonda: un ícono simple por tema) |
 | **Foto de perfil** | El avatar del medio (`reels/avatar.mjs`) sobre el rojo de la marca, centrado: se muestra redonda (ver medidas) |
 
-**Bio, opción A (131 caracteres)**
+**Bio de Instagram (máx. 150 caracteres)**
 
 ```
-Noticias de Balcarce, clima y farmacia de turno todos los días. Resúmenes con IA verificados contra la fuente. Notas en el enlace 👇
+Noticias de Balcarce, la región y el país.
+Clima, agenda y lo que pasa hoy.
+radarbalcarce.com
 ```
 
-**Bio, opción B (126 caracteres)**
-
-```
-Balcarce al día: noticias, clima, farmacia de turno y agenda. Resúmenes con IA verificados contra la fuente. Todas las notas 👇
-```
-
-Se recomienda la **B** porque nombra la agenda y suena más a "lo que pasa
-hoy". Si se cambia una palabra, volver a contar: el límite es 150.
+Tres renglones, sin emojis ni promesas. Si se cambia una palabra, volver a
+contar: el límite es 150 (una prueba lo cuida).
 
 ## Facebook (página "Radar Balcarce")
 
@@ -57,26 +55,24 @@ hoy". Si se cambia una palabra, volver a contar: el límite es 150.
 | **Botón de llamado a la acción** | "Más información" (o "Enviar mensaje") apuntando al sitio |
 | **Ubicación** | Balcarce, Buenos Aires |
 
-**Información breve**
+**Información breve de Facebook (máx. 101 caracteres)**
 
 ```
-Lo que pasa en Balcarce, el clima y la farmacia de turno. Todo el día, con enlace a cada nota.
+Noticias de Balcarce, la región y el país. Clima y agenda. radarbalcarce.com
 ```
 
-**Descripción larga**
+**Descripción larga de Facebook**
 
 ```
-Radar Balcarce es un medio digital de Balcarce. Reúne lo que pasa en la
-ciudad y la región, con el enlace a cada nota en radarbalcarce.com. Además:
-el clima, la farmacia de turno, los teléfonos útiles y la agenda de la
-semana.
+Radar Balcarce es un medio digital de Balcarce. Reunimos lo que pasa en la
+ciudad, la región y el país, con la fuente siempre a la vista, y sumamos el
+clima, la agenda y los teléfonos útiles.
 
-Los resúmenes y las voces de los videos se producen con inteligencia
-artificial y se verifican automáticamente contra la fuente; lo sensible
-lo revisa una persona antes de salir. Si ves un error, escribinos y lo
-corregimos.
+Las notas las escribe una inteligencia artificial y se verifican contra las
+fuentes; lo sensible lo revisa una persona antes de salir. Si ves un error,
+escribinos y lo corregimos.
 
-radarbalcarce.com
+Todas las notas en radarbalcarce.com
 ```
 
 ## Imágenes y colores
