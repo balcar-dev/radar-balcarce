@@ -45,3 +45,25 @@ await seccion('Posteos del feed', 'published_posts', 'created_time,message,perma
 await seccion('Reels', 'video_reels', 'created_time,description,permalink_url,status,length', (d) => `${corto(d.description)} ${d.permalink_url ?? ''} estado=${JSON.stringify(d.status ?? {}).slice(0, 160)} duración=${d.length ?? '?'}s`);
 await seccion('Videos', 'videos', 'created_time,description,permalink_url', (d) => `${corto(d.description)} ${d.permalink_url ?? ''}`);
 await seccion('Historias', 'stories', 'creation_time,status,url', (d) => `${d.status ?? ''} ${d.url ?? ''}`);
+
+// --- ¿Lo ve el público? Visibilidad de la página, de los posteos y de los reels.
+async function visibilidad() {
+  console.log('\n== Visibilidad ==');
+  try {
+    const p = await pedir(PAGINA, { fields: 'is_published,is_unclaimed,verification_status,restrictions,has_transitioned_to_new_page_experience' }, tp);
+    console.log('Página:', JSON.stringify(p));
+  } catch (e) { console.log('Página: no se pudo leer (' + e.message.slice(0, 140) + ')'); }
+  try {
+    const j = await pedir(`${PAGINA}/published_posts`, { fields: 'created_time,is_published,is_hidden,is_expired,privacy,status_type,permalink_url,message', limit: 8 }, tp);
+    for (const d of j.data ?? []) console.log('Posteo', hora(d.created_time), JSON.stringify({ publicado: d.is_published, oculto: d.is_hidden, privacidad: d.privacy?.value ?? d.privacy, tipo: d.status_type }), corto(d.message));
+  } catch (e) { console.log('Posteos: no se pudo leer (' + e.message.slice(0, 140) + ')'); }
+  try {
+    const j = await pedir(`${PAGINA}/video_reels`, { fields: 'created_time,status,permalink_url', limit: 4 }, tp);
+    for (const d of j.data ?? []) console.log('Reel', hora(d.created_time), JSON.stringify(d.status ?? {}));
+  } catch (e) { console.log('Reels: no se pudo leer (' + e.message.slice(0, 140) + ')'); }
+  try {
+    const j = await pedir(`${PAGINA}/videos`, { fields: 'created_time,published,privacy,content_category,is_crosspost_video', limit: 4 }, tp);
+    for (const d of j.data ?? []) console.log('Video', hora(d.created_time), JSON.stringify({ publicado: d.published, privacidad: d.privacy?.value ?? d.privacy }));
+  } catch (e) { console.log('Videos: no se pudo leer (' + e.message.slice(0, 140) + ')'); }
+}
+await visibilidad();
