@@ -1,5 +1,5 @@
 {
-  "exportado": "2026-09-26T08:03:45.609Z",
+  "exportado": "2026-09-26T08:13:17.483Z",
   "decisiones": {
     "1951120": {
       "estado": "automatica",
@@ -23752,6 +23752,126 @@
           "titulo": "Tregua en la interna del Gobierno: las oscilaciones de Patricia Bullrich y los pronósticos del grupo de Karina Milei",
           "fecha": "2026-09-24T14:40:00.000Z",
           "ruta": "/nota/tregua-en-la-interna-del-gobierno-las-oscilaciones-de-patricia-14e7f85"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "1ry7mu3": {
+      "estado": "automatica",
+      "titulo": "Franco Colapinto largará noveno en el Gran Premio de Azerbaiyán",
+      "copete": "El piloto argentino se metió entre los diez mejores en la clasificación de Bakú. Partirá desde la novena posición tras una sesión donde aprovechó la succión en la pista.",
+      "cuerpo": "Franco Colapinto se ubicó entre los diez mejores de la clasificación en el circuito callejero de Bakú y largará noveno este sábado desde las 8 de Argentina. En la sesión de este viernes, el piloto salió de boxes por delante de Pierre Gasly, permitiendo que el francés aprovechara su rebufo aerodinámico en la recta para marcar un tiempo rápido, mientras que el argentino completó su vuelta sin esa ayuda y reconoció que fue difícil perder rendimiento en la recta.\n\nTras la sesión surgieron interpretaciones sobre una posible estrategia asimétrica de la escudería Alpine, aunque fuentes cercanas a la escuadra afirmaron que no se estableció un plan para favorecer a uno u otro piloto y que operaron de la manera habitual. En la fase final, el argentino no quedó conforme con el rendimiento del vehículo ni con su propia actuación.",
+      "guion": "Franco Colapinto largara noveno en el Gran Premio de Azerbaiyan",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-26T08:13:17.420Z",
+      "claves": [
+        "El piloto argentino largará noveno en Bakú.",
+        "Completó la sesión de clasificación entre los diez mejores.",
+        "Aprovechó la succión aerodinámica en la pista junto a su compañero.",
+        "La escudería negó haber aplicado una estrategia para favorecer a un piloto."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas si existió una orden directa de la escudería sobre el orden de salida en la pista.",
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Franco Colapinto se metió entre los diez mejores en la clasificación de Bakú y largará noveno este sábado en el Gran Premio de Azerbaiyán de Fórmula 1.",
+      "etiquetas": [
+        "Franco Colapinto",
+        "Formula 1",
+        "Gran Premio de Azerbaiyan"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/deportes/automovilismo/franco-colapinto-largara-noveno-en-el-gp-de-azerbaiyan-despues-de-ayudar-a-pierre-gasly-en-la-nid25092026/",
+          "fecha": "2026-09-25T19:24:40.000Z",
+          "oficial": false,
+          "aporte": "Detalles sobre la maniobra de succión en la Q2 y las declaraciones del piloto sobre la falta de apoyo aerodinámico."
+        },
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/deportes/automovilismo/franco-colapinto-en-la-formula-1-en-vivo-nid25092026/",
+          "fecha": "2026-09-25T16:22:15.000Z",
+          "oficial": false,
+          "aporte": "Confirmación de la posición de largada, el horario y el resultado de la pole position."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "xtbw5",
+          "titulo": "Franco Colapinto largara noveno el Gran Premio de Azerbaiyan",
+          "fecha": "2026-09-25T19:13:53.000Z",
+          "ruta": "/nota/franco-colapinto-largara-noveno-el-gran-premio-de-azerbaiyan-xtbw5"
+        },
+        {
+          "id": "1n5o9jc",
+          "titulo": "Franco Colapinto parte noveno en el Gran Premio de Azerbaiyán",
+          "fecha": "2026-09-25T17:34:57.000Z",
+          "ruta": "/nota/franco-colapinto-parte-noveno-en-el-gran-premio-de-azerbaiyan-1n5o9jc"
+        },
+        {
+          "id": "ffhx7",
+          "titulo": "Franco Colapinto larga décimo en el Gran Premio de Azerbaiyán",
+          "fecha": "2026-09-25T16:22:15.000Z",
+          "ruta": "/nota/franco-colapinto-disputa-la-clasificacion-en-el-gran-premio-de-ffhx7"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "jhkcnr": {
+      "estado": "automatica",
+      "titulo": "China y Estados Unidos firman un acuerdo sobre carbón y tecnología en Balcarce",
+      "copete": "Las potencias globales concretaron un entendimiento para importar carbón y abrir un diálogo sobre inteligencia artificial, con impacto directo en los mercados internacionales.",
+      "cuerpo": "Los gobiernos de China y Estados Unidos formalizaron un entendimiento comercial y tecnológico que incluye la importación de carbón estadounidense por parte de Pekín y la apertura de canales de diálogo sobre inteligencia artificial. Durante el encuentro entre los mandatarios Donald Trump y Xi Jinping, se pactó además una tregua arancelaria prorrogada hasta enero y recomendaciones para aplicar un trato arancelario más favorable en bienes no sensibles. Como se había informado a principios de mes, las potencias ya avanzaban en la creación de mecanismos bilaterales para gestionar riesgos vinculados a esta tecnología emergente y coordinar el suministro de recursos estratégicos a nivel global.",
+      "guion": "China y Estados Unidos firman un acuerdo sobre carbon y tecnologia en Balcarce",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-26T08:13:17.420Z",
+      "claves": [
+        "Pekín y Washington concretaron un canal de diálogo sobre inteligencia artificial.",
+        "China importará carbón estadounidense en los próximos años.",
+        "Se prorrogó una tregua arancelaria bilateral hasta el mes de enero."
+      ],
+      "seSabe": [
+        "Los mandatarios Donald Trump y Xi Jinping se reunieron en Washington.",
+        "Se acordó un trato arancelario más favorable para bienes no sensibles.",
+        "Ambos países abordaron cuestiones sobre exportaciones de minerales críticos y fentanilo."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "China y Estados Unidos alcanzaron un acuerdo comercial y tecnológico que contempla la importación de carbón y un diálogo sobre inteligencia artificial tras una cumbre bilateral.",
+      "etiquetas": [
+        "China",
+        "Estados Unidos",
+        "inteligencia artificial",
+        "carbón",
+        "comercio internacional"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Clarín",
+          "enlace": "https://www.clarin.com/estados-unidos/china-y-eeuu-alcanzan-acuerdo-sobre-carbon-y-establecen-canal-de-dialogo-sobre-ia_0_gP6fg30bwd.html",
+          "fecha": "2026-09-26T07:30:11.000Z",
+          "oficial": false,
+          "aporte": "Detalla los acuerdos comerciales, tecnológicos y arancelarios alcanzados entre China y Estados Unidos durante la visita oficial."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "oz017v",
+          "titulo": "Estados Unidos y China abrirán un canal de comunicación para incidentes",
+          "fecha": "2026-09-26T05:00:18.000Z",
+          "ruta": "/nota/estados-unidos-y-china-abriran-un-canal-de-comunicacion-para-oz017v"
         }
       ],
       "verificacion": {
