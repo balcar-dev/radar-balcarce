@@ -516,6 +516,10 @@ test('la auditoría de voz: los clips usan la ruta de producción y dicen la dir
   assert.match(falla('Buen día. Radar Balcarce punto com punto ar'), /\.ar/);
   assert.match(falla('Buen día. Radar Balcarce.com.ar'), /\.ar/);
   assert.match(falla('Buen día, Balcarce. Chau.'), /Radar Balcarce/);
+  // El transcriptor no conoce "Balcarce" y escribe "Valcarce" o "Balcarse": suenan igual (auditoría del 26/09).
+  assert.deepEqual(revisarTranscripcion({ guion: p.texto, transcripcion: 'Buen día, Valcarce. Que tengan un buen día. Todo con más detalle en radarvalcarce.com.', saludo: 'manana' }), []);
+  assert.deepEqual(revisarTranscripcion({ guion: 'Seguimos en Radar Balcarce punto com.', transcripcion: 'Seguimos en radarvalcarse.com.' }), []);
+  assert.match(revisarTranscripcion({ guion: 'Seguimos en Radar Balcarce punto com.', transcripcion: 'Seguimos en radarvalcarse.com.ar' }).join(), /\.ar/);
   assert.match(falla('Buenas tardes, Balcarce. Radar Balcarce punto com.'), /saludo|otro horario/);
   assert.match(falla('Balcarce. Radar Balcarce punto com.'), /falta el saludo/);
   assert.match(falla('Buen día, Balcarce. Radar Balcarce.'), /punto com/);
@@ -549,4 +553,20 @@ test('los documentos se remiten a CRITERIO-REDES.md', () => {
     assert.ok(leer(f).includes('CRITERIO-REDES.md'), `${f} no menciona CRITERIO-REDES.md`);
   }
   assert.ok(momentoDeHora('10:00') === 'manana');
+});
+
+test('las transcripciones REALES de la primera auditoría (26/09): la voz dijo bien la dirección y el juez las aprueba', () => {
+  // Salieron de Gemini flash-lite oyendo la voz Kore: escribió "Valcarce" y
+  // "radarvalcarce.com" (suena igual), y NINGUNA trajo ".ar".
+  const reales = {
+    'podcast-manana': 'Buen día, Valcarce. Que tengan un buen día. Todo con más detalle en radarvalcarce.com.',
+    'podcast-tarde': 'Buenas tardes, Valcarce. Que la tarde les rinda. Todo lo demás lo encontrás en radarvalcarce.com.',
+    'podcast-noche': 'Buenas noches, Valcarce. A descansar, que mañana seguimos. Las notas completas en radarvalcarce.com.',
+    'clima-noche': 'Buenas noches, Valcarce, que descansen. Más información en radarvalcarce.com.',
+    'direccion-podcasts': 'Las notas completas en radarvalcarce.com. Todo con más detalle en radarvalcarce.com. Seguimos en radarvalcarce.com. Todo lo demás lo encontrás en radarvalcarce.com.',
+    'direccion-clima-y-semanales': 'Más información en radarvalcarse.com. Seguimos en radarvalcarse.com. Todo lo demás en radarvalcarse.com. Te esperamos en radarvalcarse.com.',
+  };
+  for (const c of clipsDeAuditoria()) {
+    assert.deepEqual(revisarTranscripcion({ guion: c.texto, transcripcion: reales[c.id], saludo: c.saludo }), [], c.id);
+  }
 });

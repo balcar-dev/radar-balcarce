@@ -54,6 +54,12 @@ export function variantesDeLaDireccion() {
 const sinAcentos = (t) => String(t).toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
 const llano = (t) => sinAcentos(t).replace(/[^a-z0-9.]+/g, ' ').trim();
 
+// En castellano la b y la v suenan igual, y la c ante e/i suena como la s: el
+// transcriptor, que no conoce "Balcarce", escribió "Valcarce" (auditoría del
+// 26/09) aunque la voz dijo bien el nombre. Se compara por cómo suena, no por
+// cómo se escribe. Sólo para el nombre del medio: lo de ".ar" se busca en lo escrito.
+const comoSuena = (t) => llano(t).replace(/v/g, 'b').replace(/z/g, 's').replace(/c(?=[ei])/g, 's');
+
 /** Cuántas veces aparece la dirección en la transcripción: dicha ("punto com")
  *  o escrita como la suele devolver el transcriptor ("radarbalcarce.com"). */
 export function cuantasDirecciones(transcripcion) {
@@ -74,7 +80,7 @@ export function revisarTranscripcion({ guion, transcripcion, saludo = null }) {
   const t = llano(transcripcion);
   if (!t) return ['no hubo transcripción'];
 
-  if (!/radar ?balcarce/.test(t)) fallas.push('no se oye "Radar Balcarce"');
+  if (!/radar ?balcarse/.test(comoSuena(transcripcion))) fallas.push('no se oye "Radar Balcarce"');
 
   const esperadas = (String(guion).match(/punto com/gi) ?? []).length;
   if (esperadas) {
