@@ -70,7 +70,13 @@ jobs:
       TZ: America/Argentina/Buenos_Aires
 
     steps:
+      # Siempre la última versión de main, no la que había cuando se DISPARÓ la
+      # corrida: si una corrida espera a la anterior (el candado "redes"), sin
+      # esto trabaja con el libro viejo y publica de nuevo lo que la anterior ya
+      # había publicado. Pasó el 25/09: el repaso de la mañana salió dos veces.
       - uses: actions/checkout@v4
+        with:
+          ref: main
 
       - uses: actions/setup-node@v4
         with:

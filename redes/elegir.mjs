@@ -251,7 +251,6 @@ export function mensajeDeNota(nota, sitio) {
   if (nota.textoRedes) {
     const partes = [String(nota.textoRedes).trim()];
     if (sitio) partes.push(`Leé la nota completa: ${enlaceDeNota(nota, sitio)}`);
-    partes.push('Resumen hecho con IA');
     const tags = hashtagsDe(nota);
     if (tags.length) partes.push(tags.join(' '));
     return partes.join('\n\n');
@@ -260,10 +259,8 @@ export function mensajeDeNota(nota, sitio) {
   const copete = recortar(nota.copete);
   if (copete) partes.push(copete);
   if (sitio) partes.push(`Leé la nota completa: ${enlaceDeNota(nota, sitio)}`);
-  // La IA la reescribió si tiene guion: el mismo criterio que la firma de la
-  // web (components/metadatos.js). `publicadaPor` queda vacío en lo que se
-  // reescribe en la nube, y el 25/09 esos posteos no decían que eran de IA.
-  if (nota.publicadaPor === 'ia' || nota.guion) partes.push('Resumen hecho con IA');
+  // Sin "Resumen hecho con IA" (desde el 26/09, a pedido de Hernán y Andrés):
+  // quién escribió la nota se dice en la nota, en la web.
   return partes.join('\n\n');
 }
 
@@ -381,7 +378,7 @@ export function elegirParaPodcast(notas, { cuantas = PIEZAS.notasPorPodcast, exc
  * ya publicado: no hay nada que la IA pueda inventar acá. La fuente no se
  * nombra nunca. Con menos de dos noticias no es un repaso: devuelve null.
  */
-export function guionRepaso(elegidas, { saludo, cierre = 'Todas las notas, en radar balcarce punto com.' }) {
+export function guionRepaso(elegidas, { saludo, cierre = 'Todas las notas, en Radar Balcarce.' }) {
   if (elegidas.length < PIEZAS.notasMinimasPodcast) return null;
   const marca = (i) => (i === elegidas.length - 1 ? 'Y para cerrar' : ['Primero', 'Después', 'Además'][i]);
   const cuerpo = elegidas.map((n, i) => {
@@ -399,7 +396,10 @@ export function guionRepaso(elegidas, { saludo, cierre = 'Todas las notas, en ra
 export function guionPodcast(notas, { cuantas = PIEZAS.notasPodcastNoche, fecha = new Date() } = {}) {
   const dia = new Intl.DateTimeFormat('es-AR', { weekday: 'long', timeZone: ZONA }).format(fecha);
   const elegidas = elegirParaPodcast(notas, { cuantas }, { ...REGLAS_PIEZAS, relevanciaParaHistoria: 0 });
-  return guionRepaso(elegidas, { saludo: `Buenas, Balcarce. Este es el repaso de este ${dia}.` });
+  return guionRepaso(elegidas, {
+    saludo: `Buenas noches, Balcarce. Este es el repaso de este ${dia}.`,
+    cierre: 'Todas las notas, en Radar Balcarce. Buenas noches, y hasta mañana.',
+  });
 }
 
 /** ¿Está prendido el interruptor de publicar? Acepta "si", "Si", "SÍ", "sí"…

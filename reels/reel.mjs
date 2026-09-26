@@ -8,7 +8,7 @@ import { promisify } from 'node:util';
 import ffmpeg from 'ffmpeg-static';
 import { decir, paraLeer, enCarteles } from './voz.mjs';
 import { aPng } from './placa.mjs';
-import { decirGemini } from './voz-gemini.mjs';
+import { decirGemini, INDICACION } from './voz-gemini.mjs';
 import { ARCHIVO as CORTINA, generar as generarCortina } from './cortina.mjs';
 
 const correr = promisify(execFile);
@@ -89,7 +89,7 @@ ${lineas.join('\n')}
 // pista de verdad (grabada o de una librería libre) y ahí se prende con
 // { musica: true }.
 export async function armarReel({
-  nombre, svg, guion, acento = '#E8A33C', musica = false,
+  nombre, svg, guion, acento = '#E8A33C', musica = false, indicacion = null,
   // Gemini por defecto: se nota bastante mejor que Edge, sobre todo en las
   // piezas que se repiten todos los días. El cupo gratis es de 10 pedidos
   // diarios y las piezas fijas son 4, así que entra holgado — y si se acaba,
@@ -115,7 +115,11 @@ export async function armarReel({
   let vozUsada = proveedor;
   if (proveedor === 'gemini') {
     try {
-      voz = await decirGemini(texto, mp3, { voz: vozGemini });
+      voz = await decirGemini(texto, mp3, {
+        voz: vozGemini,
+        // La de siempre más la del momento del día (mañana, tarde o noche).
+        ...(indicacion ? { indicacion: `${INDICACION} ${indicacion}` } : {}),
+      });
     } catch (e) {
       console.log(`\n    \x1b[33mGemini no respondió (${e.message.slice(0, 60)}…), va con Elena\x1b[0m`);
       voz = await decir(texto, mp3);

@@ -64,9 +64,18 @@ la portada y publica **una** nota si cumple todo esto:
 | Repetición | una nota sale una sola vez (lo garantiza `web/data/redes.json`) |
 | Tema | **no repite un tema publicado en las últimas 24 horas** (desde el 25/09; el 24/09 salieron tres posteos de la reapertura del autódromo en cuatro horas). Dos notas son del mismo tema si sus titulares comparten dos palabras que dicen algo, o una larga, o una palabra y un tema del sitio (`temaParecido`, `redes/elegir.mjs`) |
 
-El texto lleva el titular, el copete y **el enlace a la nota en nuestro sitio**, más `Resumen hecho con IA`
-cuando la redactó la IA. La regla de que cada nota diga quién la escribió
-vale también afuera del sitio. **La fuente no se nombra en las redes** (desde el 24/09): eso está en la nota de la web.
+El texto lleva el titular, el copete y **el enlace a la nota en nuestro sitio**
+(o el texto para redes que escribe la IA, con hashtags). **Ya no dice "Resumen
+hecho con IA"** (desde el 26/09, a pedido de Hernán y Andrés): quién escribió la
+nota se dice en la nota, en la web. **La fuente no se nombra en las redes**
+(desde el 24/09): eso está en la nota de la web.
+
+**Cada podcast habla según su hora** (26/09): el de la mañana saluda con "buen
+día" y cierra con "que tengan un buen día"; el de la tarde, "buenas tardes"; el
+de la noche, "buenas noches" y "hasta mañana", más pausado. Y **nunca dice la
+dirección del sitio en voz alta**: la voz agregaba un ".ar" que no existe. Cierra
+con "Todas las notas, en Radar Balcarce" y el enlace va escrito en el posteo
+(`reels/plan.mjs`, `redes/elegir.mjs`, con pruebas en `pruebas/redes.test.mjs`).
 
 **El enlace no se rompe** (desde el 25/09). La dirección de cada nota queda
 fija desde la primera vez que sale, aunque la IA cambie el titular después. Y

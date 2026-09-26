@@ -268,9 +268,9 @@ test('parecido de temas: ni tan estricto que deje pasar lo mismo, ni tan flojo q
 
 // -------------------------------------------------------------- el mensaje
 
-test('el mensaje lleva el enlace a la nota, dice cuándo lo resumió una IA y NO nombra la fuente', () => {
+test('el mensaje lleva el enlace a la nota, no dice "Resumen hecho con IA" y NO nombra la fuente', () => {
   const m = mensajeDeNota(nota({ id: 'abc', titulo: 'Un titular' }), 'https://radarbalcarce.com');
-  assert.equal(m, 'Un titular\n\nUn copete\n\nLeé la nota completa: https://radarbalcarce.com/nota/un-titular-abc\n\nResumen hecho con IA');
+  assert.equal(m, 'Un titular\n\nUn copete\n\nLeé la nota completa: https://radarbalcarce.com/nota/un-titular-abc');
   assert.ok(!/Fuente|Vanguardia/i.test(m), 'nombró la fuente en una red social');
 });
 
@@ -502,9 +502,30 @@ test('si no hay secciones distintas alcanza, se completa por puntaje', () => {
   assert.equal(elegirParaPodcast(notas, { cuantas: 3 }).length, 3);
 });
 
-test('el posteo de Facebook dice que es de IA también cuando la nota se reescribió en la nube (25/09)', () => {
-  const nota = { id: 'x1', titulo: 'Título', copete: 'Copete.', guion: 'Título', publicadaPor: null };
-  assert.match(mensajeDeNota(nota, 'https://radarbalcarce.com'), /Resumen hecho con IA/);
-  const sinIA = { id: 'x2', titulo: 'Título', copete: 'Copete.', publicadaPor: null };
-  assert.doesNotMatch(mensajeDeNota(sinIA, 'https://radarbalcarce.com'), /Resumen hecho con IA/);
+test('ningún posteo dice "Resumen hecho con IA", ni de nota reescrita ni con texto para redes (26/09)', () => {
+  const reescrita = { id: 'x1', titulo: 'Título', copete: 'Copete.', guion: 'Título', publicadaPor: 'ia' };
+  assert.doesNotMatch(mensajeDeNota(reescrita, 'https://radarbalcarce.com'), /con IA/);
+  const conTexto = { ...reescrita, textoRedes: 'Un texto para redes.' };
+  assert.doesNotMatch(mensajeDeNota(conTexto, 'https://radarbalcarce.com'), /con IA/);
+});
+
+// ---------------------------- los podcasts hablan según su hora (26/09)
+
+const dosNotas = [
+  { id: 'a', titulo: 'Primera nota del día', seccion: 'Balcarce', local: true, relevancia: 80, temas: [] },
+  { id: 'b', titulo: 'Segunda nota del día', seccion: 'Deportes', local: true, relevancia: 70, temas: [] },
+];
+
+test('el guion de un podcast nunca dice la dirección del sitio en voz alta (la voz agregaba ".ar")', () => {
+  const g = guionRepaso(dosNotas, { saludo: 'Buen día, Balcarce.' });
+  assert.ok(g, 'tiene que armar el guion');
+  assert.doesNotMatch(g, /punto\s+com|\.com|punto\s+ar/i);
+  assert.match(g, /Radar Balcarce\.$/);
+});
+
+test('el podcast de la noche saluda de noche, no de día', () => {
+  const g = guionPodcast(dosNotas, { fecha: new Date('2026-09-25T23:00:00Z') });
+  assert.match(g, /^Buenas noches, Balcarce/);
+  assert.match(g, /Buenas noches, y hasta mañana\.$/);
+  assert.doesNotMatch(g, /buen d[ií]a/i);
 });
