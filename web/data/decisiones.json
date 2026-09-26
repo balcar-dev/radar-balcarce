@@ -1,5 +1,5 @@
 {
-  "exportado": "2026-09-26T04:12:31.826Z",
+  "exportado": "2026-09-26T04:22:53.155Z",
   "decisiones": {
     "1951120": {
       "estado": "automatica",
@@ -21041,6 +21041,117 @@
         "nivel": "MEDIA",
         "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
         "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "epzsa5": {
+      "estado": "automatica",
+      "titulo": "Reinauguran el autódromo Juan Manuel Fangio en Balcarce",
+      "copete": "El gobernador Axel Kicillof y el intendente Esteban Reino encabezaron la reapertura del autódromo Juan Manuel Fangio tras quince años sin competencias nacionales. El circuito vuelve a recibir carreras este fin de semana con las categorías TC Pick Up, TC Pista Pick Up y Turismo Special de la Costa.",
+      "cuerpo": "El acto contó con la presencia del ministro de Gobierno bonaerense, Carlos Bianco; el subsecretario de Deportes, Cristian Cardozo; el presidente de la ACTC, Hugo Mazzacane; el exsubsecretario de Transporte provincial, Alejo Supply, y representantes de la Fundación Fangio.\n\nLa recuperación del trazado comenzó en 2023 con trabajos de puesta en valor y reacondicionamiento para cumplir con las exigencias actuales de seguridad, en un proyecto gestado años atrás que requirió precisión técnica y una decisión política para evitar que el predio continuara inactivo. Según indicó previamente el jefe comunal, la intervención constituye una de las obras más grandes realizadas en el distrito.\n\nEl predio abrió sus puertas al público a las 8 de la mañana para dar inicio a una nueva etapa deportiva y turística en la región, que incluirá este fin de semana el regreso de las grandes categorías nacionales al escenario serrano.",
+      "guion": "Reinauguran el autódromo Juan Manuel Fangio en Balcarce",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-26T04:22:53.108Z",
+      "claves": [
+        "El gobernador Kicillof y el intendente Reino encabezaron la ceremonia oficial.",
+        "El autódromo vuelve a recibir competencias nacionales tras quince años de inactividad.",
+        "Las obras de puesta en valor en el circuito comenzaron en 2023.",
+        "La actividad deportiva se desarrollará durante el fin de semana con categorías como TC Pick Up."
+      ],
+      "noConfirmado": [
+        "No trascendieron detalles sobre los costos totales de la obra de reacondicionamiento ni montos específicos de inversión provincial."
+      ],
+      "textoRedes": "El autódromo Juan Manuel Fangio volvió a abrir sus puertas este viernes tras quince años sin competencias nacionales. El gobernador Axel Kicillof y el intendente Esteban Reino encabezaron la reinauguración del circuito que este fin de semana recibe a las TC Pick Up.",
+      "etiquetas": [
+        "autodromo Juan Manuel Fangio",
+        "Balcarce",
+        "Axel Kicillof",
+        "Esteban Reino",
+        "automovilismo",
+        "TC Pick Up"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Diario La Vanguardia",
+          "enlace": "https://www.diariolavanguardia.com/noticias/44907-con-la-presencia-de-reino-y-kicillof-se-reinauguro-el-autodromo-juan-manuel-fangio/",
+          "fecha": "2026-09-26T01:22:00.000Z",
+          "oficial": false,
+          "aporte": "Detalló los funcionarios presentes, las declaraciones de Kicillof y Reino, y el inicio de las obras en 2023."
+        },
+        {
+          "medio": "0223 (Mar del Plata)",
+          "enlace": "https://www.0223.com.ar/nota/2026-9-25-22-22-0-kicillof-encabezo-la-reinauguracion-del-autodromo-juan-manuel-fangio",
+          "fecha": "2026-09-26T01:22:00.000Z",
+          "oficial": false,
+          "aporte": "Mencionó la participación del ministro de Gobierno, Carlos Bianco, en la inauguración."
+        },
+        {
+          "medio": "Campeones",
+          "enlace": "https://campeones.com.ar/se-oficializo-la-reinauguracion-del-autodromo-juan-manuel-fangio-de-balcarce/",
+          "fecha": "2026-09-26T00:18:14.000Z",
+          "oficial": false,
+          "aporte": "Indicó datos sobre el corte de cintas en la recta principal del trazado histórico."
+        },
+        {
+          "medio": "La Noticia 1",
+          "enlace": "https://www.lanoticia1.com/noticia/este-circuito-se-paga-solo-kicillof-participo-de-la-reinauguracion-del-autodromo-juan-manuel-fangio-en-balcarce",
+          "fecha": "2026-09-25T21:24:13.000Z",
+          "oficial": false,
+          "aporte": "Confirmó el desarrollo de la ceremonia oficial sobre la recta principal tras más de 15 años."
+        },
+        {
+          "medio": "Radio Gabal (FM 104.1)",
+          "enlace": "https://www.radiogabal.com.ar/index.php/politica/y-un-dia-quedo-reinaugurado-el-autodromo-juan-manuel-fangio",
+          "fecha": "2026-09-25T20:35:22.000Z",
+          "oficial": false,
+          "aporte": "Informó que las competencias deportivas se desarrollarán durante este fin de semana."
+        },
+        {
+          "medio": "Puntonueve (FM 100.9)",
+          "enlace": "https://puntonueve.com.ar/se-realizo-acto-por-la-reinauguracion-del-autodromo-juan-manuel-fangio/",
+          "fecha": "2026-09-25T20:27:43.000Z",
+          "oficial": false,
+          "aporte": "Aportó el dato de que el acto se realizó en la previa de la octava fecha de las TC Pick Up."
+        },
+        {
+          "medio": "Municipalidad de Balcarce",
+          "enlace": "https://balcarce.gob.ar/2026/09/24/reapertura-del-autodromo-juan-manuel-fangio-informacion-para-los-asistentes/",
+          "fecha": "2026-09-25T00:03:22.000Z",
+          "oficial": true,
+          "aporte": "Precisó que las puertas del predio abrieron a las 8 de la mañana del viernes."
+        },
+        {
+          "medio": "LU9 Mar del Plata",
+          "enlace": "https://www.lu9mardelplata.com.ar/reabre-el-autodromo-juan-manuel-fangio-de-balcarce-jamas-vi-el-autodromo-como-esta-hoy-dijo-esteban-reino",
+          "fecha": "2026-09-24T12:44:10.000Z",
+          "oficial": false,
+          "aporte": "Agregó que el autódromo recibirá al Turismo Special de la Costa y las declaraciones del intendente sobre la magnitud de la obra."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1rzhnh1",
+          "titulo": "Kicillof reinaugura el autódromo Juan Manuel Fangio en Balcarce",
+          "fecha": "2026-09-25T22:52:06.000Z",
+          "ruta": "/nota/kicillof-reinaugura-el-autodromo-juan-manuel-fangio-en-balcarce-1rzhnh1"
+        },
+        {
+          "id": "1e6tvp9",
+          "titulo": "Kicillof encabeza la reapertura del autódromo Juan Manuel Fangio en Balcarce",
+          "fecha": "2026-09-25T10:15:00.000Z",
+          "ruta": "/nota/el-gobernador-bonaerense-encabeza-la-reapertura-del-autodromo-en-1e6tvp9"
+        },
+        {
+          "id": "5bq6e6",
+          "titulo": "Reabre el autódromo Juan Manuel Fangio de Balcarce: ‘Jamás vi el autódromo como está hoy’, dijo Esteban Reino",
+          "fecha": "2026-09-24T12:44:10.000Z",
+          "ruta": "/nota/reabre-el-autodromo-juan-manuel-fangio-de-balcarce-jamas-vi-el-5bq6e6"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo confirman 7 medios independientes y Municipalidad de Balcarce.",
+        "sugeridoPorIA": "ALTA"
       }
     }
   },
