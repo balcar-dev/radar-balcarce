@@ -1,0 +1,21 @@
+# Mira, sólo mirando, qué hay publicado de verdad en la página de Facebook
+# (posteos, reels e historias). Se corre a mano: Actions → Ver Facebook → Run workflow.
+name: Ver Facebook
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  ver:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - run: node redes/ver-facebook.mjs
+        env:
+          META_TOKEN: ${{ secrets.META_TOKEN }}
