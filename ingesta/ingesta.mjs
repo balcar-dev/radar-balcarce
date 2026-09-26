@@ -1019,7 +1019,9 @@ export function aplicarCupos(portada) {
     const cupo = CUPO_DE_AFUERA[n.seccion] ?? CUPO_POR_DEFECTO;
     if (usados[n.seccion] > cupo) {
       n.semaforo = 'amarillo';
-      n.motivo = `pasó el cupo de ${n.seccion} de afuera (${cupo} por vuelta)`;
+      n.motivo = cupo === 0
+        ? `${n.seccion} de afuera: la sección es sólo de Balcarce y la zona`
+        : `pasó el cupo de ${n.seccion} de afuera (${cupo} por vuelta)`;
     }
   }
   return portada;

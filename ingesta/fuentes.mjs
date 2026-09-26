@@ -681,46 +681,9 @@ export const FUENTES_NACIONALES = [
     maxItems: 2,
     temas: ['cultura', 'arte', 'libros'],
   },
-  // Policiales: lo grave (muertes, chicos, delitos sexuales) lo frena el
-  // semáforo como siempre; acá entra lo que el semáforo deja pasar. Sin
-  // Clarín Policiales (pocas notas por día y resumen de una línea).
-  {
-    id: 'lanacion-seguridad',
-    nombre: 'La Nación · Seguridad',
-    medio: 'La Nación',
-    url: 'https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/seguridad/',
-    tipo: 'rss',
-    alcance: 'pais',
-    seccion: 'Policiales',
-    peso: 13,
-    maxItems: 2,
-    temas: ['policiales', 'seguridad'],
-  },
-  {
-    id: 'tn-policiales',
-    nombre: 'TN · Policiales',
-    medio: 'TN',
-    url: 'https://tn.com.ar/arc/outboundfeeds/rss/category/policiales/?outputType=xml',
-    tipo: 'rss',
-    alcance: 'pais',
-    seccion: 'Policiales',
-    peso: 12,
-    maxItems: 2,
-    temas: ['policiales'],
-  },
-  {
-    id: 'infobae-policiales',
-    nombre: 'Infobae · Policiales',
-    medio: 'Infobae',
-    url: 'https://www.infobae.com/arc/outboundfeeds/rss/category/sociedad/policiales/?outputType=xml',
-    tipo: 'rss',
-    alcance: 'pais',
-    seccion: 'Policiales',
-    peso: 13,
-    maxItems: 2,
-    temas: ['policiales'],
-    nota: 'Con el texto completo. La categoría /policiales/ a secas viene vacía: el feed es el de Sociedad > Policiales.',
-  },
+  // Policiales: sin fuentes nacionales (26/09). La sección es sólo de Balcarce y la
+  // zona; La Nación Seguridad, TN e Infobae Policiales traían crímenes de otros
+  // lugares y se sacaron. Ver CRITERIO-EDITORIAL.md § 2.
   // Tecnología (y ciencia): la sección se confirma con el título, así que lo
   // que no habla de tecnología se clasifica por lo que dice.
   {
@@ -888,7 +851,9 @@ export const REGLAS_SECCION = [
     seccion: 'Policiales',
     palabras: ['policía', 'policia', 'detenido', 'detenidos', 'robo', 'hurto', 'allanamiento',
       'fiscalía', 'fiscalia', 'homicidio', 'causa judicial', 'juzgado', 'aprehendido',
-      'siniestro vial', 'choque', 'accidente'],
+      'siniestro vial', 'choque', 'accidente',
+      // 26/09: los hechos locales que las palabras de arriba no alcanzaban.
+      'incendio', 'asalto', 'ladrón', 'ladron', 'robaron', 'estafa', 'alcoholemia', 'persecución'],
   },
   {
     seccion: 'Deportes',

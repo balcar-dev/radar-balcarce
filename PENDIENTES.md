@@ -115,6 +115,16 @@ mañana".
 
 ## D. Editorial y contenido
 
+- **Fuente local de Policiales (26/09).** Hecho: se sacaron las 3 fuentes nacionales;
+  cupo de afuera 0; palabras locales nuevas (incendio, asalto, ladrón, robaron,
+  estafa, alcoholemia, persecución). Revisado y sin feed usable: Bomberos
+  Voluntarios (sin sitio propio; salen en La Vanguardia y Puntonueve), Policía
+  Comunal / Jefatura / Defensa Civil (categorías del WordPress de la Municipalidad:
+  1 a 18 notas en total y casi ninguna policial; ya entran por el feed general del
+  municipio). Falta: seguir cazando fuentes (Facebook de la Comisaría y de Bomberos
+  no tienen feed; Tránsito publica operativos cada tanto en la categoría Movilidad
+  y Control Urbano).
+
 29. Mirar cómo salen las notas reescritas con IA (cuerpo distinto del copete,
     sin inventos) y ajustar el prompt si hace falta: se corrige en
     `CRITERIO-EDITORIAL.md`, sección 12.

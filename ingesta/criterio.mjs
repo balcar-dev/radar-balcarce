@@ -128,7 +128,8 @@ export const CUPO_DE_AFUERA = {
   Economía: 12,
   Tecnología: 8,
   Política: 8,
-  Policiales: 8,
+  // 26/09: Policiales es sólo de Balcarce y la zona. Lo de afuera no sale solo.
+  Policiales: 0,
   Automovilismo: 6,
   // 26/09: Cultura y agenda tenía el cupo de todas (15); con los espectáculos de
   // los diarios nacionales, la agenda de Balcarce quedaría tapada por la farándula.

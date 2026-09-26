@@ -16,10 +16,10 @@ falta) e `INVESTIGACION.md` (lo legal, con fuentes). La lista completa está en
 ## 1. El recorrido de una noticia
 
 ```
-61 fuentes  →  agrupar  →  clasificar  →  puntuar  →  semáforo  →  panel  →  web / reels
+58 fuentes  →  agrupar  →  clasificar  →  puntuar  →  semáforo  →  panel  →  web / reels
 ```
 
-1. **Buscar.** Cada 30 minutos GitHub Actions lee las 61 fuentes (locales,
+1. **Buscar.** Cada 30 minutos GitHub Actions lee las 58 fuentes (locales,
    regionales y nacionales; la lista está en `ingesta/fuentes.mjs`), con la PC
    apagada; el panel, mientras está prendido, también busca cada 10. La mayoría tiene RSS; El Diario Balcarce
    no, así que se raspa la portada y después se entra a cada nota para sacar
@@ -33,16 +33,16 @@ falta) e `INVESTIGACION.md` (lo legal, con fuentes). La lista completa está en
    (`PALABRAS_ZONA`, en `ingesta/fuentes.mjs`). Pesan poco para no ganarle a lo
    local, y lo de afuera que nombra a Balcarce va a la sección Balcarce.
    **Secciones flacas (26/09).** Hernán y Andrés piden tres notas por sección
-   en la portada. Por eso hay 16 fuentes más, todas de afuera y con la sección
+   en la portada. Por eso hay 13 fuentes más (16 hasta que se sacaron las de Policiales), todas de afuera y con la sección
    fija (el feed ya viene separado por tema), peso 11 a 14 y `maxItems` de 2 o 3:
    Cultura y agenda (Infobae Teleshow y Cultura, Ámbito y Minuto Uno
    Espectáculos, La Nación Cultura: lo que más se lee en los diarios
-   nacionales), Policiales (La Nación Seguridad, TN e Infobae Policiales),
+   nacionales),
    Tecnología (La Nación Tecnología, Hipertextual, Xataka), Agro (Clarín Rural,
    Infocampo, Bichos de Campo, INTA) y Economía (Perfil). El piso y el cupo
    de cada sección (`ingesta/criterio.mjs`) frenan lo de afuera, y el semáforo
-   sigue mandando. Policiales es la que menos rinde: casi todo lo que traen
-   esos diarios es un crimen o una causa con acusados, y espera a una persona.
+   sigue mandando. Policiales no tiene fuentes de afuera: es sólo de Balcarce y la zona
+   (CRITERIO-EDITORIAL.md § 2).
    Además, la IA reescribe primero las notas de la sección que menos notas
    escritas tiene (`ordenarParaReescribir`, `reels/reescritura.mjs`), sin gastar
    más pedidos.

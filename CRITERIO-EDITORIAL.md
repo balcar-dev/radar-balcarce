@@ -93,6 +93,13 @@ la sección con menos notas escritas.
 | Policiales | Sí en la web; **en las redes, nunca sin una persona** |
 | País | No: espera a una persona |
 
+**Policiales es sólo de Balcarce y la zona** (26/09; pedido de Hernán y Andrés:
+"que sean policiales de Balcarce"): el partido, Napaleofú, Los Pinos, Ramos
+Otero y las rutas 226 y 55 dentro del partido. No hay fuentes nacionales de
+Policiales, y un policial de otro lugar que llegue por una fuente general no sale
+solo (cupo de afuera 0: queda amarillo, esperando a una persona). En un pueblo
+son pocas notas por semana, y es lo normal. El semáforo no cambia.
+
 "Sale sola" quiere decir que no espera a nadie **si el semáforo da verde**
 (sección 3) y si tiene cuerpo (sección 4).
 
@@ -622,7 +629,7 @@ instrucción de la IA (70, 90, 100 a 180…) también se controlan.
 | Cupo de lo de afuera: Economía | 12 | `CUPO_DE_AFUERA.Economía` |
 | Cupo de lo de afuera: Tecnología | 8 | `CUPO_DE_AFUERA.Tecnología` |
 | Cupo de lo de afuera: Política | 8 | `CUPO_DE_AFUERA.Política` |
-| Cupo de lo de afuera: Policiales | 8 | `CUPO_DE_AFUERA.Policiales` |
+| Cupo de lo de afuera: Policiales | 0 | `CUPO_DE_AFUERA.Policiales` |
 | Cupo de lo de afuera: Automovilismo | 6 | `CUPO_DE_AFUERA.Automovilismo` |
 | Cupo de lo de afuera: Cultura y agenda | 8 | `CUPO_DE_AFUERA.Cultura y agenda` |
 | Cupo de lo de afuera: el resto de las secciones | 15 | `CUPO_POR_DEFECTO` |

@@ -28,9 +28,6 @@ const NUEVAS = {
   'ambito-espectaculos': 'Cultura y agenda',
   'minutouno-espectaculos': 'Cultura y agenda',
   'lanacion-cultura': 'Cultura y agenda',
-  'lanacion-seguridad': 'Policiales',
-  'tn-policiales': 'Policiales',
-  'infobae-policiales': 'Policiales',
   'lanacion-tecnologia': 'Tecnología',
   hipertextual: 'Tecnología',
   xataka: 'Tecnología',
@@ -43,7 +40,7 @@ const NUEVAS = {
 
 // ------------------------------------------------------------ 1. las fuentes
 
-test('las 16 fuentes nuevas están bien formadas y pesan poco', () => {
+test('las 13 fuentes nuevas están bien formadas y pesan poco', () => {
   const ids = TODAS_LAS_FUENTES.map((f) => f.id);
   assert.equal(new Set(ids).size, ids.length, 'hay ids repetidos');
   for (const [id, seccion] of Object.entries(NUEVAS)) {
@@ -62,8 +59,8 @@ test('las 16 fuentes nuevas están bien formadas y pesan poco', () => {
   }
 });
 
-test('el total de fuentes es el que dicen los documentos (61)', () => {
-  assert.equal(TODAS_LAS_FUENTES.length, 61);
+test('el total de fuentes es el que dicen los documentos (58)', () => {
+  assert.equal(TODAS_LAS_FUENTES.length, 58);
 });
 
 // ------------------------------------------------ 2. la sección de cada título
@@ -81,9 +78,6 @@ test('los títulos reales de las fuentes nuevas caen en la sección buscada', ()
     ['ambito-espectaculos', 'Cinco películas y tres series argentinas para ver esta semana', 'Cultura y agenda'],
     ['minutouno-espectaculos', 'Agustín "Rada" Aristarán brilla en "Chanta", una obra que invita a reír y reflexionar', 'Cultura y agenda'],
     ['lanacion-cultura', 'Con “The Bunnyman”, un guardián mitad humano y mitad conejo, Johnny Depp debuta como escultor', 'Cultura y agenda'],
-    ['infobae-policiales', 'Hallaron más de 1.500 kilos de marihuana ocultos entre muebles en un camión proveniente de Brasil', 'Policiales'],
-    ['lanacion-seguridad', 'Bajaron en Vicente López los delitos cometidos por motochorros', 'Policiales'],
-    ['tn-policiales', 'Video: un taxista se metió en una protesta de choferes de aplicaciones y protagonizó una pelea', 'Policiales'],
     ['clarin-rural', 'A la espera de El Niño: la primavera comienza con el 70% entre escasez y sequía en la principal zona', 'Agro'],
     ['infocampo', 'Exportaciones de carne: a contramano del Mercosur, Argentina crece y gana protagonismo', 'Agro'],
     ['bichosdecampo', 'El cerdo se agranda en Argentina: la producción de carne porcina creció 12,4%', 'Agro'],
@@ -112,10 +106,10 @@ test('los pisos y cupos nuevos son los que dice el criterio', () => {
   assert.equal(PISO_DE_AFUERA.Agro, 38);
   assert.equal(PISO_DE_AFUERA.Tecnología, 34);
   assert.equal(CUPO_DE_AFUERA['Cultura y agenda'], 8);
-  // Lo que no se tocó: Deportes sigue subiendo, Policiales sigue conservador.
+  // Lo que no se tocó: Deportes sigue subiendo. Policiales de afuera: cupo 0 (26/09).
   assert.equal(PISO_DE_AFUERA.Deportes, 62);
   assert.equal(PISO_DE_AFUERA.Policiales, 40);
-  assert.equal(CUPO_DE_AFUERA.Policiales, 8);
+  assert.equal(CUPO_DE_AFUERA.Policiales, 0);
   assert.equal(pisoDe('Cultura y agenda'), 38);
   assert.equal(pisoDe('Servicios'), PISO_POR_DEFECTO);
 });
@@ -144,6 +138,34 @@ test('el cupo de Cultura y agenda de afuera es 8: la nota 9 espera, y Balcarce n
   assert.match(portada[8].motivo, /cupo de Cultura y agenda de afuera \(8 por vuelta\)/);
   assert.equal(portada.at(-1).semaforo, 'verde');
   assert.ok(CUPO_DE_AFUERA['Cultura y agenda'] < CUPO_POR_DEFECTO);
+});
+
+// ------------------------------- Policiales: sólo Balcarce y la zona (26/09)
+
+test('no quedan fuentes nacionales de Policiales', () => {
+  for (const f of TODAS_LAS_FUENTES) {
+    if (f.alcance === 'pais') assert.notEqual(f.seccion, 'Policiales', f.id);
+  }
+});
+
+test('Policiales de afuera no sale solo (cupo 0); lo de Balcarce y la zona no cuenta', () => {
+  const portada = [
+    { id: 'a', seccion: 'Policiales', semaforo: 'verde', local: false, nombraBalcarce: false },
+    { id: 'b', seccion: 'Policiales', semaforo: 'verde', local: true, nombraBalcarce: false },
+    { id: 'c', seccion: 'Policiales', semaforo: 'verde', local: false, nombraBalcarce: true },
+  ];
+  aplicarCupos(portada);
+  assert.equal(portada[0].semaforo, 'amarillo');
+  assert.match(portada[0].motivo, /sólo de Balcarce/);
+  assert.equal(portada[1].semaforo, 'verde');
+  assert.equal(portada[2].semaforo, 'verde');
+});
+
+test('títulos reales: el crimen de otro lugar espera; el robo en Balcarce pasa el filtro de sección', () => {
+  const crimen = deAfuera('Mató a su mujer embarazada, se escapó de la cárcel, estuvo 22 años prófugo y ahora ordenaron su captura', 'Policiales');
+  assert.equal(semaforo(crimen, 'Policiales', 60).color, 'amarillo');
+  const robo = deAfuera('Investigan un robo en una casa de Balcarce', 'Policiales', { alcance: 'local', local: true, nombraBalcarce: true });
+  assert.equal(clasificar({ ...RSS(robo.titulo), alcance: 'local', seccionFuente: 'Policiales' }), 'Policiales');
 });
 
 // --------------------------------------------- 4. el semáforo sigue mandando
