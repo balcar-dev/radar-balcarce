@@ -1,6 +1,65 @@
 {
-  "generado": "2026-09-26T21:00:37.235Z",
+  "generado": "2026-09-26T21:30:38.504Z",
   "notas": [
+    {
+      "id": "17bo7cs",
+      "titulo": "Las elecciones en Estados Unidos definen el Senado",
+      "copete": "Las encuestas en Texas muestran una competencia ajustada para el Senado federal de cara a los comicios legislativos de noviembre de 2026 en Estados Unidos.",
+      "cuerpo": "Las elecciones legislativas de medio término en Estados Unidos, previstas para el martes tres de noviembre de dos mil veintiséis, generan expectativa por su impacto en la composición del Congreso y en la gestión del presidente Donald Trump. En Texas, la disputa por un escaño en el Senado federal enfrenta al demócrata James Talarico con el fiscal general republicano Ken Paxton.\n\nEl escaño actualmente pertenece a John Cornyn, quien fue derrotado por Paxton en las primarias republicanas. Pese a la ventaja parcial del candidato demócrata, el cincuenta y dos por ciento de los electores estima que el postulante republicano se impone en los sondeos generales de un distrito de fuerte tradición conservadora.\n\nAdemás de la contienda senatorial, el relevamiento abordó la elección para la gobernación de Texas.",
+      "guion": "Las elecciones en Estados Unidos definen el Senado",
+      "seccion": "Política",
+      "medios": [
+        "La Nación"
+      ],
+      "enlace": "https://www.lanacion.com.ar/estados-unidos/texas/las-encuestas-son-claras-en-texas-talarico-vs-paxton-y-quien-gana-las-midterm-elections-2026-en-usa-nid26092026/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-26T21:14:58.000Z",
+      "sinFecha": false,
+      "visto": "2026-09-26T07:30:27.161Z",
+      "relevancia": 43,
+      "local": false,
+      "publicadaPor": "ia",
+      "publicadaCuando": "2026-09-26T08:03:45.541Z",
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Las elecciones legislativas de Estados Unidos se realizarán en noviembre.",
+        "Talarico y Paxton compiten por un escaño en el Senado por Texas.",
+        "Una encuesta ubica al candidato demócrata con ventaja sobre el postulante republicano.",
+        "Abbott y Hinojosa disputan la gobernación de Texas."
+      ],
+      "seSabe": [
+        "Las elecciones generales se celebrarán el martes 3 de noviembre de 2026 en Estados Unidos.",
+        "James Talarico y Ken Paxton compiten por un escaño en el Senado federal por Texas.",
+        "Una encuesta de Marist Poll muestra una ventaja de seis puntos a favor de Talarico frente a Paxton.",
+        "Greg Abbott y Gina Hinojosa disputan la gobernación del mismo estado."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Las encuestas en Texas muestran una competencia ajustada para el Senado federal de cara a los comicios legislativos de noviembre de 2026 en Estados Unidos.",
+      "etiquetas": [
+        "elecciones",
+        "Estados Unidos",
+        "Texas",
+        "Senado"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/estados-unidos/texas/las-encuestas-son-claras-en-texas-talarico-vs-paxton-y-quien-gana-las-midterm-elections-2026-en-usa-nid26092026/",
+          "fecha": "2026-09-26T07:20:00.000Z",
+          "oficial": false,
+          "aporte": "Aportó los detalles sobre las encuestas, los candidatos y el contexto político de las elecciones de medio término en Texas."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "las-elecciones-en-estados-unidos-definen-el-futuro-del-senado"
+    },
     {
       "id": "epzsa5",
       "titulo": "Reinauguran el autódromo Juan Manuel Fangio en Balcarce",
@@ -4277,11 +4336,11 @@
     }
   ],
   "secciones": [
+    "Política",
     "Automovilismo",
     "Balcarce",
     "Cultura y agenda",
     "Tecnología",
-    "Política",
     "Economía",
     "Deportes",
     "Agro"
@@ -4310,9 +4369,9 @@
   ],
   "clima": {
     "ahora": {
-      "temp": 14,
-      "sensacion": 11,
-      "humedad": 63,
+      "temp": 13,
+      "sensacion": 9,
+      "humedad": 66,
       "viento": 16,
       "rumbo": "E",
       "cielo": "Despejado",
@@ -4704,18 +4763,6 @@
       "motivo": "necesita ojo humano: \"murió\""
     },
     {
-      "id": "8y3l9f",
-      "titulo": "Con un doblete de Di María, Rosario Central le da vuelta a…",
-      "seccion": "País",
-      "motivo": "sección general, sin regla verde"
-    },
-    {
-      "id": "aj6czm",
-      "titulo": null,
-      "seccion": "Policiales",
-      "motivo": "necesita ojo humano: \"homicidio\""
-    },
-    {
       "id": "5vh7nw",
       "titulo": null,
       "seccion": "Policiales",
@@ -4734,16 +4781,28 @@
       "motivo": "sección general, sin regla verde"
     },
     {
-      "id": "1m7xi9h",
-      "titulo": "Ogura supera sin problemas su retorno en Austria y espera…",
-      "seccion": "Automovilismo",
-      "motivo": "necesita ojo humano: \"denuncia\""
+      "id": "8y3l9f",
+      "titulo": null,
+      "seccion": "Policiales",
+      "motivo": "necesita ojo humano: \"detenido\""
+    },
+    {
+      "id": "aj6czm",
+      "titulo": null,
+      "seccion": "Policiales",
+      "motivo": "necesita ojo humano: \"homicidio\""
     },
     {
       "id": "2mlx8w",
       "titulo": "Derrota de Cerúndolo",
       "seccion": "Región",
       "motivo": "sección general, sin regla verde"
+    },
+    {
+      "id": "13pxtwm",
+      "titulo": "Elecciones Brasil 2026: quiénes son los candidatos a…",
+      "seccion": "Automovilismo",
+      "motivo": "internacional: sin relación con Balcarce"
     },
     {
       "id": "s98u2k",
@@ -4764,12 +4823,6 @@
       "motivo": "necesita ojo humano: \"investigación\""
     },
     {
-      "id": "15di1xv",
-      "titulo": null,
-      "seccion": "Tecnología",
-      "motivo": "necesita ojo humano: \"víctima\""
-    },
-    {
       "id": "1pajtq0",
       "titulo": null,
       "seccion": "Policiales",
@@ -4782,16 +4835,10 @@
       "motivo": "necesita ojo humano: \"investigación\""
     },
     {
-      "id": "6sgw5c",
-      "titulo": "El adiós a Oscar González Oro: lo cremarán el lunes en…",
-      "seccion": "Cultura y agenda",
-      "motivo": "necesita ojo humano: \"murió\""
-    },
-    {
-      "id": "jqw8gz",
-      "titulo": null,
-      "seccion": "Policiales",
-      "motivo": "Policiales de afuera: la sección es sólo de Balcarce y la zona"
+      "id": "1udvo3m",
+      "titulo": "La Corte Suprema definió que prosiga la doble…",
+      "seccion": "Política",
+      "motivo": "necesita ojo humano: \"investigación\""
     },
     {
       "id": "1m0q6k7",
@@ -4800,34 +4847,34 @@
       "motivo": "necesita ojo humano: \"murió\""
     },
     {
+      "id": "bsjrtt",
+      "titulo": null,
+      "seccion": "Policiales",
+      "motivo": "necesita ojo humano: \"investigación\""
+    },
+    {
+      "id": "1m7xi9h",
+      "titulo": "Ogura supera sin problemas su retorno en Austria y espera…",
+      "seccion": "Automovilismo",
+      "motivo": "necesita ojo humano: \"denuncia\""
+    },
+    {
       "id": "njnvp4",
       "titulo": "Francisco Cerúndolo perdió con el noruego Casper Ruud en…",
       "seccion": "País",
       "motivo": "parece promoción, no noticia: \"sortea\""
     },
     {
-      "id": "1ow5umt",
-      "titulo": "Trump rechaza propuesta de Irán para reabrir estrecho de…",
-      "seccion": "Política",
-      "motivo": "internacional: sin relación con Balcarce"
-    },
-    {
-      "id": "a537y8",
-      "titulo": "El voto femenino será decisivo en la ajustada disputa…",
+      "id": "cm1252",
+      "titulo": "Quiniela de Santa Fe: resultado del sorteo de la Nocturna…",
       "seccion": "País",
-      "motivo": "internacional: sin relación con Balcarce"
+      "motivo": "parece promoción, no noticia: \"sorteo\""
     },
     {
       "id": "ckrie2",
       "titulo": "La salud de Daniel Osvaldo: su familia reveló que \"está…",
       "seccion": "Deportes",
       "motivo": "necesita ojo humano: \"hospital\""
-    },
-    {
-      "id": "go2lja",
-      "titulo": "El decomiso de US$ 645 millones de Cristina Kirchner y sus…",
-      "seccion": "Política",
-      "motivo": "necesita ojo humano: \"acusado\""
     },
     {
       "id": "2kpd4g",
@@ -4848,5 +4895,5 @@
       "motivo": "necesita ojo humano: \"hospital\""
     }
   ],
-  "esperandoCuerpo": 64
+  "esperandoCuerpo": 68
 }
