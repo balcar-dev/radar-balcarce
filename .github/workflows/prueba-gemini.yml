@@ -1,5 +1,6 @@
 # Un pedido mínimo con la clave gratis de redacción, para saber si anda.
 # Se corre a mano (Actions → Prueba de Gemini → Run workflow).
+# Costo: cero (un pedido con la clave gratis de redacción).
 name: Prueba de Gemini
 
 on:

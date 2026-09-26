@@ -1,6 +1,7 @@
 # Mide las estadísticas ahora y muestra los números y los permisos que faltan.
 # No guarda nada ni manda WhatsApp. Se corre a mano (Actions → Prueba de
 # estadísticas → Run workflow), por ejemplo después de cargar un token nuevo.
+# Costo: cero (sólo lee las estadísticas de Meta y de Cloudflare).
 name: Prueba de estadísticas
 
 on:

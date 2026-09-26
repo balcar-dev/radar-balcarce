@@ -29,3 +29,11 @@ respaldos/
 # Base comercial: el archivo crudo de OpenStreetMap y la vista previa se regeneran.
 comercial/datos/osm-crudo.json
 comercial/salida/
+
+# Restos de trabajo local
+*.bak
+*.tmp
+*.orig
+Thumbs.db
+.DS_Store
+scratch/

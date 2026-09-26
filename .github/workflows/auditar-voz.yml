@@ -26,6 +26,8 @@ jobs:
   auditar:
     runs-on: ubuntu-latest
     timeout-minutes: 15
+    env:
+      TZ: America/Argentina/Buenos_Aires # el saludo depende de la hora de Balcarce
     steps:
       - uses: actions/checkout@v4
 

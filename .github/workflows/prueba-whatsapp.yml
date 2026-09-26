@@ -1,5 +1,6 @@
 # Manda un WhatsApp de prueba y muestra lo que contestó CallMeBot.
 # Se corre a mano (Actions → Prueba de WhatsApp → Run workflow).
+# Costo: cero (CallMeBot es gratis).
 name: Prueba de WhatsApp
 
 on:

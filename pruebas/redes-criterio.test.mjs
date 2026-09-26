@@ -37,6 +37,7 @@ import {
   guionRepaso, guionPodcast, mensajeDeNota, mensajeParaInstagram, FRASES_DEL_ENLACE,
 } from '../redes/elegir.mjs';
 import { pieDePieza } from '../redes/piezas.mjs';
+import { fechaEnBalcarce } from '../ingesta/utiles.mjs';
 import { clipsDeAuditoria, revisarTranscripcion, cuantasDirecciones } from '../redes/auditoria-voz.mjs';
 import { INDICACION, VOZ_DEL_MEDIO } from '../reels/voz-gemini.mjs';
 import { TONO_DE_LA_MANANA, TONO_DE_LA_TARDE, TONO_DE_LA_NOCHE, planDelDia } from '../reels/plan.mjs';
@@ -468,7 +469,7 @@ test('el pie de un reel lleva radarbalcarce.com escrito y nunca la frase de la v
 // --------------------------------------------------- el plan completo
 
 test('todas las piezas del plan hablan según su horario y cumplen el criterio', () => {
-  const hoy = new Date().getDate();
+  const hoy = fechaEnBalcarce().dia; // el día de Balcarce, no el del servidor (UTC)
   const datos = {
     clima: CLIMAS.fresco,
     farmacias: { turnos: [{ ...TURNO_DOS, dia: hoy }] },

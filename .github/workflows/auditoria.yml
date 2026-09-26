@@ -6,6 +6,7 @@
 # Los lunes a las 9 (hora de Balcarce). También se puede correr a mano.
 # Suma la auditoría de la semana del contrato de las redes (redes/auditar-redes.mjs).
 
+# Costo: cero. No usa Gemini; sólo mira lo publicado (los repos públicos no pagan minutos de Actions).
 name: Auditoría
 
 on:

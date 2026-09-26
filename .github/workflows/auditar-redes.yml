@@ -13,6 +13,7 @@
 #
 # SECRETO: META_TOKEN (el mismo que publica; nunca se imprime).
 
+# Costo: cero. Sólo lee Meta y el repositorio (los repos públicos no pagan minutos de Actions).
 name: Auditar redes
 
 on:

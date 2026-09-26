@@ -1,5 +1,6 @@
 # Mira, sólo mirando, qué hay publicado de verdad en la página de Facebook
 # (posteos, reels e historias). Se corre a mano: Actions → Ver Facebook → Run workflow.
+# Costo: cero (sólo lee Facebook).
 name: Ver Facebook
 
 on:
@@ -11,6 +12,7 @@ permissions:
 jobs:
   ver:
     runs-on: ubuntu-latest
+    timeout-minutes: 5
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
