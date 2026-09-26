@@ -26,6 +26,7 @@
 // generar-datos, las páginas y las pruebas, sin red.
 
 import { slugDe } from './ruta.js';
+import { sinTildes } from './texto.js';
 
 /** Cuántos días sigue existiendo la página de un evento que ya pasó. Los
  *  enlaces que circularon por WhatsApp no se rompen (regla 20 de REGLAS.md),
@@ -82,7 +83,6 @@ const CORRECCIONES = {
   fernandez: 'Fernández', rodriguez: 'Rodríguez', perez: 'Pérez', gomez: 'Gómez', ramon: 'Ramón',
 };
 const LETRA = 'A-Za-zÁÉÍÓÚÑÜáéíóúñü';
-const sinTildes = (t) => String(t ?? '').normalize('NFD').replace(/[̀-ͯ]/g, '');
 
 /**
  * El nombre de un evento (o de un lugar, o de quien organiza) como se
@@ -108,7 +108,7 @@ export function nombreDeEvento(nombre = '') {
     const m = palabra.match(forma);
     if (!m) return palabra;
     const [, antes, nucleo, despues] = m;
-    const conocida = CORRECCIONES[sinTildes(nucleo).toLowerCase()];
+    const conocida = CORRECCIONES[sinTildes(nucleo)];
     const intocable = SIGLAS.has(nucleo.toUpperCase()) || /\d/.test(palabra);
     let nueva = nucleo;
     if (recasar && !intocable) {
@@ -279,7 +279,7 @@ const SERVICIOS = [
 ];
 
 export function detallesDeEvento(e = {}) {
-  const texto = sinTildes(e.descripcion ?? '').toLowerCase();
+  const texto = sinTildes(e.descripcion ?? '');
   if (!texto) return [];
   return SERVICIOS.filter(([, re]) => {
     const g = new RegExp(re.source, 'g');
@@ -309,7 +309,7 @@ function primeraOracion(texto) {
 
 // ---------------------------------------------------------- listas y archivo
 
-const normal = (t) => String(t ?? '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+const normal = (t) => sinTildes(t)
   .replace(/[^a-z0-9]+/g, ' ').trim();
 
 /** ¿Son el mismo evento contado dos veces? Mismo día y un nombre que

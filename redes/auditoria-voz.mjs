@@ -8,6 +8,7 @@ import {
   SALUDOS, CIERRES_HUMANOS, firmasConDireccion, cierreDePodcast,
 } from './guiones.mjs';
 import { SITIO_DICHO } from './prompt-redes.mjs';
+import { sinTildes } from '../web/lib/texto.js';
 
 const fecha = (dia) => new Date(`${dia}T12:00:00-03:00`);
 
@@ -51,8 +52,7 @@ export function variantesDeLaDireccion() {
   ];
 }
 
-const sinAcentos = (t) => String(t).toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
-const llano = (t) => sinAcentos(t).replace(/[^a-z0-9.]+/g, ' ').trim();
+const llano = (t) => sinTildes(t).replace(/[^a-z0-9.]+/g, ' ').trim();
 
 // En castellano la b y la v suenan igual, y la c ante e/i suena como la s: el
 // transcriptor, que no conoce "Balcarce", escribió "Valcarce" (auditoría del

@@ -38,11 +38,7 @@
 import {
   TITULO, BAJADA, CUERPO, GUION, PARTES, COPIA_MAXIMA,
 } from './criterio.mjs';
-
-const sinTildes = (s = '') => String(s)
-  .toLowerCase()
-  .normalize('NFD')
-  .replace(/[̀-ͯ]/g, '');
+import { sinTildes } from '../web/lib/texto.js';
 
 const palabras = (s) => sinTildes(s).match(/[a-zñ0-9]+/g) ?? [];
 

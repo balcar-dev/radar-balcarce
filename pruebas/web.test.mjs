@@ -3,7 +3,7 @@
 
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { comoNombre } from '../web/lib/texto.js';
+import { comoNombre, sinTildes } from '../web/lib/texto.js';
 import {
   POR_PAGINA, partirRanura, cuantasPaginas, direccionDePagina,
 } from '../web/lib/paginas.js';
@@ -230,4 +230,10 @@ test('"hace X" se recalcula en el navegador: el <time> lleva la fecha exacta (26
   assert.match(piezas, /<time[^>]*dateTime=[^>]*data-hace/);
   const layout = fs.readFileSync(new URL('../web/app/layout.js', import.meta.url), 'utf8');
   assert.match(layout, /<HorasVivas \/>/);
+});
+
+test('sinTildes deja el texto en minúsculas y sin tildes (la base de toda comparación de textos)', () => {
+  assert.equal(sinTildes('Fútbol, AÑO y Cañuelas'), 'futbol, ano y canuelas');
+  assert.equal(sinTildes(null), '');
+  assert.equal(sinTildes(), '');
 });

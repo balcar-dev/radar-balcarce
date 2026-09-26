@@ -12,15 +12,7 @@
 // se cambia por algo más grande sin tocar el resto del sitio.
 
 import { useEffect, useMemo, useRef, useState } from 'react';
-
-/** Saca tildes y mayúsculas: buscar "futbol" tiene que encontrar "fútbol", y
- *  nadie escribe los acentos en un buscador. */
-function normalizar(texto) {
-  return String(texto ?? '')
-    .toLowerCase()
-    .normalize('NFD')
-    .replace(/[̀-ͯ]/g, '');
-}
+import { sinTildes as normalizar } from '@/lib/texto'; // sin tildes ni mayúsculas: buscar "futbol" encuentra "fútbol"
 
 export default function Buscador({ notas = [] }) {
   const [abierto, setAbierto] = useState(false);

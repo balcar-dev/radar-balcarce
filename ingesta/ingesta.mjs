@@ -10,6 +10,7 @@ import {
   MOTIVO_INTERNACIONAL, PALABRAS_DE_TECNOLOGIA_EN_EL_TITULO,
 } from './fuentes.mjs';
 import { diaDeTurno, fechaEnBalcarce } from './utiles.mjs';
+import { sinTildes } from '../web/lib/texto.js';
 
 export const TODAS_LAS_FUENTES = [...FUENTES, ...FUENTES_NACIONALES];
 
@@ -108,8 +109,7 @@ export function enlaceAlternativo(xml) {
 }
 
 export function normalizar(s = '') {
-  return s.toLowerCase()
-    .normalize('NFD').replace(/[̀-ͯ]/g, '')
+  return sinTildes(s)
     .replace(/[^a-z0-9\s]/g, ' ')
     .replace(/\s+/g, ' ').trim();
 }

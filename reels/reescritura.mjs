@@ -38,6 +38,7 @@ import { traerTexto } from '../ingesta/articulo.mjs';
 import { MEDIOS_OFICIALES } from '../ingesta/fuentes.mjs';
 import { palabrasDeTitular } from '../redes/elegir.mjs';
 import { rutaDeNota } from '../web/lib/ruta.js';
+import { sinTildes } from '../web/lib/texto.js';
 import { tieneCuerpo, palabrasDe } from '../web/lib/cuerpo.js';
 import { leerCriterio } from '../ingesta/prompt-editorial.mjs';
 import {
@@ -464,7 +465,7 @@ export function motivoCorto(problemas = []) {
 /** Lo que va en "Qué falta confirmar" cuando hay una sola fuente. */
 export const FRASE_FUENTE_UNICA = 'No pudo ser contrastado de forma independiente con las fuentes consultadas.';
 
-const normalizar = (s = '') => String(s).toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '')
+const normalizar = (s = '') => sinTildes(s)
   .replace(/\s+/g, ' ')
   .trim();
 

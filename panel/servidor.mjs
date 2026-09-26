@@ -7,6 +7,7 @@ import http from 'node:http';
 import fs from 'node:fs';
 import path from 'node:path';
 import { leerJson } from '../ingesta/json.mjs';
+import { sinTildes } from '../web/lib/texto.js';
 import { ingestar, traer, parsearFeed, TODAS_LAS_FUENTES } from '../ingesta/ingesta.mjs';
 import {
   agendaCompleta, CATEGORIAS as CATEGORIAS_AGENDA, CALENDARIO_ANUAL,
@@ -882,7 +883,7 @@ const servidor = http.createServer(async (req, res) => {
     if (ruta === '/api/fuente' && req.method === 'POST') {
       const d = await cuerpoDe(req);
       if (d.accion === 'agregar') {
-        const id = (d.nombre ?? 'fuente').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '')
+        const id = sinTildes(d.nombre ?? 'fuente')
           .replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 30) || `fuente${Date.now()}`;
         if (estado.fuentes.some((f) => f.url === d.url)) { json(res, { error: 'esa URL ya está' }, 400); return; }
         estado.fuentes.push({

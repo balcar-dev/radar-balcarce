@@ -8,6 +8,7 @@ import path from 'node:path';
 import { rutaDeNota, idDeRuta } from './ruta.js';
 import { vigenteEnPortada } from './archivo.js';
 import { sinNotasRepetidas, titularesParecidos } from './texto.js';
+import { sinTildes } from './texto.js';
 import { tieneCuerpo } from './cuerpo.js';
 import { interpretarDolarApi } from './dolar.js';
 import {
@@ -409,8 +410,7 @@ export function porRanura(ranura) {
 }
 
 function ranuraDe(nombre) {
-  return nombre.toLowerCase()
-    .normalize('NFD').replace(/[̀-ͯ]/g, '')
+  return sinTildes(nombre)
     .replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 }
 

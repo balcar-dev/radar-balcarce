@@ -11,8 +11,10 @@
 //
 // Lo usan web/scripts/generar-datos.mjs (qué se publica), reels/reescritura.mjs
 // (qué se reusa de una corrida anterior), redes/elegir.mjs (qué sale en las
-// redes) y la página de la nota. Sin imports: lo lee también redes/, que no
-// puede depender de nada de afuera de Node.
+// redes) y la página de la nota. Sólo importa ./texto.js, que no importa
+// nada: lo lee también redes/, que no puede depender de nada de afuera de Node.
+
+import { sinTildes } from './texto.js';
 
 /** Cuántas palabras tiene que tener el cuerpo, como mínimo. La instrucción a
  *  la IA pide de 100 a 180. */
@@ -23,7 +25,7 @@ export function palabrasDe(texto) {
   return (String(texto ?? '').match(/[\p{L}\p{N}]+/gu) ?? []).length;
 }
 
-const plano = (s) => String(s ?? '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '')
+const plano = (s) => sinTildes(s)
   .replace(/[^a-z0-9ñ]+/g, ' ')
   .trim();
 

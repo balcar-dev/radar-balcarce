@@ -4,6 +4,9 @@
 // levantar React: son funciones de una entrada y una salida, y las pruebas
 // viven en pruebas/web.test.mjs.
 
+/** Minúsculas y sin tildes: para comparar textos sin que importe cómo se escribieron. */
+export const sinTildes = (texto = '') => String(texto ?? '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
+
 /**
  * Pasa un nombre escrito todo en mayúsculas a la forma en que se escribe.
  *
@@ -41,7 +44,7 @@ export function recortarEn(texto = '', maximo = 60) {
  * de dos medios distintos).
  */
 export function titularNormalizado(titulo = '') {
-  return String(titulo).toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+  return sinTildes(titulo)
     .replace(/[^a-z0-9]+/g, ' ').trim();
 }
 

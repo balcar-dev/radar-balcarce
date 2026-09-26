@@ -24,6 +24,7 @@
 //     cambia en el día. Serían redundantes.
 
 import { rutaDeNota } from '../web/lib/ruta.js';
+import { sinTildes } from '../web/lib/texto.js';
 import { esperaCuerpo } from '../web/lib/cuerpo.js';
 import {
   FACEBOOK, PIEZAS, PODCAST_VOZ, POSTEO, SECCIONES_QUE_ESPERAN_PERSONA,
@@ -147,7 +148,7 @@ const VACIAS = new Set([
  *  las que están en cualquier titular de acá). También la usa
  *  reels/reescritura.mjs para buscar antecedentes en el archivo. */
 export const palabrasDeTitular = (titulo = '') => new Set(
-  String(titulo).toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').split(/[^a-z0-9]+/)
+  sinTildes(titulo).split(/[^a-z0-9]+/)
     .filter((w) => w.length >= 5 && !VACIAS.has(w)),
 );
 
@@ -209,7 +210,7 @@ export function hashtagsDe(nota, cuantos = POSTEO.hashtagsMaximo) {
   for (const e of candidatas) {
     const tag = String(e ?? '').replace(/^#+/, '').split(/[^\p{L}\p{N}]+/u).filter(Boolean)
       .map((p) => p[0].toUpperCase() + p.slice(1)).join('');
-    const clave = tag.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
+    const clave = sinTildes(tag);
     if (!tag || tag.length > 30 || vistos.has(clave)) continue;
     vistos.add(clave);
     tags.push(`#${tag}`);
@@ -291,7 +292,7 @@ const porRelevancia = (a, b) => (b.relevancia ?? 0) - (a.relevancia ?? 0);
 const COMUNES = new Set(['balcarce', 'municipio', 'municipal', 'municipalidad', 'provincia', 'ciudad', 'escuela', 'escuelas']);
 
 const palabrasClave = (titulo = '') => new Set(
-  String(titulo).toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').split(/[^a-z0-9]+/)
+  sinTildes(titulo).split(/[^a-z0-9]+/)
     .filter((w) => w.length >= 7 && !COMUNES.has(w)),
 );
 
@@ -450,5 +451,5 @@ export function guionPodcast(notas, { cuantas = PIEZAS.notasPodcastNoche, fecha 
  *  Se descubrió el 21/09: la variable se creó como "Si" y una comparación
  *  exacta la dejaba apagada sin avisar. */
 export function estaActivo(valor) {
-  return String(valor ?? '').trim().toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '') === 'si';
+  return sinTildes(String(valor ?? '').trim()) === 'si';
 }
