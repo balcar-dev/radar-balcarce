@@ -1,5 +1,5 @@
 {
-  "exportado": "2026-09-26T07:53:49.480Z",
+  "exportado": "2026-09-26T08:03:45.609Z",
   "decisiones": {
     "1951120": {
       "estado": "automatica",
@@ -20226,13 +20226,69 @@
     },
     "1n5o9jc": {
       "estado": "automatica",
-      "titulo": null,
-      "copete": null,
-      "cuerpo": null,
-      "guion": null,
-      "deIA": null,
+      "titulo": "Franco Colapinto parte noveno en la Formula 1 en Azerbaiyán",
+      "copete": "El piloto argentino de Alpine se metió entre los diez mejores en la clasificación del Gran Premio de Azerbaiyán en el circuito callejero de Bakú. Saldrá desde el noveno puesto tras superar con lo justo las etapas previas.",
+      "cuerpo": "Franco Colapinto logró instalarse entre los diez mejores de la clasificación de la Fórmula 1 en el circuito callejero de Bakú y largará desde la novena posición en el Gran Premio de Azerbaiyán. El piloto argentino superó las etapas iniciales y, tras trabajar para su compañero de equipo Pierre Gasly en el segundo corte, consiguió el pase a la instancia decisiva sobre la bandera a cuadros con un tiempo de 1m44s683.\n\nTras la actividad en pista, el piloto explicó que debió afrontar diversos inconvenientes durante las tandas, como complicaciones en los frenos, problemas con la energía de la batería y la falta de succión en las extensas rectas del trazado.\n\n\"Ojalá sea una buena carrera.",
+      "guion": "Franco Colapinto parte noveno en la Formula 1 en Azerbaiyán",
+      "deIA": true,
       "por": "ia",
-      "cuando": "2026-09-26T01:11:17.857Z"
+      "cuando": "2026-09-26T08:03:45.541Z",
+      "claves": [
+        "Franco Colapinto partirá noveno en el Gran Premio de Azerbaiyán.",
+        "El piloto argentino se metió en la instancia decisiva en el circuito callejero de Bakú.",
+        "Señaló que sufrió problemas de frenos, batería y falta de succión.",
+        "George Russell se quedó con la pole position con Mercedes."
+      ],
+      "seSabe": [
+        "Franco Colapinto se ubicó entre los diez mejores de la clasificación en Bakú.",
+        "El argentino largará desde la novena posición.",
+        "El piloto explicó que tuvo dificultades con los frenos, la batería y la falta de succión.",
+        "George Russell obtuvo la pole position, seguido por Charles Leclerc y Oscar Piastri."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Franco Colapinto se metió entre los diez mejores de la clasificación y largará noveno en el Gran Premio de Azerbaiyán de la Fórmula 1. El piloto argentino afrontará la competencia en el circuito callejero de Bakú con el objetivo de sumar nuevos puntos.",
+      "etiquetas": [
+        "Franco Colapinto",
+        "Formula 1",
+        "Gran Premio de Azerbaiyán",
+        "Bakú"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/deportes/automovilismo/colapinto-hablo-de-la-ayuda-que-le-dio-a-gasly-para-avanzar-a-la-q3-y-que-no-fue-reciproca-es-muy-nid25092026/",
+          "fecha": "2026-09-25T17:34:57.000Z",
+          "oficial": false,
+          "aporte": "Detalló el rendimiento de Franco Colapinto en la clasificación de Bakú, sus declaraciones sobre las dificultades en la pista y las posiciones de largada."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "y2p14e",
+          "titulo": "Franco Colapinto termina décimo en la clasificación de Bakú",
+          "fecha": "2026-09-25T14:03:00.000Z",
+          "ruta": "/nota/franco-colapinto-termina-decimo-en-la-clasificacion-de-baku-y2p14e"
+        },
+        {
+          "id": "14uc9gg",
+          "titulo": "Franco Colapinto encara la tercera práctica libre y la clasificación en Bakú",
+          "fecha": "2026-09-25T07:57:16.000Z",
+          "ruta": "/nota/franco-colapinto-encara-la-tercera-practica-libre-y-la-clasificacion-14uc9gg"
+        },
+        {
+          "id": "te9rpt",
+          "titulo": "Colapinto vuelve a Bakú, el circuito de su primera gran alegría en la Fórmula 1, para estirar su mejor racha",
+          "fecha": "2026-09-21T08:44:54.000Z",
+          "ruta": "/nota/colapinto-vuelve-a-baku-el-circuito-de-su-primera-gran-alegria-en-la-te9rpt"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
     },
     "qx770i": {
       "estado": "automatica",
@@ -23423,6 +23479,279 @@
           "fecha": "2026-09-25T21:48:17.000Z",
           "oficial": false,
           "aporte": "Detalló el desarrollo de modelos de inteligencia artificial de gran escala en empresas chinas y sus características técnicas."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "11s68mw": {
+      "estado": "automatica",
+      "titulo": "Franco Colapinto larga noveno en el Gran Premio de Azerbaiyán",
+      "copete": "El piloto argentino se metió en la Q3 y avanzará un puesto en la grilla tras una sanción a Carlos Sainz. La carrera se largará este sábado a las ocho de la mañana.",
+      "cuerpo": "Franco Colapinto avanzó este sábado al noveno lugar de la grilla en el Gran Premio de Azerbaiyán de Fórmula 1, tras una penalización al español Carlos Sainz. El piloto argentino había terminado décimo en la sesión de clasificación en el Circuito Callejero de Bakú, pero subió una posición luego de que los comisarios sancionaran a Sainz con cinco puestos por no respetar las banderas amarillas.\n\nDurante la sesión, el representante de Alpine logró meterse por sexta vez en su trayectoria en la fase final de la categoría, la quinta de la temporada, tras marcar un tiempo que le permitió superar exigencias en un trazado donde reconoció dificultades con el frenado.\n\nLa competencia principal de la decimoquinta fecha del año se disputará este sábado desde las ocho de la mañana, hora de Argentina, y podrá seguirse a través de Fox Sports, Disney+ Premium y F1 TV. Como se había informado en la previa, el piloto argentino buscará sumar nuevos puntos en un circuito callejero donde ya supo conseguir unidades en su paso anterior por la categoría en 2024.",
+      "guion": "Franco Colapinto larga noveno en el Gran Premio de Azerbaiyán",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-26T08:03:45.541Z",
+      "claves": [
+        "Franco Colapinto largará noveno en el Gran Premio de Azerbaiyán de Fórmula 1.",
+        "El piloto argentino avanzó un puesto en la grilla tras una penalización a Carlos Sainz.",
+        "George Russell se quedó con la pole position en el Circuito Callejero de Bakú.",
+        "La carrera comenzará este sábado a las ocho de la mañana de Argentina."
+      ],
+      "seSabe": [
+        "Franco Colapinto clasificó en la décima posición y largará noveno en Bakú por la penalización a Carlos Sainz.",
+        "George Russell obtuvo la pole position en el Circuito Callejero de Bakú.",
+        "La carrera se disputará este sábado a las 08:00 de la mañana, hora argentina.",
+        "La transmisión en vivo estará a cargo de Fox Sports, Disney+ Premium y F1 TV."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Franco Colapinto se metió en la Q3 y largará noveno este sábado en el Gran Premio de Azerbaiyán de Fórmula 1. La carrera comenzará a las ocho de la mañana y se podrá seguir por televisión y plataformas digitales.",
+      "etiquetas": [
+        "Franco Colapinto",
+        "Formula 1",
+        "Gran Premio de Azerbaiyan"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Olé",
+          "enlace": "https://www.ole.com.ar/autos/gran-premio-azerbaiyan-carrera-franco-colapinto-hoy-vivo-online-horario-ver_0_ptdVDl4M25.html",
+          "fecha": "2026-09-26T07:18:08.000Z",
+          "oficial": false,
+          "aporte": "Detalles de la clasificación, las posiciones de largada, la sanción a Carlos Sainz, los tiempos y los horarios de la carrera en Bakú."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "10nwbxo",
+          "titulo": "A qué hora corre Franco Colapinto en el GP de Azerbaiyán y por dónde se puede ver la F1",
+          "fecha": "2026-09-23T21:18:30.000Z",
+          "ruta": "/nota/a-que-hora-corre-franco-colapinto-en-el-gp-de-azerbaiyan-y-por-donde-10nwbxo"
+        },
+        {
+          "id": "1ry7mu3",
+          "titulo": "Franco Colapinto larga noveno en el Gran Premio de Azerbaiyán",
+          "fecha": "2026-09-25T19:24:40.000Z",
+          "ruta": "/nota/franco-colapinto-larga-noveno-en-el-gran-premio-de-azerbaiyan-1ry7mu3"
+        },
+        {
+          "id": "xtbw5",
+          "titulo": "Franco Colapinto largara noveno el Gran Premio de Azerbaiyan",
+          "fecha": "2026-09-25T19:13:53.000Z",
+          "ruta": "/nota/franco-colapinto-largara-noveno-el-gran-premio-de-azerbaiyan-xtbw5"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "ofi5rd": {
+      "estado": "automatica",
+      "titulo": "Recomiendan tres producciones de Los Javis tras el éxito",
+      "copete": "Tras el éxito de la película La bola negra en el Festival de Toronto, repasan tres creaciones clave de los directores Javier Calvo y Javier Ambrossi para conocer su trayectoria.",
+      "cuerpo": "La película La bola negra, dirigida por Javier Calvo y Javier Ambrossi, se consolidó como una de las producciones del año tras obtener el Premio del Público en el Festival Internacional de Cine de Toronto. La obra representa un punto de inflexión en la carrera de los directores y su incursión en el cine de autor de gran formato, a partir de un guion coescrito junto a Alberto Conejero que toma elementos de un manuscrito de Federico García Lorca y de la obra teatral La piedra oscura.\n\nA raíz de este reconocimiento internacional, se destacan otros trabajos previos de la dupla creativa española que permiten dimensionar su evolución artística. Entre ellos figura la serie Paquita Salas, una comedia que retrata el mundo del espectáculo a través de una representante interpretada por Brays Efe, y la producción Veneno, basada en la biografía de Cristina Ortiz y en las memorias de la periodista Valeria Vegas.",
+      "guion": "Recomiendan tres producciones de Los Javis tras el éxito",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-26T08:03:45.541Z",
+      "claves": [
+        "La película La bola negra ganó un premio en el Festival de Toronto.",
+        "El film está dirigido por Javier Calvo y Javier Ambrossi.",
+        "El guion combina elementos de Federico García Lorca y la obra La piedra oscura.",
+        "Repasan producciones anteriores de los directores como Paquita Salas y Veneno."
+      ],
+      "seSabe": [
+        "La película La bola negra obtuvo el Premio del Público en el Festival Internacional de Cine de Toronto.",
+        "El guion de la cinta fue coescrito junto al dramaturgo Alberto Conejero.",
+        "La producción se inspira en un manuscrito de Federico García Lorca y en la obra La piedra oscura.",
+        "La trayectoria de los directores incluye creaciones previas como Paquita Salas y Veneno."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Repasan tres producciones clave de los directores Javier Calvo y Javier Ambrossi tras el reconocimiento internacional de su última película.",
+      "etiquetas": [
+        "Los Javis",
+        "cine",
+        "La bola negra",
+        "Festival de Toronto",
+        "Paquita Salas",
+        "Veneno"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Hipertextual",
+          "enlace": "https://hipertextual.com/cine-television/tres-producciones-que-ver-de-los-javis-si-amaste-la-bola-negra/",
+          "fecha": "2026-09-26T08:00:00.000Z",
+          "oficial": false,
+          "aporte": "Detalla el reconocimiento a la película La bola negra en Toronto y repasa las producciones Paquita Salas y Veneno de los directores Javier Calvo y Javier Ambrossi."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "17bo7cs": {
+      "estado": "automatica",
+      "titulo": "Las elecciones en Estados Unidos definen el Senado",
+      "copete": "Las encuestas en Texas muestran una competencia ajustada para el Senado federal de cara a los comicios legislativos de noviembre de 2026 en Estados Unidos.",
+      "cuerpo": "Las elecciones legislativas de medio término en Estados Unidos, previstas para el martes tres de noviembre de dos mil veintiséis, generan expectativa por su impacto en la composición del Congreso y en la gestión del presidente Donald Trump. En Texas, la disputa por un escaño en el Senado federal enfrenta al demócrata James Talarico con el fiscal general republicano Ken Paxton.\n\nEl escaño actualmente pertenece a John Cornyn, quien fue derrotado por Paxton en las primarias republicanas. Pese a la ventaja parcial del candidato demócrata, el cincuenta y dos por ciento de los electores estima que el postulante republicano se impone en los sondeos generales de un distrito de fuerte tradición conservadora.\n\nAdemás de la contienda senatorial, el relevamiento abordó la elección para la gobernación de Texas.",
+      "guion": "Las elecciones en Estados Unidos definen el Senado",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-26T08:03:45.541Z",
+      "claves": [
+        "Las elecciones legislativas de Estados Unidos se realizarán en noviembre.",
+        "Talarico y Paxton compiten por un escaño en el Senado por Texas.",
+        "Una encuesta ubica al candidato demócrata con ventaja sobre el postulante republicano.",
+        "Abbott y Hinojosa disputan la gobernación de Texas."
+      ],
+      "seSabe": [
+        "Las elecciones generales se celebrarán el martes 3 de noviembre de 2026 en Estados Unidos.",
+        "James Talarico y Ken Paxton compiten por un escaño en el Senado federal por Texas.",
+        "Una encuesta de Marist Poll muestra una ventaja de seis puntos a favor de Talarico frente a Paxton.",
+        "Greg Abbott y Gina Hinojosa disputan la gobernación del mismo estado."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Las encuestas en Texas muestran una competencia ajustada para el Senado federal de cara a los comicios legislativos de noviembre de 2026 en Estados Unidos.",
+      "etiquetas": [
+        "elecciones",
+        "Estados Unidos",
+        "Texas",
+        "Senado"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/estados-unidos/texas/las-encuestas-son-claras-en-texas-talarico-vs-paxton-y-quien-gana-las-midterm-elections-2026-en-usa-nid26092026/",
+          "fecha": "2026-09-26T07:20:00.000Z",
+          "oficial": false,
+          "aporte": "Aportó los detalles sobre las encuestas, los candidatos y el contexto político de las elecciones de medio término en Texas."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "1ggll4l": {
+      "estado": "automatica",
+      "titulo": "Una encuesta evalúa el desempeño del alcalde Zohran Mamdani",
+      "copete": "Una encuesta revela la opinión de los ciudadanos sobre la gestión de Zohran Mamdani en la ciudad de Nueva York tras ocho meses en el cargo.",
+      "cuerpo": "A ocho meses de asumir como alcalde de la ciudad de Nueva York, una encuesta de la Universidad de Suffolk indicó que el 61% de los consultados considera que el desempeño de Zohran Mamdani es mejor de lo esperado. El sondeo, realizado a 500 personas, arrojó que el 57% califica su trabajo como bueno o excelente, mientras que un sector lo ve de manera regular o mala.\n\nLa asequibilidad se ubica como la principal preocupación de los habitantes. En respuesta a esto, la administración dispuso un congelamiento de alquileres del 0% para contratos de uno o dos años, una medida aprobada por siete votos contra uno que entrará en vigor el 1 de octubre y se extenderá hasta septiembre del año próximo.\n\nComo antecedente, en septiembre la administración municipal anunció una elección especial prevista para noviembre con el fin de agilizar su estrategia de gobierno mediante cinco propuestas.",
+      "guion": "Una encuesta evalúa el desempeño del alcalde Zohran Mamdani",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-26T08:03:45.541Z",
+      "claves": [
+        "Zohran Mamdani cumplió ocho meses al frente de la alcaldía",
+        "Un sondeo revela que la mayoría valora su gestión",
+        "Se dispuso un congelamiento de alquileres del cero por ciento"
+      ],
+      "seSabe": [
+        "Zohran Mamdani asumió el cargo el 1 de enero de 2026",
+        "Una encuesta de la Universidad de Suffolk consultó a 500 personas",
+        "El congelamiento de alquileres regirá desde el 1 de octubre"
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Una encuesta evalúa la gestión de Zohran Mamdani en Nueva York a ocho meses de asumir su mandato y tras la aprobación de un congelamiento de alquileres.",
+      "etiquetas": [
+        "Zohran Mamdani",
+        "Nueva York",
+        "alcalde",
+        "encuesta",
+        "alquileres"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/estados-unidos/nueva-york/lo-dicen-los-neoyorquinos-la-encuesta-que-revela-lo-que-piensan-del-alcalde-mamdani-a-casi-un-ano-de-nid26092026/",
+          "fecha": "2026-09-26T06:01:00.000Z",
+          "oficial": false,
+          "aporte": "Aportó los datos sobre la encuesta de gestión, las medidas de congelamiento de alquileres y los detalles de las medidas implementadas."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "18u9g13",
+          "titulo": "“Vota por un gobierno rápido”: Mamdani anuncia elecciones especiales en NYC de cara al 3 de noviembre",
+          "fecha": "2026-09-25T01:40:00.000Z",
+          "ruta": "/nota/vota-por-un-gobierno-rapido-mamdani-anuncia-elecciones-especiales-en-18u9g13"
+        },
+        {
+          "id": "1ce3j0r",
+          "titulo": "La ultraderecha vuelve a ganar en las elecciones regionales de Alemania y los conservadores se hunden, según los primeros sondeos: Merz asume su “responsabilidad” ante el “desastre”",
+          "fecha": "2026-09-20T17:13:17.000Z",
+          "ruta": "/nota/la-ultraderecha-vuelve-a-ganar-en-las-elecciones-regionales-de-1ce3j0r"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "74i5kc": {
+      "estado": "automatica",
+      "titulo": "Reuniones en Nueva York con referentes nacionales y la mirada inversora",
+      "copete": "El financista Javier Timerman analizó las reuniones mantenidas en Nueva York entre funcionarios nacionales, inversores y analistas del mercado internacional durante la Asamblea de las Naciones Unidas.",
+      "cuerpo": "Durante la Asamblea de las Naciones Unidas en Nueva York, referentes de la política nacional y funcionarios como el presidente Javier Milei, el gobernador bonaerense Axel Kicillof y el ministro de Economía Luis Caputo mantuvieron diversos encuentros con inversores extranjeros y economistas.\n\nEn ese marco, integrantes de la red de inversores conocida como Grupo Varenike participaron y cruzaron información sobre la agenda de los visitantes.\n\nSegún detalló Timerman, los inversores manifestaron dudas respecto a la actividad económica y su impacto en las elecciones, mientras que desde el Gobierno sostuvieron que el nivel de actividad funciona en ciertos sectores y anticiparon un triunfo electoral.",
+      "guion": "Reuniones en Nueva York con referentes nacionales y la mirada inversora",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-26T08:03:45.541Z",
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El financista Javier Timerman analizó las reuniones mantenidas en Nueva York entre funcionarios nacionales, inversores y analistas del mercado internacional durante la Asamblea de las Naciones Unidas.",
+      "etiquetas": [
+        "Nueva York",
+        "Javier Milei",
+        "Axel Kicillof",
+        "Luis Caputo",
+        "economia"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/economia/2026/09/26/milei-caputo-y-kicillof-en-nueva-york-la-mirada-del-financista-argentino-del-grupo-varenike-que-estuvo-en-todas-las-reuniones/",
+          "fecha": "2026-09-26T04:25:09.000Z",
+          "oficial": false,
+          "aporte": "Detalló las reuniones de referentes nacionales en Nueva York y el análisis del financista Javier Timerman sobre la postura de los inversores."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "6sipq6",
+          "titulo": "Kicillof en Nueva York: reuniones con fondos de inversión y empresarios, con críticas a Milei y al RIGI",
+          "fecha": "2026-09-22T23:43:00.000Z",
+          "ruta": "/nota/kicillof-en-nueva-york-reuniones-con-fondos-de-inversion-y-6sipq6"
+        },
+        {
+          "id": "1rzjar1",
+          "titulo": "Axel Kicillof en C5N: \"Cuenten conmigo para lo que haga falta; no podemos permitir cuatro años más de Milei\"",
+          "fecha": "2026-09-25T00:29:00.000Z",
+          "ruta": "/nota/axel-kicillof-en-c5n-cuenten-conmigo-para-lo-que-haga-falta-no-1rzjar1"
+        },
+        {
+          "id": "14e7f85",
+          "titulo": "Tregua en la interna del Gobierno: las oscilaciones de Patricia Bullrich y los pronósticos del grupo de Karina Milei",
+          "fecha": "2026-09-24T14:40:00.000Z",
+          "ruta": "/nota/tregua-en-la-interna-del-gobierno-las-oscilaciones-de-patricia-14e7f85"
         }
       ],
       "verificacion": {
