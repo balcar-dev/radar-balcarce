@@ -1,5 +1,5 @@
 {
-  "exportado": "2026-09-26T07:24:59.491Z",
+  "exportado": "2026-09-26T07:35:33.694Z",
   "decisiones": {
     "1951120": {
       "estado": "automatica",
@@ -22557,6 +22557,329 @@
           "titulo": "Kicillof encabeza la reapertura del autódromo Juan Manuel Fangio en Balcarce",
           "fecha": "2026-09-26T02:38:34.000Z",
           "ruta": "/nota/kicillof-encabeza-la-reapertura-del-autodromo-juan-manuel-fangio-en-7qxthx"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "1pjgnu4": {
+      "estado": "automatica",
+      "titulo": "McCain advierte sobre una falsa convocatoria laboral en Balcarce",
+      "copete": "La empresa emitió un comunicado para alertar a la comunidad sobre una estafa vinculada a falsas ofertas de empleo.",
+      "cuerpo": "La empresa McCain emitió un comunicado dirigido a la comunidad para advertir sobre una falsa convocatoria laboral que circula en la zona. La firma, reconocida como la planta de procesamiento de papas congeladas más grande de Sudamérica, alertó acerca de maniobras fraudulentas detectadas en plataformas digitales.\n\nComo se había informado el 25 de septiembre de 2026, la maniobra fraudulenta detectada en redes sociales utiliza datos incorrectos y herramientas de inteligencia artificial para ofrecer puestos de trabajo a nombre de la compañía.\n\nLa advertencia busca prevenir posibles casos de suplantación de identidad y estafas a los vecinos que buscan empleo en el distrito.",
+      "guion": "McCain advierte sobre una falsa convocatoria laboral en Balcarce",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-26T07:35:33.626Z",
+      "claves": [
+        "La empresa McCain emitió un comunicado de alerta",
+        "Detectaron publicaciones falsas en redes sociales",
+        "Utilizan herramientas de inteligencia artificial y datos incorrectos",
+        "Advierten sobre posibles estafas y suplantación de identidad"
+      ],
+      "seSabe": [
+        "La empresa McCain emitió un comunicado para alertar sobre una falsa convocatoria laboral, según informó un medio local.",
+        "La maniobra utiliza datos incorrectos y herramientas de inteligencia artificial en redes sociales, de acuerdo con los antecedentes."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "La empresa McCain emitió un comunicado para alertar a la comunidad sobre una falsa convocatoria laboral que circula en redes sociales utilizando herramientas de inteligencia artificial.",
+      "etiquetas": [
+        "McCain",
+        "convocatoria laboral",
+        "Balcarce"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/alerta-por-falsa-convocatoria-laboral-y-suplantacion-de-identidad-115",
+          "fecha": "2026-09-25T19:10:29.000Z",
+          "oficial": false,
+          "aporte": "Informó sobre el comunicado emitido por la empresa McCain para alertar acerca de una falsa convocatoria laboral."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1wzh43l",
+          "titulo": "Advierten por una falsa búsqueda laboral de la empresa McCain en Balcarce",
+          "fecha": "2026-09-25T15:36:43.000Z",
+          "ruta": "/nota/advierten-por-una-falsa-busqueda-laboral-de-la-empresa-mccain-en-1wzh43l"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "6zyz8n": {
+      "estado": "automatica",
+      "titulo": "El handball de Balcarce compite en el Circuito Asabal",
+      "copete": "Unos cuarenta jugadores locales participaron en Mar del Plata de la sexta fecha del Circuito Asabal y ya se preparan para un torneo internacional en noviembre.",
+      "cuerpo": "Del encuentro deportivo también formaron parte equipos de Once Unidos y Handball Norte de Mar del Plata, además de Handball Necochea. Durante la jornada, los deportistas locales sumaron minutos de competencia y participaron de actividades recreativas, sorteos y entrevistas.\n\nLa actividad sirvió como preparación para el próximo compromiso de la Escuela Municipal, que en noviembre participará del Torneo Internacional Copa Mar del Plata para continuar adquiriendo experiencia frente a nuevos rivales de la región.",
+      "guion": "El handball de Balcarce compite en el Circuito Asabal",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-26T07:35:33.626Z",
+      "claves": [
+        "Unos cuarenta jugadores locales compitieron en Mar del Plata",
+        "Participaron delegaciones de la zona en el Club Once Unidos",
+        "El equipo se prepara para un torneo internacional en noviembre"
+      ],
+      "seSabe": [
+        "Unos cuarenta jugadores de Balcarce integraron la delegación municipal",
+        "El torneo se disputó en el Club Once Unidos de Mar del Plata",
+        "La delegación estuvo acompañada por los profesores Federico Santiago y Maximiliano La Rocca",
+        "La Escuela Municipal participará en noviembre del Torneo Internacional Copa Mar del Plata"
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "La Escuela Municipal de Handball de Balcarce participó con unos cuarenta jugadores en la sexta fecha del Circuito Asabal en Mar del Plata y ya se prepara para competir en un torneo internacional en noviembre.",
+      "etiquetas": [
+        "handball",
+        "deportes",
+        "Escuela Municipal de Handball",
+        "Asabal",
+        "Mar del Plata"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Radio Gabal (FM 104.1)",
+          "enlace": "https://www.radiogabal.com.ar/index.php/deportes/la-escuela-municipal-de-handball-sumo-experiencia-en-el-circuito-asabal",
+          "fecha": "2026-09-25T16:32:32.000Z",
+          "oficial": false,
+          "aporte": "Detalló la participación de cuarenta jugadores de la Escuela Municipal de Handball en el Circuito Asabal en Mar del Plata y su próxima participación internacional."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1fu8eca",
+          "titulo": "El handball de Balcarce compitió en una nueva fecha del Circuito AsABal en Mar del Plata",
+          "fecha": "2026-09-25T16:25:28.285Z",
+          "ruta": "/nota/el-handball-de-balcarce-compitio-en-una-nueva-fecha-del-circuito-1fu8eca"
+        },
+        {
+          "id": "ug5xuk",
+          "titulo": "La Escuela Municipal de Handball participa de un nuevo torneo en Mar del Plata",
+          "fecha": "2026-09-25T14:23:44.000Z",
+          "ruta": "/nota/la-escuela-municipal-de-handball-compite-en-mar-del-plata-en-balcarce-ug5xuk"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "1phpas5": {
+      "estado": "automatica",
+      "titulo": "La actividad económica enciende alertas por el riesgo de una recesión técnica",
+      "copete": "La economía argentina registró una caída mensual del 2,9% en julio según el EMAE, el nivel más profundo desde la pandemia. Analistas evalúan el impacto de esta contracción en el tercer trimestre.",
+      "cuerpo": "Esta contracción, sumada al retroceso del Producto Bruto Interno en el segundo trimestre, abrió el debate entre analistas sobre la posibilidad de que el país ingrese en una recesión técnica si se encadenan dos trimestres consecutivos en baja.\n\nDistintos informes privados advirtieron que sectores generadores de empleo, como el comercio, la industria y la construcción, continúan rezagados frente al desempeño de otras áreas como el agro y la energía. La consultora LCG indicó que sería necesario un crecimiento mensual del 3 por ciento tanto en agosto como en septiembre para evitar el saldo negativo en el trimestre, mientras que la firma Outlier señaló que el escenario refleja una pérdida general de dinamismo.\n\nPor su parte, el economista jefe de Facimex, Adrián Yarde Buller, recortó la proyección de crecimiento anual al 1,5 por ciento y remarcó que la industria y la construcción operan por debajo de los niveles previos. En paralelo, la actividad económica ya había mostrado señales de desaceleración según lo informado previamente a fines de septiembre.",
+      "guion": "La actividad económica enciende alertas por el riesgo de una recesión técnica.",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-26T07:35:33.626Z",
+      "claves": [
+        "La actividad económica registró una caída mensual del 2,9% en julio.",
+        "Analistas evalúan el riesgo de una recesión técnica en el tercer trimestre.",
+        "Sectores como industria y comercio acumulan meses de rezago frente al agro."
+      ],
+      "seSabe": [
+        "La economía registró una caída mensual del dos coma nueve por ciento en julio según el indicador oficial de actividad.",
+        "El PBI del segundo trimestre mostró una baja respecto al periodo anterior.",
+        "Los sectores de comercio, industria y construcción acumulan meses de retraso frente a otras actividades."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "La economía argentina registró una fuerte caída en julio y los analistas advierten sobre el riesgo de una recesión técnica en el tercer trimestre si la actividad no logra repuntar en los próximos meses.",
+      "etiquetas": [
+        "economia",
+        "recesion",
+        "actividad economica",
+        "pbi",
+        "emae"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/economia/2026/09/26/la-economia-corre-riesgo-de-caer-en-recesion-tecnica-que-dicen-los-analistas-y-las-medidas-del-gobierno-para-evitarlo/",
+          "fecha": "2026-09-26T05:06:07.000Z",
+          "oficial": false,
+          "aporte": "Aportó los datos sobre la caída del EMAE en julio, las proyecciones de las consultoras y las declaraciones de los analistas económicos."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1i4yl1",
+          "titulo": "La actividad económica cae en julio y analizan un riesgo de recesión",
+          "fecha": "2026-09-25T15:43:05.000Z",
+          "ruta": "/nota/la-actividad-economica-cae-en-julio-y-analizan-un-riesgo-de-recesion-1i4yl1"
+        },
+        {
+          "id": "12qzwmx",
+          "titulo": "Las 5 razones que identificaron los analistas para explicar el fuerte repunte del riesgo país",
+          "fecha": "2026-09-24T05:04:50.000Z",
+          "ruta": "/nota/las-5-razones-que-identificaron-los-analistas-para-explicar-el-fuerte-12qzwmx"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "hmyxr4": {
+      "estado": "automatica",
+      "titulo": "Microsoft lanza una nueva aplicación de inteligencia artificial",
+      "copete": "La empresa tecnológica presentó una versión rediseñada de su asistente Copilot en formato de superaplicación. La herramienta busca competir con las soluciones integradas de OpenAI y Anthropic.",
+      "cuerpo": "La compañía Microsoft anunció una versión completamente rediseñada de su asistente de inteligencia artificial Copilot, estructurada como una superaplicación dividida en tres pestañas principales denominadas Home, Code y Autopilot. Según indicó el director ejecutivo Satya Nadella, el desarrollo busca unificar funciones de productividad y agrupar tareas que antes requerían herramientas separadas. La nueva interfaz combina un chat de inteligencia artificial con un agente de ejecución de tareas y la integración directa de programas de edición de documentos, de acuerdo con la información difundida por la empresa.\n\nEste lanzamiento responde a la necesidad de unificar la oferta corporativa frente a los productos integrados que ofrecen competidores del sector como OpenAI y Anthropic. Hasta el momento, la división comercial de Microsoft mantenía separados los servicios de ofimática tradicionales y las funciones de asistencia automatizada, un segmento que contaba con un porcentaje menor de adopción en las licencias empresariales globales en comparación con la base instalada de sus programas de oficina.\n\nEn cuanto a su disponibilidad y comercialización, las funciones avanzadas y los agentes de larga duración se facturarán según el consumo real y no mediante el modelo de suscripción tradicional. Desde la empresa precisaron que las primeras pruebas privadas de Autopilot comenzarán este mes, mientras que las secciones de Home y Code se integrarán de manera gradual en los programas de acceso anticipado durante las próximas semanas.",
+      "guion": "Microsoft lanza una nueva aplicación de inteligencia artificial",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-26T07:35:33.626Z",
+      "claves": [
+        "Microsoft rediseñó su asistente Copilot en formato de superaplicación.",
+        "La herramienta unifica chat, agentes de tareas y programas de oficina.",
+        "El sistema busca competir con las propuestas de OpenAI y Anthropic.",
+        "Las funciones avanzadas se facturarán por consumo y se desplegarán por etapas."
+      ],
+      "seSabe": [
+        "Microsoft rediseñó su asistente Copilot como una superaplicación organizada en tres pestañas.",
+        "La herramienta integra chat, agentes de tareas y programas de oficina de forma directa.",
+        "Las funciones avanzadas se facturarán por consumo en lugar de utilizar suscripciones fijas.",
+        "La fase de pruebas de Autopilot comenzará durante este mes."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Microsoft presentó una versión rediseñada de su asistente Copilot en formato de superaplicación para competir con las herramientas de inteligencia artificial de OpenAI y Anthropic.",
+      "etiquetas": [
+        "Microsoft",
+        "Copilot",
+        "Inteligencia Artificial"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Xataka",
+          "enlace": "https://www.xataka.com/aplicaciones/microsoft-cree-que-ha-inventado-nuevo-office-superapp-ia-que-quiere-sentarse-a-mesa-anthropic-openai",
+          "fecha": "2026-09-26T07:00:17.000Z",
+          "oficial": false,
+          "aporte": "Aportó los detalles sobre el rediseño de Copilot, las declaraciones de los directivos, el modelo de cobro por consumo y el calendario de despliegue."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "5ar64f",
+          "titulo": "Demandan a SpaceXAI, OpenAI y Anthropic por presunto pacto ilegal para ralentizar el desarrollo de la IA",
+          "fecha": "2026-09-21T03:39:11.000Z",
+          "ruta": "/nota/demandan-a-spacexai-openai-y-anthropic-por-presunto-pacto-ilegal-para-5ar64f"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "hhhnps": {
+      "estado": "automatica",
+      "titulo": "OpenAI lanza una nueva función de mapas para competir en el mercado",
+      "copete": "La herramienta ChatGPT Maps permite buscar lugares, restaurantes y planificar viajes directamente desde la conversación. Por el momento se encuentra disponible en su versión web.",
+      "cuerpo": "La empresa tecnológica OpenAI presentó una nueva herramienta integrada en su asistente virtual, denominada ChatGPT Maps, que busca competir de forma directa con los servicios de cartografía tradicionales. Esta función permite a los usuarios buscar puntos de interés, establecimientos gastronómicos y organizar itinerarios de viaje mediante preguntas formuladas con lenguaje natural.\n\nA diferencia de las respuestas habituales del chat, el sistema ofrece elementos interactivos como mapas y fichas informativas que incluyen direcciones, horarios, datos de contacto, fotografías y valoraciones de otros usuarios. La tecnología cartográfica empleada se sustenta en plataformas como Mapbox y OpenStreetMap.",
+      "guion": "OpenAI lanza una nueva función de mapas para competir en el mercado",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-26T07:35:33.626Z",
+      "claves": [
+        "ChatGPT Maps funciona como una herramienta de búsqueda local y planificación.",
+        "Utiliza elementos interactivos como mapas, fichas y opiniones de usuarios.",
+        "La cartografía es posible mediante el uso de Mapbox y OpenStreetMap.",
+        "Ya está disponible en la versión web para Europa tras cumplir exigencias legales."
+      ],
+      "seSabe": [
+        "ChatGPT Maps permite buscar lugares, restaurantes y planificar viajes mediante lenguaje natural, según la fuente.",
+        "La función muestra elementos interactivos, fichas informativas, horarios y fotografías, de acuerdo con la información disponible.",
+        "Los mapas utilizan tecnología de Mapbox y OpenStreetMap, según se indicó.",
+        "La herramienta comenzó a activarse en la Unión Europea tras adaptarse a los requerimientos legales, según el informe."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "OpenAI lanzó ChatGPT Maps, una nueva función integrada en su asistente virtual para buscar lugares, consultar fichas informativas y planificar viajes desde el navegador web.",
+      "etiquetas": [
+        "OpenAI",
+        "ChatGPT",
+        "mapas"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Hipertextual",
+          "enlace": "https://hipertextual.com/guias/chatgpt-maps-alternativa-google-maps-openai/",
+          "fecha": "2026-09-26T07:00:00.000Z",
+          "oficial": false,
+          "aporte": "Detalló las características, el funcionamiento y la disponibilidad regional de la nueva función ChatGPT Maps de OpenAI."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1w00rx6",
+          "titulo": "OpenAI admite que ChatGPT tenía un bajo rendimiento en Siri, el asistente del iPhone",
+          "fecha": "2026-09-24T21:26:45.000Z",
+          "ruta": "/nota/openai-admite-que-chatgpt-tenia-un-bajo-rendimiento-en-siri-el-1w00rx6"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "1g3clx2": {
+      "estado": "automatica",
+      "titulo": "Spotify lanza una experiencia exclusiva para fans de BTS en Colombia",
+      "copete": "La plataforma de música presentó una propuesta inmersiva con contenidos especiales y listas personalizadas para los oyentes más frecuentes del grupo surcoreano en Colombia.",
+      "cuerpo": "Spotify lanzó una experiencia inmersiva exclusiva para los seguidores del grupo surcoreano BTS en Colombia, con playlists personalizadas, tarjetas digitales y contenidos diferenciados según el historial de reproducción de cada usuario dentro de la plataforma digital.\n\nPara quienes forman parte del sector de oyentes más frecuentes, la propuesta permite desbloquear listas con portadas exclusivas y registrarse para participar en un encuentro presencial en Bogotá. Como antecedentes, en agosto el grupo y Google lanzaron una colaboración con herramientas de inteligencia artificial y juegos interactivos, tras un incremento sostenido en las reproducciones musicales registrado a lo largo de los últimos tres años en ese país.\n\nLa iniciativa busca reconocer el vínculo de la comunidad seguidora con el grupo, que también impulsa el consumo de los proyectos individuales de sus integrantes, aunque la banda no participará de manera presencial en las actividades programadas en el espacio cultural.",
+      "guion": "Spotify lanza una experiencia exclusiva para fans de BTS en Colombia",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-26T07:35:33.626Z",
+      "claves": [
+        "La iniciativa incluye playlists personalizadas y tarjetas digitales para los oyentes frecuentes.",
+        "Los seguidores del sector principal podrán participar en un encuentro presencial en Bogotá.",
+        "El consumo musical del grupo registra un crecimiento sostenido en Colombia en los últimos tres años.",
+        "La plataforma aclaró que los integrantes de la banda no asistirán de forma presencial."
+      ],
+      "seSabe": [
+        "Spotify lanzó el 25 de septiembre una experiencia inmersiva para los fans de BTS en Colombia.",
+        "La propuesta incluye playlists personalizadas, tarjetas digitales y contenidos especiales para oyentes frecuentes.",
+        "Los usuarios ubicados en el sector de mayor escucha pueden registrarse para un encuentro en Casa Spotify Bogotá.",
+        "En agosto de 2026, el grupo y Google presentaron una colaboración previa con herramientas de inteligencia artificial."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Spotify presentó una experiencia inmersiva con contenidos exclusivos para los oyentes más frecuentes de BTS en Colombia, en medio del crecimiento sostenido del consumo musical del grupo surcoreano en la región.",
+      "etiquetas": [
+        "Spotify",
+        "BTS",
+        "Colombia",
+        "K-pop",
+        "Música"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/tecno/2026/09/26/spotify-premiara-a-los-fans-de-bts-en-colombia-por-reproducir-su-musica-contenido-exclusivo-para-los-top-listeners/",
+          "fecha": "2026-09-26T03:08:04.000Z",
+          "oficial": false,
+          "aporte": "Detalló el lanzamiento de la experiencia inmersiva de Spotify para seguidores de BTS en Colombia, las métricas de reproducción y las actividades previstas."
         }
       ],
       "verificacion": {
