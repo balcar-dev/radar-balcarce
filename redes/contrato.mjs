@@ -11,7 +11,9 @@
 //       espejo como foto del feed. Pueden ser menos si no hubo candidatas
 //       (relevancia 75 o más, tema no repetido, de 8 a 22).
 //   SEMANALES, aparte (no cuentan en las 6 historias): los teléfonos útiles un
-//   día por semana y la agenda del jueves (ésta sólo se arma en la PC).
+//   día por semana (rotan, ver diaRotativoDeUtiles) y la agenda del jueves (ésta
+//   sólo se arma en la PC). El día no pasa de 8 historias en total
+//   (CONTRATO_DIARIO.historiasMaximasPorDia).
 //
 // Las horas y las ventanas salen de redes/piezas.mjs (no se repiten acá) y los
 // números de ingesta/criterio.mjs (CONTRATO_DIARIO).
@@ -19,7 +21,11 @@
 // ANTES DE ESTE CONTRATO nadie miraba los podcasts ni sus historias, ni nada de
 // Facebook fuera del posteo: el 25/09 la historia del podcast de la noche no
 // salió en ninguna de las dos redes (el video duraba 62,7 segundos y las
-// historias aceptan 61) y no se enteró nadie.
+// historias aceptan 61) y no se enteró nadie. Desde el 26/09 el guion de cada
+// podcast tiene un presupuesto de 55 s y la historia nunca pasa de 58
+// (PODCAST_VOZ en ingesta/criterio.mjs): esa causa está cubierta, pero el caso
+// "su reel salió y la historia no" sigue siendo una falta (no se reintenta entre
+// corridas), y el vigilante lo avisa.
 //
 // Un libro no puede mostrar un duplicado por su clave (dos publicaciones de la
 // misma pieza se pisan en la misma entrada): eso lo ve la auditoría contra Meta

@@ -75,10 +75,11 @@ Cada cosa figura una sola vez: si está en "Para mañana", no se repite abajo.
     la sección durante dos semanas y comparar el alcance con números propios.
 16. Permiso `instagram_manage_insights` para leer qué rinde cada red.
 
-Encontrado al auditar el contrato del día (26/09, `redes/contrato.mjs`); lo que
-sigue es de `reels/` y de `redes/publicar-piezas.mjs`, y no está arreglado:
+Encontrado al auditar el contrato del día (26/09, `redes/contrato.mjs`), de
+`reels/` y de `redes/publicar-piezas.mjs`. **Arreglado el mismo día** (reglas 36 a
+40 de `REGLAS.md`, `pruebas/historias-largas.test.mjs`); queda anotado qué no cubre:
 
-- **16a. Las historias de los podcasts largos no salen (ALTA).** Una historia
+- **16a. Las historias de los podcasts largos no salen (ALTA). RESUELTO.** Una historia
   acepta hasta 60 segundos (Instagram: "Max duration for stories is 61.0";
   Facebook la rechaza también). El podcast de la noche, con 4 notas, duró
   62,7 s el 25/09 y **su historia no salió en ninguna de las dos redes**; el
@@ -87,26 +88,54 @@ sigue es de `reels/` y de `redes/publicar-piezas.mjs`, y no está arreglado:
   (`ffmpeg -t 58`, con un cierre corto) y usarlo sólo para `STORIES`, o bajar
   las notas del podcast de la noche a 3. Mientras tanto el vigilante avisa
   "no salió la historia de podcast noche… no se reintenta".
+  **Hecho:** el guion tiene presupuesto de 55 s (`repasoConPresupuesto`: saca el
+  contexto y después notas, mínimo 2) y, como red de seguridad, la historia sube
+  una copia cortada en 58 s con fundido (`reels/duracion.mjs`, `reels/reel.mjs`);
+  el reel sube entero. Con los datos del 25/09 a la noche: 153 palabras, ~65 s
+  estimados (62,7 reales) → 112 palabras, ~48 s. Se verificó el corte con ffmpeg
+  de verdad sobre un video de 62,7 s (queda en 58,0 y el reel no cambia).
+  **Sin cubrir:** el ritmo (2,4 palabras por segundo) es una medición de tres días;
+  si la voz se enlentece, el corte de 58 s la ataja, pero conviene mirar los avisos
+  amarillos de "Redes" ("la historia sube recortada").
 - **16b. La historia de un reel, y la copia en la segunda red, no se
-  reintentan (MEDIA).** `piezasQueTocan` mira sólo la red que manda
+  reintentan (MEDIA). RESUELTO EN PARTE.** `piezasQueTocan` mira sólo la red que manda
   (Instagram): en cuanto el reel salió, la pieza ya no "toca", así que si la
   historia falló (o Facebook falló después de tres intentos) no hay otra
   vuelta. Arreglo: guardar en el libro qué falta de cada pieza y rearmarla sólo
   si falta algo; o subir la historia con tres intentos y un corte automático
   (ver 16a).
-- **16c. Los teléfonos útiles no salen los días que rota (MEDIA).**
+  **Hecho:** la historia se intenta tres veces en la misma corrida (con espera),
+  sin volver a armar el video ni pedir la voz. **Sin cubrir:** si falla las tres
+  veces, no se reintenta en las corridas siguientes ni se reintenta la copia de
+  Facebook de un reel que falló: el video no se guarda entre corridas y armarlo de
+  nuevo gasta la voz de Gemini (y `plan.mjs` podría elegir otras notas, con lo que
+  la historia contaría otra cosa que el reel). Para cubrirlo habría que guardar el
+  `.mp4` (artefacto de Actions o Release) y bajarlo en la corrida siguiente; no se
+  hizo por costo y por no poder probarlo sin publicar.
+- **16c. Los teléfonos útiles no salen los días que rota (MEDIA). RESUELTO.**
   `redes/piezas.mjs` (`diaRotativoDeUtiles`) decide el día de la semana, pero
   `reels/plan.mjs` usa el de `panel/horarios.mjs` (martes) y sólo arma la pieza
   ese día. El 25/09 (viernes) el reloj dijo "tocan: utiles" cada 30 minutos de
   11:00 a 16:00 y nunca se armó; hasta las 15:49 eso además hacía fallar la
   corrida de Redes. Arreglo: que `plan.mjs` use el mismo día que el reloj.
   Mientras, la auditoría muestra "semanal teléfonos útiles: falta".
-- **16d. `historiasPorDia: 6` de `reels/plan.mjs` no se aplica (BAJA).** Sólo se
+  **Hecho:** una sola regla (`diaRotativoDeUtiles` en `ingesta/utiles.mjs`, aplicada
+  por `toca` de `panel/horarios.mjs`) para el reloj, el plan y el panel; si se fija
+  el día a mano en el panel, manda ese. Además `plan.mjs` tenía perdida la constante
+  `COLOR_UTILES_ACENTO` (se cayó con ReferenceError el primer día que la pieza tocó
+  de verdad): se repuso. El panel mostraba "esta semana: X" con una tercera regla
+  (`tocaHoy` de `utiles.mjs`, azarosa, incluso sábado o domingo): ahora es la misma.
+- **16d. `historiasPorDia: 6` de `reels/plan.mjs` no se aplica (BAJA). RESUELTO.** Sólo se
   imprime. Con los útiles y la agenda pueden salir 7 u 8 historias en un día:
   no hay nada que las frene, y el contrato del día las cuenta aparte.
-- **16e. Sin `REDES_ACTIVAS` todo parece faltar (BAJA).** Con el interruptor
+  **Hecho:** techo de 8 (6 + 2 extras, `CONTRATO_DIARIO.historiasMaximasPorDia`);
+  si se pasa, salen primero los útiles y después la agenda.
+- **16e. Sin `REDES_ACTIVAS` todo parece faltar (BAJA). RESUELTO.** Con el interruptor
   apagado el libro no se escribe y el vigilante avisa de cada pieza que falta.
   Es lo esperable, pero el aviso no lo dice.
+  **Hecho:** `vigilancia.yml` le pasa la variable; el vigilante dice una vez por día
+  "las redes están apagadas: es esperable que no salga nada", el resumen de las 21
+  lo dice en su línea y el cierre de las 23:30 se saltea.
 
 ## B. Perfiles y medidas
 

@@ -16,14 +16,17 @@ import { avisosDelClima } from '../ingesta/alertas.mjs';
 import { NUMEROS } from '../ingesta/utiles.mjs';
 import { horariosDe, toca } from '../panel/horarios.mjs';
 import {
-  elegirHistoriasDeNotas, elegirFeed, elegirParaPodcast, guionRepaso, guionPodcast, enlaceDeNota,
+  elegirHistoriasDeNotas, elegirFeed, elegirParaPodcast, repasoConPresupuesto, enlaceDeNota,
 } from '../redes/elegir.mjs';
+import { CONTRATO_DIARIO, PIEZAS } from '../ingesta/criterio.mjs';
 import { datosDeLaWeb } from '../redes/datos.mjs';
 import {
   guionClima, guionClimaNoche, guionFarmacia, guionUtiles, guionAgenda, comoNombre,
 } from '../redes/guiones.mjs';
 import { INDICACIONES, momentoDeHora } from '../redes/prompt-redes.mjs';
-import { HORAS_REELS, colorDelDia, horaHistoriaDeNota, HISTORIAS_DE_NOTAS, notasUsadasHoy, piezasPublicadasHoy } from '../redes/piezas.mjs';
+import {
+  HORAS_REELS, colorDelDia, horaHistoriaDeNota, HISTORIAS_DE_NOTAS, notasUsadasHoy, piezasPublicadasHoy, historiasQueSobran,
+} from '../redes/piezas.mjs';
 
 // El cupo de reels es el recurso escaso del día, así que NO se gasta en lo que
 // se repite todas las mañanas. Clima, farmacia y agenda van a historias, que
@@ -33,12 +36,21 @@ import { HORAS_REELS, colorDelDia, horaHistoriaDeNota, HISTORIAS_DE_NOTAS, notas
 export const REGLAS = {
   reelsPorDia: 3, // techo duro, sólo noticias
   horasEntreReels: 4, // que no salgan pegados
-  historiasPorDia: 6, // clima de la mañana y de la noche, farmacia, y tres de notas
+  // Las historias del contrato son 6 (los tres podcasts, el clima de la mañana y
+  // el de la noche, la farmacia) y el techo del día es 8: las 6 más como máximo
+  // dos extras (teléfonos útiles y agenda). Se aplica de verdad en planDelDia.
+  historiasPorDia: CONTRATO_DIARIO.historiasPorDia,
+  historiasMaximasPorDia: CONTRATO_DIARIO.historiasMaximasPorDia,
   feedPorDia: 0, // apagado: Instagram no acepta fotos sin alojarlas; todo sale en video
   relevanciaParaHistoria: 62,
   relevanciaParaFeed: 80,
   horariosReel: HORAS_REELS,
 };
+
+// El color de la placa de teléfonos útiles (el mismo que usa reels/placa.mjs). Se había
+// perdido en un refactor y, como los útiles sólo salían un día fijo que nadie
+// corría, nadie lo notó: el plan se caía con ReferenceError el día que tocaba.
+const COLOR_UTILES_ACENTO = '#8C2D18';
 
 const DATOS = path.join(import.meta.dirname, '..', 'panel', 'datos', 'ultima.json');
 const SALIDA = path.join(import.meta.dirname, 'salida');
@@ -53,11 +65,14 @@ const fechaLarga = (d = new Date()) => {
 const F_AGENDA = path.join(import.meta.dirname, '..', 'panel', 'datos', 'agenda.json');
 const F_ESTADO = path.join(import.meta.dirname, '..', 'panel', 'datos', 'estado.json');
 
+/** Lo que decidió el panel (estado.json). Sin panel, vacío: valen los de fábrica. */
+function leerEstado() {
+  try { return JSON.parse(fs.readFileSync(F_ESTADO, 'utf8')); } catch { return {}; }
+}
+
 /** Los horarios de las piezas fijas, como quedaron configurados en el panel
  *  (pestaña Calendario). Si no hay nada guardado, valen los de fábrica. */
-function horariosConfigurados() {
-  let estado = {};
-  try { estado = JSON.parse(fs.readFileSync(F_ESTADO, 'utf8')); } catch { /* valores de fábrica */ }
+function horariosConfigurados(estado) {
   const porId = {};
   for (const h of horariosDe(estado)) porId[h.id] = h;
   return porId;
@@ -144,8 +159,10 @@ export function guionNoticia(n) {
 
 // --- el plan ---------------------------------------------------------------
 
-export function planDelDia(datos, { libro = null } = {}) {
-  const hoy = new Date().getDate();
+export function planDelDia(datos, {
+  libro = null, fecha = new Date(), estado = leerEstado(), eventos = null,
+} = {}) {
+  const hoy = fecha.getDate();
   const turno = datos.farmacias?.turnos?.find((t) => t.dia === hoy) ?? null;
 
   // Sólo compiten por un reel las notas que salieron o que alguien aprobó,
@@ -158,7 +175,10 @@ export function planDelDia(datos, { libro = null } = {}) {
 
   // Los horarios y los días salen del panel (pestaña Calendario). Si una
   // pieza está apagada o hoy no le toca, directamente no se arma.
-  const cuando = horariosConfigurados();
+  const cuando = horariosConfigurados(estado);
+  // `toca` (panel/horarios.mjs) es la MISMA función que usa el reloj de Redes:
+  // los teléfonos útiles salen el día que rotan, o el que fijó el panel.
+  const tocaHoy = (id) => toca(cuando[id], fecha, { estado });
 
   // --- El aviso de clima: la única pieza que no tiene horario -------------
   //
@@ -200,7 +220,7 @@ export function planDelDia(datos, { libro = null } = {}) {
   }
 
   // --- Historias: lo de todos los días, que es servicio y no noticia -------
-  if (datos.clima && toca(cuando['clima-manana'])) {
+  if (datos.clima && tocaHoy('clima-manana')) {
     const c = datos.clima.ahora;
     const hoy = datos.clima.dias[0];
     const manana = datos.clima.dias[1];
@@ -229,7 +249,7 @@ export function planDelDia(datos, { libro = null } = {}) {
 
     // Segundo pase: de noche, cuando la gente ya está en casa y lo que
     // importa es cómo amanece mañana.
-    if (toca(cuando['clima-noche'])) piezas.push({
+    if (tocaHoy('clima-noche')) piezas.push({
       tipo: 'historia', hora: cuando['clima-noche'].hora, nombre: 'clima-noche', titulo: 'Cómo sigue el día',
       motivo: 'segundo pase del clima · mira para adelante', seccion: 'Clima',
       guion: guionClimaNoche(datos.clima),
@@ -253,7 +273,7 @@ export function planDelDia(datos, { libro = null } = {}) {
   }
 
   // La farmacia va tarde a propósito: sirve cuando las demás ya cerraron.
-  if (turno && toca(cuando.farmacia)) {
+  if (turno && tocaHoy('farmacia')) {
     piezas.push({
       tipo: 'historia', hora: cuando.farmacia.hora, nombre: 'farmacia', titulo: `Farmacia de turno: ${comoNombre(turno.farmacias.join(' y '))}`,
       motivo: 'a la hora en que cierran las demás', seccion: 'Farmacias',
@@ -269,7 +289,7 @@ export function planDelDia(datos, { libro = null } = {}) {
   // Números útiles: una vez por semana, día variable (ingesta/utiles.mjs
   // decide cuál). No es noticia ni clima: es contenido de utilidad pura, así
   // que no compite por cupo de reel ni tiene por qué salir todos los días.
-  if (toca(cuando.utiles)) {
+  if (tocaHoy('utiles')) {
     const grupos = [...new Set(NUMEROS.map((n) => n.categoria))]
       .map((categoria) => ({ categoria, items: NUMEROS.filter((n) => n.categoria === categoria) }));
     piezas.push({
@@ -286,8 +306,8 @@ export function planDelDia(datos, { libro = null } = {}) {
   // La agenda del fin de semana: los jueves a la tarde, que es cuando la
   // gente empieza a pensar qué hacer. Es la pieza que ninguno de los otros
   // medios de Balcarce tiene, así que es de lo que más nos diferencia.
-  const deLaAgenda = eventosProximos(4);
-  if (toca(cuando.agenda) && deLaAgenda.length) {
+  const deLaAgenda = eventos ?? eventosProximos(4);
+  if (tocaHoy('agenda') && deLaAgenda.length) {
     piezas.push({
       tipo: 'historia', hora: cuando.agenda.hora, nombre: 'agenda',
       titulo: 'Qué hacer este fin de semana', motivo: 'los jueves, si hay eventos cargados',
@@ -326,16 +346,22 @@ export function planDelDia(datos, { libro = null } = {}) {
   const yaContadas = [];
   RONDAS.forEach((ronda, i) => {
     if (hechas.has(ronda.nombre)) return;
-    const elegidas = elegirParaPodcast(libres, { cuantas: 3, excluir: yaContadas });
-    const guion = guionRepaso(elegidas, { momento: ronda.momento });
-    if (!guion) return; // un podcast de una sola noticia no es un repaso
+    // Con presupuesto de duración: cada podcast se sube también como historia y
+    // una historia acepta 60 s. Si el guion no cabe en 55, se le sacan las
+    // oraciones de contexto y después notas (mínimo 2): `elegidas` son las que quedaron.
+    const repaso = repasoConPresupuesto(
+      elegirParaPodcast(libres, { cuantas: PIEZAS.notasPorPodcast, excluir: yaContadas }), { momento: ronda.momento, fecha },
+    );
+    if (!repaso) return; // un podcast de una sola noticia no es un repaso
+    const { guion, notas: elegidas } = repaso;
     yaContadas.push(...elegidas);
     piezas.push({
       tipo: 'reel', hora: REGLAS.horariosReel[i] ?? '21:00', nombre: ronda.nombre, notaId: elegidas[0].id,
       notaIds: elegidas.map((n) => n.id),
       items: elegidas.map((n) => ({ titulo: n.titulo, enlace: enlaceDeNota(n, SITIO) })),
       titulo: ronda.titulo, momento: ronda.momento, indicacion: INDICACIONES[ronda.momento],
-      motivo: `podcast de ${elegidas.length} notas, las de más puntaje de temas distintos`,
+      motivo: `podcast de ${elegidas.length} notas, las de más puntaje de temas distintos · ~${repaso.segundos.toFixed(0)} s`,
+      segundosEstimados: repaso.segundos,
       seccion: 'Balcarce', guion,
       svg: placaNoticia({ seccion: 'Balcarce', titulo: ronda.titulo, cuando: fechaLarga(), color: colorDelDia() }),
       acento: colorDelDia(),
@@ -345,15 +371,18 @@ export function planDelDia(datos, { libro = null } = {}) {
   // El podcast de la noche: el repaso de lo más fuerte del día. Sale cuando la
   // gente ya vio todo y quiere el resumen. Si ese día no hay al menos dos
   // noticias para repasar, no se arma.
-  const delDia = elegirParaPodcast(publicables, { cuantas: 4 }, { relevanciaParaHistoria: 0 });
-  const repaso = guionPodcast(publicables);
-  if (repaso && !hechas.has('podcast')) {
+  // También con presupuesto: el del 25/09 (4 notas, 62,7 s) dejó sin historia a las dos redes.
+  const delDia = elegirParaPodcast(publicables, { cuantas: PIEZAS.notasPodcastNoche }, { relevanciaParaHistoria: 0 });
+  const repasoNoche = repasoConPresupuesto(delDia, { momento: 'noche', fecha });
+  if (repasoNoche && !hechas.has('podcast')) {
+    const notasNoche = repasoNoche.notas;
     piezas.push({
       tipo: 'reel', hora: REGLAS.horariosReel[2] ?? '20:30', nombre: 'podcast',
-      notaIds: delDia.map((n) => n.id),
-      items: delDia.map((n) => ({ titulo: n.titulo, enlace: enlaceDeNota(n, SITIO) })),
-      titulo: 'El repaso del día', motivo: 'el podcast diario: los titulares más fuertes, un solo audio',
-      seccion: 'Balcarce', guion: repaso, momento: 'noche', indicacion: INDICACIONES.noche,
+      notaIds: notasNoche.map((n) => n.id),
+      items: notasNoche.map((n) => ({ titulo: n.titulo, enlace: enlaceDeNota(n, SITIO) })),
+      titulo: 'El repaso del día', motivo: `el podcast diario: los titulares más fuertes, un solo audio · ~${repasoNoche.segundos.toFixed(0)} s`,
+      segundosEstimados: repasoNoche.segundos,
+      seccion: 'Balcarce', guion: repasoNoche.guion, momento: 'noche', indicacion: INDICACIONES.noche,
       svg: placaNoticia({ seccion: 'Balcarce', titulo: 'El repaso del día', cuando: fechaLarga(), color: colorDelDia() }),
       acento: colorDelDia(),
     });
@@ -387,6 +416,20 @@ export function planDelDia(datos, { libro = null } = {}) {
     reels.slice(REGLAS.reelsPorDia).forEach((p) => { p.fueraDeTecho = true; });
   }
 
+  // El techo de historias del día (8 = las 6 del contrato + 2 extras). Cuentan
+  // los tres podcasts (cada uno se sube también como historia), aunque ya hayan
+  // salido. Si se pasa, se dejan de armar los extras: primero los teléfonos
+  // útiles, después la agenda. Las del contrato y los avisos nunca se sacan.
+  const PODCASTS = ['noticia1', 'noticia2', 'podcast'];
+  const historiasDelDia = [
+    ...piezas.filter((p) => p.tipo === 'historia' || PODCASTS.includes(p.nombre)).map((p) => p.nombre),
+    ...PODCASTS.filter((n) => hechas.has(n)),
+  ];
+  for (const nombre of historiasQueSobran(historiasDelDia, REGLAS.historiasMaximasPorDia)) {
+    const p = piezas.find((x) => x.nombre === nombre);
+    if (p) { p.fueraDeTecho = true; p.motivo = `${p.motivo} · no sale: el día ya tiene ${REGLAS.historiasMaximasPorDia} historias`; }
+  }
+
   return { piezas, turno };
 }
 
@@ -397,7 +440,7 @@ if (process.argv[1] && process.argv[1].endsWith('plan.mjs')) {
   const { piezas } = planDelDia(datos, { libro: leerLibro() });
 
   console.log(`\n\x1b[1mPLAN DEL DÍA · ${fechaLarga()}\x1b[0m`);
-  console.log(`  techo: ${REGLAS.reelsPorDia} reels, ${REGLAS.historiasPorDia} historias, ${REGLAS.feedPorDia} en el feed\n`);
+  console.log(`  techo: ${REGLAS.reelsPorDia} reels, ${REGLAS.historiasPorDia} historias (hasta ${REGLAS.historiasMaximasPorDia} con los extras), ${REGLAS.feedPorDia} en el feed\n`);
   const icono = { reel: '\x1b[33mREEL     \x1b[0m', historia: '\x1b[36mHISTORIA \x1b[0m', feed: '\x1b[32mFEED     \x1b[0m' };
   for (const p of piezas) {
     console.log(`  ${p.hora}  ${icono[p.tipo]} ${p.titulo.slice(0, 68)}`);
@@ -424,8 +467,15 @@ if (process.argv[1] && process.argv[1].endsWith('plan.mjs')) {
           nombre: p.nombre, tipo: p.tipo, hora: p.hora, titulo: p.titulo, notaId: p.notaId ?? null,
           notaIds: p.notaIds ?? [], items: p.items ?? [],
           archivo: path.basename(r.mp4), duracion: Number(r.duracion.toFixed(1)),
+          // Si el video pasa de lo que acepta una historia, las historias suben
+          // esta versión recortada; el reel sube entero (redes/publicar-piezas.mjs).
+          ...(r.historia ? { archivoHistoria: path.basename(r.historia.mp4), duracionHistoria: Number(r.historia.duracion.toFixed(1)) } : {}),
         });
         console.log(`\x1b[32mlisto\x1b[0m ${path.basename(r.mp4)} · ${r.duracion.toFixed(1)} s · voz ${r.vozUsada}`);
+        if (r.historia) {
+          console.log(`\x1b[33m    AVISO\x1b[0m ${r.historia.aviso}`);
+          if (process.env.GITHUB_ACTIONS) console.log(`::warning::${p.nombre}: ${r.historia.aviso}`);
+        }
       } catch (e) {
         console.log(`\x1b[31mfalló\x1b[0m ${e.message.split('\n')[0]}`);
       }

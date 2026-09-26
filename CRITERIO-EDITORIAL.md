@@ -705,6 +705,7 @@ instrucción de la IA (70, 90, 100 a 180…) también se controlan.
 | Contrato del día: historias de clima | 2 | `CONTRATO_DIARIO.historiasDeClima` |
 | Contrato del día: historias de farmacia | 1 | `CONTRATO_DIARIO.historiasDeFarmacia` |
 | Contrato del día: historias en total | 6 | `CONTRATO_DIARIO.historiasPorDia` |
+| Contrato del día: techo de historias (6 + 2 extras) | 8 | `CONTRATO_DIARIO.historiasMaximasPorDia` |
 | Contrato del día: minuto del cierre (23:30) | 1410 | `CONTRATO_DIARIO.cierreMinutoDelDia` |
 | Contrato del día: minutos de diferencia entre el libro y Meta | 20 | `CONTRATO_DIARIO.toleranciaDeHoraMinutos` |
 | Contrato del día: días de la auditoría semanal | 7 | `CONTRATO_DIARIO.diasDeAuditoriaSemanal` |

@@ -39,7 +39,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { cronogramaDelDia, ventanaDe, claveDePieza } from './piezas.mjs';
-import { yaPublicada, horaAR, diaAR, minutoDelDiaAR } from './elegir.mjs';
+import { yaPublicada, horaAR, diaAR, minutoDelDiaAR, estaActivo } from './elegir.mjs';
 import { enviarWhatsApp, sinSecretos } from './whatsapp.mjs';
 import { auditoriaVencida } from './auditar.mjs';
 import { contratoDelDia, CONTRATO_DESDE } from './contrato.mjs';
@@ -55,6 +55,20 @@ import {
   medir, tocaMedir, turnoDeMedicion, agregarPunto, textoEstadisticas, nombresDeCaminos,
 } from './estadisticas.mjs';
 
+/**
+ * ¿Están prendidas las redes? Es la variable REDES_ACTIVAS de GitHub, que la
+ * corrida de Vigilancia recibe por entorno (vigilancia.yml). Sin la variable
+ * DEFINIDA en el entorno (una corrida a mano, sin GitHub) se asume que sí: es
+ * más seguro avisar de más que callar. En GitHub la variable siempre está
+ * definida: sin valor es texto vacío, y eso es "apagadas", igual que en redes.yml.
+ */
+export function redesPrendidas(env = process.env) {
+  return env.REDES_ACTIVAS === undefined ? true : estaActivo(env.REDES_ACTIVAS);
+}
+
+/** Lo que dice el vigilante, una vez por día, cuando las redes están apagadas. */
+export const TEXTO_REDES_APAGADAS = 'Las redes están apagadas (la variable REDES_ACTIVAS de GitHub no dice "Si"): es esperable que no salga nada en Facebook ni en Instagram, y por eso no se avisa pieza por pieza. Cuando se prendan, vuelve a vigilarse todo.';
+
 /** Las piezas que tienen que salir todos los días: si no salió una, es un
  *  problema. Los podcasts no están: dependen de que haya notas para contar. */
 export const PIEZAS_FIJAS = ['clima-manana', 'farmacia', 'clima-noche'];
@@ -63,6 +77,7 @@ export const LIMITES = {
   minutosSinActualizar: 100,   // la web se arma cada 30
   minutosSinReloj: 100,        // el reloj de redes corre cada 30
   horasEntreAvisos: 6,
+  horasEntreAvisosDeRedesApagadas: 24, // el recordatorio de "redes apagadas": una vez por día
   minimoDeNotasConCuerpo: 0.35, // de las últimas 24 horas; con 10 notas o más
   horaDelResumen: 21,
 };
@@ -100,6 +115,7 @@ const minutos = (desde, ahora) => (ahora.getTime() - new Date(desde).getTime()) 
  */
 export function evaluar({
   ahora, web, www = null, corridas = {}, libro = {}, contenido = null, auditoria = null, contrato = null,
+  redesActivas = true,
 }) {
   const problemas = [];
   const de = (clave, nivel, texto) => problemas.push({ clave, nivel, texto });
@@ -171,8 +187,15 @@ export function evaluar({
     }
   }
 
+  // --- redes apagadas: con REDES_ACTIVAS sin prender no se publica nada y no se
+  // escribe el libro, así que TODA pieza "falta". Es lo esperable: se dice una
+  // vez por día en vez de avisar cada pieza como si fuera un problema.
+  if (!redesActivas) {
+    de('redes-apagadas', 'media', TEXTO_REDES_APAGADAS);
+  }
+
   // --- las piezas fijas del día
-  if (libro && Object.keys(libro).length) {
+  if (redesActivas && libro && Object.keys(libro).length) {
     for (const p of cronogramaDelDia(ahora)) {
       if (!PIEZAS_FIJAS.includes(p.nombre)) continue;
       const [h, m] = p.hora.split(':').map(Number);
@@ -186,7 +209,7 @@ export function evaluar({
   }
 
   // --- el contrato del día (redes/contrato.mjs)
-  if (contrato) problemas.push(...problemasDelContrato(contrato));
+  if (contrato) problemas.push(...problemasDelContrato(contrato, { redesActivas }));
   return problemas;
 }
 
@@ -208,12 +231,14 @@ const YA_VIGILADAS_EN_INSTAGRAM = ['clima-manana', 'farmacia', 'clima-noche'];
  * Los posteos que quedan cortos NO son un problema acá: pueden no haber tenido
  * candidatas; eso lo distingue el cierre de las 23:30.
  */
-export function problemasDelContrato(contrato) {
+export function problemasDelContrato(contrato, { redesActivas = true } = {}) {
   const lista = [];
   for (const red of [contrato.facebook, contrato.instagram]) {
     for (const d of red.duplicadas) {
       lista.push({ clave: `duplicado-${red.red}-${d.claves.join('+')}`, nivel: 'alta', texto: `${red.nombre}: DUPLICADO. ${d.texto}. Revisá la página y borrá la copia (REGLAS.md, "una pieza por día").` });
     }
+    // Con las redes apagadas lo que falta es lo esperable: lo dice `evaluar` una vez.
+    if (!redesActivas) continue;
     for (const p of red.faltan) {
       if (red.red === 'instagram' && p.tipo === 'STORIES' && YA_VIGILADAS_EN_INSTAGRAM.includes(p.nombre) && p.grupo !== 'historia-podcast') continue;
       const que = p.grupo === 'reel' ? 'el reel' : 'la historia';
@@ -237,7 +262,8 @@ export function aAvisar(problemas, estado = {}, ahora = new Date()) {
   const previos = estado.avisos ?? {};
   return problemas.filter((p) => {
     const antes = previos[p.clave];
-    return !antes || minutos(antes, ahora) >= LIMITES.horasEntreAvisos * 60;
+    const cadaHoras = p.clave === 'redes-apagadas' ? LIMITES.horasEntreAvisosDeRedesApagadas : LIMITES.horasEntreAvisos;
+    return !antes || minutos(antes, ahora) >= cadaHoras * 60;
   });
 }
 
@@ -254,9 +280,11 @@ export function mensajeDeProblemas(problemas) {
  * problemas abiertos y las estadísticas.
  */
 export function mensajeDelResumen({
-  ahora, libro = {}, web, portada = {}, problemas = [], problemasArriba = false, estadisticas = '',
+  ahora, libro = {}, web, portada = {}, problemas = [], problemasArriba = false, estadisticas = '', redesActivas = true,
 }) {
-  return textoResumen({ datos: datosDelDia({ ahora, portada, libro }), problemas, problemasArriba, estadisticas, web });
+  return textoResumen({
+    datos: datosDelDia({ ahora, portada, libro }), problemas, problemasArriba, estadisticas, web, redesActivas,
+  });
 }
 
 /**
@@ -320,7 +348,7 @@ export function tocaResumen(ahora, estado = {}) {
  */
 export function planDeAvisos({
   ahora, problemas = [], estado = {}, portada = {}, libro = {}, web = null,
-  estadisticas = '', soloResumen = false, sitio = 'https://radarbalcarce.com', cierre = null,
+  estadisticas = '', soloResumen = false, sitio = 'https://radarbalcarce.com', cierre = null, redesActivas = true,
 }) {
   const secciones = [];
   const hechos = {};
@@ -352,7 +380,9 @@ export function planDeAvisos({
   if (soloResumen || tocaResumen(ahora, estado)) {
     secciones.push({
       clave: 'resumen',
-      texto: mensajeDelResumen({ ahora, libro, web, portada, problemas, problemasArriba: nuevos.length > 0, estadisticas }),
+      texto: mensajeDelResumen({
+        ahora, libro, web, portada, problemas, problemasArriba: nuevos.length > 0, estadisticas, redesActivas,
+      }),
     });
     hechos.resumen = (e) => { e.ultimoResumen = diaAR(ahora); };
   } else if (estadisticas) {
@@ -493,7 +523,11 @@ async function main() {
   const cuerpos = { total: recientes.length, conCuerpo: recientes.filter((n) => n.cuerpo).length };
   const auditoria = leer(path.join(RAIZ, 'web', 'data', 'auditoria.json'), null);
   const contrato = contratoDelDia({ libro, ahora, portada });
-  const problemas = evaluar({ ...obs, libro, auditoria, contrato, contenido: { ...(obs.contenido ?? {}), cuerpos } });
+  const redesActivas = redesPrendidas();
+  if (!redesActivas) console.log('  Las redes están apagadas (REDES_ACTIVAS): no se avisa pieza por pieza.');
+  const problemas = evaluar({
+    ...obs, libro, auditoria, contrato, redesActivas, contenido: { ...(obs.contenido ?? {}), cuerpos },
+  });
 
   if (probarCierre) {
     const meta = await consultarMeta({ ahora, dias: 2 });
@@ -540,7 +574,12 @@ ${c.texto}`);
   // --- el cierre del día (23:30): contra lo que Meta tiene de verdad
   let cierre = null;
   const diaDelCierre = probarResumen ? null : fechaDelCierre(ahora, estado);
-  if (diaDelCierre) {
+  if (diaDelCierre && !redesActivas) {
+    // Sin publicar no hay nada que cerrar contra Meta: se anota el día y ya.
+    console.log(`  Cierre del ${diaDelCierre} salteado: las redes están apagadas.`);
+    estado.ultimoCierre = diaDelCierre;
+    cambio = true;
+  } else if (diaDelCierre) {
     console.log(`  Cerrando el día ${diaDelCierre} contra Meta…`);
     const meta = await consultarMeta({ ahora, dias: 2 });
     cierre = cierreDelDia({ fecha: diaDelCierre, ahora, libro, portada, meta });
@@ -558,6 +597,7 @@ ${c.texto}`);
   // --- un solo mensaje con todo lo que haya para decir
   const plan = planDeAvisos({
     ahora, problemas, estado, portada, libro, web: obs.web, estadisticas: textoStats, soloResumen: probarResumen, sitio, cierre,
+    redesActivas,
   });
   const { texto, incluidas } = armarMensaje(plan.secciones);
   const afuera = plan.secciones.map((s) => s.clave).filter((c) => !incluidas.includes(c));

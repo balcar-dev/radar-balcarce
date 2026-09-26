@@ -15,7 +15,9 @@
 // Sin red y sin reloj propio: se prueba entera.
 
 import { diaAR, horaAR, yaPublicada } from './elegir.mjs';
-import { horariosDe } from '../panel/horarios.mjs';
+import { horariosDe, toca } from '../panel/horarios.mjs';
+import { diaRotativoDeUtiles } from '../ingesta/utiles.mjs';
+import { CONTRATO_DIARIO } from '../ingesta/criterio.mjs';
 import { SITIO } from './prompt-redes.mjs';
 
 /** Cuánto tiempo después de su hora una pieza todavía vale la pena. Un clima
@@ -133,25 +135,33 @@ const diaSemanaAR = (fecha) => ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
   new Intl.DateTimeFormat('en-US', { weekday: 'short', timeZone: 'America/Argentina/Buenos_Aires' }).format(fecha),
 );
 
-// Los teléfonos útiles no dependen de una fecha para tener sentido (a
-// diferencia de la agenda del finde), así que no hay motivo para que caigan
-// siempre el mismo día: se pidió que roten, de lunes a viernes, una semana
-// distinta cada vez. La placa es la misma casi siempre — sólo cambia si se
-// actualiza la lista de teléfonos en ingesta/utiles.mjs —, lo único que se
-// mueve es qué día de la semana le toca.
-const DIAS_HABILES = [1, 2, 3, 4, 5]; // lunes a viernes, como en horariosDe()
-const SEMANA_MS = 7 * 24 * 60 * 60 * 1000;
+// Los teléfonos útiles rotan de lunes a viernes, una semana distinta cada vez
+// (ingesta/utiles.mjs). Esa regla es la única: la usan también reels/plan.mjs y
+// el panel, vía `toca` de panel/horarios.mjs. Se re-exporta con el nombre de
+// siempre.
+export { diaRotativoDeUtiles };
 
-/** Qué día (lunes a viernes) le toca a los teléfonos útiles esta semana. */
-export function diaRotativoDeUtiles(fecha = new Date()) {
-  // Se ancla al lunes de la semana (hora de Balcarce), no a la fecha exacta:
-  // si no, un martes podría quedar en una "semana" distinta que el lunes de
-  // al lado nada más porque los siete días no arrancan a contarse un lunes.
-  const medianoche = new Date(`${diaAR(fecha)}T00:00:00Z`).getTime();
-  const diasDesdeElLunes = (diaSemanaAR(fecha) + 6) % 7; // domingo=0 → 6, lunes=1 → 0…
-  const lunesDeEstaSemana = medianoche - diasDesdeElLunes * 24 * 60 * 60 * 1000;
-  const semanas = Math.floor(lunesDeEstaSemana / SEMANA_MS);
-  return DIAS_HABILES[semanas % DIAS_HABILES.length];
+/** Las historias extras (no están en el contrato de las seis), de la que se
+ *  sacaría primero a la que menos importa. */
+export const EXTRAS_DE_HISTORIAS = ['utiles', 'agenda'];
+
+/**
+ * Qué historias sobran para que el día no pase el techo (CONTRATO_DIARIO
+ * .historiasMaximasPorDia: las 6 del contrato más 2 extras). Recibe los
+ * nombres de todas las historias del día (los tres podcasts cuentan: cada uno
+ * se sube también como historia) y devuelve los de los extras que hay que
+ * dejar de armar: primero los teléfonos útiles, después la agenda. Las del
+ * contrato y los avisos de clima nunca se sacan. Función pura.
+ */
+export function historiasQueSobran(nombres, techo = CONTRATO_DIARIO.historiasMaximasPorDia) {
+  const todas = [...new Set(nombres)];
+  let exceso = todas.length - techo;
+  const sobran = [];
+  for (const extra of EXTRAS_DE_HISTORIAS) {
+    if (exceso <= 0) break;
+    if (todas.includes(extra)) { sobran.push(extra); exceso -= 1; }
+  }
+  return sobran;
 }
 
 /**
@@ -163,16 +173,12 @@ export function diaRotativoDeUtiles(fecha = new Date()) {
  * historias de notas tienen los suyos arriba.
  */
 export function cronogramaDelDia(fecha = new Date(), { estado = {} } = {}) {
-  const dia = diaSemanaAR(fecha);
-  // Si alguien fijó a mano qué días salen los útiles desde el panel, eso
-  // manda. Si no, rota sola.
-  const diasUtilesAMano = estado?.horarios?.utiles?.dias;
+  // `toca` (panel/horarios.mjs) es la única que decide qué día sale cada pieza,
+  // la misma que usa reels/plan.mjs: si alguien fijó los días de los útiles a
+  // mano desde el panel, manda eso; si no, rotan solos.
   const fijas = horariosDe(estado)
-    .filter((h) => h.activa !== false)
     .filter((h) => !SOLO_EN_LA_PC.includes(h.id))
-    .filter((h) => (h.id === 'utiles' && !diasUtilesAMano
-      ? dia === diaRotativoDeUtiles(fecha)
-      : (h.dias ?? []).includes(dia)))
+    .filter((h) => toca(h, fecha, { estado }))
     .map((h) => ({ nombre: h.id, tipo: 'historia', hora: h.hora }));
 
   return [

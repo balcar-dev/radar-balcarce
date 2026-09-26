@@ -83,6 +83,9 @@ jobs:
           CLOUDFLARE_ANALYTICS_TOKEN: ${{ secrets.CLOUDFLARE_ANALYTICS_TOKEN }}
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           META_TOKEN: ${{ secrets.META_TOKEN }}
+          # Si las redes están apagadas, que el vigilante lo sepa: es esperable que
+          # no salga nada y no tiene que avisar pieza por pieza.
+          REDES_ACTIVAS: ${{ vars.REDES_ACTIVAS }}
 
       - name: Guardar lo avisado y lo medido
         if: always() && github.event.inputs.modo != 'probar-resumen' && github.event.inputs.modo != 'probar-cierre'

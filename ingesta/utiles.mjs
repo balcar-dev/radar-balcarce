@@ -42,30 +42,47 @@ export const FUENTE = 'balcarce.gob.ar/telefonos-utiles';
 
 const DIAS = ['domingo', 'lunes', 'martes', 'miércoles', 'jueves', 'viernes', 'sábado'];
 
+const ZONA = 'America/Argentina/Buenos_Aires';
+const DIA_MS = 24 * 60 * 60 * 1000;
+const SEMANA_MS = 7 * DIA_MS;
+
+/** El día de Balcarce como AAAA-MM-DD. */
+const diaAR = (fecha) => new Intl.DateTimeFormat('en-CA', { timeZone: ZONA }).format(fecha);
+
+/** El día de la semana en Balcarce, con 0 = domingo como Date#getDay(). */
+export const diaSemanaAR = (fecha = new Date()) => ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'].indexOf(
+  new Intl.DateTimeFormat('en-US', { weekday: 'short', timeZone: ZONA }).format(fecha),
+);
+
 /**
- * Decide si HOY toca publicar la historia de números útiles.
+ * Qué día (lunes a viernes, 1 a 5) le toca a los teléfonos útiles esta semana.
+ * ES LA ÚNICA FUENTE de "¿toca hoy?": la usan el reloj de Redes
+ * (redes/piezas.mjs), el plan que arma el video (reels/plan.mjs), el panel y la
+ * web. Antes había tres reglas distintas y el 25/09 el reloj decía "tocan:
+ * utiles" un viernes que el plan no conocía (PENDIENTES 16c).
  *
- * La regla: una vez por semana, en un día elegido al azar pero ESTABLE — la
- * semilla es el número de semana del año, así que no cambia si se corre el
- * chequeo varias veces el mismo día, pero sí varía de una semana a la otra
- * (no siempre cae lunes).
+ * Se ancla al lunes de la semana (hora de Balcarce), así que no cambia si se
+ * consulta cualquier día de la misma semana, y varía de una semana a la otra.
+ */
+export function diaRotativoDeUtiles(fecha = new Date()) {
+  const medianoche = new Date(`${diaAR(fecha)}T00:00:00Z`).getTime();
+  const diasDesdeElLunes = (diaSemanaAR(fecha) + 6) % 7; // domingo=0 → 6, lunes=1 → 0…
+  const semanas = Math.floor((medianoche - diasDesdeElLunes * DIA_MS) / SEMANA_MS);
+  return [1, 2, 3, 4, 5][semanas % 5];
+}
+
+/**
+ * Decide si HOY toca publicar la historia de números útiles: el día de
+ * `diaRotativoDeUtiles`. Un día hábil por semana, que rota. (El panel puede
+ * fijar un día a mano: ver `toca` en panel/horarios.mjs.)
  */
 export function tocaHoy(fecha = new Date()) {
-  const inicioAnio = new Date(fecha.getFullYear(), 0, 1);
-  const semana = Math.floor((fecha - inicioAnio) / (7 * 24 * 3600 * 1000));
-  // Semilla simple y determinística: no hace falta más para elegir 1 de 7.
-  const diaElegido = (semana * 2654435761) % 7;
-  return fecha.getDay() === Math.abs(diaElegido);
+  return diaSemanaAR(fecha) === diaRotativoDeUtiles(fecha);
 }
 
 /** Para el panel: qué día le tocó a esta semana, sin esperar a que llegue. */
 export function diaDeEstaSemana(fecha = new Date()) {
-  for (let i = 0; i < 7; i += 1) {
-    const d = new Date(fecha);
-    d.setDate(d.getDate() - d.getDay() + i);
-    if (tocaHoy(d)) return DIAS[i];
-  }
-  return DIAS[0];
+  return DIAS[diaRotativoDeUtiles(fecha)];
 }
 
 if (process.argv[1] && process.argv[1].endsWith('utiles.mjs')) {

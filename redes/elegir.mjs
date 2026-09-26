@@ -26,9 +26,9 @@
 import { rutaDeNota } from '../web/lib/ruta.js';
 import { esperaCuerpo } from '../web/lib/cuerpo.js';
 import {
-  FACEBOOK, PIEZAS, POSTEO, SECCIONES_QUE_ESPERAN_PERSONA,
+  FACEBOOK, PIEZAS, PODCAST_VOZ, POSTEO, SECCIONES_QUE_ESPERAN_PERSONA,
 } from '../ingesta/criterio.mjs';
-import { armarPodcast, variante } from './guiones.mjs';
+import { armarPodcast, variante, segundosDePodcast } from './guiones.mjs';
 import { MEDIO } from './prompt-redes.mjs';
 
 // Los números de las redes son parte del criterio editorial: están en
@@ -413,12 +413,57 @@ export function guionRepaso(elegidas, {
 }
 
 /**
+ * El guion de un podcast CON PRESUPUESTO de duración. Cada podcast se sube también
+ * como historia y una historia acepta 60 segundos (el podcast de la noche del 25/09
+ * duró 62,7 y su historia falló en las dos redes). Así que el guion tiene que caber
+ * en `PODCAST_VOZ.segundosPresupuesto` (55, medido con segundosDePodcast). Si no
+ * cabe, en este orden:
+ *   1. se le saca la oración de contexto a las notas, de la última a la primera;
+ *   2. se sacan notas del final (las de menos puntaje), hasta un mínimo de dos.
+ * Devuelve { guion, notas, segundos, cabe, recortes } o null si no hay dos notas.
+ * `notas` son las que QUEDARON: el posteo con la lista de enlaces tiene que
+ * mostrar esas y no las que se pidieron.
+ */
+export function repasoConPresupuesto(elegidas, {
+  momento = 'manana', fecha = new Date(), presupuesto = PODCAST_VOZ.segundosPresupuesto, saludo, cierre, direccion,
+} = {}) {
+  if (elegidas.length < PIEZAS.notasMinimasPodcast) return null;
+  const armar = (notas, sinDetalle) => {
+    const items = notas.map((n, i) => ({
+      titular: n.titulo,
+      detalle: !sinDetalle.has(i) && esPropia(n) ? primeraOracion(n.copete) : '',
+    }));
+    return armarPodcast(items, { momento, fecha, saludo, cierre, direccion });
+  };
+  const resultado = (notas, sinDetalle, recortes) => {
+    const guion = armar(notas, sinDetalle);
+    const segundos = segundosDePodcast(guion);
+    return { guion, notas, segundos, cabe: segundos <= presupuesto, recortes };
+  };
+
+  let notas = [...elegidas];
+  const sinDetalle = new Set();
+  let r = resultado(notas, sinDetalle, { detalles: 0, notas: 0 });
+  // 1) sin la oración de contexto, empezando por la última nota
+  for (let i = notas.length - 1; i >= 0 && !r.cabe; i -= 1) {
+    sinDetalle.add(i);
+    r = resultado(notas, sinDetalle, { detalles: sinDetalle.size, notas: 0 });
+  }
+  // 2) sin las últimas notas
+  while (!r.cabe && notas.length > PIEZAS.notasMinimasPodcast) {
+    notas = notas.slice(0, -1);
+    r = resultado(notas, sinDetalle, { detalles: sinDetalle.size, notas: elegidas.length - notas.length });
+  }
+  return r;
+}
+
+/**
  * El podcast de la noche: el repaso de lo más importante del día, dicho por
  * la voz de siempre.
  */
 export function guionPodcast(notas, { cuantas = PIEZAS.notasPodcastNoche, fecha = new Date() } = {}) {
   const elegidas = elegirParaPodcast(notas, { cuantas }, { ...REGLAS_PIEZAS, relevanciaParaHistoria: 0 });
-  return guionRepaso(elegidas, { momento: 'noche', fecha });
+  return repasoConPresupuesto(elegidas, { momento: 'noche', fecha })?.guion ?? null;
 }
 
 /** ¿Está prendido el interruptor de publicar? Acepta "si", "Si", "SÍ", "sí"…

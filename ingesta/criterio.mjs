@@ -177,6 +177,7 @@ export const CONTRATO_DIARIO = {
   historiasDeClima: 2,       // la de la mañana y la de la noche
   historiasDeFarmacia: 1,
   historiasPorDia: 6,        // la suma de las tres de arriba (las semanales van aparte)
+  historiasMaximasPorDia: 8, // techo del día: las 6 del contrato + 2 extras (teléfonos útiles y agenda del jueves)
   cierreMinutoDelDia: 1410,  // 23:30: el cierre del día contra lo que Meta tiene de verdad
   toleranciaDeHoraMinutos: 20, // cuánto pueden diferir la hora del libro y la de Meta para ser la misma pieza
   diasDeAuditoriaSemanal: 7,
@@ -221,8 +222,31 @@ export const VOZ = {
 /** Cuánto dura un clima, en segundos (se apunta a 10 a 20). */
 export const CLIMA_VOZ = { segundosMinimo: 8, segundosMaximo: 25 };
 
-/** Cuánto dura un podcast, en segundos (se apunta a 45 a 75 con tres notas). */
-export const PODCAST_VOZ = { segundosMinimo: 20, segundosMaximo: 100 };
+/**
+ * Cuánto dura un podcast, en segundos (se apunta a 45 a 75 con tres notas).
+ *
+ * Cada podcast se sube también como HISTORIA, y una historia acepta 60 segundos
+ * como máximo (Instagram: "Max duration for stories is 61.0"; Facebook la
+ * rechaza también). El 25/09 el podcast de la noche, con 4 notas y 153 palabras,
+ * duró 62,7 segundos y su historia falló en las dos redes. Por eso:
+ *   · `palabrasPorSegundo`: el ritmo REAL de la voz de Gemini con el texto de un
+ *     podcast (salieron entre 2,3 y 2,6); es más lento que el de VOZ a propósito,
+ *     para que el cálculo peque de largo y no de corto.
+ *   · `segundosDeAdorno`: lo que el video suma a la voz (0,25 de entrada y 1,4 de
+ *     cola, en reels/reel.mjs).
+ *   · `segundosPresupuesto`: lo que puede durar un podcast al escribirlo; si el
+ *     guion pasa, se le sacan detalles y después notas (mínimo 2).
+ *   · `segundosMaximoHistoria`: el corte de seguridad. Si aun así el video pasa de
+ *     esto, la historia sube recortada con fundido (el reel queda entero).
+ */
+export const PODCAST_VOZ = {
+  segundosMinimo: 20,
+  segundosMaximo: 100,
+  palabrasPorSegundo: 2.4,
+  segundosDeAdorno: 1.65,
+  segundosPresupuesto: 55,
+  segundosMaximoHistoria: 58,
+};
 
 /** Cuánto dura la farmacia o una pieza semanal, en segundos. */
 export const PIEZA_FIJA_VOZ = { segundosMinimo: 6, segundosMaximo: 25 };

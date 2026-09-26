@@ -147,7 +147,10 @@ fecha, no el azar: sale el mismo día siempre), y los otros dos días cierran s�
 ### Podcast de la mañana
 
 - **Objetivo:** las tres notas para arrancar el día.
-- **Hora:** 10:00. **Largo:** 45 a 75 segundos con tres notas (nunca más de 100 s).
+- **Hora:** 10:00. **Largo:** 45 a 75 segundos con tres notas (nunca más de 100 s),
+  y **el video no pasa de 55 segundos**: cada podcast se sube también como historia y
+  Meta acepta 60. Si el guion no cabe, primero se le saca la oración de contexto a las
+  últimas notas y después se sacan notas del final (mínimo dos). Ver "Los números".
 - **Estructura:** saludo, una línea de entrada, tres notas de temas distintos (cada
   una con su titular y, si el texto es nuestro, una oración de contexto), cierre
   cálido y la dirección dicha.
@@ -180,8 +183,11 @@ fecha, no el azar: sale el mismo día siempre), y los otros dos días cierran s�
 ### Podcast de la noche
 
 - **Objetivo:** el repaso de lo más fuerte del día, para cerrarlo.
-- **Hora:** 20:30. **Largo:** 45 a 90 segundos con cuatro notas.
-- **Estructura:** saludo con el día de la semana, cuatro notas (o tres si no hay más),
+- **Hora:** 20:30. **Largo:** hasta 55 segundos de video (la historia acepta 60):
+  cuatro notas si caben; si no, se saca el contexto y después notas, hasta un mínimo
+  de dos. El 25/09 salieron cuatro con contexto, 153 palabras y 62,7 s, y su historia
+  no salió en ninguna red.
+- **Estructura:** saludo con el día de la semana, cuatro notas (o tres o dos si no caben),
   cierre de noche y la dirección dicha.
 - **Saludo y cierre:** "Buenas noches, Balcarce" y "Que descansen" o "hasta mañana";
   termina en la dirección.
@@ -272,10 +278,24 @@ fila: **si se cambia un número, se cambia en los dos lados.**
 | Clima: segundos como máximo (se apunta a 10 a 20) | 25 | `CLIMA_VOZ.segundosMaximo` |
 | Podcast: segundos como mínimo | 20 | `PODCAST_VOZ.segundosMinimo` |
 | Podcast: segundos como máximo (se apunta a 45 a 75) | 100 | `PODCAST_VOZ.segundosMaximo` |
+| Podcast: ritmo real de la voz (palabras por segundo; salieron 2,3 a 2,6) | 2.4 | `PODCAST_VOZ.palabrasPorSegundo` |
+| Podcast: segundos que el video suma a la voz (entrada y cola) | 1.65 | `PODCAST_VOZ.segundosDeAdorno` |
+| Podcast: presupuesto de duración al escribirlo (segundos) | 55 | `PODCAST_VOZ.segundosPresupuesto` |
+| Podcast: corte de seguridad de la historia (segundos; el máximo de Meta es 60) | 58 | `PODCAST_VOZ.segundosMaximoHistoria` |
 | Farmacia y semanales: segundos como mínimo | 6 | `PIEZA_FIJA_VOZ.segundosMinimo` |
 | Farmacia y semanales: segundos como máximo | 25 | `PIEZA_FIJA_VOZ.segundosMaximo` |
 | Posteo: hashtags como máximo | 3 | `POSTEO.hashtagsMaximo` |
 <!-- NUMEROS_REDES:FIN -->
+
+**Cómo se usan los cuatro números de la duración** (`redes/elegir.mjs`,
+`repasoConPresupuesto`; `reels/duracion.mjs`): la duración estimada de un podcast es
+`palabras / ritmo + adorno`. Si pasa de 55, se le saca el contexto a las notas de la
+última a la primera y después notas del final (nunca menos de dos). El podcast dice
+en el posteo sólo las notas que quedaron. Si el video ya armado igual pasa de 58
+(se mide con ffmpeg), las historias suben una copia cortada en 58 con fundido de
+salida (`podcast-historia.mp4`) y el reel sube entero. Con el guion del 25/09 a la
+noche: 153 palabras y ~65 s estimados antes; 112 palabras y ~48 s ahora, con las
+cuatro notas y el contexto sólo de las dos primeras.
 
 ## 6. Las instrucciones que recibe la voz
 

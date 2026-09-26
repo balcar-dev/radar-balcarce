@@ -73,7 +73,37 @@ las horas y las ventanas, en `redes/piezas.mjs`. Vale desde el 25/09
 (`CONTRATO_DESDE`): antes las historias eran de notas sueltas.
 
 - **Semanales, aparte** (no cuentan en las 6): los teléfonos útiles un día por
-  semana y la agenda del jueves (ésta sólo se arma en la PC de Hernán).
+  semana y la agenda del jueves (ésta sólo se arma en la PC de Hernán). Son **extras
+  que se mantienen**, con un techo: **el día no pasa de 8 historias** (las 6 del
+  contrato más 2 extras; `CONTRATO_DIARIO.historiasMaximasPorDia`). Si con un aviso
+  de clima grave y la agenda se llegara a 9, se deja de armar primero la de los
+  teléfonos útiles y después la agenda; el contrato y los avisos nunca se sacan
+  (`historiasQueSobran` en `redes/piezas.mjs`, aplicado en `planDelDia`).
+- **Los teléfonos útiles rotan** de lunes a viernes, un día distinto cada semana
+  (viernes 25/09, lunes 28/09, martes 6/10…). La regla es una sola
+  (`diaRotativoDeUtiles` en `ingesta/utiles.mjs`, aplicada por `toca` de
+  `panel/horarios.mjs`) y la usan el reloj de Redes, el plan que arma el video y el
+  panel: si el reloj dice "tocan: utiles", el plan la arma. Si Hernán fija los días
+  a mano en el panel (Calendario), manda ese día y deja de rotar.
+- **Ninguna historia pasa de 58 segundos** (Meta acepta 60; el 25/09 la historia del
+  podcast de la noche, de 62,7 s, falló en las dos redes). Tres defensas: el guion
+  de cada podcast tiene un presupuesto de 55 s (se le saca contexto y después notas,
+  mínimo dos); si aun así el video pasa de 58, la historia sube una copia cortada
+  con fundido y el reel sube entero (y `plan.mjs` deja un aviso amarillo en la
+  corrida); y la historia del reel se intenta **tres veces** en la misma corrida.
+  Cifras y detalle: `CRITERIO-REDES.md`, "Los números".
+- **Qué no se reintenta entre corridas.** Si la historia de un reel (o su copia en
+  la segunda red) falla las tres veces, no vuelve a intentarse en las corridas
+  siguientes: el video no se guarda entre corridas y armarlo de nuevo cuesta la voz
+  de Gemini (y podría elegir otras notas). El vigilante lo avisa como "no salió la
+  historia de… (su reel sí salió y la historia no se reintenta)". Si hiciera falta,
+  se puede subir a mano desde el workflow "Piezas" (que arma y publica).
+- **Con `REDES_ACTIVAS` apagado** no se publica ni se escribe el libro, así que todo
+  "falta". El vigilante lo dice **una vez por día** ("las redes están apagadas: es
+  esperable que no salga nada"), el resumen de las 21 lo dice en su línea de redes y
+  el cierre de las 23:30 se saltea. Un duplicado, la web caída o un reloj parado se
+  siguen avisando. Recibe la variable por entorno (`vigilancia.yml`); sin ella
+  (una corrida a mano) asume que las redes están prendidas.
 - **Los posteos pueden ser menos de 5** si no hubo candidatas (relevancia de 75 o
   más, tema no repetido, sección que sale sola, con cuerpo, entre las 8 y las 22).
   La auditoría lo distingue: "sin más candidatas" es normal; "FALLA: había N

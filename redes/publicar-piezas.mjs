@@ -27,6 +27,9 @@ export const REDES = {
 /** Los intentos en las redes que no mandan. */
 const INTENTOS_SECUNDARIA = 3;
 
+/** Los intentos de la historia de un reel, en cada red, en la misma corrida. */
+export const INTENTOS_HISTORIA = 3;
+
 /** ¿Es un podcast? Un reel que cuenta dos notas o más. Cada podcast tiene su
  *  nota en la web (web/lib/notas-propias.js), que enlaza al video: para eso
  *  se guarda en el libro su dirección pública (`permalink`). */
@@ -108,7 +111,11 @@ export async function publicarPiezas({
       continue;
     }
 
-    const video = leerVideo(pieza.archivo);
+    // Una historia acepta 60 s. Si el video se pasó, reels/plan.mjs dejó además una
+    // versión recortada (`archivoHistoria`): las historias suben ésa y el reel
+    // sube el video entero (PENDIENTES 16a).
+    const archivoParaHistoria = pieza.archivoHistoria ?? pieza.archivo;
+    const video = leerVideo(tipo === 'STORIES' ? archivoParaHistoria : pieza.archivo);
     const clave = claveDePieza(pieza.nombre, ahora);
 
     for (const [i, red] of destinos.entries()) {
@@ -144,15 +151,25 @@ export async function publicarPiezas({
           if (tipo === 'REELS') {
             const claveHistoria = `${red}/${clave}`; // una por red: no es el mismo medio subido
             if (!libro.historiasDeReels?.[claveHistoria]) {
-              try {
-                const rh = await api[metodo]({ video, tipo: 'STORIES', pie: '' });
-                anotar(libro, 'historiasDeReels', claveHistoria, {
-                  mediaId: rh.id, nombre: pieza.nombre, red, notaId: pieza.notaId ?? null,
-                });
-                guardar();
-                log(`             + historia: ${rh.id}`);
-              } catch (e) {
-                log(`             la historia del reel falló, queda igual el reel: ${e.message}`);
+              const videoHistoria = pieza.archivoHistoria ? leerVideo(archivoParaHistoria) : video;
+              // Tres intentos en esta corrida (sin volver a pedir la voz: el video
+              // ya está armado). Entre corridas no se reintenta: el video no se
+              // guarda y armarlo de nuevo gasta la voz de Gemini (REDES.md).
+              for (let intentoH = 1; intentoH <= INTENTOS_HISTORIA; intentoH += 1) {
+                try {
+                  const rh = await api[metodo]({ video: videoHistoria, tipo: 'STORIES', pie: '' });
+                  anotar(libro, 'historiasDeReels', claveHistoria, {
+                    mediaId: rh.id, nombre: pieza.nombre, red, notaId: pieza.notaId ?? null,
+                  });
+                  guardar();
+                  log(`             + historia: ${rh.id}`);
+                  break;
+                } catch (e) {
+                  const ultimo = intentoH === INTENTOS_HISTORIA || e.tokenMuerto;
+                  log(`             la historia del reel falló (intento ${intentoH} de ${INTENTOS_HISTORIA})${ultimo ? ', queda igual el reel' : ''}: ${e.message}`);
+                  if (ultimo) break;
+                  await esperar(4000 * intentoH);
+                }
               }
             }
           }

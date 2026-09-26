@@ -8,6 +8,8 @@
 // Lo que se guarda vive en panel/datos/estado.json, que no se versiona: son
 // decisiones de la redacción, no del proyecto.
 
+import { diaRotativoDeUtiles, diaSemanaAR } from '../ingesta/utiles.mjs';
+
 // Los días de la semana como los devuelve Date#getDay(): 0 es domingo.
 export const DIAS = [
   { n: 1, corto: 'L', nombre: 'lunes' },
@@ -105,7 +107,21 @@ export function guardarHorario(estado, { id, activa, hora, dias }) {
   return horariosDe(estado);
 }
 
-/** ¿Toca hoy esta pieza? La usa el plan del día. */
-export function toca(horario, cuando = new Date()) {
-  return horario.activa !== false && (horario.dias ?? TODOS).includes(cuando.getDay());
+/**
+ * ¿Toca hoy esta pieza? LA ÚNICA FUENTE: el reloj de Redes (redes/piezas.mjs) y
+ * el plan que arma los videos (reels/plan.mjs) usan esta misma función, así que
+ * no puede pasar que uno diga "toca" y el otro no arme nada (PENDIENTES 16c).
+ *
+ * Los teléfonos útiles rotan solos, de lunes a viernes, un día distinto cada
+ * semana (`diaRotativoDeUtiles`). Si alguien fija los días a mano desde el
+ * panel (`estado.horarios.utiles.dias`), manda eso.
+ *
+ * El día es el de Balcarce, no el de la máquina: en GitHub el reloj es UTC.
+ */
+export function toca(horario, cuando = new Date(), { estado = null } = {}) {
+  if (horario.activa === false) return false;
+  const dia = diaSemanaAR(cuando);
+  const aMano = estado?.horarios?.utiles?.dias;
+  if (horario.id === 'utiles' && !aMano) return dia === diaRotativoDeUtiles(cuando);
+  return (horario.dias ?? TODOS).includes(dia);
 }

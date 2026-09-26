@@ -11,6 +11,9 @@ import { aPng } from './placa.mjs';
 import { decirGemini, VOZ_DEL_MEDIO } from './voz-gemini.mjs';
 import { componerIndicacion } from '../redes/prompt-redes.mjs';
 import { ARCHIVO as CORTINA, generar as generarCortina } from './cortina.mjs';
+import {
+  HISTORIA_MAXIMA, duracionDeLaSalida, pasaDelMaximo, argumentosDeRecorte,
+} from './duracion.mjs';
 
 const correr = promisify(execFile);
 const RETARDO = 0.7; // lo que suena la cortina sola antes de que entre la voz
@@ -79,6 +82,24 @@ Style: Sub,IBM Plex Sans,64,&H001A1614,&H00FFFFFF,&H00E3ECEF,&H00000000,-1,0,0,0
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
 ${lineas.join('\n')}
 `;
+}
+
+/** Cuánto dura un video, en segundos, medido con ffmpeg (que sale con error al abrir
+ *  un archivo sin destino: lo que importa es lo que imprime). null si no pudo. */
+export async function medirDuracion(archivo) {
+  try {
+    await correr(ffmpeg, ['-i', archivo], { maxBuffer: 1024 * 1024 * 10 });
+    return null;
+  } catch (e) {
+    return duracionDeLaSalida(`${e.stderr ?? ''}${e.stdout ?? ''}`);
+  }
+}
+
+/** La versión del video para las historias: cortada en HISTORIA_MAXIMA con fundido
+ *  de salida. Deja el original como está. Devuelve la ruta y lo que dura. */
+export async function recortarParaHistoria(mp4, salida) {
+  await correr(ffmpeg, argumentosDeRecorte({ entrada: mp4, salida }), { maxBuffer: 1024 * 1024 * 40 });
+  return { mp4: salida, duracion: (await medirDuracion(salida)) ?? HISTORIA_MAXIMA };
 }
 
 /**
@@ -183,5 +204,18 @@ export async function armarReel({
     path.basename(mp4),
   ], { cwd: dir, maxBuffer: 1024 * 1024 * 40 });
 
-  return { mp4, mp3, png, duracion: total, palabras: voz.palabras.length, vozUsada };
+  // La duración de verdad, medida en el archivo (no la calculada). Si pasa del
+  // máximo de una historia, se hace además una versión recortada para las
+  // historias; el reel queda entero. Sirve tanto para un podcast (se sube como
+  // reel y como historia) como para una historia suelta que se hubiera alargado.
+  const duracionReal = (await medirDuracion(mp4)) ?? total;
+  let historia = null;
+  if (pasaDelMaximo(duracionReal)) {
+    historia = await recortarParaHistoria(mp4, path.join(dir, `${nombre}-historia.mp4`));
+    historia.aviso = `el video dura ${duracionReal.toFixed(1)} s y una historia acepta 60: la historia sube recortada a ${HISTORIA_MAXIMA} s`;
+  }
+
+  return {
+    mp4, mp3, png, duracion: duracionReal, palabras: voz.palabras.length, vozUsada, historia,
+  };
 }

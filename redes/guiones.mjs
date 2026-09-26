@@ -60,6 +60,17 @@ export const segundosDe = (texto) => String(texto).trim().split(/\s+/).filter(Bo
 
 export { CLIMA_VOZ, PODCAST_VOZ, PIEZA_FIJA_VOZ };
 
+/**
+ * Cuánto va a durar el VIDEO de un podcast, en segundos: las palabras al ritmo
+ * real de la voz más lo que el video suma (entrada y cola). Es lo que se compara
+ * con el presupuesto (PODCAST_VOZ.segundosPresupuesto). Con el guion del 25/09 a
+ * la noche (153 palabras) da 65,4: el video real duró 62,7 y la historia falló.
+ */
+export const segundosDePodcast = (texto) => (
+  String(texto).trim().split(/\s+/).filter(Boolean).length / PODCAST_VOZ.palabrasPorSegundo
+  + PODCAST_VOZ.segundosDeAdorno
+);
+
 // --- saludos y cierres por horario -----------------------------------------
 
 /** Saludo por horario. Sólo de mañana se dice "buen día". */

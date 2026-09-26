@@ -278,15 +278,19 @@ export function datosDelDia({ ahora = new Date(), portada = {}, libro = {} }) {
  * @param {boolean} o.problemasArriba  si el mismo mensaje ya los lista arriba
  * @param {string} [o.estadisticas]    el texto de las estadísticas, si hay
  */
-export function textoResumen({ datos, problemas = [], problemasArriba = false, estadisticas = '', web = null }) {
-  // "Todo bien" sólo si no hay problemas y el contrato del día está completo.
-  const incompleto = datos.contrato ? !contratoCompleto(datos.contrato) : false;
+export function textoResumen({
+  datos, problemas = [], problemasArriba = false, estadisticas = '', web = null, redesActivas = true,
+}) {
+  // "Todo bien" sólo si no hay problemas y el contrato del día está completo. Con
+  // las redes apagadas no se puede pedir el contrato: no es un día incompleto.
+  const incompleto = datos.contrato && redesActivas ? !contratoCompleto(datos.contrato) : false;
   const cab = problemas.length || incompleto ? '📋 Radar Balcarce: resumen del día' : '✅ Radar Balcarce: todo bien. Resumen del día';
   const l = [cab, ''];
   l.push(`• Notas nuevas hoy: ${datos.notas} (${datos.locales} de Balcarce), ${datos.conCuerpo} con cuerpo`);
   // El contrato del día (25/09): una línea por red, con lo que falta y lo que
   // todavía está a tiempo ("pendiente"). Reemplaza al conteo suelto de antes.
-  if (datos.contrato) l.push(textoContrato(datos.contrato));
+  if (!redesActivas) l.push('• Redes: apagadas (REDES_ACTIVAS). Es esperable que no salga nada en Facebook ni en Instagram.');
+  else if (datos.contrato) l.push(textoContrato(datos.contrato));
   else {
     l.push(`• Facebook: ${datos.facebook} posteo(s) · Instagram: ${datos.instagramFotos} foto(s)`);
     l.push(`• Piezas: ${PIEZAS_DEL_RESUMEN.map(([n, nombre]) => `${nombre} ${datos.piezas[n] ? '✓' : '✗'}`).join(' · ')}`);
