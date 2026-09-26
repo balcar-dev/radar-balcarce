@@ -67,3 +67,27 @@ async function visibilidad() {
   } catch (e) { console.log('Videos: no se pudo leer (' + e.message.slice(0, 140) + ')'); }
 }
 await visibilidad();
+
+// --- La app que publica: ¿está lista para que el público vea lo que publica?
+// Las publicaciones de una app en modo "Desarrollo" las ven sólo quienes tienen
+// un rol en la app (administradores, desarrolladores, probadores).
+async function laApp() {
+  console.log('\n== La app de Meta ==');
+  for (const campos of ['id,name,link,category,privacy_policy_url,terms_of_service_url,user_support_email,app_domains', 'id,name,link,category', 'id,name']) {
+    try {
+      const a = await pedir('app', { fields: campos });
+      console.log('App:', JSON.stringify(a));
+      if (!('privacy_policy_url' in a)) console.log('(no pude leer la política de privacidad de la app con este token)');
+      break;
+    } catch (e) { console.log('App (' + campos.split(',').length + ' campos): ' + e.message.slice(0, 160)); }
+  }
+  try {
+    const t = await pedir('me', { fields: 'id,name' });
+    console.log('El token es de:', JSON.stringify(t));
+  } catch (e) { console.log('Token: ' + e.message.slice(0, 120)); }
+  try {
+    const roles = await pedir(PAGINA + '/roles', {}, tp);
+    console.log('Roles en la página:', (roles.data ?? []).map((r) => (r.name ?? r.id) + ':' + (r.tasks ?? r.role ?? '')).join(' | ').slice(0, 300));
+  } catch (e) { console.log('Roles de la página: ' + e.message.slice(0, 120)); }
+}
+await laApp();
