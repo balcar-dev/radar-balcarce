@@ -1,5 +1,5 @@
 {
-  "exportado": "2026-09-26T09:32:55.556Z",
+  "exportado": "2026-09-26T09:43:04.680Z",
   "decisiones": {
     "1951120": {
       "estado": "automatica",
@@ -25193,6 +25193,150 @@
         "nivel": "ALTA",
         "porque": "Lo contaron tres medios independientes.",
         "sugeridoPorIA": "ALTA"
+      }
+    },
+    "xw4ddg": {
+      "estado": "automatica",
+      "titulo": "Lionel Messi adquiere una nueva propiedad en Estados Unidos",
+      "copete": "El capitán de la Selección Argentina amplió su patrimonio inmobiliario en Florida mediante una operación millonaria. La nueva vivienda se ubica junto a su residencia actual en Fort Lauderdale.",
+      "cuerpo": "La nueva propiedad se encuentra situada al lado de la mansión donde reside junto a su familia en Fort Lauderdale.\n\nLa transacción se concretó a través de una sociedad administrada por el gestor patrimonial Alfonso Nebot Armisen. La vivienda está ubicada en Bay Colony, una exclusiva comunidad cerrada que cuenta con canales y salida al agua. La construcción dispone de varios dormitorios, baños, piscina y muelle privado.\n\nCon ambas operaciones, las propiedades totalizan una importante inversión desde su llegada al Inter Miami.",
+      "guion": "Lionel Messi adquiere una nueva propiedad en Estados Unidos",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-26T09:43:04.616Z",
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Lionel Messi amplió su patrimonio inmobiliario en Florida con la compra de una propiedad lindera a su mansión en Fort Lauderdale por una cifra millonaria.",
+      "etiquetas": [
+        "Lionel Messi",
+        "Estados Unidos",
+        "Fort Lauderdale",
+        "Inter Miami",
+        "Inmuebles"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Eco de Tandil",
+          "enlace": "https://www.eleco.com.ar/interes-general/lionel-messi-compro-la-propiedad-lindera-a-su-mansion-en-florida-por-8-millones-de-dolares",
+          "fecha": "2026-09-25T22:35:17.000Z",
+          "oficial": false,
+          "aporte": "Aportó los detalles sobre la compra de la nueva propiedad inmobiliaria de Lionel Messi en Florida, el monto de la operación, la ubicación exacta y los datos de la sociedad compradora."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "yruzv2",
+          "titulo": "La demanda de dólares se mantiene alta y suma millones",
+          "fecha": "2026-09-25T21:52:49.000Z",
+          "ruta": "/nota/la-demanda-de-dolares-se-mantiene-elevada-en-agosto-en-el-pais-yruzv2"
+        },
+        {
+          "id": "1cdc43k",
+          "titulo": "Bariloche recauda treinta millones de dólares al año en alquileres temporarios",
+          "fecha": "2026-09-25T10:26:01.000Z",
+          "ruta": "/nota/bariloche-recauda-treinta-millones-de-dolares-al-ano-en-alquileres-1cdc43k"
+        },
+        {
+          "id": "19nfzay",
+          "titulo": "Lionel Messi expande su cadena de hoteles y prepara nuevos proyectos",
+          "fecha": "2026-09-25T09:59:29.000Z",
+          "ruta": "/nota/lionel-messi-expande-su-cadena-de-hoteles-y-prepara-nuevos-proyectos-19nfzay"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "1eefixy": {
+      "estado": "automatica",
+      "titulo": "Nuevos dispositivos tecnológicos apuntan al bienestar y la salud en Balcarce",
+      "copete": "Equipos orientados a mejorar el descanso, controlar la presión arterial y aliviar dolores ya se consiguen en el mercado argentino. Cuáles son sus características principales y qué tener en cuenta.",
+      "cuerpo": "El mercado tecnológico incorporó nuevos dispositivos diseñados para el cuidado personal, abarcando desde antifaces con vibración para favorecer la relajación hasta relojes inteligentes capaces de medir la presión arterial. Entre las opciones disponibles se encuentra la máscara Therabody SleepMask, un accesorio que utiliza vibraciones suaves para inducir el sueño sin necesidad de utilizar el teléfono celular. Según los datos difundidos, el producto se comercializa en Argentina a un valor de unos 308.000 pesos.\n\nPor otra parte, los relojes inteligentes suman prestaciones orientadas al monitoreo médico cotidiano. El modelo Huawei Watch D3 incorpora una bolsa de aire en su correa para realizar mediciones de presión arterial similares a las de un tensiómetro tradicional, permitiendo un seguimiento ambulatorio durante las veintivatsuatro horas y facilitando el registro para las consultas profesionales.\n\nPara los vecinos interesados en incorporar estas herramientas, los especialistas señalan que la comodidad y la facilidad de uso resultan tan relevantes como los datos que miden, recordando que estos equipos no reemplazan un diagnóstico médico formal sino que funcionan como un complemento para el bienestar diario.",
+      "guion": "Nuevos dispositivos tecnológicos apuntan al bienestar y la salud en Balcarce",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-26T09:43:04.616Z",
+      "claves": [
+        "Ya se consiguen en el país antifaces con vibración para mejorar el descanso nocturno.",
+        "Nuevos relojes inteligentes incorporan sistemas para medir la presión arterial en la muñeca.",
+        "Los equipos buscan facilitar el monitoreo diario pero no reemplazan instrumentos médicos formales."
+      ],
+      "seSabe": [
+        "Se comercializan en Argentina dispositivos como antifaces relajantes y relojes con medición de presión arterial.",
+        "La máscara Therabody SleepMask ofrece vibraciones rítmicas para inducir el sueño y se consigue a unos 308.000 pesos.",
+        "El reloj Huawei Watch D3 cuenta con una bolsa de aire inflable en la correa para realizar mediciones similares a un tensiómetro."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Conocé los nuevos dispositivos tecnológicos orientados a mejorar el descanso y controlar la presión arterial que ya se consiguen en el mercado argentino.",
+      "etiquetas": [
+        "tecnología",
+        "salud",
+        "bienestar",
+        "descanso",
+        "dispositivos",
+        "Argentina"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Clarín",
+          "enlace": "https://www.clarin.com/tecnologia/dormir-mejor-aliviar-dolores-controlar-presion-ultima-tecnologia-aplicada-cuidado-salud_0_JE8GbdA3oN.html",
+          "fecha": "2026-09-26T08:46:12.000Z",
+          "oficial": false,
+          "aporte": "Detalló las características, funcionamiento y precios de los nuevos dispositivos tecnológicos para el cuidado de la salud y el bienestar."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "nuozk2",
+          "titulo": "Aprende todo sobre PPS: la tecnología que hará que tu celular cargue mejor",
+          "fecha": "2026-09-24T21:35:00.000Z",
+          "ruta": "/nota/aprende-todo-sobre-pps-la-tecnologia-que-hara-que-tu-celular-cargue-nuozk2"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "b21dqx": {
+      "estado": "automatica",
+      "titulo": "La carne aviar lidera el consumo global de proteínas",
+      "copete": "La producción aviar experimentó un crecimiento exponencial en las últimas décadas y superó a la carne vacuna y porcina a nivel mundial, impulsada por la demanda de alimentos accesibles.",
+      "cuerpo": "La carne aviar se consolidó como la principal fuente de proteínas a nivel mundial en las últimas décadas, según datos aportados por RaboBank y la Organización de Naciones Unidas para la Alimentación y el Desarrollo.\n\nEste proceso de transformación comenzó a escala masiva a principios del siglo XXI, favorecido por el desarrollo de la tecnología de frío, la expansión del transporte ferroviario y el aumento de la demanda urbana. Como contrapartida, el crecimiento de esta industria genera desafíos vinculados a la polución ambiental, la aparición de enfermedades animales y el rechazo de comunidades locales a la instalación de nuevas unidades productivas.\n\nEl fenómeno modificó los hábitos alimentarios de más de la mitad de la población global, posicionando a los productos avícolas y las comidas rápidas como opciones económicas frente al encarecimiento de la carne vacuna y la estabilidad de la porcina.",
+      "guion": "La carne aviar lidera el consumo global de proteínas",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-26T09:43:04.616Z",
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "La carne aviar se convirtió en la principal fuente de proteínas a nivel mundial y desplazó a la vacuna y la porcina, impulsada por un crecimiento sostenido de la producción y los cambios en los hábitos de consumo globales.",
+      "etiquetas": [
+        "carne aviar",
+        "consumo mundial",
+        "alimentación",
+        "producción agroalimentaria",
+        "mercado global"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Clarín",
+          "enlace": "https://www.clarin.com/rural/carne-aviar-lejos-mayor-consumo-mundial_0_GEevYAluB5.html",
+          "fecha": "2026-09-26T08:41:07.000Z",
+          "oficial": false,
+          "aporte": "Aportó datos estadísticos sobre el crecimiento histórico de la producción aviar y su comparación con otras carnes a nivel global."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
       }
     }
   },
