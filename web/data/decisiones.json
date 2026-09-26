@@ -1,5 +1,5 @@
 {
-  "exportado": "2026-09-26T07:35:33.694Z",
+  "exportado": "2026-09-26T07:44:00.263Z",
   "decisiones": {
     "1951120": {
       "estado": "automatica",
@@ -22880,6 +22880,311 @@
           "fecha": "2026-09-26T03:08:04.000Z",
           "oficial": false,
           "aporte": "Detalló el lanzamiento de la experiencia inmersiva de Spotify para seguidores de BTS en Colombia, las métricas de reproducción y las actividades previstas."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "clgr2q": {
+      "estado": "automatica",
+      "titulo": "El Concejo debate prórroga y cuestiona cobros de OSeBal en Balcarce",
+      "copete": "Durante la décimo cuarta sesión ordinaria del Concejo Deliberante, ediles pidieron una prórroga de 180 días para regularizar deudas con OSeBal y cuestionaron la modalidad de cobro y el accionar de un estudio jurídico.",
+      "cuerpo": "Ante la preocupación de los contribuyentes, se pidió una prórroga de 180 días para regularizar los pagos y generar alternativas accesibles. Di Gerónimo señaló que muchos vecinos evitan atender llamadas por temor a estafas y cuestionó que se exija el pago en una sola cuota.\n\nPor su parte, el concejal Enrique Guillén, de La Libertad Avanza, solicitó convocar al nuevo gerente de la empresa para conocer sus lineamientos y cuestionó que se pretenda cobrar en diez días lo adeudado durante meses sin planes de pago. Además, Guillén planteó interrogantes sobre la sustentabilidad financiera de OSeBal y advirtió sobre diferencias en los montos informados a los vecinos entre el estudio jurídico y la prestataria, como se había informado en el debate legislativo previo sobre deudas de agua.\n\nEl pedido apunta a establecer nuevas alternativas de pago y convocar a las autoridades de la empresa prestataria para transparentar la situación económica y facilitar el cumplimiento de los contribuyentes locales.",
+      "guion": "El Concejo debate prórroga y cuestiona cobros de OSeBal en Balcarce",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-26T07:44:00.192Z",
+      "claves": [
+        "Trataron un proyecto para frenar el hostigamiento a vecinos por deudas de OSeBal.",
+        "Pidieron una prórroga de 180 días y alternativas de pago en cuotas.",
+        "Cuestionaron diferencias en los montos informados y la gestión del nuevo gerente."
+      ],
+      "seSabe": [
+        "El tema se abordó durante la décimo cuarta sesión ordinaria del Honorable Concejo Deliberante.",
+        "La concejal Sol Di Gerónimo presentó un Proyecto de Comunicación para pedir el cese del hostigamiento a los vecinos por parte de un estudio jurídico.",
+        "Se solicitó una prórroga de 180 días para la regularización de las deudas con OSeBal SAPEM.",
+        "El concejal Enrique Guillén pidió convocar al nuevo gerente de la empresa para conocer sus lineamientos."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El Concejo Deliberante debatió un pedido de prórroga por 180 días para regularizar deudas con OSeBal y cuestionó la modalidad de cobro de un estudio jurídico y la situación financiera de la empresa.",
+      "etiquetas": [
+        "Concejo Deliberante",
+        "OSeBal",
+        "deudas",
+        "Balcarce",
+        "Sol Di Gerónimo",
+        "Enrique Guillén"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infórmese Primero (FM 104.9)",
+          "enlace": "http://www.informeseprimero.com.ar/2026/09/el-hcd-aprobo-una-prorroga-de-180-dias.html",
+          "fecha": "2026-09-25T13:00:52.110Z",
+          "oficial": false,
+          "aporte": "Detalló el debate en el Concejo Deliberante sobre el proyecto de comunicación, los reclamos por el cobro de deudas de OSeBal y los dichos de los concejales Sol Di Gerónimo y Enrique Guillén."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1tspv07",
+          "titulo": "El Concejo aprueba prorrogar deudas de agua en Balcarce",
+          "fecha": "2026-09-25T00:05:57.000Z",
+          "ruta": "/nota/el-concejo-pide-prorroga-para-deudas-de-agua-en-balcarce-1tspv07"
+        },
+        {
+          "id": "164efaj",
+          "titulo": "Solicitan una oficina presencial de Telepase en Balcarce",
+          "fecha": "2026-09-25T12:48:28.000Z",
+          "ruta": "/nota/solicitan-una-oficina-de-atencion-presencial-para-el-telepase-en-164efaj"
+        },
+        {
+          "id": "1spjzhb",
+          "titulo": "El Concejo designa Paseo Intendente Juan José Mare a la vuelta interna del Cerro en Balcar",
+          "fecha": "2026-09-25T12:46:51.000Z",
+          "ruta": "/nota/el-concejo-designa-paseo-intendente-juan-jose-mare-a-la-vuelta-1spjzhb"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "yruzv2": {
+      "estado": "automatica",
+      "titulo": "La demanda de dólares se mantiene alta y suma millones",
+      "copete": "La compra de moneda extranjera continuó en niveles elevados durante agosto, aunque registró una baja respecto al mes anterior. Los datos surgen del último informe del Banco Central.",
+      "cuerpo": "Según el Informe Cambiario del Banco Central, las personas realizaron compras netas por más de 2400 millones de dólares y el total demandado llegó a casi 2700 millones al sumar egresos por transferencias, quedando por debajo de los valores de julio.\n\nDesde la eliminación de las restricciones cambiarias a mediados de 2025, la demanda neta de divisas acumulada supera los 40.000 millones de dólares.\n\nEl Banco Central estimó que gran parte de esas divisas quedaron depositadas en bancos locales, incrementaron activos externos o cubrieron gastos de tarjetas. En tanto, el comercio exterior dejó ingresos netos positivos impulsados por las exportaciones.",
+      "guion": "La demanda de dolares se mantiene alta y suma millones",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-26T07:44:00.192Z",
+      "claves": [
+        "La demanda de dólares se mantuvo elevada en agosto pero cayó frente a julio.",
+        "Alrededor de 1,7 millones de personas acudieron al mercado cambiario en el mes.",
+        "Las compras netas del sector privado superan los 18.000 millones de dólares en el año."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "La demanda de dólares se mantuvo en niveles elevados durante agosto aunque registró una baja respecto a julio, según los datos oficiales del Banco Central.",
+      "etiquetas": [
+        "dólares",
+        "Banco Central",
+        "demanda",
+        "economía",
+        "agosto"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/economia/la-demanda-de-dolares-se-mantuvo-alta-aunque-cayo-en-montos-nid25092026/",
+          "fecha": "2026-09-25T21:52:49.000Z",
+          "oficial": false,
+          "aporte": "Aportó los datos del Informe Cambiario del Banco Central sobre la demanda de dólares, compras netas, transferencias y estadísticas de comercio exterior durante agosto."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "pbv5pm",
+          "titulo": "AMD entra al club del billón de dólares gracias a la demanda de tecnología para inteligencia artificial",
+          "fecha": "2026-09-23T22:35:35.000Z",
+          "ruta": "/nota/amd-entra-al-club-del-billon-de-dolares-gracias-a-la-demanda-de-pbv5pm"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "1weuz84": {
+      "estado": "automatica",
+      "titulo": "Analizan el margen para la baja de impuestos en el Presupuesto 2027",
+      "copete": "El proyecto oficial prevé superávit fiscal y un incremento en la recaudación, mientras se evalúa el impacto de las reducciones tributarias acumuladas desde el inicio de la gestión.",
+      "cuerpo": "El Presupuesto 2027 proyecta un superávit primario de 1,3% del PBI y un resultado financiero positivo de 0,2% para el Sector Público Nacional.\n\nEl Instituto Argentino de Análisis Fiscal advirtió que esa suba en la presión no implica necesariamente un incremento de alícuotas, ya que puede responder a una mayor actividad, consumo o salarios. Según los cálculos de esa entidad, las medidas tributarias implementadas entre 2024 y 2026 generaron una pérdida neta de recaudación cercana al 3% del PBI, impulsada principalmente por la eliminación del impuesto PAIS.\n\nEl análisis señala que la continuidad de las reducciones impositivas dependerá de cómo convivan con la meta de equilibrio fiscal establecida por el Gobierno para el próximo año.",
+      "guion": "Analizan el margen para la baja de impuestos en el Presupuesto 2027.",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-26T07:44:00.192Z",
+      "claves": [
+        "El Presupuesto 2027 proyecta un superávit financiero positivo de 0,2% del PBI.",
+        "La presión tributaria efectiva pasará al 21,7% del PBI el próximo año.",
+        "Las reducciones impositivas desde 2024 acumularon una pérdida neta del 3% del PBI."
+      ],
+      "seSabe": [
+        "El Ejecutivo prevé un superávit primario de 18,44 billones de pesos para 2027, según el proyecto oficial.",
+        "La recaudación de impuestos nacionales y de la Seguridad Social aumentará 27,9% respecto de 2026.",
+        "El Instituto Argentino de Análisis Fiscal calculó que la pérdida neta de recaudación entre 2024 y 2026 fue de aproximadamente 3% del PBI."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El Presupuesto 2027 proyecta superávit fiscal y un incremento en la presión tributaria efectiva, mientras se analiza el margen para profundizar la reducción de impuestos.",
+      "etiquetas": [
+        "Presupuesto 2027",
+        "impuestos",
+        "economia",
+        "pbi",
+        "Gobierno nacional"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/economia/2026/09/26/baja-de-impuestos-que-margen-tiene-el-gobierno-para-seguir-con-las-reducciones-en-2027-segun-el-presupuesto/",
+          "fecha": "2026-09-26T04:25:29.000Z",
+          "oficial": false,
+          "aporte": "Detalló las proyecciones del Presupuesto 2027, los cálculos de presión tributaria y el informe del Instituto Argentino de Análisis Fiscal sobre la pérdida neta de recaudación."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "17x5y1v": {
+      "estado": "automatica",
+      "titulo": "Meta anuncia nuevo cable submarino transatlántico",
+      "copete": "La empresa tecnológica presentó Petal, una infraestructura submarina que conectará Estados Unidos y Francia. El sistema busca alcanzar una velocidad de un petabit por segundo y prevé su puesta en marcha para 2029.",
+      "cuerpo": "El sistema fue diseñado para alcanzar una capacidad de transferencia de un petabit de datos por segundo, superando a las redes tradicionales y con fecha de puesta en marcha prevista para dos mil veintinueve.\n\nPara lograr este rendimiento, la empresa utilizó tecnología de fibra multinúcleo para duplicar los canales espaciales y un diseño de repetidores de menor consumo energético. En el proyecto participan también NEC Corporation, Sumitomo Electric Industries y la firma francesa Orange para la instalación en la costa gala.\n\nDesde la compañía informaron que este tipo de infraestructura submarina sostiene casi la totalidad del tráfico intercontinental de datos a nivel global, impulsado por el crecimiento del consumo digital y las herramientas de inteligencia artificial.",
+      "guion": "Meta anuncia nuevo cable submarino transatlántico",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-26T07:44:00.192Z",
+      "claves": [
+        "Meta anunció el cable submarino Petal entre Estados Unidos y Francia.",
+        "El sistema proyecta alcanzar un petabit por segundo hacia 2029.",
+        "Utiliza tecnología de fibra multinúcleo y repetidores de bajo consumo.",
+        "Participan en el desarrollo NEC, Sumitomo Electric e instalaciones de Orange."
+      ],
+      "seSabe": [
+        "Meta anunció la construcción del cable submarino Petal entre Estados Unidos y Francia, según informó la compañía.",
+        "El proyecto prevé operar en 2029 con una capacidad de un petabit por segundo, de acuerdo con los datos difundidos.",
+        "La iniciativa cuenta con la participación de NEC Corporation, Sumitomo Electric Industries y Orange, según detalló la empresa."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Meta anunció la construcción de Petal, un cable submarino transatlántico que conectará Estados Unidos y Francia con una capacidad inédita de un petabit por segundo para 2029.",
+      "etiquetas": [
+        "Meta",
+        "cable submarino",
+        "tecnología",
+        "internet",
+        "telecomunicaciones"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/tecno/2026/09/26/meta-anuncia-construccion-de-cable-submarino-de-internet-con-capacidad-de-1-petabit-por-segundo/",
+          "fecha": "2026-09-26T03:07:26.000Z",
+          "oficial": false,
+          "aporte": "Detalló el anuncio de Meta sobre el cable submarino Petal, su capacidad técnica, socios y proyecciones para 2029."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "164rlv9",
+          "titulo": "Elon Musk anuncia construcción de túnel Hyperloop para viajar a más de 300 km/h entre dos ciudades de EE. UU.",
+          "fecha": "2026-09-22T22:37:00.000Z",
+          "ruta": "/nota/elon-musk-anuncia-construccion-de-tunel-hyperloop-para-viajar-a-mas-164rlv9"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "g9u419": {
+      "estado": "automatica",
+      "titulo": "Jensen Huang aconseja a los jóvenes estudiar y adoptar la inteligencia artificial",
+      "copete": "El fundador de Nvidia recomendó mantener la educación formal y utilizar las nuevas herramientas tecnológicas como un recurso para ampliar capacidades.",
+      "cuerpo": "El planteo surge en medio del debate global sobre cómo adaptar los programas educativos a la expansión de la IA generativa.\n\nHuang sostuvo que la educación permite interpretar un entorno complejo, mientras que la adopción activa de la tecnología busca elevar las aspiraciones de los estudiantes sin reemplazar el esfuerzo personal. En paralelo, organismos internacionales como el Fondo Monetario Internacional estiman que una porción significativa del empleo global se verá transformada por la automatización.",
+      "guion": "Jensen Huang aconseja a los jóvenes estudiar y adoptar la inteligencia artificial",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-26T07:44:00.192Z",
+      "claves": [
+        "El CEO de Nvidia recomendó mantener la educación formal.",
+        "Huang pidió adoptar la inteligencia artificial de forma activa.",
+        "El empresario rechazó la idea de abandonar la escuela por la automatización."
+      ],
+      "seSabe": [
+        "Jensen Huang recomendó a los jóvenes continuar su educación formal y adoptar la inteligencia artificial.",
+        "El empresario afirmó en una entrevista que la formación académica permite comprender mejor el mundo y tomar decisiones informadas.",
+        "El Fondo Monetario Internacional estima que una gran parte de los empleos globales está expuesta a transformaciones por la automatización."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El CEO de Nvidia, Jensen Huang, aconsejó a los jóvenes mantener la educación formal y aprender a utilizar la inteligencia artificial como una herramienta para ampliar sus capacidades en lugar de abandonar los estudios.",
+      "etiquetas": [
+        "Inteligencia artificial",
+        "Educación",
+        "Nvidia",
+        "Jensen Huang",
+        "Tecnología"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/tecno/2026/09/26/jensen-huang-ceo-de-nvidia-aconseja-a-los-ninos-vayan-a-la-escuela-y-adopten-la-ia/",
+          "fecha": "2026-09-26T02:38:26.000Z",
+          "oficial": false,
+          "aporte": "Detalló las declaraciones de Jensen Huang sobre educación e inteligencia artificial."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "6yvtmw",
+          "titulo": "Jensen Huang, CEO de Nvidia, asegura que “hay un 0% de probabilidad de que la IA destruya el mundo”",
+          "fecha": "2026-09-21T14:49:18.000Z",
+          "ruta": "/nota/jensen-huang-ceo-de-nvidia-asegura-que-hay-un-0-de-probabilidad-de-6yvtmw"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "1w161hy": {
+      "estado": "automatica",
+      "titulo": "Los vehículos autónomos registran menos choques que los humanos",
+      "copete": "Un informe de la compañía Waymo indicó que sus vehículos autónomos redujeron los accidentes viales con lesiones en comparación con los conductores humanos. La tecnología genera debate entre reguladores y especialistas por su impacto urbano.",
+      "cuerpo": "El reporte analizó millones de millas recorridas sin conductor en cinco ciudades de Estados Unidos. Los datos también indicaron una disminución en choques con peatones, ciclistas y motociclistas.\n\nPese a las cifras difundidas por la empresa filial de Alphabet, algunas jurisdicciones mantienen reservas sobre la autorización de estos servicios en las calles ante preocupaciones por el tráfico y la movilidad urbana. Por su parte, especialistas e instituciones académicas señalaron que el volumen de millas recorridas por los vehículos autónomos sigue siendo reducido frente al total del parque automotor humano.\n\nAsimismo, expertos en seguridad vial advirtieron limitaciones en la recopilación de datos y en la ausencia de estándares uniformes para comparar el rendimiento entre diferentes desarrollos de conducción automatizada. La compañía confía en que la difusión de estas mediciones contribuya al debate sobre la seguridad en el transporte.",
+      "guion": "Los vehículos autónomos registran menos choques que los humanos",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-26T07:44:00.192Z",
+      "claves": [
+        "La compañía Waymo difundió un informe sobre seguridad vial.",
+        "Registraron una baja en accidentes con lesiones frente a conductores humanos.",
+        "Persisten cuestionamientos de especialistas sobre la medición y los datos."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Un informe de la empresa Waymo indicó que sus vehículos autónomos redujeron los accidentes viales con lesiones en comparación con conductores humanos. La tecnología genera debate entre reguladores y especialistas.",
+      "etiquetas": [
+        "vehículos autónomos",
+        "tecnología",
+        "seguridad vial"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/tecno/2026/09/26/los-carros-waymo-sin-conductor-de-google-lograron-82-menos-accidentes-con-lesiones-que-los-cometidos-por-humanos-al-volante/",
+          "fecha": "2026-09-26T01:56:42.000Z",
+          "oficial": false,
+          "aporte": "Detalló las estadísticas de seguridad vial y los cuestionamientos de especialistas sobre los vehículos autónomos."
         }
       ],
       "verificacion": {
