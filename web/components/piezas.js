@@ -8,7 +8,6 @@
 import {
   datosSeccion, nombreCorto, cuando, partirFecha, whatsapp, MAIL, WHATSAPP,
 } from '@/lib/datos';
-import { tipoDeCielo } from '@/lib/clima';
 import { comoNombre } from '@/lib/texto';
 import { nombreDeEvento } from '@/lib/eventos';
 import { enlaceDeLlamada } from '@/lib/farmacias';

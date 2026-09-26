@@ -27,12 +27,8 @@ export const ALTO = 924;
 
 /** Lo que muestra Facebook en escritorio: 2,63:1 centrado. */
 export const RECORTE_ESCRITORIO = { ancho: ANCHO, alto: 624, y: (ALTO - 624) / 2 };
-/** Lo que muestra en el celular: 16:9 (la imagen entera). */
-export const RECORTE_CELULAR = { ancho: ANCHO, alto: ALTO, y: 0 };
 /** Avatar en el celular (medido de una captura): centrado, ~44 % del ancho, arriba a ~54 % del alto. */
 export const AVATAR_CELULAR = { cx: ANCHO / 2, cy: Math.round(ALTO * 0.54) + Math.round(ANCHO * 0.22), r: Math.round(ANCHO * 0.22) };
-/** Avatar en escritorio: abajo a la izquierda (aproximado; el centro queda libre). */
-export const AVATAR_ESCRITORIO = { cx: 260, cy: 774, r: 190 };
 
 /**
  * Zona segura común: el texto tiene que caer dentro de esta caja.

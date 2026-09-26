@@ -525,11 +525,6 @@ export function icsDeEvento(e, { url = '', dominio = 'radarbalcarce.com', ahora 
   return `${lineas.map(plegar).join('\r\n')}\r\n`;
 }
 
-/** El mensaje para pasarlo por WhatsApp: qué, cuándo, dónde y el enlace. */
-export function mensajeParaCompartir(e, url = '') {
-  return `${nombreDeEvento(e.nombre)}\n${copeteDeEvento(e)}${url ? `\n\n${url}` : ''}`;
-}
-
 // ------------------------------------------------------ datos estructurados
 
 /** Un número de precio, si la entrada lo dice claro ("$5.000" → 5000). */

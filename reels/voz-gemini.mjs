@@ -59,21 +59,6 @@ function anotarPedido(ok) {
   fs.writeFileSync(REGISTRO, JSON.stringify(podado, null, 2), 'utf8');
 }
 
-/** Para el panel: cuánto se usó y cuánto queda del cupo de hoy. */
-export function estadoCuota() {
-  const dia = diaDeCuota();
-  const hoy = leerRegistro()[dia] ?? { pedidos: 0, fallados: 0 };
-  const usados = hoy.pedidos - hoy.fallados;
-  return {
-    dia,
-    cupo: CUPO_DIARIO,
-    usados,
-    quedan: Math.max(0, CUPO_DIARIO - usados),
-    rechazados: hoy.fallados,
-    renueva: 'a la medianoche de California (4 o 5 de la mañana en Balcarce)',
-  };
-}
-
 // El plan gratuito limita pedidos por minuto, así que las llamadas se espacian
 // solas y, si igual salta el límite, se espera y se reintenta. Nunca conviene
 // disparar una atrás de la otra.

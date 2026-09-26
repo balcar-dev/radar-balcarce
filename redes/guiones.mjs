@@ -348,9 +348,6 @@ export function guionClimaNoche(clima, { fecha = new Date(), direccion } = {}) {
   return unir(partes);
 }
 
-/** El nombre de siempre de esta pieza (antes se la llamaba "de la tarde"). */
-export const guionClimaTarde = (clima, opciones) => guionClimaNoche(clima, opciones);
-
 // --- la farmacia y las piezas semanales ------------------------------------
 
 /** La farmacia de turno (19:00). Dice el nombre y la dirección; no dice hasta

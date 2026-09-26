@@ -112,7 +112,6 @@
 .solo-grande.solo-grande { display: none; }
 @media (min-width: 720px) {
   .solo-grande.solo-grande { display: inline-flex; }
-  .solo-chico.solo-chico { display: none; }
 }
 
 /* Fraunces sin las formas "wonky" (la h, la n y la m inclinadas) ni el redondeo
@@ -486,8 +485,6 @@ main { padding: 24px 0 10px; }
 }
 .boton.rojo { background: var(--rojo); color: #fff; }
 .boton.rojo:hover { background: var(--rojo-oscuro); color: #fff; }
-.boton.tinta { background: var(--tinta); color: var(--crema); }
-.boton.tinta:hover { color: #fff; }
 .boton.borde { background: transparent; border: 1px solid var(--tinta); color: var(--tinta); }
 .boton.ancho { width: 100%; }
 
@@ -822,37 +819,6 @@ footer.principal .aclaracion { max-width: 760px; line-height: 1.6; border-top: 1
 .cuerpo-nota h1 { font-size: 30px; line-height: 1.15; margin-top: 12px; font-weight: 700; }
 @media (min-width: 720px) { .cuerpo-nota h1 { font-size: 38px; } }
 .cuerpo-nota .copete { font-size: 17px; color: var(--texto); margin-top: 14px; line-height: 1.6; }
-.atribucion { background: var(--crema); border-radius: 10px; padding: 16px; margin-top: 26px; font-size: 13.5px; line-height: 1.6; }
-.atribucion a { color: var(--rojo); font-weight: 600; }
-
-/* Claves, qué se sabe, qué falta confirmar y fuentes consultadas
-   (components/verificacion.js, desde el 25/09). Compacto y en gris de
-   rótulo, como la ficha de un evento: es información de apoyo, no otra nota. */
-.verificacion-nota {
-  margin-top: 28px; padding-top: 18px; border-top: 1px solid var(--linea);
-  display: flex; flex-direction: column; gap: 18px;
-}
-.bloque-verificacion h2 {
-  font-family: inherit; font-size: 11px; font-weight: 700; letter-spacing: 0.08em;
-  text-transform: uppercase; color: var(--suave); margin: 0 0 6px;
-}
-.bloque-verificacion ul { margin: 0; padding-left: 18px; }
-.bloque-verificacion li { font-size: 15px; line-height: 1.55; color: var(--texto); margin: 4px 0; overflow-wrap: anywhere; }
-.bloque-verificacion a { color: var(--rojo); font-weight: 600; }
-.fuentes-consultadas li { font-size: 14px; }
-.fuentes-consultadas .dato-fuente, .fuentes-consultadas .aporte { color: var(--suave); }
-.nivel-verificacion {
-  display: flex; align-items: baseline; flex-wrap: wrap; gap: 6px 10px;
-  margin: 0; font-size: 13.5px; line-height: 1.5; color: var(--suave);
-}
-.chapa-nivel {
-  flex: none; font-size: 11px; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase;
-  border: 1px solid currentColor; border-radius: 4px; padding: 2px 7px;
-}
-/* Los tres dan más de 4,5:1 sobre blanco. */
-.nivel-alta { color: var(--verde); }
-.nivel-media { color: #8A5A0B; }
-.nivel-baja { color: var(--rojo); }
 
 /* ------------------------------------------------ servicios en el celular */
 
