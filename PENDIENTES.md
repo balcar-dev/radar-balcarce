@@ -7,6 +7,16 @@ auditoría del 25/09, ítem por ítem, está en `docs/historico/AUDITORIA.md`.
 *Última revisión: 25/09/2026.* Lo que ya se hizo está al final ("Ya resuelto").
 Cada cosa figura una sola vez: si está en "Para mañana", no se repite abajo.
 
+## LO PRIMERO DEL 26/09: comprobar que Facebook ya se ve
+
+La app de Meta "Radar Balcarce Publicador" estaba en **modo desarrollo**: sus
+posteos y reels sólo los veían quienes tienen un rol en la app (las historias
+sí). El 26/09 a la noche se **publicó** (modo activo). Hay que comprobar,
+con una persona que **no sea administradora** de la página, que ahora ve los
+posteos y los reels nuevos (el primer posteo sale desde las 8:10). Si los de
+antes siguen ocultos, hay que volver a publicar lo importante. `redes/ver-facebook.mjs`
+(workflow "Ver Facebook") muestra lo que Meta tiene publicado.
+
 ## PARA MAÑANA (26/09), en este orden
 
 1. **Reiniciar el panel** (cerrar su ventana y doble clic en `ARRANCAR.bat`).
