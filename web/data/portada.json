@@ -1,6 +1,133 @@
 {
-  "generado": "2026-09-26T07:00:50.854Z",
+  "generado": "2026-09-26T07:30:49.692Z",
   "notas": [
+    {
+      "id": "17bo7cs",
+      "titulo": "Las elecciones en Estados Unidos definen el futuro del Senado",
+      "copete": "Los comicios legislativos en Estados Unidos generan atención por su impacto en la composición del Congreso. En Texas, los sondeos muestran una disputa ajustada para la renovación de bancas.",
+      "cuerpo": "Las elecciones legislativas de medio término en Estados Unidos se realizarán el martes 3 de noviembre de 2026 y definirán la composición del Senado federal. En el estado de Texas, la contienda enfrenta al candidato demócrata James Talarico con el fiscal general republicano Ken Paxton por un escaño que actualmente ocupa el senador John Cornyn, según informó el medio consultado. Un sondeo realizado por Marist Poll entre el 17 y el 20 de septiembre ubicó al postulante demócrata con una ventaja de seis puntos porcentuales frente a su rival, aunque la mayoría de los consultados estimó que el candidato republicano se impondrá en los comicios.\n\nEn paralelo, la encuesta abordó la competencia por la gobernación estatal entre el actual mandatario republicano Greg Abbott y la candidata demócrata Gina Hinojosa. El informe indicó que ambos aspirantes registran cifras cercanas en las preferencias de los votantes registrados en la región.",
+      "guion": "Las elecciones en Estados Unidos definen el futuro del Senado",
+      "seccion": "Política",
+      "medios": [
+        "La Nación"
+      ],
+      "enlace": "https://www.lanacion.com.ar/estados-unidos/texas/las-encuestas-son-claras-en-texas-talarico-vs-paxton-y-quien-gana-las-midterm-elections-2026-en-usa-nid26092026/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-26T07:20:00.000Z",
+      "sinFecha": false,
+      "visto": "2026-09-26T07:30:27.161Z",
+      "relevancia": 43,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Los comicios legislativos se realizarán el martes 3 de noviembre.",
+        "En Texas compiten James Talarico y Ken Paxton por un escaño.",
+        "Un sondeo preliminar muestra ventaja para el candidato demócrata.",
+        "La contienda por la gobernación enfrenta a Greg Abbott y Gina Hinojosa."
+      ],
+      "seSabe": [
+        "Las elecciones legislativas de medio término en Estados Unidos se llevarán a cabo el martes 3 de noviembre de 2026.",
+        "En Texas, James Talarico y Ken Paxton compiten por un escaño en el Senado federal.",
+        "Un sondeo de Marist Poll realizado en septiembre ubicó a Talarico con una ventaja de seis puntos frente a su rival.",
+        "Greg Abbott y Gina Hinojosa disputan la gobernación de Texas."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Las elecciones legislativas de medio término en Estados Unidos convocan a los votantes para definir bancas clave en el Congreso. Los sondeos preliminares en estados como Texas muestran escenarios disputados.",
+      "etiquetas": [
+        "Estados Unidos",
+        "elecciones",
+        "Senado",
+        "Texas"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/estados-unidos/texas/las-encuestas-son-claras-en-texas-talarico-vs-paxton-y-quien-gana-las-midterm-elections-2026-en-usa-nid26092026/",
+          "fecha": "2026-09-26T07:20:00.000Z",
+          "oficial": false,
+          "aporte": "Detalló los candidatos, las fechas y los resultados de los sondeos para el Senado y la gobernación en Texas."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "las-elecciones-en-estados-unidos-definen-el-futuro-del-senado"
+    },
+    {
+      "id": "hmyxr4",
+      "titulo": "Microsoft rediseña Copilot como una superapp de inteligencia artificial",
+      "copete": "La empresa tecnológica presentó una versión renovada de su asistente virtual que unifica herramientas de trabajo y edición de documentos en una sola plataforma. La medida busca competir con los productos integrados de OpenAI y Anthropic.",
+      "cuerpo": "Microsoft rediseñó por completo su asistente virtual Copilot para transformarlo en una superapp orientada al trabajo diario. Según informó la compañía, la nueva plataforma se organiza en tres pestañas principales denominadas Home, Code y Autopilot. El sector Home combina chat, un agente para ejecutar tareas y la integración directa de programas como Word, Excel y PowerPoint. \n\nEl director ejecutivo de la empresa, Satya Nadella, definió el desarrollo en redes sociales como un nuevo sistema operativo para el trabajo. Por su parte, la vicepresidenta corporativa del área, Annie Pearl, señaló que el objetivo fue convertir al asistente en una suite de productividad unificada para competir en el mercado frente a propuestas similares de OpenAI y Anthropic. \n\nEn cuanto a la disponibilidad, el sistema de facturación funcionará por consumo y no mediante una suscripción tradicional. Las funciones de Autopilot comenzarán su etapa de prueba privada este mes, mientras que las herramientas de Home y Code se desplegarán de forma paulatina en las próximas semanas.",
+      "guion": "Microsoft rediseña Copilot como una superapp de inteligencia artificial",
+      "seccion": "Tecnología",
+      "medios": [
+        "Xataka"
+      ],
+      "enlace": "https://www.xataka.com/aplicaciones/microsoft-cree-que-ha-inventado-nuevo-office-superapp-ia-que-quiere-sentarse-a-mesa-anthropic-openai",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-26T07:00:17.000Z",
+      "sinFecha": false,
+      "visto": "2026-09-26T07:30:27.161Z",
+      "relevancia": 46,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Microsoft lanzó una versión rediseñada de su asistente Copilot.",
+        "La plataforma unifica herramientas de chat, edición y ejecución de tareas.",
+        "El sistema se divide en tres pestañas: Home, Code y Autopilot.",
+        "La facturación de las nuevas funciones se realizará por consumo."
+      ],
+      "seSabe": [
+        "Microsoft rediseñó Copilot para convertirlo en una superapp.",
+        "La plataforma se divide en tres secciones: Home, Code y Autopilot.",
+        "Satya Nadella definió la herramienta como un sistema operativo para el trabajo.",
+        "Annie Pearl explicó que busca unificar la productividad en una sola suite.",
+        "Autopilot iniciará su fase de prueba privada este mes y Home y Code llegarán en las próximas semanas."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Microsoft presentó una versión rediseñada de Copilot convertida en una superapp que unifica chat, herramientas de oficina y agentes de tareas para competir en el mercado tecnológico actual.",
+      "etiquetas": [
+        "Microsoft",
+        "Copilot",
+        "Inteligencia Artificial",
+        "Software"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Xataka",
+          "enlace": "https://www.xataka.com/aplicaciones/microsoft-cree-que-ha-inventado-nuevo-office-superapp-ia-que-quiere-sentarse-a-mesa-anthropic-openai",
+          "fecha": "2026-09-26T07:00:17.000Z",
+          "oficial": false,
+          "aporte": "Detalló el rediseño de Copilot, sus nuevas funciones organizadas en pestañas, las declaraciones de los directivos y el esquema de facturación por uso."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "5ar64f",
+          "titulo": "Demandan a SpaceXAI, OpenAI y Anthropic por presunto pacto ilegal para ralentizar el desarrollo de la IA",
+          "fecha": "2026-09-21T03:39:11.000Z",
+          "ruta": "/nota/demandan-a-spacexai-openai-y-anthropic-por-presunto-pacto-ilegal-para-5ar64f"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "microsoft-redisena-copilot-como-una-superapp-de-inteligencia"
+    },
     {
       "id": "hhhnps",
       "titulo": "OpenAI lanza una función de mapas para competir con Google",
@@ -200,64 +327,6 @@
       "slug": "una-encuesta-mide-la-gestion-de-zohran-mamdani-en-nueva-york"
     },
     {
-      "id": "1jrpi3i",
-      "titulo": "Ella Beatty protagoniza la cuarta temporada de Monster",
-      "copete": "La hija de Warren Beatty y Annette Bening interpreta a una asesina con hacha en la nueva entrega de la antología de Netflix.",
-      "cuerpo": "La actriz Ella Beatty, de veintiséis años e hija de los reconocidos intérpretes Warren Beatty y Annette Bening, integra el elenco de la cuarta temporada de la serie Monster, la producción de Netflix centrada en casos de criminales célebres.\n\nEgresada de la escuela de artes escénicas Juilliard, Beatty debutó en televisión en la serie Feud: Capote versus The Swans y participó en producciones teatrales en Broadway, además de incursionar en cine y compartir escenario con figuras como Hugh Jackman. Sobre sus inicios, la artista reconoció que el respaldo familiar le otorgó visibilidad y destacó las enseñanzas vinculadas a la disciplina profesional y al trato cotidiano.\n\nLa intérprete señaló que debió superar su propia aprensión personal para encarnar las escenas vinculadas a los crímenes de su personaje en la ficción. La información proviene exclusivamente del artículo publicado por el medio nacional, sin vínculos directos consignados con la comunidad de Balcarce.",
-      "guion": "Ella Beatty protagoniza la cuarta temporada de Monster",
-      "seccion": "Cultura y agenda",
-      "medios": [
-        "La Nación"
-      ],
-      "enlace": "https://www.lanacion.com.ar/revista-hola/con-un-hacha-en-la-mano-tiene-22-anos-es-la-hija-de-dos-estrellas-del-cine-y-se-luce-en-su-papel-de-nid26092026/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-26T06:00:00.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-26T06:30:48.786Z",
-      "relevancia": 43,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "La hija de Warren Beatty actúa en la serie Monster",
-        "Interpreta a Lizzie Borden en la cuarta entrega de Netflix",
-        "Se formó en la escuela Juilliard y suma trayectoria en teatro"
-      ],
-      "seSabe": [
-        "Ella Beatty es hija de Warren Beatty y Annette Bening",
-        "Interpreta a Lizzie Borden en la cuarta temporada de Monster",
-        "Egresó de la escuela de artes escénicas Juilliard"
-      ],
-      "noConfirmado": [
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "La actriz Ella Beatty, hija de Warren Beatty y Annette Bening, interpreta a Lizzie Borden en la cuarta temporada de la serie Monster en Netflix.",
-      "etiquetas": [
-        "Ella Beatty",
-        "Monster",
-        "Netflix",
-        "Cine",
-        "Series"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "La Nación",
-          "enlace": "https://www.lanacion.com.ar/revista-hola/con-un-hacha-en-la-mano-tiene-22-anos-es-la-hija-de-dos-estrellas-del-cine-y-se-luce-en-su-papel-de-nid26092026/",
-          "fecha": "2026-09-26T06:00:00.000Z",
-          "oficial": false,
-          "aporte": "Detalla la trayectoria artística de Ella Beatty y su participación en la serie Monster."
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "ella-beatty-protagoniza-la-cuarta-temporada-de-monster"
-    },
-    {
       "id": "1phpas5",
       "titulo": "Evalúan el riesgo de una recesión técnica en la economía",
       "copete": "Analistas advierten por una posible recesión técnica tras una fuerte caída de la actividad en julio. La evolución de los próximos meses resulta clave.",
@@ -331,66 +400,6 @@
       "slug": "evaluan-el-riesgo-de-una-recesion-tecnica-en-la-economia"
     },
     {
-      "id": "oz017v",
-      "titulo": "Estados Unidos y China abrirán un canal de comunicación para incidentes",
-      "copete": "Las potencias acordaron establecer un mecanismo bilateral para gestionar riesgos vinculados a la inteligencia artificial tras una cumbre entre Donald Trump y Xi Jinping.",
-      "cuerpo": "Estados Unidos y China acordaron establecer un canal de comunicación bilateral para gestionar incidentes relacionados con la inteligencia artificial, según informó la Casa Blanca el viernes. Durante una cumbre centrada en los desafíos de esta tecnología, ambos países habilitaron el llamado Diálogo sobre Superinteligencia para intercambiar opiniones sobre los riesgos y beneficios del sector. Las naciones decidieron emplear el término superinteligencia en lugar de inteligencia artificial. Previamente, el presidente estadounidense había manifestado su postura de dejar el avance de esta tecnología exactamente en su estado actual. Por su parte, el mandatario chino abogó por una relación sin conflictos ni confrontaciones y por mantener los sistemas bajo supervisión humana. Los mandatarios mantendrán un encuentro en noviembre para abordar la continuidad de estas medidas de control.",
-      "guion": "Estados Unidos y China abrirán un canal de comunicación para incidentes",
-      "seccion": "Tecnología",
-      "medios": [
-        "Clarín"
-      ],
-      "enlace": "https://www.clarin.com/estados-unidos/eeuu-y-china-abriran-un-canal-de-comunicacion-para-incidentes-de-la-ia_0_v2mUa8TWyD.html",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-26T05:00:18.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-26T05:30:43.585Z",
-      "relevancia": 39,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Creación de un canal bilateral para incidentes tecnológicos",
-        "Cumbre entre Donald Trump y Xi Jinping",
-        "Adopción del término superinteligencia",
-        "Supervisión humana sobre los sistemas"
-      ],
-      "seSabe": [
-        "Estados Unidos y China establecerán un canal de comunicación para incidentes de superinteligencia, según informó la Casa Blanca.",
-        "Los mandatarios Donald Trump y Xi Jinping participaron en una cumbre para abordar los riesgos y beneficios de la tecnología.",
-        "Ambas potencias acordaron denominar a la tecnología como superinteligencia."
-      ],
-      "noConfirmado": [
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "Estados Unidos y China acordaron crear un canal de comunicación bilateral para gestionar incidentes de superinteligencia tras una cumbre entre Donald Trump y Xi Jinping.",
-      "etiquetas": [
-        "Estados Unidos",
-        "China",
-        "Inteligencia artificial",
-        "Tecnología",
-        "Donald Trump",
-        "Xi Jinping"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Clarín",
-          "enlace": "https://www.clarin.com/estados-unidos/eeuu-y-china-abriran-un-canal-de-comunicacion-para-incidentes-de-la-ia_0_v2mUa8TWyD.html",
-          "fecha": "2026-09-26T05:00:18.000Z",
-          "oficial": false,
-          "aporte": "Informó sobre la creación del canal de comunicación bilateral y los detalles de la cumbre entre Estados Unidos y China."
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "estados-unidos-y-china-abriran-un-canal-de-comunicacion-para"
-    },
-    {
       "id": "1weuz84",
       "titulo": "El Presupuesto proyecta una mayor presión tributaria para 2027",
       "copete": "El proyecto oficial contempla un superávit fiscal y prevé un incremento de la presión tributaria efectiva para el próximo año, según los datos del Presupuesto 2027.",
@@ -405,7 +414,7 @@
       "fecha": "2026-09-26T04:25:29.000Z",
       "sinFecha": false,
       "visto": "2026-09-26T04:30:43.572Z",
-      "relevancia": 49,
+      "relevancia": 39,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -458,7 +467,7 @@
       "fecha": "2026-09-26T04:01:13.000Z",
       "sinFecha": false,
       "visto": "2026-09-26T04:30:43.572Z",
-      "relevancia": 49,
+      "relevancia": 39,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -523,10 +532,10 @@
     },
     {
       "id": "1n2zzdt",
-      "titulo": "El Gobierno prepara anuncios económicos para la segunda Argentina Week",
-      "copete": "El presidente Javier Milei viajará a Francia para la segunda edición de la Argentina Week con el objetivo de generar confianza ante la suba del riesgo país. Trece gobernadores confirmaron su presencia en el evento.",
-      "cuerpo": "El Gobierno nacional ultima los detalles para la segunda edición de la Argentina Week en París, un evento que encabezará el presidente Javier Milei con el propósito de concretar anuncios económicos y mostrar definiciones formales, tras una primera experiencia en Nueva York que, según admitieron desde la administración central, no dejó medidas de esa magnitud. La comitiva oficial incluirá al ministro de Justicia, Juan Bautista Mahiques, para la firma de un convenio con el GAFI, además de nuevas medidas vinculadas al RIGI con la participación de los ministros Luis Caputo y Federico Sturzenegger, y una mayor apertura hacia la prensa con la presencia del secretario de Comunicación, Fabián Fernández.\n\nEn el plano político, la administración nacional busca asegurar el respaldo de los mandatarios provinciales en medio de las discusiones por la posible eliminación o suspensión de las PASO y la reforma impulsada por Karina Milei. Hasta el momento, trece gobernadores confirmaron su asistencia, entre ellos Jorge Macri de la Ciudad de Buenos Aires, Alfredo Cornejo de Mendoza, Ignacio Torres de Chubut, Rogelio Frigerio de Entre Ríos y Martín Llaryora de Córdoba, aunque desde las provincias aclararon que el viaje apunta a fortalecer vínculos con el sector privado y no implica necesariamente un alineamiento legislativo automático con la Casa Rosada.",
-      "guion": "El Gobierno prepara anuncios económicos para la segunda Argentina Week",
+      "titulo": "El Gobierno prepara anuncios económicos para su viaje a París",
+      "copete": "La administración nacional ultima los detalles de la segunda edición de la Argentina Week en Francia. El presidente Javier Milei buscará generar confianza tras la suba del riesgo país.",
+      "cuerpo": "El Gobierno nacional ultima los detalles de la segunda edición de la Argentina Week en París, un evento de promoción que incluirá la firma de un convenio con el GAFI y nuevas medidas vinculadas al RIGI.\n\nEl viaje tendrá un fuerte costado político en medio de la discusión por la suspensión o eliminación de las PASO y el Presupuesto 2027. Desde la Casa Rosada indicaron que buscarán sumar a la mayor cantidad de gobernadores aliados para conseguir apoyos legislativos. Entre los mandatarios provinciales que confirmaron su asistencia se encuentran Jorge Macri, Alfredo Cornejo, Marcelo Orrego, Ignacio Torres, Rogelio Frigerio, Alberto Weretilneck, Rolando Figueroa, Gustavo Sáenz, Raúl Jalil, Carlos Sadir, Martín Llaryora, Leandro Zdero, Juan Pablo Valdés y Claudio Vidal. En tanto, desde las provincias aclararon que el viaje busca reforzar vínculos con el sector privado y no implica necesariamente un alineamiento legislativo automático con el oficialismo.",
+      "guion": "El Gobierno prepara anuncios económicos para su viaje a París.",
       "seccion": "Política",
       "medios": [
         "Infobae"
@@ -538,21 +547,19 @@
       "visto": "2026-09-26T04:30:43.572Z",
       "relevancia": 85,
       "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
+      "publicadaPor": "ia",
+      "publicadaCuando": "2026-09-26T07:03:52.036Z",
       "temas": [],
       "como": "automatica",
       "noConfirmado": [
-        "No se confirmó si los gobernadores asistentes votarán a favor de los proyectos del oficialismo en el Congreso.",
-        "No trascendieron los detalles específicos de todas las medidas sobre el RIGI que se anunciarán en París.",
         "No pudo ser contrastado de forma independiente con las fuentes consultadas."
       ],
-      "textoRedes": "El Gobierno nacional prepara anuncios económicos para la segunda edición de la Argentina Week en París. El presidente Javier Milei viajará acompañado por trece gobernadores provinciales en busca de nuevos apoyos legislativos y confianza en los mercados.",
+      "textoRedes": "El Gobierno nacional ultima los detalles de la Argentina Week en París, donde el presidente Javier Milei prevé anunciar medidas económicas y buscará el apoyo de gobernadores aliados en medio de la discusión legislativa.",
       "etiquetas": [
-        "Argentina Week",
+        "Gobierno nacional",
         "Javier Milei",
         "Francia",
-        "Gobernadores",
+        "Argentina Week",
         "Economía",
         "Política"
       ],
@@ -562,7 +569,7 @@
           "enlace": "https://www.infobae.com/politica/2026/09/26/argentina-week-milei-prepara-anuncios-concretos-para-paliar-la-suba-del-riesgo-pais-y-encaminar-la-negociacion-por-la-paso/",
           "fecha": "2026-09-26T03:50:04.000Z",
           "oficial": false,
-          "aporte": "Detalló la agenda de la Argentina Week en París, los funcionarios que integran la comitiva y la lista de gobernadores confirmados."
+          "aporte": "Aportó los detalles sobre la agenda del viaje presidencial a París, las medidas económicas previstas, la lista de gobernadores confirmados y el contexto político nacional."
         }
       ],
       "antecedentes": [
@@ -576,7 +583,7 @@
       "verificacion": {
         "nivel": "MEDIA",
         "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "ALTA"
+        "sugeridoPorIA": "MEDIA"
       },
       "slug": "el-gobierno-prepara-anuncios-economicos-para-la-segunda-argentina-week"
     },
@@ -837,10 +844,10 @@
     },
     {
       "id": "e6im4b",
-      "titulo": "Las TC Pick Up se presentan en Balcarce con una multitud",
-      "copete": "La octava fecha del campeonato tuvo su presentación oficial con una masiva convocatoria de vecinos y fanáticos. Las camionetas recorrieron la ciudad en la antesala del regreso del automovilismo nacional al autódromo Juan Manuel Fangio.",
-      "cuerpo": "Una multitudinaria convocatoria acompañó este viernes la presentación oficial de la octava fecha de las TC Pick Up en la ciudad, en la antesala de la competencia que marcará el regreso del automovilismo nacional al autódromo Juan Manuel Fangio tras quince años, según se informó.\n\nLa jornada comenzó por la tarde en una estación de servicios ubicada en avenida San Martín y 107, donde los pilotos locales José y Diego Ciantini, Santiago Mangoni y Juan José Suárez, junto a figuras como Omar Martínez, Agustín Canapino y Mariano Werner, firmaron autógrafos ante miles de fanáticos. Luego, las unidades realizaron un recorrido por distintas calles hasta llegar al Museo del Automovilismo Juan Manuel Fangio, donde se llevó a cabo la conferencia de prensa con la presencia del intendente Esteban Reino y el gerente general de la ACTC, Fernando Miori.\n\nLas actividades promocionales habían tenido escalas previas en Tandil y Mar del Plata, como se informó a principios de semana. La actividad oficial en pista comenzará este sábado en el circuito serrano, mientras que las finales de las TC Pick Up y TC Pista Pick Up se disputarán el domingo.",
-      "guion": "Las TC Pick Up se presentan en Balcarce con una multitud",
+      "titulo": "Las TC Pick Up realizan su presentación oficial en Balcarce",
+      "copete": "Una multitud acompañó la presentación de la octava fecha de las TC Pick Up con actividades en una estación de servicio y un recorrido hacia el Museo Fangio.",
+      "cuerpo": "La octava fecha de las TC Pick Up tuvo su presentación oficial con una jornada que comenzó con la firma de autógrafos en una estación de servicio ubicada en avenida San Martín y 107. Del encuentro participaron pilotos locales y figuras del automovilismo nacional ante una multitud de fanáticos.\n\nParticiparon el intendente Esteban Reino y el gerente general de la ACTC, Fernando Miori.\n\nEsta actividad forma parte de la previa del regreso de las categorías nacionales al circuito local después de quince años, tras las acciones promocionales realizadas previamente en Tandil y Mar del Plata.",
+      "guion": "Las TC Pick Up realizan su presentación oficial en Balcarce",
       "seccion": "Automovilismo",
       "medios": [
         "Diario La Vanguardia"
@@ -852,35 +859,32 @@
       "visto": "2026-09-26T03:00:42.156Z",
       "relevancia": 71,
       "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
+      "publicadaPor": "ia",
+      "publicadaCuando": "2026-09-26T07:24:59.436Z",
       "temas": [
         "tc-pick-up",
         "fangio"
       ],
       "como": "automatica",
       "claves": [
-        "Las TC Pick Up realizaron su presentación oficial en la ciudad ante una multitud.",
-        "Participaron pilotos destacados como los hermanos Ciantini, Mangoni, Canapino y Werner.",
-        "El evento incluyó una firma de autógrafos y una caravana hasta el Museo Fangio.",
-        "La actividad oficial en el autódromo comenzará este sábado."
+        "Presentaron oficialmente la octava fecha de las TC Pick Up.",
+        "Pilotos y fanáticos participaron de actividades en la ciudad.",
+        "El evento anticipa la competencia en el autódromo local."
       ],
       "seSabe": [
-        "Las TC Pick Up presentaron la octava fecha de su campeonato en Balcarce.",
-        "Participaron los pilotos locales José y Diego Ciantini, Santiago Mangoni y Juan José Suárez.",
-        "Estuvieron presentes figuras nacionales como Omar Martínez, Agustín Canapino y Mariano Werner.",
-        "Participaron el intendente Esteban Reino y el gerente general de la ACTC, Fernando Miori.",
-        "La actividad oficial en el autódromo Juan Manuel Fangio comenzará este sábado."
+        "Las actividades comenzaron con una firma de autógrafos en una estación de servicio.",
+        "Las camionetas recorrieron las calles hasta el Museo Fangio para una conferencia.",
+        "Participaron referentes locales, pilotos nacionales, el intendente y autoridades de la ACTC."
       ],
       "noConfirmado": [
         "No pudo ser contrastado de forma independiente con las fuentes consultadas."
       ],
-      "textoRedes": "Las TC Pick Up tuvieron su presentación oficial en Balcarce con una masiva convocatoria de fanáticos y una caravana hasta el Museo Fangio. Este sábado comienza la actividad oficial en el autódromo.",
+      "textoRedes": "Las TC Pick Up tuvieron su presentación oficial en las calles locales con una masiva convocatoria de vecinos y fanáticos en la previa de la competencia en el autódromo.",
       "etiquetas": [
         "TC Pick Up",
+        "Automovilismo",
         "Autodromo Juan Manuel Fangio",
-        "Balcarce",
-        "Automovilismo"
+        "Balcarce"
       ],
       "fuentesConsultadas": [
         {
@@ -888,7 +892,7 @@
           "enlace": "https://www.diariolavanguardia.com/noticias/44908-una-gran-marco-de-publico-acompano-la-presentacion-de-las-tc-pick-up-en-balcarce/",
           "fecha": null,
           "oficial": false,
-          "aporte": "Detalló el recorrido de la presentación de las TC Pick Up, la firma de autógrafos y las autoridades presentes."
+          "aporte": "Detalló el recorrido de la presentación oficial de las TC Pick Up y las actividades en la ciudad."
         }
       ],
       "antecedentes": [
@@ -905,10 +909,10 @@
           "ruta": "/nota/reino-y-ciantini-participan-en-tandil-1ss3yj3"
         },
         {
-          "id": "1mkm1na",
-          "titulo": "El autódromo Juan Manuel Fangio abre sus puertas en Balcarce",
-          "fecha": "2026-09-25T22:53:16.590Z",
-          "ruta": "/nota/el-autodromo-juan-manuel-fangio-abre-sus-puertas-en-balcarce-1mkm1na"
+          "id": "7qxthx",
+          "titulo": "Kicillof encabeza la reapertura del autódromo Juan Manuel Fangio en Balcarce",
+          "fecha": "2026-09-26T02:38:34.000Z",
+          "ruta": "/nota/kicillof-encabeza-la-reapertura-del-autodromo-juan-manuel-fangio-en-7qxthx"
         }
       ],
       "verificacion": {
@@ -979,10 +983,10 @@
     },
     {
       "id": "7qxthx",
-      "titulo": "Kicillof encabeza la reapertura del autódromo Juan Manuel Fangio en Balcarce",
-      "copete": "El gobernador bonaerense y el intendente Esteban Reino participaron de la reinauguración del circuito local tras quince años sin competencias nacionales.",
-      "cuerpo": "Durante el acto oficial, Kicillof destacó el trabajo conjunto entre la Provincia y el municipio que permitió concretar las obras de mejora en la pista, curvas y medidas de seguridad del trazado serrano.\n\nDel evento también formaron parte autoridades provinciales y locales, en una jornada que incluyó la entrega previa de escrituras a familias del distrito en el Teatro Municipal Luis A. Conti.\n\nDesde la administración provincial señalaron que la puesta en valor del espacio representa un motivo de orgullo para los vecinos y un motor para el deporte motor en la región.",
-      "guion": "Kicillof encabeza la reapertura del autódromo Juan Manuel Fangio en Balcarce",
+      "titulo": "Kicillof encabeza la reinauguración del autódromo en Balcarce",
+      "copete": "El gobernador bonaerense y el intendente Esteban Reino participaron de la reapertura del autódromo Juan Manuel Fangio. El circuito vuelve a recibir competencias nacionales tras quince años.",
+      "cuerpo": "Conti». Durante la ceremonia, de la que participó el presidente de la ACTC, Hugo Mazzacane, el mandatario provincial destacó que el circuito es un símbolo para el automovilismo nacional y resaltó el trabajo conjunto entre la Provincia y el municipio para finalizar las obras de mejora en la pista y la infraestructura.\n\nLa reapertura del trazado serrano marca el retorno de las competencias nacionales al distrito luego de quince años de inactividad oficial.\n\nPara los vecinos de Balcarce, la puesta en valor del escenario deportivo representa un motivo de orgullo y un impulso para la actividad local, según remarcó el gobernador durante su visita institucional al distrito.",
+      "guion": "Kicillof encabeza la reinauguración del autódromo en Balcarce",
       "seccion": "Automovilismo",
       "medios": [
         "Sendero Regional",
@@ -996,35 +1000,29 @@
       "visto": "2026-09-26T03:00:42.156Z",
       "relevancia": 100,
       "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
+      "publicadaPor": "ia",
+      "publicadaCuando": "2026-09-26T07:03:52.036Z",
       "temas": [
         "autodromo",
         "fangio"
       ],
       "como": "automatica",
-      "claves": [
-        "Kicillof y Reino reinauguraron el autódromo Juan Manuel Fangio.",
-        "El circuito vuelve a recibir automovilismo nacional tras quince años.",
-        "Las obras incluyeron mejoras en la pista, curvas y seguridad.",
-        "El gobernador destacó el trabajo conjunto entre Provincia y municipio."
-      ],
       "seSabe": [
-        "Kicillof visitó Balcarce este viernes para participar de la entrega de escrituras y la reinauguración del autódromo, según las fuentes oficiales.",
-        "Del acto en el circuito participaron el intendente Esteban Reino y el presidente de la ACTC, Hugo Mazzacane, de acuerdo con los registros de los medios.",
-        "El autódromo estuvo quince años sin competencias nacionales antes de esta reapertura, según la información oficial.",
-        "Las obras de recuperación incluyeron mejoras en la pista, sectores, curvas e infraestructura de seguridad, según informó la Provincia."
+        "El gobernador Axel Kicillof y el intendente Esteban Reino participaron de la entrega de escrituras y la reinauguración del autódromo, según la información oficial.",
+        "El acto de entrega de escrituras se realizó en el Teatro Municipal Luis A. Conti, de acuerdo con la fuente oficial.",
+        "Del evento participó el presidente de la ACTC, Hugo Mazzacane, según indicaron los reportes.",
+        "Las obras incluyeron mejoras en la pista, curvas, seguridad e infraestructura, según detalló el mandatario provincial.",
+        "El autódromo vuelve a recibir competencias nacionales tras quince años, según los antecedentes y las fuentes."
       ],
       "noConfirmado": [
-        "No trascendieron los montos invertidos en las obras de recuperación del circuito serrano.",
-        "No se informaron detalles sobre la cantidad exacta de escrituras entregadas a las familias del distrito."
+        "No se detalló la cantidad exacta de familias beneficiadas en la entrega de escrituras de propiedad."
       ],
-      "textoRedes": "El gobernador Axel Kicillof y el intendente Esteban Reino encabezaron la reinauguración del autódromo Juan Manuel Fangio. Tras quince años sin actividad oficial, el circuito serrano vuelve a recibir este fin de semana competencias del automovilismo nacional.",
+      "textoRedes": "El gobernador Axel Kicillof y el intendente Esteban Reino encabezaron la reinauguración del autódromo Juan Manuel Fangio en Balcarce. Tras quince años sin actividad oficial, el circuito vuelve a recibir competencias nacionales de automovilismo este fin de semana.",
       "etiquetas": [
-        "autodromo Juan Manuel Fangio",
+        "Automovilismo",
+        "Autodromo Juan Manuel Fangio",
         "Axel Kicillof",
         "Esteban Reino",
-        "automovilismo",
         "Balcarce"
       ],
       "fuentesConsultadas": [
@@ -1033,24 +1031,30 @@
           "enlace": "https://www.senderomultimedios.com.ar/kicillof-el-fangio-es-un-simbolo-del-automovilismo-y-de-balcarce/",
           "fecha": "2026-09-26T02:38:34.000Z",
           "oficial": false,
-          "aporte": "Detalló las declaraciones de Kicillof sobre el autódromo y las obras realizadas en el circuito."
+          "aporte": "Aportó los dichos de Axel Kicillof sobre la importancia del autódromo, los detalles de las obras y el trabajo conjunto entre Provincia y municipio."
         },
         {
           "medio": "Municipalidad de Balcarce",
           "enlace": "https://balcarce.gob.ar/2026/09/25/un-dia-historico-para-balcarce-kicillof-y-reino-encabezaron-la-entrega-de-escrituras-y-la-reinauguracion-del-autodromo-fangio/",
           "fecha": "2026-09-25T21:30:55.000Z",
           "oficial": true,
-          "aporte": "Informó la presencia del gobernador y el intendente en la entrega de escrituras y la reinauguración."
+          "aporte": "Aportó la información institucional sobre la presencia del gobernador y el intendente en la entrega de escrituras y la reinauguración."
         },
         {
           "medio": "Puntonueve (FM 100.9)",
           "enlace": "https://puntonueve.com.ar/kicillof-entrego-escrituras-a-familias-de-balcarce-y-luego-participo-de-la-reapertura-del-fangio/",
           "fecha": "2026-09-25T19:54:51.000Z",
           "oficial": false,
-          "aporte": "Confirmó que el acto de entrega de escrituras se realizó en las instalaciones del Teatro Municipal Luis A. Conti."
+          "aporte": "Aportó el dato de que la entrega de escrituras se realizó en las instalaciones del Teatro Municipal Luis A. Conti."
         }
       ],
       "antecedentes": [
+        {
+          "id": "1rzhnh1",
+          "titulo": "Kicillof reinaugura el autódromo Juan Manuel Fangio en Balcarce",
+          "fecha": "2026-09-25T22:52:06.000Z",
+          "ruta": "/nota/kicillof-reinaugura-el-autodromo-juan-manuel-fangio-en-balcarce-1rzhnh1"
+        },
         {
           "id": "1e6tvp9",
           "titulo": "Kicillof encabeza la reapertura del autódromo Juan Manuel Fangio en Balcarce",
@@ -1062,12 +1066,6 @@
           "titulo": "El autódromo Juan Manuel Fangio vuelve a recibir automovilismo nacional en Balcarce",
           "fecha": "2026-09-24T19:48:00.000Z",
           "ruta": "/nota/el-autodromo-juan-manuel-fangio-vuelve-a-recibir-automovilismo-gfro59"
-        },
-        {
-          "id": "n331xk",
-          "titulo": "Definieron horarios para el automovilismo en el Fangio",
-          "fecha": "2026-09-24T13:05:55.000Z",
-          "ruta": "/nota/definieron-horarios-para-el-automovilismo-en-el-fangio-n331xk"
         }
       ],
       "verificacion": {
@@ -1206,10 +1204,10 @@
     },
     {
       "id": "p7nd3j",
-      "titulo": "Comienza la previa del TC Pick Up en Balcarce",
-      "copete": "Miles de personas participaron de la presentación oficial de las TC Pick Up en el Autódromo Juan Manuel Fangio. El evento incluyó firma de autógrafos y una conferencia en el Museo Fangio.",
-      "cuerpo": "Las actividades comenzaron por la tarde en un establecimiento de servicios con una firma de autógrafos de los deportistas Omar Martínez, Santiago Mangoni, José Ciantini, Diego Ciantini y Juan José Suárez, junto con la exhibición de vehículos.\n\nLuego se llevó a cabo un recorrido promocional por las calles locales hasta el Museo Fangio frente a la plaza principal, donde se desarrolló la conferencia de prensa oficial con la participación de Agustín Canapino, Mariano Werner, el gerente general de la ACTC, Fernando Miori, y el intendente municipal, Esteban Reino. Como se había informado, el cronograma continuará este sábado con la actividad oficial en el circuito y finalizará el domingo con las finales.\n\nLa llegada de la competencia nacional se produce tras las acciones de promoción realizadas previamente en Tandil y Mar del Plata, marcando el retorno de la categoría al distrito tras más de una década y media.",
-      "guion": "Comienza la previa del TC Pick Up en Balcarce",
+      "titulo": "Balcarce palpita el regreso del automovilismo nacional en Balcarce",
+      "copete": "Miles de personas participaron de la presentación oficial de las TC Pick Up en el Autódromo Juan Manuel Fangio con una firma de autógrafos y una caravana por la ciudad.",
+      "cuerpo": "La actividad comenzó por la tarde con una firma de autógrafos en una estación de servicio local con pilotos como Omar Martínez, Santiago Mangoni, José Ciantini, Diego Ciantini y Juan José Suárez, donde se exhibieron vehículos de competición.\n\nPosteriormente, las unidades realizaron un recorrido por las calles locales hasta el Museo Fangio frente a la plaza principal, sede de la conferencia de prensa oficial. Del encuentro participaron figuras como Agustín Canapino y Mariano Werner, el gerente general de la ACTC, Fernando Miori, y el intendente local, Esteban Reino. Como antesala, la categoría había recorrido previamente ciudades de la región como Tandil y Mar del Plata.\n\nEste sábado se pondrá en marcha la actividad oficial en el circuito balcarceño, mientras que el domingo se disputarán las finales que coronarán el fin de semana deportivo.",
+      "guion": "Balcarce palpita el regreso del automovilismo nacional en Balcarce",
       "seccion": "Automovilismo",
       "medios": [
         "Puntonueve (FM 100.9)"
@@ -1221,8 +1219,8 @@
       "visto": "2026-09-26T03:30:38.768Z",
       "relevancia": 82,
       "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
+      "publicadaPor": "ia",
+      "publicadaCuando": "2026-09-26T07:03:52.036Z",
       "temas": [
         "autodromo",
         "tc-pick-up",
@@ -1230,21 +1228,17 @@
       ],
       "como": "automatica",
       "claves": [
-        "Miles de personas participaron en la presentación oficial de la categoría.",
-        "Pilotos y autoridades formaron parte de las actividades en el Museo Fangio.",
-        "La competencia marca el regreso del automovilismo nacional al circuito local."
-      ],
-      "seSabe": [
-        "El evento previo se desarrolló este viernes con firma de autógrafos y una caravana hacia el Museo Fangio.",
-        "Participaron figuras del automovilismo como Agustín Canapino, Mariano Werner, Omar Martínez, Santiago Mangoni, José Ciantini, Diego Ciantini y Juan José Suárez.",
-        "El intendente Esteban Reino y el gerente general de la ACTC, Fernando Miori, estuvieron en la conferencia oficial.",
-        "El fin de semana se disputará la octava fecha en el Autódromo Juan Manuel Fangio."
+        "Miles de personas participaron de la previa de las TC Pick Up",
+        "El evento incluyó firma de autógrafos y una caravana hacia el Museo Fangio",
+        "Participaron autoridades y reconocidos pilotos del automovilismo nacional",
+        "Este fin de semana se disputará la competencia en el Autódromo Juan Manuel Fangio"
       ],
       "noConfirmado": [
         "No pudo ser contrastado de forma independiente con las fuentes consultadas."
       ],
+      "textoRedes": "Balcarce vivió una masiva jornada previa al regreso de las TC Pick Up al Autódromo Juan Manuel Fangio con firma de autógrafos, exhibición de vehículos y una conferencia de prensa en el Museo Fangio. Este fin de semana se disputará la competencia oficial.",
       "etiquetas": [
-        "Automovilismo",
+        "automovilismo",
         "TC Pick Up",
         "Autodromo Juan Manuel Fangio",
         "Balcarce"
@@ -1255,7 +1249,7 @@
           "enlace": "https://puntonueve.com.ar/balcarce-vivio-una-jornada-multitudinaria-en-la-previa-del-regreso-de-las-tc-pick-up/",
           "fecha": "2026-09-26T01:13:28.000Z",
           "oficial": false,
-          "aporte": "Detalló el cronograma de actividades previas, los protagonistas presentes y la llegada de la categoría nacional a la ciudad."
+          "aporte": "Detalló las actividades previas, cronograma, participación de pilotos y autoridades en la presentación de las TC Pick Up en Balcarce."
         }
       ],
       "antecedentes": [
@@ -1287,10 +1281,10 @@
     },
     {
       "id": "1chec7e",
-      "titulo": "Carlos Bianco destaca la inversión y las obras en el autódromo de Balcarce",
-      "copete": "El ministro de Gobierno bonaerense participó de la reinauguración del Autódromo Juan Manuel Fangio y detalló las cifras destinadas a la recuperación del circuito local tras quince años sin actividad oficial.",
-      "cuerpo": "Durante la reinauguración del Autódromo Juan Manuel Fangio, el ministro de Gobierno bonaerense, Carlos Bianco, destacó el trabajo conjunto con el Municipio y la recuperación del histórico escenario automovilístico, donde se concretó el regreso de las categorías nacionales después de quince años.\n\nComo se había informado previamente, la reapertura del circuito serrano se produce en la previa de la competencia de TC Pick Up.\n\nLa presencia del ministro en el acto oficial y los detalles sobre los montos destinados a las obras marcaron la jornada para los vecinos y aficionados al automovilismo local.",
-      "guion": "Carlos Bianco destaca la inversión y las obras en el autódromo de Balcarce",
+      "titulo": "Carlos Bianco detalla la inversión en la reinauguración del autódromo",
+      "copete": "El ministro de Gobierno bonaerense participó de la reapertura del Autódromo Juan Manuel Fangio, repasó los trabajos realizados junto al Municipio y explicó las cifras destinadas a las obras.",
+      "cuerpo": "Durante la reinauguración del Autódromo Juan Manuel Fangio, el ministro de Gobierno bonaerense, Carlos Bianco, destacó la recuperación del circuito local y repasó el trabajo conjunto con la administración comunal para lograr el regreso de la actividad nacional tras quince años.\n\nEl titular de la cartera de Gobierno acompañó al gobernador Axel Kicillof y al intendente Esteban Reino en la ceremonia oficial, donde recordó su vínculo personal con el trazado automovilístico local y recorrió las instalaciones. Ante las consultas sobre el financiamiento, el funcionario descartó la existencia de irregularidades y diferenció el proceso de obra balcarceño de otras controversias de la política nacional. Como se había informado a principios de semana, la Provincia y el Municipio coordinaron la puesta en valor del escenario deportivo en la previa del desembarco de las categorías de la ACTC.",
+      "guion": "Carlos Bianco detalla la inversión en la reinauguración del autódromo",
       "seccion": "Automovilismo",
       "medios": [
         "Radio Gabal (FM 104.1)"
@@ -1302,30 +1296,32 @@
       "visto": "2026-09-26T03:00:42.156Z",
       "relevancia": 82,
       "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
+      "publicadaPor": "ia",
+      "publicadaCuando": "2026-09-26T07:14:26.882Z",
       "temas": [
         "autodromo",
         "fangio"
       ],
       "como": "automatica",
       "claves": [
-        "Bianco participó de la reinauguración del autódromo Juan Manuel Fangio.",
-        "El ministro detalló una inversión de tres mil millones de pesos actualizados.",
-        "El circuito vuelve a recibir actividad nacional después de quince años."
+        "El ministro Carlos Bianco participó de la reinauguración del Autódromo Juan Manuel Fangio.",
+        "Precisó que la inversión total a valor actualizado alcanza los 3.300 millones de pesos.",
+        "Indicó que los desembolsos nominales de los últimos tres años sumaron 1.300 millones.",
+        "El funcionario descartó irregularidades y destacó el trabajo conjunto con el Municipio."
       ],
       "seSabe": [
-        "Carlos Bianco participó en el acto oficial de reinauguración del Autódromo Juan Manuel Fangio.",
-        "El ministro de Gobierno bonaerense detalló que la inversión total a valor presente asciende a tres mil millones de pesos.",
-        "Las obras permitieron el regreso de las categorías nacionales al circuito local tras quince años."
+        "Carlos Bianco participó de la reinauguración del Autódromo Juan Manuel Fangio junto al gobernador Axel Kicillof y el intendente Esteban Reino.",
+        "El ministro de Gobierno bonaerense explicó que el valor actualizado de las obras es de 3.300 millones de pesos.",
+        "Los desembolsos nominales realizados en los últimos tres años totalizaron aproximadamente 1.300 millones de pesos, según detalló el funcionario.",
+        "La intervención permitió recuperar el circuito local para el regreso del automovilismo nacional tras quince años."
       ],
       "noConfirmado": [
         "No pudo ser contrastado de forma independiente con las fuentes consultadas."
       ],
-      "textoRedes": "El ministro de Gobierno bonaerense, Carlos Bianco, detalló las cifras destinadas a la recuperación del Autódromo Juan Manuel Fangio durante su reinauguración y destacó el regreso de la actividad nacional al circuito local tras quince años.",
+      "textoRedes": "El ministro Carlos Bianco participó de la reinauguración del Autódromo Juan Manuel Fangio y detalló las cifras destinadas a la obra que permitió el regreso del automovilismo nacional a Balcarce.",
       "etiquetas": [
-        "Autódromo Juan Manuel Fangio",
         "Carlos Bianco",
+        "Autodromo Juan Manuel Fangio",
         "Balcarce",
         "Automovilismo",
         "Obras"
@@ -1336,7 +1332,7 @@
           "enlace": "https://www.radiogabal.com.ar/index.php/comunidad/carlos-bianco-destaco-la-reinauguracion-del-fangio-y-explico-la-inversion-realizada",
           "fecha": "2026-09-26T00:15:11.000Z",
           "oficial": false,
-          "aporte": "Detalles del discurso del ministro Carlos Bianco sobre la inversión y las obras en el autódromo de Balcarce."
+          "aporte": null
         }
       ],
       "antecedentes": [
@@ -1347,10 +1343,10 @@
           "ruta": "/nota/autodromo-bianco-hablo-de-una-inversion-de-3-300-millones-pero-el-9oermg"
         },
         {
-          "id": "1mkm1na",
-          "titulo": "El autódromo Juan Manuel Fangio abre sus puertas en Balcarce",
-          "fecha": "2026-09-25T22:53:16.590Z",
-          "ruta": "/nota/el-autodromo-juan-manuel-fangio-abre-sus-puertas-en-balcarce-1mkm1na"
+          "id": "1rzhnh1",
+          "titulo": "Kicillof reinaugura el autódromo Juan Manuel Fangio en Balcarce",
+          "fecha": "2026-09-25T22:52:06.000Z",
+          "ruta": "/nota/kicillof-reinaugura-el-autodromo-juan-manuel-fangio-en-balcarce-1rzhnh1"
         },
         {
           "id": "1fq9x2v",
@@ -1368,10 +1364,10 @@
     },
     {
       "id": "go2o8z",
-      "titulo": "Kicillof homenajea a Tulio Crespi en el autódromo en Balcarce",
-      "copete": "El gobernador bonaerense recordó al emblemático constructor de autos de carrera durante su discurso en la reapertura del circuito local tras quince años.",
-      "cuerpo": "Durante la reinauguración del Autódromo Juan Manuel Fangio, el gobernador de la provincia de Buenos Aires, Axel Kicillof, dedicó unas palabras para recordar al fallecido constructor y referente del automovilismo argentino, Tulio Crespi.\n\nEl evento marcó el retorno de las competencias nacionales al trazado serrano tras quince años sin actividad oficial. Días atrás, el integrante de la Asociación Autódromo, Mario Alberghini, también había recordado con emoción al constructor, destacando su capacidad de trabajo, su generosidad y el legado dejado en el distrito.",
-      "guion": "Kicillof homenajea a Tulio Crespi en el autódromo en Balcarce",
+      "titulo": "Kicillof recordó a Tulio Crespi en la reapertura del autódromo en Balcarce",
+      "copete": "Durante la reinauguración del Autódromo Juan Manuel Fangio, el gobernador bonaerense Axel Kicillof recordó al constructor Tulio Crespi y dedicó la jornada a su memoria.",
+      "cuerpo": "El gobernador de la provincia de Buenos Aires, Axel Kicillof, encabezó la reinauguración del Autódromo Juan Manuel Fangio en Balcarce, un hecho histórico que marca el regreso de la actividad nacional al circuito serrano tras quince años sin competencias oficiales.\n\nDurante su discurso sobre el escenario, el mandatario tuvo un momento de emoción al recordar al reconocido constructor y referente del automovilismo argentino Tulio Crespi, fallecido días atrás, a quien definió como una figura emblemática.\n\n\"Falleció alguien que es también emblemático, Tulio Crespi. Días atrás, el integrante de la Asociación Autódromo Mario Alberghini también había recordado al constructor, a quien definió como una figura paternal en el automovilismo.",
+      "guion": "Kicillof recordó a Tulio Crespi en la reapertura del autódromo en Balcarce",
       "seccion": "Automovilismo",
       "medios": [
         "Radio Gabal (FM 104.1)"
@@ -1383,28 +1379,22 @@
       "visto": "2026-09-26T03:00:42.156Z",
       "relevancia": 82,
       "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
+      "publicadaPor": "ia",
+      "publicadaCuando": "2026-09-26T07:14:26.882Z",
       "temas": [
         "autodromo",
         "fangio"
       ],
       "como": "automatica",
       "claves": [
-        "Kicillof recordó a Tulio Crespi en la reapertura del autódromo",
-        "El gobernador indicó que el histórico constructor no pudo ver la obra terminada",
-        "El circuito recuperó la actividad nacional después de quince años"
-      ],
-      "seSabe": [
-        "El gobernador Axel Kicillof recordó a Tulio Crespi durante su discurso en el autódromo de Balcarce",
-        "El mandatario provincial señaló que el constructor había fallecido días atrás sin poder ver la reapertura del circuito",
-        "El autódromo volvió a recibir actividad nacional tras quince años sin competencias oficiales",
-        "Mario Alberghini había recordado previamente al constructor destacando su legado en el automovilismo"
+        "Axel Kicillof recordó a Tulio Crespi durante la reinauguración del autódromo.",
+        "El circuito de Balcarce volvió a recibir actividad nacional tras quince años.",
+        "El gobernador dedicó la jornada en memoria del reconocido constructor."
       ],
       "noConfirmado": [
         "No pudo ser contrastado de forma independiente con las fuentes consultadas."
       ],
-      "textoRedes": "El gobernador Axel Kicillof recordó al constructor Tulio Crespi durante su discurso en la reinauguración del Autódromo Juan Manuel Fangio, en una jornada histórica que marcó el regreso de la actividad nacional a Balcarce tras quince años.",
+      "textoRedes": "El gobernador Axel Kicillof recordó al constructor Tulio Crespi durante la reinauguración del Autódromo Juan Manuel Fangio en Balcarce, que marcó el regreso de la actividad nacional al circuito tras quince años.",
       "etiquetas": [
         "Axel Kicillof",
         "Tulio Crespi",
@@ -1418,7 +1408,7 @@
           "enlace": "https://www.radiogabal.com.ar/index.php/comunidad/kicillof-recordo-a-tulio-crespi-durante-la-reinauguracion-del-fangio",
           "fecha": "2026-09-26T00:09:33.000Z",
           "oficial": false,
-          "aporte": "Detalló las palabras del gobernador Axel Kicillof sobre Tulio Crespi durante la reinauguración del autódromo."
+          "aporte": "Informó el discurso del gobernador Axel Kicillof durante la reinauguración del autódromo y el recuerdo dedicado a Tulio Crespi."
         }
       ],
       "antecedentes": [
@@ -1429,16 +1419,16 @@
           "ruta": "/nota/mario-alberghini-recordo-a-tulio-crespi-para-mi-fue-como-un-padre-en-fcnceu"
         },
         {
+          "id": "1rzhnh1",
+          "titulo": "Kicillof reinaugura el autódromo Juan Manuel Fangio en Balcarce",
+          "fecha": "2026-09-25T22:52:06.000Z",
+          "ruta": "/nota/kicillof-reinaugura-el-autodromo-juan-manuel-fangio-en-balcarce-1rzhnh1"
+        },
+        {
           "id": "uj4h1v",
           "titulo": "Kicillof encabeza la reinauguración del autódromo en Balcarce",
           "fecha": "2026-09-25T11:53:01.000Z",
           "ruta": "/nota/kicillof-encabeza-la-reinauguracion-del-autodromo-en-balcarce-uj4h1v"
-        },
-        {
-          "id": "1e6tvp9",
-          "titulo": "Kicillof encabeza la reapertura del autódromo Juan Manuel Fangio en Balcarce",
-          "fecha": "2026-09-25T10:15:00.000Z",
-          "ruta": "/nota/el-gobernador-bonaerense-encabeza-la-reapertura-del-autodromo-en-1e6tvp9"
         }
       ],
       "verificacion": {
@@ -1515,9 +1505,9 @@
     },
     {
       "id": "y7cahl",
-      "titulo": "El Autódromo de Balcarce reabre tras quince años",
-      "copete": "El circuito Juan Manuel Fangio volvió a abrir sus puertas este viernes en un acto oficial con autoridades provinciales y locales. Este fin de semana recibirá a las TC Pick Up.",
-      "cuerpo": "El Autódromo Municipal Juan Manuel Fangio quedó oficialmente reinaugurado este viernes en un acto en la sierra La Barrosa que incluyó el tradicional corte de cintas, tras permanecer cerrado durante quince años. De la ceremonia participaron el gobernador de la provincia de Buenos Aires, Axel Kicillof, el intendente municipal, Esteban Reino, el ministro de Gobierno bonaerense, Carlos Bianco, y el presidente de la Asociación Corredores de Turismo Carretera (ACTC), Hugo Mazzacane, además de otros funcionarios e invitados especiales.\n\nLa reapertura genera expectativas en el distrito tras años de inactividad y debates previos en torno a las partidas de fondos provinciales para las obras, según se había informado a fines de septiembre.",
+      "titulo": "El autódromo de Balcarce reabre tras quince años",
+      "copete": "El Autódromo Municipal Juan Manuel Fangio quedó inaugurado este viernes con la presencia de autoridades provinciales y locales. El circuito recibirá este fin de semana a las TC Pick Up en su regreso oficial.",
+      "cuerpo": "El Autódromo Municipal Juan Manuel Fangio de Balcarce vivió una jornada histórica este viernes 25 de septiembre con el acto oficial de reinauguración, tras permanecer cerrado durante quince años. Del evento participaron el gobernador bonaerense, Axel Kicillof, y el intendente municipal, Esteban Reino, quienes realizaron el tradicional corte de cintas en la sierra La Barrosa junto al ministro de Gobierno provincial, Carlos Bianco, y el presidente de la Asociación Corredores de Turismo Carretera, Hugo Mazzacane.\n\nEl predio se prepara para albergar este fin de semana la octava fecha del campeonato y la primera edición de la Copa de las TC Pick Up y TC Pista Pick Up.\n\nLa reactivación del emblemático escenario deportivo genera gran expectativa en la comunidad local y en los fanáticos del automovilismo nacional, quienes podrán disfrutar de actividades en pista, propuestas gastronómicas y un ambiente familiar durante todo el fin de semana.",
       "guion": "El autódromo de Balcarce reabre tras quince años",
       "seccion": "Automovilismo",
       "medios": [
@@ -1530,35 +1520,37 @@
       "visto": "2026-09-26T03:00:42.156Z",
       "relevancia": 88,
       "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
+      "publicadaPor": "ia",
+      "publicadaCuando": "2026-09-26T07:03:52.036Z",
       "temas": [
         "autodromo",
         "tc-pick-up"
       ],
       "como": "automatica",
       "claves": [
-        "Reinauguración oficial del Autódromo Juan Manuel Fangio tras quince años cerrado.",
-        "Participaron el gobernador Axel Kicillof y el intendente Esteban Reino.",
-        "El circuito recibe este fin de semana a las TC Pick Up y TC Pista Pick Up.",
-        "Las mejoras incluyeron obras en el trazado de la sierra La Barrosa."
+        "Reinauguración oficial del Autódromo Juan Manuel Fangio tras quince años.",
+        "Presencia del gobernador Axel Kicillof y el intendente Esteban Reino.",
+        "Competencia de las TC Pick Up durante el fin de semana en el circuito.",
+        "Detalles de las obras a cargo de la Asociación Corredores de Turismo Carretera."
       ],
       "seSabe": [
-        "Se realizó el acto oficial de reinauguración del Autódromo Juan Manuel Fangio este viernes, según las fuentes.",
-        "Participaron el gobernador Axel Kicillof, el intendente Esteban Reino, el ministro Carlos Bianco y el presidente de la ACTC, Hugo Mazzacane.",
-        "El circuito recibirá este fin de semana a las categorías TC Pick Up y TC Pista Pick Up para su octava fecha."
+        "El acto oficial de reinauguración se realizó el viernes 25 de septiembre.",
+        "Participaron el gobernador Axel Kicillof y el intendente Esteban Reino.",
+        "El autódromo estuvo cerrado durante quince años.",
+        "El circuito recibirá a las TC Pick Up y TC Pista Pick Up este fin de semana."
       ],
       "noConfirmado": [
         "No pudo ser contrastado de forma independiente con las fuentes consultadas."
       ],
-      "textoRedes": "El Autódromo Juan Manuel Fangio fue reinaugurado este viernes tras quince años y recibirá este fin de semana a las TC Pick Up con la presencia de autoridades provinciales y locales.",
+      "textoRedes": "El Autódromo Juan Manuel Fangio de Balcarce reabrió sus puertas este viernes tras quince años de inactividad con un acto oficial encabezado por autoridades provinciales y locales. El histórico circuito recibirá este fin de semana a las TC Pick Up.",
       "etiquetas": [
-        "Autódromo Juan Manuel Fangio",
+        "autodromo",
         "Balcarce",
+        "automovilismo",
+        "Juan Manuel Fangio",
         "TC Pick Up",
         "Axel Kicillof",
-        "Esteban Reino",
-        "Automovilismo"
+        "Esteban Reino"
       ],
       "fuentesConsultadas": [
         {
@@ -1566,7 +1558,7 @@
           "enlace": "https://dib.com.ar/sociedad/el-autodromo-balcarce-vuelve-rugir-las-obras-que-permitiran-girar-las-tc-pick-up-el-fin-semana-n56039",
           "fecha": "2026-09-25T23:08:00.000Z",
           "oficial": false,
-          "aporte": "Detalló los detalles de la reinauguración del autódromo, las presencias políticas y deportivas, y el cronograma de las TC Pick Up."
+          "aporte": "Detalló la reinauguración del autódromo, las autoridades presentes y la actividad deportiva prevista para el fin de semana."
         }
       ],
       "antecedentes": [
@@ -1655,10 +1647,10 @@
     },
     {
       "id": "1s9so2g",
-      "titulo": "El Concejo aprueba suspender intimaciones de OSEBAL en Balcarce",
-      "copete": "El Concejo Deliberante aprobó de forma unánime un pedido para frenar las notificaciones de la empresa prestataria de agua. La medida busca una pausa en las gestiones de cobro.",
-      "cuerpo": "La decisión legislativa se dio en el marco de la sesión desarrollada por el cuerpo deliberativo, donde se debatió la situación de los vecinos frente a las notificaciones emitidas por la prestataria del servicio sanitario en el ámbito local.\n\nDe esta manera, el Departamento Ejecutivo deberá intervenir ante las autoridades de la empresa para evaluar la aplicación de la pausa solicitada por los concejales, lo cual impactará de forma directa en los usuarios alcanzados por las deudas y avisos de pago.",
-      "guion": "El Concejo aprueba suspender intimaciones de OSEBAL en Balcarce",
+      "titulo": "El Concejo aprueba pedir suspensión de intimaciones de OSEBAL en Balcarce",
+      "copete": "El Concejo Deliberante aprobó por unanimidad solicitar al Departamento Ejecutivo que gestione la suspensión de las intimaciones enviadas por la empresa de agua.",
+      "cuerpo": "Como se había informado a fines de septiembre, el cuerpo legislativo ya había abordado reclamos vinculados a las deudas de la empresa y solicitado prórrogas para regularizar los pagos, además de pedir explicaciones a la firma prestadora del servicio en el distrito.\n\nCon esta nueva medida aprobada por los ediles, se busca frenar temporalmente los reclamos a los vecinos mientras se continúan evaluando alternativas para facilitar la situación de los usuarios afectados por las notificaciones de deuda enviadas recientemente.",
+      "guion": "El Concejo aprueba pedir suspensión de intimaciones de OSEBAL en Balcarce",
       "seccion": "Política",
       "medios": [
         "El Diario Balcarce"
@@ -1670,19 +1662,32 @@
       "visto": "2026-09-26T03:00:42.156Z",
       "relevancia": 78,
       "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
+      "publicadaPor": "ia",
+      "publicadaCuando": "2026-09-26T07:24:59.436Z",
       "temas": [
         "concejo"
       ],
       "como": "automatica",
+      "claves": [
+        "El Concejo Deliberante aprobó un proyecto por unanimidad.",
+        "Se pide frenar las intimaciones enviadas por OSEBAL SAPEM.",
+        "La solicitud apunta a gestiones del Departamento Ejecutivo."
+      ],
+      "seSabe": [
+        "El Concejo Deliberante aprobó por unanimidad un proyecto de Comunicación.",
+        "Se solicita al Departamento Ejecutivo realizar gestiones ante OSEBAL SAPEM Aguas de la Ciudad.",
+        "La medida pide suspender el envío de intimaciones prejudiciales."
+      ],
       "noConfirmado": [
         "No pudo ser contrastado de forma independiente con las fuentes consultadas."
       ],
+      "textoRedes": "El Concejo Deliberante aprobó por unanimidad un proyecto para solicitar que se suspendan las intimaciones prejudiciales enviadas por OSEBAL SAPEM Aguas de la Ciudad en el distrito.",
       "etiquetas": [
         "Concejo Deliberante",
         "OSEBAL",
-        "Balcarce"
+        "Balcarce",
+        "servicios",
+        "intimaciones"
       ],
       "fuentesConsultadas": [
         {
@@ -1690,10 +1695,16 @@
           "enlace": "https://eldiariobalcarce.com.ar/el-concejo-aprobo-pedir-una-suspension-de-180-dias-para-las-intimaciones-de-osebal-299",
           "fecha": "2026-09-25T23:02:57.000Z",
           "oficial": false,
-          "aporte": "Informó sobre la aprobación unánime en el Concejo Deliberante del pedido de suspensión de intimaciones de OSEBAL por 180 días."
+          "aporte": "Informó que el Concejo Deliberante aprobó un proyecto para pedir la suspensión de intimaciones de OSEBAL."
         }
       ],
       "antecedentes": [
+        {
+          "id": "ntjgh8",
+          "titulo": "El Concejo aprueba pedir la baja de tasas a taxis y remises en Balcarce",
+          "fecha": "2026-09-25T22:43:54.000Z",
+          "ruta": "/nota/el-concejo-aprueba-pedir-la-baja-de-tasas-a-taxis-y-remises-en-ntjgh8"
+        },
         {
           "id": "2olgpl",
           "titulo": "El Concejo aprueba pedir la baja de tasas a taxis y remises en Balcarce",
@@ -1701,16 +1712,10 @@
           "ruta": "/nota/el-concejo-aprueba-pedir-la-baja-de-tasas-a-taxis-y-remises-en-2olgpl"
         },
         {
-          "id": "1spjzhb",
-          "titulo": "El Concejo designa Paseo Intendente Juan José Mare a la vuelta interna del Cerro en Balcar",
-          "fecha": "2026-09-25T12:46:51.000Z",
-          "ruta": "/nota/el-concejo-designa-paseo-intendente-juan-jose-mare-a-la-vuelta-1spjzhb"
-        },
-        {
-          "id": "1s8swk5",
-          "titulo": "El Concejo pide informes al Municipio por obras tras una renuncia en Balcarce",
-          "fecha": "2026-09-25T10:47:08.606Z",
-          "ruta": "/nota/el-concejo-pidio-informes-al-municipio-por-obras-publicas-1s8swk5"
+          "id": "clgr2q",
+          "titulo": "El Concejo pide frenar reclamos a vecinos y prorrogar deudas de OSeBal en Balcarce",
+          "fecha": "2026-09-25T13:00:52.110Z",
+          "ruta": "/nota/el-concejo-pide-frenar-reclamos-a-vecinos-y-prorrogar-deudas-de-clgr2q"
         }
       ],
       "verificacion": {
@@ -1719,6 +1724,170 @@
         "sugeridoPorIA": "MEDIA"
       },
       "slug": "el-concejo-aprueba-suspender-intimaciones-de-osebal-en-balcarce"
+    },
+    {
+      "id": "1iq1m6a",
+      "titulo": "Advierten sobre una falsa búsqueda laboral de la empresa McCain en Balcarce",
+      "copete": "Detectan una publicación fraudulenta en redes sociales que ofrece puestos de trabajo a nombre de la firma McCain con datos incorrectos.",
+      "cuerpo": "Una falsa convocatoria laboral de la empresa McCain comenzó a circular en las redes sociales y generó preocupación entre quienes buscan empleo. La publicación fraudulenta utiliza datos apócrifos y herramientas de inteligencia artificial para ofrecer puestos de trabajo, según informaron los medios y la propia compañía.\n\nDesde la firma se des Se despegaron públicamente del aviso difundido en Facebook y remarcaron diversas irregularidades. Entre los principales indicios detectados figuran la utilización de una dirección incorrecta para la planta de Balcarce, ubicada en el kilómetro 64,5 del parque industrial, y el empleo de una cuenta de correo electrónico de Gmail para la recepción de antecedentes, un canal que la compañía no utiliza para sus comunicaciones de recursos humanos.\n\nAnte esta situación, se recomienda a la comunidad no enviar datos personales ni información sensible a los contactos indicados en el aviso y canalizar las postulaciones exclusivamente a través de los canales oficiales. Asimismo, la empresa aclaró que no realiza ofrecimientos sin un proceso previo de selección ni solicita dinero a los postulantes.",
+      "guion": "Advierten sobre una falsa búsqueda laboral de la empresa McCain en Balcarce",
+      "seccion": "Balcarce",
+      "medios": [
+        "0223 (Mar del Plata)",
+        "Radio Gabal (FM 104.1)"
+      ],
+      "enlace": "https://www.0223.com.ar/nota/2026-9-25-19-53-0-advierten-por-la-falsa-busqueda-laboral-de-una-reconocida-empresa-que-circula-en-facebook-estamos-contratando",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-25T22:53:00.000Z",
+      "sinFecha": false,
+      "visto": "2026-09-26T03:00:42.156Z",
+      "relevancia": 94,
+      "local": true,
+      "publicadaPor": "ia",
+      "publicadaCuando": "2026-09-26T07:03:52.036Z",
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Detectan una publicación fraudulenta de empleo a nombre de McCain en redes sociales.",
+        "La firma aclaró que el aviso es falso y utiliza datos erróneos de la planta local.",
+        "Recomiendan no enviar datos personales y postularse solo por canales oficiales."
+      ],
+      "seSabe": [
+        "Circula en Facebook una falsa búsqueda laboral que utiliza el nombre de la empresa McCain.",
+        "La publicación utiliza una dirección incorrecta de la planta de Balcarce y un correo de Gmail.",
+        "La compañía advirtió que no utiliza cuentas de Gmail para recursos humanos ni pide dinero a los postulantes."
+      ],
+      "noConfirmado": [
+        "No se especificó la cantidad de personas que enviaron sus datos a la publicación fraudulenta."
+      ],
+      "textoRedes": "Advierten sobre una falsa búsqueda laboral de la empresa McCain que circula en redes sociales con datos incorrectos. Recomiendan no enviar información personal y utilizar solo los canales oficiales.",
+      "etiquetas": [
+        "McCain",
+        "búsqueda laboral",
+        "redes sociales",
+        "Balcarce"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "0223 (Mar del Plata)",
+          "enlace": "https://www.0223.com.ar/nota/2026-9-25-19-53-0-advierten-por-la-falsa-busqueda-laboral-de-una-reconocida-empresa-que-circula-en-facebook-estamos-contratando",
+          "fecha": "2026-09-25T22:53:00.000Z",
+          "oficial": false,
+          "aporte": "Detalló que la falsa convocatoria circuló en Facebook, alertó a la empresa y señaló el uso de una dirección errónea y un correo de Gmail."
+        },
+        {
+          "medio": "Radio Gabal (FM 104.1)",
+          "enlace": "https://www.radiogabal.com.ar/index.php/policiales/advierten-por-una-falsa-busqueda-laboral-de-la-empresa-mccain-en-redes-sociales",
+          "fecha": "2026-09-25T15:36:43.000Z",
+          "oficial": false,
+          "aporte": "Indicó que la publicación en redes sociales utiliza datos erróneos y apócrifos para ofrecer puestos de trabajo."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1wzh43l",
+          "titulo": "Advierten por una falsa búsqueda laboral de la empresa McCain en Balcarce",
+          "fecha": "2026-09-25T15:36:43.000Z",
+          "ruta": "/nota/advierten-por-una-falsa-busqueda-laboral-de-la-empresa-mccain-en-1wzh43l"
+        },
+        {
+          "id": "1pjgnu4",
+          "titulo": "McCain advierte sobre una falsa convocatoria laboral en Balcarce",
+          "fecha": "2026-09-25T19:10:29.000Z",
+          "ruta": "/nota/mccain-advierte-sobre-una-falsa-convocatoria-laboral-en-balcarce-1pjgnu4"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "advierten-por-una-falsa-busqueda-laboral-de-la-empresa-mccain-en"
+    },
+    {
+      "id": "1rzhnh1",
+      "titulo": "Kicillof reinaugura el autódromo de Balcarce",
+      "copete": "El gobernador bonaerense encabezó la reapertura del autódromo Juan Manuel Fangio. El circuito vuelve a recibir competencias nacionales este fin de semana con la presentación de las TC Pick Up.",
+      "cuerpo": "Durante el acto, el mandatario destacó el impacto económico y turístico que generan los eventos deportivos en la región y remarcó la importancia de la inversión estatal en infraestructura.\n\nEl circuito vuelve a recibir competencias de alcance nacional tras un largo período sin actividad de estas características.\n\nLa reapertura genera expectativas en sectores como la hotelería, la gastronomía y el comercio por la llegada de visitantes de todo el país.",
+      "guion": "Kicillof reinaugura el autódromo de Balcarce",
+      "seccion": "Automovilismo",
+      "medios": [
+        "El Eco de Tandil"
+      ],
+      "enlace": "https://www.eleco.com.ar/la-region/kicillof-reinauguro-el-autodromo-de-balcarce-y-destaco-el-impacto-turistico-en-la-region",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-25T22:52:06.000Z",
+      "sinFecha": false,
+      "visto": "2026-09-26T03:00:42.156Z",
+      "relevancia": 92,
+      "local": true,
+      "publicadaPor": "ia",
+      "publicadaCuando": "2026-09-26T07:24:59.436Z",
+      "temas": [
+        "autodromo",
+        "tc-pick-up",
+        "fangio"
+      ],
+      "como": "automatica",
+      "claves": [
+        "Axel Kicillof reinauguró el autódromo Juan Manuel Fangio.",
+        "El circuito vuelve a recibir automovilismo nacional.",
+        "Participaron Esteban Reino y Hugo Mazzacane.",
+        "Se destaca el impacto turístico y económico regional."
+      ],
+      "seSabe": [
+        "El gobernador Axel Kicillof reinauguró este viernes el autódromo Juan Manuel Fangio de Balcarce.",
+        "Estuvieron presentes el ministro Carlos Bianco, el intendente Esteban Reino y el presidente de la ACTC, Hugo Mazzacane.",
+        "El fin de semana se presentan las TC Pick Up en el circuito.",
+        "Se destacó el impacto positivo en la hotelería, la gastronomía y los comercios de la región."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El gobernador Axel Kicillof encabezó la reinauguración del autódromo Juan Manuel Fangio de Balcarce. El histórico circuito vuelve a recibir competencias nacionales este fin de semana con la llegada de las TC Pick Up y visitantes de todo el país.",
+      "etiquetas": [
+        "Autódromo Juan Manuel Fangio",
+        "Axel Kicillof",
+        "Esteban Reino",
+        "TC Pick Up",
+        "Automovilismo",
+        "Balcarce"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Eco de Tandil",
+          "enlace": "https://www.eleco.com.ar/la-region/kicillof-reinauguro-el-autodromo-de-balcarce-y-destaco-el-impacto-turistico-en-la-region",
+          "fecha": "2026-09-25T22:52:06.000Z",
+          "oficial": false,
+          "aporte": "Detalló la reinauguración del autódromo, las declaraciones del gobernador y las autoridades presentes en el acto."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "uj4h1v",
+          "titulo": "Kicillof encabeza la reinauguración del autódromo en Balcarce",
+          "fecha": "2026-09-25T11:53:01.000Z",
+          "ruta": "/nota/kicillof-encabeza-la-reinauguracion-del-autodromo-en-balcarce-uj4h1v"
+        },
+        {
+          "id": "1e6tvp9",
+          "titulo": "Kicillof encabeza la reapertura del autódromo Juan Manuel Fangio en Balcarce",
+          "fecha": "2026-09-25T10:15:00.000Z",
+          "ruta": "/nota/el-gobernador-bonaerense-encabeza-la-reapertura-del-autodromo-en-1e6tvp9"
+        },
+        {
+          "id": "11pnmnw",
+          "titulo": "Axel Kicillof visita Balcarce para la reinauguración del autódromo",
+          "fecha": "2026-09-23T23:52:12.000Z",
+          "ruta": "/nota/kicillof-visitara-balcarce-para-la-reinauguracion-del-autodromo-11pnmnw"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "kicillof-reinaugura-el-autodromo-juan-manuel-fangio-en-balcarce"
     },
     {
       "id": "1yjy49a",
@@ -1796,10 +1965,10 @@
     },
     {
       "id": "ntjgh8",
-      "titulo": "El Concejo aprueba pedir la baja de tasas a taxis y remises en Balcarce",
-      "copete": "El Concejo Deliberante solicitó al Ejecutivo municipal que contemple una reducción o eliminación de tributos para el sector en el próximo presupuesto.",
-      "cuerpo": "El Concejo Deliberante aprobó un proyecto mediante el cual se pide al Departamento Ejecutivo que analice una baja o supresión de tasas y cánones para taxis y remises de cara al armado del presupuesto y de la ordenanza fiscal e impositiva del próximo año.\n\nLa iniciativa había comenzado a ser debatida en el ámbito legislativo tras una propuesta impulsada por el bloque de La Libertad Avanza para equiparar las condiciones del sector ante la competencia de las aplicaciones de transporte.\n\nEl cuerpo deliberativo resolvió elevar formalmente este requerimiento a la administración municipal, que ahora deberá evaluar la viabilidad de incorporar modificaciones tributarias para la actividad en las futuras normativas económicas.",
-      "guion": "El Concejo aprueba pedir la baja de tasas a taxis y remises en Balcarce",
+      "titulo": "El Concejo aprueba reducir tributos a taxis y remises en Balcarce",
+      "copete": "El Deliberante solicitó al Ejecutivo municipal que contemple una baja o eliminación de tasas para taxis y remises en el presupuesto del próximo año.",
+      "cuerpo": "El Concejo Deliberante aprobó un proyecto de Comunicación para solicitar al Departamento Ejecutivo que contemple una reducción o eliminación de tasas, derechos y cánones para taxis y remises dentro del Presupuesto y de la Ordenanza Fiscal e Impositiva correspondientes al año 2027.\n\nLa iniciativa había comenzado a tratarse en el ámbito legislativo días atrás, luego de ser presentada por un bloque político con el objetivo de equilibrar la actividad del sector frente al avance de las aplicaciones de transporte en el distrito.\n\nLa medida aprobada tiene carácter de solicitud hacia el municipio, por lo que ahora resta definir si el Ejecutivo incluirá estas modificaciones impositivas en la diagramación de los gastos y tributos proyectados para el próximo año.",
+      "guion": "El Concejo aprueba reducir tributos a taxis y remises en Balcarce",
       "seccion": "Política",
       "medios": [
         "El Diario Balcarce"
@@ -1811,29 +1980,33 @@
       "visto": "2026-09-26T03:00:42.156Z",
       "relevancia": 78,
       "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
+      "publicadaPor": "ia",
+      "publicadaCuando": "2026-09-26T07:14:26.882Z",
       "temas": [
         "concejo"
       ],
       "como": "automatica",
       "claves": [
-        "El Concejo Deliberante aprobó un proyecto de Comunicación.",
-        "Se solicita reducir o eliminar tributos para taxis y remises.",
-        "La medida apunta al presupuesto y a la ordenanza fiscal del próximo año."
+        "El Concejo aprobó un proyecto de Comunicación al Ejecutivo.",
+        "Buscan reducir o eliminar tasas para taxis y remises desde 2027.",
+        "La medida apunta a equiparar al sector frente a las aplicaciones de transporte.",
+        "El pedido deberá evaluarse para la próxima Ordenanza Fiscal e Impositiva."
       ],
       "seSabe": [
         "El Concejo Deliberante aprobó un proyecto de Comunicación.",
-        "Se solicita al Departamento Ejecutivo una reducción o eliminación de tributos para taxis y remises.",
-        "El pedido debe ser contemplado dentro del presupuesto y de la ordenanza fiscal e impositiva."
+        "Se solicita al Ejecutivo reducir o eliminar tasas y cánones para taxis y remises.",
+        "La solicitud apunta al Presupuesto y a la Ordenanza Fiscal e Impositiva de 2027.",
+        "El proyecto se vincula con la situación del sector ante las aplicaciones de transporte, según antecedentes legislativos."
       ],
       "noConfirmado": [
+        "No se informó si el Departamento Ejecutivo aceptará el pedido del cuerpo deliberativo.",
         "No pudo ser contrastado de forma independiente con las fuentes consultadas."
       ],
-      "textoRedes": "El Concejo Deliberante aprobó un pedido para que el Ejecutivo municipal analice reducir o eliminar tasas y cánones a taxis y remises en el próximo presupuesto, en medio del debate por la actividad del sector.",
+      "textoRedes": "El Concejo Deliberante aprobó un pedido para que el Ejecutivo evalúe reducir o eliminar tasas a taxis y remises en el presupuesto y la ordenanza fiscal del próximo año, con el fin de equiparar al sector frente a las aplicaciones de transporte.",
       "etiquetas": [
         "Concejo Deliberante",
-        "taxis y remises",
+        "taxis",
+        "remises",
         "tasas municipales",
         "presupuesto",
         "Balcarce"
@@ -1844,7 +2017,7 @@
           "enlace": "https://eldiariobalcarce.com.ar/solicitan-reducir-y-eliminar-tributos-para-taxis-y-remises-en-el-presupuesto-2027-918",
           "fecha": "2026-09-25T22:43:54.000Z",
           "oficial": false,
-          "aporte": "Informó que el Concejo Deliberante aprobó un proyecto de Comunicación para solicitar al Ejecutivo la reducción o eliminación de tributos para taxis y remises en el presupuesto."
+          "aporte": "Informó la aprobación en el Concejo Deliberante del proyecto de Comunicación dirigido al Departamento Ejecutivo sobre los tributos a taxis y remises."
         }
       ],
       "antecedentes": [
@@ -1875,11 +2048,70 @@
       "slug": "el-concejo-aprueba-pedir-la-baja-de-tasas-a-taxis-y-remises-en"
     },
     {
+      "id": "152hhps",
+      "titulo": "Alumnos de la Escuela Nº 13 visitan un medio en Necochea",
+      "copete": "Estudiantes de sexto año de la Escuela Primaria Nº 13 de Balcarce viajaron a Necochea en el marco de una actividad educativa. Durante la jornada, recorrieron las instalaciones de un medio gráfico y participaron de programas de radio.",
+      "cuerpo": "Más de setenta alumnos de sexto año de la Escuela Primaria Nº 13 de Balcarce realizaron este viernes un viaje educativo a la ciudad de Necochea. Durante la visita, el contingente escolar recorrió la redacción, el archivo histórico y la planta impresora de un medio local, donde conocieron el proceso de elaboración de las noticias y observaron ejemplares gráficos de distintas épocas. Además, los estudiantes tomaron parte de entrevistas en dos espacios radiales de la emisora.\n\nTras completar la recorrida por las instalaciones periodísticas, el grupo de docentes y alumnos se trasladó al Lago de los Cisnes para pasar la tarde y disfrutar de los entretenimientos que ofrece el paseo recreativo en la vecina localidad.",
+      "guion": "Alumnos de la Escuela número trece visitan un medio en Necochea",
+      "seccion": "Balcarce",
+      "medios": [
+        "Ecos Diarios (Necochea)"
+      ],
+      "enlace": "https://elecos.com.ar/alumnos-de-la-escuela-no-13-de-balcarce-visitaron-ecos-diarios",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-25T22:39:18.000Z",
+      "sinFecha": false,
+      "visto": "2026-09-26T07:30:27.161Z",
+      "relevancia": 83,
+      "local": true,
+      "publicadaPor": "ia",
+      "publicadaCuando": "2026-09-26T07:03:52.036Z",
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Más de setenta alumnos de la Escuela Primaria Nº 13 de Balcarce viajaron a Necochea.",
+        "Recorrieron la redacción, el archivo y la planta impresora de un medio local.",
+        "Participaron de entrevistas en dos programas de radio y visitaron el Lago de los Cisnes."
+      ],
+      "seSabe": [
+        "Más de 70 alumnos de sexto año de la Escuela Primaria Nº 13 de Balcarce realizaron un viaje educativo a Necochea.",
+        "Visitaron la redacción, el archivo y la planta impresora del multimedio.",
+        "Participaron de entrevistas en dos programas de radio.",
+        "Pasaron la tarde en el Lago de los Cisnes."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Alumnos de sexto año de la Escuela Primaria Nº 13 de Balcarce realizaron un viaje educativo a Necochea, donde recorrieron las instalaciones de un medio local, participaron de programas de radio y visitaron el Lago de los Cisnes.",
+      "etiquetas": [
+        "Escuela Nº 13",
+        "Balcarce",
+        "Necochea",
+        "viaje educativo",
+        "alumnos"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Ecos Diarios (Necochea)",
+          "enlace": "https://elecos.com.ar/alumnos-de-la-escuela-no-13-de-balcarce-visitaron-ecos-diarios",
+          "fecha": "2026-09-25T22:39:18.000Z",
+          "oficial": false,
+          "aporte": "Informó sobre el viaje educativo de los alumnos de la Escuela Nº 13 de Balcarce a Necochea y su recorrido por las instalaciones del multimedio y el Lago de los Cisnes."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "alumnos-de-la-escuela-n-13-visitan-un-medio-en-necochea"
+    },
+    {
       "id": "16exwiu",
-      "titulo": "Axel Kicillof entrega escrituras a familias en Balcarce",
-      "copete": "El gobernador bonaerense encabezó un acto este viernes para otorgar más de trescientos títulos de propiedad en el distrito, mediante un programa provincial.",
-      "cuerpo": "El gobernador de la provincia de Buenos Aires, Axel Kicillof, visitó el distrito para encabezar la entrega de trescientas siete escrituras a vecinos locales. La actividad se desarrolló enmarcada en el programa provincial de regularización dominial conocido como Mi Escritura, Mi Casa.\n\nDurante la jornada oficial desarrollada este viernes, el mandatario provincial sostuvo que la iniciativa representa al Estado saldando un derecho fundamental para los habitantes de la región. Como se había informado el dieciséis de septiembre, la visita institucional también contemplaba el desarrollo de otras actividades vinculadas a la infraestructura y al ámbito deportivo local.\n\nLa entrega de la documentación legal busca brindar seguridad jurídica a los beneficiarios del partido. La información oficial difundida no detalló nuevas etapas futuras para este plan habitacional en el distrito.",
-      "guion": "Axel Kicillof entrega escrituras a familias en Balcarce",
+      "titulo": "Kicillof entrega trescientas siete escrituras en Balcarce",
+      "copete": "El gobernador bonaerense encabezó un acto en el distrito para otorgar títulos de propiedad a familias locales a través del programa provincial \"Mi Escritura, Mi Casa\".",
+      "cuerpo": "La actividad se llevó a cabo en el marco del programa provincial \"Mi Escritura, Mi Casa\".\n\nComo se había informado en la agenda oficial, esta entrega de títulos de propiedad se concretó en el distrito durante una visita institucional que incluyó actividades vinculadas al desarrollo deportivo y la infraestructura local.\n\nDurante la jornada, el mandatario provincial sostuvo que la iniciativa representa al Estado saldando un derecho para las familias beneficiarias de la región.",
+      "guion": "Kicillof entrega trescientas siete escrituras en Balcarce",
       "seccion": "Política",
       "medios": [
         "El Diario Balcarce"
@@ -1891,30 +2123,28 @@
       "visto": "2026-09-26T03:00:42.156Z",
       "relevancia": 78,
       "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
+      "publicadaPor": "ia",
+      "publicadaCuando": "2026-09-26T07:24:59.436Z",
       "temas": [],
       "como": "automatica",
       "claves": [
-        "El gobernador entregó trescientas siete escrituras.",
-        "La actividad se realizó este viernes en el distrito.",
-        "El programa provincial se denomina Mi Escritura, Mi Casa.",
-        "El mandatario afirmó que se trata de saldar un derecho."
+        "El gobernador Axel Kicillof entregó 307 escrituras en Balcarce",
+        "La entrega se realizó en el marco del programa Mi Escritura, Mi Casa",
+        "La actividad formó parte de una visita institucional al distrito"
       ],
       "seSabe": [
-        "Axel Kicillof entregó trescientas siete escrituras en Balcarce.",
-        "La actividad se realizó este viernes.",
-        "El programa se llama Mi Escritura, Mi Casa.",
-        "El gobernador declaró que el Estado salda un derecho."
+        "El gobernador Axel Kicillof entregó 307 escrituras en Balcarce este viernes",
+        "La entrega se realizó a través del programa provincial \"Mi Escritura, Mi Casa\""
       ],
       "noConfirmado": [
         "No pudo ser contrastado de forma independiente con las fuentes consultadas."
       ],
-      "textoRedes": "El gobernador Axel Kicillof entregó trescientas siete escrituras a familias de Balcarce en el marco de un programa provincial de regularización dominial.",
       "etiquetas": [
         "Axel Kicillof",
-        "Escrituras",
-        "Balcarce"
+        "escrituras",
+        "Balcarce",
+        "Mi Escritura Mi Casa",
+        "provincia de Buenos Aires"
       ],
       "fuentesConsultadas": [
         {
@@ -1922,10 +2152,22 @@
           "enlace": "https://eldiariobalcarce.com.ar/es-el-estado-que-esta-saldando-un-derecho-sostuvo-kicillof-al-entregar-307-escrituras-en-balcarce-83",
           "fecha": "2026-09-25T22:37:38.000Z",
           "oficial": false,
-          "aporte": "Informó la entrega de 307 escrituras por parte de Axel Kicillof en Balcarce mediante el programa provincial."
+          "aporte": "Informó que el gobernador Axel Kicillof entregó 307 escrituras en Balcarce este viernes mediante el programa \"Mi Escritura, Mi Casa\" y consignó una declaración sobre el derecho a la vivienda."
         }
       ],
       "antecedentes": [
+        {
+          "id": "188nlc0",
+          "titulo": "Kicillof encabeza la entrega de escrituras en el Teatro Municipal en Balcarce",
+          "fecha": "2026-09-25T19:51:45.000Z",
+          "ruta": "/nota/kicillof-encabeza-la-entrega-de-escrituras-en-el-teatro-municipal-en-188nlc0"
+        },
+        {
+          "id": "10vh1ng",
+          "titulo": "Kicillof encabeza en Balcarce la entrega de casi cuatrocientas escrituras",
+          "fecha": "2026-09-25T19:41:47.274Z",
+          "ruta": "/nota/kicillof-encabeza-en-balcarce-la-entrega-de-casi-cuatrocientas-10vh1ng"
+        },
         {
           "id": "1nuz3q",
           "titulo": "Kicillof visitará Balcarce: inaugurará obras en el autódromo y entregará escrituras",
@@ -1939,6 +2181,84 @@
         "sugeridoPorIA": "MEDIA"
       },
       "slug": "axel-kicillof-entrega-escrituras-a-familias-en-balcarce"
+    },
+    {
+      "id": "4j0jsg",
+      "titulo": "Franco Colapinto larga noveno en el Gran Premio de Azerbaijan en Balcarce",
+      "copete": "El piloto argentino avanzará al noveno puesto de la grilla en la decimoquinta fecha del campeonato mundial de Fórmula 1 tras varias penalizaciones.",
+      "cuerpo": "Franco Colapinto iniciará la carrera desde el noveno puesto con el Alpine A526 en el Gran Premio de Azerbaijan, decimoquinta fecha de la Fórmula 1 que se disputará este sábado desde las 9 en el circuito callejero de Baku sobre 51 vueltas. De acuerdo con la información difundida, el piloto argentino subió posiciones debido a la sanción aplicada a Carlos Sainz por no reducir la velocidad bajo banderas amarillas durante la clasificación, quien ahora largará en el decimocuarto lugar. El pilarense tendrá por delante a su compañero Pierre Gasly y a Max Verstappen, con el objetivo de mantener la estabilidad del vehículo para continuar dentro del grupo de los diez mejores y sumar puntos.\n\nEn la competencia, George Russell largará desde la primera posición con el Mercedes para intentar dominar la carrera sabatina frente a Charles Leclerc y Oscar Piastri, mientras que otros pilotos también recibieron recargos en la formación de salida por modificaciones en sus unidades.",
+      "guion": "Franco Colapinto larga noveno en el Gran Premio de Azerbaijan en Balcarce",
+      "seccion": "Automovilismo",
+      "medios": [
+        "Campeones"
+      ],
+      "enlace": "https://campeones.com.ar/gp-de-azerbaijan-colapinto-larga-noveno-tras-confirmarse-varias-penalizaciones/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-25T22:23:21.000Z",
+      "sinFecha": false,
+      "visto": "2026-09-26T04:30:43.572Z",
+      "relevancia": 61,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Franco Colapinto largará desde el noveno puesto en la Fórmula 1.",
+        "La carrera se disputará este sábado en el circuito callejero de Baku.",
+        "El cambio en la grilla se produjo tras una sanción a Carlos Sainz.",
+        "El piloto argentino busca continuar sumando puntos en el campeonato."
+      ],
+      "seSabe": [
+        "Franco Colapinto largará noveno en el Gran Premio de Azerbaijan.",
+        "La carrera se disputará este sábado desde las 9 en el circuito de Baku sobre 51 vueltas.",
+        "Carlos Sainz recibió una sanción por no reducir la velocidad con banderas amarillas y largará decimocuarto.",
+        "George Russell largará desde la primera posición."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Franco Colapinto avanzará al noveno puesto de la grilla de largada en el Gran Premio de Azerbaijan tras confirmarse penalizaciones en la Fórmula 1.",
+      "etiquetas": [
+        "Formula 1",
+        "Franco Colapinto",
+        "Gran Premio de Azerbaijan"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Campeones",
+          "enlace": "https://campeones.com.ar/gp-de-azerbaijan-colapinto-larga-noveno-tras-confirmarse-varias-penalizaciones/",
+          "fecha": "2026-09-25T22:23:21.000Z",
+          "oficial": false,
+          "aporte": "Detalló los cambios en la grilla de largada del Gran Premio de Azerbaijan tras las penalizaciones en la Fórmula 1."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1ry7mu3",
+          "titulo": "Franco Colapinto larga noveno en el Gran Premio de Azerbaiyán",
+          "fecha": "2026-09-25T19:24:40.000Z",
+          "ruta": "/nota/franco-colapinto-larga-noveno-en-el-gran-premio-de-azerbaiyan-1ry7mu3"
+        },
+        {
+          "id": "xtbw5",
+          "titulo": "Franco Colapinto largara noveno el Gran Premio de Azerbaiyan",
+          "fecha": "2026-09-25T19:13:53.000Z",
+          "ruta": "/nota/franco-colapinto-largara-noveno-el-gran-premio-de-azerbaiyan-xtbw5"
+        },
+        {
+          "id": "1n5o9jc",
+          "titulo": "Franco Colapinto larga décimo en el Gran Premio de Azerbaiyán",
+          "fecha": "2026-09-25T17:34:57.000Z",
+          "ruta": "/nota/franco-colapinto-larga-decimo-en-el-gran-premio-de-azerbaiyan-1n5o9jc"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "franco-colapinto-larga-noveno-en-el-gran-premio-de-azerbaijan-en"
     },
     {
       "id": "1gzq987",
@@ -2061,10 +2381,10 @@
     },
     {
       "id": "188nlc0",
-      "titulo": "Kicillof encabeza la entrega de escrituras en el Teatro Municipal en Balcarce",
-      "copete": "El gobernador bonaerense entregó casi cuatrocientos títulos de propiedad junto al intendente Esteban Reino en el Teatro Municipal. La actividad se desarrolló en la previa de la reinauguración del autódromo local.",
-      "cuerpo": "El gobernador bonaerense, Axel Kicillof, encabezó este viernes la entrega de 396 escrituras gratuitas a vecinos de Balcarce en el Teatro Municipal. Durante la ceremonia, de la que también participaron el intendente Esteban Reino y funcionarios provinciales como los ministros Juan Martín Mena, Nicolás Kreplak y Silvina Batakis, el mandatario provincial señaló que algunas familias esperaron hasta 40 años para obtener la documentación y remarcó que el programa provincial ya alcanzó a 150.000 hogares.\n\nPor su parte, el jefe comunal valoró la importancia de la entrega para la tranquilidad de las familias y destacó el trabajo conjunto entre administraciones de distintas fuerzas políticas. La visita se dio en el marco de una agenda institucional que incluyó posteriormente la reinauguración del autódromo Juan Manuel Fangio, una obra anticipada por este medio a mediados de septiembre, y contó además con la celebración del cumpleaños del gobernador sobre el escenario.\n\nLa llegada del mandatario provincial a la ciudad había sido destacada días atrás por sectores políticos locales debido al movimiento económico proyectado para el distrito durante el fin de semana.",
-      "guion": "Kicillof encabeza la entrega de escrituras en el Teatro Municipal en Balcarce",
+      "titulo": "Kicillof entrega casi cuatrocientas escrituras en Balcarce",
+      "copete": "El gobernador bonaerense encabezó el acto en el Teatro Municipal junto al intendente local. Cientos de familias recibieron la documentación de sus viviendas en una jornada que incluyó el festejo de su cumpleaños.",
+      "cuerpo": "Durante el acto, que formó parte de la previa de la reinauguración del autódromo Juan Manuel Fangio, Kicillof señaló que algunas familias aguardaron hasta 40 años para obtener los títulos de propiedad a través del programa gratuito \"Mi Escritura, Mi Casa\". Reino remarcó que la documentación otorga tranquilidad para la proyección familiar.\n\nLa jornada continuó con actividades vinculadas al desarrollo deportivo y de infraestructura en la ciudad, en el marco de la agenda institucional que se había anunciado a mediados de mes.",
+      "guion": "Kicillof entrega casi cuatrocientas escrituras en Balcarce",
       "seccion": "Automovilismo",
       "medios": [
         "Radio Gabal (FM 104.1)"
@@ -2076,36 +2396,36 @@
       "visto": "2026-09-26T03:00:42.156Z",
       "relevancia": 82,
       "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
+      "publicadaPor": "ia",
+      "publicadaCuando": "2026-09-26T07:14:26.882Z",
       "temas": [
         "autodromo"
       ],
       "como": "automatica",
       "claves": [
-        "Kicillof y Reino entregaron casi 400 escrituras en el Teatro Municipal.",
-        "La actividad se concretó este viernes en la previa de la reinauguración del autódromo.",
-        "Participaron ministros provinciales y autoridades locales.",
-        "El gobernador cumplió 55 años y recibió un Postre Balcarce en el escenario."
+        "Kicillof y Reino entregaron casi cuatrocientas escrituras gratuitas en el Teatro Municipal.",
+        "El gobernador destacó que algunas familias esperaron hasta 40 años.",
+        "La visita incluyó un festejo de cumpleaños en el escenario con un Postre Balcarce.",
+        "El acto se realizó en la previa de la reinauguración del autódromo local."
       ],
       "seSabe": [
-        "El gobernador Axel Kicillof entregó 396 escrituras a vecinos de Balcarce este viernes en el Teatro Municipal.",
-        "Del acto participaron el intendente Esteban Reino y los ministros provinciales Juan Martín Mena, Nicolás Kreplak y Silvina Batakis.",
-        "La entrega se realizó en el marco del programa provincial gratuito \"Mi Escritura, Mi Casa\".",
-        "La actividad se desarrolló antes de la reinauguración del autódromo Juan Manuel Fangio.",
-        "El gobernador sopló las velitas por su cumpleaños número 55 en el escenario, con un Postre Balcarce acercado por la concejal Sol Di Gerónimo."
+        "Se entregaron 396 escrituras a vecinos en el Teatro Municipal.",
+        "Participaron el gobernador Axel Kicillof y el intendente Esteban Reino.",
+        "Estuvieron presentes los ministros provinciales Juan Martín Mena, Nicolás Kreplak y Silvina Batakis.",
+        "El gobernador cumplió 55 años y recibió un Postre Balcarce de parte de la concejal Sol Di Gerónimo.",
+        "La entrega se enmarcó en el programa provincial \"Mi Escritura, Mi Casa\"."
       ],
       "noConfirmado": [
         "No pudo ser contrastado de forma independiente con las fuentes consultadas."
       ],
-      "textoRedes": "El gobernador Axel Kicillof y el intendente Esteban Reino entregaron este viernes casi 400 escrituras a vecinos en el Teatro Municipal, en la previa de la reinauguración del autódromo local y en una jornada que incluyó la visita de funcionarios provinciales.",
+      "textoRedes": "El gobernador Axel Kicillof entregó este viernes casi cuatrocientas escrituras a familias de Balcarce en el Teatro Municipal, en un acto compartido con el intendente Esteban Reino que incluyó la entrega de títulos gratuitos y actividades oficiales.",
       "etiquetas": [
         "Axel Kicillof",
         "Esteban Reino",
-        "Teatro Municipal",
         "escrituras",
+        "Teatro Municipal",
         "Balcarce",
-        "autodromo Juan Manuel Fangio"
+        "autódromo"
       ],
       "fuentesConsultadas": [
         {
@@ -2113,10 +2433,16 @@
           "enlace": "https://www.radiogabal.com.ar/index.php/politica/el-gobernador-kicillof-comando-la-entrega-de-mas-de-300-escrituras-en-el-teatro-municipal",
           "fecha": "2026-09-25T19:51:45.000Z",
           "oficial": false,
-          "aporte": "Detalló la entrega de 396 escrituras en el Teatro Municipal, las declaraciones de Kicillof y Reino, los funcionarios presentes y el festejo de cumpleaños del gobernador."
+          "aporte": "Detalló la entrega de 396 escrituras en el Teatro Municipal con la presencia de funcionarios provinciales y locales, el festejo de cumpleaños del gobernador y las declaraciones de las autoridades."
         }
       ],
       "antecedentes": [
+        {
+          "id": "10vh1ng",
+          "titulo": "Kicillof encabeza en Balcarce la entrega de casi cuatrocientas escrituras",
+          "fecha": "2026-09-25T19:41:47.274Z",
+          "ruta": "/nota/kicillof-encabeza-en-balcarce-la-entrega-de-casi-cuatrocientas-10vh1ng"
+        },
         {
           "id": "101q9i9",
           "titulo": "Sol Di Geronimo sobre la visita de Kicillof: “Es muy importante recibir al gobernador en épocas no electorales”",
@@ -2128,12 +2454,6 @@
           "titulo": "Kicillof visitará Balcarce: inaugurará obras en el autódromo y entregará escrituras",
           "fecha": "2026-09-16T13:12:10.873Z",
           "ruta": "/nota/kicillof-visitara-balcarce-inaugurara-obras-en-el-autodromo-y-1nuz3q"
-        },
-        {
-          "id": "1v69v60",
-          "titulo": "Kicillof visita la vecina ciudad de Loberia",
-          "fecha": "2026-09-25T12:55:56.000Z",
-          "ruta": "/nota/kicillof-visita-la-vecina-ciudad-de-loberia-1v69v60"
         }
       ],
       "verificacion": {
@@ -2145,10 +2465,10 @@
     },
     {
       "id": "6m9ixr",
-      "titulo": "Fijan precios sugeridos de alquileres en Mar del Plata para el verano",
-      "copete": "El Colegio de Martilleros de Mar del Plata informó los valores orientativos semanales para la temporada 2026-2027 con un incremento del veinticinco por ciento respecto al año anterior.",
-      "cuerpo": "A pocos meses del inicio de la temporada de verano, el Colegio de Martilleros y Corredores Públicos de Mar del Plata dio a conocer los precios sugeridos para el alquiler temporario de inmuebles.\n\nDurante la presentación, el presidente de la institución, Guillermo Rossi, señaló que las expectativas para el sector son favorables, aunque advirtió que el éxito de la temporada dependerá de la prudencia de los operadores debido a la situación económica y la competencia de países vecinos. Asimismo, aconsejaron que las operaciones se pacten en pesos y recordaron que los precios varían según la ubicación, calidad y demanda de cada propiedad.",
-      "guion": "Fijan precios sugeridos de alquileres en Mar del Plata para el verano",
+      "titulo": "Fijan precios sugeridos para alquilar en Mar del Plata este verano",
+      "copete": "El Colegio de Martilleros de Mar del Plata estableció los valores orientativos para la temporada de verano 2026-27 con un incremento del veinticinco por ciento respecto al año anterior, una referencia de interés para los balcarceños que vacacionan en la costa.",
+      "cuerpo": "A poco más de dos meses del inicio de la temporada de verano 2026-27, el Colegio de Martilleros y Corredores Públicos de Mar del Plata dio a conocer los precios sugeridos para el alquiler de departamentos y casas.\n\nLos montos varían según la ubicación, la calidad y el estado de cada inmueble.\n\nEl presidente de la institución, Guillermo Rossi, señaló que las expectativas para el período estival son buenas, aunque advirtió que el éxito de la temporada dependerá de la prudencia de los operadores turísticos debido a la situación económica y la competencia de países vecinos. Asimismo, aconsejaron que las operaciones se pacten en pesos y remarcaron que los martilleros no son formadores de precios.",
+      "guion": "Fijan precios sugeridos para alquilar en Mar del Plata este verano",
       "seccion": "Balcarce",
       "medios": [
         "Infórmese Primero (FM 104.9)"
@@ -2160,14 +2480,14 @@
       "visto": "2026-09-26T03:00:42.156Z",
       "relevancia": 80,
       "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
+      "publicadaPor": "ia",
+      "publicadaCuando": "2026-09-26T07:14:26.882Z",
       "temas": [],
       "como": "automatica",
       "noConfirmado": [
         "No pudo ser contrastado de forma independiente con las fuentes consultadas."
       ],
-      "textoRedes": "El Colegio de Martilleros de Mar del Plata dio a conocer los precios orientativos para alquilar departamentos y casas este verano, con un incremento del veinticinco por ciento respecto al año pasado.",
+      "textoRedes": "El Colegio de Martilleros de Mar del Plata estableció los precios sugeridos para los alquileres de la próxima temporada de verano con un incremento del veinticinco por ciento, una referencia clave para planificar las vacaciones de los balcarceños en la costa atlántica.",
       "etiquetas": [
         "Mar del Plata",
         "verano",
@@ -2180,7 +2500,7 @@
           "enlace": "http://www.informeseprimero.com.ar/2026/09/mar-del-plata-cuanto-costara-alquilar.html",
           "fecha": "2026-09-25T19:51:09.255Z",
           "oficial": false,
-          "aporte": "Detalló los precios sugeridos por el Colegio de Martilleros de Mar del Plata para el alquiler temporario de la próxima temporada y las declaraciones del presidente de la entidad."
+          "aporte": "Informó los valores orientativos de alquileres en la costa y las declaraciones del presidente del Colegio de Martilleros."
         }
       ],
       "antecedentes": [
@@ -2296,10 +2616,10 @@
     },
     {
       "id": "1r5sphv",
-      "titulo": "El TC Mouras y el Pista Mouras aceleran en Rosario",
-      "copete": "Las categorías del automovilismo nacional iniciaron su actividad en el autódromo santafesino con tandas de ensayos. La novena fecha se mudó allí debido a la clausura del circuito platense.",
-      "cuerpo": "El autódromo de Rosario alberga este fin de semana la novena fecha del TC Mouras y el Pista Mouras, competencia que debió trasladarse desde el circuito platense de La Plata tras su clausura para definir su Etapa Regular. Debido a que se trata de un trazado desconocido para la mayoría de los participantes, se habilitaron entrenamientos previos sobre los cuatro mil metros de pista.\n\nEn la divisional mayor, el piloto Santiago Arrigoni se quedó con el registro más veloz a bordo de su Dodge, superando a Valentino Alaux y al líder del campeonato, Francisco Luengo. Por su parte, en el Pista Mouras dominó las tandas el representante de Ford, escoltado por Ignacio Lovich y Bautista Roquet, según los datos informados.\n\nLas actividades continuarán durante la jornada siguiente con nuevos entrenamientos matutinos para ambas divisionales.",
-      "guion": "El TC Mouras y el Pista Mouras aceleran en Rosario",
+      "titulo": "El TC Mouras inicia en Rosario su novena fecha",
+      "copete": "El autódromo de Rosario recibe la novena fecha de TC Mouras y Pista Mouras tras el cambio de sede. Las categorías realizan ensayos para definir su Etapa Regular.",
+      "cuerpo": "El autódromo de Rosario es el escenario de la novena fecha de TC Mouras y Pista Mouras, categorías que debieron modificar su destino inicial en La Plata debido a la clausura del circuito bonaerense.\n\nDebido a que se trata de un circuito desconocido para gran parte de los participantes, la organización habilitó dos tandas de ensayos previos. En TC Mouras, el piloto Santiago Arrigoni registró el tiempo más veloz del día al cronometrar 1m41s con un Dodge, seguido por Valentino Alaux y por el líder del campeonato, Francisco Luengo. En tanto, en Pista Mouras, las pruebas libres tuvieron al frente a los representantes de esa divisional durante las prácticas del viernes.\n\nLas actividades continuarán durante el fin de semana con nuevos entrenamientos matutinos programados para ambas categorías en el circuito santafesino.",
+      "guion": "El TC Mouras inicia en Rosario su novena fecha",
       "seccion": "Automovilismo",
       "medios": [
         "Campeones"
@@ -2311,27 +2631,22 @@
       "visto": "2026-09-26T03:00:42.156Z",
       "relevancia": 86,
       "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
+      "publicadaPor": "ia",
+      "publicadaCuando": "2026-09-26T07:03:52.036Z",
       "temas": [
         "autodromo",
         "fangio"
       ],
       "como": "automatica",
       "claves": [
-        "Rosario recibe la novena fecha del TC Mouras y Pista Mouras.",
-        "El cambio de escenario se debió a la clausura del autódromo platense.",
-        "Los pilotos completaron las primeras tandas de ensayos en el circuito santafesino."
-      ],
-      "seSabe": [
-        "El autódromo de Rosario es sede de la novena fecha del TC Mouras y Pista Mouras.",
-        "Santiago Arrigoni fue el más rápido en las pruebas del TC Mouras.",
-        "La competencia busca definir la Etapa Regular de los campeonatos."
+        "Rosario recibe la novena fecha de TC Mouras y Pista Mouras.",
+        "El cambio de sede se debió a la clausura del autódromo de La Plata.",
+        "Santiago Arrigoni dominó las pruebas libres del TC Mouras."
       ],
       "noConfirmado": [
         "No pudo ser contrastado de forma independiente con las fuentes consultadas."
       ],
-      "textoRedes": "El TC Mouras y el Pista Mouras pusieron en marcha sus actividades en el autódromo de Rosario para disputar la novena fecha del campeonato tras el cambio de escenario.",
+      "textoRedes": "El TC Mouras y el Pista Mouras disputan su novena fecha en el autódromo de Rosario tras el cambio de sede por la clausura del circuito platense. Las categorías desarrollaron ensayos previos para definir su Etapa Regular.",
       "etiquetas": [
         "TC Mouras",
         "Pista Mouras",
@@ -2343,7 +2658,7 @@
           "enlace": "https://campeones.com.ar/tc-mouras-y-pista-mouras-pusieron-primera-en-rosario/",
           "fecha": "2026-09-25T19:48:13.000Z",
           "oficial": false,
-          "aporte": "Informó los resultados de los ensayos, los cambios de escenario y el desarrollo de la novena fecha en Rosario."
+          "aporte": "Informó los resultados de las pruebas de entrenamiento y el cambio de sede a Rosario para el TC Mouras y Pista Mouras."
         }
       ],
       "antecedentes": [
@@ -2374,158 +2689,6 @@
       "slug": "el-tc-mouras-y-el-pista-mouras-aceleran-en-rosario"
     },
     {
-      "id": "10vh1ng",
-      "titulo": "Kicillof encabeza en Balcarce la entrega de casi cuatrocientas escrituras",
-      "copete": "El gobernador bonaerense entregó títulos de propiedad en el Teatro Municipal y recorrió el autódromo local. La agenda oficial incluyó un festejo de cumpleaños y la suspensión de una recorrida de obras.",
-      "cuerpo": "La actividad se realizó mediante el programa provincial Mi Escritura, Mi Casa, destinado a la regularización dominial gratuita para brindar seguridad jurídica y acceso a créditos.\n\nDurante el acto, que coincidió con el cumpleaños del mandatario provincial y contó con un festejo por parte de los presentes, Kicillof señaló que la iniciativa busca saldar una deuda con los vecinos bonaerenses. Tras la ceremonia, la comitiva se trasladó hacia el Autódromo Municipal Juan Manuel Fangio para participar de la reapertura del histórico trazado serrano, mientras que la recorrida prevista por la obra de la avenida Centenario y la Ruta Provincial 55 fue suspendida por cuestiones de tiempo.\n\nComo se había informado el dieciséis de septiembre, la visita oficial del gobernador contemplaba como ejes centrales el desarrollo deportivo, la infraestructura y la regularización dominial en el distrito.",
-      "guion": "Kicillof encabeza en Balcarce la entrega de casi cuatrocientas escrituras",
-      "seccion": "Política",
-      "medios": [
-        "Infórmese Primero (FM 104.9)"
-      ],
-      "enlace": "http://www.informeseprimero.com.ar/2026/09/kicillof-encabezo-en-balcarce-la.html",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-25T19:41:47.274Z",
-      "sinFecha": false,
-      "visto": "2026-09-26T03:00:42.156Z",
-      "relevancia": 80,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "El gobernador entregó casi cuatrocientas escrituras en el Teatro Municipal.",
-        "La actividad formó parte del programa provincial de regularización dominial.",
-        "Kicillof visitó también el Autódromo Municipal Juan Manuel Fangio.",
-        "La recorrida prevista por la avenida Centenario fue suspendida por cuestiones de tiempo."
-      ],
-      "seSabe": [
-        "El gobernador Axel Kicillof encabezó la entrega de 397 escrituras en el Teatro Municipal Luis Conti, según informó la fuente.",
-        "La entrega se realizó a través del programa provincial Mi Escritura, Mi Casa, de acuerdo con el reporte oficial.",
-        "La agenda oficial incluyó una visita al Autódromo Municipal Juan Manuel Fangio tras la suspensión de la recorrida por la avenida Centenario."
-      ],
-      "noConfirmado": [
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "El gobernador Axel Kicillof entregó casi cuatrocientas escrituras a familias de Balcarce en el Teatro Municipal y visitó el autódromo local, en una jornada donde también se suspendió una recorrida de obras.",
-      "etiquetas": [
-        "Axel Kicillof",
-        "escrituras",
-        "Teatro Municipal",
-        "Autódromo Juan Manuel Fangio",
-        "Balcarce"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Infórmese Primero (FM 104.9)",
-          "enlace": "http://www.informeseprimero.com.ar/2026/09/kicillof-encabezo-en-balcarce-la.html",
-          "fecha": "2026-09-25T19:41:47.274Z",
-          "oficial": false,
-          "aporte": "Detalles completos de la visita oficial de Axel Kicillof a Balcarce, la entrega de escrituras y las modificaciones en la agenda."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "1nuz3q",
-          "titulo": "Kicillof visitará Balcarce: inaugurará obras en el autódromo y entregará escrituras",
-          "fecha": "2026-09-16T13:12:10.873Z",
-          "ruta": "/nota/kicillof-visitara-balcarce-inaugurara-obras-en-el-autodromo-y-1nuz3q"
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "kicillof-encabeza-en-balcarce-la-entrega-de-casi-cuatrocientas"
-    },
-    {
-      "id": "1ry7mu3",
-      "titulo": "Franco Colapinto larga noveno en el Gran Premio de Azerbaiyán",
-      "copete": "El piloto argentino avanzará al noveno lugar de la grilla en la decimoquinta fecha de la temporada de Fórmula 1. La competencia principal se disputará este sábado desde las 8 en el circuito callejero de Bakú.",
-      "cuerpo": "Franco Colapinto se metió entre los diez mejores de la clasificación en el circuito urbano de Bakú y largará noveno este sábado en el Gran Premio de Azerbaiyán. Durante la segunda tanda clasificatoria de este viernes, el piloto argentino salió a pista por delante de su compañero de equipo Pierre Gasly, a quien benefició con el rebufo aerodinámico en la recta principal, lo que le permitió al francés registrar un tiempo favorable. El propio Colapinto reconoció en declaraciones a ESPN que completar su vuelta rápida sin succión fue difícil y le hizo perder tiempo en la recta.\n\nEn torno a la maniobra surgieron interpretaciones en redes sociales sobre una supuesta falta de reciprocidad o estrategia asimétrica por parte de la escudería. Sin embargo, fuentes cercanas al equipo descartaron que existieran directivas planificadas para favorecer a uno u otro piloto, y señalaron que la salida de los vehículos respondió al orden habitual de los garajes en la pista callejera azerbaiyana.",
-      "guion": "Franco Colapinto larga noveno en el Gran Premio de Azerbaiyán",
-      "seccion": "Automovilismo",
-      "medios": [
-        "La Nación"
-      ],
-      "enlace": "https://www.lanacion.com.ar/deportes/automovilismo/franco-colapinto-largara-noveno-en-el-gp-de-azerbaiyan-despues-de-ayudar-a-pierre-gasly-en-la-nid25092026/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-25T19:24:40.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-26T04:00:50.256Z",
-      "relevancia": 65,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "El piloto argentino largará noveno este sábado en la Fórmula 1.",
-        "La competencia en el circuito callejero de Bakú comenzará a las 8.",
-        "George Russell se quedó con la pole position de la prueba."
-      ],
-      "seSabe": [
-        "Franco Colapinto largará noveno este sábado en el Gran Premio de Azerbaiyán, según informaron las fuentes.",
-        "George Russell conquistó la pole position tras marcar el mejor tiempo en la clasificación.",
-        "El piloto argentino ayudó a su compañero Pierre Gasly con el rebufo aerodinámico durante la Q2."
-      ],
-      "noConfirmado": [
-        "No se pudo determinar de forma independiente si existió alguna directiva interna para favorecer el rendimiento de un piloto sobre otro.",
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "Franco Colapinto largará noveno este sábado en el Gran Premio de Azerbaiyán de Fórmula 1. El piloto argentino completó la clasificación en el circuito callejero de Bakú tras una jornada con actividad en la Q2 y la Q3.",
-      "etiquetas": [
-        "Formula 1",
-        "Franco Colapinto",
-        "Azerbaiyan",
-        "Baku"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "La Nación",
-          "enlace": "https://www.lanacion.com.ar/deportes/automovilismo/franco-colapinto-largara-noveno-en-el-gp-de-azerbaiyan-despues-de-ayudar-a-pierre-gasly-en-la-nid25092026/",
-          "fecha": "2026-09-25T19:24:40.000Z",
-          "oficial": false,
-          "aporte": "Analizó la maniobra de suçón en la Q2 y las declaraciones de Colapinto sobre la falta de rebufo."
-        },
-        {
-          "medio": "La Nación",
-          "enlace": "https://www.lanacion.com.ar/deportes/automovilismo/franco-colapinto-en-la-formula-1-en-vivo-nid25092026/",
-          "fecha": "2026-09-25T16:22:15.000Z",
-          "oficial": false,
-          "aporte": "Confirmó la posición de partida de Colapinto, el horario de la carrera y la pole position de George Russell."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "xtbw5",
-          "titulo": "Franco Colapinto largara noveno el Gran Premio de Azerbaiyan",
-          "fecha": "2026-09-25T19:13:53.000Z",
-          "ruta": "/nota/franco-colapinto-largara-noveno-el-gran-premio-de-azerbaiyan-xtbw5"
-        },
-        {
-          "id": "1n5o9jc",
-          "titulo": "Franco Colapinto larga décimo en el Gran Premio de Azerbaiyán",
-          "fecha": "2026-09-25T17:34:57.000Z",
-          "ruta": "/nota/franco-colapinto-larga-decimo-en-el-gran-premio-de-azerbaiyan-1n5o9jc"
-        },
-        {
-          "id": "ffhx7",
-          "titulo": "Franco Colapinto larga décimo en el Gran Premio de Azerbaiyán",
-          "fecha": "2026-09-25T16:22:15.000Z",
-          "ruta": "/nota/franco-colapinto-disputa-la-clasificacion-en-el-gran-premio-de-ffhx7"
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "franco-colapinto-larga-noveno-en-el-gran-premio-de-azerbaiyan"
-    },
-    {
       "id": "1pjgnu4",
       "titulo": "McCain advierte sobre una falsa convocatoria laboral en Balcarce",
       "copete": "La empresa emitió un comunicado para alertar a la comunidad sobre publicaciones fraudulentas en redes sociales que utilizan su nombre con inteligencia artificial.",
@@ -2540,7 +2703,7 @@
       "fecha": "2026-09-25T19:10:29.000Z",
       "sinFecha": false,
       "visto": "2026-09-26T03:00:42.156Z",
-      "relevancia": 78,
+      "relevancia": 71,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -2650,10 +2813,10 @@
     },
     {
       "id": "12gu063",
-      "titulo": "Advierten sobre una situación crítica en el PAMI y en la atención a jubilados en Balcarce",
-      "copete": "El titular del gremio SUTEPA advirtió sobre un panorama complejo en la obra social de los jubilados, con recortes en clínicas y problemas de atención que impactan en la región.",
-      "cuerpo": "Gastón Venturi, secretario general de la seccional Mar del Plata del Sindicato Unido de Trabajadores y Empleados del PAMI (SUTEPA), advirtió sobre la situación crítica que atraviesa la obra social y señaló que el panorama es \"desesperante\" para los afiliados. Durante una entrevista radial, el dirigente gremial sostuvo que existen dificultades para acceder a la atención médica y cuestionó las derivaciones de pacientes entre distintas clínicas de la zona.\n\nEl referente sindical indicó que en el Hospital Bernardo Houssay hay un piso con veinticinco camas que no se utiliza por falta de personal y cuestionó la precarización laboral. Además, señaló que el Sanatorio Belgrano dejó de prestar servicios a miles de afiliados y que la Clínica Mar del Plata aplicó restricciones en sus áreas de internación, lo que genera una mayor saturación en el sistema.\n\nAsimismo, reclamó discutir nuevas fuentes de financiamiento para sostener el sistema previsional.",
-      "guion": "Advierten sobre una situación crítica en el PAMI y en la atención a jubilados en Balcarce",
+      "titulo": "Gastón Venturi advierte sobre una situacion grave en PAMI",
+      "copete": "El secretario general de SUTEPA en Mar del Plata advirtió sobre la compleja situación que atraviesa la obra social y el impacto en la atención de los jubilados.",
+      "cuerpo": "Venturi sostuvo que el Sanatorio Belgrano dejó de prestar servicios a miles de afiliados y que la Clínica Mar del Plata atravesó restricciones, lo que incrementó la demanda sobre el sistema.\n\nPor otra parte, el Ministerio de Salud bonaerense informó previamente que el rechazo de coberturas y la sobrecarga del sector privado dejan sin camas al Hospital Alende de Mar del Plata. El referente gremial también cuestionó el actual esquema de financiamiento de la obra social y reclamó discutir nuevas fuentes de recursos ante la dependencia estatal.",
+      "guion": "Gastón Venturi advierte sobre una situacion grave en PAMI",
       "seccion": "Balcarce",
       "medios": [
         "Infórmese Primero (FM 104.9)"
@@ -2665,26 +2828,26 @@
       "visto": "2026-09-26T03:30:38.768Z",
       "relevancia": 73,
       "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
+      "publicadaPor": "ia",
+      "publicadaCuando": "2026-09-26T07:24:59.436Z",
       "temas": [],
       "como": "automatica",
       "claves": [
-        "Venturi calificó de desesperante el estado actual del PAMI.",
-        "Señalaron veinticinco camas sin usar en el Hospital Houssay.",
-        "Advierten sobre restricciones prestacionales en clínicas privadas.",
-        "Reclamaron discutir nuevas fuentes de financiamiento para el sistema."
+        "El dirigente gremial Gastón Venturi advirtió sobre la situación crítica del PAMI.",
+        "Señaló que el Hospital Houssay tiene veinticinco camas sin usar por falta de personal.",
+        "Mencionó recortes prestacionales en sanatorios privados y cierres de oficinas de atención."
       ],
       "noConfirmado": [
         "No pudo ser contrastado de forma independiente con las fuentes consultadas."
       ],
-      "textoRedes": "El secretario general de SUTEPA advirtió sobre una situación crítica en el PAMI, con recortes prestacionales en clínicas de la región y problemas de atención que afectan a los jubilados.",
+      "textoRedes": "El secretario general de SUTEPA advirtió sobre la situación crítica que atraviesa el PAMI y el impacto en la atención de los jubilados de la región.",
       "etiquetas": [
         "PAMI",
         "SUTEPA",
-        "Jubilados",
-        "Salud",
-        "Mar del Plata"
+        "Gastón Venturi",
+        "Mar del Plata",
+        "jubilados",
+        "salud"
       ],
       "fuentesConsultadas": [
         {
@@ -2692,7 +2855,7 @@
           "enlace": "http://www.informeseprimero.com.ar/2026/09/la-situacion-es-grave-y-esto-ya-esta.html",
           "fecha": "2026-09-25T16:53:13.168Z",
           "oficial": false,
-          "aporte": "Detalló la crisis prestacional del PAMI, la falta de personal en el Hospital Houssay y los problemas de atención en la región."
+          "aporte": "Detalló el estado crítico de la atención del PAMI, la falta de personal y el cierre de bocas de atención en la región."
         }
       ],
       "verificacion": {
@@ -2705,8 +2868,8 @@
     {
       "id": "i3pe4a",
       "titulo": "La Cámpora rechaza la eliminación de la Zona Fría en Balcarce",
-      "copete": "La agrupación política cuestionó la anulación del beneficio en el Senado y advirtió sobre un fuerte incremento en la tarifa del gas para los vecinos.",
-      "cuerpo": "A través de un comunicado difundido recientemente, la organización señaló que semanas atrás impulsó acciones para informar a los vecinos y recolectar firmas con el fin de evitar la exclusión de la ciudad del beneficio. En el mismo texto, cuestionaron el rol de distintos sectores políticos, al mencionar críticas hacia sectores radicales, la gestión municipal y referentes de otros espacios.\n\nDesde el espacio político sostuvieron que la anulación del esquema diferencial tendrá un impacto directo en la economía doméstica y afirmaron que la suba en el servicio alcanzará la mitad del valor actual. Asimismo, manifestaron que continuarán focalizados en la situación económica de la comunidad para promover mejoras en las condiciones de vida locales.",
+      "copete": "La organización política cuestionó la quita del beneficio tarifario tras su aprobación en el Senado. Advirtió que las boletas de gas aumentarán un cincuenta por ciento.",
+      "cuerpo": "La Cámpora Balcarce expresó su rechazo a la eliminación del régimen de Zona Fría, aprobada recientemente en el Senado nacional.\n\nDesde el espacio político indicaron que en las semanas previas impulsaron diversas acciones para visibilizar el reclamo, lo que incluyó tareas informativas en la vía pública y una recolección de firmas destinada a evitar la exclusión de la ciudad del beneficio tarifario. En el mismo texto, cuestionaron el rol de distintos sectores y apuntaron contra los radicales, la gestión del intendente municipal y la postura de referentes de otros espacios.\n\nPor último, la organización partidaria ratificó que mantendrá su labor en torno a las dificultades económicas que atraviesan los vecinos y adelantó que continuará realizando gestiones orientadas a mejorar la calidad de vida en el distrito.",
       "guion": "La Cámpora rechaza la eliminación de la Zona Fría en Balcarce",
       "seccion": "Balcarce",
       "medios": [
@@ -2719,29 +2882,28 @@
       "visto": "2026-09-26T03:00:42.156Z",
       "relevancia": 73,
       "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
+      "publicadaPor": "ia",
+      "publicadaCuando": "2026-09-26T07:24:59.436Z",
       "temas": [],
       "como": "automatica",
       "claves": [
-        "Rechazo a la eliminación del régimen de Zona Fría",
-        "Advertencia sobre un aumento del cincuenta por ciento en el gas",
-        "Críticas a sectores políticos y a la gestión municipal",
-        "Acciones previas de recolección de firmas en la ciudad"
+        "Rechazo a la quita de la Zona Fría",
+        "Advierten una suba del cincuenta por ciento en el gas",
+        "Críticas a dirigentes locales y nacionales"
       ],
       "seSabe": [
-        "El Senado aprobó la eliminación del régimen de Zona Fría, según La Cámpora Balcarce.",
-        "La organización política realizó actividades de información y recolección de firmas en la ciudad.",
-        "Desde La Cámpora afirmaron que el servicio de gas experimentará un aumento del cincuenta por ciento."
+        "El Senado aprobó la eliminación del régimen de Zona Fría.",
+        "La Cámpora Balcarce difundió un comunicado en rechazo a la medida.",
+        "La agrupación juntó firmas e informó a los vecinos en las últimas semanas."
       ],
       "noConfirmado": [
         "No pudo ser contrastado de forma independiente con las fuentes consultadas."
       ],
-      "textoRedes": "La Cámpora Balcarce cuestionó la eliminación del régimen de Zona Fría aprobada en el Senado y advirtió que la medida provocará un aumento del cincuenta por ciento en la tarifa del gas para los vecinos de la ciudad.",
+      "textoRedes": "La Cámpora cuestionó la eliminación de la Zona Fría y advirtió que las boletas de gas aumentarán un cincuenta por ciento en Balcarce.",
       "etiquetas": [
         "La Cámpora",
         "Zona Fría",
-        "Gas",
+        "gas",
         "Balcarce",
         "Senado"
       ],
@@ -2751,7 +2913,7 @@
           "enlace": "http://www.informeseprimero.com.ar/2026/09/la-campora-balcarce-cuestiono-la.html",
           "fecha": "2026-09-25T16:41:49.656Z",
           "oficial": false,
-          "aporte": "Informó el rechazo de La Cámpora Balcarce a la eliminación de la Zona Fría y las críticas a otros sectores políticos."
+          "aporte": "Informó sobre el comunicado de La Cámpora Balcarce tras la eliminación de la Zona Fría y sus críticas a la dirigencia."
         }
       ],
       "verificacion": {
@@ -2763,10 +2925,10 @@
     },
     {
       "id": "d2elpy",
-      "titulo": "La comunidad sorda celebra su día en el Polideportivo en Balcarce",
-      "copete": "Integrantes de la comunidad sorda local y de la región se reúnen en el Complejo Polideportivo Municipal para conmemorar su día con actividades de camaradería.",
-      "cuerpo": "Vecinos locales y visitantes provenientes de Mar del Plata y Miramar se encuentran este viernes en el Complejo Polideportivo Municipal para compartir una jornada de celebración y camaradería, destinada a conmemorar el Día de las Personas Sordas, fecha que se recordó el pasado sábado diecinueve de septiembre según informó un medio local. La iniciativa busca visibilizar la importancia de la inclusión, la accesibilidad y la Lengua de Señas, además de promover la identidad y la cultura de este sector.\n\nEl evento genera un espacio de intercambio que fortalece los vínculos entre los participantes de distintas localidades y fomenta la participación y la expresión comunitaria en un clima de compañerismo.",
-      "guion": "La comunidad sorda celebra su día en el Polideportivo en Balcarce",
+      "titulo": "La comunidad sorda celebra su día en el Complejo Polideportivo Municipal en Balcarce",
+      "copete": "Integrantes de la comunidad sorda local y de la región se reúnen en el Complejo Polideportivo Municipal para celebrar su día, promover la inclusión y visibilizar la Lengua de Señas.",
+      "cuerpo": "Vecinos locales y visitantes provenientes de Mar del Plata y Miramar participan este viernes de un encuentro de camaradería en el Complejo Polideportivo Municipal, en el marco de las actividades por el Día de las Personas Sordas, conmemorado el pasado sábado 19 de septiembre.\n\nLa jornada apunta a visibilizar la importancia de la Lengua de Señas, la accesibilidad y la inclusión, además de destacar la cultura de la comunidad sorda mediante un espacio de intercambio entre distintas localidades de la región.\n\nEl evento se desarrolla en un clima de celebración con el objetivo de fortalecer los lazos entre los participantes y fomentar nuevos espacios de expresión y participación.",
+      "guion": "La comunidad sorda celebra su día en el Complejo Polideportivo Municipal en Balcarce",
       "seccion": "Balcarce",
       "medios": [
         "Infórmese Primero (FM 104.9)"
@@ -2778,30 +2940,30 @@
       "visto": "2026-09-26T03:00:42.156Z",
       "relevancia": 73,
       "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
+      "publicadaPor": "ia",
+      "publicadaCuando": "2026-09-26T07:24:59.436Z",
       "temas": [],
       "como": "automatica",
       "claves": [
-        "La comunidad sorda se reúne en el Polideportivo Municipal.",
-        "Participan vecinos de Balcarce, Mar del Plata y Miramar.",
-        "Las actividades promueven la inclusión y la Lengua de Señas."
+        "Encuentro en el Complejo Polideportivo Municipal",
+        "Participan vecinos de Balcarce, Mar del Plata y Miramar",
+        "Busca visibilizar la Lengua de Señas y la inclusión"
       ],
       "seSabe": [
-        "El encuentro se realiza este viernes en el Complejo Polideportivo Municipal.",
-        "Participan personas de la comunidad local, de Mar del Plata y de Miramar.",
-        "El Día de las Personas Sordas se conmemoró el pasado sábado diecinueve de septiembre."
+        "El encuentro se realiza en el Complejo Polideportivo Municipal",
+        "Participan personas de la comunidad local, Mar del Plata y Miramar",
+        "La jornada busca visibilizar la Lengua de Señas, la inclusión y la accesibilidad"
       ],
       "noConfirmado": [
         "No pudo ser contrastado de forma independiente con las fuentes consultadas."
       ],
-      "textoRedes": "Integrantes de la comunidad sorda de Balcarce, Mar del Plata y Miramar se reúnen en el Polideportivo Municipal para celebrar su día y visibilizar la importancia de la Lengua de Señas y la inclusión.",
+      "textoRedes": "Integrantes de la comunidad sorda local y de la región se reúnen en el Complejo Polideportivo Municipal para celebrar su día, visibilizar la Lengua de Señas y promover la inclusión.",
       "etiquetas": [
-        "comunidad sorda",
+        "Comunidad sorda",
         "Polideportivo Municipal",
-        "Balcarce",
-        "inclusión",
-        "Lengua de Señas"
+        "Inclusión",
+        "Lengua de Señas",
+        "Balcarce"
       ],
       "fuentesConsultadas": [
         {
@@ -2809,7 +2971,7 @@
           "enlace": "http://www.informeseprimero.com.ar/2026/09/la-comunidad-sorda-se-reune-en-el.html",
           "fecha": "2026-09-25T16:38:00.000Z",
           "oficial": false,
-          "aporte": "Informó sobre el encuentro de la comunidad sorda en el Polideportivo y los detalles de la conmemoración."
+          "aporte": "Informó sobre el encuentro de la comunidad sorda en el Polideportivo y la participación de visitantes regionales."
         }
       ],
       "verificacion": {
@@ -2820,11 +2982,78 @@
       "slug": "la-comunidad-sorda-celebra-su-dia-en-el-polideportivo-en-balcarce"
     },
     {
+      "id": "6zyz8n",
+      "titulo": "El handball municipal compitió en el circuito Asabal en Balcarce",
+      "copete": "Unos cuarenta jugadores locales participaron de la sexta fecha del Circuito Asabal en Mar del Plata. La delegación sumó rodaje de cara al torneo internacional de noviembre.",
+      "cuerpo": "Unos cuarenta jugadores de la Escuela Municipal de Handball representaron a Balcarce en la sexta fecha del Circuito Asabal, disputada en las instalaciones del Club Once Unidos de Mar del Plata.\n\nDurante la jornada, que reunió a representantes de la zona como Once Unidos, Handball Norte y Handball Necochea, los equipos locales sumaron minutos de competencia y participaron de actividades recreativas, sorteos y entrevistas. Esta presentación forma parte de la preparación de la Escuela Municipal de cara a su participación en noviembre en el Torneo Internacional Copa Mar del Plata.",
+      "guion": "El handball municipal compitió en el circuito Asabal en Balcarce",
+      "seccion": "Deportes",
+      "medios": [
+        "Radio Gabal (FM 104.1)"
+      ],
+      "enlace": "https://www.radiogabal.com.ar/index.php/deportes/la-escuela-municipal-de-handball-sumo-experiencia-en-el-circuito-asabal",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-25T16:32:32.000Z",
+      "sinFecha": false,
+      "visto": "2026-09-25T17:00:45.961Z",
+      "relevancia": 65,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Cuarenta jugadores balcarceños participaron en Mar del Plata",
+        "La delegación integró las categorías Infantil y Menores",
+        "El equipo se prepara para el torneo internacional de noviembre"
+      ],
+      "seSabe": [
+        "Cuarenta jugadores de la Escuela Municipal de Handball representaron a Balcarce en el Circuito Asabal",
+        "La sexta fecha se disputó en el Club Once Unidos de Mar del Plata",
+        "La delegación fue acompañada por los profesores Federico Santiago y Maximiliano La Rocca",
+        "El equipo participará en noviembre del Torneo Internacional Copa Mar del Plata"
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Unos cuarenta jugadores de la Escuela Municipal de Handball representaron a Balcarce en la sexta fecha del Circuito Asabal en Mar del Plata y se preparan para competir en noviembre en un torneo internacional.",
+      "etiquetas": [
+        "handball",
+        "deportes",
+        "Escuela Municipal",
+        "Asabal",
+        "Mar del Plata"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Radio Gabal (FM 104.1)",
+          "enlace": "https://www.radiogabal.com.ar/index.php/deportes/la-escuela-municipal-de-handball-sumo-experiencia-en-el-circuito-asabal",
+          "fecha": "2026-09-25T16:32:32.000Z",
+          "oficial": false,
+          "aporte": "Detalló la participación de la Escuela Municipal de Handball en el Circuito Asabal en Mar del Plata con unos cuarenta jugadores."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "ug5xuk",
+          "titulo": "La Escuela Municipal de Handball participa de un nuevo torneo en Mar del Plata",
+          "fecha": "2026-09-25T14:23:44.000Z",
+          "ruta": "/nota/la-escuela-municipal-de-handball-compite-en-mar-del-plata-en-balcarce-ug5xuk"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "el-handball-municipal-compitio-en-el-circuito-asabal-en-balcarce"
+    },
+    {
       "id": "1fu8eca",
-      "titulo": "El handball de Balcarce compitió en una nueva fecha del Circuito AsABal en Mar del Plata",
-      "copete": "La Escuela Municipal de Handball de Balcarce participó con unos cuarenta jugadores de distintas categorías en el sexto Circuito AsABal, llevado a cabo en el Club Once Unidos de Mar del Plata.",
-      "cuerpo": "Del encuentro también formaron parte equipos del club anfitrión, Handball Necochea y Handball Norte de Mar del Plata. Durante la actividad, los deportistas balcarceños demostraron su crecimiento individual y colectivo dentro de la disciplina, además de participar en sorteos y recibir la visita de fotógrafos de la Liga.\n\nLa competencia funcionó como preparación de cara al Torneo Internacional Copa Mar del Plata, que se disputará en noviembre y reunirá a nuevos equipos, permitiendo que los representantes locales continúen sumando experiencia en el deporte.",
-      "guion": "El handball de Balcarce compitió en una nueva fecha del Circuito AsABal en Mar del Plata",
+      "titulo": "El handball de Balcarce compitió en una nueva fecha del circuito en Mar del Plata",
+      "copete": "La Escuela Municipal de Handball participó del sexto Circuito AsABal en el club Once Unidos con una delegación de unos cuarenta jugadores de diversas categorías.",
+      "cuerpo": "El contingente estuvo a cargo de los profesores Federico Santiago y Maximiliano La Rocca. Durante el encuentro, los deportistas locales disputaron distintos partidos para mostrar el crecimiento individual y colectivo en la disciplina, además de recibir obsequios en sorteos y participar en producciones fotográficas y entrevistas de la Liga.\n\nEsta competencia funcionó como preparación de cara a los compromisos de noviembre, cuando los representantes de la Escuela Municipal compitan en el Torneo Internacional Copa Mar del Plata para continuar sumando experiencia frente a nuevos equipos de la región.",
+      "guion": "El handball de Balcarce compitió en una nueva fecha del circuito en Mar del Plata",
       "seccion": "Deportes",
       "medios": [
         "Infórmese Primero (FM 104.9)"
@@ -2836,33 +3065,26 @@
       "visto": "2026-09-26T03:00:42.156Z",
       "relevancia": 73,
       "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
+      "publicadaPor": "ia",
+      "publicadaCuando": "2026-09-26T07:24:59.436Z",
       "temas": [],
       "como": "automatica",
-      "claves": [
-        "Participaron unos cuarenta jugadores locales de diferentes categorías.",
-        "El encuentro deportivo se desarrolló en el Club Once Unidos de Mar del Plata.",
-        "La delegación estuvo a cargo de los profesores Federico Santiago y Maximiliano La Rocca.",
-        "La jornada sirvió como preparación para el Torneo Internacional Copa Mar del Plata de noviembre."
-      ],
       "seSabe": [
-        "La Escuela Municipal de Handball de Balcarce participó del sexto Circuito AsABal en Mar del Plata.",
-        "La delegación estuvo integrada por aproximadamente cuarenta jugadores de distintas categorías.",
-        "Los profesores a cargo del contingente local fueron Federico Santiago y Maximiliano La Rocca.",
-        "Participaron delegaciones de Once Unidos, Handball Necochea y Handball Norte.",
-        "La actividad sirvió como preparación para la Copa Mar del Plata que se jugará en noviembre."
+        "La Escuela Municipal de Handball participó del sexto Circuito AsABal en Mar del Plata.",
+        "La delegación estuvo integrada por aproximadamente 40 jugadores de distintas categorías.",
+        "Los profesores a cargo del contingente fueron Federico Santiago y Maximiliano La Rocca.",
+        "La actividad sirvió como preparación para el Torneo Internacional Copa Mar del Plata de noviembre."
       ],
       "noConfirmado": [
         "No pudo ser contrastado de forma independiente con las fuentes consultadas."
       ],
-      "textoRedes": "La Escuela Municipal de Handball de Balcarce participó con unos cuarenta jugadores de una nueva fecha del Circuito AsABal en Mar del Plata como preparación para el torneo internacional de noviembre.",
+      "textoRedes": "La Escuela Municipal de Handball de Balcarce formó parte de una nueva jornada del Circuito AsABal en Mar del Plata con una delegación de cuarenta jugadores de distintas categorías.",
       "etiquetas": [
-        "Handball",
-        "Escuela Municipal",
-        "AsABal",
+        "handball",
+        "deportes",
+        "Balcarce",
         "Mar del Plata",
-        "Deportes"
+        "AsABal"
       ],
       "fuentesConsultadas": [
         {
@@ -2870,7 +3092,7 @@
           "enlace": "http://www.informeseprimero.com.ar/2026/09/el-handball-balcarceno-tuvo-una-nueva.html",
           "fecha": "2026-09-25T16:25:28.285Z",
           "oficial": false,
-          "aporte": "Informó sobre la participación de la Escuela Municipal de Handball en el Circuito AsABal de Mar del Plata con detalles de los deportistas y profesores."
+          "aporte": "Informó la participación de la Escuela Municipal de Handball en el circuito AsABal en Mar del Plata y detalló el listado de jugadores y entrenadores."
         }
       ],
       "verificacion": {
@@ -2882,10 +3104,10 @@
     },
     {
       "id": "1iyhhh6",
-      "titulo": "Campo de Pato tuvo una intensa doble fecha de hockey en Balcarce",
-      "copete": "El Club Social y Campo de Pato fue escenario de un fin de semana con actividad por el Torneo AB de la Asociación Amateur Marplatense, enfrentando a equipos de Necochea y Villa Gesell con diversos resultados.",
-      "cuerpo": "Durante el fin de semana pasado, el Club Social y Campo de Pato \"Gral. Balcarce\" recibió dos jornadas de hockey sobre césped correspondientes al Torneo AB de la Asociación Amateur Marplatense. El sábado, el conjunto local se enfrentó a Del Valle de Necochea con resultados dispares, en una jornada que incluyó la participación de más de 60 jugadoras infantiles. Entre los resultados destacados de esa jornada, la séptima división se impuso por 3 a 2 y la intermedia ganó por la mínima, mientras que la sexta igualó y cayó por penales australianos, al igual que la quinta y la primera división que también sumaron derrotas.\n\nEl domingo, a pesar de las condiciones climáticas adversas, el equipo balcarceño adelantó parte de la fecha doce frente al Polideportivo Villa Gesell. En esa oportunidad, la categoría sub-16 consiguió una contundente victoria por 4 a 0, la séptima empató sin goles y cayó en los penales australianos, y la quinta división sumó una nueva caída por 3 a 2. Como se había informado tras la actividad del fin de semana, la institución local mantiene una intensa participación en el certamen regional.\n\nEn la próxima fecha del campeonato, la actividad continuará en la ciudad de Mar del Plata, donde los equipos de Campo de Pato se medirán frente a su par de Biguá.",
-      "guion": "Campo de Pato tuvo una intensa doble fecha de hockey en Balcarce",
+      "titulo": "Campo de Pato afronta una intensa doble fecha de hockey en Balcarce",
+      "copete": "El Club Social y Campo de Pato fue escenario de partidos frente a Del Valle de Necochea y Polideportivo Villa Gesell por el Torneo AB, con actividad en todas las categorías.",
+      "cuerpo": "El Club Social y Campo de Pato albergó el pasado fin de semana dos jornadas de hockey sobre césped correspondientes al Torneo AB de la Asociación Amateur Marplatense. El sábado, el conjunto local recibió a Del Valle de Necochea con actividad que incluyó a más de 60 jugadoras infantiles, reflejando el crecimiento del semillero institucional. En la tira competitiva, la séptima división se impuso por 3 a 2, la sexta igualó 3 a 3 pero cayó por penales australianos, la intermedia ganó por 1 a 0, la quinta perdió 3 a 2 y la primera cayó por 3 a 1.\n\nA pesar de las condiciones climáticas adversas, la actividad continuó el domingo con el adelento de parte de la duodécima fecha frente a Polideportivo Villa Gesell.\n\nComo se había informado en las coberturas del fin de semana anterior, la institución local mantiene una participación sostenida en el certamen regional. Tras estos encuentros, la próxima fecha del torneo se disputará en Mar del Plata, donde Campo de Pato se medirá ante Biguá.",
+      "guion": "Campo de Pato afronta una intensa doble fecha de hockey en Balcarce",
       "seccion": "Deportes",
       "medios": [
         "Infórmese Primero (FM 104.9)",
@@ -2898,23 +3120,23 @@
       "visto": "2026-09-26T03:00:42.156Z",
       "relevancia": 83,
       "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
+      "publicadaPor": "ia",
+      "publicadaCuando": "2026-09-26T07:03:52.036Z",
       "temas": [],
       "como": "automatica",
       "claves": [
-        "El Club Social y Campo de Pato recibió a Del Valle de Necochea y Villa Gesell.",
-        "La jornada del sábado contó con la participación de más de 60 jugadoras infantiles.",
-        "La próxima fecha del Torneo AB se disputará en Mar del Plata ante Biguá."
+        "Campo de Pato disputó una doble fecha como local por el Torneo AB.",
+        "El sábado enfrentó a Del Valle de Necochea con resultados dispares.",
+        "El domingo recibió a Polideportivo Villa Gesell a pesar del clima adverso.",
+        "La próxima presentación del equipo balcarceño será en Mar del Plata ante Biguá."
       ],
-      "textoRedes": "El Club Social y Campo de Pato fue escenario de un intenso fin de semana de hockey sobre césped por el Torneo AB de la Asociación Amateur Marplatense, con partidos frente a rivales de Necochea y Villa Gesell.",
+      "textoRedes": "El Club Social y Campo de Pato recibió una doble fecha de hockey sobre césped por el Torneo AB con partidos frente a Del Valle de Necochea y Polideportivo Villa Gesell. Repasá los resultados de las distintas categorías de la institución balcarceña.",
       "etiquetas": [
-        "hockey sobre césped",
+        "hockey",
         "Campo de Pato",
         "Torneo AB",
-        "Asociación Amateur Marplatense",
-        "Balcarce",
-        "deportes"
+        "deportes",
+        "Balcarce"
       ],
       "fuentesConsultadas": [
         {
@@ -2922,14 +3144,14 @@
           "enlace": "http://www.informeseprimero.com.ar/2026/09/doble-fecha-de-hockey-para-campo-de-pato.html",
           "fecha": "2026-09-25T16:18:25.329Z",
           "oficial": false,
-          "aporte": "Detalló los resultados y goleadores de las distintas categorías frente a Del Valle y Villa Gesell."
+          "aporte": "Detalló los resultados y autores de los goles en las distintas categorías frente a Del Valle de Necochea y Polideportivo Villa Gesell."
         },
         {
           "medio": "Municipalidad de Balcarce",
           "enlace": "https://balcarce.gob.ar/2026/09/25/doble-fecha-de-hockey-para-campo-de-pato/",
           "fecha": "2026-09-25T13:28:23.000Z",
           "oficial": true,
-          "aporte": "Confirmó la realización de la doble fecha de hockey en la institución balcarceña."
+          "aporte": "Confirmó la realización de la doble fecha de hockey sobre césped en el club local por el Torneo AB."
         }
       ],
       "antecedentes": [
@@ -3428,91 +3650,6 @@
       "slug": "el-concejo-pide-frenar-reclamos-a-vecinos-y-prorrogar-deudas-de"
     },
     {
-      "id": "24vfqp",
-      "titulo": "Franco Colapinto finaliza décimo en la última práctica en Bakú",
-      "copete": "El piloto argentino completó la tercera práctica libre del Gran Premio de Azerbaiyán de Fórmula 1 y se ubicó en el décimo puesto. El más rápido del entrenamiento fue el neerlandés Max Verstappen.",
-      "cuerpo": "El más rápido de la sesión fue el neerlandés Max Verstappen con un registro de 1:43.922 con su Red Bull, seguido por el británico George Russell y el británico Lewis Hamilton. La competencia en Bakú corresponde a la decimoquinta fecha del campeonato, tras la modificación del cronograma motivada por la conmemoración del Día del Recuerdo en Azerbaiyán.\n\nComo antecedentes inmediatos de la misma fecha, el piloto argentino había terminado en el décimo octavo lugar en la primera práctica libre disputada en el circuito callejero, según los registros previos informados por el medio.\n\nEn la previa de la actividad en Bakú, el compañero de equipo Pierre Gasly denunció haber recibido amenazas dirigidas a su familia y a su pareja en redes sociales, tras una polémica maniobra con el argentino en el Gran Premio de España.",
-      "guion": "Franco Colapinto finaliza décimo en la última práctica en Bakú",
-      "seccion": "Automovilismo",
-      "medios": [
-        "La Nación"
-      ],
-      "enlace": "https://www.lanacion.com.ar/deportes/colapinto-termino-10-en-la-tercera-practica-de-azerbaiyan-y-el-mas-rapido-fue-verstappen-nid25092026/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-25T12:03:28.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-26T03:30:38.768Z",
-      "relevancia": 58,
-      "local": false,
-      "publicadaPor": "ia",
-      "publicadaCuando": "2026-09-25T14:02:59.613Z",
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Colapinto terminó décimo en el tercer entrenamiento en Bakú.",
-        "Max Verstappen marcó el tiempo más rápido de la sesión.",
-        "La actividad se reprogramó por el Día del Recuerdo local."
-      ],
-      "seSabe": [
-        "Franco Colapinto finalizó en el décimo lugar de la tercera práctica libre en Bakú con un tiempo de 1:45.592.",
-        "Max Verstappen marcó el mejor tiempo de la sesión con un registro de 1:43.922 con su Red Bull.",
-        "George Russell y Lewis Hamilton completaron los primeros puestos del entrenamiento.",
-        "Lance Stroll debió abandonar la práctica tras golpear su auto contra una pared interior.",
-        "Pierre Gasly denunció haber recibido amenazas en redes sociales tras una maniobra en el Gran Premio de España."
-      ],
-      "noConfirmado": [
-        "No se especificaron detalles adicionales sobre las medidas que tomarán las autoridades ante las amenazas denunciadas por Pierre Gasly.",
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "etiquetas": [
-        "Franco Colapinto",
-        "Formula 1",
-        "Azerbaiyan"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "La Nación",
-          "enlace": "https://www.lanacion.com.ar/deportes/colapinto-termino-10-en-la-tercera-practica-de-azerbaiyan-y-el-mas-rapido-fue-verstappen-nid25092026/",
-          "fecha": "2026-09-25T12:03:28.000Z",
-          "oficial": false,
-          "aporte": "Detalles del resultado de Franco Colapinto, los tiempos de la tercera práctica en Bakú y la denuncia por amenazas de Pierre Gasly."
-        },
-        {
-          "medio": "La Nación",
-          "enlace": "https://www.lanacion.com.ar/deportes/automovilismo/colapinto-termino-18-en-la-primera-practica-del-gp-de-azerbaiyan-y-el-mas-rapido-fue-russell-nid24092026/",
-          "fecha": "2026-09-24T12:56:04.000Z",
-          "oficial": false,
-          "aporte": "Datos históricos de la primera práctica libre disputada en el circuito callejero."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "y8hgj",
-          "titulo": "Colapinto terminó 18 en la primera práctica del GP de Azerbaiyán y el más rápido fue Russell",
-          "fecha": "2026-09-24T10:07:22.000Z",
-          "ruta": "/nota/colapinto-termino-18-en-la-primera-practica-del-gp-de-azerbaiyan-y-el-y8hgj"
-        },
-        {
-          "id": "14uc9gg",
-          "titulo": "Franco Colapinto encara la tercera práctica libre y la clasificación en Bakú",
-          "fecha": "2026-09-25T07:57:16.000Z",
-          "ruta": "/nota/franco-colapinto-encara-la-tercera-practica-libre-y-la-clasificacion-14uc9gg"
-        },
-        {
-          "id": "2du9ow",
-          "titulo": "Franco Colapinto termina décimo en la práctica libre en Bakú",
-          "fecha": "2026-09-25T11:38:39.000Z",
-          "ruta": "/nota/franco-colapinto-termina-decimo-en-la-practica-libre-en-baku-2du9ow"
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "franco-colapinto-finaliza-decimo-en-la-ultima-practica-en-baku"
-    },
-    {
       "id": "1kzeqjl",
       "titulo": "Cierra la planta de Dánica en Llavallol tras casi noventa años",
       "copete": "La planta bonaerense de Dánica dejará de producir a fin de mes debido a problemas económicos, tras casi noventa años de trayectoria industrial.",
@@ -3638,6 +3775,86 @@
         "sugeridoPorIA": "MEDIA"
       },
       "slug": "el-teatro-municipal-recibe-voces-por-la-infancia-en-balcarce"
+    },
+    {
+      "id": "1sus6ai",
+      "titulo": "Comienza la actividad previa al TC Pick Up en Balcarce",
+      "copete": "Comienza la actividad previa a la octava fecha de las TC Pick Up en el autódromo Juan Manuel Fangio, con firma de autógrafos, exhibición de unidades y un acto en el Museo Fangio.",
+      "cuerpo": "Las actividades de la jornada incluyen una firma de autógrafos, exhibición de unidades y un acto oficial en el Museo Fangio.\n\nComo se había informado el veinticuatro de septiembre, la categoría nacional organizó una presentación previa con pilotos en una estación de servicio local durante la tarde del jueves.\n\nEsta competencia marca el regreso oficial de las categorías nacionales al trazado local, generando expectativa en la comunidad deportiva y en los fanáticos del automovilismo de la región.",
+      "guion": "Comienza la actividad previa al TC Pick Up en Balcarce",
+      "seccion": "Automovilismo",
+      "medios": [
+        "El Diario Balcarce"
+      ],
+      "enlace": "https://eldiariobalcarce.com.ar/firma-de-autografos-exhibicion-de-unidades-y-acto-en-el-museo-fangio-810",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-25T11:53:19.000Z",
+      "sinFecha": false,
+      "visto": "2026-09-25T12:00:43.124Z",
+      "relevancia": 79,
+      "local": true,
+      "publicadaPor": "ia",
+      "publicadaCuando": "2026-09-25T11:57:25.176Z",
+      "temas": [
+        "autodromo",
+        "tc-pick-up",
+        "fangio"
+      ],
+      "como": "automatica",
+      "claves": [
+        "Comienza la actividad previa del TC Pick Up en Balcarce",
+        "El autódromo vuelve a recibir categorías nacionales tras quince años",
+        "La programación incluye exhibición de unidades y un acto en el Museo Fangio"
+      ],
+      "seSabe": [
+        "Comienza a desarrollarse hoy la actividad previa al TC Pick Up en Balcarce.",
+        "El autódromo Juan Manuel Fangio vuelve a recibir una categoría nacional tras quince años.",
+        "Se programaron firma de autógrafos, exhibición de unidades y un acto en el Museo Fangio."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Comienza la actividad previa a la octava fecha de las TC Pick Up en el autódromo Juan Manuel Fangio de Balcarce con firma de autógrafos, exhibición de unidades y un acto en el Museo Fangio.",
+      "etiquetas": [
+        "TC Pick Up",
+        "Autodromo Juan Manuel Fangio",
+        "Balcarce"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/firma-de-autografos-exhibicion-de-unidades-y-acto-en-el-museo-fangio-810",
+          "fecha": "2026-09-25T11:53:19.000Z",
+          "oficial": false,
+          "aporte": "Informó el inicio de la actividad previa a la octava fecha del TC Pick Up con firma de autógrafos, exhibición de unidades y acto en el Museo Fangio."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "xpr0le",
+          "titulo": "El TC Pick Up realiza una firma de autógrafos en Balcarce",
+          "fecha": "2026-09-24T14:21:16.000Z",
+          "ruta": "/nota/el-tc-pick-up-realiza-una-firma-de-autografos-en-balcarce-xpr0le"
+        },
+        {
+          "id": "mvz4ty",
+          "titulo": "Reconocieron a Kevin Gómez en el Museo Fangio",
+          "fecha": "2026-09-22T19:54:30.000Z",
+          "ruta": "/nota/reconocieron-a-kevin-gomez-en-el-museo-fangio-mvz4ty"
+        },
+        {
+          "id": "1hm23zx",
+          "titulo": "El autódromo Juan Manuel Fangio reabre sus puertas en Balcarce",
+          "fecha": "2026-09-25T08:03:43.000Z",
+          "ruta": "/nota/el-autodromo-juan-manuel-fangio-reabre-sus-puertas-en-balcarce-1hm23zx"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "comienza-la-actividad-previa-al-tc-pick-up-en-balcarce"
     },
     {
       "id": "p961ye",
@@ -6398,12 +6615,12 @@
     }
   ],
   "secciones": [
-    "Tecnología",
     "Política",
-    "Cultura y agenda",
+    "Tecnología",
     "Economía",
     "Automovilismo",
     "Balcarce",
+    "Cultura y agenda",
     "Deportes",
     "Agro"
   ],
@@ -6411,17 +6628,17 @@
     {
       "nombre": "El autódromo",
       "ranura": "autodromo",
-      "cuantas": 16
+      "cuantas": 18
     },
     {
       "nombre": "Fangio",
       "ranura": "fangio",
-      "cuantas": 15
+      "cuantas": 17
     },
     {
       "nombre": "TC Pick Up",
       "ranura": "tc-pick-up",
-      "cuantas": 8
+      "cuantas": 10
     },
     {
       "nombre": "El Concejo Deliberante",
@@ -6438,7 +6655,7 @@
     "ahora": {
       "temp": 7,
       "sensacion": 4,
-      "humedad": 79,
+      "humedad": 78,
       "viento": 9,
       "rumbo": "S",
       "cielo": "Despejado",
@@ -6451,10 +6668,10 @@
         "max": 18,
         "min": 6,
         "lluvia": 0,
-        "codigo": 2,
+        "codigo": 1,
         "viento": 17,
         "milimetros": 0,
-        "cielo": "Parcialmente nublado"
+        "cielo": "Mayormente despejado"
       },
       {
         "fecha": "2026-09-27",
@@ -6463,18 +6680,18 @@
         "min": 6,
         "lluvia": 40,
         "codigo": 51,
-        "viento": 25,
+        "viento": 22,
         "milimetros": 0,
         "cielo": "Llovizna leve"
       },
       {
         "fecha": "2026-09-28",
         "dia": "lun",
-        "max": 14,
+        "max": 16,
         "min": 10,
         "lluvia": 46,
         "codigo": 51,
-        "viento": 23,
+        "viento": 22,
         "milimetros": 0,
         "cielo": "Llovizna leve"
       },
@@ -6485,7 +6702,7 @@
         "min": 9,
         "lluvia": 90,
         "codigo": 82,
-        "viento": 28,
+        "viento": 25,
         "milimetros": 56,
         "cielo": "Chaparrones muy fuertes"
       }
@@ -6931,34 +7148,16 @@
       "motivo": "internacional: sin relación con Balcarce"
     },
     {
-      "id": "1st0vmn",
+      "id": "alpjyc",
       "titulo": null,
-      "seccion": "Política",
-      "motivo": "necesita ojo humano: \"niña\", en el texto completo de la fuente (visto al reescribir)"
-    },
-    {
-      "id": "guxszb",
-      "titulo": null,
-      "seccion": "Policiales",
-      "motivo": "necesita ojo humano: \"denuncia\""
-    },
-    {
-      "id": "6fqh8k",
-      "titulo": "Magistrado propone que el INE resuelva queja de MC contra…",
-      "seccion": "Deportes",
-      "motivo": "necesita ojo humano: \"denunció\""
-    },
-    {
-      "id": "1gyfi5j",
-      "titulo": null,
-      "seccion": "País",
+      "seccion": "Cultura y agenda",
       "motivo": "necesita ojo humano: \"víctima\""
     },
     {
-      "id": "1im1170",
-      "titulo": "Otro último adiós. La familia real de Noruega despidió a…",
+      "id": "xwy0p7",
+      "titulo": "Pilar Sordo, psicóloga, sobre la estabilidad emocional…",
       "seccion": "País",
-      "motivo": "necesita ojo humano: \"murió\""
+      "motivo": "necesita ojo humano: \"investigación\""
     },
     {
       "id": "biqthx",
@@ -6991,6 +7190,12 @@
       "motivo": "necesita ojo humano: \"niña\", en el texto completo de la fuente (visto al reescribir)"
     },
     {
+      "id": "1um5cky",
+      "titulo": "Condenados a dos años por recoger a inmigrantes de pateras…",
+      "seccion": "País",
+      "motivo": "necesita ojo humano: \"acusado\""
+    },
+    {
       "id": "15wfcr",
       "titulo": null,
       "seccion": "Economía",
@@ -7021,5 +7226,5 @@
       "motivo": "necesita ojo humano: \"hospital\""
     }
   ],
-  "esperandoCuerpo": 15
+  "esperandoCuerpo": 14
 }
