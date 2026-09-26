@@ -1,6 +1,6 @@
 # Redes
 
-*Actualizado el 25/09/2026.* Qué se publica en Instagram y Facebook, cómo y cuándo. El criterio editorial (qué se publica, qué nunca sale solo, cómo se escribe, los números) está en [`CRITERIO-EDITORIAL.md`](CRITERIO-EDITORIAL.md): los números de esta página salen de ahí (`ingesta/criterio.mjs`) y se cambian ahí. Las reglas que siempre se cumplen y qué las vigila están en `REGLAS.md`; dónde corre todo, en `INFRAESTRUCTURA.md`; los textos de los perfiles, en `PERFILES.md`; las medidas de las imágenes, en `FORMATOS.md`.
+*Actualizado el 26/09/2026.* Qué se publica en Instagram y Facebook, cómo y cuándo. El criterio editorial (qué se publica, qué nunca sale solo, cómo se escribe, los números) está en [`CRITERIO-EDITORIAL.md`](CRITERIO-EDITORIAL.md): los números de esta página salen de ahí (`ingesta/criterio.mjs`) y se cambian ahí. Las reglas que siempre se cumplen y qué las vigila están en `REGLAS.md`; dónde corre todo, en `INFRAESTRUCTURA.md`; los textos de los perfiles, en `PERFILES.md`; las medidas de las imágenes, en `FORMATOS.md`.
 
 ## 1. La competencia
 
@@ -20,8 +20,11 @@ toca a este documento).
 *Andando en vivo desde el 24/09 (Meta destrabó la cuenta). El espejo a
 Instagram, el reflejo de cada reel como historia y los tres podcasts se
 sumaron el 23 y 24/09; el reflejo como historia y las historias se vieron
-salir bien el 24/09. Falta mirar unos días el link en los posteos y el
-podcast con notas de texto propio.*
+salir bien el 24/09. **El 26/09 se publicó la app de Meta** (hasta entonces
+estaba en modo desarrollo y el público no veía los posteos ni los reels de
+Facebook): falta comprobar que ya se ven (`PENDIENTES.md`; el workflow "Ver
+Facebook" muestra lo que Meta tiene publicado). Falta también mirar unos días
+el link en los posteos y el podcast con notas de texto propio.*
 
 ### La regla de fondo
 
@@ -139,8 +142,8 @@ Para probar el cierre sin mandar nada: Actions → Vigilancia → Run workflow �
 
 ### Qué sale hoy y a qué hora (hora de Balcarce)
 
-**Facebook, automático.** Cada 30 minutos (a los :10 y :40) el sistema mira
-la portada y publica **una** nota si cumple todo esto:
+**Facebook, automático.** En cada corrida del reloj (cada 30 minutos) el sistema
+mira la portada y publica **una** nota si cumple todo esto:
 
 | Regla | Valor |
 |---|---|
@@ -384,9 +387,10 @@ En el pie de la web (y, más corto, en la bio de las dos cuentas):
 > lo revisa una persona antes de salir. Las voces de los videos también son
 > de IA.
 
-(Es el texto del pie de la web desde el 25/09. Antes decía "con revisión
-humana", y ninguna nota la había tenido. Las biografías cortas están en
-`PERFILES.md`.)
+(Es el texto literal del pie de la web, `web/app/layout.js`, desde el 25/09.
+Antes decía "con revisión humana", y ninguna nota la había tenido. Hoy la web
+llama "notas" a lo que ahí se llama "resúmenes": si se cambia el pie, cambiarlo
+acá también. Las biografías cortas están en `PERFILES.md`.)
 
 No es humildad: es lo que evita que el día que alguien lo descubra parezca que
 lo estábamos escondiendo.
@@ -408,8 +412,10 @@ lo estábamos escondiendo.
 - **Usuario del sistema** `publicador-radar`, con la página (Contenido y
   Estadísticas), el Instagram (Contenido y Estadísticas) y la app (Desarrollar
   app). Su token **no vence** y está guardado como el secreto `META_TOKEN` en
-  GitHub. No hizo falta la revisión de Meta que se preveía: en modo desarrollo,
-  con cuentas propias, los permisos andan.
+  GitHub. En modo desarrollo, con cuentas propias, los permisos andan para
+  publicar, pero **el público no ve** lo publicado: por eso la app se **publicó
+  (modo activo) el 26/09**. El campo de dominios de la app quedó vacío (no lo
+  exigieron).
 
 ### Secretos y variables (GitHub → Settings → Secrets and variables → Actions)
 
@@ -440,6 +446,11 @@ tiene alternativa: si falta, los reels no arrancan. Los tokens y las claves
 | `redes/guiones.mjs` | El libro de recursos: saludos, aperturas, conectores, cierres y guiones del clima, la farmacia, lo semanal y los podcasts, con variedad por fecha; y `revisarTexto`, las reglas de toda pieza |
 | `redes/auditoria-voz.mjs` y `reels/auditar-voz.mjs` | La auditoría de voz (clips de prueba, transcripción y juicio) |
 | `redes/publicar.mjs` | El programa: `--verificar`, `--facebook`, `--enlaces` (la dirección pública de los podcasts), `--piezas [--sin-horario]` |
+| `redes/contrato.mjs` | El contrato del día: qué tiene que salir en cada red y en qué estado está cada pieza (función pura) |
+| `redes/auditar-redes.mjs` | Compara el contrato con lo que Meta tiene publicado (`auditar-redes.yml`; el cierre de las 23:30 usa lo mismo) |
+| `redes/espejo.mjs` | Cuáles posteos de Facebook se quedaron sin su foto en Instagram y hay que reintentar |
+| `redes/ver-facebook.mjs` | Sólo mira qué hay publicado de verdad en la página de Facebook (`ver-facebook.yml`) |
+| `redes/avisos.mjs` y `redes/estadisticas.mjs` | Qué avisos manda el vigilante por WhatsApp y las estadísticas de las 9 y las 21 |
 | `redes/datos.mjs` | Arma los datos del día desde la web, para generar sin panel |
 | `reels/claves.mjs` | Las dos claves de Gemini |
 | `redes/reloj.mjs` | Dice qué pieza toca a esta hora (sin instalar nada) |

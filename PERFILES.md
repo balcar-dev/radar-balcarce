@@ -1,6 +1,6 @@
 # Perfiles de Instagram y Facebook
 
-*Actualizado el 26/09/2026.* Reemplaza a `BIOS.md`. Los textos **todavía no
+*Actualizado el 26/09/2026.* Los textos **todavía no
 están aplicados**: hay que cambiarlos a mano en cada red (`PENDIENTES.md`,
 sección B). Nada de acá inventa datos: sólo dice lo que el medio hace hoy.
 
@@ -15,8 +15,8 @@ sección B). Nada de acá inventa datos: sólo dice lo que el medio hace hoy.
    `REGLAS.md` (cada nota dice quién la escribió).
 4. **Adónde ir**: `radarbalcarce.com`, **en los dos perfiles**, siempre
    escrito así (nunca `.com.ar`).
-5. **Tono**: el del medio (`REDES.md` § "El tono"). Sin "IMPACTANTE", sin
-   promesas.
+5. **Tono**: el del medio (`CRITERIO-REDES.md`, sección 2, y `CRITERIO-EDITORIAL.md`,
+   sección 4). Sin "IMPACTANTE", sin promesas.
 
 ## Instagram (`@radarbalcarce`)
 

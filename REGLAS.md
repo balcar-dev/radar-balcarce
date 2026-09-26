@@ -1,12 +1,16 @@
 # Reglas permanentes
 
-*Actualizado el 25/09/2026.* Lo que Hernán y Andrés pidieron que **se cumpla
+*Actualizado el 26/09/2026.* Lo que Hernán y Andrés pidieron que **se cumpla
 siempre**, junto con lo que lo vigila. Las reglas editoriales se explican
 enteras en [`CRITERIO-EDITORIAL.md`](CRITERIO-EDITORIAL.md); acá está sólo la
 lista y qué prueba cuida cada una. Una regla sin vigilancia se rompe sola
 con el tiempo: por eso cada una dice qué prueba (`pruebas/`, corre con
 `npm test` y antes de cada publicación en GitHub) o qué chequeo del vigilante
 (`redes/vigilar.mjs`, cada 30 minutos, avisa por WhatsApp) la protege.
+
+Hay **40 reglas**, numeradas del 1 al 40 sin huecos ni repetidas. Están
+agrupadas por tema (la web, las redes, cómo se trabaja) y no por número, porque
+los números no se reordenan: otros documentos los citan.
 
 Cómo leer la columna "Qué la cuida":
 
@@ -35,7 +39,6 @@ Cómo leer la columna "Qué la cuida":
 | 23 | **Una nota sin cuerpo no se publica** (25/09). Una nota automática sólo va a la portada, las secciones, el feed, el sitemap y las redes si tiene cuerpo de verdad: 70 palabras o más, distinto de la bajada. Si no, queda "esperando cuerpo" (`esperandoCuerpo` en `portada.json`, y el resumen de las 21 lo dice). Un cuerpo vacío nunca cuenta como "ya hecho": la nota se vuelve a intentar, hasta tres veces. Lo que publicó una persona se respeta (el panel pide confirmarlo). Las páginas viejas sin cuerpo conservan su página pero no vuelven a las listas. | Prueba: `pruebas/cuerpo.test.mjs` ("si el cuerpo falla las dos veces, la nota NO se publica sin cuerpo", "la memoria entre corridas NO reusa un cuerpo vacío", "generar-datos no publica una nota automática sin cuerpo", "Facebook y los podcasts no toman una nota automática sin cuerpo", "cada nota se le pide a Gemini como mucho tres veces", "un dato inventado en el cuerpo se va con SU oración", "sin texto completo y con un resumen corto no se le pide nada a Gemini") y `pruebas/editor.test.mjs` ("desde el panel no se publica una nota sin cuerpo sin confirmarlo"). Vigilante: `pocos-cuerpos` y la línea "Esperando cuerpo" del resumen. |
 | 24 | **El lector ve la nota, no el análisis** (25/09). En la página: título, bajada, cuerpo y un desplegable chico y cerrado "Fuentes (N)" con el nombre de cada medio y su enlace (que es la atribución). Las claves, qué se sabe, qué falta confirmar, lo que aportó cada fuente y el nivel de verificación se guardan y se ven en el panel, no en la web. | Prueba: `pruebas/editor.test.mjs` ("la página de la nota muestra sólo la nota y un desplegable cerrado…", "las fuentes del lector…", "el panel muestra el análisis interno (plegado)") y `pruebas/portada.test.mjs` ("la fuente sí queda en la página de cada nota"). |
 | 25 | **Lo que no es una nota, o no está verificado, no sale solo** (25/09). La cotización del dólar (en el título) queda amarilla: se muestra en `/dolar`. Una nota con verificación BAJA (un solo medio y una denuncia o declaración de parte, o datos centrales sin confirmar) espera a una persona, como una amarilla. | Prueba: `pruebas/semaforo.test.mjs` ("una nota de la cotización del dólar no sale sola…", "lo que habla de plata pero no es la cotización sí sale") y `pruebas/editor.test.mjs` ("con verificación BAJA la nota no sale sola…"). |
-
 | 26 | **El criterio editorial es uno solo y la IA lo lee tal cual** (25/09). `CRITERIO-EDITORIAL.md` es el único documento editorial; la instrucción de la IA sale de su sección 12, sin copia en el código, y si el archivo falta o le falta una parte la reescritura no arranca. Cada número de su tabla "Los números" es el que usa el código. | Prueba: `pruebas/criterio.test.mjs` ("la tabla… dice lo mismo que el código, fila por fila", "la IA lee la instrucción de CRITERIO-EDITORIAL.md, no de una copia en el código", "sin criterio no se escribe…", "los números que el documento repite en el texto son los de la tabla"). |
 | 27 | **El enlace de cada fuente es la página de la nota original**, nunca un archivo interno del medio (25/09: las notas de Infórmese Primero enlazaban la entrada XML del feed de Blogger). El identificador de las notas no cambia. | Prueba: `pruebas/informese.test.mjs` ("el enlace de la nota es la página…", "el identificador de la nota no cambia", "al lector nunca le llega el XML de un feed…"). |
 

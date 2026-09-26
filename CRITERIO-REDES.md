@@ -1,6 +1,6 @@
 # Criterio de las redes de Radar Balcarce
 
-Este es **el documento único** de todo lo que sale en Instagram y Facebook: cómo
+*Actualizado el 26/09/2026.* Este es **el documento único** de todo lo que sale en Instagram y Facebook: cómo
 suena la voz, qué dice cada pieza, qué no dice nunca. Hernán y Andrés lo pidieron
 así: que cada cosa de las redes tenga su criterio, que la voz sea **siempre la
 misma locutora**, que siempre sea "Radar Balcarce" y que la página sea siempre
