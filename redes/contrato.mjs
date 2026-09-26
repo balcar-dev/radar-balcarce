@@ -36,7 +36,7 @@
 
 import { CONTRATO_DIARIO, FACEBOOK, SECCIONES_QUE_ESPERAN_PERSONA } from '../ingesta/criterio.mjs';
 import { temaParecido, esNotaPropia } from './elegir.mjs';
-import { diaAR, minutoDelDiaAR } from '../ingesta/zona.mjs';
+import { diaAR, minutoDelDiaAR, minutosDeHora } from '../ingesta/zona.mjs';
 import { cronogramaDelDia, ventanaDe, HORAS_REELS } from './piezas.mjs';
 import { esperaCuerpo } from '../web/lib/cuerpo.js';
 
@@ -62,7 +62,6 @@ const ETIQUETAS_FIJAS = {
   'clima-manana': 'clima mañana', farmacia: 'farmacia', 'clima-noche': 'clima noche', utiles: 'teléfonos útiles',
 };
 
-const aMinutos = (hhmm) => { const [h, m] = String(hhmm).split(':').map(Number); return h * 60 + (m || 0); };
 const alMediodia = (fecha) => new Date(`${fecha}T12:00:00-03:00`);
 
 /**
@@ -86,7 +85,7 @@ export function piezasDelContrato(fecha) {
   if (cronograma.some((p) => p.nombre === 'utiles')) {
     lista.push({ id: 'historia:utiles', grupo: 'utiles', nombre: 'utiles', etiqueta: ETIQUETAS_FIJAS.utiles, tipo: 'STORIES', hora: horaDe('utiles'), ventana: ventanaDe('utiles'), semanal: true });
   }
-  return lista.sort((a, b) => aMinutos(a.hora) - aMinutos(b.hora));
+  return lista.sort((a, b) => minutosDeHora(a.hora) - minutosDeHora(b.hora));
 }
 
 /** Cómo va una pieza que no salió: 'pendiente' (todavía no es su hora, o está
@@ -96,7 +95,7 @@ export function estadoDeLaPieza({ hora, ventana, fecha, ahora }) {
   if (fecha > hoy) return { estado: 'pendiente', fase: 'futura' };
   if (fecha < hoy) return { estado: 'falta', fase: 'vencida' };
   const m = minutoDelDiaAR(ahora);
-  const inicio = aMinutos(hora);
+  const inicio = minutosDeHora(hora);
   const fin = Math.min(inicio + ventana, 24 * 60); // lo de un día no sale al siguiente
   if (m < inicio) return { estado: 'pendiente', fase: 'futura' };
   if (m < fin) return { estado: 'pendiente', fase: 'a-tiempo' };

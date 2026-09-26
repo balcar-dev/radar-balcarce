@@ -15,7 +15,7 @@
 // Sin red y sin reloj propio: se prueba entera.
 
 import { yaPublicada } from './elegir.mjs';
-import { diaAR, horaAR, minutoDelDiaAR, diaSemanaAR } from '../ingesta/zona.mjs';
+import { diaAR, horaAR, minutoDelDiaAR, diaSemanaAR, minutosDeHora } from '../ingesta/zona.mjs';
 import { horariosDe, toca } from '../panel/horarios.mjs';
 import { diaRotativoDeUtiles } from '../ingesta/utiles.mjs';
 import { CONTRATO_DIARIO } from '../ingesta/criterio.mjs';
@@ -122,11 +122,6 @@ export function pieDePieza(pieza) {
   return `${pieza.titulo}\n\nMás en ${SITIO}`;
 }
 
-const aMinutos = (hhmm) => {
-  const [h, m] = String(hhmm).split(':').map(Number);
-  return h * 60 + (m || 0);
-};
-
 // Los teléfonos útiles rotan de lunes a viernes, una semana distinta cada vez
 // (ingesta/utiles.mjs). Esa regla es la única: la usan también reels/plan.mjs y
 // el panel, vía `toca` de panel/horarios.mjs. Se re-exporta con el nombre de
@@ -181,12 +176,12 @@ export function cronogramaDelDia(fecha = new Date(), { estado = {} } = {}) {
     ...Array.from({ length: HISTORIAS_DE_NOTAS }, (_, i) => (
       { nombre: `historia${i + 1}`, tipo: 'historia', hora: horaHistoriaDeNota(i) }
     )),
-  ].sort((a, b) => aMinutos(a.hora) - aMinutos(b.hora));
+  ].sort((a, b) => minutosDeHora(a.hora) - minutosDeHora(b.hora));
 }
 
 /** ¿Está dentro de su hora? Desde que le toca hasta que vence la ventana. */
 function enHora(hora, ahora, ventana) {
-  const desde = aMinutos(hora);
+  const desde = minutosDeHora(hora);
   const ahoraMin = minutoDelDiaAR(ahora);
   return ahoraMin >= desde && ahoraMin < desde + ventana;
 }
@@ -234,7 +229,7 @@ export function piezasQueTocan({
   return [...piezas]
     .filter((p) => !yaPublicada(libro, red, claveDePieza(p.nombre, ahora)))
     .filter((p) => sinHorario || enHora(p.hora, ahora, ventana ?? ventanaDe(p.nombre)))
-    .sort((a, b) => aMinutos(a.hora) - aMinutos(b.hora))
+    .sort((a, b) => minutosDeHora(a.hora) - minutosDeHora(b.hora))
     .slice(0, sinHorario ? piezas.length : porCorrida);
 }
 

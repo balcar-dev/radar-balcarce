@@ -35,3 +35,9 @@ export function diaSemanaAR(fecha = new Date()) {
 export function horaCortaAR(fecha) {
   return new Date(fecha).toLocaleTimeString('es-AR', { hour: '2-digit', minute: '2-digit', hour12: false, timeZone: ZONA });
 }
+
+/** Los minutos desde la medianoche de una hora escrita "HH:MM" ("09:30" es 570). */
+export function minutosDeHora(hhmm) {
+  const [h, m] = String(hhmm).split(':').map(Number);
+  return h * 60 + (m || 0);
+}

@@ -4,7 +4,7 @@
 // seguir marcando Balcarce.
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { diaAR, horaAR, minutoDelDiaAR, diaSemanaAR, horaCortaAR } from '../ingesta/zona.mjs';
+import { diaAR, horaAR, minutoDelDiaAR, diaSemanaAR, horaCortaAR, minutosDeHora } from '../ingesta/zona.mjs';
 
 // 22:30 del sábado 26/09 en Balcarce = 01:30 UTC del domingo 27/09.
 const NOCHE = new Date('2026-09-27T01:30:00Z');
@@ -27,4 +27,10 @@ test('el día de la semana cuenta desde el domingo (0) y sigue a Balcarce', () =
   assert.equal(diaSemanaAR(NOCHE), 6); // sábado, aunque en UTC ya sea domingo
   assert.equal(diaSemanaAR(new Date('2026-09-27T12:00:00-03:00')), 0);
   assert.equal(diaSemanaAR(new Date('2026-09-28T12:00:00-03:00')), 1);
+});
+
+test('una hora escrita "HH:MM" se cuenta en minutos desde la medianoche', () => {
+  assert.equal(minutosDeHora('00:00'), 0);
+  assert.equal(minutosDeHora('09:30'), 570);
+  assert.equal(minutosDeHora('22:00'), 1320);
 });
