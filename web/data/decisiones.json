@@ -1,5 +1,5 @@
 {
-  "exportado": "2026-09-26T08:23:16.495Z",
+  "exportado": "2026-09-26T08:33:05.600Z",
   "decisiones": {
     "1951120": {
       "estado": "automatica",
@@ -23924,6 +23924,163 @@
         "nivel": "MEDIA",
         "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
         "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "x0r3gd": {
+      "estado": "automatica",
+      "titulo": "Avanzan las negociaciones para la continuidad de Lionel Scaloni en la selección",
+      "copete": "La Asociación del Fútbol Argentino negocia la renovación del contrato de Lionel Scaloni al frente del seleccionado nacional. El vínculo actual finaliza en diciembre próximo.",
+      "cuerpo": "En paralelo, el cuerpo técnico se prepara para los próximos compromisos amistosos en el marco de la ventana FIFA, que incluirán partidos en Córdoba y Buenos Aires. El seleccionado se medirá ante Bolivia, Burkina Faso y Benín, en un encuentro este último previsto para el seis de octubre que marcará la despedida oficial del capitán Lionel Messi del combinado nacional.\n\nSemanas atrás, el cuerpo técnico había asistido a presenciar un encuentro de los Juegos Suramericanos en medio de los diversos rumores sobre su continuidad en el cargo.",
+      "guion": "Avanzan las negociaciones para la continuidad de Lionel Scaloni en la selección",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-26T08:33:05.501Z",
+      "claves": [
+        "La AFA negocia la renovación del contrato de Lionel Scaloni.",
+        "El actual vínculo del entrenador finaliza en diciembre.",
+        "El seleccionado se prepara para una serie de amistosos en la ventana FIFA.",
+        "El próximo seis de octubre será la despedida de Lionel Messi."
+      ],
+      "seSabe": [
+        "La Asociación del Fútbol Argentino negocia la renovación del contrato de Lionel Scaloni.",
+        "El vínculo actual del entrenador finaliza en diciembre próximo.",
+        "Scaloni y el presidente Claudio Tapia mantuvieron una reunión en el predio de Ezeiza.",
+        "El seleccionado argentino disputará partidos amistosos ante Bolivia, Burkina Faso y Benín.",
+        "El seis de octubre se realizará la despedida oficial de Lionel Messi."
+      ],
+      "noConfirmado": [
+        "No se informó si el acuerdo para la renovación del contrato se concretará en lo inmediato."
+      ],
+      "textoRedes": "La Asociación del Fútbol Argentino se encuentra en negociaciones para renovar el contrato de Lionel Scaloni como entrenador de la selección nacional. El vínculo actual finaliza en diciembre y la dirigencia busca asegurar su continuidad de cara al próximo ciclo mundialista.",
+      "etiquetas": [
+        "Lionel Scaloni",
+        "Seleccion Argentina",
+        "AFA",
+        "Claudio Tapia",
+        "Lionel Messi",
+        "Fútbol"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/espana/agencias/2026/09/26/argentina-ya-trabaja-en-la-renovacion-de-lionel-scaloni-como-seleccionador/",
+          "fecha": "2026-09-26T08:16:07.000Z",
+          "oficial": false,
+          "aporte": "Detalló los detalles de la reunión entre Scaloni y Tapia, la duración del contrato y la agenda de partidos amistosos."
+        },
+        {
+          "medio": "Clarín",
+          "enlace": "https://www.clarin.com/deportes/claudio-chiqui-tapia-mostro-lionel-scaloni-afa-anuncio-inicio-charlas-renovacion-dt-frente-seleccion-argentina_0_9K5SSRgrzB.html",
+          "fecha": "2026-09-25T23:31:37.000Z",
+          "oficial": false,
+          "aporte": "Aportó las declaraciones del entrenador en Ezeiza sobre la falta de reuniones previas y su flexibilidad respecto a la continuidad."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1mqxijp",
+          "titulo": "Lionel Scaloni y el cuerpo técnico cenaron en Buenos Aires",
+          "fecha": "2026-09-25T13:00:54.000Z",
+          "ruta": "/nota/lionel-scaloni-y-su-cuerpo-tecnico-cenan-en-belgrano-1mqxijp"
+        },
+        {
+          "id": "pqjedg",
+          "titulo": "Lionel Scaloni, Aimar, Samuel y todo el cuerpo técnico de la Selección vieron la victoria de Argentina sobre Uruguay en los Suramericanos",
+          "fecha": "2026-09-19T19:10:27.000Z",
+          "ruta": "/nota/lionel-scaloni-aimar-samuel-y-todo-el-cuerpo-tecnico-de-la-seleccion-pqjedg"
+        },
+        {
+          "id": "n1lrk8",
+          "titulo": "Lionel Scaloni, sobre su continuidad en la Selección Argentina: \"Lo intentaremos, estemos o no nosotros\"",
+          "fecha": "2026-09-19T12:51:15.000Z",
+          "ruta": "/nota/lionel-scaloni-sobre-su-continuidad-en-la-seleccion-argentina-lo-n1lrk8"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      }
+    },
+    "1turq3u": {
+      "estado": "automatica",
+      "titulo": "Proyectan reconstruir el puente histórico de Arroyo Venado en octubre",
+      "copete": "Vecinos y productores llevan más de doscientos días sin poder circular tras la caída de la estructura que conecta Guaminí y Carhué. Las autoridades provinciales y municipales anunciaron plazos para las obras.",
+      "cuerpo": "La interrupción del tránsito afecta a unos setenta habitantes locales y complica las actividades comerciales y agropecuarias de la región, obligando a realizar un desvío de setenta kilómetros en lugar del trayecto habitual de veinticinco.\n\nTras meses de reclamos y promesas incumplidas de un paso provisorio que incluyeron la colocación fallida de escombros en un vado cercano, el gobierno provincial y el municipio de Guaminí anunciaron que la reconstrucción comenzará a mediados de octubre a través de la Dirección Provincial de Hidráulica y demandará un mes de trabajo. Por su parte, los vecinos cuestionaron la falta de respuestas y señalaron que se desestimó un proyecto vial elaborado por la propia comunidad durante una asamblea realizada en julio.",
+      "guion": "Proyectan reconstruir el puente histórico de Arroyo Venado en octubre",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-26T08:33:05.501Z",
+      "seSabe": [
+        "El puente fue construido en mil novecientos treinta y colapsó tras una creciente que socavó sus bases.",
+        "La falta del paso afecta a los setenta habitantes de la zona y duplica los trayectos hacia Carhué y Guaminí.",
+        "La Provincia y el municipio de Guaminí informaron que la reconstrucción se realizará en octubre y tomará treinta días."
+      ],
+      "noConfirmado": [
+        "No se precisó el costo total de la obra de reconstrucción anunciada por las autoridades provinciales.",
+        "No se detalló si habrá un paso provisorio operativo antes del inicio de los trabajos definitivos.",
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "etiquetas": [
+        "Arroyo Venado",
+        "Guaminí",
+        "Adolfo Alsina",
+        "Puente"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/economia/campo/impotencia-y-bronca-se-cayo-un-puente-de-1930-y-llevan-220-dias-sin-poder-circular-nid25092026/",
+          "fecha": "2026-09-26T08:24:59.000Z",
+          "oficial": false,
+          "aporte": "Detalló los plazos de obra anunciados por la Provincia y el municipio de Guaminí, y los reclamos vecinales."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "16skygn": {
+      "estado": "automatica",
+      "titulo": "El ingreso de camiones a puertos supera al año pasado",
+      "copete": "El movimiento de camiones con granos hacia los distintos puertos se mantiene intenso pese a haber pasado el pico de la cosecha, impulsado por una mayor producción y una demanda activa.",
+      "cuerpo": "El incremento responde a una campaña que dejó una cosecha récord, especialmente de maíz, cuya recolección se extendió más de lo habitual debido a cuestiones climáticas.\n\nEspecialistas señalaron que la actividad se sostiene por una demanda internacional firme y por precios favorables para la comercialización. Además, indicaron que los productores no retienen la mercadería ante la falta de expectativas de devaluación o medidas cambiarias extraordinarias.\n\nEl Gran Rosario concentró el mayor crecimiento en la recepción de vehículos, beneficiado también por el nivel del río Paraná, que permite una mayor carga en los buques. El trigo también registró una suba moderada en los arribos respecto al período anterior.",
+      "guion": "El ingreso de camiones a puertos supera al año pasado",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-26T08:33:05.501Z",
+      "claves": [
+        "Creció el arribo de camiones con granos en septiembre.",
+        "El maíz duplicó sus entregas respecto al año pasado.",
+        "El Gran Rosario concentró el mayor incremento.",
+        "La demanda internacional y los precios sostienen la actividad."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El movimiento de camiones con granos a puertos y molinos se mantiene intenso este mes y supera al del año pasado, impulsado por una cosecha récord de maíz y una demanda internacional activa.",
+      "etiquetas": [
+        "cosecha",
+        "camiones",
+        "puertos",
+        "maíz",
+        "granos"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/economia/campo/con-la-cosecha-ya-fuera-de-su-pico-se-mantiene-muy-fuerte-el-ingreso-de-camiones-a-los-puertos-nid25092026/",
+          "fecha": "2026-09-26T08:24:05.000Z",
+          "oficial": false,
+          "aporte": "Aportó los datos sobre el ingreso de camiones, el volumen de la cosecha, las declaraciones de referentes del sector y la situación en el Gran Rosario."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "ALTA"
       }
     }
   },
