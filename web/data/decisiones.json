@@ -1,5 +1,5 @@
 {
-  "exportado": "2026-09-27T02:30:12.280Z",
+  "exportado": "2026-09-27T02:50:13.401Z",
   "decisiones": {
     "1951120": {
       "estado": "automatica",
@@ -15821,29 +15821,32 @@
     },
     "19znilf": {
       "estado": "automatica",
-      "titulo": "Preocupan los recortes de PAMI en Balcarce",
-      "copete": "La reducción de coberturas y prestaciones de la obra social genera inquietud entre los afiliados locales. El impacto se siente en el acceso a medicamentos y servicios médicos.",
-      "cuerpo": "Los cambios recientes en las prestaciones y coberturas de la obra social generan incertidumbre en la comunidad de jubilados y pensionados del distrito. Los beneficiarios advierten sobre las dificultades que esto genera para afrontar los gastos en farmacia y atención médica habitual.\n\nLa situación se enmarca en un contexto de revisión de recursos a nivel general que repercute de manera directa en las familias locales dependientes de la entidad.",
-      "guion": "Preocupan los recortes de PAMI en Balcarce",
+      "titulo": "Informan los servicios de sepelios de la Cooperativa de Electricidad en Balcarce",
+      "copete": "Se dieron a conocer los registros de los servicios de sepelios brindados por la Cooperativa de Electricidad en el partido de Balcarce.",
+      "cuerpo": "La Cooperativa de Electricidad «General Balcarce» Limitada informó los detalles correspondientes a los servicios de sepelios y honras fúnebres llevados a cabo en el distrito, según los registros difundidos por la entidad local.\n\nLos procedimientos incluyeron los traslados, los velatorios en las salas habilitadas y las posteriores inhumaciones en el Cementerio Municipal o cremaciones en instalaciones privadas, de acuerdo con cada caso y con la participación de familiares y allegados.\n\nEstas comunicaciones habituales permiten a la comunidad local tomar conocimiento de los decesos registrados en las últimas semanas y de los cronogramas dispuestos para las despedidas en las salas velatorias de la ciudad y las localidades del partido.",
+      "guion": "Informan los servicios de sepelios de la Cooperativa de Electricidad en Balcarce",
       "deIA": true,
       "por": "ia",
-      "cuando": "2026-09-25T09:30:47.439Z",
+      "cuando": "2026-09-27T02:50:13.340Z",
       "claves": [
-        "Preocupación por recortes de PAMI",
-        "Impacto en jubilados locales",
-        "Menor cobertura en medicamentos"
+        "Se detallaron los servicios de sepelios de la Cooperativa de Electricidad.",
+        "Los procedimientos incluyeron traslados, velatorios e inhumaciones.",
+        "Las ceremonias se realizaron en el Cementerio Municipal y crematorios privados."
       ],
       "seSabe": [
-        "Hay inquietud entre los afiliados locales por los recortes de PAMI."
+        "La Cooperativa de Electricidad de Balcarce estuvo a cargo de los servicios de sepelios.",
+        "Se realizaron inhumaciones en el Cementerio Municipal y cremaciones en destinos privados.",
+        "Se comunicaron los cronogramas de los servicios para familiares y allegados."
       ],
       "noConfirmado": [
         "No pudo ser contrastado de forma independiente con las fuentes consultadas."
       ],
-      "textoRedes": "Hay preocupación entre los jubilados de Balcarce por los recortes en las coberturas y prestaciones de PAMI que afectan el acceso a medicamentos y atención médica.",
+      "textoRedes": "La Cooperativa de Electricidad dio a conocer los detalles sobre los servicios de sepelios y los cronogramas de despedidas en el partido de Balcarce.",
       "etiquetas": [
-        "PAMI",
+        "sepelios",
+        "Cooperativa de Electricidad",
         "Balcarce",
-        "recortes"
+        "fallecimientos"
       ],
       "fuentesConsultadas": [
         {
@@ -15851,7 +15854,7 @@
           "enlace": "https://eldiariobalcarce.com.ar/preocupacion-por-los-recortes-de-pami-y-el-impacto-en-la-atencion-de-pacientes-339",
           "fecha": null,
           "oficial": false,
-          "aporte": "Informó sobre la preocupación en la ciudad por los recortes de PAMI."
+          "aporte": "Aportó el registro completo de los servicios de sepelios y decesos informados por la Cooperativa de Electricidad en Balcarce."
         }
       ],
       "verificacion": {
