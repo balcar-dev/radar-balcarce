@@ -1,5 +1,5 @@
 {
-  "exportado": "2026-09-27T18:48:47.877Z",
+  "exportado": "2026-09-27T19:19:11.844Z",
   "decisiones": {
     "1951120": {
       "estado": "automatica",
@@ -34647,6 +34647,209 @@
           "titulo": "Mangoni sube al podio en la serie del TC Pick Up en Balcarce",
           "fecha": "2026-09-27T16:00:48.000Z",
           "ruta": "/nota/mangoni-sube-al-podio-y-los-ciantini-corren-en-balcarce-146c1m7"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "15jd9hb": {
+      "estado": "automatica",
+      "titulo": "Hernán Palazzo gana en el regreso del TC Pick Up en Balcarce",
+      "copete": "El automovilismo nacional volvió al autódromo Juan Manuel Fangio después de quince años. Ante 27.000 personas, Hernán Palazzo se quedé con el triunfo y el piloto local Diego Ciantini terminó segundo.",
+      "cuerpo": "El autódromo municipal Juan Manuel Fangio recibió a 27.000 espectadores en una jornada histórica para el TC Pick Up, que volvió a la ciudad después de quince años. La masiva concurrencia obligó a cerrar el ingreso de vehículos al estacionamiento al mediodía por capacidad completa. La competencia reunió al TC Pista Pick Up y al TC Pick Up en el circuito serrano.\n\nEn la prueba principal, Hernán Palazzo se impuso tras una definición cambiante que lo tuvo como lider en las últimas cuatro vueltas. El balcarceño Diego Ciantini completó un podio histórico al finalizar segundo ante su gente, mientras que Otto Fritzler ocupó el tercer lugar. En tanto, Mariano Werner debió abandonar a poco del final por un inconveniente mecánico cuando peleaba adelante. Por su parte, Antonino Sganga se adjudicó la victoria en el TC Pista Pick Up en su debut en el trazado.\n\nEl evento marcó la reanudación de la actividad automovilística nacional en el escenario local, tal como se había anunciado en la previa del fin de semana.",
+      "guion": "Hernan Palazzo gana en el regreso del TC Pick Up en Balcarce",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T19:19:11.768Z",
+      "claves": [
+        "Hernán Palazzo ganó la final del TC Pick Up en el autódromo Juan Manuel Fangio.",
+        "El balcarceño Diego Ciantini terminó en el segundo puesto ante su gente.",
+        "Unas 27.000 personas asistieron al regreso del automovilismo nacional tras quince años.",
+        "Antonino Sganga se impuso en la categoría TC Pista Pick Up."
+      ],
+      "seSabe": [
+        "Hernán Palazzo ganó la final del TC Pick Up en Balcarce.",
+        "Diego Ciantini finalizó segundo y Otto Fritzler tercero en la competencia principal.",
+        "Antonino Sganga se quedó con la victoria en el TC Pista Pick Up.",
+        "Asistieron 27.000 personas al autódromo municipal Juan Manuel Fangio.",
+        "Mariano Werner abandonó la carrera a cuatro vueltas del final por un problema mecánico."
+      ],
+      "textoRedes": "El automovilismo nacional volvió al autódromo Juan Manuel Fangio ante 27.000 personas. Hernán Palazzo ganó en el TC Pick Up y el balcarceño Diego Ciantini terminó segundo en una jornada histórica para la ciudad.",
+      "etiquetas": [
+        "automovilismo",
+        "TC Pick Up",
+        "Autodromo Juan Manuel Fangio",
+        "Hernan Palazzo",
+        "Diego Ciantini",
+        "Balcarce"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infórmese Primero (FM 104.9)",
+          "enlace": "http://www.informeseprimero.com.ar/2026/09/hernan-palazzo-gano-en-el-regreso-del.html",
+          "fecha": "2026-09-27T18:52:24.300Z",
+          "oficial": false,
+          "aporte": "Detalles completos sobre el desarrollo de las finales del TC Pick Up y TC Pista Pick Up, concurrencia de público y alternativas de los pilotos."
+        },
+        {
+          "medio": "0223 (Mar del Plata)",
+          "enlace": "https://www.0223.com.ar/nota/2026-9-27-15-9-0-el-regreso-sonado-del-automovilismo-tuvo-dueno-hernan-palazzo-gano-en-balcarce-ante-27-000-personas",
+          "fecha": "2026-09-27T18:14:00.000Z",
+          "oficial": false,
+          "aporte": "Confirmación de la asistencia de 27.000 personas y el desarrollo de la jornada en el autódromo Juan Manuel Fangio."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "4aj9uy",
+          "titulo": "Hernán Palazzo gana en el regreso del TC Pick Up en Balcarce",
+          "fecha": "2026-09-27T18:14:00.000Z",
+          "ruta": "/nota/hernan-palazzo-gana-en-el-regreso-del-tc-pick-up-en-balcarce-4aj9uy"
+        },
+        {
+          "id": "1yi8cyn",
+          "titulo": "Hernán Palazzo gana en el autódromo de Balcarce",
+          "fecha": "2026-09-27T18:02:33.000Z",
+          "ruta": "/nota/hernan-palazzo-gana-en-el-autodromo-de-balcarce-1yi8cyn"
+        },
+        {
+          "id": "28a62y",
+          "titulo": "Exclusivo: así será el cronograma de las TC Pick Up en el regreso a la actividad del Fangio",
+          "fecha": "2026-09-22T22:45:09.000Z",
+          "ruta": "/nota/exclusivo-asi-sera-el-cronograma-de-las-tc-pick-up-en-el-regreso-a-la-28a62y"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      }
+    },
+    "w0munu": {
+      "estado": "automatica",
+      "titulo": "Mariano Werner consigue la pole en el autódromo de Balcarce",
+      "copete": "Mariano Werner marcó el mejor tiempo en la clasificación del TC Pick Up en el autódromo Juan Manuel Fangio, en el esperado regreso del automovilismo nacional a Balcarce tras quince años.",
+      "cuerpo": "El piloto Mariano Werner se quedó con la pole position del TC Pick Up en el autódromo Juan Manuel Fangio al marcar un registro en el trazado perimetral. Detrás del entrerriano se ubicaron Diego Azar y Agustín Canapino, quienes completaron los primeros puestos de la clasificación. El rendimiento del ganador mostró una evolución constante a lo largo de las tandas previas hasta alcanzar el tiempo definitivo.\n\nEsta competencia marca el retorno de la actividad nacional al tradicional escenario serrano luego de quince años de ausencia, un hecho que generó una gran convocatoria de público. Como se había informado a principios de la semana, miles de personas participaron de las actividades previas y de la presentación oficial con pilotos locales.\n\nLa actividad continuará con las series clasificatorias que definirán la grilla de partida para la carrera final. Los resultados provisionales impactan en la cima del campeonato de la categoría.",
+      "guion": "Mariano Werner consigue la pole en el autódromo de Balcarce",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T19:19:11.768Z",
+      "claves": [
+        "Mariano Werner logró la pole position del TC Pick Up en el autódromo Juan Manuel Fangio.",
+        "Diego Azar y Agustín Canapino escoltaron al ganador en la clasificación.",
+        "La competencia marca el regreso del automovilismo nacional a Balcarce tras quince años.",
+        "La actividad continuará con las series que definirán la grilla de la final."
+      ],
+      "seSabe": [
+        "Mariano Werner logró el mejor tiempo en la clasificación del TC Pick Up en el autódromo Juan Manuel Fangio.",
+        "Diego Azar finalizó segundo y Agustín Canapino tercero en la sesión.",
+        "El evento representa el regreso de la competencia nacional a Balcarce tras quince años sin actividad."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Mariano Werner se quedó con la pole position en el autódromo Juan Manuel Fangio en el marco del regreso del automovilismo nacional a Balcarce tras quince años.",
+      "etiquetas": [
+        "Mariano Werner",
+        "TC Pick Up",
+        "Autodromo Juan Manuel Fangio",
+        "Balcarce",
+        "Automovilismo"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Ecos Diarios (Necochea)",
+          "enlace": "https://elecos.com.ar/werner-consiguio-la-pole-en-el-regreso-del-automovilismo-nacional-a-balcarce",
+          "fecha": "2026-09-26T21:06:10.000Z",
+          "oficial": false,
+          "aporte": "Detalló los resultados de la clasificación del TC Pick Up con los tiempos y las posiciones de Werner, Azar y Canapino."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "p7nd3j",
+          "titulo": "Balcarce palpita el regreso del automovilismo nacional en Balcarce",
+          "fecha": "2026-09-26T01:13:28.000Z",
+          "ruta": "/nota/comienza-la-previa-del-tc-pick-up-en-balcarce-p7nd3j"
+        },
+        {
+          "id": "4v2vga",
+          "titulo": "Largas filas en Balcarce por el regreso del automovilismo",
+          "fecha": "2026-09-24T13:34:15.000Z",
+          "ruta": "/nota/largas-filas-en-balcarce-por-el-regreso-del-automovilismo-4v2vga"
+        },
+        {
+          "id": "1sjses1",
+          "titulo": "Mangoni palpita el regreso del automovilismo a Balcarce",
+          "fecha": "2026-09-23T22:16:46.000Z",
+          "ruta": "/nota/mangoni-palpita-el-regreso-del-automovilismo-a-balcarce-1sjses1"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "1hfsu27": {
+      "estado": "automatica",
+      "titulo": "Mariano Werner logra la pole de las TC Pick Up en Balcarce",
+      "copete": "El piloto se quedó con el mejor tiempo en la clasificación desarrollada en el Autódromo Juan Manuel Fangio, en el retorno de la categoría nacional a la ciudad tras quince años.",
+      "cuerpo": "Mariano Werner dominó la sesión de clasificación de las TC Pick Up en el Autódromo Juan Manuel Fangio con un registro de 1:39.866 a bordo de su Foton, convirtiéndose en el único competidor en descender del minuto y cuarenta segundos. La actividad marcó el regreso oficial del automovilismo nacional al circuito balcarceño luego de quince años de inactividad, en una jornada desarrollada este sábado que contó con un importante marco de público y buen clima.\n\nDetrás del líder se ubicó Diego Azar con Toyota, a casi un segundo de diferencia, mientras que Agustín Canapino completó el terceto de punta con Chevrolet al quedar a dos milésimas del segundo puesto. En tanto, Otto Fritzler finalizó cuarto y Marco Dianda quinto.\n\nEntre los representantes locales, Diego Ciantini culminó en la sexta colocación con una Ford Ranger, Santiago Mangoni se posicionó noveno y José Ciantini finalizó en el decimosexto lugar de la tanda clasificatoria.",
+      "guion": "Mariano Werner logra la pole de las TC Pick Up en Balcarce",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T19:19:11.768Z",
+      "claves": [
+        "Werner logró el mejor tiempo en la clasificación con un registro de 1:39.866.",
+        "El autódromo Fangio volvió a recibir una competencia nacional tras quince años.",
+        "Diego Ciantini finalizó sexto y Santiago Mangoni noveno entre los locales."
+      ],
+      "seSabe": [
+        "Mariano Werner fue el más rápido de la clasificación a bordo de una Foton.",
+        "Diego Azar y Agustín Canapino completaron los tres primeros puestos.",
+        "El circuito Juan Manuel Fangio retomó la actividad nacional después de quince años."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "etiquetas": [
+        "Automovilismo",
+        "TC Pick Up",
+        "Autodromo Juan Manuel Fangio",
+        "Balcarce",
+        "Mariano Werner"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Radio Gabal (FM 104.1)",
+          "enlace": "https://www.radiogabal.com.ar/index.php/deportes/werner-se-quedo-con-la-pole-de-las-tc-pick-up-en-el-regreso-al-fangio",
+          "fecha": "2026-09-26T20:23:38.000Z",
+          "oficial": false,
+          "aporte": "Detalló los resultados de la clasificación de las TC Pick Up y las posiciones de los pilotos locales en el autódromo."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "28a62y",
+          "titulo": "Exclusivo: así será el cronograma de las TC Pick Up en el regreso a la actividad del Fangio",
+          "fecha": "2026-09-22T22:45:09.000Z",
+          "ruta": "/nota/exclusivo-asi-sera-el-cronograma-de-las-tc-pick-up-en-el-regreso-a-la-28a62y"
+        },
+        {
+          "id": "kquco2",
+          "titulo": "El autódromo Juan Manuel Fangio vuelve a recibir automovilismo nacional en Balcarce",
+          "fecha": "2026-09-26T17:24:55.000Z",
+          "ruta": "/nota/el-autodromo-juan-manuel-fangio-vuelve-a-recibir-automovilismo-kquco2"
+        },
+        {
+          "id": "jgkb1p",
+          "titulo": "El autódromo Fangio completa su estacionamiento de autos en Balcarce",
+          "fecha": "2026-09-26T13:52:51.342Z",
+          "ruta": "/nota/el-autodromo-fangio-completa-su-estacionamiento-de-autos-en-balcarce-jgkb1p"
         }
       ],
       "verificacion": {
