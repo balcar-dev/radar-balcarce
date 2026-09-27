@@ -1,5 +1,5 @@
 {
-  "exportado": "2026-09-27T09:30:21.719Z",
+  "exportado": "2026-09-27T09:50:33.766Z",
   "decisiones": {
     "1951120": {
       "estado": "automatica",
@@ -31536,6 +31536,118 @@
           "fecha": "2026-09-27T09:00:14.000Z",
           "oficial": false,
           "aporte": "Aportó información general sobre el clima en la provincia de Corrientes."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "1xbylst": {
+      "estado": "automatica",
+      "titulo": "Alpine evaluará medidas tras el choque de Colapinto",
+      "copete": "El asesor ejecutivo de Alpine advirtió que analizará sanciones para el piloto argentino después de un choque en Azerbaiyán que dejó fuera a su compañero y a Lando Norris.",
+      "cuerpo": "El asesor ejecutivo de Alpine, Flavio Briatore, anunció que evaluará qué medidas tomar con Franco Colapinto tras un incidente en la vuelta 37 del Gran Premio de Azerbaiyán.\n\nBriatore se mostró decepcionado por la pérdida de puntos valiosos y señaló que la maniobra no debió ocurrir. Por su parte, Colapinto asumió la responsabilidad y pidió disculpas al equipo, a la fábrica y a Gasly. En tanto, el piloto sudamericano deberá cumplir una penalización de diez segundos en Malasia por el hecho.",
+      "guion": "Alpine evaluará medidas tras el choque de Colapinto",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T09:50:33.671Z",
+      "claves": [
+        "Alpine analizará sanciones para Franco Colapinto tras un choque.",
+        "El incidente involucró a Pierre Gasly y a Lando Norris.",
+        "El piloto argentino deberá cumplir una penalización en Malasia."
+      ],
+      "seSabe": [
+        "El asesor ejecutivo de Alpine, Flavio Briatore, evaluará medidas tras el choque.",
+        "El incidente ocurrió en la vuelta 37 del Gran Premio de Azerbaiyán.",
+        "Colapinto embistió a su compañero Pierre Gasly y afectó a Lando Norris.",
+        "El piloto argentino recibirá una penalización de diez segundos en Malasia."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El asesor de Alpine, Flavio Briatore, advirtió que analizará sanciones para Franco Colapinto tras un choque en Azerbaiyán que dejó fuera de carrera a su compañero Pierre Gasly y a Lando Norris.",
+      "etiquetas": [
+        "Franco Colapinto",
+        "Alpine",
+        "Formula 1",
+        "Flavio Briatore",
+        "Pierre Gasly"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/america/agencias/2026/09/27/alpine-decidira-que-medidas-tomar-tras-el-accidente-de-colapinto/",
+          "fecha": "2026-09-27T09:45:55.000Z",
+          "oficial": false,
+          "aporte": "Detalló las declaraciones de Briatore sobre la evaluación de medidas y el desarrollo del accidente en la vuelta 37."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1drzk8j",
+          "titulo": "El momento de Franco Colapinto en la Fórmula 1 y Alpine",
+          "fecha": "2026-09-25T16:44:55.000Z",
+          "ruta": "/nota/el-momento-de-franco-colapinto-en-la-formula-1-y-alpine-1drzk8j"
+        },
+        {
+          "id": "hgesfo",
+          "titulo": "Franco Colapinto tendrá la ayuda de un ex piloto de F1 que se sumó a Alpine: el rol clave que tendrá en las carreras",
+          "fecha": "2026-09-24T20:26:57.000Z",
+          "ruta": "/nota/franco-colapinto-tendra-la-ayuda-de-un-ex-piloto-de-f1-que-se-sumo-a-hgesfo"
+        },
+        {
+          "id": "1cvio1y",
+          "titulo": "Franco Colapinto, entre las dificultades que tuvo con su Alpine y los objetivos para el GP de Azerbaiyán: \"Q3 y puntos\"",
+          "fecha": "2026-09-24T14:43:16.000Z",
+          "ruta": "/nota/franco-colapinto-entre-las-dificultades-que-tuvo-con-su-alpine-y-los-1cvio1y"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "1l6c7ob": {
+      "estado": "automatica",
+      "titulo": "El Senado organiza una capacitación sobre inteligencia artificial",
+      "copete": "Los integrantes del Senado recibirán una charla sobre inteligencia artificial el próximo martes 6 de octubre. La medida forma parte de un plan de formación continua en la Cámara Alta.",
+      "cuerpo": "Los senadores participarán el próximo martes 6 de octubre, desde las 12 horas, en una capacitación sobre la aplicación de la inteligencia artificial en la labor parlamentaria.\n\nEsta actividad se enmarca en las directrices aprobadas en febrero para regular el uso de estas herramientas con principios éticos y jurídicos. Además, la institución adquirió licencias de prueba y estableció que no se podrá introducir información sujeta a secreto parlamentario en sistemas públicos.\n\nEl personal y los legisladores mantendrán una formación continua a lo largo de la legislatura para evaluar los riesgos, limitaciones y capacidades de los sistemas tecnológicos autorizados por la Cámara Alta.",
+      "guion": "El Senado organiza una capacitación sobre inteligencia artificial",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T09:50:33.671Z",
+      "claves": [
+        "Los senadores tendrán una charla sobre inteligencia artificial el martes 6 de octubre.",
+        "La capacitación estará a cargo de Pablo García-Mexía y Manuel Pereira.",
+        "La Cámara Alta aprobó en febrero directrices para regular el uso de esta tecnología.",
+        "Se prohibió ingresar información sujeta a reserva en sistemas públicos."
+      ],
+      "seSabe": [
+        "El Senado impartirá una charla formativa el martes 6 de octubre a las 12 horas.",
+        "La exposición estará a cargo de Pablo García-Mexía y Manuel Pereira.",
+        "La Cámara Alta aprobó directrices sobre inteligencia artificial en febrero.",
+        "Se adquirieron licencias de prueba para utilizar herramientas tecnológicas."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El Senado organizará una charla sobre inteligencia artificial para sus integrantes el próximo martes 6 de octubre, en el marco de su plan de formación continua y regulación tecnológica.",
+      "etiquetas": [
+        "Senado",
+        "inteligencia artificial",
+        "tecnología",
+        "Parlamento"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/espana/agencias/2026/09/27/los-senadores-recibiran-una-charla-sobre-como-usar-la-ia-en-el-ambito-parlamentario-y-tendran-formacion-continua/",
+          "fecha": "2026-09-27T09:46:50.000Z",
+          "oficial": false,
+          "aporte": "Detalló la fecha de la charla sobre inteligencia artificial y las normativas vigentes en la Cámara Alta."
         }
       ],
       "verificacion": {
