@@ -1,5 +1,5 @@
 {
-  "exportado": "2026-09-27T19:29:08.651Z",
+  "exportado": "2026-09-27T20:28:57.433Z",
   "decisiones": {
     "1951120": {
       "estado": "automatica",
@@ -9824,13 +9824,48 @@
     },
     "1sxk7mg": {
       "estado": "automatica",
-      "titulo": "Producir papa Spunta supera los quince mil dólares por hectárea",
-      "copete": "Producir una hectárea de papa Spunta en Balcarce supera los quince mil dólares, según datos difundidos esta semana por el sector.",
-      "cuerpo": null,
-      "guion": "Producir papa Spunta supera los quince mil dólares por hectárea",
+      "titulo": "Informan los servicios fúnebres de la comunidad en Balcarce",
+      "copete": "Se dieron a conocer los registros de los servicios de sepelios prestados por la Cooperativa de Electricidad en el distrito.",
+      "cuerpo": "La Cooperativa de Electricidad \"General Balcarce\" Limitada informó el detalle de los servicios de sepelios correspondientes a los fallecimientos registrados en el distrito durante las últimas semanas, según los avisos publicados.\n\nLos procedimientos incluyeron velatorios en salas locales, oficios religiosos y posterior traslado de los restos para su inhumación en el Cementerio Municipal o cremación en instalaciones de Miramar, de acuerdo con cada caso.\n\nLas comunicaciones de duelo abarcan domicilios tanto de la planta urbana como de zonas rurales del partido, con servicios coordinados por la entidad prestadora local.",
+      "guion": "Informan los servicios fúnebres de la comunidad en Balcarce",
       "deIA": true,
       "por": "ia",
-      "cuando": "2026-09-21T06:44:16.563Z"
+      "cuando": "2026-09-27T20:28:57.351Z",
+      "claves": [
+        "Registro de servicios fúnebres en Balcarce",
+        "Información brindada por la Cooperativa de Electricidad",
+        "Traslados al Cementerio Municipal y crematorios",
+        "Avisos de deudos correspondientes a las últimas semanas"
+      ],
+      "seSabe": [
+        "Se registraron los avisos fúnebres informados por la Cooperativa de Electricidad \"General Balcarce\" Limitada.",
+        "Los servicios incluyeron inhumaciones en el Cementerio Municipal y cremaciones en Miramar.",
+        "Se detallaron las casas de duelo en distintos puntos de la ciudad y zonas rurales."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "La Cooperativa de Electricidad dio a conocer el detalle de los servicios fúnebres y traslados al Cementerio Municipal registrados en las últimas semanas en el distrito.",
+      "etiquetas": [
+        "servicios fúnebres",
+        "cooperativa de electricidad",
+        "balcarce",
+        "cementerio municipal"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/producir-papa-spunta-cuesta-mas-de-us-15000-por-hectarea-y-el-costo-aumento-315-en-un-ano-461",
+          "fecha": null,
+          "oficial": false,
+          "aporte": "Detalle de los servicios de sepelios y avisos fúnebres informados por la Cooperativa de Electricidad."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
     },
     "1ny0yyi": {
       "estado": "automatica",
@@ -34850,6 +34885,66 @@
           "titulo": "El autódromo Fangio completa su estacionamiento de autos en Balcarce",
           "fecha": "2026-09-26T13:52:51.342Z",
           "ruta": "/nota/el-autodromo-fangio-completa-su-estacionamiento-de-autos-en-balcarce-jgkb1p"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "1dz6rsc": {
+      "estado": "automatica",
+      "titulo": "Palazzo gana en el autódromo Juan Manuel Fangio en Balcarce",
+      "copete": "El autódromo Juan Manuel Fangio volvió a recibir al automovilismo nacional con una gran presencia de público. En una definición intensa, Palazzo se quedó con la victoria tras superar a Diego Ciantini.",
+      "cuerpo": "En la definición de la competencia, Palazzo se impuso tras una lucha intensa en pista frente al piloto local Diego Ciantini, quien finalizó en la segunda posición.\n\nDurante los entrenamientos previos desarrollados el día anterior, el propio Ciantini había marcado el mejor tiempo al liderar la última práctica a bordo de su camioneta, en el marco de la llegada de la categoría a la ciudad.\n\nEl fin de semana marcó el regreso oficial de la categoría al trazado local, luego de la presentación previa de los diseños de los vehículos realizada por los pilotos locales.",
+      "guion": "Palazzo gana en el autódromo Juan Manuel Fangio en Balcarce",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T20:28:57.350Z",
+      "claves": [
+        "El autódromo Juan Manuel Fangio volvió a recibir al automovilismo nacional tras quince años.",
+        "Palazzo se quedó con la victoria en una disputa ajustada contra Diego Ciantini.",
+        "Una multitud de espectadores acompañó el desarrollo de la competencia en La Barrosa."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El autódromo Juan Manuel Fangio volvió a recibir al automovilismo nacional tras quince años y una multitud presenció la victoria de Palazzo en una definición ajustada frente al piloto local Diego Ciantini.",
+      "etiquetas": [
+        "automovilismo",
+        "autodromo Juan Manuel Fangio",
+        "Diego Ciantini",
+        "Palazzo",
+        "Balcarce"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/balcarce-vivio-una-fiesta-y-palazzo-gano-en-emotiva-lucha-con-diego-ciantini-2-129",
+          "fecha": "2026-09-27T20:26:05.000Z",
+          "oficial": false,
+          "aporte": "Informó sobre la victoria de Palazzo, el segundo puesto de Diego Ciantini y la concurrencia de público en el autódromo Juan Manuel Fangio."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1uamvkq",
+          "titulo": "Diego Ciantini marca el mejor tiempo en el último entrenamiento",
+          "fecha": "2026-09-26T16:39:24.000Z",
+          "ruta": "/nota/diego-ciantini-marca-el-mejor-tiempo-en-el-ultimo-entrenamiento-en-1uamvkq"
+        },
+        {
+          "id": "yy4073",
+          "titulo": "Así será el diseño de las Pick Up del “Bocha” y Diego Ciantini para correr",
+          "fecha": "2026-09-21T15:56:43.000Z",
+          "ruta": "/nota/asi-sera-el-diseno-de-las-pick-up-del-bocha-y-diego-ciantini-para-yy4073"
+        },
+        {
+          "id": "18cuo5p",
+          "titulo": "Adelanto: El Bocha y Diego Ciantini presentarán el lunes las Pick Up con las que correrán",
+          "fecha": "2026-09-17T13:38:07.000Z",
+          "ruta": "/nota/adelanto-el-bocha-y-diego-ciantini-presentaran-el-lunes-las-pick-up-18cuo5p"
         }
       ],
       "verificacion": {
