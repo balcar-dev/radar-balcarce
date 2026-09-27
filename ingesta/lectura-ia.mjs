@@ -41,11 +41,13 @@ export const IMPORTANCIAS = ['alta', 'media', 'baja'];
 
 /** Los números de la prueba silenciosa. */
 export const LECTURA = {
-  notasPorPedido: 20,
+  // 12 y no 20: con 20 notas y sus bajadas, un pedido de cada tres pasaba el
+  // minuto de espera y se perdía (27/09).
+  notasPorPedido: 12,
   // Por corrida y por día. Con la clave de redacción compartida, el tope del
   // día deja lugar de sobra a la redacción (~500 pedidos gratis por día y por
   // proyecto; la redacción usa hasta 300).
-  pedidosPorCorrida: 4,
+  pedidosPorCorrida: 5,
   pedidosPorDia: 60,
   // El pedido que junta repetidas: uno por corrida como mucho, si cambió la lista.
   pedidosRepetidasPorDia: 30,
