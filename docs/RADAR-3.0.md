@@ -491,6 +491,18 @@ salido, anotadas en `web/data/retiradas.json` con motivo, fecha y quién
 Ese archivo sirve para sacar algo **por fuera del panel**; si el panel está
 prendido, sus decisiones se subirían encima.
 
+### 4.16 El cruce de medios (27/09, a la tarde)
+
+Desde el 27/09 a la tarde, **la forma en que entra lo de afuera cambió de raíz**:
+
+- Se leen **unas 210 fuentes**: las de `fuentes.mjs` y las 160 de `ingesta/fuentes-cruce.mjs` (20 nacionales, 20 de la provincia, Mar del Plata, la zona, especializadas en fútbol, deportes, automovilismo, campo y ciencia, y Radio Sudestada). También los índices de noticias que cada sitio arma para Google, que traen todo el día. Tarda unos 25 segundos.
+- Todo lo de afuera entra al **cruce** (`ingesta/cruce.mjs`): se juntan las notas que cuentan el mismo hecho (título y resumen, TF-IDF, umbral 0,42) con una **memoria de 36 horas** (caché de GitHub Actions, fuera del repositorio).
+- **Queda:** todo lo de Balcarce; de afuera, lo que dice Balcarce en el título o toca la zona, y **lo que cuentan dos medios distintos o más**. Lo de un solo medio no se trae. Ya no entran "las 3 a 5 más nuevas" de cada fuente.
+- Cuantos más medios cuentan un hecho, más puntaje (con tope de +40): es lo que se está hablando.
+- La nota de una historia conserva su dirección cuando otro medio se suma (la principal es la ya publicada).
+- **Secciones:** Fútbol aparte de Deportes, y **Argentina** en lugar de País (sale sola).
+- La medición que llevó a esto (90 medios, 2.664 notas en 24 h, 187 hechos contados por dos o más): `docs/CRUCE-DE-MEDIOS.md`.
+
 ### 4.15 Dos medios para lo de afuera y una nota por noticia (27/09)
 
 - **Lo de afuera de Balcarce sale solo sólo si lo cuentan dos medios distintos

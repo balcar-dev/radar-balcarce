@@ -8,7 +8,7 @@ con el tiempo: por eso cada una dice qué prueba (`pruebas/`, corre con
 `npm test` y antes de cada publicación en GitHub) o qué chequeo del vigilante
 (`redes/vigilar.mjs`, cada 30 minutos, avisa por WhatsApp) la protege.
 
-Hay **51 reglas**, numeradas del 1 al 51 sin huecos ni repetidas (las 41 a 51 son del 27/09, plan V2.2). Están
+Hay **53 reglas**, numeradas del 1 al 53 sin huecos ni repetidas (las 41 a 53 son del 27/09, plan V2.2). Están
 agrupadas por tema (la web, las redes, cómo se trabaja) y no por número, porque
 los números no se reordenan: otros documentos los citan.
 
@@ -56,6 +56,8 @@ Cómo leer la columna "Qué la cuida":
 | 49 | **La lectura con IA decide, pero nunca destraba** (27/09, en vivo, a pedido de Hernán). Con la ficha de cada nota: no entra la publicidad, lo del extranjero (salvo automovilismo o una figura argentina), lo de afuera sin relación con Balcarce ni un policial que no es de acá; es de Balcarce sólo con dos llaves (fuente de acá o Balcarce en el título, y la IA diciendo que el hecho es de acá); la sección es la de la IA. Lo rojo o amarillo sigue igual y sin ficha queda lo de siempre. Usa su propia clave o la gratis de redacción, con topes (4 pedidos por corrida, 60 por día); nunca la paga. Cada nota se lee una vez. | Prueba: `pruebas/lectura-ia.test.mjs` ("la IA saca lo que no es para Radar…", "Colapinto…", "de Balcarce sólo con dos llaves…", "la IA nunca destraba…", "sin ficha…", topes, 429 y la clave). |
 | 50 | **Lo de afuera de Balcarce sale solo sólo con dos medios o más** (una fuente oficial alcanza). Lo viejo que no cumple conserva su página pero no completa la tapa ni "Seguí leyendo". | Prueba: `pruebas/lectura-ia.test.mjs` ("lo de afuera necesita dos medios…") y `pruebas/seguir-leyendo.test.mjs` ("lo de afuera con un solo medio no completa…"). |
 | 51 | **Una noticia, una nota:** las repetidas (el mismo hecho con otro título) se juntan en una, con todos los medios. Una repetida que fue a redes conserva su página. | Prueba: `pruebas/lectura-ia.test.mjs` ("de tres notas del mismo hecho queda una…", "el pedido de repetidas…"). |
+| 52 | **El cruce de medios:** de afuera sólo entra lo que cuentan dos medios distintos o más, contando las notas de las últimas 36 horas. La nota de una historia conserva su dirección cuando otro medio se suma. | Pruebas: `pruebas/cruce.test.mjs`. |
+| 53 | **Fútbol es sección aparte de Deportes y Argentina reemplaza a País** (y sale sola). | Prueba: `pruebas/notas.test.mjs` ("el fútbol tiene sección propia…"). |
 | 48 | **Lo que se saca a mano de la web va en `web/data/retiradas.json`**, con motivo, fecha y quién. Sale de las listas y pierde la página aunque la ingesta lo vuelva a traer. Sirve cuando el panel está prendido (si no, pisaría las decisiones). | Prueba: `pruebas/archivo.test.mjs` ("las notas retiradas a mano…", "la lista de retiradas… bien armada"). |
 
 ## Las redes

@@ -219,6 +219,7 @@ cada uno, cuándo corre y si cuesta plata), en `INFRAESTRUCTURA.md`.
 | que algo espere aprobación o nunca salga | `REGLAS_SEMAFORO`, mismo archivo |
 | que una sección de un medio de afuera no se traiga (otro país, policiales, consejos) | `SECCIONES_QUE_NO_ENTRAN` y `CONEXION_ARGENTINA`, mismo archivo (`motivoDeDescarte` en `ingesta/ingesta.mjs`) |
 | que un feed sólo cuente cobertura y no publique | `uso: 'senal'` en la fuente; la ficha de cada fuente (tipo, ciudad, uso) es `fichaDeFuente` |
+| sumar o sacar una fuente del cruce de medios (nacionales, provincia, zona, especializadas) | `ingesta/fuentes-cruce.mjs` (una línea por feed; `activa: false` para apagarla); cómo se cruzan, `ingesta/cruce.mjs` |
 | sacar de la web una nota ya publicada, sin el panel | `web/data/retiradas.json` (motivo, cuándo, quién) |
 | que lo de afuera pida dos medios, o juntar notas repetidas | `exigirDosMedios` (`ingesta/ingesta.mjs`), `agruparRepetidas` y `quitarRepetidas` (`ingesta/lectura-ia.mjs`); lo que se muestra del archivo, `tieneRespaldo` (`web/lib/cuerpo.js`) |
 | qué va a las redes (hoy, sólo lo de Balcarce) | `esParaLasRedes` en `redes/elegir.mjs` |

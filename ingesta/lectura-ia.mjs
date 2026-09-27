@@ -315,7 +315,9 @@ export function aplicarFichas(notas, fichas = {}, { verdeSecciones = [] } = {}) 
       n.relevancia = Math.max(0, (n.relevancia ?? 0) - 25);
       cambios.dejanDeSerLocales.push(caso);
     }
-    const deLaIA = seccionDe(f);
+    // Las fichas de antes del 27/09 a la tarde no conocían Fútbol: si la IA
+    // dice Deportes y las palabras dicen Fútbol, es Fútbol.
+    const deLaIA = seccionDe(f) === 'Deportes' && n.seccion === 'Fútbol' ? 'Fútbol' : seccionDe(f);
     const seccion = deLaIA === 'Balcarce' && !esLocal ? (['Servicios', 'País'].includes(n.seccion) ? 'Argentina' : n.seccion)
       : deLaIA === 'Argentina' && esLocal ? 'Balcarce'
         : deLaIA;

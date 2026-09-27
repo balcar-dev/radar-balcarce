@@ -104,6 +104,14 @@ hay ficha se decide como antes. Empezó sin prueba previa, a pedido de Hernán:
 los errores se corrigen en vivo, y lo que saca cada corrida queda en el
 registro de "Actualizar la web" (`ingesta/lectura-ia.mjs`, `aplicarFichas`).
 
+**El cruce de medios (27/09).** Se leen unas 210 fuentes (nacionales,
+provincia, Mar del Plata, zona, especializadas y todas las de Balcarce) y se
+juntan las notas que cuentan el mismo hecho, con una memoria de 36 horas
+(`ingesta/cruce.mjs`, `ingesta/fuentes-cruce.mjs`). De afuera sólo entra lo
+que cuentan dos medios o más, y cuantos más lo cuentan, más arriba va: es lo
+que se está hablando. Una exclusiva de un solo medio espera a que otro la
+cuente. El listado de fuentes y la medición: `docs/CRUCE-DE-MEDIOS.md`.
+
 **Lo de afuera, con dos medios o más (27/09, Hernán).** Una nota que no es de
 Balcarce sale sola sólo si la cuentan dos medios distintos o más (una fuente
 oficial alcanza sola). Con un solo medio no se publica. Las notas viejas del
@@ -136,7 +144,8 @@ la sección con menos notas escritas.
 | Sección | ¿Sale sola? |
 |---|---|
 | Balcarce | Sí |
-| Deportes | Sí |
+| Fútbol | Sí (desde el 27/09: de la liga de Balcarce a la Selección) |
+| Deportes | Sí (todos los demás deportes) |
 | Automovilismo | Sí |
 | Agro | Sí |
 | Cultura y agenda | Sí |
@@ -144,7 +153,7 @@ la sección con menos notas escritas.
 | Economía | Sí |
 | Política | Sí en la web; **en las redes, nunca sin una persona** |
 | Policiales | Sí en la web; **en las redes, nunca sin una persona** |
-| País | No: espera a una persona |
+| Argentina | Sí (desde el 27/09; antes se llamaba País y no salía sola): lo nacional contado por dos medios o más que no es Política ni Economía |
 
 **No hay sección Servicios (27/09, Hernán).** Los cortes, trámites, tarifas y
 obras de acá van a **Balcarce**. Lo de afuera que sólo trataba de eso queda
