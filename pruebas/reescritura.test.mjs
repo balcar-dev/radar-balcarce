@@ -456,3 +456,15 @@ test('el registro cuenta qué clave se usó: la gratis primero, la paga sólo si
     if (previoP === undefined) delete process.env.GEMINI_API_KEY_REDES; else process.env.GEMINI_API_KEY_REDES = previoP;
   }
 });
+
+test("con el cupo casi gastado, lo de afuera espera y lo de Balcarce sigue (reserva para locales)", async () => {
+  const { REESCRITURA } = await import("../ingesta/criterio.mjs");
+  const { fn, pedidos } = fetchFalso([]);
+  const ahora = Date.parse("2026-09-25T15:00:00Z");
+  const gastadas = REESCRITURAS_POR_DIA - REESCRITURA.reservaParaLocales;
+  const intentos = Object.fromEntries(Array.from({ length: gastadas }, (_, i) => [`v${i}`, { intentos: 1, ultimo: "2026-09-25T12:00:00Z" }]));
+  await reescribirAutomaticas([{ ...notaVerde(), id: "afuera", seccion: "Deportes", local: false, alcance: "nacional" }], { ...SIN_PISO, opciones: { fetchFn: fn }, intentos, ahora, registro: () => {} });
+  assert.equal(pedidos.length, 0, "lo de afuera ya no se pide");
+  await reescribirAutomaticas([{ ...notaVerde(), id: "local", seccion: "Balcarce" }], { ...SIN_PISO, opciones: { fetchFn: fn }, intentos, ahora, registro: () => {} });
+  assert.ok(pedidos.length > 0, "lo local todavía tiene cupo");
+});

@@ -961,7 +961,8 @@ export async function reescribirAutomaticas(notas, {
     }
     if (cuenta.hechas >= tope || cuenta.fallos >= FALLOS_PARA_CORTAR) continue; // sigue por si algo más abajo está en caché
     // El tope del día: la clave es paga. Lo que no entra hoy espera a mañana.
-    if (yaPedidasHoy + cuenta.hechas >= porDia) {
+    const pedidasAhora = yaPedidasHoy + cuenta.hechas;
+    if (pedidasAhora >= porDia || (!esLocal(nota) && pedidasAhora >= porDia - REESCRITURA.reservaParaLocales)) {
       if (!topeDelDia) { topeDelDia = true; registro(`  tope del día: ya se le pidieron ${yaPedidasHoy + cuenta.hechas} notas a la IA hoy (máximo ${porDia}); el resto espera a mañana`); }
       continue;
     }

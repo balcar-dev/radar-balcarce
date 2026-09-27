@@ -68,6 +68,11 @@ export const REESCRITURA = {
   // pidieron unas 300 en un día, con muchas corridas a mano. Primero se gasta
   // en lo de Balcarce (el orden ya lo hace así).
   porDia: 150,
+  // De esos, los últimos quedan reservados para lo de Balcarce: lo de afuera
+  // deja de pedirse antes, así lo local que llega a la noche no se queda sin
+  // cupo (26/09: a las 21:30 ya se habían gastado los 150 y tres notas locales
+  // importantes esperaban sin cuerpo).
+  reservaParaLocales: 40,
   caracteresDelTextoCompleto: 4000,
   diasDeAntecedentes: 30,
   antecedentesMaximo: 3,

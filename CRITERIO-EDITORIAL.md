@@ -662,6 +662,7 @@ instrucción de la IA (70, 90, 100 a 180…) también se controlan.
 | Palabras de resumen mínimas sin texto completo | 60 | `REESCRITURA.palabrasMinimasDeMaterial` |
 | Notas que se le piden a la IA por corrida | 40 | `REESCRITURA.porCorrida` |
 | Notas que se le piden a la IA por día, como máximo | 150 | `REESCRITURA.porDia` |
+| De esas, reservadas para lo de Balcarce (lo de afuera para antes) | 40 | `REESCRITURA.reservaParaLocales` |
 | Texto completo de la fuente: caracteres que recibe la IA | 4000 | `REESCRITURA.caracteresDelTextoCompleto` |
 | Antecedentes: días hacia atrás | 30 | `REESCRITURA.diasDeAntecedentes` |
 | Antecedentes: como máximo | 3 | `REESCRITURA.antecedentesMaximo` |
