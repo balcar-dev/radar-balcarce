@@ -1443,13 +1443,13 @@ function armarPreview(d) {
   return `<!doctype html>
 <html lang="es"><head><meta charset="utf-8">
 <title>Radar Balcarce · prueba de ingesta</title>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,600..900&family=Inter:opsz,wght@14..32,400..700&display=swap">
 <style>
   :root { --tinta:#14161A; --papel:#F7F5EF; --rojo:#A8371F; --verde:#16615B; --linea:#D5CFC0; --suave:#4A4F4B; }
   * { box-sizing: border-box; }
-  body { margin:0; background:var(--papel); color:var(--tinta); font-family:"IBM Plex Sans",system-ui,sans-serif; }
+  body { margin:0; background:var(--papel); color:var(--tinta); font-family:"Inter",system-ui,sans-serif; }
   header { background:var(--tinta); color:var(--papel); padding:22px 32px; }
-  h1 { margin:0; font-family:Fraunces,Georgia,serif; font-size:34px; font-weight:700; letter-spacing:-.02em; }
+  h1 { margin:0; font-family:"Source Serif 4",Georgia,serif; font-size:34px; font-weight:700; letter-spacing:-.02em; }
   h1 span { color:#E8A33C; }
   .sub { margin-top:6px; font-size:13px; color:#BDC1B8; }
   .barra { display:flex; gap:10px; flex-wrap:wrap; padding:14px 32px; background:#fff; border-bottom:1px solid var(--linea); }
@@ -1462,13 +1462,13 @@ function armarPreview(d) {
   .secc { text-transform:uppercase; letter-spacing:.06em; color:var(--rojo); }
   .sep { color:var(--linea); }
   .rel { margin-left:auto; background:var(--papel); border:1px solid var(--linea); border-radius:3px; padding:2px 7px; }
-  h3 { margin:7px 0 0; font-family:Fraunces,Georgia,serif; font-size:20px; line-height:1.25; font-weight:600; }
+  h3 { margin:7px 0 0; font-family:"Source Serif 4",Georgia,serif; font-size:20px; line-height:1.25; font-weight:600; }
   h3 a { color:inherit; text-decoration:none; }
   h3 a:hover { color:var(--rojo); }
   .nota p { margin:6px 0 0; font-size:13px; line-height:1.5; color:var(--suave); }
   aside section { background:#fff; border:1px solid var(--linea); border-radius:6px; padding:16px; margin-bottom:16px; }
-  aside h2 { margin:0 0 10px; font-family:Fraunces,Georgia,serif; font-size:18px; }
-  .temp { font-family:Fraunces,Georgia,serif; font-size:44px; font-weight:700; line-height:1; }
+  aside h2 { margin:0 0 10px; font-family:"Source Serif 4",Georgia,serif; font-size:18px; }
+  .temp { font-family:"Source Serif 4",Georgia,serif; font-size:44px; font-weight:700; line-height:1; }
   .dias { display:grid; grid-template-columns:repeat(4,1fr); gap:6px; margin-top:12px; text-align:center; }
   .dias div { background:var(--papel); border-radius:4px; padding:8px 2px; font-size:12px; }
   .dias b { display:block; font-size:10px; color:var(--suave); text-transform:uppercase; }
@@ -1485,7 +1485,7 @@ function armarPreview(d) {
 <main>
   <div>
     ${secciones.map((s) => `
-      <h2 style="font-family:Fraunces,Georgia,serif;font-size:24px;margin:26px 0 4px;border-bottom:2px solid var(--tinta);padding-bottom:6px;">${esc(s)}</h2>
+      <h2 style="font-family:'Source Serif 4',Georgia,serif;font-size:24px;margin:26px 0 4px;border-bottom:2px solid var(--tinta);padding-bottom:6px;">${esc(s)}</h2>
       ${d.notas.filter((n) => n.seccion === s).map(nota).join('')}
     `).join('')}
   </div>

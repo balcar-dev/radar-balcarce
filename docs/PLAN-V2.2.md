@@ -251,7 +251,7 @@ Pedido de Hernán: además de lo que le sirve a Balcarce, sumar notas nacionales
 | **Visitas de Radar** | Lo que más leen nuestros lectores | Cloudflare | Ya se mide; sirve para aprender con el tiempo |
 
 ### 11.2 Los feeds generales pasan a ser "señal"
-Los feeds generales de Infobae, La Nación, Clarín, Ámbito y Minuto Uno traen de todo: por eso eran ruido como candidatas. Pero **sirven para contar cobertura**. Se quedan, pero sus notas no se publican por sí solas: sólo cuentan cuántos medios hablan de cada historia.
+Los feeds generales de Infobae, La Nación, Clarín, Ámbito y Minuto Uno traen de todo: por eso eran ruido como candidatas. Pero **sirven para contar cobertura**. Se quedan, pero sus notas no se publican por sí solas: sólo cuentan cuántos medios hablan de cada historia. (Así quedó a la mañana del 27/09; desde el cruce de medios de esa tarde, sus notas cuentan como las de cualquier otro medio de afuera: salen si las cuentan dos medios o más.)
 
 ### 11.3 Cuándo una nota nacional es "Popular"
 Tiene que cumplir todo:
@@ -378,7 +378,7 @@ Para cada nota: fuente y su sección, ficha de la IA, historia a la que pertenec
 - [x] Ficha de cada fuente: tipo, ciudad y uso (`fichaDeFuente`, `ingesta/fuentes.mjs`). Hecho el 27/09.
 - [x] Descartar por la sección del medio: otros países, policiales de afuera y consejos (`SECCIONES_QUE_NO_ENTRAN`). Hecho el 27/09.
 - [x] Policiales que no son de Balcarce: no se traen. Hecho el 27/09.
-- [x] Feeds generales pasan a "señal": sólo cuentan cobertura. Hecho el 27/09.
+- [x] Feeds generales pasan a "señal": sólo cuentan cobertura. Hecho el 27/09. **Superado a la tarde por el cruce de medios:** la etiqueta quedó en la ficha, pero ya no cambia qué entra (lo de afuera sale si lo cuentan dos medios o más, venga del feed que venga).
 - [ ] Últimas 12 horas de afuera y cada artículo una vez: **se pasa a la semana 2**. Sin la lectura con IA no hace falta, y hoy haría que lo nacional saliera de la portada a las 12 horas.
 - [ ] Leer Tendencias de Google Argentina: **se pasa al carril Popular** (sección 11), que es donde se usa.
 
@@ -397,10 +397,13 @@ Medición del 27/09, con los mismos feeds antes y después del filtro: 175 y 174
 - [x] Repetidas: la IA junta las que cuentan el mismo hecho y queda una (`agruparRepetidas`).
 - [x] La IA saca también lo de un medio local que no es de Balcarce ni la nombra ("alquileres en Mar del Plata").
 - [x] Qué va en cada sección, explicado en la instrucción de la IA (Servicios es sólo lo práctico: cortes, trámites, tarifas).
+- [x] **El cruce de medios** (`ingesta/cruce.mjs`, `ingesta/fuentes-cruce.mjs`: 160 feeds de 76 medios): lo de afuera entra entero, se junta por hecho (TF-IDF, umbral 0,42, memoria de 36 horas) y queda sólo lo que cuentan dos medios o más, lo que dice Balcarce en el título o lo que toca la zona. La medición: `docs/CRUCE-DE-MEDIOS.md`.
+- [x] Secciones: **Fútbol** aparte de Deportes, **Argentina** en lugar de País (sale sola) y **sin Servicios** (lo práctico de acá va a Balcarce; reemplaza el punto anterior).
+- [x] Títulos sin "en Balcarce" al final (`web/lib/titulos.js`) y correcciones a mano en `web/data/correcciones.json`.
 
 ### Semana 4 o 5 — Activar
-- [ ] Si pasa el examen: reglas por ámbito, dos llaves, respaldo.
-- [ ] Reemplazar "las 3 a 5 más nuevas" por los filtros nuevos, si la web no queda flaca.
+- [ ] Si pasa el examen: reglas por ámbito, dos llaves, respaldo. (Las dos llaves y el respaldo de dos medios ya andan desde el 27/09, sin examen.)
+- [x] Reemplazar "las 3 a 5 más nuevas" por los filtros nuevos. Hecho el 27/09 a la tarde con el cruce de medios.
 - [ ] Redes con la ficha.
 - [ ] Puntaje de fuentes por sección y ajuste mensual.
 
@@ -428,7 +431,9 @@ Medición del 27/09, con los mismos feeds antes y después del filtro: 175 y 174
 
 ## Anexo A — Todas las fuentes y cómo se usan
 
-Datos del 27/09/2026. **Peso** = puntaje base de la fuente hoy (de 7 a 30). **Máx.** = cuántas notas "de relleno" entran por corrida además de las que nombran a Balcarce, a una figura o tocan la zona (0 = sólo esas; — = entra todo, porque es local).
+Datos del 27/09/2026 a la mañana, antes del cruce de medios: son las 58 de `ingesta/fuentes.mjs`. **Peso** = puntaje base de la fuente hoy (de 7 a 30). **Máx.** = cuántas notas "de relleno" entraban por corrida además de las que nombran a Balcarce, a una figura o tocan la zona (0 = sólo esas; — = entra todo, porque es local).
+
+**Desde el cruce (27/09 a la tarde)** la columna "Máx." y el uso "señal" ya no cambian qué entra: de afuera queda lo que dice Balcarce en el título, lo que toca la zona y lo que cuentan dos medios o más. A estas 58 se suman los 160 feeds de 76 medios de `ingesta/fuentes-cruce.mjs` (nacionales, provincia, Mar del Plata, la zona y especializados), que no están en este anexo; el listado y la medición, en `docs/CRUCE-DE-MEDIOS.md`.
 
 ### A.1 Medios de Balcarce (11) — entra todo
 | Fuente | Cómo se lee | Sección fija | Peso | Propuesta V2.2 |

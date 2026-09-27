@@ -50,3 +50,50 @@ test('cada sección tiene su color, y no hay dos del mismo tono', () => {
     }
   }
 });
+
+// Las placas de Instagram y las tarjetas para compartir, con los mismos
+// colores y la misma letra que la web (27/09).
+const luz = (h) => {
+  const [r, g, b] = [1, 3, 5].map((i) => parseInt(h.slice(i, i + 2), 16) / 255)
+    .map((c) => (c <= 0.03928 ? c / 12.92 : ((c + 0.055) / 1.055) ** 2.4));
+  return 0.2126 * r + 0.7152 * g + 0.0722 * b;
+};
+const contraste = (a, b) => { const [x, y] = [luz(a), luz(b)].sort((m, n) => n - m); return (x + 0.05) / (y + 0.05); };
+
+test('las placas de Instagram usan el color de cada sección de la web', async () => {
+  const { COLOR_SECCION } = await import('../reels/placa.mjs');
+  for (const s of SECCIONES) {
+    const web = s.color.includes('--s-pais') ? css.match(/--s-pais:\s*(#[0-9A-Fa-f]{6})/)[1] : colorDe(s);
+    assert.equal(COLOR_SECCION[s.nombre]?.toUpperCase(), web.toUpperCase(), `${s.nombre} tiene otro color en las placas`);
+  }
+  assert.ok(!('Servicios' in COLOR_SECCION) && !('País' in COLOR_SECCION), 'sin las secciones que ya no existen');
+});
+
+test('la tarjeta para compartir tiene un color legible para cada sección', () => {
+  const t = fs.readFileSync(new URL('../web/lib/tarjeta.js', import.meta.url), 'utf8');
+  const bloque = t.match(/const COLOR = \{([\s\S]*?)\};/)[1];
+  const colores = Object.fromEntries([...bloque.matchAll(/'?([^':\n]+?)'?:\s*'(#[0-9A-Fa-f]{6})'/g)].map((m) => [m[1].trim(), m[2]]));
+  for (const s of SECCIONES) {
+    assert.ok(colores[s.nombre], `${s.nombre} sin color en la tarjeta`);
+    assert.ok(contraste(colores[s.nombre], '#14161A') >= 4.5, `${s.nombre} no se lee sobre el fondo oscuro`);
+  }
+  assert.ok(!/Servicios|País:/.test(bloque));
+});
+
+test('placas y tarjetas usan Source Serif 4 e Inter, con los archivos en su lugar', () => {
+  const raiz = new URL('../', import.meta.url);
+  const t = fs.readFileSync(new URL('web/lib/tarjeta.js', raiz), 'utf8');
+  for (const f of ['SourceSerif4-900.ttf', 'Inter-600.ttf']) {
+    assert.match(t, new RegExp(f.replace('.', '\.')));
+    assert.ok(fs.existsSync(new URL(`web/fuentes/${f}`, raiz)), `falta web/fuentes/${f}`);
+  }
+  const marca = fs.readdirSync(new URL('reels/marca/fuentes/', raiz));
+  for (const f of ['SourceSerif4-700.ttf', 'SourceSerif4-900.ttf', 'Inter-400.ttf', 'Inter-500.ttf', 'Inter-600.ttf', 'Inter-700.ttf']) {
+    assert.ok(marca.includes(f), `falta reels/marca/fuentes/${f}`);
+  }
+  assert.ok(!marca.some((f) => /Fraunces|Plex/.test(f)), 'sin las letras de antes');
+  for (const f of ['reels/placa.mjs', 'reels/portada.mjs', 'reels/avatar.mjs', 'reels/reel.mjs', 'web/lib/tarjeta.js', 'panel/panel.html', 'panel/acceso.mjs', 'ingesta/ingesta.mjs', 'comercial/vista.plantilla.html']) {
+    const sin = fs.readFileSync(new URL(f, raiz), 'utf8').replace(/\/\/[^\n]*/g, '').replace(/\/\*[\s\S]*?\*\//g, '');
+    assert.ok(!/Fraunces|IBM Plex|IBMPlex/.test(sin), `${f} todavía usa la letra de antes`);
+  }
+});

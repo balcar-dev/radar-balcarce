@@ -76,7 +76,7 @@ ScaledBorderAndShadow: yes
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
-Style: Sub,IBM Plex Sans,64,&H001A1614,&H00FFFFFF,&H00E3ECEF,&H00000000,-1,0,0,0,100,100,0.5,0,1,0,0,5,60,60,0,1
+Style: Sub,Inter,64,&H001A1614,&H00FFFFFF,&H00E3ECEF,&H00000000,-1,0,0,0,100,100,0.5,0,1,0,0,5,60,60,0,1
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text

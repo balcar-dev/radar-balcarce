@@ -1,6 +1,6 @@
 # El panel
 
-*Actualizado el 26/09/2026.* El tablero editorial: donde Hernán y Andrés
+*Actualizado el 27/09/2026.* El tablero editorial: donde Hernán y Andrés
 deciden qué se publica, cargan avisos y miran el buzón.
 
 ## Qué es y dónde vive
@@ -44,9 +44,9 @@ Dos usuarios: **Hernán** y **Andrés**. Cada uno con su contraseña.
 
 | Pestaña | Para qué |
 |---|---|
-| **Para decidir** | La cola de notas amarillas (denuncias, detenidos, muertes, chicos, promociones, lo de afuera con poco puntaje, País, la cotización del dólar y lo que tiene verificación baja): publicar, descartar o editar título, copete y cuerpo. Política y Policiales llegan acá sólo si el semáforo las frena: si da verde, salen solas a la web (a las redes, nunca sin una persona). Cada nota tiene, plegado, su **análisis interno** (nivel de verificación y porqué, claves, qué se sabe, qué falta confirmar, fuentes con lo que aportó cada una, antecedentes): es para quien decide, no se muestra en la web. Si la nota **no tiene cuerpo** (menos de 70 palabras), lo avisa y "Publicar" pide confirmarlo con el botón "Publicar igual, sin cuerpo" |
+| **Para decidir** | La cola de notas amarillas (denuncias, detenidos, muertes, chicos, promociones, lo de afuera con poco puntaje o contado por un solo medio, lo de Región o Provincia sin otra sección, la cotización del dólar y lo que tiene verificación baja): publicar, descartar o editar título, copete y cuerpo. Política y Policiales llegan acá sólo si el semáforo las frena: si da verde, salen solas a la web (a las redes, nunca sin una persona). Cada nota tiene, plegado, su **análisis interno** (nivel de verificación y porqué, claves, qué se sabe, qué falta confirmar, fuentes con lo que aportó cada una, antecedentes): es para quien decide, no se muestra en la web. Si la nota **no tiene cuerpo** (menos de 70 palabras), lo avisa y "Publicar" pide confirmarlo con el botón "Publicar igual, sin cuerpo" |
 | **Publicadas / Descartadas / Frenadas / Archivadas** | Lo ya decidido. **Frenadas** es el semáforo rojo (menores, víctimas): no se publica ni por error. **Archivadas** son las que pasaron 72 horas sin decidir |
-| **Fuentes** | Las fuentes (58 configuradas, 54 activas), con sus pesos y temas |
+| **Fuentes** | Las fuentes (218 configuradas, 214 activas: las 58 de `ingesta/fuentes.mjs` y las 160 del cruce de medios, `ingesta/fuentes-cruce.mjs`), con sus pesos y temas |
 | **Clima y farmacias** | Lo que la web muestra hoy |
 | **Agenda** | Eventos del municipio, carga y publicación de eventos a mano (cada uno con su página en la web) y la base de contactos para pedir fechas. Ver "La agenda" más abajo |
 | **Calendario** | Horarios de las historias fijas (sólo rigen en la PC; en GitHub valen los de `panel/horarios.mjs`) |

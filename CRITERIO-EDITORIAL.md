@@ -1,6 +1,6 @@
 # Criterio editorial de Radar Balcarce
 
-*Actualizado el 26/09/2026.* Éste es **el** criterio editorial del medio: qué
+*Actualizado el 27/09/2026.* Éste es **el** criterio editorial del medio: qué
 se publica, cómo se escribe, cómo se trabaja con las fuentes y cómo se
 verifica. Hay uno solo y está acá. Todo lo demás lo respeta:
 
@@ -53,8 +53,10 @@ pueblo sin leer cinco medios. Por eso:
 
 ### Las fuentes
 
-Las fuentes están en `ingesta/fuentes.mjs`: medios de Balcarce, de la región
-y nacionales, y organismos públicos (la Municipalidad es **fuente oficial**).
+Las fuentes están en `ingesta/fuentes.mjs` (58: medios de Balcarce, de la
+región, de la provincia, secciones de los diarios nacionales y organismos
+públicos; la Municipalidad es **fuente oficial**) y en `ingesta/fuentes-cruce.mjs`
+(160 feeds de 76 medios, para el cruce de medios; ver abajo).
 Cada una tiene un peso: los medios locales pesan más que los nacionales. Si
 dos o más medios cuentan lo mismo, es **una** nota con varias fuentes, no
 varias notas.
@@ -75,15 +77,16 @@ argentina en el título (una figura argentina, "Argentina", Milei, Malvinas) o
 es automovilismo. De los medios de Balcarce entra todo. La lista es
 `SECCIONES_QUE_NO_ENTRAN` (`ingesta/fuentes.mjs`).
 
-**Los feeds generales de los diarios nacionales sólo cuentan (27/09).**
-Infobae, La Nación, Clarín "lo último", Ámbito "últimas" y Minuto Uno traen de
-todo: sus notas no salen por sí solas (salvo que digan Balcarce en el título).
-Sirven para contar cuántos medios cuentan una misma historia, que suma puntaje
-y respaldo. Las secciones nacionales se leen de los feeds de cada sección.
+**Los feeds generales de los diarios nacionales.** Infobae, La Nación, Clarín
+"lo último", Ámbito "últimas" y Minuto Uno traen de todo. A la mañana del 27/09
+pasaron a "señal" (sus notas no salían solas); desde el cruce de medios, esa
+etiqueta ya no cambia qué entra: como cualquier nota de afuera, las suyas
+quedan sólo si las cuentan dos medios o más, y sirven para contar cuántos
+medios cuentan una misma historia, que suma puntaje y respaldo.
 
-**De afuera entra poco y a propósito.** De casi todas las fuentes de la región
-entra sólo lo que es de Balcarce, nombra a una figura de acá o toca la zona
-(la ruta 226, la 55, el sudeste, la papa). **Una nota de un medio de afuera es
+**De afuera entra poco y a propósito.** De un medio de afuera queda lo que es
+de Balcarce, lo que toca la zona (la ruta 226, la 55, el sudeste, la papa) y
+lo que cuentan dos medios distintos o más (ver "El cruce de medios"). **Una nota de un medio de afuera es
 de Balcarce sólo si el medio dice Balcarce en su propio título (27/09)**:
 nombrarla al pasar en el texto (una lista de localidades, "en Balcarce también
 hay productores") no la hace local. Y lo de afuera tiene, por sección, un
@@ -104,11 +107,12 @@ hay ficha se decide como antes. Empezó sin prueba previa, a pedido de Hernán:
 los errores se corrigen en vivo, y lo que saca cada corrida queda en el
 registro de "Actualizar la web" (`ingesta/lectura-ia.mjs`, `aplicarFichas`).
 
-**El cruce de medios (27/09).** Se leen unas 210 fuentes (nacionales,
-provincia, Mar del Plata, zona, especializadas y todas las de Balcarce) y se
-juntan las notas que cuentan el mismo hecho, con una memoria de 36 horas
+**El cruce de medios (27/09).** Se leen 214 feeds activos (nacionales,
+provincia, Mar del Plata, zona, especializados y todos los de Balcarce: los de
+`fuentes.mjs` y 160 de 76 medios en `fuentes-cruce.mjs`) y se juntan las notas que cuentan el mismo hecho, con una memoria de 36 horas
 (`ingesta/cruce.mjs`, `ingesta/fuentes-cruce.mjs`). De afuera sólo entra lo
-que cuentan dos medios o más, y cuantos más lo cuentan, más arriba va: es lo
+que cuentan dos medios o más (además de lo que dice Balcarce en el título o
+toca la zona), y cuantos más lo cuentan, más arriba va: es lo
 que se está hablando. Una exclusiva de un solo medio espera a que otro la
 cuente. El listado de fuentes y la medición: `docs/CRUCE-DE-MEDIOS.md`.
 
@@ -132,7 +136,7 @@ apagados.
 sección, y para eso hay fuentes de afuera con la sección fija: **lo que le gusta
 a la gente** en otros medios (cultura, tecnología, el campo y la economía de
 los diarios nacionales). Cuentan igual que cualquier nota de afuera: peso
-bajo, pocas por vuelta, piso y cupo de su sección, semáforo, verificación
+bajo, dos medios o más, piso y cupo de su sección, semáforo, verificación
 contra la fuente y cuerpo. Lo internacional sin relación con Balcarce no entra. Cuando
 falta material para una sección se suman fuentes o se baja el piso de esa
 sección (nunca el de Deportes ni el semáforo); no se sube el tope de pedidos
@@ -157,7 +161,8 @@ la sección con menos notas escritas.
 
 **No hay sección Servicios (27/09, Hernán).** Los cortes, trámites, tarifas y
 obras de acá van a **Balcarce**. Lo de afuera que sólo trataba de eso queda
-como País. La farmacia, el clima y el dólar siguen siendo servicios del sitio
+en Argentina, o en Región o Provincia según el alcance del medio (esas dos
+esperan a una persona). La farmacia, el clima y el dólar siguen siendo servicios del sitio
 (la barra de arriba), no una sección de notas.
 
 **Policiales es sólo de Balcarce y la zona** (26/09; pedido de Hernán y Andrés:
@@ -198,7 +203,7 @@ su prueba. **No se tocan sin que lo decidan Hernán y Andrés.**
 | Color | Qué pasa | Cuándo |
 |---|---|---|
 | **Rojo** | No se publica nunca, ni por error | Identifica o puede identificar a un menor o a una víctima de violencia de género o de un delito sexual (menor de edad, abuso sexual, violación, femicidio, grooming, suicidio…) |
-| **Amarillo** | Espera a una persona en el panel | Acusa a alguien (denuncia, detenido, imputado), habla de una muerte, involucra a un chico, parece promoción, es de afuera con poco puntaje o fuera del cupo, es de País, es la cotización del dólar, o tiene **verificación baja** (sección 5) |
+| **Amarillo** | Espera a una persona en el panel | Acusa a alguien (denuncia, detenido, imputado), habla de una muerte, involucra a un chico, parece promoción, es de afuera con poco puntaje, fuera del cupo o contada por un solo medio, es de Región o Provincia sin otra sección, es la cotización del dólar, o tiene **verificación baja** (sección 5) |
 | **Verde** | Sale sola | Todo lo demás, en las secciones que salen solas |
 
 **Qué mira el semáforo.** En el **título y el comienzo del resumen**, las
@@ -228,14 +233,16 @@ invertida: lo más importante primero. El guion para la voz es el título.
   etiqueta.
 - Apunta a unos **70 caracteres** y **nunca pasa de 90**: se tiene que entender
   solo en la pantalla del celular.
-- Si el hecho es de Balcarce y el título no lo dice, termina con "en
-  Balcarce".
+- **Nunca termina en "en Balcarce"** (27/09, Hernán): el medio es de Balcarce
+  y se sobreentiende. Si igual aparece, el sistema lo saca
+  (`sinBalcarceAlFinal`, `web/lib/titulos.js`). Si el hecho es de otra ciudad,
+  el título nombra esa ciudad y nunca a Balcarce.
 - Sin signos de admiración, sin pregunta, sin "Video:", "Ojo:" ni frases de
   gancho. Nunca "en vivo".
 
 | Bien | Mal, y por qué |
 |---|---|
-| El Concejo aprueba el presupuesto 2027 en Balcarce | "Balcarce: el Concejo aprobó el presupuesto" (empieza por el lugar) |
+| El Concejo aprueba el presupuesto 2027 | "Balcarce: el Concejo aprobó el presupuesto" (empieza por el lugar); "El Concejo aprueba el presupuesto 2027 en Balcarce" (la cola sobra) |
 | Ferroviarios gana por penales y juega la final | "¡Ferroviarios a la final!" (admiración, no dice qué pasó) |
 | Reabre el autódromo Juan Manuel Fangio tras una década | "EN VIVO: la reapertura del Fangio" (no hacemos coberturas en vivo) |
 | Cortan la luz el martes en el barrio Norte | "Lo que tenés que saber del corte de luz" (gancho) |
@@ -688,7 +695,12 @@ también son de IA.
   sobre otro texto y podrían contradecir la corregida.
 - **Se saca una nota**: si una persona la bloquea o la descarta, o el semáforo
   la pasa a rojo o amarillo, sale de las listas y su página deja de existir
-  hasta que una persona la apruebe.
+  hasta que una persona la apruebe. Sin el panel, se anota en
+  `web/data/retiradas.json` (motivo, cuándo y quién).
+- **Una corrección sin el panel** (27/09): el título, la bajada o la sección de
+  una nota van en `web/data/correcciones.json`, con motivo, cuándo y quién (sin
+  motivo no vale). Manda sobre lo que escribe la IA y la dirección de la nota no
+  cambia (`correccionesAMano` y `conCorreccion`, `web/lib/archivo.js`).
 - **El enlace no se rompe**: la dirección de una nota queda fija desde que sale
   aunque cambie el titular, y la página dura 180 días aunque salga de la
   portada.
@@ -916,7 +928,11 @@ mismo y hasta tres notas que el sitio ya publicó sobre el tema en los últimos
 |---|---|
 | La instrucción de la IA (se lee de acá) | `ingesta/prompt-editorial.mjs` la carga; `reels/reescritura.mjs` la usa |
 | Los números | `ingesta/criterio.mjs`, controlados por `pruebas/criterio.test.mjs` |
-| El semáforo, las secciones, las fuentes y sus pesos | `ingesta/fuentes.mjs` (`REGLAS_SEMAFORO`, `REGLAS_SECCION`, `FUENTES`) |
+| El semáforo, las secciones, las fuentes y sus pesos | `ingesta/fuentes.mjs` (`REGLAS_SEMAFORO`, `REGLAS_SECCION`, `FUENTES`, `FUENTES_NACIONALES`) |
+| El cruce de medios y sus fuentes | `ingesta/cruce.mjs` y `ingesta/fuentes-cruce.mjs`; los dos medios, `exigirDosMedios` (`ingesta/ingesta.mjs`) |
+| La lectura con IA | `ingesta/lectura-ia.mjs` (fichas en `web/data/fichas.json`), con `ingesta/perfil-balcarce.md` |
+| Títulos sin "en Balcarce" al final | `sinBalcarceAlFinal`, en `web/lib/titulos.js` |
+| Retiradas y correcciones sin el panel | `web/data/retiradas.json` y `web/data/correcciones.json` (`web/lib/archivo.js`) |
 | El verificador | `ingesta/verificar.mjs` |
 | El nivel de verificación, el tono y los intentos | `reels/reescritura.mjs` |
 | "Sin cuerpo no se publica" | `web/lib/cuerpo.js` |

@@ -398,7 +398,7 @@ export const SECCIONES = [
 
 // Las que van en la barra de navegación: el resto existe igual como página,
 // pero no ocupa lugar arriba.
-export const EN_NAVEGACION = ['Balcarce', 'Política', 'Policiales', 'Deportes', 'Automovilismo', 'Agro', 'Economía', 'Cultura y agenda', 'Tecnología'];
+export const EN_NAVEGACION = ['Balcarce', 'Política', 'Policiales', 'Fútbol', 'Deportes', 'Automovilismo', 'Agro', 'Economía', 'Cultura y agenda', 'Tecnología', 'Argentina'];
 
 export function datosSeccion(nombre) {
   return SECCIONES.find((s) => s.nombre === nombre)

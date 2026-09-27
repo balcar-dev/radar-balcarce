@@ -44,9 +44,9 @@ const Y_BAJADA = 396;
 const TAM_BAJADA = 36;
 export const BAJADA = 'Lo que pasa en Balcarce, la región y el país';
 
-const marcaSvg = (extra = '') => `<text x="${ANCHO / 2}" y="${Y_MARCA}" text-anchor="middle" font-family="Fraunces" font-weight="900"
+const marcaSvg = (extra = '') => `<text x="${ANCHO / 2}" y="${Y_MARCA}" text-anchor="middle" font-family="Source Serif 4 60pt" font-weight="900"
         font-size="${TAM_MARCA}" fill="#F4F1EA" letter-spacing="-4"${extra}>RADAR <tspan fill="#C7381C">BALCARCE</tspan></text>`;
-const bajadaSvg = () => `<text x="${ANCHO / 2}" y="${Y_BAJADA}" text-anchor="middle" font-family="IBM Plex Sans" font-weight="600"
+const bajadaSvg = () => `<text x="${ANCHO / 2}" y="${Y_BAJADA}" text-anchor="middle" font-family="Inter" font-weight="600"
         font-size="${TAM_BAJADA}" fill="#F4F1EA" fill-opacity="0.85" letter-spacing="1">${BAJADA}</text>`;
 
 const envolver = (contenido) => `<svg xmlns="http://www.w3.org/2000/svg" width="${ANCHO}" height="${ALTO}" viewBox="0 0 ${ANCHO} ${ALTO}">${contenido}</svg>`;
@@ -77,7 +77,7 @@ const opciones = () => {
   const archivos = fs.existsSync(FUENTES)
     ? fs.readdirSync(FUENTES).filter((f) => /\.(ttf|otf)$/i.test(f)).map((f) => path.join(FUENTES, f))
     : [];
-  return { font: { fontFiles: archivos, loadSystemFonts: archivos.length === 0, defaultFontFamily: 'IBM Plex Sans' } };
+  return { font: { fontFiles: archivos, loadSystemFonts: archivos.length === 0, defaultFontFamily: 'Inter' } };
 };
 
 /** Cajas reales (medidas con las tipografías) de la marca y la bajada. */

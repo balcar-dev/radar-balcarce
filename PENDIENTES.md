@@ -1,6 +1,6 @@
 # Pendientes: todo en un solo lugar
 
-*Actualizado el 26/09/2026.* Los otros documentos explican **cómo** funciona
+*Actualizado el 27/09/2026.* Los otros documentos explican **cómo** funciona
 cada cosa; éste dice **qué falta**. Lo que se exige siempre está en `REGLAS.md`.
 Lo que ya se hizo está al final ("Ya resuelto"). Cada cosa figura una sola vez.
 
@@ -17,7 +17,15 @@ Punto de restauración anterior a los cambios: la etiqueta `antes-de-v2.2` en Gi
 policiales de afuera, consejos), feeds generales que sólo cuentan cobertura,
 ficha de cada fuente, "de Balcarce" sólo con el título, redes sólo con lo de
 Balcarce, título de la IA sin Balcarce de más, 197 notas retiradas de la web
-(`web/data/retiradas.json`), medios de España y chimentos apagados.
+(`web/data/retiradas.json`), medios de España y chimentos apagados. **A la
+tarde:** el cruce de medios (160 feeds más, de 76 medios, en
+`ingesta/fuentes-cruce.mjs`; lo de afuera sólo con dos medios o más, con
+memoria de 36 horas), la lectura con IA decidiendo, las repetidas juntas en una
+nota, Fútbol aparte de Deportes, Argentina en lugar de País, sin sección
+Servicios, títulos sin "en Balcarce" al final, correcciones a mano en
+`web/data/correcciones.json`, un color distinto por sección y la tipografía
+nueva (Source Serif 4 e Inter en la web, las imágenes, las placas, el panel y
+la guía comercial).
 
 | Qué falta | Quién | Urgencia |
 |---|---|---|
@@ -137,8 +145,9 @@ clave o una decisión.
   escuela primaria salió en Deportes; noticias de fútbol peruano entran por las
   fuentes nacionales. Se ajusta con `REGLAS_SECCION` (`ingesta/fuentes.mjs`);
   `npm run auditar` muestra qué palabra decidió cada nota.
-- **Nota duplicada con dos direcciones** ("Zona Fría"): el agrupamiento todavía
-  no las une.
+- **Nota duplicada con dos direcciones** ("Zona Fría"): desde el 27/09 lo
+  atacan el cruce de medios (título y resumen, TF-IDF) y `agruparRepetidas` (la
+  IA junta las que cuentan el mismo hecho). Falta confirmar que no vuelve a pasar.
 
 **Baja**
 
@@ -164,6 +173,13 @@ Las ideas más grandes, que cambian cómo funciona algo, están en `IDEAS.md`.
 
 ## Ya resuelto (para no volver a proponerlo)
 
+- **27/09:** plan V2.2 semana 1 (filtro de entrada, fichas de fuente, policiales
+  sólo de Balcarce), la lectura con IA decide en vivo, el cruce de medios (218
+  fuentes configuradas, 214 activas; ya no entran "las 3 a 5 más nuevas"), lo de
+  afuera sólo con dos medios, una noticia una nota, secciones nuevas (Fútbol,
+  Argentina; sin Servicios), un color por sección, títulos sin "en Balcarce",
+  correcciones y retiradas a mano sin el panel, tipografía Source Serif 4 e Inter
+  en todo (reglas 41 a 55 de `REGLAS.md`).
 - **26/09:** la app de Meta se **publicó** (modo activo); Policiales sólo de
   Balcarce y la zona; secciones flacas con 13 fuentes nuevas, pisos y cupos por
   sección (58 fuentes en total); una sola hora de Balcarce para todo el código

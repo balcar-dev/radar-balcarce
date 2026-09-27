@@ -240,13 +240,13 @@ export function paginaLogin({ error = null, sinUsuarios = false } = {}) {
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Entrar · Radar Balcarce</title>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700;9..144,900&family=IBM+Plex+Sans:wght@400;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,600..900&family=Inter:opsz,wght@14..32,400..700&display=swap">
 <style>
   * { box-sizing: border-box; }
   body { margin:0; min-height:100vh; display:flex; align-items:center; justify-content:center;
-         background:#14161A; color:#F4F1EA; font-family:"IBM Plex Sans",system-ui,sans-serif; padding:20px; }
+         background:#14161A; color:#F4F1EA; font-family:"Inter",system-ui,sans-serif; padding:20px; }
   .caja { width:100%; max-width:380px; }
-  .marca { font-family:"Fraunces",Georgia,serif; font-size:34px; font-weight:900; letter-spacing:-0.03em; }
+  .marca { font-family:"Source Serif 4",Georgia,serif; font-size:34px; font-weight:900; letter-spacing:-0.03em; }
   .marca span { color:#C7381C; }
   .sub { color:#8C918D; font-size:13px; margin:8px 0 26px; }
   label { display:block; font-size:12px; font-weight:600; letter-spacing:0.05em;

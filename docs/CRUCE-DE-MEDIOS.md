@@ -2,6 +2,12 @@
 
 *Medido el domingo 27/09/2026 a la tarde. Un domingo publica menos que un día hábil.*
 
+*Es la foto de ese día. Lo que se decidió con esto ya está en el código: el cruce
+(`ingesta/cruce.mjs`, título y resumen con TF-IDF, umbral 0,42, memoria de 36
+horas) y la lista vigente, `ingesta/fuentes-cruce.mjs` (160 feeds de 76 medios,
+que se suman a los 58 de `ingesta/fuentes.mjs`). "Las fuentes que usamos hoy" y
+la columna "¿Ya se usa?" son las de antes del cruce.*
+
 ## En corto
 
 - **90 medios**, 167 feeds leídos (RSS y los índices de noticias que arman los sitios para Google, que traen todo lo del día).

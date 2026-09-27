@@ -27,21 +27,24 @@ export const COLORES = {
 // sobre fondo casi negro, la placa entera se veía vieja. Estos son los
 // mismos tonos pero saturados, pensados para ocupar media placa como
 // bloque de color en vez de ser una insinuación en un degradado.
+// Las secciones llevan el mismo color que en la web (--s-* de
+// web/app/globals.css, 27/09): uno por sección y de tonos bien distintos.
+// Ya son oscuros para texto blanco; paraTextoBlanco los deja igual.
 export const COLOR_SECCION = {
-  Balcarce: '#D6412A',
-  Servicios: '#12857A',
-  Deportes: '#12857A',
-  Automovilismo: '#F2A324',
-  Policiales: '#B23A1C',
-  Política: '#D6412A',
-  Agro: '#7E9420',
-  'Cultura y agenda': '#8B5BC4',
-  País: '#5A6270',
-  Región: '#5A6270',
+  Balcarce: '#B91C1C',
+  Política: '#3730A3',
+  Policiales: '#831843',
+  Fútbol: '#15803D',
+  Deportes: '#0F766E',
+  Automovilismo: '#B45309',
+  Agro: '#4D7C0F',
+  'Cultura y agenda': '#9D2C8F',
+  Argentina: '#4B5563',
+  Región: '#4B5563',
   Clima: '#12857A',
   Farmacias: '#D6412A',
-  Economía: '#C08A1E',
-  Tecnología: '#2F7FD6',
+  Economía: '#8A6500',
+  Tecnología: '#0B6FB8',
   Reclamos: '#B23A1C',
   Seguimiento: '#7E9420',
 };
@@ -99,10 +102,12 @@ export function envolver(texto, ancho) {
   return renglones;
 }
 
-// Tipografías: las mismas del portal. Se declaran acá una sola vez para no
-// repetir el string en cada placa.
-const DISPLAY = 'Fraunces';
-const TEXTO = 'IBM Plex Sans';
+// Tipografías: las mismas del portal (27/09). Se declaran acá una sola vez
+// para no repetir el string en cada placa. Los titulares usan el corte de
+// 60 puntos de Source Serif 4 (el de tamaños grandes), y ése es el nombre
+// que trae el archivo (marca/fuentes/SourceSerif4-*.ttf).
+const DISPLAY = 'Source Serif 4 60pt';
+const TEXTO = 'Inter';
 
 // El margen lateral. Más aire que antes: las placas apretadas contra el
 // borde se leen peor y parecen hechas a las apuradas.
@@ -206,7 +211,7 @@ export function placaClima({
        aunque el corte fuera exactamente el mismo. -->
   <text x="${MARGEN - 12}" y="${CORTE - 120}" font-family="${DISPLAY}" font-size="264" font-weight="900"
         letter-spacing="-14" fill="#FFFFFF">${temp}<tspan
-        font-size="114" letter-spacing="0" dx="30" dy="-120" opacity="0.65">°</tspan></text>
+        font-size="114" letter-spacing="0" dx="6" dy="-120" opacity="0.65">°</tspan></text>
 
   <text x="${MARGEN}" y="1010" font-family="${DISPLAY}" font-size="62" font-weight="900"
         letter-spacing="-2" fill="${COLORES.tinta}">${esc(cielo)}</text>
@@ -234,11 +239,10 @@ export function placaFarmacia({ detalle = [], farmacias = [], dia, diaSemana }) 
     const dir = f.direccion ? envolver(f.direccion, doble ? 28 : 24) : [];
     const tamNombre = doble ? 72 : 108;
     let cursor = y;
-    // El nombre va en la sans, no en Fraunces. Fraunces tiene un rasgo de
-    // diseño llamado "wonk" que hace las letras a propósito irregulares: en
-    // un titular largo se lee como carácter, pero en un nombre corto a 108
-    // píxeles la J y las s se ven torcidas, como si la tipografía estuviera
-    // rota. Un nombre de farmacia tiene que leerse limpio y rápido.
+    // El nombre va en la sans, no en la letra de los titulares: es un dato
+    // de servicio, no un título, y tiene que leerse limpio y rápido. Con
+    // Inter a 108 px, 14 letras miden unos 830 px y entran en los 904 que
+    // quedan entre márgenes (medido sobre nombres reales el 27/09).
     const partes = nombre.map((l, i) => `<text x="${MARGEN}" y="${cursor + i * (tamNombre * 1.1)}"
         font-family="${TEXTO}" font-size="${tamNombre}" font-weight="700" letter-spacing="-2"
         fill="${COLORES.tinta}">${esc(l)}</text>`).join('');
@@ -379,13 +383,14 @@ export function placaUtiles({ grupos = [] }) {
 // letras y ocupan el doble una que la otra. Por eso el renglón se pasaba
 // del margen derecho aunque el conteo diera bien.
 //
-// Estos factores son del ancho de cada letra respecto del cuerpo, medidos
-// a ojo sobre Fraunces en negrita. No son exactos, pero alcanzan: el error
-// queda muy por debajo del margen que dejamos.
-// Calibrados contra una placa real: con los valores de antes, "La Dirección
-// de Juventud" medía 859 px estimados y se dibujaba en 945. Fraunces en
-// negro es más ancha de lo que parece.
-const ANCHO_LETRA = { estrecha: 0.34, normal: 0.58, ancha: 0.96, mayuscula: 0.72, numero: 0.62 };
+// Estos factores son del ancho de cada letra respecto del cuerpo. No son
+// exactos, pero alcanzan: el error queda por debajo del margen que dejamos.
+// Calibrados el 27/09 contra los anchos reales de Source Serif 4 Black
+// (leídos del archivo de la fuente): "La Dirección de Juventud" mide 10,72
+// cuerpos y el cálculo da 11,0, un 3 % de más, del lado seguro. Con
+// Fraunces, la letra de antes, la misma frase medía 12,99: Source Serif es
+// un 17 % más angosta y los factores bajaron en proporción.
+const ANCHO_LETRA = { estrecha: 0.30, normal: 0.50, ancha: 0.84, mayuscula: 0.63, numero: 0.54 };
 
 // Un poco de aire: el cálculo es aproximado y es preferible que un renglón
 // baje antes de tiempo a que se salga del margen.
@@ -487,8 +492,8 @@ export function placaNoticia({
 // Las tipografías del portal, incrustadas de verdad. Antes las placas se
 // dibujaban con Georgia y Segoe UI (las que trae Windows) y por eso no
 // terminaban de verse del mismo medio que la web. Estas son las mismas
-// que usa el sitio: Fraunces para los titulares, IBM Plex Sans para todo
-// lo demás.
+// que usa el sitio: Source Serif 4 para los titulares, Inter para todo lo
+// demás.
 const CARPETA_FUENTES = path.join(import.meta.dirname, 'marca', 'fuentes');
 
 function archivosDeFuente() {
@@ -521,7 +526,7 @@ export async function aPng(svg, destino, ancho = ANCHO) {
       // Si por lo que sea faltan los archivos, sigue andando con las del
       // sistema en vez de romperse: una placa fea es mejor que ninguna.
       loadSystemFonts: propias.length === 0,
-      defaultFontFamily: 'IBM Plex Sans',
+      defaultFontFamily: TEXTO,
     },
   });
   fs.writeFileSync(destino, r.render().asPng());

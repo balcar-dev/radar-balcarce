@@ -1,6 +1,6 @@
 # Reglas permanentes
 
-*Actualizado el 26/09/2026.* Lo que Hernán y Andrés pidieron que **se cumpla
+*Actualizado el 27/09/2026.* Lo que Hernán y Andrés pidieron que **se cumpla
 siempre**, junto con lo que lo vigila. Las reglas editoriales se explican
 enteras en [`CRITERIO-EDITORIAL.md`](CRITERIO-EDITORIAL.md); acá está sólo la
 lista y qué prueba cuida cada una. Una regla sin vigilancia se rompe sola
@@ -8,7 +8,7 @@ con el tiempo: por eso cada una dice qué prueba (`pruebas/`, corre con
 `npm test` y antes de cada publicación en GitHub) o qué chequeo del vigilante
 (`redes/vigilar.mjs`, cada 30 minutos, avisa por WhatsApp) la protege.
 
-Hay **53 reglas**, numeradas del 1 al 53 sin huecos ni repetidas (las 41 a 53 son del 27/09, plan V2.2). Están
+Hay **55 reglas**, numeradas del 1 al 55 sin huecos ni repetidas (las 41 a 55 son del 27/09, plan V2.2 y lo que se decidió en vivo ese día). Están
 agrupadas por tema (la web, las redes, cómo se trabaja) y no por número, porque
 los números no se reordenan: otros documentos los citan.
 
@@ -48,7 +48,7 @@ Cómo leer la columna "Qué la cuida":
 |---|---|---|
 | 41 | **De los medios de afuera no se trae lo que el propio medio pone en una sección de otro país, de policiales o de consejos genéricos** (se mira la dirección de la nota, no el texto). De una sección de otro país entra sólo lo que tiene conexión argentina en el título o es automovilismo. De los medios de Balcarce entra todo. | Prueba: `pruebas/entrada.test.mjs` (con las direcciones reales de California, Colombia, el tigre de México, Olé internacional, un policial de Infobae y un consejo de Ámbito). |
 | 42 | **Un policial que no es de Balcarce no se trae** (ni amarillo). | Prueba: `pruebas/entrada.test.mjs` ("un policial de afuera no se trae…"). |
-| 43 | **Los feeds generales de los diarios nacionales sólo cuentan cobertura**: sus notas no salen solas, salvo que digan Balcarce en el título. Cada fuente tiene ficha con tipo, ciudad y uso. | Prueba: `pruebas/entrada.test.mjs` ("cada fuente tiene su ficha…", "los feeds generales… señal"). |
+| 43 | **Cada fuente tiene ficha con tipo, ciudad y uso**, y los feeds generales de los diarios nacionales llevan el uso "señal". Desde el cruce de medios (regla 52, 27/09 a la tarde) esa etiqueta ya no cambia qué entra: sus notas, como cualquiera de afuera, salen sólo si las cuentan dos medios o más. | Prueba: `pruebas/entrada.test.mjs` ("cada fuente tiene su ficha…", "los feeds generales… señal": mira la ficha, no la entrada). |
 | 44 | **Una nota de un medio de afuera es de Balcarce sólo si el medio dice Balcarce en su título.** Nombrarla al pasar no la hace local ni le suma puntaje. | Prueba: `pruebas/notas.test.mjs` ("un medio de afuera que nombra a Balcarce sólo en el texto…"). |
 | 45 | **Una palabra suelta no decide:** "fangio" sin autódromo ni museo, "taller", "drones", "etcheverry" o "báez" sin nombre no hacen local una nota, no la cambian de sección ni la vuelven figura. | Prueba: `pruebas/notas.test.mjs` y `pruebas/zona.test.mjs` (los casos del 27/09). |
 | 46 | **El título de la IA no pone Balcarce en una nota que no es de Balcarce.** | Prueba: `pruebas/verificar.test.mjs` ("el título no pone Balcarce…"). La instrucción, en `CRITERIO-EDITORIAL.md` § 12, regla 2. |
@@ -57,8 +57,10 @@ Cómo leer la columna "Qué la cuida":
 | 50 | **Lo de afuera de Balcarce sale solo sólo con dos medios o más** (una fuente oficial alcanza). Lo viejo que no cumple conserva su página pero no completa la tapa ni "Seguí leyendo". | Prueba: `pruebas/lectura-ia.test.mjs` ("lo de afuera necesita dos medios…") y `pruebas/seguir-leyendo.test.mjs` ("lo de afuera con un solo medio no completa…"). |
 | 51 | **Una noticia, una nota:** las repetidas (el mismo hecho con otro título) se juntan en una, con todos los medios. Una repetida que fue a redes conserva su página. | Prueba: `pruebas/lectura-ia.test.mjs` ("de tres notas del mismo hecho queda una…", "el pedido de repetidas…"). |
 | 52 | **El cruce de medios:** de afuera sólo entra lo que cuentan dos medios distintos o más, contando las notas de las últimas 36 horas. La nota de una historia conserva su dirección cuando otro medio se suma. | Pruebas: `pruebas/cruce.test.mjs`. |
-| 53 | **Fútbol es sección aparte de Deportes y Argentina reemplaza a País** (y sale sola). | Prueba: `pruebas/notas.test.mjs` ("el fútbol tiene sección propia…"). |
-| 48 | **Lo que se saca a mano de la web va en `web/data/retiradas.json`**, con motivo, fecha y quién. Sale de las listas y pierde la página aunque la ingesta lo vuelva a traer. Sirve cuando el panel está prendido (si no, pisaría las decisiones). | Prueba: `pruebas/archivo.test.mjs` ("las notas retiradas a mano…", "la lista de retiradas… bien armada"). |
+| 53 | **Fútbol es sección aparte de Deportes y Argentina reemplaza a País** (y sale sola). **No hay sección Servicios**: lo práctico de acá (cortes, trámites, obras) va a Balcarce. | Prueba: `pruebas/notas.test.mjs` ("el fútbol tiene sección propia…", "no hay sección Servicios…"). |
+| 54 | **Un título automático nunca termina en "en Balcarce"**: el medio es de Balcarce. Se saca la cola en las notas nuevas y en las ya publicadas (si lo que queda tiene cuatro palabras o más); lo que escribió una persona no se toca. La dirección no cambia. | Prueba: `pruebas/titulos-colores.test.mjs` ("los títulos automáticos no terminan en…", "la instrucción de la IA dice que el título nunca termina en…"). |
+| 55 | **Las correcciones a mano sin el panel van en `web/data/correcciones.json`**: título, bajada o sección de una nota, cada una con motivo, cuándo y quién (sin motivo no vale). Mandan sobre lo que escribe la IA y la dirección no cambia. | Prueba: `pruebas/archivo.test.mjs` ("las correcciones a mano mandan sobre el título, la bajada y la sección…", "el archivo de correcciones del repositorio está bien armado"). |
+| 48 | **Lo que se saca a mano de la web va en `web/data/retiradas.json`**, con motivo, fecha y quién. Sale de las listas y pierde la página aunque la ingesta lo vuelva a traer. Manda aunque el panel esté prendido: el panel escribe `decisiones.json` y no toca este archivo. | Prueba: `pruebas/archivo.test.mjs` ("las notas retiradas a mano…", "la lista de retiradas… bien armada"). |
 
 ## Las redes
 

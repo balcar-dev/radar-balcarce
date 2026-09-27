@@ -27,20 +27,22 @@ export const TAMANO = { width: 1200, height: 630 };
 export const TAMANO_INSTAGRAM = { width: 1080, height: 1350 };
 export const TIPO = 'image/png';
 
-// Los mismos de globals.css. Están repetidos acá porque esto corre al
-// compilar, sin CSS a mano.
+// Los mismos tonos de globals.css (--s-*, 27/09), pero claros: acá el color
+// va en el nombre de la sección y en la franja, sobre el fondo casi negro, y
+// los de la web son oscuros porque van de fondo de un texto blanco. Cada uno
+// da al menos 4,5:1 contra #14161A (pruebas/titulos-colores.test.mjs).
 const COLOR = {
-  Balcarce: '#C7381C',
-  Política: '#C7381C',
-  Policiales: '#8C2D18',
-  Deportes: '#1E6E4F',
-  Automovilismo: '#E08A16',
-  Agro: '#6B7A2A',
-  'Cultura y agenda': '#6D4BA0',
-  Servicios: '#16615B',
-  Economía: '#9A6A12',
-  Tecnología: '#2563A8',
-  País: '#4A4F4B',
+  Balcarce: '#F87171',
+  Política: '#A5B4FC',
+  Policiales: '#F472B6',
+  Fútbol: '#4ADE80',
+  Deportes: '#2DD4BF',
+  Automovilismo: '#FB923C',
+  Agro: '#A3E635',
+  'Cultura y agenda': '#E879F9',
+  Economía: '#FACC15',
+  Tecnología: '#38BDF8',
+  Argentina: '#9CA3AF',
 };
 const POR_DEFECTO = '#14161A';
 
@@ -78,7 +80,7 @@ export function tarjeta(nota = {}, { instagram = false } = {}) {
           ...(instagram ? {} : { borderTop: `18px solid ${acento}` }),
           // 135px arriba y abajo: lo que se recorta en la grilla cuadrada.
           padding: instagram ? '200px 96px 190px' : '56px 64px 48px',
-          fontFamily: 'Plex',
+          fontFamily: 'Inter',
         },
         children: [
           instagram && {
@@ -112,7 +114,7 @@ export function tarjeta(nota = {}, { instagram = false } = {}) {
                 type: 'div',
                 props: {
                   style: {
-                    fontFamily: 'Fraunces',
+                    fontFamily: 'Source Serif',
                     fontSize: Math.round(cuerpo(titulo) * (instagram ? 1.2 : 1)),
                     fontWeight: 900,
                     lineHeight: 1.12,
@@ -142,7 +144,7 @@ export function tarjeta(nota = {}, { instagram = false } = {}) {
                   type: 'div',
                   props: {
                     style: {
-                      fontFamily: 'Fraunces',
+                      fontFamily: 'Source Serif',
                       fontSize: Math.round(30 * e),
                       fontWeight: 900,
                       color: '#F7F5EF',
@@ -155,7 +157,7 @@ export function tarjeta(nota = {}, { instagram = false } = {}) {
                   type: 'div',
                   props: {
                     style: {
-                      fontFamily: 'Fraunces',
+                      fontFamily: 'Source Serif',
                       fontSize: Math.round(30 * e),
                       fontWeight: 900,
                       color: '#E0553A',
@@ -187,8 +189,8 @@ export function tarjeta(nota = {}, { instagram = false } = {}) {
     {
       ...(instagram ? TAMANO_INSTAGRAM : TAMANO),
       fonts: [
-        { name: 'Fraunces', data: leer('Fraunces-900.ttf'), weight: 900, style: 'normal' },
-        { name: 'Plex', data: leer('IBMPlexSans-600.ttf'), weight: 600, style: 'normal' },
+        { name: 'Source Serif', data: leer('SourceSerif4-900.ttf'), weight: 900, style: 'normal' },
+        { name: 'Inter', data: leer('Inter-600.ttf'), weight: 600, style: 'normal' },
       ],
     },
   );

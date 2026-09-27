@@ -1,6 +1,6 @@
 # Cómo funciona Radar Balcarce
 
-*Actualizado el 26/09/2026.* Este archivo explica la parte técnica: el recorrido de una noticia, cómo se
+*Actualizado el 27/09/2026.* Este archivo explica la parte técnica: el recorrido de una noticia, cómo se
 puntúa y cómo está hecha la web. Es el documento para leer antes de tocar
 `ingesta/fuentes.mjs`.
 
@@ -16,31 +16,33 @@ falta) e `INVESTIGACION.md` (lo legal, con fuentes). La lista completa está en
 ## 1. El recorrido de una noticia
 
 ```
-58 fuentes  →  agrupar  →  clasificar  →  puntuar  →  semáforo  →  panel  →  web / reels
+218 feeds  →  cruce de medios  →  clasificar  →  puntuar  →  semáforo  →  lectura con IA  →  panel  →  web / redes
 ```
 
-1. **Buscar.** Cada 30 minutos GitHub Actions lee las 54 fuentes activas (locales,
-   regionales y nacionales; la lista está en `ingesta/fuentes.mjs`), con la PC
-   apagada; el panel, mientras está prendido, también busca cada 10. La mayoría tiene RSS; El Diario Balcarce
+1. **Buscar.** Cada 30 minutos GitHub Actions lee, con la PC apagada, **214
+   feeds activos** de 218: 54 de los 58 de `ingesta/fuentes.mjs` (los medios de
+   Balcarce, la región, la provincia y las secciones de los diarios nacionales;
+   4 apagados) y los 160 de `ingesta/fuentes-cruce.mjs` (76 medios: nacionales,
+   provincia, Mar del Plata, la zona y especializados en fútbol, deportes,
+   automovilismo, campo y ciencia; muchos con su índice de noticias, que trae
+   todo el día); el panel, mientras está prendido, también busca cada 10. La mayoría tiene RSS; El Diario Balcarce
    no, así que se raspa la portada y después se entra a cada nota para sacar
    la bajada y la hora de publicación de sus metadatos.
-   **De afuera entra poco y a propósito.** Desde el 25/09 hay doce fuentes de
-   la región y la provincia (0223, LU9, QZ, El Eco de Tandil, Ecos Diarios,
-   Lobería, Ayacucho, la Agencia DIB, La Noticia 1, Diputados bonaerenses, el
-   Gobierno de la Provincia y Argenpapa). De casi todas entra sólo lo que
-   dice Balcarce **en el título** (`PALABRAS_LOCALES`; desde el 27/09, antes
-   alcanzaba con nombrarla en el texto), a una figura (`FIGURAS`) o toca la
-   zona sin nombrarla: la ruta 226, la 55, el sudeste o el cultivo de papa
-   (`PALABRAS_ZONA`, en `ingesta/fuentes.mjs`). Pesan poco para no ganarle a lo
-   local, y lo de afuera que es de Balcarce va a la sección Balcarce.
+   **De afuera queda sólo lo que tiene respaldo** (desde el 27/09, paso 2): lo
+   que dice Balcarce **en el título** (`PALABRAS_LOCALES`; nombrarla en el texto
+   no alcanza), lo que toca la zona sin nombrarla (la ruta 226, la 55, el
+   sudeste o el cultivo de papa: `PALABRAS_ZONA`, en `ingesta/fuentes.mjs`) y lo
+   que cuentan **dos medios distintos o más**. Las fuentes de afuera pesan poco
+   para no ganarle a lo local, y lo de afuera que es de Balcarce va a la sección
+   Balcarce.
    **El filtro de la entrada (27/09, plan V2.2).** Antes de todo eso, de los
    medios de afuera no se trae lo que el propio medio pone en una sección de
    otro país, de policiales o de consejos genéricos (`SECCIONES_QUE_NO_ENTRAN`),
-   y los feeds generales de los diarios nacionales sólo cuentan cobertura
-   (`uso: 'senal'`). Ver `CRITERIO-EDITORIAL.md` § 2 y `docs/PLAN-V2.2.md`.
+   y eso no entra ni al cruce. (Los feeds generales de los diarios nacionales
+   tienen `uso: 'senal'` en su ficha; desde el cruce eso ya no cambia qué entra.) Ver `CRITERIO-EDITORIAL.md` § 2 y `docs/PLAN-V2.2.md`.
    **Secciones flacas (26/09).** Hernán y Andrés piden tres notas por sección
    en la portada. Por eso hay 13 fuentes más, todas de afuera y con la sección
-   fija (el feed ya viene separado por tema), peso 11 a 14 y `maxItems` de 2 o 3:
+   fija (el feed ya viene separado por tema), peso 11 a 14:
    Cultura y agenda (Infobae Teleshow y Cultura, Ámbito y Minuto Uno — desde el
    27/09 Teleshow y Minuto Uno Espectáculos están apagados, por chimentos, y
    también Hipertextual y Xataka, por ser de España —
@@ -49,27 +51,47 @@ falta) e `INVESTIGACION.md` (lo legal, con fuentes). La lista completa está en
    Tecnología (La Nación Tecnología, Hipertextual, Xataka), Agro (Clarín Rural,
    Infocampo, Bichos de Campo, INTA) y Economía (Perfil). El piso y el cupo
    de cada sección (`ingesta/criterio.mjs`) frenan lo de afuera, y el semáforo
-   sigue mandando. Policiales no tiene fuentes de afuera: es sólo de Balcarce y la zona
-   (CRITERIO-EDITORIAL.md § 2).
+   sigue mandando. Policiales es sólo de Balcarce y la zona: lo que se clasifica
+   como policial y no viene de un medio de acá ni dice Balcarce en el título no
+   se trae (CRITERIO-EDITORIAL.md § 2).
    Además, la IA reescribe primero las notas de la sección que menos notas
    escritas tiene (`ordenarParaReescribir`, `reels/reescritura.mjs`), sin gastar
    más pedidos.
-2. **Agrupar.** Si dos medios cuentan lo mismo, es UNA historia con dos
-   fuentes, no dos notas. Se comparan los títulos por similitud (palabras en común sobre el título más corto,
-   umbral 0,55). Que varios medios la tengan es señal de que importa, y suma
-   puntos.
+2. **Cruzar** (`ingesta/cruce.mjs`, desde el 27/09). Si dos medios cuentan lo
+   mismo, es UNA historia con dos fuentes, no dos notas. Se comparan el título y
+   el resumen de todas las notas (palabras en común, pesando más las raras:
+   TF-IDF, umbral 0,42), sumando las notas de afuera de las últimas 36 horas (la
+   memoria, en la caché de GitHub Actions, fuera del repositorio). La misma nota
+   de un medio que llega por dos feeds suyos cuenta una vez. Lo de afuera que
+   cuenta un solo medio y no dice Balcarce en el título ni toca la zona **no se
+   trae**. La principal de cada historia es la ya publicada (o la primera que
+   salió): así la dirección no cambia cuando otro medio se suma. Que varios
+   medios la cuenten es señal de que importa, y suma puntos. Ya no entran "las
+   3 a 5 más nuevas" de cada fuente (`maxItems` quedó sin efecto).
 3. **Clasificar** (`clasificar`, `ingesta/ingesta.mjs`). Automovilismo gana
    siempre (en Balcarce es sección propia). Después, si la fuente ya viene
    separada por sección, se le cree, salvo en Tecnología, que se confirma con el
    título (`PALABRAS_DE_TECNOLOGIA_EN_EL_TITULO`). Y si no, por palabras clave
    (`REGLAS_SECCION`): gana la coincidencia más larga y, si empatan, el orden de
    las reglas. Las palabras cortas o ambiguas (`PALABRAS_DEBILES`) sólo deciden
-   desde el titular.
+   desde el titular. Si nada coincide: Balcarce si es de acá; si no, Región,
+   Provincia o Argentina, según el alcance del medio. Una nota de Deportes que es
+   de fútbol pasa a **Fútbol** (27/09). No hay sección Servicios: lo práctico de
+   acá va a Balcarce.
 4. **Puntuar.** Un número de 0 a 100 (abajo, sección 2).
-5. **Semáforo.** Verde / amarillo / rojo (sección 3).
+5. **Semáforo.** Verde / amarillo / rojo (sección 3). Además, lo de afuera
+   que no cuentan dos medios distintos queda amarillo (`exigirDosMedios`; una
+   fuente oficial alcanza sola). En la nube, después, la **lectura con IA**
+   (`ingesta/lectura-ia.mjs`, fichas en `web/data/fichas.json`) decide qué
+   entra, la sección y qué es de Balcarce, y junta las repetidas que el cruce no
+   unió (`agruparRepetidas`). Nunca destraba el semáforo.
 6. **Decidir.** En el panel (localhost:4321, `PANEL.md`). Lo verde sale solo; lo
    amarillo espera; lo rojo está bloqueado.
 7. **Publicar.** `npm run datos` arma `web/data/portada.json` y la web lo lee.
+   Ahí se sacan las retiradas a mano (`web/data/retiradas.json`), mandan las
+   correcciones a mano de título, bajada o sección (`web/data/correcciones.json`)
+   y los títulos automáticos pierden el "en Balcarce" del final
+   (`web/lib/titulos.js`).
    Los reels y las historias salen del mismo material.
 
 ## 2. El puntaje
@@ -85,9 +107,8 @@ que los nacionales y los de afuera pesan poco) y suma:
 | Entre 12 y 24 h | +8 |
 | Un medio nacional la nombra a Balcarce | +22 |
 | Nombra a una figura argentina (`FIGURAS`) | +16 |
-| Cada medio extra que la cuenta | +10 |
+| Cada medio extra que la cuenta | +10 (tope: +40) |
 | Es de Automovilismo | +8 |
-| Es de Servicios | +6 |
 | Tiene foto en la fuente | +6 |
 | Trae texto completo | +4 |
 
@@ -134,7 +155,9 @@ miran todos los días.
 - **Chapa negra de arriba**: fecha, clima y farmacia de turno, en *todas* las
   páginas. Son las dos cosas que la gente viene a buscar sin querer leer nada.
 - **Navegación por secciones reales**, cada una con su página
-  (`/seccion/deportes`). Sólo aparecen las que hoy tienen notas: una pestaña
+  (`/seccion/deportes`). El menú lleva las once (`EN_NAVEGACION`, `web/lib/datos.js`)
+  y sólo aparecen las que hoy
+  tienen notas: una pestaña
   que lleva a una página vacía es peor que no tenerla.
 - **Agenda y Balcarce Útil** van a la derecha y en verde: son servicios, no
   secciones. Agenda es su propia página (`/agenda`), no un ancla — antes,
@@ -154,7 +177,7 @@ lados para que no se separen.
 
 ## 5. Las pruebas
 
-Se corren con `npm test` desde la carpeta del proyecto. Son más de 1.100, tardan
+Se corren con `npm test` desde la carpeta del proyecto. Son más de 1.170, tardan
 unos segundos, no instalan nada y no salen a internet.
 
 **Cada una es un error que ya pasó de verdad**, no un ejercicio: dos

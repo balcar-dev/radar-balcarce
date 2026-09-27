@@ -29,7 +29,11 @@ npm run build        # compila (arma las redirecciones; NO regenera los datos)
 
 `npm run datos` (`scripts/generar-datos.mjs`) arma `data/portada.json` y
 `data/archivo.json` a partir de la ingesta y de las decisiones de
-`data/decisiones.json`. Si nunca corrió,
+`data/decisiones.json`. Ahí también se aplican la lectura con IA
+(`data/fichas.json`), los dos medios para lo de afuera, las retiradas
+(`data/retiradas.json`) y las correcciones a mano (`data/correcciones.json`, que
+mandan sobre lo que escribe la IA), y se saca el "en Balcarce" del final de los
+títulos automáticos (`lib/titulos.js`). Si nunca corrió,
 la web arranca igual con un aviso.
 
 ## Dónde está cada cosa
@@ -38,8 +42,8 @@ la web arranca igual con un aviso.
 |---|---|
 | `app/` | Las páginas: portada, `nota/`, `seccion/`, `tema/`, `agenda/` (y `agenda/[id]`, cada evento con su `.ics`), `farmacias/`, `dolar/` (la cotización, que se pide en el navegador), `util/`, `politica-de-privacidad/`, `quienes-somos/`, `contacto/`, la 404 (`not-found.js`, rescata direcciones viejas con `nota/indice.json`), más `sitemap`, `sitemap-news.xml`, `robots`, `feed.xml` y `llms.txt` |
 | `components/` | Piezas de la interfaz (avisos, buscador, clima, ficha con datos estructurados, compartir) |
-| `lib/` | Direcciones (`ruta.js`), archivo de notas (`archivo.js`), dirección del sitio (`sitio.js`), tarjetas de imagen (`tarjeta.js`) |
-| `data/` | `portada.json`, `archivo.json`, `agenda.json` y `dolar-historia.json` (los regenera Actions), `decisiones.json`, `avisos.json` y `eventos-panel.json` (los sube el panel), `redes.json` (libro de lo publicado); `dolar.json` es la foto del dólar que guarda cada build (no se versiona) |
+| `lib/` | Direcciones (`ruta.js`), archivo de notas, retiradas y correcciones a mano (`archivo.js`), títulos sin "en Balcarce" al final (`titulos.js`), secciones y tapa (`datos.js`), dirección del sitio (`sitio.js`), tarjetas de imagen (`tarjeta.js`) |
+| `data/` | `portada.json`, `archivo.json`, `agenda.json`, `dolar-historia.json`, `fichas.json` (la lectura con IA) e `intentos-ia.json` (los regenera Actions); `decisiones.json`, `avisos.json` y `eventos-panel.json` (los sube el panel); `retiradas.json` y `correcciones.json` (lo que se saca o se corrige a mano sin el panel, con motivo, cuándo y quién); `redes.json` (libro de lo publicado), `estadisticas.json` y `vigilancia.json` (los escriben las redes y el vigilante); `dolar.json` es la foto del dólar que guarda cada build (no se versiona) |
 | `scripts/` | Generar datos y redirecciones, íconos, auditoría de SEO y `recuperar-archivo.mjs` (herramienta de rescate: rearma `data/archivo.json` desde el historial de git si se pierde o se rompe) |
 | `public/` | Íconos, manifiesto, `_headers` (la imagen para compartir sale como `image/png`, HSTS y otros encabezados de seguridad, caché de un año para `/_next/static`) y `_redirects` (se genera en cada compilación) |
 
@@ -105,8 +109,40 @@ Fraunces e IBM Plex Sans: en el celular los títulos se veían pesados y torpes.
 eligieron entre cuatro opciones probadas con titulares reales (Fraunces, Newsreader,
 Source Serif 4 y Archivo): Source Serif es la más firme y clara en pantalla chica.
 Los titulares llevan `font-variant-numeric: lining-nums proportional-nums`. Las
-imágenes para compartir (`lib/tarjeta.js`) todavía usan su propio archivo,
-`fuentes/Fraunces-900.ttf`.
+imágenes para compartir (`lib/tarjeta.js`) usan sus propios archivos, con las
+mismas familias: `fuentes/SourceSerif4-900.ttf` para el título e
+`fuentes/Inter-600.ttf` para el resto. Las placas y los reels de Instagram usan
+los de `../reels/marca/fuentes/` (Source Serif 4 en su corte de 60 puntos, que
+se llama "Source Serif 4 60pt", e Inter; `../reels/placa.mjs`). Fraunces e IBM
+Plex Sans ya no se usan en ningún lado.
+
+### Las secciones y sus colores (27/09)
+
+Son once, en este orden (`SECCIONES`, `lib/datos.js`), cada una con su página
+(`/seccion/<ranura>`) y un color de tono distinto (`--s-*` en `app/globals.css`;
+todos llevan texto blanco encima con contraste de 4,5:1 o más):
+
+| Sección | Ranura | Color |
+|---|---|---|
+| Balcarce | `balcarce` | `--s-balcarce` `#B91C1C` |
+| Política | `politica` | `--s-politica` `#3730A3` |
+| Policiales | `policiales` | `--s-policiales` `#831843` |
+| Fútbol | `futbol` | `--s-futbol` `#15803D` |
+| Deportes | `deportes` | `--s-deportes` `#0F766E` |
+| Automovilismo | `automovilismo` | `--s-automovilismo` `#B45309` |
+| Agro | `agro` | `--s-agro` `#4D7C0F` |
+| Economía | `economia` | `--s-economia` `#8A6500` |
+| Cultura y agenda | `cultura` | `--s-cultura` `#9D2C8F` |
+| Tecnología | `tecnologia` | `--s-tecnologia` `#0B6FB8` |
+| Argentina | `argentina` | `--s-pais` `#4B5563` |
+
+No hay Servicios (lo práctico de acá va a Balcarce) y País pasó a llamarse
+Argentina. El menú lleva las once (`EN_NAVEGACION`), sólo las que tienen notas; desde
+1180px entra en una línea (12px entre secciones). `/seccion/servicios` y
+`/seccion/pais` redirigen a Balcarce y a Argentina (`SECCIONES_VIEJAS` en
+`scripts/generar-redirects.mjs`). Las placas de `../reels/placa.mjs` usan los mismos colores.
+Pruebas: `../pruebas/titulos-colores.test.mjs` (ningún tono repetido) y
+`../pruebas/seo-paginas.test.mjs` (contraste).
 
 ### El menú de secciones (`components/navegacion.js`)
 

@@ -1,6 +1,6 @@
 # Infraestructura: qué corre dónde
 
-*Actualizado el 26/09/2026.* Este documento responde tres preguntas: **qué
+*Actualizado el 27/09/2026.* Este documento responde tres preguntas: **qué
 corre en cada lugar**, **qué se cae y cómo se ve**, y **qué vence y cuándo**.
 Los secretos figuran por nombre; los valores no se escriben en ningún
 documento (ver `REGLAS.md`, regla 16).
@@ -31,7 +31,7 @@ PC de Hernán: el panel (puerto 4321) ── sincroniza decisiones a GitHub
 | **Vercel** | **Apagado desde el 25/09** (sin conexión a GitHub: no despliega ni recibe el dominio). El panel tampoco publica ahí. Falta borrar el proyecto y limpiar el DNS que quedó (`PENDIENTES.md`). El plan Hobby no permite publicidad. | `radarbalcarce@gmail.com` |
 | **cron-job.org** | Dispara tres trabajos en GitHub cada 30 minutos: "Actualizar la web", el reloj de "Redes" y "Vigilancia". | `radarbalcarce@gmail.com` |
 | **Meta** (app "Radar Balcarce Publicador") | Publicar en la página de Facebook "Radar Balcarce" y en Instagram `@radarbalcarce`. Usuario del sistema `publicador-radar`, token sin vencimiento. **La app se publicó (modo activo) el 26/09**: hasta entonces estaba en modo desarrollo y el público no veía los posteos ni los reels de Facebook (las historias sí). | `radarbalcarce@gmail.com` |
-| **Gemini** (Google) | Dos claves separadas: una gratis para redactar las notas y otra (paga) para las voces y los reels. | `radarbalcarce@gmail.com` |
+| **Gemini** (Google) | Claves separadas: una gratis para redactar las notas, otra (paga) para las voces y los reels, y una tercera para la lectura con IA, que todavía falta cargar (mientras tanto usa la gratis de redacción, con tope). | `radarbalcarce@gmail.com` |
 | **CallMeBot** | Manda el WhatsApp de la vigilancia, sólo al número que lo activó. **Funciona desde el 25/09.** | El teléfono de Hernán |
 | **Search Console** | Indexación en Google (propiedad de dominio). | `radarbalcarce@gmail.com` |
 | **La PC de Hernán** | El panel y su carpeta `panel/datos/`. Ver `PANEL.md`. | — |
@@ -44,7 +44,7 @@ puede costar: todo lo demás es gratis).
 
 | Workflow | Cuándo corre | Qué hace | Cuesta |
 |---|---|---|---|
-| `actualizar.yml` · Actualizar la web | cron-job.org cada 30 min (y un `schedule` propio de GitHub, que es impuntual, como respaldo) | Lee las 58 fuentes, reescribe con IA lo que sale sin revisión, corre las pruebas, arma `web/data/portada.json` (sólo notas de las últimas 72 h) y `web/data/archivo.json` (lo publicado de los últimos 180 días) y los sube. Tiempo máximo: 20 minutos. **Si las pruebas fallan, la web se queda como estaba.** | Gemini: primero la clave gratis; la paga sólo si la gratis se queda sin cupo. Tope de 300 notas por día |
+| `actualizar.yml` · Actualizar la web | cron-job.org cada 30 min (y un `schedule` propio de GitHub, que es impuntual, como respaldo) | Corre las pruebas; lee las 214 fuentes activas (54 de `ingesta/fuentes.mjs` y 160 del cruce de medios, `ingesta/fuentes-cruce.mjs`) y las cruza con la memoria de 36 horas, que guarda la caché de Actions (`.cache/`, fuera del repo); la lectura con IA decide qué entra; reescribe con IA lo que sale sin revisión; arma `web/data/portada.json` (sólo notas de las últimas 72 h) y `web/data/archivo.json` (lo publicado de los últimos 180 días) y los sube. Tiempo máximo: 20 minutos. **Si las pruebas fallan, la web se queda como estaba.** | Gemini: primero la clave gratis; la paga sólo si la gratis se queda sin cupo. Tope de 300 notas por día |
 | `cloudflare-deploy.yml` · Cloudflare Pages | Al terminar bien "Actualizar la web"; también a mano | Compila el sitio y lo sube a Cloudflare Pages con `wrangler` en una versión fija (4.139.0). Tiempo máximo: 15 minutos. | No |
 | `redes.yml` · Redes | cron-job.org cada 30 min, de 7 a 23 (y al terminar "Actualizar la web"); a mano con `reloj`, `verificar` o `facebook` | Publica en Facebook y, si a esa hora toca una pieza, la arma con la voz de Gemini y la sube a Instagram y a la página. Tiempo máximo: 25 minutos. | Sí, sólo cuando arma una pieza (voz, clave paga). Sin pieza que armar, no gasta |
 | `piezas.yml` · Piezas | A mano (Actions → Piezas → Run workflow) | Armar o publicar una pieza puntual, sin esperar su hora. | Sí (voz, clave paga) |

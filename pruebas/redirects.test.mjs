@@ -37,3 +37,16 @@ test('el formato de Cloudflare/Netlify: origen, destino y 301 en una línea', ()
   assert.ok(texto.endsWith('\n'), 'termina en salto de línea');
 });
 
+
+test('las secciones que ya no existen mandan a la que las reemplazó (27/09)', async () => {
+  const { SECCIONES_VIEJAS } = await import('../web/scripts/generar-redirects.mjs');
+  const { SECCIONES, EN_NAVEGACION } = await import('../web/lib/datos.js');
+  const destinos = Object.fromEntries(SECCIONES_VIEJAS.map((r) => [r.origen, r.destino]));
+  assert.equal(destinos['/seccion/servicios'], '/seccion/balcarce');
+  assert.equal(destinos['/seccion/pais'], '/seccion/argentina');
+  const ranuras = new Set(SECCIONES.map((s) => `/seccion/${s.ranura}`));
+  for (const r of SECCIONES_VIEJAS) assert.ok(ranuras.has(r.destino), `${r.destino} existe`);
+  // Las secciones nuevas están en el menú.
+  for (const s of ['Fútbol', 'Argentina']) assert.ok(EN_NAVEGACION.includes(s), `${s} en el menú`);
+  assert.ok(!EN_NAVEGACION.includes('Servicios') && !EN_NAVEGACION.includes('País'));
+});

@@ -278,10 +278,13 @@ nav.principal .primero-servicio::before { content: ''; position: absolute; left:
   nav.principal .primero-servicio::before { display: none; }
 }
 /* Fija arriba sólo en pantalla grande: en el celular se comía un cuarto de la
-   pantalla mientras se leía una nota. */
+   pantalla mientras se leía una nota. Con Fútbol y Argentina en el menú (27/09)
+   y la letra Inter, un poco más ancha que la de antes, hacían falta 1250px: con
+   12px entre secciones y 24px a los costados vuelve a entrar en una línea desde
+   1180px. */
 @media (min-width: 1180px) {
   nav.principal { position: sticky; top: 0; }
-  nav.principal .envoltura { height: 52px; flex-wrap: nowrap; padding-top: 0; padding-bottom: 0; }
+  nav.principal .envoltura { height: 52px; flex-wrap: nowrap; padding-top: 0; padding-bottom: 0; gap: 4px 12px; padding-left: 24px; padding-right: 24px; }
   nav.principal a { min-height: 52px; }
 }
 

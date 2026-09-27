@@ -369,7 +369,8 @@ lugares, escribirle a las instituciones con el mensaje de
 `ingesta/agenda.mjs`); semana 3, probar formatos; semana 4, medir y ajustar
 los pesos de `ingesta/fuentes.mjs`. Lo de las tres primeras semanas ya corre
 solo o cambió (los podcasts reemplazaron a las noticias sueltas). Lo que sigue
-vigente es medir con números: `PENDIENTES.md`, secciones A y D.
+vigente es medir con números: `PENDIENTES.md` ("Decisiones de criterio que
+esperan a los dos").
 
 ### El tono y la voz
 

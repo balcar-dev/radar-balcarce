@@ -346,7 +346,9 @@ que más se notan.
    cuándo y por qué. Da confianza y lo piden Google Noticias y AdSense.
 7. **Tipografías servidas por el propio sitio.** Hoy la web las pide a Google
    Fonts, que ve la IP de cada lector; la política de privacidad promete
-   cuidar eso. Los archivos ya están en `web/fuentes/`.
+   cuidar eso. En `web/fuentes/` están sólo los dos cortes que usan las imágenes
+   para compartir (Source Serif 4 900 e Inter 600); para servir el sitio harían
+   falta todos los pesos que pide `web/app/layout.js`.
 8. **Estadísticas en el panel.** Una pestaña con la evolución de
    `web/data/estadisticas.json` (visitas, seguidores), además del WhatsApp.
 9. **Anotar el sitio en Google Noticias** (Publisher Center): ya están

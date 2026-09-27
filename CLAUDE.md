@@ -1,9 +1,10 @@
 # Radar Balcarce
 
-*Actualizado el 26/09/2026.*
+*Actualizado el 27/09/2026.*
 
-Medio digital automático de Balcarce (Buenos Aires). Lee 54 fuentes activas (58 configuradas) cada media
-hora, decide qué publicar, arma el sitio y lo sube, sin que haya nadie
+Medio digital automático de Balcarce (Buenos Aires). Lee 214 feeds activos (218 configurados: 54 de
+los 58 de `ingesta/fuentes.mjs` y los 160 del cruce de medios, de 76 medios,
+en `ingesta/fuentes-cruce.mjs`) cada media hora, decide qué publicar, arma el sitio y lo sube, sin que haya nadie
 despierto. Los usuarios son Hernán y Andrés; escribir siempre en castellano
 rioplatense, sin voseo forzado.
 
@@ -14,9 +15,10 @@ rioplatense, sin voseo forzado.
     reels/     placas, voz y video. SÍ tiene dependencias (resvg, ffmpeg)
     redes/     publicar en Facebook e Instagram (API de Meta). SIN dependencias
     web/       el sitio público (Next.js 15, JavaScript, HTML estático)
-    pruebas/   `npm test`, más de 1.100 pruebas, sin red
+    pruebas/   `npm test`, más de 1.170 pruebas, sin red
 
-Flujo: fuentes → ingesta → clasificar → puntaje → semáforo → `web/data/portada.json`
+Flujo: fuentes → cruce de medios → clasificar → puntaje → semáforo → lectura con IA
+→ reescritura con IA → `web/data/portada.json`
 → GitHub Actions (cada 30 min) → **Cloudflare Pages** (desde el 24/09). Vercel
 está apagado desde el 25/09; falta borrar el proyecto. **La web se actualiza con
 la PC apagada.**
@@ -102,6 +104,20 @@ cada uno, cuándo corre y si cuesta plata), en `INFRAESTRUCTURA.md`.
 - **Las palabras clave cortas engañan.** "gol" encontraba "golpe"; "partido" en
   la provincia es un municipio. Las ambiguas están en `PALABRAS_DEBILES`
   (`ingesta/ingesta.mjs`) y sólo deciden desde el titular.
+
+- **Las secciones son once** (27/09): Balcarce, Política, Policiales, Fútbol,
+  Deportes, Automovilismo, Agro, Economía, Cultura y agenda, Tecnología y
+  Argentina (`SECCIONES` en `web/lib/datos.js`). **No hay Servicios**: lo
+  práctico de acá (cortes, trámites, obras) va a Balcarce. **País se llama
+  Argentina** y sale sola. Fútbol es aparte de Deportes. Las fichas viejas de la
+  IA que dicen Servicios o País se traducen solas (`aplicarFichas`). Lo de afuera
+  que no cae en ninguna queda como Región o Provincia, que esperan a una persona.
+  Las once van en el menú (`EN_NAVEGACION`) cuando tienen notas. Las direcciones
+  viejas `/seccion/servicios` y `/seccion/pais` redirigen a Balcarce y a Argentina
+  (`SECCIONES_VIEJAS`, `web/scripts/generar-redirects.mjs`).
+- **Los títulos automáticos no terminan en "en Balcarce"** (27/09): el medio es
+  de Balcarce. `sinBalcarceAlFinal` (`web/lib/titulos.js`) saca esa cola en las
+  notas nuevas y en las ya publicadas; lo que escribió una persona no se toca.
 
 - **Las redes tienen un interruptor:** la variable de GitHub `REDES_ACTIVAS`.
   Con `Si` (cualquier mayúscula o tilde) publica; con otro valor todo corre pero
@@ -205,6 +221,18 @@ cada uno, cuándo corre y si cuesta plata), en `INFRAESTRUCTURA.md`.
   trae un dato que no cuadra, se sacan esas oraciones (`depurarCuerpo`). Sin
   texto completo de ninguna fuente y con un resumen corto, no se le pide nada.
   El panel reescribe con el mismo flujo (`reescribirAutomaticas`).
+- **El cruce de medios** (27/09 a la tarde, `ingesta/cruce.mjs`): todo lo de
+  afuera entra entero y se juntan las notas que cuentan el mismo hecho (título y
+  resumen, TF-IDF, umbral 0,42), con una memoria de 36 horas en la caché de
+  Actions (`.cache/`, fuera del repo). Queda todo lo de Balcarce y, de afuera, lo
+  que dice Balcarce en el título, lo que toca la zona y lo que cuentan **dos
+  medios distintos o más**; lo de un solo medio no se trae. Ya no entran "las 3
+  a 5 más nuevas" de cada fuente (`maxItems` y `uso: 'senal'` quedaron como
+  datos de la ficha, sin efecto en la entrada). La medición que llevó a esto:
+  `docs/CRUCE-DE-MEDIOS.md`.
+- **Correcciones a mano sin el panel** (27/09): `web/data/correcciones.json`
+  cambia el título, la bajada o la sección de una nota ya publicada, con motivo,
+  cuándo y quién. Manda sobre lo que escribe la IA y la dirección no cambia.
 - **Todo lo que falta, por categoría, está en [`PENDIENTES.md`](PENDIENTES.md)**
   (redes, SEO, bios, editorial, técnico) y en `IDEAS.md` (ideas de producto).
   Qué se publica y cómo se escribe: `CRITERIO-EDITORIAL.md`. Redes: `REDES.md`.
@@ -218,9 +246,12 @@ cada uno, cuándo corre y si cuesta plata), en `INFRAESTRUCTURA.md`.
 | que una palabra mande una nota a otra sección | `REGLAS_SECCION`, mismo archivo |
 | que algo espere aprobación o nunca salga | `REGLAS_SEMAFORO`, mismo archivo |
 | que una sección de un medio de afuera no se traiga (otro país, policiales, consejos) | `SECCIONES_QUE_NO_ENTRAN` y `CONEXION_ARGENTINA`, mismo archivo (`motivoDeDescarte` en `ingesta/ingesta.mjs`) |
-| que un feed sólo cuente cobertura y no publique | `uso: 'senal'` en la fuente; la ficha de cada fuente (tipo, ciudad, uso) es `fichaDeFuente` |
+| la ficha de cada fuente (tipo, ciudad, uso) | `fichaDeFuente`, en `ingesta/fuentes.mjs`. Desde el cruce (27/09) `uso: 'senal'` y `maxItems` son sólo datos de la ficha: no cambian qué entra (lo de afuera sale si lo cuentan dos medios, venga del feed que venga) |
 | sumar o sacar una fuente del cruce de medios (nacionales, provincia, zona, especializadas) | `ingesta/fuentes-cruce.mjs` (una línea por feed; `activa: false` para apagarla); cómo se cruzan, `ingesta/cruce.mjs` |
 | sacar de la web una nota ya publicada, sin el panel | `web/data/retiradas.json` (motivo, cuándo, quién) |
+| corregir a mano el título, la bajada o la sección de una nota, sin el panel | `web/data/correcciones.json` (cada una con motivo, cuándo y quién; sin motivo no vale). Manda sobre lo que escribe la IA y no cambia la dirección: `correccionesAMano` y `conCorreccion` en `web/lib/archivo.js`, aplicadas en `web/scripts/generar-datos.mjs` |
+| que los títulos automáticos no terminen en "en Balcarce" | `sinBalcarceAlFinal`, en `web/lib/titulos.js` (lo aplica `generar-datos.mjs`); la instrucción de la IA, `CRITERIO-EDITORIAL.md` § 12, regla 2 |
+| agregar, sacar o renombrar una sección, o cambiar su color | `SECCIONES` y `EN_NAVEGACION` (las del menú) en `web/lib/datos.js`; el color, `--s-*` en `web/app/globals.css`; las palabras, `REGLAS_SECCION`, y cuáles salen solas, `verdeSecciones` (`ingesta/fuentes.mjs`); las que conoce la IA, `SECCIONES_DE_LA_FICHA` (`ingesta/lectura-ia.mjs`) |
 | que lo de afuera pida dos medios, o juntar notas repetidas | `exigirDosMedios` (`ingesta/ingesta.mjs`), `agruparRepetidas` y `quitarRepetidas` (`ingesta/lectura-ia.mjs`); lo que se muestra del archivo, `tieneRespaldo` (`web/lib/cuerpo.js`) |
 | qué va a las redes (hoy, sólo lo de Balcarce) | `esParaLasRedes` en `redes/elegir.mjs` |
 | el plan de trabajo en curso (filtro de entrada, lectura con IA, notas populares) | `docs/PLAN-V2.2.md` |
@@ -250,6 +281,7 @@ cada uno, cuándo corre y si cuesta plata), en `INFRAESTRUCTURA.md`.
 | cambiar cómo se habla con Meta | `redes/meta.mjs` |
 | cargar o sacar un aviso publicitario | panel → Avisos (`web/data/avisos.json`) |
 | cambiar la página del dólar (fuentes, tipos, textos de "actualizado") | `web/lib/dolar.js` y `web/components/dolar-vivo.js`; la foto de respaldo la guarda `web/scripts/foto-dolar.mjs` en cada build. Nunca decir "en vivo" |
+| cambiar la tipografía (Source Serif 4 en los títulos, Inter en el resto, desde el 27/09) | La web: `web/app/layout.js` (el `<link>` de Google Fonts) y `web/app/globals.css` (`--f-titulo` y el sistema tipográfico; detalle en `web/README.md`). Las placas, reels, avatar y portada de Facebook: `reels/placa.mjs`, `reels/avatar.mjs` y `reels/portada.mjs`, con los archivos de `reels/marca/fuentes/`. Las imágenes para compartir: `web/lib/tarjeta.js`, con `web/fuentes/`. El panel, `panel/panel.html`; la guía comercial, `comercial/vista.plantilla.html` |
 | cambiar una medida de imagen de Instagram/Facebook | `redes/formatos.mjs` (fuente única, con fecha de verificación) y `FORMATOS.md`. Los lunes `redes/auditar.mjs` audita lo publicado y avisa por WhatsApp si algo se desvió o los datos pasaron de 90 días |
 | cambiar qué revisa el vigilante o cuándo avisa | `redes/vigilar.mjs` |
 | cambiar qué tiene que salir cada día en Facebook e Instagram (el contrato: 3 reels, 6 historias, 5 posteos) | `redes/contrato.mjs` (piezas y estados), los números en `CONTRATO_DIARIO` (`ingesta/criterio.mjs` **y** la tabla de `CRITERIO-EDITORIAL.md`), las horas y ventanas en `redes/piezas.mjs`; se documenta en `REDES.md` ("El contrato del día") |
@@ -279,6 +311,7 @@ cada uno, cuándo corre y si cuesta plata), en `INFRAESTRUCTURA.md`.
 | `PENDIENTES.md` | Qué falta, por categoría |
 | `docs/RADAR-3.0.md` | **Todo el proyecto de punta a punta** (27/09): fuentes, recorrido de una nota, criterio, instrucciones de la IA, notas propias, redes y cronograma, sitio, panel, vigilancia, infraestructura, archivos, reglas, hoja de ruta y glosario. Empezar por acá |
 | `docs/PLAN-V2.2.md` | El plan en curso para elegir mejor las notas: filtro de entrada, lectura con IA, notas populares, todas las fuentes y cómo se usan (anexo A) |
+| `docs/CRUCE-DE-MEDIOS.md` | La medición del 27/09 que llevó al cruce de medios: 90 medios, 2.664 notas en 24 horas, cuántos hechos cuentan dos medios o más, y los medios probados (foto de ese día; la lista vigente es `ingesta/fuentes-cruce.mjs`) |
 | `IDEAS.md` | Ideas de producto y de sistema |
 | `ingesta/README.md` | El motor: qué hace cada archivo y cómo correrlo a mano |
 | `web/README.md` | La web: cómo correrla y dónde está cada cosa |

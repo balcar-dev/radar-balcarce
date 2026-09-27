@@ -41,6 +41,16 @@ export function redireccionesDeNotas(portada, archivo = { notas: [] }, maximo = 
   }));
 }
 
+/**
+ * Las secciones que ya no existen (27/09): Servicios se sumó a Balcarce y País
+ * pasó a llamarse Argentina. Sus páginas estaban indexadas y compartidas; sin
+ * esto daban 404. Van primero: son fijas y no dependen de las notas.
+ */
+export const SECCIONES_VIEJAS = [
+  { origen: '/seccion/servicios', destino: '/seccion/balcarce' },
+  { origen: '/seccion/pais', destino: '/seccion/argentina' },
+];
+
 export function comoRedirectsDeCloudflare(redirecciones) {
   // Formato Netlify/Cloudflare: "origen destino código", una por línea. El
   // 301 es permanente, igual que el `permanent: true` que tenía Next.
@@ -50,7 +60,7 @@ export function comoRedirectsDeCloudflare(redirecciones) {
 if (process.argv[1] && process.argv[1].endsWith('generar-redirects.mjs')) {
   const portada = leerJson(path.join(RAIZ, 'data', 'portada.json'), { notas: [] });
   const archivo = leerJson(path.join(RAIZ, 'data', 'archivo.json'), { notas: [] });
-  const redirecciones = redireccionesDeNotas(portada, archivo);
+  const redirecciones = [...SECCIONES_VIEJAS, ...redireccionesDeNotas(portada, archivo)];
 
   fs.mkdirSync(path.join(RAIZ, 'public'), { recursive: true });
   fs.writeFileSync(path.join(RAIZ, 'public', '_redirects'), comoRedirectsDeCloudflare(redirecciones), 'utf8');

@@ -1,7 +1,8 @@
 # Ingesta de Radar Balcarce
 
-El motor: lee las fuentes, agrupa la misma noticia contada por varios medios,
-la clasifica, le pone el semáforo y le calcula el puntaje. **Sin
+El motor: lee las fuentes (214 feeds activos: los de `fuentes.mjs` y los del
+cruce de medios), junta la misma noticia contada por varios medios, deja de
+afuera sólo lo que tiene respaldo, la clasifica, le pone el semáforo y le calcula el puntaje. **Sin
 dependencias**: sólo lo que trae Node (hay una prueba que lo vigila). Corre
 sola en GitHub Actions cada 30 minutos ("Actualizar la web") y en el panel,
 mientras está prendido. El recorrido técnico y el puntaje están en `../MANUAL.md`
@@ -18,10 +19,12 @@ node ingesta/probar.mjs https://medio.com/feed   # prueba una URL suelta
 
 | Archivo | Qué hace |
 |---|---|
-| `fuentes.mjs` | Lo que se toca: fuentes y pesos, palabras por sección, semáforo y temas |
+| `fuentes.mjs` | Lo que se toca: fuentes y pesos (58, 54 activas: `FUENTES` y `FUENTES_NACIONALES`), palabras por sección, semáforo y temas |
+| `fuentes-cruce.mjs` | Las 160 fuentes del cruce de medios (76 medios: nacionales, provincia, Mar del Plata, la zona y especializados), una línea por feed; `activa: false` para apagar una |
+| `cruce.mjs` | Junta las notas de todos los medios que cuentan el mismo hecho (título y resumen, TF-IDF, umbral 0,42) con una memoria de 36 horas (`.cache/cruce-memoria.json`, fuera del repo). De afuera queda lo que dice Balcarce en el título, toca la zona o cuentan dos medios o más |
 | `criterio.mjs` | Los números del criterio (largos, intentos, pisos y cupos de afuera, Facebook, podcasts, contrato del día): tienen que coincidir con las tablas de `../CRITERIO-EDITORIAL.md` y `../CRITERIO-REDES.md` |
 | `prompt-editorial.mjs` | Lee la sección 12 de `../CRITERIO-EDITORIAL.md`: es la instrucción exacta que recibe la IA; si el archivo falta, la reescritura no arranca |
-| `ingesta.mjs` | Bajar, parsear, filtrar por la sección del medio, agrupar, clasificar, puntuar y pedir dos medios a lo de afuera |
+| `ingesta.mjs` | Bajar, parsear, filtrar por la sección del medio, cruzar (con `cruce.mjs`), clasificar, puntuar y pedir dos medios a lo de afuera (`exigirDosMedios`) |
 | `lectura-ia.mjs` | La lectura con IA (plan V2.2): una ficha por nota que decide qué entra, la sección y qué es de Balcarce, y junta las repetidas |
 | `perfil-balcarce.md` | Lo que la IA sabe de Balcarce: localidades, vecinos, rutas, actividades. Sólo datos seguros |
 | `articulo.mjs` | El texto completo de la nota original, para la IA |

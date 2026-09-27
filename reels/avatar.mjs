@@ -35,15 +35,15 @@ const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1080" 
     <circle cx="540" cy="540" r="420" stroke-width="4" stroke-opacity="0.22"/>
   </g>
   <circle cx="540" cy="548" r="22" fill="#E8A33C"/>
-  <text x="540" y="470" text-anchor="middle" font-family="Fraunces" font-weight="900"
+  <text x="540" y="470" text-anchor="middle" font-family="Source Serif 4 60pt" font-weight="900"
         font-size="138" fill="#F4F1EA" letter-spacing="-6">RADAR</text>
-  <text x="540" y="700" text-anchor="middle" font-family="Fraunces" font-weight="900"
+  <text x="540" y="700" text-anchor="middle" font-family="Source Serif 4 60pt" font-weight="900"
         font-size="116" fill="#C7381C" letter-spacing="-4">BALCARCE</text>
 </svg>`;
 
 const r = new Resvg(svg, {
   fitTo: { mode: 'width', value: 1080 },
-  font: { fontFiles: archivos, loadSystemFonts: archivos.length === 0, defaultFontFamily: 'IBM Plex Sans' },
+  font: { fontFiles: archivos, loadSystemFonts: archivos.length === 0, defaultFontFamily: 'Inter' },
 });
 
 fs.mkdirSync(path.dirname(DESTINO), { recursive: true });

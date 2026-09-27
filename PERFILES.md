@@ -1,6 +1,6 @@
 # Perfiles de Instagram y Facebook
 
-*Actualizado el 26/09/2026.* Los textos **todavía no
+*Actualizado el 27/09/2026.* Los textos **todavía no
 están aplicados**: hay que cambiarlos a mano en cada red (`PENDIENTES.md`,
 sección B). Nada de acá inventa datos: sólo dice lo que el medio hace hoy.
 
@@ -99,8 +99,12 @@ compu: la marca tiene que verse entera.
   miércoles azul, jueves ámbar, viernes violeta, sábado verde azulado. El
   perfil se mantiene en el rojo de la marca: así la grilla muestra un perfil
   firme y piezas que cambian.
-- **Tipografía**: Fraunces en los títulos (las placas usan las fuentes de
-  `reels/marca/fuentes/`).
+- **Tipografía** (desde el 27/09): **Source Serif 4** en los títulos e **Inter**
+  en todo lo demás, igual que la web. Las placas, el avatar y la portada usan
+  los archivos de `reels/marca/fuentes/` (Source Serif 4 en su corte de 60
+  puntos). Hasta el 27/09 eran Fraunces e IBM Plex Sans.
+- **Cada sección, su color**, el mismo de la web (`--s-*` en
+  `web/app/globals.css`; la tabla está en `web/README.md`).
 
 ## Cuándo actualizar
 

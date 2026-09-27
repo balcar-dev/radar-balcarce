@@ -1,6 +1,6 @@
 # Radar Balcarce — empezar acá
 
-*Actualizado el 26/09/2026. Es una hoja de enlaces y de "qué hago yo": cómo
+*Actualizado el 27/09/2026. Es una hoja de enlaces y de "qué hago yo": cómo
 funciona cada cosa está en los otros documentos (ver el índice al final).
 Lo que falta hacer, por persona y en orden, está en `PENDIENTES.md`.*
 
@@ -37,7 +37,10 @@ cambia y listo. Y se borra `panel/datos/CLAVES-INICIALES.txt` si todavía existe
 
 Todo esto corre en GitHub, **con la PC apagada**:
 
-- **Cada 30 minutos:** busca noticias en 54 fuentes (58 configuradas, 4 apagadas), las agrupa, las clasifica,
+- **Cada 30 minutos:** busca noticias en 214 fuentes (218 configuradas, 4 apagadas:
+  las de Balcarce, la región y la provincia, y las del cruce de medios, 76 medios
+  de todo el país), junta la misma noticia contada por varios, deja de afuera
+  sólo lo que cuentan dos medios o más (o dice Balcarce en el título), las clasifica,
   reescribe con IA las que van a salir sin revisión (título, copete y cuerpo),
   arma la web y la publica en Cloudflare Pages.
 - **Varias veces por día (el reloj de las redes):** publica en Facebook y arma
@@ -65,6 +68,9 @@ cuando algo deja de salir.
   semáforo da verde; en las redes siempre esperan a una persona.** Si se
   quiere que en la web también esperen, está anotado en `PENDIENTES.md`.
 - **Cargar avisos publicitarios**, eventos de la agenda y lo que llegue al buzón.
+- **Sacar o corregir una nota sin el panel:** `web/data/retiradas.json` (sacarla)
+  y `web/data/correcciones.json` (título, bajada o sección), siempre con motivo,
+  cuándo y quién. Mandan aunque el panel esté prendido: el panel no los toca.
 - **Prender o apagar las redes:** variable `REDES_ACTIVAS` en GitHub (con `Si`
   publica; con otra cosa, sólo simula).
 - **Publicar una pieza a mano:** GitHub → Actions → **Piezas** → Run workflow.
@@ -145,6 +151,9 @@ tailscale funnel --https=443 off
 | `INVESTIGACION.md` | Lo legal, con las fuentes |
 | `PENDIENTES.md` | **Qué falta, por categoría** |
 | `IDEAS.md` | Ideas de producto |
+| `docs/RADAR-3.0.md` | **Todo el proyecto de punta a punta**, en un solo documento |
+| `docs/PLAN-V2.2.md` | El plan en curso para elegir mejor las notas |
+| `docs/CRUCE-DE-MEDIOS.md` | La medición del 27/09 que llevó al cruce de medios |
 | `POLITICA-PRIVACIDAD.md` | El texto de la política de privacidad |
 | `docs/historico/` | Lo que ya no se mantiene: la historia con fechas (`HISTORIA.md`), la auditoría del 25/09 (`AUDITORIA.md`) y cómo se veían los otros medios (`INVESTIGACION-COMPETENCIA.md`) |
 
