@@ -1,5 +1,5 @@
 {
-  "exportado": "2026-09-27T11:30:34.841Z",
+  "exportado": "2026-09-27T11:40:31.242Z",
   "decisiones": {
     "1951120": {
       "estado": "automatica",
@@ -32602,41 +32602,13 @@
     },
     "1ve3237": {
       "estado": "automatica",
-      "titulo": "Miami votará en noviembre la extensión de un impuesto escolar",
-      "copete": "Los votantes de Miami-Dade definirán el 3 de noviembre si extienden por cuatro años una tasa a la propiedad destinada a salarios docentes y seguridad escolar. La medida no implica un aumento del gravamen actual.",
-      "cuerpo": "Los electores del condado estadounidense de Miami-Dade definirán en las urnas el martes 3 de noviembre si continúan con la \"tasa de un mil\", un impuesto a la propiedad que financia parte del sistema educativo local y cuyo período actual vence a mediados de 2027. La consulta fue fijada mediante la resolución R-440-26 y busca extender el gravamen por cuatro años más, desde julio de 2027 hasta junio de 2031, sin implicar un incremento en el tributo.\n\nEl superintendente del distrito escolar, Rafael Villalobos, advirtió que una eventual caída del impuesto afectaría la retención y contratación de maestros ante el costo de vida de la región.",
-      "guion": "Miami votará en noviembre la extensión de un impuesto escolar",
-      "deIA": true,
+      "titulo": null,
+      "copete": null,
+      "cuerpo": null,
+      "guion": null,
+      "deIA": null,
       "por": "ia",
-      "cuando": "2026-09-27T11:30:34.769Z",
-      "claves": [
-        "Los votantes de Miami-Dade definirán el 3 de noviembre la continuidad de una tasa escolar.",
-        "El gravamen recauda cien dólares anuales por cada cien mil de valor imponible de una propiedad.",
-        "La mayor parte de los fondos se destina al pago de salarios docentes y seguridad en los establecimientos.",
-        "La medida no plantea un aumento respecto al tributo vigente y se extendería hasta 2031 si se aprueba."
-      ],
-      "noConfirmado": [
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "Los votantes de Miami-Dade definirán en noviembre si extienden por cuatro años una tasa a la propiedad destinada a salarios docentes y seguridad escolar, sin aumentos en el tributo actual.",
-      "etiquetas": [
-        "Miami",
-        "impuestos"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "La Nación",
-          "enlace": "https://www.lanacion.com.ar/estados-unidos/florida/us100-por-cada-us100-mil-en-florida-el-impuesto-que-ya-se-aplica-en-miami-y-podria-vetarse-luego-de-nid27092026/",
-          "fecha": "2026-09-27T11:00:00.000Z",
-          "oficial": false,
-          "aporte": "Detalló los plazos del referéndum de Miami-Dade sobre la tasa escolar, los destinos de los fondos, las estimaciones de recaudación y los dichos del superintendente."
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      }
+      "cuando": "2026-09-27T11:40:31.147Z"
     },
     "614rkz": {
       "estado": "automatica",
@@ -32901,6 +32873,81 @@
         "nivel": "MEDIA",
         "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
         "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "18hjax8": {
+      "estado": "automatica",
+      "titulo": "Chile mejora la calidad del aire aunque persisten brechas",
+      "copete": "Un informe de instituciones chilenas detalla los avances y las zonas con mayores dificultades ambientales en el país tras dos décadas de controles.",
+      "cuerpo": "El informe publicado en la revista Atmosphere advierte que el uso intensivo de leña húmeda en el sur chileno continúa como la principal causa de contaminación atmosférica. Al respecto, Kevin Basoa, integrante del CR2, explicó que la regulación sobre este combustible aún no se implementa de manera plena y que su uso arraigado en la comunidad dificulta el avance.\n\nLa noticia no guarda relación directa con Balcarce, ya que refiere exclusivamente a la situación ambiental y las normativas vigentes en distintas regiones de Chile.",
+      "guion": "Chile mejora la calidad del aire aunque persisten brechas",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T11:40:31.147Z",
+      "claves": [
+        "Chile registra una mejora ambiental en dos décadas",
+        "El uso de leña húmeda afecta al sur del país",
+        "Persisten zonas con mayores niveles de contaminación",
+        "El informe fue publicado en la revista Atmosphere"
+      ],
+      "seSabe": [
+        "Chile mejoró su calidad del aire en los últimos veinte años según un análisis del 2025.",
+        "El informe fue desarrollado por la Universidad de Chile, el CR2, el Ministerio del Medio Ambiente y la UDD.",
+        "El uso de leña húmeda es la principal causa de contaminación en el sur chileno según el CR2."
+      ],
+      "noConfirmado": [
+        "No se especifican datos sobre posibles réplicas o impacto de esta situación ambiental en Argentina o en la localidad de Balcarce.",
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Un análisis reciente detalla los avances y las dificultades en la calidad del aire en distintas regiones de Chile, donde el uso de leña y factores geográficos influyen en la contaminación.",
+      "etiquetas": [
+        "calidad del aire",
+        "Chile",
+        "contaminación",
+        "medio ambiente",
+        "CR2"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/noticias/2026/09/27/puerto-varas-calidad-del-aire-este-27-de-septiembre-de-2026/",
+          "fecha": "2026-09-27T11:35:14.000Z",
+          "oficial": false,
+          "aporte": "Aportó el informe sobre la calidad del aire en Chile, detalles del estudio del CR2 y restricciones vigentes."
+        },
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/noticias/2026/09/27/valle-alegre-calidad-del-aire-este-27-de-septiembre-de-2026/",
+          "fecha": "2026-09-27T11:34:58.000Z",
+          "oficial": false,
+          "aporte": "Aportó el informe sobre la calidad del aire en Chile, detalles del estudio del CR2 y restricciones vigentes."
+        },
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/noticias/2026/09/27/copiapo-sivica-calidad-del-aire-este-27-de-septiembre-de-2026/",
+          "fecha": "2026-09-27T11:34:41.000Z",
+          "oficial": false,
+          "aporte": "Aportó el informe sobre la calidad del aire en Chile, detalles del estudio del CR2 y restricciones vigentes."
+        },
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/noticias/2026/09/27/calidad-del-aire-en-lautaro-este-27-de-septiembre-de-2026/",
+          "fecha": "2026-09-27T11:34:24.000Z",
+          "oficial": false,
+          "aporte": "Aportó el informe sobre la calidad del aire en Chile, detalles del estudio del CR2 y restricciones vigentes."
+        },
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/noticias/2026/09/27/los-maitenes-calidad-del-aire-este-27-de-septiembre-de-2026/",
+          "fecha": "2026-09-27T11:34:08.000Z",
+          "oficial": false,
+          "aporte": "Aportó el informe sobre la calidad del aire en Chile, detalles del estudio del CR2 y restricciones vigentes."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "ALTA"
       }
     }
   },
