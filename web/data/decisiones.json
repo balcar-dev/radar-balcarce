@@ -1,5 +1,5 @@
 {
-  "exportado": "2026-09-27T05:00:33.676Z",
+  "exportado": "2026-09-27T05:10:48.472Z",
   "decisiones": {
     "1951120": {
       "estado": "automatica",
@@ -30435,6 +30435,178 @@
         "nivel": "MEDIA",
         "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
         "sugeridoPorIA": "ALTA"
+      }
+    },
+    "1npadxs": {
+      "estado": "automatica",
+      "titulo": "El transporte público y el gas en debate en la región",
+      "copete": "Analizan una posible nueva prórroga para los colectivos y cambios en la Zona Fría. Las fuentes advierten sobre el vencimiento del plazo actual.",
+      "cuerpo": "El Concejo evalúa una nueva prórroga de seis meses para los colectivos, que vence el próximo dos de octubre, o declarar la emergencia para que el Ejecutivo negocie la continuidad del servicio tras dos licitaciones desiertas. Kristiansen advirtió que el transporte público está a punto de perderse, mientras se discuten ajustes en recorridos y frecuencias.\n\nEn paralelo, el municipio detalló que los ciudadanos pueden solicitar obras de agua, cloacas o cordón cuneta mediante convenios donde los vecinos compran los materiales y la comuna aporta los empleados y las máquinas, previo análisis de viabilidad técnica y expediente administrativo.\n\nNo pudo ser contrastado de forma independiente con las fuentes consultadas.",
+      "guion": "El transporte público y el gas en debate en la región",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T05:10:48.410Z",
+      "claves": [
+        "Analizan una prórroga de seis meses para los colectivos o declarar la emergencia.",
+        "El vencimiento del servicio actual está fijado para el dos de octubre.",
+        "El Congreso redujo el alcance del descuento en la factura de gas por la Zona Fría.",
+        "El municipio implementa un sistema de convenios vecinales para obras públicas."
+      ],
+      "seSabe": [
+        "El Concejo analiza una prórroga de seis meses para los colectivos o declarar la emergencia.",
+        "El plazo de la prórroga actual vence el dos de octubre.",
+        "Kristiansen advirtió sobre la situación del transporte público.",
+        "El Congreso aprobó reducir el alcance del beneficio de la Zona Fría en las facturas de gas.",
+        "El municipio impulsa un sistema de convenios para obras de agua, cloacas y cordón cuneta."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El Concejo analiza una prórroga para los colectivos ante el vencimiento del dos de octubre y el Congreso redujo el alcance del beneficio de la Zona Fría en las tarifas de gas.",
+      "etiquetas": [
+        "transporte publico",
+        "colectivos",
+        "zona fria",
+        "gas",
+        "obras publicas"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Ecos Diarios (Necochea)",
+          "enlace": "https://elecos.com.ar/el-colectivo-espera-el-fangio-acelera",
+          "fecha": "2026-09-27T04:39:39.000Z",
+          "oficial": false,
+          "aporte": "Detalla la situación del transporte público, los convenios municipales de obras y los cambios en la Zona Fría."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "121t71e",
+          "titulo": "Cruce en Balcarce por la habilitación del autódromo Fangio",
+          "fecha": "2026-09-27T02:30:43.813Z",
+          "ruta": "/nota/cruce-en-balcarce-por-la-habilitacion-del-autodromo-fangio-121t71e"
+        },
+        {
+          "id": "1hjmkd4",
+          "titulo": "Ingresan más de mil cuatrocientos vehículos al Fangio en Balcarce",
+          "fecha": "2026-09-27T02:00:40.587Z",
+          "ruta": "/nota/ingresan-mas-de-mil-cuatrocientos-vehiculos-al-fangio-en-balcarce-1hjmkd4"
+        },
+        {
+          "id": "1as5wmy",
+          "titulo": "El autódromo Fangio completa su capacidad de estacionamiento para autos en Balcarce",
+          "fecha": "2026-09-27T02:00:40.587Z",
+          "ruta": "/nota/el-autodromo-fangio-completa-su-capacidad-de-estacionamiento-para-1as5wmy"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "BAJA"
+      }
+    },
+    "1kufvrz": {
+      "estado": "automatica",
+      "titulo": "El Congreso debate la autonomía y el rol institucional del Banco Central",
+      "copete": "La Cámara de Diputados dio media sanción a un proyecto del Poder Ejecutivo que reforma la carta orgánica del Banco Central de la República Argentina para modificar su autonomía y prohibir el financiamiento al Tesoro.",
+      "cuerpo": "En agosto, la Cámara de Diputados dio media sanción a un proyecto enviado por el Poder Ejecutivo que modifica el diseño institucional del Banco Central de la República Argentina. La iniciativa establece como objetivo primordial la preservación del valor de la moneda y busca erradicar la emisión destinada a cubrir el déficit fiscal, limitando la relación financiera con el Tesoro. Asimismo, la propuesta modifica el régimen de designación y destitución de los funcionarios para otorgar mayor estabilidad al Directorio, requiriendo el voto favorable de los dos tercios de ambas cámaras legislativas para remover a su titular.\n\nEstas modificaciones se suman a los antecedentes históricos de la entidad, creada en 1935 y reformada en distintas ocasiones.",
+      "guion": "El Congreso debate la autonomía y el rol institucional del Banco Central",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T05:10:48.410Z",
+      "claves": [
+        "Diputados dio media sanción a un proyecto sobre el Banco Central.",
+        "Busca preservar el valor de la moneda y frenar la emisión para el Tesoro.",
+        "Modifica los requisitos para remover al presidente de la entidad."
+      ],
+      "seSabe": [
+        "La Cámara de Diputados aprobó en agosto la media sanción del proyecto del Poder Ejecutivo.",
+        "La iniciativa fija la preservación del valor de la moneda como cometido primario.",
+        "Se busca acotar al mínimo la relación financiera entre el Banco Central y el Tesoro.",
+        "Para destituir al titular del organismo se exigirá el voto de los dos tercios de ambas cámaras del Congreso."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Diputados dio media sanción a un proyecto para reformar la carta orgánica del Banco Central, enfocado en la estabilidad de la moneda y los requisitos para la remoción de sus autoridades.",
+      "etiquetas": [
+        "Banco Central",
+        "Congreso Nacional",
+        "Economía",
+        "Diputados"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/opinion/2026/09/27/quien-controla-al-banco-central/",
+          "fecha": "2026-09-27T05:07:45.000Z",
+          "oficial": false,
+          "aporte": "Detalla la historia institucional del Banco Central y los cambios introducidos en el proyecto aprobado con media sanción en agosto."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1fohheo",
+          "titulo": "El Banco Central no compró dólares y las reservas cayeron tras un pago",
+          "fecha": "2026-09-25T23:50:00.000Z",
+          "ruta": "/nota/el-banco-central-no-compro-dolares-y-las-reservas-cayeron-tras-un-pago-1fohheo"
+        },
+        {
+          "id": "uxan4p",
+          "titulo": "El Banco Central frena la compra de divisas tras la suba del dólar",
+          "fecha": "2026-09-25T21:21:55.000Z",
+          "ruta": "/nota/el-banco-central-frena-la-compra-de-divisas-tras-la-suba-del-dolar-uxan4p"
+        },
+        {
+          "id": "17j8a37",
+          "titulo": "El Banco Central publica la tasa de interés de los plazos fijos",
+          "fecha": "2026-09-25T17:23:32.000Z",
+          "ruta": "/nota/el-banco-central-publica-la-tasa-de-interes-de-los-plazos-fijos-17j8a37"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "9hn4nt": {
+      "estado": "automatica",
+      "titulo": "Argentina retrocede en el índice de complejidad exportadora",
+      "copete": "El economista Ricardo Hausmann advirtió que la falta de diversificación y de inversión tecnológica afectó la posición comercial del país. La temática impacta en las economías regionales y el desarrollo industrial.",
+      "cuerpo": "El economista Ricardo Hausmann advirtió que la estabilidad macroeconómica no alcanza para asegurar el desarrollo y señaló la necesidad de diversificar la estructura de exportaciones hacia bienes con mayor nivel tecnológico. Durante un seminario internacional, el especialista comparó el caso argentino con los modelos de Corea y Japón, y destacó que las empresas cumplen un rol central en el cambio por su contacto directo con la producción.\n\nEl informe atribuye este retroceso a la falta de competitividad del sector industrial y a la baja inversión local en investigación y desarrollo.",
+      "guion": "Argentina retrocede en el índice de complejidad exportadora",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T05:10:48.410Z",
+      "claves": [
+        "Hausmann alertó sobre la baja complejidad de las exportaciones argentinas.",
+        "El país cayó treinta posiciones en la última década según datos de Harvard.",
+        "Se cuestionó la escasa inversión privada en investigación y tecnología."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "etiquetas": [
+        "exportaciones",
+        "economía",
+        "desarrollo",
+        "industria",
+        "universidad de harvard"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/opinion/2026/09/27/la-matriz-exportadora/",
+          "fecha": "2026-09-27T05:07:25.000Z",
+          "oficial": false,
+          "aporte": "Aportó los datos de la presentación de Ricardo Hausmann sobre la complejidad exportadora de Argentina y su comparación internacional."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
       }
     }
   },
