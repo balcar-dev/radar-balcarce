@@ -1,5 +1,5 @@
 {
-  "exportado": "2026-09-27T05:20:26.822Z",
+  "exportado": "2026-09-27T05:30:32.978Z",
   "decisiones": {
     "1951120": {
       "estado": "automatica",
@@ -30607,6 +30607,98 @@
         "nivel": "MEDIA",
         "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
         "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "1pwxmsq": {
+      "estado": "automatica",
+      "titulo": "Denisse González relata su internación por un cuadro de púrpura",
+      "copete": "La exparticipante de Gran Hermano contó detalles sobre su internación debido a la púrpura trombocitopénica idiopática. El diagnóstico se conoció tras un análisis de rutina.",
+      "cuerpo": "La influencer Denisse González relató el difícil momento que atravesó tras ser internada de urgencia por un cuadro de púrpura trombocitopénica idiopática, una enfermedad que le fue diagnosticada luego de realizarse un análisis de sangre de rutina que había postergado.\n\nLa joven de veinticuatro años explicó que tuvo síntomas previos que no advirtió en su momento, como moretones y pequeños puntos de sangre en las manos y piernas que confundió con una alergia, además de sangrado en las encías. Tras recibir los resultados del laboratorio, su médico le indicó por videollamada que acudiera de forma inmediata a Urgencias debido a la gravedad de la situación.\n\nDurante su primera noche internada sola, reconoció haber atravesado momentos de profundo miedo ante la incertidumbre del diagnóstico y las advertencias médicas sobre posibles hemorragias. La exparticipante de Gran Hermano transcurrió esas horas acompañada a distancia por su pareja, el músico Bautista Mascia.",
+      "guion": "Denisse González relata su internación por un cuadro de púrpura",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T05:30:32.903Z",
+      "claves": [
+        "La influencer Denisse González fue internada de urgencia con un cuadro de púrpura.",
+        "El diagnóstico se conoció a partir de un análisis de sangre de rutina.",
+        "Llegó a tener un registro de mil plaquetas según detalló la propia creadora de contenido.",
+        "La joven reconoció que había ignorado síntomas previos como moretones y sangrados."
+      ],
+      "seSabe": [
+        "Denisse González fue internada en una clínica tras un estudio de laboratorio.",
+        "El diagnóstico confirmado es púrpura trombocitopénica idiopática.",
+        "La influencer llegó a registrar mil plaquetas al ingresar a la guardia médica.",
+        "Su pareja es el músico Bautista Mascia."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "La influencer Denisse González contó detalles sobre su internación de urgencia tras recibir un diagnóstico de púrpura trombocitopénica idiopática luego de un análisis de rutina.",
+      "etiquetas": [
+        "Denisse González",
+        "salud",
+        "púrpura",
+        "Gran Hermano"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/reportajes/2026/09/27/denisse-gonzalez-llore-toda-la-noche-hice-un-dibujito-de-despedida/",
+          "fecha": "2026-09-27T05:21:25.000Z",
+          "oficial": false,
+          "aporte": "Detalles sobre el diagnóstico de púrpura, los síntomas previos y el relato de la internación de Denisse González."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "176vdl1": {
+      "estado": "automatica",
+      "titulo": "Gobernadora mexicana responde a embajador tras ataque",
+      "copete": "La mandataria estatal agradeció el reconocimiento del diplomático estadounidense tras el ataque a un helicóptero policial en Chihuahua, un hecho sin relación directa con Balcarce.",
+      "cuerpo": "La agresión ocurrió el pasado 12 de septiembre en una zona entre los municipios de Coyame y Ojinaga, donde un efectivo que cumplía tareas de observación aérea sufrió una herida en la cabeza, mientras el resto de la tripulación resultó ileso. A través de redes sociales, la mandataria reafirmó el compromiso de su administración con la seguridad y el combate al crimen, y valoró el respaldo del diplomático estadounidense a la estrategia de vigilancia conocida como Plataforma Centinela y a la labor del secretario de Seguridad Pública estatal, Gilberto Loya. El intercambio de mensajes se produjo luego de que el representante diplomático elogiara las detenciones y los decomisos concretados tras el atentado contra la aeronave de las fuerzas de seguridad.",
+      "guion": "Gobernadora mexicana responde a embajador tras ataque",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T05:30:32.903Z",
+      "claves": [
+        "La gobernadora de Chihuahua agradeció el respaldo diplomático",
+        "Un helicóptero policial fue atacado el 12 de septiembre",
+        "Un efectivo resultó herido durante la agresión armada",
+        "Autoridades destacaron la estrategia de seguridad estatal"
+      ],
+      "seSabe": [
+        "La gobernadora de Chihuahua, Maru Campos, respondió al mensaje del embajador estadounidense Ronald Johnson.",
+        "El embajador reconoció al secretario de Seguridad Pública, Gilberto Loya, tras el ataque a un helicóptero de la Policía Estatal.",
+        "El ataque a la aeronave ocurrió el 12 de septiembre entre los municipios de Coyame y Ojinaga.",
+        "Un oficial que se desempeñaba como observador aéreo resultó herido en la cabeza durante el hecho."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "La gobernadora de Chihuahua respondió al embajador de Estados Unidos tras el reconocimiento al trabajo de las fuerzas de seguridad locales luego del ataque a un helicóptero policial ocurrido el 12 de septiembre.",
+      "etiquetas": [
+        "Chihuahua",
+        "Seguridad",
+        "Estados Unidos",
+        "Policía"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/mexico/2026/09/27/maru-campos-responde-a-ronald-johnson-tras-ataque-a-helicoptero-de-la-policia-de-chihuahua/",
+          "fecha": "2026-09-27T05:19:34.000Z",
+          "oficial": false,
+          "aporte": "Aportó los detalles sobre el intercambio entre la gobernadora de Chihuahua y el embajador de Estados Unidos, así como los datos del ataque al helicóptero policial."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "BAJA"
       }
     }
   },
