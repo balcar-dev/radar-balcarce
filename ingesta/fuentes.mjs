@@ -199,7 +199,7 @@ export const FUENTES_NACIONALES = [
     url: 'https://www.ole.com.ar/rss/ultimas-noticias/',
     tipo: 'rss',
     alcance: 'pais',
-    seccion: 'Deportes',
+    seccion: 'Fútbol',
     peso: 8,
     maxItems: 5,
     temas: ['deportes', 'fútbol'],
@@ -935,9 +935,21 @@ export const REGLAS_SECCION = [
       'incendio', 'asalto', 'ladrón', 'ladron', 'robaron', 'estafa', 'alcoholemia', 'persecución'],
   },
   {
+    // Fútbol, sección propia desde el 27/09 (Hernán): es lo que más cubren
+    // todos los medios y tapaba al resto de los deportes.
+    seccion: 'Fútbol',
+    palabras: ['fútbol', 'futbol', 'goleó', 'goleo', 'gol', 'goles', 'liga profesional', 'primera división',
+      'primera division', 'copa argentina', 'copa libertadores', 'libertadores', 'sudamericana',
+      'selección argentina', 'seleccion argentina', 'scaloni', 'messi', 'la scaloneta', 'boca juniors',
+      'river plate', 'racing club', 'san lorenzo', 'estudiantes de la plata', 'rosario central',
+      'newell', 'vélez', 'velez', 'huracán', 'huracan', 'liga balcarceña', 'liga balcarcena',
+      'ferroviarios', 'primera nacional', 'torneo federal', 'ascenso', 'penal', 'arquero', 'delantero',
+      'director técnico', 'mundial de clubes', 'eliminatorias', 'superclásico', 'superclasico'],
+  },
+  {
     seccion: 'Deportes',
-    palabras: ['fútbol', 'futbol', 'básquet', 'basquet', 'vóley', 'voley', 'maxivoley',
-      'torneo', 'campeonato', 'liga', 'partido', 'goleó', 'goleo', 'gol', 'goles',
+    palabras: ['básquet', 'basquet', 'vóley', 'voley', 'maxivoley',
+      'torneo', 'campeonato', 'liga', 'partido',
       'playoffs', 'hockey', 'atletismo', 'maratón', 'maraton', 'árbitro', 'arbitro',
       'deportivo', 'descenso', 'selección', 'seleccion', 'copa',
       // Los que no son fútbol y suelen quedar sin cubrir en la zona.
@@ -1080,7 +1092,7 @@ export const REGLAS_SEMAFORO = {
   // seguras no es que estén afuera sino la lista de arriba — todo lo que
   // acusa, mata o involucra a un chico sigue esperando a una persona — y
   // el rojo, que no sale nunca.
-  verdeSecciones: ['Cultura y agenda', 'Deportes', 'Automovilismo', 'Agro',
+  verdeSecciones: ['Cultura y agenda', 'Fútbol', 'Argentina', 'Deportes', 'Automovilismo', 'Agro',
     'Balcarce', 'Política', 'Policiales', 'Economía', 'Tecnología'],
   // Esto NO es noticia: es publicidad o promoción de otro medio. No se
   // bloquea (a veces un sorteo del club sí interesa), pero nunca sale solo:

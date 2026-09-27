@@ -332,7 +332,7 @@ const NO_ES_TEMA = new Set(['balcarce', 'argentina', 'buenos aires', 'provincia'
 
 const SECCION_COMO_TEMA = {
   Deportes: 'deportes', Automovilismo: 'automovilismo', Agro: 'el campo', Economía: 'economía',
-  'Cultura y agenda': 'cultura', Tecnología: 'tecnología', Servicios: 'servicios', País: 'el país',
+  'Cultura y agenda': 'cultura', Tecnología: 'tecnología', Servicios: 'servicios', País: 'el país', Argentina: 'el país', Fútbol: 'fútbol',
 };
 
 /**

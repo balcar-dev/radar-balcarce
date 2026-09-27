@@ -81,7 +81,11 @@ if (enLaNube) {
   const { ingestar } = await import('../../ingesta/ingesta.mjs');
   const { agendaCompleta } = await import('../../ingesta/agenda.mjs');
   console.log('  sin panel a mano: se buscan las noticias ahora');
-  ultima = await ingestar({ silencioso: true });
+  // Los identificadores ya publicados: cuando otro medio se suma a una
+  // historia, la nota no cambia de dirección (ingesta/cruce.mjs).
+  const idsConocidos = new Set([...leerJson(SALIDA, { notas: [] }).notas ?? [], ...leerJson(ARCHIVO, { notas: [] }).notas ?? []]
+    .map((n) => n.id));
+  ultima = await ingestar({ silencioso: true, idsConocidos });
   agenda = await agendaCompleta().catch(() => null);
   const exportado = leerJson(path.join(AQUI, '..', 'data', 'decisiones.json'), { decisiones: {} });
   estado = { decisiones: exportado.decisiones ?? {} };
@@ -431,7 +435,9 @@ if (repetidas) console.log(`  ${repetidas} notas repetidas (mismo titular) salen
 
 // Sin sección Servicios desde el 27/09 (Hernán): lo que quedó con esa sección
 // en el archivo pasa a Balcarce si es de acá, y a País si no.
-const sinServicios = (n) => (n?.seccion === 'Servicios' ? { ...n, seccion: n.local ? 'Balcarce' : 'País' } : n);
+// Y desde el mismo día País se llama Argentina.
+const sinServicios = (n) => (n?.seccion === 'Servicios' ? { ...n, seccion: n.local ? 'Balcarce' : 'Argentina' }
+  : n?.seccion === 'País' ? { ...n, seccion: 'Argentina' } : n);
 const archivo = actualizarArchivo({
   archivo: (archivoAnterior.notas ?? []).map(sinServicios),
   // Las partes nuevas que hoy no están (una persona corrigió el texto, o la

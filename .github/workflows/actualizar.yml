@@ -86,6 +86,17 @@ jobs:
       # primero intenta con la de redacción, y si no está o se quedó sin
       # cupo, sigue con la de redes. Si ninguna de las dos anda, la nota sale
       # igual con el resumen mecánico de la fuente — esto nunca frena nada.
+      # La memoria del cruce de medios (ingesta/cruce.mjs): lo que publicaron
+      # todos los medios en las últimas 36 horas, para contar cuántos cuentan
+      # cada hecho. No va al repositorio: la guarda la caché de Actions entre
+      # corridas. Si se pierde, se rearma sola con los índices de noticias.
+      - name: Memoria del cruce de medios
+        uses: actions/cache@v4
+        with:
+          path: .cache
+          key: cruce-${{ github.run_id }}
+          restore-keys: cruce-
+
       - name: Buscar noticias y armar los datos
         working-directory: web
         run: node scripts/generar-datos.mjs

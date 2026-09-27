@@ -10,9 +10,11 @@ import {
   MOTIVO_INTERNACIONAL, PALABRAS_DE_TECNOLOGIA_EN_EL_TITULO, SECCIONES_QUE_NO_ENTRAN, CONEXION_ARGENTINA,
 } from './fuentes.mjs';
 import { diaDeTurno, fechaEnBalcarce } from './utiles.mjs';
+import { agruparPorHecho, leerMemoria, guardarMemoria, desdeLaMemoria } from './cruce.mjs';
+import { FUENTES_CRUCE } from './fuentes-cruce.mjs';
 import { sinTildes } from '../web/lib/texto.js';
 
-export const TODAS_LAS_FUENTES = [...FUENTES, ...FUENTES_NACIONALES];
+export const TODAS_LAS_FUENTES = [...FUENTES, ...FUENTES_NACIONALES, ...FUENTES_CRUCE];
 
 // Cuando corre desde el panel no queremos que escriba en la consola.
 let log = console.log;
@@ -167,6 +169,30 @@ function haceCuanto(fecha) {
 // ------------------------------------------------------------------- parseo
 
 export function parsearFeed(xml, fuente) {
+  // El índice de noticias que cada sitio arma para Google (news-sitemap): trae
+  // TODO lo del día, no sólo las últimas 10 o 20 notas de un RSS (27/09, para
+  // el cruce). No trae resumen: se compara por el título.
+  if (/<urlset[\s>]/i.test(xml) && !/<item[\s>]|<entry[\s>]/i.test(xml)) {
+    return bloques(xml, 'url').map((b) => {
+      const fechaTexto = etiqueta(b, 'news:publication_date') || etiqueta(b, 'lastmod');
+      const fecha = fechaTexto ? new Date(fechaTexto) : new Date();
+      return {
+        titulo: sinEtiquetas(etiqueta(b, 'news:title')),
+        enlace: etiqueta(b, 'loc').trim(),
+        fecha: Number.isNaN(fecha.getTime()) ? new Date() : fecha,
+        cuerpo: '',
+        textoCompleto: false,
+        imagen: etiqueta(b, 'image:loc'),
+        categorias: etiqueta(b, 'news:keywords').split(',').map((s) => s.trim()).filter(Boolean),
+        fuenteId: fuente.id,
+        medio: fuente.medio,
+        alcance: fuente.alcance,
+        oficial: !!fuente.oficial,
+        seccionFuente: fuente.seccion ?? null,
+        peso: fuente.peso ?? 10,
+      };
+    }).filter((n) => n.titulo && n.enlace);
+  }
   const esAtom = /<feed[\s>]/i.test(xml) && !/<rss[\s>]/i.test(xml);
   const crudos = esAtom ? bloques(xml, 'entry') : bloques(xml, 'item');
 
@@ -466,6 +492,8 @@ const PALABRAS_DEBILES = new Set([
   //     Ámbito sobre cómo arreglar la ventanilla de un auto a Cultura y
   //     agenda, que la publicó sola.
   'fangio', 'taller',
+  // Fútbol (27/09): "boca" es también la de tormenta y "penal", lo judicial.
+  'boca', 'river', 'racing', 'penal', 'ascenso',
 ]);
 
 /** Los temas de larga duración que toca esta nota. Suele ser ninguno. */
@@ -486,10 +514,25 @@ function clasificar(nota) {
   if (s !== 'Balcarce' || nota.alcance === 'local' || nota.nombraBalcarce) return s;
   if (nota.alcance === 'region') return 'Región';
   if (nota.alcance === 'provincia') return 'Provincia';
-  return 'País';
+  return 'Argentina';
 }
 
 function clasificarPorPalabras(nota) {
+  const s = clasificarSinFutbol(nota);
+  // Un feed de deportes (Radio Gabal, Clarín, La Nación) trae de todo: lo que
+  // es fútbol va a Fútbol (27/09).
+  if (s === 'Deportes' && esDeFutbol(nota)) return 'Fútbol';
+  return s;
+}
+
+const REGLA_FUTBOL = REGLAS_SECCION.find((r) => r.seccion === 'Fútbol');
+/** ¿Es fútbol? Con una palabra firme del fútbol en el título o el comienzo. */
+function esDeFutbol(nota) {
+  const texto = normalizar(`${nota.titulo} ${String(nota.cuerpo ?? '').slice(0, 300)}`);
+  return (REGLA_FUTBOL?.palabras ?? []).some((p) => !PALABRAS_DEBILES.has(p) && contiene(texto, p));
+}
+
+function clasificarSinFutbol(nota) {
   const texto = normalizar(`${nota.titulo} ${nota.categorias.join(' ')} ${nota.cuerpo.slice(0, 400)}`);
   // Una palabra débil sólo decide si está en el TITULAR. En el cuerpo
   // aparece de casualidad: "Recordaron a Domingo Teruggi" hablaba del
@@ -540,7 +583,7 @@ function clasificarPorPalabras(nota) {
   if (nota.nombraBalcarce) return 'Balcarce';
   if (nota.alcance === 'region') return 'Región';
   if (nota.alcance === 'provincia') return 'Provincia';
-  return 'País';
+  return 'Argentina';
 }
 
 // El piso de puntaje para lo de afuera ya no es uno solo: cada sección tiene
@@ -649,7 +692,9 @@ function relevancia(nota, seccion, medios) {
   // puede competir con una nota que sí tiene hora.
   const horas = nota.fechaEstimada ? 24 : (Date.now() - nota.fecha.getTime()) / 3600000;
   if (horas < 3) p += 25; else if (horas < 12) p += 15; else if (horas < 24) p += 8;
-  if (medios > 1) p += 10 * (medios - 1);
+  // Cada medio que cuenta lo mismo suma, con tope: con el cruce, un tema del
+  // día lo cuentan 20 medios y sin tope todo lo nacional daría 100.
+  if (medios > 1) p += Math.min(40, 10 * (medios - 1));
   if (nota.imagen) p += 6;
   if (nota.textoCompleto) p += 4;
   // Que un medio nacional nombre a Balcarce es noticia en Balcarce.
@@ -1105,8 +1150,24 @@ export function exigirDosMedios(portada) {
   return portada;
 }
 
+/** La memoria del cruce, entre corridas. En GitHub la guarda la caché de
+ *  Actions (actualizar.yml); en la PC, este mismo archivo. No va al repo. */
+export const MEMORIA_DEL_CRUCE = path.join(path.dirname(fileURLToPath(import.meta.url)), '..', '.cache', 'cruce-memoria.json');
+
+/** Marca una nota de afuera: si dice Balcarce en el título, si nombra a una
+ *  figura argentina o si toca la zona. */
+function marcarDeAfuera(n) {
+  if (esDeBalcarce(n)) n.nombraBalcarce = true;
+  else if (figuraQueNombra(n)) n.figura = figuraQueNombra(n);
+  else if (tocaLaZona(n)) n.deLaZona = true;
+}
+
 export async function ingestar({
   fuentes = null, silencioso = false, escribirArchivos = false,
+  // `memoria`: el archivo del cruce (null = sin memoria, como en las pruebas).
+  // `idsConocidos`: los identificadores ya publicados, para no cambiarle la
+  // dirección a una nota cuando otro medio se suma a su historia.
+  memoria = MEMORIA_DEL_CRUCE, idsConocidos = null,
 } = {}) {
   log = silencioso ? () => {} : console.log;
   const lista = (fuentes ?? TODAS_LAS_FUENTES).filter((f) => f.activa !== false);
@@ -1121,62 +1182,34 @@ export async function ingestar({
     let notas = f.tipo === 'scrape' ? parsearScrape(cuerpo, f) : parsearFeed(cuerpo, f);
     // Raspar la portada da títulos sin bajada ni fecha: hay que entrar a cada nota.
     if (f.tipo === 'scrape') await ampliar(notas);
-    // De las fuentes de afuera entra lo que nombra a Balcarce (siempre) y unas
-    // pocas recientes para tener sección País sin tapar lo local.
+    // De las fuentes de afuera, lo que por la sección del propio medio no es
+    // para Radar (otro país, policiales, consejos) no se trae (V2.2). Lo demás
+    // entra ENTERO al cruce, marcado (si dice Balcarce en el título, si nombra
+    // a una figura, si toca la zona): qué queda se decide después de cruzar
+    // con todos los medios (paso 2). Antes entraban "las 3 a 5 más nuevas" de
+    // cada fuente, y así casi todo lo nacional quedaba "de un solo medio".
     let descartadas = 0;
-    let senal = [];
     if (f.alcance !== 'local') {
-      // V2.2: lo que por la sección del propio medio no es para Radar (otro
-      // país, policiales, consejos) ni se trae.
       const antes = notas.length;
       notas = notas.filter((n) => !motivoDeDescarte(n, f));
       descartadas = antes - notas.length;
+      notas.forEach(marcarDeAfuera);
     }
-    if (f.uso === 'senal') {
-      // Un feed general sólo cuenta cobertura: entra lo que dice Balcarce en el
-      // título; lo demás sólo suma como "otro medio que cuenta lo mismo".
-      const nuestras = notas.filter(esDeBalcarce);
-      nuestras.forEach((n) => { n.nombraBalcarce = true; });
-      senal = notas.filter((n) => !nuestras.includes(n));
-      notas = nuestras;
-    } else if (f.alcance !== 'local') {
-      const nuestras = notas.filter(esDeBalcarce);
-      nuestras.forEach((n) => { n.nombraBalcarce = true; });
-      // Las que nombran a una figura entran aunque no digan Balcarce: son
-      // las que la gente lee igual. Van marcadas para que el puntaje las
-      // suba y para poder explicar en el panel por qué están.
-      const conFigura = notas.filter((n) => !nuestras.includes(n) && figuraQueNombra(n));
-      conFigura.forEach((n) => { n.figura = figuraQueNombra(n); });
-      // Lo que toca la zona (ruta 226, sudeste, papa) entra aunque no diga
-      // Balcarce, pero sin marcarse como que la nombra (sin los +22).
-      const deLaZona = notas.filter((n) => !nuestras.includes(n) && !conFigura.includes(n) && tocaLaZona(n));
-      deLaZona.forEach((n) => { n.deLaZona = true; });
-      const resto = notas.filter((n) => !nuestras.includes(n) && !conFigura.includes(n) && !deLaZona.includes(n))
-        .sort((a, b) => b.fecha - a.fecha)
-        .slice(0, f.maxItems ?? 5);
-      notas = [...nuestras, ...conFigura, ...deLaZona, ...resto];
-    }
-    return {
-      fuente: f, notas, senal, descartadas,
-    };
+    return { fuente: f, notas, descartadas };
   }));
 
   let todas = [];
-  let deSenal = [];
   const estadoFuentes = [];
   resultados.forEach((r, i) => {
     const f = lista[i];
     if (r.status === 'fulfilled') {
       const { notas } = r.value;
-      deSenal = deSenal.concat(r.value.senal ?? []);
       if (r.value.descartadas) log(`       ${f.nombre}: ${r.value.descartadas} no entran por la sección del medio`);
       const ultima = notas.length
         ? notas.map((n) => n.fecha).sort((a, b) => b - a)[0] : null;
       const frescura = ultima && !notas[0].fechaEstimada ? haceCuanto(ultima) : 'sin fecha';
       log(`  \x1b[32mok\x1b[0m   ${f.nombre.padEnd(28)} ${String(notas.length).padStart(3)} notas   última ${frescura}`);
-      // Un feed de señal casi nunca trae candidatas: cuenta lo que leyó, para
-      // que no parezca una fuente caída.
-      estadoFuentes.push({ id: f.id, nombre: f.nombre, estado: 'ok', notas: notas.length + (r.value.senal?.length ?? 0), frescura });
+      estadoFuentes.push({ id: f.id, nombre: f.nombre, estado: 'ok', notas: notas.length, frescura });
       todas = todas.concat(notas);
     } else {
       log(`  \x1b[31mfalla\x1b[0m ${f.nombre.padEnd(28)} ${r.reason?.message ?? r.reason}`);
@@ -1184,40 +1217,61 @@ export async function ingestar({
     }
   });
 
-  // 2. Agrupar la misma noticia contada por varios medios
+  // 2. El cruce (ingesta/cruce.mjs): se juntan las notas de todos los medios
+  // que cuentan el mismo hecho, con las de las últimas horas (la memoria), y
+  // se cuenta cuántos medios distintos lo cuentan. Queda:
+  //   · todo lo de los medios de Balcarce;
+  //   · de afuera, lo que dice Balcarce en el título o toca la zona;
+  //   · de afuera, lo que cuentan DOS MEDIOS O MÁS (la regla de dos fuentes).
+  // Lo de afuera de un solo medio no se trae: ni amarillo (Hernán, 27/09).
+  // La misma nota de un medio puede llegar por dos feeds suyos (la portada y
+  // la sección, o el RSS y el índice): una sola vez.
+  const yaVistas = new Set();
+  todas = todas.filter((n) => {
+    const k = `${n.medio}|${normalizar(n.titulo).replace(/s+/g, '')}`;
+    if (yaVistas.has(k)) return false;
+    yaVistas.add(k);
+    return true;
+  });
+  const enEstaCorrida = new Set(todas.map((n) => n.enlace));
+  const memoriaAntes = memoria ? leerMemoria(memoria) : [];
+  const deAntes = memoriaAntes.filter((m) => !enEstaCorrida.has(m.enlace)).map(desdeLaMemoria);
+  deAntes.forEach(marcarDeAfuera);
+  const conjunto = [...todas, ...deAntes];
   const grupos = [];
-  for (const nota of todas.sort((a, b) => b.fecha - a.fecha)) {
-    const g = grupos.find((x) => parecido(x.principal.titulo, nota.titulo) >= 0.55);
-    if (g) {
-      if (!g.medios.includes(nota.medio)) g.medios.push(nota.medio);
-      g.tambien.push(nota);
+  let deUnSoloMedio = 0;
+  for (const indices of agruparPorHecho(conjunto)) {
+    const ns = indices.map((i) => conjunto[i]);
+    const locales = ns.filter((n) => n.alcance === 'local');
+    const medios = [...new Set(ns.map((n) => n.medio))];
+    if (!locales.length && !ns.some((n) => n.nombraBalcarce || n.deLaZona) && medios.length < 2) {
+      if (!ns.every((n) => n.deLaMemoria)) deUnSoloMedio += 1;
+      continue;
+    }
+    // La principal (de la que sale el identificador y la dirección de la
+    // nota): la que ya se publicó si hay una; si no, la primera que salió.
+    // De Balcarce si hay alguna de acá. Así, cuando otro medio se suma a la
+    // historia, la nota no cambia de dirección ni aparece otra vez.
+    const base = locales.length ? locales : ns;
+    const conocida = base.find((n) => idsConocidos?.has(idDe(n.enlaceFeed ?? n.enlace)));
+    const principal = conocida ?? [...base].sort((a, b) => a.fecha - b.fecha)[0];
+    const tambien = ns.filter((n) => n !== principal);
+    for (const nota of tambien) {
       // La portada de El Diario corta los títulos con puntos suspensivos:
       // si otro medio trae el título entero, nos quedamos con ese.
-      const cortado = /[.…]{3}$|…$/.test(g.principal.titulo);
-      if (cortado && !/[.…]{3}$|…$/.test(nota.titulo) && nota.titulo.length > 25) {
-        g.principal.titulo = nota.titulo;
-      }
-      if (g.principal.fechaEstimada && !nota.fechaEstimada) {
-        g.principal.fecha = nota.fecha;
-        g.principal.fechaEstimada = false;
-      }
-      if (!g.principal.imagen && nota.imagen) g.principal.imagen = nota.imagen;
-      if (!g.principal.textoCompleto && nota.textoCompleto) {
-        g.principal.cuerpo = nota.cuerpo;
-        g.principal.textoCompleto = true;
-      }
-    } else {
-      grupos.push({ principal: nota, medios: [nota.medio], tambien: [] });
+      const cortado = /[.…]{3}$|…$/.test(principal.titulo);
+      if (cortado && !/[.…]{3}$|…$/.test(nota.titulo) && nota.titulo.length > 25) principal.titulo = nota.titulo;
+      if (principal.fechaEstimada && !nota.fechaEstimada) { principal.fecha = nota.fecha; principal.fechaEstimada = false; }
+      if (!principal.imagen && nota.imagen) principal.imagen = nota.imagen;
+      if (!principal.textoCompleto && nota.textoCompleto) { principal.cuerpo = nota.cuerpo; principal.textoCompleto = true; }
     }
+    if (!principal.nombraBalcarce && ns.some((n) => n.nombraBalcarce)) principal.nombraBalcarce = true;
+    if (!principal.figura) principal.figura = ns.find((n) => n.figura)?.figura;
+    grupos.push({ principal, medios, tambien });
   }
-  // Lo de los feeds generales sólo suma cobertura a una historia que ya está:
-  // no arma una nueva (V2.2).
-  for (const nota of deSenal) {
-    const g = grupos.find((x) => parecido(x.principal.titulo, nota.titulo) >= 0.55);
-    if (!g) continue;
-    if (!g.medios.includes(nota.medio)) g.medios.push(nota.medio);
-    g.tambien.push(nota);
-  }
+  if (memoria) guardarMemoria(memoria, memoriaAntes, todas.filter((n) => n.alcance !== 'local'));
+  log(`
+  cruce: ${conjunto.length} notas (${deAntes.length} de la memoria) · ${grupos.length} historias · ${deUnSoloMedio} de afuera con un solo medio no entran`);
 
   // 3. Clasificar, semáforo y relevancia
   //

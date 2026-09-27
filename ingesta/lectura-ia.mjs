@@ -32,8 +32,8 @@ const AQUI = import.meta.dirname;
 const MODELO = 'gemini-flash-lite-latest';
 
 /** Las secciones que puede elegir: las de la web, sin inventar ninguna. */
-export const SECCIONES_DE_LA_FICHA = ['Balcarce', 'Política', 'Policiales', 'Deportes', 'Automovilismo',
-  'Economía', 'Agro', 'Tecnología', 'Cultura y agenda', 'País'];
+export const SECCIONES_DE_LA_FICHA = ['Balcarce', 'Política', 'Policiales', 'Fútbol', 'Deportes', 'Automovilismo',
+  'Economía', 'Agro', 'Tecnología', 'Cultura y agenda', 'Argentina'];
 export const AMBITOS = ['balcarce', 'region', 'provincia', 'nacional', 'internacional'];
 export const IMPACTOS = ['directo', 'indirecto', 'nulo'];
 export const RAZONES = ['local', 'servicio', 'actividad', 'provincia', 'nacional', 'popular', 'ninguna'];
@@ -73,13 +73,14 @@ Reglas:
   · Balcarce: lo que pasa en la ciudad y no tiene una sección más precisa (vecinos, instituciones, obras, escuelas, salud local), y también lo práctico para el vecino: cortes de luz o agua, trámites, horarios de atención, tarifas y subsidios de servicios públicos, vencimientos, alertas.
   · Política: el Concejo, el intendente, el gobierno provincial y nacional, leyes, elecciones.
   · Policiales: delitos, accidentes, incendios, bomberos, policía.
-  · Deportes: todo el deporte salvo el automovilismo.
+  · Fútbol: el fútbol, de la liga de Balcarce a la Selección y los clubes argentinos.
+  · Deportes: todos los demás deportes (básquet, hockey, rugby, tenis, boxeo, UFC, ajedrez, atletismo…), salvo el automovilismo.
   · Automovilismo: autos de carrera (TC, Turismo Nacional, Fórmula 1, MotoGP, karting, rally), el autódromo Juan Manuel Fangio y Fangio. Nunca Deportes.
   · Economía: precios, inflación, dólar, empleo, empresas, combustibles.
   · Agro: campo, papa, ganadería, INTA, clima para el productor.
   · Tecnología: tecnología, ciencia, inteligencia artificial.
   · Cultura y agenda: espectáculos, música, teatro, cine, libros, muestras, actividades.
-  · País: lo nacional que no entra en ninguna de las anteriores.
+  · Argentina: lo nacional que no entra en ninguna de las anteriores (sociedad, clima, salud, educación, grandes hechos).
 - "es_publicidad": true si promociona un comercio, producto o servicio sin ser noticia.
 - "es_anuncio": true si la nota cuenta que alguien anunció algo (que todavía no pasó).
 - "clave_tema": de 3 a 5 palabras en minúscula, separadas por guiones, que describan el hecho (por ejemplo "reapertura-autodromo-fangio"). La misma para el mismo hecho.
@@ -140,7 +141,7 @@ export const ESQUEMA = {
  *  lo que no cierra se descarta y se vuelve a pedir en otra corrida. */
 export function fichaValida(f) {
   if (!f || typeof f !== 'object' || !f.id) return null;
-  if (!AMBITOS.includes(f.ambito) || !(SECCIONES_DE_LA_FICHA.includes(f.seccion) || f.seccion === 'Servicios') || !IMPACTOS.includes(f.impacto_balcarce)
+  if (!AMBITOS.includes(f.ambito) || !(SECCIONES_DE_LA_FICHA.includes(f.seccion) || ['Servicios', 'País'].includes(f.seccion)) || !IMPACTOS.includes(f.impacto_balcarce)
     || !RAZONES.includes(f.razon) || !IMPORTANCIAS.includes(f.importancia)) return null;
   return {
     ambito: f.ambito,
@@ -279,7 +280,7 @@ export function compararConElSistema(notas, fichas = {}) {
 export function aplicarFichas(notas, fichas = {}, { verdeSecciones = [] } = {}) {
   const cambios = { sacadas: [], dejanDeSerLocales: [], otraSeccion: [], aEsperar: [] };
   // Las fichas viejas pueden decir "Servicios", que ya no existe (27/09).
-  const seccionDe = (f) => (f.seccion === 'Servicios' ? 'Balcarce' : f.seccion);
+  const seccionDe = (f) => ({ Servicios: 'Balcarce', País: 'Argentina' }[f.seccion] ?? f.seccion);
   const salida = [];
   for (const original of notas) {
     const f = fichas[original.id];
@@ -315,8 +316,8 @@ export function aplicarFichas(notas, fichas = {}, { verdeSecciones = [] } = {}) 
       cambios.dejanDeSerLocales.push(caso);
     }
     const deLaIA = seccionDe(f);
-    const seccion = deLaIA === 'Balcarce' && !esLocal ? (n.seccion === 'Servicios' ? 'País' : n.seccion)
-      : deLaIA === 'País' && esLocal ? 'Balcarce'
+    const seccion = deLaIA === 'Balcarce' && !esLocal ? (['Servicios', 'País'].includes(n.seccion) ? 'Argentina' : n.seccion)
+      : deLaIA === 'Argentina' && esLocal ? 'Balcarce'
         : deLaIA;
     if (seccion !== n.seccion) {
       cambios.otraSeccion.push({ ...caso, antes: n.seccion, ahora: seccion });

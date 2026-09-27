@@ -292,7 +292,8 @@ test('"partido" en el titular sí cuenta', () => {
     cuerpo: 'El equipo sigue invicto.',
     alcance: 'pais',
   });
-  assert.equal(clasificar(boca), 'Deportes');
+  // Desde el 27/09 el fútbol tiene sección propia.
+  assert.equal(clasificar(boca), 'Fútbol');
 });
 
 test('un descenso de temperatura no es un descenso de categoría', () => {
@@ -301,7 +302,7 @@ test('un descenso de temperatura no es un descenso de categoría', () => {
     cuerpo: 'El ingreso de aire frío provocará un marcado descenso de las temperaturas.',
     alcance: 'pais',
   });
-  assert.equal(clasificar(frio), 'País');
+  assert.equal(clasificar(frio), 'Argentina');
 });
 
 // ------------------------------------------------ el piso para lo de afuera
@@ -537,6 +538,18 @@ test('el mismo título da siempre el mismo id', () => {
 test('no hay sección Servicios: los cortes y trámites de acá van a Balcarce; lo de afuera, no (27/09)', () => {
   // Hernán, 27/09: "saca la sección servicios, pásalo a Balcarce".
   assert.equal(clasificar(nota({ titulo: 'Corte de luz programado en el barrio Norte' })), 'Balcarce');
-  assert.equal(clasificar(nota({ titulo: 'Corte de agua en Lomas de Zamora', alcance: 'pais' })), 'País');
+  assert.equal(clasificar(nota({ titulo: 'Corte de agua en Lomas de Zamora', alcance: 'pais' })), 'Argentina');
   assert.equal(clasificar(nota({ titulo: 'Anuncian una licitación para el asfalto de Balcarce', alcance: 'region', nombraBalcarce: true })), 'Balcarce');
+});
+
+test('el fútbol tiene sección propia; los otros deportes quedan en Deportes; País se llama Argentina (27/09)', () => {
+  // Hernán, 27/09: Fútbol aparte y Argentina como sección de verdad.
+  assert.equal(clasificar(nota({ titulo: 'Racing vs Boca, por la Copa Argentina: a qué hora juegan', alcance: 'pais' })), 'Fútbol');
+  assert.equal(clasificar(nota({ titulo: 'Ferroviarios ganó el clásico de la Liga Balcarceña' })), 'Fútbol');
+  // Un feed de deportes trae de todo: lo que es fútbol va a Fútbol, lo demás queda.
+  assert.equal(clasificar(nota({ titulo: 'Rosario Central campeón de la Supercopa', seccionFuente: 'Deportes', alcance: 'pais' })), 'Fútbol');
+  assert.equal(clasificar(nota({ titulo: 'Ailín Pérez venció a Dumont en la UFC', seccionFuente: 'Deportes', alcance: 'pais' })), 'Deportes');
+  assert.equal(clasificar(nota({ titulo: 'Campo de Pato afronta una doble fecha de hockey' })), 'Deportes');
+  // "boca" suelta no es Boca.
+  assert.notEqual(clasificar(nota({ titulo: 'Limpian una boca de tormenta en el centro' })), 'Fútbol');
 });

@@ -386,13 +386,14 @@ export const SECCIONES = [
   { nombre: 'Balcarce', ranura: 'balcarce', color: 'var(--s-balcarce)' },
   { nombre: 'Política', ranura: 'politica', color: 'var(--s-politica)' },
   { nombre: 'Policiales', ranura: 'policiales', color: 'var(--s-policiales)' },
+  { nombre: 'Fútbol', ranura: 'futbol', color: 'var(--s-futbol)' },
   { nombre: 'Deportes', ranura: 'deportes', color: 'var(--s-deportes)' },
   { nombre: 'Automovilismo', ranura: 'automovilismo', color: 'var(--s-automovilismo)' },
   { nombre: 'Agro', ranura: 'agro', color: 'var(--s-agro)' },
   { nombre: 'Economía', ranura: 'economia', color: 'var(--s-economia)' },
   { nombre: 'Cultura y agenda', ranura: 'cultura', color: 'var(--s-cultura)' },
   { nombre: 'Tecnología', ranura: 'tecnologia', color: 'var(--s-tecnologia)' },
-  { nombre: 'País', ranura: 'pais', color: 'var(--s-pais)' },
+  { nombre: 'Argentina', ranura: 'argentina', color: 'var(--s-pais)' },
 ];
 
 // Las que van en la barra de navegación: el resto existe igual como página,
