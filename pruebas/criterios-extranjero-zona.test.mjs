@@ -76,3 +76,10 @@ test('lo que no se publica nunca se mira también en el texto final (el panel pu
   const g = fs.readFileSync(new URL('../web/scripts/generar-datos.mjs', import.meta.url), 'utf8');
   assert.match(g, /if \(!humana && nuncaSePublica\(corregida\)\) return null;/);
 });
+
+test('lo que se lee de la página de un medio sin feed toma la fecha real de adentro y no entra si tiene más de 72 horas (27/09, El Diario)', () => {
+  const g = fs.readFileSync(new URL('../ingesta/ingesta.mjs', import.meta.url), 'utf8');
+  assert.match(g, /const pendientes = notas\.filter\(\(n\) => !n\.cuerpo \|\| n\.fechaEstimada\);/, 'se abre también la que ya trae bajada pero no fecha');
+  assert.doesNotMatch(g, /d > new Date\(Date\.now\(\) - 30 \* 864e5\)/, 'una fecha vieja ya no se ignora');
+  assert.match(g, /notas = notas\.filter\(\(n\) => n\.fechaEstimada \|\| Date\.now\(\) - n\.fecha\.getTime\(\) <= HORAS_DE_UNA_NOTA_NUEVA \* 3600e3\);/);
+});

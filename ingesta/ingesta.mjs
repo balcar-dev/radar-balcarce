@@ -290,12 +290,14 @@ function meta(html, nombre) {
 // De a 4 en paralelo y sólo para lo que no tiene cuerpo: son unos 15
 // pedidos por ciclo, nada para el servidor de ellos.
 async function ampliar(notas, { concurrencia = 4 } = {}) {
-  const pendientes = notas.filter((n) => !n.cuerpo);
+  // También las que ya traen bajada pero no fecha: la fecha está adentro, y
+  // sin ella una nota de 2025 de la portada del medio salía como de hoy (27/09).
+  const pendientes = notas.filter((n) => !n.cuerpo || n.fechaEstimada);
   for (let i = 0; i < pendientes.length; i += concurrencia) {
     await Promise.allSettled(pendientes.slice(i, i + concurrencia).map(async (n) => {
       const html = await traer(n.enlace, { timeout: 12000 });
       const bajada = meta(html, 'og:description') || meta(html, 'twitter:description');
-      if (bajada.length > 40) { n.cuerpo = bajada; n.textoCompleto = true; }
+      if (!n.cuerpo && bajada.length > 40) { n.cuerpo = bajada; n.textoCompleto = true; }
 
       // La portada corta los títulos con puntos suspensivos; adentro está entero.
       const entero = meta(html, 'og:title');
@@ -304,9 +306,11 @@ async function ampliar(notas, { concurrencia = 4 } = {}) {
       const cruda = meta(html, 'article:published_time') || meta(html, 'og:updated_time');
       // Viene como "2026-09-17 18:45:02" (sin la T del formato ISO).
       const d = cruda ? new Date(cruda.includes('T') ? cruda : cruda.replace(' ', 'T')) : null;
-      const dentroDeRango = d && !Number.isNaN(+d)
-        && d < new Date(Date.now() + 864e5) && d > new Date(Date.now() - 30 * 864e5);
-      if (dentroDeRango) { n.fecha = d; n.fechaEstimada = false; }
+      // Cualquier fecha real sirve, por vieja que sea: es la que dice si la
+      // nota es de hoy. Antes se ignoraba si tenía más de 30 días, y la nota
+      // quedaba con la hora de ahora.
+      const valida = d && !Number.isNaN(+d) && d < new Date(Date.now() + 864e5);
+      if (valida) { n.fecha = d; n.fechaEstimada = false; }
 
       // La foto no se publica nunca (es del medio que la sacó); se guarda
       // sólo porque tener foto es señal de que la nota está trabajada.
@@ -1201,6 +1205,10 @@ export function exigirMedios(portada) {
   return portada;
 }
 
+/** Cuántas horas puede tener una nota para entrar como nueva: las mismas
+ *  que muestra la portada (HORAS_EN_PORTADA, web/lib/archivo.js). */
+export const HORAS_DE_UNA_NOTA_NUEVA = 72;
+
 /** La memoria del cruce, entre corridas. En GitHub la guarda la caché de
  *  Actions (actualizar.yml); en la PC, este mismo archivo. No va al repo. */
 export const MEMORIA_DEL_CRUCE = path.join(path.dirname(fileURLToPath(import.meta.url)), '..', '.cache', 'cruce-memoria.json');
@@ -1232,7 +1240,13 @@ export async function ingestar({
     const cuerpo = await traer(f.url);
     let notas = f.tipo === 'scrape' ? parsearScrape(cuerpo, f) : parsearFeed(cuerpo, f);
     // Raspar la portada da títulos sin bajada ni fecha: hay que entrar a cada nota.
-    if (f.tipo === 'scrape') await ampliar(notas);
+    if (f.tipo === 'scrape') {
+      await ampliar(notas);
+      // Lo que la portada del medio muestra pero salió hace más de 72 horas
+      // (las mismas de la portada de Radar) no es nuevo: no se trae (27/09,
+      // El Diario Balcarce tenía en su portada notas de 2025).
+      notas = notas.filter((n) => n.fechaEstimada || Date.now() - n.fecha.getTime() <= HORAS_DE_UNA_NOTA_NUEVA * 3600e3);
+    }
     // De las fuentes de afuera, lo que por la sección del propio medio no es
     // para Radar (otro país, policiales, consejos) no se trae (V2.2). Lo demás
     // entra ENTERO al cruce, marcado (si dice Balcarce en el título, si nombra
