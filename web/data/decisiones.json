@@ -1,5 +1,5 @@
 {
-  "exportado": "2026-09-27T12:00:25.514Z",
+  "exportado": "2026-09-27T12:10:34.319Z",
   "decisiones": {
     "1951120": {
       "estado": "automatica",
@@ -33064,6 +33064,241 @@
           "titulo": "Oficial y confirmado: Gavin Newsom avanza con una ley que busca “Apagar la IA” en California",
           "fecha": "2026-09-21T16:22:00.000Z",
           "ruta": "/nota/oficial-y-confirmado-gavin-newsom-avanza-con-una-ley-que-busca-apagar-1v3okzj"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "9hkq7t": {
+      "estado": "automatica",
+      "titulo": "Juan Pablo Montoya respalda a Franco Colapinto en la F1",
+      "copete": "El expiloto colombiano respaldó al argentino tras el accidente en el Gran Premio de Azerbaiyán. Los comisarios impusieron una sanción de cinco lugares para la próxima fecha.",
+      "cuerpo": "El expiloto colombiano Juan Pablo Montoya defendió al piloto Franco Colapinto tras el accidente múltiple que protagonizó en el Gran Premio de Azerbaiyán.\n\nTras el hecho, Colapinto asumió la responsabilidad por la maniobra. Por su parte, Montoya valoró la mentalidad competitiva del joven de veintitrés años y señaló que el error formó parte de una actitud de búsqueda de oportunidades en carrera.\n\nComo consecuencia del impacto, los comisarios deportivos confirmaron una sanción que obligará al argentino a retroceder cinco posiciones en la grilla de salida de la próxima competencia, programada para el siguiente fin de semana en Sepang.",
+      "guion": "Juan Pablo Montoya respalda a Franco Colapinto en la F1",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T12:10:34.244Z",
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El expiloto Juan Pablo Montoya respaldó a Franco Colapinto tras el accidente en el Gran Premio de Azerbaiyán. Los comisarios deportivos confirmaron una sanción de cinco posiciones para la próxima competencia.",
+      "etiquetas": [
+        "Franco Colapinto",
+        "Juan Pablo Montoya",
+        "Formula 1",
+        "Gran Premio de Azerbaiyán"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/deportes/automovilismo/montoya-respaldo-a-colapinto-tras-el-accidente-en-baku-admiro-a-la-gente-que-lo-intenta-nid27092026/",
+          "fecha": "2026-09-27T12:02:03.000Z",
+          "oficial": false,
+          "aporte": "Detalló las declaraciones de Juan Pablo Montoya y la sanción oficial aplicada por los comisarios deportivos de la Fórmula 1."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "zd48ar",
+          "titulo": "El respaldo de Juan Pablo Montoya a Franco Colapinto en la Fórmula 1",
+          "fecha": "2026-09-27T10:48:17.000Z",
+          "ruta": "/nota/juan-pablo-montoya-respalda-a-franco-colapinto-tras-el-choque-en-zd48ar"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "xkyfd7": {
+      "estado": "automatica",
+      "titulo": "Actualizan la cotización de las principales criptomonedas",
+      "copete": "Las principales monedas digitales registran variaciones en sus valores de mercado durante este domingo, en un contexto de relativa estabilidad tras periodos previos de alta volatilidad.",
+      "cuerpo": "Las criptomonedas más destacadas del mercado registran diversas cotizaciones y variaciones durante las últimas horas, según se informó este domingo. El Bitcoin opera a 84.487,37 dólares, con un cambio de 0,096 por ciento, mientras que Ethereum se ubica en 2.706,61 dólares tras mostrar un movimiento de 0,423 por ciento en las últimas 24 horas. Por su parte, TetherUs cotiza a 1 dólar, BNB alcanza los 775,37 dólares, Litecoin se sitúa en 71,87 dólares y Dogecoin llega a 0,1 dólares.\n\nEn el plano internacional, se observa que Hong Kong analiza ablandar restricciones para permitir su uso, al tiempo que plataformas como PayPal anunciaron el lanzamiento de su propia stablecoin respaldada por activos en dólares. En contraste, instituciones como el Banco de México prohibieron su uso en el sistema financiero nacional.\n\nEstas monedas virtuales funcionan mediante monederos digitales sin soporte físico y continúan bajo la atención de inversores pese a sus niveles extremos de inestabilidad.",
+      "guion": "Actualizan la cotización de las principales criptomonedas",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T12:10:34.244Z",
+      "claves": [
+        "El bitcoin cotiza a 84.487,37 dólares con un leve cambio reciente.",
+        "Ethereum se ubica en 2.706,61 dólares tras variaciones diarias.",
+        "Plataformas digitales impulsan nuevas opciones respaldadas en dólares."
+      ],
+      "seSabe": [
+        "El Bitcoin cotiza a 84.487,37 dólares con una variación de 0,096 por ciento.",
+        "Ethereum se ubica en 2.706,61 dólares según los registros del mercado.",
+        "PayPal anunció su propia stablecoin respaldada por bonos y depósitos."
+      ],
+      "textoRedes": "Conocé los valores actuales de las principales criptomonedas del mercado internacional y las variaciones que registran sus cotizaciones durante este domingo.",
+      "etiquetas": [
+        "criptomonedas",
+        "bitcoin",
+        "ethereum",
+        "finanzas",
+        "mercado internacional"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/tecno/2026/09/27/criptomonedas-cual-es-su-precio-en-el-mercado-este-domingo-27-de-septiembre/",
+          "fecha": "2026-09-27T11:46:07.000Z",
+          "oficial": false,
+          "aporte": "Detalló los precios actuales de bitcoin, ethereum, tetherus, bnb, litecoin y dogecoin, además de novedades internacionales."
+        },
+        {
+          "medio": "Clarín",
+          "enlace": "https://www.clarin.com/economia/euro-hoy-en-venezuela-precio-y-cotizacion-de-la-divisa-este-domingo-27-de-septiembre-de-2026_0_O4ZmzjSJ6q.html",
+          "fecha": "2026-09-27T10:45:14.000Z",
+          "oficial": false,
+          "aporte": "Aportó información general sobre cotizaciones de monedas extranjeras."
+        },
+        {
+          "medio": "Clarín",
+          "enlace": "https://www.clarin.com/economia/euro-hoy-en-uruguay-precio-y-cotizacion-de-la-divisa-este-domingo-27-de-septiembre-de-2026_0_Qz1FD440ST.html",
+          "fecha": "2026-09-27T10:45:13.000Z",
+          "oficial": false,
+          "aporte": "Aportó información general sobre cotizaciones de monedas extranjeras."
+        },
+        {
+          "medio": "Clarín",
+          "enlace": "https://www.clarin.com/economia/euro-hoy-en-paraguay-precio-y-cotizacion-de-la-divisa-este-domingo-27-de-septiembre-de-2026_0_5HfoXBEB2n.html",
+          "fecha": "2026-09-27T10:45:12.000Z",
+          "oficial": false,
+          "aporte": "Aportó información general sobre cotizaciones de monedas extranjeras."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "uqq6ff",
+          "titulo": "Dólar hoy y dólar blue, EN VIVO: a cuánto cotiza el oficial y cuál es el precio del paralelo este jueves 24 de septiembre, minuto a minuto",
+          "fecha": "2026-09-24T20:26:55.000Z",
+          "ruta": "/nota/dolar-hoy-y-dolar-blue-en-vivo-a-cuanto-cotiza-el-oficial-y-cual-es-uqq6ff"
+        },
+        {
+          "id": "jv4xu5",
+          "titulo": "Dólar hoy y dólar blue, EN VIVO: a cuánto cotiza el oficial y cuál es el precio del paralelo este martes 22 de septiembre, minuto a minuto",
+          "fecha": "2026-09-22T19:20:00.000Z",
+          "ruta": "/nota/dolar-hoy-y-dolar-blue-en-vivo-a-cuanto-cotiza-el-oficial-y-cual-es-jv4xu5"
+        },
+        {
+          "id": "toewxm",
+          "titulo": "Dólar blue hoy: a cuánto opera este domingo 20 de septiembre",
+          "fecha": "2026-09-21T02:31:00.000Z",
+          "ruta": "/nota/dolar-blue-hoy-a-cuanto-opera-este-domingo-20-de-septiembre-toewxm"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "1ji3unp": {
+      "estado": "automatica",
+      "titulo": "Netflix estrena una miniserie basada en Mariana Enríquez",
+      "copete": "La plataforma sumó a su catálogo una producción de terror inspirada en la obra de la escritora argentina, con dirección del chileno Pablo Larraín.",
+      "cuerpo": "Netflix estrenó una miniserie de terror que adapta la obra de la escritora argentina Mariana Enríquez. La producción fusiona tramas de diversos relatos de la autora, como Julie, Un lugar soleado para gente sombría y el texto homónimo, y sitúa su desarrollo en el barrio bonaerense de Piedrabuena.\n\nLa dirección de la propuesta audiovisual está a cargo del cineasta chileno Pablo Larraín. La historia indaga en el horror social y psicológico mediante una exploración de los traumas colectivos, la memoria histórica y la marginación a través de elementos sobrenaturales.\n\nEsta tira se integra al auge del cine de terror en Latinoamérica, una tendencia que utiliza manifestaciones de este género para abordar problemáticas sociales y cotidianas de la región.",
+      "guion": "Netflix estrena una miniserie basada en Mariana Enríquez",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T12:10:34.244Z",
+      "claves": [
+        "Adaptación de la obra de la escritora argentina Mariana Enríquez.",
+        "Dirección a cargo del cineasta chileno Pablo Larraín.",
+        "Ambientación en el barrio bonaerense de Piedrabuena.",
+        "Enfoque centrado en el terror social y psicológico."
+      ],
+      "seSabe": [
+        "Netflix estrenó una miniserie de terror basada en la obra de la escritora Mariana Enríquez.",
+        "La producción adapta relatos de la autora como Julie, Un lugar soleado para gente sombría y el cuento homónimo.",
+        "La trama se desarrolla en el barrio bonaerense de Piedrabuena.",
+        "La dirección pertenece al cineasta chileno Pablo Larraín."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Netflix estrenó una miniserie de terror basada en la obra de la escritora Mariana Enríquez y dirigida por Pablo Larraín. La producción adapta varios relatos de la autora y se ambienta en un barrio bonaerense.",
+      "etiquetas": [
+        "Netflix",
+        "Mariana Enríquez",
+        "Pablo Larraín",
+        "miniserie",
+        "terror"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Hipertextual",
+          "enlace": "https://hipertextual.com/cine-television/3-razones-para-ver-mis-muertos-tristes-la-miniserie-de-terror-de-netflix-basada-en-un-cuento-de-mariana-enriquez/",
+          "fecha": "2026-09-27T12:00:00.000Z",
+          "oficial": false,
+          "aporte": "Detalles sobre la trama, la dirección de Pablo Larraín y la adaptación de los cuentos de Mariana Enríquez."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "oofnbp": {
+      "estado": "automatica",
+      "titulo": "Agustín Aristarán recordó sus inicios laborales en la televisión",
+      "copete": "El artista Agustín Aristarán participó del programa conducido por Juana Viale y repasó su juventud en Bahía Blanca, donde trabajó promocionando un local de comidas.",
+      "cuerpo": "Durante su paso por el ciclo televisivo conducido por Juana Viale, el comediante Agustín Aristarán fue consultado sobre sus primeros empleos en su juventud en Bahía Blanca. La conductora mencionó un trabajo en el que se disfrazaba para promocionar productos gastronómicos, lo que generó la sorpresa del invitado en el estudio. Tras recordar aquella etapa vinculada a la publicidad callejera, el artista profundizó sobre sus inicios en el espectáculo, que comenzaron con la música antes de dedicarse a la magia. Según relató, su recorrido por eventos privados y su labor en la vía pública funcionaron como un aprendizaje fundamental para su formación escénica actual.",
+      "guion": "Agustín Aristarán recordó sus inicios laborales en la televisión",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T12:10:34.244Z",
+      "claves": [
+        "Agustín Aristarán participó del programa de Juana Viale.",
+        "Recordó su juventud y sus primeros trabajos en Bahía Blanca.",
+        "Mencionó que su paso por la animación callejera sirvió de escuela escénica."
+      ],
+      "seSabe": [
+        "Agustín Aristarán fue invitado al programa conducido por Juana Viale.",
+        "La conductora reveló un trabajo de su juventud relacionado con la promoción de un local de comidas.",
+        "El artista comenzó su carrera en el espectáculo con la música antes de dedicarse a la magia."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El comediante Agustín Aristarán participó del programa de Juana Viale y recordó los particulares trabajos de su juventud en Bahía Blanca antes de dedicarse de lleno a la música y la magia.",
+      "etiquetas": [
+        "Agustín Aristarán",
+        "Juana Viale",
+        "espectáculos"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Minuto Uno",
+          "enlace": "https://www.minutouno.com/espectaculos/rada-se-sincero-su-pasado-la-mesa-juana-viale-era-jamon-y-queso-n6327112",
+          "fecha": "2026-09-27T12:00:00.000Z",
+          "oficial": false,
+          "aporte": "Informó sobre la participación de Agustín Aristarán en el programa de Juana Viale y sus declaraciones sobre su juventud."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1luxgi9",
+          "titulo": "Juana Viale durísima con Martín Menem: \"Han pasado un montón de cosas como lo de Adorni que fue un papelón\"",
+          "fecha": "2026-09-20T17:07:00.000Z",
+          "ruta": "/nota/juana-viale-durisima-con-martin-menem-han-pasado-un-monton-de-cosas-1luxgi9"
+        },
+        {
+          "id": "115xu0n",
+          "titulo": "Juana Viale da detalles sobre la salud de Mirtha Legrand",
+          "fecha": "2026-09-27T01:49:58.000Z",
+          "ruta": "/nota/juana-viale-confirma-la-mejora-en-la-salud-de-mirtha-legrand-115xu0n"
+        },
+        {
+          "id": "x0wnmh",
+          "titulo": "Andy Kusnetzoff y Juana Viale compiten por el rating",
+          "fecha": "2026-09-20T03:39:37.000Z",
+          "ruta": "/nota/andy-kusnetzoff-y-juana-viale-compiten-por-el-rating-x0wnmh"
         }
       ],
       "verificacion": {
