@@ -129,18 +129,54 @@ const ahoraISO = new Date().toISOString();
 // destraba nada. Sin ficha (o si falla), queda lo de siempre. Va antes de la
 // reescritura para no gastar cuota en lo que no va a salir.
 let sacadasPorLaIA = new Set();
+let repetidasFuera = new Set();
 if (enLaNube) {
   try {
-    const { leerNotasNuevas, aplicarFichas, comoFichasJson } = await import('../../ingesta/lectura-ia.mjs');
+    const {
+      leerNotasNuevas, aplicarFichas, comoFichasJson, agruparRepetidas, quitarRepetidas, LECTURA,
+    } = await import('../../ingesta/lectura-ia.mjs');
+    const { claveClasificacion } = await import('../../reels/claves.mjs');
+    const { exigirDosMedios, MOTIVO_UN_SOLO_MEDIO } = await import('../../ingesta/ingesta.mjs');
     const fichasAntes = leerJson(FICHAS, {});
     const { archivo: fichas, cuenta } = await leerNotasNuevas(ultima.notas ?? [], { guardado: fichasAntes, registro: console.log });
     if (cuenta.sinClave) console.log('  lectura con IA: sin clave, se decide como siempre');
-    const { notas, cambios } = aplicarFichas(ultima.notas ?? [], fichas.fichas, { verdeSecciones: REGLAS_SEMAFORO.verdeSecciones });
-    ultima = { ...ultima, notas };
+    const { notas: conFichas, cambios } = aplicarFichas(ultima.notas ?? [], fichas.fichas, { verdeSecciones: REGLAS_SEMAFORO.verdeSecciones });
     sacadasPorLaIA = new Set(cambios.sacadas.map((c) => c.id));
+
+    // Las repetidas: la misma noticia contada con otro título (27/09, McCain).
+    // Se pide sólo si cambió lo que hay para publicar, con tope por día.
+    const candidatas = conFichas.filter((n) => n.semaforo !== 'rojo');
+    const claveDeLaLista = candidatas.map((n) => n.id).sort().join(',');
+    const hoy = fichas.dia;
+    const rep = fichas.repetidas?.dia === hoy ? fichas.repetidas : { dia: hoy, pedidosHoy: 0, grupos: fichas.repetidas?.grupos ?? [] };
+    const clave = claveClasificacion();
+    if (clave && rep.lista !== claveDeLaLista && rep.pedidosHoy < LECTURA.pedidosRepetidasPorDia && candidatas.length > 1) {
+      rep.pedidosHoy += 1;
+      try {
+        rep.grupos = await agruparRepetidas(candidatas, { clave });
+        rep.lista = claveDeLaLista;
+      } catch (e) {
+        console.log(`  repetidas: falló el pedido (${e.message}); quedan los grupos de antes`);
+      }
+    }
+    fichas.repetidas = rep;
+    const { notas, repetidas } = quitarRepetidas(conFichas, rep.grupos);
+    repetidasFuera = new Set(repetidas.map((r) => r.id));
+    // Con los medios de las repetidas sumados, una nota de afuera puede llegar
+    // a dos: la regla se vuelve a mirar. Y lo que la IA dijo que no es de acá
+    // también pide dos medios.
+    for (const n of notas) {
+      if (n.semaforo === 'amarillo' && n.motivo === MOTIVO_UN_SOLO_MEDIO && new Set(n.medios ?? []).size >= 2) {
+        n.semaforo = 'verde';
+        n.motivo = 'de afuera, contada por dos medios o más';
+      }
+    }
+    exigirDosMedios(notas);
+    ultima = { ...ultima, notas };
     console.log(`  lectura con IA: ${cuenta.nuevas} fichas nuevas en ${cuenta.pedidos} pedidos (${fichas.pedidosHoy ?? 0} hoy)`
       + ` · sacó ${cambios.sacadas.length}, ${cambios.dejanDeSerLocales.length} dejaron de ser de Balcarce,`
-      + ` ${cambios.otraSeccion.length} cambiaron de sección, ${cambios.aEsperar.length} a esperar`);
+      + ` ${cambios.otraSeccion.length} cambiaron de sección, ${cambios.aEsperar.length} a esperar, ${repetidas.length} repetidas`);
+    for (const r of repetidas.slice(0, 10)) console.log(`    repetida: ${r.titulo}`);
     for (const c of cambios.sacadas.slice(0, 15)) console.log(`    fuera (${c.motivo}): ${c.titulo}`);
     const texto = comoFichasJson(fichas);
     if (!fs.existsSync(FICHAS) || fs.readFileSync(FICHAS, 'utf8') !== texto) fs.writeFileSync(FICHAS, texto, 'utf8');
@@ -299,7 +335,9 @@ const deLaIngesta = (ultima.notas ?? [])
 //     la trae, la corrección llega igual a la página.
 const enIngesta = new Map((ultima.notas ?? []).map((n) => [n.id, n]));
 // Lo que la IA sacó en esta corrida tampoco conserva su página.
-const retiradas = new Set([...RETIRADAS_A_MANO, ...sacadasPorLaIA]);
+// Una repetida que ya fue a las redes conserva su página: su enlace circula.
+const enLasRedes = idsEnRedes(leerJson(LIBRO_REDES, {}));
+const retiradas = new Set([...RETIRADAS_A_MANO, ...sacadasPorLaIA, ...[...repetidasFuera].filter((id) => !enLasRedes.has(id))]);
 const corregidas = [];
 for (const a of archivoAnterior.notas ?? []) {
   const d = estado.decisiones[a.id];

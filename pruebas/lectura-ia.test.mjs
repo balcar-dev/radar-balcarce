@@ -170,7 +170,7 @@ test('sin ficha, la nota queda como la decidió el sistema de siempre', () => {
 test('generar-datos lee con IA antes de reescribir y retira de la web lo que la IA sacó', () => {
   const g = fs.readFileSync(new URL('../web/scripts/generar-datos.mjs', import.meta.url), 'utf8');
   assert.ok(g.indexOf('aplicarFichas(') > 0 && g.indexOf('aplicarFichas(') < g.indexOf('reescribirAutomaticas(paraReescribir'), 'la lectura va antes de la reescritura');
-  assert.match(g, /new Set\(\[\.\.\.RETIRADAS_A_MANO, \.\.\.sacadasPorLaIA\]\)/);
+  assert.match(g, /new Set\(\[\.\.\.RETIRADAS_A_MANO, \.\.\.sacadasPorLaIA,/);
 });
 
 test('lo que la IA sacó mal en la primera corrida del 27/09 ya no se saca', () => {
@@ -188,4 +188,38 @@ test('lo que la IA sacó mal en la primera corrida del 27/09 ya no se saca', () 
   // Y lo que sí tenía que salir, sale: el dólar blue en Mendoza.
   const mendoza = { id: 'd', titulo: 'Dólar blue: a cuánto cotiza hoy en Mendoza', seccion: 'Economía', semaforo: 'verde', alcance: 'pais', relevancia: 50, medios: ['Minuto Uno'] };
   assert.equal(aplicar(mendoza, ficha({ ambito: 'provincia', seccion: 'Economía', impacto_balcarce: 'nulo', razon: 'ninguna', importancia: 'baja' })).notas.length, 0);
+});
+
+// ------------------------------------------------------- repetidas y respaldo
+
+import { quitarRepetidas, agruparRepetidas } from '../ingesta/lectura-ia.mjs';
+import { exigirDosMedios, MOTIVO_UN_SOLO_MEDIO } from '../ingesta/ingesta.mjs';
+
+test('de tres notas del mismo hecho queda una, con los medios de las tres (McCain, 27/09)', () => {
+  const a = { id: 'a', titulo: 'McCain advierte por estafas con falsas ofertas de empleo', medios: ['La Vanguardia', 'Infórmese Primero'], relevancia: 80, semaforo: 'verde' };
+  const b = { id: 'b', titulo: 'McCain advierte sobre una falsa convocatoria laboral', medios: ['El Diario Balcarce'], relevancia: 85, semaforo: 'verde' };
+  const c = { id: 'c', titulo: 'Advierten por una falsa búsqueda laboral de McCain', medios: ['Radio Gabal'], relevancia: 70, semaforo: 'verde' };
+  const otra = { id: 'o', titulo: 'Reabre el autódromo', medios: ['La Vanguardia'], relevancia: 90, semaforo: 'verde' };
+  const r = quitarRepetidas([a, b, c, otra], [['a', 'b', 'c']]);
+  assert.deepEqual(r.notas.map((n) => n.id), ['a', 'o'], 'queda la que cuentan más medios');
+  assert.deepEqual(r.notas[0].medios.sort(), ['El Diario Balcarce', 'Infórmese Primero', 'La Vanguardia', 'Radio Gabal']);
+  assert.deepEqual(r.repetidas.map((x) => x.id).sort(), ['b', 'c']);
+});
+
+test('el pedido de repetidas devuelve sólo grupos de dos o más con ids que existen', async () => {
+  const fn = async () => ({ ok: true, json: async () => ({ candidates: [{ content: { parts: [{ text: JSON.stringify([{ ids: ['a', 'b', 'zzz'] }, { ids: ['c'] }]) }] } }] }) });
+  const grupos = await agruparRepetidas([{ id: 'a', titulo: 'x' }, { id: 'b', titulo: 'y' }, { id: 'c', titulo: 'z' }], { clave: 'k', fetchFn: fn });
+  assert.deepEqual(grupos, [['a', 'b']]);
+});
+
+test('lo de afuera necesita dos medios para salir solo; lo de acá y lo oficial, no (Hernán, 27/09)', () => {
+  const notas = [
+    { id: 'uno', semaforo: 'verde', local: false, medios: ['Ámbito'] },
+    { id: 'dos', semaforo: 'verde', local: false, medios: ['Olé', 'Clarín'] },
+    { id: 'aca', semaforo: 'verde', local: true, medios: ['Radio Gabal'] },
+    { id: 'oficial', semaforo: 'verde', local: false, oficial: true, medios: ['Gobierno de la Provincia'] },
+  ];
+  exigirDosMedios(notas);
+  assert.deepEqual(notas.map((n) => n.semaforo), ['amarillo', 'verde', 'verde', 'verde']);
+  assert.equal(notas[0].motivo, MOTIVO_UN_SOLO_MEDIO);
 });

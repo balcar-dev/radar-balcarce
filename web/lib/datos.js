@@ -9,7 +9,7 @@ import { rutaDeNota, idDeRuta } from './ruta.js';
 import { vigenteEnPortada } from './archivo.js';
 import { sinNotasRepetidas, titularesParecidos } from './texto.js';
 import { sinTildes } from './texto.js';
-import { tieneCuerpo } from './cuerpo.js';
+import { tieneCuerpo, tieneRespaldo } from './cuerpo.js';
 import { interpretarDolarApi } from './dolar.js';
 import {
   rutaDeEvento, claveDeEvento, claveDeRuta, proximos, confirmacionDeAnual,
@@ -289,7 +289,7 @@ export function armarTapa(notasSueltas = [], orden = SECCIONES.map((s) => s.nomb
   const idsPortada = new Set(notas.map((n) => n.id));
   const viejas = archivo
     .filter((n) => n?.id && !idsPortada.has(n.id) && !n.sinFecha && !n.propia
-      && tieneCuerpo(n) && new Date(n.fecha).getTime() >= corte)
+      && tieneCuerpo(n) && tieneRespaldo(n) && new Date(n.fecha).getTime() >= corte)
     .sort((a, b) => new Date(b.fecha) - new Date(a.fecha));
 
   const secciones = [...new Set([...orden, ...Object.keys(porSeccion)])];

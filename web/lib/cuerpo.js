@@ -34,6 +34,16 @@ const plano = (s) => sinTildes(s)
  * la bajada (el verificador ya controla, al escribirlo, que el primer párrafo
  * no la diga de nuevo; esto es la red de seguridad al publicar).
  */
+/**
+ * ¿Tiene respaldo para mostrarse? Lo de Balcarce, lo propio y lo oficial, sí;
+ * lo de afuera, sólo si lo contaron dos medios o más (Hernán, 27/09). Las notas
+ * viejas del archivo que no cumplen conservan su página (su enlace puede
+ * circular), pero no se usan para completar la tapa ni en "Seguí leyendo".
+ */
+export function tieneRespaldo(nota) {
+  return !!(nota?.local || nota?.propia || nota?.oficial || new Set(nota?.medios ?? []).size >= 2);
+}
+
 export function tieneCuerpo(nota) {
   const cuerpo = String(nota?.cuerpo ?? '').trim();
   if (palabrasDe(cuerpo) < PALABRAS_MINIMAS_CUERPO) return false;

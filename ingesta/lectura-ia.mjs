@@ -17,7 +17,13 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { claveClasificacion } from '../reels/claves.mjs';
-import { fichaDeFuente, FUENTES, FUENTES_NACIONALES, CONEXION_ARGENTINA } from './fuentes.mjs';
+import { fichaDeFuente, FUENTES, FUENTES_NACIONALES, CONEXION_ARGENTINA, PALABRAS_LOCALES } from './fuentes.mjs';
+
+/** ¿El título nombra a Balcarce o a una localidad del partido? */
+function nombraBalcarceEnElTitulo(n) {
+  const titulo = sinTildesSimple(n.titulo ?? '');
+  return PALABRAS_LOCALES.some((p) => titulo.includes(sinTildesSimple(p)));
+}
 
 const sinTildesSimple = (s) => String(s).normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
 import { diaAR } from './zona.mjs';
@@ -41,6 +47,8 @@ export const LECTURA = {
   // proyecto; la redacción usa hasta 300).
   pedidosPorCorrida: 4,
   pedidosPorDia: 60,
+  // El pedido que junta repetidas: uno por corrida como mucho, si cambió la lista.
+  pedidosRepetidasPorDia: 30,
   // Cuánto se guarda una ficha.
   diasDeFichas: 3,
   resumenMaximo: 500,
@@ -58,7 +66,18 @@ Reglas:
 - Si no es de Balcarce, decí en una frase concreta por qué le interesaría a un vecino de Balcarce. Si no hay una razón concreta, el impacto es "nulo" y la razón "ninguna". No inventes vínculos con Balcarce.
 - "impacto_balcarce": "directo" si pasa en Balcarce o cambia algo concreto acá; "indirecto" si toca la zona o una actividad de la ciudad (campo, papa, automovilismo); "nulo" si no.
 - "razon": local (pasó acá), servicio (cambia algo práctico para los vecinos: tarifas, trámites, salud, clima, rutas), actividad (automovilismo, campo, papa), provincia (medida provincial con efecto acá), nacional (noticia nacional importante), popular (tema del que habla todo el país) o ninguna.
-- "seccion": Automovilismo para todo lo de autos de carrera (TC, Turismo Nacional, Fórmula 1, MotoGP, karting, rally), nunca Deportes.
+- "seccion", qué va en cada una:
+  · Balcarce: lo que pasa en la ciudad y no tiene una sección más precisa (vecinos, instituciones, obras, escuelas, salud local).
+  · Política: el Concejo, el intendente, el gobierno provincial y nacional, leyes, elecciones.
+  · Policiales: delitos, accidentes, incendios, bomberos, policía.
+  · Deportes: todo el deporte salvo el automovilismo.
+  · Automovilismo: autos de carrera (TC, Turismo Nacional, Fórmula 1, MotoGP, karting, rally), el autódromo Juan Manuel Fangio y Fangio. Nunca Deportes ni Servicios.
+  · Economía: precios, inflación, dólar, empleo, empresas, combustibles.
+  · Agro: campo, papa, ganadería, INTA, clima para el productor.
+  · Tecnología: tecnología, ciencia, inteligencia artificial.
+  · Cultura y agenda: espectáculos, música, teatro, cine, libros, muestras, actividades.
+  · Servicios: sólo lo práctico para el vecino: cortes de luz o agua, trámites, horarios de atención, tarifas y subsidios de servicios públicos, vencimientos, alertas.
+  · País: lo nacional que no entra en ninguna de las anteriores.
 - "es_publicidad": true si promociona un comercio, producto o servicio sin ser noticia.
 - "es_anuncio": true si la nota cuenta que alguien anunció algo (que todavía no pasó).
 - "clave_tema": de 3 a 5 palabras en minúscula, separadas por guiones, que describan el hecho (por ejemplo "reapertura-autodromo-fangio"). La misma para el mismo hecho.
@@ -279,7 +298,10 @@ export function aplicarFichas(notas, fichas = {}, { verdeSecciones = [] } = {}) 
     let motivo = null;
     if (f.publicidad) motivo = 'es publicidad';
     else if (f.ambito === 'internacional' && !deFierros && !conexionArgentina) motivo = 'es del extranjero';
-    else if (!deFuenteLocal && f.impacto === 'nulo' && !deFierros && !conexionArgentina && !nacionalQueImporta) motivo = 'no tiene relación con Balcarce';
+    // De un medio de acá sólo se saca si ni siquiera nombra a Balcarce en el
+    // título ("precios sugeridos para alquilar en Mar del Plata", 27/09).
+    else if (f.impacto === 'nulo' && !deFierros && !conexionArgentina && !nacionalQueImporta
+      && (!deFuenteLocal || !nombraBalcarceEnElTitulo(n))) motivo = 'no tiene relación con Balcarce';
     else if (f.seccion === 'Policiales' && !esLocal) motivo = 'policial que no es de Balcarce';
     if (motivo) { cambios.sacadas.push({ ...caso, motivo }); continue; }
 
@@ -305,10 +327,81 @@ export function aplicarFichas(notas, fichas = {}, { verdeSecciones = [] } = {}) 
   return { notas: salida, cambios };
 }
 
+// ------------------------------------------------------------ las repetidas
+//
+// La misma noticia contada por tres medios con títulos distintos salía tres
+// veces (27/09: "McCain advierte por estafas con falsas ofertas de empleo",
+// "McCain advierte sobre una falsa convocatoria laboral" y "Advierten por una
+// falsa búsqueda laboral de la empresa McCain"). Comparar títulos no alcanza, y
+// la clave de tema de la ficha tampoco (la IA le pone otro nombre en cada
+// pedido, y junta como un solo tema doce notas distintas del autódromo). Así
+// que la IA mira juntas las notas del momento y agrupa sólo las que cuentan
+// EXACTAMENTE el mismo hecho.
+
+const INSTRUCCION_REPETIDAS = `Estas son las notas que un medio de Balcarce tiene para publicar ahora.
+Agrupá SOLAMENTE las que cuentan exactamente el mismo hecho: la misma noticia contada por distintos medios o con otro título.
+NO agrupes notas distintas sobre el mismo tema (por ejemplo, dos prácticas distintas del TC, o una nota de la reapertura del autódromo y otra de su estacionamiento): esas son notas distintas.
+Devolvé sólo los grupos de dos o más notas, con sus "id". Si no hay repetidas, devolvé una lista vacía.`;
+
+export const ESQUEMA_REPETIDAS = {
+  type: 'ARRAY',
+  items: { type: 'OBJECT', properties: { ids: { type: 'ARRAY', items: { type: 'STRING' } } }, required: ['ids'] },
+};
+
+/** Un pedido: los grupos de ids que cuentan el mismo hecho. Lanza si falla. */
+export async function agruparRepetidas(notas, { clave, fetchFn = fetch } = {}) {
+  const lista = notas.map((n) => ({ id: n.id, titulo: n.titulo, medio: n.medio ?? n.medios?.[0] ?? '' }));
+  const res = await fetchFn(`https://generativelanguage.googleapis.com/v1beta/models/${MODELO}:generateContent`, {
+    method: 'POST',
+    headers: { 'content-type': 'application/json', 'x-goog-api-key': clave },
+    body: JSON.stringify({
+      contents: [{ parts: [{ text: `${INSTRUCCION_REPETIDAS}
+
+${JSON.stringify(lista, null, 1)}` }] }],
+      generationConfig: { responseMimeType: 'application/json', responseSchema: ESQUEMA_REPETIDAS, temperature: 0 },
+    }),
+    signal: AbortSignal.timeout(60_000),
+  });
+  if (!res.ok) { const e = new Error(`HTTP ${res.status}`); e.status = res.status; throw e; }
+  const j = await res.json();
+  let grupos;
+  try { grupos = JSON.parse(j.candidates?.[0]?.content?.parts?.map((p) => p.text).join('') ?? ''); } catch { throw new Error('la respuesta no es JSON'); }
+  const validos = new Set(lista.map((n) => n.id));
+  return (Array.isArray(grupos) ? grupos : [])
+    .map((g) => [...new Set((g?.ids ?? []).filter((id) => validos.has(id)))])
+    .filter((ids) => ids.length >= 2);
+}
+
+/**
+ * De cada grupo de repetidas queda una sola: la que cuentan más medios y, si
+ * empatan, la de más puntaje. Se le suman los medios de las otras (así cuenta
+ * como contada por varios). Devuelve { notas, repetidas } sin tocar las
+ * originales.
+ */
+export function quitarRepetidas(notas, grupos = []) {
+  const porId = new Map(notas.map((n) => [n.id, n]));
+  const fuera = new Map();
+  const reemplazo = new Map();
+  for (const ids of grupos) {
+    const del = ids.map((id) => porId.get(id)).filter(Boolean).filter((n) => n.semaforo !== 'rojo');
+    if (del.length < 2) continue;
+    del.sort((a, b) => (new Set(b.medios ?? []).size - new Set(a.medios ?? []).size) || ((b.relevancia ?? 0) - (a.relevancia ?? 0)));
+    const [queda, ...resto] = del;
+    const medios = [...new Set(del.flatMap((n) => n.medios ?? []))];
+    reemplazo.set(queda.id, { ...queda, medios });
+    for (const n of resto) fuera.set(n.id, { id: n.id, titulo: n.titulo, queda: queda.id });
+  }
+  return {
+    notas: notas.filter((n) => !fuera.has(n.id)).map((n) => reemplazo.get(n.id) ?? n),
+    repetidas: [...fuera.values()],
+  };
+}
+
 /** El archivo de fichas como texto: una línea por ficha, para que el commit de
  *  cada corrida cambie sólo lo nuevo. */
 export function comoFichasJson(archivo) {
   const lineas = Object.entries(archivo.fichas ?? {}).sort(([a], [b]) => (a < b ? -1 : 1))
     .map(([id, f]) => `${JSON.stringify(id)}:${JSON.stringify(f)}`);
-  return `{"dia":${JSON.stringify(archivo.dia ?? null)},"pedidosHoy":${archivo.pedidosHoy ?? 0},"fichas":{\n${lineas.join(',\n')}\n}}\n`;
+  const repetidas = archivo.repetidas ? `"repetidas":${JSON.stringify(archivo.repetidas)},\n` : '';
+  return `{"dia":${JSON.stringify(archivo.dia ?? null)},"pedidosHoy":${archivo.pedidosHoy ?? 0},${repetidas}"fichas":{\n${lineas.join(',\n')}\n}}\n`;
 }

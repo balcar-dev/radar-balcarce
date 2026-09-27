@@ -16,7 +16,8 @@ const nota = (id, titulo, horas, extra = {}) => ({
   id, titulo, seccion: 'Balcarce', relevancia: 50, local: false, copete: `bajada de ${id}`,
   fecha: new Date(AHORA - horas * 3600e3).toISOString(), ...extra,
 });
-const conCuerpo = (n) => ({ ...n, cuerpo: CUERPO });
+// Con dos medios: lo de afuera con uno solo no completa nada (27/09).
+const conCuerpo = (n) => ({ medios: ['El Diario Balcarce', 'La Vanguardia'], ...n, cuerpo: CUERPO });
 
 // ----------------------------------------------------- "Seguí leyendo"
 
@@ -207,4 +208,13 @@ test('una sección con notas recientes de sobra no toca el archivo', () => {
   const archivo = [conCuerpo(nota('v', 'Archivada de deportes sobre natación', 24, { seccion: 'Deportes' }))];
   const { bloques } = armarTapa(portada, ['Deportes'], { archivo });
   assert.deepEqual(en(bloques, 'Deportes').map((n) => n.id), ['d2', 'd3', 'd4']);
+});
+
+import { tieneRespaldo } from '../web/lib/cuerpo.js';
+
+test('lo de afuera con un solo medio no completa la tapa ni "Seguí leyendo"; lo de acá, sí (27/09)', () => {
+  assert.equal(tieneRespaldo({ local: false, medios: ['Ámbito'] }), false, 'Tom Cruise en Ámbito, sola');
+  assert.equal(tieneRespaldo({ local: false, medios: ['Olé', 'Clarín'] }), true);
+  assert.equal(tieneRespaldo({ local: true, medios: ['Radio Gabal (FM 104.1)'] }), true);
+  assert.equal(tieneRespaldo({ propia: true }), true);
 });

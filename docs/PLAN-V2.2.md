@@ -392,6 +392,12 @@ Medición del 27/09, con los mismos feeds antes y después del filtro: 175 y 174
 - [ ] Lectura en dos niveles, fichas e historias, en silencio.
 - [ ] Resumen semanal automático.
 
+### Hecho el 27/09 por la tarde (en vivo)
+- [x] Lo de afuera sale solo sólo con dos medios o más (`exigirDosMedios`).
+- [x] Repetidas: la IA junta las que cuentan el mismo hecho y queda una (`agruparRepetidas`).
+- [x] La IA saca también lo de un medio local que no es de Balcarce ni la nombra ("alquileres en Mar del Plata").
+- [x] Qué va en cada sección, explicado en la instrucción de la IA (Servicios es sólo lo práctico: cortes, trámites, tarifas).
+
 ### Semana 4 o 5 — Activar
 - [ ] Si pasa el examen: reglas por ámbito, dos llaves, respaldo.
 - [ ] Reemplazar "las 3 a 5 más nuevas" por los filtros nuevos, si la web no queda flaca.

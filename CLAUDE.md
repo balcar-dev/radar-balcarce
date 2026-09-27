@@ -220,6 +220,7 @@ cada uno, cuándo corre y si cuesta plata), en `INFRAESTRUCTURA.md`.
 | que una sección de un medio de afuera no se traiga (otro país, policiales, consejos) | `SECCIONES_QUE_NO_ENTRAN` y `CONEXION_ARGENTINA`, mismo archivo (`motivoDeDescarte` en `ingesta/ingesta.mjs`) |
 | que un feed sólo cuente cobertura y no publique | `uso: 'senal'` en la fuente; la ficha de cada fuente (tipo, ciudad, uso) es `fichaDeFuente` |
 | sacar de la web una nota ya publicada, sin el panel | `web/data/retiradas.json` (motivo, cuándo, quién) |
+| que lo de afuera pida dos medios, o juntar notas repetidas | `exigirDosMedios` (`ingesta/ingesta.mjs`), `agruparRepetidas` y `quitarRepetidas` (`ingesta/lectura-ia.mjs`); lo que se muestra del archivo, `tieneRespaldo` (`web/lib/cuerpo.js`) |
 | qué va a las redes (hoy, sólo lo de Balcarce) | `esParaLasRedes` en `redes/elegir.mjs` |
 | el plan de trabajo en curso (filtro de entrada, lectura con IA, notas populares) | `docs/PLAN-V2.2.md` |
 | la lectura con IA (decide desde el 27/09: qué entra, sección, qué es de Balcarce; nunca destraba el semáforo) | `ingesta/lectura-ia.mjs`, con el perfil de `ingesta/perfil-balcarce.md` (sólo datos seguros); las fichas, en `web/data/fichas.json` |

@@ -17,7 +17,7 @@
 // De una entrada y una salida, sin leer archivos: se prueba sin red.
 
 import { mismaHistoria } from './texto.js';
-import { tieneCuerpo } from './cuerpo.js';
+import { tieneCuerpo, tieneRespaldo } from './cuerpo.js';
 
 export const CUANTAS_SIGUEN = 4;
 export const DE_LA_MISMA_SECCION = 2;
@@ -59,7 +59,7 @@ export function seguirLeyendo(nota, recientes = [], archivo = [], cuantas = CUAN
   });
   const propia = (n) => Boolean(n.propia);
   const dePortada = unicas(recientes).sort(masNueva);
-  const delArchivo = unicas(archivo.filter((n) => tieneCuerpo(n))).sort(masNueva);
+  const delArchivo = unicas(archivo.filter((n) => tieneCuerpo(n) && tieneRespaldo(n))).sort(masNueva);
 
   // De mejor a peor candidata: con hora y no propia, de la portada primero; después
   // las del archivo; al final lo que no cumple (sin hora, o de servicio).

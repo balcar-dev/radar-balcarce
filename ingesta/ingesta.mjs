@@ -1077,6 +1077,25 @@ export function aplicarCupos(portada) {
   return portada;
 }
 
+/** El motivo con que espera una nota de afuera contada por un solo medio. */
+export const MOTIVO_UN_SOLO_MEDIO = 'de afuera con un solo medio: hacen falta dos';
+
+/**
+ * Lo de afuera de Balcarce sale solo sólo si lo cuentan dos medios distintos o
+ * más (Hernán, 27/09). Una fuente oficial alcanza sola. Lo de Balcarce no pide
+ * esto. Se aplica sobre la portada ya armada (y otra vez después de la
+ * lectura con IA, que puede decidir que una nota no es de acá). La modifica.
+ */
+export function exigirDosMedios(portada) {
+  for (const n of portada) {
+    if (n.semaforo !== 'verde' || n.local || n.oficial || n.propia) continue;
+    if (new Set(n.medios ?? []).size >= 2) continue;
+    n.semaforo = 'amarillo';
+    n.motivo = MOTIVO_UN_SOLO_MEDIO;
+  }
+  return portada;
+}
+
 export async function ingestar({
   fuentes = null, silencioso = false, escribirArchivos = false,
 } = {}) {
@@ -1255,6 +1274,8 @@ export async function ingestar({
   // de afuera que salen solas son las N de más puntaje; el resto espera.
   // Lo de Balcarce no entra en la cuenta. Automovilismo sí, desde el 25/09.
   aplicarCupos(portada);
+  // Y lo de afuera, con dos medios o más (Hernán, 27/09).
+  exigirDosMedios(portada);
 
   // 4. Clima y farmacias
   let clima = null; let farmacias = null;

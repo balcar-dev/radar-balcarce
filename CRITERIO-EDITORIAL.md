@@ -104,6 +104,18 @@ hay ficha se decide como antes. Empezó sin prueba previa, a pedido de Hernán:
 los errores se corrigen en vivo, y lo que saca cada corrida queda en el
 registro de "Actualizar la web" (`ingesta/lectura-ia.mjs`, `aplicarFichas`).
 
+**Lo de afuera, con dos medios o más (27/09, Hernán).** Una nota que no es de
+Balcarce sale sola sólo si la cuentan dos medios distintos o más (una fuente
+oficial alcanza sola). Con un solo medio no se publica. Las notas viejas del
+archivo que no cumplen conservan su página, pero no completan la tapa ni
+aparecen en "Seguí leyendo" (`exigirDosMedios`, `tieneRespaldo`).
+
+**Una noticia, una nota (27/09).** Cuando varios medios cuentan el mismo hecho
+con títulos distintos (las tres notas de las falsas ofertas de empleo de
+McCain), la IA las junta y queda una sola, con todos los medios como fuentes
+(`agruparRepetidas`, `quitarRepetidas`). No junta notas distintas del mismo
+tema (dos prácticas del TC son dos notas).
+
 **Sin medios de España ni chimentos (27/09, Hernán).** Hipertextual y Xataka
 (de España), Infobae Teleshow y Minuto Uno Espectáculos (chimentos) están
 apagados.
