@@ -1,5 +1,5 @@
 {
-  "exportado": "2026-09-27T23:44:27.412Z",
+  "exportado": "2026-09-27T23:54:27.161Z",
   "decisiones": {
     "1951120": {
       "estado": "automatica",
@@ -35960,6 +35960,67 @@
         "nivel": "ALTA",
         "porque": "Lo contaron dos medios independientes.",
         "sugeridoPorIA": "ALTA"
+      }
+    },
+    "1oj9qzr": {
+      "estado": "automatica",
+      "titulo": "El automovilismo nacional convoca a una multitud en el Fangio",
+      "copete": "El autódromo local volvió a recibir competencias nacionales este domingo con una masiva concurrencia de público y una gran movilización turística en la ciudad.",
+      "cuerpo": "El regreso del automovilismo nacional al autódromo Juan Manuel Fangio convocó a una multitud que colmó el perímetro del circuito, los sectores internos y las zonas altas de la sierra para presenciar las competencias. El movimiento de visitantes se tradujo en una ocupación total de hoteles, cabañas y residencias turísticas, mientras que los puestos gastronómicos y los estacionamientos funcionaron a pleno.\n\nEn la faz deportiva, el fin de semana dejó varios ganadores y podios destacados en las distintas categorías participantes. En tanto, Antonino Sganga venció en las TC Pista Pick Up tras la exclusión de Juan José Suárez por un toque.\n\nPor su parte, Hernán Palazzo se impuso en las TC Pick Up luego de una disputa con Diego Ciantini, quien finalizó quinto tras un recargo por un incidente con Santiago Mangoni, cuyo auto debió abandonar por la rotura del motor. José Ciantini completó la prueba en el octavo puesto y anunció su despedida de las pistas.",
+      "guion": "El automovilismo nacional convoca a una multitud en el Fangio",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T23:54:27.081Z",
+      "claves": [
+        "Una multitud colmó el autódromo y la sierra en el regreso de las competencias nacionales.",
+        "Se registró ocupación hotelera total y un intenso movimiento turístico en la ciudad.",
+        "Bruno Boccanera y Kevin Baigorria ganaron en el Turismo Special de la Costa.",
+        "Antonino Sganga se impuso en las TC Pista Pick Up y Hernán Palazzo en las TC Pick Up.",
+        "José Ciantini completó la competencia y anunció su despedida definitiva de las pistas."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El autódromo Juan Manuel Fangio vivió una jornada histórica con una multitudinaria concurrencia de público en el regreso del automovilismo nacional, generando ocupación turística total y un fuerte impacto en la ciudad.",
+      "etiquetas": [
+        "Automovilismo",
+        "Autodromo Juan Manuel Fangio",
+        "Turismo",
+        "Deportes"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Puntonueve (FM 100.9)",
+          "enlace": "https://puntonueve.com.ar/mas-de-20-mil-personas-fueron-parte-de-un-dia-historico-en-el-autodromo-juan-manuel-fangio/",
+          "fecha": "2026-09-27T23:49:17.000Z",
+          "oficial": false,
+          "aporte": "Detalló los resultados deportivos, la asistencia del público, el impacto turístico y las declaraciones de los protagonistas del automovilismo."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "si6qmk",
+          "titulo": "Diego Santilli visita el autódromo Juan Manuel Fangio",
+          "fecha": "2026-09-27T15:00:58.065Z",
+          "ruta": "/nota/diego-santilli-visita-el-autodromo-juan-manuel-fangio-en-balcarce-si6qmk"
+        },
+        {
+          "id": "epzsa5",
+          "titulo": "Reinauguran el autódromo Juan Manuel Fangio",
+          "fecha": "2026-09-26T13:46:35.000Z",
+          "ruta": "/nota/el-autodromo-juan-manuel-fangio-reabre-sus-puertas-en-balcarce-epzsa5"
+        },
+        {
+          "id": "1gnqz6n",
+          "titulo": "El Autódromo Juan Manuel Fangio reabre sus puertas",
+          "fecha": "2026-09-25T22:53:16.590Z",
+          "ruta": "/nota/el-autodromo-juan-manuel-fangio-reabre-sus-puertas-en-balcarce-1gnqz6n"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
       }
     }
   },
