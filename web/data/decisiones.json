@@ -1,5 +1,5 @@
 {
-  "exportado": "2026-09-27T06:10:20.370Z",
+  "exportado": "2026-09-27T06:20:14.486Z",
   "decisiones": {
     "1951120": {
       "estado": "automatica",
@@ -30833,6 +30833,68 @@
           "fecha": "2026-09-27T05:37:58.000Z",
           "oficial": false,
           "aporte": "Aportó datos sobre la capacidad instalada industrial, la caída de la construcción y las ventas de supermercados en julio."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "zo6t62": {
+      "estado": "automatica",
+      "titulo": "Lali cierra su gira en el Monumental",
+      "copete": "Lali completó su tercer estadio River del año con un show que cerró su gira y reunió a miles de fanáticos. El espectáculo incluyó invitados, tango y un repaso por sus éxitos.",
+      "cuerpo": "Lali cerró su gira ante un estadio Monumental colmado, en lo que significó su tercer show en ese escenario durante el año. El recital incluyó diversos bloques musicales con coreografías, invitados especiales como el bandoneonista Nicolás Perrone y el cantor Cucuza Castiello para interpretar tango, y un repaso por sus principales canciones de pop.\n\nDurante el espectáculo, la artista hizo referencia al clima favorable que acompañó la noche y repasó su recorrido al frente de ocho estadios en poco más de un año. El show contó con cambios de vestuario, participación de bailarines y momentos destacados junto a su público en el cierre de la presentación.",
+      "guion": "Lali cierra su gira en el Monumental",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T06:20:14.409Z",
+      "claves": [
+        "Lali completó su tercer estadio River del año ante un estadio colmado.",
+        "El show incluyó un bloque de tango con invitados especiales.",
+        "La artista repasó sus ocho estadios en poco más de un año."
+      ],
+      "seSabe": [
+        "Lali realizó su tercer show en el estadio River del año.",
+        "El recital incluyó la participación del bandoneonista Nicolás Perrone y el cantor Cucuza Castiello.",
+        "El espectáculo marcó el cierre de la gira de la artista."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Lali cerró su gira con un show multitudinario en el estadio Monumental, completando su tercera presentación en ese escenario durante el año ante un estadio colmado.",
+      "etiquetas": [
+        "Lali",
+        "River"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/teleshow/2026/09/27/lali-volvio-a-hacer-historia-y-brillo-en-su-tercer-river-tini-vestida-de-novia-lagrimas-y-un-guino-a-fito-paez/",
+          "fecha": "2026-09-27T06:04:07.000Z",
+          "oficial": false,
+          "aporte": "Detalles del show de Lali en el estadio Monumental, incluyendo invitados y repertorio."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "140xrso",
+          "titulo": "Que significa la corbata que usó Milei en la ONU: un guiño a la historia de la economía liberal y al presente de la IA",
+          "fecha": "2026-09-23T16:52:36.000Z",
+          "ruta": "/nota/que-significa-la-corbata-que-uso-milei-en-la-onu-un-guino-a-la-140xrso"
+        },
+        {
+          "id": "62ymka",
+          "titulo": "River y un arranque fatal ante Huracán: lesión de Thiago Almada, gol del Globo y las lágrimas del pibe Tobías Andrada al pedir el cambio",
+          "fecha": "2026-09-19T22:46:34.000Z",
+          "ruta": "/nota/river-y-un-arranque-fatal-ante-huracan-lesion-de-thiago-almada-gol-62ymka"
+        },
+        {
+          "id": "kjgj47",
+          "titulo": "De los excesos a ser campeona del mundo: la historia de Juliette Duhaime, la argentina que volvió a empezar sobre una tabla",
+          "fecha": "2026-09-19T09:00:30.000Z",
+          "ruta": "/nota/de-los-excesos-a-ser-campeona-del-mundo-la-historia-de-juliette-kjgj47"
         }
       ],
       "verificacion": {
