@@ -471,9 +471,12 @@ test("con el cupo casi gastado, lo de afuera espera y lo de Balcarce sigue (rese
 
 test("la reescritura empieza por lo más nuevo: una nota local de hace dos días no pasa delante de una de hace una hora", async () => {
   const { ordenarParaReescribir } = await import("../reels/reescritura.mjs");
-  const hace = (h) => new Date(Date.now() - h * 3600e3).toISOString();
-  const vieja = notaVerde({ id: "vieja", relevancia: 95, fecha: hace(48) });
-  const nueva = notaVerde({ id: "nueva", relevancia: 70, fecha: hace(1) });
-  const parecida = notaVerde({ id: "parecida", relevancia: 90, fecha: hace(2) });
-  assert.deepEqual(ordenarParaReescribir([vieja, nueva, parecida]).map((n) => n.id), ["parecida", "nueva", "vieja"], "el tramo de 6 horas manda; dentro del tramo, el puntaje");
+  // Los tramos son de 6 horas fijas: se arma todo a partir del comienzo del tramo actual.
+  const tramo = Math.floor(Date.now() / (6 * 3600e3)) * 6 * 3600e3;
+  const en = (ms) => new Date(tramo + ms).toISOString();
+  const vieja = notaVerde({ id: "vieja", relevancia: 95, fecha: en(-48 * 3600e3) });
+  const nueva = notaVerde({ id: "nueva", relevancia: 70, fecha: en(60e3) });
+  const parecida = notaVerde({ id: "parecida", relevancia: 90, fecha: en(120e3) });
+  const anterior = notaVerde({ id: "anterior", relevancia: 99, fecha: en(-1 * 3600e3) });
+  assert.deepEqual(ordenarParaReescribir([vieja, anterior, nueva, parecida]).map((n) => n.id), ["parecida", "nueva", "anterior", "vieja"], "el tramo más nuevo manda; dentro del tramo, el puntaje");
 });
