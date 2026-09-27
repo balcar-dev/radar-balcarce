@@ -1,5 +1,5 @@
 {
-  "exportado": "2026-09-27T15:18:57.597Z",
+  "exportado": "2026-09-27T15:29:00.326Z",
   "decisiones": {
     "1951120": {
       "estado": "automatica",
@@ -33799,6 +33799,78 @@
         "nivel": "MEDIA",
         "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
         "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "srfkko": {
+      "estado": "automatica",
+      "titulo": "El Concejo aprueba llamar Paseo Intendente Juan José Mare a la vuelta interna del cerro en",
+      "copete": "El Concejo Deliberante aprobó por mayoría nombrar \"Paseo Intendente Juan José Mare\" a la vuelta interna del Cerro El Triunfo. La iniciativa generó una disidencia y una abstención en el recinto.",
+      "cuerpo": "La iniciativa fue impulsada por la concejal de Juntos, Sandra Divito, quien destacó durante el debate la trayectoria del exjefe comunal, sus obras y su vínculo con las actividades culturales del lugar, como las primeras ediciones del Festival del Canto Argentino. Mare se desempeñó como intendente interino desde 1966 y luego resultó electo por el voto popular en 1973 por la Unión Vecinal de Balcarce.\n\nLa votación contó con una disidencia. El concejal del PRO, Edgar Foglia, decidió abstenerse y argumentó que conserva testimonios de personas perseguidas y golpeadas durante la última dictadura. Foglia propuso incorporar una placa explicativa con distintas miradas históricas para dotar al homenaje de un carácter educativo, una postura que se suma al debate público generado en torno a su asunción inicial durante un gobierno de facto.\n\nLa medida formaliza el reconocimiento en el espacio recreativo y apunta a mantener presente el legado del exintendente en el desarrollo urbano e institucional de la ciudad.",
+      "guion": "El Concejo aprueba llamar Paseo Intendente Juan José Mare a la vuelta interna del cerro en Balcarce",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T15:29:00.253Z",
+      "claves": [
+        "El Concejo Deliberante aprobó nombrar Paseo Intendente Juan José Mare a la vuelta interna del Cerro El Triunfo.",
+        "La iniciativa fue impulsada por la concejal Sandra Divito del bloque Juntos.",
+        "El concejal Edgar Foglia se abstuvo y pidió una placa explicativa por el contexto histórico de su gestión.",
+        "Juan José Mare gobernó desde 1966 tras la interrupción institucional y fue elegido en 1973 por la Unión Vecinal."
+      ],
+      "seSabe": [
+        "El Concejo Deliberante aprobó por mayoría la ordenanza impulsada por la concejal Sandra Divito.",
+        "El circuito interno del Cerro El Triunfo pasó a llamarse \"Paseo Intendente Juan José Mare\".",
+        "El concejal Edgar Foglia se abstuvo en la votación y solicitó una placa explicativa.",
+        "Juan José Mare asumió como intendente interino en 1966 y fue electo por voto popular en 1973."
+      ],
+      "textoRedes": "El Concejo Deliberante aprobó por mayoría nombrar Paseo Intendente Juan José Mare a la vuelta interna del Cerro El Triunfo. La medida contó con una abstención en el recinto y abrió el debate sobre su legado histórico.",
+      "etiquetas": [
+        "Concejo Deliberante",
+        "Cerro El Triunfo",
+        "Juan José Mare",
+        "Sandra Divito",
+        "Edgar Foglia",
+        "Balcarce"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Radio Gabal (FM 104.1)",
+          "enlace": "https://www.radiogabal.com.ar/index.php/politica/con-una-disidencia-se-aprobo-por-mayoria-nombrar-la-vuelta-interna-del-cerro-intendente-juan-jose-mare",
+          "fecha": "2026-09-27T15:18:35.000Z",
+          "oficial": false,
+          "aporte": "Detalló los argumentos de la concejal Sandra Divito sobre la trayectoria de Mare, las obras durante su gestión y la postura del concejal Edgar Foglia."
+        },
+        {
+          "medio": "Infórmese Primero (FM 104.9)",
+          "enlace": "http://www.informeseprimero.com.ar/2026/09/por-mayoria-el-hcd-aprobo-que-la-vuelta.html",
+          "fecha": "2026-09-25T00:52:49.160Z",
+          "oficial": false,
+          "aporte": "Informó la aprobación por mayoría de la ordenanza en el Concejo Deliberante."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1spjzhb",
+          "titulo": "El Concejo designa Paseo Intendente Juan José Mare a la vuelta interna del Cerro en Balcar",
+          "fecha": "2026-09-25T12:46:51.000Z",
+          "ruta": "/nota/el-concejo-designa-paseo-intendente-juan-jose-mare-a-la-vuelta-1spjzhb"
+        },
+        {
+          "id": "1muc0dj",
+          "titulo": "El Concejo aprueba denominar Paseo Intendente Juan José Mare al circuito del Cerro El Triu",
+          "fecha": "2026-09-24T23:30:13.000Z",
+          "ruta": "/nota/el-concejo-aprueba-denominar-paseo-intendente-juan-jose-mare-al-1muc0dj"
+        },
+        {
+          "id": "11a57qo",
+          "titulo": "El Concejo aprueba el Paseo Intendente Juan José Mare en Balcarce",
+          "fecha": "2026-09-25T00:52:49.160Z",
+          "ruta": "/nota/el-cerro-el-triunfo-tendra-el-paseo-juan-jose-mare-11a57qo"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "ALTA"
       }
     }
   },
