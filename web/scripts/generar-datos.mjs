@@ -28,7 +28,7 @@ import { sinNotasRepetidas } from '../lib/texto.js';
 import { pendientesDeLaIngesta } from '../../redes/avisos.mjs';
 import {
   vigenteEnPortada, slugsConocidos, fijarSlug, actualizarArchivo, idsEnRedes, sinPuntaje, comoArchivoJson,
-  idsRetiradosAMano,
+  idsRetiradosAMano, correccionesAMano, conCorreccion,
 } from '../lib/archivo.js';
 import { actualizarAgenda, comoAgendaJson } from '../lib/eventos.js';
 import { traerDolar } from '../lib/dolar.js';
@@ -62,6 +62,8 @@ const HISTORIA_DOLAR = path.join(AQUI, '..', 'data', 'dolar-historia.json');
 const FICHAS = path.join(AQUI, '..', 'data', 'fichas.json');
 // Lo que se sacó a mano de la web, fuera del panel (lib/archivo.js).
 const RETIRADAS_A_MANO = idsRetiradosAMano(leerJson(path.join(AQUI, '..', 'data', 'retiradas.json'), null));
+// Lo que se corrigió a mano (título, bajada, sección), fuera del panel.
+const CORRECCIONES = correccionesAMano(leerJson(path.join(AQUI, '..', 'data', 'correcciones.json'), null));
 
 // Este script corre en dos lugares distintos:
 //
@@ -330,7 +332,8 @@ function notaPublicada(n) {
     if (vigenteEnPortada(nota)) esperandoCuerpo.push(n.id);
     return null;
   }
-  return nota;
+  // Lo corregido a mano manda (web/data/correcciones.json).
+  return conCorreccion(nota, CORRECCIONES);
 }
 
 // Lo que viene de las fuentes. Las notas propias se suman más abajo, después
@@ -441,7 +444,7 @@ if (repetidas) console.log(`  ${repetidas} notas repetidas (mismo titular) salen
 // Y desde el mismo día País se llama Argentina.
 // Y los títulos automáticos del archivo, sin "en Balcarce" al final.
 const sinCola = (n) => (n && (!n.publicadaPor || n.publicadaPor === 'ia') && !n.propia ? { ...n, titulo: sinBalcarceAlFinal(n.titulo) } : n);
-const sinServicios = (n) => sinColaDe(n);
+const sinServicios = (n) => conCorreccion(sinColaDe(n), CORRECCIONES);
 const sinColaDe = (n) => sinCola(n?.seccion === 'Servicios' ? { ...n, seccion: n.local ? 'Balcarce' : 'Argentina' }
   : n?.seccion === 'País' ? { ...n, seccion: 'Argentina' } : n);
 const archivo = actualizarArchivo({

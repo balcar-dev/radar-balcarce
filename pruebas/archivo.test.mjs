@@ -281,3 +281,29 @@ test('"Seguí leyendo" no repite una nota con el mismo titular', () => {
   // Desde el 25/09 la página usa seguirLeyendo (pruebas/seguir-leyendo.test.mjs), que compara con mismaHistoria.
   assert.match(leer('web/app/nota/[id]/page.js'), /seguirLeyendo\(/);
 });
+
+// ------------------------------------------- las correcciones a mano (27/09)
+
+import { correccionesAMano, conCorreccion } from '../web/lib/archivo.js';
+
+test('las correcciones a mano mandan sobre el título, la bajada y la sección; sin motivo no valen', () => {
+  const c = correccionesAMano({ notas: {
+    a: { titulo: 'El Concejo pide bajar las tasas a taxis y remises', seccion: 'Política', motivo: 'el título exageraba' },
+    b: { titulo: 'Sin motivo' },
+    x: { cuerpo: 'no se corrige el cuerpo', motivo: 'no' },
+  } });
+  assert.deepEqual([...c.keys()], ['a']);
+  const nota = { id: 'a', titulo: 'El Concejo aprueba reducir tributos a taxis y remises', seccion: 'Balcarce', cuerpo: 'x' };
+  const r = conCorreccion(nota, c);
+  assert.equal(r.titulo, 'El Concejo pide bajar las tasas a taxis y remises');
+  assert.equal(r.seccion, 'Política');
+  assert.equal(r.cuerpo, 'x');
+  assert.equal(conCorreccion({ id: 'z', titulo: 't' }, c).titulo, 't');
+  assert.equal(correccionesAMano(null).size, 0);
+});
+
+test('el archivo de correcciones del repositorio está bien armado', () => {
+  const json = JSON.parse(fs.readFileSync(new URL('../web/data/correcciones.json', import.meta.url), 'utf8'));
+  for (const [id, n] of Object.entries(json.notas)) assert.ok(n.motivo && n.cuando && n.por, `a ${id} le falta motivo, fecha o quién`);
+  assert.equal(correccionesAMano(json).size, Object.keys(json.notas).length);
+});

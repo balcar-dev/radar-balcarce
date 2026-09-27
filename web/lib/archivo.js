@@ -40,6 +40,34 @@ export function idsRetiradosAMano(json) {
   return new Set(Object.keys(notas).filter((id) => notas[id] && notas[id].motivo));
 }
 
+/** Los campos que se pueden corregir a mano en web/data/correcciones.json. */
+export const CAMPOS_CORREGIBLES = ['titulo', 'copete', 'seccion'];
+
+/**
+ * Las correcciones a mano (web/data/correcciones.json, 27/09): el título, la
+ * bajada o la sección de una nota ya publicada, arreglados en un repaso
+ * editorial fuera del panel. Mandan sobre lo que escriba la IA en cada
+ * corrida. Devuelve un Map id → { titulo?, copete?, seccion? }; con un
+ * archivo vacío o roto, ninguna. Cada una tiene que decir por qué.
+ */
+export function correccionesAMano(json) {
+  const notas = json && typeof json === 'object' ? json.notas : null;
+  const salida = new Map();
+  if (!notas || typeof notas !== 'object') return salida;
+  for (const [id, c] of Object.entries(notas)) {
+    if (!c || !c.motivo) continue;
+    const campos = Object.fromEntries(CAMPOS_CORREGIBLES.filter((k) => typeof c[k] === 'string' && c[k].trim()).map((k) => [k, c[k].trim()]));
+    if (Object.keys(campos).length) salida.set(id, campos);
+  }
+  return salida;
+}
+
+/** Aplica la corrección a mano de una nota, si la tiene. */
+export function conCorreccion(nota, correcciones) {
+  const c = nota?.id ? correcciones?.get(nota.id) : null;
+  return c ? { ...nota, ...c } : nota;
+}
+
 /** Cuánto dura una página. Pasado eso, el enlace ya no circula. */
 export const DIAS_DE_ARCHIVO = 180;
 
