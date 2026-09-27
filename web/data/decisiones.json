@@ -1,5 +1,5 @@
 {
-  "exportado": "2026-09-27T12:10:34.319Z",
+  "exportado": "2026-09-27T12:20:29.993Z",
   "decisiones": {
     "1951120": {
       "estado": "automatica",
@@ -33299,6 +33299,159 @@
           "titulo": "Andy Kusnetzoff y Juana Viale compiten por el rating",
           "fecha": "2026-09-20T03:39:37.000Z",
           "ruta": "/nota/andy-kusnetzoff-y-juana-viale-compiten-por-el-rating-x0wnmh"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "3vjab8": {
+      "estado": "automatica",
+      "titulo": "Apple debe pagar cinco mil millones de dólares por uso de patentes",
+      "copete": "Un jurado federal de Estados Unidos determinó que la empresa deberá abonar más de cinco mil millones de dólares a Taction Technology por infringir patentes de tecnología háptica.",
+      "cuerpo": "El jurado concluyó que la infracción no fue deliberada. La demanda había sido desestimada en dos mil veintitrés, pero la Corte de Apelaciones la reactivó el año pasado. El abogado de Taction, Tigran Guledjian, manifestó conformidad con el veredicto, mientras que desde Apple expresaron su desacuerdo con el monto y adelantaron que apelarán la medida judicial, al sostener que no utilizan esa tecnología.\n\nEste litigio se suma a otros conflictos legales previos que la compañía debió afrontar por cuestiones de patentes vinculadas a sus dispositivos electrónicos, según trascendió en el proceso judicial.",
+      "guion": "Apple debe pagar cinco mil millones de dólares por uso de patentes",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T12:20:29.908Z",
+      "claves": [
+        "Un jurado determinó que Apple pagará más de cinco mil millones de dólares.",
+        "La demanda fue presentada por Taction Technology en dos mil veintiono.",
+        "El litigio involucra patentes de tecnología háptica en dispositivos de Apple.",
+        "La empresa afectada sostuvo que se infringieron derechos de desarrollo."
+      ],
+      "seSabe": [
+        "Un jurado federal de Estados Unidos determinó que Apple debe pagar más de cinco mil millones de dólares a Taction Technology.",
+        "El fallo se emitió en la Corte de Distrito del Distrito Sur de California.",
+        "La demanda original fue presentada en dos mil veintiuno y reactivada por la Corte de Apelaciones.",
+        "Apple anunció que apelará la decisión judicial."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "etiquetas": [
+        "Apple",
+        "Taction Technology",
+        "tecnología",
+        "demanda",
+        "patentes"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/tecno/2026/09/27/apple-debera-pagar-5700-millones-de-dolares-por-usar-una-patente-sin-autorizacion/",
+          "fecha": "2026-09-27T12:17:13.000Z",
+          "oficial": false,
+          "aporte": "Detalló el fallo del jurado federal contra Apple por más de cinco mil millones de dólares a favor de Taction Technology."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "p7tbko",
+          "titulo": "El estado de Florida custodia fondos sin reclamar por miles de millones de dólares",
+          "fecha": "2026-09-27T11:32:00.000Z",
+          "ruta": "/nota/el-estado-de-florida-custodia-fondos-sin-reclamar-por-miles-de-p7tbko"
+        },
+        {
+          "id": "yruzv2",
+          "titulo": "La demanda de dólares se mantiene alta y suma millones",
+          "fecha": "2026-09-25T21:52:49.000Z",
+          "ruta": "/nota/la-demanda-de-dolares-se-mantiene-elevada-en-agosto-en-el-pais-yruzv2"
+        },
+        {
+          "id": "1cdc43k",
+          "titulo": "Bariloche recauda treinta millones de dólares al año en alquileres temporarios",
+          "fecha": "2026-09-25T10:26:01.000Z",
+          "ruta": "/nota/bariloche-recauda-treinta-millones-de-dolares-al-ano-en-alquileres-1cdc43k"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "1nslo4v": {
+      "estado": "automatica",
+      "titulo": "El mundo conmemora una nueva jornada dedicada a la actividad turística",
+      "copete": "Cada veintisiete de septiembre se celebra el Día Mundial del Turismo, una fecha impulsada a nivel global para destacar el valor de esta actividad.",
+      "cuerpo": "El veintisiete de septiembre se conmemora una nueva jornada dedicada a la actividad turística en todo el planeta. Esta celebración tiene como propósito principal generar conciencia en la comunidad internacional sobre la importancia cultural, social, económica y política que posee el sector.\n\nLa iniciativa de establecer esta fecha pertenece a la Organización Mundial del Turismo, organismo que depende de las Naciones Unidas. Su origen se remonta a la aprobación formal de los estatutos de dicha entidad internacional, concretada un veintisiete de septiembre.\n\nDesde el organismo promotor se destaca que la efeméride busca difundir cómo esta actividad puede colaborar en el cumplimiento de las metas de desarrollo sostenible planteadas por la organización internacional para los próximos años.",
+      "guion": "El mundo conmemora una nueva jornada dedicada a la actividad turística",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T12:20:29.908Z",
+      "claves": [
+        "Se celebra el Día Mundial del Turismo cada veintisiete de septiembre.",
+        "La iniciativa pertenece a la Organización Mundial del Turismo.",
+        "Busca destacar el valor social, cultural y económico del sector."
+      ],
+      "seSabe": [
+        "Cada veintisiete de septiembre se celebra el Día Mundial del Turismo.",
+        "La fecha fue impulsada por la Organización Mundial del Turismo.",
+        "La efeméride conmemora la aprobación de los estatutos del organismo."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Cada veintisiete de septiembre se conmemora el Día Mundial del Turismo, una fecha impulsada por la Organización Mundial del Turismo para destacar el valor social, cultural y económico de la actividad en todo el planeta.",
+      "etiquetas": [
+        "Turismo",
+        "Efemérides",
+        "Internacional"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/lifestyle/efemerides-del-27-de-septiembre-que-paso-un-dia-como-hoy-nid27092026/",
+          "fecha": "2026-09-27T12:11:19.000Z",
+          "oficial": false,
+          "aporte": "Informó sobre los detalles y propósitos del Día Mundial del Turismo."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "jzue97": {
+      "estado": "automatica",
+      "titulo": "El fenómeno de la caja negra en la inteligencia artificial",
+      "copete": "Los modelos de inteligencia artificial más avanzados toman decisiones cuyo proceso interno resulta imposible de reconstruir por completo para sus propios desarrolladores.",
+      "cuerpo": "Los sistemas de inteligencia artificial más avanzados operan bajo el fenómeno conocido como caja negra, donde el proceso interno que conecta los datos ingresados con los resultados permanece parcialmente oculto para sus propios desarrolladores. A diferencia de los programas tradicionales, donde es posible rastrear las reglas que conducen a un resultado, las redes neuronales basadas en aprendizaje profundo ajustan millones de parámetros durante su entrenamiento, lo que genera una lógica compleja que dificulta interpretar cada decisión específica.\n\nEsta opacidad presenta dos orígenes principales según se desprende de los informes: por un lado, la complejidad técnica que impide comprender la combinación de sus componentes internos y, por el otro, la confidencialidad que mantienen las empresas sobre sus códigos, datos y arquitecturas por motivos comerciales. Como consecuencia, cuando estas herramientas operan con autonomía, el riesgo se traslada hacia las posibles acciones imprevistas que puedan desencadenar fuera del entorno de una conversación digital.",
+      "guion": "El fenomeno de la caja negra en la inteligencia artificial",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T12:20:29.908Z",
+      "claves": [
+        "Los modelos avanzados toman decisiones difíciles de reconstruir por completo.",
+        "El aprendizaje profundo utiliza redes neuronales con millones de parámetros.",
+        "La opacidad surge tanto por complejidad técnica como por secreto comercial.",
+        "El avance de los agentes autónomos plantea riesgos sobre sus efectos prácticos."
+      ],
+      "seSabe": [
+        "Los modelos de inteligencia artificial más avanzados toman decisiones cuyos procesos internos no siempre pueden ser reconstruidos por completo.",
+        "El fenómeno de caja negra ocurre porque las redes neuronales ajustan millones de parámetros durante su entrenamiento.",
+        "La opacidad se debe tanto a la complejidad técnica como al secreto comercial que guardan las empresas sobre sus códigos."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Los modelos de inteligencia artificial más avanzados generan decisiones cuyos procesos internos no siempre pueden ser explicados por completo, un fenómeno conocido como la caja negra que plantea nuevos desafíos sobre su funcionamiento y autonomía.",
+      "etiquetas": [
+        "Inteligencia artificial",
+        "Caja negra",
+        "Redes neuronales"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Ámbito",
+          "enlace": "https://www.ambito.com/tecnologia/el-lado-oscuro-la-ia-que-es-la-caja-negra-como-funciona-y-el-miedo-que-desobedezca-sus-creadores-n6327116",
+          "fecha": "2026-09-27T12:14:06.000Z",
+          "oficial": false,
+          "aporte": "Detalló el funcionamiento de la caja negra, las redes neuronales y los riesgos de los agentes autónomos."
         }
       ],
       "verificacion": {
