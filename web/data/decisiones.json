@@ -1,5 +1,5 @@
 {
-  "exportado": "2026-09-27T15:38:59.938Z",
+  "exportado": "2026-09-27T15:49:10.834Z",
   "decisiones": {
     "1951120": {
       "estado": "automatica",
@@ -33938,6 +33938,72 @@
         "nivel": "MEDIA",
         "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
         "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "1spxjt5": {
+      "estado": "automatica",
+      "titulo": "Mariano Werner y Otto Fritzler ganan las series en Balcarce",
+      "copete": "Mariano Werner y Otto Fritzler se quedaron con las baterías del TC Pick Up en el Autódromo Juan Manuel Fangio y largarán desde la primera fila en la final de la octava fecha del campeonato.",
+      "cuerpo": "Mariano Werner se quedó con la primera serie del TC Pick Up este domingo en el Autódromo Juan Manuel Fangio de Balcarce tras imponerse en una disputa inicial con Agustín Canapino, quien terminó segundo.\n\nEn tanto, Otto Fritzler se impuso en la segunda batería con la Ford Ranger luego de superar a Diego Azar, y compartirá la primera fila de la final junto a Werner. La carrera decisiva, correspondiente a la primera fecha de la Copa Coronación 2026 y a la octava del certamen, se largará a las 14:10 a un total de 20 vueltas o un máximo de 40 minutos en el circuito de 4.395 metros.\n\nLa actividad automovilística marca el regreso de una competencia nacional al autódromo local después de 15 años, un hecho que generó gran expectativa popular en la ciudad durante todo el fin de semana.",
+      "guion": "Mariano Werner y Otto Fritzler ganan las series en Balcarce",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T15:49:10.748Z",
+      "claves": [
+        "Mariano Werner ganó la primera serie y largará desde la pole.",
+        "Otto Fritzler se impuso en la segunda batería con la Ford Ranger.",
+        "La final se disputará a las 14:10 a un total de 20 vueltas.",
+        "El TC Pick Up marca el regreso del automovilismo nacional al autódromo local tras 15 años."
+      ],
+      "textoRedes": "Mariano Werner y Otto Fritzler ganaron sus respectivas series del TC Pick Up en el Autódromo Juan Manuel Fangio y compartirán la primera fila en la final de este domingo, en el marco del regreso del automovilismo nacional a Balcarce.",
+      "etiquetas": [
+        "TC Pick Up",
+        "Autodromo Juan Manuel Fangio",
+        "Mariano Werner",
+        "Otto Fritzler",
+        "Balcarce",
+        "Automovilismo"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "QZ Noticias (Mar del Plata)",
+          "enlace": "https://www.qznoticias.com/deportes/werner-y-fritzler-ganaron-las-series-y-largaran-adelante-en-balcarce",
+          "fecha": "2026-09-27T15:41:34.000Z",
+          "oficial": false,
+          "aporte": "Detalló el desarrollo de la primera serie, las posiciones de Canapino y Azar, y las características técnicas de la final."
+        },
+        {
+          "medio": "Campeones",
+          "enlace": "https://campeones.com.ar/tc-pick-up-en-balcarce-werner-y-fritzler-se-impusieron-en-las-series/",
+          "fecha": "2026-09-27T15:25:20.000Z",
+          "oficial": false,
+          "aporte": "Confirmó la victoria de Werner en la batería más veloz y su posición de largada para la primera fecha de la Copa Coronación."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "17qh9mv",
+          "titulo": "Werner y Fritzler ganan las series del TC Pick Up en Balcarce",
+          "fecha": "2026-09-27T15:25:20.000Z",
+          "ruta": "/nota/mariano-werner-y-otto-fritzler-ganan-las-series-del-tc-pick-up-en-17qh9mv"
+        },
+        {
+          "id": "22c5tw",
+          "titulo": "Stier y Dose ganaron las series en Río Cuarto",
+          "fecha": "2026-09-19T20:38:42.000Z",
+          "ruta": "/nota/stier-y-dose-ganaron-las-series-en-rio-cuarto-22c5tw"
+        },
+        {
+          "id": "12jm31p",
+          "titulo": "Mariano Werner lidera la clasificación del TC Pick Up en Balcarce",
+          "fecha": "2026-09-27T00:32:00.000Z",
+          "ruta": "/nota/mariano-werner-lidera-la-clasificacion-del-tc-pick-up-en-balcarce-12jm31p"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "ALTA"
       }
     }
   },
