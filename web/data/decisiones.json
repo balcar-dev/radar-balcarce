@@ -1,5 +1,5 @@
 {
-  "exportado": "2026-09-27T07:10:17.125Z",
+  "exportado": "2026-09-27T07:20:26.419Z",
   "decisiones": {
     "1951120": {
       "estado": "automatica",
@@ -30912,13 +30912,67 @@
     },
     "v8jjgw": {
       "estado": "automatica",
-      "titulo": null,
-      "copete": null,
-      "cuerpo": null,
-      "guion": null,
-      "deIA": null,
+      "titulo": "Bomberos controlan un principio de incendio en Balcarce",
+      "copete": "Una dotación de Bomberos Voluntarios intervino esta madrugada en un domicilio tras registrarse fuego en la zona del techo. No se reportaron personas heridas.",
+      "cuerpo": "Un principio de incendio se produjo durante la madrugada de este domingo en una vivienda situada en la calle 5, entre las calles 10 y 12. Las llamas se originaron en la parte del techo del inmueble, lo que requirió la movilización inmediata de una dotación de Bomberos Voluntarios para controlar la situación.\n\nTras varios minutos de labores en el lugar, los efectivos lograron extinguir el foco ígneo y evitar que el fuego se extendiera hacia otras áreas del edificio. De acuerdo con la información aportada, no se registraron personas heridas como consecuencia del episodio.\n\nLas causas que provocaron el inicio del fuego aún no fueron establecidas y son materia de análisis, mientras se completaron las tareas preventivas en el inmueble afectado.",
+      "guion": "Bomberos controlan un principio de incendio en Balcarce",
+      "deIA": true,
       "por": "ia",
-      "cuando": "2026-09-27T07:10:17.052Z"
+      "cuando": "2026-09-27T07:20:26.349Z",
+      "claves": [
+        "El hecho ocurrió durante la madrugada de este domingo",
+        "El fuego se inició en el techo de una vivienda",
+        "Intervinieron Bomberos Voluntarios y no hubo heridos"
+      ],
+      "seSabe": [
+        "Un principio de incendio afectó el techo de una casa en calle 5, entre 10 y 12, durante la madrugada de este domingo.",
+        "Una dotación de Bomberos Voluntarios trabajó en el lugar y logró controlar la situación.",
+        "No se registraron personas heridas por el hecho."
+      ],
+      "noConfirmado": [
+        "No se determinaron las causas que originaron el fuego.",
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Una dotación de Bomberos Voluntarios intervino esta madrugada por un principio de incendio en el techo de un domicilio de la calle 5. No se reportaron personas heridas y las causas del fuego aún se desconocen.",
+      "etiquetas": [
+        "incendio",
+        "bomberos",
+        "Balcarce"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infórmese Primero (FM 104.9)",
+          "enlace": "http://www.informeseprimero.com.ar/2026/09/principio-de-incendio-en-un-domicilio.html",
+          "fecha": "2026-09-27T04:43:31.521Z",
+          "oficial": false,
+          "aporte": "Informó sobre el principio de incendio en la madrugada, el lugar, la intervención de bomberos y la ausencia de heridos."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1k3dzvz",
+          "titulo": "Principio de incendio en un departamento céntrico",
+          "fecha": "2026-09-24T19:14:04.000Z",
+          "ruta": "/nota/principio-de-incendio-en-un-departamento-centrico-1k3dzvz"
+        },
+        {
+          "id": "10x98wn",
+          "titulo": "Caravana y recibimiento para el boxeador Kevin Gómez",
+          "fecha": "2026-09-22T23:46:36.443Z",
+          "ruta": "/nota/caravana-y-recibimiento-para-el-boxeador-kevin-gomez-10x98wn"
+        },
+        {
+          "id": "1gk282j",
+          "titulo": "Ferroviarios ganó la final del Apertura por penales",
+          "fecha": "2026-09-21T00:42:06.000Z",
+          "ruta": "/nota/ferroviarios-gano-la-final-del-apertura-por-penales-1gk282j"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
     },
     "wbaaus": {
       "estado": "automatica",
@@ -31011,6 +31065,105 @@
           "fecha": "2026-09-27T07:00:00.000Z",
           "oficial": false,
           "aporte": "Detalló los pasos, el funcionamiento y las recomendaciones de seguridad para compartir la ubicación en tiempo real por WhatsApp."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "v8tsii": {
+      "estado": "automatica",
+      "titulo": "Comienza una nueva temporada de MasterChef con cambios en el jurado",
+      "copete": "Los cocineros Germán Martitegui, Damián Betular y Maru Botana presentaron la nueva edición del certamen de Telefe, que contará con veinticuatro famosos y la conducción de Wanda Nara.",
+      "cuerpo": "El encuentro con la prensa se realizó en Palermo luego de una jornada de grabaciones y sirvió para dar detalles sobre el ciclo.\n\nDurante la presentación, el jurado destacó las expectativas ante el inicio del programa y se refirió a los cambios en el equipo. Botana se incorpora como jurada estable en reemplazo de Donato de Santis, quien formó parte del ciclo durante una década, mientras que Martitegui y Betular continúan en sus roles evaluando a los participantes en cada gala.",
+      "guion": "Comienza una nueva temporada de MasterChef con cambios en el jurado",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T07:20:26.349Z",
+      "claves": [
+        "El programa se emite por Telefe con veinticuatro participantes famosos.",
+        "Wanda Nara continúa a cargo de la conducción del ciclo.",
+        "Maru Botana se suma como jurada estable en reemplazo de Donato de Santis."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Germán Martitegui, Damián Betular y Maru Botana presentaron la nueva edición de MasterChef por Telefe, que contará con veinticuatro famosos, la conducción de Wanda Nara y la incorporación de Botana como jurada estable en reemplazo de Donato de Santis.",
+      "etiquetas": [
+        "MasterChef",
+        "Telefe",
+        "Germán Martitegui",
+        "Damián Betular",
+        "Maru Botana"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/teleshow/2026/09/27/german-martitegui-damian-betular-y-maru-botana-a-horas-del-estreno-de-masterchef-la-edicion-anterior-dejo-la-vara-muy-alta/",
+          "fecha": "2026-09-27T07:02:00.000Z",
+          "oficial": false,
+          "aporte": "Detalles sobre la presentación de la nueva temporada de MasterChef, la conformación del jurado y declaraciones de los chefs."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "4aipbs": {
+      "estado": "automatica",
+      "titulo": "Omán pide cooperación internacional para destrabar el estrecho de Ormuz",
+      "copete": "El ministro de Asuntos Exteriores omaní solicitó un esfuerzo regional para habilitar la navegación en el estrecho de Ormuz y hallar una salida política a la crisis en Yemen durante su discurso en la ONU.",
+      "cuerpo": "El ministro de Asuntos Exteriores de Omán, Badr al-Busaidi, solicitó cooperación regional para restablecer la navegación en el estrecho de Ormuz, una ruta bloqueada de facto y vigilada por el régimen iraní. En paralelo, una coalición de ochenta países reclamó la reapertura inmediata del paso y condenó los ataques atribuidos a Irán y a los rebeldes hutíes, los cuales incrementan los riesgos para el comercio internacional y la circulación en la región.",
+      "guion": "Omán pide cooperación internacional para destrabar el estrecho de Ormuz",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T07:20:26.349Z",
+      "claves": [
+        "Omán reclamó esfuerzos conjuntos para destrabar la navegación en el estrecho de Ormuz.",
+        "El canciller omaní pidió una salida política al conflicto en Yemen ante la ONU.",
+        "Una coalición internacional exigió la reapertura de la ruta y cuestionó las acciones de Irán."
+      ],
+      "seSabe": [
+        "El ministro de Asuntos Exteriores de Omán pidió cooperación regional para restablecer la navegación en el estrecho de Ormuz.",
+        "El funcionario reclamó una salida política para la crisis en Yemen ante la Asamblea General de las Naciones Unidas.",
+        "Una coalición de ochenta países reclamó ante la ONU la reapertura inmediata del estrecho de Ormuz."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El ministro de Asuntos Exteriores de Omán pidió cooperación internacional para restablecer la navegación en el estrecho de Ormuz y hallar una salida política al conflicto en Yemen durante su intervención ante la ONU.",
+      "etiquetas": [
+        "Omán",
+        "Estrecho de Ormuz",
+        "Naciones Unidas",
+        "Yemen",
+        "Navegación"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/america/mundo/2026/09/27/oman-pidio-cooperacion-para-restablecer-la-navegacion-en-el-estrecho-de-ormuz-y-frenar-la-crisis-de-yemen/",
+          "fecha": "2026-09-27T07:12:45.000Z",
+          "oficial": false,
+          "aporte": "Detalló el pedido del ministro omaní y la declaración de la coalición internacional ante la ONU."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "eocxo1",
+          "titulo": "EEUU e Irán negocian una salida gradual de la guerra con el estrecho de Ormuz como moneda de cambio",
+          "fecha": "2026-09-25T10:49:22.000Z",
+          "ruta": "/nota/eeuu-e-iran-negocian-una-salida-gradual-de-la-guerra-con-el-estrecho-eocxo1"
+        },
+        {
+          "id": "1olmc8o",
+          "titulo": "Bomba en Racing: el vice Lacunza pidió licencia en plena crisis",
+          "fecha": "2026-09-18T01:49:09.000Z",
+          "ruta": "/nota/bomba-en-racing-el-vice-lacunza-pidio-licencia-en-plena-crisis-1olmc8o"
         }
       ],
       "verificacion": {
