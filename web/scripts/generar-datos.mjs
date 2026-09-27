@@ -254,6 +254,13 @@ const direcciones = slugsConocidos({
 // las cuenta en el resumen de las 21.
 const esperandoCuerpo = [];
 
+/** ¿El título o la bajada son de lo que no se publica nunca (REGLAS_SEMAFORO.nunca)? */
+function nuncaSePublica(nota) {
+  const palabras = new Set(sinTildesMin(`${nota.titulo ?? ''} ${nota.copete ?? ''}`).split(/[^a-z0-9ñ]+/));
+  return (REGLAS_SEMAFORO.nunca ?? []).some((p) => palabras.has(sinTildesMin(p)));
+}
+const sinTildesMin = (s) => String(s).normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
+
 function notaPublicada(n) {
   if (RETIRADAS_A_MANO.has(n.id)) return null;
   const d = estado.decisiones[n.id];
@@ -331,6 +338,10 @@ function notaPublicada(n) {
   // Lo corregido a mano manda (web/data/correcciones.json), y va antes de
   // mirar el cuerpo: el cuerpo también se puede escribir ahí (27/09).
   const corregida = conCorreccion(nota, CORRECCIONES);
+  // Lo que no se publica nunca (las listas de sepelios), mirado en el texto
+  // FINAL: el título de la fuente puede ser otro y el texto venir del panel,
+  // escrito con una página que traía las necrológicas pegadas (27/09).
+  if (!humana && nuncaSePublica(corregida)) return null;
   // SIN CUERPO NO SE PUBLICA (25/09): una nota automática sin cuerpo de
   // verdad (70 palabras o más, distinto de la bajada) queda "esperando
   // cuerpo" y no aparece en ninguna lista, ni en el feed, el sitemap o las

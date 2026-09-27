@@ -6,6 +6,7 @@
 //     historia en dos secciones.
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
+import fs from 'node:fs';
 import { aplicarFichas } from '../ingesta/lectura-ia.mjs';
 import { paraPruebas, exigirMedios } from '../ingesta/ingesta.mjs';
 import { REGLAS_SEMAFORO } from '../ingesta/fuentes.mjs';
@@ -60,4 +61,18 @@ test('la portada no muestra nada de más de 72 horas y no repite una historia en
   assert.ok(ids.includes('a1'));
   assert.ok(!ids.includes('a2'), 'la misma historia no completa otra sección');
   assert.ok(!ids.includes('a3'), 'nada de más de 72 horas');
+});
+
+test('las necrológicas que El Diario pega debajo de cada nota no se leen como la nota (27/09)', async () => {
+  const { extraerTexto } = await import('../ingesta/articulo.mjs');
+  const nota = '<article><p>Los alumnos de la escuela San José transforman plantas aromáticas en productos naturales que venden en la feria del barrio.</p><p>El proyecto empezó este año con el acompañamiento de las docentes de ciencias naturales y ya tiene pedidos de toda la ciudad.</p></article>';
+  const necro = Array.from({ length: 8 }, (_, i) => `<p>Falleció el ${i + 10} de septiembre a los 80 años. Sus restos fueron inhumados en el Cementerio Municipal, previo oficio religioso en sala velatoria. Casa de duelo: calle ${i}. Servicios de Sepelios de la Cooperativa de Electricidad.</p>`).join('');
+  const texto = extraerTexto(`${nota}<div class="necrologicas-container">${necro}</div>`, { minimo: 50 });
+  assert.match(texto, /plantas aromáticas/);
+  assert.doesNotMatch(texto, /sepelios|casa de duelo|inhumados/i);
+});
+
+test('lo que no se publica nunca se mira también en el texto final (el panel pudo escribir sobre sepelios)', () => {
+  const g = fs.readFileSync(new URL('../web/scripts/generar-datos.mjs', import.meta.url), 'utf8');
+  assert.match(g, /if \(!humana && nuncaSePublica\(corregida\)\) return null;/);
 });

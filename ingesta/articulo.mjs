@@ -48,6 +48,12 @@ function limpiar(html) {
 // Lo que aparece en los pies y menús de los medios y no es la nota.
 const RUIDO = /(^|\s)(compartir|seguinos|suscri|newsletter|leé también|lee también|leer más|te puede interesar|todos los derechos|©|copyright|publicidad|comentarios|whatsapp|facebook|twitter|outdated browser|navegador desactualizado)(\s|$|:)/i;
 
+// Las necrológicas que El Diario Balcarce pone debajo de cada nota
+// (necrologicas-container): párrafos largos y seguidos, así que el tramo más
+// largo de la página era ése y no la nota. El 27/09 la IA escribió "servicios
+// de sepelios" para una nota sobre alumnos del San José. No se leen nunca.
+const NECROLOGICA = /casa de duelo|sala velatoria|servicios? de sepelios?|inhumaci[oó]n|restos (fueron|ser[aá]n) inhumados/i;
+
 // Cuánto HTML puede haber entre dos párrafos de la MISMA nota: una
 // publicidad, una foto con epígrafe o un "leé también" en el medio. Lo
 // relacionado del costado o del pie está mucho más lejos, separado por menús
@@ -66,7 +72,7 @@ function tramoPrincipal(html) {
   let actual = null;
   for (const m of html.matchAll(/<p(?:\s[^>]*)?>([\s\S]*?)<\/p>/gi)) {
     const t = limpiar(m[1]);
-    if (t.length < 50 || RUIDO.test(t)) continue;
+    if (t.length < 50 || RUIDO.test(t) || NECROLOGICA.test(t)) continue;
     const inicio = m.index;
     if (!actual || inicio - actual.fin > SALTO_MAXIMO) {
       actual = { parrafos: [], largo: 0, fin: 0 };
@@ -91,7 +97,7 @@ function parrafosDeAtom(xml) {
     .replace(/<(br|\/p|\/div|\/h\d|\/li|\/blockquote)[^>]*>/gi, '\n')
     .split('\n')
     .map(limpiar)
-    .filter((t) => t.length >= 50 && !RUIDO.test(t))
+    .filter((t) => t.length >= 50 && !RUIDO.test(t) && !NECROLOGICA.test(t))
     .filter((t, i, todos) => todos.indexOf(t) === i);
 }
 
