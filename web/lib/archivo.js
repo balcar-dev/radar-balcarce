@@ -41,8 +41,12 @@ export function idsRetiradosAMano(json) {
   return new Set(Object.keys(notas).filter((id) => notas[id] && notas[id].motivo));
 }
 
-/** Los campos que se pueden corregir a mano en web/data/correcciones.json. */
-export const CAMPOS_CORREGIBLES = ['titulo', 'copete', 'seccion'];
+/** Los campos que se pueden corregir a mano en web/data/correcciones.json.
+ *  El cuerpo, desde el 27/09: Hernán pidió que Claude escriba el de las notas
+ *  aprobadas que esperaban a Gemini ("hacé todo con Claude"). Se escribe con
+ *  el mismo criterio (CRITERIO-EDITORIAL.md § 12), contra el texto de las
+ *  fuentes, y la nota lo dice en "por". */
+export const CAMPOS_CORREGIBLES = ['titulo', 'copete', 'seccion', 'cuerpo'];
 
 /**
  * Las correcciones a mano (web/data/correcciones.json, 27/09): el título, la

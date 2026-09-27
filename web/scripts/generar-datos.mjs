@@ -222,7 +222,10 @@ const intentos = podarIntentos(intentosAntes ?? {});
 if (enLaNube) {
   const previas = previasDeLaPortada([...(archivoAnterior.notas ?? []), ...(anterior.notas ?? [])]);
   const fechaParaLista = (n) => (n.cuando === 'sin fecha en la fuente' ? (vistoAntes[n.id] ?? ahoraISO) : n.fecha);
+  // Lo que ya tiene el cuerpo escrito en correcciones.json no se le pide a
+  // Gemini: sería gastar cupo en algo que después no se usa (27/09).
   const paraReescribir = (ultima.notas ?? [])
+    .filter((n) => !CORRECCIONES.get(n.id)?.cuerpo)
     .filter((n) => previas[n.id] || vigenteEnPortada({ fecha: fechaParaLista(n) }));
   // El archivo va también como fuente de ANTECEDENTES: lo que el sitio ya
   // publicó sobre el mismo tema en los últimos 30 días (CRITERIO-EDITORIAL.md).
@@ -325,16 +328,18 @@ function notaPublicada(n) {
     // IA (extrasParaLaWeb en reels/reescritura.mjs).
     ...extrasParaLaWeb(deLaDecision, auto),
   }, direcciones);
+  // Lo corregido a mano manda (web/data/correcciones.json), y va antes de
+  // mirar el cuerpo: el cuerpo también se puede escribir ahí (27/09).
+  const corregida = conCorreccion(nota, CORRECCIONES);
   // SIN CUERPO NO SE PUBLICA (25/09): una nota automática sin cuerpo de
   // verdad (70 palabras o más, distinto de la bajada) queda "esperando
   // cuerpo" y no aparece en ninguna lista, ni en el feed, el sitemap o las
   // redes (todo sale de acá). Lo que publicó una persona se respeta.
-  if (!humana && !tieneCuerpo(nota)) {
-    if (vigenteEnPortada(nota)) esperandoCuerpo.push(n.id);
+  if (!humana && !tieneCuerpo(corregida)) {
+    if (vigenteEnPortada(corregida)) esperandoCuerpo.push(n.id);
     return null;
   }
-  // Lo corregido a mano manda (web/data/correcciones.json).
-  return conCorreccion(nota, CORRECCIONES);
+  return corregida;
 }
 
 // Lo que viene de las fuentes. Las notas propias se suman más abajo, después

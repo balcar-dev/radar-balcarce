@@ -72,3 +72,31 @@ test('ya no hay secciones Región ni Provincia: lo de afuera que no encaja va a 
   const { SECCIONES } = await import('../web/lib/datos.js');
   assert.ok(!SECCIONES.some((s) => ['Región', 'Provincia'].includes(s.nombre)));
 });
+
+test('un medio de Balcarce que copia una noticia de afuera no la vuelve "de Balcarce" (27/09, Malvinas)', async () => {
+  const { ingestar } = await import('../ingesta/ingesta.mjs');
+  const f = (id, medio, alcance) => ({ id, nombre: medio, medio, url: `https://${id}.test/rss`, tipo: 'rss', alcance, peso: alcance === 'local' ? 28 : 10 });
+  const fuentes = [f('local1', 'Radio de Acá', 'local'), f('nac1', 'Nacional Uno', 'pais'), f('nac2', 'Nacional Dos', 'pais')];
+  const item = (t, l, d = `${t}. Más detalles de la nota.`) => `<item><title>${t}</title><link>https://x.test/${l}</link><pubDate>${new Date().toUTCString()}</pubDate><description>${d}</description></item>`;
+  const malvinas = 'Reino Unido asegura que Argentina no tiene capacidad para tomar las Malvinas';
+  const autodromo = 'Reabre el autódromo con una multitud en las tribunas';
+  const feeds = {
+    'https://local1.test/rss': [item(malvinas, 'l1'), item(autodromo, 'l2', `${autodromo}. Miles de personas llegaron a Balcarce para la reapertura.`)],
+    'https://nac1.test/rss': [item(malvinas, 'n1'), item(autodromo, 'n2')],
+    'https://nac2.test/rss': [item(malvinas, 'm1')],
+  };
+  const xml = (url) => `<rss><channel>${(feeds[url] ?? []).join('')}</channel></rss>`;
+  const fetchOriginal = globalThis.fetch;
+  globalThis.fetch = async (url) => ({ ok: true, status: 200, headers: new Map(), text: async () => xml(url), arrayBuffer: async () => new TextEncoder().encode(xml(url)).buffer });
+  try {
+    const r = await ingestar({ fuentes, silencioso: true, memoria: null });
+    const m = r.notas.find((n) => /Malvinas/.test(n.titulo));
+    assert.ok(m, 'la de Malvinas entra (la cuentan tres medios)');
+    assert.equal(m.local, false, 'es una noticia de afuera aunque la haya copiado un medio de acá');
+    assert.notEqual(m.medio, 'Radio de Acá', 'la principal es de un medio de afuera');
+    const a = r.notas.find((n) => /autódromo/.test(n.titulo));
+    assert.equal(a.local, true, 'lo que el medio de acá cuenta de Balcarce sigue siendo de acá');
+  } finally {
+    globalThis.fetch = fetchOriginal;
+  }
+});

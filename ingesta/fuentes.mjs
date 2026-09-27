@@ -1009,16 +1009,17 @@ export const REGLAS_SEMAFORO = {
   // "paro", "protesta" y "reclamo", a pedido de la redacción: son política
   // de todos los días, y con ellas frenando, Política no publicaba nada.
   // Siguen esperando lo que acusa, lo que muere y lo que involucra a chicos.
+  // Lo que no se publica nunca, aparte de la lista roja: las listas de
+  // "servicios de sepelios" de la Cooperativa (nombres de personas fallecidas).
+  // Salieron diez veces, cada una en una sección distinta, y Hernán decidió
+  // (27/09) que no se hacen: es sensible y no hay una fuente oficial.
+  nunca: ['sepelio', 'sepelios', 'inhumación', 'inhumacion', 'inhumaciones'],
   amarillo: ['denuncia', 'denunció', 'denuncio', 'detenido', 'acusado', 'imputado',
     'hospital', 'muerte', 'falleció', 'fallecio', 'investigación', 'investigacion',
     // Una muerte se llame como se llame. "Murió Mario Torres" salió sola
     // porque el filtro sólo conocía "muerte" y "falleció": es una necrológica,
     // y las necrológicas no salen sin fuente firmada.
     'murió', 'murio', 'muere', 'fallece', 'deceso', 'velatorio',
-    // Las listas de "servicios de sepelios" de la Cooperativa: nombres de
-    // personas fallecidas. Salieron diez veces, cada una en una sección
-    // distinta (27/09).
-    'sepelio', 'sepelios', 'inhumación', 'inhumacion', 'inhumaciones',
     // Policiales entró a las secciones automáticas el 21/09. Esto es lo que
     // hace que eso sea seguro: lo grave sigue esperando a una persona.
     'homicidio', 'asesinato', 'asesinado', 'asesinaron', 'cadáver', 'cadaver',

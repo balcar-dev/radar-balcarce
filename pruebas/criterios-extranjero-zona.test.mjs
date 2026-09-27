@@ -9,7 +9,7 @@ import assert from 'node:assert/strict';
 import { aplicarFichas } from '../ingesta/lectura-ia.mjs';
 import { paraPruebas, exigirMedios } from '../ingesta/ingesta.mjs';
 import { REGLAS_SEMAFORO } from '../ingesta/fuentes.mjs';
-import { armarTapa, DIAS_PARA_COMPLETAR } from '../web/lib/datos.js';
+import { armarTapa, HORAS_PARA_COMPLETAR } from '../web/lib/datos.js';
 
 const { semaforo } = paraPruebas;
 const ficha = (extra = {}) => ({ ambito: 'internacional', lugar: 'Bakú', seccion: 'Automovilismo', impacto: 'nulo', razon: 'ninguna', importancia: 'media', publicidad: false, anuncio: false, chimento: false, porque: '', tema: 'x', ...extra });
@@ -34,15 +34,15 @@ test('lo de la zona que es tema de Balcarce sale solo, aunque lo cuente un solo 
   assert.equal(portada[0].semaforo, 'verde');
 });
 
-test('las listas de sepelios esperan a una persona (salieron diez veces, en cualquier sección)', () => {
+test('las listas de sepelios no se publican nunca: es sensible (Hernán, 27/09)', () => {
   const n = { titulo: 'Informan los servicios de sepelios de la Cooperativa de Electricidad', cuerpo: 'Se informan las inhumaciones.', categorias: [], alcance: 'local', local: true };
   const s = semaforo(n, 'Balcarce', 80);
-  assert.equal(s.color, 'amarillo');
-  assert.match(s.motivo, /sepelio/);
+  assert.equal(s.color, 'rojo');
+  assert.match(s.motivo, /sepelios/);
 });
 
-test('la portada se completa con notas de hasta 7 días y no repite una historia en dos secciones', () => {
-  assert.equal(DIAS_PARA_COMPLETAR, 7);
+test('la portada no muestra nada de más de 72 horas y no repite una historia en dos secciones', () => {
+  assert.equal(HORAS_PARA_COMPLETAR, 72);
   const ahora = Date.parse('2026-09-27T22:00:00Z');
   const hace = (d) => new Date(ahora - d * 864e5).toISOString();
   const cuerpo = 'palabra '.repeat(90);
@@ -53,11 +53,11 @@ test('la portada se completa con notas de hasta 7 días y no repite una historia
   const archivo = [
     { id: 'a1', titulo: 'Informan los servicios de la Cooperativa de Electricidad', seccion: 'Balcarce', local: true, fecha: hace(2), cuerpo },
     { id: 'a2', titulo: 'Informan los servicios de la Cooperativa de Electricidad', seccion: 'Fútbol', local: true, fecha: hace(3), cuerpo },
-    { id: 'a3', titulo: 'Una nota de hace nueve días', seccion: 'Deportes', local: true, fecha: hace(9), cuerpo },
+    { id: 'a3', titulo: 'Una nota de hace cuatro días', seccion: 'Deportes', local: true, fecha: hace(4), cuerpo },
   ];
   const { bloques } = armarTapa(hoy, undefined, { archivo, ahora });
   const ids = bloques.flatMap(([, ns]) => ns.map((n) => n.id));
   assert.ok(ids.includes('a1'));
   assert.ok(!ids.includes('a2'), 'la misma historia no completa otra sección');
-  assert.ok(!ids.includes('a3'), 'nada de más de 7 días');
+  assert.ok(!ids.includes('a3'), 'nada de más de 72 horas');
 });

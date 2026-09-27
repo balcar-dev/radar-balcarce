@@ -286,13 +286,15 @@ test('"Seguí leyendo" no repite una nota con el mismo titular', () => {
 
 import { correccionesAMano, conCorreccion } from '../web/lib/archivo.js';
 
-test('las correcciones a mano mandan sobre el título, la bajada y la sección; sin motivo no valen', () => {
+test('las correcciones a mano mandan sobre el título, la bajada, la sección y el cuerpo; sin motivo no valen', () => {
   const c = correccionesAMano({ notas: {
     a: { titulo: 'El Concejo pide bajar las tasas a taxis y remises', seccion: 'Política', motivo: 'el título exageraba' },
     b: { titulo: 'Sin motivo' },
-    x: { cuerpo: 'no se corrige el cuerpo', motivo: 'no' },
+    x: { cuerpo: 'El cuerpo que escribió Claude a pedido (27/09).', motivo: 'esperaba a Gemini' },
+    y: { autor: 'un campo que no se corrige', motivo: 'no' },
   } });
-  assert.deepEqual([...c.keys()], ['a']);
+  assert.deepEqual([...c.keys()], ['a', 'x']);
+  assert.equal(conCorreccion({ id: 'x', cuerpo: null }, c).cuerpo, 'El cuerpo que escribió Claude a pedido (27/09).');
   const nota = { id: 'a', titulo: 'El Concejo aprueba reducir tributos a taxis y remises', seccion: 'Balcarce', cuerpo: 'x' };
   const r = conCorreccion(nota, c);
   assert.equal(r.titulo, 'El Concejo pide bajar las tasas a taxis y remises');

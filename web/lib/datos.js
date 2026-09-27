@@ -6,7 +6,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { rutaDeNota, idDeRuta } from './ruta.js';
-import { vigenteEnPortada } from './archivo.js';
+import { vigenteEnPortada, HORAS_EN_PORTADA } from './archivo.js';
 import { sinNotasRepetidas, titularesParecidos } from './texto.js';
 import { sinTildes } from './texto.js';
 import { tieneCuerpo, tieneRespaldo } from './cuerpo.js';
@@ -231,10 +231,11 @@ export function ordenarPortada(notas = []) {
   return { principal, resto: porHora.filter((n) => n.id !== principal.id) };
 }
 
-/** Hasta cuántos días atrás se va al archivo a completar una sección. Era 14:
- *  una nota de "hace 9 días" en la portada de un medio de noticias se lee como
- *  un sitio abandonado (27/09). */
-export const DIAS_PARA_COMPLETAR = 7;
+/** Hasta cuántas horas atrás se va al archivo a completar una sección: las
+ *  mismas 72 de la portada (Hernán, 27/09: "no puede salir nada que tenga más
+ *  de 72 horas publicado"). Eran 14 días: salían notas de "hace 9 días". Del
+ *  archivo sólo vuelve lo de estas 72 horas que la ingesta ya no trae. */
+export const HORAS_PARA_COMPLETAR = HORAS_EN_PORTADA;
 /** Cuántas notas muestra cada sección de la portada. */
 export const NOTAS_POR_SECCION = 3;
 
@@ -287,7 +288,7 @@ export function armarTapa(notasSueltas = [], orden = SECCIONES.map((s) => s.nomb
   // Del archivo: lo que no está en la portada, con hora, con cuerpo de verdad,
   // no propio (una nota del dólar de hace cinco días no completa nada), de los
   // últimos 14 días. Ya viene sin lo que el semáforo retiró (lib/archivo.js).
-  const corte = Number(ahora) - DIAS_PARA_COMPLETAR * 24 * 3600e3;
+  const corte = Number(ahora) - HORAS_PARA_COMPLETAR * 3600e3;
   const idsPortada = new Set(notas.map((n) => n.id));
   const viejas = archivo
     .filter((n) => n?.id && !idsPortada.has(n.id) && !n.sinFecha && !n.propia

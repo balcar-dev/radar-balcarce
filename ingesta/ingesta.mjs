@@ -420,6 +420,14 @@ function esDeBalcarce(nota) {
   return PALABRAS_LOCALES.some((p) => contiene(titulo, p));
 }
 
+/** ¿La nota nombra algo de Balcarce en el título o al comienzo del texto?
+ *  Sirve para saber si un medio de acá cuenta algo de acá o copia algo de
+ *  afuera (el cruce, 27/09). */
+function mencionaBalcarce(nota) {
+  const texto = normalizar(`${nota.titulo ?? ''} ${String(nota.cuerpo ?? '').slice(0, 600)}`);
+  return PALABRAS_LOCALES.some((p) => contiene(texto, p));
+}
+
 /**
  * ¿Por qué no entra esta nota de un medio de afuera? Mira la sección que le
  * puso el propio medio (los tramos de la dirección: infobae.com/mexico/…,
@@ -649,6 +657,11 @@ export function semaforoDelTexto(textoCrudo, { soloMenores = false } = {}) {
 function semaforo(nota, seccion, puntaje, medios = cuantosMedios(nota)) {
   const sensible = semaforoDelTexto(`${nota.titulo} ${nota.cuerpo.slice(0, 600)}`);
   if (sensible) return sensible;
+  // Lo que no se publica nunca (las listas de sepelios, Hernán 27/09). Sólo
+  // el título: la palabra suelta en un texto largo no alcanza.
+  if ((REGLAS_SEMAFORO.nunca ?? []).some((p) => contiene(normalizar(String(nota.titulo ?? '')), p))) {
+    return { color: 'rojo', motivo: 'lista de sepelios: no se publica' };
+  }
   // La cotización del dólar no sale como nota: está en /dolar. Sólo el título.
   const delTitulo = normalizar(String(nota.titulo ?? ''));
   if ((REGLAS_SEMAFORO.cotizacion ?? []).some((p) => contiene(delTitulo, p))) {
@@ -1301,7 +1314,18 @@ export async function ingestar({
     // nota): la que ya se publicó si hay una; si no, la primera que salió.
     // De Balcarce si hay alguna de acá. Así, cuando otro medio se suma a la
     // historia, la nota no cambia de dirección ni aparece otra vez.
-    const base = locales.length ? locales : ns;
+    //
+    // Un medio de Balcarce que cuenta lo mismo que los nacionales sin nombrar
+    // nada de acá está copiando una noticia de afuera (27/09: Malvinas y el
+    // Reino Unido, un incendio en Misiones, una pelea de UFC, todas "de
+    // Balcarce" por venir de un medio local). Esa historia es de afuera y se
+    // rige por lo de afuera: la principal es de un medio de afuera y pide los
+    // medios de su sección. Si la cuentan sólo medios de acá, sigue siendo de
+    // acá (la lectura con IA decide si de verdad lo es).
+    const hayDeAfuera = ns.some((n) => n.alcance !== 'local');
+    const nombraAca = ns.some((n) => n.nombraBalcarce) || locales.some(mencionaBalcarce);
+    const historiaDeAca = locales.length > 0 && (!hayDeAfuera || nombraAca);
+    const base = historiaDeAca ? locales : ns.filter((n) => n.alcance !== 'local');
     const conocida = base.find((n) => idsConocidos?.has(idDe(n.enlaceFeed ?? n.enlace)));
     const principal = conocida ?? [...base].sort((a, b) => a.fecha - b.fecha)[0];
     const tambien = ns.filter((n) => n !== principal);
