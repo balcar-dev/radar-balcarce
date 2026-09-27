@@ -1,5 +1,5 @@
 {
-  "exportado": "2026-09-27T04:30:25.281Z",
+  "exportado": "2026-09-27T04:40:13.028Z",
   "decisiones": {
     "1951120": {
       "estado": "automatica",
@@ -30360,43 +30360,13 @@
     },
     "o48c9g": {
       "estado": "automatica",
-      "titulo": "Carlos Melconian advierte sobre el aumento de la informalidad laboral en el país",
-      "copete": "El economista analizó la situación económica nacional y alertó sobre el crecimiento del trabajo no registrado. Además, cuestionó el rumbo de la gestión actual frente a la inflación.",
-      "cuerpo": "El economista Carlos Melconian advirtió durante una entrevista televisiva que los trabajadores formales son por primera vez menos que los informales.\n\nDurante su exposición, el expresidente del Banco Nación sostuvo que el panorama económico nacional se mantendrá en una situación compleja hasta las próximas elecciones. Asimismo, cuestionó la estrategia oficial para reducir la inflación y señaló dificultades en el acceso al crédito y un aumento de la morosidad en sectores vulnerables.\n\nEl especialista también remarcó la necesidad de lograr equilibrios entre el empleo, el poder adquisitivo y las metas inflacionarias, y advirtió sobre la aparición de economías informales de subsistencia vinculadas a necesidades básicas de la población.",
-      "guion": "Carlos Melconian advierte sobre el aumento de la informalidad laboral en el país",
-      "deIA": true,
+      "titulo": null,
+      "copete": null,
+      "cuerpo": null,
+      "guion": null,
+      "deIA": null,
       "por": "ia",
-      "cuando": "2026-09-27T04:30:25.220Z",
-      "claves": [
-        "Melconian afirmó que los trabajadores formales son menos que los informales.",
-        "Atribuyó los datos a un informe del Indec sobre el crecimiento del cuentapropismo.",
-        "Cuestionó el rumbo de la gestión económica y previó un panorama gris hasta las elecciones."
-      ],
-      "noConfirmado": [
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "El economista Carlos Melconian advirtió sobre el récord de la informalidad laboral en el país y criticó el rumbo de la gestión económica nacional.",
-      "etiquetas": [
-        "economia",
-        "carlos melconian",
-        "empleo",
-        "informalidad",
-        "indec"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "La Nación",
-          "enlace": "https://www.lanacion.com.ar/economia/carlos-melconian-economista-es-la-primera-vez-en-la-historia-que-los-trabajadores-formales-son-menos-nid27092026/",
-          "fecha": "2026-09-27T04:26:14.000Z",
-          "oficial": false,
-          "aporte": null
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      }
+      "cuando": "2026-09-27T04:40:12.988Z"
     }
   },
   "horarios": {
