@@ -1,5 +1,5 @@
 {
-  "exportado": "2026-09-27T02:50:13.401Z",
+  "exportado": "2026-09-27T03:01:00.613Z",
   "decisiones": {
     "1951120": {
       "estado": "automatica",
@@ -3808,13 +3808,66 @@
     },
     "10e13dt": {
       "estado": "automatica",
-      "titulo": "Ferroviarios goleó en la final del torneo local",
-      "copete": "Ferroviarios se consagró campeón este fin de semana tras golear en el partido decisivo del Play Off de la Liga Balcarceña de Fútbol.",
-      "cuerpo": null,
-      "guion": "Ferroviarios goleó en la final del torneo local",
+      "titulo": "Informan los servicios de sepelios en Balcarce",
+      "copete": "Se dieron a conocer los avisos fúnebres y servicios de sepelios prestados en el distrito durante los últimos meses.",
+      "cuerpo": "Durante los meses de mayo, agosto y septiembre de 2026, la Cooperativa de Electricidad General Balcarce Limitada registró los avisos fúnebres de vecinos de la ciudad y de la zona rural, como la localidad de Los Pinos.\n\nLos servicios incluyeron los traslados a salas velatorias, los oficios religiosos correspondientes y las posteriores inhumaciones en el Cementerio Municipal o cremaciones en el distrito de Miramar, según los datos difundidos por la entidad prestataria.\n\nEstas publicaciones forman parte del registro habitual de servicios de sepelios que la cooperativa local comunica a la comunidad de Balcarce para el conocimiento de familiares y allegados.",
+      "guion": "Informan los servicios de sepelios en Balcarce",
       "deIA": true,
       "por": "ia",
-      "cuando": "2026-09-20T04:09:39.466Z"
+      "cuando": "2026-09-27T03:01:00.524Z",
+      "claves": [
+        "Se registraron diversos servicios de sepelios en el distrito.",
+        "Las prestaciones estuvieron a cargo de la cooperativa local.",
+        "Los procedimientos incluyeron inhumaciones y cremaciones."
+      ],
+      "seSabe": [
+        "La Cooperativa de Electricidad General Balcarce Limitada informó los servicios de sepelios correspondientes a los meses de mayo, agosto y septiembre de 2026.",
+        "Las inhumaciones se realizaron principalmente en el Cementerio Municipal y las cremaciones en un establecimiento privado de Miramar."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "La cooperativa de electricidad dio a conocer los registros de los servicios de sepelios y avisos fúnebres llevados adelante en distintas fechas en el distrito de Balcarce.",
+      "etiquetas": [
+        "servicios fúnebres",
+        "cooperativa de electricidad",
+        "Balcarce",
+        "fallecimientos"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/ferroviarios-goleo-en-la-final-del-play-off-y-definira-con-san-manuel-238",
+          "fecha": null,
+          "oficial": false,
+          "aporte": "Detalló los avisos fúnebres y los servicios de sepelios prestados por la cooperativa local."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "mlw0og",
+          "titulo": "Ferroviarios goleó en la final del Play O...",
+          "fecha": "2026-09-18T05:43:46.736Z",
+          "ruta": "/nota/ferroviarios-goleo-en-la-final-del-play-o-mlw0og"
+        },
+        {
+          "id": "v1u9f1",
+          "titulo": "Ferroviarios gana la primera final de la Copa de Plata en Balcarce",
+          "fecha": "2026-09-23T03:05:01.594Z",
+          "ruta": "/nota/ferroviarios-gano-la-primera-final-de-la-copa-de-plata-v1u9f1"
+        },
+        {
+          "id": "1gk282j",
+          "titulo": "Ferroviarios ganó la final del Apertura por penales",
+          "fecha": "2026-09-21T00:42:06.000Z",
+          "ruta": "/nota/ferroviarios-gano-la-final-del-apertura-por-penales-1gk282j"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
     },
     "66itsq": {
       "estado": "automatica",
@@ -27419,13 +27472,57 @@
     },
     "dsbyos": {
       "estado": "automatica",
-      "titulo": null,
-      "copete": null,
-      "cuerpo": null,
-      "guion": null,
-      "deIA": null,
+      "titulo": "Un estudio advierte que sectores de mayor crecimiento pierden empleo",
+      "copete": "Un informe de la Universidad de Buenos Aires revela que gran parte de las actividades con mayor expansión económica registra una caída en la creación de puestos de trabajo registrados.",
+      "cuerpo": "Un estudio elaborado por el Centro RA de la Universidad de Buenos Aires advierte que ocho de las diez ramas con mayor expansión económica redujeron sus puestos de trabajo en el sector privado entre diciembre de 2023 y mayo de 2026. Según el informe difundido, el agro lideró el crecimiento con una suba del cuarenta por ciento y trece mil nuevos empleos, seguido por la intermediación financiera, minería y turismo, sectores que registraron caídas en la contratación.",
+      "guion": "Un estudio advierte que sectores de mayor crecimiento pierden empleo",
+      "deIA": true,
       "por": "ia",
-      "cuando": "2026-09-27T02:00:53.740Z"
+      "cuando": "2026-09-27T03:01:00.524Z",
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Un informe universitario revela que varios de los sectores de mayor crecimiento económico en el país registran una caída en la creación de empleo registrado y un aumento de la informalidad laboral.",
+      "etiquetas": [
+        "economia",
+        "empleo",
+        "universidad de buenos aires",
+        "mercado de trabajo"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Ámbito",
+          "enlace": "https://www.ambito.com/economia/desafio-del-modelo-milei-ocho-los-diez-sectores-mayor-crecimiento-tienen-indice-negativo-empleo-n6327084",
+          "fecha": "2026-09-27T00:57:00.000Z",
+          "oficial": false,
+          "aporte": "Aportó los datos del informe del Centro RA de la Universidad de Buenos Aires sobre el EMAE y la evolución del empleo sectorial."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1r8jcww",
+          "titulo": "Advierten que los sectores de mayor crecimiento económico no generan empleo",
+          "fecha": "2026-09-25T23:57:19.000Z",
+          "ruta": "/nota/advierten-que-los-sectores-de-mayor-crecimiento-economico-no-generan-1r8jcww"
+        },
+        {
+          "id": "tnndx1",
+          "titulo": "El boom exportador no siempre derrama: qué provincias lograron transformar el crecimiento en más salarios y empleo",
+          "fecha": "2026-09-24T15:05:50.000Z",
+          "ruta": "/nota/el-boom-exportador-no-siempre-derrama-que-provincias-lograron-tnndx1"
+        },
+        {
+          "id": "1fpclkk",
+          "titulo": "Milei ante inversionistas en Nueva York: \"Somos los que más hicimos por los sectores más vulnerables por el solo hecho de bajar la inflación\"",
+          "fecha": "2026-09-23T20:44:03.000Z",
+          "ruta": "/nota/milei-ante-inversionistas-en-nueva-york-somos-los-que-mas-hicimos-por-1fpclkk"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
     },
     "14ozs7q": {
       "estado": "automatica",
@@ -28000,6 +28097,371 @@
           "fecha": "2026-09-26T22:06:22.264Z",
           "oficial": false,
           "aporte": "Detalles de la entrevista radial al músico balcarceño Matías Latorre sobre su vida y trayectoria artística."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "1xgs07k": {
+      "estado": "automatica",
+      "titulo": "Ciantini y el intendente presentan las TC Pick Up en Mar del Plata en Balcarce",
+      "copete": "José “Bocha” Ciantini y el intendente realizaron una recorrida al volante por Mar del Plata como antesala de la llegada de la categoría al Autódromo Juan Manuel Fangio.",
+      "cuerpo": "En la previa del regreso del automovilismo nacional al Autódromo Juan Manuel Fangio, el piloto José “Bocha” Ciantini y el jefe comunal llevaron adelante una exhibición por las calles de Mar del Plata al mando de una TC Pick Up.\n\nComo se había informado el 21 de septiembre, el evento automovilístico contará con la presencia de pilotos locales en un escenario renovado. Tras la presentación realizada en la ciudad balnearia, las actividades promocionales continuarán este viernes en Balcarce para palpitar la competencia oficial del fin de semana.",
+      "guion": "Ciantini y el intendente presentan las TC Pick Up en Mar del Plata en Balcarce",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T03:01:00.523Z",
+      "claves": [
+        "José “Bocha” Ciantini recorrió Mar del Plata con una TC Pick Up.",
+        "La actividad anticipa el regreso del automovilismo a Balcarce.",
+        "Este viernes habrá nuevas acciones promocionales en la ciudad.",
+        "La competencia se disputará en el Autódromo Juan Manuel Fangio."
+      ],
+      "seSabe": [
+        "José “Bocha” Ciantini y el intendente presentaron la actividad en Mar del Plata.",
+        "La exhibición se realizó al volante de una TC Pick Up.",
+        "Las actividades promocionales en Balcarce se realizarán este viernes."
+      ],
+      "noConfirmado": [
+        "No se detallaron los horarios ni las calles específicas que comprenderá la presentación prevista para este viernes en Balcarce."
+      ],
+      "etiquetas": [
+        "automovilismo",
+        "TC Pick Up",
+        "Autódromo Juan Manuel Fangio",
+        "José Bocha Ciantini",
+        "Balcarce",
+        "Mar del Plata"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/el-bocha-y-diego-ciantini-presentaron-sus-camionetas-450",
+          "fecha": null,
+          "oficial": false,
+          "aporte": "Informó sobre la recorrida en Mar del Plata y el anticipo de las actividades en Balcarce."
+        },
+        {
+          "medio": "Diario La Vanguardia",
+          "enlace": "https://www.diariolavanguardia.com/noticias/44901-el-bocha-ciantini-y-el-intendente-presentaron-en-mar-del-plata-la-actividad-de-las-tc-pick-up/",
+          "fecha": null,
+          "oficial": false,
+          "aporte": "Confirmó la exhibición de la TC Pick Up en la ciudad vecina junto al intendente."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1o216bo",
+          "titulo": "Los Ciantini presentaron las Pick Up para volver a correr en Balcarce",
+          "fecha": "2026-09-21T20:45:01.000Z",
+          "ruta": "/nota/los-ciantini-presentaron-las-pick-up-para-volver-a-correr-en-balcarce-1o216bo"
+        },
+        {
+          "id": "yy4073",
+          "titulo": "Así será el diseño de las Pick Up del “Bocha” y Diego Ciantini para correr en Balcarce",
+          "fecha": "2026-09-21T15:56:43.000Z",
+          "ruta": "/nota/asi-sera-el-diseno-de-las-pick-up-del-bocha-y-diego-ciantini-para-yy4073"
+        },
+        {
+          "id": "18cuo5p",
+          "titulo": "Adelanto: El Bocha y Diego Ciantini presentarán el lunes las Pick Up con las que correrán en Balcarce",
+          "fecha": "2026-09-17T13:38:07.000Z",
+          "ruta": "/nota/adelanto-el-bocha-y-diego-ciantini-presentaran-el-lunes-las-pick-up-18cuo5p"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      }
+    },
+    "50jq4b": {
+      "estado": "automatica",
+      "titulo": "Informan los servicios de sepelios de la Cooperativa de Electricidad en Balcarce",
+      "copete": "Se dieron a conocer los avisos fúnebres y los servicios de sepelios prestados por la Cooperativa de Electricidad en el distrito.",
+      "cuerpo": "La Cooperativa de Electricidad General Balcarce Limitada informó los distintos servicios de sepelios y traslados al Cementerio Municipal correspondientes a las personas fallecidas en las últimas semanas en el distrito, de acuerdo con los avisos publicados en el ámbito local.\n\nLos cronogramas incluyeron los horarios de los oficios religiosos en las salas velatorias habilitadas y las respectivas inhumaciones o cremaciones en servicios de sepelios organizados por la entidad cooperativa.\n\nEstos reportes habituales detallan la información institucional referida a los decesos registrados tanto en la planta urbana como en zonas rurales del partido de Balcarce.",
+      "guion": "Informan los servicios de sepelios de la Cooperativa de Electricidad en Balcarce",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T03:01:00.524Z",
+      "claves": [
+        "Se detallaron los servicios de sepelios de la Cooperativa de Electricidad.",
+        "Incluyó traslados al Cementerio Municipal y crematorios de la zona.",
+        "Los avisos corresponden a fallecimientos registrados en el distrito."
+      ],
+      "seSabe": [
+        "La Cooperativa de Electricidad General Balcarce Limitada presta los servicios de sepelios.",
+        "Se realizaron inhumaciones en el Cementerio Municipal y cremaciones en Miramar.",
+        "Se informaron las casas de duelo de las personas fallecidas."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "La Cooperativa de Electricidad dio a conocer los detalles de los servicios de sepelios y traslados al Cementerio Municipal en Balcarce.",
+      "etiquetas": [
+        "servicios fúnebres",
+        "Cooperativa de Electricidad",
+        "Balcarce",
+        "Cementerio Municipal"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/la-libertad-avaza-lanza-una-movida-para-sumar-respaldos-en-toda-provincia-al-planteo-de-milei-sobre-malvinas-869",
+          "fecha": null,
+          "oficial": false,
+          "aporte": "Aportó el listado de avisos fúnebres y servicios de sepelios de la Cooperativa de Electricidad."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "levx4q": {
+      "estado": "automatica",
+      "titulo": "Conocé cuáles son los videos más reproducidos en YouTube",
+      "copete": "La plataforma de videos detalló el listado con las producciones musicales y de entretenimiento con mayor visualización del momento a nivel nacional.",
+      "cuerpo": "YouTube recopiló las producciones musicales y de entretenimiento más reproducidas en el país, destacando entre las principales tendencias contenidos de artistas como La Joaqui, Emanero, Luck Ra, Soledad y Q' Lokura, entre otros. La plataforma, creada en dos mil cinco y adquirida por Google al año siguiente, registra un consumo diario masivo con cinco mil millones de reproducciones globales y quinientas horas de contenido subidas por minuto. En cuanto a su historia y evolución, el sitio ha atravesado diversos hitos desde su lanzamiento, alcanzando el reconocimiento como invento del año por la revista Time en dos mil seis, aunque también ha enfrentado cuestionamientos internacionales por la moderación de contenidos sensibles y la monetización de material riesgoso.",
+      "guion": "Conocé cuáles son los videos más reproducidos en YouTube",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T03:01:00.524Z",
+      "claves": [
+        "YouTube publicó el listado de los videos más reproducidos en el país.",
+        "El ranking incluye producciones musicales de referentes nacionales.",
+        "La plataforma registra cinco mil millones de visualizaciones diarias a nivel global.",
+        "El sitio repasa su evolución tecnológica a dos décadas de su creación."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "YouTube dio a conocer las tendencias con los videos más reproducidos del país, en un listado que incluye producciones musicales de diversos artistas nacionales.",
+      "etiquetas": [
+        "YouTube",
+        "tendencias",
+        "videos",
+        "música"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/tecno/2026/09/27/ranking-de-tendencias-en-youtube-argentina-los-10-videos-mas-reproducidos/",
+          "fecha": "2026-09-27T02:30:31.000Z",
+          "oficial": false,
+          "aporte": "Detalló el listado de los videos más reproducidos en YouTube y las estadísticas globales de consumo de la plataforma."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1msgl9y",
+          "titulo": "YouTube detalla los videos musicales y de entretenimiento más reproducidos",
+          "fecha": "2026-09-27T02:01:05.000Z",
+          "ruta": "/nota/youtube-detalla-los-videos-musicales-y-de-entretenimiento-mas-1msgl9y"
+        },
+        {
+          "id": "1lz37g8",
+          "titulo": "YouTube detalla su impacto global y las tendencias de visualización",
+          "fecha": "2026-09-27T01:15:43.000Z",
+          "ruta": "/nota/youtube-detalla-su-impacto-global-y-las-tendencias-de-visualizacion-1lz37g8"
+        },
+        {
+          "id": "1v5zuep",
+          "titulo": "YouTube expande a más países la opción de monetizar videos etiquetando productos de Amazon",
+          "fecha": "2026-09-23T23:34:00.000Z",
+          "ruta": "/nota/youtube-expande-a-mas-paises-la-opcion-de-monetizar-videos-1v5zuep"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "1gbqyce": {
+      "estado": "automatica",
+      "titulo": "Marta Minujín entrega un premio Oscar casero al actor Juan Minujín",
+      "copete": "La artista plástica agasajó a su sobrino con una estatuilla casera para reconocer su recorrido en producciones internacionales.",
+      "cuerpo": "El actor Juan Minujín visitó el atelier de su tía, la reconocida artista Marta Minujín, en Buenos Aires, donde recibió una estatuilla casera inspirada en los premios Oscar. El reconocimiento buscó celebrar la trayectoria internacional del intérprete, quien recientemente participó en Without Blood, el filme dirigido por Angelina Jolie donde compartió pantalla con Salma Hayek y Demián Bichir.\n\nTras el encuentro, el actor compartió registros de la reunión en redes sociales y destacó el valor afectivo del presente. No es la primera vez que ambos cruzan sus caminos creativos: en 2021 lanzaron de manera conjunta un mapa ilustrado para colorear que repasa la obra de la artista, incluyendo intervenciones emblemáticas como La Menesunda y el Lobo Marino de alfajores de Mar del Plata.",
+      "guion": "Marta Minujín entrega un premio Oscar casero al actor Juan Minujín",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T03:01:00.524Z",
+      "claves": [
+        "Marta Minujín agasajó a su sobrino Juan con una estatuilla casera.",
+        "El reconocimiento celebra la proyección internacional del actor.",
+        "El encuentro ocurrió tras la participación del intérprete en una película dirigida por Angelina Jolie.",
+        "Ambos colaboraron previamente en un mapa ilustrado didáctico sobre la obra de la artista."
+      ],
+      "seSabe": [
+        "Marta Minujín le entregó una estatuilla casera inspirada en los Oscar a su sobrino Juan Minujín.",
+        "El encuentro se realizó en el atelier de la artista en Buenos Aires.",
+        "El actor participó recientemente en la película Without Blood, dirigida por Angelina Jolie.",
+        "Ambos colaboraron en 2021 en un proyecto editorial de mapas para colorear inspirados en la obra de la artista."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "La artista Marta Minujín recibió a su sobrino Juan en su atelier de Buenos Aires y le entregó una estatuilla casera para celebrar su recorrido internacional en el cine.",
+      "etiquetas": [
+        "Marta Minujín",
+        "Juan Minujín",
+        "cine",
+        "arte",
+        "Buenos Aires"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/teleshow/2026/09/27/marta-minujin-sorprendio-a-su-sobrino-juan-con-un-oscar-casero-y-celebro-su-recorrido-internacional/",
+          "fecha": "2026-09-27T02:07:25.000Z",
+          "oficial": false,
+          "aporte": "Informó sobre la visita de Juan Minujín al atelier de su tía Marta, la entrega de la estatuilla y los antecedentes de colaboración entre ambos."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "1ryrgiu": {
+      "estado": "automatica",
+      "titulo": "Lisandro Martinez lanza una coleccion de indumentaria inspirada en el anime",
+      "copete": "El defensor de la Seleccion Argentina presento una linea de ropa junto a Crunchyroll con referencias a su carrera y al anime. Los productos se consiguen online.",
+      "cuerpo": "El defensor Lisandro Martinez lanzo una coleccion de indumentaria inspirada en el anime en colaboracion con Crunchyroll, combinando referencias a su trayectoria deportiva con su fanatismo por las series japonesas. La linea incluye remeras, buzos, medias y una bufanda con ilustraciones de manga que aluden a sus apodos en Argentina y en Inglaterra.\n\nLa capsula cuenta con seis articulos y toma elementos de producciones como Supercampeones y Dragon Ball Z, serie que el futbolista utilizaba para motivarse antes de los partidos.",
+      "guion": "Lisandro Martinez lanza una coleccion de indumentaria inspirada en el anime",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T03:01:00.524Z",
+      "claves": [
+        "El defensor presento una linea de ropa inspirada en el anime junto a Crunchyroll.",
+        "La coleccion incluye remeras, buzos, medias y una bufanda con referencias a su carrera.",
+        "Los precios van desde los veinte hasta los noventa dolares.",
+        "Las prendas se consiguen a traves de la tienda oficial y plataformas digitales."
+      ],
+      "seSabe": [
+        "Lisandro Martinez lanzo una linea de indumentaria junto a Crunchyroll inspirada en el anime.",
+        "La coleccion esta compuesta por seis productos que incluyen remeras, buzos, medias y una bufanda.",
+        "Los precios de los articulos varian entre veinte y noventa dolares.",
+        "La compra se realiza por medio de la tienda oficial de Crunchyroll y Mercado Libre."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El defensor Lisandro Martinez presento una coleccion de ropa inspirada en el anime junto a Crunchyroll. La linea incluye seis productos con referencias a su carrera y ya se consigue de forma online.",
+      "etiquetas": [
+        "Lisandro Martinez",
+        "Crunchyroll",
+        "anime",
+        "moda"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Ámbito",
+          "enlace": "https://www.ambito.com/economia/la-coleccion-ropa-lisandro-licha-martinez-y-crunchyroll-catalogo-precios-y-donde-comprar-n6326497",
+          "fecha": "2026-09-27T01:00:00.000Z",
+          "oficial": false,
+          "aporte": "Detallo el lanzamiento de la coleccion de indumentaria de Lisandro Martinez con Crunchyroll, los productos disponibles, sus precios y los detalles esteticos inspirados en el anime."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "12eopig": {
+      "estado": "automatica",
+      "titulo": "Lali Espósito y Tini Stoessel cantaron juntas en el estadio de River Plate",
+      "copete": "Las artistas compartieron escenario este sábado en el estadio de River Plate para interpretar un clásico de Madonna. La presentación incluyó también a la cantante Marilina Bertoldi.",
+      "cuerpo": "Lali Espósito subió a Tini Stoessel a su show en el estadio de River Plate, un hecho que concretó las expectativas y los rumores previos que circulaban en las redes sociales sobre una posible colaboración entre ambas referentes de la música pop nacional.\n\nEl punto central del recital ocurrió cuando ambas interpretaron \"Like a Virgin\", el clásico de Madonna, vestidas de novias. De la versión participó también Marilina Bertoldi. Luego, las artistas unieron sus voces para cantar \"1 Amor\", tema que ya había aparecido en una lista de repertorio filtrada horas antes del espectáculo.\n\nLa presentación conjunta se transformó en uno de los hitos musicales recientes del género en el país, tras semanas de especulaciones entre los seguidores.",
+      "guion": "Lali Esposito y Tini Stoessel cantaron juntas en el estadio de River Plate",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T03:01:00.524Z",
+      "claves": [
+        "Lali Espósito e invitó a Tini Stoessel a su show en River Plate.",
+        "Interpretaron juntas el tema \"Like a Virgin\" de Madonna.",
+        "Del tramo musical también participó la cantante Marilina Bertoldi.",
+        "Ambas cantaron además la canción \"1 Amor\"."
+      ],
+      "seSabe": [
+        "Lali Espósito y Tini Stoessel cantaron juntas en el estadio de River Plate.",
+        "Interpretaron el tema \"Like a Virgin\" de Madonna vestidas de novias.",
+        "De la versión participó también Marilina Bertoldi.",
+        "Ambas artistas cantaron la canción \"1 Amor\".",
+        "Previamente había circulado en redes sociales una lista filtrada con el repertorio del show."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Lali Espósito y Tini Stoessel compartieron escenario en el estadio de River Plate para interpretar un clásico de Madonna. De la presentación también participó Marilina Bertoldi.",
+      "etiquetas": [
+        "Lali Espósito",
+        "Tini Stoessel",
+        "River Plate",
+        "Marilina Bertoldi",
+        "Madonna",
+        "Música"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Minuto Uno",
+          "enlace": "https://www.minutouno.com/espectaculos/lali-esposito-y-tini-stoessel-brillaron-juntas-y-cantaron-un-iconico-tema-madonna-river-n6327092",
+          "fecha": "2026-09-27T02:13:00.000Z",
+          "oficial": false,
+          "aporte": "Informó sobre el show conjunto de Lali Espósito y Tini Stoessel en River Plate interpretando a Madonna."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "ucpo62": {
+      "estado": "automatica",
+      "titulo": "Lali Espósito cierra su gira en River con Tini Stoessel",
+      "copete": "La cantante se presentó en el estadio Monumental para finalizar su recorrido musical y compartió escenario con Tini Stoessel, Miranda! y Marilina Bertoldi ante entradas agotadas.",
+      "cuerpo": "El recital llegó luego de cinco estadios Vélez en 2025 y dos presentaciones previas este año que reunieron a más de 160.000 espectadores, además de coincidir con el segundo aniversario de la canción \"Fanático\".\n\nDurante la noche ante entradas agotadas, la artista estuvo acompañada por Miranda! para interpretar \"Mejor que vos\". Posteriormente, Tini Stoessel se sumó al escenario para cantar junto a ella y a Marilina Bertoldi, en lo que significó la primera vez que ambas comparten escenario tras años de expectativa.",
+      "guion": "Lali Esposito cierra su gira en River con Tini Stoessel",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T03:01:00.524Z",
+      "claves": [
+        "Lali Espósito cerró su gira en el estadio Monumental con entradas agotadas.",
+        "El show contó con las participaciones de Miranda! y Marilina Bertoldi.",
+        "Tini Stoessel subió al escenario para cantar junto a la artista por primera vez."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "etiquetas": [
+        "Lali Espósito",
+        "Tini Stoessel",
+        "Música",
+        "Espectáculos"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/espectaculos/personajes/lali-esposito-brilla-en-su-tercer-river-el-cierre-de-una-era-y-las-grandes-sorpresas-de-la-noche-nid26092026/",
+          "fecha": "2026-09-27T02:55:49.000Z",
+          "oficial": false,
+          "aporte": "Detalló el desarrollo del show de Lali Espósito en el estadio Monumental, las participaciones de Tini Stoessel, Miranda! y Marilina Bertoldi, y los antecedentes de la gira."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "12eopig",
+          "titulo": "Lali Esposito y Tini Stoessel cantaron juntas en el estadio de River",
+          "fecha": "2026-09-27T02:13:00.000Z",
+          "ruta": "/nota/lali-esposito-y-tini-stoessel-cantaron-juntas-en-el-estadio-de-river-12eopig"
         }
       ],
       "verificacion": {
