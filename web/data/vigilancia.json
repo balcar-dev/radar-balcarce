@@ -1,7 +1,5 @@
 {
-  "avisos": {
-    "falla-Actualizar la web": "2026-09-27T01:30:12.565Z"
-  },
+  "avisos": {},
   "importantes": {
     "avisadas": {
       "1juqupr": {
@@ -17,6 +15,15 @@
       "1mkm1na": {
         "cuando": "2026-09-26T03:30:11.513Z",
         "titulo": "El autódromo Juan Manuel Fangio abre sus puertas en Balcarce",
+        "temas": [
+          "autodromo",
+          "tc-pick-up",
+          "fangio"
+        ]
+      },
+      "1pbhcrn": {
+        "cuando": "2026-09-27T02:30:11.858Z",
+        "titulo": "Mariano Werner marca la pole del TC Pick Up en Balcarce",
         "temas": [
           "autodromo",
           "tc-pick-up",
@@ -58,5 +65,5 @@
   },
   "ultimaMedicion": "2026-09-26/21",
   "ultimoResumen": "2026-09-26",
-  "ultimoCierre": "2026-09-25"
+  "ultimoCierre": "2026-09-26"
 }
