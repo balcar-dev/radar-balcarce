@@ -1,5 +1,5 @@
 {
-  "exportado": "2026-09-27T15:49:10.834Z",
+  "exportado": "2026-09-27T15:59:29.530Z",
   "decisiones": {
     "1951120": {
       "estado": "automatica",
@@ -34004,6 +34004,127 @@
         "nivel": "ALTA",
         "porque": "Lo contaron dos medios independientes.",
         "sugeridoPorIA": "ALTA"
+      }
+    },
+    "c2myhf": {
+      "estado": "automatica",
+      "titulo": "Agotan las pulseras de ingreso por una multitud en el Fangio en Balcarce",
+      "copete": "La masiva llegada de espectadores al autódromo Juan Manuel Fangio superó las previsiones iniciales y obligó a reponer las credenciales de acceso durante el fin de semana histórico del automovilismo nacional.",
+      "cuerpo": "El Autódromo Juan Manuel Fangio vivió una jornada de gran convocatoria este domingo con la llegada de miles de espectadores que superaron las previsiones iniciales para presenciar la actividad de las categorías TC Pick Up, TC Pista Pick Up y Turismo Special de la Costa, según informó un medio local. La magnitud de la asistencia provocó que se agotaran las pulseras de ingreso, lo que obligó a realizar una reposición para permitir el acceso continuado del público al predio.\n\nEn la víspera, el médico de la ACTC, Rodolfo Balinotti, había defendido las obras realizadas ante cuestionamientos sobre la habilitación del trazado balcarceño.",
+      "guion": "Agotan las pulseras de ingreso por una multitud en el Fangio en Balcarce",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T15:59:29.449Z",
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Una multitud colmó este domingo el autódromo Juan Manuel Fangio en el marco del regreso del automovilismo nacional a Balcarce. La masiva asistencia obligó a reponer las pulseras de ingreso al predio.",
+      "etiquetas": [
+        "autodromo Fangio",
+        "automovilismo",
+        "TC Pick Up",
+        "turismo",
+        "Balcarce"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Radio Gabal (FM 104.1)",
+          "enlace": "https://www.radiogabal.com.ar/index.php/comunidad/una-multitud-copo-el-fangio-se-agotaron-las-pulseras-de-ingreso-y-debieron-reponerlas",
+          "fecha": "2026-09-27T15:34:39.000Z",
+          "oficial": false,
+          "aporte": "Informó sobre la masiva concurrencia de público, el agotamiento de las pulseras de ingreso y la posterior reposición por parte de la ACTC."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "si6qmk",
+          "titulo": "Diego Santilli visita el autódromo Juan Manuel Fangio en Balcarce",
+          "fecha": "2026-09-27T15:00:58.065Z",
+          "ruta": "/nota/diego-santilli-visita-el-autodromo-juan-manuel-fangio-en-balcarce-si6qmk"
+        },
+        {
+          "id": "e9anvw",
+          "titulo": "El autodromo Juan Manuel Fangio recibe al automovilismo nacional en Balcarce",
+          "fecha": "2026-09-27T12:20:00.000Z",
+          "ruta": "/nota/el-autodromo-juan-manuel-fangio-recupera-el-automovilismo-nacional-en-e9anvw"
+        },
+        {
+          "id": "121t71e",
+          "titulo": "Cruce en Balcarce por la habilitación del autódromo Fangio",
+          "fecha": "2026-09-27T02:30:43.813Z",
+          "ruta": "/nota/cruce-en-balcarce-por-la-habilitacion-del-autodromo-fangio-121t71e"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "1ofousc": {
+      "estado": "automatica",
+      "titulo": "Suárez logra el segundo puesto en su serie del TC Pista Pick Up en Balcarce",
+      "copete": "El piloto local Juan José Suárez terminó como escolta en la segunda batería del TC Pista Pick Up en el autódromo Juan Manuel Fangio y largará adelante en la final.",
+      "cuerpo": "El piloto balcarceño Juan José Suárez finalizó en la segunda colocación a bordo de su Ford Ranger durante la segunda serie del TC Pista Pick Up, disputada este domingo en el autódromo Juan Manuel Fangio de nuestra ciudad. La batería tuvo como ganador a Nahuel Cordone con un registro de 8:45.462, lo que convirtió a esta manga en la más veloz de la jornada.\n\nPreviamente, Cifre había marcado el ritmo durante la jornada de clasificación desarrollada en el circuito local.\n\nCon este resultado en la serie, Suárez se aseguró largar desde la primera posición en la final de este fin de semana, en el marco del esperado regreso de la categoría nacional al trazado balcarceño ante el público local.",
+      "guion": "Suárez logra el segundo puesto en su serie del TC Pista Pick Up en Balcarce",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T15:59:29.449Z",
+      "claves": [
+        "Juan José Suárez fue segundo en su serie del TC Pista Pick Up.",
+        "La competencia se desarrolla en el autódromo Juan Manuel Fangio.",
+        "El piloto local largará en la primera posición de la final.",
+        "Nahuel Cordone ganó la batería más rápida de la jornada."
+      ],
+      "seSabe": [
+        "Juan José Suárez finalizó segundo en la segunda serie del TC Pista Pick Up a bordo de una Ford Ranger.",
+        "Nahuel Cordone ganó la batería con un tiempo de 8:45.462 y se quedó con la serie más rápida.",
+        "Antonino Sganga ganó la primera batería tras una sanción a Faustino Cifre.",
+        "Juan Pablo Alberti fue excluido por reiteración de maniobras peligrosas."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El balcarceño Juan José Suárez fue segundo en su serie del TC Pista Pick Up en el autódromo Juan Manuel Fangio y largará adelante en la gran final de este fin de semana en nuestra ciudad.",
+      "etiquetas": [
+        "Juan José Suárez",
+        "TC Pista Pick Up",
+        "Autódromo Juan Manuel Fangio",
+        "Balcarce"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Radio Gabal (FM 104.1)",
+          "enlace": "https://www.radiogabal.com.ar/index.php/deportes/suarez-fue-segundo-en-su-serie-y-largara-adelante-en-la-final-del-tc-pista-pick-up",
+          "fecha": "2026-09-27T15:55:51.000Z",
+          "oficial": false,
+          "aporte": "Informó sobre el desempeño del piloto Juan José Suárez y los resultados de las series del TC Pista Pick Up en el autódromo Juan Manuel Fangio."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1b7rczz",
+          "titulo": "Cifre marca el ritmo en la clasificación del TC Pista Pick Up en Balcarce",
+          "fecha": "2026-09-26T19:31:21.000Z",
+          "ruta": "/nota/cifre-marca-el-ritmo-en-la-clasificacion-del-tc-pista-pick-up-en-1b7rczz"
+        },
+        {
+          "id": "gror6g",
+          "titulo": "Iñaki Arrías logra la pole position y lidera el TC Pista Mouras",
+          "fecha": "2026-09-26T18:28:46.000Z",
+          "ruta": "/nota/inaki-arrias-logra-la-pole-position-y-lidera-el-tc-pista-mouras-gror6g"
+        },
+        {
+          "id": "1b3p6ze",
+          "titulo": "Juan José Suárez corre en el Autódromo Juan Manuel Fangio en Balcarce",
+          "fecha": "2026-09-24T19:08:06.000Z",
+          "ruta": "/nota/suarez-acelera-en-casa-es-un-sueno-correr-en-balcarce-1b3p6ze"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
       }
     }
   },
