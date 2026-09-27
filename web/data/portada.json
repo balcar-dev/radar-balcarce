@@ -1,5 +1,5 @@
 {
-  "generado": "2026-09-27T18:31:15.325Z",
+  "generado": "2026-09-27T19:00:57.421Z",
   "notas": [
     {
       "id": "119oqdp",
@@ -544,7 +544,7 @@
       "fecha": "2026-09-27T15:55:51.000Z",
       "sinFecha": false,
       "visto": "2026-09-27T16:00:45.744Z",
-      "relevancia": 90,
+      "relevancia": 80,
       "local": true,
       "publicadaPor": "ia",
       "publicadaCuando": "2026-09-27T15:59:29.449Z",
@@ -710,7 +710,7 @@
       "fecha": "2026-09-27T15:34:39.000Z",
       "sinFecha": false,
       "visto": "2026-09-27T15:40:44.103Z",
-      "relevancia": 92,
+      "relevancia": 82,
       "local": true,
       "publicadaPor": "ia",
       "publicadaCuando": "2026-09-27T15:59:29.449Z",
@@ -913,6 +913,67 @@
         }
       ],
       "slug": "el-repaso-de-la-manana-en-radar-balcarce-autodromo-juan-manuel-fangio"
+    },
+    {
+      "id": "9hkq7t",
+      "titulo": "Juan Pablo Montoya respalda a Franco Colapinto en la F1",
+      "copete": "El expiloto colombiano respaldó al argentino tras el accidente en el Gran Premio de Azerbaiyán. Los comisarios impusieron una sanción de cinco lugares para la próxima fecha.",
+      "cuerpo": "El expiloto colombiano Juan Pablo Montoya defendió al piloto Franco Colapinto tras el accidente múltiple que protagonizó en el Gran Premio de Azerbaiyán.\n\nTras el hecho, Colapinto asumió la responsabilidad por la maniobra. Por su parte, Montoya valoró la mentalidad competitiva del joven de veintitrés años y señaló que el error formó parte de una actitud de búsqueda de oportunidades en carrera.\n\nComo consecuencia del impacto, los comisarios deportivos confirmaron una sanción que obligará al argentino a retroceder cinco posiciones en la grilla de salida de la próxima competencia, programada para el siguiente fin de semana en Sepang.",
+      "guion": "Juan Pablo Montoya respalda a Franco Colapinto en la F1",
+      "seccion": "Automovilismo",
+      "medios": [
+        "La Nación",
+        "Infobae",
+        "Ámbito",
+        "Ecos Diarios (Necochea)",
+        "Motorsport",
+        "0223 (Mar del Plata)",
+        "La Noticia 1"
+      ],
+      "enlace": "https://www.lanacion.com.ar/deportes/automovilismo/montoya-respaldo-a-colapinto-tras-el-accidente-en-baku-admiro-a-la-gente-que-lo-intenta-nid27092026/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-27T12:02:03.000Z",
+      "sinFecha": false,
+      "visto": "2026-09-27T19:00:46.462Z",
+      "relevancia": 75,
+      "local": false,
+      "publicadaPor": "ia",
+      "publicadaCuando": "2026-09-27T12:10:34.244Z",
+      "temas": [],
+      "como": "automatica",
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El expiloto Juan Pablo Montoya respaldó a Franco Colapinto tras el accidente en el Gran Premio de Azerbaiyán. Los comisarios deportivos confirmaron una sanción de cinco posiciones para la próxima competencia.",
+      "etiquetas": [
+        "Franco Colapinto",
+        "Juan Pablo Montoya",
+        "Formula 1",
+        "Gran Premio de Azerbaiyán"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/deportes/automovilismo/montoya-respaldo-a-colapinto-tras-el-accidente-en-baku-admiro-a-la-gente-que-lo-intenta-nid27092026/",
+          "fecha": "2026-09-27T12:02:03.000Z",
+          "oficial": false,
+          "aporte": "Detalló las declaraciones de Juan Pablo Montoya y la sanción oficial aplicada por los comisarios deportivos de la Fórmula 1."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "zd48ar",
+          "titulo": "El respaldo de Juan Pablo Montoya a Franco Colapinto en la Fórmula 1",
+          "fecha": "2026-09-27T10:48:17.000Z",
+          "ruta": "/nota/juan-pablo-montoya-respalda-a-franco-colapinto-tras-el-choque-en-zd48ar"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "juan-pablo-montoya-respalda-a-franco-colapinto-en-la-f1"
     },
     {
       "id": "m4pjpv",
@@ -4284,10 +4345,10 @@
   ],
   "clima": {
     "ahora": {
-      "temp": 16,
-      "sensacion": 13,
-      "humedad": 72,
-      "viento": 24,
+      "temp": 18,
+      "sensacion": 15,
+      "humedad": 59,
+      "viento": 22,
       "rumbo": "NE",
       "cielo": "Parcialmente nublado",
       "esDeDia": true
@@ -4296,35 +4357,35 @@
       {
         "fecha": "2026-09-27",
         "dia": "dom",
-        "max": 17,
+        "max": 19,
         "min": 6,
         "lluvia": 41,
-        "codigo": 81,
-        "viento": 26,
-        "milimetros": 5,
-        "cielo": "Chaparrones fuertes"
+        "codigo": 3,
+        "viento": 23,
+        "milimetros": 0,
+        "cielo": "Nublado"
       },
       {
         "fecha": "2026-09-28",
         "dia": "lun",
-        "max": 16,
+        "max": 17,
         "min": 11,
         "lluvia": 67,
         "codigo": 51,
-        "viento": 22,
+        "viento": 19,
         "milimetros": 1,
         "cielo": "Llovizna leve"
       },
       {
         "fecha": "2026-09-29",
         "dia": "mar",
-        "max": 16,
-        "min": 10,
+        "max": 15,
+        "min": 9,
         "lluvia": 63,
-        "codigo": 53,
+        "codigo": 51,
         "viento": 25,
-        "milimetros": 3,
-        "cielo": "Llovizna"
+        "milimetros": 2,
+        "cielo": "Llovizna leve"
       },
       {
         "fecha": "2026-09-30",
@@ -4332,10 +4393,10 @@
         "max": 13,
         "min": 8,
         "lluvia": 10,
-        "codigo": 3,
-        "viento": 28,
+        "codigo": 51,
+        "viento": 26,
         "milimetros": 0,
-        "cielo": "Nublado"
+        "cielo": "Llovizna leve"
       }
     ],
     "fuente": "Open-Meteo"
@@ -4658,6 +4719,12 @@
   },
   "pendientes": [
     {
+      "id": "14yqu2m",
+      "titulo": "Opinión: Volvió la mística al Juan Manuel Fangio, el…",
+      "seccion": "Automovilismo",
+      "motivo": "verificación baja: espera a una persona (visto al reescribir)"
+    },
+    {
       "id": "jakg2e",
       "titulo": "Horarios de los amistosos de la selección argentina vs…",
       "seccion": "Deportes",
@@ -4685,6 +4752,18 @@
       "id": "1lg4u7s",
       "titulo": "La actividad económica cayó 2,9% en julio, el mayor…",
       "seccion": "Economía",
+      "motivo": "de afuera con un solo medio: hacen falta dos"
+    },
+    {
+      "id": "wwbmd7",
+      "titulo": "La familia Crespi confirmó que la fábrica seguirá…",
+      "seccion": "Automovilismo",
+      "motivo": "de afuera con un solo medio: hacen falta dos"
+    },
+    {
+      "id": "jje778",
+      "titulo": "La Sociedad Rural de Balcarce participó de una reunión…",
+      "seccion": "Agro",
       "motivo": "de afuera con un solo medio: hacen falta dos"
     },
     {
@@ -4718,34 +4797,10 @@
       "motivo": "de afuera con un solo medio: hacen falta dos"
     },
     {
-      "id": "jje778",
-      "titulo": "La Sociedad Rural de Balcarce participó de una reunión…",
-      "seccion": "Agro",
-      "motivo": "de afuera con un solo medio: hacen falta dos"
-    },
-    {
-      "id": "wwbmd7",
-      "titulo": "La familia Crespi confirmó que la fábrica seguirá…",
-      "seccion": "Automovilismo",
-      "motivo": "de afuera con un solo medio: hacen falta dos"
-    },
-    {
-      "id": "nauwa6",
-      "titulo": "La pobreza en Argentina subió al 32,3% y ya alcanza a más…",
-      "seccion": "Economía",
-      "motivo": "de afuera con un solo medio: hacen falta dos"
-    },
-    {
       "id": "15anu4y",
       "titulo": null,
       "seccion": "Policiales",
       "motivo": "necesita ojo humano: \"niña\""
-    },
-    {
-      "id": "ql98q0",
-      "titulo": null,
-      "seccion": "Policiales",
-      "motivo": "necesita ojo humano: \"investigación\""
     },
     {
       "id": "sj38qg",
@@ -4754,8 +4809,8 @@
       "motivo": "de afuera con un solo medio: hacen falta dos"
     },
     {
-      "id": "1kcun96",
-      "titulo": "Aston Martin se defiende tras el fiasco de Bakú: \"Las…",
+      "id": "1nonfri",
+      "titulo": "Ignacio Díaz, presente en Brasil con la Fórmula 4",
       "seccion": "Automovilismo",
       "motivo": "de afuera con un solo medio: hacen falta dos"
     },
@@ -4778,14 +4833,14 @@
       "motivo": "de afuera con un solo medio: hacen falta dos"
     },
     {
-      "id": "34dz61",
-      "titulo": "Roqueta resistió en Rosario y festejó su 1ª victoria en TCPM",
-      "seccion": "Automovilismo",
+      "id": "o48c9g",
+      "titulo": "Carlos Melconian, economista: “Es la primera vez en la…",
+      "seccion": "Economía",
       "motivo": "de afuera con un solo medio: hacen falta dos"
     },
     {
-      "id": "1dyqg94",
-      "titulo": "Jubilaciones de Anses: cuánto se cobra en octubre 2026…",
+      "id": "1not06u",
+      "titulo": "¿Abren los supermercados, shoppings y comercios mañana, 28…",
       "seccion": "Economía",
       "motivo": "de afuera con un solo medio: hacen falta dos"
     },
@@ -4808,6 +4863,18 @@
       "motivo": "de afuera con un solo medio: hacen falta dos"
     },
     {
+      "id": "17atfcy",
+      "titulo": "Gran remontada de Giovanelli para ser 8.° en F4 Brasil",
+      "seccion": "Automovilismo",
+      "motivo": "de afuera con un solo medio: hacen falta dos"
+    },
+    {
+      "id": "1f8a54u",
+      "titulo": "F3 Metropolitana: Galeano se quedó con el triunfo en la…",
+      "seccion": "Automovilismo",
+      "motivo": "de afuera con un solo medio: hacen falta dos"
+    },
+    {
       "id": "1cmm1ra",
       "titulo": "Exportación, inversión y migraciones internas: ¿dónde está…",
       "seccion": "Economía",
@@ -4816,12 +4883,6 @@
     {
       "id": "1lsxdcx",
       "titulo": "Martín Saa cerró la cita en Viterbo del Campeonato…",
-      "seccion": "Automovilismo",
-      "motivo": "de afuera con un solo medio: hacen falta dos"
-    },
-    {
-      "id": "188pdob",
-      "titulo": "Lucas Carabajal festejó en «El Zonda» su primera victoria…",
       "seccion": "Automovilismo",
       "motivo": "de afuera con un solo medio: hacen falta dos"
     },
@@ -4844,9 +4905,9 @@
       "motivo": "de afuera con un solo medio: hacen falta dos"
     },
     {
-      "id": "w11vwh",
-      "titulo": "Karina Milei se resigna con Patricia Bullrich, pero en el…",
-      "seccion": "Política",
+      "id": "1kcun96",
+      "titulo": "Aston Martin se defiende tras el fiasco de Bakú: \"Las…",
+      "seccion": "Automovilismo",
       "motivo": "de afuera con un solo medio: hacen falta dos"
     },
     {
@@ -4862,27 +4923,9 @@
       "motivo": "de afuera con un solo medio: hacen falta dos"
     },
     {
-      "id": "1f8a54u",
-      "titulo": "F3 Metropolitana: Galeano se quedó con el triunfo en la…",
-      "seccion": "Automovilismo",
-      "motivo": "de afuera con un solo medio: hacen falta dos"
-    },
-    {
-      "id": "kzu2pn",
-      "titulo": "Javier Milei hablará delante del papa, pero también lo…",
-      "seccion": "Política",
-      "motivo": "de afuera con un solo medio: hacen falta dos"
-    },
-    {
       "id": "1kosp78",
       "titulo": "El detalle que más impresiona a Red Bull del \"excepcional\"…",
       "seccion": "Automovilismo",
-      "motivo": "de afuera con un solo medio: hacen falta dos"
-    },
-    {
-      "id": "1y2nmcm",
-      "titulo": "\"El demonio está sacado\": Lali cerró la gira con su tercer…",
-      "seccion": "Cultura y agenda",
       "motivo": "de afuera con un solo medio: hacen falta dos"
     },
     {
@@ -4896,7 +4939,19 @@
       "titulo": "A cuánto llegaría la nafta en el Gran Buenos Aires si el…",
       "seccion": "Economía",
       "motivo": "de afuera con un solo medio: hacen falta dos"
+    },
+    {
+      "id": "10tvasv",
+      "titulo": "Samsung Galaxy S26 FE llega a la Argentina: cuánto cuesta…",
+      "seccion": "Tecnología",
+      "motivo": "de afuera con un solo medio: hacen falta dos"
+    },
+    {
+      "id": "1dcnv04",
+      "titulo": "Reino: “El sueño hoy lo cumplimos y es el comienzo de algo…",
+      "seccion": "Automovilismo",
+      "motivo": "de afuera con un solo medio: hacen falta dos"
     }
   ],
-  "esperandoCuerpo": 10
+  "esperandoCuerpo": 9
 }
