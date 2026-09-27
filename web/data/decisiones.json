@@ -1,5 +1,5 @@
 {
-  "exportado": "2026-09-27T11:20:37.885Z",
+  "exportado": "2026-09-27T11:30:34.841Z",
   "decisiones": {
     "1951120": {
       "estado": "automatica",
@@ -32602,13 +32602,41 @@
     },
     "1ve3237": {
       "estado": "automatica",
-      "titulo": null,
-      "copete": null,
-      "cuerpo": null,
-      "guion": null,
-      "deIA": null,
+      "titulo": "Miami votará en noviembre la extensión de un impuesto escolar",
+      "copete": "Los votantes de Miami-Dade definirán el 3 de noviembre si extienden por cuatro años una tasa a la propiedad destinada a salarios docentes y seguridad escolar. La medida no implica un aumento del gravamen actual.",
+      "cuerpo": "Los electores del condado estadounidense de Miami-Dade definirán en las urnas el martes 3 de noviembre si continúan con la \"tasa de un mil\", un impuesto a la propiedad que financia parte del sistema educativo local y cuyo período actual vence a mediados de 2027. La consulta fue fijada mediante la resolución R-440-26 y busca extender el gravamen por cuatro años más, desde julio de 2027 hasta junio de 2031, sin implicar un incremento en el tributo.\n\nEl superintendente del distrito escolar, Rafael Villalobos, advirtió que una eventual caída del impuesto afectaría la retención y contratación de maestros ante el costo de vida de la región.",
+      "guion": "Miami votará en noviembre la extensión de un impuesto escolar",
+      "deIA": true,
       "por": "ia",
-      "cuando": "2026-09-27T11:20:37.785Z"
+      "cuando": "2026-09-27T11:30:34.769Z",
+      "claves": [
+        "Los votantes de Miami-Dade definirán el 3 de noviembre la continuidad de una tasa escolar.",
+        "El gravamen recauda cien dólares anuales por cada cien mil de valor imponible de una propiedad.",
+        "La mayor parte de los fondos se destina al pago de salarios docentes y seguridad en los establecimientos.",
+        "La medida no plantea un aumento respecto al tributo vigente y se extendería hasta 2031 si se aprueba."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Los votantes de Miami-Dade definirán en noviembre si extienden por cuatro años una tasa a la propiedad destinada a salarios docentes y seguridad escolar, sin aumentos en el tributo actual.",
+      "etiquetas": [
+        "Miami",
+        "impuestos"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/estados-unidos/florida/us100-por-cada-us100-mil-en-florida-el-impuesto-que-ya-se-aplica-en-miami-y-podria-vetarse-luego-de-nid27092026/",
+          "fecha": "2026-09-27T11:00:00.000Z",
+          "oficial": false,
+          "aporte": "Detalló los plazos del referéndum de Miami-Dade sobre la tasa escolar, los destinos de los fondos, las estimaciones de recaudación y los dichos del superintendente."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
     },
     "614rkz": {
       "estado": "automatica",
@@ -32770,6 +32798,103 @@
           "fecha": "2026-09-27T11:08:25.000Z",
           "oficial": false,
           "aporte": "Detalla los ganadores, montos de premios, organización y alcance de la Copa Robótica 2026."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "ss4tes": {
+      "estado": "automatica",
+      "titulo": "Chile mejora la calidad del aire en veinte años",
+      "copete": "Un informe detalla una mejora general en la calidad del aire de Chile durante las últimas dos décadas. Sin embargo, persisten desafíos por el uso de leña y en zonas industriales.",
+      "cuerpo": "A pesar de la reducción de contaminantes como el material particulado fino, el informe advierte sobre persistentes brechas ambientales.\n\nEl análisis señala que el uso intensivo de leña húmeda en el sur del país continúa como la principal causa de contaminación, una situación compleja debido a factores geográficos y culturales. Por su parte, las denominadas zonas de sacrificio en el norte y centro mantienen episodios agudos de contaminación a pesar de la baja general en los valores de dióxido de azufre.",
+      "guion": "Chile mejora la calidad del aire en veinte años",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T11:30:34.769Z",
+      "claves": [
+        "Informe revela mejora general en la calidad del aire de Chile en veinte años.",
+        "El uso de leña en el sur continúa como la principal causa de contaminación.",
+        "Persisten episodios agudos en zonas industriales del norte y centro."
+      ],
+      "seSabe": [
+        "Chile registra una mejoría en la calidad del aire en los últimos veinte años según un análisis publicado en Atmosphere.",
+        "El estudio fue desarrollado por la Universidad de Chile, el CR2, el Ministerio del Medio Ambiente y la Universidad del Desarrollo.",
+        "El uso de leña húmeda es la principal causa de contaminación en el sur del país."
+      ],
+      "noConfirmado": [
+        "No se mencionan impactos directos o vinculaciones con la ciudad de Balcarce en las fuentes consultadas.",
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Un informe de la Universidad de Chile y el Ministerio del Medio Ambiente revela una mejora general en la calidad del aire del país en los últimos veinte años, aunque persisten desafíos por el uso de leña y en zonas industriales.",
+      "etiquetas": [
+        "Chile",
+        "Calidad del aire",
+        "Medio ambiente",
+        "Contaminación"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/noticias/2026/09/27/la-florida-calidad-del-aire-este-27-de-septiembre-de-2026/",
+          "fecha": "2026-09-27T11:24:16.000Z",
+          "oficial": false,
+          "aporte": "Aportó el análisis sobre la mejora en la calidad del aire en Chile y los factores contaminantes."
+        },
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/noticias/2026/09/27/romeral-calidad-del-aire-este-27-de-septiembre-de-2026/",
+          "fecha": "2026-09-27T11:23:58.000Z",
+          "oficial": false,
+          "aporte": "Aportó los datos generales sobre la evolución de la calidad del aire en la región."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "ALTA"
+      }
+    },
+    "1ej2fe1": {
+      "estado": "automatica",
+      "titulo": "Advierten sobre estafas virtuales a jubilados y pensionados de PAMI",
+      "copete": "Tras una serie de engaños virtuales, la obra social difundió medidas de prevención destinadas a sus afiliados. Recomiendan no brindar datos personales ni contraseñas.",
+      "cuerpo": "Ante una serie de engaños virtuales dirigidos a los afiliados, el organismo nacional reiteró las medidas de seguridad para prevenir delitos informáticos. La advertencia apunta a evitar que los asociados entreguen información personal, contraseñas o datos bancarios a través de llamadas, mensajes, correos electrónicos o perfiles falsos en redes sociales.\n\nDesde la obra social recordaron que no operan con intermediarios y remarcaron que nunca solicitan códigos de validación, claves ni pagos para realizar trámites o gestiones. Además, detallaron que las consultas deben realizarse exclusivamente mediante la aplicación oficial o el sitio web institucional, y aconsejaron verificar la tilde azul en los perfiles de redes sociales.\n\nEn caso de recibir comunicaciones sospechosas o llamadas en las que se utilicen datos personales para generar confianza, las autoridades sugieren cortar la comunicación de manera inmediata.",
+      "guion": "Advierten sobre estafas virtuales a jubilados y pensionados de PAMI",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T11:30:34.769Z",
+      "claves": [
+        "PAMI emitió nuevas recomendaciones para prevenir estafas a afiliados.",
+        "El organismo aclaró que nunca solicita claves ni datos bancarios por teléfono.",
+        "Recomiendan no ingresar a enlaces dudosos y usar canales oficiales.",
+        "Existe la línea gratuita 138 para denunciar y recibir asesoramiento."
+      ],
+      "seSabe": [
+        "PAMI difundió medidas preventivas tras una serie de ataques y engaños a afiliados.",
+        "El organismo aclaró que no cuenta con intermediarios en redes sociales.",
+        "La aplicación oficial es gratuita y no exige pagos para su instalación o funcionamiento.",
+        "La línea gratuita 138 funciona las veinticuatro horas para recibir consultas."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "PAMI difundió nuevas recomendaciones para prevenir estafas telefónicas y virtuales dirigidas a sus afiliados. Conocé cuáles son los canales oficiales y qué recaudos hay que tomar para proteger datos personales y bancarios.",
+      "etiquetas": [
+        "PAMI",
+        "estafas virtuales",
+        "ciberdelitos"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Ámbito",
+          "enlace": "https://www.ambito.com/informacion-general/si-sos-afiliado-pami-tenes-que-tener-cuidado-las-estafas-como-prevenir-ciberdelitos-n6326365",
+          "fecha": "2026-09-27T11:00:00.000Z",
+          "oficial": false,
+          "aporte": "Detalló las modalidades de estafa y las recomendaciones oficiales de seguridad de PAMI."
         }
       ],
       "verificacion": {
