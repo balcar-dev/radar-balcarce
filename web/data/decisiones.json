@@ -1,5 +1,5 @@
 {
-  "exportado": "2026-09-27T04:00:58.766Z",
+  "exportado": "2026-09-27T04:10:38.335Z",
   "decisiones": {
     "1951120": {
       "estado": "automatica",
@@ -30079,6 +30079,183 @@
           "fecha": "2026-09-27T03:52:44.000Z",
           "oficial": false,
           "aporte": "Informó sobre la mudanza de Aleks Syntek a Inglaterra y detalló las polémicas recientes y antecedentes del artista."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "f0797k": {
+      "estado": "automatica",
+      "titulo": "Colapinto choca a Gasly y queda fuera del Gran Premio de Azerbaiyán",
+      "copete": "El piloto argentino y su compañero Pierre Gasly debieron abandonar la competencia en el circuito callejero de Bakú tras un incidente en el relanzamiento.",
+      "cuerpo": "Como consecuencia del impacto en el circuito callejero de Bakú, ambos monoplazas del equipo Alpine quedaron fuera de competencia en una carrera marcada por los abandonos y las situaciones de tensión.\n\nDías atrás, el deportista había señalado dificultades con su vehículo durante las prácticas libres aunque se había mostrado optimista de cara al fin de semana.\n\nEn tanto, la victoria en el trazado urbano quedó en manos de George Russell con Mercedes, seguido por Max Verstappen y e Isack Hadjar en el podio. Para la escudería Alpine significó una jornada enteramente negativa al perder a sus dos representantes antes de la bandera a cuadros.",
+      "guion": "Colapinto choca a Gasly y queda fuera del Gran Premio de Azerbaiyán",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T04:10:38.264Z",
+      "claves": [
+        "Franco Colapinto chocó a su compañero Pierre Gasly en Bakú.",
+        "Los dos autos de Alpine debieron abandonar la competencia.",
+        "El incidente ocurrió durante el relanzamiento tras el auto de seguridad.",
+        "George Russell se quedó con el primer puesto de la carrera."
+      ],
+      "seSabe": [
+        "Franco Colapinto y Pierre Gasly protagonizaron un choque en el Gran Premio de Azerbaiyán según informaron los medios.",
+        "El incidente ocurrió en el relanzamiento de la carrera tras la salida del auto de seguridad en Bakú.",
+        "George Russell ganó la competencia para Mercedes, seguido por Max Verstappen y e Isack Hadjar.",
+        "El piloto argentino había partido desde la novena posición."
+      ],
+      "textoRedes": "Franco Colapinto chocó con su compañero Pierre Gasly y ambos debieron abandonar el Gran Premio de Azerbaiyán de Fórmula 1 tras un incidente en el relanzamiento de la competencia en el circuito callejero de Bakú.",
+      "etiquetas": [
+        "Franco Colapinto",
+        "Formula 1",
+        "Gran Premio de Azerbaiyan"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "La Noticia 1",
+          "enlace": "https://www.lanoticia1.com/noticia/colapinto-choco-a-gasly-y-los-dos-alpine-quedaron-fuera-del-gp-de-azerbaiyan",
+          "fecha": "2026-09-26T12:49:58.000Z",
+          "oficial": false,
+          "aporte": "Aportó los detalles del choque con Pierre Gasly, el abandono de los Alpine y las posiciones finales de la carrera."
+        },
+        {
+          "medio": "El Eco de Tandil",
+          "enlace": "https://www.eleco.com.ar/deportes/colapinto-choco-con-gasly-y-debio-abandonar-en-el-gran-premio-de-azerbaiyan",
+          "fecha": "2026-09-26T12:43:14.000Z",
+          "oficial": false,
+          "aporte": "Aportó el dato de que el piloto argentino había partido desde la novena posición."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1cvio1y",
+          "titulo": "Franco Colapinto, entre las dificultades que tuvo con su Alpine y los objetivos para el GP de Azerbaiyán: \"Q3 y puntos\"",
+          "fecha": "2026-09-24T14:43:16.000Z",
+          "ruta": "/nota/franco-colapinto-entre-las-dificultades-que-tuvo-con-su-alpine-y-los-1cvio1y"
+        },
+        {
+          "id": "he08gv",
+          "titulo": "Franco Colapinto larga noveno en el Gran Premio de Azerbaiyán",
+          "fecha": "2026-09-26T09:30:00.000Z",
+          "ruta": "/nota/franco-colapinto-larga-noveno-en-el-gran-premio-de-azerbaiyan-he08gv"
+        },
+        {
+          "id": "xtbw5",
+          "titulo": "Franco Colapinto largara noveno el Gran Premio de Azerbaiyan",
+          "fecha": "2026-09-25T19:13:53.000Z",
+          "ruta": "/nota/franco-colapinto-largara-noveno-el-gran-premio-de-azerbaiyan-xtbw5"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "1aurrh2": {
+      "estado": "automatica",
+      "titulo": "Boca y Racing juegan en Rosario por la Copa Argentina",
+      "copete": "Boca y Racing se enfrentan este domingo desde las diecisiete en el Gigante de Arroyito por los cuartos de final de la Copa Argentina, con transmisión de TyC Sports.",
+      "cuerpo": "El conjunto de La Ribera llega al encuentro tras vencer dos a cero a San Lorenzo y acumula una racha de catorce partidos sin caídas en todas las competencias. Para este compromiso, el director técnico Rodolfo Arruabarrena no podrá contar con Álvaro Montero, ausente por su convocatoria a la Selección de Colombia, por lo que Leandro Brey ocupará el arco. Por su parte, el equipo dirigido por Juan Pablo Vojvoda derrotó tres a uno a Sarmiento y cortó una racha negativa de ocho encuentros sin victorias en el campeonato local.",
+      "guion": "Boca y Racing juegan en Rosario por la Copa Argentina",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T04:10:38.264Z",
+      "claves": [
+        "Boca y Racing juegan este domingo a las diecisiete en el Gigante de Arroyito.",
+        "El encuentro corresponde a los cuartos de final de la Copa Argentina y transmite TyC Sports.",
+        "El ganador de la llave se enfrentará en semifinales a Banfield."
+      ],
+      "textoRedes": "Boca y Racing se enfrentan este domingo desde las diecisiete en el Gigante de Arroyito por los cuartos de final de la Copa Argentina, en un encuentro televisado por TyC Sports.",
+      "etiquetas": [
+        "Boca Juniors",
+        "Racing Club",
+        "Copa Argentina",
+        "Fútbol",
+        "Rosario"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/deportes/agenda-de-tv-y-streaming-del-domingo-racing-boca-por-copa-argentina-tc-2000-copa-laver-y-polo-nid26092026/",
+          "fecha": "2026-09-27T03:57:00.000Z",
+          "oficial": false,
+          "aporte": "Detalló la programación televisiva del evento deportivo del domingo."
+        },
+        {
+          "medio": "Minuto Uno",
+          "enlace": "https://www.minutouno.com/deportes/boca-vs-racing-la-copa-argentina-horario-formaciones-y-tv-n6326309",
+          "fecha": "2026-09-27T03:41:00.000Z",
+          "oficial": false,
+          "aporte": "Aportó los detalles sobre el estadio, los árbitros, el presente de ambos equipos y las formaciones."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1jgqwyc",
+          "titulo": "Agenda de partidos de fútbol para este domingo",
+          "fecha": "2026-09-20T23:56:07.000Z",
+          "ruta": "/nota/agenda-de-partidos-de-futbol-para-este-domingo-1jgqwyc"
+        },
+        {
+          "id": "1738oru",
+          "titulo": "Agenda de futbol: San Lorenzo y Boca juegan este domingo",
+          "fecha": "2026-09-20T10:00:43.000Z",
+          "ruta": "/nota/agenda-de-futbol-san-lorenzo-y-boca-juegan-este-domingo-1738oru"
+        },
+        {
+          "id": "wify3j",
+          "titulo": "Agenda deportiva de domingo con tenis y fútbol",
+          "fecha": "2026-09-20T03:00:00.000Z",
+          "ruta": "/nota/agenda-deportiva-de-domingo-con-tenis-y-futbol-wify3j"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      }
+    },
+    "1cca6bm": {
+      "estado": "automatica",
+      "titulo": "El presidente Milei enfrenta dudas económicas en Nueva York",
+      "copete": "El mandatario nacional respondió consultas sobre recesión, empleo y controles cambiarios en un foro en Estados Unidos. El Indec informó una caída en la actividad y un aumento de la pobreza.",
+      "cuerpo": "El presidente Javier Milei participó de un encuentro en el Economic Club of New York, donde el editor jefe de la agencia Bloomberg, John Micklethwait, le planteó cuatro interrogantes sobre la contracción económica, el incremento del desempleo, la vigencia del cepo cambiario y el vínculo comercial con China.\n\nPor su parte, el ministro de Economía, Luis Caputo, había pronosticado en abril el inicio de un ciclo favorable de dieciocho meses, mientras que el riesgo país escaló a seiscientos nueve puntos básicos. Como antecedente, el gobernador bonaerense Axel Kicillof había iniciado la semana pasada una gira en Estados Unidos con reuniones destinadas a fondos de inversión tenedores de deuda provincial.\n\nEstas tensiones en la coyuntura nacional y los indicadores difundidos generan expectativas entre los inversores y analistas internacionales sobre el rumbo del modelo económico y la evolución de las variables financieras en los próximos meses.",
+      "guion": "El presidente Milei enfrenta dudas económicas en Nueva York.",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T04:10:38.264Z",
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El presidente Javier Milei respondió consultas sobre recesión y empleo en Nueva York, en una semana donde el Indec informó una caída del tres por ciento en la actividad y un incremento en la pobreza.",
+      "etiquetas": [
+        "Economía",
+        "Javier Milei",
+        "Estados Unidos",
+        "Indec",
+        "Pobreza",
+        "Axel Kicillof"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Clarín",
+          "enlace": "https://www.clarin.com/politica/malas-noticias-activaron-alarmas-gobierno-impensada-estrategia-axel-kicillof-wall-street_0_uixFgCUMjq.html",
+          "fecha": "2026-09-27T03:34:10.000Z",
+          "oficial": false,
+          "aporte": "Aportó los detalles sobre las preguntas de Bloomberg a Javier Milei en Nueva York, las declaraciones presidenciales y los datos oficiales del Indec sobre caída económica y pobreza."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "qpkq2f",
+          "titulo": "Kicillof abrió su gira en EEUU: se juntó con fondos de inversión para dar una señal a Wall Street",
+          "fecha": "2026-09-22T23:26:42.000Z",
+          "ruta": "/nota/kicillof-abrio-su-gira-en-eeuu-se-junto-con-fondos-de-inversion-para-qpkq2f"
         }
       ],
       "verificacion": {
