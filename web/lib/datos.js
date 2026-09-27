@@ -392,7 +392,6 @@ export const SECCIONES = [
   { nombre: 'Economía', ranura: 'economia', color: 'var(--s-economia)' },
   { nombre: 'Cultura y agenda', ranura: 'cultura', color: 'var(--s-cultura)' },
   { nombre: 'Tecnología', ranura: 'tecnologia', color: 'var(--s-tecnologia)' },
-  { nombre: 'Servicios', ranura: 'servicios', color: 'var(--s-servicios)' },
   { nombre: 'País', ranura: 'pais', color: 'var(--s-pais)' },
 ];
 

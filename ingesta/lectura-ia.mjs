@@ -33,7 +33,7 @@ const MODELO = 'gemini-flash-lite-latest';
 
 /** Las secciones que puede elegir: las de la web, sin inventar ninguna. */
 export const SECCIONES_DE_LA_FICHA = ['Balcarce', 'Política', 'Policiales', 'Deportes', 'Automovilismo',
-  'Economía', 'Agro', 'Tecnología', 'Cultura y agenda', 'Servicios', 'País'];
+  'Economía', 'Agro', 'Tecnología', 'Cultura y agenda', 'País'];
 export const AMBITOS = ['balcarce', 'region', 'provincia', 'nacional', 'internacional'];
 export const IMPACTOS = ['directo', 'indirecto', 'nulo'];
 export const RAZONES = ['local', 'servicio', 'actividad', 'provincia', 'nacional', 'popular', 'ninguna'];
@@ -69,16 +69,15 @@ Reglas:
 - "impacto_balcarce": "directo" si pasa en Balcarce o cambia algo concreto acá; "indirecto" si toca la zona o una actividad de la ciudad (campo, papa, automovilismo); "nulo" si no.
 - "razon": local (pasó acá), servicio (cambia algo práctico para los vecinos: tarifas, trámites, salud, clima, rutas), actividad (automovilismo, campo, papa), provincia (medida provincial con efecto acá), nacional (noticia nacional importante), popular (tema del que habla todo el país) o ninguna.
 - "seccion", qué va en cada una:
-  · Balcarce: lo que pasa en la ciudad y no tiene una sección más precisa (vecinos, instituciones, obras, escuelas, salud local).
+  · Balcarce: lo que pasa en la ciudad y no tiene una sección más precisa (vecinos, instituciones, obras, escuelas, salud local), y también lo práctico para el vecino: cortes de luz o agua, trámites, horarios de atención, tarifas y subsidios de servicios públicos, vencimientos, alertas.
   · Política: el Concejo, el intendente, el gobierno provincial y nacional, leyes, elecciones.
   · Policiales: delitos, accidentes, incendios, bomberos, policía.
   · Deportes: todo el deporte salvo el automovilismo.
-  · Automovilismo: autos de carrera (TC, Turismo Nacional, Fórmula 1, MotoGP, karting, rally), el autódromo Juan Manuel Fangio y Fangio. Nunca Deportes ni Servicios.
+  · Automovilismo: autos de carrera (TC, Turismo Nacional, Fórmula 1, MotoGP, karting, rally), el autódromo Juan Manuel Fangio y Fangio. Nunca Deportes.
   · Economía: precios, inflación, dólar, empleo, empresas, combustibles.
   · Agro: campo, papa, ganadería, INTA, clima para el productor.
   · Tecnología: tecnología, ciencia, inteligencia artificial.
   · Cultura y agenda: espectáculos, música, teatro, cine, libros, muestras, actividades.
-  · Servicios: sólo lo práctico para el vecino: cortes de luz o agua, trámites, horarios de atención, tarifas y subsidios de servicios públicos, vencimientos, alertas.
   · País: lo nacional que no entra en ninguna de las anteriores.
 - "es_publicidad": true si promociona un comercio, producto o servicio sin ser noticia.
 - "es_anuncio": true si la nota cuenta que alguien anunció algo (que todavía no pasó).
@@ -140,7 +139,7 @@ export const ESQUEMA = {
  *  lo que no cierra se descarta y se vuelve a pedir en otra corrida. */
 export function fichaValida(f) {
   if (!f || typeof f !== 'object' || !f.id) return null;
-  if (!AMBITOS.includes(f.ambito) || !SECCIONES_DE_LA_FICHA.includes(f.seccion) || !IMPACTOS.includes(f.impacto_balcarce)
+  if (!AMBITOS.includes(f.ambito) || !(SECCIONES_DE_LA_FICHA.includes(f.seccion) || f.seccion === 'Servicios') || !IMPACTOS.includes(f.impacto_balcarce)
     || !RAZONES.includes(f.razon) || !IMPORTANCIAS.includes(f.importancia)) return null;
   return {
     ambito: f.ambito,
@@ -278,6 +277,8 @@ export function compararConElSistema(notas, fichas = {}) {
  */
 export function aplicarFichas(notas, fichas = {}, { verdeSecciones = [] } = {}) {
   const cambios = { sacadas: [], dejanDeSerLocales: [], otraSeccion: [], aEsperar: [] };
+  // Las fichas viejas pueden decir "Servicios", que ya no existe (27/09).
+  const seccionDe = (f) => (f.seccion === 'Servicios' ? 'Balcarce' : f.seccion);
   const salida = [];
   for (const original of notas) {
     const f = fichas[original.id];
@@ -312,9 +313,10 @@ export function aplicarFichas(notas, fichas = {}, { verdeSecciones = [] } = {}) 
       n.relevancia = Math.max(0, (n.relevancia ?? 0) - 25);
       cambios.dejanDeSerLocales.push(caso);
     }
-    const seccion = f.seccion === 'Balcarce' && !esLocal ? n.seccion
-      : f.seccion === 'País' && esLocal ? 'Balcarce'
-        : f.seccion;
+    const deLaIA = seccionDe(f);
+    const seccion = deLaIA === 'Balcarce' && !esLocal ? (n.seccion === 'Servicios' ? 'País' : n.seccion)
+      : deLaIA === 'País' && esLocal ? 'Balcarce'
+        : deLaIA;
     if (seccion !== n.seccion) {
       cambios.otraSeccion.push({ ...caso, antes: n.seccion, ahora: seccion });
       n.seccion = seccion;

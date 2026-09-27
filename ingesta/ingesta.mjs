@@ -479,7 +479,17 @@ function tituloEsDeTecnologia(titularNormalizado) {
   return PALABRAS_DE_TECNOLOGIA_EN_EL_TITULO.some((p) => contiene(titularNormalizado, p));
 }
 
+/** La sección, sin "Balcarce" para lo de afuera: si una palabra de cortes u
+ *  obras manda a Balcarce una nota que no es de acá, queda por su alcance. */
 function clasificar(nota) {
+  const s = clasificarPorPalabras(nota);
+  if (s !== 'Balcarce' || nota.alcance === 'local' || nota.nombraBalcarce) return s;
+  if (nota.alcance === 'region') return 'Región';
+  if (nota.alcance === 'provincia') return 'Provincia';
+  return 'País';
+}
+
+function clasificarPorPalabras(nota) {
   const texto = normalizar(`${nota.titulo} ${nota.categorias.join(' ')} ${nota.cuerpo.slice(0, 400)}`);
   // Una palabra débil sólo decide si está en el TITULAR. En el cuerpo
   // aparece de casualidad: "Recordaron a Domingo Teruggi" hablaba del
@@ -648,7 +658,6 @@ function relevancia(nota, seccion, medios) {
   // vale bastante más que una nota nacional cualquiera.
   if (nota.figura) p += 16;
   if (seccion === 'Automovilismo') p += 8; // Balcarce es tierra de fierros
-  if (seccion === 'Servicios') p += 6;
   return Math.min(100, Math.round(p));
 }
 

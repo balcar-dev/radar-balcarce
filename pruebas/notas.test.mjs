@@ -533,3 +533,10 @@ test('el mismo título da siempre el mismo id', () => {
   assert.equal(idDe('El Concejo aprobó el presupuesto'), idDe('El Concejo aprobó el presupuesto'));
   assert.notEqual(idDe('Una nota'), idDe('Otra nota'));
 });
+
+test('no hay sección Servicios: los cortes y trámites de acá van a Balcarce; lo de afuera, no (27/09)', () => {
+  // Hernán, 27/09: "saca la sección servicios, pásalo a Balcarce".
+  assert.equal(clasificar(nota({ titulo: 'Corte de luz programado en el barrio Norte' })), 'Balcarce');
+  assert.equal(clasificar(nota({ titulo: 'Corte de agua en Lomas de Zamora', alcance: 'pais' })), 'País');
+  assert.equal(clasificar(nota({ titulo: 'Anuncian una licitación para el asfalto de Balcarce', alcance: 'region', nombraBalcarce: true })), 'Balcarce');
+});

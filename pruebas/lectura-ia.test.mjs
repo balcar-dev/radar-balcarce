@@ -232,3 +232,10 @@ test('las repetidas se acumulan de una corrida a otra: A~B antes y B~C ahora son
   assert.deepEqual(unirGrupos([['a', 'b', 'viejo']], [], new Set(['a', 'b'])), [['a', 'b']], 'lo que ya no está en la ingesta se va');
   assert.deepEqual(unirGrupos([['a', 'viejo']], [], new Set(['a'])), [], 'un grupo de uno no es grupo');
 });
+
+test('la IA ya no tiene la sección Servicios; una ficha vieja que la dice va a Balcarce (27/09)', () => {
+  assert.ok(!ESQUEMA.items.properties.seccion.enum.includes('Servicios'));
+  const vieja = { ...fichaValida(fichaDe('s', { seccion: 'Balcarce' })), seccion: 'Servicios' };
+  const nota = { id: 's', titulo: 'Congelan la VTV en Balcarce', seccion: 'Balcarce', semaforo: 'verde', alcance: 'local', local: true, relevancia: 70 };
+  assert.equal(aplicarFichas([nota], { s: vieja }, { verdeSecciones: VERDES }).notas[0].seccion, 'Balcarce');
+});

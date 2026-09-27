@@ -139,13 +139,17 @@ la sección con menos notas escritas.
 | Deportes | Sí |
 | Automovilismo | Sí |
 | Agro | Sí |
-| Servicios | Sí |
 | Cultura y agenda | Sí |
 | Tecnología | Sí |
 | Economía | Sí |
 | Política | Sí en la web; **en las redes, nunca sin una persona** |
 | Policiales | Sí en la web; **en las redes, nunca sin una persona** |
 | País | No: espera a una persona |
+
+**No hay sección Servicios (27/09, Hernán).** Los cortes, trámites, tarifas y
+obras de acá van a **Balcarce**. Lo de afuera que sólo trataba de eso queda
+como País. La farmacia, el clima y el dólar siguen siendo servicios del sitio
+(la barra de arriba), no una sección de notas.
 
 **Policiales es sólo de Balcarce y la zona** (26/09; pedido de Hernán y Andrés:
 "que sean policiales de Balcarce"): el partido, Napaleofú, Los Pinos, Ramos

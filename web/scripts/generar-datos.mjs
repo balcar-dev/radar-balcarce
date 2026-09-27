@@ -423,8 +423,11 @@ const notas = sinNotasRepetidas(vigentes);
 const repetidas = vigentes.length - notas.length;
 if (repetidas) console.log(`  ${repetidas} notas repetidas (mismo titular) salen de las listas y conservan su página`);
 
+// Sin sección Servicios desde el 27/09 (Hernán): lo que quedó con esa sección
+// en el archivo pasa a Balcarce si es de acá, y a País si no.
+const sinServicios = (n) => (n?.seccion === 'Servicios' ? { ...n, seccion: n.local ? 'Balcarce' : 'País' } : n);
 const archivo = actualizarArchivo({
-  archivo: archivoAnterior.notas ?? [],
+  archivo: (archivoAnterior.notas ?? []).map(sinServicios),
   // Las partes nuevas que hoy no están (una persona corrigió el texto, o la
   // reescritura se cayó) tampoco quedan de la vez anterior en el archivo: el
   // `undefined` pisa lo viejo al mezclar y no se escribe.

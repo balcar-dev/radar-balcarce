@@ -963,7 +963,10 @@ export const REGLAS_SECCION = [
       'kicillof', 'milei', 'gobierno provincial', 'paso', 'bloque', 'oposición', 'oposicion'],
   },
   {
-    seccion: 'Servicios',
+    // Sin sección Servicios desde el 27/09 (Hernán): los cortes, trámites y
+    // obras de acá son de Balcarce. Lo de afuera que sólo cae acá no tiene
+    // sección de Balcarce: queda por su alcance (ver clasificar).
+    seccion: 'Balcarce',
     palabras: ['corte de luz', 'corte de energía', 'corte de energia', 'corte de agua',
       'farmacia de turno', 'cronograma', 'licitación', 'licitacion', 'obra pública',
       'obra publica', 'asfalto', 'bacheo', 'recolección', 'recoleccion', 'tránsito',
@@ -1077,7 +1080,7 @@ export const REGLAS_SEMAFORO = {
   // seguras no es que estén afuera sino la lista de arriba — todo lo que
   // acusa, mata o involucra a un chico sigue esperando a una persona — y
   // el rojo, que no sale nunca.
-  verdeSecciones: ['Servicios', 'Cultura y agenda', 'Deportes', 'Automovilismo', 'Agro',
+  verdeSecciones: ['Cultura y agenda', 'Deportes', 'Automovilismo', 'Agro',
     'Balcarce', 'Política', 'Policiales', 'Economía', 'Tecnología'],
   // Esto NO es noticia: es publicidad o promoción de otro medio. No se
   // bloquea (a veces un sorteo del club sí interesa), pero nunca sale solo:
