@@ -330,7 +330,7 @@ test('las notas propias no van a Facebook como posteo ni a los podcasts', () => 
   assert.ok(esNotaPropia(dolar) && esNotaPropia(repaso));
   assert.deepEqual(elegirParaFacebook({ notas: [dolar, repaso], ahora }), []);
   // Con una nota normal igual de fuerte, sale ésa.
-  const normal = { ...dolar, id: 'normal', propia: undefined, titulo: 'Otra cosa distinta', seccion: 'Deportes' };
+  const normal = { ...dolar, id: 'normal', propia: undefined, titulo: 'Otra cosa distinta', seccion: 'Deportes', local: true };
   assert.deepEqual(elegirParaFacebook({ notas: [dolar, repaso, normal], ahora }).map((n) => n.id), ['normal']);
   assert.equal(sePuedeSola(dolar), false);
   assert.equal(sePuedeSola(repaso), false);

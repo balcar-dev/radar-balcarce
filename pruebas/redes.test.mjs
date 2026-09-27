@@ -116,7 +116,7 @@ const haceMin = (m) => new Date(AHORA.getTime() - m * 60000).toISOString();
 
 const nota = (extra = {}) => ({
   id: 'abc', titulo: 'Un titular', copete: 'Un copete', seccion: 'Deportes', relevancia: 90,
-  medios: ['Diario La Vanguardia'], publicadaPor: 'ia', publicadaCuando: haceMin(60), ...extra,
+  medios: ['Diario La Vanguardia'], local: true, publicadaPor: 'ia', publicadaCuando: haceMin(60), ...extra,
 });
 
 test('la hora se cuenta en Balcarce, no en UTC', () => {
@@ -435,7 +435,7 @@ test('el interruptor acepta si, Si, SÍ y sí, y nada más', () => {
 
 import { elegirParaPodcast, guionRepaso, primeraOracion } from '../redes/elegir.mjs';
 
-const nn = (id, titulo, seccion, relevancia, extra = {}) => ({ id, titulo, seccion, relevancia, semaforo: 'verde', ...extra });
+const nn = (id, titulo, seccion, relevancia, extra = {}) => ({ id, titulo, seccion, relevancia, local: true, semaforo: 'verde', ...extra });
 
 test('el podcast lee el copete sólo de las notas propias, y sin nombrar la fuente', () => {
   const g = guionRepaso([
@@ -529,4 +529,23 @@ test('el podcast de la noche saluda de noche, no de día', () => {
   assert.match(g, /^Buenas noches, Balcarce/);
   assert.match(g, /Radar Balcarce punto com\.$/);
   assert.doesNotMatch(g, /buen d[ií]a/i);
+});
+
+// ------------------------------------- a las redes, sólo lo de Balcarce (27/09)
+
+import { esParaLasRedes } from '../redes/elegir.mjs';
+
+test('a las redes va sólo lo de Balcarce; del automovilismo de afuera, lo que nombra a una figura (27/09)', () => {
+  // El 26/09 el podcast de la tarde contó "la Invasión de Pueblos en
+  // Necochea" y el 27/09 Facebook publicó "El transporte público y el gas en
+  // debate en la región", también de Necochea. Ninguna era de acá.
+  const necochea = { id: 'n', titulo: 'Comienza la Invasión de Pueblos en Necochea', seccion: 'Cultura y agenda', relevancia: 90, local: false, semaforo: 'verde' };
+  const deAca = { id: 'b', titulo: 'El Concejo aprueba el presupuesto', seccion: 'Balcarce', relevancia: 80, local: true, semaforo: 'verde' };
+  const colapinto = { id: 'c', titulo: 'Colapinto larga noveno en Azerbaiyán', seccion: 'Automovilismo', relevancia: 85, local: false, figura: 'colapinto', semaforo: 'verde' };
+  const rosario = { id: 'r', titulo: 'Arrigoni gana el TC Mouras en Rosario', seccion: 'Automovilismo', relevancia: 85, local: false, semaforo: 'verde' };
+  assert.equal(esParaLasRedes(necochea), false);
+  assert.equal(esParaLasRedes(rosario), false);
+  assert.equal(esParaLasRedes(deAca), true);
+  assert.equal(esParaLasRedes(colapinto), true);
+  assert.deepEqual(elegirParaPodcast([necochea, deAca, colapinto, rosario], { cuantas: 4 }).map((n) => n.id).sort(), ['b', 'c']);
 });

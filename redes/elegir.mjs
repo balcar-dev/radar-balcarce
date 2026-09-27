@@ -119,6 +119,7 @@ export function elegirParaFacebook({ notas, libro = libroNuevo(), ahora = new Da
     if (yaPublicada(libro, 'facebook', n.id)) return false;
     if (esperaCuerpo(n)) return false;
     if (esNotaPropia(n)) return false;
+    if (!esParaLasRedes(n)) return false;
     if ((n.relevancia ?? 0) < reglas.relevanciaMinima) return false;
     if (reglas.seccionesQueEsperanPersona.includes(n.seccion)) return false;
     if (recientes.some((p) => temaParecido(n, p))) return false;
@@ -280,10 +281,22 @@ export const REGLAS_PIEZAS = {
   feedPorDia: PIEZAS.feedPorDia,
 };
 
+/**
+ * ¿Es para las redes? Por ahora sólo va lo de Balcarce (Hernán, 27/09): una
+ * nota de un medio de Balcarce, o de un medio de afuera que dice Balcarce en
+ * su título (`local`, ingesta/ingesta.mjs). Del automovilismo nacional, sólo
+ * lo que nombra a una figura argentina (Colapinto): Balcarce es la ciudad de
+ * Fangio. El 26/09 el podcast de la tarde contó una nota de Necochea y el
+ * 27/09 Facebook publicó otra; ninguna de las dos era de acá.
+ */
+export function esParaLasRedes(nota) {
+  return nota?.local === true || (nota?.seccion === 'Automovilismo' && !!nota?.figura);
+}
+
 /** ¿Se puede armar una pieza sola con esta nota? */
 export function sePuedeSola(nota) {
   return nota.semaforo !== 'rojo' && !SECCIONES_QUE_ESPERAN_PERSONA.includes(nota.seccion) && !esperaCuerpo(nota)
-    && !esNotaPropia(nota);
+    && !esNotaPropia(nota) && esParaLasRedes(nota);
 }
 
 const porRelevancia = (a, b) => (b.relevancia ?? 0) - (a.relevancia ?? 0);

@@ -106,6 +106,17 @@ test('lo que pasa en Balcarce se reconoce aunque la fuente sea de afuera', () =>
   assert.ok(!esDeBalcarce(nota({ alcance: 'pais', titulo: 'Suba del dólar', cuerpo: 'El mercado cerró en alza' })));
 });
 
+test('un medio de afuera que nombra a Balcarce sólo en el texto no hace la nota "de Balcarce" (27/09)', () => {
+  // "Este viernes comienza la 58ª Invasión de Pueblos" (Ecos Diarios, de
+  // Necochea) nombraba a Balcarce en la lista de localidades y terminó en el
+  // podcast como si fuera de acá. Si el hecho es de Balcarce, el medio de
+  // afuera lo dice en el título.
+  assert.ok(!esDeBalcarce(nota({ alcance: 'region', titulo: 'Este viernes comienza la 58ª Invasión de Pueblos', cuerpo: 'Participan jóvenes de Necochea, Balcarce y Lobería.' })));
+  assert.ok(!esDeBalcarce(nota({ alcance: 'pais', titulo: 'Milei prepara anuncios por la suba del riesgo país', cuerpo: 'En Balcarce y en todo el país…' })));
+  assert.ok(esDeBalcarce(nota({ alcance: 'region', titulo: 'Werner hizo la pole del TC Pick Up en el autódromo de Balcarce' })));
+  assert.ok(esDeBalcarce(nota({ alcance: 'local', titulo: 'Comienza la Invasión de Pueblos' })), 'lo de un medio de acá sigue siendo de acá');
+});
+
 test('el automovilismo le gana a deportes', () => {
   // En Balcarce los fierros son sección propia: es la ciudad de Fangio, no
   // un subtema de deportes.

@@ -329,12 +329,22 @@ const EN_VIVO_PERMITIDO = /\b(musica|show|shows|banda|bandas|espectaculo|especta
  * @param {{ titulo?: string, resumen?: string, antecedentes?: string }} fuente lo que se le dio
  * @param {{ titulo?: string, copete?: string, cuerpo?: string, guion?: string }} nuevo lo que devolvió
  */
-export function verificar(fuente, nuevo, { soloForma = false } = {}) {
+export function verificar(fuente, nuevo, { soloForma = false, deBalcarce = null } = {}) {
   const problemas = [];
   const agregar = (tipo, detalle) => problemas.push({ tipo, detalle });
 
   const ctx = contexto(fuente);
   const { origen, origenNorm } = ctx;
+
+  // 0. Balcarce en el título de una nota que no es de Balcarce (27/09). La
+  // instrucción decía "si el hecho es de Balcarce y el título no lo dice, va
+  // 'en Balcarce' al final", y la IA lo aplicaba a lo que sólo nombraba a
+  // Balcarce: "Comienza la Invasión de Pueblos en Necochea con presencia de
+  // jóvenes de Balcarce". Si el título original ya lo decía, queda.
+  if (deBalcarce === false && /\bbalcarce\b/.test(sinTildes(nuevo?.titulo ?? ''))
+    && !/\bbalcarce\b/.test(sinTildes(fuente?.titulo ?? ''))) {
+    agregar('lugar', 'el título pone Balcarce y la nota no es de Balcarce');
+  }
 
   // Nada vacío: un título en blanco publicado es peor que uno mecánico.
   if (!nuevo?.titulo?.trim()) agregar('vacio', 'no devolvió título');

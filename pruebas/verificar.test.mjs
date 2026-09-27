@@ -313,3 +313,17 @@ test('la regla de "en vivo" vale también al revalidar lo ya publicado', () => {
   const r = verificar({}, { titulo: 'Dólar hoy en vivo', copete: 'La cotización.', guion: 'x' }, { soloForma: true });
   assert.ok(r.problemas.some((p) => p.tipo === 'forma'));
 });
+
+test('el título no pone Balcarce en una nota que no es de Balcarce (27/09)', () => {
+  // Pasó el 26/09: "Este viernes comienza la 58ª Invasión de Pueblos" (Ecos
+  // Diarios, de Necochea) salió como "Comienza la Invasión de Pueblos en
+  // Necochea con presencia de jóvenes de Balcarce" y terminó en el podcast.
+  const fuente = { titulo: 'Este viernes comienza la 58ª Invasión de Pueblos', resumen: 'Participan jóvenes de Necochea, Balcarce y la región.' };
+  const nuevo = { titulo: 'Comienza la Invasión de Pueblos en Necochea con presencia de jóvenes de Balcarce', copete: 'El encuentro juvenil dura tres jornadas.' };
+  const r = verificar(fuente, nuevo, { soloForma: true, deBalcarce: false });
+  assert.ok(r.problemas.some((p) => p.tipo === 'lugar'), 'tiene que frenar');
+  // Si la nota es de Balcarce, o el título original ya lo decía, queda.
+  assert.ok(!verificar(fuente, nuevo, { soloForma: true, deBalcarce: true }).problemas.some((p) => p.tipo === 'lugar'));
+  const conBalcarce = { ...fuente, titulo: 'Jóvenes de Balcarce viajan a la Invasión de Pueblos' };
+  assert.ok(!verificar(conBalcarce, nuevo, { soloForma: true, deBalcarce: false }).problemas.some((p) => p.tipo === 'lugar'));
+});

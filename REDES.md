@@ -150,6 +150,7 @@ mira la portada y publica **una** nota si cumple todo esto:
 | Relevancia | 75 o más |
 | Antigüedad en la web | entre 15 minutos y 8 horas (el enlace tiene que existir) |
 | Sección | nunca **Política** ni **Policiales**: esas las decide una persona |
+| De dónde es | **sólo de Balcarce** (desde el 27/09, pedido de Hernán): de un medio de Balcarce, o de un medio de afuera que dice Balcarce en su propio título. Del automovilismo de afuera, sólo lo que nombra a una figura argentina (Colapinto). Vale igual para los podcasts, las historias y el feed de Instagram (`esParaLasRedes`, `redes/elegir.mjs`) |
 | Horario | de las 8 a las **22:00 en punto** (se cuenta en minutos: el 24/09 salió uno a las 22:25 y ya no puede pasar) |
 | Tope | **5 por día**, con 90 minutos entre una y otra (conservador a propósito: la web publica unas 100 notas por día y en Facebook sería ruido) |
 | Repetición | una nota sale una sola vez (lo garantiza `web/data/redes.json`) |

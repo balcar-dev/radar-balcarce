@@ -363,10 +363,18 @@ function parsearScrape(html, fuente) {
 
 // ------------------------------------------------- clasificación y semáforo
 
+// Una nota de un medio de afuera es "de Balcarce" sólo si lo dice el TÍTULO
+// del medio (27/09). Antes alcanzaba con nombrarla en los primeros 600
+// caracteres, y eso le daba +47 puntos, la sacaba del piso y del cupo de lo
+// de afuera y la dejaba ir a las redes: "Este viernes comienza la 58ª
+// Invasión de Pueblos" (Ecos Diarios, de Necochea) nombraba a Balcarce en
+// una lista de localidades que participaban y terminó en el podcast; una
+// nota de Infobae sobre el riesgo país, también. Si el hecho es de acá, el
+// medio de afuera lo pone en el título ("…en el autódromo de Balcarce").
 function esDeBalcarce(nota) {
   if (nota.alcance === 'local') return true;
-  const texto = normalizar(`${nota.titulo} ${nota.cuerpo.slice(0, 600)}`);
-  return PALABRAS_LOCALES.some((p) => contiene(texto, p));
+  const titulo = normalizar(nota.titulo ?? '');
+  return PALABRAS_LOCALES.some((p) => contiene(titulo, p));
 }
 
 /** ¿Toca la zona sin nombrar a Balcarce? La ruta 226, el sudeste, la papa.

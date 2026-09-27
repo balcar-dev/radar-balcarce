@@ -954,7 +954,7 @@ export async function reescribirAutomaticas(notas, {
         {
           titulo: cacheada.titulo, copete: cacheada.copete, guion: cacheada.guion, cuerpo: cacheada.cuerpo,
         },
-        { soloForma: true },
+        { soloForma: true, deBalcarce: esLocal(nota) },
       );
       if (control.ok) { resultado[nota.id] = cacheada; continue; }
       // No entra en resultado: no se publica por ahora, y como no aparece
@@ -1009,7 +1009,7 @@ export async function reescribirAutomaticas(notas, {
     const fuente = materialParaVerificar(conTexto);
     const comprobar = (x) => verificar(fuente, {
       titulo: x.titulo, copete: x.copete, guion: x.guion, cuerpo: x.cuerpo,
-    });
+    }, { deBalcarce: esLocal(nota) });
 
     /** Lo que se puede publicar de una respuesta: tal cual, o con el cuerpo
      *  sin las oraciones que no pasan. Nunca sin cuerpo. */
