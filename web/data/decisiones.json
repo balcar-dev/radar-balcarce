@@ -1,5 +1,5 @@
 {
-  "exportado": "2026-09-27T07:00:33.733Z",
+  "exportado": "2026-09-27T07:10:17.125Z",
   "decisiones": {
     "1951120": {
       "estado": "automatica",
@@ -15955,25 +15955,32 @@
     },
     "1390kus": {
       "estado": "automatica",
-      "titulo": "El doctor Fernando Garcia sera incorporado en Balcarce",
-      "copete": "El profesional de la salud Fernando Garcia sumara sus servicios en el ambito local. La novedad fue informada por el medio de comunicacion.",
-      "cuerpo": "El doctor Fernando Garcia sera incorporado segun lo informado por el medio de comunicacion local, sumandose a la atencion medica de la comunidad de Balcarce.\n\nHasta el momento no se brindaron mayores detalles acerca del sector especifico donde cumplira funciones ni la fecha exacta de su llegada al distrito.",
-      "guion": "El doctor Fernando Garcia sera incorporado en Balcarce",
+      "titulo": "Informan los servicios de sepelios de la cooperativa en Balcarce",
+      "copete": "Se dieron a conocer los avisos fúnebres y servicios de sepelios prestados por la Cooperativa de Electricidad \"General Balcarce\" Limitada para distintas fechas recientes en el distrito.",
+      "cuerpo": "La Cooperativa de Electricidad \"General Balcarce\" Limitada difundió los servicios de sepelios correspondientes a vecinos fallecidos en la ciudad durante los últimos meses. Los avisos detallan las fechas de los decesos, los lugares de las casas de duelo y los horarios previstos para las inhumaciones en el Cementerio Municipal o cremaciones en Miramar.\n\nLos registros publicados abarcan fallecimientos ocurridos desde mayo hasta septiembre de este año, incluyendo servicios con destino en la cabecera del partido y en localidades rurales como Los Pinos. Las despedidas contaron con sus respectivos oficiamientos religiosos en salas velatorias.\n\nEstos partes informativos se emiten de manera habitual para dar aviso a familiares y allegados sobre los cronogramas de los servicios fúnebres organizados por la entidad de servicios públicos local.",
+      "guion": "Informan los servicios de sepelios de la cooperativa en Balcarce",
       "deIA": true,
       "por": "ia",
-      "cuando": "2026-09-25T09:30:53.046Z",
+      "cuando": "2026-09-27T07:10:17.053Z",
       "claves": [
-        "Incorporacion de un nuevo profesional medico",
-        "Se trata del doctor Fernando Garcia",
-        "La novedad fue dada a conocer por un medio local"
+        "La cooperativa eléctrica difundió los avisos fúnebres recientes.",
+        "Se detallan los cronogramas de inhumaciones y cremaciones.",
+        "Los servicios corresponden a decesos registrados entre mayo y septiembre."
+      ],
+      "seSabe": [
+        "La Cooperativa de Electricidad \"General Balcarce\" Limitada presta los servicios de sepelios en el distrito.",
+        "Se registraron diversos fallecimientos con servicios en el Cementerio Municipal y en un crematorio de Miramar.",
+        "Los avisos incluyen casas de duelo ubicadas en la ciudad y en zonas rurales como Los Pinos."
       ],
       "noConfirmado": [
         "No pudo ser contrastado de forma independiente con las fuentes consultadas."
       ],
-      "textoRedes": "El doctor Fernando Garcia sera incorporado para prestar servicios en Balcarce, segun la informacion dada a conocer recientemente. Enterate de los detalles en nuestra web.",
+      "textoRedes": "La Cooperativa de Electricidad \"General Balcarce\" Limitada difundió el detalle de los servicios de sepelios y avisos fúnebres correspondientes a los últimos meses en el distrito.",
       "etiquetas": [
+        "servicios fúnebres",
+        "cooperativa de electricidad",
         "Balcarce",
-        "Fernando Garcia"
+        "fallecimientos"
       ],
       "fuentesConsultadas": [
         {
@@ -15981,7 +15988,7 @@
           "enlace": "https://eldiariobalcarce.com.ar/el-dr-fernando-garcia-sera-incorporado-a-la-academia-nacional-de-agronomia-y-veterinaria-936",
           "fecha": null,
           "oficial": false,
-          "aporte": "Informo la incorporacion del doctor Fernando Garcia."
+          "aporte": "Aportó el detalle de los avisos fúnebres, fechas de fallecimiento, casas de duelo y servicios de sepelios de la cooperativa."
         }
       ],
       "verificacion": {
@@ -30905,70 +30912,13 @@
     },
     "v8jjgw": {
       "estado": "automatica",
-      "titulo": "Bomberos controlan un principio de incendio en una vivienda en Balcarce",
-      "copete": "Una dotación de bomberos intervino durante la madrugada de este domingo por un foco ígneo en el techo de una casa ubicada en calle 5. No se reportaron personas heridas.",
-      "cuerpo": "Por motivos que todavía no se pudieron establecer, las llamas se originaron en la zona del techo del inmueble, lo que requirió la intervención inmediata de una dotación del cuerpo activo de Bomberos Voluntarios.\n\nTras varios minutos de labores en el lugar, los efectivos lograron contener la situación y evitar que el fuego se expandiera hacia otros sectores de la vivienda. Desde el área interviniente confirmaron que no se registraron personas heridas como consecuencia del episodio.",
-      "guion": "Bomberos controlan un principio de incendio en una vivienda en Balcarce",
-      "deIA": true,
+      "titulo": null,
+      "copete": null,
+      "cuerpo": null,
+      "guion": null,
+      "deIA": null,
       "por": "ia",
-      "cuando": "2026-09-27T07:00:33.674Z",
-      "claves": [
-        "Ocurrió durante la madrugada de este domingo en calle 5 entre 10 y 12.",
-        "El fuego se inició en la zona del techo por causas que se desconocen.",
-        "Una dotación de bomberos trabajó en el lugar y evitó la propagación.",
-        "No se informaron personas heridas tras el episodio."
-      ],
-      "seSabe": [
-        "El principio de incendio ocurrió durante la madrugada de este domingo.",
-        "El hecho tuvo lugar en un domicilio situado en calle 5, entre 10 y 12.",
-        "Las llamas se concentraron en la zona del techo del inmueble.",
-        "Una dotación de Bomberos Voluntarios trabajó para controlar la situación y evitar la propagación.",
-        "No se reportaron personas heridas."
-      ],
-      "noConfirmado": [
-        "No se establecieron las causas que originaron el fuego.",
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "Una dotación de bomberos intervino durante la madrugada de este domingo por un principio de incendio en el techo de una vivienda ubicada en calle 5, entre 10 y 12. No se registraron personas heridas.",
-      "etiquetas": [
-        "Bomberos Voluntarios",
-        "incendio",
-        "calle 5"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Infórmese Primero (FM 104.9)",
-          "enlace": "http://www.informeseprimero.com.ar/2026/09/principio-de-incendio-en-un-domicilio.html",
-          "fecha": "2026-09-27T04:43:31.521Z",
-          "oficial": false,
-          "aporte": "Informó sobre el principio de incendio en calle 5, la intervención de los bomberos y la ausencia de heridos."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "1k3dzvz",
-          "titulo": "Principio de incendio en un departamento céntrico",
-          "fecha": "2026-09-24T19:14:04.000Z",
-          "ruta": "/nota/principio-de-incendio-en-un-departamento-centrico-1k3dzvz"
-        },
-        {
-          "id": "10x98wn",
-          "titulo": "Caravana y recibimiento para el boxeador Kevin Gómez",
-          "fecha": "2026-09-22T23:46:36.443Z",
-          "ruta": "/nota/caravana-y-recibimiento-para-el-boxeador-kevin-gomez-10x98wn"
-        },
-        {
-          "id": "1gk282j",
-          "titulo": "Ferroviarios ganó la final del Apertura por penales",
-          "fecha": "2026-09-21T00:42:06.000Z",
-          "ruta": "/nota/ferroviarios-gano-la-final-del-apertura-por-penales-1gk282j"
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      }
+      "cuando": "2026-09-27T07:10:17.052Z"
     },
     "wbaaus": {
       "estado": "automatica",
@@ -31017,6 +30967,50 @@
           "titulo": "Un motociclista choca contra una camioneta y resulta gravemente herido en Balcarce",
           "fecha": "2026-09-27T01:32:51.000Z",
           "ruta": "/nota/un-motociclista-choca-contra-una-camioneta-y-resulta-gravemente-ads7me"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "3nmr0s": {
+      "estado": "automatica",
+      "titulo": "Cómo compartir la ubicación en tiempo real por WhatsApp de forma segura",
+      "copete": "WhatsApp permite compartir la posición en un mapa para coordinar encuentros de forma práctica. La función requiere precauciones sobre el consumo de batería y el control de privacidad.",
+      "cuerpo": "La aplicación de mensajería instantánea WhatsApp ofrece una herramienta para compartir la ubicación en tiempo real, lo que permite visualizar a varios usuarios en un mismo mapa dentro de un grupo y seguir el movimiento hasta el destino mediante la geolocalización del teléfono. Al finalizar, la interfaz muestra un aviso de ubicación finalizada y conserva la última posición compartida.\n\nEl uso de esta herramienta genera un mayor consumo de batería debido al uso intensivo de la cobertura móvil y los recursos del dispositivo. Por seguridad, se recomienda configurar periodos cortos de transmisión de datos en lugar de activarla durante horas prolongadas, además de revisar los ajustes de privacidad de la aplicación para controlar los chats activos.\n\nPara verificar en qué conversaciones se encuentra activa la función, es necesario ingresar al menú de configuración, seleccionar la sección de privacidad y consultar el apartado correspondiente para administrar el acceso o interrumpir la transmisión en cualquier momento.",
+      "guion": "Cómo compartir la ubicación en tiempo real por WhatsApp de forma segura",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T07:10:17.053Z",
+      "claves": [
+        "Permite visualizar múltiples ubicaciones en un mapa grupal.",
+        "Consume mayor energía por el uso de geolocalización.",
+        "Es posible revisar los chats activos desde los ajustes de privacidad."
+      ],
+      "seSabe": [
+        "WhatsApp permite compartir la ubicación en tiempo real de forma individual o en grupos.",
+        "La función utiliza la geolocalización del dispositivo y muestra el movimiento en un mapa.",
+        "El sistema genera un mayor consumo de batería debido al uso intensivo de los recursos móviles.",
+        "Es posible verificar los chats activos con esta función desde el menú de privacidad."
+      ],
+      "noConfirmado": [
+        "Se desconoce el límite exacto de usuarios que pueden activar la función de manera simultánea en un mismo grupo.",
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Conocé cómo utilizar la función de ubicación en tiempo real en WhatsApp de forma segura, qué recaudos tomar con la batería y cómo controlar los chats activos desde los ajustes de privacidad.",
+      "etiquetas": [
+        "WhatsApp",
+        "ubicación"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Hipertextual",
+          "enlace": "https://hipertextual.com/guias/compartir-ubicacion-whatsapp-tiempo-real/",
+          "fecha": "2026-09-27T07:00:00.000Z",
+          "oficial": false,
+          "aporte": "Detalló los pasos, el funcionamiento y las recomendaciones de seguridad para compartir la ubicación en tiempo real por WhatsApp."
         }
       ],
       "verificacion": {
