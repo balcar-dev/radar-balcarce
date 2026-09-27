@@ -94,6 +94,48 @@
         "seguidores": 3,
         "publicaciones": 19
       }
+    },
+    {
+      "cuando": "2026-09-27T00:00:17.830Z",
+      "web": {
+        "u12": {
+          "visitas": 15,
+          "vistas": 36
+        },
+        "a12": {
+          "visitas": 6,
+          "vistas": 137
+        },
+        "u24": {
+          "visitas": 21,
+          "vistas": 173
+        },
+        "a24": {
+          "visitas": 61,
+          "vistas": 427
+        },
+        "top": [
+          {
+            "camino": "/",
+            "vistas": 80
+          },
+          {
+            "camino": "/agenda",
+            "vistas": 6
+          },
+          {
+            "camino": "/nota/ypf-mantiene-precios-y-queda-mas-barata-en-balcarce-1x3bvjs",
+            "vistas": 6
+          }
+        ]
+      },
+      "facebook": {
+        "seguidores": 2
+      },
+      "instagram": {
+        "seguidores": 3,
+        "publicaciones": 25
+      }
     }
   ]
 }
