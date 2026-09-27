@@ -1,5 +1,5 @@
 {
-  "exportado": "2026-09-27T11:10:39.390Z",
+  "exportado": "2026-09-27T11:20:37.885Z",
   "decisiones": {
     "1951120": {
       "estado": "automatica",
@@ -32602,35 +32602,174 @@
     },
     "1ve3237": {
       "estado": "automatica",
-      "titulo": "Miami votará la continuidad de un impuesto escolar",
-      "copete": "Los votantes de Miami-Dade definirán el tres de noviembre si extienden un gravamen inmobiliario destinado al financiamiento educativo del condado. La medida no representa un aumento en la tasa vigente.",
-      "cuerpo": "Los electores de Miami-Dade definirán el tres de noviembre en las urnas la continuidad de un impuesto inmobiliario que sostiene parte del financiamiento de las escuelas públicas del condado. La consulta evaluará prorrogar por cuatro años la llamada tasa de un mill, equivalente a cien dólares anuales por cada cien mil dólares de valor imponible, según lo establecido por la Junta Escolar local. El esquema recauda fondos destinados principalmente a salarios docentes y a la seguridad en los establecimientos educativos.\n\nLas autoridades distritales advirtieron que una eventual negativa afectaría la retención y contratación de personal docente en la región.",
-      "guion": "Miami votara la continuidad de un impuesto escolar",
+      "titulo": null,
+      "copete": null,
+      "cuerpo": null,
+      "guion": null,
+      "deIA": null,
+      "por": "ia",
+      "cuando": "2026-09-27T11:20:37.785Z"
+    },
+    "614rkz": {
+      "estado": "automatica",
+      "titulo": "La reconversión agrícola del Valle de Uco mendocino",
+      "copete": "El Valle de Uco atravesó profundas transformaciones productivas en las últimas cuatro décadas. Pasó de la fruticultura tradicional al auge vitivinícola y ahora apunta al tomate y al ajo.",
+      "cuerpo": "El Valle de Uco, región mendocina integrada por Tunuyán, Tupungato y San Carlos, modificó su matriz productiva a lo largo de cuarenta años debido a sucesivas reconversiones agrícolas, según detalló el productor y vicepresidente de la Cámara de Comercio de Tunuyán, Carlos Dávila. En los años ochenta la zona concentraba unas treinta mil hectáreas de manzanas y peras, superficie que se redujo a unas mil seiscientas hectáreas en la actualidad, de acuerdo con datos oficiales provinciales citados por Dávila.\n\nAquel cultivo frutícola y conservero dejó lugar a mediados de los noventa a la vitivinicultura de alta gama con la llegada de inversores extranjeros y bodegas, actividad que actualmente ocupa unas veintinueve mil hectáreas. Sin embargo, la caída del mercado vitivinícola y las dificultades de los pequeños productores impulsaron una nueva transformación que incluye la extracción de viñedos para sembrar tomate y ajo.\n\nEl propio Dávila indicó que debió cambiar su producción de peras por uva Pedro Giménez, reconvertirla luego a Malbec y finalmente retirar los viñedos para cultivar tomate bajo el esquema integrado Tomate 2000 y también ajo. Por su parte, el productor e industrializador César Bernué advirtió sobre la baja competitividad del sector y la preocupación ante la importación de tomate industria.",
+      "guion": "La reconversión agrícola del Valle de Uco mendocino",
       "deIA": true,
       "por": "ia",
-      "cuando": "2026-09-27T11:10:39.304Z",
+      "cuando": "2026-09-27T11:20:37.784Z",
       "claves": [
-        "Los votantes de Miami-Dade definirán el tres de noviembre la extensión de un impuesto inmobiliario escolar.",
-        "La tasa recauda cien dólares anuales por cada cien mil dólares de valor imponible de una propiedad.",
-        "La mayor parte de los fondos obtenidos se destina al pago de salarios docentes y a la seguridad escolar."
+        "El Valle de Uco redujo drásticamente sus hectáreas de manzanas y peras en cuarenta años.",
+        "La vitivinicultura dominó la región desde los noventa tras desplazar a la fruticultura.",
+        "Pequeños productores comenzaron a arrancar viñedos para apostar por el tomate y el ajo.",
+        "El productor Carlos Dávila describió las distintas etapas de reconversión que atravesó."
+      ],
+      "seSabe": [
+        "El Valle de Uco está integrado por los departamentos de Tunuyán, Tupungato y San Carlos.",
+        "Las hectáreas de manzanas y peras pasaron de unas treinta mil hace cuarenta años a unas mil seiscientas en la actualidad, según datos oficiales citados por Dávila.",
+        "La vitivinicultura ocupa actualmente unas veintinueve mil hectáreas en la región.",
+        "El productor Carlos Dávila reemplazó sus cultivos anteriores por plantaciones de tomate bajo la figura Tomate 2000 y por ajo."
       ],
       "noConfirmado": [
         "No pudo ser contrastado de forma independiente con las fuentes consultadas."
       ],
-      "textoRedes": "Los votantes de Miami-Dade definirán en noviembre la continuidad de un impuesto inmobiliario destinado a financiar salarios docentes y seguridad escolar en el condado.",
+      "textoRedes": "El Valle de Uco mendocino transformó su producción agrícola en las últimas cuatro décadas: pasó de las peras y manzanas al auge del vino, y ahora los productores reemplazan viñedos por cultivos de tomate y ajo.",
       "etiquetas": [
-        "Miami",
-        "impuestos",
-        "escuelas",
-        "elecciones"
+        "Valle de Uco",
+        "agricultura",
+        "vitivinicultura",
+        "Mendoza",
+        "tomate",
+        "ajo"
       ],
       "fuentesConsultadas": [
         {
-          "medio": "La Nación",
-          "enlace": "https://www.lanacion.com.ar/estados-unidos/florida/us100-por-cada-us100-mil-en-florida-el-impuesto-que-ya-se-aplica-en-miami-y-podria-vetarse-luego-de-nid27092026/",
-          "fecha": "2026-09-27T11:00:00.000Z",
+          "medio": "Bichos de Campo",
+          "enlace": "https://bichosdecampo.com/las-siete-vidas-del-valle-de-uco-carlos-davila-productor-de-tunuyan-vivio-en-carne-propia-todas-las-reconversiones-en-ese-oasis-que-paso-de-las-manzanas-y-peras-a-los-vinos-y-duraznos-y-que-ahora/",
+          "fecha": "2026-09-27T11:17:45.000Z",
           "oficial": false,
-          "aporte": "Detalló que los votantes de Miami-Dade definirán el tres de noviembre la prórroga de un impuesto escolar por cuatro años."
+          "aporte": "Detalló la evolución histórica de los cultivos en el Valle de Uco y las sucesivas reconversiones de los productores."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1b4vg7n",
+          "titulo": "Plantó 5.700 árboles alrededor de su pequeña casa para cumplir el deseo de su madre; ahora busca llegar a 10.000 para ingresar al Libro Guinness de los récords",
+          "fecha": "2026-09-25T08:31:57.000Z",
+          "ruta": "/nota/planto-5-700-arboles-alrededor-de-su-pequena-casa-para-cumplir-el-1b4vg7n"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "gdzgb": {
+      "estado": "automatica",
+      "titulo": "Los bancos bajan tasas de créditos hipotecarios UVA y varían cuotas",
+      "copete": "Las entidades financieras redujeron los intereses para préstamos hipotecarios UVA con opciones desde el 6,5%. Los valores iniciales cambian según el banco y el plazo elegido, en un contexto de mayores consultas por parte de los compradores.",
+      "cuerpo": "Los bancos volvieron a bajar las tasas de interés en los créditos hipotecarios UVA, con propuestas que arrancan desde el 6,5% TNA para clientes que acreditan sus haberes y plazos de hasta 30 años. Como se había informado a principios de semana en el marco de una creciente competencia y un aumento de consultas por parte de los interesados en comprar viviendas, las cuotas iniciales para un préstamo de 75 mil dólares varían desde los 653 mil hasta superar los 940 mil pesos según la entidad y el plazo.\n\nEntre las entidades privadas, ICBC ofrece un 6,9% y otras como BBVA, Hipotecario, Galicia y Credicoop se sitúan en el 7,5%. La diferencia en la primera cuota entre las opciones más bajas y las más altas puede alcanzar los 300 mil pesos mensuales.\n\nEl impacto en los ingresos familiares necesarios para acceder al crédito también se modificó tras las reducciones de tasas. Además del anticipo del 25 por ciento, los compradores deben contemplar gastos de escritura, seguros mensuales y la condición de mantener la acreditación de haberes para evitar aumentos en la tasa.",
+      "guion": "Los bancos bajan tasas de créditos hipotecarios UVA y varían cuotas",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T11:20:37.785Z",
+      "claves": [
+        "Las tasas de los créditos hipotecarios UVA arrancan desde el 6,5% TNA para clientes con acreditación de haberes.",
+        "Las primeras cuotas para un préstamo de 75 mil dólares varían entre 653 mil y más de 940 mil pesos.",
+        "Banco Ciudad, Provincia y Nación concentran las opciones más competitivas en tasas y plazos de hasta 30 años.",
+        "Los ingresos familiares requeridos varían desde los 2,6 millones de pesos según la entidad y el plazo elegido."
+      ],
+      "seSabe": [
+        "Los bancos redujeron las tasas de los créditos hipotecarios UVA con ofertas desde el 6,5% TNA.",
+        "Las consultas para comprar viviendas habían crecido en los días previos tras las bajas de tasas del sector.",
+        "Banco Ciudad y Banco Provincia ofrecen las tasas iniciales más bajas para clientes con haberes acreditados.",
+        "Dejar de cobrar el sueldo en la entidad puede incrementar la tasa entre 1,5 y 2 puntos porcentuales."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Los bancos volvieron a bajar las tasas de los créditos hipotecarios UVA con propuestas desde el 6,5% y plazos de hasta 30 años. Conocé cómo varían las cuotas iniciales, las diferencias entre entidades y los ingresos necesarios para acceder al préstamo.",
+      "etiquetas": [
+        "creditos hipotecarios",
+        "bancos",
+        "vivienda"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Ámbito",
+          "enlace": "https://www.ambito.com/economia/creditos-hipotecarios-uva-2026-de-cuanto-es-la-cuota-mensual-la-baja-tasas-los-bancos-n6326384",
+          "fecha": "2026-09-27T10:30:00.000Z",
+          "oficial": false,
+          "aporte": "Aportó detalles sobre las tasas actuales de los créditos hipotecarios UVA, montos de cuotas iniciales, ingresos requeridos e impacto de los costos adicionales."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "3hepnz",
+          "titulo": "La guerra de tasas en créditos hipotecarios UVA: ya son 12 los bancos que las bajaron al 7,5% o menos",
+          "fecha": "2026-09-22T23:00:00.000Z",
+          "ruta": "/nota/la-guerra-de-tasas-en-creditos-hipotecarios-uva-ya-son-12-los-bancos-3hepnz"
+        },
+        {
+          "id": "16vlfyu",
+          "titulo": "Crecen las consultas por créditos hipotecarios tras bajas de tasas",
+          "fecha": "2026-09-25T12:00:00.000Z",
+          "ruta": "/nota/crecen-las-consultas-por-creditos-hipotecarios-tras-bajas-de-tasas-16vlfyu"
+        },
+        {
+          "id": "66ksij",
+          "titulo": "Créditos hipotecarios UVA: ¿cuánto hay que ganar para comprar un departamento en septiembre de 2026?",
+          "fecha": "2026-09-23T20:00:00.000Z",
+          "ruta": "/nota/creditos-hipotecarios-uva-cuanto-hay-que-ganar-para-comprar-un-66ksij"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "17n83ts": {
+      "estado": "automatica",
+      "titulo": "Estudiantes santafesinos ganan la Copa Robótica 2026",
+      "copete": "Un equipo de Santa Fe se consagró campeón nacional en Neuquén y obtuvo el pase al mundial de robótica. El certamen reunió a jóvenes de todo el país y repartió tecnología educativa.",
+      "cuerpo": "Cuarenta y ocho equipos de estudiantes de entre 15 y 18 años participaron de la final de la Copa Robótica Educabot 2026 en el Centro de Convenciones Domuyo, en la ciudad de Neuquén. El primer puesto fue para el equipo \"Sanjobits101\", de la Escuela Técnico Profesional y Secundaria NRO 8013 San José de Santa Fe, que representará a la Argentina en el mundial FIRST Global Challenge 2027.\n\nEl segundo lugar quedó para \"ETernos 2.0\", de la institución mendocina José de San Martín, y el tercero para \"BOTS.DS\", de la Escuela Privada Santo Domingo Savio de Formosa. Los tres equipos recibieron parte de los cien millones de pesos en tecnología educativa distribuidos entre los participantes. La organización estuvo a cargo de Educabot junto con organismos provinciales y municipales neuquinos.\n\nEn todo el proceso de la edición 2026 participaron miles de alumnos de escuelas de distintas provincias, con predominio de establecimientos del interior del país.",
+      "guion": "Estudiantes santafesinos ganan la Copa Robótica dos mil veintiséis.",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T11:20:37.785Z",
+      "claves": [
+        "Un equipo de Santa Fe se consagró campeón nacional de robótica.",
+        "El certamen se disputó en la ciudad de Neuquén con cuarenta y ocho equipos finalistas.",
+        "Los tres mejores puestos recibieron tecnología educativa por cien millones de pesos.",
+        "El equipo ganador representará al país en el mundial FIRST Global Challenge dos mil veintintisiete."
+      ],
+      "seSabe": [
+        "Cuarenta y ocho equipos de estudiantes llegaron a la final disputada en Neuquén.",
+        "El equipo \"Sanjobits101\" de Santa Fe obtuvo el primer puesto y clasificó al mundial de robótica.",
+        "El segundo lugar fue para Mendoza y el tercero para Formosa.",
+        "Se repartieron cien millones de pesos en tecnología educativa entre los participantes."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Un equipo de Santa Fe ganó la final de la Copa Robótica 2026 en Neuquén y clasificó al mundial de la disciplina. Del certamen participaron jóvenes de todo el país y se distribuyeron cien millones de pesos en tecnología educativa.",
+      "etiquetas": [
+        "Copa Robotica",
+        "Neuquen",
+        "Santa Fe",
+        "Tecnologia",
+        "Educacion"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/sociedad/2026/09/27/la-copa-robotica-2026-reunio-a-240-estudiantes-en-neuquen-repartio-100000000-y-corono-a-un-campeon-nacional/",
+          "fecha": "2026-09-27T11:08:25.000Z",
+          "oficial": false,
+          "aporte": "Detalla los ganadores, montos de premios, organización y alcance de la Copa Robótica 2026."
         }
       ],
       "verificacion": {
