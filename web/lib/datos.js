@@ -287,7 +287,8 @@ export function armarTapa(notasSueltas = [], orden = SECCIONES.map((s) => s.nomb
 
   // Del archivo: lo que no está en la portada, con hora, con cuerpo de verdad,
   // no propio (una nota del dólar de hace cinco días no completa nada), de los
-  // últimos 14 días. Ya viene sin lo que el semáforo retiró (lib/archivo.js).
+  // últimas 72 horas (HORAS_PARA_COMPLETAR). Ya viene sin lo que el semáforo
+  // retiró (lib/archivo.js).
   const corte = Number(ahora) - HORAS_PARA_COMPLETAR * 3600e3;
   const idsPortada = new Set(notas.map((n) => n.id));
   const viejas = archivo

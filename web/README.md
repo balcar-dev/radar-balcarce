@@ -34,8 +34,11 @@ npm run build        # compila (arma las redirecciones; NO regenera los datos)
 `data/decisiones.json`. Ahí también se aplican la lectura con IA
 (`data/fichas.json`), los medios que pide cada sección a lo de afuera y los
 cupos (`exigirMedios` y `aplicarCupos`, otra vez después de la lectura), las retiradas
-(`data/retiradas.json`) y las correcciones a mano (`data/correcciones.json`, que
-mandan sobre lo que escribe la IA), y se saca el "en Balcarce" del final de los
+(`data/retiradas.json`) y las correcciones a mano (`data/correcciones.json`:
+título, bajada, sección o cuerpo, que mandan sobre lo que escribe la IA; un
+cuerpo escrito ahí cuenta como cuerpo y a esa nota no se le pide nada a
+Gemini), se vuelve a mirar en el título y la bajada finales lo que no se publica
+nunca (las listas de sepelios, `nuncaSePublica`), y se saca el "en Balcarce" del final de los
 títulos automáticos (`lib/titulos.js`). Si nunca corrió,
 la web arranca igual con un aviso.
 
@@ -179,8 +182,10 @@ muestra la de turno con la misma tarjeta y la semana ordenada, sin repetir hoy.
 
 - `armarTapa(notas, orden, { archivo })` (`lib/datos.js`): la grande y cuatro
   secundarias salen sólo de las últimas 72 horas; cada sección muestra tres notas y,
-  si en 72 horas hay menos, se completa con el archivo (hasta 14 días, con cuerpo,
-  sin repetidas ni notas propias) con su fecha real. Sección sin nada: no se dibuja.
+  si en 72 horas hay menos, se completa con el archivo, pero sólo con lo de esas
+  mismas 72 horas (`HORAS_PARA_COMPLETAR`, 27/09; eran 14 días), con cuerpo, sin
+  repetidas ni notas propias, con su fecha real; una misma historia no completa
+  dos secciones. Sección sin nada: no se dibuja.
 - `seguirLeyendo(nota, recientes, archivo)` (`lib/seguir-leyendo.js`): siempre cuatro
   notas distintas entre sí y de la actual (`mismaHistoria`), dos de la misma sección y
   dos de otras, con hora, lo más nuevo primero, sin notas propias mientras haya otra.

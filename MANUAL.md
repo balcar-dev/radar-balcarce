@@ -27,7 +27,9 @@ falta) e `INVESTIGACION.md` (lo legal, con fuentes). La lista completa está en
    automovilismo, campo y ciencia; muchos con su índice de noticias, que trae
    todo el día); el panel, mientras está prendido, también busca cada 10. La mayoría tiene RSS; El Diario Balcarce
    no, así que se raspa la portada y después se entra a cada nota para sacar
-   la bajada y la hora de publicación de sus metadatos. La lista entera, con
+   la bajada y la hora de publicación de sus metadatos; lo que tiene más de 72
+   horas no se trae (27/09: su portada muestra también notas viejas, sin fecha,
+   que salían como de hoy). La lista entera, con
    ciudad, peso y cómo se usa cada una, es `FUENTES.md` (la escribe
    `node ingesta/listar-fuentes.mjs`; después de tocar una fuente, correrlo).
    **De afuera queda sólo lo que tiene respaldo** (desde el 27/09, paso 2): lo
@@ -68,7 +70,10 @@ falta) e `INVESTIGACION.md` (lo legal, con fuentes). La lista completa está en
    de un medio que llega por dos feeds suyos cuenta una vez. Lo de afuera que
    cuenta un solo medio y no dice Balcarce en el título ni toca la zona **no se
    trae**. La principal de cada historia es la ya publicada (o la primera que
-   salió): así la dirección no cambia cuando otro medio se suma. Que varios
+   salió): así la dirección no cambia cuando otro medio se suma. Un medio de
+   Balcarce que cuenta lo mismo que los de afuera sin nombrar nada de acá está
+   copiando: la historia es de afuera y la principal, de un medio de afuera
+   (27/09, `historiaDeAca`). Que varios
    medios la cuenten es lo que dice que importa: suma puntos y decide si sale
    sola (paso 5). Lo que cuentan **sólo** medios de otras ciudades de la zona
    (Mar del Plata, Tandil, Necochea…) y no dice Balcarce en el título ni toca la
@@ -90,19 +95,24 @@ falta) e `INVESTIGACION.md` (lo legal, con fuentes). La lista completa está en
    menos medios distintos de los que pide su sección (`MEDIOS_DE_AFUERA`:
    Fútbol y Deportes 4; Economía, Tecnología, Agro y Automovilismo 2; el resto
    3; con una figura argentina 2) queda amarillo, y después van los cupos
-   (`exigirMedios`, `aplicarCupos`; una fuente oficial alcanza sola). En la
+   (`exigirMedios`, `aplicarCupos`; una fuente oficial alcanza sola; lo que toca
+   la zona no pide medios desde el 27/09). Las listas de sepelios quedan en rojo
+   por el título (`REGLAS_SEMAFORO.nunca`, 27/09). En la
    nube, después, la **lectura con IA** (`ingesta/lectura-ia.mjs`, fichas en
    `web/data/fichas.json`) decide qué entra, la sección y qué es de Balcarce,
-   saca publicidad y chimentos, y junta las repetidas que el cruce no unió
-   (`agruparRepetidas`). Después se vuelven a mirar los medios, en los dos
+   saca publicidad, chimentos y lo del extranjero sin un argentino, y junta las
+   repetidas que el cruce no unió (`agruparRepetidas`; queda la ya publicada).
+   Después se vuelven a mirar los medios, en los dos
    sentidos (una nota que al juntarse con sus repetidas llega a los que pide,
    sale), y los cupos. Nunca destraba el semáforo.
 6. **Decidir.** En el panel (localhost:4321, `PANEL.md`). Lo verde sale solo; lo
    amarillo espera; lo rojo está bloqueado.
 7. **Publicar.** `npm run datos` arma `web/data/portada.json` y la web lo lee.
    Ahí se sacan las retiradas a mano (`web/data/retiradas.json`), mandan las
-   correcciones a mano de título, bajada o sección (`web/data/correcciones.json`)
-   y los títulos automáticos pierden el "en Balcarce" del final
+   correcciones a mano de título, bajada, sección o cuerpo
+   (`web/data/correcciones.json`; un cuerpo escrito ahí cuenta como cuerpo), se
+   vuelve a mirar lo que no se publica nunca (las listas de sepelios) en el
+   título y la bajada finales, y los títulos automáticos pierden el "en Balcarce" del final
    (`web/lib/titulos.js`).
    Los reels y las historias salen del mismo material.
 
@@ -153,7 +163,8 @@ una nota (sección 4), cómo se verifica (sección 6) y qué ve el lector
   (menos las notas sin fecha real). Está en la pestaña Archivadas del panel,
   no se pierde, pero deja de tapar la cola. Eso lo hace el panel; aparte, la
   portada de la web muestra sólo lo de las últimas 72 horas aunque la PC esté
-  apagada (`web/lib/archivo.js`).
+  apagada (`web/lib/archivo.js`). Tampoco completa una sección con nada más
+  viejo del archivo (`HORAS_PARA_COMPLETAR`, `web/lib/datos.js`, 27/09).
 
 ## 4. El diseño de la web
 
@@ -190,7 +201,7 @@ lados para que no se separen.
 
 ## 5. Las pruebas
 
-Se corren con `npm test` desde la carpeta del proyecto. Son más de 1.190, tardan
+Se corren con `npm test` desde la carpeta del proyecto. Son más de 1.200, tardan
 unos segundos, no instalan nada y no salen a internet.
 
 **Cada una es un error que ya pasó de verdad**, no un ejercicio: dos

@@ -29,7 +29,12 @@ la guía comercial). **A la noche:** la importancia de lo de afuera por cantidad
 de medios (`MEDIOS_DE_AFUERA`, sin piso de puntaje), un nombre por medio, sin
 secciones Región ni Provincia, sin `maxItems` ni fuentes "de señal", la IA saca
 los chimentos, el archivo sin las páginas de afuera de un solo medio y el
-registro de fuentes `FUENTES.md`.
+registro de fuentes `FUENTES.md`. **Más tarde:** del extranjero sólo con un
+argentino, lo de la zona sale solo con un medio, las listas de sepelios nunca,
+nada de más de 72 horas en la portada, lo copiado de afuera por un medio de acá
+es de afuera, la fecha real de las notas de El Diario (sin sus necrológicas),
+de las repetidas queda la ya publicada, y cuerpos escritos a mano en
+`web/data/correcciones.json` (37, por Claude, a pedido de Hernán).
 
 | Qué falta | Quién | Urgencia |
 |---|---|---|
@@ -184,7 +189,9 @@ Las ideas más grandes, que cambian cómo funciona algo, están en `IDEAS.md`.
   nombre por medio, una noticia una nota, secciones nuevas (Fútbol, Argentina;
   sin Servicios, Región ni Provincia), un color por sección, títulos sin "en
   Balcarce", correcciones y retiradas a mano sin el panel, `FUENTES.md`,
-  tipografía Source Serif 4 e Inter en todo (reglas 41 a 57 de `REGLAS.md`).
+  tipografía Source Serif 4 e Inter en todo; a la noche, lo de la zona, los
+  sepelios, las 72 horas, lo copiado de afuera, la fecha de El Diario y los
+  cuerpos a mano (reglas 41 a 62 de `REGLAS.md`).
 - **26/09:** la app de Meta se **publicó** (modo activo); Policiales sólo de
   Balcarce y la zona; secciones flacas con 13 fuentes nuevas, pisos (desde el
   27/09, cantidad de medios) y cupos por

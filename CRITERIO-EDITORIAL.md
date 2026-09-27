@@ -80,6 +80,14 @@ argentina en el título (una figura argentina, "Argentina", Milei, Malvinas) o
 es automovilismo. De los medios de Balcarce entra todo. La lista es
 `SECCIONES_QUE_NO_ENTRAN` (`ingesta/fuentes.mjs`).
 
+**Nada de más de 72 horas (27/09).** El Diario Balcarce no tiene feed: se lee
+su portada, que no dice la fecha de las notas y muestra también notas viejas
+(ese día, de 2025, que salían como de hoy). Ahora se abre cada nota sin fecha,
+se toma la fecha real de adentro por vieja que sea y lo que tiene más de 72
+horas no se trae (`ampliar` y `HORAS_DE_UNA_NOTA_NUEVA`, `ingesta/ingesta.mjs`).
+Del texto de sus notas tampoco se lee el bloque de necrológicas que el medio
+pega debajo de cada una (`ingesta/articulo.mjs`).
+
 **Los feeds generales de los diarios nacionales.** Infobae, La Nación, Clarín
 "lo último", Ámbito "últimas" y Minuto Uno traen de todo. Cuentan como
 cualquier medio de afuera: sus notas quedan sólo si otros medios cuentan lo
@@ -98,14 +106,20 @@ ciudades de la zona (Mar del Plata, Tandil, Necochea…) no se trae, salvo que
 diga Balcarce en el título o toque la zona: es de esas ciudades. Y lo de afuera
 tiene, por sección, un **mínimo de medios** que lo cuenten y un **cupo**
 (cuántas pueden salir solas a la vez, como máximo): los números están en la
-sección 11. Lo de Balcarce no pide medios ni tiene cupo.
+sección 11. Lo de Balcarce no pide medios ni tiene cupo. **Lo que toca la zona
+sale solo aunque lo cuente un solo medio** (27/09, Hernán: "si son de la zona y
+son realmente temas de Balcarce, que salga"): no pide medios, pero tiene el
+cupo de su sección, y la lectura con IA igual saca lo que no tenga relación con
+acá (`deLaZona`, en `semaforo` y `exigirMedios`).
 
 **Una IA lee cada nota antes de decidir (27/09).** Con el perfil de Balcarce
 (`ingesta/perfil-balcarce.md`) y la ciudad del medio, arma una ficha: de dónde
 es el hecho, de qué sección es, si le importa a un vecino y por qué. Con esa
 ficha: no entra la **publicidad**, los **chimentos** (farándula y vida privada
-de famosos), lo del **extranjero** (salvo automovilismo o
-una figura argentina), lo de un medio de afuera **sin relación con Balcarce**
+de famosos), lo del **extranjero** (entra sólo si se destaca un argentino, una
+figura como Colapinto o Messi, o hay conexión argentina en el título: la
+Fórmula 1 o el fútbol de otro país sin un argentino, no; 27/09, Hernán), lo de
+un medio de afuera **sin relación con Balcarce**
 ni un **policial que no es de acá**. Una nota es de Balcarce sólo con **dos
 llaves**: la fuente es de acá (o el medio dice Balcarce en el título) y la IA
 dice que el hecho es de acá; una nota nacional reproducida por un medio local
@@ -126,6 +140,15 @@ que cuentan dos medios o más (además de lo que dice Balcarce en el título o
 toca la zona), y cuantos más lo cuentan, más arriba va y más fácil sale sola:
 es lo que se está hablando. Una exclusiva de un solo medio no entra hasta que
 otro la cuente. Las fuentes: `FUENTES.md`; la medición: `docs/CRUCE-DE-MEDIOS.md`.
+
+**Lo copiado de afuera por un medio de acá es de afuera (27/09).** Un medio de
+Balcarce que cuenta lo mismo que los nacionales sin nombrar nada de acá está
+copiando una noticia de afuera (Malvinas y el Reino Unido, un incendio en
+Misiones, una pelea de UFC salían "de Balcarce"). Si la historia la cuentan
+también medios de afuera y ningún medio de acá nombra a Balcarce en el título o
+al comienzo, se rige por lo de afuera: la principal es de un medio de afuera y
+pide los medios de su sección. Lo que el medio de acá cuenta de Balcarce sigue
+siendo de acá (`historiaDeAca`, `ingesta/ingesta.mjs`).
 
 **La importancia de lo de afuera se mide en medios (27/09, Hernán y Andrés:
 "que sea popular y esté medido").** Una nota que no es de Balcarce sale sola
@@ -148,7 +171,10 @@ la tapa ni aparecen en "Seguí leyendo" (`tieneRespaldo`).
 con títulos distintos (las tres notas de las falsas ofertas de empleo de
 McCain), la IA las junta y queda una sola, con todos los medios como fuentes
 (`agruparRepetidas`, `quitarRepetidas`). No junta notas distintas del mismo
-tema (dos prácticas del TC son dos notas).
+tema (dos prácticas del TC son dos notas). Queda, en este orden, la que ya
+está publicada (en la portada o en las últimas 72 horas: si no, desaparece la
+que la gente ya ve), la que puede salir sola, la que cuentan más medios y la de
+más puntaje (27/09).
 
 **Sin medios de España ni chimentos (27/09, Hernán).** Hipertextual y Xataka
 (de España), Infobae Teleshow y Minuto Uno Espectáculos (chimentos) están
@@ -215,6 +241,7 @@ pueblo son pocas notas por semana, y es lo normal. El semáforo no cambia.
 | **Una nota automática sin cuerpo** | Una nota de dos renglones no es una nota. Queda "esperando cuerpo" hasta tenerlo (sección 4) |
 | **El nombre del medio de origen en el título, el guion, las placas o las redes** | La atribución va en la nota de la web, con el enlace al original |
 | **Lo que parece promoción y no noticia** (sorteos, "ganá tu entrada") | No se bloquea, pero nunca sale solo |
+| **Las listas de sepelios** ("servicios de sepelios", inhumaciones: nombres de personas fallecidas) | Decisión de Hernán, 27/09: "es sensible y no hay fuente oficial". Salieron diez veces, cada una en otra sección. Quedan en rojo por el título (`REGLAS_SEMAFORO.nunca`, sección 3) y se vuelve a mirar en el título y la bajada finales de toda nota automática (`nuncaSePublica`, `web/scripts/generar-datos.mjs`) |
 | **Fúnebres, comentarios de lectores y transmisiones en vivo largas** | Decisión vigente (`REGLAS.md`, "Decisiones que siguen valiendo") |
 
 ## 3. El semáforo
@@ -228,6 +255,12 @@ su prueba. **No se tocan sin que lo decidan Hernán y Andrés.**
 | **Rojo** | No se publica nunca, ni por error | Identifica o puede identificar a un menor o a una víctima de violencia de género o de un delito sexual (menor de edad, abuso sexual, violación, femicidio, grooming, suicidio…) |
 | **Amarillo** | Espera a una persona en el panel | Acusa a alguien (denuncia, detenido, imputado), habla de una muerte, involucra a un chico, parece promoción, es de afuera y la cuentan menos medios de los que pide su sección, pasó el cupo de su sección, es la cotización del dólar, o tiene **verificación baja** (sección 5) |
 | **Verde** | Sale sola | Todo lo demás, en las secciones que salen solas |
+
+**Lo que no se publica nunca, aparte del rojo (27/09).** Las listas de
+sepelios (sepelio, inhumación y sus variantes) son otra lista,
+`REGLAS_SEMAFORO.nunca`, que mira sólo el título: la nota queda en rojo con el
+motivo "lista de sepelios: no se publica". La lista roja de menores y víctimas
+no cambió.
 
 **Qué mira el semáforo.** En el **título y el comienzo del resumen**, las
 listas enteras. En el **texto entero** (el artículo completo de la fuente, lo
@@ -530,10 +563,13 @@ del 26/09, que recorrió las 300 páginas publicadas.
 11. **Cada sección de la portada muestra tres notas, siempre.** Las tres más
     nuevas de esa sección, sin repetir las de la tapa. La tapa (la grande y las
     cuatro de abajo) usa sólo lo de las últimas 72 horas; si una sección tiene
-    menos de tres ahí, se completa con lo más nuevo del archivo: hasta 14 días
-    atrás, sólo notas con cuerpo, sin repetidas, sin notas propias y sin lo que
-    el semáforo retiró, y cada una **muestra su tiempo real** ("ayer", "hace 5
-    días"): nunca se inventa frescura. Si ni así hay tres, van las que haya; una
+    menos de tres ahí, se completa con lo más nuevo del archivo, pero **nunca
+    con nada de más de 72 horas** (27/09, Hernán: "no puede salir nada que ya
+    tenga más de 72 horas publicado"; eran 14 días y salían notas de "hace 9
+    días"): vuelve sólo lo de esas horas que la ingesta ya no trae, con cuerpo,
+    sin repetidas, sin notas propias y sin lo que el semáforo retiró, y cada una
+    **muestra su tiempo real**: nunca se inventa frescura. Una misma historia no
+    completa dos secciones (`HORAS_PARA_COMPLETAR`). Si ni así hay tres, van las que haya; una
     sección sin ninguna no se dibuja (`armarTapa`, `web/lib/datos.js`).
 12. **"Seguí leyendo" siempre está y nunca repite.** Cuatro notas: dos de la
     misma sección y dos de otras (de secciones distintas entre sí), todas con
@@ -723,7 +759,14 @@ también son de IA.
 - **Una corrección sin el panel** (27/09): el título, la bajada o la sección de
   una nota van en `web/data/correcciones.json`, con motivo, cuándo y quién (sin
   motivo no vale). Manda sobre lo que escribe la IA y la dirección de la nota no
-  cambia (`correccionesAMano` y `conCorreccion`, `web/lib/archivo.js`).
+  cambia (`correccionesAMano` y `conCorreccion`, `web/lib/archivo.js`). Desde el
+  27/09 a la noche también el **cuerpo** (`CAMPOS_CORREGIBLES`): se aplica antes
+  de mirar si la nota tiene cuerpo, así que cuenta para "sin cuerpo no se
+  publica", y a esa nota ya no se le pide nada a Gemini. Se escribe con este
+  mismo criterio (sección 12), contra el texto de las fuentes, y el campo "por"
+  dice quién. Esa noche Claude escribió así 37 cuerpos de notas que esperaban a
+  Gemini ("redacción de Claude, pedida por Hernán"), y en un repaso editorial de
+  todo lo visible retiró 68 notas y después 15 más, y corrigió 36.
 - **El enlace no se rompe**: la dirección de una nota queda fija desde que sale
   aunque cambie el titular, y la página dura 180 días aunque salga de la
   portada.

@@ -271,7 +271,7 @@ reescritura.
 
 cron-job.org dispara la corrida cada 30 minutos (hay además un `schedule`
 propio de GitHub en los minutos 7 y 37, que es impuntual y sirve de respaldo).
-Orden de la corrida: instalar, **`npm test` (más de 1.190 pruebas, ninguna
+Orden de la corrida: instalar, **`npm test` (más de 1.200 pruebas, ninguna
 sale a internet)**, armar los datos, compilar el sitio, revisar el SEO, guardar en el
 repositorio. **Si una prueba falla o el sitio no compila, no se guarda nada y
 la web queda como estaba.** Tope: 20 minutos.
@@ -280,7 +280,10 @@ la web queda como estaba.** Tope: 20 minutos.
 
 Se leen las 214 fuentes activas en paralelo (15 segundos de espera por
 fuente; unos 25 segundos en total). Las de raspado entran a cada nota, de a cuatro, para sacar bajada,
-título entero y hora de sus metadatos. Del índice de noticias de La Tecla, que
+título entero y hora de sus metadatos. Desde el 27/09 entran a toda nota sin
+fecha y toman la fecha real, por vieja que sea: lo que tiene más de 72 horas no
+se trae (`HORAS_DE_UNA_NOTA_NUEVA`; la portada de El Diario Balcarce mostraba
+notas de 2025 que salían como de hoy). Del índice de noticias de La Tecla, que
 trae palabras sueltas como título, se toma el epígrafe de la foto
 (`tituloDelSitemap`). Una fuente caída o vacía queda como
 aviso amarillo arriba de la corrida.
@@ -317,6 +320,14 @@ más nuevas; esa noche los dos campos se sacaron del código.
 **Una nota de afuera es "de Balcarce" sólo si el medio dice Balcarce en su
 propio título** (27/09). Nombrarla al pasar en el texto no alcanza: así se
 había colado "la Invasión de Pueblos" de Necochea.
+
+**Un medio de acá que copia una noticia de afuera no la vuelve de Balcarce**
+(27/09: Malvinas y el Reino Unido, un incendio en Misiones, una pelea de UFC).
+Si la historia la cuentan también medios de afuera y ningún medio de acá nombra
+a Balcarce en el título o al comienzo (`mencionaBalcarce`), es de afuera: la
+principal es de un medio de afuera y pide los medios de su sección
+(`historiaDeAca`). Si la cuentan sólo medios de acá, sigue siendo de acá, y la
+lectura con IA decide si de verdad lo es.
 
 ### 4.5 Agrupar
 
@@ -368,7 +379,11 @@ orden; lo primero que aparece decide:
 
 1. **Rojo** (no sale nunca): menor de edad, abuso sexual, violación,
    femicidio, grooming, suicidio, violencia de género, trata, estupro y
-   variantes. Leyes 26.061 y 26.485.
+   variantes. Leyes 26.061 y 26.485. Aparte de esa lista, y después de la
+   amarilla, **las listas de sepelios** (sepelio, inhumación, sólo en el
+   título) también dan rojo: "lista de sepelios: no se publica"
+   (`REGLAS_SEMAFORO.nunca`; 27/09, Hernán: "es sensible y no hay fuente
+   oficial"). La lista roja no cambió.
 2. **Amarillo** (espera a una persona): denuncia, detenido, imputado,
    hospital, muerte, falleció, murió, velatorio, homicidio, víctima, niño,
    nena, adolescente, "un menor de", bebé, alumno de…
@@ -383,7 +398,7 @@ orden; lo primero que aparece decide:
 7. Verde: **fuente oficial**.
 8. Amarillo: **de afuera y poco contada**: la cuentan menos medios distintos
    de los que pide su sección (4.9). No aplica a lo de Balcarce (medio de acá
-   o Balcarce en el título).
+   o Balcarce en el título) ni a lo que toca la zona (`deLaZona`, 27/09).
 9. Verde si la sección está en `verdeSecciones` (Cultura y agenda, Fútbol,
    Argentina, Deportes, Automovilismo, Agro, Balcarce, Política, Policiales,
    Economía, Tecnología: las once, todas las que hay).
@@ -421,7 +436,10 @@ cupo y para Facebook.
 
 Nunca con un solo medio; una fuente oficial alcanza sola. Lo que no llega
 espera con el motivo "de afuera y poco contada (N medios; Sección pide M)".
-**Lo de Balcarce no pide medios ni tiene cupo.** Los cupos son topes, no
+**Lo de Balcarce no pide medios ni tiene cupo.** Lo que toca la zona
+(`PALABRAS_ZONA`) tampoco pide medios desde el 27/09 (Hernán: "si son de la
+zona y son realmente temas de Balcarce, que salga"), pero tiene el cupo de su
+sección. Los cupos son topes, no
 mínimos: no obligan a llenar. Lo que pasa del cupo queda amarillo ("pasó el
 cupo de … (N a la vez)").
 
@@ -457,7 +475,7 @@ se gasta redacción en lo que no va a salir).
 
 | Regla | Detalle |
 |---|---|
-| **Saca** | Lo de un medio de acá que no es de Balcarce **ni la nombra en el título** ("alquileres en Mar del Plata"); publicidad; chimentos (farándula y vida privada de famosos; las fichas viejas, sin esa marca, no cambian); lo del extranjero (salvo automovilismo, una figura o conexión argentina en el título); lo de un medio de afuera con impacto nulo (salvo automovilismo, conexión argentina o "nacional que importa": 3 medios o más, importancia alta, o razón nacional/popular/servicio); un policial que no es de Balcarce. Lo sacado **pierde también la página** |
+| **Saca** | Lo de un medio de acá que no es de Balcarce **ni la nombra en el título** ("alquileres en Mar del Plata"); publicidad; chimentos (farándula y vida privada de famosos; las fichas viejas, sin esa marca, no cambian); lo del extranjero, salvo que haya una figura argentina (Colapinto, Messi) o conexión argentina en el título (desde el 27/09 a la noche el automovilismo ya no se salva solo: la Fórmula 1 sin un argentino, no); lo de un medio de afuera con impacto nulo (salvo automovilismo, conexión argentina o "nacional que importa": 3 medios o más, importancia alta, o razón nacional/popular/servicio); un policial que no es de Balcarce. Lo sacado **pierde también la página** |
 | **Dos llaves de lo local** | Es de Balcarce sólo si **(1)** la fuente es de acá o el medio dice Balcarce en el título, **y (2)** la IA dice que el hecho es de Balcarce o que el impacto es directo. Una nota nacional reproducida por un medio local deja de ser local y pierde los +25 |
 | **Sección** | Manda la de la IA, salvo "Balcarce" para lo que no es de acá. Las fichas viejas que dicen Servicios o País se leen como Balcarce y Argentina. Con la sección nueva y los medios de las repetidas se vuelve a mirar la regla de medios (4.9), en los dos sentidos, y después los cupos |
 | **Nunca destraba** | Lo rojo queda rojo, lo amarillo queda amarillo. La IA sólo puede endurecer. Sin ficha (o si Gemini falla), se decide como siempre. Lo único que puede pasar a verde después de la lectura es lo de afuera que esperaba por pocos medios y, al juntarse con sus repetidas, llega a los que pide su sección: lo decide la regla de medios, no la IA |
@@ -524,10 +542,16 @@ que ninguna persona decidió, de las últimas 72 horas (o ya escritas antes).
   (`web/lib/titulos.js`) saca la cola de los títulos automáticos, nuevos y ya
   publicados, si lo que queda tiene cuatro palabras o más. Lo de una persona no
   se toca.
-- **Correcciones a mano** (`web/data/correcciones.json`, 27/09): título, bajada
-  o sección de una nota, con motivo, cuándo y quién (sin motivo no vale). Se
-  aplican al final y mandan sobre lo que escribió la IA; la dirección no cambia
-  (`correccionesAMano` y `conCorreccion`, `web/lib/archivo.js`).
+- **Correcciones a mano** (`web/data/correcciones.json`, 27/09): título, bajada,
+  sección o cuerpo de una nota, con motivo, cuándo y quién (sin motivo no vale).
+  Mandan sobre lo que escribió la IA; la dirección no cambia
+  (`correccionesAMano` y `conCorreccion`, `web/lib/archivo.js`). Se aplican
+  antes de mirar el cuerpo: un cuerpo escrito ahí cuenta, y a esa nota no se le
+  pide nada a Gemini (27/09 a la noche; esa noche Claude escribió así 37
+  cuerpos, a pedido de Hernán).
+- **Lo que no se publica nunca** (las listas de sepelios) se vuelve a mirar en
+  el título y la bajada finales de toda nota automática, vengan del panel, de la
+  nube o de una corrección (`nuncaSePublica`, 27/09).
 - **Dos notas con el mismo titular (o casi)** no conviven en las listas: queda
   la de más puntaje; la otra conserva su página (`sinNotasRepetidas`).
 - `portada.json` sólo se reescribe si cambió algo que importa (el clima, sólo
@@ -546,6 +570,11 @@ conserva la página), si la IA la saca, si está en `retiradas.json` o si es de
 afuera y la contó un solo medio (salvo que haya salido en redes; 27/09, 1.069
 páginas de antes del cruce: `tieneRespaldo` en `actualizarArchivo`).
 
+La portada y sus secciones no muestran **nada de más de 72 horas** (27/09,
+Hernán): para completar una sección, del archivo vuelve sólo lo de esas mismas
+72 horas (`HORAS_PARA_COMPLETAR` en `web/lib/datos.js`; eran 14 días), y una
+misma historia no completa dos secciones.
+
 ### 4.14 Las retiradas a mano (27/09)
 
 El 27/09 se sacaron de una vez **198 notas** (197 en una tanda y después la de Tom Cruise) que nunca tendrían que haber
@@ -562,9 +591,13 @@ salido, anotadas en `web/data/retiradas.json` con motivo, fecha y quién
 | Chimento de otro país (Tom Cruise) | 1 |
 | De otra ciudad, sin relación con Balcarce | 1 |
 
+Esa misma noche, en un repaso editorial de todo lo visible ("repaso editorial
+de Claude, pedido por Hernán"), se retiraron 68 notas y después 15 más, y se
+corrigieron 36.
+
 Ese archivo sirve para sacar algo **por fuera del panel**, y manda aunque el
 panel esté prendido (el panel escribe `decisiones.json`, no éste). Para
-corregir sin el panel el título, la bajada o la sección está
+corregir sin el panel el título, la bajada, la sección o el cuerpo está
 `web/data/correcciones.json` (4.12).
 
 ### 4.16 El cruce de medios (27/09, a la tarde)
@@ -594,8 +627,11 @@ Desde el 27/09 a la tarde, **la forma en que entra lo de afuera cambió de raíz
 - **Una noticia, una nota.** Cuando varios medios cuentan el mismo hecho con
   títulos distintos (las tres notas de las falsas ofertas de empleo de
   McCain), la IA mira juntas las notas que van a salir y agrupa sólo las que
-  cuentan exactamente el mismo hecho (`agruparRepetidas`); queda la que
-  tienen más medios, con todos sumados como fuentes (`quitarRepetidas`). No
+  cuentan exactamente el mismo hecho (`agruparRepetidas`); queda la que ya
+  está publicada (en la portada o en las últimas 72 horas; 27/09, para que no
+  desaparezca la que la gente ya ve), después la que puede salir sola, la de
+  más medios y la de más puntaje, con todos los medios sumados como fuentes
+  (`quitarRepetidas`, `publicadas`). No
   junta notas distintas del mismo tema (dos prácticas del TC son dos notas).
   Un pedido por corrida como mucho, sólo si cambió la lista, tope de 60 por
   día. Una repetida que ya fue a las redes conserva su página.
@@ -625,12 +661,13 @@ Ramos Otero, las rutas 226 y 55 dentro del partido).
 iniciales, escuela, cuadra, parentesco que la deje identificada, foto ni
 descripción); la foto de otro medio (siempre placa propia); una acusación
 dicha como hecho (doctrina Campillay: atribuida y en condicional); la
-cotización del dólar como nota ajena; lo de otros países sin conexión
-argentina; chimentos y medios de España; un policial de otro lugar; una nota
+cotización del dólar como nota ajena; lo de otros países sin un argentino que
+se destaque ni conexión argentina; chimentos y medios de España; un policial de otro lugar; una nota
 de Tecnología que no habla de tecnología; "en vivo", "minuto a minuto", "en
 directo"; una nota automática sin cuerpo; el nombre del medio de origen en el
-título, el guion, las placas o las redes; la promoción como noticia; fúnebres,
-comentarios de lectores y transmisiones en vivo largas.
+título, el guion, las placas o las redes; la promoción como noticia; fúnebres
+y las listas de sepelios (27/09), comentarios de lectores y transmisiones en
+vivo largas.
 
 ### 5.2 Cómo se escribe
 
@@ -663,7 +700,7 @@ comentarios de lectores y transmisiones en vivo largas.
   revisión que no hubo.
 - **Correcciones**: una persona corrige desde el panel y eso manda siempre (al
   corregir se borran las partes internas de la IA). Sacar una nota le quita la
-  página. Sin el panel: `web/data/correcciones.json` (título, bajada, sección)
+  página. Sin el panel: `web/data/correcciones.json` (título, bajada, sección o cuerpo)
   y `web/data/retiradas.json` (sacarla). Cuando se arregla algo mal publicado,
   se escribe una prueba.
 
@@ -840,7 +877,7 @@ navegador.
 
 | Ruta | Qué muestra |
 |---|---|
-| `/` | La tapa: una nota grande (la de más puntaje y de Balcarce) y cuatro de secciones distintas, sólo de 72 h; tres notas por sección (si faltan, del archivo hasta 14 días, con su fecha real); columna de servicios (clima, farmacia, dólar, agenda, buzón, útiles); los tres avisos |
+| `/` | La tapa: una nota grande (la de más puntaje y de Balcarce) y cuatro de secciones distintas, sólo de 72 h; tres notas por sección (si faltan, del archivo, pero nunca nada de más de 72 h, y una historia no completa dos secciones); columna de servicios (clima, farmacia, dólar, agenda, buzón, útiles); los tres avisos |
 | `/nota/[id]` | La nota: título, bajada, cuerpo, "Fuentes (N)" con la firma, compartir y "Seguí leyendo" (cuatro notas: dos de la misma sección y dos de otras). También `/nota/[id]/opengraph-image` (1200 × 630) y `/nota/[id]/instagram.png` (1080 × 1350) |
 | `/nota/indice.json` | Índice para que la 404 rescate direcciones viejas por el identificador |
 | `/seccion/[ranura]` | Cada sección (balcarce, politica, policiales, futbol, deportes, automovilismo, agro, economia, cultura, tecnologia, argentina), sólo las que tienen notas, cada una con su color (`--s-*`; la tabla está en `web/README.md`). El menú lleva nueve: Fútbol y Argentina no tienen pestaña |
@@ -1032,7 +1069,7 @@ repositorio.
 | `panel/` | El tablero, sin dependencias: `servidor.mjs`, `panel.html`, `sincronizar.mjs`, `respaldo.mjs`, `horarios.mjs`, `agenda.mjs`, `avisos.mjs`, `buzon.mjs`, `notas.mjs`, `acceso.mjs`, `seguridad.mjs`, `clave.mjs`; `datos/` (no se versiona) |
 | `web/` | El sitio: `app/` (páginas), `components/`, `lib/` (`archivo.js`, `cuerpo.js`, `datos.js`, `notas-propias.js`, `eventos.js`, `dolar.js`, `ruta.js`, `tarjeta.js`, `texto.js`, `titulos.js`, `sitio.js`…), `fuentes/` (las tipografías de las imágenes para compartir), `scripts/generar-datos.mjs`, `data/` |
 | `web/data/` | `portada.json`, `archivo.json`, `agenda.json`, `intentos-ia.json`, `dolar-historia.json`, `fichas.json`, `notas-por-dia.json` (los escribe Actions); `decisiones.json`, `avisos.json`, `eventos-panel.json` (los sube el panel); `redes.json` (el libro de redes); `retiradas.json` y `correcciones.json` (a mano, sin el panel); `vigilancia.json`; `estadisticas.json` |
-| `pruebas/` | Más de 1.190 pruebas (`npm test`), sin red |
+| `pruebas/` | Más de 1.200 pruebas (`npm test`), sin red |
 | `comercial/` | La base de 145 comercios de OpenStreetMap, con puntaje de "¿sigue abierto?"; todavía no se usa en la web |
 | `docs/` | Este documento, `PLAN-V2.2.md`, `CRUCE-DE-MEDIOS.md` (la medición del cruce) e `historico/` (historia, auditoría del 25/09, competencia) |
 
@@ -1053,7 +1090,7 @@ repositorio.
 | Cuándo una nota tiene cuerpo | `web/lib/cuerpo.js` |
 | Cuánto dura en portada o archivo | `web/lib/archivo.js` |
 | Sacar una nota de la web sin el panel | `web/data/retiradas.json` |
-| Corregir título, bajada o sección sin el panel | `web/data/correcciones.json` |
+| Corregir título, bajada, sección o cuerpo sin el panel | `web/data/correcciones.json` |
 | Sumar o apagar una fuente del cruce; cómo se cruzan | `ingesta/fuentes-cruce.mjs` (el mismo `medio` para todos los feeds de un medio; después, `node ingesta/listar-fuentes.mjs`); `ingesta/cruce.mjs` (`CRUCE`: umbral y horas de memoria) |
 | Una sección nueva o su color | `SECCIONES` y `EN_NAVEGACION` (`web/lib/datos.js`), `--s-*` (`web/app/globals.css`), `REGLAS_SECCION` y `verdeSecciones` (`ingesta/fuentes.mjs`), `SECCIONES_DE_LA_FICHA` (`ingesta/lectura-ia.mjs`) |
 | La tipografía | `web/app/layout.js` y `web/app/globals.css`; placas en `reels/placa.mjs` con `reels/marca/fuentes/`; imágenes para compartir en `web/lib/tarjeta.js` con `web/fuentes/` |
@@ -1087,10 +1124,10 @@ repositorio.
 8. La IA de lectura nunca destraba.
 
 **Cómo se controlan.** `REGLAS.md` lista cada regla con la prueba o el
-chequeo que la cuida (hoy son 57, numeradas del 1 al 57). Tres tipos de
+chequeo que la cuida (hoy son 62, numeradas del 1 al 62). Tres tipos de
 control:
 
-- **Pruebas** (`npm test`, **más de 1.190**, unos 5 segundos, sin red). Corren antes de cada publicación: si una falla, la web
+- **Pruebas** (`npm test`, **más de 1.200**, unos 5 segundos, sin red). Corren antes de cada publicación: si una falla, la web
   no cambia. Cubren, a grandes rasgos: el semáforo término por término
   (`semaforo.test.mjs`), el verificador (`verificar.test.mjs`), la reescritura
   y el editor digital (`reescritura`, `editor`, `cuerpo`), que la tabla de
@@ -1123,7 +1160,7 @@ control:
 | 24/09 | Mudanza a Cloudflare Pages; Search Console; tres podcasts en lugar de noticias sueltas; Vigilancia; texto completo para la IA; el panel sincroniza solo; base comercial |
 | 25/09 | Auditoría: repo público; WhatsApp andando; clave gratis de redacción; enlaces que no se rompen (archivo de 180 días, 1.556 notas recuperadas); portada de 72 h en la nube; sin cuerpo no se publica; el lector ve la nota; criterio editorial y de redes únicos; notas propias; agenda con página por evento; Vercel apagado; contrato del día |
 | 26/09 | App de Meta publicada; Policiales sólo de Balcarce; 13 fuentes para las secciones flacas (58 en total); historias de hasta 58 s; sin "Resumen hecho con IA" |
-| 27/09 | Plan V2.2: filtro de entrada por la sección del medio; policiales sólo de Balcarce (no se traen); feeds generales como señal; ficha de fuente con ciudad; "de Balcarce" sólo con Balcarce en el título; redes sólo con lo de Balcarce; título de la IA sin Balcarce de más; 197 notas retiradas; medios de España y chimentos apagados; perfil de Balcarce; **la lectura con IA decide en vivo**; lo de afuera sale solo sólo con dos medios; la IA junta las notas repetidas; qué va en cada sección, explicado a la IA; tope de redacción de 150 a 300 por día; permiso de Analytics en Cloudflare. Etiqueta de restauración `antes-de-v2.2`. **A la tarde y a la noche:** el cruce de medios (160 fuentes más, de 76 medios; lo de afuera sólo con dos medios o más); Fútbol y Argentina; sin Servicios; un color por sección; títulos sin "en Balcarce"; correcciones a mano; tipografía Source Serif 4 e Inter en la web, las imágenes, las placas, el panel y la guía comercial. **Ya de noche:** la importancia de lo de afuera por cantidad de medios (sin piso de puntaje), cupos de Fútbol y Argentina, un nombre por medio, sin Región ni Provincia, sin `maxItems` ni fuentes "de señal", la IA saca los chimentos y leerá 200 pedidos por día con clave propia, redacción de 450 por día (330 sin la clave de lectura), el archivo sin las páginas de afuera de un solo medio, `FUENTES.md` y la estadística diaria de notas |
+| 27/09 | Plan V2.2: filtro de entrada por la sección del medio; policiales sólo de Balcarce (no se traen); feeds generales como señal; ficha de fuente con ciudad; "de Balcarce" sólo con Balcarce en el título; redes sólo con lo de Balcarce; título de la IA sin Balcarce de más; 197 notas retiradas; medios de España y chimentos apagados; perfil de Balcarce; **la lectura con IA decide en vivo**; lo de afuera sale solo sólo con dos medios; la IA junta las notas repetidas; qué va en cada sección, explicado a la IA; tope de redacción de 150 a 300 por día; permiso de Analytics en Cloudflare. Etiqueta de restauración `antes-de-v2.2`. **A la tarde y a la noche:** el cruce de medios (160 fuentes más, de 76 medios; lo de afuera sólo con dos medios o más); Fútbol y Argentina; sin Servicios; un color por sección; títulos sin "en Balcarce"; correcciones a mano; tipografía Source Serif 4 e Inter en la web, las imágenes, las placas, el panel y la guía comercial. **Ya de noche:** la importancia de lo de afuera por cantidad de medios (sin piso de puntaje), cupos de Fútbol y Argentina, un nombre por medio, sin Región ni Provincia, sin `maxItems` ni fuentes "de señal", la IA saca los chimentos y leerá 200 pedidos por día con clave propia, redacción de 450 por día (330 sin la clave de lectura), el archivo sin las páginas de afuera de un solo medio, `FUENTES.md` y la estadística diaria de notas. **Más tarde:** del extranjero sólo con un argentino; lo de la zona sale solo con un medio; las listas de sepelios, nunca; nada de más de 72 horas en la portada; lo copiado de afuera por un medio de acá es de afuera; la fecha real de las notas de El Diario, sin sus necrológicas; de las repetidas queda la ya publicada; cuerpos escritos en `correcciones.json` (37, por Claude) y un repaso editorial (68 + 15 retiradas, 36 corregidas) |
 
 ### 14.2 Lo que sigue
 
@@ -1174,7 +1211,7 @@ Oficial Municipal; errores de clasificación; Threads; CSP completa.
 | **Fuente** | Un feed o una página que se lee (un mismo medio puede tener varias, una por sección) |
 | **Medios que pide** | Cuántos medios distintos tienen que contar una nota de afuera para que salga sola, según su sección (4.9). Nunca menos de dos |
 | **Cruce de medios** | Juntar las notas de todos los medios que cuentan el mismo hecho (`ingesta/cruce.mjs`) y contar cuántos medios distintos lo cuentan |
-| **Correcciones** | Cambios a mano de título, bajada o sección en `web/data/correcciones.json`: mandan sobre lo que escribió la IA |
+| **Correcciones** | Cambios a mano de título, bajada, sección o cuerpo en `web/data/correcciones.json`: mandan sobre lo que escribió la IA |
 | **Ficha de fuente** | Tipo y ciudad de cada fuente (`fichaDeFuente`) |
 | **Ficha (de la IA)** | Lo que la lectura con IA dice de cada nota: ámbito, impacto, sección, razón |
 | **Dos llaves** | Para ser de Balcarce: fuente de acá (o Balcarce en el título) **y** la IA diciendo que el hecho es de acá |

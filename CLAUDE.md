@@ -15,7 +15,7 @@ rioplatense, sin voseo forzado.
     reels/     placas, voz y video. SÍ tiene dependencias (resvg, ffmpeg)
     redes/     publicar en Facebook e Instagram (API de Meta). SIN dependencias
     web/       el sitio público (Next.js 15, JavaScript, HTML estático)
-    pruebas/   `npm test`, más de 1.190 pruebas, sin red
+    pruebas/   `npm test`, más de 1.200 pruebas, sin red
 
 Flujo: fuentes → cruce de medios → clasificar → puntaje → semáforo → lectura con IA
 → reescritura con IA → `web/data/portada.json`
@@ -61,7 +61,8 @@ cada uno, cuándo corre y si cuesta plata), en `INFRAESTRUCTURA.md`.
 - **Sin cuerpo no se publica** (25/09). Una nota automática sin cuerpo de al
   menos 70 palabras no va a ningún lado público (`web/lib/cuerpo.js`); se
   reintenta hasta tres veces (`web/data/intentos-ia.json`). Lo que publica una
-  persona se respeta, pero el panel pide confirmarlo.
+  persona se respeta, pero el panel pide confirmarlo. Un cuerpo escrito en
+  `web/data/correcciones.json` cuenta como cuerpo (27/09).
 - **El lector ve la nota, no el análisis** (25/09). La página muestra título,
   bajada, cuerpo y un desplegable cerrado "Fuentes (N)". Claves, qué se sabe,
   qué falta confirmar, aportes y nivel de verificación son de uso interno: se
@@ -103,6 +104,39 @@ cada uno, cuándo corre y si cuesta plata), en `INFRAESTRUCTURA.md`.
 - **Una nota de afuera es "de Balcarce" sólo si el medio lo dice en el título**
   (27/09). Nombrarla en el texto no alcanza: así se colaron Necochea y el
   riesgo país. Y a las redes va sólo lo de Balcarce.
+- **Del extranjero, sólo con un argentino; lo de la zona, aunque lo cuente un
+  medio** (27/09, Hernán). La lectura con IA saca lo internacional sin una
+  figura argentina (Colapinto, Messi) ni conexión argentina en el título: la
+  Fórmula 1 o el fútbol de otro país sin un argentino ya no pasan
+  (`aplicarFichas`, "es del extranjero"). Lo que toca la zona (`PALABRAS_ZONA`:
+  la 226, la 55, la papa, el sudeste) sale solo aunque lo cuente un solo medio
+  (`deLaZona`, en `semaforo` y `exigirMedios`); la IA igual saca lo que no
+  tenga relación con acá.
+- **Un medio de acá que copia una noticia de afuera no la hace de Balcarce**
+  (27/09: Malvinas, un incendio en Misiones, una pelea de UFC). Si la historia
+  la cuentan también medios de afuera y ningún medio de acá nombra algo de
+  Balcarce (en el título o al comienzo), el cruce la trata como de afuera: la
+  principal es de un medio de afuera y pide los medios de su sección
+  (`historiaDeAca` y `mencionaBalcarce`, en `ingestar`).
+- **Nada de más de 72 horas en la portada ni en las secciones** (27/09, Hernán:
+  "no puede salir nada que ya tenga más de 72 horas publicado"). Para completar
+  una sección, del archivo vuelve sólo lo de esas mismas 72 horas
+  (`HORAS_PARA_COMPLETAR = HORAS_EN_PORTADA`, `web/lib/datos.js`; eran 14 días
+  y después 7), y una misma historia no completa dos secciones. El Diario
+  Balcarce, que se raspa, muestra en su portada notas viejas sin fecha (el
+  27/09, de 2025): se abre cada nota para leer `article:published_time` y lo
+  de más de 72 horas no se trae (`ampliar`, `HORAS_DE_UNA_NOTA_NUEVA`).
+- **Las listas de sepelios no se publican nunca** (27/09, Hernán: "es sensible
+  y no hay fuente oficial"). `REGLAS_SEMAFORO.nunca` las pone en rojo por el
+  título ("lista de sepelios: no se publica") y `nuncaSePublica`
+  (`web/scripts/generar-datos.mjs`) lo vuelve a mirar en el título y la bajada
+  finales. El bloque de necrológicas que El Diario pega debajo de cada nota
+  (`necrologicas-container`) no se lee como la nota (`NECROLOGICA`,
+  `ingesta/articulo.mjs`): era más largo que la nota, y la IA escribió sobre
+  sepelios en una de alumnos del San José. La lista roja no se tocó.
+- **De las repetidas queda la ya publicada** (27/09): la que está en la portada
+  o salió en las últimas 72 horas, aunque a otra la cuenten más medios
+  (`quitarRepetidas`, `publicadas`). Si no, desaparecía la que la gente ya veía.
 - **Las palabras clave cortas engañan.** "gol" encontraba "golpe"; "partido" en
   la provincia es un municipio. Las ambiguas están en `PALABRAS_DEBILES`
   (`ingesta/ingesta.mjs`) y sólo deciden desde el titular.
@@ -254,8 +288,13 @@ cada uno, cuándo corre y si cuesta plata), en `INFRAESTRUCTURA.md`.
   Diarios (Necochea)). Si no, las secciones de un diario contarían como dos
   medios en el cruce (`pruebas/cruce-coherente.test.mjs`).
 - **Correcciones a mano sin el panel** (27/09): `web/data/correcciones.json`
-  cambia el título, la bajada o la sección de una nota ya publicada, con motivo,
-  cuándo y quién. Manda sobre lo que escribe la IA y la dirección no cambia.
+  cambia el título, la bajada, la sección o el cuerpo de una nota ya publicada,
+  con motivo, cuándo y quién. Manda sobre lo que escribe la IA y la dirección no
+  cambia. El cuerpo se aplica antes de mirar si la nota tiene cuerpo (cuenta para
+  "sin cuerpo no se publica") y a esa nota ya no se le pide nada a Gemini. El
+  27/09 a la noche Claude escribió así 37 cuerpos, a pedido de Hernán ("por":
+  "redacción de Claude, pedida por Hernán"), y en un repaso editorial de todo lo
+  visible retiró 68 notas y después 15 más, y corrigió 36.
 - **Todo lo que falta, por categoría, está en [`PENDIENTES.md`](PENDIENTES.md)**
   (redes, SEO, bios, editorial, técnico) y en `IDEAS.md` (ideas de producto).
   Qué se publica y cómo se escribe: `CRITERIO-EDITORIAL.md`. Redes: `REDES.md`.
@@ -267,26 +306,30 @@ cada uno, cuándo corre y si cuesta plata), en `INFRAESTRUCTURA.md`.
 |---|---|
 | agregar, sacar o apagar una fuente, o cambiar un peso | `ingesta/fuentes.mjs` (o `ingesta/fuentes-cruce.mjs`, si es del cruce); después, `node ingesta/listar-fuentes.mjs` para rehacer `FUENTES.md` (`pruebas/fuentes-registro.test.mjs` controla que esté al día) |
 | que una palabra mande una nota a otra sección | `REGLAS_SECCION`, mismo archivo |
-| que algo espere aprobación o nunca salga | `REGLAS_SEMAFORO`, mismo archivo |
+| que algo espere aprobación o nunca salga | `REGLAS_SEMAFORO`, mismo archivo (`nunca`: lo que no se publica nunca aparte del rojo, hoy las listas de sepelios; mira sólo el título, y `nuncaSePublica` en `web/scripts/generar-datos.mjs` lo vuelve a mirar en el título y la bajada finales) |
 | que una sección de un medio de afuera no se traiga (otro país, policiales, consejos) | `SECCIONES_QUE_NO_ENTRAN` y `CONEXION_ARGENTINA`, mismo archivo (`motivoDeDescarte` en `ingesta/ingesta.mjs`) |
 | la ficha de cada fuente (tipo y ciudad) | `fichaDeFuente`, en `ingesta/fuentes.mjs`: el tipo sale del alcance, de `oficial` y de si el feed tiene `seccion` (nacional por sección o general). Desde el 27/09 no hay `maxItems` ni `uso: 'senal'`: lo de afuera entra por el cruce, venga del feed que venga |
 | sumar o sacar una fuente del cruce de medios (nacionales, provincia, zona, especializadas) | `ingesta/fuentes-cruce.mjs` (una línea por feed; `activa: false` para apagarla; el mismo `medio` para todos los feeds de un medio); cómo se cruzan, `ingesta/cruce.mjs`; después, `node ingesta/listar-fuentes.mjs` |
 | el título de un índice de noticias (news-sitemap) que trae palabras sueltas | `tituloDelSitemap` (`ingesta/ingesta.mjs`): con cinco palabras o menos, usa el epígrafe de la foto (La Tecla) |
 | sacar de la web una nota ya publicada, sin el panel | `web/data/retiradas.json` (motivo, cuándo, quién) |
-| corregir a mano el título, la bajada o la sección de una nota, sin el panel | `web/data/correcciones.json` (cada una con motivo, cuándo y quién; sin motivo no vale). Manda sobre lo que escribe la IA y no cambia la dirección: `correccionesAMano` y `conCorreccion` en `web/lib/archivo.js`, aplicadas en `web/scripts/generar-datos.mjs` |
+| corregir a mano el título, la bajada, la sección o el cuerpo de una nota, sin el panel | `web/data/correcciones.json` (cada una con motivo, cuándo y quién; sin motivo no vale; los campos, `CAMPOS_CORREGIBLES`). El cuerpo cuenta para "sin cuerpo no se publica" y a esa nota no se le pide nada a Gemini. Manda sobre lo que escribe la IA y no cambia la dirección: `correccionesAMano` y `conCorreccion` en `web/lib/archivo.js`, aplicadas en `web/scripts/generar-datos.mjs` |
 | que los títulos automáticos no terminen en "en Balcarce" | `sinBalcarceAlFinal`, en `web/lib/titulos.js` (lo aplica `generar-datos.mjs`); la instrucción de la IA, `CRITERIO-EDITORIAL.md` § 12, regla 2 |
 | agregar, sacar o renombrar una sección, o cambiar su color | `SECCIONES` y `EN_NAVEGACION` (las del menú) en `web/lib/datos.js`; el color, `--s-*` en `web/app/globals.css`; las palabras, `REGLAS_SECCION`, y cuáles salen solas, `verdeSecciones` (`ingesta/fuentes.mjs`); las que conoce la IA, `SECCIONES_DE_LA_FICHA` (`ingesta/lectura-ia.mjs`) |
-| cuántos medios pide lo de afuera, o juntar notas repetidas | `MEDIOS_DE_AFUERA`, `MEDIOS_POR_DEFECTO` y `MEDIOS_CON_FIGURA` (`ingesta/criterio.mjs` y la tabla de `CRITERIO-EDITORIAL.md`), aplicados por `exigirMedios` y `mediosMinimosDe` (`ingesta/ingesta.mjs`); `agruparRepetidas` y `quitarRepetidas` (`ingesta/lectura-ia.mjs`); qué del archivo se muestra y conserva la página, `tieneRespaldo` (`web/lib/cuerpo.js`, usado en `web/lib/archivo.js`) |
+| cuántos medios pide lo de afuera, o juntar notas repetidas | `MEDIOS_DE_AFUERA`, `MEDIOS_POR_DEFECTO` y `MEDIOS_CON_FIGURA` (`ingesta/criterio.mjs` y la tabla de `CRITERIO-EDITORIAL.md`), aplicados por `exigirMedios` y `mediosMinimosDe` (`ingesta/ingesta.mjs`); `agruparRepetidas` y `quitarRepetidas` (`ingesta/lectura-ia.mjs`; queda la ya publicada, `publicadas`); qué del archivo se muestra y conserva la página, `tieneRespaldo` (`web/lib/cuerpo.js`, usado en `web/lib/archivo.js`) |
 | qué va a las redes (hoy, sólo lo de Balcarce) | `esParaLasRedes` en `redes/elegir.mjs` |
 | el plan de trabajo en curso (filtro de entrada, lectura con IA, notas populares) | `docs/PLAN-V2.2.md` |
-| la lectura con IA (decide desde el 27/09: qué entra, sección, qué es de Balcarce; saca publicidad y chimentos; nunca destraba el semáforo) | `ingesta/lectura-ia.mjs` (`LECTURA` y `topeDeLecturas`: 60 pedidos por día con la clave gratis, 200 con la propia), con el perfil de `ingesta/perfil-balcarce.md` (sólo datos seguros); las fichas, en `web/data/fichas.json` |
+| la lectura con IA (decide desde el 27/09: qué entra, sección, qué es de Balcarce; saca publicidad, chimentos y lo del extranjero sin un argentino; nunca destraba el semáforo) | `ingesta/lectura-ia.mjs` (`LECTURA` y `topeDeLecturas`: 60 pedidos por día con la clave gratis, 200 con la propia), con el perfil de `ingesta/perfil-balcarce.md` (sólo datos seguros); las fichas, en `web/data/fichas.json` |
 | cambiar el criterio editorial, el tono o las reglas de escritura | `CRITERIO-EDITORIAL.md` (la IA lo lee tal cual; reiniciar el panel) |
 | cambiar un número del criterio (largos, intentos, cupos, medios de afuera, Facebook, podcasts) | `ingesta/criterio.mjs` **y** la tabla "Los números" de `CRITERIO-EDITORIAL.md` (una prueba controla que digan lo mismo) |
 | cambiar cuántos medios pide cada sección o cuántas notas de afuera deja salir a la vez | `MEDIOS_DE_AFUERA` y `CUPO_DE_AFUERA`, en `ingesta/criterio.mjs` (y en `CRITERIO-EDITORIAL.md`) |
 | agregar un tema que se sigue | `TEMAS`, mismo archivo |
 | ajustar el filtro de la IA | `ingesta/verificar.mjs` |
 | que el semáforo mire lo que escribe la IA | `reels/reescritura.mjs` (`semaforoDeLaReescritura`; usa las listas de `REGLAS_SEMAFORO`) |
-| cuánto dura una nota en la portada o en el archivo | `web/lib/archivo.js` (`HORAS_EN_PORTADA`, `DIAS_DE_ARCHIVO`, `MAXIMO_EN_ARCHIVO`) |
+| cuánto dura una nota en la portada o en el archivo | `web/lib/archivo.js` (`HORAS_EN_PORTADA`, `DIAS_DE_ARCHIVO`, `MAXIMO_EN_ARCHIVO`); hasta cuándo el archivo completa una sección de la portada, `HORAS_PARA_COMPLETAR` (`web/lib/datos.js`: las mismas 72 horas) |
+| que lo que toca la zona salga solo con un medio, o qué palabras son de la zona | `PALABRAS_ZONA` (`ingesta/fuentes.mjs`); `deLaZona` en `semaforo` y `exigirMedios` (`ingesta/ingesta.mjs`) |
+| cuándo una historia que cuenta un medio de acá es de afuera (copiada) | `historiaDeAca` y `mencionaBalcarce`, en `ingestar` (`ingesta/ingesta.mjs`) |
+| la fecha de las notas de un medio que se raspa (El Diario Balcarce) o cuántas horas puede tener una nota para entrar | `ampliar` y `HORAS_DE_UNA_NOTA_NUEVA` (`ingesta/ingesta.mjs`) |
+| qué partes de la página de un medio no se leen como la nota (pies, menús, necrológicas) | `RUIDO` y `NECROLOGICA`, en `ingesta/articulo.mjs` |
 | que una palabra pida el tono serio | `CRITERIO-EDITORIAL.md`, sección 4 ("Los dos tonos") |
 | cambiar cómo se calcula el nivel de verificación, los antecedentes o las partes nuevas (claves, qué se sabe, texto para redes) | `reels/reescritura.mjs` (`nivelDeVerificacion`, `antecedentesDe`, `completarReescritura`); se ven en el panel ("Análisis interno", `panel/panel.html`), no en la web. Qué fuente es oficial: `oficial: true` en `ingesta/fuentes.mjs` |
 | cambiar qué ve el lector al pie de la nota (el desplegable de fuentes) | `web/components/verificacion.js` y `web/lib/fuentes-de-la-nota.js` |

@@ -71,7 +71,7 @@ cuando algo deja de salir.
   quiere que en la web también esperen, está anotado en `PENDIENTES.md`.
 - **Cargar avisos publicitarios**, eventos de la agenda y lo que llegue al buzón.
 - **Sacar o corregir una nota sin el panel:** `web/data/retiradas.json` (sacarla)
-  y `web/data/correcciones.json` (título, bajada o sección), siempre con motivo,
+  y `web/data/correcciones.json` (título, bajada, sección o cuerpo), siempre con motivo,
   cuándo y quién. Mandan aunque el panel esté prendido: el panel no los toca.
 - **Prender o apagar las redes:** variable `REDES_ACTIVAS` en GitHub (con `Si`
   publica; con otra cosa, sólo simula).
