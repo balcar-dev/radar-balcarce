@@ -1,5 +1,5 @@
 {
-  "exportado": "2026-09-27T03:41:07.724Z",
+  "exportado": "2026-09-27T03:51:07.266Z",
   "decisiones": {
     "1951120": {
       "estado": "automatica",
@@ -29479,6 +29479,471 @@
           "titulo": "Zona fría ya es ley: quiénes perderán subsidios al gas y cómo quedarán las tarifas",
           "fecha": "2026-09-24T22:29:00.000Z",
           "ruta": "/nota/zona-fria-ya-es-ley-quienes-perderan-subsidios-al-gas-y-como-quedaran-19tmvzr"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "mk94me": {
+      "estado": "automatica",
+      "titulo": "Franco Colapinto choca con Pierre Gasly en el Gran Premio de Azerbaiyán",
+      "copete": "El piloto argentino colisionó con su compañero de equipo y con Lando Norris durante el relanzamiento de la carrera en Bakú. El incidente dejó a ambos fuera de competencia y generó distintas reacciones en la categoría.",
+      "cuerpo": "Tras el impacto, el piloto argentino se dirigió al box de Alpine para disculparse con el personal y con el corredor francés, quien mantuvo una postura fría y evitó declaraciones extensas ante la prensa. El antecedente inmediato señala que ambos integran la escudería Alpine y habían protagonizado semanas atrás tensiones internas por posiciones en pista, según consignó la cobertura previa.\n\nEn cuanto a las consecuencias para el corredor argentino, el circuito callejero de Bakú albergó este sábado la decimosexta fecha de la temporada, donde el deportista había partido desde el noveno puesto antes del incidente que determinó el abandono general de los involucrados en la maniobra.",
+      "guion": "Franco Colapinto choca con Pierre Gasly en el Gran Premio de Azerbaiyán",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T03:51:07.207Z",
+      "noConfirmado": [
+        "No se especificaron sanciones oficiales por parte de las autoridades de la competición tras el incidente."
+      ],
+      "etiquetas": [
+        "Franco Colapinto",
+        "Pierre Gasly",
+        "Formula 1",
+        "Gran Premio de Azerbaiyán"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/deportes/automovilismo/gasly-tuvo-una-fria-reaccion-ante-las-disculpas-de-colapinto-por-el-choque-en-baku-nid26092026/",
+          "fecha": "2026-09-26T15:07:30.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Ámbito",
+          "enlace": "https://www.ambito.com/deportes/formula-1-la-reaccion-pierre-gasly-el-choque-franco-colapinto-el-gp-azerbaiyan-n6326967",
+          "fecha": "2026-09-26T13:05:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Motorsport",
+          "enlace": "https://es.motorsport.com/f1/news/franco-colapinto-sancion-accidente-baku/10859242/?utm_source=RSS&utm_medium=referral&utm_campaign=RSS-F1&utm_term=News&utm_content=es",
+          "fecha": "2026-09-26T13:04:10.000Z",
+          "oficial": false,
+          "aporte": null
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "f0797k",
+          "titulo": "Franco Colapinto choca con Pierre Gasly en el Gran Premio de Azerbaiyán",
+          "fecha": "2026-09-26T12:49:58.000Z",
+          "ruta": "/nota/franco-colapinto-choca-con-pierre-gasly-en-el-gran-premio-de-f0797k"
+        },
+        {
+          "id": "iyfntb",
+          "titulo": "La reacción de Sofía Solá, la hija de Maru Botana, al ser relacionada sentimentalmente con Franco Colapinto",
+          "fecha": "2026-09-24T21:03:28.000Z",
+          "ruta": "/nota/la-reaccion-de-sofia-sola-la-hija-de-maru-botana-al-ser-relacionada-iyfntb"
+        },
+        {
+          "id": "he08gv",
+          "titulo": "Franco Colapinto larga noveno en el Gran Premio de Azerbaiyán",
+          "fecha": "2026-09-26T09:30:00.000Z",
+          "ruta": "/nota/franco-colapinto-larga-noveno-en-el-gran-premio-de-azerbaiyan-he08gv"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron tres medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      }
+    },
+    "1j2zck8": {
+      "estado": "automatica",
+      "titulo": "Franco Colapinto choca con su compañero en Azerbaiyán",
+      "copete": "Franco Colapinto impactó contra su compañero de equipo tras un relanzamiento en el Gran Premio de Azerbaiyán. El piloto argentino debió abandonar la carrera.",
+      "cuerpo": "El piloto argentino intentó una maniobra por el carril interno, bloqueó los neumáticos y no pudo evitar el impacto contra el vehículo del francés Pierre Gasly, lo que derivó en el abandono de ambos corredores de la competencia. Con este choque se esfumó la posibilidad de sumar puntos importantes para el equipo, una cosecha que parecía asegurada para ambos vehículos en la recta final de la prueba.\n\nTras el incidente, Colapinto pidió disculpas a través de la radio y reconoció su error ante las cámaras al señalar que se le bloquearon los neumáticos al frenar. El corredor argentino había recordado en días previos que su objetivo principal para el fin de semana era meterse entre los mejores y sumar unidades para el campeonato, en el marco de una temporada donde su escudería busca afianzarse en la parte media de la parrilla.",
+      "guion": "Franco Colapinto choca con su compañero en Azerbaiyán",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T03:51:07.207Z",
+      "seSabe": [
+        "Franco Colapinto impactó contra su compañero de equipo tras un coche de seguridad.",
+        "El piloto argentino pidió disculpas por la radio y reconoció que bloqueó los frenos.",
+        "La carrera del corredor argentino finalizó tras la revisión de los mecánicos en boxes."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "etiquetas": [
+        "Franco Colapinto",
+        "Gran Premio de Azerbaiyán"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/deportes/automovilismo/colapinto-sabia-que-el-objetivo-era-sumar-puntos-pero-equivoco-su-batalla-y-lo-pago-caro-nid26092026/",
+          "fecha": "2026-09-26T16:57:32.000Z",
+          "oficial": false,
+          "aporte": "Detalló el choque entre Colapinto y su compañero en el Gran Premio de Azerbaiyán."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "sxq2rr",
+          "titulo": "Colapinto regresa al circuito de sus primeros puntos en F1 con un objetivo claro",
+          "fecha": "2026-09-21T18:57:28.000Z",
+          "ruta": "/nota/colapinto-regresa-al-circuito-de-sus-primeros-puntos-en-f1-con-un-sxq2rr"
+        },
+        {
+          "id": "1cvio1y",
+          "titulo": "Franco Colapinto, entre las dificultades que tuvo con su Alpine y los objetivos para el GP de Azerbaiyán: \"Q3 y puntos\"",
+          "fecha": "2026-09-24T14:43:16.000Z",
+          "ruta": "/nota/franco-colapinto-entre-las-dificultades-que-tuvo-con-su-alpine-y-los-1cvio1y"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "dqgwgb": {
+      "estado": "automatica",
+      "titulo": "Franco Colapinto recibe una sanción para la próxima fecha de F1",
+      "copete": "El piloto argentino fue penalizado con retroceder cinco posiciones en la parrilla de salida por un choque múltiple en Azerbaiyán. La medida se aplicará en la competencia de Malasia.",
+      "cuerpo": "La Fórmula 1 confirmó una penalización para Franco Colapinto tras determinar su responsabilidad en un choque múltiple durante el Gran Premio de Azerbaiyán, disputado en el circuito callejero de Bakú. Los comisarios deportivos señalaron que el piloto argentino llegó con velocidad excesiva a la primera curva tras una reanudación con auto de seguridad e impactó contra el vehículo del francés Pierre Gasly, generando una reacción en cadena que también involucró al británico Lando Norris, por lo que los tres debieron abandonar la competencia.\n\nTras revisar imágenes de televisión, cronometrajes y cámaras a bordo, el informe oficial descartó factores atenuantes y determinó que el deportista tuvo la mayor responsabilidad en el incidente. Como el abandono impidió aplicar la sanción estándar de diez segundos durante la carrera, los jueces la reemplazaron por una pérdida de cinco puestos en la parrilla de salida de la próxima fecha que se disputará en Sepang, Malasia. El propio piloto reconoció posteriormente su error y admitió haber bloqueado los neumáticos en la frenada.",
+      "guion": "Franco Colapinto recibe una sanción para la próxima fecha de F1",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T03:51:07.207Z",
+      "claves": [
+        "Franco Colapinto fue sancionado por un choque múltiple en la Fórmula 1.",
+        "El incidente ocurrió en el Gran Premio de Azerbaiyán tras una reanudación.",
+        "Deberá retroceder cinco posiciones en la parrilla de salida en la próxima competencia.",
+        "El piloto argentino reconoció su error y admitió haber bloqueado los neumáticos."
+      ],
+      "seSabe": [
+        "La Fórmula 1 confirmó una sanción para Franco Colapinto por el incidente en Azerbaiyán.",
+        "Los comisarios determinaron que el argentino fue responsable del choque que dejó fuera a Pierre Gasly y Lando Norris.",
+        "La penalización consiste en retroceder cinco posiciones en la parrilla de la próxima fecha en Sepang, Malasia.",
+        "El propio Colapinto reconoció su error y admitió el bloqueo de neumáticos."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Franco Colapinto fue sancionado en la Fórmula 1 tras ser considerado responsable de un choque múltiple en el Gran Premio de Azerbaiyán. El piloto argentino deberá retroceder cinco posiciones en la parrilla de salida de la próxima competencia.",
+      "etiquetas": [
+        "Franco Colapinto",
+        "Formula 1",
+        "Gran Premio de Azerbaiyan",
+        "Sancion"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/deportes/automovilismo/la-dura-sancion-de-la-fia-que-colapinto-debera-cumplir-en-el-gp-de-bahrein-nid26092026/",
+          "fecha": "2026-09-26T16:39:29.000Z",
+          "oficial": false,
+          "aporte": "Aportó los detalles oficiales de la sanción a Franco Colapinto y el análisis de los comisarios deportivos sobre el incidente en Bakú."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "g2u3l1": {
+      "estado": "automatica",
+      "titulo": "Flavio Briatore critica a Franco Colapinto tras el Gran Premio de Azerbaiyán",
+      "copete": "El jefe de Alpine cuestionó con dureza al piloto argentino por un choque en carrera y dejó abierta la posibilidad de aplicar sanciones internas tras el incidente.",
+      "cuerpo": "El director de la escudería Alpine, Flavio Briatore, cuestionó con dureza al piloto argentino Franco Colapinto por un toque ocurrido en el Gran Premio de Azerbaiyán, donde impactó contra su compañero Pierre Gasly y el corredor de McLaren Lando Norris. El empresario italiano calificó la acción como muy pobre para un competidor experimentado y expresó su decepción por la pérdida de puntos valiosos en el campeonato, según informó un medio periodístico. Asimismo, el responsable del equipo pidió disculpas a la estructura británica y anticipó que evaluará medidas disciplinarias internas, sin precisar cuáles serán las acciones a seguir.",
+      "guion": "Flavio Briatore critica a Franco Colapinto tras el Gran Premio de Azerbaiyán",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T03:51:07.207Z",
+      "seSabe": [
+        "Flavio Briatore criticó públicamente el desempeño de Franco Colapinto en el Gran Premio de Azerbaiyán, según un medio periodístico.",
+        "El incidente involucró a Colapinto, a su compañero Pierre Gasly y a Lando Norris.",
+        "El director de Alpine pidió disculpas a McLaren y a su propio equipo por los daños en la carrera.",
+        "La escudería analiza posibles medidas internas que aún no fueron detalladas."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El jefe de Alpine, Flavio Briatore, cuestionó con dureza a Franco Colapinto por un choque en el Gran Premio de Azerbaiyán y adelantó que evaluarán sanciones internas.",
+      "etiquetas": [
+        "Franco Colapinto",
+        "Flavio Briatore",
+        "Alpine"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "0223 (Mar del Plata)",
+          "enlace": "https://www.0223.com.ar/nota/2026-9-26-19-12-0-briatore-condeno-publicamente-a-colapinto-y-dejo-entrever-sanciones-internas",
+          "fecha": "2026-09-26T22:12:00.000Z",
+          "oficial": false,
+          "aporte": "Detalló las declaraciones de Flavio Briatore contra Franco Colapinto y el anuncio de posibles sanciones tras el Gran Premio de Azerbaiyán."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "16p1yti",
+          "titulo": "Flavio Briatore lanzó un fuerte aviso para los hinchas de Franco Colapinto",
+          "fecha": "2026-09-23T21:09:00.000Z",
+          "ruta": "/nota/flavio-briatore-lanzo-un-fuerte-aviso-para-los-hinchas-de-franco-16p1yti"
+        },
+        {
+          "id": "vw9q5v",
+          "titulo": "Flavio Briatore, sin filtro, contra los fans de Colapinto y sobre el cruce del argentino con Gasly: \"No necesitamos peleas entre nuestros pilotos, no es aceptable\"",
+          "fecha": "2026-09-23T16:53:14.000Z",
+          "ruta": "/nota/flavio-briatore-sin-filtro-contra-los-fans-de-colapinto-y-sobre-el-vw9q5v"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "12bqha2": {
+      "estado": "automatica",
+      "titulo": "El Tesoro reduce vencimientos y San Juan debuta en el mercado internacional",
+      "copete": "Finanzas adjudicó miles de millones en la letra dólar linked de septiembre y bajó los compromisos para la próxima licitación. Además, la provincia cuyana concretó su primera emisión de deuda externa.",
+      "cuerpo": "La demanda se concentró en las opciones de conversión de octubre y noviembre, mientras que el Tesoro ofrecerá instrumentos a tasa fija, TAMAR, CER y dólar linked sin extender los plazos más allá de julio de dos mil veintisiete.\n\nEn el plano internacional, la provincia de San Juan concretó su debut con una colocación de seiscientos millones de dólares a nueve años bajo ley de Nueva York. La emisión se realizó en una semana compleja para la deuda emergente, marcada por el repunte del petróleo y el incremento en los rendimientos de los bonos estadounidenses.\n\nCon estos registros, el indicador habría acumulado dos trimestres móviles consecutivos de contracción, lo que configuraría una recesión técnica.",
+      "guion": "El Tesoro reduce vencimientos y San Juan debuta en el mercado internacional",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T03:51:07.207Z",
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Finanzas redujo los vencimientos para la próxima licitación y San Juan concretó su primera emisión internacional de deuda. Además, la actividad económica registró una fuerte caída en julio.",
+      "etiquetas": [
+        "Finanzas",
+        "Deuda",
+        "San Juan",
+        "Actividad economica"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/economia/finanzas-el-mercado-digiere-los-datos-negativos-de-actividad-nid27092026/",
+          "fecha": "2026-09-27T03:01:00.000Z",
+          "oficial": false,
+          "aporte": "Aportó los datos sobre la licitación de Finanzas, la colocación de deuda de San Juan y la caída del EMAE en julio."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "1mzcxyt": {
+      "estado": "automatica",
+      "titulo": "El presidente Javier Milei encabeza un foro de inversiones en París",
+      "copete": "El presidente Javier Milei encabeza el evento Argentina Week en París junto a gobernadores, ministros y empresarios para buscar inversiones. La comitiva nacional participa de reuniones en sedes internacionales.",
+      "cuerpo": "Las jornadas se desarrollan en diversas sedes parisinas, como la Organización para la Cooperación y el Desarrollo Económicos y la Embajada Argentina, con la presencia de gobernadores, funcionarios del gabinete nacional y referentes de sectores estratégicos como energía, minería, agro y economía del conocimiento.\n\nLa delegación nacional viaja en medio de un escenario económico marcado por previsiones de crecimiento y advertencias de organismos internacionales sobre el ritmo de la actividad.\n\nEl evento se lleva a cabo tras declaraciones recientes en las que el mandatario cuestionó la situación financiera europea y detalló los lineamientos de su gestión, en continuidad con las actividades internacionales que el Gobierno nacional agenda para el sector productivo y tecnológico.",
+      "guion": "El presidente Javier Milei encabeza un foro de inversiones en París",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T03:51:07.207Z",
+      "claves": [
+        "El presidente encabeza el encuentro empresarial Argentina Week en París.",
+        "Participan gobernadores provinciales, ministros y referentes de sectores productivos.",
+        "La agenda incluye exposiciones en organismos internacionales y reuniones bilaterales."
+      ],
+      "seSabe": [
+        "El presidente Javier Milei encabeza la delegación argentina en París.",
+        "El evento Argentina Week se desarrolla entre miércoles y viernes en la capital francesa.",
+        "Participan gobernadores provinciales y referentes de sectores económicos estratégicos."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El presidente Javier Milei encabeza el evento Argentina Week en París junto a gobernadores y empresarios para buscar inversiones extranjeras en sectores estratégicos.",
+      "etiquetas": [
+        "Javier Milei",
+        "Paris",
+        "Inversiones",
+        "Economia",
+        "Politica"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/economia/2026/09/27/clima-de-negocios-quienes-son-los-empresarios-de-la-economia-que-vuela-que-acompanaran-a-milei-en-la-argentina-week-de-paris/",
+          "fecha": "2026-09-27T03:40:32.000Z",
+          "oficial": false,
+          "aporte": null
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "drk3w0",
+          "titulo": "Antes de viajar a París, Javier Milei cuestionó la economía europea: \"Se está hundiendo\"",
+          "fecha": "2026-09-22T00:31:00.000Z",
+          "ruta": "/nota/antes-de-viajar-a-paris-javier-milei-cuestiono-la-economia-europea-se-drk3w0"
+        },
+        {
+          "id": "3z7kvo",
+          "titulo": "Quiénes acompañaron a Milei y quiénes se opusieron a la reforma del Banco Central",
+          "fecha": "2026-09-24T22:35:06.000Z",
+          "ruta": "/nota/quienes-acompanaron-a-milei-y-quienes-se-opusieron-a-la-reforma-del-3z7kvo"
+        },
+        {
+          "id": "1f08r2d",
+          "titulo": "La agenda de Javier Milei en París: exposición en la OCDE, búsqueda de inversiones y un particular pedido a la prensa",
+          "fecha": "2026-09-23T21:29:53.000Z",
+          "ruta": "/nota/la-agenda-de-javier-milei-en-paris-exposicion-en-la-ocde-busqueda-de-1f08r2d"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "84b2sd": {
+      "estado": "automatica",
+      "titulo": "Abre sus puertas el Museo Lucas de Arte Narrativo",
+      "copete": "Inauguró el Museo Lucas de Arte Narrativo, un proyecto personal del creador de Star Wars, George Lucas, y su esposa, Mellody Hobson, con una colección que mezcla cómics, reliquias y obras de arte.",
+      "cuerpo": "El Museo Lucas de Arte Narrativo abrió sus puertas esta semana tras una inversión calculada en mil millones de dólares. La propuesta reúne cómics, manga, obras de Andy Warhol, Frida Kahlo y piezas de ilustradores clásicos.\n\nEl conservador jefe, Ryan Linkof, señaló que el espacio busca priorizar la ilustración por sobre la narración tradicional. El recorrido combina creaciones fantásticas, reliquias antiguas y pinturas, desafiando las fronteras entre el arte y la ilustración con una mirada amplia sobre las historias de la humanidad.",
+      "guion": "Abre sus puertas el Museo Lucas de Arte Narrativo",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T03:51:07.207Z",
+      "claves": [
+        "Inauguró el Museo Lucas de Arte Narrativo.",
+        "El proyecto fue impulsado por George Lucas y Mellody Hobson.",
+        "La colección incluye cómics, arte clásico y obras de reconocidos autores.",
+        "El edificio presenta una estructura biomórfica de gran escala."
+      ],
+      "seSabe": [
+        "El museo fue cofundado por George Lucas y Mellody Hobson.",
+        "La estructura biomórfica fue diseñada por el arquitecto Ma Yansong.",
+        "El recinto alberga obras de Frida Kahlo, Andy Warhol e ilustraciones de diversos géneros.",
+        "El conservador jefe es Ryan Linkof."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Inauguró el Museo Lucas de Arte Narrativo, un espacio impulsado por el creador de Star Wars que exhibe una vasta colección de arte y cómics.",
+      "etiquetas": [
+        "museo",
+        "arte",
+        "george lucas",
+        "star wars",
+        "cultura"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/cultura/2026/09/27/el-museo-de-george-lucas-mezcla-comics-y-basura-de-lujo-con-frida-kahlo-y-andy-warhol-asi-busca-redefinir-que-es-el-arte/",
+          "fecha": "2026-09-27T03:40:00.000Z",
+          "oficial": false,
+          "aporte": "Detalló la inauguración, características arquitectónicas y contenido del Museo Lucas de Arte Narrativo."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "1dutv2d": {
+      "estado": "automatica",
+      "titulo": "El riesgo país supera los 600 puntos básicos por factores externos y locales",
+      "copete": "El indicador financiero superó la barrera de las 600 unidades tras registrar un incremento de más de 200 puntos en poco más de dos meses. La suba responde a tasas internacionales más altas y a la desaceleración en la compra de reservas.",
+      "cuerpo": "El indicador que mide la sobretasa de la deuda argentina cerró el 25 de septiembre en 609 unidades, un nivel que no se registraba desde comienzos de abril. El movimiento reflejó una caída de los bonos soberanos en dólares y coincidió con bajas consecutivas para el S&P Merval.\n\nLa suba acumuló un incremento de 207 puntos desde el mínimo de 402 anotado el 10 de julio. El escenario combinó dos factores externos, vinculados al rendimiento de los bonos del Tesoro estadounidense y a la tensión en Medio Oriente con el precio del crudo, junto con tres frentes internos marcados por la desaceleración en la acumulación de reservas del Banco Central, el encarecimiento de la deuda local y el riesgo político.\n\nComo antecedente, a fines de septiembre los mercados ya operaban a la baja y el indicador se había acercado a los 600 puntos, presionado por las tasas internacionales y el retroceso de los títulos públicos.",
+      "guion": "El riesgo pais supera los 600 puntos basicos por factores externos y locales",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T03:51:07.207Z",
+      "claves": [
+        "El riesgo país cerró el 25 de septiembre en 609 puntos básicos.",
+        "El indicador acumuló una suba de 207 unidades desde el 10 de julio.",
+        "Influyeron tasas internacionales más altas y menor compra de reservas."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El riesgo país argentino superó los 600 puntos básicos tras una suba de más de 200 unidades en dos meses y medio, impulsado por factores externos y locales.",
+      "etiquetas": [
+        "riesgo pais",
+        "bonos",
+        "economia",
+        "mercados"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/economia/2026/09/27/riesgo-pais-arriba-de-600-puntos-dos-factores-externos-y-tres-locales-detras-de-la-caida-de-los-bonos-argentinos/",
+          "fecha": "2026-09-27T03:39:41.000Z",
+          "oficial": false,
+          "aporte": "Detalló la evolución del riesgo país hasta los 609 puntos y los factores externos y locales que explican la suba."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "vn0qei",
+          "titulo": "Los bonos y la Bolsa porteña operan a la baja y el riesgo país se acerca a los 600 puntos",
+          "fecha": "2026-09-25T20:58:03.000Z",
+          "ruta": "/nota/los-bonos-y-la-bolsa-portena-operan-a-la-baja-y-el-riesgo-pais-se-vn0qei"
+        },
+        {
+          "id": "yoe8s9",
+          "titulo": "Mercados: cayeron las acciones y los bonos argentinos y volvió a subir el riesgo país",
+          "fecha": "2026-09-24T20:38:14.000Z",
+          "ruta": "/nota/mercados-cayeron-las-acciones-y-los-bonos-argentinos-y-volvio-a-subir-yoe8s9"
+        },
+        {
+          "id": "pkk5e1",
+          "titulo": "Mercados: bajaron los bonos argentinos y el riesgo país alcanzó su nivel más alto desde abril",
+          "fecha": "2026-09-23T20:49:33.000Z",
+          "ruta": "/nota/mercados-bajaron-los-bonos-argentinos-y-el-riesgo-pais-alcanzo-su-pkk5e1"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "pe1jmd": {
+      "estado": "automatica",
+      "titulo": "Analizan las repercusiones del discurso presidencial sobre Malvinas y la ONU",
+      "copete": "El discurso del presidente Javier Milei ante las Naciones Unidas dejó cuestionamientos sobre el tono utilizado y el reclamo por la soberanía de las Islas Malvinas. La intervención presidencial generó debate en el ámbito diplomático.",
+      "cuerpo": "El presidente Javier Milei cuestionó a las Naciones Unidas durante su presentación en la Asamblea General, donde también reafirmó el reclamo por la soberanía de las Islas Malvinas. Si bien el planteo sobre el archipiélago como causa nacional fue señalado como un acierto, las críticas al organismo internacional fueron calificadas de desacertadas en el plano político por la forma en que se plantearon.\n\nEl análisis de la intervención presidencial señala que el mandatario no diferenció el rol de la Asamblea General del Consejo de Seguridad, órgano clave donde Gran Bretaña posee derecho a veto. Asimismo, se advirtió que la postura adoptada podría afectar las expectativas en torno a la postulación diplomática del embajador Rafael Grossi para la secretaría general del organismo.\n\nEn cuanto al reclamo por el archipiélago, usurpado hace casi dos siglos, especialistas en política internacional recordaron que la Asamblea General reconoció el conflicto en la década del sesenta y solicitó evitar la explotación de recursos naturales sin acuerdo previo. Sin embargo, se indicó que las negociaciones con el gobierno británico requieren de una estrategia diplomática gradual y no de posturas confrontativas.",
+      "guion": "Analizan las repercusiones del discurso presidencial sobre Malvinas y la ONU",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T03:51:07.207Z",
+      "claves": [
+        "Cuestionan el tono del discurso presidencial ante las Naciones Unidas.",
+        "Analizan el impacto en el reclamo soberano por las Islas Malvinas.",
+        "Advierten posibles consecuencias para la candidatura diplomática de Rafael Grossi."
+      ],
+      "seSabe": [
+        "Javier Milei cuestionó a las Naciones Unidas durante su presentación en la Asamblea General.",
+        "El discurso incluyó un reclamo por la soberanía de las Islas Malvinas.",
+        "La Asamblea General reconoció el conflicto de soberanía durante el gobierno de Arturo Illia."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Analizan el impacto político del discurso del presidente Javier Milei ante la ONU y sus repercusiones sobre el reclamo por la soberanía de las Islas Malvinas y las estrategias diplomáticas internacionales.",
+      "etiquetas": [
+        "Javier Milei",
+        "Islas Malvinas",
+        "ONU",
+        "Política internacional"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/opinion/milei-entre-verdades-y-mentiras-nid27092026/",
+          "fecha": "2026-09-27T03:05:00.000Z",
+          "oficial": false,
+          "aporte": "Aportó un análisis sobre el impacto político del discurso presidencial en la ONU y su relación con el reclamo por las Islas Malvinas."
         }
       ],
       "verificacion": {
