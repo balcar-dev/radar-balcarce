@@ -1,5 +1,5 @@
 {
-  "exportado": "2026-09-27T10:40:16.861Z",
+  "exportado": "2026-09-27T11:00:32.771Z",
   "decisiones": {
     "1951120": {
       "estado": "automatica",
@@ -32405,6 +32405,149 @@
           "titulo": "Por qué no corre Franco Colapinto este domingo 20 de septiembre: cuándo vuelve la Fórmula 1",
           "fecha": "2026-09-20T13:07:00.000Z",
           "ruta": "/nota/por-que-no-corre-franco-colapinto-este-domingo-20-de-septiembre-ups44l"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "zd48ar": {
+      "estado": "automatica",
+      "titulo": "El respaldo de Juan Pablo Montoya a Franco Colapinto en la Fórmula 1",
+      "copete": "El ex piloto colombiano Juan Pablo Montoya defendió al argentino Franco Colapinto tras el accidente que protagonizó en el Gran Premio de Azerbaiyán. El incidente dejó fuera de competencia a ambos autos del equipo.",
+      "cuerpo": "El ex piloto colombiano Juan Pablo Montoya respaldó al piloto argentino Franco Colapinto luego del choque que protagonizó con su compañero Pierre Gasly a falta de quince vueltas para el final del Gran Premio de Azerbaiyán, en el circuito callejero de Bakú. Montoya destacó la actitud de buscar oportunidades en los relanzamientos y afirmó que admira a quienes intentan esas maniobras, pese a reconocer que se cometió un error.\n\nPor su parte, Colapinto admitió su responsabilidad en el incidente, pidió disculpas públicamente a Gasly y al equipo por la pérdida de puntos y explicó que bloqueó al iniciar la frenada, lo que lo dejó sin control del monoplaza. El hecho cortó una racha de treinta Grandes Premios consecutivos en los que el argentino había logrado llegar a la meta.\n\nEn contraste con las posturas favorables de Montoya, Max Verstappen y George Russell, otros integrantes de la categoría expresaron reparos. Lando Norris solicitó una suspensión de una carrera para el argentino, mientras que el director de Alpine manifestó una mirada crítica sobre lo ocurrido, según se indicó tras la competencia.",
+      "guion": "El respaldo de Juan Pablo Montoya a Franco Colapinto en la Fórmula 1",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T11:00:32.701Z",
+      "claves": [
+        "Juan Pablo Montoya respaldó la actitud de Franco Colapinto tras el choque.",
+        "El piloto argentino pidió disculpas públicas a su compañero Pierre Gasly y al equipo.",
+        "El incidente cortó una racha de treinta carreras consecutivas finalizadas por Colapinto.",
+        "Lando Norris pidió una suspensión de una fecha para el argentino tras el impacto."
+      ],
+      "seSabe": [
+        "Juan Pablo Montoya defendió la maniobra de Franco Colapinto en diálogo con F1 TV.",
+        "Colapinto chocó con Pierre Gasly durante el relanzamiento de la carrera en Azerbaiyán, según informó la fuente.",
+        "El piloto argentino se disculpó con el equipo y con su compañero por la pérdida de puntos.",
+        "El accidente interrumpió una serie de treinta Grandes Premios consecutivos en los que Colapinto había llegado a la meta."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El ex piloto Juan Pablo Montoya respaldó a Franco Colapinto tras el accidente en el Gran Premio de Azerbaiyán que dejó fuera de competencia a los dos autos del equipo. El argentino pidió disculpas por la maniobra que interrumpió su racha de carreras terminadas.",
+      "etiquetas": [
+        "Franco Colapinto",
+        "Formula 1",
+        "Juan Pablo Montoya",
+        "Gran Premio de Azerbaiyán"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/deportes/2026/09/27/el-fuerte-respaldo-de-un-referente-de-la-formula-1-para-franco-colapinto-tras-chocar-a-gasly-tienes-que-admirarlo/",
+          "fecha": "2026-09-27T10:48:17.000Z",
+          "oficial": false,
+          "aporte": "Aporta declaraciones de Juan Pablo Montoya, de Franco Colapinto y detalles del incidente en el Gran Premio de Azerbaiyán."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "zhx6lt",
+          "titulo": "Franco Colapinto abandona tras un fuerte choque en Azerbaiyán",
+          "fecha": "2026-09-27T04:00:00.000Z",
+          "ruta": "/nota/franco-colapinto-abandona-tras-un-fuerte-choque-en-azerbaiyan-zhx6lt"
+        },
+        {
+          "id": "mk94me",
+          "titulo": "Franco Colapinto choca con Pierre Gasly en el Gran Premio de Azerbaiyán",
+          "fecha": "2026-09-26T15:07:30.000Z",
+          "ruta": "/nota/colapinto-choca-en-azerbaiyan-y-genera-el-enojo-de-gasly-mk94me"
+        },
+        {
+          "id": "1drzk8j",
+          "titulo": "El momento de Franco Colapinto en la Fórmula 1 y Alpine",
+          "fecha": "2026-09-25T16:44:55.000Z",
+          "ruta": "/nota/el-momento-de-franco-colapinto-en-la-formula-1-y-alpine-1drzk8j"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "jaby8": {
+      "estado": "automatica",
+      "titulo": "Neuquén crece al ritmo de Vaca Muerta con miles de nuevos vecinos",
+      "copete": "La industria petrolera impulsa una fuerte llegada diaria de personas a la ciudad de Neuquén. Con indicadores sociales favorables, la provincia enfrenta desafíos en infraestructura.",
+      "cuerpo": "El año pasado se radicaron veintidós mil personas y este año se esperan treinta mil. El motor principal es Vaca Muerta, impulsado por el precio del petróleo y el régimen de incentivos para grandes inversiones, lo que llevó a la provincia a liderar la creación de empleo formal en el país.\n\nA pesar de la ola migratoria, la provincia mantiene una tasa de desempleo del tres por ciento y una pobreza cercana al veinte por ciento, cifras mejores que el promedio nacional. Sin embargo, los vecinos advierten sobre un encarecimiento del costo de vida y mayor inseguridad. La producción petrolera provincial supera los seiscientos mil barriles diarios, lo que representa siete de cada diez barriles del total nacional.\n\nEl crecimiento genera desafíos logísticos, principalmente por el transporte de arena necesaria para la fractura hidráulica. El ministro de Energía provincial, Gustavo Medele, advirtió sobre la congestión de camiones en las rutas y señaló que una alternativa a futuro sería la construcción de un tren de carga que demandaría una millonaria inversión.",
+      "guion": "Neuquén crece al ritmo de Vaca Muerta con miles de nuevos vecinos",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T11:00:32.701Z",
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "etiquetas": [
+        "Neuquén",
+        "Vaca Muerta",
+        "petróleo"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/economia/llegan-82-personas-por-dia-y-las-marcas-quieren-estar-como-cambia-neuquen-al-ritmo-de-vaca-muerta-nid27092026/",
+          "fecha": "2026-09-27T10:21:51.000Z",
+          "oficial": false,
+          "aporte": "Detalló la llegada diaria de personas, los datos de producción petrolera, los indicadores sociales y los desafíos logísticos en Neuquén."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "1q8fsca": {
+      "estado": "automatica",
+      "titulo": "Desplegan un operativo de búsqueda por un tigre suelto en México",
+      "copete": "Protección Civil y Bomberos emitieron una alerta de urgencia tras el avistamiento de un felino de gran tamaño en una zona rural del estado de Jalisco.",
+      "cuerpo": "Un tigre se encuentra en libertad en una zona rural del municipio mexicano de La Barca, en el estado de Jalisco, lo que motivó a Protección Civil y Bomberos a desplegar un operativo de búsqueda y a pedir a los habitantes que eviten actividades al aire libre. Según los reportes recibidos a través de las líneas de emergencia, el animal fue visto en los caminos que conectan la localidad de San José de las Moras con los límites de La Providencia.\n\nAnte la situación, personal especializado en fauna y distintas corporaciones de seguridad participan en las tareas para localizar al ejemplar, mientras las autoridades solicitaron mantener bajo resguardo a la población y evitar intentar capturarlo o acercarse. Como antecedente, en abril de este año otro tigre juvenil fue contenido en un fraccionamiento de Tlajomulco, y en julio pasado se registró la muerte de un ejemplar llamado Kenzo durante un operativo en el Estado de México.\n\nCualquier aviso sobre la presencia del animal debe ser comunicado a las líneas de emergencia locales, mientras continúan las labores de contención en la zona rural afectada.",
+      "guion": "Desplegan un operativo de búsqueda por un tigre suelto en México.",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T11:00:32.701Z",
+      "claves": [
+        "Buscan a un tigre suelto en una zona rural de Jalisco.",
+        "Protección Civil emitió una alerta para los habitantes.",
+        "Registran antecedentes de operativos similares en el país."
+      ],
+      "seSabe": [
+        "Un tigre fue visto en libertad en una zona rural entre San José de las Moras y La Providencia.",
+        "Protección Civil y Bomberos emitieron una alerta de urgencia y desplegaron un operativo.",
+        "Las autoridades solicitaron a la población evitar actividades al aire libre y reportar avistamientos."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Emiten una alerta y despliegan un operativo de búsqueda tras el avistamiento de un tigre en libertad en una zona rural de Jalisco.",
+      "etiquetas": [
+        "Tigre",
+        "Jalisco",
+        "Proteccion Civil",
+        "Operativo",
+        "Fauna silvestre"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/mexico/2026/09/27/tigre-suelto-pone-en-alerta-a-la-barca-jalisco-autoridades-despliegan-operativo-de-busqueda/",
+          "fecha": "2026-09-27T10:50:41.000Z",
+          "oficial": false,
+          "aporte": "Aportó los detalles sobre el operativo de búsqueda del tigre en Jalisco y los antecedentes de casos similares en México."
         }
       ],
       "verificacion": {
