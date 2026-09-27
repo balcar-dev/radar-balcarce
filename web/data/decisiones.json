@@ -1,5 +1,5 @@
 {
-  "exportado": "2026-09-27T23:01:24.976Z",
+  "exportado": "2026-09-27T23:11:19.697Z",
   "decisiones": {
     "1951120": {
       "estado": "automatica",
@@ -35622,13 +35622,58 @@
     },
     "vr15w": {
       "estado": "automatica",
-      "titulo": null,
-      "copete": null,
-      "cuerpo": null,
-      "guion": null,
-      "deIA": null,
+      "titulo": "Un espiral contra mosquitos provoca un incendio en una vivienda",
+      "copete": "Una mujer de 85 años resultó afectada por un incendio en su casa de la localidad misionera de Puerto Santa Ana, originado por un espiral colocado cerca de la cama. No se registraron personas heridas.",
+      "cuerpo": "El hecho se registró el domingo alrededor de las diez y media en una propiedad ubicada en el Lote 33 de Puerto Santa Ana, Misiones, según informaron fuentes policiales. Una dotación de la División Bomberos acudió al lugar tras recibir el aviso sobre una importante concentración de humo proveniente de la parte posterior del inmueble.\n\nTras interrumpir el suministro eléctrico, los efectivos ingresaron a la vivienda y extinguieron las llamas que afectaron una habitación de mampostería. De acuerdo con el relato de la propietaria, había dejado un espiral encendido cerca de su cama para ahuyentar a los mosquitos antes de ingresar a bañarse, elemento que habría caído sobre el colchón.\n\nLa rápida intervención de los bomberos evitó que el fuego se propagara al resto de la casa y descartó inicialmente una falla eléctrica como origen. Las fuentes confirmaron que no hubo personas heridas durante el episodio.",
+      "guion": "Un espiral contra mosquitos provoca un incendio en una vivienda",
+      "deIA": true,
       "por": "ia",
-      "cuando": "2026-09-27T23:01:24.885Z"
+      "cuando": "2026-09-27T23:11:19.590Z",
+      "claves": [
+        "Ocurrió el domingo en la localidad misionera de Puerto Santa Ana.",
+        "El fuego se originó por un espiral encendido cerca de la cama.",
+        "Los bomberos evitaron que las llamas se propaguen al resto de la casa.",
+        "No se registraron personas heridas tras la intervención."
+      ],
+      "seSabe": [
+        "El hecho ocurrió este domingo alrededor de las 10:30 en el Lote 33 de Puerto Santa Ana.",
+        "Una mujer de 85 años era la única propietaria en el lugar.",
+        "El fuego afectó una habitación de mampostería de aproximadamente 3 por 4 metros.",
+        "No se registraron personas heridas.",
+        "Los bomberos descartaron inicialmente una falla en la instalación eléctrica."
+      ],
+      "noConfirmado": [
+        "No se informaron mayores detalles sobre el estado de salud posterior de la propietaria más allá de confirmarse la ausencia de heridos."
+      ],
+      "textoRedes": "Una mujer de 85 años debió ser asistida tras un incendio en su vivienda de Misiones, originado por un espiral contra los mosquitos que habría caído sobre la cama. Los bomberos controlaron las llamas y confirmaron que no hubo personas heridas.",
+      "etiquetas": [
+        "incendio",
+        "misiones",
+        "puerto santa ana",
+        "bomberos",
+        "policiales"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Radio Sudestada",
+          "enlace": "https://radiosudestada.com.ar/2026/09/misiones-prendio-un-espiral-para-combatir-a-los-mosquitos-y-provoco-un-incendio-en-una-casa/",
+          "fecha": "2026-09-27T20:00:00.000Z",
+          "oficial": false,
+          "aporte": "Detalló cómo se originó el incendio por un espiral y la intervención de los bomberos en Puerto Santa Ana."
+        },
+        {
+          "medio": "Noticias Argentinas (NA)",
+          "enlace": "https://noticiasargentinas.com/sociedad/misiones--prendio-un-espiral-para-combatir-a-los-mosquitos-y-provoco-un-incendio-en-una-casa_a6ab955a0c2b8de8667ee95d7",
+          "fecha": "2026-09-27T17:50:00.000Z",
+          "oficial": false,
+          "aporte": "Confirmó el hecho ocurrido a una mujer de 85 años en la localidad misionera."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      }
     },
     "zdzoxc": {
       "estado": "automatica",
