@@ -1,12 +1,12 @@
 {
-  "generado": "2026-09-27T16:09:10.754Z",
+  "generado": "2026-09-27T16:12:39.778Z",
   "notas": [
     {
       "id": "146c1m7",
-      "titulo": "Mangoni sube al podio y los Ciantini corren en Balcarce",
-      "copete": "Santiago Mangoni terminó tercero en la segunda serie de las TC Pick Up en el Autódromo Juan Manuel Fangio. Diego y José Ciantini completaron la competencia en una jornada con fuerte presencia local.",
-      "cuerpo": "La segunda serie de las TC Pick Up concentró la atención en el Autódromo Juan Manuel Fangio con una destacada actuación de los pilotos locales. Santiago Mangoni avanzó hasta el tercer puesto tras una maniobra en la segunda vuelta y logró subirse al podio de la batería, en una carrera que tuvo a Otto Fritzler como ganador tras superar a Diego Azar.\n\nPor su parte, Diego Ciantini llegó a pelear en los puestos de vanguardia en el inicio, pero sufrió un inconveniente en un neumático que lo relegó al séptimo lugar. En tanto, José Ciantini completó la prueba en la octava colocación.",
-      "guion": "Mangoni sube al podio y los Ciantini corren en Balcarce",
+      "titulo": "Mangoni sube al podio en la serie del TC Pick Up en Balcarce",
+      "copete": "Santiago Mangoni terminó tercero en la segunda batería del TC Pick Up disputada en el Autódromo Juan Manuel Fangio. Diego y José Ciantini también compitieron ante un gran marco de público.",
+      "cuerpo": "La segunda serie del TC Pick Up concentró la atención local este domingo en el Autódromo Juan Manuel Fangio, con una fuerte presencia de pilotos balcarceños en pista. La batería comenzó con una disputa por la punta entre Diego Azar y Otto Fritzler, mientras Diego Ciantini se sumaba rápidamente a la pelea por los primeros puestos.\n\nEn la segunda vuelta, Santiago Mangoni realizó una maniobra para superar a Ciantini y avanzar al tercer lugar. Más adelante, un inconveniente en un neumático hizo que Diego Ciantini perdiera posiciones hasta finalizar séptimo, en tanto que José Ciantini completó la prueba en el octavo puesto. La victoria quedó en manos de Fritzler, seguido por Azar y Mangoni tras los cinco giros de competencia.",
+      "guion": "Mangoni sube al podio en la serie del TC Pick Up en Balcarce",
       "seccion": "Automovilismo",
       "medios": [
         "Radio Gabal (FM 104.1)"
@@ -18,8 +18,8 @@
       "visto": "2026-09-27T16:04:14.605Z",
       "relevancia": 90,
       "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
+      "publicadaPor": "ia",
+      "publicadaCuando": "2026-09-27T16:08:52.625Z",
       "temas": [
         "autodromo",
         "tc-pick-up",
@@ -27,26 +27,25 @@
       ],
       "como": "automatica",
       "claves": [
-        "Santiago Mangoni finalizó tercero en la segunda serie de las TC Pick Up.",
-        "Diego Ciantini cayó al séptimo puesto por un problema en un neumático.",
-        "José Ciantini completó la batería en el octavo lugar.",
-        "Otto Fritzler se quedó con la victoria en la competencia."
+        "Santiago Mangoni finalizó en el tercer puesto de la segunda serie del TC Pick Up.",
+        "Otto Fritzler se quedó con la victoria en la batería disputada en el Autódromo Juan Manuel Fangio.",
+        "Diego Ciantini sufrió un problema en un neumático y terminó séptimo, mientras José Ciantini fue octavo."
       ],
       "seSabe": [
-        "Santiago Mangoni terminó tercero en la segunda serie de las TC Pick Up en el Autódromo Fangio.",
-        "Diego Ciantini finalizó séptimo tras sufrir un problema en un neumático.",
-        "José Ciantini completó la prueba en la octava colocación.",
-        "Otto Fritzler ganó la batería tras superar a Diego Azar.",
-        "Mariano Werner ganó la primera serie de punta a punta."
+        "Santiago Mangoni terminó tercero en la segunda batería de las TC Pick Up en Balcarce.",
+        "Otto Fritzler ganó la serie, seguido por Diego Azar y Mangoni.",
+        "Diego Ciantini finalizó séptimo tras sufrir un problema en un neumático y José Ciantini fue octavo.",
+        "Mariano Werner se impuso en la primera serie de la categoría."
       ],
       "noConfirmado": [
         "No pudo ser contrastado de forma independiente con las fuentes consultadas."
       ],
-      "textoRedes": "Santiago Mangoni terminó tercero en la segunda serie de las TC Pick Up en el Autódromo Fangio. Diego y José Ciantini también compitieron en una nueva jornada de automovilismo nacional en la ciudad.",
+      "textoRedes": "Santiago Mangoni terminó tercero en la segunda serie del TC Pick Up en el Autódromo Juan Manuel Fangio. Diego y José Ciantini también participaron de la competencia ante una gran presencia de público.",
       "etiquetas": [
         "TC Pick Up",
         "Santiago Mangoni",
         "Diego Ciantini",
+        "José Ciantini",
         "Autodromo Juan Manuel Fangio",
         "Balcarce"
       ],
@@ -56,7 +55,7 @@
           "enlace": "https://www.radiogabal.com.ar/index.php/deportes/mangoni-fue-tercero-y-los-ciantini-dieron-pelea-en-la-segunda-serie-del-tc-pick-up",
           "fecha": "2026-09-27T16:00:48.000Z",
           "oficial": false,
-          "aporte": "Detalló las posiciones y el desarrollo de la segunda serie de las TC Pick Up con los pilotos locales."
+          "aporte": "Detalló el desarrollo y las posiciones finales de la segunda serie de las TC Pick Up en el Autódromo Juan Manuel Fangio."
         }
       ],
       "antecedentes": [
@@ -177,7 +176,7 @@
       "seccion": "Automovilismo",
       "medios": [
         "QZ Noticias (Mar del Plata)",
-        "Campeones"
+        "Ayacucho al Día"
       ],
       "enlace": "https://www.qznoticias.com/deportes/werner-y-fritzler-ganaron-las-series-y-largaran-adelante-en-balcarce",
       "teniaImagenLaFuente": true,
@@ -1254,6 +1253,87 @@
       "slug": "el-repaso-de-la-tarde-en-radar-balcarce-autodromo-juan-manuel-fangio"
     },
     {
+      "id": "mk94me",
+      "titulo": "Franco Colapinto choca con Pierre Gasly en el Gran Premio de Azerbaiyán",
+      "copete": "El piloto argentino colisionó con su compañero de equipo y con Lando Norris durante el relanzamiento de la carrera en Bakú. El incidente dejó a ambos fuera de competencia y generó distintas reacciones en la categoría.",
+      "cuerpo": "Tras el impacto, el piloto argentino se dirigió al box de Alpine para disculparse con el personal y con el corredor francés, quien mantuvo una postura fría y evitó declaraciones extensas ante la prensa. El antecedente inmediato señala que ambos integran la escudería Alpine y habían protagonizado semanas atrás tensiones internas por posiciones en pista, según consignó la cobertura previa.\n\nEn cuanto a las consecuencias para el corredor argentino, el circuito callejero de Bakú albergó este sábado la decimosexta fecha de la temporada, donde el deportista había partido desde el noveno puesto antes del incidente que determinó el abandono general de los involucrados en la maniobra.",
+      "guion": "Franco Colapinto choca con Pierre Gasly en el Gran Premio de Azerbaiyán",
+      "seccion": "Automovilismo",
+      "medios": [
+        "La Nación",
+        "Motorsport"
+      ],
+      "enlace": "https://www.lanacion.com.ar/deportes/automovilismo/gasly-tuvo-una-fria-reaccion-ante-las-disculpas-de-colapinto-por-el-choque-en-baku-nid26092026/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-26T15:07:30.000Z",
+      "sinFecha": false,
+      "visto": "2026-09-27T16:12:25.801Z",
+      "relevancia": 60,
+      "local": false,
+      "publicadaPor": "ia",
+      "publicadaCuando": "2026-09-27T03:51:07.207Z",
+      "temas": [],
+      "como": "automatica",
+      "noConfirmado": [
+        "No se especificaron sanciones oficiales por parte de las autoridades de la competición tras el incidente."
+      ],
+      "etiquetas": [
+        "Franco Colapinto",
+        "Pierre Gasly",
+        "Formula 1",
+        "Gran Premio de Azerbaiyán"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/deportes/automovilismo/gasly-tuvo-una-fria-reaccion-ante-las-disculpas-de-colapinto-por-el-choque-en-baku-nid26092026/",
+          "fecha": "2026-09-26T15:07:30.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Ámbito",
+          "enlace": "https://www.ambito.com/deportes/formula-1-la-reaccion-pierre-gasly-el-choque-franco-colapinto-el-gp-azerbaiyan-n6326967",
+          "fecha": "2026-09-26T13:05:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Motorsport",
+          "enlace": "https://es.motorsport.com/f1/news/franco-colapinto-sancion-accidente-baku/10859242/?utm_source=RSS&utm_medium=referral&utm_campaign=RSS-F1&utm_term=News&utm_content=es",
+          "fecha": "2026-09-26T13:04:10.000Z",
+          "oficial": false,
+          "aporte": null
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "f0797k",
+          "titulo": "Franco Colapinto choca con Pierre Gasly en el Gran Premio de Azerbaiyán",
+          "fecha": "2026-09-26T12:49:58.000Z",
+          "ruta": "/nota/franco-colapinto-choca-con-pierre-gasly-en-el-gran-premio-de-f0797k"
+        },
+        {
+          "id": "iyfntb",
+          "titulo": "La reacción de Sofía Solá, la hija de Maru Botana, al ser relacionada sentimentalmente con Franco Colapinto",
+          "fecha": "2026-09-24T21:03:28.000Z",
+          "ruta": "/nota/la-reaccion-de-sofia-sola-la-hija-de-maru-botana-al-ser-relacionada-iyfntb"
+        },
+        {
+          "id": "he08gv",
+          "titulo": "Franco Colapinto larga noveno en el Gran Premio de Azerbaiyán",
+          "fecha": "2026-09-26T09:30:00.000Z",
+          "ruta": "/nota/franco-colapinto-larga-noveno-en-el-gran-premio-de-azerbaiyan-he08gv"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron tres medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "franco-colapinto-choca-con-pierre-gasly-en-el-gran-premio-de"
+    },
+    {
       "id": "14nnhex",
       "titulo": "Establecen precios sugeridos para alquilar en Mar del Plata",
       "copete": "Difundieron los valores orientativos para la temporada de verano en la costa atlántica, con un incremento respecto al año anterior que interesa a los vecinos de Balcarce.",
@@ -1333,7 +1413,8 @@
       "guion": "El autódromo Fangio completa su estacionamiento de autos en Balcarce",
       "seccion": "Automovilismo",
       "medios": [
-        "Infórmese Primero (FM 104.9)"
+        "Infórmese Primero (FM 104.9)",
+        "Diario La Vanguardia"
       ],
       "enlace": "http://www.informeseprimero.com.ar/2026/09/por-la-gran-concurrencia-se-completo-el.html",
       "teniaImagenLaFuente": true,
@@ -1427,6 +1508,7 @@
         "Infórmese Primero (FM 104.9)",
         "El Diario Balcarce",
         "0223 (Mar del Plata)",
+        "Agencia DIB",
         "News Balcarce (FM 91.7)"
       ],
       "enlace": "https://www.diariolavanguardia.com/noticias/44907-con-la-presencia-de-reino-y-kicillof-se-reinauguro-el-autodromo-juan-manuel-fangio/",
@@ -4399,6 +4481,12 @@
       "motivo": "de afuera con un solo medio: hacen falta dos"
     },
     {
+      "id": "1ixvj3g",
+      "titulo": "Russell y Verstappen defienden a Colapinto tras su costoso…",
+      "seccion": "Automovilismo",
+      "motivo": "de afuera con un solo medio: hacen falta dos"
+    },
+    {
       "id": "wwbmd7",
       "titulo": "La familia Crespi confirmó que la fábrica seguirá…",
       "seccion": "Automovilismo",
@@ -4453,6 +4541,48 @@
       "motivo": "necesita ojo humano: \"investigación\""
     },
     {
+      "id": "1kcun96",
+      "titulo": "Aston Martin se defiende tras el fiasco de Bakú: \"Las…",
+      "seccion": "Automovilismo",
+      "motivo": "de afuera con un solo medio: hacen falta dos"
+    },
+    {
+      "id": "2v54dp",
+      "titulo": "Análisis: cómo Russell resistió al rebufo de Verstappen en…",
+      "seccion": "Automovilismo",
+      "motivo": "de afuera con un solo medio: hacen falta dos"
+    },
+    {
+      "id": "1j2zck8",
+      "titulo": "Colapinto sabía que el objetivo era sumar puntos, pero…",
+      "seccion": "Automovilismo",
+      "motivo": "de afuera con un solo medio: hacen falta dos"
+    },
+    {
+      "id": "dqgwgb",
+      "titulo": "La dura sanción de la FIA que Colapinto deberá cumplir en…",
+      "seccion": "Automovilismo",
+      "motivo": "de afuera con un solo medio: hacen falta dos"
+    },
+    {
+      "id": "1kosp78",
+      "titulo": "El detalle que más impresiona a Red Bull del \"excepcional\"…",
+      "seccion": "Automovilismo",
+      "motivo": "de afuera con un solo medio: hacen falta dos"
+    },
+    {
+      "id": "g2u3l1",
+      "titulo": "Briatore condenó públicamente a Colapinto y dejó entrever…",
+      "seccion": "Automovilismo",
+      "motivo": "de afuera con un solo medio: hacen falta dos"
+    },
+    {
+      "id": "zuy5n3",
+      "titulo": "Colapinto recibió una dura sanción tras el choque en…",
+      "seccion": "Automovilismo",
+      "motivo": "de afuera con un solo medio: hacen falta dos"
+    },
+    {
       "id": "1not06u",
       "titulo": "¿Abren los supermercados, shoppings y comercios mañana, 28…",
       "seccion": "Economía",
@@ -4465,65 +4595,89 @@
       "motivo": "de afuera con un solo medio: hacen falta dos"
     },
     {
+      "id": "glll7w",
+      "titulo": "Lando Norris pidió la suspensión de una carrera para…",
+      "seccion": "Automovilismo",
+      "motivo": "de afuera con un solo medio: hacen falta dos"
+    },
+    {
+      "id": "1arnfaz",
+      "titulo": "Así quedó la tabla de posiciones de la Fórmula 1 2026…",
+      "seccion": "Automovilismo",
+      "motivo": "de afuera con un solo medio: hacen falta dos"
+    },
+    {
+      "id": "1iaq66c",
+      "titulo": "George Russell ganó el Gran Premio de Azerbaiyán y Franco…",
+      "seccion": "Automovilismo",
+      "motivo": "de afuera con un solo medio: hacen falta dos"
+    },
+    {
+      "id": "r9x4zp",
+      "titulo": "Agenda de TV y streaming del sábado: Colapinto, Inglaterra…",
+      "seccion": "Automovilismo",
+      "motivo": "de afuera con un solo medio: hacen falta dos"
+    },
+    {
+      "id": "1vapgi3",
+      "titulo": "Así fue la maniobra con la que Colapinto provocó el triple…",
+      "seccion": "Automovilismo",
+      "motivo": "de afuera con un solo medio: hacen falta dos"
+    },
+    {
+      "id": "sa6pfx",
+      "titulo": "Cómo le fue a Franco Colapinto en el GP de Azerbaiyán de…",
+      "seccion": "Automovilismo",
+      "motivo": "de afuera con un solo medio: hacen falta dos"
+    },
+    {
+      "id": "17zgdwp",
+      "titulo": "Franco Colapinto, tras chocar a Gasly y Norris en Bakú…",
+      "seccion": "Automovilismo",
+      "motivo": "de afuera con un solo medio: hacen falta dos"
+    },
+    {
+      "id": "1ry7mu3",
+      "titulo": "Franco Colapinto largará noveno en el GP de Azerbaiyán…",
+      "seccion": "Automovilismo",
+      "motivo": "de afuera con un solo medio: hacen falta dos"
+    },
+    {
+      "id": "1n5o9jc",
+      "titulo": "Colapinto se refirió a qué le faltó para obtener una mejor…",
+      "seccion": "Automovilismo",
+      "motivo": "de afuera con un solo medio: hacen falta dos"
+    },
+    {
       "id": "123i1nh",
       "titulo": "A cuánto llegaría la nafta en el Gran Buenos Aires si el…",
       "seccion": "Economía",
       "motivo": "de afuera con un solo medio: hacen falta dos"
     },
     {
-      "id": "1i0qwb7",
-      "titulo": "Dura sanción de la FIA a Sainz para la parrilla de Bakú…",
+      "id": "1j7tlyt",
+      "titulo": "Briatore abre la puerta a 'tomar medidas' contra Colapinto…",
       "seccion": "Automovilismo",
-      "motivo": "necesita ojo humano: \"investigación\""
-    },
-    {
-      "id": "afat3b",
-      "titulo": "La elección en Brasil esconde pistas sobre el futuro de la…",
-      "seccion": "País",
       "motivo": "de afuera con un solo medio: hacen falta dos"
     },
     {
-      "id": "w11vwh",
-      "titulo": "Karina Milei se resigna con Patricia Bullrich, pero en el…",
-      "seccion": "Política",
+      "id": "c7164i",
+      "titulo": "Gasly lamenta el accidente provocado por Colapinto: \"Estoy…",
+      "seccion": "Automovilismo",
       "motivo": "de afuera con un solo medio: hacen falta dos"
     },
     {
-      "id": "1qzie8h",
-      "titulo": "“Una forma de cerrar los ojos”, de Raquel San Martín…",
-      "seccion": "Cultura y agenda",
+      "id": "7749f7",
+      "titulo": "Colapinto, destrozado tras arruinar la carrera de Gasly y…",
+      "seccion": "Automovilismo",
       "motivo": "de afuera con un solo medio: hacen falta dos"
     },
     {
-      "id": "tqg6a4",
-      "titulo": "Elecciones 2027: ¿cuándo son las próximas elecciones…",
-      "seccion": "Política",
-      "motivo": "de afuera con un solo medio: hacen falta dos"
-    },
-    {
-      "id": "1x01kfr",
-      "titulo": "La fiebre hemorrágica quedó fuera del radar, pero no…",
-      "seccion": "Agro",
-      "motivo": "de afuera con un solo medio: hacen falta dos"
-    },
-    {
-      "id": "1asjrko",
-      "titulo": "¿Qué tiene ese pastito que logra sobrevivir en la…",
-      "seccion": "Agro",
-      "motivo": "de afuera con un solo medio: hacen falta dos"
-    },
-    {
-      "id": "1mzcxyt",
-      "titulo": "Clima de Negocios: quiénes son los empresarios de la…",
-      "seccion": "Economía",
-      "motivo": "de afuera con un solo medio: hacen falta dos"
-    },
-    {
-      "id": "10tvasv",
-      "titulo": "Samsung Galaxy S26 FE llega a la Argentina: cuánto cuesta…",
-      "seccion": "Tecnología",
+      "id": "19intg3",
+      "titulo": "Vídeo F1: Colapinto se lleva por delante a Gasly y provoca…",
+      "seccion": "Automovilismo",
       "motivo": "de afuera con un solo medio: hacen falta dos"
     }
   ],
-  "esperandoCuerpo": 8
+  "esperandoCuerpo": 6
 }
