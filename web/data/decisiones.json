@@ -1,5 +1,5 @@
 {
-  "exportado": "2026-09-27T17:38:54.295Z",
+  "exportado": "2026-09-27T18:08:56.491Z",
   "decisiones": {
     "1951120": {
       "estado": "automatica",
@@ -34378,6 +34378,139 @@
           "titulo": "Diego Santilli visita el autódromo Juan Manuel Fangio en Balcarce",
           "fecha": "2026-09-27T15:00:58.065Z",
           "ruta": "/nota/diego-santilli-visita-el-autodromo-juan-manuel-fangio-en-balcarce-si6qmk"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "b203ts": {
+      "estado": "automatica",
+      "titulo": "Palazzo gana la final de TC Pick Up en Balcarce",
+      "copete": "El piloto de Pinamar se impuso en el Autódromo Juan Manuel Fangio tras una definición apretada en la octava fecha del campeonato nacional.",
+      "cuerpo": "Mariano Werner, quien había logrado la pole position y ganado la serie más rápida, lideró gran parte de la prueba pero debió abandonar por un problema mecánico cuando se perfilaba para luchar por el triunfo.\n\nEl evento automovilístico generó una gran convocatoria con una multitud en el autódromo y un intenso movimiento vehicular que colmó las calles y avenidas cercanas durante el fin de semana con la llegada de miles de visitantes a la ciudad.",
+      "guion": "Palazzo gana la final de TC Pick Up en Balcarce",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T18:08:56.425Z",
+      "claves": [
+        "José Hernán Palazzo se impuso en la octava fecha de TC Pick Up en el Autódromo Juan Manuel Fangio.",
+        "Mariano Werner abandonó por una falla mecánica cuando lideraba la competencia.",
+        "Diego Ciantini y Otto Fritzler completaron el podio de la carrera en el circuito local."
+      ],
+      "seSabe": [
+        "José Hernán Palazzo ganó la final de la octava fecha de TC Pick Up con una Toyota Hilux en Balcarce.",
+        "Mariano Werner abandonó por un problema mecánico tras liderar buena parte de la carrera.",
+        "Diego Ciantini y Otto Fritzler completaron el podio de la competencia.",
+        "Diego Azar y Agustín Canapino se engancharon en la largada y quedaron relegados."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El piloto José Hernán Palazzo se quedó con la victoria en la final de TC Pick Up disputada en el Autódromo Juan Manuel Fangio, en una jornada que convocó a una multitud en la ciudad.",
+      "etiquetas": [
+        "TC Pick Up",
+        "Autodromo Juan Manuel Fangio",
+        "Balcarce",
+        "Jose Hernan Palazzo"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "QZ Noticias (Mar del Plata)",
+          "enlace": "https://www.qznoticias.com/deportes/palazzo-gano-una-final-vibrante-de-tc-pick-up-en-balcarce",
+          "fecha": "2026-09-27T18:06:56.000Z",
+          "oficial": false,
+          "aporte": "Detalló el desarrollo de la octava fecha de TC Pick Up, el triunfo de Palazzo, el podio y el abandono de Werner en Balcarce."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "wlcrq7",
+          "titulo": "El Autódromo Juan Manuel Fangio reabre en Balcarce",
+          "fecha": "2026-09-27T17:24:00.000Z",
+          "ruta": "/nota/el-autodromo-juan-manuel-fangio-reabre-en-balcarce-wlcrq7"
+        },
+        {
+          "id": "1ou5oaz",
+          "titulo": "Kicillof y Bianco explican los montos de la obra del autódromo en Balcarce",
+          "fecha": "2026-09-27T17:00:45.088Z",
+          "ruta": "/nota/kicillof-y-bianco-explican-los-montos-de-la-obra-del-autodromo-en-1ou5oaz"
+        },
+        {
+          "id": "p8h86x",
+          "titulo": "El automovilismo nacional genera un intenso movimiento vehicular en Balcarce",
+          "fecha": "2026-09-27T16:27:29.000Z",
+          "ruta": "/nota/el-automovilismo-nacional-genera-un-intenso-movimiento-vehicular-en-p8h86x"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "aabc5v": {
+      "estado": "automatica",
+      "titulo": "El Concejo aprueba proyectos sobre infecciones y celiaquía en Balcarce",
+      "copete": "El Concejo Deliberante aprobó dos iniciativas impulsadas por el edil Gabriel Petruccelli para reforzar la prevención sanitaria y la asistencia alimentaria en el distrito.",
+      "cuerpo": "El Concejo Deliberante aprobó dos proyectos vinculados a la salud pública impulsados por el concejal del bloque Frente Potencia, Gabriel Petruccelli, para fortalecer las campañas de prevención de infecciones de transmisión sexual y mejorar la asistencia a personas con celiaquía en el distrito.\n\nEn relación a la primera iniciativa, el edil sostuvo que patologías como la sífilis, el VIH, la hepatitis B y el HPV representan un problema sanitario que requiere un abordaje integral. En ese sentido, reclamó que el Municipio garantice la disponibilidad de preservativos tanto en el Hospital como en las salas de atención primaria, al advertir que la entrega actual en el sistema de salud local no resulta suficiente.\n\nPor otra parte, el segundo proyecto estuvo enfocado en el Programa de Acompañamiento Alimentario para Personas Celíacas. Petruccelli cuestionó el funcionamiento de la asistencia y la falta de información oficial al respecto, y remarcó la necesidad de identificar a los sectores vulnerables que afrontan dificultades económicas para sostener una dieta libre de gluten. Como antecedente, el concejal ya había presentado días atrás pedidos de informes vinculados a ambas temáticas en el ámbito legislativo local.",
+      "guion": "El Concejo aprueba proyectos sobre infecciones y celiaquía en Balcarce",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T18:08:56.425Z",
+      "claves": [
+        "El Concejo Deliberante aprobó dos iniciativas en materia sanitaria y social.",
+        "Pidieron reforzar las campañas y la entrega de preservativos en el sistema de salud local.",
+        "Reclamaron mayor información sobre la asistencia a personas con celiaquía en situación de vulnerabilidad.",
+        "El edil impulsor había presentado días atrás pedidos de informes sobre ambos temas."
+      ],
+      "seSabe": [
+        "El Concejo Deliberante aprobó dos proyectos sobre salud y asistencia social impulsados por el concejal Gabriel Petruccelli.",
+        "Las iniciativas abordan la prevención de infecciones de transmisión sexual y el funcionamiento del programa para personas celíacas.",
+        "El edil reclamó mayor disponibilidad de preservativos en el hospital y los centros de atención primaria.",
+        "Petruccelli cuestionó la falta de información sobre el cumplimiento de la asistencia alimentaria para celíacos vulnerables."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El Concejo Deliberante aprobó dos iniciativas para reforzar la prevención de infecciones de transmisión sexual y mejorar el relevamiento de la asistencia a personas celíacas en situación de vulnerabilidad en Balcarce.",
+      "etiquetas": [
+        "Concejo Deliberante",
+        "salud",
+        "infecciones de transmision sexual",
+        "celiaquia",
+        "Gabriel Petruccelli",
+        "Balcarce"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Radio Gabal (FM 104.1)",
+          "enlace": "https://www.radiogabal.com.ar/index.php/politica/salud-solicitaron-mayores-medidas-para-prevenir-las-its-y-el-acompanamiento-a-personas-celiacas",
+          "fecha": "2026-09-27T18:00:04.000Z",
+          "oficial": false,
+          "aporte": "Detalló los dos proyectos aprobados por el Concejo sobre prevención de ITS y celiaquía, y los reclamos del concejal Gabriel Petruccelli sobre la falta de insumos y datos oficiales."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "p036u7",
+          "titulo": "Petruccelli puso el foco en la asistencia a personas celíacas y la prevención de ITS en Balcarce",
+          "fecha": "2026-09-21T15:15:00.000Z",
+          "ruta": "/nota/petruccelli-puso-el-foco-en-la-asistencia-a-personas-celiacas-y-la-p036u7"
+        },
+        {
+          "id": "srfkko",
+          "titulo": "El Concejo aprueba llamar Paseo Intendente Juan José Mare a la vuelta interna del cerro en",
+          "fecha": "2026-09-27T15:18:35.000Z",
+          "ruta": "/nota/el-concejo-aprueba-llamar-paseo-intendente-juan-jose-mare-a-la-vuelta-srfkko"
+        },
+        {
+          "id": "11genwv",
+          "titulo": "El Concejo declara de interés un proyecto escolar en Balcarce",
+          "fecha": "2026-09-26T14:24:46.000Z",
+          "ruta": "/nota/el-concejo-declara-de-interes-un-proyecto-escolar-en-balcarce-11genwv"
         }
       ],
       "verificacion": {
