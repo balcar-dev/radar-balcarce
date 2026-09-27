@@ -1,5 +1,5 @@
 {
-  "exportado": "2026-09-27T01:31:17.748Z",
+  "exportado": "2026-09-27T01:41:00.761Z",
   "decisiones": {
     "1951120": {
       "estado": "automatica",
@@ -26818,6 +26818,348 @@
           "fecha": "2026-09-26T12:57:38.000Z",
           "oficial": false,
           "aporte": "Informó sobre el envío de dos contenedores de granos a Isla Mauricio por parte de la empresa local Scorziello y Galella en el año de su quincuagésimo aniversario."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "14nnhex": {
+      "estado": "automatica",
+      "titulo": "Establecen precios sugeridos para alquilar en Mar del Plata",
+      "copete": "Difundieron los valores orientativos para la temporada de verano en la costa atlántica, con un incremento respecto al año anterior que interesa a los vecinos de Balcarce.",
+      "cuerpo": "A pocos meses del inicio de la temporada de verano, el Colegio de Martilleros y Corredores Públicos de Mar del Plata dio a conocer los precios de referencia para los alquileres temporarios de inmuebles.\n\nDesde la entidad gremial aclararon que se trata de montos flexibles que varían según la ubicación, la calidad y el estado de cada propiedad, y remarcaron que estas referencias buscan prevenir inconvenientes entre propietarios y turistas.",
+      "guion": "Establecen precios sugeridos para alquilar en Mar del Plata",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T01:41:00.694Z",
+      "claves": [
+        "Difundieron los precios sugeridos para los alquileres en Mar del Plata.",
+        "Los valores de referencia registran un incremento del veinticinco por ciento.",
+        "Los montos varían según la ubicación y las características de cada inmueble."
+      ],
+      "textoRedes": "Difundieron los valores orientativos para alquilar casas y departamentos en Mar del Plata de cara al próximo verano. Los precios de referencia llegan con un aumento del veinticinco por ciento y son de interés para los vecinos que planean viajar.",
+      "etiquetas": [
+        "alquileres",
+        "verano",
+        "Mar del Plata",
+        "Balcarce",
+        "precios"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Radio Gabal (FM 104.1)",
+          "enlace": "https://www.radiogabal.com.ar/index.php/comunidad/temporada-2026-2027-cuanto-costara-alquilar-en-mar-del-plata-durante-las-vacaciones-de-verano",
+          "fecha": "2026-09-26T15:00:55.000Z",
+          "oficial": false,
+          "aporte": "Aportó el detalle de los precios semanales por tipo de inmueble y las aclaraciones del Colegio de Martilleros."
+        },
+        {
+          "medio": "Infórmese Primero (FM 104.9)",
+          "enlace": "http://www.informeseprimero.com.ar/2026/09/mar-del-plata-cuanto-costara-alquilar.html",
+          "fecha": "2026-09-25T19:51:09.255Z",
+          "oficial": false,
+          "aporte": "Coincidió en la información sobre los precios sugeridos y el porcentaje de aumento del sector."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "6m9ixr",
+          "titulo": "Fijan precios sugeridos para alquilar en Mar del Plata este verano",
+          "fecha": "2026-09-25T19:51:09.255Z",
+          "ruta": "/nota/fijan-precios-sugeridos-de-alquileres-en-mar-del-plata-para-el-verano-6m9ixr"
+        },
+        {
+          "id": "15eauxf",
+          "titulo": "Verano 2027: los 5 destinos “fuera de radar” que están en la mira de los argentinos para estas vacaciones",
+          "fecha": "2026-09-20T09:00:43.000Z",
+          "ruta": "/nota/verano-2027-los-5-destinos-fuera-de-radar-que-estan-en-la-mira-de-los-15eauxf"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      }
+    },
+    "1xlakiv": {
+      "estado": "automatica",
+      "titulo": "El Turismo Special de la Costa compite en el autódromo en Balcarce",
+      "copete": "La categoría participa en la histórica reapertura del circuito Juan Manuel Fangio para competencias de orden nacional tras quince años.",
+      "cuerpo": "El Turismo Special de la Costa forma parte de la programación desarrollada en el autódromo Juan Manuel Fangio, marcando su regreso a las competencias nacionales luego de quince años sin actividad oficial en el circuito local. Esta participación se da en el marco de la reapertura del trazado serrano, un acontecimiento histórico para el automovilismo de la región.\n\nEl predio volvió a recibir al público y a las categorías en una previa marcada por la expectativa institucional y deportiva.\n\nLa presencia de la categoría en este evento representa un hito para los aficionados locales y consolida la reactivación del circuito tras más de una década de inactividad para las competencias de nivel nacional.",
+      "guion": "El Turismo Special de la Costa compite en el autódromo en Balcarce",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T01:41:00.694Z",
+      "claves": [
+        "El Turismo Special de la Costa participa en la reapertura del autódromo Juan Manuel Fangio.",
+        "El circuito vuelve a recibir competencias de orden nacional tras quince años.",
+        "Las actividades se desarrollan en el marco de la reinauguración oficial del predio serrano."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El Turismo Special de la Costa participa en la histórica reapertura del autódromo Juan Manuel Fangio, que vuelve a recibir competencias nacionales tras quince años.",
+      "etiquetas": [
+        "Turismo Special de la Costa",
+        "Autodromo Juan Manuel Fangio",
+        "Balcarce"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/el-tsc-se-suma-a-una-fecha-que-hara-historia-en-el-autodromo-798",
+          "fecha": "2026-09-26T12:46:52.000Z",
+          "oficial": false,
+          "aporte": "Informa la participación del Turismo Special de la Costa en la fecha histórica del autódromo Juan Manuel Fangio."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "7qxthx",
+          "titulo": "Kicillof encabeza la reinauguración del autódromo en Balcarce",
+          "fecha": "2026-09-26T02:38:34.000Z",
+          "ruta": "/nota/kicillof-encabeza-la-reapertura-del-autodromo-juan-manuel-fangio-en-7qxthx"
+        },
+        {
+          "id": "1mkm1na",
+          "titulo": "El autódromo Juan Manuel Fangio abre sus puertas en Balcarce",
+          "fecha": "2026-09-26T02:30:21.000Z",
+          "ruta": "/nota/el-autodromo-juan-manuel-fangio-abre-sus-puertas-en-balcarce-1mkm1na"
+        },
+        {
+          "id": "1chec7e",
+          "titulo": "Carlos Bianco detalla la inversión en la reinauguración del autódromo",
+          "fecha": "2026-09-26T00:15:11.000Z",
+          "ruta": "/nota/carlos-bianco-destaca-la-inversion-y-las-obras-en-el-autodromo-de-1chec7e"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "1wo8jyc": {
+      "estado": "automatica",
+      "titulo": "Juan Pablo Curone gana un premio nacional de ganadería en Balcarce",
+      "copete": "El balcarceño Juan Pablo Curone se consagró campeón en una competencia de la raza Angus junto al equipo de la cabaña del director técnico Ramón Díaz.",
+      "cuerpo": "Este reconocimiento se suma a la actividad del sector en la región, donde recientemente la cabaña Don Cholo también había alcanzado el máximo galardón con el ejemplar Josecito en la Exposición Nacional Angus de Primavera desarrollada en la localidad bonaerense de Cañuelas, según lo informado en septiembre.\n\nEl logro alcanzado por Curone posiciona nuevamente a los productores locales en los primeros planos de la ganadería nacional especializada en la raza bovina Angus.",
+      "guion": "Juan Pablo Curone gana un premio nacional de ganadería en Balcarce",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T01:41:00.694Z",
+      "claves": [
+        "Juan Pablo Curone obtuvo el Gran Campeón Macho Pedigree Angus.",
+        "Participó junto a la cabaña Los Ramones, de Ramón Díaz.",
+        "El galardón se logró en un certamen de la provincia de Entre Ríos."
+      ],
+      "seSabe": [
+        "Juan Pablo Curone se coronó campeón en la categoría Angus.",
+        "La cabaña Los Ramones pertenece al exfutbolista Ramón Díaz y su familia.",
+        "El establecimiento está ubicado cerca de la localidad de Urdinarrain, en Entre Ríos."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El balcarceño Juan Pablo Curone se consagró campeón en una competencia de la raza Angus junto a la cabaña del director técnico Ramón Díaz en Entre Ríos.",
+      "etiquetas": [
+        "Juan Pablo Curone",
+        "Angus",
+        "Ramón Díaz",
+        "Balcarce"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/juan-pablo-curone-se-corono-campeon-con-ramon-diaz-compitiendo-en-angus-737",
+          "fecha": "2026-09-26T12:52:09.000Z",
+          "oficial": false,
+          "aporte": "Informó que Juan Pablo Curone se consagró campeón con Ramón Díaz en la competencia Angus de la cabaña Los Ramones en Entre Ríos."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1aa6w2s",
+          "titulo": "Cabaña Don Cholo gana el Gran Campeón Macho de la Semana Angus",
+          "fecha": "2026-09-26T08:12:12.000Z",
+          "ruta": "/nota/cabana-don-cholo-gana-el-gran-campeon-macho-de-la-semana-angus-1aa6w2s"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "1lz37g8": {
+      "estado": "automatica",
+      "titulo": "YouTube detalla su impacto global y las tendencias de visualización",
+      "copete": "A dos décadas de su creación, la plataforma de videos repasa su evolución tecnológica, las cifras de consumo diario y las listas de reproducción más populares.",
+      "cuerpo": "Desde su aparición en dos mil cinco, YouTube se transformó en un fenómeno global que revolucionó la forma de consumir contenido audiovisual. Según la información difundida, a la plataforma se suben quinientas horas de material por minuto y se reproducen cinco mil millones de videos al día, lo que genera ganancias trimestrales millonarias.\n\nNo obstante, la popularidad también generó cuestionamientos por la difusión de material delicado relacionado con violencia, delitos y contenido engañoso durante la pandemia.\n\nComo parte de sus herramientas actuales, la plataforma elabora listados en tiempo real con las tendencias y los artistas más escuchados del día, entre los que figuran producciones recientes de diversos intérpretes internacionales.",
+      "guion": "YouTube detalla su impacto global y las tendencias de visualización",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T01:41:00.694Z",
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "YouTube repasa su impacto global, las estadísticas de consumo diario y las tendencias de videos más reproducidos en la plataforma a dos décadas de su lanzamiento.",
+      "etiquetas": [
+        "YouTube",
+        "internet",
+        "videos",
+        "tendencias"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/tecno/2026/09/27/top-10-videos-mas-vistos-en-youtube-espana-hoy/",
+          "fecha": "2026-09-27T01:15:43.000Z",
+          "oficial": false,
+          "aporte": "Aportó datos sobre la historia, estadísticas de uso, polémicas y tendencias actuales de la plataforma YouTube."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1v5zuep",
+          "titulo": "YouTube expande a más países la opción de monetizar videos etiquetando productos de Amazon",
+          "fecha": "2026-09-23T23:34:00.000Z",
+          "ruta": "/nota/youtube-expande-a-mas-paises-la-opcion-de-monetizar-videos-1v5zuep"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "1owmqze": {
+      "estado": "automatica",
+      "titulo": "Tesla proyecta fabricar mil robots Optimus por semana",
+      "copete": "La compañía estadounidense prevé alcanzar las mil unidades semanales de su robot humanoide para fin de año. Sin embargo, el fabricante reconoció que las máquinas todavía no dominan tareas básicas ni operan con autonomía.",
+      "cuerpo": "De mantenerse este ritmo, la compañía prevé alcanzar las mil unidades semanales hacia fines de año. No obstante, el fabricante reconoció que el sistema todavía no puede ejecutar tareas generalizadas en un entorno real. El principal obstáculo radica en el desarrollo del software necesario para interpretar órdenes simples y sortear obstáculos sin requerir un entrenamiento extenso para cada variación.\n\nA esta limitación cognitiva se suman inconvenientes mecánicos relacionados con la complejidad de las manos robóticas, que requieren más de cien componentes, y problemas de durabilidad en los sensores táctiles. Para resolver estos desafíos, la empresa recopiló más de quinientas mil horas de datos de entrenamiento.",
+      "guion": "Tesla proyecta fabricar mil robots Optimus por semana",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T01:41:00.694Z",
+      "claves": [
+        "Tesla prevé fabricar mil robots por semana hacia fin de año",
+        "El sistema enfrenta dificultades para realizar tareas básicas con autonomía",
+        "La complejidad mecánica de las manos constituye otro de los obstáculos técnicos"
+      ],
+      "seSabe": [
+        "Tesla multiplicó por diez su volumen de fabricación respecto al segundo trimestre del año",
+        "La compañía acumuló más de quinientas mil horas de datos de entrenamiento para la inteligencia artificial del robot"
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Tesla proyecta fabricar mil robots Optimus por semana, aunque la compañía reconoció que las máquinas todavía enfrentan limitaciones para ejecutar tareas básicas de manera autónoma en entornos industriales.",
+      "etiquetas": [
+        "Tesla",
+        "Optimus",
+        "robot humanoide",
+        "producción"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/tecno/2026/09/27/tesla-esta-cerca-de-producir-1000-optimus-por-semana-pero-el-robot-aun-no-domina-tareas-basicas/",
+          "fecha": "2026-09-27T00:18:53.000Z",
+          "oficial": false,
+          "aporte": "Detalló los planes de producción de Tesla y las limitaciones técnicas que enfrentan los robots Optimus."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "14llo95": {
+      "estado": "automatica",
+      "titulo": "Melody Luz responde a las críticas tras hablar de su intimidad",
+      "copete": "La bailarina Melody Luz respondió a los cuestionamientos en redes sociales tras revelar detalles sobre su relación con Alex Caniggia. El testimonio surgió durante una entrevista televisiva.",
+      "cuerpo": "Durante la charla, Luz indicó que la dinámica del reality les dejaba largos periodos sin actividades, por lo que buscaban espacios sin cámaras dentro del predio pese a las advertencias de la producción. Ante una consulta de la conductora vinculada a una anécdota previa de Daniela Celis y Thiago Medina, la bailarina confirmó haber sostenido hasta nueve relaciones en un mismo día y señaló que aquella intensidad le generó molestias físicas por las cuales debió consultar a una profesional de la salud.\n\nLa difusión de sus dichos generó reacciones divididas entre los usuarios, lo que motivó la posterior respuesta pública de la bailarina frente a los cuestionamientos recibidos en las plataformas digitales.",
+      "guion": "Melody Luz responde a las críticas tras hablar de su intimidad",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T01:41:00.694Z",
+      "claves": [
+        "Melody Luz respondió a las críticas en redes sociales.",
+        "Habló sobre la frecuencia de sus encuentros con Alex Caniggia.",
+        "El testimonio surgió en una entrevista en Bondi Live.",
+        "Contó que debió consultar a una médica por molestias físicas."
+      ],
+      "seSabe": [
+        "Según informó una fuente, Melody Luz respondió a los cuestionamientos en redes sociales.",
+        "De acuerdo con el testimonio, la pareja se conoció durante las grabaciones de un reality.",
+        "La bailarina afirmó que llegaron a tener hasta nueve encuentros íntimos en un día.",
+        "Luz indicó que debió consultar a una médica debido a las molestias físicas ocasionadas."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "La bailarina Melody Luz respondió a los cuestionamientos en redes sociales tras revelar detalles sobre sus primeros meses de relación con Alex Caniggia y el impacto físico que tuvieron aquellos encuentros.",
+      "etiquetas": [
+        "Melody Luz",
+        "Alex Caniggia"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/teleshow/2026/09/27/melody-luz-respondio-a-las-criticas-tras-revelar-su-frecuencia-sexual-con-alex-caniggia-vayan-a-hacerse-una/",
+          "fecha": "2026-09-27T01:10:39.000Z",
+          "oficial": false,
+          "aporte": "Detalló las declaraciones de Melody Luz sobre su intimidad con Alex Caniggia y las críticas recibidas."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "ddo0s5": {
+      "estado": "automatica",
+      "titulo": "Agustina Cherri y su hija realizaron un viaje juntas a Nueva York",
+      "copete": "La actriz y su hija compartieron una escapada por Nueva York con caminatas y paseos urbanos. El viaje funcionó como una pausa previa en la carrera musical de la joven.",
+      "cuerpo": "La actriz Agustina Cherri y su hija Muna Pauls llevaron adelante un viaje de descanso por la ciudad estadounidense de Nueva York, donde recorrieron distintos puntos urbanos y compartieron registros de sus paseos a través de las redes sociales.\n\nDurante su estadía en Manhattan, ambas caminaron por sectores como Times Square y registraron postales de los trayectos cotidianos con indumentaria cómoda para las jornadas de caminata.\n\nEsta escapada funcionó como un momento de distensión para la joven, quien a mediados de agosto firmó su primer contrato discográfico con Sony Music y 5020 RCRDS para comenzar formalmente su carrera musical, un paso que fue celebrado públicamente tanto por Cherri como por su padre, el actor Gastón Pauls.",
+      "guion": "Agustina Cherri y su hija realizaron un viaje juntas a Nueva York",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T01:41:00.694Z",
+      "claves": [
+        "La actriz Agustina Cherri viajó a Nueva York junto a su hija Muna.",
+        "Ambas compartieron caminatas, postales urbanas y momentos de descanso.",
+        "El viaje se dio semanas después de que la joven firmara contrato con una discográfica."
+      ],
+      "seSabe": [
+        "Agustina Cherri y su hija Muna realizaron un viaje juntas a Nueva York, según informó un medio nacional.",
+        "Durante la estadía recorrieron distintos puntos de Manhattan y compartieron imágenes en redes sociales, de acuerdo con la misma fuente.",
+        "A mediados de agosto, la joven firmó un contrato con Sony Music y 5020 RCRDS para iniciar su carrera como cantante, según los registros publicados."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "La actriz Agustina Cherri y su hija Muna realizaron una escapada de descanso por Nueva York con caminatas y paseos urbanos.",
+      "etiquetas": [
+        "Agustina Cherri",
+        "Muna Pauls",
+        "Nueva York",
+        "viaje",
+        "música"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/teleshow/2026/09/27/agustina-cherri-y-muna-pauls-compartieron-un-viaje-de-chicas-por-nueva-york-bailes-pizza-y-nuevas-etapas/",
+          "fecha": "2026-09-27T00:33:07.000Z",
+          "oficial": false,
+          "aporte": "Detalles del viaje de Agustina Cherri y su hija a Nueva York y antecedentes sobre el contrato musical de la joven."
         }
       ],
       "verificacion": {
