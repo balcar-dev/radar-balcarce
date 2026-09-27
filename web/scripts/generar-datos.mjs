@@ -179,7 +179,9 @@ if (enLaNube) {
       }
     }
     fichas.repetidas = rep;
-    const { notas, repetidas } = quitarRepetidas(conFichas, rep.grupos);
+    // Queda la que ya está publicada: si no, desaparece de la portada y queda
+    // una que todavía espera cuerpo (27/09, la de YPF y la de la maestra china).
+    const { notas, repetidas } = quitarRepetidas(conFichas, rep.grupos, { publicadas: new Set((anterior.notas ?? []).map((n) => n.id)) });
     repetidasFuera = new Set(repetidas.map((r) => r.id));
     // Con los medios de las repetidas sumados, una nota de afuera puede llegar
     // a los que pide su sección, y con la sección que corrigió la IA el mínimo

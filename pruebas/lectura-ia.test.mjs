@@ -255,3 +255,14 @@ test('la IA ya no tiene la sección Servicios; una ficha vieja que la dice va a 
   const nota = { id: 's', titulo: 'Congelan la VTV en Balcarce', seccion: 'Balcarce', semaforo: 'verde', alcance: 'local', local: true, relevancia: 70 };
   assert.equal(aplicarFichas([nota], { s: vieja }, { verdeSecciones: VERDES }).notas[0].seccion, 'Balcarce');
 });
+
+test('de un grupo de repetidas queda la que ya está publicada, aunque otra la cuenten más medios (27/09, YPF)', () => {
+  const publicada = { id: 'p', titulo: 'YPF mantiene precios en Balcarce', medios: ['Radio Gabal'], relevancia: 70, semaforo: 'verde' };
+  const nueva = { id: 'n', titulo: 'YPF no aumenta en Balcarce', medios: ['La Vanguardia', 'Puntonueve'], relevancia: 90, semaforo: 'verde' };
+  const r = quitarRepetidas([publicada, nueva], [['p', 'n']], { publicadas: new Set(['p']) });
+  assert.deepEqual(r.notas.map((x) => x.id), ['p']);
+  assert.deepEqual(r.notas[0].medios.sort(), ['La Vanguardia', 'Puntonueve', 'Radio Gabal'], 'suma los medios de las dos');
+  // Sin publicada, gana la que puede salir sola antes que la que espera.
+  const espera = { ...nueva, id: 'e', semaforo: 'amarillo' };
+  assert.deepEqual(quitarRepetidas([publicada, espera], [['p', 'e']]).notas.map((x) => x.id), ['p']);
+});

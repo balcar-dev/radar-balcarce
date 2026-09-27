@@ -422,14 +422,26 @@ export function unirGrupos(anteriores = [], nuevos = [], idsVigentes = null) {
  * como contada por varios). Devuelve { notas, repetidas } sin tocar las
  * originales.
  */
-export function quitarRepetidas(notas, grupos = []) {
+/**
+ * Qué nota de un grupo de repetidas queda (27/09): primero la que ya está
+ * publicada (`publicadas`, los ids de la portada anterior: si no, una nota
+ * que la gente ya ve desaparece y queda otra que todavía no tiene cuerpo),
+ * después la que puede salir sola (verde), después la que cuentan más medios
+ * y por último la de más puntaje.
+ */
+export function quitarRepetidas(notas, grupos = [], { publicadas = new Set() } = {}) {
   const porId = new Map(notas.map((n) => [n.id, n]));
   const fuera = new Map();
   const reemplazo = new Map();
   for (const ids of grupos) {
     const del = ids.map((id) => porId.get(id)).filter(Boolean).filter((n) => n.semaforo !== 'rojo');
     if (del.length < 2) continue;
-    del.sort((a, b) => (new Set(b.medios ?? []).size - new Set(a.medios ?? []).size) || ((b.relevancia ?? 0) - (a.relevancia ?? 0)));
+    const orden = (n) => [publicadas.has(n.id) ? 1 : 0, n.semaforo === 'verde' ? 1 : 0, new Set(n.medios ?? []).size, n.relevancia ?? 0];
+    del.sort((a, b) => {
+      const [x, y] = [orden(a), orden(b)];
+      for (let i = 0; i < x.length; i += 1) if (x[i] !== y[i]) return y[i] - x[i];
+      return 0;
+    });
     const [queda, ...resto] = del;
     const medios = [...new Set(del.flatMap((n) => n.medios ?? []))];
     reemplazo.set(queda.id, { ...queda, medios });
