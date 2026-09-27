@@ -79,6 +79,11 @@
   "ultimo": "2026-09-27T02:30:43.835Z",
   "motivo": "con cuerpo"
  },
+ "12f4ldc": {
+  "intentos": 1,
+  "ultimo": "2026-09-27T09:00:40.045Z",
+  "motivo": "Gemini: Expected double-quoted property name in JSON at position 1484 (line 1 column 1485)"
+ },
  "12gu063": {
   "intentos": 2,
   "ultimo": "2026-09-26T03:30:38.780Z",
@@ -1652,6 +1657,11 @@
  "e6im4b": {
   "intentos": 1,
   "ultimo": "2026-09-26T03:00:42.173Z",
+  "motivo": "con cuerpo"
+ },
+ "e6rtq9": {
+  "intentos": 1,
+  "ultimo": "2026-09-27T09:00:40.045Z",
   "motivo": "con cuerpo"
  },
  "e7ym9v": {
