@@ -1,5 +1,5 @@
 {
-  "exportado": "2026-09-27T05:40:18.306Z",
+  "exportado": "2026-09-27T06:00:39.735Z",
   "decisiones": {
     "1951120": {
       "estado": "automatica",
@@ -30699,6 +30699,146 @@
         "nivel": "MEDIA",
         "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
         "sugeridoPorIA": "BAJA"
+      }
+    },
+    "cl7wco": {
+      "estado": "automatica",
+      "titulo": "Sectores de mayor crecimiento destruyen empleo formal",
+      "copete": "Un informe nacional revela la pérdida de miles de puestos de trabajo registrados en áreas dinámicas de la economía. El impacto del fenómeno en el mercado laboral.",
+      "cuerpo": "El mercado laboral atraviesa una dinámica que genera preocupación por la destrucción de empleo formal en sectores que mostraron crecimiento económico.\n\nEn actividades dinámicas como minería e intermediación financiera se redujeron miles de trabajadores a pesar de haber crecido, mientras que el agro aumentó su planta laboral.\n\nDesde el sector académico advierten que el crecimiento de las actividades más dinámicas no logra compensar la debilidad de aquellas que concentran una mayor proporción del empleo.",
+      "guion": "Sectores de mayor crecimiento destruyen empleo formal",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T06:00:39.663Z",
+      "claves": [
+        "Cae el empleo asalariado formal en el sector privado",
+        "Aumenta la informalidad laboral y el cuentapropismo",
+        "Sectores dinámicos reducen puestos pese a crecer"
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Un informe nacional señala que los sectores de mayor crecimiento económico acumulan una pérdida de puestos de trabajo formales y crece la informalidad laboral.",
+      "etiquetas": [
+        "empleo",
+        "mercado de trabajo",
+        "informalidad",
+        "economia",
+        "UBA"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Perfil",
+          "enlace": "https://www.perfil.com/noticias/economia/en-los-sectores-que-mas-crecieron-en-el-ultimo-ano-se-destruyeron-3500-puestos-de-trabajo-formales.phtml",
+          "fecha": "2026-09-27T05:39:24.000Z",
+          "oficial": false,
+          "aporte": "Detalló la caída del empleo formal privado, el incremento de la informalidad y la pérdida de puestos en sectores de mayor crecimiento."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "e6h8p9",
+          "titulo": "Cierra la histórica planta de Dánica en Llavallol y quedan en riesgo 35 puestos de trabajo",
+          "fecha": "2026-09-23T02:02:00.000Z",
+          "ruta": "/nota/cierra-la-historica-planta-de-danica-en-llavallol-y-quedan-en-riesgo-e6h8p9"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "1359eyk": {
+      "estado": "automatica",
+      "titulo": "Advierten por suba de importaciones de bienes y contrabando",
+      "copete": "Un informe detalla un incremento en la compra de productos terminados del exterior y una caída en maquinarias. El empresariado alerta por el impacto en la industria local.",
+      "cuerpo": "El comercio exterior registró un superávit récord impulsado por las exportaciones, según datos analizados por el Instituto Argentina Grande. Ante este escenario, la Unión Industrial Argentina advirtió sobre la competencia desleal y el aumento del contrabondo, señalando que seis de cada diez empresas sufren un impacto alto en su actividad por esta situación.\n\nEl sector fabril indicó que los productos extranjeros se comercializan a precios bajos que presionan los costos locales y generan una reducción en las ventas. Asimismo, señalaron la falta de certificaciones y la informalidad en la comercialización, mientras que reclamaron un fortalecimiento de los controles aduaneros frente a las políticas de desregulación oficial.",
+      "guion": "Advierten por suba de importaciones de bienes y contrabando",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T06:00:39.663Z",
+      "claves": [
+        "Superávit comercial récord impulsado por las exportaciones",
+        "Caída en la importación de maquinarias y suba de bienes terminados",
+        "Empresarios alertan por el impacto del contrabando en la industria",
+        "Reclaman mayores controles aduaneros ante la informalidad"
+      ],
+      "seSabe": [
+        "El superávit comercial acumulado fue el mayor en al menos veinticinco años, según el Instituto Argentina Grande.",
+        "Las exportaciones de combustibles y energía crecieron casi la mitad en la comparación interanual.",
+        "Las importaciones de bienes de capital cayeron un seis por ciento.",
+        "Seis de cada diez empresas encuestadas por la Unión Industrial Argentina afirmaron que el contrabando tiene un impacto alto en su actividad."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Un informe detalla el crecimiento de las importaciones de bienes terminados y la caída en la compra de maquinarias. Desde el sector industrial alertan sobre el impacto del contrabando en la producción nacional.",
+      "etiquetas": [
+        "industria",
+        "importaciones",
+        "contrabando",
+        "comercio exterior"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Perfil",
+          "enlace": "https://www.perfil.com/noticias/economia/aumento-la-importacion-de-los-productos-terminados-pero-tambien-el-contrabando.phtml",
+          "fecha": "2026-09-27T05:41:03.000Z",
+          "oficial": false,
+          "aporte": "Aportó datos sobre el superávit comercial, la caída de importaciones de maquinarias, el aumento de bienes de consumo y el informe de la Unión Industrial Argentina sobre contrabando."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "1x5dfc3": {
+      "estado": "automatica",
+      "titulo": "El impacto de la disparidad sectorial en el empleo en Balcarce",
+      "copete": "Mientras los sectores extractivos avanzan con inversiones a largo plazo, la industria y el comercio enfrentan caídas que afectan de forma directa al empleo urbano.",
+      "cuerpo": "El escenario económico actual expone una marcada disparidad entre sectores que crecen, como la minería y la energía, y aquellos que atraviesan dificultades, tales como la industria manufacturera, la construcción y el comercio. Esta asimetría genera interrogantes sobre los tiempos de maduración de las grandes inversiones y su capacidad de compensar la desaceleración de actividades que concentran gran parte del empleo urbano.\n\nEstas actividades representan una porción significativa de los puestos de trabajo en las ciudades, lo que evidencia una tensión latente en el esquema económico vigente.\n\nEl desafío principal radica en la diferencia de velocidad entre el desarrollo de los recursos naturales y la situación cotidiana de los sectores rezagados. Mientras los proyectos extractivos requieren años de maduración y estabilidad cambiaria, las estructuras productivas tradicionales enfrentan dificultades inmediatas para sostener su nivel de actividad.",
+      "guion": "El impacto de la disparidad sectorial en el empleo en Balcarce",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T06:00:39.663Z",
+      "claves": [
+        "Disparidad entre sectores económicos y tiempos de inversión",
+        "Caída en la industria, construcción y ventas en supermercados",
+        "Alta concentración del empleo urbano en las actividades afectadas"
+      ],
+      "seSabe": [
+        "La industria manufacturera utilizó el 58,2% de su capacidad instalada en julio.",
+        "La construcción cayó 4,5% interanual en julio y un 4,6% respecto al mes anterior.",
+        "Las ventas reales de supermercados acumularon una caída del 2,7% en los primeros siete meses del año."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El contraste entre el avance de los sectores extractivos y las dificultades en industria y comercio genera tensión en el empleo urbano y plantea desafíos sobre los tiempos económicos.",
+      "etiquetas": [
+        "economía",
+        "empleo",
+        "industria",
+        "comercio",
+        "construcción",
+        "inversiones"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Perfil",
+          "enlace": "https://www.perfil.com/noticias/economia/la-economia-de-los-dos-tiempos-por-natalia-motyl.phtml",
+          "fecha": "2026-09-27T05:37:58.000Z",
+          "oficial": false,
+          "aporte": "Aportó datos sobre la capacidad instalada industrial, la caída de la construcción y las ventas de supermercados en julio."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
       }
     }
   },
