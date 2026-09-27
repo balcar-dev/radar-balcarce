@@ -1,5 +1,5 @@
 {
-  "exportado": "2026-09-27T07:30:10.113Z",
+  "exportado": "2026-09-27T07:40:21.131Z",
   "decisiones": {
     "1951120": {
       "estado": "automatica",
@@ -30912,13 +30912,68 @@
     },
     "v8jjgw": {
       "estado": "automatica",
-      "titulo": null,
-      "copete": null,
-      "cuerpo": null,
-      "guion": null,
-      "deIA": null,
+      "titulo": "Bomberos controlan un principio de incendio en Balcarce",
+      "copete": "Una dotación de Bomberos Voluntarios intervino esta madrugada en un domicilio de calle 5 para sofocar el fuego iniciado en el techo. No se registraron personas heridas.",
+      "cuerpo": "Por motivos que todavía no se pudieron establecer, las llamas se originaron en la zona del techo del inmueble, lo que requirió la movilización inmediata de una dotación de Bomberos Voluntarios.\n\nTras varios minutos de tareas en el lugar, los servidores públicos lograron controlar la situación e impidieron que el fuego se extendiera hacia otros sectores de la propiedad. Desde el área interviniente confirmaron que no hubo personas heridas como consecuencia del episodio.",
+      "guion": "Bomberos controlan un principio de incendio en Balcarce",
+      "deIA": true,
       "por": "ia",
-      "cuando": "2026-09-27T07:30:10.066Z"
+      "cuando": "2026-09-27T07:40:21.060Z",
+      "claves": [
+        "Ocurrió durante la madrugada en una vivienda de calle 5.",
+        "El fuego se originó en el techo por causas que se desconocen.",
+        "Intervino una dotación de Bomberos Voluntarios y no hubo heridos."
+      ],
+      "seSabe": [
+        "Se registró un principio de incendio en la madrugada de este domingo en un domicilio de calle 5, entre 10 y 12.",
+        "El fuego se inició en la zona del techo del inmueble.",
+        "Una dotación de Bomberos Voluntarios trabajó en el lugar y logró controlar la situación.",
+        "No se informaron personas heridas tras el episodio."
+      ],
+      "noConfirmado": [
+        "Se desconocen las causas que originaron el fuego.",
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Bomberos Voluntarios trabajaron esta madrugada para controlar un principio de incendio registrado en el techo de una vivienda ubicada en calle 5. No se reportaron personas heridas.",
+      "etiquetas": [
+        "Bomberos Voluntarios",
+        "incendio",
+        "Balcarce"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infórmese Primero (FM 104.9)",
+          "enlace": "http://www.informeseprimero.com.ar/2026/09/principio-de-incendio-en-un-domicilio.html",
+          "fecha": "2026-09-27T04:43:31.521Z",
+          "oficial": false,
+          "aporte": "Informó sobre el principio de incendio en calle 5, el trabajo de los bomberos y la ausencia de personas heridas."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1k3dzvz",
+          "titulo": "Principio de incendio en un departamento céntrico",
+          "fecha": "2026-09-24T19:14:04.000Z",
+          "ruta": "/nota/principio-de-incendio-en-un-departamento-centrico-1k3dzvz"
+        },
+        {
+          "id": "10x98wn",
+          "titulo": "Caravana y recibimiento para el boxeador Kevin Gómez",
+          "fecha": "2026-09-22T23:46:36.443Z",
+          "ruta": "/nota/caravana-y-recibimiento-para-el-boxeador-kevin-gomez-10x98wn"
+        },
+        {
+          "id": "1gk282j",
+          "titulo": "Ferroviarios ganó la final del Apertura por penales",
+          "fecha": "2026-09-21T00:42:06.000Z",
+          "ruta": "/nota/ferroviarios-gano-la-final-del-apertura-por-penales-1gk282j"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
     },
     "wbaaus": {
       "estado": "automatica",
