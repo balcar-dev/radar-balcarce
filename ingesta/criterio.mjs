@@ -69,7 +69,17 @@ export const REESCRITURA = {
   // 150 dejaba unas 67 notas verdes esperando, y hay que mirar en Google Cloud
   // que no aparezca ningún cargo. Primero se gasta en lo de Balcarce y en lo
   // más nuevo (ordenarParaReescribir).
-  porDia: 300,
+  // El 27/09 a la noche se subió a 450 (Hernán): ese día había 60 notas de
+  // afuera aprobadas, contadas por dos medios o más, que nunca llegaron a
+  // pedirse porque el cupo se había gastado. La clave gratis de redacción
+  // permite 500 pedidos por día: 450 entra si la lectura con IA tiene su
+  // propia clave (GEMINI_API_KEY_CLASIFICACION).
+  porDia: 450,
+  // Mientras esa clave no esté cargada, la lectura con IA gasta de la misma
+  // clave gratis (hasta 60 pedidos de fichas y 60 de repetidas por día), así
+  // que el tope baja: 330 + 120 = 450, por debajo de los 500 gratis. Lo elige
+  // topeDeReescrituras (reels/reescritura.mjs).
+  porDiaSinClaveDeLectura: 330,
   // De esos, los últimos quedan reservados para lo de Balcarce: lo de afuera
   // deja de pedirse antes, así lo local que llega a la noche no se queda sin
   // cupo (26/09: a las 21:30 ya se habían gastado los 150 y tres notas locales

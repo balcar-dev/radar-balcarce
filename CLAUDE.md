@@ -129,7 +129,7 @@ cada uno, cuándo corre y si cuesta plata), en `INFRAESTRUCTURA.md`.
   no tiene alternativa: si falta, los reels no arrancan. La de redes es paga.
   La de redacción es **gratis y está cargada y probada desde el 25/09**: la
   reescritura la usa primero y pasa a la de redes (paga) sólo si se queda sin
-  cupo (429). Tope de 300 notas por día (`REESCRITURA.porDia`).
+  cupo (429). Tope de 450 por día con la clave de lectura propia, 330 mientras la lectura con IA comparte la clave gratis (`REESCRITURA.porDia`, `porDiaSinClaveDeLectura`; lo elige `topeDeReescrituras`, 27/09).
   La reescritura usa `gemini-flash-lite-latest`: `gemini-flash-latest` daba
   503 de alta demanda seguido; si vuelve a fallar, es el primer lugar donde mirar.
 - **En GitHub las piezas se arman con lo ya publicado** (`web/data/portada.json`,

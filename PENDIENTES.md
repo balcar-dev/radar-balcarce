@@ -198,8 +198,8 @@ Las ideas más grandes, que cambian cómo funciona algo, están en `IDEAS.md`.
     clave correcta; probado con "Prueba de WhatsApp"), con avisos nuevos y
     estadísticas.
   - **Clave gratis de redacción** cargada y probada (25/09): la redacción la usa
-    primero y sólo pasa a la paga si se queda sin cupo (429). Tope de 300 notas
-    por día (`REESCRITURA.porDia`).
+    primero y sólo pasa a la paga si se queda sin cupo (429). Tope de 450 notas
+    por día con la clave de lectura propia, 330 sin ella (`REESCRITURA.porDia`, 27/09).
   - **Enlaces de redes que no se rompen**: dirección fija desde la primera
     publicación, archivo de 180 días (`web/data/archivo.json`) y rescate en la
     404. Se recuperaron 1556 notas. Las notas archivadas ya están en el sitemap.

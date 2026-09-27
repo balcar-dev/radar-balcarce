@@ -444,7 +444,7 @@ que ninguna persona decidió, de las últimas 72 horas (o ya escritas antes).
 1. **Orden**: primero lo de Balcarce; después lo de afuera, empezando por la
    sección con menos notas escritas; dentro de cada tramo de 6 horas, por
    puntaje.
-2. **Topes**: 40 notas por corrida, **300 por día**, de las cuales las últimas
+2. **Topes**: 40 notas por corrida, **450 por día con la clave de lectura propia, 330 mientras la lectura con IA comparte la clave gratis** (27/09; antes 300), de las cuales las últimas
    80 quedan reservadas para lo de Balcarce. Lo ya escrito (con cuerpo) no
    gasta: se revalida y se reusa.
 3. **Material**: se baja el texto completo de la nota original

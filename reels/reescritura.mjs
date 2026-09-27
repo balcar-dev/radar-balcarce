@@ -27,7 +27,7 @@
 // son los medios que contaron lo mismo y los ANTECEDENTES, notas que el sitio
 // ya publicó sobre el tema en los últimos 30 días (antecedentesDe).
 
-import { claveRedaccion, claveRedes } from './claves.mjs';
+import { claveRedaccion, claveRedes, leerVariable } from './claves.mjs';
 import {
   verificar, verificarExtras, resumirProblemas, depurarCuerpo,
 } from '../ingesta/verificar.mjs';
@@ -733,7 +733,18 @@ export function previasDeLaPortada(notas) {
 export const MAXIMO_DE_INTENTOS = REESCRITURA.intentosMaximos;
 
 /** Cuántas notas se le pueden pedir a la IA en un día (gasto de la clave paga). */
-export const REESCRITURAS_POR_DIA = REESCRITURA.porDia;
+/**
+ * El tope de notas por día que se le piden a la IA (27/09). Con la clave de
+ * la lectura con IA cargada aparte, la redacción tiene la clave gratis para
+ * ella sola: REESCRITURA.porDia. Sin esa clave, la comparte con la lectura y
+ * el tope baja (REESCRITURA.porDiaSinClaveDeLectura), para no pasar de los
+ * 500 pedidos gratis del día y no caer en la clave paga.
+ */
+export function topeDeReescrituras(o) {
+  return leerVariable('GEMINI_API_KEY_CLASIFICACION', o) ? REESCRITURA.porDia : REESCRITURA.porDiaSinClaveDeLectura;
+}
+
+export const REESCRITURAS_POR_DIA = topeDeReescrituras();
 
 /**
  * Cuántas notas ya se le pidieron a la IA hoy (día de Balcarce), según los

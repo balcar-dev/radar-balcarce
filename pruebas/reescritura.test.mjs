@@ -480,3 +480,16 @@ test("la reescritura empieza por lo más nuevo: una nota local de hace dos días
   const anterior = notaVerde({ id: "anterior", relevancia: 99, fecha: en(-1 * 3600e3) });
   assert.deepEqual(ordenarParaReescribir([vieja, anterior, nueva, parecida]).map((n) => n.id), ["parecida", "nueva", "anterior", "vieja"], "el tramo más nuevo manda; dentro del tramo, el puntaje");
 });
+
+test('el tope del día es 450 con la clave de lectura propia y 330 sin ella (27/09: nunca pasar de los 500 gratis)', async () => {
+  const { topeDeReescrituras } = await import('../reels/reescritura.mjs');
+  const { REESCRITURA } = await import('../ingesta/criterio.mjs');
+  const sinArchivo = 'no-existe.env';
+  assert.equal(topeDeReescrituras({ env: { GEMINI_API_KEY_CLASIFICACION: 'x' }, archivo: sinArchivo }), REESCRITURA.porDia);
+  assert.equal(topeDeReescrituras({ env: { GEMINI_API_KEY_CLASIFICACION: '' }, archivo: sinArchivo }), REESCRITURA.porDiaSinClaveDeLectura);
+  assert.equal(REESCRITURA.porDia, 450);
+  // Sin clave propia, la lectura gasta hasta 60 + 60 pedidos de la misma clave gratis.
+  const { LECTURA } = await import('../ingesta/lectura-ia.mjs');
+  assert.ok(REESCRITURA.porDiaSinClaveDeLectura + LECTURA.pedidosPorDia + LECTURA.pedidosRepetidasPorDia <= 460, 'queda margen debajo de los 500 gratis');
+  assert.ok(REESCRITURA.porDia <= 460);
+});
