@@ -1,5 +1,5 @@
 {
-  "exportado": "2026-09-27T03:01:00.613Z",
+  "exportado": "2026-09-27T03:11:03.946Z",
   "decisiones": {
     "1951120": {
       "estado": "automatica",
@@ -10610,13 +10610,50 @@
     },
     "ycv541": {
       "estado": "automatica",
-      "titulo": "Jurado balcarceño en la Expo Primavera de Angus en Cañuelas",
-      "copete": "El balcarceño Julio Fernández participará como jurado en la cuadragésima séptima Exposición Primavera de Angus, que se realizará la semana próxima en Cañuelas.",
-      "cuerpo": null,
-      "guion": "Jurado balcarceño en la Expo Primavera de Angus en Cañuelas",
+      "titulo": "Julio Fernández será jurado en la Exposición Nacional de Angus",
+      "copete": "El balcarceño Julio Fernández fue convocado como jurado para la cuadragesimoséptima Exposición Nacional y la vigesimosexta Exposición del Ternero de la raza Angus, que se realizará en Cañuelas.",
+      "cuerpo": "Fernández cuenta con una trayectoria de dos décadas como jurado y un año con numerosas participaciones en distintas muestras provinciales y nacionales, tras haber estado en la Expo Otoño de Hereford, en La Rural de Palermo en julio pasado, en la raza Simmental y en la octogésima segunda Exposición de Ganadería de Federal, en Entre Ríos, además de su paso por Maipú, General Madariaga y Dolores.\n\nDurante las jornadas en Cañuelas tambéin habrá actividades para jóvenes y niños a través de los programas Mini Angus, la Jura Junior y el Ateneo Angus, segón detalló la representante de la entidad organizadora, Virginia De Jesús. Por su parte, la cabaña local Inambú participará con cinco ejemplares seleccionados por su responsable, Martín Tinello.",
+      "guion": "Julio Fernandez sera jurado en la Exposicion Nacional de Angus",
       "deIA": true,
       "por": "ia",
-      "cuando": "2026-09-21T11:54:17.872Z"
+      "cuando": "2026-09-27T03:11:03.876Z",
+      "claves": [
+        "Julio Fernández actuará como jurado en Cañuelas.",
+        "Participarán trescientos reproductores de sesenta cabañas.",
+        "La cabaña local Inambú presentará cinco ejemplares.",
+        "El encuentro incluirá actividades para jóvenes y niños."
+      ],
+      "seSabe": [
+        "Julio Fernández será jurado en la Exposición Nacional y de Ternero de Angus en Cañuelas, según la Asociación Argentina de Angus.",
+        "El evento contará con trescientos reproductores de sesenta cabañas y se desarrollará de lunes a viernes de la semana próxima.",
+        "La cabaña Inambú presentará cinco ejemplares seleccionados por Martín Tinello.",
+        "Virginia De Jesús informó que habrá actividades para niños y jóvenes."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El balcarceño Julio Fernández fue convocado como jurado principal para la Exposición Nacional de Angus que se realizará la próxima semana en Cañuelas.",
+      "etiquetas": [
+        "Julio Fernández",
+        "Angus",
+        "Balcarce",
+        "Cañuelas",
+        "ganadería"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/julio-fernandez-elegira-los-mejores-angus-en-la-expo-primavera-en-canuelas-507",
+          "fecha": null,
+          "oficial": false,
+          "aporte": "Detalló la participación del balcarceño Julio Fernández como jurado en la muestra de Angus en Cañuelas."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
     },
     "1dnz1pb": {
       "estado": "automatica",
@@ -28462,6 +28499,229 @@
           "titulo": "Lali Esposito y Tini Stoessel cantaron juntas en el estadio de River",
           "fecha": "2026-09-27T02:13:00.000Z",
           "ruta": "/nota/lali-esposito-y-tini-stoessel-cantaron-juntas-en-el-estadio-de-river-12eopig"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "1msgl9y": {
+      "estado": "automatica",
+      "titulo": "YouTube consolida su alcance global y el consumo de videos",
+      "copete": "La plataforma mantiene su liderazgo mundial con millones de visualizaciones diarias, mientras creadores de contenidos y videos musicales marcan tendencia en la región.",
+      "cuerpo": "La plataforma digital YouTube se mantiene como la segunda página más visitada del mundo, con presencia en más de cien países y contenido disponible en decenas de idiomas. Para ordenar estas métricas, desde dos mil veintiocho cuenta con listas en tiempo real sobre tendencias y artistas.\n\nEl consumo en la plataforma abarca desde videos musicales de diversos géneros hasta contenido educativo, transmisiones de entretenimiento y material informativo, consolidando comunidades de habla hispana en todo el mundo.",
+      "guion": "YouTube consolida su alcance global y el consumo de videos",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T03:11:03.876Z",
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "YouTube sigue liderando el consumo global de videos con millones de reproducciones diarias y nuevas herramientas de monetización para creadores.",
+      "etiquetas": [
+        "YouTube",
+        "video digital"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/tecno/2026/09/27/lista-de-los-10-videos-mas-populares-hoy-en-youtube-colombia/",
+          "fecha": "2026-09-27T02:01:05.000Z",
+          "oficial": false,
+          "aporte": "Aportó los datos sobre estadísticas globales, funcionamiento, creadores destacados y listas de tendencias de YouTube."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1v5zuep",
+          "titulo": "YouTube expande a más países la opción de monetizar videos etiquetando productos de Amazon",
+          "fecha": "2026-09-23T23:34:00.000Z",
+          "ruta": "/nota/youtube-expande-a-mas-paises-la-opcion-de-monetizar-videos-1v5zuep"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "BAJA"
+      }
+    },
+    "mj947u": {
+      "estado": "automatica",
+      "titulo": "Lali Esposito y Tini Stoessel cantaron juntas en el estadio de River",
+      "copete": "Tini Stoessel sorprendió al público al sumarse al tercer show de Lali Espósito en el estadio de River Plate para interpretar un clásico de Madonna junto a Marilina Bertoldi.",
+      "cuerpo": "Tini Stoessel se presentó de forma sorpresiva en el tercer show que Lali Espósito brindó en el estadio de River Plate. Durante la recta final del espectáculo, ambas interpretaron \"Like a Virgin\" de Madonna frente a miles de fanáticos y lucieron prendas blancas vinculadas por la fuente a sus próximos casamientos, mientras que Stoessel apareció con el cabello rosado y un velo.\n\nDel tramo final también participó la música Marilina Bertoldi con su guitarra, quien vistió camisa negra y pantalones engomados. Al finalizar la interpretación y despedir a Bertoldi, Espósito expresó su agradecimiento y Stoessel manifestó su emoción por compartir el escenario y acompañarla.",
+      "guion": "Lali Esposito y Tini Stoessel cantaron juntas en el estadio de River",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T03:11:03.876Z",
+      "seSabe": [
+        "Tini Stoessel participó en el tercer show de Lali Espósito en River Plate, según informó un medio.",
+        "Las artistas interpretaron juntas el tema \"Like a Virgin\" de Madonna, de acuerdo con la información difundida.",
+        "Marilina Bertoldi se sumó a la presentación con su guitarra, según lo detallado en la cobertura.",
+        "El espectáculo incluyó referencias visuales relacionadas con próximos casamientos, según indicó el medio original."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "etiquetas": [
+        "Lali Espósito",
+        "Tini Stoessel",
+        "Marilina Bertoldi",
+        "River Plate"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/teleshow/2026/09/27/lali-y-tini-stoessel-impactaron-a-miles-de-fans-en-river-plate-con-un-clasico-de-madonna-para-mi-es-algo-muy-fuerte/",
+          "fecha": "2026-09-27T02:37:22.000Z",
+          "oficial": false,
+          "aporte": "Detalló la participación sorpresa de Tini Stoessel y Marilina Bertoldi en el show de Lali Espósito en River Plate."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "12eopig",
+          "titulo": "Lali Esposito y Tini Stoessel cantaron juntas en el estadio de River",
+          "fecha": "2026-09-27T02:13:00.000Z",
+          "ruta": "/nota/lali-esposito-y-tini-stoessel-cantaron-juntas-en-el-estadio-de-river-12eopig"
+        },
+        {
+          "id": "108vf6q",
+          "titulo": "River Plate pierde con Huracán en el Monumental y no puede acercarse a la cima de su zona en el Torneo Clausura",
+          "fecha": "2026-09-19T22:11:37.000Z",
+          "ruta": "/nota/river-plate-pierde-con-huracan-en-el-monumental-y-no-puede-acercarse-108vf6q"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "evk2dt": {
+      "estado": "automatica",
+      "titulo": "El deterioro del empleo explica la nueva suba de la pobreza",
+      "copete": "La pobreza subió al 32,3% en el primer semestre de 2026 tras tres semestres de caída, según datos oficiales. Un informe técnico señala que el repunte responde al atraso de los ingresos frente a los costos y no a la inflación.",
+      "cuerpo": "El indicador interrumpió una racha de tres semestres consecutivos de mejora desde el pico del 52,9% registrado a comienzos de 2024, acumulando la incorporación de unas 1,9 millones de personas a la situación de pobreza.\n\nUn informe elaborado por los economistas Federico Belich y Laura Caullo, del Ieral de la Fundación Mediterránea, advierte que el fenómeno responde a una dinámica diferente a la de los últimos años. Según explicó Belich, el incremento actual se origina en el debilitamiento del mercado laboral y los salarios frente al costo de la canasta, y no por el impacto directo de la inflación como ocurría anteriormente.\n\nLos especialistas atribuyen esta situación a la estrategia de crecimiento económico nacional, centrada en sectores de alta generación de divisas pero escasa demanda de mano de obra, como la minería, los hidrocarburos y el agro, en contraste con la caída de la actividad en rubros intensivos en empleo como la industria, la construcción y el comercio.",
+      "guion": "El deterioro del empleo explica la nueva suba de la pobreza",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T03:11:03.876Z",
+      "claves": [
+        "La pobreza llegó al 32,3% en el primer semestre de 2026 y la indigencia al 7,5%.",
+        "El indicador cortó tres semestres seguidos de baja y afectó a unos 15 millones de personas.",
+        "Un informe del Ieral atribuye el repunte al deterioro salarial y no a la inflación.",
+        "Apunta a la estrategia económica que prioriza sectores con poca demanda de empleo."
+      ],
+      "seSabe": [
+        "La pobreza alcanzó al 32,3% de la población en el primer semestre de 2026, según el Indec.",
+        "La indigencia se ubicó en el 7,5% en el mismo período, afectando a unos 3,5 millones de personas.",
+        "Un informe del Ieral señala que el repunte se debe al rezago de los ingresos frente al costo de la canasta.",
+        "Los analistas del Ieral indican que la estrategia económica actual prioriza sectores con baja demanda de mano de obra."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "La pobreza subió al 32,3% en el primer semestre de 2026 tras tres semestres de caída, según datos oficiales. Un informe técnico señala que el repunte responde al atraso de los ingresos frente a los costos y no a la inflación.",
+      "etiquetas": [
+        "pobreza",
+        "Indec",
+        "empleo",
+        "economia",
+        "Ieral"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Perfil",
+          "enlace": "https://www.perfil.com/noticias/cordoba/no-es-la-inflacion-el-trabajo-que-se-degrada-explica-la-nueva-suba-de-la-pobreza.phtml",
+          "fecha": "2026-09-27T02:00:00.000Z",
+          "oficial": false,
+          "aporte": "Detalla las estadísticas del Indec sobre pobreza e indigencia y las conclusiones del informe del Ieral sobre el mercado laboral."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "14jovf6": {
+      "estado": "automatica",
+      "titulo": "Un estudio de la Universidad Nacional de Córdoba mide la pobreza",
+      "copete": "Un trabajo de la Universidad Nacional de Córdoba calcula la pobreza multidimensional en la provincia mediante privaciones cotidianas, en paralelo a los datos oficiales del INDEC.",
+      "cuerpo": "En paralelo, un equipo de la Universidad Nacional de Córdoba y del CONICET presentó el Índice de Pobreza Multidimensional, que relevó a más de mil hogares en los veintiséis departamentos provinciales durante junio y julio y estableció que el treinta y seis por ciento de los domicilios atraviesa privaciones en aspectos cotidianos.\n\nEl estudio combina veintisiete indicadores agrupados en siete ejes, entre los que se destacan vivienda, educación y salud, y detalla que las mayores carencias pasan por los gastos básicos, las redes de apoyo y el bajo nivel educativo, con diferencias territoriales que ubican a la región Centro con el índice más alto.",
+      "guion": "Un estudio de la Universidad Nacional de Córdoba mide la pobreza",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T03:11:03.876Z",
+      "seSabe": [
+        "El INDEC informó un aumento de la pobreza en el primer semestre de 2026.",
+        "El Observatorio de la Universidad Nacional de Córdoba relevó 1.126 hogares en junio y julio.",
+        "El Índice de Pobreza Multidimensional se ubicó en el treinta y seis por ciento de los hogares cordobeses."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Un relevamiento de la Universidad Nacional de Córdoba midió la pobreza multidimensional en la provincia a través de privaciones cotidianas, en paralelo a los datos difundidos por el INDEC.",
+      "etiquetas": [
+        "pobreza",
+        "universidad nacional de cordoba",
+        "indec",
+        "economia",
+        "cordoba"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Perfil",
+          "enlace": "https://www.perfil.com/noticias/cordoba/la-unc-advierte-que-en-cordoba-la-pobreza-trepa-al-36-si-se-miden-las-privaciones-cotidianas.phtml",
+          "fecha": "2026-09-27T01:55:00.000Z",
+          "oficial": false,
+          "aporte": "Aportó los datos del INDEC sobre pobreza y los resultados del índice multidimensional de la Universidad Nacional de Córdoba."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "1l2xk1l": {
+      "estado": "automatica",
+      "titulo": "Qué significa la luz amarilla de check engine en los autos",
+      "copete": "El testigo de avería del motor advierte sobre fallas que pueden ser graves aunque el vehículo funcione con normalidad. Cuándo hay que detenerse.",
+      "cuerpo": "El encendido de la luz amarilla con forma de motor en el tablero indica que el sistema de diagnóstico detectó una anomalía que requiere atención. Aunque el vehículo continúe andando sin ruidos ni pérdida de potencia, postergar la visita al taller puede derivar en problemas mayores. Este testigo, también llamado de avería, se relaciona con el control de emisiones, la alimentación de combustible o la combustión.\n\nEntre los motivos frecuentes figuran una tapa de tanque floja, inconvenientes en el encendido o fallas en algún sensor. Si la luz permanece fija y el auto responde bien, es posible circular con prudencia hasta un lugar seguro o un taller mecánico, evitando exigir el motor. En cambio, si el indicador comienza a parpadear, o si se perciben tirones, humo, olores extraños y pérdida de potencia, se debe detener la marcha de inmediato y solicitar asistencia para evitar daños severos en el catalizador.",
+      "guion": "Qué significa la luz amarilla de check engine en los autos",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T03:11:03.876Z",
+      "claves": [
+        "El testigo de check engine indica una anomalía detectada por el sistema.",
+        "Puede encenderse por una tapa floja, fallas de sensores o problemas de encendido.",
+        "Si la luz es fija, se puede llegar al taller con prudencia.",
+        "Una luz intermitente o fallas mecánicas exigen detener el auto de inmediato."
+      ],
+      "seSabe": [
+        "El testigo de check engine advierte sobre fallas en la combustión, alimentación o emisiones.",
+        "Una luz fija permite llegar con prudencia al taller si el auto responde bien.",
+        "La luz intermitente exige detener el vehículo para evitar daños mayores."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Qué indica la luz amarilla con forma de motor en el tablero y por qué no hay que postergar la visita al taller mecánico.",
+      "etiquetas": [
+        "autos",
+        "check engine"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/autos/que-significa-el-testigo-de-check-engine-y-por-que-casi-nadie-lo-atiende-a-tiempo-nid27092026/",
+          "fecha": "2026-09-27T03:08:00.000Z",
+          "oficial": false,
+          "aporte": "Detalló las causas, significados y precauciones ante el encendido del testigo de check engine."
         }
       ],
       "verificacion": {
