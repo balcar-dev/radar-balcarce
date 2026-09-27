@@ -30,9 +30,9 @@
   "motivo": "con cuerpo"
  },
  "11ehz57": {
-  "intentos": 2,
-  "ultimo": "2026-09-27T03:00:47.961Z",
-  "motivo": "título o bajada: 1 problema (negacion): la fuente niega algo en el título y el texto nuevo no"
+  "intentos": 3,
+  "ultimo": "2026-09-27T03:30:39.535Z",
+  "motivo": "Gemini: Expected ',' or ']' after array element in JSON at position 2092 (line 21 column 13)"
  },
  "11genwv": {
   "intentos": 1,
@@ -89,6 +89,11 @@
   "ultimo": "2026-09-25T12:12:18.091Z",
   "motivo": "con cuerpo"
  },
+ "137xgf9": {
+  "intentos": 1,
+  "ultimo": "2026-09-27T03:30:39.535Z",
+  "motivo": "sin material"
+ },
  "13eigya": {
   "intentos": 1,
   "ultimo": "2026-09-26T03:30:38.780Z",
@@ -113,6 +118,13 @@
   "intentos": 1,
   "ultimo": "2026-09-25T13:00:43.192Z",
   "motivo": "cuerpo: 4 problemas (numero, repite, copia): el cuerpo dice 30 y la fuente no lo dice; sin esas oraciones quedan 59 palabras"
+ },
+ "14dvqf7": {
+  "intentos": 1,
+  "ultimo": "2026-09-27T03:30:39.535Z",
+  "motivo": "verificación baja: espera a una persona",
+  "baja": true,
+  "fuentes": 1
  },
  "14jovf6": {
   "intentos": 1,
@@ -177,6 +189,11 @@
  "160531l": {
   "intentos": 1,
   "ultimo": "2026-09-25T15:00:50.448Z",
+  "motivo": "con cuerpo"
+ },
+ "1630hgn": {
+  "intentos": 1,
+  "ultimo": "2026-09-27T03:30:39.535Z",
   "motivo": "con cuerpo"
  },
  "163jy6m": {
@@ -264,6 +281,11 @@
   "ultimo": "2026-09-26T03:00:42.173Z",
   "motivo": "con cuerpo"
  },
+ "18ijfw7": {
+  "intentos": 1,
+  "ultimo": "2026-09-27T03:30:39.535Z",
+  "motivo": "título o bajada: 1 problema (negacion): la fuente niega algo en el título y el texto nuevo no"
+ },
  "18ldbf4": {
   "intentos": 1,
   "ultimo": "2026-09-26T04:30:43.593Z",
@@ -324,6 +346,11 @@
  "1adul6g": {
   "intentos": 1,
   "ultimo": "2026-09-25T12:00:43.134Z",
+  "motivo": "con cuerpo"
+ },
+ "1agrxxu": {
+  "intentos": 1,
+  "ultimo": "2026-09-27T03:30:39.535Z",
   "motivo": "con cuerpo"
  },
  "1aguy56": {
@@ -515,6 +542,11 @@
   "ultimo": "2026-09-26T04:30:43.593Z",
   "motivo": "con cuerpo"
  },
+ "1g9p99f": {
+  "intentos": 1,
+  "ultimo": "2026-09-27T03:30:39.535Z",
+  "motivo": "semáforo: necesita ojo humano: \"investigación\", en lo que escribió la IA (título, bajada o texto para redes)"
+ },
  "1gbqyce": {
   "intentos": 1,
   "ultimo": "2026-09-27T02:30:43.835Z",
@@ -523,6 +555,11 @@
  "1ggll4l": {
   "intentos": 1,
   "ultimo": "2026-09-26T06:30:48.809Z",
+  "motivo": "con cuerpo"
+ },
+ "1gnqz6n": {
+  "intentos": 1,
+  "ultimo": "2026-09-27T03:30:39.535Z",
   "motivo": "con cuerpo"
  },
  "1gry8t4": {
@@ -610,9 +647,14 @@
   "ultimo": "2026-09-25T15:00:50.448Z",
   "motivo": "con cuerpo"
  },
- "1j7tlyt": {
+ "1j73nqz": {
   "intentos": 1,
-  "ultimo": "2026-09-27T03:00:47.961Z",
+  "ultimo": "2026-09-27T03:30:39.535Z",
+  "motivo": "con cuerpo"
+ },
+ "1j7tlyt": {
+  "intentos": 2,
+  "ultimo": "2026-09-27T03:30:39.535Z",
   "motivo": "sin material"
  },
  "1jaqxc4": {
@@ -668,6 +710,11 @@
  "1kzpmh2": {
   "intentos": 1,
   "ultimo": "2026-09-25T16:30:41.998Z",
+  "motivo": "con cuerpo"
+ },
+ "1l2xk1l": {
+  "intentos": 1,
+  "ultimo": "2026-09-27T03:30:39.535Z",
   "motivo": "con cuerpo"
  },
  "1laaouo": {
@@ -810,6 +857,11 @@
  "1plbwti": {
   "intentos": 1,
   "ultimo": "2026-09-25T18:00:42.946Z",
+  "motivo": "con cuerpo"
+ },
+ "1pnog3i": {
+  "intentos": 1,
+  "ultimo": "2026-09-27T03:30:39.535Z",
   "motivo": "con cuerpo"
  },
  "1pp9gwe": {
@@ -1095,6 +1147,11 @@
   "ultimo": "2026-09-27T02:30:43.835Z",
   "motivo": "con cuerpo"
  },
+ "1wwmim6": {
+  "intentos": 1,
+  "ultimo": "2026-09-27T03:30:39.535Z",
+  "motivo": "con cuerpo"
+ },
  "1wzh43l": {
   "intentos": 1,
   "ultimo": "2026-09-25T16:00:39.434Z",
@@ -1220,6 +1277,11 @@
   "ultimo": "2026-09-25T13:30:44.587Z",
   "motivo": "con cuerpo"
  },
+ "5bq6e6": {
+  "intentos": 1,
+  "ultimo": "2026-09-27T03:30:39.535Z",
+  "motivo": "Gemini: Bad Unicode escape in JSON at position 428 (line 1 column 429)"
+ },
  "5cywqg": {
   "intentos": 1,
   "ultimo": "2026-09-27T02:00:40.608Z",
@@ -1275,6 +1337,11 @@
   "ultimo": "2026-09-26T05:30:43.606Z",
   "motivo": "título o bajada: 1 problema (nombre): el copete nombra a \"unidos\" y la fuente no"
  },
+ "7fmhve": {
+  "intentos": 1,
+  "ultimo": "2026-09-27T03:30:39.535Z",
+  "motivo": "con cuerpo"
+ },
  "7qxthx": {
   "intentos": 1,
   "ultimo": "2026-09-26T03:00:42.173Z",
@@ -1323,6 +1390,11 @@
  "942wi7": {
   "intentos": 1,
   "ultimo": "2026-09-25T11:38:40.017Z",
+  "motivo": "con cuerpo"
+ },
+ "9817ym": {
+  "intentos": 1,
+  "ultimo": "2026-09-27T03:30:39.535Z",
   "motivo": "con cuerpo"
  },
  "9yz9ds": {
@@ -1473,9 +1545,14 @@
   "motivo": "con cuerpo"
  },
  "evk2dt": {
-  "intentos": 2,
-  "ultimo": "2026-09-27T03:00:47.961Z",
-  "motivo": "título o bajada: 7 problemas (numero, negacion): el titulo dice 30 y la fuente no lo dice"
+  "intentos": 3,
+  "ultimo": "2026-09-27T03:30:39.535Z",
+  "motivo": "título o bajada: 6 problemas (numero, negacion): el titulo dice 30 y la fuente no lo dice"
+ },
+ "f0797k": {
+  "intentos": 1,
+  "ultimo": "2026-09-27T03:30:39.535Z",
+  "motivo": "con cuerpo"
  },
  "fda952": {
   "intentos": 1,
@@ -1485,6 +1562,11 @@
  "ffhx7": {
   "intentos": 1,
   "ultimo": "2026-09-25T12:12:18.091Z",
+  "motivo": "con cuerpo"
+ },
+ "fjzcfr": {
+  "intentos": 1,
+  "ultimo": "2026-09-27T03:30:39.535Z",
   "motivo": "con cuerpo"
  },
  "foyz3t": {
@@ -1670,6 +1752,11 @@
   "ultimo": "2026-09-27T02:00:40.608Z",
   "motivo": "sin material"
  },
+ "l0emx4": {
+  "intentos": 1,
+  "ultimo": "2026-09-27T03:30:39.535Z",
+  "motivo": "con cuerpo"
+ },
  "ldyp8v": {
   "intentos": 2,
   "ultimo": "2026-09-25T16:00:39.434Z",
@@ -1793,6 +1880,11 @@
  "pd6ls9": {
   "intentos": 1,
   "ultimo": "2026-09-25T12:00:43.134Z",
+  "motivo": "con cuerpo"
+ },
+ "pe1jmd": {
+  "intentos": 1,
+  "ultimo": "2026-09-27T03:30:39.535Z",
   "motivo": "con cuerpo"
  },
  "pktre7": {
@@ -2000,6 +2092,11 @@
   "ultimo": "2026-09-27T02:00:40.608Z",
   "motivo": "con cuerpo"
  },
+ "w11vwh": {
+  "intentos": 1,
+  "ultimo": "2026-09-27T03:30:39.535Z",
+  "motivo": "con cuerpo"
+ },
  "w1stq6": {
   "intentos": 1,
   "ultimo": "2026-09-25T12:00:43.134Z",
@@ -2093,8 +2190,13 @@
   "motivo": "Gemini: Bad Unicode escape in JSON at position 42 (line 1 column 43)"
  },
  "z7c2yy": {
-  "intentos": 2,
-  "ultimo": "2026-09-27T03:00:47.961Z",
+  "intentos": 3,
+  "ultimo": "2026-09-27T03:30:39.535Z",
   "motivo": "título o bajada: 1 problema (negacion): la fuente niega algo en el título y el texto nuevo no"
+ },
+ "zsocqt": {
+  "intentos": 1,
+  "ultimo": "2026-09-27T03:30:39.535Z",
+  "motivo": "con cuerpo"
  }
 }
