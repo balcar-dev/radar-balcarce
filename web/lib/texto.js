@@ -102,7 +102,10 @@ export function sinNotasRepetidas(notas = []) {
   const porMerito = [...notas].sort((a, b) => ((b.relevancia ?? 0) - (a.relevancia ?? 0)) || (tiempo(b) - tiempo(a)));
   const quedan = [];
   for (const n of porMerito) {
-    if (!quedan.some((q) => titularesParecidos(q.titulo, n.titulo))) quedan.push(n);
+    // Las notas propias (el dólar, los repasos de los podcasts) nunca son
+    // "repetidas": "El repaso de la tarde en Radar Balcarce: …" se parece al de
+    // la mañana en casi todo el titular y se sacaba de la portada (26/09).
+    if (n.propia || !quedan.some((q) => titularesParecidos(q.titulo, n.titulo))) quedan.push(n);
   }
   const ids = new Set(quedan);
   return notas.filter((n) => ids.has(n));

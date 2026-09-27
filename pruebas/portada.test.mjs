@@ -135,3 +135,10 @@ test('la columna derecha es una sola pila: servicios y lateral dentro de .derech
   assert.match(css, /\.dos-columnas \.derecha \{ display: flex; flex-direction: column; gap: 16px; grid-column: 2; grid-row: 1;/);
   assert.ok(!/grid-row: 1 \/ span 2/.test(css), 'una fila que abarca dos filas de la grilla estira la de arriba y deja el hueco');
 });
+
+test("los repasos de los podcasts y las notas propias no se sacan por parecerse entre sí", () => {
+  const r = (id, franja, propia = "repaso") => ({ id, propia, relevancia: 50, fecha: "2026-09-26T13:00:00Z", titulo: `El repaso de la ${franja} en Radar Balcarce: autódromo Juan Manuel Fangio y fábrica` });
+  const lista = [r("m", "mañana"), r("t", "tarde"), r("n", "noche")];
+  assert.deepEqual(sinNotasRepetidas(lista).map((n) => n.id), ["m", "t", "n"]);
+  assert.equal(sinNotasRepetidas(lista.map((n) => ({ ...n, propia: undefined }))).length, 1, "sin la marca, sí se juntan");
+});
