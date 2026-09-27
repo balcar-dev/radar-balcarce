@@ -38,9 +38,11 @@ cambia y listo. Y se borra `panel/datos/CLAVES-INICIALES.txt` si todavía existe
 Todo esto corre en GitHub, **con la PC apagada**:
 
 - **Cada 30 minutos:** busca noticias en 214 fuentes (218 configuradas, 4 apagadas:
-  las de Balcarce, la región y la provincia, y las del cruce de medios, 76 medios
-  de todo el país), junta la misma noticia contada por varios, deja de afuera
-  sólo lo que cuentan dos medios o más (o dice Balcarce en el título), las clasifica,
+  las de Balcarce, la región y la provincia, y las del cruce de medios, 71 medios
+  de todo el país; la lista entera, en `FUENTES.md`), junta la misma noticia
+  contada por varios, de afuera trae sólo lo que cuentan dos medios o más (o dice
+  Balcarce en el título) y lo publica solo si lo cuentan los medios que pide su
+  sección (tres, en general), las clasifica,
   reescribe con IA las que van a salir sin revisión (título, copete y cuerpo),
   arma la web y la publica en Cloudflare Pages.
 - **Varias veces por día (el reloj de las redes):** publica en Facebook y arma
@@ -139,6 +141,7 @@ tailscale funnel --https=443 off
 | **`REGLAS.md`** | **Lo que se pidió que se cumpla siempre** (y las pruebas que lo vigilan) |
 | `INFRAESTRUCTURA.md` | Dónde vive cada cosa, los relojes, los secretos y la vigilancia |
 | `MANUAL.md` | Cómo se eligen las noticias: puntaje, semáforo, qué sale solo |
+| `FUENTES.md` | **Todas las fuentes**: dónde se leen, de qué ciudad son, su peso y cómo se usan (se escribe solo desde el código) |
 | `CRITERIO-EDITORIAL.md` | **El criterio editorial único**: qué se publica, **cómo se escriben las notas**, cómo se verifican y la instrucción exacta que lee la IA |
 | `REDES.md` | Qué se publica en Instagram y Facebook, a qué hora y cómo se publica (horarios, contrato del día, infraestructura) |
 | `CRITERIO-REDES.md` | **El criterio único de las redes**: cómo suena la voz, qué dice cada pieza y qué no dice nunca |

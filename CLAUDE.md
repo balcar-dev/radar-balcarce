@@ -3,8 +3,8 @@
 *Actualizado el 27/09/2026.*
 
 Medio digital automático de Balcarce (Buenos Aires). Lee 214 feeds activos (218 configurados: 54 de
-los 58 de `ingesta/fuentes.mjs` y los 160 del cruce de medios, de 76 medios,
-en `ingesta/fuentes-cruce.mjs`) cada media hora, decide qué publicar, arma el sitio y lo sube, sin que haya nadie
+los 58 de `ingesta/fuentes.mjs` y los 160 del cruce de medios, de 71 medios,
+en `ingesta/fuentes-cruce.mjs`; la lista entera, en `FUENTES.md`) cada media hora, decide qué publicar, arma el sitio y lo sube, sin que haya nadie
 despierto. Los usuarios son Hernán y Andrés; escribir siempre en castellano
 rioplatense, sin voseo forzado.
 
@@ -15,7 +15,7 @@ rioplatense, sin voseo forzado.
     reels/     placas, voz y video. SÍ tiene dependencias (resvg, ffmpeg)
     redes/     publicar en Facebook e Instagram (API de Meta). SIN dependencias
     web/       el sitio público (Next.js 15, JavaScript, HTML estático)
-    pruebas/   `npm test`, más de 1.170 pruebas, sin red
+    pruebas/   `npm test`, más de 1.190 pruebas, sin red
 
 Flujo: fuentes → cruce de medios → clasificar → puntaje → semáforo → lectura con IA
 → reescritura con IA → `web/data/portada.json`
@@ -85,7 +85,9 @@ cada uno, cuándo corre y si cuesta plata), en `INFRAESTRUCTURA.md`.
   muestra sólo 72 horas; `web/data/archivo.json` guarda lo publicado de los
   últimos 180 días (hasta 2500 notas) y de ahí también salen páginas. Si una
   nota pasa a rojo o amarillo, o una persona la bloquea, sale del archivo y
-  pierde la página. Todo en `web/lib/archivo.js`.
+  pierde la página. Lo de afuera contado por un solo medio también la pierde,
+  salvo que haya salido en redes (27/09: eran 1.069 páginas, todas de antes del
+  cruce; `tieneRespaldo`). Todo en `web/lib/archivo.js`.
 - **El turno de farmacia dura hasta las 8:30 de la mañana del día siguiente**, no
   hasta la medianoche. La regla está en `ingesta/utiles.mjs`. El turno se
   cruza contra La Vanguardia y Radio Gabal; la dirección sale del Colegio o de
@@ -111,7 +113,8 @@ cada uno, cuándo corre y si cuesta plata), en `INFRAESTRUCTURA.md`.
   práctico de acá (cortes, trámites, obras) va a Balcarce. **País se llama
   Argentina** y sale sola. Fútbol es aparte de Deportes. Las fichas viejas de la
   IA que dicen Servicios o País se traducen solas (`aplicarFichas`). Lo de afuera
-  que no cae en ninguna queda como Región o Provincia, que esperan a una persona.
+  que no cae en ninguna va a Argentina: **Región y Provincia no existen** (27/09;
+  eran la ciudad del medio, no la del hecho, y lo que caía ahí esperaba siempre).
   Las once van en el menú (`EN_NAVEGACION`) cuando tienen notas. Las direcciones
   viejas `/seccion/servicios` y `/seccion/pais` redirigen a Balcarce y a Argentina
   (`SECCIONES_VIEJAS`, `web/scripts/generar-redirects.mjs`).
@@ -122,7 +125,7 @@ cada uno, cuándo corre y si cuesta plata), en `INFRAESTRUCTURA.md`.
 - **Las redes tienen un interruptor:** la variable de GitHub `REDES_ACTIVAS`.
   Con `Si` (cualquier mayúscula o tilde) publica; con otro valor todo corre pero
   sólo simula. No hay que tocar código para prender o apagar.
-- **Una tercera clave, para la lectura con IA** (`GEMINI_API_KEY_CLASIFICACION`, plan V2.2): falta cargarla; mientras tanto usa la de redacción (gratis) con tope. Nunca la de redes.
+- **Una tercera clave, para la lectura con IA** (`GEMINI_API_KEY_CLASIFICACION`, plan V2.2): falta cargarla; mientras tanto usa la de redacción (gratis) con tope: 60 pedidos de fichas por día, 200 cuando tenga la propia (`topeDeLecturas`, `ingesta/lectura-ia.mjs`). Nunca la de redes.
 - **Dos claves de Gemini, separadas a propósito:** `GEMINI_API_KEY_REDACCION`
   para redactar las notas (acepta el nombre viejo `GEMINI_API_KEY`) y
   `GEMINI_API_KEY_REDES` para voces y reels (`reels/claves.mjs`). La de redes
@@ -228,10 +231,28 @@ cada uno, cuándo corre y si cuesta plata), en `INFRAESTRUCTURA.md`.
   resumen, TF-IDF, umbral 0,42), con una memoria de 36 horas en la caché de
   Actions (`.cache/`, fuera del repo). Queda todo lo de Balcarce y, de afuera, lo
   que dice Balcarce en el título, lo que toca la zona y lo que cuentan **dos
-  medios distintos o más**; lo de un solo medio no se trae. Ya no entran "las 3
-  a 5 más nuevas" de cada fuente (`maxItems` y `uso: 'senal'` quedaron como
-  datos de la ficha, sin efecto en la entrada). La medición que llevó a esto:
-  `docs/CRUCE-DE-MEDIOS.md`.
+  medios distintos o más**; lo de un solo medio no se trae, y lo que cuentan
+  sólo medios de otras ciudades de la zona (Mar del Plata, Tandil, Necochea…)
+  tampoco. Ya no entran "las 3 a 5 más nuevas" de cada fuente: `maxItems` y
+  `uso: 'senal'` se sacaron del código (27/09 a la noche). La medición que
+  llevó a esto: `docs/CRUCE-DE-MEDIOS.md`. Todas las fuentes, con ciudad, peso
+  y cómo se usan: `FUENTES.md` (lo escribe `node ingesta/listar-fuentes.mjs`).
+- **La importancia de lo de afuera se mide en medios, no en puntaje** (27/09 a
+  la noche). Para salir sola, una nota de afuera tiene que estar contada por los
+  medios distintos que pide su sección (`MEDIOS_DE_AFUERA` en
+  `ingesta/criterio.mjs`): Fútbol y Deportes 4; Economía, Tecnología, Agro y
+  Automovilismo 2; el resto 3; con una figura argentina, 2. Nunca uno; una
+  fuente oficial alcanza sola. Si no llega, espera con el motivo "de afuera y
+  poco contada (N medios; Sección pide M)". El puntaje sólo ordena y decide el
+  cupo y Facebook. Lo mira `exigirMedios` (`ingesta/ingesta.mjs`) en la ingesta
+  y otra vez después de la lectura con IA, en los dos sentidos (si al juntar
+  repetidas una nota llega a los medios que pide, sale), y después van los
+  cupos (`aplicarCupos`, "a la vez"). Ya no existen `PISO_DE_AFUERA` ni
+  `exigirDosMedios`.
+- **Un medio, un nombre** (27/09): todos los feeds de un mismo medio llevan el
+  mismo `medio` (TN con Campo, Tecno y Clima; iProfesional; La Tecla; Ecos
+  Diarios (Necochea)). Si no, las secciones de un diario contarían como dos
+  medios en el cruce (`pruebas/cruce-coherente.test.mjs`).
 - **Correcciones a mano sin el panel** (27/09): `web/data/correcciones.json`
   cambia el título, la bajada o la sección de una nota ya publicada, con motivo,
   cuándo y quién. Manda sobre lo que escribe la IA y la dirección no cambia.
@@ -244,23 +265,24 @@ cada uno, cuándo corre y si cuesta plata), en `INFRAESTRUCTURA.md`.
 
 | Quiero… | Archivo |
 |---|---|
-| agregar una fuente o cambiar un peso | `ingesta/fuentes.mjs` |
+| agregar, sacar o apagar una fuente, o cambiar un peso | `ingesta/fuentes.mjs` (o `ingesta/fuentes-cruce.mjs`, si es del cruce); después, `node ingesta/listar-fuentes.mjs` para rehacer `FUENTES.md` (`pruebas/fuentes-registro.test.mjs` controla que esté al día) |
 | que una palabra mande una nota a otra sección | `REGLAS_SECCION`, mismo archivo |
 | que algo espere aprobación o nunca salga | `REGLAS_SEMAFORO`, mismo archivo |
 | que una sección de un medio de afuera no se traiga (otro país, policiales, consejos) | `SECCIONES_QUE_NO_ENTRAN` y `CONEXION_ARGENTINA`, mismo archivo (`motivoDeDescarte` en `ingesta/ingesta.mjs`) |
-| la ficha de cada fuente (tipo, ciudad, uso) | `fichaDeFuente`, en `ingesta/fuentes.mjs`. Desde el cruce (27/09) `uso: 'senal'` y `maxItems` son sólo datos de la ficha: no cambian qué entra (lo de afuera sale si lo cuentan dos medios, venga del feed que venga) |
-| sumar o sacar una fuente del cruce de medios (nacionales, provincia, zona, especializadas) | `ingesta/fuentes-cruce.mjs` (una línea por feed; `activa: false` para apagarla); cómo se cruzan, `ingesta/cruce.mjs` |
+| la ficha de cada fuente (tipo y ciudad) | `fichaDeFuente`, en `ingesta/fuentes.mjs`: el tipo sale del alcance, de `oficial` y de si el feed tiene `seccion` (nacional por sección o general). Desde el 27/09 no hay `maxItems` ni `uso: 'senal'`: lo de afuera entra por el cruce, venga del feed que venga |
+| sumar o sacar una fuente del cruce de medios (nacionales, provincia, zona, especializadas) | `ingesta/fuentes-cruce.mjs` (una línea por feed; `activa: false` para apagarla; el mismo `medio` para todos los feeds de un medio); cómo se cruzan, `ingesta/cruce.mjs`; después, `node ingesta/listar-fuentes.mjs` |
+| el título de un índice de noticias (news-sitemap) que trae palabras sueltas | `tituloDelSitemap` (`ingesta/ingesta.mjs`): con cinco palabras o menos, usa el epígrafe de la foto (La Tecla) |
 | sacar de la web una nota ya publicada, sin el panel | `web/data/retiradas.json` (motivo, cuándo, quién) |
 | corregir a mano el título, la bajada o la sección de una nota, sin el panel | `web/data/correcciones.json` (cada una con motivo, cuándo y quién; sin motivo no vale). Manda sobre lo que escribe la IA y no cambia la dirección: `correccionesAMano` y `conCorreccion` en `web/lib/archivo.js`, aplicadas en `web/scripts/generar-datos.mjs` |
 | que los títulos automáticos no terminen en "en Balcarce" | `sinBalcarceAlFinal`, en `web/lib/titulos.js` (lo aplica `generar-datos.mjs`); la instrucción de la IA, `CRITERIO-EDITORIAL.md` § 12, regla 2 |
 | agregar, sacar o renombrar una sección, o cambiar su color | `SECCIONES` y `EN_NAVEGACION` (las del menú) en `web/lib/datos.js`; el color, `--s-*` en `web/app/globals.css`; las palabras, `REGLAS_SECCION`, y cuáles salen solas, `verdeSecciones` (`ingesta/fuentes.mjs`); las que conoce la IA, `SECCIONES_DE_LA_FICHA` (`ingesta/lectura-ia.mjs`) |
-| que lo de afuera pida dos medios, o juntar notas repetidas | `exigirDosMedios` (`ingesta/ingesta.mjs`), `agruparRepetidas` y `quitarRepetidas` (`ingesta/lectura-ia.mjs`); lo que se muestra del archivo, `tieneRespaldo` (`web/lib/cuerpo.js`) |
+| cuántos medios pide lo de afuera, o juntar notas repetidas | `MEDIOS_DE_AFUERA`, `MEDIOS_POR_DEFECTO` y `MEDIOS_CON_FIGURA` (`ingesta/criterio.mjs` y la tabla de `CRITERIO-EDITORIAL.md`), aplicados por `exigirMedios` y `mediosMinimosDe` (`ingesta/ingesta.mjs`); `agruparRepetidas` y `quitarRepetidas` (`ingesta/lectura-ia.mjs`); qué del archivo se muestra y conserva la página, `tieneRespaldo` (`web/lib/cuerpo.js`, usado en `web/lib/archivo.js`) |
 | qué va a las redes (hoy, sólo lo de Balcarce) | `esParaLasRedes` en `redes/elegir.mjs` |
 | el plan de trabajo en curso (filtro de entrada, lectura con IA, notas populares) | `docs/PLAN-V2.2.md` |
-| la lectura con IA (decide desde el 27/09: qué entra, sección, qué es de Balcarce; nunca destraba el semáforo) | `ingesta/lectura-ia.mjs`, con el perfil de `ingesta/perfil-balcarce.md` (sólo datos seguros); las fichas, en `web/data/fichas.json` |
+| la lectura con IA (decide desde el 27/09: qué entra, sección, qué es de Balcarce; saca publicidad y chimentos; nunca destraba el semáforo) | `ingesta/lectura-ia.mjs` (`LECTURA` y `topeDeLecturas`: 60 pedidos por día con la clave gratis, 200 con la propia), con el perfil de `ingesta/perfil-balcarce.md` (sólo datos seguros); las fichas, en `web/data/fichas.json` |
 | cambiar el criterio editorial, el tono o las reglas de escritura | `CRITERIO-EDITORIAL.md` (la IA lo lee tal cual; reiniciar el panel) |
-| cambiar un número del criterio (largos, intentos, cupos, pisos, Facebook, podcasts) | `ingesta/criterio.mjs` **y** la tabla "Los números" de `CRITERIO-EDITORIAL.md` (una prueba controla que digan lo mismo) |
-| cambiar cuánto puntaje pide cada sección | `PISO_DE_AFUERA` y `CUPO_DE_AFUERA`, en `ingesta/criterio.mjs` (y en `CRITERIO-EDITORIAL.md`) |
+| cambiar un número del criterio (largos, intentos, cupos, medios de afuera, Facebook, podcasts) | `ingesta/criterio.mjs` **y** la tabla "Los números" de `CRITERIO-EDITORIAL.md` (una prueba controla que digan lo mismo) |
+| cambiar cuántos medios pide cada sección o cuántas notas de afuera deja salir a la vez | `MEDIOS_DE_AFUERA` y `CUPO_DE_AFUERA`, en `ingesta/criterio.mjs` (y en `CRITERIO-EDITORIAL.md`) |
 | agregar un tema que se sigue | `TEMAS`, mismo archivo |
 | ajustar el filtro de la IA | `ingesta/verificar.mjs` |
 | que el semáforo mire lo que escribe la IA | `reels/reescritura.mjs` (`semaforoDeLaReescritura`; usa las listas de `REGLAS_SEMAFORO`) |
@@ -300,6 +322,7 @@ cada uno, cuándo corre y si cuesta plata), en `INFRAESTRUCTURA.md`.
 | `REGLAS.md` | Lo que se exige siempre y la prueba o el chequeo que lo cuida; las decisiones que siguen valiendo |
 | `INFRAESTRUCTURA.md` | Qué corre dónde, secretos por nombre, vencimientos, qué se cae y cómo se ve |
 | `MANUAL.md` | Cómo se eligen las noticias: puntaje, semáforo, diseño de la web |
+| `FUENTES.md` | **El registro único de las fuentes**: las 218 (214 activas, de 91 medios), con dónde se leen, ciudad, cómo se leen, sección, peso, si son oficiales y cómo se usan en el cruce. Lo escribe `node ingesta/listar-fuentes.mjs` desde el código; no se edita a mano (`pruebas/fuentes-registro.test.mjs`) |
 | `CRITERIO-EDITORIAL.md` | **El criterio editorial único**: qué entra, semáforo, cómo se escribe (título, bajada, cuerpo), fuentes, verificación, qué ve el lector, notas propias, redes, firma, los números y la instrucción exacta de la IA |
 | `CRITERIO-REDES.md` | **El criterio único de las redes**: identidad ("Radar Balcarce", `radarbalcarce.com`), la voz (siempre la misma locutora), una ficha por pieza, las reglas de toda pieza, los números y las instrucciones exactas de voz |
 | `REDES.md` | Qué se publica en Instagram y Facebook, cuándo y con qué reglas (horarios e infraestructura; cómo suena, en `CRITERIO-REDES.md`) |

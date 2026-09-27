@@ -4,9 +4,13 @@
 
 *Es la foto de ese día. Lo que se decidió con esto ya está en el código: el cruce
 (`ingesta/cruce.mjs`, título y resumen con TF-IDF, umbral 0,42, memoria de 36
-horas) y la lista vigente, `ingesta/fuentes-cruce.mjs` (160 feeds de 76 medios,
-que se suman a los 58 de `ingesta/fuentes.mjs`). "Las fuentes que usamos hoy" y
-la columna "¿Ya se usa?" son las de antes del cruce.*
+horas) y la lista vigente, `ingesta/fuentes-cruce.mjs` (160 feeds; 71 medios
+desde que cada medio tiene un solo nombre, 27/09 a la noche), que se suman a los
+58 de `ingesta/fuentes.mjs`; todas juntas, en `FUENTES.md`. "Las fuentes que
+usamos hoy" y la columna "¿Ya se usa?" son las de antes del cruce. La regla de
+"dos medios" de abajo quedó como piso para entrar; para salir sola, desde esa
+noche lo de afuera pide los medios de su sección (`MEDIOS_DE_AFUERA`, en
+`CRITERIO-EDITORIAL.md`).*
 
 ## En corto
 

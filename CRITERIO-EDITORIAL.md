@@ -56,16 +56,19 @@ pueblo sin leer cinco medios. Por eso:
 Las fuentes están en `ingesta/fuentes.mjs` (58: medios de Balcarce, de la
 región, de la provincia, secciones de los diarios nacionales y organismos
 públicos; la Municipalidad es **fuente oficial**) y en `ingesta/fuentes-cruce.mjs`
-(160 feeds de 76 medios, para el cruce de medios; ver abajo).
+(160 feeds de 71 medios, para el cruce de medios; ver abajo). Todas, con su
+ciudad, su peso y cómo se usan, están en **`FUENTES.md`**, que se escribe solo
+desde el código (`node ingesta/listar-fuentes.mjs`; una prueba controla que
+esté al día).
 Cada una tiene un peso: los medios locales pesan más que los nacionales. Si
 dos o más medios cuentan lo mismo, es **una** nota con varias fuentes, no
-varias notas.
+varias notas. Por eso **cada medio tiene un solo nombre** para todos sus feeds
+(27/09): TN, con Campo, Tecno y Clima, es un medio, no cuatro.
 
 **Cada fuente tiene su ficha (27/09):** qué es (oficial, medio de Balcarce, de
-la región, provincial, nacional por sección o nacional general), **de qué
-ciudad es** (Ecos Diarios es de Necochea, no de Balcarce) y para qué se usa
-(`fichaDeFuente`). La lista completa, con cómo se usa cada una, está en el
-anexo A de `docs/PLAN-V2.2.md`.
+la región, provincial, nacional por sección o nacional general) y **de qué
+ciudad es** (Ecos Diarios es de Necochea, no de Balcarce) (`fichaDeFuente`).
+La IA recibe esa ciudad con cada nota, también la de los medios del cruce.
 
 **Lo que no se trae (27/09).** De los medios de afuera no entra lo que el
 propio medio pone en una sección de **otro país** (`/mexico/`, `/colombia/`,
@@ -78,49 +81,68 @@ es automovilismo. De los medios de Balcarce entra todo. La lista es
 `SECCIONES_QUE_NO_ENTRAN` (`ingesta/fuentes.mjs`).
 
 **Los feeds generales de los diarios nacionales.** Infobae, La Nación, Clarín
-"lo último", Ámbito "últimas" y Minuto Uno traen de todo. A la mañana del 27/09
-pasaron a "señal" (sus notas no salían solas); desde el cruce de medios, esa
-etiqueta ya no cambia qué entra: como cualquier nota de afuera, las suyas
-quedan sólo si las cuentan dos medios o más, y sirven para contar cuántos
-medios cuentan una misma historia, que suma puntaje y respaldo.
+"lo último", Ámbito "últimas" y Minuto Uno traen de todo. Cuentan como
+cualquier medio de afuera: sus notas quedan sólo si otros medios cuentan lo
+mismo, y sirven sobre todo para contar cuántos medios cuentan una misma
+historia. (A la mañana del 27/09 habían pasado a "señal"; desde el cruce esa
+etiqueta ya no hacía nada, y esa noche se sacó, junto con el máximo de notas
+por fuente.)
 
 **De afuera entra poco y a propósito.** De un medio de afuera queda lo que es
 de Balcarce, lo que toca la zona (la ruta 226, la 55, el sudeste, la papa) y
 lo que cuentan dos medios distintos o más (ver "El cruce de medios"). **Una nota de un medio de afuera es
 de Balcarce sólo si el medio dice Balcarce en su propio título (27/09)**:
 nombrarla al pasar en el texto (una lista de localidades, "en Balcarce también
-hay productores") no la hace local. Y lo de afuera tiene, por sección, un
-**piso de puntaje** y un **cupo** (cuántas pueden salir solas, como máximo):
-los números están en la sección 11. Lo de Balcarce no tiene piso ni cupo.
+hay productores") no la hace local. Lo que cuentan **sólo** medios de otras
+ciudades de la zona (Mar del Plata, Tandil, Necochea…) no se trae, salvo que
+diga Balcarce en el título o toque la zona: es de esas ciudades. Y lo de afuera
+tiene, por sección, un **mínimo de medios** que lo cuenten y un **cupo**
+(cuántas pueden salir solas a la vez, como máximo): los números están en la
+sección 11. Lo de Balcarce no pide medios ni tiene cupo.
 
 **Una IA lee cada nota antes de decidir (27/09).** Con el perfil de Balcarce
 (`ingesta/perfil-balcarce.md`) y la ciudad del medio, arma una ficha: de dónde
 es el hecho, de qué sección es, si le importa a un vecino y por qué. Con esa
-ficha: no entra la **publicidad**, lo del **extranjero** (salvo automovilismo o
+ficha: no entra la **publicidad**, los **chimentos** (farándula y vida privada
+de famosos), lo del **extranjero** (salvo automovilismo o
 una figura argentina), lo de un medio de afuera **sin relación con Balcarce**
 ni un **policial que no es de acá**. Una nota es de Balcarce sólo con **dos
 llaves**: la fuente es de acá (o el medio dice Balcarce en el título) y la IA
 dice que el hecho es de acá; una nota nacional reproducida por un medio local
 deja de contar como local. La sección es la que dice la IA. **La IA nunca
 destraba:** lo que el semáforo pone en rojo o amarillo sigue igual, y si no
-hay ficha se decide como antes. Empezó sin prueba previa, a pedido de Hernán:
+hay ficha se decide como antes. (Lo único que puede salir después de la
+lectura es lo de afuera que esperaba por pocos medios y, al juntarse con sus
+repetidas, llega a los que pide su sección: lo decide la regla de medios, no
+la IA.) Empezó sin prueba previa, a pedido de Hernán:
 los errores se corrigen en vivo, y lo que saca cada corrida queda en el
 registro de "Actualizar la web" (`ingesta/lectura-ia.mjs`, `aplicarFichas`).
 
 **El cruce de medios (27/09).** Se leen 214 feeds activos (nacionales,
 provincia, Mar del Plata, zona, especializados y todos los de Balcarce: los de
-`fuentes.mjs` y 160 de 76 medios en `fuentes-cruce.mjs`) y se juntan las notas que cuentan el mismo hecho, con una memoria de 36 horas
+`fuentes.mjs` y 160 de 71 medios en `fuentes-cruce.mjs`) y se juntan las notas que cuentan el mismo hecho, con una memoria de 36 horas
 (`ingesta/cruce.mjs`, `ingesta/fuentes-cruce.mjs`). De afuera sólo entra lo
 que cuentan dos medios o más (además de lo que dice Balcarce en el título o
-toca la zona), y cuantos más lo cuentan, más arriba va: es lo
-que se está hablando. Una exclusiva de un solo medio espera a que otro la
-cuente. El listado de fuentes y la medición: `docs/CRUCE-DE-MEDIOS.md`.
+toca la zona), y cuantos más lo cuentan, más arriba va y más fácil sale sola:
+es lo que se está hablando. Una exclusiva de un solo medio no entra hasta que
+otro la cuente. Las fuentes: `FUENTES.md`; la medición: `docs/CRUCE-DE-MEDIOS.md`.
 
-**Lo de afuera, con dos medios o más (27/09, Hernán).** Una nota que no es de
-Balcarce sale sola sólo si la cuentan dos medios distintos o más (una fuente
-oficial alcanza sola). Con un solo medio no se publica. Las notas viejas del
-archivo que no cumplen conservan su página, pero no completan la tapa ni
-aparecen en "Seguí leyendo" (`exigirDosMedios`, `tieneRespaldo`).
+**La importancia de lo de afuera se mide en medios (27/09, Hernán y Andrés:
+"que sea popular y esté medido").** Una nota que no es de Balcarce sale sola
+sólo si la cuentan los medios distintos que pide su sección: 3 por defecto;
+Fútbol y Deportes, 4 (son un tercio de todo lo que entra, y un medio de
+Balcarce no puede ser Olé); Economía, Tecnología, Agro y Automovilismo, 2 (las
+cubren pocos medios y tienen cupo propio); lo que nombra a una figura
+argentina, 2. **Nunca con uno solo**; una fuente oficial alcanza sola. Si no
+llega, espera a una persona con el motivo "de afuera y poco contada (N medios;
+Sección pide M)". El puntaje ya no decide si sale: sirve para ordenar, para el
+cupo y para Facebook. (Hasta el 27/09 a la noche había un piso de puntaje por
+sección, que frenaba historias contadas por 9 y por 17 medios.) Se mira en la
+ingesta y otra vez después de la lectura con IA, en los dos sentidos: si al
+juntar repetidas una nota llega a los medios que pide, sale (`exigirMedios`,
+`mediosMinimosDe`). Las páginas viejas de lo de afuera contado por un solo
+medio salen del archivo, salvo las que fueron a las redes, y tampoco completan
+la tapa ni aparecen en "Seguí leyendo" (`tieneRespaldo`).
 
 **Una noticia, una nota (27/09).** Cuando varios medios cuentan el mismo hecho
 con títulos distintos (las tres notas de las falsas ofertas de empleo de
@@ -136,10 +158,11 @@ apagados.
 sección, y para eso hay fuentes de afuera con la sección fija: **lo que le gusta
 a la gente** en otros medios (cultura, tecnología, el campo y la economía de
 los diarios nacionales). Cuentan igual que cualquier nota de afuera: peso
-bajo, dos medios o más, piso y cupo de su sección, semáforo, verificación
+bajo, los medios que pide y el cupo de su sección, semáforo, verificación
 contra la fuente y cuerpo. Lo internacional sin relación con Balcarce no entra. Cuando
-falta material para una sección se suman fuentes o se baja el piso de esa
-sección (nunca el de Deportes ni el semáforo); no se sube el tope de pedidos
+falta material para una sección se suman fuentes o se bajan los medios que pide
+esa sección (nunca a menos de dos, nunca en Fútbol ni Deportes, y nunca el
+semáforo); no se sube el tope de pedidos
 a la IA. Para gastar ese tope, se reescribe primero lo de Balcarce y, después,
 la sección con menos notas escritas.
 
@@ -157,12 +180,12 @@ la sección con menos notas escritas.
 | Economía | Sí |
 | Política | Sí en la web; **en las redes, nunca sin una persona** |
 | Policiales | Sí en la web; **en las redes, nunca sin una persona** |
-| Argentina | Sí (desde el 27/09; antes se llamaba País y no salía sola): lo nacional contado por dos medios o más que no es Política ni Economía |
+| Argentina | Sí (desde el 27/09; antes se llamaba País y no salía sola): lo nacional que no es de otra sección (sociedad, clima, salud, educación, grandes hechos), contado por tres medios o más; también lo de afuera que no encaja en ninguna |
 
 **No hay sección Servicios (27/09, Hernán).** Los cortes, trámites, tarifas y
 obras de acá van a **Balcarce**. Lo de afuera que sólo trataba de eso queda
-en Argentina, o en Región o Provincia según el alcance del medio (esas dos
-esperan a una persona). La farmacia, el clima y el dólar siguen siendo servicios del sitio
+en Argentina. **Tampoco hay Región ni Provincia** (27/09): eran la ciudad del
+medio, no la del hecho. La farmacia, el clima y el dólar siguen siendo servicios del sitio
 (la barra de arriba), no una sección de notas.
 
 **Policiales es sólo de Balcarce y la zona** (26/09; pedido de Hernán y Andrés:
@@ -203,7 +226,7 @@ su prueba. **No se tocan sin que lo decidan Hernán y Andrés.**
 | Color | Qué pasa | Cuándo |
 |---|---|---|
 | **Rojo** | No se publica nunca, ni por error | Identifica o puede identificar a un menor o a una víctima de violencia de género o de un delito sexual (menor de edad, abuso sexual, violación, femicidio, grooming, suicidio…) |
-| **Amarillo** | Espera a una persona en el panel | Acusa a alguien (denuncia, detenido, imputado), habla de una muerte, involucra a un chico, parece promoción, es de afuera con poco puntaje, fuera del cupo o contada por un solo medio, es de Región o Provincia sin otra sección, es la cotización del dólar, o tiene **verificación baja** (sección 5) |
+| **Amarillo** | Espera a una persona en el panel | Acusa a alguien (denuncia, detenido, imputado), habla de una muerte, involucra a un chico, parece promoción, es de afuera y la cuentan menos medios de los que pide su sección, pasó el cupo de su sección, es la cotización del dólar, o tiene **verificación baja** (sección 5) |
 | **Verde** | Sale sola | Todo lo demás, en las secciones que salen solas |
 
 **Qué mira el semáforo.** En el **título y el comienzo del resumen**, las
@@ -932,7 +955,7 @@ mismo y hasta tres notas que el sitio ya publicó sobre el tema en los últimos
 | La instrucción de la IA (se lee de acá) | `ingesta/prompt-editorial.mjs` la carga; `reels/reescritura.mjs` la usa |
 | Los números | `ingesta/criterio.mjs`, controlados por `pruebas/criterio.test.mjs` |
 | El semáforo, las secciones, las fuentes y sus pesos | `ingesta/fuentes.mjs` (`REGLAS_SEMAFORO`, `REGLAS_SECCION`, `FUENTES`, `FUENTES_NACIONALES`) |
-| El cruce de medios y sus fuentes | `ingesta/cruce.mjs` y `ingesta/fuentes-cruce.mjs`; los dos medios, `exigirDosMedios` (`ingesta/ingesta.mjs`) |
+| El cruce de medios y sus fuentes | `ingesta/cruce.mjs` y `ingesta/fuentes-cruce.mjs`; la lista de todas, `FUENTES.md` (`ingesta/listar-fuentes.mjs`); cuántos medios pide lo de afuera, `exigirMedios` y `mediosMinimosDe` (`ingesta/ingesta.mjs`, con `MEDIOS_DE_AFUERA` de `ingesta/criterio.mjs`) |
 | La lectura con IA | `ingesta/lectura-ia.mjs` (fichas en `web/data/fichas.json`), con `ingesta/perfil-balcarce.md` |
 | Títulos sin "en Balcarce" al final | `sinBalcarceAlFinal`, en `web/lib/titulos.js` |
 | Retiradas y correcciones sin el panel | `web/data/retiradas.json` y `web/data/correcciones.json` (`web/lib/archivo.js`) |
@@ -942,4 +965,4 @@ mismo y hasta tres notas que el sitio ya publicó sobre el tema en los últimos
 | Lo que ve el lector de las fuentes | `web/lib/fuentes-de-la-nota.js` y `web/components/verificacion.js` |
 | Qué sale en las redes | `redes/elegir.mjs` |
 | La firma (una línea) | `firmaCorta` en `web/components/metadatos.js`; se ve en `web/components/verificacion.js` |
-| Las pruebas de todo esto | `pruebas/criterio.test.mjs`, `pruebas/editor.test.mjs`, `pruebas/reescritura.test.mjs`, `pruebas/verificar.test.mjs`, `pruebas/cuerpo.test.mjs`, `pruebas/semaforo.test.mjs` |
+| Las pruebas de todo esto | `pruebas/criterio.test.mjs`, `pruebas/notas.test.mjs`, `pruebas/cruce-coherente.test.mjs`, `pruebas/editor.test.mjs`, `pruebas/reescritura.test.mjs`, `pruebas/verificar.test.mjs`, `pruebas/cuerpo.test.mjs`, `pruebas/semaforo.test.mjs` |

@@ -36,9 +36,10 @@ const plano = (s) => sinTildes(s)
  */
 /**
  * ¿Tiene respaldo para mostrarse? Lo de Balcarce, lo propio y lo oficial, sí;
- * lo de afuera, sólo si lo contaron dos medios o más (Hernán, 27/09). Las notas
- * viejas del archivo que no cumplen conservan su página (su enlace puede
- * circular), pero no se usan para completar la tapa ni en "Seguí leyendo".
+ * lo de afuera, sólo si lo contaron dos medios o más (Hernán, 27/09). Desde
+ * esa noche el archivo aplica la misma regla: lo que no la cumple pierde la
+ * página, salvo que haya salido en las redes (web/lib/archivo.js), y tampoco
+ * se usa para completar la tapa ni en "Seguí leyendo".
  */
 export function tieneRespaldo(nota) {
   return !!(nota?.local || nota?.propia || nota?.oficial || new Set(nota?.medios ?? []).size >= 2);

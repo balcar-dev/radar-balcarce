@@ -15,7 +15,9 @@ a nada: lee dos archivos que regenera GitHub Actions cada 30 minutos
   últimos 180 días (hasta 2500 notas). Así una nota que sale de la portada
   sigue teniendo su página y los enlaces que circulan no se rompen. La
   dirección de cada nota queda fija desde la primera publicación, aunque la IA
-  cambie el titular. Reglas en `lib/archivo.js`.
+  cambie el titular. Lo de afuera contado por un solo medio no tiene página,
+  salvo que haya salido en redes (27/09, `tieneRespaldo`). Reglas en
+  `lib/archivo.js`.
 
 ## Correr en la máquina
 
@@ -30,7 +32,8 @@ npm run build        # compila (arma las redirecciones; NO regenera los datos)
 `npm run datos` (`scripts/generar-datos.mjs`) arma `data/portada.json` y
 `data/archivo.json` a partir de la ingesta y de las decisiones de
 `data/decisiones.json`. Ahí también se aplican la lectura con IA
-(`data/fichas.json`), los dos medios para lo de afuera, las retiradas
+(`data/fichas.json`), los medios que pide cada sección a lo de afuera y los
+cupos (`exigirMedios` y `aplicarCupos`, otra vez después de la lectura), las retiradas
 (`data/retiradas.json`) y las correcciones a mano (`data/correcciones.json`, que
 mandan sobre lo que escribe la IA), y se saca el "en Balcarce" del final de los
 títulos automáticos (`lib/titulos.js`). Si nunca corrió,
@@ -43,7 +46,7 @@ la web arranca igual con un aviso.
 | `app/` | Las páginas: portada, `nota/`, `seccion/`, `tema/`, `agenda/` (y `agenda/[id]`, cada evento con su `.ics`), `farmacias/`, `dolar/` (la cotización, que se pide en el navegador), `util/`, `politica-de-privacidad/`, `quienes-somos/`, `contacto/`, la 404 (`not-found.js`, rescata direcciones viejas con `nota/indice.json`), más `sitemap`, `sitemap-news.xml`, `robots`, `feed.xml` y `llms.txt` |
 | `components/` | Piezas de la interfaz (avisos, buscador, clima, ficha con datos estructurados, compartir) |
 | `lib/` | Direcciones (`ruta.js`), archivo de notas, retiradas y correcciones a mano (`archivo.js`), títulos sin "en Balcarce" al final (`titulos.js`), secciones y tapa (`datos.js`), dirección del sitio (`sitio.js`), tarjetas de imagen (`tarjeta.js`) |
-| `data/` | `portada.json`, `archivo.json`, `agenda.json`, `dolar-historia.json`, `fichas.json` (la lectura con IA) e `intentos-ia.json` (los regenera Actions); `decisiones.json`, `avisos.json` y `eventos-panel.json` (los sube el panel); `retiradas.json` y `correcciones.json` (lo que se saca o se corrige a mano sin el panel, con motivo, cuándo y quién); `redes.json` (libro de lo publicado), `estadisticas.json` y `vigilancia.json` (los escriben las redes y el vigilante); `dolar.json` es la foto del dólar que guarda cada build (no se versiona) |
+| `data/` | `portada.json`, `archivo.json`, `agenda.json`, `dolar-historia.json`, `fichas.json` (la lectura con IA), `intentos-ia.json` y `notas-por-dia.json` (la estadística diaria de notas por sección) (los regenera Actions); `decisiones.json`, `avisos.json` y `eventos-panel.json` (los sube el panel); `retiradas.json` y `correcciones.json` (lo que se saca o se corrige a mano sin el panel, con motivo, cuándo y quién); `redes.json` (libro de lo publicado), `estadisticas.json` y `vigilancia.json` (los escriben las redes y el vigilante); `dolar.json` es la foto del dólar que guarda cada build (no se versiona) |
 | `scripts/` | Generar datos y redirecciones, íconos, auditoría de SEO y `recuperar-archivo.mjs` (herramienta de rescate: rearma `data/archivo.json` desde el historial de git si se pierde o se rompe) |
 | `public/` | Íconos, manifiesto, `_headers` (la imagen para compartir sale como `image/png`, HSTS y otros encabezados de seguridad, caché de un año para `/_next/static`) y `_redirects` (se genera en cada compilación) |
 

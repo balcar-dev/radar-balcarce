@@ -25,12 +25,16 @@ nota, Fútbol aparte de Deportes, Argentina en lugar de País, sin sección
 Servicios, títulos sin "en Balcarce" al final, correcciones a mano en
 `web/data/correcciones.json`, un color distinto por sección y la tipografía
 nueva (Source Serif 4 e Inter en la web, las imágenes, las placas, el panel y
-la guía comercial).
+la guía comercial). **A la noche:** la importancia de lo de afuera por cantidad
+de medios (`MEDIOS_DE_AFUERA`, sin piso de puntaje), un nombre por medio, sin
+secciones Región ni Provincia, sin `maxItems` ni fuentes "de señal", la IA saca
+los chimentos, el archivo sin las páginas de afuera de un solo medio y el
+registro de fuentes `FUENTES.md`.
 
 | Qué falta | Quién | Urgencia |
 |---|---|---|
 | **Borrar de Facebook e Instagram el posteo de Necochea** del 27/09 a las 11:03 ("El transporte público y el gas en debate en la región"). Facebook: `facebook.com/1254237411116171/posts/122097323043495512`. Borrar es permanente: lo hace una persona | Hernán | Alta |
-| **Crear un proyecto de Google aparte** (sin facturación) y cargar su clave en GitHub Secrets como `GEMINI_API_KEY_CLASIFICACION`. Mientras tanto la lectura con IA usa la clave gratis de redacción, con tope (desde el 27/09) | Hernán | Media (mañana) |
+| **Crear un proyecto de Google aparte** (sin facturación) y cargar su clave en GitHub Secrets como `GEMINI_API_KEY_CLASIFICACION`. Mientras tanto la lectura con IA usa la clave gratis de redacción, con tope de 60 pedidos por día, y la redacción baja de 450 a 330 notas por día (desde el 27/09). Con la clave propia, la lectura sube a 200 pedidos por día y la redacción vuelve a 450 | Hernán | Media (mañana) |
 | **Hecho el 27/09:** perfil de Balcarce (`ingesta/perfil-balcarce.md`) y lectura rápida con IA en prueba silenciosa (`ingesta/lectura-ia.mjs`, fichas en `web/data/fichas.json`). **Desde el 27/09 la IA decide** (sin prueba ni examen, a pedido de Hernán: se corrige en vivo). **Falta:** lectura con el texto completo (nivel 2), historias por `clave_tema`, resumen de lo que sacó la IA en el WhatsApp de las 21 | Claude | Semanas 2 y 3 |
 | Notas populares medidas (cobertura y Tendencias de Google Argentina), primero sólo anotando cuáles habría publicado | Claude | Después del primer mes |
 
@@ -176,12 +180,14 @@ Las ideas más grandes, que cambian cómo funciona algo, están en `IDEAS.md`.
 - **27/09:** plan V2.2 semana 1 (filtro de entrada, fichas de fuente, policiales
   sólo de Balcarce), la lectura con IA decide en vivo, el cruce de medios (218
   fuentes configuradas, 214 activas; ya no entran "las 3 a 5 más nuevas"), lo de
-  afuera sólo con dos medios, una noticia una nota, secciones nuevas (Fútbol,
-  Argentina; sin Servicios), un color por sección, títulos sin "en Balcarce",
-  correcciones y retiradas a mano sin el panel, tipografía Source Serif 4 e Inter
-  en todo (reglas 41 a 55 de `REGLAS.md`).
+  afuera sólo con los medios que pide su sección (sin piso de puntaje), un
+  nombre por medio, una noticia una nota, secciones nuevas (Fútbol, Argentina;
+  sin Servicios, Región ni Provincia), un color por sección, títulos sin "en
+  Balcarce", correcciones y retiradas a mano sin el panel, `FUENTES.md`,
+  tipografía Source Serif 4 e Inter en todo (reglas 41 a 57 de `REGLAS.md`).
 - **26/09:** la app de Meta se **publicó** (modo activo); Policiales sólo de
-  Balcarce y la zona; secciones flacas con 13 fuentes nuevas, pisos y cupos por
+  Balcarce y la zona; secciones flacas con 13 fuentes nuevas, pisos (desde el
+  27/09, cantidad de medios) y cupos por
   sección (58 fuentes en total); una sola hora de Balcarce para todo el código
   (`ingesta/zona.mjs`, incluye los teléfonos útiles) y una sola lectura de JSON
   (`ingesta/json.mjs`); se sacó "Resumen hecho con IA" de los posteos de redes.
