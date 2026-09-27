@@ -1,5 +1,5 @@
 {
-  "generado": "2026-09-27T22:41:13.761Z",
+  "generado": "2026-09-27T22:44:37.141Z",
   "notas": [
     {
       "id": "119oqdp",
@@ -767,17 +767,17 @@
         "Noticias Argentinas (NA)",
         "El Día",
         "0221",
-        "La Verdad",
         "InfoRegión",
         "QZ Noticias (Mar del Plata)",
         "El Marplatense",
         "Mi8 (Canal 8 Mar del Plata)",
         "NDEN – Noticias de Necochea",
-        "Doble Amarilla",
-        "Bolavip Argentina",
         "Clarín",
         "0223 (Mar del Plata)",
-        "La Nueva"
+        "La Nueva",
+        "La Verdad",
+        "Doble Amarilla",
+        "Bolavip Argentina"
       ],
       "enlace": "https://www.lanacion.com.ar/deportes/automovilismo/montoya-respaldo-a-colapinto-tras-el-accidente-en-baku-admiro-a-la-gente-que-lo-intenta-nid27092026/",
       "teniaImagenLaFuente": true,
@@ -833,7 +833,6 @@
       "seccion": "Automovilismo",
       "medios": [
         "Minuto Uno",
-        "Radio Mitre",
         "Bolavip Argentina"
       ],
       "enlace": "https://www.minutouno.com/deportes/por-que-no-corre-franco-colapinto-hoy-domingo-el-gran-premio-azerbaiyan-2026-formula-1-n6327107",
@@ -841,7 +840,7 @@
       "fecha": "2026-09-27T11:19:00.000Z",
       "sinFecha": false,
       "visto": "2026-09-27T12:55:54.351Z",
-      "relevancia": 77,
+      "relevancia": 63,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1597,12 +1596,12 @@
         "C5N",
         "Diario Popular",
         "0221",
-        "Infoeme",
         "InfoRegión",
         "QZ Noticias (Mar del Plata)",
         "El Marplatense",
         "Punto Noticias",
-        "La Verdad"
+        "La Verdad",
+        "Infoeme"
       ],
       "enlace": "http://www.informeseprimero.com.ar/2026/09/ypf-aumento-1-el-precio-de-sus.html",
       "teniaImagenLaFuente": true,
@@ -1718,7 +1717,7 @@
       "fecha": "2026-09-26T08:12:12.000Z",
       "sinFecha": false,
       "visto": "2026-09-26T09:00:32.976Z",
-      "relevancia": 42,
+      "relevancia": 38,
       "local": false,
       "publicadaPor": "ia",
       "publicadaCuando": "2026-09-26T08:53:21.927Z",
@@ -1999,14 +1998,14 @@
         "Diario La Vanguardia",
         "Noticias Argentinas (NA)",
         "La Tecla",
-        "La Verdad",
         "ANDigital",
         "Infobrisas (Radio Brisas)",
         "NDEN – Noticias de Necochea",
+        "La Verdad",
         "0223 (Mar del Plata)",
         "QZ Noticias (Mar del Plata)",
-        "Campeones",
         "Diario Popular",
+        "Campeones",
         "El Destape",
         "El Eco de Tandil",
         "Agencia DIB",
@@ -3829,5 +3828,5 @@
       "motivo": "necesita ojo humano: \"detenido\""
     }
   ],
-  "esperandoCuerpo": 39
+  "esperandoCuerpo": 45
 }
