@@ -1,5 +1,5 @@
 {
-  "exportado": "2026-09-27T04:10:38.335Z",
+  "exportado": "2026-09-27T04:20:18.780Z",
   "decisiones": {
     "1951120": {
       "estado": "automatica",
@@ -30256,6 +30256,100 @@
           "titulo": "Kicillof abrió su gira en EEUU: se juntó con fondos de inversión para dar una señal a Wall Street",
           "fecha": "2026-09-22T23:26:42.000Z",
           "ruta": "/nota/kicillof-abrio-su-gira-en-eeuu-se-junto-con-fondos-de-inversion-para-qpkq2f"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "zhx6lt": {
+      "estado": "automatica",
+      "titulo": "Franco Colapinto abandona tras un fuerte choque en Azerbaiyán",
+      "copete": "El piloto argentino debió dejar la competencia en el Gran Premio de Azerbaiyán tras un impacto en la vuelta 36. La victoria quedó para el británico George Russell.",
+      "cuerpo": "Franco Colapinto (Alpine) debió abandonar la carrera del Gran Premio de Azerbaiyán tras protagonizar un fuerte choque en la vuelta 36. El piloto argentino marchaba décimo cuando intentó una maniobra en la salida de un auto de seguridad, se pasó de largo y sacó de competencia a su compañero de equipo, el francés Pierre Gasly, y al británico Lando Norris (McLaren).\n\nLa próxima fecha de la Fórmula 1 será el fin de semana venidero con el Gran Premio de Bahréin.",
+      "guion": "Franco Colapinto abandona tras un fuerte choque en Azerbaiyán",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T04:20:18.705Z",
+      "claves": [
+        "Colapinto chocó en la vuelta 36 y debió abandonar la competencia.",
+        "El incidente involucró a su compañero Gasly y a Norris.",
+        "George Russell se quedó con la victoria en el Gran Premio.",
+        "Antonelli continúa al frente del campeonato de la categoría."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Franco Colapinto debió abandonar el Gran Premio de Azerbaiyán tras un fuerte choque en la vuelta 36 que involucró a su compañero de equipo. La competencia quedó en manos de George Russell y el campeonato continúa con Antonelli como líder.",
+      "etiquetas": [
+        "Franco Colapinto",
+        "Formula 1",
+        "Gran Premio de Azerbaiyan",
+        "Alpine"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Eco de Tandil",
+          "enlace": "https://www.eleco.com.ar/deportes/colapinto-fallo-en-un-momento-clave-y-sufrio-su-peor-carrera",
+          "fecha": "2026-09-27T04:00:00.000Z",
+          "oficial": false,
+          "aporte": "Detalló el desarrollo y el resultado del Gran Premio de Azerbaiyán, el choque de Colapinto y la situación del campeonato."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1drzk8j",
+          "titulo": "El momento de Franco Colapinto en la Fórmula 1 y Alpine",
+          "fecha": "2026-09-25T16:44:55.000Z",
+          "ruta": "/nota/el-momento-de-franco-colapinto-en-la-formula-1-y-alpine-1drzk8j"
+        },
+        {
+          "id": "hgesfo",
+          "titulo": "Franco Colapinto tendrá la ayuda de un ex piloto de F1 que se sumó a Alpine: el rol clave que tendrá en las carreras",
+          "fecha": "2026-09-24T20:26:57.000Z",
+          "ruta": "/nota/franco-colapinto-tendra-la-ayuda-de-un-ex-piloto-de-f1-que-se-sumo-a-hgesfo"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "hl20qx": {
+      "estado": "automatica",
+      "titulo": "Los Premios PYME definen a sus doce finalistas",
+      "copete": "Doce empresas de distintos puntos del país competirán en cuatro categorías en la novena edición de los galardones organizados por una entidad bancaria, una universidad y un medio nacional.",
+      "cuerpo": "La novena edición de los Premios PYME dio a conocer a las doce empresas que integran las ternas finalistas tras la preselección realizada por un jurado académico. Las firmas competirán en las categorías de exportación, industria, innovación digital y expansión comercial.\n\nEl seis de octubre, los finalistas expondrán sus casos en el edificio Plaza Galicia, en el barrio porteño de Chacarita, ante un jurado de honor que definirá a los ganadores de cada terna y al ganador del premio principal. También se entregará una distinción especial a la trayectoria.\n\nLos organizadores detallaron que los galardones buscan destacar la adaptación, la visión estratégica y el impacto positivo de las pequeñas y medianas empresas en el plano local e internacional. Los vencedores accederán a espacios de comunicación, consultorías, talleres y programas de educación ejecutiva.",
+      "guion": "Los Premios PYME definen a sus doce finalistas",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T04:20:18.705Z",
+      "seSabe": [
+        "Doce empresas fueron preseleccionadas como finalistas por un jurado académico.",
+        "La competencia se divide en cuatro categorías: exportadora, industrial, innovación digital y expansión comercial.",
+        "El evento de exposición y premiación será el seis de octubre en el edificio Plaza Galicia.",
+        "Habrá una distinción especial a la trayectoria y se entregará el premio PYME Oro."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Se conocieron las doce empresas finalistas de la novena edición de los Premios PYME, que competirán en cuatro categorías y definirán a los ganadores el seis de octubre en un evento en Buenos Aires.",
+      "etiquetas": [
+        "Premios PYME",
+        "Economía",
+        "Empresas",
+        "Finalistas"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Clarín",
+          "enlace": "https://www.clarin.com/economia/edicion-2026-premios-pyme-finalistas_0_p2dRS8RKYj.html",
+          "fecha": "2026-09-27T03:28:22.000Z",
+          "oficial": false,
+          "aporte": "Detalló las doce empresas finalistas, las cuatro categorías de los premios, la fecha de la premiación y los integrantes del jurado de honor."
         }
       ],
       "verificacion": {
