@@ -1,5 +1,5 @@
 {
-  "exportado": "2026-09-27T03:31:06.626Z",
+  "exportado": "2026-09-27T03:41:07.724Z",
   "decisiones": {
     "1951120": {
       "estado": "automatica",
@@ -28776,23 +28776,82 @@
     },
     "1630hgn": {
       "estado": "automatica",
-      "titulo": null,
-      "copete": null,
-      "cuerpo": null,
-      "guion": null,
-      "deIA": null,
+      "titulo": "Nicolás Dujovne advierte por el impacto de la incertidumbre política en la inversión",
+      "copete": "El exministro de Hacienda analizó el escenario macroeconómico nacional, marcado por la heterogeneidad sectorial, la baja del gasto público y la desaceleración del crecimiento previsto para este año.",
+      "cuerpo": "A casi tres años del inicio de la gestión del presidente Javier Milei, la economía nacional transita un escenario de marcada heterogeneidad con sectores exportadores en expansión y otros segmentos, como el comercio y la industria, afectados por el ajuste fiscal y la apertura comercial, según indicó el exministro de Hacienda Nicolás Dujovne en declaraciones periodísticas. El exfuncionario nacional estimó que la actividad económica crecerá este año en torno al dos por ciento, una cifra inferior a la proyectada inicialmente por el mercado, y señaló que la cautela de los inversores ante los comicios venideros ya condiciona la concreción de grandes proyectos.\n\nEn el plano fiscal, Dujovne destacó la reducción del gasto primario nacional registrada en la última década y consideró que la próxima etapa demandará optimizar la recaudación y disminuir la presión tributaria subnacional. Asimismo, calificó como una señal positiva que el proyecto de presupuesto para el próximo año contemple una suba de precios del dieciocho por ciento para anclar las expectativas inflacionarias.",
+      "guion": "Nicolás Dujovne advierte por el impacto de la incertidumbre política en la inversión",
+      "deIA": true,
       "por": "ia",
-      "cuando": "2026-09-27T03:31:06.528Z"
+      "cuando": "2026-09-27T03:41:07.646Z",
+      "claves": [
+        "La economía nacional crece este año a un ritmo del dos por ciento, por debajo de lo previsto.",
+        "Los sectores exportadores muestran un buen desempeño frente al impacto que enfrentan el comercio y la industria.",
+        "El exministro de Hacienda señaló que la incertidumbre electoral ya condiciona las inversiones del régimen para grandes proyectos."
+      ],
+      "seSabe": [
+        "Según indicó Nicolás Dujovne, la economía nacional crecerá este año alrededor del dos por ciento.",
+        "El exfuncionario señaló que la apertura comercial, el ajuste fiscal y el programa de estabilización generan un escenario de marcada heterogeneidad sectorial.",
+        "Dujovne destacó que el gasto primario nacional se redujo de veinticuatro a catorce por ciento del producto bruto interno entre 2015 y 2026."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El exministro de Hacienda Nicolás Dujovne analizó la actualidad macroeconómica nacional, destacó el desempeño de los sectores exportadores frente al impacto en el comercio y advirtió sobre la influencia de la incertidumbre política en la inversión.",
+      "etiquetas": [
+        "Nicolás Dujovne",
+        "Economía",
+        "Inversión",
+        "Apertura comercial",
+        "Gobierno nacional"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/economia/nicolas-dujovne-la-inversion-cae-porque-en-buena-medida-ya-juega-la-incertidumbre-politica-nid27092026/",
+          "fecha": "2026-09-27T03:01:00.000Z",
+          "oficial": false,
+          "aporte": "Aportó la entrevista completa con el exministro de Hacienda Nicolás Dujovne sobre la situación económica nacional, las proyecciones de crecimiento y el impacto de la apertura comercial."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
     },
     "1agrxxu": {
       "estado": "automatica",
-      "titulo": null,
-      "copete": null,
-      "cuerpo": null,
-      "guion": null,
-      "deIA": null,
+      "titulo": "El impacto económico genera tensiones en la estrategia oficial",
+      "copete": "Un informe de análisis político advierte sobre el desgaste en la narrativa oficial ante la suba de la desocupación y la caída del consumo, mientras el equipo económico expone sus proyecciones de financiamiento en el exterior.",
+      "cuerpo": "Ante este panorama, la inquietud interna comienza a debatirse dentro de la administración nacional, donde funcionarios del ala política advierten sobre las dificultades de sostener acuerdos de cara a los próximos procesos electorales, mientras la cúpula mantiene su defensa de los lineamientos macroeconómicos actuales.\n\nPor su parte, el presidente Javier Milei y el ministro de Economía, Luis Caputo, presentaron ante inversores en Nueva York un esquema de financiamiento que contempla decenas de miles de millones de dólares a través de distintas fuentes, aunque sectores financieros expresaron reparos sobre la viabilidad de algunas de esas partidas proyectadas.",
+      "guion": "El impacto económico genera tensiones en la estrategia oficial",
+      "deIA": true,
       "por": "ia",
-      "cuando": "2026-09-27T03:31:06.528Z"
+      "cuando": "2026-09-27T03:41:07.646Z",
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Un análisis político advierte sobre el desgaste en la narrativa oficial ante la suba de la desocupación y la caída del consumo, mientras el equipo económico expone sus proyecciones financieras en el exterior.",
+      "etiquetas": [
+        "economia",
+        "gobierno nacional",
+        "desempleo",
+        "politica"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/politica/la-narrativa-libertaria-se-desenfoca-bajo-la-presion-economica-nid26092026/",
+          "fecha": "2026-09-27T01:50:00.000Z",
+          "oficial": false,
+          "aporte": "Aportó datos sobre indicadores económicos negativos, tensiones internas en el Gobierno y la presentación de funcionarios en Nueva York."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
     },
     "1jxm65l": {
       "estado": "automatica",
@@ -29164,6 +29223,262 @@
           "titulo": "Milei reivindicó el modelo económico de Pinochet y reiteró que sufrió un intento de golpe de Estado",
           "fecha": "2026-09-03T18:55:46.000Z",
           "ruta": "/nota/milei-reivindico-el-modelo-economico-de-pinochet-y-reitero-que-sufrio-1cgrp7o"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "s1huqr": {
+      "estado": "automatica",
+      "titulo": "Casación ratifica la probation para una exdirectiva vinculada con el grupo Báez",
+      "copete": "La Cámara Federal de Casación Penal rechazó un recurso de la fiscalía y mantuvo la suspensión del juicio a prueba para la expresidenta de una constructora imputada en la causa Vialidad.",
+      "cuerpo": "La causa principal concluyó en junio de 2025 con condenas a exfuncionarios y al propio Báez, mientras que la situación de Costilla se tramitó en un segundo tramo donde obtuvo la suspensión del juicio a prueba por parte del Tribunal Oral Federal N° 2.\n\nEl beneficio procesal, concedido el 6 de mayo pasado por un plazo de dos años, exige a la imputada fijar residencia, someterse a controles y realizar tareas comunitarias en un hogar de ancianos de Comodoro Rivadavia, además de un ofrecimiento de reparación económica por parte de su defensa. Ante la oposición de la fiscalía, la Sala IV de Casación, con los votos de los jueces Mariano Borinsky y Diego Barroetaveña, desestimó el recurso extraordinario al considerar que no se demostró una cuestión federal.",
+      "guion": "Casación ratifica la probation para una exdirectiva vinculada con el grupo Báez",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T03:41:07.646Z",
+      "claves": [
+        "La Cámara Federal de Casación Penal rechazó un recurso fiscal y mantuvo la probation para Myriam Elizabeth Costilla.",
+        "La imputada era la expresidenta de una constructora de Lázaro Báez investigada en el segundo tramo de la causa Vialidad.",
+        "El beneficio procesal exige el cumplimiento de tareas comunitarias y reglas de conducta por el plazo de dos años.",
+        "Los jueces consideraron que el planteo de la fiscalía no logró demostrar una cuestión federal para llegar a la Corte Suprema."
+      ],
+      "seSabe": [
+        "La Cámara Federal de Casación Penal rechazó por mayoría el recurso de la fiscalía.",
+        "Myriam Elizabeth Costilla fue expresidenta de Kank y Costilla S.A.",
+        "El Tribunal Oral Federal N° 2 le había concedido la probation el 6 de mayo pasado por dos años.",
+        "La medida incluye la realización de tareas comunitarias en Comodoro Rivadavia y reglas de conducta."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "La Cámara Federal de Casación Penal rechazó un recurso fiscal y ratificó la suspensión del juicio a prueba para la expresidenta de una constructora vinculada al grupo de Lázaro Báez en la causa Vialidad.",
+      "etiquetas": [
+        "Casacion",
+        "Vialidad",
+        "Lazaro Baez",
+        "Justicia Federal"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/judiciales/2026/09/27/vialidad-ii-casacion-mantuvo-la-probation-de-una-ex-directiva-de-una-constructora-del-grupo-baez/",
+          "fecha": "2026-09-27T03:31:57.000Z",
+          "oficial": false,
+          "aporte": "Detalló el fallo de la Cámara Federal de Casación Penal sobre la probation de la exdirectiva y los antecedentes de la causa Vialidad."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "1kzkdow": {
+      "estado": "automatica",
+      "titulo": "Licitación de basura en CABA abre un conflicto con Camioneros",
+      "copete": "La nueva licitación para la recolección de residuos en la Ciudad de Buenos Aires genera tensión por las indemnizaciones que reclama el Sindicato de Camioneros para los contratos entre 2028 y 2038.",
+      "cuerpo": "El gobierno de la Ciudad de Buenos Aires avanza hacia la audiencia pública del cinco de octubre para analizar los pliegos de licitación del servicio de recolección de residuos.\n\nEl gremio liderado por Hugo y Pablo Moyano puso en alerta a las autoridades por la falta de previsión de estos pagos en los anteproyectos y por las dudas sobre las partidas presupuestarias para resarcir al personal del sector, a pesar de que mantendrán su fuente laboral en las empresas adjudicatarias.",
+      "guion": "Licitación de basura en CABA abre un conflicto con Camioneros",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T03:41:07.646Z",
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "La nueva licitación para la recolección de residuos en la Ciudad de Buenos Aires abre un frente de conflicto con el Sindicato de Camioneros por el pago de indemnizaciones previstas para los futuros contratos.",
+      "etiquetas": [
+        "recoleccion de residuos",
+        "CABA",
+        "Sindicato de Camioneros",
+        "licitacion",
+        "politica"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/politica/2026/09/27/la-polemica-ley-moyano-vuelve-a-escena-con-la-nueva-licitacion-para-la-recoleccion-de-residuos-en-caba/",
+          "fecha": "2026-09-27T03:28:31.000Z",
+          "oficial": false,
+          "aporte": "Aportó los detalles sobre los pliegos de licitación de la basura en CABA, la postura del gobierno porteño y el reclamo del Sindicato de Camioneros."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "g7enw": {
+      "estado": "automatica",
+      "titulo": "Kicillof proyecta su perfil internacional con agenda en China y el Papa",
+      "copete": "El gobernador bonaerense Axel Kicillof articula una agenda internacional que incluye un viaje a China y su coincidencia con la visita del papa León XIV. La información no pudo ser contrastada de forma independiente.",
+      "cuerpo": "El gobernador bonaerense Axel Kicillof impulsa una estrategia de proyección internacional con la mira puesta en posicionarse como una alternativa política de alcance nacional, según publicó un medio nacional. En ese marco, el mandatario proyecta un viaje a China para participar de la Exposición Internacional de Importaciones en Shanghái a principios de noviembre, de acuerdo con la información difundida.\n\nLa agenda internacional del mandatario provincial genera cruces temporales con la visita pastoral del papa León XIV a la Argentina, prevista para los mismos días de noviembre en localidades bonaerenses. Kicillof mantiene además vínculos comerciales con firmas asiáticas para la provisión de baterías destinadas al transporte de energía en territorio provincial, un eje que formó parte de sus recientes actividades en los Estados Unidos.\n\nLa actividad internacional del gobernador busca consolidar acuerdos comerciales y financieros con referentes globales.",
+      "guion": "Kicillof proyecta su perfil internacional con agenda en China y el Papa",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T03:41:07.646Z",
+      "claves": [
+        "Axel Kicillof proyecta su perfil internacional con una agenda que incluye a China.",
+        "El viaje previsto para noviembre coincide con la visita del papa León XIV a la Argentina.",
+        "La provincia mantiene acuerdos comerciales con empresas asiáticas para infraestructura energética.",
+        "El armado político del mandatario busca consolidar una estructura de carácter federal."
+      ],
+      "seSabe": [
+        "Axel Kicillof proyecta un viaje a China para participar de la Exposición Internacional de Importaciones en Shanghái a principios de noviembre, según informó un medio nacional.",
+        "La visita del papa León XIV a la Argentina está prevista entre el 8 y el 11 de noviembre, fechas que coinciden parcialmente con la agenda internacional del gobernador.",
+        "El gobierno provincial cerró acuerdos con la empresa Huawei para la provisión de baterías destinadas al transporte de energía eléctrica en nodos bonaerenses.",
+        "El mandatario bonaerense desarrolló actividades y reuniones en Nueva York durante la semana pasada."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El gobernador bonaerense Axel Kicillof impulsa una agenda internacional con un viaje previsto a China y movimientos políticos que coinciden con la visita del papa León XIV a la Argentina.",
+      "etiquetas": [
+        "Axel Kicillof",
+        "China",
+        "Papa León XIV",
+        "Provincia de Buenos Aires"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/politica/2026/09/27/tras-su-viaje-a-nueva-york-kicillof-busca-volumen-con-china-y-el-papa-ante-la-apatia-de-un-sector-del-pj/",
+          "fecha": "2026-09-27T03:27:55.000Z",
+          "oficial": false,
+          "aporte": "Detalla la agenda internacional de Axel Kicillof, sus proyecciones políticas, el viaje previsto a China, la coincidencia con la visita del papa León XIV y los acuerdos comerciales provinciales."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "BAJA"
+      }
+    },
+    "19wba6q": {
+      "estado": "automatica",
+      "titulo": "El rol de los gobernadores en la estrategia nacional",
+      "copete": "La relación entre el Gobierno nacional y los mandatarios provinciales define el escenario político de cara a 2027, con tensiones entre acuerdos legislativos y armados electorales.",
+      "cuerpo": "El presidente Javier Milei busca apoyos en el Congreso para su agenda y necesita votos de estructuras provinciales, mientras que los gobernadores reclaman recursos para rutas, energía y obras, según informó un medio nacional. Para avanzar en estas negociaciones, Diego Santilli inició una ronda de encuentros con mandatarios provinciales tras el envío del Presupuesto. En distritos como Salta y Tucumán se evidencian tensiones porque los gobernadores actúan como socios parlamentarios pero a su vez compiten con candidatos locales de La Libertad Avanza, tal como ocurrió en agosto con disputas que afectaron iniciativas legislativas. Por otro lado, Osvaldo Jaldo mantuvo reuniones en septiembre con el referente oficialista para debatir el Presupuesto bajo la premisa de un carácter federal.",
+      "guion": "El rol de los gobernadores en la estrategia nacional",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T03:41:07.646Z",
+      "claves": [
+        "El Gobierno nacional busca votos en el Congreso a cambio de recursos provinciales.",
+        "Diego Santilli encabeza las reuniones con mandatarios del interior.",
+        "Existen tensiones entre los acuerdos parlamentarios y las candidaturas locales de La Libertad Avanza."
+      ],
+      "seSabe": [
+        "El Gobierno nacional envió el Presupuesto al Congreso.",
+        "Diego Santilli inició reuniones con gobernadores provinciales.",
+        "Catamarca, Corrientes, Salta y Tucumán participaron de las primeras reuniones con reclamos por rutas, energía y obras.",
+        "Osvaldo Jaldo se reunió en septiembre para discutir el Presupuesto 2027.",
+        "Lisandro Catalán fue lanzado como candidato en Tucumán por La Libertad Avanza."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Las negociaciones entre el Gobierno nacional y los gobernadores por el Presupuesto y el rol de los armados provinciales de cara a 2027.",
+      "etiquetas": [
+        "Gobernadores",
+        "Presupuesto",
+        "Congreso",
+        "Elecciones 2027",
+        "Política"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/politica/2026/09/27/cuanto-pesan-los-gobernadores-en-el-plan-de-milei-para-2027/",
+          "fecha": "2026-09-27T03:27:31.000Z",
+          "oficial": false,
+          "aporte": "Detalla la estrategia electoral de cara a 2027, las reuniones de Diego Santilli con gobernadores y los casos de Salta y Tucumán."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "18k6p8b": {
+      "estado": "automatica",
+      "titulo": "La inversion nacional cae a pesar del impulso de los grandes proyectos",
+      "copete": "Los datos oficiales del Indec muestran una retraccion de la formacion de capital en el primer trimestre, mientras se debaten los limites y el impacto real del RIGI en la economia.",
+      "cuerpo": "El sector de maquinaria y equipo explico la mayor parte de la baja, condicionado por las tasas de interes y la demanda interna.\n\nEn paralelo, el analisis sectorial indico que la construccion registro un repunte positivo. Los especialistas advierten sobre la diferencia entre los anuncios de grandes proyectos bajo el Regimen de Incentivo para Grandes Inversiones y los desembolsos reales previstos para los proximos años, los cuales se ubican por debajo del umbral internacional necesario para sostener un crecimiento elevado a largo plazo.",
+      "guion": "La inversion nacional cae a pesar del impulso de los grandes proyectos",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T03:41:07.646Z",
+      "claves": [
+        "La formacion bruta de capital cayo casi doce por ciento interanual en el primer trimestre.",
+        "El retroceso se explico principalmente por la menor adquisicion de maquinaria y equipo.",
+        "Los desembolsos iniciales previstos por el RIGI representan una fraccion menor de la inversion anual."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "La inversion nacional cayo en el primer trimestre y acumula cuatro trimestres de retroceso, mientras analizan el impacto real del RIGI y los limites para alcanzar las metas de crecimiento sostenido.",
+      "etiquetas": [
+        "Inversion",
+        "Indec",
+        "RIGI",
+        "Economia"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/opinion/2026/09/27/boom-de-rigi-con-caida-de-la-inversion/",
+          "fecha": "2026-09-27T03:38:31.000Z",
+          "oficial": false,
+          "aporte": "Aporto los datos del Indec sobre caida de la inversion y las cifras oficiales sobre los proyectos presentados y aprobados del RIGI."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "1ndb79f": {
+      "estado": "automatica",
+      "titulo": "Advierten sobre los efectos económicos de los subsidios a las tarifas",
+      "copete": "Un análisis económico señala que el uso prolongado de subsidios energéticos distorsiona los precios relativos y genera un fuerte impacto fiscal.",
+      "cuerpo": "La regulación de precios en el mercado responde a una inflación elevada y a la demanda de alivio social, lo que suele traducirse en subsidios crecientes para mantener tarifas bajas en servicios como electricidad, gas y agua.\n\nEn el plano internacional, casos como los de Egipto e Indonesia muestran que los subsidios energéticos llegaron a representar porcentajes elevados del producto bruto interno y que su posterior corrección requirió reformas profundas acompañadas de costos políticos inmediatos.\n\nDemorar la corrección tarifaria multiplica los problemas estructurales, agranda el stock de subsidios y deteriora las redes de servicios, lo que encarece un eventual ajuste futuro y desplaza recursos de áreas como educación e infraestructura.",
+      "guion": "Advierten sobre los efectos económicos de los subsidios a las tarifas",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T03:41:07.646Z",
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Un análisis económico advierte sobre las distorsiones que generan los subsidios prolongados a las tarifas de servicios públicos y el impacto fiscal que provocan a largo plazo.",
+      "etiquetas": [
+        "subsidios",
+        "tarifas",
+        "economia",
+        "inflacion",
+        "servicios publicos"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/opinion/2026/09/27/los-subsidios-a-las-tarifas-pueden-convertirse-en-una-trampa-que-distorsione-toda-la-economia/",
+          "fecha": "2026-09-27T03:38:14.000Z",
+          "oficial": false,
+          "aporte": "Detalló el impacto macroeconómico de los subsidios energéticos y mencionó los casos internacionales de Egipto e Indonesia."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "19tmvzr",
+          "titulo": "Zona fría ya es ley: quiénes perderán subsidios al gas y cómo quedarán las tarifas",
+          "fecha": "2026-09-24T22:29:00.000Z",
+          "ruta": "/nota/zona-fria-ya-es-ley-quienes-perderan-subsidios-al-gas-y-como-quedaran-19tmvzr"
         }
       ],
       "verificacion": {
