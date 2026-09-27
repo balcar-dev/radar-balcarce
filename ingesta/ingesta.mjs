@@ -1174,7 +1174,9 @@ export async function ingestar({
         ? notas.map((n) => n.fecha).sort((a, b) => b - a)[0] : null;
       const frescura = ultima && !notas[0].fechaEstimada ? haceCuanto(ultima) : 'sin fecha';
       log(`  \x1b[32mok\x1b[0m   ${f.nombre.padEnd(28)} ${String(notas.length).padStart(3)} notas   última ${frescura}`);
-      estadoFuentes.push({ id: f.id, nombre: f.nombre, estado: 'ok', notas: notas.length, frescura });
+      // Un feed de señal casi nunca trae candidatas: cuenta lo que leyó, para
+      // que no parezca una fuente caída.
+      estadoFuentes.push({ id: f.id, nombre: f.nombre, estado: 'ok', notas: notas.length + (r.value.senal?.length ?? 0), frescura });
       todas = todas.concat(notas);
     } else {
       log(`  \x1b[31mfalla\x1b[0m ${f.nombre.padEnd(28)} ${r.reason?.message ?? r.reason}`);
@@ -1282,9 +1284,11 @@ export async function ingestar({
   // de 62 puntos y la portada de Balcarce sería la de Olé. Por sección, las
   // de afuera que salen solas son las N de más puntaje; el resto espera.
   // Lo de Balcarce no entra en la cuenta. Automovilismo sí, desde el 25/09.
-  aplicarCupos(portada);
-  // Y lo de afuera, con dos medios o más (Hernán, 27/09).
+  // Primero lo de afuera con dos medios o más (Hernán, 27/09) y DESPUÉS los
+  // cupos: al revés, los lugares de cada sección se los llevaban notas de un
+  // solo medio que después quedaban frenadas, y las de dos medios no entraban.
   exigirDosMedios(portada);
+  aplicarCupos(portada);
 
   // 4. Clima y farmacias
   let clima = null; let farmacias = null;
