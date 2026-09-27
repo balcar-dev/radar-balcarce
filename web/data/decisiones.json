@@ -1,5 +1,5 @@
 {
-  "exportado": "2026-09-27T15:29:00.326Z",
+  "exportado": "2026-09-27T15:38:59.938Z",
   "decisiones": {
     "1951120": {
       "estado": "automatica",
@@ -33871,6 +33871,73 @@
         "nivel": "ALTA",
         "porque": "Lo contaron dos medios independientes.",
         "sugeridoPorIA": "ALTA"
+      }
+    },
+    "17qh9mv": {
+      "estado": "automatica",
+      "titulo": "Werner y Fritzler ganan las series del TC Pick Up en Balcarce",
+      "copete": "Mariano Werner y Otto Fritzler se impusieron en las baterías matutinas del TC Pick Up en el autódromo Juan Manuel Fangio y largarán en la primera fila de la final.",
+      "cuerpo": "Mariano Werner y Otto Fritzler se quedaron este domingo con las victorias en las series del TC Pick Up en el autódromo Juan Manuel Fangio de Balcarce, en el marco del inicio de la Copa Coronación 2026. Werner se impuso en la batería más veloz con su Foton tras contener a Agustín Canapino en la largada y estirar diferencias, mientras que Fritzler ganó la segunda manga luego de un duelo con Diego Azar. El piloto local Diego Ciantini participó de esa serie, aunque se retrasó y finalizó en el séptimo puesto.\n\nLa llegada de la categoría nacional a la ciudad se da tras el regreso del automovilismo al circuito local luego de quince años de ausencia, un hecho que había generado gran expectativa popular durante las tandas de clasificación del sábado, donde Werner ya se había destacado.\n\nLa competencia final se pondrá en marcha a las 14:10 con una exigencia de veinte vueltas al trazado de algo más de cuatro mil metros o un tiempo máximo de cuarenta minutos.",
+      "guion": "Werner y Fritzler ganan las series del TC Pick Up en Balcarce",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T15:38:59.859Z",
+      "claves": [
+        "Werner y Fritzler ganaron las series matutinas en el Juan Manuel Fangio",
+        "El piloto local Diego Ciantini concluyó séptimo en su batería",
+        "La final se largará a las 14:10 con veinte vueltas previstas"
+      ],
+      "seSabe": [
+        "Mariano Werner se adjudicó la serie más veloz y largará la final desde la primera posición",
+        "Otto Fritzler ganó la segunda batería y completará la primera fila de la largada",
+        "Agustín Canapino escoltó a Werner en la primera serie",
+        "El piloto local Diego Ciantini terminó séptimo en su batería",
+        "La final tendrá un recorrido de veinte vueltas o un tiempo máximo de cuarenta minutos"
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Mariano Werner y Otto Fritzler ganaron las series del TC Pick Up en el autódromo Juan Manuel Fangio y largarán en la primera fila de la final en Balcarce.",
+      "etiquetas": [
+        "TC Pick Up",
+        "Balcarce",
+        "autodromo Juan Manuel Fangio",
+        "Mariano Werner",
+        "Otto Fritzler"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Campeones",
+          "enlace": "https://campeones.com.ar/tc-pick-up-en-balcarce-werner-y-fritzler-se-impusieron-en-las-series/",
+          "fecha": "2026-09-27T15:25:20.000Z",
+          "oficial": false,
+          "aporte": null
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "12jm31p",
+          "titulo": "Mariano Werner lidera la clasificación del TC Pick Up en Balcarce",
+          "fecha": "2026-09-27T00:32:00.000Z",
+          "ruta": "/nota/mariano-werner-lidera-la-clasificacion-del-tc-pick-up-en-balcarce-12jm31p"
+        },
+        {
+          "id": "1pbhcrn",
+          "titulo": "Mariano Werner marca la pole del TC Pick Up en Balcarce",
+          "fecha": "2026-09-26T21:59:46.000Z",
+          "ruta": "/nota/mariano-werner-marca-la-pole-del-tc-pick-up-en-balcarce-1pbhcrn"
+        },
+        {
+          "id": "sr6f38",
+          "titulo": "Galeano y Traverso ganan las series de la Fórmula 3 Metropolitana en Rosario",
+          "fecha": "2026-09-26T20:31:12.000Z",
+          "ruta": "/nota/galeano-y-traverso-ganan-las-series-de-la-formula-3-metropolitana-en-sr6f38"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
       }
     }
   },
