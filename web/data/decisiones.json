@@ -1,5 +1,5 @@
 {
-  "exportado": "2026-09-27T03:11:03.946Z",
+  "exportado": "2026-09-27T03:21:06.521Z",
   "decisiones": {
     "1951120": {
       "estado": "automatica",
@@ -28722,6 +28722,191 @@
           "fecha": "2026-09-27T03:08:00.000Z",
           "oficial": false,
           "aporte": "Detalló las causas, significados y precauciones ante el encendido del testigo de check engine."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "6qoa5z": {
+      "estado": "automatica",
+      "titulo": "Franco Colapinto choca con su compañero en Azerbaiyán",
+      "copete": "El piloto argentino Franco Colapinto chocó con su compañero Pierre Gasly en el Gran Premio de Azerbaiyán de Fórmula 1, debió abandonar la carrera y recibió una sanción.",
+      "cuerpo": "El piloto argentino Franco Colapinto protagonizó un choque múltiple en la vuelta treinta y seis del Gran Premio de Azerbaiyán de Fórmula 1, disputado en el Circuito Callejero de Bakú.\n\nTras el incidente, el piloto argentino asumió la responsabilidad y calificó lo sucedido como \"un error grande y grave\", además de pedir disculpas a la escudería y a Gasly por la pérdida de unidades en el campeonato.\n\nEl impacto privó al equipo Alpine de sumar puntos valiosos en el campeonato de constructores, ya que Gasly se encontraba séptimo antes del choque. Asimismo, este abandono puso fin a una racha de treinta carreras consecutivas completadas por el piloto argentino.",
+      "guion": "Franco Colapinto choca con su compañero en Azerbaiyan",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T03:21:06.396Z",
+      "claves": [
+        "Franco Colapinto abandonó el Gran Premio de Azerbaiyán tras un choque.",
+        "El incidente involucró a su compañero Pierre Gasly y a Lando Norris.",
+        "El piloto argentino recibió una sanción de cinco puestos para la próxima carrera.",
+        "El accidente privó a la escudería Alpine de sumar puntos en el campeonato."
+      ],
+      "textoRedes": "Franco Colapinto protagonizó un choque con su compañero Pierre Gasly en el Gran Premio de Azerbaiyán de Fórmula 1, debió abandonar la competencia y recibió una sanción de cinco puestos para la siguiente fecha.",
+      "etiquetas": [
+        "Franco Colapinto",
+        "Formula 1",
+        "Gran Premio de Azerbaiyán",
+        "Alpine"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Eco de Tandil",
+          "enlace": "https://www.eleco.com.ar/deportes/un-error-grande-y-grave",
+          "fecha": "2026-09-27T02:29:30.000Z",
+          "oficial": false,
+          "aporte": "Detalló las declaraciones autocríticas de Franco Colapinto sobre el incidente y la pérdida de puntos."
+        },
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/deportes/automovilismo/franco-colapinto-tras-chocar-a-gasly-y-norris-en-baku-fue-un-error-grande-y-grave-nid26092026/",
+          "fecha": "2026-09-26T13:39:48.000Z",
+          "oficial": false,
+          "aporte": "Aportó los detalles sobre la sanción de los comisarios de la FIA y la dinámica de la maniobra."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      }
+    },
+    "1630hgn": {
+      "estado": "automatica",
+      "titulo": "Nicolás Dujovne advierte por el impacto de la incertidumbre política en la inversión",
+      "copete": "El exministro de Hacienda analizó la marcha de la economía nacional, el impacto de la apertura comercial y las proyecciones para los próximos años. El informe no precisa vínculos directos con Balcarce.",
+      "cuerpo": "A casi tres años del inicio de la gestión del presidente Javier Milei, la economía argentina muestra un crecimiento heterogéneo con sectores exportadores sólidos y otras áreas con dificultades, según indicó el exministro de Hacienda Nicolás Dujovne en una entrevista periodística. El exfuncionario señaló que la actividad crecerá este año en torno al dos por ciento, por debajo de las previsiones iniciales del mercado, y sostuvo que la incertidumbre por los comicios de dos mil veintisiete ya condiciona la inversión en grandes proyectos.\n\nA su vez, valoró que el proyecto de presupuesto para dos mil veintisiete proyecte una inflación del dieciocho por ciento como ancla de expectativas.\n\nPor último, el exfuncionario analizó que la economía nacional transita una superposición de procesos que incluyen el ajuste fiscal, la apertura comercial y la estabilización, lo cual genera diferencias marcadas entre el interior y los grandes centros urbanos, así como entre los diversos sectores productivos y laborales.",
+      "guion": "Nicolás Dujovne advierte por el impacto de la incertidumbre política en la inversión",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T03:21:06.396Z",
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El exministro de Hacienda Nicolás Dujovne analizó la marcha de la economía nacional, el ritmo de la actividad y el impacto de la incertidumbre electoral en las inversiones.",
+      "etiquetas": [
+        "Economía",
+        "Nicolás Dujovne",
+        "Inversión",
+        "Javier Milei",
+        "Inflación"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/economia/nicolas-dujovne-la-inversion-cae-porque-en-buena-medida-ya-juega-la-incertidumbre-politica-nid27092026/",
+          "fecha": "2026-09-27T03:01:00.000Z",
+          "oficial": false,
+          "aporte": "Aportó la visión y los análisis del exministro Nicolás Dujovne sobre la economía nacional, la inversión y el impacto de la apertura comercial."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "1agrxxu": {
+      "estado": "automatica",
+      "titulo": "Analizan el impacto de la situación económica en la gestión nacional",
+      "copete": "Un informe de análisis político expone la tensión entre los indicadores económicos negativos y el discurso oficial del Gobierno. El impacto no menciona un vínculo directo con Balcarce.",
+      "cuerpo": "El escenario político nacional atraviesa un momento de tensión debido al contraste entre una serie de indicadores económicos negativos y la postura sostenida por el oficialismo, según consignó una publicación periodística. En contrapartida, el único dato favorable señalado fue la desaceleración de la inflación.\n\nFrente a este panorama, funcionarios nacionales y el equipo económico mantuvieron encuentros con inversores en Nueva York, donde defendieron las proyecciones financieras para los próximos años y aseguraron que el país cuenta con respaldo ante eventuales turbulencias. Sin embargo, operadores financieros y referentes del mercado manifestaron reparos sobre la viabilidad de las cifras presentadas y la comparabilidad de las partidas de financiamiento anunciadas.\n\nEn paralelo, dentro de la administración central se registra preocupación en el ámbito político ante la dificultad de articular discursos electorales y acuerdos futuros con el actual escenario de ajuste. No obstante, las discusiones sobre el impacto de estas medidas en la confianza pública se mantienen bajo reserva dentro del círculo de decisiones.",
+      "guion": "Analizan el impacto de la situación económica en la gestión nacional",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T03:21:06.396Z",
+      "claves": [
+        "Dificultades en la economía nacional y su impacto en la narrativa oficial.",
+        "Indicadores negativos recientes en empleo, consumo y nivel de actividad.",
+        "Presentación financiera del equipo económico ante inversores en Nueva York.",
+        "Preocupación interna en el oficialismo por el costo político del ajuste."
+      ],
+      "seSabe": [
+        "La tasa de desempleo subió al 7,9 por ciento.",
+        "El PBI registró una baja del 0,6 por ciento en el segundo trimestre.",
+        "La actividad económica retrocedió un 2,9 por ciento respecto al mes anterior.",
+        "El consumo masivo cayó un 1,5 por ciento interanual.",
+        "La pobreza aumentó 4,1 puntos hasta llegar al 32,3 por ciento.",
+        "La inflación se redujo al 1,7 por ciento."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Un análisis político repasa el impacto de los recientes indicadores económicos negativos en la gestión nacional y las dudas que generan en los mercados financieros las proyecciones oficiales presentadas en Nueva York.",
+      "etiquetas": [
+        "Economía",
+        "Gobierno nacional",
+        "Indicadores",
+        "Política"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/politica/la-narrativa-libertaria-se-desenfoca-bajo-la-presion-economica-nid26092026/",
+          "fecha": "2026-09-27T01:50:00.000Z",
+          "oficial": false,
+          "aporte": "Detalló los indicadores económicos recientes, las reuniones del equipo económico en Nueva York y las discusiones internas en el oficialismo."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "1jxm65l": {
+      "estado": "automatica",
+      "titulo": "Una pelicula britanica gana el festival de San Sebastian",
+      "copete": "El filme Tender Loving Care del director Mike Leigh obtuvo el premio mayor en la septuagesima cuarta edicion del Festival de San Sebastian.",
+      "cuerpo": "La produccion britanica Tender Loving Care, dirigida por el cineasta Mike Leigh, se alzo con la Concha de Oro a la mejor pelicula en la septuagesima cuarta edicion del Festival de San Sebastian.\n\nEl jurado, encabezado por el director Ira Sachs, tambien otorgo el galardono al mejor guion para el mismo titulo. Ademas, la actriz Kate O'Flynn compartio la Concha de Plata a la mejor interpretacion protagonista con la noruega Asta Kamma August.\n\nEl festival espanol conto ademas con la participacion de producciones argentinas en secciones paralelas, como el reconocimiento obtenido por el trabajo de Alessandra Sanguinetti.",
+      "guion": "Una pelicula britanica gana el festival de San Sebastian",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T03:21:06.396Z",
+      "claves": [
+        "El filme Tender Loving Care gano la Concha de Oro en el Festival de San Sebastian.",
+        "El director Mike agradecio el galardon mediante una videollamada.",
+        "Kate O'Flynn obtuvo la Concha de Plata a la mejor interpretacion protagonista."
+      ],
+      "seSabe": [
+        "La pelicula Tender Loving Care gano la Concha de Oro en la septuagesima cuarta edicion del Festival de San Sebastian, segun informo la fuente.",
+        "El director Mike Leigh agradecio el premio por videollamada.",
+        "El jurado otorgo el premio al mejor guion a la misma produccion."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "La pelicula britanica Tender Loving Care gano el premio mayor en la septuagesima cuarta edicion del Festival de San Sebastian.",
+      "etiquetas": [
+        "Festival de San Sebastian",
+        "Cine",
+        "Premios",
+        "Mike Leigh"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/cultura/2026/09/26/la-pelicula-inglesa-tender-loving-care-de-mike-leigh-gano-el-premio-mayor-del-festival-de-san-sebastian/",
+          "fecha": "2026-09-26T20:10:37.000Z",
+          "oficial": false,
+          "aporte": "Detallo los premios de la septuagesima cuarta edicion del Festival de San Sebastian, incluyendo los galardones para Tender Loving Care y las categorias de interpretacion."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "p62tjz",
+          "titulo": "Festival de San Sebastián: Lali Espósito habló de soberanía, empatía y Glaxo, el film en competencia que protagoniza",
+          "fecha": "2026-09-20T19:28:27.000Z",
+          "ruta": "/nota/festival-de-san-sebastian-lali-esposito-hablo-de-soberania-empatia-y-p62tjz"
+        },
+        {
+          "id": "1fx76ra",
+          "titulo": "Desde el Festival de San Sebastián, Lali Espósito habló sobre el presente del cine argentino: \"Ha sido muy atacado por el gobierno\"",
+          "fecha": "2026-09-19T19:09:18.000Z",
+          "ruta": "/nota/desde-el-festival-de-san-sebastian-lali-esposito-hablo-sobre-el-1fx76ra"
         }
       ],
       "verificacion": {
