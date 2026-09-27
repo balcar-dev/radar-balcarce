@@ -1,5 +1,5 @@
 {
-  "exportado": "2026-09-27T04:50:17.891Z",
+  "exportado": "2026-09-27T05:00:33.676Z",
   "decisiones": {
     "1951120": {
       "estado": "automatica",
@@ -30398,6 +30398,43 @@
         "nivel": "MEDIA",
         "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
         "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "11eefri": {
+      "estado": "automatica",
+      "titulo": "El Gobierno debate nuevas medidas ante indicadores económicos en rojo",
+      "copete": "La suba de la pobreza, el desempleo y la caída de la actividad económica reavivan la discusión en la administración central sobre cómo encarar el año electoral.",
+      "cuerpo": "El riesgo país cerró en seiscientos puntos y el dólar alcanzó un valor nominal máximo de mil quinientos pesos.\n\nFrente a este escenario, en la Casa Rosada se discute la necesidad de adoptar medidas para el año electoral sin descuidar el equilibrio fiscal. Mientras el presidente Javier Milei se mantiene inflexible y confía en el plan económico, respaldado en la baja de la inflación, que marcó uno por ciento en agosto, existen diferencias internas sobre el timing y la implementación de posibles acciones para dar un espaldarazo a la sociedad.\n\nPor otro lado, sectores del oficialismo confían en que la actividad se recuperará en los próximos meses y que el salario se ubicará por arriba de la inflación, impulsando la mejora desde el interior hacia los grandes centros urbanos.",
+      "guion": "El Gobierno debate nuevas medidas ante indicadores económicos en rojo",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T05:00:33.607Z",
+      "noConfirmado": [
+        "Todavía no se definieron medidas concretas para anunciar a la sociedad.",
+        "No hay acuerdo dentro de la mesa política sobre el momento oportuno para implementar cambios sin afectar las cuentas públicas.",
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "La suba de la pobreza y la caída en la actividad económica generan debate en el Gobierno sobre la necesidad de adoptar medidas de cara al año electoral.",
+      "etiquetas": [
+        "Economía",
+        "Gobierno",
+        "Pobreza",
+        "Desempleo",
+        "Inflación"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/politica/los-datos-negativos-de-la-economia-generan-inquietud-y-debate-en-el-gobierno-sobre-la-necesidad-de-nid27092026/",
+          "fecha": "2026-09-27T04:53:07.000Z",
+          "oficial": false,
+          "aporte": "Aportó los datos de pobreza, desempleo, caída de actividad económica, indicadores financieros y detalles sobre el debate interno en el Gobierno."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "ALTA"
       }
     }
   },
