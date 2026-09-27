@@ -1,5 +1,5 @@
 {
-  "exportado": "2026-09-27T14:20:13.092Z",
+  "exportado": "2026-09-27T14:50:41.685Z",
   "decisiones": {
     "1951120": {
       "estado": "automatica",
@@ -33690,6 +33690,50 @@
       "verificacion": {
         "nivel": "ALTA",
         "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "1aau94q": {
+      "estado": "automatica",
+      "titulo": "Celebramos el Dia Mundial del Turismo en Balcarce",
+      "copete": "Cada 27 de septiembre se conmemora el Día Mundial del Turismo para destacar su valor social, cultural y económico. La fecha busca generar conciencia sobre el desarrollo sostenible.",
+      "cuerpo": "Cada 27 de septiembre se celebra el Día Mundial del Turismo, una jornada destinada a resaltar la importancia de esta actividad en los ámbitos social, cultural y económico, además de su contribución al desarrollo sostenible.\n\nLa conmemoración fue fijada por la Organización Mundial del Turismo, organismo actualmente vinculado a las Naciones Unidas, en recuerdo de la aprobación de sus estatutos que tuvo lugar el 27 de septiembre de 1970.\n\nEl propósito central de la fecha es promover la toma de conciencia sobre el impacto global del sector y su vinculación directa con los Objetivos de Desarrollo Sostenible.",
+      "guion": "Celebramos el Dia Mundial del Turismo en Balcarce",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T14:50:41.601Z",
+      "claves": [
+        "Se celebra cada 27 de septiembre.",
+        "Busca destacar el valor social, cultural y económico.",
+        "Impulsado por la Organización Mundial del Turismo."
+      ],
+      "seSabe": [
+        "La fecha fue establecida por la Organización Mundial del Turismo.",
+        "Los estatutos de la entidad se aprobaron el 27 de septiembre de 1970.",
+        "La jornada busca promover los Objetivos de Desarrollo Sostenible."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Cada 27 de septiembre se celebra el Día Mundial del Turismo para destacar su valor social, cultural y económico, y su aporte al desarrollo sostenible. Conocé los detalles de la fecha.",
+      "etiquetas": [
+        "Turismo",
+        "Dia Mundial del Turismo",
+        "Balcarce",
+        "Naciones Unidas"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Radio Gabal (FM 104.1)",
+          "enlace": "https://www.radiogabal.com.ar/index.php/comunidad/efemerides-27-de-septiembre-se-celebra-el-dia-mundial-del-turismo",
+          "fecha": "2026-09-27T14:47:50.000Z",
+          "oficial": false,
+          "aporte": "Aportó los datos históricos y los objetivos del Día Mundial del Turismo."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
         "sugeridoPorIA": "MEDIA"
       }
     }
