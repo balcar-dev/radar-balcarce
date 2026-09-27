@@ -223,3 +223,12 @@ test('lo de afuera necesita dos medios para salir solo; lo de acá y lo oficial,
   assert.deepEqual(notas.map((n) => n.semaforo), ['amarillo', 'verde', 'verde', 'verde']);
   assert.equal(notas[0].motivo, MOTIVO_UN_SOLO_MEDIO);
 });
+
+import { unirGrupos } from '../ingesta/lectura-ia.mjs';
+
+test('las repetidas se acumulan de una corrida a otra: A~B antes y B~C ahora son una sola (McCain, 27/09)', () => {
+  assert.deepEqual(unirGrupos([['a', 'b']], [['b', 'c']]), [['a', 'b', 'c']]);
+  assert.deepEqual(unirGrupos([['a', 'b']], [['x', 'y']]).length, 2, 'grupos distintos no se mezclan');
+  assert.deepEqual(unirGrupos([['a', 'b', 'viejo']], [], new Set(['a', 'b'])), [['a', 'b']], 'lo que ya no está en la ingesta se va');
+  assert.deepEqual(unirGrupos([['a', 'viejo']], [], new Set(['a'])), [], 'un grupo de uno no es grupo');
+});

@@ -350,7 +350,9 @@ export const ESQUEMA_REPETIDAS = {
 
 /** Un pedido: los grupos de ids que cuentan el mismo hecho. Lanza si falla. */
 export async function agruparRepetidas(notas, { clave, fetchFn = fetch } = {}) {
-  const lista = notas.map((n) => ({ id: n.id, titulo: n.titulo, medio: n.medio ?? n.medios?.[0] ?? '' }));
+  const lista = notas.map((n) => ({
+    id: n.id, titulo: n.titulo, bajada: String(n.resumenFuente ?? n.copete ?? '').slice(0, 200), medio: n.medio ?? n.medios?.[0] ?? '',
+  }));
   const res = await fetchFn(`https://generativelanguage.googleapis.com/v1beta/models/${MODELO}:generateContent`, {
     method: 'POST',
     headers: { 'content-type': 'application/json', 'x-goog-api-key': clave },
@@ -370,6 +372,25 @@ ${JSON.stringify(lista, null, 1)}` }] }],
   return (Array.isArray(grupos) ? grupos : [])
     .map((g) => [...new Set((g?.ids ?? []).filter((id) => validos.has(id)))])
     .filter((ids) => ids.length >= 2);
+}
+
+/**
+ * Junta los grupos de una corrida con los de las anteriores: si antes se vio
+ * que A y B cuentan lo mismo y ahora que B y C, A, B y C son una sola noticia.
+ * La IA no siempre agrupa igual (27/09: de las tres de McCain juntó dos), así
+ * que lo que ya vio no se pierde. Sólo quedan los ids que siguen existiendo.
+ */
+export function unirGrupos(anteriores = [], nuevos = [], idsVigentes = null) {
+  const padre = new Map();
+  const raiz = (x) => { while (padre.get(x) !== x) x = padre.get(x); return x; };
+  for (const ids of [...anteriores, ...nuevos]) {
+    const vivos = idsVigentes ? ids.filter((id) => idsVigentes.has(id)) : ids;
+    for (const id of vivos) if (!padre.has(id)) padre.set(id, id);
+    for (let i = 1; i < vivos.length; i += 1) padre.set(raiz(vivos[i]), raiz(vivos[0]));
+  }
+  const grupos = new Map();
+  for (const id of padre.keys()) { const r = raiz(id); (grupos.get(r) ?? grupos.set(r, []).get(r)).push(id); }
+  return [...grupos.values()].filter((g) => g.length >= 2).map((g) => g.sort());
 }
 
 /**

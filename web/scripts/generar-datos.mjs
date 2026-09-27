@@ -133,7 +133,7 @@ let repetidasFuera = new Set();
 if (enLaNube) {
   try {
     const {
-      leerNotasNuevas, aplicarFichas, comoFichasJson, agruparRepetidas, quitarRepetidas, LECTURA,
+      leerNotasNuevas, aplicarFichas, comoFichasJson, agruparRepetidas, quitarRepetidas, unirGrupos, LECTURA,
     } = await import('../../ingesta/lectura-ia.mjs');
     const { claveClasificacion } = await import('../../reels/claves.mjs');
     const { exigirDosMedios, MOTIVO_UN_SOLO_MEDIO } = await import('../../ingesta/ingesta.mjs');
@@ -150,12 +150,15 @@ if (enLaNube) {
     const candidatas = conFichas.filter((n) => n.semaforo === 'verde');
     const claveDeLaLista = candidatas.map((n) => n.id).sort().join(',');
     const hoy = fichas.dia;
+    // Los grupos se conservan de un día al otro (mientras sus notas sigan en la
+    // ingesta); sólo el contador de pedidos vuelve a cero.
     const rep = fichas.repetidas?.dia === hoy ? fichas.repetidas : { dia: hoy, pedidosHoy: 0, grupos: fichas.repetidas?.grupos ?? [] };
     const clave = claveClasificacion();
     if (clave && rep.lista !== claveDeLaLista && rep.pedidosHoy < LECTURA.pedidosRepetidasPorDia && candidatas.length > 1) {
       rep.pedidosHoy += 1;
       try {
-        rep.grupos = await agruparRepetidas(candidatas, { clave });
+        const nuevos = await agruparRepetidas(candidatas, { clave });
+        rep.grupos = unirGrupos(rep.grupos, nuevos, new Set((ultima.notas ?? []).map((n) => n.id)));
         rep.lista = claveDeLaLista;
       } catch (e) {
         console.log(`  repetidas: falló el pedido (${e.message}); quedan los grupos de antes`);
