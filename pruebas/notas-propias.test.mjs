@@ -23,7 +23,6 @@ import { idDeRuta, rutaDeNota } from '../web/lib/ruta.js';
 import { elegirParaFacebook, elegirParaPodcast, sePuedeSola } from '../redes/elegir.mjs';
 import { completarEnlaces, publicarPiezas } from '../redes/publicar-piezas.mjs';
 import { crearCliente } from '../redes/meta.mjs';
-import { PISO_DE_AFUERA } from '../ingesta/fuentes.mjs';
 import { CUERPO } from './cuerpo-de-prueba.mjs';
 
 const RAIZ = path.join(import.meta.dirname, '..');
@@ -122,7 +121,7 @@ test('la nota del dólar es de Economía, no es local y no le gana a una nota de
   assert.equal(n.local, false);
   assert.equal(n.relevancia, RELEVANCIA_DOLAR);
   assert.ok(n.relevancia < 63, 'ninguna nota de Balcarce de la portada baja de 63');
-  assert.ok(n.relevancia >= PISO_DE_AFUERA.Economía, 'lo que sacaría una nota de afuera normal');
+  assert.equal(n.propia, 'dolar', 'es una nota propia: no pide medios como lo de afuera');
 });
 
 test('el dólar no se arma antes de las 11, ni dos veces el mismo día, ni el fin de semana', () => {

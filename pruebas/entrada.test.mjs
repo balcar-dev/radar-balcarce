@@ -52,23 +52,25 @@ test('un policial de afuera no se trae; si dice Balcarce en el título o es de u
   assert.equal(esPolicialDeAfuera({ ...robo, titulo: 'El Concejo aprueba el presupuesto', cuerpo: 'Sesión ordinaria.' }), false);
 });
 
-test('cada fuente tiene su ficha: tipo, ciudad y uso', () => {
+test('cada fuente tiene su ficha: tipo y ciudad', () => {
   for (const f of [...FUENTES, ...FUENTES_NACIONALES].filter((x) => x.activa !== false)) {
     const ficha = fichaDeFuente(f);
     assert.ok(ficha.tipo, `${f.id} sin tipo`);
     assert.ok(ficha.ciudad, `${f.id} sin ciudad: los medios de la región y la provincia la necesitan`);
-    assert.ok(['candidata', 'senal'].includes(ficha.uso), `${f.id} con un uso raro`);
   }
   assert.equal(fichaDeFuente(FUENTES_NACIONALES.find((f) => f.id === 'ecosdiarios')).ciudad, 'Necochea');
 });
 
-test('los feeds generales de los diarios nacionales sólo cuentan cobertura (señal)', () => {
-  for (const id of ['infobae', 'lanacion', 'clarin', 'ambito', 'minutouno']) {
-    const f = FUENTES_NACIONALES.find((x) => x.id === id);
-    assert.equal(fichaDeFuente(f).uso, 'senal', id);
+test('desde el cruce ya no hay fuentes "de señal" ni un máximo por fuente (27/09)', async () => {
+  // Todas entran enteras al cruce y lo que sale lo decide cuántos medios
+  // cuentan cada hecho. `uso` y `maxItems` decidían eso antes y ya no hacían nada.
+  const { FUENTES_CRUCE } = await import('../ingesta/fuentes-cruce.mjs');
+  for (const f of [...FUENTES, ...FUENTES_NACIONALES, ...FUENTES_CRUCE]) {
+    assert.ok(!('maxItems' in f), `${f.id} todavía tiene maxItems`);
+    assert.ok(!('uso' in f), `${f.id} todavía tiene uso`);
   }
-  // Los de sección siguen siendo candidatos.
-  assert.equal(fichaDeFuente(FUENTES_NACIONALES.find((x) => x.id === 'infobae-economia')).uso, 'candidata');
+  assert.equal(fichaDeFuente(FUENTES_NACIONALES.find((x) => x.id === 'infobae')).tipo, 'nacional general');
+  assert.equal(fichaDeFuente(FUENTES_NACIONALES.find((x) => x.id === 'infobae-economia')).tipo, 'nacional por sección');
 });
 
 test('los medios de España y los de chimentos están apagados (Hernán, 27/09)', () => {

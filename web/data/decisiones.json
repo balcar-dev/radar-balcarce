@@ -1,5 +1,5 @@
 {
-  "exportado": "2026-09-27T22:28:48.492Z",
+  "exportado": "2026-09-27T22:39:04.803Z",
   "decisiones": {
     "1951120": {
       "estado": "automatica",
@@ -35046,6 +35046,130 @@
           "titulo": "Agotan las pulseras de ingreso por una multitud en el Fangio",
           "fecha": "2026-09-27T15:34:39.000Z",
           "ruta": "/nota/una-multitud-colma-el-autodromo-juan-manuel-fangio-en-balcarce-c2myhf"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "1rrmdov": {
+      "estado": "automatica",
+      "titulo": "El automovilismo regresa al autódromo Juan Manuel Fangio en Balcarce",
+      "copete": "Tras quince años sin competencias nacionales, el circuito de la sierra La Barrosa volvió a recibir carreras con una multitudinaria convocatoria en el marco del TC Pick Up.",
+      "cuerpo": "El autódromo Juan Manuel Fangio recuperó la actividad nacional este fin de semana con la disputa de la octava fecha del TC Pick Up, del TC Pista Pick Up y del Turismo Special de la Costa, luego de quince años de inactividad en el escenario local.\n\nEn la final del TC Pick Up, que marcó el inicio de la Copa de Oro, el triunfo quedó en manos del piloto de Pinamar José Hernán Palazzo con una Toyota Hilux. El segundo lugar fue para Otto Fritzler y tercero finalizó Lucas Valle, luego de que el piloto local Diego Ciantini fuera recargado por una infracción.\n\nLa reapertura del circuito generó gran expectativa en el turismo y el comercio local, además de contar con la presencia de autoridades nacionales durante el desarrollo de las jornadas.",
+      "guion": "El automovilismo regresa al autódromo Juan Manuel Fangio en Balcarce",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T22:39:04.732Z",
+      "textoRedes": "El automovilismo volvió a rugir en el autódromo Juan Manuel Fangio después de quince años con una multitudinaria convocatoria y la disputa del TC Pick Up en la sierra La Barrosa.",
+      "etiquetas": [
+        "automovilismo",
+        "autodromo Juan Manuel Fangio",
+        "TC Pick Up",
+        "Balcarce"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Agencia DIB",
+          "enlace": "https://dib.com.ar/sociedad/balcarce-y-un-dia-los-motores-volvieron-rugir-el-autodromo-juan-manuel-fancio-n56071",
+          "fecha": "2026-09-27T22:28:00.000Z",
+          "oficial": false,
+          "aporte": "Informó detalles de la competencia del TC Pick Up, los ganadores del podio, la cantidad de asistentes y el desarrollo del evento en el autódromo."
+        },
+        {
+          "medio": "0223 (Mar del Plata)",
+          "enlace": "https://www.0223.com.ar/nota/2026-9-27-14-24-0-balcarce-volvio-a-rugir-27-000-personas-en-la-historica-reinauguracion-del-autodromo-juan-manuel-fangio",
+          "fecha": "2026-09-27T17:29:00.000Z",
+          "oficial": false,
+          "aporte": "Coincidió en el regreso del automovilismo a Balcarce después de quince años y la convocatoria de público en el autódromo."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "si6qmk",
+          "titulo": "Diego Santilli visita el autódromo Juan Manuel Fangio",
+          "fecha": "2026-09-27T15:00:58.065Z",
+          "ruta": "/nota/diego-santilli-visita-el-autodromo-juan-manuel-fangio-en-balcarce-si6qmk"
+        },
+        {
+          "id": "e9anvw",
+          "titulo": "El autodromo Juan Manuel Fangio recibe al automovilismo nacional",
+          "fecha": "2026-09-27T12:20:00.000Z",
+          "ruta": "/nota/el-autodromo-juan-manuel-fangio-recupera-el-automovilismo-nacional-en-e9anvw"
+        },
+        {
+          "id": "kquco2",
+          "titulo": "El autódromo Juan Manuel Fangio vuelve a recibir automovilismo nacional",
+          "fecha": "2026-09-26T17:24:55.000Z",
+          "ruta": "/nota/el-autodromo-juan-manuel-fangio-vuelve-a-recibir-automovilismo-kquco2"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      }
+    },
+    "if257m": {
+      "estado": "automatica",
+      "titulo": "Boccanera y Baigorria ganan en el regreso del Turismo Special de la Costa en Balcarce",
+      "copete": "Bruno Boccanera y Kevin Baigorria se impusieron en las dos competencias del Turismo Special de la Costa en el autódromo Juan Manuel Fangio, en el marco del retorno del automovilismo nacional a Balcarce.",
+      "cuerpo": "En la primera carrera, Boccanera se impuso con su Ford tras una prueba marcada por varios incidentes que obligaron al ingreso del auto de seguridad, mientras que Nahuel Morón y Kevin Walter completaron el podio. En la segunda competencia, destinada a pilotos invitados, Baigorria logró el triunfo de punta a punta, escoltado por Pablo Buduba y Martín Calamante. De manera extraoficial, Esteban Dimuro se adjudicó la Fase Regular del campeonato.\n\nLa próxima presentación de la categoría tendrá lugar el fin de semana del 11 de octubre en el circuito Juan Manuel Bordeu de Balcarce, compartiendo escenario con el Zonal del Atlántico.",
+      "guion": "Boccanera y Baigorria ganan en el regreso del Turismo Special de la Costa en Balcarce",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T22:39:04.733Z",
+      "claves": [
+        "El Turismo Special de la Costa compitió en el autódromo Juan Manuel Fangio",
+        "Bruno Boccanera ganó la primera competencia y Kevin Baigorria la segunda",
+        "Esteban Dimuro se adjudicó de manera extraoficial la Fase Regular del campeonato",
+        "La próxima fecha se disputará el fin de semana del 11 de octubre en el circuito Juan Manuel Bordeu"
+      ],
+      "seSabe": [
+        "Bruno Boccanera ganó la primera competencia de la quinta fecha del Turismo Special de la Costa con un Ford",
+        "Kevin Baigorria se quedó con el triunfo en la segunda competencia de pilotos invitados",
+        "Esteban Dimuro se adjudicó de forma extraoficial la Fase Regular y liderará la Copa de Oro con cuarenta puntos",
+        "La próxima fecha se correrá el fin de semana del 11 de octubre en el circuito Juan Manuel Bordeu"
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Bruno Boccanera y Kevin Baigorria ganaron las dos competencias del Turismo Special de la Costa en el autódromo Juan Manuel Fangio, en el marco del regreso de la categoría a Balcarce.",
+      "etiquetas": [
+        "Turismo Special de la Costa",
+        "Autodromo Juan Manuel Fangio",
+        "Balcarce",
+        "Automovilismo"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Puntonueve (FM 100.9)",
+          "enlace": "https://puntonueve.com.ar/boccanera-y-baigorria-hicieron-historia-en-el-regreso-del-turismo-special-de-la-costa-al-fangio/",
+          "fecha": "2026-09-27T22:28:39.000Z",
+          "oficial": false,
+          "aporte": "Detalló los resultados de las dos competencias, los incidentes en pista y las posiciones para la Copa de Oro del Turismo Special de la Costa."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "189jmfz",
+          "titulo": "El Turismo Special de la Costa también será protagonista en la reapertura del Fangio",
+          "fecha": "2026-09-22T23:24:28.000Z",
+          "ruta": "/nota/el-turismo-special-de-la-costa-tambien-sera-protagonista-en-la-189jmfz"
+        },
+        {
+          "id": "1xlakiv",
+          "titulo": "El Turismo Special de la Costa compite en el autódromo",
+          "fecha": "2026-09-26T12:46:52.000Z",
+          "ruta": "/nota/el-turismo-special-de-la-costa-compite-en-el-autodromo-en-balcarce-1xlakiv"
+        },
+        {
+          "id": "aiqaq9",
+          "titulo": "El Turismo Special de la Costa vuelve a Balcarce",
+          "fecha": "2026-09-23T13:50:26.000Z",
+          "ruta": "/nota/el-turismo-special-de-la-costa-vuelve-a-balcarce-aiqaq9"
         }
       ],
       "verificacion": {

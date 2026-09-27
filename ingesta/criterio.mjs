@@ -97,38 +97,48 @@ export const PORTADA = {
   diasDeArchivo: 180,
 };
 
-// Cuánto puntaje necesita una nota de AFUERA para salir sola, por sección.
+// Cuántos medios distintos tienen que contar una nota de AFUERA para que
+// salga sola, por sección (27/09, con el cruce de medios).
 //
-// Lo de Balcarce no tiene piso. Lo de afuera sí, porque las fuentes
-// nacionales tiran cincuenta notas por vuelta y sólo unas pocas le importan
-// a alguien de acá. El piso no es igual para todas:
+// Hasta el cruce se usaba un piso de PUNTAJE (38 a 62 según la sección). El
+// puntaje sale del peso de la fuente, la frescura, si trae foto y si trae el
+// texto entero: servía cuando cada nota venía de un solo medio y no había otra
+// forma de saber si importaba. Con el cruce sí la hay, y es la que pidieron
+// Hernán y Andrés ("que sea popular y esté medido"): cuántos medios cuentan lo
+// mismo. El 27/09 el piso viejo frenaba a Ailín Pérez en UFC (la contaban 9
+// medios) y a los Juegos Suramericanos (17), y dejaba pasar notas de dos.
 //
-//   · Deportes sube: es casi un tercio de todo lo que entra y no es lo que
-//     define a un medio de Balcarce. Queda lo que ya vale mucho — Messi,
-//     Colapinto, la Selección — y lo de la zona.
-//   · Economía, Tecnología, Política y Policiales bajan: las fuentes de
-//     esas secciones son pocas y de peso parejo, y con el piso general de
-//     50 no habría pasado casi nada.
-export const PISO_DE_AFUERA = {
-  Deportes: 62,
-  Economía: 38,
-  // 26/09: 38 dejaba afuera a Hipertextual y Xataka (36); es una sección flaca.
-  Tecnología: 34,
-  Política: 40,
-  Policiales: 40,
-  // 26/09: las secciones flacas. Con el piso de 50, las notas frescas de
-  // espectáculos y de agro de afuera (unos 45 puntos) quedaban todas esperando.
-  'Cultura y agenda': 38,
-  Agro: 38,
+//   · Por defecto, 3: tres medios distintos que cuentan lo mismo es la noticia
+//     del día, no la nota suelta de un diario.
+//   · Fútbol y Deportes piden 4: son un tercio de todo lo que entra, y un medio
+//     de Balcarce no puede ser Olé. Quedan la Selección, Messi, los grandes,
+//     lo que cuenta todo el país.
+//   · Economía, Tecnología y Agro piden 2: las cubren pocos medios (los
+//     especializados) y cada una ya tiene su cupo. Automovilismo también pide
+//     2: Balcarce es tierra de fierros y tiene cupo propio.
+//   · Lo que nombra a una figura argentina (Messi, Colapinto) pide 2.
+//
+// Lo de Balcarce (medios de acá, o Balcarce en el título) no pide nada. Nada
+// de afuera sale con un solo medio, en ninguna sección: es la regla de las
+// dos fuentes. El puntaje sigue sirviendo para ORDENAR (qué va primero, qué
+// entra en el cupo, qué va a Facebook), no para decidir si sale.
+export const MEDIOS_DE_AFUERA = {
+  Fútbol: 4,
+  Deportes: 4,
+  Economía: 2,
+  Tecnología: 2,
+  Agro: 2,
+  Automovilismo: 2,
 };
-export const PISO_POR_DEFECTO = 50;
+export const MEDIOS_POR_DEFECTO = 3;
+export const MEDIOS_CON_FIGURA = 2;
 
-// Cuántas notas de AFUERA salen solas por sección, como máximo.
+// Cuántas notas de AFUERA salen solas por sección, como máximo, a la vez.
 //
-// Con el piso no alcanza: un domingo de fútbol tiene treinta notas arriba de
-// 62 puntos, y la portada de Balcarce sería la de Olé. El cupo se queda con
-// las de más puntaje y manda el resto a esperar. Lo de Balcarce no tiene
-// cupo.
+// Con los medios no alcanza: un domingo de fútbol tiene treinta historias que
+// cuentan cuatro medios o más, y la portada de Balcarce sería la de Olé. El
+// cupo se queda con las de más puntaje (que suma los medios y la frescura) y
+// manda el resto a esperar. Lo de Balcarce no tiene cupo.
 //
 // Automovilismo no tenía cupo hasta el 25/09, y la portada de ese día tenía
 // 45 notas de fierros (22 de afuera: F1, TC nacional) contra 40 de Balcarce.
@@ -140,7 +150,11 @@ export const PISO_POR_DEFECTO = 50;
 // Automovilismo bajó otra vez, de 12 a 6, esa misma madrugada: con la portada
 // de 72 h quedaban 16 locales (semana del autódromo) + 12 de afuera (semana de
 // F1) = 28, contra 24 de Balcarce. Con 6, las mejores de la F1 siguen saliendo.
+// Fútbol y Argentina (27/09, secciones nuevas): Fútbol, como Deportes, del que
+// se separó; Argentina, como Economía.
 export const CUPO_DE_AFUERA = {
+  Fútbol: 10,
+  Argentina: 12,
   Deportes: 10,
   Economía: 12,
   Tecnología: 8,
@@ -211,8 +225,9 @@ export const NUMEROS_DEL_CRITERIO = {
   COPIA_MAXIMA,
   REESCRITURA,
   PORTADA,
-  PISO_DE_AFUERA,
-  PISO_POR_DEFECTO,
+  MEDIOS_DE_AFUERA,
+  MEDIOS_POR_DEFECTO,
+  MEDIOS_CON_FIGURA,
   CUPO_DE_AFUERA,
   CUPO_POR_DEFECTO,
   FACEBOOK,

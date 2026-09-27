@@ -28,7 +28,7 @@ test('las notas retiradas a mano salen del archivo y una lista rota no retira na
   assert.deepEqual([...ids], ['a'], 'sin motivo no se retira');
   assert.equal(idsRetiradosAMano(null).size, 0);
   assert.equal(idsRetiradosAMano({ notas: 'roto' }).size, 0);
-  const archivo = [{ id: 'a', titulo: 'Tigre suelto en México', fecha: new Date().toISOString() }, { id: 'c', titulo: 'Balcarce', fecha: new Date().toISOString() }];
+  const archivo = [{ id: 'a', titulo: 'Tigre suelto en México', local: true, fecha: new Date().toISOString() }, { id: 'c', titulo: 'Balcarce', local: true, fecha: new Date().toISOString() }];
   assert.deepEqual(actualizarArchivo({ archivo, retiradas: ids }).map((n) => n.id), ['c']);
 });
 
@@ -53,7 +53,7 @@ const haceHoras = (h) => new Date(AHORA - h * 3600e3).toISOString();
 
 const nota = (extra = {}) => ({
   id: 'lcvlqf', titulo: 'Vuelve el TC al autódromo Juan Manuel Fangio', copete: 'Copete', cuerpo: null,
-  seccion: 'Automovilismo', medios: ['Un medio'], enlace: 'https://otro.medio/x', fecha: haceHoras(2), temas: ['autodromo'],
+  seccion: 'Automovilismo', medios: ['Un medio'], local: true, enlace: 'https://otro.medio/x', fecha: haceHoras(2), temas: ['autodromo'],
   ...extra,
 });
 
@@ -306,4 +306,18 @@ test('el archivo de correcciones del repositorio está bien armado', () => {
   const json = JSON.parse(fs.readFileSync(new URL('../web/data/correcciones.json', import.meta.url), 'utf8'));
   for (const [id, n] of Object.entries(json.notas)) assert.ok(n.motivo && n.cuando && n.por, `a ${id} le falta motivo, fecha o quién`);
   assert.equal(correccionesAMano(json).size, Object.keys(json.notas).length);
+});
+
+test('el archivo aplica la regla de las fuentes: lo de afuera de un solo medio pierde la página, salvo que haya salido en redes (27/09)', () => {
+  // Antes del cruce de medios salían notas de afuera contadas por un solo
+  // medio; el 27/09 eran 1.069 de las 1.614 páginas del archivo.
+  const f = new Date().toISOString();
+  const archivo = [
+    { id: 'suelta', titulo: 'Cinco ajustes del iPhone', medios: ['Infobae'], fecha: f },
+    { id: 'cruzada', titulo: 'La pobreza subió al 32,3 %', medios: ['Infobae', 'Clarín'], fecha: f },
+    { id: 'local', titulo: 'Arreglan la plaza', medios: ['La Vanguardia'], local: true, fecha: f },
+    { id: 'propia', titulo: 'El dólar hoy', propia: 'dolar', fecha: f },
+    { id: 'fb', titulo: 'Colapinto largó noveno', medios: ['Olé'], redes: true, fecha: f },
+  ];
+  assert.deepEqual(actualizarArchivo({ archivo, ahora: Date.now() }).map((n) => n.id).sort(), ['cruzada', 'fb', 'local', 'propia']);
 });

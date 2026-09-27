@@ -144,7 +144,7 @@ if (enLaNube) {
       leerNotasNuevas, aplicarFichas, comoFichasJson, agruparRepetidas, quitarRepetidas, unirGrupos, LECTURA,
     } = await import('../../ingesta/lectura-ia.mjs');
     const { claveClasificacion } = await import('../../reels/claves.mjs');
-    const { exigirDosMedios, MOTIVO_UN_SOLO_MEDIO } = await import('../../ingesta/ingesta.mjs');
+    const { exigirMedios, aplicarCupos, MOTIVO_POCO_CONTADA } = await import('../../ingesta/ingesta.mjs');
     const fichasAntes = leerJson(FICHAS, {});
     const { archivo: fichas, cuenta } = await leerNotasNuevas(ultima.notas ?? [], { guardado: fichasAntes, registro: console.log });
     if (cuenta.sinClave) console.log('  lectura con IA: sin clave, se decide como siempre');
@@ -155,12 +155,12 @@ if (enLaNube) {
     // Se pide sólo si cambió lo que hay para publicar, con tope por día.
     // Sólo lo que va a salir: con las 270 notas de la ingesta (ruido incluido)
     // la IA no vio las tres de McCain; con las publicables, sí (27/09).
-    // Y aparte, lo de afuera que espera por tener un solo medio: si otro medio
-    // cuenta lo mismo, al juntarlas llega a dos y puede salir. Antes quedaba
-    // frenado antes de poder juntarse, y lo nacional desaparecía (27/09). Van
-    // en dos pedidos: con todo junto la IA ve peor.
+    // Y aparte, lo de afuera que espera por tener pocos medios: si otro medio
+    // cuenta lo mismo, al juntarlas llega a los que pide su sección y puede
+    // salir. Antes quedaba frenado antes de poder juntarse, y lo nacional
+    // desaparecía (27/09). Van en dos pedidos: con todo junto la IA ve peor.
     const candidatas = conFichas.filter((n) => n.semaforo === 'verde');
-    const deUnMedio = conFichas.filter((n) => n.semaforo === 'amarillo' && n.motivo === MOTIVO_UN_SOLO_MEDIO);
+    const deUnMedio = conFichas.filter((n) => n.semaforo === 'amarillo' && String(n.motivo ?? '').startsWith(MOTIVO_POCO_CONTADA));
     const claveDeLaLista = [...candidatas, ...deUnMedio].map((n) => n.id).sort().join(',');
     const hoy = fichas.dia;
     // Los grupos se conservan de un día al otro (mientras sus notas sigan en la
@@ -182,15 +182,11 @@ if (enLaNube) {
     const { notas, repetidas } = quitarRepetidas(conFichas, rep.grupos);
     repetidasFuera = new Set(repetidas.map((r) => r.id));
     // Con los medios de las repetidas sumados, una nota de afuera puede llegar
-    // a dos: la regla se vuelve a mirar. Y lo que la IA dijo que no es de acá
-    // también pide dos medios.
-    for (const n of notas) {
-      if (n.semaforo === 'amarillo' && n.motivo === MOTIVO_UN_SOLO_MEDIO && new Set(n.medios ?? []).size >= 2) {
-        n.semaforo = 'verde';
-        n.motivo = 'de afuera, contada por dos medios o más';
-      }
-    }
-    exigirDosMedios(notas);
+    // a los que pide su sección, y con la sección que corrigió la IA el mínimo
+    // puede ser otro: la regla se vuelve a mirar, en los dos sentidos. Lo que
+    // la IA dijo que no es de acá también la cumple. Y después, el cupo.
+    exigirMedios(notas);
+    aplicarCupos(notas.sort((a, b) => (b.relevancia ?? 0) - (a.relevancia ?? 0)));
     ultima = { ...ultima, notas };
     console.log(`  lectura con IA: ${cuenta.nuevas} fichas nuevas en ${cuenta.pedidos} pedidos (${fichas.pedidosHoy ?? 0} hoy)`
       + ` · sacó ${cambios.sacadas.length}, ${cambios.dejanDeSerLocales.length} dejaron de ser de Balcarce,`

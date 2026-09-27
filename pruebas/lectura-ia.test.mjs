@@ -193,7 +193,7 @@ test('lo que la IA sacó mal en la primera corrida del 27/09 ya no se saca', () 
 // ------------------------------------------------------- repetidas y respaldo
 
 import { quitarRepetidas, agruparRepetidas } from '../ingesta/lectura-ia.mjs';
-import { exigirDosMedios, MOTIVO_UN_SOLO_MEDIO } from '../ingesta/ingesta.mjs';
+import { exigirMedios, MOTIVO_POCO_CONTADA } from '../ingesta/ingesta.mjs';
 
 test('de tres notas del mismo hecho queda una, con los medios de las tres (McCain, 27/09)', () => {
   const a = { id: 'a', titulo: 'McCain advierte por estafas con falsas ofertas de empleo', medios: ['La Vanguardia', 'Infórmese Primero'], relevancia: 80, semaforo: 'verde' };
@@ -212,16 +212,32 @@ test('el pedido de repetidas devuelve sólo grupos de dos o más con ids que exi
   assert.deepEqual(grupos, [['a', 'b']]);
 });
 
-test('lo de afuera necesita dos medios para salir solo; lo de acá y lo oficial, no (Hernán, 27/09)', () => {
+test('lo de afuera necesita los medios que pide su sección; lo de acá y lo oficial, no (Hernán, 27/09)', () => {
   const notas = [
-    { id: 'uno', semaforo: 'verde', local: false, medios: ['Ámbito'] },
-    { id: 'dos', semaforo: 'verde', local: false, medios: ['Olé', 'Clarín'] },
-    { id: 'aca', semaforo: 'verde', local: true, medios: ['Radio Gabal'] },
-    { id: 'oficial', semaforo: 'verde', local: false, oficial: true, medios: ['Gobierno de la Provincia'] },
+    { id: 'uno', seccion: 'Economía', semaforo: 'verde', local: false, medios: ['Ámbito'] },
+    { id: 'dos', seccion: 'Economía', semaforo: 'verde', local: false, medios: ['Olé', 'Clarín'] },
+    { id: 'futbol', seccion: 'Fútbol', semaforo: 'verde', local: false, medios: ['Olé', 'Clarín', 'TyC Sports'] },
+    { id: 'aca', seccion: 'Balcarce', semaforo: 'verde', local: true, medios: ['Radio Gabal'] },
+    { id: 'oficial', seccion: 'Argentina', semaforo: 'verde', local: false, oficial: true, medios: ['Gobierno de la Provincia'] },
   ];
-  exigirDosMedios(notas);
-  assert.deepEqual(notas.map((n) => n.semaforo), ['amarillo', 'verde', 'verde', 'verde']);
-  assert.equal(notas[0].motivo, MOTIVO_UN_SOLO_MEDIO);
+  exigirMedios(notas);
+  assert.deepEqual(notas.map((n) => n.semaforo), ['amarillo', 'verde', 'amarillo', 'verde', 'verde']);
+  assert.ok(notas[0].motivo.startsWith(MOTIVO_POCO_CONTADA));
+  assert.equal(notas[2].motivo, 'de afuera y poco contada (3 medios; Fútbol pide 4)');
+});
+
+test('si al juntar repetidas una nota llega a los medios que pide, sale; y si la IA le cambió la sección, se vuelve a mirar', () => {
+  const n = { id: 'x', seccion: 'Argentina', semaforo: 'amarillo', motivo: 'de afuera y poco contada (2 medios; Argentina pide 3)', local: false, medios: ['Infobae', 'Clarín', 'TN (Todo Noticias)'] };
+  exigirMedios([n]);
+  assert.equal(n.semaforo, 'verde');
+  assert.equal(n.motivo, 'de afuera, contada por 3 medios');
+  const m = { id: 'y', seccion: 'Fútbol', semaforo: 'verde', local: false, medios: ['Infobae', 'Clarín', 'TN (Todo Noticias)'] };
+  exigirMedios([m]);
+  assert.equal(m.semaforo, 'amarillo', 'la IA la pasó a Fútbol, que pide cuatro');
+  // Lo que espera por otra cosa no se toca.
+  const s = { id: 'z', seccion: 'Argentina', semaforo: 'amarillo', motivo: 'necesita ojo humano: "murió"', local: false, medios: ['A', 'B', 'C', 'D'] };
+  exigirMedios([s]);
+  assert.equal(s.semaforo, 'amarillo');
 });
 
 import { unirGrupos } from '../ingesta/lectura-ia.mjs';

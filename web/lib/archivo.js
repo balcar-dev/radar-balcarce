@@ -18,6 +18,7 @@
 // archivos: generar-datos lo usa y las pruebas lo prueban sin red.
 
 import { slugDe } from './ruta.js';
+import { tieneRespaldo } from './cuerpo.js';
 
 /** Cuánto se queda una nota en las listas del sitio. Es el mismo criterio que
  *  usa el panel para archivar lo que nadie decidió (panel/servidor.mjs,
@@ -167,6 +168,10 @@ export function comoArchivoJson(notas = []) {
  *     sale del archivo y su página deja de existir. Es lo que protege a un
  *     menor o a una víctima si se descubre tarde: no puede quedar una página
  *     vieja dando vueltas.
+ *   · Lo que hoy no cumpliría la regla de las fuentes (de afuera y contado
+ *     por un solo medio: tieneRespaldo) se va, salvo que haya salido en las
+ *     redes, donde su enlace circula. Son las notas de antes del cruce de
+ *     medios (27/09): el 27/09 eran 1.069 de 1.614 páginas.
  *   · Más de 180 días, o pasado el tope, se va.
  */
 export function actualizarArchivo({
@@ -187,6 +192,7 @@ export function actualizarArchivo({
   const corte = Number(ahora) - dias * 24 * HORA;
   let notas = [...porId.values()]
     .map((n) => (enRedes.has(n.id) || n.redes ? { ...n, redes: true } : n))
+    .filter((n) => n.redes || tieneRespaldo(n))
     .filter((n) => !Number.isFinite(tiempo(n)) || tiempo(n) >= corte)
     .sort(porFecha);
 

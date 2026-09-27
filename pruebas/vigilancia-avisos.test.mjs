@@ -33,10 +33,10 @@ test('pendientes: sólo las amarillas sin decidir; nunca una roja ni una verde',
   assert.deepEqual(r.map((p) => p.id), ['a']);
 });
 
-test('pendientes: el relleno de afuera (poco puntaje, cupo) no es para una persona', () => {
+test('pendientes: el relleno de afuera (pocos medios, cupo) no es para una persona', () => {
   const r = pendientesDeLaIngesta([
-    deIngesta('a', { motivo: 'de afuera y con poco puntaje (40 de 50)' }),
-    deIngesta('b', { motivo: 'pasó el cupo de País de afuera (3 por vuelta)' }),
+    deIngesta('a', { motivo: 'de afuera y poco contada (2 medios; Argentina pide 3)' }),
+    deIngesta('b', { motivo: 'pasó el cupo de Argentina de afuera (12 a la vez)' }),
     deIngesta('c', { motivo: 'necesita ojo humano: "murió"' }),
   ], {}, A('12:00'));
   assert.deepEqual(r.map((p) => p.id), ['c']);

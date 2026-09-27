@@ -12,7 +12,7 @@ import { CUPO_DE_AFUERA } from '../ingesta/fuentes.mjs';
 
 const {
   normalizar, parecido, sentenciar, esDeBalcarce, figuraQueNombra,
-  clasificar, semaforo, limpiarCopete, relevancia, idDe, parsearScrape, pisoDe,
+  clasificar, semaforo, limpiarCopete, relevancia, idDe, parsearScrape, mediosMinimosDe,
 } = paraPruebas;
 
 /** Una nota mínima, para no repetir diez campos en cada prueba. */
@@ -305,33 +305,35 @@ test('un descenso de temperatura no es un descenso de categoría', () => {
   assert.equal(clasificar(frio), 'Argentina');
 });
 
-// ------------------------------------------------ el piso para lo de afuera
+// ------------------- lo de afuera: cuántos medios lo cuentan (el cruce, 27/09)
 
 test('lo de Balcarce sale solo aunque puntúe poco', () => {
   const local = nota({ titulo: 'Arreglan una vereda en el centro', local: true });
   assert.equal(semaforo(local, 'Balcarce', 20).color, 'verde');
 });
 
-test('lo de afuera con poco puntaje espera', () => {
-  // El 20/09 "Turismo invita a recorrer los parajes rurales de Lobería" (10
-  // puntos) salía sola mientras la caravana del campeón balcarceño (100)
-  // esperaba aprobación.
+test('lo de afuera que cuentan pocos medios espera, por más puntaje que tenga', () => {
+  // Hasta el cruce decidía el puntaje. Desde el 27/09, cuántos medios lo
+  // cuentan: el puntaje viejo frenaba a Ailín Pérez (9 medios) y dejaba pasar
+  // notas de dos.
   const afuera = nota({ titulo: 'Boca derrota a San Lorenzo', alcance: 'pais', local: false });
-  const s = semaforo(afuera, 'Deportes', 37);
+  const s = semaforo(afuera, 'Fútbol', 95, 3);
   assert.equal(s.color, 'amarillo');
-  assert.match(s.motivo, /poco puntaje/);
+  assert.equal(s.motivo, 'de afuera y poco contada (3 medios; Fútbol pide 4)');
+  assert.equal(semaforo(afuera, 'Fútbol', 20, 4).color, 'verde', 'con los medios, el puntaje no frena');
 });
 
-test('lo de afuera con buen puntaje sale igual', () => {
-  const messi = nota({ titulo: 'Messi metió dos goles en Inter Miami', alcance: 'pais', local: false });
-  assert.equal(semaforo(messi, 'Deportes', 89).color, 'verde');
+test('lo que nombra a una figura argentina pide dos medios', () => {
+  const messi = nota({ titulo: 'Messi metió dos goles en Inter Miami', alcance: 'pais', local: false, figura: 'Messi' });
+  assert.equal(semaforo(messi, 'Fútbol', 50, 2).color, 'verde');
+  assert.equal(semaforo(messi, 'Fútbol', 90, 1).color, 'amarillo', 'nunca con un solo medio');
 });
 
-test('el automovilismo no tiene piso', () => {
-  // Es la ciudad de Fangio. Con el piso puesto, las notas de Fórmula 1
-  // quedaban justo abajo (48 de 50) y la sección se vaciaba.
+test('el automovilismo pide dos medios, no un puntaje', () => {
+  // Es la ciudad de Fangio: pide lo mínimo de afuera, dos medios.
   const f1 = nota({ titulo: 'El complicado arte de frenar en la Fórmula 1', alcance: 'pais', local: false });
-  assert.equal(semaforo(f1, 'Automovilismo', 48).color, 'verde');
+  assert.equal(semaforo(f1, 'Automovilismo', 20, 2).color, 'verde');
+  assert.equal(semaforo(f1, 'Automovilismo', 90, 1).color, 'amarillo');
 });
 
 test('el piso no pisa a las reglas de arriba', () => {
@@ -387,23 +389,26 @@ test('la política de todos los días ya no espera', () => {
   assert.notEqual(semaforo(nota({ titulo: 'Denuncian al intendente por irregularidades', local: true }), 'Política', 90).color, 'verde');
 });
 
-test('Economía y Tecnología también salen solas', () => {
+test('Economía y Tecnología también salen solas, con dos medios', () => {
   const e = nota({ titulo: 'El dólar cerró en alza', alcance: 'pais', local: false });
-  assert.equal(semaforo(e, 'Economía', 45).color, 'verde');
+  assert.equal(semaforo(e, 'Economía', 45, 2).color, 'verde');
   const t = nota({ titulo: 'Nueva herramienta de inteligencia artificial', alcance: 'pais', local: false });
-  assert.equal(semaforo(t, 'Tecnología', 45).color, 'verde');
+  assert.equal(semaforo(t, 'Tecnología', 45, 2).color, 'verde');
 });
 
-// ------------------------------------------------ pisos y cupos por sección
+// ------------------------------------ medios y cupos por sección
 
-test('el piso de Deportes es más alto que el de las demás', () => {
-  // Deportes es casi un tercio de todo lo que entra y no define a un medio
-  // de Balcarce. Una nota de afuera con 55 puntos sale en Economía y espera
-  // en Deportes.
+test('Fútbol y Deportes piden más medios que las secciones flacas', () => {
+  // Son un tercio de todo lo que entra y no definen a un medio de Balcarce.
+  // Tres medios alcanzan en Economía; en Fútbol, no.
   const afuera = (titulo) => nota({ titulo, alcance: 'pais', local: false });
-  assert.equal(semaforo(afuera('Boca ganó en la Bombonera'), 'Deportes', 55).color, 'amarillo');
-  assert.equal(semaforo(afuera('El BCRA subió la tasa'), 'Economía', 55).color, 'verde');
-  assert.ok(pisoDe('Deportes') > pisoDe('Economía'));
+  assert.equal(semaforo(afuera('Boca ganó en la Bombonera'), 'Fútbol', 90, 3).color, 'amarillo');
+  assert.equal(semaforo(afuera('El BCRA subió la tasa'), 'Economía', 40, 2).color, 'verde');
+  assert.ok(mediosMinimosDe('Fútbol') > mediosMinimosDe('Economía'));
+  assert.ok(mediosMinimosDe('Deportes') > mediosMinimosDe('Argentina'));
+  for (const s of ['Economía', 'Tecnología', 'Agro', 'Automovilismo', 'Argentina', 'Política', 'Fútbol', 'Deportes', 'Cultura y agenda']) {
+    assert.ok(mediosMinimosDe(s) >= 2, `${s}: de afuera nunca con un solo medio`);
+  }
 });
 
 test('el cupo se queda con las de más puntaje', () => {

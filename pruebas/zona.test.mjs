@@ -20,19 +20,37 @@ test('"el Papa" no es la papa, y una ruta cualquiera no es la zona', () => {
   assert.equal(tocaLaZona(nota('Choque en la ruta 2260')), false);
 });
 
-test('las fuentes de región nuevas no tapan lo local: sólo entra lo que importa acá', () => {
+test('las fuentes de región no tapan lo local: pesan poco', () => {
   const nuevas = ['0223', 'eleco', 'lu9', 'qznoticias', 'ecosdiarios', 'lanoticia1', 'diputadosbsas', 'gba', 'ayacuchoaldia'];
   for (const id of nuevas) {
     const f = FUENTES_NACIONALES.find((x) => x.id === id);
     assert.ok(f, `falta ${id}`);
-    assert.equal(f.maxItems, 0, `${id} tiene que entrar sólo si nombra a Balcarce o toca la zona`);
     assert.ok(f.peso <= 16, `${id} pesa demasiado: le ganaría a lo local`);
   }
 });
 
-test('una fuente oficial de afuera nunca tiene maxItems: saltearía el piso', () => {
-  for (const f of FUENTES_NACIONALES.filter((x) => x.oficial)) {
-    assert.equal(f.maxItems ?? 5, 0, `${f.id} es oficial y tiene maxItems`);
+test('lo que cuentan sólo medios de otras ciudades de la zona no se trae; con Balcarce en el título o la zona, sí (27/09)', async () => {
+  // "Algo que sea sólo para Necochea no" (Hernán). Antes del cruce esos
+  // medios tenían maxItems 0 por lo mismo; ahora lo decide el cruce.
+  const { ingestar } = await import('../ingesta/ingesta.mjs');
+  const f = (id, medio, alcance) => ({ id, nombre: medio, medio, url: `https://${id}.test/rss`, tipo: 'rss', alcance, peso: 10 });
+  const fuentes = [f('mdp1', 'Diario A (Mar del Plata)', 'region'), f('mdp2', 'Diario B (Tandil)', 'region'), f('nac1', 'Nacional 1', 'pais')];
+  const item = (t, l) => `<item><title>${t}</title><link>https://x.test/${l}</link><pubDate>${new Date().toUTCString()}</pubDate><description>${t}. Más detalles de la nota.</description></item>`;
+  const feeds = {
+    'https://mdp1.test/rss': [item('Corte de tránsito en la avenida Colón de Mar del Plata por obras', 'a1'), item('Repavimentan la ruta 226 a la altura de Tandil', 'a2'), item('Paro docente nacional de 72 horas en las universidades', 'a3')],
+    'https://mdp2.test/rss': [item('Corte de tránsito en la avenida Colón de Mar del Plata por obras', 'b1'), item('Repavimentan la ruta 226 a la altura de Tandil', 'b2'), item('Paro docente nacional de 72 horas en las universidades', 'b3')],
+    'https://nac1.test/rss': [item('Paro docente nacional de 72 horas en las universidades', 'c3')],
+  };
+  const fetchOriginal = globalThis.fetch;
+  globalThis.fetch = async (url) => ({ ok: true, status: 200, headers: new Map(), text: async () => `<rss><channel>${(feeds[url] ?? []).join('')}</channel></rss>`, arrayBuffer: async () => new TextEncoder().encode(`<rss><channel>${(feeds[url] ?? []).join('')}</channel></rss>`).buffer });
+  try {
+    const r = await ingestar({ fuentes, silencioso: true, memoria: null });
+    const titulos = r.notas.map((n) => n.titulo);
+    assert.ok(!titulos.some((t) => /avenida Colón/.test(t)), 'lo de Mar del Plata que cuentan sólo medios de la zona no entra');
+    assert.ok(titulos.some((t) => /ruta 226/.test(t)), 'la ruta 226 es la zona: entra');
+    assert.ok(titulos.some((t) => /Paro docente/.test(t)), 'lo que cuenta también un medio nacional entra');
+  } finally {
+    globalThis.fetch = fetchOriginal;
   }
 });
 

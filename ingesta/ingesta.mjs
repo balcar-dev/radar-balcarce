@@ -6,7 +6,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import {
-  NOMBRES_PROPIOS, FIGURAS, TEMAS, FARMACIAS_A_MANO, PISO_DE_AFUERA, PISO_POR_DEFECTO, CUPO_DE_AFUERA, CUPO_POR_DEFECTO, BALCARCE, FUENTES, FUENTES_NACIONALES, PALABRAS_LOCALES, PALABRAS_ZONA, REGLAS_SECCION, AMARILLO_MENORES, REGLAS_SEMAFORO, MOTIVO_COTIZACION, MOTIVO_POLICIAL_DE_AFUERA,
+  NOMBRES_PROPIOS, FIGURAS, TEMAS, FARMACIAS_A_MANO, MEDIOS_DE_AFUERA, MEDIOS_POR_DEFECTO, MEDIOS_CON_FIGURA, CUPO_DE_AFUERA, CUPO_POR_DEFECTO, BALCARCE, FUENTES, FUENTES_NACIONALES, PALABRAS_LOCALES, PALABRAS_ZONA, REGLAS_SECCION, AMARILLO_MENORES, REGLAS_SEMAFORO, MOTIVO_COTIZACION, MOTIVO_POLICIAL_DE_AFUERA,
   MOTIVO_INTERNACIONAL, PALABRAS_DE_TECNOLOGIA_EN_EL_TITULO, SECCIONES_QUE_NO_ENTRAN, CONEXION_ARGENTINA,
 } from './fuentes.mjs';
 import { diaDeTurno, fechaEnBalcarce } from './utiles.mjs';
@@ -168,6 +168,23 @@ function haceCuanto(fecha) {
 
 // ------------------------------------------------------------------- parseo
 
+/**
+ * El título de una nota del índice de noticias (news-sitemap). Casi todos los
+ * sitios ponen el título en news:title; La Tecla pone ahí palabras sueltas
+ * ("Vista", "Bicameral seguridad") y el título de verdad en el epígrafe de la
+ * foto (image:caption). El 27/09 esas palabras sueltas se juntaban con otras
+ * notas en el cruce. Si el news:title es de cinco palabras o menos y el
+ * epígrafe es una frase más larga que no es un crédito de foto, va el epígrafe.
+ */
+export function tituloDelSitemap(bloque) {
+  const titulo = sinEtiquetas(etiqueta(bloque, 'news:title'));
+  const epigrafe = sinEtiquetas(etiqueta(bloque, 'image:caption'));
+  const palabras = (s) => s.split(/\s+/).filter(Boolean).length;
+  if (epigrafe && palabras(titulo) <= 5 && palabras(epigrafe) > palabras(titulo) && palabras(epigrafe) >= 6
+    && !/^(foto|fotos|imagen|cr[eé]dito|gentileza)\b/i.test(epigrafe)) return epigrafe;
+  return titulo;
+}
+
 export function parsearFeed(xml, fuente) {
   // El índice de noticias que cada sitio arma para Google (news-sitemap): trae
   // TODO lo del día, no sólo las últimas 10 o 20 notas de un RSS (27/09, para
@@ -177,7 +194,7 @@ export function parsearFeed(xml, fuente) {
       const fechaTexto = etiqueta(b, 'news:publication_date') || etiqueta(b, 'lastmod');
       const fecha = fechaTexto ? new Date(fechaTexto) : new Date();
       return {
-        titulo: sinEtiquetas(etiqueta(b, 'news:title')),
+        titulo: tituloDelSitemap(b),
         enlace: etiqueta(b, 'loc').trim(),
         fecha: Number.isNaN(fecha.getTime()) ? new Date() : fecha,
         cuerpo: '',
@@ -508,12 +525,13 @@ function tituloEsDeTecnologia(titularNormalizado) {
 }
 
 /** La sección, sin "Balcarce" para lo de afuera: si una palabra de cortes u
- *  obras manda a Balcarce una nota que no es de acá, queda por su alcance. */
+ *  obras manda a Balcarce una nota que no es de acá, va a Argentina, la
+ *  sección de lo general de afuera. Región y Provincia no existen desde el
+ *  27/09: eran la ciudad del MEDIO, no del hecho, no son secciones del sitio y
+ *  lo que caía ahí esperaba para siempre a una persona. */
 function clasificar(nota) {
   const s = clasificarPorPalabras(nota);
   if (s !== 'Balcarce' || nota.alcance === 'local' || nota.nombraBalcarce) return s;
-  if (nota.alcance === 'region') return 'Región';
-  if (nota.alcance === 'provincia') return 'Provincia';
   return 'Argentina';
 }
 
@@ -581,14 +599,23 @@ function clasificarSinFutbol(nota) {
   // es de Balcarce, no de "Región" (que no sale sola). El 25/09 el acuerdo
   // salarial del STM con el Municipio, que trajo QZ Noticias, quedaba ahí.
   if (nota.nombraBalcarce) return 'Balcarce';
-  if (nota.alcance === 'region') return 'Región';
-  if (nota.alcance === 'provincia') return 'Provincia';
   return 'Argentina';
 }
 
-// El piso de puntaje para lo de afuera ya no es uno solo: cada sección tiene
-// el suyo (PISO_DE_AFUERA en fuentes.mjs, con el porqué de cada número).
-const pisoDe = (seccion) => PISO_DE_AFUERA[seccion] ?? PISO_POR_DEFECTO;
+/** Cuántos medios distintos tienen que contar una nota de afuera para salir
+ *  sola en esta sección (MEDIOS_DE_AFUERA en ingesta/criterio.mjs, con el
+ *  porqué). Lo que nombra a una figura argentina pide menos. */
+export function mediosMinimosDe(seccion, nota = {}) {
+  if (nota.figura) return Math.min(MEDIOS_CON_FIGURA, MEDIOS_DE_AFUERA[seccion] ?? MEDIOS_POR_DEFECTO);
+  return MEDIOS_DE_AFUERA[seccion] ?? MEDIOS_POR_DEFECTO;
+}
+
+/** Cuántos medios distintos cuentan esta nota. */
+const cuantosMedios = (nota) => new Set((nota?.medios ?? [nota?.medio]).filter(Boolean)).size;
+
+/** El comienzo del motivo con que espera lo de afuera que cuentan pocos medios. */
+export const MOTIVO_POCO_CONTADA = 'de afuera y poco contada';
+const motivoPocoContada = (medios, seccion, minimo) => `${MOTIVO_POCO_CONTADA} (${medios} ${medios === 1 ? 'medio' : 'medios'}; ${seccion} pide ${minimo})`;
 
 /**
  * Las listas roja y amarilla del semáforo, pasadas sobre un texto cualquiera.
@@ -619,7 +646,7 @@ export function semaforoDelTexto(textoCrudo, { soloMenores = false } = {}) {
   return null;
 }
 
-function semaforo(nota, seccion, puntaje) {
+function semaforo(nota, seccion, puntaje, medios = cuantosMedios(nota)) {
   const sensible = semaforoDelTexto(`${nota.titulo} ${nota.cuerpo.slice(0, 600)}`);
   if (sensible) return sensible;
   // La cotización del dólar no sale como nota: está en /dolar. Sólo el título.
@@ -645,13 +672,12 @@ function semaforo(nota, seccion, puntaje) {
   }
   if (nota.oficial) return { color: 'verde', motivo: 'comunicado oficial' };
 
-  // Automovilismo tampoco tiene piso. No es una sección más: es la ciudad
-  // de Fangio y ya se le suman 8 puntos por eso en el puntaje. Con el piso
-  // puesto, las notas de Fórmula 1 quedaban justo abajo (48 de 50) y la
-  // sección se vaciaba.
-  const deAca = nota.local || nota.nombraBalcarce || seccion === 'Automovilismo' || esDeBalcarce(nota);
-  if (!deAca && puntaje < pisoDe(seccion)) {
-    return { color: 'amarillo', motivo: `de afuera y con poco puntaje (${puntaje} de ${pisoDe(seccion)})` };
+  // Lo de afuera sale solo si lo cuentan bastantes medios (27/09, el cruce):
+  // la importancia se mide con cuántos lo cuentan, no con el puntaje.
+  const deAca = nota.local || nota.nombraBalcarce || esDeBalcarce(nota);
+  const minimo = mediosMinimosDe(seccion, nota);
+  if (!deAca && medios < minimo) {
+    return { color: 'amarillo', motivo: motivoPocoContada(medios, seccion, minimo) };
   }
 
   if (REGLAS_SEMAFORO.verdeSecciones.includes(seccion)) return { color: 'verde', motivo: `sección ${seccion}` };
@@ -1125,27 +1151,35 @@ export function aplicarCupos(portada) {
       n.semaforo = 'amarillo';
       n.motivo = cupo === 0
         ? `${n.seccion} de afuera: la sección es sólo de Balcarce y la zona`
-        : `pasó el cupo de ${n.seccion} de afuera (${cupo} por vuelta)`;
+        : `pasó el cupo de ${n.seccion} de afuera (${cupo} a la vez)`;
     }
   }
   return portada;
 }
 
-/** El motivo con que espera una nota de afuera contada por un solo medio. */
-export const MOTIVO_UN_SOLO_MEDIO = 'de afuera con un solo medio: hacen falta dos';
-
 /**
- * Lo de afuera de Balcarce sale solo sólo si lo cuentan dos medios distintos o
- * más (Hernán, 27/09). Una fuente oficial alcanza sola. Lo de Balcarce no pide
- * esto. Se aplica sobre la portada ya armada (y otra vez después de la
- * lectura con IA, que puede decidir que una nota no es de acá). La modifica.
+ * Lo de afuera de Balcarce sale solo sólo si lo cuentan los medios que pide su
+ * sección (mediosMinimosDe; nunca menos de dos: Hernán, 27/09). Una fuente
+ * oficial alcanza sola. Lo de Balcarce no pide esto.
+ *
+ * Se vuelve a mirar después de la lectura con IA, que puede cambiar la
+ * sección, decir que una nota no es de acá o juntar dos notas del mismo hecho
+ * (y así sumar medios). Por eso va en los dos sentidos: lo que ya no llega
+ * espera, y lo que esperaba por pocos medios y ahora llega, sale. Modifica la
+ * portada.
  */
-export function exigirDosMedios(portada) {
+export function exigirMedios(portada) {
   for (const n of portada) {
-    if (n.semaforo !== 'verde' || n.local || n.oficial || n.propia) continue;
-    if (new Set(n.medios ?? []).size >= 2) continue;
-    n.semaforo = 'amarillo';
-    n.motivo = MOTIVO_UN_SOLO_MEDIO;
+    if (n.local || n.oficial || n.propia) continue;
+    const medios = cuantosMedios(n);
+    const minimo = mediosMinimosDe(n.seccion, n);
+    if (n.semaforo === 'verde' && medios < minimo) {
+      n.semaforo = 'amarillo';
+      n.motivo = motivoPocoContada(medios, n.seccion, minimo);
+    } else if (n.semaforo === 'amarillo' && String(n.motivo ?? '').startsWith(MOTIVO_POCO_CONTADA) && medios >= minimo) {
+      n.semaforo = 'verde';
+      n.motivo = `de afuera, contada por ${medios} medios`;
+    }
   }
   return portada;
 }
@@ -1240,12 +1274,23 @@ export async function ingestar({
   const conjunto = [...todas, ...deAntes];
   const grupos = [];
   let deUnSoloMedio = 0;
+  let deOtraCiudad = 0;
   for (const indices of agruparPorHecho(conjunto)) {
     const ns = indices.map((i) => conjunto[i]);
     const locales = ns.filter((n) => n.alcance === 'local');
     const medios = [...new Set(ns.map((n) => n.medio))];
-    if (!locales.length && !ns.some((n) => n.nombraBalcarce || n.deLaZona) && medios.length < 2) {
+    const importaAca = ns.some((n) => n.nombraBalcarce || n.deLaZona);
+    if (!locales.length && !importaAca && medios.length < 2) {
       if (!ns.every((n) => n.deLaMemoria)) deUnSoloMedio += 1;
+      continue;
+    }
+    // Lo que cuentan SÓLO medios de la región (Mar del Plata, Tandil,
+    // Necochea…) es de esas ciudades: sin Balcarce en el título ni la zona
+    // (la 226, la papa), no se trae, ni para esperar a una persona (Hernán,
+    // 27/09: "algo que sea sólo para Necochea no"). Antes del cruce esos
+    // medios tenían maxItems 0 por lo mismo.
+    if (!locales.length && !importaAca && ns.every((n) => n.alcance === 'region')) {
+      if (!ns.every((n) => n.deLaMemoria)) deOtraCiudad += 1;
       continue;
     }
     // La principal (de la que sale el identificador y la dirección de la
@@ -1271,7 +1316,7 @@ export async function ingestar({
   }
   if (memoria) guardarMemoria(memoria, memoriaAntes, todas.filter((n) => n.alcance !== 'local'));
   log(`
-  cruce: ${conjunto.length} notas (${deAntes.length} de la memoria) · ${grupos.length} historias · ${deUnSoloMedio} de afuera con un solo medio no entran`);
+  cruce: ${conjunto.length} notas (${deAntes.length} de la memoria) · ${grupos.length} historias · ${deUnSoloMedio} de afuera con un solo medio y ${deOtraCiudad} de otra ciudad de la zona no entran`);
 
   // 3. Clasificar, semáforo y relevancia
   //
@@ -1286,7 +1331,7 @@ export async function ingestar({
   const portada = sinPolicialesDeAfuera.map((g) => {
     const seccion = clasificar(g.principal);
     const rel = relevancia(g.principal, seccion, g.medios.length);
-    const sem = semaforo(g.principal, seccion, rel);
+    const sem = semaforo(g.principal, seccion, rel, g.medios.length);
     return {
       // Con el enlace del feed si lo hay (Blogger): así el identificador es el
       // mismo que antes de que el enlace pasara a ser la página de la nota.
@@ -1334,14 +1379,13 @@ export async function ingestar({
 
   // 3b. El cupo de lo de afuera.
   //
-  // El piso solo no alcanza: un domingo de fútbol tiene treinta notas arriba
-  // de 62 puntos y la portada de Balcarce sería la de Olé. Por sección, las
-  // de afuera que salen solas son las N de más puntaje; el resto espera.
-  // Lo de Balcarce no entra en la cuenta. Automovilismo sí, desde el 25/09.
-  // Primero lo de afuera con dos medios o más (Hernán, 27/09) y DESPUÉS los
-  // cupos: al revés, los lugares de cada sección se los llevaban notas de un
-  // solo medio que después quedaban frenadas, y las de dos medios no entraban.
-  exigirDosMedios(portada);
+  // Los medios solos no alcanzan: un domingo de fútbol tiene treinta historias
+  // que cuentan cuatro medios y la portada de Balcarce sería la de Olé. Por
+  // sección, las de afuera que salen solas son las N de más puntaje; el resto
+  // espera. Lo de Balcarce no entra en la cuenta. Primero la regla de medios
+  // y DESPUÉS los cupos: al revés, los lugares de cada sección se los llevaban
+  // notas que después quedaban frenadas.
+  exigirMedios(portada);
   aplicarCupos(portada);
 
   // 4. Clima y farmacias
@@ -1528,7 +1572,7 @@ export const paraPruebas = {
   idDe, normalizar, parecido, sentenciar, esDeBalcarce, figuraQueNombra,
   clasificar, semaforo, limpiarCopete, relevancia, meta, parsearScrape,
   cieloDeSimbolo, haceCuanto, sinEtiquetas, decodificar,
-  clavesDe, anotar, buscarFarmacia, directorioDeLaVanguardia, pisoDe,
+  clavesDe, anotar, buscarFarmacia, directorioDeLaVanguardia, mediosMinimosDe,
   contiene, cruzarFarmacias, controlDelCronograma, tocaLaZona, tituloEsDeTecnologia,
   motivoDeDescarte, esPolicialDeAfuera,
 };

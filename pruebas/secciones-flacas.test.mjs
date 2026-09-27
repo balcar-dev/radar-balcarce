@@ -5,7 +5,8 @@
 //
 //   1. que las fuentes nuevas estén bien formadas y no le ganen a lo local;
 //   2. que sus títulos reales caigan en la sección que se busca;
-//   3. que el piso y el cupo nuevos hagan lo que dice CRITERIO-EDITORIAL.md;
+//   3. que los medios que pide y el cupo de cada sección hagan lo que dice
+//      CRITERIO-EDITORIAL.md (desde el 27/09 medios, no un piso de puntaje);
 //   4. que el semáforo siga mandando (lo sensible y lo internacional esperan);
 //   5. que la IA gaste primero en la sección con menos notas escritas.
 //
@@ -16,11 +17,11 @@ import assert from 'node:assert/strict';
 import { TODAS_LAS_FUENTES, paraPruebas, aplicarCupos } from '../ingesta/ingesta.mjs';
 import { MOTIVO_INTERNACIONAL, MOTIVO_POLICIAL_DE_AFUERA, REGLAS_SEMAFORO } from '../ingesta/fuentes.mjs';
 import {
-  PISO_DE_AFUERA, CUPO_DE_AFUERA, CUPO_POR_DEFECTO, PISO_POR_DEFECTO,
+  MEDIOS_DE_AFUERA, MEDIOS_POR_DEFECTO, CUPO_DE_AFUERA, CUPO_POR_DEFECTO,
 } from '../ingesta/criterio.mjs';
 import { ordenarParaReescribir } from '../reels/reescritura.mjs';
 
-const { clasificar, semaforo, pisoDe } = paraPruebas;
+const { clasificar, semaforo, mediosMinimosDe } = paraPruebas;
 
 const NUEVAS = {
   'infobae-teleshow': 'Cultura y agenda',
@@ -50,11 +51,9 @@ test('las 13 fuentes nuevas están bien formadas y pesan poco', () => {
     assert.ok(['rss', 'atom'].includes(f.tipo), `${id}: tipo raro (${f.tipo})`);
     assert.ok(f.peso <= 16, `${id} pesa ${f.peso}: le ganaría a lo local`);
     assert.ok(f.peso >= 10, `${id} pesa ${f.peso}: el resto de las de afuera va de 10 a 16`);
-    assert.ok(Number.isInteger(f.maxItems) && f.maxItems >= 1 && f.maxItems <= 3,
-      `${id}: maxItems tiene que estar definido y ser chico (1 a 3)`);
     assert.equal(f.alcance, 'pais', `${id}: es un medio nacional`);
     assert.equal(f.seccion, seccion, `${id}: la sección fija es ${seccion}`);
-    assert.ok(!f.oficial, `${id}: con oficial y maxItems saltearía el piso`);
+    assert.ok(!f.oficial, `${id}: con oficial saldría sola sin que la cuente otro medio`);
     assert.ok(f.nombre && f.medio && Array.isArray(f.temas) && f.temas.length, `${id}: le falta nombre, medio o temas`);
   }
 });
@@ -102,19 +101,20 @@ test('Tecnología: se confirma con el título, así que un reloj deportivo no es
   assert.notEqual(clasificar(tec('Dos nuevos relojes para el deporte extremo con GPS y pantalla solar')), 'Tecnología');
 });
 
-// ------------------------------------------------- 3. el piso y el cupo nuevos
+// ------------------------------------- 3. los medios y el cupo de cada sección
 
-test('los pisos y cupos nuevos son los que dice el criterio', () => {
-  assert.equal(PISO_DE_AFUERA['Cultura y agenda'], 38);
-  assert.equal(PISO_DE_AFUERA.Agro, 38);
-  assert.equal(PISO_DE_AFUERA.Tecnología, 34);
+test('los medios que pide y los cupos son los que dice el criterio', () => {
+  // Las flacas (Tecnología, Agro, Economía) piden dos; las que se inundan
+  // (Fútbol, Deportes), cuatro; el resto, tres (27/09, con el cruce).
+  assert.equal(MEDIOS_DE_AFUERA.Tecnología, 2);
+  assert.equal(MEDIOS_DE_AFUERA.Agro, 2);
+  assert.equal(MEDIOS_DE_AFUERA.Fútbol, 4);
+  assert.equal(MEDIOS_DE_AFUERA.Deportes, 4);
+  assert.equal(mediosMinimosDe('Cultura y agenda'), MEDIOS_POR_DEFECTO);
+  assert.equal(MEDIOS_POR_DEFECTO, 3);
   assert.equal(CUPO_DE_AFUERA['Cultura y agenda'], 8);
-  // Lo que no se tocó: Deportes sigue subiendo. Policiales de afuera: cupo 0 (26/09).
-  assert.equal(PISO_DE_AFUERA.Deportes, 62);
-  assert.equal(PISO_DE_AFUERA.Policiales, 40);
+  assert.equal(CUPO_DE_AFUERA.Fútbol, 10);
   assert.equal(CUPO_DE_AFUERA.Policiales, 0);
-  assert.equal(pisoDe('Cultura y agenda'), 38);
-  assert.equal(pisoDe('Servicios'), PISO_POR_DEFECTO);
 });
 
 const deAfuera = (titulo, seccion, extra = {}) => ({
@@ -122,12 +122,12 @@ const deAfuera = (titulo, seccion, extra = {}) => ({
   fecha: new Date(), imagen: 'https://x/y.jpg', local: false, nombraBalcarce: false, ...extra, seccionFuente: seccion,
 });
 
-test('una nota fresca de espectáculos de afuera (unos 45 puntos) sale sola; con 36 espera', () => {
+test('una nota de espectáculos de afuera sale sola si la cuentan tres medios; con dos espera', () => {
   const n = deAfuera('Lali Espósito y su tercer River: todo lo que hay que saber para el show del sábado', 'Cultura y agenda');
-  assert.equal(semaforo(n, 'Cultura y agenda', 45).color, 'verde');
-  const s = semaforo(n, 'Cultura y agenda', 36);
+  assert.equal(semaforo(n, 'Cultura y agenda', 30, 3).color, 'verde');
+  const s = semaforo(n, 'Cultura y agenda', 90, 2);
   assert.equal(s.color, 'amarillo');
-  assert.match(s.motivo, /poco puntaje \(36 de 38\)/);
+  assert.equal(s.motivo, 'de afuera y poco contada (2 medios; Cultura y agenda pide 3)');
 });
 
 test('el cupo de Cultura y agenda de afuera es 8: la nota 9 espera, y Balcarce no cuenta', () => {
@@ -138,7 +138,7 @@ test('el cupo de Cultura y agenda de afuera es 8: la nota 9 espera, y Balcarce n
   portada.push({ id: 'local', seccion: 'Cultura y agenda', semaforo: 'verde', local: true, nombraBalcarce: false });
   aplicarCupos(portada);
   assert.equal(portada.filter((n) => n.semaforo === 'verde').length, 8 + 1);
-  assert.match(portada[8].motivo, /cupo de Cultura y agenda de afuera \(8 por vuelta\)/);
+  assert.match(portada[8].motivo, /cupo de Cultura y agenda de afuera \(8 a la vez\)/);
   assert.equal(portada.at(-1).semaforo, 'verde');
   assert.ok(CUPO_DE_AFUERA['Cultura y agenda'] < CUPO_POR_DEFECTO);
 });
@@ -180,10 +180,10 @@ test('un crimen de otro lugar, de un feed policial, no sale solo: "Mató a su mu
   assert.equal(s.motivo, MOTIVO_POLICIAL_DE_AFUERA);
 });
 
-test('un policial neutro de afuera con puntaje alcanza; con poco puntaje, no', () => {
+test('un policial neutro de afuera pasa el semáforo si lo cuentan tres medios (después el cupo 0 lo frena)', () => {
   const n = deAfuera('Hallaron más de 1.500 kilos de marihuana ocultos entre muebles en un camión proveniente de Brasil', 'Policiales', { cuerpo: 'Un cargamento en una ruta de Misiones.' });
-  assert.equal(semaforo(n, 'Policiales', 45).color, 'verde');
-  assert.equal(semaforo(n, 'Policiales', 38).color, 'amarillo');
+  assert.equal(semaforo(n, 'Policiales', 45, 3).color, 'verde');
+  assert.equal(semaforo(n, 'Policiales', 90, 2).color, 'amarillo');
 });
 
 test('la regla de policiales de afuera no toca lo de Balcarce ni otras secciones', () => {

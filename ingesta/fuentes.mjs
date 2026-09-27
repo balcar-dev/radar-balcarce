@@ -17,10 +17,11 @@ export const BALCARCE = {
 //   (nivelDeVerificacion en reels/reescritura.mjs). No cambia el peso.
 // ciudad: de dónde es el medio (V2.2, 27/09). Las de Balcarce no la llevan
 //   (es Balcarce) y las nacionales tampoco (es "nacional"): ver fichaDeFuente.
-// uso: 'senal' en los feeds generales de los diarios nacionales (V2.2): traen
-//   de todo, así que sus notas no se publican solas; sólo cuentan cuántos
-//   medios cuentan una misma historia. Lo que dice Balcarce en el título sí
-//   entra. Sin `uso`, la fuente es candidata.
+// Desde el cruce de medios (27/09) todas las fuentes de afuera cumplen el
+//   mismo papel: todo lo que traen entra al cruce, y lo que sale es lo que
+//   cuentan los medios que pide su sección (ingesta/criterio.mjs,
+//   MEDIOS_DE_AFUERA). Ya no hay fuentes "de señal" ni un máximo de notas por
+//   fuente (`uso` y `maxItems`, que decidían eso antes del cruce).
 export const FUENTES = [
   {
     id: 'newsbalcarce',
@@ -153,43 +154,37 @@ export const FUENTES = [
 ];
 
 // --- Nacionales y temáticas, ya probadas y vivas -------------------------
-// De estas fuentes NO se toma todo: entra lo que menciona a Balcarce (siempre)
-// más las `maxItems` más recientes, para tener la sección País sin inundarse.
+// Entra todo al cruce; de afuera sale lo que dice Balcarce en el título y lo
+// que cuentan los medios que pide su sección (MEDIOS_DE_AFUERA).
 export const FUENTES_NACIONALES = [
   {
     id: 'infobae',
-    uso: 'senal', // V2.2: sólo cuenta cobertura; sus notas no se publican solas
     nombre: 'Infobae',
     medio: 'Infobae',
     url: 'https://www.infobae.com/arc/outboundfeeds/rss/?outputType=xml',
     tipo: 'rss',
     alcance: 'pais',
     peso: 8,
-    maxItems: 6,
     temas: ['nacionales', 'general'],
   },
   {
     id: 'lanacion',
-    uso: 'senal', // V2.2: sólo cuenta cobertura
     nombre: 'La Nación',
     medio: 'La Nación',
     url: 'https://www.lanacion.com.ar/arc/outboundfeeds/rss/?outputType=xml',
     tipo: 'rss',
     alcance: 'pais',
     peso: 8,
-    maxItems: 5,
     temas: ['nacionales', 'general'],
   },
   {
     id: 'clarin',
-    uso: 'senal', // V2.2: sólo cuenta cobertura
     nombre: 'Clarín · Lo último',
     medio: 'Clarín',
     url: 'https://www.clarin.com/rss/lo-ultimo/',
     tipo: 'rss',
     alcance: 'pais',
     peso: 8,
-    maxItems: 5,
     temas: ['nacionales', 'general'],
   },
   {
@@ -201,7 +196,6 @@ export const FUENTES_NACIONALES = [
     alcance: 'pais',
     seccion: 'Fútbol',
     peso: 8,
-    maxItems: 5,
     temas: ['deportes', 'fútbol'],
   },
   {
@@ -213,7 +207,6 @@ export const FUENTES_NACIONALES = [
     alcance: 'pais',
     seccion: 'Deportes',
     peso: 7,
-    maxItems: 4,
     temas: ['deportes'],
   },
   {
@@ -225,7 +218,6 @@ export const FUENTES_NACIONALES = [
     tipo: 'rss',
     alcance: 'region',
     peso: 10,
-    maxItems: 4,
     temas: ['región', 'agro', 'policiales', 'política'],
     nota: 'Cubre Necochea, Lobería, San Cayetano, Balcarce y Tandil. Primera fuente de región que funciona: las otras cuatro probadas (La Capital MdP, El Retrato de Hoy, 0223, La Noticia 1) fallaron.',
   },
@@ -235,10 +227,12 @@ export const FUENTES_NACIONALES = [
   // (qué medios de afuera nombraron a Balcarce en 30 días, con Google Noticias
   // como radar) y todas respondieron ese día.
   //
-  // maxItems: 0 = de estas fuentes SÓLO entra lo que nombra a Balcarce
-  // (PALABRAS_LOCALES), a una FIGURA, o toca la zona (PALABRAS_ZONA). Pesos
-  // bajos a propósito: lo que nombra a Balcarce ya suma +25 y +22, y con más
-  // peso una nota de Mar del Plata le ganaría a una de acá.
+  // Lo que cuentan SÓLO estos medios (la ciudad de cada uno) no se trae,
+  // salvo que diga Balcarce en el título o toque la zona (PALABRAS_ZONA): el
+  // cruce lo deja afuera (ingesta.mjs, "de otra ciudad de la zona"). Sí cuentan
+  // como un medio más cuando cuentan lo mismo que los nacionales. Pesos bajos
+  // a propósito: lo que nombra a Balcarce ya suma +25 y +22, y con más peso una
+  // nota de Mar del Plata le ganaría a una de acá.
   // Siete medios de la región usan la misma plataforma (<medio>apiv3.eleco.com.ar):
   // si ese servidor se cae, se caen juntos.
   {
@@ -250,7 +244,6 @@ export const FUENTES_NACIONALES = [
     tipo: 'rss',
     alcance: 'region',
     peso: 12,
-    maxItems: 0,
     temas: ['región', 'mar del plata', 'rutas'],
     nota: 'El medio de afuera que más nombra a Balcarce (autódromo, ruta 226, sudeste). ~150 notas por día: sin filtro taparía todo. /rss/pages/home.xml viene vacío; /rss anda.',
   },
@@ -263,7 +256,6 @@ export const FUENTES_NACIONALES = [
     tipo: 'atom',
     alcance: 'region',
     peso: 12,
-    maxItems: 0,
     temas: ['región', 'tandil', 'rutas'],
     nota: 'Tandil y la ruta 226 Tandil–Balcarce. El feed lo publica la plataforma de El Eco (el link rel=alternate de su portada).',
   },
@@ -276,7 +268,6 @@ export const FUENTES_NACIONALES = [
     tipo: 'atom',
     alcance: 'region',
     peso: 12,
-    maxItems: 0,
     temas: ['región', 'mar del plata'],
     nota: 'Radio de Mar del Plata con entrevistas propias (el 25/09, a Reino por el autódromo). Misma plataforma que El Eco.',
   },
@@ -289,7 +280,6 @@ export const FUENTES_NACIONALES = [
     tipo: 'atom',
     alcance: 'region',
     peso: 12,
-    maxItems: 0,
     temas: ['región', 'mar del plata', 'gremiales'],
     nota: 'El 25/09 trajo el acuerdo salarial STM–Municipio de Balcarce, que no publicó ningún medio local.',
   },
@@ -302,7 +292,6 @@ export const FUENTES_NACIONALES = [
     tipo: 'atom',
     alcance: 'region',
     peso: 11,
-    maxItems: 0,
     temas: ['región', 'necochea', 'lobería'],
     nota: 'El que más cubre Lobería. El dominio viejo (ecosdiariosweb.com.ar) corta la conexión.',
   },
@@ -315,7 +304,6 @@ export const FUENTES_NACIONALES = [
     tipo: 'rss',
     alcance: 'provincia',
     peso: 12,
-    maxItems: 0,
     temas: ['provincia', 'interior bonaerense'],
     nota: 'Agencia de noticias del interior bonaerense; la levantan decenas de diarios. Sólo lo que nombra a Balcarce o toca la zona: con dos por vuelta entraba "Edición impresa del día" y la sección Provincia no sale sola.',
   },
@@ -328,7 +316,6 @@ export const FUENTES_NACIONALES = [
     tipo: 'atom',
     alcance: 'provincia',
     peso: 11,
-    maxItems: 0,
     temas: ['provincia'],
     nota: 'Interior bonaerense. La URL vieja (/rss) no andaba; el feed real es el de la plataforma de El Eco.',
   },
@@ -341,7 +328,6 @@ export const FUENTES_NACIONALES = [
     tipo: 'rss',
     alcance: 'provincia',
     peso: 11,
-    maxItems: 0,
     temas: ['legislatura', 'política provincial'],
     nota: 'Legislatura bonaerense. Sólo entra cuando nombra a Balcarce (proyectos, legisladores de la sección).',
   },
@@ -354,10 +340,9 @@ export const FUENTES_NACIONALES = [
     tipo: 'rss',
     alcance: 'provincia',
     peso: 14,
-    maxItems: 0,
     oficial: true,
     temas: ['oficial', 'provincia'],
-    nota: 'Sólo trae discursos del gobernador. oficial + maxItems 0: sale únicamente lo que nombra a Balcarce o toca la zona. NO subir maxItems con oficial: true (saltearía el piso).',
+    nota: 'Sólo trae discursos del gobernador. Es oficial: lo que dice Balcarce en el título o toca la zona sale solo; lo demás, sólo si lo cuentan otros medios (el cruce).',
   },
   {
     id: 'loberia2261',
@@ -368,7 +353,6 @@ export const FUENTES_NACIONALES = [
     tipo: 'rss',
     alcance: 'region',
     peso: 10,
-    maxItems: 1,
     temas: ['región', 'lobería', 'rural'],
     nota: 'Partido vecino. Una por vuelta: obras, rutas, sociedades rurales.',
   },
@@ -381,7 +365,6 @@ export const FUENTES_NACIONALES = [
     tipo: 'rss',
     alcance: 'region',
     peso: 10,
-    maxItems: 0,
     temas: ['región', 'ayacucho'],
     nota: 'Partido vecino, pero mezcla notas de toda la provincia: sólo lo que nombra a Balcarce o toca la zona.',
   },
@@ -400,7 +383,6 @@ export const FUENTES_NACIONALES = [
     seccion: 'Agro',
     prefijoTitulo: 'Argentina:',
     peso: 16,
-    maxItems: 3,
     temas: ['agro', 'papa'],
     nota: 'Balcarce es capital nacional de la papa y nadie de la zona cubre el negocio (precios, semilla, industria, importaciones). Sin feed: se lee la sección Argentina.',
   },
@@ -413,7 +395,6 @@ export const FUENTES_NACIONALES = [
     alcance: 'pais',
     seccion: 'Automovilismo',
     peso: 12, // en la ciudad de Fangio, el automovilismo pesa más
-    maxItems: 6,
     temas: ['automovilismo'],
   },
   // ------------------------------------------------ deporte que no es fútbol
@@ -436,7 +417,6 @@ export const FUENTES_NACIONALES = [
     tipo: 'rss',
     alcance: 'pais',
     peso: 15,
-    maxItems: 4,
     temas: ['automovilismo', 'formula 1'],
     nota: 'F1 en castellano, todos los días. Lo que no cubre nadie en la zona.',
   },
@@ -448,7 +428,6 @@ export const FUENTES_NACIONALES = [
     tipo: 'rss',
     alcance: 'pais',
     peso: 14,
-    maxItems: 2,
     temas: ['automovilismo', 'motociclismo'],
     nota: 'MotoGP. Poco volumen a propósito: es para no tener sólo autos.',
   },
@@ -460,7 +439,6 @@ export const FUENTES_NACIONALES = [
     tipo: 'rss',
     alcance: 'pais',
     peso: 16,
-    maxItems: 3,
     temas: ['deportes'],
     nota: 'Para rugby, tenis, hockey y atletismo: lo que Olé no cubre porque va todo a fútbol.',
   },
@@ -471,31 +449,27 @@ export const FUENTES_NACIONALES = [
   // Balcarce o a un balcarceño desde afuera (ahí el filtro de alcance deja
   // pasar todo y la relevancia suma 22 puntos).
   //
-  // Pesos bajos y maxItems chicos a propósito: si empatan con lo local,
-  // dejamos de ser un medio de Balcarce.
+  // Pesos bajos a propósito: si empatan con lo local, dejamos de ser un
+  // medio de Balcarce.
   {
     id: 'ambito',
-    uso: 'senal', // V2.2: sólo cuenta cobertura
     nombre: 'Ámbito',
     medio: 'Ámbito',
     url: 'https://www.ambito.com/rss/pages/ultimas-noticias.xml',
     tipo: 'rss',
     alcance: 'pais',
     peso: 15,
-    maxItems: 3,
     temas: ['economia', 'pais'],
     nota: 'Economía y últimas noticias. Es la sección que más le pega al bolsillo.',
   },
   {
     id: 'minutouno',
-    uso: 'senal', // V2.2: sólo cuenta cobertura
     nombre: 'Minuto Uno',
     medio: 'Minuto Uno',
     url: 'https://www.minutouno.com/rss/pages/home.xml',
     tipo: 'rss',
     alcance: 'pais',
     peso: 13,
-    maxItems: 3,
     temas: ['pais', 'espectaculos'],
   },
   {
@@ -506,7 +480,6 @@ export const FUENTES_NACIONALES = [
     tipo: 'rss',
     alcance: 'pais',
     peso: 15,
-    maxItems: 3,
     seccion: 'Economía',
     temas: ['economia'],
   },
@@ -518,8 +491,7 @@ export const FUENTES_NACIONALES = [
   //
   // Van con `seccion` fija: el feed ya viene separado por tema y es más
   // confiable que adivinar por palabras. Los pesos son parejos y bajos a
-  // propósito — que un medio de Balcarce no se vuelva una copia de Infobae —
-  // y `maxItems` chico, porque estas tres fuentes tiran cien notas por vuelta.
+  // propósito: que un medio de Balcarce no se vuelva una copia de Infobae.
   {
     id: 'infobae-tecno',
     nombre: 'Infobae · Tecnología',
@@ -529,7 +501,6 @@ export const FUENTES_NACIONALES = [
     alcance: 'pais',
     seccion: 'Tecnología',
     peso: 14,
-    maxItems: 4,
     temas: ['tecnologia'],
   },
   {
@@ -541,7 +512,6 @@ export const FUENTES_NACIONALES = [
     alcance: 'pais',
     seccion: 'Tecnología',
     peso: 14,
-    maxItems: 3,
     temas: ['tecnologia'],
   },
   {
@@ -553,7 +523,6 @@ export const FUENTES_NACIONALES = [
     alcance: 'pais',
     seccion: 'Tecnología',
     peso: 13,
-    maxItems: 3,
     temas: ['tecnologia'],
   },
   {
@@ -565,7 +534,6 @@ export const FUENTES_NACIONALES = [
     alcance: 'pais',
     seccion: 'Economía',
     peso: 14,
-    maxItems: 4,
     temas: ['economia'],
   },
   {
@@ -577,7 +545,6 @@ export const FUENTES_NACIONALES = [
     alcance: 'pais',
     seccion: 'Economía',
     peso: 14,
-    maxItems: 3,
     temas: ['economia'],
   },
   {
@@ -589,7 +556,6 @@ export const FUENTES_NACIONALES = [
     alcance: 'pais',
     seccion: 'Economía',
     peso: 14,
-    maxItems: 3,
     temas: ['economia'],
   },
   {
@@ -601,7 +567,6 @@ export const FUENTES_NACIONALES = [
     alcance: 'pais',
     seccion: 'Política',
     peso: 13,
-    maxItems: 3,
     temas: ['politica'],
   },
   {
@@ -613,7 +578,6 @@ export const FUENTES_NACIONALES = [
     alcance: 'pais',
     seccion: 'Política',
     peso: 13,
-    maxItems: 3,
     temas: ['politica'],
   },
   {
@@ -625,7 +589,6 @@ export const FUENTES_NACIONALES = [
     alcance: 'pais',
     seccion: 'Política',
     peso: 13,
-    maxItems: 3,
     temas: ['politica'],
   },
   // --- Secciones flacas: más fuentes y lo que le gusta a la gente (26/09) ------
@@ -637,8 +600,8 @@ export const FUENTES_NACIONALES = [
   // respondieron con notas de las últimas horas.
   //
   // Todas van con `seccion` fija (el feed ya viene separado por tema) y con
-  // pesos bajos (11 a 14) y `maxItems` chico: lo local sigue ganando. Lo que
-  // frena lo de afuera es el piso y el cupo de cada sección (criterio.mjs), y
+  // pesos bajos (11 a 14): lo local sigue ganando. Lo que frena lo de afuera
+  // son los medios que pide y el cupo de cada sección (criterio.mjs), y
   // el semáforo manda igual: lo sensible sigue esperando a una persona, y lo
   // internacional sin relación con Balcarce, también.
   //
@@ -654,7 +617,6 @@ export const FUENTES_NACIONALES = [
     alcance: 'pais',
     seccion: 'Cultura y agenda',
     peso: 12,
-    maxItems: 3,
     temas: ['espectaculos', 'popular'],
     nota: 'Farándula, música y televisión: 36 notas por día, con el texto completo.',
   },
@@ -667,7 +629,6 @@ export const FUENTES_NACIONALES = [
     alcance: 'pais',
     seccion: 'Cultura y agenda',
     peso: 13,
-    maxItems: 2,
     temas: ['cultura', 'libros', 'teatro'],
   },
   {
@@ -679,7 +640,6 @@ export const FUENTES_NACIONALES = [
     alcance: 'pais',
     seccion: 'Cultura y agenda',
     peso: 12,
-    maxItems: 2,
     temas: ['espectaculos', 'cine', 'series'],
   },
   {
@@ -692,7 +652,6 @@ export const FUENTES_NACIONALES = [
     alcance: 'pais',
     seccion: 'Cultura y agenda',
     peso: 12,
-    maxItems: 2,
     temas: ['espectaculos', 'popular'],
   },
   {
@@ -704,7 +663,6 @@ export const FUENTES_NACIONALES = [
     alcance: 'pais',
     seccion: 'Cultura y agenda',
     peso: 13,
-    maxItems: 2,
     temas: ['cultura', 'arte', 'libros'],
   },
   // Policiales: sin fuentes nacionales (26/09). La sección es sólo de Balcarce y la
@@ -721,7 +679,6 @@ export const FUENTES_NACIONALES = [
     alcance: 'pais',
     seccion: 'Tecnología',
     peso: 14,
-    maxItems: 3,
     temas: ['tecnologia'],
   },
   {
@@ -734,7 +691,6 @@ export const FUENTES_NACIONALES = [
     alcance: 'pais',
     seccion: 'Tecnología',
     peso: 11,
-    maxItems: 2,
     temas: ['tecnologia', 'ciencia'],
     nota: 'Medio de tecnología en castellano (no es argentino). Con el texto completo.',
   },
@@ -748,7 +704,6 @@ export const FUENTES_NACIONALES = [
     alcance: 'pais',
     seccion: 'Tecnología',
     peso: 11,
-    maxItems: 2,
     temas: ['tecnologia', 'ia'],
     nota: 'Medio de tecnología en castellano (no es argentino). La edición argentina (xataka.com.ar/feed) da 404.',
   },
@@ -763,7 +718,6 @@ export const FUENTES_NACIONALES = [
     alcance: 'pais',
     seccion: 'Agro',
     peso: 12,
-    maxItems: 3,
     temas: ['agro', 'campo'],
   },
   {
@@ -775,7 +729,6 @@ export const FUENTES_NACIONALES = [
     alcance: 'pais',
     seccion: 'Agro',
     peso: 12,
-    maxItems: 3,
     temas: ['agro', 'granos', 'carne'],
     nota: 'Con el texto completo. También publica cotizaciones ("Euro blue hoy"): las frena la regla de cotización.',
   },
@@ -788,7 +741,6 @@ export const FUENTES_NACIONALES = [
     alcance: 'pais',
     seccion: 'Agro',
     peso: 12,
-    maxItems: 3,
     temas: ['agro', 'productores'],
     nota: 'Con el texto completo.',
   },
@@ -801,9 +753,8 @@ export const FUENTES_NACIONALES = [
     alcance: 'pais',
     seccion: 'Agro',
     peso: 12,
-    maxItems: 2,
     temas: ['agro', 'inta'],
-    nota: 'Organismo público, una o dos notas por día. Sin la marca oficial a propósito: con oficial y maxItems saltearía el piso (ver pruebas/zona.test.mjs).',
+    nota: 'Organismo público, una o dos notas por día. Sin la marca oficial a propósito: con oficial saldría solo sin que lo cuente ningún otro medio.',
   },
   // Economía: la más leída de las que faltaban.
   {
@@ -815,7 +766,6 @@ export const FUENTES_NACIONALES = [
     alcance: 'pais',
     seccion: 'Economía',
     peso: 13,
-    maxItems: 3,
     temas: ['economia'],
   },
 ];
@@ -902,16 +852,16 @@ export const SECCIONES_QUE_NO_ENTRAN = [
 export const CONEXION_ARGENTINA = ['argentina', 'argentino', 'argentinos', 'argentinas',
   'milei', 'malvinas', 'boca', 'river'];
 
-/** La ficha de una fuente (V2.2): qué es, de dónde es y para qué se usa. */
+/** La ficha de una fuente (V2.2): qué es y de dónde es. */
 export function fichaDeFuente(f) {
   const tipo = f.oficial ? 'oficial'
     : f.alcance === 'local' ? 'medio de Balcarce'
       : f.alcance === 'region' ? 'medio de la región'
         : f.alcance === 'provincia' ? 'medio provincial'
-          : f.uso === 'senal' ? 'nacional general'
-            : 'nacional por sección';
+          : f.seccion ? 'nacional por sección'
+            : 'nacional general';
   const ciudad = f.ciudad ?? (f.alcance === 'local' ? 'Balcarce' : f.alcance === 'pais' ? 'nacional' : null);
-  return { tipo, ciudad, uso: f.uso ?? 'candidata' };
+  return { tipo, ciudad };
 }
 
 // Clasificación por palabras. El orden importa: gana la primera que coincide.
@@ -1307,10 +1257,10 @@ export const FARMACIAS_A_MANO = {
 };
 
 
-// Cuánto puntaje necesita una nota de AFUERA para salir sola (el piso) y
+// Cuántos medios tienen que contar una nota de AFUERA para que salga sola y
 // cuántas de afuera salen solas por sección (el cupo): son números del
 // criterio editorial, y viven en ingesta/criterio.mjs, con el porqué de cada
 // uno, y en la tabla "Los números" de CRITERIO-EDITORIAL.md. Se cambian ahí.
 export {
-  PISO_DE_AFUERA, PISO_POR_DEFECTO, CUPO_DE_AFUERA, CUPO_POR_DEFECTO,
+  MEDIOS_DE_AFUERA, MEDIOS_POR_DEFECTO, MEDIOS_CON_FIGURA, CUPO_DE_AFUERA, CUPO_POR_DEFECTO,
 } from './criterio.mjs';

@@ -93,10 +93,11 @@ test('los que usan los números los toman del criterio (o dicen lo mismo)', () =
   assert.equal(PALABRAS_MINIMAS_DE_MATERIAL, REESCRITURA.palabrasMinimasDeMaterial);
   assert.equal(DIAS_DE_INTENTOS, REESCRITURA.diasDeIntentos);
   assert.equal(REESCRITURAS_POR_CORRIDA, REESCRITURA.porCorrida);
-  // El piso y el cupo de lo de afuera: fuentes.mjs los reexporta, son los mismos.
-  assert.equal(fuentes.PISO_DE_AFUERA, criterio.PISO_DE_AFUERA);
+  // Los medios que pide y el cupo de lo de afuera: fuentes.mjs los reexporta, son los mismos.
+  assert.equal(fuentes.MEDIOS_DE_AFUERA, criterio.MEDIOS_DE_AFUERA);
   assert.equal(fuentes.CUPO_DE_AFUERA, criterio.CUPO_DE_AFUERA);
-  assert.equal(fuentes.PISO_POR_DEFECTO, criterio.PISO_POR_DEFECTO);
+  assert.equal(fuentes.MEDIOS_POR_DEFECTO, criterio.MEDIOS_POR_DEFECTO);
+  assert.ok(!('PISO_DE_AFUERA' in fuentes), 'el piso de puntaje ya no existe (27/09)');
   assert.equal(fuentes.CUPO_POR_DEFECTO, criterio.CUPO_POR_DEFECTO);
   // Las redes.
   for (const k of Object.keys(FACEBOOK)) assert.equal(REGLAS_FACEBOOK[k], FACEBOOK[k], `Facebook: ${k}`);

@@ -755,14 +755,16 @@ instrucción de la IA (70, 90, 100 a 180…) también se controlan.
 | Portada: horas que una nota está en las listas | 72 | `PORTADA.horas` |
 | Portada: horas que una nota compite por el lugar grande | 6 | `PORTADA.horasNotaGrande` |
 | Días que dura la página de una nota | 180 | `PORTADA.diasDeArchivo` |
-| Piso de lo de afuera: Deportes | 62 | `PISO_DE_AFUERA.Deportes` |
-| Piso de lo de afuera: Economía | 38 | `PISO_DE_AFUERA.Economía` |
-| Piso de lo de afuera: Tecnología | 34 | `PISO_DE_AFUERA.Tecnología` |
-| Piso de lo de afuera: Política | 40 | `PISO_DE_AFUERA.Política` |
-| Piso de lo de afuera: Policiales | 40 | `PISO_DE_AFUERA.Policiales` |
-| Piso de lo de afuera: Cultura y agenda | 38 | `PISO_DE_AFUERA.Cultura y agenda` |
-| Piso de lo de afuera: Agro | 38 | `PISO_DE_AFUERA.Agro` |
-| Piso de lo de afuera: el resto de las secciones | 50 | `PISO_POR_DEFECTO` |
+| Medios que tienen que contar lo de afuera: Fútbol | 4 | `MEDIOS_DE_AFUERA.Fútbol` |
+| Medios que tienen que contar lo de afuera: Deportes | 4 | `MEDIOS_DE_AFUERA.Deportes` |
+| Medios que tienen que contar lo de afuera: Economía | 2 | `MEDIOS_DE_AFUERA.Economía` |
+| Medios que tienen que contar lo de afuera: Tecnología | 2 | `MEDIOS_DE_AFUERA.Tecnología` |
+| Medios que tienen que contar lo de afuera: Agro | 2 | `MEDIOS_DE_AFUERA.Agro` |
+| Medios que tienen que contar lo de afuera: Automovilismo | 2 | `MEDIOS_DE_AFUERA.Automovilismo` |
+| Medios que tienen que contar lo de afuera: el resto de las secciones | 3 | `MEDIOS_POR_DEFECTO` |
+| Medios que tienen que contar lo de afuera que nombra a una figura argentina | 2 | `MEDIOS_CON_FIGURA` |
+| Cupo de lo de afuera: Fútbol | 10 | `CUPO_DE_AFUERA.Fútbol` |
+| Cupo de lo de afuera: Argentina | 12 | `CUPO_DE_AFUERA.Argentina` |
 | Cupo de lo de afuera: Deportes | 10 | `CUPO_DE_AFUERA.Deportes` |
 | Cupo de lo de afuera: Economía | 12 | `CUPO_DE_AFUERA.Economía` |
 | Cupo de lo de afuera: Tecnología | 8 | `CUPO_DE_AFUERA.Tecnología` |

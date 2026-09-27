@@ -16,8 +16,9 @@
 
 import fs from 'node:fs';
 import path from 'node:path';
-import { claveClasificacion } from '../reels/claves.mjs';
+import { claveClasificacion, leerVariable } from '../reels/claves.mjs';
 import { fichaDeFuente, FUENTES, FUENTES_NACIONALES, CONEXION_ARGENTINA, PALABRAS_LOCALES } from './fuentes.mjs';
+import { FUENTES_CRUCE } from './fuentes-cruce.mjs';
 
 /** ¿El título nombra a Balcarce o a una localidad del partido? */
 function nombraBalcarceEnElTitulo(n) {
@@ -44,11 +45,13 @@ export const LECTURA = {
   // 12 y no 20: con 20 notas y sus bajadas, un pedido de cada tres pasaba el
   // minuto de espera y se perdía (27/09).
   notasPorPedido: 12,
-  // Por corrida y por día. Con la clave de redacción compartida, el tope del
-  // día deja lugar de sobra a la redacción (~500 pedidos gratis por día y por
-  // proyecto; la redacción usa hasta 300).
+  // Por corrida y por día. Mientras la lectura comparte la clave gratis de la
+  // redacción (500 pedidos por día), 60; con su propia clave
+  // (GEMINI_API_KEY_CLASIFICACION), 200: el 27/09 quedaron 170 historias de
+  // afuera sin leer porque se habían gastado los 60 (topeDeLecturas).
   pedidosPorCorrida: 5,
   pedidosPorDia: 60,
+  pedidosPorDiaConClavePropia: 200,
   // El pedido que junta repetidas: uno por corrida como mucho, si cambió la lista.
   // Dos pedidos por corrida (lo que va a salir, y lo de afuera con un medio).
   pedidosRepetidasPorDia: 60,
@@ -82,6 +85,7 @@ Reglas:
   · Cultura y agenda: espectáculos, música, teatro, cine, libros, muestras, actividades.
   · Argentina: lo nacional que no entra en ninguna de las anteriores (sociedad, clima, salud, educación, grandes hechos).
 - "es_publicidad": true si promociona un comercio, producto o servicio sin ser noticia.
+- "es_chimento": true si es farándula o la vida privada de famosos (romances, casamientos, separaciones, peleas, internaciones, fiestas o viajes de gente de la tele, la música o las redes). La muerte de una figura, un premio, un estreno o una obra no son chimento.
 - "es_anuncio": true si la nota cuenta que alguien anunció algo (que todavía no pasó).
 - "clave_tema": de 3 a 5 palabras en minúscula, separadas por guiones, que describan el hecho (por ejemplo "reapertura-autodromo-fangio"). La misma para el mismo hecho.
 - Devolvé una ficha por nota, con el mismo "id".`;
@@ -95,7 +99,14 @@ export function perfilDeBalcarce() {
   return perfilCacheado;
 }
 
-const FUENTE_POR_MEDIO = new Map([...FUENTES, ...FUENTES_NACIONALES].map((f) => [f.medio, f]));
+// Con las del cruce: sin ellas, los 76 medios del cruce iban a la IA con la
+// ciudad "desconocida" (27/09).
+const FUENTE_POR_MEDIO = new Map([...FUENTES_CRUCE, ...FUENTES, ...FUENTES_NACIONALES].map((f) => [f.medio, f]));
+
+/** Cuántos pedidos de fichas se hacen por día: más con la clave propia (27/09). */
+export function topeDeLecturas(o) {
+  return leerVariable('GEMINI_API_KEY_CLASIFICACION', o) ? LECTURA.pedidosPorDiaConClavePropia : LECTURA.pedidosPorDia;
+}
 
 /** De qué ciudad es el medio de una nota. */
 export function ciudadDelMedio(nota) {
@@ -128,6 +139,7 @@ export const ESQUEMA = {
       razon: { type: 'STRING', enum: RAZONES },
       importancia: { type: 'STRING', enum: IMPORTANCIAS },
       es_publicidad: { type: 'BOOLEAN' },
+      es_chimento: { type: 'BOOLEAN' },
       es_anuncio: { type: 'BOOLEAN' },
       por_que_interesa: { type: 'STRING' },
       clave_tema: { type: 'STRING' },
@@ -151,6 +163,8 @@ export function fichaValida(f) {
     razon: f.razon,
     importancia: f.importancia,
     publicidad: f.es_publicidad === true,
+    // Las fichas de antes del 27/09 no lo traen: cuentan como "no".
+    chimento: f.es_chimento === true,
     anuncio: f.es_anuncio === true,
     porque: String(f.por_que_interesa ?? '').slice(0, 200),
     tema: String(f.clave_tema ?? '').toLowerCase().replace(/[^a-z0-9ñ-]+/g, '-').slice(0, 60),
@@ -215,7 +229,7 @@ export async function leerNotasNuevas(notas, {
   for (let i = 0; i < faltan.length; i += LECTURA.notasPorPedido) grupos.push(faltan.slice(i, i + LECTURA.notasPorPedido));
 
   for (const grupo of grupos) {
-    if (cuenta.pedidos >= LECTURA.pedidosPorCorrida || archivo.pedidosHoy >= LECTURA.pedidosPorDia) break;
+    if (cuenta.pedidos >= LECTURA.pedidosPorCorrida || archivo.pedidosHoy >= topeDeLecturas()) break;
     cuenta.pedidos += 1;
     archivo.pedidosHoy += 1;
     try {
@@ -302,6 +316,7 @@ export function aplicarFichas(notas, fichas = {}, { verdeSecciones = [] } = {}) 
 
     let motivo = null;
     if (f.publicidad) motivo = 'es publicidad';
+    else if (f.chimento) motivo = 'es un chimento';
     else if (f.ambito === 'internacional' && !deFierros && !conexionArgentina) motivo = 'es del extranjero';
     // De un medio de acá sólo se saca si ni siquiera nombra a Balcarce en el
     // título ("precios sugeridos para alquilar en Mar del Plata", 27/09).
