@@ -1,5 +1,5 @@
 {
-  "exportado": "2026-09-27T22:52:05.433Z",
+  "exportado": "2026-09-27T23:01:24.976Z",
   "decisiones": {
     "1951120": {
       "estado": "automatica",
@@ -35622,56 +35622,13 @@
     },
     "vr15w": {
       "estado": "automatica",
-      "titulo": "Un espiral para mosquitos genera un incendio en una vivienda",
-      "copete": "Una mujer mayor debió ser asistida luego de que un espiral contra los mosquitos iniciara un incendio en una habitación de su casa en Misiones. No se registraron personas heridas.",
-      "cuerpo": "Un incendio se desató este domingo en una vivienda de la localidad misionera de Puerto Santa Ana luego de que un espiral contra los mosquitos fuera dejado encendido cerca de una cama. Según informaron fuentes policiales, el fuego se originó alrededor de las diez y media de la mañana en una propiedad del Lote 33, tras la caída del elemento sobre un colchón.\n\nUna dotación de la División Bomberos de Santa Ana acudió al lugar con una autobomba y constató una importante concentración de humo en la parte posterior del inmueble. Tras interrumpir el suministro eléctrico, los efectivos ingresaron y extinguieron las llamas, que afectaron una habitación de mampostería.\n\nLa intervención de los bomberos y las tareas de enfriamiento permitieron evitar que el fuego se propagara al resto de la vivienda. De acuerdo con el relevamiento posterior, los agentes descartaron inicialmente una falla en la instalación eléctrica como causa del episodio, mientras que la propietaria relató cómo se habrían iniciado los hechos antes de ingresar a bañarse.",
-      "guion": "Un espiral para mosquitos genera un incendio en una vivienda",
-      "deIA": true,
+      "titulo": null,
+      "copete": null,
+      "cuerpo": null,
+      "guion": null,
+      "deIA": null,
       "por": "ia",
-      "cuando": "2026-09-27T22:52:05.347Z",
-      "claves": [
-        "Ocurrió este domingo en Puerto Santa Ana, Misiones.",
-        "El fuego se inició en un colchón por un espiral.",
-        "No se registraron personas heridas.",
-        "Bomberos controlaron el foco sin que se propague."
-      ],
-      "seSabe": [
-        "El hecho ocurrió este domingo alrededor de las diez y media de la mañana en una vivienda del Lote 33 en Puerto Santa Ana, Misiones.",
-        "El fuego se originó tras la caída de un espiral encendido sobre un colchón, según informaron fuentes policiales.",
-        "La propietaria había dejado el elemento cerca de la cama antes de ingresar a bañarse.",
-        "Los bomberos intervinieron, cortaron la luz y extinguieron las llamas, evitando que el fuego se propague al resto de la casa.",
-        "No se registraron personas heridas y se descartó inicialmente una falla eléctrica."
-      ],
-      "textoRedes": "Una mujer mayor fue asistida tras un incendio en su vivienda en Misiones, provocado por un espiral contra los mosquitos que cayó sobre un colchón. Los bomberos lograron controlar las llamas y no se registraron personas heridas.",
-      "etiquetas": [
-        "incendio",
-        "mosquitos",
-        "espiral",
-        "Misiones",
-        "bomberos",
-        "Puerto Santa Ana"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Radio Sudestada",
-          "enlace": "https://radiosudestada.com.ar/2026/09/misiones-prendio-un-espiral-para-combatir-a-los-mosquitos-y-provoco-un-incendio-en-una-casa/",
-          "fecha": "2026-09-27T20:00:00.000Z",
-          "oficial": false,
-          "aporte": "Detalló el horario, la ubicación, el trabajo de los bomberos y el relato de la propietaria sobre el inicio del fuego."
-        },
-        {
-          "medio": "Noticias Argentinas (NA)",
-          "enlace": "https://noticiasargentinas.com/sociedad/misiones--prendio-un-espiral-para-combatir-a-los-mosquitos-y-provoco-un-incendio-en-una-casa_a6ab955a0c2b8de8667ee95d7",
-          "fecha": "2026-09-27T17:50:00.000Z",
-          "oficial": false,
-          "aporte": "Coincidió en los datos principales del episodio brindados por fuentes policiales."
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron dos medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      }
+      "cuando": "2026-09-27T23:01:24.885Z"
     },
     "zdzoxc": {
       "estado": "automatica",
@@ -35829,6 +35786,117 @@
           "fecha": "2026-09-26T17:00:04.000Z",
           "oficial": false,
           "aporte": "Informó la confirmación de la familia Crespi sobre la continuidad de la fábrica en Balcarce y los detalles de la producción."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "1wzh43l": {
+      "estado": "automatica",
+      "titulo": "McCain advierte sobre una falsa búsqueda laboral que circula en redes",
+      "copete": "La empresa McCain alertó sobre comunicaciones fraudulentas que utilizan su marca para ofrecer puestos de trabajo inexistentes. Piden dinero y datos personales a los postulantes.",
+      "cuerpo": "McCain Argentina alertó sobre la circulación de comunicaciones fraudulentas que utilizan sin autorización su nombre y elementos identificatorios para difundir una falsa convocatoria laboral. Según informó la compañía, las publicaciones utilizan datos incorrectos, como una dirección errónea del Parque Industrial, y emplean cuentas de correo gratuitas para sus supuestas comunicaciones.\n\nA las personas contactadas se les solicitan datos bancarios y dinero en efectivo para la adquisición de un supuesto uniforme. La empresa aclaró que nunca realiza ofertas de empleo sin un proceso previo de selección ni exige pagos a los postulantes, y recomendó verificar las búsquedas únicamente a través de sus canales oficiales.",
+      "guion": "McCain advierte sobre una falsa búsqueda laboral que circula en redes",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T23:01:24.886Z",
+      "claves": [
+        "Circula una falsa convocatoria laboral a nombre de McCain.",
+        "Utilizan cuentas de correo gratuitas y datos incorrectos de la planta.",
+        "Exigen dinero para uniformes y solicitan datos bancarios a los postulantes.",
+        "La empresa recordó que no cobra por postularse ni utiliza vías informales."
+      ],
+      "seSabe": [
+        "McCain Argentina emitió una alerta por comunicaciones fraudulentas con su marca.",
+        "Los mensajes falsos ofrecen puestos de trabajo mediante canales no oficiales y cuentas de Gmail.",
+        "Se solicita dinero a los postulantes para un supuesto uniforme y se piden datos bancarios.",
+        "La empresa indicó que sus procesos de selección formales no incluyen solicitudes de dinero."
+      ],
+      "noConfirmado": [
+        "No se informaron denuncias formales radicadas por personas afectadas.",
+        "No trascendió la cantidad de vecinos que hayan recibido este tipo de mensajes."
+      ],
+      "textoRedes": "McCain alertó sobre una falsa búsqueda laboral en redes sociales que utiliza su marca para pedir dinero y datos bancarios a los postulantes. La empresa aclaró que no realiza ofertas sin selección previa ni exige pagos.",
+      "etiquetas": [
+        "McCain",
+        "búsqueda laboral",
+        "Parque Industrial",
+        "Balcarce"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Radio Gabal (FM 104.1)",
+          "enlace": "https://www.radiogabal.com.ar/index.php/policiales/advierten-por-una-falsa-busqueda-laboral-de-la-empresa-mccain-en-redes-sociales",
+          "fecha": "2026-09-25T15:36:43.000Z",
+          "oficial": false,
+          "aporte": "Detalló el uso de una dirección incorrecta, cuentas de Gmail e inteligencia artificial en la maniobra."
+        },
+        {
+          "medio": "Infórmese Primero (FM 104.9)",
+          "enlace": "http://www.informeseprimero.com.ar/2026/09/advierten-por-una-falsa-convocatoria.html",
+          "fecha": "2026-09-25T19:33:22.484Z",
+          "oficial": false,
+          "aporte": "Informó la alerta emitida por la empresa respecto a las comunicaciones fraudulentas."
+        },
+        {
+          "medio": "Diario La Vanguardia",
+          "enlace": "https://www.diariolavanguardia.com/noticias/44906-mccain-alerto-por-una-falsa-convocatoria-laboral-en-balcarce-y-pidio-no-entregar-dinero-ni-datos-bancarios/",
+          "fecha": null,
+          "oficial": false,
+          "aporte": "Precisó que a los postulantes se les solicita dinero para un uniforme y datos bancarios."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "130mj2j",
+          "titulo": "Briatore, en la polémica por las redes sociales y con un mensaje para los argentinos",
+          "fecha": "2026-09-23T20:10:53.000Z",
+          "ruta": "/nota/briatore-en-la-polemica-por-las-redes-sociales-y-con-un-mensaje-para-130mj2j"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron tres medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      }
+    },
+    "5vh7nw": {
+      "estado": "automatica",
+      "titulo": "Informan los servicios de sepelios de la cooperativa local",
+      "copete": "La Cooperativa de Electricidad General Balcarce dio a conocer los avisos fúnebres con el detalle de los servicios de sepelios prestados en la comunidad.",
+      "cuerpo": "Durante las últimas semanas se registraron diversos servicios de sepelios y traslados a crematorios informados por la Cooperativa de Electricidad General Balcarce Limitada.\n\nLos avisos incluyeron los cronogramas de velatorios y las inhumaciones realizadas en el Cementerio Municipal, así como los servicios con destino al Crematorio Privado de Miramar.\n\nLas casas de duelo correspondieron a distintas direcciones urbanas y rurales del partido, abarcando zonas como Los Pinos y barrios locales.",
+      "guion": "Informan los servicios de sepelios de la cooperativa local",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T23:01:24.886Z",
+      "claves": [
+        "Servicios de sepelios de la cooperativa eléctrica",
+        "Detalle de inhumaciones en el Cementerio Municipal",
+        "Avisos fúnebres y casas de duelo en el partido"
+      ],
+      "seSabe": [
+        "La Cooperativa de Electricidad General Balcarce Limitada informó los servicios de sepelios y traslados",
+        "Los procedimientos incluyeron inhumaciones en el Cementerio Municipal y cremaciones en Miramar"
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "La Cooperativa de Electricidad General Balcarce dio a conocer el detalle de los servicios de sepelios prestados en la comunidad durante las últimas semanas.",
+      "etiquetas": [
+        "sepelios",
+        "cooperativa de electricidad",
+        "fallecimientos"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/secuestraron-una-garrafa-y-prendas-de-vestir-624",
+          "fecha": null,
+          "oficial": false,
+          "aporte": "Aportó el registro de los servicios fúnebres, fechas de decesos, casas de duelo y destino de los restos."
         }
       ],
       "verificacion": {
