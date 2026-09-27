@@ -1,5 +1,5 @@
 {
-  "exportado": "2026-09-27T23:23:54.833Z",
+  "exportado": "2026-09-27T23:34:23.001Z",
   "decisiones": {
     "1951120": {
       "estado": "automatica",
@@ -13154,67 +13154,13 @@
     },
     "1dou3ni": {
       "estado": "automatica",
-      "titulo": "Estudian el costo operativo de usar drones para pulverizar papa en Balcarce",
-      "copete": "Un informe de INTA Balcarce analizó el valor de aplicar agroquímicos con drones propios en campos de papa de escala media del sudeste bonaerense.",
-      "cuerpo": "Un trabajo del INTA Balcarce analizó los gastos que demanda incorporar un dron agrícola propio para pulverizar cultivos de papa en una explotación mediana de la región. El estudio determinó que la viabilidad económica de la tecnología está sujeta al uso continuo que se le dé al equipo durante el año y a la recuperación de la inversión inicial.\n\nLa incorporación de esta herramienta aérea busca optimizar las tareas de cuidado en los lotes paperos del sudeste bonaerense, donde el manejo de costos resulta clave para la rentabilidad del sector agropecuario local.",
-      "guion": "Estudian el costo operativo de usar drones para pulverizar papa en Balcarce",
-      "deIA": true,
+      "titulo": null,
+      "copete": null,
+      "cuerpo": null,
+      "guion": null,
+      "deIA": null,
       "por": "ia",
-      "cuando": "2026-09-25T06:40:50.774Z",
-      "claves": [
-        "El INTA Balcarce analizó costos de drones aplicadores en papa",
-        "El gasto depende del uso anual y la amortización del equipo",
-        "Apunta a explotaciones medianas del sudeste bonaerense"
-      ],
-      "seSabe": [
-        "El INTA Balcarce evaluó el costo operativo de usar un dron propio para pulverizar papa",
-        "El resultado depende del aprovechamiento anual y la amortización del equipo",
-        "El análisis se centró en una explotación papera de escala media"
-      ],
-      "noConfirmado": [
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "Un informe del INTA Balcarce analizó el costo operativo de utilizar drones propios para pulverizar cultivos de papa en establecimientos medianos de la región.",
-      "etiquetas": [
-        "Papa",
-        "INTA Balcarce",
-        "Drones",
-        "Sudeste bonaerense"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Argenpapa",
-          "enlace": "https://www.argenpapa.com.ar/noticia/17680-argentina-drones-aplicadores-iquest-cuanto-cuesta-pulverizar-una-hectarea-de-papa-en-el-sudeste-bonaerense",
-          "fecha": null,
-          "oficial": false,
-          "aporte": "Aportó los detalles del análisis del INTA Balcarce sobre el costo de usar drones para pulverizar papa."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "jd35eq",
-          "titulo": "Pocho Lavezzi, Julián Álvarez, Mario Pergolini, Tini y la depresión: ¿cuánto cuesta un psicólogo en Argentina en septiembre 2026?",
-          "fecha": "2026-09-20T20:00:00.000Z",
-          "ruta": "/nota/pocho-lavezzi-julian-alvarez-mario-pergolini-tini-y-la-depresion-jd35eq"
-        },
-        {
-          "id": "16pajho",
-          "titulo": "Cuánto cuesta ir a ver a Franco Colapinto al Gran Premio de Brasil en noviembre",
-          "fecha": "2026-09-17T18:33:09.000Z",
-          "ruta": "/nota/cuanto-cuesta-ir-a-ver-a-franco-colapinto-al-gran-premio-de-brasil-en-16pajho"
-        },
-        {
-          "id": "1li63ec",
-          "titulo": "El Concejo debate la situación de una investigadora en Balcarce",
-          "fecha": "2026-09-24T14:26:48.000Z",
-          "ruta": "/nota/el-concejo-debate-la-situacion-de-una-investigadora-en-balcarce-1li63ec"
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      }
+      "cuando": "2026-09-27T23:34:22.956Z"
     },
     "165tzq5": {
       "estado": "automatica",
