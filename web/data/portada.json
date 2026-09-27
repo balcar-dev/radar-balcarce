@@ -1,5 +1,5 @@
 {
-  "generado": "2026-09-27T22:48:21.886Z",
+  "generado": "2026-09-27T23:01:02.758Z",
   "notas": [
     {
       "id": "119oqdp",
@@ -12,11 +12,11 @@
         "El Diario Balcarce"
       ],
       "enlace": "https://eldiariobalcarce.com.ar/una-noche-de-musica-solidaridad-y-suenos-para-acompanar-a-la-infancia-625",
-      "teniaImagenLaFuente": true,
+      "teniaImagenLaFuente": false,
       "fecha": "2026-09-27T18:30:42.064Z",
       "sinFecha": true,
       "visto": "2026-09-27T18:30:42.064Z",
-      "relevancia": 63,
+      "relevancia": 53,
       "local": true,
       "publicadaPor": "ia",
       "publicadaCuando": "2026-09-25T13:14:20.980Z",
@@ -767,14 +767,14 @@
         "Noticias Argentinas (NA)",
         "El Día",
         "0221",
+        "InfoRegión",
         "QZ Noticias (Mar del Plata)",
+        "El Marplatense",
+        "Mi8 (Canal 8 Mar del Plata)",
         "Clarín",
         "0223 (Mar del Plata)",
         "La Nueva",
         "La Verdad",
-        "InfoRegión",
-        "El Marplatense",
-        "Mi8 (Canal 8 Mar del Plata)",
         "NDEN – Noticias de Necochea",
         "Doble Amarilla",
         "Bolavip Argentina"
@@ -1195,6 +1195,54 @@
       "slug": "cruce-en-balcarce-por-la-habilitacion-del-autodromo-fangio"
     },
     {
+      "id": "1hanh9c",
+      "titulo": "La acopiadora Scorziello y Galella exporta granos a Isla Mauricio",
+      "copete": "La empresa acopiadora local Scorziello y Galella concretó un nuevo envío de granos al exterior con dos contenedores rumbo a Isla Mauricio, en el marco de su quincuagésimo aniversario.",
+      "cuerpo": "La firma local Scorziello y Galella sumó un nuevo destino internacional para sus productos al enviar dos contenedores con granos rumbo a Isla Mauricio. Esta operación marca un nuevo hito comercial para la empresa acopiadora, que actualmente se encuentra celebrando medio siglo de trayectoria en el distrito.\n\nEl embarque hacia este destino marítimo se integró a la lista de envíos al exterior que la compañía viene realizando desde el partido, consolidando su presencia en mercados internacionales de características particulares.",
+      "guion": "Scorziello y Galella exporta granos a Isla Mauricio",
+      "seccion": "Agro",
+      "medios": [
+        "El Diario Balcarce"
+      ],
+      "enlace": "https://eldiariobalcarce.com.ar/de-balcarce-al-mundo-nueva-exportacion-de-granos-esta-vez-a-un-destino-exotico-657",
+      "teniaImagenLaFuente": false,
+      "fecha": "2026-09-27T02:30:43.813Z",
+      "sinFecha": true,
+      "visto": "2026-09-27T02:30:43.813Z",
+      "relevancia": 53,
+      "local": true,
+      "publicadaPor": "ia",
+      "publicadaCuando": "2026-09-27T01:31:17.679Z",
+      "temas": [],
+      "como": "automatica",
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "La empresa local Scorziello y Galella cumplió medio siglo de trayectoria comercial y concretó una nueva exportación de granos hacia Isla Mauricio con el envío de dos contenedores.",
+      "etiquetas": [
+        "Scorziello y Galella",
+        "exportación",
+        "granos",
+        "Isla Mauricio",
+        "Balcarce"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/de-balcarce-al-mundo-nueva-exportacion-de-granos-esta-vez-a-un-destino-exotico-657",
+          "fecha": "2026-09-26T12:57:38.000Z",
+          "oficial": false,
+          "aporte": "Informó sobre el envío de dos contenedores de granos a Isla Mauricio por parte de la empresa local Scorziello y Galella en el año de su quincuagésimo aniversario."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "scorziello-y-galella-exporta-granos-a-isla-mauricio-en-balcarce"
+    },
+    {
       "id": "repaso20260926noche",
       "propia": "repaso",
       "titulo": "El repaso de la noche en Radar Balcarce: autódromo Juan Manuel Fangio, McCain y hockey",
@@ -1530,14 +1578,15 @@
       "guion": "El gobernador reinaugura el autÃ³dromo Fangio tras quince aÃ±os",
       "seccion": "Automovilismo",
       "medios": [
-        "El Destape"
+        "El Destape",
+        "El Eco de Tandil"
       ],
       "enlace": "https://www.eldestapeweb.com/informacion-general/kicillof-reinauguro-autodromo-fangio-15-anos-balcarce-destaco-impacto-turistico-productivo-202692614101",
       "teniaImagenLaFuente": true,
       "fecha": "2026-09-26T17:10:01.459Z",
       "sinFecha": false,
       "visto": "2026-09-27T22:48:16.752Z",
-      "relevancia": 69,
+      "relevancia": 79,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1596,9 +1645,9 @@
     {
       "id": "1qm1ppu",
       "titulo": "La familia Crespi confirma que la fábrica seguirá abierta",
-      "copete": "Tras el fallecimiento del histórico constructor Tulio Crespi, sus hijos anunciaron que la emblemática planta mantendrá sus puertas abiertas y seguirá adelante con la producción de vehículos y proyectos mecánicos en el distrito.",
-      "cuerpo": "El anuncio se oficializó mediante un comunicado difundido en las redes sociales de la firma, luego de las muestras de afecto recibidas durante las exequias del proyectista.\n\nDe acuerdo con la información brindada por la familia, la reorganización operativa de la empresa comenzó en 2021, etapa en la cual los hermanos asumieron la gestión y participaron en iniciativas como la construcción de réplicas para una serie biográfica sobre Ayrton Senna.\n\nEn esta nueva etapa, el establecimiento seguirá proveyendo chasis para las categorías escuela de monoplazas. Además, prevé concluir el deportivo artesanal diseñado por el fundador, denominado TULIO VLV 84, y continuar con el desarrollo del prototipo Fórmula Cross.",
-      "guion": "La familia Crespi confirma que la fábrica continuará produciendo",
+      "copete": "La emblemática planta de automóviles de Balcarce seguirá en marcha bajo la conducción de los hijos del fundador, Tulio Crespi, según informó la familia a través de un comunicado oficial.",
+      "cuerpo": "La fábrica de automóviles fundada por Tulio Crespi en Balcarce continuará con su producción y mantendrá sus puertas abiertas bajo la dirección de sus hijos Sandro, Matías y Luciano. Así lo ratificó la familia mediante un mensaje difundido en las redes sociales oficiales, tras las muestras de afecto recibidas durante las exequias del histórico proyectista.\n\nEl comunicado detalla que la reorganización operativa de la empresa familiar se puso en marcha en 2021, cuando la nueva generación asumió la gestión. En este período, la firma participó en la fabricación de réplicas para la serie biográfica sobre Ayrton Senna y mantuvo su actividad habitual.\n\nEn esta etapa, la planta seguirá adelante con el suministro de chasis para las categorías escuela de monoplazas, completará el desarrollo del prototipo Fórmula Cross y finalizará el proyecto del deportivo artesanal TULIO VLV 84 ideado por su creador.",
+      "guion": "La familia Crespi confirma la continuidad de la fábrica",
       "seccion": "Automovilismo",
       "medios": [
         "El Marplatense",
@@ -1611,30 +1660,29 @@
       "visto": "2026-09-27T19:06:41.904Z",
       "relevancia": 64,
       "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
+      "publicadaPor": "ia",
+      "publicadaCuando": "2026-09-27T22:52:05.347Z",
       "temas": [],
       "como": "automatica",
       "claves": [
-        "La familia Crespi confirmó que la fábrica seguirá produciendo en Balcarce.",
-        "La gestión continuará a cargo de sus hijos Sandro, Matías y Luciano.",
-        "La planta seguirá fabricando chasis y finalizará el deportivo TULIO VLV 84.",
-        "La reorganización de la firma había comenzado en el año 2021."
+        "La fábrica Crespi seguirá produciendo en Balcarce",
+        "Los hijos del fundador asumieron la dirección operativa",
+        "Completarán el desarrollo del deportivo artesanal TULIO VLV 84"
       ],
       "seSabe": [
-        "La familia Crespi confirmó que la fábrica ubicada en Balcarce seguirá abierta y con su producción en marcha, según el comunicado oficial.",
-        "La conducción de la firma estará a cargo de los hermanos Sandro, Matías y Luciano Crespi.",
-        "La planta continuará con el suministro de chasis para categorías escuela de monoplazas.",
-        "Se avanzará en la finalización del deportivo TULIO VLV 84 y en el prototipo Fórmula Cross."
+        "La familia Crespi confirmó que la fábrica de Balcarce continuará produciendo.",
+        "La dirección quedará a cargo de los hermanos Sandro, Matías y Luciano.",
+        "El proceso de reorganización de la firma comenzó en 2021.",
+        "La planta continuará entregando chasis para monoplazas y finalizará el deportivo TULIO VLV 84."
       ],
       "noConfirmado": [
         "No pudo ser contrastado de forma independiente con las fuentes consultadas."
       ],
-      "textoRedes": "La familia Crespi confirmó que la histórica fábrica de automóviles de Balcarce mantendrá sus puertas abiertas y seguirá produciendo bajo la dirección de sus hijos. Continuarán con los chasis, el deportivo TULIO VLV 84 y el prototipo Fórmula Cross.",
+      "textoRedes": "La emblemática fábrica de automóviles de Balcarce continuará con su producción bajo la dirección de los hijos de Tulio Crespi, tras un comunicado oficial de la familia.",
       "etiquetas": [
         "Tulio Crespi",
         "Balcarce",
-        "fábrica"
+        "automovilismo"
       ],
       "fuentesConsultadas": [
         {
@@ -1642,7 +1690,7 @@
           "enlace": "https://www.elmarplatense.com/balcarce-la-familia-crespi-confirmo-que-la-fabrica-continuara-produciendo-y-mantendra-su-legado",
           "fecha": "2026-09-26T17:00:04.000Z",
           "oficial": false,
-          "aporte": "Informó el comunicado de la familia Crespi sobre la continuidad de la fábrica en Balcarce y sus próximos proyectos."
+          "aporte": "Informó la confirmación de la familia Crespi sobre la continuidad de la fábrica en Balcarce y los detalles de la producción."
         }
       ],
       "verificacion": {
@@ -1667,12 +1715,12 @@
         "C5N",
         "Diario Popular",
         "0221",
-        "QZ Noticias (Mar del Plata)",
-        "La Verdad",
-        "Infoeme",
         "InfoRegión",
+        "QZ Noticias (Mar del Plata)",
         "El Marplatense",
-        "Punto Noticias"
+        "Punto Noticias",
+        "La Verdad",
+        "Infoeme"
       ],
       "enlace": "http://www.informeseprimero.com.ar/2026/09/ypf-aumento-1-el-precio-de-sus.html",
       "teniaImagenLaFuente": true,
@@ -1722,54 +1770,6 @@
         "sugeridoPorIA": "MEDIA"
       },
       "slug": "ypf-aumenta-uno-por-ciento-sus-combustibles-en-balcarce"
-    },
-    {
-      "id": "1hanh9c",
-      "titulo": "La acopiadora Scorziello y Galella exporta granos a Isla Mauricio",
-      "copete": "La empresa acopiadora local Scorziello y Galella concretó un nuevo envío de granos al exterior con dos contenedores rumbo a Isla Mauricio, en el marco de su quincuagésimo aniversario.",
-      "cuerpo": "La firma local Scorziello y Galella sumó un nuevo destino internacional para sus productos al enviar dos contenedores con granos rumbo a Isla Mauricio. Esta operación marca un nuevo hito comercial para la empresa acopiadora, que actualmente se encuentra celebrando medio siglo de trayectoria en el distrito.\n\nEl embarque hacia este destino marítimo se integró a la lista de envíos al exterior que la compañía viene realizando desde el partido, consolidando su presencia en mercados internacionales de características particulares.",
-      "guion": "Scorziello y Galella exporta granos a Isla Mauricio",
-      "seccion": "Agro",
-      "medios": [
-        "El Diario Balcarce"
-      ],
-      "enlace": "https://eldiariobalcarce.com.ar/de-balcarce-al-mundo-nueva-exportacion-de-granos-esta-vez-a-un-destino-exotico-657",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-26T12:57:38.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-27T02:30:43.813Z",
-      "relevancia": 63,
-      "local": true,
-      "publicadaPor": "ia",
-      "publicadaCuando": "2026-09-27T01:31:17.679Z",
-      "temas": [],
-      "como": "automatica",
-      "noConfirmado": [
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "La empresa local Scorziello y Galella cumplió medio siglo de trayectoria comercial y concretó una nueva exportación de granos hacia Isla Mauricio con el envío de dos contenedores.",
-      "etiquetas": [
-        "Scorziello y Galella",
-        "exportación",
-        "granos",
-        "Isla Mauricio",
-        "Balcarce"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "El Diario Balcarce",
-          "enlace": "https://eldiariobalcarce.com.ar/de-balcarce-al-mundo-nueva-exportacion-de-granos-esta-vez-a-un-destino-exotico-657",
-          "fecha": "2026-09-26T12:57:38.000Z",
-          "oficial": false,
-          "aporte": "Informó sobre el envío de dos contenedores de granos a Isla Mauricio por parte de la empresa local Scorziello y Galella en el año de su quincuagésimo aniversario."
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "scorziello-y-galella-exporta-granos-a-isla-mauricio-en-balcarce"
     },
     {
       "id": "1aa6w2s",
@@ -2065,10 +2065,12 @@
         "News Balcarce (FM 91.7)",
         "Infórmese Primero (FM 104.9)",
         "Municipalidad de Balcarce",
+        "El Diario Balcarce",
         "Diario La Vanguardia",
         "Noticias Argentinas (NA)",
         "La Tecla",
         "ANDigital",
+        "Infobrisas (Radio Brisas)",
         "La Verdad",
         "NDEN – Noticias de Necochea",
         "0223 (Mar del Plata)",
@@ -2076,7 +2078,6 @@
         "Diario Popular",
         "Campeones",
         "Agencia DIB",
-        "El Diario Balcarce",
         "Radio Gabal (FM 104.1)",
         "Infocielo"
       ],
@@ -2593,59 +2594,6 @@
       "slug": "advierten-por-una-falsa-convocatoria-laboral-de-mccain-en-balcarce"
     },
     {
-      "id": "repaso20260925tarde",
-      "propia": "repaso",
-      "titulo": "El repaso de la tarde en Radar Balcarce: autódromo Juan Manuel Fangio y Deporte Adaptado",
-      "copete": "Radar Balcarce publicó a las 15:03 de este viernes 25 de septiembre el repaso de la tarde en Instagram y Facebook, un audio con 2 notas. Acá está en texto lo que se contó, con el enlace a cada nota.",
-      "cuerpo": "Estas son las 2 notas que se contaron en el repaso de la tarde del viernes 25, en el orden en que salieron en el audio.\n\nEl autódromo Juan Manuel Fangio abre sus puertas este viernes. El histórico circuito vuelve a recibir actividad automovilística este viernes con un operativo especial de tránsito, accesos diferenciados desde las 8 y venta de entradas en el predio.\n\nEquipos de la Escuela Municipal de Deporte Adaptado logran podios en Mar del Plata. Los conjuntos balcarceños de fútbol alcanzaron dos terceros puestos y un segundo lugar en una competencia disputada en Mar del Plata.\n\nMirá y escuchá el repaso en Instagram y Facebook, con los botones de acá abajo. Todas las notas del día están en la portada de Radar Balcarce.",
-      "guion": null,
-      "seccion": "Balcarce",
-      "local": true,
-      "relevancia": 60,
-      "medios": [],
-      "enlace": null,
-      "teniaImagenLaFuente": false,
-      "fecha": "2026-09-25T18:03:09.267Z",
-      "sinFecha": false,
-      "visto": "2026-09-25T18:03:09.267Z",
-      "publicadaPor": null,
-      "publicadaCuando": "2026-09-25T18:03:09.267Z",
-      "temas": [],
-      "etiquetas": [
-        "autódromo Juan Manuel Fangio",
-        "Deporte Adaptado"
-      ],
-      "como": "automatica",
-      "firma": "Nota de Radar Balcarce: el texto del repaso publicado en nuestras redes.",
-      "notasDelRepaso": [
-        "yaqf3p",
-        "1uwv7rc"
-      ],
-      "enlacesEnTexto": [
-        {
-          "texto": "El autódromo Juan Manuel Fangio abre sus puertas este viernes",
-          "href": "/nota/todo-sobre-la-reapertura-del-autodromo-juan-manuel-fangio-yaqf3p"
-        },
-        {
-          "texto": "Equipos de la Escuela Municipal de Deporte Adaptado logran podios en Mar del Plata",
-          "href": "/nota/deportistas-de-la-emdab-logran-podios-en-un-torneo-de-futbol-en-mar-1uwv7rc"
-        }
-      ],
-      "destacados": [
-        {
-          "texto": "Mirá y escuchá el repaso en Instagram",
-          "href": "https://www.instagram.com/reel/DduDtwNH-JI/",
-          "externo": true
-        },
-        {
-          "texto": "Mirá y escuchá el repaso en Facebook",
-          "href": "https://www.facebook.com/reel/3247488875441670/",
-          "externo": true
-        }
-      ],
-      "slug": "el-repaso-de-la-tarde-en-radar-balcarce-autodromo-juan-manuel-fangio"
-    },
-    {
       "id": "d2elpy",
       "titulo": "La comunidad sorda celebra su día en el Complejo Polideportivo Municipal",
       "copete": "Integrantes de la comunidad sorda local y de la región se reúnen en el Complejo Polideportivo Municipal para celebrar su día, promover la inclusión y visibilizar la Lengua de Señas.",
@@ -3099,6 +3047,62 @@
       "slug": "karina-lupo-y-mariano-barreiro-ganan-la-media-maraton-en-balcarce"
     },
     {
+      "id": "xpr0le",
+      "titulo": "Informan los servicios de sepelios y las inhumaciones recientes",
+      "copete": "Se difunden los avisos fúnebres y los cronogramas de servicios de sepelios brindados por la Cooperativa de Electricidad \"General Balcarce\" Limitada correspondientes a los últimos meses.",
+      "cuerpo": "La Cooperativa de Electricidad \"General Balcarce\" Limitada dio a conocer los distintos servicios de sepelios y cronogramas de inhumaciones llevados a cabo en el Cementerio Municipal y en el crematorio privado de Miramar. Los avisos corresponden a fallecimientos registrados en la ciudad y en zonas rurales como Los Pinos a lo largo de los meses de mayo, agosto y septiembre de este año.\n\nLos partes detallan las casas de duelo de cada persona fallecida, además de los horarios previstos para los oficios religiosos en las salas velatorias y los traslados hacia el cementerio local, con la organización a cargo de la entidad de servicios eléctricos.",
+      "guion": "Informan los servicios de sepelios y las inhumaciones recientes",
+      "seccion": "Balcarce",
+      "medios": [
+        "El Diario Balcarce"
+      ],
+      "enlace": "https://eldiariobalcarce.com.ar/balcarce-se-prepara-para-un-fin-de-semana-historico-475",
+      "teniaImagenLaFuente": false,
+      "fecha": "2026-09-25T11:30:36.900Z",
+      "sinFecha": true,
+      "visto": "2026-09-25T11:30:36.900Z",
+      "relevancia": 53,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "La Cooperativa de Electricidad informó los servicios de sepelios.",
+        "Se detallan inhumaciones en el Cementerio Municipal y cremaciones.",
+        "Los avisos abarcan decesos registrados entre mayo y septiembre."
+      ],
+      "seSabe": [
+        "La Cooperativa de Electricidad \"General Balcarce\" Limitada estuvo a cargo de los servicios de sepelios.",
+        "Se registraron inhumaciones en el Cementerio Municipal y cremaciones en Miramar.",
+        "Los avisos incluyen domicilios de duelo en la ciudad y en Los Pinos."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "La Cooperativa de Electricidad dio a conocer el detalle de los servicios de sepelios y cronogramas de inhumaciones correspondientes a los últimos meses en el distrito.",
+      "etiquetas": [
+        "sepelios",
+        "cooperativa de electricidad",
+        "cementerio municipal"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/balcarce-se-prepara-para-un-fin-de-semana-historico-475",
+          "fecha": null,
+          "oficial": false,
+          "aporte": "Detalló los avisos fúnebres, las fechas de deceso y los servicios de sepelios de la cooperativa."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "el-tc-pick-up-realiza-una-firma-de-autografos-en-balcarce"
+    },
+    {
       "id": "8hniuy",
       "titulo": "Un científico formado en Balcarce investiga para la NASA",
       "copete": "El licenciado en Biotecnología Felipe Vilicich integra un equipo internacional en Nueva York que analiza cómo la vida resiste condiciones extremas mediante inteligencia artificial y financiamiento de la agencia espacial.",
@@ -3199,6 +3203,7 @@
         "El Diario Balcarce",
         "LU9 Mar del Plata",
         "iProfesional",
+        "InfoRegión",
         "Diario La Vanguardia"
       ],
       "enlace": "http://www.informeseprimero.com.ar/2026/09/el-senado-elimino-el-beneficio-de-zona.html",
@@ -3206,7 +3211,7 @@
       "fecha": "2026-09-25T00:37:16.160Z",
       "sinFecha": false,
       "visto": "2026-09-27T03:30:39.508Z",
-      "relevancia": 95,
+      "relevancia": 100,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -3391,8 +3396,8 @@
     "Política",
     "Automovilismo",
     "Policiales",
-    "Economía",
     "Agro",
+    "Economía",
     "Deportes"
   ],
   "temas": [
@@ -3419,12 +3424,12 @@
   ],
   "clima": {
     "ahora": {
-      "temp": 13,
+      "temp": 12,
       "sensacion": 9,
       "humedad": 75,
       "viento": 19,
       "rumbo": "NE",
-      "cielo": "Nublado",
+      "cielo": "Parcialmente nublado",
       "esDeDia": false
     },
     "dias": [
@@ -3799,6 +3804,12 @@
       "motivo": "necesita ojo humano: \"asesinato\""
     },
     {
+      "id": "3h6frb",
+      "titulo": "Se estrelló una avioneta en Córdoba y cinco personas…",
+      "seccion": "Agro",
+      "motivo": "necesita ojo humano: \"hospital\""
+    },
+    {
       "id": "gs5cei",
       "titulo": "Acusan a un influencer de matar a cientos de aves…",
       "seccion": "Argentina",
@@ -3835,12 +3846,6 @@
       "motivo": "necesita ojo humano: \"víctima\""
     },
     {
-      "id": "j7dphq",
-      "titulo": "La fiscalía avanza con la investigación del patrimonio de…",
-      "seccion": "Política",
-      "motivo": "necesita ojo humano: \"investigación\""
-    },
-    {
       "id": "3tprm7",
       "titulo": "\"Un escándalo político que reverbera desde Argentina hasta…",
       "seccion": "Argentina",
@@ -3857,6 +3862,12 @@
       "titulo": "La Corte Suprema resolvió que se investigue al exsenador…",
       "seccion": "Política",
       "motivo": "necesita ojo humano: \"detenido\""
+    },
+    {
+      "id": "jaqudl",
+      "titulo": "Milei se reunió con Netanyahu en Naciones Unidas y…",
+      "seccion": "Política",
+      "motivo": "internacional: sin relación con Balcarce"
     },
     {
       "id": "flyfw1",
@@ -3889,5 +3900,5 @@
       "motivo": "necesita ojo humano: \"detenido\""
     }
   ],
-  "esperandoCuerpo": 45
+  "esperandoCuerpo": 43
 }
