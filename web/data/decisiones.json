@@ -1,5 +1,5 @@
 {
-  "exportado": "2026-09-27T01:50:58.171Z",
+  "exportado": "2026-09-27T02:00:53.808Z",
   "decisiones": {
     "1951120": {
       "estado": "automatica",
@@ -873,13 +873,48 @@
     },
     "wp9pca": {
       "estado": "automatica",
-      "titulo": "Alumnos de Balcarce elaboran productos con aromáticas",
-      "copete": "Estudiantes del colegio San José crearon \"Agro Aromas\", un proyecto para investigar plantas y fabricar artículos naturales.",
-      "cuerpo": null,
-      "guion": "Alumnos de secundaria elaboraron productos naturales con plantas aromáticas. Investigaron métodos de extracción y crearon una línea propia en el colegio.",
+      "titulo": "Informan los servicios de sepelios de la cooperativa en Balcarce",
+      "copete": "La Cooperativa de Electricidad emitió los avisos fúnebres con los detalles de los servicios de sepelios y los cronogramas de inhumaciones previstos en el distrito.",
+      "cuerpo": "La Cooperativa de Electricidad «General Balcarce» Limitada difundió el registro de los servicios de sepelios correspondientes a los últimos meses, detallando las fechas de fallecimiento, las casas de duelo y los horarios de los oficios religiosos y las inhumaciones en el Cementerio Municipal. Los cronogramas incluyeron las ceremonias llevadas a cabo tanto en la ciudad cabecera como en zonas rurales del partido, con la participación de familiares y allegados.\n\nLos reportes detallan las distintas locaciones de las casas de duelo y la realización de traslados a crematorios privados según cada caso, centralizando la información institucional de los servicios funerarios prestados por la entidad local a lo largo del período.",
+      "guion": "Informan los servicios de sepelios de la cooperativa en Balcarce",
       "deIA": true,
       "por": "ia",
-      "cuando": "2026-09-18T17:50:14.760Z"
+      "cuando": "2026-09-27T02:00:53.740Z",
+      "claves": [
+        "La Cooperativa de Electricidad difundió los servicios de sepelios.",
+        "Se detallaron los cronogramas para las inhumaciones en el Cementerio Municipal.",
+        "Los reportes incluyeron casas de duelo en la ciudad y zonas rurales."
+      ],
+      "seSabe": [
+        "La Cooperativa de Electricidad «General Balcarce» Limitada informó los servicios de sepelios.",
+        "Se detallaron los cronogramas de inhumaciones y servicios religiosos.",
+        "Se incluyeron las ubicaciones de las casas de duelo en el distrito."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "La Cooperativa de Electricidad dio a conocer el detalle de los servicios de sepelios y los cronogramas de inhumaciones en el distrito.",
+      "etiquetas": [
+        "servicios fúnebres",
+        "cooperativa de electricidad",
+        "Balcarce",
+        "sepelios",
+        "cementerio municipal"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/alumnos-del-san-jose-transforman-plantas-aromaticas-en-productos-naturales-917",
+          "fecha": null,
+          "oficial": false,
+          "aporte": "Aportó el registro y los detalles de los servicios de sepelios informados por la cooperativa local."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
     },
     "1dlpsq8": {
       "estado": "automatica",
@@ -8430,13 +8465,65 @@
     },
     "1xddyhu": {
       "estado": "automatica",
-      "titulo": "Inter Miami jugara un partido oficial en Balcarce",
-      "copete": "El Inter Miami disputara un encuentro oficial en la ciudad de Balcarce, segun se confirmo en las ultimas horas.",
-      "cuerpo": null,
-      "guion": "Inter Miami jugara un partido oficial en Balcarce",
+      "titulo": "Servicios fúnebres y participación de Inter Miami en Balcarce",
+      "copete": "La Cooperativa de Electricidad dio a conocer los servicios de sepelios en la ciudad, mientras se aguarda el torneo infantil con la filial estadounidense.",
+      "cuerpo": "La Cooperativa de Electricidad «General Balcarce» Limitada informó los servicios de sepelios correspondientes a los últimos meses en el distrito. Los cronogramas incluyeron traslados al Cementerio Municipal y al crematorio privado de Miramar, según los avisos fúnebres difundidos por la entidad.\n\nEn paralelo, como se había informado el 18 de septiembre, el club Racing ratificó que la filial de Inter Miami participará del próximo torneo infantil en la ciudad. Aquella confirmación se dio tras semanas de expectativas sobre la llegada de la entidad estadounidense.\n\nEstas actividades combinan la agenda institucional de los servicios locales y la expectativa por el evento deportivo infantil previsto para las próximas semanas en el partido.",
+      "guion": "Servicios funebres y participacion de Inter Miami en Balcarce",
       "deIA": true,
       "por": "ia",
-      "cuando": "2026-09-21T02:26:32.550Z"
+      "cuando": "2026-09-27T02:00:53.740Z",
+      "claves": [
+        "La Cooperativa de Electricidad informó los servicios de sepelios en el distrito.",
+        "Los cronogramas incluyeron inhumaciones y cremaciones según los avisos locales.",
+        "Racing había confirmado la llegada de la filial de Inter Miami al torneo infantil."
+      ],
+      "seSabe": [
+        "La Cooperativa de Electricidad «General Balcarce» Limitada detalló los servicios fúnebres.",
+        "Racing ratificó la participación de la filial de Inter Miami en un torneo infantil."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "etiquetas": [
+        "servicios funebres",
+        "cooperativa de electricidad",
+        "Inter Miami",
+        "Balcarce"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/inter-miami-confirmo-su-participacion-en-el-torneo-ciudad-de-balcarce-272",
+          "fecha": null,
+          "oficial": false,
+          "aporte": "Detalló el listado de servicios de sepelios prestados por la cooperativa local."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "kqa7ux",
+          "titulo": "Racing confirmó la llegada de Inter Miami a Balcarce",
+          "fecha": "2026-09-18T12:41:52.000Z",
+          "ruta": "/nota/racing-confirmo-la-llegada-de-inter-miami-a-balcarce-kqa7ux"
+        },
+        {
+          "id": "etfww6",
+          "titulo": "Messi titular en Inter Miami ante San Diego por la MLS",
+          "fecha": "2026-09-21T14:02:35.000Z",
+          "ruta": "/nota/messi-titular-en-inter-miami-ante-san-diego-por-la-mls-etfww6"
+        },
+        {
+          "id": "9m2w5x",
+          "titulo": "Golazo de tiro libre de Messi en el Inter Miami",
+          "fecha": "2026-09-21T02:10:53.000Z",
+          "ruta": "/nota/golazo-de-tiro-libre-de-messi-en-el-inter-miami-9m2w5x"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
     },
     "lx3wcw": {
       "estado": "automatica",
@@ -27329,58 +27416,13 @@
     },
     "dsbyos": {
       "estado": "automatica",
-      "titulo": "El crecimiento de los sectores con mayor actividad no compensa la caída de empleo",
-      "copete": "Un estudio universitario revela que ocho de los diez rubros de mayor expansión económica redujeron sus puestos de trabajo en el sector privado, en medio de un incremento de la informalidad laboral en el país.",
-      "cuerpo": "Un informe elaborado por el Centro RA de la Universidad de Buenos Aires advierte sobre las dificultades del actual modelo económico, donde el crecimiento de las actividades más dinámicas no alcanza para compensar la caída de puestos laborales. Entre diciembre de 2023 y mayo de este año, sectores como la intermediación financiera, la minería y el turismo registraron una expansión en su nivel de actividad pero mostraron bajas de empleo registrado, según el análisis difundido.\n\nEl relevamiento detalla que el sector agropecuario lideró el crecimiento con una suba del cuarenta por ciento y la creación de trece mil puestos nuevos, al tiempo que la enseñanza también generó empleo privado.\n\nComo se había advertido a principios de semana en otros análisis sobre el impacto del modelo económico, la desconexión entre el auge de los sectores exportadores y la generación de puestos de trabajo formales continúa abierta a debate. Para los distritos del interior bonaerense, estas cifras reflejan la complejidad de un mercado laboral donde la mayor precariedad afecta la calidad de los ingresos de los trabajadores.",
-      "guion": "El crecimiento de los sectores con mayor actividad no compensa la caída de empleo",
-      "deIA": true,
+      "titulo": null,
+      "copete": null,
+      "cuerpo": null,
+      "guion": null,
+      "deIA": null,
       "por": "ia",
-      "cuando": "2026-09-27T01:50:58.059Z",
-      "noConfirmado": [
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "Un estudio universitario revela que ocho de los diez sectores de mayor crecimiento económico redujeron sus puestos de trabajo en el sector privado. El informe detalla la caída del empleo formal y el incremento de la informalidad en el país.",
-      "etiquetas": [
-        "empleo",
-        "economia",
-        "mercado de trabajo",
-        "universidad de buenos aires",
-        "desocupacion"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Ámbito",
-          "enlace": "https://www.ambito.com/economia/desafio-del-modelo-milei-ocho-los-diez-sectores-mayor-crecimiento-tienen-indice-negativo-empleo-n6327084",
-          "fecha": "2026-09-27T00:57:00.000Z",
-          "oficial": false,
-          "aporte": "Detalló el informe del Centro RA de la Universidad de Buenos Aires sobre la caída de empleo en sectores de alto crecimiento y los indicadores laborales del segundo trimestre."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "1r8jcww",
-          "titulo": "Advierten que los sectores de mayor crecimiento económico no generan empleo",
-          "fecha": "2026-09-25T23:57:19.000Z",
-          "ruta": "/nota/advierten-que-los-sectores-de-mayor-crecimiento-economico-no-generan-1r8jcww"
-        },
-        {
-          "id": "tnndx1",
-          "titulo": "El boom exportador no siempre derrama: qué provincias lograron transformar el crecimiento en más salarios y empleo",
-          "fecha": "2026-09-24T15:05:50.000Z",
-          "ruta": "/nota/el-boom-exportador-no-siempre-derrama-que-provincias-lograron-tnndx1"
-        },
-        {
-          "id": "1fpclkk",
-          "titulo": "Milei ante inversionistas en Nueva York: \"Somos los que más hicimos por los sectores más vulnerables por el solo hecho de bajar la inflación\"",
-          "fecha": "2026-09-23T20:44:03.000Z",
-          "ruta": "/nota/milei-ante-inversionistas-en-nueva-york-somos-los-que-mas-hicimos-por-1fpclkk"
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      }
+      "cuando": "2026-09-27T02:00:53.740Z"
     },
     "14ozs7q": {
       "estado": "automatica",
@@ -27665,6 +27707,191 @@
           "titulo": "Las tecnológicas chinas desarrollan modelos masivos de inteligencia artificial",
           "fecha": "2026-09-25T21:48:17.000Z",
           "ruta": "/nota/las-tecnologicas-chinas-desarrollan-modelos-masivos-de-inteligencia-1vponx3"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "ka1fw0": {
+      "estado": "automatica",
+      "titulo": "El obispo Alberto Bochatey destaca el vínculo con el papa León XIV",
+      "copete": "El obispo argentino Alberto Bochatey recordó su relación de décadas con el papa León XIV y adelantó que el pontífice visitará el país en noviembre.",
+      "cuerpo": "El obispo argentino Alberto Bochatey repasó su vínculo de amistad y trabajo con el papa León XIV, a quien conoce desde la década de 1980 cuando ambos vivían en una comunidad en Roma en el marco de la Orden de San Agustín. Según relató, compartieron diversas actividades en la organización agustina de América Latina y el Caribe, y destacó que el pontífice cuenta con una amplia trayectoria pastoral que incluyó su labor como misionero en Perú y su paso como superior general de la orden.\n\nBochatey señaló que el papa León XIV representa en su vida sacerdotal los valores impulsados por Francisco y consideró que su figura aportará un mensaje enriquecedor para los argentinos durante su visita pastoral prevista del ocho al once de noviembre. Asimismo, el obispo recordó distintas etapas de la trayectoria eclesiástica de Prevost, como su designación como obispo de Chiclayo y su labor en la diócesis peruana de El Callao.",
+      "guion": "El obispo Alberto Bochatey destaca el vínculo con el papa León XIV",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T02:00:53.740Z",
+      "claves": [
+        "El obispo Alberto Bochatey repasó su relación de décadas con el papa León XIV.",
+        "Ambos compartieron estudios y tareas en la Orden de San Agustín desde los años ochenta.",
+        "Bochatey confirmó que el pontífice visitará la Argentina del ocho al once de noviembre."
+      ],
+      "seSabe": [
+        "El obispo Alberto Bochatey y el papa León XIV se conocen desde los años ochenta en Roma.",
+        "Prevost fue superior general de los agustinos y obispo en Perú antes de llegar al Vaticano.",
+        "El papa León XIV realizará una visita pastoral a la Argentina entre el ocho y el once de noviembre."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El obispo argentino Alberto Bochatey recordó su vínculo de décadas con el papa León XIV y destacó que su visita pastoral al país en noviembre dejará un mensaje enriquecedor para los fieles.",
+      "etiquetas": [
+        "papa León XIV",
+        "Alberto Bochatey",
+        "Iglesia",
+        "visita pastoral",
+        "Vaticano"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/politica/alberto-bochatey-francisco-describio-la-iglesia-ideal-para-el-siglo-xxi-leon-xiv-la-vivio-nid26092026/",
+          "fecha": "2026-09-26T23:53:18.000Z",
+          "oficial": false,
+          "aporte": "Detalles sobre la relación histórica entre el obispo Alberto Bochatey y el papa León XIV, y el anuncio de la visita pastoral a la Argentina."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "10zi23s": {
+      "estado": "automatica",
+      "titulo": "El Fondo Nacional de las Artes entrega premios literarios en el país",
+      "copete": "El Fondo Nacional de las Artes dio a conocer a los ganadores de su concurso de letras con obras inéditas. Se recibieron casi dos mil postulaciones y se otorgaron millones de pesos en premios.",
+      "cuerpo": "El Fondo Nacional de las Artes anunció esta semana a los ganadores del Concurso de Letras en las categorías de novela, poesía, cuento, ensayo-no ficción y crónica.\n\nEl director de Letras del Fondo, Patricio Zunini, destacó el reconocimiento al talento y remarcó la importancia de la participación federal para visibilizar voces de distintos puntos del territorio argentino. Entre los ganadores de los primeros puestos se encuentran autores de San Luis, Mendoza, Jujuy y la ciudad de Buenos Aires, en un concurso que este año incorporó por primera vez la categoría de crónica.\n\nLas obras premiadas en ediciones anteriores suelen despertar el interés de editoriales de grandes grupos y sellos independientes. Los primeros premios reciben tres millones de pesos, los segundos dos millones y los terceros un millón, mientras que la categoría de crónica otorga un único galardón de tres millones de pesos.",
+      "guion": "El Fondo Nacional de las Artes entrega premios literarios en el país",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T02:00:53.740Z",
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El Fondo Nacional de las Artes dio a conocer a los ganadores de su concurso literario anual. Se presentaron casi dos mil autores de todo el país y se repartieron veintisiete millones de pesos en premios en distintas categorías.",
+      "etiquetas": [
+        "literatura",
+        "premios",
+        "concurso",
+        "Fondo Nacional de las Artes"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/cultura/otras-voces-el-fondo-nacional-de-las-artes-dio-a-conocer-a-los-ganadores-del-concurso-literario-nid26092026/",
+          "fecha": "2026-09-26T23:10:44.000Z",
+          "oficial": false,
+          "aporte": "Informó sobre los ganadores del concurso literario del Fondo Nacional de las Artes, los montos de los premios y las declaraciones de los organizadores y jurados."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "115xu0n": {
+      "estado": "automatica",
+      "titulo": "Juana Viale da detalles sobre la salud de Mirtha Legrand",
+      "copete": "La conductora temporaria se refirió a la evolución de su abuela durante la última emisión del ciclo televisivo.",
+      "cuerpo": "Durante la emisión del programa televisivo del fin de semana, la conductora Juana Viale brindó detalles sobre el estado de salud de su abuela, Mirtha Legrand, quien continúa internada. Con un mensaje alusivo, aseguró que la histórica figura televisiva \"está mejorando muy bien\" y que sigue el programa desde el centro de salud.\n\nEl reingreso de la conductora al Sanatorio Mater Dei de la Ciudad de Buenos Aires se había registrado previamente por un cuadro compatible con neumopatía, según se informó a mediados de septiembre, ocasión en la cual la paciente transitaba una leve mejoría sin requerir asistencia respiratoria.\n\nEn esta última emisión televisiva, Viale estuvo acompañada por invitados del ámbito artístico y musical como Agustín \"Rada\" Aristarán, Cecilia Dopazo, CAE y Gabriel Machado, mientras el entorno familiar transmite calma sobre su recuperación.",
+      "guion": "Juana Viale da detalles sobre la salud de Mirtha Legrand",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T02:00:53.740Z",
+      "seSabe": [
+        "Juana Viale condujo nuevamente el programa televisivo durante el fin de semana.",
+        "La conductora afirmó que su abuela sigue el ciclo desde su internación.",
+        "El entorno familiar destacó la favorable recuperación."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Juana Viale se refirió a la evolución de la salud de Mirtha Legrand durante la última emisión del ciclo televisivo y aseguró que transita una favorable recuperación desde su internación.",
+      "etiquetas": [
+        "Mirtha Legrand",
+        "Juana Viale",
+        "salud",
+        "televisión"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Minuto Uno",
+          "enlace": "https://www.minutouno.com/espectaculos/juana-viale-dio-nuevos-detalles-la-salud-mirtha-legrand-n6327090",
+          "fecha": "2026-09-27T01:49:58.000Z",
+          "oficial": false,
+          "aporte": "Aportó los dichos de Juana Viale sobre la salud de su abuela y los invitados del programa."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "vzanaa",
+          "titulo": "Cómo sigue la salud de Mirtha Legrand tras su nueva internación: qué se sabe y el último parte médico",
+          "fecha": "2026-09-20T12:50:00.000Z",
+          "ruta": "/nota/como-sigue-la-salud-de-mirtha-legrand-tras-su-nueva-internacion-que-vzanaa"
+        },
+        {
+          "id": "s164hs",
+          "titulo": "Mirtha Legrand sigue internada en el Sanatorio Mater Dei",
+          "fecha": "2026-09-20T21:01:00.000Z",
+          "ruta": "/nota/mirtha-legrand-sigue-internada-en-el-sanatorio-mater-dei-s164hs"
+        },
+        {
+          "id": "1luxgi9",
+          "titulo": "Juana Viale durísima con Martín Menem: \"Han pasado un montón de cosas como lo de Adorni que fue un papelón\"",
+          "fecha": "2026-09-20T17:07:00.000Z",
+          "ruta": "/nota/juana-viale-durisima-con-martin-menem-han-pasado-un-monton-de-cosas-1luxgi9"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "1nd4uji": {
+      "estado": "automatica",
+      "titulo": "Detectan una falla de seguridad en el asistente de inteligencia artificial de Meta",
+      "copete": "Un especialista en ciberseguridad descubrió una vulnerabilidad en Muse, el asistente de inteligencia artificial de Meta, que permitía acceder a permisos y archivos en equipos Mac.",
+      "cuerpo": "Para concretar el ataque, era necesario que se ejecutara un comando inicial en el equipo de la víctima, lo cual podía lograrse a través de técnicas de ingeniería social como el engaño conocido como ClickFix. Una vez cumplido ese paso, el sistema permitía redirigir solicitudes del dictado de voz hacia un servidor externo y obtener la credencial de autenticación de la cuenta.\n\nTras el hallazgo, desde la compañía desarrolladora aplicaron una corrección en el software. Por su parte, el investigador advirtió que detectaron problemas similares en otros productos basados en agentes de inteligencia artificial de diferentes firmas, cuyos detalles se darán a conocer una vez que los proveedores publiquen los respectivos parches.",
+      "guion": "Detectan una falla de seguridad en el asistente de inteligencia artificial de Meta",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T02:00:53.740Z",
+      "claves": [
+        "Hallaron una vulnerabilidad en el asistente de inteligencia artificial Muse, de Meta.",
+        "El fallo permitía secuestrar la sesión y aprovechar los permisos otorgados por el usuario.",
+        "Requería la ejecución previa de un comando en la computadora mediante ingeniería social.",
+        "La compañía aplicó una corrección en el software tras recibir el reporte del especialista."
+      ],
+      "seSabe": [
+        "El especialista Patrick Wardle descubrió una vulnerabilidad en el asistente de inteligencia artificial Muse, de Meta.",
+        "El fallo permitía secuestrar la sesión del asistente y utilizar los permisos de archivos y servicios conectados.",
+        "El ataque requería un paso inicial de ejecución de comandos mediante ingeniería social en el equipo.",
+        "Meta implementó una corrección en el sistema luego de que el problema fuera reportado."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Un especialista en seguridad descubrió una vulnerabilidad en el asistente de inteligencia artificial Muse de Meta que permitía acceder a permisos y archivos en equipos Mac. La empresa ya implementó una corrección en el sistema.",
+      "etiquetas": [
+        "seguridad informatica",
+        "inteligencia artificial",
+        "meta",
+        "ciberseguridad",
+        "vulnerabilidad"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Clarín",
+          "enlace": "https://www.clarin.com/tecnologia/descubrio-hackear-asistente-meta-advierte-encontramos-fallas-agentes-ia_0_iamgFqsBIy.html",
+          "fecha": "2026-09-26T17:00:17.000Z",
+          "oficial": false,
+          "aporte": "Detalla el hallazgo de la vulnerabilidad en el asistente de inteligencia artificial de Meta y el funcionamiento del ataque."
         }
       ],
       "verificacion": {
