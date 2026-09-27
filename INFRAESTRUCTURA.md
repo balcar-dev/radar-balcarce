@@ -79,7 +79,7 @@ esa pantalla o correr el workflow de prueba que corresponda.
 | `GEMINI_API_KEY_REDACCION` | Secreto | Cargado y probada el 25/09 | Redactar notas. Acepta el nombre viejo `GEMINI_API_KEY`. Es gratis: la reescritura usa esta primero y pasa a la de redes (paga) sólo si se queda sin cupo. El registro de "Actualizar la web" dice cuántos pedidos fueron a cada una. Se prueba con "Prueba de Gemini". |
 | `CLOUDFLARE_API_TOKEN` | Secreto | Cargado | Subir el sitio a Cloudflare Pages. |
 | `CLOUDFLARE_ACCOUNT_ID` | Secreto | Cargado | Idem (también para las estadísticas). |
-| `CLOUDFLARE_ANALYTICS_TOKEN` | Secreto | **Falta cargarlo** | Leer las visitas de Cloudflare Web Analytics para las estadísticas. Token de Cloudflare con permiso *Account · Account Analytics · Read*. Sin él, el resumen dice "falta permiso de Analytics". |
+| `CLOUDFLARE_ANALYTICS_TOKEN` | Secreto | Cargado; el permiso de Analytics también está en `CLOUDFLARE_API_TOKEN` (27/09) | Leer las visitas de Cloudflare Web Analytics para las estadísticas. Token de Cloudflare con permiso *Account · Account Analytics · Read*. Sin permiso, el resumen dice "falta permiso de Analytics". |
 | `WHATSAPP_TELEFONO` | Secreto | Cargado | Número al que la vigilancia manda los avisos: **completo, con 549 adelante**, sin + ni espacios, el mismo con el que se activó CallMeBot. Hasta el 25/09 estaba cargado con 7 dígitos y no llegaba nada. |
 | `WHATSAPP_APIKEY` | Secreto | Cargado | La clave que da CallMeBot al activarse: un número corto. Si CallMeBot contesta "APIKey is invalid", está mal copiada. |
 | `GITHUB_TOKEN` | Automático | — | Lo pone GitHub en cada corrida. No se carga. |

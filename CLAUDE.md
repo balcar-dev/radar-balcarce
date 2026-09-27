@@ -164,9 +164,9 @@ cada uno, cuándo corre y si cuesta plata), en `INFRAESTRUCTURA.md`.
   contra la fuente antes de aceptarse. Detalle completo: `CRITERIO-EDITORIAL.md`.
 - **Analítica: Cloudflare Web Analytics** (dash.cloudflare.com, gratis y sin
   cookies). Las analíticas de Vercel se sacaron al mudar el sitio. Todavía hay
-  poco tráfico para sacar conclusiones. **Faltan** el secreto
-  `CLOUDFLARE_ANALYTICS_TOKEN` y los permisos `read_insights` e
-  `instagram_manage_insights` en `META_TOKEN`: sin ellos el resumen de las
+  poco tráfico para sacar conclusiones. Cloudflare ya tiene el permiso
+  (27/09). **Faltan** `read_insights` e `instagram_manage_insights` en
+  `META_TOKEN`: sin ellos el resumen de las
   9 dice qué le falta (`INFRAESTRUCTURA.md`, `PENDIENTES.md`).
 - **Los tres avisos publicitarios se cargan desde el panel** (pestaña Avisos,
   23/09), no editando `web/data/avisos.json` a mano. Detalle: `PUBLICIDAD.md`.
