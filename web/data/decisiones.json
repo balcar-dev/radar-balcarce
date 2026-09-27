@@ -1,5 +1,5 @@
 {
-  "exportado": "2026-09-27T02:10:15.908Z",
+  "exportado": "2026-09-27T02:20:16.628Z",
   "decisiones": {
     "1951120": {
       "estado": "automatica",
@@ -27892,6 +27892,111 @@
           "fecha": "2026-09-26T17:00:17.000Z",
           "oficial": false,
           "aporte": "Detalla el hallazgo de la vulnerabilidad en el asistente de inteligencia artificial de Meta y el funcionamiento del ataque."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "1dlctqu": {
+      "estado": "automatica",
+      "titulo": "Las cajas municipales cierran antes por el balance trimestral en Balcarce",
+      "copete": "La Secretaría de Hacienda dispuso que la atención al público finalice a las 10 el próximo miércoles 30 de septiembre. La medida alcanza únicamente a las cajas y se solicita a los contribuyentes realizar los trámites con anticipación.",
+      "cuerpo": "Así lo informó la Secretaría de Hacienda, que solicitó a los vecinos y contribuyentes que deban efectuar pagos o gestiones de manera presencial que procuren concretar sus trámites antes de ese horario para evitar inconvenientes.\n\nDesde el área comunal detallaron que la medida afectará de forma exclusiva la atención en el sector de cajas durante esa única jornada. Como se había informado en ocasiones previas por este medio, este tipo de interrupciones temporales se implementan de manera habitual para cumplir con las instancias administrativas correspondientes.",
+      "guion": "Las cajas municipales cierran antes por el balance trimestral en Balcarce",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T02:20:16.533Z",
+      "claves": [
+        "Cierre anticipado de cajas municipales a las 10",
+        "La medida rige para el miércoles 30 de septiembre",
+        "Se debe a la realización del balance trimestral",
+        "Afecta únicamente la atención presencial de pagos y trámites"
+      ],
+      "seSabe": [
+        "Las cajas municipales cerrarán a las 10 el miércoles 30 de septiembre según informó la Secretaría de Hacienda.",
+        "La modificación en el horario obedece a la realización del balance trimestral.",
+        "La medida afectará únicamente la atención presencial en el sector de cajas durante esa jornada."
+      ],
+      "etiquetas": [
+        "cajas municipales",
+        "Secretaría de Hacienda",
+        "balance trimestral",
+        "Balcarce",
+        "trámites"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infórmese Primero (FM 104.9)",
+          "enlace": "http://www.informeseprimero.com.ar/2026/09/cierre-anticipado-de-las-cajas.html",
+          "fecha": "2026-09-26T22:01:01.559Z",
+          "oficial": false,
+          "aporte": "Informó el horario del cierre anticipado a las 10 para el miércoles 30 de septiembre y el pedido de realizar trámites previos."
+        },
+        {
+          "medio": "Municipalidad de Balcarce",
+          "enlace": "https://balcarce.gob.ar/2026/09/25/cierre-anticipado-de-cajas-por-balance-trimestral/",
+          "fecha": "2026-09-25T13:13:45.000Z",
+          "oficial": true,
+          "aporte": "Aportó la comunicación oficial de la Secretaría de Hacienda sobre el balance trimestral y la afectación exclusiva de las cajas."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1ft3pp0",
+          "titulo": "Las cajas municipales cierran antes por el balance en Balcarce",
+          "fecha": "2026-09-25T13:13:45.000Z",
+          "ruta": "/nota/las-cajas-municipales-cierran-antes-por-el-balance-en-balcarce-1ft3pp0"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo informaron Municipalidad de Balcarce y un medio independiente.",
+        "sugeridoPorIA": "ALTA"
+      }
+    },
+    "iobnth": {
+      "estado": "automatica",
+      "titulo": "Matías Latorre repasó su trayectoria musical en Balcarce",
+      "copete": "El cantante balcarceño fue entrevistado en un programa radial local, donde recorrió sus inicios artísticos, su paso por distintos escenarios del país y su vínculo con el tango y el folclore.",
+      "cuerpo": "El músico balcarceño Matías Latorre participó de una emisión del ciclo radial \"Historias de Vida\", que conduce Mauricio Panaggio, para repasar distintos momentos de su trayectoria personal y artística. Durante la charla, el artista recordó que nació en Balcarce el 25 de octubre de 1982 y que tuvo su primer contacto con la guitarra a los seis o siete años gracias a un regalo de su padre y a unas clases con Hugo Centeno que abandonó rápidamente.\n\nLa relación con la música se reanudó a los doce años al retomar el estudio con Alberto Medina, influenciado también por su abuelo bandoneonista, cuyo instrumento conserva en la actualidad. Tras incursionar inicialmente en el folclore y participar en los Torneos Juveniles Bonaerenses en 1997, volcó su repertorio hacia el tango, género que marcó su carrera. Asimismo, recordó sus primeras presentaciones en la plaza Libertad, su paso por Buenos Aires para formarse con la licenciada Susana Naidich, y su participación en ciclos televisivos como \"Si lo sabe, cante\" y \"La Voz Argentina\" en 2012, además de su posterior presentación en el festival de Cosquín junto a Los Tekis en 2023.",
+      "guion": "Matías Latorre repasó su trayectoria musical en Balcarce",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T02:20:16.533Z",
+      "claves": [
+        "Matías Latorre repasó su historia con la música en una entrevista radial.",
+        "El cantante balcarceño recordó sus inicios con la guitarra y su paso al tango.",
+        "Mencionó su participación en certámenes televisivos y festivales nacionales."
+      ],
+      "seSabe": [
+        "Matías Latorre nació en Balcarce el 25 de octubre de 1982, según indicó el propio artista.",
+        "Comenzó a tocar la guitarra de chico y retomó a los doce años con el profesor Alberto Medina.",
+        "Participó en los Torneos Juveniles Bonaerenses en 1997 y orientó su carrera hacia el tango y el folclore.",
+        "Estudió canto en Buenos Aires con la licenciada Susana Naidich.",
+        "Formó parte de programas televisivos como \"Si lo sabe, cante\" y \"La Voz Argentina\" en 2012, y se presentó en Cosquín con Los Tekis en 2023."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El cantante balcarceño Matías Latorre repasó su trayectoria en una entrevista radial, desde sus primeros pasos con la música en la ciudad hasta su participación en escenarios nacionales y programas televisivos.",
+      "etiquetas": [
+        "Matías Latorre",
+        "Balcarce",
+        "música",
+        "tango",
+        "folclore",
+        "entrevista"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infórmese Primero (FM 104.9)",
+          "enlace": "http://www.informeseprimero.com.ar/2026/09/matias-latorre-en-fm-1049-una-vida.html",
+          "fecha": "2026-09-26T22:06:22.264Z",
+          "oficial": false,
+          "aporte": "Detalles de la entrevista radial al músico balcarceño Matías Latorre sobre su vida y trayectoria artística."
         }
       ],
       "verificacion": {
