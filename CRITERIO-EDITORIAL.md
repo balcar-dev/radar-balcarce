@@ -639,7 +639,7 @@ manda sobre lo que se repita acá. Los horarios, las piezas y cómo se publica, 
 - **Instagram** recibe video con voz (historias y reels) y el espejo de cada
   posteo de Facebook como tarjeta propia. Nunca la foto de otro medio.
 - **Podcasts en vez de noticias sueltas:** tres por día, con notas de
-  relevancia **62 o más** y de temas distintos, sin repetir las del podcast
+  relevancia **62 o más** (el de la noche, sin mínimo: repasa el día) y de temas distintos, sin repetir las del podcast
   anterior.
 
 ## 10. Correcciones y firma

@@ -21,7 +21,9 @@ node ingesta/probar.mjs https://medio.com/feed   # prueba una URL suelta
 | `fuentes.mjs` | Lo que se toca: fuentes y pesos, palabras por sección, semáforo y temas |
 | `criterio.mjs` | Los números del criterio (largos, intentos, pisos y cupos de afuera, Facebook, podcasts, contrato del día): tienen que coincidir con las tablas de `../CRITERIO-EDITORIAL.md` y `../CRITERIO-REDES.md` |
 | `prompt-editorial.mjs` | Lee la sección 12 de `../CRITERIO-EDITORIAL.md`: es la instrucción exacta que recibe la IA; si el archivo falta, la reescritura no arranca |
-| `ingesta.mjs` | Bajar, parsear, agrupar, clasificar y puntuar |
+| `ingesta.mjs` | Bajar, parsear, filtrar por la sección del medio, agrupar, clasificar, puntuar y pedir dos medios a lo de afuera |
+| `lectura-ia.mjs` | La lectura con IA (plan V2.2): una ficha por nota que decide qué entra, la sección y qué es de Balcarce, y junta las repetidas |
+| `perfil-balcarce.md` | Lo que la IA sabe de Balcarce: localidades, vecinos, rutas, actividades. Sólo datos seguros |
 | `articulo.mjs` | El texto completo de la nota original, para la IA |
 | `zona.mjs` | La hora de Balcarce: la única que usan la ingesta, el panel, las redes y los reels (el servidor de GitHub corre en UTC) |
 | `json.mjs` | Leer un JSON sin que un archivo faltante o roto tire abajo el proceso |

@@ -8,7 +8,7 @@ con el tiempo: por eso cada una dice qué prueba (`pruebas/`, corre con
 `npm test` y antes de cada publicación en GitHub) o qué chequeo del vigilante
 (`redes/vigilar.mjs`, cada 30 minutos, avisa por WhatsApp) la protege.
 
-Hay **40 reglas**, numeradas del 1 al 40 sin huecos ni repetidas. Están
+Hay **51 reglas**, numeradas del 1 al 51 sin huecos ni repetidas (las 41 a 51 son del 27/09, plan V2.2). Están
 agrupadas por tema (la web, las redes, cómo se trabaja) y no por número, porque
 los números no se reordenan: otros documentos los citan.
 

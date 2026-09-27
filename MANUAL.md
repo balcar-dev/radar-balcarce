@@ -19,7 +19,7 @@ falta) e `INVESTIGACION.md` (lo legal, con fuentes). La lista completa está en
 58 fuentes  →  agrupar  →  clasificar  →  puntuar  →  semáforo  →  panel  →  web / reels
 ```
 
-1. **Buscar.** Cada 30 minutos GitHub Actions lee las 58 fuentes (locales,
+1. **Buscar.** Cada 30 minutos GitHub Actions lee las 54 fuentes activas (locales,
    regionales y nacionales; la lista está en `ingesta/fuentes.mjs`), con la PC
    apagada; el panel, mientras está prendido, también busca cada 10. La mayoría tiene RSS; El Diario Balcarce
    no, así que se raspa la portada y después se entra a cada nota para sacar
@@ -55,7 +55,7 @@ falta) e `INVESTIGACION.md` (lo legal, con fuentes). La lista completa está en
    escritas tiene (`ordenarParaReescribir`, `reels/reescritura.mjs`), sin gastar
    más pedidos.
 2. **Agrupar.** Si dos medios cuentan lo mismo, es UNA historia con dos
-   fuentes, no dos notas. Se comparan los títulos por similitud (Jaccard,
+   fuentes, no dos notas. Se comparan los títulos por similitud (palabras en común sobre el título más corto,
    umbral 0,55). Que varios medios la tengan es señal de que importa, y suma
    puntos.
 3. **Clasificar** (`clasificar`, `ingesta/ingesta.mjs`). Automovilismo gana

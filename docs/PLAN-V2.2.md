@@ -198,7 +198,7 @@ Mencionar Balcarce **ya no alcanza** para ninguna de las dos llaves.
 | Caso | Llave 1 (IA, nivel 2) | Llave 2 (evidencia) | Resultado |
 |---|---|---|---|
 | Medio de Balcarce | El hecho ocurre en Balcarce o lo afecta directo | La fuente es de Balcarce, u oficial de Balcarce | Local, sale solo |
-| Medio de afuera que cuenta un hecho de acá (por ejemplo, QZ con el acuerdo STM–Municipio) | El hecho ocurre en Balcarce | Balcarce está en el **título o el copete originales** del medio, no perdido en el texto | Local, sale solo |
+| Medio de afuera que cuenta un hecho de acá (por ejemplo, QZ con el acuerdo STM–Municipio) | El hecho ocurre en Balcarce | Balcarce está en el **título original** del medio, no perdido en el texto | Local, sale solo |
 | Nota nacional que menciona Balcarce al pasar ("en Balcarce también hay productores") | La IA dice que el hecho es nacional | — | **No es local:** se evalúa como nacional |
 | Las llaves no coinciden | — | — | Espera a una persona |
 
@@ -369,8 +369,8 @@ Para cada nota: fuente y su sección, ficha de la IA, historia a la que pertenec
 
 ### Ya
 - [x] Subir los arreglos hechos y probados ("Fangio", "taller", "drones", "California", "Etcheverry"). Hecho el 27/09.
-- [ ] Título sin "en Balcarce" de más.
-- [ ] Redes sólo con fuentes de Balcarce, mirando el texto original.
+- [x] Título sin "en Balcarce" de más. Hecho el 27/09.
+- [x] Redes sólo con lo de Balcarce (`esParaLasRedes`). Hecho el 27/09.
 - [x] Sacar las notas mal publicadas: 197 retiradas de la web el 27/09 (`web/data/retiradas.json`).
 - [ ] Borrar de Facebook e Instagram el posteo de Necochea (lo hace una persona).
 

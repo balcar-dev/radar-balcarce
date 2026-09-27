@@ -57,7 +57,7 @@ const INTENTOS_IA = path.join(AQUI, '..', 'data', 'intentos-ia.json');
 // nota propia del dólar y su comparación con días anteriores
 // (lib/notas-propias.js). Va versionado, como intentos-ia.json.
 const HISTORIA_DOLAR = path.join(AQUI, '..', 'data', 'dolar-historia.json');
-// Las fichas de la lectura con IA, en prueba silenciosa (ingesta/lectura-ia.mjs).
+// Las fichas de la lectura con IA, que decide desde el 27/09 (ingesta/lectura-ia.mjs).
 const FICHAS = path.join(AQUI, '..', 'data', 'fichas.json');
 // Lo que se sacó a mano de la web, fuera del panel (lib/archivo.js).
 const RETIRADAS_A_MANO = idsRetiradosAMano(leerJson(path.join(AQUI, '..', 'data', 'retiradas.json'), null));
@@ -145,7 +145,9 @@ if (enLaNube) {
 
     // Las repetidas: la misma noticia contada con otro título (27/09, McCain).
     // Se pide sólo si cambió lo que hay para publicar, con tope por día.
-    const candidatas = conFichas.filter((n) => n.semaforo !== 'rojo');
+    // Sólo lo que va a salir: con las 270 notas de la ingesta (ruido incluido)
+    // la IA no vio las tres de McCain; con las publicables, sí (27/09).
+    const candidatas = conFichas.filter((n) => n.semaforo === 'verde');
     const claveDeLaLista = candidatas.map((n) => n.id).sort().join(',');
     const hoy = fichas.dia;
     const rep = fichas.repetidas?.dia === hoy ? fichas.repetidas : { dia: hoy, pedidosHoy: 0, grupos: fichas.repetidas?.grupos ?? [] };

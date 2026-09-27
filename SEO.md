@@ -58,7 +58,7 @@ el estado.
 | **Enlaces internos entre notas** | Ahora las etiquetas de temas están apagadas (`MOSTRAR_TEMAS`) | Pensar una alternativa |
 | **Resumen claro al abrir cada nota** | Es lo que una IA cita | Ya lo hace el copete; falta revisar fecha y autor visibles |
 | **Permisos `read_insights` e `instagram_manage_insights`** | Leer qué rinde cada red | Con Meta: regenerar `META_TOKEN` (`INFRAESTRUCTURA.md`) |
-| **Token de Cloudflare Analytics** | Que el resumen de WhatsApp traiga las visitas | Cargar el secreto `CLOUDFLARE_ANALYTICS_TOKEN` (`INFRAESTRUCTURA.md`) |
+| **Token de Cloudflare Analytics** | Que el resumen de WhatsApp traiga las visitas | Hecho: el secreto `CLOUDFLARE_ANALYTICS_TOKEN` está cargado (`INFRAESTRUCTURA.md`) |
 
 ## Reglas a cuidar
 

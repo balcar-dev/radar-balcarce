@@ -2,7 +2,7 @@
 
 *Actualizado el 26/09/2026.*
 
-Medio digital automático de Balcarce (Buenos Aires). Lee 58 fuentes cada media
+Medio digital automático de Balcarce (Buenos Aires). Lee 54 fuentes activas (58 configuradas) cada media
 hora, decide qué publicar, arma el sitio y lo sube, sin que haya nadie
 despierto. Los usuarios son Hernán y Andrés; escribir siempre en castellano
 rioplatense, sin voseo forzado.
@@ -276,6 +276,7 @@ cada uno, cuándo corre y si cuesta plata), en `INFRAESTRUCTURA.md`.
 | `INVESTIGACION.md` | Lo legal, con fuentes |
 | `POLITICA-PRIVACIDAD.md` | El texto de la política de privacidad del sitio |
 | `PENDIENTES.md` | Qué falta, por categoría |
+| `docs/RADAR-3.0.md` | **Todo el proyecto de punta a punta** (27/09): fuentes, recorrido de una nota, criterio, instrucciones de la IA, notas propias, redes y cronograma, sitio, panel, vigilancia, infraestructura, archivos, reglas, hoja de ruta y glosario. Empezar por acá |
 | `docs/PLAN-V2.2.md` | El plan en curso para elegir mejor las notas: filtro de entrada, lectura con IA, notas populares, todas las fuentes y cómo se usan (anexo A) |
 | `IDEAS.md` | Ideas de producto y de sistema |
 | `ingesta/README.md` | El motor: qué hace cada archivo y cómo correrlo a mano |
