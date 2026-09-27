@@ -115,3 +115,60 @@ test('las fichas viejas se podan y el archivo se escribe una línea por ficha', 
   // El archivo del repositorio existe y se lee (el workflow lo suma con git add).
   assert.ok(JSON.parse(fs.readFileSync(new URL('../web/data/fichas.json', import.meta.url), 'utf8')).fichas);
 });
+
+// ------------------------------------------ la IA decide (27/09, en vivo)
+
+import { aplicarFichas } from '../ingesta/lectura-ia.mjs';
+
+const VERDES = ['Servicios', 'Cultura y agenda', 'Deportes', 'Automovilismo', 'Agro', 'Balcarce', 'Política', 'Policiales', 'Economía', 'Tecnología'];
+const ficha = (extra) => fichaValida(fichaDe('x', extra));
+const aplicar = (nota, f) => aplicarFichas([nota], { [nota.id]: f }, { verdeSecciones: VERDES });
+
+test('la IA saca lo que no es para Radar: publicidad, extranjero, sin relación con Balcarce, policiales de afuera', () => {
+  const afuera = { id: 'a', titulo: 'Algo', seccion: 'Economía', semaforo: 'verde', alcance: 'pais', local: false, relevancia: 60 };
+  assert.equal(aplicar(afuera, ficha({ es_publicidad: true })).notas.length, 0);
+  assert.equal(aplicar(afuera, ficha({ ambito: 'internacional', impacto_balcarce: 'nulo' })).notas.length, 0);
+  assert.equal(aplicar(afuera, ficha({ ambito: 'region', impacto_balcarce: 'nulo', razon: 'ninguna' })).notas.length, 0, 'la de Necochea');
+  assert.equal(aplicar(afuera, ficha({ ambito: 'nacional', seccion: 'Policiales' })).notas.length, 0);
+  const r = aplicar(afuera, ficha({ es_publicidad: true }));
+  assert.equal(r.cambios.sacadas[0].motivo, 'es publicidad', 'y dice por qué');
+});
+
+test('Colapinto y el automovilismo de afuera no se sacan aunque la IA diga que es del extranjero', () => {
+  const f1 = { id: 'c', titulo: 'Colapinto larga noveno', seccion: 'Automovilismo', semaforo: 'verde', alcance: 'pais', figura: 'colapinto', relevancia: 70 };
+  assert.equal(aplicar(f1, ficha({ ambito: 'internacional', seccion: 'Automovilismo', impacto_balcarce: 'indirecto' })).notas.length, 1);
+});
+
+test('de Balcarce sólo con dos llaves: una nacional reproducida por un medio local deja de ser local', () => {
+  const reproducida = { id: 'r', titulo: 'El riesgo país supera los 600 puntos', seccion: 'Balcarce', semaforo: 'verde', alcance: 'local', local: true, relevancia: 80 };
+  const r = aplicar(reproducida, ficha({ ambito: 'nacional', seccion: 'Economía', impacto_balcarce: 'indirecto', razon: 'nacional' }));
+  assert.equal(r.notas[0].local, false);
+  assert.equal(r.notas[0].relevancia, 55, 'pierde los +25 de lo local');
+  assert.equal(r.notas[0].seccion, 'Economía');
+  // La IA no puede hacer local a una nota de afuera que no dice Balcarce en el título.
+  const afuera = { id: 'b', titulo: 'Una muestra en Tandil', seccion: 'Cultura y agenda', semaforo: 'verde', alcance: 'region', local: false, relevancia: 50 };
+  const s = aplicar(afuera, ficha({ ambito: 'balcarce', seccion: 'Balcarce', impacto_balcarce: 'indirecto' }));
+  assert.equal(s.notas[0].local ?? false, false);
+  assert.equal(s.notas[0].seccion, 'Cultura y agenda', 'no la pasa a la sección Balcarce');
+});
+
+test('la IA nunca destraba: lo rojo y lo amarillo siguen igual, y si la manda a País, espera', () => {
+  const roja = { id: 'r', titulo: 'x', seccion: 'Balcarce', semaforo: 'rojo', alcance: 'local', local: true };
+  assert.deepEqual(aplicar(roja, ficha({})).notas, [roja]);
+  const amarilla = { id: 'y', titulo: 'x', seccion: 'Balcarce', semaforo: 'amarillo', motivo: 'necesita ojo humano', alcance: 'local', local: true };
+  assert.equal(aplicar(amarilla, ficha({ seccion: 'Deportes' })).notas[0].semaforo, 'amarillo');
+  const verde = { id: 'v', titulo: 'x', seccion: 'Tecnología', semaforo: 'verde', alcance: 'pais', local: false, relevancia: 60 };
+  const r = aplicar(verde, ficha({ ambito: 'nacional', seccion: 'País', impacto_balcarce: 'indirecto', razon: 'nacional' }));
+  assert.equal(r.notas[0].semaforo, 'amarillo');
+});
+
+test('sin ficha, la nota queda como la decidió el sistema de siempre', () => {
+  const n = { id: 'sin', titulo: 'x', seccion: 'Deportes', semaforo: 'verde', alcance: 'local', local: true };
+  assert.deepEqual(aplicarFichas([n], {}).notas, [n]);
+});
+
+test('generar-datos lee con IA antes de reescribir y retira de la web lo que la IA sacó', () => {
+  const g = fs.readFileSync(new URL('../web/scripts/generar-datos.mjs', import.meta.url), 'utf8');
+  assert.ok(g.indexOf('aplicarFichas(') > 0 && g.indexOf('aplicarFichas(') < g.indexOf('reescribirAutomaticas(paraReescribir'), 'la lectura va antes de la reescritura');
+  assert.match(g, /new Set\(\[\.\.\.RETIRADAS_A_MANO, \.\.\.sacadasPorLaIA\]\)/);
+});

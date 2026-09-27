@@ -90,6 +90,20 @@ hay productores") no la hace local. Y lo de afuera tiene, por sección, un
 **piso de puntaje** y un **cupo** (cuántas pueden salir solas, como máximo):
 los números están en la sección 11. Lo de Balcarce no tiene piso ni cupo.
 
+**Una IA lee cada nota antes de decidir (27/09).** Con el perfil de Balcarce
+(`ingesta/perfil-balcarce.md`) y la ciudad del medio, arma una ficha: de dónde
+es el hecho, de qué sección es, si le importa a un vecino y por qué. Con esa
+ficha: no entra la **publicidad**, lo del **extranjero** (salvo automovilismo o
+una figura argentina), lo de un medio de afuera **sin relación con Balcarce**
+ni un **policial que no es de acá**. Una nota es de Balcarce sólo con **dos
+llaves**: la fuente es de acá (o el medio dice Balcarce en el título) y la IA
+dice que el hecho es de acá; una nota nacional reproducida por un medio local
+deja de contar como local. La sección es la que dice la IA. **La IA nunca
+destraba:** lo que el semáforo pone en rojo o amarillo sigue igual, y si no
+hay ficha se decide como antes. Empezó sin prueba previa, a pedido de Hernán:
+los errores se corrigen en vivo, y lo que saca cada corrida queda en el
+registro de "Actualizar la web" (`ingesta/lectura-ia.mjs`, `aplicarFichas`).
+
 **Sin medios de España ni chimentos (27/09, Hernán).** Hipertextual y Xataka
 (de España), Infobae Teleshow y Minuto Uno Espectáculos (chimentos) están
 apagados.

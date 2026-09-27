@@ -21,7 +21,7 @@ import { avisosDelClima } from '../../ingesta/alertas.mjs';
 import {
   reescribirAutomaticas, previasDeLaPortada, extrasParaLaWeb, sinExtras, CAMPOS_EXTRA, podarIntentos,
 } from '../../reels/reescritura.mjs';
-import { TEMAS, MOTIVO_COTIZACION } from '../../ingesta/fuentes.mjs';
+import { TEMAS, MOTIVO_COTIZACION, REGLAS_SEMAFORO } from '../../ingesta/fuentes.mjs';
 import { tieneCuerpo } from '../lib/cuerpo.js';
 import { sinNotasRepetidas } from '../lib/texto.js';
 import { pendientesDeLaIngesta } from '../../redes/avisos.mjs';
@@ -122,6 +122,33 @@ const vistoAntes = Object.fromEntries([...(archivoAnterior.notas ?? []), ...(ant
   .map((n) => [n.id, n.visto]));
 const ahoraISO = new Date().toISOString();
 
+// La lectura con IA (plan V2.2, ingesta/lectura-ia.mjs). Desde el 27/09 DECIDE
+// (Hernán: sin prueba, se corrige en vivo): una IA lee cada nota nueva con el
+// perfil de Balcarce y su ficha saca lo que no es para Radar, corrige la
+// sección y dice qué es de Balcarce. El semáforo sigue mandando: la IA nunca
+// destraba nada. Sin ficha (o si falla), queda lo de siempre. Va antes de la
+// reescritura para no gastar cuota en lo que no va a salir.
+let sacadasPorLaIA = new Set();
+if (enLaNube) {
+  try {
+    const { leerNotasNuevas, aplicarFichas, comoFichasJson } = await import('../../ingesta/lectura-ia.mjs');
+    const fichasAntes = leerJson(FICHAS, {});
+    const { archivo: fichas, cuenta } = await leerNotasNuevas(ultima.notas ?? [], { guardado: fichasAntes, registro: console.log });
+    if (cuenta.sinClave) console.log('  lectura con IA: sin clave, se decide como siempre');
+    const { notas, cambios } = aplicarFichas(ultima.notas ?? [], fichas.fichas, { verdeSecciones: REGLAS_SEMAFORO.verdeSecciones });
+    ultima = { ...ultima, notas };
+    sacadasPorLaIA = new Set(cambios.sacadas.map((c) => c.id));
+    console.log(`  lectura con IA: ${cuenta.nuevas} fichas nuevas en ${cuenta.pedidos} pedidos (${fichas.pedidosHoy ?? 0} hoy)`
+      + ` · sacó ${cambios.sacadas.length}, ${cambios.dejanDeSerLocales.length} dejaron de ser de Balcarce,`
+      + ` ${cambios.otraSeccion.length} cambiaron de sección, ${cambios.aEsperar.length} a esperar`);
+    for (const c of cambios.sacadas.slice(0, 15)) console.log(`    fuera (${c.motivo}): ${c.titulo}`);
+    const texto = comoFichasJson(fichas);
+    if (!fs.existsSync(FICHAS) || fs.readFileSync(FICHAS, 'utf8') !== texto) fs.writeFileSync(FICHAS, texto, 'utf8');
+  } catch (e) {
+    console.log(`  lectura con IA: no se pudo (${e.message}); se decide como siempre`);
+  }
+}
+
 // Reescritura automática, sin que nadie la mire: sólo tiene sentido en la
 // nube, porque en la PC el panel ya hace exactamente esto (reescribirPendientes
 // en panel/servidor.mjs, cada 10 minutos) — correrlo acá también sería
@@ -151,27 +178,6 @@ if (enLaNube) {
   if (nuevas) console.log(`  ${nuevas} notas reescritas con IA en esta corrida`);
 }
 
-// La lectura con IA, en PRUEBA SILENCIOSA (plan V2.2, ingesta/lectura-ia.mjs):
-// guarda una ficha por nota y cuenta qué habría hecho distinto, pero no decide
-// nada. Sólo en la nube, como la reescritura. Si falla, no frena la corrida.
-if (enLaNube) {
-  try {
-    const { leerNotasNuevas, compararConElSistema, comoFichasJson } = await import('../../ingesta/lectura-ia.mjs');
-    const fichasAntes = leerJson(FICHAS, {});
-    const { archivo: fichas, cuenta } = await leerNotasNuevas(ultima.notas ?? [], { guardado: fichasAntes, registro: console.log });
-    if (cuenta.sinClave) console.log('  lectura con IA: sin clave, no se leyó nada');
-    else {
-      const c = compararConElSistema(ultima.notas ?? [], fichas.fichas);
-      console.log(`  lectura con IA (prueba silenciosa): ${cuenta.nuevas} fichas nuevas en ${cuenta.pedidos} pedidos (${fichas.pedidosHoy} hoy)`
-        + ` · de ${c.comparadas}: ${c.otraSeccion.length} en otra sección, ${c.noEsDeBalcarce.length} que no serían de Balcarce,`
-        + ` ${c.noInteresa.length} publicadas que no le interesan a un vecino, ${c.publicidad.length} publicidades`);
-    }
-    const texto = comoFichasJson(fichas);
-    if (!fs.existsSync(FICHAS) || fs.readFileSync(FICHAS, 'utf8') !== texto) fs.writeFileSync(FICHAS, texto, 'utf8');
-  } catch (e) {
-    console.log(`  lectura con IA: no se pudo (${e.message}); no cambia nada de lo publicado`);
-  }
-}
 // Se escribe siempre que falte (el workflow lo suma con `git add`) o cambie.
 const intentosFinal = podarIntentos(intentos);
 if (!intentosAntes || JSON.stringify(intentosFinal) !== JSON.stringify(podarIntentos(intentosAntes))) {
@@ -292,7 +298,8 @@ const deLaIngesta = (ultima.notas ?? [])
 //   · si una persona le corrigió el titular o el copete y la ingesta ya no
 //     la trae, la corrección llega igual a la página.
 const enIngesta = new Map((ultima.notas ?? []).map((n) => [n.id, n]));
-const retiradas = new Set(RETIRADAS_A_MANO);
+// Lo que la IA sacó en esta corrida tampoco conserva su página.
+const retiradas = new Set([...RETIRADAS_A_MANO, ...sacadasPorLaIA]);
 const corregidas = [];
 for (const a of archivoAnterior.notas ?? []) {
   const d = estado.decisiones[a.id];

@@ -388,7 +388,7 @@ Medición del 27/09, con los mismos feeds antes y después del filtro: 175 y 174
 - [ ] Clave nueva (una persona). **Mientras tanto** (27/09, Hernán) usa la clave gratis de redacción, con tope de 60 pedidos por día; nunca la paga.
 - [x] Perfil de Balcarce (`ingesta/perfil-balcarce.md`). Hecho el 27/09.
 - [x] Lectura rápida (nivel 1) en prueba silenciosa: `ingesta/lectura-ia.mjs`, fichas en `web/data/fichas.json`, comparación con el sistema en el registro de cada corrida. Hecho el 27/09. Probada con Gemini de verdad sobre los casos del 27/09: California y Colombia salen "internacional, impacto nulo"; Necochea, "región, nulo"; la ventanilla, "nulo"; lo de Balcarce, "directo".
-- [ ] Examen: Claude lo propone, ustedes lo revisan.
+- [x] ~~Examen y prueba silenciosa~~: **descartados el 27/09 por Hernán** ("no quiero testear nada, cualquier cosa vamos corrigiendo en vivo"). La lectura con IA decide desde ese día (`aplicarFichas`), con el semáforo por encima y sin destrabar nada. Lo que saca cada corrida queda en el registro de "Actualizar la web".
 - [ ] Lectura en dos niveles, fichas e historias, en silencio.
 - [ ] Resumen semanal automático.
 

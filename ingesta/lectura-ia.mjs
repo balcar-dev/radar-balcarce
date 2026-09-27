@@ -5,10 +5,10 @@
 // completa una ficha: de dónde es el hecho, de qué sección es, si le importa a
 // un vecino de Balcarce y por qué.
 //
-// POR AHORA ES UNA PRUEBA SILENCIOSA: la ficha se guarda (web/data/fichas.json)
-// y se compara con lo que decidió el sistema de siempre, pero NO decide nada.
-// Nada de lo que se publica cambia por esto. Se activa recién cuando pase el
-// examen (§ 13 del plan).
+// DESDE EL 27/09 DECIDE, sin prueba previa (Hernán: se corrige en vivo). Las
+// fichas se guardan en web/data/fichas.json y aplicarFichas() las usa: saca lo
+// que no es para Radar, corrige la sección y dice qué es de Balcarce. El
+// semáforo sigue mandando y sin ficha queda lo de siempre.
 //
 // Usa la clave de clasificación; mientras no esté cargada, la gratis de
 // redacción. Nunca la paga de redes (reels/claves.mjs). Sin dependencias: sólo
@@ -229,6 +229,68 @@ export function compararConElSistema(notas, fichas = {}) {
     if (n.semaforo === 'verde' && f.publicidad) r.publicidad.push(caso);
   }
   return r;
+}
+
+/**
+ * La IA decide (27/09, Hernán: "sin testear, corregimos en vivo"). Aplica cada
+ * ficha a su nota, con límites que no se negocian:
+ *
+ *   · El semáforo manda: lo rojo o amarillo sigue igual. La IA sólo puede
+ *     endurecer (sacar una nota o mandarla a esperar), nunca destrabar.
+ *   · Sin ficha, la nota sigue como la decidió el sistema de siempre.
+ *
+ * Con ficha:
+ *   · No entra: publicidad; lo del extranjero que no es automovilismo ni
+ *     nombra a una figura argentina; lo de un medio de afuera sin relación
+ *     con Balcarce (impacto nulo); un policial que no es de Balcarce.
+ *   · Es de Balcarce sólo con dos llaves: la fuente es de acá o el medio lo
+ *     dice en el título, Y la IA dice que el hecho es de Balcarce. Una nota
+ *     nacional reproducida por un medio local deja de ser local (sin los +25).
+ *   · La sección es la de la IA, salvo "Balcarce" para lo que no es de acá. Si
+ *     la IA la manda a País (que no sale sola), la nota espera.
+ *
+ * Devuelve { notas, cambios } sin tocar las originales.
+ */
+export function aplicarFichas(notas, fichas = {}, { verdeSecciones = [] } = {}) {
+  const cambios = { sacadas: [], dejanDeSerLocales: [], otraSeccion: [], aEsperar: [] };
+  const salida = [];
+  for (const original of notas) {
+    const f = fichas[original.id];
+    if (!f || original.semaforo === 'rojo') { salida.push(original); continue; }
+    const n = { ...original };
+    const deFuenteLocal = n.alcance === 'local';
+    const deFierros = f.seccion === 'Automovilismo' || n.seccion === 'Automovilismo' || !!n.figura;
+    const llaveDeLaFuente = deFuenteLocal || !!n.nombraBalcarce;
+    const esLocal = llaveDeLaFuente && f.ambito === 'balcarce';
+    const caso = { id: n.id, titulo: n.titulo, porque: f.porque };
+
+    let motivo = null;
+    if (f.publicidad) motivo = 'es publicidad';
+    else if (f.ambito === 'internacional' && !deFierros) motivo = 'es del extranjero';
+    else if (!deFuenteLocal && f.impacto === 'nulo' && !deFierros) motivo = 'no tiene relación con Balcarce';
+    else if (f.seccion === 'Policiales' && !esLocal) motivo = 'policial que no es de Balcarce';
+    if (motivo) { cambios.sacadas.push({ ...caso, motivo }); continue; }
+
+    if (n.local && !esLocal) {
+      n.local = false;
+      n.relevancia = Math.max(0, (n.relevancia ?? 0) - 25);
+      cambios.dejanDeSerLocales.push(caso);
+    }
+    const seccion = f.seccion === 'Balcarce' && !esLocal ? n.seccion
+      : f.seccion === 'País' && esLocal ? 'Balcarce'
+        : f.seccion;
+    if (seccion !== n.seccion) {
+      cambios.otraSeccion.push({ ...caso, antes: n.seccion, ahora: seccion });
+      n.seccion = seccion;
+    }
+    if (n.semaforo === 'verde' && verdeSecciones.length && !verdeSecciones.includes(n.seccion)) {
+      n.semaforo = 'amarillo';
+      n.motivo = `la IA la puso en ${n.seccion}: espera a una persona`;
+      cambios.aEsperar.push(caso);
+    }
+    salida.push(n);
+  }
+  return { notas: salida, cambios };
 }
 
 /** El archivo de fichas como texto: una línea por ficha, para que el commit de
