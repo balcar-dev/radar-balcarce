@@ -1,5 +1,5 @@
 {
-  "exportado": "2026-09-27T14:58:36.221Z",
+  "exportado": "2026-09-27T15:09:44.850Z",
   "decisiones": {
     "1951120": {
       "estado": "automatica",
@@ -33729,6 +33729,70 @@
           "fecha": "2026-09-27T14:47:50.000Z",
           "oficial": false,
           "aporte": "Aportó los datos históricos y los objetivos del Día Mundial del Turismo."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "si6qmk": {
+      "estado": "automatica",
+      "titulo": "Diego Santilli visita el autódromo Juan Manuel Fangio en Balcarce",
+      "copete": "El jefe de Gabinete nacional recorrió el circuito local junto a autoridades durante la jornada de las TC Pick Up. Su llegada responde a la participación de su hijo en la competencia.",
+      "cuerpo": "El jefe de Gabinete de la Nación, Diego Santilli, recorrió los boxes del Autódromo Municipal Juan Manuel Fangio junto al intendente Esteban Reino y al senador Maximiliano Abad. La visita se dio en el marco de la competencia de las TC Pick Up y el regreso de la actividad automovilística oficial al escenario balcarceño tras una espera de quince años.\n\nLa presencia del funcionario nacional estuvo motivada por la participación de su hijo, Nicanor Santilli Pazos, quien compite en la categoría TC Pista Pick Up a bordo de una unidad del Coiro Competición. El piloto logró el segundo puesto en la primera serie de la jornada, resultado que le permitió avanzar en la instancia definitoria del campeonato que se disputa este fin de semana.",
+      "guion": "Diego Santilli visita el autódromo Juan Manuel Fangio en Balcarce",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T15:09:44.777Z",
+      "claves": [
+        "El jefe de Gabinete nacional recorrió el autódromo local.",
+        "Estuvo acompañado por el intendente Reino y el senador Abad.",
+        "Su hijo compite este fin de semana en la categoría TC Pista Pick Up."
+      ],
+      "seSabe": [
+        "Diego Santilli recorrió el autódromo Juan Manuel Fangio junto a Esteban Reino y Maximiliano Abad, según informó la fuente.",
+        "El funcionario nacional viajó por la participación de su hijo Nicanor en la categoría TC Pista Pick Up, de acuerdo con los datos brindados.",
+        "El joven piloto finalizó segundo en la primera serie del domingo."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El jefe de Gabinete de la Nación, Diego Santilli, recorrió el autódromo Juan Manuel Fangio en el marco de la competencia de las TC Pick Up y acompañó a su hijo en la categoría TC Pista Pick Up.",
+      "etiquetas": [
+        "Diego Santilli",
+        "autodromo",
+        "Balcarce",
+        "Esteban Reino"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Diario La Vanguardia",
+          "enlace": "https://www.diariolavanguardia.com/noticias/44914-diego-santilli-estuvo-en-los-boxes-del-fangio-acompanando-a-su-hijo-nicanor/",
+          "fecha": null,
+          "oficial": false,
+          "aporte": "Detalló la recorrida de Diego Santilli por el autódromo junto a autoridades locales y el desempeño deportivo de su hijo."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1fq9x2v",
+          "titulo": "Diego Santilli visita Balcarce por la reinauguración del autódromo",
+          "fecha": "2026-09-25T15:00:50.432Z",
+          "ruta": "/nota/diego-santilli-visita-balcarce-por-la-reinauguracion-del-autodromo-1fq9x2v"
+        },
+        {
+          "id": "1mphhlq",
+          "titulo": "Diego Santilli llega a Balcarce por el automovilismo",
+          "fecha": "2026-09-25T13:40:13.000Z",
+          "ruta": "/nota/diego-santilli-llega-a-balcarce-por-el-automovilismo-1mphhlq"
+        },
+        {
+          "id": "11drdvl",
+          "titulo": "Diego Santilli se reunió con Leandro Zdero y cerrará la semana recibiendo a otros dos gobernadores",
+          "fecha": "2026-09-24T22:10:00.000Z",
+          "ruta": "/nota/diego-santilli-se-reunio-con-leandro-zdero-y-cerrara-la-semana-11drdvl"
         }
       ],
       "verificacion": {
