@@ -1,5 +1,5 @@
 {
-  "exportado": "2026-09-27T01:21:14.397Z",
+  "exportado": "2026-09-27T01:31:17.748Z",
   "decisiones": {
     "1951120": {
       "estado": "automatica",
@@ -26638,6 +26638,186 @@
           "titulo": "Kicillof encabeza la reinauguración del autódromo en Balcarce",
           "fecha": "2026-09-26T02:38:34.000Z",
           "ruta": "/nota/kicillof-encabeza-la-reapertura-del-autodromo-juan-manuel-fangio-en-7qxthx"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "ovito2": {
+      "estado": "automatica",
+      "titulo": "YPF aumenta uno por ciento sus combustibles en Balcarce",
+      "copete": "La empresa estatal YPF aplicó un incremento del uno por ciento en naftas y gasoil. La medida responde al impacto internacional del petróleo.",
+      "cuerpo": "YPF aplicó un incremento del uno por ciento en el precio de todos sus combustibles.\n\nLa compañía estatal explicó que la actualización se realiza mientras mantiene el esquema de congelamiento vigente desde abril. Con esta suba, la firma registró el menor incremento entre las principales empresas del sector, luego de que Shell, Axion y Puma aplicaran alzas de entre el dos y el cinco por ciento en los últimos días.\n\nDesde la petrolera señalaron que el objetivo es sostener los niveles de consumo, en especial en el interior del país. El presidente y CEO de la firma, Horacio Marín, ya había advertido en declaraciones radiales que la cotización internacional terminaría por repercutir en los surtidores locales.",
+      "guion": "YPF aumenta uno por ciento sus combustibles en Balcarce",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T01:31:17.679Z",
+      "claves": [
+        "YPF aumentó uno por ciento sus combustibles",
+        "La empresa mantuvo congelados los precios desde abril",
+        "Otras petroleras aplicaron subas de hasta cinco por ciento"
+      ],
+      "seSabe": [
+        "YPF aumentó uno por ciento el precio de sus combustibles desde el sábado",
+        "La petrolera estatal mantiene un esquema de congelamiento desde abril",
+        "El presidente y CEO de YPF, Horacio Marín, había advertido sobre posibles ajustes por el conflicto internacional"
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "YPF aplicó un aumento del uno por ciento en el precio de sus combustibles tras la suba del valor internacional del petróleo. La medida busca sostener el consumo en el interior del país.",
+      "etiquetas": [
+        "YPF",
+        "combustibles",
+        "aumento",
+        "Balcarce",
+        "precios",
+        "petróleo"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infórmese Primero (FM 104.9)",
+          "enlace": "http://www.informeseprimero.com.ar/2026/09/ypf-aumento-1-el-precio-de-sus.html",
+          "fecha": "2026-09-26T13:30:28.264Z",
+          "oficial": false,
+          "aporte": "Informó el aumento del uno por ciento en los combustibles de YPF y los motivos vinculados al mercado internacional."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "b9osje": {
+      "estado": "automatica",
+      "titulo": "El autódromo Juan Manuel Fangio recupera la actividad oficial en Balcarce",
+      "copete": "El circuito local vuelve a recibir competencias automovilísticas tras quince años. Las TC Pick Up disputan la octava fecha y la apertura de su Copa Coronación.",
+      "cuerpo": "El autódromo municipal Juan Manuel Fangio regresa oficialmente a la actividad este fin de semana con la disputa de la octava fecha y el inicio de la Copa Coronación de las TC Pick Up. De esta manera, el tradicional trazado serrano vuelve a albergar una competencia de nivel nacional luego de casi quince años de inactividad oficial en sus instalaciones.\n\nDurante este fin de semana, las camionetas se presentan por primera vez en el histórico trazado local para desarrollar las instancias decisivas del campeonato, marcando un hito para los seguidores del automovilismo y para toda la comunidad.",
+      "guion": "El autodromo Juan Manuel Fangio recupera la actividad oficial en Balcarce",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T01:31:17.679Z",
+      "claves": [
+        "El autódromo Juan Manuel Fangio retoma la actividad oficial tras quince años.",
+        "Las TC Pick Up disputan la octava fecha y la apertura de su Copa Coronación.",
+        "El gobernador bonaerense encabezó la reinauguración previa del circuito serrano."
+      ],
+      "seSabe": [
+        "El autódromo Juan Manuel Fangio retoma la actividad oficial tras quince años.",
+        "Las TC Pick Up corren este fin de semana en el circuito local.",
+        "Se disputa la octava fecha y la apertura de la Copa Coronación de la categoría."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El autódromo Juan Manuel Fangio vuelve a recibir competencias oficiales de nivel nacional tras quince años sin actividad. Las TC Pick Up disputan este fin de semana la octava fecha y la apertura de su Copa Coronación en el histórico trazado serrano.",
+      "etiquetas": [
+        "autodromo Juan Manuel Fangio",
+        "TC Pick Up",
+        "Balcarce"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/las-tc-pick-up-vuelven-a-darle-vida-al-juan-manuel-fangio-609",
+          "fecha": "2026-09-26T12:45:48.000Z",
+          "oficial": false,
+          "aporte": "Informó el regreso de la actividad al autódromo con la octava fecha y apertura de la Copa Coronación de las TC Pick Up."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1mkm1na",
+          "titulo": "El autódromo Juan Manuel Fangio abre sus puertas en Balcarce",
+          "fecha": "2026-09-26T02:30:21.000Z",
+          "ruta": "/nota/el-autodromo-juan-manuel-fangio-abre-sus-puertas-en-balcarce-1mkm1na"
+        },
+        {
+          "id": "uukabt",
+          "titulo": "Kicillof destaca la reinauguración del autódromo Juan Manuel Fangio en Balcarce",
+          "fecha": "2026-09-26T00:07:31.000Z",
+          "ruta": "/nota/kicillof-destaca-la-reapertura-del-autodromo-en-balcarce-uukabt"
+        },
+        {
+          "id": "1rqdi5z",
+          "titulo": "Kicillof encabeza la reinauguración del autódromo Juan Manuel Fangio en Balcarce",
+          "fecha": "2026-09-25T19:59:58.000Z",
+          "ruta": "/nota/kicillof-encabeza-la-reinauguracion-del-autodromo-juan-manuel-fangio-1rqdi5z"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "13ujk52": {
+      "estado": "automatica",
+      "titulo": "Municipios bonaerenses analizan recurrir a la Justicia por la ley de Zona Fría en Balcarce",
+      "copete": "El Senado nacional aprobó la reforma del régimen que modifica los beneficios tarifarios en el consumo de gas. La medida excluye a Balcarce y a otros distritos de la provincia, lo que motivó el rechazo de jefes comunales y defensores de usuarios.",
+      "cuerpo": "La modificación afecta a más de un millón de hogares en la provincia y contempla un esquema de asistencia focalizada según ingresos.\n\nEn las semanas previas a la votación, distintos intendentes habían cuestionado la iniciativa en el Congreso. Entre ellos se encontraban el jefe comunal de Tres Arroyos, Pablo Garate, junto a los mandatarios de Villa Gesell, Gustavo Barrera; de Olavarría, Maximiliano Wesner; de Azul, Nelson Sombra; de San Pedro, Cecilio Salazar; de Salliqueló, Ariel Succurro; de Carmen de Areco, Iván Villagrán; y de General Las Heras, Juan Manuel Cerezo.\n\nTras la sanción legislativa, el intendente de Bahía Blanca, Federico Susbielles, adelantó que recurrirá a la Justicia Federal una vez promulgada la norma, mientras que jefes comunales de la Quinta Sección y la Defensoría del Pueblo de General Pueyrredon analizan la presentación de un amparo colectivo para frenar la aplicación del nuevo esquema.",
+      "guion": "Municipios bonaerenses analizan recurrir a la Justicia por la ley de Zona Fría en Balcarce",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T01:31:17.679Z",
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El Senado aprobó la reforma de Zona Fría que deja fuera a Balcarce y otros distritos bonaerenses. Municipios y organismos analizan recurrir a la Justicia para cuestionar la eliminación del beneficio tarifario.",
+      "etiquetas": [
+        "Zona Fría",
+        "Gas",
+        "Tarifas",
+        "Balcarce",
+        "Justicia",
+        "Senado"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Puntonueve (FM 100.9)",
+          "enlace": "https://puntonueve.com.ar/zona-fria-tras-la-sancion-de-la-ley-municipios-bonaerenses-analizan-recurrir-a-la-justicia/",
+          "fecha": "2026-09-26T14:49:28.000Z",
+          "oficial": false,
+          "aporte": "Detalló la sanción de la reforma de Zona Fría en el Senado y las medidas judiciales analizadas por municipios y organismos."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "1hanh9c": {
+      "estado": "automatica",
+      "titulo": "Scorziello y Galella exporta granos a Isla Mauricio en Balcarce",
+      "copete": "La empresa acopiadora local Scorziello y Galella concretó un nuevo envío de granos al exterior con dos contenedores rumbo a Isla Mauricio, en el marco de su quincuagésimo aniversario.",
+      "cuerpo": "La firma local Scorziello y Galella sumó un nuevo destino internacional para sus productos al enviar dos contenedores con granos rumbo a Isla Mauricio. Esta operación marca un nuevo hito comercial para la empresa acopiadora, que actualmente se encuentra celebrando medio siglo de trayectoria en el distrito.\n\nEl embarque hacia este destino marítimo se integró a la lista de envíos al exterior que la compañía viene realizando desde el partido, consolidando su presencia en mercados internacionales de características particulares.",
+      "guion": "Scorziello y Galella exporta granos a Isla Mauricio en Balcarce",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T01:31:17.679Z",
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "La empresa local Scorziello y Galella cumplió medio siglo de trayectoria comercial y concretó una nueva exportación de granos hacia Isla Mauricio con el envío de dos contenedores.",
+      "etiquetas": [
+        "Scorziello y Galella",
+        "exportación",
+        "granos",
+        "Isla Mauricio",
+        "Balcarce"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/de-balcarce-al-mundo-nueva-exportacion-de-granos-esta-vez-a-un-destino-exotico-657",
+          "fecha": "2026-09-26T12:57:38.000Z",
+          "oficial": false,
+          "aporte": "Informó sobre el envío de dos contenedores de granos a Isla Mauricio por parte de la empresa local Scorziello y Galella en el año de su quincuagésimo aniversario."
         }
       ],
       "verificacion": {
