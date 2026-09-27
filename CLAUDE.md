@@ -199,7 +199,9 @@ cada uno, cuándo corre y si cuesta plata), en `INFRAESTRUCTURA.md`.
   el reloj de redes y las piezas fijas del día, y avisa por **WhatsApp**
   (CallMeBot; secretos `WHATSAPP_TELEFONO` y `WHATSAPP_APIKEY`, los pega una
   persona) una vez cada 6 horas por problema, más un resumen "todo bien" a las
-  21. También avisa 30 días antes de que venzan el token de GitHub y el
+  21 y, detrás, el **informe del día en notas** (27/09, breve: dos líneas, el
+  total contra los días anteriores y las notas por sección; la historia día por
+  día queda en `web/data/notas-por-dia.json`). También avisa 30 días antes de que venzan el token de GitHub y el
   dominio (los dos el 21/09/2027). **El WhatsApp funciona desde el 25/09**
   (se prueba con el workflow "Prueba de WhatsApp"). Sin esos secretos corre
   igual y no avisa. Cuando encuentra un problema deja un aviso amarillo en
@@ -284,6 +286,7 @@ cada uno, cuándo corre y si cuesta plata), en `INFRAESTRUCTURA.md`.
 | cambiar la tipografía (Source Serif 4 en los títulos, Inter en el resto, desde el 27/09) | La web: `web/app/layout.js` (el `<link>` de Google Fonts) y `web/app/globals.css` (`--f-titulo` y el sistema tipográfico; detalle en `web/README.md`). Las placas, reels, avatar y portada de Facebook: `reels/placa.mjs`, `reels/avatar.mjs` y `reels/portada.mjs`, con los archivos de `reels/marca/fuentes/`. Las imágenes para compartir: `web/lib/tarjeta.js`, con `web/fuentes/`. El panel, `panel/panel.html`; la guía comercial, `comercial/vista.plantilla.html` |
 | cambiar una medida de imagen de Instagram/Facebook | `redes/formatos.mjs` (fuente única, con fecha de verificación) y `FORMATOS.md`. Los lunes `redes/auditar.mjs` audita lo publicado y avisa por WhatsApp si algo se desvió o los datos pasaron de 90 días |
 | cambiar qué revisa el vigilante o cuándo avisa | `redes/vigilar.mjs` |
+| cambiar la estadística diaria de notas (qué cuenta como publicada hoy, por sección) o su informe de las 21 | `ingesta/estadistica-diaria.mjs` (`cuentaDelDia`, `textoDelDia`: breve, dos líneas); la guarda `web/scripts/generar-datos.mjs` en cada corrida en `web/data/notas-por-dia.json` (un día por línea, 400 días); la manda `planDeAvisos` (`redes/vigilar.mjs`, bloque "informe") |
 | cambiar qué tiene que salir cada día en Facebook e Instagram (el contrato: 3 reels, 6 historias, 5 posteos) | `redes/contrato.mjs` (piezas y estados), los números en `CONTRATO_DIARIO` (`ingesta/criterio.mjs` **y** la tabla de `CRITERIO-EDITORIAL.md`), las horas y ventanas en `redes/piezas.mjs`; se documenta en `REDES.md` ("El contrato del día") |
 | auditar lo publicado contra Meta (duplicados, faltantes, libro sin Meta, % de la semana) | `redes/auditar-redes.mjs`; a mano, workflow "Auditar redes"; el cierre de las 23:30 está en `redes/vigilar.mjs` (`fechaDelCierre`, `cierreDelDia`) |
 | sumar o completar comercios | `comercial/` (ver `COMERCIAL.md`) |

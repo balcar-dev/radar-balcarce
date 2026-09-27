@@ -51,7 +51,7 @@ import {
 import { CONTRATO_DIARIO } from '../ingesta/criterio.mjs';
 import {
   importantesAAvisar, textoImportantes, anotarImportantes, pendientesAAvisar, textoPendientes,
-  anotarPendientes, novedadesEnRedes, textoRedes, datosDelDia, textoResumen, armarMensaje,
+  anotarPendientes, novedadesEnRedes, textoRedes, datosDelDia, textoResumen, armarMensaje, textoInformeDelDia,
 } from './avisos.mjs';
 import {
   medir, tocaMedir, turnoDeMedicion, agregarPunto, textoEstadisticas, nombresDeCaminos,
@@ -351,6 +351,7 @@ export function tocaResumen(ahora, estado = {}) {
 export function planDeAvisos({
   ahora, problemas = [], estado = {}, portada = {}, libro = {}, web = null,
   estadisticas = '', soloResumen = false, sitio = 'https://radarbalcarce.com', cierre = null, redesActivas = true,
+  historia = {},
 }) {
   const secciones = [];
   const hechos = {};
@@ -386,9 +387,23 @@ export function planDeAvisos({
         ahora, libro, web, portada, problemas, problemasArriba: nuevos.length > 0, estadisticas, redesActivas,
       }),
     });
-    hechos.resumen = (e) => { e.ultimoResumen = diaAR(ahora); };
+    // El informe del día va detrás; si no entra en este mensaje, queda
+    // pendiente para la corrida siguiente.
+    hechos.resumen = (e) => { e.ultimoResumen = diaAR(ahora); e.informePendiente = diaAR(ahora); };
   } else if (estadisticas) {
     secciones.push({ clave: 'estadisticas', texto: estadisticas });
+  }
+
+  // El informe del día en notas (27/09): detrás del resumen, una vez por día.
+  // Si no entró junto al resumen, sale en la corrida siguiente.
+  const hoy = diaAR(ahora);
+  const informeDeHoy = soloResumen || tocaResumen(ahora, estado) || estado.informePendiente === hoy;
+  if (informeDeHoy) {
+    const texto = textoInformeDelDia({ ahora, portada, libro, historia });
+    if (texto) {
+      secciones.push({ clave: 'informe', texto });
+      hechos.informe = (e) => { e.ultimoInforme = hoy; delete e.informePendiente; };
+    }
   }
 
   if (!soloResumen) {
@@ -598,7 +613,7 @@ ${c.texto}`);
   // --- un solo mensaje con todo lo que haya para decir
   const plan = planDeAvisos({
     ahora, problemas, estado, portada, libro, web: obs.web, estadisticas: textoStats, soloResumen: probarResumen, sitio, cierre,
-    redesActivas,
+    redesActivas, historia: leer(path.join(RAIZ, 'web', 'data', 'notas-por-dia.json'), { dias: {} }),
   });
   const { texto, incluidas } = armarMensaje(plan.secciones);
   const afuera = plan.secciones.map((s) => s.clave).filter((c) => !incluidas.includes(c));

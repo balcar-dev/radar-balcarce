@@ -26,6 +26,7 @@ import { tieneCuerpo } from '../lib/cuerpo.js';
 import { sinBalcarceAlFinal } from '../lib/titulos.js';
 import { sinNotasRepetidas } from '../lib/texto.js';
 import { pendientesDeLaIngesta } from '../../redes/avisos.mjs';
+import { cuentaDelDia, anotarDia, comoHistoriaJson } from '../../ingesta/estadistica-diaria.mjs';
 import {
   vigenteEnPortada, slugsConocidos, fijarSlug, actualizarArchivo, idsEnRedes, sinPuntaje, comoArchivoJson,
   idsRetiradosAMano, correccionesAMano, conCorreccion,
@@ -532,6 +533,20 @@ const salida = {
 };
 
 fs.mkdirSync(path.dirname(SALIDA), { recursive: true });
+
+// La estadística del día (27/09): cuántas notas salieron hoy y en qué
+// sección. Se reescribe el día de hoy en cada corrida; el WhatsApp de las 21
+// la manda (ingesta/estadistica-diaria.mjs). Sólo se toca el archivo si
+// cambió algún número: si no, cada corrida haría un commit y una compilación.
+const NOTAS_POR_DIA = path.join(AQUI, '..', 'data', 'notas-por-dia.json');
+{
+  const historia = leerJson(NOTAS_POR_DIA, { dias: {} });
+  const cuenta = cuentaDelDia({ portada: salida, ahora: new Date(), libro: libroRedes });
+  const texto = comoHistoriaJson(anotarDia(historia, cuenta));
+  if (!fs.existsSync(NOTAS_POR_DIA) || fs.readFileSync(NOTAS_POR_DIA, 'utf8') !== texto) fs.writeFileSync(NOTAS_POR_DIA, texto, 'utf8');
+  console.log(`  hoy: ${cuenta.publicadas} notas publicadas (${cuenta.deBalcarce} de Balcarce) · ${Object.entries(cuenta.porSeccion).map(([s, n]) => `${s} ${n}`).join(', ') || 'ninguna'}`);
+}
+
 // ¿Cambió algo que justifique volver a publicar?
 //
 // `generado` cambia en cada corrida por definición, así que el archivo

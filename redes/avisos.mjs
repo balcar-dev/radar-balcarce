@@ -19,6 +19,7 @@ import { diaAR, horaCortaAR as horaCorta } from '../ingesta/zona.mjs';
 import { decisionHumana } from '../ingesta/utiles.mjs';
 import { LARGO_MAXIMO } from './whatsapp.mjs';
 import { contratoDelDia, textoContrato, contratoCompleto } from './contrato.mjs';
+import { cuentaDelDia, textoDelDia } from '../ingesta/estadistica-diaria.mjs';
 
 const minutos = (desde, ahora) => (ahora.getTime() - new Date(desde).getTime()) / 60000;
 
@@ -266,7 +267,19 @@ export function datosDelDia({ ahora = new Date(), portada = {}, libro = {} }) {
     pendientes: Array.isArray(portada?.pendientes) ? portada.pendientes.length : null,
     // Las automáticas que no salen porque no tienen cuerpo (web/lib/cuerpo.js).
     esperandoCuerpo: Number.isFinite(portada?.esperandoCuerpo) ? portada.esperandoCuerpo : null,
+    // Lo publicado hoy (27/09): mismo criterio que web/data/notas-por-dia.json.
+    delDia: cuentaDelDia({ portada, ahora, libro }),
   };
+}
+
+/**
+ * El informe del día en notas (27/09): por sección, las que no tuvieron nada
+ * y cómo viene contra los días anteriores (web/data/notas-por-dia.json). Va
+ * como bloque propio detrás del resumen de las 21, para no cortarlo: si no
+ * entra en el mismo WhatsApp, sale en la corrida siguiente.
+ */
+export function textoInformeDelDia({ ahora = new Date(), portada = {}, libro = {}, historia = {} }) {
+  return textoDelDia(cuentaDelDia({ portada, ahora, libro }), historia);
 }
 
 /**
@@ -285,7 +298,9 @@ export function textoResumen({
   const incompleto = datos.contrato && redesActivas ? !contratoCompleto(datos.contrato) : false;
   const cab = problemas.length || incompleto ? '📋 Radar Balcarce: resumen del día' : '✅ Radar Balcarce: todo bien. Resumen del día';
   const l = [cab, ''];
-  l.push(`• Notas nuevas hoy: ${datos.notas} (${datos.locales} de Balcarce), ${datos.conCuerpo} con cuerpo`);
+  // Las notas del día van en su propio bloque, breve, detrás del resumen
+  // (textoInformeDelDia): acá no se repiten.
+  if (!datos.delDia) l.push(`• Notas nuevas hoy: ${datos.notas} (${datos.locales} de Balcarce), ${datos.conCuerpo} con cuerpo`);
   // El contrato del día (25/09): una línea por red, con lo que falta y lo que
   // todavía está a tiempo ("pendiente"). Reemplaza al conteo suelto de antes.
   if (!redesActivas) l.push('• Redes: apagadas (REDES_ACTIVAS). Es esperable que no salga nada en Facebook ni en Instagram.');

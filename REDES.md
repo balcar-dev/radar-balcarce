@@ -335,7 +335,7 @@ piezas fijas del día (clima y farmacia) hayan salido, y que la portada no
 vuelva a mostrar lo que se pidió sacar (`REGLAS.md`). Avisa por **WhatsApp**
 (`redes/whatsapp.mjs`, CallMeBot, secretos `WHATSAPP_TELEFONO` y
 `WHATSAPP_APIKEY`; **funciona desde el 25/09**) una vez cada 6 horas por
-problema, y a las 21 manda el resumen del día con el **contrato del día** (ver arriba); a las 23:30 audita el día contra Meta y avisa si algo no cuadra. También avisa 30 días antes
+problema, y a las 21 manda el resumen del día con el **contrato del día** (ver arriba) y el informe breve de las notas publicadas hoy por sección (`ingesta/estadistica-diaria.mjs`, historia en `web/data/notas-por-dia.json`); a las 23:30 audita el día contra Meta y avisa si algo no cuadra. También avisa 30 días antes
 de que venzan el token de GitHub y el dominio. Cada lunes, la **Auditoría** (`redes/auditar.mjs`) mide
 las imágenes publicadas. Detalle en `INFRAESTRUCTURA.md`.
 

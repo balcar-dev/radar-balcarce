@@ -212,7 +212,8 @@ test('resumen: con problemas abiertos los lista, y trae las estadísticas', () =
     problemas: [{ clave: 'x', nivel: 'alta', texto: 'La web no responde.' }], estadisticas: '📊 Estadísticas\nWeb: …',
   });
   assert.match(m, /^📋 Radar Balcarce: resumen del día/);
-  assert.match(m, /Notas nuevas hoy: 2 \(1 de Balcarce\), 1 con cuerpo/);
+  // Las notas del día ya no van acá: tienen su bloque breve detrás (27/09).
+  assert.doesNotMatch(m, /Notas nuevas hoy/);
   assert.match(m, /Esperando a una persona: 3/);
   assert.match(m, /Problemas abiertos \(1\):\n {2}- La web no responde\./);
   // El contrato del día, una línea por red (redes/contrato.mjs).
@@ -269,7 +270,7 @@ test('plan: junta problemas, importante, pendientes y redes, y sólo anota lo qu
 test('plan: a las 21 va el resumen aunque haya problemas; a las 9, las estadísticas solas', () => {
   const problemas = [{ clave: 'x', nivel: 'media', texto: 'algo' }];
   const noche = planDeAvisos({ ahora: A('21:05'), estado: { avisos: { x: hace(A('21:05'), 10) } }, portada: {}, libro: {}, problemas, estadisticas: '📊 E' });
-  assert.deepEqual(noche.secciones.map((s) => s.clave), ['resumen']);
+  assert.deepEqual(noche.secciones.map((s) => s.clave), ['resumen', 'informe']);
   assert.match(noche.secciones[0].texto, /📊 E/);
   const manana = planDeAvisos({ ahora: A('09:05'), estado: {}, portada: {}, libro: {}, estadisticas: '📊 E' });
   assert.deepEqual(manana.secciones.map((s) => s.clave), ['estadisticas']);
@@ -278,7 +279,7 @@ test('plan: a las 21 va el resumen aunque haya problemas; a las 9, las estadíst
 test('plan: el resumen sale una vez por día', () => {
   const estado = {};
   const plan = planDeAvisos({ ahora: A('21:05'), estado, portada: {}, libro: {} });
-  plan.anotar(estado, ['resumen']);
+  plan.anotar(estado, ['resumen', 'informe']);
   assert.deepEqual(planDeAvisos({ ahora: A('21:35'), estado, portada: {}, libro: {} }).secciones, []);
 });
 
@@ -287,7 +288,7 @@ test('plan: la prueba del resumen trae sólo el resumen, aunque haya otras cosas
     ahora: A('11:00'), estado: {}, portada: { notas: [nota('imp', { visto: hace(A('11:00'), 10) })], pendientes: [P('a')] }, libro: LIBRO,
     problemas: [{ clave: 'x', nivel: 'alta', texto: 'algo' }], soloResumen: true,
   });
-  assert.deepEqual(plan.secciones.map((s) => s.clave), ['resumen']);
+  assert.deepEqual(plan.secciones.map((s) => s.clave), ['resumen', 'informe']);
 });
 
 test('plan: la primera vez sin marca de redes no manda todo el libro', () => {

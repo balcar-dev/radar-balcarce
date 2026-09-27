@@ -138,7 +138,7 @@ jobs:
           # dolar-historia.json: la cotización de las 11 de cada día hábil, para
           # la nota propia del dólar y su comparación (web/lib/notas-propias.js).
           # fichas.json: lo que leyó la IA de cada nota y las repetidas (V2.2).
-          git add web/data/portada.json web/data/archivo.json web/data/agenda.json web/data/intentos-ia.json web/data/dolar-historia.json web/data/fichas.json
+          git add web/data/portada.json web/data/archivo.json web/data/agenda.json web/data/intentos-ia.json web/data/dolar-historia.json web/data/fichas.json web/data/notas-por-dia.json
           if git diff --cached --quiet; then
             echo "Sin novedades: no hay nada que publicar."
           else
