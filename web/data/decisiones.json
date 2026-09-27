@@ -1,5 +1,5 @@
 {
-  "exportado": "2026-09-27T08:00:21.482Z",
+  "exportado": "2026-09-27T08:10:21.334Z",
   "decisiones": {
     "1951120": {
       "estado": "automatica",
@@ -31150,6 +31150,38 @@
           "fecha": "2026-09-27T07:49:55.000Z",
           "oficial": false,
           "aporte": "Aportó los datos del estudio de la Fundación de Estudios de Economía Aplicada sobre la evolución de las jubilaciones demoradas y las discrepancias con las proyecciones oficiales."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "owe1zx": {
+      "estado": "automatica",
+      "titulo": "Lanzan una aplicacion para consultar comandos de Linux en iOS y Android",
+      "copete": "Una nueva herramienta permite acceder a miles de páginas de manual y comandos de Linux desde teléfonos móviles y computadoras sin necesidad de conexión a internet.",
+      "cuerpo": "Una nueva aplicación desarrollada para dispositivos móviles y computadoras permite consultar y aprender comandos de Linux de manera organizada.\n\nLa aplicación ofrece fichas detalladas con parámetros, ejemplos de uso y opciones similares para cada instrucción. Según se detalló, su principal ventaja radica en la posibilidad de acceder a toda la información recopilada sin necesidad de contar con conexión a internet tras su instalación.\n\nEl software se encuentra disponible para descargar en teléfonos con sistemas operativos Android e iOS, además de contar con versiones adaptadas para computadoras Mac, Windows y distintas distribuciones de Linux.",
+      "guion": "Lanzan una aplicacion para consultar comandos de Linux en iOS y Android",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T08:10:21.220Z",
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Lanzan una aplicacion para telefonos y computadoras que permite consultar comandos y manuales de Linux de forma organizada y sin conexion a internet.",
+      "etiquetas": [
+        "Linux",
+        "aplicacion"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Hipertextual",
+          "enlace": "https://hipertextual.com/guias/recopilatorio-comandos-linux-linux-command-library/",
+          "fecha": "2026-09-27T08:00:00.000Z",
+          "oficial": false,
+          "aporte": "Detallo las caracteristicas, categorias y disponibilidad de la aplicacion Linux Command Library"
         }
       ],
       "verificacion": {
