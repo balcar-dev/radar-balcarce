@@ -1,5 +1,5 @@
 {
-  "exportado": "2026-09-27T08:30:17.279Z",
+  "exportado": "2026-09-27T08:40:20.295Z",
   "decisiones": {
     "1951120": {
       "estado": "automatica",
@@ -31231,6 +31231,71 @@
           "titulo": "General Guetlein, del Departamento de Guerra estadounidense: “Estamos actuando con urgencia para forjar un escudo multicapa”",
           "fecha": "2026-09-20T09:32:00.000Z",
           "ruta": "/nota/general-guetlein-del-departamento-de-guerra-estadounidense-estamos-n6tdi1"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "e6rtq9": {
+      "estado": "automatica",
+      "titulo": "MediaMarkt lanza descuentos en ordenadores y móviles",
+      "copete": "La tienda online de MediaMarkt publicó una selección de rebajas en dispositivos tecnológicos, que incluye ordenadores, teléfonos y lectores de libros electrónicos.",
+      "cuerpo": "La cadena comercial MediaMarkt dispuso una serie de descuentos en su tienda online para diversos equipos tecnológicos. Entre los dispositivos rebajados se encuentra el ordenador portátil Asus Vivobook S16, que cuenta con pantalla OLED de dieciséis pulgadas y procesador Snapdragon, disponible a un valor reducido al iniciar sesión en la plataforma.\n\nEstas promociones se suman a las distintas alternativas de rebajas en tecnología difundidas en el mercado durante las últimas semanas, orientadas a la renovación de equipos de telefonía, informática y entretenimiento digital.",
+      "guion": "MediaMarkt lanza descuentos en ordenadores y móviles",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T08:40:20.230Z",
+      "claves": [
+        "MediaMarkt rebajó precios en su tienda online.",
+        "Hay descuentos en ordenadores y teléfonos.",
+        "El lector de libros electrónicos incluye beneficio para estudiantes."
+      ],
+      "seSabe": [
+        "MediaMarkt lanzó ofertas en su tienda online.",
+        "El ordenador Asus Vivobook S16 y el teléfono Google Pixel 10 Pro figuran entre los productos rebajados.",
+        "El lector de libros electrónicos Peaq Basic ofrece un descuento adicional para estudiantes."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "MediaMarkt lanzó rebajas en su tienda online en ordenadores, teléfonos, tablets y lectores de libros electrónicos con descuentos aplicados según el método de compra.",
+      "etiquetas": [
+        "Tecnología",
+        "MediaMarkt",
+        "Ofertas",
+        "Móviles",
+        "Ordenadores"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Xataka",
+          "enlace": "https://www.xataka.com/seleccion/mejores-ofertas-mediamarkt-tecnologia-hoy-domingo-27-septiembre",
+          "fecha": "2026-09-27T08:30:51.000Z",
+          "oficial": false,
+          "aporte": "Detalló las ofertas y precios promocionales de MediaMarkt en ordenadores, móviles, tablets y lectores de libros electrónicos."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "rbsr6m",
+          "titulo": "El Corte Inglés lanza nuevas ofertas en tecnología en el exterior",
+          "fecha": "2026-09-26T08:30:17.000Z",
+          "ruta": "/nota/el-corte-ingles-lanza-nuevas-ofertas-en-tecnologia-en-el-exterior-rbsr6m"
+        },
+        {
+          "id": "1lyz3un",
+          "titulo": "Los mejores seguros de viaje en septiembre 2026: comparativa y análisis de cobertura",
+          "fecha": "2026-09-22T18:00:00.000Z",
+          "ruta": "/nota/los-mejores-seguros-de-viaje-en-septiembre-2026-comparativa-y-1lyz3un"
+        },
+        {
+          "id": "toewxm",
+          "titulo": "Dólar blue hoy: a cuánto opera este domingo 20 de septiembre",
+          "fecha": "2026-09-21T02:31:00.000Z",
+          "ruta": "/nota/dolar-blue-hoy-a-cuanto-opera-este-domingo-20-de-septiembre-toewxm"
         }
       ],
       "verificacion": {
