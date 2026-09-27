@@ -1,5 +1,5 @@
 {
-  "exportado": "2026-09-27T10:20:32.657Z",
+  "exportado": "2026-09-27T10:30:42.145Z",
   "decisiones": {
     "1951120": {
       "estado": "automatica",
@@ -9110,13 +9110,51 @@
     },
     "izytbj": {
       "estado": "automatica",
-      "titulo": "Un cocinero de Balcarce preparó un asado en China",
-      "copete": "Un vecino de Balcarce viajó a China para cocinar carne argentina y compartir los sabores tradicionales del asado en el exterior.",
-      "cuerpo": null,
-      "guion": "Un cocinero de Balcarce preparó un asado en China",
+      "titulo": "Un asador balcarceño lleva la parrilla argentina a China",
+      "copete": "El balcarceño Argentino Lucero viajó a China para cocinar en un nuevo complejo comercial y de exposición, donde presenta cortes vacunos, pollo y verduras a la parrilla ante un público masivo.",
+      "cuerpo": "Su estadía se extenderá por alrededor de un mes, período durante el cual trabaja en una de las cuatro cocinas del predio dedicadas a distintas especialidades. Su tarea consiste en preparar dos cortes de carne, pollo y verduras en una modalidad de servicio similar a un tenedor libre, con un flujo constante de comensales que incluye a empleados y visitantes del lugar.\n\nPara llevar adelante su labor, Lucero debió adaptarse a las particularidades del mercado local, ya que utiliza carne de origen australiano supercongelada cuya calidad le resulta cercana a la argentina. Además, los alimentos deben ser cortados en pequeñas porciones para ser consumidos con palitos. Según indicó, la respuesta del público local es positiva y las bandejas se vacían al finalizar cada jornada de trabajo, lo que le genera satisfacción frente al desafío cultural y gastronómico.",
+      "guion": "Un asador balcarceño lleva la parrilla argentina a China",
       "deIA": true,
       "por": "ia",
-      "cuando": "2026-09-21T03:14:12.297Z"
+      "cuando": "2026-09-27T10:30:42.082Z",
+      "claves": [
+        "El balcarceño Argentino Lucero cocina en China en un nuevo complejo comercial.",
+        "Su tarea se centra en la parrilla con dos cortes de carne, pollo y verduras.",
+        "Se adapta a insumos australianos y a la costumbre local de comer con palitos.",
+        "La respuesta del público es positiva y consume la totalidad de las preparaciones."
+      ],
+      "seSabe": [
+        "Argentino Lucero viajó a China para trabajar como asador en la inauguración de un complejo comercial y de exposición.",
+        "Su estadía prevista es de aproximadamente un mes.",
+        "El complejo cuenta con cuatro cocinas y su sector se especializa en carne, pollo y verduras a la parrilla.",
+        "Utiliza carne de origen australiano supercongelada y adapta las porciones para ser consumidas con palitos.",
+        "La producción diaria se consume por completo en la modalidad de tenedor libre."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El balcarceño Argentino Lucero viajó a China para cocinar cortes de carne, pollo y verduras a la parrilla en un nuevo complejo comercial y de exposición ante un numeroso público.",
+      "etiquetas": [
+        "Argentino Lucero",
+        "China",
+        "asador balcarceño",
+        "parrilla argentina",
+        "gastronomía"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/entre-brasas-y-sabores-desconocidos-la-experiencia-de-un-balcarceno-asando-en-china-190",
+          "fecha": null,
+          "oficial": false,
+          "aporte": "Detalló la experiencia de un balcarceño cocinando a la parrilla en China, su metodología de trabajo y la adaptación a las costumbres locales."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
     },
     "8hniuy": {
       "estado": "automatica",
@@ -10046,13 +10084,45 @@
     },
     "wc6fea": {
       "estado": "automatica",
-      "titulo": "Muestra anual de la escuela San José en Balcarce",
-      "copete": "La comunidad educativa de la escuela San José expone este año los trabajos realizados por los alumnos en Balcarce.",
-      "cuerpo": null,
-      "guion": "Muestra anual de la escuela San José en Balcarce",
+      "titulo": "El Colegio San José ultima detalles para una nueva edición de EduCoAgro en Balcarce",
+      "copete": "La institución educativa se prepara para realizar la duodécima edición de su muestra anual del 10 al 13 de septiembre. Habrá cerca de 60 proyectos institucionales vinculados a la producción, la tecnología y los 150 años de la ciudad.",
+      "cuerpo": "Andrea Silva describió el movimiento previo como una etapa de gran actividad donde alumnos, docentes y familias ultiman las presentaciones. Por su parte, el director Pablo Vergara señaló que la exposición busca reflejar el trabajo desarrollado por los estudiantes durante todo el ciclo lectivo como parte del proceso pedagógico.\n\nDurante las cuatro jornadas se presentarán cerca de 60 proyectos institucionales sobre temáticas como agroaroma, avicultura, piscicultura, ecología y arte. La muestra también incluirá trabajos conjuntos con la Facultad de Ciencias Agrarias y el INTA, además de propuestas de articulación entre los niveles educativos primario y secundario.",
+      "guion": "El Colegio San José ultima detalles para una nueva edición de EduCoAgro en Balcarce",
       "deIA": true,
       "por": "ia",
-      "cuando": "2026-09-21T09:14:12.546Z"
+      "cuando": "2026-09-27T10:30:42.082Z",
+      "claves": [
+        "La muestra EduCoAgro se realizará del 10 al 13 de septiembre.",
+        "Participarán cerca de 60 proyectos institucionales de diversas temáticas.",
+        "La edición conmemora los 150 años de la fundación de Balcarce.",
+        "Habrá trabajos articulados con el INTA y la Facultad de Ciencias Agrarias."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El Colegio San José se prepara para realizar una nueva edición de EduCoAgro del 10 al 13 de septiembre. La muestra incluirá cerca de 60 proyectos educativos, tecnológicos y productivos vinculados también a los 150 años de Balcarce.",
+      "etiquetas": [
+        "EduCoAgro",
+        "Colegio San José",
+        "Balcarce",
+        "Educación",
+        "Producción",
+        "Tecnología"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/la-escuela-san-jose-se-prepara-para-mostrar-todo-lo-que-construyo-durante-el-ano-416",
+          "fecha": null,
+          "oficial": false,
+          "aporte": "Detalló los preparativos, fechas, cantidad de proyectos y testimonios institucionales sobre la muestra EduCoAgro."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
     },
     "14hvebc": {
       "estado": "automatica",
@@ -10779,13 +10849,47 @@
     },
     "1h8sxxo": {
       "estado": "automatica",
-      "titulo": "Nuevas propuestas para la dinámica de campo en Balcarce",
-      "copete": "El sector agropecuario de Balcarce incorpora nuevas propuestas y actividades orientadas a la producción y la capacitación técnica.",
-      "cuerpo": null,
-      "guion": "Nuevas propuestas para la dinámica de campo en Balcarce",
+      "titulo": "Informan los servicios de sepelios de la Cooperativa de Electricidad en Balcarce",
+      "copete": "Se dieron a conocer los registros de servicios fúnebres informados por la Cooperativa de Electricidad General Balcarce Limitada correspondientes a los últimos meses.",
+      "cuerpo": "La Cooperativa de Electricidad General Balcarce Limitada informó el detalle de los servicios de sepelios prestados en el distrito durante diferentes fechas de los meses de mayo, agosto y septiembre de este año, según los avisos publicados en la comunidad.\n\nLos reportes detallan los distintos decesos registrados en el partido, indicando las fechas de fallecimiento, las casas de duelo correspondientes tanto en la cabecera del partido como en zonas rurales como Los Pinos, y los destinos de los restos para su inhumación o cremación.\n\nEstas comunicaciones habituales permiten a los vecinos conocer los servicios fúnebres organizados por la entidad cooperativa y acompañar a los familiares de las personas fallecidas en las diferentes localidades del distrito.",
+      "guion": "Informan los servicios de sepelios de la Cooperativa de Electricidad en Balcarce",
       "deIA": true,
       "por": "ia",
-      "cuando": "2026-09-21T12:14:15.502Z"
+      "cuando": "2026-09-27T10:30:42.082Z",
+      "claves": [
+        "Detalle de servicios fúnebres en Balcarce.",
+        "Información brindada por la Cooperativa de Electricidad local.",
+        "Registros correspondientes a los meses de mayo, agosto y septiembre."
+      ],
+      "seSabe": [
+        "La Cooperativa de Electricidad General Balcarce Limitada difundió los avisos de servicios de sepelios.",
+        "Los registros abarcan decesos ocurridos entre mayo y septiembre de 2026.",
+        "Se detallan las casas de duelo y los destinos de los restos en el Cementerio Municipal u otras locaciones."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "La Cooperativa de Electricidad General Balcarce Limitada difundió el registro de los servicios de sepelios y avisos fúnebres correspondientes a los últimos meses en el distrito.",
+      "etiquetas": [
+        "servicios fúnebres",
+        "Cooperativa de Electricidad",
+        "Balcarce",
+        "fallecimientos"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/la-dinamica-de-campo-trae-nuevas-propuestas-y-actividades-969",
+          "fecha": null,
+          "oficial": false,
+          "aporte": "Aportó el listado completo de los avisos fúnebres y servicios de sepelios de la Cooperativa de Electricidad."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
     },
     "1rjx8hz": {
       "estado": "automatica",
@@ -32087,6 +32191,220 @@
           "titulo": "HB 1293 en Florida: la ley que crea el delito de ingreso fraudulento a una vivienda residencial desde octubre 2026",
           "fecha": "2026-09-25T00:00:00.000Z",
           "ruta": "/nota/hb-1293-en-florida-la-ley-que-crea-el-delito-de-ingreso-fraudulento-a-13nkxw3"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "m4pjpv": {
+      "estado": "automatica",
+      "titulo": "Kicillof visita Balcarce y Lobería junto a los intendentes en Balcarce",
+      "copete": "El gobernador bonaerense Axel Kicillof visitó los distritos de Balcarce y Lobería, donde se reunió con los jefes comunales Esteban Reino y Pablo Barrena para inaugurar obras y entregar documentación.",
+      "cuerpo": "El gobernador bonaerense Axel Kicillof visitó los municipios de Balcarce y Lobería, donde fue recibido por los intendentes Esteban Reino y Pablo Barrena. Durante la recorrida, los mandatarios compartieron un encuentro institucional que incluyó la entrega de aportes decisivos para la reinauguración del autódromo Juan Manuel Fangio y casi cuatrocientas escrituras en territorio balcarceño. Como se había informado a mediados de la semana previa, el mandatario provincial llegó a la región para encabezar las actividades previstas en ambas comunas.",
+      "guion": "Kicillof visita Balcarce y Lobería junto a los intendentes en Balcarce",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T10:30:42.082Z",
+      "claves": [
+        "El gobernador Axel Kicillof visitó Balcarce y Lobería.",
+        "Fue recibido por los intendentes Esteban Reino y Pablo Barrena.",
+        "Entregaron escrituras y aportes para el autódromo local."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El gobernador Axel Kicillof visitó Balcarce y Lobería, donde se reunió con los intendentes Esteban Reino y Pablo Barrena para entregar escrituras y concretar aportes destinados al autódromo local.",
+      "etiquetas": [
+        "Axel Kicillof",
+        "Esteban Reino",
+        "Balcarce",
+        "Lobería",
+        "Autódromo Juan Manuel Fangio"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Sendero Regional",
+          "enlace": "https://www.senderomultimedios.com.ar/un-abrazo-contra-la-grieta-la-visita-de-kicillof-a-loberia-y-balcarce/",
+          "fecha": "2026-09-27T10:14:33.000Z",
+          "oficial": false,
+          "aporte": "Detalló la visita del gobernador Axel Kicillof a Balcarce y Lobería, los encuentros con los intendentes Esteban Reino y Pablo Barrena, y la entrega de obras, ambulancias, netbooks y escrituras."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1v69v60",
+          "titulo": "Kicillof visita la vecina ciudad de Loberia",
+          "fecha": "2026-09-25T12:55:56.000Z",
+          "ruta": "/nota/kicillof-visita-la-vecina-ciudad-de-loberia-1v69v60"
+        },
+        {
+          "id": "11pnmnw",
+          "titulo": "Axel Kicillof visita Balcarce para la reinauguración del autódromo",
+          "fecha": "2026-09-23T23:52:12.000Z",
+          "ruta": "/nota/kicillof-visitara-balcarce-para-la-reinauguracion-del-autodromo-11pnmnw"
+        },
+        {
+          "id": "1ulc8zs",
+          "titulo": "En un encuentro con Pedro Sánchez y Mamdani, Kicillof apuntó contra Milei: \"En Argentina se está viviendo una verdadera catástrofe\"",
+          "fecha": "2026-09-23T22:15:04.000Z",
+          "ruta": "/nota/en-un-encuentro-con-pedro-sanchez-y-mamdani-kicillof-apunto-contra-1ulc8zs"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "13a4uka": {
+      "estado": "automatica",
+      "titulo": "El Presidente viaja a Francia para participar de un foro de inversiones",
+      "copete": "El presidente Javier Milei partirá este martes rumbo a París con una comitiva de ministros, gobernadores y empresarios para participar de la Semana Argentina en Francia, un foro orientado a atraer inversiones y reunirse con su par francés Emmanuel Macron.",
+      "cuerpo": "El presidente Javier Milei y su equipo viajarán este martes a la noche a París para participar entre jueves y viernes de la Semana Argentina en Francia, un foro de inversiones organizado en la sede de la OCDE.\n\nEl programa prevé exposiciones de funcionarios nacionales y referentes energéticos, bancarios y del agro, así como reuniones bilaterales con empresarios globales y un encuentro entre Milei y el mandatario francés Emmanuel Macron en el Palacio del Eliseo. El Presidente disertará el jueves y regresará a Buenos Aires el sábado, tras recibir el premio del Paris Economic Forum y reunirse con el Premio Nobel de Economía Philippe Aghion.\n\nComo se había informado en la agenda difundida a principios de semana, la participación presidencial incluye actividades sobre energía, minerales críticos y tecnología, en paralelo a los cuestionamientos formulados por el mandatario a la economía europea antes de su partida.",
+      "guion": "El Presidente viaja a Francia para participar de un foro de inversiones",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T10:30:42.082Z",
+      "claves": [
+        "Javier Milei viaja este martes a París para participar de la Semana Argentina en Francia.",
+        "La comitiva oficial incluye a ministros, secretarios y once gobernadores provinciales.",
+        "El foro se desarrollará jueves y viernes con exposiciones de funcionarios y empresarios globales.",
+        "Está prevista una reunión bilateral entre el Presidente y su par francés Emmanuel Macron."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El presidente Javier Milei viaja este martes a París junto a ministros, gobernadores y empresarios para participar de un foro internacional de inversiones y reunirse con Emmanuel Macron.",
+      "etiquetas": [
+        "Javier Milei",
+        "Paris",
+        "Francia",
+        "inversiones",
+        "economia"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Clarín",
+          "enlace": "https://www.clarin.com/economia/javier-milei-sale-caravana-paris-hablarle-empresarios-inversores_0_6zB1vd9W1G.html",
+          "fecha": "2026-09-27T09:00:28.000Z",
+          "oficial": false,
+          "aporte": "Detalla la agenda, los integrantes de la comitiva oficial y las actividades previstas para el foro de inversiones en París."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1mzcxyt",
+          "titulo": "El presidente Javier Milei encabeza un foro de inversiones en París",
+          "fecha": "2026-09-27T03:40:32.000Z",
+          "ruta": "/nota/el-presidente-javier-milei-encabeza-un-foro-de-inversiones-en-paris-1mzcxyt"
+        },
+        {
+          "id": "1f08r2d",
+          "titulo": "La agenda de Javier Milei en París: exposición en la OCDE, búsqueda de inversiones y un particular pedido a la prensa",
+          "fecha": "2026-09-23T21:29:53.000Z",
+          "ruta": "/nota/la-agenda-de-javier-milei-en-paris-exposicion-en-la-ocde-busqueda-de-1f08r2d"
+        },
+        {
+          "id": "drk3w0",
+          "titulo": "Antes de viajar a París, Javier Milei cuestionó la economía europea: \"Se está hundiendo\"",
+          "fecha": "2026-09-22T00:31:00.000Z",
+          "ruta": "/nota/antes-de-viajar-a-paris-javier-milei-cuestiono-la-economia-europea-se-drk3w0"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "1cqpdyc": {
+      "estado": "automatica",
+      "titulo": "Colaboradores cercanos se mantienen firmes en la estructura presidencial",
+      "copete": "El asistente personal Mario Suli y la secretaria privada Magalí Bianco continúan en sus puestos dentro del entorno presidencial tras las modificaciones organizativas en la Quinta de Olivos.",
+      "cuerpo": "Ambos colaboradores consolidaron su vínculo con el mandatario desde etapas anteriores a la llegada al gobierno nacional y se mantienen al margen de los nombramientos formales en el Boletín Oficial. Suli, quien acompaña al jefe de Estado desde su etapa como diputado nacional, ingresa al despacho presidencial sin restricciones protocolares al igual que la secretaria general de la Presidencia, Karina Milei.\n\nLa permanencia de ambos integrantes del entorno presidencial genera expectativa en el ámbito político nacional debido al reordenamiento administrativo impulsado en la residencia oficial, donde fuentes consultadas destacaron el perfil de bajo perfil y la relación de confianza que ambos mantienen con el mandatario.",
+      "guion": "Colaboradores cercanos se mantienen firmes en la estructura presidencial",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T10:30:42.082Z",
+      "claves": [
+        "Mario Suli y Magalí Bianco continúan en el entorno presidencial.",
+        "Los colaboradores se mantienen firmes tras los cambios en Olivos.",
+        "Ninguno de los dos figura con cargos formales en el Boletín Oficial."
+      ],
+      "seSabe": [
+        "Mario Suli se desempeña como asistente personal de Javier Milei y vive en el chalet de la Quinta de Olivos.",
+        "Magalí Bianco es la secretaria privada del Presidente y se sumó a sus funciones a principios de marzo.",
+        "Ninguno de los dos colaboradores figura empleado con cargo formal dentro del Estado en el Boletín Oficial.",
+        "Suli acompaña al mandatario desde su período como diputado nacional."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El asistente personal Mario Suli y la secretaria privada Magalí Bianco continúan en sus puestos dentro del entorno presidencial tras las modificaciones organizativas en la Quinta de Olivos.",
+      "etiquetas": [
+        "Gobierno nacional",
+        "Javier Milei",
+        "Quinta de Olivos"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/politica/los-guardianes-de-milei-que-sobrevivieron-a-los-cambios-en-olivos-nid27092026/",
+          "fecha": "2026-09-27T10:25:12.000Z",
+          "oficial": false,
+          "aporte": "Aportó detalles sobre la permanencia de Mario Suli y Magalí Bianco en el entorno presidencial tras los cambios en Olivos."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "nimx4w": {
+      "estado": "automatica",
+      "titulo": "Precios de los combustibles en México este domingo",
+      "copete": "La Comisión Nacional de Energía y la Procuraduría Federal del Consumidor informaron los valores actualizados de los carburantes para este domingo 27 de septiembre.",
+      "cuerpo": "El organismo regulador, que opera desde marzo de 2025 tras la disolución de la entidad anterior, trabaja de forma coordinada con la Secretaría de Energía para supervisar el sector de hidrocarburos. Asimismo, a principios de 2025 se firmó un acuerdo entre el sector empresarial y la presidencia para establecer un tope de veinticuatro pesos en la venta de la gasolina magna.\n\nLos montos finales de los combustibles dependen de factores como la producción, la logística, los impuestos y las cotizaciones internacionales, los cuales impactan directamente en la economía general y en los índices inflacionarios.",
+      "guion": "Precios de los combustibles en México este domingo",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T10:30:42.082Z",
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Los organismos oficiales informaron los valores actualizados de la gasolina magna, premium y el diésel en la Ciudad de México para este domingo.",
+      "etiquetas": [
+        "combustibles",
+        "México",
+        "economia",
+        "precios",
+        "energia"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/mexico/2026/09/27/precios-de-la-gasolina-hoy-en-mexico-litro-de-magna-premium-y-diesel-este-domingo-27-de-septiembre/",
+          "fecha": "2026-09-27T10:16:44.000Z",
+          "oficial": false,
+          "aporte": "Detalló los valores promedio de la gasolina magna, premium y el diésel en la Ciudad de México, además del rol de los organismos de control energético."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "toewxm",
+          "titulo": "Dólar blue hoy: a cuánto opera este domingo 20 de septiembre",
+          "fecha": "2026-09-21T02:31:00.000Z",
+          "ruta": "/nota/dolar-blue-hoy-a-cuanto-opera-este-domingo-20-de-septiembre-toewxm"
+        },
+        {
+          "id": "ups44l",
+          "titulo": "Por qué no corre Franco Colapinto este domingo 20 de septiembre: cuándo vuelve la Fórmula 1",
+          "fecha": "2026-09-20T13:07:00.000Z",
+          "ruta": "/nota/por-que-no-corre-franco-colapinto-este-domingo-20-de-septiembre-ups44l"
         }
       ],
       "verificacion": {
