@@ -8,6 +8,25 @@ Cada pendiente dice **quién** lo hace (Hernán, Andrés, "los dos" o Claude) y
 **qué tan urgente** es (alta, media o baja). Lo que sólo puede hacer una persona
 (abrir cuentas, cargar claves, decidir criterio) nunca lo hace Claude.
 
+## El plan V2.2 (27/09): cómo se eligen las notas
+
+El plan completo, con la hoja de ruta, está en [`docs/PLAN-V2.2.md`](docs/PLAN-V2.2.md).
+Punto de restauración anterior a los cambios: la etiqueta `antes-de-v2.2` en GitHub.
+
+**Hecho el 27/09:** filtro de entrada por la sección del medio (otros países,
+policiales de afuera, consejos), feeds generales que sólo cuentan cobertura,
+ficha de cada fuente, "de Balcarce" sólo con el título, redes sólo con lo de
+Balcarce, título de la IA sin Balcarce de más, 197 notas retiradas de la web
+(`web/data/retiradas.json`), medios de España y chimentos apagados.
+
+| Qué falta | Quién | Urgencia |
+|---|---|---|
+| **Borrar de Facebook e Instagram el posteo de Necochea** del 27/09 a las 11:03 ("El transporte público y el gas en debate en la región"). Facebook: `facebook.com/1254237411116171/posts/122097323043495512`. Borrar es permanente: lo hace una persona | Hernán | Alta |
+| **Crear un proyecto de Google aparte** (sin facturación) y cargar su clave en GitHub Secrets como `GEMINI_API_KEY_CLASIFICACION`, para la lectura con IA | Hernán | Media (para la semana 2 del plan) |
+| **Revisar una vez el examen** de unos 60 casos que arma Claude (la respuesta que tiene que dar la IA para cada nota) | Los dos | Media (semana 2) |
+| Perfil de Balcarce, examen, lectura en dos niveles en prueba silenciosa, historias por `clave_tema`, resumen semanal | Claude | Semanas 2 y 3 |
+| Notas populares medidas (cobertura y Tendencias de Google Argentina), primero sólo anotando cuáles habría publicado | Claude | Después del primer mes |
+
 ## Lo primero del 26/09: comprobar que Facebook ya se ve
 
 **Los dos · alta.** La app de Meta "Radar Balcarce Publicador" estaba en **modo

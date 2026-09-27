@@ -59,19 +59,47 @@ Cada una tiene un peso: los medios locales pesan más que los nacionales. Si
 dos o más medios cuentan lo mismo, es **una** nota con varias fuentes, no
 varias notas.
 
+**Cada fuente tiene su ficha (27/09):** qué es (oficial, medio de Balcarce, de
+la región, provincial, nacional por sección o nacional general), **de qué
+ciudad es** (Ecos Diarios es de Necochea, no de Balcarce) y para qué se usa
+(`fichaDeFuente`). La lista completa, con cómo se usa cada una, está en el
+anexo A de `docs/PLAN-V2.2.md`.
+
+**Lo que no se trae (27/09).** De los medios de afuera no entra lo que el
+propio medio pone en una sección de **otro país** (`/mexico/`, `/colombia/`,
+`/estados-unidos/`, `/el-mundo/`…), de **policiales o seguridad**, ni
+**consejos genéricos** (autos, horóscopo, recetas). Se mira la sección de la
+dirección de la nota, no palabras del texto, así que un juego de palabras no
+lo engaña. De una sección de otro país entra sólo lo que tiene conexión
+argentina en el título (una figura argentina, "Argentina", Milei, Malvinas) o
+es automovilismo. De los medios de Balcarce entra todo. La lista es
+`SECCIONES_QUE_NO_ENTRAN` (`ingesta/fuentes.mjs`).
+
+**Los feeds generales de los diarios nacionales sólo cuentan (27/09).**
+Infobae, La Nación, Clarín "lo último", Ámbito "últimas" y Minuto Uno traen de
+todo: sus notas no salen por sí solas (salvo que digan Balcarce en el título).
+Sirven para contar cuántos medios cuentan una misma historia, que suma puntaje
+y respaldo. Las secciones nacionales se leen de los feeds de cada sección.
+
 **De afuera entra poco y a propósito.** De casi todas las fuentes de la región
-entra sólo lo que nombra a Balcarce, a una figura de acá o a la zona (la ruta
-226, la 55, el sudeste, la papa). Y lo de afuera tiene, por sección, un
-**piso de puntaje** y un **cupo** (cuántas pueden salir solas): los números
-están en la sección 11. Lo de Balcarce no tiene piso ni cupo.
+entra sólo lo que es de Balcarce, nombra a una figura de acá o toca la zona
+(la ruta 226, la 55, el sudeste, la papa). **Una nota de un medio de afuera es
+de Balcarce sólo si el medio dice Balcarce en su propio título (27/09)**:
+nombrarla al pasar en el texto (una lista de localidades, "en Balcarce también
+hay productores") no la hace local. Y lo de afuera tiene, por sección, un
+**piso de puntaje** y un **cupo** (cuántas pueden salir solas, como máximo):
+los números están en la sección 11. Lo de Balcarce no tiene piso ni cupo.
+
+**Sin medios de España ni chimentos (27/09, Hernán).** Hipertextual y Xataka
+(de España), Infobae Teleshow y Minuto Uno Espectáculos (chimentos) están
+apagados.
 
 **Las secciones flacas (26/09).** La portada tiene que tener tres notas por
 sección, y para eso hay fuentes de afuera con la sección fija: **lo que le gusta
-a la gente** en otros medios (espectáculos, cultura, tecnología, el campo y
-la economía de los diarios nacionales) y los policiales de los diarios
-nacionales. Cuentan igual que cualquier nota de afuera: peso bajo, pocas por
-vuelta, piso y cupo de su sección, semáforo, verificación contra la fuente y
-cuerpo. Lo internacional sin relación con Balcarce sigue esperando. Cuando
+a la gente** en otros medios (cultura, tecnología, el campo y la economía de
+los diarios nacionales). Cuentan igual que cualquier nota de afuera: peso
+bajo, pocas por vuelta, piso y cupo de su sección, semáforo, verificación
+contra la fuente y cuerpo. Lo internacional sin relación con Balcarce no entra. Cuando
 falta material para una sección se suman fuentes o se baja el piso de esa
 sección (nunca el de Deportes ni el semáforo); no se sube el tope de pedidos
 a la IA. Para gastar ese tope, se reescribe primero lo de Balcarce y, después,
@@ -96,9 +124,10 @@ la sección con menos notas escritas.
 **Policiales es sólo de Balcarce y la zona** (26/09; pedido de Hernán y Andrés:
 "que sean policiales de Balcarce"): el partido, Napaleofú, Los Pinos, Ramos
 Otero y las rutas 226 y 55 dentro del partido. No hay fuentes nacionales de
-Policiales, y un policial de otro lugar que llegue por una fuente general no sale
-solo (cupo de afuera 0: queda amarillo, esperando a una persona). En un pueblo
-son pocas notas por semana, y es lo normal. El semáforo no cambia.
+Policiales, y **un policial de otro lugar no se trae** (27/09, Hernán): lo que
+no viene de un medio de Balcarce ni dice Balcarce en el título, no entra.
+Antes quedaba amarillo esperando a una persona, y nadie lo miraba. En un
+pueblo son pocas notas por semana, y es lo normal. El semáforo no cambia.
 
 "Sale sola" quiere decir que no espera a nadie **si el semáforo da verde**
 (sección 3) y si tiene cuerpo (sección 4).
@@ -111,8 +140,9 @@ son pocas notas por semana, y es lo normal. El semáforo no cambia.
 | **La foto de otro medio.** Va siempre una placa propia con el titular | La ley 11.723 permite reproducir noticias de interés general: cubre el texto, no las fotos |
 | **Una acusación dicha como hecho.** Sin condena o confirmación oficial, se atribuye a quien acusó y va en condicional ("habría") | Doctrina Campillay: es lo que protege al medio de una demanda por calumnias o injurias |
 | **La cotización del dólar como nota de otro medio.** Si el título es "dólar hoy", "dólar blue", "a cuánto cotiza"… la nota no sale sola | La cotización se muestra en `/dolar`, que se actualiza sola, y el sitio arma su propia nota del dólar una vez por día hábil (sección 8). Una nota ajena por cada cotización es relleno |
-| **Política o economía de otros países sin relación con Balcarce.** Si el título nombra a Trump, Xi Jinping, Putin, la Casa Blanca, Gaza, Ucrania, el G20… y la nota no nombra a Balcarce, no sale sola | No le importa a nadie de acá: el 26/09 la cumbre Trump–Xi salió sola. Queda amarilla con el motivo "internacional: sin relación con Balcarce", por si una persona quiere publicarla (por ejemplo, si afecta a la papa). La lista es `REGLAS_SEMAFORO.internacional`, y sólo mira el título |
-| **Un policial de otro lugar con violencia o acusados.** Si la nota es de Policiales, no nombra a Balcarce y el título o el comienzo dicen "mató", "crimen", "detuvieron", "condenado", "prófugo", "juicio", "fiscal"…, no sale sola | Los diarios nacionales traen crímenes y causas de todo el país, con nombres de acusados, y un medio de Balcarce no tiene por qué darles lugar sin que una persona los mire (26/09: "Mató a su mujer embarazada…" salía verde). Queda amarilla con el motivo "policial de afuera con violencia o acusados". La lista es `REGLAS_SEMAFORO.policialDeAfuera`; no toca lo de Balcarce ni el resto del semáforo |
+| **Lo de otros países sin conexión argentina.** Primero no se trae lo que el medio pone en una sección de otro país (sección 2, "Lo que no se trae"). Si igual se cuela por una sección argentina y el título nombra a Trump, Xi Jinping, Putin, Newsom, California, la Casa Blanca, Gaza, Ucrania, el G20…, y la nota no es de Balcarce, no sale sola | No le importa a nadie de acá: el 26/09 la cumbre Trump–Xi salió sola y el 27/09 salieron una ley de California y un tigre suelto en México. La lista de nombres es `REGLAS_SEMAFORO.internacional` (sólo mira el título) y es un respaldo: lo principal es no traerlo |
+| **Chimentos y medios de España** | Decisión de Hernán, 27/09: esas fuentes están apagadas |
+| **Un policial de otro lugar.** Desde el 27/09 no se trae (ver "Policiales es sólo de Balcarce"). Queda de respaldo la regla anterior: si la nota es de Policiales, no es de Balcarce y el título o el comienzo dicen "mató", "crimen", "detuvieron", "condenado", "prófugo", "juicio", "fiscal"…, no sale sola | Los diarios nacionales traen crímenes y causas de todo el país, con nombres de acusados, y un medio de Balcarce no tiene por qué darles lugar sin que una persona los mire (26/09: "Mató a su mujer embarazada…" salía verde). Queda amarilla con el motivo "policial de afuera con violencia o acusados". La lista es `REGLAS_SEMAFORO.policialDeAfuera`; no toca lo de Balcarce ni el resto del semáforo |
 | **Una nota en Tecnología que no habla de tecnología.** Las fuentes de tecnología de los diarios traen de todo | La sección se confirma con el título (`PALABRAS_DE_TECNOLOGIA_EN_EL_TITULO`): si no nombra nada de tecnología, no se le cree a la fuente y se clasifica por lo que dice |
 | **"En vivo", "minuto a minuto", "en directo"** en el título, la bajada, el guion o el texto para redes, aunque el medio de origen lo diga ("música en vivo" sí) | Radar Balcarce no hace coberturas en vivo: cuenta lo que pasó |
 | **Una nota automática sin cuerpo** | Una nota de dos renglones no es una nota. Queda "esperando cuerpo" hasta tenerlo (sección 4) |
@@ -566,6 +596,11 @@ manda sobre lo que se repita acá. Los horarios, las piezas y cómo se publica, 
 
 - **Sólo sale lo que ya está publicado en la web.** Lo que el semáforo frenó no
   llega a las redes.
+- **Por ahora, sólo lo de Balcarce (27/09, Hernán):** a Facebook, Instagram y
+  los podcasts van las notas de un medio de Balcarce o de un medio de afuera
+  que dice Balcarce en su propio título. Del automovilismo de afuera, sólo lo
+  que nombra a una figura argentina (Colapinto). Nada nacional ni de otra
+  ciudad suelto: el 26/09 el podcast contó una nota de Necochea.
 - **Nada sensible sale solo:** Política, Policiales y lo que está en rojo
   esperan a una persona en todas las piezas. Tampoco va una nota sin cuerpo,
   ni una nota propia (el dólar, el repaso de un podcast).

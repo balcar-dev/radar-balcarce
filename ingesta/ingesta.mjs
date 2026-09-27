@@ -7,7 +7,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import {
   NOMBRES_PROPIOS, FIGURAS, TEMAS, FARMACIAS_A_MANO, PISO_DE_AFUERA, PISO_POR_DEFECTO, CUPO_DE_AFUERA, CUPO_POR_DEFECTO, BALCARCE, FUENTES, FUENTES_NACIONALES, PALABRAS_LOCALES, PALABRAS_ZONA, REGLAS_SECCION, AMARILLO_MENORES, REGLAS_SEMAFORO, MOTIVO_COTIZACION, MOTIVO_POLICIAL_DE_AFUERA,
-  MOTIVO_INTERNACIONAL, PALABRAS_DE_TECNOLOGIA_EN_EL_TITULO,
+  MOTIVO_INTERNACIONAL, PALABRAS_DE_TECNOLOGIA_EN_EL_TITULO, SECCIONES_QUE_NO_ENTRAN, CONEXION_ARGENTINA,
 } from './fuentes.mjs';
 import { diaDeTurno, fechaEnBalcarce } from './utiles.mjs';
 import { sinTildes } from '../web/lib/texto.js';
@@ -375,6 +375,36 @@ function esDeBalcarce(nota) {
   if (nota.alcance === 'local') return true;
   const titulo = normalizar(nota.titulo ?? '');
   return PALABRAS_LOCALES.some((p) => contiene(titulo, p));
+}
+
+/**
+ * ¿Por qué no entra esta nota de un medio de afuera? Mira la sección que le
+ * puso el propio medio (los tramos de la dirección: infobae.com/mexico/…,
+ * lanacion.com.ar/estados-unidos/…), no el texto. Devuelve el motivo o null.
+ * Los medios de Balcarce nunca pasan por acá (V2.2, 27/09).
+ */
+function motivoDeDescarte(nota, fuente = {}) {
+  if (fuente.alcance === 'local') return null;
+  let tramos;
+  try { tramos = new URL(nota.enlace).pathname.toLowerCase().split('/').filter(Boolean); } catch { return null; }
+  // El último tramo es el nombre de la nota ("colectivos-de-mexico-y-…"): no cuenta.
+  tramos = tramos.slice(0, -1);
+  for (const regla of SECCIONES_QUE_NO_ENTRAN) {
+    if (!regla.tramos.some((t) => tramos.includes(t))) continue;
+    if (regla.conExcepcion) {
+      const titulo = normalizar(nota.titulo ?? '');
+      const esDeFierros = fuente.seccion === 'Automovilismo' || (fuente.temas ?? []).includes('automovilismo');
+      if (esDeFierros || figuraQueNombra(nota) || CONEXION_ARGENTINA.some((p) => contiene(titulo, p))) continue;
+    }
+    return regla.motivo;
+  }
+  return null;
+}
+
+/** ¿Es un policial que no es de Balcarce? No viene de un medio de acá ni dice
+ *  Balcarce en el título. Esos no se traen (Hernán, 27/09). */
+function esPolicialDeAfuera(nota) {
+  return nota.alcance !== 'local' && !esDeBalcarce(nota) && clasificar(nota) === 'Policiales';
 }
 
 /** ¿Toca la zona sin nombrar a Balcarce? La ruta 226, el sudeste, la papa.
@@ -1065,7 +1095,23 @@ export async function ingestar({
     if (f.tipo === 'scrape') await ampliar(notas);
     // De las fuentes de afuera entra lo que nombra a Balcarce (siempre) y unas
     // pocas recientes para tener sección País sin tapar lo local.
+    let descartadas = 0;
+    let senal = [];
     if (f.alcance !== 'local') {
+      // V2.2: lo que por la sección del propio medio no es para Radar (otro
+      // país, policiales, consejos) ni se trae.
+      const antes = notas.length;
+      notas = notas.filter((n) => !motivoDeDescarte(n, f));
+      descartadas = antes - notas.length;
+    }
+    if (f.uso === 'senal') {
+      // Un feed general sólo cuenta cobertura: entra lo que dice Balcarce en el
+      // título; lo demás sólo suma como "otro medio que cuenta lo mismo".
+      const nuestras = notas.filter(esDeBalcarce);
+      nuestras.forEach((n) => { n.nombraBalcarce = true; });
+      senal = notas.filter((n) => !nuestras.includes(n));
+      notas = nuestras;
+    } else if (f.alcance !== 'local') {
       const nuestras = notas.filter(esDeBalcarce);
       nuestras.forEach((n) => { n.nombraBalcarce = true; });
       // Las que nombran a una figura entran aunque no digan Balcarce: son
@@ -1082,15 +1128,20 @@ export async function ingestar({
         .slice(0, f.maxItems ?? 5);
       notas = [...nuestras, ...conFigura, ...deLaZona, ...resto];
     }
-    return { fuente: f, notas };
+    return {
+      fuente: f, notas, senal, descartadas,
+    };
   }));
 
   let todas = [];
+  let deSenal = [];
   const estadoFuentes = [];
   resultados.forEach((r, i) => {
     const f = lista[i];
     if (r.status === 'fulfilled') {
       const { notas } = r.value;
+      deSenal = deSenal.concat(r.value.senal ?? []);
+      if (r.value.descartadas) log(`       ${f.nombre}: ${r.value.descartadas} no entran por la sección del medio`);
       const ultima = notas.length
         ? notas.map((n) => n.fecha).sort((a, b) => b - a)[0] : null;
       const frescura = ultima && !notas[0].fechaEstimada ? haceCuanto(ultima) : 'sin fecha';
@@ -1129,9 +1180,26 @@ export async function ingestar({
       grupos.push({ principal: nota, medios: [nota.medio], tambien: [] });
     }
   }
+  // Lo de los feeds generales sólo suma cobertura a una historia que ya está:
+  // no arma una nueva (V2.2).
+  for (const nota of deSenal) {
+    const g = grupos.find((x) => parecido(x.principal.titulo, nota.titulo) >= 0.55);
+    if (!g) continue;
+    if (!g.medios.includes(nota.medio)) g.medios.push(nota.medio);
+    g.tambien.push(nota);
+  }
 
   // 3. Clasificar, semáforo y relevancia
-  const portada = grupos.map((g) => {
+  //
+  // Policiales, sólo de Balcarce (Hernán, 27/09): lo que el sistema clasifica
+  // como policial y no viene de un medio de acá ni dice Balcarce en el título
+  // no se trae. Antes quedaba esperando a una persona (cupo 0), y nadie lo
+  // miraba: era ruido en el panel.
+  const sinPolicialesDeAfuera = grupos.filter((g) => !esPolicialDeAfuera(g.principal));
+  if (sinPolicialesDeAfuera.length < grupos.length) {
+    log(`\n  ${grupos.length - sinPolicialesDeAfuera.length} policiales de afuera no entran`);
+  }
+  const portada = sinPolicialesDeAfuera.map((g) => {
     const seccion = clasificar(g.principal);
     const rel = relevancia(g.principal, seccion, g.medios.length);
     const sem = semaforo(g.principal, seccion, rel);
@@ -1374,6 +1442,7 @@ export const paraPruebas = {
   cieloDeSimbolo, haceCuanto, sinEtiquetas, decodificar,
   clavesDe, anotar, buscarFarmacia, directorioDeLaVanguardia, pisoDe,
   contiene, cruzarFarmacias, controlDelCronograma, tocaLaZona, tituloEsDeTecnologia,
+  motivoDeDescarte, esPolicialDeAfuera,
 };
 
 // Sólo corre cuando se lo invoca directo; si lo importa probar.mjs, no.

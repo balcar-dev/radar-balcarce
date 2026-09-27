@@ -92,6 +92,13 @@ cada uno, cuándo corre y si cuesta plata), en `INFRAESTRUCTURA.md`.
   (`ingesta/fuentes.mjs`).
 - **Si Open-Meteo falla, el clima sale de `api.met.no`** (gratis, sin clave).
   No da sensación térmica: no se inventa.
+- **El panel pisa las decisiones cargadas a mano** si está prendido: guarda su
+  estado en memoria y cada 10 minutos lo vuelve a escribir en
+  `web/data/decisiones.json`. Para sacar notas sin el panel, usar
+  `web/data/retiradas.json`.
+- **Una nota de afuera es "de Balcarce" sólo si el medio lo dice en el título**
+  (27/09). Nombrarla en el texto no alcanza: así se colaron Necochea y el
+  riesgo país. Y a las redes va sólo lo de Balcarce.
 - **Las palabras clave cortas engañan.** "gol" encontraba "golpe"; "partido" en
   la provincia es un municipio. Las ambiguas están en `PALABRAS_DEBILES`
   (`ingesta/ingesta.mjs`) y sólo deciden desde el titular.
@@ -209,6 +216,11 @@ cada uno, cuándo corre y si cuesta plata), en `INFRAESTRUCTURA.md`.
 | agregar una fuente o cambiar un peso | `ingesta/fuentes.mjs` |
 | que una palabra mande una nota a otra sección | `REGLAS_SECCION`, mismo archivo |
 | que algo espere aprobación o nunca salga | `REGLAS_SEMAFORO`, mismo archivo |
+| que una sección de un medio de afuera no se traiga (otro país, policiales, consejos) | `SECCIONES_QUE_NO_ENTRAN` y `CONEXION_ARGENTINA`, mismo archivo (`motivoDeDescarte` en `ingesta/ingesta.mjs`) |
+| que un feed sólo cuente cobertura y no publique | `uso: 'senal'` en la fuente; la ficha de cada fuente (tipo, ciudad, uso) es `fichaDeFuente` |
+| sacar de la web una nota ya publicada, sin el panel | `web/data/retiradas.json` (motivo, cuándo, quién) |
+| qué va a las redes (hoy, sólo lo de Balcarce) | `esParaLasRedes` en `redes/elegir.mjs` |
+| el plan de trabajo en curso (filtro de entrada, lectura con IA, notas populares) | `docs/PLAN-V2.2.md` |
 | cambiar el criterio editorial, el tono o las reglas de escritura | `CRITERIO-EDITORIAL.md` (la IA lo lee tal cual; reiniciar el panel) |
 | cambiar un número del criterio (largos, intentos, cupos, pisos, Facebook, podcasts) | `ingesta/criterio.mjs` **y** la tabla "Los números" de `CRITERIO-EDITORIAL.md` (una prueba controla que digan lo mismo) |
 | cambiar cuánto puntaje pide cada sección | `PISO_DE_AFUERA` y `CUPO_DE_AFUERA`, en `ingesta/criterio.mjs` (y en `CRITERIO-EDITORIAL.md`) |
@@ -261,6 +273,7 @@ cada uno, cuándo corre y si cuesta plata), en `INFRAESTRUCTURA.md`.
 | `INVESTIGACION.md` | Lo legal, con fuentes |
 | `POLITICA-PRIVACIDAD.md` | El texto de la política de privacidad del sitio |
 | `PENDIENTES.md` | Qué falta, por categoría |
+| `docs/PLAN-V2.2.md` | El plan en curso para elegir mejor las notas: filtro de entrada, lectura con IA, notas populares, todas las fuentes y cómo se usan (anexo A) |
 | `IDEAS.md` | Ideas de producto y de sistema |
 | `ingesta/README.md` | El motor: qué hace cada archivo y cómo correrlo a mano |
 | `web/README.md` | La web: cómo correrla y dónde está cada cosa |

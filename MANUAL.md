@@ -28,14 +28,22 @@ falta) e `INVESTIGACION.md` (lo legal, con fuentes). La lista completa está en
    la región y la provincia (0223, LU9, QZ, El Eco de Tandil, Ecos Diarios,
    Lobería, Ayacucho, la Agencia DIB, La Noticia 1, Diputados bonaerenses, el
    Gobierno de la Provincia y Argenpapa). De casi todas entra sólo lo que
-   nombra a Balcarce (`PALABRAS_LOCALES`), a una figura (`FIGURAS`) o toca la
+   dice Balcarce **en el título** (`PALABRAS_LOCALES`; desde el 27/09, antes
+   alcanzaba con nombrarla en el texto), a una figura (`FIGURAS`) o toca la
    zona sin nombrarla: la ruta 226, la 55, el sudeste o el cultivo de papa
    (`PALABRAS_ZONA`, en `ingesta/fuentes.mjs`). Pesan poco para no ganarle a lo
-   local, y lo de afuera que nombra a Balcarce va a la sección Balcarce.
+   local, y lo de afuera que es de Balcarce va a la sección Balcarce.
+   **El filtro de la entrada (27/09, plan V2.2).** Antes de todo eso, de los
+   medios de afuera no se trae lo que el propio medio pone en una sección de
+   otro país, de policiales o de consejos genéricos (`SECCIONES_QUE_NO_ENTRAN`),
+   y los feeds generales de los diarios nacionales sólo cuentan cobertura
+   (`uso: 'senal'`). Ver `CRITERIO-EDITORIAL.md` § 2 y `docs/PLAN-V2.2.md`.
    **Secciones flacas (26/09).** Hernán y Andrés piden tres notas por sección
    en la portada. Por eso hay 13 fuentes más, todas de afuera y con la sección
    fija (el feed ya viene separado por tema), peso 11 a 14 y `maxItems` de 2 o 3:
-   Cultura y agenda (Infobae Teleshow y Cultura, Ámbito y Minuto Uno
+   Cultura y agenda (Infobae Teleshow y Cultura, Ámbito y Minuto Uno — desde el
+   27/09 Teleshow y Minuto Uno Espectáculos están apagados, por chimentos, y
+   también Hipertextual y Xataka, por ser de España —
    Espectáculos, La Nación Cultura: lo que más se lee en los diarios
    nacionales),
    Tecnología (La Nación Tecnología, Hipertextual, Xataka), Agro (Clarín Rural,

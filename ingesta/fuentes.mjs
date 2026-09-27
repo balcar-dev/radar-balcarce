@@ -15,6 +15,12 @@ export const BALCARCE = {
 //   la Policía), no un medio. Además de dar verde en el semáforo, cuenta para
 //   el nivel de verificación de la nota: con una fuente oficial es ALTA
 //   (nivelDeVerificacion en reels/reescritura.mjs). No cambia el peso.
+// ciudad: de dónde es el medio (V2.2, 27/09). Las de Balcarce no la llevan
+//   (es Balcarce) y las nacionales tampoco (es "nacional"): ver fichaDeFuente.
+// uso: 'senal' en los feeds generales de los diarios nacionales (V2.2): traen
+//   de todo, así que sus notas no se publican solas; sólo cuentan cuántos
+//   medios cuentan una misma historia. Lo que dice Balcarce en el título sí
+//   entra. Sin `uso`, la fuente es candidata.
 export const FUENTES = [
   {
     id: 'newsbalcarce',
@@ -152,6 +158,7 @@ export const FUENTES = [
 export const FUENTES_NACIONALES = [
   {
     id: 'infobae',
+    uso: 'senal', // V2.2: sólo cuenta cobertura; sus notas no se publican solas
     nombre: 'Infobae',
     medio: 'Infobae',
     url: 'https://www.infobae.com/arc/outboundfeeds/rss/?outputType=xml',
@@ -163,6 +170,7 @@ export const FUENTES_NACIONALES = [
   },
   {
     id: 'lanacion',
+    uso: 'senal', // V2.2: sólo cuenta cobertura
     nombre: 'La Nación',
     medio: 'La Nación',
     url: 'https://www.lanacion.com.ar/arc/outboundfeeds/rss/?outputType=xml',
@@ -174,6 +182,7 @@ export const FUENTES_NACIONALES = [
   },
   {
     id: 'clarin',
+    uso: 'senal', // V2.2: sólo cuenta cobertura
     nombre: 'Clarín · Lo último',
     medio: 'Clarín',
     url: 'https://www.clarin.com/rss/lo-ultimo/',
@@ -209,6 +218,7 @@ export const FUENTES_NACIONALES = [
   },
   {
     id: 'sendero',
+    ciudad: 'varias ciudades del sudeste',
     nombre: 'Sendero Regional',
     medio: 'Sendero Regional',
     url: 'https://senderomultimedios.com.ar/feed',
@@ -233,6 +243,7 @@ export const FUENTES_NACIONALES = [
   // si ese servidor se cae, se caen juntos.
   {
     id: '0223',
+    ciudad: 'Mar del Plata',
     nombre: '0223',
     medio: '0223 (Mar del Plata)',
     url: 'https://www.0223.com.ar/rss',
@@ -245,6 +256,7 @@ export const FUENTES_NACIONALES = [
   },
   {
     id: 'eleco',
+    ciudad: 'Tandil',
     nombre: 'El Eco de Tandil',
     medio: 'El Eco de Tandil',
     url: 'https://articapiv3.eleco.com.ar/feed-notes',
@@ -257,6 +269,7 @@ export const FUENTES_NACIONALES = [
   },
   {
     id: 'lu9',
+    ciudad: 'Mar del Plata',
     nombre: 'LU9 Mar del Plata',
     medio: 'LU9 Mar del Plata',
     url: 'https://lu9mardelplataapiv3.eleco.com.ar/feed-notes',
@@ -269,6 +282,7 @@ export const FUENTES_NACIONALES = [
   },
   {
     id: 'qznoticias',
+    ciudad: 'Mar del Plata',
     nombre: 'QZ Noticias',
     medio: 'QZ Noticias (Mar del Plata)',
     url: 'https://qznoticiasapiv3.eleco.com.ar/feed-notes',
@@ -281,6 +295,7 @@ export const FUENTES_NACIONALES = [
   },
   {
     id: 'ecosdiarios',
+    ciudad: 'Necochea',
     nombre: 'Ecos Diarios',
     medio: 'Ecos Diarios (Necochea)',
     url: 'https://ecosdiariosapiv3.eleco.com.ar/feed-notes',
@@ -293,6 +308,7 @@ export const FUENTES_NACIONALES = [
   },
   {
     id: 'dib',
+    ciudad: 'La Plata',
     nombre: 'Agencia DIB',
     medio: 'Agencia DIB',
     url: 'https://dib.com.ar/rss/pages/home.xml',
@@ -305,6 +321,7 @@ export const FUENTES_NACIONALES = [
   },
   {
     id: 'lanoticia1',
+    ciudad: 'provincia de Buenos Aires',
     nombre: 'La Noticia 1',
     medio: 'La Noticia 1',
     url: 'https://lanoticia1apiv3.eleco.com.ar/feed-notes',
@@ -317,6 +334,7 @@ export const FUENTES_NACIONALES = [
   },
   {
     id: 'diputadosbsas',
+    ciudad: 'La Plata',
     nombre: 'Diputados Bonaerenses',
     medio: 'Diputados Bonaerenses',
     url: 'https://diputadosbsas.com.ar/feed/',
@@ -329,6 +347,7 @@ export const FUENTES_NACIONALES = [
   },
   {
     id: 'gba',
+    ciudad: 'La Plata',
     nombre: 'Gobierno de la Provincia',
     medio: 'Gobierno de la Provincia de Buenos Aires',
     url: 'https://www.gba.gob.ar/rss.xml',
@@ -342,6 +361,7 @@ export const FUENTES_NACIONALES = [
   },
   {
     id: 'loberia2261',
+    ciudad: 'Lobería',
     nombre: '2261 Lobería',
     medio: '2261 – Noticias de Lobería',
     url: 'https://www.2261.com.ar/feed/',
@@ -354,6 +374,7 @@ export const FUENTES_NACIONALES = [
   },
   {
     id: 'ayacuchoaldia',
+    ciudad: 'Ayacucho',
     nombre: 'Ayacucho al Día',
     medio: 'Ayacucho al Día',
     url: 'https://ayacuchoaldia.com.ar/feed/',
@@ -366,6 +387,7 @@ export const FUENTES_NACIONALES = [
   },
   {
     id: 'argenpapa',
+    ciudad: 'nacional (especializada en papa)',
     nombre: 'Argenpapa',
     medio: 'Argenpapa',
     url: 'https://www.argenpapa.com.ar/noticias/argentina/',
@@ -453,6 +475,7 @@ export const FUENTES_NACIONALES = [
   // dejamos de ser un medio de Balcarce.
   {
     id: 'ambito',
+    uso: 'senal', // V2.2: sólo cuenta cobertura
     nombre: 'Ámbito',
     medio: 'Ámbito',
     url: 'https://www.ambito.com/rss/pages/ultimas-noticias.xml',
@@ -465,6 +488,7 @@ export const FUENTES_NACIONALES = [
   },
   {
     id: 'minutouno',
+    uso: 'senal', // V2.2: sólo cuenta cobertura
     nombre: 'Minuto Uno',
     medio: 'Minuto Uno',
     url: 'https://www.minutouno.com/rss/pages/home.xml',
@@ -845,6 +869,51 @@ export const PALABRAS_ZONA = [
   'produccion de papa', 'cosecha de papa', 'siembra de papa',
 ];
 
+// ------------------------------------------------ el filtro de la entrada (V2.2)
+//
+// Lo que no se trae de los medios de afuera, mirando la SECCIÓN QUE LE PONE EL
+// PROPIO MEDIO a la nota (la dirección), no palabras del texto: no se equivoca
+// con juegos de palabras. El 27/09, 153 de las 1.878 notas del archivo venían
+// de secciones de otros países de los diarios nacionales (la ley de California,
+// el tigre de México, los ataques con drones en Colombia). Ver PLAN-V2.2.md § 5.
+// Los medios de Balcarce no pasan por acá: de ellos entra todo.
+export const SECCIONES_QUE_NO_ENTRAN = [
+  {
+    motivo: 'de otro país',
+    // Excepción: una figura argentina (FIGURAS), una conexión argentina en el
+    // título (CONEXION_ARGENTINA) o automovilismo, que es de Balcarce.
+    conExcepcion: true,
+    tramos: ['mexico', 'espana', 'peru', 'colombia', 'america', 'estados-unidos', 'venezuela',
+      'chile', 'uruguay', 'el-mundo', 'mundo', 'internacional', 'internacionales', 'futbol-internacional'],
+  },
+  {
+    // Sólo de los medios de Balcarce (Hernán, 27/09).
+    motivo: 'policial de afuera',
+    tramos: ['policiales', 'seguridad'],
+  },
+  {
+    motivo: 'consejo genérico',
+    tramos: ['autos', 'horoscopo', 'recetas'],
+  },
+];
+
+// Lo que hace que una nota de una sección de otro país igual le importe a un
+// argentino. Sólo en el título, palabras enteras.
+export const CONEXION_ARGENTINA = ['argentina', 'argentino', 'argentinos', 'argentinas',
+  'milei', 'malvinas', 'boca', 'river'];
+
+/** La ficha de una fuente (V2.2): qué es, de dónde es y para qué se usa. */
+export function fichaDeFuente(f) {
+  const tipo = f.oficial ? 'oficial'
+    : f.alcance === 'local' ? 'medio de Balcarce'
+      : f.alcance === 'region' ? 'medio de la región'
+        : f.alcance === 'provincia' ? 'medio provincial'
+          : f.uso === 'senal' ? 'nacional general'
+            : 'nacional por sección';
+  const ciudad = f.ciudad ?? (f.alcance === 'local' ? 'Balcarce' : f.alcance === 'pais' ? 'nacional' : null);
+  return { tipo, ciudad, uso: f.uso ?? 'candidata' };
+}
+
 // Clasificación por palabras. El orden importa: gana la primera que coincide.
 export const REGLAS_SECCION = [
   {
@@ -1107,7 +1176,7 @@ export const FIGURAS = [
   // Fútbol
   'messi', 'scaloni', 'dibu martínez', 'dibu martinez', 'julián álvarez',
   'julian alvarez', 'enzo fernández', 'enzo fernandez', 'selección argentina',
-  'seleccion argentina', 'la scaloneta',
+  'seleccion argentina', 'la scaloneta', 'mac allister', 'lautaro martínez', 'lautaro martinez',
   // Automovilismo — en la ciudad de Fangio esto pesa doble
   'colapinto', 'franco colapinto', 'canapino', 'agustín canapino',
   'agustin canapino', 'pechito lópez', 'pechito lopez', 'josé maría lópez',

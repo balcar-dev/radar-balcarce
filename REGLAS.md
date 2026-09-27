@@ -42,6 +42,19 @@ Cómo leer la columna "Qué la cuida":
 | 26 | **El criterio editorial es uno solo y la IA lo lee tal cual** (25/09). `CRITERIO-EDITORIAL.md` es el único documento editorial; la instrucción de la IA sale de su sección 12, sin copia en el código, y si el archivo falta o le falta una parte la reescritura no arranca. Cada número de su tabla "Los números" es el que usa el código. | Prueba: `pruebas/criterio.test.mjs` ("la tabla… dice lo mismo que el código, fila por fila", "la IA lee la instrucción de CRITERIO-EDITORIAL.md, no de una copia en el código", "sin criterio no se escribe…", "los números que el documento repite en el texto son los de la tabla"). |
 | 27 | **El enlace de cada fuente es la página de la nota original**, nunca un archivo interno del medio (25/09: las notas de Infórmese Primero enlazaban la entrada XML del feed de Blogger). El identificador de las notas no cambia. | Prueba: `pruebas/informese.test.mjs` ("el enlace de la nota es la página…", "el identificador de la nota no cambia", "al lector nunca le llega el XML de un feed…"). |
 
+### Qué se trae y qué es de Balcarce (27/09, plan V2.2)
+
+| # | Regla | Qué la cuida |
+|---|---|---|
+| 41 | **De los medios de afuera no se trae lo que el propio medio pone en una sección de otro país, de policiales o de consejos genéricos** (se mira la dirección de la nota, no el texto). De una sección de otro país entra sólo lo que tiene conexión argentina en el título o es automovilismo. De los medios de Balcarce entra todo. | Prueba: `pruebas/entrada.test.mjs` (con las direcciones reales de California, Colombia, el tigre de México, Olé internacional, un policial de Infobae y un consejo de Ámbito). |
+| 42 | **Un policial que no es de Balcarce no se trae** (ni amarillo). | Prueba: `pruebas/entrada.test.mjs` ("un policial de afuera no se trae…"). |
+| 43 | **Los feeds generales de los diarios nacionales sólo cuentan cobertura**: sus notas no salen solas, salvo que digan Balcarce en el título. Cada fuente tiene ficha con tipo, ciudad y uso. | Prueba: `pruebas/entrada.test.mjs` ("cada fuente tiene su ficha…", "los feeds generales… señal"). |
+| 44 | **Una nota de un medio de afuera es de Balcarce sólo si el medio dice Balcarce en su título.** Nombrarla al pasar no la hace local ni le suma puntaje. | Prueba: `pruebas/notas.test.mjs` ("un medio de afuera que nombra a Balcarce sólo en el texto…"). |
+| 45 | **Una palabra suelta no decide:** "fangio" sin autódromo ni museo, "taller", "drones", "etcheverry" o "báez" sin nombre no hacen local una nota, no la cambian de sección ni la vuelven figura. | Prueba: `pruebas/notas.test.mjs` y `pruebas/zona.test.mjs` (los casos del 27/09). |
+| 46 | **El título de la IA no pone Balcarce en una nota que no es de Balcarce.** | Prueba: `pruebas/verificar.test.mjs` ("el título no pone Balcarce…"). La instrucción, en `CRITERIO-EDITORIAL.md` § 12, regla 2. |
+| 47 | **A las redes va sólo lo de Balcarce** (y del automovilismo de afuera, lo que nombra a una figura argentina). | Prueba: `pruebas/redes.test.mjs` ("a las redes va sólo lo de Balcarce…"). |
+| 48 | **Lo que se saca a mano de la web va en `web/data/retiradas.json`**, con motivo, fecha y quién. Sale de las listas y pierde la página aunque la ingesta lo vuelva a traer. Sirve cuando el panel está prendido (si no, pisaría las decisiones). | Prueba: `pruebas/archivo.test.mjs` ("las notas retiradas a mano…", "la lista de retiradas… bien armada"). |
+
 ## Las redes
 
 | # | Regla | Qué la cuida |
