@@ -146,12 +146,45 @@ recién ahí se decide el formato (¿historia semanal? ¿parte del podcast?) y s
 escribe el código, igual que se hizo con cualquier fuente nueva en
 `ingesta/fuentes.mjs`.
 
-### La mascota / las viñetas
+### La historieta de Radar: un personaje propio, como los diarios de antes (27/09)
 
-Lo mencionaste al principio. Sigue siendo una buena idea de identidad, pero
-necesita que Gemini deje generar imágenes (requiere billing activado) y que
-alguien defina el personaje. **Lo dejaría para cuando el medio ya tenga
-lectores**: una mascota sin público es un dibujo.
+Hernán lo volvió a traer el 27/09: una tira cómica como la que tenían los
+diarios viejos, con un personaje inventado por nosotros. Ideas para pensarla:
+
+- **El personaje**: alguien de acá, reconocible sin ser nadie en particular
+  (un vecino de toda la vida, un fierrero del autódromo, un productor de papa,
+  un perro de la plaza). Nunca una persona real ni una caricatura de alguien
+  identificable.
+- **De dónde salen los chistes**: de lo que pasa en Balcarce esa semana (el
+  corte de luz, la tasa, el TC en el autódromo, el frío). Las tiras clásicas
+  sirven de **influencia de estilo** (el humor costumbrista, el remate en el
+  último cuadro), pero no se copian chistes ni dibujos ajenos: tienen dueño.
+- **Cómo se hace**: la escribe una persona (o Claude, como propuesta que una
+  persona aprueba) y la dibuja un dibujante local, o se arma con una IA de
+  imágenes con un estilo fijo y siempre el mismo personaje. Una por semana
+  alcanza.
+- **Dónde va**: una sección fija en la web, un posteo semanal y una historia.
+- **Cuándo**: cuando el medio ya tenga lectores. Una mascota sin público es un
+  dibujo.
+
+### Radio online o canal de YouTube 24/7 con nuestras noticias (27/09)
+
+Otra idea de Hernán para más adelante: una señal que no se corta nunca, con las
+noticias de Radar, los informes propios y, el día de mañana, publicidad.
+
+- **Qué ya tenemos**: la voz de la locutora de los reels y los podcasts
+  (CRITERIO-REDES.md), los tres podcasts por día, el clima, la farmacia y la
+  agenda. Con eso se puede armar una grilla que se repite y se actualiza sola.
+- **Radio online**: un servidor de audio (Icecast, AzuraCast) que pasa en
+  bucle los podcasts del día, los avisos y música libre de derechos. Cuesta un
+  servidor chico por mes.
+- **YouTube 24/7**: un video en vivo permanente con placas (título, clima,
+  farmacia) y la voz de fondo. Pide una máquina transmitiendo todo el tiempo
+  (un servidor, no la PC de Hernán).
+- **Lo que hay que cuidar**: la música tiene que ser libre de derechos o
+  pagada (una radio online también paga SADAIC y AADI-CAPIF), y la voz
+  sintética tiene que decir que es una voz generada.
+- **Cuándo**: después del lanzamiento, cuando haya avisos que la paguen.
 
 ### Automovilismo como marca propia
 
