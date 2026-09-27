@@ -1,5 +1,5 @@
 {
-  "exportado": "2026-09-27T08:50:09.399Z",
+  "exportado": "2026-09-27T09:10:27.769Z",
   "decisiones": {
     "1951120": {
       "estado": "automatica",
@@ -31302,6 +31302,132 @@
         "nivel": "MEDIA",
         "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
         "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "6hssm": {
+      "estado": "automatica",
+      "titulo": "La inteligencia artificial desata una saturación de contenidos y informes falsos",
+      "copete": "El uso masivo de inteligencia artificial para generar contenidos provoca una avalancha de informes falsos y solicitudes laborales, trasladando el costo del filtro a los receptores.",
+      "cuerpo": "El creador del software cURL, Daniel Stenberg, cerró en enero su programa de recompensas por errores debido a una saturación de avisos de vulnerabilidades falsos generados con inteligencia artificial. Cada reporte falso requería horas de revisión por parte de voluntarios, lo que ejemplifica cómo la reducción de costos en la producción digital traslada la carga laboral hacia quienes deben filtrar la información.\n\nAdemás, un estudio de BetterUp Labs y Stanford citado por la fuente indica que el cuarenta por ciento de los trabajadores recibió documentos generados por inteligencia artificial que debieron rehacerse.\n\nAnte este escenario, la industria comienza a responder mediante filtros automatizados y barreras de acceso más costosas. Esta tendencia revaloriza la reputación y las relaciones personales frente al volumen de contenidos producidos automáticamente.",
+      "guion": "La inteligencia artificial desata una saturación de contenidos e informes falsos",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T09:10:27.703Z",
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El uso masivo de inteligencia artificial genera una avalancha de contenidos y solicitudes laborales falsas, trasladando el costo de filtrado a los receptores.",
+      "etiquetas": [
+        "internet",
+        "trabajo",
+        "tecnologia"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Xataka",
+          "enlace": "https://www.xataka.com/robotica-e-ia/ia-iba-a-democratizar-creacion-contenido-esta-consiguiendo-contrario-que-internet-vuelva-a-poner-puertas",
+          "fecha": "2026-09-27T09:00:50.000Z",
+          "oficial": false,
+          "aporte": "Aportó datos sobre el cierre del programa cURL, estadísticas de solicitudes en LinkedIn y el estudio de BetterUp Labs y Stanford sobre documentos generados por inteligencia artificial."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "ejplh9": {
+      "estado": "automatica",
+      "titulo": "El Gobierno abrirá la negociación social del plan de inteligencia artificial",
+      "copete": "El Ejecutivo nacional convocará a patronal y sindicatos en octubre para debatir la estrategia estatal de inteligencia artificial, centrada en la seguridad, la ética y la protección ciudadana.",
+      "cuerpo": "El Gobierno pondrá en marcha en octubre un acuerdo tripartito con patronal y sindicatos para impulsar la adopción de la inteligencia artificial bajo un modelo ético y seguro. La iniciativa se enmarca en la estrategia estatal denominada 'IA360', diseñada para el periodo 2026-2027 con el fin de consolidar el liderazgo tecnológico del país mediante la gobernanza y la protección de los colectivos vulnerables.\n\nDe acuerdo con la información difundida, el plan contempla la creación de mesas sectoriales y un observatorio permanente para evaluar el impacto en el empleo, la educación y la industria cultural. Asimismo, el Ejecutivo reconoció dificultades estructurales como la baja inversión privada y la escasez de personal especializado en comparación con otros países.\n\nPara alcanzar las metas previstas, la estrategia prevé reforzar las infraestructuras existentes, optimizar la capacidad de cómputo y establecer garantías normativas que aseguren una transición digital equilibrada y sostenible.",
+      "guion": "El Gobierno abrirá la negociación social del plan de inteligencia artificial",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T09:10:27.703Z",
+      "claves": [
+        "Negociación tripartita con patronal y sindicatos desde octubre.",
+        "Implementación de la estrategia estatal de inteligencia artificial 'IA360'.",
+        "Creación de mesas sectoriales y un observatorio laboral especializado.",
+        "Reconocimiento oficial de desafíos en inversión y personal calificado."
+      ],
+      "seSabe": [
+        "El Gobierno iniciará negociaciones con agentes sociales en octubre.",
+        "La estrategia 'IA360' abarca el periodo 2026-2027.",
+        "Se crearán mesas sectoriales y un observatorio para el tejido laboral y cultural."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El Gobierno iniciará en octubre negociaciones con patronal y sindicatos para debatir la estrategia estatal de inteligencia artificial 'IA360', enfocada en la seguridad, la ética laboral y la protección ciudadana.",
+      "etiquetas": [
+        "inteligencia artificial",
+        "Gobierno",
+        "tecnología",
+        "empleo",
+        "economía"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/america/agencias/2026/09/27/el-gobierno-abrira-en-octubre-la-negociacion-social-del-plan-ia360-para-consolidar-un-modelo-etico-de-ia/",
+          "fecha": "2026-09-27T09:01:28.000Z",
+          "oficial": false,
+          "aporte": "Detalló el lanzamiento del plan 'IA360', la convocatoria a patronal y sindicatos, y los objetivos de gobernanza e infraestructura."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "8h6vb": {
+      "estado": "automatica",
+      "titulo": "Drag Race Espana estrena su sexta temporada con novedades en el formato",
+      "copete": "El programa de entretenimiento regresa con una nueva edición en plataforma y la incorporación de su primer participante drag king. La conductora analiza la actualidad del sector.",
+      "cuerpo": "El formato televisivo Drag Race España regresa con su sexta temporada en la plataforma Atresplayer, consolidado como uno de los principales productos de entretenimiento digital. La conducción continúa a cargo de la artista Supremme de Luxe, quien destacó la trayectoria del ciclo y los cambios implementados para sorprender a los espectadores.\n\nEntre las principales novedades de esta entrega se destaca la incorporación de Marcus como el primer artista drag king en competir en el plató español, una decisión valorada por la producción para visibilizar la diversidad de la disciplina. Además, el equipo personal de la conductora sumó a Nori en el área de maquillaje tras la salida de Miss Claudia.\n\nDurante una entrevista con un medio nacional, la presentadora también reflexionó sobre la situación del sector fuera de la televisión y los desafíos para la internacionalización de las figuras locales, señalando que el principal obstáculo para trascender fronteras es la barrera del idioma.",
+      "guion": "Drag Race Espana estrena su sexta temporada con novedades en el formato",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T09:10:27.703Z",
+      "claves": [
+        "El programa regresa con su sexta edición en Atresplayer.",
+        "Se incorpora el primer participante drag king de la franquicia española.",
+        "Supremme de Luxe continúa al frente de la conducción.",
+        "La producción implementó cambios en la mecánica para los nuevos episodios."
+      ],
+      "seSabe": [
+        "El programa alcanza su sexta temporada en la plataforma Atresplayer.",
+        "Supremme de Luxe continúa como presentadora principal del ciclo.",
+        "Marcus participa como el primer drag king en la historia del formato en España.",
+        "Nori se incorpora al equipo de maquillaje en reemplazo de Miss Claudia."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Drag Race España estrena su sexta temporada con cambios en la mecánica y la participación del primer drag king en el certamen.",
+      "etiquetas": [
+        "Drag Race España",
+        "Atresplayer",
+        "Supremme de Luxe",
+        "televisión",
+        "plataformas"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/espana/2026/09/27/drag-race-espana-vuelve-con-su-sexta-temporada-y-supremme-de-luxe-al-frente-el-drag-sigue-siendo-precario-hay-locales-que-hoy-pagan-menos-que-en-2007/",
+          "fecha": "2026-09-27T09:01:25.000Z",
+          "oficial": false,
+          "aporte": "Detalló los cambios en la mecánica, la incorporación del primer drag king y las declaraciones de la conductora sobre el estado del formato."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "BAJA"
       }
     }
   },
