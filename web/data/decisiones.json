@@ -1,5 +1,5 @@
 {
-  "exportado": "2026-09-27T09:50:33.766Z",
+  "exportado": "2026-09-27T10:00:32.124Z",
   "decisiones": {
     "1951120": {
       "estado": "automatica",
@@ -31648,6 +31648,157 @@
           "fecha": "2026-09-27T09:46:50.000Z",
           "oficial": false,
           "aporte": "Detalló la fecha de la charla sobre inteligencia artificial y las normativas vigentes en la Cámara Alta."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "3q2w3i": {
+      "estado": "automatica",
+      "titulo": "Lionel Scaloni negocia su continuidad en la Selección argentina",
+      "copete": "La Asociación del Fútbol Argentino y el director técnico iniciaron las conversaciones para extender el vínculo que finaliza en diciembre. Las negociaciones se concretaron en la sede de la entidad.",
+      "cuerpo": "La Asociación del Fútbol Argentino comunicó de forma oficial el inicio de las conversaciones entre el presidente Claudio Tapia y el entrenador Lionel Scaloni para acordar la continuidad al frente del combinado nacional, dado que el contrato actual vence en diciembre.\n\nTras la final del Mundial, el director técnico había manifestado la necesidad de evaluar diferentes aspectos antes de definir su futuro y, recientemente, declaró que la predisposición y las ganas de continuar en el cargo se mantenían vigentes, a la espera de concretar el encuentro formal con la dirigencia que finalmente se llevó a cabo.",
+      "guion": "Lionel Scaloni negocia su continuidad en la Seleccion argentina",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T10:00:32.056Z",
+      "claves": [
+        "La AFA y Lionel Scaloni iniciaron las charlas para renovar el contrato.",
+        "El vínculo actual del entrenador al frente del seleccionado finaliza en diciembre.",
+        "La reunión oficial se concretó en la sede de la entidad."
+      ],
+      "seSabe": [
+        "Según la Asociación del Fútbol Argentino, comenzaron las negociaciones entre Claudio Tapia y Lionel Scaloni para la renovación del contrato.",
+        "El vínculo actual del entrenador finaliza en diciembre.",
+        "La reunión se llevó a cabo en la oficina del presidente de la entidad."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "La Asociación del Fútbol Argentino y Lionel Scaloni iniciaron las negociaciones formales para extender el contrato del entrenador al frente de la Selección argentina, cuyo vínculo actual finaliza en el mes de diciembre.",
+      "etiquetas": [
+        "Lionel Scaloni",
+        "Seleccion argentina",
+        "AFA",
+        "Claudio Tapia"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Eco de Tandil",
+          "enlace": "https://www.eleco.com.ar/deportes/scaloni-comenzo-a-negociar-la-renovacion-de-su-contrato",
+          "fecha": "2026-09-27T09:42:41.000Z",
+          "oficial": false,
+          "aporte": "Informó sobre el inicio formal de las negociaciones entre Claudio Tapia y Lionel Scaloni para extender el contrato con la Selección argentina."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "bktd2v": {
+      "estado": "automatica",
+      "titulo": "El JP Morgan estima una recesión para el tercer trimestre en Argentina",
+      "copete": "El banco de inversión ajustó su pronóstico económico tras una fuerte baja en julio. El impacto en las proyecciones anuales de crecimiento.",
+      "cuerpo": "El banco JP Morgan recortó su proyección de crecimiento económico para la Argentina y estimó que el país ingresará en una recesión durante el tercer trimestre.\n\nAnalistas del mercado como Miguel Kiguel y la consultora Outlier coincidieron en que el tercer trimestre cerrará en baja y redujeron sus estimaciones de expansión anual para el país.\n\nComo contexto, a principios de la semana la entidad financiera había advertido sobre la rentabilidad de Mercado Libre debido al incremento de la competencia regional, según se informó oportunamente.",
+      "guion": "El JP Morgan estima una recesión para el tercer trimestre en Argentina",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T10:00:32.056Z",
+      "seSabe": [
+        "El JP Morgan ajustó su pronóstico de crecimiento para la Argentina.",
+        "El Indec reportó una caída en la actividad económica durante julio.",
+        "Analistas privados revisaron a la baja sus proyecciones anuales."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "etiquetas": [
+        "economia",
+        "jp morgan",
+        "pbi",
+        "indec",
+        "recesion"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Clarín",
+          "enlace": "https://www.clarin.com/economia/caida-junio-jp-morgan-ajusto-pronostico-estimo-recesion-tercer-trimestre_0_RQZcm2GT9b.html",
+          "fecha": "2026-09-27T09:00:28.000Z",
+          "oficial": false,
+          "aporte": "Aportó los datos del reporte de JP Morgan, el informe del Indec sobre la caída de julio y las declaraciones de economistas como Kiguel y Caamaño."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1v3qkdz",
+          "titulo": "La drástica advertencia de JP Morgan sobre la caída en la rentabilidad de Mercado Libre: cuál es el problema que identificó",
+          "fecha": "2026-09-22T19:54:22.000Z",
+          "ruta": "/nota/la-drastica-advertencia-de-jp-morgan-sobre-la-caida-en-la-1v3qkdz"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "1k92rji": {
+      "estado": "automatica",
+      "titulo": "Inversores europeos consultan a Milei en Francia por la actividad",
+      "copete": "El financista Javier Timerman anticipó que los mercados en Europa centrarán sus preguntas en la desaceleración económica, la acumulación de reservas y el equilibrio fiscal durante la Semana Argentina en París.",
+      "cuerpo": "El titular de AdCap Grupo Financiero, Javier Timerman, señaló que los inversores internacionales mantienen inquietud respecto al freno en la actividad económica, la situación cambiaria y la capacidad para recomponer reservas. Durante su paso por Nueva York y previo a su participación en la Semana Argentina en París, el especialista indicó que en Europa las consultas hacia el presidente Javier Milei girarán en torno a los motivos de la contracción económica, los plazos para la recuperación y la compatibilidad entre el equilibrio fiscal y el crecimiento.\n\nEl análisis financiero internacional ocurre en paralelo a la agenda oficial desarrollada por el mandatario nacional, quien encabeza el foro de inversiones Argentina Week en la capital francesa junto a funcionarios y empresarios para atraer capitales externos, tras haber cuestionado la situación económica europea en los días previos a su viaje.",
+      "guion": "Inversores europeos consultan a Milei en Francia por la actividad",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T10:00:32.056Z",
+      "seSabe": [
+        "Javier Timerman afirmó que los mercados europeos centrarán sus preguntas en la economía y las reservas.",
+        "El financista participó previamente de reuniones en Nueva York con inversores.",
+        "El presidente Javier Milei encabeza el foro Argentina Week en París según lo informado en coberturas previas."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El financista Javier Timerman anticipó que los inversores europeos consultarán al presidente Javier Milei en Francia sobre las razones del freno en la economía, la acumulación de reservas y los planes para recuperar el crecimiento.",
+      "etiquetas": [
+        "Javier Timerman",
+        "Inversores",
+        "Europa",
+        "Economia",
+        "Javier Milei"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Clarín",
+          "enlace": "https://www.clarin.com/economia/javier-timerman-francia-van-preguntarle-milei-freno-economia_0_H9NtzGRaAs.html",
+          "fecha": "2026-09-27T09:00:28.000Z",
+          "oficial": false,
+          "aporte": "Aportó declaraciones del financista Javier Timerman sobre la visión de los inversores internacionales respecto a la economía argentina."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "drk3w0",
+          "titulo": "Antes de viajar a París, Javier Milei cuestionó la economía europea: \"Se está hundiendo\"",
+          "fecha": "2026-09-22T00:31:00.000Z",
+          "ruta": "/nota/antes-de-viajar-a-paris-javier-milei-cuestiono-la-economia-europea-se-drk3w0"
+        },
+        {
+          "id": "1mzcxyt",
+          "titulo": "El presidente Javier Milei encabeza un foro de inversiones en París",
+          "fecha": "2026-09-27T03:40:32.000Z",
+          "ruta": "/nota/el-presidente-javier-milei-encabeza-un-foro-de-inversiones-en-paris-1mzcxyt"
+        },
+        {
+          "id": "18ldbf4",
+          "titulo": "Javier Milei revela cuál es el vehículo de sus sueños",
+          "fecha": "2026-09-26T04:01:13.000Z",
+          "ruta": "/nota/javier-milei-revela-cual-es-el-auto-de-sus-suenos-y-como-lo-18ldbf4"
         }
       ],
       "verificacion": {
