@@ -74,13 +74,12 @@ Nada de tamaños sueltos: se usa una variable.
 | Dato | `--t-dato` | 16px, 700 | Nombre de la farmacia, estado del cielo, tipo de dólar |
 | Dato grande | `--t-dato-grande` | 22px, 700, tabular | Venta del dólar, número de teléfono |
 | Cifra | `--t-cifra` | 44px, 700, tabular | Sólo la temperatura |
-| Título de tarjeta | `--t-titulo-tarjeta` | 19px, Fraunces 700 | Buzón e invitaciones ("¿Viste algo en el barrio?") |
+| Título de tarjeta | `--t-titulo-tarjeta` | 19px, Source Serif 700 | Buzón e invitaciones ("¿Viste algo en el barrio?") |
 
-Familias: **Fraunces** sólo para títulos de nota, de sección y de tarjeta y para el
-nombre de marca; **IBM Plex Sans** para todo lo demás (etiquetas, datos, cifras,
-texto). Nunca una cifra ni un nombre de servicio en Fraunces (el "wonk" tuerce la
-J y las S y los dígitos quedan de ancho distinto). Las cifras llevan
-`font-variant-numeric: tabular-nums`. No se carga IBM Plex Mono: no hace falta.
+Familias: **Source Serif 4** sólo para títulos de nota, de sección y de tarjeta y
+para el nombre de marca; **Inter** para todo lo demás (etiquetas, datos, cifras,
+texto). Nunca una cifra ni un nombre de servicio en la letra de los títulos. Las
+cifras llevan `font-variant-numeric: tabular-nums`.
 
 - **El nombre de la farmacia es un dato, no un titular**: mismo tamaño y peso que
   cualquier dato y en tinta. El rojo es el acento de las acciones. "Cómo llegar"
@@ -98,16 +97,16 @@ J y las S y los dígitos quedan de ancho distinto). Las cifras llevan
 - **Cambiar un tamaño** = cambiar la variable, no la tarjeta. Pruebas:
   `../pruebas/tipografia.test.mjs`.
 
-### Tipografía: Fraunces sin "wonk"
+### Tipografía: Source Serif 4 e Inter (27/09)
 
-El `<link>` de Google Fonts (`app/layout.js`) pide `Fraunces:opsz,wght,WONK@9..144,500..900,0..1`.
-Con sólo `opsz` y `wght` Google sirve la fuente con las formas "wonky" (h, n, m
-inclinadas) puestas de fábrica en los tamaños grandes, y el CSS no las puede
-apagar. Con el eje WONK disponible, `globals.css` pone `html { font-variation-settings:
-"WONK" 0, "SOFT" 0 }` (IBM Plex Sans no tiene esos ejes y lo ignora) y los titulares
-llevan `font-variant-numeric: lining-nums proportional-nums`. El archivo pesa lo
-mismo que antes (unos 60 KB el subconjunto latino). Las imágenes para compartir
-(`lib/tarjeta.js`) usan su propio archivo, `fuentes/Fraunces-900.ttf`, y no cambian.
+El `<link>` de Google Fonts (`app/layout.js`) pide `Source Serif 4` (600 a 900) e
+`Inter` (400 a 700), las dos con tamaño óptico (`opsz`). Hasta el 27/09 eran
+Fraunces e IBM Plex Sans: en el celular los títulos se veían pesados y torpes. Se
+eligieron entre cuatro opciones probadas con titulares reales (Fraunces, Newsreader,
+Source Serif 4 y Archivo): Source Serif es la más firme y clara en pantalla chica.
+Los titulares llevan `font-variant-numeric: lining-nums proportional-nums`. Las
+imágenes para compartir (`lib/tarjeta.js`) todavía usan su propio archivo,
+`fuentes/Fraunces-900.ttf`.
 
 ### El menú de secciones (`components/navegacion.js`)
 

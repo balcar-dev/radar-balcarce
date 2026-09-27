@@ -86,10 +86,14 @@ test('/farmacias destaca la de turno con la misma tarjeta y ordena la semana sin
 
 // -------------------------------------------------------- tipografía
 
-test('Fraunces se pide con el eje WONK y se usa con WONK 0 y SOFT 0, con cifras alineadas a la línea base', () => {
+test('Source Serif 4 en los títulos e Inter en el texto, con cifras alineadas a la línea base', () => {
+  // 27/09: Fraunces e IBM Plex Sans se veían pesadas en el celular (Hernán).
   const layout = leer('web/app/layout.js');
-  assert.match(layout, /family=Fraunces:opsz,wght,WONK@9\.\.144,500\.\.900,0\.\.1/);
-  assert.ok(!/family=Fraunces:opsz,wght@/.test(layout), 'sin el eje WONK no hay forma de apagar el wonk');
-  assert.match(css, /html \{ font-variation-settings: "WONK" 0, "SOFT" 0; \}/);
+  assert.match(layout, /family=Source\+Serif\+4:opsz,wght@/);
+  assert.match(layout, /family=Inter:opsz,wght@/);
+  assert.ok(!/family=(Fraunces|IBM)/.test(layout), 'no se cargan las letras de antes');
+  assert.ok(!/Fraunces|Plex|WONK/.test(css.replace(/\/\*[\s\S]*?\*\//g, '')), 'la hoja no las nombra fuera de los comentarios');
+  assert.match(css, /--f-titulo: "Source Serif 4"/);
+  assert.match(css, /--f-texto: "Inter"/);
   assert.match(css, /h1, h2, h3, \.fraunces \{[^}]*font-variant-numeric:\s*lining-nums proportional-nums/);
 });

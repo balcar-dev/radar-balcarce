@@ -91,13 +91,12 @@ export default function RaizLayout({ children }) {
         <link rel="alternate" type="application/rss+xml" title="Radar Balcarce" href="/feed.xml" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        {/* Fraunces con el eje WONK (0 a 1) a propósito: sin pedirlo, Google sirve la
-            fuente con las formas "wonky" (h, n, m inclinadas) fijas en los tamaños
-            grandes, y no hay forma de apagarlas desde el CSS. Con el eje disponible,
-            globals.css lo pone en 0. Pesa lo mismo que antes. */}
+        {/* Source Serif 4 para los títulos e Inter para todo lo demás (27/09; antes
+            Fraunces e IBM Plex Sans, que en el celular se veían pesadas). Las dos
+            con el eje de tamaño óptico (opsz): la letra se ajusta sola al tamaño. */}
         <link
           rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,WONK@9..144,500..900,0..1&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,600..900&family=Inter:opsz,wght@14..32,400..700&display=swap"
         />
       </head>
       <body>

@@ -4,7 +4,7 @@
    lienzo, para que no se separen.
 
    Criterio general: fondo blanco de portal (no el crema de diario viejo),
-   tipografía con carácter (Fraunces en los títulos), color por sección y
+   tipografía de diario (Source Serif 4 en los títulos), color por sección y
    movimiento sólo en las dos piezas que se miran todos los días — el clima
    y la farmacia de turno. */
 
@@ -49,14 +49,14 @@
    /agenda y /util. Nada de tamaños sueltos: se usa una de estas variables.
 
    FAMILIAS
-     --f-titulo  Fraunces: SÓLO títulos de nota, títulos de sección, títulos
-                 de tarjeta (buzón) y el nombre de la marca. Nunca una cifra ni
-                 un nombre de servicio (el "wonk" de Fraunces tuerce la J y las
-                 S en un nombre corto, y los números quedan de ancho distinto).
-     --f-texto   IBM Plex Sans: etiquetas, datos, cifras y texto de las
-                 tarjetas. Las cifras llevan font-variant-numeric: tabular-nums
-                 (todos los dígitos del mismo ancho: las columnas no se corren).
-                 No se carga IBM Plex Mono a propósito: no hace falta.
+     --f-titulo  Source Serif 4: SÓLO títulos de nota, títulos de sección,
+                 títulos de tarjeta (buzón) y el nombre de la marca. Nunca una
+                 cifra ni un nombre de servicio: eso es un dato, no un titular.
+     --f-texto   Inter: etiquetas, datos, cifras y texto de las tarjetas. Las
+                 cifras llevan font-variant-numeric: tabular-nums (todos los
+                 dígitos del mismo ancho: las columnas no se corren).
+     Hasta el 27/09 eran Fraunces e IBM Plex Sans; en el celular se veían
+     pesadas y torpes (Hernán).
 
    ESCALA (mismo tamaño = mismo rol, en todas las tarjetas)
      --t-etiqueta 11px  MAYÚSCULAS, 600, letra abierta (--ls-etiqueta), gris
@@ -77,7 +77,7 @@
      --t-dato-grande 22px 700 tabular: la cifra de la tarjeta (venta del dólar,
                         número de teléfono, día de un evento).
      --t-cifra    44px  700 tabular: SÓLO la temperatura del clima.
-     --t-titulo-tarjeta 19px Fraunces 700: el título de las tarjetas que son
+     --t-titulo-tarjeta 19px Source Serif 700: el título de las tarjetas que son
                         una invitación (buzón, "¿El turno no coincide?").
 
    PUNTITO DE ESTADO: siempre .punto-vivo (6px, verde, late), a la izquierda de
@@ -85,8 +85,8 @@
    turno de hoy), clima y dólar cuando el navegador ya consultó la fuente.
    Documentado también en web/README.md ("Sistema tipográfico"). */
 :root {
-  --f-titulo: "Fraunces", Georgia, serif;
-  --f-texto: "IBM Plex Sans", system-ui, sans-serif;
+  --f-titulo: "Source Serif 4", Georgia, serif;
+  --f-texto: "Inter", system-ui, sans-serif;
   --t-etiqueta: 11px;
   --ls-etiqueta: 0.06em;
   --t-meta: 12.5px;
@@ -116,30 +116,24 @@
   .solo-grande.solo-grande { display: inline-flex; }
 }
 
-/* Fraunces sin las formas "wonky" (la h, la n y la m inclinadas) ni el redondeo
-   "soft": a tamaños grandes se veían como letras raras. WONK 0 sólo se puede
-   apagar porque el <link> de la fuente (layout.js) pide ese eje. Se hereda a
-   todo lo que use Fraunces; IBM Plex Sans no tiene esos ejes y lo ignora. */
-html { font-variation-settings: "WONK" 0, "SOFT" 0; }
-
 html, body {
   margin: 0;
   padding: 0;
   background: var(--papel);
   color: var(--tinta);
-  font-family: "IBM Plex Sans", system-ui, sans-serif;
+  font-family: var(--f-texto);
   font-size: 16px;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
 }
 
 h1, h2, h3, .fraunces {
-  font-family: "Fraunces", Georgia, serif;
-  letter-spacing: -0.02em;
+  font-family: var(--f-titulo);
+  letter-spacing: -0.015em;
   margin: 0;
   /* Cifras de la altura de las mayúsculas y de ancho propio: un "$1.560" o un
      "25" en un titular no quedan con huecos ni con formas de texto antiguo.
-     (Las cifras de las tarjetas van en IBM Plex Sans, tabulares.) */
+     (Las cifras de las tarjetas van en Inter, tabulares.) */
   font-variant-numeric: lining-nums proportional-nums;
 }
 
@@ -367,7 +361,7 @@ main { padding: 24px 0 10px; }
 .placa-seccion::after { right: -130px; top: -150px; width: 400px; height: 400px; }
 .placa-seccion::before { right: -40px; top: -60px; width: 220px; height: 220px; border-color: rgba(255, 255, 255, 0.08); }
 .placa-seccion span {
-  font-family: "Fraunces", Georgia, serif; font-size: 28px; font-weight: 900;
+  font-family: var(--f-titulo); font-size: 28px; font-weight: 900;
   color: var(--crema); position: relative; letter-spacing: -0.03em;
 }
 @media (min-width: 720px) { .placa-seccion span { font-size: 42px; } }
@@ -476,7 +470,7 @@ main { padding: 24px 0 10px; }
 .aviso-etiqueta { font-size: 11px; letter-spacing: 0.04em; text-transform: uppercase; color: var(--suave); margin: 0 0 8px; }
 .aviso-cuerpo { display: flex; align-items: center; gap: 12px; }
 .aviso-logo { width: 40px; height: 40px; border-radius: 6px; object-fit: cover; flex-shrink: 0; }
-.aviso-nombre { font-family: "Fraunces", Georgia, serif; font-weight: 900; font-size: 16px; margin: 0 0 2px; color: var(--tinta); }
+.aviso-nombre { font-family: var(--f-titulo); font-weight: 900; font-size: 16px; margin: 0 0 2px; color: var(--tinta); }
 .aviso-texto { font-size: 13px; color: var(--texto); margin: 0; }
 
 .boton {
@@ -580,10 +574,9 @@ main { padding: 24px 0 10px; }
 .pastilla-turno .punto-vivo { background: var(--farmacia); }
 .tarjeta-farmacia .ver-semana { white-space: nowrap; }
 
-/* El nombre de la farmacia es un DATO de servicio, no un titular: IBM Plex Sans
-   en el mismo tamaño y peso que cualquier otro dato (--t-dato), en tinta.
-   (Fraunces tiene un rasgo de diseño, el "wonk", que tuerce la J y las S en un
-   nombre corto y grande.) Un nombre largo baja de renglón, nunca se corta. */
+/* El nombre de la farmacia es un DATO de servicio, no un titular: la letra de
+   texto en el mismo tamaño y peso que cualquier otro dato (--t-dato), en tinta.
+   Un nombre largo baja de renglón, nunca se corta. */
 .nombre-farmacia {
   font-family: var(--f-texto); font-size: var(--t-dato); font-weight: 700; color: var(--tinta);
   line-height: 1.25; min-width: 0; overflow-wrap: anywhere;
@@ -752,7 +745,7 @@ a.telefono:hover { border-color: var(--rojo); color: inherit; }
 /* El encabezado de la página de un tema. */
 .chapa-tema { padding-bottom: 18px; border-bottom: 2px solid var(--tinta); }
 .chapa-tema h1 {
-  font-family: "Fraunces", Georgia, serif; font-size: clamp(30px, 6vw, 42px);
+  font-family: var(--f-titulo); font-size: clamp(30px, 6vw, 42px);
   font-weight: 900; line-height: 1.08; letter-spacing: -0.025em;
   margin: 6px 0 0; color: var(--tinta);
 }
@@ -812,7 +805,7 @@ a.telefono:hover { border-color: var(--rojo); color: inherit; }
 footer.principal { background: var(--tinta); color: #BDC1B8; padding: 28px 0; margin-top: 44px; font-size: 13px; }
 footer.principal .envoltura { display: flex; flex-direction: column; gap: 9px; }
 footer.principal a:hover { color: #fff; }
-footer.principal .marca { font-family: "Fraunces", serif; font-size: 20px; font-weight: 900; color: var(--crema); }
+footer.principal .marca { font-family: var(--f-titulo); font-size: 20px; font-weight: 900; color: var(--crema); }
 footer.principal .aclaracion { max-width: 760px; line-height: 1.6; border-top: 1px solid #2A2E32; padding-top: 14px; margin-top: 6px; }
 
 /* ----------------------------------------------------------- página de nota */

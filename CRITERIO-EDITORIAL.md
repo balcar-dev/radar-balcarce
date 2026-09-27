@@ -473,14 +473,13 @@ del 26/09, que recorrió las 300 páginas publicadas.
 6. **Sin promoción ni mayúsculas sostenidas ni signos dobles** en ningún
    título ni texto ("¡¡¡INFORMACIÓN IMPORTANTE!!!"). Los nombres que llegan mal
    de una fuente se corrigen (tildes, mayúsculas) antes de mostrarse.
-7. **Una tipografía, un sistema.** Fraunces sólo para títulos de nota, de
-   sección y de tarjeta, y la marca. Todo dato, cifra y etiqueta va en IBM Plex
-   Sans, con cifras tabulares. Cada tarjeta (clima, farmacia, dólar, agenda,
+7. **Una tipografía, un sistema.** Source Serif 4 sólo para títulos de nota,
+   de sección y de tarjeta, y la marca. Todo dato, cifra y etiqueta va en
+   Inter, con cifras tabulares. Cada tarjeta (clima, farmacia, dólar, agenda,
    buzón, números útiles) usa la misma etiqueta, el mismo dato principal, el
-   mismo texto secundario y las mismas acciones ("Ver la semana →"). Fraunces
-   se pide a Google con el eje WONK y se usa con WONK 0 y SOFT 0: sin eso, a
-   tamaños grandes salían las formas "wonky" (h, n, m inclinadas) y las letras
-   se veían raras. En los titulares, las cifras van a la altura de las
+   mismo texto secundario y las mismas acciones ("Ver la semana →"). Hasta el
+   27/09 eran Fraunces e IBM Plex Sans, que en el celular se veían pesadas. En
+   los titulares, las cifras van a la altura de las
    mayúsculas y de ancho propio (`lining-nums proportional-nums`). El detalle
    y las variables están en `web/README.md` ("Sistema tipográfico") y al
    principio del bloque de tarjetas de `web/app/globals.css`.

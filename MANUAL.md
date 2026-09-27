@@ -123,7 +123,7 @@ una nota (sección 4), cómo se verifica (sección 6) y qué ve el lector
 
 ## 4. El diseño de la web
 
-Criterio: portal de noticias, no diario solemne. Fondo blanco, Fraunces en
+Criterio: portal de noticias, no diario solemne. Fondo blanco, Source Serif 4 en
 los títulos, color por sección, y movimiento sólo en las dos piezas que se
 miran todos los días.
 

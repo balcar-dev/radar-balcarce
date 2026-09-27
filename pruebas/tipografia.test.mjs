@@ -33,13 +33,12 @@ test('las variables del sistema tipográfico existen', () => {
   assert.match(css, /sistema tipográfico/, 'el sistema está documentado al principio del bloque');
 });
 
-test('Fraunces no se usa en cifras ni en nombres de servicio', () => {
-  // Los datos van en IBM Plex Sans (--f-texto): el "wonk" de Fraunces tuerce
-  // la J y las S de un nombre corto y los números quedan de ancho distinto.
+test('la letra de los títulos no se usa en cifras ni en nombres de servicio', () => {
+  // Los datos van en la letra de texto (--f-texto), con cifras tabulares.
   for (const sel of ['.nombre-farmacia', '.tarjeta-clima .temp', '.taco .dia', '.cabeza-dolar h2']) {
     const r = regla(sel);
     assert.match(r, /font-family:\s*var\(--f-texto\)/, `${sel} tiene que ir en la sans`);
-    assert.ok(!/Fraunces/.test(r), `${sel} no usa Fraunces`);
+    assert.ok(!/--f-titulo|Serif/.test(r), `${sel} no usa la letra de los títulos`);
   }
 });
 
