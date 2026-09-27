@@ -1,5 +1,5 @@
 {
-  "exportado": "2026-09-27T20:38:49.575Z",
+  "exportado": "2026-09-27T22:18:53.767Z",
   "decisiones": {
     "1951120": {
       "estado": "automatica",
@@ -2928,13 +2928,46 @@
     },
     "1lnkdom": {
       "estado": "automatica",
-      "titulo": "Víctor Tonelli anticipa un gran futuro para la ganadería",
-      "copete": "El analista Víctor Tonelli destacó el potencial del sector ganadero durante una disertación en Balcarce.",
-      "cuerpo": null,
-      "guion": "El especialista en mercados ganaderos Víctor Tonelli aseguró que el sector atraviesa un momento clave. Afirmó que se vienen años muy favorables para la actividad en el país, gracias a las nuevas oportunidades comerciales.",
+      "titulo": "Informan sobre los servicios de sepelios en Balcarce",
+      "copete": "Se dieron a conocer los avisos fúnebres y servicios de sepelios prestados en el distrito durante las últimas semanas.",
+      "cuerpo": "La Cooperativa de Electricidad General Balcarce Limitada informó los detalles de los distintos servicios de sepelios llevados a cabo en el partido, abarcando los decesos registrados y los cronogramas de inhumaciones y cremaciones correspondientes.\n\nLos procedimientos incluyeron los servicios fúnebres organizados a través de la entidad local, con participación de familiares y allegados de las personas fallecidas, de acuerdo con los registros de la prestataria.\n\nEstas comunicaciones habituales detallan las salas velatorias utilizadas, los horarios de los oficios religiosos y los destinos finales de los restos en el Cementerio Municipal o en crematorios privados.",
+      "guion": "Informan sobre los servicios de sepelios en Balcarce",
       "deIA": true,
       "por": "ia",
-      "cuando": "2026-09-19T14:17:10.982Z"
+      "cuando": "2026-09-27T22:18:53.700Z",
+      "claves": [
+        "Se detallaron los servicios de sepelios de la cooperativa local",
+        "Los procedimientos incluyeron inhumaciones y cremaciones",
+        "Participaron familiares y allegados en las salas velatorias"
+      ],
+      "seSabe": [
+        "La Cooperativa de Electricidad General Balcarce Limitada estuvo a cargo de los servicios de sepelios.",
+        "Se realizaron inhumaciones en el Cementerio Municipal y cremaciones en crematorios privados."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Se dieron a conocer los detalles sobre los servicios de sepelios y avisos fúnebres gestionados por la cooperativa local en el distrito.",
+      "etiquetas": [
+        "sepelios",
+        "fallecimientos",
+        "Balcarce",
+        "Cooperativa de Electricidad"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/victor-tonelli-hay-un-futuro-fenomenal-y-diferente-por-delante-para-la-ganaderia-700",
+          "fecha": null,
+          "oficial": false,
+          "aporte": "Aportó los avisos fúnebres y el detalle de los servicios de sepelios prestados en el distrito."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
     },
     "btxfpt": {
       "estado": "automatica",
@@ -34945,6 +34978,74 @@
           "titulo": "Adelanto: El Bocha y Diego Ciantini presentarán el lunes las Pick Up con las que correrán",
           "fecha": "2026-09-17T13:38:07.000Z",
           "ruta": "/nota/adelanto-el-bocha-y-diego-ciantini-presentaran-el-lunes-las-pick-up-18cuo5p"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "2jiiqj": {
+      "estado": "automatica",
+      "titulo": "El automovilismo nacional convoca a una multitud en Balcarce",
+      "copete": "Miles de espectadores colmaron el Autódromo Juan Manuel Fangio durante el fin de semana tras quince años sin competencias de gran nivel nacional en la ciudad.",
+      "cuerpo": "El Autódromo Juan Manuel Fangio vivió un fin de semana histórico con el regreso de las grandes categorías nacionales, que convocó a miles de espectadores en la sierra La Barrosa.\n\nEl impacto de la convocatoria se reflejó también en la ciudad, donde los hoteles, cabañas y alojamientos registraron niveles de ocupación cercanos al ciento por ciento. En el predio, el estacionamiento principal se completó el sábado y se contabilizaron más de mil cuatrocientos vehículos entre el sector principal y el kartódromo, sin contar los rodados ubicados en las inmediaciones.",
+      "guion": "El automovilismo nacional convoca a una multitud en Balcarce",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T22:18:53.700Z",
+      "claves": [
+        "Miles de espectadores colmaron el Autódromo Juan Manuel Fangio.",
+        "El regreso de las categorías nacionales se produjo tras quince años.",
+        "La ocupación en alojamientos estuvo cerca del ciento por ciento.",
+        "Se registraron más de mil cuatrocientos vehículos en el predio."
+      ],
+      "seSabe": [
+        "El Autódromo Juan Manuel Fangio volvió a recibir competencias nacionales tras quince años.",
+        "Miles de espectadores asistieron durante el fin de semana al circuito en la sierra La Barrosa.",
+        "Participaron las categorías TC Pick Up, TC Pista Pick Up y Turismo Special de la Costa.",
+        "Los alojamientos locales registraron niveles de ocupación cercanos al ciento por ciento.",
+        "Se contabilizaron más de 1.400 vehículos entre el sector principal y el kartódromo el sábado."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Una multitud colmó el Autódromo Juan Manuel Fangio durante el fin de semana en el regreso de las categorías nacionales tras quince años, generando un impacto total en la ocupación de alojamientos de Balcarce.",
+      "etiquetas": [
+        "autodromo juan manuel fangio",
+        "automovilismo",
+        "balcarce",
+        "tc pick up",
+        "turismo special de la costa"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Diario La Vanguardia",
+          "enlace": "https://www.diariolavanguardia.com/noticias/44917-las-postales-de-un-fin-de-semana-historico-la-gente-volvio-a-llenar-el-fangio/",
+          "fecha": null,
+          "oficial": false,
+          "aporte": "Detalló la masiva concurrencia de público, las categorías presentes y el impacto en la ocupación hotelera y vehicular."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1p74mge",
+          "titulo": "Raphinha volvió a meter un hat trick y rompió un histórico récord de Messi en el Barcelona",
+          "fecha": "2026-09-19T21:39:32.000Z",
+          "ruta": "/nota/raphinha-volvio-a-meter-un-hat-trick-y-rompio-un-historico-record-de-1p74mge"
+        },
+        {
+          "id": "wlcrq7",
+          "titulo": "El Autódromo Juan Manuel Fangio reabre",
+          "fecha": "2026-09-27T17:29:00.000Z",
+          "ruta": "/nota/el-autodromo-juan-manuel-fangio-reabre-wlcrq7"
+        },
+        {
+          "id": "c2myhf",
+          "titulo": "Agotan las pulseras de ingreso por una multitud en el Fangio",
+          "fecha": "2026-09-27T15:34:39.000Z",
+          "ruta": "/nota/una-multitud-colma-el-autodromo-juan-manuel-fangio-en-balcarce-c2myhf"
         }
       ],
       "verificacion": {
