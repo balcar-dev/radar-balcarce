@@ -26,7 +26,7 @@ import { tieneCuerpo } from '../lib/cuerpo.js';
 import { sinBalcarceAlFinal } from '../lib/titulos.js';
 import { sinNotasRepetidas } from '../lib/texto.js';
 import { pendientesDeLaIngesta } from '../../redes/avisos.mjs';
-import { cuentaDelDia, anotarDia, comoHistoriaJson } from '../../ingesta/estadistica-diaria.mjs';
+import { cuentaDelDia, anotarDia, comoHistoriaJson as comoNotasPorDiaJson } from '../../ingesta/estadistica-diaria.mjs';
 import {
   vigenteEnPortada, slugsConocidos, fijarSlug, actualizarArchivo, idsEnRedes, sinPuntaje, comoArchivoJson,
   idsRetiradosAMano, correccionesAMano, conCorreccion,
@@ -542,7 +542,7 @@ const NOTAS_POR_DIA = path.join(AQUI, '..', 'data', 'notas-por-dia.json');
 {
   const historia = leerJson(NOTAS_POR_DIA, { dias: {} });
   const cuenta = cuentaDelDia({ portada: salida, ahora: new Date(), libro: libroRedes });
-  const texto = comoHistoriaJson(anotarDia(historia, cuenta));
+  const texto = comoNotasPorDiaJson(anotarDia(historia, cuenta));
   if (!fs.existsSync(NOTAS_POR_DIA) || fs.readFileSync(NOTAS_POR_DIA, 'utf8') !== texto) fs.writeFileSync(NOTAS_POR_DIA, texto, 'utf8');
   console.log(`  hoy: ${cuenta.publicadas} notas publicadas (${cuenta.deBalcarce} de Balcarce) · ${Object.entries(cuenta.porSeccion).map(([s, n]) => `${s} ${n}`).join(', ') || 'ninguna'}`);
 }
