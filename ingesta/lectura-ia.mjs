@@ -317,7 +317,10 @@ export function aplicarFichas(notas, fichas = {}, { verdeSecciones = [] } = {}) 
     let motivo = null;
     if (f.publicidad) motivo = 'es publicidad';
     else if (f.chimento) motivo = 'es un chimento';
-    else if (f.ambito === 'internacional' && !deFierros && !conexionArgentina) motivo = 'es del extranjero';
+    // Del extranjero, sólo si un argentino se destaca en algo o le importa a
+    // Balcarce (Hernán, 27/09): una figura argentina (Colapinto, Messi) o la
+    // conexión argentina en el título. La Fórmula 1 sin un argentino, no.
+    else if (f.ambito === 'internacional' && !n.figura && !conexionArgentina) motivo = 'es del extranjero';
     // De un medio de acá sólo se saca si ni siquiera nombra a Balcarce en el
     // título ("precios sugeridos para alquilar en Mar del Plata", 27/09).
     else if (f.impacto === 'nulo' && !deFierros && !conexionArgentina && !nacionalQueImporta

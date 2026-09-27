@@ -1015,6 +1015,10 @@ export const REGLAS_SEMAFORO = {
     // porque el filtro sólo conocía "muerte" y "falleció": es una necrológica,
     // y las necrológicas no salen sin fuente firmada.
     'murió', 'murio', 'muere', 'fallece', 'deceso', 'velatorio',
+    // Las listas de "servicios de sepelios" de la Cooperativa: nombres de
+    // personas fallecidas. Salieron diez veces, cada una en una sección
+    // distinta (27/09).
+    'sepelio', 'sepelios', 'inhumación', 'inhumacion', 'inhumaciones',
     // Policiales entró a las secciones automáticas el 21/09. Esto es lo que
     // hace que eso sea seguro: lo grave sigue esperando a una persona.
     'homicidio', 'asesinato', 'asesinado', 'asesinaron', 'cadáver', 'cadaver',

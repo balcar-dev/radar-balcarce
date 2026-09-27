@@ -674,7 +674,11 @@ function semaforo(nota, seccion, puntaje, medios = cuantosMedios(nota)) {
 
   // Lo de afuera sale solo si lo cuentan bastantes medios (27/09, el cruce):
   // la importancia se mide con cuántos lo cuentan, no con el puntaje.
-  const deAca = nota.local || nota.nombraBalcarce || esDeBalcarce(nota);
+  // Lo que toca la zona (la 226, la 55, la papa, el sudeste) es tema de
+  // Balcarce aunque lo cuente un solo medio (Hernán, 27/09: "si son de la zona
+  // y son realmente temas de Balcarce, que salga"). La lectura con IA igual
+  // saca lo que no tenga relación con acá.
+  const deAca = nota.local || nota.nombraBalcarce || nota.deLaZona || esDeBalcarce(nota);
   const minimo = mediosMinimosDe(seccion, nota);
   if (!deAca && medios < minimo) {
     return { color: 'amarillo', motivo: motivoPocoContada(medios, seccion, minimo) };
@@ -1170,7 +1174,7 @@ export function aplicarCupos(portada) {
  */
 export function exigirMedios(portada) {
   for (const n of portada) {
-    if (n.local || n.oficial || n.propia) continue;
+    if (n.local || n.oficial || n.propia || n.deLaZona) continue;
     const medios = cuantosMedios(n);
     const minimo = mediosMinimosDe(n.seccion, n);
     if (n.semaforo === 'verde' && medios < minimo) {
@@ -1372,6 +1376,7 @@ export async function ingestar({
       })),
       local: esDeBalcarce(g.principal),
       figura: g.principal.figura ?? null,
+      ...(g.principal.deLaZona ? { deLaZona: true } : {}),
       alcance: g.principal.alcance,
       nombraBalcarce: !!g.principal.nombraBalcarce,
     };

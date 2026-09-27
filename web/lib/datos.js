@@ -231,8 +231,10 @@ export function ordenarPortada(notas = []) {
   return { principal, resto: porHora.filter((n) => n.id !== principal.id) };
 }
 
-/** Hasta cuántos días atrás se va al archivo a completar una sección. */
-export const DIAS_PARA_COMPLETAR = 14;
+/** Hasta cuántos días atrás se va al archivo a completar una sección. Era 14:
+ *  una nota de "hace 9 días" en la portada de un medio de noticias se lee como
+ *  un sitio abandonado (27/09). */
+export const DIAS_PARA_COMPLETAR = 7;
 /** Cuántas notas muestra cada sección de la portada. */
 export const NOTAS_POR_SECCION = 3;
 
@@ -294,16 +296,20 @@ export function armarTapa(notasSueltas = [], orden = SECCIONES.map((s) => s.nomb
 
   const secciones = [...new Set([...orden, ...Object.keys(porSeccion)])];
   const bloques = [];
+  // Lo que se sumó del archivo en cualquier sección: una misma historia no
+  // puede completar dos secciones (27/09, los sepelios en Balcarce y en Fútbol).
+  const sumadas = [];
   for (const s of secciones) {
     const suyas = (porSeccion[s] ?? []).slice(0, NOTAS_POR_SECCION);
     if (suyas.length < NOTAS_POR_SECCION) {
       // Sin repetir historia con nada de lo que ya está en la portada ni con lo
-      // que se va sumando.
+      // que se va sumando, en esta sección o en otra.
       for (const v of viejas) {
         if (suyas.length >= NOTAS_POR_SECCION) break;
         if (v.seccion !== s) continue;
-        if ([...notas, ...suyas].some((o) => titularesParecidos(o.titulo, v.titulo))) continue;
+        if ([...notas, ...sumadas].some((o) => titularesParecidos(o.titulo, v.titulo))) continue;
         suyas.push(v);
+        sumadas.push(v);
       }
     }
     if (suyas.length) bloques.push([s, suyas.sort((a, b) => new Date(b.fecha) - new Date(a.fecha))]);
