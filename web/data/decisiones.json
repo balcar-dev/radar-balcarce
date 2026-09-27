@@ -1,5 +1,5 @@
 {
-  "exportado": "2026-09-27T11:00:32.771Z",
+  "exportado": "2026-09-27T11:10:39.390Z",
   "decisiones": {
     "1951120": {
       "estado": "automatica",
@@ -32548,6 +32548,89 @@
           "fecha": "2026-09-27T10:50:41.000Z",
           "oficial": false,
           "aporte": "Aportó los detalles sobre el operativo de búsqueda del tigre en Jalisco y los antecedentes de casos similares en México."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "1oxcjak": {
+      "estado": "automatica",
+      "titulo": "Un documental rescata la historia de la maquinaria agrícola",
+      "copete": "Un nuevo trabajo audiovisual repasa los orígenes de la fabricación de cosechadoras y el trabajo de las antiguas fábricas en Santa Fe.",
+      "cuerpo": "Un nuevo documental titulado \"Tracción a sangre\" repasa la historia industrial de la localidad santafesina de San Vicente y su rol clave en el desarrollo de la mecanización agrícola en el país. El trabajo audiovisual, dirigido por el realizador Luciano Prósperi, tiene una duración de cuarenta minutos y fue estrenado en el auditorio del Club Brown durante la Fiesta Nacional de la Cosechadora.\n\nEl material explora el pasado productivo de la región situada entre San Vicente y Sunchales, reconocida por albergar los primeros hitos en la fabricación de maquinaria agrícola. Entre los aspectos destacados se encuentra el recorrido por las antiguas plantas que marcaron la economía local, como las firmas Senor, considerada la primera fábrica organizada de Sudamérica en producir unidades a tracción a sangre, además de Bernardín, Bofelli y Flamini.",
+      "guion": "Un documental rescata la historia de la maquinaria agrícola",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T11:10:39.303Z",
+      "claves": [
+        "Se estrenó el documental Tracción a sangre en San Vicente.",
+        "La obra repasa la historia de la fabricación de cosechadoras.",
+        "El trabajo fue dirigido por el realizador Luciano Prósperi."
+      ],
+      "seSabe": [
+        "El documental se llama Tracción a sangre y dura cuarenta minutos, según informó un medio especializado.",
+        "La obra fue dirigida por Luciano Prósperi y se estrenó en el Club Brown de San Vicente.",
+        "El trabajo repasa la historia de las fábricas Senor, Bernardín, Bofelli y Flamini."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Un nuevo documental repasa la historia industrial y la fabricación de cosechadoras en la región santafesina de San Vicente.",
+      "etiquetas": [
+        "documental",
+        "industria nacional",
+        "cosechadoras",
+        "San Vicente"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infocampo",
+          "enlace": "https://www.infocampo.com.ar/cuando-las-sirenas-dejaron-de-sonar-el-documental-que-rescata-el-alma-obrera-de-la-cuna-de-las-cosechadoras/",
+          "fecha": "2026-09-27T11:02:53.000Z",
+          "oficial": false,
+          "aporte": "Aportó los detalles sobre el estreno del documental Tracción a sangre y su contenido histórico."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "1ve3237": {
+      "estado": "automatica",
+      "titulo": "Miami votará la continuidad de un impuesto escolar",
+      "copete": "Los votantes de Miami-Dade definirán el tres de noviembre si extienden un gravamen inmobiliario destinado al financiamiento educativo del condado. La medida no representa un aumento en la tasa vigente.",
+      "cuerpo": "Los electores de Miami-Dade definirán el tres de noviembre en las urnas la continuidad de un impuesto inmobiliario que sostiene parte del financiamiento de las escuelas públicas del condado. La consulta evaluará prorrogar por cuatro años la llamada tasa de un mill, equivalente a cien dólares anuales por cada cien mil dólares de valor imponible, según lo establecido por la Junta Escolar local. El esquema recauda fondos destinados principalmente a salarios docentes y a la seguridad en los establecimientos educativos.\n\nLas autoridades distritales advirtieron que una eventual negativa afectaría la retención y contratación de personal docente en la región.",
+      "guion": "Miami votara la continuidad de un impuesto escolar",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T11:10:39.304Z",
+      "claves": [
+        "Los votantes de Miami-Dade definirán el tres de noviembre la extensión de un impuesto inmobiliario escolar.",
+        "La tasa recauda cien dólares anuales por cada cien mil dólares de valor imponible de una propiedad.",
+        "La mayor parte de los fondos obtenidos se destina al pago de salarios docentes y a la seguridad escolar."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Los votantes de Miami-Dade definirán en noviembre la continuidad de un impuesto inmobiliario destinado a financiar salarios docentes y seguridad escolar en el condado.",
+      "etiquetas": [
+        "Miami",
+        "impuestos",
+        "escuelas",
+        "elecciones"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/estados-unidos/florida/us100-por-cada-us100-mil-en-florida-el-impuesto-que-ya-se-aplica-en-miami-y-podria-vetarse-luego-de-nid27092026/",
+          "fecha": "2026-09-27T11:00:00.000Z",
+          "oficial": false,
+          "aporte": "Detalló que los votantes de Miami-Dade definirán el tres de noviembre la prórroga de un impuesto escolar por cuatro años."
         }
       ],
       "verificacion": {
