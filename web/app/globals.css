@@ -22,24 +22,25 @@
   --verde: #16615B;
   --ambar: #E8A33C;
 
-  /* Un color por sección. Se usa en la etiqueta, en la barrita del
+  /* Un color por sección, cada uno de un tono distinto (27/09, Hernán: antes
+     Balcarce y Política eran el mismo rojo, Fútbol y Deportes dos verdes y
+     Economía y Automovilismo dos marrones). Se usa en la etiqueta, en la barrita del
      encabezado de sección y en la placa que reemplaza a la foto. */
-  --s-balcarce: #C7381C;
-  --s-politica: #C7381C;
-  --s-policiales: #8C2D18;
-  --s-deportes: #1E6E4F;
-  --s-futbol: #2E7D32;
+  --s-balcarce: #B91C1C;
+  --s-politica: #3730A3;
+  --s-policiales: #831843;
+  --s-deportes: #0F766E;
+  --s-futbol: #15803D;
   /* Naranja oscurecido: el #E08A16 de antes daba 2,69:1 con el texto blanco
      de la etiqueta (hace falta 4,5:1). Éste da 4,83:1. Todas las --s-* se
      usan de fondo de texto blanco: si se cambia una, medir el contraste
      (pruebas/seo-paginas.test.mjs lo vigila). */
-  --s-automovilismo: #A8600E;
-  --s-agro: #6B7A2A;
-  --s-cultura: #6D4BA0;
-  --s-economia: #9A6A12;
-  --s-tecnologia: #2563A8;
-  --s-servicios: #16615B;
-  --s-pais: #4A4F4B;
+  --s-automovilismo: #B45309;
+  --s-agro: #4D7C0F;
+  --s-cultura: #9D2C8F;
+  --s-economia: #8A6500;
+  --s-tecnologia: #0B6FB8;
+  --s-pais: #4B5563;
 }
 
 /* ------------------------------------------------------ sistema tipográfico
