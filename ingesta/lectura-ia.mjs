@@ -50,7 +50,8 @@ export const LECTURA = {
   pedidosPorCorrida: 5,
   pedidosPorDia: 60,
   // El pedido que junta repetidas: uno por corrida como mucho, si cambió la lista.
-  pedidosRepetidasPorDia: 30,
+  // Dos pedidos por corrida (lo que va a salir, y lo de afuera con un medio).
+  pedidosRepetidasPorDia: 60,
   // Cuánto se guarda una ficha.
   diasDeFichas: 3,
   resumenMaximo: 500,

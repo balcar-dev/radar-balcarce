@@ -147,8 +147,13 @@ if (enLaNube) {
     // Se pide sólo si cambió lo que hay para publicar, con tope por día.
     // Sólo lo que va a salir: con las 270 notas de la ingesta (ruido incluido)
     // la IA no vio las tres de McCain; con las publicables, sí (27/09).
+    // Y aparte, lo de afuera que espera por tener un solo medio: si otro medio
+    // cuenta lo mismo, al juntarlas llega a dos y puede salir. Antes quedaba
+    // frenado antes de poder juntarse, y lo nacional desaparecía (27/09). Van
+    // en dos pedidos: con todo junto la IA ve peor.
     const candidatas = conFichas.filter((n) => n.semaforo === 'verde');
-    const claveDeLaLista = candidatas.map((n) => n.id).sort().join(',');
+    const deUnMedio = conFichas.filter((n) => n.semaforo === 'amarillo' && n.motivo === MOTIVO_UN_SOLO_MEDIO);
+    const claveDeLaLista = [...candidatas, ...deUnMedio].map((n) => n.id).sort().join(',');
     const hoy = fichas.dia;
     // Los grupos se conservan de un día al otro (mientras sus notas sigan en la
     // ingesta); sólo el contador de pedidos vuelve a cero.
@@ -158,7 +163,8 @@ if (enLaNube) {
       rep.pedidosHoy += 1;
       try {
         const nuevos = await agruparRepetidas(candidatas, { clave });
-        rep.grupos = unirGrupos(rep.grupos, nuevos, new Set((ultima.notas ?? []).map((n) => n.id)));
+        const deAfuera = deUnMedio.length > 1 ? await agruparRepetidas(deUnMedio, { clave }) : [];
+        rep.grupos = unirGrupos(rep.grupos, [...nuevos, ...deAfuera], new Set((ultima.notas ?? []).map((n) => n.id)));
         rep.lista = claveDeLaLista;
       } catch (e) {
         console.log(`  repetidas: falló el pedido (${e.message}); quedan los grupos de antes`);
