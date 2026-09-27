@@ -1,5 +1,5 @@
 {
-  "exportado": "2026-09-27T06:30:38.031Z",
+  "exportado": "2026-09-27T07:00:33.733Z",
   "decisiones": {
     "1951120": {
       "estado": "automatica",
@@ -30895,6 +30895,128 @@
           "titulo": "De los excesos a ser campeona del mundo: la historia de Juliette Duhaime, la argentina que volvió a empezar sobre una tabla",
           "fecha": "2026-09-19T09:00:30.000Z",
           "ruta": "/nota/de-los-excesos-a-ser-campeona-del-mundo-la-historia-de-juliette-kjgj47"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "v8jjgw": {
+      "estado": "automatica",
+      "titulo": "Bomberos controlan un principio de incendio en una vivienda en Balcarce",
+      "copete": "Una dotación de bomberos intervino durante la madrugada de este domingo por un foco ígneo en el techo de una casa ubicada en calle 5. No se reportaron personas heridas.",
+      "cuerpo": "Por motivos que todavía no se pudieron establecer, las llamas se originaron en la zona del techo del inmueble, lo que requirió la intervención inmediata de una dotación del cuerpo activo de Bomberos Voluntarios.\n\nTras varios minutos de labores en el lugar, los efectivos lograron contener la situación y evitar que el fuego se expandiera hacia otros sectores de la vivienda. Desde el área interviniente confirmaron que no se registraron personas heridas como consecuencia del episodio.",
+      "guion": "Bomberos controlan un principio de incendio en una vivienda en Balcarce",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T07:00:33.674Z",
+      "claves": [
+        "Ocurrió durante la madrugada de este domingo en calle 5 entre 10 y 12.",
+        "El fuego se inició en la zona del techo por causas que se desconocen.",
+        "Una dotación de bomberos trabajó en el lugar y evitó la propagación.",
+        "No se informaron personas heridas tras el episodio."
+      ],
+      "seSabe": [
+        "El principio de incendio ocurrió durante la madrugada de este domingo.",
+        "El hecho tuvo lugar en un domicilio situado en calle 5, entre 10 y 12.",
+        "Las llamas se concentraron en la zona del techo del inmueble.",
+        "Una dotación de Bomberos Voluntarios trabajó para controlar la situación y evitar la propagación.",
+        "No se reportaron personas heridas."
+      ],
+      "noConfirmado": [
+        "No se establecieron las causas que originaron el fuego.",
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Una dotación de bomberos intervino durante la madrugada de este domingo por un principio de incendio en el techo de una vivienda ubicada en calle 5, entre 10 y 12. No se registraron personas heridas.",
+      "etiquetas": [
+        "Bomberos Voluntarios",
+        "incendio",
+        "calle 5"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infórmese Primero (FM 104.9)",
+          "enlace": "http://www.informeseprimero.com.ar/2026/09/principio-de-incendio-en-un-domicilio.html",
+          "fecha": "2026-09-27T04:43:31.521Z",
+          "oficial": false,
+          "aporte": "Informó sobre el principio de incendio en calle 5, la intervención de los bomberos y la ausencia de heridos."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1k3dzvz",
+          "titulo": "Principio de incendio en un departamento céntrico",
+          "fecha": "2026-09-24T19:14:04.000Z",
+          "ruta": "/nota/principio-de-incendio-en-un-departamento-centrico-1k3dzvz"
+        },
+        {
+          "id": "10x98wn",
+          "titulo": "Caravana y recibimiento para el boxeador Kevin Gómez",
+          "fecha": "2026-09-22T23:46:36.443Z",
+          "ruta": "/nota/caravana-y-recibimiento-para-el-boxeador-kevin-gomez-10x98wn"
+        },
+        {
+          "id": "1gk282j",
+          "titulo": "Ferroviarios ganó la final del Apertura por penales",
+          "fecha": "2026-09-21T00:42:06.000Z",
+          "ruta": "/nota/ferroviarios-gano-la-final-del-apertura-por-penales-1gk282j"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "wbaaus": {
+      "estado": "automatica",
+      "titulo": "Un motociclista choca contra una camioneta en Balcarce",
+      "copete": "Un motociclista sufrió heridas graves tras perder el control de su rodado e impactar contra una camioneta estacionada en avenida Del Valle y Maipú. Fue asistido en el lugar por Bomberos Voluntarios.",
+      "cuerpo": "Un motociclista resultó con lesiones de consideración tras protagonizar un siniestro vial durante la noche del sábado en la intersección de avenida Del Valle y calle Maipú. De acuerdo con la información difundida, el conductor circulaba a bordo de una motocicleta de alta cilindrada por la avenida y, al pasar por un reductor de velocidad, perdió el control de la unidad, lo que provocó que colisionara violentamente contra una camioneta Ford Ranger que se encontraba detenida sobre la arteria.\n\nComo consecuencia del impacto, el motociclista sufrió un golpe de gravedad en la cabeza y una fractura en una de sus extremidades inferiores. Personal de Bomberos Voluntarios acudió al lugar en una ambulancia para brindarle asistencia médica inicial, mientras que agentes de la repartición de Tránsito se abocaron a ordenar el flujo vehicular y labrar las actuaciones de rigor.",
+      "guion": "Un motociclista choca contra una camioneta en Balcarce",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T07:00:33.674Z",
+      "claves": [
+        "Ocurrió en avenida Del Valle y Maipú durante la noche del sábado.",
+        "El conductor perdió el control de la moto tras pasar un lomo de burro.",
+        "Impactó contra una Ford Ranger que estaba estacionada.",
+        "Sufrió una fractura en una pierna y un golpe en la cabeza."
+      ],
+      "seSabe": [
+        "El hecho ocurrió en la noche del sábado en avenida Del Valle y calle Maipú.",
+        "Una motocicleta de alta cilindrada chocó contra una camioneta Ford Ranger estacionada tras pasar un lomo de burro.",
+        "El conductor de la moto sufrió un golpe en la cabeza y la fractura de una pierna.",
+        "Bomberos Voluntarios asistieron al herido y personal de Tránsito trabajó en el ordenamiento vehicular."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Un motociclista sufrió una fractura y un golpe en la cabeza tras chocar contra una camioneta estacionada en avenida Del Valle y Maipú. Fue asistido por Bomberos Voluntarios en el lugar.",
+      "etiquetas": [
+        "accidente",
+        "motociclista",
+        "avenida Del Valle",
+        "Bomberos Voluntarios",
+        "Balcarce"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infórmese Primero (FM 104.9)",
+          "enlace": "http://www.informeseprimero.com.ar/2026/09/perdio-el-control-de-la-moto-y-termino.html",
+          "fecha": "2026-09-27T04:28:35.901Z",
+          "oficial": false,
+          "aporte": "Aportó los detalles sobre la mecánica del choque, el lugar, el estado de salud del motociclista y la intervención de Bomberos y Tránsito."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "ads7me",
+          "titulo": "Un motociclista choca contra una camioneta y resulta gravemente herido en Balcarce",
+          "fecha": "2026-09-27T01:32:51.000Z",
+          "ruta": "/nota/un-motociclista-choca-contra-una-camioneta-y-resulta-gravemente-ads7me"
         }
       ],
       "verificacion": {
