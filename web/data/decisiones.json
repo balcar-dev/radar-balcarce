@@ -1,5 +1,5 @@
 {
-  "exportado": "2026-09-27T00:59:57.039Z",
+  "exportado": "2026-09-27T01:11:04.060Z",
   "decisiones": {
     "1951120": {
       "estado": "automatica",
@@ -25745,6 +25745,509 @@
           "fecha": "2026-09-26T09:53:56.000Z",
           "oficial": false,
           "aporte": "Detalló el cronograma de cortes, las estaciones afectadas, las alternativas de transporte y los planes de automatización de la red."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "12jm31p": {
+      "estado": "automatica",
+      "titulo": "Mariano Werner lidera la clasificación del TC Pick Up en Balcarce",
+      "copete": "Mariano Werner marcó el mejor tiempo en la clasificación de las TC Pick Up en el autódromo Juan Manuel Fangio. El automovilismo nacional volvió este fin de semana al circuito local con gran expectativa popular.",
+      "cuerpo": "Mariano Werner se quedó con el mejor tiempo en la clasificación de la octava fecha del TCPK de la ACTC, desarrollada este sábado en el autódromo Juan Manuel Fangio, en el marco de la vuelta del automovilismo nacional al circuito de Balcarce.\n\nOmar Martínez se ubicó en el décimo lugar de la prueba.\n\nLa actividad de este domingo continuará con las series a partir de las diez de la mañana y las finales programadas desde el mediodía en el escenario balcarceño.",
+      "guion": "Mariano Werner lidera la clasificación del TC Pick Up en Balcarce",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T01:11:04.003Z",
+      "claves": [
+        "Mariano Werner registró el mejor tiempo en la clasificación sabatina.",
+        "Las series y las finales se disputarán este domingo en el circuito local.",
+        "El automovilismo nacional regresó al autódromo Juan Manuel Fangio."
+      ],
+      "seSabe": [
+        "Mariano Werner logró el tiempo más rápido en la clasificación de la octava fecha del TCPK.",
+        "Diego Azar y Agustín Canapino completaron los primeros puestos de la prueba.",
+        "La actividad dominical incluye series y finales desde la mañana."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Mariano Werner se quedó con el mejor tiempo en la clasificación del TC Pick Up en el autódromo Juan Manuel Fangio. Este domingo se disputarán las series y las finales en el circuito local.",
+      "etiquetas": [
+        "automovilismo",
+        "TC Pick Up",
+        "autodromo Juan Manuel Fangio",
+        "Balcarce",
+        "Mariano Werner"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "0223 (Mar del Plata)",
+          "enlace": "https://www.0223.com.ar/nota/2026-9-26-21-32-0-asi-se-vivio-la-clasificacion-de-las-tc-pick-up-en-el-reinaugurado-autodromo-de-balcarce",
+          "fecha": "2026-09-27T00:32:00.000Z",
+          "oficial": false,
+          "aporte": "Detalló los resultados de la clasificación del TCPK y el cronograma de este domingo en el autódromo."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "5yolmk",
+          "titulo": "El Autódromo Juan Manuel Fangio será reinaugurado este viernes",
+          "fecha": "2026-09-22T19:26:50.000Z",
+          "ruta": "/nota/el-autodromo-juan-manuel-fangio-sera-reinaugurado-este-viernes-5yolmk"
+        },
+        {
+          "id": "epzsa5",
+          "titulo": "Reinauguran el autódromo Juan Manuel Fangio en Balcarce",
+          "fecha": "2026-09-26T13:46:35.000Z",
+          "ruta": "/nota/el-autodromo-juan-manuel-fangio-reabre-sus-puertas-en-balcarce-epzsa5"
+        },
+        {
+          "id": "7qxthx",
+          "titulo": "Kicillof encabeza la reinauguración del autódromo en Balcarce",
+          "fecha": "2026-09-26T02:38:34.000Z",
+          "ruta": "/nota/kicillof-encabeza-la-reapertura-del-autodromo-juan-manuel-fangio-en-7qxthx"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "1b7rczz": {
+      "estado": "automatica",
+      "titulo": "Cifre marca el ritmo en la clasificación del TC Pista Pick Up en Balcarce",
+      "copete": "Faustino Cifre logró la pole position en la categoría en el autódromo Juan Manuel Fangio. Las series se disputarán en la jornada posterior.",
+      "cuerpo": "Faustino Cifre con una Ford Ranger consiguió el mejor registro en la clasificación del TC Pista Pick Up desarrollada en el autódromo Juan Manuel Fangio de Balcarce. De este modo, alcanzó su segunda pole position en la categoría durante la actual temporada.\n\nPor su parte, Tomás Pellandino con Ford Ranger, quien lidera la Copa Coronación con una ventaja de siete puntos sobre Biagi, quedó relegado al séptimo puesto tras sufrir la pinchadura de un neumático durante el segundo segmento clasificatorio.\n\nLas baterías iniciales se pondrán en marcha durante la siguiente jornada a partir de las 10:45 y las 11:10 respectivamente, con Cifre y Antonino Sganga compartiendo la primera fila de la tanda inicial con unidades Ford.",
+      "guion": "Cifre marca el ritmo en la clasificación del TC Pista Pick Up en Balcarce",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T01:11:04.003Z",
+      "claves": [
+        "Faustino Cifre fue el más veloz en la clasificación en el autódromo Juan Manuel Fangio.",
+        "El piloto alcanzó su segunda pole position en la categoría durante la temporada 2026.",
+        "Tomás Pellandino finalizó en el séptimo puesto tras sufrir la pinchadura de un neumático.",
+        "Las series se llevarán a cabo en la jornada siguiente desde las 10:45."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Faustino Cifre se quedó con la pole position en la clasificación del TC Pista Pick Up en el autódromo Juan Manuel Fangio de Balcarce y este fin de semana continúan las actividades con las series.",
+      "etiquetas": [
+        "TC Pista Pick Up",
+        "Balcarce",
+        "autodromo Juan Manuel Fangio",
+        "Faustino Cifre"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Campeones",
+          "enlace": "https://campeones.com.ar/tc-pista-pick-up-cifre-dejo-su-sello-veloz-en-balcarce/",
+          "fecha": "2026-09-26T19:31:21.000Z",
+          "oficial": false,
+          "aporte": "Detalló los resultados de la clasificación del TC Pista Pick Up en el autódromo de Balcarce con los tiempos y posiciones de los pilotos."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "epzsa5",
+          "titulo": "Reinauguran el autódromo Juan Manuel Fangio en Balcarce",
+          "fecha": "2026-09-26T13:46:35.000Z",
+          "ruta": "/nota/el-autodromo-juan-manuel-fangio-reabre-sus-puertas-en-balcarce-epzsa5"
+        },
+        {
+          "id": "e6im4b",
+          "titulo": "Las TC Pick Up realizan su presentación oficial en Balcarce",
+          "fecha": "2026-09-26T03:00:42.156Z",
+          "ruta": "/nota/las-tc-pick-up-se-presentan-en-balcarce-con-una-multitud-e6im4b"
+        },
+        {
+          "id": "7qxthx",
+          "titulo": "Kicillof encabeza la reinauguración del autódromo en Balcarce",
+          "fecha": "2026-09-26T02:38:34.000Z",
+          "ruta": "/nota/kicillof-encabeza-la-reapertura-del-autodromo-juan-manuel-fangio-en-7qxthx"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "vtodnm": {
+      "estado": "automatica",
+      "titulo": "Valentino Alaux logra la pole position en el TC Mouras en Rosario",
+      "copete": "El piloto Valentino Alaux consiguió el mejor tiempo en la clasificación del TC Mouras en el autódromo de Rosario.",
+      "cuerpo": "El piloto Valentino Alaux, al mando de un Dodge del equipo Ramiro Galarza Racing, se quedó con la pole position en el autódromo Juan Manuel Fangio de Rosario. En la actividad desarrollada en el circuito santafesino de cuatro mil metros, marcó un tiempo de un minuto con cuarenta segundos y quinientos cuarenta milésimas.\n\nPor su parte, Francisco Luengo debió afrontar inconvenientes mecánicos con la rotura del motor que lo relegaron al decimotercer lugar del clasificador.\n\nLa competencia forma parte de la novena y última fecha de la Etapa Regular de la categoría automovilística.",
+      "guion": "Valentino Alaux logra la pole position en el TC Mouras en Rosario",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T01:11:04.003Z",
+      "claves": [
+        "Valentino Alaux logró la pole position con su Dodge en Rosario.",
+        "Santiago Arrigoni y Nicolás Jaime completaron los primeros puestos de la clasificación.",
+        "La actividad corresponde a la novena y última fecha de la Etapa Regular."
+      ],
+      "seSabe": [
+        "Valentino Alaux marcó el mejor tiempo en la clasificación con un registro de 1m40s540.",
+        "Santiago Arrigoni se ubicó segundo a 0s260 del poleman.",
+        "Nicolás Jaime clasificó tercero a 0s394.",
+        "Francisco Luengo sufrió la rotura del motor y quedó en el decimotercer puesto."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Valentino Alaux se quedó con la pole position en la clasificación del TC Mouras disputada en el autódromo de Rosario.",
+      "etiquetas": [
+        "Valentino Alaux",
+        "TC Mouras",
+        "Rosario"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Campeones",
+          "enlace": "https://campeones.com.ar/tc-mouras-valentino-alaux-extiende-su-gran-momento/",
+          "fecha": "2026-09-26T19:19:33.000Z",
+          "oficial": false,
+          "aporte": "Detalló los resultados de la clasificación del TC Mouras en Rosario, los tiempos de los pilotos y los inconvenientes mecánicos."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1r5sphv",
+          "titulo": "El TC Mouras inicia en Rosario su novena fecha",
+          "fecha": "2026-09-25T19:48:13.000Z",
+          "ruta": "/nota/el-tc-mouras-y-el-pista-mouras-aceleran-en-rosario-1r5sphv"
+        },
+        {
+          "id": "1iz15k7",
+          "titulo": "Rosario siempre estuvo cerca: inscriptos para la visita de TC Mouras",
+          "fecha": "2026-09-23T11:30:25.000Z",
+          "ruta": "/nota/rosario-siempre-estuvo-cerca-inscriptos-para-la-visita-de-tc-mouras-1iz15k7"
+        },
+        {
+          "id": "epzsa5",
+          "titulo": "Reinauguran el autódromo Juan Manuel Fangio en Balcarce",
+          "fecha": "2026-09-26T13:46:35.000Z",
+          "ruta": "/nota/el-autodromo-juan-manuel-fangio-reabre-sus-puertas-en-balcarce-epzsa5"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "gror6g": {
+      "estado": "automatica",
+      "titulo": "Iñaki Arrías logra la pole position y lidera el TC Pista Mouras",
+      "copete": "El piloto Iñaki Arrías se quedó con el mejor registro de clasificación en el autódromo de Rosario y pasó a comandar el campeonato del TC Pista Mouras en la fecha de cierre de la Etapa Regular.",
+      "cuerpo": "El autódromo de Rosario es escenario este fin de semana de la novena y última fecha de la Etapa Regular dos mil veintiséis del TC Pista Mouras. Iñaki Arrías, al volante de un Ford y perteneciente al equipo Enrique Candela Competicía, marcó un tiempo de un minuto cuarenta y un segundos y veintidós milésimas en la sesión de clasificación para alcanzar su tercera pole position de la temporada.\n\nEn tanto, Bautista Roqueta completó el tercer puesto con otra unidad de la misma marca.",
+      "guion": "Iñaki Arrías logra la pole position y lidera el TC Pista Mouras",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T01:11:04.003Z",
+      "seSabe": [
+        "Iñaki Arrías obtuvo el mejor tiempo en la clasificación del TC Pista Mouras en Rosario.",
+        "Arrías superó a Ignacio Lovich por algo más de seiscientas milésimas.",
+        "El piloto de Ford alcanzó la cima del campeonato con una unidad de ventaja.",
+        "Bautista Roqueta se ubicó en el tercer lugar de la prueba."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Iñaki Arrías se quedó con la pole position en el autódromo de Rosario y pasó a liderar el campeonato del TC Pista Mouras en la fecha de cierre de la Etapa Regular.",
+      "etiquetas": [
+        "TC Pista Mouras",
+        "Iñaki Arrías",
+        "Rosario"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Campeones",
+          "enlace": "https://campeones.com.ar/inaki-arrias-se-quedo-con-la-pole-del-pista-mouras/",
+          "fecha": "2026-09-26T18:28:46.000Z",
+          "oficial": false,
+          "aporte": "Detalló los resultados de la clasificación, los tiempos y las posiciones del campeonato del TC Pista Mouras en Rosario."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "epzsa5",
+          "titulo": "Reinauguran el autódromo Juan Manuel Fangio en Balcarce",
+          "fecha": "2026-09-26T13:46:35.000Z",
+          "ruta": "/nota/el-autodromo-juan-manuel-fangio-reabre-sus-puertas-en-balcarce-epzsa5"
+        },
+        {
+          "id": "e6im4b",
+          "titulo": "Las TC Pick Up realizan su presentación oficial en Balcarce",
+          "fecha": "2026-09-26T03:00:42.156Z",
+          "ruta": "/nota/las-tc-pick-up-se-presentan-en-balcarce-con-una-multitud-e6im4b"
+        },
+        {
+          "id": "7qxthx",
+          "titulo": "Kicillof encabeza la reinauguración del autódromo en Balcarce",
+          "fecha": "2026-09-26T02:38:34.000Z",
+          "ruta": "/nota/kicillof-encabeza-la-reapertura-del-autodromo-juan-manuel-fangio-en-7qxthx"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "sr6f38": {
+      "estado": "automatica",
+      "titulo": "Galeano y Traverso ganan las series de la Fórmula 3 Metropolitana en Rosario",
+      "copete": "Los pilotos Cristian Galeano y Benjamín Traverso se impusieron este sábado en las series de la Fórmula 3 Metropolitana en el autódromo de Rosario y largarán desde la primera fila en la final dominical.",
+      "cuerpo": "La Fórmula 3 Metropolitana completó este sábado su actividad en el autódromo Juan Manuel Fangio de Rosario con la disputa de dos series clasificatorias. La primera batería quedó en manos del bonaerense Cristian Galeano, integrante de la Scuderia Ramini, mientras que la segunda y más rápida fue para el correntino Benjamín Traverso, del equipo Satorra Competición.\n\nAl cierre de la jornada sabatina, el liderazgo de la Copa de Oro continúa en poder de Malek El Bacha con veintinueve unidades, escoltado por Galeano a seis puntos y por Francisco Olaverría a siete.",
+      "guion": "Galeano y Traverso ganan las series de la Fórmula 3 Metropolitana en Rosario",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T01:11:04.003Z",
+      "claves": [
+        "Galeano y Traverso ganaron las series de la Fórmula 3 Metropolitana en Rosario.",
+        "Ambos pilotos largarán en la primera fila de la final dominical.",
+        "Malek El Bacha lidera la Copa de Oro con veintinueve puntos."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Cristian Galeano y Benjamín Traverso ganaron las series de la Fórmula 3 Metropolitana en el autódromo de Rosario y largarán desde la primera fila en la final dominical.",
+      "etiquetas": [
+        "Fórmula 3 Metropolitana",
+        "Rosario",
+        "Cristian Galeano",
+        "Benjamín Traverso"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Campeones",
+          "enlace": "https://campeones.com.ar/f3-metropolitana-galeano-y-traverso-se-llevaron-las-series-rosarinas/",
+          "fecha": "2026-09-26T20:31:12.000Z",
+          "oficial": false,
+          "aporte": "Informó sobre los ganadores de las series de la Fórmula 3 Metropolitana en Rosario, la conformación de la primera fila para la final y las posiciones de la Copa de Oro."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1crfv0z",
+          "titulo": "La Fórmula 3 Metropolitana debuta en el autódromo de Rosario",
+          "fecha": "2026-09-22T21:17:44.000Z",
+          "ruta": "/nota/la-formula-3-metropolitana-debuta-en-el-autodromo-de-rosario-1crfv0z"
+        },
+        {
+          "id": "epzsa5",
+          "titulo": "Reinauguran el autódromo Juan Manuel Fangio en Balcarce",
+          "fecha": "2026-09-26T13:46:35.000Z",
+          "ruta": "/nota/el-autodromo-juan-manuel-fangio-reabre-sus-puertas-en-balcarce-epzsa5"
+        },
+        {
+          "id": "e6im4b",
+          "titulo": "Las TC Pick Up realizan su presentación oficial en Balcarce",
+          "fecha": "2026-09-26T03:00:42.156Z",
+          "ruta": "/nota/las-tc-pick-up-se-presentan-en-balcarce-con-una-multitud-e6im4b"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "5cywqg": {
+      "estado": "automatica",
+      "titulo": "Cristian Galeano logra la pole de la Fórmula 3 Metropolitana en Rosario",
+      "copete": "El piloto se quedó con el mejor tiempo en la clasificación en el autódromo santafesino. Sumó puntos para el arranque de la Copa de Oro.",
+      "cuerpo": "La actividad en el circuito santafesino continuará con la disputa de las dos series previstas para la tarde. La categoría llegó al escenario rosarino para disputar una nueva fecha tras confirmarse el cambio de sede respecto al calendario inicial, en un fin de semana que también fiscaliza la presencia de veinticinco competidores.\n\nCon este resultado, el representante de Villa Luzuriaga elevó a ocho unidades su acumulado en los play-offs, ubicándose detrás de Malek El Bacha, Stefano Polini y Francisco Olaverría. En tanto, Tomás López debió marginarse de la tanda cronometrada por un cambio de impulsor.",
+      "guion": "Cristian Galeano logra la pole de la Formula 3 Metropolitana en Rosario",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T01:11:04.003Z",
+      "claves": [
+        "Cristian Galeano obtuvo el mejor tiempo en la clasificación en Rosario.",
+        "La categoría compite en el autódromo santafesino por la Copa de Oro.",
+        "El piloto sumó tres unidades para escalar en el campeonato.",
+        "Veinticinco máquinas forman parte de la actividad oficial."
+      ],
+      "seSabe": [
+        "Cristian Galeano se quedó con la pole position con un tiempo de 1m40s8.",
+        "Benjamín Traverso y Sebastián Caram completaron los primeros puestos de la tanda.",
+        "El piloto sumó tres unidades y acumuló ocho puntos en la Copa de Oro.",
+        "Tomás López no participó de la clasificación por un cambio de motor."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Cristian Galeano se quedó con la pole position de la Fórmula 3 Metropolitana en el autódromo de Rosario y sumó valiosos puntos para el inicio de la Copa de Oro en una nueva fecha del automovilismo.",
+      "etiquetas": [
+        "Fórmula 3 Metropolitana",
+        "Rosario",
+        "Cristian Galeano",
+        "Copa de Oro"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Campeones",
+          "enlace": "https://campeones.com.ar/galeano-con-la-pole-de-la-f3-metropolitana-en-rosario/",
+          "fecha": "2026-09-26T19:20:53.000Z",
+          "oficial": false,
+          "aporte": "Detalló los resultados de la clasificación, los tiempos y la situación de los pilotos en la Copa de Oro."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1crfv0z",
+          "titulo": "La Fórmula 3 Metropolitana debuta en el autódromo de Rosario",
+          "fecha": "2026-09-22T21:17:44.000Z",
+          "ruta": "/nota/la-formula-3-metropolitana-debuta-en-el-autodromo-de-rosario-1crfv0z"
+        },
+        {
+          "id": "8hnmar",
+          "titulo": "Rosario reemplaza a La Plata para la fecha de TC Mouras, F3 Metropolitana y T4000 Argentino",
+          "fecha": "2026-09-19T16:01:13.000Z",
+          "ruta": "/nota/rosario-reemplaza-a-la-plata-para-la-fecha-de-tc-mouras-f3-8hnmar"
+        },
+        {
+          "id": "1r5sphv",
+          "titulo": "El TC Mouras inicia en Rosario su novena fecha",
+          "fecha": "2026-09-25T19:48:13.000Z",
+          "ruta": "/nota/el-tc-mouras-y-el-pista-mouras-aceleran-en-rosario-1r5sphv"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "1hjmkd4": {
+      "estado": "automatica",
+      "titulo": "Ingresan más de mil cuatrocientos vehículos al Fangio en Balcarce",
+      "copete": "El regreso de las competencias nacionales al Autódromo Municipal Juan Manuel Fangio generó un masivo ingreso de vehículos y una ocupación hotelera plena en la ciudad.",
+      "cuerpo": "Más de mil cuatrocientos vehículos ingresaron este sábado al Autódromo Municipal Juan Manuel Fangio y colmaron la capacidad de estacionamiento del predio, en el marco del regreso de las competencias nacionales tras quince años de inactividad, según se informó.\n\nDel total registrado, más de mil rodados ingresaron al sector principal del circuito y otros cuatrocientos se ubicaron en la zona del kartódromo, una cifra que no contempla los vehículos estacionados en los alrededores. El intenso movimiento turístico también se reflejó en la hotelería y las cabañas, que alcanzaron un nivel de ocupación del ciento por ciento durante el fin de semana.\n\nLa actividad continuará este domingo con las series y las finales de las TC Pick Up y el Turismo Special de la Costa, en tanto que las autoridades recomendaron respetar las indicaciones de tránsito para garantizar el acceso de emergencias.",
+      "guion": "Ingresan más de mil cuatrocientos vehículos al Fangio en Balcarce",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T01:11:04.003Z",
+      "claves": [
+        "Ingresaron más de mil cuatrocientos vehículos al autódromo Juan Manuel Fangio.",
+        "La capacidad de estacionamiento dentro del predio quedó completamente colmada.",
+        "La ocupación hotelera y de cabañas alcanzó el ciento por ciento en la ciudad."
+      ],
+      "seSabe": [
+        "Más de mil vehículos ingresaron al sector principal del autódromo y otros cuatrocientos a la zona del kartódromo.",
+        "La capacidad de estacionamiento para automóviles dentro del predio se completó por completo.",
+        "La ocupación en hoteles y cabañas llegó al ciento por ciento durante el fin de semana."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El masivo ingreso de vehículos al autódromo Juan Manuel Fangio colmará la capacidad de estacionamiento y generó ocupación hotelera plena en Balcarce durante el fin de semana.",
+      "etiquetas": [
+        "Autódromo Juan Manuel Fangio",
+        "Balcarce",
+        "TC Pick Up",
+        "Turismo"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Diario La Vanguardia",
+          "enlace": "https://www.diariolavanguardia.com/noticias/44912-mas-de-1-400-vehiculos-ingresaron-al-fangio-y-el-movimiento-desbordo-la-capacidad-de-estacionamiento/",
+          "fecha": null,
+          "oficial": false,
+          "aporte": "Aportó los datos sobre el ingreso de vehículos al autódromo y el impacto en la ocupación hotelera de Balcarce."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1synfb5",
+          "titulo": "Reapertura del Fangio: horarios, accesos, estacionamiento y recomendaciones para el público",
+          "fecha": "2026-09-25T00:21:50.000Z",
+          "ruta": "/nota/reapertura-del-fangio-horarios-accesos-estacionamiento-y-1synfb5"
+        },
+        {
+          "id": "epzsa5",
+          "titulo": "Reinauguran el autódromo Juan Manuel Fangio en Balcarce",
+          "fecha": "2026-09-26T13:46:35.000Z",
+          "ruta": "/nota/el-autodromo-juan-manuel-fangio-reabre-sus-puertas-en-balcarce-epzsa5"
+        },
+        {
+          "id": "1mkm1na",
+          "titulo": "El autódromo Juan Manuel Fangio abre sus puertas en Balcarce",
+          "fecha": "2026-09-26T02:30:21.000Z",
+          "ruta": "/nota/el-autodromo-juan-manuel-fangio-abre-sus-puertas-en-balcarce-1mkm1na"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "1as5wmy": {
+      "estado": "automatica",
+      "titulo": "El autódromo Fangio completa su capacidad de estacionamiento para autos en Balcarce",
+      "copete": "La capacidad para vehículos particulares en el predio llegó al límite en plena jornada de las TC Pick Up. Las motos todavía tienen lugar y el ingreso de automóviles quedó cerrado.",
+      "cuerpo": "El estacionamiento general para automóviles en el Autódromo Municipal Juan Manuel Fangio alcanzó el ciento por ciento de ocupación en la jornada automovilística de este sábado. Según informaron las autoridades, el ingreso para vehículos de cuatro ruedas quedó cerrado y quienes arriben deberán hacerlo de manera peatonal, mientras que las motos aún disponen de espacio.\n\nAnte el intenso movimiento de público registrado desde las primeras horas de la mañana, la organización recomendó a los espectadores que aún están en camino contemplar alternativas de traslado y mantener despejados los accesos destinados a emergencias para garantizar la circulación.",
+      "guion": "El autodromo Fangio completa su capacidad de estacionamiento para autos en Balcarce",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T01:11:04.003Z",
+      "claves": [
+        "Estacionamiento de autos al ciento por ciento en el autódromo Fangio",
+        "Cierre del acceso vehicular para automóviles",
+        "Las motos todavía cuentan con lugares disponibles",
+        "Intenso movimiento de público en el regreso de las competencias nacionales"
+      ],
+      "seSabe": [
+        "La capacidad de estacionamiento para automóviles en el autódromo Fangio llegó al ciento por ciento de ocupación.",
+        "El ingreso para vehículos de cuatro ruedas quedó cerrado.",
+        "Las motos todavía disponen de espacios para estacionar dentro del predio.",
+        "El autódromo volvió a recibir actividad oficial este fin de semana tras quince años."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El estacionamiento para autos en el autódromo Fangio llegó al ciento por ciento de su capacidad en el marco de la competencia de las TC Pick Up. El ingreso vehicular quedó cerrado y las motos aún tienen lugar.",
+      "etiquetas": [
+        "Autodromo Juan Manuel Fangio",
+        "TC Pick Up",
+        "Balcarce",
+        "Estacionamiento"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Diario La Vanguardia",
+          "enlace": "https://www.diariolavanguardia.com/noticias/44911-tc-pickup-el-estacionamiento-para-autos-llego-al-100-en-el-autodromo-fangio/",
+          "fecha": null,
+          "oficial": false,
+          "aporte": "Informó que el estacionamiento para autos llegó al ciento por ciento, el cierre de accesos vehiculares y la disponibilidad para motos."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "epzsa5",
+          "titulo": "Reinauguran el autódromo Juan Manuel Fangio en Balcarce",
+          "fecha": "2026-09-26T13:46:35.000Z",
+          "ruta": "/nota/el-autodromo-juan-manuel-fangio-reabre-sus-puertas-en-balcarce-epzsa5"
+        },
+        {
+          "id": "1mkm1na",
+          "titulo": "El autódromo Juan Manuel Fangio abre sus puertas en Balcarce",
+          "fecha": "2026-09-26T02:30:21.000Z",
+          "ruta": "/nota/el-autodromo-juan-manuel-fangio-abre-sus-puertas-en-balcarce-1mkm1na"
+        },
+        {
+          "id": "uukabt",
+          "titulo": "Kicillof destaca la reinauguración del autódromo Juan Manuel Fangio en Balcarce",
+          "fecha": "2026-09-26T00:07:31.000Z",
+          "ruta": "/nota/kicillof-destaca-la-reapertura-del-autodromo-en-balcarce-uukabt"
         }
       ],
       "verificacion": {
