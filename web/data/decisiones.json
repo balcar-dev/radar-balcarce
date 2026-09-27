@@ -1,5 +1,5 @@
 {
-  "exportado": "2026-09-27T08:10:21.334Z",
+  "exportado": "2026-09-27T08:20:15.562Z",
   "decisiones": {
     "1951120": {
       "estado": "automatica",
@@ -31182,6 +31182,55 @@
           "fecha": "2026-09-27T08:00:00.000Z",
           "oficial": false,
           "aporte": "Detallo las caracteristicas, categorias y disponibilidad de la aplicacion Linux Command Library"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "infwno": {
+      "estado": "automatica",
+      "titulo": "El Gobierno aprueba el martes un nuevo escudo anticrisis",
+      "copete": "El Ejecutivo nacional aprobará un nuevo decreto para proteger a hogares y empresas de la subida de precios provocada por el conflicto en Oriente Próximo. La medida busca mitigar el impacto en la inflación y los sectores productivos.",
+      "cuerpo": "El Consejo de Ministros aprobará el próximo martes 29 de septiembre un nuevo escudo anticrisis para hacer frente a la escalada de precios y la pérdida de poder adquisitivo derivada de la guerra en Irán, según informó un medio nacional. El decreto prevé prorrogar hasta fin de año las ayudas al sector agroalimentario, incluidas las compensaciones por los sobrecostes del gasóleo agrícola, antes de que expiren las medidas vigentes a finales de septiembre.\n\nPor su parte, la Organización de Consumidores y Usuarios advirtió que la tarifa regulada de gas podría registrar un incremento superior al cincuenta por ciento a partir del jueves próximo si el Ejecutivo no adopta medidas de contención. En paralelo, análisis económicos privados proyectan que la tasa de inflación general alcance el cuatro coma nueve por ciento en septiembre.\n\nLas autoridades mantuvieron reuniones con sindicatos, patronal y representantes de los sectores industrial, energético y de transporte para definir el alcance de la nueva normativa.",
+      "guion": "El Gobierno aprueba el martes un nuevo escudo anticrisis",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T08:20:15.497Z",
+      "claves": [
+        "El Consejo de Ministros aprobará el decreto el próximo martes 29 de septiembre.",
+        "La medida busca mitigar el impacto de la subida de precios por el conflicto en Irán.",
+        "Se prorrogarán las ayudas al sector agroalimentario hasta el 31 de diciembre.",
+        "La OCU advirtió que la tarifa regulada de gas podría subir más del cincuenta por ciento."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El Gobierno nacional aprobará el martes un nuevo escudo anticrisis para mitigar la subida de precios y proteger a los sectores productivos ante el impacto del conflicto internacional.",
+      "etiquetas": [
+        "Gobierno",
+        "inflación",
+        "crisis energética",
+        "economía",
+        "precios"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/america/agencias/2026/09/27/el-gobierno-aprueba-el-martes-un-nuevo-escudo-anticrisis-ante-la-escala-de-precios-por-la-guerra-en-iran/",
+          "fecha": "2026-09-27T08:15:55.000Z",
+          "oficial": false,
+          "aporte": "Detalló la aprobación del nuevo escudo anticrisis, la prórroga de ayudas al sector agroalimentario, las proyecciones de inflación de Funcas y las advertencias de la OCU sobre la tarifa de gas."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "n6tdi1",
+          "titulo": "General Guetlein, del Departamento de Guerra estadounidense: “Estamos actuando con urgencia para forjar un escudo multicapa”",
+          "fecha": "2026-09-20T09:32:00.000Z",
+          "ruta": "/nota/general-guetlein-del-departamento-de-guerra-estadounidense-estamos-n6tdi1"
         }
       ],
       "verificacion": {
