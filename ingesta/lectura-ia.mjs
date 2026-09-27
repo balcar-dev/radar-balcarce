@@ -17,7 +17,9 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { claveClasificacion } from '../reels/claves.mjs';
-import { fichaDeFuente, FUENTES, FUENTES_NACIONALES } from './fuentes.mjs';
+import { fichaDeFuente, FUENTES, FUENTES_NACIONALES, CONEXION_ARGENTINA } from './fuentes.mjs';
+
+const sinTildesSimple = (s) => String(s).normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
 import { diaAR } from './zona.mjs';
 
 const AQUI = import.meta.dirname;
@@ -50,6 +52,8 @@ Con el perfil de Balcarce que sigue, decidí para cada nota qué valor tiene par
 Reglas:
 - Juzgá por lo que cuenta la nota, no por palabras sueltas: que aparezca "Fangio", "taller" o "Balcarce" no define nada. Definí de qué trata el hecho.
 - El ámbito es el del HECHO, no el del medio que lo publica. Cada nota dice de qué ciudad es el medio.
+- Lo que hace o dice el gobierno argentino en el exterior (el Presidente en un viaje, Malvinas en la ONU) es "nacional", no "internacional".
+- Si una medida provincial o nacional cambia algo concreto en Balcarce (una tarifa, un subsidio, un trámite, un precio acá), el impacto es "directo" aunque el ámbito sea provincia o nacional.
 - Que la nota mencione Balcarce (por ejemplo, en una lista de localidades) no la hace de Balcarce.
 - Si no es de Balcarce, decí en una frase concreta por qué le interesaría a un vecino de Balcarce. Si no hay una razón concreta, el impacto es "nulo" y la razón "ninguna". No inventes vínculos con Balcarce.
 - "impacto_balcarce": "directo" si pasa en Balcarce o cambia algo concreto acá; "indirecto" si toca la zona o una actividad de la ciudad (campo, papa, automovilismo); "nulo" si no.
@@ -261,13 +265,21 @@ export function aplicarFichas(notas, fichas = {}, { verdeSecciones = [] } = {}) 
     const deFuenteLocal = n.alcance === 'local';
     const deFierros = f.seccion === 'Automovilismo' || n.seccion === 'Automovilismo' || !!n.figura;
     const llaveDeLaFuente = deFuenteLocal || !!n.nombraBalcarce;
-    const esLocal = llaveDeLaFuente && f.ambito === 'balcarce';
+    // El ámbito es dónde se decidió; el impacto, dónde pega. Una medida
+    // provincial que cambia la tarifa de luz acá es de Balcarce (27/09).
+    const esLocal = llaveDeLaFuente && (f.ambito === 'balcarce' || f.impacto === 'directo');
+    // Lo argentino en el exterior (Milei en París, Malvinas en la ONU) y lo que
+    // cubren muchos medios o es muy importante no se saca por "no ser de acá".
+    const palabrasDelTitulo = new Set(sinTildesSimple(n.titulo ?? '').split(/[^a-z0-9ñ]+/));
+    const conexionArgentina = CONEXION_ARGENTINA.some((p) => palabrasDelTitulo.has(sinTildesSimple(p)));
+    const nacionalQueImporta = (n.medios?.length ?? 1) >= 3 || f.importancia === 'alta'
+      || ['nacional', 'popular', 'servicio'].includes(f.razon);
     const caso = { id: n.id, titulo: n.titulo, porque: f.porque };
 
     let motivo = null;
     if (f.publicidad) motivo = 'es publicidad';
-    else if (f.ambito === 'internacional' && !deFierros) motivo = 'es del extranjero';
-    else if (!deFuenteLocal && f.impacto === 'nulo' && !deFierros) motivo = 'no tiene relación con Balcarce';
+    else if (f.ambito === 'internacional' && !deFierros && !conexionArgentina) motivo = 'es del extranjero';
+    else if (!deFuenteLocal && f.impacto === 'nulo' && !deFierros && !conexionArgentina && !nacionalQueImporta) motivo = 'no tiene relación con Balcarce';
     else if (f.seccion === 'Policiales' && !esLocal) motivo = 'policial que no es de Balcarce';
     if (motivo) { cambios.sacadas.push({ ...caso, motivo }); continue; }
 

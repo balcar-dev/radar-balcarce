@@ -172,3 +172,20 @@ test('generar-datos lee con IA antes de reescribir y retira de la web lo que la 
   assert.ok(g.indexOf('aplicarFichas(') > 0 && g.indexOf('aplicarFichas(') < g.indexOf('reescribirAutomaticas(paraReescribir'), 'la lectura va antes de la reescritura');
   assert.match(g, /new Set\(\[\.\.\.RETIRADAS_A_MANO, \.\.\.sacadasPorLaIA\]\)/);
 });
+
+test('lo que la IA sacó mal en la primera corrida del 27/09 ya no se saca', () => {
+  // Milei hablando en París y Malvinas en la ONU son de acá, aunque pasen afuera.
+  const milei = { id: 'm', titulo: 'Milei afirmó ante inversores que 2028 será el mejor año', seccion: 'Economía', semaforo: 'verde', alcance: 'pais', relevancia: 60, medios: ['Infobae'] };
+  assert.equal(aplicar(milei, ficha({ ambito: 'internacional', seccion: 'Economía', impacto_balcarce: 'nulo', razon: 'ninguna' })).notas.length, 1);
+  // Boca–Racing por la Copa Argentina, contado por cuatro medios, es nacional y popular.
+  const boca = { id: 'b', titulo: 'A qué hora juegan Boca vs. Racing', seccion: 'Deportes', semaforo: 'verde', alcance: 'pais', relevancia: 70, medios: ['Olé', 'Clarín', 'Infobae', 'Minuto Uno'] };
+  assert.equal(aplicar(boca, ficha({ ambito: 'nacional', seccion: 'Deportes', impacto_balcarce: 'nulo', razon: 'ninguna', importancia: 'media' })).notas.length, 1);
+  // La VTV congelada en Balcarce: la decide la Provincia, pero pega acá.
+  const vtv = { id: 'v', titulo: 'Congelan el precio de la VTV hasta mediados de octubre en Balcarce', seccion: 'Servicios', semaforo: 'verde', alcance: 'local', local: true, relevancia: 80 };
+  const r = aplicar(vtv, ficha({ ambito: 'provincia', seccion: 'Servicios', impacto_balcarce: 'directo', razon: 'servicio' }));
+  assert.equal(r.notas[0].local, true, 'sigue siendo de Balcarce');
+  assert.equal(r.notas[0].relevancia, 80);
+  // Y lo que sí tenía que salir, sale: el dólar blue en Mendoza.
+  const mendoza = { id: 'd', titulo: 'Dólar blue: a cuánto cotiza hoy en Mendoza', seccion: 'Economía', semaforo: 'verde', alcance: 'pais', relevancia: 50, medios: ['Minuto Uno'] };
+  assert.equal(aplicar(mendoza, ficha({ ambito: 'provincia', seccion: 'Economía', impacto_balcarce: 'nulo', razon: 'ninguna', importancia: 'baja' })).notas.length, 0);
+});
