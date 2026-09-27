@@ -1,5 +1,5 @@
 {
-  "exportado": "2026-09-27T22:40:39.051Z",
+  "exportado": "2026-09-27T22:52:05.433Z",
   "decisiones": {
     "1951120": {
       "estado": "automatica",
@@ -35170,6 +35170,665 @@
           "titulo": "El Turismo Special de la Costa vuelve a Balcarce",
           "fecha": "2026-09-23T13:50:26.000Z",
           "ruta": "/nota/el-turismo-special-de-la-costa-vuelve-a-balcarce-aiqaq9"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "x5ex8p": {
+      "estado": "automatica",
+      "titulo": "Diego Santilli visita el autódromo Fangio por la competencia de su hijo",
+      "copete": "El jefe de Gabinete nacional recorrió este domingo los boxes del Autódromo Juan Manuel Fangio junto al intendente Esteban Reino y al senador Maximiliano Abad, en el marco del regreso del automovilismo nacional a Balcarce.",
+      "cuerpo": "El jefe de Gabinete de la Nación, Diego Santilli, presenció este domingo las actividades deportivas en el Autódromo Municipal Juan Manuel Fangio, en el marco del retorno del automovilismo de escala nacional al circuito de La Barrosa tras quince años. La visita del funcionario nacional no respondió a una agenda oficial, sino a un motivo familiar para acompañar a su hijo, el piloto Nicanor Santilli Pazos, quien compitió en la categoría TC Pista Pick Up con una unidad del equipo Coiro Competición.\n\nEn el plano deportivo, el joven piloto finalizó en el segundo puesto de su batería inicial detrás de Antonino Sganga, lo que le garantizó un lugar de vanguardia para el cuadro final.",
+      "guion": "Diego Santilli visita el autódromo Fangio por la competencia de su hijo",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T22:52:05.347Z",
+      "claves": [
+        "El jefe de Gabinete nacional visitó el autódromo Juan Manuel Fangio.",
+        "La estadía respondió a la participación de su hijo en el TC Pista Pick Up.",
+        "Recorrió los boxes junto al intendente Esteban Reino y al senador Maximiliano Abad.",
+        "La actividad se enmarcó en la histórica reapertura del circuito tras quince años."
+      ],
+      "seSabe": [
+        "Diego Santilli visitó este domingo el Autódromo Juan Manuel Fangio.",
+        "El viaje respondió a un motivo familiar vinculado a la participación de su hijo Nicanor en el TC Pista Pick Up.",
+        "El funcionario recorrió los boxes junto al intendente Esteban Reino y al senador Maximiliano Abad.",
+        "El piloto local compitió con una unidad del equipo Coiro Competición y fue segundo en su batería inicial."
+      ],
+      "etiquetas": [
+        "Autodromo Juan Manuel Fangio",
+        "Diego Santilli",
+        "Automovilismo",
+        "Esteban Reino",
+        "TC Pista Pick Up"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Radio Sudestada",
+          "enlace": "https://radiosudestada.com.ar/2026/09/diego-santilli-estuvo-presente-en-la-jornada-del-autodromo-fangio-para-acompanar-a-su-hijo-en-la-tc-pista-pick-up/",
+          "fecha": "2026-09-27T21:49:41.000Z",
+          "oficial": false,
+          "aporte": "Detalló los datos deportivos del piloto Nicanor Santilli Pazos y el contexto de los quince años sin actividad nacional."
+        },
+        {
+          "medio": "Diario La Vanguardia",
+          "enlace": "https://www.diariolavanguardia.com/noticias/44914-diego-santilli-estuvo-en-los-boxes-del-fangio-acompanando-a-su-hijo-nicanor/",
+          "fecha": null,
+          "oficial": false,
+          "aporte": "Confirmó el recorrido de Santilli junto a Reino y Abad durante la jornada de las TC Pick Up."
+        },
+        {
+          "medio": "Diario La Vanguardia",
+          "enlace": "https://www.diariolavanguardia.com/noticias/44904-diego-santilli-estara-en-balcarce-para-la-reapertura-del-fangio-y-la-fecha-de-las-tc-pick-up/",
+          "fecha": null,
+          "oficial": false,
+          "aporte": "Aportó la previsión de la llegada del funcionario para las actividades de reapertura del autódromo."
+        },
+        {
+          "medio": "QZ Noticias (Mar del Plata)",
+          "enlace": "https://www.qznoticias.com/la-region/diego-santilli-visito-el-fangio-durante-la-jornada-de-tc-pick-up",
+          "fecha": "2026-09-27T15:34:50.000Z",
+          "oficial": false,
+          "aporte": "Precisó que la visita se desarrolló este domingo en el Autódromo Municipal Juan Manuel Fangio."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "si6qmk",
+          "titulo": "Diego Santilli visita el autódromo Juan Manuel Fangio",
+          "fecha": "2026-09-27T15:00:58.065Z",
+          "ruta": "/nota/diego-santilli-visita-el-autodromo-juan-manuel-fangio-en-balcarce-si6qmk"
+        },
+        {
+          "id": "1fq9x2v",
+          "titulo": "Diego Santilli visita Balcarce por la reinauguración del autódromo",
+          "fecha": "2026-09-27T15:34:50.000Z",
+          "ruta": "/nota/diego-santilli-visita-balcarce-por-la-reinauguracion-del-autodromo-1fq9x2v"
+        },
+        {
+          "id": "1jtty0p",
+          "titulo": "Fangio siempre presente: \"Nico\" Lahitte artífice de un nuevo mural del Quíntuple en el autódromo",
+          "fecha": "2026-09-20T17:00:51.000Z",
+          "ruta": "/nota/fangio-siempre-presente-nico-lahitte-artifice-de-un-nuevo-mural-del-1jtty0p"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron tres medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      }
+    },
+    "1b169h9": {
+      "estado": "automatica",
+      "titulo": "El Reino Unido afirma que la Argentina no tiene capacidad militar para tomar las Malvinas",
+      "copete": "El ministro de Defensa británico aseguró que el país carece de recursos para recuperar el archipiélago. La respuesta surge tras el reclamo del presidente ante la ONU.",
+      "cuerpo": "Estas declaraciones responden al discurso brindado recientemente por el mandatario argentino ante la Asamblea General de las Naciones Unidas, donde cuestionó al organismo internacional por desatender el reclamo soberano sobre las islas. Como antecedente, la delegación británica ya había rechazado reanudar el diálogo sin el aval de los habitantes locales.\n\nPor último, el funcionario ratificó que la postura de Londres se mantiene firme en la defensa de la región, respaldando la voluntad de los residentes del archipiélago que eligen pertenecer al Reino Unido.",
+      "guion": "El Reino Unido afirma que la Argentina no tiene capacidad militar para tomar las Malvinas",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T22:52:05.347Z",
+      "claves": [
+        "El ministro de Defensa británico aseguró que la Argentina no tiene capacidad para tomar las islas.",
+        "Wes Streeting respondió así al discurso de Javier Milei ante la Asamblea General de la ONU.",
+        "El funcionario sostuvo que el Reino Unido cuenta con los recursos para defender el archipiélago."
+      ],
+      "seSabe": [
+        "El ministro de Defensa británico, Wes Streeting, afirmó que la Argentina no tiene capacidad para tomar las islas Malvinas.",
+        "El funcionario brindó estas declaraciones en una entrevista publicada por un medio británico.",
+        "El cruce se originó tras el discurso del presidente Javier Milei sobre la soberanía del archipiélago ante la ONU."
+      ],
+      "textoRedes": "El ministro de Defensa británico aseguró que el país carece de capacidad militar para tomar las islas Malvinas. La respuesta oficial se dio tras el reclamo del presidente Javier Milei ante la ONU.",
+      "etiquetas": [
+        "Malvinas",
+        "Reino Unido",
+        "Javier Milei",
+        "defensa",
+        "soberanía"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Radio Sudestada",
+          "enlace": "https://radiosudestada.com.ar/2026/09/reino-unido-asegura-que-argentina-no-tiene-capacidad-para-tomar-las-malvinas/",
+          "fecha": "2026-09-27T21:45:00.000Z",
+          "oficial": false,
+          "aporte": "Detalló las declaraciones del ministro de Defensa británico sobre la falta de capacidad militar argentina y el conflicto de 1982."
+        },
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/politica/2026/09/26/el-secretario-de-defensa-del-reino-unido-afirmo-que-estan-preparados-para-defender-militarmente-las-malvinas-ante-una-accion-argentina/",
+          "fecha": "2026-09-26T19:50:49.000Z",
+          "oficial": false,
+          "aporte": "Indicó que Londres está preparado para defensa militar y mencionó la entrevista en The Sun on Sunday."
+        },
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/politica/2026/09/23/reino-unido-le-respondio-a-javier-milei-tras-su-discurso-en-la-onu-el-desarrollo-de-los-hidrocarburos-es-legitimo/",
+          "fecha": "2026-09-23T19:40:47.000Z",
+          "oficial": false,
+          "aporte": "Mencionó el comunicado británico en respuesta al discurso de Javier Milei en la Asamblea General de la ONU."
+        },
+        {
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/internacional/2026/09/26/el-secretario-de-defensa-britanico-dijo-que-el-reino-unido-esta-preparado-para-defender-militarmente-las-malvinas/",
+          "fecha": "2026-09-26T20:25:26.000Z",
+          "oficial": false,
+          "aporte": "Sin resumen disponible."
+        },
+        {
+          "medio": "El Cronista",
+          "enlace": "https://www.cronista.com/economia-politica/malvinas-reino-unido-advirtio-que-tiene-la-capacidad-militar-para-defender-a-las-islas-ante-una-accion-argentina/",
+          "fecha": "2026-09-26T21:06:24.000Z",
+          "oficial": false,
+          "aporte": "Señaló que el secretario de Defensa cuestionó las medidas y sanciones dispuestas por el gobierno argentino."
+        },
+        {
+          "medio": "El Destape",
+          "enlace": "https://www.eldestapeweb.com/politica/secretario-defensa-reino-unido-le-respondio-milei-reclamo-islas-malvinas-onu-2026926173556",
+          "fecha": "2026-09-26T20:35:56.000Z",
+          "oficial": false,
+          "aporte": "Confirmó la respuesta de un funcionario británico sobre la capacidad de defensa de las islas."
+        },
+        {
+          "medio": "Página/12",
+          "enlace": "https://www.pagina12.com.ar/2026/09/26/el-ministro-de-defensa-del-reino-unido-afirmo-que-tienen-la-capacidad-militar-de-defender-las-malvinas/",
+          "fecha": "2026-09-26T20:17:24.000Z",
+          "oficial": false,
+          "aporte": "Aportó declaraciones del ministro británico de Defensa sobre la capacidad militar en el archipiélago."
+        },
+        {
+          "medio": "iProfesional",
+          "enlace": "https://www.iprofesional.com/actualidad/465321-reino-unido-afirmo-que-estan-preparados-para-defender-las-malvinas",
+          "fecha": "2026-09-26T22:03:00.000Z",
+          "oficial": false,
+          "aporte": "Informó que el secretario de Defensa rechazó los reclamos y aseguró recursos para proteger la zona."
+        },
+        {
+          "medio": "C5N",
+          "enlace": "https://www.c5n.com/politica/tension-malvinas-el-reino-unido-advirtio-que-esta-listo-responder-sus-fuerzas-armadas-n250006",
+          "fecha": "2026-09-26T20:26:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Crónica",
+          "enlace": "https://www.cronica.com.ar/politica/malvinas-el-secrertario-de-defensa-dijo-que-estan-preparados-para-defender-militarmente-las-islas-de-una-accion-argentina/",
+          "fecha": "2026-09-26T20:40:01.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Diario Popular",
+          "enlace": "https://www.diariopopular.com.ar/politica/el-reino-unido-advirtio-que-puede-defender-las-malvinas-n921690",
+          "fecha": "2026-09-26T21:24:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Noticias Argentinas (NA)",
+          "enlace": "https://noticiasargentinas.com/politica/el-secretario-de-defensa-del-reino-unido-hablo-sobre-malvinas-y-afirmo-que-tienen-la-capacidad-de--defender-las-islas-_a6ab81a4d9a676c64cfd9197e",
+          "fecha": "2026-09-26T19:53:57.920Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "QZ Noticias (Mar del Plata)",
+          "enlace": "https://www.qznoticias.com/el-pais/reino-unido-redobla-la-apuesta-por-malvinas-el-secretario-de-defensa-aseguro-que-tienen-la-capacidad-de-defenderlas",
+          "fecha": "2026-09-26T20:34:46.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/el-mundo/el-secretario-de-defensa-britanico-aseguro-que-reino-unido-esta-armada-y-preparada-para-proteger-a-nid26092026/",
+          "fecha": "2026-09-27T16:13:25.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "A24",
+          "enlace": "https://www.a24.com/mundo/el-reino-unido-aseguro-que-esta-preparado-defender-militarmente-las-malvinas-un-eventual-ataque-n1600638",
+          "fecha": "2026-09-26T20:05:00.000Z",
+          "oficial": false,
+          "aporte": null
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "iw7x0c",
+          "titulo": "El Reino Unido respondió el discurso de Milei ante la ONU y rechazó negociar la soberanía de Malvinas sin aval isleño",
+          "fecha": "2026-09-23T20:10:17.000Z",
+          "ruta": "/nota/el-reino-unido-respondio-el-discurso-de-milei-ante-la-onu-y-rechazo-iw7x0c"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron 14 medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      }
+    },
+    "ufmimz": {
+      "estado": "automatica",
+      "titulo": "Detectan irregularidades y sobreprecios en compras de la ex Andis",
+      "copete": "Informes técnicos enviados a la Justicia revelaron sobreprecios y anomalías en adquisiciones de la ex Agencia Nacional de Discapacidad, incluyendo una prótesis no entregada.",
+      "cuerpo": "Entre los casos relevados figuran válvulas bicavales transcatéter adquiridas a 425 millones de pesos frente a los 124 millones abonados por el PAMI, una factura abonada dos veces por 28 millones de pesos cada una, y compras de implantes cocleares a un promedio de más de 62.000 dólares. El material fue incorporado a la investigación judicial sobre el sistema de compras del organismo.\n\nComo antecedente, la Cámara Federal había ratificado el pasado 22 de septiembre el procesamiento de Diego Spagnuolo, ex titular de la Andis, en una causa vinculada a presuntas irregularidades en la compra de medicamentos.",
+      "guion": "Detectan irregularidades y sobreprecios en compras de la ex Andis",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T22:52:05.347Z",
+      "noConfirmado": [
+        "No se pudo determinar con precisión el alcance total de los perjuicios económicos en todas las contrataciones investigadas.",
+        "Las firmas involucradas no emitieron declaraciones públicas sobre los señalamientos de los informes."
+      ],
+      "textoRedes": "Informes técnicos enviados a la Justicia revelaron presuntas irregularidades y sobreprecios de hasta el 1.972% en compras de insumos médicos y ortopédicos de la ex Agencia Nacional de Discapacidad.",
+      "etiquetas": [
+        "Andis",
+        "justicia",
+        "salud",
+        "irregularidades",
+        "sobreprecios",
+        "compras públicas"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Radio Sudestada",
+          "enlace": "https://radiosudestada.com.ar/2026/09/causa-andis-detectaron-presuntas-irregularidades-en-compras-con-sobreprecios-y-una-protesis-que-nunca-fue-entregada/",
+          "fecha": "2026-09-27T19:30:00.000Z",
+          "oficial": false,
+          "aporte": "Detalló los informes técnicos remitidos a la Justicia, los casos específicos de sobreprecios, la prótesis no entregada en Río Negro y los datos de las empresas proveedoras."
+        },
+        {
+          "medio": "Canal 26",
+          "enlace": "https://www.canal26.com/politica/2026/09/27/andis-bajo-la-lupa-denuncian-sobreprecios-de-hasta-1972-pagos-duplicados-y-protesis-que-nunca-llegaron/",
+          "fecha": "2026-09-27T15:07:18.000Z",
+          "oficial": false,
+          "aporte": "Confirmó que la Agencia Nacional de Discapacidad quedó en el centro de la polémica por documentos técnicos sobre compras de insumos."
+        },
+        {
+          "medio": "Diario Popular",
+          "enlace": "https://www.diariopopular.com.ar/politica/causa-andis-detectaron-sobreprecios-y-una-protesis-que-nunca-fue-entregada-n921821",
+          "fecha": "2026-09-27T20:33:00.000Z",
+          "oficial": false,
+          "aporte": "Aportó la advertencia sobre documentos remitidos a la Justicia respecto a la adquisición de insumos médicos y ortopédicos."
+        },
+        {
+          "medio": "Noticias Argentinas (NA)",
+          "enlace": "https://noticiasargentinas.com/politica/causa-andis--detectaron-presuntas-irregularidades-en-compras-con-sobreprecios-y-una-protesis-que-nunca-fue-entregada_a6ab94d80c2b8de8667ed4daf",
+          "fecha": "2026-09-27T17:13:15.000Z",
+          "oficial": false,
+          "aporte": "Informó sobre la emisión de los informes técnicos de compras de la ex Andis remitidos a la Justicia."
+        },
+        {
+          "medio": "La Verdad",
+          "enlace": "https://laverdadonline.com/causa-andis-detectaron-presuntas-irregularidades-en-compras-con-sobreprecios-y-una-protesis-que-nunca-fue-entregada/",
+          "fecha": "2026-09-27T21:00:43.000Z",
+          "oficial": false,
+          "aporte": "Coincidió en el reporte sobre informes técnicos de compras y el caso relevado en Río Negro."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "x74hqw",
+          "titulo": "Causa ANDIS: la Cámara Federal ratificó el procesamiento de Spagnuolo",
+          "fecha": "2026-09-23T02:10:00.000Z",
+          "ruta": "/nota/causa-andis-la-camara-federal-ratifico-el-procesamiento-de-spagnuolo-x74hqw"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron cinco medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      }
+    },
+    "192abxo": {
+      "estado": "automatica",
+      "titulo": "Alex Brundle defiende a Franco Colapinto tras el choque en Azerbaiyán",
+      "copete": "El piloto y comentarista británico Alex Brundle respaldó a Franco Colapinto tras el choque múltiple en Bakú y señaló que los errores forman parte del automovilismo.",
+      "cuerpo": "El piloto británico Alex Brundle salió a respaldar a Franco Colapinto tras el choque múltiple protagonizado por el argentino en la curva uno del Gran Premio de Azerbaiyán, donde quedaron fuera de carrera el británico Lando Norris y el francés Pierre Gasly. El incidente ocurrió al relanzarse la competencia tras la salida del auto de seguridad, cuando Colapinto frenó tarde y colisionó con el monoplaza de Gasly, quien a su vez impactó al de Norris. Tras el episodio, el argentino recibió una penalización de cinco puestos para la próxima competencia, el Gran Premio de Bahréin, que se disputará entre el 2 y el 4 de octubre.\n\nEn declaraciones a F1 TV, Brundle sostuvo que los errores forman parte del aprendizaje y de la intensidad de la categoría, y mencionó factores como la baja en la temperatura ambiente. El respaldo de Brundle se sumó a las declaraciones de otros referentes de la categoría como George Russell, Max Verstappen e Isack Hadjar, quienes consideraron excesiva una sanción mayor.\n\nEn contraste con las muestras de apoyo, la escudería Alpine emitió un duro comunicado y su asesor ejecutivo, Flavio Briatore, junto a Norris, cuestionaron la maniobra.",
+      "guion": "Alex Brundle defiende a Franco Colapinto tras el choque en Azerbaiyán",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T22:52:05.347Z",
+      "claves": [
+        "Alex Brundle respaldó a Franco Colapinto tras el choque en Bakú.",
+        "El piloto británico señaló que los errores forman parte del automovilismo.",
+        "Colapinto recibió una sanción de cinco puestos para el Gran Premio de Bahréin.",
+        "Alpine y Flavio Briatore criticaron la maniobra del piloto argentino."
+      ],
+      "seSabe": [
+        "Alex Brundle defendió a Franco Colapinto tras el incidente en Azerbaiyán según F1 TV.",
+        "Colapinto chocó con Pierre Gasly y Lando Norris en la curva uno del circuito de Bakú tras un relanzamiento con auto de seguridad.",
+        "El piloto argentino fue penalizado con cinco posiciones para la parrilla de salida del Gran Premio de Bahréin.",
+        "George Russell, Max Verstappen e Isack Hadjar expresaron que una sanción ejemplificadora habría sido demasiado severa.",
+        "La escudería Alpine y Flavio Briatore manifestaron su rechazo a la maniobra a través de un comunicado y declaraciones."
+      ],
+      "textoRedes": "El piloto Alex Brundle respaldó a Franco Colapinto tras el choque en el Gran Premio de Azerbaiyán y señaló que los errores forman parte de la competencia.",
+      "etiquetas": [
+        "Franco Colapinto",
+        "Formula 1",
+        "Alex Brundle",
+        "Gran Premio de Azerbaiyán",
+        "Automovilismo"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Radio Sudestada",
+          "enlace": "https://radiosudestada.com.ar/2026/09/otro-piloto-defendio-a-franco-colapinto-te-disculpas-con-todos-en-el-garaje-una-vez-y-despues-sigues-con-tu-vida/",
+          "fecha": "2026-09-27T21:00:00.000Z",
+          "oficial": false,
+          "aporte": "Detalles sobre las declaraciones de Alex Brundle en F1 TV y el desarrollo técnico del incidente en Bakú."
+        },
+        {
+          "medio": "Noticias Argentinas (NA)",
+          "enlace": "https://noticiasargentinas.com/deportes/otro-piloto-defendio-a-franco-colapinto---te-disculpas-con-todos-en-el-garaje-una-vez-y-despues-sigues-con-tu-vida-_a6ab97600c2b8de8667f3bc57",
+          "fecha": "2026-09-27T20:08:00.000Z",
+          "oficial": false,
+          "aporte": "Información general de la agencia Noticias Argentinas sobre el respaldo de Brundle al piloto argentino."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "9hkq7t",
+          "titulo": "Juan Pablo Montoya respalda a Franco Colapinto en la F1",
+          "fecha": "2026-09-27T12:02:03.000Z",
+          "ruta": "/nota/juan-pablo-montoya-respalda-a-franco-colapinto-en-la-f1-9hkq7t"
+        },
+        {
+          "id": "q2svkm",
+          "titulo": "El motivo por el cual la carrera de Franco Colapinto se adelantó",
+          "fecha": "2026-09-27T11:19:00.000Z",
+          "ruta": "/nota/el-motivo-por-el-cual-la-carrera-de-franco-colapinto-se-adelanto-q2svkm"
+        },
+        {
+          "id": "6qoa5z",
+          "titulo": "Franco Colapinto choca con su compañero en Azerbaiyán",
+          "fecha": "2026-09-27T02:29:30.000Z",
+          "ruta": "/nota/franco-colapinto-choca-con-su-companero-en-azerbaiyan-y-recibe-sancion-6qoa5z"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "1r7whif": {
+      "estado": "automatica",
+      "titulo": "Mar del Plata recibe el sexagésimo segundo Coloquio de IDEA",
+      "copete": "La ciudad balnearia será sede del tradicional encuentro de empresarios y dirigentes políticos entre el miércoles y el viernes de esta semana.",
+      "cuerpo": "Entre el miércoles y el viernes de esta semana se desarrollará el sexagésimo segundo Coloquio del Instituto para el Desarrollo Empresarial de la Argentina en la ciudad de Mar del Plata. El encuentro empresario y político contará con el lema relacionado con invertir la historia y buscará transformar la estabilidad macroeconómica en crecimiento sostenido. \n\nLos organizadores convocaron a referentes del sector privado, legisladores y funcionarios nacionales, entre ellos el presidente Javier Milei y el ministro de Economía Luis Caputo. Las jornadas incluirán debates sobre experiencias internacionales y cuatro ejes temáticos centrados en la productividad, el empleo formal y la atracción de inversiones. \n\nEl presidente del evento y directivo bancario Fabián Kon destacó que el objetivo es consolidar reglas claras para lograr un desarrollo prolongado y una mayor integración global del país.",
+      "guion": "Mar del Plata recibe el sexagésimo segundo Coloquio de IDEA",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T22:52:05.347Z",
+      "claves": [
+        "El foro empresarial comienza esta semana en Mar del Plata.",
+        "Participarán referentes económicos, políticos y sociales.",
+        "Prevén la presencia del presidente Javier Milei y ministros."
+      ],
+      "seSabe": [
+        "El encuentro se realizará entre el miércoles y el viernes.",
+        "El lema de la edición es Invirtiendo la historia.",
+        "Fabián Kon encabeza la organización del foro."
+      ],
+      "noConfirmado": [
+        "La confirmación definitiva de la asistencia de cada funcionario invitado."
+      ],
+      "textoRedes": "Mar del Plata será sede esta semana del sexagésimo segundo Coloquio de IDEA con la participación de empresarios y funcionarios nacionales para debatir sobre desarrollo y crecimiento económico.",
+      "etiquetas": [
+        "Coloquio IDEA",
+        "Mar del Plata",
+        "Economia",
+        "Empresarios"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Radio Sudestada",
+          "enlace": "https://radiosudestada.com.ar/2026/09/comienza-esta-semana-el-62-coloquio-de-idea-en-mar-del-plata/",
+          "fecha": "2026-09-27T20:51:39.000Z",
+          "oficial": false,
+          "aporte": "Detalló los ejes temáticos, los funcionarios invitados y las declaraciones del presidente del coloquio."
+        },
+        {
+          "medio": "Noticias Argentinas (NA)",
+          "enlace": "https://noticiasargentinas.com/economia/comienza-esta-semana-el-62--coloquio-de-idea-en-mar-del-plata_a6ab6eafa66108e5d34b88bfc",
+          "fecha": "2026-09-27T18:30:00.000Z",
+          "oficial": false,
+          "aporte": "Informó sobre el inicio del encuentro en Mar del Plata durante la semana."
+        },
+        {
+          "medio": "Punto Noticias",
+          "enlace": "https://puntonoticias.com/el-62-coloquio-de-idea-llega-a-mar-del-plata-asistira-milei/",
+          "fecha": "2026-09-27T20:55:28.000Z",
+          "oficial": false,
+          "aporte": "Registró la convocatoria del evento empresario."
+        },
+        {
+          "medio": "El Norte",
+          "enlace": "https://diarioelnorte.com.ar/mar-del-plata-recibe-el-62-coloquio-de-idea-sobre-futuro-economico/",
+          "fecha": "2026-09-27T19:04:23.000Z",
+          "oficial": false,
+          "aporte": "Señaló que Mar del Plata será sede de uno de los foros económicos más influyentes."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron cuatro medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      }
+    },
+    "vr15w": {
+      "estado": "automatica",
+      "titulo": "Un espiral para mosquitos genera un incendio en una vivienda",
+      "copete": "Una mujer mayor debió ser asistida luego de que un espiral contra los mosquitos iniciara un incendio en una habitación de su casa en Misiones. No se registraron personas heridas.",
+      "cuerpo": "Un incendio se desató este domingo en una vivienda de la localidad misionera de Puerto Santa Ana luego de que un espiral contra los mosquitos fuera dejado encendido cerca de una cama. Según informaron fuentes policiales, el fuego se originó alrededor de las diez y media de la mañana en una propiedad del Lote 33, tras la caída del elemento sobre un colchón.\n\nUna dotación de la División Bomberos de Santa Ana acudió al lugar con una autobomba y constató una importante concentración de humo en la parte posterior del inmueble. Tras interrumpir el suministro eléctrico, los efectivos ingresaron y extinguieron las llamas, que afectaron una habitación de mampostería.\n\nLa intervención de los bomberos y las tareas de enfriamiento permitieron evitar que el fuego se propagara al resto de la vivienda. De acuerdo con el relevamiento posterior, los agentes descartaron inicialmente una falla en la instalación eléctrica como causa del episodio, mientras que la propietaria relató cómo se habrían iniciado los hechos antes de ingresar a bañarse.",
+      "guion": "Un espiral para mosquitos genera un incendio en una vivienda",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T22:52:05.347Z",
+      "claves": [
+        "Ocurrió este domingo en Puerto Santa Ana, Misiones.",
+        "El fuego se inició en un colchón por un espiral.",
+        "No se registraron personas heridas.",
+        "Bomberos controlaron el foco sin que se propague."
+      ],
+      "seSabe": [
+        "El hecho ocurrió este domingo alrededor de las diez y media de la mañana en una vivienda del Lote 33 en Puerto Santa Ana, Misiones.",
+        "El fuego se originó tras la caída de un espiral encendido sobre un colchón, según informaron fuentes policiales.",
+        "La propietaria había dejado el elemento cerca de la cama antes de ingresar a bañarse.",
+        "Los bomberos intervinieron, cortaron la luz y extinguieron las llamas, evitando que el fuego se propague al resto de la casa.",
+        "No se registraron personas heridas y se descartó inicialmente una falla eléctrica."
+      ],
+      "textoRedes": "Una mujer mayor fue asistida tras un incendio en su vivienda en Misiones, provocado por un espiral contra los mosquitos que cayó sobre un colchón. Los bomberos lograron controlar las llamas y no se registraron personas heridas.",
+      "etiquetas": [
+        "incendio",
+        "mosquitos",
+        "espiral",
+        "Misiones",
+        "bomberos",
+        "Puerto Santa Ana"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Radio Sudestada",
+          "enlace": "https://radiosudestada.com.ar/2026/09/misiones-prendio-un-espiral-para-combatir-a-los-mosquitos-y-provoco-un-incendio-en-una-casa/",
+          "fecha": "2026-09-27T20:00:00.000Z",
+          "oficial": false,
+          "aporte": "Detalló el horario, la ubicación, el trabajo de los bomberos y el relato de la propietaria sobre el inicio del fuego."
+        },
+        {
+          "medio": "Noticias Argentinas (NA)",
+          "enlace": "https://noticiasargentinas.com/sociedad/misiones--prendio-un-espiral-para-combatir-a-los-mosquitos-y-provoco-un-incendio-en-una-casa_a6ab955a0c2b8de8667ee95d7",
+          "fecha": "2026-09-27T17:50:00.000Z",
+          "oficial": false,
+          "aporte": "Coincidió en los datos principales del episodio brindados por fuentes policiales."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      }
+    },
+    "zdzoxc": {
+      "estado": "automatica",
+      "titulo": "El estacionamiento del autódromo completa su capacidad por el TC Pick Up",
+      "copete": "El sector para automóviles en el Autódromo Municipal Juan Manuel Fangio alcanzó el ciento por ciento de ocupación en la previa del regreso del automovilismo nacional a Balcarce.",
+      "cuerpo": "El estacionamiento general para automóviles en el Autódromo Municipal Juan Manuel Fangio completó su capacidad en el marco de la jornada de las TC Pick Up, según informó la organización. De esta manera, ya no hay lugares disponibles para vehículos de cuatro ruedas dentro del predio y el ingreso quedó habilitado exclusivamente de forma peatonal, aunque todavía se registran espacios habilitados para motos en las inmediaciones.\n\nDesde la organización recomendaron a los asistentes coordinar alternativas de traslado y respetar las indicaciones del personal de tránsito y seguridad para ordenar la circulación en los accesos al escenario balcarceño.",
+      "guion": "El estacionamiento del autódromo completa su capacidad por el té cé pick up",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T22:52:05.347Z",
+      "noConfirmado": [
+        "No se informó la cantidad exacta de vehículos que ingresaron al predio ni el número total de cocheras disponibles."
+      ],
+      "textoRedes": "El estacionamiento para automóviles en el Autódromo Municipal Juan Manuel Fangio completó su capacidad total ante la masiva llegada de público por el regreso del automovilismo nacional a Balcarce.",
+      "etiquetas": [
+        "autodromo",
+        "balcarce",
+        "tc pick up",
+        "automovilismo",
+        "estacionamiento"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Puntonueve (FM 100.9)",
+          "enlace": "https://puntonueve.com.ar/el-estacionamiento-del-autodromo-juan-manuel-fangio-esta-completo/",
+          "fecha": "2026-09-26T13:46:35.000Z",
+          "oficial": false,
+          "aporte": "Informó que el estacionamiento general para automóviles alcanzó el cien por ciento de ocupación."
+        },
+        {
+          "medio": "Infórmese Primero (FM 104.9)",
+          "enlace": "http://www.informeseprimero.com.ar/2026/09/por-la-gran-concurrencia-se-completo-el.html",
+          "fecha": "2026-09-26T13:52:51.342Z",
+          "oficial": false,
+          "aporte": "Confirmó que el autódromo alcanzó el ciento por ciento de ocupación en sus sectores habilitados este sábado."
+        },
+        {
+          "medio": "Diario La Vanguardia",
+          "enlace": "https://www.diariolavanguardia.com/noticias/44911-tc-pickup-el-estacionamiento-para-autos-llego-al-100-en-el-autodromo-fangio/",
+          "fecha": null,
+          "oficial": false,
+          "aporte": "Aportó que ya no hay lugares disponibles para vehículos dentro del predio y el ingreso de autos quedó cerrado."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1gnqz6n",
+          "titulo": "El Autódromo Juan Manuel Fangio reabre sus puertas",
+          "fecha": "2026-09-25T22:53:16.590Z",
+          "ruta": "/nota/el-autodromo-juan-manuel-fangio-reabre-sus-puertas-en-balcarce-1gnqz6n"
+        },
+        {
+          "id": "1pnog3i",
+          "titulo": "El autódromo Juan Manuel Fangio reabre",
+          "fecha": "2026-09-25T21:24:13.000Z",
+          "ruta": "/nota/el-autodromo-juan-manuel-fangio-reabre-en-balcarce-1pnog3i"
+        },
+        {
+          "id": "1rqdi5z",
+          "titulo": "Kicillof encabeza la reinauguración del autódromo Juan Manuel Fangio",
+          "fecha": "2026-09-25T19:59:58.000Z",
+          "ruta": "/nota/kicillof-encabeza-la-reinauguracion-del-autodromo-juan-manuel-fangio-1rqdi5z"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron tres medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      }
+    },
+    "10c3ww3": {
+      "estado": "automatica",
+      "titulo": "Raoni Barcelos se encuentra estable tras sufrir un traumatismo en UFC",
+      "copete": "El peleador brasileño Raoni Barcelos recuperó la estabilidad y la movilidad tras ser hospitalizado de emergencia por un traumatismo sufrido durante su combate en Las Vegas frente a Raúl Rosas Jr.",
+      "cuerpo": "en el evento principal de UFC Vegas 121, en Las Vegas. El enfrentamiento concluyó en el quinto asalto cuando Rosas Jr. derribó a su oponente cerca de la reja, lo que motivó la intervención del árbitro y del cuerpo médico al notar que Barcelos quedó inmóvil sobre la lona sin un impacto contundente previo.\n\nUFC confirmó mediante un comunicado oficial que los estudios descartaron problemas cardíacos y que el deportista permanece bajo observación estricta. Por su parte, el entrenador Davi Ramos envió un mensaje de tranquilidad y ratificó que se encuentra fuera de peligro, mientras que Rosas Jr. selló la victoria más relevante de su carrera en la organización.",
+      "guion": "Raoni Barcelos se encuentra estable tras sufrir un traumatismo en UFC",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T22:52:05.347Z",
+      "claves": [
+        "Raoni Barcelos sufrió un traumatismo en su combate en UFC Vegas 121.",
+        "Fue trasladado de emergencia en camilla tras quedar inmóvil en el quinto asalto.",
+        "UFC confirmó que se encuentra estable y descartó problemas cardíacos.",
+        "El entrenador Davi Ramos ratificó que el deportista está fuera de peligro."
+      ],
+      "seSabe": [
+        "Raoni Barcelos sufrió un traumatismo durante su combate ante Raúl Rosas Jr. en UFC Vegas 121 en Las Vegas.",
+        "El combate terminó en el quinto asalto tras un derribo cerca de la reja.",
+        "UFC confirmó mediante un comunicado que el peleador está estable, alerta y bajo observación médica.",
+        "El entrenador Davi Ramos ratificó que el deportista está fuera de peligro."
+      ],
+      "textoRedes": "El peleador brasileño Raoni Barcelos se encuentra estable y bajo observación médica en Las Vegas tras sufrir un traumatismo durante su combate de artes marciales mixtas frente a Raúl Rosas Jr.",
+      "etiquetas": [
+        "Deportes",
+        "UFC",
+        "Raoni Barcelos",
+        "Raúl Rosas Jr.",
+        "Las Vegas"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Radio Sudestada",
+          "enlace": "https://radiosudestada.com.ar/2026/09/el-brasileno-raoni-barcelos-esta-consciente-tras-sufrir-un-traumatismo-en-su-pelea-en-ufc-vegas-121/",
+          "fecha": "2026-09-27T18:29:55.000Z",
+          "oficial": false,
+          "aporte": "Detalló el estado de salud de Raoni Barcelos, el desarrollo del combate y las declaraciones oficiales de UFC y su entrenador."
+        },
+        {
+          "medio": "Noticias Argentinas (NA)",
+          "enlace": "https://noticiasargentinas.com/deportes/el-brasileno-raoni-barcelos-esta-consciente-tras-sufrir-un-traumatismo-en-su-pelea-en-ufc-vegas-121_a6ab935c6c2b8de8667e97211",
+          "fecha": "2026-09-27T15:40:46.655Z",
+          "oficial": false,
+          "aporte": "No aportó información adicional al no incluir texto en su resumen."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      }
+    },
+    "1qm1ppu": {
+      "estado": "automatica",
+      "titulo": "La familia Crespi confirma la continuidad de la fábrica",
+      "copete": "La emblemática planta de automóviles de Balcarce seguirá en marcha bajo la conducción de los hijos del fundador, Tulio Crespi, según informó la familia a través de un comunicado oficial.",
+      "cuerpo": "La fábrica de automóviles fundada por Tulio Crespi en Balcarce continuará con su producción y mantendrá sus puertas abiertas bajo la dirección de sus hijos Sandro, Matías y Luciano. Así lo ratificó la familia mediante un mensaje difundido en las redes sociales oficiales, tras las muestras de afecto recibidas durante las exequias del histórico proyectista.\n\nEl comunicado detalla que la reorganización operativa de la empresa familiar se puso en marcha en 2021, cuando la nueva generación asumió la gestión. En este período, la firma participó en la fabricación de réplicas para la serie biográfica sobre Ayrton Senna y mantuvo su actividad habitual.\n\nEn esta etapa, la planta seguirá adelante con el suministro de chasis para las categorías escuela de monoplazas, completará el desarrollo del prototipo Fórmula Cross y finalizará el proyecto del deportivo artesanal TULIO VLV 84 ideado por su creador.",
+      "guion": "La familia Crespi confirma la continuidad de la fábrica",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T22:52:05.347Z",
+      "claves": [
+        "La fábrica Crespi seguirá produciendo en Balcarce",
+        "Los hijos del fundador asumieron la dirección operativa",
+        "Completarán el desarrollo del deportivo artesanal TULIO VLV 84"
+      ],
+      "seSabe": [
+        "La familia Crespi confirmó que la fábrica de Balcarce continuará produciendo.",
+        "La dirección quedará a cargo de los hermanos Sandro, Matías y Luciano.",
+        "El proceso de reorganización de la firma comenzó en 2021.",
+        "La planta continuará entregando chasis para monoplazas y finalizará el deportivo TULIO VLV 84."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "La emblemática fábrica de automóviles de Balcarce continuará con su producción bajo la dirección de los hijos de Tulio Crespi, tras un comunicado oficial de la familia.",
+      "etiquetas": [
+        "Tulio Crespi",
+        "Balcarce",
+        "automovilismo"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Marplatense",
+          "enlace": "https://www.elmarplatense.com/balcarce-la-familia-crespi-confirmo-que-la-fabrica-continuara-produciendo-y-mantendra-su-legado",
+          "fecha": "2026-09-26T17:00:04.000Z",
+          "oficial": false,
+          "aporte": "Informó la confirmación de la familia Crespi sobre la continuidad de la fábrica en Balcarce y los detalles de la producción."
         }
       ],
       "verificacion": {
