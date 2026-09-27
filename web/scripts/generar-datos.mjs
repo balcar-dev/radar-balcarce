@@ -57,6 +57,8 @@ const INTENTOS_IA = path.join(AQUI, '..', 'data', 'intentos-ia.json');
 // nota propia del dólar y su comparación con días anteriores
 // (lib/notas-propias.js). Va versionado, como intentos-ia.json.
 const HISTORIA_DOLAR = path.join(AQUI, '..', 'data', 'dolar-historia.json');
+// Las fichas de la lectura con IA, en prueba silenciosa (ingesta/lectura-ia.mjs).
+const FICHAS = path.join(AQUI, '..', 'data', 'fichas.json');
 // Lo que se sacó a mano de la web, fuera del panel (lib/archivo.js).
 const RETIRADAS_A_MANO = idsRetiradosAMano(leerJson(path.join(AQUI, '..', 'data', 'retiradas.json'), null));
 
@@ -147,6 +149,28 @@ if (enLaNube) {
   });
   const nuevas = Object.keys(reescritas).filter((id) => !previas[id]).length;
   if (nuevas) console.log(`  ${nuevas} notas reescritas con IA en esta corrida`);
+}
+
+// La lectura con IA, en PRUEBA SILENCIOSA (plan V2.2, ingesta/lectura-ia.mjs):
+// guarda una ficha por nota y cuenta qué habría hecho distinto, pero no decide
+// nada. Sólo en la nube, como la reescritura. Si falla, no frena la corrida.
+if (enLaNube) {
+  try {
+    const { leerNotasNuevas, compararConElSistema, comoFichasJson } = await import('../../ingesta/lectura-ia.mjs');
+    const fichasAntes = leerJson(FICHAS, {});
+    const { archivo: fichas, cuenta } = await leerNotasNuevas(ultima.notas ?? [], { guardado: fichasAntes, registro: console.log });
+    if (cuenta.sinClave) console.log('  lectura con IA: sin clave, no se leyó nada');
+    else {
+      const c = compararConElSistema(ultima.notas ?? [], fichas.fichas);
+      console.log(`  lectura con IA (prueba silenciosa): ${cuenta.nuevas} fichas nuevas en ${cuenta.pedidos} pedidos (${fichas.pedidosHoy} hoy)`
+        + ` · de ${c.comparadas}: ${c.otraSeccion.length} en otra sección, ${c.noEsDeBalcarce.length} que no serían de Balcarce,`
+        + ` ${c.noInteresa.length} publicadas que no le interesan a un vecino, ${c.publicidad.length} publicidades`);
+    }
+    const texto = comoFichasJson(fichas);
+    if (!fs.existsSync(FICHAS) || fs.readFileSync(FICHAS, 'utf8') !== texto) fs.writeFileSync(FICHAS, texto, 'utf8');
+  } catch (e) {
+    console.log(`  lectura con IA: no se pudo (${e.message}); no cambia nada de lo publicado`);
+  }
 }
 // Se escribe siempre que falte (el workflow lo suma con `git add`) o cambie.
 const intentosFinal = podarIntentos(intentos);

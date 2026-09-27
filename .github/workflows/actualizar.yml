@@ -92,6 +92,9 @@ jobs:
         env:
           GEMINI_API_KEY_REDACCION: ${{ secrets.GEMINI_API_KEY_REDACCION }}
           GEMINI_API_KEY_REDES: ${{ secrets.GEMINI_API_KEY_REDES }}
+          # La lectura con IA (prueba silenciosa, plan V2.2). Si no está cargada,
+          # usa la de redacción (gratis); nunca la de redes.
+          GEMINI_API_KEY_CLASIFICACION: ${{ secrets.GEMINI_API_KEY_CLASIFICACION }}
 
       # El sitio se compila acá antes de publicar. Si no, un cambio que
       # rompía Next se descubría recién cuando fallaba el despliegue — con la
@@ -123,7 +126,8 @@ jobs:
           # existiría: cada corrida empezaría de cero.
           # dolar-historia.json: la cotización de las 11 de cada día hábil, para
           # la nota propia del dólar y su comparación (web/lib/notas-propias.js).
-          git add web/data/portada.json web/data/archivo.json web/data/agenda.json web/data/intentos-ia.json web/data/dolar-historia.json
+          # fichas.json: lo que leyó la IA de cada nota (prueba silenciosa, V2.2).
+          git add web/data/portada.json web/data/archivo.json web/data/agenda.json web/data/intentos-ia.json web/data/dolar-historia.json web/data/fichas.json
           if git diff --cached --quiet; then
             echo "Sin novedades: no hay nada que publicar."
           else

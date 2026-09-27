@@ -35,3 +35,8 @@ export function leerVariable(nombre, { env = process.env, archivo = path.join(RA
 export const claveRedaccion = (o) => leerVariable('GEMINI_API_KEY_REDACCION', o) ?? leerVariable('GEMINI_API_KEY', o);
 
 export const claveRedes = (o) => leerVariable('GEMINI_API_KEY_REDES', o);
+
+/** La de la lectura con IA (plan V2.2): su propio proyecto de Google, para no
+ *  gastarle cupo a la redacción. Mientras no esté cargada, usa la de redacción
+ *  (gratis). NUNCA la de redes, que es paga (Hernán, 27/09). */
+export const claveClasificacion = (o) => leerVariable('GEMINI_API_KEY_CLASIFICACION', o) ?? claveRedaccion(o);

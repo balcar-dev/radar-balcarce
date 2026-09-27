@@ -106,6 +106,7 @@ cada uno, cuándo corre y si cuesta plata), en `INFRAESTRUCTURA.md`.
 - **Las redes tienen un interruptor:** la variable de GitHub `REDES_ACTIVAS`.
   Con `Si` (cualquier mayúscula o tilde) publica; con otro valor todo corre pero
   sólo simula. No hay que tocar código para prender o apagar.
+- **Una tercera clave, para la lectura con IA** (`GEMINI_API_KEY_CLASIFICACION`, plan V2.2): falta cargarla; mientras tanto usa la de redacción (gratis) con tope. Nunca la de redes.
 - **Dos claves de Gemini, separadas a propósito:** `GEMINI_API_KEY_REDACCION`
   para redactar las notas (acepta el nombre viejo `GEMINI_API_KEY`) y
   `GEMINI_API_KEY_REDES` para voces y reels (`reels/claves.mjs`). La de redes
@@ -221,6 +222,7 @@ cada uno, cuándo corre y si cuesta plata), en `INFRAESTRUCTURA.md`.
 | sacar de la web una nota ya publicada, sin el panel | `web/data/retiradas.json` (motivo, cuándo, quién) |
 | qué va a las redes (hoy, sólo lo de Balcarce) | `esParaLasRedes` en `redes/elegir.mjs` |
 | el plan de trabajo en curso (filtro de entrada, lectura con IA, notas populares) | `docs/PLAN-V2.2.md` |
+| la lectura con IA (prueba silenciosa: fichas por nota, sin decidir) | `ingesta/lectura-ia.mjs`, con el perfil de `ingesta/perfil-balcarce.md` (sólo datos seguros); las fichas, en `web/data/fichas.json` |
 | cambiar el criterio editorial, el tono o las reglas de escritura | `CRITERIO-EDITORIAL.md` (la IA lo lee tal cual; reiniciar el panel) |
 | cambiar un número del criterio (largos, intentos, cupos, pisos, Facebook, podcasts) | `ingesta/criterio.mjs` **y** la tabla "Los números" de `CRITERIO-EDITORIAL.md` (una prueba controla que digan lo mismo) |
 | cambiar cuánto puntaje pide cada sección | `PISO_DE_AFUERA` y `CUPO_DE_AFUERA`, en `ingesta/criterio.mjs` (y en `CRITERIO-EDITORIAL.md`) |

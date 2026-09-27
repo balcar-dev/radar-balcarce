@@ -76,6 +76,7 @@ esa pantalla o correr el workflow de prueba que corresponda.
 |---|---|---|---|
 | `META_TOKEN` | Secreto | Cargado. **Faltan permisos** | Publicar en Facebook e Instagram, leer seguidores y **auditar lo publicado** (el cierre de las 23:30, "Auditar redes" y "Ver Facebook" sólo leen). No vence. Para vistas, alcance e interacciones le faltan los permisos `read_insights` e `instagram_manage_insights` (al regenerarlo, tildar TODOS los de ahora más esos dos). |
 | `GEMINI_API_KEY_REDES` | Secreto | Cargado | Voces y reels (clave paga). Sin ella los reels no arrancan. |
+| `GEMINI_API_KEY_CLASIFICACION` | Secreto | **Falta cargarla** (27/09): la crea una persona en un proyecto de Google aparte, sin facturación | La lectura con IA del plan V2.2 (`ingesta/lectura-ia.mjs`), hoy en prueba silenciosa. Mientras no esté, usa la de redacción (gratis) con un tope de 60 pedidos por día; nunca la de redes. Va aparte porque el cupo de Gemini es por proyecto |
 | `GEMINI_API_KEY_REDACCION` | Secreto | Cargado y probada el 25/09 | Redactar notas. Acepta el nombre viejo `GEMINI_API_KEY`. Es gratis: la reescritura usa esta primero y pasa a la de redes (paga) sólo si se queda sin cupo. El registro de "Actualizar la web" dice cuántos pedidos fueron a cada una. Se prueba con "Prueba de Gemini". |
 | `CLOUDFLARE_API_TOKEN` | Secreto | Cargado | Subir el sitio a Cloudflare Pages. |
 | `CLOUDFLARE_ACCOUNT_ID` | Secreto | Cargado | Idem (también para las estadísticas). |

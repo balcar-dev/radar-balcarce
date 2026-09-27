@@ -385,8 +385,9 @@ Para cada nota: fuente y su sección, ficha de la IA, historia a la que pertenec
 Medición del 27/09, con los mismos feeds antes y después del filtro: 175 y 174 notas que salen solas, las mismas 142 de Balcarce. Salieron una de Perú y tres generales de los feeds "señal"; entraron notas con más medios (Boca–Racing, con cuatro).
 
 ### Semanas 2 y 3 — IA en prueba silenciosa
-- [ ] Clave nueva (una persona).
-- [ ] Perfil de Balcarce.
+- [ ] Clave nueva (una persona). **Mientras tanto** (27/09, Hernán) usa la clave gratis de redacción, con tope de 60 pedidos por día; nunca la paga.
+- [x] Perfil de Balcarce (`ingesta/perfil-balcarce.md`). Hecho el 27/09.
+- [x] Lectura rápida (nivel 1) en prueba silenciosa: `ingesta/lectura-ia.mjs`, fichas en `web/data/fichas.json`, comparación con el sistema en el registro de cada corrida. Hecho el 27/09. Probada con Gemini de verdad sobre los casos del 27/09: California y Colombia salen "internacional, impacto nulo"; Necochea, "región, nulo"; la ventanilla, "nulo"; lo de Balcarce, "directo".
 - [ ] Examen: Claude lo propone, ustedes lo revisan.
 - [ ] Lectura en dos niveles, fichas e historias, en silencio.
 - [ ] Resumen semanal automático.

@@ -22,9 +22,9 @@ Balcarce, título de la IA sin Balcarce de más, 197 notas retiradas de la web
 | Qué falta | Quién | Urgencia |
 |---|---|---|
 | **Borrar de Facebook e Instagram el posteo de Necochea** del 27/09 a las 11:03 ("El transporte público y el gas en debate en la región"). Facebook: `facebook.com/1254237411116171/posts/122097323043495512`. Borrar es permanente: lo hace una persona | Hernán | Alta |
-| **Crear un proyecto de Google aparte** (sin facturación) y cargar su clave en GitHub Secrets como `GEMINI_API_KEY_CLASIFICACION`, para la lectura con IA | Hernán | Media (para la semana 2 del plan) |
+| **Crear un proyecto de Google aparte** (sin facturación) y cargar su clave en GitHub Secrets como `GEMINI_API_KEY_CLASIFICACION`. Mientras tanto la lectura con IA usa la clave gratis de redacción, con tope (desde el 27/09) | Hernán | Media (mañana) |
 | **Revisar una vez el examen** de unos 60 casos que arma Claude (la respuesta que tiene que dar la IA para cada nota) | Los dos | Media (semana 2) |
-| Perfil de Balcarce, examen, lectura en dos niveles en prueba silenciosa, historias por `clave_tema`, resumen semanal | Claude | Semanas 2 y 3 |
+| **Hecho el 27/09:** perfil de Balcarce (`ingesta/perfil-balcarce.md`) y lectura rápida con IA en prueba silenciosa (`ingesta/lectura-ia.mjs`, fichas en `web/data/fichas.json`). **Falta:** examen de 60 casos, lectura con el texto completo (nivel 2), historias por `clave_tema`, resumen semanal por WhatsApp | Claude | Semanas 2 y 3 |
 | Notas populares medidas (cobertura y Tendencias de Google Argentina), primero sólo anotando cuáles habría publicado | Claude | Después del primer mes |
 
 ## Lo primero del 26/09: comprobar que Facebook ya se ve
