@@ -14,7 +14,33 @@ import path from 'node:path';
 import { rutaDeNota, parteDeNota, idDeRuta, destinoDesde404 } from '../web/lib/ruta.js';
 import {
   vigenteEnPortada, slugsConocidos, fijarSlug, actualizarArchivo, idsEnRedes, HORAS_EN_PORTADA,
+  idsRetiradosAMano,
 } from '../web/lib/archivo.js';
+
+// ------------------------------------------ lo que se sacó a mano (27/09)
+
+test('las notas retiradas a mano salen del archivo y una lista rota no retira nada', () => {
+  // El 27/09 se retiraron 197 notas que nunca tendrían que haber salido (de
+  // otros países, chimentos, medios de España, policiales de afuera). Se
+  // hizo con web/data/retiradas.json porque el panel estaba prendido y
+  // habría pisado cualquier decisión cargada a mano.
+  const ids = idsRetiradosAMano({ notas: { a: { motivo: 'de otro país' }, b: { motivo: '' } } });
+  assert.deepEqual([...ids], ['a'], 'sin motivo no se retira');
+  assert.equal(idsRetiradosAMano(null).size, 0);
+  assert.equal(idsRetiradosAMano({ notas: 'roto' }).size, 0);
+  const archivo = [{ id: 'a', titulo: 'Tigre suelto en México', fecha: new Date().toISOString() }, { id: 'c', titulo: 'Balcarce', fecha: new Date().toISOString() }];
+  assert.deepEqual(actualizarArchivo({ archivo, retiradas: ids }).map((n) => n.id), ['c']);
+});
+
+test('la lista de retiradas del repositorio está bien armada: cada una con motivo, fecha y quién', () => {
+  const json = JSON.parse(fs.readFileSync(new URL('../web/data/retiradas.json', import.meta.url), 'utf8'));
+  const entradas = Object.entries(json.notas);
+  assert.ok(entradas.length > 0);
+  for (const [id, n] of entradas) {
+    assert.ok(n.motivo && n.cuando && n.por, `a ${id} le falta motivo, fecha o quién`);
+  }
+  assert.equal(idsRetiradosAMano(json).size, entradas.length);
+});
 import { sinTitularRepetido, titularNormalizado } from '../web/lib/texto.js';
 import { enlaceDeNota } from '../redes/elegir.mjs';
 import { redireccionesDeNotas } from '../web/scripts/generar-redirects.mjs';

@@ -133,9 +133,60 @@ test('una exposición que sí es de cultura sigue en cultura', () => {
   assert.equal(clasificar(muestra), 'Cultura y agenda');
 });
 
+test('"fangio" solo, sin autódromo ni museo, no hace que una nota de otro lado sea "de Balcarce" (27/09)', () => {
+  // La misma nota de Necochea: además de caer en la sección equivocada, el
+  // "Fangio" del título original la marcaba como esDeBalcarce(), y eso le
+  // sacaba el piso y el cupo de afuera y le sumaba puntaje como si fuera
+  // local. El piloto de verdad sigue entrando por "autódromo Juan Manuel
+  // Fangio" y "museo Fangio".
+  assert.ok(!esDeBalcarce(nota({
+    alcance: 'region',
+    titulo: 'El colectivo espera, el Fangio acelera',
+    cuerpo: 'El Concejo evalúa una prórroga para los colectivos.',
+  })));
+  assert.ok(esDeBalcarce(nota({
+    alcance: 'region',
+    titulo: 'Vuelve el TC al Autódromo Juan Manuel Fangio',
+  })));
+});
+
+test('"fangio" de casualidad en una categoría del feed no manda a Automovilismo (27/09)', () => {
+  // Pasó el 27/09: una nota de Necochea sobre el transporte público y el gas
+  // salió publicada en Automovilismo porque traía "Fangio" como categoría
+  // del feed (un juego de palabras del medio de origen, "el Fangio acelera"),
+  // sin que el piloto ni las carreras tuvieran nada que ver.
+  const n = nota({
+    titulo: 'El transporte público y el gas en debate en la región',
+    cuerpo: 'El Concejo evalúa una prórroga para los colectivos y el Congreso redujo la Zona Fría del gas.',
+    categorias: ['Fangio'],
+    alcance: 'region',
+  });
+  assert.notEqual(clasificar(n), 'Automovilismo');
+});
+
+test('"taller" en el cuerpo, hablando de un auto, no manda a Cultura (27/09)', () => {
+  // Pasó el 27/09: "antes de visitar el taller mecánico" mandó una nota de
+  // Ámbito sobre cómo arreglar una ventanilla a Cultura y agenda, que la
+  // publicó sola sin ninguna relación con Balcarce.
+  const n = nota({
+    titulo: 'Qué revisar cuando la ventanilla eléctrica del auto no sube',
+    cuerpo: 'El origen puede estar en el interruptor o el mecanismo interno. Qué revisar antes de visitar el taller mecánico.',
+    alcance: 'pais',
+  });
+  assert.notEqual(clasificar(n), 'Cultura y agenda');
+});
+
 test('si la fuente ya viene separada por sección, se le cree', () => {
   const n = nota({ titulo: 'Ganó el equipo local', seccionFuente: 'Deportes' });
   assert.equal(clasificar(n), 'Deportes');
+});
+
+test('un apellido suelto no es una figura: la inmobiliaria Etcheverry no es el tenista (27/09)', () => {
+  // Pasó el 27/09: "Alejandro Etcheverry Inmobiliaria vende inmueble…", de
+  // Ayacucho al Día, entró como si nombrara al tenista y salió en Cultura.
+  assert.equal(figuraQueNombra(nota({ titulo: 'Alejandro Etcheverry Inmobiliaria vende inmueble en muy buen estado', alcance: 'region' })), null);
+  assert.equal(figuraQueNombra(nota({ titulo: 'La causa de Lázaro Báez vuelve a la Corte', alcance: 'pais' })), null);
+  assert.equal(figuraQueNombra(nota({ titulo: 'Tomás Etcheverry avanzó a cuartos en Pekín', alcance: 'pais' })), 'tomás etcheverry');
 });
 
 test('reconoce a las figuras argentinas de afuera', () => {

@@ -622,6 +622,7 @@ export const FUENTES_NACIONALES = [
   // Cultura y agenda con cupo propio, para que no tape la agenda de Balcarce.
   {
     id: 'infobae-teleshow',
+    activa: false, // chimentos: no van (Hernán, 27/09)
     nombre: 'Infobae · Teleshow',
     medio: 'Infobae',
     url: 'https://www.infobae.com/arc/outboundfeeds/rss/category/teleshow/?outputType=xml',
@@ -659,6 +660,7 @@ export const FUENTES_NACIONALES = [
   },
   {
     id: 'minutouno-espectaculos',
+    activa: false, // chimentos: no van (Hernán, 27/09)
     nombre: 'Minuto Uno · Espectáculos',
     medio: 'Minuto Uno',
     url: 'https://www.minutouno.com/rss/pages/espectaculos.xml',
@@ -700,6 +702,7 @@ export const FUENTES_NACIONALES = [
   },
   {
     id: 'hipertextual',
+    activa: false, // medio de España: no va por ahora (Hernán, 27/09)
     nombre: 'Hipertextual',
     medio: 'Hipertextual',
     url: 'https://hipertextual.com/feed',
@@ -713,6 +716,7 @@ export const FUENTES_NACIONALES = [
   },
   {
     id: 'xataka',
+    activa: false, // medio de España: no va por ahora (Hernán, 27/09)
     nombre: 'Xataka',
     medio: 'Xataka',
     url: 'https://www.xataka.com/feedburner.xml',
@@ -817,8 +821,14 @@ export const CANDIDATOS = [
 // nacional. "El Triunfo" y "Los Pinos" son lugares de Balcarce, pero también
 // frases comunes: colarlos hacía que Radar tomara por locales notas de fútbol
 // europeo. Si hace falta usarlos, tiene que ser junto a "Balcarce".
+//
+// "fangio" SOLO no va (27/09): una nota de Necochea sobre el transporte
+// público y el gas, sin ninguna relación con el piloto, quedó marcada como
+// "de Balcarce" (con el bonus de puntaje y sin cupo ni piso de afuera)
+// porque el título original del medio decía "el Fangio acelera" como juego
+// de palabras. Van sólo las frases que de verdad son del piloto o del lugar.
 export const PALABRAS_LOCALES = [
-  'balcarce', 'balcarceño', 'balcarceno', 'balcarceña', 'fangio',
+  'balcarce', 'balcarceño', 'balcarceno', 'balcarceña',
   'napaleofú', 'napaleofu', 'ramos otero', 'laguna la brava',
   'sierras de balcarce', 'inta balcarce', 'partido de balcarce',
   'autódromo juan manuel fangio', 'museo fangio',
@@ -910,8 +920,10 @@ export const REGLAS_SECCION = [
     // día que exista un beat propio de IA/agro-tech, va acá.
     seccion: 'Tecnología',
     // Sin siglas sueltas como "IA" o "app": dan demasiados falsos positivos
-    // sin el contexto de una frase completa.
-    palabras: ['inteligencia artificial', 'algoritmo', 'drone', 'dron', 'satelital',
+    // sin el contexto de una frase completa. Tampoco "drone"/"dron": el
+    // 27/09 mandaron a Tecnología "Grupos armados en Colombia multiplican
+    // ataques con drones", que es Policiales de otro lado, no tecnología.
+    palabras: ['inteligencia artificial', 'algoritmo', 'satelital',
       'agricultura de precisión', 'agricultura precision', 'biotecnología', 'biotecnologia',
       'digitalización', 'digitalizacion', 'ciberseguridad', 'automatización', 'automatizacion',
       // Inteligencia artificial: es lo que más se lee de tecnología hoy y lo
@@ -1024,7 +1036,14 @@ export const REGLAS_SEMAFORO = {
   internacional: ['trump', 'xi jinping', 'putin', 'zelenski', 'zelensky', 'netanyahu', 'casa blanca',
     'kremlin', 'hamas', 'franja de gaza', 'ucrania', 'otan', 'brics', 'g20', 'g7',
     'unión europea', 'union europea', 'parlamento europeo', 'macron', 'starmer', 'sheinbaum', 'lula',
-    'maduro', 'petro', 'boric', 'erdogan', 'kim jong'],
+    'maduro', 'petro', 'boric', 'erdogan', 'kim jong',
+    // Sumado el 27/09: "California promulga una ley para fortalecer el
+    // intercambio estudiantil con México" salió sola en Política por la
+    // palabra "gobernador", sin ninguna relación con Balcarce. La lista era
+    // sólo de líderes mundiales y no cubría la política de un estado de
+    // otro país. Con "newsom" y "california" no hace falta nombrar a cada
+    // gobernador de EE.UU.: si vuelve a pasar con otro estado, se agrega acá.
+    'newsom', 'california'],
   // Policiales de OTRO lugar (26/09). Las fuentes nacionales de policiales
   // (La Nación Seguridad, TN, Infobae) traen crímenes y causas de todo el
   // país: "Mató a su mujer embarazada, se escapó de la cárcel…" salía verde
@@ -1050,8 +1069,12 @@ export const MOTIVO_POLICIAL_DE_AFUERA = 'policial de afuera con violencia o acu
 // cumbre, un partido, una serie): no alcanza con que el feed diga "Tecnología".
 // La sección se confirma con el TÍTULO: si no nombra algo de tecnología, no se
 // le cree a la fuente y la nota se clasifica por lo que dice.
+// "drone"/"dron"/"drones" NO están: el 27/09 confirmaban como tecnología una
+// nota sobre ataques con drones de grupos armados en Colombia, que no tiene
+// nada que ver. Un dron de verdad tecnológico llega igual por otra palabra
+// de esta lista (inteligencia artificial, startup, software, etc.).
 export const PALABRAS_DE_TECNOLOGIA_EN_EL_TITULO = [
-  'inteligencia artificial', 'algoritmo', 'drone', 'dron', 'drones', 'satelital', 'ciberseguridad',
+  'inteligencia artificial', 'algoritmo', 'satelital', 'ciberseguridad',
   'ciberataque', 'hackeo', 'software', 'startup', 'semiconductores', 'smartphone', 'nvidia', 'robot',
   'robots', 'ia', 'chatgpt', 'openai', 'gemini', 'claude', 'copilot', 'chatbot', 'machine learning',
   'microsoft', 'google', 'apple', 'samsung', 'android', 'iphone', 'windows', 'linux',
@@ -1089,7 +1112,10 @@ export const FIGURAS = [
   'colapinto', 'franco colapinto', 'canapino', 'agustín canapino',
   'agustin canapino', 'pechito lópez', 'pechito lopez', 'josé maría lópez',
   // Tenis
-  'cerúndolo', 'cerundolo', 'báez', 'sebastián báez', 'etcheverry',
+  // Con nombre y apellido (27/09): "etcheverry" solo entró como figura una
+  // publicidad de "Alejandro Etcheverry Inmobiliaria" de Ayacucho, y "báez"
+  // solo toma cualquier nota de Lázaro Báez.
+  'cerúndolo', 'cerundolo', 'sebastián báez', 'sebastian baez', 'tomás etcheverry', 'tomas etcheverry',
   // Básquet y otros
   'campazzo', 'facundo campazzo', 'las leonas', 'los pumas',
   // Ciclismo y atletismo, que en Balcarce tienen público propio

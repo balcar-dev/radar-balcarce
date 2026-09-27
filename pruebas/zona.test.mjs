@@ -101,6 +101,26 @@ test('lo que sí es de tecnología en un feed de tecnología sigue siendo Tecnol
   }
 });
 
+test('un ataque con drones en Colombia no es Tecnología aunque el feed lo traiga así (27/09)', () => {
+  // Pasó el 27/09: "Grupos armados en Colombia multiplican ataques con
+  // drones en 2026" salió publicada en Tecnología porque "drones" está en
+  // el título y confirmaba la sección del feed de Infobae. Es Policiales de
+  // otro lado, no tecnología.
+  const n = nacional('Grupos armados en Colombia multiplican ataques con drones en 2026', { seccionFuente: 'Tecnología' });
+  assert.notEqual(paraPruebas.clasificar(n), 'Tecnología');
+});
+
+test('la política de un estado de otro país tampoco sale sola, aunque no sea un líder mundial (27/09)', () => {
+  // Pasó el 27/09: "California promulga una ley para fortalecer el
+  // intercambio estudiantil con México" salió sola en Política por la
+  // palabra "gobernador". La lista de internacional sólo tenía líderes
+  // mundiales.
+  const abierto = (n) => paraPruebas.semaforo({ ...n, cuerpo: 'El gobernador de California, Gavin Newsom, promulgó la ley.' }, 'Política', 80);
+  const california = abierto(nacional('California promulga una ley para fortalecer el intercambio estudiantil con México'));
+  assert.equal(california.color, 'amarillo');
+  assert.match(california.motivo, /internacional/);
+});
+
 test('lo internacional sin relación con Balcarce no sale solo; lo de acá, sí', () => {
   const abierto = (n) => paraPruebas.semaforo({ ...n, cuerpo: 'Texto.' }, 'Política', 80);
   const cumbre = abierto(nacional('Donald Trump y Xi Jinping concluyen su cumbre en Washington'));

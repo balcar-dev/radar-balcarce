@@ -25,6 +25,21 @@ import { slugDe } from './ruta.js';
  *  PC prendida, y el 25/09 la portada tenía 43 notas de más de tres días. */
 export const HORAS_EN_PORTADA = 72;
 
+/**
+ * Las notas que se sacaron a mano de la web (web/data/retiradas.json), fuera
+ * del panel. Existe desde el 27/09: ese día se retiraron de una vez las notas
+ * que nunca tendrían que haber salido (de otros países, chimentos, medios de
+ * España, policiales de afuera, publicidad) y el panel estaba prendido, así
+ * que sus decisiones se habrían pisado. Una nota de esta lista no sale en
+ * ninguna lista ni tiene página, aunque la ingesta la vuelva a traer.
+ * Devuelve el conjunto de ids; con un archivo vacío o roto, ninguno.
+ */
+export function idsRetiradosAMano(json) {
+  const notas = json && typeof json === 'object' ? json.notas : null;
+  if (!notas || typeof notas !== 'object') return new Set();
+  return new Set(Object.keys(notas).filter((id) => notas[id] && notas[id].motivo));
+}
+
 /** Cuánto dura una página. Pasado eso, el enlace ya no circula. */
 export const DIAS_DE_ARCHIVO = 180;
 

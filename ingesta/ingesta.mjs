@@ -416,6 +416,18 @@ const PALABRAS_DEBILES = new Set([
   'bonos', 'finanzas', 'empresas en mora', 'salarios', 'deuda',
   'ia', 'claude', 'gemini', 'copilot', 'robot', 'robots', 'software', 'startup',
   'smartphone', 'chatbot',
+  // Sumadas el 27/09: "Fangio" y "taller" mandaban a Automovilismo o a
+  // Cultura una nota que no tenía nada que ver.
+  //   · "fangio" — el automovilismo "gana siempre" (más abajo) y no mira esta
+  //     lista, así que a "fangio" hay que sacarla de ahí directamente; acá
+  //     sólo se evita que decida como Automovilismo si aparece de casualidad
+  //     en el cuerpo o en una categoría del feed ("El colectivo espera, el
+  //     Fangio acelera" venía como categoría de una nota de transporte
+  //     público de Necochea, sin ninguna relación con el piloto).
+  //   · "taller" — "antes de visitar el taller mecánico" mandó una nota de
+  //     Ámbito sobre cómo arreglar la ventanilla de un auto a Cultura y
+  //     agenda, que la publicó sola.
+  'fangio', 'taller',
 ]);
 
 /** Los temas de larga duración que toca esta nota. Suele ser ninguno. */

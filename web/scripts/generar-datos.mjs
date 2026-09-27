@@ -27,6 +27,7 @@ import { sinNotasRepetidas } from '../lib/texto.js';
 import { pendientesDeLaIngesta } from '../../redes/avisos.mjs';
 import {
   vigenteEnPortada, slugsConocidos, fijarSlug, actualizarArchivo, idsEnRedes, sinPuntaje, comoArchivoJson,
+  idsRetiradosAMano,
 } from '../lib/archivo.js';
 import { actualizarAgenda, comoAgendaJson } from '../lib/eventos.js';
 import { traerDolar } from '../lib/dolar.js';
@@ -56,6 +57,8 @@ const INTENTOS_IA = path.join(AQUI, '..', 'data', 'intentos-ia.json');
 // nota propia del dólar y su comparación con días anteriores
 // (lib/notas-propias.js). Va versionado, como intentos-ia.json.
 const HISTORIA_DOLAR = path.join(AQUI, '..', 'data', 'dolar-historia.json');
+// Lo que se sacó a mano de la web, fuera del panel (lib/archivo.js).
+const RETIRADAS_A_MANO = idsRetiradosAMano(leerJson(path.join(AQUI, '..', 'data', 'retiradas.json'), null));
 
 // Este script corre en dos lugares distintos:
 //
@@ -164,6 +167,7 @@ const direcciones = slugsConocidos({
 const esperandoCuerpo = [];
 
 function notaPublicada(n) {
+  if (RETIRADAS_A_MANO.has(n.id)) return null;
   const d = estado.decisiones[n.id];
   // Sólo manda lo que decidió una persona. Lo que guardó la máquina es una
   // foto de un semáforo viejo: ver decisionHumana en ingesta/utiles.mjs.
@@ -264,7 +268,7 @@ const deLaIngesta = (ultima.notas ?? [])
 //   · si una persona le corrigió el titular o el copete y la ingesta ya no
 //     la trae, la corrección llega igual a la página.
 const enIngesta = new Map((ultima.notas ?? []).map((n) => [n.id, n]));
-const retiradas = new Set();
+const retiradas = new Set(RETIRADAS_A_MANO);
 const corregidas = [];
 for (const a of archivoAnterior.notas ?? []) {
   const d = estado.decisiones[a.id];
