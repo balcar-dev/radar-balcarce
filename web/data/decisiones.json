@@ -1,5 +1,5 @@
 {
-  "exportado": "2026-09-27T09:10:27.769Z",
+  "exportado": "2026-09-27T09:20:27.837Z",
   "decisiones": {
     "1951120": {
       "estado": "automatica",
@@ -31428,6 +31428,107 @@
         "nivel": "MEDIA",
         "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
         "sugeridoPorIA": "BAJA"
+      }
+    },
+    "11zms3w": {
+      "estado": "automatica",
+      "titulo": "Grupos armados en Colombia multiplican ataques con drones en 2026",
+      "copete": "Los ataques con drones por parte de grupos armados en Colombia superaron los registros de todo el año pasado con casi trescientos casos en lo que va de 2026. La noticia no tiene vínculos directos informados con Balcarce.",
+      "cuerpo": "Los grupos armados en Colombia acumularon 292 ataques con drones con corte al 15 de septiembre de 2026, según un balance de la Fuerza Pública difundido por la prensa. La cifra supera los 277 eventos registrados durante todo 2025 y evidencia un incremento constante desde los primeros dos casos documentados en 2023.\n\nEl balance detalla que las estructuras vinculadas a Iván Mordisco participaron en 145 de los hechos de este año, el ELN en 119 y la facción de Calarcá en 26. En cuanto al saldo total entre 2024 y 2026, la Fuerza Pública contabilizó 456 heridos y 31 fallecidos, mientras que organizaciones no gubernamentales manejan un cálculo diferente de 12 civiles muertos, de acuerdo con los datos publicados.\n\nEl uso de estos dispositivos incluye la adaptación de aeronaves comerciales y el empleo de impresoras 3D para fabricar componentes, según indicó Milton Salazar, profesor de sistemas aéreos de la Universidad de los Andes. Cauca encabeza los departamentos con mayor cantidad de hechos acumulados en los últimos años.",
+      "guion": "Grupos armados en Colombia multiplican ataques con drones en dos mil veintiséis",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T09:20:27.746Z",
+      "claves": [
+        "Se registraron 292 ataques con drones en Colombia en lo que va de 2026.",
+        "La cifra supera los 277 hechos documentados durante todo el año anterior.",
+        "El último ataque reportado ocurrió contra una comisaría en Cesar, sin heridos.",
+        "Las estructuras de Iván Mordisco y el ELN concentran la mayoría de los casos."
+      ],
+      "seSabe": [
+        "La Fuerza Pública registró 292 ataques con drones en Colombia hasta el 15 de septiembre de 2026, según un balance oficial.",
+        "El total de 2026 supera los 277 eventos reportados en todo 2025 y los 119 de 2024.",
+        "El ataque más reciente ocurrió el 24 de septiembre en Aguachica, Cesar, contra una estación de policía, con daños materiales y sin heridos.",
+        "Las estructuras asociadas a Iván Mordisco suman 145 ataques este año, el ELN 119 y la facción de Calarcá 26.",
+        "El saldo general entre 2024 y 2026 alcanza 456 heridos y 31 fallecidos, según las cifras oficiales."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "etiquetas": [
+        "Colombia",
+        "drones",
+        "ataques",
+        "grupos armados"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/colombia/2026/09/27/grupos-armados-en-colombia-han-realizado-292-ataques-con-drones-en-lo-que-va-de-2026/",
+          "fecha": "2026-09-27T09:18:33.000Z",
+          "oficial": false,
+          "aporte": "Aportó el balance oficial de la Fuerza Pública sobre los ataques con drones en Colombia, las cifras por año y las estructuras involucradas."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "17k72dr": {
+      "estado": "automatica",
+      "titulo": "California promulga una ley para fortalecer el intercambio estudiantil con México",
+      "copete": "El gobernador de California, Gavin Newsom, promulgó la ley AB 1093 para impulsar programas de intercambio académico con México a partir de 2027.",
+      "cuerpo": "El proyecto fue patrocinado por el asambleísta José Luis Solache. La normativa especifica que su aplicación quedará sujeta a la asignación de fondos necesarios por parte de la Legislatura. En paralelo, el mandatario firmó la ley AB 1307, que habilitará licencias temporales de tres años para treinta dentistas recibidos en México para prestar servicios en centros de salud comunitarios.\n\nComo antecedente reciente en la agenda legislativa californiana, a principios de la semana pasada el mandatario firmó normativas vinculadas al control de sistemas de inteligencia artificial.",
+      "guion": "California promulga una ley para fortalecer el intercambio estudiantil con México",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T09:20:27.746Z",
+      "claves": [
+        "Promulgación de la ley AB 1093 en California",
+        "Impulso a programas de intercambio académico con México",
+        "Implementación prevista a partir del ciclo 2027-2028",
+        "Aprobación de licencias temporales para profesionales de la salud dental"
+      ],
+      "seSabe": [
+        "Gavin Newsom promulgó la ley AB 1093 el domingo 20 de septiembre.",
+        "La normativa exige a la Universidad Estatal de California adoptar un plan de intercambio con universidades públicas de México desde el período 2027-2028.",
+        "La legislación requiere la asignación previa de fondos por parte de la Legislatura para ser operativa.",
+        "Se aprobó la ley AB 1307 para otorgar licencias temporales a treinta odontólogos de México."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El gobernador de California promulgó la ley AB 1093 para impulsar programas de intercambio estudiantil con universidades de México a partir de 2027.",
+      "etiquetas": [
+        "California",
+        "Mexico",
+        "Educacion",
+        "Gavin Newsom",
+        "Intercambio estudiantil"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/estados-unidos/california/es-oficial-la-ley-firmada-por-newsom-que-fortalece-programas-de-intercambio-entre-california-y-nid27092026/",
+          "fecha": "2026-09-27T09:09:00.000Z",
+          "oficial": false,
+          "aporte": "Detalles sobre la promulgación de la ley AB 1093 de intercambio estudiantil y la medida AB 1307 para profesionales de la salud dental en California."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1v3okzj",
+          "titulo": "Oficial y confirmado: Gavin Newsom avanza con una ley que busca “Apagar la IA” en California",
+          "fecha": "2026-09-21T16:22:00.000Z",
+          "ruta": "/nota/oficial-y-confirmado-gavin-newsom-avanza-con-una-ley-que-busca-apagar-1v3okzj"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
       }
     }
   },
