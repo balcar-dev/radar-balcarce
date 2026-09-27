@@ -1,5 +1,5 @@
 {
-  "exportado": "2026-09-27T12:20:29.993Z",
+  "exportado": "2026-09-27T12:31:35.106Z",
   "decisiones": {
     "1951120": {
       "estado": "automatica",
@@ -33452,6 +33452,171 @@
           "fecha": "2026-09-27T12:14:06.000Z",
           "oficial": false,
           "aporte": "Detalló el funcionamiento de la caja negra, las redes neuronales y los riesgos de los agentes autónomos."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "e9anvw": {
+      "estado": "automatica",
+      "titulo": "El autodromo Juan Manuel Fangio recibe al automovilismo nacional en Balcarce",
+      "copete": "Tras quince años sin competencias nacionales, el circuito de la sierra La Barrosa vuelve a recibir carreras con la llegada de las TC Pick Up. La actividad genera expectativa en el turismo y el comercio local.",
+      "cuerpo": "El autódromo Juan Manuel Fangio recupera este fin de semana la actividad oficial del automovilismo nacional tras quince años de inactividad. El circuito ubicado sobre la sierra La Barrosa recibe a las categorías de TC Pick Up y TC Pista Pick Up, en un acontecimiento que marca el regreso de las competencias de primer nivel a la ciudad.\n\nEl evento genera un fuerte movimiento en sectores vinculados al turismo y la actividad comercial, como la hotelería y la gastronomía, debido a la llegada de visitantes, fanáticos y equipos.\n\nEl fin de semana incluye la participación de pilotos locales y regionales con vínculo directo con la ciudad, entre quienes se encuentran José y su hijo Diego Ciantini, además del regreso del piloto Santiago Mangoni para competir en esta fecha especial.",
+      "guion": "El autodromo Juan Manuel Fangio recibe al automovilismo nacional en Balcarce",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T12:31:35.017Z",
+      "claves": [
+        "El autódromo Juan Manuel Fangio retoma la actividad nacional tras quince años.",
+        "Las categorías TC Pick Up y TC Pista Pick Up disputan sus competencias este fin de semana.",
+        "La reapertura incluye la participación de los pilotos locales José y Diego Ciantini, y Santiago Mangoni.",
+        "El evento moviliza sectores comerciales como la hotelería y la gastronomía."
+      ],
+      "seSabe": [
+        "El autódromo Juan Manuel Fangio retoma la actividad nacional tras quince años de inactividad, según los datos informados.",
+        "El gobernador bonaerense Axel Kicillof participó en la inauguración de la nueva etapa competitiva.",
+        "Los pilotos José y Diego Ciantini, junto con Santiago Mangoni, participan de la competencia en el circuito local."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El autódromo Juan Manuel Fangio vuelve a recibir al automovilismo nacional tras quince años de inactividad. Las TC Pick Up compiten este fin de semana en la sierra La Barrosa con participación de pilotos locales y un fuerte impacto en el turismo y el comercio.",
+      "etiquetas": [
+        "autodromo Juan Manuel Fangio",
+        "automovilismo",
+        "TC Pick Up",
+        "Balcarce",
+        "deportes"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "0223 (Mar del Plata)",
+          "enlace": "https://www.0223.com.ar/nota/2026-9-27-9-20-0-la-historia-vuelve-a-ponerse-en-marcha-en-balcarce-el-autodromo-juan-manuel-fangio-recibe-nuevamente-al-automovilimo-nacional",
+          "fecha": "2026-09-27T12:20:00.000Z",
+          "oficial": false,
+          "aporte": "Detalla el regreso de las TC Pick Up al autódromo Juan Manuel Fangio tras quince años y la participación de los pilotos locales."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "kquco2",
+          "titulo": "El autódromo Juan Manuel Fangio vuelve a recibir automovilismo nacional en Balcarce",
+          "fecha": "2026-09-26T17:24:55.000Z",
+          "ruta": "/nota/el-autodromo-juan-manuel-fangio-vuelve-a-recibir-automovilismo-kquco2"
+        },
+        {
+          "id": "epzsa5",
+          "titulo": "Reinauguran el autódromo Juan Manuel Fangio en Balcarce",
+          "fecha": "2026-09-26T13:46:35.000Z",
+          "ruta": "/nota/el-autodromo-juan-manuel-fangio-reabre-sus-puertas-en-balcarce-epzsa5"
+        },
+        {
+          "id": "b9osje",
+          "titulo": "El autódromo Juan Manuel Fangio recupera la actividad oficial en Balcarce",
+          "fecha": "2026-09-26T12:45:48.000Z",
+          "ruta": "/nota/el-autodromo-juan-manuel-fangio-recupera-la-actividad-oficial-en-b9osje"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "147gcbd": {
+      "estado": "automatica",
+      "titulo": "Las encuestas muestran a los favoritos para las elecciones de Brasil",
+      "copete": "Los sondeos previos a los comicios presidenciales del próximo mes en Brasil ubican al actual mandatario y a su principal oponente al frente de las preferencias.",
+      "cuerpo": "Las elecciones presidenciales de Brasil se celebrarán el domingo cuatro de octubre y los sondeos recientes ubican como favoritos a un posible balotaje al presidente Luiz Inácio Lula da Silva y al opositor Flávio Bolsonaro.\n\nEn paralelo, como se había informado en septiembre, los ciudadanos brasileños habilitados que residen en el exterior pueden consultar su lugar de votación.\n\nLos comicios definirán a las máximas autoridades ejecutivas por los próximos cuatro años, además de renovar gobernaciones provinciales y bancas legislativas en veintiséis estados.",
+      "guion": "Las encuestas muestran a los favoritos para las elecciones de Brasil",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T12:31:35.017Z",
+      "claves": [
+        "Las elecciones presidenciales en Brasil se realizarán el cuatro de octubre.",
+        "Los sondeos ubican al frente a Lula da Silva y a Flávio Bolsonaro.",
+        "Las consultoras registran diferencias que oscilan entre el tres y el cuatro por ciento."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Las últimas encuestas para las elecciones presidenciales de Brasil ubican al actual mandatario y al principal opositor como favoritos de cara a los comicios del próximo cuatro de octubre.",
+      "etiquetas": [
+        "elecciones Brasil 2026",
+        "Lula da Silva",
+        "Flávio Bolsonaro",
+        "encuestas",
+        "politica internacional"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/el-mundo/ultimas-encuestas-de-las-elecciones-en-brasil-2026-quien-va-primero-hoy-viernes-25-de-septiembre-nid27092026/",
+          "fecha": "2026-09-27T12:19:25.000Z",
+          "oficial": false,
+          "aporte": "Detalló los resultados de las últimas encuestas de Datafolha, Quaest y Nexus sobre las elecciones presidenciales en Brasil."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "n5lm6f",
+          "titulo": "Dólar blue hoy: a cuánto cotiza este viernes 25 de septiembre",
+          "fecha": "2026-09-25T07:00:08.000Z",
+          "ruta": "/nota/dolar-blue-hoy-a-cuanto-cotiza-este-viernes-25-de-septiembre-n5lm6f"
+        },
+        {
+          "id": "1t6ueme",
+          "titulo": "Dónde votar en las elecciones de Brasil 2026 y cómo consultar el lugar de votación en la Argentina",
+          "fecha": "2026-09-24T10:16:33.000Z",
+          "ruta": "/nota/donde-votar-en-las-elecciones-de-brasil-2026-y-como-consultar-el-1t6ueme"
+        },
+        {
+          "id": "1ftzlvl",
+          "titulo": "Elecciones en Brasil 2026: fecha, candidatos y todo lo que hay que saber",
+          "fecha": "2026-09-23T02:23:00.000Z",
+          "ruta": "/nota/elecciones-en-brasil-2026-fecha-candidatos-y-todo-lo-que-hay-que-saber-1ftzlvl"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "uwvhop": {
+      "estado": "automatica",
+      "titulo": "Chevron proyecta millonaria inversión para ampliar su producción",
+      "copete": "La petrolera estadounidense prevé destinar miles de millones de dólares para multiplicar su actividad en Vaca Muerta durante la próxima década bajo el amparo del RIGI.",
+      "cuerpo": "La petrolera estadounidense Chevron prepara la inversión extranjera más grande amparada bajo el Régimen de Incentivo para Grandes Inversiones para triplicar su producción en menos de diez años en el yacimiento El Trapial, ubicado en Neuquén. El proyecto contempla destinar una cifra multimillonaria en dólares hasta fines de dos mil veintiocho.\n\nEl yacimiento cuenta con un área muy extensa y una producción diaria de crudo que representa un porcentaje significativo a nivel nacional. La actividad en la zona requiere el movimiento constante de camiones de arena y un alto consumo diario de agua para la estimulación hidráulica.\n\nLa firma fue pionera en apostar a Vaca Muerta junto a YPF hace más de una década. Actualmente, la compañía busca expandir sus operaciones no convencionales en el país mediante este nuevo plan estratégico de exportación a largo plazo.",
+      "guion": "Chevron proyecta millonaria inversion para ampliar su produccion",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T12:31:35.017Z",
+      "claves": [
+        "Chevron prepara una inversión millonaria en Vaca Muerta.",
+        "El plan apunta a triplicar la producción en El Trapial.",
+        "La iniciativa se ampara en el Régimen de Incentivo para Grandes Inversiones."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "La petrolera Chevron prepara una inversión histórica en Vaca Muerta para triplicar su producción en la próxima década bajo el amparo del régimen de incentivos.",
+      "etiquetas": [
+        "Chevron",
+        "Vaca Muerta",
+        "Neuquén",
+        "Inversión"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Clarín",
+          "enlace": "https://www.clarin.com/economia/chevron-quiere-triplicar-produccion-vaca-muerta-mayor-inversion-extranjera-rigi_0_ecEhpc9HVA.html",
+          "fecha": "2026-09-27T12:00:28.000Z",
+          "oficial": false,
+          "aporte": "Detalló los planes de inversión de Chevron, las características operativas de El Trapial y los antecedentes de la petrolera en Vaca Muerta."
         }
       ],
       "verificacion": {
