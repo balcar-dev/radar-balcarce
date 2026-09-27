@@ -819,7 +819,10 @@ function palabrasDeResumenes(nota) {
  * igual): sólo QUÉ se le pide primero. Lo ya escrito no gasta nada.
  */
 export function ordenarParaReescribir(notas, previas = {}) {
-  const porPuntaje = (a, b) => (b.relevancia ?? 0) - (a.relevancia ?? 0);
+  // Lo más nuevo primero, por tramos de 6 horas (una nota de hace dos días no
+  // pasa delante de una de hace una hora); dentro del tramo, el puntaje.
+  const tramo = (n) => Math.floor((Date.parse(n.fecha) || 0) / (6 * 3600 * 1000));
+  const porPuntaje = (a, b) => (tramo(b) - tramo(a)) || ((b.relevancia ?? 0) - (a.relevancia ?? 0));
   const yaEscrita = (n) => !!(previas[n.id]?.titulo && tieneCuerpo(previas[n.id]));
   const locales = notas.filter(esLocal).sort(porPuntaje);
   const deAfuera = notas.filter((n) => !esLocal(n)).sort(porPuntaje);

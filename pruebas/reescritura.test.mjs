@@ -468,3 +468,12 @@ test("con el cupo casi gastado, lo de afuera espera y lo de Balcarce sigue (rese
   await reescribirAutomaticas([{ ...notaVerde(), id: "local", seccion: "Balcarce" }], { ...SIN_PISO, opciones: { fetchFn: fn }, intentos, ahora, registro: () => {} });
   assert.ok(pedidos.length > 0, "lo local todavía tiene cupo");
 });
+
+test("la reescritura empieza por lo más nuevo: una nota local de hace dos días no pasa delante de una de hace una hora", async () => {
+  const { ordenarParaReescribir } = await import("../reels/reescritura.mjs");
+  const hace = (h) => new Date(Date.now() - h * 3600e3).toISOString();
+  const vieja = notaVerde({ id: "vieja", relevancia: 95, fecha: hace(48) });
+  const nueva = notaVerde({ id: "nueva", relevancia: 70, fecha: hace(1) });
+  const parecida = notaVerde({ id: "parecida", relevancia: 90, fecha: hace(2) });
+  assert.deepEqual(ordenarParaReescribir([vieja, nueva, parecida]).map((n) => n.id), ["parecida", "nueva", "vieja"], "el tramo de 6 horas manda; dentro del tramo, el puntaje");
+});

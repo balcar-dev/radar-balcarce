@@ -64,15 +64,17 @@ export const REESCRITURA = {
   palabrasMinimasDeMaterial: 60,
   porCorrida: 40,
   // Tope de notas que se le piden a la IA en un día entero (hora de Balcarce).
-  // La clave que se usa es paga y Hernán y Andrés no tienen margen: el 25/09 se
-  // pidieron unas 300 en un día, con muchas corridas a mano. Primero se gasta
-  // en lo de Balcarce (el orden ya lo hace así).
-  porDia: 150,
+  // Se usa primero la clave gratis; la paga sólo si la gratis se queda sin cupo
+  // y Hernán y Andrés no tienen margen: el 27/09 se subió de 150 a 300 porque
+  // 150 dejaba unas 67 notas verdes esperando, y hay que mirar en Google Cloud
+  // que no aparezca ningún cargo. Primero se gasta en lo de Balcarce y en lo
+  // más nuevo (ordenarParaReescribir).
+  porDia: 300,
   // De esos, los últimos quedan reservados para lo de Balcarce: lo de afuera
   // deja de pedirse antes, así lo local que llega a la noche no se queda sin
   // cupo (26/09: a las 21:30 ya se habían gastado los 150 y tres notas locales
   // importantes esperaban sin cuerpo).
-  reservaParaLocales: 40,
+  reservaParaLocales: 80,
   caracteresDelTextoCompleto: 4000,
   diasDeAntecedentes: 30,
   antecedentesMaximo: 3,
