@@ -1,5 +1,5 @@
 {
-  "exportado": "2026-09-27T01:11:04.060Z",
+  "exportado": "2026-09-27T01:21:14.397Z",
   "decisiones": {
     "1951120": {
       "estado": "automatica",
@@ -26248,6 +26248,396 @@
           "titulo": "Kicillof destaca la reinauguración del autódromo Juan Manuel Fangio en Balcarce",
           "fecha": "2026-09-26T00:07:31.000Z",
           "ruta": "/nota/kicillof-destaca-la-reapertura-del-autodromo-en-balcarce-uukabt"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "kquco2": {
+      "estado": "automatica",
+      "titulo": "El autódromo Juan Manuel Fangio vuelve a recibir automovilismo nacional en Balcarce",
+      "copete": "El circuito local retoma la actividad nacional tras quince años de inactividad. Este fin de semana se disputará la octava fecha de las TC Pick Up.",
+      "cuerpo": "El autódromo Juan Manuel Fangio de Balcarce vuelve a contar con actividad deportiva nacional tras quince años de inactividad para estas categorías, originada a partir del accidente registrado en la última competencia de Turismo Carretera disputada en el circuito bonaerense.\n\nPara lograr la operatividad del trazado se llevaron a cabo trabajos impulsados por el Municipio, los cuales contaron con el asesoramiento de la ACTC y el aporte económico del Gobierno de la Provincia de Buenos Aires.\n\nComo parte de esta reapertura, el circuito serrano recibirá este fin de semana la octava fecha de las TC Pick Up, marcando el regreso de las competencias nacionales a la ciudad.",
+      "guion": "El autodromo Juan Manuel Fangio vuelve a recibir automovilismo nacional en Balcarce",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T01:21:14.338Z",
+      "claves": [
+        "El autódromo Juan Manuel Fangio recupera la actividad nacional tras quince años.",
+        "El circuito albergará la octava fecha de las TC Pick Up este fin de semana.",
+        "Las obras se realizaron mediante el Municipio, la ACTC y la Provincia."
+      ],
+      "seSabe": [
+        "El autódromo Juan Manuel Fangio estuvo inactivo para categorías nacionales desde 2011.",
+        "La inactividad se originó tras el accidente en la última competencia de Turismo Carretera.",
+        "El Municipio realizó trabajos con asesoramiento de la ACTC y aportes de la Provincia.",
+        "El circuito recibirá este fin de semana la octava fecha de las TC Pick Up."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El autódromo Juan Manuel Fangio de Balcarce vuelve a recibir competencias nacionales tras quince años de inactividad. Este fin de semana se disputará la octava fecha de las TC Pick Up tras tareas realizadas entre el Municipio, la ACTC y la Provincia.",
+      "etiquetas": [
+        "autodromo Juan Manuel Fangio",
+        "automovilismo",
+        "TC Pick Up",
+        "Balcarce",
+        "deportes"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Ecos Diarios (Necochea)",
+          "enlace": "https://elecos.com.ar/tras-15-anos-volvio-el-automovilismo-nacional-a-balcarce-y-ecos-diarios-te-muestra-el-autodromo",
+          "fecha": "2026-09-26T17:24:55.000Z",
+          "oficial": false,
+          "aporte": null
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "5agvfd",
+          "titulo": "El autódromo de Balcarce vuelve a recibir al automovilismo nacional en Balcarce",
+          "fecha": "2026-09-25T13:25:22.000Z",
+          "ruta": "/nota/el-autodromo-de-balcarce-vuelve-a-recibir-al-automovilismo-nacional-5agvfd"
+        },
+        {
+          "id": "gfro59",
+          "titulo": "El autódromo Juan Manuel Fangio vuelve a recibir automovilismo nacional en Balcarce",
+          "fecha": "2026-09-24T19:48:00.000Z",
+          "ruta": "/nota/el-autodromo-juan-manuel-fangio-vuelve-a-recibir-automovilismo-gfro59"
+        },
+        {
+          "id": "epzsa5",
+          "titulo": "Reinauguran el autódromo Juan Manuel Fangio en Balcarce",
+          "fecha": "2026-09-26T13:46:35.000Z",
+          "ruta": "/nota/el-autodromo-juan-manuel-fangio-reabre-sus-puertas-en-balcarce-epzsa5"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "11genwv": {
+      "estado": "automatica",
+      "titulo": "El Concejo declara de interés un proyecto escolar en Balcarce",
+      "copete": "Estudiantes de la Escuela Primaria Nº 3 crearon un juego didáctico sobre los atractivos turísticos del distrito. La iniciativa fue distinguida por el cuerpo legislativo.",
+      "cuerpo": "Tras realizar encuestas, los estudiantes diseñaron un juego con tarjetas y referencias locales para promover el turismo interno. Por su parte, la concejal Sol Di Geronimo destacó la herramienta pedagógica, mientras que su par Enrique Guillén tambié acompañó el reconocimiento a los jóvenes, docentes y directivos.\n\nLa iniciativa había recibido el visto bueno del cuerpo deliberativo en una instancia previa para fomentar el recorrido lúdico por distintos puntos de interés de la comunidad.",
+      "guion": "El Concejo declara de interés un proyecto escolar en Balcarce",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T01:21:14.338Z",
+      "claves": [
+        "Alumnos de la Escuela Primaria Nº 3 crearon el juego Balcarce se recorre jugando.",
+        "El Concejo Deliberante declaró la iniciativa de interés legislativo, educativo y cultural.",
+        "El proyecto surgió por el aniversario distrital tras investigar el conocimiento turístico local.",
+        "Los estudiantes realizaron encuestas previas para diseñar el material didáctico."
+      ],
+      "seSabe": [
+        "El Concejo Deliberante aprobó la declaración de interés para el proyecto escolar.",
+        "La iniciativa pertenece a los alumnos de tercer año de la Escuela Primaria N.º 3.",
+        "El trabajo incluyó encuestas a vecinos y el diseño de un juego de tarjetas sobre la ciudad."
+      ],
+      "noConfirmado": [
+        "No se detallaron las fechas exactas en las que se implementará el juego en el distrito."
+      ],
+      "textoRedes": "El Concejo Deliberante reconoció a alumnos de la Escuela Primaria Nº 3 que crearon un juego didáctico para promover los atractivos turísticos y el conocimiento de los vecinos sobre Balcarce.",
+      "etiquetas": [
+        "Concejo Deliberante",
+        "Escuela Primaria 3",
+        "Balcarce se recorre jugando",
+        "turismo"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Radio Gabal (FM 104.1)",
+          "enlace": "https://www.radiogabal.com.ar/index.php/comunidad/balcarce-se-recorre-jugando-el-proyecto-de-alumnos-de-la-ep-n-3-fue-declarado-de-interes-legislativo",
+          "fecha": "2026-09-26T14:24:46.000Z",
+          "oficial": false,
+          "aporte": "Informó la aprobación en el Concejo y detalló los dichos de los ediles Paciaroni, Di Geronimo y Guillén."
+        },
+        {
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/reconocieron-a-alumnos-de-la-escuela-n-3-por-su-proyecto-balcarce-se-recorre-jugando-217",
+          "fecha": "2026-09-25T22:45:26.000Z",
+          "oficial": false,
+          "aporte": "Reportó el reconocimiento del Concejo Deliberante a los alumnos de la Escuela Primaria Nº 3."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1d356vs",
+          "titulo": "El Concejo aprueba el proyecto escolar Balcarce se recorre jugando en Balcarce",
+          "fecha": "2026-09-24T23:00:34.000Z",
+          "ruta": "/nota/el-concejo-aprueba-un-juego-turistico-escolar-en-balcarce-1d356vs"
+        },
+        {
+          "id": "1yjy49a",
+          "titulo": "El Concejo reconoce a alumnos de la Escuela Primaria por su proyecto en Balcarce",
+          "fecha": "2026-09-25T22:45:26.000Z",
+          "ruta": "/nota/el-concejo-reconoce-a-alumnos-de-la-escuela-primaria-por-su-proyecto-1yjy49a"
+        },
+        {
+          "id": "jul4v3",
+          "titulo": "Hoy Balcarce «se recorre jugando».",
+          "fecha": "2026-09-16T15:09:41.000Z",
+          "ruta": "/nota/hoy-balcarce-se-recorre-jugando-jul4v3"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      }
+    },
+    "jgkb1p": {
+      "estado": "automatica",
+      "titulo": "El autódromo Fangio completa su estacionamiento de autos en Balcarce",
+      "copete": "Los sectores habilitados para automóviles en el Autódromo Municipal Juan Manuel Fangio llegaron al total de su capacidad durante la jornada de las TC Pick Up.",
+      "cuerpo": "El Autódromo Municipal Juan Manuel Fangio alcanzó este sábado el cien por ciento de ocupación en los sectores habilitados para el estacionamiento de automóviles, en el marco del regreso de las categorías nacionales a Balcarce tras quince años sin competencias oficiales.\n\nAnte la saturación de los espacios internos, las autoridades recomendaron a los asistentes que aún se encuentran en camino contemplar alternativas de traslado y respetar las zonas permitidas en las inmediaciones, además de seguir las indicaciones del personal de tránsito y seguridad.",
+      "guion": "El autódromo Fangio completa su estacionamiento de autos en Balcarce",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T01:21:14.338Z",
+      "claves": [
+        "El estacionamiento de autos del autódromo llegó al cien por ciento de ocupación.",
+        "El acceso vehicular quedó restringido y solo se permite el ingreso peatonal.",
+        "Los sectores destinados a motocicletas todavía cuentan con disponibilidad.",
+        "El evento marca el regreso de las categorías nacionales de automovilismo después de quince años."
+      ],
+      "seSabe": [
+        "El Autódromo Municipal Juan Manuel Fangio completó este sábado el cien por ciento de ocupación en sus sectores de estacionamiento para automóviles.",
+        "El acceso vehicular de cuatro ruedas al predio fue restringido por la alta concurrencia.",
+        "Los espacios destinados a motos continúan con disponibilidad para estacionar.",
+        "Las autoridades recomendaron utilizar alternativas de traslado y respetar las indicaciones de tránsito en las inmediaciones."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El Autódromo Municipal Juan Manuel Fangio alcanzó este sábado la ocupación total de sus espacios para autos en el marco del regreso del automovilismo nacional a Balcarce, por lo que el ingreso vehicular al predio quedó restringido y pasó a ser exclusivamente peatonal.",
+      "etiquetas": [
+        "Autodromo Fangio",
+        "Balcarce",
+        "Automovilismo",
+        "TC Pick Up",
+        "Transito"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infórmese Primero (FM 104.9)",
+          "enlace": "http://www.informeseprimero.com.ar/2026/09/por-la-gran-concurrencia-se-completo-el.html",
+          "fecha": "2026-09-26T13:52:51.342Z",
+          "oficial": false,
+          "aporte": "Informó sobre el estado del estacionamiento del autódromo, las restricciones de acceso vehicular y las recomendaciones para los asistentes."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "epzsa5",
+          "titulo": "Reinauguran el autódromo Juan Manuel Fangio en Balcarce",
+          "fecha": "2026-09-26T13:46:35.000Z",
+          "ruta": "/nota/el-autodromo-juan-manuel-fangio-reabre-sus-puertas-en-balcarce-epzsa5"
+        },
+        {
+          "id": "1mkm1na",
+          "titulo": "El autódromo Juan Manuel Fangio abre sus puertas en Balcarce",
+          "fecha": "2026-09-26T02:30:21.000Z",
+          "ruta": "/nota/el-autodromo-juan-manuel-fangio-abre-sus-puertas-en-balcarce-1mkm1na"
+        },
+        {
+          "id": "uukabt",
+          "titulo": "Kicillof destaca la reinauguración del autódromo Juan Manuel Fangio en Balcarce",
+          "fecha": "2026-09-26T00:07:31.000Z",
+          "ruta": "/nota/kicillof-destaca-la-reapertura-del-autodromo-en-balcarce-uukabt"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "fqk2rx": {
+      "estado": "automatica",
+      "titulo": "El autódromo llega al ciento por ciento de ocupación en Balcarce",
+      "copete": "Los espacios para vehículos en el autódromo Juan Manuel Fangio completaron su capacidad este sábado y el acceso vehicular quedó restringido.",
+      "cuerpo": "Los sectores habilitados para el estacionamiento de vehículos en el Autódromo Juan Manuel Fangio alcanzaron el ciento por ciento de ocupación durante la jornada automovilística de este sábado, según informó la organización. Ante esta situación, el Municipio indicó que ya no hay lugar disponible para autos dentro de las instalaciones, aunque todavía quedan espacios para motos, y el ingreso para vehículos de cuatro ruedas pasó a ser exclusivamente peatonal.\n\nDesde la organización solicitaron a quienes continúan en viaje que respeten las indicaciones del personal a cargo de la circulación y mantengan despejados los caminos internos y los accesos de emergencia para asegurar el desarrollo de la actividad.",
+      "guion": "El autódromo llega al ciento por ciento de ocupación en Balcarce",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T01:21:14.338Z",
+      "claves": [
+        "El autódromo Juan Manuel Fangio completó su capacidad de estacionamiento.",
+        "El acceso para vehículos de cuatro ruedas pasó a ser exclusivamente peatonal.",
+        "Todavía hay lugares disponibles para motocicletas dentro del predio.",
+        "Se solicita mantener despejados los caminos internos y accesos de emergencia."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El autódromo Juan Manuel Fangio completó su capacidad de estacionamiento para vehículos este sábado y el ingreso vehicular al predio quedó restringido de manera peatonal para autos, mientras continúan habilitados los espacios para motos.",
+      "etiquetas": [
+        "autodromo",
+        "balcarce",
+        "estacionamiento"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Radio Gabal (FM 104.1)",
+          "enlace": "https://www.radiogabal.com.ar/index.php/comunidad/el-autodromo-alcanzo-el-100-de-ocupacion-de-estacionamiento",
+          "fecha": "2026-09-26T13:33:32.000Z",
+          "oficial": false,
+          "aporte": "Informó el estado completo de ocupación del estacionamiento y las restricciones de acceso vehicular al autódromo."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "7qxthx",
+          "titulo": "Kicillof encabeza la reinauguración del autódromo en Balcarce",
+          "fecha": "2026-09-26T02:38:34.000Z",
+          "ruta": "/nota/kicillof-encabeza-la-reapertura-del-autodromo-juan-manuel-fangio-en-7qxthx"
+        },
+        {
+          "id": "1mkm1na",
+          "titulo": "El autódromo Juan Manuel Fangio abre sus puertas en Balcarce",
+          "fecha": "2026-09-26T02:30:21.000Z",
+          "ruta": "/nota/el-autodromo-juan-manuel-fangio-abre-sus-puertas-en-balcarce-1mkm1na"
+        },
+        {
+          "id": "1chec7e",
+          "titulo": "Carlos Bianco detalla la inversión en la reinauguración del autódromo",
+          "fecha": "2026-09-26T00:15:11.000Z",
+          "ruta": "/nota/carlos-bianco-destaca-la-inversion-y-las-obras-en-el-autodromo-de-1chec7e"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "1uamvkq": {
+      "estado": "automatica",
+      "titulo": "Diego Ciantini marca el mejor tiempo en el último entrenamiento en Balcarce",
+      "copete": "El piloto local lideró la última práctica de las TC Pick Up en el Autódromo Juan Manuel Fangio. Esta tarde se disputará la sesión de clasificación.",
+      "cuerpo": "El piloto local Diego Ciantini registró este sábado el mejor tiempo en la segunda y última tanda de entrenamientos de las TC Pick Up en el Autódromo Juan Manuel Fangio de Balcarce. A bordo de la Ford Ranger del Martínez Competición, marcó un tiempo de 1:41.248 y superó por 155 milésimas a Ignacio Faín, mientras que la tercera posición quedó para Diego Azar.\n\nDetrás se ubicaron Gastón Mazzacane, Agustín Canapino, Omar Martínez, Santiago Mangoni, Thomas Ricciardi, Gustavo Tadei y Diego De Carlo, en tanto que el líder de la Copa, Mariano Werner, finalizó en el décimo quinto lugar. La actividad continuará desde las 16:10 con la disputa de la sesión de clasificación correspondiente a la novena fecha del campeonato.\n\nEsta competencia marca el retorno de la categoría al circuito local, luego de que a principios de semana el piloto y su padre, José Ciantini, presentaran los diseños de las camionetas para afrontar el fin de semana.",
+      "guion": "Diego Ciantini marca el mejor tiempo en el último entrenamiento en Balcarce",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T01:21:14.338Z",
+      "claves": [
+        "Diego Ciantini fue el más rápido en el último entrenamiento en el Autódromo Juan Manuel Fangio.",
+        "El piloto local registró un tiempo de 1:41.248 con su Ford Ranger.",
+        "La clasificación de la novena fecha se disputará desde las 16:10.",
+        "La categoría TC Pick Up concreta su retorno al circuito local."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "etiquetas": [
+        "Diego Ciantini",
+        "TC Pick Up",
+        "Autodromo Juan Manuel Fangio",
+        "Automovilismo",
+        "Balcarce"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Radio Gabal (FM 104.1)",
+          "enlace": "https://www.radiogabal.com.ar/index.php/deportes/diego-ciantini-fue-el-mas-rapido-en-el-ultimo-entrenamiento",
+          "fecha": "2026-09-26T16:39:24.000Z",
+          "oficial": false,
+          "aporte": "Informó sobre los resultados del último entrenamiento de las TC Pick Up en el Autódromo Juan Manuel Fangio y el horario de la clasificación."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "yy4073",
+          "titulo": "Así será el diseño de las Pick Up del “Bocha” y Diego Ciantini para correr en Balcarce",
+          "fecha": "2026-09-21T15:56:43.000Z",
+          "ruta": "/nota/asi-sera-el-diseno-de-las-pick-up-del-bocha-y-diego-ciantini-para-yy4073"
+        },
+        {
+          "id": "1xgs07k",
+          "titulo": "El “Bocha” y Diego Ciantini presentaron sus camionetas",
+          "fecha": "2026-09-21T19:45:23.000Z",
+          "ruta": "/nota/el-bocha-y-diego-ciantini-presentaron-sus-camionetas-1xgs07k"
+        },
+        {
+          "id": "1wc36bj",
+          "titulo": "TN C2: Gastón Iansa prevaleció en el último entrenamiento",
+          "fecha": "2026-09-19T15:12:33.000Z",
+          "ruta": "/nota/tn-c2-gaston-iansa-prevalecio-en-el-ultimo-entrenamiento-1wc36bj"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "1yy9hn8": {
+      "estado": "automatica",
+      "titulo": "Fritzler domina la primera práctica de las TC Pick Up en Balcarce",
+      "copete": "El piloto Otto Fritzler marcó el mejor tiempo en el entrenamiento inicial de las TC Pick Up en el autódromo Juan Manuel Fangio, en el marco del histórico regreso de la categoría a la pista local tras más de quince años.",
+      "cuerpo": "El autódromo Juan Manuel Fangio volvió a recibir actividad automovilística nacional luego de más de quince años sin competencias de este nivel.\n\nEl más rápido de la sesión fue Otto Fritzler, quien a bordo de una Ford Ranger del equipo Maquin Parts Racing registró un tiempo de 1:41.098. En la segunda posición se ubicó Diego Azar con una Toyota Hilux a 554 milésimas, mientras que el piloto local Diego Ciantini quedó tercero con una unidad Ford a 708 milésimas del mejor registro. Más atrás finalizaron Agustín Canapino, Ignacio Faín, Tomás Abdala, Lucas Valle, Tobías Martínez y Hernán Palazzo, además del balcarceño Santiago Mangoni en el décimo lugar, mientras que el líder del certamen, Mariano Werner, concluyó en la decimoséptima posición.\n\nLa actividad en el trazado balcarceño continuará con el segundo y último entrenamiento previsto para el mediodía.",
+      "guion": "Fritzler domina la primera práctica de las TC Pick Up en Balcarce",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T01:21:14.338Z",
+      "claves": [
+        "Otto Fritzler marcó el mejor tiempo en el primer entrenamiento en el autódromo Juan Manuel Fangio.",
+        "El circuito volvió a recibir actividad nacional después de más de quince años.",
+        "Los pilotos locales Diego Ciantini y Santiago Mangoni finalizaron tercero y décimo respectivamente.",
+        "La actividad continuará con el segundo entrenamiento de la jornada."
+      ],
+      "seSabe": [
+        "Otto Fritzler registró el tiempo más rápido de la práctica con 1:41.098 al mando de una Ford Ranger.",
+        "Diego Azar terminó en el segundo puesto y Diego Ciantini se ubicó tercero.",
+        "El autódromo recuperó la actividad nacional tras más de quince años sin competencias en la pista local.",
+        "Mariano Werner finalizó en la decimoséptima posición del entrenamiento."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "etiquetas": [
+        "automovilismo",
+        "TC Pick Up",
+        "autodromo Juan Manuel Fangio",
+        "Balcarce",
+        "Otto Fritzler"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Radio Gabal (FM 104.1)",
+          "enlace": "https://www.radiogabal.com.ar/index.php/deportes/fritzler-fue-el-mas-rapido-en-el-primer-entrenamiento-de-las-tc-pick-up-en-balcarce",
+          "fecha": "2026-09-26T15:52:56.000Z",
+          "oficial": false,
+          "aporte": "Detalló los resultados y tiempos del primer entrenamiento de las TC Pick Up en el autódromo de Balcarce."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "epzsa5",
+          "titulo": "Reinauguran el autódromo Juan Manuel Fangio en Balcarce",
+          "fecha": "2026-09-26T13:46:35.000Z",
+          "ruta": "/nota/el-autodromo-juan-manuel-fangio-reabre-sus-puertas-en-balcarce-epzsa5"
+        },
+        {
+          "id": "e6im4b",
+          "titulo": "Las TC Pick Up realizan su presentación oficial en Balcarce",
+          "fecha": "2026-09-26T03:00:42.156Z",
+          "ruta": "/nota/las-tc-pick-up-se-presentan-en-balcarce-con-una-multitud-e6im4b"
+        },
+        {
+          "id": "7qxthx",
+          "titulo": "Kicillof encabeza la reinauguración del autódromo en Balcarce",
+          "fecha": "2026-09-26T02:38:34.000Z",
+          "ruta": "/nota/kicillof-encabeza-la-reapertura-del-autodromo-juan-manuel-fangio-en-7qxthx"
         }
       ],
       "verificacion": {
