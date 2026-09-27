@@ -1,5 +1,5 @@
 {
-  "exportado": "2026-09-27T10:10:35.947Z",
+  "exportado": "2026-09-27T10:20:32.657Z",
   "decisiones": {
     "1951120": {
       "estado": "automatica",
@@ -15901,13 +15901,47 @@
     },
     "14hjcia": {
       "estado": "automatica",
-      "titulo": null,
-      "copete": null,
-      "cuerpo": null,
-      "guion": null,
-      "deIA": null,
-      "por": null,
-      "cuando": "2026-09-25T09:30:45.168Z"
+      "titulo": "Informan los servicios de sepelios de la cooperativa en Balcarce",
+      "copete": "Se dieron a conocer los servicios de sepelios y las inhumaciones programadas en el distrito, según los registros difundidos por la entidad local de servicios públicos.",
+      "cuerpo": "Durante las últimas semanas se registraron diversos servicios de sepelios y traslados al Cementerio Municipal en el partido de Balcarce, de acuerdo con los comunicados emitidos por la Cooperativa de Electricidad General Balcarce Limitada.\n\nLos avisos fúnebres detallan los cronogramas de los oficios religiosos en salas velatorias, así como las casas de duelo correspondientes a cada fallecimiento ocurrido en el distrito.\n\nEstas comunicaciones habituales permiten a familiares y allegados conocer los horarios de inhumaciones y cremaciones tanto en el ámbito urbano como en zonas rurales del partido.",
+      "guion": "Informan los servicios de sepelios de la cooperativa en Balcarce",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T10:20:32.586Z",
+      "claves": [
+        "Se detallaron los servicios de sepelios en el distrito",
+        "Los procedimientos incluyen inhumaciones y cremaciones",
+        "La información corresponde a los registros de la cooperativa local"
+      ],
+      "seSabe": [
+        "Se registraron los avisos de servicios fúnebres de la cooperativa eléctrica",
+        "Se detallaron las inhumaciones en el Cementerio Municipal y traslados a crematorios",
+        "Se informaron las casas de duelo y los horarios de los oficios religiosos"
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Se dieron a conocer los servicios de sepelios y los cronogramas de inhumaciones programadas en el distrito, según los registros de la entidad local.",
+      "etiquetas": [
+        "sepelios",
+        "servicios fúnebres",
+        "cooperativa eléctrica",
+        "Balcarce"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/fuerte-debate-por-la-tercerizacion-de-la-publicidad-en-espacios-municipales-623",
+          "fecha": null,
+          "oficial": false,
+          "aporte": "Aportó el listado de avisos fúnebres, servicios de sepelios y cronogramas de inhumaciones en Balcarce."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
     },
     "19znilf": {
       "estado": "automatica",
@@ -31842,6 +31876,223 @@
         "nivel": "MEDIA",
         "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
         "sugeridoPorIA": "BAJA"
+      }
+    },
+    "10tvasv": {
+      "estado": "automatica",
+      "titulo": "Llega el Samsung Galaxy S26 FE a la Argentina con preventa",
+      "copete": "El nuevo teléfono inteligente de la marca surcoreana arribará a principios de octubre con funciones de inteligencia artificial y batería de alta autonomía. Ofrece una preventa especial con descuentos.",
+      "cuerpo": "El mercado tecnológico argentino se prepara para la llegada del nuevo Samsung Galaxy S26 FE, una alternativa diseñada para acercar funciones de la gama alta a un segmento más amplio. Según informó la empresa, el dispositivo estará disponible a partir de principios de octubre con una configuración de ocho gigabytes de memoria RAM y almacenamiento de hasta quinientos doce gigabytes.\n\nPara su lanzamiento, la compañía habilitó una preventa mediante una tarjeta prepaga que funciona desde el veintiuno hasta el treinta de septiembre por un valor de trescientos mil pesos.",
+      "guion": "Llega el Samsung Galaxy S26 FE a la Argentina con preventa",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T10:20:32.586Z",
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El nuevo teléfono Samsung Galaxy S26 FE llegará a la Argentina en octubre con inteligencia artificial, mejoras en cámaras y una preventa especial con descuentos y opciones de financiación para los usuarios.",
+      "etiquetas": [
+        "tecnologia",
+        "Samsung",
+        "Argentina"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Clarín",
+          "enlace": "https://www.clarin.com/tecnologia/samsung-galaxy-s26-fe-llega-argentina-cuesta-acceder-descuento-especial_0_5tGHTRsn0p.html",
+          "fecha": "2026-09-27T09:00:25.000Z",
+          "oficial": false,
+          "aporte": "Detalló las especificaciones técnicas, fecha de lanzamiento, precio y el sistema de preventa del Samsung Galaxy S26 FE en la Argentina."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "16pajho",
+          "titulo": "Cuánto cuesta ir a ver a Franco Colapinto al Gran Premio de Brasil en noviembre",
+          "fecha": "2026-09-17T18:33:09.000Z",
+          "ruta": "/nota/cuanto-cuesta-ir-a-ver-a-franco-colapinto-al-gran-premio-de-brasil-en-16pajho"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "xep2sb": {
+      "estado": "automatica",
+      "titulo": "Las consultoras estiman una leve suba de la inflación en septiembre",
+      "copete": "Diversas firmas privadas proyectan que el índice de precios de septiembre se ubicará levemente por encima del registro de agosto, impulsado por el comportamiento de los alimentos, las verduras y los combustibles.",
+      "cuerpo": "Como contexto, a fines de septiembre se había registrado una aceleración en los precios de los alimentos, con un incremento mensual que saltó al 2,7% tras subas en carnes, verduras, panificados y bebidas, según se informó oportunamente.\n\nPara el mes en curso, firmas como Empiria y C&T Asesores Económicos proyectan cifras cercanas al 1,7% o ligeramente superiores, mientras que LCG y Abeceb ubican sus estimaciones entre el 1,7% y el 1,8%. Por su parte, entidades como Equilibra y Eco Go anticipan registros en torno al 2% debido al impacto de la indumentaria, los combustibles y los alimentos.",
+      "guion": "Las consultoras estiman una leve suba de la inflación en septiembre",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T10:20:32.586Z",
+      "claves": [
+        "Proyectan una leve suba de la inflación en septiembre respecto de agosto",
+        "El incremento responde al comportamiento de los alimentos y los combustibles",
+        "Las estimaciones privadas ubican el índice mensual entre el 1,7% y el 2%"
+      ],
+      "seSabe": [
+        "El presidente Javier Milei celebró en redes sociales la aprobación de la reforma de la Carta Orgánica del Banco Central",
+        "Las consultoras privadas proyectan que la inflación de septiembre rondará entre el 1,7% y el 2%",
+        "El rubro de alimentos, verduras y combustibles traccionó las subas en las mediciones mensuales"
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Las consultoras privadas estiman que la inflación de septiembre se ubicará levemente por encima de la de agosto, impulsada por el aumento en los alimentos y los combustibles.",
+      "etiquetas": [
+        "inflación",
+        "economía",
+        "septiembre",
+        "consultoras",
+        "alimentos"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/economia/por-la-suba-de-los-alimentos-la-inflacion-de-septiembre-seria-levemente-superior-a-la-de-agosto-nid27092026/",
+          "fecha": "2026-09-27T10:11:06.000Z",
+          "oficial": false,
+          "aporte": "Aportó las proyecciones de las consultoras económicas sobre la inflación de septiembre y los factores de aumento."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "vxyap2",
+          "titulo": "Inflación: los precios de los alimentos se aceleraron en la última semana y la suba mensual saltó al 2,7%",
+          "fecha": "2026-09-24T19:09:00.000Z",
+          "ruta": "/nota/inflacion-los-precios-de-los-alimentos-se-aceleraron-en-la-ultima-vxyap2"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "i8u40l": {
+      "estado": "automatica",
+      "titulo": "Javier Milei encabeza una misión de inversiones en París",
+      "copete": "El presidente Javier Milei encabeza una comitiva en la capital francesa para buscar inversiones extranjeras. El evento se superpone con el Coloquio de IDEA y cuenta con gobernadores y empresarios.",
+      "cuerpo": "El presidente Javier Milei encabeza una delegación en París para participar de la llamada \"Argentina Week\", un evento destinado a mostrar la potencialidad del país en sectores estratégicos y atraer inversiones globales. La actividad se desarrollará entre el miércoles y el viernes próximo, y contará con una reunión bilateral entre el mandatario y su par francés, Emmanuel Macron, según se informó.\n\nTambién participarán más de una decena de gobernadores provinciales y referentes de cámaras empresarias, en un viaje que coincide temporalmente con la realización del Coloquio de IDEA en Mar del Plata.\n\nEl foro empresario en territorio francés reunirá a directivos de firmas internacionales y ejecutivos de sectores clave como energía, minería y tecnología.",
+      "guion": "Javier Milei encabeza una misión de inversiones en París",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T10:20:32.586Z",
+      "claves": [
+        "El presidente Javier Milei encabeza una misión de inversiones en París junto a ministros y gobernadores.",
+        "El evento Argentina Week busca captar capitales globales en sectores estratégicos como energía y tecnología.",
+        "La comitiva incluye a referentes de cámaras empresarias y se superpone con el Coloquio de IDEA en Mar del Plata."
+      ],
+      "seSabe": [
+        "Javier Milei encabeza el evento Argentina Week en París junto a funcionarios, gobernadores y empresarios, según informaron las fuentes.",
+        "La agenda incluye una reunión bilateral entre Javier Milei y el presidente francés, Emmanuel Macron.",
+        "El viaje de la comitiva coincide con la realización del Coloquio de IDEA en Mar del Plata."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El presidente Javier Milei encabeza una comitiva de funcionarios, gobernadores y empresarios en París para buscar inversiones extranjeras en sectores estratégicos, en un viaje que coincide con el Coloquio de IDEA.",
+      "etiquetas": [
+        "Javier Milei",
+        "París",
+        "inversiones",
+        "Argentina Week",
+        "economía"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/economia/promesas-de-grandes-inversiones-y-respaldo-politico-y-empresario-al-rumbo-de-milei-las-claves-de-la-nid27092026/",
+          "fecha": "2026-09-27T10:08:06.000Z",
+          "oficial": false,
+          "aporte": "Detalla la agenda de la Argentina Week en París, la integración de la comitiva oficial y empresaria, y la superposición con el Coloquio de IDEA."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1mzcxyt",
+          "titulo": "El presidente Javier Milei encabeza un foro de inversiones en París",
+          "fecha": "2026-09-27T03:40:32.000Z",
+          "ruta": "/nota/el-presidente-javier-milei-encabeza-un-foro-de-inversiones-en-paris-1mzcxyt"
+        },
+        {
+          "id": "1f08r2d",
+          "titulo": "La agenda de Javier Milei en París: exposición en la OCDE, búsqueda de inversiones y un particular pedido a la prensa",
+          "fecha": "2026-09-23T21:29:53.000Z",
+          "ruta": "/nota/la-agenda-de-javier-milei-en-paris-exposicion-en-la-ocde-busqueda-de-1f08r2d"
+        },
+        {
+          "id": "1pbhxfq",
+          "titulo": "Corredor Andes-Atlántico: las diez claves para entender el acuerdo de inversiones que la Argentina firmó con Estados Unidos",
+          "fecha": "2026-09-24T05:04:01.000Z",
+          "ruta": "/nota/corredor-andes-atlantico-las-diez-claves-para-entender-el-acuerdo-de-1pbhxfq"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "1kvw0op": {
+      "estado": "automatica",
+      "titulo": "Modifican las normas de tránsito para las patentes en Florida",
+      "copete": "El estado estadounidense de Florida aprobó una nueva normativa sobre tránsito que comenzará a regir en octubre.",
+      "cuerpo": "El gobernador de Florida, Ron DeSantis, firmó la ley SB 488 que introduce modificaciones en las normas de tránsito del estado y entrará en vigencia el primero de octubre. La medida habilita el uso de marcos y bordes decorativos en las patentes vehiculares, al tiempo que endurece las sanciones para aquellos conductores que bloqueen la lectura de las chapas patentes y ajusta otras disposiciones para vehículos motorizados.\n\nLa medida forma parte de un paquete de actualizaciones legales en el estado norteamericano, sin que se hayan reportado hasta el momento implicancias directas para la circulación vehicular en el ámbito local.",
+      "guion": "Modifican las normas de tránsito para las patentes en Florida",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T10:20:32.586Z",
+      "claves": [
+        "El gobernador Ron DeSantis firmó la nueva normativa de tránsito",
+        "La ley SB 488 comenzará a regir el 1 de octubre",
+        "Se permiten marcos decorativos y se endurecen sanciones por bloqueo de patentes"
+      ],
+      "seSabe": [
+        "El gobernador de Florida, Ron DeSantis, firmó la ley SB 488.",
+        "La normativa comenzará a regir el 1 de octubre de 2026.",
+        "Se habilitan marcos y bordes decorativos en las patentes y se endurecen sanciones por bloquear su lectura."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El estado de Florida aprobó una nueva ley de tránsito que comenzará a regir en octubre e introduce cambios en el uso de patentes y sanciones.",
+      "etiquetas": [
+        "Florida",
+        "tránsito",
+        "patentes",
+        "ley"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/estados-unidos/florida/ya-es-oficial-en-florida-la-ley-que-autoriza-el-uso-de-placas-especiales-desde-el-1-de-octubre-para-nid23092026/",
+          "fecha": "2026-09-27T10:01:00.000Z",
+          "oficial": false,
+          "aporte": "Aportó los detalles sobre la firma de la ley SB 488 en Florida y la fecha de entrada en vigencia."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "yzhlww",
+          "titulo": "Ley placas especiales en Florida: cuáles son válidas y para qué conductores y autos se puede aplicar",
+          "fecha": "2026-09-24T22:22:00.000Z",
+          "ruta": "/nota/ley-placas-especiales-en-florida-cuales-son-validas-y-para-que-yzhlww"
+        },
+        {
+          "id": "13nkxw3",
+          "titulo": "HB 1293 en Florida: la ley que crea el delito de ingreso fraudulento a una vivienda residencial desde octubre 2026",
+          "fecha": "2026-09-25T00:00:00.000Z",
+          "ruta": "/nota/hb-1293-en-florida-la-ley-que-crea-el-delito-de-ingreso-fraudulento-a-13nkxw3"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
       }
     }
   },
