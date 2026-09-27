@@ -1,5 +1,5 @@
 {
-  "generado": "2026-09-27T16:14:34.114Z",
+  "generado": "2026-09-27T16:31:13.768Z",
   "notas": [
     {
       "id": "146c1m7",
@@ -622,7 +622,7 @@
       "fecha": "2026-09-27T04:28:35.901Z",
       "sinFecha": false,
       "visto": "2026-09-27T07:00:43.423Z",
-      "relevancia": 80,
+      "relevancia": 73,
       "local": true,
       "publicadaPor": "ia",
       "publicadaCuando": "2026-09-27T07:00:33.674Z",
@@ -4067,11 +4067,11 @@
   "clima": {
     "ahora": {
       "temp": 17,
-      "sensacion": 15,
-      "humedad": 62,
-      "viento": 23,
+      "sensacion": 14,
+      "humedad": 69,
+      "viento": 19,
       "rumbo": "NE",
-      "cielo": "Nublado",
+      "cielo": "Llovizna intensa",
       "esDeDia": true
     },
     "dias": [
@@ -4566,6 +4566,12 @@
       "motivo": "de afuera con un solo medio: hacen falta dos"
     },
     {
+      "id": "16f9pdq",
+      "titulo": "En Rosario, Traverso fue contundente en la primera carrera…",
+      "seccion": "Automovilismo",
+      "motivo": "de afuera con un solo medio: hacen falta dos"
+    },
+    {
       "id": "1uug5wc",
       "titulo": "TC Pista Pick Up: Nahuel Cordone venció en la batería más…",
       "seccion": "Automovilismo",
@@ -4590,12 +4596,6 @@
       "motivo": "de afuera con un solo medio: hacen falta dos"
     },
     {
-      "id": "1kosp78",
-      "titulo": "El detalle que más impresiona a Red Bull del \"excepcional\"…",
-      "seccion": "Automovilismo",
-      "motivo": "de afuera con un solo medio: hacen falta dos"
-    },
-    {
       "id": "g2u3l1",
       "titulo": "Briatore condenó públicamente a Colapinto y dejó entrever…",
       "seccion": "Automovilismo",
@@ -4608,14 +4608,14 @@
       "motivo": "de afuera con un solo medio: hacen falta dos"
     },
     {
-      "id": "1not06u",
-      "titulo": "¿Abren los supermercados, shoppings y comercios mañana, 28…",
+      "id": "o48c9g",
+      "titulo": "Carlos Melconian, economista: “Es la primera vez en la…",
       "seccion": "Economía",
       "motivo": "de afuera con un solo medio: hacen falta dos"
     },
     {
-      "id": "iiw0oc",
-      "titulo": "Paritaria con aumento: cuánto cobran las niñeras y…",
+      "id": "1not06u",
+      "titulo": "¿Abren los supermercados, shoppings y comercios mañana, 28…",
       "seccion": "Economía",
       "motivo": "de afuera con un solo medio: hacen falta dos"
     },
@@ -4680,5 +4680,5 @@
       "motivo": "de afuera con un solo medio: hacen falta dos"
     }
   ],
-  "esperandoCuerpo": 5
+  "esperandoCuerpo": 6
 }
