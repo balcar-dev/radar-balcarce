@@ -1,5 +1,5 @@
 {
-  "exportado": "2026-09-27T07:50:09.039Z",
+  "exportado": "2026-09-27T08:00:21.482Z",
   "decisiones": {
     "1951120": {
       "estado": "automatica",
@@ -31110,6 +31110,46 @@
           "titulo": "Bomba en Racing: el vice Lacunza pidió licencia en plena crisis",
           "fecha": "2026-09-18T01:49:09.000Z",
           "ruta": "/nota/bomba-en-racing-el-vice-lacunza-pidio-licencia-en-plena-crisis-1olmc8o"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "e044if": {
+      "estado": "automatica",
+      "titulo": "Las jubilaciones demoradas se triplicarán en la próxima década",
+      "copete": "Un informe privado señala que los retiros postergados pasarán a representar casi un tercio de las nuevas altas debido al aumento de la esperanza de vida. La proyección contrasta con las estimaciones de los organismos oficiales.",
+      "cuerpo": "El análisis, elaborado por el director de la entidad, Ángel de la Fuente, atribuye este cambio principalmente al aumento de la esperanza de vida, lo que obligará a los trabajadores a reunir más ahorro y permanecer activos más allá de la fecha de retiro.\n\nEl informe sostiene que la evolución demográfica tendrá más peso que las medidas legales aprobadas en los últimos años y cuestiona que los incentivos actuales hayan alterado profundamente las decisiones de retiro.",
+      "guion": "Las jubilaciones demoradas se triplicarán en la próxima década",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T08:00:21.422Z",
+      "claves": [
+        "Las jubilaciones demoradas alcanzarán el treinta por ciento de las nuevas altas.",
+        "El informe atribuye el incremento al aumento de la esperanza de vida.",
+        "Se advierten discrepancias con las proyecciones de organismos oficiales sobre el déficit."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Un estudio privado proyecta que las jubilaciones demoradas se triplicarán en las próximas décadas debido al aumento de la esperanza de vida y advierte sobre diferencias con las estimaciones oficiales respecto al impacto fiscal.",
+      "etiquetas": [
+        "jubilaciones",
+        "demografía",
+        "economía",
+        "España",
+        "pensiones"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/espana/2026/09/27/la-otra-cara-de-la-longevidad-las-jubilaciones-demoradas-se-triplicaran-en-la-proxima-decada-segun-un-estudio/",
+          "fecha": "2026-09-27T07:49:55.000Z",
+          "oficial": false,
+          "aporte": "Aportó los datos del estudio de la Fundación de Estudios de Economía Aplicada sobre la evolución de las jubilaciones demoradas y las discrepancias con las proyecciones oficiales."
         }
       ],
       "verificacion": {
