@@ -1,12 +1,65 @@
 {
-  "generado": "2026-09-27T07:03:18.194Z",
+  "generado": "2026-09-27T07:30:44.986Z",
   "notas": [
     {
+      "id": "v8tsii",
+      "titulo": "Comienza una nueva temporada de MasterChef con cambios en el jurado",
+      "copete": "Los cocineros Germán Martitegui, Damián Betular y Maru Botana presentaron la nueva edición del certamen de Telefe, que contará con veinticuatro famosos y la conducción de Wanda Nara.",
+      "cuerpo": "El encuentro con la prensa se realizó en Palermo luego de una jornada de grabaciones y sirvió para dar detalles sobre el ciclo.\n\nDurante la presentación, el jurado destacó las expectativas ante el inicio del programa y se refirió a los cambios en el equipo. Botana se incorpora como jurada estable en reemplazo de Donato de Santis, quien formó parte del ciclo durante una década, mientras que Martitegui y Betular continúan en sus roles evaluando a los participantes en cada gala.",
+      "guion": "Comienza una nueva temporada de MasterChef con cambios en el jurado",
+      "seccion": "Cultura y agenda",
+      "medios": [
+        "Infobae"
+      ],
+      "enlace": "https://www.infobae.com/teleshow/2026/09/27/german-martitegui-damian-betular-y-maru-botana-a-horas-del-estreno-de-masterchef-la-edicion-anterior-dejo-la-vara-muy-alta/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-27T07:02:00.000Z",
+      "sinFecha": false,
+      "visto": "2026-09-27T07:30:41.971Z",
+      "relevancia": 47,
+      "local": false,
+      "publicadaPor": "ia",
+      "publicadaCuando": "2026-09-27T07:20:26.349Z",
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "El programa se emite por Telefe con veinticuatro participantes famosos.",
+        "Wanda Nara continúa a cargo de la conducción del ciclo.",
+        "Maru Botana se suma como jurada estable en reemplazo de Donato de Santis."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Germán Martitegui, Damián Betular y Maru Botana presentaron la nueva edición de MasterChef por Telefe, que contará con veinticuatro famosos, la conducción de Wanda Nara y la incorporación de Botana como jurada estable en reemplazo de Donato de Santis.",
+      "etiquetas": [
+        "MasterChef",
+        "Telefe",
+        "Germán Martitegui",
+        "Damián Betular",
+        "Maru Botana"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/teleshow/2026/09/27/german-martitegui-damian-betular-y-maru-botana-a-horas-del-estreno-de-masterchef-la-edicion-anterior-dejo-la-vara-muy-alta/",
+          "fecha": "2026-09-27T07:02:00.000Z",
+          "oficial": false,
+          "aporte": "Detalles sobre la presentación de la nueva temporada de MasterChef, la conformación del jurado y declaraciones de los chefs."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "comienza-una-nueva-temporada-de-masterchef-con-cambios-en-el-jurado"
+    },
+    {
       "id": "3nmr0s",
-      "titulo": "Pasos para compartir la ubicación en tiempo real por WhatsApp",
-      "copete": "WhatsApp permite compartir la ubicación en tiempo real en chats individuales y grupales mediante el uso de la geolocalización del teléfono.",
-      "cuerpo": "La aplicación de mensajería WhatsApp ofrece la herramienta para compartir la ubicación en tiempo real con otros usuarios, lo cual permite visualizar múltiples posiciones en un mismo mapa cuando se activa de manera simultánea en un grupo. Para verificar en qué chats o grupos se encuentra activa esta función, es necesario ingresar a los ajustes de la aplicación, luego al apartado de privacidad y revisar la sección correspondiente a la ubicación.\n\nEl uso de esta herramienta genera un consumo más elevado de batería debido al empleo intensivo de la cobertura y los recursos del dispositivo móvil. Por este motivo, se recomienda configurar periodos cortos de tiempo para la transmisión de la posición y finalizar la función de manera manual en cualquier momento antes de que se cumpla el plazo establecido.",
-      "guion": "Pasos para compartir la ubicación en tiempo real por WhatsApp",
+      "titulo": "Cómo compartir la ubicación en tiempo real por WhatsApp de forma segura",
+      "copete": "WhatsApp permite compartir la posición en un mapa para coordinar encuentros de forma práctica. La función requiere precauciones sobre el consumo de batería y el control de privacidad.",
+      "cuerpo": "La aplicación de mensajería instantánea WhatsApp ofrece una herramienta para compartir la ubicación en tiempo real, lo que permite visualizar a varios usuarios en un mismo mapa dentro de un grupo y seguir el movimiento hasta el destino mediante la geolocalización del teléfono. Al finalizar, la interfaz muestra un aviso de ubicación finalizada y conserva la última posición compartida.\n\nEl uso de esta herramienta genera un mayor consumo de batería debido al uso intensivo de la cobertura móvil y los recursos del dispositivo. Por seguridad, se recomienda configurar periodos cortos de transmisión de datos en lugar de activarla durante horas prolongadas, además de revisar los ajustes de privacidad de la aplicación para controlar los chats activos.\n\nPara verificar en qué conversaciones se encuentra activa la función, es necesario ingresar al menú de configuración, seleccionar la sección de privacidad y consultar el apartado correspondiente para administrar el acceso o interrumpir la transmisión en cualquier momento.",
+      "guion": "Cómo compartir la ubicación en tiempo real por WhatsApp de forma segura",
       "seccion": "Tecnología",
       "medios": [
         "Hipertextual"
@@ -18,30 +71,29 @@
       "visto": "2026-09-27T07:00:43.423Z",
       "relevancia": 46,
       "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
+      "publicadaPor": "ia",
+      "publicadaCuando": "2026-09-27T07:10:17.053Z",
       "temas": [],
       "como": "automatica",
       "claves": [
-        "Permite seguir el movimiento en tiempo real mediante la geolocalización",
-        "Se puede consultar el historial de chats activos desde los ajustes de privacidad",
-        "La función genera un mayor consumo de batería en el dispositivo",
-        "Es posible interrumpir la transmisión de la posición en cualquier momento"
+        "Permite visualizar múltiples ubicaciones en un mapa grupal.",
+        "Consume mayor energía por el uso de geolocalización.",
+        "Es posible revisar los chats activos desde los ajustes de privacidad."
       ],
       "seSabe": [
-        "Se pueden ver múltiples ubicaciones en un mismo mapa si varios usuarios la comparten en un grupo de WhatsApp",
-        "El uso de la función consume más batería por el empleo intensivo de la cobertura móvil",
-        "Los ajustes de privacidad de la aplicación permiten revisar los chats y grupos con la función activa"
+        "WhatsApp permite compartir la ubicación en tiempo real de forma individual o en grupos.",
+        "La función utiliza la geolocalización del dispositivo y muestra el movimiento en un mapa.",
+        "El sistema genera un mayor consumo de batería debido al uso intensivo de los recursos móviles.",
+        "Es posible verificar los chats activos con esta función desde el menú de privacidad."
       ],
       "noConfirmado": [
-        "Se desconoce el límite exacto de usuarios que pueden activar la función al mismo tiempo en simultáneo",
+        "Se desconoce el límite exacto de usuarios que pueden activar la función de manera simultánea en un mismo grupo.",
         "No pudo ser contrastado de forma independiente con las fuentes consultadas."
       ],
-      "textoRedes": "WhatsApp cuenta con la función para compartir la ubicación en tiempo real en chats y grupos, permitiendo seguir los desplazamientos desde el mapa. Conocé los detalles sobre el consumo de batería y cómo revisar los ajustes de privacidad de la aplicación.",
+      "textoRedes": "Conocé cómo utilizar la función de ubicación en tiempo real en WhatsApp de forma segura, qué recaudos tomar con la batería y cómo controlar los chats activos desde los ajustes de privacidad.",
       "etiquetas": [
         "WhatsApp",
-        "ubicación",
-        "privacidad"
+        "ubicación"
       ],
       "fuentesConsultadas": [
         {
@@ -49,7 +101,7 @@
           "enlace": "https://hipertextual.com/guias/compartir-ubicacion-whatsapp-tiempo-real/",
           "fecha": "2026-09-27T07:00:00.000Z",
           "oficial": false,
-          "aporte": "Explicó el funcionamiento de la ubicación en tiempo real en chats individuales y grupales, el impacto en la batería y cómo revisar los ajustes de privacidad."
+          "aporte": "Detalló los pasos, el funcionamiento y las recomendaciones de seguridad para compartir la ubicación en tiempo real por WhatsApp."
         }
       ],
       "verificacion": {
@@ -58,65 +110,6 @@
         "sugeridoPorIA": "MEDIA"
       },
       "slug": "pasos-para-compartir-la-ubicacion-en-tiempo-real-por-whatsapp"
-    },
-    {
-      "id": "6mgy99",
-      "titulo": "Maná encabeza el festival Ohana en California",
-      "copete": "La banda mexicana se convirtió en el primer grupo de rock latino en liderar el encuentro musical en Dana Point. Fue presentada por el músico Eddie Vedder antes de continuar su gira internacional.",
-      "cuerpo": "La agrupación mexicana Maná marcó un hito al convertirse en el primer grupo de rock latino en encabezar el festival estadounidense Ohana, llevado a cabo en la playa de Dana Point durante su décimo aniversario. Antes de su actuación, el músico Eddie Vedder presentó al grupo en el escenario y destacó su trayectoria de cuatro décadas, además de señalar sus numerosos conciertos con entradas agotadas en Los Ángeles y su labor ambiental.\n\nEl recital formó parte de la gira Vivir sin Aire Tour, con la que el conjunto recorre Estados Unidos y América Latina. Tras sus presentaciones en territorio estadounidense, el recorrido continuará en diciembre por países como Colombia, Perú, Chile, Argentina y México, con un cierre previsto en Ciudad de México.\n\nLa presencia del grupo mexicano en el encuentro musical antecede a la etapa latinoamericana de sus conciertos, compartiendo cartel con artistas como Billy Idol, Pixies y Bad Religion.",
-      "guion": "Mana encabeza el festival Ohana en California",
-      "seccion": "Cultura y agenda",
-      "medios": [
-        "Infobae"
-      ],
-      "enlace": "https://www.infobae.com/mexico/2026/09/26/mana-hace-historia-y-se-convierte-en-la-primera-banda-de-rock-latino-en-encabezar-el-ohana-fest-de-la-mano-de-pearl-jam/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-27T06:46:22.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-27T07:00:43.423Z",
-      "relevancia": 43,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Maná lideró el festival Ohana en Dana Point.",
-        "Eddie Vedder presentó a la banda en California.",
-        "El grupo celebra cuarenta años de trayectoria.",
-        "La gira continuará por América Latina en diciembre."
-      ],
-      "seSabe": [
-        "Maná se convirtió en el primer grupo de rock latino en encabezar el festival Ohana.",
-        "Eddie Vedder presentó a los integrantes antes de su actuación en el evento por el décimo aniversario.",
-        "La gira Vivir sin Aire Tour incluye presentaciones en América Latina durante el mes de diciembre."
-      ],
-      "noConfirmado": [
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "Maná se convirtió en el primer grupo de rock latino en encabezar el festival Ohana en California, presentado por Eddie Vedder en el marco de su gira internacional que llegará a la Argentina en diciembre.",
-      "etiquetas": [
-        "Maná",
-        "Ohana Festival",
-        "Eddie Vedder",
-        "Gira",
-        "Rock latino"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Infobae",
-          "enlace": "https://www.infobae.com/mexico/2026/09/26/mana-hace-historia-y-se-convierte-en-la-primera-banda-de-rock-latino-en-encabezar-el-ohana-fest-de-la-mano-de-pearl-jam/",
-          "fecha": "2026-09-27T06:46:22.000Z",
-          "oficial": false,
-          "aporte": "Informó sobre la presentación de Maná en el festival Ohana y los detalles de su gira internacional."
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "mana-encabeza-el-festival-ohana-en-california"
     },
     {
       "id": "zo6t62",
@@ -424,10 +417,10 @@
     },
     {
       "id": "v8jjgw",
-      "titulo": "Bomberos controlan un principio de incendio en una vivienda en Balcarce",
-      "copete": "Una dotación de bomberos intervino durante la madrugada de este domingo por un foco ígneo en el techo de una casa ubicada en calle 5. No se reportaron personas heridas.",
-      "cuerpo": "Por motivos que todavía no se pudieron establecer, las llamas se originaron en la zona del techo del inmueble, lo que requirió la intervención inmediata de una dotación del cuerpo activo de Bomberos Voluntarios.\n\nTras varios minutos de labores en el lugar, los efectivos lograron contener la situación y evitar que el fuego se expandiera hacia otros sectores de la vivienda. Desde el área interviniente confirmaron que no se registraron personas heridas como consecuencia del episodio.",
-      "guion": "Bomberos controlan un principio de incendio en una vivienda en Balcarce",
+      "titulo": "Bomberos controlan un principio de incendio en Balcarce",
+      "copete": "Una dotación de Bomberos Voluntarios intervino esta madrugada en un domicilio tras registrarse fuego en la zona del techo. No se reportaron personas heridas.",
+      "cuerpo": "Un principio de incendio se produjo durante la madrugada de este domingo en una vivienda situada en la calle 5, entre las calles 10 y 12. Las llamas se originaron en la parte del techo del inmueble, lo que requirió la movilización inmediata de una dotación de Bomberos Voluntarios para controlar la situación.\n\nTras varios minutos de labores en el lugar, los efectivos lograron extinguir el foco ígneo y evitar que el fuego se extendiera hacia otras áreas del edificio. De acuerdo con la información aportada, no se registraron personas heridas como consecuencia del episodio.\n\nLas causas que provocaron el inicio del fuego aún no fueron establecidas y son materia de análisis, mientras se completaron las tareas preventivas en el inmueble afectado.",
+      "guion": "Bomberos controlan un principio de incendio en Balcarce",
       "seccion": "Policiales",
       "medios": [
         "Infórmese Primero (FM 104.9)"
@@ -440,33 +433,30 @@
       "relevancia": 90,
       "local": true,
       "publicadaPor": "ia",
-      "publicadaCuando": "2026-09-27T07:00:33.674Z",
+      "publicadaCuando": "2026-09-27T07:20:26.349Z",
       "temas": [
         "bomberos"
       ],
       "como": "automatica",
       "claves": [
-        "Ocurrió durante la madrugada de este domingo en calle 5 entre 10 y 12.",
-        "El fuego se inició en la zona del techo por causas que se desconocen.",
-        "Una dotación de bomberos trabajó en el lugar y evitó la propagación.",
-        "No se informaron personas heridas tras el episodio."
+        "El hecho ocurrió durante la madrugada de este domingo",
+        "El fuego se inició en el techo de una vivienda",
+        "Intervinieron Bomberos Voluntarios y no hubo heridos"
       ],
       "seSabe": [
-        "El principio de incendio ocurrió durante la madrugada de este domingo.",
-        "El hecho tuvo lugar en un domicilio situado en calle 5, entre 10 y 12.",
-        "Las llamas se concentraron en la zona del techo del inmueble.",
-        "Una dotación de Bomberos Voluntarios trabajó para controlar la situación y evitar la propagación.",
-        "No se reportaron personas heridas."
+        "Un principio de incendio afectó el techo de una casa en calle 5, entre 10 y 12, durante la madrugada de este domingo.",
+        "Una dotación de Bomberos Voluntarios trabajó en el lugar y logró controlar la situación.",
+        "No se registraron personas heridas por el hecho."
       ],
       "noConfirmado": [
-        "No se establecieron las causas que originaron el fuego.",
+        "No se determinaron las causas que originaron el fuego.",
         "No pudo ser contrastado de forma independiente con las fuentes consultadas."
       ],
-      "textoRedes": "Una dotación de bomberos intervino durante la madrugada de este domingo por un principio de incendio en el techo de una vivienda ubicada en calle 5, entre 10 y 12. No se registraron personas heridas.",
+      "textoRedes": "Una dotación de Bomberos Voluntarios intervino esta madrugada por un principio de incendio en el techo de un domicilio de la calle 5. No se reportaron personas heridas y las causas del fuego aún se desconocen.",
       "etiquetas": [
-        "Bomberos Voluntarios",
         "incendio",
-        "calle 5"
+        "bomberos",
+        "Balcarce"
       ],
       "fuentesConsultadas": [
         {
@@ -474,7 +464,7 @@
           "enlace": "http://www.informeseprimero.com.ar/2026/09/principio-de-incendio-en-un-domicilio.html",
           "fecha": "2026-09-27T04:43:31.521Z",
           "oficial": false,
-          "aporte": "Informó sobre el principio de incendio en calle 5, la intervención de los bomberos y la ausencia de heridos."
+          "aporte": "Informó sobre el principio de incendio en la madrugada, el lugar, la intervención de bomberos y la ausencia de heridos."
         }
       ],
       "antecedentes": [
@@ -602,7 +592,7 @@
       "fecha": "2026-09-27T04:28:35.901Z",
       "sinFecha": false,
       "visto": "2026-09-27T07:00:43.423Z",
-      "relevancia": 90,
+      "relevancia": 80,
       "local": true,
       "publicadaPor": "ia",
       "publicadaCuando": "2026-09-27T07:00:33.674Z",
@@ -670,7 +660,7 @@
       "fecha": "2026-09-27T04:26:14.000Z",
       "sinFecha": false,
       "visto": "2026-09-27T04:30:48.844Z",
-      "relevancia": 50,
+      "relevancia": 40,
       "local": false,
       "publicadaPor": "ia",
       "publicadaCuando": "2026-09-27T04:50:17.826Z",
@@ -1053,110 +1043,54 @@
       "slug": "el-riesgo-pais-supera-los-600-puntos-basicos-por-factores-externos-y"
     },
     {
-      "id": "913w0e",
-      "titulo": "No hay que esperar un repunte del consumo para 2027",
-      "copete": "El consultor y especialista en consumo Damián Di Pace analizó la situación económica actual, advirtió sobre la falta de recuperación en el sector y señaló que el sector privado aguarda la consolidación del ciclo económico para invertir.",
-      "cuerpo": "El consultor de empresas Damián Di Pace afirmó que no se debe esperar un repunte del consumo masivo para el próximo año y sostuvo que el sector privado aguarda la continuidad del ciclo económico, más allá de la gestión de gobierno, para concretar inversiones. Según explicó, la Argentina debe consolidar la salida de la inflación de dos dígitos y evitar que los saltos cambiarios desequilibren los presupuestos empresariales, además de resolver la infraestructura deficiente y las malas rutas que elevan los costos logísticos.\n\nPor otro lado, el analista indicó que el sector privado no percibe la baja de impuestos instrumentada por el Gobierno nacional debido a que las provincias y los municipios incrementaron los tributos locales y las tasas, con especial impacto de Ingresos Brutos. Según lo informado, la administración nacional intentó acelerar la reducción fiscal pero no fue acompañada por los distritos subnacionales, lo que genera una alta presión impositiva que dificulta la competitividad.\n\nComo antecedente, en julio los datos oficiales indicaron que las ventas en supermercados registraron una nueva baja y alcanzaron mínimos desde noviembre del año pasado, a pesar de haber mostrado mejoras en los canales mayoristas y en shoppings.",
-      "guion": "No hay que esperar un repunte del consumo para 2027",
+      "id": "1630hgn",
+      "titulo": "Nicolás Dujovne advierte por el impacto de la incertidumbre política en la inversión",
+      "copete": "El exministro de Hacienda analizó el escenario macroeconómico nacional, marcado por la heterogeneidad sectorial, la baja del gasto público y la desaceleración del crecimiento previsto para este año.",
+      "cuerpo": "A casi tres años del inicio de la gestión del presidente Javier Milei, la economía nacional transita un escenario de marcada heterogeneidad con sectores exportadores en expansión y otros segmentos, como el comercio y la industria, afectados por el ajuste fiscal y la apertura comercial, según indicó el exministro de Hacienda Nicolás Dujovne en declaraciones periodísticas. El exfuncionario nacional estimó que la actividad económica crecerá este año en torno al dos por ciento, una cifra inferior a la proyectada inicialmente por el mercado, y señaló que la cautela de los inversores ante los comicios venideros ya condiciona la concreción de grandes proyectos.\n\nEn el plano fiscal, Dujovne destacó la reducción del gasto primario nacional registrada en la última década y consideró que la próxima etapa demandará optimizar la recaudación y disminuir la presión tributaria subnacional. Asimismo, calificó como una señal positiva que el proyecto de presupuesto para el próximo año contemple una suba de precios del dieciocho por ciento para anclar las expectativas inflacionarias.",
+      "guion": "Nicolás Dujovne advierte por el impacto de la incertidumbre política en la inversión",
       "seccion": "Economía",
       "medios": [
         "La Nación"
       ],
-      "enlace": "https://www.lanacion.com.ar/economia/damian-di-pace-no-hay-que-esperar-un-repunte-del-consumo-para-2027-nid27092026/",
+      "enlace": "https://www.lanacion.com.ar/economia/nicolas-dujovne-la-inversion-cae-porque-en-buena-medida-ya-juega-la-incertidumbre-politica-nid27092026/",
       "teniaImagenLaFuente": true,
       "fecha": "2026-09-27T03:01:00.000Z",
       "sinFecha": false,
-      "visto": "2026-09-27T04:30:48.844Z",
-      "relevancia": 40,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Di Pace descartó un repunte del consumo masivo para el próximo año.",
-        "Los empresarios aguardan la estabilidad macroeconómica para invertir.",
-        "La presión impositiva subnacional anula el alivio fiscal nacional.",
-        "Reclaman mejoras en infraestructura y rutas para bajar costos logísticos."
-      ],
-      "seSabe": [
-        "Damián Di Pace afirmó que el consumo no repuntará el próximo año.",
-        "El analista señaló que los distritos subnacionales aumentaron tasas e Ingresos Brutos.",
-        "En julio el consumo en supermercados anotó una nueva baja según datos oficiales previos."
-      ],
-      "noConfirmado": [
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "El consultor Damián Di Pace afirmó que no hay que esperar un repunte del consumo para 2027 y señaló que el sector privado aguarda la consolidación del ciclo económico y una menor presión tributaria por parte de provincias y municipios para invertir.",
-      "etiquetas": [
-        "Economia",
-        "Consumo",
-        "Impuestos",
-        "Inversiones",
-        "Damián Di Pace"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "La Nación",
-          "enlace": "https://www.lanacion.com.ar/economia/damian-di-pace-no-hay-que-esperar-un-repunte-del-consumo-para-2027-nid27092026/",
-          "fecha": "2026-09-27T03:01:00.000Z",
-          "oficial": false,
-          "aporte": "Entrevista a Damián Di Pace sobre perspectivas económicas, consumo, presión tributaria e infraestructura."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "1qrbb9h",
-          "titulo": "Datos oficiales: el consumo en supermercados anotó nueva baja en julio, aunque hubo repunte en mayoristas y shoppings",
-          "fecha": "2026-09-23T19:22:00.000Z",
-          "ruta": "/nota/datos-oficiales-el-consumo-en-supermercados-anoto-nueva-baja-en-julio-1qrbb9h"
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "no-hay-que-esperar-un-repunte-del-consumo-para-2027"
-    },
-    {
-      "id": "12bqha2",
-      "titulo": "El Tesoro reduce vencimientos y San Juan debuta en el mercado internacional",
-      "copete": "Finanzas adjudicó miles de millones en la letra dólar linked de septiembre y bajó los compromisos para la próxima licitación. Además, la provincia cuyana concretó su primera emisión de deuda externa.",
-      "cuerpo": "La demanda se concentró en las opciones de conversión de octubre y noviembre, mientras que el Tesoro ofrecerá instrumentos a tasa fija, TAMAR, CER y dólar linked sin extender los plazos más allá de julio de dos mil veintisiete.\n\nEn el plano internacional, la provincia de San Juan concretó su debut con una colocación de seiscientos millones de dólares a nueve años bajo ley de Nueva York. La emisión se realizó en una semana compleja para la deuda emergente, marcada por el repunte del petróleo y el incremento en los rendimientos de los bonos estadounidenses.\n\nCon estos registros, el indicador habría acumulado dos trimestres móviles consecutivos de contracción, lo que configuraría una recesión técnica.",
-      "guion": "El Tesoro reduce vencimientos y San Juan debuta en el mercado internacional",
-      "seccion": "Economía",
-      "medios": [
-        "La Nación"
-      ],
-      "enlace": "https://www.lanacion.com.ar/economia/finanzas-el-mercado-digiere-los-datos-negativos-de-actividad-nid27092026/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-27T03:01:00.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-27T04:30:48.844Z",
+      "visto": "2026-09-27T03:30:39.508Z",
       "relevancia": 40,
       "local": false,
       "publicadaPor": "ia",
-      "publicadaCuando": "2026-09-27T03:51:07.207Z",
+      "publicadaCuando": "2026-09-27T03:41:07.646Z",
       "temas": [],
       "como": "automatica",
+      "claves": [
+        "La economía nacional crece este año a un ritmo del dos por ciento, por debajo de lo previsto.",
+        "Los sectores exportadores muestran un buen desempeño frente al impacto que enfrentan el comercio y la industria.",
+        "El exministro de Hacienda señaló que la incertidumbre electoral ya condiciona las inversiones del régimen para grandes proyectos."
+      ],
+      "seSabe": [
+        "Según indicó Nicolás Dujovne, la economía nacional crecerá este año alrededor del dos por ciento.",
+        "El exfuncionario señaló que la apertura comercial, el ajuste fiscal y el programa de estabilización generan un escenario de marcada heterogeneidad sectorial.",
+        "Dujovne destacó que el gasto primario nacional se redujo de veinticuatro a catorce por ciento del producto bruto interno entre 2015 y 2026."
+      ],
       "noConfirmado": [
         "No pudo ser contrastado de forma independiente con las fuentes consultadas."
       ],
-      "textoRedes": "Finanzas redujo los vencimientos para la próxima licitación y San Juan concretó su primera emisión internacional de deuda. Además, la actividad económica registró una fuerte caída en julio.",
+      "textoRedes": "El exministro de Hacienda Nicolás Dujovne analizó la actualidad macroeconómica nacional, destacó el desempeño de los sectores exportadores frente al impacto en el comercio y advirtió sobre la influencia de la incertidumbre política en la inversión.",
       "etiquetas": [
-        "Finanzas",
-        "Deuda",
-        "San Juan",
-        "Actividad economica"
+        "Nicolás Dujovne",
+        "Economía",
+        "Inversión",
+        "Apertura comercial",
+        "Gobierno nacional"
       ],
       "fuentesConsultadas": [
         {
           "medio": "La Nación",
-          "enlace": "https://www.lanacion.com.ar/economia/finanzas-el-mercado-digiere-los-datos-negativos-de-actividad-nid27092026/",
+          "enlace": "https://www.lanacion.com.ar/economia/nicolas-dujovne-la-inversion-cae-porque-en-buena-medida-ya-juega-la-incertidumbre-politica-nid27092026/",
           "fecha": "2026-09-27T03:01:00.000Z",
           "oficial": false,
-          "aporte": "Aportó los datos sobre la licitación de Finanzas, la colocación de deuda de San Juan y la caída del EMAE en julio."
+          "aporte": "Aportó la entrevista completa con el exministro de Hacienda Nicolás Dujovne sobre la situación económica nacional, las proyecciones de crecimiento y el impacto de la apertura comercial."
         }
       ],
       "verificacion": {
@@ -1164,7 +1098,65 @@
         "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
         "sugeridoPorIA": "MEDIA"
       },
-      "slug": "el-tesoro-reduce-vencimientos-y-san-juan-debuta-en-el-mercado"
+      "slug": "nicolas-dujovne-advierte-por-el-impacto-de-la-incertidumbre-politica"
+    },
+    {
+      "id": "fjzcfr",
+      "titulo": "Proyectan el crecimiento del empleo en energía y minería",
+      "copete": "Un informe privado detalla las proyecciones de puestos de trabajo directos e indirectos vinculados a los hidrocarburos y la minería hacia 2030, condicionados por las inversiones previstas.",
+      "cuerpo": "Los sectores de energía, minería y agroindustria lideran la expansión económica nacional frente al retroceso de la industria, la construcción y el comercio.\n\nSegún datos de la consultora Equilibra, el empleo directo en petróleo y gas llegó a 68.000 puestos en 2025 y el minero a 41.000, con proyecciones hacia 2030 que ubican los totales en 273.000 y 211.000 empleos respectivamente, sumando directos e indirectos. Por su parte, la consultora Abeceb estimó que la energía registra actualmente unos 70.000 puestos directos y proyecta un pico de hasta 95.000 empleos directos hacia 2029.\n\nRoberto Cacciola, presidente de la Cámara Argentina de Empresas Mineras, aseguró que la actividad posee el potencial de constituirse como uno de los principales motores de crecimiento del país durante la próxima década.",
+      "guion": "Proyectan el crecimiento del empleo en energía y minería",
+      "seccion": "Economía",
+      "medios": [
+        "La Nación"
+      ],
+      "enlace": "https://www.lanacion.com.ar/economia/el-derrame-de-vaca-muerta-y-la-mineria-cuanto-empleo-pueden-generar-en-los-proximos-anos-segun-los-nid27092026/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-27T03:01:00.000Z",
+      "sinFecha": false,
+      "visto": "2026-09-27T03:30:39.508Z",
+      "relevancia": 40,
+      "local": false,
+      "publicadaPor": "ia",
+      "publicadaCuando": "2026-09-27T03:31:06.528Z",
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "La energía y la minería lideran la expansión económica sectorial.",
+        "Las proyecciones de empleo alcanzan el horizonte de 2030.",
+        "Las estimaciones dependen de la concreción de inversiones anunciadas."
+      ],
+      "seSabe": [
+        "Los sectores de energía, minería y agroindustria lideran la expansión económica actual.",
+        "Los proyectos de inversión bajo el RIGI suman cifras millonarias en energía y minería.",
+        "Diversas consultoras privadas elaboraron proyecciones sobre puestos de trabajo directos e indirectos para los próximos años."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Un informe privado detalla las proyecciones de puestos de trabajo directos e indirectos vinculados a los hidrocarburos y la minería hacia 2030, condicionados por las inversiones previstas.",
+      "etiquetas": [
+        "Empleo",
+        "Energía",
+        "Minería",
+        "Economía",
+        "Inversiones"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/economia/el-derrame-de-vaca-muerta-y-la-mineria-cuanto-empleo-pueden-generar-en-los-proximos-anos-segun-los-nid27092026/",
+          "fecha": "2026-09-27T03:01:00.000Z",
+          "oficial": false,
+          "aporte": "Aportó datos sobre la proyección de empleo en energía y minería según consultoras privadas y cámaras sectoriales."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "calculan-el-impacto-del-empleo-en-energia-y-mineria"
     },
     {
       "id": "121t71e",
@@ -2306,7 +2298,7 @@
       "fecha": "2026-09-26T19:20:53.000Z",
       "sinFecha": false,
       "visto": "2026-09-27T02:00:40.587Z",
-      "relevancia": 86,
+      "relevancia": 79,
       "local": true,
       "publicadaPor": "ia",
       "publicadaCuando": "2026-09-27T01:11:04.003Z",
@@ -2388,7 +2380,7 @@
       "fecha": "2026-09-26T19:19:33.000Z",
       "sinFecha": false,
       "visto": "2026-09-27T02:00:40.587Z",
-      "relevancia": 92,
+      "relevancia": 85,
       "local": true,
       "publicadaPor": "ia",
       "publicadaCuando": "2026-09-27T01:11:04.003Z",
@@ -7402,8 +7394,8 @@
     }
   ],
   "secciones": [
-    "Tecnología",
     "Cultura y agenda",
+    "Tecnología",
     "Economía",
     "Política",
     "Policiales",
@@ -7438,10 +7430,10 @@
     "ahora": {
       "temp": 6,
       "sensacion": 3,
-      "humedad": 92,
-      "viento": 15,
+      "humedad": 93,
+      "viento": 16,
       "rumbo": "NE",
-      "cielo": "Despejado",
+      "cielo": "Mayormente despejado",
       "esDeDia": false
     },
     "dias": [
@@ -7882,40 +7874,22 @@
       "motivo": "necesita ojo humano: \"muere\""
     },
     {
-      "id": "6m35ld",
-      "titulo": null,
-      "seccion": "Cultura y agenda",
-      "motivo": "necesita ojo humano: \"adolescente\", en el texto completo de la fuente (visto al reescribir)"
-    },
-    {
       "id": "aj6czm",
       "titulo": null,
       "seccion": "Policiales",
       "motivo": "necesita ojo humano: \"homicidio\""
     },
     {
-      "id": "2oxdtj",
-      "titulo": "Dentro de la misión española que abate drones rusos en…",
-      "seccion": "Automovilismo",
-      "motivo": "internacional: sin relación con Balcarce"
-    },
-    {
-      "id": "16a0vo",
+      "id": "de0ke",
       "titulo": null,
       "seccion": "Policiales",
       "motivo": "Policiales de afuera: la sección es sólo de Balcarce y la zona"
     },
     {
-      "id": "kd904m",
-      "titulo": "Hallaron un cuerpo calcinado dentro de un pozo en Villa…",
-      "seccion": "Política",
-      "motivo": "necesita ojo humano: \"muerte\""
-    },
-    {
-      "id": "1tzmnqg",
-      "titulo": null,
-      "seccion": "Servicios",
-      "motivo": "necesita ojo humano: \"adolescente\""
+      "id": "11kit45",
+      "titulo": "Trump anuncia la aprobación de nuevas normas de eficiencia…",
+      "seccion": "País",
+      "motivo": "internacional: sin relación con Balcarce"
     },
     {
       "id": "19nulb4",
@@ -7928,12 +7902,6 @@
       "titulo": "Francisco Cerúndolo perdió con el noruego Casper Ruud en…",
       "seccion": "País",
       "motivo": "parece promoción, no noticia: \"sortea\""
-    },
-    {
-      "id": "gs5cei",
-      "titulo": "Acusan a un influencer de matar a cientos de aves…",
-      "seccion": "Política",
-      "motivo": "necesita ojo humano: \"denuncia\""
     },
     {
       "id": "1nnxxzi",
