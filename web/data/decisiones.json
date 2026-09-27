@@ -1,5 +1,5 @@
 {
-  "exportado": "2026-09-27T18:18:51.300Z",
+  "exportado": "2026-09-27T18:28:50.544Z",
   "decisiones": {
     "1951120": {
       "estado": "automatica",
@@ -34581,6 +34581,72 @@
           "titulo": "Mangoni palpita el regreso del automovilismo a Balcarce",
           "fecha": "2026-09-23T22:16:46.000Z",
           "ruta": "/nota/mangoni-palpita-el-regreso-del-automovilismo-a-balcarce-1sjses1"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "1yi8cyn": {
+      "estado": "automatica",
+      "titulo": "Hernán Palazzo gana en el autódromo de Balcarce",
+      "copete": "El TC Pick Up regresó al circuito perimetral del autódromo Juan Manuel Fangio tras casi quince años. Hernán Palazzo se quedó con la victoria en la final de la categoría.",
+      "cuerpo": "El regreso del automovilismo nacional al autódromo Juan Manuel Fangio de Balcarce tras casi quince años congregó a una multitud y culminó con el triunfo de Hernán Palazzo a bordo de una Toyota Hilux del EZE-B Team. El piloto de veintiséis años alcanzó así su primer triunfo en cuarenta presentaciones dentro de la categoría.\n\nDurante el fin de semana, la competencia nacional generó un intenso movimiento vehicular y colmó las calles y avenidas cercanas con la llegada de miles de visitantes. En la previa deportiva, Santiago Mangoni había finalizado tercero en la segunda batería, mientras que Diego y José Ciantini también participaron ante un gran marco de público.\n\nTras la consagración, el ganador expresó su emoción por competir en el trazado local. La próxima fecha de la categoría se disputará el diecisiete y dieciocho de octubre y todavía aguarda por la confirmación oficial del escenario debido a la clausura vigente del autódromo de La Plata.",
+      "guion": "Hernán Palazzo gana en el autódromo de Balcarce",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T18:28:50.479Z",
+      "claves": [
+        "El TC Pick Up volvió al autódromo Juan Manuel Fangio tras casi quince años",
+        "Hernán Palazzo logró su primera victoria en la categoría con una Toyota Hilux",
+        "La competencia generó un intenso movimiento vehicular y la llegada de miles de visitantes",
+        "La próxima fecha se correrá en octubre y aún no tiene escenario confirmado"
+      ],
+      "seSabe": [
+        "El circuito perimetral del autódromo Juan Manuel Fangio recibió una competencia nacional del TC Pick Up después de casi quince años",
+        "Hernán Palazzo ganó la final con una Toyota Hilux atendida por el EZE-B Team",
+        "El piloto sumó su primera victoria en su carrera número cuarenta dentro de la categoría",
+        "La próxima fecha de la categoría se llevará a cabo el 17 y 18 de octubre"
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El TC Pick Up regresó al autódromo Juan Manuel Fangio de Balcarce tras casi quince años y Hernán Palazzo se quedó con la victoria en la final. La competencia nacional generó un gran movimiento de visitantes en la ciudad.",
+      "etiquetas": [
+        "TC Pick Up",
+        "Autodromo Juan Manuel Fangio",
+        "Hernan Palazzo",
+        "Balcarce"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Campeones",
+          "enlace": "https://campeones.com.ar/balcarce-fue-una-fiesta-con-el-tc-pick-up-y-palazzo-tuvo-su-festejo-inolvidable/",
+          "fecha": "2026-09-27T18:02:33.000Z",
+          "oficial": false,
+          "aporte": "Detalló el triunfo de Hernán Palazzo en el TC Pick Up y el desarrollo de la competencia en el autódromo de Balcarce."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1ou5oaz",
+          "titulo": "Kicillof y Bianco explican los montos de la obra del autódromo en Balcarce",
+          "fecha": "2026-09-27T17:00:45.088Z",
+          "ruta": "/nota/kicillof-y-bianco-explican-los-montos-de-la-obra-del-autodromo-en-1ou5oaz"
+        },
+        {
+          "id": "p8h86x",
+          "titulo": "El automovilismo nacional genera un intenso movimiento vehicular en Balcarce",
+          "fecha": "2026-09-27T16:27:29.000Z",
+          "ruta": "/nota/el-automovilismo-nacional-genera-un-intenso-movimiento-vehicular-en-p8h86x"
+        },
+        {
+          "id": "146c1m7",
+          "titulo": "Mangoni sube al podio en la serie del TC Pick Up en Balcarce",
+          "fecha": "2026-09-27T16:00:48.000Z",
+          "ruta": "/nota/mangoni-sube-al-podio-y-los-ciantini-corren-en-balcarce-146c1m7"
         }
       ],
       "verificacion": {
