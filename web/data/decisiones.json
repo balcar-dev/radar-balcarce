@@ -1,5 +1,5 @@
 {
-  "exportado": "2026-09-27T01:41:00.761Z",
+  "exportado": "2026-09-27T01:50:58.171Z",
   "decisiones": {
     "1951120": {
       "estado": "automatica",
@@ -27160,6 +27160,511 @@
           "fecha": "2026-09-27T00:33:07.000Z",
           "oficial": false,
           "aporte": "Detalles del viaje de Agustina Cherri y su hija a Nueva York y antecedentes sobre el contrato musical de la joven."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "ads7me": {
+      "estado": "automatica",
+      "titulo": "Un motociclista choca contra una camioneta y resulta gravemente herido en Balcarce",
+      "copete": "Un motociclista sufrió heridas graves al impactar contra una camioneta estacionada en avenida Del Valle y Maipú. Fue asistido en el lugar por Bomberos Voluntarios.",
+      "cuerpo": "Un motociclista sufrió heridas de gravedad tras chocar contra una camioneta estacionada en la intersección de avenida Del Valle y calle Maipú, durante la noche del sábado. \n\nDe acuerdo con la información brindada, el conductor circulaba en una motocicleta de alta cilindrada por la avenida y, tras pasar un lomo de burro, perdió el control del rodado antes de colisionar contra una Ford Ranger que se encontraba detenida sobre la arteria. \n\nComo consecuencia del impacto, el motociclista sufrió un fuerte golpe en la cabeza y la fractura de una de sus piernas, por lo que requirió asistencia médica en el sitio. En el lugar trabajaron una ambulancia de Bomberos Voluntarios para el traslado de la asistencia y personal de Tránsito para ordenar la circulación vehicular.",
+      "guion": "Un motociclista choca contra una camioneta y resulta gravemente herido en Balcarce",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T01:50:58.059Z",
+      "claves": [
+        "Choque entre una moto y una camioneta",
+        "Ocurrió en avenida Del Valle y calle Maipú",
+        "El conductor sufrió fractura de pierna y golpe en la cabeza",
+        "Intervinieron Bomberos Voluntarios y Tránsito"
+      ],
+      "seSabe": [
+        "Un motociclista chocó contra una camioneta estacionada en avenida Del Valle y calle Maipú.",
+        "El hecho ocurrió durante la noche del sábado.",
+        "El conductor perdió el control tras pasar un lomo de burro.",
+        "La moto era de alta cilindrada y la camioneta una Ford Ranger.",
+        "El herido sufrió un golpe en la cabeza y una fractura en una pierna.",
+        "Trabajaron en el lugar Bomberos Voluntarios y personal de Tránsito."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Un motociclista sufrió heridas graves tras chocar contra una camioneta estacionada en avenida Del Valle y Maipú. Fue asistido por Bomberos Voluntarios.",
+      "etiquetas": [
+        "accidentes",
+        "motociclistas",
+        "tránsito"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Puntonueve (FM 100.9)",
+          "enlace": "https://puntonueve.com.ar/un-motociclista-resulto-gravemente-herido-en-choque/",
+          "fecha": "2026-09-27T01:32:51.000Z",
+          "oficial": false,
+          "aporte": "Aportó los detalles del choque entre la moto y la camioneta estacionada, la ubicación, el estado de salud del conductor y los servicios que intervinieron."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "1u77oxv": {
+      "estado": "automatica",
+      "titulo": "Inmobiliaria difunde listado de propiedades en venta",
+      "copete": "Una inmobiliaria de la región dio a conocer un amplio listado de propiedades disponibles para la venta en diferentes localidades. Las ofertas incluyen viviendas, terrenos y locales comerciales.",
+      "cuerpo": "Una firma inmobiliaria publicó un extenso catálogo de inmuebles a la venta ubicados en las localidades de Ayacucho y Tandil. Las propuestas comprenden casas de diferentes dimensiones, departamentos tipo casa, terrenos listos para escriturar y propiedades con locales comerciales integrados.\n\nEntre las opciones difundidas figuran viviendas con comodidades que van desde dos hasta cuatro dormitorios, algunas con pileta, quincho o parque, además de terrenos con superficies amplias. Varias de las publicaciones especifican la disponibilidad de servicios básicos, la opción de recibir permutas en distintas ciudades y la posibilidad de consultar por financiación o propuestas directas.",
+      "guion": "Inmobiliaria difunde listado de propiedades en venta",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T01:50:58.059Z",
+      "claves": [
+        "Catálogo difundido por una firma inmobiliaria",
+        "Propiedades ubicadas en Ayacucho y Tandil",
+        "Viviendas, terrenos y locales en oferta"
+      ],
+      "seSabe": [
+        "Se difundió un listado de inmuebles en venta en Ayacucho y Tandil.",
+        "Las opciones incluyen casas, departamentos y terrenos.",
+        "Varias propiedades aceptan permutas en distintas ciudades."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Una inmobiliaria dio a conocer un amplio catálogo de propiedades en venta en Ayacucho y Tandil que incluye casas, terrenos y locales comerciales.",
+      "etiquetas": [
+        "Inmobiliarias",
+        "Venta de inmuebles",
+        "Ayacucho",
+        "Tandil",
+        "Propiedades"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Ayacucho al Día",
+          "enlace": "https://ayacuchoaldia.com.ar/alejandro-etcheverry-inmobiliaria-vende-inmueble-en-muy-buen-estado-en-saenz-pena-637/?utm_source=rss&utm_medium=rss&utm_campaign=alejandro-etcheverry-inmobiliaria-vende-inmueble-en-muy-buen-estado-en-saenz-pena-637",
+          "fecha": "2026-09-26T18:00:35.000Z",
+          "oficial": false,
+          "aporte": "Detalló el listado completo de propiedades en venta en Ayacucho y Tandil, con sus características y datos de contacto de la inmobiliaria."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "cg7yvj": {
+      "estado": "automatica",
+      "titulo": "Fabiana Araujo y Marcelo Dimini celebran su casamiento",
+      "copete": "La conductora y exmodelo Fabiana Araujo y el empresario Marcelo Dimini formalizan su relación este sábado en un rooftop de la Ciudad de Buenos Aires, en coincidencia con el cumpleaños de ella.",
+      "cuerpo": "La ceremonia reúne a familiares, amigos y allegados en una fecha que coincide con el cumpleaños de la novia.\n\nLa pareja se conoció en 2025 tras un cruce casual en un restaurante, luego de que ambos coincidieran en el pedido de un plato de burrata. Durante la ceremonia, Dimini pronunció votos vinculados a la duración del vínculo, mientras que Araujo recordó que la propuesta de matrimonio se concretó en una playa del Caribe durante el mes de febrero.\n\nEl festejo congrega a figuras del espectáculo y allegados del ámbito de la moda. No se informaron detalles adicionales sobre la celebración posterior.",
+      "guion": "Fabiana Araujo y Marcelo Dimini celebran su casamiento",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T01:50:58.059Z",
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "La conductora Fabiana Araujo y el empresario Marcelo Dimini celebran este sábado su casamiento en la Ciudad de Buenos Aires. La pareja formaliza su relación en coincidencia con el cumpleaños de ella.",
+      "etiquetas": [
+        "casamiento",
+        "Fabiana Araujo",
+        "Marcelo Dimini",
+        "espectáculos"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/teleshow/2026/09/26/se-casaron-fabiana-araujo-y-marcelo-dimini-del-si-quiero-a-la-intimidad-de-los-votos-matrimoniales/",
+          "fecha": "2026-09-27T00:15:55.000Z",
+          "oficial": false,
+          "aporte": "Detalles del casamiento, los votos de la pareja y cómo se conocieron."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "1fswowj": {
+      "estado": "automatica",
+      "titulo": "Las coberturas de soja a término superan a la plaza física",
+      "copete": "Un hecho inédito ocurre en el mercado argentino con las coberturas de soja, que superan a las de la plaza física debido a los precios actuales de la campaña.",
+      "cuerpo": "El contrato Soja Rosario Mayo 2027 en A3 Mercados alcanzó un interés abierto de más de un millón de toneladas tras registrar operaciones por más de seiscientas mil toneladas en la semana.\n\nLa posición para la cosecha comenzó los días previos con un promedio de 363 dólares por tonelada y cerró el viernes en 362 dólares. Como comparación, un año atrás las cotizaciones eran inferiores para los contratos equivalentes, lo que genera una instancia clave para fijar valores de la nueva campaña y acelera las operaciones.\n\nEn cuanto a las ventas de contratos a futuro de la campaña 2026/27, sumaban más de un millón de toneladas a mediados de septiembre, con una porción menor con precio fijado. Además, el mercado permite realizar operaciones combinadas y opciones para cubrirse ante posibles subas, lo que impulsa también el repunte en los derivados.",
+      "guion": "Las coberturas de soja a término superan a la plaza física",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T01:50:58.059Z",
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Las coberturas de soja en el mercado a término superan por primera vez a las de la plaza física, impulsadas por los precios de la nueva campaña en A3 Mercados.",
+      "etiquetas": [
+        "soja",
+        "mercado a término",
+        "precios"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Bichos de Campo",
+          "enlace": "https://bichosdecampo.com/inedito-las-coberturas-de-soja-mayo-2027-en-el-mercado-a-termino-superan-a-las-realizadas-en-el-mercado-fisico/",
+          "fecha": "2026-09-26T23:58:19.000Z",
+          "oficial": false,
+          "aporte": "Informó que las coberturas de soja en el mercado a término superan a las de la plaza física y detalló los volúmenes de contratos y precios."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "dsbyos": {
+      "estado": "automatica",
+      "titulo": "El crecimiento de los sectores con mayor actividad no compensa la caída de empleo",
+      "copete": "Un estudio universitario revela que ocho de los diez rubros de mayor expansión económica redujeron sus puestos de trabajo en el sector privado, en medio de un incremento de la informalidad laboral en el país.",
+      "cuerpo": "Un informe elaborado por el Centro RA de la Universidad de Buenos Aires advierte sobre las dificultades del actual modelo económico, donde el crecimiento de las actividades más dinámicas no alcanza para compensar la caída de puestos laborales. Entre diciembre de 2023 y mayo de este año, sectores como la intermediación financiera, la minería y el turismo registraron una expansión en su nivel de actividad pero mostraron bajas de empleo registrado, según el análisis difundido.\n\nEl relevamiento detalla que el sector agropecuario lideró el crecimiento con una suba del cuarenta por ciento y la creación de trece mil puestos nuevos, al tiempo que la enseñanza también generó empleo privado.\n\nComo se había advertido a principios de semana en otros análisis sobre el impacto del modelo económico, la desconexión entre el auge de los sectores exportadores y la generación de puestos de trabajo formales continúa abierta a debate. Para los distritos del interior bonaerense, estas cifras reflejan la complejidad de un mercado laboral donde la mayor precariedad afecta la calidad de los ingresos de los trabajadores.",
+      "guion": "El crecimiento de los sectores con mayor actividad no compensa la caída de empleo",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T01:50:58.059Z",
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Un estudio universitario revela que ocho de los diez sectores de mayor crecimiento económico redujeron sus puestos de trabajo en el sector privado. El informe detalla la caída del empleo formal y el incremento de la informalidad en el país.",
+      "etiquetas": [
+        "empleo",
+        "economia",
+        "mercado de trabajo",
+        "universidad de buenos aires",
+        "desocupacion"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Ámbito",
+          "enlace": "https://www.ambito.com/economia/desafio-del-modelo-milei-ocho-los-diez-sectores-mayor-crecimiento-tienen-indice-negativo-empleo-n6327084",
+          "fecha": "2026-09-27T00:57:00.000Z",
+          "oficial": false,
+          "aporte": "Detalló el informe del Centro RA de la Universidad de Buenos Aires sobre la caída de empleo en sectores de alto crecimiento y los indicadores laborales del segundo trimestre."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1r8jcww",
+          "titulo": "Advierten que los sectores de mayor crecimiento económico no generan empleo",
+          "fecha": "2026-09-25T23:57:19.000Z",
+          "ruta": "/nota/advierten-que-los-sectores-de-mayor-crecimiento-economico-no-generan-1r8jcww"
+        },
+        {
+          "id": "tnndx1",
+          "titulo": "El boom exportador no siempre derrama: qué provincias lograron transformar el crecimiento en más salarios y empleo",
+          "fecha": "2026-09-24T15:05:50.000Z",
+          "ruta": "/nota/el-boom-exportador-no-siempre-derrama-que-provincias-lograron-tnndx1"
+        },
+        {
+          "id": "1fpclkk",
+          "titulo": "Milei ante inversionistas en Nueva York: \"Somos los que más hicimos por los sectores más vulnerables por el solo hecho de bajar la inflación\"",
+          "fecha": "2026-09-23T20:44:03.000Z",
+          "ruta": "/nota/milei-ante-inversionistas-en-nueva-york-somos-los-que-mas-hicimos-por-1fpclkk"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "14ozs7q": {
+      "estado": "automatica",
+      "titulo": "Tom Cruise recibe una camiseta de Gimnasia de La Plata",
+      "copete": "Durante la presentación de su última película en México, el actor estadounidense recibió una camiseta del club platense y agradeció en español.",
+      "cuerpo": "El actor estadounidense Tom Cruise recibió una camiseta de Gimnasia de La Plata durante la presentación de su nueva producción cinematográfica en México, según informó un medio digital. El hecho ocurrió cuando el protagonista de Hollywood recorría la alfombra naranja de un evento en el Toreo Parque Central de la Ciudad de México para saludar a sus seguidores, momento en el cual un medio local colocó la casaca albiazul sobre las vallas de contención. Previamente, un integrante del equipo de seguridad del artista observó la prenda y expresó un comentario futbolero. Al encontrarse con el obsequio argentino, Cruise sonrió, manifestó su gusto por los deportes y respondió con un agradecimiento en español antes de continuar con la interacción con el público, que se extendió durante cuatro horas.",
+      "guion": "Tom Cruise recibe una camiseta de Gimnasia de La Plata",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T01:50:58.059Z",
+      "claves": [
+        "Tom Cruise recibió una camiseta de Gimnasia de La Plata.",
+        "Ocurrió en México durante la presentación de su nueva película.",
+        "El actor agradeció el obsequio en español."
+      ],
+      "seSabe": [
+        "Tom Cruise recibió una camiseta de Gimnasia de La Plata en México.",
+        "El hecho ocurrió durante la presentación de su nueva película llamada Digger.",
+        "El actor agradeció el obsequio diciendo \"gracias\" en español."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Durante la presentación de su nueva película en México, Tom Cruise recibió una camiseta de Gimnasia de La Plata, reaccionó con entusiasmo ante el obsequio y agradeció en español frente a sus seguidores.",
+      "etiquetas": [
+        "Tom Cruise",
+        "Gimnasia de La Plata",
+        "México",
+        "cine"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Minuto Uno",
+          "enlace": "https://www.minutouno.com/espectaculos/tom-cruise-recibio-la-camiseta-gimnasia-la-plata-y-su-inesperada-reaccion-se-volvio-viral-n6327082",
+          "fecha": "2026-09-27T01:41:00.000Z",
+          "oficial": false,
+          "aporte": "Informó sobre la recepción de la camiseta de Gimnasia por parte de Tom Cruise en México y su reacción."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "1o7qeje": {
+      "estado": "automatica",
+      "titulo": "Breaking Bad encabeza el ranking de las mejores series del siglo",
+      "copete": "Un relevamiento internacional ubicó a Breaking Bad en el primer puesto de las mejores producciones de la televisión mundial del siglo XXI. El listado se elaboró con la votación de más de quinientas figuras del sector.",
+      "cuerpo": "Un relevamiento elaborado por el diario The New York Times ubicó a la producción Breaking Bad en el primer puesto de las mejores series estrenadas a partir del uno de enero de dos mil. El podio se completó con otros títulos destacados como The Wire y Mad Men.\n\nLa selección abarcó dramas, comedias y documentales estrenados en las últimas dos décadas. El análisis del medio sobre la tira ganadora destacó su investigación moral humanista sobre la transformación del personaje principal interpretado por Bryan Cranston.",
+      "guion": "Breaking Bad encabeza el ranking de las mejores series del siglo",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T01:50:58.059Z",
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Un relevamiento internacional que reunió la opinión de referentes de la industria televisiva ubicó a Breaking Bad en el primer puesto de las mejores producciones estrenadas en el siglo XXI.",
+      "etiquetas": [
+        "series",
+        "television",
+        "ranking",
+        "internacional"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Minuto Uno",
+          "enlace": "https://www.minutouno.com/espectaculos/breaking-bad-supero-the-wire-y-mad-men-las-mejores-series-del-siglo-xxi-n6327064",
+          "fecha": "2026-09-27T00:38:00.000Z",
+          "oficial": false,
+          "aporte": "Aportó los detalles sobre el ranking internacional de series del siglo XXI y el método de votación."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "1ylkofj": {
+      "estado": "automatica",
+      "titulo": "El análisis sobre los criterios de simplificación en economía",
+      "copete": "Un análisis sobre cómo se eligen las variables al simplificar la realidad económica y la importancia de definir los criterios según las necesidades de cada usuario.",
+      "cuerpo": "La simplificación de la realidad resulta inevitable tanto en la confección de mapas como en el desarrollo de modelos económicos, donde la clave radica en el criterio utilizado para destacar ciertos aspectos y descartar otros.\n\nSegún se desprende de un análisis histórico sobre la figura del economista Joseph Lang, publicado en 1811 en su obra Principios de aritmética política, la exclusión o inclusión de variables debe responder a los objetivos específicos de quien utiliza el modelo y no de manera automática.\n\nPara los lectores locales, el planteo invita a reflexionar sobre la necesidad de analizar los modelos económicos y las herramientas de gestión desde diferentes perspectivas para comprender los problemas y actuar en consecuencia.",
+      "guion": "El análisis sobre los criterios de simplificación en economía",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T01:50:58.059Z",
+      "claves": [
+        "La simplificación es inevitable en modelos económicos y mapas.",
+        "El criterio de selección depende de las necesidades del usuario.",
+        "Se destaca la figura histórica del economista Joseph Lang.",
+        "Los modelos formales deben analizarse según sus supuestos."
+      ],
+      "seSabe": [
+        "Según la fuente consultada, Joseph Lang desarrolló un modelo macroeconómico matemático publicado en 1811.",
+        "La inclusión o exclusión de variables en un modelo depende de lo que necesita el usuario.",
+        "Los modelos formales son ciertos según sus supuestos y falsos bajo otras condiciones."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Un análisis sobre cómo se eligen los criterios para simplificar la realidad y los modelos económicos según las necesidades de cada usuario.",
+      "etiquetas": [
+        "Economía",
+        "Joseph Lang",
+        "Modelos económicos",
+        "Análisis"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/economia/simplificar-es-inevitable-pero-con-que-criterio-nid26092026/",
+          "fecha": "2026-09-26T22:00:00.000Z",
+          "oficial": false,
+          "aporte": "Aportó reflexiones sobre la simplificación en economía y datos biográficos e históricos de Joseph Lang."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "1bh65sv": {
+      "estado": "automatica",
+      "titulo": "Quiénes pueden pedir la ayuda económica por desempleo de la Anses",
+      "copete": "La Anses detalla los requisitos para acceder a la Prestación por Desempleo destinada a trabajadores formales que perdieron su empleo. El trámite se realiza de forma presencial o virtual.",
+      "cuerpo": "La Administración Nacional de la Seguridad Social (Anses) otorga una prestación económica temporal a los trabajadores en relación de dependencia que quedaron sin empleo por motivos ajenos a su voluntad, tales como despidos sin causa o finalización de contratos. Como se había informado a fines de septiembre, este beneficio busca compensar de forma parcial la pérdida de ingresos durante la búsqueda de un nuevo puesto laboral.\n\nPara acceder al beneficio, los empleados permanentes deben contar con al menos seis meses de aportes en los tres años anteriores a la desvinculación. En el caso de los trabajadores eventuales y de temporada, se exige haber trabajado menos de doce meses en los últimos tres años y sumar más de noventa días de aportes en el año previo al cese. El monto y la cantidad de cuotas, que varían entre dos y doce, se calculan según los salarios y aportes registrados, mientras que los mayores de 45 años reciben seis meses adicionales.\n\nEl trámite requiere presentar el Documento Nacional de Identidad y la constancia de desempleo en las oficinas del organismo con turno previo o mediante su sitio web en la sección de atención virtual. El pago se deposita en una caja de ahorro previsional y el beneficio puede combinarse con diversas asignaciones familiares.",
+      "guion": "Quiénes pueden pedir la ayuda económica por desempleo de la Anses",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T01:50:58.059Z",
+      "claves": [
+        "La Anses ofrece una prestación económica para trabajadores que perdieron su empleo formal.",
+        "Se requieren al menos seis meses de aportes en los tres años previos para trabajadores permanentes.",
+        "El monto y la duración del beneficio varían según los aportes y los salarios percibidos.",
+        "El trámite se puede iniciar de forma presencial con turno o a través de la web oficial."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "La Anses detalla los requisitos para solicitar la Prestación por Desempleo destinada a trabajadores formales que perdieron su empleo. Conocé quiénes pueden acceder y cómo realizar el trámite de forma presencial o virtual.",
+      "etiquetas": [
+        "Anses",
+        "Prestacion por Desempleo",
+        "trabajadores",
+        "tramite"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/economia/2026/09/26/quienes-pueden-pedir-la-ayuda-economica-de-la-anses-para-personas-sin-trabajo-y-como-realizar-el-tramite/",
+          "fecha": "2026-09-26T20:47:41.000Z",
+          "oficial": false,
+          "aporte": "Detalló los requisitos, la duración, los montos y las vías de gestión para acceder a la Prestación por Desempleo de la Anses."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1l51z2g",
+          "titulo": "ANSES: quiénes cobran hoy, jueves 24 de septiembre de 2026",
+          "fecha": "2026-09-24T09:00:01.000Z",
+          "ruta": "/nota/anses-quienes-cobran-hoy-jueves-24-de-septiembre-de-2026-1l51z2g"
+        },
+        {
+          "id": "u3yqhj",
+          "titulo": "ANSES: quiénes cobran hoy, miércoles 23 de septiembre de 2026",
+          "fecha": "2026-09-23T09:00:01.000Z",
+          "ruta": "/nota/anses-quienes-cobran-hoy-miercoles-23-de-septiembre-de-2026-u3yqhj"
+        },
+        {
+          "id": "19uutgi",
+          "titulo": "ANSES: quiénes cobran este miércoles 23 de septiembre",
+          "fecha": "2026-09-22T18:37:09.000Z",
+          "ruta": "/nota/anses-quienes-cobran-este-miercoles-23-de-septiembre-19uutgi"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "c0dogv": {
+      "estado": "automatica",
+      "titulo": "El Banco Ciudad subasta oficinas y departamentos en Buenos Aires",
+      "copete": "La entidad bancaria realizará dos jornadas de remates online de inmuebles ubicados en distintas zonas de la Ciudad de Buenos Aires con precios base desde los 36.850 dólares.",
+      "cuerpo": "El Banco Ciudad llevará adelante remates online de propiedades y oficinas ubicadas en la Ciudad de Buenos Aires mediante su plataforma digital oficial. Esta primera jornada tendrá lugar el 30 de septiembre próximo desde las 11.\n\nEn tanto, el 9 de octubre se rematarán cinco inmuebles correspondientes a herencias vacantes, que comprenden un monoambiente en Balvanera, un terreno con construcción en Constitución y otras propiedades residenciales. La participación requiere un registro previo en la plataforma digital de la entidad hasta 48 horas antes de cada remate y la constitución de un depósito en garantía.",
+      "guion": "El Banco Ciudad subasta oficinas y departamentos en Buenos Aires",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T01:50:58.059Z",
+      "claves": [
+        "Remates online de oficinas y propiedades en Buenos Aires",
+        "Primera fecha el 30 de septiembre con cinco pisos de oficinas",
+        "Segunda fecha el 9 de octubre con bienes de herencias vacantes",
+        "Precios base desde los 36.850 dólares con requisitos de inscripción previa"
+      ],
+      "seSabe": [
+        "El Banco Ciudad realizará subastas online de inmuebles en la Ciudad de Buenos Aires.",
+        "La primera fecha de remates será el 30 de septiembre con cinco pisos de oficinas en el microcentro.",
+        "La segunda fecha será el 9 de octubre con cinco propiedades de herencias vacantes.",
+        "Los precios base de las propiedades parten desde los 36.850 dólares.",
+        "Los interesados deben registrarse en la plataforma de la entidad y dejar un depósito en garantía."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El Banco Ciudad anunció dos jornadas de subastas online de oficinas y departamentos en Buenos Aires con precios base desde los 36.850 dólares y fechas previstas para septiembre y octubre.",
+      "etiquetas": [
+        "Banco Ciudad",
+        "subastas",
+        "inmuebles",
+        "Buenos Aires",
+        "oficinas",
+        "herencias vacantes"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/economia/2026/09/26/rematan-departamentos-sin-herederos-y-oficinas-en-caba-donde-estan-como-son-y-cual-es-el-precio-inicial/",
+          "fecha": "2026-09-26T19:18:05.000Z",
+          "oficial": false,
+          "aporte": "Detalló las fechas, ubicaciones, precios base y modalidades de las subastas online del Banco Ciudad."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "1oaohul": {
+      "estado": "automatica",
+      "titulo": "La inteligencia artificial define la estrategia del mercado asegurador",
+      "copete": "Un relevamiento nacional muestra que la tecnología y la velocidad de respuesta marcan el rumbo de las compañías de seguros. Salud y vida lideran las expectativas de crecimiento.",
+      "cuerpo": "El relevamiento destaca que salud y vida individual encabezan las expectativas de crecimiento, mientras que la inteligencia artificial avanza en la atención y la gestión de siniestros.\n\nEl presidente de la entidad, Roy Humphreys, señaló que el objetivo es generar conocimiento para comprender la evolución del mercado argentino. Por su parte, el socio de la firma auditora, Alejandro de Navarrete, indicó que las proyecciones reflejan un cambio estructural en la naturaleza del riesgo debido a la presión sobre los sistemas sanitarios y previsionales.\n\nA pesar de las proyecciones de crecimiento, la industria transita una etapa de transición donde las principales barreras son las limitaciones tecnológicas y la resistencia al cambio. Ante este escenario, la velocidad de respuesta y la autogestión se consolidan como las principales exigencias de los clientes en el mercado actual.",
+      "guion": "La inteligencia artificial define la estrategia del mercado asegurador",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T01:50:58.059Z",
+      "claves": [
+        "La inteligencia artificial lidera las prioridades de las aseguradoras.",
+        "Salud y vida individual concentran las mayores expectativas de crecimiento.",
+        "La velocidad de respuesta y la autogestión son las principales exigencias de los clientes."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Un relevamiento nacional revela que la inteligencia artificial y la velocidad de respuesta transforman la estrategia del mercado asegurador argentino. Salud y vida individual lideran las expectativas de crecimiento del sector.",
+      "etiquetas": [
+        "seguros",
+        "inteligencia artificial",
+        "tecnologia",
+        "economia"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Ámbito",
+          "enlace": "https://www.ambito.com/tecnologia/la-inteligencia-artificial-y-la-velocidad-respuesta-ya-definen-la-estrategia-del-sector-los-seguros-n6327025",
+          "fecha": "2026-09-26T18:50:00.000Z",
+          "oficial": false,
+          "aporte": "Detalló los resultados del relevamiento del mercado asegurador sobre transformación digital e inteligencia artificial."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1js0h6t",
+          "titulo": "Las Pymes argentinas suman clientes por la recomendación de la inteligencia artificial",
+          "fecha": "2026-09-26T08:34:00.000Z",
+          "ruta": "/nota/las-pymes-argentinas-suman-clientes-por-la-recomendacion-de-la-1js0h6t"
+        },
+        {
+          "id": "hmyxr4",
+          "titulo": "Microsoft lanza una nueva aplicación de inteligencia artificial",
+          "fecha": "2026-09-26T07:00:17.000Z",
+          "ruta": "/nota/microsoft-redisena-copilot-como-una-superapp-de-inteligencia-hmyxr4"
+        },
+        {
+          "id": "1vponx3",
+          "titulo": "Las tecnológicas chinas desarrollan modelos masivos de inteligencia artificial",
+          "fecha": "2026-09-25T21:48:17.000Z",
+          "ruta": "/nota/las-tecnologicas-chinas-desarrollan-modelos-masivos-de-inteligencia-1vponx3"
         }
       ],
       "verificacion": {
