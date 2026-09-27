@@ -1,5 +1,5 @@
 {
-  "exportado": "2026-09-27T10:00:32.124Z",
+  "exportado": "2026-09-27T10:10:35.947Z",
   "decisiones": {
     "1951120": {
       "estado": "automatica",
@@ -31805,6 +31805,43 @@
         "nivel": "MEDIA",
         "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
         "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "1t62vai": {
+      "estado": "automatica",
+      "titulo": "PS6 y la próxima Xbox apuntan a superar la potencia de la generación actual",
+      "copete": "Los rumores sobre la próxima generación de consolas anticipan dispositivos cuatro veces más potentes que los actuales, aunque surgen dudas sobre sus futuros precios y las mejoras reales que ofrecerán a los usuarios.",
+      "cuerpo": "A casi seis años del lanzamiento de las consolas actuales, los rumores sobre la próxima generación ya comenzaron a circular en el sector tecnológico.\n\nSin embargo, las estimaciones del sector también advierten sobre un incremento notable en los costos de comercialización, con proyecciones que ubican el valor de las nuevas plataformas por encima de las cifras de lanzamiento anteriores, en un contexto marcado por la evolución de los componentes electrónicos y los precios vigentes del mercado de hardware.",
+      "guion": "PS6 y la próxima Xbox apuntan a superar la potencia de la generación actual",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T10:10:35.824Z",
+      "claves": [
+        "Los rumores indican que las futuras consolas duplicarán ampliamente el rendimiento técnico actual.",
+        "Las filtraciones señalan posibles incrementos en los precios de lanzamiento de los nuevos equipos.",
+        "El debate se centra en si el aumento de potencia justificará la inversión frente a otras opciones."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Las proyecciones sobre las consolas de próxima generación anticipan un salto en su capacidad técnica, aunque persisten dudas sobre los futuros precios de mercado y el valor real que aportarán a los usuarios.",
+      "etiquetas": [
+        "videojuegos",
+        "consolas"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Xataka",
+          "enlace": "https://www.xataka.com/videojuegos/ps6-xbox-helix-apuntan-a-ser-cuatro-veces-potentes-que-ps5-pregunta-que-me-pueden-ofrecer",
+          "fecha": "2026-09-27T10:00:10.000Z",
+          "oficial": false,
+          "aporte": "Aportó datos sobre las estimaciones técnicas y los posibles precios de la próxima generación de consolas."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "BAJA"
       }
     }
   },
