@@ -1,5 +1,5 @@
 {
-  "exportado": "2026-09-27T03:51:07.266Z",
+  "exportado": "2026-09-27T04:00:58.766Z",
   "decisiones": {
     "1951120": {
       "estado": "automatica",
@@ -29944,6 +29944,141 @@
           "fecha": "2026-09-27T03:05:00.000Z",
           "oficial": false,
           "aporte": "Aportó un análisis sobre el impacto político del discurso presidencial en la ONU y su relación con el reclamo por las Islas Malvinas."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "b97g48": {
+      "estado": "automatica",
+      "titulo": "Los bancos refinancian a miles de clientes en mora",
+      "copete": "El sistema financiero registra altos niveles de morosidad en personas físicas y los bancos avanzan con acuerdos privados para reestructurar deudas en todo el país.",
+      "cuerpo": "La morosidad en las personas físicas se ubica en torno al trece por ciento de los préstamos impagos sobre el total otorgado, en un escenario donde el stock de créditos no crece por la falta de demanda. Ante este panorama, los bancos implementan acuerdos entre privados para reestructurar deudas mediante cuotas más bajas y plazos más largos.\n\nEl funcionario respaldó el criterio de los acuerdos voluntarios y descartó medidas oficiales de rescate para evitar distorsiones en las estadísticas.\n\nPor su parte, diversas entidades financieras y la Cámara Argentina Fintech detallaron operativos propios de reestructuración de deudas tanto en la banca pública como en la privada y en el sector de billeteras virtuales para facilitar el pago de los clientes con dificultades.",
+      "guion": "Los bancos refinancian a miles de clientes en mora",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T04:00:58.679Z",
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Los bancos implementan acuerdos privados para refinanciar deudas de clientes en mora y el Banco Central asegura que la morosidad perdió fuerza.",
+      "etiquetas": [
+        "bancos",
+        "morosidad",
+        "Banco Central",
+        "economia"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/economia/2026/09/27/acuerdo-entre-privados-los-bancos-estan-refinanciando-a-115000-clientes-en-mora-por-mes/",
+          "fecha": "2026-09-27T03:40:15.000Z",
+          "oficial": false,
+          "aporte": "Detalla las estadísticas de morosidad del sistema financiero, las declaraciones del director del Banco Central Juan Curutchet y los planes de refinanciación de los principales bancos y del sector fintech."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "1tqlbld": {
+      "estado": "automatica",
+      "titulo": "Comienza una nueva edición del festival literario FILBA",
+      "copete": "El encuentro internacional de literatura arranca esta semana en Buenos Aires con un centenar de autores invitados y actividades distribuidas en ocho sedes porteñas.",
+      "cuerpo": "El Festival Internacional de Literatura de Buenos Aires se desarrollará desde el miércoles treinta de septiembre hasta el domingo cuatro de octubre con una programación centrada en el lema \"Hábitat\". La apertura formal tendrá lugar en el auditorio del Museo de Arte Latinoamericano de Buenos Aires con la presencia de referentes de la literatura nacional e internacional.\n\nEl cronograma incluye mesas de conversación, lecturas, caminatas sonoras y experiencias que cruzan literatura, música y artes visuales en ocho espacios de la capital. Entre las figuras destacadas sobresalen los escritores Emmanuel Carrère y Claire Keegan, quienes protagonizarán diversos encuentros gratuitos y arancelados en el Museo de Arte Latinoamericano de Buenos Aires y en la Facultad de Derecho de la Universidad de Buenos Aires.\n\nLa mayoría de las propuestas contará con acceso libre y gratuito, aunque algunos talleres requerirán reserva previa de localidades. La programación completa y los detalles sobre el ingreso a las distintas actividades se encuentran disponibles en el sitio web oficial del festival.",
+      "guion": "Comienza una nueva edición del festival literario FILBA",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T04:00:58.679Z",
+      "claves": [
+        "El festival literario se desarrollará del treinta de septiembre al cuatro de octubre.",
+        "Participarán cerca de cien autores nacionales e internacionales en ocho sedes.",
+        "Emmanuel Carrère y Claire Keegan figuran entre los invitados principales.",
+        "La mayoría de las actividades ofrecerá entrada libre y gratuita."
+      ],
+      "seSabe": [
+        "El festival reunirá a casi cien autores de Argentina y otros países en ocho sedes porteñas.",
+        "La edición llevará por lema \"Hábitat\" y propondrá actividades vinculadas a la literatura, la música y el cine.",
+        "El acto inaugural se realizará el miércoles treinta de septiembre en el Museo de Arte Latinoamericano de Buenos Aires.",
+        "Emmanuel Carrère y Claire Keegan participarán de entrevistas y lecturas abiertas y aranceladas."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El Festival Internacional de Literatura de Buenos Aires comenzará esta semana con un centenar de autores invitados y actividades en ocho sedes porteñas.",
+      "etiquetas": [
+        "literatura",
+        "festival",
+        "Buenos Aires",
+        "libros"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/cultura/2026/09/27/el-filba-arranca-esta-semana-con-emmanuel-carrere-y-claire-keegan-como-estrellas-asi-es-la-edicion-2026-del-festival-literario-de-buenos-aires/",
+          "fecha": "2026-09-27T03:45:00.000Z",
+          "oficial": false,
+          "aporte": "Detalló la programación, las fechas, las sedes y los invitados principales de la decimoctava edición del festival literario."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "11ps35f",
+          "titulo": "Nueva edición de la Maratón de Buenos Aires",
+          "fecha": "2026-09-20T11:17:03.000Z",
+          "ruta": "/nota/nueva-edicion-de-la-maraton-de-buenos-aires-11ps35f"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "yh8knu": {
+      "estado": "automatica",
+      "titulo": "El cantante Aleks Syntek anuncia que se mudara a Inglaterra",
+      "copete": "El músico mexicano Raúl Alejandro Escajadillo Peña comunicó que dejará su país para instalarse en Europa. La decisión llega tras una serie de polémicas en presentaciones públicas.",
+      "cuerpo": "El productor y cantante Raúl Alejandro Escajadillo Peña, conocido artísticamente como Aleks Syntek, informó durante una transmisión en vivo que se establecerá en Inglaterra. La medida se produce después del conflicto registrado el 15 de septiembre en un espectáculo en la Ciudad de México, donde el artista protagonizó cruces con los asistentes tras rechazar pedidos de canciones de Juan Gabriel y Marco Antonio Solís.\n\nA esta controversia se suman antecedentes como la renuncia a su rol de Embajador de Buena Voluntad de UNICEF México, aceptada por el organismo tras declaraciones públicas del artista. Además, el músico acumuló cuestionamientos por expresiones críticas hacia el reguetón y anécdotas difundidas en entrevistas sobre figuras internacionales como Elton John y Shakira.\n\nEl traslado a territorio británico responde, según indicó el propio cantautor, a la búsqueda de un entorno con mayor aceptación a su trayectoria artística.",
+      "guion": "El cantante Aleks Syntek anuncia que se mudara a Inglaterra",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T04:00:58.679Z",
+      "claves": [
+        "El músico Aleks Syntek dejará México para instalarse en Inglaterra.",
+        "La decisión surge tras cuestionamientos por declaraciones públicas.",
+        "Renunció a su rol en UNICEF México tras dichos sobre derechos humanos.",
+        "Acumuló polémicas por sus críticas a la música urbana y diversas anécdotas."
+      ],
+      "seSabe": [
+        "Aleks Syntek anunció en una transmisión en vivo que se mudará a Inglaterra.",
+        "El artista protagonizó un cruce con asistentes en un show el 15 de septiembre en la Ciudad de México.",
+        "UNICEF México aceptó su renuncia como Embajador de Buena Voluntad tras declaraciones contrarias al respeto de los derechos humanos.",
+        "El músico ha expresado públicamente su rechazo hacia el reguetón y difundido anécdotas sobre otros artistas."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El músico Aleks Syntek anunció que dejará México para instalarse en Inglaterra tras una serie de controversias en sus presentaciones públicas y declaraciones sobre la industria musical.",
+      "etiquetas": [
+        "Aleks Syntek",
+        "Inglaterra",
+        "musica",
+        "Mexico",
+        "UNICEF"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/mexico/2026/09/27/estas-son-las-polemicas-de-aleks-syntek-que-lo-llevaron-a-abandonar-mexico-del-odio-al-reggaeton-al-brote-psicotico/",
+          "fecha": "2026-09-27T03:52:44.000Z",
+          "oficial": false,
+          "aporte": "Informó sobre la mudanza de Aleks Syntek a Inglaterra y detalló las polémicas recientes y antecedentes del artista."
         }
       ],
       "verificacion": {
