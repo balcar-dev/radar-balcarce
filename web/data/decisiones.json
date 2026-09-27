@@ -1,5 +1,5 @@
 {
-  "exportado": "2026-09-27T16:18:46.725Z",
+  "exportado": "2026-09-27T16:38:53.850Z",
   "decisiones": {
     "1951120": {
       "estado": "automatica",
@@ -34186,6 +34186,72 @@
           "titulo": "Reino y Ciantini participan en Tandil de la presentación de las TC Pick Up en Balcarce",
           "fecha": "2026-09-24T00:23:50.055Z",
           "ruta": "/nota/reino-y-ciantini-participan-en-tandil-1ss3yj3"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "p8h86x": {
+      "estado": "automatica",
+      "titulo": "El automovilismo nacional genera un intenso movimiento vehicular en Balcarce",
+      "copete": "El regreso de las competencias nacionales al autódromo Juan Manuel Fangio colmó las calles y avenidas cercanas con miles de visitantes durante el fin de semana.",
+      "cuerpo": "El regreso de la actividad nacional al autódromo Juan Manuel Fangio tras quince años sin competencias de este nivel generó un intenso movimiento vehicular y una postal poco habitual en las calles de Balcarce. Durante el fin de semana, la avenida Suipacha junto con las calles 63, 55 y 51 registraron una gran concentración de vehículos y autos estacionados a ambos lados, lo que motivó un operativo de ordenamiento con presencia de Gendarmería Nacional. Además, los vecinos de la zona aprovecharon la llegada de visitantes para ofrecer espacios de estacionamiento dentro de sus propiedades.\n\nComo se había informado, el circuito de la sierra La Barrosa volvió a recibir categorías como el TC Pick Up, un hecho que generó gran expectativa en el turismo y el comercio local.",
+      "guion": "El automovilismo nacional genera un intenso movimiento vehicular en Balcarce",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T16:38:53.766Z",
+      "claves": [
+        "El autódromo Juan Manuel Fangio volvió a recibir competencias nacionales tras quince años.",
+        "Las avenidas y calles cercanas al circuito se colmaron de vehículos y visitantes.",
+        "Vecinos de la zona ofrecieron espacios de estacionamiento en sus propiedades.",
+        "Se desplegó un operativo de ordenamiento con Gendarmería Nacional."
+      ],
+      "seSabe": [
+        "El regreso de la actividad nacional al autódromo generó un intenso movimiento de vehículos durante el fin de semana.",
+        "La avenida Suipacha y las calles 63, 55 y 51 registraron una gran cantidad de autos estacionados y circulación.",
+        "Se desplegó un operativo de ordenamiento y fiscalización con efectivos de Gendarmería Nacional en la calle 55 y la calle 51.",
+        "Vecinos de la zona ofrecieron espacios de estacionamiento dentro de sus propiedades para los visitantes."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El regreso del automovilismo nacional al autódromo Juan Manuel Fangio colmó las calles de Balcarce con miles de visitantes, intenso movimiento vehicular y operativos de tránsito durante todo el fin de semana.",
+      "etiquetas": [
+        "autodromo",
+        "balcarce",
+        "tc pick up",
+        "transito"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Radio Gabal (FM 104.1)",
+          "enlace": "https://www.radiogabal.com.ar/index.php/comunidad/autodromo-colmado-y-las-calles-de-la-ciudad-tambien-vehiculos-coparon-la-av-suipacha-y-aledanas",
+          "fecha": "2026-09-27T16:27:29.000Z",
+          "oficial": false,
+          "aporte": "Detalló el impacto en el tránsito, las calles afectadas y el operativo de Gendarmería por el regreso del automovilismo nacional."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "si6qmk",
+          "titulo": "Diego Santilli visita el autódromo Juan Manuel Fangio en Balcarce",
+          "fecha": "2026-09-27T15:00:58.065Z",
+          "ruta": "/nota/diego-santilli-visita-el-autodromo-juan-manuel-fangio-en-balcarce-si6qmk"
+        },
+        {
+          "id": "e9anvw",
+          "titulo": "El autodromo Juan Manuel Fangio recibe al automovilismo nacional en Balcarce",
+          "fecha": "2026-09-27T12:20:00.000Z",
+          "ruta": "/nota/el-autodromo-juan-manuel-fangio-recupera-el-automovilismo-nacional-en-e9anvw"
+        },
+        {
+          "id": "121t71e",
+          "titulo": "Cruce en Balcarce por la habilitación del autódromo Fangio",
+          "fecha": "2026-09-27T02:30:43.813Z",
+          "ruta": "/nota/cruce-en-balcarce-por-la-habilitacion-del-autodromo-fangio-121t71e"
         }
       ],
       "verificacion": {
