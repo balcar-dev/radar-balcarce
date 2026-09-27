@@ -1,5 +1,5 @@
 {
-  "exportado": "2026-09-27T18:08:56.491Z",
+  "exportado": "2026-09-27T18:18:51.300Z",
   "decisiones": {
     "1951120": {
       "estado": "automatica",
@@ -34511,6 +34511,76 @@
           "titulo": "El Concejo declara de interés un proyecto escolar en Balcarce",
           "fecha": "2026-09-26T14:24:46.000Z",
           "ruta": "/nota/el-concejo-declara-de-interes-un-proyecto-escolar-en-balcarce-11genwv"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "4aj9uy": {
+      "estado": "automatica",
+      "titulo": "Hernán Palazzo gana en el regreso del TC Pick Up en Balcarce",
+      "copete": "Ante 27.000 personas, el automovilismo nacional volvió al Autódromo Juan Manuel Fangio después de quince años. Hernán Palazzo se quedó con el triunfo en el TC Pick Up y el piloto local Diego Ciantini finalizó segundo.",
+      "cuerpo": "El Autódromo Juan Manuel Fangio volvió a recibir competencias nacionales este domingo con una multitudinaria convocatoria que marcó un récord histórico de público para el TC Pick Up. Veintisiete mil personas colmaron el circuito local, donde el estacionamiento quedó completo desde el mediodía, en una jornada que también incluyó la victoria de Antonino Sganga en el TC Pista Pick Up.\n\nA falta de cuatro vueltas, Palazzo tomó el liderazgo y se quedó con la victoria, mientras que Ciantini logró el segundo puesto y Fritzler completó el podio. Por su parte, Werner debió ingresar a boxes por un problema mecánico cuando peleaba en los primeros puestos.\n\nCon este evento, el circuito local recuperó la actividad nacional tras quince años de ausencia.",
+      "guion": "Hernan Palazzo gana en el regreso del TC Pick Up en Balcarce",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T18:18:51.234Z",
+      "claves": [
+        "Hernán Palazzo ganó la final del TC Pick Up en el Autódromo Juan Manuel Fangio.",
+        "El piloto local Diego Ciantini finalizó en el segundo puesto ante su gente.",
+        "Veintisiete mil personas asistieron al evento, marcando un récord histórico para la categoría.",
+        "El automovilismo nacional regresó a Balcarce después de quince años sin actividad."
+      ],
+      "seSabe": [
+        "Hernán Palazzo ganó la competencia final del TC Pick Up.",
+        "Antonino Sganga se impuso en la categoría TC Pista Pick Up.",
+        "El piloto local Diego Ciantini terminó en la segunda posición.",
+        "Otto Fritzler ocupó el tercer lugar del podio.",
+        "Veintisiete mil personas asistieron al autódromo, según los datos difundidos.",
+        "Mariano Werner debió abandonar la pelea por la victoria a cuatro vueltas del final debido a un inconveniente mecánico."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Ante 27.000 personas, el automovilismo nacional volvió al Autódromo Juan Manuel Fangio después de quince años. Hernán Palazzo ganó en el TC Pick Up y el piloto local Diego Ciantini terminó segundo.",
+      "etiquetas": [
+        "automovilismo",
+        "TC Pick Up",
+        "Autodromo Juan Manuel Fangio",
+        "Hernan Palazzo",
+        "Diego Ciantini",
+        "Balcarce"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "0223 (Mar del Plata)",
+          "enlace": "https://www.0223.com.ar/nota/2026-9-27-15-9-0-el-regreso-sonado-del-automovilismo-tuvo-dueno-hernan-palazzo-gano-en-balcarce-ante-27-000-personas",
+          "fecha": "2026-09-27T18:09:00.000Z",
+          "oficial": false,
+          "aporte": "Detalló los resultados de las finales del TC Pick Up y TC Pista Pick Up, la asistencia de público y el desarrollo de la competencia."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "p7nd3j",
+          "titulo": "Balcarce palpita el regreso del automovilismo nacional en Balcarce",
+          "fecha": "2026-09-26T01:13:28.000Z",
+          "ruta": "/nota/comienza-la-previa-del-tc-pick-up-en-balcarce-p7nd3j"
+        },
+        {
+          "id": "4v2vga",
+          "titulo": "Largas filas en Balcarce por el regreso del automovilismo",
+          "fecha": "2026-09-24T13:34:15.000Z",
+          "ruta": "/nota/largas-filas-en-balcarce-por-el-regreso-del-automovilismo-4v2vga"
+        },
+        {
+          "id": "1sjses1",
+          "titulo": "Mangoni palpita el regreso del automovilismo a Balcarce",
+          "fecha": "2026-09-23T22:16:46.000Z",
+          "ruta": "/nota/mangoni-palpita-el-regreso-del-automovilismo-a-balcarce-1sjses1"
         }
       ],
       "verificacion": {
