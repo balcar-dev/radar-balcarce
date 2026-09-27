@@ -1,5 +1,5 @@
 {
-  "exportado": "2026-09-27T16:48:46.384Z",
+  "exportado": "2026-09-27T16:58:51.112Z",
   "decisiones": {
     "1951120": {
       "estado": "automatica",
@@ -34252,6 +34252,66 @@
           "titulo": "Cruce en Balcarce por la habilitación del autódromo Fangio",
           "fecha": "2026-09-27T02:30:43.813Z",
           "ruta": "/nota/cruce-en-balcarce-por-la-habilitacion-del-autodromo-fangio-121t71e"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "1ou5oaz": {
+      "estado": "automatica",
+      "titulo": "Kicillof y Bianco explican los montos de la obra del autódromo en Balcarce",
+      "copete": "El gobernador bonaerense y el ministro de Gobierno aclararon la diferencia entre los desembolsos nominales y la cifra actualizada informada por la Provincia para el circuito local.",
+      "cuerpo": "La discusión surgió por la diferencia entre los montos nominales registrados a nivel local y la cifra de casi tres mil millones de pesos informada por la Provincia. Al respecto, Kicillof defendió el monto y señaló que corresponde a la actualización de los desembolsos realizados durante los últimos tres años.\n\nEn paralelo, el municipio había indicado transferencias por algo más de mil millones de pesos, además de recursos propios y no monetarios para completar los trabajos.",
+      "guion": "Kicillof y Bianco explican los montos de la obra del autódromo en Balcarce",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T16:58:51.045Z",
+      "claves": [
+        "El gobernador defendió los números de la Provincia sobre la obra.",
+        "Bianco detalló que la diferencia responde a una actualización a valores actuales.",
+        "El circuito local volvió a abrir tras quince años sin actividad oficial."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El gobernador Axel Kicillof y el ministro Carlos Bianco aclararon los montos de la inversión provincial en el autódromo de Balcarce durante su reapertura.",
+      "etiquetas": [
+        "autodromo",
+        "Balcarce",
+        "Axel Kicillof",
+        "Carlos Bianco",
+        "obras"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Diario La Vanguardia",
+          "enlace": "https://www.diariolavanguardia.com/noticias/44915-kicillof-sobre-el-fangio-fue-un-invento-de-la-provincia/",
+          "fecha": null,
+          "oficial": false,
+          "aporte": "Explicaciones de Axel Kicillof y Carlos Bianco sobre los montos y la metodología de inversión en el autódromo de Balcarce."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "uukabt",
+          "titulo": "Kicillof destaca la reinauguración del autódromo Juan Manuel Fangio en Balcarce",
+          "fecha": "2026-09-26T00:07:31.000Z",
+          "ruta": "/nota/kicillof-destaca-la-reapertura-del-autodromo-en-balcarce-uukabt"
+        },
+        {
+          "id": "1rqdi5z",
+          "titulo": "Kicillof encabeza la reinauguración del autódromo Juan Manuel Fangio en Balcarce",
+          "fecha": "2026-09-25T19:59:58.000Z",
+          "ruta": "/nota/kicillof-encabeza-la-reinauguracion-del-autodromo-juan-manuel-fangio-1rqdi5z"
+        },
+        {
+          "id": "1e6tvp9",
+          "titulo": "Kicillof encabeza la reapertura del autódromo Juan Manuel Fangio en Balcarce",
+          "fecha": "2026-09-25T10:15:00.000Z",
+          "ruta": "/nota/el-gobernador-bonaerense-encabeza-la-reapertura-del-autodromo-en-1e6tvp9"
         }
       ],
       "verificacion": {
