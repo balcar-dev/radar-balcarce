@@ -1,5 +1,5 @@
 {
-  "exportado": "2026-09-27T11:40:31.242Z",
+  "exportado": "2026-09-27T11:50:34.502Z",
   "decisiones": {
     "1951120": {
       "estado": "automatica",
@@ -32602,13 +32602,36 @@
     },
     "1ve3237": {
       "estado": "automatica",
-      "titulo": null,
-      "copete": null,
-      "cuerpo": null,
-      "guion": null,
-      "deIA": null,
+      "titulo": "Miami votará la continuidad de un impuesto escolar",
+      "copete": "Los votantes de Miami-Dade definirán en noviembre la renovación de un gravamen a la propiedad destinado al financiamiento escolar. La medida no implica un aumento de la tasa actual.",
+      "cuerpo": "Los electores del condado de Miami-Dade decidirán el martes 3 de noviembre de 2026 si extienden por cuatro años una tasa impositiva destinada a sostener el financiamiento de las escuelas públicas locales.\n\nEl gravamen actual, aprobado en 2022 tras un antecedente inicial en 2018, vence el treinta de junio de 2027. La propuesta busca mantener el esquema por un período que iría desde julio de 2027 hasta junio de 2031, sin representar un incremento en el tributo.\n\nEl superintendente del distrito escolar, Rafael Villalobos, advirtió que una eventual caída del impuesto afectaría la retención y contratación de docentes debido al costo de vida en la zona. La medida requiere el respaldo de la mayoría en las urnas según lo estipulado por la normativa estatal.",
+      "guion": "Miami votará la continuidad de un impuesto escolar",
+      "deIA": true,
       "por": "ia",
-      "cuando": "2026-09-27T11:40:31.147Z"
+      "cuando": "2026-09-27T11:50:34.417Z",
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Los votantes de Miami-Dade definirán en noviembre la renovación de un impuesto a la propiedad destinado a financiar salarios docentes y seguridad escolar. La consulta decidirá si se extiende un gravamen que recauda cien dólares anuales por cada cien mil de valor imponible.",
+      "etiquetas": [
+        "Miami",
+        "impuestos",
+        "elecciones"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/estados-unidos/florida/us100-por-cada-us100-mil-en-florida-el-impuesto-que-ya-se-aplica-en-miami-y-podria-vetarse-luego-de-nid27092026/",
+          "fecha": "2026-09-27T11:00:00.000Z",
+          "oficial": false,
+          "aporte": "Aportó los detalles sobre la consulta por el impuesto a la propiedad en Miami-Dade, los montos, el destino de los fondos y los plazos de la votación."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
     },
     "614rkz": {
       "estado": "automatica",
@@ -32948,6 +32971,105 @@
         "nivel": "MEDIA",
         "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
         "sugeridoPorIA": "ALTA"
+      }
+    },
+    "1428xxh": {
+      "estado": "automatica",
+      "titulo": "Registran buena calidad del aire en la localidad chilena de Purén",
+      "copete": "Un informe técnico detalla los niveles actuales de contaminación y las medidas de restricción vigentes en distintas zonas de Chile. La situación ambiental en Purén muestra parámetros considerados seguros para la salud.",
+      "cuerpo": "Un estudio elaborado por diversas instituciones académicas y gubernamentales chilenas detalla que, en las últimas dos décadas, el país experimentó una mejora general en la calidad del aire, aunque persisten diferencias regionales. El informe señala que el uso de leña húmeda en el sur y las emisiones en áreas industriales del norte y centro continúan entre los principales desafíos ambientales.\n\nEn cuanto a la situación actual en Purén, los registros oficiales indican una condición buena, con niveles de material particulado que se ubican dentro de parámetros aceptables para la población general. Kevin Basoa, investigador del Centro de Ciencia del Clima y la Resiliencia, señaló que la regulación sobre el uso de leña enfrenta dificultades debido a factores culturales y geográficos que dificultan la dispersión de contaminantes.\n\nComo parte de las medidas de control en el país, se mantienen restricciones a la circulación vehicular, prohibiciones en el uso de calefactores a leña en determinadas zonas metropolitanas y limitaciones a las quemas agrícolas durante los meses más fríos.",
+      "guion": "Registran buena calidad del aire en la localidad chilena de Purén",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T11:50:34.417Z",
+      "claves": [
+        "La calidad del aire en Purén es considerada buena según los registros oficiales.",
+        "El uso de leña húmeda y las zonas industriales son los principales focos de contaminación en Chile.",
+        "Se mantienen restricciones vehiculares y prohibiciones de calefactores a leña en la región metropolitana."
+      ],
+      "seSabe": [
+        "Chile registró una mejoría en la calidad del aire en los últimos veinte años, según un análisis de la Universidad de Chile, el CR2, el Ministerio del Medio Ambiente y la Universidad del Desarrollo.",
+        "La calidad del aire en Purén es buena, con niveles de material particulado 2.5 en 28 g/m3 y de material particulado 10 en 36 g/m3.",
+        "El uso de leña húmeda es la principal causa de contaminación en el sur chileno, según explicó Kevin Basoa.",
+        "Existen restricciones para vehículos, motocicletas, camiones y prohibiciones de quemas agrícolas en la región metropolitana."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Un informe técnico detalla los niveles actuales de contaminación en Chile y confirma que la calidad del aire en la localidad de Purén se encuentra en niveles considerados buenos y seguros para la población.",
+      "etiquetas": [
+        "calidad del aire",
+        "Chile",
+        "Purén",
+        "contaminación ambiental",
+        "medio ambiente"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/noticias/2026/09/27/calidad-del-aire-en-puren-este-27-de-septiembre-de-2026/",
+          "fecha": "2026-09-27T11:46:25.000Z",
+          "oficial": false,
+          "aporte": "Detalla el informe sobre la calidad del aire en Chile, la situación en Purén y las medidas de restricción vigentes."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "p7tbko": {
+      "estado": "automatica",
+      "titulo": "El estado de Florida custodia fondos sin reclamar por miles de millones de dólares",
+      "copete": "El estado estadounidense mantiene bajo su resguardo miles de millones de dólares en activos sin reclamar. La administración habilitó un portal web gratuito para consultar y recuperar los fondos pendientes.",
+      "cuerpo": "El programa oficial, denominado Claim Your Cash Florida, busca facilitar la identificación y recuperación de estos bienes a través de una plataforma digital gratuita administrada por la División de Propiedad No Reclamada del Departamento de Servicios Financieros.\n\nLa iniciativa fue presentada por el director financiero estatal, Blaise Ingoglia, quien señaló que aproximadamente uno de cada cinco residentes podría contar con propiedades abandonadas.\n\nLas empresas e instituciones deben transferir estos activos al Estado cuando no logran establecer contacto con los titulares tras el período legal previsto. El gobierno conserva los fondos de manera indefinida hasta que el propietario legítimo, un heredero o un representante autorizado complete la verificación de identidad y la documentación requerida para gestionar la devolución mediante el sitio web oficial.",
+      "guion": "El estado de Florida custodia fondos sin reclamar por miles de millones de dólares",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T11:50:34.417Z",
+      "claves": [
+        "Florida resguarda miles de millones de dólares en activos sin reclamar.",
+        "El programa Claim Your Cash Florida permite realizar consultas sin costo.",
+        "Los fondos incluyen cuentas inactivas, cheques y depósitos de servicios públicos.",
+        "El Estado conserva los bienes de forma indefinida hasta verificar la titularidad."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El estado de Florida mantiene bajo custodia miles de millones de dólares en activos sin reclamar y habilitó un portal digital gratuito para que los residentes puedan consultar y gestionar la devolución de fondos pendientes.",
+      "etiquetas": [
+        "Florida",
+        "activos sin reclamar",
+        "estados unidos"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/estados-unidos/florida/oficial-y-confirmado-florida-guarda-mas-de-us3000-millones-en-dinero-y-propiedades-sin-reclamar-nid27092026/",
+          "fecha": "2026-09-27T11:32:00.000Z",
+          "oficial": false,
+          "aporte": "Detalló que Florida custodia más de 3000 millones de dólares en activos sin reclamar y explicó el funcionamiento del programa Claim Your Cash Florida."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "sqxzpc",
+          "titulo": "Oficial y confirmado | El IRS embargará las cuentas bancarias, vehículos y propiedades de las personas que no hayan presentado la Declaración de Impuestos con el Formulario 1040 después de recibir una herencia",
+          "fecha": "2026-09-23T08:03:25.000Z",
+          "ruta": "/nota/oficial-y-confirmado-el-irs-embargara-las-cuentas-bancarias-vehiculos-sqxzpc"
+        },
+        {
+          "id": "1v3okzj",
+          "titulo": "Oficial y confirmado: Gavin Newsom avanza con una ley que busca “Apagar la IA” en California",
+          "fecha": "2026-09-21T16:22:00.000Z",
+          "ruta": "/nota/oficial-y-confirmado-gavin-newsom-avanza-con-una-ley-que-busca-apagar-1v3okzj"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
       }
     }
   },
