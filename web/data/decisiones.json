@@ -1,5 +1,5 @@
 {
-  "exportado": "2026-09-27T23:34:23.001Z",
+  "exportado": "2026-09-27T23:44:27.412Z",
   "decisiones": {
     "1951120": {
       "estado": "automatica",
@@ -35894,6 +35894,72 @@
         "nivel": "MEDIA",
         "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
         "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "gun9be": {
+      "estado": "automatica",
+      "titulo": "Antonino Sganga gana en el TC Pista Pick Up en el Fangio",
+      "copete": "Antonino Sganga se impuso en la categoría disputada en el autódromo Juan Manuel Fangio. El piloto local Juan José Suárez debió abandonar tras un incidente en la carrera.",
+      "cuerpo": "Antonino Sganga se consagró ganador en las TC Pista Pick Up tras una apretada definición desarrollada en el autódromo Juan Manuel Fangio. La competencia tuvo múltiples alternativas y abandonos, entre ellos el del piloto local Juan José Suárez, quien venía cumpliendo una destacada labor en el cuarto puesto hasta que protagonizó un incidente en la vuelta ocho en la zona del puente junto a Santiago Biagi, quedando ambos sin posibilidades.\n\nEl fin de semana automovilístico en el circuito local ya había tenido actividad previa.\n\nLa carrera final también tuvo las bajas tempranas del líder del play off, Tomás Pellandino, quien no pudo largar por problemas en su vehículo. Finalmente, Sganga cruzó la meta en primer lugar seguido por Cifré, Néstor Goya y José Alberto Goya, siendo los únicos que completaron la totalidad de las vueltas del trazado balcarceño.",
+      "guion": "Antonino Sganga gana en el TC Pista Pick Up en el Fangio",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T23:44:27.328Z",
+      "claves": [
+        "Antonino Sganga logró su primera victoria en la divisional en el autódromo Juan Manuel Fangio.",
+        "El piloto local Juan José Suárez abandonó la final tras un incidente en la vuelta ocho.",
+        "La competencia principal finalizó con pocos pilotos completando la totalidad de las vueltas."
+      ],
+      "noConfirmado": [
+        "No se informaron oficialmente los detalles técnicos sobre las sanciones aplicadas en la primera serie."
+      ],
+      "textoRedes": "Antonino Sganga se impuso en las TC Pista Pick Up en el autódromo Juan Manuel Fangio. El piloto local Juan José Suárez cumplió una buena labor previa pero debió abandonar tras un incidente en la final.",
+      "etiquetas": [
+        "TC Pista Pick Up",
+        "Autodromo Juan Manuel Fangio",
+        "Antonino Sganga",
+        "Juan Jose Suárez"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/antonino-sganga-se-impuso-en-las-tc-pista-pick-up-71",
+          "fecha": "2026-09-27T23:42:42.000Z",
+          "oficial": false,
+          "aporte": "Detalló los resultados de las series, los incidentes en pista y el desarrollo de la final."
+        },
+        {
+          "medio": "Campeones",
+          "enlace": "https://campeones.com.ar/antonino-sganga-el-nuevo-nombre-ganador-del-tc-pista-pick-up/",
+          "fecha": "2026-09-27T16:56:06.000Z",
+          "oficial": false,
+          "aporte": "Informó que se trató de la primera victoria de Sganga en la categoría y su impacto en el campeonato."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1ofousc",
+          "titulo": "Suárez logra el segundo puesto en su serie del TC Pista Pick Up",
+          "fecha": "2026-09-27T15:55:51.000Z",
+          "ruta": "/nota/suarez-logra-el-segundo-puesto-en-su-serie-del-tc-pista-pick-up-en-1ofousc"
+        },
+        {
+          "id": "1b7rczz",
+          "titulo": "Cifre marca el ritmo en la clasificación del TC Pista Pick Up",
+          "fecha": "2026-09-26T19:31:21.000Z",
+          "ruta": "/nota/cifre-marca-el-ritmo-en-la-clasificacion-del-tc-pista-pick-up-en-1b7rczz"
+        },
+        {
+          "id": "4aj9uy",
+          "titulo": "Hernán Palazzo gana en el regreso del TC Pick Up",
+          "fecha": "2026-09-27T18:14:00.000Z",
+          "ruta": "/nota/hernan-palazzo-gana-en-el-regreso-del-tc-pick-up-en-balcarce-4aj9uy"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "ALTA"
       }
     }
   },
