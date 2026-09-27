@@ -1,5 +1,5 @@
 {
-  "exportado": "2026-09-27T12:31:35.106Z",
+  "exportado": "2026-09-27T12:40:29.655Z",
   "decisiones": {
     "1951120": {
       "estado": "automatica",
@@ -33622,6 +33622,74 @@
       "verificacion": {
         "nivel": "MEDIA",
         "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "1l4eu7n": {
+      "estado": "automatica",
+      "titulo": "El dólar oficial abre la semana sin cambios en sus cotizaciones",
+      "copete": "Los mercados financieros retoman su actividad este lunes con los valores de cierre de la semana pasada en las pizarras del Banco Nación y el circuito informal.",
+      "cuerpo": "El mercado financiero retoma su actividad este lunes tras el fin de semana, con la expectativa puesta en el comportamiento de las diferentes cotizaciones de la divisa estadounidense. De no registrarse sobresaltos en la economía local, tanto la moneda oficial como el circuito paralelo mantienen los valores de cierre de la última jornada hábil de la semana anterior.\n\nA estas opciones se suman las cotizaciones financieras como el dólar MEP y el contado con liquidación, cuyas operaciones bursátiles mediante la venta de bonos y acciones se realizan a través del home banking según los horarios establecidos por cada entidad bancaria.",
+      "guion": "El dólar oficial abre la semana sin cambios en sus cotizaciones",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-27T12:40:29.577Z",
+      "noConfirmado": [
+        "No se detallaron los valores específicos de cierre para el dólar MEP y el contado con liquidación en la última jornada hábil."
+      ],
+      "textoRedes": "Conocé cuáles son los valores de apertura para el dólar oficial, el dólar blue y las cotizaciones financieras en el inicio de la semana bancaria.",
+      "etiquetas": [
+        "dólar",
+        "economía",
+        "bancos",
+        "dólar blue"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/economia/a-cuanto-abre-el-dolar-el-lunes-28-de-septiembre-nid26092026/",
+          "fecha": "2026-09-27T12:34:15.000Z",
+          "oficial": false,
+          "aporte": "Detalló los valores de apertura y cierre para el dólar oficial y el dólar blue, además del funcionamiento de los dólares financieros en los bancos."
+        },
+        {
+          "medio": "Ámbito",
+          "enlace": "https://www.ambito.com/finanzas/dolar-blue-hoy-cuanto-opera-este-domingo-27-septiembre-n6327097",
+          "fecha": "2026-09-27T12:30:00.000Z",
+          "oficial": false,
+          "aporte": "Mencionó la existencia de las cotizaciones del dólar blue, oficial, MEP y CCL."
+        },
+        {
+          "medio": "Ámbito",
+          "enlace": "https://www.ambito.com/finanzas/dolar-hoy-cuanto-cotiza-este-domingo-27-septiembre-n6327096",
+          "fecha": "2026-09-27T12:30:00.000Z",
+          "oficial": false,
+          "aporte": "Mencionó las cotizaciones del dólar blue, oficial, MEP y CCL."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "c0mpjj",
+          "titulo": "Dólar hoy: a cuánto operaron todas las cotizaciones minuto a minuto este lunes 21 de septiembre",
+          "fecha": "2026-09-21T20:17:36.000Z",
+          "ruta": "/nota/dolar-hoy-a-cuanto-operaron-todas-las-cotizaciones-minuto-a-minuto-c0mpjj"
+        },
+        {
+          "id": "wnsocg",
+          "titulo": "Dólar hoy y dólar blue hoy minuto a minuto: a cuánto opera este lunes 21 de septiembre",
+          "fecha": "2026-09-21T16:34:00.000Z",
+          "ruta": "/nota/dolar-hoy-y-dolar-blue-hoy-minuto-a-minuto-a-cuanto-opera-este-lunes-wnsocg"
+        },
+        {
+          "id": "1k7kftn",
+          "titulo": "Dólar blue hoy: a cuánto opera este lunes 21 de septiembre",
+          "fecha": "2026-09-21T03:05:56.000Z",
+          "ruta": "/nota/dolar-blue-hoy-a-cuanto-opera-este-lunes-21-de-septiembre-1k7kftn"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
         "sugeridoPorIA": "MEDIA"
       }
     }
