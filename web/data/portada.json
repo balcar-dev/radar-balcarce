@@ -1,5 +1,5 @@
 {
-  "generado": "2026-09-28T01:12:52.157Z",
+  "generado": "2026-09-28T01:31:04.996Z",
   "notas": [
     {
       "id": "gun9be",
@@ -1003,7 +1003,7 @@
       "fecha": "2026-09-27T13:26:00.000Z",
       "sinFecha": false,
       "visto": "2026-09-27T23:28:54.122Z",
-      "relevancia": 80,
+      "relevancia": 73,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1034,7 +1034,7 @@
         {
           "medio": "TN (Todo Noticias)",
           "enlace": "https://tn.com.ar/internacional/2026/09/27/malvinas-el-ministro-de-defensa-de-chile-respaldo-el-reclamo-argentino-pero-defendio-el-derecho-a-comerciar-con-las-islas/",
-          "fecha": "2026-09-27T22:47:37.000Z",
+          "fecha": "2026-09-27T22:42:39.000Z",
           "oficial": false,
           "aporte": null
         },
@@ -1069,7 +1069,7 @@
         {
           "medio": "La Nueva",
           "enlace": "https://www.lanueva.com/nota/2026-9-27-20-4-0-malvinas-chile-respaldo-el-reclamo-argentino-pero-defendio-el-derecho-al-comercio-con-las-islas",
-          "fecha": "2026-09-28T01:02:17.000Z",
+          "fecha": "2026-09-28T01:23:29.000Z",
           "oficial": false,
           "aporte": null
         }
@@ -1213,7 +1213,6 @@
         "A24",
         "Ámbito",
         "TyC Sports",
-        "Minuto Uno",
         "C5N",
         "Crónica",
         "Radio Mitre",
@@ -1226,11 +1225,11 @@
         "QZ Noticias (Mar del Plata)",
         "El Marplatense",
         "Mi8 (Canal 8 Mar del Plata)",
+        "NDEN – Noticias de Necochea",
         "Clarín",
         "0223 (Mar del Plata)",
+        "Minuto Uno",
         "La Nueva",
-        "La Verdad",
-        "NDEN – Noticias de Necochea",
         "Doble Amarilla",
         "Bolavip Argentina"
       ],
@@ -1564,7 +1563,9 @@
       "seccion": "Economía",
       "medios": [
         "Infobae",
+        "El Destape",
         "Canal 26",
+        "Diario Popular",
         "0223 (Mar del Plata)"
       ],
       "enlace": "https://www.infobae.com/economia/2026/09/26/no-escapa-a-la-realidad-tras-casi-30-anos-de-actividad-cerro-la-jugueteria-tio-mario/",
@@ -1572,7 +1573,7 @@
       "fecha": "2026-09-26T22:45:44.000Z",
       "sinFecha": false,
       "visto": "2026-09-27T23:28:54.122Z",
-      "relevancia": 44,
+      "relevancia": 64,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1587,9 +1588,23 @@
           "aporte": null
         },
         {
+          "medio": "El Destape",
+          "enlace": "https://www.eldestapeweb.com/politica/cierra-historica-jugueteria-30-anos-antiguedad-202692621437",
+          "fecha": "2026-09-27T00:04:37.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
           "medio": "Canal 26",
           "enlace": "https://www.canal26.com/economia/2026/09/27/tio-mario-cierra-despues-de-casi-30-anos-que-paso-con-la-historica-jugueteria/",
           "fecha": "2026-09-27T00:11:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Diario Popular",
+          "enlace": "https://www.diariopopular.com.ar/economia/una-historica-jugueteria-cerro-despues-casi-30-anos-n921754",
+          "fecha": "2026-09-27T01:48:00.000Z",
           "oficial": false,
           "aporte": null
         },
@@ -2362,11 +2377,11 @@
         "TN (Todo Noticias)",
         "Ámbito",
         "Minuto Uno",
+        "Canal 26",
         "El Cronista",
         "C5N",
         "Crónica",
-        "Radio Mitre",
-        "Canal 26"
+        "Radio Mitre"
       ],
       "enlace": "https://tn.com.ar/politica/2026/09/26/los-docentes-universitarios-anunciaron-un-paro-de-72-horas-en-la-previa-de-una-nueva-marcha-federal/",
       "teniaImagenLaFuente": true,
@@ -2416,6 +2431,13 @@
           "aporte": null
         },
         {
+          "medio": "Canal 26",
+          "enlace": "https://www.canal26.com/politica/2026/09/26/docentes-anunciaron-un-nuevo-paro-universitario-y-exigen-la-recomposicion-de-sus-salarios-y-la-aplicacion-de-la-ley-de-financiamiento-cuando-sera/",
+          "fecha": "2026-09-26T19:07:26.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
           "medio": "El Cronista",
           "enlace": "https://www.cronista.com/informacion-gral/paro-universitario-conadu-convoco-a-una-huelga-desde-el-30-de-septiembre-y-define-si-sera-de-48-o-72-horas/",
           "fecha": "2026-09-26T17:31:23.000Z",
@@ -2440,13 +2462,6 @@
           "medio": "Radio Mitre",
           "enlace": "https://radiomitre.cienradios.com/sociedad/paro-universitario-los-docentes-anunciaron-una-medida-de-hasta-72-horas-desde-el-30-de-septiembre/",
           "fecha": "2026-09-26T15:39:57.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Canal 26",
-          "enlace": "https://www.canal26.com/politica/2026/09/26/docentes-anunciaron-un-nuevo-paro-universitario-y-exigen-la-recomposicion-de-sus-salarios-y-la-aplicacion-de-la-ley-de-financiamiento-cuando-sera/",
-          "fecha": "2026-09-26T19:07:26.000Z",
           "oficial": false,
           "aporte": null
         }
@@ -2785,101 +2800,6 @@
       "slug": "las-tc-pick-up-se-presentan-en-balcarce-con-una-multitud"
     },
     {
-      "id": "180bhca",
-      "titulo": "Milei celebra la condena a cuatro periodistas en Formosa y Bullrich la rechaza",
-      "copete": "Un juzgado de paz de Las Lomitas condenó a cinco días de arresto, sustituibles por una multa, a cuatro trabajadores de prensa que filmaron en una comunidad originaria. El Presidente festejó el fallo y Patricia Bullrich se diferenció.",
-      "cuerpo": "La sentencia, dictada por el juez Omar Padilla, alcanza a la cronista Micaela Urdinez, el camarógrafo Lautaro Martín Guillamondegui, el sonidista Joaquín Rajadel y el director audiovisual Javier Federico Corbalán. Según el fallo, infringieron el artículo 73 del Código de Faltas de Formosa al hacer entrevistas y filmaciones en la comunidad San José sin autorización previa ni carnet profesional, durante una cobertura para un documental en septiembre de 2025. La multa es de $282.550 para cada uno.\n\nJavier Milei tituló su reacción “Tiro por la culata” y volvió a llamar a los periodistas “basuras inmundas con micrófono”.\n\nBullrich, jefa del bloque de senadores de La Libertad Avanza, cuestionó el fallo con un mensaje propio: “La libertad de prensa se respeta”. También apuntó contra el gobernador Gildo Insfrán, de quien dijo que “cree que la provincia y los formoseños le pertenecen”.",
-      "guion": null,
-      "seccion": "Política",
-      "medios": [
-        "TN (Todo Noticias)",
-        "Minuto Uno",
-        "Radio Mitre",
-        "Diario Popular",
-        "Noticias Argentinas (NA)",
-        "El Día",
-        "QZ Noticias (Mar del Plata)",
-        "El Eco de Tandil"
-      ],
-      "enlace": "https://www.diariopopular.com.ar/politica/milei-festejo-la-condena-cuatro-periodistas-formosa-tiro-la-culata-n921557",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-26T00:34:00.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-28T01:12:49.931Z",
-      "relevancia": 58,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "fuentesConsultadas": [
-        {
-          "medio": "Diario Popular",
-          "enlace": "https://www.diariopopular.com.ar/politica/milei-festejo-la-condena-cuatro-periodistas-formosa-tiro-la-culata-n921557",
-          "fecha": "2026-09-26T00:34:00.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "TN (Todo Noticias)",
-          "enlace": "https://tn.com.ar/politica/2026/09/26/bullrich-volvio-a-marcar-diferencias-con-milei-y-cuestiono-la-condena-a-periodistas-en-formosa-la-libertad-de-prensa-se-respeta/",
-          "fecha": "2026-09-26T22:57:48.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Minuto Uno",
-          "enlace": "https://www.minutouno.com/politica/javier-milei-celebro-insultos-las-sanciones-judiciales-cuatro-periodistas-tiro-la-culata-n6326920",
-          "fecha": "2026-09-26T00:50:00.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Radio Mitre",
-          "enlace": "https://radiomitre.cienradios.com/politica/patricia-bullrich-cruzo-a-gildo-insfran-en-formosa-hacer-periodismo-puede-costarte-cinco-dias-de-arresto/",
-          "fecha": "2026-09-26T21:39:29.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Diario Popular",
-          "enlace": "https://www.diariopopular.com.ar/politica/bullrich-critico-milei-y-defendio-los-periodistas-condenados-formosa-n921683",
-          "fecha": "2026-09-26T17:55:00.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Noticias Argentinas (NA)",
-          "enlace": "https://noticiasargentinas.com/politica/-la-libertad-de-prensa-se-respeta---patricia-bullrich-sobre-los-periodistas--condenados--por-grabar-en-formosa_a6ab7e5979a676c64cfccf370",
-          "fecha": "2026-09-26T16:26:00.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "El Día",
-          "enlace": "https://www.eldia.com/politica-y-economia/bullrich-se-diferencio-y-repudio-la-condena-contra-periodistas-politica-y-economia_1790488288",
-          "fecha": "2026-09-27T05:51:28.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "QZ Noticias (Mar del Plata)",
-          "enlace": "https://www.qznoticias.com/el-pais/patricia-bullrich-se-diferencio-de-milei-y-cruzo-a-insfran-por-la-condena-a-periodistas-en-formosa",
-          "fecha": "2026-09-26T16:54:42.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "El Eco de Tandil",
-          "enlace": "https://www.eleco.com.ar/nacionales/la-libertad-de-prensa-se-respeta-dijo-bullrich-y-se-diferencio-de-milei",
-          "fecha": "2026-09-26T22:23:51.000Z",
-          "oficial": false,
-          "aporte": null
-        }
-      ],
-      "slug": "milei-festejo-la-condena-a-cuatro-periodistas-en-formosa-tiro-por-la"
-    },
-    {
       "id": "repaso20260925noche",
       "propia": "repaso",
       "titulo": "El repaso de la noche en Radar Balcarce: Zona Fría y papa",
@@ -2945,11 +2865,12 @@
         "Municipalidad de Balcarce",
         "El Diario Balcarce",
         "Diario La Vanguardia",
+        "0223 (Mar del Plata)",
         "El Destape",
         "ANDigital",
         "Infobrisas (Radio Brisas)",
+        "NDEN – Noticias de Necochea",
         "La Verdad",
-        "0223 (Mar del Plata)",
         "QZ Noticias (Mar del Plata)",
         "Diario Popular",
         "Noticias Argentinas (NA)",
@@ -3503,12 +3424,14 @@
       "seccion": "Economía",
       "medios": [
         "Infórmese Primero (FM 104.9)",
+        "El Destape",
         "Minuto Uno",
         "Diario Popular",
         "0221",
         "InfoRegión",
         "QZ Noticias (Mar del Plata)",
-        "El Marplatense"
+        "El Marplatense",
+        "Punto Noticias"
       ],
       "enlace": "https://www.0221.com.ar/nacional/ypf-se-sumo-los-aumentos-los-combustibles-y-ajusto-sus-precios-todo-el-pais-n134820",
       "teniaImagenLaFuente": true,
@@ -3533,6 +3456,13 @@
           "medio": "Infórmese Primero (FM 104.9)",
           "enlace": "http://www.informeseprimero.com.ar/2026/09/ypf-aumento-1-el-precio-de-sus.html",
           "fecha": "2026-09-26T13:30:28.264Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "El Destape",
+          "enlace": "https://www.eldestapeweb.com/economia/combustibles-aumentan-1-este-sabado-efectos-guerra-medio-oriente-2026925192425",
+          "fecha": "2026-09-25T22:24:25.000Z",
           "oficial": false,
           "aporte": null
         },
@@ -3570,6 +3500,13 @@
           "fecha": "2026-09-26T13:41:39.000Z",
           "oficial": false,
           "aporte": null
+        },
+        {
+          "medio": "Punto Noticias",
+          "enlace": "https://puntonoticias.com/ypf-aplicara-un-aumento-del-1-a-los-combustibles-desde-este-sabado/",
+          "fecha": "2026-09-26T12:40:53.000Z",
+          "oficial": false,
+          "aporte": null
         }
       ],
       "slug": "ypf-se-sumo-a-los-aumentos-de-los-combustibles-y-ajusto-sus-precios"
@@ -3591,8 +3528,8 @@
         "C5N",
         "Canal 26",
         "Noticias Argentinas (NA)",
-        "La Nueva",
         "0221",
+        "La Nueva",
         "La Verdad"
       ],
       "enlace": "https://www.c5n.com/politica/javier-milei-mantiene-su-agenda-internacional-y-ultima-detalles-su-viaje-francia-n249945",
@@ -3678,16 +3615,16 @@
           "aporte": null
         },
         {
-          "medio": "La Nueva",
-          "enlace": "https://www.lanueva.com/nota/2026-9-27-16-22-0-milei-viaja-a-paris-con-a-gobernadores-y-empresarios-en-busca-de-inversiones-en-el-argentina-week",
-          "fecha": "2026-09-27T23:30:25.000Z",
+          "medio": "0221",
+          "enlace": "https://www.0221.com.ar/nacional/javier-milei-prepara-su-agenda-paris-el-foco-puesto-inversiones-y-una-reunion-emmanuel-macron-n134903",
+          "fecha": "2026-09-27T20:01:00.000Z",
           "oficial": false,
           "aporte": null
         },
         {
-          "medio": "0221",
-          "enlace": "https://www.0221.com.ar/nacional/javier-milei-prepara-su-agenda-paris-el-foco-puesto-inversiones-y-una-reunion-emmanuel-macron-n134903",
-          "fecha": "2026-09-27T20:01:00.000Z",
+          "medio": "La Nueva",
+          "enlace": "https://www.lanueva.com/nota/2026-9-27-16-22-0-milei-viaja-a-paris-con-a-gobernadores-y-empresarios-en-busca-de-inversiones-en-el-argentina-week",
+          "fecha": "2026-09-27T19:28:03.000Z",
           "oficial": false,
           "aporte": null
         },
@@ -4409,10 +4346,10 @@
         "El Marplatense",
         "Mi8 (Canal 8 Mar del Plata)",
         "Infobrisas (Radio Brisas)",
-        "0223 (Mar del Plata)",
-        "Infocielo",
         "Punto Noticias",
         "Radio 10 Mar del Plata (FM 105.5)",
+        "0223 (Mar del Plata)",
+        "Infocielo",
         "Bolavip Argentina",
         "CADA (Confederación Argentina de Atletismo)"
       ],
@@ -4569,6 +4506,20 @@
           "aporte": null
         },
         {
+          "medio": "Punto Noticias",
+          "enlace": "https://puntonoticias.com/los-representantes-de-mar-del-plata-dejaron-su-marca-en-los-juegos-suramericanos-santa-fe-2026/",
+          "fecha": "2026-09-27T11:19:54.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Radio 10 Mar del Plata (FM 105.5)",
+          "enlace": "https://radio10mardelplata.com.ar/mar-del-plata-brillo-en-los-juegos-suramericanos-santa-fe-2026-24-medallas-y-una-destacada-presencia-en-el-podio/",
+          "fecha": "2026-09-26T22:52:47.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
           "medio": "0223 (Mar del Plata)",
           "enlace": "https://www.0223.com.ar/nota/2026-9-27-9-29-0-mar-del-plata-brillo-en-santa-fe-los-marplatenses-que-ganaron-24-medallas-en-los-juegos-suramericanos",
           "fecha": "2026-09-27T12:29:00.000Z",
@@ -4586,20 +4537,6 @@
           "medio": "Infocielo",
           "enlace": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOWWVhcmI2bEhjbkczLWRMaGdmZFkxSENFRV9xa0dkY1BKdTluT2h0WVFhN0hKZ01WTEFjU0lZclNxUXk0N0lsWlpiaXBNRTlMc1FPOHVOWUJPaFBBZEJqRFpSRzltSmZyRHNremVoeGI1d3VLR2NwRXBmVnNFZEt4S1E3R2R5VVBmTWdmVWZ4SEdMRml3UHpCelJTNmtUUFpfUTNsUFQtcFdab1JBZWZoS0ZsU1c?oc=5",
           "fecha": "2026-09-27T13:54:16.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Punto Noticias",
-          "enlace": "https://puntonoticias.com/los-representantes-de-mar-del-plata-dejaron-su-marca-en-los-juegos-suramericanos-santa-fe-2026/",
-          "fecha": "2026-09-27T11:19:54.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Radio 10 Mar del Plata (FM 105.5)",
-          "enlace": "https://radio10mardelplata.com.ar/mar-del-plata-brillo-en-los-juegos-suramericanos-santa-fe-2026-24-medallas-y-una-destacada-presencia-en-el-podio/",
-          "fecha": "2026-09-26T22:52:47.000Z",
           "oficial": false,
           "aporte": null
         },
@@ -4662,7 +4599,7 @@
       "humedad": 93,
       "viento": 21,
       "rumbo": "NE",
-      "cielo": "Llovizna",
+      "cielo": "Llovizna leve",
       "esDeDia": false
     },
     "dias": [
@@ -5055,6 +4992,12 @@
       "motivo": "necesita ojo humano: \"denuncia\""
     },
     {
+      "id": "1sp73jv",
+      "titulo": "Murió Oscar González Oro, una voz que hizo historia en la…",
+      "seccion": "Argentina",
+      "motivo": "necesita ojo humano: \"murió\""
+    },
+    {
       "id": "8gx70k",
       "titulo": "Aseguran que Daniel Osvaldo está internado en terapia…",
       "seccion": "Deportes",
@@ -5071,18 +5014,6 @@
       "titulo": null,
       "seccion": "Argentina",
       "motivo": "necesita ojo humano: \"víctima\""
-    },
-    {
-      "id": "1sp73jv",
-      "titulo": "Murió Oscar González Oro, una voz que hizo historia en la…",
-      "seccion": "Argentina",
-      "motivo": "necesita ojo humano: \"murió\""
-    },
-    {
-      "id": "j7dphq",
-      "titulo": "La fiscalía avanza con la investigación del patrimonio de…",
-      "seccion": "Política",
-      "motivo": "necesita ojo humano: \"investigación\""
     },
     {
       "id": "8zzu9y",
@@ -5115,6 +5046,12 @@
       "motivo": "necesita ojo humano: \"niño\""
     },
     {
+      "id": "136d2qs",
+      "titulo": "Barrena valoró el apoyo de Kicillof pese a las…",
+      "seccion": "Política",
+      "motivo": "necesita ojo humano: \"hospital\""
+    },
+    {
       "id": "8x4j47",
       "titulo": "Tiene 17 años, está internado en el Garrahan y necesita un…",
       "seccion": "Argentina",
@@ -5127,5 +5064,5 @@
       "motivo": "necesita ojo humano: \"detenido\""
     }
   ],
-  "esperandoCuerpo": 17
+  "esperandoCuerpo": 14
 }
