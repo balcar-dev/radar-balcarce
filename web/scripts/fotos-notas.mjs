@@ -43,7 +43,15 @@ export async function elegirFotosNuevas(notas, {
 } = {}) {
   const bancoNuevo = { ...banco };
   const archivos = {};
-  const candidatas = notas.filter((n) => !banco[n.id] && elegiblePorSeccion(n));
+  // Las más nuevas primero (28/09, Hernán: "no hace falta completar las
+  // notas anteriores, pero sí que todas las nuevas ahora tengan fotos"). Sin
+  // esto, una nota recién publicada podía quedar detrás de un resto de notas
+  // viejas sin probar y no le tocaba turno en la corrida donde más importa
+  // (la primera media hora, cuando más se comparte). Las viejas se van
+  // procesando igual, más despacio, y salen solas de la tapa a las 72 horas.
+  const candidatas = notas
+    .filter((n) => !banco[n.id] && elegiblePorSeccion(n))
+    .sort((a, b) => new Date(b.fecha ?? 0) - new Date(a.fecha ?? 0));
 
   let procesadas = 0;
   for (const n of candidatas) {

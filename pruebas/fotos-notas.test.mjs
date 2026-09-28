@@ -84,6 +84,22 @@ test('elegirFotosNuevas: no procesa más de "tope" notas por corrida', async () 
   assert.equal(llamadas, 4);
 });
 
+test('elegirFotosNuevas: con el tope justo, las notas más nuevas van primero (28/09: "que todas las nuevas tengan fotos")', async () => {
+  // Una vieja, sin probar todavía (un resto de una corrida anterior), y dos
+  // nuevitas: con tope 1, tiene que tocarle a la más nueva, no a la vieja.
+  const notas = [
+    { id: 'vieja', titulo: 't', seccion: 'Balcarce', fuentesConsultadas: [], fecha: '2026-09-27T10:00:00Z' },
+    { id: 'nueva-2', titulo: 't', seccion: 'Balcarce', fuentesConsultadas: [], fecha: '2026-09-28T09:00:00Z' },
+    { id: 'nueva-1', titulo: 't', seccion: 'Balcarce', fuentesConsultadas: [], fecha: '2026-09-28T10:00:00Z' },
+  ];
+  const fetchFn = async (url) => {
+    if (String(url).includes('generativelanguage')) return { ok: true, json: async () => ({ candidates: [{ content: { parts: [{ text: JSON.stringify({ persona: null }) }] } }] }) };
+  };
+  const { banco } = await elegirFotosNuevas(notas, { clave: 'g', claveRespaldo: null, fetchFn, tope: 2 });
+  assert.deepEqual(Object.keys(banco).sort(), ['nueva-1', 'nueva-2']);
+  assert.equal(banco.vieja, undefined);
+});
+
 test('elegirFotosNuevas: un error de red en una nota no frena a las demás', async () => {
   const notas = [
     { id: 'ok', titulo: 't', seccion: 'Balcarce', fuentesConsultadas: [{ medio: 'A', enlace: 'https://a.com/n' }] },
