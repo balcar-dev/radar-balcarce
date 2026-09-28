@@ -1,5 +1,5 @@
 {
-  "exportado": "2026-09-28T10:01:46.068Z",
+  "exportado": "2026-09-28T10:12:09.419Z",
   "decisiones": {
     "1951120": {
       "estado": "automatica",
@@ -41844,6 +41844,295 @@
         "nivel": "ALTA",
         "porque": "Lo contaron cuatro medios independientes.",
         "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "1efjdh8": {
+      "estado": "automatica",
+      "titulo": "Ariel Durán sufre inconvenientes en las finales disputadas en el autódromo",
+      "copete": "El piloto tandilense sufrió distintos incidentes en las competencias disputadas en el autódromo municipal Juan Manuel Fangio y debió resignar posiciones de protagonismo.",
+      "cuerpo": "En la primera competencia del TSC, Durán venía tercero tras pelear la punta con Bruno Boccanera, pero un toque desde atrás del piloto local Martín Calamante lo hizo entrar en trompo y finalizar cuarto en la prueba que ganó Boccanera, seguido por Nahuel Morón y Kevin Walter.\n\nEn la segunda final, tras escalar a la punta en el giro inicial, un toque de Morón lo despistó contra el guardrail y lo obligó a abandonar. La victoria quedó para Kevin Baigorria, escoltado por Pablo Budeba y Calamante. En tanto, Gonzalo Aramburu debió abandonar en su serie de TCP Pick Up por una falla mecánica, mientras que Bautista Cifre ganó su batería pero fue recargado, heredando el triunfo Antonino Sganga.",
+      "guion": "Ariel Duran sufre inconvenientes en las finales disputadas en el autodromo",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-28T10:12:09.327Z",
+      "claves": [
+        "El piloto tandilense Ariel Durán sufrió incidentes en ambas finales disputadas en el autódromo.",
+        "En la primera competencia finalizó cuarto tras un toque del piloto local Martín Calamante.",
+        "En la segunda prueba debió abandonar luego de ser tocado por Nahuel Morón y golpear contra el guardrail.",
+        "El fin de semana marcó el regreso de las competencias nacionales al circuito local con gran convocatoria."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El piloto tandilense Ariel Durán sufrió distintos incidentes en las finales disputadas en el autódromo municipal Juan Manuel Fangio y debió resignar posiciones de protagonismo.",
+      "etiquetas": [
+        "automovilismo",
+        "Balcarce"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Eco de Tandil",
+          "enlace": "https://www.eleco.com.ar/deportes/la-mala-suerte-de-ariel-duran-en-balcarce",
+          "fecha": "2026-09-28T09:45:53.000Z",
+          "oficial": false,
+          "aporte": "Detalló los incidentes en pista de Ariel Durán y el desarrollo de las competencias en el autódromo."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1hjmkd4",
+          "titulo": "Más de 1.400 vehículos ingresan al autódromo Fangio",
+          "fecha": "2026-09-28T07:30:59.663Z",
+          "ruta": "/nota/ingresan-mas-de-mil-cuatrocientos-vehiculos-al-fangio-1hjmkd4"
+        },
+        {
+          "id": "2jiiqj",
+          "titulo": "El automovilismo nacional convoca a una multitud",
+          "fecha": "2026-09-28T07:30:59.663Z",
+          "ruta": "/nota/el-automovilismo-nacional-convoca-a-una-multitud-2jiiqj"
+        },
+        {
+          "id": "1ou5oaz",
+          "titulo": "Kicillof y Bianco explican los montos de la obra del autódromo",
+          "fecha": "2026-09-28T07:30:59.663Z",
+          "ruta": "/nota/kicillof-y-bianco-explican-los-montos-de-la-obra-del-autodromo-1ou5oaz"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "181ggb5": {
+      "estado": "automatica",
+      "titulo": "Franco Colapinto choca con su compañero y recibe duras críticas",
+      "copete": "El piloto argentino protagonizó un accidente en el Gran Premio de Azerbaiyán que dejó a Alpine sin puntos. Los medios especializados cuestionaron su maniobra.",
+      "cuerpo": "Diversos portales automovilísticos ubicaron al pilarense entre los perdedores del fin de semana y señalaron que el impacto contra su compañero Pierre Gasly frustró las aspiraciones del equipo. Medios como The Race y Motorsport cuestionaron el cálculo del piloto y reflejaron la postura del asesor Flavio Briatore, quien calificó la acción como una maniobra imprudente. Pese a las críticas, la prensa destacó que el argentino asumió la responsabilidad de lo ocurrido de manera inmediata.\n\nComo se había informado tras el incidente, el equipo emitió un comunicado en redes sociales y el expiloto Juan Pablo Montoya respaldó públicamente al argentino, mientras que los comisarios impusieron una sanción de cinco puestos para la próxima fecha.",
+      "guion": "Franco Colapinto choca con su compañero y recibe duras críticas",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-28T10:12:09.327Z",
+      "claves": [
+        "Franco Colapinto protagonizó un accidente en el Gran Premio de Azerbaiyán.",
+        "El choque involucró a su compañero de equipo en la escudería Alpine.",
+        "Medios especializados criticaron la maniobra y el desempeño del piloto.",
+        "La escudería sufrió una importante pérdida de puntos en el campeonato."
+      ],
+      "seSabe": [
+        "Alpine cerró el Gran Premio de Azerbaiyán con un doble DNF tras un accidente protagonizado por Franco Colapinto.",
+        "El piloto argentino chocó contra su compañero de equipo Pierre Gasly en la reanudación de la carrera.",
+        "La escudería emitió un comunicado en redes sociales sobre lo ocurrido.",
+        "Medios especializados como The Race y Motorsport criticaron la maniobra del pilarense.",
+        "Flavio Briatore calificó el hecho como una maniobra imprudente."
+      ],
+      "textoRedes": "Franco Colapinto protagonizó un accidente en el Gran Premio de Azerbaiyán que dejó a Alpine sin puntos y generó duras críticas de la prensa internacional. El piloto argentino chocó con su compañero de equipo en la reanudación de la carrera.",
+      "etiquetas": [
+        "Franco Colapinto",
+        "Formula 1",
+        "Gran Premio de Azerbaiyán",
+        "Alpine"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/deportes/2026/09/27/las-repercusiones-en-los-medios-del-mundo-tras-el-accidente-de-franco-colapinto-en-la-formula-1-del-desastroso-error-a-un-cero-de-puntaje/",
+          "fecha": "2026-09-27T22:36:02.000Z",
+          "oficial": false,
+          "aporte": "Detalló las críticas de la prensa internacional y los análisis de los periodistas especializados sobre el accidente en Bakú."
+        },
+        {
+          "medio": "El Eco de Tandil",
+          "enlace": "https://www.eleco.com.ar/deportes/las-repercusiones-de-un-dia-aciago-para-colapinto",
+          "fecha": "2026-09-28T09:45:53.000Z",
+          "oficial": false,
+          "aporte": "Reprodujo la información sobre el doble DNF de Alpine y el comunicado emitido por la escudería en redes sociales."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "zd48ar",
+          "titulo": "El respaldo de Juan Pablo Montoya a Franco Colapinto en la Fórmula 1",
+          "fecha": "2026-09-27T10:48:17.000Z",
+          "ruta": "/nota/el-respaldo-de-juan-pablo-montoya-a-franco-colapinto-en-la-formula-1-zd48ar"
+        },
+        {
+          "id": "9hkq7t",
+          "titulo": "Juan Pablo Montoya respalda a Franco Colapinto en la F1",
+          "fecha": "2026-09-27T12:02:03.000Z",
+          "ruta": "/nota/juan-pablo-montoya-respalda-a-franco-colapinto-en-la-f1-9hkq7t"
+        },
+        {
+          "id": "g2u3l1",
+          "titulo": "Flavio Briatore critica a Franco Colapinto tras el Gran Premio de Azerbaiyán",
+          "fecha": "2026-09-26T22:12:00.000Z",
+          "ruta": "/nota/flavio-briatore-critica-a-franco-colapinto-tras-el-gran-premio-de-g2u3l1"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "1nuecaw": {
+      "estado": "automatica",
+      "titulo": "Milei respalda el desarrollo de Vaca Muerta tras el cruce entre Figueroa y Prat-Gay",
+      "copete": "El presidente Javier Milei respaldó al gobernador neuquino Rolando Figueroa luego de su discusión con el exministro Alfonso Prat-Gay sobre el impacto económico de Vaca Muerta.",
+      "cuerpo": "En respuesta, Figueroa defendió el modelo provincial mediante un informe del IERAL de la Fundación Mediterránea que presenta a Neuquén como un ejemplo de expansión económica generalizada. El mandatario provincial cuestionó las valoraciones del exfuncionario y lo invitó a recorrer la región para observar el desarrollo productivo.\n\nLa intervención del mandatario nacional al republicar el cruce transformó la discusión provincial en un respaldo político directo de la Casa Rosada al gobernador y a la actividad petrolera.",
+      "guion": "Milei respalda el desarrollo de Vaca Muerta tras el cruce entre Figueroa y Prat-Gay",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-28T10:12:09.327Z",
+      "claves": [
+        "Javier Milei respaldó al gobernador de Neuquén en redes sociales.",
+        "Rolando Figueroa respondió a las críticas de Alfonso Prat-Gay sobre Vaca Muerta.",
+        "El exministro había cuestionado el impacto económico del sector petrolero.",
+        "El mandatario provincial utilizó datos de la Fundación Mediterránea para defender su gestión."
+      ],
+      "seSabe": [
+        "El presidente Javier Milei compartió en redes sociales el cruce entre el gobernador y el exministro, según las fuentes.",
+        "El gobernador de Neuquén, Rolando Figueroa, defendió el impacto económico de Vaca Muerta frente a los cuestionamientos.",
+        "El exministro de Economía Alfonso Prat-Gay sostuvo que el crecimiento petrolero todavía no derrama en la provincia.",
+        "El mandatario provincial respaldó su postura con un estudio del IERAL de la Fundación Mediterránea."
+      ],
+      "textoRedes": "El presidente Javier Milei respaldó el desarrollo de Vaca Muerta al compartir un mensaje del gobernador neuquino Rolando Figueroa, quien cruzó al exministro Alfonso Prat-Gay por cuestionar el impacto económico del sector petrolero en la provincia.",
+      "etiquetas": [
+        "Vaca Muerta",
+        "Rolando Figueroa",
+        "Alfonso Prat-Gay",
+        "Javier Milei",
+        "Neuquén",
+        "Economía"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Noticias Argentinas (NA)",
+          "enlace": "https://noticiasargentinas.com/politica/milei-se-mete-en-el-cruce-de-figueroa-con-prat-gay-y-respalda-el-desarrollo-de-vaca-muerta_a6ab7e2409a676c64cfcc1a66",
+          "fecha": "2026-09-26T15:23:41.784Z",
+          "oficial": false,
+          "aporte": "Detalló la intervención del presidente Javier Milei y los argumentos del cruce entre el gobernador y el exministro."
+        },
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/economia/el-gobernador-de-neuquen-cruzo-a-prat-gay-por-decir-que-vaca-muerta-no-derrama-en-la-provincia-nid26092026/",
+          "fecha": "2026-09-26T19:47:43.000Z",
+          "oficial": false,
+          "aporte": "Informó sobre los dichos iniciales del gobernador neuquino contra el exministro."
+        },
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/politica/2026/09/26/apreciaciones-desde-el-obelisco-el-cruce-entre-el-gobernador-de-neuquen-y-prat-gay-por-vaca-muerta/",
+          "fecha": "2026-09-26T15:38:54.000Z",
+          "oficial": false,
+          "aporte": "Confirmó la respuesta del gobernador y la participación del presidente en redes sociales."
+        },
+        {
+          "medio": "Ámbito",
+          "enlace": "https://www.ambito.com/politica/rolando-figueroa-cruzo-alfonso-prat-gay-vaca-muerta-veo-que-no-has-recorrido-neuquen-n6327207",
+          "fecha": "2026-09-27T19:37:00.000Z",
+          "oficial": false,
+          "aporte": "Aportó que el gobernador respondió con datos de empleo, salarios y exportaciones."
+        },
+        {
+          "medio": "Minuto Uno",
+          "enlace": "https://www.minutouno.com/economia/la-fuerte-respuesta-rolando-figueroa-alfonso-prat-gay-el-impacto-vaca-muerta-n6327182",
+          "fecha": "2026-09-27T16:58:00.000Z",
+          "oficial": false,
+          "aporte": "Señaló el cruce entre el mandatario provincial y el exministro de Economía."
+        },
+        {
+          "medio": "C5N",
+          "enlace": "https://www.c5n.com/politica/rolando-figueroa-cruzo-alfonso-prat-gay-vaca-muerta-veo-que-no-has-recorrido-n250051",
+          "fecha": "2026-09-27T17:17:00.000Z",
+          "oficial": false,
+          "aporte": "Reprodujo la frase textual del gobernador sobre recorrer la provincia."
+        },
+        {
+          "medio": "Crónica",
+          "enlace": "https://www.cronica.com.ar/politica/figueroa-le-respondio-a-prat-gay-te-vi-en-neuquen-veo-que-no-has-recorrido/",
+          "fecha": "2026-09-26T23:30:12.000Z",
+          "oficial": false,
+          "aporte": "Mencionó que el gobernador utilizó un informe de la Fundación Mediterránea."
+        },
+        {
+          "medio": "Canal 26",
+          "enlace": "https://www.canal26.com/politica/2026/09/27/rolando-figueroa-cruzo-a-prat-gay-por-vaca-muerta-veo-que-no-has-recorrido/",
+          "fecha": "2026-09-27T14:30:33.000Z",
+          "oficial": false,
+          "aporte": "Indicó las expresiones iniciales del gobernador dirigidas al exministro."
+        },
+        {
+          "medio": "Diario Popular",
+          "enlace": "https://www.diariopopular.com.ar/politica/rolando-figueroa-prat-gay-no-comparto-tus-apreciaciones-el-obelisco-n921694",
+          "fecha": "2026-09-27T00:02:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Clarín",
+          "enlace": "https://www.clarin.com/politica/gobernador-neuquen-cruzo-prat-gay-decir-vaca-muerta-derrama-provincia_0_fG8Ofa09fC.html",
+          "fecha": "2026-09-26T22:39:00.000Z",
+          "oficial": false,
+          "aporte": null
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron 10 medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      }
+    },
+    "zy7qj6": {
+      "estado": "automatica",
+      "titulo": "Los alimentos impulsan un piso inflacionario para septiembre",
+      "copete": "Los relevamientos privados ubican la inflación de septiembre con un piso similar al del mes pasado. El incremento en las frutas y verduras presiona sobre los precios.",
+      "cuerpo": "El Índice de Precios al Consumidor de septiembre tendría un piso cercano al registrado en agosto, según las proyecciones de analistas privados. De acuerdo con los relevamientos, ninguna consultora prevé que la cifra se ubique por debajo de ese porcentaje, mientras que algunas estimaciones alcanzan el dos por ciento.\n\nLa suba en los alimentos, especialmente en frutas y verduras durante la tercera semana, empujó los precios hacia arriba. Además, se anticipan aumentos estacionales en carnes, indumentaria por el cambio de temporada y combustibles debido a la cotización internacional del petróleo.\n\nPor otra parte, el Instituto Nacional de Estadística y Censos informó que la inflación mayorista subió en agosto por encima de la minorista, acumulando un incremento anual que supera los índices previos en los últimos doce meses.",
+      "guion": "Los alimentos impulsan un piso inflacionario para septiembre",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-28T10:12:09.327Z",
+      "claves": [
+        "La inflación de septiembre mantendría un piso similar al de agosto.",
+        "Las frutas y verduras impulsaron los precios de los alimentos.",
+        "Proyectan subas futuras en indumentaria y combustibles."
+      ],
+      "noConfirmado": [
+        "No se pudo precisar el impacto final que tendrá el incremento de los combustibles en el índice de precios del próximo mes."
+      ],
+      "textoRedes": "Los relevamientos privados estiman que la inflación de septiembre mantendría un piso similar al de agosto debido al incremento en los alimentos y las proyecciones para los próximos meses.",
+      "etiquetas": [
+        "inflacion",
+        "alimentos",
+        "indec"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/economia/2026/09/27/la-suba-de-los-alimentos-le-pone-un-piso-a-la-inflacion-de-septiembre-y-complica-el-objetivo-del-gobierno/",
+          "fecha": "2026-09-27T15:25:46.000Z",
+          "oficial": false,
+          "aporte": "Aportó las proyecciones de analistas privados sobre el piso inflacionario y el detalle de los rubros."
+        },
+        {
+          "medio": "0221",
+          "enlace": "https://www.0221.com.ar/nacional/los-alimentos-presionan-los-precios-y-la-inflacion-septiembre-tendria-un-piso-17-n134911",
+          "fecha": "2026-09-27T23:28:00.000Z",
+          "oficial": false,
+          "aporte": "Anticipó subas en carnes, ropa y combustibles para los próximos meses."
+        },
+        {
+          "medio": "El Marplatense",
+          "enlace": "https://www.elmarplatense.com/la-inflacion-de-septiembre-bajo-presion-por-la-suba-de-los-alimentos",
+          "fecha": "2026-09-27T20:45:00.000Z",
+          "oficial": false,
+          "aporte": "Señaló que la inflación de septiembre podría interrumpir la desaceleración previa."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron tres medios independientes.",
+        "sugeridoPorIA": "ALTA"
       }
     }
   },
