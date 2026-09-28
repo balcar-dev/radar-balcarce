@@ -1,8 +1,16 @@
 # Pendientes: todo en un solo lugar
 
-*Actualizado el 27/09/2026.* Los otros documentos explican **cómo** funciona
+*Actualizado el 28/09/2026.* Los otros documentos explican **cómo** funciona
 cada cosa; éste dice **qué falta**. Lo que se exige siempre está en `REGLAS.md`.
 Lo que ya se hizo está al final ("Ya resuelto"). Cada cosa figura una sola vez.
+
+**Redes en pausa desde el 28/09 (Hernán).** La variable de GitHub
+`REDES_ACTIVAS` está en `No`: todo sigue corriendo (piezas, podcasts,
+vigilancia) pero sólo simula, no publica nada de verdad en Instagram ni
+Facebook. Es a propósito, hasta que Hernán borre y arregle los perfiles y
+se reacomode el cronograma con él. Para volver a prender: la variable a
+`Si` en GitHub (Settings del repo → Secrets and variables → Actions →
+Variables), o pedírselo a Claude.
 
 Cada pendiente dice **quién** lo hace (Hernán, Andrés, "los dos" o Claude) y
 **qué tan urgente** es (alta, media o baja). Lo que sólo puede hacer una persona
