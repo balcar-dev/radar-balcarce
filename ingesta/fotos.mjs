@@ -132,11 +132,21 @@ function interpretarRespuesta(obj, candidatas) {
   });
 
   let elegida = null;
-  if (letraValida(obj?.elegida) && !conMarca.has(obj.elegida)) {
+  let razon = String(obj?.razon ?? '').slice(0, 300);
+  if (letraValida(obj?.elegida) && conMarca.has(obj.elegida)) {
+    // La IA prefería justo la que tiene marca: la "razon" que mandó describe
+    // ESA foto (28/09: pasó con la del papa León XIV, y la razón que quedaba
+    // decía "encuadre cerrado" hablando de la foto con el logo de ANDigital,
+    // como si igual se hubiera elegido). Se pisa con una que diga la verdad.
+    const i = LETRAS.indexOf(obj.elegida);
+    const medio = candidatas[i]?.medio ?? 'esa fuente';
+    const detalle = porLetra.get(obj.elegida)?.detalle;
+    razon = `La mejor foto era la de ${medio}, pero tiene marca de agua${detalle ? ` (${detalle})` : ''}: no se elige ninguna.`;
+  } else if (letraValida(obj?.elegida)) {
     const i = LETRAS.indexOf(obj.elegida);
     if (candidatas[i]?.datos) elegida = { ...resultado[i], letra: obj.elegida };
   }
-  return { elegida, razon: String(obj?.razon ?? '').slice(0, 300), candidatas: resultado };
+  return { elegida, razon, candidatas: resultado };
 }
 
 /** Un pedido a Gemini, con las fotos como `inlineData`. */

@@ -132,6 +132,16 @@ clave o una decisión.
      banco, con su propio crédito ("Foto: Radar Balcarce").
   5. Mostrar la foto en la página de la nota (con su cita) y, si corresponde,
      en la tarjeta para compartir; sin foto que sirva, sigue la placa propia.
+  6. **Buscar una foto de la persona nombrada, no sólo de la fuente** (28/09,
+     idea de Hernán, al ver el caso de Mariano Werner: una sola fuente, con
+     marca de agua, así que hoy se queda sin foto). Cuando la nota nombra a
+     una sola persona identificable (un deportista, un funcionario, alguien
+     conocido) y ninguna foto de fuente sirve, antes de resignarse a la
+     placa: buscar una foto libre de esa persona puntual (Wikimedia Commons,
+     el sitio de su club o federación, una gacetilla oficial) en vez de sólo
+     comparar lo que trajeron los medios que cubrieron el hecho puntual. Es
+     una fuente de fotos distinta a la de "Las fotos" en
+     `CRITERIO-EDITORIAL.md`: no está construida, ni siquiera probada.
 - **Escuchar el podcast en la web (27/09, idea de Hernán).** El audio de cada
   repaso ya se genera para el reel; hoy se arma en un archivo temporal de la
   corrida y no queda guardado en ningún lado después de subirlo a Instagram y

@@ -111,6 +111,12 @@ test('elegirFoto: si la IA marca la elegida con marca de agua, no se elige ningu
   const r = await elegirFoto(nota, candidatas, { clave: 'g', claveRespaldo: null, fetchFn });
   assert.equal(r.elegida, null);
   assert.equal(r.candidatas[0].sospechaMarca, true);
+  // La "razon" no puede quedar como si la marcada se hubiera elegido (pasó
+  // de verdad el 28/09, con la foto del papa León XIV y el logo de ANDigital).
+  assert.match(r.razon, /Local1/);
+  assert.match(r.razon, /marca de agua/);
+  assert.match(r.razon, /logo abajo a la derecha/);
+  assert.doesNotMatch(r.razon, /^la mejor$/);
 });
 
 test('elegirFoto: si Gemini falla, prueba con Groq', async () => {
