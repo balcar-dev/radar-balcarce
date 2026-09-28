@@ -1,5 +1,5 @@
 {
-  "exportado": "2026-09-28T00:41:43.884Z",
+  "exportado": "2026-09-28T00:51:54.981Z",
   "decisiones": {
     "1951120": {
       "estado": "automatica",
@@ -36080,6 +36080,65 @@
       "verificacion": {
         "nivel": "ALTA",
         "porque": "Lo contaron tres medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      }
+    },
+    "jul3y2": {
+      "estado": "automatica",
+      "titulo": "El autodromo Juan Manuel Fangio vuelve a recibir carreras despues de quince anos",
+      "copete": "El automovilismo nacional regresó este fin de semana al autódromo Juan Manuel Fangio con las TC Pick Up y una multitudinaria concurrencia de público en Sierra La Barrosa.",
+      "cuerpo": "En lo deportivo, el Turismo Special de la Costa compitió en el circuito largo después de dieciséis años, con triunfos de Bruno Boccanera y Kevin Baigorria en sus respectivas finales, mientras que el binomio Dimuro y Baigorria cerró la Fase Regular como líder del certamen. La jornada incluyó un homenaje al constructor Tulio Crespi con la presencia de sus hijos y un minuto de silencio.\n\nEn la categoría principal, el piloto local Diego Ciantini avanzó hasta los puestos de vanguardia y peleó la punta tras un desarrollo con incidentes y abandonos, como el de Mariano Werner por problemas en la transmisión.",
+      "guion": "El autodromo Juan Manuel Fangio vuelve a recibir carreras despues de quince anos",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-28T00:51:54.895Z",
+      "textoRedes": "El autódromo Juan Manuel Fangio volvió a albergar competencias nacionales de automovilismo después de quince años con una masiva concurrencia de público en Sierra La Barrosa y la disputa de la octava fecha de las TC Pick Up.",
+      "etiquetas": [
+        "autodromo Juan Manuel Fangio",
+        "TC Pick Up",
+        "Turismo Special de la Costa",
+        "automovilismo",
+        "Sierra La Barrosa"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "News Balcarce (FM 91.7)",
+          "enlace": "https://newsbalcarce.com.ar/?p=30859",
+          "fecha": "2026-09-28T00:43:11.000Z",
+          "oficial": false,
+          "aporte": "Aportó los detalles deportivos de las finales del Turismo Special de la Costa, el homenaje a Tulio Crespi y las alternativas de la competencia de las TC Pick Up."
+        },
+        {
+          "medio": "0223 (Mar del Plata)",
+          "enlace": "https://www.0223.com.ar/nota/2026-9-27-14-24-0-balcarce-volvio-a-rugir-27-000-personas-en-la-historica-reinauguracion-del-autodromo-juan-manuel-fangio",
+          "fecha": "2026-09-27T17:29:00.000Z",
+          "oficial": false,
+          "aporte": "Aportó la confirmación general del regreso de la actividad al autódromo tras quince años y la convocatoria masiva de público."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1oj9qzr",
+          "titulo": "El automovilismo nacional convoca a una multitud en el Fangio",
+          "fecha": "2026-09-27T23:49:17.000Z",
+          "ruta": "/nota/el-automovilismo-nacional-convoca-a-una-multitud-en-el-fangio-1oj9qzr"
+        },
+        {
+          "id": "gun9be",
+          "titulo": "Antonino Sganga gana en el TC Pista Pick Up en el Fangio",
+          "fecha": "2026-09-27T23:42:42.000Z",
+          "ruta": "/nota/antonino-sganga-gana-en-el-tc-pista-pick-up-en-el-fangio-gun9be"
+        },
+        {
+          "id": "1is0p0y",
+          "titulo": "Diego Santilli visita el autódromo Juan Manuel Fangio en el regreso del automovilismo",
+          "fecha": "2026-09-27T22:35:50.424Z",
+          "ruta": "/nota/diego-santilli-visita-el-autodromo-juan-manuel-fangio-en-el-regreso-1is0p0y"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
         "sugeridoPorIA": "ALTA"
       }
     }
