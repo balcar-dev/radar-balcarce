@@ -1,5 +1,5 @@
 {
-  "generado": "2026-09-28T12:13:06.029Z",
+  "generado": "2026-09-28T12:38:08.304Z",
   "notas": [
     {
       "id": "1xs34mg",
@@ -32,9 +32,6 @@
         "La competencia reunió a dieciocho autos en su quinta fecha y se desarrolló junto a las TC Pick Up.",
         "El balcarceño Esteban Dimuro se adjudicó la Fase Regular del torneo y comenzará la Copa de Oro con cuarenta puntos.",
         "La próxima fecha se disputará el fin de semana del 10 y 11 de octubre en la variante Juan Manuel Bordeu."
-      ],
-      "noConfirmado": [
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
       ],
       "textoRedes": "Bruno Boccanera y Kevin Baigorria ganaron las dos finales del Turismo Special de la Costa en el autódromo Juan Manuel Fangio, en el regreso de la categoría al circuito largo tras dieciséis años y ante una multitud.",
       "etiquetas": [
@@ -111,9 +108,6 @@
         "Restan dos fechas para finalizar la fase regular.",
         "El club convocó a los vecinos para los partidos del próximo fin de semana."
       ],
-      "noConfirmado": [
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
       "textoRedes": "Pato Naranja derrotó a Pampa por 99 a 12 en el Torneo Desarrollo de rugby y quedó a dos fechas del cierre de la fase regular. El equipo local se prepara para definir su pase a los playoffs en los próximos encuentros.",
       "etiquetas": [
         "rugby",
@@ -151,6 +145,8 @@
       "medios": [
         "Ámbito",
         "Infobae",
+        "TN (Todo Noticias)",
+        "El Cronista",
         "Noticias Argentinas (NA)"
       ],
       "enlace": "https://www.infobae.com/economia/2026/09/28/iniciaron-un-nuevo-proceso-de-privatizacion-de-las-acciones-de-enarsa/",
@@ -158,7 +154,7 @@
       "fecha": "2026-09-28T07:44:28.000Z",
       "sinFecha": false,
       "visto": "2026-09-28T11:30:57.376Z",
-      "relevancia": 59,
+      "relevancia": 79,
       "local": false,
       "publicadaPor": "ia",
       "publicadaCuando": "2026-09-28T11:22:22.809Z",
@@ -295,11 +291,15 @@
         "Ámbito",
         "TN (Todo Noticias)",
         "El Cronista",
+        "El Destape",
         "Perfil",
+        "A24",
+        "C5N",
         "Crónica",
         "Noticias Argentinas (NA)",
         "El Día",
-        "La Nueva"
+        "La Nueva",
+        "Zona Norte Diario"
       ],
       "enlace": "https://www.infobae.com/economia/2026/09/28/el-gobierno-confirmo-el-pago-del-bono-para-jubilados-y-pensionados-para-octubre/",
       "teniaImagenLaFuente": true,
@@ -343,91 +343,84 @@
       "slug": "el-gobierno-oficializa-el-pago-del-bono-previsional-para-octubre"
     },
     {
-      "id": "in20o1",
-      "titulo": "Hernán Palazzo gana la final del TC Pick Up en el autódromo Fangio",
-      "copete": "El autódromo Juan Manuel Fangio volvió a recibir al automovilismo nacional tras casi quince años. Casi 27 mil personas presenciaron el regreso del circuito serrano, con el triunfo de Hernán Palazzo en la final del TC Pick Up.",
-      "cuerpo": "El autódromo Juan Manuel Fangio volvió a recibir competencias nacionales de automovilismo este fin de semana, tras casi quince años sin actividad oficial desde la tragedia de noviembre de 2011, según informó un medio local. Cerca de 27 mil personas acompañaron la reapertura del circuito en la sierra La Barrosa, que contó con habilitación provisoria y el visto bueno de la ACTC tras un extenso proceso de recuperación en pista, boxes y medidas de seguridad.\n\nEn lo deportivo, el pinamarense Hernán Palazzo, al mando de una Toyota Hilux, se quedó con la victoria en la final del TC Pick Up tras una competencia cargada de alternativas, seguido por los pilotos de Ford Ranger Diego Ciantini y Otto Fritzler. El evento también marcó el regreso de figuras como Omar Martínez con permiso especial de la CAF y la participación de los locales José y Diego Ciantini y Santiago Mangoni, además de las categorías TC Pista Pick Up y Turismo Special de la Costa.\n\nLas actividades comenzaron el viernes con una reinauguración oficial y una caravana de camionetas que culminó en el Museo Fangio, luego de años en los que el escenario permaneció inactivo tras el accidente fatal de Guido Falaschi.",
-      "guion": "Hernán Palazzo gana la final del TC Pick Up en el autódromo Fangio",
-      "seccion": "Automovilismo",
+      "id": "154aj3c",
+      "titulo": "Lionel Messi discute con Santiago Rodríguez en la caída de Inter Miami",
+      "copete": "Inter Miami cayó por dos a uno ante Columbus Crew en la MLS. Lionel Messi protagonizó un cruce con Santiago Rodríguez y marcó de tiro libre.",
+      "cuerpo": "El episodio ocurrió cerca del cierre del primer tiempo, luego de una infracción del capitán argentino, quien luego empató de tiro libre antes del gol definitivo de Jamal Thiaré en el tiempo agregado. El resultado dejó al equipo estadounidense con una derrota previa a la Fecha FIFA, tras lo cual el delantero viajó a la Argentina para su despedida de la Selección prevista para el seis de octubre.\n\nLa tensión entre ambos futbolistas se remonta a un antecedente del diez de noviembre de 2023, cuando Inter Miami cayó dos a uno ante New York City FC en la presentación del octavo Balón de Oro del rosarino, jornada en la que Rodríguez también discutió con Jordi Alba. Además, en febrero de 2024, el mediocampista uruguayo optó por no elegir a Messi como el mejor jugador de un plantel rival en una votación oficial de la MLS.\n\nRodríguez se incorporó recientemente a Columbus Crew como jugador designado tras su paso por el Botafogo de Brasil.",
+      "guion": "Lionel Messi discute con Santiago Rodríguez en la caída de Inter Miami",
+      "seccion": "Fútbol",
       "medios": [
-        "El Día"
+        "Infobae",
+        "TN (Todo Noticias)"
       ],
-      "enlace": "https://www.eldia.com/deportes/balcarce-el-fangio-volvio-a-todo-esplendor-deportes_1790571518",
-      "teniaImagenLaFuente": false,
-      "fecha": "2026-09-28T04:58:38.000Z",
+      "enlace": "https://www.infobae.com/deportes/2026/09/28/la-fuerte-discusion-entre-messi-y-el-uruguayo-santiago-rodriguez-en-la-derrota-de-inter-miami-el-video-del-cruce-en-2023/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-28T02:35:17.000Z",
       "sinFecha": false,
-      "visto": "2026-09-28T12:05:25.938Z",
-      "relevancia": 80,
-      "local": true,
+      "visto": "2026-09-28T12:31:00.587Z",
+      "relevancia": 59,
+      "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
-      "temas": [
-        "fangio"
-      ],
+      "temas": [],
       "como": "automatica",
       "claves": [
-        "El autódromo Fangio reabrió tras casi quince años sin carreras nacionales.",
-        "Casi 27 mil personas asistieron a la competencia del fin de semana.",
-        "Hernán Palazzo ganó la final del TC Pick Up con una Toyota Hilux.",
-        "Los pilotos locales Diego Ciantini, José Ciantini y Santiago Mangoni volvieron a competir en Balcarce."
+        "Inter Miami perdió dos a uno ante Columbus Crew en la MLS.",
+        "Lionel Messi marcó de tiro libre y protagonizó un cruce verbal con Santiago Rodríguez.",
+        "El antecedente entre ambos jugadores se remonta a un enfrentamiento de noviembre de 2023.",
+        "El capitán argentino viajó hacia la Argentina para su despedida de la Selección."
       ],
-      "seSabe": [
-        "El autódromo Juan Manuel Fangio volvió a recibir al automovilismo nacional tras casi quince años, según un medio local.",
-        "Cerca de 27 mil personas asistieron a la reapertura del circuito serrano durante el fin de semana.",
-        "Hernán Palazzo ganó la final del TC Pick Up con una Toyota Hilux, secundado por Diego Ciantini y Otto Fritzler.",
-        "La actividad nacional en el circuito se encontraba interrumpida desde la tragedia de noviembre de 2011, en la que murió Guido Falaschi.",
-        "Participaron las categorías TC Pick Up, TC Pista Pick Up y Turismo Special de la Costa."
-      ],
-      "noConfirmado": [
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "El autódromo Juan Manuel Fangio volvió a recibir al automovilismo nacional ante una multitud y Hernán Palazzo se quedó con el triunfo en el TC Pick Up.",
+      "textoRedes": "Lionel Messi protagonizó un cruce con Santiago Rodríguez en la derrota de Inter Miami por dos a uno frente a Columbus Crew en la MLS. El capitán argentino marcó de tiro libre y viajó hacia la Argentina para su despedida de la Selección.",
       "etiquetas": [
-        "Autódromo Juan Manuel Fangio",
-        "TC Pick Up",
-        "Hernán Palazzo",
-        "Automovilismo",
-        "Balcarce"
+        "Lionel Messi",
+        "Inter Miami",
+        "Columbus Crew",
+        "Santiago Rodríguez",
+        "MLS",
+        "Fútbol"
       ],
       "fuentesConsultadas": [
         {
-          "medio": "El Día",
-          "enlace": "https://www.eldia.com/deportes/balcarce-el-fangio-volvio-a-todo-esplendor-deportes_1790571518",
-          "fecha": "2026-09-28T04:58:38.000Z",
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/deportes/2026/09/28/la-fuerte-discusion-entre-messi-y-el-uruguayo-santiago-rodriguez-en-la-derrota-de-inter-miami-el-video-del-cruce-en-2023/",
+          "fecha": "2026-09-28T02:35:17.000Z",
           "oficial": false,
-          "aporte": "Detalles de la reapertura del autódromo, cantidad de público, ganadores de la competencia y antecedentes del cierre en 2011."
+          "aporte": "Detalles del cruce en el estadio de Columbus Crew, el contexto de la derrota por dos a uno y la trayectoria previa de Santiago Rodríguez."
+        },
+        {
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/deportes/futbol/2026/09/28/messi-tuvo-una-fuerte-discusion-con-un-futbolista-uruguayo-de-columbus-crew-ya-habian-protagonizado-un-cruce-en-2023/",
+          "fecha": "2026-09-28T10:18:02.000Z",
+          "oficial": false,
+          "aporte": "Confirmación del momento exacto del episodio sobre el final del primer tiempo tras una infracción del capitán argentino."
         }
       ],
       "antecedentes": [
         {
-          "id": "83u2vt",
-          "titulo": "El autódromo Juan Manuel Fangio reabre tras quince años",
-          "fecha": "2026-09-28T03:01:51.643Z",
-          "ruta": "/nota/el-autodromo-juan-manuel-fangio-reabre-tras-quince-anos-83u2vt"
+          "id": "9m2w5x",
+          "titulo": "Golazo de tiro libre de Messi en el Inter Miami",
+          "fecha": "2026-09-21T02:10:53.000Z",
+          "ruta": "/nota/golazo-de-tiro-libre-de-messi-en-el-inter-miami-9m2w5x"
         },
         {
-          "id": "1oj9qzr",
-          "titulo": "El automovilismo nacional convoca a una multitud en el Fangio",
-          "fecha": "2026-09-27T23:49:17.000Z",
-          "ruta": "/nota/el-automovilismo-nacional-convoca-a-una-multitud-en-el-fangio-1oj9qzr"
+          "id": "r5ew75",
+          "titulo": "Inter Miami juega ante San Diego FC por la MLS",
+          "fecha": "2026-09-21T01:17:25.000Z",
+          "ruta": "/nota/inter-miami-juega-ante-san-diego-fc-por-la-mls-r5ew75"
         },
         {
-          "id": "gun9be",
-          "titulo": "Antonino Sganga gana en el TC Pista Pick Up en el Fangio",
-          "fecha": "2026-09-27T23:42:42.000Z",
-          "ruta": "/nota/antonino-sganga-gana-en-el-tc-pista-pick-up-en-el-fangio-gun9be"
+          "id": "kqa7ux",
+          "titulo": "Racing confirmó la llegada de Inter Miami a Balcarce",
+          "fecha": "2026-09-18T12:41:52.000Z",
+          "ruta": "/nota/racing-confirmo-la-llegada-de-inter-miami-a-balcarce-kqa7ux"
         }
       ],
       "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "ALTA"
       },
-      "slug": "hernan-palazzo-gana-la-final-del-tc-pick-up-en-el-autodromo-fangio",
-      "foto": {
-        "archivo": "fotos-notas/in20o1.jpg",
-        "credito": "Foto: El Día"
-      }
+      "slug": "lionel-messi-discute-con-santiago-rodriguez-en-la-caida-de-inter-miami"
     },
     {
       "id": "187bqn1",
@@ -444,7 +437,7 @@
       "fecha": "2026-09-28T00:23:01.264Z",
       "sinFecha": false,
       "visto": "2026-09-28T02:01:00.043Z",
-      "relevancia": 80,
+      "relevancia": 73,
       "local": true,
       "publicadaPor": "ia",
       "publicadaCuando": "2026-09-28T01:51:44.079Z",
@@ -712,125 +705,6 @@
       "foto": {
         "archivo": "fotos-notas/1dou3ni.jpg",
         "credito": "Foto: Argenpapa"
-      }
-    },
-    {
-      "id": "nx6lkn",
-      "titulo": "Boca elimina a Racing en la Copa Argentina y lanza cargadas en redes",
-      "copete": "Boca derrotó a Racing tres a dos en el Gigante de Arroyito, avanzó a las semifinales de la Copa Argentina y utilizó las redes sociales para bromear a su rival con referencias políticas y frases virales.",
-      "cuerpo": "Boca le ganó tres a dos a Racing en el estadio Gigante de Arroyito y se metió en las semifinales de la Copa Argentina tras una remontada histórica. La victoria, coronada por tres goles del delantero Enner Valencia, desató la locura de los hinchas y motivó una serie de cargadas desde las cuentas oficiales del club en las redes sociales dirigidas al equipo de Avellaneda.\n\nEntre las publicaciones más destacadas, la institución utilizó la frase \"Salto de calidad\", en clara alusión a una expresión utilizada por el presidente de Racing, Diego Milito, durante su campaña electoral de dos mil veinticuatro. Además, el club replicó declaraciones previas del director técnico Rodolfo Arruabarrena y expresiones populares recientes de sus propios futbolistas.\n\nLas publicaciones incluyeron también referencias al desempeño de Valencia, apodado \"Súperman\" tras llevarse la pelota del partido, y chicanas adicionales vinculadas al delantero rival Adrián Martínez. Con estos mensajes, el Xeneize celebró la clasificación en un cruce decisivo que dejó fuera de la competencia al conjunto académico.",
-      "guion": "Boca elimina a Racing en la Copa Argentina y lanza cargadas en redes",
-      "seccion": "Fútbol",
-      "medios": [
-        "Infórmese Primero (FM 104.9)",
-        "La Nación",
-        "Clarín",
-        "0223 (Mar del Plata)",
-        "LU9 Mar del Plata",
-        "QZ Noticias (Mar del Plata)",
-        "Ecos Diarios (Necochea)",
-        "Minuto Uno",
-        "Infobae",
-        "TN (Todo Noticias)",
-        "El Destape",
-        "Perfil",
-        "Página/12",
-        "A24",
-        "Ámbito",
-        "TyC Sports",
-        "Olé",
-        "C5N",
-        "Crónica",
-        "Radio Mitre",
-        "Canal 26",
-        "Diario Popular",
-        "Noticias Argentinas (NA)",
-        "El Día",
-        "La Nueva",
-        "0221",
-        "La Brújula 24",
-        "La Verdad",
-        "ANDigital",
-        "El Marplatense",
-        "Mi8 (Canal 8 Mar del Plata)",
-        "El Eco de Tandil",
-        "NDEN – Noticias de Necochea",
-        "Doble Amarilla",
-        "Bolavip Argentina",
-        "Vavel Argentina",
-        "Pick and Roll",
-        "Ayacucho al Día",
-        "Infocielo"
-      ],
-      "enlace": "https://www.ole.com.ar/copa-argentina/boca-racing-copa-argentina-chicana-cargada-salto-calidad-posteo-milito-redes_0_ExUFrdDV0w.html",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-27T22:54:15.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-28T03:01:51.643Z",
-      "relevancia": 82,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Boca le ganó tres a dos a Racing y avanzó a semifinales.",
-        "El encuentro se disputó en el estadio Gigante de Arroyito.",
-        "El delantero Enner Valencia convirtió tres goles para el conjunto ganador.",
-        "El club utilizó frases de la campaña de Diego Milito para las cargadas."
-      ],
-      "seSabe": [
-        "Boca derrotó a tres a dos a Racing en el Gigante de Arroyito.",
-        "El equipo avanzó a las semifinales de la Copa Argentina.",
-        "Enner Valencia convirtió tres goles para el conjunto ganador.",
-        "Las redes sociales del club difundieron mensajes alusivos a la victoria y bromas hacia el rival."
-      ],
-      "etiquetas": [
-        "Boca",
-        "Racing",
-        "Copa Argentina",
-        "Enner Valencia",
-        "Diego Milito"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Olé",
-          "enlace": "https://www.ole.com.ar/copa-argentina/boca-racing-copa-argentina-chicana-cargada-salto-calidad-posteo-milito-redes_0_ExUFrdDV0w.html",
-          "fecha": "2026-09-27T22:54:15.000Z",
-          "oficial": false,
-          "aporte": "Detalló el desarrollo del partido, el resultado, los goles de Enner Valencia y las publicaciones realizadas por el club en redes sociales."
-        },
-        {
-          "medio": "TN (Todo Noticias)",
-          "enlace": "https://tn.com.ar/deportes/futbol/2026/09/27/salto-de-calidad-las-chicanas-de-boca-para-racing-en-las-redes-sociales-tras-el-triunfo-por-la-copa-argentina/",
-          "fecha": "2026-09-27T23:54:40.000Z",
-          "oficial": false,
-          "aporte": "Confirmó el resultado del encuentro y la clasificación a semifinales de la Copa Argentina."
-        },
-        {
-          "medio": "Perfil",
-          "enlace": "https://442.perfil.com/noticias/futbol/salto-de-calidad-la-chicana-de-boca-a-racing-despues-de-la-remontada.phtml",
-          "fecha": "2026-09-27T23:41:44.000Z",
-          "oficial": false,
-          "aporte": "Aportó la información sobre el uso de la frase de la campaña presidencial de Diego Milito."
-        },
-        {
-          "medio": "Bolavip Argentina",
-          "enlace": "https://bolavip.com/ar/boca/las-chicanas-de-boca-a-racing-y-diego-milito-tras-el-triunfo-en-la-copa-argentina-salto-de-calidad",
-          "fecha": "2026-09-27T23:14:18.000Z",
-          "oficial": false,
-          "aporte": "No aportó información adicional en su contenido."
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron cuatro medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "boca-elimina-a-racing-en-la-copa-argentina-y-lanza-cargadas-en-redes",
-      "foto": {
-        "archivo": "fotos-notas/nx6lkn.webp",
-        "credito": "Foto: Bolavip Argentina"
       }
     },
     {
@@ -1131,6 +1005,8 @@
       "guion": "El J.P. Morgan recorta su proyección y prevé una recesión",
       "seccion": "Economía",
       "medios": [
+        "El Eco de Tandil",
+        "Diputados Bonaerenses",
         "Minuto Uno",
         "Infobae",
         "Ámbito",
@@ -1143,7 +1019,6 @@
         "La Nueva",
         "Radio Mitre",
         "La Noticia 1",
-        "Diputados Bonaerenses",
         "InfoRegión",
         "El Marplatense",
         "Mi8 (Canal 8 Mar del Plata)",
@@ -1432,7 +1307,6 @@
         "A24",
         "Minuto Uno",
         "C5N",
-        "Radio Mitre",
         "Canal 26",
         "Noticias Argentinas (NA)",
         "0221",
@@ -1576,15 +1450,14 @@
       "medios": [
         "La Nación",
         "El Destape",
-        "La Página Millonaria",
-        "Vavel Argentina"
+        "La Página Millonaria"
       ],
       "enlace": "https://www.lanacion.com.ar/deportes/futbol/horarios-de-los-amistosos-de-la-seleccion-argentina-vs-bolivia-burkina-faso-y-benin-nid27092026/",
       "teniaImagenLaFuente": true,
       "fecha": "2026-09-27T17:55:16.000Z",
       "sinFecha": false,
       "visto": "2026-09-28T03:01:51.643Z",
-      "relevancia": 80,
+      "relevancia": 70,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1891,6 +1764,77 @@
       }
     },
     {
+      "id": "zy7qj6",
+      "titulo": "Los alimentos impulsan un piso inflacionario para septiembre",
+      "copete": "Los relevamientos privados ubican la inflación de septiembre con un piso similar al del mes pasado. El incremento en las frutas y verduras presiona sobre los precios.",
+      "cuerpo": "El Índice de Precios al Consumidor de septiembre tendría un piso cercano al registrado en agosto, según las proyecciones de analistas privados. De acuerdo con los relevamientos, ninguna consultora prevé que la cifra se ubique por debajo de ese porcentaje, mientras que algunas estimaciones alcanzan el dos por ciento.\n\nLa suba en los alimentos, especialmente en frutas y verduras durante la tercera semana, empujó los precios hacia arriba. Además, se anticipan aumentos estacionales en carnes, indumentaria por el cambio de temporada y combustibles debido a la cotización internacional del petróleo.\n\nPor otra parte, el Instituto Nacional de Estadística y Censos informó que la inflación mayorista subió en agosto por encima de la minorista, acumulando un incremento anual que supera los índices previos en los últimos doce meses.",
+      "guion": "Los alimentos impulsan un piso inflacionario para septiembre",
+      "seccion": "Economía",
+      "medios": [
+        "TN (Todo Noticias)",
+        "0221",
+        "El Marplatense"
+      ],
+      "enlace": "https://tn.com.ar/economia/2026/09/27/la-suba-de-los-alimentos-le-pone-un-piso-a-la-inflacion-de-septiembre-y-complica-el-objetivo-del-gobierno/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-27T15:25:46.000Z",
+      "sinFecha": false,
+      "visto": "2026-09-28T12:31:00.587Z",
+      "relevancia": 46,
+      "local": false,
+      "publicadaPor": "ia",
+      "publicadaCuando": "2026-09-28T10:12:09.327Z",
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "La inflación de septiembre mantendría un piso similar al de agosto.",
+        "Las frutas y verduras impulsaron los precios de los alimentos.",
+        "Proyectan subas futuras en indumentaria y combustibles."
+      ],
+      "noConfirmado": [
+        "No se pudo precisar el impacto final que tendrá el incremento de los combustibles en el índice de precios del próximo mes."
+      ],
+      "textoRedes": "Los relevamientos privados estiman que la inflación de septiembre mantendría un piso similar al de agosto debido al incremento en los alimentos y las proyecciones para los próximos meses.",
+      "etiquetas": [
+        "inflacion",
+        "alimentos",
+        "indec"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/economia/2026/09/27/la-suba-de-los-alimentos-le-pone-un-piso-a-la-inflacion-de-septiembre-y-complica-el-objetivo-del-gobierno/",
+          "fecha": "2026-09-27T15:25:46.000Z",
+          "oficial": false,
+          "aporte": "Aportó las proyecciones de analistas privados sobre el piso inflacionario y el detalle de los rubros."
+        },
+        {
+          "medio": "0221",
+          "enlace": "https://www.0221.com.ar/nacional/los-alimentos-presionan-los-precios-y-la-inflacion-septiembre-tendria-un-piso-17-n134911",
+          "fecha": "2026-09-27T23:28:00.000Z",
+          "oficial": false,
+          "aporte": "Anticipó subas en carnes, ropa y combustibles para los próximos meses."
+        },
+        {
+          "medio": "El Marplatense",
+          "enlace": "https://www.elmarplatense.com/la-inflacion-de-septiembre-bajo-presion-por-la-suba-de-los-alimentos",
+          "fecha": "2026-09-27T20:45:00.000Z",
+          "oficial": false,
+          "aporte": "Señaló que la inflación de septiembre podría interrumpir la desaceleración previa."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron tres medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "los-alimentos-impulsan-un-piso-inflacionario-para-septiembre",
+      "foto": {
+        "archivo": "fotos-notas/zy7qj6.jpg",
+        "credito": "Foto: El Marplatense"
+      }
+    },
+    {
       "id": "dmfg6e",
       "titulo": "Chile apoya el reclamo por Malvinas, pero defiende el comercio con las islas",
       "copete": "El ministro de Defensa chileno, Fernando Barros Tocornal, dijo que su país apoya la pretensión argentina sobre Malvinas, pero que el Reino Unido, \"un país amigo\", ejerce allí soberanía \"hace 200 años\". También avaló una ruta comercial entre Punta Arenas y las islas.",
@@ -1902,6 +1846,7 @@
         "La Nación",
         "TN (Todo Noticias)",
         "Perfil",
+        "A24",
         "Ámbito",
         "C5N",
         "Crónica",
@@ -2856,6 +2801,58 @@
       "slug": "el-repaso-de-la-noche-en-radar-balcarce-autodromo-juan-manuel-fangio"
     },
     {
+      "id": "z7c2yy",
+      "titulo": "Cierra Tío Mario, una juguetería porteña con casi 30 años de historia",
+      "copete": "La juguetería Tío Mario cerró definitivamente el sábado 26 de septiembre, tras casi tres décadas de actividad. Lo anunció en sus redes sociales, junto con una liquidación total de la mercadería.",
+      "cuerpo": "Según fuentes cercanas al comercio, pesaron la imposibilidad de competir con los productos importados de China, que llegan con precios mucho más bajos, y el alto costo de los alquileres. Julián Benítez, gerente de Relaciones Institucionales de la Cámara Argentina de la Industria del Juguete (CAIJ), confirmó el cierre, advirtió que \"hay muchos cierres\" e indicó que cerca del 90% de los juguetes importados viene de China.\n\nEl rubro atraviesa una caída: según datos de la cámara, las ventas bajaron 10% en el primer semestre de 2026, la industria trabaja al 30% de su capacidad y cinco fábricas están en proceso de cierre. En octubre de 2025, el Gobierno había bajado del 35% al 20% los aranceles de importación de catorce tipos de juguetes.\n\nAntes de bajar las persianas, el local ofreció 2x1 en artículos seleccionados y 30% de descuento en mochilas y cartucheras.",
+      "guion": null,
+      "seccion": "Economía",
+      "medios": [
+        "Infobae",
+        "Canal 26",
+        "0223 (Mar del Plata)"
+      ],
+      "enlace": "https://www.infobae.com/economia/2026/09/26/no-escapa-a-la-realidad-tras-casi-30-anos-de-actividad-cerro-la-jugueteria-tio-mario/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-26T22:45:44.000Z",
+      "sinFecha": false,
+      "visto": "2026-09-28T12:31:00.587Z",
+      "relevancia": 44,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "fuentesConsultadas": [
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/economia/2026/09/26/no-escapa-a-la-realidad-tras-casi-30-anos-de-actividad-cerro-la-jugueteria-tio-mario/",
+          "fecha": "2026-09-26T22:45:44.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Canal 26",
+          "enlace": "https://www.canal26.com/economia/2026/09/27/tio-mario-cierra-despues-de-casi-30-anos-que-paso-con-la-historica-jugueteria/",
+          "fecha": "2026-09-27T00:11:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "0223 (Mar del Plata)",
+          "enlace": "https://www.0223.com.ar/nota/2026-9-27-11-3-47-tio-mario-cierra-tras-casi-30-anos-por-la-competencia-de-productos-importados-y-altos-costos",
+          "fecha": "2026-09-27T14:03:00.000Z",
+          "oficial": false,
+          "aporte": null
+        }
+      ],
+      "slug": "no-escapa-a-la-realidad-tras-casi-30-anos-de-actividad-cerro-una",
+      "foto": {
+        "archivo": "fotos-notas/z7c2yy.jpg",
+        "credito": "Foto: Diario Popular"
+      }
+    },
+    {
       "id": "iobnth",
       "titulo": "Matías Latorre repasó su trayectoria musical",
       "copete": "El cantante balcarceño fue entrevistado en un programa radial local, donde recorrió sus inicios artísticos, su paso por distintos escenarios del país y su vínculo con el tango y el folclore.",
@@ -3150,94 +3147,6 @@
       }
     },
     {
-      "id": "wb80wz",
-      "titulo": "Una locomotora centenaria llega a Mar del Plata por su aniversario",
-      "copete": "Una histórica formación restaurada tras diecisiete años encabezó los festejos por los 140 años de la llegada del tren a Mar del Plata, en una jornada que convocó a miles de vecinos y visitantes.",
-      "cuerpo": "Una locomotora a vapor de 1925 llegó a la Estación Ferroautomotora de Mar del Plata tras un viaje de casi veinte horas, como parte central de la conmemoración por el 140° aniversario del arribo del primer ferrocarril a la ciudad balnearia.\n\nLa formación incluyó ocho vagones abiertos al público, entre ellos cinco del Museo Ferroviario y tres coches de pasajeros, como uno oficial utilizado por Juan Pablo II en 1982 y restaurado en los talleres de Junín. La llegada coincidió con los festejos que también recordaron el centenario de la primera vez que esta misma máquina circuló hacia la costa atlántica.\n\nEl evento reunió a miles de personas, entre curiosos, turistas, extrabajadores ferroviarios y el propio maquinista y gestor del proyecto, Martín Campbell, además de vecinos mayores que compartieron recuerdos de la época dorada del transporte.",
-      "guion": "Una locomotora centenaria llega a Mar del Plata por su aniversario",
-      "seccion": "Cultura y agenda",
-      "medios": [
-        "0223 (Mar del Plata)",
-        "Agencia DIB",
-        "La Nación",
-        "QZ Noticias (Mar del Plata)",
-        "Infobrisas (Radio Brisas)",
-        "Noticias y Protagonistas"
-      ],
-      "enlace": "https://www.lanacion.com.ar/sociedad/humo-negro-y-vapor-la-centenaria-locomotora-39-grande-evoco-la-llegada-del-primer-tren-a-mar-del-nid26092026/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-26T18:56:18.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-28T08:00:59.952Z",
-      "relevancia": 58,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Llegó a Mar del Plata la locomotora histórica \"39 Grande\".",
-        "Fue restaurada durante 17 años por el Ferroclub Argentino.",
-        "El viaje duró casi 20 horas desde Buenos Aires.",
-        "La formación incluyó vagones museo y un coche presidencial histórico."
-      ],
-      "textoRedes": "Una histórica locomotora a vapor restaurada tras diecisiete años llegó a Mar del Plata para encabezar los festejos por los 140 años de la llegada del primer tren, en una jornada que reunió a vecinos y visitantes en la estación ferroviaria.",
-      "etiquetas": [
-        "Mar del Plata",
-        "Ferrocarril",
-        "Locomotora",
-        "Aniversario",
-        "Ferroclub Argentino"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "La Nación",
-          "enlace": "https://www.lanacion.com.ar/sociedad/humo-negro-y-vapor-la-centenaria-locomotora-39-grande-evoco-la-llegada-del-primer-tren-a-mar-del-nid26092026/",
-          "fecha": "2026-09-26T18:56:18.000Z",
-          "oficial": false,
-          "aporte": "Detalló el proceso de restauración de la locomotora, el viaje de 20 horas y los vagones que integraron la formación."
-        },
-        {
-          "medio": "0223 (Mar del Plata)",
-          "enlace": "https://www.0223.com.ar/nota/2026-9-27-16-42-0-mar-del-plata-y-su-historia-ferroviaria-las-postales-que-dejo-la-llegada-de-la-locomotora-a-vapor",
-          "fecha": "2026-09-27T19:42:00.000Z",
-          "oficial": false,
-          "aporte": "Informó sobre la exposición especial organizada por el Ferroclub Argentino en la estación local."
-        },
-        {
-          "medio": "La Noticia 1",
-          "enlace": "https://www.lanoticia1.com/noticia/mar-del-plata-celebro-los-140-anos-de-la-llegada-del-tren-con-una-historica-locomotora-a-vapor",
-          "fecha": "2026-09-26T22:04:03.000Z",
-          "oficial": false,
-          "aporte": "Confirmó que la conmemoración se desarrolló durante toda la jornada del sábado."
-        },
-        {
-          "medio": "QZ Noticias (Mar del Plata)",
-          "enlace": "https://www.qznoticias.com/la-ciudad/una-locomotora-a-vapor-volvio-a-mar-del-plata-para-celebrar-los-140-anos-de-la-llegada-del-tren",
-          "fecha": "2026-09-26T22:37:49.000Z",
-          "oficial": false,
-          "aporte": "Destacó la llegada de la formación centenaria enmarcada en los festejos ferroviarios."
-        },
-        {
-          "medio": "Noticias y Protagonistas",
-          "enlace": "https://noticiasyprotagonistas.com/actualidad/la-locomotora-a-vapor-volvio-a-las-vias-y-celebro-los-140-anos-de-la-llegada-del-tren-a-mar-del-plata/",
-          "fecha": "2026-09-27T12:32:00.000Z",
-          "oficial": false,
-          "aporte": "Aportó el dato de que la unidad fue restaurada tras 17 años y cumplió un viaje de casi 20 horas."
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron cinco medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "una-locomotora-centenaria-llega-a-mar-del-plata-por-su-aniversario",
-      "foto": {
-        "archivo": "fotos-notas/wb80wz.jpg",
-        "credito": "Foto: La Noticia 1"
-      }
-    },
-    {
       "id": "1qm1ppu",
       "titulo": "La familia Crespi confirma que la fábrica seguirá abierta",
       "copete": "La emblemática planta de automóviles de Balcarce seguirá en marcha bajo la conducción de los hijos del fundador, Tulio Crespi, según informó la familia a través de un comunicado oficial.",
@@ -3431,90 +3340,243 @@
       }
     },
     {
-      "id": "5exxou",
-      "titulo": "Un gallo bataraz se vende por más de tres millones de pesos",
-      "copete": "Un ejemplar de la raza Plymouth Rock Barrada marcó un récord en un remate durante la última Exposición Rural de Bolívar al ser vendido por una cifra inédita en el mercado nacional.",
-      "cuerpo": "El evento ganadero reunió a criadores y productores de la región, donde la subasta del ejemplar llamó la atención por alcanzar un valor equivalente a unos dos mil dólares. La venta del ave generó repercusión en el sector agropecuario bonaerense por la magnitud del monto alcanzado para un animal de granja.\n\nAunque la operación comercial se concretó con éxito en la muestra rural bolivarense, hasta el momento no trascendieron detalles sobre la identidad del comprador ni el destino que tendrá el ejemplar tras la histórica subasta.",
-      "guion": "Un gallo bataraz se vende por más de tres millones de pesos",
-      "seccion": "Agro",
+      "id": "1nuecaw",
+      "titulo": "Figueroa cruza a Prat-Gay por Vaca Muerta y Milei comparte su respuesta",
+      "copete": "El gobernador de Neuquén respondió al exministro, que había dicho que el crecimiento petrolero todavía no derrama en la economía provincial. El presidente Javier Milei difundió el mensaje en sus redes.",
+      "cuerpo": "Alfonso Prat-Gay hizo su diagnóstico después de recorrer pequeñas y medianas empresas en Neuquén, aunque reconoció que no llegó a Añelo y que se trataba de “una muestra muy pequeña”. Rolando Figueroa le contestó en redes sociales: “Te vi en Neuquén. Veo que no has recorrido. No comparto en absoluto tus apreciaciones desde el Obelisco”.\n\nEl gobernador acompañó su respuesta con un informe de la Fundación Mediterránea y con datos de la provincia: entre 2023 y 2025 la masa salarial creció 13% en petróleo y gas y 17% en otras actividades; el empleo privado registrado subió cerca de 7%, con unos 12.000 puestos nuevos y 186 empresas radicadas, y las exportaciones del primer semestre de 2026 superaron los 4.300 millones de dólares, 42% más que un año antes.\n\n“La próxima vez te saco a recorrer mi provincia, que ha logrado lo que muchos en el país no hicieron cuando tuvieron su oportunidad”, cerró Figueroa. Milei compartió el mensaje sin agregar declaraciones propias.",
+      "guion": "Milei respalda el desarrollo de Vaca Muerta tras el cruce entre Figueroa y Prat-Gay",
+      "seccion": "Política",
       "medios": [
-        "0223 (Mar del Plata)",
-        "Ayacucho al Día",
-        "Infoeme",
-        "La Verdad de Ayacucho"
+        "La Nación",
+        "Infobae",
+        "Ámbito",
+        "Minuto Uno",
+        "C5N",
+        "Canal 26",
+        "Diario Popular",
+        "Noticias Argentinas (NA)"
       ],
-      "enlace": "https://laverdadayacucho.com.ar/se-vendio-el-gallo-mas-caro-de-la-argentina-mas-de-tres-millones-de-pesos/",
+      "enlace": "https://noticiasargentinas.com/politica/milei-se-mete-en-el-cruce-de-figueroa-con-prat-gay-y-respalda-el-desarrollo-de-vaca-muerta_a6ab7e2409a676c64cfcc1a66",
       "teniaImagenLaFuente": true,
-      "fecha": "2026-09-26T14:37:43.000Z",
+      "fecha": "2026-09-26T15:23:41.784Z",
       "sinFecha": false,
-      "visto": "2026-09-28T02:26:47.869Z",
-      "relevancia": 51,
+      "visto": "2026-09-28T12:31:00.587Z",
+      "relevancia": 58,
       "local": false,
       "publicadaPor": "ia",
-      "publicadaCuando": "2026-09-28T03:02:36.621Z",
+      "publicadaCuando": "2026-09-28T10:12:09.327Z",
       "temas": [],
       "como": "automatica",
       "claves": [
-        "Se vendió el gallo más caro de la Argentina",
-        "Alcanzó un valor de tres millones de pesos",
-        "La subasta ocurrió en la Exposición Rural de Bolívar",
-        "El ejemplar pertenece a la raza Plymouth Rock Barrada"
+        "Javier Milei respaldó al gobernador de Neuquén en redes sociales.",
+        "Rolando Figueroa respondió a las críticas de Alfonso Prat-Gay sobre Vaca Muerta.",
+        "El exministro había cuestionado el impacto económico del sector petrolero.",
+        "El mandatario provincial utilizó datos de la Fundación Mediterránea para defender su gestión."
       ],
       "seSabe": [
-        "Un gallo bataraz de la raza Plymouth Rock Barrada se vendió por 3.020.000 pesos",
-        "La subasta se realizó en el marco de la Exposición Rural de Bolívar",
-        "El monto equivale aproximadamente a dos mil dólares"
+        "El presidente Javier Milei compartió en redes sociales el cruce entre el gobernador y el exministro, según las fuentes.",
+        "El gobernador de Neuquén, Rolando Figueroa, defendió el impacto económico de Vaca Muerta frente a los cuestionamientos.",
+        "El exministro de Economía Alfonso Prat-Gay sostuvo que el crecimiento petrolero todavía no derrama en la provincia.",
+        "El mandatario provincial respaldó su postura con un estudio del IERAL de la Fundación Mediterránea."
       ],
-      "noConfirmado": [
-        "No se informó la identidad del comprador",
-        "No se detalló el destino que tendrá el ejemplar"
-      ],
-      "textoRedes": "Un gallo de la raza Plymouth Rock Barrada batió un récord en la Exposición Rural de Bolívar al venderse en más de tres millones de pesos.",
+      "textoRedes": "El presidente Javier Milei respaldó el desarrollo de Vaca Muerta al compartir un mensaje del gobernador neuquino Rolando Figueroa, quien cruzó al exministro Alfonso Prat-Gay por cuestionar el impacto económico del sector petrolero en la provincia.",
       "etiquetas": [
-        "remate",
-        "Exposición Rural de Bolívar",
-        "gallo bataraz",
-        "Plymouth Rock Barrada"
+        "Vaca Muerta",
+        "Rolando Figueroa",
+        "Alfonso Prat-Gay",
+        "Javier Milei",
+        "Neuquén",
+        "Economía"
       ],
       "fuentesConsultadas": [
         {
-          "medio": "La Verdad de Ayacucho",
-          "enlace": "https://laverdadayacucho.com.ar/se-vendio-el-gallo-mas-caro-de-la-argentina-mas-de-tres-millones-de-pesos/",
-          "fecha": "2026-09-26T14:37:43.000Z",
+          "medio": "Noticias Argentinas (NA)",
+          "enlace": "https://noticiasargentinas.com/politica/milei-se-mete-en-el-cruce-de-figueroa-con-prat-gay-y-respalda-el-desarrollo-de-vaca-muerta_a6ab7e2409a676c64cfcc1a66",
+          "fecha": "2026-09-26T15:23:41.784Z",
           "oficial": false,
-          "aporte": "Informó los detalles de la venta del gallo bataraz en la Exposición Rural de Bolívar."
+          "aporte": "Detalló la intervención del presidente Javier Milei y los argumentos del cruce entre el gobernador y el exministro."
         },
         {
-          "medio": "0223 (Mar del Plata)",
-          "enlace": "https://www.0223.com.ar/nota/2026-9-27-15-4-0-record-se-vendio-el-gallo-mas-caro-del-pais-por-una-cifra-millonaria-en-bolivar",
-          "fecha": "2026-09-27T18:04:00.000Z",
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/economia/el-gobernador-de-neuquen-cruzo-a-prat-gay-por-decir-que-vaca-muerta-no-derrama-en-la-provincia-nid26092026/",
+          "fecha": "2026-09-26T19:47:43.000Z",
           "oficial": false,
-          "aporte": "Aportó el dato sobre la conversión estimada en dólares de la venta."
+          "aporte": "Informó sobre los dichos iniciales del gobernador neuquino contra el exministro."
         },
         {
-          "medio": "Ayacucho al Día",
-          "enlace": "https://ayacuchoaldia.com.ar/bolivar-se-vendio-el-gallo-mas-caro-de-la-argentina-mas-de-tres-millones-de-pesos/?utm_source=rss&utm_medium=rss&utm_campaign=bolivar-se-vendio-el-gallo-mas-caro-de-la-argentina-mas-de-tres-millones-de-pesos",
-          "fecha": "2026-09-27T17:00:08.000Z",
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/politica/2026/09/26/apreciaciones-desde-el-obelisco-el-cruce-entre-el-gobernador-de-neuquen-y-prat-gay-por-vaca-muerta/",
+          "fecha": "2026-09-26T15:38:54.000Z",
           "oficial": false,
-          "aporte": "Confirmó la cifra récord alcanzada durante el remate en la muestra rural."
+          "aporte": "Confirmó la respuesta del gobernador y la participación del presidente en redes sociales."
         },
         {
-          "medio": "Infoeme",
-          "enlace": "https://www.infoeme.com/agro/2026-9-26-12-38-47-bolivar-se-vendio-el-gallo-mas-caro-de-la-argentina",
-          "fecha": "2026-09-26T15:38:47.000Z",
+          "medio": "Ámbito",
+          "enlace": "https://www.ambito.com/politica/rolando-figueroa-cruzo-alfonso-prat-gay-vaca-muerta-veo-que-no-has-recorrido-neuquen-n6327207",
+          "fecha": "2026-09-27T19:37:00.000Z",
           "oficial": false,
-          "aporte": "Detalló la raza del ejemplar y el monto exacto de la transacción."
+          "aporte": "Aportó que el gobernador respondió con datos de empleo, salarios y exportaciones."
+        },
+        {
+          "medio": "Minuto Uno",
+          "enlace": "https://www.minutouno.com/economia/la-fuerte-respuesta-rolando-figueroa-alfonso-prat-gay-el-impacto-vaca-muerta-n6327182",
+          "fecha": "2026-09-27T16:58:00.000Z",
+          "oficial": false,
+          "aporte": "Señaló el cruce entre el mandatario provincial y el exministro de Economía."
+        },
+        {
+          "medio": "C5N",
+          "enlace": "https://www.c5n.com/politica/rolando-figueroa-cruzo-alfonso-prat-gay-vaca-muerta-veo-que-no-has-recorrido-n250051",
+          "fecha": "2026-09-27T17:17:00.000Z",
+          "oficial": false,
+          "aporte": "Reprodujo la frase textual del gobernador sobre recorrer la provincia."
+        },
+        {
+          "medio": "Crónica",
+          "enlace": "https://www.cronica.com.ar/politica/figueroa-le-respondio-a-prat-gay-te-vi-en-neuquen-veo-que-no-has-recorrido/",
+          "fecha": "2026-09-26T23:30:12.000Z",
+          "oficial": false,
+          "aporte": "Mencionó que el gobernador utilizó un informe de la Fundación Mediterránea."
+        },
+        {
+          "medio": "Canal 26",
+          "enlace": "https://www.canal26.com/politica/2026/09/27/rolando-figueroa-cruzo-a-prat-gay-por-vaca-muerta-veo-que-no-has-recorrido/",
+          "fecha": "2026-09-27T14:30:33.000Z",
+          "oficial": false,
+          "aporte": "Indicó las expresiones iniciales del gobernador dirigidas al exministro."
+        },
+        {
+          "medio": "Diario Popular",
+          "enlace": "https://www.diariopopular.com.ar/politica/rolando-figueroa-prat-gay-no-comparto-tus-apreciaciones-el-obelisco-n921694",
+          "fecha": "2026-09-27T00:02:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Clarín",
+          "enlace": "https://www.clarin.com/politica/gobernador-neuquen-cruzo-prat-gay-decir-vaca-muerta-derrama-provincia_0_fG8Ofa09fC.html",
+          "fecha": "2026-09-26T22:39:00.000Z",
+          "oficial": false,
+          "aporte": null
         }
       ],
       "verificacion": {
         "nivel": "ALTA",
-        "porque": "Lo contaron cuatro medios independientes.",
+        "porque": "Lo contaron 10 medios independientes.",
         "sugeridoPorIA": "ALTA"
       },
-      "slug": "un-gallo-se-vende-a-un-precio-record-en-bolivar",
+      "slug": "milei-respalda-el-desarrollo-de-vaca-muerta-tras-el-cruce-entre"
+    },
+    {
+      "id": "mk94me",
+      "titulo": "Franco Colapinto choca con Pierre Gasly en el Gran Premio de Azerbaiyán",
+      "copete": "El piloto argentino colisionó con su compañero de equipo y con Lando Norris durante el relanzamiento de la carrera en Bakú. El incidente dejó a ambos fuera de competencia y generó distintas reacciones en la categoría.",
+      "cuerpo": "Tras el impacto, el piloto argentino se dirigió al box de Alpine para disculparse con el personal y con el corredor francés, quien mantuvo una postura fría y evitó declaraciones extensas ante la prensa. El antecedente inmediato señala que ambos integran la escudería Alpine y habían protagonizado semanas atrás tensiones internas por posiciones en pista, según consignó la cobertura previa.\n\nEn cuanto a las consecuencias para el corredor argentino, el circuito callejero de Bakú albergó este sábado la decimosexta fecha de la temporada, donde el deportista había partido desde el noveno puesto antes del incidente que determinó el abandono general de los involucrados en la maniobra.",
+      "guion": "Franco Colapinto choca con Pierre Gasly en el Gran Premio de Azerbaiyán",
+      "seccion": "Automovilismo",
+      "medios": [
+        "Clarín",
+        "La Nación",
+        "Minuto Uno",
+        "Infobae",
+        "TN (Todo Noticias)",
+        "El Destape",
+        "Perfil",
+        "Página/12",
+        "A24",
+        "Ámbito",
+        "TyC Sports",
+        "C5N",
+        "Crónica",
+        "Radio Mitre",
+        "Canal 26",
+        "Diario Popular",
+        "Noticias Argentinas (NA)",
+        "El Día",
+        "La Nueva",
+        "0221",
+        "InfoRegión",
+        "QZ Noticias (Mar del Plata)",
+        "El Marplatense",
+        "Mi8 (Canal 8 Mar del Plata)",
+        "El Eco de Tandil",
+        "NDEN – Noticias de Necochea",
+        "Doble Amarilla",
+        "Bolavip Argentina",
+        "0223 (Mar del Plata)"
+      ],
+      "enlace": "https://www.lanacion.com.ar/deportes/automovilismo/gasly-tuvo-una-fria-reaccion-ante-las-disculpas-de-colapinto-por-el-choque-en-baku-nid26092026/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-26T15:07:30.000Z",
+      "sinFecha": false,
+      "visto": "2026-09-27T16:12:25.801Z",
+      "relevancia": 90,
+      "local": false,
+      "publicadaPor": "ia",
+      "publicadaCuando": "2026-09-27T03:51:07.207Z",
+      "temas": [],
+      "como": "automatica",
+      "noConfirmado": [
+        "No se especificaron sanciones oficiales por parte de las autoridades de la competición tras el incidente."
+      ],
+      "etiquetas": [
+        "Franco Colapinto",
+        "Pierre Gasly",
+        "Formula 1",
+        "Gran Premio de Azerbaiyán"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/deportes/automovilismo/gasly-tuvo-una-fria-reaccion-ante-las-disculpas-de-colapinto-por-el-choque-en-baku-nid26092026/",
+          "fecha": "2026-09-26T15:07:30.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Ámbito",
+          "enlace": "https://www.ambito.com/deportes/formula-1-la-reaccion-pierre-gasly-el-choque-franco-colapinto-el-gp-azerbaiyan-n6326967",
+          "fecha": "2026-09-26T13:05:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Motorsport",
+          "enlace": "https://es.motorsport.com/f1/news/franco-colapinto-sancion-accidente-baku/10859242/?utm_source=RSS&utm_medium=referral&utm_campaign=RSS-F1&utm_term=News&utm_content=es",
+          "fecha": "2026-09-26T13:04:10.000Z",
+          "oficial": false,
+          "aporte": null
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "f0797k",
+          "titulo": "Franco Colapinto choca con Pierre Gasly en el Gran Premio de Azerbaiyán",
+          "fecha": "2026-09-26T12:49:58.000Z",
+          "ruta": "/nota/franco-colapinto-choca-con-pierre-gasly-en-el-gran-premio-de-f0797k"
+        },
+        {
+          "id": "iyfntb",
+          "titulo": "La reacción de Sofía Solá, la hija de Maru Botana, al ser relacionada sentimentalmente con Franco Colapinto",
+          "fecha": "2026-09-24T21:03:28.000Z",
+          "ruta": "/nota/la-reaccion-de-sofia-sola-la-hija-de-maru-botana-al-ser-relacionada-iyfntb"
+        },
+        {
+          "id": "he08gv",
+          "titulo": "Franco Colapinto larga noveno en el Gran Premio de Azerbaiyán",
+          "fecha": "2026-09-26T09:30:00.000Z",
+          "ruta": "/nota/franco-colapinto-larga-noveno-en-el-gran-premio-de-azerbaiyan-he08gv"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron tres medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "franco-colapinto-choca-con-pierre-gasly-en-el-gran-premio-de",
       "foto": {
-        "archivo": "fotos-notas/5exxou.jpg",
-        "credito": "Foto: Ayacucho al Día"
+        "archivo": "fotos-notas/mk94me.jpg",
+        "credito": "Foto: Motorsport"
       }
     },
     {
@@ -3603,210 +3665,125 @@
       "slug": "el-autodromo-fangio-completa-su-estacionamiento-de-autos"
     },
     {
-      "id": "2ruiao",
-      "titulo": "La Federacion Argentina de Municipios rechaza el fin de las zonas frias",
-      "copete": "La Federacion Argentina de Municipios critico la modificacion del regimen de tarifa diferencial de gas aprobada por el Senado nacional, una medida que afecta a distintas provincias y genera impacto en los usuarios.",
-      "cuerpo": "El nucleo de intendentes sostuvo mediante un comunicado que la alteracion del esquema representa un golpe directo al bolsillo de las familias y un enorme dano para las regiones alcanzadas, entre las que se encuentran diversos partidos de la provincia de Buenos Aires y otras jurisdicciones del territorio nacional.\n\nLa medida legislativa habia generado previamente debate parlamentario hasta su sancion en la camara alta, lo que provoco la reaccion institucional de la federacion en defensa de los usuarios de las zonas afectadas por el clima.",
-      "guion": "La Federacion Argentina de Municipios rechaza el fin de las zonas frias",
-      "seccion": "Economía",
+      "id": "1h399fo",
+      "titulo": "Los docentes universitarios paran 72 horas desde el miércoles 30",
+      "copete": "La CONADU confirmó un paro del miércoles 30 de septiembre al viernes 2 de octubre para reclamar la aplicación de la Ley de Financiamiento Universitario y una recomposición salarial. Es la antesala de la quinta Marcha Federal Universitaria, prevista para el 15 de octubre.",
+      "cuerpo": "La medida se aprobó por mayoría en el plenario de secretarias y secretarios generales de la federación, que primero había hablado de una huelga de 48 a 72 horas y luego confirmó tres jornadas. Buscará hacerla junto con la CONADU Histórica. El paro se levantaría si el Gobierno otorga antes del martes 29 el aumento del 33,4% que prevé la ley; la última oferta oficial en la paritaria fue del 3%, y los gremios la rechazaron.\n\nEn paralelo, el juez federal Martín Cormick intimó esta semana al Gobierno a cumplir por completo la medida cautelar que ordena aplicar los artículos 5 y 6 de la Ley 27.795, y le dio cinco días. La Casa Rosada anunció que apelará y sostiene que ya cumplió.\n\nLa ley fue sancionada en 2025, vetada por el presidente Javier Milei y ratificada después por el Congreso con dos tercios en ambas cámaras. El Gobierno la promulgó, pero suspendió su aplicación.",
+      "guion": "Docentes universitarios convocan a un paro de hasta tres días",
+      "seccion": "Argentina",
       "medios": [
-        "LU9 Mar del Plata",
-        "Ecos Diarios (Necochea)",
+        "La Noticia 1",
         "Infobae",
         "TN (Todo Noticias)",
-        "El Destape",
-        "A24",
         "Ámbito",
-        "Diario Popular",
-        "Noticias Argentinas (NA)",
-        "Zona Norte Diario",
-        "ANDigital",
-        "El Marplatense",
-        "Mi8 (Canal 8 Mar del Plata)",
-        "Infobrisas (Radio Brisas)",
-        "Punto Noticias",
-        "El Eco de Tandil",
-        "El Día"
+        "Minuto Uno",
+        "Canal 26",
+        "Infobrisas (Radio Brisas)"
       ],
-      "enlace": "https://noticiasargentinas.com/politica/fam-repudio-la-derogacion-del-regimen-de-zonas-frias---un-golpe-directo-al-bolsillo-_a6ab7c7879a676c64cfc57f58",
+      "enlace": "https://tn.com.ar/politica/2026/09/26/los-docentes-universitarios-anunciaron-un-paro-de-72-horas-en-la-previa-de-una-nueva-marcha-federal/",
       "teniaImagenLaFuente": true,
-      "fecha": "2026-09-26T13:39:29.218Z",
+      "fecha": "2026-09-26T13:49:54.000Z",
       "sinFecha": false,
-      "visto": "2026-09-28T02:01:00.043Z",
+      "visto": "2026-09-28T12:31:00.587Z",
       "relevancia": 58,
       "local": false,
       "publicadaPor": "ia",
-      "publicadaCuando": "2026-09-28T04:11:48.598Z",
+      "publicadaCuando": "2026-09-28T03:42:54.417Z",
       "temas": [],
       "como": "automatica",
       "claves": [
-        "La Federacion Argentina de Municipios rechazo los cambios en el regimen de Zona Fria.",
-        "La entidad advirtio que la medida aprobada en el Senado afectara a millones de usuarios de gas.",
-        "El nucleo de intendentes calificado como un golpe al bolsillo la quita de tarifas diferenciales."
+        "El paro universitario comenzará el miércoles 30 de septiembre.",
+        "La medida se extenderá por hasta tres días según los gremios.",
+        "Los sindicatos reclaman la aplicación de la Ley de Financiamiento.",
+        "El Gobierno ofreció un incremento salarial del tres por ciento."
       ],
-      "noConfirmado": [
-        "No se detallaron aun los alcances especificos distrito por distrito del nuevo cuadro tarifario.",
-        "No trascendio el impacto economico exacto que tendra la medida en cada factura individual."
+      "seSabe": [
+        "Los docentes universitarios realizarán un paro a partir del miércoles 30 de septiembre.",
+        "La medida de fuerza tendrá una duración de entre 48 y 72 horas.",
+        "Los gremios exigen la aplicación de la Ley de Financiamiento Universitario y una recomposición salarial.",
+        "El Gobierno ofreció una suba del 3% en la última paritaria y anunció que apelará la intimación judicial."
       ],
       "etiquetas": [
-        "Zonas Frias",
-        "tarifas",
-        "gas",
-        "Senado",
-        "Federacion Argentina de Municipios",
-        "gobierno nacional"
+        "docentes universitarios",
+        "paro",
+        "universidades nacionales",
+        "salarios",
+        "ley de financiamiento"
       ],
       "fuentesConsultadas": [
         {
-          "medio": "Noticias Argentinas (NA)",
-          "enlace": "https://noticiasargentinas.com/politica/fam-repudio-la-derogacion-del-regimen-de-zonas-frias---un-golpe-directo-al-bolsillo-_a6ab7c7879a676c64cfc57f58",
-          "fecha": "2026-09-26T13:39:29.218Z",
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/politica/2026/09/26/los-docentes-universitarios-anunciaron-un-paro-de-72-horas-en-la-previa-de-una-nueva-marcha-federal/",
+          "fecha": "2026-09-26T13:49:54.000Z",
           "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "El Eco de Tandil",
-          "enlace": "https://www.eleco.com.ar/politica/la-federacion-argentina-de-municipios-definio-como-un-ataque-los-cambios-en-el-regimen-de-zona-fria",
-          "fecha": "2026-09-27T15:18:26.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "LU9 Mar del Plata",
-          "enlace": "https://www.lu9mardelplata.com.ar/zona-fria-la-fam-repudio-la-reforma-y-advirtio-que-es-un-golpe-directo-al-bolsillo-de-las-familias",
-          "fecha": "2026-09-27T21:23:51.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "QZ Noticias (Mar del Plata)",
-          "enlace": "https://www.qznoticias.com/el-pais/zona-fria-intendentes-rechazaron-la-reforma-y-alertaron-por-el-impacto-en-mar-del-plata",
-          "fecha": "2026-09-27T13:22:31.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Ecos Diarios (Necochea)",
-          "enlace": "https://elecos.com.ar/zona-fria-la-fam-repudio-la-reforma-y-advirtio-que-es-un-golpe-directo-al-bolsillo-de-las-familias",
-          "fecha": "2026-09-27T21:14:16.000Z",
-          "oficial": false,
-          "aporte": null
+          "aporte": "Detalló que el paro será el 30 de septiembre y podrá extenderse hasta 72 horas."
         },
         {
           "medio": "La Noticia 1",
-          "enlace": "https://www.lanoticia1.com/noticia/zona-fria-la-fam-rechazo-la-reforma-y-advirtio-por-el-impacto-en-las-familias-bonaerenses",
-          "fecha": "2026-09-26T23:10:24.000Z",
+          "enlace": "https://www.lanoticia1.com/noticia/paro-universitario-conadu-confirmo-la-medida-de-fuerza-por-72-horas-desde-el-miercoles",
+          "fecha": "2026-09-27T21:21:24.000Z",
           "oficial": false,
-          "aporte": null
+          "aporte": "Indicó que la huelga se extenderá del 30 de septiembre al 2 de octubre."
         },
         {
-          "medio": "TN (Todo Noticias)",
-          "enlace": "https://tn.com.ar/politica/2026/09/26/la-federacion-argentina-de-municipios-critico-el-fin-del-regimen-de-zona-fria-es-un-golpe-directo-al-bolsillo/",
-          "fecha": "2026-09-26T19:15:12.000Z",
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/politica/2026/09/26/los-docentes-universitarios-convocaron-a-un-paro-para-la-proxima-semana-podria-durar-entre-48-y-72-horas/",
+          "fecha": "2026-09-26T16:39:27.000Z",
           "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "El Destape",
-          "enlace": "https://www.eldestapeweb.com/politica/500-intendentes-repudiaron-derogacion-zonas-frias-golpe-bolsillo-202692614754",
-          "fecha": "2026-09-26T17:07:54.000Z",
-          "oficial": false,
-          "aporte": null
+          "aporte": "Informó que la medida exige la aplicación de la Ley de Financiamiento al gobierno de Javier Milei."
         },
         {
           "medio": "Ámbito",
-          "enlace": "https://www.ambito.com/politica/mas-500-intendentes-cuestionaron-la-reforma-del-regimen-zona-fria-n6326980",
-          "fecha": "2026-09-26T14:26:00.000Z",
+          "enlace": "https://www.ambito.com/politica/docentes-universitarios-convocaron-un-paro-72-horas-y-condicionaron-la-medida-una-suba-salarial-n6327027",
+          "fecha": "2026-09-26T18:28:00.000Z",
           "oficial": false,
-          "aporte": null
+          "aporte": "Señaló que la huelga se levantará si el Gobierno otorga el aumento previsto."
         },
         {
-          "medio": "Diario Popular",
-          "enlace": "https://www.diariopopular.com.ar/politica/la-federacion-argentina-municipios-critico-el-fin-del-regimen-zona-fria-n921818",
-          "fecha": "2026-09-27T18:54:00.000Z",
+          "medio": "Minuto Uno",
+          "enlace": "https://www.minutouno.com/politica/se-viene-otro-paro-docentes-universitarios-la-previa-la-marcha-federal-n6327040",
+          "fecha": "2026-09-26T22:36:00.000Z",
           "oficial": false,
-          "aporte": null
+          "aporte": "Agregó que el reclamo incluye a trabajadores no docentes."
         },
         {
-          "medio": "Diario Popular",
-          "enlace": "https://www.diariopopular.com.ar/politica/zonas-frias-los-municipios-rechazaron-los-cambios-el-regimen-n921684",
-          "fecha": "2026-09-26T18:12:00.000Z",
+          "medio": "Canal 26",
+          "enlace": "https://www.canal26.com/politica/2026/09/26/docentes-anunciaron-un-nuevo-paro-universitario-y-exigen-la-recomposicion-de-sus-salarios-y-la-aplicacion-de-la-ley-de-financiamiento-cuando-sera/",
+          "fecha": "2026-09-26T19:07:26.000Z",
           "oficial": false,
-          "aporte": null
+          "aporte": "Mencionó la participación de la CONADU en la convocatoria."
         },
         {
-          "medio": "La Verdad",
-          "enlace": "https://laverdadonline.com/fam-repudio-la-derogacion-del-regimen-de-zonas-frias-un-golpe-directo-al-bolsillo/",
-          "fecha": "2026-09-26T15:43:59.000Z",
+          "medio": "El Cronista",
+          "enlace": "https://www.cronista.com/informacion-gral/paro-universitario-conadu-convoco-a-una-huelga-desde-el-30-de-septiembre-y-define-si-sera-de-48-o-72-horas/",
+          "fecha": "2026-09-26T17:31:23.000Z",
           "oficial": false,
-          "aporte": null
+          "aporte": "Indicó que la medida fue aprobada en un plenario de secretarios."
         },
         {
-          "medio": "Zona Norte Diario",
-          "enlace": "https://www.zonanortediario.com.ar/27/09/2026/la-fam-rechazo-los-cambios-en-zona-fria-y-apunto-contra-milei-es-un-golpe-directo-al-bolsillo-de-las-familias/",
-          "fecha": "2026-09-27T17:39:28.000Z",
+          "medio": "C5N",
+          "enlace": "https://www.c5n.com/sociedad/de-cara-la-marcha-universitaria-docentes-paran-72-horas-el-proximo-30-septiembre-n250004",
+          "fecha": "2026-09-26T19:34:00.000Z",
           "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "El Marplatense",
-          "enlace": "https://www.elmarplatense.com/la-federacion-argentina-de-municipios-repudio-la-derogacion-del-regimen-de-zonas-frias",
-          "fecha": "2026-09-26T14:58:53.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Mi8 (Canal 8 Mar del Plata)",
-          "enlace": "https://mi8.com.ar/municipios-de-todo-el-pais-manifiestan-que-los-cambios-en-la-zona-fria-son-un-ataque-de-milei/",
-          "fecha": "2026-09-27T21:52:03.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Punto Noticias",
-          "enlace": "https://puntonoticias.com/la-fam-cuestiono-la-eliminacion-de-la-zona-fria-es-otro-ataque-a-las-familias-argentinas/",
-          "fecha": "2026-09-26T14:16:29.000Z",
-          "oficial": false,
-          "aporte": null
+          "aporte": "Sostuvo que la marcha atrás dependerá del cumplimiento de la ley."
         },
         {
           "medio": "Crónica",
-          "enlace": "https://www.cronica.com.ar/politica/intendentes-de-la-fam-repudiaron-la-modificacion-del-regimen-de-zona-fria-sancionada-en-el-senado/",
-          "fecha": "2026-09-26T16:24:00.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Radio Mitre",
-          "enlace": "https://radiomitre.cienradios.com/sociedad/la-federacion-argentina-de-municipios-apunto-contra-el-fin-del-regimen-de-zona-fria-un-golpe-directo-al-bolsillo/",
-          "fecha": "2026-09-26T21:13:10.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "El Día",
-          "enlace": "https://www.eldia.com/politica-y-economia/mas-criticas-por-cambios-al-regimen-de-zona-fria-politica-y-economia_1790488348",
-          "fecha": "2026-09-27T05:52:28.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Infobrisas (Radio Brisas)",
-          "enlace": "https://www.infobrisas.com/noticias/2026/09/27/109342-la-federacion-argentina-de-municipios-repudio-el-nuevo-regimen-de-zona-fria-un-golpe-directo-al-bolsillo-de-las-familias",
-          "fecha": "2026-09-27T13:21:26.000Z",
+          "enlace": "https://www.cronica.com.ar/politica/paro-universitario-gremios-convocaron-a-una-medida-de-fuerza-para-la-proxima-semana/",
+          "fecha": "2026-09-26T18:59:00.000Z",
           "oficial": false,
           "aporte": null
         }
       ],
       "verificacion": {
         "nivel": "ALTA",
-        "porque": "Lo contaron 19 medios independientes.",
+        "porque": "Lo contaron 9 medios independientes.",
         "sugeridoPorIA": "ALTA"
       },
-      "slug": "la-federacion-argentina-de-municipios-rechaza-los-cambios-en-zona-fria",
+      "slug": "docentes-universitarios-convocan-a-un-paro-de-hasta-tres-dias",
       "foto": {
-        "archivo": "fotos-notas/2ruiao.jpg",
-        "credito": "Foto: LU9 Mar del Plata"
+        "archivo": "fotos-notas/1h399fo.jpg",
+        "credito": "Foto: La Noticia 1"
       }
     },
     {
@@ -3924,34 +3901,10 @@
       "medios": [
         "Motorsport",
         "La Nación",
-        "Ámbito",
-        "Minuto Uno",
-        "Infobae",
         "TN (Todo Noticias)",
         "El Destape",
-        "Perfil",
-        "Página/12",
-        "A24",
-        "TyC Sports",
-        "C5N",
-        "Crónica",
         "Radio Mitre",
-        "Canal 26",
-        "Diario Popular",
-        "Noticias Argentinas (NA)",
-        "El Día",
-        "La Nueva",
-        "0221",
-        "InfoRegión",
-        "QZ Noticias (Mar del Plata)",
-        "El Marplatense",
-        "Mi8 (Canal 8 Mar del Plata)",
-        "El Eco de Tandil",
-        "NDEN – Noticias de Necochea",
-        "Doble Amarilla",
-        "Bolavip Argentina",
-        "Clarín",
-        "0223 (Mar del Plata)"
+        "Bolavip Argentina"
       ],
       "enlace": "https://es.motorsport.com/f1/news/clasificacion-mundial-pilotos-equipos-formula1-2026-azerbaiyan-baku/10859208/?utm_source=RSS&utm_medium=referral&utm_campaign=RSS-F1&utm_term=News&utm_content=es",
       "teniaImagenLaFuente": true,
@@ -4576,11 +4529,12 @@
         "Municipalidad de Balcarce",
         "El Diario Balcarce",
         "Diario La Vanguardia",
-        "Sendero Regional",
         "0223 (Mar del Plata)",
         "El Destape",
+        "El Día",
         "ANDigital",
         "Infobrisas (Radio Brisas)",
+        "Sendero Regional",
         "NDEN – Noticias de Necochea",
         "Radio Gabal (FM 104.1)",
         "QZ Noticias (Mar del Plata)",
@@ -4881,10 +4835,7 @@
       "guion": "Comienza el operativo de seguridad en playas en Mar del Plata",
       "seccion": "Cultura y agenda",
       "medios": [
-        "Infórmese Primero (FM 104.9)",
         "El Eco de Tandil",
-        "LU9 Mar del Plata",
-        "Agencia DIB",
         "Noticias Argentinas (NA)",
         "El Marplatense",
         "Infobrisas (Radio Brisas)",
@@ -4969,8 +4920,6 @@
       "medios": [
         "Infórmese Primero (FM 104.9)",
         "El Destape",
-        "Minuto Uno",
-        "Diario Popular",
         "InfoRegión",
         "El Marplatense",
         "Punto Noticias"
@@ -5560,7 +5509,24 @@
       "seccion": "Política",
       "medios": [
         "Infórmese Primero (FM 104.9)",
-        "Diario La Vanguardia"
+        "Diario La Vanguardia",
+        "LU9 Mar del Plata",
+        "Ecos Diarios (Necochea)",
+        "Infobae",
+        "TN (Todo Noticias)",
+        "El Destape",
+        "A24",
+        "Ámbito",
+        "Diario Popular",
+        "Noticias Argentinas (NA)",
+        "Zona Norte Diario",
+        "ANDigital",
+        "El Marplatense",
+        "Mi8 (Canal 8 Mar del Plata)",
+        "Infobrisas (Radio Brisas)",
+        "Punto Noticias",
+        "El Eco de Tandil",
+        "El Día"
       ],
       "enlace": "http://www.informeseprimero.com.ar/2026/09/la-campora-balcarce-cuestiono-la.html",
       "teniaImagenLaFuente": true,
@@ -5842,81 +5808,6 @@
       }
     },
     {
-      "id": "7ohqni",
-      "titulo": "La jubilación mínima sube 1,66% en octubre y llega a $435.748,51",
-      "copete": "ANSES oficializó el aumento por la movilidad mensual, calculado sobre la inflación de agosto. Los pagos empiezan el 1 de octubre con las Pensiones No Contributivas y el 8 para quienes cobran la mínima.",
-      "cuerpo": "El ajuste quedó formalizado por la Resolución 284/2026, publicada en el Boletín Oficial. Con él, el haber máximo pasa a $2.932.174,85 y la Prestación Básica Universal a $199.335,05, mientras que la Asignación Universal por Hijo general queda en $156.588 por hijo.\n\nEl calendario para quienes cobran la mínima va del jueves 8 al jueves 22 de octubre según la terminación del DNI: el 0 cobra el 8, el 1 el 9, el 2 el 13, el 3 el 14, el 4 el 15, el 5 el 16, el 6 el 19, el 7 el 20, el 8 el 21 y el 9 el 22. Los haberes superiores se pagan del 23 al 29 de octubre.\n\nSobre el bono de 70.000 pesos, las fuentes no coinciden: una lo suma al haber mínimo, con lo que el total bruto llegaría a $505.748,51, y otra indica que el de octubre todavía no fue oficializado. Las liquidaciones se pueden consultar en Mi ANSES.",
-      "guion": null,
-      "seccion": "Economía",
-      "medios": [
-        "La Nación",
-        "El Destape",
-        "A24",
-        "C5N",
-        "Zona Norte Diario"
-      ],
-      "enlace": "https://www.a24.com/previsional/anses-confirmo-el-aumento-y-el-calendario-octubre-cuando-cobran-los-jubilados-n1600337",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-25T15:05:00.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-28T05:11:21.714Z",
-      "relevancia": 58,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "fuentesConsultadas": [
-        {
-          "medio": "A24",
-          "enlace": "https://www.a24.com/previsional/anses-confirmo-el-aumento-y-el-calendario-octubre-cuando-cobran-los-jubilados-n1600337",
-          "fecha": "2026-09-25T15:05:00.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "La Nación",
-          "enlace": "https://www.lanacion.com.ar/economia/cuanto-cobran-de-minima-los-jubilados-de-la-anses-en-octubre-2026-con-el-aumento-oficial-nid23092026/",
-          "fecha": "2026-09-27T17:02:29.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "El Destape",
-          "enlace": "https://www.eldestapeweb.com/economia/cuanto-actualizacion-jubilados-pensionado-anses-octubre-2026-2026925182441",
-          "fecha": "2026-09-25T21:24:00.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "El Destape",
-          "enlace": "https://www.eldestapeweb.com/economia/jubilados-cuanto-cobran-haberes-minimo-maximo-anses-octubre-2026-2026925182151",
-          "fecha": "2026-09-25T21:21:51.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "C5N",
-          "enlace": "https://www.c5n.com/economia/en-que-fecha-cobraran-los-jubilados-y-pensionados-anses-octubre-2026-n249959",
-          "fecha": "2026-09-27T11:28:00.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Zona Norte Diario",
-          "enlace": "https://www.zonanortediario.com.ar/27/09/2026/anses-cuanto-cobraran-los-jubilados-en-octubre-y-el-calendario-completo-segun-el-dni/",
-          "fecha": "2026-09-27T13:07:38.000Z",
-          "oficial": false,
-          "aporte": null
-        }
-      ],
-      "slug": "anses-confirmo-el-aumento-y-el-calendario-de-octubre-cuando-cobran",
-      "foto": {
-        "archivo": "fotos-notas/7ohqni.jpg",
-        "credito": "Foto: Crónica"
-      }
-    },
-    {
       "id": "56y0ry",
       "titulo": "La Escuela Municipal de Deporte Adaptado compite en Mar del Plata",
       "copete": "Equipos balcarceños lograron podios en un certamen de fútbol en Mar del Plata. Además, nadadores locales participaron días atrás en Necochea.",
@@ -6167,9 +6058,9 @@
     "Deportes",
     "Economía",
     "Política",
+    "Fútbol",
     "Balcarce",
     "Agro",
-    "Fútbol",
     "Argentina",
     "Policiales",
     "Cultura y agenda"
@@ -6178,7 +6069,7 @@
     {
       "nombre": "Fangio",
       "ranura": "fangio",
-      "cuantas": 15
+      "cuantas": 14
     },
     {
       "nombre": "El autódromo",
@@ -6200,8 +6091,8 @@
     "ahora": {
       "temp": 12,
       "sensacion": 10,
-      "humedad": 97,
-      "viento": 15,
+      "humedad": 99,
+      "viento": 17,
       "rumbo": "NE",
       "cielo": "Nublado",
       "esDeDia": true
@@ -6212,7 +6103,7 @@
         "dia": "lun",
         "max": 17,
         "min": 11,
-        "lluvia": 47,
+        "lluvia": 93,
         "codigo": 81,
         "viento": 19,
         "milimetros": 9,
@@ -6223,9 +6114,9 @@
         "dia": "mar",
         "max": 15,
         "min": 9,
-        "lluvia": 69,
+        "lluvia": 86,
         "codigo": 80,
-        "viento": 27,
+        "viento": 28,
         "milimetros": 9,
         "cielo": "Chaparrones"
       },
@@ -6236,7 +6127,7 @@
         "min": 8,
         "lluvia": 2,
         "codigo": 3,
-        "viento": 26,
+        "viento": 28,
         "milimetros": 0,
         "cielo": "Nublado"
       },
@@ -6245,9 +6136,9 @@
         "dia": "jue",
         "max": 13,
         "min": 6,
-        "lluvia": 26,
+        "lluvia": 16,
         "codigo": 51,
-        "viento": 28,
+        "viento": 26,
         "milimetros": 1,
         "cielo": "Llovizna leve"
       }
@@ -6590,22 +6481,22 @@
       "motivo": "necesita ojo humano: \"denuncia\""
     },
     {
+      "id": "3h6frb",
+      "titulo": null,
+      "seccion": "Argentina",
+      "motivo": "necesita ojo humano: \"menores de edad\", en lo que contaron otros medios (visto al reescribir)"
+    },
+    {
+      "id": "132bq5o",
+      "titulo": "Quiniela de Santiago del Estero: resultados en VIVO de…",
+      "seccion": "Argentina",
+      "motivo": "parece promoción, no noticia: \"sorteo\""
+    },
+    {
       "id": "gs5cei",
       "titulo": "Acusan a un influencer de matar a cientos de aves…",
       "seccion": "Argentina",
       "motivo": "necesita ojo humano: \"denuncia\""
-    },
-    {
-      "id": "1c0r59y",
-      "titulo": "Condenaron a los asesinos del ex Puma Federico Martín…",
-      "seccion": "Argentina",
-      "motivo": "necesita ojo humano: \"asesinato\""
-    },
-    {
-      "id": "1cmtnhl",
-      "titulo": null,
-      "seccion": "Economía",
-      "motivo": "necesita ojo humano: \"niño\""
     },
     {
       "id": "thfxj",
@@ -6614,16 +6505,22 @@
       "motivo": "necesita ojo humano: \"denuncia\""
     },
     {
+      "id": "1cmtnhl",
+      "titulo": null,
+      "seccion": "Economía",
+      "motivo": "necesita ojo humano: \"niño\""
+    },
+    {
       "id": "3tprm7",
       "titulo": "\"Un escándalo político que reverbera desde Argentina hasta…",
       "seccion": "Argentina",
       "motivo": "necesita ojo humano: \"detenido\""
     },
     {
-      "id": "flyfw1",
-      "titulo": null,
-      "seccion": "Agro",
-      "motivo": "necesita ojo humano: \"niño\""
+      "id": "13kniom",
+      "titulo": "Incidentes en la previa de Boca - Racing por Copa…",
+      "seccion": "Fútbol",
+      "motivo": "necesita ojo humano: \"denuncia\""
     },
     {
       "id": "16mksfo",
@@ -6638,5 +6535,5 @@
       "motivo": "necesita ojo humano: \"investigación\""
     }
   ],
-  "esperandoCuerpo": 6
+  "esperandoCuerpo": 10
 }
