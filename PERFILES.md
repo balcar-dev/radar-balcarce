@@ -1,9 +1,11 @@
 # Perfiles de Instagram y Facebook
 
 *Actualizado el 28/09/2026: bios nuevas, con el nombre del medio adelante,
-para que peguen con el rediseño (dirección B).* Los textos **todavía no
-están aplicados**: hay que cambiarlos a mano en cada red (`PENDIENTES.md`,
-sección B). Nada de acá inventa datos: sólo dice lo que el medio hace hoy.
+para que peguen con el rediseño (dirección B).* **Aplicados en parte el
+28/09**: lo que falta cargar a mano está en `PENDIENTES.md` ("Para Hernán y
+Andrés", Biografías) y los pasos en cada app, en `PARA-CARGAR-A-MANO.md`.
+**Este documento es el único lugar del texto de los perfiles**: se copia de
+acá. Nada de acá inventa datos: sólo dice lo que el medio hace hoy.
 
 ## Qué tiene que decir un perfil
 
@@ -92,25 +94,29 @@ compu: la marca tiene que verse entera.
 
 **Colores** (los de la web, `web/app/globals.css`):
 
-- **Rojo de la marca** `#C7381C` (y `#9C2B15` como oscuro): para la foto de
-  perfil y detalles. Nunca en avisos publicitarios (`PUBLICIDAD.md`).
+- **Rojo de la marca** `#C7381C` (y `#9C2B15` como oscuro): detalles (en la
+  foto de perfil, "BALCARCE" y los anillos). Nunca en avisos publicitarios
+  (`PUBLICIDAD.md`).
+- **La foto de perfil y la portada de Facebook son azules** (`reels/avatar.mjs`,
+  `reels/portada.mjs`): el detalle de colores, en `MEDIA-KIT.md`, "Los
+  colores".
 - **Tinta** `#14161A` y **crema** `#F4F1EA`: fondos y textos.
 - Los **podcasts** cambian de color cada día de la semana (`colorDelDia` en
   `redes/piezas.mjs`): domingo magenta, lunes rojo de la marca, martes verde,
   miércoles azul, jueves ámbar, viernes violeta, sábado verde azulado. El
-  perfil se mantiene en el rojo de la marca: así la grilla muestra un perfil
+  perfil no cambia (siempre el avatar azul): así la grilla muestra un perfil
   firme y piezas que cambian.
 - **Tipografía** (desde el 27/09): **Source Serif 4** en los títulos e **Inter**
   en todo lo demás, igual que la web. Las placas, el avatar y la portada usan
   los archivos de `reels/marca/fuentes/` (Source Serif 4 en su corte de 60
   puntos). Hasta el 27/09 eran Fraunces e IBM Plex Sans.
 - **Cada sección, su color**, el mismo de la web (`--s-*` en
-  `web/app/globals.css`; la tabla está en `web/README.md`).
+  `web/app/globals.css`; la tabla está en `MEDIA-KIT.md`, "Los colores").
 
 ## Cuándo actualizar
 
-- **Al aplicarlas por primera vez** (pendiente): Facebook se puede desde Meta
-  Business Suite; Instagram, sólo desde el celular.
+- **Al terminar de aplicarlas** (lo que falta, en `PENDIENTES.md`): Facebook
+  se puede desde Meta Business Suite; Instagram, sólo desde el celular.
 - **Si cambia lo que el medio hace**: por ejemplo, si se suma otra cosa fija
   (alertas de clima, la guía comercial) o si deja de haber podcasts.
 - **Si cambia la política de IA** o cómo se firma cada nota.

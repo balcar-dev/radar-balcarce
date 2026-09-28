@@ -20,9 +20,16 @@ tener dos copias que se desacuerden); acá se lo nombra y se dice dónde está.
 
 ## Los colores
 
-**El de la marca:** rojo `#C7381C` (oscuro `#9C2B15`). Es el de la foto de
-perfil y el acento general. **Nunca** en un aviso publicitario
-(`PUBLICIDAD.md`, para que no se confunda con contenido propio).
+**El de la marca:** rojo `#C7381C` (oscuro `#9C2B15`). Es el acento general.
+**Nunca** en un aviso publicitario (`PUBLICIDAD.md`, para que no se confunda
+con contenido propio).
+
+**La foto de perfil y la portada de Facebook** (`reels/avatar.mjs`,
+`reels/portada.mjs`) son **azules**: fondo azul petróleo `#1D4F63` que se
+funde en la tinta `#14161A`, "RADAR" en crema `#F4F1EA`, "BALCARCE" y los
+anillos del radar en el rojo de la marca, y el punto del centro ámbar
+`#E8A33C`. El 28/09 se probaron en rojo y Hernán prefirió las azules ("se ve
+mejor el contraste entre Radar y Balcarce").
 
 **Fondo y texto de la web:** tinta `#14161A`, crema/papel `#F4F1EA`. Viven
 como variables CSS en `web/app/globals.css` (`--tinta`, `--papel`, `--crema`,
@@ -58,8 +65,8 @@ versión clara, para el fondo oscuro de entonces):
 **Los podcasts cambian de color según el día de la semana** (no según la
 sección): `colorDelDia` en `redes/piezas.mjs` — domingo magenta, lunes rojo
 de la marca, martes verde, miércoles azul, jueves ámbar, viernes violeta,
-sábado verde azulado. El perfil de Instagram y Facebook se mantiene siempre
-en el rojo de la marca.
+sábado verde azulado. El perfil de Instagram y Facebook no cambia: es siempre
+el azul de arriba.
 
 ## La tipografía
 
@@ -113,24 +120,19 @@ Dónde están los archivos de letra:
 
 ## Los íconos
 
-| Qué | Archivo | Medida |
+Las medidas de cada uno están en [`FORMATOS.md`](FORMATOS.md).
+
+| Qué | Archivo | Cómo se hace |
 |---|---|---|
-| El sitio (pestaña del navegador) | `web/app/favicon.ico`, `web/app/icon.png` | 16/32/48 (.ico), 192 y 512 (PNG) |
-| Apple (agregar a la pantalla de inicio) | `web/public/apple-touch-icon.png` | 180 × 180 |
-| Perfil de Instagram | se sube a mano, `node reels/avatar.mjs` lo genera | 1080 × 1080 (se ve redonda; sin confirmar en fuente oficial, `FORMATOS.md`) |
-| Perfil de Facebook | mismo archivo que Instagram | 720 × 720 (sin confirmar) |
+| El sitio (pestaña del navegador) | `web/public/favicon.ico`, `web/public/icon-192.png`, `web/public/icon-512.png` | `web/scripts/hacer-iconos.mjs` (el radar en el rojo de la marca) |
+| Apple (agregar a la pantalla de inicio) | `web/public/apple-touch-icon.png` | El mismo script |
+| Perfil de Instagram y de Facebook (el mismo archivo) | `reels/salida/avatar.png` | `node reels/avatar.mjs`; lo sube una persona (`PARA-CARGAR-A-MANO.md`) |
 
 ## Las medidas de imagen y video por red
 
-Tabla completa, con el porqué de cada una y cómo se audita:
-[`FORMATOS.md`](FORMATOS.md). Resumen:
-
-| Dónde | Medida | Con qué se arma |
-|---|---|---|
-| Instagram · espejo de cada posteo de Facebook | 1080 × 1350 (4:5) | tarjeta de la nota, con su foto si tiene (`web/lib/tarjeta.js`) |
-| Instagram/Facebook · historia y reel | 1080 × 1920 (9:16) | placas (`reels/placa.mjs`) |
-| Facebook · posteo con enlace / la web al compartir | 1200 × 630 (1,91:1) | `opengraph-image` de la nota, sin foto (`web/lib/tarjeta.js`) |
-| Facebook · portada de la página | 1640 × 924 (16:9) | `node reels/portada.mjs` |
+Viven en un solo lugar: [`FORMATOS.md`](FORMATOS.md) (la tabla, el porqué de
+cada una, las zonas seguras y cómo se audita), con los números en
+`redes/formatos.mjs`.
 
 ## Cómo suenan y qué dicen las piezas
 
@@ -151,29 +153,31 @@ sección como acento. Dos cosas del lienzo **no** se tomaron: sus letras
 (Fraunces e IBM Plex: van las del proyecto) y sus colores de sección (van los
 de la web).
 
-| Pieza | Plantilla del lienzo | Medida | Dónde se arma |
-|---|---|---|---|
-| Los tres podcasts (reel + historia) | Repaso · tapa: el nombre del podcast y la duración en el color del día, un título ("Tres noticias para empezar el día", "Tres cosas que pasaron hoy", "Lo que dejó el día") y la lista numerada de las notas, cada número en el color de su sección | 1080 × 1920 | `placaRepaso` (`reels/placa.mjs`), desde `reels/plan.mjs` |
-| El clima de la mañana | Historia diaria: "Hoy en Balcarce", la fecha, la tarjeta oscura del clima (temperatura, cielo, sensación y viento, hoy y los dos días que siguen); sin dólar: si se mueve, sale como nota propia | 1080 × 1920 | `placaClima` |
-| El clima de la noche | Historia diaria: "Cómo sigue el día", la tarjeta del clima (ahora, esta noche, mañana y pasado) y un recuadro con el pronóstico de mañana | 1080 × 1920 | `placaClima` |
-| El aviso de clima | Historia diaria con un recuadro de borde rojo ("Qué hay que saber") | 1080 × 1920 | `placaClima` |
-| La farmacia de turno | Historia diaria: la fecha y la tarjeta blanca con borde verde (nombre, dirección, teléfono) y hasta cuándo dura el turno | 1080 × 1920 | `placaFarmacia` |
-| Teléfonos útiles y agenda (extras) | La misma cabecera de la historia diaria y una lista con rayas finas | 1080 × 1920 | `placaUtiles`, `placaAgenda` |
-| Espejo en Instagram de cada posteo de Facebook | Placa de noticia con foto (la foto del banco propio, la franja del color de la sección, título, bajada y el pie con la fecha); sin foto, Placa sin foto (el bloque de color con los anillos del radar y el nombre de la sección) | 1080 × 1350 | `web/lib/tarjeta.js` (`/nota/ID/instagram.png`) |
-| Facebook con enlace, WhatsApp, la web al compartir | Una banda con el color de la sección y los anillos, el título y el pie; sin foto | 1200 × 630 | `web/lib/tarjeta.js` (`opengraph-image`) |
+| Pieza | Plantilla del lienzo | Dónde se arma |
+|---|---|---|
+| Los tres podcasts (reel + historia) | Repaso · tapa: el nombre del podcast y la duración en el color del día, un título ("Tres noticias para empezar el día", "Tres cosas que pasaron hoy", "Lo que dejó el día") y la lista numerada de las notas, cada número en el color de su sección | `placaRepaso` (`reels/placa.mjs`), desde `reels/plan.mjs` |
+| El clima de la mañana | Historia diaria: "Hoy en Balcarce", la fecha, la tarjeta oscura del clima (temperatura, cielo, sensación y viento, hoy y los dos días que siguen); sin dólar: si se mueve, sale como nota propia | `placaClima` |
+| El clima de la noche | Historia diaria: "Cómo sigue el día", la tarjeta del clima (ahora, esta noche, mañana y pasado) y un recuadro con el pronóstico de mañana | `placaClima` |
+| El aviso de clima | Historia diaria con un recuadro de borde rojo ("Qué hay que saber") | `placaClima` |
+| La farmacia de turno | Historia diaria: la fecha y la tarjeta blanca con borde verde (nombre, dirección, teléfono) y hasta cuándo dura el turno | `placaFarmacia` |
+| Teléfonos útiles y agenda (extras) | La misma cabecera de la historia diaria y una lista con rayas finas | `placaUtiles`, `placaAgenda` |
+| Espejo en Instagram de cada posteo de Facebook | Placa de noticia con foto (la foto del banco propio, la franja del color de la sección, título, bajada y el pie con la fecha); sin foto, Placa sin foto (el bloque de color con los anillos del radar y el nombre de la sección) | `web/lib/tarjeta.js` (`/nota/ID/instagram.png`) |
+| Facebook con enlace, WhatsApp, la web al compartir | Con foto (desde el 28/09, `FOTO_EN_ENLACE`): la foto del banco a la izquierda y el título a la derecha; sin foto, una banda con el color de la sección y los anillos, el título y el pie | `web/lib/tarjeta.js` (`opengraph-image`) |
 
 Lo que no se usa del lienzo, por ahora: "Repaso · una nota por placa" y
 "Repaso · cierre" son para un carrusel, y el repaso hoy es **un video**: se
 tomó la tapa como placa del video sin cambiar cómo se publica. Tampoco el
 sticker de enlace de la historia diaria (la API no lo pone).
 
-**Las fotos.** La foto de una nota sólo aparece en el espejo de Instagram, y
-sólo si está en el banco propio (`web/data/banco-fotos.json` →
+**Las fotos.** La foto de una nota aparece en la página de la nota, en el
+espejo de Instagram y en la tarjeta para compartir el enlace (Facebook,
+WhatsApp), y sólo si está en el banco propio (`web/data/banco-fotos.json` →
 `web/public/fotos-notas/`). Va recortada y **sin el crédito adentro**: nunca
 el nombre de otro medio ni una marca de agua dentro de una imagen. El crédito
-va al pie del posteo de Instagram (`conCreditoDeFoto`, `redes/elegir.mjs`) y
-en la página de la nota. La imagen de Facebook (la del enlace) no lleva foto:
-ese posteo no nombra fuentes (`CRITERIO-EDITORIAL.md` § 9). Un ejemplo de
+va en el epígrafe de la página de la nota y al pie del posteo de Instagram
+(`conCreditoDeFoto`, `redes/elegir.mjs`); la tarjeta del enlace lleva a la
+página, que tiene el epígrafe (`CRITERIO-EDITORIAL.md` § 2, "Las fotos"). Los
+videos siguen con placa. Un ejemplo de
 cada pieza se arma con los datos de la portada en
 `reels/salida/muestras-diseno-nuevo/` (no se versiona). Lo cuidan
 `pruebas/placas.test.mjs` (mide con resvg cada renglón: nada se sale, nada

@@ -15,7 +15,7 @@ En orden alfabético.
 | **Antecedentes** | Hasta 3 notas que el sitio ya publicó en los últimos 30 días sobre el mismo tema, que la IA recibe como contexto **anterior**. No se busca nada en internet | `antecedentesDe` (`reels/reescritura.mjs`); `docs/04-REDACCION.md` |
 | **Archivo** | Lo que tiene **página**: lo publicado en los últimos 180 días, hasta 2.500 notas. La portada es lo que se **muestra** (36 horas) | `web/data/archivo.json`, `web/lib/archivo.js`; `docs/06-WEB.md` |
 | **Archivadas** (en el panel) | Las notas que pasaron 72 horas sin que nadie las decidiera. Sólo en la PC | `HORAS_PARA_ARCHIVAR` (`panel/servidor.mjs`); `docs/09-PANEL.md` |
-| **Auditoría (semanal)** | El workflow de los lunes a las 9 que mide lo publicado (tamaños de imágenes, íconos, SEO) y el contrato de la semana. Al 28/09 nunca había corrido | `.github/workflows/auditoria.yml`, `redes/auditar.mjs`; `docs/08-INFRAESTRUCTURA.md` |
+| **Auditoría (semanal)** | El workflow de los lunes a las 9 que mide lo publicado (tamaños de imágenes, íconos, SEO) y el contrato de la semana. Corrió por primera vez el 28/09; guarda `web/data/auditoria.json` | `.github/workflows/auditoria.yml`, `redes/auditar.mjs`; `docs/08-INFRAESTRUCTURA.md` |
 | **Aviso (publicitario)** | Uno de los tres espacios de publicidad de la web (apertura, clima, pie). Se cargan desde el panel | `web/data/avisos.json`, `panel/avisos.mjs`, `web/components/avisos.js`; `PUBLICIDAD.md` |
 | **Aviso de clima** | La historia que sale apenas hay una helada fuerte, granizo o viento de 60 km/h o más, hoy o mañana. No es parte del contrato | `avisoDeClima` (`redes/piezas.mjs`), `ingesta/alertas.mjs`; `docs/07-REDES.md` |
 | **Bajada (copete)** | Las dos o tres frases que van debajo del título: completan el título, no lo repiten. En el código se llama `copete` | `BAJADA` (`ingesta/criterio.mjs`); `CRITERIO-EDITORIAL.md` § 4 |
@@ -51,7 +51,7 @@ En orden alfabético.
 | **Historia (en redes)** | Video vertical que dura 24 horas en Instagram o en la página de Facebook | `redes/publicar-piezas.mjs`; `docs/07-REDES.md` |
 | **Hoy en Balcarce** | El panel de tres filas de la portada: clima, farmacia de turno y dólar, cada una con enlace a su página | `web/components/hoy-balcarce.js`; `docs/06-WEB.md` |
 | **Índice de noticias (sitemap)** | La lista que cada medio arma para Google News: trae todo el día, sin resumen | `tipo: 'sitemap'`; `docs/02-INGESTA.md` |
-| **Interruptor** | La variable de GitHub `REDES_ACTIVAS`: con "Si" (cualquier mayúscula o tilde) las redes publican; con otra cosa, sólo simulan | `estaActivo` (`redes/elegir.mjs`); `docs/07-REDES.md` |
+| **Interruptor** | La variable de GitHub `REDES_ACTIVAS`: con "Si" (cualquier mayúscula o tilde) las redes publican; con otra cosa, sólo simulan. Desde el 28/09, en `No` (en pausa hasta el visto bueno de Hernán al diseño nuevo) | `estaActivo` (`redes/elegir.mjs`); `docs/07-REDES.md` |
 | **Lectura con IA** | Una IA (Gemini, con Groq de respaldo) lee cada nota nueva y completa su ficha; puede sacarla, cambiarle la sección o decir que no es de acá, pero **nunca destrabarla** | `ingesta/lectura-ia.mjs`, `ingesta/perfil-balcarce.md`; `docs/03-SELECCION.md` § 8 |
 | **Libro** | La memoria de las redes: todo lo que ya salió, con la hora y el número que dio Meta. Es lo que impide repetir. No se edita a mano | `web/data/redes.json`; `docs/07-REDES.md` |
 | **Medio** | El diario, la radio o el organismo. Todos sus feeds llevan el mismo nombre, para que cuente una sola vez | Campo `medio` de cada fuente |
@@ -88,7 +88,7 @@ En orden alfabético.
 | **Tema** | Una historia que se sigue en el tiempo (el autódromo, Ferroviarios, el Concejo…). Sus páginas existen pero no se enlazan | `TEMAS` (`ingesta/fuentes.mjs`), `MOSTRAR_TEMAS` (`web/lib/sitio.js`) |
 | **Texto completo** | La nota original bajada de la página del medio (hasta 4.000 caracteres), para que la IA escriba sin inventar | `ingesta/articulo.mjs`, `textoCompletoDe` (`reels/reescritura.mjs`) |
 | **Ventana** | Hasta cuándo sigue valiendo una pieza después de su hora; si se cierra sin que salga, se pierde por hoy | `VENTANAS` (`redes/piezas.mjs`) |
-| **Verde** | El color del semáforo que sale solo (si después tiene cuerpo y, si es de afuera, los medios y el cupo) | `REGLAS_SEMAFORO.verdeSecciones` (`ingesta/fuentes.mjs`) |
+| **Verde** | El color del semáforo que sale solo (si después tiene cuerpo y, si es de afuera, los medios y el cupo) | `semaforo` (`ingesta/ingesta.mjs`): verde si ninguna regla la frenó |
 | **Verificación (el verificador)** | La comparación mecánica, sin IA, de lo que escribió la IA contra lo que recibió: números, nombres, fechas, citas, acusaciones, copia, relleno, forma del título… | `verificar` (`ingesta/verificar.mjs`); `docs/04-REDACCION.md` § 8 |
 | **Vigilante** | El programa que cada media hora mira la web publicada, las corridas y las redes, y avisa por WhatsApp (un solo mensaje por corrida; el resumen, a las 21) | `redes/vigilar.mjs`, workflow "Vigilancia"; `docs/08-INFRAESTRUCTURA.md` |
 | **Workflow** | Una tarea automática de GitHub. Son trece | `.github/workflows/`; `docs/08-INFRAESTRUCTURA.md` |

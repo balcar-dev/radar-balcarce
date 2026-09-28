@@ -1,6 +1,6 @@
 # 08 · Infraestructura: qué corre dónde
 
-*Escrito el 28/09/2026 leyendo los trece workflows de `.github/workflows/`, el
+*Escrito el 28/09/2026 leyendo los doce workflows de `.github/workflows/`, el
 código que corren y el historial de corridas de GitHub de ese día. Si algo de
 acá no coincide con los `.yml` o con el código, mandan ellos. Los secretos
 figuran **sólo por nombre**: sus valores no se escriben en ningún documento ni
@@ -27,7 +27,8 @@ revisa todo y avisa por WhatsApp; lo único que se paga es la voz de los videos
 - Un **secreto** es una clave guardada en GitHub (Settings → Secrets and
   variables → Actions → Secrets) que los workflows usan sin que nadie la vea.
   Una **variable** es lo mismo pero a la vista (la pestaña Variables): hoy hay
-  una sola que importa, `REDES_ACTIVAS`.
+  una sola que importa, `REDES_ACTIVAS` (desde el 28/09 en `No`: las redes
+  están en pausa hasta el visto bueno de Hernán al diseño nuevo).
 - Un **token** es una clave que le da permiso a un programa para hacer algo en
   otro servicio. Se trata como una contraseña.
 
@@ -80,7 +81,7 @@ PC de Hernán: el panel (puerto 4321, `09-PANEL`) ── sube sus decisiones a G
    `CLAUDE.md`). Los que chocan entre sí se ponen de acuerdo con `git pull
    --rebase` (ver "Cómo no se pisan").
 
-## Los trece workflows
+## Los doce workflows
 
 "Gasta plata" quiere decir si puede generar un cargo: GitHub no cobra minutos
 porque el repositorio es público; lo único pago es la clave de Gemini de redes.
@@ -96,7 +97,6 @@ porque el repositorio es público; lo único pago es la clave de Gemini de redes
 | **Auditar redes** (`auditar-redes.yml`) | A mano (opcional: `desde`, AAAA-MM-DD) | `redes/auditar-redes.mjs` cuatro veces: hoy, ayer, la semana y "crudo" | `META_TOKEN` | Nada | 10 min | No |
 | **Auditar voz** (`auditar-voz.yml`) | A mano (opcional: `explorar`) | `npm ci`, `reels/auditar-voz.mjs [--explorar]` | `GEMINI_API_KEY_REDES` | Nada | 15 min | Centavos (unos audios cortos y su transcripción) |
 | **Ver Facebook** (`ver-facebook.yml`) | A mano | `redes/ver-facebook.mjs` | `META_TOKEN` | Nada | 5 min | No |
-| **Probar banco de fotos** (`probar-fotos.yml`) | A mano (`maximo`: cuántas notas; 100 por defecto) | `ingesta/probar-fotos.mjs` | `GEMINI_API_KEY_CLASIFICACION`, `GEMINI_API_KEY_REDACCION`, `GEMINI_API_KEY` (nombre viejo), `GROQ_API_KEY` | Nada; deja `web/data/_prueba-fotos.json` como artefacto 14 días | 40 min | No (nunca la clave de redes) |
 | **Prueba de estadísticas** (`prueba-estadisticas.yml`) | A mano | `redes/estadisticas.mjs` | `CLOUDFLARE_ACCOUNT_ID`, `CLOUDFLARE_ANALYTICS_TOKEN`, `CLOUDFLARE_API_TOKEN`, `META_TOKEN` | Nada | 5 min | No |
 | **Prueba de Gemini** (`prueba-gemini.yml`) | A mano | `reels/probar-gemini.mjs` (un pedido mínimo) | `GEMINI_API_KEY_REDACCION` | Nada | sin tope propio | No (clave gratis) |
 | **Prueba de WhatsApp** (`prueba-whatsapp.yml`) | A mano | `redes/probar-whatsapp.mjs` (manda un mensaje y muestra la respuesta de CallMeBot, sin la clave ni el teléfono) | `WHATSAPP_TELEFONO`, `WHATSAPP_APIKEY` | Nada | 5 min | No |
@@ -268,7 +268,7 @@ el workflow de prueba que corresponda.
 | `WHATSAPP_TELEFONO` | Secreto | Cargado | El número de los avisos, completo con 549, sin + ni espacios |
 | `WHATSAPP_APIKEY` | Secreto | Cargado | La clave que dio CallMeBot |
 | `GITHUB_TOKEN` | Automático | — | Lo pone GitHub en cada corrida |
-| `REDES_ACTIVAS` | Variable | `Si` | El interruptor de las redes (`docs/07-REDES.md`) |
+| `REDES_ACTIVAS` | Variable | `No` desde el 28/09 (en pausa hasta el visto bueno de Hernán al diseño nuevo) | El interruptor de las redes (`docs/07-REDES.md`) |
 | `CLOUDFLARE_PROJECT` | Variable opcional | No cargada | Sin ella se usa `radar-balcarce`, el nombre real del proyecto de Pages |
 
 Fuera de GitHub: el token de GitHub de cron-job.org (en el encabezado
@@ -333,7 +333,7 @@ sitio, no una clave.
 
 | Archivo | Qué hace | Quién lo llama | Qué lee | Qué escribe |
 |---|---|---|---|---|
-| `.github/workflows/*.yml` | Los trece workflows (tabla de arriba) | cron-job.org, GitHub, una persona | secretos y variables | commits en `main`, artefactos |
+| `.github/workflows/*.yml` | Los doce workflows (tabla de arriba) | cron-job.org, GitHub, una persona | secretos y variables | commits en `main`, artefactos |
 | `web/scripts/generar-datos.mjs` | Todo lo que hace "Actualizar la web" entre las pruebas y la compilación | `actualizar.yml` | fuentes, `web/data/`, claves de IA | `web/data/*.json`, `web/public/fotos-notas/` |
 | `web/scripts/revisar-seo.mjs` | Que el SEO siga en el HTML compilado | `actualizar.yml` | `web/out` | — |
 | `reels/claves.mjs` | Las cuatro claves de IA | redacción, lectura, fotos, voz | entorno, `.env` | — |
@@ -362,13 +362,13 @@ sitio, no una clave.
 | **Gemini con demasiada demanda (503)** | La reescritura falla seguido | Es el primer lugar donde mirar si vuelve a pasar: el modelo (`gemini-flash-lite-latest`) |
 | **El WhatsApp no llega** | No llega el resumen de las 21 | "Prueba de WhatsApp"; si CallMeBot dice "APIKey is invalid", la clave está mal copiada; revisar que el teléfono tenga 549 |
 | **Faltan permisos en un token** | El resumen dice "falta permiso de Analytics" o que faltan los de Meta | Una persona regenera el token con los permisos |
-| **La auditoría semanal no corre** | Nadie avisa si nunca corrió: `auditoriaVencida` (`redes/auditar.mjs`) no dice nada mientras no exista `web/data/auditoria.json`. Al 28/09 a las 15:15 no había corrido nunca (su primera vez programada era ese lunes a las 9) | Correrla a mano (`PENDIENTES.md`) |
+| **La auditoría semanal no corre** | `auditoriaVencida` (`redes/auditar.mjs`) avisa si `web/data/auditoria.json` tiene más de 10 días. Corrió por primera vez el 28/09 (a las 16:06); si el archivo faltara, no avisaría | Correrla a mano (Actions → Auditoría → Run workflow) |
 | **Se vence el token de cron-job.org o el dominio** | Aviso 30 días antes | Ver "Vencimientos" |
 | **La PC está apagada** | Sólo el panel deja de andar | Nada se rompe: web, redes y vigilancia siguen |
 
 ## Lo que sigue abierto
 
 En `PENDIENTES.md`: los disparos de cron-job.org a Redes (tres por hora; el
-comentario de `redes.yml` todavía dice "cada 30 minutos, de 7 a 23"), la
-Auditoría de los lunes que nunca corrió y el tope de gasto de la clave paga de
-Gemini.
+comentario de `redes.yml` todavía dice "cada 30 minutos, de 7 a 23"),
+confirmar que la Auditoría de los lunes corra sola y el tope de gasto de la
+clave paga de Gemini.

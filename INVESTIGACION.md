@@ -289,8 +289,8 @@ Fuentes:
    algún momento alguien nuevo toca ese código.
 
 **Estado al 25/09/2026: los cuatro puntos están aplicados.** (1) La política
-de privacidad está publicada en la web (`web/app/politica-de-privacidad`, texto
-en `POLITICA-PRIVACIDAD.md`). (2) La lógica Campillay está en el prompt de
+de privacidad está publicada en la web (`web/app/politica-de-privacidad`, la
+única fuente del texto; lo interno del buzón, en `POLITICA-PRIVACIDAD.md`). (2) La lógica Campillay está en el prompt de
 `reels/reescritura.mjs` (regla 10). (3) Menores y víctimas son rojo automático
 en `ingesta/fuentes.mjs`. (4) La regla del reclamo está comentada en
 `panel/buzon.mjs`.

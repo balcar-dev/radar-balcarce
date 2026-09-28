@@ -114,9 +114,10 @@ tiene, por sección, un **mínimo de medios** que lo cuenten y un **cupo**
 (cuántas pueden salir solas a la vez, como máximo): los números están en la
 sección 11. Lo de Balcarce no pide medios ni tiene cupo. **Lo que toca la zona
 sale solo aunque lo cuente un solo medio** (27/09, Hernán: "si son de la zona y
-son realmente temas de Balcarce, que salga"): no pide medios, pero tiene el
-cupo de su sección, y la lectura con IA igual saca lo que no tenga relación con
-acá (`deLaZona`, en `semaforo` y `exigirMedios`).
+son realmente temas de Balcarce, que salga"): no pide medios y, desde el
+28/09, tampoco ocupa cupo (es "de acá", `esDeAca`); la lectura con IA igual
+saca lo que no tenga relación con acá (`deLaZona`, en `semaforo`,
+`exigirMedios` y `aplicarCupos`).
 
 **Una IA lee cada nota antes de decidir (27/09).** Con el perfil de Balcarce
 (`ingesta/perfil-balcarce.md`) y la ciudad del medio, arma una ficha: de dónde
@@ -178,7 +179,7 @@ con títulos distintos (las tres notas de las falsas ofertas de empleo de
 McCain), la IA las junta y queda una sola, con todos los medios como fuentes
 (`agruparRepetidas`, `quitarRepetidas`). No junta notas distintas del mismo
 tema (dos prácticas del TC son dos notas). Queda, en este orden, la que ya
-está publicada (en la portada o en las últimas 72 horas: si no, desaparece la
+está publicada (en la portada o en las últimas 36 horas, `HORAS_EN_PORTADA`: si no, desaparece la
 que la gente ya ve), la que puede salir sola, la que cuentan más medios y la de
 más puntaje (27/09).
 
@@ -767,7 +768,7 @@ del 26/09, que recorrió las 300 páginas publicadas.
    27/09 eran Fraunces e IBM Plex Sans, que en el celular se veían pesadas. En
    los titulares, las cifras van a la altura de las
    mayúsculas y de ancho propio (`lining-nums proportional-nums`). El detalle
-   y las variables están en `web/README.md` ("Sistema tipográfico") y al
+   y las variables están en `MEDIA-KIT.md` ("El sistema tipográfico") y al
    principio del bloque de tarjetas de `web/app/globals.css`.
 8. **Todo se ve bien en cualquier tamaño.** Sin desborde horizontal, sin
    texto cortado ni pisado, columnas alineadas, contraste de 4,5:1 o más, de
@@ -831,7 +832,7 @@ plantilla lleno con números o con lo ya publicado, así que no hay nada que
 inventar. Son notas normales (portada, sección, feed, archivo) y pasan por la
 regla de cuerpo como cualquier otra. **No van a Facebook como posteo ni
 entran a un podcast**: serían redundantes. El detalle técnico está en
-`web/README.md` ("Las notas propias", `web/lib/notas-propias.js`).
+`docs/06-WEB.md` ("Las notas propias", `web/lib/notas-propias.js`).
 
 **El dólar.** La cotización del momento se muestra en `/dolar`, que se
 actualiza sola. Además, **una nota propia, sólo el día hábil en que el dólar
@@ -939,7 +940,12 @@ manda sobre lo que se repita acá. Los horarios, las piezas y cómo se publica, 
   (`radarbalcarce.com/…`) y hasta tres hashtags. **Nunca nombra la fuente** (eso
   está en la nota de la web) **ni dice "Resumen hecho con IA"** (desde el 26/09).
 - **Instagram** recibe video con voz (historias y reels) y el espejo de cada
-  posteo de Facebook como tarjeta propia. Nunca la foto de otro medio.
+  posteo de Facebook como tarjeta propia. Desde el 28/09 el espejo lleva la
+  foto de la nota guardada en el banco propio, sin marca de agua y con el
+  crédito en el texto del posteo (`FOTO_EN_INSTAGRAM`); sin foto que sirva,
+  la placa. La tarjeta que acompaña el enlace en Facebook y WhatsApp también
+  lleva esa foto (`FOTO_EN_ENLACE`), con el crédito en el epígrafe de la
+  nota (ver "Las fotos", sección 2).
 - **Podcasts en vez de noticias sueltas:** tres por día, con notas de
   relevancia **62 o más** (el de la noche, sin mínimo: repasa el día) y de temas distintos, sin repetir las del podcast
   anterior.

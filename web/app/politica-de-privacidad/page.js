@@ -1,6 +1,6 @@
-// El texto fuente de esta página vive en POLITICA-PRIVACIDAD.md, en la raíz
-// del proyecto — se edita ahí y se copia acá (evita meter un parser de
-// markdown sólo para una página que casi no cambia).
+// Esta página es la única fuente del texto público de la política de
+// privacidad: se edita acá. POLITICA-PRIVACIDAD.md, en la raíz, guarda sólo lo
+// interno (qué se hace con lo que manda la gente).
 //
 // El título va sin la marca: la plantilla del layout ya le agrega
 // " · Radar Balcarce" y salía repetida.
@@ -26,7 +26,7 @@ export default function PoliticaPrivacidad() {
 
         <h3 style={{ fontSize: 20, marginTop: 28, marginBottom: 8 }}>Qué pedimos</h3>
         <p>
-          Según el formulario, puede ser: tu nombre, un teléfono o WhatsApp de contacto, y el
+          Lo que nos mandes por WhatsApp o por mail: tu nombre, un teléfono de contacto y el
           texto de lo que nos quieras contar. Nunca es obligatorio dejar tu nombre — podés pedir
           mantenerte anónimo, salvo en las notas de opinión, que siempre van firmadas con nombre
           real porque son un texto de opinión personal, no un dato anónimo.

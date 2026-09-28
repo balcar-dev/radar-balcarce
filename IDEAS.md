@@ -174,41 +174,29 @@ Lo caro no es el código: es cargar y mantener los datos. Arrancaría con 15 a
 y crecería sólo si alguien lo pide — la misma lógica que ya funciona con
 `ingesta/fuentes.mjs`.
 
-### Efemérides, fechas patrias y contenido que se repite todos los años
+#### Cómo se arma en serio
 
-*Ampliada el 23/09.* Tres ideas juntas porque resuelven el mismo problema: un
-día sin noticia fuerte, la portada y las redes igual necesitan algo. Y son
-contenido "de siempre": se arma una vez por tema y vuelve a servir cada año.
+Pensado para empezar chico y que se pueda dejar de hacer sin que rompa nada:
 
-- **"Un día como hoy" con fotos del archivo.** Se comparte mucho y no compite
-  con nadie porque nadie lo hace en Balcarce. **El problema sigue siendo el
-  mismo:** las fotos viejas tienen dueño — Museo Histórico Municipal "Don
-  Aurelio González" o el Archivo Histórico Municipal. Una llamada, pero hay
-  que hacerla; mientras no esté, se puede arrancar sin fotos, sólo con el
-  dato ("un 15 de octubre de 1944 nació Fangio acá") y una placa.
-- **Fechas patrias y feriados**, con el ángulo de Balcarce cuando lo hay (el
-  25 de mayo o el 9 de julio son iguales en todo el país, pero "qué actividad
-  hace el municipio" sí es propio y ya se saca de la misma agenda que
-  alimenta `ingesta/agenda.mjs`). Se arma un calendario fijo (como
-  `CALENDARIO_ANUAL` en `ingesta/agenda.mjs`, que ya existe para otra cosa)
-  con las fechas del año y qué se dice cada una, y se reutiliza siempre.
-- **Una película por semana.** Más simple de sostener que las dos anteriores
-  porque no depende de conseguir un dato local: una recomendación corta,
-  fija los mismos días, sin IA inventando la reseña (se resume una sinopsis
-  ya publicada, como el resto de las notas). Punto a decidir: qué la hace
-  "de Balcarce" — ¿la cartelera real de algún cine/club de cine local si
-  existe, o una curaduría editorial sin pretensión de ser local? Es una
-  decisión editorial, no técnica.
-
-**Cómo seguir esto en serio:** son ideas para dos frentes de trabajo
-distintos, y conviene separarlos. (1) Reportar qué fuentes existen para cada
-una — el Museo/Archivo para las fotos, si el municipio publica un calendario
-de efemérides propio, si hay una cartelera de cine local con web o RSS — es
-una tarea de investigación que no toca código y se puede encargar aparte,
-sin login ni credenciales de por medio. (2) Una vez que haya fuentes reales,
-recién ahí se decide el formato (¿historia semanal? ¿parte del podcast?) y se
-escribe el código, igual que se hizo con cualquier fuente nueva en
-`ingesta/fuentes.mjs`.
+1. **Datos mínimos por comercio:** nombre, rubro, dirección, teléfono,
+   horario, y si quiere, WhatsApp e Instagram. Hoy la base vive en
+   `comercial/datos/comercios.json`; para la web haría falta un archivo en
+   `web/data/` que se edite desde el panel, igual que los avisos.
+2. **Cómo cargarlos sin ser una carga eterna:** salir con un formulario de
+   papel o un mensaje de WhatsApp de una línea ("nombre, rubro, dirección,
+   horario"). El comerciante lo manda, alguien del equipo lo pasa al panel.
+   Con 15 a 20 del centro alcanza para probar.
+3. **El mapa:** OpenStreetMap con MapLibre o Leaflet (gratis, sin clave). Las
+   coordenadas se sacan una vez de la dirección (Nominatim) y se guardan.
+4. **Búsqueda por rubro** ("farmacias", "ferreterías", "restaurantes") — es lo
+   que la gente busca en Google, y cada rubro es una página que posiciona sola.
+5. **Ferias y eventos** en el mismo mapa con fecha, enganchados a la agenda
+   que ya existe (`ingesta/agenda.mjs`).
+6. **Mejoras pagas:** pin destacado, foto, aparecer primero en el rubro,
+   mención en podcasts, historia propia. Lo básico siempre gratis.
+7. **Medir para poder vender:** cuántos toques recibe cada ficha (con
+   Analytics por página), y mostrárselo al comerciante una vez al mes. Es lo
+   que hace que renueve.
 
 ### La historieta de Radar: un personaje propio, como los diarios de antes (27/09)
 
@@ -296,31 +284,6 @@ menciones en los podcasts, guía y mapa, sorteos, clasificados, contenido
 patrocinado, AdSense al final), las reglas que no se negocian y lo que falta
 antes de vender (página `/publicidad`, media kit, precios).
 
-## La guía comercial: cómo se arma en serio
-
-Ya está descripta más arriba (mapa + catálogo de venta). Esto es el **cómo**,
-pensado para empezar chico y que se pueda dejar de hacer sin que rompa nada:
-
-1. **Datos mínimos por comercio:** nombre, rubro, dirección, teléfono,
-   horario, y si quiere, WhatsApp e Instagram. Hoy la base vive en
-   `comercial/datos/comercios.json`; para la web haría falta un archivo en
-   `web/data/` que se edite desde el panel, igual que los avisos.
-2. **Cómo cargarlos sin ser una carga eterna:** salir con un formulario de
-   papel o un mensaje de WhatsApp de una línea ("nombre, rubro, dirección,
-   horario"). El comerciante lo manda, alguien del equipo lo pasa al panel.
-   Con 15 a 20 del centro alcanza para probar.
-3. **El mapa:** OpenStreetMap con MapLibre o Leaflet (gratis, sin clave). Las
-   coordenadas se sacan una vez de la dirección (Nominatim) y se guardan.
-4. **Búsqueda por rubro** ("farmacias", "ferreterías", "restaurantes") — es lo
-   que la gente busca en Google, y cada rubro es una página que posiciona sola.
-5. **Ferias y eventos** en el mismo mapa con fecha, enganchados a la agenda
-   que ya existe (`ingesta/agenda.mjs`).
-6. **Mejoras pagas:** pin destacado, foto, aparecer primero en el rubro,
-   mención en podcasts, historia propia. Lo básico siempre gratis.
-7. **Medir para poder vender:** cuántos toques recibe cada ficha (con
-   Analytics por página), y mostrárselo al comerciante una vez al mes. Es lo
-   que hace que renueve.
-
 ## Contenido propio: cosas que no dependen de lo que publican otros
 
 *Nueva, 24/09. Objetivo: que la portada tenga algo nuestro todos los días,
@@ -337,6 +300,10 @@ reescritos por la IA con la verificación contra la fuente
   arrancar. El resto (fundación, inauguraciones, hechos locales) hay que
   **verificarlo con el Museo Fangio, el Museo Histórico y el Archivo
   Municipal** antes de escribirlo: no se publica una fecha de memoria.
+- **"Un día como hoy" con fotos del archivo.** Se comparte mucho y nadie lo
+  hace en Balcarce. Las fotos viejas tienen dueño (Museo Histórico Municipal
+  "Don Aurelio González" o el Archivo Histórico Municipal): hay que pedirlas.
+  Mientras tanto se puede arrancar sin fotos, sólo con el dato y una placa.
 - **Fechas patrias y feriados**, con el ángulo local cuando lo hay (qué acto
   hace el municipio, cómo funcionan farmacias y transporte). Las de siempre:
   24/3, 2/4, 1/5, 25/5, 20/6, 9/7, 17/8, 11/9 (Día del Maestro), 12/10, 20/11,
@@ -393,6 +360,15 @@ hacer)**
   foto que mandan ellos (nunca la de otro medio). Alimenta la guía comercial.
 - **Encuestas de historia** semanales.
 
+**Cómo seguir esto en serio:** son dos frentes distintos. (1) Averiguar qué
+fuentes existen (el Museo y el Archivo para las fotos, si el municipio publica
+un calendario de efemérides, si hay cartelera de cine local con web o RSS): es
+investigación, no toca código ni pide credenciales. (2) Con fuentes reales,
+recién ahí decidir el formato (¿historia semanal? ¿parte del podcast?) y
+escribir el código, como con cualquier fuente nueva de `ingesta/fuentes.mjs`.
+Para la película, falta decidir qué la hace "de Balcarce": la cartelera de un
+cine o club de cine local, si existe, o una curaduría editorial.
+
 **Cómo elegir qué hacer primero:** empezar por lo que **no necesita a nadie
 más**: efemérides + fechas patrias + la semana en Balcarce + precios del
 campo. Son datos fijos o públicos, se verifican solos y llenan la portada sin
@@ -411,9 +387,6 @@ conviene decidirlas sin apuro.
 - **Probar los workflows en la máquina** (`act`).
 - **Revisar la accesibilidad** de la web a fondo (el 25/09 se arreglaron el
   contraste de Automovilismo y el nombre del buscador; falta el resto).
-- **La guía comercial y el mapa de Balcarce** (arriba y en `COMERCIAL.md`),
-  con marketing conjunto y sorteos: la idea más grande y la que más conecta
-  con vender publicidad.
 
 ## Después de la auditoría (25/09): lo que haría ahora
 
@@ -436,9 +409,9 @@ que más se notan.
 4. **Ser buen vecino con los medios.** Guardar el texto completo de cada nota
    ya leída (no volver a pedirla en cada corrida) y espaciar los pedidos al
    mismo sitio. Menos riesgo de que un medio nos bloquee.
-5. **"Qué dijo cada medio".** En las notas con dos o más fuentes, un bloque
-   corto al pie con una línea por medio y su enlace. Es transparencia, suma
-   valor propio y es lo que hacen los agregadores serios.
+5. ~~**"Qué dijo cada medio".**~~ **Hecho**: el desplegable cerrado "Fuentes
+   (N)" al pie de cada nota, con una línea por medio y su enlace
+   (`web/components/verificacion.js`, `web/lib/fuentes-de-la-nota.js`).
 6. **Una página pública de correcciones** (`/correcciones`): qué se corrigió,
    cuándo y por qué. Da confianza y lo piden Google Noticias y AdSense.
 7. **Tipografías servidas por el propio sitio.** Hoy la web las pide a Google

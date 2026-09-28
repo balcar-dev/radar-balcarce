@@ -127,7 +127,7 @@ primero que encuentra:
 | 6 | La promoción (`REGLAS_SEMAFORO.promocional`: sorteo, ganá tu entrada, suscribite, auspicia…) | Título y primeros 600 caracteres | **Amarillo** "parece promoción, no noticia" |
 | 7 | La fuente principal es oficial | — | **Verde** "comunicado oficial" |
 | 8 | No es de acá (paso 5) y la cuentan menos medios de los que pide su sección (paso 6) | — | **Amarillo** "de afuera y poco contada (N medios; Sección pide M)" |
-| 9 | La sección está en `REGLAS_SEMAFORO.verdeSecciones` (hoy, las once) | — | **Verde** "sección X" |
+| 9 | Si nada de lo anterior la frenó (todas las secciones salen solas; la lista `verdeSecciones`, que ya tenía las once, se sacó el 28/09) | — | **Verde** "sección X" |
 | 10 | Si no | — | Amarillo "sección general, sin regla verde" (hoy no pasa nunca) |
 
 Las listas roja y amarilla se pasan también, más adelante, sobre **el texto
@@ -434,7 +434,7 @@ corrida siguiente de "Actualizar la web".
 | Archivo | Qué hace | Quién lo llama | Qué lee | Qué escribe |
 |---|---|---|---|---|
 | `ingesta/ingesta.mjs` | `clasificar`, `relevancia`, `semaforo`, `esDeAca`, `mediosMinimosDe`, `exigirMedios`, `aplicarCupos`, `esPolicialDeAfuera`; `semaforoDelTexto` (las listas sobre cualquier texto) | `ingestar()`; `generar-datos.mjs`; `reels/reescritura.mjs` | `ingesta/fuentes.mjs`, `ingesta/criterio.mjs` | — |
-| `ingesta/fuentes.mjs` | `REGLAS_SECCION`, `REGLAS_SEMAFORO` (rojo, nunca, amarillo, verdeSecciones, promocional, cotizacion, internacional), `AMARILLO_MENORES`, `PALABRAS_DE_TECNOLOGIA_EN_EL_TITULO`, `FIGURAS`, `TEMAS` | Todo el motor | — | — |
+| `ingesta/fuentes.mjs` | `REGLAS_SECCION`, `REGLAS_SEMAFORO` (rojo, nunca, amarillo, amarilloMuerte, promocional, cotizacion, internacional), `AMARILLO_MENORES`, `PALABRAS_DE_TECNOLOGIA_EN_EL_TITULO`, `FIGURAS`, `TEMAS` | Todo el motor | — | — |
 | `ingesta/criterio.mjs` | Los números: `MEDIOS_DE_AFUERA`, `MEDIOS_POR_DEFECTO`, `MEDIOS_CON_FIGURA`, `CUPO_DE_AFUERA`, `CUPO_POR_DEFECTO`, `PORTADA` | Todo | — | — |
 | `ingesta/lectura-ia.mjs` | Fichas (`leerNotasNuevas`, `aplicarFichas`), repetidas (`agruparRepetidas`, `unirGrupos`, `quitarRepetidas`) | `generar-datos.mjs` (nube) | `ingesta/perfil-balcarce.md`, `web/data/fichas.json`, `reels/claves.mjs` | (lo escribe `generar-datos.mjs`) |
 | `ingesta/perfil-balcarce.md` | Lo que la IA sabe de Balcarce (sólo datos seguros) | `lectura-ia.mjs` | — | — |

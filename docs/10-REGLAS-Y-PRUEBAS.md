@@ -2,8 +2,8 @@
 
 *Escrito el 28/09/2026, leyendo `CLAUDE.md` y cada archivo de `pruebas/` de
 ese día, y puesto al día esa noche con el commit "Trece arreglos encontrados al
-documentar". Las pruebas se corrieron ese día: **1.353 pruebas en 83 archivos,
-todas bien, en unos 11 segundos**. Si un documento dice otra cosa que el
+documentar". Las pruebas se corrieron ese día: **1.355 pruebas en 83 archivos,
+todas bien** (la cuenta de cada archivo, al final). Si un documento dice otra cosa que el
 código, manda el código.*
 
 Desde el 28/09 **la lista numerada de reglas vive acá** (antes estaba en un
@@ -82,7 +82,7 @@ libro de redes real del 24 y 25/09).
 ### 4. Cómo se agrega una regla
 
 1. Escribirla en este documento, en la tabla de su tema, con **el número
-   siguiente** (hoy, 72), aunque vaya en otra tabla: los números no se
+   siguiente** (hoy, 73), aunque vaya en otra tabla: los números no se
    reordenan.
 2. Escribir la prueba en el archivo del área (la tabla de abajo dice cuál) o en
    uno nuevo con un nombre que diga qué cuida.
@@ -175,6 +175,7 @@ publicada y avisa si la regla se rompió por algo que las pruebas no ven) o
 | 69 | **No se junta información sin sentido** (28/09, Hernán): los lunes, en la nube, `retiradas.json` pierde las de más de 7 días que la ingesta ya no trae (`podarRetiradas`, `web/lib/archivo.js`), y el panel no guarda lo que esperó a una persona (pendiente) más de 7 días (`DIAS_DE_PENDIENTES`, `panel/notas.mjs`). Pasada una semana, una nota ya no se puede estrenar. | Prueba: `archivo.test.mjs` ("las retiradas de más de una semana…"), `panel-seguridad.test.mjs` ("lo que espera a una persona…") |
 | 70 | **Arreglos de la auditoría del 28/09**: lo de la zona conserva la página aunque lo cuente un solo medio (`deLaZona` en la nota publicada y en `tieneRespaldo`); la foto de una nota retirada a mano o que ya no está en ningún lado se borra de `web/public/fotos-notas/` (`podarFotos`); el panel de la PC no reescribe solo con IA (sólo la nube); `reels/voz.mjs` corre sola sólo con su nombre exacto. | Prueba: `auditoria-28-09.test.mjs` |
 | 71 | **Decisiones de Hernán sobre la auditoría (28/09)**: los policiales de la zona entran (con el mismo semáforo); "hospital" e "investigación" ya no frenan, y una muerte o un herido frenan sólo en Policiales, Balcarce, lo de acá o de la zona y lo de un solo medio (`amarilloMuerte`, `laMuerteFrena`); la verificación BAJA es sólo por acusaciones o, con un solo medio, por lo sin confirmar del hecho central; la negación se busca en toda la nota y acepta los verbos que niegan; un nombre escrito de otra forma en la fuente (EE.UU., ONU) no es inventado (`EQUIVALENCIAS`); la IA dice qué le importa a Balcarce sólo si la fuente lo dice. | Prueba: `auditoria-28-09.test.mjs`, `editor.test.mjs` |
+| 72 | **Limpieza de la auditoría (28/09)**: el modelo de texto de Gemini vive sólo en `MODELO_DE_TEXTO` (`reels/claves.mjs`); la ficha de la lectura con IA pide sólo lo que decide algo y `es_chimento` es obligatoria; `marcarDeAfuera` pone figura, Balcarce y zona por separado; sin `verdeSecciones` (todas las secciones salen solas si el semáforo da verde). | Prueba: `auditoria-28-09.test.mjs` |
 
 ### Qué se trae y qué es de Balcarce
 
@@ -271,10 +272,11 @@ qué documento cuenta ese tema.
 | `acceso.test.mjs` | 18 | Entrar al panel: claves con hash, sesiones firmadas, freno después de cinco intentos, que no delate qué usuarios existen | Panel |
 | `agenda-panel.test.mjs` | 16 | Eventos cargados a mano: nacen como borrador, qué va al archivo público, contactos para pedir fechas, que el panel no mande nada solo | Panel / Web |
 | `agenda.test.mjs` | 13 | La agenda del municipio y las fiestas anuales; el semáforo también en la agenda | Ingesta |
-| `archivo.test.mjs` | 27 | Los enlaces no se rompen; archivo de 180 días; retiradas y correcciones; 36 h en las listas; nada se estrena con más de 12 h; la fecha más vieja manda | Web |
+| `archivo.test.mjs` | 29 | Los enlaces no se rompen; archivo de 180 días; retiradas y correcciones; 36 h en las listas; nada se estrena con más de 12 h; la fecha más vieja manda | Web |
 | `arreglos-28-09.test.mjs` | 13 | Los trece arreglos del 28/09: firma de lo corregido a mano, sepelios antes del amarillo y aunque los apruebe una persona, la historia oficial, la página que se conserva por cupo, fotos del banco en la PC, crédito de Wikimedia, el interruptor en el reloj, útiles en Balcarce, tres intentos de Vigilancia y Auditoría, las claves, Piezas sin elegir | Varias |
 | `articulo.test.mjs` | 9 | Bajar el texto completo de la nota original sin menús ni pies | Ingesta |
 | `auditar-redes.test.mjs` | 21 | Comparar el libro de redes con lo que Meta tiene de verdad | Redes |
+| `auditoria-28-09.test.mjs` | 15 | Los arreglos y las decisiones de la auditoría del 28/09 (reglas 70 y 71): la zona conserva la página, fotos sin nota se borran, el panel no reescribe solo, policiales de la zona, cuándo frena una muerte, la verificación BAJA, el modelo de IA en un solo lugar | Varias |
 | `buzon.test.mjs` | 4 | Los cuatro tipos del buzón y sus reglas (el reclamo nunca de un solo lado) | Panel |
 | `checkout-main.test.mjs` | 3 | Los workflows que publican bajan la última `main` | Infraestructura |
 | `clima.test.mjs` | 18 | El dibujo de cada cielo (de noche no hay sol) y cuándo avisar helada, granizo o viento | Web / Redes |
@@ -300,7 +302,7 @@ qué documento cuenta ese tema.
 | `fotos-notas.test.mjs` | 11 | A qué notas se les prueba foto, el banco, Policiales sólo con foto oficial, que el workflow suba las fotos | Fotos |
 | `fotos.test.mjs` | 19 | Elegir una foto sin marca con IA (Gemini, Groq de respaldo, Wikimedia) | Fotos |
 | `fuentes-registro.test.mjs` | 2 | `FUENTES.md` dice lo mismo que el código | Ingesta |
-| `fuentes.test.mjs` | 13 | La salud de la configuración de fuentes; que el motor no dependa de nada instalado; caracteres escondidos | Ingesta / todo |
+| `fuentes.test.mjs` | 12 | La salud de la configuración de fuentes; que el motor no dependa de nada instalado; caracteres escondidos | Ingesta / todo |
 | `guiones.test.mjs` | 1 | Los teléfonos útiles no dicen "esta semana" | Redes |
 | `historias-largas.test.mjs` | 24 | Historias de hasta 58 s, reintentos, útiles, techo de 8 historias, redes apagadas | Redes |
 | `hora-balcarce.test.mjs` | 4 | La hora de Balcarce (`ingesta/zona.mjs`) | Infraestructura |
@@ -311,14 +313,14 @@ qué documento cuenta ese tema.
 | `meta-tiempo.test.mjs` | 3 | Los pedidos a Meta tienen tiempo máximo | Redes |
 | `notas-propias.test.mjs` | 24 | La nota del dólar (sólo si se movió 2 %) y los repasos de los podcasts | Web |
 | `notas.test.mjs` | 55 | Semáforo, puntaje, secciones, medios que pide lo de afuera, cupos, limpieza del texto | Selección |
-| `panel-seguridad.test.mjs` | 16 | Control de origen, qué se deja probar, que no publique a Vercel, poda de decisiones | Panel |
+| `panel-seguridad.test.mjs` | 17 | Control de origen, qué se deja probar, que no publique a Vercel, poda de decisiones | Panel |
 | `panel.test.mjs` | 16 | Avisos, campos editables que llegan a la web, sincronización con GitHub | Panel |
 | `pedir-clima-tiempo.test.mjs` | 3 | El pedido del clima en el navegador no se traba | Web |
 | `pedir-clima.test.mjs` | 6 | Cómo se lee la respuesta de Open-Meteo | Web |
 | `perfiles.test.mjs` | 4 | Las biografías de Instagram y Facebook (`PERFILES.md`) | Redes |
-| `piezas.test.mjs` | 53 | Qué pieza sale, cuándo, cómo se sube a Instagram y Facebook, colores del día | Redes |
+| `piezas.test.mjs` | 52 | Qué pieza sale, cuándo, cómo se sube a Instagram y Facebook, colores del día | Redes |
 | `placa-texto.test.mjs` | 6 | Cómo se cortan los renglones en las placas | Redes |
-| `placas.test.mjs` | 16 | El diseño del 28/09 de placas y tarjetas (`web/lib/tarjeta-diseno.js`): todo entra, sin nombres de medios adentro | Redes / Web |
+| `placas.test.mjs` | 15 | El diseño del 28/09 de placas y tarjetas (`web/lib/tarjeta-diseno.js`): todo entra, sin nombres de medios adentro | Redes / Web |
 | `plan-vacio.test.mjs` | 1 | El plan no se cae con la lista vacía (25/09) | Redes |
 | `portada.test.mjs` | 16 | Lo que ve el lector en la portada: sin fuente arriba, horas, orden, repetidas, farmacia sin botones, `/clima` | Web |
 | `presentacion-celular.test.mjs` | 6 | El sitio en el celular: menú en una fila, tarjetas, farmacia, tipografía | Web |
@@ -327,7 +329,7 @@ qué documento cuenta ese tema.
 | `redes-criterio.test.mjs` | 28 | El criterio de redes: identidad, voz, saludos por horario, auditoría de voz | Redes |
 | `redes.test.mjs` | 53 | Qué se publica en Facebook e Instagram, tokens, claves, podcasts | Redes |
 | `redirects.test.mjs` | 4 | Las redirecciones de Cloudflare (`/nota/ID` y secciones viejas) | Web |
-| `reescritura.test.mjs` | 39 | La reescritura: tonos, varias fuentes, clave gratis y paga, topes, semáforo sobre lo escrito | Redacción |
+| `reescritura.test.mjs` | 40 | La reescritura: tonos, varias fuentes, clave gratis y paga, topes, semáforo sobre lo escrito | Redacción |
 | `reloj.test.mjs` | 5 | Importar el reloj de redes no publica nada | Redes |
 | `respaldo.test.mjs` | 10 | La copia de seguridad del panel | Panel |
 | `ruta.test.mjs` | 11 | La dirección de cada nota | Web |

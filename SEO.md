@@ -1,7 +1,7 @@
 # SEO: cómo se posiciona la web
 
 *Actualizado el 26/09/2026.* Qué está hecho, cómo se audita y qué falta. La
-lista completa de pendientes está en `PENDIENTES.md` (sección C); acá se explica
+lista completa de pendientes está en `PENDIENTES.md` ("Para Claude", Baja, "SEO"); acá se explica
 el estado.
 
 ## Qué está hecho
@@ -15,7 +15,7 @@ el estado.
 | **Enlace canónico** | Siempre al dominio sin `www` y con `https`. **Cada página declara el suyo** y sólo la portada es `/`: hasta el 25/09 Farmacias, Agenda, Útil y Privacidad decían ser la portada y Google podía no mostrarlas nunca | `web/lib/sitio.js`, `web/components/metadatos.js`, `pruebas/seo.test.mjs`, `pruebas/seo-paginas.test.mjs` |
 | **Datos estructurados (JSON-LD)** | `NewsArticle` en cada nota, `NewsMediaOrganization` (con logo, desde el 25/09) y `WebSite` en el sitio, `BreadcrumbList` en las migas. El autor dice lo mismo que la firma de la nota | `web/components/ficha.js`, `pruebas/seo-paginas.test.mjs` |
 | **Título, descripción y `h1` propios** | Portada, cada sección, cada tema y cada nota; se recortan al largo que muestra Google | `pruebas/seo-paginas.test.mjs` |
-| **Imagen para compartir** | Una tarjeta propia por nota de 1200 × 630 (`opengraph-image`) y otra de 1080 × 1350 para el posteo de Instagram (`instagram.png`). Nunca la foto de otro medio | `web/lib/tarjeta.js`; medidas en `FORMATOS.md` |
+| **Imagen para compartir** | Una tarjeta propia por nota de 1200 × 630 (`opengraph-image`) y otra de 1080 × 1350 para el posteo de Instagram (`instagram.png`). Desde el 28/09 las dos llevan la foto de la nota del banco propio si hay (sin marca de agua ni crédito adentro: el crédito va en el epígrafe de la página y en el texto del posteo); si no, la banda de color o la placa | `web/lib/tarjeta.js`; medidas en `FORMATOS.md` |
 | **Íconos y manifiesto** | `favicon.ico` (16/32/48), `icon-192`, `icon-512`, `apple-touch-icon` (180) y `manifest.webmanifest` | `web/public/`, `web/scripts/hacer-iconos.mjs`, `pruebas/seo-paginas.test.mjs` |
 | **`feed.xml`** (RSS) | Para programas, no para el índice de búsqueda | `web/app/feed.xml` |
 | **`llms.txt`** | Descripción del sitio para buscadores con IA | `web/app/llms.txt` |

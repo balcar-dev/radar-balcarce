@@ -1,9 +1,10 @@
 # Para cargar a mano: Facebook e Instagram
 
-*Armado el 28/09/2026.* Esto es sólo la lista de tareas, con el texto ya
-listo para copiar y pegar. El detalle y el porqué de cada cosa está en
-`PERFILES.md`, `MEDIA-KIT.md` y `FORMATOS.md` — esto es el resumen de acción,
-para tenerlo abierto al lado mientras cargás.
+*Armado el 28/09/2026.* Esto es sólo la lista de tareas: dónde tocar en cada
+app. **El texto para copiar y pegar está en `PERFILES.md`** (es el único
+lugar donde vive, y una prueba cuida sus largos); los colores, en
+`MEDIA-KIT.md`; las medidas, en `FORMATOS.md`. Qué quedó hecho y qué falta,
+en `PENDIENTES.md` ("Para Hernán y Andrés", Biografías).
 
 Nada de esto lo puede hacer Claude: son cuentas, y las contraseñas y los
 botones de "guardar" los toca una persona.
@@ -12,9 +13,9 @@ botones de "guardar" los toca una persona.
 
 ## 1. La foto de perfil (Instagram y Facebook, la misma en las dos)
 
-**Archivo:** `reels/salida/avatar.png` (1080×1080, fondo azul oscuro con
-"RADAR" en blanco y "BALCARCE" en rojo — es el mismo archivo en las dos
-redes). **Ya subida el 28/09** en Instagram y Facebook.
+**Archivo:** `reels/salida/avatar.png` (el avatar azul, el mismo archivo en
+las dos redes; cómo es, en `PERFILES.md`). **Ya subida el 28/09** en
+Instagram y Facebook.
 
 - **Instagram:** Editar perfil → tocar la foto → Cambiar foto de perfil.
 - **Facebook:** la página "Radar Balcarce" → Editar foto de perfil.
@@ -26,11 +27,12 @@ node reels/avatar.mjs
 
 ## 2. La portada de Facebook
 
-**Archivo:** `reels/salida/portada-facebook.png` (1640×924, 16:9).
+**Archivo:** `reels/salida/portada-facebook.png`. **Ya subida el 28/09** (la
+azul).
 
 - Página "Radar Balcarce" → Editar portada → Subir foto → elegí el archivo.
 - Mirala después en el celular Y en la computadora: el avatar redondo tapa
-  distinto en cada una (`PERFILES.md` lo explica, "zona segura común").
+  distinto en cada una (`FORMATOS.md`, "La portada de Facebook", lo explica).
 
 Si hace falta un archivo nuevo:
 ```
@@ -39,64 +41,33 @@ node reels/portada.mjs
 
 Instagram no tiene portada: sólo la foto de perfil.
 
-## 3. La bio de Instagram (máx. 150 caracteres)
+## 3. Los textos (bio, información breve, descripción larga)
 
-Editar perfil → Biografía → **borrar todo y pegar esto tal cual**:
+**El texto está en `PERFILES.md`**: los bloques "Bio de Instagram",
+"Información breve de Facebook" y "Descripción larga de Facebook". Copiarlo
+de ahí tal cual (no de otro lado: ahí lo cuida una prueba).
 
-```
-Radar Balcarce: noticias de acá, la región y el país.
-Clima y agenda, todos los días.
-Todo en radarbalcarce.com
-```
+- **Instagram, bio** (ya cargada el 28/09): Editar perfil → Biografía →
+  borrar todo y pegar.
+- **Facebook, información breve y descripción**: Configuración de la página →
+  Información de la página. El 28/09 la presentación quedó la que estaba: la
+  página nueva tiene un solo campo, que ya junta la breve y la larga.
 
-## 4. La información breve de Facebook (máx. 101 caracteres)
+## 4. Nombre, usuario, categoría, enlace y ubicación
 
-Configuración de la página → Información de la página → Información breve:
+Qué poner en cada campo: las tablas de `PERFILES.md`. Dónde se toca:
 
-```
-Radar Balcarce: noticias de acá, la región y el país. Todo en radarbalcarce.com
-```
+- **Instagram, nombre** (ya cargado el 28/09) y **usuario** (`@radarbalcarce`,
+  no tocar): Editar perfil.
+- **Instagram, categoría** (falta): Editar perfil → Categoría.
+- **Instagram, enlace** (falta; la web no deja editarlo, sólo el celular):
+  Editar perfil. **Nunca `.com.ar`**: es `.com`.
+- **Facebook, categoría y sitio web** (ya estaban): Configuración de la
+  página → Categoría / Información de la página.
+- **Facebook, ubicación** (cargada el 28/09): Configuración de la página →
+  Información de la página → Ubicación.
 
-## 5. La descripción larga de Facebook
-
-Configuración de la página → Información de la página → Descripción:
-
-```
-Radar Balcarce es el medio digital que sigue lo que pasa en Balcarce, la
-región y el país. Cada día reunimos las noticias con la fuente siempre a la
-vista, y sumamos el clima, la agenda y los teléfonos útiles.
-
-Las notas se escriben con inteligencia artificial y se verifican contra las
-fuentes; lo sensible lo revisa una persona antes de salir. Si ves un error,
-escribinos y lo corregimos.
-
-Todas las notas, la agenda y el clima, en radarbalcarce.com
-```
-
-## 6. Nombre y usuario
-
-| Dónde | Qué poner |
-|---|---|
-| Instagram, nombre (el que se busca) | `Radar Balcarce · Noticias` |
-| Instagram, usuario | `@radarbalcarce` (ya está, no tocar) |
-| Facebook, nombre de la página | `Radar Balcarce` (ya está) |
-| Facebook, nombre de usuario | El más parecido a `radarbalcarce` que Facebook deje |
-
-## 7. Categoría (mejora cómo cada red lo entiende, aunque no se vea mucho)
-
-- **Instagram:** Editar perfil → Categoría → buscar "Sitio web de noticias y
-  medios de comunicación" (hoy dice "Blog personal": cambiarlo).
-- **Facebook:** Configuración de la página → Categoría → la más parecida a
-  "Sitio web de noticias y medios de comunicación" que ofrezca.
-
-## 8. Enlace y sitio web
-
-- Instagram, enlace: `https://radarbalcarce.com`
-- Facebook, sitio web: `https://radarbalcarce.com`
-
-**Nunca `.com.ar`** — no existe, es `.com`.
-
-## 9. Botón de contacto / llamado a la acción
+## 5. Botón de contacto / llamado a la acción
 
 Todavía sin decidir cuál usar (WhatsApp o el correo del medio). Cuando se
 decida:
@@ -105,20 +76,15 @@ decida:
 - **Facebook:** el botón de la página (hoy dice "Más información" o "Enviar
   mensaje") → apuntarlo a `radarbalcarce.com`.
 
-## 10. Ubicación (sólo Facebook)
+## 6. Historias destacadas fijas (sólo Instagram, falta)
 
-Configuración de la página → Información de la página → Ubicación:
-**Balcarce, Buenos Aires**.
+Cuáles y en qué orden: `PERFILES.md`. La portada de cada una: cuadrada pero
+pensada para verse bien recortada en círculo (un ícono simple por tema
+alcanza; no hace falta texto).
 
-## 11. Historias destacadas fijas (sólo Instagram)
+## 7. Lo que NO hay que tocar todavía
 
-Cuatro, en este orden: **Farmacia · Teléfonos · Agenda · Clima**. La portada
-de cada una: cuadrada pero pensada para verse bien recortada en círculo (un
-ícono simple por tema alcanza; no hace falta texto).
-
-## 12. Lo que NO hay que tocar todavía
-
-- El botón de contacto (punto 9): falta decidir WhatsApp o correo.
+- El botón de contacto (punto 5): falta decidir WhatsApp o correo.
 - Nada de esto pide ninguna clave ni token: son sólo textos e imágenes,
   pegados a mano en cada app.
 

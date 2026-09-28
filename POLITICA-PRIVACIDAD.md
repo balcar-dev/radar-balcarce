@@ -1,70 +1,40 @@
-# Política de privacidad de Radar Balcarce
+# Política de privacidad: lo interno
 
-*Es la copia de referencia del texto que ve el público en
-`/politica-de-privacidad` (la fuente es `web/app/politica-de-privacidad/page.js`:
-si se cambia una, se cambia la otra). También explica qué se hace con los
-datos que llegan por el buzón. Ver `INVESTIGACION.md`, sección 5, para el
-marco legal (Ley 25.326).*
+*Actualizado el 28/09/2026.* **El texto público vive en un solo lugar: la
+página `/politica-de-privacidad`** (`web/app/politica-de-privacidad/page.js`).
+Si hay que cambiar lo que lee el público, se cambia ahí; este documento ya no
+es una copia de la página. Acá queda sólo lo interno: qué se hace con lo que
+manda la gente. El marco legal (Ley 25.326), en `INVESTIGACION.md`, sección 5.
 
----
+## Por dónde llega
 
-En Radar Balcarce pedimos algunos datos cuando alguien nos manda un dato,
-un reclamo, una opinión para publicar o algo para investigar. Esta página
-explica qué pedimos, para qué lo usamos y qué podés hacer si querés que
-borremos tus datos.
+No hay formulario en el sitio. La gente escribe por **WhatsApp** o por
+**mail** (la tarjeta "¿Viste algo en el barrio?" y las invitaciones de la web,
+`web/components/piezas.js`). Lo que sirve se carga **a mano** en el buzón del
+panel (pestaña Buzón), con uno de cuatro tipos: dato, reclamo, opinión o
+seguimiento (`panel/buzon.mjs`, con la regla de cada uno).
 
-## Qué pedimos
+## Qué se guarda y dónde
 
-Según el formulario, puede ser: tu nombre, un teléfono o WhatsApp de
-contacto, y el texto de lo que nos quieras contar. Nunca es obligatorio
-dejar tu nombre — podés pedir mantenerte anónimo, salvo en las notas de
-opinión, que siempre van firmadas con nombre real porque son un texto de
-opinión personal, no un dato anónimo.
+- Cada entrada guarda el texto, el tipo, el nombre y el teléfono de contacto
+  (si los dio), si pidió anonimato, quién la cargó y cuándo
+  (`panel/servidor.mjs`, `/api/buzon`).
+- Vive **sólo en la PC del panel** (`panel/datos/`, fuera de git). No va a
+  GitHub ni a la web: `web/data/decisiones.json` exporta sólo las decisiones
+  editoriales, nunca el buzón, el historial ni los contactos.
+- La copia de seguridad (`panel/respaldo.mjs`) sí lo incluye; por eso la
+  carpeta de respaldo no va a GitHub.
 
-## Cómo medimos las visitas
+## Qué se hace con eso
 
-Contamos cuánta gente entra y qué notas se leen. Es lo único que nos permite
-saber qué le interesa a Balcarce y qué no.
-
-Lo hacemos con Cloudflare Web Analytics, de Cloudflare, la empresa donde vive
-el sitio, elegida a propósito: **no usa cookies, no arma un perfil de cada
-persona y no la sigue a otros sitios**. Sabemos que alguien entró, desde qué
-tipo de dispositivo y qué página miró. Nada más.
-
-No usamos Google Analytics ni ninguna herramienta de una red publicitaria. Un
-medio que promete cuidar a sus lectores no puede estar entregándoselos a otro.
-
-## Para qué lo usamos
-
-- Para poder volver a contactarte si necesitamos verificar algo antes de
-  publicar.
-- Para armar la nota, el reclamo o el seguimiento que nos pediste.
-- Nunca para otra cosa. No vendemos ni compartimos tu contacto con
-  nadie — ni con otro medio, ni con un anunciante, ni con el municipio.
-
-## Qué publicamos y qué no
-
-Tu **teléfono nunca se publica**. Tu nombre se publica sólo si diste tu
-autorización explícita (por ejemplo, en una nota de opinión firmada) o si
-pediste específicamente que se mencione. Si pediste anonimato, lo
-respetamos — salvo que la ley obligue a lo contrario en un caso muy
-puntual, algo que te avisaríamos antes de que pase.
-
-## Cómo pedir que borremos tus datos
-
-Escribinos por el mismo canal donde nos contactaste (WhatsApp o el
-formulario del sitio) pidiendo que borremos tu información, y lo hacemos.
-Si ya publicamos una nota que salió de tu dato, borrar tu contacto no
-borra la nota publicada — eso se resuelve por separado, hablando con la
-redacción.
-
-## Reclamos: la otra parte también entra en esto
-
-Cuando recibimos un reclamo contra una persona o un comercio, antes de
-publicar le pedimos su versión a esa otra parte. Esto no es sólo una
-regla editorial: es lo que nos protege a nosotros y a vos de publicar
-algo apurado que después haya que corregir.
-
----
-
-*Última actualización: 24 de septiembre de 2026.*
+- Se usa para verificar antes de publicar y para armar la nota, el reclamo o
+  el seguimiento que pidieron. Nunca para otra cosa ni se comparte con nadie.
+- **El teléfono nunca se publica.** El nombre, sólo con autorización
+  explícita; si pidió anonimato, se respeta. La opinión va siempre firmada con
+  nombre real.
+- **Un reclamo nunca sale de un solo lado**: antes se le pide su versión a la
+  otra parte y se anota en la entrada (`respuestaOtraParte`).
+- **Si alguien pide que borremos sus datos**, se borra la entrada desde el
+  panel (pestaña Buzón → Borrar). Una nota ya publicada no se borra por eso: se
+  resuelve aparte. Las copias viejas del respaldo se van renovando solas (se
+  guardan las últimas 14).

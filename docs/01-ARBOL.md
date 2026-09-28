@@ -1,6 +1,6 @@
 # 01 · El árbol: cada carpeta y cada archivo
 
-*Escrito el 28/09/2026 con `git ls-files` (433 archivos versionados) y
+*Escrito el 28/09/2026 con `git ls-files` (la lista completa de lo versionado) y
 verificado contra el código: quién importa a quién, qué corre cada workflow
 (`.github/workflows/`) y cada script de `package.json`. Si se suma o se saca un
 archivo, se corrige acá.*
@@ -20,7 +20,7 @@ Cómo leer las tablas:
 
 ```
 radar-balcarce/
-├── .github/workflows/   13 workflows: lo que corre solo en GitHub (docs/08)
+├── .github/workflows/   12 workflows: lo que corre solo en GitHub (docs/08)
 ├── ingesta/             el motor: fuentes, cruce, selección, lectura con IA, verificador. SIN dependencias (docs/02, 03, 04)
 ├── reels/               placas, voz, video y la reescritura con IA. SÍ tiene dependencias (docs/04, 07)
 ├── redes/               Facebook, Instagram, contrato, vigilante, WhatsApp. SIN dependencias (docs/07, 08)
@@ -33,7 +33,7 @@ radar-balcarce/
 │   ├── data/            los JSON que lee el sitio (los escribe GitHub, el panel o una persona)
 │   ├── public/          íconos, encabezados de Cloudflare, fotos del banco
 │   └── fuentes/         las letras de las imágenes para compartir
-├── pruebas/             82 archivos de pruebas + 2 de material (docs/10)
+├── pruebas/             las pruebas (*.test.mjs) + 2 de material (docs/10)
 ├── comercial/           la base de comercios, aparte del sitio (COMERCIAL.md)
 ├── docs/                la documentación (docs/00-INDICE.md) e historico/
 └── (raíz)               CLAUDE.md, los criterios, PENDIENTES.md y demás documentos; package.json; ARRANCAR.bat
@@ -65,11 +65,10 @@ Lo que **no** se versiona (`.gitignore`): `node_modules/`, `.env*`,
 | `redes.yml` | "Redes": Facebook, el reloj, armar y subir piezas, completar direcciones, guardar el libro | cron-job.org; al terminar "Actualizar la web"; a mano | Sí |
 | `piezas.yml` | "Piezas": armar (y publicar) una pieza a mano | A mano | A mano |
 | `vigilancia.yml` | "Vigilancia": `redes/vigilar.mjs` | cron-job.org cada 30 min; `schedule` cada 3 h; a mano | Sí |
-| `auditoria.yml` | "Auditoría": medidas, íconos, SEO en vivo y la semana del contrato | Lunes 12:00 UTC; a mano | Sí (al 28/09 nunca corrió: `PENDIENTES.md`) |
+| `auditoria.yml` | "Auditoría": medidas, íconos, SEO en vivo y la semana del contrato | Lunes 12:00 UTC; a mano | Sí (corrió por primera vez el 28/09; guarda `web/data/auditoria.json`) |
 | `auditar-redes.yml` | "Auditar redes": el contrato contra Meta (hoy, ayer, semana, crudo) | A mano | A mano |
 | `auditar-voz.yml` | "Auditar voz": clips con la voz real y su transcripción | A mano | A mano |
 | `ver-facebook.yml` | "Ver Facebook": qué hay publicado de verdad en la página | A mano | A mano |
-| `probar-fotos.yml` | "Probar banco de fotos": la comparación de fotos sobre la tapa de hoy, sin publicar | A mano | A mano |
 | `prueba-estadisticas.yml` | "Prueba de estadísticas": visitas y seguidores, y qué permisos faltan | A mano | A mano |
 | `prueba-gemini.yml` | "Prueba de Gemini": un pedido mínimo con la clave de redacción | A mano | A mano |
 | `prueba-whatsapp.yml` | "Prueba de WhatsApp": un mensaje de prueba por CallMeBot | A mano | A mano |
@@ -87,7 +86,7 @@ Lo que **no** se versiona (`.gitignore`): `node_modules/`, `.env*`,
 | `criterio.mjs` | Los números del criterio editorial (largos, topes, medios, cupos, horas, Facebook, podcasts, contrato, nota del dólar) | Casi todo el código; `pruebas/criterio.test.mjs` lo compara con `CRITERIO-EDITORIAL.md` | Sí |
 | `cruce.mjs` | Junta las notas que cuentan el mismo hecho (TF-IDF, 0,42) y maneja la memoria de 36 horas | `ingesta.mjs` | Sí |
 | `estadistica-diaria.mjs` | Cuántas notas se publicaron hoy y por sección, y su informe de las 21 | `generar-datos.mjs`, `redes/avisos.mjs` | Sí |
-| `fotos.mjs` | Candidatas de foto, comparación con Gemini o Groq, la red de seguridad contra la marca de agua, Wikimedia y el crédito | `web/scripts/fotos-notas.mjs`, `probar-fotos.mjs` | Sí |
+| `fotos.mjs` | Candidatas de foto, comparación con Gemini o Groq, la red de seguridad contra la marca de agua, Wikimedia y el crédito | `web/scripts/fotos-notas.mjs` | Sí |
 | `fuentes-cruce.mjs` | Las 160 fuentes del cruce de medios, una por línea | `ingesta.mjs`, `lectura-ia.mjs`, `listar-fuentes.mjs` | Sí |
 | `fuentes.mjs` | Las 58 fuentes de siempre y todas las listas de palabras: sección, semáforo, local, zona, figuras, filtro de entrada, temas, farmacias a mano; `fichaDeFuente` | `ingesta.mjs`, `lectura-ia.mjs`, `reels/reescritura.mjs`, `generar-datos.mjs` y más | Sí |
 | `ingesta.mjs` | `ingestar()`: baja, lee, filtra, marca, cruza, clasifica, puntúa, semáforo, medios, cupos, clima y farmacias. Corrido solo, deja `ingesta/salida/` | `generar-datos.mjs` (nube), `panel/servidor.mjs` (PC); a mano: `npm run ingesta` | Sí |
@@ -95,7 +94,6 @@ Lo que **no** se versiona (`.gitignore`): `node_modules/`, `.env*`,
 | `lectura-ia.mjs` | La lectura con IA: fichas, qué saca, secciones, dos llaves, repetidas; Gemini con Groq de respaldo | `generar-datos.mjs` (nube) | Sí |
 | `listar-fuentes.mjs` | Escribe `FUENTES.md` desde las dos listas de fuentes | A mano: `node ingesta/listar-fuentes.mjs` | A mano |
 | `perfil-balcarce.md` | Lo que la IA de lectura sabe de Balcarce (sólo datos seguros) | La IA lo lee (vía `lectura-ia.mjs`) | Sí |
-| `probar-fotos.mjs` | Corre la comparación de fotos sobre la tapa de hoy y deja un reporte | `probar-fotos.yml` | A mano |
 | `probar.mjs` | Prueba si las fuentes candidatas (`CANDIDATOS`) o una URL suelta están vivas | A mano: `node ingesta/probar.mjs [url]` | A mano |
 | `prompt-editorial.mjs` | Lee la instrucción de la IA de `CRITERIO-EDITORIAL.md` § 12, entre sus marcas; sin ella, la reescritura no arranca | `reels/reescritura.mjs` | Sí |
 | `utiles.mjs` | Los teléfonos útiles (`NUMEROS`), la farmacia de turno que cambia a las 8:30 (`diaDeTurno`), qué día tocan los útiles (`diaRotativoDeUtiles`) y qué decisión es de una persona (`decisionHumana`) | `ingesta.mjs`, `generar-datos.mjs`, `panel/`, `redes/`, `reels/` | Sí |
@@ -240,7 +238,7 @@ Lo que **no** se versiona (`.gitignore`): `node_modules/`, `.env*`,
 | `ruta.js` | La dirección de cada nota y el rescate de la 404 | `archivo.js`, `datos.js`, páginas de nota, redes, `generar-redirects.mjs` | Sí |
 | `seguir-leyendo.js` | "Seguí leyendo" | `nota/[id]/page.js` | Sí |
 | `sitio.js` | La dirección del sitio (`SITIO`), si es el dominio propio, `MOSTRAR_TEMAS` | Metadatos, sitemap, robots, feed | Sí |
-| `tarjeta-diseno.js` | Las cuentas de las tarjetas y el interruptor `FOTO_EN_INSTAGRAM` (prendido desde el 28/09: el espejo lleva la foto del banco si hay) | `tarjeta.js`, `instagram.png/route.js`, `redes/publicar.mjs` | Sí |
+| `tarjeta-diseno.js` | Las cuentas de las tarjetas y los interruptores `FOTO_EN_INSTAGRAM` y `FOTO_EN_ENLACE` (prendidos desde el 28/09: el espejo y la tarjeta para compartir llevan la foto del banco si hay) | `tarjeta.js`, `instagram.png/route.js`, `redes/publicar.mjs` | Sí |
 | `tarjeta.js` | Dibuja las tarjetas para compartir y la de Instagram | Las rutas `opengraph-image` e `instagram.png` | Sí |
 | `texto.js` | Comparar textos, nombres, recortes, repetidas (`sinNotasRepetidas`) | Casi todo, también `ingesta/` | Sí |
 | `tiempo.js` | "Hace cuánto" | `datos.js`, `horas-vivas.js` | Sí |
@@ -282,8 +280,8 @@ Lo que **no** se versiona (`.gitignore`): `node_modules/`, `.env*`,
 | `vigilancia.json` | Lo que ya avisó el vigilante | "Vigilancia" |
 | `estadisticas.json` | Visitas y seguidores | "Vigilancia" |
 
-No versionados: `dolar.json` (cada build) y `auditoria.json` (lo escribe
-"Auditoría", que al 28/09 nunca corrió).
+No versionado: `dolar.json` (cada build). `auditoria.json` sí se versiona:
+lo escribe y lo sube "Auditoría" (la primera vez, el 28/09).
 
 ### `web/public/` y `web/fuentes/`
 
@@ -292,7 +290,7 @@ No versionados: `dolar.json` (cada build) y `auditoria.json` (lo escribe
 | `web/public/_headers` | Los encabezados de Cloudflare: seguridad, tipos de las tarjetas y del `.ics`, caché | Sí |
 | `web/public/manifest.webmanifest` | La ficha del sitio para instalarlo en el celular | Sí |
 | `web/public/favicon.ico`, `apple-touch-icon.png`, `icon-192.png`, `icon-512.png` | Los íconos del sitio (el radar en el rojo de marca; los dibuja `hacer-iconos.mjs`) | Sí |
-| `web/public/fotos-notas/` (105 fotos al 28/09) | Las fotos elegidas por el banco, una por nota | Sí |
+| `web/public/fotos-notas/` | Las fotos elegidas por el banco, una por nota | Sí |
 | `web/fuentes/` (`SourceSerif4-900.ttf`, `Inter-400.ttf`, `Inter-600.ttf`) | Las letras de las tarjetas para compartir y del espejo | Sí |
 
 ## `comercial/` — la base de comercios, aparte del sitio (`COMERCIAL.md`)
@@ -319,7 +317,7 @@ Los documentos `00` a `12` y la carpeta `historico/`: ver
 
 ## `pruebas/`
 
-82 archivos `*.test.mjs` y 2 de material (`cuerpo-de-prueba.mjs`,
+Los archivos `*.test.mjs` y 2 de material (`cuerpo-de-prueba.mjs`,
 `libro-real-24-25-09.json`): cada uno con su línea en
 `docs/10-REGLAS-Y-PRUEBAS.md`. Se corren con `npm test`.
 

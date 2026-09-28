@@ -67,7 +67,7 @@ cron-job.org, GitHub Actions y el interruptor de las redes.
 | **Todos los días, a las 21** | Leer el WhatsApp del resumen. "✅ todo bien" = nada que hacer. Si no llegó, ver "El WhatsApp no llega" | 1 minuto |
 | **Cuando llega un WhatsApp de notas esperando** (cada 3 horas como mucho) | Decidirlas en el panel (`09-PANEL`) | Unos minutos |
 | **Cuando llega un WhatsApp de problema** | Seguir lo que dice; si no se entiende, "Si algo dejó de salir" | — |
-| **Los lunes** | Mirar que la **Auditoría** haya corrido (Actions → Auditoría). Al 28/09 **nunca corrió**: correrla a mano una vez (Run workflow) | 1 minuto |
+| **Los lunes** | Mirar que la **Auditoría** haya corrido (Actions → Auditoría). Corrió por primera vez el 28/09; si un lunes no corre, correrla a mano (Run workflow) | 1 minuto |
 | **Principios de cada mes** | Mirar el gasto de la clave paga de Gemini en Google AI Studio (presupuesto: USD 10 por mes desde octubre) | 2 minutos |
 | **Cada 90 días** (la primera, hacia el 24/12/2026) | Volver a verificar las medidas de las redes (`FORMATOS.md`). La auditoría avisa | — |
 | **Antes del 21/09/2027** | Renovar el dominio en DonWeb y el token de GitHub de cron-job.org (el vigilante avisa 30 días antes) | — |
@@ -269,7 +269,9 @@ panel a internet: `tailscale funnel --https=443 off`.
 2. **cron-job.org:** ¿están prendidos todos los trabajos? (tarea 10).
 3. **GitHub → Actions:** ¿hay una corrida en rojo? Abrirla y leer el paso rojo.
    Un aviso amarillo de "Vigilancia" no es una falla: es lo que encontró.
-4. **`REDES_ACTIVAS`** dice `Si` (tarea 5).
+4. **`REDES_ACTIVAS`** dice `Si` (tarea 5). Desde el 28/09 está en `No` a
+   propósito, hasta el visto bueno de Hernán al diseño nuevo (`CLAUDE.md`,
+   "Estado").
 5. **¿La PC está prendida?** Sólo importa para el panel.
 6. **Si se publica pero nadie lo ve en Facebook:** Actions → **Ver Facebook**
    (muestra lo que Meta tiene publicado) y mirar la página desde una cuenta que
@@ -473,5 +475,5 @@ La lista completa y al día de lo pendiente: `PENDIENTES.md`.
 
 En `PENDIENTES.md`: la pestaña Calendario del panel no cambia las horas de lo
 que publica GitHub (las reales son las de fábrica de `panel/horarios.mjs`), la
-Auditoría de los lunes nunca corrió y hay que mirar cuántos trabajos tiene
-cron-job.org.
+Auditoría de los lunes tiene que confirmar que corre sola (la primera vez fue
+el 28/09) y hay que mirar cuántos trabajos tiene cron-job.org.

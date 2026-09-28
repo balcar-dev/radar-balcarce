@@ -74,6 +74,9 @@ alrededor ("Si", "SÍ", " sí "). La usan dos programas:
   están apagadas"), así no se gasta la voz paga de Gemini en videos que no se
   van a publicar.
 
+**Hoy está apagado**: `No` desde el 28/09, hasta el visto bueno de Hernán al
+diseño nuevo (el estado del día está en `CLAUDE.md`, "Estado").
+
 Con el interruptor apagado: el paso de Facebook corre igual pero sólo simula,
 no se arma ni se sube ningún video, no se reintentan espejos, el libro no
 cambia y el vigilante dice una vez por día que las redes están apagadas (ver
@@ -137,7 +140,10 @@ nota sigue en la portada, también con el de ahora.
 
 La imagen que muestra Facebook la saca sola de la página de la nota: es la
 **tarjeta apaisada de 1200 × 630** (`web/app/nota/[id]/opengraph-image.js`,
-dibujada por `web/lib/tarjeta.js`), sin foto de otro medio.
+dibujada por `web/lib/tarjeta.js`). Desde el 28/09 lleva a la izquierda la
+foto de la nota guardada en el banco propio, sin el crédito adentro (está en el
+epígrafe de la página; `FOTO_EN_ENLACE`); sin foto que sirva, la banda de
+color.
 
 **3d. Publicar y anotar.** `api.publicarEnFacebook` (`redes/meta.mjs`) publica
 en la página con el token de la página. Apenas Meta contesta, se anota en el
@@ -449,8 +455,11 @@ en `web/lib/tarjeta-diseno.js`, decisión del 27/09: la foto va donde haya una
 que sirva). Sin foto en el banco, sale la placa sin foto. La misma constante la
 leen la imagen (`instagram.png/route.js`) y el texto del posteo
 (`redes/publicar.mjs`), así nunca sale un crédito sin foto ni una foto sin
-crédito. Para volver a la placa en todos: `false`. La tarjeta apaisada de Facebook nunca lleva foto (su texto no nombra
-la fuente, así que no habría dónde poner el crédito).
+crédito. Para volver a la placa en todos: `false`. La tarjeta apaisada para
+compartir el enlace (Facebook, WhatsApp) también lleva la foto desde el 28/09
+(`FOTO_EN_ENLACE`, `paraCompartirConFoto` en `web/lib/tarjeta.js`): a la
+izquierda, sin el crédito adentro, que está en el epígrafe de la página a la
+que lleva el enlace. Sin foto, la banda de color con los anillos.
 
 ## La voz y los guiones
 
@@ -510,7 +519,7 @@ se borra, esa pieza o ese posteo puede volver a salir.
 | **Estadísticas** | 9 y 21 | `redes/estadisticas.mjs`, guarda `web/data/estadisticas.json` (sólo números, 120 mediciones) | Visitas de Cloudflare Web Analytics (aproximadas) y seguidores de Facebook e Instagram; vistas, alcance e interacciones **sólo si `META_TOKEN` tiene** `read_insights` e `instagram_manage_insights` (hoy no los tiene) | WhatsApp de la mañana y resumen de las 21 |
 | **Auditar redes** | a mano | `redes/auditar-redes.mjs` (`auditar-redes.yml`) | Hoy, ayer, la semana (% de cumplimiento por red y pieza) y lo que devuelve Meta sin interpretar | El registro de la corrida (no manda WhatsApp) |
 | **La semana del contrato** | lunes 9:00 | `redes/auditar-redes.mjs --semana` dentro de `auditoria.yml` | Igual que la semana de arriba | El registro |
-| **Auditoría semanal** | lunes 9:00 | `redes/auditar.mjs` (`auditoria.yml`), guarda `web/data/auditoria.json` | Que la tarjeta de Instagram mida 1080 × 1350 y la de compartir 1200 × 630, los íconos, el SEO en vivo y que las medidas de `redes/formatos.mjs` no tengan más de 90 días (verificadas el 25/09) | WhatsApp si hay problemas. **Al 28/09 nunca corrió** (ver "Qué puede fallar") |
+| **Auditoría semanal** | lunes 9:00 | `redes/auditar.mjs` (`auditoria.yml`), guarda `web/data/auditoria.json` | Que la tarjeta de Instagram mida 1080 × 1350 y la de compartir 1200 × 630, los íconos, el SEO en vivo y que las medidas de `redes/formatos.mjs` no tengan más de 90 días (verificadas el 25/09) | WhatsApp si hay problemas. Corrió por primera vez el 28/09 (ver "Qué puede fallar") |
 | **Ver Facebook** | a mano | `redes/ver-facebook.mjs` (`ver-facebook.yml`) | Qué hay publicado de verdad en la página: posteos, reels, historias, con fecha | El registro |
 | **Auditar voz** | a mano | `reels/auditar-voz.mjs` | Ver "La voz y los guiones" | El registro (PASA/FALLA) |
 
@@ -638,14 +647,14 @@ sílabas).
 | **El video pasa de 58 segundos** | Aviso amarillo en la corrida; la historia sube recortada con fundido | Nada: está previsto |
 | **El libro no se pudo guardar** | Redes en rojo: "No se pudo guardar el libro después de tres intentos" | Mirar enseguida: la vuelta siguiente puede repetir lo publicado |
 | **Se publica pero el público no lo ve** (pasó hasta el 26/09: la app de Meta estaba en modo desarrollo) | Nadie avisa | Correr "Ver Facebook" y mirar la página desde una cuenta que no sea administradora |
-| **La auditoría semanal no corre** | Hoy nadie lo nota: el vigilante sólo avisa si `web/data/auditoria.json` existe y tiene más de 10 días, y ese archivo todavía no existe | Correr "Auditoría" a mano una vez: al 28/09 nunca corrió (`PENDIENTES.md`) |
+| **La auditoría semanal no corre** | El vigilante avisa si `web/data/auditoria.json` tiene más de 10 días (existe desde el 28/09, la primera corrida) | Correr "Auditoría" a mano (Actions → Auditoría → Run workflow) |
 | **Las medidas de `formatos.mjs` quedaron viejas** (90 días desde el 25/09) | La auditoría semanal avisa por WhatsApp | Volver a verificarlas (`FORMATOS.md`) |
 | **Faltan permisos de estadísticas en `META_TOKEN`** | El resumen dice qué le falta | Regenerar el token con `read_insights` e `instagram_manage_insights` (una persona) |
 
 ## Lo que sigue abierto
 
 En `PENDIENTES.md`: los disparos de cron-job.org a Redes (tres por hora, de 0
-a 22), la pestaña Calendario que no llega a GitHub, la Auditoría de los lunes
-que nunca corrió (y `auditoriaVencida`, que no avisa si nunca corrió),
+a 22), la pestaña Calendario que no llega a GitHub, confirmar que la
+Auditoría de los lunes corra sola (la primera vez fue el 28/09),
 el nombre doble de la variable del ID de la página y
 la historia de un podcast que no se puede reintentar.

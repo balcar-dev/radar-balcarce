@@ -10,7 +10,7 @@ cada 90 días (la auditoría avisa por WhatsApp cuando toca).
 |---|---|---|---|
 | Instagram · posteo | 1080 × 1350 | 4:5 | tarjeta propia de la nota: `/nota/ID/instagram.png` (con su foto si tiene, desde el 28/09) |
 | Instagram · historia / reel | 1080 × 1920 | 9:16 | placas de `reels/placa.mjs` |
-| Facebook · posteo con enlace | 1200 × 630 | 1,91:1 | `opengraph-image` de la nota (sin foto) |
+| Facebook · posteo con enlace | 1200 × 630 | 1,91:1 | `opengraph-image` de la nota (con su foto a la izquierda si tiene, desde el 28/09) |
 | Facebook · posteo con foto | 1080 × 1350 (o 1080 × 1080) | 4:5 | — |
 | Facebook · historia / reel | 1080 × 1920 | 9:16 | las mismas placas que Instagram |
 | Facebook · portada de la página | 1640 × 924 (se ve a 820 × 312 en compu y 640 × 360 en celular) | 16:9 | `node reels/portada.mjs` (ver abajo) |
@@ -53,7 +53,7 @@ redes", aprobado por Hernán el 28/09). Qué pieza usa qué plantilla:
 | Historias y reels (podcasts, clima, farmacia, extras) | entre las filas **250 y 1580** (arriba la app pone su nombre y la barra, abajo los botones); la firma termina en la 1570 | nada: el fondo es papel liso | `ZONA_TEXTO` en `reels/placa.mjs` (= `margenArriba` y `margenAbajo` de acá) |
 | Subtítulos del video | centrados en la fila **1660**, sobre papel, debajo de todo lo demás | — | `SUB_Y` en `reels/reel.mjs` |
 | Espejo en Instagram (4:5) | entre las filas **150 y 1215** (la grilla cuadrada recorta 135 arriba y abajo) y a **72 px** de los costados (la 3:4 recorta 34) | la foto (arriba, 690 px de alto) o el bloque de color de la placa sin foto | `INSTAGRAM` en `web/lib/tarjeta-diseno.js` |
-| Enlace de Facebook, WhatsApp (1,91:1) | a 64 px de los costados | la banda de color de arriba | `web/lib/tarjeta.js` |
+| Enlace de Facebook, WhatsApp (1,91:1) | a 64 px de los costados; con foto, el texto va a la derecha de la foto | la foto (a la izquierda, 460 px de ancho, `ANCHO_FOTO_ENLACE`) o, sin foto, la banda de color de arriba | `web/lib/tarjeta.js`, `web/lib/tarjeta-diseno.js` |
 
 Si una historia trae más de lo que entra (tres farmacias con direcciones
 largas, el aviso de clima), la placa se achica entera; nunca se corta ni pisa
@@ -70,9 +70,10 @@ la firma. Los títulos nunca se cortan: se achica la letra. Lo prueba
   si la grilla la recorta, no se pierde nada. La foto va sin el crédito
   adentro; el crédito va al pie del posteo.
 - **Facebook**, con un enlace, muestra la imagen del enlace apaisada. Por eso
-  ahí va la de 1200 × 630, que es la misma que ve WhatsApp. No lleva la foto
-  de la nota: el texto de ese posteo no nombra fuentes, así que el crédito no
-  tendría dónde ir.
+  ahí va la de 1200 × 630, que es la misma que ve WhatsApp. Desde el 28/09
+  lleva la foto de la nota a la izquierda (`FOTO_EN_ENLACE`), sin el crédito
+  adentro: el crédito está en el epígrafe de la página a la que lleva el
+  enlace. Sin foto, la banda de color.
 - **Historias y reels**: 9:16. Las apps ponen su propia interfaz arriba (~250 px)
   y abajo (~340 px): ahí no va texto.
 

@@ -158,4 +158,5 @@ condiciones prohíben copiarlos. Sirven para mirar, no para importar.
 - **Sin envíos masivos** y siempre con la opción de salir de la lista (ley
   25.326). Ver "Qué se busca y para qué" arriba.
 
-Qué falta hacer, por prioridad: `PENDIENTES.md`, sección G.
+Qué falta hacer: `PENDIENTES.md`, "Decisiones de criterio que esperan a los
+dos" ("Base comercial") y "Para Claude" (`comercial/propuestas.mjs`).

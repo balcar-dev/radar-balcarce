@@ -757,5 +757,6 @@ Las pruebas que cuidan el diseño: `pruebas/tipografia.test.mjs`,
   existe, `tarjeta-diseno.test.mjs`; la que lo prueba es `placas.test.mjs`);
   y el título de una prueba de `pruebas/archivo.test.mjs` ("corta las listas
   en 72 horas", el código corta en 36). Están en `PENDIENTES.md`.
-- `web/data/auditoria.json` no existe todavía: la Auditoría de los lunes nunca
-  corrió (`docs/08-INFRAESTRUCTURA.md`, `PENDIENTES.md`).
+- La Auditoría de los lunes corrió por primera vez el 28/09
+  (`web/data/auditoria.json`): falta confirmar que corra sola el lunes
+  siguiente (`PENDIENTES.md`).

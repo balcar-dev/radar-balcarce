@@ -83,7 +83,7 @@ Una regla o un número vive en **un** lugar; los demás documentos remiten.
 | Las medidas de imagen y video de cada red | `redes/formatos.mjs` (y `FORMATOS.md`, el porqué) | `pruebas/formatos.test.mjs` y la auditoría de los lunes |
 | Las biografías de las redes | `PERFILES.md` | `pruebas/perfiles.test.mjs` |
 | Lo legal | `INVESTIGACION.md` | — |
-| El texto de la política de privacidad | `web/app/politica-de-privacidad/page.js` (`POLITICA-PRIVACIDAD.md` es la copia de referencia) | — |
+| El texto de la política de privacidad | `web/app/politica-de-privacidad/page.js` (la única fuente; `POLITICA-PRIVACIDAD.md` cuenta sólo lo interno del buzón) | — |
 
 ## Todos los documentos
 
@@ -99,9 +99,9 @@ Una regla o un número vive en **un** lugar; los demás documentos remiten.
 | `docs/05-FOTOS.md` | El banco de fotos: cómo se elige una foto sin marca de agua, Wikimedia, qué se guarda, dónde se muestra y dónde no |
 | `docs/06-WEB.md` | Cómo se arma el sitio: `generar-datos.mjs` paso a paso, los archivos de `web/data/`, la tapa, las páginas, el archivo de 180 días, la dirección fija, las notas propias, el SEO y el diseño |
 | `docs/07-REDES.md` | Facebook e Instagram: el interruptor, los posteos y el espejo, el reloj, las piezas, los podcasts, el contrato del día, el libro, la conexión con Meta y las auditorías |
-| `docs/08-INFRAESTRUCTURA.md` | Qué corre dónde: los trece workflows, cron-job.org, Cloudflare, GitHub, las claves de IA y sus topes, todos los secretos por nombre, la vigilancia, los vencimientos y lo que cuesta |
+| `docs/08-INFRAESTRUCTURA.md` | Qué corre dónde: los doce workflows, cron-job.org, Cloudflare, GitHub, las claves de IA y sus topes, todos los secretos por nombre, la vigilancia, los vencimientos y lo que cuesta |
 | `docs/09-PANEL.md` | El tablero de la PC: arrancarlo, las pestañas, qué pasa cuando alguien decide, cómo sube a GitHub, el respaldo, la agenda paso a paso y cómo se podría pasar a online |
-| `docs/10-REGLAS-Y-PRUEBAS.md` | **Las reglas numeradas** (1 a 71), qué prueba cuida cada una, el mapa de `pruebas/` y la regla de la prueba después del error |
+| `docs/10-REGLAS-Y-PRUEBAS.md` | **Las reglas numeradas** (1 a 72), qué prueba cuida cada una, el mapa de `pruebas/` y la regla de la prueba después del error |
 | `docs/11-OPERACION.md` | El manual de uso diario: los enlaces, corregir, retirar, escribir cuerpos, prender o apagar las redes, publicar una pieza, qué mirar cuando algo deja de salir |
 | `docs/12-GLOSARIO.md` | Cada palabra propia del proyecto, con su definición y dónde vive |
 
@@ -123,7 +123,7 @@ Una regla o un número vive en **un** lugar; los demás documentos remiten.
 | `PUBLICIDAD.md` | Los tres avisos, las reglas que no se negocian, AdSense y cómo se piensa vender | De la publicidad |
 | `COMERCIAL.md` | La base de comercios de Balcarce (aparte del sitio), la vigencia y las propuestas | De la base comercial |
 | `INVESTIGACION.md` | Lo legal, con sus fuentes (18/09, revisado el 25/09) | De lo legal |
-| `POLITICA-PRIVACIDAD.md` | Copia de referencia del texto de `/politica-de-privacidad` y qué se hace con los datos del buzón | La fuente es la página |
+| `POLITICA-PRIVACIDAD.md` | Qué se hace con los datos del buzón (lo interno); el texto público es la página `/politica-de-privacidad` | Del buzón |
 
 ### En otras carpetas
 

@@ -19,7 +19,7 @@ rioplatense, sin voseo forzado.
     redes/     Facebook e Instagram (API de Meta), contrato del día, vigilante, WhatsApp. SIN dependencias
     panel/     el tablero editorial (vive en la PC de Hernán, puerto 4321). SIN dependencias
     web/       el sitio público (Next.js 15, JavaScript, HTML estático); web/scripts/generar-datos.mjs arma los datos
-    pruebas/   `npm test`: 1.353 pruebas en 83 archivos, sin red
+    pruebas/   `npm test`: 1.355 pruebas en 83 archivos, sin red
     docs/      la documentación: 00-INDICE a 12-GLOSARIO, e historico/
 
 Flujo (`docs/00-INDICE.md`): fuentes → ingesta → cruce de medios → sección,
@@ -45,7 +45,7 @@ vigilancia andan con la PC apagada**; sólo el panel vive en la PC.
   prueba lo vigila (sigue los imports en cadena).
 - **Cuando se arregla algo que estuvo mal publicado, se escribe una prueba**
   (con el caso real) y, si es una regla nueva, se anota en
-  `docs/10-REGLAS-Y-PRUEBAS.md` con el número siguiente (hoy, 72).
+  `docs/10-REGLAS-Y-PRUEBAS.md` con el número siguiente (hoy, 73).
 - **El criterio editorial es uno solo: `CRITERIO-EDITORIAL.md`.** La IA lee su
   § 12 **tal cual** (`ingesta/prompt-editorial.mjs`; si falta, la reescritura
   no arranca) y sus números están en `ingesta/criterio.mjs`, controlados contra
@@ -193,8 +193,8 @@ vigilancia andan con la PC apagada**; sólo el panel vive en la PC.
 Todo andando en la nube desde el 25/09: web en Cloudflare Pages,
 redes en pausa (`REDES_ACTIVAS` en `No` desde el 28/09, hasta el visto bueno de Hernán al diseño nuevo), vigilancia por WhatsApp con el resumen de
 las 21. Lo que falta, con quién y qué urgencia: **`PENDIENTES.md`** (entre lo
-más importante: la Auditoría de los lunes nunca corrió, mirar los trabajos de
-cron-job.org, el tope de gasto de la clave paga, reiniciar el panel).
+más importante: mirar los trabajos de cron-job.org, el tope de gasto de la
+clave paga, reiniciar el panel).
 
 ## Dónde tocar cada cosa
 
@@ -226,7 +226,7 @@ cron-job.org, el tope de gasto de la clave paga, reiniciar el panel).
 | La firma de las notas | `quienEscribio`, `firmaCorta` (`web/components/metadatos.js`) |
 | Qué ve el lector al pie de la nota | `web/components/verificacion.js`, `web/lib/fuentes-de-la-nota.js` |
 | Las fotos | `web/scripts/fotos-notas.mjs` (`TOPE_POR_CORRIDA`, `elegiblePorSeccion`), `ingesta/fotos.mjs`; la foto en el espejo, `FOTO_EN_INSTAGRAM` (`web/lib/tarjeta-diseno.js`) |
-| Una sección nueva, su nombre o su color | `SECCIONES` y `EN_NAVEGACION` (`web/lib/datos.js`), `--s-*` (`web/app/globals.css`), `REGLAS_SECCION` y `verdeSecciones` (`ingesta/fuentes.mjs`), `SECCIONES_DE_LA_FICHA` (`ingesta/lectura-ia.mjs`), `SECCIONES_VIEJAS` (`web/scripts/generar-redirects.mjs`) |
+| Una sección nueva, su nombre o su color | `SECCIONES` y `EN_NAVEGACION` (`web/lib/datos.js`), `--s-*` (`web/app/globals.css`), `REGLAS_SECCION` (`ingesta/fuentes.mjs`), `SECCIONES_DE_LA_FICHA` (`ingesta/lectura-ia.mjs`), `SECCIONES_VIEJAS` (`web/scripts/generar-redirects.mjs`) |
 | La tapa, las secciones o "Seguí leyendo" | `armarTapa` (`web/lib/datos.js`), `web/lib/seguir-leyendo.js` |
 | "Hoy en Balcarce" o la página del clima | `web/components/hoy-balcarce.js`, `web/app/clima/page.js` |
 | La nota del dólar o la de cada podcast | `web/lib/notas-propias.js`; el porcentaje, `NOTA_DEL_DOLAR` (`ingesta/criterio.mjs`) |
