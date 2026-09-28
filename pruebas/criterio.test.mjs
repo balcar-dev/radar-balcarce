@@ -103,9 +103,10 @@ test('los que usan los números los toman del criterio (o dicen lo mismo)', () =
   for (const k of Object.keys(FACEBOOK)) assert.equal(REGLAS_FACEBOOK[k], FACEBOOK[k], `Facebook: ${k}`);
   // Desde el 28/09 las piezas sólo usan el piso de los podcasts: las historias
   // de una nota y el feed de fotos de Instagram se sacaron del código (no salían
-  // desde el 24/09). PIEZAS.historiasDeNotas, relevanciaFeed y feedPorDia
-  // quedaron en ingesta/criterio.mjs sin nadie que los use.
+  // desde el 24/09), y sus números (historiasDeNotas, relevanciaFeed y
+  // feedPorDia) se borraron de ingesta/criterio.mjs y de la tabla.
   assert.deepEqual(Object.keys(REGLAS_PIEZAS), ['relevanciaParaPodcast']);
+  for (const k of ['historiasDeNotas', 'relevanciaFeed', 'feedPorDia']) assert.ok(!(k in PIEZAS), `PIEZAS.${k} ya no existe`);
   assert.equal(REGLAS_PIEZAS.relevanciaParaPodcast, PIEZAS.relevanciaPodcast);
   assert.deepEqual([...SECCIONES_QUE_ESPERAN_PERSONA].sort(), [...criterio.SECCIONES_QUE_ESPERAN_PERSONA].sort());
   // Los tres que viven en web/lib porque los compila la web.
@@ -214,6 +215,17 @@ test('los números que el documento repite en el texto son los de la tabla', () 
     `la página dura ${PORTADA.diasDeArchivo} días`,
   ];
   for (const f of frases) assert.ok(t.includes(f.toLowerCase()), `el documento no dice "${f}"`);
+});
+
+test('las frases de relleno son las mismas en el código, en el documento y en la instrucción de la IA (28/09)', () => {
+  const a = DOC.indexOf('<!-- RELLENO:INICIO -->');
+  const b = DOC.indexOf('<!-- RELLENO:FIN -->');
+  assert.ok(a >= 0 && b > a, 'falta la lista de relleno entre sus marcas');
+  const delDocumento = [...DOC.slice(a, b).matchAll(/`([^`]+)`/g)].map((m) => m[1]);
+  assert.deepEqual(delDocumento, criterio.RELLENO, 'la lista del documento y RELLENO de ingesta/criterio.mjs no dicen lo mismo');
+  const { reglas } = leerCriterio();
+  for (const frase of criterio.RELLENO) assert.ok(reglas.includes(`"${frase}"`), `la instrucción de la IA no le prohíbe "${frase}"`);
+  for (const frase of criterio.RELLENO) assert.equal(frase, frase.toLowerCase(), `en minúscula: ${frase}`);
 });
 
 test('EDITORIAL.md ya no existe y ningún documento lo nombra: el criterio es uno solo', () => {

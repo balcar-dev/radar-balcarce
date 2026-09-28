@@ -8,7 +8,7 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { crearCliente, ErrorMeta, sinToken } from '../redes/meta.mjs';
 import {
-  elegirParaFacebook, mensajeDeNota, enlaceDeNota, imagenDeNota, libroNuevo, anotar, yaPublicada, REGLAS_FACEBOOK,
+  elegirParaFacebook, mensajeDeNota, enlaceDeNota, imagenDeNota, conCreditoDeFoto, libroNuevo, anotar, yaPublicada, REGLAS_FACEBOOK,
   temaParecido,
 } from '../redes/elegir.mjs';
 import { horaAR, minutoDelDiaAR } from '../ingesta/zona.mjs';
@@ -299,9 +299,25 @@ test('el mensaje de Instagram es el mismo que Facebook: con el enlace y sin la f
   assert.match(m, /radarbalcarce\.com\/nota\//);
   assert.ok(!/Fuente/.test(m));
   // El pie de la foto espejo en Instagram es este mismo texto (mensajeParaInstagram
-  // era sólo un alias y se sacó el 28/09).
+  // era sólo un alias y se sacó el 28/09) y, si la tarjeta lleva la foto de la
+  // nota, el crédito al final (conCreditoDeFoto, 28/09).
   const publicar = fs.readFileSync(new URL('../redes/publicar.mjs', import.meta.url), 'utf8');
-  assert.match(publicar, /publicarFotoEnInstagram\(\{[^}]*pie: mensajeDeNota\(nota, SITIO\)/);
+  // El crédito va sólo si la imagen lleva la foto: los dos leen FOTO_EN_INSTAGRAM.
+  assert.match(publicar, /pie: FOTO_EN_INSTAGRAM \? conCreditoDeFoto\(mensajeDeNota\(nota, SITIO\), nota\) : mensajeDeNota\(nota, SITIO\)/);
+  assert.match(fs.readFileSync(new URL('../web/app/nota/[id]/instagram.png/route.js', import.meta.url), 'utf8'), /foto: FOTO_EN_INSTAGRAM \?/);
+  // Facebook sigue sin nombrar a nadie: su imagen (la del enlace) no lleva la foto.
+  assert.match(publicar, /publicarEnFacebook\(\{ mensaje: mensajeDeNota\(nota, SITIO\), enlace \}\)/);
+});
+
+test('el espejo en Instagram lleva el crédito de la foto al pie, nunca adentro de la imagen', () => {
+  const base = 'Un titular\n\nLeé la nota completa: https://radarbalcarce.com/nota/x';
+  const conFoto = nota({ id: 'f1', foto: { archivo: 'fotos-notas/f1.jpg', credito: 'Foto: Radio Gabal (FM 104.1)' } });
+  assert.equal(conCreditoDeFoto(base, conFoto), `${base}\n\nFoto: Radio Gabal (FM 104.1)`);
+  // Un crédito sin "Foto:" adelante lo lleva igual.
+  assert.match(conCreditoDeFoto(base, nota({ foto: { archivo: 'fotos-notas/a.jpg', credito: 'Municipio de Balcarce' } })), /\n\nFoto: Municipio de Balcarce$/);
+  // Sin foto (o sin crédito) el texto queda igual.
+  assert.equal(conCreditoDeFoto(base, nota({ id: 'f2' })), base);
+  assert.equal(conCreditoDeFoto(base, nota({ foto: { archivo: 'fotos-notas/b.jpg' } })), base);
 });
 
 // ------------------------------------------------------- las claves de Gemini

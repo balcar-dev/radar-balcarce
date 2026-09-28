@@ -1095,30 +1095,10 @@ export const REGLAS_SEMAFORO = {
     // otro país. Con "newsom" y "california" no hace falta nombrar a cada
     // gobernador de EE.UU.: si vuelve a pasar con otro estado, se agrega acá.
     'newsom', 'california'],
-  // Policiales de OTRO lugar (26/09). Las fuentes nacionales de policiales
-  // (La Nación Seguridad, TN, Infobae) traen crímenes y causas de todo el
-  // país: "Mató a su mujer embarazada, se escapó de la cárcel…" salía verde
-  // porque "mató" no estaba en el amarillo. Lo de acá no cambia: esta lista
-  // sólo se aplica a Policiales que NO es de Balcarce (ni la nombra ni es de
-  // una fuente local) y mira el título y el comienzo del resumen. Queda
-  // amarilla, con su motivo. Lo que sale solo de afuera es lo neutro: un
-  // decomiso, una estafa, un robo sin nombres, la seguridad vial.
-  // 28/09: el semáforo ya no la usa. Desde el 27/09 un policial que no es de
-  // Balcarce no se trae (esPolicialDeAfuera, ingesta/ingesta.mjs) y esta
-  // regla no se alcanzaba nunca. Queda porque CRITERIO-EDITORIAL.md la nombra
-  // como respaldo; si el documento la saca, se borra con MOTIVO_POLICIAL_DE_AFUERA.
-  policialDeAfuera: ['mató', 'mataron', 'matar', 'crimen', 'detuvieron', 'detuvo', 'detienen',
-    'arrestaron', 'prófugo', 'condenaron', 'condenado', 'condena', 'acosador', 'acoso',
-    'sospechoso', 'sospechosos', 'balacera', 'tiroteo', 'secuestraron', 'rehén', 'disparó',
-    'disparos', 'muerto', 'muertos', 'murieron', 'mueren', 'cárcel', 'preso', 'presos',
-    'prisión', 'juicio', 'fiscal', 'apuñaló', 'degolló', 'atropelló'],
 };
 
 /** El motivo con que queda amarilla una nota internacional sin relación con Balcarce. */
 export const MOTIVO_INTERNACIONAL = 'internacional: sin relación con Balcarce';
-
-/** El motivo con que queda amarilla una nota policial de otro lugar con violencia o acusados. */
-export const MOTIVO_POLICIAL_DE_AFUERA = 'policial de afuera con violencia o acusados: espera a una persona';
 
 // Las fuentes de tecnología de los diarios nacionales traen de todo (esa
 // cumbre, un partido, una serie): no alcanza con que el feed diga "Tecnología".

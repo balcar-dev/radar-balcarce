@@ -148,7 +148,7 @@ export const comoNombre = (s) => String(s).toLowerCase()
  * de la reescritura en el panel (panel/servidor.mjs, vía reels/plan.mjs, que lo
  * re-exporta con este nombre). Vive acá, sin nada de afuera de Node, para que
  * reels/reescritura.mjs pueda usar este mismo en vez de su copia
- * (`mecanicoPorDefecto` arma el mismo texto a mano).
+ * (`mecanicoPorDefecto` lo usa desde el 28/09).
  */
 export function guionNoticia(n) {
   const titulo = String(n?.titulo ?? '').replace(/\s+/g, ' ').trim().replace(/[.:]+$/, '');

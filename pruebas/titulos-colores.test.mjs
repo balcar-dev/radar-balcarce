@@ -69,15 +69,19 @@ test('las placas de Instagram usan el color de cada sección de la web', async (
   assert.ok(!('Servicios' in COLOR_SECCION) && !('País' in COLOR_SECCION), 'sin las secciones que ya no existen');
 });
 
-test('la tarjeta para compartir tiene un color legible para cada sección', () => {
-  const t = fs.readFileSync(new URL('../web/lib/tarjeta.js', import.meta.url), 'utf8');
-  const bloque = t.match(/const COLOR = \{([\s\S]*?)\};/)[1];
-  const colores = Object.fromEntries([...bloque.matchAll(/'?([^':\n]+?)'?:\s*'(#[0-9A-Fa-f]{6})'/g)].map((m) => [m[1].trim(), m[2]]));
+test('la tarjeta para compartir usa el color de la web para cada sección, legible sobre el papel y con blanco encima', async () => {
+  // Desde el 28/09 (diseño nuevo) la tarjeta es de fondo papel: el color de la
+  // sección es el de la web (--s-*), de fondo del rótulo con texto blanco.
+  const { COLOR, PAPEL, colorDe: colorDeLaTarjeta, POR_DEFECTO } = await import('../web/lib/tarjeta-diseno.js');
   for (const s of SECCIONES) {
-    assert.ok(colores[s.nombre], `${s.nombre} sin color en la tarjeta`);
-    assert.ok(contraste(colores[s.nombre], '#14161A') >= 4.5, `${s.nombre} no se lee sobre el fondo oscuro`);
+    const web = s.color.includes('--s-pais') ? css.match(/--s-pais:\s*(#[0-9A-Fa-f]{6})/)[1] : colorDe(s);
+    assert.equal(COLOR[s.nombre]?.toUpperCase(), web.toUpperCase(), `${s.nombre} tiene otro color en la tarjeta`);
+    assert.equal(colorDeLaTarjeta(s.nombre), COLOR[s.nombre]);
+    assert.ok(contraste(COLOR[s.nombre], PAPEL) >= 4.5, `${s.nombre} no se lee sobre el papel`);
+    assert.ok(contraste(COLOR[s.nombre], '#FFFFFF') >= 4.5, `el blanco no se lee sobre ${s.nombre}`);
   }
-  assert.ok(!/Servicios|País:/.test(bloque));
+  assert.equal(colorDeLaTarjeta('Una sección que no existe'), POR_DEFECTO, 'sin sección, el rojo de la marca, nunca un color inventado');
+  assert.ok(!('Servicios' in COLOR) && !('País' in COLOR));
 });
 
 test('placas y tarjetas usan Source Serif 4 e Inter, con los archivos en su lugar', () => {

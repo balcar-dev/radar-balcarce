@@ -57,7 +57,7 @@ import {
 } from '../../reels/reescritura.mjs';
 import { TEMAS, MOTIVO_COTIZACION, REGLAS_SEMAFORO } from '../../ingesta/fuentes.mjs';
 import { tieneCuerpo } from '../lib/cuerpo.js';
-import { sinBalcarceAlFinal } from '../lib/titulos.js';
+import { tituloAutomatico } from '../lib/titulos.js';
 import { sinNotasRepetidas, sinTildes } from '../lib/texto.js';
 import { pendientesDeLaIngesta } from '../../redes/avisos.mjs';
 import { cuentaDelDia, anotarDia, comoHistoriaJson as comoNotasPorDiaJson } from '../../ingesta/estadistica-diaria.mjs';
@@ -391,16 +391,18 @@ function notaPublicada(n) {
   // la primera vez que sale.
   const nota = fijarSlug({
     id: n.id,
-    // Sin "en Balcarce" al final (lib/titulos.js). Lo que escribió una
+    // Los arreglos mecánicos del título (lib/titulos.js): sin "en Balcarce" al
+    // final, sin una etiqueta conocida adelante ("Rugby: …") y sin una coma o un
+    // conector colgando al final. Lo que escribió una
     // persona se respeta tal cual.
-    titulo: humana ? (deLaDecision?.titulo ?? n.titulo) : sinBalcarceAlFinal(deLaDecision?.titulo ?? auto?.titulo ?? n.titulo),
+    titulo: humana ? (deLaDecision?.titulo ?? n.titulo) : tituloAutomatico(deLaDecision?.titulo ?? auto?.titulo ?? n.titulo),
     copete: deLaDecision?.copete ?? auto?.copete ?? n.resumenFuente ?? '',
     // Sólo existe cuando la reescribió la IA (o lo cargó una persona a
     // mano): el resumen mecánico de la fuente no tiene de dónde sacar un
     // cuerpo propio, así que la nota queda con el copete nada más, como
     // siempre — ver CRITERIO-EDITORIAL.md.
     cuerpo: deLaDecision?.cuerpo ?? auto?.cuerpo ?? null,
-    guion: humana ? (deLaDecision?.guion ?? null) : (sinBalcarceAlFinal(deLaDecision?.guion ?? auto?.guion ?? '') || null),
+    guion: humana ? (deLaDecision?.guion ?? null) : (tituloAutomatico(deLaDecision?.guion ?? auto?.guion ?? '') || null),
     seccion: n.seccion,
     medios: n.medios,
     enlace: n.enlace,
@@ -608,8 +610,10 @@ if (repetidas) console.log(`  ${repetidas} notas repetidas (mismo titular) salen
 // Sin sección Servicios desde el 27/09 (Hernán): lo que quedó con esa sección
 // en el archivo pasa a Balcarce si es de acá, y a País si no.
 // Y desde el mismo día País se llama Argentina.
-// Y los títulos automáticos del archivo, sin "en Balcarce" al final.
-const sinCola = (n) => (n && (!n.publicadaPor || n.publicadaPor === 'ia') && !n.propia ? { ...n, titulo: sinBalcarceAlFinal(n.titulo) } : n);
+// Y los títulos automáticos del archivo, con los mismos arreglos mecánicos
+// (tituloAutomatico: sin "en Balcarce" al final, sin etiqueta adelante, sin
+// coma colgando).
+const sinCola = (n) => (n && (!n.publicadaPor || n.publicadaPor === 'ia') && !n.propia ? { ...n, titulo: tituloAutomatico(n.titulo) } : n);
 const sinServicios = (n) => conCorreccion(sinColaDe(n), CORRECCIONES);
 const sinColaDe = (n) => sinCola(n?.seccion === 'Servicios' ? { ...n, seccion: n.local ? 'Balcarce' : 'Argentina' }
   : n?.seccion === 'País' ? { ...n, seccion: 'Argentina' } : n);

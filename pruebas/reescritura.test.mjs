@@ -191,14 +191,14 @@ test('reusa lo ya reescrito en una corrida anterior, sin gastar un pedido', asyn
 
 test('reescribe una nota nueva y la deja si la verificación no encuentra nada raro', async () => {
   const { fn } = fetchFalso([respuestaOk(
-    'El municipio se reunió por el agua',
+    'El municipio se reúne por el agua',
     'Se trató el tema del agua en una reunión municipal.',
-    'El municipio se reunió por el agua.',
+    'El municipio se reúne por el agua.',
     CUERPO,
   )]);
   const r = await reescribirAutomaticas([notaVerde()], { ...SIN_PISO, opciones: { fetchFn: fn } });
   assert.equal(r.n1.deIA, true);
-  assert.equal(r.n1.titulo, 'El municipio se reunió por el agua');
+  assert.equal(r.n1.titulo, 'El municipio se reúne por el agua');
 });
 
 test('si la IA inventa un dato que la fuente no trae, se descarta y no queda nada', async () => {
@@ -329,9 +329,9 @@ test('lo que contaron los otros medios también pasa por el semáforo', async ()
 
 test('si lo que escribió la IA da rojo o amarillo, no se usa y la nota deja de salir sola', async () => {
   const { fn, pedidos } = fetchFalso([respuestaOk(
-    'El municipio se reunió por el agua',
+    'El municipio se reúne por el agua',
     'Se trató el tema del agua en una reunión municipal con un menor de edad presente.',
-    'El municipio se reunió por el agua.',
+    'El municipio se reúne por el agua.',
     CUERPO,
   )]);
   const n = notaVerde();
@@ -393,7 +393,7 @@ test('motivoCorto recorta y dice el tipo', () => {
 });
 
 test('con el tope justo, se reescribe primero lo de Balcarce aunque lo de afuera tenga más puntaje', async () => {
-  const { fn, pedidos } = fetchFalso([respuestaOk('El municipio se reunió por el agua', 'Se trató el tema del agua en una reunión municipal.', 'El municipio se reunió por el agua.', CUERPO)]);
+  const { fn, pedidos } = fetchFalso([respuestaOk('El municipio se reúne por el agua', 'Se trató el tema del agua en una reunión municipal.', 'El municipio se reúne por el agua.', CUERPO)]);
   const notas = [
     notaVerde({ id: 'afuera', titulo: 'Verstappen ganó en Monza', seccion: 'Automovilismo', local: false, alcance: 'pais', relevancia: 95 }),
     notaVerde({ id: 'local', local: true, relevancia: 60 }),

@@ -28,10 +28,18 @@ perfil y el acento general. **Nunca** en un aviso publicitario
 como variables CSS en `web/app/globals.css` (`--tinta`, `--papel`, `--crema`,
 `--rojo`, etc.), con su versión de modo oscuro.
 
+**Fondo de las piezas de redes (28/09):** papel `#FAF8F3`, tinta `#14161A`,
+gris de bajadas y direcciones `#474C55`, rayas `#D9D4C7`. La tarjeta del
+clima es azul noche `#1B2733` (recuadros `#26374A`, rótulos `#A9C2D9`, sol
+`#F2A93B`) y la de la farmacia lleva borde verde `#13804A`. Viven en
+`COLORES` (`reels/placa.mjs`) y en `web/lib/tarjeta-diseno.js`.
+
 **Un color por sección**, el mismo en la web, las placas y las tarjetas para
 compartir (`--s-*` en `web/app/globals.css`; los mismos valores en
-`reels/placa.mjs` y `web/lib/tarjeta.js`; prueba que los tres coincidan:
-`pruebas/titulos-colores.test.mjs` y `pruebas/cruce-coherente.test.mjs`):
+`reels/placa.mjs` y `web/lib/tarjeta-diseno.js`; prueba que los tres coincidan:
+`pruebas/titulos-colores.test.mjs` y `pruebas/cruce-coherente.test.mjs`).
+Desde el 28/09 las tarjetas también usan estos tonos (antes llevaban una
+versión clara, para el fondo oscuro de entonces):
 
 | Sección | Color |
 |---|---|
@@ -67,9 +75,9 @@ Dónde están los archivos de letra:
   `reels/marca/fuentes/` (Source Serif 4 en su corte de 60 puntos —
   `SourceSerif4-*.ttf` — e Inter, `Inter-*.ttf`; carpeta en `.gitignore`
   salvo estos archivos).
-- **Las imágenes para compartir (Facebook, WhatsApp, la web):**
-  `web/fuentes/` (`SourceSerif4-900.ttf`, `Inter-600.ttf`), usadas por
-  `web/lib/tarjeta.js`.
+- **Las imágenes para compartir y el espejo de Instagram:**
+  `web/fuentes/` (`SourceSerif4-900.ttf`, `Inter-400.ttf` —la bajada, desde
+  el 28/09— e `Inter-600.ttf`), usadas por `web/lib/tarjeta.js`.
 - **El panel y la guía comercial:** se piden a Google Fonts (`panel/panel.html`,
   `panel/acceso.mjs`, `comercial/vista.plantilla.html`).
 
@@ -89,9 +97,9 @@ Tabla completa, con el porqué de cada una y cómo se audita:
 
 | Dónde | Medida | Con qué se arma |
 |---|---|---|
-| Instagram/Facebook · posteo | 1080 × 1350 (4:5) | tarjeta propia de la nota (`web/lib/tarjeta.js`) |
+| Instagram · espejo de cada posteo de Facebook | 1080 × 1350 (4:5) | tarjeta de la nota, con su foto si tiene (`web/lib/tarjeta.js`) |
 | Instagram/Facebook · historia y reel | 1080 × 1920 (9:16) | placas (`reels/placa.mjs`) |
-| Facebook · posteo con enlace / la web al compartir | 1200 × 630 (1,91:1) | `opengraph-image` de la nota |
+| Facebook · posteo con enlace / la web al compartir | 1200 × 630 (1,91:1) | `opengraph-image` de la nota, sin foto (`web/lib/tarjeta.js`) |
 | Facebook · portada de la página | 1640 × 924 (16:9) | `node reels/portada.mjs` |
 
 ## Cómo suenan y qué dicen las piezas
@@ -101,15 +109,47 @@ dirección del sitio y los largos de cada pieza están en
 [`CRITERIO-REDES.md`](CRITERIO-REDES.md) (el criterio) y `redes/guiones.mjs`
 (los bancos de frases).
 
-## El rediseño en curso (27/09)
+## Las plantillas de las piezas (28/09)
 
-La dirección **B** ("Pantalla": fondo oscuro del color de la sección, un
-dato grande cuando la nota lo tiene verificado, tipografía enorme) fue la
-elegida. El detalle de las tres direcciones que se probaron, con las
-imágenes de cada una: la propuesta de esa noche (`PROPUESTA-REDES.md`, no
-versionada — pedirla si hace falta volver a mirarla). Falta aplicarla a
-`reels/placa.mjs` y probarla también como tarjeta de WhatsApp
-(`PENDIENTES.md`).
+El 28/09 salieron piezas en Facebook e Instagram con el diseño viejo (fondo de
+color con un corte en diagonal). Ese mismo día se pasaron todas al diseño que
+aprobó Hernán en el lienzo **"Radar Balcarce · Plantillas redes"** (reemplaza a
+la dirección "Pantalla" que se había elegido el 27/09 y nunca se aplicó): fondo
+papel, títulos grandes en Source Serif 4, textos en Inter, la firma "Radar
+Balcarce" (Radar en tinta, Balcarce en el rojo de la marca) y el color de cada
+sección como acento. Dos cosas del lienzo **no** se tomaron: sus letras
+(Fraunces e IBM Plex: van las del proyecto) y sus colores de sección (van los
+de la web).
+
+| Pieza | Plantilla del lienzo | Medida | Dónde se arma |
+|---|---|---|---|
+| Los tres podcasts (reel + historia) | Repaso · tapa: el nombre del podcast y la duración en el color del día, un título ("Tres noticias para empezar el día", "Tres cosas que pasaron hoy", "Lo que dejó el día") y la lista numerada de las notas, cada número en el color de su sección | 1080 × 1920 | `placaRepaso` (`reels/placa.mjs`), desde `reels/plan.mjs` |
+| El clima de la mañana | Historia diaria: "Hoy en Balcarce", la fecha, la tarjeta oscura del clima (temperatura, cielo, sensación y viento, hoy y los dos días que siguen) y el dólar de las 11 del último día hábil (con cuándo se tomó; nunca "en vivo") | 1080 × 1920 | `placaClima` |
+| El clima de la noche | Historia diaria: "Cómo sigue el día", la tarjeta del clima (ahora, esta noche, mañana y pasado) y un recuadro con el pronóstico de mañana | 1080 × 1920 | `placaClima` |
+| El aviso de clima | Historia diaria con un recuadro de borde rojo ("Qué hay que saber") | 1080 × 1920 | `placaClima` |
+| La farmacia de turno | Historia diaria: la fecha y la tarjeta blanca con borde verde (nombre, dirección, teléfono) y hasta cuándo dura el turno | 1080 × 1920 | `placaFarmacia` |
+| Teléfonos útiles y agenda (extras) | La misma cabecera de la historia diaria y una lista con rayas finas | 1080 × 1920 | `placaUtiles`, `placaAgenda` |
+| Espejo en Instagram de cada posteo de Facebook | Placa de noticia con foto (la foto del banco propio, la franja del color de la sección, título, bajada y el pie con la fecha); sin foto, Placa sin foto (el bloque de color con los anillos del radar y el nombre de la sección) | 1080 × 1350 | `web/lib/tarjeta.js` (`/nota/ID/instagram.png`) |
+| Facebook con enlace, WhatsApp, la web al compartir | Una banda con el color de la sección y los anillos, el título y el pie; sin foto | 1200 × 630 | `web/lib/tarjeta.js` (`opengraph-image`) |
+| La placa sin foto vertical | Placa sin foto, en 9:16 (hoy no la usa ninguna pieza fija) | 1080 × 1920 | `placaNoticia` |
+
+Lo que no se usa del lienzo, por ahora: "Repaso · una nota por placa" y
+"Repaso · cierre" son para un carrusel, y el repaso hoy es **un video**: se
+tomó la tapa como placa del video sin cambiar cómo se publica. Tampoco el
+sticker de enlace de la historia diaria (la API no lo pone).
+
+**Las fotos.** La foto de una nota sólo aparece en el espejo de Instagram, y
+sólo si está en el banco propio (`web/data/banco-fotos.json` →
+`web/public/fotos-notas/`). Va recortada y **sin el crédito adentro**: nunca
+el nombre de otro medio ni una marca de agua dentro de una imagen. El crédito
+va al pie del posteo de Instagram (`conCreditoDeFoto`, `redes/elegir.mjs`) y
+en la página de la nota. La imagen de Facebook (la del enlace) no lleva foto:
+ese posteo no nombra fuentes (`CRITERIO-EDITORIAL.md` § 9). Un ejemplo de
+cada pieza se arma con los datos de la portada en
+`reels/salida/muestras-diseno-nuevo/` (no se versiona). Lo cuidan
+`pruebas/placas.test.mjs` (mide con resvg cada renglón: nada se sale, nada
+se pisa, nada cae en la zona que tapa la app, ningún título se corta) y
+`pruebas/formatos.test.mjs`.
 
 ## Cuándo actualizar este documento
 

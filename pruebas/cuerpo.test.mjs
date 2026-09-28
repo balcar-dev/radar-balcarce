@@ -121,8 +121,8 @@ function gemini(respuestas) {
   return { fetchFn, pedidos };
 }
 const bueno = {
-  titulo: 'Aprobaron la ordenanza de tránsito', copete: 'El Concejo Deliberante aprobó la nueva norma de tránsito.',
-  guion: 'Aprobaron la ordenanza de tránsito', cuerpo: CUERPO,
+  titulo: 'Aprueban la ordenanza de tránsito', copete: 'El Concejo Deliberante aprobó la nueva norma de tránsito.',
+  guion: 'Aprueban la ordenanza de tránsito', cuerpo: CUERPO,
 };
 const conDatoInventado = { ...bueno, cuerpo: 'La norma alcanza a 350 comercios del centro y fue impulsada por Roberto Salinas.' };
 const sinTexto = async () => null;

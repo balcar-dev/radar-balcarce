@@ -51,15 +51,23 @@ test('la zona segura del posteo de Instagram cabe dentro del posteo', () => {
   assert.ok(zonaSegura.ancho <= ancho && zonaSegura.alto <= alto);
 });
 
-test('el texto de la tarjeta de Instagram no sale de la zona segura del centro', () => {
-  // El relleno de arriba y abajo tiene que ser al menos lo que se recorta en la
-  // grilla cuadrada: (1350 - 1080) / 2 = 135 px.
-  const { alto, zonaSegura } = FORMATOS.instagram.posteo;
+test('el texto de la tarjeta de Instagram no sale de la zona segura del centro', async () => {
+  // Arriba y abajo, al menos lo que se recorta en la grilla cuadrada:
+  // (1350 - 1080) / 2 = 135 px. A los costados, lo que recorta la grilla 3:4:
+  // (1080 - 1012) / 2 = 34 px. La foto y el bloque de color sí llegan al borde
+  // (diseño del 28/09): lo que se mide es dónde empieza y termina el texto.
+  const { INSTAGRAM, TAMANO_INSTAGRAM, TAMANO } = await import('../web/lib/tarjeta-diseno.js');
+  const { ancho, alto, zonaSegura } = FORMATOS.instagram.posteo;
   const recorte = (alto - zonaSegura.alto) / 2;
+  assert.ok(INSTAGRAM.arriba >= recorte, `el rótulo de arriba empieza en ${INSTAGRAM.arriba}px y la grilla recorta ${recorte}px`);
+  assert.ok(INSTAGRAM.abajo >= recorte, `el pie termina a ${INSTAGRAM.abajo}px del borde y la grilla recorta ${recorte}px`);
+  assert.ok(INSTAGRAM.margen >= (ancho - zonaSegura.ancho) / 2);
+  assert.deepEqual(TAMANO_INSTAGRAM, { width: ancho, height: alto });
+  assert.deepEqual(TAMANO, { width: FORMATOS.facebook.enlace.ancho, height: FORMATOS.facebook.enlace.alto });
+  // tarjeta.js usa esas medidas (y no números sueltos) para el texto.
   const t = leer('web/lib/tarjeta.js');
-  const m = t.match(/instagram \? '(\d+)px (\d+)px (\d+)px'/);
-  assert.ok(Number(m[1]) >= recorte, `arriba deja ${m[1]}px y la grilla recorta ${recorte}px`);
-  assert.ok(Number(m[3]) >= recorte, `abajo deja ${m[3]}px y la grilla recorta ${recorte}px`);
+  assert.match(t, /top: I\.arriba/);
+  assert.match(t, /\$\{I\.abajo\}px/);
 });
 
 test('los íconos del sitio tienen las medidas que se declaran', () => {

@@ -15,11 +15,15 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { TODAS_LAS_FUENTES, paraPruebas, aplicarCupos } from '../ingesta/ingesta.mjs';
-import { MOTIVO_INTERNACIONAL, MOTIVO_POLICIAL_DE_AFUERA, REGLAS_SEMAFORO } from '../ingesta/fuentes.mjs';
+import { MOTIVO_INTERNACIONAL, REGLAS_SEMAFORO } from '../ingesta/fuentes.mjs';
 import {
   MEDIOS_DE_AFUERA, MEDIOS_POR_DEFECTO, CUPO_DE_AFUERA, CUPO_POR_DEFECTO,
 } from '../ingesta/criterio.mjs';
 import { ordenarParaReescribir } from '../reels/reescritura.mjs';
+
+// El motivo de la regla vieja del semáforo para el policial de afuera
+// (REGLAS_SEMAFORO.policialDeAfuera, borrada el 28/09 junto con su motivo).
+const MOTIVO_POLICIAL_DE_AFUERA = 'policial de afuera con violencia o acusados: espera a una persona';
 
 const {
   clasificar, semaforo, mediosMinimosDe, esPolicialDeAfuera,
@@ -202,7 +206,7 @@ test('el filtro de policiales de afuera no toca lo de Balcarce ni otras seccione
   const cine = deAfuera('Estrenan una película sobre un crimen sin resolver', 'Cultura y agenda');
   assert.equal(esPolicialDeAfuera(cine), false);
   assert.notEqual(semaforo(cine, 'Cultura y agenda').motivo, MOTIVO_POLICIAL_DE_AFUERA);
-  for (const p of REGLAS_SEMAFORO.policialDeAfuera) assert.equal(p, p.toLowerCase(), `en minúscula: ${p}`);
+  assert.ok(!('policialDeAfuera' in REGLAS_SEMAFORO), 'la lista vieja se borró el 28/09');
 });
 
 test('lo internacional sin relación con Balcarce sigue esperando en las secciones nuevas', () => {

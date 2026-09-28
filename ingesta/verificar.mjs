@@ -23,8 +23,10 @@
 // largo salen de ingesta/criterio.mjs, los números del criterio editorial
 // (CRITERIO-EDITORIAL.md, sección 11).
 //
-//   verificar({ titulo, resumen, antecedentes? }, { titulo, copete, cuerpo, guion })
+//   verificar({ titulo, resumen, antecedentes? }, { titulo, copete, cuerpo, guion }, { estilo? })
 //     → { ok: boolean, problemas: [{ tipo, detalle }] }
+//   arreglarEscritura({ titulo, copete, cuerpo, guion }, { hoy? })
+//     → { nuevo, arreglos }: lo que se corrige sin inventar, antes de verificar (28/09)
 //   verificarExtras(fuente, { claves, seSabe, noConfirmado, aportes, textoRedes, etiquetas })
 //     → { claves: { ok, problemas }, …, etiquetas: { ok, problemas, validas } }
 //   depurarCuerpo(fuente, { copete, cuerpo })
@@ -39,9 +41,13 @@
 // el texto para redes, que por definición cuentan lo de hoy.
 
 import {
-  TITULO, BAJADA, CUERPO, GUION, PARTES, COPIA_MAXIMA,
+  TITULO, BAJADA, CUERPO, GUION, PARTES, COPIA_MAXIMA, ESTILO, RELLENO as FRASES_DE_RELLENO,
 } from './criterio.mjs';
 import { sinTildes } from '../web/lib/texto.js';
+import {
+  etiquetaAdelante, terminaColgado, sinEtiqueta, sinCierreColgado,
+} from '../web/lib/titulos.js';
+import { diaSemanaAR } from './zona.mjs';
 
 const palabras = (s) => sinTildes(s).match(/[a-zñ0-9]+/g) ?? [];
 
@@ -61,20 +67,34 @@ export function numerosDe(texto) {
   const valores = [];
 
   // En cifras. "1.234" son mil doscientos treinta y cuatro; "12,5" es doce y
-  // medio; "14 millones" es catorce millones.
-  for (const m of t.matchAll(/(\d[\d.,]*)(?:\s+(millones|millon|mil))?/g)) {
+  // medio; "14 millones" es catorce millones; "2 millones y medio", dos
+  // millones quinientos mil.
+  for (const m of t.matchAll(/(\d[\d.,]*)(?:\s+(millones|millon|mil)(\s+y\s+medio)?)?/g)) {
     let n = m[1].replace(/[.,]+$/, '');
     if (/^\d{1,3}(\.\d{3})+$/.test(n)) n = n.replace(/\./g, '');
     else n = n.replace(',', '.');
     let v = Number(n);
     if (!Number.isFinite(v)) continue;
+    if (m[3]) v += 0.5;
     if (m[2] === 'mil') v *= 1000;
     else if (m[2]) v *= 1_000_000;
     valores.push(v);
   }
 
+  // En palabras con millones o mil (28/09): "un millón y medio" es 1.500.000,
+  // y no "uno" suelto. Una cifra mal copiada ("un millón y medio" cuando la
+  // fuente dice 1,7 millones) pasaba sin que nadie la mirara. Lo que se lee
+  // acá se saca del texto antes de buscar números sueltos en palabras.
+  const enPalabras = new RegExp(`\\b(un|una|medio|${Object.keys(NUMEROS_EN_PALABRAS).join('|')})\\s+(millones|millon|mil)(\\s+y\\s+medio)?\\b`, 'g');
+  const resto = t.replace(enPalabras, (_, cuanto, escala, yMedio) => {
+    let v = cuanto === 'medio' ? 0.5 : (NUMEROS_EN_PALABRAS[cuanto] ?? 1);
+    if (yMedio) v += 0.5;
+    valores.push(v * (escala === 'mil' ? 1000 : 1_000_000));
+    return ' ';
+  });
+
   // En palabras.
-  for (const w of palabras(t)) {
+  for (const w of palabras(resto)) {
     if (NUMEROS_EN_PALABRAS[w]) valores.push(NUMEROS_EN_PALABRAS[w]);
   }
   return valores;
@@ -134,8 +154,10 @@ const DELITOS = /\b(asesino|mato|robo|hurto|estafo|violo|abuso|agredio|golpeo|am
 // fuente): frases que no dicen nada que no esté ya dicho, o que esconden que
 // no hay un dato ("fuentes consultadas" en vez de decir quién). Se tratan
 // igual que un número que no cuadra: se saca la oración entera, la diga o no
-// la fuente (no es un error de exactitud, es un vicio de estilo propio).
-const RELLENO = /\b(fuentes consultadas|pudo saber este medio|pudo saber|hito historico|consolidando|un legado|motivo de orgullo|gran presencia|en el marco de|las fuentes no registran|postal poco habitual)\b/;
+// la fuente (no es un error de exactitud, es un vicio de estilo propio). La
+// lista es RELLENO, en ingesta/criterio.mjs y en CRITERIO-EDITORIAL.md.
+const escaparRegex = (s) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+const RELLENO = new RegExp(`\\b(${FRASES_DE_RELLENO.map((f) => escaparRegex(sinTildes(f))).join('|')})\\b`);
 
 // Localía inventada (28/09): afirmar que algo es "de Balcarce" o afecta a
 // los balcarcenses cuando la fuente no lo dice. Deliberadamente angosto (no
@@ -351,7 +373,234 @@ function problemasDelTexto(ctx, campo, texto, { soloForma = false, limite = LIMI
     agregar('localia', `el ${campo} dice "${n.match(LOCALIA_SIN_RESPALDO)[0]}" y la fuente no dice Balcarce`);
   }
 
+  // 11. Frases de gancho en lo que se ve primero (28/09): "lo que tenés que
+  // saber", "enterate"… El título dice qué pasó; no promete contarlo.
+  if (A_LA_VISTA.has(campo)) {
+    const gancho = n.match(GANCHO);
+    if (gancho) agregar('gancho', `el ${campo} tiene una frase de gancho: "${gancho[0]}"`);
+  }
+
+  // 12. La forma del título (28/09): lo que salió mal publicado, repetido.
+  if (campo === 'titulo') {
+    for (const detalle of problemasDeFormaDelTitulo(t)) agregar('titulo', detalle);
+  }
+
   return problemas;
+}
+
+// ------------------------------------------------------- la forma del título
+//
+// Del repaso editorial del 28/09 (Hernán: "que los títulos estén bien"). Son
+// reglas de forma, que no dependen de la fuente: valen para lo nuevo y para lo
+// ya publicado. Lo que se puede arreglar sin inventar (una etiqueta conocida
+// adelante, una coma al final) lo arregla arreglarEscritura() antes de llegar
+// acá; lo que queda, se rechaza y la IA lo vuelve a escribir.
+
+// "Lo que tenés que saber" y parecidos: prometen en vez de decir.
+const GANCHO = /\b(lo que (tenes|hay|necesitas|tenes que) (que )?(saber|conocer)|todo lo que (tenes|hay) que saber|te contamos|enterate|mira (como|lo que|el video)|no te lo pierdas|imperdible|la pregunta que todos)\b/;
+// Adjetivos de gancho: en el título, nunca.
+const ADJETIVOS_DE_GANCHO = /\b(impresionante|impresionantes|tremendo|tremenda|tremendos|increible|increibles|insolito|insolita|furor|shock)\b/;
+// Un título que arranca con un sustantivo de clima y un lugar o un "por",
+// sin decir qué pasó: "Cruce en Balcarce por…", "Preocupación por la suba…".
+// Sin "de" después ("Fiesta de la Papa reúne…" es un nombre y un verbo) y sin
+// "fiesta" (hay fiestas que se llaman así).
+const ARRANQUE_SIN_HECHO = /^(preocupacion|tension|alarma|conmocion|polemica|revuelo|cruce|cruces|indignacion|malestar|incertidumbre|expectativa|expectativas|alegria|emocion|dolor|tristeza|furor|escandalo|repudio|bronca|temor|miedo|sorpresa|misterio|drama|caos|euforia|zozobra|inquietud)\s+(en|por|entre|tras|ante)\b/;
+const EN_BALCARCE_POR = /^\S+\s+en\s+balcarce\s+(por|tras|ante|entre)\b/;
+
+/** Los problemas de forma de un título, como frases para el registro y para
+ *  la corrección que se le manda a la IA. */
+export function problemasDeFormaDelTitulo(titulo) {
+  const t = String(titulo ?? '').trim();
+  const n = sinTildes(t);
+  const salida = [];
+  if (!t) return salida;
+  if (/[¡!¿?]/.test(t)) salida.push(`el título tiene signos de admiración o de pregunta: "${t.slice(0, 60)}"`);
+  const etiqueta = etiquetaAdelante(t);
+  if (etiqueta) salida.push(`el título empieza con una etiqueta y dos puntos ("${etiqueta.etiqueta}:"): tiene que empezar por el hecho`);
+  if (terminaColgado(t)) salida.push(`el título termina cortado (en coma, signo o conector): "…${t.slice(-30)}"`);
+  if (ARRANQUE_SIN_HECHO.test(n) || EN_BALCARCE_POR.test(n)) {
+    salida.push(`el título empieza con una etiqueta y un lugar, sin decir qué pasó: "${t.slice(0, 40)}…"`);
+  }
+  const adjetivo = n.match(ADJETIVOS_DE_GANCHO);
+  if (adjetivo) salida.push(`el título usa un adjetivo de gancho: "${adjetivo[0]}"`);
+  return salida;
+}
+
+// ------------------------------------------------------- el título en pasado
+//
+// El título va en presente (CRITERIO-EDITORIAL.md, sección 4): "El Concejo
+// aprueba", no "El Concejo aprobó". El 28/09 salían "repasó", "ganó"… Sin un
+// analizador de verbos, se mira la forma: una palabra terminada en "-ó"
+// (aprobó, ganó, recibió), en "-aron", "-ieron", "-jeron" o "-yeron"
+// (aprobaron, detuvieron, dijeron, cayeron), o un pretérito irregular
+// (fue, hizo, dijo, tuvo, hubo…). Para no tomar por principal el verbo de una
+// subordinada ("Detienen al hombre que robó una moto"), no cuenta si alguna
+// de las tres palabras de antes es "que", "quien", "donde", "cuando"… Lo que
+// está entre comillas tampoco cuenta: es una cita.
+
+const PRETERITOS_IRREGULARES = new Set([
+  'fue', 'fueron', 'hizo', 'dijo', 'tuvo', 'hubo', 'dio', 'dieron', 'estuvo', 'vino', 'trajo',
+  'puso', 'pudo', 'quiso', 'supo', 'condujo', 'produjo', 'redujo', 'anduvo', 'murio', 'fui',
+]);
+// Palabras terminadas en "-ó" o "-aron" que no son verbos.
+const NO_SON_VERBOS = new Set(['domino', 'capo', 'buro', 'rondo', 'lando', 'gigolo', 'yoyo', 'rococo', 'bongo', 'sharon', 'aaron', 'baron', 'varon', 'caron', 'charon']);
+const SUBORDINANTES = new Set(['que', 'quien', 'quienes', 'donde', 'cuando', 'como', 'cual', 'cuales', 'cuyo', 'cuya', 'cuyos', 'cuyas', 'si', 'porque', 'aunque', 'mientras']);
+
+/** El verbo en pretérito que manda en el título, o null. */
+export function tituloEnPasado(titulo) {
+  const sinCitas = String(titulo ?? '').replace(/["“«][^"”»]*["”»]/gu, ' ');
+  const ws = sinCitas.split(/\s+/)
+    .map((w) => w.replace(/^[^\p{L}]+|[^\p{L}]+$/gu, ''))
+    .filter(Boolean);
+  for (let i = 0; i < ws.length; i += 1) {
+    const w = ws[i];
+    const baja = w.toLowerCase();
+    const llana = sinTildes(baja);
+    if (NO_SON_VERBOS.has(llana)) continue;
+    const pasado = (baja.length >= 4 && /ó$/u.test(baja))
+      || (baja.length >= 6 && /(aron|ieron|jeron|yeron)$/.test(baja))
+      || PRETERITOS_IRREGULARES.has(baja);
+    if (!pasado) continue;
+    // Una palabra con mayúscula en el medio del título es un nombre (Castelló).
+    if (i > 0 && /^\p{Lu}/u.test(w)) continue;
+    const antes = ws.slice(Math.max(0, i - 3), i).map((x) => sinTildes(x));
+    if (antes.some((x) => SUBORDINANTES.has(x))) continue;
+    return w;
+  }
+  return null;
+}
+
+// ----------------------------------------------------------------- las tildes
+//
+// 28/09: salieron notas enteras sin una tilde (Paris, inversion, energia,
+// reunion, informacion). Un medio que escribe sin tildes se lee como un
+// mensaje apurado. Se cuentan las palabras frecuentes escritas sin tilde que
+// en castellano la llevan siempre: las de esta lista y las terminadas en
+// "-cion" o "-sion" (en singular, siempre llevan tilde). Con pocas se les pone
+// la tilde (arreglarEscritura); con ESTILO.palabrasSinTilde o más, el texto se
+// da por escrito sin tildes y se rechaza: hay muchas más que no se pueden
+// arreglar a ciegas ("esta" o "está", "publica" o "pública").
+
+const CON_TILDE = {
+  tambien: 'también', ademas: 'además', despues: 'después', segun: 'según', millon: 'millón',
+  energia: 'energía', politica: 'política', politicas: 'políticas', politico: 'político',
+  politicos: 'políticos', economia: 'economía', economico: 'económico', economica: 'económica',
+  tecnologia: 'tecnología', ultimo: 'último', ultima: 'última', ultimos: 'últimos', ultimas: 'últimas',
+  sabado: 'sábado', sabados: 'sábados', miercoles: 'miércoles', dia: 'día', dias: 'días',
+  pais: 'país', autodromo: 'autódromo', publico: 'público', publicos: 'públicos',
+  numero: 'número', numeros: 'números', camara: 'cámara', historico: 'histórico',
+  historica: 'histórica', habia: 'había', habian: 'habían', podria: 'podría',
+  todavia: 'todavía', asi: 'así', aqui: 'aquí', alli: 'allí', proximo: 'próximo',
+  proxima: 'próxima', musica: 'música', jovenes: 'jóvenes', titulo: 'título',
+  kilometros: 'kilómetros', rapido: 'rápido', rapida: 'rápida', razon: 'razón',
+  campeon: 'campeón', camion: 'camión', avion: 'avión', corazon: 'corazón',
+  practicamente: 'prácticamente', unico: 'único', unica: 'única', basicamente: 'básicamente',
+  // No van: "seria" (una situación seria), "periodo" (vale sin tilde),
+  // "publica", "practica", "esta", "el", "aun": son palabras correctas también.
+};
+// Se cuentan pero no se arreglan: pueden ser un nombre escrito así a propósito.
+const SIN_TILDE_SIN_ARREGLO = new Set(['paris']);
+// "-ción" y "-sión" siempre; "-ión" (reunión, región, opinión) también, pero
+// sólo en minúscula: con mayúscula puede ser un nombre (Marion, Albion).
+const TERMINA_EN_CION = /^[a-zñ]{2,}(cion|sion)$/;
+const TERMINA_EN_ION = /^[a-zñ]{3,}ion$/;
+const PALABRA = /(?<![\p{L}])(\p{L}+)(?![\p{L}])/gu;
+
+const conLaMismaMayuscula = (original, nueva) => (/^\p{Lu}/u.test(original) ? nueva.charAt(0).toUpperCase() + nueva.slice(1) : nueva);
+
+/** Cómo se escribe con tilde una palabra que la perdió, o null. */
+function palabraConTilde(w) {
+  const baja = w.toLowerCase();
+  if (baja !== w && baja.charAt(0).toUpperCase() + baja.slice(1) !== w) return null; // SIGLAS o MeZcLa
+  if (CON_TILDE[baja]) return conLaMismaMayuscula(w, CON_TILDE[baja]);
+  if (TERMINA_EN_CION.test(baja)) return conLaMismaMayuscula(w, baja.replace(/ion$/, 'ión'));
+  if (w === baja && TERMINA_EN_ION.test(baja)) return baja.replace(/ion$/, 'ión');
+  return null;
+}
+
+/** Las palabras de un texto escritas sin la tilde que siempre llevan. */
+export function palabrasSinTilde(texto) {
+  const salida = [];
+  for (const [, w] of String(texto ?? '').matchAll(PALABRA)) {
+    if (palabraConTilde(w) || SIN_TILDE_SIN_ARREGLO.has(w.toLowerCase())) salida.push(w);
+  }
+  return salida;
+}
+
+// ------------------------------------------------------ los arreglos mecánicos
+
+// Muletillas al comienzo de una oración: "Cabe destacar que el Concejo…" es
+// "El Concejo…". Se sacan sin tocar el resto de la oración.
+// El verbo es obligatorio: "Es importante que los vecinos se vacunen" dice algo.
+const MULETILLA_DE_ARRANQUE = /(^|[.!?]\s+|\n\s*)(?:cabe|vale|vale la pena|es importante|resulta importante)\s+(?:destacar|señalar|senalar|mencionar|remarcar|aclarar|recordar|subrayar|resaltar)\s+que\s+(\p{L})/giu;
+
+const DIAS_DE_LA_SEMANA = ['domingo', 'lunes', 'martes', 'miercoles', 'jueves', 'viernes', 'sabado'];
+const ESTE_DIA = /(?<![\p{L}])(este|Este|ESTE)\s+(lunes|martes|miércoles|miercoles|jueves|viernes|sábado|sabado|domingo|fin de semana)(?![\p{L}])/gu;
+
+/**
+ * Lo que se puede corregir sin inventar nada, antes de verificar (28/09).
+ * Nunca agrega un dato: saca lo que sobra o pone una tilde.
+ *
+ *   · el título: sin una etiqueta conocida adelante ("Rugby: …") y sin una
+ *     coma o un conector colgando al final (web/lib/titulos.js);
+ *   · "este sábado" pasa a ser "el sábado" cuando hoy no es sábado: la nota
+ *     se lee días después y "este sábado" se entiende como el que viene
+ *     (28/09: "participan este viernes", leído el lunes). "Este fin de
+ *     semana", igual, salvo un sábado o un domingo. No se calcula la fecha:
+ *     cuál es "este sábado" depende de cuándo lo escribió la fuente, y un
+ *     número de día inventado sería peor;
+ *   · "Cabe destacar que…" y parecidas al comienzo de una oración se sacan;
+ *   · con menos de ESTILO.palabrasSinTilde palabras sin tilde, se les pone
+ *     (con más, el texto se rechaza: verificar con `estilo`).
+ *
+ * @param {{ titulo?, copete?, cuerpo?, guion? }} nuevo
+ * @param {{ hoy?: Date }} [o]
+ * @returns {{ nuevo: object, arreglos: string[] }}
+ */
+export function arreglarEscritura(nuevo = {}, { hoy = new Date() } = {}) {
+  const arreglos = [];
+  const salida = { ...nuevo };
+  const diaDeHoy = diaSemanaAR(hoy);
+
+  if (typeof salida.titulo === 'string' && salida.titulo.trim()) {
+    const t = sinCierreColgado(sinEtiqueta(salida.titulo.trim()));
+    if (t !== salida.titulo.trim()) arreglos.push(`título: "${salida.titulo.trim()}" → "${t}"`);
+    salida.titulo = t;
+  }
+  if (typeof salida.guion === 'string' && salida.guion.trim()) {
+    salida.guion = sinEtiqueta(salida.guion.trim());
+  }
+
+  const campos = ['titulo', 'copete', 'cuerpo', 'guion'].filter((c) => typeof salida[c] === 'string' && salida[c]);
+  const todo = campos.map((c) => salida[c]).join('\n');
+  const arreglarTildes = palabrasSinTilde(todo).length < ESTILO.palabrasSinTilde;
+
+  for (const campo of campos) {
+    let t = salida[campo];
+    t = t.replace(ESTE_DIA, (m, este, dia) => {
+      const i = DIAS_DE_LA_SEMANA.indexOf(sinTildes(dia));
+      const esHoy = dia === 'fin de semana' ? (diaDeHoy === 0 || diaDeHoy === 6) : i === diaDeHoy;
+      if (esHoy) return m;
+      arreglos.push(`${campo}: "${m}" → "${este === 'este' ? 'el' : 'El'} ${dia}"`);
+      return `${este === 'este' ? 'el' : 'El'} ${dia}`;
+    });
+    if (campo === 'copete' || campo === 'cuerpo') {
+      t = t.replace(MULETILLA_DE_ARRANQUE, (m, antes, letra) => {
+        arreglos.push(`${campo}: se sacó "${m.trim().slice(0, -1).trim()}"`);
+        return `${antes}${letra.toUpperCase()}`;
+      });
+    }
+    if (arreglarTildes) {
+      t = t.replace(PALABRA, (w) => {
+        const bien = palabraConTilde(w);
+        if (!bien) return w;
+        arreglos.push(`${campo}: "${w}" → "${bien}"`);
+        return bien;
+      });
+    }
+    salida[campo] = t;
+  }
+  return { nuevo: salida, arreglos };
 }
 
 // Lo que se ve primero: el título, la bajada, el guion y el texto para redes.
@@ -366,7 +615,7 @@ const EN_VIVO_PERMITIDO = /\b(musica|show|shows|banda|bandas|espectaculo|especta
  * @param {{ titulo?: string, resumen?: string, antecedentes?: string }} fuente lo que se le dio
  * @param {{ titulo?: string, copete?: string, cuerpo?: string, guion?: string }} nuevo lo que devolvió
  */
-export function verificar(fuente, nuevo, { soloForma = false, deBalcarce = null } = {}) {
+export function verificar(fuente, nuevo, { soloForma = false, deBalcarce = null, estilo = false } = {}) {
   const problemas = [];
   const agregar = (tipo, detalle) => problemas.push({ tipo, detalle });
 
@@ -418,7 +667,60 @@ export function verificar(fuente, nuevo, { soloForma = false, deBalcarce = null 
     agregar('copia', `copia ${copiado} palabras seguidas del original`);
   }
 
+  // 9. El estilo de lo que se escribe nuevo (28/09, del repaso editorial de lo
+  // publicado). Lo pide la reescritura (reels/reescritura.mjs) y el panel; no
+  // se aplica al revalidar lo ya publicado (`soloForma`): son heurísticas, y
+  // una nota que ya está en la portada no se baja por una de ellas.
+  if (estilo && !soloForma) problemas.push(...problemasDeEstilo(nuevo));
+
   return { ok: problemas.length === 0, problemas };
+}
+
+/**
+ * Los problemas de estilo de lo que escribió la IA (28/09):
+ *
+ *   · el título en pasado ("El Concejo aprobó", "Ferroviarios ganó"): va en
+ *     presente (tituloEnPasado);
+ *   · el texto escrito sin tildes (palabrasSinTilde, ESTILO.palabrasSinTilde);
+ *   · el cuerpo que no explica lo que promete el título: cada número del
+ *     título tiene que estar también en el cuerpo, y no pueden faltarle dos
+ *     nombres propios del título o más (un título nombraba a tres sancionados
+ *     y el cuerpo explicaba uno). Sólo si hay cuerpo.
+ */
+export function problemasDeEstilo(nuevo = {}) {
+  const problemas = [];
+  const agregar = (tipo, detalle) => problemas.push({ tipo, detalle });
+  const titulo = String(nuevo.titulo ?? '');
+  const cuerpo = String(nuevo.cuerpo ?? '');
+
+  const verbo = tituloEnPasado(titulo);
+  if (verbo) agregar('pasado', `el título está en pasado ("${verbo}"): va en presente, como "aprueba" o "gana"`);
+
+  const todo = ['titulo', 'copete', 'cuerpo', 'guion'].map((c) => nuevo[c] ?? '').join('\n');
+  const sinTilde = palabrasSinTilde(todo);
+  if (sinTilde.length >= ESTILO.palabrasSinTilde) {
+    agregar('tildes', `el texto está escrito sin tildes (${[...new Set(sinTilde)].slice(0, 5).join(', ')}): va con las tildes y la eñe donde corresponden`);
+  }
+
+  if (cuerpo.trim()) {
+    // Dos nombres o más que el cuerpo no nombra: con uno solo ("El Concejo
+    // aprueba…" y un cuerpo que dice "los concejales") sería rechazar de más.
+    const palabrasDelCuerpo = new Set(palabras(cuerpo));
+    const nombresDelCuerpo = nombresDe(cuerpo);
+    const faltan = [...nombresDe(titulo)]
+      .filter((nombre) => !DE_CASA.has(nombre) && !CALENDARIO.has(nombre))
+      .filter((nombre) => !nombreConocido(nombre, nombresDelCuerpo, palabrasDelCuerpo));
+    if (faltan.length >= 2) {
+      agregar('promesa', `el título nombra a ${faltan.map((f) => `"${f}"`).join(', ')} y el cuerpo no los explica`);
+    }
+    const numerosDelCuerpo = numerosDe(cuerpo);
+    for (const v of numerosDe(titulo)) {
+      if (!estaEnLaFuente(v, numerosDelCuerpo)) {
+        agregar('promesa', `el título dice ${v.toLocaleString('es-AR')} y el cuerpo no lo explica`);
+      }
+    }
+  }
+  return problemas;
 }
 
 // ------------------------------------------------------- las partes nuevas

@@ -62,6 +62,33 @@ export const PARTES = {
 /** Más de esto seguido, palabra por palabra, es copiar y no reescribir. */
 export const COPIA_MAXIMA = 12;
 
+/** El estilo que controla el verificador (28/09). Con esta cantidad de
+ *  palabras frecuentes escritas sin tilde ("informacion", "tambien",
+ *  "segun"…) el texto se da por escrito sin tildes y se rechaza; con menos,
+ *  se les pone la tilde sin pedir nada (arreglarEscritura, ingesta/verificar.mjs). */
+export const ESTILO = {
+  palabrasSinTilde: 3,
+};
+
+/**
+ * Las frases de relleno que el verificador no deja pasar (28/09, del repaso
+ * editorial de las notas publicadas): no dicen nada que no esté dicho, o
+ * esconden que no hay un dato. En el cuerpo se saca la oración entera; en el
+ * título o la bajada, la escritura se rechaza. Aunque la fuente misma las
+ * diga. La misma lista está en CRITERIO-EDITORIAL.md (sección 4, entre las
+ * marcas RELLENO) y en la instrucción de la IA (sección 12, regla 19):
+ * pruebas/criterio.test.mjs controla que digan lo mismo. En minúscula; se
+ * comparan sin tildes.
+ */
+export const RELLENO = [
+  'fuentes consultadas', 'pudo saber', 'hito histórico', 'consolidando', 'consolidándose',
+  'un legado', 'motivo de orgullo', 'gran presencia', 'en el marco de', 'las fuentes no registran',
+  'postal poco habitual', 'cabe destacar', 'cabe señalar', 'cabe mencionar', 'cabe remarcar',
+  'es importante destacar', 'es importante señalar', 'vale destacar', 'vale la pena destacar',
+  'por este medio', 'en ocasiones previas', 'sin dudas', 'sin lugar a dudas', 'una gran noticia',
+  'no pasó desapercibido', 'dijo presente',
+];
+
 /** Cómo trabaja la IA con cada nota. */
 export const REESCRITURA = {
   intentosMaximos: 3,
@@ -202,12 +229,10 @@ export const FACEBOOK = {
   horasSinRepetirTema: 24,
 };
 
-/** Las piezas de video (podcasts e historias de notas). */
+/** Las piezas de video: los podcasts. (Las historias de una nota y el feed de
+ *  fotos de Instagram se sacaron el 28/09, y con ellos sus números.) */
 export const PIEZAS = {
   relevanciaPodcast: 62,
-  relevanciaFeed: 80,
-  historiasDeNotas: 3,
-  feedPorDia: 2,
   notasPorPodcast: 3,
   notasPodcastNoche: 4,
   notasMinimasPodcast: 2,
@@ -242,6 +267,7 @@ export const NUMEROS_DEL_CRITERIO = {
   GUION,
   PARTES,
   COPIA_MAXIMA,
+  ESTILO,
   REESCRITURA,
   PORTADA,
   NOTA_DEL_DOLAR,

@@ -36,13 +36,15 @@ export const FORMATOS = {
   instagram: {
     // Posteo del feed: vertical 4:5. La grilla del perfil lo muestra recortado
     // (3:4 en la app nueva, cuadrado en la vieja), así que el texto va en la
-    // zona segura del centro.
+    // zona segura del centro. Desde el 28/09 la tarjeta lleva la foto de la nota
+    // arriba, que sí llega al borde (INSTAGRAM en web/lib/tarjeta-diseno.js).
     posteo: {
       ancho: 1080, alto: 1350, proporcion: '4:5', zonaSegura: { ancho: 1012, alto: 1080 }, verificado: true,
     },
     // Historias y reels: vertical 9:16. Arriba y abajo la app pone su propia
     // interfaz (nombre, respuesta, botones): se dejan libres ~250 px arriba y
-    // ~340 px abajo.
+    // ~340 px abajo. Las placas del 28/09 ponen todo el texto entre las filas
+    // 250 y 1580 (ZONA_TEXTO en reels/placa.mjs; lo prueba pruebas/placas.test.mjs).
     historia: {
       ancho: 1080, alto: 1920, proporcion: '9:16', margenArriba: 250, margenAbajo: 340, verificado: true,
     },

@@ -1,197 +1,198 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { ImageResponse } from 'next/og';
-import { cuerpo } from './tamano-titulo.js';
+import {
+  PAPEL, TINTA, GRIS, ROJO, INSTAGRAM, INTERLINEA_TITULO, INTERLINEA_BAJADA,
+  colorDe, repartirTexto, tamNombreDeSeccion, fechaCorta, fotoDeLaNota,
+} from './tarjeta-diseno.js';
 
-// La imagen que se ve al compartir una nota.
+// Las imágenes de cada nota: la que se ve al compartir el enlace (WhatsApp,
+// Facebook, X, Telegram; 1200 x 630) y la del espejo de cada posteo de
+// Facebook en el feed de Instagram (/nota/ID/instagram.png, 1080 x 1350).
 //
-// Es lo que aparece en WhatsApp, Facebook, X y Telegram cuando alguien pega
-// el enlace. Hasta ahora no había ninguna, así que una nota compartida
-// llegaba como una dirección pelada — y en un pueblo, donde la conversación
-// pasa por WhatsApp, eso es perder la mitad de la distribución.
+// Diseño del 28/09 (lienzo "Radar Balcarce · Plantillas redes", aprobado por
+// Hernán): fondo papel, el título en serif grande y el pie con "Radar
+// Balcarce". La de Instagram lleva la foto de la nota arriba, con la franja
+// del color de su sección, cuando la nota tiene una en el banco propio
+// (web/data/banco-fotos.json); si no, la "placa sin foto": el bloque de color
+// de la sección con los anillos del radar. Las cuentas (cuerpos, qué entra,
+// colores) están en tarjeta-diseno.js, donde se prueban.
 //
-// No usamos la foto del medio de origen: es obra ajena, y la excepción de
-// noticias de la ley 11.723 cubre el texto, no las fotografías. Lo que va es
-// el titular sobre el color de su sección, con la marca. Misma idea que las
-// placas de los reels, mismas tipografías.
+// La foto va recortada y SIN el crédito adentro: nunca el nombre de otro medio
+// ni una marca de agua dentro de una imagen (CLAUDE.md, "Las fotos"). El
+// crédito va en el texto del posteo (redes/elegir.mjs, conCreditoDeFoto) y en
+// la página de la nota. La apaisada (Facebook con enlace, WhatsApp) no lleva
+// foto: el texto de ese posteo no nombra la fuente (CRITERIO-EDITORIAL.md § 9),
+// así que no tendría dónde ir el crédito.
 //
 // Se generan al compilar el sitio, una por nota, y quedan como archivos
 // estáticos: no hay nada corriendo cuando alguien comparte.
 
+// Se repiten acá (y no sólo en tarjeta-diseno.js) porque las rutas de Next
+// las importan de este archivo; pruebas/formatos.test.mjs controla las dos.
 export const TAMANO = { width: 1200, height: 630 };
-// Instagram: 1080x1350 (4:5), lo que recomienda hoy para un posteo. La grilla
-// del perfil lo muestra recortado (cuadrado o 3:4 según la versión de la app),
-// así que TODO lo importante queda en la zona segura del centro: 1012x1080
-// (la medida está en redes/formatos.mjs).
-// Facebook, en cambio, muestra un enlace con la imagen apaisada de arriba.
 export const TAMANO_INSTAGRAM = { width: 1080, height: 1350 };
 export const TIPO = 'image/png';
 
-// Los mismos tonos de globals.css (--s-*, 27/09), pero claros: acá el color
-// va en el nombre de la sección y en la franja, sobre el fondo casi negro, y
-// los de la web son oscuros porque van de fondo de un texto blanco. Cada uno
-// da al menos 4,5:1 contra #14161A (pruebas/titulos-colores.test.mjs).
-const COLOR = {
-  Balcarce: '#F87171',
-  Política: '#A5B4FC',
-  Policiales: '#F472B6',
-  Fútbol: '#4ADE80',
-  Deportes: '#2DD4BF',
-  Automovilismo: '#FB923C',
-  Agro: '#A3E635',
-  'Cultura y agenda': '#E879F9',
-  Economía: '#FACC15',
-  Tecnología: '#38BDF8',
-  Argentina: '#9CA3AF',
-};
-const POR_DEFECTO = '#14161A';
-
 const FUENTES = path.join(process.cwd(), 'fuentes');
 const leer = (archivo) => fs.readFileSync(path.join(FUENTES, archivo));
+
+// Un nodo para satori, sin JSX (este archivo no pasa por el compilador de React).
+const div = (style, children) => ({
+  type: 'div',
+  props: { style: { display: 'flex', ...style }, children: Array.isArray(children) ? children.filter(Boolean) : children },
+});
+
+/** Los anillos del radar, como imagen SVG (la marca de la casa). */
+const anillos = (lado, opacidad = 0.22) => ({
+  type: 'img',
+  props: {
+    width: lado,
+    height: lado,
+    src: `data:image/svg+xml;utf8,${encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" width="720" height="720" viewBox="0 0 720 720" fill="none" stroke="rgba(255,255,255,${opacidad})" stroke-width="3"><circle cx="360" cy="360" r="120"/><circle cx="360" cy="360" r="220"/><circle cx="360" cy="360" r="320"/><line x1="360" y1="360" x2="120" y2="620"/><circle cx="360" cy="360" r="14" fill="rgba(255,255,255,0.5)" stroke="none"/></svg>`)}`,
+  },
+});
+
+/** "Radar Balcarce": Radar en tinta, Balcarce en el rojo de la marca. */
+const firma = (tam) => div({ fontFamily: 'Source Serif', fontWeight: 900, fontSize: tam, letterSpacing: '-0.01em' }, [
+  div({ color: TINTA }, 'Radar'),
+  div({ color: ROJO, marginLeft: Math.round(tam * 0.25) }, 'Balcarce'),
+]);
+
+/** El pie: raya de tinta, la firma y "28 sep · radarbalcarce.com". */
+const pie = (nota, tam = 40) => {
+  const fecha = fechaCorta(nota);
+  return div({
+    marginTop: 'auto',
+    paddingTop: 20,
+    borderTop: `3px solid ${TINTA}`,
+    alignItems: 'center',
+    justifyContent: 'space-between',
+  }, [
+    firma(tam),
+    div({ fontFamily: 'Inter', fontWeight: 400, fontSize: Math.round(tam * 0.62), color: GRIS }, fecha ? `${fecha} · radarbalcarce.com` : 'radarbalcarce.com'),
+  ]);
+};
+
+/** El rótulo de la sección, en mayúsculas espaciadas. */
+const rotuloDeSeccion = (texto, style = {}) => div({
+  fontFamily: 'Inter', fontWeight: 600, fontSize: 28, letterSpacing: '0.12em', textTransform: 'uppercase', ...style,
+}, texto);
+
+const titular = (titulo, tam) => div({
+  fontFamily: 'Source Serif',
+  fontWeight: 900,
+  fontSize: tam,
+  lineHeight: INTERLINEA_TITULO,
+  letterSpacing: '-0.015em',
+  color: TINTA,
+}, titulo);
+
+/** La de Instagram con la foto de la nota (lienzo "Placa de noticia con foto"). */
+function instagramConFoto(nota, foto) {
+  const I = INSTAGRAM;
+  const color = colorDe(nota.seccion);
+  const r = repartirTexto(nota, 'conFoto');
+  return div({ width: '100%', height: '100%', flexDirection: 'column', backgroundColor: PAPEL }, [
+    div({ position: 'relative', height: I.foto, width: '100%', flexShrink: 0, backgroundColor: '#2B2F36' }, [
+      { type: 'img', props: { src: foto, width: TAMANO_INSTAGRAM.width, height: I.foto, style: { width: '100%', height: I.foto, objectFit: 'cover' } } },
+      nota.seccion && rotuloDeSeccion(nota.seccion, {
+        position: 'absolute', top: I.arriba, left: I.margen, padding: '14px 26px', borderRadius: 999, backgroundColor: color, color: '#FFFFFF', fontSize: 26,
+      }),
+    ]),
+    div({ height: I.franja, flexShrink: 0, backgroundColor: color }),
+    div({ flexGrow: 1, flexDirection: 'column', padding: `44px ${I.margen}px ${I.abajo}px` }, [
+      titular(nota.titulo ?? '', r.tamTitulo),
+      r.bajada && div({
+        marginTop: 22, fontFamily: 'Inter', fontWeight: 400, fontSize: r.tamBajada, lineHeight: INTERLINEA_BAJADA, color: GRIS,
+      }, r.bajada),
+      pie(nota),
+    ]),
+  ]);
+}
+
+/** La de Instagram sin foto (lienzo "Placa sin foto"). */
+function instagramSinFoto(nota) {
+  const I = INSTAGRAM;
+  const color = colorDe(nota.seccion);
+  const r = repartirTexto(nota, 'sinFoto');
+  const nombre = nota.seccion ?? 'Radar Balcarce';
+  return div({ width: '100%', height: '100%', flexDirection: 'column', backgroundColor: PAPEL }, [
+    div({ position: 'relative', height: I.bloque, width: '100%', flexShrink: 0, backgroundColor: color, overflow: 'hidden' }, [
+      div({ position: 'absolute', right: -200, top: -240 }, anillos(720)),
+      rotuloDeSeccion(nota.seccion ? nombre : 'radarbalcarce.com', { position: 'absolute', top: I.arriba, left: I.margen, color: '#FFFFFF' }),
+      div({
+        position: 'absolute', left: I.margen - 4, bottom: 34, fontFamily: 'Source Serif', fontWeight: 900, fontSize: tamNombreDeSeccion(nombre), lineHeight: 1, letterSpacing: '-0.03em', color: '#FFFFFF',
+      }, nombre),
+    ]),
+    div({ flexGrow: 1, flexDirection: 'column', padding: `56px ${I.margen}px ${I.abajo}px` }, [
+      titular(nota.titulo ?? 'Lo que pasa en Balcarce', r.tamTitulo),
+      pie(nota),
+    ]),
+  ]);
+}
+
+/** La apaisada para compartir el enlace: banda de color con los anillos y la sección, título y pie. */
+function paraCompartir(nota) {
+  const color = colorDe(nota.seccion);
+  const titulo = nota.titulo ?? 'Lo que pasa en Balcarce';
+  const r = repartirTexto({ titulo }, 'enlace');
+  return div({ width: '100%', height: '100%', flexDirection: 'column', backgroundColor: PAPEL }, [
+    div({
+      position: 'relative', height: 150, width: '100%', flexShrink: 0, backgroundColor: color, overflow: 'hidden', alignItems: 'center', padding: '0 64px',
+    }, [
+      div({ position: 'absolute', right: -120, top: -250 }, anillos(560)),
+      nota.seccion
+        ? rotuloDeSeccion(nota.seccion, { color: '#FFFFFF', fontSize: 30 })
+        : div({ fontFamily: 'Source Serif', fontWeight: 900, fontSize: 52, color: '#FFFFFF' }, 'Radar Balcarce'),
+    ]),
+    div({ flexGrow: 1, flexDirection: 'column', padding: '40px 64px 34px' }, [
+      titular(titulo, r.tamTitulo),
+      pie(nota, 36),
+    ]),
+  ]);
+}
+
+/**
+ * La foto de la nota lista para la tarjeta de Instagram (data URL), o null.
+ * La WebP se pasa a JPEG con sharp (viene con Next): satori no la lee. Si no
+ * se puede, va la placa sin foto — nunca se rompe la compilación por esto.
+ */
+export async function fotoParaInstagram(nota) {
+  const f = fotoDeLaNota(nota);
+  if (!f) return null;
+  try {
+    let datos = fs.readFileSync(f.ruta);
+    let tipo = f.tipo;
+    if (tipo === 'image/webp') {
+      const { default: sharp } = await import('sharp');
+      datos = await sharp(datos).jpeg({ quality: 88 }).toBuffer();
+      tipo = 'image/jpeg';
+    }
+    return `data:${tipo};base64,${datos.toString('base64')}`;
+  } catch {
+    return null;
+  }
+}
 
 /**
  * La tarjeta de una nota, o del sitio si no se pasa ninguna.
  *
  * @param {{ titulo?: string, seccion?: string, copete?: string }} nota
+ * @param {{ instagram?: boolean, foto?: string|null }} opciones  `foto`: data
+ *   URL de fotoParaInstagram (sólo la de Instagram la usa).
  */
-export function tarjeta(nota = {}, { instagram = false } = {}) {
-  // Instagram recorta la imagen en la grilla del perfil: una tarjeta apaisada
-  // (1200x630) perdía los costados del titular. La de Instagram es vertical
-  // 4:5 (1080x1350) con el texto en la zona segura del centro; la apaisada
-  // es para compartir enlaces por WhatsApp y Facebook.
-  const e = instagram ? 1.25 : 1;
-  const titulo = nota.titulo ?? 'Lo que pasa en Balcarce';
-  const seccion = nota.seccion ?? null;
-  const acento = COLOR[seccion] ?? POR_DEFECTO;
+export function tarjeta(nota = {}, { instagram = false, foto = null } = {}) {
+  let arbol;
+  if (!instagram) arbol = paraCompartir(nota);
+  else arbol = foto ? instagramConFoto(nota, foto) : instagramSinFoto(nota);
 
-  return new ImageResponse(
-    {
-      type: 'div',
-      props: {
-        style: {
-          width: '100%',
-          height: '100%',
-          display: 'flex',
-          flexDirection: 'column',
-          backgroundColor: '#14161A',
-          // La franja de color de la sección, arriba, como en las placas.
-          // En Instagram la franja de color va adentro de la zona segura (una
-          // en el borde se pierde con el recorte de la grilla).
-          ...(instagram ? {} : { borderTop: `18px solid ${acento}` }),
-          // 135px arriba y abajo: lo que se recorta en la grilla cuadrada.
-          padding: instagram ? '200px 96px 190px' : '56px 64px 48px',
-          fontFamily: 'Inter',
-        },
-        children: [
-          instagram && {
-            type: 'div',
-            props: { style: { width: 132, height: 12, backgroundColor: acento, marginBottom: 26, display: 'flex' } },
-          },
-          seccion && {
-            type: 'div',
-            props: {
-              style: {
-                fontSize: Math.round(26 * e),
-                fontWeight: 600,
-                letterSpacing: '0.14em',
-                textTransform: 'uppercase',
-                color: acento,
-                display: 'flex',
-              },
-              children: seccion,
-            },
-          },
-          {
-            type: 'div',
-            props: {
-              style: {
-                flexGrow: 1,
-                display: 'flex',
-                alignItems: 'center',
-                marginTop: 18,
-              },
-              children: {
-                type: 'div',
-                props: {
-                  style: {
-                    fontFamily: 'Source Serif',
-                    fontSize: Math.round(cuerpo(titulo) * (instagram ? 1.2 : 1)),
-                    fontWeight: 900,
-                    lineHeight: 1.12,
-                    letterSpacing: '-0.02em',
-                    color: '#F7F5EF',
-                    display: 'flex',
-                  },
-                  // Se corta antes de desbordar: una tarjeta con el titular
-                  // cortado a la mitad es peor que uno resumido.
-                  children: titulo.length > 165 ? `${titulo.slice(0, 162)}…` : titulo,
-                },
-              },
-            },
-          },
-          {
-            type: 'div',
-            props: {
-              style: {
-                display: 'flex',
-                alignItems: 'center',
-                gap: 14,
-                paddingTop: 26,
-                borderTop: '1px solid rgba(247, 245, 239, 0.18)',
-              },
-              children: [
-                {
-                  type: 'div',
-                  props: {
-                    style: {
-                      fontFamily: 'Source Serif',
-                      fontSize: Math.round(30 * e),
-                      fontWeight: 900,
-                      color: '#F7F5EF',
-                      display: 'flex',
-                    },
-                    children: 'Radar',
-                  },
-                },
-                {
-                  type: 'div',
-                  props: {
-                    style: {
-                      fontFamily: 'Source Serif',
-                      fontSize: Math.round(30 * e),
-                      fontWeight: 900,
-                      color: '#E0553A',
-                      display: 'flex',
-                    },
-                    children: 'Balcarce',
-                  },
-                },
-                {
-                  type: 'div',
-                  props: {
-                    style: {
-                      flexGrow: 1,
-                      textAlign: 'right',
-                      fontSize: Math.round(22 * e),
-                      color: '#9FA39D',
-                      display: 'flex',
-                      justifyContent: 'flex-end',
-                    },
-                    children: 'radarbalcarce.com',
-                  },
-                },
-              ],
-            },
-          },
-        ].filter(Boolean),
-      },
-    },
-    {
-      ...(instagram ? TAMANO_INSTAGRAM : TAMANO),
-      fonts: [
-        { name: 'Source Serif', data: leer('SourceSerif4-900.ttf'), weight: 900, style: 'normal' },
-        { name: 'Inter', data: leer('Inter-600.ttf'), weight: 600, style: 'normal' },
-      ],
-    },
-  );
+  return new ImageResponse(arbol, {
+    ...(instagram ? TAMANO_INSTAGRAM : TAMANO),
+    fonts: [
+      { name: 'Source Serif', data: leer('SourceSerif4-900.ttf'), weight: 900, style: 'normal' },
+      { name: 'Inter', data: leer('Inter-400.ttf'), weight: 400, style: 'normal' },
+      { name: 'Inter', data: leer('Inter-600.ttf'), weight: 600, style: 'normal' },
+    ],
+  });
 }

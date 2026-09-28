@@ -1,6 +1,6 @@
 # Criterio editorial de Radar Balcarce
 
-*Actualizado el 27/09/2026.* Éste es **el** criterio editorial del medio: qué
+*Actualizado el 28/09/2026.* Éste es **el** criterio editorial del medio: qué
 se publica, cómo se escribe, cómo se trabaja con las fuentes y cómo se
 verifica. Hay uno solo y está acá. Todo lo demás lo respeta:
 
@@ -290,7 +290,7 @@ siguen con la placa propia (eso sí sigue pendiente, `PENDIENTES.md`).
 | **La cotización del dólar como nota de otro medio.** Si el título es "dólar hoy", "dólar blue", "a cuánto cotiza"… la nota no sale sola | La cotización se muestra en `/dolar`, que se actualiza sola, y el sitio arma su propia nota del dólar una vez por día hábil (sección 8). Una nota ajena por cada cotización es relleno |
 | **Lo de otros países sin conexión argentina.** Primero no se trae lo que el medio pone en una sección de otro país (sección 2, "Lo que no se trae"). Si igual se cuela por una sección argentina y el título nombra a Trump, Xi Jinping, Putin, Newsom, California, la Casa Blanca, Gaza, Ucrania, el G20…, y la nota no es de Balcarce, no sale sola | No le importa a nadie de acá: el 26/09 la cumbre Trump–Xi salió sola y el 27/09 salieron una ley de California y un tigre suelto en México. La lista de nombres es `REGLAS_SEMAFORO.internacional` (sólo mira el título) y es un respaldo: lo principal es no traerlo |
 | **Chimentos y medios de España** | Decisión de Hernán, 27/09: esas fuentes están apagadas |
-| **Un policial de otro lugar.** Desde el 27/09 no se trae (ver "Policiales es sólo de Balcarce"). Queda de respaldo la regla anterior: si la nota es de Policiales, no es de Balcarce y el título o el comienzo dicen "mató", "crimen", "detuvieron", "condenado", "prófugo", "juicio", "fiscal"…, no sale sola | Los diarios nacionales traen crímenes y causas de todo el país, con nombres de acusados, y un medio de Balcarce no tiene por qué darles lugar sin que una persona los mire (26/09: "Mató a su mujer embarazada…" salía verde). Queda amarilla con el motivo "policial de afuera con violencia o acusados". La lista es `REGLAS_SEMAFORO.policialDeAfuera`; no toca lo de Balcarce ni el resto del semáforo |
+| **Un policial de otro lugar.** Desde el 27/09 no se trae (ver "Policiales es sólo de Balcarce"): lo que no viene de un medio de Balcarce ni dice Balcarce en el título se descarta en la ingesta (`esPolicialDeAfuera`, `ingesta/ingesta.mjs`) | Los diarios nacionales traen crímenes y causas de todo el país, con nombres de acusados, y un medio de Balcarce no tiene por qué darles lugar (26/09: "Mató a su mujer embarazada…" salía verde). La regla de respaldo del semáforo que los dejaba amarillos (`policialDeAfuera`) no se alcanzaba nunca desde entonces y se borró el 28/09 |
 | **Una nota en Tecnología que no habla de tecnología.** Las fuentes de tecnología de los diarios traen de todo | La sección se confirma con el título (`PALABRAS_DE_TECNOLOGIA_EN_EL_TITULO`): si no nombra nada de tecnología, no se le cree a la fuente y se clasifica por lo que dice |
 | **"En vivo", "minuto a minuto", "en directo"** en el título, la bajada, el guion o el texto para redes, aunque el medio de origen lo diga ("música en vivo" sí) | Radar Balcarce no hace coberturas en vivo: cuenta lo que pasó |
 | **Una nota automática sin cuerpo** | Una nota de dos renglones no es una nota. Queda "esperando cuerpo" hasta tenerlo (sección 4) |
@@ -339,29 +339,57 @@ invertida: lo más importante primero. El guion para la voz es el título.
 
 ### El título
 
-- Dice **qué pasó**: empieza por el hecho, sujeto y verbo en presente ("El
-  Concejo aprueba…", "Ferroviarios gana…"), no por el lugar ni por una
-  etiqueta.
+Es lo único que lee la mayoría: tiene que decir la noticia entera, solo.
+
+- Dice **qué pasó**: empieza por el hecho, **sujeto y verbo en presente**
+  ("El Concejo aprueba…", "Ferroviarios gana…"), **también cuando el hecho ya
+  pasó**: es el presente de los titulares. El pasado ("aprobó", "ganó",
+  "repasó", "se realizó", "fue elegido") va en el cuerpo, no en el título.
+- **Una sola frase completa**, con su verbo. Nunca una etiqueta con dos
+  puntos adelante ("Rugby:", "Exclusivo:", "Video:"), nunca un sustantivo y
+  un lugar sin verbo ("Cruce en Balcarce por…", "Preocupación por…"), nunca
+  cortado (terminado en coma, en "y", "de", "que" o en puntos suspensivos).
 - Apunta a unos **70 caracteres** y **nunca pasa de 90**: se tiene que entender
-  solo en la pantalla del celular.
+  solo en la pantalla del celular. Si no entra, se elige el dato central y se
+  deja el resto para la bajada; nunca se corta.
 - **Nunca termina en "en Balcarce"** (27/09, Hernán): el medio es de Balcarce
   y se sobreentiende. Si igual aparece, el sistema lo saca
   (`sinBalcarceAlFinal`, `web/lib/titulos.js`). Si el hecho es de otra ciudad,
   el título nombra esa ciudad y nunca a Balcarce.
-- Sin signos de admiración, sin pregunta, sin "Video:", "Ojo:" ni frases de
-  gancho. Nunca "en vivo".
+- Sin signos de admiración, sin pregunta, sin frases de gancho ("lo que tenés
+  que saber", "enterate", "te contamos") ni adjetivos de gancho
+  ("impresionante", "tremendo", "increíble"). Nunca "en vivo".
+- Con nombre y número cuando los hay: "Pato Naranja gana 24 a 10", no "Gran
+  triunfo del rugby local". Lo que nombra el título, el cuerpo lo explica.
 
 | Bien | Mal, y por qué |
 |---|---|
-| El Concejo aprueba el presupuesto 2027 | "Balcarce: el Concejo aprobó el presupuesto" (empieza por el lugar); "El Concejo aprueba el presupuesto 2027 en Balcarce" (la cola sobra) |
+| El Concejo aprueba el presupuesto 2027 | "Balcarce: el Concejo aprobó el presupuesto" (empieza por el lugar y está en pasado); "El Concejo aprueba el presupuesto 2027 en Balcarce" (la cola sobra) |
+| Pato Naranja gana el clásico y queda puntero | "Rugby: Pato Naranja ganó el clásico" (etiqueta adelante y pasado) |
 | Ferroviarios gana por penales y juega la final | "¡Ferroviarios a la final!" (admiración, no dice qué pasó) |
+| El intendente repasa las obras del año ante el Concejo | "El intendente repasó las obras del año" (pasado); "Exclusivo: el intendente habla de las obras" (etiqueta, y no dice qué dijo) |
+| Productores y el municipio discuten la tasa vial | "Cruce en Balcarce por la tasa vial" (una etiqueta y un lugar: no dice quién ni qué) |
+| Tecnopapa reúne a toda la cadena productiva de la papa | "Tecnopapa, el evento que reunirá a toda la cadena productiva del país," (sin verbo principal y cortado en una coma) |
 | Reabre el autódromo Juan Manuel Fangio tras una década | "EN VIVO: la reapertura del Fangio" (no hacemos coberturas en vivo) |
 | Cortan la luz el martes en el barrio Norte | "Lo que tenés que saber del corte de luz" (gancho) |
+
+Lo que se arregla solo, sin volver a pedirle nada a la IA y también en lo ya
+publicado (`tituloAutomatico`, `web/lib/titulos.js`): "en Balcarce" al final,
+una etiqueta **conocida** adelante (una sección, un deporte, "Exclusivo",
+"Video"…) si lo que sigue se sostiene solo, y una coma o un conector colgando
+al final. Una etiqueta que no está en la lista puede ser un lugar
+("Necochea: detienen…") y sacarla haría pasar la nota por de Balcarce: ésa la
+rechaza el verificador y la IA la vuelve a escribir. Lo que escribió una
+persona no se toca.
 
 ### La bajada (el campo `copete`)
 
 - **Dos o tres frases cortas**, unas **50 palabras** como mucho: qué pasó, cómo
   se relaciona con Balcarce y el dato más importante.
+- Completa el título, no lo repite: suma el dato que el título no tenía
+  (cuándo, cuánto, quién decidió) o por qué le importa a alguien de acá.
+- Todo dato de la bajada se desarrolla en el cuerpo: la bajada no puede
+  prometer algo que la nota después no cuenta.
 - Nada de "cabe destacar que" ni antecedentes largos: la profundidad va en el
   cuerpo.
 
@@ -369,6 +397,7 @@ invertida: lo más importante primero. El guion para la voz es el título.
 |---|---|
 | "El Concejo Deliberante aprobó por mayoría el presupuesto 2027. Prevé obras de cloacas en tres barrios y un aumento de la partida de salud." | "Cabe destacar que, como viene ocurriendo desde hace años, el Concejo trató una vez más el presupuesto, un tema siempre polémico…" (relleno y opinión) |
 | "El Concejo Deliberante aprobó por mayoría el presupuesto 2027. Prevé obras de cloacas en tres barrios y un aumento de la partida de salud." | "El Concejo Deliberante aprobó por mayoría en la sesión de este martes, tras un debate de casi tres horas con varias intervenciones de la oposición, el presupuesto municipal para el año 2027, que había sido presentado semanas atrás por el Departamento Ejecutivo." (una sola frase larguísima: es el incumplimiento más frecuente, 28/09) |
+| "La Liga sancionó a tres jugadores de Ferroviarios y a uno de Unión. Las fechas de suspensión van de dos a cinco partidos." (y el cuerpo dice quiénes y por qué, los cuatro) | "La Liga sancionó a cuatro jugadores tras los incidentes." (y el cuerpo explica una sola sanción: la bajada promete lo que la nota no cuenta) |
 
 ### El cuerpo
 
@@ -395,12 +424,77 @@ desarrollada, lo que se lee al abrirla.
   atribuidas ("dijo", "explicó").
 - Si falta largo, se suman **datos de las fuentes**, no adjetivos. Nada de
   cierres de opinión ("sin dudas", "una gran noticia").
+- **Explica todo lo que prometen el título y la bajada.** Si el título nombra
+  a tres sancionados, el cuerpo dice quiénes son los tres y por qué; si la
+  bajada da un dato, el cuerpo lo desarrolla. El verificador rechaza el
+  cuerpo que no nombra un número del título o dos de sus nombres.
+- **El dato central, con su número.** "Aumenta la tasa" no alcanza: cuánto,
+  desde cuándo y a quién. Si la fuente no lo da, se dice que no se informó.
+- **Las cifras, como las da la fuente.** "1,7 millones" es 1,7 millones, no
+  "un millón y medio". Redondear es "unos 3.500" por 3.480, nunca pasar a
+  otra cifra.
+- **Los tiempos verbales, según cuándo pasó.** Lo que ya pasó va en pasado en
+  el cuerpo ("se largó", "participaron"), aunque la fuente lo haya anunciado
+  en futuro: si la fuente del jueves dice "el sábado se largará la carrera" y
+  la nota se escribe el lunes, la carrera "se largó el sábado". Lo que todavía
+  no pasó, en futuro. Nunca "este sábado", "este viernes": la nota se lee
+  días después y "este viernes" parece el que viene. Va "el sábado" o, si la
+  fuente lo da, "el sábado 26". (El sistema cambia solo "este sábado" por "el
+  sábado" cuando hoy no es sábado.)
+
+#### El contexto: que se entienda sin haber leído nada antes
+
+Cada nota tiene que poder leerla alguien que no sabe nada del tema. Por eso,
+con lo que den las fuentes, el cuerpo contesta:
+
+1. **Qué pasó**, con quién, cuándo y dónde, en la primera oración.
+2. **A quién le importa en Balcarce** y por qué, **si la fuente lo dice**
+   (una ruta que usan los vecinos, un club de acá, una tasa que se paga acá).
+   Si la fuente no lo dice, no se inventa la conexión.
+3. **De dónde viene**: un antecedente, si lo da la fuente o un antecedente del
+   sitio ("en agosto el Concejo había rechazado un proyecto parecido"), con su
+   fecha.
+4. **Qué sigue**, si se sabe: la próxima sesión, la fecha de la obra, el
+   próximo partido.
+
+Una sigla se explica la primera vez ("el Instituto Nacional de Tecnología
+Agropecuaria (INTA)"), salvo las que todos conocen (AFA, ANSES). Una persona
+se presenta con su cargo la primera vez.
+
+#### Que se lea fácil y que no parezca escrito por una IA
+
+- **Oraciones cortas, un dato por oración.** Si una oración tiene más de dos
+  comas, se parte en dos.
+- **Sujeto, verbo y predicado**, en ese orden. "El Concejo aprobó la
+  ordenanza" y no "Fue aprobada por parte del Concejo la ordenanza".
+- **Palabras de todos los días**: "empezó" y no "dio inicio", "hubo" y no "se
+  registró la presencia de", "para" y no "a los efectos de".
+- **Sin muletillas de IA**: nada de "consolidando", "en el marco de", "cabe
+  destacar", "un hito", "sin dudas", "dijo presente". Ni un cierre que
+  resuma o valore ("de esta manera…", "sin dudas un paso importante").
+- **Sin repetir la misma palabra** en dos oraciones seguidas si hay otra que
+  sirve, y sin sinónimos rebuscados para evitarla ("la entidad de calle
+  Favaloro" por "el club").
+- **Con las tildes y la eñe donde van**, siempre.
+
+Las frases de relleno que el verificador no deja pasar, aunque la fuente las
+diga (en el cuerpo se va la oración entera; en el título o la bajada se
+rechaza la escritura). Es la lista `RELLENO` de `ingesta/criterio.mjs`: una
+prueba controla que diga lo mismo que ésta.
+
+<!-- RELLENO:INICIO -->
+`fuentes consultadas` · `pudo saber` · `hito histórico` · `consolidando` · `consolidándose` · `un legado` · `motivo de orgullo` · `gran presencia` · `en el marco de` · `las fuentes no registran` · `postal poco habitual` · `cabe destacar` · `cabe señalar` · `cabe mencionar` · `cabe remarcar` · `es importante destacar` · `es importante señalar` · `vale destacar` · `vale la pena destacar` · `por este medio` · `en ocasiones previas` · `sin dudas` · `sin lugar a dudas` · `una gran noticia` · `no pasó desapercibido` · `dijo presente`
+<!-- RELLENO:FIN -->
 
 | Bien | Mal, y por qué |
 |---|---|
 | "La ordenanza, aprobada con doce votos a favor, destina la mayor parte de las obras a los barrios Norte, Sur y Villa Dolores, según informó el Concejo. El intendente había enviado el proyecto en octubre…" | "El Concejo Deliberante aprobó por mayoría el presupuesto 2027, que prevé obras…" (repite la bajada: se rechaza) |
 | "Según la denuncia presentada en la comisaría, el hombre habría ingresado a la vivienda…" | "El hombre entró a robar a la vivienda…" (una acusación como hecho: se rechaza) |
 | "…el municipio no informó todavía cuándo empiezan las obras." | "…una obra que sin dudas cambiará la vida de los vecinos." (opinión, relleno) |
+| "La carrera se largó el sábado a las 14 con 32 autos." (leída el lunes) | "La carrera se largará este sábado." (futuro para algo que ya pasó, y "este sábado" que el lector toma por el próximo) |
+| "La inversión es de 1,7 millones de pesos, según el municipio." | "La inversión ronda el millón y medio de pesos." (la fuente dice 1,7 millones: se rechaza) |
+| "El programa empezó en marzo y ya atendió a 40 familias." | "Consolidando su compromiso, y en el marco de una política integral, el programa se posiciona como un hito." (tres muletillas, ningún dato) |
+| "La reunión fue el martes en la Municipalidad. Participaron la directora de Producción y doce productores." | "La reunion, que conto con la participacion de productores, se realizo en la Municipalidad." (sin tildes: se rechaza, y una frase larga en voz pasiva) |
 
 ### El guion para la voz
 
@@ -483,7 +577,11 @@ el copete y en el cuerpo.
 **Las fechas.** No se mezcla lo de antes con lo de ahora ni se presenta como
 actual algo que la fuente cuenta como histórico. No se usa "ayer", "hoy" ni
 "mañana" si la fuente no dice el día: va el día de la semana que trae la
-fuente, o nada.
+fuente, o nada. Tampoco "este sábado" ni "este viernes": la nota se lee días
+después (28/09: "participan este viernes", leído el lunes). La IA recibe la
+fecha de hoy y la de cada fuente **con el día de la semana** ("lunes
+28/09/2026"), para saber si lo que la fuente anunciaba ya pasó: si pasó, el
+cuerpo lo cuenta en pasado.
 
 **Los antecedentes.** La IA recibe también hasta **tres notas** que el sitio
 ya publicó sobre el mismo tema en los **últimos 30 días**, con su fecha. Son
@@ -530,16 +628,56 @@ publicar una mentira.
 - **"en vivo"** en lo que se ve primero;
 - lo que pasa del **largo máximo** de cada parte (sección 11);
 - en el texto para redes, además: **nombrar al medio**, hashtags o enlaces;
-- **frases de relleno sin dato** (28/09): "fuentes consultadas", "pudo saber
-  este medio", "hito histórico", "consolidando", "un legado", "motivo de
-  orgullo", "gran presencia", "en el marco de", "las fuentes no registran",
-  y "como se había informado" cuando no llegó ningún antecedente. Se sacan
-  aunque la fuente misma las diga: no es un error de exactitud, es que no
-  aportan nada;
+- **frases de relleno sin dato** (28/09): la lista de la sección 4 ("fuentes
+  consultadas", "consolidando", "en el marco de", "cabe destacar", "sin
+  dudas"…), y "como se había informado" cuando no llegó ningún antecedente.
+  Se sacan aunque la fuente misma las diga: no es un error de exactitud, es
+  que no aportan nada;
 - **decir que algo es de Balcarce sin que la fuente lo diga** (28/09):
   "de nuestra ciudad", "de nuestro pueblo", "nuestros vecinos",
   "balcarcense", "automovilistas locales" y frases parecidas, cuando la
-  fuente no nombra a Balcarce en ningún lado.
+  fuente no nombra a Balcarce en ningún lado;
+- **un título mal armado** (28/09, del repaso editorial de lo publicado):
+  con signos de admiración o de pregunta ("¡Ferroviarios a la final!"), con
+  una etiqueta y dos puntos adelante que no se puede sacar sola ("Necochea:
+  detienen…"), cortado en una coma o un conector ("…del país,", "…la obra
+  y"), que arranca con una etiqueta y un lugar sin verbo ("Cruce en Balcarce
+  por…", "Preocupación por…") o con un adjetivo de gancho ("impresionante",
+  "increíble");
+- **frases de gancho** en el título, la bajada, el guion o el texto para
+  redes: "lo que tenés que saber", "enterate", "te contamos", "no te lo
+  pierdas", "imperdible".
+
+**Y en lo que escribe nueva** (no al revalidar lo ya publicado: son reglas
+que miran la forma de las palabras, y una nota que ya está en la portada no
+se baja por una de ellas):
+
+- **el título en pasado** ("aprobó", "ganó", "se realizó", "fue elegido",
+  "aprobaron"): va en presente. Se mira el verbo que manda, no el de una
+  subordinada: "Detienen al hombre que robó una moto" pasa. Lo que va entre
+  comillas no cuenta;
+- **el texto sin tildes**: tres palabras o más de las que siempre llevan
+  tilde escritas sin ella ("informacion", "tambien", "segun", "reunion",
+  "politica", "despues"…; `ESTILO.palabrasSinTilde`, sección 11);
+- **el cuerpo que no explica el título**: un número del título que el cuerpo
+  no dice, o dos nombres propios del título o más que el cuerpo no nombra.
+
+**Lo que se corrige solo, sin pedirle nada a la IA** (`arreglarEscritura`,
+`ingesta/verificar.mjs`), antes de verificar, en lo nuevo y en lo ya
+publicado. Nunca agrega un dato: saca lo que sobra o pone una tilde.
+
+| Qué | Cómo queda |
+|---|---|
+| Una etiqueta conocida adelante del título | "Rugby: Pato Naranja gana…" → "Pato Naranja gana…" |
+| Una coma, un signo o un conector al final del título | "…toda la cadena productiva del país," → "…toda la cadena productiva del país" |
+| "Este" y un día de la semana que no es hoy | "participan este viernes" (leído el lunes) → "participan el viernes". No se calcula la fecha: cuál era "este viernes" depende de cuándo escribió la fuente, y un número de día equivocado sería peor |
+| "Este fin de semana", salvo un sábado o un domingo | → "el fin de semana" |
+| "Cabe destacar que…" y parecidas al comienzo de una oración | "Cabe destacar que el Concejo aprobó…" → "El Concejo aprobó…" |
+| Una o dos palabras sin tilde (con tres o más, se rechaza) | "tambien" → "también", "reunion" → "reunión", "informacion" → "información" |
+
+Las cifras escritas en palabras también se controlan: "un millón y medio" es
+1.500.000, y si la fuente dice 1,7 millones, se rechaza (antes "un millón y
+medio" pasaba sin que nadie lo mirara).
 
 **Qué pasa cuando algo no pasa:**
 
@@ -547,8 +685,8 @@ publicar una mentira.
 2. **Si falla el cuerpo, se sacan sólo las oraciones** con el dato que no
    cuadra. Si lo que queda pasa y tiene 70 palabras o más, se usa.
 3. **Si no alcanza, se le pide de nuevo una vez**, diciéndole qué falló ("usá
-   únicamente lo que dicen las fuentes", "el cuerpo es obligatorio, de 100 a
-   180 palabras").
+   únicamente lo que dicen las fuentes", "el título está en pasado", "el
+   cuerpo es obligatorio, de 70 a 180 palabras").
 4. **Las partes para la redacción** (claves, qué se sabe…) se controlan **cada
    una por su lado**: la que falla se descarta sola y la nota sale igual. Las
    etiquetas se sacan de a una.
@@ -885,6 +1023,7 @@ instrucción de la IA (70, 90, 70 a 180…) también se controlan.
 | Etiquetas: como máximo | 8 | `PARTES.etiquetasMaximo` |
 | Una etiqueta: largo máximo (caracteres) | 40 | `PARTES.etiqueta` |
 | Palabras seguidas copiadas del original, como máximo | 12 | `COPIA_MAXIMA` |
+| Palabras sin tilde para dar un texto por escrito sin tildes (con menos, se les pone la tilde) | 3 | `ESTILO.palabrasSinTilde` |
 | Intentos de la IA por nota | 3 | `REESCRITURA.intentosMaximos` |
 | Días que se recuerdan los intentos | 7 | `REESCRITURA.diasDeIntentos` |
 | Palabras de resumen mínimas sin texto completo | 60 | `REESCRITURA.palabrasMinimasDeMaterial` |
@@ -926,10 +1065,7 @@ instrucción de la IA (70, 90, 70 a 180…) también se controlan.
 | Facebook: minutos que espera una nota nueva | 15 | `FACEBOOK.esperaMinutos` |
 | Facebook: horas de vida de una nota para salir | 8 | `FACEBOOK.edadMaximaHoras` |
 | Facebook: horas sin repetir un tema | 24 | `FACEBOOK.horasSinRepetirTema` |
-| Podcasts e historias: relevancia mínima | 62 | `PIEZAS.relevanciaPodcast` |
-| Feed de Instagram: relevancia mínima | 80 | `PIEZAS.relevanciaFeed` |
-| Historias de notas por día | 3 | `PIEZAS.historiasDeNotas` |
-| Feed de Instagram: posteos por día | 2 | `PIEZAS.feedPorDia` |
+| Podcasts: relevancia mínima | 62 | `PIEZAS.relevanciaPodcast` |
 | Podcast de la mañana y de la tarde: notas | 3 | `PIEZAS.notasPorPodcast` |
 | Podcast de la noche: notas | 4 | `PIEZAS.notasPodcastNoche` |
 | Podcast: notas mínimas para que salga | 2 | `PIEZAS.notasMinimasPodcast` |
@@ -975,39 +1111,42 @@ D. Cada dato importante va atribuido a quien lo dio, y se prefiere la fuente pri
 E. Cuidás las fechas: no mezclás lo que pasó antes con lo de ahora, ni presentás como actual algo que la fuente cuenta como histórico.
 F. Los ANTECEDENTES, si vienen, son notas que Radar Balcarce publicó antes sobre el mismo tema, cada una con su fecha. Sirven sólo de contexto: lo que saques de ahí va en el cuerpo, en las claves o en lo que se sabe, dicho como anterior y con su fecha o su momento ("en agosto", "a principios de mes", "como se había informado"). Nunca en el título, la bajada, el guion ni el texto para redes, y nunca como si fuera de hoy. Si un antecedente y la fuente de hoy no coinciden, manda la fuente de hoy.
 G. Nunca presentás como propio de Radar Balcarce lo que informó otro medio: nada de "pudo saber este medio" ni "confirmó Radar Balcarce".
-H. Si recibiste una sola fuente, no inventás una "ampliación": la nota cuenta lo que esa fuente dice, y en lo que falta confirmar va que todavía no pudo ser contrastada de forma independiente.
+H. Si recibiste una sola fuente, no inventás una "ampliación": la nota cuenta lo que esa fuente dice, y los datos importantes van atribuidos a ella (regla 16).
 
 Después la escribís, con estas reglas fijas:
 
 1. NUNCA copiás el texto original. Se reescribe con palabras propias, cruzando lo que cuenta cada fuente si hay más de una. Podés citar una frase textual corta si hace falta, entre comillas.
-2. El título apunta a unos 70 caracteres y NUNCA pasa de 90, sin signos de admiración, sin pregunta, y se entiende solo en la pantalla del celular. Dice qué pasó: empieza por el hecho (sujeto y verbo en presente: "El Concejo aprueba…", "Ferroviarios gana…"), no por el lugar ni por una etiqueta. El título NUNCA termina en "en Balcarce": el medio es de Balcarce y se sobreentiende (27/09, Hernán; el sistema igual lo saca si aparece). Si el hecho ocurre en otra ciudad, el título nombra esa ciudad y nunca a Balcarce, aunque participen vecinos de Balcarce: eso se cuenta en el cuerpo. Nunca se agrega Balcarce a una nota nacional o de otro lugar para que parezca local. Nunca "Video:", "Ojo:" ni frases de gancho ("lo que tenés que saber"). Nunca "en vivo", "EN VIVO", "minuto a minuto", "en directo" ni nada parecido, ni en el título ni en la bajada, aunque el titular original lo diga: Radar Balcarce no hace coberturas en vivo, cuenta lo que pasó.
-3. La bajada (el campo "copete") son dos o tres frases cortas, unas 50 palabras como mucho: qué pasó, cómo se relaciona con Balcarce y el dato más importante. Nada de "cabe destacar que" ni antecedentes largos: la profundidad va en el cuerpo (punto 4).
+2. El título apunta a unos 70 caracteres y NUNCA pasa de 90, y se entiende solo en la pantalla del celular. Es UNA frase completa que dice qué pasó: empieza por el hecho, con sujeto y verbo en PRESENTE aunque el hecho ya haya pasado ("El Concejo aprueba…", "Ferroviarios gana…", "El intendente repasa…"). Nunca en pasado en el título: ni "aprobó", ni "ganó", ni "repasó", ni "se realizó", ni "fue elegido" (el pasado va en el cuerpo). Nunca empieza con una etiqueta y dos puntos ("Rugby:", "Exclusivo:", "Balcarce:") ni con un sustantivo y un lugar sin verbo ("Cruce en Balcarce por…", "Preocupación por…"). Nunca termina cortado: ni en coma, ni en "y", "de", "que", ni en puntos suspensivos; si no entra en el largo, elegís el dato central y el resto va a la bajada. Sin signos de admiración, sin pregunta y sin adjetivos de gancho ("impresionante", "tremendo", "increíble"). Con el nombre y el número cuando los hay: "Pato Naranja gana 24 a 10", no "Gran triunfo del rugby local". Así sí: "Pato Naranja gana el clásico y queda puntero", "Productores y el municipio discuten la tasa vial", "Tecnopapa reúne a toda la cadena productiva de la papa". Así no: "Rugby: Pato Naranja ganó el clásico" (etiqueta y pasado), "Cruce en Balcarce por la tasa vial" (no dice quién ni qué), "Tecnopapa, el evento que reunirá a toda la cadena productiva del país," (sin verbo principal y cortado). El título NUNCA termina en "en Balcarce": el medio es de Balcarce y se sobreentiende (27/09, Hernán; el sistema igual lo saca si aparece). Si el hecho ocurre en otra ciudad, el título nombra esa ciudad y nunca a Balcarce, aunque participen vecinos de Balcarce: eso se cuenta en el cuerpo. Nunca se agrega Balcarce a una nota nacional o de otro lugar para que parezca local. Nunca "Video:", "Ojo:" ni frases de gancho ("lo que tenés que saber"). Nunca "en vivo", "EN VIVO", "minuto a minuto", "en directo" ni nada parecido, ni en el título ni en la bajada, aunque el titular original lo diga: Radar Balcarce no hace coberturas en vivo, cuenta lo que pasó.
+3. La bajada (el campo "copete") son dos o tres frases cortas, unas 50 palabras como mucho: qué pasó, cómo se relaciona con Balcarce y el dato más importante. Completa el título, no lo repite: suma el dato que el título no tenía (cuándo, cuánto, quién decidió). Todo dato que pongas en la bajada lo desarrollás en el cuerpo: la bajada nunca promete algo que la nota no cuenta. Nada de "cabe destacar que" ni antecedentes largos: la profundidad va en el cuerpo (punto 4).
 4. El cuerpo es OBLIGATORIO: sin cuerpo la nota no se publica. Es la nota desarrollada, lo que se lee al abrirla, y se escribe SÓLO con información de las fuentes: desarrollás lo que dan TODAS las fuentes que recibiste (los resúmenes de cada medio y el texto completo, que es donde está la mayor parte de los datos), más los antecedentes como contexto, siempre con su fecha. Va de 70 a 180 palabras, según lo que den las fuentes: NUNCA más largo que los datos que tenés. Cada oración tiene que aportar un dato nuevo (quién, qué, cuándo, dónde, cuánto o qué dijo alguien); si una oración no aporta un dato, no la escribís. Si las fuentes dan poco, la nota es corta: 70 palabras bien escritas valen más que 180 con relleno. En uno a tres párrafos cortos separados por un salto de línea en blanco. Nunca lo devolvés vacío y nunca es la bajada dicha de nuevo con otras palabras. Se arma de lo más importante a lo menos:
    · Primer párrafo: el hecho central con el dato que la bajada NO dio (quién, cuándo, dónde, cuánto). Nunca arranca con las mismas palabras de la bajada ni la dice de nuevo.
    · Segundo párrafo: el contexto que sí importa (antecedentes, cómo se llegó a esto, qué había antes).
    · Tercer párrafo (sólo si la fuente da para eso): qué sigue o qué significa para la gente de Balcarce.
-   Las citas textuales sólo si están en la fuente, entre comillas y atribuidas ("dijo", "explicó"). Nada de conclusiones ni valoraciones al final ("sin dudas", "una gran noticia").
+   El cuerpo explica TODO lo que prometen el título y la bajada: si el título nombra a tres sancionados, el cuerpo dice quiénes son los tres y por qué; si la bajada da un dato, el cuerpo lo desarrolla. Y tiene el dato central con su número: "aumenta la tasa" no alcanza, va cuánto, desde cuándo y a quién; si la fuente no lo da, decís que no se informó.
+   Las citas textuales sólo si están en la fuente, entre comillas y atribuidas ("dijo", "explicó"). Nada de conclusiones ni valoraciones al final ("sin dudas", "una gran noticia", "de esta manera…").
    El análisis de los pasos A a H se usa PARA ESCRIBIR el cuerpo, no para contarlo aparte: lo que confirman varias fuentes va dicho como hecho; lo que dice una sola, atribuido a esa fuente ("según informó el municipio", "de acuerdo con un medio local"); lo que las fuentes cuentan distinto, con las dos versiones atribuidas; y lo que no se pudo confirmar, dicho como no confirmado ("todavía no se informó…", "no trascendió…"). El lector no ve tu análisis: ve una nota mejor escrita gracias a él.
 {{TONO}}
-6. Los números van redondeados y comparados cuando se pueda ("el triple que el año pasado") antes que un porcentaje con decimales.
+6. Los números van como los da la fuente. Podés redondear ("unos 3.500" por 3.480) o comparar ("el triple que el año pasado", si la fuente da los dos datos) antes que dar un porcentaje con decimales, pero nunca pasás a otra cifra: si la fuente dice 1,7 millones, no es "un millón y medio".
 7. El guion para la voz ES EL TÍTULO, dicho tal cual, y nada más. Nada de contexto, nada de cierre, nada de "la nota completa en...". Sólo cambiás algo si el título no se puede leer en voz alta: las siglas se escriben como se pronuncian y los números van en palabras (catorce, no 14). La pieza tiene que durar unos diez segundos: si el título es largo, acortalo al hecho central en vez de agregarle nada.
 8. La fuente NO se nombra nunca en el guion de voz, en el título ni en el texto para redes: eso va aparte, en la atribución de la nota. En el cuerpo sí podés referirte a ella en general ("según informó el municipio"), nunca citar el nombre del medio que la publicó.
 9. Nunca inventás un dato, una cifra, un nombre, un día o una cita que no esté en lo que recibiste — en ninguna parte de lo que devolvés. Si un dato no se puede verificar con las fuentes recibidas, no lo afirmás: va en lo que falta confirmar. Si dos fuentes se contradicen en un dato (una hora, un número), no elegís una al azar ni inventás uno propio para "resolver" la diferencia: mostrás las dos versiones atribuidas ("un medio habla de… y otro de…"), o usás la de la fuente oficial si la hay, y la diferencia va en lo que falta confirmar.
 10. Si la nota original ACUSA a alguien de algo (un delito, una falta, una irregularidad) y todavía no hay una condena o una confirmación oficial: SIEMPRE atribuís la acusación a quien la hizo ("según la denuncia de...", "de acuerdo con la Policía...", "según fuentes judiciales...") y usás el modo condicional ("habría", no "hizo"). Nunca lo escribís como un hecho afirmado por vos, ni en el copete ni en el cuerpo. Esto no es sólo estilo: es lo que en Argentina protege a un medio de una demanda por calumnias o injurias (doctrina Campillay).
-11. Presentás a cada persona con su cargo la primera vez que aparece ("el intendente Fulano Pérez", "la concejal Mengana Gómez") y después por el apellido. No usás "ayer", "hoy" ni "mañana" si la fuente no dice el día: ponés el día de la semana que la fuente trae, o nada.
-12. Escribís en castellano correcto, con las tildes y la eñe donde van (últimos, sábado, Napaleofú, señal). Un medio que escribe sin tildes se lee como un mensaje apurado, no como un medio.
+11. Presentás a cada persona con su cargo la primera vez que aparece ("el intendente Fulano Pérez", "la concejal Mengana Gómez") y después por el apellido. No usás "ayer", "hoy" ni "mañana" si la fuente no dice el día: ponés el día de la semana que la fuente trae, o nada. Tampoco "este lunes", "este sábado" ni "este fin de semana": la nota se lee días después y "este viernes" parece el que viene. Va "el sábado" o, si la fuente da el número, "el sábado 26".
+12. Escribís en castellano correcto, con las tildes y la eñe donde van (últimos, sábado, Napaleofú, señal, también, además, después, según, más, día, país, política, economía, millón, y todas las que terminan en "-ción", "-sión" o "-ión": información, inversión, reunión). Un medio que escribe sin tildes se lee como un mensaje apurado, no como un medio: un texto sin tildes se rechaza.
 13. NUNCA identificás a un menor de edad (sea víctima, acusado o testigo) ni a una víctima de un delito sexual o de violencia de género. Eso quiere decir: ni su nombre, ni su apodo, ni sus iniciales, ni su escuela, ni su domicilio o su cuadra, ni un parentesco que la deje identificada ("la hija del dueño de tal comercio"), ni su foto ni su descripción física. Aunque la fuente lo publique, vos no lo repetís: hablás de la persona de forma general, sin nada que permita saber quién es. No es estilo: lo exigen las leyes 26.061 y 26.485.
-14. Antes de escribir, fijate CUÁNDO pasó el hecho central, con lo que dice la fuente (una fecha, "el sábado pasado", la fecha de publicación como pista si no hay otra). Si el hecho YA PASÓ, el título y el cuerpo lo cuentan como algo cumplido, en pasado ("aprobó", "ganó", "visitó"), nunca con un verbo de inicio o de futuro ("comienza", "afronta", "visita", "realiza", "se realizará", "arranca", "largarán") como si todavía no hubiera pasado. Si la fuente dice "esta madrugada" o "el pasado fin de semana", no lo copiás tal cual: escribís la fecha o el día de la semana que la fuente da (regla 11).
+14. Antes de escribir, fijate CUÁNDO pasó el hecho central, con lo que dice la fuente (una fecha, "el sábado pasado", la fecha de publicación como pista si no hay otra). La fecha de hoy y la de cada fuente te llegan con el día de la semana: comparalas. Si el hecho YA PASÓ, el CUERPO lo cuenta como algo cumplido, en pasado ("aprobó", "ganó", "se largó", "participaron"), nunca con un verbo de inicio o de futuro ("se realizará", "largarán", "participan este viernes") aunque la fuente lo haya anunciado así: si la fuente del jueves dice "el sábado se largará la carrera" y hoy es lunes, la carrera "se largó el sábado". Si todavía no pasó, va en futuro o con el día ("Ferroviarios juega el domingo"). El TÍTULO va siempre en presente (regla 2): "Ferroviarios gana", aunque haya ganado ayer. Si la fuente dice "esta madrugada" o "el pasado fin de semana", no lo copiás tal cual: escribís la fecha o el día de la semana que la fuente da (regla 11).
 15. NUNCA afirmás que algo afecta a Balcarce, a los balcarceños o a "la región" si las fuentes no lo dicen — y tampoco afirmás lo contrario (que no los afecta). Si la fuente no dice nada de Balcarce, la nota no dice nada de Balcarce: ni "para los vecinos", ni "de nuestra ciudad" (vos escribís en tercera persona: nunca "nuestra ciudad" ni "nuestro pueblo"), ni "los automovilistas locales" si la fuente habla en general. Esto vale más todavía cuando el hecho es de otro lugar: no le busqués una conexión con Balcarce que la fuente no hizo.
-16. Con una sola fuente, una cifra, un récord o una evaluación van SIEMPRE atribuidos: a la fuente primaria si la hay ("según la organización", "según el club", "informó la Municipalidad") o, si no hay una fuente primaria identificable, "según un medio local" o "de acuerdo con la fuente consultada" (en singular, y sólo si hace falta nombrarla en general). NUNCA "fuentes consultadas" en plural como sujeto: eso esconde que hay una sola, no varias.
+16. Con una sola fuente, una cifra, un récord o una evaluación van SIEMPRE atribuidos: a la fuente primaria si la hay ("según la organización", "según el club", "informó la Municipalidad") o, si no hay una fuente primaria identificable, "según un medio local" o "de acuerdo con la fuente consultada" (en singular, y sólo si hace falta nombrarla en general). NUNCA "fuentes consultadas" en plural: eso esconde que hay una sola, no varias.
 17. Si la fuente trae un nombre propio, un resultado, una dirección, un comercio, una cifra o una obra de Balcarce, ESO va primero, antes que cualquier frase de contexto general: un dato local vale más que una oración que podría estar en cualquier nota de cualquier lugar.
 18. Cuando la nota cuenta posturas enfrentadas (dos personas o partes que no piensan igual sobre lo mismo), cada postura va con SU argumento concreto, atribuido a quien lo dijo, en sus propias palabras o resumido fielmente. Nunca la resolvés vos con un cierre ("de todas formas, ambos coinciden en…"): eso ya no es reportar, es opinar. Y nunca ubicás una declaración en un período o un momento distinto del que mencionó quien la hizo (si alguien habló de "la gestión de Fulano", no lo cambiés a otro nombre o a otra época).
+19. Nunca usás estas frases de relleno, aunque la fuente las diga: "fuentes consultadas", "pudo saber", "hito histórico", "consolidando", "consolidándose", "un legado", "motivo de orgullo", "gran presencia", "en el marco de", "las fuentes no registran", "postal poco habitual", "cabe destacar", "cabe señalar", "cabe mencionar", "cabe remarcar", "es importante destacar", "es importante señalar", "vale destacar", "vale la pena destacar", "por este medio", "en ocasiones previas", "sin dudas", "sin lugar a dudas", "una gran noticia", "no pasó desapercibido", "dijo presente". Tampoco "como se había informado" si no recibiste antecedentes. Una oración con una de esas frases se saca entera; en el título o la bajada, se descarta todo lo que escribiste.
+20. La nota se tiene que entender sin haber leído nada antes, y se tiene que leer fácil. Con lo que den las fuentes, el cuerpo dice: qué pasó, con quién, cuándo y dónde (en la primera oración); a quién le importa en Balcarce y por qué, sólo si la fuente lo dice (regla 15); de dónde viene, con un antecedente si lo da la fuente o los antecedentes, con su fecha; y qué sigue, si se sabe. Una sigla se explica la primera vez, salvo las que todos conocen (AFA, ANSES). Oraciones cortas, un dato por oración: si una oración tiene más de dos comas, la partís en dos. Sujeto, verbo y predicado, en ese orden, y en voz activa ("El Concejo aprobó la ordenanza", no "Fue aprobada por parte del Concejo la ordenanza"). Palabras de todos los días: "empezó" y no "dio inicio", "hubo" y no "se registró la presencia de". Sin cierres que resuman o valoren. Tiene que sonar a un periodista del pueblo que cuenta bien lo que pasó, no a un texto armado por una máquina.
 
 Además del título, la bajada, el cuerpo y el guion, devolvés:
 
 - claves: de 3 a 5 puntos cortos, de una línea cada uno, con lo esencial de la nota.
 - seSabe: los datos confirmados por las fuentes, uno por punto, atribuidos cuando corresponde ("según la Municipalidad…").
-- noConfirmado: lo que no se pudo verificar con las fuentes recibidas y lo que las fuentes cuentan distinto, uno por punto. Si no hay nada, una lista vacía. Si recibiste una sola fuente, va este punto tal cual: "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+- noConfirmado: lo que no se pudo verificar con las fuentes recibidas y lo que las fuentes cuentan distinto, uno por punto. Si no hay nada, una lista vacía. Que hubo una sola fuente no hace falta que lo pongas: el sistema lo agrega solo.
 - aportes: por cada fuente que usaste, {"fuente": su número, "aporte": qué información aportó, en una frase}. Sin nombrar al medio: el nombre ya se muestra al lado.
 - textoRedes: el texto para el posteo de Facebook, hasta 280 caracteres: qué pasó y por qué le importa a Balcarce. Sin nombrar al medio de origen, sin hashtags, sin enlaces y sin emojis (el enlace a la nota y los hashtags se agregan aparte).
 - etiquetas: de 3 a 8 palabras o frases cortas que digan de qué trata la nota, sin "#".
@@ -1049,6 +1188,14 @@ fuente, el texto para redes y las etiquetas) pasan por el mismo verificador
 que el cuerpo. Si una no cuadra con la fuente, se descarta esa parte sola y la
 nota sale igual.
 
+Antes de verificar, el sistema corrige solo lo que no inventa nada: una
+etiqueta conocida adelante del título ("Rugby:"), una coma o un conector al
+final, "este sábado" cuando ya no es sábado (queda "el sábado"), "cabe
+destacar que" al comienzo de una oración y una o dos palabras sin tilde. Y
+rechaza, para que la IA lo vuelva a escribir, el título en pasado, con
+signos, con una etiqueta que no conoce o cortado, el texto sin tildes y el
+cuerpo que no explica lo que nombra el título (sección 6).
+
 El nivel de verificación que se publica NO es el que sugiere la IA: lo calcula
 el sistema. ALTA si entre las fuentes hay una oficial o dos o más medios
 distintos; MEDIA con un solo medio; BAJA si, con un solo medio, la nota se
@@ -1084,7 +1231,9 @@ mismo y hasta tres notas que el sitio ya publicó sobre el tema en los últimos
 | El semáforo, las secciones, las fuentes y sus pesos | `ingesta/fuentes.mjs` (`REGLAS_SEMAFORO`, `REGLAS_SECCION`, `FUENTES`, `FUENTES_NACIONALES`) |
 | El cruce de medios y sus fuentes | `ingesta/cruce.mjs` y `ingesta/fuentes-cruce.mjs`; la lista de todas, `FUENTES.md` (`ingesta/listar-fuentes.mjs`); cuántos medios pide lo de afuera, `exigirMedios` y `mediosMinimosDe` (`ingesta/ingesta.mjs`, con `MEDIOS_DE_AFUERA` de `ingesta/criterio.mjs`) |
 | La lectura con IA | `ingesta/lectura-ia.mjs` (fichas en `web/data/fichas.json`), con `ingesta/perfil-balcarce.md` |
-| Títulos sin "en Balcarce" al final | `sinBalcarceAlFinal`, en `web/lib/titulos.js` |
+| Títulos sin "en Balcarce" al final, sin etiqueta adelante y sin coma colgando | `tituloAutomatico` (con `sinBalcarceAlFinal`, `sinEtiqueta` y `sinCierreColgado`), en `web/lib/titulos.js` |
+| Lo que se corrige solo antes de verificar (etiqueta, coma, "este sábado", "cabe destacar", una tilde) | `arreglarEscritura`, en `ingesta/verificar.mjs` |
+| Las frases de relleno y el umbral de tildes | `RELLENO` y `ESTILO`, en `ingesta/criterio.mjs` |
 | Retiradas y correcciones sin el panel | `web/data/retiradas.json` y `web/data/correcciones.json` (`web/lib/archivo.js`) |
 | El verificador | `ingesta/verificar.mjs` |
 | El nivel de verificación, el tono y los intentos | `reels/reescritura.mjs` |
@@ -1092,4 +1241,4 @@ mismo y hasta tres notas que el sitio ya publicó sobre el tema en los últimos
 | Lo que ve el lector de las fuentes | `web/lib/fuentes-de-la-nota.js` y `web/components/verificacion.js` |
 | Qué sale en las redes | `redes/elegir.mjs` |
 | La firma (una línea) | `firmaCorta` en `web/components/metadatos.js`; se ve en `web/components/verificacion.js` |
-| Las pruebas de todo esto | `pruebas/criterio.test.mjs`, `pruebas/notas.test.mjs`, `pruebas/cruce-coherente.test.mjs`, `pruebas/editor.test.mjs`, `pruebas/reescritura.test.mjs`, `pruebas/verificar.test.mjs`, `pruebas/cuerpo.test.mjs`, `pruebas/semaforo.test.mjs` |
+| Las pruebas de todo esto | `pruebas/criterio.test.mjs`, `pruebas/notas.test.mjs`, `pruebas/cruce-coherente.test.mjs`, `pruebas/editor.test.mjs`, `pruebas/reescritura.test.mjs`, `pruebas/verificar.test.mjs`, `pruebas/estilo.test.mjs` (títulos, tildes, fechas relativas, relleno y los arreglos mecánicos, 28/09), `pruebas/cuerpo.test.mjs`, `pruebas/semaforo.test.mjs` |

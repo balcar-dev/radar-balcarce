@@ -199,6 +199,22 @@ export function imagenDeNota(nota, sitio) {
 }
 
 /**
+ * El pie del espejo en Instagram cuando la tarjeta lleva la foto de la nota
+ * (28/09, diseño nuevo: web/lib/tarjeta.js usa la foto del banco propio,
+ * web/data/banco-fotos.json). La foto va sin el crédito adentro — nunca el
+ * nombre de otro medio ni una marca de agua dentro de una imagen (CLAUDE.md,
+ * "Las fotos") —, así que el crédito va acá, al final del texto. Sin foto, el
+ * texto queda igual. El posteo de Facebook no lo lleva: su imagen (la del
+ * enlace) no usa la foto.
+ */
+export function conCreditoDeFoto(texto, nota) {
+  const credito = String(nota?.foto?.credito ?? '').replace(/\s+/g, ' ').trim();
+  if (!nota?.foto?.archivo || !credito) return texto;
+  const linea = /^foto/i.test(credito) ? credito : `Foto: ${credito}`;
+  return [texto, linea].join('\n\n');
+}
+
+/**
  * Los hashtags del posteo: #Balcarce primero si la nota es de acá, y después
  * las etiquetas que escribió la IA (ya verificadas), hasta tres. "obras
  * públicas" queda #ObrasPúblicas. Sin repetir, aunque cambie la tilde.

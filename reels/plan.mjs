@@ -12,8 +12,8 @@
 
 import fs from 'node:fs';
 import path from 'node:path';
-import { placaClima, placaFarmacia, placaNoticia, placaUtiles, placaAgenda, COLOR_SECCION } from './placa.mjs';
-import { NUMEROS, decisionHumana } from '../ingesta/utiles.mjs';
+import { placaClima, placaFarmacia, placaRepaso, placaUtiles, placaAgenda, COLOR_SECCION } from './placa.mjs';
+import { NUMEROS, decisionHumana, HORA_DE_CAMBIO, MINUTO_DE_CAMBIO } from '../ingesta/utiles.mjs';
 import { horariosDe, toca } from '../panel/horarios.mjs';
 import { elegirParaPodcast, repasoConPresupuesto, enlaceDeNota } from '../redes/elegir.mjs';
 import { CONTRATO_DIARIO, PIEZAS } from '../ingesta/criterio.mjs';
@@ -71,6 +71,69 @@ const fechaLarga = (d = new Date()) => {
   });
   return t.charAt(0).toUpperCase() + t.slice(1);
 };
+
+// --- lo que muestran las placas (28/09, diseño "Historia diaria") ----------
+
+const F_DOLAR = path.join(import.meta.dirname, '..', 'web', 'data', 'dolar-historia.json');
+
+/** La historia del dólar (la cotización de las 11 de cada día hábil). */
+function leerDolar() {
+  try { return JSON.parse(fs.readFileSync(F_DOLAR, 'utf8')); } catch { return null; }
+}
+
+/**
+ * El dólar para la placa del clima de la mañana: la última cotización de las
+ * 11 que guardó la web (web/data/dolar-historia.json), con cuándo se tomó. Nunca
+ * "en vivo": a las 7:30 el mercado no abrió y lo que hay es la del último día
+ * hábil. Si es de hace más de 4 días (o no hay), no va.
+ */
+export function dolarParaLaPlaca(historia, fecha = new Date()) {
+  const ultimo = historia?.dias?.at?.(-1);
+  const c = ultimo?.cotizaciones;
+  if (!c || !ultimo.consultado) return null;
+  const tomado = new Date(ultimo.consultado);
+  if (Number.isNaN(tomado.getTime()) || fecha - tomado > 4 * 86400000 || tomado > fecha) return null;
+  const oficial = c.oficial?.venta ?? null;
+  const blue = c.blue?.venta ?? null;
+  if (!oficial && !blue) return null;
+  const tz = { timeZone: 'America/Argentina/Buenos_Aires' };
+  const dia = tomado.toLocaleDateString('es-AR', { ...tz, weekday: 'long', day: 'numeric' });
+  const hora = Number(tomado.toLocaleString('es-AR', { ...tz, hour: 'numeric', hour12: false }));
+  return { oficial, blue, cuando: `Venta · ${dia}, ${hora} h` };
+}
+
+const DIA_CORTO = {
+  lun: 'LUN', mar: 'MAR', mié: 'MIÉ', mie: 'MIÉ', jue: 'JUE', vie: 'VIE', sáb: 'SÁB', sab: 'SÁB', dom: 'DOM',
+};
+
+/** El recuadro de un día del pronóstico: "MAR · 82% lluvia", máxima y mínima. */
+export function cajaDeDia(d, titulo = null) {
+  if (!d) return null;
+  const nombre = titulo ?? DIA_CORTO[String(d.dia ?? '').toLowerCase()] ?? String(d.dia ?? '').toUpperCase();
+  const lluvia = Number(d.lluvia) >= 10 ? ` · ${d.lluvia}% lluvia` : '';
+  return { titulo: `${nombre}${lluvia}`, valor: `${d.max}°`, secundario: `${d.min}°` };
+}
+
+/** Lo que viene, en una oración: "Chaparrones. Entre 9° y 14°, con 82% de
+ *  probabilidad de lluvia y viento de hasta 27 km/h." */
+export function pronosticoDe(d) {
+  const partes = [`Entre ${d.min}° y ${d.max}°`];
+  const extra = [
+    Number(d.lluvia) >= 10 ? `${d.lluvia}% de probabilidad de lluvia` : null,
+    d.viento ? `viento de hasta ${d.viento} km/h` : null,
+  ].filter(Boolean);
+  const cielo = d.cielo ? `${d.cielo}. ` : '';
+  return `${cielo}${partes[0]}${extra.length ? `, con ${extra.join(' y ')}` : ''}.`;
+}
+
+/** Hasta cuándo dura el turno que sale a esa hora: el cambio es a las 8:30. */
+export function hastaCuandoElTurno(hora = '19:00') {
+  const [h, m] = String(hora).split(':').map(Number);
+  const cambio = `${HORA_DE_CAMBIO}:${String(MINUTO_DE_CAMBIO).padStart(2, '0')}`;
+  return (h * 60 + (m || 0)) >= HORA_DE_CAMBIO * 60 + MINUTO_DE_CAMBIO
+    ? `De turno hasta mañana a las ${cambio}.`
+    : `De turno hasta hoy a las ${cambio}.`;
+}
 
 const F_AGENDA = path.join(import.meta.dirname, '..', 'panel', 'datos', 'agenda.json');
 const F_ESTADO = path.join(import.meta.dirname, '..', 'panel', 'datos', 'estado.json');
@@ -152,8 +215,9 @@ export const TONO_DE_LA_NOCHE = INDICACIONES.noche;
 // --- el plan ---------------------------------------------------------------
 
 export function planDelDia(datos, {
-  libro = null, fecha = new Date(), estado = leerEstado(), eventos = null,
+  libro = null, fecha = new Date(), estado = leerEstado(), eventos = null, dolar = undefined,
 } = {}) {
+  const dolarDelDia = dolar === undefined ? dolarParaLaPlaca(leerDolar(), fecha) : dolar;
   const hoy = fecha.getDate();
   const turno = datos.farmacias?.turnos?.find((t) => t.dia === hoy) ?? null;
 
@@ -195,18 +259,22 @@ export function planDelDia(datos, {
       motivo: 'aviso de clima · sale apenas se detecta, sin esperar horario',
       seccion: 'Clima',
       guion: `${a.titulo}. ${a.texto}`,
+      // "Historia diaria" con el recuadro del aviso: el título del aviso
+      // manda (es lo que hay que ver de reojo) y abajo lo que hay que saber.
       svg: placaClima({
         temp: datos.clima.ahora.temp,
-        cielo: a.titulo,
+        cielo: datos.clima.ahora.cielo,
+        esDeDia: datos.clima.ahora.esDeDia !== false,
+        sensacion: datos.clima.ahora.sensacion ?? null,
+        viento: datos.clima.ahora.viento ?? null,
+        rumbo: datos.clima.ahora.rumbo ?? '',
         max: datos.clima.dias[0].max,
         min: datos.clima.dias[0].min,
-        fecha: fechaLarga(),
-        hora: 'AVISO',
-        kicker: 'ATENCIÓN',
-        cajas: [
-          { titulo: 'QUÉ', valor: a.titulo },
-          { titulo: 'CUÁNDO', valor: a.dia === datos.clima.dias[0].fecha ? 'Hoy' : 'Mañana' },
-        ],
+        fecha: a.titulo,
+        kicker: `Aviso de clima · ${a.dia === datos.clima.dias[0].fecha ? 'hoy' : 'mañana'}`,
+        etiqueta: 'El clima ahora',
+        aviso: { titulo: a.titulo, texto: a.texto },
+        cajas: datos.clima.dias.slice(0, 3).map((d, i) => cajaDeDia(d, i === 0 ? 'HOY' : null)).filter(Boolean),
       }),
       acento: COLOR_SECCION.Policiales ?? COLOR_SECCION.Clima,
     });
@@ -227,19 +295,22 @@ export function planDelDia(datos, {
       motivo: 'servicio fijo · no gasta cupo de reel', seccion: 'Clima',
       guion: guionClima(datos.clima, turno),
       momento: 'manana', indicacion: INDICACIONES.manana,
+      // "Historia diaria" (28/09): la tarjeta del clima ahora, hoy y los dos
+      // días que siguen, y el dólar de referencia.
       svg: placaClima({
         temp: c.temp,
         cielo: c.cielo,
+        esDeDia: c.esDeDia !== false,
+        sensacion: c.sensacion ?? null,
+        viento: c.viento ?? null,
+        rumbo: c.rumbo ?? '',
         max: hoy.max,
         min: hoy.min,
-        fecha: fechaLarga(),
-        hora: '07:30',
-        kicker: 'EL CLIMA DE HOY',
-        cajas: [
-          { titulo: 'VIENTO', valor: `${c.rumbo} ${c.viento} km/h` },
-          { titulo: 'LLUVIA', valor: `${hoy.lluvia}%` },
-          { titulo: 'SENSACIÓN', valor: `${c.sensacion}°` },
-        ],
+        fecha: fechaLarga(fecha),
+        kicker: 'Hoy en Balcarce',
+        etiqueta: 'El clima ahora',
+        cajas: datos.clima.dias.slice(0, 3).map((d, i) => cajaDeDia(d, i === 0 ? 'HOY' : null)).filter(Boolean),
+        dolar: dolarDelDia,
       }),
       acento: COLOR_SECCION.Clima,
     });
@@ -255,18 +326,24 @@ export function planDelDia(datos, {
       motivo: 'segundo pase del clima · mira para adelante', seccion: 'Clima',
       guion: guionClimaNoche(datos.clima),
       momento: 'noche', indicacion: INDICACIONES.noche,
+      // Mira para adelante: esta noche, mañana y pasado.
       svg: placaClima({
         temp: c.temp,
         cielo: c.cielo,
+        esDeDia: c.esDeDia !== false,
+        sensacion: c.sensacion ?? null,
+        viento: c.viento ?? null,
+        rumbo: c.rumbo ?? '',
         max: hoy.max,
         min: hoy.min,
         fecha: 'Cómo sigue el día',
-        hora: '20:00',
-        kicker: 'LA TARDE Y LA NOCHE',
+        kicker: 'Esta noche en Balcarce',
+        etiqueta: 'Ahora',
+        pronostico: manana ? { titulo: 'Mañana', texto: pronosticoDe(manana) } : null,
         cajas: [
-          { titulo: 'ESTA NOCHE', valor: `${hoy.min}°` },
-          ...(manana ? [{ titulo: 'MAÑANA', valor: `${manana.max}° / ${manana.min}°` }] : []),
-          { titulo: 'VIENTO', valor: `${c.rumbo} ${c.viento} km/h` },
+          { titulo: 'ESTA NOCHE', valor: `${hoy.min}°`, secundario: 'mín.' },
+          ...(manana ? [cajaDeDia(manana, 'MAÑANA')] : []),
+          ...(datos.clima.dias[2] ? [cajaDeDia(datos.clima.dias[2])] : []),
         ],
       }),
       acento: COLOR_SECCION.Clima,
@@ -281,7 +358,12 @@ export function planDelDia(datos, {
       guion: guionFarmacia(turno, { momento: momentoDeHora(cuando.farmacia.hora) }),
       momento: momentoDeHora(cuando.farmacia.hora), indicacion: INDICACIONES[momentoDeHora(cuando.farmacia.hora)],
       svg: placaFarmacia({
-        detalle: turno.detalle, farmacias: turno.farmacias, dia: turno.dia, diaSemana: turno.diaSemana,
+        detalle: turno.detalle,
+        farmacias: turno.farmacias,
+        dia: turno.dia,
+        diaSemana: turno.diaSemana,
+        mes: turno.mes ?? null,
+        hasta: hastaCuandoElTurno(cuando.farmacia.hora),
       }),
       acento: COLOR_SECCION.Farmacias,
     });
@@ -366,7 +448,12 @@ export function planDelDia(datos, {
       motivo: `podcast de ${elegidas.length} notas, las de más puntaje de temas distintos · ~${repaso.segundos.toFixed(0)} s`,
       segundosEstimados: repaso.segundos,
       seccion: 'Balcarce', guion,
-      svg: placaNoticia({ seccion: 'Balcarce', titulo: ronda.titulo, cuando: fechaLarga(), color: colorDelDia() }),
+      // "Repaso · tapa" (28/09): la lista numerada de las notas que cuenta,
+      // cada una con el color de su sección, y el nombre del podcast en el color del día.
+      svg: placaRepaso({
+        titulo: ronda.titulo, momento: ronda.momento, fecha: fechaLarga(fecha), segundos: repaso.segundos,
+        notas: elegidas.map((n) => ({ seccion: n.seccion, titulo: n.titulo })), color: colorDelDia(),
+      }),
       acento: colorDelDia(),
     });
   });
@@ -393,7 +480,10 @@ export function planDelDia(datos, {
       titulo: podcastNoche.titulo, motivo: `el podcast diario: los titulares más fuertes, un solo audio · ~${repasoNoche.segundos.toFixed(0)} s`,
       segundosEstimados: repasoNoche.segundos,
       seccion: 'Balcarce', guion: repasoNoche.guion, momento: podcastNoche.momento, indicacion: INDICACIONES[podcastNoche.momento],
-      svg: placaNoticia({ seccion: 'Balcarce', titulo: podcastNoche.titulo, cuando: fechaLarga(), color: colorDelDia() }),
+      svg: placaRepaso({
+        titulo: podcastNoche.titulo, momento: podcastNoche.momento, fecha: fechaLarga(fecha), segundos: repasoNoche.segundos,
+        notas: notasNoche.map((n) => ({ seccion: n.seccion, titulo: n.titulo })), color: colorDelDia(),
+      }),
       acento: colorDelDia(),
     });
   }

@@ -76,15 +76,17 @@ const correr = (respuestas, extra = {}) => {
 
 // ----------------------------------------------------------------- el prompt
 
-test('la instrucción es la del editor digital y conserva las 18 reglas fijas', () => {
+test('la instrucción es la del editor digital y conserva las 20 reglas fijas', () => {
   assert.match(INSTRUCCION_EDITORIAL, /Sos el editor digital de Radar Balcarce/);
   assert.match(INSTRUCCION_EDITORIAL, /Contrastás las fuentes/);
   assert.match(INSTRUCCION_EDITORIAL, /declaración de parte/);
   assert.match(INSTRUCCION_EDITORIAL, /ANTECEDENTES/);
-  assert.match(INSTRUCCION_EDITORIAL, /No pudo ser contrastado de forma independiente con las fuentes consultadas\./);
+  // La frase de la fuente única la agrega el sistema (28/09): "fuentes
+  // consultadas" es relleno para el verificador y tiraba la lista entera.
+  assert.match(INSTRUCCION_EDITORIAL, /el sistema lo agrega solo/);
   assert.match(INSTRUCCION_EDITORIAL, /NUNCA pasa de 90/);
   assert.match(INSTRUCCION_EDITORIAL, /de 70 a 180 palabras/);
-  for (let i = 1; i <= 18; i += 1) assert.match(INSTRUCCION_EDITORIAL, new RegExp(`\\n${i}\\. `), `falta la regla ${i}`);
+  for (let i = 1; i <= 20; i += 1) assert.match(INSTRUCCION_EDITORIAL, new RegExp(`\\n${i}\\. `), `falta la regla ${i}`);
   assert.match(INSTRUCCION_EDITORIAL, /doctrina Campillay/);
   assert.match(INSTRUCCION_EDITORIAL, /26\.061 y 26\.485/);
   for (const campo of ['claves', 'seSabe', 'noConfirmado', 'aportes', 'textoRedes', 'etiquetas']) {
@@ -104,7 +106,7 @@ test('la IA recibe las fuentes numeradas, con medio y fecha, y los antecedentes 
     antecedentes: [{ id: 'a1', titulo: 'El Concejo debate la ordenanza de tránsito', copete: 'Hubo una sesión.', fecha: '2026-09-10T12:00:00.000Z', ruta: '/nota/x-a1' }],
   }, { fetchFn });
   const texto = pedidos[0];
-  assert.match(texto, /Fuente 1 \(Puntonueve \(FM 100\.9\) · publicada el 25\/09\/2026\)/);
+  assert.match(texto, /Fuente 1 \(Puntonueve \(FM 100\.9\) · publicada el viernes 25\/09\/2026\)/);
   assert.match(texto, /Fuente 2 \(Municipalidad de Balcarce · fuente oficial\): Comunicado del municipio/);
   assert.match(texto, /ANTECEDENTES: .*ANTERIOR, no de hoy/);
   assert.match(texto, /\[10\/09\/2026\] El Concejo debate la ordenanza de tránsito/);

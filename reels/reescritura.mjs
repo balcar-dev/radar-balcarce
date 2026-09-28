@@ -29,8 +29,9 @@
 
 import { claveRedaccion, claveRedes, leerVariable } from './claves.mjs';
 import {
-  verificar, verificarExtras, resumirProblemas, depurarCuerpo,
+  verificar, verificarExtras, resumirProblemas, depurarCuerpo, arreglarEscritura,
 } from '../ingesta/verificar.mjs';
+import { guionNoticia } from '../redes/guiones.mjs';
 import { semaforoDelTexto } from '../ingesta/ingesta.mjs';
 import { decisionHumana } from '../ingesta/utiles.mjs';
 import { ZONA } from '../ingesta/zona.mjs';
@@ -42,7 +43,7 @@ import { sinTildes } from '../web/lib/texto.js';
 import { tieneCuerpo, palabrasDe } from '../web/lib/cuerpo.js';
 import { leerCriterio } from '../ingesta/prompt-editorial.mjs';
 import {
-  TITULO, CUERPO, PARTES, REESCRITURA,
+  CUERPO, PARTES, REESCRITURA,
 } from '../ingesta/criterio.mjs';
 
 // "-latest" en vez de un número de versión fijo: la reescritura no necesita
@@ -102,6 +103,16 @@ export function fechaCorta(iso) {
   return new Intl.DateTimeFormat('es-AR', {
     day: '2-digit', month: '2-digit', year: 'numeric', timeZone: ZONA,
   }).format(new Date(t));
+}
+
+/** "jueves 24/09/2026": con el día de la semana, para que la IA sepa si "el
+ *  sábado" de la fuente ya pasó o todavía no (28/09: "participan este
+ *  viernes", leído el lunes). Vacío si no hay fecha. */
+export function fechaConDia(iso) {
+  const corta = fechaCorta(iso);
+  if (!corta) return '';
+  const dia = new Intl.DateTimeFormat('es-AR', { weekday: 'long', timeZone: ZONA }).format(new Date(Date.parse(iso)));
+  return `${dia} ${corta}`;
 }
 
 /**
@@ -198,13 +209,13 @@ function textoDeAntecedentes(antecedentes = []) {
 function entradaDe(nota) {
   const origenes = origenesDe(nota);
   const partes = [
-    `Fecha de hoy: ${fechaCorta(new Date().toISOString())}`,
+    `Fecha de hoy: ${fechaConDia(new Date().toISOString())}`,
     `Sección: ${nota.seccion}`,
     `Titular original (de ${nota.medios?.join(' / ') ?? 'la fuente'}): ${nota.titulo}`,
     `FUENTES (${origenes.length === 1 ? 'una sola: no hay confirmación independiente' : `${origenes.length}, numeradas`}):`,
   ];
   origenes.forEach((o, i) => {
-    const datos = [o.medio ?? 'otro medio', o.oficial ? 'fuente oficial' : null, o.fecha ? `publicada el ${fechaCorta(o.fecha)}` : null].filter(Boolean).join(' · ');
+    const datos = [o.medio ?? 'otro medio', o.oficial ? 'fuente oficial' : null, o.fecha ? `publicada el ${fechaConDia(o.fecha)}` : null].filter(Boolean).join(' · ');
     partes.push(`Fuente ${i + 1} (${datos}): ${o.resumen || '(sin resumen)'}`);
   });
   if (nota.textoDeLaFuente) partes.push(`Texto completo de la Fuente ${nota.fuenteDelTexto ?? 1} (de acá sale la mayor parte de lo que podés contar en el cuerpo):\n${nota.textoDeLaFuente}`);
@@ -313,8 +324,11 @@ export async function reescribir(nota, { intentos = 3, fetchFn = fetch, correcci
   const salida = limpiarJson(texto);
   if (!salida.titulo || !salida.guion) throw new Error('la respuesta no trae título o guion');
 
+  // El título va entero, aunque pase del máximo: cortarlo acá dejaba títulos
+  // colgados ("…de toda la cadena productiva del país,"), y el verificador ya
+  // rechaza lo que pasa del máximo (TITULO.maximo) para que la IA lo vuelva a escribir.
   return {
-    titulo: salida.titulo.trim().slice(0, TITULO.maximo),
+    titulo: salida.titulo.trim(),
     copete: (salida.copete ?? '').trim(),
     cuerpo: (salida.cuerpo ?? '').trim(),
     guion: salida.guion.trim(),
@@ -379,13 +393,11 @@ export async function reescribirConRespaldo(nota, mecanico, opciones) {
 }
 
 // El respaldo mecánico por defecto: lo que se mostraba antes de que
-// existiera la reescritura. Lo usa reescribirAutomaticas(); el panel tiene el
-// suyo propio (`mecanico` en panel/servidor.mjs, con guionNoticia de
-// reels/plan.mjs), más elaborado, porque ahí sí puede darse el lujo de tener
-// reels/plan.mjs cargado.
+// existiera la reescritura. Lo usa reescribirAutomaticas(); el panel arma el
+// mismo (`mecanico` en panel/servidor.mjs): los dos toman el guion de
+// guionNoticia (redes/guiones.mjs), el titular con un punto.
 function mecanicoPorDefecto(nota) {
-  const titulo = String(nota.titulo ?? '').replace(/\s+/g, ' ').trim().replace(/[.:]+$/, '');
-  return { titulo: nota.titulo, copete: nota.resumenFuente || '', guion: `${titulo}.` };
+  return { titulo: nota.titulo, copete: nota.resumenFuente || '', guion: guionNoticia(nota) };
 }
 
 // Cuántas se reescriben por corrida. La ingesta corre cada 30 minutos, así
@@ -615,7 +627,10 @@ export function completarReescritura(nota, r) {
   const pedidos = {
     claves: r.claves,
     seSabe: r.seSabe,
-    noConfirmado: r.noConfirmado,
+    // La frase de la fuente única la pone el sistema (abajo): no se verifica,
+    // porque "fuentes consultadas" es relleno para el verificador y tiraba la
+    // lista entera.
+    noConfirmado: (r.noConfirmado ?? []).filter((d) => normalizar(d) !== normalizar(FRASE_FUENTE_UNICA)),
     // Un número de fuente que no existe no se muestra, sin tirar el resto.
     aportes: (r.aportes ?? []).filter((a) => a.fuente >= 1 && a.fuente <= origenes.length),
     textoRedes: r.textoRedes,
@@ -699,7 +714,8 @@ export function revalidarExtras(cacheada = {}, nota = {}) {
   const pedidos = {
     claves: cacheada.claves,
     seSabe: cacheada.seSabe,
-    noConfirmado: cacheada.noConfirmado,
+    // Sin la frase de la fuente única: la puso el sistema (completarReescritura).
+    noConfirmado: (cacheada.noConfirmado ?? []).filter((d) => normalizar(d) !== normalizar(FRASE_FUENTE_UNICA)),
     aportes: fuentes.map((f, i) => ({ fuente: i + 1, aporte: f?.aporte })).filter((a) => a.aporte),
     textoRedes: cacheada.textoRedes,
     etiquetas: cacheada.etiquetas,
@@ -965,7 +981,11 @@ export async function reescribirAutomaticas(notas, {
     // porque "ya estaba hecho".
     const previa = previas[nota.id];
     if (previa?.titulo && tieneCuerpo(previa)) {
-      const cacheada = revalidarExtras(previa, nota);
+      // Los arreglos que no inventan nada (28/09) también a lo ya escrito:
+      // "este sábado" pasa a "el sábado" cuando ya no es sábado, se va una
+      // etiqueta "Rugby:" o una coma colgando del título.
+      const arreglada = { ...previa, ...arreglarEscritura(previa, { hoy: new Date(Number(ahora)) }).nuevo };
+      const cacheada = revalidarExtras(arreglada, nota);
       // Lo ya publicado también pasa por el semáforo de hoy: si la lista
       // creció (como el 25/09), lo que ya estaba y ahora da rojo o amarillo
       // deja de salir solo en esta misma corrida.
@@ -1035,13 +1055,18 @@ export async function reescribirAutomaticas(notas, {
     cuenta.hechas += 1;
 
     const fuente = materialParaVerificar(conTexto);
+    // Con `estilo`: el título en presente, las tildes y que el cuerpo explique
+    // lo que promete el título (28/09).
     const comprobar = (x) => verificar(fuente, {
       titulo: x.titulo, copete: x.copete, guion: x.guion, cuerpo: x.cuerpo,
-    }, { deBalcarce: esLocal(nota) });
+    }, { deBalcarce: esLocal(nota), estilo: true });
 
     /** Lo que se puede publicar de una respuesta: tal cual, o con el cuerpo
-     *  sin las oraciones que no pasan. Nunca sin cuerpo. */
-    const evaluar = (x) => {
+     *  sin las oraciones que no pasan. Nunca sin cuerpo. Antes, lo que se
+     *  arregla sin inventar (arreglarEscritura): una etiqueta adelante, una
+     *  coma al final, "este sábado", "cabe destacar que", una tilde suelta. */
+    const evaluar = (respuesta) => {
+      const x = { ...respuesta, ...arreglarEscritura(respuesta, { hoy: new Date(Number(ahora)) }).nuevo };
       const control = comprobar(x);
       const cabeza = comprobar({ ...x, cuerpo: '' });
       if (!cabeza.ok) return { ok: false, problemas: control.problemas, motivo: `título o bajada: ${motivoCorto(cabeza.problemas)}` };

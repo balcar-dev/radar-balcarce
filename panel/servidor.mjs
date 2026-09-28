@@ -25,7 +25,9 @@ import {
 } from './acceso.mjs';
 import { TIPOS as TIPOS_BUZON, ESTADOS_SEGUIMIENTO } from './buzon.mjs';
 import { decisionHumana } from '../ingesta/utiles.mjs';
-import { verificar, resumirProblemas, depurarCuerpo } from '../ingesta/verificar.mjs';
+import {
+  verificar, resumirProblemas, depurarCuerpo, arreglarEscritura,
+} from '../ingesta/verificar.mjs';
 import { horariosDe, guardarHorario, DIAS as DIAS_SEMANA } from './horarios.mjs';
 import { guionNoticia } from '../reels/plan.mjs';
 import { aplicarAviso } from './avisos.mjs';
@@ -694,6 +696,9 @@ const servidor = http.createServer(async (req, res) => {
         antecedentes: antecedentesDe(nota, leerJson(F_ARCHIVO_WEB, { notas: [] }).notas ?? []),
       };
       let r = await reescribirConRespaldo(conAntecedentes, mecanico);
+      // Lo que se arregla sin inventar (una etiqueta adelante, una coma al
+      // final, "este sábado", una tilde suelta), como en la automática.
+      if (r.deIA) r = { ...r, ...arreglarEscritura(r).nuevo };
       // Lo mismo que en la reescritura automática, pero acá no se descarta:
       // lo aprieta una persona y lo va a leer. Se guarda con el aviso de qué
       // no cuadra con la fuente. Las partes nuevas sí se verifican y se
@@ -701,13 +706,13 @@ const servidor = http.createServer(async (req, res) => {
       const material = materialParaVerificar(conAntecedentes);
       if (previo.copete) material.resumen = `${material.resumen}\n${previo.copete}`;
       let control = r.deIA
-        ? verificar(material, r)
+        ? verificar(material, r, { estilo: true })
         : { ok: true, problemas: [] };
       // Como en la automática: si el cuerpo trae un dato que no cuadra, se
       // sacan esas oraciones; si lo que queda pasa y alcanza, se usa eso.
       if (r.deIA && !control.ok) {
         const depurado = { ...r, cuerpo: depurarCuerpo(material, r).cuerpo };
-        const otra = verificar(material, depurado);
+        const otra = verificar(material, depurado, { estilo: true });
         if (otra.ok && tieneCuerpo(depurado)) { r = depurado; control = otra; }
       }
       if (r.deIA && !tieneCuerpo(r)) {

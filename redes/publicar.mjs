@@ -17,8 +17,9 @@ import { crearCliente, ErrorMeta, sinToken } from './meta.mjs';
 import { leerJson as leer } from '../ingesta/json.mjs';
 import { publicarPiezas, completarEnlaces } from './publicar-piezas.mjs';
 import { espejosPendientes } from './espejo.mjs';
+import { FOTO_EN_INSTAGRAM } from '../web/lib/tarjeta-diseno.js';
 import {
-  elegirParaFacebook, mensajeDeNota, enlaceDeNota, imagenDeNota, libroNuevo, anotar, yaPublicada, estaActivo,
+  elegirParaFacebook, mensajeDeNota, enlaceDeNota, imagenDeNota, conCreditoDeFoto, libroNuevo, anotar, yaPublicada, estaActivo,
 } from './elegir.mjs';
 
 const RAIZ = path.join(import.meta.dirname, '..');
@@ -64,8 +65,9 @@ async function facebook() {
   const libro = leer(LIBRO, libroNuevo());
   libro.facebook ??= {};
   // El mismo posteo de Facebook, espejado como foto en el feed de
-  // Instagram: misma noticia en las dos redes, con la tarjeta propia que ya
-  // se genera para compartir (nunca la foto de la fuente). Va aparte del
+  // Instagram: misma noticia en las dos redes, con la tarjeta propia
+  // (web/lib/tarjeta.js: desde el 28/09 lleva la foto del banco propio si la
+  // nota tiene una, con el crédito en el pie y nunca adentro). Va aparte del
   // libro de Facebook porque puede fallar sin que eso invalide lo que ya
   // se publicó ahí.
   libro.instagramFeed ??= {};
@@ -75,7 +77,8 @@ async function facebook() {
    *  (espejosPendientes) hasta un tope. */
   async function espejar(nota, enlace) {
     try {
-      const ri = await api.publicarFotoEnInstagram({ imagenUrl: imagenDeNota(nota, SITIO), pie: mensajeDeNota(nota, SITIO) });
+      // Con la foto de la nota en la tarjeta, su crédito va al pie (conCreditoDeFoto).
+      const ri = await api.publicarFotoEnInstagram({ imagenUrl: imagenDeNota(nota, SITIO), pie: FOTO_EN_INSTAGRAM ? conCreditoDeFoto(mensajeDeNota(nota, SITIO), nota) : mensajeDeNota(nota, SITIO) });
       anotar(libro, 'instagramFeed', nota.id, { mediaId: ri.id, titulo: nota.titulo, enlace });
       fs.writeFileSync(LIBRO, `${JSON.stringify(libro, null, 2)}\n`);
       console.log(`             + Instagram: ${ri.id}`);

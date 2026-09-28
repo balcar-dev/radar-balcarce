@@ -8,9 +8,9 @@ cada 90 días (la auditoría avisa por WhatsApp cuando toca).
 
 | Dónde | Medida | Proporción | Qué usamos |
 |---|---|---|---|
-| Instagram · posteo | 1080 × 1350 | 4:5 | tarjeta propia de la nota: `/nota/ID/instagram.png` |
+| Instagram · posteo | 1080 × 1350 | 4:5 | tarjeta propia de la nota: `/nota/ID/instagram.png` (con su foto si tiene, desde el 28/09) |
 | Instagram · historia / reel | 1080 × 1920 | 9:16 | placas de `reels/placa.mjs` |
-| Facebook · posteo con enlace | 1200 × 630 | 1,91:1 | `opengraph-image` de la nota |
+| Facebook · posteo con enlace | 1200 × 630 | 1,91:1 | `opengraph-image` de la nota (sin foto) |
 | Facebook · posteo con foto | 1080 × 1350 (o 1080 × 1080) | 4:5 | — |
 | Facebook · historia / reel | 1080 × 1920 | 9:16 | las mismas placas que Instagram |
 | Facebook · portada de la página | 1640 × 924 (se ve a 820 × 312 en compu y 640 × 360 en celular) | 16:9 | `node reels/portada.mjs` (ver abajo) |
@@ -42,15 +42,37 @@ consultadas el 25/09/2026, todas coinciden en 820 × 312 y 640 × 360. **No se p
 leer la ayuda oficial de Meta** (la página no devolvió un texto consistente) ni
 hay una medida oficial del avatar: esa se tomó de la captura del celular.
 
+## Las plantillas del 28/09 y sus zonas seguras
+
+Las medidas no cambiaron; cambió el diseño (lienzo "Radar Balcarce · Plantillas
+redes", aprobado por Hernán el 28/09). Qué pieza usa qué plantilla:
+`MEDIA-KIT.md`, "Las plantillas de las piezas". Dónde va el texto en cada una:
+
+| Pieza | Dónde puede ir texto | Qué llega al borde | Dónde está el número |
+|---|---|---|---|
+| Historias y reels (podcasts, clima, farmacia, extras) | entre las filas **250 y 1580** (arriba la app pone su nombre y la barra, abajo los botones); la firma termina en la 1570 | nada: el fondo es papel liso | `ZONA_TEXTO` en `reels/placa.mjs` (= `margenArriba` y `margenAbajo` de acá) |
+| Subtítulos del video | centrados en la fila **1660**, sobre papel, debajo de todo lo demás | — | `SUB_Y` en `reels/reel.mjs` |
+| Espejo en Instagram (4:5) | entre las filas **150 y 1215** (la grilla cuadrada recorta 135 arriba y abajo) y a **72 px** de los costados (la 3:4 recorta 34) | la foto (arriba, 690 px de alto) o el bloque de color de la placa sin foto | `INSTAGRAM` en `web/lib/tarjeta-diseno.js` |
+| Enlace de Facebook, WhatsApp (1,91:1) | a 64 px de los costados | la banda de color de arriba | `web/lib/tarjeta.js` |
+
+Si una historia trae más de lo que entra (tres farmacias con direcciones
+largas, el aviso de clima), la placa se achica entera; nunca se corta ni pisa
+la firma. Los títulos nunca se cortan: se achica la letra. Lo prueba
+`pruebas/placas.test.mjs`, que mide con resvg cada renglón de cada placa.
+
 ## Por qué Instagram y Facebook usan imágenes distintas
 
 - **Instagram** muestra el posteo vertical y, en la grilla del perfil, lo
   recorta (cuadrado en la app vieja, 3:4 en la nueva desde 2025). Una imagen
   apaisada perdía los costados del titular. Por eso la tarjeta es 4:5 y **todo
   el texto queda en la zona segura del centro (1012 × 1080)**: 135 px de
-  margen arriba y abajo.
+  margen arriba y abajo. La foto de la nota (desde el 28/09) sí llega al borde:
+  si la grilla la recorta, no se pierde nada. La foto va sin el crédito
+  adentro; el crédito va al pie del posteo.
 - **Facebook**, con un enlace, muestra la imagen del enlace apaisada. Por eso
-  ahí va la de 1200 × 630, que es la misma que ve WhatsApp.
+  ahí va la de 1200 × 630, que es la misma que ve WhatsApp. No lleva la foto
+  de la nota: el texto de ese posteo no nombra fuentes, así que el crédito no
+  tendría dónde ir.
 - **Historias y reels**: 9:16. Las apps ponen su propia interfaz arriba (~250 px)
   y abajo (~340 px): ahí no va texto.
 
@@ -70,8 +92,9 @@ hay una medida oficial del avatar: esa se tomó de la captura del celular.
 
 1. Buscar las medidas vigentes (fuentes abajo o la ayuda oficial de Meta).
 2. Cambiar los valores y `VERIFICADO` en `redes/formatos.mjs`.
-3. Si cambió una medida que generamos, ajustar `web/lib/tarjeta.js` o
-   `reels/placa.mjs` y correr `npm test`.
+3. Si cambió una medida que generamos, ajustar `web/lib/tarjeta-diseno.js`
+   (y los `TAMANO` de `web/lib/tarjeta.js`) o `reels/placa.mjs` y correr
+   `npm test`.
 4. Actualizar la tabla de arriba.
 
 ## Fuentes (consultadas el 24/09/2026)
