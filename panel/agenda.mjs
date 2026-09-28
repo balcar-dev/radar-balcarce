@@ -15,7 +15,7 @@
 // Sin dependencias y sin leer ni escribir archivos: funciones de una entrada
 // y una salida, probadas en pruebas/agenda-panel.test.mjs.
 
-export const SITIO = 'https://radarbalcarce.com';
+const SITIO = 'https://radarbalcarce.com';
 
 /** Cada cuánto se le puede volver a escribir a un contacto. */
 export const DIAS_ENTRE_MENSAJES = 30;
@@ -24,7 +24,7 @@ export const DIAS_ADELANTE = 45;
 /** Hasta cuándo se sigue exportando un evento que ya pasó. La web lo guarda
  *  60 días (DIAS_DESPUES en web/lib/eventos.js); esto es un poco más, para
  *  que no sea el panel el que lo saque antes. */
-export const DIAS_EXPORTADO = 90;
+const DIAS_EXPORTADO = 90;
 
 /** Lo único de un evento cargado a mano que va al archivo público. */
 export const CAMPOS_PUBLICOS = [

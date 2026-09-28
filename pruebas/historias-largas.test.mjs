@@ -14,7 +14,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { PODCAST_VOZ, CONTRATO_DIARIO, PIEZAS } from '../ingesta/criterio.mjs';
-import { repasoConPresupuesto, guionRepaso } from '../redes/elegir.mjs';
+import { repasoConPresupuesto } from '../redes/elegir.mjs';
 import { segundosDePodcast } from '../redes/guiones.mjs';
 import {
   HISTORIA_MAXIMA, duracionDeLaSalida, pasaDelMaximo, argumentosDeRecorte,
@@ -45,7 +45,7 @@ const NOCHE_25_09 = [
 
 test('16a · el caso real del 25/09: el podcast de la noche tenía 153 palabras, ~62,7 s, y ahora la historia cabe', () => {
   const fecha = AR('2026-09-25', '20:36');
-  const antes = guionRepaso(NOCHE_25_09, { momento: 'noche', fecha });
+  const antes = repasoConPresupuesto(NOCHE_25_09, { momento: 'noche', fecha, presupuesto: Infinity }).guion; // sin tope, como salía antes
   assert.equal(antes.split(/\s+/).length, 153);
   // El video real duró 62,7 s: la estimación de ahora peca de larga (65,4), nunca de corta.
   const estimadoAntes = segundosDePodcast(antes);

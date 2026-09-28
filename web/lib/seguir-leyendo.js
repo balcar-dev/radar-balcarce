@@ -19,8 +19,8 @@
 import { mismaHistoria } from './texto.js';
 import { tieneCuerpo, tieneRespaldo } from './cuerpo.js';
 
-export const CUANTAS_SIGUEN = 4;
-export const DE_LA_MISMA_SECCION = 2;
+const CUANTAS_SIGUEN = 4;
+const DE_LA_MISMA_SECCION = 2;
 
 const tiempo = (n) => new Date(n?.fecha).getTime() || 0;
 const masNueva = (a, b) => tiempo(b) - tiempo(a);

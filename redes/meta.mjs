@@ -13,7 +13,7 @@
 //      semáforo. Este archivo sólo sabe hablar con Meta.
 
 const BASE = 'https://graph.facebook.com';
-export const VERSION = 'v23.0';
+const VERSION = 'v23.0';
 
 /** El error de Meta con lo que sirve para decidir qué hacer: si reintentar,
  *  si el token murió, si el contenido fue rechazado. */

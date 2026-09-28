@@ -40,8 +40,6 @@ export const NUMEROS = [
   { categoria: 'Delegaciones', nombre: 'Delegación San Agustín', numero: '(02266) 49-1013' },
 ];
 
-export const FUENTE = 'balcarce.gob.ar/telefonos-utiles';
-
 const DIAS = ['domingo', 'lunes', 'martes', 'miércoles', 'jueves', 'viernes', 'sábado'];
 
 const DIA_MS = 24 * 60 * 60 * 1000;

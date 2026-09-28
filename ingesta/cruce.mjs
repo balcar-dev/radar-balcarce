@@ -34,7 +34,7 @@ const VACIAS = new Set(('de la el en y a los las del que se por con un una para 
   + 'ocho nueve diez vivo hora horas minuto cuanto cuantos').split(' '));
 
 /** Las palabras que cuentan de una nota: el título dos veces y el resumen. */
-export function palabrasDe(nota) {
+function palabrasDe(nota) {
   const texto = `${nota.titulo ?? ''} ${nota.titulo ?? ''} ${String(nota.cuerpo ?? nota.resumen ?? '').slice(0, 400)}`;
   return sinTildes(texto).split(/[^a-z0-9ñ]+/).filter((w) => w.length >= 3 && !VACIAS.has(w));
 }
@@ -93,7 +93,7 @@ export function agruparPorHecho(notas, { umbral = CRUCE.umbral } = {}) {
 // ------------------------------------------------------------- la memoria
 
 /** Lo que se guarda de cada nota de afuera para cruzarla en las próximas horas. */
-export function paraLaMemoria(n) {
+function paraLaMemoria(n) {
   return {
     titulo: n.titulo,
     cuerpo: String(n.cuerpo ?? '').slice(0, 400),

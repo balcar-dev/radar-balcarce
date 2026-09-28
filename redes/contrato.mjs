@@ -100,7 +100,7 @@ export function estadoDeLaPieza({ hora, ventana, fecha, ahora }) {
 }
 
 /** Cuánto se le da a la historia de un podcast, después de su reel, antes de darla por perdida. */
-export const MINUTOS_PARA_LA_HISTORIA = 15;
+const MINUTOS_PARA_LA_HISTORIA = 15;
 
 /** Los ids de Meta repetidos bajo claves distintas del mismo día. */
 function idsRepetidos(entradas) {

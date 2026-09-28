@@ -39,10 +39,10 @@ const DIAS = ['domingo', 'lunes', 'martes', 'miércoles', 'jueves', 'viernes', '
 const MESES = ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre'];
 
 /** El día en Balcarce, "2026-09-26". */
-export const diaAR = (fecha) => new Intl.DateTimeFormat('en-CA', { timeZone: ZONA }).format(new Date(fecha));
+const diaAR = (fecha) => new Intl.DateTimeFormat('en-CA', { timeZone: ZONA }).format(new Date(fecha));
 
 /** "11:07", en Balcarce. */
-export function horaAR(fecha) {
+function horaAR(fecha) {
   const p = new Intl.DateTimeFormat('en-GB', { timeZone: ZONA, hour: '2-digit', minute: '2-digit', hour12: false }).formatToParts(new Date(fecha));
   const v = (t) => p.find((x) => x.type === t)?.value ?? '00';
   return `${String(Number(v('hour')) % 24).padStart(2, '0')}:${v('minute')}`;
@@ -58,13 +58,13 @@ const minutosAR = (fecha) => {
 const diaDeLaSemana = (dia) => new Date(`${dia}T12:00:00Z`).getUTCDay();
 
 /** "2026-09-26" más o menos `n` días. */
-export const sumarDias = (dia, n) => new Date(new Date(`${dia}T12:00:00Z`).getTime() + n * DIA_MS).toISOString().slice(0, 10);
+const sumarDias = (dia, n) => new Date(new Date(`${dia}T12:00:00Z`).getTime() + n * DIA_MS).toISOString().slice(0, 10);
 
 /** "viernes 26". */
-export const diaCorto = (dia) => `${DIAS[diaDeLaSemana(dia)]} ${Number(dia.slice(8, 10))}`;
+const diaCorto = (dia) => `${DIAS[diaDeLaSemana(dia)]} ${Number(dia.slice(8, 10))}`;
 
 /** "viernes 26 de septiembre". */
-export const diaLargo = (dia) => `${diaCorto(dia)} de ${MESES[Number(dia.slice(5, 7)) - 1]}`;
+const diaLargo = (dia) => `${diaCorto(dia)} de ${MESES[Number(dia.slice(5, 7)) - 1]}`;
 
 /** El identificador de una nota no lleva guiones: la dirección es
  *  "titular-en-guiones-ID" y el ID es lo que va después del último guion
@@ -75,16 +75,16 @@ const sinGuiones = (dia) => dia.replace(/-/g, '');
 
 /** Desde qué hora de Balcarce se arma la nota del dólar, y hasta cuál se
  *  sigue intentando si DolarApi todavía no tenía la cotización del día. */
-export const DOLAR_DESDE = 11 * 60;
-export const DOLAR_HASTA = 18 * 60;
+const DOLAR_DESDE = 11 * 60;
+const DOLAR_HASTA = 18 * 60;
 
 /** Cuántos días de cotizaciones se guardan para comparar. */
 export const DIAS_DE_HISTORIA = 60;
 
 /** Qué se guarda de cada día: lo que dice la nota. */
-export const CASAS_DE_LA_NOTA = ['oficial', 'blue', 'bolsa', 'contadoconliqui', 'tarjeta', 'mayorista'];
+const CASAS_DE_LA_NOTA = ['oficial', 'blue', 'bolsa', 'contadoconliqui', 'tarjeta', 'mayorista'];
 
-export const FIRMA_DOLAR = (hora) => `Nota de Radar Balcarce armada con los datos de DolarApi.com a las ${hora}.`;
+const FIRMA_DOLAR = (hora) => `Nota de Radar Balcarce armada con los datos de DolarApi.com a las ${hora}.`;
 
 /** La relevancia de la nota del dólar: la de una nota de afuera normal, para
  *  que no le gane a lo de Balcarce en la tapa (la grande es siempre de acá y
@@ -173,7 +173,7 @@ function fraseDeComparacion(entrada, otro, comoSeDice) {
   return `${comoSeDice}, el blue ${cambio(v(entrada, 'blue'), v(otro, 'blue'))} y el oficial ${cambio(v(entrada, 'oficial'), v(otro, 'oficial'))}.`;
 }
 
-export const MAXIMO_TITULO = 90;
+const MAXIMO_TITULO = 90;
 
 /**
  * La nota del dólar de un día, armada con plantilla a partir de los números.

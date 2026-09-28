@@ -35,14 +35,14 @@ import { diaAR, horaAR } from '../ingesta/zona.mjs';
 import { leerJson as leer } from '../ingesta/json.mjs';
 import { idDeRuta } from '../web/lib/ruta.js';
 
-export const SITIO = 'radarbalcarce.com';
+const SITIO = 'radarbalcarce.com';
 /** El identificador del sitio que Cloudflare pone en el HTML (data-cf-beacon).
  *  No es secreto: está en cada página. A veces el de la API es otro; por eso
  *  primero se le pregunta a Cloudflare cuál corresponde a radarbalcarce.com. */
-export const TOKEN_DEL_BEACON = '63fea16828ce46988d62382b0fbabf60';
-export const PAGINA_ID = '1254237411116171';
+const TOKEN_DEL_BEACON = '63fea16828ce46988d62382b0fbabf60';
+const PAGINA_ID = '1254237411116171';
 export const MAXIMO_DE_PUNTOS = 120;
-export const HORAS_DE_MEDICION = [9, 21];
+const HORAS_DE_MEDICION = [9, 21];
 const GRAPHQL = 'https://api.cloudflare.com/client/v4/graphql';
 const ESPERA = 20000;
 
@@ -119,7 +119,7 @@ const texto = (s) => JSON.stringify(String(s));
 
 /** Cuál es el siteTag de radarbalcarce.com para la API: se le pregunta a
  *  Cloudflare qué sitios de la cuenta tuvieron visitas en la última semana. */
-export async function buscarSitio({ cuenta, token, ahora, fetchFn }) {
+async function buscarSitio({ cuenta, token, ahora, fetchFn }) {
   const query = `{ viewer { accounts(filter: { accountTag: ${texto(cuenta)} }) {
     sitios: rumPageloadEventsAdaptiveGroups(limit: 50, orderBy: [count_DESC], filter: { datetime_geq: ${texto(iso(ahora.getTime() - 7 * 86400e3))}, datetime_leq: ${texto(iso(ahora.getTime()))} }) {
       count dimensions { siteTag requestHost }
@@ -174,11 +174,11 @@ export async function estadisticasDeCloudflare({ cuenta, token, ahora = new Date
 /** Las métricas que se piden, una por una: si Meta no acepta una (por
  *  permiso o porque la dio de baja, como hizo con "impressions" en 2025), las
  *  otras salen igual. */
-export const METRICAS_FACEBOOK = [
+const METRICAS_FACEBOOK = [
   ['vistas', 'page_media_view'],
   ['interacciones', 'page_post_engagements'],
 ];
-export const METRICAS_INSTAGRAM = [
+const METRICAS_INSTAGRAM = [
   ['alcance', 'reach'],
   ['vistas', 'views'],
   ['interacciones', 'total_interactions'],

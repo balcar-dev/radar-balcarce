@@ -34,13 +34,21 @@ import {
   CLIMA_VOZ, PODCAST_VOZ, PIEZA_FIJA_VOZ,
 } from '../redes/guiones.mjs';
 import {
-  guionRepaso, guionPodcast, mensajeDeNota, FRASES_DEL_ENLACE,
+  repasoConPresupuesto, elegirParaPodcast, REGLAS_PIEZAS, mensajeDeNota, FRASES_DEL_ENLACE,
 } from '../redes/elegir.mjs';
 import { pieDePieza } from '../redes/piezas.mjs';
 import { fechaEnBalcarce } from '../ingesta/utiles.mjs';
 import { clipsDeAuditoria, revisarTranscripcion, cuantasDirecciones } from '../redes/auditoria-voz.mjs';
 import { INDICACION, VOZ_DEL_MEDIO } from '../reels/voz-gemini.mjs';
-import { TONO_DE_LA_MANANA, TONO_DE_LA_TARDE, TONO_DE_LA_NOCHE, planDelDia } from '../reels/plan.mjs';
+import { planDelDia } from '../reels/plan.mjs';
+
+// El guion de un podcast sin tope de duración (el recorte se prueba en
+// historias-largas.test.mjs), y el de la noche con las notas que elige el plan.
+const guionRepaso = (notas, opciones) => repasoConPresupuesto(notas, { ...opciones, presupuesto: Infinity })?.guion ?? null;
+const guionPodcast = (notas, { fecha } = {}) => repasoConPresupuesto(
+  elegirParaPodcast(notas, { cuantas: criterio.PIEZAS.notasPodcastNoche }, { ...REGLAS_PIEZAS, relevanciaParaPodcast: 0 }),
+  { momento: 'noche', fecha },
+)?.guion ?? null;
 
 const RAIZ = path.join(import.meta.dirname, '..');
 const leer = (r) => fs.readFileSync(path.join(RAIZ, r), 'utf8').replace(/\r\n/g, '\n');
@@ -105,9 +113,6 @@ test('la voz es siempre Kore y la indicación sale del documento, sin copia en e
   assert.match(INDICACION_BASE, /punto ar/, 'la indicación tiene que prohibir "punto ar" a la voz');
   assert.match(INDICACION_BASE, /Radar Balcarce punto com/);
   // Los momentos del día que usa el plan son los del documento.
-  assert.equal(TONO_DE_LA_MANANA, INDICACIONES.manana);
-  assert.equal(TONO_DE_LA_TARDE, INDICACIONES.tarde);
-  assert.equal(TONO_DE_LA_NOCHE, INDICACIONES.noche);
   for (const m of MOMENTOS) {
     assert.ok(DOC.includes(INDICACIONES[m]), `la indicación de ${m} no está tal cual en el documento`);
     assert.equal(opcionesDeVoz(m).voz, 'Kore');
@@ -313,7 +318,7 @@ test('cada podcast saluda y cierra a su hora: mañana, tarde y noche (nunca los 
   assert.equal(tres.filter((g) => /buen d[ií]a/i.test(g)).length, 1, 'sólo el de la mañana dice "buen día"');
 });
 
-test('el podcast de la noche (guionPodcast) dice el día de la semana y saluda de noche', () => {
+test('el podcast de la noche dice el día de la semana y saluda de noche', () => {
   const notas = NOTAS.map((n) => ({ ...n, relevancia: 90 }));
   const g = guionPodcast(notas, { fecha: new Date('2026-09-21T21:00:00-03:00') });
   debeCumplir(g, 'noche', 'podcast de la noche');

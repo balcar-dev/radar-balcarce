@@ -45,7 +45,7 @@ export const VENTANA_MINUTOS = 120;
  * Lo que sí caduca (el clima "de hoy" de la mañana) se deja más corto, para no
  * publicar viejo. El aviso de clima tiene la suya (VENTANA_AVISO, más abajo).
  */
-export const VENTANAS = {
+const VENTANAS = {
   'clima-manana': 240, // 7:30 → 11:30
   noticia1: 300,       // 10:00 → 15:00
   noticia2: 300,       // 15:00 → 20:00
@@ -68,7 +68,7 @@ export const HORA_AVISO = '07:00';
 export const VENTANA_AVISO = 15 * 60; // 7:00 → 22:00
 
 /** ¿Es un aviso de clima? Se llaman `aviso-helada`, `aviso-granizo`, `aviso-viento`. */
-export const esAviso = (nombre) => String(nombre ?? '').startsWith('aviso-');
+const esAviso = (nombre) => String(nombre ?? '').startsWith('aviso-');
 
 /** La ventana de una pieza: la suya, o la de siempre si no tiene. */
 export const ventanaDe = (nombre) => VENTANAS[nombre] ?? (esAviso(nombre) ? VENTANA_AVISO : VENTANA_MINUTOS);
@@ -117,7 +117,7 @@ export const NOMBRES_DE_PODCAST = PODCASTS.map((p) => p.nombre);
 /** Piezas fijas que sólo se pueden armar en la PC: sus datos no están en la
  *  web. Hasta que lo estén, GitHub no las espera (si no, las reintentaría en
  *  cada corrida sin poder armarlas nunca). */
-export const SOLO_EN_LA_PC = ['agenda'];
+const SOLO_EN_LA_PC = ['agenda'];
 
 /**
  * El color de los podcasts de cada día. Los tres del día llevan el mismo, y

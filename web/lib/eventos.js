@@ -34,7 +34,7 @@ import { sinTildes } from './texto.js';
 export const DIAS_DESPUES = 60;
 
 /** La zona de Balcarce. Argentina no cambia la hora en verano. */
-export const ZONA = '-03:00';
+const ZONA = '-03:00';
 
 const DIA = 24 * 3600e3;
 const DIAS_SEMANA = ['domingo', 'lunes', 'martes', 'miércoles', 'jueves', 'viernes', 'sábado'];
@@ -168,7 +168,7 @@ function diaDeLaSemana(p) {
 }
 
 /** "08:00" → "8"; "12:30" → "12.30", como se escribe en un diario. */
-export function horaLinda(hora) {
+function horaLinda(hora) {
   if (!hora) return '';
   const [h, m] = hora.split(':');
   return m === '00' ? String(Number(h)) : `${Number(h)}.${m}`;

@@ -390,28 +390,12 @@ export function elegirParaPodcast(notas, { cuantas = PIEZAS.notasPorPodcast, exc
  * El guion de un podcast: el saludo de su hora, cada noticia con su titular y, si
  * el texto es propio, una oración más de contexto, y el cierre de su hora. Todo
  * sale de lo ya publicado: no hay nada que la IA pueda inventar acá. La fuente no
- * se nombra nunca. Con menos de dos noticias no es un repaso: devuelve null.
+ * se nombra nunca. Cómo suena (saludos, conectores, cierres, la dirección dicha)
+ * sale del libro de recursos de redes/guiones.mjs, según CRITERIO-REDES.md, con
+ * una semilla de fecha y momento: el mismo día y el mismo podcast dan siempre el
+ * mismo texto. `saludo` y `cierre` sólo se pasan para forzarlos (pruebas).
  *
- * Cómo suena (saludos, conectores, cierres, la dirección dicha) sale del libro de
- * recursos de redes/guiones.mjs, según CRITERIO-REDES.md, con una semilla de
- * fecha y momento: el mismo día y el mismo podcast dan siempre el mismo texto.
- * `saludo` y `cierre` sólo se pasan para forzarlos (pruebas).
- */
-export function guionRepaso(elegidas, {
-  momento = 'manana', fecha = new Date(), saludo, cierre, direccion,
-} = {}) {
-  if (elegidas.length < PIEZAS.notasMinimasPodcast) return null;
-  const items = elegidas.map((n) => ({
-    titular: n.titulo,
-    detalle: esPropia(n) ? primeraOracion(n.copete) : '',
-  }));
-  return armarPodcast(items, {
-    momento, fecha, saludo, cierre, direccion,
-  });
-}
-
-/**
- * El guion de un podcast CON PRESUPUESTO de duración. Cada podcast se sube también
+ * Tiene PRESUPUESTO de duración. Cada podcast se sube también
  * como historia y una historia acepta 60 segundos (el podcast de la noche del 25/09
  * duró 62,7 y su historia falló en las dos redes). Así que el guion tiene que caber
  * en `PODCAST_VOZ.segundosPresupuesto` (55, medido con segundosDePodcast). Si no
@@ -453,15 +437,6 @@ export function repasoConPresupuesto(elegidas, {
     r = resultado(notas, sinDetalle, { detalles: sinDetalle.size, notas: elegidas.length - notas.length });
   }
   return r;
-}
-
-/**
- * El podcast de la noche: el repaso de lo más importante del día, dicho por
- * la voz de siempre.
- */
-export function guionPodcast(notas, { cuantas = PIEZAS.notasPodcastNoche, fecha = new Date() } = {}) {
-  const elegidas = elegirParaPodcast(notas, { cuantas }, { ...REGLAS_PIEZAS, relevanciaParaPodcast: 0 });
-  return repasoConPresupuesto(elegidas, { momento: 'noche', fecha })?.guion ?? null;
 }
 
 /** ¿Está prendido el interruptor de publicar? Acepta "si", "Si", "SÍ", "sí"…

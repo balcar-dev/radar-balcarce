@@ -24,7 +24,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 
 const AQUI = import.meta.dirname;
-export const ORIGEN = path.join(AQUI, 'datos');
+const ORIGEN = path.join(AQUI, 'datos');
 
 /** Los archivos que no se respaldan nunca: las contraseñas iniciales en
  *  texto plano (CLAVES-INICIALES.txt), la firma de las sesiones

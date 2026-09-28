@@ -99,7 +99,3 @@ export function textoDelDia(cuenta, historia = {}) {
   if (secciones.length) l.push(secciones.map(([s, n]) => `${s} ${n}`).join(' · '));
   return l.join('\n');
 }
-
-/** Las secciones del sitio, en el orden del menú (web/lib/datos.js, SECCIONES). */
-export const SECCIONES_DEL_SITIO = ['Balcarce', 'Política', 'Policiales', 'Fútbol', 'Deportes', 'Automovilismo',
-  'Agro', 'Economía', 'Cultura y agenda', 'Tecnología', 'Argentina'];

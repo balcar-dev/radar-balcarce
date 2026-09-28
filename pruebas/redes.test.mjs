@@ -326,7 +326,21 @@ import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
 import { claveRedaccion, claveRedes, leerVariable } from '../reels/claves.mjs';
-import { guionPodcast, mismoTema, sePuedeSola, estaActivo } from '../redes/elegir.mjs';
+import {
+  mismoTema, sePuedeSola, estaActivo, repasoConPresupuesto, REGLAS_PIEZAS,
+} from '../redes/elegir.mjs';
+import { PIEZAS } from '../ingesta/criterio.mjs';
+
+/** El guion de un podcast sin tope de duración (el recorte se prueba en historias-largas.test.mjs). */
+function guionRepaso(notas, opciones) {
+  return repasoConPresupuesto(notas, { ...opciones, presupuesto: Infinity })?.guion ?? null;
+}
+
+/** El podcast de la noche: elige las notas como el plan y arma el guion con su presupuesto. */
+function guionPodcast(notas, { fecha } = {}) {
+  const elegidas = elegirParaPodcast(notas, { cuantas: PIEZAS.notasPodcastNoche }, { ...REGLAS_PIEZAS, relevanciaParaPodcast: 0 });
+  return repasoConPresupuesto(elegidas, { momento: 'noche', fecha })?.guion ?? null;
+}
 
 /** Un .env de mentira en una carpeta temporal. */
 function envDe(contenido) {
@@ -451,7 +465,7 @@ test('el interruptor acepta si, Si, SÍ y sí, y nada más', () => {
 
 // ------------------------------------------------------------ los podcasts
 
-import { elegirParaPodcast, guionRepaso, primeraOracion } from '../redes/elegir.mjs';
+import { elegirParaPodcast, primeraOracion } from '../redes/elegir.mjs';
 
 const nn = (id, titulo, seccion, relevancia, extra = {}) => ({ id, titulo, seccion, relevancia, local: true, semaforo: 'verde', ...extra });
 

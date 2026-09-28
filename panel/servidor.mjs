@@ -29,7 +29,7 @@ import {
   verificar, resumirProblemas, depurarCuerpo, arreglarEscritura,
 } from '../ingesta/verificar.mjs';
 import { horariosDe, guardarHorario, DIAS as DIAS_SEMANA } from './horarios.mjs';
-import { guionNoticia } from '../reels/plan.mjs';
+import { guionNoticia } from '../redes/guiones.mjs';
 import { aplicarAviso } from './avisos.mjs';
 import {
   camposEditables, decisionParaLaWeb, podarDecisiones, conTextoCorregido,

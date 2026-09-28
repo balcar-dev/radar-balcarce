@@ -37,7 +37,7 @@ async function duracion(archivo) {
 }
 
 /** Los silencios del audio: cada uno es una respiración de la voz. */
-export async function silencios(archivo, { umbral = '-32dB', minimo = 0.18 } = {}) {
+async function silencios(archivo, { umbral = '-32dB', minimo = 0.18 } = {}) {
   const salida = await correr(ffmpeg, [
     '-hide_banner', '-i', archivo,
     '-af', `silencedetect=noise=${umbral}:d=${minimo}`,

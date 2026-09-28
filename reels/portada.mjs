@@ -42,7 +42,7 @@ const TAM_MARCA = 118;
 const Y_MARCA = 318; // línea de base
 const Y_BAJADA = 396;
 const TAM_BAJADA = 36;
-export const BAJADA = 'Lo que pasa en Balcarce, la región y el país';
+const BAJADA = 'Lo que pasa en Balcarce, la región y el país';
 
 const marcaSvg = (extra = '') => `<text x="${ANCHO / 2}" y="${Y_MARCA}" text-anchor="middle" font-family="Source Serif 4 60pt" font-weight="900"
         font-size="${TAM_MARCA}" fill="#F4F1EA" letter-spacing="-4"${extra}>RADAR <tspan fill="#C7381C">BALCARCE</tspan></text>`;
@@ -51,7 +51,7 @@ const bajadaSvg = () => `<text x="${ANCHO / 2}" y="${Y_BAJADA}" text-anchor="mid
 
 const envolver = (contenido) => `<svg xmlns="http://www.w3.org/2000/svg" width="${ANCHO}" height="${ALTO}" viewBox="0 0 ${ANCHO} ${ALTO}">${contenido}</svg>`;
 
-export function svgPortada() {
+function svgPortada() {
   const cx = ANCHO / 2, cy = 300;
   return envolver(`
   <defs>

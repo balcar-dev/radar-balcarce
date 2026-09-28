@@ -47,7 +47,7 @@ export function idsRetiradosAMano(json) {
  *  aprobadas que esperaban a Gemini ("hacé todo con Claude"). Se escribe con
  *  el mismo criterio (CRITERIO-EDITORIAL.md § 12), contra el texto de las
  *  fuentes, y la nota lo dice en "por". */
-export const CAMPOS_CORREGIBLES = ['titulo', 'copete', 'seccion', 'cuerpo'];
+const CAMPOS_CORREGIBLES = ['titulo', 'copete', 'seccion', 'cuerpo'];
 
 /**
  * Las correcciones a mano (web/data/correcciones.json, 27/09): el título, la
@@ -81,7 +81,7 @@ export const DIAS_DE_ARCHIVO = 180;
  *  página y sus dos imágenes) y Cloudflare Pages acepta hasta 20.000 archivos
  *  por despliegue; además, cada nota más es tiempo de compilación. Si se pasa,
  *  se quedan primero las que salieron en las redes y después las más nuevas. */
-export const MAXIMO_EN_ARCHIVO = 2500;
+const MAXIMO_EN_ARCHIVO = 2500;
 
 const HORA = 3600e3;
 const tiempo = (n) => new Date(n?.fecha).getTime();

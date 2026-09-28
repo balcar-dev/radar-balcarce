@@ -817,7 +817,7 @@ export function similitud(a = '', b = '') {
 
 /** ¿El cuerpo dice de nuevo la bajada? Si el primer párrafo se parece mucho,
  *  o arranca con las mismas palabras, la nota se lee dos veces igual. */
-export function repiteCopete(copete, cuerpo) {
+function repiteCopete(copete, cuerpo) {
   if (!cuerpo || !copete) return false;
   const primero = String(cuerpo).split(/\n+/)[0];
   return similitud(copete, primero) >= 0.7 || sinTildes(cuerpo).startsWith(sinTildes(copete).slice(0, 60));

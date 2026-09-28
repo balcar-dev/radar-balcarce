@@ -27,7 +27,7 @@ export const FUENTES = {
 export const CADA_DOLAR = 5 * 60 * 1000;
 
 /** Cuánto se espera a cada fuente antes de darla por caída. */
-export const ESPERA_DOLAR = 10000;
+const ESPERA_DOLAR = 10000;
 
 const TZ = 'America/Argentina/Buenos_Aires';
 
@@ -236,7 +236,7 @@ export function textoDeEstado({ estado, datos, ahora }) {
 // traerDolar, vía components/usar-dolar.js).
 
 /** Los tipos que van en el panel, con el nombre corto. */
-export const CASAS_DEL_PANEL = [
+const CASAS_DEL_PANEL = [
   { casa: 'oficial', nombre: 'Oficial' },
   { casa: 'blue', nombre: 'Blue' },
   { casa: 'bolsa', nombre: 'MEP' },

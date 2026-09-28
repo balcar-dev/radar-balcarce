@@ -22,7 +22,6 @@ import { MEDIOS_DE_AFUERA, MEDIOS_POR_DEFECTO, MEDIOS_CON_FIGURA } from './crite
 export const ARCHIVO = path.join(import.meta.dirname, '..', 'FUENTES.md');
 
 const TIPOS = { rss: 'RSS', atom: 'Atom', sitemap: 'índice de noticias', scrape: 'página (se lee el HTML)' };
-const ALCANCES = { local: 'Balcarce', region: 'región', provincia: 'provincia', pais: 'nacional' };
 const celda = (s) => String(s ?? '').replace(/\|/g, '/').replace(/\s+/g, ' ').trim();
 
 function fila(f) {

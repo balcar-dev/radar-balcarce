@@ -9,7 +9,7 @@ import { MsEdgeTTS, OUTPUT_FORMAT } from 'msedge-tts';
 
 // Elena es la voz elegida. Se define una sola vez y no se cambia nunca más:
 // la voz es la marca.
-export const VOZ = 'es-AR-ElenaNeural';
+const VOZ = 'es-AR-ElenaNeural';
 
 function escaparSsml(t) {
   return t.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');

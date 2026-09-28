@@ -5,7 +5,7 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import {
-  cuentaDelDia, anotarDia, comoHistoriaJson, promedioAnterior, textoDelDia, SECCIONES_DEL_SITIO, DIAS_GUARDADOS,
+  cuentaDelDia, anotarDia, comoHistoriaJson, promedioAnterior, textoDelDia, DIAS_GUARDADOS,
 } from '../ingesta/estadistica-diaria.mjs';
 import { SECCIONES } from '../web/lib/datos.js';
 import { datosDelDia, textoResumen } from '../redes/avisos.mjs';
@@ -69,13 +69,9 @@ test('el informe es breve: el total contra los días anteriores y las notas por 
   assert.match(textoDelDia(c, semana), /promedio de 7 días: 40/);
 });
 
-test('las secciones del informe son las del sitio', () => {
-  assert.deepEqual(SECCIONES_DEL_SITIO, SECCIONES.map((s) => s.nombre));
-});
-
 test('el resumen de las 21 dice el total, y el detalle va en un bloque propio que sale una vez por día', async () => {
   const { planDeAvisos } = await import('../redes/vigilar.mjs');
-  const secciones = Object.fromEntries(SECCIONES_DEL_SITIO.map((s, i) => [s, i + 1]));
+  const secciones = Object.fromEntries(SECCIONES.map((s, i) => [s.nombre, i + 1]));
   const notas = Object.entries(secciones).flatMap(([s, n]) => Array.from({ length: n }, (_, i) => ({ id: `${s}${i}`, seccion: s, visto: '2026-09-27T15:00:00Z' })));
   const resumen = textoResumen({ datos: datosDelDia({ ahora: AHORA, portada: { notas }, libro: {} }) });
   assert.doesNotMatch(resumen, /Notas|Fútbol 4/, 'las notas del día no se repiten dentro del resumen');

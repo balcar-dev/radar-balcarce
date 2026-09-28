@@ -19,7 +19,7 @@ import { elegirParaPodcast, repasoConPresupuesto, enlaceDeNota } from '../redes/
 import { CONTRATO_DIARIO, PIEZAS } from '../ingesta/criterio.mjs';
 import { datosDeLaWeb } from '../redes/datos.mjs';
 import {
-  guionClima, guionClimaNoche, guionFarmacia, guionUtiles, guionAgenda, guionNoticia, comoNombre,
+  guionClima, guionClimaNoche, guionFarmacia, guionUtiles, guionAgenda, comoNombre,
 } from '../redes/guiones.mjs';
 import { INDICACIONES, momentoDeHora } from '../redes/prompt-redes.mjs';
 import {
@@ -199,18 +199,6 @@ function leerDatos() {
 //    significa. Si dicen lo mismo, la pieza dura el doble y no aporta nada.
 // 2. La fuente no se nombra nunca en redes. La atribución y el link van en la
 //    nota de la página, que es donde corresponde.
-//
-// Se re-exportan acá porque otros los importan de plan.mjs (guionNoticia, el
-// panel: es el respaldo mecánico de su reescritura).
-export {
-  guionClima, guionClimaNoche, guionFarmacia, guionUtiles, guionAgenda, guionNoticia,
-};
-
-// Cómo suena cada podcast según la hora se lee de CRITERIO-REDES.md (sección 6);
-// se suma a la indicación de siempre. Se exportan con los nombres de siempre.
-export const TONO_DE_LA_MANANA = INDICACIONES.manana;
-export const TONO_DE_LA_TARDE = INDICACIONES.tarde;
-export const TONO_DE_LA_NOCHE = INDICACIONES.noche;
 
 // --- el plan ---------------------------------------------------------------
 

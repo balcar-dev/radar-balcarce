@@ -18,7 +18,7 @@ import { PODCAST_VOZ } from '../ingesta/criterio.mjs';
 export const HISTORIA_MAXIMA = PODCAST_VOZ.segundosMaximoHistoria;
 
 /** Cuánto dura el fundido de salida del corte, en segundos. */
-export const FUNDIDO_DE_SALIDA = 1.2;
+const FUNDIDO_DE_SALIDA = 1.2;
 
 /** La duración que ffmpeg imprime al abrir un archivo ("Duration: 00:01:02.70"), en segundos, o null. */
 export function duracionDeLaSalida(texto) {

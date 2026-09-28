@@ -32,7 +32,6 @@ export const TAMANO_INSTAGRAM = { width: 1080, height: 1350 };
 export const PAPEL = '#FAF8F3';
 export const TINTA = '#14161A';
 export const GRIS = '#474C55';
-export const LINEA = '#D9D4C7';
 // El rojo de la marca: "Balcarce" en la firma (MEDIA-KIT.md).
 export const ROJO = '#C7381C';
 

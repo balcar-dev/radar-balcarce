@@ -20,7 +20,7 @@ import { diaAR } from '../ingesta/zona.mjs';
 import { claveDePieza, piezasQueTocan, tipoInstagram, pieDePieza } from './piezas.mjs';
 
 /** Cómo se llama cada red en el libro y qué método del cliente la publica. */
-export const REDES = {
+const REDES = {
   instagram: { libro: 'instagram', metodo: 'publicarVideoEnInstagram', nombre: 'Instagram' },
   facebook: { libro: 'facebookVideos', metodo: 'publicarVideoEnFacebook', nombre: 'Facebook' },
 };
@@ -34,7 +34,7 @@ export const INTENTOS_HISTORIA = 3;
 /** ¿Es un podcast? Un reel que cuenta dos notas o más. Cada podcast tiene su
  *  nota en la web (web/lib/notas-propias.js), que enlaza al video: para eso
  *  se guarda en el libro su dirección pública (`permalink`). */
-export const esPodcast = (p) => p?.tipo === 'REELS' && (p?.notaIds ?? []).length >= 2;
+const esPodcast = (p) => p?.tipo === 'REELS' && (p?.notaIds ?? []).length >= 2;
 
 /** La dirección pública de una publicación, o null. Nunca tira un error: sin
  *  la dirección, la nota del podcast sale igual, sólo que sin el enlace. */
@@ -44,7 +44,7 @@ async function buscarEnlace(api, red, id) {
 }
 
 /** Cuántas veces se pide la dirección de una publicación antes de rendirse. */
-export const INTENTOS_ENLACE = 5;
+const INTENTOS_ENLACE = 5;
 
 /**
  * Completa la dirección pública de los podcasts de los últimos días que

@@ -31,7 +31,7 @@ import {
 // Se repiten acá (y no sólo en tarjeta-diseno.js) porque las rutas de Next
 // las importan de este archivo; pruebas/formatos.test.mjs controla las dos.
 export const TAMANO = { width: 1200, height: 630 };
-export const TAMANO_INSTAGRAM = { width: 1080, height: 1350 };
+const TAMANO_INSTAGRAM = { width: 1080, height: 1350 };
 export const TIPO = 'image/png';
 
 const FUENTES = path.join(process.cwd(), 'fuentes');

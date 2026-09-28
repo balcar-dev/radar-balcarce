@@ -19,10 +19,10 @@ import { ZONA, diaAR } from '../ingesta/zona.mjs';
 // --- la semilla ------------------------------------------------------------
 
 /** El día de la semana en Balcarce ("lunes", "viernes"…). */
-export const diaDeLaSemana = (fecha = new Date()) => new Intl.DateTimeFormat('es-AR', { weekday: 'long', timeZone: ZONA }).format(fecha);
+const diaDeLaSemana = (fecha = new Date()) => new Intl.DateTimeFormat('es-AR', { weekday: 'long', timeZone: ZONA }).format(fecha);
 
 /** FNV-1a de 32 bits: barato, estable y sin dependencias. */
-export function hash(texto) {
+function hash(texto) {
   let h = 2166136261;
   for (const c of String(texto)) {
     h ^= c.codePointAt(0);
@@ -38,7 +38,7 @@ export const semillaDe = (pieza, fecha = new Date()) => `${diaAR(fecha)}|${pieza
 export const variante = (banco, semilla, ranura) => banco[hash(`${semilla}|${ranura}`) % banco.length];
 
 /** Elige `n` entradas seguidas y distintas del banco (para los conectores del medio). */
-export function variantes(banco, semilla, ranura, n) {
+function variantes(banco, semilla, ranura, n) {
   const inicio = hash(`${semilla}|${ranura}`) % banco.length;
   return Array.from({ length: Math.min(n, banco.length) }, (_, i) => banco[(inicio + i) % banco.length]);
 }
@@ -127,7 +127,7 @@ export const firmasConDireccion = (D, tipo) => (tipo === 'podcast'
 
 /** La firma: "Radar Balcarce." o, cuando toca, la dirección dicha ("… Radar
  *  Balcarce punto com."). Nunca otra cosa. */
-export function firma(semilla, { conDireccion = false, tipo = 'general' } = {}) {
+function firma(semilla, { conDireccion = false, tipo = 'general' } = {}) {
   return conDireccion
     ? variante(firmasConDireccion(SITIO_DICHO, tipo), semilla, 'firma')
     : variante(FIRMAS_SIN_DIRECCION, semilla, 'firma');
@@ -145,8 +145,7 @@ export const comoNombre = (s) => String(s).toLowerCase()
 /**
  * El guion mecánico de UNA nota: el mismo titular que está en la placa, y nada
  * más (sin el punto o los dos puntos del final, con un punto). Es el respaldo
- * de la reescritura en el panel (panel/servidor.mjs, vía reels/plan.mjs, que lo
- * re-exporta con este nombre). Vive acá, sin nada de afuera de Node, para que
+ * de la reescritura en el panel (panel/servidor.mjs). Vive acá, sin nada de afuera de Node, para que
  * reels/reescritura.mjs pueda usar este mismo en vez de su copia
  * (`mecanicoPorDefecto` lo usa desde el 28/09).
  */

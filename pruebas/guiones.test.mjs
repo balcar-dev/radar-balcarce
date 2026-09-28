@@ -4,7 +4,7 @@
 
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { guionUtiles } from '../reels/plan.mjs';
+import { guionUtiles } from '../redes/guiones.mjs';
 
 test('los teléfonos útiles no dicen "esta semana": son siempre los mismos', () => {
   // Pasó el 22/09: "una vez por semana te dejamos los teléfonos" daba a

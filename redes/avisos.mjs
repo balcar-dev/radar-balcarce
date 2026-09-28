@@ -44,7 +44,7 @@ export const LIMITES_AVISOS = {
 /** Lo amarillo que no es para una persona: relleno de afuera que el filtro
  *  ya dejó afuera por puntaje o por cupo. Son decenas por corrida y casi
  *  nunca se aprueban: avisarlas sería ruido. */
-export const MOTIVOS_DE_RELLENO = /de afuera y poco contada|pas[oó] el cupo|cotizaci[oó]n del d[oó]lar/i;
+const MOTIVOS_DE_RELLENO = /de afuera y poco contada|pas[oó] el cupo|cotizaci[oó]n del d[oó]lar/i;
 
 /** Motivos que hablan de chicos o de víctimas: esas notas van SIN titular a
  *  portada.json, que es público (leyes 26.061 y 26.485). */
@@ -187,7 +187,7 @@ export function anotarImportantes(previo = {}, notas = [], ahora = new Date()) {
 // ------------------------------------------------------ lo que salió en redes
 
 /** Cómo se llama cada pieza para una persona. */
-export const NOMBRES_DE_PIEZAS = {
+const NOMBRES_DE_PIEZAS = {
   'clima-manana': 'Clima de la mañana',
   'clima-noche': 'Clima de la noche',
   farmacia: 'Farmacia de turno',
@@ -201,7 +201,7 @@ const nombreDePieza = (n) => NOMBRES_DE_PIEZAS[n] ?? (n ? String(n) : 'Pieza');
 const tipoDeVideo = (t) => (t === 'REELS' ? 'reel' : 'historia');
 
 /** Todo lo del libro, en una sola lista: { red, tipo, etiqueta, cuando }. */
-export function entradasDelLibro(libro = {}) {
+function entradasDelLibro(libro = {}) {
   const lista = [];
   const cada = (seccion, fn) => { for (const v of Object.values(libro?.[seccion] ?? {})) if (v?.cuando) lista.push({ cuando: v.cuando, ...fn(v) }); };
   cada('facebook', (v) => ({ red: 'Facebook', tipo: 'posteo', etiqueta: recortar(v.titulo || 'Nota', 60) }));
@@ -244,7 +244,7 @@ export function textoRedes(items, maximo = 8) {
 // ------------------------------------------------------ el resumen de las 21
 
 /** Las piezas de video que tienen que salir cada día, en el orden del día. */
-export const PIEZAS_DEL_RESUMEN = [
+const PIEZAS_DEL_RESUMEN = [
   ['clima-manana', 'clima mañana'], ['noticia1', 'podcast mañana'], ['noticia2', 'podcast tarde'],
   ['farmacia', 'farmacia'], ['clima-noche', 'clima noche'], ['podcast', 'podcast noche'],
 ];

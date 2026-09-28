@@ -39,7 +39,7 @@ const plano = (s) => String(s ?? '').toLowerCase().normalize('NFD').replace(/[̀
 
 /** Las etiquetas que se pueden sacar sin perder nada: secciones, deportes y
  *  rótulos de gancho. Sin tildes y en minúscula. Un lugar NO va acá. */
-export const ETIQUETAS_CONOCIDAS = new Set([
+const ETIQUETAS_CONOCIDAS = new Set([
   // Las secciones del sitio y las viejas.
   'balcarce', 'politica', 'policiales', 'futbol', 'deportes', 'automovilismo', 'agro', 'campo',
   'economia', 'cultura', 'cultura y agenda', 'agenda', 'tecnologia', 'argentina', 'pais',
@@ -80,7 +80,7 @@ export function sinEtiqueta(titulo) {
 }
 
 /** Las palabras con las que un título no puede terminar: dejan la frase colgada. */
-export const CONECTORES_FINALES = new Set([
+const CONECTORES_FINALES = new Set([
   'y', 'e', 'o', 'u', 'ni', 'de', 'del', 'a', 'al', 'en', 'con', 'por', 'para', 'que', 'la',
   'el', 'los', 'las', 'un', 'una', 'su', 'sus', 'tras', 'sin', 'entre', 'como', 'desde', 'hasta',
   'sobre', 'pero', 'porque', 'cuando', 'donde', 'se', 'lo', 'le', 'les', 'mientras',
