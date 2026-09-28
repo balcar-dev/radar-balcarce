@@ -93,6 +93,14 @@ export const REESCRITURA = {
   antecedentesMaximo: 3,
 };
 
+/** La nota propia del dólar sale sólo si el blue o el oficial se movieron al
+ *  menos este porcentaje contra el día hábil anterior guardado (28/09, Hernán:
+ *  "¿la vamos a hacer siempre?"; el dato de todos los días ya está en la
+ *  portada y en /dolar). */
+export const NOTA_DEL_DOLAR = {
+  movimientoMinimo: 2,
+};
+
 /** Cuánto se queda una nota a la vista. */
 export const PORTADA = {
   horas: 72,
@@ -228,6 +236,7 @@ export const NUMEROS_DEL_CRITERIO = {
   COPIA_MAXIMA,
   REESCRITURA,
   PORTADA,
+  NOTA_DEL_DOLAR,
   MEDIOS_DE_AFUERA,
   MEDIOS_POR_DEFECTO,
   MEDIOS_CON_FIGURA,

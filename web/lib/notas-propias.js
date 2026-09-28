@@ -4,7 +4,9 @@
 // Pedido de Hernán y Andrés (25/09): contenido propio y original que sirva
 // para posicionar la web, SIN inventar nada. Hay dos:
 //
-//   · La nota del dólar, una por día hábil, a partir de las 11:00 de
+//   · La nota del dólar, sólo el día hábil en que el blue o el oficial se
+//     movieron al menos NOTA_DEL_DOLAR.movimientoMinimo % contra el día
+//     anterior guardado (28/09, Hernán), a partir de las 11:00 de
 //     Balcarce, con los números que da DolarApi.com en ese momento. El texto
 //     es una plantilla que se llena con los números: sin IA, sin adjetivos y
 //     sin pronósticos. Compara con el día hábil anterior y con una semana
@@ -28,6 +30,7 @@
 import { interpretarDolarApi, pesos, porcentaje, brecha } from './dolar.js';
 import { rutaDeNota } from './ruta.js';
 import { SECCIONES_QUE_ESPERAN_PERSONA } from '../../redes/elegir.mjs';
+import { NOTA_DEL_DOLAR } from '../../ingesta/criterio.mjs';
 
 const ZONA = 'America/Argentina/Buenos_Aires';
 const DIA_MS = 24 * 3600 * 1000;
@@ -254,11 +257,29 @@ export function notaDelDolar(entrada, historia = { dias: [] }) {
   };
 }
 
-/** Las notas del dólar de los últimos `dias` días que están en la historia. */
+/**
+ * ¿Se movió el dólar lo suficiente para hacer nota? El blue o el oficial, al
+ * menos `minimo` % contra el día hábil anterior guardado. Sin día anterior
+ * no se sabe si se movió, y no se hace (28/09, Hernán: el dato de todos los
+ * días ya está en la portada y en /dolar).
+ */
+export function seMovioElDolar(entrada, historia = { dias: [] }, minimo = NOTA_DEL_DOLAR.movimientoMinimo) {
+  const { anterior } = comparaciones(entrada, historia);
+  if (!anterior) return false;
+  return ['blue', 'oficial'].some((casa) => {
+    const antes = anterior.cotizaciones?.[casa]?.venta;
+    const ahora = entrada.cotizaciones?.[casa]?.venta;
+    return antes > 0 && ahora > 0 && (Math.abs(ahora - antes) / antes) * 100 >= minimo;
+  });
+}
+
+/** Las notas del dólar de los últimos `dias` días que están en la historia,
+ *  sólo de los días en que se movió (seMovioElDolar). */
 export function notasDelDolar(historia = { dias: [] }, { ahora = new Date(), dias = 4 } = {}) {
   const desde = sumarDias(diaAR(ahora), -dias);
   return (historia?.dias ?? [])
     .filter((d) => d.dia >= desde)
+    .filter((d) => seMovioElDolar(d, historia))
     .map((d) => notaDelDolar(d, historia))
     .filter(Boolean);
 }

@@ -682,8 +682,10 @@ entran a un podcast**: serían redundantes. El detalle técnico está en
 `web/README.md` ("Las notas propias", `web/lib/notas-propias.js`).
 
 **El dólar.** La cotización del momento se muestra en `/dolar`, que se
-actualiza sola. Además, **una nota propia por día hábil**, desde las 11 de
-Balcarce, con los números de ese momento (oficial, blue, MEP, contado con
+actualiza sola. Además, **una nota propia, sólo el día hábil en que el dólar
+se mueve** (el blue o el oficial, 2% o más contra el día hábil anterior que
+guardó el sitio; 28/09, Hernán: el dato de todos los días ya está en la
+portada y en `/dolar`), desde las 11 de Balcarce, con los números de ese momento (oficial, blue, MEP, contado con
 liqui, tarjeta, mayorista y la brecha), comparados sólo con lo que el sitio
 guardó de días anteriores. Si el oficial no se actualizó ese día (feriado, el
 mercado no abrió), no se hace. Sección Economía, sin ganarle a lo de Balcarce.
@@ -891,6 +893,7 @@ instrucción de la IA (70, 90, 70 a 180…) también se controlan.
 | Portada: horas que una nota está en las listas | 72 | `PORTADA.horas` |
 | Portada: horas que una nota compite por el lugar grande | 6 | `PORTADA.horasNotaGrande` |
 | Días que dura la página de una nota | 180 | `PORTADA.diasDeArchivo` |
+| Nota del dólar: cuánto tiene que moverse el blue o el oficial contra el día anterior para salir (%) | 2 | `NOTA_DEL_DOLAR.movimientoMinimo` |
 | Medios que tienen que contar lo de afuera: Fútbol | 4 | `MEDIOS_DE_AFUERA.Fútbol` |
 | Medios que tienen que contar lo de afuera: Deportes | 4 | `MEDIOS_DE_AFUERA.Deportes` |
 | Medios que tienen que contar lo de afuera: Economía | 2 | `MEDIOS_DE_AFUERA.Economía` |

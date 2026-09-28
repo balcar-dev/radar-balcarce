@@ -12,7 +12,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import path from 'node:path';
 import {
-  cuandoArmarDolar, entradaDelDia, sumarAlHistorial, comoHistoriaJson, notaDelDolar, notasDelDolar, comparaciones,
+  cuandoArmarDolar, entradaDelDia, sumarAlHistorial, comoHistoriaJson, notaDelDolar, notasDelDolar, comparaciones, seMovioElDolar,
   podcastsDelLibro, notaDeRepaso, notasDeRepasos, tituloDeRepaso, temaDeNota, enumerar, primerasOraciones, TURNOS,
   FIRMA_REPASO, RELEVANCIA_DOLAR, RELEVANCIA_REPASO, DIAS_DE_HISTORIA, esNotaPropia,
 } from '../web/lib/notas-propias.js';
@@ -112,7 +112,24 @@ test('la nota del dólar: una por día, con un identificador estable y sin guion
   const h = sumarAlHistorial(sumarAlHistorial({ dias: [] }, HOY), { ...HOY, consultado: '2026-09-25T17:00:00.000Z' });
   assert.equal(h.dias.length, 1);
   assert.equal(h.dias[0].consultado, HOY.consultado);
-  assert.equal(notasDelDolar(h, { ahora: VIERNES_1107 }).length, 1);
+  // Sin un día anterior no se sabe si se movió: no hay nota (28/09).
+  assert.equal(notasDelDolar(h, { ahora: VIERNES_1107 }).length, 0);
+  // Con el jueves 2% más barato, sí.
+  const conJueves = sumarAlHistorial(h, dia('2026-09-24', 1540, 1520));
+  assert.equal(notasDelDolar(conJueves, { ahora: VIERNES_1107 }).length, 1);
+});
+
+test('la nota del dólar sale sólo si el blue o el oficial se movieron 2% o más contra el día anterior (28/09, Hernán)', () => {
+  // HISTORIA: el jueves 24 el blue estaba a $1.550 y el oficial a $1.545; el
+  // viernes, $1.560 y $1.540: se movieron 0,6% y 0,3%. No hay nota.
+  assert.equal(seMovioElDolar(HOY, HISTORIA), false);
+  // El blue de $1.520 a $1.560 es 2,6%: sí.
+  assert.equal(seMovioElDolar(HOY, { dias: [dia('2026-09-24', 1545, 1520)] }), true);
+  // El oficial de $1.580 a $1.540 (bajó 2,5%): también.
+  assert.equal(seMovioElDolar(HOY, { dias: [dia('2026-09-24', 1580, 1560)] }), true);
+  // Sin día anterior no se sabe: no.
+  assert.equal(seMovioElDolar(HOY, { dias: [] }), false);
+  assert.equal(notasDelDolar({ dias: [dia('2026-09-24', 1545, 1550), HOY] }, { ahora: VIERNES_1107 }).length, 0);
 });
 
 test('la nota del dólar es de Economía, no es local y no le gana a una nota de Balcarce en la tapa', () => {
