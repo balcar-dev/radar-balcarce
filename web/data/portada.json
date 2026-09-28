@@ -1,6 +1,76 @@
 {
-  "generado": "2026-09-28T03:31:57.379Z",
+  "generado": "2026-09-28T03:48:19.299Z",
   "notas": [
+    {
+      "id": "1e5cybr",
+      "titulo": "Extienden hasta 2049 la concesión de Aeropuertos Argentina",
+      "copete": "El Gobierno nacional y la empresa acordaron prorrogar el servicio en 35 terminales del país. La compañía se comprometió a realizar nuevas inversiones en infraestructura.",
+      "cuerpo": "A cambio, la compañía operada por el grupo de Eduardo Eurnekian deberá invertir 600 millones de dólares adicionales de su propio bolsillo antes de finalizar 2031 para mejorar la infraestructura, con fondos independientes del canon que se paga al Estado.\n\nEsta renegociación tiene antecedentes en gestiones anteriores, ya que las discusiones habían comenzado en 2020 durante el gobierno de Alberto Fernández en el marco de la pandemia. En aquella oportunidad, las partes habían acordado una prórroga hasta 2038 a cambio de un compromiso de inversiones que, según los datos aportados por los medios, habría finalizado de ejecutarse este año en distintos aeropuertos.\n\nPara los pasajeros y vecinos de la región que utilizan las terminales del área metropolitana, como Aeroparque y Ezeiza, el acuerdo apunta a garantizar la continuidad operativa y nuevas obras de infraestructura. El presidente Javier Milei se excusó de intervenir en las tratativas por razones de decoro debido a un vínculo profesional previo con el holding empresarial.",
+      "guion": "Extienden hasta 2049 la concesión de Aeropuertos Argentina",
+      "seccion": "Economía",
+      "medios": [
+        "Infobae",
+        "Clarín",
+        "Noticias Argentinas (NA)"
+      ],
+      "enlace": "https://www.clarin.com/economia/extienden-2049-concesion-aeropuertos-argentina_0_OqcAPUBst6.html",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-28T01:16:41.000Z",
+      "sinFecha": false,
+      "visto": "2026-09-28T03:47:03.826Z",
+      "relevancia": 69,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "El Gobierno nacional y Aeropuertos Argentina extendieron la concesión hasta 2049.",
+        "La empresa se comprometió a invertir 600 millones de dólares propios antes de 2031.",
+        "El entendimiento incluye el cierre de reclamos y litigios previos entre las partes.",
+        "El presidente Javier Milei se excusó de intervenir en las negociaciones por razones de decoro."
+      ],
+      "noConfirmado": [
+        "No se detalló oficialmente el listado completo de todas las obras específicas que se ejecutarán con los fondos de inversión adicionales, aunque se mencionó a Ezeiza como posible destino de una nueva terminal."
+      ],
+      "textoRedes": "El Gobierno nacional y Aeropuertos Argentina acordaron extender hasta 2049 la concesión de 35 terminales aéreas del país. La compañía se comprometió a realizar nuevas inversiones millonarias en infraestructura.",
+      "etiquetas": [
+        "Aeropuertos Argentina",
+        "Gobierno nacional",
+        "Concesión",
+        "Inversiones",
+        "Infraestructura"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Clarín",
+          "enlace": "https://www.clarin.com/economia/extienden-2049-concesion-aeropuertos-argentina_0_OqcAPUBst6.html",
+          "fecha": "2026-09-28T01:16:41.000Z",
+          "oficial": false,
+          "aporte": "Detalló el acuerdo de extensión hasta 2049, la obligación de invertir 600 millones de dólares y los antecedentes de negociación desde 2020."
+        },
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/economia/2026/09/28/el-gobierno-y-aeropuertos-argentina-acordaron-extender-la-concesion-de-servicios-hasta-2049-se-esperan-inversiones-por-usd-600-millones/",
+          "fecha": "2026-09-28T03:25:39.000Z",
+          "oficial": false,
+          "aporte": "Aportó la confirmación sobre el entendimiento entre el Gobierno y la principal operadora aeroportuaria."
+        },
+        {
+          "medio": "Noticias Argentinas (NA)",
+          "enlace": "https://noticiasargentinas.com/economia/extienden-la-concesion-de-aeropuertos-argentina-con-nuevas-inversiones-por-us--600-millones_a6ab9cf50c2b8de8667fff81c",
+          "fecha": "2026-09-28T05:10:00.000Z",
+          "oficial": false,
+          "aporte": "Informó sobre el alcance de la concesión de 35 aeropuertos y la posibilidad de prórroga por siete años adicionales."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron tres medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "extienden-hasta-2049-la-concesion-de-aeropuertos-argentina"
+    },
     {
       "id": "187bqn1",
       "titulo": "El Movimiento 245 brinda contención y autoayuda",
@@ -140,7 +210,11 @@
         "porque": "Lo contaron dos medios independientes.",
         "sugeridoPorIA": "ALTA"
       },
-      "slug": "antonino-sganga-gana-en-el-tc-pista-pick-up-en-el-fangio"
+      "slug": "antonino-sganga-gana-en-el-tc-pista-pick-up-en-el-fangio",
+      "foto": {
+        "archivo": "fotos-notas/gun9be.jpg",
+        "credito": "Foto: Campeones"
+      }
     },
     {
       "id": "repaso20260927noche",
@@ -382,8 +456,6 @@
         "TN (Todo Noticias)",
         "El Destape",
         "Perfil",
-        "Página/12",
-        "A24",
         "Ámbito",
         "TyC Sports",
         "C5N",
@@ -398,11 +470,13 @@
         "ANDigital",
         "El Marplatense",
         "Mi8 (Canal 8 Mar del Plata)",
-        "El Eco de Tandil",
-        "NDEN – Noticias de Necochea",
         "Ayacucho al Día",
+        "Página/12",
+        "A24",
         "Infocielo",
         "La Verdad",
+        "El Eco de Tandil",
+        "NDEN – Noticias de Necochea",
         "Doble Amarilla",
         "Bolavip Argentina",
         "Vavel Argentina",
@@ -473,7 +547,11 @@
         "porque": "Lo contaron cuatro medios independientes.",
         "sugeridoPorIA": "ALTA"
       },
-      "slug": "boca-elimina-a-racing-en-la-copa-argentina-y-lanza-cargadas-en-redes"
+      "slug": "boca-elimina-a-racing-en-la-copa-argentina-y-lanza-cargadas-en-redes",
+      "foto": {
+        "archivo": "fotos-notas/nx6lkn.webp",
+        "credito": "Foto: Bolavip Argentina"
+      }
     },
     {
       "id": "1f46y05",
@@ -668,7 +746,11 @@
         "porque": "Lo contaron tres medios independientes.",
         "sugeridoPorIA": "ALTA"
       },
-      "slug": "diego-santilli-visita-el-autodromo-juan-manuel-fangio-en-el-regreso"
+      "slug": "diego-santilli-visita-el-autodromo-juan-manuel-fangio-en-el-regreso",
+      "foto": {
+        "archivo": "fotos-notas/1is0p0y.jpg",
+        "credito": "Foto: QZ Noticias (Mar del Plata)"
+      }
     },
     {
       "id": "15jd9hb",
@@ -685,7 +767,6 @@
         "Diario Popular",
         "Noticias Argentinas (NA)",
         "Campeones",
-        "News Balcarce (FM 91.7)",
         "Agencia DIB",
         "Radio Gabal (FM 104.1)",
         "Infocielo",
@@ -769,7 +850,89 @@
         "porque": "Lo contaron dos medios independientes.",
         "sugeridoPorIA": "ALTA"
       },
-      "slug": "hernan-palazzo-gana-en-el-regreso-del-tc-pick-up"
+      "slug": "hernan-palazzo-gana-en-el-regreso-del-tc-pick-up",
+      "foto": {
+        "archivo": "fotos-notas/15jd9hb.jpg",
+        "credito": "Foto: 0223 (Mar del Plata)"
+      }
+    },
+    {
+      "id": "1w77cph",
+      "titulo": "Scaloni y Paredes se reúnen para definir el futuro del mediocampista",
+      "copete": "El director técnico de la Selección Argentina y el volante se juntan en el predio de Ezeiza para analizar su continuidad tras una dura sanción disciplinaria.",
+      "cuerpo": "El encuentro se centra en la situación disciplinaria del volante central, quien actualmente cumple una suspensión de diez partidos que lo margina de las convocatorias oficiales.\n\nEn las últimas horas surgió la posibilidad de que el tribunal correspondiente reduzca la pena a la mitad, lo que le permitiría cumplir la sanción entre la fecha FIFA actual y los partidos de noviembre para retornar de inmediato a las citaciones.\n\nLa cumbre busca evaluar el aspecto personal y deportivo del futbolista para reordenar la estructura del mediocampo de cara a los próximos compromisos internacionales de la Albiceleste.",
+      "guion": "Scaloni y Paredes se reúnen para definir el futuro del mediocampista",
+      "seccion": "Fútbol",
+      "medios": [
+        "Minuto Uno",
+        "Crónica"
+      ],
+      "enlace": "https://www.minutouno.com/deportes/atencion-argentina-lionel-scaloni-y-leandro-paredes-se-reunen-definir-su-futuro-n6327204",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-27T18:34:00.000Z",
+      "sinFecha": false,
+      "visto": "2026-09-28T03:47:03.826Z",
+      "relevancia": 59,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Scaloni y Paredes se reúnen en Ezeiza para analizar el futuro del mediocampista.",
+        "El volante central cumple una suspensión de diez partidos en la Selección Argentina.",
+        "Existe la posibilidad de que el tribunal reduzca la pena a cinco encuentros.",
+        "El cumplimiento de la sanción recortada abarcaría las fechas FIFA actual y de noviembre."
+      ],
+      "seSabe": [
+        "Lionel Scaloni y Leandro Paredes acordaron reunirse en el predio de la AFA en Ezeiza.",
+        "El mediocampista arrastra una suspensión de diez partidos que lo aleja de las convocatorias.",
+        "Analizan la alternativa de que el tribunal reduzca la sanción a cinco partidos.",
+        "La Asociación del Fútbol Argentino negocia la continuidad de Scaloni, cuyo contrato finaliza en diciembre."
+      ],
+      "noConfirmado": [
+        "Todavía no se emitió la resolución formal de las autoridades sobre la reducción de la pena.",
+        "No trascendió el resultado definitivo de la reunión entre el entrenador y el jugador."
+      ],
+      "textoRedes": "Lionel Scaloni y Leandro Paredes se reúnen en Ezeiza para analizar el futuro del mediocampista en la Selección Argentina y evaluar su situación disciplinaria ante una posible reducción de su sanción.",
+      "etiquetas": [
+        "Seleccion Argentina",
+        "Lionel Scaloni",
+        "Leandro Paredes",
+        "AFA",
+        "Ezeiza",
+        "Futbol"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Minuto Uno",
+          "enlace": "https://www.minutouno.com/deportes/atencion-argentina-lionel-scaloni-y-leandro-paredes-se-reunen-definir-su-futuro-n6327204",
+          "fecha": "2026-09-27T18:34:00.000Z",
+          "oficial": false,
+          "aporte": "Detalló el encuentro entre Scaloni y Paredes en Ezeiza y la posible reducción de la sanción disciplinaria."
+        },
+        {
+          "medio": "Crónica",
+          "enlace": "https://www.cronica.com.ar/depo/seleccionargentina/sigue-paredes-se-reuniria-con-scaloni-para-definir-su-futuro-en-la-seleccion/",
+          "fecha": "2026-09-27T19:34:00.000Z",
+          "oficial": false,
+          "aporte": "Confirmó la cumbre entre el director técnico y el mediocampista en el predio de la AFA."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "x0r3gd",
+          "titulo": "Avanzan las negociaciones para la continuidad de Lionel Scaloni en la selección",
+          "fecha": "2026-09-26T08:16:07.000Z",
+          "ruta": "/nota/avanzan-las-negociaciones-para-la-continuidad-de-lionel-scaloni-en-la-x0r3gd"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "scaloni-y-paredes-se-reunen-para-definir-el-futuro-del-mediocampista"
     },
     {
       "id": "194nq4e",
@@ -1053,6 +1216,148 @@
       "slug": "el-concejo-aprueba-proyectos-sobre-infecciones-y-celiaquia-en-balcarce"
     },
     {
+      "id": "19foxy4",
+      "titulo": "Javier Milei viaja a Paris para participar de la Argentina Week",
+      "copete": "El presidente Javier Milei viajara a Paris junto a una comitiva de funcionarios, gobernadores y empresarios para participar de la Argentina Week en busca de inversiones.",
+      "cuerpo": "El presidente Javier Milei encabeza esta semana una comitiva rumbo a Paris para participar de la Argentina Week, un evento destinado a exponer oportunidades de inversion ante ejecutivos globales. La agenda oficial se desarrollara entre el treinta de septiembre y el dos de octubre en la capital francesa, con la presencia de ministros, secretarios, mandatarios provinciales y referentes del sector empresarial.\n\nEl programa prevé disertaciones sobre la situacion macroeconomica nacional, energia, mineria, tecnologia y agroindustria, ademas de paneles sectoriales y reuniones con referentes internacionales. Entre las actividades previstas figuran encuentros con directivos de empresas y la posibilidad de una reunion bilateral con el mandatario frances, Emmanuel Macron, durante la estadia oficial.\n\nLa delegacion oficial cuenta con la participacion de distintos gobernadores provinciales y referentes de compañias de diversos rubros productivos. Como antecedente, el propio mandatario habia participado previamente de un evento similar en Nueva York durante el mes de marzo, segun la informacion oficial difundida.",
+      "guion": "Javier Milei viaja a Paris para participar de la Argentina Week",
+      "seccion": "Política",
+      "medios": [
+        "Ámbito",
+        "El Destape",
+        "Perfil",
+        "A24",
+        "Minuto Uno",
+        "C5N",
+        "Canal 26",
+        "Noticias Argentinas (NA)",
+        "0221",
+        "La Nueva",
+        "La Verdad",
+        "Infobae"
+      ],
+      "enlace": "https://noticiasargentinas.com/politica/argentina-week--milei-desembarca-en-paris-junto-a-gobernadores-y-empresarios-en-busca-de-inversiones_a6ab91477c2b8de8667e3c8a7",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-27T18:00:00.000Z",
+      "sinFecha": false,
+      "visto": "2026-09-28T03:01:51.643Z",
+      "relevancia": 73,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "El presidente viajara a Paris junto a funcionarios, gobernadores y empresarios.",
+        "El evento Argentina Week se desarrollara del treinta de septiembre al dos de octubre.",
+        "La agenda incluye exposiciones sobre energia, mineria, tecnologia y agroindustria.",
+        "Se prevé un encuentro bilateral con el mandatario frances Emmanuel Macron."
+      ],
+      "seSabe": [
+        "El presidente Javier Milei viajara a Paris junto a funcionarios, gobernadores y empresarios.",
+        "El evento Argentina Week se realizara entre el treinta de septiembre y el dos de octubre.",
+        "La apertura oficial se llevara a cabo en la sede de la OCDE.",
+        "Participaran gobernadores de distintas provincias y directivos de compañias."
+      ],
+      "noConfirmado": [
+        "Todavia resta la confirmacion oficial definitiva sobre los detalles de la agenda de reuniones bilaterales."
+      ],
+      "textoRedes": "El presidente Javier Milei viajara a Paris junto a funcionarios, gobernadores y empresarios para participar de la Argentina Week en busca de inversiones en sectores estrategicos.",
+      "etiquetas": [
+        "Javier Milei",
+        "Argentina Week",
+        "Paris",
+        "Inversiones",
+        "Gobernadores"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Noticias Argentinas (NA)",
+          "enlace": "https://noticiasargentinas.com/politica/argentina-week--milei-desembarca-en-paris-junto-a-gobernadores-y-empresarios-en-busca-de-inversiones_a6ab91477c2b8de8667e3c8a7",
+          "fecha": "2026-09-27T18:00:00.000Z",
+          "oficial": false,
+          "aporte": "Detallo la agenda completa, los funcionarios presentes, los gobernadores y los empresarios."
+        },
+        {
+          "medio": "Perfil",
+          "enlace": "https://www.perfil.com/noticias/politica/javier-milei-viaja-a-paris-se-reune-con-macron-y-participara-de-la-argentina-week.phtml",
+          "fecha": "2026-09-27T23:12:39.000Z",
+          "oficial": false,
+          "aporte": "Confirmo las fechas de partida y regreso del mandatario."
+        },
+        {
+          "medio": "La Nueva",
+          "enlace": "https://www.lanueva.com/nota/2026-9-27-16-22-0-milei-viaja-a-paris-con-a-gobernadores-y-empresarios-en-busca-de-inversiones-en-el-argentina-week",
+          "fecha": "2026-09-27T19:28:03.000Z",
+          "oficial": false,
+          "aporte": "Informo sobre el viaje de la comitiva a Paris para exponer inversiones."
+        },
+        {
+          "medio": "0221",
+          "enlace": "https://www.0221.com.ar/nacional/javier-milei-prepara-su-agenda-paris-el-foco-puesto-inversiones-y-una-reunion-emmanuel-macron-n134903",
+          "fecha": "2026-09-27T20:01:00.000Z",
+          "oficial": false,
+          "aporte": "Menciono los encuentros con empresarios y organismos internacionales."
+        },
+        {
+          "medio": "Canal 26",
+          "enlace": "https://www.canal26.com/politica/2026/09/27/milei-viajara-a-paris-junto-a-gobernadores-y-empresarios-para-la-argentina-week-la-agenda-del-gobierno-y-la-posible-cumbre-con-macron/",
+          "fecha": "2026-09-27T21:07:56.000Z",
+          "oficial": false,
+          "aporte": "Detallo el viaje tras el paso por Nueva York."
+        },
+        {
+          "medio": "A24",
+          "enlace": "https://www.a24.com/politica/milei-viajara-paris-12-gobernadores-participar-la-argentina-week-y-reunirse-macron-n1600796",
+          "fecha": "2026-09-27T21:36:00.000Z",
+          "oficial": false,
+          "aporte": "Preciso que la estadia sera del treinta de septiembre al dos de octubre."
+        },
+        {
+          "medio": "La Verdad",
+          "enlace": "https://laverdadonline.com/argentina-week-milei-desembarca-en-paris-junto-a-gobernadores-y-empresarios-en-busca-de-inversiones/",
+          "fecha": "2026-09-27T21:37:52.000Z",
+          "oficial": false,
+          "aporte": "Confirmo la realizacion del evento Argentina Week en Paris."
+        },
+        {
+          "medio": "Noticias Argentinas (NA)",
+          "enlace": "https://noticiasargentinas.com/politica/javier-milei--entre-buenos-aires-y-paris_a6ab97f65c2b8de8667f51a61",
+          "fecha": "2026-09-27T21:50:00.000Z",
+          "oficial": false,
+          "aporte": "Menciono la combinacion de reuniones de Gabinete previa al viaje."
+        },
+        {
+          "medio": "C5N",
+          "enlace": "https://www.c5n.com/politica/la-agenda-javier-milei-francia-discurso-el-argentina-week-y-reunion-emmanuel-macron-n250076",
+          "fecha": "2026-09-27T23:13:48.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/america/agencias/2026/09/28/milei-se-reunira-con-macron-durante-su-visita-a-paris-por-la-argentina-week/",
+          "fecha": "2026-09-28T00:30:31.000Z",
+          "oficial": false,
+          "aporte": null
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "13ytphz",
+          "titulo": "Milei viaja a París con gobernadores y empresarios para la Argentina Week",
+          "fecha": "2026-09-25T20:02:00.000Z",
+          "ruta": "/nota/javier-milei-mantiene-su-agenda-internacional-y-ultima-detalles-de-su-13ytphz"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron 9 medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "javier-milei-viaja-a-paris-para-participar-de-la-argentina-week"
+    },
+    {
       "id": "jakg2e",
       "titulo": "La selección argentina juega amistosos en el inicio de un nuevo ciclo",
       "copete": "Tras el subcampeonato en el Mundial, el seleccionado nacional afrontará partidos de preparación frente a Bolivia, Burkina Faso y Benín. El encuentro ante Benín marcará la despedida de Lionel Messi.",
@@ -1125,6 +1430,141 @@
         "sugeridoPorIA": "ALTA"
       },
       "slug": "la-seleccion-argentina-juega-amistosos-en-el-inicio-de-un-nuevo-ciclo"
+    },
+    {
+      "id": "1k29v7p",
+      "titulo": "El Gobierno decreta feriado nacional el lunes 9 de noviembre",
+      "copete": "El Gobierno nacional confirmó que el lunes 9 de noviembre será feriado en todo el país por la visita del papa León XIV. La medida afectará a todos los habitantes y regirán las normas de descanso dominical.",
+      "cuerpo": "El papa León XIV visitará la Argentina entre el 8 y el 11 de noviembre, con actividades previstas en la Ciudad de Buenos Aires, Luján y la provincia de Córdoba. Según detalló la funcionaria, las jornadas del martes y miércoles tendrán feriados limitados a las jurisdicciones específicas de Buenos Aires, la Ciudad y Córdoba, mientras que se aguarda la publicación oficial en el Boletín Oficial.\n\nComo antecedente, el 23 de septiembre pasado se había informado la declaración inicial del feriado nacional por parte del Gobierno. Al tratarse de un feriado nacional amparado por la Ley de Contrato de Trabajo, rigen las normas de descanso dominical, por lo que los empleados que presten servicios deberán cobrar el doble de una jornada habitual.\n\nPara los vecinos de Balcarce, la medida implica un fin de semana largo con alcance nacional en todo el país, replicando las condiciones laborales y de descanso establecidas por la legislación vigente para estos casos.",
+      "guion": "El Gobierno decreta feriado nacional el lunes 9 de noviembre",
+      "seccion": "Argentina",
+      "medios": [
+        "La Nación",
+        "Perfil",
+        "A24",
+        "C5N",
+        "ANDigital",
+        "Infobrisas (Radio Brisas)"
+      ],
+      "enlace": "https://www.lanacion.com.ar/feriados/2026/fin-de-semana-largo-a-quien-le-corresponde-el-feriado-del-9-de-noviembre-por-la-visita-del-papa-leon-nid24092026/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-27T17:01:40.000Z",
+      "sinFecha": false,
+      "visto": "2026-09-24T10:27:08.767Z",
+      "relevancia": 73,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "El papa León XIV visitará el país del 8 al 11 de noviembre.",
+        "El Gobierno confirmó que el lunes 9 de noviembre será feriado nacional.",
+        "Regirán las normas de descanso dominical para los trabajadores.",
+        "Se aguarda la oficialización de la medida en el Boletín Oficial."
+      ],
+      "seSabe": [
+        "El papa León XIV llegará a la Argentina el 8 de noviembre y permanecerá hasta el 11.",
+        "La ministra de Seguridad Nacional, Alejandra Monteoliva, confirmó el feriado nacional para el lunes 9 de noviembre.",
+        "Habrá feriados y asuetos limitados en las jurisdicciones de Buenos Aires, la Ciudad y Córdoba para los días martes y miércoles.",
+        "El ministro de Seguridad Juan Pablo Quinteros confirmó feriados en Córdoba para los días 9 y 10 de noviembre."
+      ],
+      "noConfirmado": [
+        "Falta la publicación oficial del decreto en el Boletín Oficial."
+      ],
+      "etiquetas": [
+        "feriado nacional",
+        "papa Leon XIV",
+        "visita papal",
+        "Balcarce",
+        "calendario 2026"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/feriados/2026/fin-de-semana-largo-a-quien-le-corresponde-el-feriado-del-9-de-noviembre-por-la-visita-del-papa-leon-nid24092026/",
+          "fecha": "2026-09-27T17:01:40.000Z",
+          "oficial": false,
+          "aporte": "Confirmó el feriado nacional del 9 de noviembre anunciado por la ministra Alejandra Monteoliva y los detalles laborales."
+        },
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/sociedad/hay-feriado-el-lunes-9-de-noviembre-por-la-visita-del-papa-leon-xiv-nid22092026/",
+          "fecha": "2026-09-27T17:01:45.000Z",
+          "oficial": false,
+          "aporte": "Reprodujo información sobre la llegada del papa León XIV y la modificación del calendario."
+        },
+        {
+          "medio": "Perfil",
+          "enlace": "https://www.perfil.com/noticias/cordoba/la-visita-del-papa-leon-xiv-cordoba-tendra-dos-feriados.phtml",
+          "fecha": "2026-09-24T09:56:00.000Z",
+          "oficial": false,
+          "aporte": "Aportó que en Córdoba los feriados serán los días lunes 9 y martes 10 de noviembre según Juan Pablo Quinteros."
+        },
+        {
+          "medio": "A24",
+          "enlace": "https://www.a24.com/politica/feriados-la-visita-del-papa-leon-xiv-que-dias-no-se-trabaja-y-quienes-alcanza-cada-uno-n1599883",
+          "fecha": "2026-09-24T14:29:00.000Z",
+          "oficial": false,
+          "aporte": "Detalló las fechas de la visita papal del 8 al 11 de noviembre y los asuetos en Córdoba y Buenos Aires."
+        },
+        {
+          "medio": "C5N",
+          "enlace": "https://www.c5n.com/sociedad/cual-es-el-ultimo-feriado-que-tendra-septiembre-2026-n249723",
+          "fecha": "2026-09-27T19:30:00.000Z",
+          "oficial": false,
+          "aporte": "Informó sobre feriados locales y la confirmación del asueto del 9 de noviembre."
+        },
+        {
+          "medio": "ANDigital",
+          "enlace": "https://andigital.com.ar/nota/143758/habra-feriado-nacional-por-la-visita-del-papa-leon-xiv-que-fecha-se-eligio/",
+          "fecha": "2026-09-22T03:00:00.000Z",
+          "oficial": false,
+          "aporte": "No aportó información utilizable al no registrar resumen."
+        },
+        {
+          "medio": "Infobrisas (Radio Brisas)",
+          "enlace": "https://www.infobrisas.com/noticias/2026/09/22/108838-el-9-de-noviembre-sera-feriado-nacional-por-la-visita-del-papa-leon-xiv",
+          "fecha": "2026-09-22T22:20:52.000Z",
+          "oficial": false,
+          "aporte": "No aportó información utilizable al no registrar resumen."
+        },
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/feriados/2026/feriados-del-9-10-y-11-de-noviembre-por-la-visita-de-papa-leon-xiv-a-la-argentina-a-quien-le-nid23092026/",
+          "fecha": "2026-09-27T17:01:43.000Z",
+          "oficial": false,
+          "aporte": "Indicó que el cronograma fue confirmado por el Vaticano y la misa será en Luján."
+        },
+        {
+          "medio": "C5N",
+          "enlace": "https://www.c5n.com/sociedad/por-que-sera-feriado-este-martes-29-septiembre-2026-n249691",
+          "fecha": "2026-09-27T11:39:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "C5N",
+          "enlace": "https://www.c5n.com/sociedad/confirman-que-sera-feriado-el-miercoles-30-septiembre-2026-que-se-debe-n249757",
+          "fecha": "2026-09-26T19:50:00.000Z",
+          "oficial": false,
+          "aporte": null
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "myfrfq",
+          "titulo": "El Gobierno declara feriado nacional por la visita del Papa",
+          "fecha": "2026-09-23T12:01:51.000Z",
+          "ruta": "/nota/el-9-de-noviembre-sera-feriado-nacional-por-la-visita-del-papa-leon-myfrfq"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron seis medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "fin-de-semana-largo-a-quien-le-corresponde-el-feriado-del-9-de"
     },
     {
       "id": "1ofousc",
@@ -1224,7 +1664,7 @@
       "fecha": "2026-09-27T15:41:34.000Z",
       "sinFecha": false,
       "visto": "2026-09-27T15:45:00.980Z",
-      "relevancia": 100,
+      "relevancia": 95,
       "local": true,
       "publicadaPor": "ia",
       "publicadaCuando": "2026-09-27T15:49:10.748Z",
@@ -1290,7 +1730,11 @@
         "porque": "Lo contaron dos medios independientes.",
         "sugeridoPorIA": "ALTA"
       },
-      "slug": "mariano-werner-y-otto-fritzler-ganan-las-series-del-tc-pick-up-en"
+      "slug": "mariano-werner-y-otto-fritzler-ganan-las-series-del-tc-pick-up-en",
+      "foto": {
+        "archivo": "fotos-notas/1spxjt5.jpg",
+        "credito": "Foto: Campeones"
+      }
     },
     {
       "id": "c2myhf",
@@ -1307,7 +1751,7 @@
       "fecha": "2026-09-27T15:34:39.000Z",
       "sinFecha": false,
       "visto": "2026-09-27T15:40:44.103Z",
-      "relevancia": 82,
+      "relevancia": 75,
       "local": true,
       "publicadaPor": "ia",
       "publicadaCuando": "2026-09-27T15:59:29.449Z",
@@ -1664,8 +2108,8 @@
       "medios": [
         "QZ Noticias (Mar del Plata)",
         "TN (Todo Noticias)",
-        "0221",
-        "El Marplatense"
+        "El Marplatense",
+        "0221"
       ],
       "enlace": "https://tn.com.ar/deportes/formula-1/2026/09/27/alpine-volvio-a-emitir-un-comunicado-sobre-sobre-los-acosos-en-redes-tras-el-choque-de-colapinto-en-azerbaiyan/",
       "teniaImagenLaFuente": true,
@@ -1769,10 +2213,9 @@
         "TN (Todo Noticias)",
         "El Destape",
         "Perfil",
-        "Página/12",
-        "A24",
         "Ámbito",
         "TyC Sports",
+        "Minuto Uno",
         "C5N",
         "Crónica",
         "Radio Mitre",
@@ -1780,16 +2223,16 @@
         "Diario Popular",
         "Noticias Argentinas (NA)",
         "El Día",
-        "0221",
         "InfoRegión",
         "QZ Noticias (Mar del Plata)",
         "El Marplatense",
         "Mi8 (Canal 8 Mar del Plata)",
-        "NDEN – Noticias de Necochea",
         "Clarín",
         "0223 (Mar del Plata)",
-        "Minuto Uno",
+        "Página/12",
         "La Nueva",
+        "0221",
+        "NDEN – Noticias de Necochea",
         "Doble Amarilla",
         "Bolavip Argentina"
       ],
@@ -2246,10 +2689,10 @@
     },
     {
       "id": "1juccvy",
-      "titulo": "Sergio Massa pide construir propuestas con mirada federal y unidad",
-      "copete": "El líder del Frente Renovador convocó a dirigentes regionales a debatir propuestas con vistas a las elecciones del próximo año y fortalecer la unidad.",
-      "cuerpo": "Según se informó, el exministro sostuvo que resulta fundamental pensar en una Argentina federal y en lograr que el interior se haga valer, además de instar a abrir los brazos y trabajar por la unidad del peronismo y de todos los argentinos.\n\nEn paralelo a estas definiciones políticas de cara a los comicios del próximo año, el espacio llevó adelante un Encuentro Regional del NEA en la ciudad de Resistencia, con referentes de Chaco, Corrientes y Misiones, y un encuentro de la Sexta Sección electoral en Carmen de Patagones, donde se analizó el impacto de las políticas del Gobierno nacional y la modificación de la Ley de Zonas Frías.",
-      "guion": "Sergio Massa pide construir propuestas con mirada federal y unidad",
+      "titulo": "Massa pide construir propuestas federales y unidad de cara a las elecciones",
+      "copete": "El líder del Frente Renovador encabezó un encuentro regional y envió un mensaje a dirigentes bonaerenses sobre la necesidad de lograr un país más federal y fortalecer la unidad.",
+      "cuerpo": "El líder del Frente Renovador, Sergio Massa, instó a construir propuestas con una mirada federal y a trabajar por la unidad durante mensajes dirigidos a referentes políticos que participaron de actividades partidarias en el noreste del país y en la provincia de Buenos Aires.\n\nLos encuentros políticos se desarrollaron de manera simultánea en distintas regiones. En Resistencia, dirigentes de Chaco, Corrientes y Misiones llevaron adelante el Encuentro Regional del NEA, donde debatieron en comisiones y concluyeron en la necesidad de impulsar economías regionales mediante infraestructura, inversión en ciencia y tecnología, programas de empleo joven y políticas de vivienda. En paralelo, referentes del espacio se reunieron en Carmen de Patagones para analizar el impacto de las medidas del Gobierno nacional en la Sexta Sección electoral, con especial atención en la modificación de la Ley de Zonas Frías.",
+      "guion": "Massa pide construir propuestas federales y unidad de cara a las elecciones",
       "seccion": "Política",
       "medios": [
         "El Eco de Tandil",
@@ -2265,23 +2708,32 @@
       "visto": "2026-09-28T02:26:47.869Z",
       "relevancia": 58,
       "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
+      "publicadaPor": "ia",
+      "publicadaCuando": "2026-09-28T03:42:54.417Z",
       "temas": [],
       "como": "automatica",
-      "seSabe": [
-        "Sergio Massa encabezó un mensaje para dirigentes del Frente Renovador tras encuentros en el NEA y la provincia de Buenos Aires, según informaron fuentes periodísticas.",
-        "El líder partidario pidió construir propuestas con mirada federal y fortalecer la unidad del peronismo y de los argentinos, de acuerdo con los reportes.",
-        "En Resistencia se realizó un Encuentro Regional del NEA con la participación de referentes de Chaco, Corrientes y Misiones.",
-        "En Carmen de Patagones se llevó a cabo un encuentro de la Sexta Sección electoral bonaerense para analizar el impacto de las políticas nacionales."
+      "claves": [
+        "Sergio Massa pidió priorizar una mirada federal y fortalecer la unidad política.",
+        "El Frente Renovador realizó un encuentro regional en el NEA y otro en el sur bonaerense.",
+        "En Carmen de Patagones analizaron el impacto de las políticas nacionales y la Ley de Zonas Frías.",
+        "En Chaco debatieron sobre economías regionales, empleo joven e infraestructura."
       ],
-      "textoRedes": "Sergio Massa convocó a dirigentes del Frente Renovador a construir propuestas con mirada federal y trabajar por la unidad de cara a las elecciones del próximo año, tras encuentros políticos realizados en el NEA y la provincia de Buenos Aires.",
+      "seSabe": [
+        "Sergio Massa pidió construir propuestas con mirada federal y trabajar por la unidad.",
+        "El Frente Renovador llevó a cabo un Encuentro Regional del NEA en Resistencia con referentes de Chaco, Corrientes y Misiones.",
+        "Dirigentes del espacio realizaron un encuentro en Carmen de Patagones para analizar el impacto de las políticas del Gobierno nacional en la Sexta Sección electoral, con foco en la Ley de Zonas Frías."
+      ],
+      "noConfirmado": [
+        "No se especificaron detalles sobre posibles candidaturas de cara a los comicios del próximo año."
+      ],
+      "textoRedes": "Sergio Massa pidió construir propuestas con mirada federal y fortalecer la unidad durante un mensaje dirigido a dirigentes del Frente Renovador que participaron de encuentros políticos en el NEA y en la provincia de Buenos Aires.",
       "etiquetas": [
         "Sergio Massa",
         "Frente Renovador",
         "Elecciones",
-        "Politica",
-        "NEA"
+        "Política",
+        "NEA",
+        "Provincia de Buenos Aires"
       ],
       "fuentesConsultadas": [
         {
@@ -2289,35 +2741,35 @@
           "enlace": "https://noticiasargentinas.com/politica/massa-pidio--construir-propuestas-con-mirada-federal-y-trabajar-por-la-unidad-_a6ab846609a676c64cfe40c26",
           "fecha": "2026-09-26T22:34:40.482Z",
           "oficial": false,
-          "aporte": "Aportó los detalles sobre el mensaje de Sergio Massa, las actividades en Resistencia y Carmen de Patagones, y las conclusiones temáticas."
+          "aporte": "Detalló los dichos de Sergio Massa sobre la mirada federal y la unidad, además de las conclusiones de los encuentros en Resistencia y Carmen de Patagones."
         },
         {
           "medio": "El Eco de Tandil",
           "enlace": "https://www.eleco.com.ar/politica/sergio-massa-pidio-trabajar-por-la-unidad-y-una-mirada-federal-en-el-nea",
           "fecha": "2026-09-27T11:31:50.000Z",
           "oficial": false,
-          "aporte": "Coincidió en la información sobre el inicio de las actividades políticas del Frente Renovador de cara al próximo año."
+          "aporte": "Informó sobre la realización del Encuentro Regional del NEA en Resistencia encabezado por Sergio Massa el pasado sábado."
         },
         {
           "medio": "Agencia DIB",
           "enlace": "https://dib.com.ar/politica/massa-pidio-trabajar-la-unidad-un-encuentro-del-fr-resistencia-n56060",
           "fecha": "2026-09-26T23:24:00.000Z",
           "oficial": false,
-          "aporte": "Informó sobre el encuentro de la militancia del noreste del país y el pedido de un país más federal."
+          "aporte": "Indicó que Massa reunió a la militancia del noreste del país y conversó sobre la necesidad de un país más federal."
         },
         {
           "medio": "Ámbito",
           "enlace": "https://www.ambito.com/politica/sergio-massa-pidio-al-frente-renovador-impulsar-una-agenda-federal-y-unir-al-peronismo-n6327071",
           "fecha": "2026-09-27T00:01:00.000Z",
           "oficial": false,
-          "aporte": "Registró la realización de encuentros en el NEA y el sur bonaerense para analizar el impacto de las políticas de Javier Milei."
+          "aporte": "Mencionó que el espacio realizó encuentros en el NEA y el sur bonaerense para debatir propuestas y analizar el impacto de las políticas de Javier Milei."
         },
         {
           "medio": "Zona Norte Diario",
           "enlace": "https://www.zonanortediario.com.ar/26/09/2026/massa-pidio-trabajar-por-la-unidad-y-el-frente-renovador-comenzo-a-mover-sus-fichas-para-2027/",
           "fecha": "2026-09-26T23:23:17.000Z",
           "oficial": false,
-          "aporte": "Indicó que el Frente Renovador discutió propuestas con vistas a 2027 y puso el foco en la unidad del peronismo."
+          "aporte": "Señaló que el Frente Renovador discutió propuestas con vistas a 2027 y puso el foco en la unidad del peronismo."
         }
       ],
       "antecedentes": [
@@ -2331,7 +2783,7 @@
       "verificacion": {
         "nivel": "ALTA",
         "porque": "Lo contaron cinco medios independientes.",
-        "sugeridoPorIA": "MEDIA"
+        "sugeridoPorIA": "ALTA"
       },
       "slug": "sergio-massa-pide-construir-propuestas-con-mirada-federal-y-unidad"
     },
@@ -2466,6 +2918,144 @@
         "sugeridoPorIA": "ALTA"
       },
       "slug": "las-cajas-municipales-cierran-antes-por-el-balance-trimestral-en"
+    },
+    {
+      "id": "12l1gjp",
+      "titulo": "Juan Sebastián Verón cruzó a Darío Herrera tras la final",
+      "copete": "Rosario Central le ganó la Supercopa Internacional a Estudiantes de La Plata por tres a uno en Santiago del Estero. El presidente del club platense increpó al árbitro al finalizar el encuentro tras varias jugadas polémicas.",
+      "cuerpo": "Rosario Central derrotó por tres a uno a Estudiantes de La Plata en la final de la Supercopa Internacional disputada en Santiago del Estero. Tras el pitazo final, el presidente del Pincha, Juan Sebastián Verón, ingresó al campo de juego, mandó a los futbolistas al vestuario y enfrentó al árbitro Darío Herrera con duras expresiones por su desempeño.\n\nEl encuentro había transcurrido con tensiones y reclamos por parte del conjunto platense debido a decisiones arbitrales y al uso del VAR, incluyendo un penal sancionado en la primera etapa que derivó en la ventaja transitoria para el equipo rosarino. Durante el desarrollo del complemento, el dirigente ya había realizado publicaciones en sus redes sociales para cuestionar las reglas y la conducción del partido.\n\nAl ser consultado posteriormente sobre el entredicho con el juez, el referente institucional evitó profundizar en las declaraciones y relativizó el cruce ante los medios. El cierre del certamen dejó cruces entre los planteles tanto en el césped como en la zona de vestuarios.",
+      "guion": "Juan Sebastián Verón cruzó a Darío Herrera tras la final",
+      "seccion": "Fútbol",
+      "medios": [
+        "Infobae",
+        "TN (Todo Noticias)",
+        "Perfil",
+        "TyC Sports",
+        "Olé",
+        "Crónica",
+        "Noticias Argentinas (NA)",
+        "0221",
+        "Infocielo"
+      ],
+      "enlace": "https://www.ole.com.ar/futbol-primera/veron-buscar-herrera-arbitro-ladron-toda-video-ironica-reaccion-penal-di-maria-gol-rosario-central-respuesta-estudiantes_0_hAHN7PHKmb.html",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-26T20:34:58.000Z",
+      "sinFecha": false,
+      "visto": "2026-09-28T03:47:03.826Z",
+      "relevancia": 58,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Rosario Central venció a Estudiantes por tres a uno en la Supercopa Internacional.",
+        "Juan Sebastián Verón increpó al árbitro Darío Herrera al finalizar el encuentro.",
+        "El partido tuvo momentos de tensión y polémicas por fallos arbitrales y del VAR.",
+        "El dirigente realizó publicaciones críticas en sus redes sociales durante el desarrollo."
+      ],
+      "seSabe": [
+        "Rosario Central le ganó tres a uno a Estudiantes de La Plata en Santiago del Estero.",
+        "Juan Sebastián Verón ingresó al campo de juego y encaró al árbitro Darío Herrera.",
+        "El presidente del club platense publicó mensajes en sus redes sociales contra el arbitraje.",
+        "Se registraron incidentes entre los protagonistas dentro de la cancha y en la zona de vestuarios."
+      ],
+      "noConfirmado": [
+        "No se detallaron sanciones oficiales derivadas de los incidentes ocurridos entre los planteles y el árbitro."
+      ],
+      "textoRedes": "Rosario Central se quedó con la Supercopa Internacional tras vencer a Estudiantes de La Plata por tres a uno en Santiago del Estero. El partido finalizó con incidentes y un fuerte cruce entre Juan Sebastián Verón y el árbitro Darío Herrera debido a jugadas polémicas.",
+      "etiquetas": [
+        "Estudiantes de La Plata",
+        "Rosario Central",
+        "Juan Sebastián Verón",
+        "Darío Herrera",
+        "Supercopa Internacional"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Olé",
+          "enlace": "https://www.ole.com.ar/futbol-primera/veron-buscar-herrera-arbitro-ladron-toda-video-ironica-reaccion-penal-di-maria-gol-rosario-central-respuesta-estudiantes_0_hAHN7PHKmb.html",
+          "fecha": "2026-09-26T20:34:58.000Z",
+          "oficial": false,
+          "aporte": "Detalló los dichos de Verón a Herrera, las polémicas del partido y los posteos en redes sociales."
+        },
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/deportes/2026/09/26/juan-sebastian-veron-arremetio-contra-el-arbitro-y-la-afa-tras-la-escandalosa-final-de-la-supercopa-internacional-entre-estudiantes-y-central/",
+          "fecha": "2026-09-27T00:49:13.000Z",
+          "oficial": false,
+          "aporte": "Informó sobre el resultado del encuentro y los incidentes al final del mismo."
+        },
+        {
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/deportes/futbol/2026/09/26/juan-sebastian-veron-entro-a-la-cancha-en-medio-de-los-incidentes-e-increpo-al-arbitro-dario-herrera-es-culpa-tuya/",
+          "fecha": "2026-09-26T21:38:54.000Z",
+          "oficial": false,
+          "aporte": "Señaló que la pelea entre los jugadores se trasladó a la zona de vestuarios."
+        },
+        {
+          "medio": "Perfil",
+          "enlace": "https://442.perfil.com/noticias/futbol/juan-sebastian-veron-exploto-tras-la-final-de-la-supercopa-increpo-a-herrera-y-fue-contundente.phtml",
+          "fecha": "2026-09-26T22:16:09.000Z",
+          "oficial": false,
+          "aporte": "Indicó que el presidente bajó al césped tras la derrota ante Rosario Central."
+        },
+        {
+          "medio": "TyC Sports",
+          "enlace": "https://www.tycsports.com/liga-profesional-de-futbol/ladron-veron-increpo-a-herrera-y-hubo-pinas-en-el-final-de-rosario-central-vs-estudiantes-id763170.html",
+          "fecha": "2026-09-26T23:34:17.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Olé",
+          "enlace": "https://www.ole.com.ar/estudiantes/estudiantes-central-rosario-supercopa-internacional-juan-sebastian-veron-herrera-aplausos_0_0FKsmrHwBr.html",
+          "fecha": "2026-09-27T00:20:12.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Crónica",
+          "enlace": "https://www.cronica.com.ar/depo/actualidad/la-tarde-de-furia-de-veron-aplausos-ironicos-posteo/",
+          "fecha": "2026-09-27T00:10:00.000Z",
+          "oficial": false,
+          "aporte": "Ubicó la final en la provincia de Santiago del Estero."
+        },
+        {
+          "medio": "Noticias Argentinas (NA)",
+          "enlace": "https://noticiasargentinas.com/deportes/veron-en-la-final-contra-rosario-con-aplauso-ironico--historias-en-redes-sociales---la-impunidad-para-robarte-_a6ab8370a9a676c64cfe03533",
+          "fecha": "2026-09-27T00:08:38.067Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "0221",
+          "enlace": "https://www.0221.com.ar/estudiantes/el-hincha-estudiantes-que-increpo-dario-herrera-conto-que-le-dijo-antes-la-final-rosario-central-n134901",
+          "fecha": "2026-09-27T18:49:00.000Z",
+          "oficial": false,
+          "aporte": "Mencionó un cruce posterior entre un hincha y el árbitro en un hotel."
+        },
+        {
+          "medio": "0221",
+          "enlace": "https://www.0221.com.ar/estudiantes/juan-sebastian-veron-fue-lapidario-contra-dario-herrera-el-escandalo-del-final-n134879",
+          "fecha": "2026-09-26T21:54:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Infocielo",
+          "enlace": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQaFN4NzBINFF5enJVODFjUnJ2WVh4UGhybnltWG9IVlhYWUJsTUs1enJEV1p3UmVIV0doWE02UTBhSWhwa3ZYb1dpZUt3S1hVNHg3eEt6Y0R4R1FCeEJydzVVaVJiMDRnUVhtQ05UX1o4anZxYzZEQkxZVi1Wd19iT2E5QmFYU2drcU1KS3JpUW1sazltRjdlN21FZw?oc=5",
+          "fecha": "2026-09-26T21:45:40.000Z",
+          "oficial": false,
+          "aporte": null
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron 9 medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "juan-sebastian-veron-cruzo-a-dario-herrera-tras-la-final"
     },
     {
       "id": "1mbmoag",
@@ -2629,7 +3219,11 @@
         "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
         "sugeridoPorIA": "MEDIA"
       },
-      "slug": "mariano-werner-logra-la-pole-del-tc-pick-up-en-balcarce"
+      "slug": "mariano-werner-logra-la-pole-del-tc-pick-up-en-balcarce",
+      "foto": {
+        "archivo": "fotos-notas/1hfsu27.jpg",
+        "credito": "Foto: Radio Gabal (FM 104.1)"
+      }
     },
     {
       "id": "1pz7nob",
@@ -2702,52 +3296,76 @@
       "slug": "la-pelicula-argentina-la-ilusion-de-un-verano-sin-fin-gano-el-premio"
     },
     {
-      "id": "s69i4y",
-      "titulo": "El Presupuesto 2027 prevé casi $6 millones mensuales por empleado del Congreso",
-      "copete": "El proyecto de Presupuesto 2027 le asigna al Poder Legislativo más de un billón de pesos, un 60% más que este año. Con menos empleados, el gasto promedio por trabajador rondaría los $5,9 millones por mes.",
-      "cuerpo": "Según las planillas oficiales por jurisdicción, la partida total es de $1.079.699 millones: $995.184 millones de gastos corrientes y $84.515 millones de capital. En 2026 el Congreso tuvo $674.013 millones; descontada la inflación, la suba real sería de alrededor del 33%. La planta pasaría de 13.454 a 12.978 personas, 476 cargos menos, y el gasto mensual por empleado llegaría a $5.898.645, aguinaldo incluido.\n\nEn el Senado, que preside Victoria Villarruel, la planta se mantiene en 5.018 empleados, con $345.580 millones y unos $5,3 millones mensuales por agente. Diputados, presidida por Martín Menem, bajaría de 4.557 a 4.135 trabajadores y tendría $302.139 millones, con cerca de $5,6 millones por agente.\n\nEntre 2024 y 2027, el Congreso sumaría 1.451 empleados menos, aunque su gasto real crecería más de un 28% en ese período.",
-      "guion": null,
-      "seccion": "Economía",
+      "id": "pra9a0",
+      "titulo": "El Gobierno convoca al campo y a la industria por la ley de semillas",
+      "copete": "El Gobierno encabeza una reunión clave este lunes con la Mesa de Enlace y semilleros para avanzar en la reforma de la ley de semillas y definir el uso propio, un tema de alto interés para los productores de la región.",
+      "cuerpo": "El Instituto Nacional de Semillas (Inase) convoca para este lunes a la Mesa de Enlace y a la Asociación de Semilleros Argentinos (ASA) a una reunión en la Secretaría de Agricultura para debatir la reforma de la ley de semillas y el régimen de uso propio. El encuentro, previsto entre las 14 y las 16, estará encabezado por el presidente del Inase, Martín Famulari, junto con autoridades nacionales. El objetivo es identificar consensos entre productores y empresas tras tres encuentros técnicos previos, según los datos difundidos.\n\nLas negociaciones dejaron de lado la propuesta inicial de una excepción para explotaciones de hasta 500 hectáreas y pasaron a utilizar los deciles del Sistema de Información Simplificado Agrícola (SISA). El Ejecutivo prevé redactar un proyecto para enviar al Congreso en el plazo de un mes, una vez logrados los acuerdos necesarios.\n\nMientras el sector industrial y el ruralista discuten los alcances regulatorios, la reunión de este lunes servirá para evaluar el grado de entendimiento alcanzado antes de definir la redacción final del proyecto legislativo.",
+      "guion": "El Gobierno convoca al campo y a la industria por la ley de semillas",
+      "seccion": "Agro",
       "medios": [
-        "Infobae",
-        "TN (Todo Noticias)",
-        "Radio Mitre"
+        "Argenpapa",
+        "Agroempresario"
       ],
-      "enlace": "https://www.infobae.com/economia/2026/09/26/segun-el-proyecto-de-presupuesto-el-gasto-por-empleado-del-congreso-sera-de-casi-6-millones-mensuales-en-2027/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-26T18:16:01.000Z",
+      "enlace": "https://agroempresario.com/publicacion/121864/ley-de-semillas-campo-e-industria-definen-el-uso-propio/",
+      "teniaImagenLaFuente": false,
+      "fecha": "2026-09-26T17:27:23.000Z",
       "sinFecha": false,
-      "visto": "2026-09-27T23:28:54.122Z",
-      "relevancia": 44,
+      "visto": "2026-09-28T02:26:47.869Z",
+      "relevancia": 18,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
       "temas": [],
       "como": "automatica",
+      "claves": [
+        "Reunión clave entre el Inase, la Mesa de Enlace y la industria semillera.",
+        "El eje del debate es el régimen de uso propio de semillas para la cosecha.",
+        "Se evalúa el uso de los deciles del SISA en lugar del límite de quinientas hectáreas.",
+        "El Gobierno proyecta enviar un proyecto de reforma al Congreso en un mes."
+      ],
+      "seSabe": [
+        "El Inase convoca a una reunión este lunes en la Secretaría de Agricultura, según informó el Gobierno.",
+        "Participarán la Mesa de Enlace y la Asociación de Semilleros Argentinos (ASA), de acuerdo con los datos oficiales.",
+        "El debate se centra en las condiciones para el uso propio de semillas en cultivos como soja y trigo, según las fuentes.",
+        "Las partes analizaron alternativas de uso propio gratuito y oneroso en reuniones previas, de acuerdo con la información difundida."
+      ],
+      "noConfirmado": [
+        "No se definió qué cantidad de hectáreas quedará comprendida para cada cultivo.",
+        "No existe todavía un borrador definitivo del proyecto de reforma ni un acuerdo global entre las entidades.",
+        "No se determinó si la Argentina avanzará hacia la adopción del Acta 1991 de Upov."
+      ],
+      "textoRedes": "El Gobierno encabeza este lunes una reunión con la Mesa de Enlace y semilleros para avanzar en la reforma de la ley de semillas y definir las condiciones del uso propio en cultivos clave para la producción agropecuaria.",
+      "etiquetas": [
+        "ley de semillas",
+        "gobierno",
+        "campo",
+        "industria",
+        "inase",
+        "soja",
+        "trigo"
+      ],
       "fuentesConsultadas": [
         {
-          "medio": "Infobae",
-          "enlace": "https://www.infobae.com/economia/2026/09/26/segun-el-proyecto-de-presupuesto-el-gasto-por-empleado-del-congreso-sera-de-casi-6-millones-mensuales-en-2027/",
-          "fecha": "2026-09-26T18:16:01.000Z",
+          "medio": "Agroempresario",
+          "enlace": "https://agroempresario.com/publicacion/121864/ley-de-semillas-campo-e-industria-definen-el-uso-propio/",
+          "fecha": "2026-09-26T17:27:23.000Z",
           "oficial": false,
-          "aporte": null
+          "aporte": "Aportó los detalles sobre la convocatoria del Inase, la participación de la Mesa de Enlace y ASA, los ejes del debate sobre el uso propio, el uso del SISA y el contexto sobre el acta Upov."
         },
         {
-          "medio": "TN (Todo Noticias)",
-          "enlace": "https://tn.com.ar/politica/2026/09/26/el-presupuesto-2027-preve-un-gasto-de-casi-6-millones-mensuales-por-empleado-del-congreso/",
-          "fecha": "2026-09-26T20:50:53.000Z",
+          "medio": "Argenpapa",
+          "enlace": "https://www.argenpapa.com.ar/noticia/17808-argentina-un-proyecto-busca-limitar-el-uso-propio-de-semillas-protegidas",
+          "fecha": null,
           "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Radio Mitre",
-          "enlace": "https://radiomitre.cienradios.com/politica/se-conocio-el-presupuesto-2027-el-congreso-recibira-mas-de-1-billon-y-preve-un-gasto-de-casi-6-millones-por-empleado/",
-          "fecha": "2026-09-27T01:56:43.000Z",
-          "oficial": false,
-          "aporte": null
+          "aporte": "Aportó la referencia temática general sobre el debate entre el campo y la industria en torno al uso propio de semillas."
         }
       ],
-      "slug": "segun-el-proyecto-de-presupuesto-el-gasto-por-empleado-del-congreso"
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "el-gobierno-convoca-al-campo-y-a-la-industria-por-la-ley-de-semillas"
     },
     {
       "id": "1qm1ppu",
@@ -2820,14 +3438,14 @@
         "Infobae",
         "TN (Todo Noticias)",
         "Perfil",
-        "Página/12",
         "TyC Sports",
         "Olé",
         "Minuto Uno",
         "C5N",
         "Radio Mitre",
         "Diario Popular",
-        "Doble Amarilla"
+        "Doble Amarilla",
+        "Página/12"
       ],
       "enlace": "https://www.ole.com.ar/futbol-internacional/espana/lamine-yamal-revelo-dijo-messi-apenas-termino-final-mundial_0_ez553WkjjQ.html",
       "teniaImagenLaFuente": true,
@@ -2873,13 +3491,6 @@
           "medio": "Perfil",
           "enlace": "https://442.perfil.com/noticias/futbol/lamine-yamal-revelo-que-su-cruce-con-lionel-messi-despues-de-la-final-del-mundial-2026-que-le-dijo.phtml",
           "fecha": "2026-09-27T01:59:27.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Página/12",
-          "enlace": "https://www.pagina12.com.ar/2026/09/27/lamine-yamal-dio-detalles-de-su-dialogo-con-messi-en-la-final-del-mundial-2026/",
-          "fecha": "2026-09-28T03:01:00.000Z",
           "oficial": false,
           "aporte": null
         },
@@ -2931,196 +3542,16 @@
           "fecha": "2026-09-26T23:40:18.320Z",
           "oficial": false,
           "aporte": null
+        },
+        {
+          "medio": "Página/12",
+          "enlace": "https://www.pagina12.com.ar/2026/09/27/lamine-yamal-dio-detalles-de-su-dialogo-con-messi-en-la-final-del-mundial-2026/",
+          "fecha": "2026-09-27T21:15:14.000Z",
+          "oficial": false,
+          "aporte": null
         }
       ],
       "slug": "lamine-yamal-revelo-que-le-dijo-a-messi-apenas-termino-la-final-del"
-    },
-    {
-      "id": "1nuecaw",
-      "titulo": "Figueroa cruza a Prat-Gay por Vaca Muerta y Milei comparte su respuesta",
-      "copete": "El gobernador de Neuquén respondió al exministro, que había dicho que el crecimiento petrolero todavía no derrama en la economía provincial. El presidente Javier Milei difundió el mensaje en sus redes.",
-      "cuerpo": "Alfonso Prat-Gay hizo su diagnóstico después de recorrer pequeñas y medianas empresas en Neuquén, aunque reconoció que no llegó a Añelo y que se trataba de “una muestra muy pequeña”. Rolando Figueroa le contestó en redes sociales: “Te vi en Neuquén. Veo que no has recorrido. No comparto en absoluto tus apreciaciones desde el Obelisco”.\n\nEl gobernador acompañó su respuesta con un informe de la Fundación Mediterránea y con datos de la provincia: entre 2023 y 2025 la masa salarial creció 13% en petróleo y gas y 17% en otras actividades; el empleo privado registrado subió cerca de 7%, con unos 12.000 puestos nuevos y 186 empresas radicadas, y las exportaciones del primer semestre de 2026 superaron los 4.300 millones de dólares, 42% más que un año antes.\n\n“La próxima vez te saco a recorrer mi provincia, que ha logrado lo que muchos en el país no hicieron cuando tuvieron su oportunidad”, cerró Figueroa. Milei compartió el mensaje sin agregar declaraciones propias.",
-      "guion": null,
-      "seccion": "Política",
-      "medios": [
-        "La Nación",
-        "Infobae",
-        "Ámbito",
-        "Minuto Uno",
-        "C5N",
-        "Crónica",
-        "Canal 26",
-        "Diario Popular",
-        "Noticias Argentinas (NA)",
-        "Clarín"
-      ],
-      "enlace": "https://noticiasargentinas.com/politica/milei-se-mete-en-el-cruce-de-figueroa-con-prat-gay-y-respalda-el-desarrollo-de-vaca-muerta_a6ab7e2409a676c64cfcc1a66",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-26T15:23:41.784Z",
-      "sinFecha": false,
-      "visto": "2026-09-28T03:31:01.875Z",
-      "relevancia": 58,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "fuentesConsultadas": [
-        {
-          "medio": "Noticias Argentinas (NA)",
-          "enlace": "https://noticiasargentinas.com/politica/milei-se-mete-en-el-cruce-de-figueroa-con-prat-gay-y-respalda-el-desarrollo-de-vaca-muerta_a6ab7e2409a676c64cfcc1a66",
-          "fecha": "2026-09-26T15:23:41.784Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "La Nación",
-          "enlace": "https://www.lanacion.com.ar/economia/el-gobernador-de-neuquen-cruzo-a-prat-gay-por-decir-que-vaca-muerta-no-derrama-en-la-provincia-nid26092026/",
-          "fecha": "2026-09-26T19:47:43.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Infobae",
-          "enlace": "https://www.infobae.com/politica/2026/09/26/apreciaciones-desde-el-obelisco-el-cruce-entre-el-gobernador-de-neuquen-y-prat-gay-por-vaca-muerta/",
-          "fecha": "2026-09-26T15:38:54.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Ámbito",
-          "enlace": "https://www.ambito.com/politica/rolando-figueroa-cruzo-alfonso-prat-gay-vaca-muerta-veo-que-no-has-recorrido-neuquen-n6327207",
-          "fecha": "2026-09-27T19:37:00.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Minuto Uno",
-          "enlace": "https://www.minutouno.com/economia/la-fuerte-respuesta-rolando-figueroa-alfonso-prat-gay-el-impacto-vaca-muerta-n6327182",
-          "fecha": "2026-09-27T16:58:00.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "C5N",
-          "enlace": "https://www.c5n.com/politica/rolando-figueroa-cruzo-alfonso-prat-gay-vaca-muerta-veo-que-no-has-recorrido-n250051",
-          "fecha": "2026-09-27T17:17:00.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Crónica",
-          "enlace": "https://www.cronica.com.ar/politica/figueroa-le-respondio-a-prat-gay-te-vi-en-neuquen-veo-que-no-has-recorrido/",
-          "fecha": "2026-09-26T23:30:12.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Canal 26",
-          "enlace": "https://www.canal26.com/politica/2026/09/27/rolando-figueroa-cruzo-a-prat-gay-por-vaca-muerta-veo-que-no-has-recorrido/",
-          "fecha": "2026-09-27T14:30:33.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Diario Popular",
-          "enlace": "https://www.diariopopular.com.ar/politica/rolando-figueroa-prat-gay-no-comparto-tus-apreciaciones-el-obelisco-n921694",
-          "fecha": "2026-09-27T00:02:00.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Clarín",
-          "enlace": "https://www.clarin.com/politica/gobernador-neuquen-cruzo-prat-gay-decir-vaca-muerta-derrama-provincia_0_fG8Ofa09fC.html",
-          "fecha": "2026-09-26T22:39:00.000Z",
-          "oficial": false,
-          "aporte": null
-        }
-      ],
-      "slug": "milei-se-mete-en-el-cruce-de-figueroa-con-prat-gay-y-respalda-el"
-    },
-    {
-      "id": "5exxou",
-      "titulo": "Un gallo bataraz se vende por más de tres millones de pesos",
-      "copete": "Un ejemplar de la raza Plymouth Rock Barrada marcó un récord en un remate durante la última Exposición Rural de Bolívar al ser vendido por una cifra inédita en el mercado nacional.",
-      "cuerpo": "El evento ganadero reunió a criadores y productores de la región, donde la subasta del ejemplar llamó la atención por alcanzar un valor equivalente a unos dos mil dólares. La venta del ave generó repercusión en el sector agropecuario bonaerense por la magnitud del monto alcanzado para un animal de granja.\n\nAunque la operación comercial se concretó con éxito en la muestra rural bolivarense, hasta el momento no trascendieron detalles sobre la identidad del comprador ni el destino que tendrá el ejemplar tras la histórica subasta.",
-      "guion": "Un gallo bataraz se vende por más de tres millones de pesos",
-      "seccion": "Agro",
-      "medios": [
-        "0223 (Mar del Plata)",
-        "Ayacucho al Día",
-        "La Verdad de Ayacucho",
-        "Infoeme"
-      ],
-      "enlace": "https://laverdadayacucho.com.ar/se-vendio-el-gallo-mas-caro-de-la-argentina-mas-de-tres-millones-de-pesos/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-26T14:37:43.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-28T02:26:47.869Z",
-      "relevancia": 51,
-      "local": false,
-      "publicadaPor": "ia",
-      "publicadaCuando": "2026-09-28T03:02:36.621Z",
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Se vendió el gallo más caro de la Argentina",
-        "Alcanzó un valor de tres millones de pesos",
-        "La subasta ocurrió en la Exposición Rural de Bolívar",
-        "El ejemplar pertenece a la raza Plymouth Rock Barrada"
-      ],
-      "seSabe": [
-        "Un gallo bataraz de la raza Plymouth Rock Barrada se vendió por 3.020.000 pesos",
-        "La subasta se realizó en el marco de la Exposición Rural de Bolívar",
-        "El monto equivale aproximadamente a dos mil dólares"
-      ],
-      "noConfirmado": [
-        "No se informó la identidad del comprador",
-        "No se detalló el destino que tendrá el ejemplar"
-      ],
-      "textoRedes": "Un gallo de la raza Plymouth Rock Barrada batió un récord en la Exposición Rural de Bolívar al venderse en más de tres millones de pesos.",
-      "etiquetas": [
-        "remate",
-        "Exposición Rural de Bolívar",
-        "gallo bataraz",
-        "Plymouth Rock Barrada"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "La Verdad de Ayacucho",
-          "enlace": "https://laverdadayacucho.com.ar/se-vendio-el-gallo-mas-caro-de-la-argentina-mas-de-tres-millones-de-pesos/",
-          "fecha": "2026-09-26T14:37:43.000Z",
-          "oficial": false,
-          "aporte": "Informó los detalles de la venta del gallo bataraz en la Exposición Rural de Bolívar."
-        },
-        {
-          "medio": "0223 (Mar del Plata)",
-          "enlace": "https://www.0223.com.ar/nota/2026-9-27-15-4-0-record-se-vendio-el-gallo-mas-caro-del-pais-por-una-cifra-millonaria-en-bolivar",
-          "fecha": "2026-09-27T18:04:00.000Z",
-          "oficial": false,
-          "aporte": "Aportó el dato sobre la conversión estimada en dólares de la venta."
-        },
-        {
-          "medio": "Ayacucho al Día",
-          "enlace": "https://ayacuchoaldia.com.ar/bolivar-se-vendio-el-gallo-mas-caro-de-la-argentina-mas-de-tres-millones-de-pesos/?utm_source=rss&utm_medium=rss&utm_campaign=bolivar-se-vendio-el-gallo-mas-caro-de-la-argentina-mas-de-tres-millones-de-pesos",
-          "fecha": "2026-09-27T17:00:08.000Z",
-          "oficial": false,
-          "aporte": "Confirmó la cifra récord alcanzada durante el remate en la muestra rural."
-        },
-        {
-          "medio": "Infoeme",
-          "enlace": "https://www.infoeme.com/agro/2026-9-26-12-38-47-bolivar-se-vendio-el-gallo-mas-caro-de-la-argentina",
-          "fecha": "2026-09-26T15:38:47.000Z",
-          "oficial": false,
-          "aporte": "Detalló la raza del ejemplar y el monto exacto de la transacción."
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron cuatro medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "un-gallo-se-vende-a-un-precio-record-en-bolivar"
     },
     {
       "id": "1as5wmy",
@@ -3206,110 +3637,6 @@
       "slug": "el-autodromo-fangio-completa-su-capacidad-de-estacionamiento-para"
     },
     {
-      "id": "1h399fo",
-      "titulo": "Los docentes universitarios paran 72 horas desde el miércoles 30",
-      "copete": "La CONADU confirmó un paro del miércoles 30 de septiembre al viernes 2 de octubre para reclamar la aplicación de la Ley de Financiamiento Universitario y una recomposición salarial. Es la antesala de la quinta Marcha Federal Universitaria, prevista para el 15 de octubre.",
-      "cuerpo": "La medida se aprobó por mayoría en el plenario de secretarias y secretarios generales de la federación, que primero había hablado de una huelga de 48 a 72 horas y luego confirmó tres jornadas. Buscará hacerla junto con la CONADU Histórica. El paro se levantaría si el Gobierno otorga antes del martes 29 el aumento del 33,4% que prevé la ley; la última oferta oficial en la paritaria fue del 3%, y los gremios la rechazaron.\n\nEn paralelo, el juez federal Martín Cormick intimó esta semana al Gobierno a cumplir por completo la medida cautelar que ordena aplicar los artículos 5 y 6 de la Ley 27.795, y le dio cinco días. La Casa Rosada anunció que apelará y sostiene que ya cumplió.\n\nLa ley fue sancionada en 2025, vetada por el presidente Javier Milei y ratificada después por el Congreso con dos tercios en ambas cámaras. El Gobierno la promulgó, pero suspendió su aplicación.",
-      "guion": null,
-      "seccion": "Argentina",
-      "medios": [
-        "La Noticia 1",
-        "Infobae",
-        "TN (Todo Noticias)",
-        "Ámbito",
-        "Minuto Uno",
-        "Canal 26",
-        "El Cronista",
-        "C5N",
-        "Crónica",
-        "Radio Mitre"
-      ],
-      "enlace": "https://tn.com.ar/politica/2026/09/26/los-docentes-universitarios-anunciaron-un-paro-de-72-horas-en-la-previa-de-una-nueva-marcha-federal/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-26T13:49:54.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-27T23:28:54.122Z",
-      "relevancia": 58,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "fuentesConsultadas": [
-        {
-          "medio": "TN (Todo Noticias)",
-          "enlace": "https://tn.com.ar/politica/2026/09/26/los-docentes-universitarios-anunciaron-un-paro-de-72-horas-en-la-previa-de-una-nueva-marcha-federal/",
-          "fecha": "2026-09-26T13:49:54.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "La Noticia 1",
-          "enlace": "https://www.lanoticia1.com/noticia/paro-universitario-conadu-confirmo-la-medida-de-fuerza-por-72-horas-desde-el-miercoles",
-          "fecha": "2026-09-27T21:21:24.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Infobae",
-          "enlace": "https://www.infobae.com/politica/2026/09/26/los-docentes-universitarios-convocaron-a-un-paro-para-la-proxima-semana-podria-durar-entre-48-y-72-horas/",
-          "fecha": "2026-09-26T16:39:27.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Ámbito",
-          "enlace": "https://www.ambito.com/politica/docentes-universitarios-convocaron-un-paro-72-horas-y-condicionaron-la-medida-una-suba-salarial-n6327027",
-          "fecha": "2026-09-26T18:28:00.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Minuto Uno",
-          "enlace": "https://www.minutouno.com/politica/se-viene-otro-paro-docentes-universitarios-la-previa-la-marcha-federal-n6327040",
-          "fecha": "2026-09-26T22:36:00.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Canal 26",
-          "enlace": "https://www.canal26.com/politica/2026/09/26/docentes-anunciaron-un-nuevo-paro-universitario-y-exigen-la-recomposicion-de-sus-salarios-y-la-aplicacion-de-la-ley-de-financiamiento-cuando-sera/",
-          "fecha": "2026-09-26T19:07:26.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "El Cronista",
-          "enlace": "https://www.cronista.com/informacion-gral/paro-universitario-conadu-convoco-a-una-huelga-desde-el-30-de-septiembre-y-define-si-sera-de-48-o-72-horas/",
-          "fecha": "2026-09-26T17:31:23.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "C5N",
-          "enlace": "https://www.c5n.com/sociedad/de-cara-la-marcha-universitaria-docentes-paran-72-horas-el-proximo-30-septiembre-n250004",
-          "fecha": "2026-09-26T19:34:00.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Crónica",
-          "enlace": "https://www.cronica.com.ar/politica/paro-universitario-gremios-convocaron-a-una-medida-de-fuerza-para-la-proxima-semana/",
-          "fecha": "2026-09-26T18:59:00.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Radio Mitre",
-          "enlace": "https://radiomitre.cienradios.com/sociedad/paro-universitario-los-docentes-anunciaron-una-medida-de-hasta-72-horas-desde-el-30-de-septiembre/",
-          "fecha": "2026-09-26T15:39:57.000Z",
-          "oficial": false,
-          "aporte": null
-        }
-      ],
-      "slug": "los-docentes-universitarios-anunciaron-un-paro-de-72-horas-en-la"
-    },
-    {
       "id": "2ruiao",
       "titulo": "La Federación Argentina de Municipios rechaza los cambios en Zona Fría",
       "copete": "La Federación Argentina de Municipios repudió la modificación del régimen de Zona Fría aprobada por el Senado impulsada por el gobierno nacional, al advertir que afectará a millones de usuarios de gas.",
@@ -3321,22 +3648,16 @@
         "QZ Noticias (Mar del Plata)",
         "Ecos Diarios (Necochea)",
         "La Noticia 1",
-        "Infobae",
         "TN (Todo Noticias)",
         "El Destape",
-        "A24",
         "Ámbito",
-        "Canal 26",
         "Diario Popular",
         "Noticias Argentinas (NA)",
-        "El Día",
         "Zona Norte Diario",
-        "ANDigital",
         "El Marplatense",
         "Infobrisas (Radio Brisas)",
         "Crónica",
-        "Radio Mitre",
-        "La Verdad"
+        "Radio Mitre"
       ],
       "enlace": "https://noticiasargentinas.com/politica/fam-repudio-la-derogacion-del-regimen-de-zonas-frias---un-golpe-directo-al-bolsillo-_a6ab7c7879a676c64cfc57f58",
       "teniaImagenLaFuente": true,
@@ -3623,6 +3944,110 @@
       "slug": "scorziello-y-galella-exporta-granos-a-isla-mauricio-en-balcarce"
     },
     {
+      "id": "gqlk77",
+      "titulo": "George Russell gana el Gran Premio de Azerbaiyán en la Fórmula 1",
+      "copete": "El piloto británico se impuso en el circuito urbano de Bakú y achicó diferencias con el líder del campeonato, Andrea Kimi Antonelli. La competencia tuvo un fuerte accidente del argentino Franco Colapinto.",
+      "cuerpo": "George Russell se quedó con la victoria este sábado en el Gran Premio de Azerbaiyán de la Fórmula 1, en una competencia desarrollada en el circuito callejero de Bakú que estuvo marcada por un fuerte accidente de Franco Colapinto. El piloto de Mercedes dominó el fin de semana y logró su tercera victoria de la temporada tras imponerse por delante de Max Verstappen e Isack Hadjar, quienes completaron el podio para Red Bull.\n\nCon este triunfo, el británico achicó la diferencia en el campeonato de pilotos y se ubicó a 66 puntos del líder del certamen, su compañero Andrea Kimi Antonelli, quien finalizó en la quinta posición tras protagonizar una gran remontada luego de largar desde el decimosexto lugar.\n\nTras la competencia, el ganador destacó el rendimiento de su escudería y el trabajo realizado durante el fin de semana en declaraciones recogidas por la prensa. A falta de ocho fechas para el cierre del calendario, la pelea por el título continúa entre los integrantes del equipo alemán.",
+      "guion": "George Russell gana el Gran Premio de Azerbaiyán en la Fórmula 1",
+      "seccion": "Automovilismo",
+      "medios": [
+        "Motorsport",
+        "La Nación",
+        "TN (Todo Noticias)",
+        "El Destape",
+        "Radio Mitre"
+      ],
+      "enlace": "https://es.motorsport.com/f1/news/clasificacion-mundial-pilotos-equipos-formula1-2026-azerbaiyan-baku/10859208/?utm_source=RSS&utm_medium=referral&utm_campaign=RSS-F1&utm_term=News&utm_content=es",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-26T12:42:50.000Z",
+      "sinFecha": false,
+      "visto": "2026-09-28T03:47:03.826Z",
+      "relevancia": 89,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "George Russell ganó el Gran Premio de Azerbaiyán de Fórmula 1.",
+        "El podio en Bakú lo completaron Max Verstappen e Isack Hadjar.",
+        "El líder Andrea Kimi Antonelli terminó quinto tras una gran remontada.",
+        "La competencia tuvo un grave accidente del argentino Franco Colapinto."
+      ],
+      "seSabe": [
+        "George Russell ganó el Gran Premio de Azerbaiyán este sábado en el circuito urbano de Bakú.",
+        "El podio fue completado por Max Verstappen e Isack Hadjar.",
+        "Andrea Kimi Antonelli finalizó en el quinto puesto de la competencia tras largar desde el decimosexto lugar.",
+        "La carrera estuvo marcada por un grave accidente de Franco Colapinto.",
+        "La diferencia en el campeonato entre Antonelli y Russell se redujo a 66 puntos."
+      ],
+      "noConfirmado": [
+        "No se detallaron las consecuencias físicas ni los daños materiales derivados del accidente protagonizado por Franco Colapinto."
+      ],
+      "textoRedes": "George Russell se impuso en el Gran Premio de Azerbaiyán de la Fórmula 1 y achicó diferencias en la pelea por el campeonato con Andrea Kimi Antonelli. La competencia en Bakú tuvo un fuerte accidente del piloto argentino Franco Colapinto.",
+      "etiquetas": [
+        "Fórmula 1",
+        "George Russell",
+        "Gran Premio de Azerbaiyán",
+        "Franco Colapinto",
+        "Andrea Kimi Antonelli"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Motorsport",
+          "enlace": "https://es.motorsport.com/f1/news/clasificacion-mundial-pilotos-equipos-formula1-2026-azerbaiyan-baku/10859208/?utm_source=RSS&utm_medium=referral&utm_campaign=RSS-F1&utm_term=News&utm_content=es",
+          "fecha": "2026-09-26T12:42:50.000Z",
+          "oficial": false,
+          "aporte": "Mencionó la ventaja inicial de Andrea Kimi Antonelli sobre George Russell antes de la competencia."
+        },
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/deportes/automovilismo/asi-quedo-la-tabla-de-posiciones-de-la-formula-1-2026-tras-el-triunfo-de-george-russell-en-el-gp-de-nid26092026/",
+          "fecha": "2026-09-26T14:21:28.000Z",
+          "oficial": false,
+          "aporte": "Informó sobre el triunfo de George Russell, el podio de Red Bull y el accidente de Franco Colapinto."
+        },
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/deportes/automovilismo/franco-colapinto-en-el-gran-premio-de-azerbaiyan-en-vivo-nid26092026/",
+          "fecha": "2026-09-26T14:07:44.000Z",
+          "oficial": false,
+          "aporte": "Aportó detalles sobre el desarrollo caótico del final de carrera y la quinta posición del líder."
+        },
+        {
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/deportes/formula-1/2026/09/26/gp-de-azerbaiyan-gano-george-russell-y-el-lider-kimi-antonelli-termino-quinto-tras-remontar-11-posiciones/",
+          "fecha": "2026-09-26T14:09:30.000Z",
+          "oficial": false,
+          "aporte": "Indicó que Andrea Kimi Antonelli largó en la decimosexta posición."
+        },
+        {
+          "medio": "El Destape",
+          "enlace": "https://www.eldestapeweb.com/deportes/george-russell-gano-gp-azerbaiyan-asi-quedaron-posiciones-formula-1-2026926144225",
+          "fecha": "2026-09-26T17:42:25.034Z",
+          "oficial": false,
+          "aporte": "No aportó información útil para el desarrollo debido a la ausencia de resumen."
+        },
+        {
+          "medio": "Radio Mitre",
+          "enlace": "https://radiomitre.cienradios.com/deportes/formula-1-asi-quedo-la-tabla-de-posiciones-tras-el-triunfo-de-george-russell-en-azerbaiyan-y-los-abandonos-de-franco-coalpinto-y-pierre-gasly/",
+          "fecha": "2026-09-26T15:12:22.000Z",
+          "oficial": false,
+          "aporte": "Precisó que se trató de la tercera victoria de la temporada para el piloto británico."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron cinco medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "george-russell-gana-el-gran-premio-de-azerbaiyan-en-la-formula-1",
+      "foto": {
+        "archivo": "fotos-notas/gqlk77.jpg",
+        "credito": "Foto: Motorsport"
+      }
+    },
+    {
       "id": "1aa6w2s",
       "titulo": "Cabaña Don Cholo gana el Gran Campeón Macho de la Semana Angus",
       "copete": "La cabaña Don Cholo obtuvo el máximo galardón con el toro \"Josecito\" en la Exposición Nacional Angus de Primavera realizada en Cañuelas.",
@@ -3631,15 +4056,14 @@
       "seccion": "Agro",
       "medios": [
         "Clarín",
-        "ANDigital",
-        "La Verdad de Ayacucho"
+        "ANDigital"
       ],
       "enlace": "https://www.clarin.com/rural/don-cholo-consagro-gran-campeon-macho-primavera-juanita-logro-gran-campeon-ternero_0_aIaRZA7AUo.html",
       "teniaImagenLaFuente": true,
       "fecha": "2026-09-26T08:12:12.000Z",
       "sinFecha": false,
       "visto": "2026-09-26T09:00:32.976Z",
-      "relevancia": 42,
+      "relevancia": 28,
       "local": false,
       "publicadaPor": "ia",
       "publicadaCuando": "2026-09-26T08:53:21.927Z",
@@ -3800,7 +4224,6 @@
         "Canal 26",
         "Diario Popular",
         "Noticias Argentinas (NA)",
-        "0221",
         "La Opinión",
         "InfoRegión",
         "ANDigital",
@@ -3808,9 +4231,10 @@
         "Mi8 (Canal 8 Mar del Plata)",
         "Qué Digital",
         "Infobrisas (Radio Brisas)",
-        "NDEN – Noticias de Necochea",
         "La Nueva",
-        "Infoeme"
+        "0221",
+        "Infoeme",
+        "NDEN – Noticias de Necochea"
       ],
       "enlace": "https://www.lanacion.com.ar/sociedad/hay-alerta-amarilla-por-tormentas-y-lluvias-para-este-sabado-26-de-septiembre-las-provincias-nid26092026/",
       "teniaImagenLaFuente": true,
@@ -4560,12 +4984,10 @@
         "Municipalidad de Balcarce",
         "El Diario Balcarce",
         "Diario La Vanguardia",
+        "0223 (Mar del Plata)",
         "El Destape",
         "ANDigital",
-        "Infobrisas (Radio Brisas)",
-        "Sendero Regional",
-        "NDEN – Noticias de Necochea",
-        "La Verdad"
+        "Infobrisas (Radio Brisas)"
       ],
       "enlace": "http://www.informeseprimero.com.ar/2026/09/el-autodromo-juan-manuel-fangio-volvio.html",
       "teniaImagenLaFuente": true,
@@ -4629,14 +5051,18 @@
         "porque": "Lo contaron dos medios independientes.",
         "sugeridoPorIA": "ALTA"
       },
-      "slug": "el-autodromo-juan-manuel-fangio-reabre-sus-puertas-tras-quince-anos"
+      "slug": "el-autodromo-juan-manuel-fangio-reabre-sus-puertas-tras-quince-anos",
+      "foto": {
+        "archivo": "fotos-notas/1gnqz6n.jpg",
+        "credito": "Foto: Infórmese Primero (FM 104.9)"
+      }
     },
     {
       "id": "ctfgxx",
       "titulo": "La Marcha del Orgullo seguirá el 7 de noviembre tras un acuerdo con la Ciudad",
       "copete": "La Comisión Organizadora y el Gobierno porteño acordaron sostener la fecha original y coordinar la movilización con el operativo por la visita del papa León XIV, que llega al país al día siguiente.",
       "cuerpo": "La administración de Jorge Macri había pedido reprogramar la marcha porque necesitaba todas sus fuerzas y servicios para recibir al pontífice, que estará en el país del 8 al 11 de noviembre, y había propuesto pasarla al 21 de noviembre. Los organizadores rechazaron esa alternativa en una carta al jefe de Gobierno: argumentaron que la fecha estaba definida con anticipación y que muchos asistentes llegan de otras provincias y del exterior.\n\nTras días de negociación, ambas partes anunciaron el acuerdo. “El diálogo, la organización y una voluntad política compartida demostraron que, trabajando juntos, era posible garantizar ambos acontecimientos sin resignar derechos”, señaló la Comisión Organizadora.\n\nLa marcha recorrerá el centro porteño, con el Obelisco, la Avenida de Mayo y el Congreso como referencias. Durante esos días también se hará la Semana del Orgullo, con actividades culturales, deportivas y artísticas.",
-      "guion": null,
+      "guion": "Confirman que la Marcha del Orgullo se hara el siete de noviembre",
       "seccion": "Cultura y agenda",
       "medios": [
         "El Eco de Tandil",
@@ -4653,54 +5079,79 @@
       "visto": "2026-09-28T03:31:01.875Z",
       "relevancia": 58,
       "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
+      "publicadaPor": "ia",
+      "publicadaCuando": "2026-09-28T03:42:54.417Z",
       "temas": [],
       "como": "automatica",
+      "claves": [
+        "La Marcha del Orgullo se hará el siete de noviembre en la Ciudad de Buenos Aires.",
+        "El Gobierno porteño y la Comisión Organizadora alcanzaron un acuerdo para mantener la fecha.",
+        "La movilización coincidirá con el operativo previsto por la visita del papa León XIV.",
+        "La organización rechazó una propuesta inicial de trasladar el evento al veintiuno de noviembre."
+      ],
+      "seSabe": [
+        "La Marcha del Orgullo se llevará a cabo el siete de noviembre en la Ciudad de Buenos Aires, según el acuerdo entre la Comisión Organizadora y el Gobierno porteño.",
+        "El Gobierno de la Ciudad había propuesto inicialmente reprogramar la movilización para el veintiuno de noviembre.",
+        "La visita del papa León XIV comenzará el ocho de noviembre y motivó un operativo de seguridad y tránsito.",
+        "La marcha recorrerá puntos tradicionales como el Obelisco, la Avenida de Mayo y el Congreso."
+      ],
+      "textoRedes": "La Marcha del Orgullo se realizará el siete de noviembre en Buenos Aires tras un acuerdo entre la Comisión Organizadora y el Gobierno porteño. La fecha se mantuvo a pesar del operativo previsto por la visita del papa León XIV.",
+      "etiquetas": [
+        "Marcha del Orgullo",
+        "Ciudad de Buenos Aires",
+        "Comision Organizadora",
+        "Gobierno porteño",
+        "Papa León XIV"
+      ],
       "fuentesConsultadas": [
         {
           "medio": "Perfil",
           "enlace": "https://www.perfil.com/noticias/politica/marcha-del-orgullo-2026-el-gobierno-porteno-y-el-colectivo-lgbtiq-acordaron-mantener-la-fecha.phtml",
           "fecha": "2026-09-25T22:46:14.000Z",
           "oficial": false,
-          "aporte": null
+          "aporte": "Aportó detalles sobre el acuerdo entre la Comisión Organizadora y el Gobierno porteño, el rechazo a la fecha alternativa del veintiuno de noviembre y el recorrido por el centro porteño."
         },
         {
           "medio": "El Eco de Tandil",
           "enlace": "https://www.eleco.com.ar/nacionales/confirmaron-la-marcha-del-orgullo-para-el-7-de-noviembre-tras-alcanzar-un-acuerdo-con-el-gobierno-porteno",
           "fecha": "2026-09-27T16:32:45.000Z",
           "oficial": false,
-          "aporte": null
+          "aporte": "Confirmó la realización de la marcha para el siete de noviembre en la Ciudad de Buenos Aires."
         },
         {
           "medio": "Infobae",
           "enlace": "https://www.infobae.com/sociedad/2026/09/25/el-gobierno-porteno-y-el-colectivo-lgbtiq-llegaron-a-un-acuerdo-y-confirmaron-la-fecha-de-la-marcha-del-orgullo/",
           "fecha": "2026-09-25T23:57:44.000Z",
           "oficial": false,
-          "aporte": null
+          "aporte": "Ratificó el entendimiento entre la Comisión Organizadora y la administración porteña para mantener la fecha original."
         },
         {
           "medio": "Página/12",
           "enlace": "https://www.pagina12.com.ar/2026/09/25/marcha-del-orgullo-las-organizaciones-anunciaron-un-acuerdo-para-que-se-mantenga-el-7-de-noviembre/",
           "fecha": "2026-09-26T03:01:00.000Z",
           "oficial": false,
-          "aporte": null
+          "aporte": "Informó sobre la creación de una mesa de trabajo para compatibilizar la marcha con la visita papal."
         },
         {
           "medio": "A24",
           "enlace": "https://www.a24.com/actualidad/el-gobierno-porteno-y-la-organizacion-la-marcha-del-orgullo-alcanzaron-un-acuerdo-cuando-se-realizara-n1600498",
           "fecha": "2026-09-25T22:56:00.000Z",
           "oficial": false,
-          "aporte": null
+          "aporte": "Aportó datos sobre la coordinación del operativo por la visita del papa León XIV y el recorrido por el centro porteño."
         },
         {
           "medio": "El Marplatense",
           "enlace": "https://www.elmarplatense.com/caba-y-las-organizaciones-lgbtiq-acordaron-realizar-la-marcha-del-orgullo-el-7-de-noviembre",
           "fecha": "2026-09-26T12:14:06.000Z",
           "oficial": false,
-          "aporte": null
+          "aporte": "No aportó información adicional al no incluir texto en el resumen."
         }
       ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron seis medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
       "slug": "marcha-del-orgullo-2026-el-gobierno-porteno-y-el-colectivo-lgbtiq"
     },
     {
@@ -4960,6 +5411,116 @@
       "slug": "suramericanos-una-caida-y-golpe-de-levaggi-no-impidio-el-doble-podio"
     },
     {
+      "id": "1vrqpb6",
+      "titulo": "YPF aumenta uno por ciento el precio de sus combustibles",
+      "copete": "La petrolera estatal aplicó una suba del uno por ciento en sus combustibles desde este sábado. La medida se suma a los incrementos previos de otras compañías y responde al impacto internacional por el conflicto en Medio Oriente.",
+      "cuerpo": "La petrolera estatal YPF aplicó desde este sábado a las cero horas un incremento del uno por ciento en el precio de todos sus combustibles.\n\nEl presidente y CEO de la empresa, Horacio Marín, había anticipado la posibilidad de ajustes ante la tensión internacional. La suba dispuesta por la firma estatal se ubica por debajo de los incrementos de entre el dos y el cinco por ciento aplicados previamente por otras compañías privadas como Shell, Axion y Puma.\n\nDesde la compañía explicaron que se sostiene la política de micropricing para realizar ajustes específicos según la oferta, la demanda y las zonas geográficas, en el marco de la estrategia orientada a sostener el consumo frente a señales de caída en la demanda del interior del país.",
+      "guion": "Ypf aumenta uno por ciento el precio de sus combustibles",
+      "seccion": "Economía",
+      "medios": [
+        "Infórmese Primero (FM 104.9)",
+        "El Destape",
+        "Minuto Uno",
+        "Diario Popular",
+        "InfoRegión",
+        "QZ Noticias (Mar del Plata)",
+        "El Marplatense",
+        "Punto Noticias"
+      ],
+      "enlace": "https://www.eldestapeweb.com/economia/combustibles-aumentan-1-este-sabado-efectos-guerra-medio-oriente-2026925192425",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-25T22:24:25.000Z",
+      "sinFecha": false,
+      "visto": "2026-09-28T03:47:03.826Z",
+      "relevancia": 58,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "YPF aumentó uno por ciento sus combustibles desde este sábado.",
+        "La suba responde al impacto internacional del conflicto en Medio Oriente.",
+        "Otras compañías privadas aplicaron incrementos de entre el dos y el cinco por ciento."
+      ],
+      "seSabe": [
+        "YPF aplicó un aumento del uno por ciento en todos sus combustibles desde este sábado a las cero horas.",
+        "La compañía estatal vinculó la medida al impacto de la situación en Medio Oriente sobre el valor del petróleo.",
+        "Otras empresas del sector como Shell, Axion y Puma aplicaron subas previas de entre el dos y el cinco por ciento."
+      ],
+      "textoRedes": "YPF aplicó un aumento del uno por ciento en el precio de sus combustibles desde este sábado, tras las subas de otras petroleras y en un contexto internacional marcado por el conflicto en Medio Oriente.",
+      "etiquetas": [
+        "YPF",
+        "combustibles",
+        "aumento",
+        "petróleo"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Destape",
+          "enlace": "https://www.eldestapeweb.com/economia/combustibles-aumentan-1-este-sabado-efectos-guerra-medio-oriente-2026925192425",
+          "fecha": "2026-09-25T22:24:25.000Z",
+          "oficial": false,
+          "aporte": "Detalló los porcentajes de aumento, los valores internacionales del petróleo y los motivos vinculados al conflicto en Medio Oriente."
+        },
+        {
+          "medio": "Infórmese Primero (FM 104.9)",
+          "enlace": "http://www.informeseprimero.com.ar/2026/09/ypf-aumento-1-el-precio-de-sus.html",
+          "fecha": "2026-09-26T13:30:28.264Z",
+          "oficial": false,
+          "aporte": "Confirmó la aplicación de la suba desde este sábado a las cero horas."
+        },
+        {
+          "medio": "Minuto Uno",
+          "enlace": "https://www.minutouno.com/economia/ypf-aumenta-todos-sus-combustibles-este-sabado-cuanto-se-va-el-litro-nafta-n6326890",
+          "fecha": "2026-09-25T22:38:00.000Z",
+          "oficial": false,
+          "aporte": "Indicó que las compañías privadas aplicaron aumentos previos de entre el dos y el cinco por ciento."
+        },
+        {
+          "medio": "Diario Popular",
+          "enlace": "https://www.diariopopular.com.ar/economia/desde-este-sabado-ypf-aumenta-un-1-los-precios-sus-combustibles-n921548",
+          "fecha": "2026-09-26T10:06:00.000Z",
+          "oficial": false,
+          "aporte": "Aportó mención sobre la noticia sin texto adicional."
+        },
+        {
+          "medio": "InfoRegión",
+          "enlace": "https://www.inforegion.com.ar/2026/09/26/ypf-tambien-aumento-el-precio-de-sus-combustibles/",
+          "fecha": "2026-09-26T11:05:07.000Z",
+          "oficial": false,
+          "aporte": "Ratificó la aplicación de la suba de YPF en sintonía con otras petroleras y la política de micropricing."
+        },
+        {
+          "medio": "QZ Noticias (Mar del Plata)",
+          "enlace": "https://www.qznoticias.com/el-pais/ypf-aumenta-desde-hoy-un-1-el-precio-de-los-combustibles",
+          "fecha": "2026-09-26T12:01:57.000Z",
+          "oficial": false,
+          "aporte": "Aportó mención sobre la noticia sin texto adicional."
+        },
+        {
+          "medio": "El Marplatense",
+          "enlace": "https://www.elmarplatense.com/ypf-aplico-un-aumento-del-1-en-el-precio-de-sus-combustibles",
+          "fecha": "2026-09-26T13:41:39.000Z",
+          "oficial": false,
+          "aporte": "Aportó mención sobre la noticia sin texto adicional."
+        },
+        {
+          "medio": "Punto Noticias",
+          "enlace": "https://puntonoticias.com/ypf-aplicara-un-aumento-del-1-a-los-combustibles-desde-este-sabado/",
+          "fecha": "2026-09-26T12:40:53.000Z",
+          "oficial": false,
+          "aporte": "Aportó mención sobre la noticia sin texto adicional."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron 8 medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "ypf-aumenta-uno-por-ciento-el-precio-de-sus-combustibles"
+    },
+    {
       "id": "13eigya",
       "titulo": "La compra de dólares experimenta una baja en agosto",
       "copete": "La demanda de divisas por parte de las personas humanas registró una reducción respecto al mes anterior, según el último informe del Banco Central.",
@@ -5031,10 +5592,10 @@
     },
     {
       "id": "uxan4p",
-      "titulo": "El Banco Central frena la compra de divisas tras la suba del dólar",
-      "copete": "Ante el incremento del dólar y un pago al Fondo Monetario Internacional, el Banco Central interrumpió la adquisición de divisas. La medida busca evitar mayores presiones sobre el tipo de cambio.",
-      "cuerpo": "Desde el organismo explicaron que buscan incorporar divisas cuando exista oferta genuina sin alterar el precio de la moneda estadounidense.\n\nEn lo que va del año, la entidad acumuló compras por más de USD 14.300 millones, superando la meta anual fijada en USD 10..000 millones. Sin embargo, en los últimos siete días se produjo una baja en las reservas internacionales, que cerraron en USD 48.245 millones tras perder USD 600 millones en las últimas veinticuatro horas.\n\nPor su parte, el dólar mayorista subió seis pesos y cerró la semana a 1.525,50 pesos, acumulando tres jornadas consecutivas al alza, mientras que en el segmento minorista la cotización alcanzó los 1.545 pesos para la venta en el Banco Nación.",
-      "guion": "El Banco Central frena la compra de divisas tras la suba del dólar",
+      "titulo": "El Banco Central evita comprar divisas y las reservas bajan",
+      "copete": "Ante la suba del dólar, la autoridad monetaria se mantuvo al margen del mercado cambiario para evitar una mayor presión. Las reservas internacionales cerraron la semana en un menor nivel tras un pago al Fondo Monetario Internacional.",
+      "cuerpo": "El Banco Central de la República Argentina no compró divisas por cuarta vez en el año debido a la suba del dólar, con el objetivo de evitar una mayor presión sobre el tipo de cambio.\n\nEn paralelo, las reservas internacionales sufrieron una baja por un pago al Fondo Monetario Internacional cercano a los ochocientos millones de dólares en concepto de intereses. Por su parte, el dólar mayorista registró un incremento y alcanzó un nuevo máximo nominal en la última rueda de la semana.",
+      "guion": "El Banco Central evita comprar divisas y las reservas bajan",
       "seccion": "Economía",
       "medios": [
         "Infobae",
@@ -5049,25 +5610,16 @@
       "visto": "2026-09-26T03:30:38.768Z",
       "relevancia": 54,
       "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
+      "publicadaPor": "ia",
+      "publicadaCuando": "2026-09-28T03:42:54.417Z",
       "temas": [],
       "como": "automatica",
-      "seSabe": [
-        "El Banco Central no compró divisas por cuarta vez en el año.",
-        "Las reservas internacionales cerraron en USD 48.245 millones.",
-        "El Gobierno realizó un pago al FMI por USD 800 millones en concepto de intereses.",
-        "El dólar mayorista subió a $1.525,50 y el minorista cotizó a $1.545 en el Banco Nación."
-      ],
-      "noConfirmado": [
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "El Banco Central interrumpió la compra de divisas y las reservas cayeron tras un pago al Fondo Monetario Internacional, en una jornada donde el dólar registró una nueva suba.",
       "etiquetas": [
         "Banco Central",
-        "dólar",
-        "reservas",
-        "FMI"
+        "reservas internacionales",
+        "dolar",
+        "FMI",
+        "mercado cambiario"
       ],
       "fuentesConsultadas": [
         {
@@ -5075,33 +5627,48 @@
           "enlace": "https://www.infobae.com/economia/2026/09/25/ante-la-suba-del-dolar-el-banco-central-evito-comprar-divisas-por-tercera-vez-en-el-ano/",
           "fecha": "2026-09-25T21:21:55.000Z",
           "oficial": false,
-          "aporte": "Detalló la decisión del Banco Central de no comprar divisas, la caída de reservas por el pago al FMI y la evolución de la cotización del dólar."
+          "aporte": null
+        },
+        {
+          "medio": "Perfil",
+          "enlace": "https://www.perfil.com/noticias/economia/el-banco-central-termino-la-jornada-sin-comprar-dolares-y-las-reservas-cayeron-por-un-pago-al-fmi-a40.phtml",
+          "fecha": "2026-09-25T23:50:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "iProfesional",
+          "enlace": "https://www.iprofesional.com/finanzas/465299-el-bcra-no-compro-dolares-y-las-reservas-cayeron-600-millones-tras-un-pago-al-fmi",
+          "fecha": "2026-09-25T21:45:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "C5N",
+          "enlace": "https://www.c5n.com/economia/golpe-las-reservas-el-gobierno-pago-casi-us800-millones-al-fmi-y-el-banco-central-no-compro-dolares-n249955",
+          "fecha": "2026-09-25T21:53:00.000Z",
+          "oficial": false,
+          "aporte": null
         }
       ],
       "antecedentes": [
         {
-          "id": "17j8a37",
-          "titulo": "El Banco Central publica la tasa de interés de los plazos fijos",
-          "fecha": "2026-09-25T17:23:32.000Z",
-          "ruta": "/nota/el-banco-central-publica-la-tasa-de-interes-de-los-plazos-fijos-17j8a37"
+          "id": "1iqwljr",
+          "titulo": "Milei celebró la aprobación de la reforma de la carta orgánica del Banco Central: \"Comienza el fin de la inflación\"",
+          "fecha": "2026-09-24T21:44:04.000Z",
+          "ruta": "/nota/milei-celebro-la-aprobacion-de-la-reforma-de-la-carta-organica-del-1iqwljr"
         },
         {
-          "id": "3z7kvo",
-          "titulo": "Quiénes acompañaron a Milei y quiénes se opusieron a la reforma del Banco Central",
-          "fecha": "2026-09-24T22:35:06.000Z",
-          "ruta": "/nota/quienes-acompanaron-a-milei-y-quienes-se-opusieron-a-la-reforma-del-3z7kvo"
-        },
-        {
-          "id": "113bpe",
-          "titulo": "El Banco Central autoriza la llegada de un banco digital",
-          "fecha": "2026-09-24T22:34:54.000Z",
-          "ruta": "/nota/el-banco-digital-mas-grande-de-europa-desembarca-en-la-argentina-el-113bpe"
+          "id": "bsna1",
+          "titulo": "El Senado aprobó con cambios la reforma de la Carta Orgánica del Banco Central",
+          "fecha": "2026-09-24T20:17:00.000Z",
+          "ruta": "/nota/el-senado-aprobo-con-cambios-la-reforma-de-la-carta-organica-del-bsna1"
         }
       ],
       "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
+        "nivel": "ALTA",
+        "porque": "Lo contaron cuatro medios independientes.",
+        "sugeridoPorIA": "ALTA"
       },
       "slug": "el-banco-central-frena-la-compra-de-divisas-tras-la-suba-del-dolar"
     },
@@ -5167,185 +5734,6 @@
         "sugeridoPorIA": "MEDIA"
       },
       "slug": "reconocen-a-productores-de-papa-por-practicas-regenerativas"
-    },
-    {
-      "id": "1ft8o28",
-      "titulo": "Argentina pierde la final por penales y logra la medalla de plata",
-      "copete": "La selección argentina sub-19 cayó ante Paraguay en la definición desde los doce pasos tras igualar sin goles en Rosario. El equipo nacional cerró su participación en los Juegos Suramericanos con el segundo puesto.",
-      "cuerpo": "La selección argentina sub-19 de fútbol obtuvo la medalla de plata en los Juegos Suramericanos Santa Fe 2026 tras perder la final frente a Paraguay por cinco a cuatro en la tanda de penales. El encuentro decisivo se disputó en el estadio Marcelo Bielsa, en Rosario, luego de que ambos equipos igualaran sin goles durante los noventa minutos reglamentarios bajo la dirección técnica de Diego Placente.\n\nEn su camino hacia el partido definitorio, el conjunto nacional atravesó una fase de grupos ajustada donde debutó con una derrota por dos a uno ante el mismo rival, se recuperó con un triunfo por uno a cero frente a Uruguay y empató uno a uno con Venezuela gracias a un gol agónico de Ramiro Tulián. En las semifinales, el equipo superó a Perú por uno a cero con un tanto de Santiago Espíndola sobre el final, luego de una modificación en los cruces anunciada por la organización.",
-      "guion": "Argentina pierde la final por penales y logra la medalla de plata",
-      "seccion": "Fútbol",
-      "medios": [
-        "Infobae",
-        "Perfil",
-        "A24",
-        "Ámbito",
-        "El Eco de Tandil"
-      ],
-      "enlace": "https://www.a24.com/deportes/el-sub-19-argentina-perdio-paraguay-penales-y-se-quedo-la-medalla-plata-n1600457",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-25T20:19:00.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-28T02:26:47.869Z",
-      "relevancia": 74,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Argentina cayó por penales ante Paraguay en la final sub-19.",
-        "El partido terminó sin goles en el tiempo reglamentario en Rosario.",
-        "El equipo dirigido por Diego Placente obtuvo la medalla de plata.",
-        "La Albiceleste sumó su tercera presea histórica en la competición."
-      ],
-      "seSabe": [
-        "La selección argentina sub-19 perdió la final contra Paraguay por penales.",
-        "El partido se definió cinco a cuatro tras un empate sin goles en los noventa minutos.",
-        "El encuentro se disputó en el estadio Marcelo Bielsa de Rosario.",
-        "El equipo fue dirigido técnicamente por Diego Placente.",
-        "Argentina acumuló una nueva medalla de plata en los Juegos Suramericanos."
-      ],
-      "textoRedes": "La selección argentina sub-19 perdió la final por penales ante Paraguay y se quedó con la medalla de plata en los Juegos Suramericanos. El equipo dirigido por Diego Placente igualó sin goles en el tiempo reglamentario en Rosario.",
-      "etiquetas": [
-        "Selección Argentina",
-        "fútbol",
-        "Juegos Suramericanos",
-        "Rosario",
-        "medalla de plata"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "A24",
-          "enlace": "https://www.a24.com/deportes/el-sub-19-argentina-perdio-paraguay-penales-y-se-quedo-la-medalla-plata-n1600457",
-          "fecha": "2026-09-25T20:19:00.000Z",
-          "oficial": false,
-          "aporte": "Informó sobre el desarrollo del partido, los resultados previos del torneo y los antecedentes históricos."
-        },
-        {
-          "medio": "Infobae",
-          "enlace": "https://www.infobae.com/deportes/2026/09/25/la-seleccion-argentina-sub-19-disputara-la-final-ante-paraguay-en-los-juegos-suramericanos-hora-tv-y-posibles-formaciones/",
-          "fecha": "2026-09-25T20:44:45.000Z",
-          "oficial": false,
-          "aporte": "Confirmó el resultado de la final y la sede del encuentro en Rosario."
-        },
-        {
-          "medio": "Perfil",
-          "enlace": "https://www.perfil.com/noticias/deportes/la-sub-19-rozo-el-oro-pero-cayo-ante-paraguay-en-penales.phtml",
-          "fecha": "2026-09-26T07:07:03.000Z",
-          "oficial": false,
-          "aporte": "Aportó detalles sobre el desarrollo del juego en el estadio Marcelo Bielsa."
-        },
-        {
-          "medio": "Ámbito",
-          "enlace": "https://www.ambito.com/deportes/la-seleccion-argentina-sub-19-gano-la-medalla-plata-los-juegos-suramericanos-n6326853",
-          "fecha": "2026-09-25T20:53:00.000Z",
-          "oficial": false,
-          "aporte": "Mencionó la búsqueda de la tercera presea dorada en la historia de la competencia."
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron cuatro medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "argentina-pierde-la-final-por-penales-y-logra-la-medalla-de-plata"
-    },
-    {
-      "id": "5mxbmz",
-      "titulo": "YPF aumenta 1% sus combustibles, por debajo de Shell, Axion y Puma",
-      "copete": "La petrolera aplicó la suba en naftas y gasoil de todo el país desde las 0 del sábado 26 de septiembre. Las otras compañías habían aumentado entre 2% y 5% días antes.",
-      "cuerpo": "Con el ajuste, los precios de referencia de YPF por litro quedaron en $2.112 la Súper, $2.299 la Infinia y $2.392 la Infinia Diésel, con variaciones según la zona y la estación. La empresa atribuyó la suba a la extensión del conflicto en Medio Oriente, que volvió a empujar el precio internacional del petróleo: el Brent superaba los 104 dólares por barril y el WTI rondaba los 93.\n\nYPF mantiene desde abril un esquema de “buffer” que, según la compañía, busca evitar trasladar la volatilidad a los precios locales, y sigue aplicando el micropricing, con ajustes según la oferta y la demanda, la competencia, las franjas horarias, los corredores y las zonas geográficas.\n\nEl presidente y CEO de la empresa, Horacio Marín, había adelantado que si el barril se establecía en 100 dólares, “los consumidores vamos a tener que pagar por US$ 100”.",
-      "guion": null,
-      "seccion": "Economía",
-      "medios": [
-        "Infórmese Primero (FM 104.9)",
-        "El Destape",
-        "Minuto Uno",
-        "Diario Popular",
-        "0221",
-        "InfoRegión",
-        "QZ Noticias (Mar del Plata)",
-        "El Marplatense",
-        "Punto Noticias"
-      ],
-      "enlace": "https://www.0221.com.ar/nacional/ypf-se-sumo-los-aumentos-los-combustibles-y-ajusto-sus-precios-todo-el-pais-n134820",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-25T20:16:00.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-28T02:30:54.799Z",
-      "relevancia": 60,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "fuentesConsultadas": [
-        {
-          "medio": "0221",
-          "enlace": "https://www.0221.com.ar/nacional/ypf-se-sumo-los-aumentos-los-combustibles-y-ajusto-sus-precios-todo-el-pais-n134820",
-          "fecha": "2026-09-25T20:16:00.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Infórmese Primero (FM 104.9)",
-          "enlace": "http://www.informeseprimero.com.ar/2026/09/ypf-aumento-1-el-precio-de-sus.html",
-          "fecha": "2026-09-26T13:30:28.264Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "El Destape",
-          "enlace": "https://www.eldestapeweb.com/economia/combustibles-aumentan-1-este-sabado-efectos-guerra-medio-oriente-2026925192425",
-          "fecha": "2026-09-25T22:24:25.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Minuto Uno",
-          "enlace": "https://www.minutouno.com/economia/ypf-aumenta-todos-sus-combustibles-este-sabado-cuanto-se-va-el-litro-nafta-n6326890",
-          "fecha": "2026-09-25T22:38:00.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Diario Popular",
-          "enlace": "https://www.diariopopular.com.ar/economia/desde-este-sabado-ypf-aumenta-un-1-los-precios-sus-combustibles-n921548",
-          "fecha": "2026-09-26T10:06:00.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "InfoRegión",
-          "enlace": "https://www.inforegion.com.ar/2026/09/26/ypf-tambien-aumento-el-precio-de-sus-combustibles/",
-          "fecha": "2026-09-26T11:05:07.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "QZ Noticias (Mar del Plata)",
-          "enlace": "https://www.qznoticias.com/el-pais/ypf-aumenta-desde-hoy-un-1-el-precio-de-los-combustibles",
-          "fecha": "2026-09-26T12:01:57.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "El Marplatense",
-          "enlace": "https://www.elmarplatense.com/ypf-aplico-un-aumento-del-1-en-el-precio-de-sus-combustibles",
-          "fecha": "2026-09-26T13:41:39.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Punto Noticias",
-          "enlace": "https://puntonoticias.com/ypf-aplicara-un-aumento-del-1-a-los-combustibles-desde-este-sabado/",
-          "fecha": "2026-09-26T12:40:53.000Z",
-          "oficial": false,
-          "aporte": null
-        }
-      ],
-      "slug": "ypf-se-sumo-a-los-aumentos-de-los-combustibles-y-ajusto-sus-precios"
     },
     {
       "id": "7fmhve",
@@ -5419,6 +5807,54 @@
         "sugeridoPorIA": "MEDIA"
       },
       "slug": "advierten-por-una-falsa-convocatoria-laboral-de-mccain-en-balcarce"
+    },
+    {
+      "id": "ib1bom",
+      "titulo": "La AUH sube 1,66% en octubre y llega a $156.588 por hijo",
+      "copete": "La ANSES oficializó en el Boletín Oficial un aumento del 1,66% para todas sus prestaciones desde octubre. La Asignación Universal por Hijo pasa a $156.588 brutos, de los que se cobran unos $125.270 por mes.",
+      "cuerpo": "El 20% restante, unos $31.300 por hijo, queda retenido hasta que la familia presente la Libreta AUH, que acredita los controles de salud, las vacunas y la asistencia escolar. La AUH por discapacidad llega a $509.863 brutos, con un cobro directo de unos $407.900. La Asignación por Embarazo tiene el mismo valor que la AUH.\n\nLa suba sale de la fórmula de movilidad, que actualiza los montos según la inflación de dos meses antes: en este caso, la de agosto, que el INDEC había ubicado en 1,7%. Las resoluciones se publicaron el 23 de septiembre, y el haber mínimo jubilatorio pasa a unos $435.750.\n\nLos pagos se hacen según la terminación del DNI: arrancan el 8 de octubre con los documentos terminados en 0 y siguen hasta el 22, con los terminados en 9. La prestación alcanza a 2,5 millones de familias y 4,3 millones de menores.",
+      "guion": null,
+      "seccion": "Economía",
+      "medios": [
+        "La Nación",
+        "Infobae",
+        "Crónica"
+      ],
+      "enlace": "https://www.infobae.com/economia/2026/09/25/de-cuanto-sera-la-asignacion-universal-por-hijo-de-anses-en-octubre-2026/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-25T17:57:25.000Z",
+      "sinFecha": false,
+      "visto": "2026-09-28T03:47:03.826Z",
+      "relevancia": 44,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "fuentesConsultadas": [
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/economia/2026/09/25/de-cuanto-sera-la-asignacion-universal-por-hijo-de-anses-en-octubre-2026/",
+          "fecha": "2026-09-25T17:57:25.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/economia/asignacion-universal-por-hijo-de-anses-de-cuanto-es-la-auh-en-octubre-con-el-aumento-confirmado-nid15092026/",
+          "fecha": "2026-09-27T17:02:40.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Crónica",
+          "enlace": "https://www.cronica.com.ar/sociedad/auh-de-anses-en-octubre-confirman-calendario-de-pagos-aumento-y-extras/",
+          "fecha": "2026-09-27T10:00:00.000Z",
+          "oficial": false,
+          "aporte": null
+        }
+      ],
+      "slug": "de-cuanto-sera-la-asignacion-universal-por-hijo-de-anses-en-octubre"
     },
     {
       "id": "o84faj",
@@ -5553,43 +5989,37 @@
     },
     {
       "id": "ahxm98",
-      "titulo": "El riesgo país supera los seiscientos puntos y alcanza su nivel máximo en cinco meses",
-      "copete": "El indicador de JP Morgan trepó por encima de los seiscientos puntos básicos impulsado por la caída de los títulos soberanos. La suba se da en una jornada con baja en acciones y bonos.",
-      "cuerpo": "El indicador de riesgo soberano elaborado por JP Morgan escaló y superó la barrera de los seiscientos puntos básicos, el valor más alto registrado en los últimos cinco meses.\n\nLa tendencia alcista acumuló diez jornadas consecutivas de incremento, impulsada además por el rendimiento del bono de referencia de Estados Unidos y por el impacto negativo de los recientes datos de actividad económica y pobreza informados por el Indec. El presidente Javier Milei y el ministro de Economía, Luis Caputo, ratificaron desde Estados Unidos la continuidad del plan económico y aseguraron que existen fondos para afrontar los pagos.\n\nPara los mercados y los inversores, este escenario de valores elevados en el riesgo soberano limita las posibilidades de una colocación voluntaria de deuda en el plano internacional y refleja la inquietud en torno a los indicadores sociales y el nivel de actividad.",
-      "guion": "El riesgo pais supera los seiscientos puntos y alcanza su nivel maximo en cinco meses",
+      "titulo": "El riesgo país supera los seiscientos puntos y alcanza su nivel más alto",
+      "copete": "El indicador financiero superó la barrera de los seiscientos puntos básicos por la caída de los bonos soberanos. Esta suba impacta en la economía nacional y en la capacidad de financiamiento del Estado.",
+      "cuerpo": "El indicador de riesgo soberano escaló hasta superar la barrera de los seiscientos puntos básicos tras registrar diez jornadas consecutivas de alzas.\n\nEn paralelo, el presidente Javier Milei y el ministro de Economía, Luis Caputo, ratificaron durante su estadía en Estados Unidos que el plan económico no sufrirá modificaciones y que el país dispone de los fondos necesarios para afrontar los compromisos de deuda pública. Sin embargo, los inversores manifestaron preocupación por los recientes indicadores sociales y de actividad económica difundidos por el INDEC, los cuales mostraron un incremento en la pobreza y una retracción en el nivel de actividad durante julio.\n\nEste escenario de alta cotización en el índice financiero limita las posibilidades del Estado Nacional de evaluar una colocación de deuda voluntaria en los mercados internacionales. En el plano local, el índice Merval y los ADRs operaron con tendencia negativa.",
+      "guion": "El riesgo país supera los seiscientos puntos y alcanza su nivel más alto",
       "seccion": "Economía",
       "medios": [
         "La Nación",
         "Infobae",
         "C5N",
-        "Diario Popular",
-        "El Eco de Tandil"
+        "Diario Popular"
       ],
       "enlace": "https://www.diariopopular.com.ar/politica/el-riesgo-pais-supero-los-600-puntos-y-alcanzo-el-valor-mas-alto-cinco-meses-n921536",
       "teniaImagenLaFuente": true,
       "fecha": "2026-09-25T17:19:00.000Z",
       "sinFecha": false,
       "visto": "2026-09-28T01:48:54.790Z",
-      "relevancia": 58,
+      "relevancia": 48,
       "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
+      "publicadaPor": "ia",
+      "publicadaCuando": "2026-09-28T03:42:54.417Z",
       "temas": [],
       "como": "automatica",
-      "seSabe": [
-        "El riesgo país superó los seiscientos puntos básicos según el indicador de JP Morgan.",
-        "La suba se completó tras diez jornadas consecutivas de incremento.",
-        "El presidente Javier Milei y el ministro de Economía, Luis Caputo, ratificaron que el plan económico no sufrirá cambios."
-      ],
       "noConfirmado": [
-        "No se especificó la evolución futura que tendrán los títulos soberanos en las próximas ruedas."
+        "No se especificaron detalles adicionales sobre el impacto directo de esta suba financiera en la economía cotidiana de los municipios de la provincia de Buenos Aires."
       ],
-      "textoRedes": "El riesgo país superó los seiscientos puntos básicos tras una nueva caída de los títulos soberanos y alcanzó su valor más alto en cinco meses, en una jornada con bajas generalizadas para las acciones y los bonos.",
       "etiquetas": [
         "riesgo pais",
         "economia",
         "bonos",
-        "gobierno nacional"
+        "mercados",
+        "indec"
       ],
       "fuentesConsultadas": [
         {
@@ -5855,108 +6285,6 @@
       "slug": "espectadores-de-rawson-son-los-primeros-en-ingresar-al-autodromo-en"
     },
     {
-      "id": "7ohqni",
-      "titulo": "La jubilación mínima sube 1,66% en octubre y llega a $435.748,51",
-      "copete": "ANSES oficializó el aumento por la movilidad mensual, calculado sobre la inflación de agosto. Los pagos empiezan el 1 de octubre con las Pensiones No Contributivas y el 8 para quienes cobran la mínima.",
-      "cuerpo": "El ajuste quedó formalizado por la Resolución 284/2026, publicada en el Boletín Oficial. Con él, el haber máximo pasa a $2.932.174,85 y la Prestación Básica Universal a $199.335,05, mientras que la Asignación Universal por Hijo general queda en $156.588 por hijo.\n\nEl calendario para quienes cobran la mínima va del jueves 8 al jueves 22 de octubre según la terminación del DNI: el 0 cobra el 8, el 1 el 9, el 2 el 13, el 3 el 14, el 4 el 15, el 5 el 16, el 6 el 19, el 7 el 20, el 8 el 21 y el 9 el 22. Los haberes superiores se pagan del 23 al 29 de octubre.\n\nSobre el bono de 70.000 pesos, las fuentes no coinciden: una lo suma al haber mínimo, con lo que el total bruto llegaría a $505.748,51, y otra indica que el de octubre todavía no fue oficializado. Las liquidaciones se pueden consultar en Mi ANSES.",
-      "guion": null,
-      "seccion": "Economía",
-      "medios": [
-        "La Nación",
-        "El Cronista",
-        "El Destape",
-        "A24",
-        "C5N",
-        "Crónica",
-        "Canal 26",
-        "Zona Norte Diario"
-      ],
-      "enlace": "https://www.a24.com/previsional/anses-confirmo-el-aumento-y-el-calendario-octubre-cuando-cobran-los-jubilados-n1600337",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-25T15:05:00.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-28T03:31:01.875Z",
-      "relevancia": 58,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "fuentesConsultadas": [
-        {
-          "medio": "A24",
-          "enlace": "https://www.a24.com/previsional/anses-confirmo-el-aumento-y-el-calendario-octubre-cuando-cobran-los-jubilados-n1600337",
-          "fecha": "2026-09-25T15:05:00.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "La Nación",
-          "enlace": "https://www.lanacion.com.ar/economia/jubilaciones-de-anses-cuanto-se-cobra-en-octubre-2026-con-el-bono-y-el-aumento-confirmado-nid14092026/",
-          "fecha": "2026-09-27T17:02:43.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "La Nación",
-          "enlace": "https://www.lanacion.com.ar/economia/cuanto-cobran-de-minima-los-jubilados-de-la-anses-en-octubre-2026-con-el-aumento-oficial-nid23092026/",
-          "fecha": "2026-09-27T17:02:29.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "El Cronista",
-          "enlace": "https://www.cronista.com/economia-politica/aumento-confirmado-de-anses-cuanto-cobraran-los-jubilados-con-la-minima-en-octubre/",
-          "fecha": "2026-09-26T11:00:00.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "El Destape",
-          "enlace": "https://www.eldestapeweb.com/economia/cuanto-actualizacion-jubilados-pensionado-anses-octubre-2026-2026925182441",
-          "fecha": "2026-09-25T21:24:00.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "El Destape",
-          "enlace": "https://www.eldestapeweb.com/economia/jubilados-cuanto-cobran-haberes-minimo-maximo-anses-octubre-2026-2026925182151",
-          "fecha": "2026-09-25T21:21:51.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "C5N",
-          "enlace": "https://www.c5n.com/economia/en-que-fecha-cobraran-los-jubilados-y-pensionados-anses-octubre-2026-n249959",
-          "fecha": "2026-09-27T11:28:00.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Crónica",
-          "enlace": "https://www.cronica.com.ar/sociedad/con-el-bono-de-70-000-cuanto-cobran-los-jubilados-de-la-minima-en-octubre/",
-          "fecha": "2026-09-27T13:59:00.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Canal 26",
-          "enlace": "https://www.canal26.com/economia/2026/09/26/anses-cambia-el-bono-de-octubre-para-jubilados-quienes-cobran-70000-quienes-reciben-menos-y-el-nuevo-tope/",
-          "fecha": "2026-09-26T11:20:00.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Zona Norte Diario",
-          "enlace": "https://www.zonanortediario.com.ar/27/09/2026/anses-cuanto-cobraran-los-jubilados-en-octubre-y-el-calendario-completo-segun-el-dni/",
-          "fecha": "2026-09-27T13:07:38.000Z",
-          "oficial": false,
-          "aporte": null
-        }
-      ],
-      "slug": "anses-confirmo-el-aumento-y-el-calendario-de-octubre-cuando-cobran"
-    },
-    {
       "id": "56y0ry",
       "titulo": "La Escuela Municipal de Deporte Adaptado compite en Mar del Plata",
       "copete": "Equipos balcarceños lograron podios en un certamen de fútbol en Mar del Plata. Además, nadadores locales participaron días atrás en Necochea.",
@@ -6048,10 +6376,10 @@
         "La Nación",
         "Infobae",
         "Perfil",
-        "Página/12",
         "TyC Sports",
         "Olé",
-        "Clarín"
+        "Clarín",
+        "Página/12"
       ],
       "enlace": "https://442.perfil.com/noticias/tenis/francisco-cerundolo-debuto-en-la-laver-cup-2026-con-derrota-ante-casper-ruud.phtml",
       "teniaImagenLaFuente": true,
@@ -6197,7 +6525,7 @@
       "titulo": "Argentina cierra los Juegos Suramericanos segunda, con 293 medallas",
       "copete": "La delegación, de 658 deportistas, ganó 81 oros, 87 platas y 125 bronces en Santa Fe 2026. Quedó detrás de Brasil, que sumó 312 medallas, y delante de Colombia.",
       "cuerpo": "Los Juegos terminaron el sábado 26 de septiembre, después de dos semanas de competencia con sedes principales en Rosario, Santa Fe capital y Rafaela, y más de 4.000 atletas de 15 países. Brasil encabezó el medallero con 122 oros y Colombia fue tercera con 192 preseas.\n\nLa cosecha argentina superó con amplitud las 197 medallas de la edición de 2022, cuando el país había terminado tercero. Las 81 doradas son la mejor marca en ese rubro desde los Juegos que la Argentina organizó en Buenos Aires en 2006. La natación fue el deporte que más aportó, con 28 medallas, seguida por el atletismo (16), el canotaje de velocidad (13) y la gimnasia artística (12).\n\nEn los deportes de equipo, Las Leonas le ganaron 5 a 0 a Chile en hockey femenino, Los Leones ganaron 3 a 1 en la rama masculina y Los Gladiadores se quedaron con el oro en handball. Varias disciplinas entregaron plazas para los Juegos Panamericanos Lima 2027.",
-      "guion": null,
+      "guion": "Argentina termina segunda en los Juegos Suramericanos Santa Fe dos mil veintiséis",
       "seccion": "Deportes",
       "medios": [
         "QZ Noticias (Mar del Plata)",
@@ -6214,11 +6542,10 @@
         "Mi8 (Canal 8 Mar del Plata)",
         "Infobrisas (Radio Brisas)",
         "Punto Noticias",
-        "Radio 10 Mar del Plata (FM 105.5)",
         "0223 (Mar del Plata)",
         "Infocielo",
-        "Bolavip Argentina",
-        "CADA (Confederación Argentina de Atletismo)"
+        "Radio 10 Mar del Plata (FM 105.5)",
+        "Bolavip Argentina"
       ],
       "enlace": "https://442.perfil.com/noticias/polideportivo/juegos-suramericanos-santa-fe-2026-la-agenda-de-argentina-para-hoy.phtml",
       "teniaImagenLaFuente": true,
@@ -6227,66 +6554,80 @@
       "visto": "2026-09-27T23:28:54.122Z",
       "relevancia": 58,
       "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
+      "publicadaPor": "ia",
+      "publicadaCuando": "2026-09-28T03:32:34.329Z",
       "temas": [],
       "como": "automatica",
+      "claves": [
+        "Los Juegos Suramericanos finalizaron el sábado 26 de septiembre.",
+        "Argentina terminó segunda en el medallero con 293 preseas.",
+        "Brasil lideró la competencia y Colombia ocupó el tercer lugar.",
+        "La delegación nacional estuvo compuesta por 658 atletas."
+      ],
+      "textoRedes": "Argentina finalizó en el segundo puesto del medallero general en los Juegos Suramericanos Santa Fe 2026 tras cosechar 293 medallas. La delegación nacional estuvo integrada por 658 atletas en una competencia que lideró Brasil.",
+      "etiquetas": [
+        "Juegos Suramericanos",
+        "Santa Fe 2026",
+        "deportes",
+        "medallero",
+        "Argentina"
+      ],
       "fuentesConsultadas": [
         {
           "medio": "Perfil",
           "enlace": "https://442.perfil.com/noticias/polideportivo/juegos-suramericanos-santa-fe-2026-la-agenda-de-argentina-para-hoy.phtml",
           "fecha": "2026-09-25T11:53:00.000Z",
           "oficial": false,
-          "aporte": null
+          "aporte": "Aportó información sobre el desarrollo de la penúltima jornada y los horarios de las finales de atletismo y otros deportes."
         },
         {
           "medio": "QZ Noticias (Mar del Plata)",
           "enlace": "https://www.qznoticias.com/juegos-suramericanos-santa-fe-2026/mar-del-plata-brillo-en-santa-fe-con-24-medallas",
           "fecha": "2026-09-27T19:28:20.000Z",
           "oficial": false,
-          "aporte": null
+          "aporte": "Confirmó la finalización de los Juegos y el total de medallas obtenidas por la delegación argentina."
         },
         {
           "medio": "La Nación",
           "enlace": "https://www.lanacion.com.ar/deportes/asi-quedo-el-medallero-de-los-juegos-suramericanos-santa-fe-2026-con-la-argentina-en-el-segundo-nid26092026/",
           "fecha": "2026-09-26T22:43:58.000Z",
           "oficial": false,
-          "aporte": null
+          "aporte": "Detalló que Brasil quedó en lo más alto del medallero con 312 medallas y que Colombia ocupó el tercer puesto."
         },
         {
           "medio": "La Nación",
           "enlace": "https://www.lanacion.com.ar/deportes/el-medallero-de-los-juegos-suramericanos-santa-fe-2026-nid16092026/",
           "fecha": "2026-09-26T11:35:53.000Z",
           "oficial": false,
-          "aporte": null
+          "aporte": "Indicó las fechas de realización del evento y las ciudades donde se concentraron las actividades."
         },
         {
           "medio": "La Nación",
           "enlace": "https://www.lanacion.com.ar/deportes/asi-esta-el-medallero-de-los-juegos-suramericanos-santa-fe-2026-tras-el-dia-13-nid25092026/",
           "fecha": "2026-09-26T05:13:11.000Z",
           "oficial": false,
-          "aporte": null
+          "aporte": "Señaló que participaron más de 4.000 deportistas de 15 países de la región."
         },
         {
           "medio": "Infobae",
           "enlace": "https://www.infobae.com/deportes/2026/09/26/como-esta-argentina-en-el-medallero-de-los-juegos-suramericanos-santa-fe-2026-en-el-ultimo-dia-de-competencia-el-listado-historico/",
           "fecha": "2026-09-26T20:20:18.000Z",
           "oficial": false,
-          "aporte": null
+          "aporte": "Precisó el desglose de las preseas obtenidas por la delegación albiceleste y el liderazgo de Brasil."
         },
         {
           "medio": "TN (Todo Noticias)",
           "enlace": "https://tn.com.ar/deportes/polideportivo/2026/09/26/juegos-suramericanos-ultimo-dia-en-vivo-resultados-medallas-y-noticias-de-argentina/",
           "fecha": "2026-09-26T23:54:38.000Z",
           "oficial": false,
-          "aporte": null
+          "aporte": "Transmitió la cobertura en vivo y el resumen de la jornada de cierre."
         },
         {
           "medio": "TN (Todo Noticias)",
           "enlace": "https://tn.com.ar/deportes/2026/09/14/medallero-de-los-juegos-suramericanos-santa-fe-2026-tabla-resultados-y-como-le-va-a-la-argentina/",
           "fecha": "2026-09-26T22:24:54.000Z",
           "oficial": false,
-          "aporte": null
+          "aporte": "Informó que los Juegos duraron 14 días y detalló las tres ciudades cabecera."
         },
         {
           "medio": "El Destape",
@@ -6387,6 +6728,27 @@
           "aporte": null
         },
         {
+          "medio": "Ecos Diarios (Necochea)",
+          "enlace": "https://elecos.com.ar/sabado-26-de-septiembre-de-2026-1",
+          "fecha": "2026-09-26T03:05:32.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Bolavip Argentina",
+          "enlace": "https://bolavip.com/ar/polideportivo/argentina-gano-293-medallas-en-los-juegos-suramericanos-como-quedo-el-ranking",
+          "fecha": "2026-09-26T23:13:34.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "CADA (Confederación Argentina de Atletismo)",
+          "enlace": "https://cada-atletismo.org/medallas-argentinas-atletismo-juegos-suramericanos-santa-fe-2026/",
+          "fecha": "2026-09-26T15:32:52.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
           "medio": "0223 (Mar del Plata)",
           "enlace": "https://www.0223.com.ar/nota/2026-9-27-9-29-0-mar-del-plata-brillo-en-santa-fe-los-marplatenses-que-ganaron-24-medallas-en-los-juegos-suramericanos",
           "fecha": "2026-09-27T12:29:00.000Z",
@@ -6406,22 +6768,33 @@
           "fecha": "2026-09-27T13:54:16.000Z",
           "oficial": false,
           "aporte": null
-        },
-        {
-          "medio": "Bolavip Argentina",
-          "enlace": "https://bolavip.com/ar/polideportivo/argentina-gano-293-medallas-en-los-juegos-suramericanos-como-quedo-el-ranking",
-          "fecha": "2026-09-26T23:13:34.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "CADA (Confederación Argentina de Atletismo)",
-          "enlace": "https://cada-atletismo.org/medallas-argentinas-atletismo-juegos-suramericanos-santa-fe-2026/",
-          "fecha": "2026-09-26T15:32:52.000Z",
-          "oficial": false,
-          "aporte": null
         }
       ],
+      "antecedentes": [
+        {
+          "id": "1ch74gj",
+          "titulo": "Un balcarceño integró el equipo arbitral de los Juegos Suramericanos Santa Fe 2026",
+          "fecha": "2026-09-22T19:37:23.000Z",
+          "ruta": "/nota/un-balcarceno-integro-el-equipo-arbitral-de-los-juegos-suramericanos-1ch74gj"
+        },
+        {
+          "id": "1tqxkgi",
+          "titulo": "Ariel Bilbao integró el equipo arbitral de tiro en los Juegos Suramericanos Santa Fe 2026",
+          "fecha": "2026-09-22T15:28:50.300Z",
+          "ruta": "/nota/ariel-bilbao-integro-el-equipo-arbitral-de-tiro-en-los-juegos-1tqxkgi"
+        },
+        {
+          "id": "12y7w4i",
+          "titulo": "Con un gol sobre el final, la selección argentina Sub 19 le ganó 1-0 a Perú y se clasificó a la final de los Juegos Suramericanos",
+          "fecha": "2026-09-23T22:04:51.000Z",
+          "ruta": "/nota/con-un-gol-sobre-el-final-la-seleccion-argentina-sub-19-le-gano-1-0-a-12y7w4i"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron 20 medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
       "slug": "juegos-suramericanos-santa-fe-2026-la-agenda-de-argentina-para-hoy"
     },
     {
@@ -6528,9 +6901,9 @@
     }
   ],
   "secciones": [
+    "Economía",
     "Balcarce",
     "Automovilismo",
-    "Economía",
     "Agro",
     "Fútbol",
     "Política",
@@ -6566,7 +6939,7 @@
       "temp": 11,
       "sensacion": 8,
       "humedad": 95,
-      "viento": 16,
+      "viento": 14,
       "rumbo": "NE",
       "cielo": "Nublado",
       "esDeDia": false
@@ -6949,12 +7322,6 @@
       "motivo": "necesita ojo humano: \"adolescente\", en el texto completo de la fuente (visto al reescribir)"
     },
     {
-      "id": "1c0r59y",
-      "titulo": "Condenaron a los asesinos del ex Puma Federico Martín…",
-      "seccion": "Argentina",
-      "motivo": "necesita ojo humano: \"asesinato\""
-    },
-    {
       "id": "3h6frb",
       "titulo": null,
       "seccion": "Argentina",
@@ -6965,6 +7332,12 @@
       "titulo": "Acusan a un influencer de matar a cientos de aves…",
       "seccion": "Argentina",
       "motivo": "necesita ojo humano: \"denuncia\""
+    },
+    {
+      "id": "ki3zjp",
+      "titulo": "La reacción de la familia de Federico Martín Aramburu tras…",
+      "seccion": "Deportes",
+      "motivo": "necesita ojo humano: \"acusado\""
     },
     {
       "id": "l0jmg5",
@@ -6997,5 +7370,5 @@
       "motivo": "necesita ojo humano: \"niño\""
     }
   ],
-  "esperandoCuerpo": 7
+  "esperandoCuerpo": 4
 }
