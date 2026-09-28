@@ -138,6 +138,18 @@ test('lo que una persona sacó de circulación no se poda: si la nota vuelve, no
   assert.deepEqual(Object.keys(podadas).sort(), ['bloqueada', 'descartada']);
 });
 
+test('lo que espera a una persona y nadie aprobó se va a la semana', () => {
+  const ahora = Date.parse('2026-11-30T12:00:00Z');
+  const dias = (n) => new Date(ahora - n * 86400000).toISOString();
+  const podadas = podarDecisiones({
+    reciente: { estado: 'pendiente', por: 'ia', cuando: dias(6) },
+    vieja: { estado: 'pendiente', por: 'ia', cuando: dias(8) },
+    viejaDeUnaPersona: { estado: 'pendiente', por: 'hernan', cuando: dias(8) },
+    publicada: { estado: 'publicada', por: 'hernan', cuando: dias(8) },
+  }, { ahora });
+  assert.deepEqual(Object.keys(podadas).sort(), ['publicada', 'reciente']);
+});
+
 test('el servidor poda al exportar decisiones.json', () => {
   assert.match(leer('panel/servidor.mjs'), /Object\.entries\(podarDecisiones\(estado\.decisiones\)\)/);
 });

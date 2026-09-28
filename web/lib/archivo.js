@@ -43,6 +43,36 @@ export function idsRetiradosAMano(json) {
   return new Set(Object.keys(notas).filter((id) => notas[id] && notas[id].motivo));
 }
 
+/** Cuántos días se guarda una nota retirada a mano. */
+export const DIAS_DE_RETIRADAS = 7;
+
+/**
+ * La lista de retiradas sin las de más de DIAS_DE_RETIRADAS (28/09, Hernán:
+ * "para no juntar información sin sentido"). Pasada una semana, una nota ya no
+ * se puede estrenar (llegaTarde), así que la lista no la necesita. Se quedan las
+ * que la ingesta todavía trae (enLaIngesta): mientras un feed la muestre, la
+ * lista es lo único que la frena. Sin fecha (`cuando`), también se quedan.
+ * `hoy` es el día de Balcarce, "AAAA-MM-DD".
+ */
+export function podarRetiradas(json, { hoy, dias = DIAS_DE_RETIRADAS, enLaIngesta = new Set() } = {}) {
+  const notas = json && typeof json === 'object' && json.notas && typeof json.notas === 'object' ? json.notas : {};
+  const limite = Date.parse(`${hoy}T00:00:00Z`) - dias * 86400000;
+  const quedan = {};
+  const quitadas = [];
+  for (const [id, n] of Object.entries(notas)) {
+    const t = Date.parse(`${String(n?.cuando ?? '').slice(0, 10)}T00:00:00Z`);
+    if (Number.isFinite(t) && t < limite && !enLaIngesta.has(id)) quitadas.push(id);
+    else quedan[id] = n;
+  }
+  return { json: { ...json, notas: quedan }, quitadas };
+}
+
+/** La lista de retiradas como se guarda: una nota por renglón. */
+export function comoRetiradasJson(json) {
+  const lineas = Object.entries(json.notas ?? {}).map(([id, n]) => `${JSON.stringify(id)}:${JSON.stringify(n)}`);
+  return `{"notas":{\n${lineas.join(',\n')}\n}}\n`;
+}
+
 /** Los campos que se pueden corregir a mano en web/data/correcciones.json.
  *  El cuerpo, desde el 27/09: Hernán pidió que Claude escriba el de las notas
  *  aprobadas que esperaban a Gemini ("hacé todo con Claude"). Se escribe con

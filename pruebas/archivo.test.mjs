@@ -14,7 +14,7 @@ import path from 'node:path';
 import { rutaDeNota, parteDeNota, idDeRuta, destinoDesde404 } from '../web/lib/ruta.js';
 import {
   vigenteEnPortada, slugsConocidos, fijarSlug, actualizarArchivo, idsEnRedes, HORAS_EN_PORTADA,
-  idsRetiradosAMano,
+  idsRetiradosAMano, podarRetiradas, comoRetiradasJson,
 } from '../web/lib/archivo.js';
 
 // ------------------------------------------ lo que se sacó a mano (27/09)
@@ -30,6 +30,28 @@ test('las notas retiradas a mano salen del archivo y una lista rota no retira na
   assert.equal(idsRetiradosAMano({ notas: 'roto' }).size, 0);
   const archivo = [{ id: 'a', titulo: 'Tigre suelto en México', local: true, fecha: new Date().toISOString() }, { id: 'c', titulo: 'Balcarce', local: true, fecha: new Date().toISOString() }];
   assert.deepEqual(actualizarArchivo({ archivo, retiradas: ids }).map((n) => n.id), ['c']);
+});
+
+test('las retiradas de más de una semana salen de la lista, salvo las que la ingesta todavía trae', () => {
+  const json = { notas: {
+    nueva: { motivo: 'm', cuando: '2026-10-01', por: 'p' },
+    justo: { motivo: 'm', cuando: '2026-09-28', por: 'p' },
+    vieja: { motivo: 'm', cuando: '2026-09-27', por: 'p' },
+    viejaEnElFeed: { motivo: 'm', cuando: '2026-09-20', por: 'p' },
+    sinFecha: { motivo: 'm', por: 'p' },
+  } };
+  const { json: podado, quitadas } = podarRetiradas(json, { hoy: '2026-10-05', enLaIngesta: new Set(['viejaEnElFeed']) });
+  assert.deepEqual(quitadas, ['vieja']);
+  assert.deepEqual(Object.keys(podado.notas).sort(), ['justo', 'nueva', 'sinFecha', 'viejaEnElFeed']);
+  assert.deepEqual(JSON.parse(comoRetiradasJson(podado)), podado);
+  assert.equal(podarRetiradas(null, { hoy: '2026-10-05' }).quitadas.length, 0);
+});
+
+test('la poda de retiradas corre los lunes en la nube y el workflow guarda el archivo', () => {
+  const script = fs.readFileSync(new URL('../web/scripts/generar-datos.mjs', import.meta.url), 'utf8');
+  assert.match(script, /enLaNube && diaSemanaAR\(\) === 1/);
+  const flujo = fs.readFileSync(new URL('../.github/workflows/actualizar.yml', import.meta.url), 'utf8');
+  assert.match(flujo, /git add [^\n]*web\/data\/retiradas\.json/);
 });
 
 test('la lista de retiradas del repositorio está bien armada: cada una con motivo, fecha y quién', () => {

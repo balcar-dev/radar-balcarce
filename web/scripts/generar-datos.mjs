@@ -64,8 +64,9 @@ import { cuentaDelDia, anotarDia, comoHistoriaJson as comoNotasPorDiaJson } from
 import {
   vigenteEnPortada, slugsConocidos, fijarSlug, actualizarArchivo, idsEnRedes, sinPuntaje, comoArchivoJson,
   idsRetiradosAMano, correccionesAMano, conCorreccion, fechaDeLaNota, llegaTarde,
-  esDeLoQueNuncaSePublica, pierdeLaPagina,
+  esDeLoQueNuncaSePublica, pierdeLaPagina, podarRetiradas, comoRetiradasJson,
 } from '../lib/archivo.js';
+import { diaAR, diaSemanaAR } from '../../ingesta/zona.mjs';
 import { esperaSoloPorCantidad } from '../../ingesta/ingesta.mjs';
 import { conFotosDelBanco } from './fotos-notas.mjs';
 import { actualizarAgenda, comoAgendaJson } from '../lib/eventos.js';
@@ -330,6 +331,20 @@ if (enLaNube) {
   });
   const nuevas = Object.keys(reescritas).filter((id) => !previas[id]).length;
   if (nuevas) console.log(`  ${nuevas} notas reescritas con IA en esta corrida`);
+}
+
+// Los lunes, en la nube, la lista de retiradas pierde las de más de una semana
+// (lib/archivo.js, podarRetiradas). Una vez por semana y no en cada corrida:
+// así el archivo cambia sólo ese día y no choca con lo que se cargue a mano.
+if (enLaNube && diaSemanaAR() === 1) {
+  const ruta = path.join(AQUI, '..', 'data', 'retiradas.json');
+  const { json, quitadas } = podarRetiradas(leerJson(ruta, null), {
+    hoy: diaAR(), enLaIngesta: new Set((ultima.notas ?? []).map((n) => n.id)),
+  });
+  if (quitadas.length) {
+    fs.writeFileSync(ruta, comoRetiradasJson(json), 'utf8');
+    console.log(`  retiradas: ${quitadas.length} de más de una semana, fuera de la lista`);
+  }
 }
 
 // Se escribe siempre que falte (el workflow lo suma con `git add`) o cambie.

@@ -54,6 +54,9 @@ export function conTextoCorregido(previo = {}, nuevo = {}) {
 // notas que la ingesta trae ese día (web/scripts/generar-datos.mjs busca por
 // id de nota). Una nota de hace dos meses ya no vuelve a aparecer.
 export const DIAS_DE_DECISIONES = 60;
+/** Lo que quedó esperando a una persona (amarillo) y nadie aprobó se va a la
+ *  semana (28/09, Hernán: "para no juntar información sin sentido"). */
+export const DIAS_DE_PENDIENTES = 7;
 
 // Lo que una persona sacó de circulación se guarda igual, sin importar la
 // fecha: si una portada que no fecha sus notas vuelve a mostrar una vieja,
@@ -64,8 +67,10 @@ const SACADAS_A_MANO = new Set(['descartada', 'bloqueada', 'archivada']);
  *  (`cuando`) se conservan: no hay cómo saber si son viejas. */
 export function podarDecisiones(decisiones, { ahora = Date.now(), dias = DIAS_DE_DECISIONES } = {}) {
   const limite = ahora - dias * 86400000;
+  const limitePendientes = ahora - DIAS_DE_PENDIENTES * 86400000;
   return Object.fromEntries(Object.entries(decisiones ?? {}).filter(([, d]) => {
     const t = Date.parse(d?.cuando ?? '');
+    if (Number.isFinite(t) && d.estado === 'pendiente' && t < limitePendientes) return false;
     if (!Number.isFinite(t) || t >= limite) return true;
     const humana = !!d.por && d.por !== 'ia';
     return humana && SACADAS_A_MANO.has(d.estado);

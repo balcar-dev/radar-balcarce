@@ -410,7 +410,10 @@ identificador, tiene que decir por qué (sin `motivo` no vale):
 ```
 
 La nota no sale en ninguna lista y **pierde su página**, aunque la ingesta la
-vuelva a traer (`idsRetiradosAMano`, `web/lib/archivo.js`). El 28/09 había 293.
+vuelva a traer (`idsRetiradosAMano`, `web/lib/archivo.js`). El 28/09 había 294.
+No se guardan para siempre: los lunes, en la nube, salen de la lista las de más
+de 7 días que la ingesta ya no trae (`podarRetiradas`, regla 69); a esa altura
+la nota ya no se puede estrenar.
 
 **`web/data/correcciones.json`: corregir una nota.** Se puede cambiar
 `titulo`, `copete`, `seccion` o `cuerpo` (`CAMPOS_CORREGIBLES`), siempre con
