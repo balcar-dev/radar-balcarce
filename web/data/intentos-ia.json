@@ -212,9 +212,9 @@
   "fuentes": 1
  },
  "14iq63v": {
-  "intentos": 1,
-  "ultimo": "2026-09-28T18:05:27.574Z",
-  "motivo": "título o bajada: 1 problema (nombre): el copete nombra a \"municipalidad\" y la fuente no"
+  "intentos": 2,
+  "ultimo": "2026-09-28T18:33:26.201Z",
+  "motivo": "cuerpo: 1 problema (copia): copia 16 palabras seguidas del original; sin esas oraciones quedan 61 palabras"
  },
  "14jovf6": {
   "intentos": 1,
@@ -272,6 +272,11 @@
   "intentos": 1,
   "ultimo": "2026-09-28T12:34:48.436Z",
   "motivo": "con cuerpo"
+ },
+ "155fqzp": {
+  "intentos": 1,
+  "ultimo": "2026-09-28T18:33:26.201Z",
+  "motivo": "título o bajada: 2 problemas (numero): el titulo dice 30.000.000 y la fuente no lo dice"
  },
  "159jwak": {
   "intentos": 1,
@@ -771,6 +776,11 @@
   "ultimo": "2026-09-26T03:00:42.173Z",
   "motivo": "con cuerpo"
  },
+ "1fp9m4l": {
+  "intentos": 1,
+  "ultimo": "2026-09-28T18:33:26.201Z",
+  "motivo": "con cuerpo"
+ },
  "1fq9x2v": {
   "intentos": 3,
   "ultimo": "2026-09-27T23:24:43.763Z",
@@ -1021,6 +1031,11 @@
  "1k29v7p": {
   "intentos": 2,
   "ultimo": "2026-09-28T03:47:07.289Z",
+  "motivo": "con cuerpo"
+ },
+ "1k34j05": {
+  "intentos": 1,
+  "ultimo": "2026-09-28T18:33:26.201Z",
   "motivo": "con cuerpo"
  },
  "1k5mdvt": {
@@ -1490,8 +1505,8 @@
   "motivo": "sin material"
  },
  "1tm8af6": {
-  "intentos": 1,
-  "ultimo": "2026-09-28T17:32:02.999Z",
+  "intentos": 2,
+  "ultimo": "2026-09-28T18:33:26.201Z",
   "motivo": "título o bajada: 1 problema (negacion): la fuente niega algo en el título y el texto nuevo no"
  },
  "1tqlbld": {
@@ -1618,6 +1633,11 @@
  "1vjoknp": {
   "intentos": 1,
   "ultimo": "2026-09-25T12:12:18.091Z",
+  "motivo": "con cuerpo"
+ },
+ "1vm79z5": {
+  "intentos": 1,
+  "ultimo": "2026-09-28T18:33:26.201Z",
   "motivo": "con cuerpo"
  },
  "1voarit": {
@@ -1816,9 +1836,9 @@
   "motivo": "título o bajada: 2 problemas (numero): el copete dice 60 y la fuente no lo dice"
  },
  "37t3r4": {
-  "intentos": 1,
-  "ultimo": "2026-09-28T18:05:27.574Z",
-  "motivo": "Gemini: Bad Unicode escape in JSON at position 734 (line 1 column 735)"
+  "intentos": 2,
+  "ultimo": "2026-09-28T18:33:26.201Z",
+  "motivo": "con cuerpo"
  },
  "3aozzo": {
   "intentos": 1,
@@ -1838,6 +1858,11 @@
  "3vjab8": {
   "intentos": 1,
   "ultimo": "2026-09-27T12:31:15.920Z",
+  "motivo": "con cuerpo"
+ },
+ "3y4pz2": {
+  "intentos": 1,
+  "ultimo": "2026-09-28T18:33:26.201Z",
   "motivo": "con cuerpo"
  },
  "45w2kj": {
@@ -2051,9 +2076,9 @@
   "motivo": "con cuerpo"
  },
  "91pthk": {
-  "intentos": 1,
-  "ultimo": "2026-09-28T18:05:27.574Z",
-  "motivo": "título o bajada: 3 problemas (numero): el titulo dice 2 y la fuente no lo dice"
+  "intentos": 2,
+  "ultimo": "2026-09-28T18:33:26.201Z",
+  "motivo": "título o bajada: 2 problemas (antecedente): el titulo usa 2.000, que sale de una nota anterior, como si fuera de hoy"
  },
  "924pwu": {
   "intentos": 1,
@@ -2152,6 +2177,11 @@
   "ultimo": "2026-09-27T18:30:50.246Z",
   "motivo": "con cuerpo"
  },
+ "bclpti": {
+  "intentos": 1,
+  "ultimo": "2026-09-28T18:33:26.201Z",
+  "motivo": "con cuerpo"
+ },
  "bktd2v": {
   "intentos": 1,
   "ultimo": "2026-09-27T10:00:45.205Z",
@@ -2168,8 +2198,8 @@
   "motivo": "con cuerpo"
  },
  "by46mt": {
-  "intentos": 1,
-  "ultimo": "2026-09-28T03:02:17.601Z",
+  "intentos": 2,
+  "ultimo": "2026-09-28T18:33:26.201Z",
   "motivo": "con cuerpo"
  },
  "c0dogv": {
@@ -2230,6 +2260,11 @@
  "d2elpy": {
   "intentos": 1,
   "ultimo": "2026-09-26T03:00:42.173Z",
+  "motivo": "con cuerpo"
+ },
+ "da6b6d": {
+  "intentos": 1,
+  "ultimo": "2026-09-28T18:33:26.201Z",
   "motivo": "con cuerpo"
  },
  "ddo0s5": {
@@ -2923,9 +2958,9 @@
   "motivo": "con cuerpo"
  },
  "rlvlss": {
-  "intentos": 1,
-  "ultimo": "2026-09-28T18:05:27.574Z",
-  "motivo": "cuerpo: 2 problemas (relleno, copia): el cuerpo tiene una frase de relleno sin dato: \"en el marco de\"; sin esas oraciones quedan 35 palabras"
+  "intentos": 2,
+  "ultimo": "2026-09-28T18:33:26.201Z",
+  "motivo": "título o bajada: 1 problema (copia): copia 14 palabras seguidas del original"
  },
  "rosl57": {
   "intentos": 1,
