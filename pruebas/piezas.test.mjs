@@ -267,7 +267,7 @@ test('si el token murió, corta: no tiene sentido seguir', async () => {
 // ------------------------------------------------------------- el reloj
 
 import {
-  cronogramaDelDia, slotsQueTocan, notasUsadasHoy, piezasPublicadasHoy, VENTANA_MINUTOS, HORAS_REELS, HISTORIAS_DE_NOTAS, ventanaDe,
+  cronogramaDelDia, slotsQueTocan, notasUsadasHoy, notasContadasEnPodcasts, piezasPublicadasHoy, VENTANA_MINUTOS, HORAS_REELS, HISTORIAS_DE_NOTAS, ventanaDe,
   diaRotativoDeUtiles,
 } from '../redes/piezas.mjs';
 
@@ -386,6 +386,25 @@ test('las notas ya usadas hoy y las piezas ya publicadas se reconocen', () => {
   anotar(libro, 'instagram', claveDePieza('clima-manana', new Date('2026-09-20T08:00:00-03:00')), { notaId: 'vieja' });
   assert.deepEqual([...notasUsadasHoy(libro, LUNES('12:00'))], ['abc']);
   assert.deepEqual([...piezasPublicadasHoy(libro, LUNES('12:00'))], ['noticia1']);
+});
+
+test('una nota contada en un podcast no vuelve a un podcast de otro día, mientras siga fresca (27/09, McCain)', () => {
+  const libro = libroNuevo();
+  // El podcast de la mañana del lunes contó "mccain".
+  anotar(libro, 'instagram', claveDePieza('noticia1', LUNES('10:00')), { notaId: 'mccain', notaIds: ['mccain', 'hockey'] });
+  // Al otro día (martes), sigue esperando: no se puede repetir en un podcast nuevo.
+  const martes = new Date('2026-09-22T10:00:00-03:00');
+  assert.ok(notasContadasEnPodcasts(libro, martes).has('mccain'));
+  assert.ok(notasContadasEnPodcasts(libro, martes).has('hockey'));
+  // Cuatro días después ya no cuenta (fuera de la ventana de `dias`).
+  const cuatroDiasDespues = new Date('2026-09-25T10:00:00-03:00');
+  assert.ok(!notasContadasEnPodcasts(libro, cuatroDiasDespues, 3).has('mccain'));
+  // El podcast de la NOCHE del mismo lunes sí puede repasar lo que contó el
+  // de la mañana (es el repaso del día entero): con incluirHoy: false no cuenta.
+  assert.ok(!notasContadasEnPodcasts(libro, LUNES('20:00'), 3, { incluirHoy: false }).has('mccain'));
+  // Pero el podcast de la mañana del día SIGUIENTE, con incluirHoy: false
+  // (busca sólo lo de antes), también la ve como ya contada.
+  assert.ok(notasContadasEnPodcasts(libro, martes, 3, { incluirHoy: false }).has('mccain'));
 });
 
 

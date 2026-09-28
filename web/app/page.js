@@ -77,7 +77,7 @@ export default function Portada() {
             farmacia de turno. */}
         <aside className="servicios">
           <TarjetaClima clima={d.clima} />
-          <TarjetaFarmacia farmacia={d.farmacias?.hoy} />
+          <TarjetaFarmacia farmacia={d.farmacias?.hoy} verBotones={false} />
           <TarjetaDolar foto={fotoDelDolar()} />
           <Aviso slot="clima" />
         </aside>

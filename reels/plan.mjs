@@ -25,7 +25,7 @@ import {
 } from '../redes/guiones.mjs';
 import { INDICACIONES, momentoDeHora } from '../redes/prompt-redes.mjs';
 import {
-  HORAS_REELS, colorDelDia, horaHistoriaDeNota, HISTORIAS_DE_NOTAS, notasUsadasHoy, piezasPublicadasHoy, historiasQueSobran,
+  HORAS_REELS, colorDelDia, horaHistoriaDeNota, HISTORIAS_DE_NOTAS, notasUsadasHoy, notasContadasEnPodcasts, piezasPublicadasHoy, historiasQueSobran,
 } from '../redes/piezas.mjs';
 
 // El cupo de reels es el recurso escaso del día, así que NO se gasta en lo que
@@ -326,10 +326,15 @@ export function planDelDia(datos, {
   //
   // Con el libro de lo ya publicado, el plan sabe qué reels salieron y qué notas
   // se usaron hoy. Cuando a las 15:00 se arma sólo el reel 2, elige la mejor
-  // nota que QUEDA y no repite la que ya salió a las 10:00.
+  // nota que QUEDA y no repite la que ya salió a las 10:00. Para el podcast,
+  // además, nada de lo que ya se contó en un podcast de estos últimos tres
+  // días (notasContadasEnPodcasts): sin esto, una nota local de puntaje alto
+  // se repetía en el repaso de la mañana, la tarde y la noche, varios días
+  // seguidos (27/09, Hernán: "veo de nuevo la nota de McCain").
   const usadas = notasUsadasHoy(libro);
   const hechas = piezasPublicadasHoy(libro);
   const libres = publicables.filter((n) => !usadas.has(n.id));
+  const libresParaPodcast = publicables.filter((n) => !notasContadasEnPodcasts(libro, fecha).has(n.id));
 
   // Tres podcasts por día en vez de noticias sueltas (24/09: una noticia sola
   // dicha en voz alta sonaba rara). Mañana y tarde cuentan tres notas de temas
@@ -350,7 +355,7 @@ export function planDelDia(datos, {
     // una historia acepta 60 s. Si el guion no cabe en 55, se le sacan las
     // oraciones de contexto y después notas (mínimo 2): `elegidas` son las que quedaron.
     const repaso = repasoConPresupuesto(
-      elegirParaPodcast(libres, { cuantas: PIEZAS.notasPorPodcast, excluir: yaContadas }), { momento: ronda.momento, fecha },
+      elegirParaPodcast(libresParaPodcast, { cuantas: PIEZAS.notasPorPodcast, excluir: yaContadas }), { momento: ronda.momento, fecha },
     );
     if (!repaso) return; // un podcast de una sola noticia no es un repaso
     const { guion, notas: elegidas } = repaso;
@@ -372,7 +377,14 @@ export function planDelDia(datos, {
   // gente ya vio todo y quiere el resumen. Si ese día no hay al menos dos
   // noticias para repasar, no se arma.
   // También con presupuesto: el del 25/09 (4 notas, 62,7 s) dejó sin historia a las dos redes.
-  const delDia = elegirParaPodcast(publicables, { cuantas: PIEZAS.notasPodcastNoche }, { relevanciaParaHistoria: 0 });
+  // Puede repasar lo que ya contó el podcast de la mañana o el de la tarde
+  // DE HOY (es el repaso del día entero), pero no lo de días anteriores.
+  const contadasAntes = notasContadasEnPodcasts(libro, fecha, 3, { incluirHoy: false });
+  const delDia = elegirParaPodcast(
+    publicables.filter((n) => !contadasAntes.has(n.id)),
+    { cuantas: PIEZAS.notasPodcastNoche },
+    { relevanciaParaHistoria: 0 },
+  );
   const repasoNoche = repasoConPresupuesto(delDia, { momento: 'noche', fecha });
   if (repasoNoche && !hechas.has('podcast')) {
     const notasNoche = repasoNoche.notas;

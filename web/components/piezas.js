@@ -41,7 +41,7 @@ const TUBO = (
   </svg>
 );
 
-export function TarjetaFarmacia({ farmacia, verLaSemana = true }) {
+export function TarjetaFarmacia({ farmacia, verLaSemana = true, verBotones = true }) {
   if (!farmacia) return null;
 
   // Cuando hay dos farmacias de turno se muestran las DOS, cada una con su
@@ -90,7 +90,7 @@ export function TarjetaFarmacia({ farmacia, verLaSemana = true }) {
                 )
                 : <div className="donde-farmacia sin-dato">Dirección no publicada</div>}
             </div>
-            {(llamar || mapa) && (
+            {verBotones && (llamar || mapa) && (
               <div className="acciones-farmacia">
                 {llamar && <a href={llamar} className="boton-farmacia llenar">{TUBO}Llamar</a>}
                 {mapa && <a href={mapa} target="_blank" rel="noopener noreferrer" className="boton-farmacia">{PIN}Cómo llegar</a>}

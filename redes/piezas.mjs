@@ -215,6 +215,35 @@ export function notasUsadasHoy(libro, fecha = new Date()) {
   );
 }
 
+/** Los nombres de pieza que son un podcast (mañana, tarde y noche): las tres
+ *  cuentan varias notas, con su lista de enlaces. */
+const PIEZAS_DE_PODCAST = new Set(['noticia1', 'noticia2', 'podcast']);
+
+/**
+ * Las notas que ya se contaron en un podcast en los últimos `dias` días, para
+ * que un repaso no vuelva a contar la misma historia mientras siga siendo
+ * noticia. Sin esto, una nota local con puntaje alto se repetía en el
+ * podcast de la mañana, el de la tarde y el de la noche de tres días
+ * seguidos (27/09, Hernán: "veo de nuevo la nota de McCain").
+ *
+ * `incluirHoy = false` arranca la cuenta ayer: lo sirve el podcast de la
+ * noche, que sí puede repasar lo que ya contaron el de la mañana o el de la
+ * tarde DE HOY (es el repaso del día entero), pero no lo de días anteriores.
+ */
+export function notasContadasEnPodcasts(libro, fecha = new Date(), dias = 3, { incluirHoy = true } = {}) {
+  const arranca = incluirHoy ? 0 : 1;
+  const dentro = new Set(Array.from({ length: dias }, (_, i) => diaAR(new Date(fecha.getTime() - (i + arranca) * 86400e3))));
+  return new Set(
+    Object.entries(libro?.instagram ?? {})
+      .filter(([clave]) => {
+        const [dia, nombre] = clave.split('/');
+        return dentro.has(dia) && PIEZAS_DE_PODCAST.has(nombre);
+      })
+      .flatMap(([, v]) => [v?.notaId, ...(v?.notaIds ?? [])])
+      .filter(Boolean),
+  );
+}
+
 /**
  * Las piezas armadas que salen ahora: las del manifiesto que están en hora y
  * todavía no salieron.

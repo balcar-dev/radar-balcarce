@@ -142,3 +142,15 @@ test("los repasos de los podcasts y las notas propias no se sacan por parecerse 
   assert.deepEqual(sinNotasRepetidas(lista).map((n) => n.id), ["m", "t", "n"]);
   assert.equal(sinNotasRepetidas(lista.map((n) => ({ ...n, propia: undefined }))).length, 1, "sin la marca, sí se juntan");
 });
+
+// -------------------------------------- los botones de la farmacia (27/09)
+
+test('la portada no muestra los botones de la farmacia: van dentro de la sección (Hernán, 27/09)', () => {
+  const piezas = leer('web/components/piezas.js');
+  assert.match(piezas, /export function TarjetaFarmacia\(\{ farmacia, verLaSemana = true, verBotones = true \}\)/);
+  assert.match(piezas, /\{verBotones && \(llamar \|\| mapa\) && \(/);
+  const portada = leer('web/app/page.js');
+  assert.match(portada, /<TarjetaFarmacia farmacia=\{d\.farmacias\?\.hoy\} verBotones=\{false\} \/>/);
+  const farmacias = leer('web/app/farmacias/page.js');
+  assert.match(farmacias, /<TarjetaFarmacia farmacia=\{f\.hoy\} verLaSemana=\{false\} \/>/, 'en /farmacias los botones siguen (verBotones por defecto)');
+});
