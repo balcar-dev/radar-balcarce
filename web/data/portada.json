@@ -1,5 +1,5 @@
 {
-  "generado": "2026-09-28T16:35:13.858Z",
+  "generado": "2026-09-28T17:03:33.996Z",
   "notas": [
     {
       "id": "4rzvaf",
@@ -172,6 +172,7 @@
         "Infobae",
         "El Cronista",
         "Perfil",
+        "Página/12",
         "Ámbito",
         "C5N",
         "Noticias Argentinas (NA)"
@@ -213,6 +214,13 @@
           "medio": "Perfil",
           "enlace": "https://www.perfil.com/noticias/politica/el-indice-de-confianza-en-el-gobierno-cayo-59-en-septiembre-de-2026.phtml",
           "fecha": "2026-09-28T15:45:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Página/12",
+          "enlace": "https://www.pagina12.com.ar/2026/09/28/la-confianza-en-el-gobierno-de-milei-volvio-a-caer-el-indice-toco-uno-de-sus-niveles-mas-bajos/",
+          "fecha": "2026-09-28T16:51:21.000Z",
           "oficial": false,
           "aporte": null
         },
@@ -305,13 +313,11 @@
       "fecha": "2026-09-28T13:58:51.000Z",
       "sinFecha": false,
       "visto": "2026-09-28T16:01:28.909Z",
-      "relevancia": 96,
+      "relevancia": 82,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
-      "temas": [
-        "tc-pick-up"
-      ],
+      "temas": [],
       "como": "automatica",
       "fuentesConsultadas": [
         {
@@ -339,7 +345,7 @@
       "fecha": "2026-09-28T13:57:23.000Z",
       "sinFecha": false,
       "visto": "2026-09-28T15:31:05.922Z",
-      "relevancia": 100,
+      "relevancia": 91,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -465,6 +471,86 @@
       "slug": "balcarce-vivio-un-fin-de-semana-historico-con-el-regreso-del"
     },
     {
+      "id": "1xs34mg",
+      "titulo": "Boccanera y Baigorria ganan en el regreso del Turismo Special de la Costa al Fangio",
+      "copete": "Bruno Boccanera y Kevin Baigorria se impusieron en las dos finales del Turismo Special de la Costa, en el marco del retorno de la categoría al circuito largo del autódromo Juan Manuel Fangio tras dieciséis años.",
+      "cuerpo": "La jornada contó con dieciocho vehículos en pista e incluyó el cierre de la Fase Regular del torneo. La primera competencia tuvo como vencedor a Boccanera, escoltado por Nahuel Morón y Kevin Walter, tras una carrera que registró incidentes en la primera vuelta que involucraron a Carlos Climente, Ariel Ianni, Darío Rapari y Pablo Buduba. La segunda final, destinada a pilotos invitados, quedó en manos de Baigorria, seguido por Buduba y Martín Calamante. El resultado dejó al balcarceño Esteban Dimuro como ganador de la Fase Regular por segunda ocasión, asegurando el inicio de la Copa de Oro con cuarenta puntos, mientras que la próxima fecha se desarrollará los días diez y once de octubre en la variante Juan Manuel Bordeu.",
+      "guion": "Boccanera y Baigorria ganan en el regreso del Turismo Special de la Costa al Fangio",
+      "seccion": "Automovilismo",
+      "medios": [
+        "El Diario Balcarce"
+      ],
+      "enlace": "https://eldiariobalcarce.com.ar/boccanera-y-baigorria-los-ganadores-en-el-tsc-en-jornada-historica-en-el-fangio-543",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-28T11:51:08.000Z",
+      "sinFecha": false,
+      "visto": "2026-09-28T12:05:25.938Z",
+      "relevancia": 86,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [
+        "autodromo",
+        "tc-pick-up",
+        "fangio"
+      ],
+      "como": "automatica",
+      "seSabe": [
+        "El Turismo Special de la Costa volvió a utilizar el circuito largo del autódromo Juan Manuel Fangio después de dieciséis años.",
+        "Bruno Boccanera ganó la primera final con Ford y Kevin Baigorria la segunda con Chevrolet.",
+        "La competencia reunió a dieciocho autos en su quinta fecha y se desarrolló junto a las TC Pick Up.",
+        "El balcarceño Esteban Dimuro se adjudicó la Fase Regular del torneo y comenzará la Copa de Oro con cuarenta puntos.",
+        "La próxima fecha se disputará el fin de semana del 10 y 11 de octubre en la variante Juan Manuel Bordeu."
+      ],
+      "textoRedes": "Bruno Boccanera y Kevin Baigorria ganaron las dos finales del Turismo Special de la Costa en el autódromo Juan Manuel Fangio, en el regreso de la categoría al circuito largo tras dieciséis años y ante una multitud.",
+      "etiquetas": [
+        "Turismo Special de la Costa",
+        "Autodromo Fangio",
+        "Bruno Boccanera",
+        "Kevin Baigorria",
+        "Esteban Dimuro"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/boccanera-y-baigorria-los-ganadores-en-el-tsc-en-jornada-historica-en-el-fangio-543",
+          "fecha": "2026-09-28T11:51:08.000Z",
+          "oficial": false,
+          "aporte": "Detalles de las dos finales del Turismo Special de la Costa, ganadores, posiciones, incidentes en pista y posiciones para la Copa de Oro."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "if257m",
+          "titulo": "Boccanera y Baigorria ganan en el regreso del Turismo Special de la Costa al Fangio",
+          "fecha": "2026-09-27T22:28:39.000Z",
+          "ruta": "/nota/boccanera-y-baigorria-ganan-en-el-regreso-del-turismo-special-de-la-if257m"
+        },
+        {
+          "id": "83u2vt",
+          "titulo": "El autódromo Juan Manuel Fangio reabre tras quince años",
+          "fecha": "2026-09-28T03:01:51.643Z",
+          "ruta": "/nota/el-autodromo-juan-manuel-fangio-reabre-tras-quince-anos-83u2vt"
+        },
+        {
+          "id": "1oj9qzr",
+          "titulo": "El automovilismo nacional convoca a una multitud en el Fangio",
+          "fecha": "2026-09-27T23:49:17.000Z",
+          "ruta": "/nota/el-automovilismo-nacional-convoca-a-una-multitud-en-el-fangio-1oj9qzr"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "boccanera-y-baigorria-ganan-en-el-regreso-del-turismo-special-de-la",
+      "foto": {
+        "archivo": "fotos-notas/1xs34mg.jpg",
+        "credito": "Foto: El Diario Balcarce"
+      }
+    },
+    {
       "id": "1d5l8dl",
       "titulo": "Rugby: Pato Naranja ganó y va por la clasificación a los playoffs",
       "copete": "El equipo balcarceño se impuso por 99 a 12 ante Pampa en una nueva fecha del Torneo Desarrollo y quedó a dos jornadas del cierre de la fase regular.",
@@ -508,9 +594,9 @@
       "guion": null,
       "seccion": "Argentina",
       "medios": [
-        "Minuto Uno",
         "Clarín",
         "A24",
+        "Minuto Uno",
         "Noticias Argentinas (NA)",
         "Radio 10 Mar del Plata (FM 105.5)"
       ],
@@ -534,16 +620,16 @@
           "aporte": null
         },
         {
-          "medio": "Minuto Uno",
-          "enlace": "https://www.minutouno.com/sociedad/impresionante-tormenta-granizo-cordoba-causo-destrozos-varias-ciudades-n6327360",
-          "fecha": "2026-09-28T12:06:00.000Z",
+          "medio": "A24",
+          "enlace": "https://www.a24.com/actualidad/un-impresionante-temporal-azoto-cordoba-granizo-tormentas-y-destrozos-n1600920",
+          "fecha": "2026-09-28T13:28:00.000Z",
           "oficial": false,
           "aporte": null
         },
         {
-          "medio": "A24",
-          "enlace": "https://www.a24.com/actualidad/un-impresionante-temporal-azoto-cordoba-granizo-tormentas-y-destrozos-n1600920",
-          "fecha": "2026-09-28T13:28:00.000Z",
+          "medio": "Minuto Uno",
+          "enlace": "https://www.minutouno.com/sociedad/impresionante-tormenta-granizo-cordoba-causo-destrozos-varias-ciudades-n6327360",
+          "fecha": "2026-09-28T12:06:00.000Z",
           "oficial": false,
           "aporte": null
         },
@@ -576,7 +662,8 @@
         "El Cronista",
         "A24",
         "Radio Mitre",
-        "Noticias Argentinas (NA)"
+        "Noticias Argentinas (NA)",
+        "La Nueva"
       ],
       "enlace": "https://www.infobae.com/economia/2026/09/28/bravo-milei-el-elogio-de-elon-musk-al-presidente-argentino-por-la-baja-de-la-inflacion-durante-su-gestion/",
       "teniaImagenLaFuente": true,
@@ -622,6 +709,13 @@
           "medio": "Noticias Argentinas (NA)",
           "enlace": "https://noticiasargentinas.com/economia/elon-musk-celebro-la-desaceleracion-de-la-inflacion-argentina---bravo-milei--_a6aba724fb62936833e677937",
           "fecha": "2026-09-28T13:52:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "La Nueva",
+          "enlace": "https://www.lanueva.com/nota/2026-9-28-13-37-0-bravo-milei-elon-musk-celebro-la-desaceleracion-de-la-inflacion-argentina",
+          "fecha": "2026-09-28T16:51:31.000Z",
           "oficial": false,
           "aporte": null
         }
@@ -683,8 +777,8 @@
         "Radio Mitre",
         "Diario Popular",
         "Noticias Argentinas (NA)",
-        "La Nueva",
-        "Ámbito"
+        "Ámbito",
+        "La Nueva"
       ],
       "enlace": "https://www.infobae.com/economia/2026/09/28/iniciaron-un-nuevo-proceso-de-privatizacion-de-las-acciones-de-enarsa/",
       "teniaImagenLaFuente": true,
@@ -1010,6 +1104,13 @@
         },
         {
           "medio": "Perfil",
+          "enlace": "https://noticias.perfil.com/noticias/politica/milei-blindado-hoy-olivos-es-una-base-militar-tengo-enemigos-pesados-en-el-mundo.phtml",
+          "fecha": "2026-09-28T16:17:49.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Perfil",
           "enlace": "https://www.perfil.com/noticias/politica/la-base-militar-de-olivos-los-enemigos-muy-pesados-y-lo-que-piensa-de-bullrich-las-frases-principales-de-milei.phtml",
           "fecha": "2026-09-28T10:45:47.000Z",
           "oficial": false,
@@ -1104,86 +1205,6 @@
         "archivo": "fotos-notas/1ou5oaz.png",
         "credito": "Foto: Diario La Vanguardia"
       }
-    },
-    {
-      "id": "bnjuzh",
-      "titulo": "El Gobierno nombra a Di Liscia nuevo secretario de Discapacidad",
-      "copete": "El Gobierno nacional oficializó, a través de un decreto, la designación de Pablo Di Liscia al frente de la Secretaría Nacional de Discapacidad. Reemplaza a Alejandro Vilches, que había renunciado en medio del debate por el Presupuesto 2027.",
-      "cuerpo": "La designación se formalizó mediante el decreto 1095/2026, publicado el domingo en el Boletín Oficial. Vilches había presentado su renuncia el 21 de septiembre, en medio del debate por el proyecto de Presupuesto 2027, que contemplaba nuevos ajustes en el área cuestionados por la oposición y por sectores del propio oficialismo. Vilches, a su vez, había asumido el cargo tras la salida de Diego Spagnuolo, luego de la difusión de audios que, según se informó, mostraban presuntas irregularidades en la compra de medicamentos y servicios.\n\nDi Liscia fue presidente del IOMA bonaerense entre 2017 y 2019 y ocupó distintos cargos en el Gobierno de la Ciudad de Buenos Aires. Entre los ejes de su gestión mencionó la mejora en el acceso a las prestaciones, el refuerzo de los controles internos y la continuidad de las auditorías sobre las pensiones por invalidez laboral.",
-      "guion": null,
-      "seccion": "Argentina",
-      "medios": [
-        "La Noticia 1",
-        "Infobae",
-        "Perfil",
-        "Ámbito",
-        "Crónica",
-        "Noticias Argentinas (NA)",
-        "La Nueva"
-      ],
-      "enlace": "https://www.infobae.com/politica/2026/09/28/el-gobierno-oficializo-la-designacion-de-pablo-di-liscia-como-nuevo-secretario-nacional-de-discapacidad/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-28T03:51:18.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-28T16:01:28.909Z",
-      "relevancia": 71,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "fuentesConsultadas": [
-        {
-          "medio": "Infobae",
-          "enlace": "https://www.infobae.com/politica/2026/09/28/el-gobierno-oficializo-la-designacion-de-pablo-di-liscia-como-nuevo-secretario-nacional-de-discapacidad/",
-          "fecha": "2026-09-28T03:51:18.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "La Noticia 1",
-          "enlace": "https://www.lanoticia1.com/noticia/quien-es-pablo-di-liscia-el-extitular-del-ioma-de-vidal-que-quedo-al-frente-de-discapacidad-tras-el-escandalo-de-andis",
-          "fecha": "2026-09-28T11:43:45.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Perfil",
-          "enlace": "https://www.perfil.com/noticias/politica/el-gobierno-oficializo-a-pablo-di-liscia-en-discapacidad-reemplaza-a-vilches-en-plena-discusion-por-el-presupuesto-2027.phtml",
-          "fecha": "2026-09-28T14:11:00.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Ámbito",
-          "enlace": "https://www.ambito.com/politica/oficializan-la-designacion-pablo-di-liscia-al-frente-la-secretaria-nacional-discapacidad-reemplazo-alejandro-vilches-n6327333",
-          "fecha": "2026-09-28T10:38:00.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Crónica",
-          "enlace": "https://www.cronica.com.ar/politica/oficializaron-la-designacion-de-pablo-di-liscia-como-nuevo-secretario-nacional-de-discapacidad/",
-          "fecha": "2026-09-28T05:48:00.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Noticias Argentinas (NA)",
-          "enlace": "https://noticiasargentinas.com/politica/milei-oficializo-al-nuevo-secretario-nacional-de-discapacidad_a6aba418eb62936833e60a9c2",
-          "fecha": "2026-09-28T10:32:00.323Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "La Nueva",
-          "enlace": "https://www.lanueva.com/nota/2026-9-28-10-36-0-milei-oficializo-al-nuevo-secretario-nacional-de-discapacidad",
-          "fecha": "2026-09-28T16:23:41.000Z",
-          "oficial": false,
-          "aporte": null
-        }
-      ],
-      "slug": "el-gobierno-oficializo-la-designacion-de-pablo-di-liscia-como-nuevo"
     },
     {
       "id": "1e5cybr",
@@ -1605,87 +1626,6 @@
       "slug": "javier-milei-defendio-su-programa-y-nego-que-la-economia-vaya-a"
     },
     {
-      "id": "1oj9qzr",
-      "titulo": "El automovilismo nacional convoca a una multitud en el Fangio",
-      "copete": "El autódromo local volvió a recibir competencias nacionales este domingo con una masiva concurrencia de público y una gran movilización turística en la ciudad.",
-      "cuerpo": "El regreso del automovilismo nacional al autódromo Juan Manuel Fangio convocó a una multitud que colmó el perímetro del circuito, los sectores internos y las zonas altas de la sierra para presenciar las competencias. El movimiento de visitantes se tradujo en una ocupación total de hoteles, cabañas y residencias turísticas, mientras que los puestos gastronómicos y los estacionamientos funcionaron a pleno.\n\nEn la faz deportiva, el fin de semana dejó varios ganadores y podios destacados en las distintas categorías participantes. En tanto, Antonino Sganga venció en las TC Pista Pick Up tras la exclusión de Juan José Suárez por un toque.\n\nPor su parte, Hernán Palazzo se impuso en las TC Pick Up luego de una disputa con Diego Ciantini, quien finalizó quinto tras un recargo por un incidente con Santiago Mangoni, cuyo auto debió abandonar por la rotura del motor. José Ciantini completó la prueba en el octavo puesto y anunció su despedida de las pistas.",
-      "guion": "El automovilismo nacional convoca a una multitud en el Fangio",
-      "seccion": "Automovilismo",
-      "medios": [
-        "Puntonueve (FM 100.9)"
-      ],
-      "enlace": "https://puntonueve.com.ar/mas-de-20-mil-personas-fueron-parte-de-un-dia-historico-en-el-autodromo-juan-manuel-fangio/",
-      "teniaImagenLaFuente": false,
-      "fecha": "2026-09-27T23:49:17.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-28T00:21:53.452Z",
-      "relevancia": 75,
-      "local": true,
-      "publicadaPor": "ia",
-      "publicadaCuando": "2026-09-27T23:54:27.081Z",
-      "temas": [
-        "autodromo",
-        "fangio"
-      ],
-      "como": "automatica",
-      "claves": [
-        "Una multitud colmó el autódromo y la sierra en el regreso de las competencias nacionales.",
-        "Se registró ocupación hotelera total y un intenso movimiento turístico en la ciudad.",
-        "Bruno Boccanera y Kevin Baigorria ganaron en el Turismo Special de la Costa.",
-        "Antonino Sganga se impuso en las TC Pista Pick Up y Hernán Palazzo en las TC Pick Up.",
-        "José Ciantini completó la competencia y anunció su despedida definitiva de las pistas."
-      ],
-      "noConfirmado": [
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "El autódromo Juan Manuel Fangio vivió una jornada histórica con una multitudinaria concurrencia de público en el regreso del automovilismo nacional, generando ocupación turística total y un fuerte impacto en la ciudad.",
-      "etiquetas": [
-        "Automovilismo",
-        "Autodromo Juan Manuel Fangio",
-        "Turismo",
-        "Deportes"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Puntonueve (FM 100.9)",
-          "enlace": "https://puntonueve.com.ar/mas-de-20-mil-personas-fueron-parte-de-un-dia-historico-en-el-autodromo-juan-manuel-fangio/",
-          "fecha": "2026-09-27T23:49:17.000Z",
-          "oficial": false,
-          "aporte": "Detalló los resultados deportivos, la asistencia del público, el impacto turístico y las declaraciones de los protagonistas del automovilismo."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "si6qmk",
-          "titulo": "Diego Santilli visita el autódromo Juan Manuel Fangio",
-          "fecha": "2026-09-27T15:00:58.065Z",
-          "ruta": "/nota/diego-santilli-visita-el-autodromo-juan-manuel-fangio-en-balcarce-si6qmk"
-        },
-        {
-          "id": "epzsa5",
-          "titulo": "Reinauguran el autódromo Juan Manuel Fangio",
-          "fecha": "2026-09-26T13:46:35.000Z",
-          "ruta": "/nota/el-autodromo-juan-manuel-fangio-reabre-sus-puertas-en-balcarce-epzsa5"
-        },
-        {
-          "id": "1gnqz6n",
-          "titulo": "El Autódromo Juan Manuel Fangio reabre sus puertas",
-          "fecha": "2026-09-25T22:53:16.590Z",
-          "ruta": "/nota/el-autodromo-juan-manuel-fangio-reabre-sus-puertas-en-balcarce-1gnqz6n"
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "el-automovilismo-nacional-convoca-a-una-multitud-en-el-fangio",
-      "foto": {
-        "archivo": "fotos-notas/1oj9qzr.jpg",
-        "credito": "Foto: Puntonueve (FM 100.9)"
-      }
-    },
-    {
       "id": "repaso20260927noche",
       "propia": "repaso",
       "titulo": "El repaso de la noche en Radar Balcarce: Mariano Werner, McCain, hockey y Matías Latorre",
@@ -1761,22 +1701,24 @@
         "La Nación",
         "El Eco de Tandil",
         "Ecos Diarios (Necochea)",
-        "Minuto Uno",
         "Infobae",
         "TN (Todo Noticias)",
         "El Destape",
+        "Perfil",
         "Página/12",
         "A24",
         "TyC Sports",
+        "Minuto Uno",
         "Crónica",
         "Radio Mitre",
+        "Diario Popular",
         "Noticias Argentinas (NA)",
         "El Día",
-        "La Nueva",
         "La Verdad",
         "El Marplatense",
         "Doble Amarilla",
         "Bolavip Argentina",
+        "La Nueva",
         "Olé"
       ],
       "enlace": "https://tn.com.ar/deportes/futbol/2026/09/27/tras-la-derrota-ante-boca-juan-pablo-vojvoda-suspendio-la-conferencia-de-prensa-y-esta-en-duda-su-continuidad-como-dt-de-racing/",
@@ -1867,94 +1809,6 @@
       }
     },
     {
-      "id": "if257m",
-      "titulo": "Boccanera y Baigorria ganan en el regreso del Turismo Special de la Costa al Fangio",
-      "copete": "Bruno Boccanera y Kevin Baigorria ganaron las dos carreras de la quinta fecha del Turismo Special de la Costa, que volvió al autódromo Juan Manuel Fangio junto a la TC Pick Up. Hubo 18 autos en pista.",
-      "cuerpo": "En la primera competencia, sobre el trazado mayor de la sierra La Barrosa, Boccanera tomó rápido la punta con el Ford del CNO Racing. Al cierre de la primera vuelta, un roce en la chicana entre Carlos Climente y Ariel Ianni hizo que Climente golpeara la Dodge de Darío Rapari; entró el auto de seguridad y los dos abandonaron. Después, Martín Calamante y Ariel Durán se tocaron en la curva dos peleando el segundo puesto, que heredó Nahuel Morón. Boccanera ganó, seguido por Morón, y Kevin Walter, que había largado quinto, completó el podio.\n\nEn la segunda, Baigorria quedó adelante tras un incidente entre Morón y Durán y sostuvo el primer lugar hasta la bandera a cuadros. Pablo Buduba fue segundo y Calamante, tercero.\n\nDe manera extraoficial, Esteban Dimuro ganó por segunda vez la Fase Regular y empezará la Copa de Oro con 40 puntos. La próxima fecha será el fin de semana del 11 de octubre, otra vez en Balcarce, en el circuito Juan Manuel Bordeu.",
-      "guion": "Boccanera y Baigorria ganan en el regreso del Turismo Special de la Costa",
-      "seccion": "Automovilismo",
-      "medios": [
-        "Puntonueve (FM 100.9)",
-        "El Diario Balcarce"
-      ],
-      "enlace": "https://puntonueve.com.ar/boccanera-y-baigorria-hicieron-historia-en-el-regreso-del-turismo-special-de-la-costa-al-fangio/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-27T22:28:39.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-28T00:21:53.452Z",
-      "relevancia": 91,
-      "local": true,
-      "publicadaPor": "ia",
-      "publicadaCuando": "2026-09-27T22:39:04.733Z",
-      "temas": [
-        "autodromo",
-        "tc-pick-up",
-        "fangio"
-      ],
-      "como": "automatica",
-      "claves": [
-        "El Turismo Special de la Costa compitió en el autódromo Juan Manuel Fangio",
-        "Bruno Boccanera ganó la primera competencia y Kevin Baigorria la segunda",
-        "Esteban Dimuro se adjudicó de manera extraoficial la Fase Regular del campeonato",
-        "La próxima fecha se disputará el fin de semana del 11 de octubre en el circuito Juan Manuel Bordeu"
-      ],
-      "seSabe": [
-        "Bruno Boccanera ganó la primera competencia de la quinta fecha del Turismo Special de la Costa con un Ford",
-        "Kevin Baigorria se quedó con el triunfo en la segunda competencia de pilotos invitados",
-        "Esteban Dimuro se adjudicó de forma extraoficial la Fase Regular y liderará la Copa de Oro con cuarenta puntos",
-        "La próxima fecha se correrá el fin de semana del 11 de octubre en el circuito Juan Manuel Bordeu"
-      ],
-      "noConfirmado": [
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "Bruno Boccanera y Kevin Baigorria ganaron las dos competencias del Turismo Special de la Costa en el autódromo Juan Manuel Fangio, en el marco del regreso de la categoría a Balcarce.",
-      "etiquetas": [
-        "Turismo Special de la Costa",
-        "Autodromo Juan Manuel Fangio",
-        "Balcarce",
-        "Automovilismo"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Puntonueve (FM 100.9)",
-          "enlace": "https://puntonueve.com.ar/boccanera-y-baigorria-hicieron-historia-en-el-regreso-del-turismo-special-de-la-costa-al-fangio/",
-          "fecha": "2026-09-27T22:28:39.000Z",
-          "oficial": false,
-          "aporte": "Detalló los resultados de las dos competencias, los incidentes en pista y las posiciones para la Copa de Oro del Turismo Special de la Costa."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "189jmfz",
-          "titulo": "El Turismo Special de la Costa también será protagonista en la reapertura del Fangio",
-          "fecha": "2026-09-22T23:24:28.000Z",
-          "ruta": "/nota/el-turismo-special-de-la-costa-tambien-sera-protagonista-en-la-189jmfz"
-        },
-        {
-          "id": "1xlakiv",
-          "titulo": "El Turismo Special de la Costa compite en el autódromo",
-          "fecha": "2026-09-26T12:46:52.000Z",
-          "ruta": "/nota/el-turismo-special-de-la-costa-compite-en-el-autodromo-en-balcarce-1xlakiv"
-        },
-        {
-          "id": "aiqaq9",
-          "titulo": "El Turismo Special de la Costa vuelve a Balcarce",
-          "fecha": "2026-09-23T13:50:26.000Z",
-          "ruta": "/nota/el-turismo-special-de-la-costa-vuelve-a-balcarce-aiqaq9"
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "boccanera-y-baigorria-ganan-en-el-regreso-del-turismo-special-de-la",
-      "foto": {
-        "archivo": "fotos-notas/if257m.jpg",
-        "credito": "Foto: Puntonueve (FM 100.9)"
-      }
-    },
-    {
       "id": "1o9tryb",
       "titulo": "Marcos Acuña vota en las elecciones de Ferro Carril Oeste",
       "copete": "El defensor de River Plate votó el domingo en las elecciones de Ferro Carril Oeste, el club de Caballito donde se formó. Respaldó a la lista opositora Somos Ferro, en la que participan su esposa y su suegro como candidatos.",
@@ -1963,7 +1817,6 @@
       "seccion": "Fútbol",
       "medios": [
         "TN (Todo Noticias)",
-        "Olé",
         "Minuto Uno",
         "Doble Amarilla",
         "La Página Millonaria"
@@ -1973,7 +1826,7 @@
       "fecha": "2026-09-27T21:48:37.000Z",
       "sinFecha": false,
       "visto": "2026-09-28T16:01:28.909Z",
-      "relevancia": 82,
+      "relevancia": 72,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1983,7 +1836,7 @@
         {
           "medio": "Doble Amarilla",
           "enlace": "https://www.dobleamarilla.com.ar/ascenso-e-interior/marcos-acuna-se-presento-en-las-elecciones-de-ferro-para-votar_a6ab98c7a9b8cd1f9d62e340b",
-          "fecha": "2026-09-27T21:48:37.383Z",
+          "fecha": "2026-09-27T21:48:37.000Z",
           "oficial": false,
           "aporte": null
         },
@@ -1991,13 +1844,6 @@
           "medio": "TN (Todo Noticias)",
           "enlace": "https://tn.com.ar/deportes/futbol/2026/09/27/marcos-acuna-fue-a-votar-en-las-elecciones-de-ferro-la-sorpresa-de-los-socios-al-verlo/",
           "fecha": "2026-09-28T01:59:26.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Olé",
-          "enlace": "https://www.ole.com.ar/river-plate/river-plate-marcos-acuna-ferro_0_onh2Lb4Iqu.html",
-          "fecha": "2026-09-27T22:09:28.000Z",
           "oficial": false,
           "aporte": null
         },
@@ -2016,7 +1862,11 @@
           "aporte": null
         }
       ],
-      "slug": "marcos-acuna-se-presento-en-las-elecciones-de-ferro-para-votar"
+      "slug": "marcos-acuna-se-presento-en-las-elecciones-de-ferro-para-votar",
+      "foto": {
+        "archivo": "fotos-notas/1o9tryb.webp",
+        "credito": "Foto: La Página Millonaria"
+      }
     },
     {
       "id": "zezsk3",
@@ -2205,7 +2055,6 @@
       "guion": "Hernan Palazzo gana en el regreso del TC Pick Up",
       "seccion": "Automovilismo",
       "medios": [
-        "Puntonueve (FM 100.9)",
         "Infórmese Primero (FM 104.9)",
         "Radio Gabal (FM 104.1)",
         "El Diario Balcarce",
@@ -2644,6 +2493,7 @@
       "seccion": "Economía",
       "medios": [
         "Infórmese Primero (FM 104.9)",
+        "Perfil",
         "iProfesional",
         "Canal 26",
         "Diario Popular",
@@ -2783,25 +2633,25 @@
     {
       "nombre": "El autódromo",
       "ranura": "autodromo",
-      "cuantas": 9
+      "cuantas": 8
     },
     {
       "nombre": "Fangio",
       "ranura": "fangio",
-      "cuantas": 8
+      "cuantas": 7
     },
     {
       "nombre": "TC Pick Up",
       "ranura": "tc-pick-up",
-      "cuantas": 5
+      "cuantas": 4
     }
   ],
   "clima": {
     "ahora": {
       "temp": 18,
-      "sensacion": 16,
-      "humedad": 76,
-      "viento": 15,
+      "sensacion": 17,
+      "humedad": 75,
+      "viento": 14,
       "rumbo": "NE",
       "cielo": "Nublado",
       "esDeDia": true
@@ -3166,16 +3016,10 @@
   },
   "pendientes": [
     {
-      "id": "i9q5tj",
+      "id": "gun9be",
       "titulo": null,
       "seccion": "Automovilismo",
       "motivo": "necesita ojo humano: \"niño\""
-    },
-    {
-      "id": "kzqlp8",
-      "titulo": "Prorrogan el plazo para que las obras sociales regularicen…",
-      "seccion": "Argentina",
-      "motivo": "necesita ojo humano: \"hospital\""
     },
     {
       "id": "1tp9ff4",
@@ -3184,15 +3028,15 @@
       "motivo": "necesita ojo humano: \"investigación\""
     },
     {
-      "id": "3h6frb",
-      "titulo": "Se estrelló una avioneta en Córdoba y cinco personas…",
+      "id": "kzqlp8",
+      "titulo": "Prorrogan el plazo para que las obras sociales regularicen…",
       "seccion": "Argentina",
       "motivo": "necesita ojo humano: \"hospital\""
     },
     {
-      "id": "1iuksy8",
-      "titulo": null,
-      "seccion": "Policiales",
+      "id": "3h6frb",
+      "titulo": "Se estrelló una avioneta en Córdoba y cinco personas…",
+      "seccion": "Argentina",
       "motivo": "necesita ojo humano: \"hospital\""
     },
     {
@@ -3238,6 +3082,24 @@
       "motivo": "necesita ojo humano: \"acusado\""
     },
     {
+      "id": "1pwlgoy",
+      "titulo": "Joven al borde de la muerte tras sufrir feroz golpiza a la…",
+      "seccion": "Argentina",
+      "motivo": "necesita ojo humano: \"muerte\""
+    },
+    {
+      "id": "1iuksy8",
+      "titulo": null,
+      "seccion": "Policiales",
+      "motivo": "necesita ojo humano: \"hospital\""
+    },
+    {
+      "id": "7a3l52",
+      "titulo": "Murió Oscar Bosetti, referente de la radiofonía argentina…",
+      "seccion": "Argentina",
+      "motivo": "necesita ojo humano: \"muerte\""
+    },
+    {
       "id": "3bv2yi",
       "titulo": "Cris Morena recordó a Romina Yan a 16 años de su muerte…",
       "seccion": "Argentina",
@@ -3254,12 +3116,6 @@
       "titulo": "Ofrecen $10 millones de recompensa para identificar a los…",
       "seccion": "Política",
       "motivo": "necesita ojo humano: \"homicidio\""
-    },
-    {
-      "id": "18298e2",
-      "titulo": null,
-      "seccion": "Argentina",
-      "motivo": "necesita ojo humano: \"niño\""
     },
     {
       "id": "1cmtnhl",
@@ -3286,10 +3142,10 @@
       "motivo": "parece promoción, no noticia: \"sorteo\""
     },
     {
-      "id": "13kniom",
-      "titulo": "Incidentes en la previa de Boca - Racing por Copa…",
+      "id": "1xkl8zr",
+      "titulo": "Manchester City fue considerado culpable de 114…",
       "seccion": "Fútbol",
-      "motivo": "necesita ojo humano: \"denuncia\""
+      "motivo": "necesita ojo humano: \"investigación\""
     },
     {
       "id": "16mksfo",
@@ -3298,17 +3154,11 @@
       "motivo": "necesita ojo humano: \"hospital\""
     },
     {
-      "id": "1xkl8zr",
-      "titulo": "Manchester City fue considerado culpable de 114…",
-      "seccion": "Fútbol",
-      "motivo": "necesita ojo humano: \"investigación\""
-    },
-    {
       "id": "15w6fh2",
       "titulo": "Una pintura hallada en Lima podría ser una obra original…",
       "seccion": "Cultura y agenda",
       "motivo": "necesita ojo humano: \"investigación\""
     }
   ],
-  "esperandoCuerpo": 19
+  "esperandoCuerpo": 18
 }
