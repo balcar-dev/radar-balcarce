@@ -302,6 +302,14 @@ test('generar-datos no publica una nota automática sin cuerpo y cuenta las que 
   assert.match(leer('.github/workflows/actualizar.yml'), /git add [^\n]*web\/data\/intentos-ia\.json/);
 });
 
+test('generar-datos arma "fuentesConsultadas" desde los orígenes cuando ni la IA ni una persona lo hicieron (27/09)', () => {
+  const g = leer('web/scripts/generar-datos.mjs');
+  assert.match(g, /const extras = extrasParaLaWeb\(deLaDecision, auto\);/);
+  assert.match(g, /if \(!extras\.fuentesConsultadas\?\.length\) \{/);
+  assert.match(g, /const armadas = fuentesConsultadasDeOrigenes\(n\);/);
+  assert.match(g, /\.\.\.extras,\r?\n\s*\}, direcciones\);/);
+});
+
 test('Facebook y los podcasts no toman una nota automática sin cuerpo', () => {
   const ahora = new Date('2026-09-25T15:00:00Z');
   const nota = {

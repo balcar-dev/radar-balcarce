@@ -15,7 +15,7 @@ import path from 'node:path';
 import {
   reescribir, reescribirAutomaticas, INSTRUCCION_EDITORIAL, nivelDeVerificacion, antecedentesDe,
   completarReescritura, previasDeLaPortada, extrasParaLaWeb, extrasDeLaRespuesta, FRASE_FUENTE_UNICA,
-  semaforoDeLaReescritura, origenesDe,
+  semaforoDeLaReescritura, origenesDe, fuentesConsultadasDeOrigenes,
 } from '../reels/reescritura.mjs';
 import { verificar, verificarExtras } from '../ingesta/verificar.mjs';
 import { MEDIOS_OFICIALES } from '../ingesta/fuentes.mjs';
@@ -367,6 +367,27 @@ test('las fuentes del lector: nombre del medio y enlace, sin repetir, y siempre 
   assert.deepEqual(fuentesDeLaNota({ medios: ['A', 'B'], enlace: 'https://a/1' }), [{ medio: 'A', enlace: 'https://a/1' }, { medio: 'B', enlace: null }]);
 });
 
+test('fuentesConsultadasDeOrigenes: cada medio con su propio enlace, sin depender de la IA (27/09)', () => {
+  // El cruce ya trae el enlace real de cada medio en "origenes": sin este
+  // armado, generar-datos.mjs sólo publicaba el link de la primera fuente y
+  // el lector veía el resto de los medios sin enlace.
+  const nota = {
+    origenes: [
+      { medio: 'La Vanguardia', enlace: 'https://a/1', fecha: '2026-09-27T10:00:00Z' },
+      { medio: 'El Diario Balcarce', enlace: 'https://b/2', oficial: false },
+      { medio: 'Municipalidad de Balcarce', enlace: 'https://c/3', oficial: true },
+      { medio: 'La Vanguardia', enlace: 'https://a/1' }, // repetida: mismo enlace
+    ],
+  };
+  const f = fuentesConsultadasDeOrigenes(nota);
+  assert.deepEqual(f.map((x) => x.enlace), ['https://a/1', 'https://b/2', 'https://c/3']);
+  assert.deepEqual(f.map((x) => x.medio), ['La Vanguardia', 'El Diario Balcarce', 'Municipalidad de Balcarce']);
+  assert.equal(f[2].oficial, true);
+  assert.ok(f.every((x) => x.aporte === null), 'sin nada que la IA no escribió');
+  // Sin "origenes" (una nota vieja), arma al menos la principal.
+  assert.deepEqual(fuentesConsultadasDeOrigenes({ medios: ['A'], enlace: 'https://a/1' }).map((x) => x.enlace), ['https://a/1']);
+});
+
 test('los datos para Google no inventan propiedades: las etiquetas van en keywords y nada más', () => {
   const ficha = leer('web/components/ficha.js');
   assert.match(ficha, /nota\.etiquetas/);
@@ -375,7 +396,9 @@ test('los datos para Google no inventan propiedades: las etiquetas van en keywor
 
 test('generar-datos publica las partes nuevas y le pasa el archivo a la reescritura', () => {
   const g = leer('web/scripts/generar-datos.mjs');
-  assert.match(g, /\.\.\.extrasParaLaWeb\(deLaDecision, auto\)/);
+  // Desde el 27/09 se guarda en "extras" antes de completarlo con las fuentes
+  // armadas desde los orígenes, si hace falta (ver la prueba de arriba).
+  assert.match(g, /const extras = extrasParaLaWeb\(deLaDecision, auto\);/);
   assert.match(g, /archivo: archivoAnterior\.notas/);
 });
 

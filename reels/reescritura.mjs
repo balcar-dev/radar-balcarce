@@ -137,6 +137,21 @@ export function origenesDe(nota) {
 }
 
 /**
+ * "Fuentes consultadas" armadas directamente desde los orígenes de la nota
+ * (el enlace real de cada medio que la contó), sin pasar por la IA ni por el
+ * panel: para cuando ninguno de los dos completó ese campo. Sin esto, el
+ * lector veía el enlace sólo en la primera fuente y el resto sin link (27/09).
+ */
+export function fuentesConsultadasDeOrigenes(nota) {
+  const vistos = new Set();
+  return origenesDe(nota)
+    .map((o) => ({
+      medio: o.medio, enlace: o.enlace, fecha: o.fecha, oficial: !!o.oficial, aporte: null,
+    }))
+    .filter((f) => (f.medio || f.enlace) && !(f.enlace && vistos.has(f.enlace)) && (!f.enlace || vistos.add(f.enlace)));
+}
+
+/**
  * Las notas que el sitio ya publicó sobre el mismo tema: los ANTECEDENTES.
  *
  * Sin buscar en internet (CRITERIO-EDITORIAL.md): salen del archivo del sitio

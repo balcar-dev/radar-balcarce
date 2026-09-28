@@ -19,7 +19,7 @@ import { leerJson } from '../../ingesta/json.mjs';
 import { NUMEROS, tocaHoy, diaDeEstaSemana, diaDeTurno, comoISO, decisionHumana } from '../../ingesta/utiles.mjs';
 import { avisosDelClima } from '../../ingesta/alertas.mjs';
 import {
-  reescribirAutomaticas, previasDeLaPortada, extrasParaLaWeb, sinExtras, CAMPOS_EXTRA, podarIntentos,
+  reescribirAutomaticas, previasDeLaPortada, extrasParaLaWeb, sinExtras, CAMPOS_EXTRA, podarIntentos, fuentesConsultadasDeOrigenes,
 } from '../../reels/reescritura.mjs';
 import { TEMAS, MOTIVO_COTIZACION, REGLAS_SEMAFORO } from '../../ingesta/fuentes.mjs';
 import { tieneCuerpo } from '../lib/cuerpo.js';
@@ -281,6 +281,16 @@ function notaPublicada(n) {
   // de verdad; si no, lo que se reescribió acá, en la nube. Antes un cuerpo
   // vacío guardado por el panel tapaba uno bueno escrito en la nube.
   const deLaDecision = humana || tieneCuerpo(d) || !auto ? d : undefined;
+  // Si ni la IA ni una persona completaron "fuentesConsultadas" (una nota sin
+  // reescribir, o corregida a mano sólo en título/copete/sección/cuerpo), se
+  // arma con los enlaces reales que ya trae el cruce: sin esto, el lector
+  // veía el link sólo en la primera fuente y el resto de los medios sin
+  // enlace (27/09, Hernán: "sólo tiene link la primera fuente").
+  const extras = extrasParaLaWeb(deLaDecision, auto);
+  if (!extras.fuentesConsultadas?.length) {
+    const armadas = fuentesConsultadasDeOrigenes(n);
+    if (armadas.length) extras.fuentesConsultadas = armadas;
+  }
   // Con su dirección fijada: la que ya tenía, o la del titular de hoy si es
   // la primera vez que sale.
   const nota = fijarSlug({
@@ -333,7 +343,7 @@ function notaPublicada(n) {
     // nivel de verificación. Sólo en lo reescrito desde ese día: lo de antes
     // se ve como se veía. Nunca se mezclan las de una persona con las de la
     // IA (extrasParaLaWeb en reels/reescritura.mjs).
-    ...extrasParaLaWeb(deLaDecision, auto),
+    ...extras,
   }, direcciones);
   // Lo corregido a mano manda (web/data/correcciones.json), y va antes de
   // mirar el cuerpo: el cuerpo también se puede escribir ahí (27/09).
