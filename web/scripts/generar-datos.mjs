@@ -192,7 +192,7 @@ if (enLaNube) {
     exigirMedios(notas);
     aplicarCupos(notas.sort((a, b) => (b.relevancia ?? 0) - (a.relevancia ?? 0)));
     ultima = { ...ultima, notas };
-    console.log(`  lectura con IA: ${cuenta.nuevas} fichas nuevas en ${cuenta.pedidos} pedidos (${fichas.pedidosHoy ?? 0} hoy)`
+    console.log(`  lectura con IA: ${cuenta.nuevas} fichas nuevas en ${cuenta.pedidos} pedidos (${fichas.pedidosHoy ?? 0} hoy${cuenta.groq ? `, ${cuenta.groq} con Groq de respaldo` : ''})`
       + ` · sacó ${cambios.sacadas.length}, ${cambios.dejanDeSerLocales.length} dejaron de ser de Balcarce,`
       + ` ${cambios.otraSeccion.length} cambiaron de sección, ${cambios.aEsperar.length} a esperar, ${repetidas.length} repetidas`);
     for (const r of repetidas.slice(0, 10)) console.log(`    repetida: ${r.titulo}`);

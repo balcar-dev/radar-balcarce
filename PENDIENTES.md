@@ -39,7 +39,7 @@ de las repetidas queda la ya publicada, y cuerpos escritos a mano en
 | Qué falta | Quién | Urgencia |
 |---|---|---|
 | **Borrar de Facebook e Instagram el posteo de Necochea** del 27/09 a las 11:03 ("El transporte público y el gas en debate en la región"). Facebook: `facebook.com/1254237411116171/posts/122097323043495512`. Borrar es permanente: lo hace una persona | Hernán | Alta |
-| **Crear un proyecto de Google aparte** (sin facturación) y cargar su clave en GitHub Secrets como `GEMINI_API_KEY_CLASIFICACION`. Mientras tanto la lectura con IA usa la clave gratis de redacción, con tope de 60 pedidos por día, y la redacción baja de 450 a 330 notas por día (desde el 27/09). Con la clave propia, la lectura sube a 200 pedidos por día y la redacción vuelve a 450 | Hernán | Media (mañana) |
+| **Hecho el 28/09:** `GEMINI_API_KEY_CLASIFICACION` cargada (la lectura con IA sube a 200 pedidos por día y la redacción vuelve a 450) y `GROQ_API_KEY` cargada (segundo proveedor gratis de respaldo para la lectura con IA, `leerGrupoGroq` en `ingesta/lectura-ia.mjs`, si Gemini falla o se queda sin cupo). Falta mirar unos días cómo rinde Groq de respaldo. | Claude | Baja |
 | **Hecho el 27/09:** perfil de Balcarce (`ingesta/perfil-balcarce.md`) y lectura rápida con IA en prueba silenciosa (`ingesta/lectura-ia.mjs`, fichas en `web/data/fichas.json`). **Desde el 27/09 la IA decide** (sin prueba ni examen, a pedido de Hernán: se corrige en vivo). **Falta:** lectura con el texto completo (nivel 2), historias por `clave_tema`, resumen de lo que sacó la IA en el WhatsApp de las 21 | Claude | Semanas 2 y 3 |
 | Notas populares medidas (cobertura y Tendencias de Google Argentina), primero sólo anotando cuáles habría publicado | Claude | Después del primer mes |
 

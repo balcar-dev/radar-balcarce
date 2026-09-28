@@ -16,7 +16,7 @@
 
 import fs from 'node:fs';
 import path from 'node:path';
-import { claveClasificacion, leerVariable } from '../reels/claves.mjs';
+import { claveClasificacion, claveGroq, leerVariable } from '../reels/claves.mjs';
 import { fichaDeFuente, FUENTES, FUENTES_NACIONALES, CONEXION_ARGENTINA, PALABRAS_LOCALES } from './fuentes.mjs';
 import { FUENTES_CRUCE } from './fuentes-cruce.mjs';
 
@@ -31,6 +31,11 @@ import { diaAR } from './zona.mjs';
 
 const AQUI = import.meta.dirname;
 const MODELO = 'gemini-flash-lite-latest';
+
+// El segundo proveedor (28/09): gpt-oss-120b, el modelo de OpenAI que Groq
+// aloja gratis (Llama dejó de estar en el plan gratis en agosto). Sólo para
+// TEXTO: la lectura no manda imágenes.
+const MODELO_GROQ = 'openai/gpt-oss-120b';
 
 /** Las secciones que puede elegir: las de la web, sin inventar ninguna. */
 export const SECCIONES_DE_LA_FICHA = ['Balcarce', 'Política', 'Policiales', 'Fútbol', 'Deportes', 'Automovilismo',
@@ -201,6 +206,48 @@ export async function leerGrupo(notas, { clave, fetchFn = fetch } = {}) {
   return fichas;
 }
 
+/**
+ * Igual que leerGrupo, pero con Groq (28/09): un segundo proveedor gratis
+ * para cuando Gemini falla o se queda sin cupo. Mismo prompt, mismo esquema
+ * contado en palabras (la API de Groq no fuerza un JSON Schema como la de
+ * Gemini) y la misma validación (fichaValida): nunca decide distinto por
+ * venir de otro modelo. Su API es la de OpenAI (mensajes de chat), así que
+ * el pedido y la respuesta tienen otra forma.
+ */
+export async function leerGrupoGroq(notas, { clave, fetchFn = fetch, modelo = MODELO_GROQ } = {}) {
+  const instruccion = `${pedidoPara(notas)}\n\nDevolvé un objeto JSON con esta forma exacta y nada más: {"fichas": [ … ]}, con una ficha por nota.`;
+  const res = await fetchFn('https://api.groq.com/openai/v1/chat/completions', {
+    method: 'POST',
+    // La clave va en el encabezado, nunca en la dirección (REGLAS.md, regla 16).
+    headers: { 'content-type': 'application/json', authorization: `Bearer ${clave}` },
+    body: JSON.stringify({
+      model: modelo,
+      messages: [{ role: 'user', content: instruccion }],
+      response_format: { type: 'json_object' },
+      temperature: 0,
+    }),
+    signal: AbortSignal.timeout(60_000),
+  });
+  if (!res.ok) {
+    const error = new Error(`HTTP ${res.status}`);
+    error.status = res.status;
+    throw error;
+  }
+  const j = await res.json();
+  const texto = j.choices?.[0]?.message?.content ?? '';
+  let obj;
+  try { obj = JSON.parse(texto); } catch { throw new Error('la respuesta no es JSON'); }
+  // Por las dudas de que conteste una lista sola en vez del objeto pedido.
+  const lista = Array.isArray(obj) ? obj : Array.isArray(obj?.fichas) ? obj.fichas : (Object.values(obj ?? {}).find(Array.isArray) ?? []);
+  const pedidos = new Set(notas.map((n) => n.id));
+  const fichas = {};
+  for (const f of lista) {
+    const v = fichaValida(f);
+    if (v && pedidos.has(f.id)) fichas[f.id] = v;
+  }
+  return fichas;
+}
+
 /** Las fichas guardadas, sin las de más de `diasDeFichas`. */
 export function podarFichas(guardado = {}, { ahora = Date.now(), dias = LECTURA.diasDeFichas } = {}) {
   const limite = ahora - dias * 86400000;
@@ -215,13 +262,15 @@ export function podarFichas(guardado = {}, { ahora = Date.now(), dias = LECTURA.
  * o no hay clave, deja todo como estaba y lo cuenta.
  */
 export async function leerNotasNuevas(notas, {
-  guardado = {}, fetchFn = fetch, ahora = new Date(), clave = claveClasificacion(), registro = () => {},
+  guardado = {}, fetchFn = fetch, ahora = new Date(), clave = claveClasificacion(), claveRespaldo = claveGroq(), registro = () => {},
 } = {}) {
   const dia = diaAR(ahora);
   let archivo = podarFichas(guardado, { ahora: ahora.getTime() });
   if (archivo.dia !== dia) archivo = { ...archivo, dia, pedidosHoy: 0 };
   archivo.pedidosHoy ??= 0;
-  const cuenta = { pedidos: 0, nuevas: 0, fallas: 0, sinClave: !clave };
+  const cuenta = {
+    pedidos: 0, nuevas: 0, fallas: 0, sinClave: !clave, groq: 0,
+  };
   if (!clave) return { archivo, cuenta };
 
   const faltan = notas.filter((n) => n?.id && !archivo.fichas[n.id]);
@@ -232,17 +281,35 @@ export async function leerNotasNuevas(notas, {
     if (cuenta.pedidos >= LECTURA.pedidosPorCorrida || archivo.pedidosHoy >= topeDeLecturas()) break;
     cuenta.pedidos += 1;
     archivo.pedidosHoy += 1;
+    let nuevas;
+    let error;
     try {
-      const nuevas = await leerGrupo(grupo, { clave, fetchFn });
+      nuevas = await leerGrupo(grupo, { clave, fetchFn });
+    } catch (e) {
+      error = e;
+    }
+    // Gemini falló (sin cupo, caído, lo que sea): con una segunda clave
+    // gratis (Groq, 28/09) se prueba el mismo grupo ahí antes de darlo por
+    // perdido. Nunca se pasa a una clave paga.
+    if (!nuevas && claveRespaldo) {
+      try {
+        nuevas = await leerGrupoGroq(grupo, { clave: claveRespaldo, fetchFn });
+        cuenta.groq += 1;
+        error = null;
+      } catch (e2) {
+        error = e2;
+      }
+    }
+    if (nuevas) {
       for (const [id, f] of Object.entries(nuevas)) {
         archivo.fichas[id] = { ...f, cuando: ahora.toISOString() };
         cuenta.nuevas += 1;
       }
-    } catch (e) {
+    } else {
       cuenta.fallas += 1;
-      registro(`  lectura con IA: falló un pedido (${e.message})`);
-      // Sin cupo: no se insiste en esta corrida (y nunca se pasa a la clave paga).
-      if (e.status === 429) break;
+      registro(`  lectura con IA: falló un pedido (${error?.message})`);
+      // Sin cupo en ninguna de las dos: no se insiste en esta corrida.
+      if (error?.status === 429) break;
     }
   }
   return { archivo, cuenta };

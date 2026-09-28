@@ -40,3 +40,8 @@ export const claveRedes = (o) => leerVariable('GEMINI_API_KEY_REDES', o);
  *  gastarle cupo a la redacción. Mientras no esté cargada, usa la de redacción
  *  (gratis). NUNCA la de redes, que es paga (Hernán, 27/09). */
 export const claveClasificacion = (o) => leerVariable('GEMINI_API_KEY_CLASIFICACION', o) ?? claveRedaccion(o);
+
+/** Groq (28/09): un segundo proveedor gratis para la lectura con IA, para
+ *  cuando Gemini se queda sin cupo o falla. Sin ella, la lectura sigue sólo
+ *  con Gemini, como hasta ahora. */
+export const claveGroq = (o) => leerVariable('GROQ_API_KEY', o);

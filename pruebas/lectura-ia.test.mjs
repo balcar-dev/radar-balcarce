@@ -70,19 +70,63 @@ test('cada nota se lee una sola vez, de a grupos, y queda guardada', async () =>
   assert.equal(otra.cuenta.pedidos, 0);
 });
 
-test('hay topes por corrida y por día, y sin cupo (429) se corta', async () => {
+test('hay topes por corrida y por día, y sin cupo (429) y sin Groq de respaldo se corta', async () => {
   const muchas = Array.from({ length: 200 }, (_, i) => ({ ...DE_ACA, id: `n${i}` }));
   const { fn, pedidos } = geminiFalso(() => []);
   const ahora = new Date('2026-09-27T15:00:00Z');
-  await leerNotasNuevas(muchas, { fetchFn: fn, ahora, clave: 'k' });
+  await leerNotasNuevas(muchas, { fetchFn: fn, ahora, clave: 'k', claveRespaldo: null });
   assert.equal(pedidos.length, LECTURA.pedidosPorCorrida);
   const lleno = { dia: '2026-09-27', pedidosHoy: LECTURA.pedidosPorDia, fichas: {} };
-  const r = await leerNotasNuevas(muchas, { fetchFn: fn, ahora, clave: 'k', guardado: lleno });
+  const r = await leerNotasNuevas(muchas, { fetchFn: fn, ahora, clave: 'k', claveRespaldo: null, guardado: lleno });
   assert.equal(r.cuenta.pedidos, 0, 'con el tope del día lleno no se pide nada');
+  // Sin Groq de respaldo (claveRespaldo: null): como antes, un 429 corta la corrida.
   const sinCupo = geminiFalso(() => ({ status: 429 }));
-  const s = await leerNotasNuevas(muchas, { fetchFn: sinCupo.fn, ahora, clave: 'k' });
+  const s = await leerNotasNuevas(muchas, { fetchFn: sinCupo.fn, ahora, clave: 'k', claveRespaldo: null });
   assert.equal(sinCupo.pedidos.length, 1, 'con 429 no se insiste');
   assert.equal(s.cuenta.fallas, 1);
+});
+
+test('Groq (28/09): si Gemini falla o se queda sin cupo, se prueba el mismo grupo con Groq antes de darlo por perdido', async () => {
+  const ahora = new Date('2026-09-27T15:00:00Z');
+  const groqOk = { fn: async (url, o) => ({ ok: true, status: 200, json: async () => ({ choices: [{ message: { content: JSON.stringify({ fichas: [fichaDe('abc')] }) } }] }) }) };
+  const sinCupoGemini = geminiFalso(() => ({ status: 429 }));
+  const r = await leerNotasNuevas([DE_ACA], {
+    fetchFn: async (url, o) => (String(url).includes('groq.com') ? groqOk.fn(url, o) : sinCupoGemini.fn(url, o)),
+    ahora, clave: 'k', claveRespaldo: 'g',
+  });
+  assert.equal(r.cuenta.nuevas, 1, 'la ficha llegó igual, de Groq');
+  assert.equal(r.cuenta.groq, 1);
+  assert.equal(r.cuenta.fallas, 0, 'no cuenta como falla: Groq la resolvió');
+
+  // Si Groq TAMBIÉN falla, ahí sí se cuenta como falla de verdad.
+  const groqCae = async () => ({ ok: false, status: 500, text: async () => 'error' });
+  const s = await leerNotasNuevas([DE_ACA], {
+    fetchFn: async (url, o) => (String(url).includes('groq.com') ? groqCae() : sinCupoGemini.fn(url, o)),
+    ahora, clave: 'k', claveRespaldo: 'g',
+  });
+  assert.equal(s.cuenta.nuevas, 0);
+  assert.equal(s.cuenta.fallas, 1);
+
+  // La clave de Groq va en el encabezado Authorization, nunca en la dirección.
+  let vistoEncabezado = null;
+  await leerNotasNuevas([DE_ACA], {
+    fetchFn: async (url, o) => {
+      if (String(url).includes('groq.com')) { vistoEncabezado = o.headers.authorization; return groqOk.fn(url, o); }
+      return sinCupoGemini.fn(url, o);
+    },
+    ahora, clave: 'k', claveRespaldo: 'g',
+  });
+  assert.equal(vistoEncabezado, 'Bearer g');
+});
+
+test('leerGrupoGroq: valida las fichas igual que Gemini, y acepta que conteste una lista sola', async () => {
+  const { leerGrupoGroq } = await import('../ingesta/lectura-ia.mjs');
+  const conObjeto = async () => ({ ok: true, status: 200, json: async () => ({ choices: [{ message: { content: JSON.stringify({ fichas: [fichaDe('abc'), { id: 'otra', seccion: 'Curiosidades' }] }) } }] }) });
+  const f1 = await leerGrupoGroq([DE_ACA], { clave: 'g', fetchFn: conObjeto });
+  assert.deepEqual(Object.keys(f1), ['abc']);
+  const conLista = async () => ({ ok: true, status: 200, json: async () => ({ choices: [{ message: { content: JSON.stringify([fichaDe('abc')]) } }] }) });
+  const f2 = await leerGrupoGroq([DE_ACA], { clave: 'g', fetchFn: conLista });
+  assert.deepEqual(Object.keys(f2), ['abc']);
 });
 
 test('la clave de clasificación: la propia o la gratis de redacción, nunca la paga de redes', () => {

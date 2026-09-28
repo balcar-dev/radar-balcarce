@@ -170,7 +170,8 @@ cada uno, cuándo corre y si cuesta plata), en `INFRAESTRUCTURA.md`.
 - **Las redes tienen un interruptor:** la variable de GitHub `REDES_ACTIVAS`.
   Con `Si` (cualquier mayúscula o tilde) publica; con otro valor todo corre pero
   sólo simula. No hay que tocar código para prender o apagar.
-- **Una tercera clave, para la lectura con IA** (`GEMINI_API_KEY_CLASIFICACION`, plan V2.2): falta cargarla; mientras tanto usa la de redacción (gratis) con tope: 60 pedidos de fichas por día, 200 cuando tenga la propia (`topeDeLecturas`, `ingesta/lectura-ia.mjs`). Nunca la de redes.
+- **Una tercera clave, para la lectura con IA** (`GEMINI_API_KEY_CLASIFICACION`, plan V2.2, **cargada el 28/09**): 200 pedidos de fichas por día (`topeDeLecturas`, `ingesta/lectura-ia.mjs`). Nunca la de redes.
+- **Groq, un segundo proveedor gratis para la lectura con IA** (`GROQ_API_KEY`, cargada el 28/09): si Gemini falla o se queda sin cupo, `leerGrupoGroq` prueba el mismo grupo de notas con `openai/gpt-oss-120b` antes de darlo por perdido (`ingesta/lectura-ia.mjs`). Sin esta clave, sigue sólo con Gemini.
 - **Dos claves de Gemini, separadas a propósito:** `GEMINI_API_KEY_REDACCION`
   para redactar las notas (acepta el nombre viejo `GEMINI_API_KEY`) y
   `GEMINI_API_KEY_REDES` para voces y reels (`reels/claves.mjs`). La de redes
