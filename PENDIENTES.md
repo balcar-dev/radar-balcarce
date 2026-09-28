@@ -110,38 +110,39 @@ clave o una decisión.
 
 **Alta**
 
-- **El banco de fotos propio (27/09, Hernán).** Con la política ya decidida
-  (`CRITERIO-EDITORIAL.md`, "Las fotos"), falta construirlo:
-  1. Un archivo o carpeta (`web/data/banco-fotos.json` + los archivos, o una
-     carpeta versionada) con cada foto: de dónde salió (medio o "propia" u
-     "oficial"), el crédito exacto, la licencia si es de stock, la sección o
-     el tema, y de qué nota se usó la primera vez.
-  2. Cuando una nota necesita foto y hay dos medios o más que cubrieron el
-     hecho, comparar sus fotos (encuadre, calidad, sin gente irreconocible
-     de más) y guardar la mejor, recortada, con el crédito en la cita y sin
-     ninguna marca de agua ni nombre de otro medio adentro. **Chequeo aparte
-     para medios locales y de la zona** (28/09, Hernán: son los que más
-     acostumbran poner su logo en una esquina): antes de guardar, revisar la
-     foto entera buscando un logo o texto de marca en cualquier borde, no
-     sólo donde se piensa recortar; ante la mínima duda, no se usa.
-  3. Guardar en el banco toda foto que se usa, aunque sea una sola vez, para
-     poder reusarla (una foto del autódromo sirve para muchas notas de
-     Automovilismo) y para que Hernán y Andrés la repasen cada tanto y saquen
-     lo que no sirva.
-  4. Un lugar donde ir sumando fotos propias (las que saquen ellos) al mismo
-     banco, con su propio crédito ("Foto: Radar Balcarce").
-  5. Mostrar la foto en la página de la nota (con su cita) y, si corresponde,
-     en la tarjeta para compartir; sin foto que sirva, sigue la placa propia.
-  6. **Buscar una foto de la persona nombrada, no sólo de la fuente** (28/09,
-     idea de Hernán, al ver el caso de Mariano Werner: una sola fuente, con
-     marca de agua, así que hoy se queda sin foto). Cuando la nota nombra a
-     una sola persona identificable (un deportista, un funcionario, alguien
-     conocido) y ninguna foto de fuente sirve, antes de resignarse a la
-     placa: buscar una foto libre de esa persona puntual (Wikimedia Commons,
-     el sitio de su club o federación, una gacetilla oficial) en vez de sólo
-     comparar lo que trajeron los medios que cubrieron el hecho puntual. Es
-     una fuente de fotos distinta a la de "Las fotos" en
-     `CRITERIO-EDITORIAL.md`: no está construida, ni siquiera probada.
+- **El banco de fotos propio (27/09, Hernán). Construido y en vivo desde el
+  28/09**, con lo que faltaba:
+  1. ~~Un archivo con cada foto~~ **Hecho**: `web/data/banco-fotos.json`
+     (de dónde salió, el crédito, la licencia si es de Wikimedia) y los
+     archivos en `web/public/fotos-notas/`.
+  2. ~~Comparar las fotos de los medios y guardar la mejor~~ **Hecho**:
+     `ingesta/fotos.mjs` (Gemini, con Groq de respaldo). Nunca elige una con
+     marca de agua (usa la mejor SIN marca en su lugar, aunque no sea la
+     ideal); distingue la marca de un medio de un logo que ya estaba en la
+     escena (un sponsor, un club, el cartel de un evento). **Más cuidado con
+     medios locales y de la zona**, como se decidió el 28/09.
+  3. ~~Guardar en el banco toda foto probada~~ **Hecho**: una nota ya
+     probada (tenga foto o no) no se le vuelve a preguntar
+     (`web/scripts/fotos-notas.mjs`, hasta 10 notas nuevas por corrida, para
+     no gastarle de más el cupo a la lectura con IA).
+  4. **Sigue pendiente**: un lugar para ir sumando fotos propias (las que
+     saquen Hernán y Andrés) al mismo banco, con su propio crédito ("Foto:
+     Radar Balcarce"). Hoy `banco-fotos.json` sólo lo arma el código.
+  5. ~~Mostrar la foto en la página de la nota~~ **Hecho**: con su crédito en
+     el epígrafe, nunca adentro de la imagen (`web/app/nota/[id]/page.js`).
+     **Sigue igual sin foto en redes ni en la tarjeta para compartir**: esas
+     siguen con la placa propia (`reels/placa.mjs`, `web/lib/tarjeta.js`), a
+     propósito, para no repetir el trabajo de decidir dos veces.
+  6. ~~Buscar una foto de la persona nombrada~~ **Hecho** (idea de Hernán,
+     28/09, al ver el caso de Mariano Werner: una sola fuente, con marca de
+     agua): si ninguna fuente sirve y la nota es de una sola persona pública
+     identificable, se prueba una foto libre en Wikimedia Commons antes de
+     resignarse a la placa (`personaPublicaDeNota`, `buscarFotoWikimedia`,
+     `ingesta/fotos.mjs`).
+  7. **Para mirar en los próximos días**: cuántas notas terminan con foto
+     real contra placa, si el tope de 10 por corrida alcanza, y si el cupo
+     de Gemini (compartido con la lectura con IA) rinde con las dos cosas
+     pidiendo a la vez.
 - **Escuchar el podcast en la web (27/09, idea de Hernán).** El audio de cada
   repaso ya se genera para el reel; hoy se arma en un archivo temporal de la
   corrida y no queda guardado en ningún lado después de subirlo a Instagram y

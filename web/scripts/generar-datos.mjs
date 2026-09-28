@@ -61,6 +61,13 @@ const INTENTOS_IA = path.join(AQUI, '..', 'data', 'intentos-ia.json');
 const HISTORIA_DOLAR = path.join(AQUI, '..', 'data', 'dolar-historia.json');
 // Las fichas de la lectura con IA, que decide desde el 27/09 (ingesta/lectura-ia.mjs).
 const FICHAS = path.join(AQUI, '..', 'data', 'fichas.json');
+// El banco de fotos (28/09, scripts/fotos-notas.mjs): qué nota ya se probó,
+// tenga foto o no, para no volver a gastar cupo preguntando dos veces.
+const BANCO_FOTOS = path.join(AQUI, '..', 'data', 'banco-fotos.json');
+// Las fotos elegidas, versionadas junto con el resto de lo público (como
+// reels/marca/fuentes/): así también las sirve Cloudflare Pages sin nada
+// más que hacer.
+const FOTOS_NOTAS = path.join(AQUI, '..', 'public', 'fotos-notas');
 // Lo que se sacó a mano de la web, fuera del panel (lib/archivo.js).
 const RETIRADAS_A_MANO = idsRetiradosAMano(leerJson(path.join(AQUI, '..', 'data', 'retiradas.json'), null));
 // Lo que se corrigió a mano (título, bajada, sección), fuera del panel.
@@ -368,6 +375,41 @@ function notaPublicada(n) {
 const deLaIngesta = (ultima.notas ?? [])
   .map(notaPublicada)
   .filter(Boolean);
+
+// ---------------------------------------------------------------- las fotos
+//
+// El banco de fotos, en vivo (28/09, CRITERIO-EDITORIAL.md, "Las fotos"):
+// sólo en la nube, sólo para lo que viene de las fuentes (las notas propias
+// no llevan foto de otro), y con memoria propia (web/data/banco-fotos.json)
+// para no volver a preguntar por una nota ya probada. Si algo falla acá, la
+// nota sigue publicándose igual, sin foto, como hasta ahora.
+if (enLaNube) {
+  try {
+    const { elegirFotosNuevas, fotoDeLaWeb } = await import('./fotos-notas.mjs');
+    const { claveClasificacion, claveGroq } = await import('../../reels/claves.mjs');
+    const bancoAntes = leerJson(BANCO_FOTOS, {});
+    const { banco, archivos } = await elegirFotosNuevas(deLaIngesta, {
+      banco: bancoAntes, clave: claveClasificacion(), claveRespaldo: claveGroq(),
+    });
+    const nuevas = Object.keys(banco).length - Object.keys(bancoAntes).length;
+    if (nuevas) console.log(`  fotos: ${nuevas} notas nuevas probadas (${Object.keys(archivos).length} con foto)`);
+    for (const [archivo, buffer] of Object.entries(archivos)) {
+      const destino = path.join(FOTOS_NOTAS, path.basename(archivo));
+      fs.mkdirSync(path.dirname(destino), { recursive: true });
+      fs.writeFileSync(destino, buffer);
+    }
+    if (JSON.stringify(banco) !== JSON.stringify(bancoAntes)) {
+      fs.mkdirSync(path.dirname(BANCO_FOTOS), { recursive: true });
+      fs.writeFileSync(BANCO_FOTOS, `${JSON.stringify(banco, null, 1)}\n`, 'utf8');
+    }
+    for (const n of deLaIngesta) {
+      const foto = fotoDeLaWeb(banco, n.id);
+      if (foto) n.foto = foto;
+    }
+  } catch (e) {
+    console.log(`  fotos: no se pudo (${e.message}); las notas siguen sin foto`);
+  }
+}
 
 // ------------------------------------------------------------- el archivo
 //

@@ -263,9 +263,17 @@ Sigue habiendo notas que nunca llevan foto real, sea de quien sea: lo que
 identificaría a un menor o a una víctima (va la placa), y Policiales fuera de
 una foto oficial de Bomberos o la Policía.
 
-Construcción pendiente (PENDIENTES.md, "El banco de fotos"): hoy todas las
-piezas siguen saliendo con la placa propia; esto es el criterio ya
-decidido para cuando se arme.
+**En la página de la nota, desde el 28/09.** Cada corrida de "Actualizar la
+web" le prueba una foto a hasta 10 notas nuevas (`web/scripts/fotos-notas.mjs`,
+`ingesta/fotos.mjs`): compara las de las fuentes con Gemini o Groq (nunca
+elige una con marca; si la mejor la tiene, usa la mejor SIN marca en su
+lugar), y si ninguna sirve y la nota es de una sola persona pública
+identificable, prueba una foto libre en Wikimedia Commons antes de
+resignarse. Sólo Policiales sigue sin foto salvo que la fuente sea oficial.
+Una nota ya probada (tenga foto o no) queda en el banco
+(`web/data/banco-fotos.json`) y no se le vuelve a preguntar. Sigue sin
+publicarse nada en redes con esto: las piezas de Instagram y Facebook
+siguen con la placa propia (eso sí sigue pendiente, `PENDIENTES.md`).
 
 ### Lo que no entra nunca
 

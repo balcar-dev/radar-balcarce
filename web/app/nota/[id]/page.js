@@ -86,12 +86,23 @@ export default function PaginaNota({ params }) {
         <h1>{n.titulo}</h1>
         {n.copete && <p className="copete">{n.copete}</p>}
 
-        {/* Sin foto de la fuente, a propósito: la excepción de noticias de la
-            ley 11.723 cubre el texto, no las fotografías. Tampoco va la
-            placa de sección grande acá: repetía lo que ya dice la etiqueta
-            de arriba, en un rectángulo enorme sin ningún dato nuevo. Si el
-            día de mañana hay una foto o ilustración propia de la nota
-            (con IA, por ejemplo), va este espacio. */}
+        {/* La foto (28/09, CRITERIO-EDITORIAL.md, "Las fotos"): recortada,
+            sin ningún nombre de medio adentro (eso va sólo acá, en el
+            epígrafe, nunca en la imagen) y guardada en el banco propio
+            (web/data/banco-fotos.json, web/scripts/fotos-notas.mjs). Sin
+            foto que sirviera, no va nada: no hay placa de sección grande
+            de respaldo, a propósito (repetía la etiqueta de arriba, en un
+            rectángulo enorme sin ningún dato nuevo). */}
+        {n.foto && (
+          <figure style={{ margin: '20px 0 4px' }}>
+            <img
+              src={`/${n.foto.archivo}`}
+              alt={n.titulo}
+              style={{ width: '100%', maxHeight: 480, objectFit: 'cover', borderRadius: 10, display: 'block' }}
+            />
+            <figcaption style={{ fontSize: 13, color: 'var(--suave)', fontStyle: 'italic', marginTop: 6 }}>{n.foto.credito}</figcaption>
+          </figure>
+        )}
 
         {/* El cuerpo: la nota elaborada. Desde el 25/09 una nota automática
             sin cuerpo no se publica (web/lib/cuerpo.js); sólo puede faltar en
