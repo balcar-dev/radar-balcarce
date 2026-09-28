@@ -1,13 +1,58 @@
 # Ideas para que el medio tenga alcance de verdad
 
-*Actualizado el 26/09/2026.* Ordenadas por lo que más devuelve con menos
+*Actualizado el 28/09/2026.* Ordenadas por lo que más devuelve con menos
 trabajo. No son todas buenas; están acá para discutirlas, no para hacerlas
 todas. Lo que ya se hizo está al final ("Lo que ya se hizo"); lo que falta
 hacer del sistema, en `PENDIENTES.md`.
 
 ---
 
-## Las cuatro que yo haría primero
+## La tabla general: todas las ideas juntas, de más viable a menos viable
+
+*Armada el 28/09 a pedido de Hernán ("reunificar todas las ideas... genera
+una tabla de la más viable a la menos"), para repasarla juntos con calma. Es
+un primer orden, no una decisión: junta TODO lo que está más abajo en este
+documento (cada fila linkea a su detalle) más dos ideas nuevas de esta noche.
+"Viable" acá quiere decir tres cosas a la vez: poco trabajo, no depende de
+que un tercero conteste algo, y no hace falta audiencia previa para que
+funcione.*
+
+| # | Idea | Qué es, en una línea | Esfuerzo | Por qué acá |
+|---|---|---|---|---|
+| 1 | **Farmacia por WhatsApp** | Un mensaje automático contesta qué farmacia está de turno | Bajo | Todo el dato ya existe; sólo falta la puerta de WhatsApp |
+| 2 | **Lista de WhatsApp para conseguir información** *(nueva, 28/09)* | Un número o lista de difusión donde vecinos mandan datos, fotos o avisos ("se cortó la luz en tal barrio", "hay una obra en tal calle") | Bajo | El buzón (`panel/buzon.mjs`) ya sabe moderar esto; falta sólo la puerta de entrada, igual que "en qué quedó" |
+| 3 | **Aviso cuando una fuente deja de traer notas** | El vigilante avisa si un medio no trae nada hace 12 horas | Bajo | Ya existe el vigilante; es sumarle una regla |
+| 4 | **Ser buen vecino con los medios** | Guardar el texto ya leído y espaciar los pedidos a la misma fuente | Bajo | Evita que algún día nos bloqueen; es casi gratis |
+| 5 | **Estadísticas en el panel** | Ver la evolución de visitas y seguidores sin esperar el WhatsApp | Bajo | El dato ya se guarda (`estadisticas.json`); falta mostrarlo |
+| 6 | **Alta en Google Noticias** | Anotar el sitio en Publisher Center | Bajo | Ya están todos los requisitos; es un trámite manual |
+| 7 | **"En qué quedó"** | Cargar 3 o 4 promesas concretas del municipio y revisarlas cada 4-6 semanas | Bajo | El tipo `seguimiento` del buzón ya existe; sólo falta cargar la primera ficha |
+| 8 | **Efemérides, fechas patrias y "la semana en Balcarce"** | Contenido fijo que llena la portada aunque no pase nada (Fangio, feriados, resumen del domingo) | Bajo-medio | No depende de que nadie más publique nada; se arma una vez y sirve todos los años |
+| 9 | **"Lo que abre y lo que cierra"** | Un posteo semanal con comercios nuevos y cerrados | Bajo-medio | Barato, se comparte solo, y es la puerta a vender publicidad |
+| 10 | **Historias invitando a la gente a participar** | Encuestas, "contanos tu reclamo u opinión", y de fondo la idea 2: que cualquier vecino pueda avisar un hecho, no sólo opinar | Bajo-medio | La regla de moderación ya existe (nunca de un solo lado, opinión siempre firmada); falta la costumbre de invitar seguido |
+| 11 | **Clasificados** (compra-venta, changas, alquileres) | Un aviso que paga el propio vecino, no un espacio por mes | Medio | Complementa la guía comercial sin competir con los avisos fijos |
+| 12 | **"Lo que pasó en el Concejo"** | Resumir en 5 líneas las actas que nadie lee | Medio | Requiere leer PDFs administrativos cada sesión, pero nadie más lo hace |
+| 13 | **Aprobar notas desde el celular** | Una mini app con Aprobar / Rechazar / Corregir, sin depender de la PC prendida | Medio | Hoy lo amarillo espera a que Hernán esté frente a la PC |
+| 14 | **Buscar en todo el archivo** | El buscador hoy sólo busca en la portada del día | Medio | Un índice liviano alcanza; los 180 días de archivo ya existen |
+| 15 | **Automovilismo como marca propia** | Una nota semanal sobre pilotos balcarceños en cualquier categoría | Medio | Nicho que nadie cubre, con público asegurado por Fangio |
+| 16 | **Página pública de correcciones** | `/correcciones`: qué se corrigió, cuándo y por qué | Medio | Da confianza, y lo piden Google Noticias y AdSense |
+| 17 | **Tipografías servidas por el sitio, no por Google Fonts** | Que la web no le muestre la IP de cada lector a Google | Medio | Ya están dos cortes; faltan todos los pesos que pide `layout.js` |
+| 18 | **Panel de salud del sistema** | Ver de un vistazo si algo se cayó, sin abrir tres workflows | Medio | El vigilante ya cubre gran parte por WhatsApp; esto es para cuando hace falta mirar en el momento |
+| 19 | **Vista previa de lo que el reloj va a publicar** | Ver antes las próximas horas de redes | Medio | Cambia cómo se mira el sistema, no cómo funciona |
+| 20 | **Guía comercial y mapa de Balcarce** | El catálogo de venta: mapa + fichas + mejoras pagas | Alto | Lo caro no es el código, es cargar y mantener los datos de cada comercio |
+| 21 | **Contenido gratis de gente local** | Músicos, fotógrafos o video makers que cedan material a cambio de crédito | Alto (investigación) | Depende de contactar y convencer a terceros, uno por uno |
+| 22 | **Segundo locutor (voz de hombre)** | Alternar o repartir secciones entre dos voces | Medio-alto | Ya con un plan concreto (`IDEAS.md` más abajo); Hernán la marcó "no prioridad hoy" |
+| 23 | **Revisar la accesibilidad a fondo** | El resto de lo que quedó pendiente del 25/09 | Medio-alto | Ninguna fecha límite, pero se acumula si no se agenda |
+| 24 | **Analítica propia sin cookies** | Más completa que la de Cloudflare | Alto | Es construir un sistema nuevo, no activar uno que ya existe |
+| 25 | **Probar los workflows en la máquina (`act`)** | Ver un workflow de GitHub Actions sin subirlo | Medio (técnico) | Ahorra tiempo a futuro, pero no lo nota nadie de afuera |
+| 26 | **Historieta / mascota propia** | Un personaje de Balcarce, como los diarios de antes | Alto | Hernán mismo lo puso "para cuando el medio ya tenga lectores" |
+| 27 | **Radio online o YouTube 24/7** | Una señal que no se corta nunca, con nuestras piezas | Alto | Pide un servidor aparte y pagar derechos de música; "para después del lanzamiento" |
+
+No está en la tabla la publicidad en sí (avisos, precios, AdSense): eso vive
+en `PUBLICIDAD.md`, que ya tiene su propio orden.
+
+---
+
+## Las que yo haría primero
 
 ### 1. La farmacia de turno por WhatsApp
 
@@ -66,6 +111,25 @@ hace. El paso más grande, para más adelante: un formulario público en la web
 que cargue directo al buzón — eso sí es una idea de las que "cambian cómo
 funciona algo" y conviene pensarla con calma (moderación de spam, quién
 firma, qué se hace público y qué no).
+
+### 5. Una lista de WhatsApp para conseguir información (nueva, 28/09)
+
+La misma puerta de entrada que le falta a la idea 4, pero pensada para
+**hechos, no sólo opiniones**: un número (o una lista de difusión) donde
+cualquier vecino manda un dato, una foto o un aviso — un corte de luz, una
+obra que empezó, algo que vio. Es la fuente que ningún medio de Balcarce
+tiene hoy: todos escriben desde lo que ya está publicado en otro lado.
+
+**Por qué ya está casi resuelta:** es el mismo buzón (`panel/buzon.mjs`) con
+otro tipo de ficha (un dato o "tip", no un reclamo ni una opinión), así que
+la moderación (nunca se publica de un solo lado, se verifica antes de
+escribir) ya existe. Falta sólo: el número o la lista, quién la mira todos
+los días, y una regla chica de qué tipo de aviso entra al buzón (no todo lo
+que llega por WhatsApp es una noticia).
+
+**El riesgo a cuidar:** un tip sin verificar no es una nota. Entra al buzón
+como "sin confirmar" y sigue el mismo camino que cualquier nota con una sola
+fuente — nunca se publica solo porque alguien lo mandó por WhatsApp.
 
 ---
 
