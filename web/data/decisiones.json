@@ -1,5 +1,5 @@
 {
-  "exportado": "2026-09-28T09:21:39.427Z",
+  "exportado": "2026-09-28T09:42:08.772Z",
   "decisiones": {
     "1951120": {
       "estado": "automatica",
@@ -41680,6 +41680,58 @@
         "nivel": "ALTA",
         "porque": "Lo contaron tres medios independientes.",
         "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "c7em03": {
+      "estado": "automatica",
+      "titulo": "Vence el plazo para dictaminar y la oposición negocia un proyecto",
+      "copete": "La oposición negocia a contrarreloj un dictamen común para aliviar la morosidad y frenar abusos crediticios, mientras el oficialismo impulsa una iniciativa propia.",
+      "cuerpo": "El plazo para dictaminar sobre el proyecto que busca aliviar la morosidad y combatir los abusos del sistema crediticio vence este martes en un plenario de comisiones.\n\nEl esquema de negociación involucra a distintos bloques parlamentarios que semanas atrás respaldaron el emplazamiento, mientras que el oficialismo mantiene bajo reserva su propia iniciativa para seducir a aliados.\n\nEl sector de la oposición busca asegurar las firmas indispensables para lograr un dictamen de mayoría, en medio de un escenario donde los indicadores de atrasos en los pagos muestran subas sostenidas tanto en la banca tradicional como en las plataformas fintech.",
+      "guion": "Vence el plazo para dictaminar y la oposición negocia un proyecto",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-28T09:42:08.679Z",
+      "etiquetas": [
+        "morosidad",
+        "creditos",
+        "oposicion",
+        "oficialismo",
+        "comisiones"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Canal 26",
+          "enlace": "https://www.canal26.com/economia/2026/09/27/morosidad-vence-el-plazo-para-dictaminar-y-la-oposicion-negocia-a-contrarreloj-un-proyecto-comun/",
+          "fecha": "2026-09-27T11:10:21.000Z",
+          "oficial": false,
+          "aporte": "Aportó los detalles sobre el proyecto opositor, las negociaciones entre bloques, los porcentajes de morosidad y los plazos de la emergencia."
+        },
+        {
+          "medio": "El Eco de Tandil",
+          "enlace": "https://www.eleco.com.ar/nacionales/la-oposicion-negocia-a-contrarreloj-el-proyecto-sobre-morosidad",
+          "fecha": "2026-09-28T06:00:00.000Z",
+          "oficial": false,
+          "aporte": "Indicó que la oposición negocia a contrarreloj y compite con la iniciativa del oficialismo."
+        },
+        {
+          "medio": "iProfesional",
+          "enlace": "https://www.iprofesional.com/politica/465347-horas-claves-para-el-proyecto-de-ley-de-morosidad-las-posturas-de-oficialismo-y-oposicion",
+          "fecha": "2026-09-27T23:26:00.000Z",
+          "oficial": false,
+          "aporte": "Confirmó que este martes es la jornada marcada para que haya dictamen."
+        },
+        {
+          "medio": "Noticias Argentinas (NA)",
+          "enlace": "https://noticiasargentinas.com/politica/morosidad--la-oposicion-negocia-a-contrarreloj-el-proyecto-y-se-ilusiona-con-sumar-mas-firmas-que-lla-_a6ab6c0fe66108e5d34b12015",
+          "fecha": "2026-09-27T11:15:00.000Z",
+          "oficial": false,
+          "aporte": "No aportó información adicional al no registrarse texto en su resumen."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron cuatro medios independientes.",
+        "sugeridoPorIA": "ALTA"
       }
     }
   },
