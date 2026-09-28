@@ -1,14 +1,15 @@
 'use client';
 
-// "Hoy en Balcarce": clima, farmacia de turno y dólar en tres renglones, cada
-// uno con su dato principal y un enlace a su página (/clima, /farmacias,
-// /dolar), que es donde está el detalle.
+// "Hoy en Balcarce": clima, farmacia de turno y dólar en tres tarjetas lado a
+// lado (la idea A del lienzo "Servicios", 28/09: Hernán, "había otros modelos
+// más lindos"), cada una con su dato y el enlace a su página (/clima,
+// /farmacias, /dolar), que es donde está el detalle.
 //
 // Reemplaza al resumen con pestañas (28/09 a la mañana). Hernán, 28/09: "quedó
 // medio burdo y volvió el tema de los botones de farmacia; dos cruces de
 // farmacias es mucho para la pantalla principal, total en las tres cosas
 // después debería existir una página con más detalles". Así que en la portada
-// va sólo el dato, sin botones: en el celular son tres renglones antes de la
+// va sólo el dato, sin botones: en el celular es una fila de tres tarjetas antes de la
 // primera noticia, no una pantalla entera.
 //
 // Clima y dólar se actualizan solos en el navegador (el mismo pedido que la
@@ -22,42 +23,37 @@ import useDolar from '@/components/usar-dolar';
 import { filasDelPanel, pesosEnteros } from '@/lib/dolar';
 import { comoNombre } from '@/lib/texto';
 
-function Renglon({ href, icono, que, valor, extra }) {
+/** Una tarjeta: la etiqueta con su ícono arriba, el dato grande, un renglón
+ *  debajo y, al pie, qué hay en su página. Toda la tarjeta es el enlace. */
+function Tarjeta({ href, etiqueta, icono, color, dato, debajo, pie, claseDato = '' }) {
   return (
-    <a href={href} className="renglon-hoy">
-      <span className="icono-hoy" aria-hidden="true">{icono}</span>
-      <span className="texto-hoy">
-        <span className="que-hoy">{que}</span>
-        <span className="valor-hoy">{valor}</span>
+    <a href={href} className="tarjeta-hoy">
+      <span className="etiqueta-hoy" style={color ? { color } : undefined}>
+        {etiqueta}
+        <span aria-hidden="true">{icono}</span>
       </span>
-      {extra && <span className="extra-hoy">{extra}</span>}
-      <span className="flecha-hoy" aria-hidden="true">›</span>
+      <span className={`dato-hoy ${claseDato}`.trim()}>{dato}</span>
+      {debajo && <span className="debajo-hoy">{debajo}</span>}
+      <span className="pie-hoy">{pie}</span>
     </a>
   );
 }
 
 const CRUZ = (
-  <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true">
+  <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
     <rect x="1" y="1" width="22" height="22" rx="6" fill="var(--farmacia)" />
     <path d="M10 5.5h4v4.5h4.5v4H14v4.5h-4V14H5.5v-4H10z" fill="#fff" />
   </svg>
 );
 
-const PESOS = (
-  <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true">
-    <rect x="1" y="1" width="22" height="22" rx="6" fill="var(--crema)" />
-    <text x="12" y="17" textAnchor="middle" fontSize="15" fontWeight="700" fill="var(--tinta)" fontFamily="var(--f-texto)">$</text>
-  </svg>
-);
-
-/** Los nombres de las farmacias de turno, como se escriben: "Medrano y Del
- *  Patio". El del detalle trae los acentos (es el directorio del Colegio). */
+/** Los nombres de las farmacias de turno, como se escriben. El del detalle trae
+ *  los acentos (es el directorio del Colegio). */
 export function nombresDeTurno(farmacia) {
-  if (!farmacia) return '';
+  if (!farmacia) return [];
   const nombres = farmacia.detalle?.length
     ? farmacia.detalle.map((f) => f.nombre)
     : (farmacia.farmacias ?? []);
-  return nombres.map(comoNombre).join(' y ');
+  return nombres.map(comoNombre).filter(Boolean);
 }
 
 export function HoyEnBalcarce({ clima, farmacia, foto }) {
@@ -65,42 +61,47 @@ export function HoyEnBalcarce({ clima, farmacia, foto }) {
   const { datos: datosDolar } = useDolar(foto);
 
   const a = datosClima?.ahora;
-  const hoy = datosClima?.dias?.[0];
+  const manana = datosClima?.dias?.[1];
   const turno = nombresDeTurno(farmacia);
   const filas = filasDelPanel(datosDolar?.cotizaciones ?? []);
   const blue = filas.find((f) => f.casa === 'blue');
   const oficial = filas.find((f) => f.casa === 'oficial');
-  const principalDolar = blue ?? oficial;
-  const otroDolar = blue ? oficial : null;
+  const brecha = blue && oficial ? Math.round(((blue.venta - oficial.venta) / oficial.venta) * 100) : null;
 
-  if (!a && !turno && !principalDolar) return null;
+  if (!a && !turno.length && !blue && !oficial) return null;
 
   return (
-    <section className="tarjeta hoy-balcarce" aria-label="Hoy en Balcarce">
+    <section className="hoy-balcarce" aria-label="Hoy en Balcarce">
       {a && (
-        <Renglon
+        <Tarjeta
           href="/clima"
-          icono={<SolChico cielo={a.cielo} esDeDia={a.esDeDia !== false} tamano={24} />}
-          que="Clima"
-          valor={<><strong>{a.temp}°</strong> {a.cielo}</>}
-          extra={hoy ? `${hoy.max}° / ${hoy.min}°` : null}
+          etiqueta="Clima"
+          icono={<SolChico cielo={a.cielo} esDeDia={a.esDeDia !== false} tamano={22} />}
+          dato={`${a.temp}°`}
+          debajo={a.cielo}
+          pie={manana ? `Mañana ${manana.max}° · ${manana.min}°` : 'Pronóstico ›'}
         />
       )}
-      {turno && (
-        <Renglon
+      {turno.length > 0 && (
+        <Tarjeta
           href="/farmacias"
+          etiqueta="De turno"
           icono={CRUZ}
-          que="Farmacia de turno"
-          valor={<strong>{turno}</strong>}
+          color="var(--farmacia-oscuro)"
+          dato={turno[0]}
+          claseDato="nombre"
+          debajo={turno.length > 1 ? `y ${turno.slice(1).join(' y ')}` : null}
+          pie="Dirección y teléfono ›"
         />
       )}
-      {principalDolar && (
-        <Renglon
+      {(blue || oficial) && (
+        <Tarjeta
           href="/dolar"
-          icono={PESOS}
-          que="Dólar"
-          valor={<>{principalDolar.nombre} <strong>{pesosEnteros(principalDolar.venta)}</strong></>}
-          extra={otroDolar ? `${otroDolar.nombre} ${pesosEnteros(otroDolar.venta)}` : null}
+          etiqueta={blue ? 'Dólar blue' : 'Dólar oficial'}
+          dato={pesosEnteros((blue ?? oficial).venta)}
+          claseDato="cifra"
+          debajo={blue && oficial ? `Oficial ${pesosEnteros(oficial.venta)}` : null}
+          pie={brecha !== null ? `Brecha ${brecha}%` : 'Todos los dólares ›'}
         />
       )}
     </section>

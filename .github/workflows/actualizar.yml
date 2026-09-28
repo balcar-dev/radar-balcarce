@@ -147,7 +147,7 @@ jobs:
           # fotos" en CRITERIO-EDITORIAL.md); sin este `git add`, la corrida
           # las armaba pero se perdían al terminar la corrida (encontrado el
           # 28/09, en la primera corrida real: 8 fotos armadas, cero subidas).
-          git add web/data/portada.json web/data/archivo.json web/data/agenda.json web/data/intentos-ia.json web/data/dolar-historia.json web/data/fichas.json web/data/notas-por-dia.json web/data/banco-fotos.json web/data/esperando-cuerpo.json web/public/fotos-notas/
+          git add web/data/portada.json web/data/archivo.json web/data/agenda.json web/data/intentos-ia.json web/data/dolar-historia.json web/data/fichas.json web/data/notas-por-dia.json web/data/banco-fotos.json web/data/esperando-cuerpo.json web/data/vistas.json web/public/fotos-notas/
           if git diff --cached --quiet; then
             echo "Sin novedades: no hay nada que publicar."
           else

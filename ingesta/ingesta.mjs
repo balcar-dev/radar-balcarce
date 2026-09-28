@@ -1297,7 +1297,7 @@ export async function ingestar({
   // la sección, o el RSS y el índice): una sola vez.
   const yaVistas = new Set();
   todas = todas.filter((n) => {
-    const k = `${n.medio}|${normalizar(n.titulo).replace(/s+/g, '')}`;
+    const k = `${n.medio}|${normalizar(n.titulo).replace(/\s+/g, '')}`;
     if (yaVistas.has(k)) return false;
     yaVistas.add(k);
     return true;

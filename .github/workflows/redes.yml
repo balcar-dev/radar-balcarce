@@ -100,25 +100,32 @@ jobs:
           SITIO: https://radarbalcarce.com
 
       # ------------------------------------------ Instagram: el reloj y las piezas
+      # Sólo con las redes prendidas (28/09): con REDES_ACTIVAS en "No" el
+      # reloj seguía pidiendo la pieza, se armaba con la voz paga de Gemini cada
+      # 30 minutos y no se publicaba (no queda en el libro, así que la vuelta
+      # siguiente la volvía a pedir). always(): una falla del paso de Facebook
+      # ya no tumba las piezas de Instagram de esa vuelta.
       - name: Ver qué pieza toca ahora
         id: reloj
-        if: github.event.inputs.accion != 'verificar' && github.event.inputs.accion != 'facebook'
+        if: always() && github.event.inputs.accion != 'verificar' && github.event.inputs.accion != 'facebook' && contains(fromJSON('["Si","si","SI","Sí","sí","SÍ"]'), vars.REDES_ACTIVAS)
         run: node redes/reloj.mjs
 
       # Sólo si toca algo: acá sí se instala (resvg para las placas, ffmpeg para
       # el video).
       - name: Instalar
-        if: steps.reloj.outputs.hay == 'true'
+        id: instalar
+        if: always() && steps.reloj.outputs.hay == 'true'
         run: npm ci --no-audit --no-fund
 
       - name: Armar las piezas que tocan
-        if: steps.reloj.outputs.hay == 'true'
+        id: armar
+        if: always() && steps.instalar.outcome == 'success'
         run: node reels/plan.mjs --generar --solo=${{ steps.reloj.outputs.solo }}
         env:
           GEMINI_API_KEY_REDES: ${{ secrets.GEMINI_API_KEY_REDES }}
 
       - name: Publicar en Instagram y en la página de Facebook
-        if: steps.reloj.outputs.hay == 'true'
+        if: always() && steps.armar.outcome == 'success'
         run: node redes/publicar.mjs --piezas
         env:
           META_TOKEN: ${{ secrets.META_TOKEN }}

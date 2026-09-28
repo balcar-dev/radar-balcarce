@@ -368,6 +368,8 @@ test('una nota que nunca salió no se estrena con el hecho de más de 12 horas',
 
 test('generar-datos no estrena lo que llega tarde ni le pide cuerpo a Gemini, y respeta lo ya publicado y lo de una persona', () => {
   const s = fs.readFileSync(path.join(import.meta.dirname, '..', 'web', 'scripts', 'generar-datos.mjs'), 'utf8');
-  assert.match(s, /if \(!humana && !yaSalieron\.has\(n\.id\) && n\.cuando !== 'sin fecha en la fuente'\s+&& llegaTarde\(fechaDeLaNota\(/);
-  assert.match(s, /\.filter\(\(n\) => previas\[n\.id\] \|\| yaSalieron\.has\(n\.id\)\s+\|\| !llegaTarde\(/);
+  // La misma fecha decide las dos cosas, sin excepción para las notas sin hora
+  // (28/09: una sin hora quedaba fuera de la reescritura pero se podía estrenar).
+  assert.match(s, /if \(!humana && !yaSalieron\.has\(n\.id\) && llegaTarde\(fechaReal\(n\)\)\) return null;/);
+  assert.match(s, /\.filter\(\(n\) => previas\[n\.id\] \|\| yaSalieron\.has\(n\.id\)\s+\|\| !llegaTarde\(fechaReal\(n\)\)\);/);
 });

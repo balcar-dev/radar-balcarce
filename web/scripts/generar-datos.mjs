@@ -72,6 +72,11 @@ const FOTOS_NOTAS = path.join(AQUI, '..', 'public', 'fotos-notas');
 // Gemini sin cupo dejaba 34 esperando y la portada con notas de días atrás; así
 // Claude u otra persona las redacta en web/data/correcciones.json).
 const ESPERANDO_CUERPO = path.join(AQUI, '..', 'data', 'esperando-cuerpo.json');
+// La primera vez que vimos cada nota de la ingesta, publicada o no (28/09).
+// Un feed sin fecha le pone "ahora" en cada corrida: sin esta memoria, una nota
+// que llevaba días en el feed salía como recién publicada. Se poda a 7 días.
+const VISTAS = path.join(AQUI, '..', 'data', 'vistas.json');
+const DIAS_DE_VISTAS = 7;
 // Lo que se sacó a mano de la web, fuera del panel (lib/archivo.js).
 const RETIRADAS_A_MANO = idsRetiradosAMano(leerJson(path.join(AQUI, '..', 'data', 'retiradas.json'), null));
 // Lo que se corrigió a mano (título, bajada, sección), fuera del panel.
@@ -148,6 +153,29 @@ const fechaAntes = Object.fromEntries([...(archivoAnterior.notas ?? []), ...(ant
 // seguir en las listas con el hecho de más de 24 horas (llegaTarde).
 const yaSalieron = new Set([...(archivoAnterior.notas ?? []), ...(anterior.notas ?? [])].map((n) => n.id));
 const ahoraISO = new Date().toISOString();
+
+// La primera vez que vimos cada nota (VISTAS). Se anota antes de decidir nada.
+const vistasAntes = leerJson(VISTAS, {});
+const vistas = {};
+{
+  const limite = Date.now() - DIAS_DE_VISTAS * 864e5;
+  for (const [id, cuando] of Object.entries(vistasAntes)) if (new Date(cuando).getTime() >= limite) vistas[id] = cuando;
+  for (const n of ultima.notas ?? []) if (!vistas[n.id]) vistas[n.id] = vistoAntes[n.id] ?? ahoraISO;
+  // Un id por renglón: el diff de cada corrida queda chico y legible.
+  const texto = `${JSON.stringify(vistas).replace(/,"/g, ',\n"')}\n`;
+  if (!fs.existsSync(VISTAS) || fs.readFileSync(VISTAS, 'utf8') !== texto) fs.writeFileSync(VISTAS, texto, 'utf8');
+}
+
+/**
+ * La fecha de una nota, una sola regla para todo (28/09): si la fuente no dio
+ * hora, la primera vez que la vimos; si la dio, la más vieja que se conoce
+ * (sus fuentes, la ya publicada, la primera vez que la vimos). Es la que se
+ * muestra, la que ordena y la que decide si llega tarde (llegaTarde).
+ */
+const primeraVista = (n) => vistoAntes[n.id] ?? vistas[n.id];
+const fechaReal = (n) => (n.cuando === 'sin fecha en la fuente'
+  ? (primeraVista(n) ?? ahoraISO)
+  : fechaDeLaNota(n, { fechaAnterior: fechaAntes[n.id], visto: primeraVista(n) }));
 
 // La lectura con IA (plan V2.2, ingesta/lectura-ia.mjs). Desde el 27/09 DECIDE
 // (Hernán: sin prueba, se corrige en vivo): una IA lee cada nota nueva con el
@@ -240,7 +268,7 @@ const intentosAntes = leerJson(INTENTOS_IA, null);
 const intentos = podarIntentos(intentosAntes ?? {});
 if (enLaNube) {
   const previas = previasDeLaPortada([...(archivoAnterior.notas ?? []), ...(anterior.notas ?? [])]);
-  const fechaParaLista = (n) => (n.cuando === 'sin fecha en la fuente' ? (vistoAntes[n.id] ?? ahoraISO) : n.fecha);
+  const fechaParaLista = fechaReal;
   // Lo que ya tiene el cuerpo escrito en correcciones.json no se le pide a
   // Gemini: sería gastar cupo en algo que después no se usa (27/09).
   const paraReescribir = (ultima.notas ?? [])
@@ -249,7 +277,7 @@ if (enLaNube) {
     // Lo que ya no se va a estrenar (hecho de más de 24 horas, nunca salió) no
     // se le pide a Gemini: sería gastar cupo en algo que no va a salir (28/09).
     .filter((n) => previas[n.id] || yaSalieron.has(n.id)
-      || !llegaTarde(fechaDeLaNota(n, { fechaAnterior: fechaAntes[n.id], visto: vistoAntes[n.id] })));
+      || !llegaTarde(fechaReal(n)));
   // El archivo va también como fuente de ANTECEDENTES: lo que el sitio ya
   // publicó sobre el mismo tema en los últimos 30 días (CRITERIO-EDITORIAL.md).
   reescritas = await reescribirAutomaticas(paraReescribir, {
@@ -295,8 +323,9 @@ function notaPublicada(n) {
   if (st !== 'publicada' && st !== 'automatica') return null;
   // Una nota que nunca salió no se estrena con el hecho de más de 24 horas
   // (llegaTarde, lib/archivo.js). Lo que publicó una persona se respeta.
-  if (!humana && !yaSalieron.has(n.id) && n.cuando !== 'sin fecha en la fuente'
-    && llegaTarde(fechaDeLaNota(n, { fechaAnterior: fechaAntes[n.id], visto: vistoAntes[n.id] }))) return null;
+  // Sin excepción para las notas sin hora: se cuentan desde la primera vez que
+  // las vimos (fechaReal).
+  if (!humana && !yaSalieron.has(n.id) && llegaTarde(fechaReal(n))) return null;
   // Lo que decidió una persona manda. Si no, lo que ya reescribió la IA sola
   // en esta corrida o en una anterior. Si ninguna de las dos cosas pasó,
   // queda el resumen mecánico de la fuente, como salía antes de todo esto.
@@ -345,9 +374,7 @@ function notaPublicada(n) {
     // ese caso manda la primera vez que la vimos, que no cambia.
     // Con fecha: la más vieja que se conoce, nunca una más nueva que la ya
     // publicada (un medio que actualiza su nota no la trae de vuelta, 28/09).
-    fecha: n.cuando === 'sin fecha en la fuente'
-      ? (vistoAntes[n.id] ?? ahoraISO)
-      : fechaDeLaNota(n, { fechaAnterior: fechaAntes[n.id], visto: vistoAntes[n.id] }),
+    fecha: fechaReal(n),
     // Cuando la fuente no publica la hora, la ingesta pone la de ahora para
     // poder ordenar. Se guarda el aviso para que la web no mienta un
     // "hace 1 minuto" que no es cierto.
@@ -677,8 +704,7 @@ function cambioQueImporta(antes, ahora) {
 }
 
 {
-  const texto = `${JSON.stringify({ generado: salida.generado, notas: esperandoCuerpo }, null, 1)}
-`;
+  const texto = `${JSON.stringify({ generado: salida.generado, notas: esperandoCuerpo }, null, 1)}\n`;
   const antes = fs.existsSync(ESPERANDO_CUERPO) ? JSON.parse(fs.readFileSync(ESPERANDO_CUERPO, 'utf8')) : null;
   if (JSON.stringify(antes?.notas) !== JSON.stringify(esperandoCuerpo)) fs.writeFileSync(ESPERANDO_CUERPO, texto, 'utf8');
 }
