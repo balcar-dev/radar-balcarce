@@ -811,6 +811,11 @@
   "ultimo": "2026-09-28T01:49:20.485Z",
   "motivo": "con cuerpo"
  },
+ "1f9bhpx": {
+  "intentos": 1,
+  "ultimo": "2026-09-28T22:31:01.681Z",
+  "motivo": "cuerpo: 3 problemas (nombre, copia): el cuerpo nombra a \"radio\" y la fuente no; sin esas oraciones quedan 76 palabras"
+ },
  "1feeb6l": {
   "intentos": 1,
   "ultimo": "2026-09-25T17:30:46.959Z",
@@ -937,9 +942,11 @@
   "motivo": "con cuerpo"
  },
  "1hjmkd4": {
-  "intentos": 2,
-  "ultimo": "2026-09-28T07:31:03.507Z",
-  "motivo": "con cuerpo"
+  "intentos": 3,
+  "ultimo": "2026-09-28T22:31:01.681Z",
+  "motivo": "verificación baja: espera a una persona",
+  "baja": true,
+  "fuentes": 1
  },
  "1hk3eku": {
   "intentos": 1,
@@ -1052,6 +1059,11 @@
   "intentos": 1,
   "ultimo": "2026-09-25T15:30:41.452Z",
   "motivo": "cuerpo: 6 problemas (antecedente, repite): el cuerpo usa \"viernes\", que sale de una nota anterior, como si fuera de hoy; sin esas oraciones quedan 36 palabras"
+ },
+ "1jf1w7c": {
+  "intentos": 1,
+  "ultimo": "2026-09-28T22:31:01.681Z",
+  "motivo": "con cuerpo"
  },
  "1ji3unp": {
   "intentos": 1,
@@ -1561,6 +1573,11 @@
   "ultimo": "2026-09-27T10:30:39.936Z",
   "motivo": "con cuerpo"
  },
+ "1t74fyv": {
+  "intentos": 1,
+  "ultimo": "2026-09-28T22:31:01.681Z",
+  "motivo": "con cuerpo"
+ },
  "1t8415g": {
   "intentos": 1,
   "ultimo": "2026-09-27T07:00:43.448Z",
@@ -1592,9 +1609,9 @@
   "motivo": "título o bajada: 1 problema (negacion): la fuente niega algo en el título y el texto nuevo no"
  },
  "1tp9ff4": {
-  "intentos": 1,
-  "ultimo": "2026-09-28T22:01:14.632Z",
-  "motivo": "título o bajada: 1 problema (numero): el guion dice 14.000.000 y la fuente no lo dice"
+  "intentos": 2,
+  "ultimo": "2026-09-28T22:31:01.681Z",
+  "motivo": "título o bajada: 1 problema (largo): el titulo tiene 92 caracteres, el máximo es 90"
  },
  "1tqlbld": {
   "intentos": 1,
@@ -1898,8 +1915,8 @@
   "motivo": "con cuerpo"
  },
  "2jiiqj": {
-  "intentos": 2,
-  "ultimo": "2026-09-28T07:31:03.507Z",
+  "intentos": 3,
+  "ultimo": "2026-09-28T22:31:01.681Z",
   "motivo": "con cuerpo"
  },
  "2kpa3m": {
@@ -2035,6 +2052,11 @@
  "5exxou": {
   "intentos": 1,
   "ultimo": "2026-09-28T02:27:15.574Z",
+  "motivo": "con cuerpo"
+ },
+ "5hhuva": {
+  "intentos": 1,
+  "ultimo": "2026-09-28T22:31:01.681Z",
   "motivo": "con cuerpo"
  },
  "5qyonb": {
@@ -3519,6 +3541,11 @@
   "intentos": 3,
   "ultimo": "2026-09-27T03:30:39.535Z",
   "motivo": "título o bajada: 1 problema (negacion): la fuente niega algo en el título y el texto nuevo no"
+ },
+ "z8w3og": {
+  "intentos": 1,
+  "ultimo": "2026-09-28T22:31:01.681Z",
+  "motivo": "título o bajada: 7 problemas (numero): el titulo dice 30 y la fuente no lo dice"
  },
  "zd48ar": {
   "intentos": 3,

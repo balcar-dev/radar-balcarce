@@ -1525,16 +1525,16 @@
   "cuando": "2026-09-28T21:34:10.724Z"
  },
  "10595ii": {
-  "archivo": "fotos-notas/10595ii.png",
   "medio": "Ámbito",
-  "credito": "Foto: Ámbito",
   "licencia": null,
   "origen": "medio",
   "titulo": "El Gobierno inicia un arbitraje contra el Reino Unido por Malvinas",
   "enlace": "https://www.ambito.com/malvinas-el-gobierno-inicia-un-arbitraje-internacional-contra-el-reino-unido-el-proyecto-sea-lion-n6327638",
   "imagenOriginal": "https://media.ambito.com/p/0e50c0cdc29dc4cb6ef501e96181659c/adjuntos/239/imagenes/039/367/0039367449/1200x675/846x509:866x529/sea-lionwebp.png",
   "razon": "Es una foto clara de una plataforma petrolera en el mar, sin marcas de agua y de excelente calidad para ilustrar la nota.",
-  "cuando": "2026-09-28T21:34:10.724Z"
+  "cuando": "2026-09-28T21:34:10.724Z",
+  "intentado": true,
+  "borrada": true
  },
  "15fjvvg": {
   "archivo": "fotos-notas/15fjvvg.jpg",
@@ -1619,5 +1619,41 @@
   "imagenOriginal": "https://cdn1.eldia.com/092026/1790600365442.jpg?&amp;cw=1200&amp;ch=630",
   "razon": "Es la única foto institucional clara de un edificio gubernamental provincial libre de marcas de agua añadidas.",
   "cuando": "2026-09-28T22:01:45.815Z"
+ },
+ "1t74fyv": {
+  "archivo": "fotos-notas/1t74fyv.jpg",
+  "medio": "El Diario Balcarce",
+  "credito": "Foto: El Diario Balcarce",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "El autódromo Fangio asoma como alternativa para cerrar el año del TC",
+  "enlace": "https://eldiariobalcarce.com.ar/el-6-de-diciembre-por-las-dudas-circuito-libre-fecha-para-el-tc-673",
+  "imagenOriginal": "http://imagenes.eldiariobalcarce.com.ar/2026-09-28-22-6-53pik.JPG",
+  "razon": "Es la única opción disponible, posee buena nitidez y encuadre de los vehículos en pista sin marcas del medio.",
+  "cuando": "2026-09-28T22:33:06.660Z"
+ },
+ "1jf1w7c": {
+  "archivo": "fotos-notas/1jf1w7c.jpg",
+  "medio": "Perfil",
+  "credito": "Foto: Perfil",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Cierra la votación del Balón de Oro y definen al ganador",
+  "enlace": "https://442.perfil.com/noticias/futbol/hoy-se-cierra-la-votacion-del-balon-de-oro-quienes-son-los-candidatos-y-cuando-se-conocera-al-ganador.phtml",
+  "imagenOriginal": "https://fotos.perfil.com/2025/09/22/trim/1140/641/balon-de-oro-2103916.jpg",
+  "razon": "Es la única opción disponible, tiene buena nitidez y muestra claramente el Balón de Oro sin marcas de agua del medio.",
+  "cuando": "2026-09-28T22:33:06.660Z"
+ },
+ "5hhuva": {
+  "archivo": "fotos-notas/5hhuva.jpg",
+  "medio": "Ámbito",
+  "credito": "Foto: Ámbito",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "El Ministerio de Economía renueva la totalidad de los vencimientos de deuda",
+  "enlace": "https://www.ambito.com/finanzas/deuda-economia-logro-renovar-el-100-vencimientos-una-rueda-complicada-los-mercados-n6327653",
+  "imagenOriginal": "https://media.ambito.com/p/06db550874cfb04167414a86b90a1daa/adjuntos/239/imagenes/043/552/0043552738/1200x675/smart/ministerio-economia.jpg",
+  "razon": "Muestra claramente el frente del Ministerio de Economía sin personas en la toma y sin marcas de agua.",
+  "cuando": "2026-09-28T22:33:06.660Z"
  }
 }
