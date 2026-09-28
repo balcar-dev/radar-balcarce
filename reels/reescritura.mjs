@@ -90,10 +90,28 @@ export const INSTRUCCION_EDITORIAL = `${instruccionPara({ seccion: '', titulo: '
 /** El criterio editorial entero (CRITERIO-EDITORIAL.md), para el panel. */
 export const CRITERIO_EDITORIAL = CRITERIO.texto;
 
-function limpiarJson(texto) {
+/**
+ * Una barra invertida que no arma un escape válido de JSON ("\u00" cortado, "\é",
+ * "\ " en medio del texto) se escapa, así el texto queda igual y el JSON se lee.
+ * 28/09: la mitad de los pedidos de una corrida se perdieron con "Bad Unicode
+ * escape in JSON" y ninguna nota recibió cuerpo.
+ */
+export function repararEscapes(texto) {
+  return String(texto).replace(/\\(?!["\\/bfnrt]|u[0-9a-fA-F]{4})/g, '\\\\');
+}
+
+export function limpiarJson(texto) {
   const m = texto.match(/\{[\s\S]*\}/);
   if (!m) throw new Error('la respuesta no trae un JSON reconocible');
-  return JSON.parse(m[0]);
+  try {
+    return JSON.parse(m[0]);
+  } catch (e) {
+    try {
+      return JSON.parse(repararEscapes(m[0]));
+    } catch {
+      throw e;
+    }
+  }
 }
 
 /** "24/09/2026", en la hora de Balcarce. Vacío si no hay fecha. */
