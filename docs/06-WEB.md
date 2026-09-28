@@ -404,18 +404,18 @@ válida. Va en un `<time>` con la fecha exacta (`Hace`,
 
 ### "Hoy en Balcarce": `web/components/hoy-balcarce.js`
 
-Desde el 28/09, en la columna derecha de la portada (en el celular, antes de
-la primera noticia), un solo panel de tres filas apiladas, cada una entera un
-enlace a su página. La primera versión eran tres tarjetas lado a lado y no
-entraban (con dos farmacias de turno el nombre se apretaba); Hernán la cambió
-el mismo día. Cada fila: ícono y etiqueta a la izquierda, el dato a la derecha
-y una flecha.
+En la columna derecha de la portada (en el celular, antes de la primera
+noticia). Desde el 28/09 a la noche es un panel con **tres pestañas** (la idea
+C del lienzo "Radar Balcarce – Servicios"): se ve una cosa por vez, con los
+números grandes. Antes fueron tres tarjetas lado a lado (no entraban) y tres
+renglones apilados ("así no se leen los datos"). Una pestaña sin datos no se
+muestra; la primera con datos queda elegida.
 
-| Fila | Dato en negrita | Al lado | Lleva a |
-|---|---|---|---|
-| Clima | la temperatura | el cielo y "mañana N°" (la máxima) | `/clima` |
-| De turno | las farmacias ("Medrano y Del Patio"; cada nombre baja entero) | — | `/farmacias` |
-| Dólar blue (u oficial si no hay blue) | la venta en pesos enteros | "oficial $…" | `/dolar` |
+| Pestaña | Qué muestra | Lleva a |
+|---|---|---|
+| Clima N° | la temperatura grande y el cielo, sensación, viento y humedad (sólo lo que hay) y los tres días que siguen (máxima, mínima y la lluvia si es de 20 % o más) | "Pronóstico extendido" → `/clima` |
+| Farmacias | las de turno, con nombre y dirección. **Sin botones** de llamar ni de mapa (Hernán, 28/09): están en `/farmacias` | "Teléfonos y turnos de la semana" → `/farmacias` |
+| Dólar | oficial y blue, compra y venta en pesos enteros; nunca "en vivo" | "Todos los dólares" → `/dolar` |
 
 El clima y el dólar se actualizan solos en el navegador; la farmacia llega
 armada del servidor. Sin ningún dato, la sección no aparece. Debajo va el

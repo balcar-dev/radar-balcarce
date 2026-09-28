@@ -548,31 +548,62 @@ main { padding: 24px 0 10px; }
 .pastilla-turno .punto-vivo { background: var(--farmacia); }
 .tarjeta-farmacia .ver-semana { white-space: nowrap; }
 
-/* Hoy en Balcarce (28/09): clima, farmacia de turno y dólar en un solo panel de
-   tres filas (components/hoy-balcarce.js), cada una un enlace a su página. Siempre
-   apiladas: en escritorio vive en la columna lateral, que es angosta. */
+/* Hoy en Balcarce (28/09, a la noche): clima, farmacia de turno y dólar en un
+   panel con tres pestañas (components/hoy-balcarce.js; idea C del lienzo
+   "Radar Balcarce – Servicios"). Una cosa por vez, con los números grandes. */
 .hoy-balcarce {
-  display: grid; grid-template-columns: minmax(0, 1fr);
-  background: var(--papel); border: 1px solid var(--linea); border-radius: 14px; overflow: hidden;
+  display: flex; flex-direction: column; gap: 12px; padding: 8px;
+  background: var(--papel); border: 1px solid var(--linea); border-radius: 16px;
+  font-family: var(--f-texto); color: var(--tinta);
 }
-.fila-hoy {
-  display: grid; grid-template-columns: 112px minmax(0, 1fr) 14px; align-items: center; column-gap: 12px;
-  padding: 13px 14px; color: var(--tinta); text-decoration: none; min-width: 0;
-  border-top: 1px solid var(--linea-suave);
+.pestanas-hoy {
+  display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 4px;
+  padding: 4px; background: var(--crema); border-radius: 12px;
 }
-.fila-hoy:first-child { border-top: 0; }
-.fila-hoy:hover { background: var(--fondo-suave, rgba(0, 0, 0, 0.03)); }
-.rotulo-hoy {
-  display: flex; align-items: center; gap: 7px;
-  font-family: var(--f-texto); font-size: var(--t-etiqueta); font-weight: 700; text-transform: uppercase;
-  letter-spacing: 0.04em; color: var(--suave); line-height: 1.2; white-space: nowrap;
+.pestana-hoy {
+  min-height: 44px; border: 0; border-radius: 9px; background: transparent; cursor: pointer;
+  font-family: var(--f-texto); font-size: 15px; font-weight: 600; color: var(--texto);
+  white-space: nowrap; font-variant-numeric: tabular-nums;
 }
-.icono-hoy { display: flex; flex: none; width: 18px; }
-.dato-hoy { font-family: var(--f-texto); font-size: 15px; line-height: 1.35; overflow-wrap: anywhere; font-variant-numeric: tabular-nums; }
-.dato-hoy strong { font-size: 18px; font-weight: 700; }
-.al-lado-hoy { display: inline-block; white-space: nowrap; margin-left: 8px; font-size: 14px; color: var(--texto); }
-.nombre-hoy { white-space: nowrap; }
-.flecha-hoy { color: var(--suave); font-size: 20px; line-height: 1; text-align: right; }
+.pestana-hoy:hover { color: var(--tinta); }
+.pestana-hoy.activa { background: var(--tinta); color: #fff; }
+.pestana-hoy:focus-visible { outline: 2px solid var(--rojo); outline-offset: 2px; }
+.panel-hoy { display: flex; flex-direction: column; gap: 10px; min-height: 212px; padding: 4px 8px 6px; }
+.ahora-hoy { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.temp-hoy { display: flex; align-items: baseline; gap: 12px; min-width: 0; }
+.temp-hoy strong { font-size: 48px; font-weight: 700; line-height: 1; font-variant-numeric: tabular-nums; }
+.temp-hoy span { font-size: 19px; font-weight: 600; line-height: 1.2; }
+.detalle-hoy { margin: 0; font-size: 15px; line-height: 1.4; color: var(--texto); }
+.dias-hoy { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; }
+.dias-hoy li {
+  display: flex; flex-direction: column; align-items: center; gap: 3px;
+  padding: 9px 4px; background: var(--crema); border-radius: 10px;
+}
+.nombre-dia-hoy { font-size: 12px; font-weight: 700; letter-spacing: 0.08em; color: var(--texto); }
+.temps-hoy { font-size: 16px; color: var(--suave); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.temps-hoy strong { color: var(--tinta); font-weight: 700; }
+.lluvia-hoy { font-size: 13px; font-weight: 600; color: #235F8F; }
+.lluvia-hoy.sin-lluvia { color: var(--suave); font-weight: 400; }
+.farmacias-hoy { list-style: none; margin: 0; padding: 0; }
+.farmacias-hoy li { display: flex; flex-direction: column; gap: 2px; padding: 10px 0; border-top: 1px solid var(--linea-suave); }
+.farmacias-hoy li:first-child { border-top: 0; padding-top: 2px; }
+.farmacias-hoy strong { font-size: 19px; font-weight: 700; line-height: 1.25; overflow-wrap: anywhere; }
+.farmacias-hoy span { font-size: 15px; color: var(--texto); line-height: 1.35; overflow-wrap: anywhere; }
+.dolar-hoy { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; }
+.dolar-hoy thead th {
+  padding: 0 0 6px; font-size: 12px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--texto); text-align: right;
+}
+.dolar-hoy tbody th { padding: 11px 0; font-size: 18px; font-weight: 700; text-align: left; border-top: 1px solid var(--linea-suave); }
+.dolar-hoy td { padding: 11px 0; text-align: right; font-size: 16px; color: var(--texto); border-top: 1px solid var(--linea-suave); }
+.dolar-hoy td strong { font-size: 23px; font-weight: 700; color: var(--tinta); }
+.enlace-hoy {
+  margin-top: auto; align-self: flex-start; display: inline-flex; align-items: center; min-height: 36px;
+  font-size: 15px; font-weight: 600; color: var(--rojo); text-decoration: none;
+}
+.enlace-hoy:hover { color: var(--rojo-oscuro); text-decoration: underline; }
+.enlace-farmacia-hoy { color: var(--farmacia-oscuro); }
+.enlace-farmacia-hoy:hover { color: var(--farmacia-oscuro); }
 /* El nombre de la farmacia es un DATO de servicio, no un titular: la letra de
    texto en el mismo tamaño y peso que cualquier otro dato (--t-dato), en tinta.
    Un nombre largo baja de renglón, nunca se corta. */

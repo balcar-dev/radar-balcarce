@@ -135,8 +135,8 @@ test('la columna derecha es una sola pila: servicios y lateral dentro de .derech
   const orden = ['className="derecha"', '<HoyEnBalcarce', 'Agenda de Balcarce', '<TarjetaBuzon', 'Números útiles', 'className="principal"']
     .map((t) => page.indexOf(t));
   assert.ok(orden.every((x, i) => x > 0 && (i === 0 || x > orden[i - 1])), `orden en el HTML: ${orden}`);
-  // Clima, farmacia y dólar siguen en ese orden, ahora como tres renglones
-  // de "Hoy en Balcarce" (28/09).
+  // Clima, farmacia y dólar siguen en ese orden, ahora como tres pestañas
+  // de "Hoy en Balcarce" (28/09 a la noche).
   const hoy = leer('web/components/hoy-balcarce.js');
   const ordenInterno = ['href="/clima"', 'href="/farmacias"', 'href="/dolar"'].map((t) => hoy.indexOf(t));
   assert.ok(ordenInterno.every((x, i) => x > 0 && (i === 0 || x > ordenInterno[i - 1])), `orden adentro de Hoy en Balcarce: ${ordenInterno}`);
@@ -179,4 +179,21 @@ test('hay página de clima: la pastilla de arriba y el menú llevan a /clima (28
   assert.match(layout, /\{ href: '\/clima', nombre: 'Clima' \}/);
   assert.match(layout, /<a href="\/clima" className="enlace-pastilla"><PastillaClima/);
   assert.match(leer('web/app/sitemap.js'), /\/clima/);
+});
+
+// 28/09 a la noche: "así no se leen los datos". Hoy en Balcarce pasa a tres
+// pestañas (idea C del lienzo "Radar Balcarce – Servicios"), una cosa por vez
+// con los números grandes, y cada una termina en el enlace a su página.
+test('Hoy en Balcarce: tres pestañas accesibles, clima primero, y la farmacia sigue sin botones', () => {
+  const hoy = leer('web/components/hoy-balcarce.js');
+  assert.match(hoy, /role="tablist"/);
+  assert.match(hoy, /role="tab"/);
+  assert.match(hoy, /aria-selected=\{activa === p\.id\}/);
+  assert.match(hoy, /role="tabpanel"/);
+  const orden = ["id: 'clima'", "id: 'farmacias'", "id: 'dolar'"].map((t) => hoy.indexOf(t));
+  assert.ok(orden.every((x, i) => x > 0 && (i === 0 || x > orden[i - 1])), `orden de las pestañas: ${orden}`);
+  assert.match(hoy, /Pronóstico extendido/);
+  assert.ok(!/Llamar|Cómo llegar|tel:|google\.com\/maps/.test(hoy), 'sin botones de farmacia en la portada');
+  const css = leer('web/app/globals.css');
+  assert.match(css, /\.pestana-hoy \{[^}]*min-height: 44px;/, 'las pestañas se tocan cómodas con el dedo');
 });
