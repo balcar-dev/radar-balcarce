@@ -1,5 +1,5 @@
 {
-  "generado": "2026-09-28T08:05:14.816Z",
+  "generado": "2026-09-28T08:31:43.805Z",
   "notas": [
     {
       "id": "1hjmkd4",
@@ -259,7 +259,7 @@
       "fecha": "2026-09-28T05:10:44.000Z",
       "sinFecha": false,
       "visto": "2026-09-28T06:01:00.563Z",
-      "relevancia": 59,
+      "relevancia": 49,
       "local": false,
       "publicadaPor": "ia",
       "publicadaCuando": "2026-09-28T07:22:11.860Z",
@@ -352,6 +352,93 @@
         "sugeridoPorIA": "MEDIA"
       },
       "slug": "el-movimiento-245-brinda-contencion-y-autoayuda"
+    },
+    {
+      "id": "gun9be",
+      "titulo": "Antonino Sganga gana en el TC Pista Pick Up en el Fangio",
+      "copete": "Antonino Sganga se impuso en la categoría disputada en el autódromo Juan Manuel Fangio. El piloto local Juan José Suárez debió abandonar tras un incidente en la carrera.",
+      "cuerpo": "Antonino Sganga se consagró ganador en las TC Pista Pick Up tras una apretada definición desarrollada en el autódromo Juan Manuel Fangio. La competencia tuvo múltiples alternativas y abandonos, entre ellos el del piloto local Juan José Suárez, quien venía cumpliendo una destacada labor en el cuarto puesto hasta que protagonizó un incidente en la vuelta ocho en la zona del puente junto a Santiago Biagi, quedando ambos sin posibilidades.\n\nEl fin de semana automovilístico en el circuito local ya había tenido actividad previa.\n\nLa carrera final también tuvo las bajas tempranas del líder del play off, Tomás Pellandino, quien no pudo largar por problemas en su vehículo. Finalmente, Sganga cruzó la meta en primer lugar seguido por Cifré, Néstor Goya y José Alberto Goya, siendo los únicos que completaron la totalidad de las vueltas del trazado balcarceño.",
+      "guion": "Antonino Sganga gana en el TC Pista Pick Up en el Fangio",
+      "seccion": "Automovilismo",
+      "medios": [
+        "El Diario Balcarce",
+        "Campeones"
+      ],
+      "enlace": "https://eldiariobalcarce.com.ar/antonino-sganga-se-impuso-en-las-tc-pista-pick-up-71",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-27T23:42:42.000Z",
+      "sinFecha": false,
+      "visto": "2026-09-27T23:55:08.522Z",
+      "relevancia": 96,
+      "local": true,
+      "publicadaPor": "ia",
+      "publicadaCuando": "2026-09-27T23:44:27.328Z",
+      "temas": [
+        "autodromo",
+        "fangio"
+      ],
+      "como": "automatica",
+      "claves": [
+        "Antonino Sganga logró su primera victoria en la divisional en el autódromo Juan Manuel Fangio.",
+        "El piloto local Juan José Suárez abandonó la final tras un incidente en la vuelta ocho.",
+        "La competencia principal finalizó con pocos pilotos completando la totalidad de las vueltas."
+      ],
+      "noConfirmado": [
+        "No se informaron oficialmente los detalles técnicos sobre las sanciones aplicadas en la primera serie."
+      ],
+      "textoRedes": "Antonino Sganga se impuso en las TC Pista Pick Up en el autódromo Juan Manuel Fangio. El piloto local Juan José Suárez cumplió una buena labor previa pero debió abandonar tras un incidente en la final.",
+      "etiquetas": [
+        "TC Pista Pick Up",
+        "Autodromo Juan Manuel Fangio",
+        "Antonino Sganga",
+        "Juan Jose Suárez"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/antonino-sganga-se-impuso-en-las-tc-pista-pick-up-71",
+          "fecha": "2026-09-27T23:42:42.000Z",
+          "oficial": false,
+          "aporte": "Detalló los resultados de las series, los incidentes en pista y el desarrollo de la final."
+        },
+        {
+          "medio": "Campeones",
+          "enlace": "https://campeones.com.ar/antonino-sganga-el-nuevo-nombre-ganador-del-tc-pista-pick-up/",
+          "fecha": "2026-09-27T16:56:06.000Z",
+          "oficial": false,
+          "aporte": "Informó que se trató de la primera victoria de Sganga en la categoría y su impacto en el campeonato."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1ofousc",
+          "titulo": "Suárez logra el segundo puesto en su serie del TC Pista Pick Up",
+          "fecha": "2026-09-27T15:55:51.000Z",
+          "ruta": "/nota/suarez-logra-el-segundo-puesto-en-su-serie-del-tc-pista-pick-up-en-1ofousc"
+        },
+        {
+          "id": "1b7rczz",
+          "titulo": "Cifre marca el ritmo en la clasificación del TC Pista Pick Up",
+          "fecha": "2026-09-26T19:31:21.000Z",
+          "ruta": "/nota/cifre-marca-el-ritmo-en-la-clasificacion-del-tc-pista-pick-up-en-1b7rczz"
+        },
+        {
+          "id": "4aj9uy",
+          "titulo": "Hernán Palazzo gana en el regreso del TC Pick Up",
+          "fecha": "2026-09-27T18:14:00.000Z",
+          "ruta": "/nota/hernan-palazzo-gana-en-el-regreso-del-tc-pick-up-en-balcarce-4aj9uy"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "antonino-sganga-gana-en-el-tc-pista-pick-up-en-el-fangio",
+      "foto": {
+        "archivo": "fotos-notas/gun9be.jpg",
+        "credito": "Foto: Campeones"
+      }
     },
     {
       "id": "repaso20260927noche",
@@ -581,6 +668,96 @@
       }
     },
     {
+      "id": "1m3wgub",
+      "titulo": "Los astros anticipan las previsiones para cada signo",
+      "copete": "El horóscopo del lunes veintiocho de septiembre detalla las previsiones para los signos del zodíaco en salud, dinero, amor y trabajo, con números de la suerte para cada uno.",
+      "cuerpo": "Los astros indican las previsiones para este lunes veintiocho de septiembre de dos mil veintiséis en materia de amor, salud, trabajo y finanzas según cada signo del zodíaco. El informe general señala recomendaciones sobre el orden, la calma y el manejo de los gastos.\n\nPara los distintos signos se destacan consejos particulares, como la búsqueda de un amor tranquilo para Leo, la proyección de brillo e inteligencia para Virgo y la necesidad de reconexión espiritual para Libra. Asimismo, se aconseja resolver temas familiares pendientes en el caso de Escorpio, mantener la calma para Sagitario y aguardar cambios transformadores para Capricornio.\n\nPor último, las previsiones sugieren a Acuario revisar errores pasados para hallar paz, mientras que a Piscis se le atribuye una energía positiva que impulsa tanto los proyectos profesionales como la economía personal para esta jornada.",
+      "guion": "Los astros anticipan las previsiones para cada signo",
+      "seccion": "Cultura y agenda",
+      "medios": [
+        "C5N",
+        "Canal 26",
+        "Clarín",
+        "El Día"
+      ],
+      "enlace": "https://www.c5n.com/astrologia/horoscopo-hoy-lunes-28-septiembre-n250074",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-27T22:59:00.000Z",
+      "sinFecha": false,
+      "visto": "2026-09-28T08:31:01.978Z",
+      "relevancia": 63,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "seSabe": [
+        "El horóscopo corresponde al lunes veintiocho de septiembre de dos mil veintiséis.",
+        "Se detallan aspectos vinculados al amor, la salud, el trabajo y la economía de los signos.",
+        "Se incluyen referencias específicas para Leo, Virgo, Libra, Escorpio, Sagitario, Capricornio, Acuario y Piscis."
+      ],
+      "textoRedes": "Conocé las previsiones del horóscopo para este lunes veintiocho de septiembre en salud, dinero, amor y trabajo para cada uno de los signos del zodíaco.",
+      "etiquetas": [
+        "horoscopo",
+        "signos del zodiaco"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "C5N",
+          "enlace": "https://www.c5n.com/astrologia/horoscopo-hoy-lunes-28-septiembre-n250074",
+          "fecha": "2026-09-27T22:59:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Canal 26",
+          "enlace": "https://www.canal26.com/tendencias/2026/09/28/numeros-de-la-suerte-de-hoy-lunes-18-de-septiembre-de-2026/",
+          "fecha": "2026-09-28T08:00:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Clarín",
+          "enlace": "https://www.clarin.com/astrologia/horoscopo-hoy-lunes-28-septiembre-predicciones-salud-amor-dinero_0_TTIHmkvaI6.html",
+          "fecha": "2026-09-28T01:05:13.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Clarín",
+          "enlace": "https://www.clarin.com/astrologia/horoscopo-libra-hoy-28-septiembre-2026-predicciones-salud-amor-dinero_0_SJIkOf2CsS.html",
+          "fecha": "2026-09-28T01:00:05.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "El Día",
+          "enlace": "https://www.eldia.com/informacion-general/los-numeros-de-la-suerte-del-lunes-28-de-septiembre-de-2026-segun-el-signo-del-zodiaco-informacion-general_1790567100",
+          "fecha": "2026-09-28T03:47:35.000Z",
+          "oficial": false,
+          "aporte": null
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "wnsocg",
+          "titulo": "Dólar hoy y dólar blue hoy minuto a minuto: a cuánto opera este lunes 21 de septiembre",
+          "fecha": "2026-09-21T16:34:00.000Z",
+          "ruta": "/nota/dolar-hoy-y-dolar-blue-hoy-minuto-a-minuto-a-cuanto-opera-este-lunes-wnsocg"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron cuatro medios independientes.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "los-astros-anticipan-las-previsiones-para-cada-signo",
+      "foto": {
+        "archivo": "fotos-notas/1m3wgub.jpg",
+        "credito": "Foto: C5N"
+      }
+    },
+    {
       "id": "nx6lkn",
       "titulo": "Boca elimina a Racing en la Copa Argentina y lanza cargadas en redes",
       "copete": "Boca derrotó a Racing tres a dos en el Gigante de Arroyito, avanzó a las semifinales de la Copa Argentina y utilizó las redes sociales para bromear a su rival con referencias políticas y frases virales.",
@@ -612,17 +789,18 @@
         "Diario Popular",
         "Noticias Argentinas (NA)",
         "El Día",
-        "La Nueva",
+        "0221",
         "ANDigital",
+        "El Marplatense",
+        "Mi8 (Canal 8 Mar del Plata)",
+        "NDEN – Noticias de Necochea",
         "Ayacucho al Día",
         "La Verdad",
-        "Bolavip Argentina",
         "Doble Amarilla",
+        "Bolavip Argentina",
+        "La Nueva",
         "La Brújula 24",
-        "El Marplatense",
-        "Vavel Argentina",
-        "Mi8 (Canal 8 Mar del Plata)",
-        "NDEN – Noticias de Necochea"
+        "Vavel Argentina"
       ],
       "enlace": "https://www.ole.com.ar/copa-argentina/boca-racing-copa-argentina-chicana-cargada-salto-calidad-posteo-milito-redes_0_ExUFrdDV0w.html",
       "teniaImagenLaFuente": true,
@@ -800,6 +978,115 @@
       }
     },
     {
+      "id": "1is0p0y",
+      "titulo": "Diego Santilli visita el autódromo en la vuelta de las categorías nacionales",
+      "copete": "El jefe de Gabinete de la Nación recorrió el Autódromo Juan Manuel Fangio durante el regreso de las competencias nacionales después de quince años. Su visita coincidió con la participación de su hijo en la categoría TC Pista Pick Up.",
+      "cuerpo": "Durante su permanencia en el predio, Santilli recorrió los boxes y mantuvo encuentros con el intendente Esteban Reino y el senador nacional Maximiliano Abad. La llegada del funcionario nacional estuvo vinculada principalmente a su motivo familiar, ya que su hijo, Nicanor Santilli Pazos, compitió en la TC Pista Pick Up a bordo de una Foton del equipo Coiro Competición.\n\nEl joven piloto finalizó en el segundo puesto en la primera serie del domingo, detrás de Antonino Sganga, lo que le permitió mantenerse entre los protagonistas de la definición.",
+      "guion": "Diego Santilli visita el autódromo en la vuelta de las categorías nacionales",
+      "seccion": "Automovilismo",
+      "medios": [
+        "Infórmese Primero (FM 104.9)",
+        "Diario La Vanguardia",
+        "QZ Noticias (Mar del Plata)"
+      ],
+      "enlace": "http://www.informeseprimero.com.ar/2026/09/diego-santilli-recorrio-el-fangio-y.html",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-27T22:35:50.424Z",
+      "sinFecha": false,
+      "visto": "2026-09-27T23:55:08.522Z",
+      "relevancia": 100,
+      "local": true,
+      "publicadaPor": "ia",
+      "publicadaCuando": "2026-09-28T08:01:55.916Z",
+      "temas": [
+        "autodromo",
+        "tc-pick-up",
+        "fangio"
+      ],
+      "como": "automatica",
+      "claves": [
+        "Diego Santilli visitó el Autódromo Juan Manuel Fangio este domingo.",
+        "El funcionario recorrió los boxes junto al intendente Esteban Reino y el senador Maximiliano Abad.",
+        "Su hijo, Nicanor Santilli Pazos, compitió en la categoría TC Pista Pick Up.",
+        "La competencia marcó el regreso del automovilismo nacional al circuito local después de quince años."
+      ],
+      "seSabe": [
+        "Diego Santilli visitó el autódromo local este domingo.",
+        "El funcionario recorrió los boxes junto al intendente Esteban Reino y el senador Maximiliano Abad.",
+        "Su hijo Nicanor compitió en la TC Pista Pick Up con el equipo Coiro Competición y fue segundo en su serie.",
+        "El circuito volvió a recibir competencias nacionales después de quince años."
+      ],
+      "textoRedes": "Diego Santilli visitó el Autódromo Juan Manuel Fangio en el marco del regreso de las competencias nacionales. El funcionario recorrió el circuito junto a autoridades locales y acompañó a su hijo en la categoría TC Pista Pick Up.",
+      "etiquetas": [
+        "Diego Santilli",
+        "Autodromo Juan Manuel Fangio",
+        "TC Pista Pick Up",
+        "Esteban Reino",
+        "Maximiliano Abad",
+        "Balcarce"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infórmese Primero (FM 104.9)",
+          "enlace": "http://www.informeseprimero.com.ar/2026/09/diego-santilli-recorrio-el-fangio-y.html",
+          "fecha": "2026-09-27T22:35:50.424Z",
+          "oficial": false,
+          "aporte": "Aportó los detalles sobre el resultado deportivo del hijo del funcionario y la concurrencia de público."
+        },
+        {
+          "medio": "Diario La Vanguardia",
+          "enlace": "https://www.diariolavanguardia.com/noticias/44914-diego-santilli-estuvo-en-los-boxes-del-fangio-acompanando-a-su-hijo-nicanor/",
+          "fecha": null,
+          "oficial": false,
+          "aporte": "Confirmó el recorrido del funcionario junto a las autoridades locales y provinciales."
+        },
+        {
+          "medio": "Diario La Vanguardia",
+          "enlace": "https://www.diariolavanguardia.com/noticias/44904-diego-santilli-estara-en-balcarce-para-la-reapertura-del-fangio-y-la-fecha-de-las-tc-pick-up/",
+          "fecha": null,
+          "oficial": false,
+          "aporte": "Aportó la confirmación previa sobre la llegada del funcionario durante el fin de semana."
+        },
+        {
+          "medio": "QZ Noticias (Mar del Plata)",
+          "enlace": "https://www.qznoticias.com/la-region/diego-santilli-visito-el-fangio-durante-la-jornada-de-tc-pick-up",
+          "fecha": "2026-09-27T15:34:50.000Z",
+          "oficial": false,
+          "aporte": "Detalló la presencia del intendente y el senador en el autódromo."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1mphhlq",
+          "titulo": "Diego Santilli llega a Balcarce por el automovilismo",
+          "fecha": "2026-09-25T13:40:13.000Z",
+          "ruta": "/nota/diego-santilli-llega-a-balcarce-por-el-automovilismo-1mphhlq"
+        },
+        {
+          "id": "if257m",
+          "titulo": "Boccanera y Baigorria ganan en el regreso del Turismo Special de la Costa al Fangio",
+          "fecha": "2026-09-27T22:28:39.000Z",
+          "ruta": "/nota/boccanera-y-baigorria-ganan-en-el-regreso-del-turismo-special-de-la-if257m"
+        },
+        {
+          "id": "wlcrq7",
+          "titulo": "El Autódromo Juan Manuel Fangio reabre",
+          "fecha": "2026-09-27T17:29:00.000Z",
+          "ruta": "/nota/el-autodromo-juan-manuel-fangio-reabre-wlcrq7"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron tres medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "diego-santilli-visita-el-autodromo-juan-manuel-fangio-en-el-regreso",
+      "foto": {
+        "archivo": "fotos-notas/1is0p0y.jpg",
+        "credito": "Foto: QZ Noticias (Mar del Plata)"
+      }
+    },
+    {
       "id": "zezsk3",
       "titulo": "Sancionan a Werner, Canapino y Ciantini en el TC Pick Up",
       "copete": "Autoridades del TC Pick Up aplicaron sanciones a Mariano Werner, Agustín Canapino y Diego Ciantini tras la final disputada en el Autódromo Juan Manuel Fangio. Las penalizaciones modificaron el podio de la competencia.",
@@ -807,14 +1094,17 @@
       "guion": "Sancionan a Werner, Canapino y Ciantini en el TC Pick Up",
       "seccion": "Automovilismo",
       "medios": [
-        "Infórmese Primero (FM 104.9)"
+        "Infórmese Primero (FM 104.9)",
+        "Radio Gabal (FM 104.1)",
+        "QZ Noticias (Mar del Plata)",
+        "Ecos Diarios (Necochea)"
       ],
       "enlace": "http://www.informeseprimero.com.ar/2026/09/sancionaron-werner-canapino-y-ciantini.html",
       "teniaImagenLaFuente": true,
       "fecha": "2026-09-27T21:45:00.902Z",
       "sinFecha": false,
       "visto": "2026-09-28T08:00:59.952Z",
-      "relevancia": 88,
+      "relevancia": 100,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -829,9 +1119,6 @@
         "Mariano Werner fue excluido por una irregularidad técnica.",
         "Agustín Canapino y Diego Ciantini recibieron recargos de tiempo.",
         "Hernán Palazzo quedó confirmado como ganador de la competencia."
-      ],
-      "noConfirmado": [
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
       ],
       "textoRedes": "Sancionaron a Mariano Werner, Agustín Canapino y Diego Ciantini tras la final de las TC Pick Up en el Autódromo Juan Manuel Fangio. Las penalizaciones modificaron el clasificador y Hernán Palazzo quedó como ganador.",
       "etiquetas": [
@@ -888,20 +1175,16 @@
       "seccion": "Automovilismo",
       "medios": [
         "Infórmese Primero (FM 104.9)",
+        "El Diario Balcarce",
         "0223 (Mar del Plata)",
         "QZ Noticias (Mar del Plata)",
         "Diario Popular",
         "Noticias Argentinas (NA)",
         "Campeones",
-        "News Balcarce (FM 91.7)",
-        "Municipalidad de Balcarce",
-        "Diario La Vanguardia",
-        "El Destape",
-        "ANDigital",
-        "El Día",
         "Agencia DIB",
         "Infocielo",
-        "La Tecla"
+        "La Tecla",
+        "Diario La Vanguardia"
       ],
       "enlace": "http://www.informeseprimero.com.ar/2026/09/hernan-palazzo-gano-en-el-regreso-del.html",
       "teniaImagenLaFuente": true,
@@ -1190,6 +1473,93 @@
       "slug": "el-repaso-de-la-tarde-en-radar-balcarce-mariano-werner-club-de-leones"
     },
     {
+      "id": "aabc5v",
+      "titulo": "El Concejo aprueba proyectos sobre infecciones y celiaquía",
+      "copete": "El Concejo Deliberante aprobó dos iniciativas impulsadas por el edil Gabriel Petruccelli para reforzar la prevención sanitaria y la asistencia alimentaria en el distrito.",
+      "cuerpo": "El Concejo Deliberante aprobó dos proyectos vinculados a la salud pública impulsados por el concejal del bloque Frente Potencia, Gabriel Petruccelli, para fortalecer las campañas de prevención de infecciones de transmisión sexual y mejorar la asistencia a personas con celiaquía en el distrito.\n\nEn relación a la primera iniciativa, el edil sostuvo que patologías como la sífilis, el VIH, la hepatitis B y el HPV representan un problema sanitario que requiere un abordaje integral. En ese sentido, reclamó que el Municipio garantice la disponibilidad de preservativos tanto en el Hospital como en las salas de atención primaria, al advertir que la entrega actual en el sistema de salud local no resulta suficiente.\n\nPor otra parte, el segundo proyecto estuvo enfocado en el Programa de Acompañamiento Alimentario para Personas Celíacas. Petruccelli cuestionó el funcionamiento de la asistencia y la falta de información oficial al respecto, y remarcó la necesidad de identificar a los sectores vulnerables que afrontan dificultades económicas para sostener una dieta libre de gluten. Como antecedente, el concejal ya había presentado días atrás pedidos de informes vinculados a ambas temáticas en el ámbito legislativo local.",
+      "guion": "El Concejo aprueba proyectos sobre infecciones y celiaquía",
+      "seccion": "Política",
+      "medios": [
+        "Radio Gabal (FM 104.1)"
+      ],
+      "enlace": "https://www.radiogabal.com.ar/index.php/politica/salud-solicitaron-mayores-medidas-para-prevenir-las-its-y-el-acompanamiento-a-personas-celiacas",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-27T18:00:04.000Z",
+      "sinFecha": false,
+      "visto": "2026-09-27T18:30:42.064Z",
+      "relevancia": 67,
+      "local": true,
+      "publicadaPor": "ia",
+      "publicadaCuando": "2026-09-27T18:08:56.425Z",
+      "temas": [
+        "concejo"
+      ],
+      "como": "automatica",
+      "claves": [
+        "El Concejo Deliberante aprobó dos iniciativas en materia sanitaria y social.",
+        "Pidieron reforzar las campañas y la entrega de preservativos en el sistema de salud local.",
+        "Reclamaron mayor información sobre la asistencia a personas con celiaquía en situación de vulnerabilidad.",
+        "El edil impulsor había presentado días atrás pedidos de informes sobre ambos temas."
+      ],
+      "seSabe": [
+        "El Concejo Deliberante aprobó dos proyectos sobre salud y asistencia social impulsados por el concejal Gabriel Petruccelli.",
+        "Las iniciativas abordan la prevención de infecciones de transmisión sexual y el funcionamiento del programa para personas celíacas.",
+        "El edil reclamó mayor disponibilidad de preservativos en el hospital y los centros de atención primaria.",
+        "Petruccelli cuestionó la falta de información sobre el cumplimiento de la asistencia alimentaria para celíacos vulnerables."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El Concejo Deliberante aprobó dos iniciativas para reforzar la prevención de infecciones de transmisión sexual y mejorar el relevamiento de la asistencia a personas celíacas en situación de vulnerabilidad en Balcarce.",
+      "etiquetas": [
+        "Concejo Deliberante",
+        "salud",
+        "infecciones de transmision sexual",
+        "celiaquia",
+        "Gabriel Petruccelli",
+        "Balcarce"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Radio Gabal (FM 104.1)",
+          "enlace": "https://www.radiogabal.com.ar/index.php/politica/salud-solicitaron-mayores-medidas-para-prevenir-las-its-y-el-acompanamiento-a-personas-celiacas",
+          "fecha": "2026-09-27T18:00:04.000Z",
+          "oficial": false,
+          "aporte": "Detalló los dos proyectos aprobados por el Concejo sobre prevención de ITS y celiaquía, y los reclamos del concejal Gabriel Petruccelli sobre la falta de insumos y datos oficiales."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "p036u7",
+          "titulo": "Petruccelli puso el foco en la asistencia a personas celíacas y la prevención de ITS en Balcarce",
+          "fecha": "2026-09-21T15:15:00.000Z",
+          "ruta": "/nota/petruccelli-puso-el-foco-en-la-asistencia-a-personas-celiacas-y-la-p036u7"
+        },
+        {
+          "id": "srfkko",
+          "titulo": "El Concejo aprueba llamar Paseo Intendente Juan José Mare a la vuelta interna del cerro en",
+          "fecha": "2026-09-27T15:18:35.000Z",
+          "ruta": "/nota/el-concejo-aprueba-llamar-paseo-intendente-juan-jose-mare-a-la-vuelta-srfkko"
+        },
+        {
+          "id": "11genwv",
+          "titulo": "El Concejo declara de interés un proyecto escolar en Balcarce",
+          "fecha": "2026-09-26T14:24:46.000Z",
+          "ruta": "/nota/el-concejo-declara-de-interes-un-proyecto-escolar-en-balcarce-11genwv"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "el-concejo-aprueba-proyectos-sobre-infecciones-y-celiaquia-en-balcarce",
+      "foto": {
+        "archivo": "fotos-notas/aabc5v.jpg",
+        "credito": "Foto: Radio Gabal (FM 104.1)"
+      }
+    },
+    {
       "id": "19foxy4",
       "titulo": "Javier Milei viaja a Paris para participar de la Argentina Week",
       "copete": "El presidente Javier Milei viajara a Paris junto a una comitiva de funcionarios, gobernadores y empresarios para participar de la Argentina Week en busca de inversiones.",
@@ -1411,6 +1781,178 @@
       "slug": "la-seleccion-argentina-juega-amistosos-en-el-inicio-de-un-nuevo-ciclo"
     },
     {
+      "id": "p8h86x",
+      "titulo": "El automovilismo nacional genera un intenso movimiento vehicular",
+      "copete": "El regreso de las competencias nacionales al autódromo Juan Manuel Fangio colmó las calles y avenidas cercanas con miles de visitantes durante el fin de semana.",
+      "cuerpo": "El regreso de la actividad nacional al autódromo Juan Manuel Fangio tras quince años sin competencias de este nivel generó un intenso movimiento vehicular y una postal poco habitual en las calles de Balcarce. Durante el fin de semana, la avenida Suipacha junto con las calles 63, 55 y 51 registraron una gran concentración de vehículos y autos estacionados a ambos lados, lo que motivó un operativo de ordenamiento con presencia de Gendarmería Nacional. Además, los vecinos de la zona aprovecharon la llegada de visitantes para ofrecer espacios de estacionamiento dentro de sus propiedades.\n\nComo se había informado, el circuito de la sierra La Barrosa volvió a recibir categorías como el TC Pick Up, un hecho que generó gran expectativa en el turismo y el comercio local.",
+      "guion": "El automovilismo nacional genera un intenso movimiento vehicular",
+      "seccion": "Automovilismo",
+      "medios": [
+        "Radio Gabal (FM 104.1)"
+      ],
+      "enlace": "https://www.radiogabal.com.ar/index.php/comunidad/autodromo-colmado-y-las-calles-de-la-ciudad-tambien-vehiculos-coparon-la-av-suipacha-y-aledanas",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-27T16:27:29.000Z",
+      "sinFecha": false,
+      "visto": "2026-09-28T08:31:01.978Z",
+      "relevancia": 75,
+      "local": true,
+      "publicadaPor": "ia",
+      "publicadaCuando": "2026-09-27T16:38:53.766Z",
+      "temas": [
+        "autodromo",
+        "fangio"
+      ],
+      "como": "automatica",
+      "claves": [
+        "El autódromo Juan Manuel Fangio volvió a recibir competencias nacionales tras quince años.",
+        "Las avenidas y calles cercanas al circuito se colmaron de vehículos y visitantes.",
+        "Vecinos de la zona ofrecieron espacios de estacionamiento en sus propiedades.",
+        "Se desplegó un operativo de ordenamiento con Gendarmería Nacional."
+      ],
+      "seSabe": [
+        "El regreso de la actividad nacional al autódromo generó un intenso movimiento de vehículos durante el fin de semana.",
+        "La avenida Suipacha y las calles 63, 55 y 51 registraron una gran cantidad de autos estacionados y circulación.",
+        "Se desplegó un operativo de ordenamiento y fiscalización con efectivos de Gendarmería Nacional en la calle 55 y la calle 51.",
+        "Vecinos de la zona ofrecieron espacios de estacionamiento dentro de sus propiedades para los visitantes."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El regreso del automovilismo nacional al autódromo Juan Manuel Fangio colmó las calles de Balcarce con miles de visitantes, intenso movimiento vehicular y operativos de tránsito durante todo el fin de semana.",
+      "etiquetas": [
+        "autodromo",
+        "balcarce",
+        "tc pick up",
+        "transito"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Radio Gabal (FM 104.1)",
+          "enlace": "https://www.radiogabal.com.ar/index.php/comunidad/autodromo-colmado-y-las-calles-de-la-ciudad-tambien-vehiculos-coparon-la-av-suipacha-y-aledanas",
+          "fecha": "2026-09-27T16:27:29.000Z",
+          "oficial": false,
+          "aporte": "Detalló el impacto en el tránsito, las calles afectadas y el operativo de Gendarmería por el regreso del automovilismo nacional."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "si6qmk",
+          "titulo": "Diego Santilli visita el autódromo Juan Manuel Fangio en Balcarce",
+          "fecha": "2026-09-27T15:00:58.065Z",
+          "ruta": "/nota/diego-santilli-visita-el-autodromo-juan-manuel-fangio-en-balcarce-si6qmk"
+        },
+        {
+          "id": "e9anvw",
+          "titulo": "El autodromo Juan Manuel Fangio recibe al automovilismo nacional en Balcarce",
+          "fecha": "2026-09-27T12:20:00.000Z",
+          "ruta": "/nota/el-autodromo-juan-manuel-fangio-recupera-el-automovilismo-nacional-en-e9anvw"
+        },
+        {
+          "id": "121t71e",
+          "titulo": "Cruce en Balcarce por la habilitación del autódromo Fangio",
+          "fecha": "2026-09-27T02:30:43.813Z",
+          "ruta": "/nota/cruce-en-balcarce-por-la-habilitacion-del-autodromo-fangio-121t71e"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "el-automovilismo-nacional-genera-un-intenso-movimiento-vehicular",
+      "foto": {
+        "archivo": "fotos-notas/p8h86x.jpg",
+        "credito": "Foto: Radio Gabal (FM 104.1)"
+      }
+    },
+    {
+      "id": "1ofousc",
+      "titulo": "Suárez logra el segundo puesto en su serie del TC Pista Pick Up",
+      "copete": "El piloto local Juan José Suárez terminó como escolta en la segunda batería del TC Pista Pick Up en el autódromo Juan Manuel Fangio y largará adelante en la final.",
+      "cuerpo": "El piloto balcarceño Juan José Suárez finalizó en la segunda colocación a bordo de su Ford Ranger durante la segunda serie del TC Pista Pick Up, disputada este domingo en el autódromo Juan Manuel Fangio de nuestra ciudad. La batería tuvo como ganador a Nahuel Cordone con un registro de 8:45.462, lo que convirtió a esta manga en la más veloz de la jornada.\n\nPreviamente, Cifre había marcado el ritmo durante la jornada de clasificación desarrollada en el circuito local.\n\nCon este resultado en la serie, Suárez se aseguró largar desde la primera posición en la final de este fin de semana, en el marco del esperado regreso de la categoría nacional al trazado balcarceño ante el público local.",
+      "guion": "Suárez logra el segundo puesto en su serie del TC Pista Pick Up",
+      "seccion": "Automovilismo",
+      "medios": [
+        "Radio Gabal (FM 104.1)"
+      ],
+      "enlace": "https://www.radiogabal.com.ar/index.php/deportes/suarez-fue-segundo-en-su-serie-y-largara-adelante-en-la-final-del-tc-pista-pick-up",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-27T15:55:51.000Z",
+      "sinFecha": false,
+      "visto": "2026-09-27T16:00:45.744Z",
+      "relevancia": 73,
+      "local": true,
+      "publicadaPor": "ia",
+      "publicadaCuando": "2026-09-27T15:59:29.449Z",
+      "temas": [
+        "autodromo",
+        "fangio"
+      ],
+      "como": "automatica",
+      "claves": [
+        "Juan José Suárez fue segundo en su serie del TC Pista Pick Up.",
+        "La competencia se desarrolla en el autódromo Juan Manuel Fangio.",
+        "El piloto local largará en la primera posición de la final.",
+        "Nahuel Cordone ganó la batería más rápida de la jornada."
+      ],
+      "seSabe": [
+        "Juan José Suárez finalizó segundo en la segunda serie del TC Pista Pick Up a bordo de una Ford Ranger.",
+        "Nahuel Cordone ganó la batería con un tiempo de 8:45.462 y se quedó con la serie más rápida.",
+        "Antonino Sganga ganó la primera batería tras una sanción a Faustino Cifre.",
+        "Juan Pablo Alberti fue excluido por reiteración de maniobras peligrosas."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El balcarceño Juan José Suárez fue segundo en su serie del TC Pista Pick Up en el autódromo Juan Manuel Fangio y largará adelante en la gran final de este fin de semana en nuestra ciudad.",
+      "etiquetas": [
+        "Juan José Suárez",
+        "TC Pista Pick Up",
+        "Autódromo Juan Manuel Fangio",
+        "Balcarce"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Radio Gabal (FM 104.1)",
+          "enlace": "https://www.radiogabal.com.ar/index.php/deportes/suarez-fue-segundo-en-su-serie-y-largara-adelante-en-la-final-del-tc-pista-pick-up",
+          "fecha": "2026-09-27T15:55:51.000Z",
+          "oficial": false,
+          "aporte": "Informó sobre el desempeño del piloto Juan José Suárez y los resultados de las series del TC Pista Pick Up en el autódromo Juan Manuel Fangio."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1b7rczz",
+          "titulo": "Cifre marca el ritmo en la clasificación del TC Pista Pick Up en Balcarce",
+          "fecha": "2026-09-26T19:31:21.000Z",
+          "ruta": "/nota/cifre-marca-el-ritmo-en-la-clasificacion-del-tc-pista-pick-up-en-1b7rczz"
+        },
+        {
+          "id": "gror6g",
+          "titulo": "Iñaki Arrías logra la pole position y lidera el TC Pista Mouras",
+          "fecha": "2026-09-26T18:28:46.000Z",
+          "ruta": "/nota/inaki-arrias-logra-la-pole-position-y-lidera-el-tc-pista-mouras-gror6g"
+        },
+        {
+          "id": "1b3p6ze",
+          "titulo": "Juan José Suárez corre en el Autódromo Juan Manuel Fangio en Balcarce",
+          "fecha": "2026-09-24T19:08:06.000Z",
+          "ruta": "/nota/suarez-acelera-en-casa-es-un-sueno-correr-en-balcarce-1b3p6ze"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "suarez-logra-el-segundo-puesto-en-su-serie-del-tc-pista-pick-up-en",
+      "foto": {
+        "archivo": "fotos-notas/1ofousc.jpg",
+        "credito": "Foto: Radio Gabal (FM 104.1)"
+      }
+    },
+    {
       "id": "1spxjt5",
       "titulo": "Mariano Werner y Otto Fritzler ganan las series",
       "copete": "Mariano Werner y Otto Fritzler se quedaron con las baterías del TC Pick Up en el Autódromo Juan Manuel Fangio y largarán desde la primera fila en la final de la octava fecha del campeonato.",
@@ -1419,8 +1961,6 @@
       "seccion": "Automovilismo",
       "medios": [
         "QZ Noticias (Mar del Plata)",
-        "0223 (Mar del Plata)",
-        "Ecos Diarios (Necochea)",
         "Campeones"
       ],
       "enlace": "https://www.qznoticias.com/deportes/werner-y-fritzler-ganaron-las-series-y-largaran-adelante-en-balcarce",
@@ -1428,7 +1968,7 @@
       "fecha": "2026-09-27T15:41:34.000Z",
       "sinFecha": false,
       "visto": "2026-09-27T15:45:00.980Z",
-      "relevancia": 100,
+      "relevancia": 95,
       "local": true,
       "publicadaPor": "ia",
       "publicadaCuando": "2026-09-27T15:49:10.748Z",
@@ -1498,6 +2038,81 @@
       "foto": {
         "archivo": "fotos-notas/1spxjt5.jpg",
         "credito": "Foto: Campeones"
+      }
+    },
+    {
+      "id": "c2myhf",
+      "titulo": "Agotan las pulseras de ingreso por una multitud en el Fangio",
+      "copete": "La masiva llegada de espectadores al autódromo Juan Manuel Fangio superó las previsiones iniciales y obligó a reponer las credenciales de acceso durante el fin de semana histórico del automovilismo nacional.",
+      "cuerpo": "El Autódromo Juan Manuel Fangio vivió una jornada de gran convocatoria este domingo con la llegada de miles de espectadores que superaron las previsiones iniciales para presenciar la actividad de las categorías TC Pick Up, TC Pista Pick Up y Turismo Special de la Costa, según informó un medio local. La magnitud de la asistencia provocó que se agotaran las pulseras de ingreso, lo que obligó a realizar una reposición para permitir el acceso continuado del público al predio.\n\nEn la víspera, el médico de la ACTC, Rodolfo Balinotti, había defendido las obras realizadas ante cuestionamientos sobre la habilitación del trazado balcarceño.",
+      "guion": "Agotan las pulseras de ingreso por una multitud en el Fangio",
+      "seccion": "Automovilismo",
+      "medios": [
+        "Radio Gabal (FM 104.1)"
+      ],
+      "enlace": "https://www.radiogabal.com.ar/index.php/comunidad/una-multitud-copo-el-fangio-se-agotaron-las-pulseras-de-ingreso-y-debieron-reponerlas",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-27T15:34:39.000Z",
+      "sinFecha": false,
+      "visto": "2026-09-27T15:40:44.103Z",
+      "relevancia": 75,
+      "local": true,
+      "publicadaPor": "ia",
+      "publicadaCuando": "2026-09-27T15:59:29.449Z",
+      "temas": [
+        "autodromo",
+        "fangio"
+      ],
+      "como": "automatica",
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Una multitud colmó este domingo el autódromo Juan Manuel Fangio en el marco del regreso del automovilismo nacional a Balcarce. La masiva asistencia obligó a reponer las pulseras de ingreso al predio.",
+      "etiquetas": [
+        "autodromo Fangio",
+        "automovilismo",
+        "TC Pick Up",
+        "turismo",
+        "Balcarce"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Radio Gabal (FM 104.1)",
+          "enlace": "https://www.radiogabal.com.ar/index.php/comunidad/una-multitud-copo-el-fangio-se-agotaron-las-pulseras-de-ingreso-y-debieron-reponerlas",
+          "fecha": "2026-09-27T15:34:39.000Z",
+          "oficial": false,
+          "aporte": "Informó sobre la masiva concurrencia de público, el agotamiento de las pulseras de ingreso y la posterior reposición por parte de la ACTC."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "si6qmk",
+          "titulo": "Diego Santilli visita el autódromo Juan Manuel Fangio en Balcarce",
+          "fecha": "2026-09-27T15:00:58.065Z",
+          "ruta": "/nota/diego-santilli-visita-el-autodromo-juan-manuel-fangio-en-balcarce-si6qmk"
+        },
+        {
+          "id": "e9anvw",
+          "titulo": "El autodromo Juan Manuel Fangio recibe al automovilismo nacional en Balcarce",
+          "fecha": "2026-09-27T12:20:00.000Z",
+          "ruta": "/nota/el-autodromo-juan-manuel-fangio-recupera-el-automovilismo-nacional-en-e9anvw"
+        },
+        {
+          "id": "121t71e",
+          "titulo": "Cruce en Balcarce por la habilitación del autódromo Fangio",
+          "fecha": "2026-09-27T02:30:43.813Z",
+          "ruta": "/nota/cruce-en-balcarce-por-la-habilitacion-del-autodromo-fangio-121t71e"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "una-multitud-colma-el-autodromo-juan-manuel-fangio-en-balcarce",
+      "foto": {
+        "archivo": "fotos-notas/c2myhf.jpg",
+        "credito": "Foto: Radio Gabal (FM 104.1)"
       }
     },
     {
@@ -1722,7 +2337,7 @@
       "fecha": "2026-09-27T12:05:00.000Z",
       "sinFecha": false,
       "visto": "2026-09-27T23:28:54.122Z",
-      "relevancia": 66,
+      "relevancia": 70,
       "local": false,
       "publicadaPor": "ia",
       "publicadaCuando": "2026-09-28T03:12:47.611Z",
@@ -1813,10 +2428,8 @@
         "Ámbito",
         "Radio Mitre",
         "Infobae",
-        "Perfil",
-        "TyC Sports",
-        "Canal 26",
         "El Destape",
+        "TyC Sports",
         "Minuto Uno"
       ],
       "enlace": "https://www.lanacion.com.ar/deportes/automovilismo/montoya-respaldo-a-colapinto-tras-el-accidente-en-baku-admiro-a-la-gente-que-lo-intenta-nid27092026/",
@@ -1874,15 +2487,14 @@
       "medios": [
         "El Eco de Tandil",
         "iProfesional",
-        "Noticias Argentinas (NA)",
-        "El Marplatense"
+        "Noticias Argentinas (NA)"
       ],
       "enlace": "https://noticiasargentinas.com/economia/blindaje-2027--el-gobierno-prepara-el-plan-anticorrida-ante-una-eventual-demanda-de-dolares_a6ab291a559ee9a0f3112015c",
       "teniaImagenLaFuente": true,
       "fecha": "2026-09-27T10:30:00.000Z",
       "sinFecha": false,
       "visto": "2026-09-28T08:00:59.952Z",
-      "relevancia": 56,
+      "relevancia": 46,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -2155,6 +2767,92 @@
       }
     },
     {
+      "id": "12jm31p",
+      "titulo": "Mariano Werner lidera la clasificación del TC Pick Up",
+      "copete": "Mariano Werner marcó el mejor tiempo en la clasificación de las TC Pick Up en el autódromo Juan Manuel Fangio. El automovilismo nacional volvió este fin de semana al circuito local con gran expectativa popular.",
+      "cuerpo": "Mariano Werner se quedó con el mejor tiempo en la clasificación de la octava fecha del TCPK de la ACTC, desarrollada este sábado en el autódromo Juan Manuel Fangio, en el marco de la vuelta del automovilismo nacional al circuito de Balcarce.\n\nOmar Martínez se ubicó en el décimo lugar de la prueba.\n\nLa actividad de este domingo continuará con las series a partir de las diez de la mañana y las finales programadas desde el mediodía en el escenario balcarceño.",
+      "guion": "Mariano Werner lidera la clasificación del TC Pick Up",
+      "seccion": "Automovilismo",
+      "medios": [
+        "0223 (Mar del Plata)"
+      ],
+      "enlace": "https://www.0223.com.ar/nota/2026-9-26-21-32-0-asi-se-vivio-la-clasificacion-de-las-tc-pick-up-en-el-reinaugurado-autodromo-de-balcarce",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-27T00:32:00.000Z",
+      "sinFecha": false,
+      "visto": "2026-09-28T02:30:54.799Z",
+      "relevancia": 73,
+      "local": true,
+      "publicadaPor": "ia",
+      "publicadaCuando": "2026-09-27T01:11:04.003Z",
+      "temas": [
+        "autodromo",
+        "tc-pick-up",
+        "fangio"
+      ],
+      "como": "automatica",
+      "claves": [
+        "Mariano Werner registró el mejor tiempo en la clasificación sabatina.",
+        "Las series y las finales se disputarán este domingo en el circuito local.",
+        "El automovilismo nacional regresó al autódromo Juan Manuel Fangio."
+      ],
+      "seSabe": [
+        "Mariano Werner logró el tiempo más rápido en la clasificación de la octava fecha del TCPK.",
+        "Diego Azar y Agustín Canapino completaron los primeros puestos de la prueba.",
+        "La actividad dominical incluye series y finales desde la mañana."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Mariano Werner se quedó con el mejor tiempo en la clasificación del TC Pick Up en el autódromo Juan Manuel Fangio. Este domingo se disputarán las series y las finales en el circuito local.",
+      "etiquetas": [
+        "automovilismo",
+        "TC Pick Up",
+        "autodromo Juan Manuel Fangio",
+        "Balcarce",
+        "Mariano Werner"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "0223 (Mar del Plata)",
+          "enlace": "https://www.0223.com.ar/nota/2026-9-26-21-32-0-asi-se-vivio-la-clasificacion-de-las-tc-pick-up-en-el-reinaugurado-autodromo-de-balcarce",
+          "fecha": "2026-09-27T00:32:00.000Z",
+          "oficial": false,
+          "aporte": "Detalló los resultados de la clasificación del TCPK y el cronograma de este domingo en el autódromo."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "5yolmk",
+          "titulo": "El Autódromo Juan Manuel Fangio será reinaugurado este viernes",
+          "fecha": "2026-09-22T19:26:50.000Z",
+          "ruta": "/nota/el-autodromo-juan-manuel-fangio-sera-reinaugurado-este-viernes-5yolmk"
+        },
+        {
+          "id": "epzsa5",
+          "titulo": "Reinauguran el autódromo Juan Manuel Fangio en Balcarce",
+          "fecha": "2026-09-26T13:46:35.000Z",
+          "ruta": "/nota/el-autodromo-juan-manuel-fangio-reabre-sus-puertas-en-balcarce-epzsa5"
+        },
+        {
+          "id": "7qxthx",
+          "titulo": "Kicillof encabeza la reinauguración del autódromo en Balcarce",
+          "fecha": "2026-09-26T02:38:34.000Z",
+          "ruta": "/nota/kicillof-encabeza-la-reapertura-del-autodromo-juan-manuel-fangio-en-7qxthx"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "mariano-werner-lidera-la-clasificacion-del-tc-pick-up",
+      "foto": {
+        "archivo": "fotos-notas/12jm31p.jpg",
+        "credito": "Foto: Wikimedia Commons"
+      }
+    },
+    {
       "id": "repaso20260926noche",
       "propia": "repaso",
       "titulo": "El repaso de la noche en Radar Balcarce: autódromo Juan Manuel Fangio, McCain y hockey",
@@ -2218,162 +2916,6 @@
         }
       ],
       "slug": "el-repaso-de-la-noche-en-radar-balcarce-autodromo-juan-manuel-fangio"
-    },
-    {
-      "id": "z7c2yy",
-      "titulo": "Cierra Tío Mario, una juguetería porteña con casi 30 años de historia",
-      "copete": "La juguetería Tío Mario cerró definitivamente el sábado 26 de septiembre, tras casi tres décadas de actividad. Lo anunció en sus redes sociales, junto con una liquidación total de la mercadería.",
-      "cuerpo": "Según fuentes cercanas al comercio, pesaron la imposibilidad de competir con los productos importados de China, que llegan con precios mucho más bajos, y el alto costo de los alquileres. Julián Benítez, gerente de Relaciones Institucionales de la Cámara Argentina de la Industria del Juguete (CAIJ), confirmó el cierre, advirtió que \"hay muchos cierres\" e indicó que cerca del 90% de los juguetes importados viene de China.\n\nEl rubro atraviesa una caída: según datos de la cámara, las ventas bajaron 10% en el primer semestre de 2026, la industria trabaja al 30% de su capacidad y cinco fábricas están en proceso de cierre. En octubre de 2025, el Gobierno había bajado del 35% al 20% los aranceles de importación de catorce tipos de juguetes.\n\nAntes de bajar las persianas, el local ofreció 2x1 en artículos seleccionados y 30% de descuento en mochilas y cartucheras.",
-      "guion": null,
-      "seccion": "Economía",
-      "medios": [
-        "Infobae",
-        "Canal 26",
-        "0223 (Mar del Plata)"
-      ],
-      "enlace": "https://www.infobae.com/economia/2026/09/26/no-escapa-a-la-realidad-tras-casi-30-anos-de-actividad-cerro-la-jugueteria-tio-mario/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-26T22:45:44.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-28T07:30:59.663Z",
-      "relevancia": 44,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "fuentesConsultadas": [
-        {
-          "medio": "Infobae",
-          "enlace": "https://www.infobae.com/economia/2026/09/26/no-escapa-a-la-realidad-tras-casi-30-anos-de-actividad-cerro-la-jugueteria-tio-mario/",
-          "fecha": "2026-09-26T22:45:44.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Canal 26",
-          "enlace": "https://www.canal26.com/economia/2026/09/27/tio-mario-cierra-despues-de-casi-30-anos-que-paso-con-la-historica-jugueteria/",
-          "fecha": "2026-09-27T00:11:00.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "0223 (Mar del Plata)",
-          "enlace": "https://www.0223.com.ar/nota/2026-9-27-11-3-47-tio-mario-cierra-tras-casi-30-anos-por-la-competencia-de-productos-importados-y-altos-costos",
-          "fecha": "2026-09-27T14:03:00.000Z",
-          "oficial": false,
-          "aporte": null
-        }
-      ],
-      "slug": "no-escapa-a-la-realidad-tras-casi-30-anos-de-actividad-cerro-una",
-      "foto": {
-        "archivo": "fotos-notas/z7c2yy.jpg",
-        "credito": "Foto: Diario Popular"
-      }
-    },
-    {
-      "id": "1juccvy",
-      "titulo": "Massa pide construir propuestas federales y unidad de cara a las elecciones",
-      "copete": "El líder del Frente Renovador encabezó un encuentro regional y envió un mensaje a dirigentes bonaerenses sobre la necesidad de lograr un país más federal y fortalecer la unidad.",
-      "cuerpo": "El líder del Frente Renovador, Sergio Massa, instó a construir propuestas con una mirada federal y a trabajar por la unidad durante mensajes dirigidos a referentes políticos que participaron de actividades partidarias en el noreste del país y en la provincia de Buenos Aires.\n\nLos encuentros políticos se desarrollaron de manera simultánea en distintas regiones. En Resistencia, dirigentes de Chaco, Corrientes y Misiones llevaron adelante el Encuentro Regional del NEA, donde debatieron en comisiones y concluyeron en la necesidad de impulsar economías regionales mediante infraestructura, inversión en ciencia y tecnología, programas de empleo joven y políticas de vivienda. En paralelo, referentes del espacio se reunieron en Carmen de Patagones para analizar el impacto de las medidas del Gobierno nacional en la Sexta Sección electoral, con especial atención en la modificación de la Ley de Zonas Frías.",
-      "guion": "Massa pide construir propuestas federales y unidad de cara a las elecciones",
-      "seccion": "Política",
-      "medios": [
-        "Agencia DIB",
-        "Ámbito",
-        "Noticias Argentinas (NA)",
-        "Zona Norte Diario",
-        "El Eco de Tandil"
-      ],
-      "enlace": "https://noticiasargentinas.com/politica/massa-pidio--construir-propuestas-con-mirada-federal-y-trabajar-por-la-unidad-_a6ab846609a676c64cfe40c26",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-26T22:34:40.482Z",
-      "sinFecha": false,
-      "visto": "2026-09-28T08:00:59.952Z",
-      "relevancia": 58,
-      "local": false,
-      "publicadaPor": "ia",
-      "publicadaCuando": "2026-09-28T03:42:54.417Z",
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Sergio Massa pidió priorizar una mirada federal y fortalecer la unidad política.",
-        "El Frente Renovador realizó un encuentro regional en el NEA y otro en el sur bonaerense.",
-        "En Carmen de Patagones analizaron el impacto de las políticas nacionales y la Ley de Zonas Frías.",
-        "En Chaco debatieron sobre economías regionales, empleo joven e infraestructura."
-      ],
-      "seSabe": [
-        "Sergio Massa pidió construir propuestas con mirada federal y trabajar por la unidad.",
-        "El Frente Renovador llevó a cabo un Encuentro Regional del NEA en Resistencia con referentes de Chaco, Corrientes y Misiones.",
-        "Dirigentes del espacio realizaron un encuentro en Carmen de Patagones para analizar el impacto de las políticas del Gobierno nacional en la Sexta Sección electoral, con foco en la Ley de Zonas Frías."
-      ],
-      "noConfirmado": [
-        "No se especificaron detalles sobre posibles candidaturas de cara a los comicios del próximo año."
-      ],
-      "textoRedes": "Sergio Massa pidió construir propuestas con mirada federal y fortalecer la unidad durante un mensaje dirigido a dirigentes del Frente Renovador que participaron de encuentros políticos en el NEA y en la provincia de Buenos Aires.",
-      "etiquetas": [
-        "Sergio Massa",
-        "Frente Renovador",
-        "Elecciones",
-        "Política",
-        "NEA",
-        "Provincia de Buenos Aires"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Noticias Argentinas (NA)",
-          "enlace": "https://noticiasargentinas.com/politica/massa-pidio--construir-propuestas-con-mirada-federal-y-trabajar-por-la-unidad-_a6ab846609a676c64cfe40c26",
-          "fecha": "2026-09-26T22:34:40.482Z",
-          "oficial": false,
-          "aporte": "Detalló los dichos de Sergio Massa sobre la mirada federal y la unidad, además de las conclusiones de los encuentros en Resistencia y Carmen de Patagones."
-        },
-        {
-          "medio": "El Eco de Tandil",
-          "enlace": "https://www.eleco.com.ar/politica/sergio-massa-pidio-trabajar-por-la-unidad-y-una-mirada-federal-en-el-nea",
-          "fecha": "2026-09-27T11:31:50.000Z",
-          "oficial": false,
-          "aporte": "Informó sobre la realización del Encuentro Regional del NEA en Resistencia encabezado por Sergio Massa el pasado sábado."
-        },
-        {
-          "medio": "Agencia DIB",
-          "enlace": "https://dib.com.ar/politica/massa-pidio-trabajar-la-unidad-un-encuentro-del-fr-resistencia-n56060",
-          "fecha": "2026-09-26T23:24:00.000Z",
-          "oficial": false,
-          "aporte": "Indicó que Massa reunió a la militancia del noreste del país y conversó sobre la necesidad de un país más federal."
-        },
-        {
-          "medio": "Ámbito",
-          "enlace": "https://www.ambito.com/politica/sergio-massa-pidio-al-frente-renovador-impulsar-una-agenda-federal-y-unir-al-peronismo-n6327071",
-          "fecha": "2026-09-27T00:01:00.000Z",
-          "oficial": false,
-          "aporte": "Mencionó que el espacio realizó encuentros en el NEA y el sur bonaerense para debatir propuestas y analizar el impacto de las políticas de Javier Milei."
-        },
-        {
-          "medio": "Zona Norte Diario",
-          "enlace": "https://www.zonanortediario.com.ar/26/09/2026/massa-pidio-trabajar-por-la-unidad-y-el-frente-renovador-comenzo-a-mover-sus-fichas-para-2027/",
-          "fecha": "2026-09-26T23:23:17.000Z",
-          "oficial": false,
-          "aporte": "Señaló que el Frente Renovador discutió propuestas con vistas a 2027 y puso el foco en la unidad del peronismo."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "1aco8u",
-          "titulo": "Viviana Erreguerena habló de 2027 y pidió construir consensos antes de definir candidaturas",
-          "fecha": "2026-09-22T18:03:18.138Z",
-          "ruta": "/nota/viviana-erreguerena-hablo-de-2027-y-pidio-construir-consensos-antes-1aco8u"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron cinco medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "massa-pide-construir-propuestas-federales-y-unidad-de-cara-a-las",
-      "foto": {
-        "archivo": "fotos-notas/1juccvy.jpg",
-        "credito": "Foto: El Eco de Tandil"
-      }
     },
     {
       "id": "iobnth",
@@ -2678,9 +3220,11 @@
       "seccion": "Cultura y agenda",
       "medios": [
         "0223 (Mar del Plata)",
+        "Agencia DIB",
         "La Noticia 1",
         "La Nación",
         "QZ Noticias (Mar del Plata)",
+        "Infobrisas (Radio Brisas)",
         "Noticias y Protagonistas"
       ],
       "enlace": "https://www.lanacion.com.ar/sociedad/humo-negro-y-vapor-la-centenaria-locomotora-39-grande-evoco-la-llegada-del-primer-tren-a-mar-del-nid26092026/",
@@ -2754,6 +3298,68 @@
       "foto": {
         "archivo": "fotos-notas/wb80wz.jpg",
         "credito": "Foto: La Noticia 1"
+      }
+    },
+    {
+      "id": "1qm1ppu",
+      "titulo": "La familia Crespi confirma que la fábrica seguirá abierta",
+      "copete": "La emblemática planta de automóviles de Balcarce seguirá en marcha bajo la conducción de los hijos del fundador, Tulio Crespi, según informó la familia a través de un comunicado oficial.",
+      "cuerpo": "La fábrica de automóviles fundada por Tulio Crespi en Balcarce continuará con su producción y mantendrá sus puertas abiertas bajo la dirección de sus hijos Sandro, Matías y Luciano. Así lo ratificó la familia mediante un mensaje difundido en las redes sociales oficiales, tras las muestras de afecto recibidas durante las exequias del histórico proyectista.\n\nEl comunicado detalla que la reorganización operativa de la empresa familiar se puso en marcha en 2021, cuando la nueva generación asumió la gestión. En este período, la firma participó en la fabricación de réplicas para la serie biográfica sobre Ayrton Senna y mantuvo su actividad habitual.\n\nEn esta etapa, la planta seguirá adelante con el suministro de chasis para las categorías escuela de monoplazas, completará el desarrollo del prototipo Fórmula Cross y finalizará el proyecto del deportivo artesanal TULIO VLV 84 ideado por su creador.",
+      "guion": "La familia Crespi confirma la continuidad de la fábrica",
+      "seccion": "Automovilismo",
+      "medios": [
+        "El Marplatense",
+        "Diario La Vanguardia"
+      ],
+      "enlace": "https://www.elmarplatense.com/balcarce-la-familia-crespi-confirmo-que-la-fabrica-continuara-produciendo-y-mantendra-su-legado",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-26T17:00:04.000Z",
+      "sinFecha": false,
+      "visto": "2026-09-27T19:06:41.904Z",
+      "relevancia": 64,
+      "local": true,
+      "publicadaPor": "ia",
+      "publicadaCuando": "2026-09-27T22:52:05.347Z",
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "La fábrica Crespi seguirá produciendo en Balcarce",
+        "Los hijos del fundador asumieron la dirección operativa",
+        "Completarán el desarrollo del deportivo artesanal TULIO VLV 84"
+      ],
+      "seSabe": [
+        "La familia Crespi confirmó que la fábrica de Balcarce continuará produciendo.",
+        "La dirección quedará a cargo de los hermanos Sandro, Matías y Luciano.",
+        "El proceso de reorganización de la firma comenzó en 2021.",
+        "La planta continuará entregando chasis para monoplazas y finalizará el deportivo TULIO VLV 84."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "La emblemática fábrica de automóviles de Balcarce continuará con su producción bajo la dirección de los hijos de Tulio Crespi, tras un comunicado oficial de la familia.",
+      "etiquetas": [
+        "Tulio Crespi",
+        "Balcarce",
+        "automovilismo"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Marplatense",
+          "enlace": "https://www.elmarplatense.com/balcarce-la-familia-crespi-confirmo-que-la-fabrica-continuara-produciendo-y-mantendra-su-legado",
+          "fecha": "2026-09-26T17:00:04.000Z",
+          "oficial": false,
+          "aporte": "Informó la confirmación de la familia Crespi sobre la continuidad de la fábrica en Balcarce y los detalles de la producción."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "la-familia-crespi-confirma-que-la-fabrica-continuara-produciendo-en",
+      "foto": {
+        "archivo": "fotos-notas/1qm1ppu.jpg",
+        "credito": "Foto: El Marplatense"
       }
     },
     {
@@ -2888,6 +3494,110 @@
       }
     },
     {
+      "id": "1nuecaw",
+      "titulo": "Figueroa cruza a Prat-Gay por Vaca Muerta y Milei comparte su respuesta",
+      "copete": "El gobernador de Neuquén respondió al exministro, que había dicho que el crecimiento petrolero todavía no derrama en la economía provincial. El presidente Javier Milei difundió el mensaje en sus redes.",
+      "cuerpo": "Alfonso Prat-Gay hizo su diagnóstico después de recorrer pequeñas y medianas empresas en Neuquén, aunque reconoció que no llegó a Añelo y que se trataba de “una muestra muy pequeña”. Rolando Figueroa le contestó en redes sociales: “Te vi en Neuquén. Veo que no has recorrido. No comparto en absoluto tus apreciaciones desde el Obelisco”.\n\nEl gobernador acompañó su respuesta con un informe de la Fundación Mediterránea y con datos de la provincia: entre 2023 y 2025 la masa salarial creció 13% en petróleo y gas y 17% en otras actividades; el empleo privado registrado subió cerca de 7%, con unos 12.000 puestos nuevos y 186 empresas radicadas, y las exportaciones del primer semestre de 2026 superaron los 4.300 millones de dólares, 42% más que un año antes.\n\n“La próxima vez te saco a recorrer mi provincia, que ha logrado lo que muchos en el país no hicieron cuando tuvieron su oportunidad”, cerró Figueroa. Milei compartió el mensaje sin agregar declaraciones propias.",
+      "guion": null,
+      "seccion": "Política",
+      "medios": [
+        "La Nación",
+        "Infobae",
+        "Ámbito",
+        "Minuto Uno",
+        "C5N",
+        "Crónica",
+        "Canal 26",
+        "Diario Popular",
+        "Noticias Argentinas (NA)",
+        "Clarín"
+      ],
+      "enlace": "https://noticiasargentinas.com/politica/milei-se-mete-en-el-cruce-de-figueroa-con-prat-gay-y-respalda-el-desarrollo-de-vaca-muerta_a6ab7e2409a676c64cfcc1a66",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-26T15:23:41.784Z",
+      "sinFecha": false,
+      "visto": "2026-09-28T08:31:01.978Z",
+      "relevancia": 58,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "fuentesConsultadas": [
+        {
+          "medio": "Noticias Argentinas (NA)",
+          "enlace": "https://noticiasargentinas.com/politica/milei-se-mete-en-el-cruce-de-figueroa-con-prat-gay-y-respalda-el-desarrollo-de-vaca-muerta_a6ab7e2409a676c64cfcc1a66",
+          "fecha": "2026-09-26T15:23:41.784Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/economia/el-gobernador-de-neuquen-cruzo-a-prat-gay-por-decir-que-vaca-muerta-no-derrama-en-la-provincia-nid26092026/",
+          "fecha": "2026-09-26T19:47:43.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/politica/2026/09/26/apreciaciones-desde-el-obelisco-el-cruce-entre-el-gobernador-de-neuquen-y-prat-gay-por-vaca-muerta/",
+          "fecha": "2026-09-26T15:38:54.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Ámbito",
+          "enlace": "https://www.ambito.com/politica/rolando-figueroa-cruzo-alfonso-prat-gay-vaca-muerta-veo-que-no-has-recorrido-neuquen-n6327207",
+          "fecha": "2026-09-27T19:37:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Minuto Uno",
+          "enlace": "https://www.minutouno.com/economia/la-fuerte-respuesta-rolando-figueroa-alfonso-prat-gay-el-impacto-vaca-muerta-n6327182",
+          "fecha": "2026-09-27T16:58:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "C5N",
+          "enlace": "https://www.c5n.com/politica/rolando-figueroa-cruzo-alfonso-prat-gay-vaca-muerta-veo-que-no-has-recorrido-n250051",
+          "fecha": "2026-09-27T17:17:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Crónica",
+          "enlace": "https://www.cronica.com.ar/politica/figueroa-le-respondio-a-prat-gay-te-vi-en-neuquen-veo-que-no-has-recorrido/",
+          "fecha": "2026-09-26T23:30:12.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Canal 26",
+          "enlace": "https://www.canal26.com/politica/2026/09/27/rolando-figueroa-cruzo-a-prat-gay-por-vaca-muerta-veo-que-no-has-recorrido/",
+          "fecha": "2026-09-27T14:30:33.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Diario Popular",
+          "enlace": "https://www.diariopopular.com.ar/politica/rolando-figueroa-prat-gay-no-comparto-tus-apreciaciones-el-obelisco-n921694",
+          "fecha": "2026-09-27T00:02:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Clarín",
+          "enlace": "https://www.clarin.com/politica/gobernador-neuquen-cruzo-prat-gay-decir-vaca-muerta-derrama-provincia_0_fG8Ofa09fC.html",
+          "fecha": "2026-09-26T22:39:00.000Z",
+          "oficial": false,
+          "aporte": null
+        }
+      ],
+      "slug": "milei-se-mete-en-el-cruce-de-figueroa-con-prat-gay-y-respalda-el"
+    },
+    {
       "id": "mk94me",
       "titulo": "Franco Colapinto choca con Pierre Gasly en el Gran Premio de Azerbaiyán",
       "copete": "El piloto argentino colisionó con su compañero de equipo y con Lando Norris durante el relanzamiento de la carrera en Bakú. El incidente dejó a ambos fuera de competencia y generó distintas reacciones en la categoría.",
@@ -2896,7 +3606,6 @@
       "seccion": "Automovilismo",
       "medios": [
         "QZ Noticias (Mar del Plata)",
-        "Motorsport",
         "La Nación",
         "Infobae",
         "TN (Todo Noticias)",
@@ -2914,12 +3623,14 @@
         "Noticias Argentinas (NA)",
         "El Día",
         "0221",
-        "Clarín",
-        "0223 (Mar del Plata)",
+        "InfoRegión",
+        "El Marplatense",
+        "Mi8 (Canal 8 Mar del Plata)",
         "El Eco de Tandil",
+        "NDEN – Noticias de Necochea",
+        "0223 (Mar del Plata)",
         "Minuto Uno",
         "La Nueva",
-        "El Marplatense",
         "Doble Amarilla",
         "Bolavip Argentina"
       ],
@@ -3216,16 +3927,23 @@
         "QZ Noticias (Mar del Plata)",
         "Ecos Diarios (Necochea)",
         "La Noticia 1",
+        "Infobae",
         "TN (Todo Noticias)",
         "El Destape",
+        "A24",
         "Ámbito",
+        "Canal 26",
         "Diario Popular",
         "Noticias Argentinas (NA)",
         "Zona Norte Diario",
+        "ANDigital",
+        "El Marplatense",
+        "Mi8 (Canal 8 Mar del Plata)",
+        "Infobrisas (Radio Brisas)",
+        "Punto Noticias",
         "El Eco de Tandil",
         "Radio Mitre",
-        "Infobrisas (Radio Brisas)",
-        "Mi8 (Canal 8 Mar del Plata)"
+        "El Día"
       ],
       "enlace": "https://noticiasargentinas.com/politica/fam-repudio-la-derogacion-del-regimen-de-zonas-frias---un-golpe-directo-al-bolsillo-_a6ab7c7879a676c64cfc57f58",
       "teniaImagenLaFuente": true,
@@ -3462,6 +4180,58 @@
       "slug": "el-repaso-de-la-manana-en-radar-balcarce-mccain-y-hockey"
     },
     {
+      "id": "1hanh9c",
+      "titulo": "La acopiadora Scorziello y Galella exporta granos a Isla Mauricio",
+      "copete": "La empresa acopiadora local Scorziello y Galella concretó un nuevo envío de granos al exterior con dos contenedores rumbo a Isla Mauricio, en el marco de su quincuagésimo aniversario.",
+      "cuerpo": "La firma local Scorziello y Galella sumó un nuevo destino internacional para sus productos al enviar dos contenedores con granos rumbo a Isla Mauricio. Esta operación marca un nuevo hito comercial para la empresa acopiadora, que actualmente se encuentra celebrando medio siglo de trayectoria en el distrito.\n\nEl embarque hacia este destino marítimo se integró a la lista de envíos al exterior que la compañía viene realizando desde el partido, consolidando su presencia en mercados internacionales de características particulares.",
+      "guion": "Scorziello y Galella exporta granos a Isla Mauricio",
+      "seccion": "Agro",
+      "medios": [
+        "El Diario Balcarce"
+      ],
+      "enlace": "https://eldiariobalcarce.com.ar/de-balcarce-al-mundo-nueva-exportacion-de-granos-esta-vez-a-un-destino-exotico-657",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-26T12:57:38.000Z",
+      "sinFecha": false,
+      "visto": "2026-09-27T02:30:43.813Z",
+      "relevancia": 63,
+      "local": true,
+      "publicadaPor": "ia",
+      "publicadaCuando": "2026-09-27T01:31:17.679Z",
+      "temas": [],
+      "como": "automatica",
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "La empresa local Scorziello y Galella cumplió medio siglo de trayectoria comercial y concretó una nueva exportación de granos hacia Isla Mauricio con el envío de dos contenedores.",
+      "etiquetas": [
+        "Scorziello y Galella",
+        "exportación",
+        "granos",
+        "Isla Mauricio",
+        "Balcarce"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/de-balcarce-al-mundo-nueva-exportacion-de-granos-esta-vez-a-un-destino-exotico-657",
+          "fecha": "2026-09-26T12:57:38.000Z",
+          "oficial": false,
+          "aporte": "Informó sobre el envío de dos contenedores de granos a Isla Mauricio por parte de la empresa local Scorziello y Galella en el año de su quincuagésimo aniversario."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "scorziello-y-galella-exporta-granos-a-isla-mauricio-en-balcarce",
+      "foto": {
+        "archivo": "fotos-notas/1hanh9c.jpg",
+        "credito": "Foto: El Diario Balcarce"
+      }
+    },
+    {
       "id": "gqlk77",
       "titulo": "George Russell gana el Gran Premio de Azerbaiyán en la Fórmula 1",
       "copete": "El piloto británico se impuso en el circuito urbano de Bakú y achicó diferencias con el líder del campeonato, Andrea Kimi Antonelli. La competencia tuvo un fuerte accidente del argentino Franco Colapinto.",
@@ -3654,13 +4424,12 @@
       "guion": "Emiten alerta amarilla por tormentas y lluvias en varias provincias",
       "seccion": "Argentina",
       "medios": [
+        "Infobae",
         "La Nación",
         "QZ Noticias (Mar del Plata)",
         "La Noticia 1",
         "Diputados Bonaerenses",
-        "2261 – Noticias de Lobería",
         "Minuto Uno",
-        "Infobae",
         "TN (Todo Noticias)",
         "El Cronista",
         "El Destape",
@@ -3675,17 +4444,18 @@
         "Noticias Argentinas (NA)",
         "0221",
         "La Opinión",
+        "InfoRegión",
         "ANDigital",
+        "El Marplatense",
+        "Mi8 (Canal 8 Mar del Plata)",
+        "Qué Digital",
+        "Infobrisas (Radio Brisas)",
+        "NDEN – Noticias de Necochea",
         "Ámbito",
         "El Día",
         "La Nueva",
-        "InfoRegión",
-        "Mi8 (Canal 8 Mar del Plata)",
         "Infoeme",
-        "Infobrisas (Radio Brisas)",
-        "El Marplatense",
-        "Qué Digital",
-        "NDEN – Noticias de Necochea",
+        "2261 – Noticias de Lobería",
         "Clarín"
       ],
       "enlace": "https://www.lanacion.com.ar/sociedad/hay-alerta-amarilla-por-tormentas-y-lluvias-para-este-sabado-26-de-septiembre-las-provincias-nid26092026/",
@@ -4383,6 +5153,92 @@
       }
     },
     {
+      "id": "uukabt",
+      "titulo": "Kicillof destaca la reinauguración del autódromo Juan Manuel Fangio",
+      "copete": "El gobernador bonaerense encabezó la reapertura del circuito local y remarcó el impacto que la obra tendrá para el distrito en materia turística y económica.",
+      "cuerpo": "Durante su alocución, el mandatario provincial recordó sus primeras visitas al lugar y sostuvo que se cumplió un anhelo para la actividad. Asimismo, remarcó que los trabajos demandaron años para cumplir con las exigencias actuales de seguridad y señaló que en la recuperación colaboraron el municipio, la administración bonaerense, la ACTC, la Fundación Fangio y diversos sectores de la comunidad.\n\nKicillof advirtió que de no mediar una decisión política el predio habría permanecido inactivo durante largo tiempo y afirmó que la puesta en valor posicionará a la ciudad bajo el reflector nacional y provincial debido al movimiento turístico y productivo que generará.",
+      "guion": "Kicillof destaca la reinauguración del autódromo Juan Manuel Fangio",
+      "seccion": "Política",
+      "medios": [
+        "Radio Gabal (FM 104.1)"
+      ],
+      "enlace": "https://www.radiogabal.com.ar/index.php/politica/kicillof-tras-la-reinauguracion-del-fangio-es-magico-es-hermoso-y-habia-que-volver-a-inaugurarlo",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-26T00:07:31.000Z",
+      "sinFecha": false,
+      "visto": "2026-09-28T08:31:01.978Z",
+      "relevancia": 67,
+      "local": true,
+      "publicadaPor": "ia",
+      "publicadaCuando": "2026-09-26T07:14:26.882Z",
+      "temas": [
+        "autodromo",
+        "fangio"
+      ],
+      "como": "automatica",
+      "claves": [
+        "Axel Kicillof encabezó la reinauguración del autódromo Juan Manuel Fangio.",
+        "El gobernador destacó que la obra requirió años de trabajo conjunto.",
+        "Señaló que el circuito potenciará el turismo y la economía local."
+      ],
+      "seSabe": [
+        "El gobernador Axel Kicillof participó de la reinauguración del autódromo Juan Manuel Fangio.",
+        "Kicillof afirmó que la recuperación del circuito requirió años de trabajo para cumplir con exigencias de seguridad.",
+        "El mandatario provincial destacó la participación conjunta del municipio, la provincia, la ACTC, la Fundación Fangio y la comunidad.",
+        "El gobernador sostuvo que la reapertura impulsará el turismo, la producción y la economía de Balcarce."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El gobernador Axel Kicillof encabezó la reinauguración del autódromo Juan Manuel Fangio y destacó el impacto que la recuperación del histórico circuito tendrá para el turismo y la economía de Balcarce.",
+      "etiquetas": [
+        "autodromo",
+        "juan manuel fangio",
+        "axel kicillof",
+        "balcarce",
+        "automovilismo"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Radio Gabal (FM 104.1)",
+          "enlace": "https://www.radiogabal.com.ar/index.php/politica/kicillof-tras-la-reinauguracion-del-fangio-es-magico-es-hermoso-y-habia-que-volver-a-inaugurarlo",
+          "fecha": "2026-09-26T00:07:31.000Z",
+          "oficial": false,
+          "aporte": "Detalles del discurso de Axel Kicillof durante la reinauguración del autódromo Juan Manuel Fangio."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1rzhnh1",
+          "titulo": "Kicillof reinaugura el autódromo Juan Manuel Fangio en Balcarce",
+          "fecha": "2026-09-25T22:52:06.000Z",
+          "ruta": "/nota/kicillof-reinaugura-el-autodromo-juan-manuel-fangio-en-balcarce-1rzhnh1"
+        },
+        {
+          "id": "uj4h1v",
+          "titulo": "Kicillof encabeza la reinauguración del autódromo en Balcarce",
+          "fecha": "2026-09-25T11:53:01.000Z",
+          "ruta": "/nota/kicillof-encabeza-la-reinauguracion-del-autodromo-en-balcarce-uj4h1v"
+        },
+        {
+          "id": "1e6tvp9",
+          "titulo": "Kicillof encabeza la reapertura del autódromo Juan Manuel Fangio en Balcarce",
+          "fecha": "2026-09-25T10:15:00.000Z",
+          "ruta": "/nota/el-gobernador-bonaerense-encabeza-la-reapertura-del-autodromo-en-1e6tvp9"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "kicillof-destaca-la-reinauguracion-del-autodromo-juan-manuel-fangio",
+      "foto": {
+        "archivo": "fotos-notas/uukabt.png",
+        "credito": "Foto: Radio Gabal (FM 104.1)"
+      }
+    },
+    {
       "id": "repaso20260925noche",
       "propia": "repaso",
       "titulo": "El repaso de la noche en Radar Balcarce: Zona Fría y papa",
@@ -4434,6 +5290,174 @@
         }
       ],
       "slug": "el-repaso-de-la-noche-en-radar-balcarce-autodromo-juan-manuel-fangio"
+    },
+    {
+      "id": "1s9so2g",
+      "titulo": "El Concejo aprueba pedir suspensión de intimaciones de OSEBAL",
+      "copete": "El Concejo Deliberante aprobó por unanimidad solicitar al Departamento Ejecutivo que gestione la suspensión de las intimaciones enviadas por la empresa de agua.",
+      "cuerpo": "Como se había informado a fines de septiembre, el cuerpo legislativo ya había abordado reclamos vinculados a las deudas de la empresa y solicitado prórrogas para regularizar los pagos, además de pedir explicaciones a la firma prestadora del servicio en el distrito.\n\nCon esta nueva medida aprobada por los ediles, se busca frenar temporalmente los reclamos a los vecinos mientras se continúan evaluando alternativas para facilitar la situación de los usuarios afectados por las notificaciones de deuda enviadas recientemente.",
+      "guion": "El Concejo aprueba pedir suspensión de intimaciones de OSEBAL",
+      "seccion": "Política",
+      "medios": [
+        "El Diario Balcarce"
+      ],
+      "enlace": "https://eldiariobalcarce.com.ar/el-concejo-aprobo-pedir-una-suspension-de-180-dias-para-las-intimaciones-de-osebal-299",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-25T23:02:57.000Z",
+      "sinFecha": false,
+      "visto": "2026-09-28T08:31:01.978Z",
+      "relevancia": 63,
+      "local": true,
+      "publicadaPor": "ia",
+      "publicadaCuando": "2026-09-26T07:24:59.436Z",
+      "temas": [
+        "concejo"
+      ],
+      "como": "automatica",
+      "claves": [
+        "El Concejo Deliberante aprobó un proyecto por unanimidad.",
+        "Se pide frenar las intimaciones enviadas por OSEBAL SAPEM.",
+        "La solicitud apunta a gestiones del Departamento Ejecutivo."
+      ],
+      "seSabe": [
+        "El Concejo Deliberante aprobó por unanimidad un proyecto de Comunicación.",
+        "Se solicita al Departamento Ejecutivo realizar gestiones ante OSEBAL SAPEM Aguas de la Ciudad.",
+        "La medida pide suspender el envío de intimaciones prejudiciales."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El Concejo Deliberante aprobó por unanimidad un proyecto para solicitar que se suspendan las intimaciones prejudiciales enviadas por OSEBAL SAPEM Aguas de la Ciudad en el distrito.",
+      "etiquetas": [
+        "Concejo Deliberante",
+        "OSEBAL",
+        "Balcarce",
+        "servicios",
+        "intimaciones"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/el-concejo-aprobo-pedir-una-suspension-de-180-dias-para-las-intimaciones-de-osebal-299",
+          "fecha": "2026-09-25T23:02:57.000Z",
+          "oficial": false,
+          "aporte": "Informó que el Concejo Deliberante aprobó un proyecto para pedir la suspensión de intimaciones de OSEBAL."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "ntjgh8",
+          "titulo": "El Concejo aprueba pedir la baja de tasas a taxis y remises en Balcarce",
+          "fecha": "2026-09-25T22:43:54.000Z",
+          "ruta": "/nota/el-concejo-aprueba-pedir-la-baja-de-tasas-a-taxis-y-remises-en-ntjgh8"
+        },
+        {
+          "id": "2olgpl",
+          "titulo": "El Concejo aprueba pedir la baja de tasas a taxis y remises en Balcarce",
+          "fecha": "2026-09-25T16:08:22.000Z",
+          "ruta": "/nota/el-concejo-aprueba-pedir-la-baja-de-tasas-a-taxis-y-remises-en-2olgpl"
+        },
+        {
+          "id": "clgr2q",
+          "titulo": "El Concejo pide frenar reclamos a vecinos y prorrogar deudas de OSeBal en Balcarce",
+          "fecha": "2026-09-25T13:00:52.110Z",
+          "ruta": "/nota/el-concejo-pide-frenar-reclamos-a-vecinos-y-prorrogar-deudas-de-clgr2q"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "el-concejo-aprueba-pedir-suspension-de-intimaciones-de-osebal",
+      "foto": {
+        "archivo": "fotos-notas/1s9so2g.jpg",
+        "credito": "Foto: El Diario Balcarce"
+      }
+    },
+    {
+      "id": "1gnqz6n",
+      "titulo": "El Autódromo Juan Manuel Fangio reabre sus puertas tras quince años",
+      "copete": "El circuito de la sierra La Barrosa volvió a recibir actividad oficial este viernes con la presencia de autoridades provinciales y municipales. El fin de semana competirán las categorías nacionales.",
+      "cuerpo": "El Autódromo Juan Manuel Fangio reanudó oficialmente sus actividades este viernes tras quince años sin recibir competencias nacionales en la sierra La Barrosa. Del acto inaugural participaron el gobernador Axel Kicillof, el intendente Esteban Reino, el ministro de Gobierno Carlos Bianco y el presidente de la ACTC, Hugo Mazzacane, además de referentes y trabajadores del deporte.\n\nDurante la ceremonia se destacó el proceso de recuperación del circuito para cumplir con las exigencias actuales de seguridad.",
+      "guion": "El Autodromo Juan Manuel Fangio reabre sus puertas tras quince anos",
+      "seccion": "Automovilismo",
+      "medios": [
+        "News Balcarce (FM 91.7)",
+        "Infórmese Primero (FM 104.9)",
+        "Municipalidad de Balcarce",
+        "El Diario Balcarce",
+        "Diario La Vanguardia",
+        "0223 (Mar del Plata)",
+        "El Destape",
+        "El Día",
+        "ANDigital",
+        "Infobrisas (Radio Brisas)",
+        "NDEN – Noticias de Necochea"
+      ],
+      "enlace": "http://www.informeseprimero.com.ar/2026/09/el-autodromo-juan-manuel-fangio-volvio.html",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-25T22:53:16.590Z",
+      "sinFecha": false,
+      "visto": "2026-09-28T03:01:51.643Z",
+      "relevancia": 100,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [
+        "autodromo",
+        "fangio"
+      ],
+      "como": "automatica",
+      "etiquetas": [
+        "autodromo",
+        "balcarce",
+        "deportes",
+        "automovilismo",
+        "turismo carretera"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infórmese Primero (FM 104.9)",
+          "enlace": "http://www.informeseprimero.com.ar/2026/09/el-autodromo-juan-manuel-fangio-volvio.html",
+          "fecha": "2026-09-25T22:53:16.590Z",
+          "oficial": false,
+          "aporte": "Detalló los discursos de las autoridades, la inversión de las obras y las categorías que competirán el fin de semana."
+        },
+        {
+          "medio": "Diario La Vanguardia",
+          "enlace": "https://www.diariolavanguardia.com/noticias/44903-dia-historico-el-autodromo-juan-manuel-fangio-volvio-a-abrir-sus-puertas-despues-de-casi-15-anos/",
+          "fecha": null,
+          "oficial": false,
+          "aporte": "Confirmó la llegada de los fanáticos desde las primeras horas y la previa de la competencia de TC Pick Up."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1hm23zx",
+          "titulo": "El autódromo Juan Manuel Fangio reabre sus puertas",
+          "fecha": "2026-09-25T08:03:43.000Z",
+          "ruta": "/nota/el-autodromo-juan-manuel-fangio-reabre-sus-puertas-en-balcarce-1hm23zx"
+        },
+        {
+          "id": "mayad0",
+          "titulo": "Autódromo Juan Manuel Fangio: accesos, entradas y operativo para la reapertura",
+          "fecha": "2026-09-25T02:56:25.783Z",
+          "ruta": "/nota/el-autodromo-juan-manuel-fangio-reabre-sus-puertas-en-balcarce-mayad0"
+        },
+        {
+          "id": "30tlwf",
+          "titulo": "Reabre el Autódromo Juan Manuel Fangio",
+          "fecha": "2026-09-25T00:03:22.000Z",
+          "ruta": "/nota/reabre-el-autodromo-juan-manuel-fangio-en-balcarce-30tlwf"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "el-autodromo-juan-manuel-fangio-reabre-sus-puertas-tras-quince-anos"
     },
     {
       "id": "1cprk3f",
@@ -4561,6 +5585,142 @@
       "foto": {
         "archivo": "fotos-notas/1cprk3f.jpg",
         "credito": "Foto: C5N"
+      }
+    },
+    {
+      "id": "ntjgh8",
+      "titulo": "El Concejo pide bajar las tasas a taxis y remises",
+      "copete": "El Deliberante solicitó al Ejecutivo municipal que contemple una baja o eliminación de tasas para taxis y remises en el presupuesto del próximo año.",
+      "cuerpo": "El Concejo Deliberante aprobó un proyecto de Comunicación para solicitar al Departamento Ejecutivo que contemple una reducción o eliminación de tasas, derechos y cánones para taxis y remises dentro del Presupuesto y de la Ordenanza Fiscal e Impositiva correspondientes al año 2027.\n\nLa iniciativa había comenzado a tratarse en el ámbito legislativo días atrás, luego de ser presentada por un bloque político con el objetivo de equilibrar la actividad del sector frente al avance de las aplicaciones de transporte en el distrito.\n\nLa medida aprobada tiene carácter de solicitud hacia el municipio, por lo que ahora resta definir si el Ejecutivo incluirá estas modificaciones impositivas en la diagramación de los gastos y tributos proyectados para el próximo año.",
+      "guion": "El Concejo aprueba reducir tributos a taxis y remises",
+      "seccion": "Política",
+      "medios": [
+        "El Diario Balcarce"
+      ],
+      "enlace": "https://eldiariobalcarce.com.ar/solicitan-reducir-y-eliminar-tributos-para-taxis-y-remises-en-el-presupuesto-2027-918",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-25T22:43:54.000Z",
+      "sinFecha": false,
+      "visto": "2026-09-26T03:00:42.156Z",
+      "relevancia": 63,
+      "local": true,
+      "publicadaPor": "ia",
+      "publicadaCuando": "2026-09-26T07:14:26.882Z",
+      "temas": [
+        "concejo"
+      ],
+      "como": "automatica",
+      "claves": [
+        "El Concejo aprobó un proyecto de Comunicación al Ejecutivo.",
+        "Buscan reducir o eliminar tasas para taxis y remises desde 2027.",
+        "La medida apunta a equiparar al sector frente a las aplicaciones de transporte.",
+        "El pedido deberá evaluarse para la próxima Ordenanza Fiscal e Impositiva."
+      ],
+      "seSabe": [
+        "El Concejo Deliberante aprobó un proyecto de Comunicación.",
+        "Se solicita al Ejecutivo reducir o eliminar tasas y cánones para taxis y remises.",
+        "La solicitud apunta al Presupuesto y a la Ordenanza Fiscal e Impositiva de 2027.",
+        "El proyecto se vincula con la situación del sector ante las aplicaciones de transporte, según antecedentes legislativos."
+      ],
+      "noConfirmado": [
+        "No se informó si el Departamento Ejecutivo aceptará el pedido del cuerpo deliberativo.",
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El Concejo Deliberante aprobó un pedido para que el Ejecutivo evalúe reducir o eliminar tasas a taxis y remises en el presupuesto y la ordenanza fiscal del próximo año, con el fin de equiparar al sector frente a las aplicaciones de transporte.",
+      "etiquetas": [
+        "Concejo Deliberante",
+        "taxis",
+        "remises",
+        "tasas municipales",
+        "presupuesto",
+        "Balcarce"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/solicitan-reducir-y-eliminar-tributos-para-taxis-y-remises-en-el-presupuesto-2027-918",
+          "fecha": "2026-09-25T22:43:54.000Z",
+          "oficial": false,
+          "aporte": "Informó la aprobación en el Concejo Deliberante del proyecto de Comunicación dirigido al Departamento Ejecutivo sobre los tributos a taxis y remises."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "7c7bdz",
+          "titulo": "El Concejo debate eliminar tasas a taxis y remises en Balcarce",
+          "fecha": "2026-09-23T22:58:23.988Z",
+          "ruta": "/nota/taxis-y-remises-debatiran-la-eliminacion-de-tasas-mientras-el-sector-7c7bdz"
+        },
+        {
+          "id": "1q0vr9a",
+          "titulo": "La Libertad Avanza propone eliminar tasas municipales para taxis y remises desde 2027",
+          "fecha": "2026-09-17T18:02:03.000Z",
+          "ruta": "/nota/la-libertad-avanza-propone-eliminar-tasas-municipales-para-taxis-y-1q0vr9a"
+        },
+        {
+          "id": "2olgpl",
+          "titulo": "El Concejo aprueba pedir la baja de tasas a taxis y remises en Balcarce",
+          "fecha": "2026-09-25T16:08:22.000Z",
+          "ruta": "/nota/el-concejo-aprueba-pedir-la-baja-de-tasas-a-taxis-y-remises-en-2olgpl"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "el-concejo-aprueba-pedir-la-baja-de-tasas-a-taxis-y-remises-en"
+    },
+    {
+      "id": "o5u09g",
+      "titulo": "Belén Casetta gana el oro y Micaela Levaggi el bronce en los Juegos Suramericanos",
+      "copete": "Las dos marplatenses subieron al podio en la final de los 3000 metros con obstáculos, en Santa Fe. Casetta defendió su título y Levaggi terminó tercera pese a sufrir una caída.",
+      "cuerpo": "Casetta, de 31 años, ganó el viernes con 9 minutos, 35 segundos y 44 centésimas, un nuevo récord de los Juegos: la marca anterior, de 10:05.02, estaba vigente desde 2014. Segunda llegó la brasileña Tatiane da Silva, con 9:44.10, y Levaggi completó el podio con 9:49.63, después de caerse en la última vuelta.\n\nCon este oro, Casetta retuvo el título que había ganado en 2022. La atleta ya había sido campeona de los Juegos Panamericanos de 2023 en la misma prueba, tiene los récords argentino y sudamericano (9:25.99) y compitió en tres Juegos Olímpicos: Río 2016, Tokio 2020 y París 2024. Levaggi, por su parte, suma esta medalla a los títulos que ya había conseguido en los 1500 y los 5000 metros llanos.\n\nLa última jornada del atletismo en Santa Fe cerró para la Argentina con cuatro títulos, cuatro medallas de plata y ocho de bronce.",
+      "guion": null,
+      "seccion": "Deportes",
+      "medios": [
+        "La Nación",
+        "Mi8 (Canal 8 Mar del Plata)",
+        "Qué Digital"
+      ],
+      "enlace": "https://quedigital.com.ar/deportes/suramericanos-una-caida-y-golpe-de-levaggi-no-impidio-el-doble-podio-junto-a-casetta/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-25T22:43:25.000Z",
+      "sinFecha": false,
+      "visto": "2026-09-27T23:28:54.122Z",
+      "relevancia": 57,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "fuentesConsultadas": [
+        {
+          "medio": "Qué Digital",
+          "enlace": "https://quedigital.com.ar/deportes/suramericanos-una-caida-y-golpe-de-levaggi-no-impidio-el-doble-podio-junto-a-casetta/",
+          "fecha": "2026-09-25T22:43:25.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/deportes/atletismo/belen-casetta-defendio-su-corona-en-los-3000-metros-con-obstaculos-y-micaela-levaggi-completo-el-nid25092026/",
+          "fecha": "2026-09-26T11:35:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Mi8 (Canal 8 Mar del Plata)",
+          "enlace": "https://mi8.com.ar/belen-casetta-gano-el-oro-en-3000-metros-con-obstaculos-y-hablo-del-final-de-su-carrera/",
+          "fecha": "2026-09-26T11:53:52.000Z",
+          "oficial": false,
+          "aporte": null
+        }
+      ],
+      "slug": "suramericanos-una-caida-y-golpe-de-levaggi-no-impidio-el-doble-podio",
+      "foto": {
+        "archivo": "fotos-notas/o5u09g.jpg",
+        "credito": "Foto: Mi8 (Canal 8 Mar del Plata)"
       }
     },
     {
@@ -4727,14 +5887,15 @@
         "Infobae",
         "Perfil",
         "A24",
-        "Ámbito"
+        "Ámbito",
+        "El Eco de Tandil"
       ],
       "enlace": "https://www.a24.com/deportes/el-sub-19-argentina-perdio-paraguay-penales-y-se-quedo-la-medalla-plata-n1600457",
       "teniaImagenLaFuente": true,
       "fecha": "2026-09-25T20:19:00.000Z",
       "sinFecha": false,
       "visto": "2026-09-28T02:26:47.869Z",
-      "relevancia": 64,
+      "relevancia": 74,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -4799,127 +5960,6 @@
       "slug": "argentina-pierde-la-final-por-penales-y-logra-la-medalla-de-plata"
     },
     {
-      "id": "5mxbmz",
-      "titulo": "YPF aumenta 1% sus combustibles, por debajo de Shell, Axion y Puma",
-      "copete": "La petrolera aplicó la suba en naftas y gasoil de todo el país desde las 0 del sábado 26 de septiembre. Las otras compañías habían aumentado entre 2% y 5% días antes.",
-      "cuerpo": "Con el ajuste, los precios de referencia de YPF por litro quedaron en $2.112 la Súper, $2.299 la Infinia y $2.392 la Infinia Diésel, con variaciones según la zona y la estación. La empresa atribuyó la suba a la extensión del conflicto en Medio Oriente, que volvió a empujar el precio internacional del petróleo: el Brent superaba los 104 dólares por barril y el WTI rondaba los 93.\n\nYPF mantiene desde abril un esquema de “buffer” que, según la compañía, busca evitar trasladar la volatilidad a los precios locales, y sigue aplicando el micropricing, con ajustes según la oferta y la demanda, la competencia, las franjas horarias, los corredores y las zonas geográficas.\n\nEl presidente y CEO de la empresa, Horacio Marín, había adelantado que si el barril se establecía en 100 dólares, “los consumidores vamos a tener que pagar por US$ 100”.",
-      "guion": "YPF incrementa uno por ciento el valor de los combustibles en el país",
-      "seccion": "Economía",
-      "medios": [
-        "Infobae",
-        "Minuto Uno",
-        "Diario Popular",
-        "0221"
-      ],
-      "enlace": "https://www.0221.com.ar/nacional/ypf-se-sumo-los-aumentos-los-combustibles-y-ajusto-sus-precios-todo-el-pais-n134820",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-25T20:16:00.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-28T02:30:54.799Z",
-      "relevancia": 50,
-      "local": false,
-      "publicadaPor": "ia",
-      "publicadaCuando": "2026-09-28T03:32:34.329Z",
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "YPF aumentó uno por ciento el precio de sus combustibles en todo el país.",
-        "La suba se implementó tras los incrementos de entre el dos y el cinco por ciento aplicados por otras compañías.",
-        "La empresa atribuyó la medida a un esquema de actualización gradual por la situación internacional.",
-        "Continúa vigente el sistema de micropricing para ajustar valores según cada mercado."
-      ],
-      "seSabe": [
-        "YPF aplicó un aumento promedio del uno por ciento en naftas y gasoil en todo el país, según informó la compañía.",
-        "Otras compañías aplicaron previamente incrementos de entre el dos y el cinco por ciento, de acuerdo con los registros de las fuentes.",
-        "La empresa estatal mantiene un esquema de buffer de precios y un sistema de micropricing para fijar los valores según cada zona."
-      ],
-      "noConfirmado": [
-        "No se especificaron los valores nominales en pesos que tendrán las naftas y el gasoil en las estaciones de servicio tras el incremento."
-      ],
-      "textoRedes": "YPF aplicó una suba del uno por ciento en las naftas y el gasoil en todo el país. El incremento se suma al de otras petroleras y repercute en las estaciones de servicio locales.",
-      "etiquetas": [
-        "YPF",
-        "combustibles",
-        "aumento",
-        "precios"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "0221",
-          "enlace": "https://www.0221.com.ar/nacional/ypf-se-sumo-los-aumentos-los-combustibles-y-ajusto-sus-precios-todo-el-pais-n134820",
-          "fecha": "2026-09-25T20:16:00.000Z",
-          "oficial": false,
-          "aporte": "Detalló el porcentaje de aumento del uno por ciento, la fecha de aplicación y el esquema de buffer de precios."
-        },
-        {
-          "medio": "Infórmese Primero (FM 104.9)",
-          "enlace": "http://www.informeseprimero.com.ar/2026/09/ypf-aumento-1-el-precio-de-sus.html",
-          "fecha": "2026-09-26T13:30:28.264Z",
-          "oficial": false,
-          "aporte": "Confirmó la aplicación del incremento del uno por ciento desde la medianoche del sábado."
-        },
-        {
-          "medio": "El Destape",
-          "enlace": "https://www.eldestapeweb.com/economia/combustibles-aumentan-1-este-sabado-efectos-guerra-medio-oriente-2026925192425",
-          "fecha": "2026-09-25T22:24:25.000Z",
-          "oficial": false,
-          "aporte": "Indicó que otras compañías aplicaron incrementos previos de hasta el cinco por ciento."
-        },
-        {
-          "medio": "Minuto Uno",
-          "enlace": "https://www.minutouno.com/economia/ypf-aumenta-todos-sus-combustibles-este-sabado-cuanto-se-va-el-litro-nafta-n6326890",
-          "fecha": "2026-09-25T22:38:00.000Z",
-          "oficial": false,
-          "aporte": "Señaló que las subas de las compañías privadas oscilaron entre el dos y el cinco por ciento."
-        },
-        {
-          "medio": "Diario Popular",
-          "enlace": "https://www.diariopopular.com.ar/economia/desde-este-sabado-ypf-aumenta-un-1-los-precios-sus-combustibles-n921548",
-          "fecha": "2026-09-26T10:06:00.000Z",
-          "oficial": false,
-          "aporte": "Informó sobre la vigencia general de los ajustes en el sector."
-        },
-        {
-          "medio": "InfoRegión",
-          "enlace": "https://www.inforegion.com.ar/2026/09/26/ypf-tambien-aumento-el-precio-de-sus-combustibles/",
-          "fecha": "2026-09-26T11:05:07.000Z",
-          "oficial": false,
-          "aporte": "Precisó que la medida se da en sintonía con Shell, Axion y Puma, ratificando la política de micropricing."
-        },
-        {
-          "medio": "QZ Noticias (Mar del Plata)",
-          "enlace": "https://www.qznoticias.com/el-pais/ypf-aumenta-desde-hoy-un-1-el-precio-de-los-combustibles",
-          "fecha": "2026-09-26T12:01:57.000Z",
-          "oficial": false,
-          "aporte": "Registró la actualización de tarifas de la petrolera estatal."
-        },
-        {
-          "medio": "El Marplatense",
-          "enlace": "https://www.elmarplatense.com/ypf-aplico-un-aumento-del-1-en-el-precio-de-sus-combustibles",
-          "fecha": "2026-09-26T13:41:39.000Z",
-          "oficial": false,
-          "aporte": "Aportó cobertura sobre el impacto de la medida en la región."
-        },
-        {
-          "medio": "Punto Noticias",
-          "enlace": "https://puntonoticias.com/ypf-aplicara-un-aumento-del-1-a-los-combustibles-desde-este-sabado/",
-          "fecha": "2026-09-26T12:40:53.000Z",
-          "oficial": false,
-          "aporte": null
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron 9 medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "ypf-se-sumo-a-los-aumentos-de-los-combustibles-y-ajusto-sus-precios",
-      "foto": {
-        "archivo": "fotos-notas/5mxbmz.jpg",
-        "credito": "Foto: 0221"
-      }
-    },
-    {
       "id": "7fmhve",
       "titulo": "Advierten por una falsa convocatoria laboral de McCain",
       "copete": "La empresa McCain alertó sobre mensajes fraudulentos que ofrecen puestos de trabajo en la planta local. Advierten que piden dinero y datos bancarios a los postulantes.",
@@ -4928,14 +5968,16 @@
       "seccion": "Balcarce",
       "medios": [
         "Infórmese Primero (FM 104.9)",
-        "Diario La Vanguardia"
+        "Radio Gabal (FM 104.1)",
+        "Diario La Vanguardia",
+        "El Diario Balcarce"
       ],
       "enlace": "http://www.informeseprimero.com.ar/2026/09/advierten-por-una-falsa-convocatoria.html",
       "teniaImagenLaFuente": true,
       "fecha": "2026-09-25T19:33:22.484Z",
       "sinFecha": false,
       "visto": "2026-09-27T03:30:39.508Z",
-      "relevancia": 75,
+      "relevancia": 85,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -5120,6 +6162,88 @@
       "foto": {
         "archivo": "fotos-notas/o84faj.webp",
         "credito": "Foto: Ámbito"
+      }
+    },
+    {
+      "id": "ahxm98",
+      "titulo": "El riesgo país supera los seiscientos puntos y alcanza su nivel más alto",
+      "copete": "El indicador financiero superó la barrera de los seiscientos puntos básicos por la caída de los bonos soberanos. Esta suba impacta en la economía nacional y en la capacidad de financiamiento del Estado.",
+      "cuerpo": "El indicador de riesgo soberano escaló hasta superar la barrera de los seiscientos puntos básicos tras registrar diez jornadas consecutivas de alzas.\n\nEn paralelo, el presidente Javier Milei y el ministro de Economía, Luis Caputo, ratificaron durante su estadía en Estados Unidos que el plan económico no sufrirá modificaciones y que el país dispone de los fondos necesarios para afrontar los compromisos de deuda pública. Sin embargo, los inversores manifestaron preocupación por los recientes indicadores sociales y de actividad económica difundidos por el INDEC, los cuales mostraron un incremento en la pobreza y una retracción en el nivel de actividad durante julio.\n\nEste escenario de alta cotización en el índice financiero limita las posibilidades del Estado Nacional de evaluar una colocación de deuda voluntaria en los mercados internacionales. En el plano local, el índice Merval y los ADRs operaron con tendencia negativa.",
+      "guion": "El riesgo país supera los seiscientos puntos y alcanza su nivel más alto",
+      "seccion": "Economía",
+      "medios": [
+        "Infobae",
+        "C5N",
+        "Diario Popular",
+        "El Eco de Tandil"
+      ],
+      "enlace": "https://www.diariopopular.com.ar/politica/el-riesgo-pais-supero-los-600-puntos-y-alcanzo-el-valor-mas-alto-cinco-meses-n921536",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-25T17:19:00.000Z",
+      "sinFecha": false,
+      "visto": "2026-09-28T08:31:01.978Z",
+      "relevancia": 48,
+      "local": false,
+      "publicadaPor": "ia",
+      "publicadaCuando": "2026-09-28T03:42:54.417Z",
+      "temas": [],
+      "como": "automatica",
+      "noConfirmado": [
+        "No se especificaron detalles adicionales sobre el impacto directo de esta suba financiera en la economía cotidiana de los municipios de la provincia de Buenos Aires."
+      ],
+      "etiquetas": [
+        "riesgo pais",
+        "economia",
+        "bonos",
+        "mercados",
+        "indec"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Diario Popular",
+          "enlace": "https://www.diariopopular.com.ar/politica/el-riesgo-pais-supero-los-600-puntos-y-alcanzo-el-valor-mas-alto-cinco-meses-n921536",
+          "fecha": "2026-09-25T17:19:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/economia/el-riesgo-pais-vuelve-a-subir-y-ya-supera-los-600-puntos-nid25092026/",
+          "fecha": "2026-09-25T17:30:05.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/economia/2026/09/25/jornada-financiera-el-riesgo-pais-supero-los-600-puntos-basicos-y-toco-el-nivel-mas-alto-en-seis-meses/",
+          "fecha": "2026-09-25T21:00:10.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "C5N",
+          "enlace": "https://www.c5n.com/economia/crece-la-presion-financiera-el-riesgo-pais-escalo-encima-los-600-puntos-el-nivel-mas-alto-seis-meses-n249930",
+          "fecha": "2026-09-25T21:27:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "El Eco de Tandil",
+          "enlace": "https://www.eleco.com.ar/economia/duro-golpe-al-gobierno-el-riesgo-pais-supero-los-600-puntos-y-se-desplomaron-los-bonos",
+          "fecha": "2026-09-26T13:12:16.000Z",
+          "oficial": false,
+          "aporte": null
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron cinco medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "el-riesgo-pais-supera-los-seiscientos-puntos-y-alcanza-su-nivel-mas",
+      "foto": {
+        "archivo": "fotos-notas/ahxm98.jpg",
+        "credito": "Foto: C5N"
       }
     },
     {
@@ -5362,8 +6486,6 @@
         "El Destape",
         "A24",
         "C5N",
-        "Crónica",
-        "Canal 26",
         "Zona Norte Diario"
       ],
       "enlace": "https://www.a24.com/previsional/anses-confirmo-el-aumento-y-el-calendario-octubre-cuando-cobran-los-jubilados-n1600337",
@@ -5382,13 +6504,6 @@
           "medio": "A24",
           "enlace": "https://www.a24.com/previsional/anses-confirmo-el-aumento-y-el-calendario-octubre-cuando-cobran-los-jubilados-n1600337",
           "fecha": "2026-09-25T15:05:00.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "La Nación",
-          "enlace": "https://www.lanacion.com.ar/economia/jubilaciones-de-anses-cuanto-se-cobra-en-octubre-2026-con-el-bono-y-el-aumento-confirmado-nid14092026/",
-          "fecha": "2026-09-27T17:02:43.000Z",
           "oficial": false,
           "aporte": null
         },
@@ -5424,20 +6539,6 @@
           "medio": "C5N",
           "enlace": "https://www.c5n.com/economia/en-que-fecha-cobraran-los-jubilados-y-pensionados-anses-octubre-2026-n249959",
           "fecha": "2026-09-27T11:28:00.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Crónica",
-          "enlace": "https://www.cronica.com.ar/sociedad/con-el-bono-de-70-000-cuanto-cobran-los-jubilados-de-la-minima-en-octubre/",
-          "fecha": "2026-09-27T13:59:00.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Canal 26",
-          "enlace": "https://www.canal26.com/economia/2026/09/26/anses-cambia-el-bono-de-octubre-para-jubilados-quienes-cobran-70000-quienes-reciben-menos-y-el-nuevo-tope/",
-          "fecha": "2026-09-26T11:20:00.000Z",
           "oficial": false,
           "aporte": null
         },
@@ -5716,13 +6817,14 @@
         "Ámbito",
         "Olé",
         "C5N",
-        "0223 (Mar del Plata)",
-        "TyC Sports",
-        "Infocielo",
+        "El Marplatense",
         "Mi8 (Canal 8 Mar del Plata)",
         "Infobrisas (Radio Brisas)",
         "Punto Noticias",
         "Radio 10 Mar del Plata (FM 105.5)",
+        "0223 (Mar del Plata)",
+        "TyC Sports",
+        "Infocielo",
         "Bolavip Argentina"
       ],
       "enlace": "https://442.perfil.com/noticias/polideportivo/juegos-suramericanos-santa-fe-2026-la-agenda-de-argentina-para-hoy.phtml",
@@ -6094,37 +7196,42 @@
     "Economía",
     "Balcarce",
     "Agro",
+    "Cultura y agenda",
     "Fútbol",
     "Argentina",
     "Policiales",
-    "Cultura y agenda",
     "Deportes"
   ],
   "temas": [
     {
       "nombre": "Fangio",
       "ranura": "fangio",
-      "cuantas": 10
+      "cuantas": 18
     },
     {
       "nombre": "El autódromo",
       "ranura": "autodromo",
-      "cuantas": 7
+      "cuantas": 15
     },
     {
       "nombre": "TC Pick Up",
       "ranura": "tc-pick-up",
-      "cuantas": 5
+      "cuantas": 7
+    },
+    {
+      "nombre": "El Concejo Deliberante",
+      "ranura": "concejo",
+      "cuantas": 3
     }
   ],
   "clima": {
     "ahora": {
       "temp": 11,
-      "sensacion": 9,
+      "sensacion": 8,
       "humedad": 98,
-      "viento": 15,
+      "viento": 17,
       "rumbo": "NE",
-      "cielo": "Chaparrones fuertes",
+      "cielo": "Llovizna leve",
       "esDeDia": false
     },
     "dias": [
@@ -6553,5 +7660,5 @@
       "motivo": "necesita ojo humano: \"niño\""
     }
   ],
-  "esperandoCuerpo": 5
+  "esperandoCuerpo": 7
 }
