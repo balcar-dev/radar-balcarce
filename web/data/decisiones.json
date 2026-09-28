@@ -1,5 +1,5 @@
 {
-  "exportado": "2026-09-28T00:21:17.696Z",
+  "exportado": "2026-09-28T00:31:44.417Z",
   "decisiones": {
     "1951120": {
       "estado": "automatica",
@@ -36021,6 +36021,66 @@
         "nivel": "MEDIA",
         "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
         "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "1wwmim6": {
+      "estado": "automatica",
+      "titulo": "El Senado aprueba la reforma que elimina el subsidio de Zona Fría",
+      "copete": "El Senado nacional convirtió en ley la reforma que limita el régimen de Zona Fría. Balcarce dejará de contar con el beneficio en las tarifas de gas.",
+      "cuerpo": "El Senado de la Nación aprobó por treinta y ocho votos a favor y ocho en contra la reforma del régimen de Zona Fría. La medida limita el alcance del subsidio y deja fuera a las localidades que habían sido incorporadas en dos mil veintiuno, entre ellas Balcarce. De esta manera, la mayoría de los usuarios residenciales del distrito dejarán de percibir el descuento que se aplicaba en las facturas.\n\nCon el nuevo esquema, el beneficio se mantendrá concentrado en la Patagonia, Malargüe y la Puna, además de hogares vulnerables, veteranos de Malvinas y personas con certificado de discapacidad. Como antecedente, el día anterior el Senado había debatido el recorte impulsado por el oficialismo, según se había informado.\n\nOrganismos de consumidores y fuentes vinculadas a la distribución estiman que la eliminación del subsidio podría generar aumentos de entre el treinta y el cincuenta por ciento en las próximas facturas locales. El régimen original había sido creado en dos mil dos y luego ampliado en dos mil veintiuno para sumar a cerca de cuatro millones de hogares.",
+      "guion": "El Senado aprueba la reforma que elimina el subsidio de Zona Fría",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-28T00:31:44.323Z",
+      "claves": [
+        "El Senado aprobó la reforma del régimen de Zona Fría con treinta y ocho votos a favor y ocho en contra.",
+        "Balcarce dejará de contar con el beneficio en las tarifas de gas al igual que otras localidades incorporadas en dos mil veintiuno.",
+        "Las facturas locales podrían registrar aumentos de entre el treinta y el cincuenta por ciento según estimaciones del sector."
+      ],
+      "textoRedes": "El Senado aprobó la ley que reforma el régimen de Zona Fría y Balcarce dejará de contar con el subsidio en las tarifas de gas. Estiman aumentos en las facturas.",
+      "etiquetas": [
+        "Zona Fría",
+        "gas",
+        "Senado",
+        "tarifas",
+        "subsidio",
+        "Balcarce"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infórmese Primero (FM 104.9)",
+          "enlace": "http://www.informeseprimero.com.ar/2026/09/el-senado-elimino-el-beneficio-de-zona.html",
+          "fecha": "2026-09-25T00:37:16.160Z",
+          "oficial": false,
+          "aporte": "Informó que el Senado convirtió en ley la reforma del régimen de Zona Fría y detalló el impacto en Balcarce."
+        },
+        {
+          "medio": "iProfesional",
+          "enlace": "https://www.iprofesional.com/economia/465257-zona-fria-que-cambia-y-quienes-pueden-perder-el-subsidio-al-gas",
+          "fecha": "2026-09-26T10:35:00.000Z",
+          "oficial": false,
+          "aporte": "Confirmó que Patagonia, Puna y Malargüe mantienen el beneficio con nuevos requisitos."
+        },
+        {
+          "medio": "InfoRegión",
+          "enlace": "https://www.inforegion.com.ar/2026/09/24/senado-convirtio-en-ley-el-proyecto-de-zonas-frias-y-limita-el-subsidio-de-gas-a-la-patagonia-la-puna-y-malargue/",
+          "fecha": "2026-09-24T22:36:24.000Z",
+          "oficial": false,
+          "aporte": "Precisó que la iniciativa fue sancionada por treinta y ocho contra ocho votos."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "xcarxn",
+          "titulo": "Zona Fría: el Senado vuelve a debatir el recorte al subsidio al gas que alcanzaría a Balcarce",
+          "fecha": "2026-09-23T14:55:55.000Z",
+          "ruta": "/nota/zona-fria-el-senado-vuelve-a-debatir-el-recorte-al-subsidio-al-gas-xcarxn"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron tres medios independientes.",
+        "sugeridoPorIA": "ALTA"
       }
     }
   },
