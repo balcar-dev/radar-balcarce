@@ -1,5 +1,5 @@
 {
-  "exportado": "2026-09-28T11:02:40.131Z",
+  "exportado": "2026-09-28T11:11:50.567Z",
   "decisiones": {
     "1951120": {
       "estado": "automatica",
@@ -42479,6 +42479,164 @@
         "nivel": "MEDIA",
         "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
         "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "gqlk77": {
+      "estado": "automatica",
+      "titulo": "Russell gana en Azerbaiyán y achica diferencias en la Fórmula 1",
+      "copete": "El piloto británico se impuso en el circuito urbano de Bakú y recortó la ventaja en el campeonato. La carrera tuvo un fuerte accidente del argentino Franco Colapinto.",
+      "cuerpo": "El piloto británico George Russell (Mercedes) se quedó con la victoria este sábado en el Gran Premio de Azerbaiyán de la Fórmula 1, tras una competencia desarrollada en el circuito urbano de Bakú que incluyó un grave accidente del argentino Franco Colapinto. Russell dominó de punta a punta un fin de semana perfecto en el que también había conseguido la pole position, relegando al segundo puesto a Max Verstappen y completando el podio Isack Hadjar, ambos de Red Bull, según informaron diversos medios periodísticos.\n\nCon este triunfo, el británico logró descontar unidades decisivas en la tabla general de posiciones frente a su compañero de equipo y líder del certamen, el italiano Andrea Kimi Antonelli, quien debió conformarse con la quinta colocación tras una importante remontada. Antes de esta competencia y a falta de nueve fechas para el cierre del calendario, la diferencia entre ambos era de 81 puntos a favor del italiano, la cual se redujo ahora a 66 unidades.\n\nTras la competencia, el ganador expresó su felicidad por volver al escalón más alto del podio y agradeció el respaldo de su escudería en los momentos complejos de la temporada.",
+      "guion": "Russell gana en Azerbaiyán y achica diferencias en la Fórmula 1",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-28T11:11:50.465Z",
+      "claves": [
+        "George Russell ganó el Gran Premio de Azerbaiyán de Fórmula 1.",
+        "El británico recortó a 66 puntos la ventaja del líder Andrea Kimi Antonelli.",
+        "El podio se completó con Max Verstappen e Isack Hadjar.",
+        "La competencia tuvo un fuerte accidente del argentino Franco Colapinto."
+      ],
+      "seSabe": [
+        "George Russell ganó el Gran Premio de Azerbaiyán de la Fórmula 1 este sábado.",
+        "El podio en Bakú lo completaron Max Verstappen e Isack Hadjar en la segunda y tercera posición.",
+        "Andrea Kimi Antonelli finalizó en el quinto puesto de la carrera.",
+        "La diferencia en el campeonato entre Antonelli y Russell se redujo a 66 puntos.",
+        "Russell había logrado la pole position en la clasificación desarrollada el viernes."
+      ],
+      "noConfirmado": [
+        "No se detallaron las consecuencias físicas ni los daños materiales específicos derivados del accidente protagonizado por Franco Colapinto."
+      ],
+      "textoRedes": "George Russell se impuso en el Gran Premio de Azerbaiyán de la Fórmula 1 y achicó diferencias en la cima del campeonato. La carrera en Bakú tuvo un fuerte accidente del argentino Franco Colapinto y un podio completado por Max Verstappen e Isack Hadjar.",
+      "etiquetas": [
+        "Fórmula 1",
+        "George Russell",
+        "Azerbaiyán",
+        "Franco Colapinto",
+        "Andrea Kimi Antonelli"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Motorsport",
+          "enlace": "https://es.motorsport.com/f1/news/clasificacion-mundial-pilotos-equipos-formula1-2026-azerbaiyan-baku/10859208/?utm_source=RSS&utm_medium=referral&utm_campaign=RSS-F1&utm_term=News&utm_content=es",
+          "fecha": "2026-09-26T12:42:50.000Z",
+          "oficial": false,
+          "aporte": "Indicó la ventaja inicial de 81 puntos que tenía Andrea Kimi Antonelli sobre George Russell antes de la competencia."
+        },
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/deportes/automovilismo/asi-quedo-la-tabla-de-posiciones-de-la-formula-1-2026-tras-el-triunfo-de-george-russell-en-el-gp-de-nid26092026/",
+          "fecha": "2026-09-26T14:21:28.000Z",
+          "oficial": false,
+          "aporte": "Detalló los resultados generales, el podio de Red Bull y las declaraciones del piloto británico tras la victoria."
+        },
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/deportes/automovilismo/franco-colapinto-en-el-gran-premio-de-azerbaiyan-en-vivo-nid26092026/",
+          "fecha": "2026-09-26T14:07:44.000Z",
+          "oficial": false,
+          "aporte": "Confirmó que la carrera se disputó este sábado en el circuito urbano de Bakú y que Antonelli remontó hasta el quinto lugar."
+        },
+        {
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/deportes/formula-1/2026/09/26/gp-de-azerbaiyan-gano-george-russell-y-el-lider-kimi-antonelli-termino-quinto-tras-remontar-11-posiciones/",
+          "fecha": "2026-09-26T14:09:30.000Z",
+          "oficial": false,
+          "aporte": "Aportó cobertura general sobre el desarrollo del Gran Premio de Azerbaiyán."
+        },
+        {
+          "medio": "El Destape",
+          "enlace": "https://www.eldestapeweb.com/deportes/george-russell-gano-gp-azerbaiyan-asi-quedaron-posiciones-formula-1-2026926144225",
+          "fecha": "2026-09-26T17:42:25.034Z",
+          "oficial": false,
+          "aporte": "Aportó información sobre el desarrollo del campeonato mundial de la categoría."
+        },
+        {
+          "medio": "Radio Mitre",
+          "enlace": "https://radiomitre.cienradios.com/deportes/formula-1-asi-quedo-la-tabla-de-posiciones-tras-el-triunfo-de-george-russell-en-azerbaiyan-y-los-abandonos-de-franco-coalpinto-y-pierre-gasly/",
+          "fecha": "2026-09-26T15:12:22.000Z",
+          "oficial": false,
+          "aporte": "Informó que se trató de la tercera victoria de la temporada para Russell y mencionó el accidente de Franco Colapinto."
+        },
+        {
+          "medio": "Bolavip Argentina",
+          "enlace": "https://bolavip.com/ar/formula-1/tabla-de-posiciones-de-la-f1-tras-la-victoria-de-russell-y-el-abandono-de-colapinto-en-azerbaiyan",
+          "fecha": "2026-09-26T12:45:09.000Z",
+          "oficial": false,
+          "aporte": "Señaló que el piloto de Mercedes lideró la competencia de principio a fin y obtuvo la pole position el viernes."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron seis medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      }
+    },
+    "1vuh3vs": {
+      "estado": "automatica",
+      "titulo": "Lando Norris le pide disculpas a Franco Colapinto tras Bakú",
+      "copete": "El piloto británico se retractó de sus críticas hacia el argentino tras el choque en el Gran Premio de Azerbaiyán y le envió un mensaje privado para disculparse.",
+      "cuerpo": "El piloto de McLaren, Lando Norris, se comunicó de manera privada con el argentino Franco Colapinto para pedirle disculpas tras las críticas que había realizado luego del Gran Premio de Azerbaiyán. A través de una publicación en su cuenta de Instagram, el británico admitió que sus palabras estuvieron fuera de lugar y asumió la responsabilidad por el exabrupto tras el accidente en el trazado callejero de Bakú, que tambié involucró a Pierre Gasly.\n\nSin embargo, tras revisar la jugada, reconoció que reaccionó impulsado por la tensión del momento y que él mismo cometió errores similares en la categoría.",
+      "guion": "Lando Norris le pide disculpas a Franco Colapinto tras Baku",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-28T11:11:50.465Z",
+      "claves": [
+        "Lando Norris se disculpó en privado con Franco Colapinto.",
+        "El británico admitió que sus declaraciones tras el choque en Azerbaiyán fueron un error.",
+        "El incidente previo en Bakú había dejado a ambos pilotos fuera de competencia.",
+        "Los deportistas dieron por cerrado el conflicto."
+      ],
+      "seSabe": [
+        "Lando Norris se comunicó por Instagram de forma privada con Franco Colapinto para pedirle disculpas.",
+        "El británico admitió que se equivocó al criticar al argentino tras el Gran Premio de Azerbaiyán.",
+        "El choque en Bakú involucró a Colapinto, a Norris y a Pierre Gasly."
+      ],
+      "textoRedes": "El piloto Lando Norris se comunicó de manera privada con Franco Colapinto para pedirle disculpas tras las duras críticas que le había dirigido luego del choque en el Gran Premio de Azerbaiyán.",
+      "etiquetas": [
+        "Franco Colapinto",
+        "Lando Norris",
+        "Gran Premio de Azerbaiyán"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/deportes/formula-1/2026/09/28/me-equivoque-lando-norris-le-pidio-disculpas-publicas-a-colapinto-tras-haberlo-criticado-por-el-choque-en-el-gp-de-azerbaiyan/",
+          "fecha": "2026-09-28T10:03:48.000Z",
+          "oficial": false,
+          "aporte": "Detalló el pedido de disculpas a través de Instagram y los dichos del piloto británico."
+        },
+        {
+          "medio": "Minuto Uno",
+          "enlace": "https://www.minutouno.com/deportes/lando-norris-cambio-su-postura-y-le-pidio-disculpas-franco-colapinto-me-equivoque-n6327347",
+          "fecha": "2026-09-28T11:00:00.000Z",
+          "oficial": false,
+          "aporte": "Informó sobre el reclamo inicial de suspensión y el reconocimiento posterior de la tensión."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "10or876",
+          "titulo": "Alpine condena el acoso en redes tras el choque en Azerbaiyán",
+          "fecha": "2026-09-27T12:02:53.000Z",
+          "ruta": "/nota/alpine-condena-el-acoso-en-redes-tras-el-choque-en-azerbaiyan-10or876"
+        },
+        {
+          "id": "g2u3l1",
+          "titulo": "Flavio Briatore critica a Franco Colapinto tras el Gran Premio de Azerbaiyán",
+          "fecha": "2026-09-26T22:12:00.000Z",
+          "ruta": "/nota/flavio-briatore-critica-a-franco-colapinto-tras-el-gran-premio-de-g2u3l1"
+        },
+        {
+          "id": "mk94me",
+          "titulo": "Franco Colapinto choca con Pierre Gasly en el Gran Premio de Azerbaiyán",
+          "fecha": "2026-09-26T15:07:30.000Z",
+          "ruta": "/nota/franco-colapinto-choca-con-pierre-gasly-en-el-gran-premio-de-mk94me"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "ALTA"
       }
     }
   },
