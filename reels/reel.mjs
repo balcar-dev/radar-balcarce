@@ -1,14 +1,14 @@
 // Arma el video vertical: placa + voz + subtítulos sincronizados palabra por
 // palabra. El video se arma con ffmpeg, en la máquina; lo único que se paga es
 // la voz de Gemini (la clave de redes es paga desde el 25/09). Si Gemini falla,
-// lee Elena (Edge), que es gratis.
+// la pieza no se arma: nunca sale con otra voz (28/09, "mejor nunca Elena").
 
 import fs from 'node:fs';
 import path from 'node:path';
 import { execFile } from 'node:child_process';
 import { promisify } from 'node:util';
 import ffmpeg from 'ffmpeg-static';
-import { decir, paraLeer, enCarteles } from './voz.mjs';
+import { paraLeer, enCarteles } from './voz.mjs';
 import { aPng } from './placa.mjs';
 import { decirGemini, VOZ_DEL_MEDIO } from './voz-gemini.mjs';
 import { componerIndicacion } from '../redes/prompt-redes.mjs';
@@ -114,13 +114,9 @@ export async function recortarParaHistoria(mp4, salida) {
 // { musica: true }.
 export async function armarReel({
   nombre, svg, guion, acento = '#E8A33C', musica = false, indicacion = null,
-  // Gemini por defecto: se nota bastante mejor que Edge, sobre todo en las
-  // piezas que se repiten todos los días. La clave de redes es paga, así que
-  // no hay cupo diario que cuidar; si Gemini igual falla, el respaldo de abajo
-  // lee con Elena y la pieza sale igual.
   // La voz es siempre la misma (Kore, de CRITERIO-REDES.md): no se cambia por
-  // variable de entorno. VOZ=edge sólo fuerza el respaldo.
-  proveedor = process.env.VOZ ?? 'gemini', vozGemini = VOZ_DEL_MEDIO,
+  // variable de entorno ni hay otra de respaldo.
+  vozGemini = VOZ_DEL_MEDIO,
 }, dir) {
   fs.mkdirSync(dir, { recursive: true });
   const png = path.join(dir, `${nombre}.png`);
@@ -129,29 +125,26 @@ export async function armarReel({
   const mp4 = path.join(dir, `${nombre}.mp4`);
 
   await aPng(svg, png);
-  // Edge trae los tiempos de palabra de fábrica; Gemini no, y se resuelven
-  // alineando el texto con los silencios del audio (alinear.mjs).
+  // Gemini no trae los tiempos de cada palabra: se resuelven alineando el
+  // texto con los silencios del audio (alinear.mjs).
   const texto = paraLeer(guion);
 
-  // Gemini es mejor pero es un modelo en preview y a veces no contesta o pide
-  // esperar (429). Si se planta, la pieza NO se cae: la lee Elena y sale igual.
-  // Un medio no puede dejar de publicar el clima porque una API dijo 429.
+  // Una sola locutora, siempre (28/09): si Gemini no contesta después de sus
+  // cuatro intentos (voz-gemini.mjs), la pieza NO sale con otra voz. Se cae
+  // acá, plan.mjs la deja fuera del manifiesto y, como no quedó en el libro,
+  // el reloj la vuelve a pedir en la vuelta siguiente mientras dure su
+  // ventana (VENTANAS, redes/piezas.mjs). Mejor una historia que no sale
+  // que una que suena a otro medio.
+  const vozUsada = 'gemini';
   let voz;
-  let vozUsada = proveedor;
-  if (proveedor === 'gemini') {
-    try {
-      voz = await decirGemini(texto, mp3, {
-        voz: vozGemini,
-        // La de siempre más la del momento del día (mañana, tarde o noche).
-        indicacion: componerIndicacion(indicacion),
-      });
-    } catch (e) {
-      console.log(`\n    \x1b[33mGemini no respondió (${e.message.slice(0, 60)}…), va con Elena\x1b[0m`);
-      voz = await decir(texto, mp3);
-      vozUsada = 'edge';
-    }
-  } else {
-    voz = await decir(texto, mp3);
+  try {
+    voz = await decirGemini(texto, mp3, {
+      voz: vozGemini,
+      // La de siempre más la del momento del día (mañana, tarde o noche).
+      indicacion: componerIndicacion(indicacion),
+    });
+  } catch (e) {
+    throw new Error(`Gemini no respondió (${e.message.slice(0, 80)}): la pieza no sale con otra voz, se reintenta en la próxima vuelta`);
   }
   if (!voz.palabras.length) throw new Error('la voz no devolvió tiempos de palabra');
 

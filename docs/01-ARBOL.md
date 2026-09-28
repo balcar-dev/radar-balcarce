@@ -114,11 +114,11 @@ Lo que **no** se versiona (`.gitignore`): `node_modules/`, `.env*`,
 | `plan.mjs` | El plan del día: qué pieza, con qué guion, placa y hora; con `--generar`, arma los videos | `redes.yml`, `piezas.yml` | Sí |
 | `portada.mjs` | Dibuja la portada de la página de Facebook | A mano (la sube una persona) | A mano |
 | `probar-gemini.mjs` | Un pedido mínimo a Gemini con la clave de redacción | `prueba-gemini.yml` | A mano |
-| `reel.mjs` | Arma un video: placa, voz (Gemini o Elena), subtítulos, ffmpeg | `plan.mjs` | Sí |
+| `reel.mjs` | Arma un video: placa, voz (sólo Gemini), subtítulos, ffmpeg | `plan.mjs` | Sí |
 | `reescritura.mjs` | La reescritura con IA de punta a punta: orden, topes, texto completo, pedido, verificación, partes internas, nivel de verificación, semáforo sobre lo escrito | `generar-datos.mjs` (nube), `panel/servidor.mjs` y `panel/notas.mjs` (PC) | Sí |
 | `tiempos.mjs` | Reparte el tiempo del audio entre las palabras según sus sílabas | `alinear.mjs` | Sí |
 | `voz-gemini.mjs` | La voz de Gemini (modelo TTS, clave paga) | `reel.mjs`, `auditar-voz.mjs` | Sí |
-| `voz.mjs` | La voz de respaldo (Elena, de Microsoft Edge) y `paraLeer` (símbolos dichos en voz alta) | `reel.mjs`, `auditar-voz.mjs` | Sí |
+| `voz.mjs` | `paraLeer` (símbolos dichos en voz alta) y la voz de Edge, que ya no se usa en las piezas (28/09) | `reel.mjs`, `auditar-voz.mjs` | Sí |
 | `marca/fuentes/*.ttf` (6) | Source Serif 4 (700 y 900, corte de 60 puntos) e Inter (400 a 700) para las placas, el avatar y la portada | `placa.mjs`, `avatar.mjs`, `portada.mjs` | Sí |
 
 ## `redes/` — Facebook, Instagram y la vigilancia, sin dependencias

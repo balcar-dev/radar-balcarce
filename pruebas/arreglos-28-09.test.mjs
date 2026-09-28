@@ -293,8 +293,13 @@ test('reels/claves.mjs nombra las cuatro claves y no dice que sin la de redes lo
   const claves = leer('reels/claves.mjs');
   for (const k of ['GEMINI_API_KEY_REDACCION', 'GEMINI_API_KEY_REDES', 'GEMINI_API_KEY_CLASIFICACION', 'GROQ_API_KEY']) assert.match(claves, new RegExp(k));
   assert.doesNotMatch(claves, /no arrancan/);
-  // Lo cierto: sin la clave de redes, la voz cae a Elena y la pieza sale igual.
-  assert.match(leer('reels/reel.mjs'), /voz = await decir\(texto, mp3\);\s*vozUsada = 'edge';/);
+  // Lo cierto (28/09, "mejor nunca Elena"): sin la clave de redes, o si Gemini
+  // no contesta, la pieza no se arma con otra voz y se reintenta en la vuelta siguiente.
+  const reel = leer('reels/reel.mjs');
+  assert.doesNotMatch(reel, /\bdecir\(/, 'reel.mjs no llama a la voz de Edge');
+  assert.doesNotMatch(reel, /import \{[^}]*\bdecir\b[^}]*\} from '\.\/voz\.mjs'/);
+  assert.match(reel, /la pieza no sale con otra voz/);
+  assert.doesNotMatch(claves, /las lee con Elena/);
   assert.doesNotMatch(leer('ingesta/fotos.mjs').split('\n').slice(0, 25).join('\n'), /Llama 4 Scout, el\s/);
 });
 

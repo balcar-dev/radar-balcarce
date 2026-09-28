@@ -18,9 +18,9 @@
 // escriben en el código ni se muestran.
 //
 // La de redes no se reemplaza con otra clave de Gemini: si falta, no se gasta
-// en silencio la de redactar. Las piezas igual salen: decirGemini
-// (reels/voz-gemini.mjs) falla y armarReel (reels/reel.mjs) las lee con Elena,
-// la voz gratis de Microsoft.
+// en silencio la de redactar. Sin ella, las piezas no salen: decirGemini
+// (reels/voz-gemini.mjs) falla y armarReel (reels/reel.mjs) no las arma con
+// otra voz (28/09: una sola locutora, nunca Elena).
 
 import fs from 'node:fs';
 import path from 'node:path';

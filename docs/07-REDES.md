@@ -233,9 +233,10 @@ sacan.
    (`reels/voz-gemini.mjs`) pide el audio al modelo `gemini-2.5-flash-preview-tts`
    con la voz y la indicación de tono de `CRITERIO-REDES.md` (la de siempre más
    la de la mañana, la tarde o la noche). Hasta 4 intentos, 2 segundos entre
-   pedidos, 2 minutos como máximo por pedido. **Si Gemini falla, la pieza sale
-   igual con Elena** (`es-AR-ElenaNeural`, la voz gratis de Microsoft,
-   `reels/voz.mjs`), y el registro dice "voz edge".
+   pedidos, 2 minutos como máximo por pedido. **Si Gemini falla, la pieza no
+   sale** (28/09: nunca con otra voz): `armarReel` corta, `plan.mjs` la deja
+   fuera del manifiesto y el reloj la vuelve a pedir en la vuelta siguiente
+   mientras dure su ventana.
 3. **Los subtítulos.** Gemini no dice cuándo arranca cada palabra: `alinear`
    (`reels/alinear.mjs`) detecta los silencios del audio con ffmpeg y
    `reels/tiempos.mjs` reparte las palabras entre pausa y pausa según sus
@@ -643,7 +644,7 @@ sílabas).
 | **No salió un podcast** | WhatsApp de falta del reel | Si "ese día no había notas para contar", es normal |
 | **Un posteo sin su foto en Instagram** | WhatsApp: "N posteo(s) de Facebook de hoy no tienen su foto en el feed". Se reintenta solo 4 veces en 12 horas | Si no se arregla solo, mirar que la tarjeta `/nota/ID/instagram.png` exista |
 | **Un duplicado** | WhatsApp de prioridad alta (libro) o en el cierre de las 23:30 (Meta) | Borrar la copia a mano en la red (lo hace una persona) |
-| **Gemini (voz) no contesta** | La pieza sale con Elena; el registro dice "voz edge" | Nada urgente; si se repite, revisar la clave paga |
+| **Gemini (voz) no contesta** | La pieza no sale en esa vuelta ("la pieza no sale con otra voz") y se reintenta en la siguiente | Si se repite toda la ventana, el vigilante avisa que no salió: revisar la clave paga y el modelo de voz |
 | **El video pasa de 58 segundos** | Aviso amarillo en la corrida; la historia sube recortada con fundido | Nada: está previsto |
 | **El libro no se pudo guardar** | Redes en rojo: "No se pudo guardar el libro después de tres intentos" | Mirar enseguida: la vuelta siguiente puede repetir lo publicado |
 | **Se publica pero el público no lo ve** (pasó hasta el 26/09: la app de Meta estaba en modo desarrollo) | Nadie avisa | Correr "Ver Facebook" y mirar la página desde una cuenta que no sea administradora |

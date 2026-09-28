@@ -130,7 +130,7 @@ test('elegirFoto: si TODAS tienen marca, ahí sí no se elige ninguna', async ()
   });
   const r = await elegirFoto(nota, candidatas, { clave: 'g', claveRespaldo: null, fetchFn });
   assert.equal(r.elegida, null);
-  assert.match(r.razon, /ninguna de las otras sirve sin marca/);
+  assert.match(r.razon, /ninguna de las otras sirve: no se elige ninguna/);
 });
 
 test('elegirFoto: si Gemini falla, prueba con Groq', async () => {
@@ -281,4 +281,46 @@ test('elegirFotoParaNota: sin foto de fuente y sin persona pública clara, no el
   const r = await elegirFotoParaNota(nota, { clave: 'g', claveRespaldo: null, fetchFn });
   assert.equal(r.origen, 'ninguna');
   assert.equal(r.elegida, null);
+});
+
+// ------------- 28/09: el nombre de otro medio en la escena y los menores
+// Caso real: la nota de Reino sobre el Fangio salió con la foto de La Vanguardia
+// donde se leía el micrófono de "Radio Líder 90.9". La IA la dejó pasar porque
+// la instrucción decía que un logo "de la escena" no es marca. Y el banco tenía
+// fotos de equipos de chicas (U15, hockey) con las caras a la vista.
+
+test('la instrucción de fotos pide descartar el nombre de otro medio aunque esté en la escena, y a los menores', async () => {
+  let pedido = '';
+  const fetchFn = async (url, opciones) => {
+    pedido = JSON.parse(opciones.body).contents[0].parts[0].text;
+    return { ok: true, json: async () => ({ candidates: [{ content: { parts: [{ text: JSON.stringify({ elegida: null, razon: 'x', fotos: [] }) }] } }] }) };
+  };
+  await elegirFoto({ titulo: 'Reino destaca el éxito del regreso automovilístico al Fangio', seccion: 'Balcarce' },
+    conDatos(['Diario La Vanguardia']), { clave: 'g', claveRespaldo: null, fetchFn });
+  assert.match(pedido, /OTRO MEDIO DE\s+COMUNICACIÓN/);
+  assert.match(pedido, /micrófono con el nombre de una radio/);
+  assert.match(pedido, /MENOR DE 18 AÑOS/);
+  assert.match(pedido, /"menor": false/);
+});
+
+test('elegirFoto: una foto con un menor nunca es la elegida, aunque la IA la prefiera', async () => {
+  const candidatas = conDatos(['Infoeme', 'Municipio']);
+  const fetchFn = fetchGemini({
+    elegida: 'A', razon: 'la mejor',
+    fotos: [{ letra: 'A', tiene_marca: false, menor: true, detalle: 'equipo U15 con las caras a la vista' }, { letra: 'B', tiene_marca: false, menor: false }],
+  });
+  const r = await elegirFoto({ titulo: 'La Selección U15 femenina gana la copa', seccion: 'Deportes' }, candidatas, { clave: 'g', claveRespaldo: null, fetchFn });
+  assert.equal(r.elegida.medio, 'Municipio');
+  assert.equal(r.candidatas[0].sospechaMenor, true);
+});
+
+test('elegirFoto: si la única foto muestra el nombre de otro medio, no se elige ninguna (Reino, 28/09)', async () => {
+  const fetchFn = fetchGemini({
+    elegida: 'A', razon: 'la única',
+    fotos: [{ letra: 'A', tiene_marca: true, menor: false, detalle: 'micrófono de Radio Líder 90.9 a la derecha' }],
+  });
+  const r = await elegirFoto({ titulo: 'Reino destaca el éxito del regreso automovilístico al Fangio', seccion: 'Balcarce' },
+    conDatos(['Diario La Vanguardia']), { clave: 'g', claveRespaldo: null, fetchFn });
+  assert.equal(r.elegida, null);
+  assert.match(r.razon, /Radio Líder/);
 });

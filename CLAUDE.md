@@ -45,7 +45,7 @@ vigilancia andan con la PC apagada**; sólo el panel vive en la PC.
   prueba lo vigila (sigue los imports en cadena).
 - **Cuando se arregla algo que estuvo mal publicado, se escribe una prueba**
   (con el caso real) y, si es una regla nueva, se anota en
-  `docs/10-REGLAS-Y-PRUEBAS.md` con el número siguiente (hoy, 73).
+  `docs/10-REGLAS-Y-PRUEBAS.md` con el número siguiente (hoy, 75).
 - **El criterio editorial es uno solo: `CRITERIO-EDITORIAL.md`.** La IA lee su
   § 12 **tal cual** (`ingesta/prompt-editorial.mjs`; si falta, la reescritura
   no arranca) y sus números están en `ingesta/criterio.mjs`, controlados contra
@@ -64,7 +64,9 @@ vigilancia andan con la PC apagada**; sólo el panel vive en la PC.
   en el espejo de Instagram (crédito en el texto del posteo) y en la tarjeta
   para compartir el enlace (`FOTO_EN_ENLACE`); los videos siguen con placa. **La placa es lo que sale cuando no
   hay foto que sirva**, no una regla. Nunca foto real de un menor o una
-  víctima, ni en Policiales salvo fuente oficial (`docs/05-FOTOS.md`).
+  víctima, ni en Policiales salvo fuente oficial (`docs/05-FOTOS.md`). El
+  nombre de otro medio **en la escena** (el micrófono de una radio) también
+  descarta la foto, y la IA marca a los menores reconocibles (28/09).
 - **Todo lo que va a Instagram es video con voz**, salvo el espejo: la API no
   acepta una imagen que no esté en una dirección pública.
 - **Tokens y claves nunca en un chat ni en el código.** Van a GitHub Secrets o
@@ -156,7 +158,7 @@ vigilancia andan con la PC apagada**; sólo el panel vive en la PC.
 - **Cuatro claves de IA, separadas a propósito** (`reels/claves.mjs`):
   `GEMINI_API_KEY_REDACCION` (gratis; redactar, 450 por día), `GEMINI_API_KEY_REDES`
   (**paga**: voces, y respaldo de la redacción sólo si la gratis da 429; si
-  falta, las piezas salen con Elena, la voz de Microsoft),
+  falta o Gemini no contesta, las piezas **no salen**: nunca con otra voz),
   `GEMINI_API_KEY_CLASIFICACION` (lectura con IA, 200 pedidos por día, y fotos;
   nunca la de redes) y `GROQ_API_KEY` (respaldo gratis de la lectura y las
   fotos). Modelo de texto: `gemini-flash-lite-latest` (el "flash" normal daba

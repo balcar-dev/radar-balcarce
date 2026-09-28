@@ -94,12 +94,20 @@ cada una con una letra (A, B, C…) y el medio que la publicó. La instrucción
   sponsor, el escudo de un club, el nombre de un evento o una pantalla no son
   marca de agua ("¿podría estar en una foto que sacó cualquier otra persona
   presente ese día?");
-- **nunca elegir una foto marcada**: si la mejor tiene marca, elegir la mejor
-  entre las que no la tienen, aunque no sea la ideal; dejar la elección vacía
-  sólo si ninguna está libre de marca.
+- **con una excepción: el nombre de otro medio** (28/09). Aunque haya estado en
+  la escena, el cubo de un micrófono con el nombre de una radio, el móvil de un
+  canal, un zócalo o una pantalla con el nombre de un medio cuentan como marca.
+  Pasó con la nota de Reino sobre el Fangio: se leía "Radio Líder 90.9";
+- **marcar a los menores** (28/09): si aparece alguien que parece menor de 18 y
+  se lo reconoce, aunque esté en un grupo o un equipo, la foto lleva `menor` y
+  no se elige; ante la duda, es menor;
+- **nunca elegir una foto marcada**: si la mejor tiene marca o un menor, elegir
+  la mejor entre las que no tienen ninguna de las dos, aunque no sea la ideal;
+  dejar la elección vacía sólo si ninguna está libre.
 
 Devuelve la letra elegida, una frase con el porqué y, por cada foto, si tiene
-marca y qué vio.
+marca, si tiene un menor y qué vio. El código no confía: una foto con `menor`
+se trata igual que una con marca (`interpretarRespuesta`).
 
 ### 5. La red de seguridad sobre la respuesta
 

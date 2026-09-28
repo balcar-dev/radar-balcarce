@@ -120,14 +120,25 @@ grande o nítido — eso es parte de la escena real, no algo que el medio le agr
 medio o de la escena, pensá: ¿podría estar en una foto que sacó cualquier otra persona presente ese día? Si sí, no
 es "tiene_marca".
 
+Con UNA excepción, que sí es "tiene_marca" aunque haya estado en la escena: el nombre o el logo de OTRO MEDIO DE
+COMUNICACIÓN (un diario, una radio, un canal o un portal) que se pueda leer en la foto. Por ejemplo, el cubo o la
+esponja de un micrófono con el nombre de una radio o de un canal, un móvil o una camioneta de un medio, un cartel o
+una pantalla con el nombre de un medio, un zócalo o el logo de un canal de televisión. Radar Balcarce nunca muestra el
+nombre de otro medio adentro de una imagen, venga de donde venga. Anotá en "detalle" qué medio se lee y dónde.
+
+Mirá también si aparece alguien que parezca MENOR DE 18 AÑOS y se lo pueda reconocer (se le ve la cara, aunque esté
+en un grupo, en un equipo o en segundo plano). Radar Balcarce nunca publica la foto de un menor: esa foto lleva
+"menor" en true. Si dudás si es menor, ponelo en true. Chicos de espaldas o tan lejos que no se los reconoce no
+cuentan.
+
 Regla que no se negocia: "elegida" NUNCA puede ser la letra de una foto a la que vos mismo le pusiste "tiene_marca"
-en true, aunque sea la que mejor encuadre o nitidez tenga. Si la mejor foto tiene marca, elegí la mejor ENTRE LAS
-QUE NO TIENEN MARCA, aunque no sea la ideal: una foto sin marca y sin ser perfecta sirve más que ninguna. Sólo
-dejá "elegida" en null si NINGUNA foto de la lista está libre de marca.
+o "menor" en true, aunque sea la que mejor encuadre o nitidez tenga. Si la mejor foto tiene alguna de las dos, elegí
+la mejor ENTRE LAS QUE NO TIENEN NINGUNA, aunque no sea la ideal: una foto que sirve y no es perfecta vale más que
+ninguna. Sólo dejá "elegida" en null si NINGUNA foto de la lista está libre de las dos.
 
 Devolvé sólo un objeto JSON con esta forma exacta:
 {"elegida": "A" (la letra, o null si ninguna sirve), "razon": "una frase corta explicando por qué",
-"fotos": [{"letra": "A", "tiene_marca": false, "detalle": "qué viste, o vacío si no tiene nada"}]}
+"fotos": [{"letra": "A", "tiene_marca": false, "menor": false, "detalle": "qué viste, o vacío si no tiene nada"}]}
 con una entrada en "fotos" por cada letra de la lista, en el mismo orden.`;
 }
 
@@ -140,7 +151,8 @@ const letraValida = (l) => typeof l === 'string' && LETRAS.includes(l);
 function interpretarRespuesta(obj, candidatas) {
   const fotos = Array.isArray(obj?.fotos) ? obj.fotos : [];
   const porLetra = new Map(fotos.filter((f) => letraValida(f?.letra)).map((f) => [f.letra, f]));
-  const conMarca = new Set([...porLetra.entries()].filter(([, f]) => f.tiene_marca === true).map(([l]) => l));
+  // Una foto con un menor reconocible (28/09) queda afuera igual que una con marca.
+  const conMarca = new Set([...porLetra.entries()].filter(([, f]) => f.tiene_marca === true || f.menor === true).map(([l]) => l));
 
   const resultado = candidatas.map((c, i) => {
     const letra = LETRAS[i];
@@ -148,6 +160,7 @@ function interpretarRespuesta(obj, candidatas) {
     return {
       medio: c.medio, enlace: c.enlace, imagen: c.imagen,
       sospechaMarca: f ? f.tiene_marca === true : null,
+      sospechaMenor: f ? f.menor === true : null,
       detalle: f?.detalle ?? null,
     };
   });
@@ -166,9 +179,9 @@ function interpretarRespuesta(obj, candidatas) {
     const iSinMarca = candidatas.findIndex((c, j) => c.datos && !conMarca.has(LETRAS[j]));
     if (iSinMarca >= 0) {
       elegida = { ...resultado[iSinMarca], letra: LETRAS[iSinMarca] };
-      razon = `La IA había preferido la de ${medio}, pero tiene marca de agua${detalle ? ` (${detalle})` : ''}: se usa ${resultado[iSinMarca].medio} en su lugar, sin marca, aunque no sea la ideal.`;
+      razon = `La IA había preferido la de ${medio}, pero no se puede usar (marca de agua, otro medio o un menor)${detalle ? ` (${detalle})` : ''}: se usa ${resultado[iSinMarca].medio} en su lugar, aunque no sea la ideal.`;
     } else {
-      razon = `La mejor foto era la de ${medio}, pero tiene marca de agua${detalle ? ` (${detalle})` : ''}, y ninguna de las otras sirve sin marca: no se elige ninguna.`;
+      razon = `La mejor foto era la de ${medio}, pero no se puede usar (marca de agua, otro medio o un menor)${detalle ? ` (${detalle})` : ''}, y ninguna de las otras sirve: no se elige ninguna.`;
     }
   } else if (letraValida(obj?.elegida)) {
     const i = LETRAS.indexOf(obj.elegida);

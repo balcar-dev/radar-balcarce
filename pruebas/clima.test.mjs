@@ -12,7 +12,7 @@ import { avisosDelClima, UMBRALES } from '../ingesta/alertas.mjs';
 // horario. Que se pueda importar sin tener nada instalado no es
 // casualidad: el conversor a PNG se carga recién cuando se usa. Con el
 // import arriba de placa.mjs, esta prueba rompía en GitHub Actions.
-import { planDelDia } from '../reels/plan.mjs';
+import { planDelDia, fechaLarga } from '../reels/plan.mjs';
 import { HORA_AVISO } from '../redes/piezas.mjs';
 import { tipoDeCielo } from '../web/lib/clima.js';
 
@@ -177,4 +177,11 @@ test('sólo los avisos graves interrumpen', () => {
   datos.clima.dias[0].max = 36; // calor extremo: gravedad media
   const piezas = planDelDia(datos).piezas.filter((x) => x.nombre?.startsWith('aviso'));
   assert.deepEqual(piezas, []);
+});
+
+// 28/09: el clima salía "Lunes, 28 de septiembre" y la farmacia "Lunes 28 de
+// septiembre". Todas las placas escriben la fecha igual, sin la coma.
+test('fechaLarga escribe la fecha como la farmacia, sin coma', () => {
+  assert.equal(fechaLarga(new Date('2026-09-28T15:00:00Z')), 'Lunes 28 de septiembre');
+  assert.equal(fechaLarga(new Date('2026-09-30T15:00:00Z')), 'Miércoles 30 de septiembre');
 });

@@ -39,11 +39,10 @@ Sitio dicho: Radar Balcarce punto com
 Hay **una sola locutora**: la voz **Kore** de Gemini, siempre con la misma
 indicación base. A esa indicación se le suma la de cada momento del día (mañana,
 tarde o noche), que sólo cambia el ánimo, no la voz. Nadie elige otra voz ni cambia
-la velocidad a mano. Si Gemini no responde, la pieza sale igual con el respaldo (la
-voz Elena de Edge) y **queda anotado en el registro** ("Gemini no respondió… va con
-Elena"); en ese caso la pieza suena distinta a la de siempre, y es la única excepción
-que se acepta, porque un medio no puede dejar de publicar el clima por una falla de
-un proveedor.
+la velocidad a mano. **No hay voz de respaldo** (28/09, "mejor nunca Elena"): si
+Gemini no responde, la pieza no sale en esa vuelta y se vuelve a pedir en la
+siguiente, mientras dure su horario. Es preferible una historia que falta a una que
+suena a otro medio.
 
 **Cómo suena:** cálida y cercana, rioplatense sin exagerar, tranquila, como quien le
 cuenta algo a un vecino. Humana: nunca un noticiero de televisión ni un robot.

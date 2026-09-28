@@ -332,7 +332,7 @@ paga".
   escribir queda esperando cuerpo y se reintenta en las corridas siguientes
   (hasta tres intentos por nota). El cupo gratis se renueva al día siguiente.
 - La lectura con IA, si Gemini falla, prueba con Groq.
-- Las voces: si Gemini no contesta, la pieza sale igual con la voz de Elena.
+- Las voces: si Gemini no contesta, la pieza no sale en esa vuelta y se reintenta en la siguiente (nunca con otra voz).
 
 **Qué hacer:**
 

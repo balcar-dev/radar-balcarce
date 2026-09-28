@@ -65,11 +65,14 @@ const COLOR_UTILES_ACENTO = '#8C2D18';
 const DATOS = path.join(import.meta.dirname, '..', 'panel', 'datos', 'ultima.json');
 const SALIDA = path.join(import.meta.dirname, 'salida');
 
-const fechaLarga = (d = new Date()) => {
+export const fechaLarga = (d = new Date()) => {
   const t = d.toLocaleDateString('es-AR', {
     weekday: 'long', day: 'numeric', month: 'long', timeZone: 'America/Argentina/Buenos_Aires',
   });
-  return t.charAt(0).toUpperCase() + t.slice(1);
+  // Sin la coma que pone Node ("lunes, 28 de…"): todas las placas escriben la
+  // fecha igual que la de la farmacia, "Lunes 28 de septiembre" (28/09).
+  const sinComa = t.replace(',', '');
+  return sinComa.charAt(0).toUpperCase() + sinComa.slice(1);
 };
 
 // --- lo que muestran las placas (28/09, diseño "Historia diaria") ----------
