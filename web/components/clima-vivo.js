@@ -25,7 +25,7 @@ import { useClimaVivo } from '@/lib/pedir-clima';
 // mañana se ve fuera de lugar.
 const FONDO_CIELO = {
   sol: '#245F7A', nube: '#1D4F63', cubierto: '#1D4F63', lluvia: '#243D52',
-  luna: '#1B2A44', 'luna-nube': '#1A2438',
+  luna: '#1B2A44', 'luna-nube': '#1A2438', 'cubierto-noche': '#182338', 'lluvia-noche': '#16202F',
 };
 
 /** Los rayos del sol, calculados en vez de dibujados a ojo.
@@ -75,6 +75,9 @@ export function IconoCielo({ cielo, esDeDia = true, tamano = 92 }) {
       )}
 
       {tipo === 'cubierto' && <Nube y={16} color="#C8D4DB" />}
+      {/* De noche la nube se oscurece: sigue sin haber sol (o luna) que
+          dibujar, pero tampoco se ve como el mismo cielo de la siesta. */}
+      {tipo === 'cubierto-noche' && <Nube y={16} color="#5B6B82" />}
 
       {tipo === 'nube' && (
         <>
@@ -112,13 +115,14 @@ export function IconoCielo({ cielo, esDeDia = true, tamano = 92 }) {
         </>
       )}
 
-      {tipo === 'lluvia' && (
+      {(tipo === 'lluvia' || tipo === 'lluvia-noche') && (
         <>
           {/* La nube va más arriba para dejarle lugar a las gotas, que
               además se mueven 20px hacia abajo al caer: si arrancaran más
-              abajo, la animación se cortaría contra el borde del dibujo. */}
-          <Nube y={-12} color="#C8D4DB" />
-          <g stroke="#7FBCE8" strokeWidth="5" strokeLinecap="round">
+              abajo, la animación se cortaría contra el borde del dibujo.
+              De noche, más oscura: sigue lloviendo igual, pero no es de día. */}
+          <Nube y={-12} color={tipo === 'lluvia-noche' ? '#5B6B82' : '#C8D4DB'} />
+          <g stroke={tipo === 'lluvia-noche' ? '#5A87AD' : '#7FBCE8'} strokeWidth="5" strokeLinecap="round">
             <path className="gota" d="M33 62v8" />
             <path className="gota gota-2" d="M47 62v8" />
             <path className="gota gota-3" d="M61 62v8" />
@@ -199,11 +203,12 @@ export function TarjetaClima({ clima }) {
 export function SolChico({ cielo = '', esDeDia = true }) {
   const tipo = tipoDeCielo(cielo, esDeDia);
 
-  if (tipo === 'lluvia') {
+  if (tipo === 'lluvia' || tipo === 'lluvia-noche') {
+    const noche = tipo === 'lluvia-noche';
     return (
       <svg width="20" height="20" viewBox="0 0 48 48" fill="none" aria-hidden="true">
-        <path d="M13 27a7 7 0 0 1 1-13.7 10 10 0 0 1 19 2.6A6 6 0 0 1 32 27z" fill="#C8D4DB" />
-        <g stroke="#7FBCE8" strokeWidth="3" strokeLinecap="round">
+        <path d="M13 27a7 7 0 0 1 1-13.7 10 10 0 0 1 19 2.6A6 6 0 0 1 32 27z" fill={noche ? '#5B6B82' : '#C8D4DB'} />
+        <g stroke={noche ? '#5A87AD' : '#7FBCE8'} strokeWidth="3" strokeLinecap="round">
           <path className="gota" d="M17 32v5" />
           <path className="gota gota-2" d="M24 32v5" />
           <path className="gota gota-3" d="M31 32v5" />
@@ -212,10 +217,10 @@ export function SolChico({ cielo = '', esDeDia = true }) {
     );
   }
 
-  if (tipo === 'cubierto') {
+  if (tipo === 'cubierto' || tipo === 'cubierto-noche') {
     return (
       <svg width="20" height="20" viewBox="0 0 48 48" fill="none" aria-hidden="true">
-        <path d="M13 32a7 7 0 0 1 1-13.7 10 10 0 0 1 19 2.6A6 6 0 0 1 32 32z" fill="#C8D4DB" />
+        <path d="M13 32a7 7 0 0 1 1-13.7 10 10 0 0 1 19 2.6A6 6 0 0 1 32 32z" fill={tipo === 'cubierto-noche' ? '#5B6B82' : '#C8D4DB'} />
       </svg>
     );
   }

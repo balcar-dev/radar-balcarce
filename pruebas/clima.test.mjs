@@ -6,6 +6,7 @@
 
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
+import fs from 'node:fs';
 import { avisosDelClima, UMBRALES } from '../ingesta/alertas.mjs';
 // plan.mjs se importa para probar que el aviso de clima sale sin esperar
 // horario. Que se pueda importar sin tener nada instalado no es
@@ -21,12 +22,15 @@ test('de noche no hay sol', () => {
   assert.equal(tipoDeCielo('Despejado', false), 'luna');
 });
 
-test('nublado es una nube sola, sin sol detrás', () => {
+test('nublado es una nube sola, sin sol (ni luna) detrás', () => {
   // Pasó el 20/09/2026: la tarjeta decía "Nublado" y la barra de arriba
   // dibujaba un sol. Eran dos copias de la misma decisión, y se separaron.
   assert.equal(tipoDeCielo('Nublado', true), 'cubierto');
-  assert.equal(tipoDeCielo('Nublado', false), 'cubierto');
+  // De noche sigue sin haber sol que dibujar, pero tampoco es el mismo
+  // cielo que a la siesta (27/09: "la luna todavía no la veo").
+  assert.equal(tipoDeCielo('Nublado', false), 'cubierto-noche');
   assert.equal(tipoDeCielo('Niebla', true), 'cubierto');
+  assert.equal(tipoDeCielo('Niebla', false), 'cubierto-noche');
 });
 
 test('parcialmente nublado sí deja ver el sol', () => {
@@ -38,16 +42,29 @@ test('mayormente despejado es un día de sol', () => {
   assert.equal(tipoDeCielo('Mayormente despejado', true), 'sol');
 });
 
-test('si llueve, eso es lo que importa', () => {
+test('si llueve, eso es lo que importa; pero de noche sigue siendo de noche (27/09)', () => {
   for (const c of ['Lluvia', 'Llovizna leve', 'Chaparrones fuertes', 'Tormenta con granizo', 'Nieve']) {
     assert.equal(tipoDeCielo(c, true), 'lluvia', c);
-    assert.equal(tipoDeCielo(c, false), 'lluvia', c + ' de noche');
+    assert.equal(tipoDeCielo(c, false), 'lluvia-noche', c + ' de noche');
   }
 });
 
 test('sin dato no se inventa un cielo raro', () => {
   assert.equal(tipoDeCielo('', true), 'sol');
   assert.equal(tipoDeCielo(undefined, false), 'luna');
+});
+
+test('los dos íconos (la tarjeta grande y la pastilla chica) dibujan la nube cubierta y la de lluvia más oscuras de noche', () => {
+  const src = fs.readFileSync(new URL('../web/components/clima-vivo.js', import.meta.url), 'utf8');
+  assert.match(src, /'cubierto-noche':\s*'#/, 'FONDO_CIELO sin el color de fondo de la nube cubierta de noche');
+  assert.match(src, /'lluvia-noche':\s*'#/, 'FONDO_CIELO sin el color de fondo de la lluvia de noche');
+  assert.match(src, /tipo === 'cubierto-noche'/);
+  assert.match(src, /tipo === 'lluvia-noche'/);
+  // Las dos veces que aparece "tipo === 'lluvia'" tienen que ser el OR con
+  // la variante de noche, no la rama vieja sola (una en la tarjeta, otra en
+  // la pastilla chica).
+  const soloLluviaDia = [...src.matchAll(/tipo === 'lluvia'(?! \|\|)/g)];
+  assert.equal(soloLluviaDia.length, 0, 'quedó una rama de lluvia que no contempla la noche');
 });
 
 // -------------------------------------------------------------- los avisos

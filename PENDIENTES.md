@@ -141,11 +141,16 @@ clave o una decisión.
      compila el sitio).
   3. Un `<audio controls>` en la página de la nota del repaso, con el
      archivo de esa fecha.
-- **Sumar el diseño de las piezas a cómo se ven al compartir por WhatsApp**
-  (27/09, Hernán). El rediseño de reels, historias y posteos (dirección B
-  elegida, ver `PROPUESTA-REDES.md` de esa noche) tiene que probarse también
-  como tarjeta de enlace de WhatsApp (`web/lib/tarjeta.js`, la misma que arma
-  Facebook), no sólo como pieza de Instagram.
+- **El rediseño (dirección B, ver `PROPUESTA-REDES.md`) suma tres cosas más**
+  (27/09, Hernán):
+  1. Probarlo también como tarjeta de enlace de **WhatsApp**
+     (`web/lib/tarjeta.js`, la misma que arma tarjeta para Facebook), no sólo
+     como pieza de Instagram.
+  2. El **ícono del sitio** (`web/app/icon.png`, `favicon.ico`, `apple-touch-icon.png`).
+  3. El **ícono de perfil de Instagram y de Facebook**, y la **portada de
+     Facebook** (`reels/portada.mjs`, hoy pendiente de subir a mano en
+     `PENDIENTES.md` → "Para Hernán y Andrés", ítem 5): que compartan la
+     misma identidad que las piezas nuevas.
 - **Mirar los primeros días de redes.** Que salgan bien los tres podcasts, el
   enlace en los posteos de Facebook y el espejo a Instagram; que el contrato del
   día cierre completo (`REDES.md`). Si algo deja de salir, seguir "Si algo dejó

@@ -13,17 +13,22 @@
 /**
  * @param {string} cielo  el texto del pronóstico
  * @param {boolean} esDeDia
- * @returns {'lluvia'|'cubierto'|'nube'|'luna-nube'|'sol'|'luna'}
+ * @returns {'lluvia'|'lluvia-noche'|'cubierto'|'cubierto-noche'|'nube'|'luna-nube'|'sol'|'luna'}
  */
 export function tipoDeCielo(cielo = '', esDeDia = true) {
   const t = String(cielo).toLowerCase();
 
-  // Si cae agua, lo que importa es eso y no si hay sol detrás.
-  if (/lluvia|llovizna|chaparr|tormenta|nieve/.test(t)) return 'lluvia';
+  // Si cae agua, lo que importa es eso y no si hay sol detrás. Pero de noche
+  // sigue siendo de noche: el 27/09 llovía a la una de la mañana y la
+  // pastilla de arriba se veía igual que lloviendo a la siesta (Hernán:
+  // "la luna todavía no la veo").
+  if (/lluvia|llovizna|chaparr|tormenta|nieve/.test(t)) return esDeDia ? 'lluvia' : 'lluvia-noche';
 
   // Cubierto de verdad: nube sola. "Nublado" a secas y la niebla no dejan
-  // ver el sol, así que dibujarlo asomando es dibujar otro día.
-  if (/^nublado|cubierto|niebla/.test(t)) return 'cubierto';
+  // ver el sol, así que dibujarlo asomando es dibujar otro día. De noche,
+  // la nube se oscurece: no hay sol que dibujar en ningún caso, pero sigue
+  // sin ser de día.
+  if (/^nublado|cubierto|niebla/.test(t)) return esDeDia ? 'cubierto' : 'cubierto-noche';
 
   // Con claros: el sol (o la luna) asoma detrás de una nube.
   if (/nubl|nubos/.test(t)) return esDeDia ? 'nube' : 'luna-nube';
