@@ -129,6 +129,17 @@ test('leerGrupoGroq: valida las fichas igual que Gemini, y acepta que conteste u
   assert.deepEqual(Object.keys(f2), ['abc']);
 });
 
+test('el workflow "Actualizar la web" le pasa GROQ_API_KEY al paso que corre la lectura con IA (28/09)', () => {
+  // El código ya leía claveGroq() desde que se agregó el respaldo (28/09),
+  // pero el workflow no se la pasaba: nunca llegaba a process.env y el
+  // respaldo no se probaba nunca de verdad en una corrida real. Se encontró
+  // al armar el workflow de la comparación de fotos.
+  const y = fs.readFileSync(new URL('../.github/workflows/actualizar.yml', import.meta.url), 'utf8').replace(/\r\n/g, '\n');
+  const paso = y.match(/Buscar noticias y armar los datos[\s\S]*?env:\n([\s\S]*?)\n\s*- name:/)?.[1] ?? '';
+  assert.match(paso, /GROQ_API_KEY:\s*\$\{\{\s*secrets\.GROQ_API_KEY\s*\}\}/);
+  assert.match(paso, /GEMINI_API_KEY_CLASIFICACION:\s*\$\{\{\s*secrets\.GEMINI_API_KEY_CLASIFICACION\s*\}\}/);
+});
+
 test('la clave de clasificación: la propia o la gratis de redacción, nunca la paga de redes', () => {
   const sinArchivo = { archivo: '/no/existe/.env' };
   assert.equal(claveClasificacion({ ...sinArchivo, env: { GEMINI_API_KEY_CLASIFICACION: 'c', GEMINI_API_KEY_REDACCION: 'r' } }), 'c');
