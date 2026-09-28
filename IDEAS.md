@@ -434,3 +434,23 @@ te muestra menos si tu gente no interactúa.
    corrige gana más de lo que pierde.
 4. **Que el sitio cargue rápido.** Ya estamos bien; no lo arruinemos metiendo
    banners pesados.
+
+---
+
+## Sumadas el 28/09, para más adelante (Hernán las pidió, no son prioridad hoy)
+
+- **Un segundo locutor, hombre, además de la voz mujer que ya tenemos**
+  (Kore). Alternar por pieza o fijar qué sección hace cada uno (por ejemplo:
+  ella el clima y los podcasts, él Policiales o Deportes), y ponerles nombre
+  a los dos para que se sientan más cercanos, no "la voz de Gemini". Para
+  armarlo bien: probar candidatas del catálogo de Gemini TTS (Puck, Charon,
+  Fenrir, Orus, entre otras) buscando una que suene masculina y clara en
+  castellano rioplatense, escribirle su propia ficha en `CRITERIO-REDES.md`
+  (igual que la de Kore hoy: identidad, tono, instrucción de voz) y decidir
+  la regla de reparto en `redes/piezas.mjs` o `reels/plan.mjs`.
+- **Contenido gratis para redes, de gente local o que recién arranca**:
+  investigar si hay músicos, fotógrafos o video makers de Balcarce (o
+  bancos de música/fotos libres) dispuestos a que usemos su material a
+  cambio de crédito y difusión, para no depender sólo de lo que generamos
+  por código. Falta investigar a fondo; ver también si cruza con "Las
+  fotos" (`CRITERIO-EDITORIAL.md`) para el banco de fotos propio.
