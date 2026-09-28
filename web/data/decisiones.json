@@ -1,5 +1,5 @@
 {
-  "exportado": "2026-09-28T10:21:54.232Z",
+  "exportado": "2026-09-28T10:31:51.978Z",
   "decisiones": {
     "1951120": {
       "estado": "automatica",
@@ -42132,6 +42132,92 @@
       "verificacion": {
         "nivel": "ALTA",
         "porque": "Lo contaron tres medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      }
+    },
+    "1vrqpb6": {
+      "estado": "automatica",
+      "titulo": "YPF aumenta uno por ciento el precio de los combustibles",
+      "copete": "La petrolera estatal YPF aplicó un incremento del 1% en sus combustibles debido a la tensión internacional por el conflicto en Medio Oriente. La medida se suma a las subas de entre el 2% y el 5% dispuestas previamente por las compañías privadas.",
+      "cuerpo": "La petrolera explicó que la medida responde al impacto de la situación internacional y a la extensión del conflicto en Medio Oriente, que elevó el valor del barril de petróleo Brent por encima de los 104 dólares.\n\nEl ajuste se produce luego de que otras empresas del sector, como Shell, Axion y Puma, aplicaran incrementos que oscilan entre el 2% y el 5% días atrás. Desde la compañía estatal sostuvieron que la suba se realiza en un contexto de congelamiento de precios vigente desde abril, orientado a sostener el consumo en el interior del país.\n\nEl CEO y presidente de la empresa, Horacio Marín, había anticipado la posibilidad de ajustes ante la escalada internacional. La petrolera reafirmó la continuidad del sistema de micropricing para realizar modificaciones según las particularidades de cada mercado.",
+      "guion": "YPF aumenta uno por ciento el precio de los combustibles",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-28T10:31:51.866Z",
+      "claves": [
+        "YPF aumentó un 1% todos sus combustibles desde el sábado.",
+        "La medida responde al impacto del conflicto en Medio Oriente.",
+        "Otras compañías privadas aplicaron subas de entre el 2% y el 5%."
+      ],
+      "seSabe": [
+        "YPF aumentó un 1% el precio de sus combustibles desde el sábado a las cero horas, según informó la compañía estatal.",
+        "El incremento se debe al impacto de la extensión del conflicto en Medio Oriente sobre el valor del petróleo, según la petrolera.",
+        "Las compañías privadas aplicaron previamente aumentos de entre el 2% y el 5%, de acuerdo con los registros del sector."
+      ],
+      "noConfirmado": [
+        "No se detalló cómo impactará la medida de manera específica en las estaciones de servicio de cada distrito."
+      ],
+      "textoRedes": "YPF aumentó un uno por ciento el precio de sus combustibles desde este sábado debido al impacto internacional del conflicto en Medio Oriente. La suba se ubica por debajo de los incrementos aplicados previamente por las compañías privadas.",
+      "etiquetas": [
+        "combustibles",
+        "YPF",
+        "aumento",
+        "petroleo"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Destape",
+          "enlace": "https://www.eldestapeweb.com/economia/combustibles-aumentan-1-este-sabado-efectos-guerra-medio-oriente-2026925192425",
+          "fecha": "2026-09-25T22:24:25.000Z",
+          "oficial": false,
+          "aporte": "Informó los detalles del aumento del 1% de YPF, los fundamentos vinculados a Medio Oriente y declaraciones del CEO Horacio Marín."
+        },
+        {
+          "medio": "Infórmese Primero (FM 104.9)",
+          "enlace": "http://www.informeseprimero.com.ar/2026/09/ypf-aumento-1-el-precio-de-sus.html",
+          "fecha": "2026-09-26T13:30:28.264Z",
+          "oficial": false,
+          "aporte": "Consignó la aplicación del aumento de YPF desde el sábado a las cero horas."
+        },
+        {
+          "medio": "Minuto Uno",
+          "enlace": "https://www.minutouno.com/economia/ypf-aumenta-todos-sus-combustibles-este-sabado-cuanto-se-va-el-litro-nafta-n6326890",
+          "fecha": "2026-09-25T22:38:00.000Z",
+          "oficial": false,
+          "aporte": "Aportó el dato sobre las subas previas de entre el 2% y el 5% aplicadas por las compañías privadas."
+        },
+        {
+          "medio": "Diario Popular",
+          "enlace": "https://www.diariopopular.com.ar/economia/desde-este-sabado-ypf-aumenta-un-1-los-precios-sus-combustibles-n921548",
+          "fecha": "2026-09-26T10:06:00.000Z",
+          "oficial": false,
+          "aporte": "Sin contenido relevante en el resumen proporcionado."
+        },
+        {
+          "medio": "QZ Noticias (Mar del Plata)",
+          "enlace": "https://www.qznoticias.com/el-pais/ypf-aumenta-desde-hoy-un-1-el-precio-de-los-combustibles",
+          "fecha": "2026-09-26T12:01:57.000Z",
+          "oficial": false,
+          "aporte": "Sin contenido relevante en el resumen proporcionado."
+        },
+        {
+          "medio": "El Marplatense",
+          "enlace": "https://www.elmarplatense.com/ypf-aplico-un-aumento-del-1-en-el-precio-de-sus-combustibles",
+          "fecha": "2026-09-26T13:41:39.000Z",
+          "oficial": false,
+          "aporte": "Sin contenido relevante en el resumen proporcionado."
+        },
+        {
+          "medio": "Punto Noticias",
+          "enlace": "https://puntonoticias.com/ypf-aplicara-un-aumento-del-1-a-los-combustibles-desde-este-sabado/",
+          "fecha": "2026-09-26T12:40:53.000Z",
+          "oficial": false,
+          "aporte": "Sin contenido relevante en el resumen proporcionado."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron 7 medios independientes.",
         "sugeridoPorIA": "ALTA"
       }
     }
