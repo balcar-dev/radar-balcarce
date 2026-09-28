@@ -555,6 +555,13 @@ publicar una mentira.
 7. **Lo ya publicado se revalida** en cada corrida contra las reglas de hoy:
    si una regla nueva ya no lo dejaría pasar, se saca y se vuelve a escribir.
    Nunca se paga dos veces por lo mismo: lo que ya tiene cuerpo se reusa.
+   **Límite real, encontrado el 28/09:** esto sólo alcanza a una nota mientras
+   su fuente siga trayéndola la ingesta (`ultima.notas`, en `reescribirAutomaticas`).
+   Si la fuente ya sacó esa nota de su feed —lo normal a los pocos días—, la
+   nota queda congelada con lo que tenga escrito, aunque una regla nueva ya
+   no la dejaría pasar. Por eso una regla nueva conviene revisarla también
+   a mano contra un puñado de notas ya publicadas, como cualquier corrección
+   (`web/data/correcciones.json`).
 
 El vigilante avisa por WhatsApp si menos del 35 % de las notas de las últimas
 24 horas tienen cuerpo, y el resumen de las 21 dice cuántas esperan cuerpo.
