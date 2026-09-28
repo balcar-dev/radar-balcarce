@@ -195,10 +195,17 @@ async function pedirAGemini(nota, candidatas, { clave, fetchFn = fetch, modelo =
   return interpretarRespuesta(obj, conFoto);
 }
 
+// Groq acepta como mucho 3 imágenes por pedido (documentado, 28/09). Gemini
+// no tiene ese límite, así que esto es sólo del lado de Groq: si hay más de
+// tres candidatas, se comparan las tres primeras nada más. Es un respaldo:
+// el caso normal ya lo resolvió Gemini antes de llegar acá.
+const MAXIMO_FOTOS_GROQ = 3;
+
 /** El mismo pedido, pero con Groq (API de OpenAI: un solo mensaje con texto
- *  e imágenes como `image_url` en base64). */
+ *  e imágenes como `image_url` en base64). Máximo 3 imágenes por pedido:
+ *  documentado por Groq (28/09). */
 async function pedirAGroq(nota, candidatas, { clave, fetchFn = fetch, modelo = MODELO_GROQ_VISION } = {}) {
-  const conFoto = candidatas.filter((c) => c.datos);
+  const conFoto = candidatas.filter((c) => c.datos).slice(0, MAXIMO_FOTOS_GROQ);
   if (conFoto.length === 0) return null;
   const content = [{ type: 'text', text: instruccion(nota, conFoto) }];
   for (const c of conFoto) content.push({ type: 'image_url', image_url: { url: `data:${c.datos.mime};base64,${c.datos.base64}` } });

@@ -155,6 +155,24 @@ test('elegirFoto: si Gemini falla, prueba con Groq', async () => {
   assert.equal(r.elegida.medio, 'A');
 });
 
+test('elegirFoto: a Groq nunca le manda más de 3 fotos (límite documentado de Groq, 28/09)', async () => {
+  const nota = { titulo: 't', seccion: 'Balcarce' };
+  const candidatas = conDatos(['A', 'B', 'C', 'D', 'E']);
+  let imagenesEnviadas = null;
+  const fetchFn = async (url, init) => {
+    if (String(url).includes('generativelanguage')) return { ok: false, status: 429 };
+    const body = JSON.parse(init.body);
+    imagenesEnviadas = body.messages[0].content.filter((c) => c.type === 'image_url').length;
+    return {
+      ok: true,
+      json: async () => ({ choices: [{ message: { content: JSON.stringify({ elegida: 'A', razon: 'ok', fotos: [{ letra: 'A', tiene_marca: false }, { letra: 'B', tiene_marca: false }, { letra: 'C', tiene_marca: false }] }) } }] }),
+    };
+  };
+  const r = await elegirFoto(nota, candidatas, { clave: 'g', claveRespaldo: 'r', fetchFn });
+  assert.equal(imagenesEnviadas, 3);
+  assert.equal(r.candidatas.length, 3, 'el reporte cubre sólo las que de verdad se compararon');
+});
+
 test('elegirFoto: sin fotos que comparar, no llama a nadie', async () => {
   const nota = { titulo: 't' };
   const candidatas = [{ medio: 'A', enlace: 'x', imagen: null, datos: null }];
