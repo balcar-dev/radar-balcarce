@@ -233,7 +233,8 @@ sacan.
    (`reels/voz-gemini.mjs`) pide el audio al modelo `gemini-2.5-flash-preview-tts`
    con la voz y la indicación de tono de `CRITERIO-REDES.md` (la de siempre más
    la de la mañana, la tarde o la noche). Hasta 4 intentos, 2 segundos entre
-   pedidos, 2 minutos como máximo por pedido. **Si Gemini falla, la pieza no
+   pedidos, 2 minutos como máximo por pedido. Un audio que dura de más para su texto
+   (`vozDeMas`: leyó algo que no estaba) cuenta como falla. **Si Gemini falla, la pieza no
    sale** (28/09: nunca con otra voz): `armarReel` corta, `plan.mjs` la deja
    fuera del manifiesto y el reloj la vuelve a pedir en la vuelta siguiente
    mientras dure su ventana.

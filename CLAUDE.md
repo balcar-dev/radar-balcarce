@@ -45,7 +45,7 @@ vigilancia andan con la PC apagada**; sólo el panel vive en la PC.
   prueba lo vigila (sigue los imports en cadena).
 - **Cuando se arregla algo que estuvo mal publicado, se escribe una prueba**
   (con el caso real) y, si es una regla nueva, se anota en
-  `docs/10-REGLAS-Y-PRUEBAS.md` con el número siguiente (hoy, 75).
+  `docs/10-REGLAS-Y-PRUEBAS.md` con el número siguiente (hoy, 76).
 - **El criterio editorial es uno solo: `CRITERIO-EDITORIAL.md`.** La IA lee su
   § 12 **tal cual** (`ingesta/prompt-editorial.mjs`; si falta, la reescritura
   no arranca) y sus números están en `ingesta/criterio.mjs`, controlados contra

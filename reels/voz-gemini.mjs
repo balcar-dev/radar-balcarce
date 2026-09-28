@@ -41,6 +41,25 @@ const ESPACIADO = 2000; // dos segundos entre pedidos alcanzan con la clave paga
 // Dos minutos es de sobra, y corta un pedido que se quedó colgado.
 export const ESPERA_MAXIMA_VOZ = 120_000;
 
+// La voz no puede tardar mucho más de lo que lleva decir el texto (28/09).
+// Probando el modelo 3.8, con el guion del podcast (81 palabras) devolvió
+// 140 segundos: había leído en voz alta las indicaciones. Un audio así nunca
+// sale: se pide de nuevo como si no hubiera llegado. La voz lee a 2,3 a 2,9
+// palabras por segundo; por debajo de 1,5 (más cinco segundos de margen para
+// los textos cortos) seguro dijo algo que no estaba en el guion.
+export const RITMO_MINIMO_VOZ = 1.5;
+export const MARGEN_VOZ_SEGUNDOS = 5;
+
+/** Si un audio de `segundos` es demasiado largo para `texto`: devuelve el
+ *  motivo, o null si está bien. */
+export function vozDeMas(texto, segundos) {
+  const palabras = String(texto).trim().split(/\s+/).filter(Boolean).length;
+  const maximo = palabras / RITMO_MINIMO_VOZ + MARGEN_VOZ_SEGUNDOS;
+  return segundos > maximo
+    ? `la voz duró ${segundos.toFixed(0)} s para ${palabras} palabras (máximo ${maximo.toFixed(0)} s): leyó algo que no estaba en el texto`
+    : null;
+}
+
 /**
  * Sintetiza con Gemini. Devuelve { archivo, duracion, palabras }, con los
  * tiempos de cada palabra resueltos por alineación (ver alinear.mjs).
@@ -110,9 +129,16 @@ export async function decirGemini(texto, destino, {
       throw ultimoError;
     }
 
-    // Viene PCM 16 bits a 24 kHz, mono, sin cabecera.
+    // Viene PCM 16 bits a 24 kHz, mono, sin cabecera: 48.000 bytes por segundo.
+    const pcm = Buffer.from(parte.inlineData.data, 'base64');
+    const deMas = vozDeMas(texto, pcm.length / 48000);
+    if (deMas) {
+      ultimoError = new Error(deMas);
+      if (intento < intentos) { await dormir(3000 * intento); continue; }
+      throw ultimoError;
+    }
     const crudo = `${destino}.pcm`;
-    fs.writeFileSync(crudo, Buffer.from(parte.inlineData.data, 'base64'));
+    fs.writeFileSync(crudo, pcm);
     await correr(ffmpeg, ['-y', '-v', 'error', '-f', 's16le', '-ar', '24000', '-ac', '1',
       '-i', crudo, '-b:a', '128k', destino]);
     fs.rmSync(crudo, { force: true });

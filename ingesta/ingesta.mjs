@@ -1529,7 +1529,7 @@ export async function ingestar({
 
   if (clima) {
     const c = clima.ahora;
-    log(`\n\x1b[1mCLIMA AHORA\x1b[0m\n  ${c.temp}° · ${c.cielo} · sensación ${c.sensacion}° · viento ${c.rumbo} ${c.viento} km/h · humedad ${c.humedad}%`);
+    log(`\n\x1b[1mCLIMA AHORA\x1b[0m\n  ${c.temp}° · ${c.cielo} · sensación térmica ${c.sensacion}° · viento ${c.rumbo} ${c.viento} km/h · humedad ${c.humedad}%`);
     log(`  ${clima.dias.map((d) => `${d.dia} ${d.max}°/${d.min}°`).join('  ')}`);
   }
 
@@ -1644,7 +1644,7 @@ function armarPreview(d) {
     ${c ? `<section>
       <h2>El clima ahora</h2>
       <div class="temp">${c.temp}°</div>
-      <div style="font-size:13px;color:var(--suave);margin-top:6px;">${esc(c.cielo)} · sensación ${c.sensacion}°<br>Viento ${esc(c.rumbo)} ${c.viento} km/h · humedad ${c.humedad}%</div>
+      <div style="font-size:13px;color:var(--suave);margin-top:6px;">${esc(c.cielo)} · sensación térmica ${c.sensacion}°<br>Viento ${esc(c.rumbo)} ${c.viento} km/h · humedad ${c.humedad}%</div>
       <div class="dias">${d.clima.dias.map((x) => `<div><b>${esc(x.dia)}</b>${x.max}°/${x.min}°<br><span style="color:var(--suave)">${x.lluvia}%</span></div>`).join('')}</div>
       <div style="margin-top:10px;font-size:11px;color:var(--suave)">Fuente: Open-Meteo</div>
     </section>` : ''}

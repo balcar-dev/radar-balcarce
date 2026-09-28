@@ -137,7 +137,7 @@ export function IconoCielo({ cielo, esDeDia = true, tamano = 92 }) {
 function textoDetalle(a) {
   return (
     <>
-      <span>Sensación {a.sensacion}°</span>{' · '}
+      <span>Sensación térmica {a.sensacion}°</span>{' · '}
       <span>Viento {a.rumbo} {a.viento} km/h</span>{' · '}
       <span>Humedad {a.humedad}%</span>
     </>

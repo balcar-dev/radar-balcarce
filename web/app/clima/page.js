@@ -5,7 +5,7 @@ import { metadatosDePagina } from '@/components/metadatos';
 
 export const metadata = metadatosDePagina({
   titulo: 'El clima en Balcarce',
-  descripcion: 'El tiempo ahora en Balcarce (temperatura, sensación, viento y humedad) y el pronóstico de la semana.',
+  descripcion: 'El tiempo ahora en Balcarce (temperatura, sensación térmica, viento y humedad) y el pronóstico de la semana.',
   camino: '/clima',
 });
 

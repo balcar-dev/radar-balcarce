@@ -55,7 +55,7 @@ function diasQueSiguen(dias = [], hoy) {
 
 function PanelClima({ a, dias }) {
   const detalle = [
-    a.sensacion != null ? `Sensación ${a.sensacion}°` : null,
+    a.sensacion != null ? `Sensación térmica ${a.sensacion}°` : null,
     a.viento != null ? `Viento ${[a.rumbo, a.viento].filter((x) => x != null && x !== '').join(' ')} km/h` : null,
     a.humedad != null ? `Humedad ${a.humedad}%` : null,
   ].filter(Boolean).join(' · ');

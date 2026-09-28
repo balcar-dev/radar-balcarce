@@ -415,7 +415,7 @@ function armarClima({
   const yTemp = yEtiqueta + m(222);
   const yCielo = yTemp + m(80);
   const detalle = [
-    sensacion != null ? `Sensación ${sensacion}°` : null,
+    sensacion != null ? `Sensación térmica ${sensacion}°` : null,
     viento != null ? `Viento ${rumbo ? `${rumbo} ` : ''}${viento} km/h` : null,
     sensacion == null && viento == null && max != null ? `Máxima ${max}° · mínima ${min}°` : null,
   ].filter(Boolean).join(' · ');

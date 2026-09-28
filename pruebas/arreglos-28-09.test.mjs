@@ -314,3 +314,15 @@ test('Piezas con "solo" vacío no arma nada salvo que se marque "todas" (28/09: 
   assert.match(yml, /elif \[ "\$TODAS" = "true" \]; then\n\s*node reels\/plan\.mjs --generar\n/);
   assert.doesNotMatch(yml, /vacío = todas/);
 });
+
+// ------- 28/09: la voz que leyó las indicaciones en voz alta nunca sale
+test('vozDeMas frena un audio mucho más largo que el texto (el podcast de 81 palabras que duró 140 s)', async () => {
+  const { vozDeMas } = await import('../reels/voz-gemini.mjs');
+  const podcast = Array.from({ length: 81 }, () => 'palabra').join(' ');
+  assert.match(vozDeMas(podcast, 140.2), /leyó algo que no estaba en el texto/);
+  assert.equal(vozDeMas(podcast, 34), null, 'a 2,4 palabras por segundo está bien');
+  assert.equal(vozDeMas('Buen día, Balcarce.', 4), null, 'un texto corto tiene margen');
+  const fuente = leer('reels/voz-gemini.mjs');
+  assert.match(fuente, /const deMas = vozDeMas\(texto, pcm\.length \/ 48000\);/);
+  assert.match(fuente, /if \(deMas\) \{\s*ultimoError = new Error\(deMas\);\s*if \(intento < intentos\) \{ await dormir\(3000 \* intento\); continue; \}/);
+});
