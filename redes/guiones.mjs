@@ -397,18 +397,18 @@ export function guionUtiles({ fecha = new Date(), direccion, momento = 'manana' 
   return unir([
     variante(SALUDOS[momento], s, 'saludo'),
     variante([
-      'Te dejamos los teléfonos que sirve tener a mano en Balcarce:',
-      'Estos son los teléfonos que conviene tener a mano en Balcarce:',
-      'Anotá los teléfonos que sirven en Balcarce:',
+      'Te dejamos los teléfonos que sirve tener a mano.',
+      'Estos son los teléfonos que conviene tener a mano.',
+      'Anotá los teléfonos que conviene tener a mano.',
     ], s, 'apertura'),
-    'emergencias, el hospital, la comisaría y los servicios del municipio.',
+    'Están los de emergencias, el hospital, la comisaría y el municipio.',
     variante([
       'Guardalos ahora, que después te olvidás.',
       'Tenelos a mano, que nunca se sabe.',
       'Compartilos con quien los pueda necesitar.',
     ], s, 'consejo'),
-    // La última frase es la firma: dice dónde están los demás números.
-    con ? `Los demás números están en ${SITIO_DICHO}.` : `Los demás números están en la web de ${MEDIO}.`,
+    // La última frase es la firma: dice dónde están todos los números (el audio no los lee).
+    con ? `Los encontrás todos en ${SITIO_DICHO}.` : `Los encontrás todos en la web de ${MEDIO}.`,
   ]);
 }
 

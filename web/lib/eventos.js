@@ -29,7 +29,7 @@ import { slugDe } from './ruta.js';
 import { sinTildes } from './texto.js';
 
 /** Cuántos días sigue existiendo la página de un evento que ya pasó. Los
- *  enlaces que circularon por WhatsApp no se rompen (regla 20 de REGLAS.md),
+ *  enlaces que circularon por WhatsApp no se rompen (regla 20 de docs/10-REGLAS-Y-PRUEBAS.md),
  *  y un evento de hace dos meses ya no se busca. */
 export const DIAS_DESPUES = 60;
 

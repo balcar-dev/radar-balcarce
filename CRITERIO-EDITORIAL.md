@@ -21,10 +21,10 @@ verifica. Hay uno solo y está acá. Todo lo demás lo respeta:
 la web" usa la versión nueva en la corrida siguiente. **El panel, recién
 después de reiniciarlo** (cerrar su ventana y correr `ARRANCAR.bat`).
 
-Los otros documentos no repiten estas reglas: remiten acá. `MANUAL.md` cuenta
-el recorrido técnico y el puntaje; `REGLAS.md`, qué prueba cuida cada regla;
-`REDES.md`, los horarios de las redes; `INVESTIGACION.md`, lo legal con sus
-fuentes.
+Los otros documentos no repiten estas reglas: remiten acá. `docs/` cuenta
+cómo lo aplica el código (empezar por `docs/00-INDICE.md`); `docs/10-REGLAS-Y-PRUEBAS.md`,
+qué prueba cuida cada regla; `docs/07-REDES.md`, los horarios de las redes;
+`INVESTIGACION.md`, lo legal con sus fuentes.
 
 ---
 
@@ -145,7 +145,7 @@ provincia, Mar del Plata, zona, especializados y todos los de Balcarce: los de
 que cuentan dos medios o más (además de lo que dice Balcarce en el título o
 toca la zona), y cuantos más lo cuentan, más arriba va y más fácil sale sola:
 es lo que se está hablando. Una exclusiva de un solo medio no entra hasta que
-otro la cuente. Las fuentes: `FUENTES.md`; la medición: `docs/CRUCE-DE-MEDIOS.md`.
+otro la cuente. Las fuentes: `FUENTES.md`; la medición: `docs/historico/CRUCE-DE-MEDIOS.md`.
 
 **Lo copiado de afuera por un medio de acá es de afuera (27/09).** Un medio de
 Balcarce que cuenta lo mismo que los nacionales sin nombrar nada de acá está
@@ -277,9 +277,13 @@ lugar), y si ninguna sirve y la nota es de una sola persona pública
 identificable, prueba una foto libre en Wikimedia Commons antes de
 resignarse. Sólo Policiales sigue sin foto salvo que la fuente sea oficial.
 Una nota ya probada (tenga foto o no) queda en el banco
-(`web/data/banco-fotos.json`) y no se le vuelve a preguntar. Sigue sin
-publicarse nada en redes con esto: las piezas de Instagram y Facebook
-siguen con la placa propia (eso sí sigue pendiente, `PENDIENTES.md`).
+(`web/data/banco-fotos.json`) y no se le vuelve a preguntar. En las redes,
+el espejo de Instagram de cada posteo de Facebook lleva esa misma foto (el
+crédito va en el texto del posteo, nunca en la imagen) y, si no hay una que
+sirva, la placa sin foto. La tarjeta para compartir el enlace y los videos
+(podcasts, clima, farmacia, útiles, agenda) siguen con placa: son piezas de
+datos o de texto, no de una nota con foto. **La placa no es una regla, es lo
+que sale cuando no hay foto que sirva.**
 
 ### Lo que no entra nunca
 
@@ -297,7 +301,7 @@ siguen con la placa propia (eso sí sigue pendiente, `PENDIENTES.md`).
 | **El nombre del medio de origen en el título, el guion, las placas o las redes** | La atribución va en la nota de la web, con el enlace al original |
 | **Lo que parece promoción y no noticia** (sorteos, "ganá tu entrada") | No se bloquea, pero nunca sale solo |
 | **Las listas de sepelios** ("servicios de sepelios", inhumaciones: nombres de personas fallecidas) | Decisión de Hernán, 27/09: "es sensible y no hay fuente oficial". Salieron diez veces, cada una en otra sección. Quedan en rojo por el título (`REGLAS_SEMAFORO.nunca`, sección 3) y se vuelve a mirar en el título y la bajada finales de toda nota automática (`nuncaSePublica`, `web/scripts/generar-datos.mjs`) |
-| **Fúnebres, comentarios de lectores y transmisiones en vivo largas** | Decisión vigente (`REGLAS.md`, "Decisiones que siguen valiendo") |
+| **Fúnebres, comentarios de lectores y transmisiones en vivo largas** | Decisión vigente (`docs/10-REGLAS-Y-PRUEBAS.md`, "Decisiones que siguen valiendo") |
 
 ## 3. El semáforo
 
@@ -844,7 +848,7 @@ dos notas, ese podcast no sale. Cuando un podcast sale, **tiene su nota en la
 web**: cada nota que se contó, con su titular, su enlace y una o dos frases de
 lo que ya publicó, y los botones para verlo en Instagram y Facebook. Si una
 de esas notas se retira después, el repaso se rearma sin ella. Cuáles notas y
-a qué hora: sección 9 y `REDES.md`.
+a qué hora: sección 9 y `docs/07-REDES.md`.
 
 **Cómo se escriben.** La del dólar: título con el día y los dos números que
 más se buscan ("El dólar blue cotiza a $1.560 este viernes 25; el oficial, a
@@ -911,7 +915,7 @@ Resumen del criterio. **Cómo suenan y qué dicen las piezas de redes (la voz, l
 saludos, la dirección, una ficha por pieza) está en
 [`CRITERIO-REDES.md`](CRITERIO-REDES.md)**: es el documento único de las redes y
 manda sobre lo que se repita acá. Los horarios, las piezas y cómo se publica, en
-[`REDES.md`](REDES.md).
+[`docs/07-REDES.md`](docs/07-REDES.md).
 
 - **Sólo sale lo que ya está publicado en la web.** Lo que el semáforo frenó no
   llega a las redes.
@@ -986,7 +990,7 @@ también son de IA.
   aunque cambie el titular, y la página dura 180 días aunque salga de la
   portada.
 - **Cuando se arregla algo que estuvo mal publicado, se escribe una prueba**,
-  para que no vuelva a pasar (`REGLAS.md`, regla 19). Y si el error es de
+  para que no vuelva a pasar (`docs/10-REGLAS-Y-PRUEBAS.md`, regla 19). Y si el error es de
   criterio, se corrige **acá**.
 
 ## 11. Los números

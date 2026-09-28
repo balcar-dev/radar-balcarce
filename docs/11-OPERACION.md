@@ -5,10 +5,29 @@ workflows de ese día. Es un manual de tareas: cada sección dice qué hacer, pa
 a paso, y qué va a pasar después. Por qué funciona así está en los otros
 documentos: las redes en [`07-REDES.md`](07-REDES.md), dónde corre cada cosa
 en [`08-INFRAESTRUCTURA.md`](08-INFRAESTRUCTURA.md), el panel en `09-PANEL`,
-las reglas y las pruebas en `10-REGLAS-Y-PRUEBAS`. Los enlaces (la web, el
-panel, Cloudflare, cron-job.org) están en [`EMPEZAR-ACA.md`](../EMPEZAR-ACA.md);
-lo que hay que pegar a mano en los perfiles, en
-[`PARA-CARGAR-A-MANO.md`](../PARA-CARGAR-A-MANO.md).*
+las reglas y las pruebas en `10-REGLAS-Y-PRUEBAS`. Lo que hay que pegar a mano
+en los perfiles está en [`PARA-CARGAR-A-MANO.md`](../PARA-CARGAR-A-MANO.md);
+lo que falta, en [`PENDIENTES.md`](../PENDIENTES.md).*
+
+## Los enlaces
+
+| Qué | Dónde | Quién entra |
+|---|---|---|
+| **La web** | https://radarbalcarce.com | Cualquiera |
+| Instagram | https://www.instagram.com/radarbalcarce | Cualquiera |
+| Facebook | La página "Radar Balcarce" (se busca por el nombre; su ID para la API está en `docs/07-REDES.md`) | Cualquiera |
+| **El panel**, desde la PC | http://localhost:4321 | Hernán y Andrés, con su usuario y contraseña |
+| El panel, desde afuera | La dirección del túnel de Tailscale, en `panel/datos/DIRECCION-DEL-PANEL.txt`, en la PC (no va al repositorio, que es público) | Igual |
+| El código y las corridas | https://github.com/balcar-dev/radar-balcarce (pestaña **Actions**) | Público desde el 25/09; cuenta `balcardev@gmail.com` |
+| Cloudflare (la web, el dominio, las estadísticas) | https://dash.cloudflare.com | `radarbalcarce@gmail.com` |
+| Trabajos automáticos (cron-job.org) | https://console.cron-job.org/jobs | `radarbalcarce@gmail.com` |
+| Google Search Console | https://search.google.com/search-console | `radarbalcarce@gmail.com` |
+| Google AI Studio (las claves y el gasto de Gemini) | https://aistudio.google.com | `radarbalcarce@gmail.com` |
+| La guía comercial (vista previa) | https://claude.ai/artifact/EPFpaXCo83ryUimSvRnMvU | Privado |
+
+**Las cuentas:** `radarbalcarce@gmail.com` es el medio (Cloudflare, Vercel
+apagado, Tailscale, Instagram, Facebook, Meta, Gemini, cron-job.org, Search
+Console); `balcardev@gmail.com` es lo técnico (GitHub).
 
 ## En una frase
 
@@ -128,7 +147,9 @@ vuelva a traer. Vale aunque el panel esté prendido.
   diferencia es que `retiradas.json` no depende de la PC ni del panel.
 
 **No editar `web/data/decisiones.json` a mano:** si el panel está prendido, lo
-reescribe cada 10 minutos con lo que tiene en memoria y el cambio se pierde.
+reescribe entero cada vez que guarda su estado (al arrancar, con cada botón y
+después de cada ciclo de 10 minutos en que la IA escribió algo), con lo que
+tiene en memoria, y el cambio se pierde.
 
 ## 3. Escribir el cuerpo de una nota que espera
 
@@ -189,7 +210,8 @@ Qué pasa:
 - **Al prenderlas:** en la corrida siguiente vuelve todo. Las piezas cuya
   ventana todavía está abierta salen; las que ya se cerraron, no (ver las
   ventanas en `07-REDES`).
-- Escribir exactamente `Si` (o `si`, `SI`, `Sí`, `sí`, `SÍ`), sin espacios.
+- `Si` vale con cualquier mayúscula, con o sin tilde (`si`, `SÍ`, `sí`…):
+  Facebook y el reloj de las piezas lo leen con la misma regla desde el 28/09.
 
 ## 6. Publicar una pieza a mano
 
@@ -199,8 +221,10 @@ Para una historia fija que no salió (clima, farmacia) o para probar:
 2. **solo:** el nombre de la pieza. Los nombres: `clima-manana`,
    `clima-noche`, `farmacia`, `utiles`, `noticia1` (podcast de la mañana),
    `noticia2` (tarde), `podcast` (noche), y los avisos `aviso-helada`,
-   `aviso-granizo`, `aviso-viento`. **No dejarlo vacío**: vacío arma todas las
-   del día y gasta una voz paga por cada una.
+   `aviso-granizo`, `aviso-viento`. Si queda vacío, la corrida no arma nada y
+   termina con "Sin piezas elegidas" (28/09: antes armaba todas las del día y
+   gastaba una voz paga por cada una). Para armarlas todas a propósito, dejar
+   `solo` vacío y marcar **todas**.
 3. **publicar:** tildado para que la suba (sin tildar, sólo la arma y deja el
    video para descargar 7 días).
 4. **destino:** `ambas`, `instagram` o `facebook`.
@@ -285,7 +309,7 @@ impuntual).
 2. Mirar que estén **prendidos** los trabajos: "Actualizar la web", el reloj
    de "Redes" y "Vigilancia" (según GitHub, a Redes lo llaman tres veces por
    hora: puede haber un cuarto trabajo; ver `08-INFRAESTRUCTURA`,
-   "Diferencias").
+   "cron-job.org").
 3. Prender el que esté apagado. En su historial se ve por qué fallaba: un
    error 401 o 403 quiere decir que el **token de GitHub** venció o está mal
    (lo reemplaza una persona, en el encabezado `Authorization` de **todos** los
@@ -441,30 +465,13 @@ La lista completa y al día de lo pendiente: `PENDIENTES.md`.
 | Se editó `decisiones.json` con el panel prendido | El cambio desaparece a los 10 minutos | Usar `retiradas.json` o `correcciones.json`, o el panel |
 | Se corrigió una nota que ya estaba en Facebook | La red sigue mostrando lo viejo | Editar o borrar el posteo a mano |
 | Se retiró una nota que estaba en Facebook | El enlace del posteo da "no encontrada" | Borrar el posteo a mano |
-| Se corrió Piezas con `solo` vacío | Se armaron todas las piezas del día (gasto de voz) y, si se tildó publicar, se subieron todas las que faltaban | Siempre escribir el nombre |
+| Se corrió Piezas con `solo` vacío | La corrida termina en rojo con "Sin piezas elegidas" y no arma nada (no gasta) | Escribir el nombre, o marcar `todas` si de verdad se quieren todas |
+| Una corrección o retirada sin `cuando` o sin `por` | El código sólo exige `motivo`, pero las pruebas piden los tres: "Actualizar la web" falla y la web se congela | Completar los tres campos |
 | Se cambió código de `ingesta/`, `panel/` o `reels/` y no se reinició el panel | El panel sigue haciendo lo de antes | Tarea 7 |
 
-## Diferencias encontradas con los documentos viejos
+## Lo que sigue abierto
 
-1. **"Si hiciera falta, se puede subir a mano desde el workflow Piezas"**
-   (`REDES.md`, sobre la historia de un podcast que no salió): no se puede. El
-   plan no vuelve a armar un podcast que ya figura en el libro de Instagram, y
-   la historia de un reel sólo se sube junto con ese reel. Queda subir a mano
-   el video del artefacto de la corrida (detalle en `07-REDES`).
-2. **"Cambiar cuándo salen las historias → panel → Calendario"** (`CLAUDE.md`,
-   `REDES.md`): lo que se guarda en el Calendario no llega a GitHub, que es lo
-   único que publica. Las horas reales son las de fábrica de
-   `panel/horarios.mjs`; cambiarlas es un cambio de código.
-3. **La portada muestra 36 horas** (`HORAS_EN_PORTADA` en `web/lib/archivo.js`),
-   no 72 como dice `CLAUDE.md`. `EMPEZAR-ACA.md` ya lo dice bien. Por eso
-   `esperando-cuerpo.json` sólo lista las notas de las últimas 36 horas.
-4. **La Auditoría de los lunes nunca corrió** (al 28/09 a las 15:15, ninguna
-   corrida en Actions) y el vigilante no lo avisa mientras no exista
-   `web/data/auditoria.json`. `EMPEZAR-ACA.md` e `INFRAESTRUCTURA.md` la dan
-   por andando.
-5. **Los trabajos de cron-job.org** serían tres según `EMPEZAR-ACA.md`, pero a
-   "Redes" lo llaman tres veces por hora (:05, :35 y :45), de 0 a 22: puede
-   haber un cuarto trabajo.
-6. **"Sin motivo no vale"** (`CLAUDE.md`) es lo que hace el código; las
-   pruebas piden además `cuando` y `por` en cada entrada de `correcciones.json`
-   y `retiradas.json`. Sin ellos, la web deja de actualizarse.
+En `PENDIENTES.md`: la pestaña Calendario del panel no cambia las horas de lo
+que publica GitHub (las reales son las de fábrica de `panel/horarios.mjs`), la
+Auditoría de los lunes nunca corrió y hay que mirar cuántos trabajos tiene
+cron-job.org.

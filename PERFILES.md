@@ -13,7 +13,7 @@ sección B). Nada de acá inventa datos: sólo dice lo que el medio hace hoy.
 3. **Que hay IA, sin esconderla y sin hacerla protagonista**: una línea, en la
    descripción larga de Facebook y en `/quienes-somos`. La bio de Instagram
    tiene poco lugar y va sin ella. Es la misma transparencia que pide
-   `REGLAS.md` (cada nota dice quién la escribió).
+   `docs/10-REGLAS-Y-PRUEBAS.md` (regla 7: cada nota dice quién la escribió).
 4. **Adónde ir**: `radarbalcarce.com`, **en los dos perfiles**, siempre
    escrito así (nunca `.com.ar`).
 5. **Tono**: el del medio (`CRITERIO-REDES.md`, sección 2, y `CRITERIO-EDITORIAL.md`,
@@ -124,4 +124,4 @@ compu: la marca tiene que verse entera.
 
 ## Relacionado
 
-`REDES.md`, `FORMATOS.md`, `REGLAS.md`, `PENDIENTES.md`.
+`docs/07-REDES.md`, `FORMATOS.md`, `docs/10-REGLAS-Y-PRUEBAS.md`, `PENDIENTES.md`.

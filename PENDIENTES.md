@@ -1,7 +1,8 @@
 # Pendientes: todo en un solo lugar
 
-*Actualizado el 28/09/2026.* Los otros documentos explican **cómo** funciona
-cada cosa; éste dice **qué falta**. Lo que se exige siempre está en `REGLAS.md`.
+*Actualizado el 28/09/2026 a la noche.* Los otros documentos explican **cómo** funciona
+cada cosa; éste dice **qué falta**. Las reglas que se exigen siempre están en `docs/10-REGLAS-Y-PRUEBAS.md`; cómo funciona
+cada parte, en `docs/` (empezar por `docs/00-INDICE.md`).
 Lo que ya se hizo está al final ("Ya resuelto"). Cada cosa figura una sola vez.
 
 **Redes prendidas otra vez desde el 28/09 a las 12:50** (Hernán: "activá las
@@ -16,7 +17,8 @@ Cada pendiente dice **quién** lo hace (Hernán, Andrés, "los dos" o Claude) y
 
 ## El plan V2.2 (27/09): cómo se eligen las notas
 
-El plan completo, con la hoja de ruta, está en [`docs/PLAN-V2.2.md`](docs/PLAN-V2.2.md).
+El plan completo, con la hoja de ruta, está en [`docs/historico/PLAN-V2.2.md`](docs/historico/PLAN-V2.2.md)
+(es la foto del plan de ese día; lo que quedó por hacer está en la tabla de abajo).
 Punto de restauración anterior a los cambios: la etiqueta `antes-de-v2.2` en GitHub.
 
 **Hecho el 27/09:** filtro de entrada por la sección del medio (otros países,
@@ -47,7 +49,8 @@ de las repetidas queda la ya publicada, y cuerpos escritos a mano en
 | ~~Borrar de Facebook e Instagram el posteo de Necochea~~ **Hecho el 28/09** (lo borró Hernán en las dos redes) | Hernán | — |
 | **Hecho el 28/09:** `GEMINI_API_KEY_CLASIFICACION` cargada (la lectura con IA sube a 200 pedidos por día y la redacción vuelve a 450) y `GROQ_API_KEY` cargada (segundo proveedor gratis de respaldo para la lectura con IA, `leerGrupoGroq` en `ingesta/lectura-ia.mjs`, si Gemini falla o se queda sin cupo). Falta mirar unos días cómo rinde Groq de respaldo. | Claude | Baja |
 | **Hecho el 27/09:** perfil de Balcarce (`ingesta/perfil-balcarce.md`) y lectura rápida con IA en prueba silenciosa (`ingesta/lectura-ia.mjs`, fichas en `web/data/fichas.json`). **Desde el 27/09 la IA decide** (sin prueba ni examen, a pedido de Hernán: se corrige en vivo). **Falta:** lectura con el texto completo (nivel 2), historias por `clave_tema`, resumen de lo que sacó la IA en el WhatsApp de las 21 | Claude | Semanas 2 y 3 |
-| Notas populares medidas (cobertura y Tendencias de Google Argentina), primero sólo anotando cuáles habría publicado | Claude | Después del primer mes |
+| Notas populares medidas (cobertura y Tendencias de Google Argentina), primero sólo anotando cuáles habría publicado. Nunca a redes, sin morbo ni chimentos, hasta 5 por día. El feed de Tendencias (`trends.google.com/trending/rss?geo=AR`) respondía el 27/09; no está en el código | Claude | Después del primer mes |
+| Lo que queda de la hoja de ruta del plan: reglas por ámbito (un anuncio no es un hecho); redes con la ficha de la IA (medidas provinciales como IOMA o ARBA); puntaje de fuentes por sección con ajuste mensual; el podcast de la noche con el mismo piso de relevancia que los otros (hoy no tiene); fuentes nuevas (Concejo, hospital, bomberos, Facultad, SMN, ANSES, Boletín Oficial, más TC); actualizar una nota cuando la historia sigue | Claude, con los dos | Semanas 4 y 5 |
 
 ## Lo primero del 26/09: comprobar que Facebook ya se ve
 
@@ -99,7 +102,7 @@ clave o una decisión.
 - **Panel 100% online.** Hoy vive en la PC de Hernán y, con la PC apagada, no se
   pueden decidir notas amarillas ni cargar avisos. Primero hay que decidir cómo
   se entra (Cloudflare Access o login propio) y que una persona cargue el token
-  de GitHub en Cloudflare. Opciones en `PANEL.md`.
+  de GitHub en Cloudflare. Opciones en `docs/09-PANEL.md`, "Cómo se podría pasar a online".
 - **Primer aviso publicitario**: cargarlo en los tres espacios, preguntar
   precios en Balcarce y armar la página `/publicidad` y el media kit
   (`PUBLICIDAD.md`).
@@ -110,7 +113,34 @@ clave o una decisión.
   instituciones): revisar lo dudoso, que está anotado en `nota` (Cámara de
   Comercio y Museo Histórico con teléfonos de guías, Escuela de Estética con
   datos de 2013, clubes sólo con Instagram o sin confirmar), y empezar a
-  escribirles desde "A quién escribir este mes" (`PANEL.md`).
+  escribirles desde "A quién escribir este mes" (`docs/09-PANEL.md`, "La agenda, paso a paso").
+
+## Encontrado al documentar (28/09)
+
+Al escribir `docs/` desde el código aparecieron diferencias. Las que eran un
+error del código se arreglaron ese mismo día (commit "Trece arreglos
+encontrados al documentar": acusaciones, firma de lo corregido a mano,
+sepelios, fuente oficial, páginas que se perdían por el cupo, fotos en la PC,
+crédito de Wikimedia, interruptor, útiles, reintentos de Vigilancia y
+Auditoría, Piezas vacío). Las que eran un documento viejo se resolvieron al
+retirarlo. Queda esto:
+
+| # | Qué | Quién | Urgencia |
+|---|---|---|---|
+| D1 | **La Auditoría de los lunes nunca corrió** (al 28/09 a las 15:15 no había ninguna corrida y `web/data/auditoria.json` no existe). Correrla una vez a mano (Actions → Auditoría → Run workflow) y mirar el lunes siguiente que corra sola. Además, `auditoriaVencida` (`redes/auditar.mjs`) no avisa mientras el archivo no exista: que avise también si nunca corrió | Hernán (correrla); Claude (el aviso) | Media |
+| D2 | **cron-job.org llama a "Redes" tres veces por hora** (:05, :35 y :45, de 0 a 22 hora de Balcarce, según el historial del 27 y 28/09), no "cada 30 minutos de 7 a 23". Mirar en console.cron-job.org si hay un cuarto trabajo o uno con tres horarios; si lo hay, sumarlo a los que llevan el token de GitHub (se renueva antes del 21/09/2027). Después, corregir el comentario de `redes.yml` | Hernán (mirar); Claude (comentario) | Media |
+| D3 | **Las fotos: el criterio y el código no dicen lo mismo.** `CRITERIO-EDITORIAL.md` § 2 pide por defecto una foto propia, oficial, de stock o una ilustración (el código no tiene nada de eso: sin foto elegida, la página va sin imagen), "recortar" la foto de otro medio (se guarda entera; la página sólo la encuadra, así que un logo en una esquina puede quedar a la vista) y revisarla a ojo antes de guardarla (lo hace sólo la IA). Decidir si se cambia el criterio o el código | Los dos (decidir); Claude (hacerlo) | Media |
+| D4 | **Una nota amarilla aprobada por una persona puede llevar la foto de un chico**: la exclusión de menores y víctimas depende del semáforo rojo, y las amarillas por "niño", "adolescente" o "alumno de" que se publican desde el panel sí se prueban. Sumar esa regla a `elegiblePorSeccion` (`web/scripts/fotos-notas.mjs`) o mirar la foto al aprobar | Claude | Media |
+| D5 | **Una fuente oficial de afuera contada por un solo medio no pasa el cruce** (el Gobierno de la Provincia solo): "una fuente oficial alcanza sola" vale recién en los medios que pide la sección. Decidir si lo oficial de afuera tiene que entrar solo | Los dos | Baja |
+| D6 | **`CRITERIO-EDITORIAL.md` § 2 dice que lo de la zona "tiene el cupo de su sección"**: desde el 28/09 (`esDeAca`) no ocupa cupo. Corregir ese renglón del criterio (fuera de la instrucción de la IA) | Claude, con el sí de Hernán | Baja |
+| D7 | **La pestaña Calendario del panel no cambia lo que publica GitHub**: ni el reloj ni el plan leen lo guardado en el panel (los horarios van en `decisiones.json` y nadie los lee). Las horas reales son las de fábrica de `panel/horarios.mjs`. Decidir si GitHub los lee o se saca la pestaña | Los dos; Claude | Baja |
+| D8 | **Los tres créditos de Wikimedia guardados antes del arreglo** (Mariano Werner y dos de Colapinto) dicen sólo "Foto: Wikimedia Commons": completar autor y licencia en `web/data/banco-fotos.json` | Claude | Baja |
+| D9 | **`web/data/decisiones.json` pesa 2,5 MB** (1.540 decisiones, 1.390 escritas por la IA desde el panel): la poda a 60 días no alcanza porque cada decisión de la IA lleva el cuerpo y las partes internas. Achicar lo que se exporta | Claude | Baja |
+| D10 | **El panel escucha en todas las conexiones de la PC**: cualquiera en la misma red llega al login. Probar si puede escuchar sólo en `localhost` sin romper el túnel | Claude, con Hernán | Baja |
+| D11 | **Una decisión del panel puede no llegar a la web** si la nota tiene otro identificador en la nube (el panel no pasa `idsConocidos` a la ingesta). Sale de leer el código; no está medido. Medirlo o pasárselos | Claude | Baja |
+| D12 | **Código sin uso**: `placaNoticia` (`reels/placa.mjs`), la cortina (`reels/cortina.mjs`, apagada) y las páginas `/tema/` (sin enlaces desde el 21/09). Decidir si se borran o se vuelven a usar | Los dos | Baja |
+| D13 | **La variable del ID de la página de Facebook tiene dos nombres** (`META_PAGE_ID` y `META_PAGINA_ID`). Ninguna está cargada y todos usan el ID fijo; unificar | Claude | Baja |
+| D14 | **Comentarios y títulos de pruebas que quedaron viejos** (no cambian lo que hace el código): `ampliar` en `ingesta/ingesta.mjs` ("sólo lo que no tiene cuerpo, unos 15 pedidos": abre todo lo raspado); `HORAS_EN_PORTADA` en `web/lib/archivo.js` ("el mismo criterio que el panel": el panel archiva a las 72 h); `panel/servidor.mjs` ("si la IA falla tres veces seguidas": son tres en el ciclo); `web/next.config.mjs` ("las únicas imágenes son las placas propias"); la descripción de `web/package.json` ("datos generados desde el panel"); `web/app/sitemap.js` (el feed "trae las últimas veinte"); `web/lib/tarjeta-diseno.js` (nombra `tarjeta-diseno.test.mjs`, que no existe: es `placas.test.mjs`); la pestaña "Para redes" de `panel/panel.html` ("el camino real de todos los días"); `redes.yml` (D2); el título "corta las listas en 72 horas" de `pruebas/archivo.test.mjs` (son 36) y el encabezado de `pruebas/criterios-extranjero-zona.test.mjs` ("los sepelios esperan a una persona", "7 días") | Claude | Baja |
 
 ## Para Claude (código y seguimiento)
 
@@ -136,9 +166,10 @@ clave o una decisión.
      Radar Balcarce"). Hoy `banco-fotos.json` sólo lo arma el código.
   5. ~~Mostrar la foto en la página de la nota~~ **Hecho**: con su crédito en
      el epígrafe, nunca adentro de la imagen (`web/app/nota/[id]/page.js`).
-     **Sigue igual sin foto en redes ni en la tarjeta para compartir**: esas
-     siguen con la placa propia (`reels/placa.mjs`, `web/lib/tarjeta.js`), a
-     propósito, para no repetir el trabajo de decidir dos veces.
+     **El espejo de Instagram lleva la foto** (28/09, `FOTO_EN_INSTAGRAM`, con el
+     crédito en el texto del posteo). Sigue sin foto la tarjeta para compartir el
+     enlace (`web/lib/tarjeta.js`, `paraCompartir`): falta decidirlo, ver el
+     catálogo gráfico. La placa sin foto es lo que sale cuando no hay foto.
   6. ~~Buscar una foto de la persona nombrada~~ **Hecho** (idea de Hernán,
      28/09, al ver el caso de Mariano Werner: una sola fuente, con marca de
      agua): si ninguna fuente sirve y la nota es de una sola persona pública
@@ -162,7 +193,7 @@ clave o una decisión.
      compila el sitio).
   3. Un `<audio controls>` en la página de la nota del repaso, con el
      archivo de esa fecha.
-- **El rediseño (dirección B, ver `PROPUESTA-REDES.md`) suma tres cosas más**
+- **El rediseño (dirección B: el lienzo "Radar Balcarce · Plantillas redes", aprobado el 28/09; ver `docs/07-REDES.md` y `MEDIA-KIT.md`) suma tres cosas más**
   (27/09, Hernán):
   1. Probarlo también como tarjeta de enlace de **WhatsApp**
      (`web/lib/tarjeta.js`, la misma que arma tarjeta para Facebook), no sólo
@@ -181,8 +212,8 @@ clave o una decisión.
      versión azul con el nombre y así quedaron en Instagram y Facebook.
 - **Mirar los primeros días de redes.** Que salgan bien los tres podcasts, el
   enlace en los posteos de Facebook y el espejo a Instagram; que el contrato del
-  día cierre completo (`REDES.md`). Si algo deja de salir, seguir "Si algo dejó
-  de salir" en `EMPEZAR-ACA.md`.
+  día cierre completo (`docs/07-REDES.md`). Si algo deja de salir, seguir "Si
+  algo dejó de salir" en `docs/11-OPERACION.md`.
 - **Mirar los avisos nuevos por WhatsApp** (andan desde el 25/09): que no sean
   demasiados ni muy pocos, y ajustar los umbrales en `redes/avisos.mjs`.
 
@@ -251,6 +282,15 @@ Las ideas más grandes, que cambian cómo funciona algo, están en `IDEAS.md`.
 
 ## Ya resuelto (para no volver a proponerlo)
 
+- **28/09:** portada de 36 horas y 12 para estrenar (`llegaTarde`); una fecha
+  única por nota (`vistas.json`); "de acá" con una sola definición (`esDeAca`);
+  lo copiado de afuera por un medio de acá espera a la IA; el banco de fotos en
+  la web; Groq de respaldo; la nota del dólar sólo si se mueve 2 %; "Hoy en
+  Balcarce" y `/clima`; las plantillas nuevas de redes; los trece arreglos
+  encontrados al documentar (reglas 63 a 67 de `docs/10-REGLAS-Y-PRUEBAS.md`);
+  y la documentación en limpio (`docs/00` a `docs/12`), que reemplazó a
+  `REGLAS.md`, `REDES.md`, `INFRAESTRUCTURA.md`, `PANEL.md`, `EMPEZAR-ACA.md`,
+  `MANUAL.md` y `docs/RADAR-3.0.md`.
 - **27/09:** plan V2.2 semana 1 (filtro de entrada, fichas de fuente, policiales
   sólo de Balcarce), la lectura con IA decide en vivo, el cruce de medios (218
   fuentes configuradas, 214 activas; ya no entran "las 3 a 5 más nuevas"), lo de
@@ -260,14 +300,14 @@ Las ideas más grandes, que cambian cómo funciona algo, están en `IDEAS.md`.
   Balcarce", correcciones y retiradas a mano sin el panel, `FUENTES.md`,
   tipografía Source Serif 4 e Inter en todo; a la noche, lo de la zona, los
   sepelios, las 72 horas, lo copiado de afuera, la fecha de El Diario y los
-  cuerpos a mano (reglas 41 a 62 de `REGLAS.md`).
+  cuerpos a mano (reglas 41 a 62 de `docs/10-REGLAS-Y-PRUEBAS.md`).
 - **26/09:** la app de Meta se **publicó** (modo activo); Policiales sólo de
   Balcarce y la zona; secciones flacas con 13 fuentes nuevas, pisos (desde el
   27/09, cantidad de medios) y cupos por
   sección (58 fuentes en total); una sola hora de Balcarce para todo el código
   (`ingesta/zona.mjs`, incluye los teléfonos útiles) y una sola lectura de JSON
   (`ingesta/json.mjs`); se sacó "Resumen hecho con IA" de los posteos de redes.
-- **26/09, contrato del día y reels** (reglas 33 a 40 de `REGLAS.md`): historias
+- **26/09, contrato del día y reels** (reglas 33 a 40 de `docs/10-REGLAS-Y-PRUEBAS.md`): historias
   de podcast de hasta 58 s, con presupuesto de 55 s en el guion y corte de
   seguridad (`reels/duracion.mjs`); los teléfonos útiles con una sola regla de
   "¿toca hoy?" (el 25/09 nunca se armaron); techo de 8 historias por día; con las
@@ -289,7 +329,7 @@ Las ideas más grandes, que cambian cómo funciona algo, están en `IDEAS.md`.
   - **Semáforo más estricto**: mira el texto completo y lo que escribe la IA; la
     IA tiene prohibido identificar menores y víctimas.
   - **Sin cuerpo no se publica** y el lector ve la nota, no el análisis
-    (`REGLAS.md`, reglas 23 y 24); la IA trabaja como editor digital (claves,
+    (`docs/10-REGLAS-Y-PRUEBAS.md`, reglas 23 y 24); la IA trabaja como editor digital (claves,
     qué se sabe, verificación).
   - **Criterio editorial único** (`CRITERIO-EDITORIAL.md`, que la IA lee tal
     cual) y **criterio único de las redes** (`CRITERIO-REDES.md`, una sola

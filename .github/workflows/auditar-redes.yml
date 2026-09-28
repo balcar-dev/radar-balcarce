@@ -13,7 +13,7 @@
 #             desde otro día que no sea el 25/09, cuando empezó el contrato)
 #   Crudo     lo que devuelve Meta, sin interpretar (por si algo no cuadra)
 #
-# El contrato del día está en REDES.md ("El contrato del día"). El vigilante
+# El contrato del día está en docs/07-REDES.md ("Qué sale cada día: el contrato"). El vigilante
 # hace la misma auditoría solo, todos los días a las 23:30 (redes/vigilar.mjs).
 #
 # SECRETO: META_TOKEN (el mismo que publica; nunca se imprime).

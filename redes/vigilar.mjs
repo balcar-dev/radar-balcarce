@@ -21,7 +21,7 @@
 //     con 30 días de aviso;
 //   · que la portada NO vuelva a mostrar lo que se pidió sacar (la fuente arriba
 //     de un título, "la vimos hace…", hasta qué hora está la farmacia), y que
-//     la mayoría de las notas tengan cuerpo. Ver REGLAS.md.
+//     la mayoría de las notas tengan cuerpo. Ver docs/10-REGLAS-Y-PRUEBAS.md.
 //
 // Los problemas se avisan una vez cada seis horas (no un mensaje cada media
 // hora por lo mismo), y a las 21 sale el resumen del día.
@@ -142,12 +142,12 @@ export function evaluar({
   }
   if (www && !www.redirige) de('www', 'media', 'www.radarbalcarce.com ya no redirige al dominio sin www.');
 
-  // --- lo que se pidió que NO aparezca (REGLAS.md): si vuelve, se avisa
+  // --- lo que se pidió que NO aparezca (reglas 1 a 3, docs/10-REGLAS-Y-PRUEBAS.md): si vuelve, se avisa
   if (contenido?.home) {
     const h = contenido.home;
-    if (h.laVimos) de('regla-la-vimos', 'alta', 'La portada volvió a decir "la vimos hace…" o "sin hora". Se pidió sacarlo (REGLAS.md).');
-    if (h.horaFarmacia) de('regla-hora-farmacia', 'alta', 'La tarjeta de la farmacia volvió a decir hasta qué hora está de turno. Se pidió sacarlo (REGLAS.md).');
-    if (h.fuentesEnChapa) de('regla-fuentes', 'alta', `La portada volvió a mostrar la fuente arriba de los títulos (${h.fuentesEnChapa}). Se pidió sacarlas (REGLAS.md).`);
+    if (h.laVimos) de('regla-la-vimos', 'alta', 'La portada volvió a decir "la vimos hace…" o "sin hora". Se pidió sacarlo (regla 2, docs/10-REGLAS-Y-PRUEBAS.md).');
+    if (h.horaFarmacia) de('regla-hora-farmacia', 'alta', 'La tarjeta de la farmacia volvió a decir hasta qué hora está de turno. Se pidió sacarlo (regla 3, docs/10-REGLAS-Y-PRUEBAS.md).');
+    if (h.fuentesEnChapa) de('regla-fuentes', 'alta', `La portada volvió a mostrar la fuente arriba de los títulos (${h.fuentesEnChapa}). Se pidió sacarlas (regla 1, docs/10-REGLAS-Y-PRUEBAS.md).`);
   }
   if (contenido?.cuerpos && contenido.cuerpos.total >= 10) {
     const { total, conCuerpo } = contenido.cuerpos;
@@ -243,7 +243,7 @@ export function problemasDelContrato(contrato, { redesActivas = true } = {}) {
   const lista = [];
   for (const red of [contrato.facebook, contrato.instagram]) {
     for (const d of red.duplicadas) {
-      lista.push({ clave: `duplicado-${red.red}-${d.claves.join('+')}`, nivel: 'alta', texto: `${red.nombre}: DUPLICADO. ${d.texto}. Revisá la página y borrá la copia (REGLAS.md, "una pieza por día").` });
+      lista.push({ clave: `duplicado-${red.red}-${d.claves.join('+')}`, nivel: 'alta', texto: `${red.nombre}: DUPLICADO. ${d.texto}. Revisá la página y borrá la copia (regla 33, docs/10-REGLAS-Y-PRUEBAS.md: una pieza por día).` });
     }
     // Con las redes apagadas lo que falta es lo esperable: lo dice `evaluar` una vez.
     if (!redesActivas) continue;

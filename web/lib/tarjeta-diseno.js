@@ -17,14 +17,14 @@ import fs from 'node:fs';
 import path from 'node:path';
 
 /**
- * ¿La imagen del posteo de Instagram lleva la foto de la nota (del banco
- * propio, con el crédito en el texto del posteo)? Por ahora NO: CRITERIO-
- * EDITORIAL.md § 9 dice que en redes va siempre la placa propia, y usar ahí la
- * foto de otro medio lo decide Hernán (28/09). Lo leen la imagen
- * (app/nota/[id]/instagram.png) y el texto del posteo (redes/publicar.mjs), así
- * nunca va un crédito sin foto ni una foto sin crédito.
+ * ¿La imagen del posteo de Instagram lleva la foto de la nota (la del banco
+ * propio, con el crédito en el texto del posteo)? SÍ desde el 28/09: la decisión
+ * del 27/09 es que la foto va donde haya una que sirva y la placa sin foto es lo
+ * que sale cuando no la hay. Lo leen la imagen (app/nota/[id]/instagram.png) y
+ * el texto del posteo (redes/publicar.mjs), así nunca va un crédito sin foto ni
+ * una foto sin crédito. Para volver a la placa en todos: false.
  */
-export const FOTO_EN_INSTAGRAM = false;
+export const FOTO_EN_INSTAGRAM = true;
 
 export const TAMANO = { width: 1200, height: 630 };
 export const TAMANO_INSTAGRAM = { width: 1080, height: 1350 };

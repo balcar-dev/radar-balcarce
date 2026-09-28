@@ -1,5 +1,5 @@
 // Las fuentes del cruce de medios (27/09): generadas desde las listas probadas
-// ese día (docs/CRUCE-DE-MEDIOS.md). Son las que se suman a las de
+// ese día (docs/historico/CRUCE-DE-MEDIOS.md). Son las que se suman a las de
 // fuentes.mjs para contar cuántos medios cuentan cada hecho: de afuera entra
 // sólo lo que cuentan dos o más (ingesta/cruce.mjs). Para sacar una, se borra
 // su línea; para apagarla sin borrarla, `activa: false`.

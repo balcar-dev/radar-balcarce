@@ -55,7 +55,7 @@ const F_ULTIMA = path.join(DATOS, 'ultima.json');
 const F_AGENDA = path.join(DATOS, 'agenda.json');
 const PUERTO = 4321;
 
-// Los tres espacios de publicidad de la web (ver REDES.md § 2). Va directo a
+// Los tres espacios de publicidad de la web (ver PUBLICIDAD.md). Va directo a
 // web/data/avisos.json, el mismo archivo que lee el sitio, y se sube solo a
 // GitHub (panel/sincronizar.mjs).
 const F_AVISOS = path.join(AQUI, '..', 'web', 'data', 'avisos.json');

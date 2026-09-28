@@ -388,9 +388,8 @@ const fmtPesos = (n) => `$${Math.round(Number(n)).toLocaleString('es-AR')}`;
  * secundario }]. Los decide quien llama, para que la placa de la mañana y la
  * de la noche no digan lo mismo. `aviso` = { titulo, texto } agrega el recuadro
  * del aviso; `pronostico` = { titulo, texto }, uno con lo que viene (el de la
- * noche cuenta cómo amanece mañana). `dolar` = { oficial, blue, cuando } agrega
- * el del dólar. Nunca va
- * la fuente del dato.
+ * noche cuenta cómo amanece mañana). Nunca va la fuente del dato ni el dólar
+ * (si se mueve, sale como nota propia).
  */
 // Hasta dónde puede llegar el contenido de una historia de servicio: debajo
 // van la firma y la dirección del sitio (filas 1480 a 1570).
@@ -409,7 +408,7 @@ export function placaClima(opciones) {
 
 function armarClima({
   temp, cielo, max, min, fecha, sensacion = null, viento = null, rumbo = '', esDeDia = true,
-  kicker = 'Hoy en Balcarce', etiqueta = 'El clima ahora', cajas = [], aviso = null, pronostico = null, dolar = null,
+  kicker = 'Hoy en Balcarce', etiqueta = 'El clima ahora', cajas = [], aviso = null, pronostico = null,
 }, k = 1) {
   const cab = cabecera(kicker, fecha);
   const x0 = 64;
@@ -468,17 +467,6 @@ function armarClima({
   };
   if (aviso?.texto) recuadro('Qué hay que saber', aviso.texto, COLORES.rojo, COLORES.rojo);
   if (pronostico?.texto) recuadro(pronostico.titulo ?? 'Mañana', pronostico.texto, COLORES.lineaSuave, COLORES.gris);
-
-  // El dólar: la venta del oficial y del blue, con cuándo se tomó (nunca "en vivo").
-  if (dolar && (dolar.oficial || dolar.blue)) {
-    const alto = m(150);
-    const valores = [['Oficial', dolar.oficial], ['Blue', dolar.blue]].filter(([, v]) => v);
-    partes.push(`<rect x="${x0}" y="${y}" width="${ancho}" height="${alto}" rx="36" fill="#FFFFFF" stroke="${COLORES.lineaSuave}" stroke-width="2"/>
-  ${rotulo('Dólar', { x: adentro, y: y + m(66), color: COLORES.gris, tam: 26 })}
-  ${dolar.cuando ? `<text x="${adentro}" y="${y + m(108)}" font-family="${TEXTO}" font-size="23" font-weight="400" fill="${COLORES.suave}">${esc(dolar.cuando)}</text>` : ''}
-  ${valores.map(([nombre, v], i) => `<text x="${x0 + ancho - 48 - (valores.length - 1 - i) * 290}" y="${y + m(92)}" text-anchor="end" font-family="${TEXTO}" font-size="30" font-weight="400" fill="${COLORES.tinta}">${nombre} <tspan font-size="44" font-weight="700">${esc(fmtPesos(v))}</tspan></text>`).join('\n  ')}`);
-    y += alto + hueco;
-  }
 
   return {
     fin: y - hueco,

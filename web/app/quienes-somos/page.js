@@ -73,8 +73,10 @@ export default function QuienesSomos() {
         <h3 style={TITULO}>Lo que no hacemos</h3>
         <ul style={{ paddingLeft: 20 }}>
           <li>
-            <strong>No usamos fotos de otros medios.</strong> Son obra de quien las sacó. En su
-            lugar va una placa propia con el titular.
+            <strong>No usamos fotos sin decir de dónde salen.</strong> Cada una lleva el crédito de
+            quien la sacó o del medio u organismo de donde viene, y nunca la marca de otro medio
+            adentro de la imagen. Si no hay una que sirva, va una placa con el titular. Si una
+            foto es tuya y no querés que esté, <a href="/contacto">escribinos</a> y la sacamos.
           </li>
           <li>
             <strong>No identificamos a menores ni a víctimas</strong> de violencia de género o de

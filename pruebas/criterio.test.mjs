@@ -230,7 +230,7 @@ test('las frases de relleno son las mismas en el código, en el documento y en l
 
 test('EDITORIAL.md ya no existe y ningún documento lo nombra: el criterio es uno solo', () => {
   assert.ok(!fs.existsSync(path.join(RAIZ, 'EDITORIAL.md')));
-  for (const doc of ['CLAUDE.md', 'MANUAL.md', 'REGLAS.md', 'REDES.md', 'PANEL.md', 'EMPEZAR-ACA.md', 'PENDIENTES.md', 'SEO.md', 'web/README.md']) {
+  for (const doc of ['CLAUDE.md', 'PENDIENTES.md', 'SEO.md', 'web/README.md', 'ingesta/README.md', ...fs.readdirSync(path.join(RAIZ, 'docs')).filter((f) => f.endsWith('.md')).map((f) => `docs/${f}`)]) {
     if (!fs.existsSync(path.join(RAIZ, doc))) continue;
     assert.doesNotMatch(leer(doc).replace(/CRITERIO-EDITORIAL\.md/g, ''), /\bEDITORIAL\.md/, `${doc} todavía nombra EDITORIAL.md`);
   }

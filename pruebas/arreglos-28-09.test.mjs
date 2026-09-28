@@ -267,7 +267,7 @@ test('la pieza de teléfonos útiles va en Balcarce: la sección Servicios no ex
   let utiles = null;
   for (let d = 21; d <= 27 && !utiles; d += 1) {
     const fecha = new Date(`2026-09-${d}T09:00:00-03:00`);
-    utiles = planDelDia(datos, { fecha, estado: {}, eventos: [], dolar: null, libro: libroNuevo() }).piezas.find((p) => p.nombre === 'utiles');
+    utiles = planDelDia(datos, { fecha, estado: {}, eventos: [], libro: libroNuevo() }).piezas.find((p) => p.nombre === 'utiles');
   }
   assert.ok(utiles, 'en una semana le toca un día');
   assert.equal(utiles.seccion, 'Balcarce');

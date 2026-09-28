@@ -44,8 +44,11 @@ cinco horas entre dos corridas el 21/09):
 
 - **cron-job.org** llama a la API de GitHub pidiendo `redes.yml` con la acción
   `reloj`. Según el historial de corridas del 27 y 28/09, llega a los minutos
-  :05, :35 y :45 de cada hora, desde las 0 hasta las 22 (ver "Diferencias", al
-  final).
+  :05, :35 y :45 de cada hora, desde las 0 hasta las 22 (los documentos viejos
+  y el comentario de `redes.yml` decían "cada 30 minutos, de 7 a 23": puede
+  haber un trabajo de más en cron-job.org; está en `PENDIENTES.md`). El cuerpo
+  del pedido es `{"ref":"main","inputs":{"accion":"reloj"}}` y va a
+  `actions/workflows/redes.yml/dispatches`.
 - **El final de "Actualizar la web"** (`workflow_run`): cada vez que termina
   esa corrida, bien o mal, arranca Redes. Es el respaldo si cron-job.org se
   cae.
@@ -59,16 +62,17 @@ por trabajar con un libro viejo.
 ### 2. El interruptor: `REDES_ACTIVAS`
 
 Es una **variable** de GitHub (Settings → Secrets and variables → Actions →
-Variables), no un secreto. Se lee en dos lugares:
+Variables), no un secreto. Se lee con **una sola regla**, `estaActivo`
+(`redes/elegir.mjs`): "si" sin importar mayúsculas, tildes ni espacios
+alrededor ("Si", "SÍ", " sí "). La usan dos programas:
 
-- En el código (`estaActivo`, `redes/elegir.mjs`): acepta "Si", "si", "SÍ",
-  "sí" y cualquier combinación, con o sin tilde. Con eso, `redes/publicar.mjs`
-  publica; con cualquier otra cosa escribe "(modo prueba: no se publicó…)".
-- En el workflow, el paso "Ver qué pieza toca ahora" sólo corre si la variable
-  es una de estas seis formas exactas: `Si`, `si`, `SI`, `Sí`, `sí`, `SÍ`. **Con
-  las redes apagadas el reloj ni mira la hora y no se arma ninguna pieza**
-  (28/09): antes se armaba cada media hora con la voz paga de Gemini para no
-  publicarla.
+- `redes/publicar.mjs`: con el interruptor prendido publica; con cualquier
+  otra cosa escribe "(modo prueba: no se publicó…)".
+- `redes/reloj.mjs` (desde el 28/09; antes el workflow comparaba con seis
+  formas fijas y podía dar otra respuesta que `publicar.mjs`): **con las
+  redes apagadas el reloj no pide ninguna pieza** (`hay=false`, "las redes
+  están apagadas"), así no se gasta la voz paga de Gemini en videos que no se
+  van a publicar.
 
 Con el interruptor apagado: el paso de Facebook corre igual pero sólo simula,
 no se arma ni se sube ningún video, no se reintentan espejos, el libro no
@@ -352,7 +356,7 @@ pieza") y lo arma `redes/guiones.mjs`.
 
 | Pieza | Guion (`redes/guiones.mjs`) | Placa (`reels/placa.mjs`) | Qué muestra la placa |
 |---|---|---|---|
-| Clima de la mañana | `guionClima` | `placaClima` | La tarjeta oscura del clima ahora (temperatura, cielo, sensación, viento), hoy y los dos días que siguen, y el **dólar** oficial y blue de la última cotización de las 11 guardada por la web (nunca "en vivo"; si tiene más de 4 días, no va: `dolarParaLaPlaca`) |
+| Clima de la mañana | `guionClima` | `placaClima` | La tarjeta oscura del clima ahora (temperatura, cielo, sensación, viento), hoy y los dos días que siguen. Sin dólar: si se mueve, sale como nota propia |
 | Clima de la noche | `guionClimaNoche` | `placaClima` | "Cómo sigue el día": ahora, la mínima de esta noche, mañana y pasado, con el pronóstico de mañana en una frase |
 | Aviso de clima | título y texto del aviso | `placaClima` con recuadro de aviso | La tarjeta del clima con el recuadro del aviso: el título del aviso es lo que se ve de reojo y abajo va lo que hay que saber; acento en el color de Policiales |
 | Farmacia de turno | `guionFarmacia` | `placaFarmacia` | La farmacia (o las dos) de turno, la dirección y "De turno hasta mañana a las 8:30" (`hastaCuandoElTurno`). El turno lo decide la web (`02-INGESTA`) |
@@ -421,7 +425,7 @@ acento. Con dos excepciones firmes: las letras son las del sitio (Source Serif
 | Placas de historias y reels | `reels/placa.mjs` (`placaRepaso`, `placaClima`, `placaFarmacia`, `placaUtiles`, `placaAgenda`) | 1080 × 1920 | Instagram y la página de Facebook |
 | Tarjeta del espejo | `web/lib/tarjeta.js` (`tarjeta(nota, { instagram: true })`), servida en `/nota/ID/instagram.png` (`web/app/nota/[id]/instagram.png/route.js`) | 1080 × 1350 (4:5) | El feed de Instagram |
 | Tarjeta para compartir | `web/lib/tarjeta.js` (`tarjeta(nota)`), servida por `opengraph-image` | 1200 × 630 | Facebook con enlace, WhatsApp, X |
-| Las cuentas de las tarjetas (colores, cuerpos del título, qué entra, zonas) | `web/lib/tarjeta-diseno.js` | — | Se prueban sin levantar el sitio (`pruebas/tarjeta-diseno.test.mjs`) |
+| Las cuentas de las tarjetas (colores, cuerpos del título, qué entra, zonas) | `web/lib/tarjeta-diseno.js` | — | Se prueban sin levantar el sitio (`pruebas/placas.test.mjs`) |
 
 - Las tarjetas se generan **al compilar el sitio**, una por nota (las de la
   portada y las archivadas que salieron en redes, `notasConImagen`), y quedan
@@ -437,18 +441,17 @@ acento. Con dos excepciones firmes: las letras son las del sitio (Source Serif
 - El avatar (`reels/avatar.mjs`) y la portada de Facebook (`reels/portada.mjs`)
   se generan a mano en la PC y los sube una persona (`PARA-CARGAR-A-MANO.md`).
 
-## La foto en Instagram, apagada (`FOTO_EN_INSTAGRAM`)
+## La foto en el espejo de Instagram (`FOTO_EN_INSTAGRAM`)
 
-La tarjeta de Instagram **sabe** llevar la foto de la nota del banco propio
+La tarjeta de Instagram lleva la foto de la nota del banco propio
 (`web/data/banco-fotos.json`, ver `05-FOTOS`), recortada y sin el crédito
 adentro, con el crédito al final del texto del posteo (`conCreditoDeFoto`,
-`redes/elegir.mjs`). **Pero está apagado:** `FOTO_EN_INSTAGRAM = false` en
-`web/lib/tarjeta-diseno.js`, porque `CRITERIO-EDITORIAL.md` § 9 dice que en
-redes va siempre la placa propia, y usar ahí la foto de otro medio lo decide
-Hernán. La misma constante la leen la imagen (`instagram.png/route.js`) y el
-texto del posteo (`redes/publicar.mjs`), así nunca sale un crédito sin foto ni
-una foto sin crédito. Para prenderlo: cambiar esa constante **y** § 9 del
-criterio. La tarjeta apaisada de Facebook nunca lleva foto (su texto no nombra
+`redes/elegir.mjs`). Está prendido desde el 28/09 (`FOTO_EN_INSTAGRAM = true`
+en `web/lib/tarjeta-diseno.js`, decisión del 27/09: la foto va donde haya una
+que sirva). Sin foto en el banco, sale la placa sin foto. La misma constante la
+leen la imagen (`instagram.png/route.js`) y el texto del posteo
+(`redes/publicar.mjs`), así nunca sale un crédito sin foto ni una foto sin
+crédito. Para volver a la placa en todos: `false`. La tarjeta apaisada de Facebook nunca lleva foto (su texto no nombra
 la fuente, así que no habría dónde poner el crédito).
 
 ## La voz y los guiones
@@ -517,12 +520,49 @@ Límite de lo que Meta deja ver: **las historias sólo se ven mientras están
 activas (24 horas)**. Por eso el cierre es a las 23:30, y la auditoría de días
 anteriores cuenta las historias por el libro y lo dice.
 
+## Cómo está conectado con Meta
+
+- **Instagram** `@radarbalcarce`: cuenta profesional, vinculada a la página de
+  Facebook "Radar Balcarce".
+- **La página de Facebook**: su identificador para la API es
+  **`1254237411116171`** (Configuración del negocio → Páginas →
+  Identificador). El número que aparece en la dirección
+  `facebook.com/profile.php?id=…` (61594865361170) es el del perfil y la API
+  lo rechaza. El código usa el fijo; `redes/publicar.mjs` y
+  `redes/auditar-redes.mjs` aceptan pisarlo con `META_PAGE_ID` y
+  `redes/ver-facebook.mjs` con `META_PAGINA_ID` (ninguna está cargada).
+- **La app de Meta** "Radar Balcarce Publicador" (ID `2302218363874399`), en el
+  portfolio comercial "Radar Balcarce", con los casos de uso Threads,
+  Instagram y Páginas, y los permisos `pages_manage_posts`,
+  `pages_read_engagement`, `pages_show_list`, `instagram_basic` e
+  `instagram_content_publish`. **Se publicó (modo activo) el 26/09**: en modo
+  desarrollo publicaba, pero el público no veía los posteos ni los reels de
+  Facebook (las historias sí). El campo de dominios de la app quedó vacío.
+- **El usuario del sistema** `publicador-radar`, con la página (Contenido y
+  Estadísticas), el Instagram (Contenido y Estadísticas) y la app. Su token
+  **no vence** y es el secreto `META_TOKEN`. Le faltan `read_insights` e
+  `instagram_manage_insights` para las estadísticas (`PENDIENTES.md`).
+- **Por qué todo lo de Instagram es video:** la API de Instagram no acepta una
+  imagen que no esté en una dirección pública, y no se alojan archivos sueltos.
+  El video sí se le entrega directo. La única foto es el espejo, porque su
+  tarjeta ya está publicada en el sitio (`/nota/ID/instagram.png`).
+- **Lo que pasó con el bloqueo** (22 al 24/09): Meta bloqueó la API por
+  "actividad inusual" (`API access blocked`, `OAuthException`) y la pantalla
+  "Confirmar cuenta" fallaba. Era una falla de la plataforma que afectó a
+  muchas cuentas. Se resolvió el 24/09 confirmando la cuenta; hubo que
+  reactivar dos trabajos de cron-job.org que se habían apagado solos.
+
+**Los subtítulos**, medidos contra la voz de Edge (que trae el tiempo exacto de
+cada palabra), tienen un error medio de 0,1 a 0,2 segundos
+(`reels/tiempos.mjs`; los números se cuentan como los dice la voz: "715" son 6
+sílabas).
+
 ## Qué archivo hace qué
 
 | Archivo | Qué hace | Quién lo llama | Qué lee | Qué escribe |
 |---|---|---|---|---|
 | `.github/workflows/redes.yml` | El reloj: Facebook, piezas, direcciones y libro | cron-job.org y el final de "Actualizar la web"; a mano (`reloj`, `verificar`, `facebook`) | secretos `META_TOKEN`, `GEMINI_API_KEY_REDES`; variable `REDES_ACTIVAS` | commit de `web/data/redes.json`; artefacto con los videos (3 días) |
-| `.github/workflows/piezas.yml` | Armar (y si se pide, publicar) piezas a mano | una persona, Actions → Piezas | `solo`, `publicar`, `destino`; mismos secretos | artefacto (7 días); commit del libro si publicó |
+| `.github/workflows/piezas.yml` | Armar (y si se pide, publicar) piezas a mano | una persona, Actions → Piezas | `solo` (vacío no arma nada, 28/09), `todas` (armar todas las del día, a propósito), `publicar`, `destino`; mismos secretos | artefacto (7 días); commit del libro si publicó |
 | `redes/publicar.mjs` | El programa: `--verificar`, `--facebook`, `--piezas [--sin-horario] [--destino=…]`, `--enlaces` | los dos workflows | `portada.json`, `redes.json`, `reels/salida/piezas.json` | `redes.json` |
 | `redes/elegir.mjs` | Qué se publica: reglas de Facebook, texto del posteo, hashtags, qué notas cuenta cada podcast y su guion con presupuesto, el interruptor | `publicar.mjs`, `reels/plan.mjs`, contrato, avisos | `ingesta/criterio.mjs`, `web/lib/cuerpo.js` | — (funciones puras) |
 | `redes/espejo.mjs` | Qué espejos reintentar | `publicar.mjs` | el libro y la portada | — |
@@ -567,7 +607,7 @@ anteriores cuenta las historias por el libro y lo dice.
 | El texto del posteo, la frase del enlace, los hashtags | `mensajeDeNota`, `FRASES_DEL_ENLACE`, `hashtagsDe`, `redes/elegir.mjs` |
 | Cuántas notas cuenta un podcast, su relevancia mínima, su presupuesto | `PIEZAS` y `PODCAST_VOZ`, `ingesta/criterio.mjs` (y la tabla del criterio) |
 | La hora de un podcast | `HORAS_REELS`, `redes/piezas.mjs` |
-| La hora de una historia fija (clima, farmacia, útiles, agenda) | Los valores de fábrica de `HISTORIAS_FIJAS`, `panel/horarios.mjs` (ver "Diferencias": la pestaña Calendario del panel no cambia lo que publica GitHub) |
+| La hora de una historia fija (clima, farmacia, útiles, agenda) | Los valores de fábrica de `HISTORIAS_FIJAS`, `panel/horarios.mjs`. La pestaña Calendario del panel **no** cambia lo que publica GitHub: ni el reloj ni el plan leen lo guardado en el panel (`PENDIENTES.md`) |
 | Hasta cuándo vale una pieza | `VENTANAS`, `redes/piezas.mjs` |
 | Los umbrales del aviso de clima | `UMBRALES`, `ingesta/alertas.mjs` |
 | El color de los podcasts de cada día | `COLORES_DEL_DIA`, `redes/piezas.mjs` |
@@ -575,7 +615,7 @@ anteriores cuenta las historias por el libro y lo dice.
 | Qué dice la voz, los saludos, cierres, cuándo dice la dirección | `CRITERIO-REDES.md` (identidad y voz) y `redes/guiones.mjs` (bancos de frases); reiniciar el panel si se toca |
 | El dibujo de una placa | `reels/placa.mjs` (y `MEDIA-KIT.md`) |
 | El dibujo de las tarjetas de las notas | `web/lib/tarjeta.js` y `web/lib/tarjeta-diseno.js` |
-| Que el espejo lleve la foto de la nota | `FOTO_EN_INSTAGRAM` en `web/lib/tarjeta-diseno.js` **y** `CRITERIO-EDITORIAL.md` § 9 |
+| Que el espejo lleve (o no) la foto de la nota | `FOTO_EN_INSTAGRAM` en `web/lib/tarjeta-diseno.js` (hoy `true`) |
 | Una medida de imagen de las redes | `redes/formatos.mjs` y `FORMATOS.md` |
 | Cuántas veces se reintenta en Meta | `INTENTOS_SECUNDARIA`, `INTENTOS_HISTORIA`, `INTENTOS_ENLACE` (`redes/publicar-piezas.mjs`); `ESPEJO` (`redes/espejo.mjs`) |
 | Cómo se habla con Meta | `redes/meta.mjs` |
@@ -591,7 +631,7 @@ anteriores cuenta las historias por el libro y lo dice.
 | **Meta bloquea la API** (pasó del 22 al 24/09: "API access blocked") | Fallan Redes y Piezas | Confirmar la cuenta en Meta (lo hace una persona) |
 | **Falló Instagram al subir una pieza** | La pieza no sale en ninguna red; el reloj la vuelve a pedir en la vuelta siguiente mientras dure la ventana (gasta otra voz) | Nada, salvo que se repita: mirar el registro |
 | **Falló Facebook después de Instagram** | Registro "falló (intento 3 de 3)"; el contrato marca la falta en Facebook | Si es una historia fija (clima, farmacia): Piezas con esa pieza, `publicar` y destino `facebook`. Si es un **podcast**, Piezas no sirve (el plan no vuelve a armar un podcast que ya está en el libro de Instagram): bajar el video del artefacto de esa corrida de Redes (3 días) y subirlo a mano |
-| **No salió la historia de un podcast** | WhatsApp: "no salió la historia de… (su reel sí salió y la historia no se reintenta)" | No hay forma automática de reintentarla (ver "Diferencias"). Si importa, bajar el `.mp4` del artefacto de esa corrida de Redes y subirlo a mano como historia; el libro no se entera y el contrato la sigue contando como falta |
+| **No salió la historia de un podcast** | WhatsApp: "no salió la historia de… (su reel sí salió y la historia no se reintenta)" | No hay forma automática de reintentarla, y Piezas tampoco sirve (el plan no vuelve a armar un podcast que ya está en el libro de Instagram, y la historia de un reel sólo se sube junto con ese reel). Si importa, bajar el `.mp4` del artefacto de esa corrida de Redes y subirlo a mano como historia; el libro no se entera y el contrato la sigue contando como falta |
 | **No salió una pieza fija** (clima, farmacia) | WhatsApp: "No salió la pieza… y ya se cerró su ventana" | Revisar Gemini y `META_TOKEN`; publicarla con Piezas si todavía sirve |
 | **No salió un podcast** | WhatsApp de falta del reel | Si "ese día no había notas para contar", es normal |
 | **Un posteo sin su foto en Instagram** | WhatsApp: "N posteo(s) de Facebook de hoy no tienen su foto en el feed". Se reintenta solo 4 veces en 12 horas | Si no se arregla solo, mirar que la tarjeta `/nota/ID/instagram.png` exista |
@@ -600,55 +640,14 @@ anteriores cuenta las historias por el libro y lo dice.
 | **El video pasa de 58 segundos** | Aviso amarillo en la corrida; la historia sube recortada con fundido | Nada: está previsto |
 | **El libro no se pudo guardar** | Redes en rojo: "No se pudo guardar el libro después de tres intentos" | Mirar enseguida: la vuelta siguiente puede repetir lo publicado |
 | **Se publica pero el público no lo ve** (pasó hasta el 26/09: la app de Meta estaba en modo desarrollo) | Nadie avisa | Correr "Ver Facebook" y mirar la página desde una cuenta que no sea administradora |
-| **La auditoría semanal no corre** | Hoy nadie lo nota: el vigilante sólo avisa si `web/data/auditoria.json` existe y tiene más de 10 días, y ese archivo todavía no existe | Correr "Auditoría" a mano una vez (ver "Diferencias") |
+| **La auditoría semanal no corre** | Hoy nadie lo nota: el vigilante sólo avisa si `web/data/auditoria.json` existe y tiene más de 10 días, y ese archivo todavía no existe | Correr "Auditoría" a mano una vez: al 28/09 nunca corrió (`PENDIENTES.md`) |
 | **Las medidas de `formatos.mjs` quedaron viejas** (90 días desde el 25/09) | La auditoría semanal avisa por WhatsApp | Volver a verificarlas (`FORMATOS.md`) |
 | **Faltan permisos de estadísticas en `META_TOKEN`** | El resumen dice qué le falta | Regenerar el token con `read_insights` e `instagram_manage_insights` (una persona) |
 
-## Diferencias encontradas con los documentos viejos
+## Lo que sigue abierto
 
-1. **Cuándo llega cron-job.org a Redes.** `REDES.md`, `INFRAESTRUCTURA.md` y el
-   comentario de `redes.yml` dicen "cada 30 minutos, de 7 a 23". El historial
-   de GitHub del 27 y 28/09 muestra disparos a los **:05, :35 y :45 de cada
-   hora, de 0 a 22 (hora de Balcarce)**: tres por hora, casi todo el día. No
-   rompe nada (fuera de las ventanas el reloj no pide nada y Facebook respeta
-   de 8 a 22), pero conviene mirar en cron-job.org si hay un trabajo de más o
-   uno con tres horarios.
-2. **"La de redes no tiene alternativa: si falta, los reels no arrancan"**
-   (`CLAUDE.md`, `REDES.md` y el comentario de `reels/claves.mjs`). En el
-   código, si falta `GEMINI_API_KEY_REDES`, `decirGemini` tira un error que
-   `armarReel` atrapa, y **la pieza sale con Elena**. Lo que sí es cierto: nunca
-   se usa en su lugar la clave de redacción.
-3. **La pestaña Calendario del panel no cambia lo que se publica.** `CLAUDE.md`
-   ("cambiar cuándo salen las historias → panel → Calendario") y `REDES.md`
-   ("vale sólo en la PC") sugieren que sirve. Pero lo único que publica es
-   GitHub, y ahí ni el reloj (`slotsQueTocan` sin `estado`) ni el plan
-   (`panel/datos/estado.json` no existe en GitHub) leen lo guardado en el
-   panel: rigen siempre los horarios de fábrica de `panel/horarios.mjs`. Para
-   cambiar una hora de verdad hay que cambiar el código.
-4. **El interruptor, dos lecturas distintas.** El código acepta cualquier
-   combinación de mayúsculas y espacios alrededor (`estaActivo`); el `if` de
-   `redes.yml` sólo seis formas exactas. Con un valor como " Si " o "sI",
-   Facebook publicaría y el reloj no armaría ninguna pieza. Hoy la variable
-   dice `Si`, así que no pasa.
-5. **La Auditoría semanal nunca corrió.** `auditoria.yml` existe desde el 24/09
-   y el lunes 28/09 a las 9 tenía su primera corrida programada: al cierre de
-   este documento no hay ninguna en Actions y `web/data/auditoria.json` no
-   existe. Como `auditoriaVencida` no avisa si el archivo no existe, el
-   vigilante tampoco lo nota.
-6. **`placaNoticia`** figura entre las plantillas en el encabezado de
-   `reels/placa.mjs`, pero ninguna pieza la usa.
-7. **La pieza de teléfonos útiles** se arma con `seccion: 'Servicios'` en
-   `reels/plan.mjs`, una sección que ya no existe. No se ve en ningún lado (ese
-   campo no se publica), pero es un resto.
-8. **"Si hiciera falta, se puede subir a mano desde el workflow Piezas"**
-   (`REDES.md`, sobre la historia de un podcast que no salió). No se puede: el
-   plan no arma un podcast que ya figura en el libro de Instagram
-   (`piezasPublicadasHoy` en `planDelDia`), y `publicarPiezas` sólo sube la
-   historia de un reel justo después de subir ese reel. Lo mismo vale para el
-   reel de un podcast que salió en Instagram y falló en Facebook. Piezas sí
-   sirve para las historias fijas (clima, farmacia, útiles), que el plan arma
-   siempre que les toque ese día.
-9. **El nombre de la variable del ID de la página no es uno solo:**
-   `redes/publicar.mjs` y `redes/auditar-redes.mjs` aceptan `META_PAGE_ID` y
-   `redes/ver-facebook.mjs`, `META_PAGINA_ID`. Ninguna está cargada: todos usan
-   el ID fijo de la página (1254237411116171), así que hoy no importa.
+En `PENDIENTES.md`: los disparos de cron-job.org a Redes (tres por hora, de 0
+a 22), la pestaña Calendario que no llega a GitHub, la Auditoría de los lunes
+que nunca corrió (y `auditoriaVencida`, que no avisa si nunca corrió),
+`placaNoticia` sin uso, el nombre doble de la variable del ID de la página y
+la historia de un podcast que no se puede reintentar.

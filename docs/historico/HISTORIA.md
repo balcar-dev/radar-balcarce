@@ -1,8 +1,10 @@
 # Radar Balcarce — historia del proyecto
 
+> *Nota del 28/09/2026: documento histórico, no se mantiene. Los documentos que nombra (`REGLAS.md`, `REDES.md`, `INFRAESTRUCTURA.md`, `PANEL.md`, `EMPEZAR-ACA.md`, `MANUAL.md`, `docs/RADAR-3.0.md`) se retiraron ese día: lo vigente está en `docs/`, empezando por `docs/00-INDICE.md`.*
+
 **Documento histórico.** Cuenta qué se hizo y por qué, con fecha. Lo que dicen
 las secciones viejas puede ya no valer: para saber cómo está todo hoy, leer
-`EMPEZAR-ACA.md` y `CLAUDE.md`. Última entrada: 25/09/2026 (sección 13).
+`docs/00-INDICE.md` y `CLAUDE.md`. Última entrada: 25/09/2026 (sección 13).
 
 Ver también [`INVESTIGACION.md`](../../INVESTIGACION.md) — lo legal y lo
 competitivo, investigado aparte para no inflar este archivo. Y

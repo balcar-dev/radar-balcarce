@@ -1,17 +1,21 @@
 # 10 · Las reglas y las pruebas que las cuidan
 
-*Escrito el 28/09/2026, leyendo `CLAUDE.md`, `REGLAS.md` y cada archivo de
-`pruebas/` de ese día. Las pruebas se corrieron ese día: **1.322 pruebas en 81
-archivos, todas bien, en unos 10 segundos**. Si un documento viejo dice otra
-cosa que el código, manda el código; las diferencias están al final.*
+*Escrito el 28/09/2026, leyendo `CLAUDE.md` y cada archivo de `pruebas/` de
+ese día, y puesto al día esa noche con el commit "Trece arreglos encontrados al
+documentar". Las pruebas se corrieron ese día: **1.339 pruebas en 82 archivos,
+todas bien, en unos 11 segundos**. Si un documento dice otra cosa que el
+código, manda el código.*
 
-La lista numerada de reglas sigue viviendo en `REGLAS.md` (sus números los
-citan otros documentos). Acá está, para cada regla, **qué prueba la cuida y qué
-pasa si se rompe**, y el mapa completo de `pruebas/`. Qué dice cada regla en
-detalle está en el documento de su área: `docs/02-INGESTA.md`,
-`docs/03-SELECCION.md`, `docs/04-REDACCION.md`, `docs/05-FOTOS.md`,
-`docs/06-WEB.md`, `docs/07-REDES.md`, `docs/08-INFRAESTRUCTURA.md`,
-`docs/09-PANEL.md`, `docs/11-OPERACION.md`.
+Desde el 28/09 **la lista numerada de reglas vive acá** (antes estaba en un
+`REGLAS.md` aparte, que se retiró). Los números no cambian ni se reordenan:
+otros documentos y comentarios del código los citan ("regla 16", "regla 20").
+Para cada regla está **qué prueba la cuida y qué pasa si se rompe**, y al final
+el mapa completo de `pruebas/`. Qué dice cada regla en detalle está en el
+documento de su área: `docs/02-INGESTA.md`, `docs/03-SELECCION.md`,
+`docs/04-REDACCION.md`, `docs/05-FOTOS.md`, `docs/06-WEB.md`,
+`docs/07-REDES.md`, `docs/08-INFRAESTRUCTURA.md`, `docs/09-PANEL.md`,
+`docs/11-OPERACION.md`. El criterio editorial entero es uno solo:
+`CRITERIO-EDITORIAL.md`.
 
 ---
 
@@ -75,11 +79,11 @@ libro de redes real del 24 y 25/09).
 4. **Lo que sigue andando:** las redes (`redes.yml`, `piezas.yml`) no corren
    las pruebas: siguen publicando con la última `portada.json` que quedó.
 
-### 4. Qué hay que hacer para agregar una regla
+### 4. Cómo se agrega una regla
 
-(Lo pide `REGLAS.md`, "Cuando se agrega una regla nueva".)
-
-1. Escribirla en `REGLAS.md` con el número siguiente (hoy, 63).
+1. Escribirla en este documento, en la tabla de su tema, con **el número
+   siguiente** (hoy, 68), aunque vaya en otra tabla: los números no se
+   reordenan.
 2. Escribir la prueba en el archivo del área (la tabla de abajo dice cuál) o en
    uno nuevo con un nombre que diga qué cuida.
 3. Si es algo que ve el lector en la web publicada, sumarlo también al
@@ -100,9 +104,9 @@ libro de redes real del 24 y 25/09).
 | **El criterio editorial es uno solo** (`CRITERIO-EDITORIAL.md`; la IA lee su § 12 tal cual; los números en `ingesta/criterio.mjs`) | `criterio.test.mjs` (las 10): la tabla "Los números" dice lo mismo que el código fila por fila; la IA lee la instrucción del documento; sin el documento no se escribe; los números dichos en palabras son los de la tabla; las frases de relleno son las mismas en código, documento e instrucción; el panel muestra el criterio del archivo | Falla `npm test`; si faltara el documento, la reescritura no arranca (a la vista) |
 | **Nunca identificar a un menor ni a una víctima** (el semáforo rojo; la lista no se toca sin preguntar) | `semaforo.test.mjs` (**cada término** de las listas roja y amarilla, también en el resumen); `reescritura.test.mjs`: "las reglas de la IA prohíben identificar a un menor o a una víctima", "si lo que escribió la IA da rojo o amarillo, no se usa…", "lo que contaron los otros medios también pasa por el semáforo", "lo ya publicado que hoy da rojo deja de salir…"; `editor.test.mjs`: "las partes nuevas pasan por el semáforo…"; `zona.test.mjs`: "en el artículo completo… un chico sí"; `agenda.test.mjs`: "el semáforo rojo también mira la agenda…"; `archivo.test.mjs`: "lo que se bloquea después (o el semáforo pasa a rojo) sale del archivo y pierde la página" | Falla `npm test`. Es la regla más grave: por eso cada término tiene su propia prueba |
 | **Nunca una marca de agua ni el nombre de otro medio adentro de una imagen** | `placas.test.mjs`: "ninguna placa del plan nombra a un medio ni lleva la fuente adentro", "la placa sin foto… no nombra otro medio", "tarjeta: la foto sale del banco propio y el crédito nunca se dibuja adentro"; `fotos.test.mjs`: "elegirFoto: Gemini elige una candidata sin marca", "…si TODAS tienen marca, ahí sí no se elige ninguna"; `fotos-notas.test.mjs`: "la página de la nota muestra la foto sólo si hay, con el crédito en el epígrafe, nunca en la imagen"; `redes.test.mjs`: "el espejo en Instagram lleva el crédito de la foto al pie, nunca adentro de la imagen" | Falla `npm test`. Que una foto elegida por la IA no tenga marca lo decide la IA: la prueba cuida la regla del código, no el ojo de la IA (`docs/05-FOTOS.md`) |
-| **Las fotos (27/09):** foto ajena recortada sólo sin marca, con el crédito en la cita y guardada en el banco propio; Policiales sólo con foto oficial | Las de arriba, más `fotos-notas.test.mjs`: "elegiblePorSeccion: Policiales sólo con una fuente oficial…", "elegirFotosNuevas: una nota de Policiales sin fuente oficial no se pregunta", y "el workflow… sube banco-fotos.json y las fotos guardadas"; `redes.test.mjs`: "la imagen del posteo de Instagram es la tarjeta propia y VERTICAL… no una foto ajena" | Falla `npm test` |
-| **Lo que escribe la IA se verifica contra la fuente** | `verificar.test.mjs` (39: número, nombre, sigla, día, cita, delito dicho como hecho, negaciones, "en vivo", Balcarce de más, relleno, localía inventada); `cuerpo.test.mjs`; `editor.test.mjs` (cada parte nueva por separado, antecedentes); `estilo.test.mjs` (título en pasado, ganchos, tildes, "este viernes") | Falla `npm test`. Si el verificador dejara pasar un invento, la nota saldría con el dato falso |
-| **Cada nota dice quién la escribió** | `seo-paginas.test.mjs`: "el autor de los datos estructurados dice lo mismo que la firma de la nota", "la firma que ve el lector es una línea corta…", "no volvemos a prometer una revisión humana que no hay"; `notas-propias.test.mjs`: "las notas propias firman como Radar Balcarce…"; `eventos.test.mjs`: "cada ficha dice quién la hizo en UNA línea corta…" | Falla `npm test` |
+| **Las fotos (27/09):** foto ajena sólo sin marca, con el crédito en la cita y guardada en el banco propio; Policiales sólo con foto oficial | Las de arriba, más `fotos-notas.test.mjs`: "elegiblePorSeccion: Policiales sólo con una fuente oficial…", "elegirFotosNuevas: una nota de Policiales sin fuente oficial no se pregunta", "el workflow… sube banco-fotos.json y las fotos guardadas"; `arreglos-28-09.test.mjs`: el crédito de Wikimedia con autor y licencia; `redes.test.mjs`: "la imagen del posteo de Instagram es la tarjeta propia y VERTICAL… no una foto ajena" | Falla `npm test` |
+| **Lo que escribe la IA se verifica contra la fuente** | `verificar.test.mjs` (43: número, nombre, sigla, día, cita, delito dicho como hecho y bien atribuido, negaciones, "en vivo", Balcarce de más, relleno, localía inventada); `cuerpo.test.mjs`; `editor.test.mjs` (cada parte nueva por separado, antecedentes); `estilo.test.mjs` (título en pasado, ganchos, tildes, "este viernes") | Falla `npm test`. Si el verificador dejara pasar un invento, la nota saldría con el dato falso |
+| **Cada nota dice quién la escribió** | `seo-paginas.test.mjs`: "el autor de los datos estructurados dice lo mismo que la firma de la nota", "la firma que ve el lector es una línea corta…", "no volvemos a prometer una revisión humana que no hay"; `notas-propias.test.mjs`: "las notas propias firman como Radar Balcarce…"; `eventos.test.mjs`: "cada ficha dice quién la hizo en UNA línea corta…"; `arreglos-28-09.test.mjs`: lo corregido a mano firma "Revisada por la redacción" | Falla `npm test` |
 | **Política y Policiales esperan a una persona en TODAS las piezas de redes** | `redes.test.mjs`: "Política y Policiales no salen solas a las redes", "…no se arman solas en ninguna pieza", "nunca entra Política ni Policiales a un podcast, ni lo que está en rojo"; `notas-propias.test.mjs`: "un repaso con Política o Policiales… no se arma"; `contrato.test.mjs`: "candidatas: no cuenta lo de Política y Policiales…" | Falla `npm test` |
 | **Todo lo que va a Instagram es video con voz** (salvo la tarjeta del espejo de Facebook) | `piezas.test.mjs`: "los reels van como reel y lo demás como historia", "las historias no llevan texto y los reels sí", "un reel también se sube como historia…" | Falla `npm test` |
 | **Tokens y claves nunca en un chat ni en el código** | `redes.test.mjs`: "el token viaja en el encabezado y nunca en la dirección", "sinToken borra el token de cualquier texto", "un error de Meta llega sin el token adentro…"; `reescritura.test.mjs` y `voz-gemini.test.mjs`: la clave de Gemini va en el encabezado; `meta-tiempo.test.mjs`: el corte se informa sin el token; `respaldo.test.mjs`: "no copia las claves en texto plano ni el secreto de las sesiones"; `vigilancia.test.mjs`: "sinSecretos tapa todo…", los errores de CallMeBot sin la clave; `vigilancia-estadisticas.test.mjs`: "lo que se guarda es sólo números agregados: nada de tokens" | Falla `npm test`. **Ninguna prueba recorre el repositorio buscando claves pegadas**: eso lo cuidan la costumbre y el `.gitignore`. El repositorio es público: una clave pegada se da por quemada |
@@ -115,107 +119,140 @@ libro de redes real del 24 y 25/09).
 |---|---|
 | La dirección de una nota no cambia | `archivo.test.mjs` ("el enlace publicado en Facebook sigue andando cuando la IA cambia el titular" y 8 más), `ruta.test.mjs` (11), `redirects.test.mjs` |
 | La portada muestra sólo 36 horas (eran 72) y nada se estrena con más de 12 | `archivo.test.mjs` ("las listas no muestran notas de más de 36 horas…", "una nota que nunca salió no se estrena con el hecho de más de 12 horas", "generar-datos no estrena lo que llega tarde…"), `criterios-extranjero-zona.test.mjs` ("la portada no muestra nada de más de 36 horas…"), `criterio.test.mjs` (el número contra el criterio) |
+| Una nota ya publicada que espera sólo por cupo o medios conserva la página | `arreglos-28-09.test.mjs` |
 | El turno de farmacia dura hasta las 8:30 | `farmacias.test.mjs` ("a la medianoche sigue de turno la farmacia del día anterior", "a las ocho y media de la mañana cambia"), `fechas-balcarce.test.mjs` |
 | La hora de Balcarce en Actions (`TZ`) | `hora-balcarce.test.mjs`, `fechas-balcarce.test.mjs` (con el reloj en UTC), y varias de `redes`, `piezas`, `respaldo` |
-| Las listas de sepelios, nunca | `criterios-extranjero-zona.test.mjs` (tres pruebas) |
+| Las listas de sepelios, nunca (ni aprobadas por una persona) | `criterios-extranjero-zona.test.mjs` (tres pruebas), `arreglos-28-09.test.mjs` (dos) |
 | De las repetidas queda la ya publicada | `lectura-ia.test.mjs` ("de un grupo de repetidas queda la que ya está publicada…") |
 | Retiradas y correcciones a mano | `archivo.test.mjs` (el mecanismo y que los archivos del repositorio estén bien armados) |
-| Once secciones, sin Servicios, Región ni Provincia | `notas.test.mjs`, `cruce-coherente.test.mjs`, `lectura-ia.test.mjs`, `redirects.test.mjs` |
+| Once secciones, sin Servicios, Región ni Provincia | `notas.test.mjs`, `cruce-coherente.test.mjs`, `lectura-ia.test.mjs`, `redirects.test.mjs`, `arreglos-28-09.test.mjs` (la pieza de útiles) |
 | Títulos sin "en Balcarce" | `titulos-colores.test.mjs`, `estilo.test.mjs` |
 | Lo de acá que no nombra nada de acá espera a la IA (28/09) | `copia-de-afuera.test.mjs` |
-| Las corridas que publican bajan la última `main` | `checkout-main.test.mjs` |
+| Una fuente oficial alcanza sola (la historia hereda `oficial`) | `arreglos-28-09.test.mjs` (dos pruebas) |
+| El interruptor de las redes, una sola regla | `redes.test.mjs` ("el interruptor acepta si, Si, SÍ y sí, y nada más"), `arreglos-28-09.test.mjs` (el reloj usa la misma) |
+| Las corridas que publican bajan la última `main`; las que guardan estado reintentan tres veces | `checkout-main.test.mjs`, `arreglos-28-09.test.mjs` (Vigilancia y Auditoría) |
 | Un programa de Actions que no carga | `sintaxis-scripts.test.mjs` (`node --check` de todo lo que corre solo) |
-| Si Open-Meteo falla, `api.met.no` | No hay prueba de ese respaldo en `pruebas/` (lo usa `ingesta/`; ver `docs/02-INGESTA.md`) |
+| Si Open-Meteo falla, `api.met.no` | No hay prueba de ese respaldo en `pruebas/` (lo usa `ingesta/ingesta.mjs`; ver `docs/06-WEB.md`) |
 
 ---
 
-## Las 62 reglas de `REGLAS.md` y su prueba
+## Las reglas numeradas
 
-Resumidas; el texto entero, en `REGLAS.md`. "V" = además la mira el
-vigilante en la web publicada. Si una prueba falla, en todos los casos pasa lo
-mismo: `npm test` falla y la web no se actualiza hasta arreglarlo.
+Hay **67 reglas**, del 1 al 67, sin huecos ni repetidas: las 1 a 40 son del 21
+al 26/09, las 41 a 62 del 27/09 (el plan V2.2 y lo que se decidió en vivo ese
+día) y las 63 a 67 del 28/09. Están agrupadas por tema y no por número.
+
+"Qué la cuida" dice: **Prueba** (si alguien rompe la regla en el código,
+`npm test` falla y la web no se publica), **Vigilante** (mira la web ya
+publicada y avisa si la regla se rompió por algo que las pruebas no ven) o
+**Nada** (es una regla de criterio, y se dice sin adornos).
 
 ### La web
 
-| # | Regla | Prueba (archivo: pruebas que la cuidan) |
+| # | Regla | Qué la cuida |
 |---|---|---|
-| 1 | La portada no muestra la fuente arriba de los títulos; la página de la nota sí | `portada.test.mjs` (2). V: `regla-fuentes` (`vigilancia.test.mjs`) |
-| 2 | Nunca "la vimos hace…" ni "sin hora" | `portada.test.mjs`, `web.test.mjs`. V: `regla-la-vimos`. **Ojo:** la segunda mitad de la regla cambió, ver "Diferencias" |
-| 3 | La farmacia no dice hasta qué hora está de turno | `portada.test.mjs`, `farmacias.test.mjs`. V: `regla-hora-farmacia` |
-| 4 | De la más nueva a la más vieja; la grande es la de más puntaje y de Balcarce | `portada.test.mjs` (3), `web.test.mjs` (7 de la nota grande y la tapa) |
-| 5 | El cuerpo desarrolla y no repite la bajada | `cuerpo.test.mjs`. V: `pocos-cuerpos` (menos del 35 % con cuerpo) |
-| 6 | Lo de la IA se verifica contra la fuente | `verificar.test.mjs`, `reescritura.test.mjs`, `editor.test.mjs`, `estilo.test.mjs` |
-| 7 | Cada nota dice quién la escribió | `seo-paginas.test.mjs` |
-| 8 | Las fotos: sin marca, crédito en la cita, banco propio | `redes.test.mjs`, `fotos.test.mjs`, `fotos-notas.test.mjs`, `placas.test.mjs` |
-| 9 | Nunca identificar a un menor ni a una víctima | `semaforo.test.mjs`, `reescritura.test.mjs`, `notas.test.mjs`, `fuentes.test.mjs` ("ninguna sección automática está también en rojo") |
-| 20 | Un enlace que ya circula no se rompe | `archivo.test.mjs`, `ruta.test.mjs`, `redirects.test.mjs` |
-| 21 | Cada página con su canónico; sólo la portada es `/` | `seo-paginas.test.mjs` |
-| 22 | Una fecha aproximada nunca se publica como confirmada | `eventos.test.mjs`, `agenda-panel.test.mjs` |
-| 23 | Una nota sin cuerpo no se publica | `cuerpo.test.mjs`, `editor.test.mjs`. V: `pocos-cuerpos` y "Esperando cuerpo" del resumen de las 21 |
-| 24 | El lector ve la nota, no el análisis | `editor.test.mjs`, `portada.test.mjs` |
-| 25 | Lo que no es nota o no está verificado no sale solo | `semaforo.test.mjs`, `editor.test.mjs`, `secciones-flacas.test.mjs` (el dólar de Infocampo) |
-| 26 | El criterio editorial es uno solo | `criterio.test.mjs` |
-| 27 | El enlace de cada fuente es la página de la nota, no el XML | `informese.test.mjs` |
+| 1 | **La portada no muestra la fuente arriba de los títulos** (ni en las secciones ni en los temas). La fuente sí queda en la página de cada nota, con el enlace al original. | Prueba: `portada.test.mjs` (2). Vigilante: `regla-fuentes` (`revisarPortada`; probado en `vigilancia.test.mjs`) |
+| 2 | **Nunca "la vimos hace…" ni "sin hora".** Cada nota dice hace cuánto salió con una sola escala ("recién", "hace N min", "hace N h", "ayer", "hace N días"); si la fuente no dio la hora, se cuenta desde que la nota está en el sitio. | Prueba: `web.test.mjs` ("si la fuente no dio la hora, se dice hace cuánto salió en el sitio…") y `portada.test.mjs` ("una nota sin hora de la fuente muestra desde cuándo está en el sitio, nunca queda en blanco"). Vigilante: `regla-la-vimos` |
+| 3 | **La farmacia de turno no dice hasta qué hora está.** Sólo el nombre, la dirección, el teléfono y "Cómo llegar" (el turno cambia a las 8:30, pero es un dato interno). | Prueba: `portada.test.mjs`, `farmacias.test.mjs` ("el turno cambia a las 8:30, pero la web NO lo dice"). Vigilante: `regla-hora-farmacia` |
+| 4 | **Las notas van de la más nueva a la más vieja.** La única excepción es la nota grande de arriba: la de más puntaje de las últimas 6 horas, de Balcarce si hay. | Prueba: `portada.test.mjs` (3), `web.test.mjs` (7 de la nota grande y la tapa) |
+| 5 | **El cuerpo es la nota desarrollada y distinta de la bajada** (pirámide invertida). Un cuerpo que repite la bajada se rechaza; si trae un dato que no cuadra se sacan esas oraciones, y si no alcanza se reintenta diciéndole qué falló. | Prueba: `cuerpo.test.mjs`. Vigilante: `pocos-cuerpos` (menos del 35 % de las notas de las últimas 24 horas con cuerpo) |
+| 6 | **Lo que escribe la IA se verifica contra la fuente**: número, nombre, día, cita, antecedente dicho como de hoy, delito sin atribuir, negaciones, "en vivo" y relleno; las partes internas, cada una por su lado. El nivel de verificación lo calcula el código, no la IA. | Prueba: `verificar.test.mjs`, `reescritura.test.mjs`, `editor.test.mjs`, `estilo.test.mjs`, `json-ia.test.mjs` |
+| 7 | **Cada nota dice quién la escribió** (IA, persona o fuente), y el sitio no promete una revisión que no hubo. Lo corregido a mano en `correcciones.json` firma "Revisada por la redacción" (28/09). | Prueba: `seo-paginas.test.mjs`, `arreglos-28-09.test.mjs` |
+| 8 | **Las fotos** (27/09, decisión de Hernán con el riesgo explicado; construido el 28/09): la foto de otro medio o de un organismo oficial se puede usar en la página de la nota **sólo sin marca de agua ni el nombre del otro medio adentro**, con el crédito en el epígrafe y guardada en el banco propio (`web/data/banco-fotos.json`). Si no sirve ninguna y la nota es de una persona pública, una foto libre de Wikimedia Commons con autor y licencia. En el espejo de Instagram va la misma foto, con el crédito en el texto del posteo; la tarjeta para compartir y los videos siguen con placa, que es lo que sale cuando no hay foto que sirva. Sin foto real lo que identificaría a un menor o a una víctima, y Policiales salvo fuente oficial. | Prueba: `fotos.test.mjs`, `fotos-notas.test.mjs`, `placas.test.mjs`, `redes.test.mjs`, `arreglos-28-09.test.mjs` (`docs/05-FOTOS.md`) |
+| 9 | **Nunca identificar a un menor ni a una víctima.** El semáforo rojo lo frena y lee también el texto completo de la fuente y lo que escribió la IA; la instrucción de la IA lo prohíbe. La lista no se toca sin preguntar. | Prueba: `semaforo.test.mjs` (cada término), `reescritura.test.mjs`, `notas.test.mjs`, `fuentes.test.mjs` ("ninguna sección automática está también en rojo") |
+| 20 | **Un enlace que ya circula no se rompe.** La dirección queda fija desde la primera publicación; la página dura 180 días aunque la nota salga de la portada; la 404 rescata direcciones viejas. Lo que pasa a rojo, se bloquea o se retira sí pierde la página. | Prueba: `archivo.test.mjs`, `ruta.test.mjs`, `redirects.test.mjs` |
+| 21 | **Cada página dice cuál es su dirección** (canónico propio); sólo la portada es `/`. | Prueba: `seo-paginas.test.mjs` |
+| 22 | **Una fecha aproximada nunca se publica como confirmada.** Cada evento con página tiene fecha del municipio o una que publicó una persona; las fiestas anuales dicen "fecha a confirmar" hasta entonces. La ficha del evento no lleva texto de IA. | Prueba: `eventos.test.mjs`, `agenda-panel.test.mjs` |
+| 23 | **Una nota sin cuerpo no se publica** (25/09): 70 palabras o más, distinto de la bajada. Si no, queda "esperando cuerpo" (`web/data/esperando-cuerpo.json`), se reintenta hasta tres veces y el resumen de las 21 lo dice. Lo que publicó una persona se respeta (el panel pide confirmarlo). | Prueba: `cuerpo.test.mjs`, `editor.test.mjs`. Vigilante: `pocos-cuerpos` y "Esperando cuerpo" del resumen |
+| 24 | **El lector ve la nota, no el análisis** (25/09): título, bajada, cuerpo y un desplegable cerrado "Fuentes (N)". Claves, qué se sabe, qué falta confirmar, aportes y nivel de verificación, en el panel. | Prueba: `editor.test.mjs`, `portada.test.mjs` |
+| 25 | **Lo que no es una nota, o no está verificado, no sale solo** (25/09): la cotización del dólar en el título queda amarilla (está en `/dolar`); la verificación BAJA espera a una persona. | Prueba: `semaforo.test.mjs`, `editor.test.mjs`, `secciones-flacas.test.mjs` (el dólar de Infocampo) |
+| 26 | **El criterio editorial es uno solo y la IA lo lee tal cual** (25/09). | Prueba: `criterio.test.mjs` |
+| 27 | **El enlace de cada fuente es la página de la nota original**, nunca un archivo interno del medio (25/09: Infórmese Primero enlazaba el XML del feed). El identificador de las notas no cambia. | Prueba: `informese.test.mjs` |
+| 63 | **Una nota que nunca salió no se estrena si el hecho tiene más de 12 horas** (28/09, `llegaTarde`): de 140 notas del 25 al 28/09, 40 salieron con el hecho de más de un día. Lo que ya salió sigue su curso; lo que publicó una persona, también. | Prueba: `archivo.test.mjs` |
+| 65 | **Una nota tiene una sola fecha, y puede envejecer pero nunca rejuvenecer** (28/09, `fechaReal`, `fechaDeLaNota`): sin hora de la fuente, la primera vez que se vio (`web/data/vistas.json`); con hora, la más vieja conocida. Un medio que "actualiza" su nota no la devuelve a la tapa. | Prueba: `archivo.test.mjs` ("la fecha más vieja manda") |
+| 66 | **Una nota ya publicada no pierde su página por el cupo ni por los medios** (28/09, `pierdeLaPagina`): sale de las listas mientras espera, pero el enlace compartido sigue andando. Sí la pierde por rojo o por un amarillo de contenido. | Prueba: `arreglos-28-09.test.mjs` |
 
 ### Qué se trae y qué es de Balcarce
 
-| # | Regla | Prueba |
+| # | Regla | Qué la cuida |
 |---|---|---|
-| 41 | No se trae lo que el medio de afuera pone en otro país, policiales o consejos | `entrada.test.mjs` |
-| 42 | Un policial que no es de Balcarce no se trae | `entrada.test.mjs`, `secciones-flacas.test.mjs` |
-| 43 | Cada fuente con ficha (tipo y ciudad); `FUENTES.md` al día | `entrada.test.mjs`, `fuentes-registro.test.mjs` |
-| 44 | De afuera es "de Balcarce" sólo con Balcarce en el título | `notas.test.mjs`, `de-aca.test.mjs` |
-| 45 | Una palabra suelta no decide | `notas.test.mjs`, `zona.test.mjs` |
-| 46 | El título de la IA no pone Balcarce de más | `verificar.test.mjs` |
-| 47 | A las redes va sólo lo de Balcarce | `redes.test.mjs`, `redes-arreglos.test.mjs` |
-| 48 | Lo retirado a mano va en `retiradas.json` | `archivo.test.mjs` |
-| 49 | La lectura con IA decide pero nunca destraba; topes 5 por corrida, 60 o 200 por día | `lectura-ia.test.mjs`, `cruce-coherente.test.mjs`, `criterios-extranjero-zona.test.mjs`, `copia-de-afuera.test.mjs` |
-| 50 | Lo de afuera nunca sale con un solo medio | `lectura-ia.test.mjs`, `seguir-leyendo.test.mjs`, `archivo.test.mjs` |
-| 51 | Una noticia, una nota (repetidas) | `lectura-ia.test.mjs`, `portada.test.mjs` |
-| 52 | El cruce de medios | `cruce.test.mjs`, `zona.test.mjs` |
-| 53 | Fútbol aparte, Argentina, sin Servicios, Región ni Provincia | `notas.test.mjs`, `cruce-coherente.test.mjs` |
-| 54 | Ningún título automático termina en "en Balcarce" | `titulos-colores.test.mjs` |
-| 55 | Correcciones a mano en `correcciones.json` | `archivo.test.mjs` |
-| 56 | Lo de afuera se mide en medios, no en puntaje | `notas.test.mjs`, `lectura-ia.test.mjs`, `criterio.test.mjs`, `secciones-flacas.test.mjs` |
-| 57 | Un medio, un nombre | `cruce-coherente.test.mjs` |
-| 58 | Lo de la zona sale solo con un medio | `criterios-extranjero-zona.test.mjs`, `de-aca.test.mjs` |
-| 59 | Las listas de sepelios, nunca | `criterios-extranjero-zona.test.mjs` |
-| 60 | Nada viejo en la portada ni en las secciones | `criterios-extranjero-zona.test.mjs`, `seguir-leyendo.test.mjs`, `archivo.test.mjs` (el número es 36 h, ver "Diferencias") |
-| 61 | Lo que un medio de acá copia de afuera es de afuera | `cruce-coherente.test.mjs`, `copia-de-afuera.test.mjs` |
-| 62 | Lo raspado toma la fecha real de la nota | `criterios-extranjero-zona.test.mjs` |
+| 41 | **De los medios de afuera no se trae lo que el propio medio pone en una sección de otro país, de policiales o de consejos genéricos** (se mira la dirección de la nota; el horóscopo, también por el título). De una sección de otro país entra sólo lo que tiene conexión argentina en el título, una figura o es automovilismo. De los medios de Balcarce entra todo. | Prueba: `entrada.test.mjs` |
+| 42 | **Un policial que no es de Balcarce no se trae** (ni amarillo). | Prueba: `entrada.test.mjs`, `secciones-flacas.test.mjs` |
+| 43 | **Cada fuente tiene ficha con tipo y ciudad** (`fichaDeFuente`); no hay fuentes "de señal" ni máximo por fuente. La lista de todas es `FUENTES.md`, que escribe `node ingesta/listar-fuentes.mjs` y no se edita a mano. | Prueba: `entrada.test.mjs`, `fuentes-registro.test.mjs` |
+| 44 | **Una nota de un medio de afuera es de Balcarce sólo si el medio dice Balcarce en su título.** Nombrarla al pasar no la hace local ni le suma puntaje. | Prueba: `notas.test.mjs`, `de-aca.test.mjs` |
+| 45 | **Una palabra suelta no decide:** "fangio" sin autódromo ni museo, "taller", "drones", "etcheverry" o "báez" sin nombre no hacen local una nota, no la cambian de sección ni la vuelven figura. | Prueba: `notas.test.mjs`, `zona.test.mjs` |
+| 46 | **El título de la IA no pone Balcarce en una nota que no es de Balcarce.** | Prueba: `verificar.test.mjs`. La instrucción, en `CRITERIO-EDITORIAL.md` § 12, regla 2 |
+| 47 | **A las redes va sólo lo de Balcarce** (y del automovilismo de afuera, lo que nombra a una figura argentina). | Prueba: `redes.test.mjs`, `redes-arreglos.test.mjs` |
+| 48 | **Lo que se saca a mano de la web va en `web/data/retiradas.json`**, con motivo, cuándo y quién. Sale de las listas y pierde la página aunque la ingesta lo vuelva a traer; manda aunque el panel esté prendido. | Prueba: `archivo.test.mjs` |
+| 49 | **La lectura con IA decide, pero nunca destraba** (27/09): saca publicidad, chimentos, lo del extranjero sin un argentino ni conexión argentina, lo de afuera sin relación con Balcarce y el policial que no es de acá; es de Balcarce sólo con dos llaves (fuente de acá o Balcarce en el título, **y** la IA diciendo que el hecho es de acá); la sección es la de la IA. Lo rojo o amarillo sigue igual; sin ficha, lo de siempre. Topes: 5 pedidos por corrida, 60 por día con la clave gratis y 200 con la propia; nunca la paga. | Prueba: `lectura-ia.test.mjs`, `cruce-coherente.test.mjs`, `criterios-extranjero-zona.test.mjs`, `copia-de-afuera.test.mjs` |
+| 50 | **Lo de afuera de Balcarce nunca sale solo con un solo medio.** Cuántos pide cada sección, regla 56. Una fuente oficial alcanza sola (la historia lo es si alguna de sus fuentes lo es, 28/09), pero con un solo medio de afuera ni siquiera pasa el cruce (`PENDIENTES.md`). Lo viejo contado por un solo medio no completa la tapa ni "Seguí leyendo", y pierde la página salvo que haya salido en redes. | Prueba: `lectura-ia.test.mjs`, `seguir-leyendo.test.mjs`, `archivo.test.mjs`, `arreglos-28-09.test.mjs` |
+| 51 | **Una noticia, una nota:** las repetidas (el mismo hecho con otro título) se juntan en una, con todos los medios. Queda la que ya está publicada (en la portada o dentro de las 36 horas), aunque a otra la cuenten más medios. Una repetida que fue a redes conserva su página. | Prueba: `lectura-ia.test.mjs`, `portada.test.mjs` |
+| 52 | **El cruce de medios:** de afuera sólo entra lo que cuentan dos medios distintos o más (o dice Balcarce en el título, o toca la zona), contando las notas de las últimas 36 horas. Lo que cuentan sólo medios de otras ciudades de la zona no se trae. La nota de una historia conserva su dirección cuando otro medio se suma. | Prueba: `cruce.test.mjs`, `zona.test.mjs` |
+| 53 | **Once secciones:** Fútbol aparte de Deportes, Argentina en lugar de País; sin Servicios (lo práctico de acá va a Balcarce), sin Región ni Provincia (lo de afuera que no encaja va a Argentina). | Prueba: `notas.test.mjs`, `cruce-coherente.test.mjs` |
+| 54 | **Un título automático nunca termina en "en Balcarce"**, en las notas nuevas y en las ya publicadas (si quedan cuatro palabras o más); lo de una persona no se toca y la dirección no cambia. | Prueba: `titulos-colores.test.mjs` |
+| 55 | **Las correcciones a mano sin el panel van en `web/data/correcciones.json`**: título, bajada, sección o cuerpo, con motivo, cuándo y quién. Mandan sobre lo que escribe la IA; la dirección no cambia; el cuerpo cuenta para la regla 23 y a esa nota no se le pide nada a Gemini. | Prueba: `archivo.test.mjs` |
+| 56 | **La importancia de lo de afuera se mide en medios, no en puntaje** (27/09): Fútbol y Deportes 4; Economía, Tecnología, Agro y Automovilismo 2; el resto 3; con una figura argentina 2. Si no, espera ("de afuera y poco contada"). Se vuelve a mirar después de la lectura con IA, en los dos sentidos, y recién después van los cupos. | Prueba: `notas.test.mjs`, `lectura-ia.test.mjs`, `criterio.test.mjs`, `secciones-flacas.test.mjs` |
+| 57 | **Un medio, un nombre:** todos los feeds de un medio llevan el mismo `medio`. El título de un índice de noticias con palabras sueltas sale del epígrafe (`tituloDelSitemap`). | Prueba: `cruce-coherente.test.mjs` |
+| 58 | **Lo que toca la zona sale solo aunque lo cuente un solo medio** (la 226, la 55, el sudeste, la papa: `PALABRAS_ZONA`). No pide medios y, desde el 28/09 (`esDeAca`), tampoco ocupa el cupo de su sección. La lectura con IA igual saca lo que no tenga relación con Balcarce. | Prueba: `criterios-extranjero-zona.test.mjs`, `de-aca.test.mjs` |
+| 59 | **Las listas de sepelios no se publican nunca** (27/09, Hernán: "es sensible y no hay fuente oficial"). Rojo por el título, antes que el amarillo (28/09), y otra vez en el título y la bajada finales, **aunque las apruebe una persona**. Las necrológicas que El Diario Balcarce pega debajo de cada nota no se leen como la nota. | Prueba: `criterios-extranjero-zona.test.mjs`, `arreglos-28-09.test.mjs` |
+| 60 | **Nada viejo en la portada ni en las secciones**: sólo lo de las últimas 36 horas (28/09; eran 72). Una sección con menos de tres notas se completa con el archivo, sólo con lo de esas mismas horas, y una misma historia no completa dos secciones. | Prueba: `criterios-extranjero-zona.test.mjs`, `seguir-leyendo.test.mjs`, `archivo.test.mjs` |
+| 61 | **Un medio de Balcarce que copia una noticia de afuera no la vuelve "de Balcarce"**: si la cuentan también medios de afuera y ningún medio de acá nombra a Balcarce, es de afuera (`historiaDeAca`). | Prueba: `cruce-coherente.test.mjs`, `copia-de-afuera.test.mjs` |
+| 62 | **Lo que se lee de la página de un medio sin feed toma la fecha real de la nota**, y lo de más de 72 horas no se trae (`HORAS_DE_UNA_NOTA_NUEVA`). | Prueba: `criterios-extranjero-zona.test.mjs` |
+| 64 | **Lo de un medio de acá que no nombra nada de acá espera a la IA** (28/09, `mencionaAca`): mientras la lectura con IA ande y la nota nunca haya salido, no sale sola sin ficha (pasó con un referéndum de Suiza que copió una radio de acá). | Prueba: `copia-de-afuera.test.mjs` |
 
 ### Las redes (detalle en `docs/07-REDES.md`)
 
-| # | Regla | Prueba |
+| # | Regla | Qué la cuida |
 |---|---|---|
-| 10 | Facebook publica con enlace a nuestra nota y sin nombrar la fuente | `redes.test.mjs`, `piezas.test.mjs`, `redes-criterio.test.mjs` |
-| 11 | Podcasts en vez de noticias sueltas | `piezas.test.mjs`, `redes.test.mjs`. V: el contrato del día |
-| 12 | Un color por día para los podcasts | `piezas.test.mjs` |
-| 13 | Instagram 1080 × 1350; Facebook con enlace 1200 × 630 | `formatos.test.mjs`, `redes.test.mjs`, `placas.test.mjs`. V: auditoría semanal |
-| 14 | Todo lo de Instagram es video con voz | `piezas.test.mjs` |
-| 15 | Nada sensible sale solo a las redes | `redes.test.mjs`, `redes-arreglos.test.mjs` |
-| 28 | Siempre "Radar Balcarce" y `radarbalcarce.com`, nunca ".com.ar" | `redes-criterio.test.mjs`, `redes.test.mjs`, `perfiles.test.mjs`, `seo.test.mjs` ("el .com.ar no es nuestro") |
-| 29 | Una sola locutora (Kore) | `redes-criterio.test.mjs` |
-| 30 | Cada pieza habla a su horario | `redes-criterio.test.mjs`, `guiones.test.mjs` |
-| 31 | Posteos y pies con el enlace, sin fuente | `redes-criterio.test.mjs`, `redes.test.mjs` |
-| 32 | La voz se audita con la voz real (a mano) | `redes-criterio.test.mjs` (la parte pura y que el workflow sea manual) |
-| 33 | El contrato del día | `contrato.test.mjs`, `vigilancia-cierre.test.mjs`, `redes-arreglos.test.mjs` |
-| 34 | El libro se compara con Meta | `auditar-redes.test.mjs`, `vigilancia-cierre.test.mjs` |
-| 35 | El espejo de Instagram se reintenta | `espejo.test.mjs` |
-| 36 | Ninguna historia pasa de 58 s | `historias-largas.test.mjs` |
-| 37 | La historia de un reel se intenta tres veces | `historias-largas.test.mjs` |
-| 38 | Una sola regla de "¿toca hoy?" para los útiles | `historias-largas.test.mjs`, `piezas.test.mjs`, `horarios.test.mjs` |
-| 39 | El día no pasa de 8 historias | `historias-largas.test.mjs` |
-| 40 | Con `REDES_ACTIVAS` apagado, un solo aviso por día | `historias-largas.test.mjs`, `redes.test.mjs` ("el interruptor acepta si, Si, SÍ y sí, y nada más") |
+| 10 | **Facebook publica con enlace a nuestra nota y sin nombrar la fuente.** No dice "Resumen hecho con IA" (26/09). Lo mismo el espejo en Instagram. | Prueba: `redes.test.mjs`, `piezas.test.mjs`, `redes-criterio.test.mjs` |
+| 11 | **Podcasts en vez de noticias sueltas**: tres por día, con notas de temas distintos, más el clima, la farmacia y las historias fijas. | Prueba: `piezas.test.mjs`, `redes.test.mjs`. Vigilante: el contrato del día |
+| 12 | **Cada día, un color distinto para los podcasts** (los tres del día, el mismo). | Prueba: `piezas.test.mjs` |
+| 13 | **El posteo de Instagram es una imagen vertical de 1080 × 1350** con el texto en la zona segura; Facebook, con enlace, 1200 × 630. | Prueba: `formatos.test.mjs`, `redes.test.mjs`, `placas.test.mjs`. Vigilante: la auditoría semanal (`FORMATOS.md`) |
+| 14 | **Todo lo que va a Instagram es video con voz**, salvo la tarjeta del espejo. | Prueba: `piezas.test.mjs` |
+| 15 | **Nada sensible sale solo a las redes**: Política y Policiales esperan a una persona en TODAS las piezas; lo rojo, nunca. | Prueba: `redes.test.mjs`, `redes-arreglos.test.mjs` |
+| 28 | **Siempre "Radar Balcarce" y `radarbalcarce.com`**; dicha en voz alta, "Radar Balcarce punto com", nunca ".com.ar". | Prueba: `redes-criterio.test.mjs`, `redes.test.mjs`, `perfiles.test.mjs`, `seo.test.mjs`. Y el workflow manual "Auditar voz" |
+| 29 | **Una sola locutora** (Kore de Gemini), con la indicación leída de `CRITERIO-REDES.md`, sin copia en el código. | Prueba: `redes-criterio.test.mjs` |
+| 30 | **Cada pieza habla a su horario y suena humana**: saludo y cierre de su hora, sin exclamaciones, sin "en vivo", sin nombrar la fuente; mismo día y pieza, mismo texto. | Prueba: `redes-criterio.test.mjs`, `guiones.test.mjs` |
+| 31 | **Los posteos y los pies llevan el enlace**, no nombran la fuente y no usan la forma hablada. | Prueba: `redes-criterio.test.mjs`, `redes.test.mjs` |
+| 32 | **La voz se audita con la voz real**, a mano (workflow "Auditar voz"): gasta centavos, nunca en lazo. | Prueba (la parte pura y que el workflow sea manual): `redes-criterio.test.mjs` |
+| 33 | **El contrato del día**: por red, 3 reels, 6 historias y hasta 5 posteos; nunca más de uno por pieza y día. | Prueba: `contrato.test.mjs`, `vigilancia-cierre.test.mjs`, `redes-arreglos.test.mjs`. Vigilante: resumen de las 21 y problemas del contrato |
+| 34 | **El libro se compara con lo que Meta tiene de verdad** (el cierre de las 23:30 y "Auditar redes"). | Prueba: `auditar-redes.test.mjs`, `vigilancia-cierre.test.mjs` |
+| 35 | **Un posteo de Facebook sin su foto en Instagram se reintenta** (hasta 4 veces y 12 horas). | Prueba: `espejo.test.mjs`. Vigilante: `sin-espejo-instagram` |
+| 36 | **Ninguna historia pasa de 58 segundos**: presupuesto de 55 en el guion y, si igual pasa, la historia sube recortada con fundido y el reel entero. | Prueba: `historias-largas.test.mjs` |
+| 37 | **La historia de un reel se intenta tres veces en la misma corrida**; entre corridas no se reintenta. | Prueba: `historias-largas.test.mjs` |
+| 38 | **Una sola regla de "¿toca hoy?" para los teléfonos útiles** (`diaRotativoDeUtiles`, aplicada por `toca`). | Prueba: `historias-largas.test.mjs`, `piezas.test.mjs`, `horarios.test.mjs` |
+| 39 | **El día no pasa de 8 historias**: si sobra, primero los útiles y después la agenda; el contrato y los avisos de clima, nunca. | Prueba: `historias-largas.test.mjs` |
+| 40 | **Con `REDES_ACTIVAS` apagado, el vigilante lo dice una vez por día**; el cierre de las 23:30 se saltea; los duplicados se siguen avisando. | Prueba: `historias-largas.test.mjs`, `redes.test.mjs` |
+| 67 | **Nada gasta la voz paga sin que se pida** (28/09): con las redes apagadas el reloj no arma ninguna pieza (lee el interruptor con `estaActivo`, igual que `publicar.mjs`), y "Piezas" con `solo` vacío no arma nada salvo que se marque `todas`. | Prueba: `arreglos-28-09.test.mjs` |
 
 ### Cómo se trabaja
 
-| # | Regla | Prueba |
+| # | Regla | Qué la cuida |
 |---|---|---|
-| 16 | Claves y tokens nunca en un chat ni en el código | Ver la tabla de `CLAUDE.md`, arriba |
-| 17 | Todo lo que pueda ir online va online | Sólo el vigilante (`web-vieja`, relojes de cron-job.org) |
-| 18 | `ingesta/`, `panel/` y `redes/` sin dependencias | `fuentes.test.mjs`, `redes-criterio.test.mjs` |
-| 19 | Cuando se arregla algo mal publicado, se escribe una prueba | Ninguna (costumbre) |
+| 16 | **Claves y tokens nunca en un chat ni en el código.** Van a GitHub Secrets o al `.env`; los pega una persona; un error nunca muestra la clave. Importa más desde el 25/09: el repositorio es público. | Prueba: ver la fila de claves en "Las reglas que no se negocian". Ninguna prueba recorre el repositorio buscando claves |
+| 17 | **Todo lo que pueda ir online va online**: web, redes, vigilancia y avisos corren en GitHub y Cloudflare con la PC apagada. La excepción, por ahora, es el panel. | Vigilante: `web-vieja`, `reloj-Actualizar la web`, `reloj-Redes` |
+| 18 | **`ingesta/`, `panel/` y `redes/` no importan nada de afuera de Node.** | Prueba: `fuentes.test.mjs` (sigue los imports en cadena), `redes-criterio.test.mjs` |
+| 19 | **Cuando se arregla algo que estuvo mal publicado, se escribe una prueba.** | Nada automático: es la costumbre que sostiene a todas las demás |
+
+### Decisiones que siguen valiendo
+
+No tienen prueba: son de criterio. Se decidieron una vez y no se vuelven a
+discutir salvo que Hernán y Andrés lo pidan.
+
+- **Tecnología es un sello propio.** Ningún medio de Balcarce la cubre con
+  regularidad y conecta con el pueblo (el INTA Balcarce es uno de los centros
+  de investigación agropecuaria más grandes del país).
+- **El buzón tiene cuatro tipos**: dato, reclamo, opinión y seguimiento
+  (`panel/buzon.mjs`). Un reclamo **nunca se publica de un solo lado**: se le
+  pregunta a la otra parte. Una opinión va siempre firmada con nombre real.
+- **Sin fúnebres** (no hay fuente oficial; las listas de sepelios las frena el
+  código: regla 59), **sin comentarios de lectores** y **sin transmisiones en
+  vivo largas** (`docs/historico/INVESTIGACION-COMPETENCIA.md`).
+- **Facebook no se raspa**: va contra sus términos. Por eso las radios que
+  sólo existen en Facebook no son fuente (`docs/historico/HISTORIA.md` § 3).
+- **Sin música en las piezas**: la cortina sonaba a pitido y está apagada.
+- **Lo de `reels/` que depende de la red o de ffmpeg no tiene prueba** a
+  propósito; la lógica pura que tiene adentro sí.
 
 ---
 
@@ -231,6 +268,7 @@ qué documento cuenta ese tema.
 | `agenda-panel.test.mjs` | 16 | Eventos cargados a mano: nacen como borrador, qué va al archivo público, contactos para pedir fechas, que el panel no mande nada solo | Panel / Web |
 | `agenda.test.mjs` | 13 | La agenda del municipio y las fiestas anuales; el semáforo también en la agenda | Ingesta |
 | `archivo.test.mjs` | 27 | Los enlaces no se rompen; archivo de 180 días; retiradas y correcciones; 36 h en las listas; nada se estrena con más de 12 h; la fecha más vieja manda | Web |
+| `arreglos-28-09.test.mjs` | 13 | Los trece arreglos del 28/09: firma de lo corregido a mano, sepelios antes del amarillo y aunque los apruebe una persona, la historia oficial, la página que se conserva por cupo, fotos del banco en la PC, crédito de Wikimedia, el interruptor en el reloj, útiles en Balcarce, tres intentos de Vigilancia y Auditoría, las claves, Piezas sin elegir | Varias |
 | `articulo.test.mjs` | 9 | Bajar el texto completo de la nota original sin menús ni pies | Ingesta |
 | `auditar-redes.test.mjs` | 21 | Comparar el libro de redes con lo que Meta tiene de verdad | Redes |
 | `buzon.test.mjs` | 4 | Los cuatro tipos del buzón y sus reglas (el reclamo nunca de un solo lado) | Panel |
@@ -276,7 +314,7 @@ qué documento cuenta ese tema.
 | `perfiles.test.mjs` | 4 | Las biografías de Instagram y Facebook (`PERFILES.md`) | Redes |
 | `piezas.test.mjs` | 53 | Qué pieza sale, cuándo, cómo se sube a Instagram y Facebook, colores del día | Redes |
 | `placa-texto.test.mjs` | 6 | Cómo se cortan los renglones en las placas | Redes |
-| `placas.test.mjs` | 16 | El diseño del 28/09 de placas y tarjetas: todo entra, sin nombres de medios adentro | Redes / Web |
+| `placas.test.mjs` | 16 | El diseño del 28/09 de placas y tarjetas (`web/lib/tarjeta-diseno.js`): todo entra, sin nombres de medios adentro | Redes / Web |
 | `plan-vacio.test.mjs` | 1 | El plan no se cae con la lista vacía (25/09) | Redes |
 | `portada.test.mjs` | 16 | Lo que ve el lector en la portada: sin fuente arriba, horas, orden, repetidas, farmacia sin botones, `/clima` | Web |
 | `presentacion-celular.test.mjs` | 6 | El sitio en el celular: menú en una fila, tarjetas, farmacia, tipografía | Web |
@@ -298,7 +336,7 @@ qué documento cuenta ese tema.
 | `subtitulos.test.mjs` | 11 | Cuándo arranca cada palabra en el audio | Redes |
 | `tipografia.test.mjs` | 11 | El sistema tipográfico de las tarjetas y el dólar sin corrimientos | Web |
 | `titulos-colores.test.mjs` | 6 | Títulos sin "en Balcarce"; un color por sección; tipografías de placas y tarjetas | Web |
-| `verificar.test.mjs` | 39 | Cada forma en que la IA puede inventar algo | Redacción |
+| `verificar.test.mjs` | 43 | Cada forma en que la IA puede inventar algo; las acusaciones bien atribuidas ("presunto", "la denuncia") no se rechazan (28/09) | Redacción |
 | `vigilancia-arreglos.test.mjs` | 8 | Tres arreglos del vigilante y el vencimiento del dominio | Infraestructura |
 | `vigilancia-avisos.test.mjs` | 29 | Pendientes, noticia importante, redes, resumen de las 21, un solo WhatsApp | Infraestructura |
 | `vigilancia-cierre.test.mjs` | 17 | El cierre de las 23:30 contra Meta y los duplicados | Redes / Infraestructura |
@@ -311,20 +349,19 @@ qué documento cuenta ese tema.
 | `cuerpo-de-prueba.mjs` | — | Material: un cuerpo de nota que pasa el verificador | — |
 | `libro-real-24-25-09.json` | — | Material: el libro de redes real del 24 y 25/09 | — |
 
-**Lo que no tiene prueba, a propósito** (`REGLAS.md`, "Decisiones que siguen
-valiendo"): lo de `reels/` que depende de la red o de ffmpeg (armar el video,
-pedir la voz); sólo se prueba la lógica pura que tiene adentro. Tampoco se
-prueba contra internet de verdad: eso lo mira el vigilante sobre lo publicado.
+**Lo que no tiene prueba, a propósito**: lo de `reels/` que depende de la red
+o de ffmpeg (armar el video, pedir la voz); sólo se prueba la lógica pura que
+tiene adentro. Tampoco se prueba contra internet de verdad: eso lo mira el
+vigilante sobre lo publicado.
 
 ---
 
 ## La regla de la prueba después del error
 
-`CLAUDE.md` y `REGLAS.md` (regla 19): **cuando se arregla algo que estuvo mal
-publicado, se escribe una prueba.** No hay nada automático que la haga
-cumplir: es la costumbre que sostiene a todas las demás. Una regla sin prueba
-se rompe sola con el tiempo, porque el que toca el código dentro de un mes no
-sabe que existía.
+Regla 19: **cuando se arregla algo que estuvo mal publicado, se escribe una
+prueba.** No hay nada automático que la haga cumplir: es la costumbre que
+sostiene a todas las demás. Una regla sin prueba se rompe sola con el tiempo,
+porque el que toca el código dentro de un mes no sabe que existía.
 
 Cómo se hace:
 
@@ -337,13 +374,14 @@ Cómo se hace:
    probando el error.
 4. **Arreglar** y correr `npm test` completo.
 5. Si es algo que ve el lector en la web, sumarlo al vigilante; si es una
-   regla nueva, anotarla en `REGLAS.md`.
+   regla nueva, anotarla en este documento con el número siguiente.
 6. Commitear el arreglo y la prueba juntos.
 
 Ejemplos de pruebas que nacieron así:
 
 | Qué salió mal | Prueba |
 |---|---|
+| Dos farmacias de turno mostradas como una, un sol dibujado un domingo nublado, enlaces de El Diario a `undefined/…` | `farmacias.test.mjs`, `clima.test.mjs`, `fuentes.test.mjs` |
 | 25/09: los enlaces de Facebook daban 404 porque la IA cambió el título | `archivo.test.mjs`, `ruta.test.mjs` |
 | 25/09: el repaso de la mañana salió dos veces | `checkout-main.test.mjs` |
 | 25/09: el reloj de redes se caía con la lista vacía | `plan-vacio.test.mjs` |
@@ -356,6 +394,7 @@ Ejemplos de pruebas que nacieron así:
 | 28/09: títulos en pasado, ganchos y tildes en lo que escribe la IA | `estilo.test.mjs` |
 | 28/09: cinco errores de redes (el clima de la noche, el aviso de clima, el libro…) | `redes-arreglos.test.mjs` |
 | 28/09: un referéndum de Suiza salió en Balcarce | `copia-de-afuera.test.mjs` |
+| 28/09: trece cosas encontradas al documentar (firma, sepelios, oficial, páginas perdidas por cupo…) | `arreglos-28-09.test.mjs`, `verificar.test.mjs` |
 
 ---
 
@@ -364,10 +403,10 @@ Ejemplos de pruebas que nacieron así:
 | Archivo | Qué hace | Quién lo llama | Qué lee | Qué escribe |
 |---|---|---|---|---|
 | `package.json` (raíz), script `test` | Corre `node --test` sobre `pruebas/*.test.mjs` | `npm test` | — | Nada |
-| `pruebas/*.test.mjs` (81) | Las pruebas | `npm test`, `node --test archivo` | El código de `ingesta/`, `web/`, `redes/`, `reels/`, `panel/`, `comercial/` y algunos documentos (`CRITERIO-EDITORIAL.md`, `CRITERIO-REDES.md`, `FUENTES.md`, `PERFILES.md`, `REDES.md`) y archivos de `web/data/` | Nada en el proyecto (las que necesitan escribir usan carpetas temporales) |
+| `pruebas/*.test.mjs` (82) | Las pruebas | `npm test`, `node --test archivo` | El código de `ingesta/`, `web/`, `redes/`, `reels/`, `panel/`, `comercial/`, algunos documentos (`CLAUDE.md`, `CRITERIO-EDITORIAL.md`, `CRITERIO-REDES.md`, `FUENTES.md`, `PERFILES.md`, `docs/07-REDES.md`, `docs/10-REGLAS-Y-PRUEBAS.md`) y archivos de `web/data/` | Nada en el proyecto (las que necesitan escribir usan carpetas temporales) |
 | `pruebas/cuerpo-de-prueba.mjs`, `pruebas/libro-real-24-25-09.json` | Material para otras pruebas | Otras pruebas | — | — |
 | `.github/workflows/actualizar.yml` | Corre `npm test` antes de armar la web | cron-job.org cada 30 min | — | — |
-| `REGLAS.md` | La lista numerada de reglas con su prueba | Personas | — | — |
+| `docs/10-REGLAS-Y-PRUEBAS.md` | La lista numerada de reglas con su prueba | Personas | — | — |
 | `redes/vigilar.mjs` | Mira la web publicada y las corridas; avisa | Workflow "Vigilancia" | La web, GitHub, el libro | WhatsApp, `vigilancia.json` |
 
 ---
@@ -379,7 +418,7 @@ Ejemplos de pruebas que nacieron así:
 | Correr todas las pruebas | `npm test` en la carpeta del proyecto |
 | Correr un archivo | `node --test pruebas/archivo.test.mjs` |
 | Sumar una prueba de algo de la web | `pruebas/portada.test.mjs`, `web.test.mjs`, `archivo.test.mjs` o `seo-paginas.test.mjs`, según el tema |
-| Sumar una regla | `REGLAS.md` (número siguiente) + su prueba (+ el vigilante si es visible) |
+| Sumar una regla | Este documento (número siguiente) + su prueba (+ el vigilante si es visible) |
 | Cambiar un número del criterio | `ingesta/criterio.mjs` y la tabla de `CRITERIO-EDITORIAL.md` (lo controla `criterio.test.mjs`) |
 | Que el vigilante mire algo nuevo en la portada publicada | `revisarPortada` (`redes/vigilar.mjs`) y `pruebas/vigilancia.test.mjs` |
 
@@ -394,57 +433,11 @@ Ejemplos de pruebas que nacieron así:
 | Falta instalar algo en la PC | Error "Cannot find package" | `npm install` en la raíz y en `web/` |
 | Una prueba que depende del compilado | Algunas miran el HTML compilado "si ya se compiló" (`dolar.test.mjs`, `tipografia.test.mjs`): sin compilar, esa parte se saltea | Compilar con `cd web && npm run build` para probarla entera |
 | Una regla se rompe sin que falle nada | Pasa cuando la regla no tiene prueba (la 17, la 19) o cuando lo roto está afuera del código (una fuente cambió su página, Meta cambió algo) | Lo ve el vigilante sobre lo publicado; si no, escribir la prueba |
-| Un documento cita una prueba que ya no existe con ese nombre | Nada falla: los documentos no se prueban (salvo `CRITERIO-EDITORIAL.md`, `CRITERIO-REDES.md` y `FUENTES.md`) | Corregir el documento (ver abajo) |
+| Un documento cita una prueba que ya no existe con ese nombre | Nada falla: los documentos no se prueban (salvo `CRITERIO-EDITORIAL.md`, `CRITERIO-REDES.md`, `FUENTES.md` y unas menciones que controlan `criterio.test.mjs` y `redes-criterio.test.mjs`) | Corregir el documento |
 
----
+## Lo que sigue abierto
 
-## Diferencias encontradas con los documentos viejos
-
-1. **Regla 2 de `REGLAS.md`** dice "si la fuente no dio la hora, no se dice
-   nada en ese lugar" y cita dos pruebas que ya no existen con ese nombre
-   (`web.test.mjs` "si la fuente no dio la hora, no se dice nada" y
-   `portada.test.mjs` "una nota sin hora de la fuente no muestra nada"). El
-   código de hoy muestra **desde cuándo está la nota en el sitio** ("hace 3
-   h"), y las pruebas se llaman "si la fuente no dio la hora, se dice hace
-   cuánto salió en el sitio…" y "una nota sin hora de la fuente muestra desde
-   cuándo está en el sitio, nunca queda en blanco". Sigue valiendo que nunca se
-   dice "la vimos hace…" ni "sin hora".
-2. **Reglas 51 y 60 de `REGLAS.md`** dicen 72 horas; el código dice **36**
-   (`HORAS_EN_PORTADA`, desde el 28/09). La regla 60 cita
-   `criterios-extranjero-zona.test.mjs` ("…de más de 72 horas…") y
-   `seguir-leyendo.test.mjs` ("…de hace más de 72 horas no completan"): las
-   pruebas ya dicen 36. (La regla 62 sí es de 72 horas, y está bien:
-   `HORAS_DE_UNA_NOTA_NUEVA`.)
-3. **La regla de las 12 horas** (una nota que nunca salió no se estrena si el
-   hecho tiene más de 12 horas, `HORAS_PARA_ESTRENAR`, 28/09) tiene prueba en
-   `archivo.test.mjs` pero **no está en `REGLAS.md`** ni en `CLAUDE.md`.
-4. **Regla 8 de `REGLAS.md`** dice "Pendiente de construir: hoy sale la placa
-   propia en todos lados". Desde el 28/09 la web usa fotos del banco propio
-   (`docs/05-FOTOS.md`, `docs/06-WEB.md`), con pruebas en `fotos.test.mjs`,
-   `fotos-notas.test.mjs` y `placas.test.mjs`, que `REGLAS.md` no nombra.
-5. **43 de los 81 archivos de prueba no aparecen en `REGLAS.md`**, entre ellos
-   varios que cuidan reglas que sí están: `ruta.test.mjs` y
-   `redirects.test.mjs` (regla 20), `de-aca.test.mjs` (44 y 58),
-   `copia-de-afuera.test.mjs` (61), `secciones-flacas.test.mjs` (42 y 56),
-   `estilo.test.mjs` y `json-ia.test.mjs` (6), `redes-arreglos.test.mjs` (15,
-   33 y 47), `placas.test.mjs` (13), `notas-propias.test.mjs`,
-   `dolar.test.mjs`, `panel-seguridad.test.mjs`, `acceso.test.mjs` y los de
-   la hora (`hora-balcarce`, `fechas-balcarce`). La tabla de este documento
-   los lista todos.
-6. **Números viejos de las pruebas:** `CLAUDE.md`, `MANUAL.md` y
-   `docs/RADAR-3.0.md` dicen "más de 1.200" (es cierto: son 1.322 en 81
-   archivos); `docs/RADAR-3.0.md` dice que tardan "unos 5 segundos" (el 28/09,
-   entre 10 y 11).
-7. **Título viejo de una prueba:** `archivo.test.mjs` tiene "generar-datos
-   corta las listas en 72 horas…", pero el código corta en 36 (la prueba mira
-   el mecanismo, por eso pasa).
-8. **El encabezado de `criterios-extranjero-zona.test.mjs`** dice que "las
-   listas de sepelios esperan a una persona" y que la portada no se completa
-   con notas "de más de 7 días": las pruebas de adentro (y el código) dicen
-   que los sepelios **no se publican nunca** y que el límite es de 36 horas.
-9. **`web/lib/tarjeta-diseno.js`** dice que se prueba en
-   `pruebas/tarjeta-diseno.test.mjs`: ese archivo no existe; lo prueba
-   `placas.test.mjs`.
-10. **Regla 18 de `REGLAS.md`** cita sólo `fuentes.test.mjs`; también la cuida
-    `redes-criterio.test.mjs` ("los módulos de redes/ nuevos no importan nada
-    de afuera de Node").
+Títulos o encabezados de pruebas que quedaron viejos (no cambian lo que
+prueban): `archivo.test.mjs` "corta las listas en 72 horas" (son 36) y el
+encabezado de `criterios-extranjero-zona.test.mjs` ("las listas de sepelios
+esperan a una persona", "notas de más de 7 días"). Están en `PENDIENTES.md`.

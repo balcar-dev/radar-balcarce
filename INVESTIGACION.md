@@ -275,7 +275,7 @@ Fuentes:
    Esto se puede meter directo como regla en `reels/reescritura.mjs` o en
    el prompt editorial que ya usan, no sólo como criterio a mano.
 3. **Ampliar el criterio editorial de menores/víctimas** (punto 6) para
-   dejarlo explícito por escrito en `REGLAS.md` o donde estén las reglas
+   dejarlo explícito por escrito en `docs/10-REGLAS-Y-PRUEBAS.md` o donde estén las reglas
    del semáforo: no es sólo buen criterio, es ley (26.061 y 26.485). Se
    puede agregar como una regla dura al semáforo (rojo automático si la
    nota identifica a un menor o una víctima de delito sexual/violencia de
@@ -297,7 +297,7 @@ en `ingesta/fuentes.mjs`. (4) La regla del reclamo está comentada en
 
 **Zona gris nueva (25/09):** los posteos de redes no nombran la fuente y
 enlazan a nuestra nota, donde sí se cita y se enlaza el original. Es una
-decisión editorial (`REGLAS.md`, regla 10); si algún día llega un reclamo de un
+decisión editorial (`docs/10-REGLAS-Y-PRUEBAS.md`, regla 10); si algún día llega un reclamo de un
 medio por eso, consultar antes de responder.
 
 No se encontró necesidad de trámite ante ENACOM para el proyecto tal cual

@@ -155,7 +155,7 @@ export async function publicarPiezas({
               const videoHistoria = pieza.archivoHistoria ? leerVideo(archivoParaHistoria) : video;
               // Tres intentos en esta corrida (sin volver a pedir la voz: el video
               // ya está armado). Entre corridas no se reintenta: el video no se
-              // guarda y armarlo de nuevo gasta la voz de Gemini (REDES.md).
+              // guarda y armarlo de nuevo gasta la voz de Gemini (docs/07-REDES.md).
               for (let intentoH = 1; intentoH <= INTENTOS_HISTORIA; intentoH += 1) {
                 try {
                   const rh = await api[metodo]({ video: videoHistoria, tipo: 'STORIES', pie: '' });

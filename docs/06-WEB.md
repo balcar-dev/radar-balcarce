@@ -1,8 +1,7 @@
 # 06 · La web: cómo se arma el sitio
 
 *Escrito el 28/09/2026, leyendo el código de ese día. Si este documento y el
-código no coinciden, manda el código; las diferencias con los documentos viejos
-están al final.*
+código no coinciden, manda el código.*
 
 Este documento cuenta el último tramo del camino de una nota: desde que el
 motor ya sabe qué notas hay y qué se decidió sobre cada una, hasta que el
@@ -126,7 +125,7 @@ cada nota de la ingesta, en este orden:
    `web/data/correcciones.json`): título, bajada, sección o cuerpo.
 9. Si el título o la bajada **finales** dicen algo de lo que nunca se
    publica (hoy, las listas de sepelios, `REGLAS_SEMAFORO.nunca`), **no sale**
-   (`nuncaSePublica`). Una persona sí puede publicarlo.
+   (`nuncaSePublica`), **aunque la haya aprobado una persona** (28/09).
 10. **Sin cuerpo no se publica:** si no la decidió una persona y no tiene
     cuerpo de verdad (`tieneCuerpo`, `web/lib/cuerpo.js`: 70 palabras o más,
     `PALABRAS_MINIMAS_CUERPO`, y que no repita la bajada), **no sale** y,
@@ -140,12 +139,13 @@ cuándo, temas, `como` (automática o publicada) y las partes internas de la IA
 pero el lector no las ve). **La foto de la fuente nunca se copia**: sólo se
 guarda `teniaImagenLaFuente`.
 
-**6. Las fotos** *(sólo en la nube)*. `elegirFotosNuevas`
+**6. Las fotos.** *(Sólo en la nube)* `elegirFotosNuevas`
 (`web/scripts/fotos-notas.mjs`) prueba una foto para hasta 10 notas nuevas por
 corrida (`TOPE_POR_CORRIDA = 10`), guarda lo probado en
-`web/data/banco-fotos.json` y los archivos en `web/public/fotos-notas/` (99 al
-28/09). A cada nota con foto le pone `n.foto` (archivo y crédito). Si falla,
-las notas salen sin foto. Todo el detalle, en `docs/05-FOTOS.md`.
+`web/data/banco-fotos.json` y los archivos en `web/public/fotos-notas/` (105 al
+28/09 a la noche). *(En los dos lados)* `conFotosDelBanco` le pone `n.foto`
+(archivo y crédito) a cada nota que ya tiene foto en el banco. Si elegir falla,
+quedan las del banco. Todo el detalle, en `docs/05-FOTOS.md`.
 
 **7. Mira lo ya archivado contra lo de hoy.** Recorre `archivo.json` y arma la
 lista de `retiradas` (lo que pierde la página):
@@ -154,8 +154,13 @@ lista de `retiradas` (lo que pierde la página):
 - las repetidas que la IA descartó, **salvo** que hayan salido en redes (su
   enlace circula);
 - lo que una persona bloqueó o descartó después;
-- lo que el semáforo hoy pone en rojo o amarillo (menos la cotización del
-  dólar, que no es sensible: sale de las listas pero conserva la página).
+- lo que el semáforo hoy pone en rojo, o en amarillo por lo que dice
+  (`pierdeLaPagina`, `web/lib/archivo.js`). Conservan la página, aunque salgan
+  de las listas, la cotización del dólar y lo de afuera que hoy espera sólo
+  por el cupo o por los medios que la cuentan (`esperaSoloPorCantidad`, 28/09:
+  antes una nota ya compartida que rebotaba una corrida en el cupo perdía la
+  página para siempre);
+- las listas de sepelios, aunque las haya aprobado una persona (28/09).
 
 Si una persona corrigió una nota que la ingesta ya no trae, la corrección
 llega igual a su página.
@@ -190,7 +195,11 @@ retirado (`retirar: enLaNube`).
 **12. Los servicios.** La farmacia de turno de **ahora** (`diaDeTurno`,
 `ingesta/utiles.mjs`: el turno cambia a las 8:30) y los próximos 6 turnos; el
 clima con sus avisos (`avisosDelClima`, `ingesta/alertas.mjs`: se calculan
-acá para que el aviso ya venga en el HTML); los teléfonos útiles
+acá para que el aviso ya venga en el HTML; `UMBRALES`: helada con mínima de 0°
+o menos y fuerte con −2°, viento de 60 km/h, lluvia de 25 mm o con 85 % de
+probabilidad, más los códigos de granizo y tormenta fuerte de Open-Meteo; si
+Open-Meteo falla, el clima sale de `api.met.no`, que no da sensación térmica,
+y no se inventa); los teléfonos útiles
 (`NUMEROS`); las fiestas anuales sin fecha confirmada.
 
 **13. Lo que espera a una persona.** `pendientesDeLaIngesta`
@@ -440,7 +449,7 @@ Todas se generan al compilar, como archivos.
 | `/` | `app/page.js` | La tapa (ver arriba) |
 | `/nota/titular-ID` | `app/nota/[id]/page.js` | Título, bajada, **foto si la hay** (con el crédito en el epígrafe, nunca adentro de la imagen), cuerpo (con enlaces si es propia), botones de las notas propias, el desplegable cerrado "Fuentes (N)" con la firma (`components/verificacion.js`), compartir, "Seguí leyendo" y la invitación a escribir. Se genera una página por **cada nota de la portada y del archivo** (`todasLasNotas`) |
 | `/nota/titular-ID/opengraph-image` | `app/nota/[id]/opengraph-image.js` | La tarjeta apaisada para compartir (1200 × 630, sin foto) |
-| `/nota/titular-ID/instagram.png` | `app/nota/[id]/instagram.png/route.js` | La tarjeta vertical del espejo en Instagram (1080 × 1350). Hoy va sin foto: `FOTO_EN_INSTAGRAM = false` (`web/lib/tarjeta-diseno.js`) |
+| `/nota/titular-ID/instagram.png` | `app/nota/[id]/instagram.png/route.js` | La tarjeta vertical del espejo en Instagram (1080 × 1350). Lleva la foto del banco si la nota tiene una, y si no la placa sin foto (`FOTO_EN_INSTAGRAM = true` desde el 28/09, `web/lib/tarjeta-diseno.js`) |
 | `/nota/indice.json` | `app/nota/indice.json/route.js` | `{ id: "titular-id" }` de todas las notas con página, para el rescate de la 404 |
 | `/seccion/ranura` y `/seccion/ranura-N` | `app/seccion/[ranura]/page.js` (+ `opengraph-image.js`) | Las notas vigentes de la sección, de a 15 |
 | `/tema/ranura` | `app/tema/[ranura]/page.js` (+ `opengraph-image.js`) | Las notas de un tema que hoy tiene 2 o más. Existen y están en el sitemap, pero hoy nada las enlaza (`MOSTRAR_TEMAS = false`) |
@@ -478,8 +487,9 @@ ya está en Facebook, en un grupo de WhatsApp o en Google no da error.
 - lo que ya estaba y la ingesta no trae más, queda como estaba;
 - lo **retirado** (ver paso 7) sale y pierde la página: es lo que protege a
   un menor o a una víctima si se descubre tarde;
-- lo que hoy no tiene respaldo (de afuera y contado por un solo medio) se va,
-  **salvo** que haya salido en redes;
+- lo que hoy no tiene respaldo (de afuera, contado por un solo medio y sin
+  fuente oficial: `tieneRespaldo`, `web/lib/cuerpo.js`) se va, **salvo** que
+  haya salido en redes;
 - lo de más de 180 días (`DIAS_DE_ARCHIVO`) se va, y si pasa de 2.500 notas
   (`MAXIMO_EN_ARCHIVO`, por el límite de 20.000 archivos por despliegue de
   Cloudflare) se quedan primero las que salieron en redes y después las más
@@ -586,15 +596,62 @@ El detalle y lo que falta está en `SEO.md`. Lo que arma el código:
 
 ---
 
-## Tipografías y colores
+## El diseño: criterio, tipografías y colores
 
-Source Serif 4 en los títulos e Inter en el resto (desde el 27/09); once
-colores, uno por sección (`--s-*` en `web/app/globals.css`); el sistema
-tipográfico de las tarjetas de servicio con variables (`--t-*`). Todo está
-junto en **`MEDIA-KIT.md`**, con dónde vive cada cosa en el código, y el
-detalle de las tarjetas de servicio en `web/README.md`. Las pruebas que lo
-cuidan: `pruebas/tipografia.test.mjs`, `pruebas/titulos-colores.test.mjs` y
-`pruebas/presentacion-celular.test.mjs`.
+**El criterio**: portal de noticias,
+no diario solemne. Fondo claro, títulos en serif, un color por sección y
+movimiento sólo en lo que se mira todos los días (el dibujo del clima: sol que
+gira, nube que flota, gotas que caen; quien pidió menos movimiento en su
+sistema no lo ve, `prefers-reduced-motion` en `web/app/globals.css`). La
+franja de arriba (fecha, clima, farmacia de turno) va en **todas** las
+páginas: son las dos cosas que la gente viene a buscar sin querer leer nada.
+Una pestaña que lleva a una página vacía es peor que no tenerla: el menú sólo
+muestra las secciones que hoy tienen notas. Agenda, Clima, Farmacias, Dólar y
+Teléfonos van al final del menú y en verde: son servicios, no secciones.
+
+**Letras y colores.** Source Serif 4 en los títulos e Inter en el resto (desde
+el 27/09); once colores, uno por sección (`--s-*` en `web/app/globals.css`);
+el sistema tipográfico de las tarjetas de servicio con variables (`--t-*`).
+Todo está junto en **`MEDIA-KIT.md`** (los colores, las letras, el sistema
+tipográfico con cada variable y dónde vive cada cosa en el código).
+
+**Detalles de presentación que ya se decidieron** (27 y 28/09):
+
+- **El menú** (`web/components/navegacion.js`): el HTML viene armado y anda
+  sin JavaScript; en el navegador marca la página actual, la centra en la fila
+  y prende un degradé a la derecha mientras quede menú por ver. Con menos de
+  900 px es **una sola fila** que se desliza (toques de 44 px); desde 900 px
+  es una barra normal que envuelve, y desde 1180 px entra en una línea.
+- **Los servicios en el celular** (menos de 620 px, el bloque del final de
+  `globals.css`): el clima y la farmacia se apilan, no van en carrusel (nada
+  queda escondido detrás de un gesto); los días del clima van en una fila baja
+  con la probabilidad de lluvia al lado.
+- **La farmacia** (`TarjetaFarmacia` en `web/components/piezas.js`,
+  `web/lib/farmacias.js`): cruz propia en verde farmacia, "Llamar" y "Cómo
+  llegar"; `enlaceDeLlamada` arma el `tel:` completo ("42-2106" pasa a
+  `tel:+542266422106`). El nombre de la farmacia es un dato, no un titular. En
+  `/farmacias`, la de turno y la semana ordenada, sin repetir hoy. La tarjeta
+  **no dice hasta qué hora está de turno** (regla 3 de
+  `docs/10-REGLAS-Y-PRUEBAS.md`).
+- **El dólar** (`/dolar`, `web/lib/dolar.js`, `web/components/dolar-vivo.js`):
+  se pide en el navegador a DolarApi (`/v1/dolares`) al abrir y cada 5
+  minutos; si no contesta, a Bluelytics (sólo oficial y blue). Las dos son
+  gratis, sin clave. Mientras tanto se ve la foto del build con su hora y "no
+  se pudo actualizar". El punto verde y "Actualizado a las…" aparecen sólo
+  cuando la fuente contestó, con la hora que informa la fuente. **Nunca "en
+  vivo".** En `/dolar`, si algún valor tiene centavos, todos llevan dos
+  decimales para que las cifras alineen; en "Hoy en Balcarce", pesos enteros.
+- **El pie de todas las páginas** (`web/app/layout.js`, desde el 25/09) dice
+  que los resúmenes los escribe una IA y se verifican automáticamente contra la
+  fuente, que lo sensible lo revisa una persona antes de salir, que las voces
+  de los videos también son de IA y que cada nota dice al pie quién la
+  escribió. Antes decía "con revisión humana" y ninguna nota la había tenido:
+  decirlo es lo que evita que el día que alguien lo descubra parezca que se
+  escondía. Las biografías de las redes dicen lo mismo, más corto
+  (`PERFILES.md`).
+
+Las pruebas que cuidan el diseño: `pruebas/tipografia.test.mjs`,
+`pruebas/titulos-colores.test.mjs` y `pruebas/presentacion-celular.test.mjs`.
 
 ---
 
@@ -650,7 +707,7 @@ cuidan: `pruebas/tipografia.test.mjs`, `pruebas/titulos-colores.test.mjs` y
 | Cuánto puede tener un hecho para salir por primera vez | `HORAS_PARA_ESTRENAR` y `PORTADA.horasParaEstrenar`, igual que arriba |
 | Con cuántas horas compite la nota grande | `VENTANA_HORAS` (`web/lib/datos.js`) y `PORTADA.horasNotaGrande` |
 | Cuántas notas por sección en la portada | `NOTAS_POR_SECCION` (`web/lib/datos.js`) |
-| El orden, los nombres y el menú de las secciones | `SECCIONES` y `EN_NAVEGACION` (`web/lib/datos.js`); el color, `--s-*` en `web/app/globals.css` (`MEDIA-KIT.md`) |
+| El orden, los nombres y el menú de las secciones | `SECCIONES` y `EN_NAVEGACION` (`web/lib/datos.js`); el color, `--s-*` en `web/app/globals.css` (`MEDIA-KIT.md`; Argentina conserva la variable vieja `--s-pais`). Las ranuras son `balcarce`, `politica`, `policiales`, `futbol`, `deportes`, `automovilismo`, `agro`, `economia`, `cultura`, `tecnologia` y `argentina` |
 | Cuánto dura el archivo o cuántas notas guarda | `DIAS_DE_ARCHIVO`, `MAXIMO_EN_ARCHIVO` (`web/lib/archivo.js`) |
 | Sacar una nota de la web sin el panel | `web/data/retiradas.json` (motivo, cuándo, quién) |
 | Corregir título, bajada, sección o cuerpo sin el panel | `web/data/correcciones.json` (motivo, cuándo, quién; `CAMPOS_CORREGIBLES`) |
@@ -664,7 +721,7 @@ cuidan: `pruebas/tipografia.test.mjs`, `pruebas/titulos-colores.test.mjs` y
 | Las redirecciones de secciones viejas | `SECCIONES_VIEJAS` (`web/scripts/generar-redirects.mjs`) |
 | Los encabezados de Cloudflare | `web/public/_headers` |
 | Prender las etiquetas de temas | `MOSTRAR_TEMAS` (`web/lib/sitio.js`) |
-| Poner la foto en la imagen de Instagram | `FOTO_EN_INSTAGRAM` (`web/lib/tarjeta-diseno.js`), sólo si Hernán lo decide (y actualizar `CRITERIO-EDITORIAL.md` § 9) |
+| Que la imagen de Instagram lleve (o no) la foto del banco | `FOTO_EN_INSTAGRAM` (`web/lib/tarjeta-diseno.js`; hoy `true`) |
 | Los avisos publicitarios | Panel → Avisos (`PUBLICIDAD.md`) |
 
 ---
@@ -688,48 +745,15 @@ cuidan: `pruebas/tipografia.test.mjs`, `pruebas/titulos-colores.test.mjs` y
 
 ---
 
-## Diferencias encontradas con los documentos viejos
+## Lo que sigue abierto
 
-El código del 28/09 manda. Lo que dicen otros documentos y ya no es así:
-
-1. **La portada muestra 36 horas, no 72.** `HORAS_EN_PORTADA = 36` desde el
-   28/09 (`web/lib/archivo.js`, `PORTADA.horas`). `CLAUDE.md` ("La portada
-   muestra sólo 72 horas", "Nada de más de 72 horas…", "De las repetidas queda
-   la ya publicada … últimas 72 horas"), `REGLAS.md` (reglas 51 y 60),
-   `MANUAL.md` y `docs/RADAR-3.0.md` (§ 4.13 y la tabla de páginas) todavía
-   dicen 72. `web/README.md` ya dice 36.
-2. **Hay una regla nueva que no está en `CLAUDE.md`:** una nota que nunca
-   salió no se estrena si el hecho tiene más de 12 horas
-   (`HORAS_PARA_ESTRENAR`, `llegaTarde`, 28/09).
-3. **Las fotos ya se usan en la web.** `CLAUDE.md` y `REGLAS.md` (regla 8)
-   dicen que el banco de fotos "todavía no está construido" y que "sigue
-   saliendo la placa propia en todos lados". Desde el 28/09 la nube prueba
-   fotos (`web/scripts/fotos-notas.mjs`), las guarda en
-   `web/data/banco-fotos.json` y `web/public/fotos-notas/` (99 archivos) y la
-   página de la nota las muestra con el crédito en el epígrafe. En Instagram
-   sigue la placa sin foto (`FOTO_EN_INSTAGRAM = false`).
-4. **`web/README.md` dice que `npm run datos` "sólo regenera `portada.json` y
-   `archivo.json`".** Escribe diez archivos de `web/data/` y las fotos. Su tabla de `data/`
-   no nombra `banco-fotos.json`, `esperando-cuerpo.json` ni `vistas.json`, y
-   la de `app/` no nombra `/clima` (existe desde el 28/09).
-5. **`web/README.md` describe una "tarjeta del dólar de la portada" de tres
-   columnas** (nombre, compra, venta). Desde el 28/09 el dólar de la portada es
-   una de las tres tarjetas de "Hoy en Balcarce": el blue grande, el oficial
-   debajo y la brecha.
-6. **El comentario de `HORAS_EN_PORTADA`** (`web/lib/archivo.js`) dice que es
-   "el mismo criterio que usa el panel para archivar" (`HORAS_PARA_ARCHIVAR`).
-   Ya no: el panel archiva a las 72 horas y la web corta a las 36.
-7. **El título de una prueba quedó viejo:** en `pruebas/archivo.test.mjs`,
-   "generar-datos corta las listas en 72 horas…" (el código corta en 36; la
-   prueba pasa porque mira el mecanismo, no el número).
-8. **Comentarios viejos en el código de la web:** `web/next.config.mjs` dice
-   que "las únicas imágenes del sitio son las placas propias" (ya hay fotos);
-   `web/package.json` describe la web como "datos estáticos generados desde el
-   panel" (los genera GitHub); `web/app/sitemap.js` dice que el feed "trae las
-   últimas veinte" (trae todas las vigentes); `web/lib/tarjeta-diseno.js` dice
-   que se prueba en `pruebas/tarjeta-diseno.test.mjs`, que no existe (lo
-   prueba `pruebas/placas.test.mjs`).
-9. **`web/data/auditoria.json`** lo nombran `redes/auditar.mjs`, el workflow
-   "Auditoría" y el vigilante, pero al 28/09 no está en el repositorio.
-10. **`docs/RADAR-3.0.md`** dice que `npm test` tarda "unos 5 segundos": el
-    28/09 tardó entre 10 y 11 segundos, con 1.322 pruebas.
+- Comentarios que quedaron viejos: `HORAS_EN_PORTADA` (`web/lib/archivo.js`,
+  "el mismo criterio que el panel"), `web/next.config.mjs` ("las únicas
+  imágenes son las placas"), la descripción de `web/package.json`
+  ("datos generados desde el panel"), `web/app/sitemap.js` (el feed "trae las
+  últimas veinte") y `web/lib/tarjeta-diseno.js` (nombra una prueba que no
+  existe, `tarjeta-diseno.test.mjs`; la que lo prueba es `placas.test.mjs`);
+  y el título de una prueba de `pruebas/archivo.test.mjs` ("corta las listas
+  en 72 horas", el código corta en 36). Están en `PENDIENTES.md`.
+- `web/data/auditoria.json` no existe todavía: la Auditoría de los lunes nunca
+  corrió (`docs/08-INFRAESTRUCTURA.md`, `PENDIENTES.md`).

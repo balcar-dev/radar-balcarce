@@ -1,5 +1,7 @@
 # Auditoría completa — 25/09/2026
 
+> *Nota del 28/09/2026: documento histórico, no se mantiene. Los documentos que nombra (`REGLAS.md`, `REDES.md`, `INFRAESTRUCTURA.md`, `PANEL.md`, `EMPEZAR-ACA.md`, `MANUAL.md`, `docs/RADAR-3.0.md`) se retiraron ese día: lo vigente está en `docs/`, empezando por `docs/00-INDICE.md`.*
+
 ## Estado al cierre del 25/09
 
 ✅ arreglado · ⏳ pendiente (técnico) · 👤 le toca a una persona.

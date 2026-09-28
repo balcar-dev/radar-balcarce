@@ -12,7 +12,7 @@ import {
   ANCHO, ALTO, ZONA_TEXTO, COLOR_SECCION, COLORES, placaRepaso, placaClima, placaFarmacia, placaNoticia,
   placaUtiles, placaAgenda, diaConTilde, comoNombrePropio, encabezadoDelRepaso, iconoDelCielo, archivosDeFuente,
 } from '../reels/placa.mjs';
-import { planDelDia, dolarParaLaPlaca, hastaCuandoElTurno, cajaDeDia, pronosticoDe } from '../reels/plan.mjs';
+import { planDelDia, hastaCuandoElTurno, cajaDeDia, pronosticoDe } from '../reels/plan.mjs';
 import {
   repartirTexto, INSTAGRAM, TAMANO_INSTAGRAM, INTERLINEA_TITULO, altoParaTexto, bajadaQueEntra, fechaCorta, fotoDeLaNota,
   tamNombreDeSeccion, anchoParaTexto,
@@ -131,13 +131,13 @@ test('clima: la mañana, la noche y el aviso entran enteros, sin pisar la firma'
     temp: 18, cielo: 'Chaparrones fuertes con tormenta', max: 18, min: 11, sensacion: 17, viento: 14, rumbo: 'NE',
     cajas: CLIMA.dias.map((d, i) => cajaDeDia(d, i === 0 ? 'HOY' : null)),
   };
-  revisarCajas(placaClima({ ...base, fecha: 'Miércoles 30 de septiembre', dolar: { oficial: 1545, blue: 1560, cuando: 'Venta · lunes 28, 11 h' } }), 'clima de la mañana');
+  revisarCajas(placaClima({ ...base, fecha: 'Miércoles 30 de septiembre' }), 'clima de la mañana');
   revisarCajas(placaClima({
     ...base, fecha: 'Cómo sigue el día', kicker: 'Esta noche en Balcarce', etiqueta: 'Ahora', pronostico: { titulo: 'Mañana', texto: pronosticoDe(CLIMA.dias[1]) },
   }), 'clima de la noche');
   revisarCajas(placaClima({
-    ...base, fecha: 'Tormenta con granizo hoy', kicker: 'Aviso de clima · hoy', aviso: { texto: 'El pronóstico da tormenta con granizo para hoy en Balcarce. Guardá los autos bajo techo y evitá salir durante la tormenta.' }, dolar: { oficial: 1545, blue: 1560, cuando: 'x' },
-  }), 'aviso de clima con dólar');
+    ...base, fecha: 'Tormenta con granizo hoy', kicker: 'Aviso de clima · hoy', aviso: { texto: 'El pronóstico da tormenta con granizo para hoy en Balcarce. Guardá los autos bajo techo y evitá salir durante la tormenta.' },
+  }), 'aviso de clima');
 });
 
 test('clima: el recuadro de mañana no repite la lluvia y el ícono sigue al cielo', () => {
@@ -150,15 +150,9 @@ test('clima: el recuadro de mañana no repite la lluvia y el ícono sigue al cie
   assert.equal(iconoDelCielo('Parcialmente nublado'), 'sol-nube');
 });
 
-test('el dólar de la placa: el último de las 11, con cuándo se tomó, y nunca uno viejo ni "en vivo"', () => {
-  const historia = { dias: [{ dia: '2026-09-28', consultado: '2026-09-28T14:01:44.189Z', cotizaciones: { oficial: { venta: 1545 }, blue: { venta: 1560 } } }] };
-  const d = dolarParaLaPlaca(historia, new Date('2026-09-29T10:30:00Z'));
-  assert.deepEqual({ oficial: d.oficial, blue: d.blue }, { oficial: 1545, blue: 1560 });
-  assert.match(d.cuando, /lunes 28, 11 h/);
-  assert.doesNotMatch(d.cuando, /vivo|ahora/i);
-  assert.equal(dolarParaLaPlaca(historia, new Date('2026-10-05T10:30:00Z')), null, 'uno de hace una semana no va');
-  assert.equal(dolarParaLaPlaca(null), null);
-  assert.equal(dolarParaLaPlaca({ dias: [] }), null);
+test('el clima nunca lleva el dólar: si se mueve, sale como nota propia', () => {
+  const svg = placaClima({ temp: 18, cielo: 'Nublado', max: 18, min: 11, fecha: 'Lunes 28 de septiembre', dolar: { oficial: 1545, blue: 1560, cuando: 'x' } });
+  assert.doesNotMatch(svg, /Dólar|Oficial|Blue|1\.545/);
 });
 
 // ------------------------------------------------------------ la farmacia
@@ -226,7 +220,7 @@ test('ninguna placa del plan nombra a un medio ni lleva la fuente adentro', () =
     clima: CLIMA,
     farmacias: { turnos: [{ dia: new Date().getDate(), diaSemana: 'LUNES', mes: 9, farmacias: ['MEDRANO'], detalle: [{ nombre: 'Medrano', direccion: 'Calle 28 esquina 19' }] }] },
   };
-  const { piezas } = planDelDia(datos, { libro: null, estado: {}, eventos: [], dolar: null });
+  const { piezas } = planDelDia(datos, { libro: null, estado: {}, eventos: [] });
   assert.ok(piezas.length >= 3, 'el plan no armó piezas');
   for (const p of piezas.filter((x) => x.svg)) {
     assert.doesNotMatch(p.svg, /Vanguardia|Gabal|Colegio de Farmac|Foto:|diariolavanguardia/i, `${p.nombre} nombra una fuente`);

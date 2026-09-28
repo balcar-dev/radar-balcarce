@@ -438,7 +438,7 @@ main { padding: 24px 0 10px; }
 .fila-nota .dato, .fila-nota h3.dato { font-size: var(--t-dato); font-weight: 600; }
 
 /* -------------------------------------------------------------- publicidad */
-/* Gris, quieto y con la etiqueta siempre arriba: ver REDES.md § 2. Nunca
+/* Gris, quieto y con la etiqueta siempre arriba: ver PUBLICIDAD.md. Nunca
    var(--rojo) acá — un aviso que se ve como una nota deja de distinguirse. */
 .aviso { background: var(--crema); border: 1px solid var(--linea); border-radius: 10px; padding: 14px 16px; margin: 24px 0; }
 .aviso-etiqueta { font-size: 11px; letter-spacing: 0.04em; text-transform: uppercase; color: var(--suave); margin: 0 0 8px; }

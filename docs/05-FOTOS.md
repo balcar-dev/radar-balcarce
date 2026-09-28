@@ -14,8 +14,9 @@ no se probaron se les busca la foto principal de cada medio que las contó, una
 IA con visión elige la mejor **sin marca de agua** (o, si ninguna sirve y la
 nota es de una persona pública, se busca una foto libre en Wikimedia Commons),
 se guarda en el banco propio con su crédito y se muestra en la página de la
-nota con el crédito debajo; en redes y en la tarjeta para compartir sigue la
-placa propia.
+nota con el crédito debajo y en el espejo de Instagram (el crédito va en el
+texto del posteo); la tarjeta para compartir y los videos siguen con placa.
+La placa es lo que sale cuando no hay foto que sirva.
 
 ### Por qué hay un banco de fotos
 
@@ -33,10 +34,14 @@ para poder revisarla y reusarla. Desde el 28/09 está construido y en vivo.
 
 ### 1. Cuándo corre
 
-Dentro de `web/scripts/generar-datos.mjs`, **sólo en la nube** (en GitHub
-Actions), después de decidir qué notas se publican (`docs/03-SELECCION.md`,
-paso 11) y antes de armar el archivo. Si algo falla, la nota se publica igual,
-sin foto ("fotos: no se pudo (…); las notas siguen sin foto").
+Dentro de `web/scripts/generar-datos.mjs`, después de decidir qué notas se
+publican (`docs/03-SELECCION.md`, paso 11) y antes de armar el archivo.
+**Elegir fotos nuevas es sólo en la nube** (en GitHub Actions: gasta cupo de
+IA). **Poner las que ya están en el banco** (`conFotosDelBanco`,
+`web/scripts/fotos-notas.mjs`) corre siempre, también en la PC (28/09: antes
+una corrida en la PC dejaba `portada.json` sin ninguna foto). Si elegir falla,
+las notas salen con lo que ya tenía el banco ("fotos: no se pudieron elegir
+nuevas (…); quedan las del banco").
 
 ### 2. A qué notas se les prueba
 
@@ -130,8 +135,14 @@ con marca de agua, y una persona fácil de identificar):
    `WIKIMEDIA_LICENCIAS_LIBRES`). Lo que tiene "todos los derechos reservados"
    se descarta.
 
+De Commons se guarda también **el autor** (`extmetadata.Artist`, pasado a
+texto por `textoPlano`), y el crédito dice autor y licencia, como piden CC BY y
+CC BY-SA: "Foto: *autor* / Wikimedia Commons (CC BY-SA 4.0)" (`creditoDeFoto`,
+`ingesta/fotos.mjs`, 28/09). La foto de un medio dice "Foto: *medio*".
+
 El 28/09 había 3 fotos de Wikimedia en el banco (Mariano Werner y dos de
-Colapinto), las tres CC BY-SA 4.0.
+Colapinto), las tres CC BY-SA 4.0, guardadas **antes** de ese arreglo: su
+crédito sigue diciendo sólo "Foto: Wikimedia Commons" (`PENDIENTES.md`).
 
 ### 8. Qué se guarda en el banco
 
@@ -148,6 +159,7 @@ En `web/data/banco-fotos.json`, una entrada por nota:
 | `medio` | De quién es la foto (el medio, o "Wikimedia Commons") |
 | `credito` | Lo que se muestra debajo: "Foto: *medio*" |
 | `licencia` | La de Wikimedia; `null` para las de un medio |
+| `autor` | Sólo en las de Wikimedia guardadas desde el 28/09 |
 | `origen` | `medio`, `wikimedia`, `ninguna` o `error` |
 | `titulo` | El título de **nuestra** nota |
 | `enlace` | La nota del medio de donde salió (o la página de Wikimedia) |
@@ -186,15 +198,15 @@ que salga del banco y no de la fuente, y que el crédito esté una sola vez.
 ### 10. Dónde NO se muestra
 
 - **Instagram:** la imagen de cada posteo (`web/app/nota/[id]/instagram.png`)
-  es la placa propia sin foto. El diseño nuevo tiene lugar para la foto, pero
-  está apagado con `FOTO_EN_INSTAGRAM = false` (`web/lib/tarjeta-diseno.js`):
-  usar ahí la foto de otro medio lo decide Hernán. Lo leen la imagen y el
-  texto del posteo (`redes/publicar.mjs`), así nunca va un crédito sin foto
-  ni una foto sin crédito: si se prende, el posteo suma "Foto: *medio*" al
-  final (`conCreditoDeFoto`, `redes/elegir.mjs`).
+  lleva la foto del banco desde el 28/09 (`FOTO_EN_INSTAGRAM = true`,
+  `web/lib/tarjeta-diseno.js`). Sin foto que sirva, sale la placa sin foto. Lo
+  leen la imagen y el texto del posteo (`redes/publicar.mjs`), así nunca va un
+  crédito sin foto ni una foto sin crédito: el posteo suma "Foto: *medio*" al
+  final (`conCreditoDeFoto`, `redes/elegir.mjs`). Para volver a la placa en
+  todos: `false`.
 - **Facebook y la tarjeta para compartir enlaces** (WhatsApp, Facebook:
-  `opengraph-image.js`): placa propia.
-- **Podcasts, historias y reels:** placas propias (`reels/placa.mjs`).
+  `opengraph-image.js`): placa sin foto (falta decidir si lleva la del banco).
+- **Podcasts, historias y reels:** placas de datos (`reels/placa.mjs`): no cuentan una sola nota, así que no llevan foto.
 - **La imagen que trae la ingesta de cada fuente** (`imagen`) no se publica en
   ningún lado: sólo suma 6 puntos de relevancia como señal de que la nota está
   trabajada.
@@ -215,13 +227,13 @@ Ver `docs/07-REDES.md`.
 
 | Archivo | Qué hace | Quién lo llama | Qué lee | Qué escribe |
 |---|---|---|---|---|
-| `web/scripts/fotos-notas.mjs` | A qué notas se les prueba foto (`elegirFotosNuevas`, `elegiblePorSeccion`, `TOPE_POR_CORRIDA`) y qué se guarda; `fotoDeLaWeb` | `generar-datos.mjs` (nube) | El banco anterior | Devuelve el banco nuevo y los archivos |
+| `web/scripts/fotos-notas.mjs` | A qué notas se les prueba foto (`elegirFotosNuevas`, `elegiblePorSeccion`, `TOPE_POR_CORRIDA`; sólo en la nube) y qué se guarda; `fotoDeLaWeb` y `conFotosDelBanco` (las ya guardadas, nube y PC) | `generar-datos.mjs` | El banco anterior | Devuelve el banco nuevo y los archivos |
 | `ingesta/fotos.mjs` | Candidatas (`og:image`), descarga, comparación con Gemini o Groq, red de seguridad contra la marca, persona pública y Wikimedia (`elegirFotoParaNota`) | `fotos-notas.mjs` | Las páginas de los medios, las APIs de Gemini, Groq y Wikimedia | — |
 | `web/scripts/generar-datos.mjs` | Dispara todo y escribe los archivos | `actualizar.yml` | `banco-fotos.json` | `web/data/banco-fotos.json`, `web/public/fotos-notas/`, el campo `foto` de cada nota |
 | `web/data/banco-fotos.json` | El banco: qué nota se probó y con qué resultado | — | — | — |
 | `web/public/fotos-notas/` | Las fotos elegidas | — | — | — |
 | `web/app/nota/[id]/page.js` | Muestra la foto y el crédito | La web al compilar | `portada.json`, `archivo.json` | — |
-| `web/lib/tarjeta-diseno.js` | `FOTO_EN_INSTAGRAM` (apagado) y `fotoDeLaNota` | Tarjeta de Instagram, `redes/publicar.mjs` | — | — |
+| `web/lib/tarjeta-diseno.js` | `FOTO_EN_INSTAGRAM` (prendido desde el 28/09) y `fotoDeLaNota` | Tarjeta de Instagram, `redes/publicar.mjs` | — | — |
 | `redes/elegir.mjs` | `conCreditoDeFoto`: el crédito en el texto del posteo, si la imagen lleva foto | `redes/publicar.mjs` | — | — |
 | `reels/claves.mjs` | `claveClasificacion` y `claveGroq` | `ingesta/fotos.mjs` | `.env`, variables | — |
 
@@ -236,7 +248,7 @@ Ver `docs/07-REDES.md`.
 | Qué licencias de Wikimedia se aceptan | `WIKIMEDIA_LICENCIAS_LIBRES` (`ingesta/fotos.mjs`) |
 | Que una nota vuelva a probarse | Borrar su entrada de `web/data/banco-fotos.json` |
 | Sacar una foto que no debía salir | Borrar la entrada del banco y el archivo de `web/public/fotos-notas/`, **y** agregar la nota al banco con `"intentado": true` para que no se vuelva a elegir la misma |
-| Prender la foto en Instagram | `FOTO_EN_INSTAGRAM` (`web/lib/tarjeta-diseno.js`), y actualizar `CRITERIO-EDITORIAL.md` § 9 (decisión de Hernán) |
+| Que el espejo de Instagram lleve (o no) la foto del banco | `FOTO_EN_INSTAGRAM` (`web/lib/tarjeta-diseno.js`; hoy `true`) |
 | Cómo se ve en la página | El bloque `{n.foto && …}` de `web/app/nota/[id]/page.js` |
 
 ## Qué puede fallar y cómo se nota
@@ -245,19 +257,19 @@ Ver `docs/07-REDES.md`.
 |---|---|---|
 | **La foto no se recorta de verdad** | El archivo se guarda entero, tal como lo publicó el medio. Lo único que "recorta" es la página, que la ajusta a 480 píxeles de alto: si hubiera un logo en una esquina, puede quedar a la vista, y el archivo en `fotos-notas/` lo conserva | La única defensa contra la marca de agua es que la IA la vea. Revisar el banco a ojo cada tanto, empezando por los medios locales y de la zona |
 | La IA no ve una marca de agua | Una foto con el logo de otro medio en la página de una nota | Sacarla del banco (tabla de arriba) y anotar el caso |
-| **El crédito de Wikimedia está incompleto** | La página dice "Foto: Wikimedia Commons". Las licencias CC BY y CC BY-SA piden nombrar **al autor** y la licencia; la licencia queda guardada en el banco pero no se muestra, y el autor ni se guarda | Falta sumar el autor y la licencia al crédito |
+| El crédito de una foto de Wikimedia guardada antes del 28/09 | La página dice sólo "Foto: Wikimedia Commons" (lo nuevo ya lleva autor y licencia) | Completar a mano `credito` y `autor` de esas tres entradas del banco (`PENDIENTES.md`) |
 | **Una nota amarilla aprobada por una persona puede llevar la foto de un chico** | La exclusión de menores y víctimas depende del semáforo rojo; las notas amarillas por "niño", "adolescente" o "alumno de" que una persona publica desde el panel sí se prueban (sólo Policiales está excluida) | Mirar la foto al aprobar una nota así, o sumar la regla a `elegiblePorSeccion` |
-| Correr `generar-datos.mjs` en la PC | Las fotos sólo se asignan en la nube: una corrida en la PC deja `portada.json` **sin ninguna foto** (el archivo las conserva). Se vio el 28/09: la portada del repositorio tenía 19 fotos y la regenerada en la PC, 0 | Se corrige sola en la corrida siguiente de la nube; no subir esa portada |
 | La elegida no se pudo volver a bajar | Entrada con `"error":"no se pudo volver a bajar la elegida"`; esa nota no se vuelve a probar nunca | Borrar la entrada para que se reintente |
 | Una nota sin foto que después cuentan más medios | Se probó con los medios de ese momento y quedó `intentado`: no se vuelve a probar aunque aparezca una foto mejor | Borrar la entrada si importa |
 | Gemini y Groq sin cupo | "fotos: N notas nuevas probadas (0 con foto)"; entradas con la razón "Gemini falló…" o "Groq también falló…", que ya no se reintentan | Borrar esas entradas cuando vuelva el cupo |
 | La IA de fotos le gana cupo a la lectura con IA | Comparten `GEMINI_API_KEY_CLASIFICACION`: diez pedidos con imágenes por corrida se suman a los de las fichas | Si falta cupo, bajar `TOPE_POR_CORRIDA` |
 
-## Diferencias encontradas con los documentos viejos
+## Lo que sigue abierto
 
-- **`REGLAS.md` regla 8** dice "Pendiente de construir: hoy sale la placa propia en todos lados", y **`docs/RADAR-3.0.md`** pone "la foto de otro medio (siempre placa propia)" entre lo que no se hace: desde el 28/09 la foto de otro medio **sale en la página de la nota** (la placa propia sigue en redes y en la tarjeta para compartir). `CLAUDE.md` y `PENDIENTES.md` ya están al día.
-- **`CRITERIO-EDITORIAL.md` § 2, "Las fotos", dice que "por defecto" una nota lleva una foto propia, oficial, de stock "imagen ilustrativa" o una ilustración de la sección**: el código no tiene fotos propias cargadas (`PENDIENTES.md`: sigue pendiente), no busca stock ni pone ilustraciones. Sin foto elegida, la página va **sin imagen**.
-- **`CRITERIO-EDITORIAL.md` y `CLAUDE.md` hablan de "recortar" la foto de otro medio**: el código no recorta el archivo; lo guarda entero y la página lo encuadra (ver "Qué puede fallar").
-- **`CRITERIO-EDITORIAL.md` pide revisar "a ojo (o con la IA que compare)" cada foto de un medio local antes de guardarla**: el código sólo usa la IA; no hay revisión humana antes de publicar.
-- **El comentario de arriba de `ingesta/fotos.mjs` dice que la comparación es "cuando una nota tiene 2 medios o más"**: el código también compara (y busca la marca de agua) cuando hay un solo medio con foto.
-- **Los comentarios de `ingesta/ingesta.mjs` (`ampliar`) y de `web/scripts/generar-datos.mjs` (`teniaImagenLaFuente`) dicen que la foto de la fuente "no se publica nunca"**: la del feed no se publica, pero la del banco sí (ver `docs/02-INGESTA.md`, "Diferencias").
+`CRITERIO-EDITORIAL.md` § 2 ("Las fotos") pide cosas que el código no hace:
+una foto propia, oficial, de stock o una ilustración "por defecto" (sin foto
+elegida la página va sin imagen), "recortar" la foto de otro medio (se guarda
+entera y la página sólo la encuadra) y revisarla a ojo antes de guardarla (lo
+hace sólo la IA). Hay que alinear el criterio o el código: está en
+`PENDIENTES.md`, con lo de las fotos de chicos en notas amarillas aprobadas y
+los tres créditos viejos de Wikimedia.

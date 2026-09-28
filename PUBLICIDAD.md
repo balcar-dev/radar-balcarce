@@ -2,7 +2,7 @@
 
 *Actualizado el 26/09/2026.* Cómo se piensa ganar plata sin arruinar lo que
 hace distinto al medio (una portada liviana, sin banners de terceros). Este
-documento reúne lo que antes estaba repartido entre `REDES.md` y `IDEAS.md`.
+documento reúne lo que antes estaba repartido entre las notas de redes y `IDEAS.md`.
 
 ## Dónde estamos
 
@@ -46,7 +46,7 @@ Maqueta en el lienzo de diseño, artboard "Dónde irían los avisos".
 opcionalmente un logo, por cada espacio. Se guarda en `web/data/avisos.json`
 (lo lee `web/components/avisos.js`) y el panel lo sube solo a GitHub
 (`panel/sincronizar.mjs`): en unos minutos está en la web. Requiere la PC
-prendida (`PANEL.md`). Prueba: `pruebas/panel.test.mjs` ("son exactamente tres
+prendida (`docs/09-PANEL.md`). Prueba: `pruebas/panel.test.mjs` ("son exactamente tres
 espacios, los mismos que dibuja la web").
 
 ### Reglas que no se negocian
@@ -118,6 +118,6 @@ avisos propios. El mismo pendiente, en `PENDIENTES.md` y `SEO.md`.
 
 ## Relacionado
 
-`REDES.md` (los podcasts y las historias donde puede haber menciones),
+`docs/07-REDES.md` (los podcasts y las historias donde puede haber menciones),
 `COMERCIAL.md` (a quién ofrecerle qué), `IDEAS.md` (guía comercial y contenido
-propio), `PANEL.md`, `docs/historico/INVESTIGACION-COMPETENCIA.md`.
+propio), `docs/09-PANEL.md`, `docs/historico/INVESTIGACION-COMPETENCIA.md`.

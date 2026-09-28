@@ -253,7 +253,7 @@ bajar una nota ya publicada). Los ejemplos marcados "real" salieron de
 | `lugar` | Una nota que no es de Balcarce con Balcarce en el título, si el titular original no lo decía | Real (27/09): "Comienza la Invasión de Pueblos en Necochea con presencia de jóvenes de Balcarce" |
 | `vacio` | Sin título o sin bajada | — |
 | `largo` | Pasar el máximo de cada parte (título 90, bajada 360, guion 200, cuerpo 1.800; claves 180, datos 260, aporte 220, texto para redes 280, etiqueta 40) | Un título de 95 caracteres |
-| `acusacion` | Un verbo de delito (asesinó, mató, robó, estafó, abusó…) sin ninguna atribución en el mismo texto (según, habría, fiscal, policía, justicia…) | Real: "Difunden un nuevo video sobre un presunto abuso…" (ver "Qué puede fallar": este rechazo es un error del control) |
+| `acusacion` | Un verbo de delito en pasado (asesinó, mató, robó, estafó, abusó…) sin ninguna atribución en el mismo texto (según, habría, presunto, supuesto, acusado, la denuncia, imputado, investigan, policía, fiscal, justicia…). Se mira con tildes: "un robo" o "un presunto abuso" no son "robó" ni "abusó" (28/09) | Prueba: "Asesinó a su vecino" sin atribuir. Real (antes del 28/09 se rechazaba por error): "Difunden un nuevo video sobre un presunto abuso…", que hoy pasa |
 | `negacion` | Una negación (no, nunca, jamás, tampoco, ni) en el título o la bajada que las fuentes no tienen, o una del titular original que desapareció | Real: "la fuente niega algo en el título y el texto nuevo no" (28 notas así) |
 | `repite` | El primer párrafo del cuerpo dice casi lo mismo que la bajada (70 % de palabras en común) o arranca con sus mismas palabras | Real: "el cuerpo repite el copete en vez de desarrollarlo" |
 | `copia` | Más de 12 palabras seguidas copiadas del original (`COPIA_MAXIMA`) | Real: "copia 13 palabras seguidas del original" |
@@ -410,14 +410,18 @@ porque se armaron sobre otro texto.
 Cada nota dice quién la escribió, en una sola línea gris (`firmaCorta`,
 `web/components/metadatos.js`), y lo mismo en los datos para Google
 (`autorDeNota`). La decide `quienEscribio`: "escrita por la IA" si la nota
-tiene **guion**; "revisada" si la publicó una persona desde el panel
-(`como: 'publicada'`).
+tiene **guion** y su cuerpo no se escribió a mano; "revisada" si la publicó
+una persona desde el panel (`como: 'publicada'`) o si tiene una corrección en
+`web/data/correcciones.json` (`corregidaAMano`, que pone `conCorreccion`,
+28/09). Si el cuerpo es el de la corrección (`cuerpoAMano`), el autor de los
+datos para Google es Radar Balcarce.
 
 | La nota es… | La línea dice |
 |---|---|
 | Escrita por la IA, sin revisión | "Redacción con IA, verificada contra las fuentes · Fuentes (N)" |
 | Escrita por la IA y publicada por una persona | "Redacción con IA, revisada por la redacción · Fuentes (N)" |
-| Publicada por una persona sin texto de la IA | "Revisada por la redacción · Fuentes (N)" |
+| Escrita por la IA y corregida en `correcciones.json` (título, bajada o sección) | "Redacción con IA, revisada por la redacción · Fuentes (N)" |
+| Publicada por una persona sin texto de la IA, o con el cuerpo escrito a mano en `correcciones.json` | "Revisada por la redacción · Fuentes (N)" |
 | Sin guion y sin persona | "Texto de *medio* · Fuentes (N)" |
 | Propia (el dólar, un repaso) | Lo que dice la nota ("Nota de Radar Balcarce…") |
 
@@ -471,15 +475,13 @@ automáticamente contra ellas…"). Nunca se dice "sin revisión humana". Criter
 | Gemini sin cupo o saturado | "reescritura: … N fallaron (HTTP 429…)" en el registro; crece `esperando-cuerpo.json`; el vigilante avisa si menos del 35 % de lo de las últimas 24 horas tiene cuerpo | Esperar al día siguiente, o escribir los cuerpos a mano (paso 12) |
 | Se cayó `CRITERIO-EDITORIAL.md` o se borró una marca | "Actualizar la web" falla a la vista ("Criterio editorial (…): falta la marca …") y `npm test` también | Restaurar la marca |
 | La IA cambia el formato del JSON | "Gemini: Bad Unicode escape…" o "Unexpected token" en `intentos-ia.json` | `repararEscapes` cubre las barras mal formadas; lo demás, mirar `limpiarJson` |
-| **El control de acusaciones no reconoce "presunto", "investigan" ni "la denuncia"** | Rechaza títulos bien atribuidos. Real: "Difunden un nuevo video sobre un presunto abuso…". La lista `ATRIBUCION` (`ingesta/verificar.mjs`) tiene raíces (`presunt`, `denunci`, `investig`, `acusad`, `imputad`, `sospech`, `supuest`) con un corte de palabra al final, así que sólo encuentran la raíz sola, nunca "presunto" o "denuncia". Además "robo" (el sustantivo) se toma como el verbo "robó": "Investigan un robo en la escuela" se rechaza | Arreglarlo en el código con su prueba (es un falso positivo: frena notas, no publica errores) |
-| **Una nota con cuerpo escrito a mano firma como "Texto de *medio*"** | Si la IA nunca la escribió, la nota no tiene guion, y la firma dice que el texto es del medio ("El texto es el que publicó la fuente. No lo reescribimos."), aunque el cuerpo lo escribió Claude. El 28/09 eran 25 de las 44 notas con cuerpo a mano que estaban publicadas | Hace falta una regla de firma para lo corregido a mano (`quienEscribio`, `web/components/metadatos.js`) |
+| La IA escribe un verbo de delito sin tilde ("robo" por "robó") | El control no lo ve: los verbos que se confunden con un sustantivo (robó, abusó, secuestró, disparó) sólo se reconocen con la tilde, a propósito, para no rechazar "un robo" | Riesgo aceptado (era peor rechazar cada "un robo"); si una nota así sale, se corrige en `correcciones.json` |
 | Una regla nueva no alcanza a lo ya publicado | Una nota vieja sigue con un defecto que hoy se rechazaría | Sólo se revalida lo que la ingesta todavía trae; lo demás se corrige a mano en `correcciones.json` |
 | Una nota se frena por verificación BAJA | En el panel, amarilla con "verificación baja: espera a una persona" | Revisarla y publicarla desde el panel si corresponde |
 | La reescritura en la PC y en la nube cuentan intentos por separado | El panel lleva su propio conteo (`estado.intentosIA`) y no lo suma a `intentos-ia.json`: el tope del día es por lado | Nada, mientras el panel esté apagado casi siempre |
 
-## Diferencias encontradas con los documentos viejos
+## Lo que sigue abierto
 
-- **"Se piden 100 a 180 palabras"** (`docs/RADAR-3.0.md`, tabla del cuerpo) y los comentarios de `web/lib/cuerpo.js` ("La instrucción a la IA pide de 100 a 180") y de `LIMITES` en `ingesta/verificar.mjs` ("De 100 a 180 palabras"): desde el 28/09 se piden **de 70 a 180** (`CUERPO.palabrasPedidasMinimo = 70`). `CRITERIO-EDITORIAL.md` ya lo dice bien.
-- **El comentario de arriba de `ingesta/verificar.mjs` dice que "un falso positivo cuesta poco: la nota sale igual, con el resumen del medio original"**: desde el 25/09 una nota automática sin cuerpo **no sale**; un rechazo la deja esperando. `CRITERIO-EDITORIAL.md` § 6 lo dice bien ("un falso positivo cuesta una nota que espera").
-- **`CRITERIO-EDITORIAL.md` § 10 dice que lo "cargado o corregido por una persona" firma "Revisada por la redacción"**: en el código, lo corregido en `correcciones.json` sin pasar por el panel no cambia la firma, y si la nota no tenía guion firma "Texto de *medio*" (ver "Qué puede fallar").
-- **El comentario de `FALLOS_PARA_CORTAR` (`reels/reescritura.mjs`) y el del panel dicen "si la IA falla tres veces seguidas"**: el código cuenta tres fallas **en toda la corrida**, seguidas o no.
+- El comentario de "si la IA falla tres veces seguidas" de `panel/servidor.mjs`
+  (el código cuenta tres fallas en el ciclo, seguidas o no): en la lista de
+  comentarios viejos de `PENDIENTES.md`.

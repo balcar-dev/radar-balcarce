@@ -38,7 +38,7 @@ export function generateMetadata({ params }) {
   return {
     title: recortarEn(nombre, 52),
     description: descripcion,
-    // Su propia dirección, sin parámetros pegados (regla 21 de REGLAS.md).
+    // Su propia dirección, sin parámetros pegados (regla 21 de docs/10-REGLAS-Y-PRUEBAS.md).
     alternates: { canonical: e.ruta },
     // La tarjeta la pone sola opengraph-image.js, que está al lado.
     openGraph: {

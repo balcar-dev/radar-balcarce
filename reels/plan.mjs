@@ -2,7 +2,7 @@
 //   node reels/plan.mjs              muestra el plan del día
 //   node reels/plan.mjs --generar    además arma los videos
 //
-// Qué sale cada día (el contrato, redes/contrato.mjs y REDES.md): tres reels,
+// Qué sale cada día (el contrato, redes/contrato.mjs y docs/07-REDES.md): tres reels,
 // que son los tres podcasts (mañana, tarde y noche, cada uno subido también
 // como historia), y las historias fijas de servicio (el clima de la mañana y el
 // de la noche, la farmacia), más los extras semanales (teléfonos útiles,
@@ -73,34 +73,6 @@ const fechaLarga = (d = new Date()) => {
 };
 
 // --- lo que muestran las placas (28/09, diseño "Historia diaria") ----------
-
-const F_DOLAR = path.join(import.meta.dirname, '..', 'web', 'data', 'dolar-historia.json');
-
-/** La historia del dólar (la cotización de las 11 de cada día hábil). */
-function leerDolar() {
-  try { return JSON.parse(fs.readFileSync(F_DOLAR, 'utf8')); } catch { return null; }
-}
-
-/**
- * El dólar para la placa del clima de la mañana: la última cotización de las
- * 11 que guardó la web (web/data/dolar-historia.json), con cuándo se tomó. Nunca
- * "en vivo": a las 7:30 el mercado no abrió y lo que hay es la del último día
- * hábil. Si es de hace más de 4 días (o no hay), no va.
- */
-export function dolarParaLaPlaca(historia, fecha = new Date()) {
-  const ultimo = historia?.dias?.at?.(-1);
-  const c = ultimo?.cotizaciones;
-  if (!c || !ultimo.consultado) return null;
-  const tomado = new Date(ultimo.consultado);
-  if (Number.isNaN(tomado.getTime()) || fecha - tomado > 4 * 86400000 || tomado > fecha) return null;
-  const oficial = c.oficial?.venta ?? null;
-  const blue = c.blue?.venta ?? null;
-  if (!oficial && !blue) return null;
-  const tz = { timeZone: 'America/Argentina/Buenos_Aires' };
-  const dia = tomado.toLocaleDateString('es-AR', { ...tz, weekday: 'long', day: 'numeric' });
-  const hora = Number(tomado.toLocaleString('es-AR', { ...tz, hour: 'numeric', hour12: false }));
-  return { oficial, blue, cuando: `Venta · ${dia}, ${hora} h` };
-}
 
 const DIA_CORTO = {
   lun: 'LUN', mar: 'MAR', mié: 'MIÉ', mie: 'MIÉ', jue: 'JUE', vie: 'VIE', sáb: 'SÁB', sab: 'SÁB', dom: 'DOM',
@@ -203,9 +175,8 @@ function leerDatos() {
 // --- el plan ---------------------------------------------------------------
 
 export function planDelDia(datos, {
-  libro = null, fecha = new Date(), estado = leerEstado(), eventos = null, dolar = undefined,
+  libro = null, fecha = new Date(), estado = leerEstado(), eventos = null,
 } = {}) {
-  const dolarDelDia = dolar === undefined ? dolarParaLaPlaca(leerDolar(), fecha) : dolar;
   const hoy = fecha.getDate();
   const turno = datos.farmacias?.turnos?.find((t) => t.dia === hoy) ?? null;
 
@@ -284,7 +255,7 @@ export function planDelDia(datos, {
       guion: guionClima(datos.clima, turno),
       momento: 'manana', indicacion: INDICACIONES.manana,
       // "Historia diaria" (28/09): la tarjeta del clima ahora, hoy y los dos
-      // días que siguen, y el dólar de referencia.
+      // días que siguen. Sin dólar: si se mueve, sale como nota propia.
       svg: placaClima({
         temp: c.temp,
         cielo: c.cielo,
@@ -298,7 +269,6 @@ export function planDelDia(datos, {
         kicker: 'Hoy en Balcarce',
         etiqueta: 'El clima ahora',
         cajas: datos.clima.dias.slice(0, 3).map((d, i) => cajaDeDia(d, i === 0 ? 'HOY' : null)).filter(Boolean),
-        dolar: dolarDelDia,
       }),
       acento: COLOR_SECCION.Clima,
     });

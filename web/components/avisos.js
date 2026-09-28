@@ -1,6 +1,6 @@
 import avisos from '@/data/avisos.json';
 
-// Los tres espacios de publicidad (ver REDES.md § 2): después de la nota de
+// Los tres espacios de publicidad (ver PUBLICIDAD.md): después de la nota de
 // apertura, al lado del clima y la farmacia, y al pie de todo. Se venden a
 // comercios de Balcarce, no a una red publicitaria — por eso no hay ningún
 // código de terceros acá, sólo texto y un logo propio.

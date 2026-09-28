@@ -257,7 +257,7 @@ test('pasada la fecha dice que ya venció', () => {
   assert.match(v.texto, /YA VENCIÓ/);
 });
 
-test('el vencimiento apunta al 21/09/2027, como dice REDES.md', () => {
+test('el vencimiento apunta al 21/09/2027, como dice docs/08-INFRAESTRUCTURA.md', () => {
   assert.equal(VENCIMIENTOS.find((v) => v.clave === 'vence-token-github').fecha, '2027-09-21');
 });
 

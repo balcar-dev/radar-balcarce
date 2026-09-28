@@ -185,7 +185,7 @@ contenido "de siempre": se arma una vez por tema y vuelve a servir cada año.
   mismo:** las fotos viejas tienen dueño — Museo Histórico Municipal "Don
   Aurelio González" o el Archivo Histórico Municipal. Una llamada, pero hay
   que hacerla; mientras no esté, se puede arrancar sin fotos, sólo con el
-  dato ("un 15 de octubre de 1944 nació Fangio acá") y una placa propia.
+  dato ("un 15 de octubre de 1944 nació Fangio acá") y una placa.
 - **Fechas patrias y feriados**, con el ángulo de Balcarce cuando lo hay (el
   25 de mayo o el 9 de julio son iguales en todo el país, pero "qué actividad
   hace el municipio" sí es propio y ya se saca de la misma agenda que
@@ -466,7 +466,7 @@ que más se notan.
 - **Las notas archivadas en el sitemap** (26/09): las páginas de los últimos
   180 días ya se listan y Google puede encontrarlas.
 - **La agenda con una página por evento** y una base de contactos para pedir
-  fechas (25/09; `PANEL.md`).
+  fechas (25/09; `docs/09-PANEL.md`).
 - **Notas propias sin IA**: el dólar de cada día hábil y una nota por cada
   podcast (25/09; `CRITERIO-EDITORIAL.md` § 8).
 - La base de comercios de Balcarce (145, de OpenStreetMap; `COMERCIAL.md`):

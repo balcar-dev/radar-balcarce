@@ -120,8 +120,8 @@ primero que encuentra:
 | # | Qué mira | Dónde | Resultado |
 |---|---|---|---|
 | 1 | La lista roja (`REGLAS_SEMAFORO.rojo`: menor de edad, abuso sexual, violación, femicidio, grooming, suicidio, trata…) | Título y primeros 600 caracteres | **Rojo** "tema sensible" |
-| 2 | La lista amarilla (`REGLAS_SEMAFORO.amarillo`: denuncia, detenido, imputado, hospital, murió, falleció, homicidio, víctima, niño, adolescente, "un menor de", "alumno de"…) | Título y primeros 600 caracteres | **Amarillo** "necesita ojo humano" |
-| 3 | Lo que no se publica nunca (`REGLAS_SEMAFORO.nunca`: sepelio, inhumación) | Sólo el título | **Rojo** "lista de sepelios: no se publica" |
+| 2 | Lo que no se publica nunca (`REGLAS_SEMAFORO.nunca`: sepelio, inhumación). Va **antes** del amarillo desde el 28/09: una lista de sepelios dice "falleció", quedaba amarilla y una persona podía aprobarla | Sólo el título | **Rojo** "lista de sepelios: no se publica" |
+| 3 | La lista amarilla (`REGLAS_SEMAFORO.amarillo`: denuncia, detenido, imputado, hospital, murió, falleció, homicidio, víctima, niño, adolescente, "un menor de", "alumno de"…) | Título y primeros 600 caracteres | **Amarillo** "necesita ojo humano" |
 | 4 | La cotización del dólar (`REGLAS_SEMAFORO.cotizacion`: dólar hoy, dólar blue, a cuánto cotiza…) | Sólo el título | **Amarillo** "cotización del dólar: se muestra en /dolar" |
 | 5 | Lo internacional (`REGLAS_SEMAFORO.internacional`: Trump, Putin, Gaza, Ucrania, G20, California…), sólo en lo de afuera que no dice Balcarce en el título | Sólo el título | **Amarillo** "internacional: sin relación con Balcarce" |
 | 6 | La promoción (`REGLAS_SEMAFORO.promocional`: sorteo, ganá tu entrada, suscribite, auspicia…) | Título y primeros 600 caracteres | **Amarillo** "parece promoción, no noticia" |
@@ -148,7 +148,8 @@ semáforo, los medios que pide lo de afuera y el cupo). **Es de acá:**
    (`local`), o lo que otro medio de la misma historia dice con Balcarce en el
    título (`nombraBalcarce`).
 
-Una fuente oficial y una nota propia no piden medios (paso 6), pero **no** son
+Una fuente oficial (la historia lo es si alguna de sus fuentes lo es, desde el
+28/09) y una nota propia no piden medios (paso 6), pero **no** son
 "de acá".
 
 ### 6. Cuántos medios tiene que tener lo de afuera
@@ -350,8 +351,9 @@ llega tarde tampoco se le pide a la IA.
 6. **Las correcciones a mano** (`web/data/correcciones.json`, paso 13) pisan
    título, bajada, sección o cuerpo.
 7. **Lo que no se publica nunca**, otra vez, sobre el título y la bajada
-   finales (`nuncaSePublica`): una lista de sepelios que se coló con otro
-   título no sale.
+   finales, **aunque la haya aprobado una persona** (`nuncaSePublica`, que
+   usa `esDeLoQueNuncaSePublica` de `web/lib/archivo.js`; la persona, desde
+   el 28/09): una lista de sepelios que se coló con otro título no sale.
 8. **Sin cuerpo no se publica** (`tieneCuerpo`, `web/lib/cuerpo.js`): la nota
    automática sin cuerpo de 70 palabras o más queda "esperando cuerpo"
    (`docs/04-REDACCION.md`, paso 12). Lo que publicó una persona se respeta.
@@ -382,12 +384,15 @@ queda la de más puntaje y la otra conserva su página (`sinNotasRepetidas`,
 `web/lib/texto.js`).
 
 **Cuándo una nota pierde su página** (sale de `web/data/archivo.json`): si una
-persona la bloqueó o descartó; si hoy la ingesta la trae en rojo o amarillo
-(salvo la cotización del dólar, que conserva la página); si la lectura con IA
-la sacó en esta corrida; si quedó fuera como repetida y no fue a las redes; si
-está en `retiradas.json`; si es de afuera y la contó un solo medio y no fue a
-las redes (`tieneRespaldo`); o si pasó de 180 días. Detalle en
-`docs/06-WEB.md`.
+persona la bloqueó o descartó; si hoy la ingesta la trae en rojo, o en
+amarillo **por lo que dice** (`pierdeLaPagina`, `web/lib/archivo.js`: la
+cotización del dólar y lo de afuera que espera sólo por el cupo o por los
+medios que la cuentan, `esperaSoloPorCantidad`, conservan la página desde el
+28/09); si es una lista de sepelios, aunque la haya aprobado una persona; si
+la lectura con IA la sacó en esta corrida; si quedó fuera como repetida y no
+fue a las redes; si está en `retiradas.json`; si es de afuera, la contó un
+solo medio, no es oficial y no fue a las redes (`tieneRespaldo`); o si pasó de
+180 días. Detalle en `docs/06-WEB.md`.
 
 ### 13. Retirar y corregir a mano, sin el panel
 
@@ -431,7 +436,7 @@ corrida siguiente de "Actualizar la web".
 | `ingesta/perfil-balcarce.md` | Lo que la IA sabe de Balcarce (sólo datos seguros) | `lectura-ia.mjs` | — | — |
 | `ingesta/utiles.mjs` | `decisionHumana`: qué decisión es de una persona | `generar-datos.mjs`, `reels/reescritura.mjs`, panel | — | — |
 | `web/scripts/generar-datos.mjs` | Orquesta todo: lectura con IA, reescritura, `fechaReal`, `notaPublicada`, fotos, archivo | `actualizar.yml` (nube), a mano en la PC | `decisiones.json`, `retiradas.json`, `correcciones.json`, `vistas.json`, `fichas.json`, portada y archivo anteriores | `portada.json`, `archivo.json`, `fichas.json`, `vistas.json`, `esperando-cuerpo.json`, `intentos-ia.json` y más |
-| `web/lib/archivo.js` | `HORAS_EN_PORTADA`, `HORAS_PARA_ESTRENAR`, `vigenteEnPortada`, `llegaTarde`, `fechaDeLaNota`, retiradas y correcciones a mano, el archivo | `generar-datos.mjs`, la web | — | — |
+| `web/lib/archivo.js` | `HORAS_EN_PORTADA`, `HORAS_PARA_ESTRENAR`, `vigenteEnPortada`, `llegaTarde`, `fechaDeLaNota`, `pierdeLaPagina`, `esDeLoQueNuncaSePublica`, retiradas y correcciones a mano, el archivo | `generar-datos.mjs`, la web | — | — |
 | `web/lib/cuerpo.js` | `tieneCuerpo`, `tieneRespaldo` | `generar-datos.mjs`, la web, redes | — | — |
 | `web/lib/texto.js` | `sinNotasRepetidas` (mismo titular) | `generar-datos.mjs` | — | — |
 | `web/data/retiradas.json`, `web/data/correcciones.json` | Lo que decidió una persona sin el panel | Una persona (o Claude, a pedido) | — | — |
@@ -461,17 +466,15 @@ corrida siguiente de "Actualizar la web".
 |---|---|---|
 | La IA de lectura se queda sin cupo | "lectura con IA: falló un pedido (HTTP 429)" en el registro; las notas sin ficha salen como lo decidió el sistema | Revisar `GEMINI_API_KEY_CLASIFICACION` y `GROQ_API_KEY` |
 | La IA saca algo que sí era de Balcarce | Aparece en "fuera (…)" del registro de "Actualizar la web" | Anotar el caso, ajustar `INSTRUCCION` o el perfil; mientras, publicar desde el panel |
-| **Una nota de afuera ya publicada rebota en el cupo o en los medios** | En una corrida pasa a amarilla (otra nota de más puntaje le ganó el lugar, o un medio la sacó de su feed y la memoria la olvidó) y **pierde la página** (el archivo saca lo que hoy está amarillo). Si vuelve a verde después de 12 horas, ya no se estrena: desaparece para siempre | Es un efecto real del código de hoy; para una nota importante, publicarla desde el panel |
+| Una nota de afuera ya publicada rebota en el cupo o en los medios | En una corrida pasa a amarilla (otra nota de más puntaje le ganó el lugar, o un medio la sacó de su feed y la memoria la olvidó) y sale de las listas. **Conserva la página** desde el 28/09 (`pierdeLaPagina`), y como ya salió, si vuelve a verde vuelve a las listas aunque tenga más de 12 horas | Nada; para una nota importante, publicarla desde el panel |
 | `aplicarCupos` sólo baja | Después de la lectura con IA, una nota que había quedado amarilla por el cupo en la ingesta no vuelve a verde aunque la IA haya sacado otras de su sección | Se corrige sola en la corrida siguiente, cuando la ingesta vuelve a repartir |
-| Una lista de sepelios con "falleció" en el título | Queda amarilla ("necesita ojo humano"), no roja: el amarillo se mira antes que la lista `nunca`. Si una persona la aprueba, `nuncaSePublica` no la frena (no mira lo que publicó una persona) | Cuidado en el panel |
 | El panel y la nube archivan distinto | En la PC, lo que nadie decidió se archiva a las 72 horas; la web ya no lo muestra a las 36 | Nada: la web manda en lo que se ve |
 | La portada queda vacía de lo de afuera | "de afuera y poco contada" en muchas notas del panel | Revisar que el cruce tenga memoria y que las fuentes estén vivas (`docs/02-INGESTA.md`) |
 
-## Diferencias encontradas con los documentos viejos
+## Lo que sigue abierto
 
-- **"Una fuente oficial alcanza sola"** (`CLAUDE.md`, `CRITERIO-EDITORIAL.md` § 2, `MANUAL.md`, `REGLAS.md` regla 50, `docs/RADAR-3.0.md`). En el código: (a) lo oficial de afuera contado por un solo medio no pasa el cruce, salvo Balcarce en el título o la zona; y (b) `exigirMedios` y `tieneRespaldo` preguntan por `nota.oficial`, pero **la historia armada por la ingesta no lleva ese campo** (sólo cada una de sus fuentes, en `origenes`). En la práctica, la exención de lo oficial sólo funciona en el semáforo de la ingesta (paso 4, fila 7) y `exigirMedios` la vuelve a amarillo si no llega a los medios. Hoy afecta sólo al Gobierno de la Provincia (la Municipalidad es de acá).
-- **"De las repetidas queda la ya publicada, en la portada o en las últimas 72 horas"** (`CLAUDE.md`, `CRITERIO-EDITORIAL.md` § 2, `REGLAS.md` regla 51, `docs/RADAR-3.0.md`): el código usa `vigenteEnPortada`, que desde el 28/09 es **36 horas**.
-- **"Nada de más de 72 horas en la portada"** y `HORAS_PARA_COMPLETAR` "de 72 horas" (`REGLAS.md` regla 60, `MANUAL.md`, `docs/RADAR-3.0.md` § 4.13, la tabla "Dónde tocar" de `CLAUDE.md`): hoy son **36 horas** (`HORAS_EN_PORTADA = 36`, y `HORAS_PARA_COMPLETAR = HORAS_EN_PORTADA`).
-- **`CRITERIO-EDITORIAL.md` § 2 dice que lo que toca la zona "no pide medios, pero tiene el cupo de su sección"**: desde el 28/09 (`esDeAca`) lo de la zona **no** entra en el cupo.
-- **El comentario de `HORAS_EN_PORTADA` (`web/lib/archivo.js`) dice que es "el mismo criterio que usa el panel" (`HORAS_PARA_ARCHIVAR`)**: el panel archiva a las 72 horas y la web muestra 36.
-- **`docs/RADAR-3.0.md` dice que `GEMINI_API_KEY_CLASIFICACION` "falta crearla y cargarla"**; `CLAUDE.md` dice que se cargó el 28/09. El código usa 200 pedidos por día si está y 60 si no.
+- `CRITERIO-EDITORIAL.md` § 2 todavía dice que lo que toca la zona "tiene el
+  cupo de su sección" (desde el 28/09, `esDeAca`, no ocupa cupo), y el
+  comentario de `HORAS_EN_PORTADA` (`web/lib/archivo.js`) dice que es "el mismo
+  criterio que el panel" (el panel archiva a las 72 horas). Los dos, en
+  `PENDIENTES.md`.

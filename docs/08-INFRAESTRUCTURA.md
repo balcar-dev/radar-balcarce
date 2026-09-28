@@ -90,7 +90,7 @@ porque el repositorio es público; lo único pago es la clave de Gemini de redes
 | **Actualizar la web** (`actualizar.yml`) | cron-job.org a los :00 y :30; respaldo `schedule` a los :07 y :37; a mano | `npm ci` (raíz y `web/`), `npm test`, caché `.cache` (la memoria de 36 horas del cruce de medios), `node web/scripts/generar-datos.mjs`, `npm run build` con `SITIO`, `node web/scripts/revisar-seo.mjs` | `GEMINI_API_KEY_REDACCION`, `GEMINI_API_KEY_REDES`, `GEMINI_API_KEY_CLASIFICACION`, `GROQ_API_KEY` | `web/data/portada.json`, `archivo.json`, `agenda.json`, `intentos-ia.json`, `dolar-historia.json`, `fichas.json`, `notas-por-dia.json`, `banco-fotos.json`, `esperando-cuerpo.json`, `vistas.json` y `web/public/fotos-notas/`. Mensaje "Datos de la portada · dd/mm hh:mm" | 20 min | Casi nunca: la redacción usa la clave gratis y pasa a la paga sólo si la gratis contesta "sin cupo" |
 | **Cloudflare Pages** (`cloudflare-deploy.yml`) | Al terminar **bien** "Actualizar la web"; a mano | `npm ci` y `npm run build` en `web/`, después `npx wrangler@4.139.0 pages deploy out --branch=main` | `CLOUDFLARE_API_TOKEN`, `CLOUDFLARE_ACCOUNT_ID`; variable opcional `CLOUDFLARE_PROJECT` (si falta, `radar-balcarce`) | Nada (sólo lee el repo) | 15 min | No |
 | **Redes** (`redes.yml`) | cron-job.org (acción `reloj`); al terminar "Actualizar la web"; a mano: `reloj`, `verificar` o `facebook` | `redes/publicar.mjs --facebook`; `redes/reloj.mjs`; si toca: `npm ci`, `reels/plan.mjs --generar --solo=…`, `redes/publicar.mjs --piezas`; `redes/publicar.mjs --enlaces` | `META_TOKEN`, `GEMINI_API_KEY_REDES`; variable `REDES_ACTIVAS` | `web/data/redes.json` ("Redes: libro de publicaciones · …"); los videos quedan 3 días como artefacto | 25 min | Sí, sólo cuando arma una pieza (la voz). Con las redes apagadas no arma nada |
-| **Piezas** (`piezas.yml`) | Sólo a mano: `solo` (nombres separados por coma; vacío = todas), `publicar` (sí/no), `destino` (ambas, instagram, facebook) | `npm ci`, `reels/plan.mjs --generar [--solo=…]`; si `publicar`: `redes/publicar.mjs --piezas --sin-horario --destino=…` | `GEMINI_API_KEY_REDES`, `META_TOKEN`; `REDES_ACTIVAS` | `web/data/redes.json` si publicó; artefacto "piezas" 7 días (mp4, mp3, png, manifiesto) | 30 min | Sí (una voz por pieza; con `solo` vacío, todas las del día) |
+| **Piezas** (`piezas.yml`) | Sólo a mano: `solo` (nombres separados por coma; **vacío no arma nada** desde el 28/09), `todas` (sí/no: armar todas las del día a propósito), `publicar` (sí/no), `destino` (ambas, instagram, facebook) | `npm ci`, `reels/plan.mjs --generar [--solo=…]`; si `publicar`: `redes/publicar.mjs --piezas --sin-horario --destino=…` | `GEMINI_API_KEY_REDES`, `META_TOKEN`; `REDES_ACTIVAS` | `web/data/redes.json` si publicó; artefacto "piezas" 7 días (mp4, mp3, png, manifiesto) | 30 min | Sí (una voz por pieza; con `todas`, una por cada pieza del día) |
 | **Vigilancia** (`vigilancia.yml`) | cron-job.org a los :00 y :30; respaldo `schedule` cada 3 horas (a los :17 UTC); a mano: `vigilar`, `probar-resumen`, `probar-cierre` | `node redes/vigilar.mjs` | `WHATSAPP_TELEFONO`, `WHATSAPP_APIKEY`, `CLOUDFLARE_ACCOUNT_ID`, `CLOUDFLARE_ANALYTICS_TOKEN`, `CLOUDFLARE_API_TOKEN`, `META_TOKEN`, `GITHUB_TOKEN` (automático); variable `REDES_ACTIVAS` | `web/data/vigilancia.json` y `web/data/estadisticas.json` (no en los modos de prueba) | 10 min | No |
 | **Auditoría** (`auditoria.yml`) | Lunes 12:00 UTC (9:00 en Balcarce); a mano | `redes/auditar.mjs`; `redes/auditar-redes.mjs --semana` (si falla, sigue) | `WHATSAPP_TELEFONO`, `WHATSAPP_APIKEY`, `META_TOKEN` | `web/data/auditoria.json` | sin tope propio (el de GitHub: 6 h) | No |
 | **Auditar redes** (`auditar-redes.yml`) | A mano (opcional: `desde`, AAAA-MM-DD) | `redes/auditar-redes.mjs` cuatro veces: hoy, ayer, la semana y "crudo" | `META_TOKEN` | Nada | 10 min | No |
@@ -120,13 +120,12 @@ Detalles que importan:
   espera), `redes` (lo comparten Redes y Piezas: nunca dos publicando a la
   vez), `cloudflare-pages` (si llega una nueva, **cancela** la que estaba
   subiendo: sólo importa la última), `vigilancia` y `auditoria`.
-- **Al commitear**, "Actualizar la web", "Redes" y "Piezas" hacen `git pull
-  --rebase` antes de subir; si chocan en un archivo de `web/data/` (o, en
-  "Actualizar la web", de `web/public/fotos-notas/`) gana lo que acaba de armar
-  esa corrida; reintentan hasta tres veces y, si no pueden, terminan en rojo.
-  Un choque fuera de esas carpetas corta la corrida sin tocar nada.
-  "Vigilancia" y "Auditoría" hacen un solo `pull --rebase` y un solo `push`, sin
-  reintento.
+- **Al commitear**, "Actualizar la web", "Redes", "Piezas" y, desde el 28/09,
+  "Vigilancia" y "Auditoría" hacen `git pull --rebase` antes de subir; si
+  chocan en un archivo de `web/data/` (o, en "Actualizar la web", de
+  `web/public/fotos-notas/`) gana lo que acaba de armar esa corrida; reintentan
+  hasta tres veces y, si no pueden, terminan en rojo. Un choque fuera de esas
+  carpetas corta la corrida sin tocar nada.
 - **El panel** también sube (`web/data/decisiones.json`, `avisos.json`,
   `eventos-panel.json`, con `pull --rebase --autostash`): ver `09-PANEL`.
 
@@ -141,7 +140,9 @@ Detalles que importan:
 - Según los documentos son **tres trabajos**: "Actualizar la web", el reloj de
   "Redes" y "Vigilancia". El historial de GitHub del 27 y 28/09 muestra:
   "Actualizar la web" y "Vigilancia" a los :00 y :30, todo el día; "Redes" a
-  los **:05, :35 y :45**, de 0 a 22 hora de Balcarce (ver "Diferencias").
+  los **:05, :35 y :45**, de 0 a 22 hora de Balcarce. Puede haber un cuarto
+  trabajo o uno con tres horarios: hay que mirarlo en cron-job.org y, si hay
+  uno de más, sumarlo a los que llevan el token (`PENDIENTES.md`).
 - **Si un trabajo falla varias veces seguidas, cron-job.org lo desactiva
   solo** (pasó el 24/09 con dos, mientras Meta tenía bloqueada la cuenta y los
   workflows estaban apagados). Es lo primero que hay que mirar cuando algo deja
@@ -211,7 +212,7 @@ cuándo se llegó al tope del día.
 | `www` no redirige | `www` | media |
 | La última corrida de "Actualizar la web", "Redes" o "Cloudflare Pages" falló | `falla-<nombre>` | alta si fallaron 3 de las últimas 5 |
 | No hay corridas nuevas de "Actualizar la web" o "Redes" en 100 minutos (sólo de 7 a 23) | `reloj-<nombre>` | alta: "cron-job.org pudo haberse desactivado solo" |
-| Volvió algo que se pidió sacar: "la vimos hace…", hasta qué hora está la farmacia, la fuente arriba de un título (`REGLAS.md`) | `regla-…` | alta |
+| Volvió algo que se pidió sacar: "la vimos hace…", hasta qué hora está la farmacia, la fuente arriba de un título (reglas 1 a 3 de `docs/10-REGLAS-Y-PRUEBAS.md`) | `regla-…` | alta |
 | Menos del 35% de las notas de las últimas 24 horas tiene cuerpo (con 10 o más) | `pocos-cuerpos` | media |
 | La auditoría semanal no corre hace más de 10 días | `auditoria-vencida` | media |
 | Faltan 30 días o menos para un vencimiento | `vence-token-github`, `vence-dominio` | alta en la última semana |
@@ -248,6 +249,44 @@ llegaba nada); `WHATSAPP_APIKEY` es la clave que dio CallMeBot al activarlo.
 La clave viaja en la dirección del pedido, así que el código la borra de todo
 lo que muestra. El número de CallMeBot cambia de vez en cuando (se mira en
 callmebot.com). Anda desde el 25/09; se prueba con "Prueba de WhatsApp".
+
+## Todos los secretos y variables, por nombre
+
+Están en GitHub → Settings → Secrets and variables → Actions. **Los valores
+los pega una persona**, nunca un chat ni un archivo del repositorio. Desde el
+repositorio no se puede ver qué está cargado: el estado de abajo es el que se
+cargó y probó según este proyecto; ante la duda, mirar esa pantalla o correr
+el workflow de prueba que corresponda.
+
+| Nombre | Tipo | Estado al 28/09 | Para qué |
+|---|---|---|---|
+| `META_TOKEN` | Secreto | Cargado; **le faltan permisos** | Publicar y leer en Facebook e Instagram (`docs/07-REDES.md`). No vence. Al regenerarlo, tildar todos los permisos de ahora **más** `read_insights` e `instagram_manage_insights` |
+| `GEMINI_API_KEY_REDACCION`, `GEMINI_API_KEY_REDES`, `GEMINI_API_KEY_CLASIFICACION`, `GROQ_API_KEY` | Secretos | Cargados (el último par, el 28/09) | Las claves de IA (tabla de arriba) |
+| `CLOUDFLARE_API_TOKEN` | Secreto | Cargado | Subir el sitio a Cloudflare Pages; desde el 27/09 tiene también el permiso *Account · Account Analytics · Read* |
+| `CLOUDFLARE_ACCOUNT_ID` | Secreto | Cargado | Lo mismo, y las estadísticas |
+| `CLOUDFLARE_ANALYTICS_TOKEN` | Secreto | Cargado | Leer las visitas de Web Analytics. Sin permiso, el resumen dice "falta permiso de Analytics" |
+| `WHATSAPP_TELEFONO` | Secreto | Cargado | El número de los avisos, completo con 549, sin + ni espacios |
+| `WHATSAPP_APIKEY` | Secreto | Cargado | La clave que dio CallMeBot |
+| `GITHUB_TOKEN` | Automático | — | Lo pone GitHub en cada corrida |
+| `REDES_ACTIVAS` | Variable | `Si` | El interruptor de las redes (`docs/07-REDES.md`) |
+| `CLOUDFLARE_PROJECT` | Variable opcional | No cargada | Sin ella se usa `radar-balcarce`, el nombre real del proyecto de Pages |
+
+Fuera de GitHub: el token de GitHub de cron-job.org (en el encabezado
+`Authorization` de sus trabajos) y, en la PC, el `.env` con las claves de
+Gemini para trabajar localmente.
+
+## Las otras cuentas
+
+| Servicio | Para qué | Cuenta |
+|---|---|---|
+| Google Search Console | Indexación; propiedad de dominio, verificada el 24/09 con los dos sitemaps enviados (`SEO.md`) | `radarbalcarce@gmail.com` |
+| DonWeb | El registro del dominio (el DNS está en Cloudflare) | — |
+| Tailscale | El túnel que deja entrar al panel desde afuera (`docs/09-PANEL.md`) | `radarbalcarce@gmail.com` |
+| Vercel | Apagado desde el 25/09; falta borrar el proyecto | `radarbalcarce@gmail.com` |
+| Meta | La app, la página y el Instagram (`docs/07-REDES.md`) | `radarbalcarce@gmail.com` |
+
+El WhatsApp que aparece en `web/lib/datos.js` es el de contacto público del
+sitio, no una clave.
 
 ## Vencimientos
 
@@ -318,45 +357,18 @@ callmebot.com). Anda desde el 25/09; se prueba con "Prueba de WhatsApp".
 | **Cloudflare no sube** | "falla-Cloudflare Pages"; la web queda con la versión anterior | Mirar el paso "Subir a Cloudflare Pages" (token vencido o sin permiso, versión de wrangler) |
 | **La web no responde** | `web-caida` | Mirar Cloudflare (dash.cloudflare.com) |
 | **Choque al commitear** | "No se pudo subir la portada después de tres intentos" o "Conflicto fuera de web/data" | Suele arreglarse en la corrida siguiente; si se repite, alguien subió algo a mano que choca |
-| **Vigilancia no pudo subir su estado** (un solo intento de `push`) | Corrida roja en "Guardar lo avisado" | La siguiente vuelta lo reintenta; puede repetir un aviso |
+| **Vigilancia no pudo subir su estado** (tres intentos, desde el 28/09) | Corrida roja en "Guardar lo avisado": "No se pudo guardar el estado de los avisos después de tres intentos" | La siguiente vuelta lo reintenta; puede repetir un aviso |
 | **La clave gratis se quedó sin cupo** | Registro: "tope del día" o pedidos a la paga; aviso `pocos-cuerpos`; crece "Esperando cuerpo" en el resumen | Esperar al día siguiente o escribir los cuerpos a mano (`11-OPERACION`) |
 | **Gemini con demasiada demanda (503)** | La reescritura falla seguido | Es el primer lugar donde mirar si vuelve a pasar: el modelo (`gemini-flash-lite-latest`) |
 | **El WhatsApp no llega** | No llega el resumen de las 21 | "Prueba de WhatsApp"; si CallMeBot dice "APIKey is invalid", la clave está mal copiada; revisar que el teléfono tenga 549 |
 | **Faltan permisos en un token** | El resumen dice "falta permiso de Analytics" o que faltan los de Meta | Una persona regenera el token con los permisos |
-| **La auditoría semanal no corre** | Nadie avisa si nunca corrió (ver "Diferencias") | Correrla a mano |
+| **La auditoría semanal no corre** | Nadie avisa si nunca corrió: `auditoriaVencida` (`redes/auditar.mjs`) no dice nada mientras no exista `web/data/auditoria.json`. Al 28/09 a las 15:15 no había corrido nunca (su primera vez programada era ese lunes a las 9) | Correrla a mano (`PENDIENTES.md`) |
 | **Se vence el token de cron-job.org o el dominio** | Aviso 30 días antes | Ver "Vencimientos" |
 | **La PC está apagada** | Sólo el panel deja de andar | Nada se rompe: web, redes y vigilancia siguen |
 
-## Diferencias encontradas con los documentos viejos
+## Lo que sigue abierto
 
-1. **Los disparos de Redes.** `INFRAESTRUCTURA.md`, `REDES.md` y el
-   comentario de `redes.yml` dicen "cron-job.org cada 30 minutos, de 7 a 23".
-   El historial de GitHub del 27 y 28/09 muestra disparos a los **:05, :35 y
-   :45** de cada hora, **de 0 a 22** (hora de Balcarce). Puede haber un cuarto
-   trabajo en cron-job.org (los documentos hablan de tres) o uno con tres
-   horarios. No rompe nada, pero conviene mirarlo y, si hay un cuarto, sumarlo
-   a la lista de trabajos a los que hay que cambiarles el token en 2027.
-2. **La Auditoría semanal nunca corrió.** Su primera corrida programada era el
-   lunes 28/09 a las 9:00; a las 15:15 no había ninguna en Actions (el
-   workflow figura activo) y `web/data/auditoria.json` no existe.
-   `INFRAESTRUCTURA.md` la da por andando. Además, `auditoriaVencida`
-   (`redes/auditar.mjs`) no avisa cuando el archivo no existe, así que el aviso
-   `auditoria-vencida` nunca va a saltar hasta que corra una primera vez.
-3. **El respaldo de Vigilancia** no es "cada 30 minutos": el `schedule` de
-   `vigilancia.yml` es **cada 3 horas** (minuto 17 UTC). Cada 30 minutos sólo si
-   cron-job.org anda.
-4. **"Si falta la clave de redes, los reels no arrancan"** (`CLAUDE.md`,
-   `INFRAESTRUCTURA.md`, `reels/claves.mjs`): en el código la pieza sale igual
-   con la voz de Elena.
-5. **La portada muestra 36 horas, no 72.** `INFRAESTRUCTURA.md` y `CLAUDE.md`
-   dicen que "Actualizar la web" arma la portada con las últimas 72 horas; el
-   código dice 36 (`HORAS_EN_PORTADA` en `web/lib/archivo.js` y `PORTADA.horas`
-   en `ingesta/criterio.mjs`). `EMPEZAR-ACA.md` ya lo dice bien (28/09).
-6. **"Probar banco de fotos" pasa `GEMINI_API_KEY`** (el nombre viejo de la
-   clave de redacción) además de las otras; no hace daño, pero ningún
-   documento lo nombra.
-7. **El modelo de Groq para fotos.** El encabezado de `ingesta/fotos.mjs` dice
-   "Llama 4 Scout"; el código usa `qwen/qwen3.8-27b` (el comentario de al lado
-   explica que Llama 4 Scout daba 404). Manda el código.
-8. **El comentario de arriba de `reels/claves.mjs`** habla de "dos claves";
-   el archivo maneja cuatro (las tres de Gemini y la de Groq).
+En `PENDIENTES.md`: los disparos de cron-job.org a Redes (tres por hora; el
+comentario de `redes.yml` todavía dice "cada 30 minutos, de 7 a 23"), la
+Auditoría de los lunes que nunca corrió y el tope de gasto de la clave paga de
+Gemini.

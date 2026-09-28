@@ -1,4 +1,4 @@
-// La lectura rápida con IA (plan V2.2, docs/PLAN-V2.2.md § 7).
+// La lectura rápida con IA (plan V2.2, docs/historico/PLAN-V2.2.md § 7).
 //
 // Una IA lee el título y el resumen de cada nota nueva, con el perfil de
 // Balcarce al lado (ingesta/perfil-balcarce.md) y la ciudad del medio, y
@@ -181,7 +181,7 @@ export function fichaValida(f) {
 export async function leerGrupo(notas, { clave, fetchFn = fetch } = {}) {
   const res = await fetchFn(`https://generativelanguage.googleapis.com/v1beta/models/${MODELO}:generateContent`, {
     method: 'POST',
-    // La clave va en el encabezado, nunca en la dirección (REGLAS.md, regla 16).
+    // La clave va en el encabezado, nunca en la dirección (docs/10-REGLAS-Y-PRUEBAS.md, regla 16).
     headers: { 'content-type': 'application/json', 'x-goog-api-key': clave },
     body: JSON.stringify({
       contents: [{ parts: [{ text: pedidoPara(notas) }] }],
@@ -219,7 +219,7 @@ export async function leerGrupoGroq(notas, { clave, fetchFn = fetch, modelo = MO
   const instruccion = `${pedidoPara(notas)}\n\nDevolvé un objeto JSON con esta forma exacta y nada más: {"fichas": [ … ]}, con una ficha por nota.`;
   const res = await fetchFn('https://api.groq.com/openai/v1/chat/completions', {
     method: 'POST',
-    // La clave va en el encabezado, nunca en la dirección (REGLAS.md, regla 16).
+    // La clave va en el encabezado, nunca en la dirección (docs/10-REGLAS-Y-PRUEBAS.md, regla 16).
     headers: { 'content-type': 'application/json', authorization: `Bearer ${clave}` },
     body: JSON.stringify({
       model: modelo,

@@ -1,5 +1,7 @@
 # Radar Balcarce V2.2 — Cómo elegimos y publicamos las notas
 
+> *Nota del 28/09/2026: documento histórico, no se mantiene. Los documentos que nombra (`REGLAS.md`, `REDES.md`, `INFRAESTRUCTURA.md`, `PANEL.md`, `EMPEZAR-ACA.md`, `MANUAL.md`, `docs/RADAR-3.0.md`) se retiraron ese día: lo vigente está en `docs/`, empezando por `docs/00-INDICE.md`.*
+
 **Versión:** 2.2 · 27/09/2026 (actualizada con las decisiones de la tarde)
 **Base:** el plan V2.1, la revisión externa de ese plan y lo que pidió Hernán el 27/09 (sumar notas nacionales que se pueda medir que son populares, y listar todas las fuentes y cómo se usan).
 **Para quién es:** para Hernán y Andrés, y para quien implemente los cambios (persona o IA).

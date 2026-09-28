@@ -1,5 +1,7 @@
 # Cruce de notas entre medios · últimas 24 horas
 
+> *Nota del 28/09/2026: documento histórico, no se mantiene. Los documentos que nombra (`REGLAS.md`, `REDES.md`, `INFRAESTRUCTURA.md`, `PANEL.md`, `EMPEZAR-ACA.md`, `MANUAL.md`, `docs/RADAR-3.0.md`) se retiraron ese día: lo vigente está en `docs/`, empezando por `docs/00-INDICE.md`.*
+
 *Medido el domingo 27/09/2026 a la tarde. Un domingo publica menos que un día hábil.*
 
 *Es la foto de ese día. Lo que se decidió con esto ya está en el código: el cruce

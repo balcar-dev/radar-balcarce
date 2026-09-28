@@ -37,7 +37,7 @@ el estado.
   imagen para compartir).
 - **En vivo, cada lunes**: `redes/auditar.mjs` (workflow `auditoria.yml`)
   corre ese auditor y además mide las imágenes publicadas. Si algo falla, avisa
-  por WhatsApp. Ver `FORMATOS.md` e `INFRAESTRUCTURA.md`.
+  por WhatsApp. Ver `FORMATOS.md` y `docs/08-INFRAESTRUCTURA.md`.
 
 ## Lo que falta
 
@@ -48,7 +48,7 @@ el estado.
 | **Google Publisher Center** (Google Noticias y Discover) | El sitemap de noticias ya está; falta el alta manual | Discover pide imágenes de al menos 1200 px |
 | **Google Business Profile** | Aparecer en el mapa y en "cerca de mí" | Si corresponde |
 | **Google AdSense** | Monetizar con avisos de Google | Pendiente (`PENDIENTES.md`). Falta: que una persona abra la cuenta (datos fiscales), `ads.txt` con el ID de editor que da AdSense (sin el ID no se puede armar) y sostener las notas con cuerpo. La aprobación tarda de días a semanas. Ver `PUBLICIDAD.md` |
-| **Notas con cuerpo** | Google y AdSense premian el contenido propio | Desde el 25/09 una nota automática sin cuerpo no se publica (`REGLAS.md`, regla 23): toda nota visible tiene cuerpo (el 26/09 a las 00:33, las 94 de la portada; 21 esperaban cuerpo). El 25/09 a la mañana sólo el 19 % lo tenía. Mirar que siga así |
+| **Notas con cuerpo** | Google y AdSense premian el contenido propio | Desde el 25/09 una nota automática sin cuerpo no se publica (`docs/10-REGLAS-Y-PRUEBAS.md`, regla 23): toda nota visible tiene cuerpo (el 26/09 a las 00:33, las 94 de la portada; 21 esperaban cuerpo). El 25/09 a la mañana sólo el 19 % lo tenía. Mirar que siga así |
 | **Política editorial** como página | Lo que Google y las IA miran para decidir si un medio es confiable | "Quiénes somos" y "Contacto" ya están. Falta la política editorial: sacar de `CRITERIO-EDITORIAL.md` lo que se puede publicar. Y confirmar el texto de "Quiénes somos" |
 | **CSP completa** | Seguridad | Hoy `_headers` sólo trae `frame-ancestors` |
 | **Rastreadores de IA** (GPTBot, ClaudeBot, PerplexityBot, Google-Extended) | Permitirlos da visibilidad y citas; bloquearlos protege el contenido | Decisión editorial, no técnica. Hoy `robots.txt` no distingue |
@@ -57,8 +57,8 @@ el estado.
 | **Parámetros UTM** en los enlaces de redes | Saber cuánta gente llega desde cada red | Con la analítica sin cookies |
 | **Enlaces internos entre notas** | Ahora las etiquetas de temas están apagadas (`MOSTRAR_TEMAS`) | Pensar una alternativa |
 | **Resumen claro al abrir cada nota** | Es lo que una IA cita | Ya lo hace el copete; falta revisar fecha y autor visibles |
-| **Permisos `read_insights` e `instagram_manage_insights`** | Leer qué rinde cada red | Con Meta: regenerar `META_TOKEN` (`INFRAESTRUCTURA.md`) |
-| **Token de Cloudflare Analytics** | Que el resumen de WhatsApp traiga las visitas | Hecho: el secreto `CLOUDFLARE_ANALYTICS_TOKEN` está cargado (`INFRAESTRUCTURA.md`) |
+| **Permisos `read_insights` e `instagram_manage_insights`** | Leer qué rinde cada red | Con Meta: regenerar `META_TOKEN` (`docs/08-INFRAESTRUCTURA.md`) |
+| **Token de Cloudflare Analytics** | Que el resumen de WhatsApp traiga las visitas | Hecho: el secreto `CLOUDFLARE_ANALYTICS_TOKEN` está cargado (`docs/08-INFRAESTRUCTURA.md`) |
 
 ## Reglas a cuidar
 

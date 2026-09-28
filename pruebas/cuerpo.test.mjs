@@ -7,7 +7,7 @@
 // El 25/09 42 de 89 notas de la portada seguían saliendo sin cuerpo (39 de
 // ellas escritas por la IA): si el cuerpo no pasaba, se publicaba el título y
 // la bajada con el cuerpo vacío, y ese cuerpo vacío se reusaba para siempre.
-// Desde ese día (regla 23 de REGLAS.md):
+// Desde ese día (regla 23 de docs/10-REGLAS-Y-PRUEBAS.md):
 //   · una nota automática SIN CUERPO NO SE PUBLICA (web/lib/cuerpo.js);
 //   · un cuerpo vacío nunca se reusa: la nota vuelve a intentarse;
 //   · como mucho tres intentos por nota, en corridas distintas;

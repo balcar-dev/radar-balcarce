@@ -1,4 +1,4 @@
-// Los tres espacios de publicidad de la web (ver REDES.md § 2).
+// Los tres espacios de publicidad de la web (ver PUBLICIDAD.md).
 //
 // Va aparte de servidor.mjs para poder probarlo: recibe lo que hay y lo que
 // se pidió, y devuelve lo que queda. No toca archivos.

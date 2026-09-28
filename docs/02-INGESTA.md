@@ -77,7 +77,7 @@ Cada fuente es una ficha con estos datos:
 | `alcance` | `local`, `region`, `provincia` o `pais` | Qué es de Balcarce, qué entra al filtro y al cruce |
 | `ciudad` | De dónde es el medio (las de Balcarce y las nacionales no la llevan) | La lectura con IA la recibe (ver `docs/03-SELECCION.md`, paso 8) |
 | `peso` | Cuánto suma a la relevancia: 30 a 24 los de Balcarce, 8 casi todos los nacionales, 7 a 16 el resto | Ordenar, nunca decidir si sale (ver `docs/03-SELECCION.md`, paso 3) |
-| `oficial` | `true` si es un organismo público. Hoy son dos: la Municipalidad y el Gobierno de la Provincia | Verde en el semáforo y verificación ALTA |
+| `oficial` | `true` si es un organismo público. Hoy son dos: la Municipalidad y el Gobierno de la Provincia. El INTA es organismo público pero va **sin** la marca, a propósito: con ella saldría solo sin que lo cuente ningún otro medio | Verde en el semáforo y verificación ALTA. Desde el 28/09 la historia es oficial si **cualquiera** de sus fuentes lo es (paso 13) |
 | `seccion` | La sección fija si el feed ya viene separado por tema | Clasificar (ver `docs/03-SELECCION.md`, paso 2) |
 | `temas`, `nota` | Descripción para humanos | Nada automático |
 | `patronEnlace`, `base`, `prefijoTitulo` | Sólo en las que se raspan | Reconocer los enlaces a notas en el HTML |
@@ -262,7 +262,7 @@ tarda segundos. Cómo compara:
    mismas palabras con los mismos pesos).
 4. **Umbral 0,42** (`CRUCE.umbral`). Con 0,42 o más, las dos notas cuentan el
    mismo hecho. Se probó el 27/09 con 90 medios y 2.664 notas: con 0,25
-   encadenaba cosas sin relación (`docs/CRUCE-DE-MEDIOS.md`).
+   encadenaba cosas sin relación (`docs/historico/CRUCE-DE-MEDIOS.md`).
 5. **Para no comparar todas contra todas**, cada nota se compara sólo con las
    que comparten alguna palabra poco común. Una palabra que está en más del 5 %
    de las notas (`CRUCE.palabraComun`, y nunca menos de 3) no sirve para buscar
@@ -281,7 +281,7 @@ Por cada grupo se mira qué medios lo cuentan (`ingestar`, paso 2 del código):
 | Tiene al menos una nota de un medio de Balcarce | Sí |
 | Tiene una nota de afuera con `nombraBalcarce` o `deLaZona` | Sí |
 | Lo cuentan **dos medios distintos o más** | Sí (lo que pida su sección se decide después: `docs/03-SELECCION.md`, paso 6) |
-| Lo cuenta **un solo medio** de afuera | **No se trae**, ni para esperar a una persona |
+| Lo cuenta **un solo medio** de afuera | **No se trae**, ni para esperar a una persona. Vale también para una fuente oficial de afuera sola (el Gobierno de la Provincia): "una fuente oficial alcanza sola" rige recién después del cruce, en los medios que pide la sección (`PENDIENTES.md`) |
 | Lo cuentan **sólo medios de la región** (Mar del Plata, Tandil, Necochea…), sin Balcarce en el título ni la zona | **No se trae**: "algo que sea sólo para Necochea no" (Hernán, 27/09) |
 
 El registro de cada corrida dice: "cruce: N notas (M de la memoria) · H
@@ -337,6 +337,7 @@ con estos campos, que es lo que usan todos los pasos siguientes:
 | `origenes` | **Cada fuente, en orden, la principal primero**: medio, enlace, fecha (null si no tenía), si es oficial y su resumen. Es lo que la IA recibe numerado ("Fuente 1, Fuente 2…"), lo que el lector ve en "Fuentes (N)" y con lo que se calcula el nivel de verificación (`docs/04-REDACCION.md`) |
 | `local` | `true` si la principal es de un medio de Balcarce o dice Balcarce en el título (`esDeBalcarce`) |
 | `figura`, `deLaZona`, `nombraBalcarce`, `alcance` | Las marcas del paso 7 y el alcance de la principal |
+| `oficial` | `true` si la principal **o cualquiera** de las otras notas del grupo es de una fuente oficial (28/09). Lo usan el semáforo, los medios que pide lo de afuera y el archivo (`tieneRespaldo`) |
 
 Además de las noticias, `ingestar()` trae el **clima** (Open-Meteo y, si
 falla, `api.met.no`) y las **farmacias de turno** (Colegio de Farmacéuticos,
@@ -425,13 +426,13 @@ se baja la página de la nota original. Lo hace `ingesta/articulo.mjs`:
 | Se pierde la caché de Actions | El cruce arranca sin memoria: durante unas horas hay más notas "de un solo medio" que no entran | Nada: se rearma sola en unas corridas |
 | Dos hechos distintos con palabras parecidas se juntan (o uno igual no se junta) | Una historia con fuentes que no corresponden, o la misma noticia dos veces | El umbral es `CRUCE.umbral`; la lectura con IA junta después las repetidas que el cruce no vio (`docs/03-SELECCION.md`, paso 8) |
 | Un medio aparece con dos nombres | Una nota de un solo medio cuenta como de dos | Unificar `medio`; `pruebas/cruce-coherente.test.mjs` lo controla |
+| Se cae la plataforma que comparten varios medios de la región | Varios avisos "Fuente caída" juntos: 0223, LU9, QZ Noticias, Ecos Diarios, La Noticia 1 y otros leen de `…apiv3.eleco.com.ar` (lo dice el comentario de `ingesta/fuentes.mjs`) | Nada: vuelven solos cuando el servidor vuelve |
 | La página original tiene la nota partida o metida en `<div>` sin `<p>` | No hay texto completo: la IA escribe con los resúmenes (o no escribe, si son muy cortos) | Mirar `extraerTexto` con esa página (`pruebas/articulo.test.mjs`) |
 | Una figura de la lista es ambigua | Entra como "figura" algo que no lo es (27/09: "etcheverry" solo tomó una inmobiliaria de Ayacucho) | Usar nombre y apellido en `FIGURAS` |
 
-## Diferencias encontradas con los documentos viejos
+## Lo que sigue abierto
 
-- **`FUENTES.md` (generado) y `CLAUDE.md` dicen que "una fuente oficial alcanza sola"** para que lo de afuera salga. En el código, una nota oficial de afuera contada por un solo medio **no pasa el cruce** (paso 11: un solo medio no se trae, salvo Balcarce en el título o la zona). La ficha del Gobierno de la Provincia en `ingesta/fuentes.mjs` lo dice bien ("lo demás, sólo si lo cuentan otros medios"). Ver también `docs/03-SELECCION.md`, "Diferencias".
-- **`CLAUDE.md` (resumen del cruce) dice que "lo de un solo medio no se trae"** sin matiz: es así para lo de afuera; lo de un medio de Balcarce entra siempre, y lo de afuera con Balcarce en el título o de la zona, también.
-- **El comentario de `ampliar` dice que abre "sólo lo que no tiene cuerpo, unos 15 pedidos"**: abre también todo lo que no tiene fecha, y lo raspado nunca la tiene, así que abre todas las notas raspadas de cada corrida.
-- **El comentario de `ampliar` (`ingesta/ingesta.mjs`) y el de `teniaImagenLaFuente` (`web/scripts/generar-datos.mjs`) dicen que la foto de la fuente "no se publica nunca"**: desde el 28/09 sí se puede publicar, elegida por la IA y guardada en el banco propio (la imagen que trae la ingesta, `imagen`, sigue sin usarse; la del banco sale de otro lado). Ver `docs/05-FOTOS.md`.
-- **`docs/RADAR-3.0.md` y un comentario de `ingesta/lectura-ia.mjs` hablan de "76 medios" del cruce** (27/09): hoy son 160 feeds de 71 medios en el cruce, y 91 medios en total.
+- Una fuente oficial de afuera contada por un solo medio no pasa el cruce, y un
+  comentario de `ampliar` (`ingesta/ingesta.mjs`) todavía dice que abre "sólo
+  lo que no tiene cuerpo, unos 15 pedidos" (abre toda nota sin fecha, o sea
+  todo lo raspado): los dos están en `PENDIENTES.md`.

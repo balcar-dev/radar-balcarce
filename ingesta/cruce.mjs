@@ -1,4 +1,4 @@
-// El cruce de medios (27/09, pedido de Hernán; docs/PLAN-V2.2.md).
+// El cruce de medios (27/09, pedido de Hernán; docs/historico/PLAN-V2.2.md).
 //
 // Junta las notas de todos los medios que cuentan EL MISMO HECHO, aunque cada
 // uno le ponga otro título, y guarda una memoria de las últimas horas para que

@@ -556,7 +556,7 @@ test('los módulos de redes/ nuevos no importan nada de afuera de Node', () => {
 });
 
 test('los documentos se remiten a CRITERIO-REDES.md', () => {
-  for (const f of ['CLAUDE.md', 'REDES.md', 'CRITERIO-EDITORIAL.md', 'REGLAS.md']) {
+  for (const f of ['CLAUDE.md', 'docs/07-REDES.md', 'CRITERIO-EDITORIAL.md', 'docs/10-REGLAS-Y-PRUEBAS.md']) {
     assert.ok(leer(f).includes('CRITERIO-REDES.md'), `${f} no menciona CRITERIO-REDES.md`);
   }
   assert.ok(momentoDeHora('10:00') === 'manana');

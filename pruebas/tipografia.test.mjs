@@ -1,7 +1,7 @@
 // El sistema tipográfico de las tarjetas de servicio (web/app/globals.css) y el
 // dólar sin corrimientos. Sin red, sin navegador: lee la hoja de
 // estilo y los componentes. (Las medidas reales, columna por columna y ancho por
-// ancho, se tomaron en el navegador: ver web/README.md.)
+// ancho, se tomaron en el navegador: ver MEDIA-KIT.md, "El sistema tipográfico".)
 
 import { test } from 'node:test';
 import assert from 'node:assert/strict';

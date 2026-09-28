@@ -1,14 +1,12 @@
 # 09 · El panel: el tablero de la PC
 
-*Escrito el 28/09/2026, leyendo el código de ese día (`panel/`). Toma como
-referencia `PANEL.md`, pero cada cosa se verificó contra el código; si no
-coinciden, manda el código y la diferencia está al final.*
+*Escrito el 28/09/2026, leyendo el código de ese día (`panel/`). Si algo de
+acá no coincide con el código, manda el código.*
 
 Qué es cada nota y por qué el semáforo la pone de un color es de
 `docs/03-SELECCION.md`; cómo escribe la IA, de `docs/04-REDACCION.md`; cómo
 usa la web lo que el panel decide, de `docs/06-WEB.md`; las redes, de
-`docs/07-REDES.md`; cómo se entra desde afuera (Tailscale) y los enlaces, de
-`EMPEZAR-ACA.md` y `docs/11-OPERACION.md`.
+`docs/07-REDES.md`; los enlaces y el uso diario, de `docs/11-OPERACION.md`.
 
 ---
 
@@ -95,9 +93,19 @@ Mientras corre, la luz de arriba del tablero se pone amarilla.
   página se rechaza (`origenPermitido`), "Salir" es un botón y no un enlace, y
   "Probar una fuente" no deja entrar a la red de la casa ni a la PC
   (`probarUrlPermitida`).
-- El panel escucha en todas las conexiones de la PC y, con **Tailscale
-  Funnel** prendido, se puede entrar desde afuera. Ahí lo protege sólo la
-  contraseña (`PANEL.md`, `EMPEZAR-ACA.md`).
+- Además (`panel/acceso.mjs`): la cookie sale marcada `Secure` cuando se
+  entra por https (el túnel); para el freno de intentos, la dirección que
+  manda el túnel (`X-Forwarded-For`) sólo se cree si la conexión viene de la
+  misma PC, así no se saltea inventándola (25/09); y el error de acceso no
+  delata si el usuario existe.
+- El panel escucha en todas las conexiones de la PC (cualquiera en la misma
+  red llega a la pantalla del login) y, con **Tailscale Funnel** prendido, se
+  puede entrar desde afuera, con la dirección que está en
+  `panel/datos/DIRECCION-DEL-PANEL.txt` (no va al repositorio, que es
+  público). Ahí lo protege **sólo la contraseña**. Para cerrarlo:
+  `tailscale funnel --https=443 off`.
+- Las contraseñas iniciales se cambiaron el 25/09. Si todavía existe
+  `panel/datos/CLAVES-INICIALES.txt`, se borra (`PENDIENTES.md`).
 
 ### 5. Usarlo: las pestañas
 
@@ -115,7 +123,7 @@ mientras no haya una nota abierta. Arriba a la derecha: quién entró,
 | **Archivadas** | Lo que pasó 72 horas sin que nadie lo decidiera (`HORAS_PARA_ARCHIVAR = 72`) | **Volver a la cola** |
 | **Fuentes** | Todas las fuentes con su peso, si están activas y cómo les fue en la última búsqueda; los últimos movimientos del historial | Pausar o reactivar, cambiar el peso (de 1 a 40), borrar, **sumar una fuente** y **probarla** antes |
 | **Clima y farmacias** | La farmacia de turno y la semana, el clima ahora y los próximos días, los números útiles | Sólo mirar |
-| **Agenda** | Los eventos cargados a mano, los del municipio, el formulario "Cargar un evento", "A quién pedirle fechas" y las fiestas anuales | Cargar un evento (nace como borrador), **Publicar en la web**, **Sacar de la web**, **Borrar**; "Ya tengo la fecha" para una fiesta anual; escribirle a un contacto por WhatsApp o mail (el panel abre el mensaje, **no manda nada solo**), marcar "Le escribimos hoy" y "Respondió". El paso a paso está en `PANEL.md`, "La agenda" |
+| **Agenda** | Los eventos cargados a mano, los del municipio, el formulario "Cargar un evento", "A quién pedirle fechas" y las fiestas anuales | Cargar un evento (nace como borrador), **Publicar en la web**, **Sacar de la web**, **Borrar**; "Ya tengo la fecha" para una fiesta anual; escribirle a un contacto por WhatsApp o mail (el panel abre el mensaje, **no manda nada solo**), marcar "Le escribimos hoy" y "Respondió". El paso a paso, en "La agenda, paso a paso", más abajo |
 | **Calendario** | A qué hora y qué días sale cada historia fija (clima de la mañana y de la noche, farmacia, útiles, agenda) | Cambiar hora, días o apagarla. **Sólo rige en la PC**: en GitHub valen los horarios de fábrica (`HISTORIAS_FIJAS`, `panel/horarios.mjs`) |
 | **Para redes** (con el número) | Los videos y placas que se armaron **en la PC** en las últimas 24 horas (`reels/salida/`) | Bajarlos. Las redes de todos los días salen desde GitHub, no de acá (`docs/07-REDES.md`) |
 | **Buzón** (con el número de nuevos) | Lo que manda la gente: dato, reclamo, opinión o seguimiento, cada uno con su regla (`panel/buzon.mjs`) | Cargar algo que llegó por otro canal, cambiarle el estado, anotar la respuesta de la otra parte en un reclamo, borrar. Un reclamo **nunca** se publica de un solo lado |
@@ -186,6 +194,70 @@ en texto plano (`esSecreto`: los `.txt` con "clave", "secreto", "password" o
 "token" en el nombre). A mano: `node panel/respaldo.mjs [carpeta]`.
 
 ---
+
+## La agenda, paso a paso
+
+Desde el 25/09 (`panel/agenda.mjs`; el criterio, en `CRITERIO-EDITORIAL.md`
+§ 8; la página de cada evento, en `docs/06-WEB.md`).
+
+**Cargar un evento que avisó alguien:**
+
+1. Pestaña **Agenda** → formulario **Cargar un evento**: nombre, fecha
+   (`2026-10-15`) y, si se sabe, hora (`20:30`), cuándo termina, lugar,
+   dirección, entrada, quién organiza, página de entradas y una descripción.
+   Todo eso **sale en la web tal cual**. "Quién lo avisó" queda en el panel.
+2. Si la fecha está **confirmada por quien organiza**, tildar "Publicar ya en
+   la web". Si no, queda como **borrador** y se publica después con **Publicar
+   en la web**. Una fecha aproximada no se publica.
+3. En la próxima corrida de GitHub (media hora como mucho) el evento tiene su
+   página. **Sacar de la web** o **Borrar** la hacen desaparecer en la corrida
+   siguiente.
+
+**Una fiesta del calendario anual** (Automovilismo, Postre, Balcarce Corre…):
+cuando el organizador confirma la fecha, **Ya tengo la fecha** (en "Se acercan
+estas fechas anuales" o "Todo el calendario anual") llena el formulario y lo
+liga a la fiesta; la web cambia "fecha a confirmar" por la fecha con enlace.
+
+**Pedirle fechas a las instituciones** (tarjeta "A quién pedirle fechas"):
+
+1. **A quién escribir este mes** muestra a los que suelen tener eventos en los
+   próximos 45 días (`DIAS_ADELANTE`) y a los que no se les escribió en los
+   últimos 30 (`DIAS_ENTRE_MENSAJES`). "Todos" muestra la base completa.
+2. **Escribir por WhatsApp** (o por mail) abre el mensaje ya escrito. **El
+   panel no manda nada solo**: lo manda una persona. Sin WhatsApp ni mail,
+   **Ver mensaje**, copiarlo y mandarlo por Instagram o Facebook.
+3. Después, **Le escribimos hoy** (si varios comparten el número, vale para
+   todos). Cuando contestan, **Respondió** y, si mandan una fecha, **Cargar un
+   evento suyo**.
+
+**La base de contactos** es `ingesta/contactos-agenda.json` (43 instituciones
+al 28/09): qué organiza cada una, en qué meses (sólo si hay una fuente que lo
+respalde), sus canales **oficiales**, de dónde salió cada dato y cuándo se
+verificó. El repositorio es público: nunca un celular personal que la
+institución no publique. Se corrige editando ese archivo y reiniciando el
+panel. No se mezcla con `comercial/` (comercios para vender publicidad).
+
+## Cómo se podría pasar a online
+
+Ninguna opción está decidida ni probada (`PENDIENTES.md`, "Panel 100%
+online"); los límites de los planes gratis cambian, hay que verificarlos antes:
+
+1. **Cloudflare Pages + Functions + Access** (la que mejor encaja: el sitio ya
+   está ahí). El panel detrás de Cloudflare Access (entrar con el correo, sin
+   contraseñas propias), unas funciones que escriben las decisiones en el
+   repositorio por la API de GitHub y los datos del buzón en un almacenamiento
+   de Cloudflare, nunca en el repositorio. Trabajo mediano: el servidor se
+   reescribe como funciones.
+2. **Sólo lo esencial**: aprobar notas y cargar avisos en una página protegida
+   que escriba `decisiones.json` y `avisos.json` por GitHub; buzón y agenda,
+   después.
+3. **Un servidor gratis**: el panel ya corre con Node sin dependencias, pero
+   hay que resolver el disco para `panel/datos/`, el respaldo y el acceso (muchos
+   planes gratis duermen el servicio o borran el disco).
+4. **Con gasto** (unos USD 5 por mes): Railway o Fly.io. Lo más simple.
+
+Mientras tanto: respaldo apuntado afuera de la PC, contraseñas cambiadas (25/09)
+y el túnel cerrado cuando no haga falta.
 
 ## Qué guarda el panel y dónde
 
@@ -330,33 +402,13 @@ Lo que vigilan las pruebas: `pruebas/panel.test.mjs`,
 
 ---
 
-## Diferencias encontradas con los documentos viejos
+## Lo que sigue abierto
 
-1. **"Unos segundos después del último cambio"** (`CLAUDE.md`, `PANEL.md`,
-   `docs/RADAR-3.0.md`): son **30 segundos** (`esperaMs = 30000`,
-   `panel/sincronizar.mjs`).
-2. **"Cada 10 minutos lo vuelve a escribir en `decisiones.json`"**
-   (`CLAUDE.md`): lo reescribe cada vez que guarda su estado: al arrancar, con
-   cada acción de una persona y después de cada ciclo en que la IA escribió o
-   borró algo. No es un reloj propio de 10 minutos, aunque en la práctica se
-   parece.
-3. **Las diferencias entre la corrida de la PC y la de la nube** (fuentes con
-   la pausa del panel, sin `idsConocidos`, sin lectura con IA, archivo a 72 h
-   contra portada de 36 h) no están en `PANEL.md` ni en `CLAUDE.md`. La
-   posibilidad de que una decisión del panel no llegue a la web porque la nota
-   tiene otro identificador en la nube sale de leer el código; no está
-   medida.
-4. **`decisiones.json` exporta los horarios del Calendario**, pero en GitHub
-   nadie los lee (`redes/piezas.mjs` llama a `horariosDe` con un estado vacío).
-   `PANEL.md` lo dice bien ("sólo rigen en la PC"); el campo exportado sobra.
-5. **`decisiones.json` pesa 2,5 MB** (1.540 decisiones, 1.390 escritas por la
-   IA desde el panel). `panel/notas.mjs` dice que la poda a 60 días lo iba a
-   dejar chico (antes de la poda eran 437 KB con 950 decisiones): creció
-   porque ahora cada decisión de la IA lleva el cuerpo y las partes internas.
-6. **La pestaña "Para redes"** dice en su comentario que es "el camino real de
-   todos los días mientras Meta no apruebe la publicación automática". Meta la
-   aprobó (24/09 y 26/09): hoy sólo sirve para bajar lo que se armó en la PC.
-7. **El panel escucha en todas las conexiones de la PC** (`servidor.listen`
-   sin dirección), no sólo en `localhost`. Está protegido por la contraseña,
-   como dice `PANEL.md`, pero cualquiera en la misma red llega a la pantalla
-   del login.
+En `PENDIENTES.md`: los horarios del Calendario, que se exportan pero GitHub
+no lee; el tamaño de `decisiones.json` (2,5 MB al 28/09, 1.540 decisiones,
+1.390 escritas por la IA desde el panel: la poda a 60 días no alcanza porque
+cada decisión de la IA lleva el cuerpo y las partes internas); que el panel
+escucha en todas las conexiones; que una decisión del panel puede no llegar a
+la web si la nota tiene otro identificador en la nube (sale de leer el código,
+no está medido); y el comentario viejo de la pestaña "Para redes" (dice que es
+"el camino real de todos los días": Meta ya publica sola).

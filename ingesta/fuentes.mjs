@@ -825,7 +825,7 @@ export const PALABRAS_ZONA = [
 // PROPIO MEDIO a la nota (la dirección), no palabras del texto: no se equivoca
 // con juegos de palabras. El 27/09, 153 de las 1.878 notas del archivo venían
 // de secciones de otros países de los diarios nacionales (la ley de California,
-// el tigre de México, los ataques con drones en Colombia). Ver PLAN-V2.2.md § 5.
+// el tigre de México, los ataques con drones en Colombia). Ver docs/historico/PLAN-V2.2.md § 5.
 // Los medios de Balcarce no pasan por acá: de ellos entra todo.
 export const SECCIONES_QUE_NO_ENTRAN = [
   {

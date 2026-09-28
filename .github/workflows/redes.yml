@@ -10,7 +10,7 @@
 #      página de Facebook (el mismo video, como historia o reel).
 #
 # Cuando no toca ninguna pieza, la corrida termina en segundos y no instala
-# nada. Los horarios y las reglas están en REDES.md.
+# nada. Los horarios y las reglas están en docs/07-REDES.md.
 #
 # EL DISPARADOR ES EXTERNO (cron-job.org), no el planificador propio de GitHub.
 # El 21/09 el planificador de GitHub llegó a dejar cinco horas entre dos

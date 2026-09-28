@@ -65,8 +65,38 @@ en el rojo de la marca.
 
 Desde el 27/09: **Source Serif 4** (títulos, marca) e **Inter** (todo lo
 demás: etiquetas, datos, cifras, texto). Antes eran Fraunces e IBM Plex Sans
-(se veían pesadas en el celular). Detalle del sistema (tamaños, cuándo usar
-cada variable): `web/README.md`, sección "Sistema tipográfico".
+(se veían pesadas en el celular). Se eligieron entre cuatro opciones probadas
+con titulares reales (Fraunces, Newsreader, Source Serif 4 y Archivo): Source
+Serif es la más firme y clara en pantalla chica. El `<link>` de Google Fonts
+(`web/app/layout.js`) pide Source Serif 4 (600 a 900) e Inter (400 a 700), con
+tamaño óptico; los titulares llevan `lining-nums proportional-nums` y las
+cifras, `tabular-nums`. Nunca una cifra ni un nombre de servicio en la letra
+de los títulos.
+
+### El sistema tipográfico
+
+Las tarjetas de servicio (clima, farmacia, dólar, agenda, buzón, números
+útiles) y las páginas `/farmacias`, `/dolar`, `/agenda` y `/util` comparten
+**un** sistema, definido con variables en `web/app/globals.css` (bloque
+"sistema tipográfico"). Nada de tamaños sueltos: **cambiar un tamaño es
+cambiar la variable, no la tarjeta** (`pruebas/tipografia.test.mjs`).
+
+| Rol | Variable | Valor | Se usa en |
+|---|---|---|---|
+| Etiqueta | `--t-etiqueta` + `--ls-etiqueta` | 11px, 600, mayúsculas, letra abierta, gris | Primera línea de cada tarjeta |
+| Meta | `--t-meta` | 12,5px, gris | Hora, aclaraciones, "compra $1.495" |
+| Texto | `--t-texto` | 14px | Dirección, descripción, números útiles |
+| Acción | `--t-accion` | 13px, 600, rojo, con "→" | "Ver la semana →", "Toda la agenda →" |
+| Dato | `--t-dato` | 16px, 700 | Nombre de la farmacia, estado del cielo, tipo de dólar |
+| Dato grande | `--t-dato-grande` | 22px, 700, tabular | Venta del dólar, número de teléfono |
+| Cifra | `--t-cifra` | 44px, 700, tabular | Sólo la temperatura |
+| Título de tarjeta | `--t-titulo-tarjeta` | 19px, Source Serif 700 | Buzón e invitaciones ("¿Viste algo en el barrio?") |
+
+El nombre de la farmacia es un dato, no un titular (mismo tamaño que cualquier
+dato, en tinta); el rojo es el acento de las acciones. El puntito de estado
+(`.punto-vivo`, 6px, verde) va a la izquierda de la etiqueta y sólo cuando el
+dato está confirmado al día (la farmacia del día; el clima y el dólar cuando
+el navegador ya consultó la fuente).
 
 Dónde están los archivos de letra:
 
@@ -124,7 +154,7 @@ de la web).
 | Pieza | Plantilla del lienzo | Medida | Dónde se arma |
 |---|---|---|---|
 | Los tres podcasts (reel + historia) | Repaso · tapa: el nombre del podcast y la duración en el color del día, un título ("Tres noticias para empezar el día", "Tres cosas que pasaron hoy", "Lo que dejó el día") y la lista numerada de las notas, cada número en el color de su sección | 1080 × 1920 | `placaRepaso` (`reels/placa.mjs`), desde `reels/plan.mjs` |
-| El clima de la mañana | Historia diaria: "Hoy en Balcarce", la fecha, la tarjeta oscura del clima (temperatura, cielo, sensación y viento, hoy y los dos días que siguen) y el dólar de las 11 del último día hábil (con cuándo se tomó; nunca "en vivo") | 1080 × 1920 | `placaClima` |
+| El clima de la mañana | Historia diaria: "Hoy en Balcarce", la fecha, la tarjeta oscura del clima (temperatura, cielo, sensación y viento, hoy y los dos días que siguen); sin dólar: si se mueve, sale como nota propia | 1080 × 1920 | `placaClima` |
 | El clima de la noche | Historia diaria: "Cómo sigue el día", la tarjeta del clima (ahora, esta noche, mañana y pasado) y un recuadro con el pronóstico de mañana | 1080 × 1920 | `placaClima` |
 | El aviso de clima | Historia diaria con un recuadro de borde rojo ("Qué hay que saber") | 1080 × 1920 | `placaClima` |
 | La farmacia de turno | Historia diaria: la fecha y la tarjeta blanca con borde verde (nombre, dirección, teléfono) y hasta cuándo dura el turno | 1080 × 1920 | `placaFarmacia` |

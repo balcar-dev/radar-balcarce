@@ -1,5 +1,7 @@
 # Investigación de la competencia
 
+> *Nota del 28/09/2026: documento histórico, no se mantiene. Los documentos que nombra (`REGLAS.md`, `REDES.md`, `INFRAESTRUCTURA.md`, `PANEL.md`, `EMPEZAR-ACA.md`, `MANUAL.md`, `docs/RADAR-3.0.md`) se retiraron ese día: lo vigente está en `docs/`, empezando por `docs/00-INDICE.md`.*
+
 *Reemplaza a `INVESTIGACION-NACIONALES.md` e `INVESTIGACION-PORTALES.md`
 (fusionados el 25/09/2026; el detalle de cada tabla se conserva acá). Estado
 revisado el 25/09/2026 contra el código.*

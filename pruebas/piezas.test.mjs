@@ -321,7 +321,7 @@ test('la agenda no la espera GitHub: necesita datos que sólo hay en la PC', () 
   assert.ok(!nombres(cronogramaDelDia(jueves)).includes('agenda'));
 });
 
-test('los horarios de los podcasts son los que dice REDES.md, y no hay historias de una nota', () => {
+test('los horarios de los podcasts son los que dice docs/07-REDES.md, y no hay historias de una nota', () => {
   assert.deepEqual(HORAS_REELS, ['10:00', '15:00', '20:30']);
   assert.deepEqual(PODCASTS.map((p) => [p.nombre, p.hora]), [['noticia1', '10:00'], ['noticia2', '15:00'], ['podcast', '20:30']]);
   // Una noticia sola en una historia sonaba rara (24/09): van dentro de los podcasts.

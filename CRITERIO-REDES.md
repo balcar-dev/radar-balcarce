@@ -6,7 +6,7 @@ así: que cada cosa de las redes tenga su criterio, que la voz sea **siempre la
 misma locutora**, que siempre sea "Radar Balcarce" y que la página sea siempre
 `radarbalcarce.com`. Lo editorial de las notas (qué se publica, cómo se escribe
 una nota) está en [`CRITERIO-EDITORIAL.md`](CRITERIO-EDITORIAL.md); los horarios y
-cómo se publica, en [`REDES.md`](REDES.md).
+cómo se publica, en [`docs/07-REDES.md`](docs/07-REDES.md).
 
 **Cómo funciona este documento.** El código lo lee y lo respeta (`redes/prompt-redes.mjs`):
 la identidad (sección 1) y las instrucciones de voz (sección 6) se leen de acá, sin
@@ -200,7 +200,7 @@ fecha, no el azar: sale el mismo día siempre), y los otros dos días cierran s�
 ### Posteo de una nota en Facebook (y su espejo en Instagram)
 
 - **Objetivo:** que el vecino entre a la nota, en nuestra página.
-- **Hora:** cuando hay una nota fuerte (ver `REDES.md`). **Largo:** el texto para
+- **Hora:** cuando hay una nota fuerte (ver `docs/07-REDES.md`). **Largo:** el texto para
   redes tiene un máximo de 280 caracteres (`PARTES.textoRedes`).
 - **Estructura:** el texto para redes (o el titular y la bajada), una línea con el
   enlace a nuestra nota (`radarbalcarce.com/nota/…`) que va cambiando de frase, y
@@ -219,15 +219,15 @@ fecha, no el azar: sale el mismo día siempre), y los otros dos días cierran s�
 - **Objetivo:** que tengan a mano los números que sirven.
 - **Hora:** 11:00, un día distinto de lunes a viernes. **Largo:** 8 a 20 segundos.
 - **Estructura:** saludo, qué números son, un cierre ("Guardalos ahora, que después
-  te olvidás") y dónde están los demás.
+  te olvidás") y dónde están todos (el audio no lee los números).
 - **Saludo y cierre:** el de su hora (a las 11, "buen día").
 - **Lleva:** las categorías (emergencias, hospital, comisaría, municipio).
 - **No lleva:** "esta semana" ni "una vez por semana": son siempre los mismos
   teléfonos.
-- **Bueno:** "Buen día, Balcarce. Te dejamos los teléfonos que sirve tener a mano en
-  Balcarce: emergencias, el hospital, la comisaría y los servicios del municipio.
-  Tenelos a mano, que nunca se sabe. Los demás números están en la web de Radar
-  Balcarce. Radar Balcarce."
+- **Bueno:** "Buen día, Balcarce. Te dejamos los teléfonos que sirve tener a mano.
+  Están los de emergencias, el hospital, la comisaría y el municipio. Tenelos a
+  mano, que nunca se sabe. Los encontrás todos en la web de Radar Balcarce.
+  Radar Balcarce."
 - **Malo:** "Los teléfonos de esta semana…" (los números no cambian).
 
 ### Semanales: la agenda del jueves
