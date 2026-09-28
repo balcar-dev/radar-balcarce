@@ -1,5 +1,5 @@
 {
-  "exportado": "2026-09-28T10:31:51.978Z",
+  "exportado": "2026-09-28T10:41:55.259Z",
   "decisiones": {
     "1951120": {
       "estado": "automatica",
@@ -42218,6 +42218,118 @@
       "verificacion": {
         "nivel": "ALTA",
         "porque": "Lo contaron 7 medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      }
+    },
+    "1b7cqi8": {
+      "estado": "automatica",
+      "titulo": "Luciano Giugno comparte un recuerdo de sus años en Estados Unidos",
+      "copete": "El mediático y primo de Marcelo Tinelli publicó en sus redes sociales una fotografía de 1990 junto a su primera esposa en California, compartida previamente por su hija.",
+      "cuerpo": "Luciano Giugno, conocido como El Tirri y primo de Marcelo Tinelli, compartió en sus historias de Instagram una imagen tomada en 1990 en Laguna Beach, California, que le envió su hija por mensaje privado. En la fotografía se lo observa junto a su entonces pareja, Mariana Tévez, con quien se casó tras conocerse en el ámbito de la música durante su etapa como integrante de Los Fabulosos Cadillacs.\n\nEl músico recordó que la presentación estuvo a cargo de Leo Dan, padre de su expareja, y que un año después contrajeron matrimonio en territorio estadounidense, donde nació su hija mayor.",
+      "guion": "Luciano Giugno comparte un recuerdo de sus años en Estados Unidos",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-28T10:41:55.144Z",
+      "claves": [
+        "Luciano Giugno publicó una foto de 1990 en California junto a su primera esposa.",
+        "La imagen fue enviada por su hija a través de las redes sociales.",
+        "El músico conoció a su expareja en los años noventa a través de Leo Dan."
+      ],
+      "seSabe": [
+        "Luciano Giugno compartió una fotografía de 1990 en Laguna Beach, California, enviada por su hija.",
+        "El mediático estuvo casado con Mariana Tévez, con quien tuvo a su hija Katerina.",
+        "Ambos se conocieron en la década del noventa cuando el músico integraba Los Fabulosos Cadillacs y fueron presentados por Leo Dan."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El mediático Luciano Giugno recordó en sus redes sociales su etapa en Estados Unidos y compartió una fotografía de 1990 junto a su primera esposa en California, enviada por su hija.",
+      "etiquetas": [
+        "Luciano Giugno",
+        "El Tirri",
+        "Marcelo Tinelli",
+        "California"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Radio Sudestada",
+          "enlace": "https://radiosudestada.com.ar/2026/09/luciano-el-tirri-se-mostro-con-su-esposa-en-una-foto-en-california-y-revelo-detalles-desconocidos-de-su-vida/",
+          "fecha": "2026-09-28T10:38:55.000Z",
+          "oficial": false,
+          "aporte": "Detalló la publicación en redes sociales de Luciano Giugno con una fotografía retro junto a su exesposa en California y su historia familiar."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1gqd04y",
+          "titulo": "La foto casera que reveló la esposa de Dibu Martínez tras los dichos sobre el retiro de Lionel Messi",
+          "fecha": "2026-09-23T04:13:00.000Z",
+          "ruta": "/nota/la-foto-casera-que-revelo-la-esposa-de-dibu-martinez-tras-los-dichos-1gqd04y"
+        },
+        {
+          "id": "1uw8pf",
+          "titulo": "La foto casera que reveló la esposa de Dibu Martínez tras los dichos sobre el retiro de Lionel Messi",
+          "fecha": "2026-09-23T04:13:00.000Z",
+          "ruta": "/nota/la-foto-casera-que-revelo-la-esposa-de-dibu-martinez-tras-los-dichos-1uw8pf"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "BAJA"
+      }
+    },
+    "s1owlc": {
+      "estado": "automatica",
+      "titulo": "Pedro Rosemblat despide la gira de Lali Espósito con un mensaje",
+      "copete": "El conductor dedicó un posteo a su pareja tras el cierre de su gira en River Plate. El recorrido reunió ocho estadios y medio millón de entradas vendidas.",
+      "cuerpo": "Pedro Rosemblat compartió un mensaje en sus redes sociales para celebrar el final de la gira \"No vayas a atender cuando el demonio llama\" de Lali Espósito, concluida el sábado veintiséis de septiembre con su tercer show en el estadio de River Plate. El recorrido completó ocho estadios de fútbol y más de quinientas mil entradas vendidas a lo largo de algo más de un año. En el tramo final del mensaje, el periodista expresó su admiración y cerró con una frase dedicada a la cantante.\n\nLa última presentación contó con momentos destacados, como la participación de Tini Stoessel y Marilina Bertoldi sobre el escenario, además de la interpretación del tema \"Mejor que vos\" junto al grupo Miranda!.",
+      "guion": "Pedro Rosemblat despide la gira de Lali Espósito con un mensaje",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-28T10:41:55.145Z",
+      "claves": [
+        "Pedro Rosemblat dedicó un mensaje a Lali Espósito tras el cierre de su gira en River Plate.",
+        "La artista concluyó el sábado veintiséis de septiembre su tercer show en el estadio Monumental.",
+        "El recorrido artístico reunió ocho estadios de fútbol y más de quinientas mil entradas vendidas.",
+        "El espectáculo final contó con la participación de Tini Stoessel y Marilina Bertoldi."
+      ],
+      "noConfirmado": [
+        "No hay otros detalles sobre los futuros proyectos artísticos de la cantante tras el cierre de esta etapa."
+      ],
+      "textoRedes": "Pedro Rosemblat le dedicó un mensaje a Lali Espósito tras el cierre de su gira en River Plate. El recorrido completó ocho estadios de fútbol y medio millón de entradas vendidas.",
+      "etiquetas": [
+        "Pedro Rosemblat",
+        "Lali Espósito",
+        "River Plate",
+        "música"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/teleshow/2026/09/27/el-conmovedor-mensaje-que-pedro-rosemblat-le-dedico-a-lali-esposito-te-amo-y-te-admiro-enana-faquera/",
+          "fecha": "2026-09-27T21:07:27.000Z",
+          "oficial": false,
+          "aporte": "Aportó los detalles sobre el mensaje de Pedro Rosemblat, los números de la gira y los momentos destacados del show final."
+        },
+        {
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/videos/show/famosos/2026/09/27/te-amo-y-te-admiro-enana-faquera-el-mensaje-de-pedro-rosemblat-a-lali-esposito-tras-su-show-en-river/",
+          "fecha": "2026-09-27T21:56:37.000Z",
+          "oficial": false,
+          "aporte": "No aportó información adicional al no incluir resumen en su contenido."
+        },
+        {
+          "medio": "El Día",
+          "enlace": "https://www.eldia.com/espectaculos/mensaje-de-pedro-rosemblat-a-lali-esposito-tras-su-show-en-river-te-amo-y-te-admiro-enana-faquera-espectaculos_1790590920",
+          "fecha": "2026-09-28T10:37:08.000Z",
+          "oficial": false,
+          "aporte": "Aportó información sobre el reconocimiento de Rosemblat a la gestión de los shows y el liderazgo del equipo de la artista."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron tres medios independientes.",
         "sugeridoPorIA": "ALTA"
       }
     }
