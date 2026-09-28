@@ -1,5 +1,5 @@
 {
-  "exportado": "2026-09-28T09:42:08.772Z",
+  "exportado": "2026-09-28T09:51:57.007Z",
   "decisiones": {
     "1951120": {
       "estado": "automatica",
@@ -41732,6 +41732,118 @@
         "nivel": "ALTA",
         "porque": "Lo contaron cuatro medios independientes.",
         "sugeridoPorIA": "ALTA"
+      }
+    },
+    "1by9548": {
+      "estado": "automatica",
+      "titulo": "Repasan los hechos históricos ocurridos en distintas fechas de septiembre",
+      "copete": "Un repaso por los acontecimientos internacionales y nacionales que marcaron la historia en un día como hoy, desde sucesos trágicos hasta hitos de la ciencia.",
+      "cuerpo": "El calendario reúne diversos acontecimientos internacionales y nacionales ocurridos a lo largo de los años en una misma fecha. Entre los hechos recordados figuran sucesos trágicos, hitos en la exploración espacial, eventos musicales y episodios políticos en distintas partes del mundo.\n\nPara la memoria colectiva del país, la fecha recuerda un episodio violento ocurrido en una escuela bonaerense. En el plano internacional, el registro abarca desde desastres marítimos en el mar Báltico hasta incidentes en centros penitenciarios de Ecuador y accidentes en parques de atracciones.\n\nAdemás, la jornada contempla avances científicos vinculados a la industria aeroespacial privada y momentos destacados del ámbito cultural y musical a nivel global.",
+      "guion": "Repasan los hechos historicos ocurridos en distintas fechas de septiembre",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-28T09:51:56.880Z",
+      "claves": [
+        "Repaso de acontecimientos históricos globales.",
+        "Sucesos trágicos y hechos policiales.",
+        "Hitos de la ciencia y la exploración espacial.",
+        "Acontecimientos culturales y musicales."
+      ],
+      "seSabe": [
+        "La fecha reúne diversos hechos históricos a nivel internacional.",
+        "Se recuerda un episodio violento ocurrido en una escuela bonaerense.",
+        "Se mencionan desastres marítimos y sucesos en centros penitenciarios.",
+        "Se destacan hitos de la ciencia y la industria aeroespacial."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Un repaso por los acontecimientos históricos, trágicos e hitos científicos que marcaron distintas épocas en una misma fecha del calendario.",
+      "etiquetas": [
+        "efemérides",
+        "historia",
+        "internacional"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Radio Sudestada",
+          "enlace": "https://radiosudestada.com.ar/2026/09/efemerides-del-28-de-septiembre-que-paso-un-dia-como-hoy-en-la-historia/",
+          "fecha": "2026-09-28T09:31:25.000Z",
+          "oficial": false,
+          "aporte": "Detalla una serie de hechos históricos, trágicos, científicos y culturales ocurridos en distintas fechas del calendario."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "BAJA"
+      }
+    },
+    "1papkwz": {
+      "estado": "automatica",
+      "titulo": "Daniela Celis atraviesa un momento de angustia tras una función",
+      "copete": "La influencer Daniela Celis se mostró conmovida en sus redes sociales tras sufrir un error durante una de las funciones de la obra teatral dirigida por José María Muscari. La exparticipante de reality explicó que sintió culpa por equivocarse en el texto final.",
+      "cuerpo": "Daniela Celis vivió un momento de angustia durante su participación en la obra teatral Sex, viví tu experiencia, dirigida por José María Muscari. Según informó la propia influencer a través de sus historias de Instagram, se trató del primer episodio de este tipo en sus dos meses dentro de la propuesta artística, luego de equivocarse en el texto final de la función y sentir culpa por la situación.\n\nTras el episodio, Celis destacó el apoyo y la contención que recibió de sus compañeros de elenco en el camarín. La influencer respondió a las consultas de sus seguidores y defendió su sensibilidad ante las críticas en redes sociales, al señalar que se muestra transparente con su comunidad.\n\nSu incorporación a la obra se había confirmado a comienzos de septiembre para todas las funciones de los sábados de ese mes, tras haber participado previamente durante agosto. Aquella extensión de su contrato había generado también fuertes emociones en la artista, quien cumplió el deseo de integrar el espectáculo que veía como espectadora cuatro años atrás.",
+      "guion": "Daniela Celis atraviesa un momento de angustia tras una función",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-28T09:51:56.880Z",
+      "claves": [
+        "Daniela Celis se mostró conmovida tras una función de teatro.",
+        "Explicó que se confundió en el texto final y sintió culpa.",
+        "Destacó la contención de sus compañeros de elenco.",
+        "Su participación en la obra dirigida por Muscari continúa durante septiembre."
+      ],
+      "seSabe": [
+        "Daniela Celis protagonizó un momento de angustia tras una función de la obra Sex.",
+        "La influencer explicó en sus redes sociales que se equivocó en el texto final.",
+        "Celis destacó el apoyo de sus compañeros de elenco tras el episodio.",
+        "Su continuidad en el espectáculo fue confirmada para los sábados de septiembre."
+      ],
+      "noConfirmado": [
+        "No trascendieron detalles sobre la repercusión del error en el público presente en la sala."
+      ],
+      "textoRedes": "Daniela Celis se quebró en el camarín tras una función de la obra Sex y explicó que sintió culpa por equivocarse en el texto final. La influencer destacó la contención de sus compañeros de elenco.",
+      "etiquetas": [
+        "Daniela Celis",
+        "Sex",
+        "José María Muscari",
+        "espectáculos"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/videos/show/famosos/2026/09/27/el-llanto-desconsolado-de-daniela-celis-en-el-camarin-tras-una-funcion-de-sex-senti-mucha-culpa/",
+          "fecha": "2026-09-27T23:00:25.000Z",
+          "oficial": false,
+          "aporte": "Informó sobre la conmovecedora reacción de Daniela Celis tras una función de la obra Sex."
+        },
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/teleshow/2026/09/28/daniela-celis-rompio-en-llanto-despues-de-una-funcion-de-sex-y-conto-el-motivo-soy-muy-emocional/",
+          "fecha": "2026-09-28T03:31:50.000Z",
+          "oficial": false,
+          "aporte": "Detalló los dichos de la influencer en Instagram sobre su error en el texto y el apoyo del elenco."
+        },
+        {
+          "medio": "Minuto Uno",
+          "enlace": "https://www.minutouno.com/espectaculos/daniela-celis-rompio-llanto-al-terminar-una-funcion-sex-y-explico-que-le-paso-senti-mucha-culpa-n6327304",
+          "fecha": "2026-09-28T02:18:00.000Z",
+          "oficial": false,
+          "aporte": "Aportó declaraciones sobre cómo vivió el momento incómodo sobre el escenario."
+        },
+        {
+          "medio": "A24",
+          "enlace": "https://www.a24.com/primiciasya/el-desconsolado-llanto-daniela-celis-una-funcion-sex-senti-mucha-culpa-n1600808",
+          "fecha": "2026-09-28T00:48:00.000Z",
+          "oficial": false,
+          "aporte": "Explicó los motivos que llevaron a la exparticipante de reality a quebrarse en el camarín."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron cuatro medios independientes.",
+        "sugeridoPorIA": "MEDIA"
       }
     }
   },
