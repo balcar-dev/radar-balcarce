@@ -119,7 +119,11 @@ clave o una decisión.
   2. Cuando una nota necesita foto y hay dos medios o más que cubrieron el
      hecho, comparar sus fotos (encuadre, calidad, sin gente irreconocible
      de más) y guardar la mejor, recortada, con el crédito en la cita y sin
-     ninguna marca de agua ni nombre de otro medio adentro.
+     ninguna marca de agua ni nombre de otro medio adentro. **Chequeo aparte
+     para medios locales y de la zona** (28/09, Hernán: son los que más
+     acostumbran poner su logo en una esquina): antes de guardar, revisar la
+     foto entera buscando un logo o texto de marca en cualquier borde, no
+     sólo donde se piensa recortar; ante la mínima duda, no se usa.
   3. Guardar en el banco toda foto que se usa, aunque sea una sola vez, para
      poder reusarla (una foto del autódromo sirve para muchas notas de
      Automovilismo) y para que Hernán y Andrés la repasen cada tanto y saquen
@@ -145,12 +149,17 @@ clave o una decisión.
   (27/09, Hernán):
   1. Probarlo también como tarjeta de enlace de **WhatsApp**
      (`web/lib/tarjeta.js`, la misma que arma tarjeta para Facebook), no sólo
-     como pieza de Instagram.
-  2. El **ícono del sitio** (`web/app/icon.png`, `favicon.ico`, `apple-touch-icon.png`).
-  3. El **ícono de perfil de Instagram y de Facebook**, y la **portada de
-     Facebook** (`reels/portada.mjs`, hoy pendiente de subir a mano en
-     `PENDIENTES.md` → "Para Hernán y Andrés", ítem 5): que compartan la
-     misma identidad que las piezas nuevas.
+     como pieza de Instagram. **Sigue pendiente.**
+  2. ~~El **ícono del sitio**~~ **Hecho el 28/09**: `web/scripts/hacer-iconos.mjs`
+     dibuja ahora el mismo radar (dos anillos y un punto) del resto del
+     rediseño, en el rojo de marca, en vez de la "R" de antes.
+  3. ~~El **ícono de perfil de Instagram y de Facebook**, y la **portada de
+     Facebook**~~ **Hecho el 28/09**: `reels/avatar.mjs` (el ícono, sin texto,
+     para que se lea recortado en círculo) y `reels/portada.mjs` (la portada)
+     pasaron del fondo verde azulado de antes al rojo de marca, coherente con
+     `MEDIA-KIT.md` ("el perfil se mantiene siempre en el rojo de la marca").
+     Sigue pendiente subirlos a mano a Instagram y Facebook (`PENDIENTES.md`
+     → "Para Hernán y Andrés", ítem 5).
 - **Mirar los primeros días de redes.** Que salgan bien los tres podcasts, el
   enlace en los posteos de Facebook y el espejo a Instagram; que el contrato del
   día cierre completo (`REDES.md`). Si algo deja de salir, seguir "Si algo dejó

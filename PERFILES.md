@@ -1,6 +1,7 @@
 # Perfiles de Instagram y Facebook
 
-*Actualizado el 27/09/2026.* Los textos **todavía no
+*Actualizado el 28/09/2026: bios nuevas, con el nombre del medio adelante,
+para que peguen con el rediseño (dirección B).* Los textos **todavía no
 están aplicados**: hay que cambiarlos a mano en cada red (`PENDIENTES.md`,
 sección B). Nada de acá inventa datos: sólo dice lo que el medio hace hoy.
 
@@ -34,8 +35,8 @@ sección B). Nada de acá inventa datos: sólo dice lo que el medio hace hoy.
 **Bio de Instagram (máx. 150 caracteres)**
 
 ```
-Lo que pasa en Balcarce, la región y el país.
-Noticias, clima y agenda, todos los días.
+Radar Balcarce: noticias de acá, la región y el país.
+Clima y agenda, todos los días.
 Todo en radarbalcarce.com
 ```
 
@@ -58,7 +59,7 @@ contar: el límite es 150 (una prueba lo cuida).
 **Información breve de Facebook (máx. 101 caracteres)**
 
 ```
-Lo que pasa en Balcarce, la región y el país, todos los días. Todo en radarbalcarce.com
+Radar Balcarce: noticias de acá, la región y el país. Todo en radarbalcarce.com
 ```
 
 **Descripción larga de Facebook**

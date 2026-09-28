@@ -245,6 +245,20 @@ sin volver a buscarla. Cuando dos medios o más cubrieron el mismo hecho, se
 compara qué foto de cada uno sirve mejor (encuadre, calidad, que no tenga
 gente irreconocible de más) antes de elegir cuál recortar.
 
+**Cuidado extra con los medios locales y de la zona** (28/09, Hernán: "hay que
+tener mucho más cuidado con los medios locales y zonales que no se nos pase
+una marca de agua"). Un medio nacional casi nunca marca sus fotos; uno chico
+de Balcarce o de la zona (El Diario Balcarce, La Vanguardia, Infórmese
+Primero, QZ Noticias, Campeones…) sí acostumbra pegar su logo en una esquina,
+y es justo ahí donde más se recorta porque son la única fuente con foto del
+hecho. Mirarla una vez no alcanza: antes de guardar cualquier foto de un
+medio local o zonal en el banco, se revisa a ojo (o con la IA que compare)
+buscando específicamente un logo o texto de marca en las esquinas y los
+bordes, y si hay la mínima duda, no se usa esa foto. Un recorte que saca el
+logo de una esquina puede dejar otro pedazo de marca de agua en otra esquina:
+no alcanza con encuadrar distinto, hay que mirar la foto entera antes de
+recortarla.
+
 Sigue habiendo notas que nunca llevan foto real, sea de quien sea: lo que
 identificaría a un menor o a una víctima (va la placa), y Policiales fuera de
 una foto oficial de Bomberos o la Policía.

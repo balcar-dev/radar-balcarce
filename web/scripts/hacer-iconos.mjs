@@ -13,12 +13,24 @@ import { Resvg } from '@resvg/resvg-js';
 
 const SALIDA = path.join(import.meta.dirname, '..', 'public');
 
-// Una "R" gruesa sobre fondo oscuro y un punto rojo, como un blip de radar.
-// Las mismas tintas de la marca (globals.css).
+// El mismo "radar" de la foto de perfil y de todas las placas (reels/avatar.mjs,
+// reels/placa.mjs): dos anillos y un punto ámbar corrido del centro, sobre el
+// rojo de la marca. Antes era una "R" sobre fondo oscuro, sin relación con el
+// resto del rediseño (dirección B, 28/09): un ícono de pestaña que no se
+// parecía a nada del medio en Instagram o Facebook.
 const svg = (redondeo) => `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <rect width="64" height="64" rx="${redondeo}" fill="#14161A"/>
-  <path fill="#F4F1EA" fill-rule="evenodd" d="M16 14h18.5a11.5 11.5 0 0 1 3.4 22.5L47 50H35.2l-7.4-12H27v12H16zM27 23v9h7.3a4.5 4.5 0 0 0 0-9z"/>
-  <circle cx="50" cy="14.5" r="5.5" fill="#C7381C"/>
+  <defs>
+    <linearGradient id="fondo" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#C7381C"/>
+      <stop offset="100%" stop-color="#9C2B15"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="${redondeo}" fill="url(#fondo)"/>
+  <g fill="none" stroke="#F4F1EA">
+    <circle cx="32" cy="32" r="14" stroke-width="3.4" stroke-opacity="0.9"/>
+    <circle cx="32" cy="32" r="23" stroke-width="2.6" stroke-opacity="0.45"/>
+  </g>
+  <circle cx="32" cy="32.6" r="4.6" fill="#E8A33C"/>
 </svg>`;
 
 const png = (tam, redondeo = 12) => new Resvg(svg(redondeo), { fitTo: { mode: 'width', value: tam } }).render().asPng();
