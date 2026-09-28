@@ -1,5 +1,5 @@
 {
-  "exportado": "2026-09-28T11:22:22.921Z",
+  "exportado": "2026-09-28T11:32:11.350Z",
   "decisiones": {
     "1951120": {
       "estado": "automatica",
@@ -42723,6 +42723,121 @@
       "verificacion": {
         "nivel": "ALTA",
         "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      }
+    },
+    "1dyqg94": {
+      "estado": "automatica",
+      "titulo": "Jubilados de Anses cobran en octubre aumento y bono",
+      "copete": "Los jubilados y pensionados de la Anses percibirán en octubre un incremento del 1,66% por movilidad y un bono de hasta 70.000 pesos oficializado por el Gobierno.",
+      "cuerpo": "Los jubilados y pensionados que cobran a través de la Administración Nacional de la Seguridad Social recibirán en octubre un incremento del 1,66 por ciento, de acuerdo con el reajuste automático basado en la inflación de agosto, que se ubicó en el 1,7 por ciento, según se informó oficialmente.\n\nAdemás, mediante el decreto 1108 publicado en el Boletín Oficial, el Gobierno oficializó la entrega de un bono extraordinario de hasta 70.000 pesos. Este refuerzo se mantendrá congelado en ese monto por séptimo mes consecutivo desde marzo de 2024 y se acreditará directamente junto con los haberes mensuales de los beneficiarios.",
+      "guion": "Jubilados de Anses cobran en octubre aumento y bono",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-28T11:32:11.229Z",
+      "claves": [
+        "Los jubilados y pensionados de Anses tendrán un aumento del 1,66% en octubre.",
+        "El Gobierno oficializó mediante el decreto 1108 un bono previsional de hasta 70.000 pesos.",
+        "El refuerzo se abonará completo a quienes perciban la mínima y en forma proporcional para haberes superiores.",
+        "La medida alcanza a titulares de prestaciones contributivas, no contributivas y de la PUAM."
+      ],
+      "seSabe": [
+        "Los jubilados y pensionados recibirán en octubre un aumento del 1,66% por movilidad según el índice inflacionario, de acuerdo con la Anses.",
+        "El Gobierno oficializó el pago de un bono extraordinario de hasta 70.000 pesos mediante el decreto 1108/2026.",
+        "El refuerzo se pagará completo a quienes perciban el haber mínimo y de manera proporcional hasta un tope de 505.748,51 pesos.",
+        "La medida incluye a titulares de prestaciones no contributivas y de la Pensión Universal para el Adulto Mayor."
+      ],
+      "textoRedes": "Los jubilados y pensionados de la Anses percibirán en octubre un aumento del 1,66% por movilidad y un bono extraordinario de hasta 70.000 pesos, oficializado por el Gobierno a través del Boletín Oficial.",
+      "etiquetas": [
+        "Jubilados",
+        "Anses",
+        "Aumento",
+        "Bono",
+        "Octubre"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/economia/jubilaciones-de-anses-cuanto-se-cobra-en-octubre-2026-con-el-bono-y-el-aumento-confirmado-nid14092026/",
+          "fecha": "2026-09-27T17:02:43.000Z",
+          "oficial": false,
+          "aporte": "Detalló el porcentaje de aumento del 1,66% para octubre y el mecanismo de actualización por inflación."
+        },
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/economia/el-gobierno-confirmo-el-bono-previsional-de-octubre-para-jubilados-y-pensionados-nid28092026/",
+          "fecha": "2026-09-28T09:32:37.000Z",
+          "oficial": false,
+          "aporte": "Informó la oficialización del bono a través del Decreto 1108/2026."
+        },
+        {
+          "medio": "Ámbito",
+          "enlace": "https://www.ambito.com/economia/anses-confirmo-bono-70000-jubilados-octubre-quienes-lo-cobraran-y-como-acceder-al-beneficio-n6327332",
+          "fecha": "2026-09-28T10:28:00.000Z",
+          "oficial": false,
+          "aporte": "Indicó que el refuerzo alcanza a jubilados, pensionados y titulares de prestaciones no contributivas."
+        },
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/economia/2026/09/28/el-gobierno-confirmo-el-pago-del-bono-para-jubilados-y-pensionados-para-octubre/",
+          "fecha": "2026-09-28T05:10:44.000Z",
+          "oficial": false,
+          "aporte": "Confirmó el pago del Bono Extraordinario Previsional para el próximo mes."
+        },
+        {
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/economia/2026/09/28/el-gobierno-confirmo-que-pagara-en-octubre-un-bono-de-hasta-70000-para-jubilados-y-pensionados/",
+          "fecha": "2026-09-28T10:32:05.000Z",
+          "oficial": false,
+          "aporte": "Señaló que la medida fue publicada este lunes en el Boletín Oficial."
+        },
+        {
+          "medio": "Perfil",
+          "enlace": "https://www.perfil.com/noticias/sociedad/el-gobierno-anuncio-el-pago-de-un-bono-para-jubilados-y-pensionados-para-octubre-a-cuanto-asciende-y-quienes-podran-cobrarlo-completo.phtml",
+          "fecha": "2026-09-28T07:12:00.000Z",
+          "oficial": false,
+          "aporte": "Especificó que el decreto fue publicado durante la madrugada del lunes."
+        },
+        {
+          "medio": "Crónica",
+          "enlace": "https://www.cronica.com.ar/politica/el-gobierno-confirmo-el-pago-del-bono-de-70-mil-para-jubilados-y-pensionados-en-octubre/",
+          "fecha": "2026-09-28T08:31:00.000Z",
+          "oficial": false,
+          "aporte": "Aportó detalles sobre el alcance del refuerzo extraordinario a partir de octubre."
+        },
+        {
+          "medio": "Noticias Argentinas (NA)",
+          "enlace": "https://noticiasargentinas.com/economia/jubilados--el-gobierno-confirmo-un-bono-de-hasta--70-000-para-octubre_a6aba3dd6b62936833e60385a",
+          "fecha": "2026-09-28T10:15:40.000Z",
+          "oficial": false,
+          "aporte": "Explicó que el monto completo del bono se otorga a quienes perciben un haber igual o inferior al mínimo."
+        },
+        {
+          "medio": "La Nueva",
+          "enlace": "https://www.lanueva.com/nota/2026-9-28-7-21-0-jubilados-el-gobierno-confirmo-un-bono-de-hasta-70-000-para-octubre",
+          "fecha": "2026-09-28T10:26:33.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "El Norte",
+          "enlace": "https://diarioelnorte.com.ar/bono-de-hasta-70-000-para-jubilados-en-octubre/",
+          "fecha": "2026-09-28T11:00:35.000Z",
+          "oficial": false,
+          "aporte": null
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1cleyvd",
+          "titulo": "ANSES oficializó el aumento de octubre para jubilaciones",
+          "fecha": "2026-09-23T13:27:05.000Z",
+          "ruta": "/nota/anses-oficializo-el-aumento-de-octubre-para-jubilaciones-1cleyvd"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron 9 medios independientes.",
         "sugeridoPorIA": "ALTA"
       }
     }
