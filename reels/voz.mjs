@@ -158,7 +158,9 @@ export function enCarteles(palabras, { max = 4, minimo = 2 } = {}) {
   return grupos.map(cartelDe);
 }
 
-if (process.argv[1] && process.argv[1].endsWith('voz.mjs')) {
+// Por el nombre exacto: "auditar-voz.mjs" también termina en "voz.mjs" y, al
+// importar este archivo, pedía un audio de prueba antes de auditar.
+if (process.argv[1] && path.basename(process.argv[1]) === 'voz.mjs') {
   const texto = process.argv.slice(2).join(' ')
     || 'Buen día, Balcarce. Hoy hay dieciséis grados y el cielo está despejado.';
   const r = await decir(paraLeer(texto), path.join(import.meta.dirname, 'salida', 'prueba.mp3'));

@@ -68,7 +68,7 @@ import {
 } from '../lib/archivo.js';
 import { diaAR, diaSemanaAR } from '../../ingesta/zona.mjs';
 import { esperaSoloPorCantidad } from '../../ingesta/ingesta.mjs';
-import { conFotosDelBanco } from './fotos-notas.mjs';
+import { conFotosDelBanco, podarFotos } from './fotos-notas.mjs';
 import { actualizarAgenda, comoAgendaJson } from '../lib/eventos.js';
 import { traerDolar } from '../lib/dolar.js';
 import {
@@ -294,10 +294,9 @@ if (enLaNube) {
   }
 }
 
-// Reescritura automática, sin que nadie la mire: sólo tiene sentido en la
-// nube, porque en la PC el panel ya hace exactamente esto (reescribirPendientes
-// en panel/servidor.mjs, cada 10 minutos) — correrlo acá también sería
-// gastar cuota dos veces en la misma nota.
+// Reescritura automática, sin que nadie la mire: sólo en la nube. Es el único
+// lugar que la hace (el panel de la PC dejó de hacerla el 28/09: gastaba cupo
+// en textos que la web no usaba); en la PC, este script no le pide nada a Gemini.
 //
 // `previas` es lo que ya se reescribió en una corrida anterior (la portada
 // de la vez pasada y, desde el 25/09, el archivo): así no se le vuelve a
@@ -450,6 +449,9 @@ function notaPublicada(n) {
     // Una fuente oficial alcanza sola: la página la conserva aunque la cuente
     // un solo medio (tieneRespaldo, lib/cuerpo.js; 28/09).
     ...(n.oficial ? { oficial: true } : {}),
+    // Lo de la zona sale con un solo medio (esDeAca) y también conserva la
+    // página: sin esta marca, el archivo lo descartaba al dejar la portada.
+    ...(n.deLaZona ? { deLaZona: true } : {}),
     publicadaPor: d?.por ?? null,
     publicadaCuando: d?.cuando ?? null,
     // Cómo llegó a publicarse: sola por el semáforo verde, o porque
@@ -667,6 +669,21 @@ if (JSON.stringify(archivo) !== JSON.stringify(archivoAnterior.notas ?? [])) {
   fs.mkdirSync(path.dirname(ARCHIVO), { recursive: true });
   fs.writeFileSync(ARCHIVO, comoArchivoJson(archivo), 'utf8');
   console.log(`  archivo.json: ${archivo.length} notas con página (${retiradas.size} retiradas)`);
+}
+
+// Las fotos que ya no tienen nota se borran (podarFotos): las de lo retirado a
+// mano siempre, y las de lo que ya no está en el archivo, la portada ni la
+// ingesta. Sólo en la nube, que es la que sube web/public/fotos-notas/.
+if (enLaNube && fs.existsSync(FOTOS_NOTAS)) {
+  const quedan = new Set([...archivo, ...vigentes, ...deLaIngesta].map((n) => n.id));
+  const { banco, borrar } = podarFotos({
+    banco: bancoDeFotos, enDisco: fs.readdirSync(FOTOS_NOTAS), quedan, retiradas: RETIRADAS_A_MANO,
+  });
+  for (const f of borrar) fs.rmSync(path.join(FOTOS_NOTAS, f), { force: true });
+  if (JSON.stringify(banco) !== JSON.stringify(bancoDeFotos)) {
+    fs.writeFileSync(BANCO_FOTOS, `${JSON.stringify(banco, null, 1)}\n`, 'utf8');
+  }
+  if (borrar.length) console.log(`  fotos: ${borrar.length} sin nota, borradas`);
 }
 
 // ------------------------------------------------------------- la agenda

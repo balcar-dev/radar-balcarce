@@ -95,10 +95,9 @@ salir solo. No se le pide nada a Gemini de una nota que:
 
 Lo ya reescrito en corridas anteriores (`previasDeLaPortada`, de la portada y
 del archivo) se reusa sin gastar. Cuántas veces se pidió cada nota queda en
-`web/data/intentos-ia.json` (tope de tres, podado a 7 días). En la PC esto no
-se hace acá porque el panel ya lo hace cada 10 minutos
-(`reescribirPendientes`, ver `docs/09-PANEL.md`). El detalle, en
-`docs/04-REDACCION.md`.
+`web/data/intentos-ia.json` (tope de tres, podado a 7 días). En la PC no se
+reescribe nada: es el único lugar que lo hace (el panel dejó de hacerlo el
+28/09). El detalle, en `docs/04-REDACCION.md`.
 
 **5. Decide qué nota se publica: `notaPublicada(n)`.** Es el corazón. Para
 cada nota de la ingesta, en este orden:

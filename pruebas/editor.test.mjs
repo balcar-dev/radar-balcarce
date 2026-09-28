@@ -451,10 +451,8 @@ test('el panel muestra el análisis interno (plegado) y sigue mostrando la instr
   assert.match(servidor, /conTextoCorregido\(previo,/);
 });
 
-test('el panel reescribe con el MISMO flujo que la nube, sin una copia propia de la lógica', () => {
+test('el panel no tiene una copia propia de la reescritura automática (desde el 28/09 la hace sólo la nube)', () => {
   const servidor = leer('panel/servidor.mjs');
-  assert.match(servidor, /await reescribirAutomaticas\(cola, \{/);
-  assert.match(servidor, /intentos: estado\.intentosIA/);
   // La copia vieja verificaba a mano y marcaba "rechazadaPorVerificacion" para no reintentar nunca.
   assert.ok(!/rechazadaPorVerificacion: true/.test(servidor));
 });

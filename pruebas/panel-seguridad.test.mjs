@@ -157,6 +157,7 @@ test('el servidor poda al exportar decisiones.json', () => {
 test('todo cambio de decisión le pone fecha (si no, no se podría podar nunca)', () => {
   const servidor = leer('panel/servidor.mjs');
   const asignaciones = [...servidor.matchAll(/estado\.decisiones\[[^\]]+\] = \{[\s\S]*?\n\s*\};?/g)].map((m) => m[0]);
-  assert.ok(asignaciones.length >= 4, `encontré sólo ${asignaciones.length} lugares donde se guarda una decisión`);
+  // Desde el 28/09 son dos: el panel dejó de reescribir solo con IA.
+  assert.ok(asignaciones.length >= 2, `encontré sólo ${asignaciones.length} lugares donde se guarda una decisión`);
   for (const a of asignaciones) assert.match(a, /cuando: new Date\(\)\.toISOString\(\)/, a.slice(0, 80));
 });

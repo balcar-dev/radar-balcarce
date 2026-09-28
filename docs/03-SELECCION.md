@@ -390,8 +390,9 @@ cotización del dólar y lo de afuera que espera sólo por el cupo o por los
 medios que la cuentan, `esperaSoloPorCantidad`, conservan la página desde el
 28/09); si es una lista de sepelios, aunque la haya aprobado una persona; si
 la lectura con IA la sacó en esta corrida; si quedó fuera como repetida y no
-fue a las redes; si está en `retiradas.json`; si es de afuera, la contó un
-solo medio, no es oficial y no fue a las redes (`tieneRespaldo`); o si pasó de
+fue a las redes; si está en `retiradas.json`; si es de afuera y no de la zona, la
+contó un solo medio, no es oficial y no fue a las redes (`tieneRespaldo`; lo
+de la zona conserva la página desde el 28/09, `deLaZona`); o si pasó de
 180 días. Detalle en `docs/06-WEB.md`.
 
 ### 13. Retirar y corregir a mano, sin el panel

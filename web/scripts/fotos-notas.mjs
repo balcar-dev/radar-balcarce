@@ -93,6 +93,32 @@ export async function elegirFotosNuevas(notas, {
   return { banco: bancoNuevo, archivos };
 }
 
+/**
+ * Qué fotos del banco se borran (28/09, auditoría): las de notas retiradas a
+ * mano (una nota puede retirarse por un menor o una víctima, y su foto seguía en
+ * radarbalcarce.com/fotos-notas/) y las de notas que ya no están en ningún lado
+ * (`quedan`: el archivo, la portada y la ingesta de hoy). La entrada del banco
+ * se queda sin `archivo` pero con `intentado`, para no volver a gastar cupo en
+ * la misma nota. `enDisco` son los nombres de fotos-notas/; un archivo que no
+ * es de ninguna nota del banco también se borra. Devuelve el banco nuevo y los
+ * nombres a borrar; no toca el disco.
+ */
+export function podarFotos({ banco = {}, enDisco = [], quedan = new Set(), retiradas = new Set() } = {}) {
+  const bancoNuevo = { ...banco };
+  const vivas = new Set();
+  for (const [id, b] of Object.entries(banco)) {
+    if (!b?.archivo) continue;
+    const nombre = b.archivo.split('/').pop();
+    if (retiradas.has(id) || !quedan.has(id)) {
+      const { archivo, credito, ...resto } = b;
+      bancoNuevo[id] = { ...resto, intentado: true, borrada: true };
+    } else {
+      vivas.add(nombre);
+    }
+  }
+  return { banco: bancoNuevo, borrar: enDisco.filter((f) => !vivas.has(f)) };
+}
+
 /** La nota lista para la web: `{archivo, credito}`, o nada si no tiene. */
 export function fotoDeLaWeb(banco, id) {
   const b = banco?.[id];

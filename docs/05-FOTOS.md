@@ -152,6 +152,14 @@ como archivo propio del sitio: `web/public/fotos-notas/<id de la nota>.<jpg,
 png o webp>`. Cloudflare Pages la sirve como cualquier archivo del sitio. El
 workflow la sube al repositorio junto con el resto de los datos.
 
+**Las fotos que se quedan sin nota se borran** (28/09, `podarFotos`): en cada
+corrida de la nube, la de una nota retirada a mano (`retiradas.json`: puede
+haberse retirado por un menor o una víctima) y la de una nota que ya no está en
+el archivo, la portada ni la ingesta. La entrada del banco queda sin `archivo`
+y con `borrada: true`, para no volver a gastar cupo en esa nota. Ojo: el
+repositorio es público y el historial de git guarda la foto borrada; si una
+foto no tenía que estar nunca, hay que pedir que la limpien del historial.
+
 En `web/data/banco-fotos.json`, una entrada por nota:
 
 | Campo | Qué es |

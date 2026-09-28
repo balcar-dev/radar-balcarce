@@ -13,8 +13,7 @@ usa la web lo que el panel decide, de `docs/06-WEB.md`; las redes, de
 ## En una frase
 
 El panel es un programa de Node que corre **sólo en la PC de Hernán**
-(`http://localhost:4321`): busca noticias cada 10 minutos, reescribe con IA lo
-que va a salir solo, muestra la cola de notas amarillas para que Hernán o
+(`http://localhost:4321`): busca noticias cada 10 minutos, muestra la cola de notas amarillas para que Hernán o
 Andrés decidan, y **sube solo a GitHub** lo que se decide (las decisiones, los
 avisos y los eventos), para que la web, que se arma en GitHub, lo respete
 aunque después la PC se apague.
@@ -59,20 +58,11 @@ aunque después la PC se apague.
    código, pero con el peso y la pausa que tengan en el panel
    (`fuentesParaIngestar`). Una fuente que se borró en el panel no vuelve.
 2. Guarda el resultado en `panel/datos/ultima.json`.
-3. **Reescribe sola lo que va a salir sola** (`reescribirPendientes`): toma las
-   notas **verdes** de menos de 72 horas, reusa lo que la IA ya escribió con
-   cuerpo, y pide a Gemini hasta **12 por ciclo** (`REESCRITURAS_POR_CICLO`).
-   Usa exactamente el mismo flujo que la nube (`reescribirAutomaticas`,
-   `reels/reescritura.mjs`): texto completo de las fuentes, cuerpo
-   obligatorio, verificación contra la fuente, tres intentos por nota
-   (guardados en `estado.intentosIA`), semáforo sobre lo escrito. Lo que
-   escribe lo guarda como una decisión "de la máquina" (`por: 'ia'`,
-   `deIA: true`), con el mismo estado que la nota ya tenía. **Nunca pisa lo que
-   escribió una persona.** Si lo ya escrito hoy no pasa la revalidación, borra
-   ese texto para que se rehaga. Si el semáforo o una verificación baja frenan
-   una nota, la nota cambia de color y queda esperando a una persona.
-   Necesita la clave de redacción (`claveRedaccion`, `reels/claves.mjs`); sin
-   clave, no hace nada.
+3. **Ya no reescribe solo** (desde el 28/09, auditoría): hasta ese día pedía a
+   Gemini hasta 12 notas verdes por ciclo con la misma clave que la nube y un
+   contador aparte, y la web no usaba esos textos (manda sólo lo que decidió
+   una persona). La reescritura automática la hace sólo la nube
+   (`docs/04-REDACCION.md`). Queda el botón "Reescribir", a pedido.
 
 Mientras corre, la luz de arriba del tablero se pone amarilla.
 

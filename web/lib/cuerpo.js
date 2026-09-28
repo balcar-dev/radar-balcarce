@@ -36,14 +36,15 @@ const plano = (s) => sinTildes(s)
  * no la diga de nuevo; esto es la red de seguridad al publicar).
  */
 /**
- * ¿Tiene respaldo para mostrarse? Lo de Balcarce, lo propio y lo oficial, sí;
+ * ¿Tiene respaldo para mostrarse? Lo de Balcarce, lo de la zona (la 226, la 55,
+ * la papa, el sudeste: esDeAca, 28/09), lo propio y lo oficial, sí;
  * lo de afuera, sólo si lo contaron dos medios o más (Hernán, 27/09). Desde
  * esa noche el archivo aplica la misma regla: lo que no la cumple pierde la
  * página, salvo que haya salido en las redes (web/lib/archivo.js), y tampoco
  * se usa para completar la tapa ni en "Seguí leyendo".
  */
 export function tieneRespaldo(nota) {
-  return !!(nota?.local || nota?.propia || nota?.oficial || new Set(nota?.medios ?? []).size >= 2);
+  return !!(nota?.local || nota?.deLaZona || nota?.propia || nota?.oficial || new Set(nota?.medios ?? []).size >= 2);
 }
 
 export function tieneCuerpo(nota) {

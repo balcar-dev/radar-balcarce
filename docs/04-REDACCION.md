@@ -22,11 +22,12 @@ veces y mientras tanto la nota no sale.
 
 ## El recorrido, paso a paso
 
-Todo pasa en `reescribirAutomaticas()` (`reels/reescritura.mjs`). La llaman
-dos lugares: `web/scripts/generar-datos.mjs` en cada corrida de "Actualizar la
-web" (en la nube, con la PC apagada) y el panel en la PC
-(`reescribirPendientes`, `panel/servidor.mjs`, cada 10 minutos, 12 notas por
-vuelta; ver `docs/09-PANEL.md`). **El flujo es el mismo en los dos lados.**
+Todo pasa en `reescribirAutomaticas()` (`reels/reescritura.mjs`). La llama
+un solo lugar: `web/scripts/generar-datos.mjs` en cada corrida de "Actualizar
+la web" (en la nube, con la PC apagada). Hasta el 28/09 el panel de la PC
+también reescribía solo cada 10 minutos, con la misma clave y su propio
+contador, en textos que la web no usaba; se apagó (auditoría del 28/09). En
+el panel queda el botón "Reescribir", a pedido.
 
 ### 1. Qué notas se escriben
 

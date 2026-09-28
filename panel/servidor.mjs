@@ -16,10 +16,9 @@ import {
 import { NUMEROS, tocaHoy, diaDeEstaSemana } from '../ingesta/utiles.mjs';
 import {
   reescribirConRespaldo, INSTRUCCION_EDITORIAL, CRITERIO_EDITORIAL, completarReescritura, antecedentesDe, materialParaVerificar, sinExtras,
-  reescribirAutomaticas, podarIntentos, textoCompletoDe, extrasDe,
+  textoCompletoDe, extrasDe,
 } from '../reels/reescritura.mjs';
 import { tieneCuerpo, palabrasDe, PALABRAS_MINIMAS_CUERPO } from '../web/lib/cuerpo.js';
-import { claveRedaccion as claveGemini } from '../reels/claves.mjs';
 import {
   sesionDe, entrar, salir, paginaLogin, hayUsuarios,
 } from './acceso.mjs';
@@ -323,99 +322,10 @@ function fuentesParaIngestar() {
     });
 }
 
-// Cuántas se reescriben en cada ciclo. El ciclo es cada 10 minutos, así que
-// 12 por vuelta son unas 70 por hora: bastante más de lo que Balcarce publica
-// en un día entero, y sin vaciar el cupo gratis de golpe.
-const REESCRITURAS_POR_CICLO = 12;
-
-// Si la IA falla tres veces seguidas, se corta y se sigue en el próximo ciclo:
-// lo hace reescribirAutomaticas (reels/reescritura.mjs), igual que en la nube.
-
-/** Reescribe sola lo que va a salir sin que nadie lo mire.
- *
- *  Sólo toca las verdes: son las que se publican automáticamente, así que
- *  son justamente las que nadie va a corregir a mano. Lo amarillo espera
- *  aprobación y ahí ya hay un humano que puede apretar el botón.
- *
- *  Desde el 25/09 usa EXACTAMENTE el mismo flujo que la nube:
- *  reescribirAutomaticas (reels/reescritura.mjs), con el texto completo de
- *  las fuentes, el cuerpo obligatorio (70 palabras o más), las oraciones
- *  dudosas sacadas, el tope de tres intentos por nota (estado.intentosIA),
- *  el semáforo sobre todo lo escrito y el freno por verificación baja. Antes
- *  tenía su propia copia de la lógica, que se quedó atrás: publicaba sin
- *  cuerpo y nunca reintentaba una nota rechazada.
- *
- *  Nunca pisa algo que escribió una persona: si la decisión guardada no vino
- *  de la IA, se respeta. Y el estado que deja es el que la nota habría tenido
- *  igual (estadoPorDefecto), para no cambiar sin querer qué se publica. */
-async function reescribirPendientes() {
-  if (!claveGemini()) return;
-  const cola = (ultima?.notas ?? []).filter((n) => n.semaforo === 'verde').filter((n) => !esVieja(n));
-  if (!cola.length) return;
-
-  // Lo que la IA ya escribió CON cuerpo se reusa (y se revalida) sin pedir
-  // nada; lo que quedó sin cuerpo vuelve a ser candidata, hasta el tope.
-  const previas = {};
-  for (const n of cola) {
-    const d = estado.decisiones[n.id];
-    if (d && !decisionHumana(d) && d.guion && tieneCuerpo(d)) previas[n.id] = { ...d };
-  }
-  const intentosAntes = JSON.stringify(estado.intentosIA ?? {});
-  estado.intentosIA = podarIntentos(estado.intentosIA ?? {});
-  const colores = new Map(cola.map((n) => [n.id, n.semaforo]));
-  const resultado = await reescribirAutomaticas(cola, {
-    previas,
-    decisiones: estado.decisiones,
-    tope: REESCRITURAS_POR_CICLO,
-    archivo: leerJson(F_ARCHIVO_WEB, { notas: [] }).notas ?? [],
-    intentos: estado.intentosIA,
-  });
-
-  let hechas = 0;
-  let caidas = 0;
-  for (const n of cola) {
-    const r = resultado[n.id];
-    const previo = estado.decisiones[n.id] ?? {};
-    if (r && !previas[n.id]) {
-      const resto = sinExtras(previo);
-      delete resto.rechazadaPorVerificacion;
-      delete resto.problemasDeLaIA;
-      estado.decisiones[n.id] = {
-        ...resto,
-        estado: previo.estado ?? estadoPorDefecto(n),
-        titulo: r.titulo,
-        copete: r.copete,
-        guion: r.guion,
-        cuerpo: r.cuerpo,
-        ...extrasDe(r),
-        deIA: true,
-        por: 'ia',
-        cuando: new Date().toISOString(),
-      };
-      hechas += 1;
-    } else if (!r && previas[n.id] && n.semaforo === colores.get(n.id)) {
-      // Lo que ya estaba escrito y hoy no pasa la revalidación (una regla
-      // nueva, como la de "en vivo"): se borra el texto de la IA para que se
-      // vuelva a escribir, en vez de quedar publicado mal.
-      const { titulo, copete, cuerpo, guion, ...resto } = sinExtras(previo);
-      estado.decisiones[n.id] = { ...resto, deIA: null, cuando: new Date().toISOString() };
-      caidas += 1;
-    }
-  }
-  // Las que el semáforo o la verificación baja frenaron cambiaron de color
-  // en `ultima` (reels/reescritura.mjs, frenar): se guarda para que el
-  // tablero las muestre esperando a una persona hasta la próxima búsqueda.
-  const frenadas = cola.filter((n) => n.semaforo !== colores.get(n.id)).length;
-  if (frenadas) guardarJson(F_ULTIMA, ultima);
-  if (hechas || caidas || intentosAntes !== JSON.stringify(estado.intentosIA)) guardarJson(F_ESTADO, estado);
-  if (hechas || caidas || frenadas) {
-    console.log(`  reescritas ${hechas}${caidas ? ` · ${caidas} para rehacer` : ''}${frenadas ? ` · ${frenadas} esperan a una persona` : ''}`);
-  }
-  if (hechas) {
-    anotar(`reescribió ${hechas} ${hechas === 1 ? 'nota' : 'notas'} automáticas`, '', 'ia');
-    guardarJson(F_ESTADO, estado);
-  }
-}
+// La reescritura automática la hace sólo la nube (web/scripts/generar-datos.mjs).
+// Hasta el 28/09 el panel también reescribía solo cada 10 minutos, con la misma
+// clave y su propio contador: gastaba cupo en textos que la web no usa (manda
+// sólo lo que decidió una persona). Queda el botón "Reescribir", a pedido.
 
 // --------------------------------------------------- las piezas para redes
 
@@ -466,9 +376,6 @@ async function correrIngesta() {
     guardarJson(F_ULTIMA, ultima);
     const nuevas = ultima.notas.filter((n) => !estado.decisiones[n.id]).length;
     console.log(`  ciclo ok · ${ultima.notas.length} historias · ${nuevas} sin decidir`);
-    // Lo que va a salir solo se escribe solo. Va después de guardar la
-    // ingesta: si la reescritura falla, las notas ya están.
-    await reescribirPendientes();
   } catch (e) {
     console.error('  ciclo con error:', e.message);
   } finally {
