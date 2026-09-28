@@ -49,7 +49,7 @@ En orden alfabético.
 | **Guion** | Lo que dice la voz: en una nota, el título dicho tal cual (unos 10 segundos); en una pieza, el texto entero | `GUION` (`ingesta/criterio.mjs`), `redes/guiones.mjs` |
 | **Historia (una noticia)** | Un hecho con todas las notas de los distintos medios que lo contaron. Lo que se publica en Radar es una historia | `ingestar` (`ingesta/ingesta.mjs`); `docs/02-INGESTA.md` |
 | **Historia (en redes)** | Video vertical que dura 24 horas en Instagram o en la página de Facebook | `redes/publicar-piezas.mjs`; `docs/07-REDES.md` |
-| **Hoy en Balcarce** | Las tres tarjetas de la portada: clima, farmacia de turno y dólar, cada una con enlace a su página | `web/components/hoy-balcarce.js`; `docs/06-WEB.md` |
+| **Hoy en Balcarce** | El panel de tres filas de la portada: clima, farmacia de turno y dólar, cada una con enlace a su página | `web/components/hoy-balcarce.js`; `docs/06-WEB.md` |
 | **Índice de noticias (sitemap)** | La lista que cada medio arma para Google News: trae todo el día, sin resumen | `tipo: 'sitemap'`; `docs/02-INGESTA.md` |
 | **Interruptor** | La variable de GitHub `REDES_ACTIVAS`: con "Si" (cualquier mayúscula o tilde) las redes publican; con otra cosa, sólo simulan | `estaActivo` (`redes/elegir.mjs`); `docs/07-REDES.md` |
 | **Lectura con IA** | Una IA (Gemini, con Groq de respaldo) lee cada nota nueva y completa su ficha; puede sacarla, cambiarle la sección o decir que no es de acá, pero **nunca destrabarla** | `ingesta/lectura-ia.mjs`, `ingesta/perfil-balcarce.md`; `docs/03-SELECCION.md` § 8 |

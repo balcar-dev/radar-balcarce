@@ -406,14 +406,17 @@ válida. Va en un `<time>` con la fecha exacta (`Hace`,
 ### "Hoy en Balcarce": `web/components/hoy-balcarce.js`
 
 Desde el 28/09, en la columna derecha de la portada (en el celular, antes de
-la primera noticia), tres tarjetas lado a lado, cada una entera un enlace a
-su página:
+la primera noticia), un solo panel de tres filas apiladas, cada una entera un
+enlace a su página. La primera versión eran tres tarjetas lado a lado y no
+entraban (con dos farmacias de turno el nombre se apretaba); Hernán la cambió
+el mismo día. Cada fila: ícono y etiqueta a la izquierda, el dato a la derecha
+y una flecha.
 
-| Tarjeta | Dato grande | Debajo | Al pie | Lleva a |
-|---|---|---|---|---|
-| Clima | la temperatura | el cielo | "Mañana N°" (la máxima) | `/clima` |
-| De turno | la primera farmacia | "y …" las otras | "Ver más ›" | `/farmacias` |
-| Dólar blue (u oficial si no hay blue) | la venta en pesos enteros | "Oficial $…" | "Brecha N%" | `/dolar` |
+| Fila | Dato en negrita | Al lado | Lleva a |
+|---|---|---|---|
+| Clima | la temperatura | el cielo y "mañana N°" (la máxima) | `/clima` |
+| De turno | las farmacias ("Medrano y Del Patio"; cada nombre baja entero) | — | `/farmacias` |
+| Dólar blue (u oficial si no hay blue) | la venta en pesos enteros | "oficial $…" | `/dolar` |
 
 El clima y el dólar se actualizan solos en el navegador; la farmacia llega
 armada del servidor. Sin ningún dato, la sección no aparece. Debajo va el
