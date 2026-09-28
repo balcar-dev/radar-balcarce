@@ -101,10 +101,12 @@ test('los que usan los números los toman del criterio (o dicen lo mismo)', () =
   assert.equal(fuentes.CUPO_POR_DEFECTO, criterio.CUPO_POR_DEFECTO);
   // Las redes.
   for (const k of Object.keys(FACEBOOK)) assert.equal(REGLAS_FACEBOOK[k], FACEBOOK[k], `Facebook: ${k}`);
-  assert.equal(REGLAS_PIEZAS.relevanciaParaHistoria, PIEZAS.relevanciaPodcast);
-  assert.equal(REGLAS_PIEZAS.relevanciaParaFeed, PIEZAS.relevanciaFeed);
-  assert.equal(REGLAS_PIEZAS.historiasDeNotas, PIEZAS.historiasDeNotas);
-  assert.equal(REGLAS_PIEZAS.feedPorDia, PIEZAS.feedPorDia);
+  // Desde el 28/09 las piezas sólo usan el piso de los podcasts: las historias
+  // de una nota y el feed de fotos de Instagram se sacaron del código (no salían
+  // desde el 24/09). PIEZAS.historiasDeNotas, relevanciaFeed y feedPorDia
+  // quedaron en ingesta/criterio.mjs sin nadie que los use.
+  assert.deepEqual(Object.keys(REGLAS_PIEZAS), ['relevanciaParaPodcast']);
+  assert.equal(REGLAS_PIEZAS.relevanciaParaPodcast, PIEZAS.relevanciaPodcast);
   assert.deepEqual([...SECCIONES_QUE_ESPERAN_PERSONA].sort(), [...criterio.SECCIONES_QUE_ESPERAN_PERSONA].sort());
   // Los tres que viven en web/lib porque los compila la web.
   assert.equal(PALABRAS_MINIMAS_CUERPO, CUERPO.minimoParaPublicar);

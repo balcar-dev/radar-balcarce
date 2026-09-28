@@ -267,7 +267,7 @@ test('si el token murió, corta: no tiene sentido seguir', async () => {
 // ------------------------------------------------------------- el reloj
 
 import {
-  cronogramaDelDia, slotsQueTocan, notasUsadasHoy, notasContadasEnPodcasts, piezasPublicadasHoy, VENTANA_MINUTOS, HORAS_REELS, HISTORIAS_DE_NOTAS, ventanaDe,
+  cronogramaDelDia, slotsQueTocan, notasContadasEnPodcasts, piezasPublicadasHoy, VENTANA_MINUTOS, HORAS_REELS, PODCASTS, ventanaDe,
   diaRotativoDeUtiles,
 } from '../redes/piezas.mjs';
 
@@ -321,9 +321,11 @@ test('la agenda no la espera GitHub: necesita datos que sólo hay en la PC', () 
   assert.ok(!nombres(cronogramaDelDia(jueves)).includes('agenda'));
 });
 
-test('los horarios de los reels y las historias de notas son los que dice REDES.md', () => {
+test('los horarios de los podcasts son los que dice REDES.md, y no hay historias de una nota', () => {
   assert.deepEqual(HORAS_REELS, ['10:00', '15:00', '20:30']);
-  assert.equal(HISTORIAS_DE_NOTAS, 0, 'una noticia sola en una historia sonaba rara: van dentro de los podcasts');
+  assert.deepEqual(PODCASTS.map((p) => [p.nombre, p.hora]), [['noticia1', '10:00'], ['noticia2', '15:00'], ['podcast', '20:30']]);
+  // Una noticia sola en una historia sonaba rara (24/09): van dentro de los podcasts.
+  assert.ok(!cronogramaDelDia(LUNES('12:00')).some((p) => /^historia\d/.test(p.nombre)));
 });
 
 test('a cada hora toca lo que corresponde', () => {
@@ -380,11 +382,10 @@ test('lo de ayer no frena lo de hoy', () => {
   assert.deepEqual(nombres(slotsQueTocan({ ahora: LUNES('07:35'), libro })), ['clima-manana']);
 });
 
-test('las notas ya usadas hoy y las piezas ya publicadas se reconocen', () => {
+test('las piezas ya publicadas hoy se reconocen', () => {
   const libro = libroNuevo();
   anotar(libro, 'instagram', claveDePieza('noticia1', LUNES('10:00')), { notaId: 'abc' });
   anotar(libro, 'instagram', claveDePieza('clima-manana', new Date('2026-09-20T08:00:00-03:00')), { notaId: 'vieja' });
-  assert.deepEqual([...notasUsadasHoy(libro, LUNES('12:00'))], ['abc']);
   assert.deepEqual([...piezasPublicadasHoy(libro, LUNES('12:00'))], ['noticia1']);
 });
 
@@ -593,11 +594,10 @@ test('el pie de un podcast lista cada nota con su enlace y no nombra la fuente',
   assert.ok(!/fuente/i.test(pie));
 });
 
-test('las notas de un podcast cuentan como usadas, todas', async () => {
-  const { notasUsadasHoy: usadasHoy } = await import('../redes/piezas.mjs');
+test('las notas de un podcast cuentan como contadas, todas', () => {
   const libro = libroNuevo();
   anotar(libro, 'instagram', claveDePieza('noticia1', LUNES('10:00')), { notaId: 'a', notaIds: ['a', 'b', 'c'] });
-  const u = usadasHoy(libro, LUNES('15:00'));
+  const u = notasContadasEnPodcasts(libro, LUNES('15:00'));
   assert.deepEqual([...u].sort(), ['a', 'b', 'c']);
 });
 

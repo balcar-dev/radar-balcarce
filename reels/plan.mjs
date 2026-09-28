@@ -2,50 +2,60 @@
 //   node reels/plan.mjs              muestra el plan del día
 //   node reels/plan.mjs --generar    además arma los videos
 //
-// La pregunta de fondo es cuántos reels por día conviene. La respuesta corta
-// para una cuenta local chica: DOS fijos y uno más sólo si hay una noticia
-// fuerte. Más que eso y tus propios reels se compiten entre ellos, porque a
-// cada seguidor el algoritmo le muestra una cantidad limitada de posteos
-// tuyos por día. Las historias son otra superficie y no compiten: ahí sí
-// pueden ir seis a diez.
+// Qué sale cada día (el contrato, redes/contrato.mjs y REDES.md): tres reels,
+// que son los tres podcasts (mañana, tarde y noche, cada uno subido también
+// como historia), y las historias fijas de servicio (el clima de la mañana y el
+// de la noche, la farmacia), más los extras semanales (teléfonos útiles,
+// agenda) y el aviso de clima cuando hay uno grave. Desde el 24/09 no hay
+// reels ni historias de UNA nota: una noticia sola dicha en voz alta sonaba
+// rara, y las notas salen dentro de los podcasts.
 
 import fs from 'node:fs';
 import path from 'node:path';
 import { placaClima, placaFarmacia, placaNoticia, placaUtiles, placaAgenda, COLOR_SECCION } from './placa.mjs';
-import { avisosDelClima } from '../ingesta/alertas.mjs';
-import { NUMEROS } from '../ingesta/utiles.mjs';
+import { NUMEROS, decisionHumana } from '../ingesta/utiles.mjs';
 import { horariosDe, toca } from '../panel/horarios.mjs';
-import {
-  elegirHistoriasDeNotas, elegirFeed, elegirParaPodcast, repasoConPresupuesto, enlaceDeNota,
-} from '../redes/elegir.mjs';
+import { elegirParaPodcast, repasoConPresupuesto, enlaceDeNota } from '../redes/elegir.mjs';
 import { CONTRATO_DIARIO, PIEZAS } from '../ingesta/criterio.mjs';
 import { datosDeLaWeb } from '../redes/datos.mjs';
 import {
-  guionClima, guionClimaNoche, guionFarmacia, guionUtiles, guionAgenda, comoNombre,
+  guionClima, guionClimaNoche, guionFarmacia, guionUtiles, guionAgenda, guionNoticia, comoNombre,
 } from '../redes/guiones.mjs';
 import { INDICACIONES, momentoDeHora } from '../redes/prompt-redes.mjs';
 import {
-  HORAS_REELS, colorDelDia, horaHistoriaDeNota, HISTORIAS_DE_NOTAS, notasUsadasHoy, notasContadasEnPodcasts, piezasPublicadasHoy, historiasQueSobran,
+  PODCASTS, NOMBRES_DE_PODCAST, HORA_AVISO, avisoDeClima, colorDelDia, notasContadasEnPodcasts, piezasPublicadasHoy, historiasQueSobran,
 } from '../redes/piezas.mjs';
 
 // El cupo de reels es el recurso escaso del día, así que NO se gasta en lo que
 // se repite todas las mañanas. Clima, farmacia y agenda van a historias, que
 // no compiten entre sí y son justo donde la gente busca ese dato. Los reels
-// quedan libres para noticias: si un día no hay ninguna que valga, no sale
-// ningún reel y está bien.
+// son los tres podcasts: si un día no hay notas para un repaso, ese reel no
+// sale y está bien.
 export const REGLAS = {
-  reelsPorDia: 3, // techo duro, sólo noticias
-  horasEntreReels: 4, // que no salgan pegados
+  reelsPorDia: CONTRATO_DIARIO.reelsPorDia, // techo duro: los tres podcasts
   // Las historias del contrato son 6 (los tres podcasts, el clima de la mañana y
   // el de la noche, la farmacia) y el techo del día es 8: las 6 más como máximo
   // dos extras (teléfonos útiles y agenda). Se aplica de verdad en planDelDia.
   historiasPorDia: CONTRATO_DIARIO.historiasPorDia,
   historiasMaximasPorDia: CONTRATO_DIARIO.historiasMaximasPorDia,
-  feedPorDia: 0, // apagado: Instagram no acepta fotos sin alojarlas; todo sale en video
-  relevanciaParaHistoria: 62,
-  relevanciaParaFeed: 80,
-  horariosReel: HORAS_REELS,
 };
+
+/**
+ * ¿Se puede contar esta nota en una pieza? Lo mismo que decide la web
+ * (notaPublicada en web/scripts/generar-datos.mjs): si una persona decidió
+ * (decisionHumana), manda lo que decidió; si no, sólo la verde, que sale sola.
+ * La amarilla que nadie miró todavía espera, y la roja nunca.
+ *
+ * Sólo hace falta con los datos del panel (PC, panel/datos/ultima.json, que
+ * trae todo lo que leyó la ingesta). En GitHub los datos son lo ya publicado
+ * (web/data/portada.json, `yaPublicadas` en redes/datos.mjs): ya pasaron por
+ * este filtro y no traen el semáforo.
+ */
+export function esPublicable(nota, decisiones = {}) {
+  const d = decisiones?.[nota.id];
+  if (decisionHumana(d)) return d.estado === 'publicada' || d.estado === 'automatica';
+  return nota.semaforo === 'verde';
+}
 
 // El color de la placa de teléfonos útiles (el mismo que usa reels/placa.mjs). Se había
 // perdido en un refactor y, como los útiles sólo salían un día fijo que nadie
@@ -118,21 +128,19 @@ function leerDatos() {
 }
 
 // --- los guiones -----------------------------------------------------------
-// Ojo: esto todavía es una reescritura mecánica. En la Fase 2 el guion lo
-// escribe el modelo, con las reglas de la línea editorial. Lo que no cambia
-// nunca es la estructura: dato, contexto, fuente, remate.
-
-// Dos reglas que valen para los tres guiones:
+// Los arma redes/guiones.mjs con lo ya publicado (titulares, copetes propios,
+// el clima, la farmacia) y el libro de recursos de CRITERIO-REDES.md (saludos,
+// conectores, cierres): el guion no lo escribe un modelo. Gemini sólo pone la
+// voz, con la indicación de su hora. Dos reglas que valen para todos:
 // 1. La voz NO lee la placa. La placa muestra el dato; la voz cuenta qué
 //    significa. Si dicen lo mismo, la pieza dura el doble y no aporta nada.
 // 2. La fuente no se nombra nunca en redes. La atribución y el link van en la
 //    nota de la página, que es donde corresponde.
-
-// Los guiones de las piezas fijas (clima, farmacia, teléfonos, agenda) y de los
-// podcasts viven en redes/guiones.mjs, con su libro de recursos y el criterio de
-// CRITERIO-REDES.md. Se re-exportan acá porque otros los importan de plan.mjs.
+//
+// Se re-exportan acá porque otros los importan de plan.mjs (guionNoticia, el
+// panel: es el respaldo mecánico de su reescritura).
 export {
-  guionClima, guionClimaNoche, guionFarmacia, guionUtiles, guionAgenda,
+  guionClima, guionClimaNoche, guionFarmacia, guionUtiles, guionAgenda, guionNoticia,
 };
 
 // Cómo suena cada podcast según la hora se lee de CRITERIO-REDES.md (sección 6);
@@ -140,22 +148,6 @@ export {
 export const TONO_DE_LA_MANANA = INDICACIONES.manana;
 export const TONO_DE_LA_TARDE = INDICACIONES.tarde;
 export const TONO_DE_LA_NOCHE = INDICACIONES.noche;
-
-export function guionNoticia(n) {
-  // La voz dice el MISMO titular que está en la placa, y nada más.
-  //
-  // Antes contaba la noticia con el cuerpo de la nota y salían piezas de
-  // veinticinco segundos. Una historia se mira cinco y se pasa: si a los
-  // diez segundos todavía está hablando, ya nadie está mirando. Y que lo
-  // dicho coincida con lo escrito tiene otra ventaja: los subtítulos
-  // acompañan el titular en vez de tapar la placa con otro texto.
-  //
-  // Los reels van a poder ser más largos cuando haya alguien grabando en
-  // cámara; hasta entonces, van igual que las historias.
-  const titulo = String(n.titulo ?? '').replace(/\s+/g, ' ').trim().replace(/[.:]+$/, '');
-  return `${titulo}.`;
-}
-
 
 // --- el plan ---------------------------------------------------------------
 
@@ -165,10 +157,13 @@ export function planDelDia(datos, {
   const hoy = fecha.getDate();
   const turno = datos.farmacias?.turnos?.find((t) => t.dia === hoy) ?? null;
 
-  // Sólo compiten por un reel las notas que salieron o que alguien aprobó,
-  // nunca las que están esperando decisión.
+  // Sólo compiten por un podcast las notas que salieron solas (verdes) o que
+  // alguien aprobó, nunca las que están esperando decisión. Antes el filtro
+  // sólo sacaba las rojas: con los datos del panel (PC) podía contar una
+  // amarilla que nadie había mirado (28/09). Lo ya publicado (GitHub) pasó
+  // ese filtro en la web.
   const publicables = datos.notas
-    .filter((n) => n.semaforo !== 'rojo')
+    .filter((n) => datos.yaPublicadas || esPublicable(n, estado?.decisiones))
     .sort((a, b) => b.relevancia - a.relevancia);
 
   const piezas = [];
@@ -180,24 +175,22 @@ export function planDelDia(datos, {
   // los teléfonos útiles salen el día que rotan, o el que fijó el panel.
   const tocaHoy = (id) => toca(cuando[id], fecha, { estado });
 
-  // --- El aviso de clima: la única pieza que no tiene horario -------------
+  // --- El aviso de clima: la única pieza que no espera su horario ---------
   //
   // Helada fuerte, granizo o viento de más de 60 km/h. Sale cuando hay algo
   // que avisar y no cuando le toca, porque un aviso que espera a las 20:00
   // no es un aviso. Los umbrales están altos a propósito (ingesta/alertas.mjs):
   // si esto saltara todas las semanas dejaría de mirarlo nadie, y el día que
-  // importa pasaría de largo.
-  //
-  // Sólo los graves. Un "posible helada" o un "calor extremo" ya están en la
-  // tarjeta de la portada; interrumpir a alguien con una historia es para lo
-  // que le puede costar plata o un susto.
-  const avisos = avisosDelClima(datos.clima).filter((a) => a.gravedad === 'alta');
-  if (avisos.length) {
-    const a = avisos[0];
+  // importa pasaría de largo. Cuál es y a qué "hora" (HORA_AVISO: desde las
+  // 7:00, con ventana hasta las 22:00, así la primera vuelta del reloj que lo
+  // ve lo pide) lo dice avisoDeClima, en redes/piezas.mjs: el reloj usa la
+  // misma función y pide el mismo nombre que acá se arma.
+  const a = avisoDeClima(datos.clima);
+  if (a) {
     piezas.push({
       tipo: 'historia',
-      hora: 'ahora',
-      nombre: `aviso-${a.tipo}`,
+      hora: HORA_AVISO,
+      nombre: a.nombre,
       titulo: a.titulo,
       motivo: 'aviso de clima · sale apenas se detecta, sin esperar horario',
       seccion: 'Clima',
@@ -220,11 +213,15 @@ export function planDelDia(datos, {
   }
 
   // --- Historias: lo de todos los días, que es servicio y no noticia -------
-  if (datos.clima && tocaHoy('clima-manana')) {
-    const c = datos.clima.ahora;
-    const hoy = datos.clima.dias[0];
-    const manana = datos.clima.dias[1];
+  // El clima de la mañana y el de la noche se deciden cada uno por su lado: el
+  // de la noche estaba anidado dentro del de la mañana y, si se apagaba el de
+  // la mañana en el panel, desaparecía también el de la noche (28/09).
+  const c = datos.clima?.ahora;
+  const climaHoy = datos.clima?.dias?.[0];
+  const climaManana = datos.clima?.dias?.[1];
 
+  if (datos.clima && tocaHoy('clima-manana')) {
+    const hoy = climaHoy;
     piezas.push({
       tipo: 'historia', hora: cuando['clima-manana'].hora, nombre: 'clima-manana', titulo: 'El clima de hoy',
       motivo: 'servicio fijo · no gasta cupo de reel', seccion: 'Clima',
@@ -246,10 +243,14 @@ export function planDelDia(datos, {
       }),
       acento: COLOR_SECCION.Clima,
     });
+  }
 
-    // Segundo pase: de noche, cuando la gente ya está en casa y lo que
-    // importa es cómo amanece mañana.
-    if (tocaHoy('clima-noche')) piezas.push({
+  // Segundo pase: de noche, cuando la gente ya está en casa y lo que
+  // importa es cómo amanece mañana.
+  if (datos.clima && tocaHoy('clima-noche')) {
+    const hoy = climaHoy;
+    const manana = climaManana;
+    piezas.push({
       tipo: 'historia', hora: cuando['clima-noche'].hora, nombre: 'clima-noche', titulo: 'Cómo sigue el día',
       motivo: 'segundo pase del clima · mira para adelante', seccion: 'Clima',
       guion: guionClimaNoche(datos.clima),
@@ -319,21 +320,20 @@ export function planDelDia(datos, {
     });
   }
 
-  // --- Reels: dos noticias con gancho y el podcast del día ------------------
+  // --- Reels: los tres podcasts del día ------------------------------------
   //
-  // Las reglas de qué se puede armar solo (nada de Política ni Policiales)
-  // y cómo se elige el gancho están en redes/elegir.mjs, donde se prueban.
+  // Las reglas de qué se puede contar solo (nada de Política ni Policiales,
+  // sólo lo de Balcarce) y cómo se eligen las notas están en redes/elegir.mjs,
+  // donde se prueban.
   //
-  // Con el libro de lo ya publicado, el plan sabe qué reels salieron y qué notas
-  // se usaron hoy. Cuando a las 15:00 se arma sólo el reel 2, elige la mejor
-  // nota que QUEDA y no repite la que ya salió a las 10:00. Para el podcast,
-  // además, nada de lo que ya se contó en un podcast de estos últimos tres
-  // días (notasContadasEnPodcasts): sin esto, una nota local de puntaje alto
-  // se repetía en el repaso de la mañana, la tarde y la noche, varios días
+  // Con el libro de lo ya publicado, el plan sabe qué podcasts salieron y qué
+  // notas se contaron. Cuando a las 15:00 se arma sólo el de la tarde, elige
+  // las mejores notas que QUEDAN y no repite las de las 10:00: nada de lo que
+  // ya se contó en un podcast de hoy o de los dos días anteriores
+  // (notasContadasEnPodcasts). Sin esto, una nota local de puntaje alto se
+  // repetía en el repaso de la mañana, la tarde y la noche, varios días
   // seguidos (27/09, Hernán: "veo de nuevo la nota de McCain").
-  const usadas = notasUsadasHoy(libro);
   const hechas = piezasPublicadasHoy(libro);
-  const libres = publicables.filter((n) => !usadas.has(n.id));
   const libresParaPodcast = publicables.filter((n) => !notasContadasEnPodcasts(libro, fecha).has(n.id));
 
   // Tres podcasts por día en vez de noticias sueltas (24/09: una noticia sola
@@ -341,15 +341,13 @@ export function planDelDia(datos, {
   // distintos, sin repetir entre sí; el de la noche repasa lo más fuerte del
   // día. Cada uno lleva su lista de notas con el enlace en el texto del posteo,
   // y sin nombrar la fuente. Cada podcast se sube también como historia.
+  // La lista (nombre, título, momento, hora) es una sola: PODCASTS, en
+  // redes/piezas.mjs. Cada uno habla como corresponde a su hora: el saludo, el
+  // cierre y el tono salen de CRITERIO-REDES.md (redes/guiones.mjs).
   const SITIO = process.env.SITIO ?? 'https://radarbalcarce.com';
-  const RONDAS = [
-    // Cada uno habla como corresponde a su hora: el saludo, el cierre y el tono
-    // salen de CRITERIO-REDES.md, con variedad por fecha (redes/guiones.mjs).
-    { nombre: 'noticia1', titulo: 'El repaso de la mañana', momento: 'manana' },
-    { nombre: 'noticia2', titulo: 'El repaso de la tarde', momento: 'tarde' },
-  ];
+  const [podcastManana, podcastTarde, podcastNoche] = PODCASTS;
   const yaContadas = [];
-  RONDAS.forEach((ronda, i) => {
+  [podcastManana, podcastTarde].forEach((ronda) => {
     if (hechas.has(ronda.nombre)) return;
     // Con presupuesto de duración: cada podcast se sube también como historia y
     // una historia acepta 60 s. Si el guion no cabe en 55, se le sacan las
@@ -361,7 +359,7 @@ export function planDelDia(datos, {
     const { guion, notas: elegidas } = repaso;
     yaContadas.push(...elegidas);
     piezas.push({
-      tipo: 'reel', hora: REGLAS.horariosReel[i] ?? '21:00', nombre: ronda.nombre, notaId: elegidas[0].id,
+      tipo: 'reel', hora: ronda.hora, nombre: ronda.nombre, notaId: elegidas[0].id,
       notaIds: elegidas.map((n) => n.id),
       items: elegidas.map((n) => ({ titulo: n.titulo, enlace: enlaceDeNota(n, SITIO) })),
       titulo: ronda.titulo, momento: ronda.momento, indicacion: INDICACIONES[ronda.momento],
@@ -383,44 +381,22 @@ export function planDelDia(datos, {
   const delDia = elegirParaPodcast(
     publicables.filter((n) => !contadasAntes.has(n.id)),
     { cuantas: PIEZAS.notasPodcastNoche },
-    { relevanciaParaHistoria: 0 },
+    { relevanciaParaPodcast: 0 },
   );
-  const repasoNoche = repasoConPresupuesto(delDia, { momento: 'noche', fecha });
-  if (repasoNoche && !hechas.has('podcast')) {
+  const repasoNoche = repasoConPresupuesto(delDia, { momento: podcastNoche.momento, fecha });
+  if (repasoNoche && !hechas.has(podcastNoche.nombre)) {
     const notasNoche = repasoNoche.notas;
     piezas.push({
-      tipo: 'reel', hora: REGLAS.horariosReel[2] ?? '20:30', nombre: 'podcast',
+      tipo: 'reel', hora: podcastNoche.hora, nombre: podcastNoche.nombre,
       notaIds: notasNoche.map((n) => n.id),
       items: notasNoche.map((n) => ({ titulo: n.titulo, enlace: enlaceDeNota(n, SITIO) })),
-      titulo: 'El repaso del día', motivo: `el podcast diario: los titulares más fuertes, un solo audio · ~${repasoNoche.segundos.toFixed(0)} s`,
+      titulo: podcastNoche.titulo, motivo: `el podcast diario: los titulares más fuertes, un solo audio · ~${repasoNoche.segundos.toFixed(0)} s`,
       segundosEstimados: repasoNoche.segundos,
-      seccion: 'Balcarce', guion: repasoNoche.guion, momento: 'noche', indicacion: INDICACIONES.noche,
-      svg: placaNoticia({ seccion: 'Balcarce', titulo: 'El repaso del día', cuando: fechaLarga(), color: colorDelDia() }),
+      seccion: 'Balcarce', guion: repasoNoche.guion, momento: podcastNoche.momento, indicacion: INDICACIONES[podcastNoche.momento],
+      svg: placaNoticia({ seccion: 'Balcarce', titulo: podcastNoche.titulo, cuando: fechaLarga(), color: colorDelDia() }),
       acento: colorDelDia(),
     });
   }
-
-  // --- Historias: además del clima y la farmacia, tres de notas ------------
-  const slotsHistoria = Array.from({ length: HISTORIAS_DE_NOTAS }, (_, i) => (
-    { nombre: `historia${i + 1}`, hora: horaHistoriaDeNota(i) }
-  )).filter((sl) => !hechas.has(sl.nombre));
-
-  elegirHistoriasDeNotas(libres, yaContadas).slice(0, slotsHistoria.length).forEach((n, i) => {
-    piezas.push({
-      tipo: 'historia', hora: slotsHistoria[i].hora, nombre: slotsHistoria[i].nombre, notaId: n.id,
-      titulo: n.titulo, motivo: `relevancia ${n.relevancia}`, seccion: n.seccion,
-      guion: guionNoticia(n),
-      svg: placaNoticia({ seccion: n.seccion, titulo: n.titulo, cuando: n.cuando }),
-      acento: COLOR_SECCION[n.seccion] ?? '#A8371F',
-    });
-  });
-
-  (REGLAS.feedPorDia > 0 ? elegirFeed(publicables) : []).forEach((n, i) => {
-    piezas.push({
-      tipo: 'feed', hora: i === 0 ? '13:30' : '19:30', nombre: `feed${i + 1}`,
-      titulo: n.titulo, motivo: `relevancia ${n.relevancia}`, seccion: n.seccion, sinVideo: true,
-    });
-  });
 
   // El techo: si hay más reels de los permitidos, se van los de menos motivo.
   const reels = piezas.filter((p) => p.tipo === 'reel');
@@ -432,10 +408,9 @@ export function planDelDia(datos, {
   // los tres podcasts (cada uno se sube también como historia), aunque ya hayan
   // salido. Si se pasa, se dejan de armar los extras: primero los teléfonos
   // útiles, después la agenda. Las del contrato y los avisos nunca se sacan.
-  const PODCASTS = ['noticia1', 'noticia2', 'podcast'];
   const historiasDelDia = [
-    ...piezas.filter((p) => p.tipo === 'historia' || PODCASTS.includes(p.nombre)).map((p) => p.nombre),
-    ...PODCASTS.filter((n) => hechas.has(n)),
+    ...piezas.filter((p) => p.tipo === 'historia' || NOMBRES_DE_PODCAST.includes(p.nombre)).map((p) => p.nombre),
+    ...NOMBRES_DE_PODCAST.filter((n) => hechas.has(n)),
   ];
   for (const nombre of historiasQueSobran(historiasDelDia, REGLAS.historiasMaximasPorDia)) {
     const p = piezas.find((x) => x.nombre === nombre);
@@ -452,8 +427,8 @@ if (process.argv[1] && process.argv[1].endsWith('plan.mjs')) {
   const { piezas } = planDelDia(datos, { libro: leerLibro() });
 
   console.log(`\n\x1b[1mPLAN DEL DÍA · ${fechaLarga()}\x1b[0m`);
-  console.log(`  techo: ${REGLAS.reelsPorDia} reels, ${REGLAS.historiasPorDia} historias (hasta ${REGLAS.historiasMaximasPorDia} con los extras), ${REGLAS.feedPorDia} en el feed\n`);
-  const icono = { reel: '\x1b[33mREEL     \x1b[0m', historia: '\x1b[36mHISTORIA \x1b[0m', feed: '\x1b[32mFEED     \x1b[0m' };
+  console.log(`  techo: ${REGLAS.reelsPorDia} reels, ${REGLAS.historiasPorDia} historias (hasta ${REGLAS.historiasMaximasPorDia} con los extras)\n`);
+  const icono = { reel: '\x1b[33mREEL     \x1b[0m', historia: '\x1b[36mHISTORIA \x1b[0m' };
   for (const p of piezas) {
     console.log(`  ${p.hora}  ${icono[p.tipo]} ${p.titulo.slice(0, 68)}`);
     console.log(`         ${p.seccion} · ${p.motivo}${p.fueraDeTecho ? ' · \x1b[31mno sale: pasa el techo\x1b[0m' : ''}`);

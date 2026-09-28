@@ -29,7 +29,7 @@ test('del extranjero: la Fórmula 1 sin un argentino no va; con Colapinto, sí',
 
 test('lo de la zona que es tema de Balcarce sale solo, aunque lo cuente un solo medio', () => {
   const ruta = { titulo: 'Repavimentan la ruta 226 entre Tandil y Mar del Plata', cuerpo: 'Obras en la ruta.', categorias: [], alcance: 'region', local: false, deLaZona: true };
-  assert.equal(semaforo(ruta, 'Argentina', 20, 1).color, 'verde');
+  assert.equal(semaforo(ruta, 'Argentina', 1).color, 'verde');
   const portada = [{ id: 'r', seccion: 'Argentina', semaforo: 'verde', local: false, deLaZona: true, medios: ['0223'] }];
   exigirMedios(portada);
   assert.equal(portada[0].semaforo, 'verde');
@@ -37,7 +37,7 @@ test('lo de la zona que es tema de Balcarce sale solo, aunque lo cuente un solo 
 
 test('las listas de sepelios no se publican nunca: es sensible (Hernán, 27/09)', () => {
   const n = { titulo: 'Informan los servicios de sepelios de la Cooperativa de Electricidad', cuerpo: 'Se informan las inhumaciones.', categorias: [], alcance: 'local', local: true };
-  const s = semaforo(n, 'Balcarce', 80);
+  const s = semaforo(n, 'Balcarce');
   assert.equal(s.color, 'rojo');
   assert.match(s.motivo, /sepelios/);
 });

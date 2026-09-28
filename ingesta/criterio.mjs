@@ -8,9 +8,11 @@
 // Andrés es siempre lo que hace el sistema.
 //
 // Sin imports: lo usan ingesta/, panel/, redes/ y reels/, que no pueden
-// depender de nada de afuera de Node. Los tres números que viven en web/lib
-// (72 horas, 6 horas y 70 palabras) se quedan allá porque los compila la web,
-// pero la misma prueba controla que sean iguales a éstos.
+// depender de nada de afuera de Node. Los números que también viven en web/lib
+// (las 36 horas de la portada y las 12 para estrenar una nota, las 6 horas de
+// la nota grande, los 180 días del archivo y las 70 palabras del cuerpo) se
+// quedan allá porque los compila la web, pero las pruebas (criterio.test.mjs
+// y archivo.test.mjs) controlan que sean iguales a éstos.
 
 /** El título: apunta a unos 70 caracteres y el verificador rechaza más de 90. */
 export const TITULO = {

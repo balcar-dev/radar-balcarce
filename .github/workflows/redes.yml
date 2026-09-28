@@ -25,13 +25,16 @@
 # "Actualizar la web".
 #
 # INTERRUPTOR: la variable REDES_ACTIVAS ("Si") en Settings → Secrets and
-# variables → Actions → Variables. Con otro valor todo corre pero sólo simula.
+# variables → Actions → Variables. Con otro valor, Facebook sólo simula (dice qué
+# publicaría) y el reloj de Instagram ni mira la hora: no arma ninguna pieza,
+# así no se gasta la voz paga de Gemini en videos que no se van a publicar
+# (ver el `if` del paso "Ver qué pieza toca ahora", 28/09).
 #
 # SECRETOS: META_TOKEN (publicar) y GEMINI_API_KEY_REDES (la voz).
 #
 # A mano (pestaña Actions → "Redes" → Run workflow):
-#   reloj      lo mismo que las corridas programadas (es lo que usa un servicio
-#              externo si un día se necesita más puntualidad)
+#   reloj      lo mismo que hace cron-job.org cada 30 minutos (es la acción que
+#              manda ese disparador)
 #   verificar  comprueba que el token, la página y el Instagram andan
 #   facebook   sólo la elección de Facebook
 
@@ -168,8 +171,27 @@ jobs:
             echo "Nada nuevo que guardar."
           else
             git commit -m "Redes: libro de publicaciones · $(TZ=America/Argentina/Buenos_Aires date '+%d/%m %H:%M')"
-            # La otra corrida (la que actualiza la web) también empuja: se
-            # traen sus cambios antes de subir los nuestros.
-            git pull --rebase
-            git push
+            # La otra corrida (la que actualiza la web) y la vigilancia también
+            # empujan: se traen sus cambios antes de subir los nuestros, con el
+            # mismo ciclo que "Actualizar la web" (actualizar.yml). Si chocan en
+            # un archivo de web/data/, gana lo de esta corrida (en un rebase,
+            # "theirs" es el commit propio): el libro sólo lo escriben esta
+            # corrida y "Piezas", que comparten el candado "redes". Y si otro
+            # sube justo en el medio, se reintenta. Antes era un solo pull y un
+            # solo push (28/09): si el push fallaba, el libro no se guardaba y
+            # la vuelta siguiente volvía a publicar lo mismo.
+            for intento in 1 2 3; do
+              if ! git pull --rebase; then
+                # Sólo los archivos en conflicto, y sólo si son de web/data/.
+                chocan=$(git diff --name-only --diff-filter=U)
+                echo "$chocan" | grep -qvE "^web/data/" && { echo "Conflicto fuera de web/data: $chocan"; git rebase --abort; exit 1; }
+                echo "$chocan" | xargs -r git checkout --theirs --
+                echo "$chocan" | xargs -r git add --
+                GIT_EDITOR=true git rebase --continue || { git rebase --abort; exit 1; }
+              fi
+              git push && break
+              sleep 5
+            done
+            git fetch -q origin main
+            [ "$(git rev-list --count origin/main..HEAD)" = 0 ] || { echo "No se pudo guardar el libro después de tres intentos: la vuelta siguiente puede repetir lo publicado"; exit 1; }
           fi

@@ -20,10 +20,13 @@ import { slotsQueTocan, POR_CORRIDA } from './piezas.mjs';
 
 const RAIZ = path.join(import.meta.dirname, '..');
 const LIBRO = path.join(RAIZ, 'web', 'data', 'redes.json');
+const PORTADA = path.join(RAIZ, 'web', 'data', 'portada.json');
 
-/** Lo que corresponde publicar ahora, como { hora, tocan, textoResumen }. */
-export function estadoDelReloj({ ahora = new Date(), libro } = {}) {
-  const tocan = slotsQueTocan({ ahora, libro }).slice(0, POR_CORRIDA);
+/** Lo que corresponde publicar ahora, como { hora, tocan, textoResumen }.
+ *  `clima` (el de web/data/portada.json) es para el aviso de clima: si hay uno
+ *  grave, también lo pide (avisoDeClima en redes/piezas.mjs). */
+export function estadoDelReloj({ ahora = new Date(), libro, clima = null } = {}) {
+  const tocan = slotsQueTocan({ ahora, libro, clima }).slice(0, POR_CORRIDA);
   const hora = new Intl.DateTimeFormat('es-AR', {
     hour: '2-digit', minute: '2-digit', timeZone: 'America/Argentina/Buenos_Aires',
   }).format(ahora);
@@ -39,8 +42,12 @@ export function estadoDelReloj({ ahora = new Date(), libro } = {}) {
 if (process.argv[1] && process.argv[1].endsWith('reloj.mjs')) {
   let libro = libroNuevo();
   try { libro = JSON.parse(fs.readFileSync(LIBRO, 'utf8')); } catch { /* todavía no hay libro */ }
+  // El clima publicado: el mismo que usa reels/plan.mjs en GitHub (vía
+  // redes/datos.mjs), así el reloj pide el mismo aviso que el plan arma.
+  let clima = null;
+  try { clima = JSON.parse(fs.readFileSync(PORTADA, 'utf8')).clima ?? null; } catch { /* sin portada, sin aviso */ }
 
-  const { tocan, textoResumen } = estadoDelReloj({ libro });
+  const { tocan, textoResumen } = estadoDelReloj({ libro, clima });
   console.log(`  ${textoResumen}`);
 
   if (process.env.GITHUB_OUTPUT) {

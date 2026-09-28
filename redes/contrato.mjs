@@ -35,9 +35,9 @@
 // Sin dependencias: sólo lo que trae Node. Sin red y sin reloj propio.
 
 import { CONTRATO_DIARIO, FACEBOOK, SECCIONES_QUE_ESPERAN_PERSONA } from '../ingesta/criterio.mjs';
-import { temaParecido, esNotaPropia } from './elegir.mjs';
+import { temaParecido, esNotaPropia, esParaLasRedes } from './elegir.mjs';
 import { diaAR, minutoDelDiaAR, minutosDeHora } from '../ingesta/zona.mjs';
-import { cronogramaDelDia, ventanaDe, HORAS_REELS } from './piezas.mjs';
+import { cronogramaDelDia, ventanaDe, PODCASTS } from './piezas.mjs';
 import { esperaCuerpo } from '../web/lib/cuerpo.js';
 
 /** El día desde el que rige este contrato. Antes las historias eran de notas y
@@ -49,12 +49,9 @@ export const REDES_DEL_CONTRATO = [
   { red: 'instagram', nombre: 'Instagram', posteos: 'instagramFeed', videos: 'instagram' },
 ];
 
-/** Los tres podcasts: el reel y su historia. */
-export const PODCASTS = [
-  { nombre: 'noticia1', etiqueta: 'podcast mañana' },
-  { nombre: 'noticia2', etiqueta: 'podcast tarde' },
-  { nombre: 'podcast', etiqueta: 'podcast noche' },
-];
+/** Los tres podcasts: el reel y su historia. La lista es una sola, la de
+ *  redes/piezas.mjs; se re-exporta con el nombre de siempre. */
+export { PODCASTS };
 
 /** Las de fábrica, por si el cronograma no las trae. */
 const HORAS_FIJAS = { 'clima-manana': '07:30', farmacia: '19:00', 'clima-noche': '20:00', utiles: '11:00' };
@@ -73,11 +70,11 @@ export function piezasDelContrato(fecha) {
   const cronograma = cronogramaDelDia(alMediodia(fecha));
   const horaDe = (nombre) => cronograma.find((p) => p.nombre === nombre)?.hora ?? HORAS_FIJAS[nombre];
   const lista = [];
-  PODCASTS.forEach((p, i) => {
-    lista.push({ id: `reel:${p.nombre}`, grupo: 'reel', nombre: p.nombre, etiqueta: p.etiqueta, tipo: 'REELS', hora: HORAS_REELS[i], ventana: ventanaDe(p.nombre) });
+  PODCASTS.forEach((p) => {
+    lista.push({ id: `reel:${p.nombre}`, grupo: 'reel', nombre: p.nombre, etiqueta: p.etiqueta, tipo: 'REELS', hora: p.hora, ventana: ventanaDe(p.nombre) });
   });
-  PODCASTS.forEach((p, i) => {
-    lista.push({ id: `historia:${p.nombre}`, grupo: 'historia-podcast', nombre: p.nombre, etiqueta: p.etiqueta, tipo: 'STORIES', hora: HORAS_REELS[i], ventana: ventanaDe(p.nombre) });
+  PODCASTS.forEach((p) => {
+    lista.push({ id: `historia:${p.nombre}`, grupo: 'historia-podcast', nombre: p.nombre, etiqueta: p.etiqueta, tipo: 'STORIES', hora: p.hora, ventana: ventanaDe(p.nombre) });
   });
   for (const [nombre, grupo] of [['clima-manana', 'clima'], ['farmacia', 'farmacia'], ['clima-noche', 'clima']]) {
     lista.push({ id: `historia:${nombre}`, grupo, nombre, etiqueta: ETIQUETAS_FIJAS[nombre], tipo: 'STORIES', hora: horaDe(nombre), ventana: ventanaDe(nombre) });
@@ -119,9 +116,29 @@ function idsRepetidos(entradas) {
 const enlaceDe = (v) => String(v?.enlace ?? '').replace(/[?#].*$/, '').replace(/\/$/, '');
 
 /**
- * Las notas que todavía se podían publicar ese día y no salieron: relevancia
- * suficiente, de una sección que sale sola, con cuerpo, sin tema repetido con lo
- * ya publicado. Sirve para distinguir "no había candidatas" de "falló".
+ * ¿La nota estuvo en edad de salir en Facebook en algún momento del horario de
+ * ese día? elegirParaFacebook la toma desde `esperaMinutos` después de salir en
+ * la web hasta `edadMaximaHoras` después, y sólo entre `desdeHora` y
+ * `hastaHora`. Una nota que salió a la web a las 23:00 no tuvo oportunidad.
+ */
+function tuvoSuMomento(salio, fecha) {
+  const t = new Date(salio).getTime();
+  const desde = t + FACEBOOK.esperaMinutos * 60e3;
+  const hasta = t + FACEBOOK.edadMaximaHoras * 3600e3;
+  const hh = (h) => String(h).padStart(2, '0');
+  const abre = new Date(`${fecha}T${hh(FACEBOOK.desdeHora)}:00:00-03:00`).getTime();
+  const cierra = new Date(`${fecha}T${hh(FACEBOOK.hastaHora)}:00:00-03:00`).getTime();
+  return desde <= cierra && hasta >= abre;
+}
+
+/**
+ * Las notas que todavía se podían publicar ese día y no salieron: con los
+ * mismos filtros que elegirParaFacebook (redes/elegir.mjs): relevancia
+ * suficiente, de una sección que sale sola, de Balcarce (esParaLasRedes), con
+ * cuerpo, en edad de salir dentro del horario (tuvoSuMomento) y sin tema
+ * repetido con lo ya publicado. Sirve para distinguir "no había candidatas" de
+ * "falló". Antes no miraba esParaLasRedes ni la edad, y el resumen decía
+ * "FALLA" por notas que Facebook nunca iba a publicar (28/09).
  * Sólo se puede saber mirando la portada (72 horas): sin ella devuelve null.
  */
 export function candidatasSinPublicar({ portada, libro, fecha }) {
@@ -132,9 +149,10 @@ export function candidatasSinPublicar({ portada, libro, fecha }) {
   const candidatas = portada.notas
     .filter((n) => !libro?.facebook?.[n.id])
     .filter((n) => !esNotaPropia(n) && !esperaCuerpo(n))
+    .filter(esParaLasRedes)
     .filter((n) => (n.relevancia ?? 0) >= FACEBOOK.relevanciaMinima)
     .filter((n) => !SECCIONES_QUE_ESPERAN_PERSONA.includes(n.seccion))
-    .filter((n) => { const t = n.publicadaCuando ?? n.fecha; return t && diaAR(new Date(t)) === fecha; })
+    .filter((n) => { const t = n.publicadaCuando ?? n.fecha; return t && diaAR(new Date(t)) === fecha && tuvoSuMomento(t, fecha); })
     .sort((a, b) => (b.relevancia ?? 0) - (a.relevancia ?? 0));
   for (const n of candidatas) {
     if ([...yaPuestas, ...elegidas].some((p) => temaParecido(n, p))) continue;

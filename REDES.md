@@ -31,8 +31,10 @@ el link en los posteos y el podcast con notas de texto propio.*
 **Lo que sale a Instagram es siempre video con voz**: historias y reels.
 Instagram no acepta una foto si no está en una dirección pública de internet,
 y el video sí se le puede entregar directo. Como no queremos alojar archivos
-en ningún lado, todo va en video. Por eso el feed de Instagram con fotos está
-apagado (`feedPorDia: 0` en `reels/plan.mjs`).
+en ningún lado, todo va en video. La única foto del feed de Instagram es el
+espejo de cada posteo de Facebook (abajo), que usa la tarjeta que la web ya
+publica. No hay otro feed de fotos: el que había quedó apagado y el 28/09 se
+sacó del código (`elegirFeed`).
 
 **Facebook recibe dos cosas.** Por un lado, posteos con enlace: la tarjeta con la
 imagen y el titular la arma sola con la imagen de NUESTRA página
@@ -193,6 +195,15 @@ son las piezas del día y su horario:
 | 20:00 | Cómo sigue el día | Historia | Clima de la noche |
 | 20:30 | **El repaso del día** | Reel (+ historia) | Podcast grande: 4 titulares de lo más fuerte |
 | Jueves 18:00 | Qué hacer el fin de semana | Historia | Sólo si hay eventos cargados |
+| Apenas se detecta (de 7:00 a 22:00) | Aviso de clima | Historia | Sólo con helada fuerte, granizo o viento de más de 60 km/h, hoy o mañana. Una vez por día y por tipo |
+
+**El aviso de clima** (28/09) no tiene hora: el reloj mira el clima de
+`web/data/portada.json` y, si hay un aviso grave (`avisoDeClima`,
+`redes/piezas.mjs`, con los umbrales de `ingesta/alertas.mjs`), lo pide en la
+primera vuelta que lo ve, entre las 7:00 y las 22:00 (`HORA_AVISO` y
+`VENTANA_AVISO`). Antes su hora era `'ahora'`, que no es una hora: el reloj
+nunca lo pedía y sólo salía armándolo a mano. No es parte del contrato: no
+se cuenta como falta si un día no hay aviso.
 
 Son **3 podcasts por día** (mañana, tarde y noche) y **3 historias fijas**
 (clima mañana, clima noche, farmacia), más las semanales. **Ya no salen
@@ -241,11 +252,19 @@ Cómo se eligen (todo en `redes/elegir.mjs`, con pruebas):
 - **Un podcast lee el titular de cada nota y, sólo si el texto es nuestro**
   (reescrito por la IA o por una persona), **una oración del copete.** Si el
   copete es el resumen del medio de origen, no se lee. Nunca se nombra la
-  fuente. Mañana y tarde: 3 notas de temas distintos (`elegirParaPodcast`,
-  `guionRepaso`, en `redes/elegir.mjs`), sin repetir entre sí; relevancia 62
-  o más. Con menos de dos notas, ese podcast no sale.
+  fuente. Mañana y tarde: 3 notas de temas distintos (`elegirParaPodcast` y
+  `repasoConPresupuesto`, en `redes/elegir.mjs`), sin repetir entre sí ni lo
+  contado en un podcast de los dos días anteriores; relevancia 62 o más. La
+  noche: hasta 4 notas, las más fuertes del día, sin piso de relevancia (puede
+  repetir lo de la mañana y la tarde de hoy). Con menos de dos notas, ese
+  podcast no sale. Si el guion pasa de 55 segundos, se le sacan primero las
+  oraciones de contexto y después notas.
+- Sólo cuentan las notas publicables: en GitHub, lo que ya está en la portada;
+  en la PC, la verde o lo que decidió una persona (`esPublicable`,
+  `reels/plan.mjs`; hasta el 28/09 en la PC podía colarse una amarilla).
 - El mismo tema contado por dos medios cuenta una sola vez (por ejemplo, el
-  mismo partido con dos titulares).
+  mismo partido con dos titulares; `mismoTema`, que es más estricto que el
+  `temaParecido` de Facebook).
 - **Política y Policiales no se arman solas en ninguna pieza**, no sólo en
   Facebook.
 - Los horarios de las fijas (clima, farmacia, agenda, útiles) se cambian en el
@@ -257,7 +276,8 @@ Cómo se eligen (todo en `redes/elegir.mjs`, con pruebas):
 - **La voz** es de Gemini (voz Kore), con la clave de redes
   `GEMINI_API_KEY_REDES`, que es **paga**: no hay tope de pedidos. Si Gemini
   falla, la pieza sale igual con Elena, la voz de Microsoft.
-- **Las piezas se arman en GitHub** con la PC apagada (workflow **Piezas**).
+- **Las piezas se arman en GitHub** con la PC apagada: las arma solo el reloj
+  del workflow **Redes** cuando les toca, y a mano el workflow **Piezas**.
   Usan el clima, la farmacia y las notas de `web/data/portada.json`, o sea lo
   que ya se publicó: una pieza nunca habla de algo que el semáforo frenó.
 - **Facebook (historias y reels de la página)**: el mismo video, con el mismo
@@ -267,7 +287,9 @@ Cómo se eligen (todo en `redes/elegir.mjs`, con pruebas):
   avisa sin perder lo de Instagram.
 - **Instagram**: el video se sube directo en dos pasos (Instagram da una
   dirección de subida y se le manda el archivo). Las historias no llevan
-  texto; los reels llevan el titular y `Más en radarbalcarce.com`.
+  texto; los reels (los podcasts) llevan su título, la lista de las notas que
+  cuentan, cada una con su enlace, y `Más en radarbalcarce.com` (`pieDePieza`,
+  `redes/piezas.mjs`).
 - **El interruptor** es la variable de GitHub `REDES_ACTIVAS`. Vale `Si`
   (acepta cualquier mayúscula o tilde). Con otro valor, todo funciona pero
   sólo **simula**: muestra qué publicaría y no publica nada.
@@ -429,19 +451,24 @@ La lista completa (Cloudflare, WhatsApp, etc.) está en `INFRAESTRUCTURA.md`. La
 | `GEMINI_API_KEY_REDES` | Secreto | Voces de las piezas (paga) |
 | `REDES_ACTIVAS` | Variable | El interruptor: `Si` publica, otro valor sólo simula |
 
-En la PC, en el archivo `.env`: `GEMINI_API_KEY_REDACCION` para redactar las
-notas (acepta el nombre viejo `GEMINI_API_KEY`) y, si se quieren armar reels en
-la PC, `GEMINI_API_KEY_REDES`. **Van separadas a propósito**: cada clave tiene
-su propio cupo y así los reels no le sacan cuota a la redacción. La de redes no
-tiene alternativa: si falta, los reels no arrancan. Los tokens y las claves
-**nunca** se pegan en un chat ni se escriben en el código.
+Las claves de IA son cuatro (`reels/claves.mjs`; en GitHub, secretos; en la PC,
+el archivo `.env`): `GEMINI_API_KEY_REDACCION` para redactar las notas (gratis;
+acepta el nombre viejo `GEMINI_API_KEY`), `GEMINI_API_KEY_REDES` para las voces
+de las piezas (paga; en la PC sólo hace falta si se arman reels ahí),
+`GEMINI_API_KEY_CLASIFICACION` para la lectura con IA (si falta, usa la de
+redacción; nunca la de redes) y `GROQ_API_KEY`, el segundo proveedor gratis de
+la lectura con IA. Las tres primeras y la de Groq se cargaron el 25 y el 28/09.
+**Van separadas a propósito**: cada clave tiene su propio cupo y así los reels no
+le sacan cuota a la redacción. La de redes no tiene alternativa: si falta, los
+reels no arrancan. Los tokens y las claves **nunca** se pegan en un chat ni se
+escriben en el código.
 
 ### Dónde está el código
 
 | Archivo | Qué hace |
 |---|---|
 | `redes/meta.mjs` | Habla con Meta: posteo, subida de video, verificación. El token viaja en un encabezado, nunca en la dirección |
-| `redes/elegir.mjs` | Qué se publica: reglas de Facebook, reels, historias, podcast, interruptor |
+| `redes/elegir.mjs` | Qué se publica: reglas de Facebook, qué notas cuenta cada podcast, interruptor |
 | `redes/piezas.mjs` | Qué pieza le toca a cada hora y hasta cuándo vale (`VENTANAS`; 2 horas si no tiene una propia) |
 | `redes/publicar-piezas.mjs` | Publica en Instagram y guarda el libro después de cada una |
 | `redes/prompt-redes.mjs` | Lee de `CRITERIO-REDES.md` la identidad ("Radar Balcarce", `radarbalcarce.com`) y las instrucciones de la voz |
@@ -454,7 +481,7 @@ tiene alternativa: si falta, los reels no arrancan. Los tokens y las claves
 | `redes/ver-facebook.mjs` | Sólo mira qué hay publicado de verdad en la página de Facebook (`ver-facebook.yml`) |
 | `redes/avisos.mjs` y `redes/estadisticas.mjs` | Qué avisos manda el vigilante por WhatsApp y las estadísticas de las 9 y las 21 |
 | `redes/datos.mjs` | Arma los datos del día desde la web, para generar sin panel |
-| `reels/claves.mjs` | Las dos claves de Gemini |
+| `reels/claves.mjs` | Las cuatro claves de IA: las tres de Gemini (redacción, redes y lectura) y la de Groq |
 | `redes/reloj.mjs` | Dice qué pieza toca a esta hora (sin instalar nada) |
 | `redes/formatos.mjs` | Las medidas de imágenes y videos de cada red (`FORMATOS.md`) |
 | `redes/auditar.mjs` | Auditoría semanal de lo publicado (`auditoria.yml`) |

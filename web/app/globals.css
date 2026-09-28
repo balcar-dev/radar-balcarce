@@ -421,43 +421,13 @@ main { padding: 24px 0 10px; }
 .cabecera-tarjeta .accion { margin-left: auto; }
 
 /* Las acciones de las tarjetas: un solo estilo. */
-.accion, .ver-todo, .ver-semana, .pie-panel-dolar a {
+.accion, .ver-todo, .ver-semana {
   font-family: var(--f-texto); font-size: var(--t-accion); font-weight: 600; line-height: 1.4;
   color: var(--rojo); text-decoration: none;
 }
-.accion:hover, .ver-todo:hover, .ver-semana:hover, .pie-panel-dolar a:hover {
+.accion:hover, .ver-todo:hover, .ver-semana:hover {
   color: var(--rojo-oscuro); text-decoration: underline;
 }
-
-/* El panel del dólar de la portada (components/tarjeta-dolar.js).
-
-   Una grilla de tres columnas COMPARTIDA por las filas (subgrid): nombre |
-   compra | venta. Cada columna se ancha lo que pide su contenido más largo, así
-   que "compra" arranca en la misma x en las tres filas y la venta queda
-   alineada a la derecha, aunque un monto tenga más dígitos o falte una compra.
-   Las cifras son enteras y tabulares. El tamaño de las ventas es fluido según
-   el ancho de la tarjeta (container query) y el mismo para todas las filas:
-   si no entra, achica todo por igual. */
-.panel-dolar { container-type: inline-size; }
-.filas-panel-dolar {
-  --cifra: clamp(17px, 7.2cqw, var(--t-dato-grande));
-  display: grid; grid-template-columns: max-content minmax(0, 1fr) max-content;
-  column-gap: 10px; font-variant-numeric: tabular-nums;
-}
-.fila-panel-dolar {
-  display: grid; grid-column: 1 / -1; grid-template-columns: subgrid;
-  align-items: baseline; padding: 6px 0; border-bottom: 1px solid var(--linea-suave);
-}
-.fila-panel-dolar:last-child { border-bottom: none; }
-@supports not (grid-template-columns: subgrid) {
-  .filas-panel-dolar { display: block; }
-  .fila-panel-dolar { grid-template-columns: 4.6rem minmax(0, 1fr) 6.2ch; column-gap: 10px; }
-}
-.fila-panel-dolar .nombre { font-size: var(--t-dato); font-weight: 600; color: var(--tinta); }
-.fila-panel-dolar .compra { text-align: right; font-size: var(--t-meta); color: var(--suave); white-space: nowrap; }
-.fila-panel-dolar .venta { text-align: right; font-size: var(--cifra); font-weight: 700; line-height: 1.2; color: var(--tinta); white-space: nowrap; }
-.pie-panel-dolar { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 2px 12px; margin-top: 8px; font-size: var(--t-meta); color: var(--suave); }
-.pie-panel-dolar .viejo { color: #8A5A00; }
 
 .tarjeta { background: var(--papel); border: 1px solid var(--linea); border-radius: var(--radio-tarjeta); padding: var(--pad-tarjeta); }
 .tarjeta h3, .titulo-tarjeta { font-family: var(--f-titulo); font-size: var(--t-titulo-tarjeta); font-weight: 700; line-height: 1.25; letter-spacing: -0.02em; margin: 0; }
@@ -907,15 +877,4 @@ footer.principal .aclaracion { max-width: 760px; line-height: 1.6; border-top: 1
   .cruz-farmacia { width: 36px; height: 36px; }
   .acciones-farmacia { margin-top: 6px; }
   .boton-farmacia { min-height: 40px; }
-
-  /* Dólar: Oficial y Blue más juntos; la hora y el enlace, en un renglón. */
-  .panel-dolar { padding-top: 8px; padding-bottom: 8px; }
-  .panel-dolar .cabecera-tarjeta { margin-bottom: 0; }
-  .fila-panel-dolar { padding: 2px 0; }
-  .fila-panel-dolar:nth-child(n+3) { display: none; }
-  .filas-panel-dolar { --cifra: clamp(17px, 6.2cqw, 20px); }
-  .fila-panel-dolar .venta { line-height: 1.15; }
-  .pie-panel-dolar { margin-top: 2px; flex-wrap: nowrap; }
-  .pie-panel-dolar > span { min-width: 0; }
-  .pie-panel-dolar a { white-space: nowrap; }
 }

@@ -34,21 +34,15 @@ test('el menú de secciones es una sola fila que se desliza en el celular, con d
 
 // ------------------------------------------ servicios compactos (celular)
 
-test('las tarjetas de servicio se compactan sólo en el celular y el MEP queda para escritorio', () => {
+test('las tarjetas de servicio se compactan sólo en el celular', () => {
   const i = css.indexOf('@media (max-width: 619px) {\n  .dos-columnas .servicios');
   assert.ok(i > 0, 'hay un bloque de celular para los servicios');
   const bloque = css.slice(i);
-  assert.match(bloque, /\.fila-panel-dolar:nth-child\(n\+3\) \{ display: none; \}/);
   assert.match(bloque, /\.tira-dias \.lluvia-chica \{ display: inline;/);
   // Va al final de la hoja: si otra regla base va después, le gana.
   assert.ok(css.lastIndexOf('.tira-dias .min.con-lluvia { display: none; }') < i);
   // La columna de escritorio no se achica: la grilla de dos columnas sigue igual.
   assert.match(css, /@media \(min-width: 980px\) \{\s*\.dos-columnas \{ grid-template-columns: minmax\(0, 1fr\) 340px;/);
-});
-
-test('el dólar del celular mantiene la grilla alineada de tres columnas', () => {
-  assert.match(css, /\.filas-panel-dolar \{[^}]*grid-template-columns:\s*max-content minmax\(0, 1fr\) max-content/);
-  assert.match(css, /\.fila-panel-dolar \{[^}]*grid-template-columns:\s*subgrid/);
 });
 
 // -------------------------------------------- la farmacia, con identidad

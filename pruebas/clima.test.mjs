@@ -13,6 +13,7 @@ import { avisosDelClima, UMBRALES } from '../ingesta/alertas.mjs';
 // casualidad: el conversor a PNG se carga recién cuando se usa. Con el
 // import arriba de placa.mjs, esta prueba rompía en GitHub Actions.
 import { planDelDia } from '../reels/plan.mjs';
+import { HORA_AVISO } from '../redes/piezas.mjs';
 import { tipoDeCielo } from '../web/lib/clima.js';
 
 // ------------------------------------------------------------ los dibujos
@@ -162,7 +163,9 @@ test('un día tranquilo no interrumpe a nadie', () => {
 test('con granizo sale una historia, y sale ya', () => {
   const [pieza] = avisosDelPlan(96);
   assert.ok(pieza, 'no salió la pieza');
-  assert.equal(pieza.hora, 'ahora');
+  // "Ya" para el reloj es su ventana del día (7:00 a 22:00): con 'ahora', que no
+  // es una hora, el reloj nunca lo pedía (28/09).
+  assert.equal(pieza.hora, HORA_AVISO);
   assert.match(pieza.guion, /granizo/i);
   assert.ok(pieza.svg?.length > 500, 'la placa salió vacía');
 });

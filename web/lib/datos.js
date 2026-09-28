@@ -7,8 +7,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { rutaDeNota, idDeRuta } from './ruta.js';
 import { vigenteEnPortada, HORAS_EN_PORTADA } from './archivo.js';
-import { sinNotasRepetidas, titularesParecidos } from './texto.js';
-import { sinTildes } from './texto.js';
+import { sinNotasRepetidas, titularesParecidos, sinTildes } from './texto.js';
 import { tieneCuerpo, tieneRespaldo } from './cuerpo.js';
 import { interpretarDolarApi } from './dolar.js';
 import {
@@ -55,7 +54,7 @@ function leerPortada() {
   return leerConMemoria(path.join(carpetaDeDatos(), 'portada.json'), (crudo) => {
     if (!crudo) return null;
     const conPagina = (crudo.notas ?? []).map(conRuta);
-    // Las de más de 72 horas ya las saca generar-datos; esto es por si el
+    // Las de más de HORAS_EN_PORTADA ya las saca generar-datos; esto es por si el
     // archivo quedó un rato sin regenerar. Salen de las listas, pero la
     // página sigue (`conPagina`).
     return { ...crudo, notas: conPagina.filter((n) => vigenteEnPortada(n)), conPagina };
@@ -64,7 +63,7 @@ function leerPortada() {
 
 /**
  * Lo que muestra el sitio: portada, secciones, temas, buscador, feed. Sólo
- * trae las notas de las listas (las de las últimas 72 horas); las demás
+ * trae las notas de las listas (las de las últimas HORAS_EN_PORTADA); las demás
  * páginas de notas salen del archivo (`todasLasNotas`).
  */
 export function obtenerDatos() {
@@ -203,10 +202,10 @@ const VENTANA_HORAS = 6;
  * caravana para recibir al campeón balcarceño Kevin Gómez —la nota de más
  * puntaje del día, 100 sobre 100— estaba enterrada en el medio de la lista.
  *
- * Así que la grande es la de más puntaje de las últimas 24 horas. El puntaje
- * ya sabe lo que importa acá: suma 25 si es de Balcarce, 22 si un medio de
- * afuera nombra a Balcarce, 10 por cada medio que la contó, y baja con las
- * horas. Si no hay nada de las últimas 24 horas, manda el puntaje a secas.
+ * Así que la grande es la de más puntaje de las últimas VENTANA_HORAS. El
+ * puntaje ya sabe lo que importa acá: suma 25 si es de Balcarce, 22 si un medio
+ * de afuera nombra a Balcarce, 10 por cada medio que la contó, y baja con las
+ * horas. Si no hay nada en esa ventana, manda el puntaje a secas.
  */
 export function ordenarPortada(notas = []) {
   // De la más nueva a la más vieja, siempre.
@@ -232,9 +231,10 @@ export function ordenarPortada(notas = []) {
 }
 
 /** Hasta cuántas horas atrás se va al archivo a completar una sección: las
- *  mismas 72 de la portada (Hernán, 27/09: "no puede salir nada que tenga más
- *  de 72 horas publicado"). Eran 14 días: salían notas de "hace 9 días". Del
- *  archivo sólo vuelve lo de estas 72 horas que la ingesta ya no trae. */
+ *  mismas de la portada, HORAS_EN_PORTADA (Hernán, 27/09: "no puede salir nada
+ *  que ya tenga más de 72 horas publicado"; desde el 28/09 son 36). Eran 14
+ *  días: salían notas de "hace 9 días". Del archivo sólo vuelve lo de esas
+ *  horas que la ingesta ya no trae. */
 export const HORAS_PARA_COMPLETAR = HORAS_EN_PORTADA;
 /** Cuántas notas muestra cada sección de la portada. */
 export const NOTAS_POR_SECCION = 3;
@@ -248,11 +248,12 @@ export const NOTAS_POR_SECCION = 3;
  *   · todas con su hora (una nota cuya fuente no dijo la hora no va a la
  *     tapa: queda en su sección);
  *   · cada sección, con SIEMPRE tres notas (las más nuevas, sin repetir las
- *     de arriba). La tapa sólo usa lo de las últimas 72 horas; si una sección
- *     tiene menos de tres ahí, se completa con lo más nuevo del archivo
- *     (hasta 14 días atrás, sólo con cuerpo, sin repetidas), y cada una
- *     muestra su hora real ("hace 5 días"): nunca se inventa frescura. Si ni
- *     así hay tres, van las que haya, y una sección sin ninguna no se dibuja;
+ *     de arriba). La tapa sólo usa lo de las últimas HORAS_EN_PORTADA; si una
+ *     sección tiene menos de tres ahí, se completa con lo más nuevo del
+ *     archivo (de esas mismas horas, HORAS_PARA_COMPLETAR, sólo con cuerpo,
+ *     sin repetidas), y cada una muestra su hora real: nunca se inventa
+ *     frescura. Si ni así hay tres, van las que haya, y una sección sin
+ *     ninguna no se dibuja;
  *   · siempre lo nuevo primero.
  *
  * @param {object[]} notas
@@ -286,8 +287,8 @@ export function armarTapa(notasSueltas = [], orden = SECCIONES.map((s) => s.nomb
   }
 
   // Del archivo: lo que no está en la portada, con hora, con cuerpo de verdad,
-  // no propio (una nota del dólar de hace cinco días no completa nada), de los
-  // últimas 72 horas (HORAS_PARA_COMPLETAR). Ya viene sin lo que el semáforo
+  // no propio (una nota del dólar de otro día no completa nada), de las
+  // últimas HORAS_PARA_COMPLETAR. Ya viene sin lo que el semáforo
   // retiró (lib/archivo.js).
   const corte = Number(ahora) - HORAS_PARA_COMPLETAR * 3600e3;
   const idsPortada = new Set(notas.map((n) => n.id));

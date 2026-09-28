@@ -16,6 +16,7 @@
 
 import fs from 'node:fs';
 import path from 'node:path';
+import { sinTildes } from '../web/lib/texto.js';
 
 export const CRUCE = {
   umbral: 0.42,
@@ -24,8 +25,6 @@ export const CRUCE = {
   // parecidas (es "gobierno", "hoy", "argentina"): no entra al índice.
   palabraComun: 0.05,
 };
-
-const sinTildes = (s) => String(s ?? '').normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
 
 const VACIAS = new Set(('de la el en y a los las del que se por con un una para al lo como mas su sus es fue son ser hay '
   + 'este esta estos estas ese esa tras sobre entre desde hasta ante ya no si o u le les nos todo todos toda todas otro otra '
@@ -90,9 +89,6 @@ export function agruparPorHecho(notas, { umbral = CRUCE.umbral } = {}) {
   notas.forEach((_, i) => { const r = raiz(i); (grupos.get(r) ?? grupos.set(r, []).get(r)).push(i); });
   return [...grupos.values()];
 }
-
-/** Cuántos medios distintos hay en un grupo de notas. */
-export const mediosDistintos = (ns) => new Set(ns.map((n) => n.medio)).size;
 
 // ------------------------------------------------------------- la memoria
 

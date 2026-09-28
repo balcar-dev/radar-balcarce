@@ -872,7 +872,11 @@ export function fichaDeFuente(f) {
   return { tipo, ciudad };
 }
 
-// Clasificación por palabras. El orden importa: gana la primera que coincide.
+// Clasificación por palabras (clasificarSinFutbol, ingesta/ingesta.mjs). Gana
+// la palabra más larga que coincide, de cualquier regla: la más específica.
+// El orden de las reglas sólo desempata dos palabras igual de largas. Aparte:
+// Automovilismo gana siempre que tenga una palabra firme, y las palabras de
+// PALABRAS_DEBILES deciden sólo desde el titular y si no hay nada más firme.
 export const REGLAS_SECCION = [
   {
     seccion: 'Automovilismo',
@@ -1099,6 +1103,10 @@ export const REGLAS_SEMAFORO = {
   // una fuente local) y mira el título y el comienzo del resumen. Queda
   // amarilla, con su motivo. Lo que sale solo de afuera es lo neutro: un
   // decomiso, una estafa, un robo sin nombres, la seguridad vial.
+  // 28/09: el semáforo ya no la usa. Desde el 27/09 un policial que no es de
+  // Balcarce no se trae (esPolicialDeAfuera, ingesta/ingesta.mjs) y esta
+  // regla no se alcanzaba nunca. Queda porque CRITERIO-EDITORIAL.md la nombra
+  // como respaldo; si el documento la saca, se borra con MOTIVO_POLICIAL_DE_AFUERA.
   policialDeAfuera: ['mató', 'mataron', 'matar', 'crimen', 'detuvieron', 'detuvo', 'detienen',
     'arrestaron', 'prófugo', 'condenaron', 'condenado', 'condena', 'acosador', 'acoso',
     'sospechoso', 'sospechosos', 'balacera', 'tiroteo', 'secuestraron', 'rehén', 'disparó',
@@ -1242,7 +1250,9 @@ export const TEMAS = [
   {
     nombre: 'El hospital',
     ranura: 'hospital',
-    palabras: ['hospital felipe glasman', 'hospital municipal', 'hospital de balcarce'],
+    // El Hospital Municipal Subzonal "Dr. Felipe A. Fossati" (balcarce.gob.ar,
+    // 28/09). Hasta el 28/09 decía "Felipe Glasman", que no existe.
+    palabras: ['hospital fossati', 'hospital felipe fossati', 'felipe a fossati', 'hospital municipal', 'hospital de balcarce'],
   },
   {
     nombre: 'Las rutas',

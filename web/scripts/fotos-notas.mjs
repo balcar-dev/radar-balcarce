@@ -48,7 +48,8 @@ export async function elegirFotosNuevas(notas, {
   // esto, una nota recién publicada podía quedar detrás de un resto de notas
   // viejas sin probar y no le tocaba turno en la corrida donde más importa
   // (la primera media hora, cuando más se comparte). Las viejas se van
-  // procesando igual, más despacio, y salen solas de la tapa a las 72 horas.
+  // procesando igual, más despacio, y salen solas de la tapa pasadas las
+  // HORAS_EN_PORTADA (lib/archivo.js).
   const candidatas = notas
     .filter((n) => !banco[n.id] && elegiblePorSeccion(n))
     .sort((a, b) => new Date(b.fecha ?? 0) - new Date(a.fecha ?? 0));

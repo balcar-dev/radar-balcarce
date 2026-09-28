@@ -66,7 +66,8 @@ export default function PaginaNota({ params }) {
   const temas = temasVivos();
   // "Seguí leyendo": siempre cuatro notas distintas entre sí y de ésta, con su
   // hora, dos de la misma sección y dos de otras (lib/seguir-leyendo.js). Si
-  // las últimas 72 horas no alcanzan, se completa con el archivo.
+  // las notas de la portada (HORAS_EN_PORTADA) no alcanzan, se completa con el
+  // archivo.
   const recientes = obtenerDatos().notas;
   const relacionadas = seguirLeyendo(n, recientes, obtenerArchivo());
 

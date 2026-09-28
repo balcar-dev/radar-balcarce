@@ -8,8 +8,11 @@
 // los mire.
 //
 // Esto compara lo que escribió la IA contra lo que ella misma recibió —el
-// título y el resumen de la fuente, nada más— y rechaza el texto si aparece
-// algo que no estaba. No usa otra IA: son comparaciones mecánicas, que
+// título y el resumen de la fuente, el texto completo de la nota original
+// (ingesta/articulo.mjs), los resúmenes de los otros medios que contaron lo
+// mismo y los antecedentes (ver abajo)— y rechaza el texto si aparece algo
+// que no estaba. Todo lo de hoy llega junto en `resumen`
+// (fuenteParaVerificar, reels/reescritura.mjs). No usa otra IA: son comparaciones mecánicas, que
 // cuestan cero, no fallan por cuota y hacen siempre lo mismo.
 //
 // Es deliberadamente estricto. Un falso positivo cuesta poco: la nota sale

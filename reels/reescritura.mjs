@@ -265,6 +265,11 @@ async function pedir({ prompt, entrada, clave, fetchFn, intentos }) {
   return res;
 }
 
+/** Cuántos pedidos fueron a cada clave desde que arrancó el programa: la gratis
+ *  ('redaccion') o la paga ('redes'). El registro de Actualizar la web lo
+ *  muestra, para ver de un vistazo si se está gastando. */
+export const USO_DE_CLAVES = { redaccion: 0, redes: 0 };
+
 /**
  * Reescribe una nota. `nota` = { titulo, resumenFuente, seccion, medios,
  * fuentesTexto?, origenes?, textoDeLaFuente?, antecedentes? }. Devuelve
@@ -278,11 +283,6 @@ async function pedir({ prompt, entrada, clave, fetchFn, intentos }) {
  * reescribir. Cualquier otro error no reintenta con la otra clave: no tiene
  * sentido pagar por un pedido que ya está mal armado.
  */
-/** Cuántos pedidos fueron a cada clave desde que arrancó el programa: la gratis
- *  ('redaccion') o la paga ('redes'). El registro de Actualizar la web lo
- *  muestra, para ver de un vistazo si se está gastando. */
-export const USO_DE_CLAVES = { redaccion: 0, redes: 0 };
-
 export async function reescribir(nota, { intentos = 3, fetchFn = fetch, correccion = null } = {}) {
   const primera = claveRedaccion();
   const segunda = claveRedes();
@@ -379,9 +379,10 @@ export async function reescribirConRespaldo(nota, mecanico, opciones) {
 }
 
 // El respaldo mecánico por defecto: lo que se mostraba antes de que
-// existiera la reescritura. Lo usa reescribirAutomaticas(); plan.mjs y el
-// panel tienen el suyo propio (guionNoticia), más elaborado, porque ahí sí
-// pueden darse el lujo de tener reels/plan.mjs cargado.
+// existiera la reescritura. Lo usa reescribirAutomaticas(); el panel tiene el
+// suyo propio (`mecanico` en panel/servidor.mjs, con guionNoticia de
+// reels/plan.mjs), más elaborado, porque ahí sí puede darse el lujo de tener
+// reels/plan.mjs cargado.
 function mecanicoPorDefecto(nota) {
   const titulo = String(nota.titulo ?? '').replace(/\s+/g, ' ').trim().replace(/[.:]+$/, '');
   return { titulo: nota.titulo, copete: nota.resumenFuente || '', guion: `${titulo}.` };
@@ -747,7 +748,6 @@ export function previasDeLaPortada(notas) {
  *  Andrés no quieren gastar de más en una nota que no da. */
 export const MAXIMO_DE_INTENTOS = REESCRITURA.intentosMaximos;
 
-/** Cuántas notas se le pueden pedir a la IA en un día (gasto de la clave paga). */
 /**
  * El tope de notas por día que se le piden a la IA (27/09). Con la clave de
  * la lectura con IA cargada aparte, la redacción tiene la clave gratis para
@@ -989,7 +989,9 @@ export async function reescribirAutomaticas(notas, {
       continue;
     }
     if (cuenta.hechas >= tope || cuenta.fallos >= FALLOS_PARA_CORTAR) continue; // sigue por si algo más abajo está en caché
-    // El tope del día: la clave es paga. Lo que no entra hoy espera a mañana.
+    // El tope del día (topeDeReescrituras): cuida el cupo de la clave gratis
+    // de redacción, que se usa primero, para no caer en la paga de redes. Lo
+    // que no entra hoy espera a mañana.
     const pedidasAhora = yaPedidasHoy + cuenta.hechas;
     if (pedidasAhora >= porDia || (!esLocal(nota) && pedidasAhora >= porDia - REESCRITURA.reservaParaLocales)) {
       if (!topeDelDia) { topeDelDia = true; registro(`  tope del día: ya se le pidieron ${yaPedidasHoy + cuenta.hechas} notas a la IA hoy (máximo ${porDia}); el resto espera a mañana`); }

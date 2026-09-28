@@ -18,7 +18,7 @@ import { leerJson as leer } from '../ingesta/json.mjs';
 import { publicarPiezas, completarEnlaces } from './publicar-piezas.mjs';
 import { espejosPendientes } from './espejo.mjs';
 import {
-  elegirParaFacebook, mensajeDeNota, mensajeParaInstagram, enlaceDeNota, imagenDeNota, libroNuevo, anotar, yaPublicada, estaActivo,
+  elegirParaFacebook, mensajeDeNota, enlaceDeNota, imagenDeNota, libroNuevo, anotar, yaPublicada, estaActivo,
 } from './elegir.mjs';
 
 const RAIZ = path.join(import.meta.dirname, '..');
@@ -75,7 +75,7 @@ async function facebook() {
    *  (espejosPendientes) hasta un tope. */
   async function espejar(nota, enlace) {
     try {
-      const ri = await api.publicarFotoEnInstagram({ imagenUrl: imagenDeNota(nota, SITIO), pie: mensajeParaInstagram(nota, SITIO) });
+      const ri = await api.publicarFotoEnInstagram({ imagenUrl: imagenDeNota(nota, SITIO), pie: mensajeDeNota(nota, SITIO) });
       anotar(libro, 'instagramFeed', nota.id, { mediaId: ri.id, titulo: nota.titulo, enlace });
       fs.writeFileSync(LIBRO, `${JSON.stringify(libro, null, 2)}\n`);
       console.log(`             + Instagram: ${ri.id}`);

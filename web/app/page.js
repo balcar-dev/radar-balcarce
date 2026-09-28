@@ -9,6 +9,7 @@ import { HoyEnBalcarce } from '@/components/hoy-balcarce';
 import { Aviso } from '@/components/avisos';
 import { MOSTRAR_TEMAS } from '@/lib/sitio';
 import { metadatosDePagina } from '@/components/metadatos';
+import { recortarEn } from '@/lib/texto';
 
 // El título de la portada dice qué es y de dónde: es lo que se ve en Google.
 // Es la única página con canónico "/": el layout ya no lo pone para todas.
@@ -158,7 +159,7 @@ export default function Portada() {
                       <Hace nota={n} />
                     </div>
                     <h3><a href={n.ruta}>{n.titulo}</a></h3>
-                    {n.copete && <p>{recortar(n.copete, 150)}</p>}
+                    {n.copete && <p>{recortarEn(n.copete, 150)}</p>}
                   </article>
                 ))}
               </div>
@@ -183,10 +184,4 @@ export default function Portada() {
       </div>
     </div>
   );
-}
-
-function recortar(texto, largo) {
-  if (texto.length <= largo) return texto;
-  const corte = texto.slice(0, largo);
-  return `${corte.slice(0, corte.lastIndexOf(' '))}…`;
 }

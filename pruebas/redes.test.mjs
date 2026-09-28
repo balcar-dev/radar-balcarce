@@ -8,7 +8,7 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { crearCliente, ErrorMeta, sinToken } from '../redes/meta.mjs';
 import {
-  elegirParaFacebook, mensajeDeNota, mensajeParaInstagram, enlaceDeNota, imagenDeNota, libroNuevo, anotar, yaPublicada, REGLAS_FACEBOOK,
+  elegirParaFacebook, mensajeDeNota, enlaceDeNota, imagenDeNota, libroNuevo, anotar, yaPublicada, REGLAS_FACEBOOK,
   temaParecido,
 } from '../redes/elegir.mjs';
 import { horaAR, minutoDelDiaAR } from '../ingesta/zona.mjs';
@@ -295,10 +295,13 @@ test('la imagen del posteo de Instagram es la tarjeta propia y VERTICAL (4:5) de
 
 test('el mensaje de Instagram es el mismo que Facebook: con el enlace y sin la fuente', () => {
   const n = nota({ id: 'abc' });
-  const m = mensajeParaInstagram(n, 'https://radarbalcarce.com');
-  assert.equal(m, mensajeDeNota(n, 'https://radarbalcarce.com'));
+  const m = mensajeDeNota(n, 'https://radarbalcarce.com');
   assert.match(m, /radarbalcarce\.com\/nota\//);
   assert.ok(!/Fuente/.test(m));
+  // El pie de la foto espejo en Instagram es este mismo texto (mensajeParaInstagram
+  // era sólo un alias y se sacó el 28/09).
+  const publicar = fs.readFileSync(new URL('../redes/publicar.mjs', import.meta.url), 'utf8');
+  assert.match(publicar, /publicarFotoEnInstagram\(\{[^}]*pie: mensajeDeNota\(nota, SITIO\)/);
 });
 
 // ------------------------------------------------------- las claves de Gemini
@@ -307,7 +310,7 @@ import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
 import { claveRedaccion, claveRedes, leerVariable } from '../reels/claves.mjs';
-import { elegirHistoriasDeNotas, elegirFeed, guionPodcast, mismoTema, sePuedeSola, estaActivo } from '../redes/elegir.mjs';
+import { guionPodcast, mismoTema, sePuedeSola, estaActivo } from '../redes/elegir.mjs';
 
 /** Un .env de mentira en una carpeta temporal. */
 function envDe(contenido) {
@@ -355,8 +358,7 @@ test('Política y Policiales no se arman solas en ninguna pieza', () => {
     n('b', 'Detuvieron a un hombre por un robo en Balcarce', 'Policiales', 95),
     n('c', 'Kevin Gómez volvió a Balcarce como campeón', 'Balcarce', 90),
   ];
-  assert.deepEqual(elegirHistoriasDeNotas(notas).map((x) => x.id), ['c']);
-  assert.deepEqual(elegirFeed(notas).map((x) => x.id), ['c']);
+  assert.deepEqual(elegirParaPodcast(notas).map((x) => x.id), ['c']);
   assert.equal(sePuedeSola(notas[0]), false);
 });
 
@@ -366,8 +368,8 @@ test('la misma noticia contada por dos medios no sale dos veces', () => {
   const c = n('c', 'Estudiantes crearon un mapa de EcoPuntos en la escuela', 'Balcarce', 85);
   assert.equal(mismoTema(a, b), true);
   assert.equal(mismoTema(a, c), false);
-  // Y las historias no repiten lo que ya es reel.
-  assert.deepEqual(elegirHistoriasDeNotas([a, b, c], [a]).map((x) => x.id), ['c']);
+  // Y el podcast de la tarde no repite lo que ya contó el de la mañana.
+  assert.deepEqual(elegirParaPodcast([a, b, c], { excluir: [a] }).map((x) => x.id), ['c']);
 });
 
 test('"Balcarce" no alcanza para decir que dos notas son lo mismo', () => {
@@ -377,10 +379,10 @@ test('"Balcarce" no alcanza para decir que dos notas son lo mismo', () => {
   );
 });
 
-test('hay tres historias de notas como máximo, además de clima y farmacia', () => {
+test('el podcast de la mañana o de la tarde cuenta tres notas como máximo', () => {
   const temas = ['mercado', 'biblioteca', 'hospital', 'cooperadora', 'autódromo', 'bomberos', 'polideportivo', 'carnaval'];
   const notas = temas.map((t, i) => n(`x${i}`, `El ${t} abre hoy`, 'Balcarce', 90 - i));
-  assert.equal(elegirHistoriasDeNotas(notas).length, 3);
+  assert.equal(elegirParaPodcast(notas).length, 3);
 });
 
 test('el podcast repasa los titulares del día y no inventa nada', () => {

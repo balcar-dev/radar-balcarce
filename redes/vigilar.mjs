@@ -1,7 +1,10 @@
 // El vigilante: revisa que todo ande y avisa por WhatsApp cuando algo falla.
 //
-//   node redes/vigilar.mjs              revisa y, si hace falta, avisa
-//   node redes/vigilar.mjs --sin-avisar sólo muestra lo que encontró
+//   node redes/vigilar.mjs                  revisa y, si hace falta, avisa
+//   node redes/vigilar.mjs --sin-avisar     sólo muestra lo que encontró
+//   node redes/vigilar.mjs --probar-resumen manda el resumen de las 21 (ver abajo)
+//   node redes/vigilar.mjs --probar-cierre  muestra el cierre del día contra Meta
+//                                           y el WhatsApp que saldría, sin mandarlo
 //
 // Corre cada 30 minutos (workflow "Vigilancia", disparado por cron-job.org) y
 // mira, desde afuera, lo que un lector vería:
@@ -9,7 +12,10 @@
 //   · que la web responda y se haya actualizado hace poco;
 //   · que las corridas de GitHub (web, redes, Cloudflare) no estén fallando;
 //   · que el reloj de redes esté corriendo;
-//   · que las piezas fijas del día (clima, farmacia) hayan salido en su hora;
+//   · que las piezas fijas del día (clima, farmacia) hayan salido en su hora,
+//     y el contrato del día (redes/contrato.mjs), con el cierre de las 23:30
+//     contra lo que Meta tiene de verdad; con REDES_ACTIVAS apagado, sólo lo
+//     dice una vez por día;
 //   · que `www` redirija al dominio sin `www`;
 //   · lo que vence y hay que renovar a mano (el token de GitHub, el dominio),
 //     con 30 días de aviso;

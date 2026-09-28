@@ -1,8 +1,10 @@
 # Busca noticias y actualiza la web, sin depender de que haya una PC prendida.
 #
-# Corre en los servidores de GitHub cada media hora. Lo que hace es lo mismo
-# que hace el panel en casa: leer las 58 fuentes, agrupar, clasificar, poner
-# puntaje, y escribir web/data/portada.json.
+# Corre en los servidores de GitHub cada media hora (lo dispara cron-job.org; el
+# `schedule` de abajo es el respaldo). Lo que hace es lo mismo que hace el panel
+# en casa: leer las fuentes activas (las de ingesta/fuentes.mjs y las del cruce
+# de medios, ingesta/fuentes-cruce.mjs; la lista entera, en FUENTES.md), cruzar
+# los medios, clasificar, poner puntaje, y escribir web/data/portada.json.
 #
 # La diferencia está en las decisiones humanas. Acá no hay panel, así que se
 # leen de web/data/decisiones.json, que el panel exporta al repositorio cada
@@ -50,9 +52,11 @@ jobs:
 
     steps:
       # Siempre la última versión de main, no la que había cuando se DISPARÓ la
-      # corrida: si una corrida espera a la anterior (el candado "redes"), sin
-      # esto trabaja con el libro viejo y publica de nuevo lo que la anterior ya
-      # había publicado. Pasó el 25/09: el repaso de la mañana salió dos veces.
+      # corrida: si una corrida espera a la anterior (el candado "actualizar-web"),
+      # sin esto arranca de los datos viejos, sin lo que la anterior acababa de
+      # subir (y sin el libro de redes ni las decisiones que llegaron mientras
+      # tanto). La misma regla que en redes.yml y piezas.yml, donde el 25/09 el
+      # repaso de la mañana salió dos veces por esto.
       - uses: actions/checkout@v4
         with:
           ref: main

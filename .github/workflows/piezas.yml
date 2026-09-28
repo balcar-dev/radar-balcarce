@@ -113,6 +113,21 @@ jobs:
             echo "Nada nuevo que guardar."
           else
             git commit -m "Redes: libro de publicaciones · $(TZ=America/Argentina/Buenos_Aires date '+%d/%m %H:%M')"
-            git pull --rebase
-            git push
+            # El mismo ciclo que "Redes" y "Actualizar la web": traer lo de las
+            # otras corridas, resolver choques de web/data/ con lo de esta
+            # corrida y reintentar hasta tres veces. Si el libro no se guarda,
+            # el reloj vuelve a publicar lo mismo en la vuelta siguiente.
+            for intento in 1 2 3; do
+              if ! git pull --rebase; then
+                chocan=$(git diff --name-only --diff-filter=U)
+                echo "$chocan" | grep -qvE "^web/data/" && { echo "Conflicto fuera de web/data: $chocan"; git rebase --abort; exit 1; }
+                echo "$chocan" | xargs -r git checkout --theirs --
+                echo "$chocan" | xargs -r git add --
+                GIT_EDITOR=true git rebase --continue || { git rebase --abort; exit 1; }
+              fi
+              git push && break
+              sleep 5
+            done
+            git fetch -q origin main
+            [ "$(git rev-list --count origin/main..HEAD)" = 0 ] || { echo "No se pudo guardar el libro después de tres intentos: la vuelta siguiente puede repetir lo publicado"; exit 1; }
           fi

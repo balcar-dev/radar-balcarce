@@ -7,7 +7,7 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import {
-  pedidoPara, entradaDeNota, fichaValida, leerNotasNuevas, compararConElSistema, podarFichas,
+  pedidoPara, entradaDeNota, fichaValida, leerNotasNuevas, podarFichas,
   comoFichasJson, LECTURA, ESQUEMA,
 } from '../ingesta/lectura-ia.mjs';
 import { claveClasificacion } from '../reels/claves.mjs';
@@ -145,20 +145,6 @@ test('la clave de clasificación: la propia o la gratis de redacción, nunca la 
   assert.equal(claveClasificacion({ ...sinArchivo, env: { GEMINI_API_KEY_CLASIFICACION: 'c', GEMINI_API_KEY_REDACCION: 'r' } }), 'c');
   assert.equal(claveClasificacion({ ...sinArchivo, env: { GEMINI_API_KEY_REDACCION: 'r', GEMINI_API_KEY_REDES: 'paga' } }), 'r');
   assert.equal(claveClasificacion({ ...sinArchivo, env: { GEMINI_API_KEY_REDES: 'paga' } }), null);
-});
-
-test('la prueba silenciosa compara y cuenta, pero no toca las notas', () => {
-  const fichas = {
-    t3o3tt: { ...fichaValida(fichaDe('t3o3tt', { ambito: 'region', seccion: 'Cultura y agenda', impacto_balcarce: 'nulo', razon: 'ninguna' })) },
-    abc: fichaValida(fichaDe('abc')),
-  };
-  const antes = JSON.stringify([DE_ACA, { ...NECOCHEA, local: true }]);
-  const notas = JSON.parse(antes);
-  const c = compararConElSistema(notas, fichas);
-  assert.equal(c.comparadas, 2);
-  assert.deepEqual(c.noEsDeBalcarce.map((x) => x.id), ['t3o3tt'], 'la IA dice que lo de Necochea no es de acá');
-  assert.deepEqual(c.noInteresa.map((x) => x.id), ['t3o3tt']);
-  assert.equal(JSON.stringify(notas), antes, 'no cambió ninguna nota');
 });
 
 test('las fichas viejas se podan y el archivo se escribe una línea por ficha', () => {

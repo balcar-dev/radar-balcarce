@@ -262,23 +262,21 @@ export function mensajeDeNota(nota, sitio) {
   return partes.join('\n\n');
 }
 
-/** Lo mismo para Instagram. Ahí el enlace no es clickeable, pero se pide que
- *  esté igual: quien lo quiera lo copia, y queda a la vista adónde ir. */
-export function mensajeParaInstagram(nota, sitio) {
-  return mensajeDeNota(nota, sitio);
-}
+// El pie de la foto espejo en Instagram es este mismo texto (redes/publicar.mjs
+// usa mensajeDeNota para las dos redes). Ahí el enlace no es clickeable, pero se
+// pide que esté igual: quien lo quiera lo copia, y queda a la vista adónde ir.
 
-// ------------------------------------------------- reels, historias y feed
+// ------------------------------------------------------------- los podcasts
 //
-// Lo que sale de la PC (reels/plan.mjs) se elige con las mismas reglas de
-// fondo que Facebook: nada sensible solo. Está acá, y no en plan.mjs, porque
-// plan.mjs necesita resvg y ffmpeg instalados y esto se prueba sin nada.
+// Las notas de los podcasts (reels/plan.mjs, en GitHub o en la PC) se eligen
+// con las mismas reglas de fondo que Facebook: nada sensible solo, sólo lo de
+// Balcarce. Está acá, y no en plan.mjs, porque plan.mjs necesita resvg y ffmpeg
+// instalados y esto se prueba sin nada. Desde el 24/09 no hay historias ni
+// reels de UNA nota, ni fotos en el feed de Instagram fuera del espejo de
+// Facebook: las notas salen dentro de los podcasts.
 
 export const REGLAS_PIEZAS = {
-  historiasDeNotas: PIEZAS.historiasDeNotas,     // además del clima y la farmacia, que son fijas
-  relevanciaParaHistoria: PIEZAS.relevanciaPodcast,
-  relevanciaParaFeed: PIEZAS.relevanciaFeed,
-  feedPorDia: PIEZAS.feedPorDia,
+  relevanciaParaPodcast: PIEZAS.relevanciaPodcast,
 };
 
 /**
@@ -309,9 +307,17 @@ const palabrasClave = (titulo = '') => new Set(
     .filter((w) => w.length >= 7 && !COMUNES.has(w)),
 );
 
-/** ¿Dos titulares cuentan lo mismo? Los medios locales repiten mucho: el mismo
- *  partido sale con tres titulares distintos y no tiene sentido contarlo tres
- *  veces en el mismo día. Alcanza con que compartan una palabra larga y rara. */
+/** ¿Dos titulares cuentan lo mismo, para un podcast? Los medios locales repiten
+ *  mucho: el mismo partido sale con tres titulares distintos y no tiene sentido
+ *  contarlo tres veces en el mismo día. Alcanza con que compartan una palabra
+ *  larga y rara (siete letras o más).
+ *
+ *  No es el mismo criterio que temaParecido (Facebook, avisos, contrato), y a
+ *  propósito no se unificaron (28/09): mismoTema junta con UNA palabra de siete
+ *  letras ("Apertura", "Ferroviarios"), temaParecido pide dos de cinco o una de
+ *  ocho. Pasar los podcasts a temaParecido cambiaría qué notas cuentan (el
+ *  "Ferroviarios… Apertura" / "Ferro… Apertura" de las pruebas dejaría de
+ *  juntarse). */
 export function mismoTema(a, b) {
   const A = palabrasClave(a?.titulo);
   return [...palabrasClave(b?.titulo)].some((w) => A.has(w));
@@ -325,24 +331,6 @@ function sinRepetidos(notas, yaVistas = []) {
     elegidas.push(n);
   }
   return elegidas;
-}
-
-/** Las notas que van como historia, sin repetir las que ya son reel. */
-export function elegirHistoriasDeNotas(notas, yaElegidas = [], reglas = REGLAS_PIEZAS) {
-  const candidatas = [...notas]
-    .filter(sePuedeSola)
-    .filter((n) => (n.relevancia ?? 0) >= reglas.relevanciaParaHistoria)
-    .sort(porRelevancia);
-  return sinRepetidos(candidatas, yaElegidas).slice(0, reglas.historiasDeNotas);
-}
-
-/** Los posteos del feed de Instagram. */
-export function elegirFeed(notas, reglas = REGLAS_PIEZAS) {
-  return [...notas]
-    .filter(sePuedeSola)
-    .filter((n) => (n.relevancia ?? 0) >= reglas.relevanciaParaFeed)
-    .sort(porRelevancia)
-    .slice(0, reglas.feedPorDia);
 }
 
 /** ¿El texto de esta nota es nuestro (reescrito por la IA o por una persona)?
@@ -368,7 +356,7 @@ export function elegirParaPodcast(notas, { cuantas = PIEZAS.notasPorPodcast, exc
   const candidatas = sinRepetidos(
     [...notas]
       .filter(sePuedeSola)
-      .filter((n) => (n.relevancia ?? 0) >= reglas.relevanciaParaHistoria)
+      .filter((n) => (n.relevancia ?? 0) >= reglas.relevanciaParaPodcast)
       .sort(porRelevancia),
     excluir,
   );
@@ -456,7 +444,7 @@ export function repasoConPresupuesto(elegidas, {
  * la voz de siempre.
  */
 export function guionPodcast(notas, { cuantas = PIEZAS.notasPodcastNoche, fecha = new Date() } = {}) {
-  const elegidas = elegirParaPodcast(notas, { cuantas }, { ...REGLAS_PIEZAS, relevanciaParaHistoria: 0 });
+  const elegidas = elegirParaPodcast(notas, { cuantas }, { ...REGLAS_PIEZAS, relevanciaParaPodcast: 0 });
   return repasoConPresupuesto(elegidas, { momento: 'noche', fecha })?.guion ?? null;
 }
 

@@ -15,7 +15,6 @@ import { claveRedes } from './claves.mjs';
 import { VOZ_NOMBRE, INDICACION_BASE } from '../redes/prompt-redes.mjs';
 
 const correr = promisify(execFile);
-const RAIZ = path.join(import.meta.dirname, '..');
 const MODELO = 'gemini-2.5-flash-preview-tts';
 
 export function clave() {
@@ -29,41 +28,15 @@ export const INDICACION = INDICACION_BASE;
 
 const dormir = (ms) => new Promise((r) => { setTimeout(r, ms); });
 
-// --- cuota ------------------------------------------------------------------
-// Google no expone cuánto te queda, así que lo llevamos nosotros. El cupo del
-// plan gratuito para este modelo es de 10 pedidos y se renueva a la medianoche
-// de California, o sea entre las 4 y las 5 de la mañana de acá.
-export const CUPO_DIARIO = 10;
-const REGISTRO = path.join(RAIZ, 'panel', 'datos', 'cuota-gemini.json');
-
-function diaDeCuota(d = new Date()) {
-  // Pasamos a hora del Pacífico para saber a qué "día de Google" pertenece.
-  return new Date(d.getTime() - 7 * 3600 * 1000).toISOString().slice(0, 10);
-}
-
-function leerRegistro() {
-  try { return JSON.parse(fs.readFileSync(REGISTRO, 'utf8')); } catch { return {}; }
-}
-
-function anotarPedido(ok) {
-  const r = leerRegistro();
-  const dia = diaDeCuota();
-  r[dia] ??= { pedidos: 0, fallados: 0 };
-  r[dia].pedidos += 1;
-  if (!ok) r[dia].fallados += 1;
-  // Sólo guardamos los últimos días, no hace falta más.
-  const dias = Object.keys(r).sort().slice(-7);
-  const podado = {};
-  dias.forEach((d) => { podado[d] = r[d]; });
-  fs.mkdirSync(path.dirname(REGISTRO), { recursive: true });
-  fs.writeFileSync(REGISTRO, JSON.stringify(podado, null, 2), 'utf8');
-}
-
-// El plan gratuito limita pedidos por minuto, así que las llamadas se espacian
-// solas y, si igual salta el límite, se espera y se reintenta. Nunca conviene
-// disparar una atrás de la otra.
+// La clave de redes es PAGA (desde el 25/09): no hay cupo diario gratis que
+// contar. Hasta el 28/09 se llevaba la cuenta de un cupo de 10 pedidos del
+// plan gratuito en panel/datos/cuota-gemini.json, que nadie leía: se sacó.
+//
+// Igual Google puede limitar pedidos por minuto, así que las llamadas se
+// espacian un poco y, si salta el límite (429), se espera lo que pide Google y
+// se reintenta. Nunca conviene disparar una atrás de la otra.
 let ultimoPedido = 0;
-const ESPACIADO = 2000; // la clave de redes es paga: no hay cupo gratis que cuidar
+const ESPACIADO = 2000; // dos segundos entre pedidos alcanzan con la clave paga
 // Una voz de diez segundos tarda unos pocos en generarse; un podcast, más.
 // Dos minutos es de sobra, y corta un pedido que se quedó colgado.
 export const ESPERA_MAXIMA_VOZ = 120_000;
@@ -112,22 +85,19 @@ export async function decirGemini(texto, destino, {
     }
 
     if (res.status === 429) {
-      anotarPedido(false);
       const cuerpo = await res.text();
       const seg = +(cuerpo.match(/"retryDelay":\s*"(\d+)s"/)?.[1] ?? 30);
-      ultimoError = new Error(`límite del plan gratuito: ${cuerpo.slice(0, 300)}`);
+      ultimoError = new Error(`Gemini pidió esperar (429, límite de pedidos): ${cuerpo.slice(0, 300)}`);
       if (intento < intentos) { await dormir((seg + 2) * 1000); continue; }
       throw ultimoError;
     }
     if (!res.ok) {
-      anotarPedido(false);
       ultimoError = new Error(`HTTP ${res.status}: ${(await res.text()).slice(0, 300)}`);
       // 500, 502, 503 y 504 son "el servicio está ocupado o se cayó un momento":
       // vale la pena esperar y volver a pedir antes de resignarse.
       if (res.status >= 500 && intento < intentos) { await dormir(4000 * intento); continue; }
       throw ultimoError;
     }
-    anotarPedido(true);
 
     const j = await res.json();
     const parte = j.candidates?.[0]?.content?.parts?.find((p) => p.inlineData);

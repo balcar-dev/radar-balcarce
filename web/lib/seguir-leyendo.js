@@ -11,8 +11,8 @@
 //     distintas entre sí, si se puede);
 //   · nunca una nota propia de servicio (el dólar, un repaso) mientras haya
 //     otra cosa para ofrecer;
-//   · si las últimas 72 horas no alcanzan, se completa con el archivo, con su
-//     fecha real ("hace 5 días"), sólo notas con cuerpo.
+//   · si las notas de la portada (HORAS_EN_PORTADA) no alcanzan, se completa
+//     con el archivo, con su fecha real ("hace 5 días"), sólo notas con cuerpo.
 //
 // De una entrada y una salida, sin leer archivos: se prueba sin red.
 
@@ -46,7 +46,7 @@ function tomar(candidatas, elegidas, cuantas, { seccionesDistintas = false } = {
 
 /**
  * @param {object} nota      la que se está leyendo
- * @param {object[]} recientes  las notas de la portada (últimas 72 horas)
+ * @param {object[]} recientes  las notas de la portada (últimas HORAS_EN_PORTADA)
  * @param {object[]} [archivo]  las archivadas (más viejas), con su cuerpo
  * @param {number} [cuantas]
  */

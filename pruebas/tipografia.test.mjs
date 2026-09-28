@@ -1,5 +1,5 @@
-// El sistema tipográfico de las tarjetas de servicio (web/app/globals.css) y la
-// tarjeta del dólar sin corrimientos. Sin red, sin navegador: lee la hoja de
+// El sistema tipográfico de las tarjetas de servicio (web/app/globals.css) y el
+// dólar sin corrimientos. Sin red, sin navegador: lee la hoja de
 // estilo y los componentes. (Las medidas reales, columna por columna y ancho por
 // ancho, se tomaron en el navegador: ver web/README.md.)
 
@@ -58,15 +58,14 @@ test('todas las tarjetas usan la etiqueta única y el enlace de acción único',
   const accion = css.match(/\n\.accion,[^{]*\{([^}]*)\}/)?.[1] ?? '';
   assert.match(accion, /font-size:\s*var\(--t-accion\)/);
   assert.match(accion, /color:\s*var\(--rojo\)/);
-  for (const clase of ['.ver-todo', '.ver-semana', '.pie-panel-dolar a']) {
+  for (const clase of ['.ver-todo', '.ver-semana']) {
     assert.ok(css.match(/\n\.accion,[^{]*/)[0].includes(clase), `${clase} comparte el estilo de la acción`);
   }
   // Los componentes usan la etiqueta y la cabecera común, sin tamaños a mano.
   const piezas = leer('web/components/piezas.js');
   const clima = leer('web/components/clima-vivo.js');
-  const dolar = leer('web/components/tarjeta-dolar.js');
   const pagina = leer('web/app/page.js');
-  for (const [nombre, fuente] of [['piezas', piezas], ['clima', clima], ['dolar', dolar], ['portada', pagina]]) {
+  for (const [nombre, fuente] of [['piezas', piezas], ['clima', clima], ['portada', pagina]]) {
     assert.match(fuente, /className="cabecera-tarjeta"/, `${nombre} usa la cabecera común`);
     assert.match(fuente, /className="etiqueta"/, `${nombre} usa la etiqueta única`);
   }
@@ -74,31 +73,12 @@ test('todas las tarjetas usan la etiqueta única y el enlace de acción único',
   assert.match(pagina, /className="accion">Toda la guía →/);
   assert.match(pagina, /className="accion">Toda la agenda →/);
   assert.match(piezas, /className="accion ver-semana"><span className="solo-lg">Ver <\/span>la semana →/);
-  assert.match(dolar, /Ver todos los dólares →/);
 });
 
 test('el puntito de estado es uno solo, del mismo tamaño en todas las tarjetas', () => {
   assert.match(css, /\.punto-vivo \{ width: 6px; height: 6px;/);
   assert.ok(!/\.en-vivo\b/.test(css), 'no hay un segundo puntito');
   assert.ok(!/en-vivo/.test(leer('web/components/clima-vivo.js')));
-});
-
-test('la tarjeta del dólar usa una grilla de columnas fijas con cifras tabulares', () => {
-  const filas = regla('.filas-panel-dolar');
-  assert.match(filas, /grid-template-columns:\s*max-content minmax\(0, 1fr\) max-content/);
-  assert.match(filas, /font-variant-numeric:\s*tabular-nums/);
-  assert.match(filas, /--cifra:\s*clamp\([^;]*cqw[^;]*\)/, 'el tamaño de las cifras es fluido y único');
-  const fila = regla('.fila-panel-dolar');
-  assert.match(fila, /grid-template-columns:\s*subgrid/, 'las tres filas comparten las columnas');
-  assert.match(fila, /grid-column:\s*1 \/ -1/);
-  assert.match(css, /\.panel-dolar \{ container-type: inline-size; \}/);
-  assert.match(regla('.fila-panel-dolar .venta'), /text-align:\s*right/);
-  assert.match(regla('.fila-panel-dolar .venta'), /font-size:\s*var\(--cifra\)/);
-  assert.match(regla('.fila-panel-dolar .compra'), /text-align:\s*right/);
-  // Hay una alternativa para navegadores sin subgrid.
-  assert.match(css, /@supports not \(grid-template-columns: subgrid\)/);
-  // El pie envuelve en vez de pisarse.
-  assert.match(regla('.pie-panel-dolar'), /flex-wrap:\s*wrap/);
 });
 
 test('las tarjetas grandes de /dolar: mismo tamaño de cifra, tabulares y sin desborde', () => {
@@ -110,19 +90,17 @@ test('las tarjetas grandes de /dolar: mismo tamaño de cifra, tabulares y sin de
   assert.match(regla('.cabeza-dolar'), /flex-wrap:\s*wrap/);
 });
 
-test('la tarjeta de la portada muestra pesos enteros, y falta de compra no corre las columnas', () => {
+test('el dólar de la portada muestra pesos enteros, y una falta de compra queda en null', () => {
   assert.equal(pesosEnteros(1549.8), '$1.550');
   assert.equal(pesosEnteros(1545), '$1.545');
   assert.equal(pesosEnteros(10000), '$10.000');
   assert.equal(pesosEnteros(1234567.4), '$1.234.567');
   assert.equal(pesosEnteros(null), '—');
   assert.equal(pesosEnteros(NaN), '—');
-  const dolar = leer('web/components/tarjeta-dolar.js');
-  assert.match(dolar, /pesosEnteros\(f\.venta\)/);
-  assert.match(dolar, /pesosEnteros\(f\.compra\)/);
-  assert.ok(!/\bpesos\(/.test(dolar), 'la tarjeta de la portada nunca muestra centavos');
-  // La celda de "compra" se dibuja siempre, aunque esté vacía.
-  assert.match(dolar, /<span className="compra">\{f\.compra != null \?/);
+  // En la portada el dólar es un renglón de "Hoy en Balcarce" (28/09).
+  const hoy = leer('web/components/hoy-balcarce.js');
+  assert.match(hoy, /pesosEnteros\(/);
+  assert.ok(!/\bpesos\(/.test(hoy), 'el dólar de la portada nunca muestra centavos');
   const filas = filasDelPanel([{ casa: 'oficial', compra: null, venta: 1500, fecha: '2026-09-25T12:00:00Z' }]);
   assert.equal(filas[0].compra, null);
 });
@@ -140,8 +118,8 @@ test('/dolar: los centavos, todos o ninguno, para que las cifras alineen', () =>
   assert.match(vivo, /pesos\(c\.venta, opciones\)/);
 });
 
-test('/dolar y la tarjeta siguen sin decir "en vivo"', () => {
-  for (const f of ['web/app/dolar/page.js', 'web/components/dolar-vivo.js', 'web/components/tarjeta-dolar.js']) {
+test('/dolar y el dólar de la portada siguen sin decir "en vivo"', () => {
+  for (const f of ['web/app/dolar/page.js', 'web/components/dolar-vivo.js', 'web/components/hoy-balcarce.js']) {
     const sin = leer(f).replace(/\/\/[^\n]*/g, '').replace(/\/\*[\s\S]*?\*\//g, '');
     assert.ok(!/en vivo/i.test(sin.replace(/"nunca dice[^"]*"/g, '')), `${f} no dice "en vivo"`);
   }
@@ -164,13 +142,6 @@ test('el HTML compilado tiene las clases del sistema (si ya se compiló)', (t) =
   assert.match(html, /class="etiqueta">Números útiles/);
   assert.match(html, /class="tarjeta tarjeta-util"/);
   assert.match(html, /class="accion">Toda la guía →/);
-  const panel = html.match(/<section class="tarjeta panel-dolar"[\s\S]*?<\/section>/)?.[0];
-  if (panel) {
-    assert.match(panel, /class="fila-panel-dolar"/);
-    assert.match(panel, /class="venta"/);
-    assert.ok(!/,\d\d</.test(panel), 'sin centavos en la tarjeta de la portada');
-    assert.ok(!/en vivo/i.test(panel));
-  }
   const d = path.join(RAIZ, 'web/out/dolar.html');
   if (fs.existsSync(d)) assert.ok(!/en vivo/i.test(fs.readFileSync(d, 'utf8').replace(/<script[\s\S]*?<\/script>/g, '')));
 });

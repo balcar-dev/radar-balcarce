@@ -67,7 +67,8 @@ test('al generar los datos, una nota sin hora usa la primera vez que se la vio',
   // conoce, nunca una más nueva que la ya publicada (fechaDeLaNota, 28/09).
   assert.match(s, /const fechaReal = \(n\) => \(n\.cuando === 'sin fecha en la fuente'\s+\? \(primeraVista\(n\) \?\? ahoraISO\)\s+: fechaDeLaNota\(n, \{ fechaAnterior: fechaAntes\[n\.id\], visto: primeraVista\(n\) \}\)\);/);
   assert.match(s, /const primeraVista = \(n\) => vistoAntes\[n\.id\] \?\? vistas\[n\.id\];/, 'la primera vez que se la vio, aunque nunca haya salido (vistas.json, 28/09)');
-  assert.match(s, /    fecha: fechaReal\(n\),/);
+  assert.match(s, /  const fecha = fechaReal\(n\);/);
+  assert.match(s, /\n    fecha,\r?\n/);
 });
 
 // --------------------------------------------------------- la farmacia

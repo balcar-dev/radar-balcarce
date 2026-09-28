@@ -1,15 +1,49 @@
-// Genera web/data/portada.json a partir de lo que ya decidió el panel.
+// Arma los datos de la web (web/data/) a partir de las noticias y de lo que
+// decidieron el semáforo y las personas.
 //
-// Por qué un archivo estático y no una conexión en vivo al panel: la web
-// es HTML estático en Cloudflare Pages, que no puede leer los archivos de la
-// PC. GitHub Actions corre la ingesta, ACTUALIZA este archivo y lo sube al
-// repo; después "Cloudflare Pages" compila y publica. En la PC, este script
-// hace lo mismo a mano.
+// Por qué archivos estáticos y no una conexión en vivo al panel: la web es
+// HTML estático en Cloudflare Pages, que no puede leer los archivos de la PC.
+// GitHub Actions corre este script cada media hora, sube lo que cambió al repo
+// y después Cloudflare Pages compila y publica. En la PC hace lo mismo a mano,
+// con lo que ya tiene el panel.
+//
+// Qué hace, en orden:
+//
+//   1. Lee las noticias y las decisiones: en la PC, de panel/datos/; en la
+//      nube, corre la ingesta en el momento y lee web/data/decisiones.json.
+//   2. Anota la primera vez que vio cada nota y fija su fecha (fechaReal).
+//   3. En la nube: la lectura con IA (fichas, repetidas) y, otra vez, los
+//      medios que pide lo de afuera y los cupos.
+//   4. En la nube: la reescritura con IA de lo que va a salir.
+//   5. Decide qué nota se publica (notaPublicada): la decisión de una persona o
+//      el semáforo, que no llegue tarde, las correcciones a mano, lo que no se
+//      publica nunca y "sin cuerpo no se publica".
+//   6. En la nube: el banco de fotos.
+//   7. El archivo: lo que se retira y lo que se corrige de lo ya publicado.
+//   8. Las notas propias (el dólar del día y los repasos de los podcasts).
+//   9. La portada (sólo lo vigente, sin repetidas), el archivo y la agenda.
+//  10. La farmacia de turno, el clima, los útiles y las pendientes.
+//  11. La estadística del día, las notas que esperan cuerpo y, si cambió algo
+//      que importa, la portada.
+//
+// Qué escribe (cada uno sólo si falta o si cambió):
+//
+//   web/data/portada.json           lo que se muestra (portada, secciones, feed)
+//   web/data/archivo.json           todo lo publicado con página (lib/archivo.js)
+//   web/data/agenda.json            los eventos con página (lib/eventos.js)
+//   web/data/intentos-ia.json       cuántas veces se le pidió cada nota a Gemini
+//   web/data/dolar-historia.json    la cotización de cada día hábil
+//   web/data/fichas.json            las fichas de la lectura con IA (en la nube)
+//   web/data/notas-por-dia.json     la estadística diaria de notas
+//   web/data/banco-fotos.json       el banco de fotos, y las fotos en
+//     + web/public/fotos-notas/     web/public/fotos-notas/ (en la nube)
+//   web/data/esperando-cuerpo.json  las notas que esperan cuerpo
+//   web/data/vistas.json            la primera vez que se vio cada nota
 //
 // La lógica de "qué nota está publicada" es la misma que usa
-// panel/servidor.mjs en su función vista() — se repite acá a propósito
-// (son 15 líneas) para no atar la web a que el servidor del panel esté
-// corriendo: la web sólo necesita el JSON, nunca el proceso.
+// panel/servidor.mjs en su función vista(): se repite acá a propósito para no
+// atar la web a que el servidor del panel esté corriendo. La web sólo
+// necesita el JSON, nunca el proceso.
 //
 //   node scripts/generar-datos.mjs
 
@@ -24,7 +58,7 @@ import {
 import { TEMAS, MOTIVO_COTIZACION, REGLAS_SEMAFORO } from '../../ingesta/fuentes.mjs';
 import { tieneCuerpo } from '../lib/cuerpo.js';
 import { sinBalcarceAlFinal } from '../lib/titulos.js';
-import { sinNotasRepetidas } from '../lib/texto.js';
+import { sinNotasRepetidas, sinTildes } from '../lib/texto.js';
 import { pendientesDeLaIngesta } from '../../redes/avisos.mjs';
 import { cuentaDelDia, anotarDia, comoHistoriaJson as comoNotasPorDiaJson } from '../../ingesta/estadistica-diaria.mjs';
 import {
@@ -111,8 +145,8 @@ if (enLaNube) {
   estado = { decisiones: exportado.decisiones ?? {} };
   console.log(`  ${ultima.notas.length} historias · ${Object.keys(estado.decisiones).length} decisiones del panel`);
 
-  // Una fuente que se vacía no avisa. Tres de las 24 se leen raspando el
-  // HTML de la página: el día que El Diario la rediseñe, esas notas dejan
+  // Una fuente que se vacía no avisa. Algunas se leen raspando el HTML de
+  // la página: el día que El Diario la rediseñe, esas notas dejan
   // de entrar sin ningún error, y lo único que se nota es que el sitio
   // tiene menos. Estas líneas ("::warning::") las muestra GitHub arriba de
   // la corrida, donde se ve sin abrir el registro.
@@ -126,9 +160,6 @@ if (enLaNube) {
   agenda = leerJson(path.join(DATOS_PANEL, 'agenda.json'), null);
 }
 
-// Mismo criterio que el panel: sin decisión manda el semáforo (verde =
-// automática, rojo = bloqueada, el resto pendiente). Sólo lo publicado o
-// automático llega a la web.
 // Cuándo vimos cada nota por primera vez.
 //
 // Las fuentes que no publican la hora obligaban a mostrar "sin hora", que
@@ -150,7 +181,8 @@ const fechaAntes = Object.fromEntries([...(archivoAnterior.notas ?? []), ...(ant
   .filter((n) => n.fecha && !n.sinFecha)
   .map((n) => [n.id, n.fecha]));
 // Lo que ya salió alguna vez (la portada anterior y el archivo): sólo eso puede
-// seguir en las listas con el hecho de más de 24 horas (llegaTarde).
+// seguir en las listas con el hecho de más de HORAS_PARA_ESTRENAR (llegaTarde,
+// lib/archivo.js).
 const yaSalieron = new Set([...(archivoAnterior.notas ?? []), ...(anterior.notas ?? [])].map((n) => n.id));
 const ahoraISO = new Date().toISOString();
 
@@ -227,8 +259,9 @@ if (enLaNube) {
     }
     fichas.repetidas = rep;
     // Queda la que ya está publicada (en la portada anterior o en el archivo,
-    // en las últimas 72 horas): si no, desaparece de la portada y queda una que
-    // todavía espera cuerpo (27/09, la de YPF y la de la maestra china).
+    // todavía vigente en la portada, HORAS_EN_PORTADA): si no, desaparece de la
+    // portada y queda una que todavía espera cuerpo (27/09, la de YPF y la de
+    // la maestra china).
     const yaPublicadas = new Set([...(anterior.notas ?? []), ...(archivoAnterior.notas ?? []).filter((n) => vigenteEnPortada(n))].map((n) => n.id));
     const { notas, repetidas } = quitarRepetidas(conFichas, rep.grupos, { publicadas: yaPublicadas });
     repetidasFuera = new Set(repetidas.map((r) => r.id));
@@ -261,23 +294,26 @@ if (enLaNube) {
 // pedir a Gemini la misma nota en cada corrida de acá a que alguien la
 // revise. Lo de la portada va último para que mande si están en los dos.
 //
-// Lo de más de 72 horas no se reescribe si no estaba hecho: ya no va a salir
-// en ninguna lista, y sería gastar cuota en una nota que nadie va a ver.
+// Si no estaba hecha, no se reescribe una nota que ya salió de las listas (más
+// de HORAS_EN_PORTADA): sería gastar cuota en una nota que nadie va a ver.
 let reescritas = {};
 const intentosAntes = leerJson(INTENTOS_IA, null);
 const intentos = podarIntentos(intentosAntes ?? {});
+// Cómo estaban al empezar, ya podados: al final se escriben sólo si cambiaron.
+const intentosAlEmpezar = JSON.stringify(intentos);
 if (enLaNube) {
   const previas = previasDeLaPortada([...(archivoAnterior.notas ?? []), ...(anterior.notas ?? [])]);
-  const fechaParaLista = fechaReal;
   // Lo que ya tiene el cuerpo escrito en correcciones.json no se le pide a
   // Gemini: sería gastar cupo en algo que después no se usa (27/09).
   const paraReescribir = (ultima.notas ?? [])
     .filter((n) => !CORRECCIONES.get(n.id)?.cuerpo)
-    .filter((n) => previas[n.id] || vigenteEnPortada({ fecha: fechaParaLista(n) }))
-    // Lo que ya no se va a estrenar (hecho de más de 24 horas, nunca salió) no
-    // se le pide a Gemini: sería gastar cupo en algo que no va a salir (28/09).
-    .filter((n) => previas[n.id] || yaSalieron.has(n.id)
-      || !llegaTarde(fechaReal(n)));
+    .filter((n) => {
+      if (previas[n.id]) return true;
+      const fecha = fechaReal(n);
+      // Lo que ya no se va a estrenar (hecho de más de HORAS_PARA_ESTRENAR,
+      // nunca salió) tampoco: no va a salir (28/09).
+      return vigenteEnPortada({ fecha }) && (yaSalieron.has(n.id) || !llegaTarde(fecha));
+    });
   // El archivo va también como fuente de ANTECEDENTES: lo que el sitio ya
   // publicó sobre el mismo tema en los últimos 30 días (CRITERIO-EDITORIAL.md).
   reescritas = await reescribirAutomaticas(paraReescribir, {
@@ -289,7 +325,7 @@ if (enLaNube) {
 
 // Se escribe siempre que falte (el workflow lo suma con `git add`) o cambie.
 const intentosFinal = podarIntentos(intentos);
-if (!intentosAntes || JSON.stringify(intentosFinal) !== JSON.stringify(podarIntentos(intentosAntes))) {
+if (!intentosAntes || JSON.stringify(intentosFinal) !== intentosAlEmpezar) {
   fs.writeFileSync(INTENTOS_IA, `${JSON.stringify(intentosFinal, null, 1)}\n`, 'utf8');
 }
 
@@ -307,11 +343,13 @@ const esperandoCuerpo = [];
 
 /** ¿El título o la bajada son de lo que no se publica nunca (REGLAS_SEMAFORO.nunca)? */
 function nuncaSePublica(nota) {
-  const palabras = new Set(sinTildesMin(`${nota.titulo ?? ''} ${nota.copete ?? ''}`).split(/[^a-z0-9ñ]+/));
-  return (REGLAS_SEMAFORO.nunca ?? []).some((p) => palabras.has(sinTildesMin(p)));
+  const palabras = new Set(sinTildes(`${nota.titulo ?? ''} ${nota.copete ?? ''}`).split(/[^a-z0-9ñ]+/));
+  return (REGLAS_SEMAFORO.nunca ?? []).some((p) => palabras.has(sinTildes(p)));
 }
-const sinTildesMin = (s) => String(s).normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
 
+// Mismo criterio que el panel: sin decisión manda el semáforo (verde =
+// automática, rojo = bloqueada, el resto pendiente). Sólo lo publicado o
+// automático llega a la web.
 function notaPublicada(n) {
   if (RETIRADAS_A_MANO.has(n.id)) return null;
   const d = estado.decisiones[n.id];
@@ -321,11 +359,13 @@ function notaPublicada(n) {
   const humana = decisionHumana(d);
   const st = humana ? d.estado : delSemaforo;
   if (st !== 'publicada' && st !== 'automatica') return null;
-  // Una nota que nunca salió no se estrena con el hecho de más de 24 horas
-  // (llegaTarde, lib/archivo.js). Lo que publicó una persona se respeta.
-  // Sin excepción para las notas sin hora: se cuentan desde la primera vez que
-  // las vimos (fechaReal).
-  if (!humana && !yaSalieron.has(n.id) && llegaTarde(fechaReal(n))) return null;
+  // La fecha de la nota, una sola vez: decide si llega tarde y es la que sale.
+  const fecha = fechaReal(n);
+  // Una nota que nunca salió no se estrena con el hecho de más de
+  // HORAS_PARA_ESTRENAR (llegaTarde, lib/archivo.js). Lo que publicó una
+  // persona se respeta. Sin excepción para las notas sin hora: se cuentan desde
+  // la primera vez que las vimos (fechaReal).
+  if (!humana && !yaSalieron.has(n.id) && llegaTarde(fecha)) return null;
   // Lo que decidió una persona manda. Si no, lo que ya reescribió la IA sola
   // en esta corrida o en una anterior. Si ninguna de las dos cosas pasó,
   // queda el resumen mecánico de la fuente, como salía antes de todo esto.
@@ -374,7 +414,7 @@ function notaPublicada(n) {
     // ese caso manda la primera vez que la vimos, que no cambia.
     // Con fecha: la más vieja que se conoce, nunca una más nueva que la ya
     // publicada (un medio que actualiza su nota no la trae de vuelta, 28/09).
-    fecha: fechaReal(n),
+    fecha,
     // Cuando la fuente no publica la hora, la ingesta pone la de ahora para
     // poder ordenar. Se guarda el aviso para que la web no mienta un
     // "hace 1 minuto" que no es cierto.
@@ -417,7 +457,7 @@ function notaPublicada(n) {
   if (!humana && !tieneCuerpo(corregida)) {
     if (vigenteEnPortada(corregida)) {
       esperandoCuerpo.push({
-        id: n.id, titulo: corregida.titulo, copete: corregida.copete, seccion: n.seccion, fecha: corregida.fecha,
+        id: n.id, titulo: corregida.titulo, copete: corregida.copete, seccion: corregida.seccion, fecha: corregida.fecha,
         fuentes: (n.origenes ?? []).map((o) => ({ medio: o.medio, enlace: o.enlace, fecha: o.fecha ?? null })),
       });
     }
@@ -552,9 +592,10 @@ const publicadas = [...deLaIngesta, ...propias]
   .sort((a, b) => new Date(b.fecha) - new Date(a.fecha));
 
 // Lo que se MUESTRA (portada, secciones, temas, buscador, feed): sólo lo de
-// las últimas 72 horas. El 25/09 la portada tenía 43 notas de más de tres
-// días, porque el panel las archiva sólo cuando la PC está prendida. La
-// página de cada una sigue existiendo: está en el archivo.
+// las últimas HORAS_EN_PORTADA (vigenteEnPortada, lib/archivo.js). El 25/09 la
+// portada tenía 43 notas de más de tres días, porque el panel las archiva sólo
+// cuando la PC está prendida. La página de cada una sigue existiendo: está en
+// el archivo.
 const vigentes = publicadas.filter((n) => vigenteEnPortada(n));
 // Ni dos notas con el mismo titular (o casi) en las listas: se queda la de más
 // relevancia y la otra sale de la portada, las secciones, el feed y el sitemap.
@@ -705,7 +746,7 @@ function cambioQueImporta(antes, ahora) {
 
 {
   const texto = `${JSON.stringify({ generado: salida.generado, notas: esperandoCuerpo }, null, 1)}\n`;
-  const antes = fs.existsSync(ESPERANDO_CUERPO) ? JSON.parse(fs.readFileSync(ESPERANDO_CUERPO, 'utf8')) : null;
+  const antes = leerJson(ESPERANDO_CUERPO, null);
   if (JSON.stringify(antes?.notas) !== JSON.stringify(esperandoCuerpo)) fs.writeFileSync(ESPERANDO_CUERPO, texto, 'utf8');
 }
 

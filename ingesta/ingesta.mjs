@@ -6,12 +6,13 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import {
-  NOMBRES_PROPIOS, FIGURAS, TEMAS, FARMACIAS_A_MANO, MEDIOS_DE_AFUERA, MEDIOS_POR_DEFECTO, MEDIOS_CON_FIGURA, CUPO_DE_AFUERA, CUPO_POR_DEFECTO, BALCARCE, FUENTES, FUENTES_NACIONALES, PALABRAS_LOCALES, PALABRAS_ZONA, REGLAS_SECCION, AMARILLO_MENORES, REGLAS_SEMAFORO, MOTIVO_COTIZACION, MOTIVO_POLICIAL_DE_AFUERA,
+  NOMBRES_PROPIOS, FIGURAS, TEMAS, FARMACIAS_A_MANO, MEDIOS_DE_AFUERA, MEDIOS_POR_DEFECTO, MEDIOS_CON_FIGURA, CUPO_DE_AFUERA, CUPO_POR_DEFECTO, BALCARCE, FUENTES, FUENTES_NACIONALES, PALABRAS_LOCALES, PALABRAS_ZONA, REGLAS_SECCION, AMARILLO_MENORES, REGLAS_SEMAFORO, MOTIVO_COTIZACION,
   MOTIVO_INTERNACIONAL, PALABRAS_DE_TECNOLOGIA_EN_EL_TITULO, SECCIONES_QUE_NO_ENTRAN, CONEXION_ARGENTINA, TITULO_HOROSCOPO,
 } from './fuentes.mjs';
 import { diaDeTurno, fechaEnBalcarce } from './utiles.mjs';
 import { agruparPorHecho, leerMemoria, guardarMemoria, desdeLaMemoria } from './cruce.mjs';
 import { FUENTES_CRUCE } from './fuentes-cruce.mjs';
+import { decodificar } from './articulo.mjs';
 import { sinTildes } from '../web/lib/texto.js';
 
 export const TODAS_LAS_FUENTES = [...FUENTES, ...FUENTES_NACIONALES, ...FUENTES_CRUCE];
@@ -55,21 +56,8 @@ export async function traer(url, { timeout = 15000, agente } = {}) {
   }
 }
 
-const ENTIDADES = {
-  amp: '&', lt: '<', gt: '>', quot: '"', apos: "'", nbsp: ' ',
-  aacute: 'á', eacute: 'é', iacute: 'í', oacute: 'ó', uacute: 'ú',
-  ntilde: 'ñ', Ntilde: 'Ñ', uuml: 'ü', laquo: '«', raquo: '»',
-  hellip: '…', mdash: '—', ndash: '–', rsquo: '’', lsquo: '‘',
-  Aacute: 'Á', Eacute: 'É', Iacute: 'Í', Oacute: 'Ó', Uacute: 'Ú',
-};
-
-function decodificar(s = '') {
-  return s
-    .replace(/<!\[CDATA\[([\s\S]*?)\]\]>/g, '$1')
-    .replace(/&#(\d+);/g, (_, n) => String.fromCharCode(+n))
-    .replace(/&#x([0-9a-f]+);/gi, (_, n) => String.fromCharCode(parseInt(n, 16)))
-    .replace(/&([a-z]+);/gi, (m, n) => ENTIDADES[n] ?? m);
-}
+// Las entidades de HTML se traducen con `decodificar` (ingesta/articulo.mjs):
+// una sola lista para los feeds y para la página de la nota.
 
 function sinEtiquetas(s = '') {
   return decodificar(
@@ -116,13 +104,6 @@ export function normalizar(s = '') {
     .replace(/\s+/g, ' ').trim();
 }
 
-const VACIAS = new Set(['de', 'la', 'el', 'en', 'y', 'a', 'los', 'las', 'un', 'una', 'del',
-  'por', 'con', 'para', 'que', 'se', 'su', 'al', 'lo', 'es', 'no', 'mas', 'sobre', 'tras']);
-
-function fichas(titulo) {
-  return new Set(normalizar(titulo).split(' ').filter((w) => w.length > 3 && !VACIAS.has(w)));
-}
-
 // Busca una palabra entera, no un pedazo: "obra" no puede matchear dentro de
 // "cobra", pero sí tiene que matchear "obras". Los sufijos cortos se permiten.
 const CACHE_RE = new Map();
@@ -149,14 +130,6 @@ function contiene(textoNormalizado, palabra) {
     CACHE_RE.set(palabra, re);
   }
   return re.test(textoNormalizado);
-}
-
-function parecido(a, b) {
-  const A = fichas(a); const B = fichas(b);
-  if (!A.size || !B.size) return 0;
-  let comunes = 0;
-  for (const w of A) if (B.has(w)) comunes += 1;
-  return comunes / Math.min(A.size, B.size);
 }
 
 function haceCuanto(fecha) {
@@ -475,6 +448,36 @@ function tocaLaZona(nota) {
   return RE_ZONA.some((re) => re.test(texto));
 }
 
+/**
+ * ¿Es de acá? UNA sola definición (28/09) para las tres reglas que la usan: el
+ * semáforo, los medios que pide lo de afuera (exigirMedios) y el cupo de lo de
+ * afuera (aplicarCupos). Antes cada una tenía la suya y se pisaban: el
+ * semáforo dejaba salir con un medio lo que dice Balcarce en el título y
+ * exigirMedios lo frenaba enseguida; lo de la zona pasaba las dos y después
+ * el cupo lo bajaba como si fuera de afuera.
+ *
+ * Es de acá (CLAUDE.md):
+ *   · lo de un medio de Balcarce o lo que dice Balcarce en el título
+ *     (`local`, o esDeBalcarce si la nota todavía no lo trae);
+ *   · lo que otro medio de la misma historia dice con Balcarce en el título
+ *     (`nombraBalcarce`, que el cruce le pasa a la principal);
+ *   · lo que toca la zona (`deLaZona`: la 226, la 55, la papa, el sudeste),
+ *     que sale solo aunque lo cuente un medio.
+ *
+ * La lectura con IA manda sobre las dos primeras: si dice que el hecho no es
+ * de Balcarce (aplicarFichas deja `local: false` y `noEsDeAcaSegunLaIA`), el
+ * título ya no alcanza y la nota se rige por lo de afuera. La zona no la
+ * toca: la IA saca lo que no tiene relación con acá, no lo deja a medias.
+ *
+ * Las exenciones que son de una sola regla quedan en esa regla (una fuente
+ * oficial o una nota propia no piden medios, pero no son "de acá").
+ */
+export function esDeAca(nota = {}) {
+  if (nota.deLaZona) return true;
+  if (nota.noEsDeAcaSegunLaIA) return false;
+  return !!(nota.local ?? esDeBalcarce(nota)) || !!nota.nombraBalcarce;
+}
+
 /** ¿Nombra a alguien que en Balcarce se lee igual aunque la noticia sea de
  *  afuera? Messi, Colapinto, la Selección. Devuelve el nombre encontrado o
  *  null, para poder mostrar por qué entró. */
@@ -510,23 +513,29 @@ const PALABRAS_DEBILES = new Set([
   // "comerciantes", que le ganaba a "robo". Estas sólo deciden desde el
   // titular, y sólo si no hay nada más firme.
   'comerciantes', 'comercio local', 'precios', 'ahorro', 'inversiones', 'mercados',
-  'bonos', 'finanzas', 'empresas en mora', 'salarios', 'deuda',
+  'bonos', 'finanzas', 'empresas en mora', 'salarios',
   'ia', 'claude', 'gemini', 'copilot', 'robot', 'robots', 'software', 'startup',
   'smartphone', 'chatbot',
   // Sumadas el 27/09: "Fangio" y "taller" mandaban a Automovilismo o a
   // Cultura una nota que no tenía nada que ver.
-  //   · "fangio" — el automovilismo "gana siempre" (más abajo) y no mira esta
-  //     lista, así que a "fangio" hay que sacarla de ahí directamente; acá
-  //     sólo se evita que decida como Automovilismo si aparece de casualidad
-  //     en el cuerpo o en una categoría del feed ("El colectivo espera, el
-  //     Fangio acelera" venía como categoría de una nota de transporte
-  //     público de Necochea, sin ninguna relación con el piloto).
+  //   · "fangio" — el automovilismo "gana siempre" (paso 1 de
+  //     clasificarSinFutbol) salvo con las palabras de esta lista: "fangio"
+  //     no decide ahí, y en el paso 3 decide sólo desde el titular. Así no
+  //     manda a Automovilismo una nota que la nombra de casualidad en el
+  //     cuerpo o en una categoría del feed ("El colectivo espera, el Fangio
+  //     acelera" venía como categoría de una nota de transporte público de
+  //     Necochea, sin ninguna relación con el piloto).
   //   · "taller" — "antes de visitar el taller mecánico" mandó una nota de
   //     Ámbito sobre cómo arreglar la ventanilla de un auto a Cultura y
   //     agenda, que la publicó sola.
   'fangio', 'taller',
-  // Fútbol (27/09): "boca" es también la de tormenta y "penal", lo judicial.
-  'boca', 'river', 'racing', 'penal', 'ascenso',
+  // Fútbol (27/09): "penal" es también lo judicial y "ascenso", el de un
+  // cargo. Los clubes van con el nombre entero en REGLAS_SECCION ("boca
+  // juniors", "river plate", "racing club"): "boca" suelta es también la de
+  // tormenta, y por eso no es palabra de ninguna sección (una palabra débil
+  // que no está en REGLAS_SECCION no hace nada; hasta el 28/09 estaban acá
+  // "boca", "river" y "racing" sin efecto).
+  'penal', 'ascenso',
 ]);
 
 /** Los temas de larga duración que toca esta nota. Suele ser ninguno. */
@@ -662,7 +671,9 @@ export function semaforoDelTexto(textoCrudo, { soloMenores = false } = {}) {
   return null;
 }
 
-function semaforo(nota, seccion, puntaje, medios = cuantosMedios(nota)) {
+/** El color de una nota recién leída: { color, motivo }. El puntaje no entra
+ *  (desde el 27/09 lo de afuera se mide en medios, no en puntaje). */
+function semaforo(nota, seccion, medios = cuantosMedios(nota)) {
   const sensible = semaforoDelTexto(`${nota.titulo} ${nota.cuerpo.slice(0, 600)}`);
   if (sensible) return sensible;
   // Lo que no se publica nunca (las listas de sepelios, Hernán 27/09). Sólo
@@ -681,13 +692,11 @@ function semaforo(nota, seccion, puntaje, medios = cuantosMedios(nota)) {
     return { color: 'amarillo', motivo: MOTIVO_INTERNACIONAL };
   }
   const texto = normalizar(`${nota.titulo} ${nota.cuerpo.slice(0, 600)}`);
-  // Un policial de otro lugar con violencia o acusados espera a una persona
-  // (26/09): las fuentes nacionales de policiales traen crímenes de todo el país.
-  if (seccion === 'Policiales' && nota.alcance !== 'local' && !nota.nombraBalcarce && !esDeBalcarce(nota)) {
-    if ((REGLAS_SEMAFORO.policialDeAfuera ?? []).some((p) => contiene(texto, p))) {
-      return { color: 'amarillo', motivo: MOTIVO_POLICIAL_DE_AFUERA };
-    }
-  }
+  // Acá había una regla para el policial de otro lugar con violencia o
+  // acusados (26/09, REGLAS_SEMAFORO.policialDeAfuera). Desde el 27/09 no se
+  // alcanza nunca: esPolicialDeAfuera saca antes de llegar al semáforo todo
+  // policial que no es de un medio de acá ni dice Balcarce en el título, que
+  // es justo lo que esa regla miraba. Se sacó el 28/09.
   for (const p of REGLAS_SEMAFORO.promocional ?? []) {
     if (contiene(texto, p)) return { color: 'amarillo', motivo: `parece promoción, no noticia: "${p}"` };
   }
@@ -698,10 +707,9 @@ function semaforo(nota, seccion, puntaje, medios = cuantosMedios(nota)) {
   // Lo que toca la zona (la 226, la 55, la papa, el sudeste) es tema de
   // Balcarce aunque lo cuente un solo medio (Hernán, 27/09: "si son de la zona
   // y son realmente temas de Balcarce, que salga"). La lectura con IA igual
-  // saca lo que no tenga relación con acá.
-  const deAca = nota.local || nota.nombraBalcarce || nota.deLaZona || esDeBalcarce(nota);
+  // saca lo que no tenga relación con acá. Qué es de acá: esDeAca.
   const minimo = mediosMinimosDe(seccion, nota);
-  if (!deAca && medios < minimo) {
+  if (!esDeAca(nota) && medios < minimo) {
     return { color: 'amarillo', motivo: motivoPocoContada(medios, seccion, minimo) };
   }
 
@@ -858,21 +866,19 @@ async function climaDeOpenMeteo() {
     + '&daily=temperature_2m_max,temperature_2m_min,precipitation_probability_max,weather_code,wind_speed_10m_max,precipitation_sum'
     + `&timezone=${encodeURIComponent(BALCARCE.tz)}&forecast_days=4`;
   const j = JSON.parse(await traer(url));
-  const rumbos = ['N', 'NE', 'E', 'SE', 'S', 'SO', 'O', 'NO'];
-  const dias = ['dom', 'lun', 'mar', 'mié', 'jue', 'vie', 'sáb'];
   return {
     ahora: {
       temp: Math.round(j.current.temperature_2m),
       sensacion: Math.round(j.current.apparent_temperature),
       humedad: j.current.relative_humidity_2m,
       viento: Math.round(j.current.wind_speed_10m),
-      rumbo: rumbos[Math.round(j.current.wind_direction_10m / 45) % 8],
+      rumbo: RUMBOS[Math.round(j.current.wind_direction_10m / 45) % 8],
       cielo: CIELO[j.current.weather_code] ?? 'Sin datos',
       esDeDia: j.current.is_day === 1,
     },
     dias: j.daily.time.map((f, i) => ({
       fecha: f,
-      dia: dias[new Date(`${f}T12:00:00`).getDay()],
+      dia: DIAS_CORTOS[new Date(`${f}T12:00:00`).getDay()],
       max: Math.round(j.daily.temperature_2m_max[i]),
       min: Math.round(j.daily.temperature_2m_min[i]),
       lluvia: j.daily.precipitation_probability_max[i],
@@ -1166,10 +1172,8 @@ export function aplicarCupos(portada) {
   const usados = {};
   for (const n of portada) {
     if (n.semaforo !== 'verde') continue;
-    if (n.local || n.nombraBalcarce) continue;
-    // Automovilismo no tenía cupo hasta el 25/09; ahora tiene el suyo en
-    // CUPO_DE_AFUERA. Sin esa entrada seguiría sin tope, como antes.
-    if (n.seccion === 'Automovilismo' && CUPO_DE_AFUERA.Automovilismo == null) continue;
+    // Lo de acá no entra en la cuenta (esDeAca: Balcarce y la zona).
+    if (esDeAca(n)) continue;
     usados[n.seccion] = (usados[n.seccion] ?? 0) + 1;
     const cupo = CUPO_DE_AFUERA[n.seccion] ?? CUPO_POR_DEFECTO;
     if (usados[n.seccion] > cupo) {
@@ -1185,7 +1189,8 @@ export function aplicarCupos(portada) {
 /**
  * Lo de afuera de Balcarce sale solo sólo si lo cuentan los medios que pide su
  * sección (mediosMinimosDe; nunca menos de dos: Hernán, 27/09). Una fuente
- * oficial alcanza sola. Lo de Balcarce no pide esto.
+ * oficial alcanza sola, y una nota propia no pide medios. Lo de acá
+ * (esDeAca: Balcarce, Balcarce en el título, la zona) no pide esto.
  *
  * Se vuelve a mirar después de la lectura con IA, que puede cambiar la
  * sección, decir que una nota no es de acá o juntar dos notas del mismo hecho
@@ -1195,7 +1200,7 @@ export function aplicarCupos(portada) {
  */
 export function exigirMedios(portada) {
   for (const n of portada) {
-    if (n.local || n.oficial || n.propia || n.deLaZona) continue;
+    if (n.oficial || n.propia || esDeAca(n)) continue;
     const medios = cuantosMedios(n);
     const minimo = mediosMinimosDe(n.seccion, n);
     if (n.semaforo === 'verde' && medios < minimo) {
@@ -1209,8 +1214,12 @@ export function exigirMedios(portada) {
   return portada;
 }
 
-/** Cuántas horas puede tener una nota para entrar como nueva: las mismas
- *  que muestra la portada (HORAS_EN_PORTADA, web/lib/archivo.js). */
+/** Cuántas horas puede tener una nota raspada (El Diario Balcarce) para
+ *  entrar a la ingesta. Eran las de la portada cuando la portada era de 72
+ *  horas; desde el 28/09 la portada es de 36 (PORTADA.horas en
+ *  ingesta/criterio.mjs) y una nota que nunca salió no se estrena con el
+ *  hecho de más de 12 (PORTADA.horasParaEstrenar): esos cortes los hace la
+ *  web (web/lib/archivo.js). Éste es sólo el colador grueso de la entrada. */
 export const HORAS_DE_UNA_NOTA_NUEVA = 72;
 
 /** La memoria del cruce, entre corridas. En GitHub la guarda la caché de
@@ -1221,8 +1230,11 @@ export const MEMORIA_DEL_CRUCE = path.join(path.dirname(fileURLToPath(import.met
  *  figura argentina o si toca la zona. */
 function marcarDeAfuera(n) {
   if (esDeBalcarce(n)) n.nombraBalcarce = true;
-  else if (figuraQueNombra(n)) n.figura = figuraQueNombra(n);
-  else if (tocaLaZona(n)) n.deLaZona = true;
+  else {
+    const figura = figuraQueNombra(n);
+    if (figura) n.figura = figura;
+    else if (tocaLaZona(n)) n.deLaZona = true;
+  }
 }
 
 export async function ingestar({
@@ -1246,9 +1258,9 @@ export async function ingestar({
     // Raspar la portada da títulos sin bajada ni fecha: hay que entrar a cada nota.
     if (f.tipo === 'scrape') {
       await ampliar(notas);
-      // Lo que la portada del medio muestra pero salió hace más de 72 horas
-      // (las mismas de la portada de Radar) no es nuevo: no se trae (27/09,
-      // El Diario Balcarce tenía en su portada notas de 2025).
+      // Lo que la portada del medio muestra pero salió hace más de
+      // HORAS_DE_UNA_NOTA_NUEVA (72) no es nuevo: no se trae (27/09, El Diario
+      // Balcarce tenía en su portada notas de 2025).
       notas = notas.filter((n) => n.fechaEstimada || Date.now() - n.fecha.getTime() <= HORAS_DE_UNA_NOTA_NUEVA * 3600e3);
     }
     // De las fuentes de afuera, lo que por la sección del propio medio no es
@@ -1377,7 +1389,7 @@ export async function ingestar({
   const portada = sinPolicialesDeAfuera.map((g) => {
     const seccion = clasificar(g.principal);
     const rel = relevancia(g.principal, seccion, g.medios.length);
-    const sem = semaforo(g.principal, seccion, rel, g.medios.length);
+    const sem = semaforo(g.principal, seccion, g.medios.length);
     return {
       // Con el enlace del feed si lo hay (Blogger): así el identificador es el
       // mismo que antes de que el enlace pasara a ser la página de la nota.
@@ -1437,8 +1449,8 @@ export async function ingestar({
 
   // 4. Clima y farmacias
   let clima = null; let farmacias = null;
-  try { clima = await traerClima(); console.log('\n\x1b[1mCLIMA\x1b[0m\n  \x1b[32mok\x1b[0m   Open-Meteo responde'); } catch (e) { console.log(`\n  \x1b[31mfalla\x1b[0m clima: ${e.message}`); }
-  try { farmacias = await traerFarmacias(); console.log(`\x1b[1m\nFARMACIAS\x1b[0m\n  ${farmacias.turnos.length ? '\x1b[32mok\x1b[0m  ' : '\x1b[33maviso\x1b[0m'} ${farmacias.turnos.length} turnos reconocidos en colbalcarce.com`); } catch (e) { console.log(`  \x1b[31mfalla\x1b[0m farmacias: ${e.message}`); }
+  try { clima = await traerClima(); log(`\n\x1b[1mCLIMA\x1b[0m\n  \x1b[32mok\x1b[0m   ${clima.fuente} responde`); } catch (e) { log(`\n  \x1b[31mfalla\x1b[0m clima: ${e.message}`); }
+  try { farmacias = await traerFarmacias(); log(`\x1b[1m\nFARMACIAS\x1b[0m\n  ${farmacias.turnos.length ? '\x1b[32mok\x1b[0m  ' : '\x1b[33maviso\x1b[0m'} ${farmacias.turnos.length} turnos reconocidos en colbalcarce.com`); } catch (e) { log(`  \x1b[31mfalla\x1b[0m farmacias: ${e.message}`); }
 
   // 5. Resumen en pantalla
   const porSeccion = {};
@@ -1480,8 +1492,8 @@ export async function ingestar({
     log('\n\x1b[1mFARMACIA DE TURNO\x1b[0m');
     log(`  hoy (día ${hoy}): ${deHoy ? `\x1b[1m${deHoy.farmacias.join(' y ')}\x1b[0m` : 'no figura en el cronograma'}`);
     const prox = farmacias.turnos.filter((t) => t.dia > hoy).slice(0, 4);
-    if (prox.length) console.log(`  siguen: ${prox.map((t) => `${t.dia} ${t.farmacias.join('/')}`).join(' · ')}`);
-    for (const a of farmacias.avisos) console.log(`  \x1b[33maviso\x1b[0m ${a}`);
+    if (prox.length) log(`  siguen: ${prox.map((t) => `${t.dia} ${t.farmacias.join('/')}`).join(' · ')}`);
+    for (const a of farmacias.avisos) log(`  \x1b[33maviso\x1b[0m ${a}`);
   }
 
   // 6. Archivos de salida
@@ -1616,7 +1628,7 @@ function armarPreview(d) {
 // y cuál es la ventana que abrimos sólo para poder probar. Las pruebas están
 // en la carpeta pruebas/ y corren con `npm test`, sin red.
 export const paraPruebas = {
-  idDe, normalizar, parecido, sentenciar, esDeBalcarce, figuraQueNombra,
+  idDe, normalizar, sentenciar, esDeBalcarce, figuraQueNombra, PALABRAS_DEBILES,
   clasificar, semaforo, limpiarCopete, relevancia, meta, parsearScrape,
   cieloDeSimbolo, haceCuanto, sinEtiquetas, decodificar,
   clavesDe, anotar, buscarFarmacia, directorioDeLaVanguardia, mediosMinimosDe,

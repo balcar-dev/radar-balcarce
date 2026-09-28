@@ -142,6 +142,19 @@ const unir = (partes) => partes.filter(Boolean).join(' ');
 export const comoNombre = (s) => String(s).toLowerCase()
   .replace(/(^|\s|-)([a-záéíóúñ])/g, (_, a, b) => a + b.toUpperCase());
 
+/**
+ * El guion mecánico de UNA nota: el mismo titular que está en la placa, y nada
+ * más (sin el punto o los dos puntos del final, con un punto). Es el respaldo
+ * de la reescritura en el panel (panel/servidor.mjs, vía reels/plan.mjs, que lo
+ * re-exporta con este nombre). Vive acá, sin nada de afuera de Node, para que
+ * reels/reescritura.mjs pueda usar este mismo en vez de su copia
+ * (`mecanicoPorDefecto` arma el mismo texto a mano).
+ */
+export function guionNoticia(n) {
+  const titulo = String(n?.titulo ?? '').replace(/\s+/g, ' ').trim().replace(/[.:]+$/, '');
+  return `${titulo}.`;
+}
+
 // --- el clima --------------------------------------------------------------
 
 const hayTormenta = (c) => /tormenta|granizo/i.test(String(c?.cielo ?? ''));

@@ -10,7 +10,8 @@
 // Ahora hay dos listas separadas:
 //
 //   portada.json   lo que se MUESTRA: portada, secciones, temas, buscador,
-//                  feed. Sólo notas de las últimas 36 horas (eran 72).
+//                  feed. Sólo notas de las últimas HORAS_EN_PORTADA (36
+//                  desde el 28/09; eran 72).
 //   archivo.json   lo que tiene PÁGINA: todo lo publicado de los últimos 180
 //                  días, con lo necesario para armar la página de la nota.
 //
@@ -106,7 +107,7 @@ export function vigenteEnPortada(nota, ahora = Date.now(), horas = HORAS_EN_PORT
  *
  * Los medios "actualizan" sus notas y el feed trae la fecha nueva: la de
  * Colapinto y Gasly en Bakú (sábado 26/09) figuraba "hace 46 minutos" el lunes
- * 28 (Hernán), y con la fecha corriéndose sola nunca cumplía las 72 horas. Una
+ * 28 (Hernán), y con la fecha corriéndose sola nunca salía de la portada. Una
  * nota puede envejecer, nunca rejuvenecer. Devuelve ISO, o la de la ingesta si
  * no hay ninguna fecha válida.
  */
@@ -126,7 +127,7 @@ export const HORAS_PARA_ESTRENAR = 12;
 /**
  * ¿Esta nota llega tarde para estrenarse? Una nota que nunca salió no se
  * publica si el hecho (su fecha, ya corregida con fechaDeLaNota) tiene más de
- * HORAS_PARA_ESTRENAR. Lo ya publicado sigue su curso hasta las 36 horas.
+ * HORAS_PARA_ESTRENAR. Lo ya publicado sigue su curso hasta HORAS_EN_PORTADA.
  *
  * 28/09, Hernán: "¿por qué trae noticias viejas todo el tiempo?". De 140 notas
  * publicadas desde el viernes, 40 salieron con el hecho de más de 24 horas y 20
@@ -205,7 +206,8 @@ export function comoArchivoJson(notas = []) {
  *
  *   · Lo que está hoy en las listas entra (o se actualiza, si le corrigieron
  *     el titular o el copete). La dirección no cambia nunca.
- *   · Lo que ya estaba y hoy sigue publicado pero tiene más de 72 horas, se
+ *   · Lo que ya estaba y hoy sigue publicado pero ya salió de las listas
+ *     (más de HORAS_EN_PORTADA), se
  *     actualiza igual: una corrección llega también a la página vieja.
  *   · Lo que ya estaba y la ingesta ya no trae, queda como estaba.
  *   · Lo que alguien bloqueó, o que el semáforo ahora frena (`retiradas`),

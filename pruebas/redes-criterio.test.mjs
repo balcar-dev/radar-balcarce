@@ -34,7 +34,7 @@ import {
   CLIMA_VOZ, PODCAST_VOZ, PIEZA_FIJA_VOZ,
 } from '../redes/guiones.mjs';
 import {
-  guionRepaso, guionPodcast, mensajeDeNota, mensajeParaInstagram, FRASES_DEL_ENLACE,
+  guionRepaso, guionPodcast, mensajeDeNota, FRASES_DEL_ENLACE,
 } from '../redes/elegir.mjs';
 import { pieDePieza } from '../redes/piezas.mjs';
 import { fechaEnBalcarce } from '../ingesta/utiles.mjs';
@@ -436,7 +436,8 @@ test('el posteo (Facebook e Instagram): con enlace radarbalcarce.com, sin fuente
   ];
   const frases = new Set();
   for (const n of notas) {
-    for (const m of [mensajeDeNota(n, 'https://radarbalcarce.com'), mensajeParaInstagram(n, 'https://radarbalcarce.com')]) {
+    // Facebook y el pie de la foto espejo en Instagram usan el mismo texto.
+    for (const m of [mensajeDeNota(n, 'https://radarbalcarce.com')]) {
       assert.deepEqual(revisarTexto(m, { tipo: 'texto' }), [], m);
       assert.match(m, /https:\/\/radarbalcarce\.com\/nota\//);
       assert.doesNotMatch(m, /Resumen hecho con IA|con IA/);

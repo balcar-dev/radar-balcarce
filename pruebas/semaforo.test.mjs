@@ -22,7 +22,7 @@ const { semaforo, normalizar } = paraPruebas;
  *  sale sola. Así el color depende sólo de las palabras. */
 const colorDe = (titulo, cuerpo = '') => semaforo({
   titulo, cuerpo, categorias: [], peso: 20, alcance: 'local', local: true, fecha: new Date(), imagen: null,
-}, 'Balcarce', 100).color;
+}, 'Balcarce').color;
 
 // ------------------------------------------------------ 1. todos los términos
 
@@ -132,7 +132,7 @@ test('semaforoDelTexto no mira las promociones: una página entera siempre dice 
 test('una nota de la cotización del dólar no sale sola: queda amarilla con su motivo', () => {
   const s = semaforo({
     titulo: 'El dólar minorista y el dólar blue cotizan este viernes', cuerpo: '', categorias: [], peso: 20, alcance: 'pais', local: false, fecha: new Date(), imagen: null,
-  }, 'Economía', 100);
+  }, 'Economía');
   assert.equal(s.color, 'amarillo');
   assert.equal(s.motivo, MOTIVO_COTIZACION);
   for (const t of ['Dólar hoy: a cuánto cotiza el oficial', 'Dólar blue hoy en vivo', 'Cotización del dólar este lunes', 'El dólar MEP cerró en alza']) {

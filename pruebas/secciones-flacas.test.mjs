@@ -21,7 +21,9 @@ import {
 } from '../ingesta/criterio.mjs';
 import { ordenarParaReescribir } from '../reels/reescritura.mjs';
 
-const { clasificar, semaforo, mediosMinimosDe } = paraPruebas;
+const {
+  clasificar, semaforo, mediosMinimosDe, esPolicialDeAfuera,
+} = paraPruebas;
 
 const NUEVAS = {
   'infobae-teleshow': 'Cultura y agenda',
@@ -124,8 +126,8 @@ const deAfuera = (titulo, seccion, extra = {}) => ({
 
 test('una nota de espectáculos de afuera sale sola si la cuentan tres medios; con dos espera', () => {
   const n = deAfuera('Lali Espósito y su tercer River: todo lo que hay que saber para el show del sábado', 'Cultura y agenda');
-  assert.equal(semaforo(n, 'Cultura y agenda', 30, 3).color, 'verde');
-  const s = semaforo(n, 'Cultura y agenda', 90, 2);
+  assert.equal(semaforo(n, 'Cultura y agenda', 3).color, 'verde');
+  const s = semaforo(n, 'Cultura y agenda', 2);
   assert.equal(s.color, 'amarillo');
   assert.equal(s.motivo, 'de afuera y poco contada (2 medios; Cultura y agenda pide 3)');
 });
@@ -166,7 +168,7 @@ test('Policiales de afuera no sale solo (cupo 0); lo de Balcarce y la zona no cu
 
 test('títulos reales: el crimen de otro lugar espera; el robo en Balcarce pasa el filtro de sección', () => {
   const crimen = deAfuera('Mató a su mujer embarazada, se escapó de la cárcel, estuvo 22 años prófugo y ahora ordenaron su captura', 'Policiales');
-  assert.equal(semaforo(crimen, 'Policiales', 60).color, 'amarillo');
+  assert.equal(semaforo(crimen, 'Policiales').color, 'amarillo');
   const robo = deAfuera('Investigan un robo en una casa de Balcarce', 'Policiales', { alcance: 'local', local: true, nombraBalcarce: true });
   assert.equal(clasificar({ ...RSS(robo.titulo), alcance: 'local', seccionFuente: 'Policiales' }), 'Policiales');
 });
@@ -174,47 +176,54 @@ test('títulos reales: el crimen de otro lugar espera; el robo en Balcarce pasa 
 // --------------------------------------------- 4. el semáforo sigue mandando
 
 test('un crimen de otro lugar, de un feed policial, no sale solo: "Mató a su mujer embarazada…" (26/09)', () => {
+  // Desde el 27/09 ni siquiera se trae: esPolicialDeAfuera lo saca antes del
+  // semáforo. Por eso la regla policialDeAfuera del semáforo se sacó (28/09):
+  // no se alcanzaba nunca. Y si llegara, con un medio espera igual.
   const n = deAfuera('Mató a su mujer embarazada, se escapó de la cárcel, estuvo 22 años prófugo y ahora ordenaron su captura', 'Policiales');
-  const s = semaforo(n, 'Policiales', 60);
+  assert.equal(esPolicialDeAfuera(n), true, 'no entra a la ingesta');
+  const s = semaforo(n, 'Policiales', 1);
   assert.equal(s.color, 'amarillo');
-  assert.equal(s.motivo, MOTIVO_POLICIAL_DE_AFUERA);
+  assert.notEqual(s.motivo, MOTIVO_POLICIAL_DE_AFUERA, 'la regla vieja del semáforo ya no existe');
 });
 
 test('un policial neutro de afuera pasa el semáforo si lo cuentan tres medios (después el cupo 0 lo frena)', () => {
   const n = deAfuera('Hallaron más de 1.500 kilos de marihuana ocultos entre muebles en un camión proveniente de Brasil', 'Policiales', { cuerpo: 'Un cargamento en una ruta de Misiones.' });
-  assert.equal(semaforo(n, 'Policiales', 45, 3).color, 'verde');
-  assert.equal(semaforo(n, 'Policiales', 90, 2).color, 'amarillo');
+  assert.equal(semaforo(n, 'Policiales', 3).color, 'verde');
+  assert.equal(semaforo(n, 'Policiales', 2).color, 'amarillo');
 });
 
-test('la regla de policiales de afuera no toca lo de Balcarce ni otras secciones', () => {
+test('el filtro de policiales de afuera no toca lo de Balcarce ni otras secciones', () => {
   const local = deAfuera('Un vecino de Balcarce dijo que mataron a su perro', 'Policiales', { alcance: 'local', local: true });
-  assert.equal(semaforo(local, 'Policiales', 60).color, 'verde');
+  assert.equal(esPolicialDeAfuera(local), false);
+  assert.equal(semaforo(local, 'Policiales').color, 'verde');
   const nombra = deAfuera('Balcarce: detuvieron a dos por un robo', 'Policiales', { nombraBalcarce: true, cuerpo: 'En Balcarce.' });
-  assert.notEqual(semaforo(nombra, 'Policiales', 60).motivo, MOTIVO_POLICIAL_DE_AFUERA);
+  assert.equal(esPolicialDeAfuera(nombra), false);
+  assert.notEqual(semaforo(nombra, 'Policiales').motivo, MOTIVO_POLICIAL_DE_AFUERA);
   const cine = deAfuera('Estrenan una película sobre un crimen sin resolver', 'Cultura y agenda');
-  assert.notEqual(semaforo(cine, 'Cultura y agenda', 60).motivo, MOTIVO_POLICIAL_DE_AFUERA);
+  assert.equal(esPolicialDeAfuera(cine), false);
+  assert.notEqual(semaforo(cine, 'Cultura y agenda').motivo, MOTIVO_POLICIAL_DE_AFUERA);
   for (const p of REGLAS_SEMAFORO.policialDeAfuera) assert.equal(p, p.toLowerCase(), `en minúscula: ${p}`);
 });
 
 test('lo internacional sin relación con Balcarce sigue esperando en las secciones nuevas', () => {
   const n = deAfuera('Donald Trump y Xi Jinping concluyen su cumbre en Washington', 'Tecnología');
-  const s = semaforo(n, 'Tecnología', 70);
+  const s = semaforo(n, 'Tecnología');
   assert.equal(s.color, 'amarillo');
   assert.equal(s.motivo, MOTIVO_INTERNACIONAL);
 });
 
 test('en espectáculos, una muerte o un menor siguen esperando a una persona', () => {
   const muerte = deAfuera('Murió Oscar el "Negro" González Oro: reacciones y mensajes de despedida', 'Cultura y agenda');
-  assert.equal(semaforo(muerte, 'Cultura y agenda', 60).color, 'amarillo');
+  assert.equal(semaforo(muerte, 'Cultura y agenda').color, 'amarillo');
   const chico = deAfuera('Un nene de 7 años fue el protagonista de la obra que se estrena', 'Cultura y agenda');
-  assert.equal(semaforo(chico, 'Cultura y agenda', 60).color, 'amarillo');
+  assert.equal(semaforo(chico, 'Cultura y agenda').color, 'amarillo');
   const rojo = deAfuera('Documental sobre un caso de abuso sexual en una escuela', 'Cultura y agenda');
-  assert.equal(semaforo(rojo, 'Cultura y agenda', 90).color, 'rojo');
+  assert.equal(semaforo(rojo, 'Cultura y agenda').color, 'rojo');
 });
 
 test('la cotización del dólar de Infocampo (Agro) sigue sin salir como nota', () => {
   const n = deAfuera('Euro BLUE HOY: precio y cotización de este 25 septiembre 2026', 'Agro');
-  assert.equal(semaforo(n, 'Agro', 60).color, 'amarillo');
+  assert.equal(semaforo(n, 'Agro').color, 'amarillo');
 });
 
 // ------------------------------ 5. la IA gasta primero donde hay menos notas

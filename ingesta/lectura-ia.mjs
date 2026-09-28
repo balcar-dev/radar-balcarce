@@ -19,15 +19,14 @@ import path from 'node:path';
 import { claveClasificacion, claveGroq, leerVariable } from '../reels/claves.mjs';
 import { fichaDeFuente, FUENTES, FUENTES_NACIONALES, CONEXION_ARGENTINA, PALABRAS_LOCALES } from './fuentes.mjs';
 import { FUENTES_CRUCE } from './fuentes-cruce.mjs';
+import { diaAR } from './zona.mjs';
+import { sinTildes } from '../web/lib/texto.js';
 
 /** ¿El título nombra a Balcarce o a una localidad del partido? */
 function nombraBalcarceEnElTitulo(n) {
-  const titulo = sinTildesSimple(n.titulo ?? '');
-  return PALABRAS_LOCALES.some((p) => titulo.includes(sinTildesSimple(p)));
+  const titulo = sinTildes(n.titulo ?? '');
+  return PALABRAS_LOCALES.some((p) => titulo.includes(sinTildes(p)));
 }
-
-const sinTildesSimple = (s) => String(s).normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
-import { diaAR } from './zona.mjs';
 
 const AQUI = import.meta.dirname;
 const MODELO = 'gemini-flash-lite-latest';
@@ -45,7 +44,7 @@ export const IMPACTOS = ['directo', 'indirecto', 'nulo'];
 export const RAZONES = ['local', 'servicio', 'actividad', 'provincia', 'nacional', 'popular', 'ninguna'];
 export const IMPORTANCIAS = ['alta', 'media', 'baja'];
 
-/** Los números de la prueba silenciosa. */
+/** Los números de la lectura con IA (decide desde el 27/09). */
 export const LECTURA = {
   // 12 y no 20: con 20 notas y sus bajadas, un pedido de cada tres pasaba el
   // minuto de espera y se perdía (27/09).
@@ -57,8 +56,10 @@ export const LECTURA = {
   pedidosPorCorrida: 5,
   pedidosPorDia: 60,
   pedidosPorDiaConClavePropia: 200,
-  // El pedido que junta repetidas: uno por corrida como mucho, si cambió la lista.
-  // Dos pedidos por corrida (lo que va a salir, y lo de afuera con un medio).
+  // Las repetidas: una vuelta por corrida como mucho, y sólo si cambió la
+  // lista. Cada vuelta hace hasta dos pedidos (lo que va a salir, y lo de
+  // afuera que espera por pocos medios) y cuenta como una contra este tope
+  // (web/scripts/generar-datos.mjs).
   pedidosRepetidasPorDia: 60,
   // Cuánto se guarda una ficha.
   diasDeFichas: 3,
@@ -316,29 +317,6 @@ export async function leerNotasNuevas(notas, {
 }
 
 /**
- * Qué habría hecho distinto la IA, comparando su ficha con lo que decidió el
- * sistema de siempre. Es el corazón de la prueba silenciosa: no cambia nada,
- * sólo cuenta. Devuelve { comparadas, ...casos } con los ejemplos de cada uno.
- */
-export function compararConElSistema(notas, fichas = {}) {
-  const r = {
-    comparadas: 0, otraSeccion: [], noEsDeBalcarce: [], esDeBalcarce: [], noInteresa: [], publicidad: [],
-  };
-  for (const n of notas) {
-    const f = fichas[n.id];
-    if (!f) continue;
-    r.comparadas += 1;
-    const caso = { id: n.id, titulo: n.titulo, seccion: n.seccion, ia: f.seccion, ambito: f.ambito, porque: f.porque };
-    if (f.seccion !== n.seccion) r.otraSeccion.push(caso);
-    if (n.local && f.ambito !== 'balcarce') r.noEsDeBalcarce.push(caso);
-    if (!n.local && f.ambito === 'balcarce') r.esDeBalcarce.push(caso);
-    if (n.semaforo === 'verde' && f.impacto === 'nulo') r.noInteresa.push(caso);
-    if (n.semaforo === 'verde' && f.publicidad) r.publicidad.push(caso);
-  }
-  return r;
-}
-
-/**
  * La IA decide (27/09, Hernán: "sin testear, corregimos en vivo"). Aplica cada
  * ficha a su nota, con límites que no se negocian:
  *
@@ -352,9 +330,13 @@ export function compararConElSistema(notas, fichas = {}) {
  *     con Balcarce (impacto nulo); un policial que no es de Balcarce.
  *   · Es de Balcarce sólo con dos llaves: la fuente es de acá o el medio lo
  *     dice en el título, Y la IA dice que el hecho es de Balcarce. Una nota
- *     nacional reproducida por un medio local deja de ser local (sin los +25).
- *   · La sección es la de la IA, salvo "Balcarce" para lo que no es de acá. Si
- *     la IA la manda a País (que no sale sola), la nota espera.
+ *     nacional reproducida por un medio local deja de ser local (sin los +25)
+ *     y queda marcada `noEsDeAcaSegunLaIA`: para esDeAca (ingesta/ingesta.mjs)
+ *     el título ya no alcanza, y pide los medios de lo de afuera.
+ *   · La sección es la de la IA, salvo "Balcarce" para lo que no es de acá.
+ *     Las fichas viejas que dicen Servicios o País se traducen a Balcarce y
+ *     Argentina. Si la IA la manda a una sección que no sale sola (fuera de
+ *     `verdeSecciones`), la nota espera.
  *
  * Devuelve { notas, cambios } sin tocar las originales.
  */
@@ -375,8 +357,8 @@ export function aplicarFichas(notas, fichas = {}, { verdeSecciones = [] } = {}) 
     const esLocal = llaveDeLaFuente && (f.ambito === 'balcarce' || f.impacto === 'directo');
     // Lo argentino en el exterior (Milei en París, Malvinas en la ONU) y lo que
     // cubren muchos medios o es muy importante no se saca por "no ser de acá".
-    const palabrasDelTitulo = new Set(sinTildesSimple(n.titulo ?? '').split(/[^a-z0-9ñ]+/));
-    const conexionArgentina = CONEXION_ARGENTINA.some((p) => palabrasDelTitulo.has(sinTildesSimple(p)));
+    const palabrasDelTitulo = new Set(sinTildes(n.titulo ?? '').split(/[^a-z0-9ñ]+/));
+    const conexionArgentina = CONEXION_ARGENTINA.some((p) => palabrasDelTitulo.has(sinTildes(p)));
     const nacionalQueImporta = (n.medios?.length ?? 1) >= 3 || f.importancia === 'alta'
       || ['nacional', 'popular', 'servicio'].includes(f.razon);
     const caso = { id: n.id, titulo: n.titulo, porque: f.porque };
@@ -395,6 +377,9 @@ export function aplicarFichas(notas, fichas = {}, { verdeSecciones = [] } = {}) 
     else if (f.seccion === 'Policiales' && !esLocal) motivo = 'policial que no es de Balcarce';
     if (motivo) { cambios.sacadas.push({ ...caso, motivo }); continue; }
 
+    // Tenía la llave de la fuente o del título pero la IA dice que el hecho no
+    // es de acá: se rige por lo de afuera (esDeAca, ingesta/ingesta.mjs).
+    if (llaveDeLaFuente && !esLocal) n.noEsDeAcaSegunLaIA = true;
     if (n.local && !esLocal) {
       n.local = false;
       n.relevancia = Math.max(0, (n.relevancia ?? 0) - 25);
@@ -487,17 +472,13 @@ export function unirGrupos(anteriores = [], nuevos = [], idsVigentes = null) {
 }
 
 /**
- * De cada grupo de repetidas queda una sola: la que cuentan más medios y, si
- * empatan, la de más puntaje. Se le suman los medios de las otras (así cuenta
- * como contada por varios). Devuelve { notas, repetidas } sin tocar las
- * originales.
- */
-/**
- * Qué nota de un grupo de repetidas queda (27/09): primero la que ya está
+ * De cada grupo de repetidas queda una sola (27/09): primero la que ya está
  * publicada (`publicadas`, los ids de la portada anterior: si no, una nota
  * que la gente ya ve desaparece y queda otra que todavía no tiene cuerpo),
  * después la que puede salir sola (verde), después la que cuentan más medios
- * y por último la de más puntaje.
+ * y por último la de más puntaje. Se le suman los medios de las otras (así
+ * cuenta como contada por varios). Devuelve { notas, repetidas } sin tocar
+ * las originales.
  */
 export function quitarRepetidas(notas, grupos = [], { publicadas = new Set() } = {}) {
   const porId = new Map(notas.map((n) => [n.id, n]));

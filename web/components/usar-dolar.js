@@ -2,9 +2,9 @@
 
 // El dólar en el navegador: arranca con la foto que vino armada del servidor,
 // le pregunta a la fuente al abrir la página y cada 5 minutos, y devuelve
-// { datos, estado, ahora }. Lo usan /dolar (dolar-vivo.js) y el panel de la
-// portada (tarjeta-dolar.js): la consulta y sus estados se escriben una sola
-// vez (lib/dolar.js).
+// { datos, estado, ahora }. Lo usan /dolar (dolar-vivo.js) y el renglón del
+// dólar de la portada (hoy-balcarce.js): la consulta y sus estados se escriben
+// una sola vez (lib/dolar.js).
 //
 //   estado 'guardada'  lo que vino en el HTML, todavía sin consultar
 //   estado 'cargando'  el navegador está consultando

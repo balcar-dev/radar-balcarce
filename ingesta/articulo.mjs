@@ -24,23 +24,38 @@
 
 import { REESCRITURA } from './criterio.mjs';
 
-const ENTIDADES = {
-  '&nbsp;': ' ', '&amp;': '&', '&quot;': '"', '&#39;': "'", '&apos;': "'", '&lt;': '<', '&gt;': '>',
-  '&aacute;': 'á', '&eacute;': 'é', '&iacute;': 'í', '&oacute;': 'ó', '&uacute;': 'ú', '&ntilde;': 'ñ',
-  '&Aacute;': 'Á', '&Eacute;': 'É', '&Iacute;': 'Í', '&Oacute;': 'Ó', '&Uacute;': 'Ú', '&Ntilde;': 'Ñ',
-  '&ldquo;': '"', '&rdquo;': '"', '&lsquo;': "'", '&rsquo;': "'", '&hellip;': '…', '&ndash;': '–', '&mdash;': '—',
-  '&uuml;': 'ü', '&Uuml;': 'Ü', '&iexcl;': '¡', '&iquest;': '¿', '&laquo;': '«', '&raquo;': '»',
+/** Las entidades de HTML con nombre que se traducen. Una sola lista para los
+ *  feeds (ingesta/ingesta.mjs) y para la página de la nota (28/09: había dos,
+ *  y cada una conocía entidades que la otra no). */
+export const ENTIDADES = {
+  amp: '&', lt: '<', gt: '>', quot: '"', apos: "'", nbsp: ' ',
+  aacute: 'á', eacute: 'é', iacute: 'í', oacute: 'ó', uacute: 'ú', ntilde: 'ñ', uuml: 'ü',
+  Aacute: 'Á', Eacute: 'É', Iacute: 'Í', Oacute: 'Ó', Uacute: 'Ú', Ntilde: 'Ñ', Uuml: 'Ü',
+  ldquo: '"', rdquo: '"', lsquo: '‘', rsquo: '’', laquo: '«', raquo: '»',
+  hellip: '…', ndash: '–', mdash: '—', iexcl: '¡', iquest: '¿',
 };
 
-function decodificar(texto) {
-  return String(texto)
-    .replace(/&#x([0-9a-f]+);/gi, (_, n) => String.fromCodePoint(parseInt(n, 16)))
-    .replace(/&#(\d+);/g, (_, n) => String.fromCodePoint(Number(n)))
-    .replace(/&[a-zA-Z]+;/g, (e) => ENTIDADES[e] ?? ' ');
+/** Un número de carácter, o la entidad tal cual si no es un carácter válido
+ *  (String.fromCodePoint lanza con un número fuera de rango). */
+const caracter = (n, entidad) => (Number.isInteger(n) && n >= 0 && n <= 0x10ffff ? String.fromCodePoint(n) : entidad);
+
+/**
+ * Traduce las entidades de HTML (&amp;, &aacute;, &#8220;, &#x2019;) y saca
+ * los envoltorios CDATA. Una entidad con nombre que no está en ENTIDADES
+ * queda tal cual, salvo que se pida otra cosa con `desconocidas` (el texto de
+ * la nota las cambia por un espacio: una entidad rara suelta en el medio de
+ * un párrafo es ruido para la IA).
+ */
+export function decodificar(texto = '', { desconocidas = null } = {}) {
+  return String(texto ?? '')
+    .replace(/<!\[CDATA\[([\s\S]*?)\]\]>/g, '$1')
+    .replace(/&#x([0-9a-f]+);/gi, (m, n) => caracter(parseInt(n, 16), m))
+    .replace(/&#(\d+);/g, (m, n) => caracter(Number(n), m))
+    .replace(/&([a-z]+);/gi, (m, n) => ENTIDADES[n] ?? desconocidas ?? m);
 }
 
 function limpiar(html) {
-  return decodificar(String(html).replace(/<[^>]+>/g, ' '))
+  return decodificar(String(html).replace(/<[^>]+>/g, ' '), { desconocidas: ' ' })
     .replace(/\s+/g, ' ')
     .trim();
 }

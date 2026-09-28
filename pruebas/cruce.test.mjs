@@ -7,7 +7,7 @@ import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
 import {
-  agruparPorHecho, mediosDistintos, leerMemoria, guardarMemoria, desdeLaMemoria, CRUCE,
+  agruparPorHecho, leerMemoria, guardarMemoria, desdeLaMemoria, CRUCE,
 } from '../ingesta/cruce.mjs';
 import { parsearFeed } from '../ingesta/ingesta.mjs';
 
@@ -26,7 +26,7 @@ test('el mismo hecho contado por tres medios con títulos distintos es una sola 
   const grupos = agruparPorHecho(notas);
   const ufc = grupos.find((g) => g.includes(0));
   assert.deepEqual(ufc.sort(), [0, 1, 2]);
-  assert.equal(mediosDistintos(ufc.map((i) => notas[i])), 3);
+  assert.equal(new Set(ufc.map((i) => notas[i].medio)).size, 3);
 });
 
 test('dos hechos distintos del mismo tema no se juntan', () => {

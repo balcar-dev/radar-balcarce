@@ -1,5 +1,7 @@
 // Arma el video vertical: placa + voz + subtítulos sincronizados palabra por
-// palabra. Todo con ffmpeg, sin servicios de pago.
+// palabra. El video se arma con ffmpeg, en la máquina; lo único que se paga es
+// la voz de Gemini (la clave de redes es paga desde el 25/09). Si Gemini falla,
+// lee Elena (Edge), que es gratis.
 
 import fs from 'node:fs';
 import path from 'node:path';
@@ -113,10 +115,9 @@ export async function recortarParaHistoria(mp4, salida) {
 export async function armarReel({
   nombre, svg, guion, acento = '#E8A33C', musica = false, indicacion = null,
   // Gemini por defecto: se nota bastante mejor que Edge, sobre todo en las
-  // piezas que se repiten todos los días. El cupo gratis es de 10 pedidos
-  // diarios y las piezas fijas son 4, así que entra holgado — y si se acaba,
-  // el respaldo de abajo lee con Elena y la pieza sale igual.
-  // Para forzar una u otra: VOZ=edge o VOZ=gemini.
+  // piezas que se repiten todos los días. La clave de redes es paga, así que
+  // no hay cupo diario que cuidar; si Gemini igual falla, el respaldo de abajo
+  // lee con Elena y la pieza sale igual.
   // La voz es siempre la misma (Kore, de CRITERIO-REDES.md): no se cambia por
   // variable de entorno. VOZ=edge sólo fuerza el respaldo.
   proveedor = process.env.VOZ ?? 'gemini', vozGemini = VOZ_DEL_MEDIO,
@@ -132,8 +133,8 @@ export async function armarReel({
   // alineando el texto con los silencios del audio (alinear.mjs).
   const texto = paraLeer(guion);
 
-  // Gemini es mejor pero es preview y tiene techo de pedidos en el plan
-  // gratuito. Si se planta, la pieza NO se cae: la lee Elena y sale igual.
+  // Gemini es mejor pero es un modelo en preview y a veces no contesta o pide
+  // esperar (429). Si se planta, la pieza NO se cae: la lee Elena y sale igual.
   // Un medio no puede dejar de publicar el clima porque una API dijo 429.
   let voz;
   let vozUsada = proveedor;

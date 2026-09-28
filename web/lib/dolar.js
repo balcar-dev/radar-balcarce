@@ -229,12 +229,11 @@ export function textoDeEstado({ estado, datos, ahora }) {
   return { titulo: `Cotización ${deCuando}`, detalle: guardada };
 }
 
-// ------------------------------------------------- el panel de la portada
+// ------------------------------------------------- el dólar de la portada
 //
-// La tarjeta chica de la columna derecha (components/tarjeta-dolar.js): oficial,
-// blue y MEP con la venta grande y la compra chica, la hora de la cotización y
-// un enlace a /dolar. Usa lo mismo que la página: la foto del build, la
-// consulta del navegador (traerDolar) y la misma forma de decir la hora.
+// El renglón del dólar de "Hoy en Balcarce" (components/hoy-balcarce.js): elige
+// oficial, blue y MEP de la misma consulta que usa /dolar (la foto del build y
+// traerDolar, vía components/usar-dolar.js).
 
 /** Los tipos que van en el panel, con el nombre corto. */
 export const CASAS_DEL_PANEL = [
@@ -251,24 +250,6 @@ export function filasDelPanel(cotizaciones = []) {
       return c && esNumero(c.venta) ? { casa, nombre, compra: c.compra ?? null, venta: c.venta, fecha: c.fecha } : null;
     })
     .filter(Boolean);
-}
-
-/**
- * La línea de la hora del panel: "Cotización de las 14:32", con el día si no
- * es de hoy ("de ayer a las 17:56") y "; no se pudo actualizar" si el
- * navegador consultó y ninguna fuente contestó. No promete inmediatez. Es la
- * hora que informa la fuente para las filas que se ven, no la del pedido.
- * Devuelve null si no hay nada que mostrar.
- */
-export function horaDelPanel({ estado, filas = [], ahora }) {
-  if (!filas.length) return null;
-  const ultima = ultimaFecha(filas);
-  if (!ultima) return null;
-  const m = momento(ultima, ahora);
-  let texto = `Cotización de las ${m.hora}`;
-  if (m.dia === 'ayer') texto = `Cotización de ayer a las ${m.hora}`;
-  else if (m.dia) texto = `Cotización del ${m.dia.replace(/^el /, '')} a las ${m.hora}`;
-  return estado === 'fallo' ? `${texto}; no se pudo actualizar` : texto;
 }
 
 /** Una señal que corta a los `ms` (AbortSignal.timeout no está en todos los

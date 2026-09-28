@@ -48,18 +48,6 @@ export function titularNormalizado(titulo = '') {
     .replace(/[^a-z0-9]+/g, ' ').trim();
 }
 
-/** Saca de la lista las notas con un titular ya visto (en la lista o en
- *  `yaMostradas`), dejando la primera. */
-export function sinTitularRepetido(notas = [], yaMostradas = []) {
-  const vistos = new Set(yaMostradas.map((n) => titularNormalizado(n.titulo)));
-  return notas.filter((n) => {
-    const t = titularNormalizado(n.titulo);
-    if (vistos.has(t)) return false;
-    vistos.add(t);
-    return true;
-  });
-}
-
 // Las palabras que no distinguen un titular de otro.
 const VACIAS = new Set(['de', 'la', 'el', 'en', 'y', 'a', 'los', 'las', 'un', 'una', 'del',
   'por', 'con', 'para', 'que', 'se', 'su', 'al', 'lo', 'es', 'no', 'mas', 'sobre', 'tras']);

@@ -170,7 +170,7 @@ test('posteos: quedar corto sin candidatas es normal; quedar corto con candidata
   const libro = libroCompleto('2026-09-23');
   for (const id of ['d', 'e']) { delete libro.facebook[`2026-09-23-${id}`]; delete libro.instagramFeed[`2026-09-23-${id}`]; }
   const nota = (id, relevancia, extra = {}) => ({
-    id, titulo: `Titular distinto número ${id} sobre otro asunto ${id}`, relevancia, seccion: 'Balcarce', cuerpo: 'palabra '.repeat(100),
+    id, titulo: `Titular distinto número ${id} sobre otro asunto ${id}`, relevancia, seccion: 'Balcarce', local: true, cuerpo: 'palabra '.repeat(100),
     publicadaCuando: UTC('2026-09-23', '15:00'), fecha: UTC('2026-09-23', '15:00'), temas: [`tema-${id}`], ...extra,
   });
   const cierre = AR('2026-09-24', '00:10');
@@ -201,7 +201,7 @@ test('posteos: a las 15:00 con 3 de 5 todavía está a tiempo (hasta las 22:00)'
 
 test('candidatas: no cuenta lo de Política y Policiales, lo repetido de tema ni lo que espera cuerpo', () => {
   const libro = { facebook: {} };
-  const base = { relevancia: 90, seccion: 'Balcarce', cuerpo: 'palabra '.repeat(100), publicadaCuando: UTC('2026-09-23', '12:00'), temas: [] };
+  const base = { relevancia: 90, seccion: 'Balcarce', local: true, cuerpo: 'palabra '.repeat(100), publicadaCuando: UTC('2026-09-23', '12:00'), temas: [] };
   const notas = [
     { id: '1', titulo: 'Reabre el autódromo Fangio con carreras', ...base },
     { id: '2', titulo: 'Reabre el autódromo Fangio con más carreras', ...base },

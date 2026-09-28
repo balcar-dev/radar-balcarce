@@ -161,14 +161,13 @@ desde 1180 px queda fija arriba.
 
 ### Servicios en el celular (menos de 620 px)
 
-El bloque "servicios en el celular" **al final** de `globals.css` compacta clima,
-farmacia y dólar (objetivo: menos de 420 px entre las tres a 375 px de ancho; se mide
-en el navegador con `getBoundingClientRect` sobre `.servicios`). Se apilan, no van
-en carrusel: nada queda escondido detrás de un gesto. El clima muestra los días en
-una fila baja (con la probabilidad de lluvia junto al día, `.lluvia-chica`); el dólar
-oculta el MEP (`.fila-panel-dolar:nth-child(n+3)`) pero conserva la grilla de tres
-columnas alineadas. En escritorio no cambia nada. Va al final de la hoja para ganarle
-a las reglas base.
+El bloque "servicios en el celular" **al final** de `globals.css` compacta el clima
+y la farmacia (se mide en el navegador con `getBoundingClientRect` sobre
+`.servicios`). Se apilan, no van en carrusel: nada queda escondido detrás de un
+gesto. El clima muestra los días en una fila baja (con la probabilidad de lluvia
+junto al día, `.lluvia-chica`). En escritorio no cambia nada. Va al final de la hoja
+para ganarle a las reglas base. (El dólar de la portada es, desde el 28/09, un
+renglón de "Hoy en Balcarce", `components/hoy-balcarce.js`.)
 
 ### La farmacia (`components/piezas.js`, `lib/farmacias.js`)
 
@@ -181,9 +180,9 @@ muestra la de turno con la misma tarjeta y la semana ordenada, sin repetir hoy.
 ### Cómo se elige lo que se ve (tapa, secciones, "Seguí leyendo")
 
 - `armarTapa(notas, orden, { archivo })` (`lib/datos.js`): la grande y cuatro
-  secundarias salen sólo de las últimas 72 horas; cada sección muestra tres notas y,
-  si en 72 horas hay menos, se completa con el archivo, pero sólo con lo de esas
-  mismas 72 horas (`HORAS_PARA_COMPLETAR`, 27/09; eran 14 días), con cuerpo, sin
+  secundarias salen sólo de las últimas `HORAS_EN_PORTADA` (36 desde el 28/09); cada
+  sección muestra tres notas y, si en ese tiempo hay menos, se completa con el archivo,
+  pero sólo con lo de esas mismas horas (`HORAS_PARA_COMPLETAR`, 27/09; eran 14 días), con cuerpo, sin
   repetidas ni notas propias, con su fecha real; una misma historia no completa
   dos secciones. Sección sin nada: no se dibuja.
 - `seguirLeyendo(nota, recientes, archivo)` (`lib/seguir-leyendo.js`): siempre cuatro

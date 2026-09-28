@@ -3,10 +3,15 @@
 # manda WhatsApp. Es para que Hernán y Andrés la corran cuando quieran:
 # Actions → "Auditar redes" → Run workflow. El resultado se lee en el registro.
 #
-#   hoy       las piezas del día contra el contrato, el libro y Meta
-#   ayer      lo mismo del día anterior
-#   semana    los últimos 7 días: porcentaje de cumplimiento por red y por pieza
-#   crudo     lo que devuelve Meta, sin interpretar (por si algo no cuadra)
+# No hay que elegir nada: cada corrida hace los cuatro pasos, uno atrás del otro
+# (si uno falla, los demás corren igual), y cada uno deja su parte del registro:
+#
+#   Hoy       las piezas del día contra el contrato, el libro y Meta
+#   Ayer      lo mismo del día anterior
+#   La semana los últimos 7 días: porcentaje de cumplimiento por red y por pieza
+#             (lo único que se puede pedir al lanzarla: `desde`, para contar
+#             desde otro día que no sea el 25/09, cuando empezó el contrato)
+#   Crudo     lo que devuelve Meta, sin interpretar (por si algo no cuadra)
 #
 # El contrato del día está en REDES.md ("El contrato del día"). El vigilante
 # hace la misma auditoría solo, todos los días a las 23:30 (redes/vigilar.mjs).

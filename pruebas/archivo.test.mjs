@@ -41,7 +41,7 @@ test('la lista de retiradas del repositorio está bien armada: cada una con moti
   }
   assert.equal(idsRetiradosAMano(json).size, entradas.length);
 });
-import { sinTitularRepetido, titularNormalizado } from '../web/lib/texto.js';
+import { titularNormalizado } from '../web/lib/texto.js';
 import { enlaceDeNota } from '../redes/elegir.mjs';
 import { redireccionesDeNotas } from '../web/scripts/generar-redirects.mjs';
 import { notasDelHistorial } from '../web/scripts/recuperar-archivo.mjs';
@@ -270,13 +270,6 @@ test('generar-datos corta las listas en 72 horas y guarda el archivo, sin tocar 
 // -------------------------------------------------- "Seguí leyendo" (25/09)
 
 test('"Seguí leyendo" no repite una nota con el mismo titular', () => {
-  const lista = [
-    { id: 'a', titulo: 'El Senado aprueba la reforma de Zona Fría en Balcarce' },
-    { id: 'b', titulo: 'El senado aprueba la reforma de Zona Fria en Balcarce.' },
-    { id: 'c', titulo: 'Otra cosa' },
-    { id: 'd', titulo: 'La que se está leyendo' },
-  ];
-  assert.deepEqual(sinTitularRepetido(lista, [{ id: 'x', titulo: 'La que se está leyendo' }]).map((n) => n.id), ['a', 'c']);
   assert.equal(titularNormalizado('¡Hola, Fangio!'), 'hola fangio');
   // Desde el 25/09 la página usa seguirLeyendo (pruebas/seguir-leyendo.test.mjs), que compara con mismaHistoria.
   assert.match(leer('web/app/nota/[id]/page.js'), /seguirLeyendo\(/);
@@ -370,6 +363,6 @@ test('generar-datos no estrena lo que llega tarde ni le pide cuerpo a Gemini, y 
   const s = fs.readFileSync(path.join(import.meta.dirname, '..', 'web', 'scripts', 'generar-datos.mjs'), 'utf8');
   // La misma fecha decide las dos cosas, sin excepción para las notas sin hora
   // (28/09: una sin hora quedaba fuera de la reescritura pero se podía estrenar).
-  assert.match(s, /if \(!humana && !yaSalieron\.has\(n\.id\) && llegaTarde\(fechaReal\(n\)\)\) return null;/);
-  assert.match(s, /\.filter\(\(n\) => previas\[n\.id\] \|\| yaSalieron\.has\(n\.id\)\s+\|\| !llegaTarde\(fechaReal\(n\)\)\);/);
+  assert.match(s, /const fecha = fechaReal\(n\);\s+(\/\/[^\n]*\s+)*if \(!humana && !yaSalieron\.has\(n\.id\) && llegaTarde\(fecha\)\) return null;/);
+  assert.match(s, /const fecha = fechaReal\(n\);\s+(\/\/[^\n]*\s+)*return vigenteEnPortada\(\{ fecha \}\) && \(yaSalieron\.has\(n\.id\) \|\| !llegaTarde\(fecha\)\);/);
 });

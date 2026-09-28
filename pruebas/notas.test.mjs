@@ -11,7 +11,7 @@ import { decisionHumana } from '../ingesta/utiles.mjs';
 import { CUPO_DE_AFUERA } from '../ingesta/fuentes.mjs';
 
 const {
-  normalizar, parecido, sentenciar, esDeBalcarce, figuraQueNombra,
+  normalizar, sentenciar, esDeBalcarce, figuraQueNombra,
   clasificar, semaforo, limpiarCopete, relevancia, idDe, parsearScrape, mediosMinimosDe,
 } = paraPruebas;
 
@@ -28,13 +28,6 @@ function nota(extra = {}) {
 test('normalizar saca tildes, mayúsculas y puntuación', () => {
   assert.equal(normalizar('Automovilismo: el TC en Balcarce'), 'automovilismo el tc en balcarce');
   assert.equal(normalizar('ÑOÑO, ¿sí?'), 'nono si');
-});
-
-test('parecido reconoce la misma noticia contada por dos medios', () => {
-  const a = 'Choque en la ruta 226 a la altura de Balcarce';
-  const b = 'Un choque en la ruta 226 cerca de Balcarce dejó dos heridos';
-  assert.ok(parecido(a, b) > 0.4, 'dos versiones de la misma noticia');
-  assert.ok(parecido(a, 'El Concejo aprobó el presupuesto') < 0.2, 'noticias distintas');
 });
 
 test('un título en mayúsculas se pasa a redacción normal', () => {
@@ -309,7 +302,7 @@ test('un descenso de temperatura no es un descenso de categoría', () => {
 
 test('lo de Balcarce sale solo aunque puntúe poco', () => {
   const local = nota({ titulo: 'Arreglan una vereda en el centro', local: true });
-  assert.equal(semaforo(local, 'Balcarce', 20).color, 'verde');
+  assert.equal(semaforo(local, 'Balcarce').color, 'verde');
 });
 
 test('lo de afuera que cuentan pocos medios espera, por más puntaje que tenga', () => {
@@ -317,41 +310,41 @@ test('lo de afuera que cuentan pocos medios espera, por más puntaje que tenga',
   // cuentan: el puntaje viejo frenaba a Ailín Pérez (9 medios) y dejaba pasar
   // notas de dos.
   const afuera = nota({ titulo: 'Boca derrota a San Lorenzo', alcance: 'pais', local: false });
-  const s = semaforo(afuera, 'Fútbol', 95, 3);
+  const s = semaforo(afuera, 'Fútbol', 3);
   assert.equal(s.color, 'amarillo');
   assert.equal(s.motivo, 'de afuera y poco contada (3 medios; Fútbol pide 4)');
-  assert.equal(semaforo(afuera, 'Fútbol', 20, 4).color, 'verde', 'con los medios, el puntaje no frena');
+  assert.equal(semaforo(afuera, 'Fútbol', 4).color, 'verde', 'con los medios, el puntaje no frena');
 });
 
 test('lo que nombra a una figura argentina pide dos medios', () => {
   const messi = nota({ titulo: 'Messi metió dos goles en Inter Miami', alcance: 'pais', local: false, figura: 'Messi' });
-  assert.equal(semaforo(messi, 'Fútbol', 50, 2).color, 'verde');
-  assert.equal(semaforo(messi, 'Fútbol', 90, 1).color, 'amarillo', 'nunca con un solo medio');
+  assert.equal(semaforo(messi, 'Fútbol', 2).color, 'verde');
+  assert.equal(semaforo(messi, 'Fútbol', 1).color, 'amarillo', 'nunca con un solo medio');
 });
 
 test('el automovilismo pide dos medios, no un puntaje', () => {
   // Es la ciudad de Fangio: pide lo mínimo de afuera, dos medios.
   const f1 = nota({ titulo: 'El complicado arte de frenar en la Fórmula 1', alcance: 'pais', local: false });
-  assert.equal(semaforo(f1, 'Automovilismo', 20, 2).color, 'verde');
-  assert.equal(semaforo(f1, 'Automovilismo', 90, 1).color, 'amarillo');
+  assert.equal(semaforo(f1, 'Automovilismo', 2).color, 'verde');
+  assert.equal(semaforo(f1, 'Automovilismo', 1).color, 'amarillo');
 });
 
 test('el piso no pisa a las reglas de arriba', () => {
   // Un tema sensible sigue bloqueado por más puntaje que tenga, y una
   // promoción sigue esperando por más local que sea.
   const grave = nota({ titulo: 'Detuvieron a un hombre por un femicidio', local: true });
-  assert.equal(semaforo(grave, 'Balcarce', 100).color, 'rojo');
+  assert.equal(semaforo(grave, 'Balcarce').color, 'rojo');
   const rifa = nota({ titulo: 'La rifa de Bomberos ya tiene su sorteo', local: true });
-  assert.equal(semaforo(rifa, 'Balcarce', 90).color, 'amarillo');
+  assert.equal(semaforo(rifa, 'Balcarce').color, 'amarillo');
 });
 
 test('Política y Policiales salen solas cuando no hay nada sensible', () => {
   // Estaban afuera y tenían 38 notas esperando que nadie aprobaba: dos
   // secciones enteras que no existían para el lector. Entraron el 21/09.
   const p = nota({ titulo: 'Se define la interna del oficialismo', local: true });
-  assert.equal(semaforo(p, 'Política', 70).color, 'verde');
+  assert.equal(semaforo(p, 'Política').color, 'verde');
   const po = nota({ titulo: 'Chocaron dos autos en la ruta', local: true });
-  assert.equal(semaforo(po, 'Policiales', 70).color, 'verde');
+  assert.equal(semaforo(po, 'Policiales').color, 'verde');
 });
 
 test('en Policiales lo grave sigue esperando a una persona', () => {
@@ -365,7 +358,7 @@ test('en Policiales lo grave sigue esperando a una persona', () => {
     'El acusado declaró ante el fiscal',
   ];
   for (const titulo of casos) {
-    const s = semaforo(nota({ titulo, local: true }), 'Policiales', 90);
+    const s = semaforo(nota({ titulo, local: true }), 'Policiales');
     assert.notEqual(s.color, 'verde', 'salió sola: ' + titulo);
   }
 });
@@ -375,7 +368,7 @@ test('una muerte espera se la llame como se la llame', () => {
   // "falleció". Es una necrológica, y las necrológicas no salen sin fuente
   // firmada.
   for (const titulo of ['Murió un reconocido vecino', 'Falleció el histórico dirigente', 'Es el velatorio de un docente']) {
-    const s = semaforo(nota({ titulo, local: true }), 'Balcarce', 90);
+    const s = semaforo(nota({ titulo, local: true }), 'Balcarce');
     assert.notEqual(s.color, 'verde', 'salió sola: ' + titulo);
   }
 });
@@ -384,16 +377,16 @@ test('la política de todos los días ya no espera', () => {
   // "intendente", "concejo deliberante", "paro" y "reclamo" frenaban
   // Política entera. Lo que acusa sigue esperando: eso es otra lista.
   for (const titulo of ['El intendente inauguró una obra', 'El Concejo Deliberante aprobó el presupuesto', 'Reclamo de vecinos por el alumbrado']) {
-    assert.equal(semaforo(nota({ titulo, local: true }), 'Política', 70).color, 'verde', titulo);
+    assert.equal(semaforo(nota({ titulo, local: true }), 'Política').color, 'verde', titulo);
   }
-  assert.notEqual(semaforo(nota({ titulo: 'Denuncian al intendente por irregularidades', local: true }), 'Política', 90).color, 'verde');
+  assert.notEqual(semaforo(nota({ titulo: 'Denuncian al intendente por irregularidades', local: true }), 'Política').color, 'verde');
 });
 
 test('Economía y Tecnología también salen solas, con dos medios', () => {
   const e = nota({ titulo: 'El dólar cerró en alza', alcance: 'pais', local: false });
-  assert.equal(semaforo(e, 'Economía', 45, 2).color, 'verde');
+  assert.equal(semaforo(e, 'Economía', 2).color, 'verde');
   const t = nota({ titulo: 'Nueva herramienta de inteligencia artificial', alcance: 'pais', local: false });
-  assert.equal(semaforo(t, 'Tecnología', 45, 2).color, 'verde');
+  assert.equal(semaforo(t, 'Tecnología', 2).color, 'verde');
 });
 
 // ------------------------------------ medios y cupos por sección
@@ -402,8 +395,8 @@ test('Fútbol y Deportes piden más medios que las secciones flacas', () => {
   // Son un tercio de todo lo que entra y no definen a un medio de Balcarce.
   // Tres medios alcanzan en Economía; en Fútbol, no.
   const afuera = (titulo) => nota({ titulo, alcance: 'pais', local: false });
-  assert.equal(semaforo(afuera('Boca ganó en la Bombonera'), 'Fútbol', 90, 3).color, 'amarillo');
-  assert.equal(semaforo(afuera('El BCRA subió la tasa'), 'Economía', 40, 2).color, 'verde');
+  assert.equal(semaforo(afuera('Boca ganó en la Bombonera'), 'Fútbol', 3).color, 'amarillo');
+  assert.equal(semaforo(afuera('El BCRA subió la tasa'), 'Economía', 2).color, 'verde');
   assert.ok(mediosMinimosDe('Fútbol') > mediosMinimosDe('Economía'));
   assert.ok(mediosMinimosDe('Deportes') > mediosMinimosDe('Argentina'));
   for (const s of ['Economía', 'Tecnología', 'Agro', 'Automovilismo', 'Argentina', 'Política', 'Fútbol', 'Deportes', 'Cultura y agenda']) {

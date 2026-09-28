@@ -15,7 +15,7 @@ cron-job.org ──(cada 30 min, 3 trabajos)──▶ GitHub Actions ──▶ C
                                                │  ├─ Cloudflare Pages  (sube el sitio)
                                                │  ├─ Auditoría         (lunes)
                                                │  └─ A mano: Piezas, Auditar redes, Auditar voz,
-                                               │     Ver Facebook y las tres pruebas
+                                               │     Ver Facebook, las tres pruebas y Probar banco de fotos
                                                ├──▶ Meta (Facebook + Instagram)
                                                ├──▶ Gemini (redacción y voces)
                                                └──▶ CallMeBot ──▶ WhatsApp de Hernán
@@ -31,7 +31,7 @@ PC de Hernán: el panel (puerto 4321) ── sincroniza decisiones a GitHub
 | **Vercel** | **Apagado desde el 25/09** (sin conexión a GitHub: no despliega ni recibe el dominio). El panel tampoco publica ahí. Falta borrar el proyecto y limpiar el DNS que quedó (`PENDIENTES.md`). El plan Hobby no permite publicidad. | `radarbalcarce@gmail.com` |
 | **cron-job.org** | Dispara tres trabajos en GitHub cada 30 minutos: "Actualizar la web", el reloj de "Redes" y "Vigilancia". | `radarbalcarce@gmail.com` |
 | **Meta** (app "Radar Balcarce Publicador") | Publicar en la página de Facebook "Radar Balcarce" y en Instagram `@radarbalcarce`. Usuario del sistema `publicador-radar`, token sin vencimiento. **La app se publicó (modo activo) el 26/09**: hasta entonces estaba en modo desarrollo y el público no veía los posteos ni los reels de Facebook (las historias sí). | `radarbalcarce@gmail.com` |
-| **Gemini** (Google) | Claves separadas: una gratis para redactar las notas, otra (paga) para las voces y los reels, y una tercera para la lectura con IA, que todavía falta cargar (mientras tanto usa la gratis de redacción, con tope). | `radarbalcarce@gmail.com` |
+| **Gemini** (Google) | Tres claves separadas: una gratis para redactar las notas, otra (paga) para las voces y los reels, y una tercera para la lectura con IA (cargada el 28/09). La lectura con IA tiene además un segundo proveedor gratis, **Groq** (`GROQ_API_KEY`, cargada el 28/09). Detalle de las cuatro en "Secretos y variables", más abajo. | `radarbalcarce@gmail.com` |
 | **CallMeBot** | Manda el WhatsApp de la vigilancia, sólo al número que lo activó. **Funciona desde el 25/09.** | El teléfono de Hernán |
 | **Search Console** | Indexación en Google (propiedad de dominio). | `radarbalcarce@gmail.com` |
 | **La PC de Hernán** | El panel y su carpeta `panel/datos/`. Ver `PANEL.md`. | — |
@@ -39,14 +39,14 @@ PC de Hernán: el panel (puerto 4321) ── sincroniza decisiones a GitHub
 ### Los workflows (`.github/workflows/`)
 
 Un **workflow** es una tarea automática de GitHub; se ven en la pestaña Actions.
-Son doce. La columna "Cuesta" dice si gasta plata (sólo Gemini con la clave paga
+Son trece. La columna "Cuesta" dice si gasta plata (sólo Gemini con la clave paga
 puede costar: todo lo demás es gratis).
 
 | Workflow | Cuándo corre | Qué hace | Cuesta |
 |---|---|---|---|
 | `actualizar.yml` · Actualizar la web | cron-job.org cada 30 min (y un `schedule` propio de GitHub, que es impuntual, como respaldo) | Corre las pruebas; lee las 214 fuentes activas (54 de `ingesta/fuentes.mjs` y 160 del cruce de medios, `ingesta/fuentes-cruce.mjs`; todas en `FUENTES.md`) y las cruza con la memoria de 36 horas, que guarda la caché de Actions (`.cache/`, fuera del repo); la lectura con IA decide qué entra; reescribe con IA lo que sale sin revisión; arma `web/data/portada.json` (sólo notas de las últimas 72 h), `web/data/archivo.json` (lo publicado de los últimos 180 días) y `web/data/notas-por-dia.json` (cuántas notas se publicaron cada día, por sección) y los sube. Tiempo máximo: 20 minutos. **Si las pruebas fallan, la web se queda como estaba.** | Gemini: primero la clave gratis; la paga sólo si la gratis se queda sin cupo. Tope de 450 notas por día (330 sin la clave de lectura) |
 | `cloudflare-deploy.yml` · Cloudflare Pages | Al terminar bien "Actualizar la web"; también a mano | Compila el sitio y lo sube a Cloudflare Pages con `wrangler` en una versión fija (4.139.0). Tiempo máximo: 15 minutos. | No |
-| `redes.yml` · Redes | cron-job.org cada 30 min, de 7 a 23 (y al terminar "Actualizar la web"); a mano con `reloj`, `verificar` o `facebook` | Publica en Facebook y, si a esa hora toca una pieza, la arma con la voz de Gemini y la sube a Instagram y a la página. Tiempo máximo: 25 minutos. | Sí, sólo cuando arma una pieza (voz, clave paga). Sin pieza que armar, no gasta |
+| `redes.yml` · Redes | cron-job.org cada 30 min, de 7 a 23 (y al terminar "Actualizar la web"); a mano con `reloj`, `verificar` o `facebook` | Publica en Facebook y, si a esa hora toca una pieza, la arma con la voz de Gemini y la sube a Instagram y a la página. Tiempo máximo: 25 minutos. Guarda el libro (`web/data/redes.json`) con hasta tres intentos, como "Actualizar la web". **Con `REDES_ACTIVAS` en otro valor que `Si`, Facebook sólo simula y el reloj no arma ninguna pieza** (28/09). | Sí, sólo cuando arma una pieza (voz, clave paga). Sin pieza que armar, o con las redes apagadas, no gasta |
 | `piezas.yml` · Piezas | A mano (Actions → Piezas → Run workflow) | Armar o publicar una pieza puntual, sin esperar su hora. | Sí (voz, clave paga) |
 | `vigilancia.yml` · Vigilancia | cron-job.org cada 30 min (y un `schedule` propio como respaldo); a mano con `probar-resumen` o `probar-cierre` | Corre `redes/vigilar.mjs`. Si encuentra un problema deja un aviso amarillo en Actions (no una falla roja) y manda el WhatsApp. | No |
 | `auditoria.yml` · Auditoría | Lunes, 12:00 UTC (9:00 en Balcarce); también a mano | Corre `redes/auditar.mjs`: medidas de imágenes, íconos, SEO en vivo y antigüedad de `FORMATOS.md`. Y `redes/auditar-redes.mjs --semana`: el contrato de las redes de los últimos 7 días (sólo en el registro). | No |
@@ -55,6 +55,7 @@ puede costar: todo lo demás es gratis).
 | `ver-facebook.yml` · Ver Facebook | A mano | Muestra qué hay publicado de verdad en la página de Facebook (posteos, reels, historias, visibilidad y configuración de la app). Sólo mira: no publica. Sirve para comprobar que el público ya ve lo que se publica. Necesita `META_TOKEN`. | No |
 | `prueba-estadisticas.yml` · Prueba de estadísticas | A mano | Muestra las visitas de la web y los números de Facebook e Instagram, y qué permisos faltan. No guarda ni avisa. | No |
 | `prueba-gemini.yml` · Prueba de Gemini | A mano | Un pedido mínimo con la clave gratis de redacción, para saber si anda. | No (clave gratis) |
+| `probar-fotos.yml` · Probar banco de fotos | A mano (Actions → Probar banco de fotos → Run workflow; se elige cuántas notas revisar) | Corre `ingesta/probar-fotos.mjs`: la comparación de fotos con IA sobre la tapa de hoy, para ver cómo quedarían las notas con foto real. Deja el reporte como artefacto de la corrida (14 días). No publica nada ni toca `portada.json`. Tiempo máximo: 40 minutos. | No (la clave de lectura o la de redacción, y Groq; nunca la paga de redes) |
 | `prueba-whatsapp.yml` · Prueba de WhatsApp | A mano (Actions → Prueba de WhatsApp → Run workflow) | Manda un mensaje de prueba y muestra lo que contestó CallMeBot. Sirve para ver que los secretos de WhatsApp están bien. | No |
 
 Todos comparten el huso horario de Balcarce (`TZ: America/Argentina/Buenos_Aires`)
