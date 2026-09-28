@@ -22,9 +22,11 @@
 import { claveClasificacion, claveGroq } from '../reels/claves.mjs';
 
 const MODELO_GEMINI = 'gemini-flash-lite-latest';
-// Llama 4 Scout: el modelo con visión que Groq aloja gratis (28/09). El
-// gpt-oss-120b que usa la lectura con IA es sólo de texto.
-const MODELO_GROQ_VISION = 'meta-llama/llama-4-scout-17b-16e-instruct';
+// El modelo con visión que documenta Groq hoy (confirmado el 28/09 en
+// console.groq.com/docs/vision: Llama 4 Scout, con el que se armó esto al
+// principio, ya no figura ahí y daba 404 en la corrida real). El gpt-oss-120b
+// que usa la lectura con IA sigue siendo sólo de texto.
+const MODELO_GROQ_VISION = 'qwen/qwen3.8-27b';
 
 const ESPERA = 20_000;
 // No tiene sentido bajar una foto de 15 MB para mandarla achicada a la IA:
