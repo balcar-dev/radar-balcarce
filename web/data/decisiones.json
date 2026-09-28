@@ -1,5 +1,5 @@
 {
-  "exportado": "2026-09-28T03:42:54.538Z",
+  "exportado": "2026-09-28T03:52:33.647Z",
   "decisiones": {
     "1951120": {
       "estado": "automatica",
@@ -39268,6 +39268,1253 @@
         "nivel": "ALTA",
         "porque": "Lo contaron dos medios independientes.",
         "sugeridoPorIA": "ALTA"
+      }
+    },
+    "g0030f": {
+      "estado": "automatica",
+      "titulo": "Franco Colapinto abandona en el Gran Premio de Azerbaiyán tras un choque",
+      "copete": "El piloto argentino Franco Colapinto chocó con su compañero Pierre Gasly durante el Gran Premio de Azerbaiyán y ambos debieron abandonar. George Russell se quedó con la victoria en el circuito callejero de Bakú.",
+      "cuerpo": "El hecho ocurrió durante el relanzamiento posterior a un coche de seguridad, cuando el representante de Alpine bloqueó los neumáticos en la primera curva e impactó contra su compañero de escudería, el francés Pierre Gasly, en una maniobra que también dejó fuera al británico Lando Norris. Tras el incidente, el argentino asumió la responsabilidad y calificó lo sucedido como un error grande y grave, mientras que los comisarios deportivos determinaron una penalización de cinco puestos en la grilla para la próxima competencia.\n\nLa competencia quedó en manos del británico George Russell, de Mercedes, quien dominó de principio a fin y se impuso por delante de Max Verstappen e Isack Hadjar, mientras que el líder del campeonato, Andrea Kimi Antonelli, finalizó en la quinta posición tras una remontada desde el décimo sexto lugar.\n\nEn el plano deportivo, este abandono significó cortar una racha de veintiséis carreras consecutivas completadas por el piloto argentino en la máxima categoría del automovilismo mundial.",
+      "guion": "Franco Colapinto abandona en el Gran Premio de Azerbaiyán tras un choque",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-28T03:52:33.537Z",
+      "claves": [
+        "Franco Colapinto chocó a su compañero Pierre Gasly en el Gran Premio de Azerbaiyán.",
+        "El incidente ocurrió en el relanzamiento de la carrera e involucró también a Lando Norris.",
+        "George Russell se quedó con la victoria en el circuito callejero de Bakú.",
+        "Los comisarios sancionaron al piloto argentino con cinco puestos para la próxima fecha."
+      ],
+      "textoRedes": "Franco Colapinto protagonizó un accidente en el Gran Premio de Azerbaiyán, chocó con su compañero Pierre Gasly y ambos debieron abandonar la competencia. La escudería Alpine fue sancionada y emitió un comunicado para repudiar las agresiones en redes sociales.",
+      "etiquetas": [
+        "Franco Colapinto",
+        "Formula 1",
+        "Gran Premio de Azerbaiyans",
+        "Alpine",
+        "Automovilismo"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Diario Popular",
+          "enlace": "https://www.diariopopular.com.ar/deportes/formula-1-franco-colapinto-abandono-el-gp-azerbaiyan-un-choque-gasly-n921559",
+          "fecha": "2026-09-26T09:48:00.000Z",
+          "oficial": false,
+          "aporte": "Detalló el desarrollo de la carrera, el podio de Russell, Verstappen y Hadjar, el incidente en el relanzamiento y los resultados de las prácticas y clasificación."
+        },
+        {
+          "medio": "El Eco de Tandil",
+          "enlace": "https://www.eleco.com.ar/deportes/alpine-condeno-los-mensajes-de-odio-tras-el-choque-de-franco-colapinto-en-el-gran-premio-de-azerbaiyan",
+          "fecha": "2026-09-27T13:45:00.000Z",
+          "oficial": false,
+          "aporte": "Informó sobre el comunicado de la escudería Alpine condenando los mensajes de odio en redes sociales."
+        },
+        {
+          "medio": "QZ Noticias (Mar del Plata)",
+          "enlace": "https://www.qznoticias.com/deportes/alpine-volvio-a-pronunciarse-tras-el-choque-de-colapinto-en-baku",
+          "fecha": "2026-09-27T13:16:57.000Z",
+          "oficial": false,
+          "aporte": "Amplió sobre las repercusiones del accidente que dejó fuera a los dos autos de Alpine y afectó a Lando Norris."
+        },
+        {
+          "medio": "Motorsport",
+          "enlace": "https://es.motorsport.com/f1/news/alpine-condena-de-nuevo-abuso-redes-colapinto-baku/10859567/?utm_source=RSS&utm_medium=referral&utm_campaign=RSS-F1&utm_term=News&utm_content=es",
+          "fecha": "2026-09-27T11:44:37.000Z",
+          "oficial": false,
+          "aporte": "Reportó la emisión del comunicado de Alpine tras el error de frenada del piloto argentino."
+        },
+        {
+          "medio": "Motorsport",
+          "enlace": "https://es.motorsport.com/f1/news/clasificacion-mundial-pilotos-equipos-formula1-2026-azerbaiyan-baku/10859208/?utm_source=RSS&utm_medium=referral&utm_campaign=RSS-F1&utm_term=News&utm_content=es",
+          "fecha": "2026-09-26T12:42:50.000Z",
+          "oficial": false,
+          "aporte": "Aportó datos sobre la ventaja de Andrea Kimi Antonelli en el campeonato frente a George Russell."
+        },
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/deportes/tras-el-choque-de-colapinto-alpine-condeno-las-agresiones-en-redes-sociales-nid27092026/",
+          "fecha": "2026-09-27T13:25:36.000Z",
+          "oficial": false,
+          "aporte": "Consignó la postura de la escudería tras el choque y las agresiones digitales."
+        },
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/deportes/automovilismo/montoya-respaldo-a-colapinto-tras-el-accidente-en-baku-admiro-a-la-gente-que-lo-intenta-nid27092026/",
+          "fecha": "2026-09-27T12:02:03.000Z",
+          "oficial": false,
+          "aporte": "Mencionó las declaraciones de apoyo del expiloto Juan Pablo Montoya hacia el argentino."
+        },
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/deportes/automovilismo/la-dura-sancion-de-la-fia-que-colapinto-debera-cumplir-en-el-gp-de-bahrein-nid26092026/",
+          "fecha": "2026-09-26T16:39:29.000Z",
+          "oficial": false,
+          "aporte": "Confirmó la existencia de una sanción por parte de los comisarios deportivos."
+        },
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/deportes/automovilismo/gasly-tuvo-una-fria-reaccion-ante-las-disculpas-de-colapinto-por-el-choque-en-baku-nid26092026/",
+          "fecha": "2026-09-26T15:07:30.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/deportes/automovilismo/lando-norris-pidio-la-suspension-de-una-carrera-para-franco-colapinto-tras-el-accidente-en-baku-nid26092026/",
+          "fecha": "2026-09-26T14:56:22.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/deportes/automovilismo/asi-quedo-la-tabla-de-posiciones-de-la-formula-1-2026-tras-el-triunfo-de-george-russell-en-el-gp-de-nid26092026/",
+          "fecha": "2026-09-26T14:21:28.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/deportes/automovilismo/franco-colapinto-en-el-gran-premio-de-azerbaiyan-en-vivo-nid26092026/",
+          "fecha": "2026-09-26T14:07:44.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/deportes/asi-fue-la-maniobra-con-la-que-colapinto-provoco-el-triple-choque-con-gasly-y-norris-nid26092026/",
+          "fecha": "2026-09-26T13:56:50.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/deportes/automovilismo/como-le-fue-a-franco-colapinto-en-el-gp-de-azerbaiyan-de-la-formula-1-2026-nid26092026/",
+          "fecha": "2026-09-26T13:40:03.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/deportes/automovilismo/franco-colapinto-tras-chocar-a-gasly-y-norris-en-baku-fue-un-error-grande-y-grave-nid26092026/",
+          "fecha": "2026-09-26T13:39:48.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/deportes/2026/09/27/el-ironico-mensaje-del-kun-aguero-a-lando-norris-tras-las-criticas-del-britanico-a-colapinto-por-el-choque-en-baku/",
+          "fecha": "2026-09-27T21:20:52.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/deportes/2026/09/27/el-respaldo-de-un-famoso-piloto-a-franco-colapinto-tras-el-choque-con-gasly-en-el-gran-premio-de-azerbaiyan/",
+          "fecha": "2026-09-27T19:45:08.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/deportes/2026/09/27/el-mensaje-de-alpine-que-condeno-el-odio-y-los-insultos-tras-el-choque-de-colapinto-a-gasly-que-genero-polemica-en-la-f1/",
+          "fecha": "2026-09-27T13:20:25.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/deportes/2026/09/27/el-fuerte-respaldo-de-un-referente-de-la-formula-1-para-franco-colapinto-tras-chocar-a-gasly-tienes-que-admirarlo/",
+          "fecha": "2026-09-27T10:48:17.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/deportes/2026/09/26/el-gesto-de-colapinto-con-los-mecanicos-de-alpine-despues-del-accidente-con-gasly-en-el-gp-de-azerbaiyan-uno-por-uno/",
+          "fecha": "2026-09-26T18:49:42.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/deportes/2026/09/26/el-video-del-grave-error-que-cometio-franco-colapinto-en-baku-choco-a-su-companero-y-abandonaron-los-dos/",
+          "fecha": "2026-09-26T18:02:05.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/deportes/2026/09/26/la-penalizacion-que-debera-cumplir-franco-colapinto-en-la-proxima-carrera-tras-el-choque-a-pierre-gasly/",
+          "fecha": "2026-09-26T16:29:10.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/deportes/2026/09/26/franco-colapinto-hablo-tras-su-choque-a-pierre-gasly-en-baku-fue-un-error-grande-y-grave/",
+          "fecha": "2026-09-26T15:18:30.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/deportes/2026/09/26/cuando-volvera-a-correr-franco-colapinto-en-la-formula-1-tras-su-actuacion-en-el-gp-de-azerbaiyan/",
+          "fecha": "2026-09-26T14:20:03.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/deportes/2026/09/26/el-insolito-castigo-que-exigio-lando-norris-a-franco-colapinto-tras-el-choque-con-gasly-que-lo-saco-de-carrera-en-baku/",
+          "fecha": "2026-09-26T13:42:53.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/deportes/2026/09/26/el-pedido-de-disculpas-de-franco-colapinto-por-la-radio-y-la-furia-de-pierre-gasly-tras-el-choque-de-su-companero/",
+          "fecha": "2026-09-26T13:09:50.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/deportes/formula-1/2026/09/28/el-kun-aguero-defendio-a-franco-colapinto-tras-el-accidente-en-baku-queremos-respeto-para-todos/",
+          "fecha": "2026-09-28T03:15:54.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/deportes/formula-1/2026/09/27/un-expiloto-de-formula-1-defendio-a-franco-colapinto-tras-su-error-en-el-gp-de-azerbaiyan-admiro-a-la-gente-que-lo-intenta/",
+          "fecha": "2026-09-27T18:05:05.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/deportes/formula-1/2026/09/27/alpine-volvio-a-emitir-un-comunicado-sobre-sobre-los-acosos-en-redes-tras-el-choque-de-colapinto-en-azerbaiyan/",
+          "fecha": "2026-09-27T12:02:53.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/deportes/formula-1/2026/09/27/fuerte-critica-del-jefe-de-mclaren-a-franco-colapinto-por-el-choque-en-el-gp-de-azerbaiyan-le-falto-sentido-comun/",
+          "fecha": "2026-09-27T03:43:21.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/deportes/automovilismo/2026/09/26/el-kun-aguero-reacciono-a-los-dichos-de-lando-norris-sobre-franco-colapinto-el-gesto-que-se-volvio-viral/",
+          "fecha": "2026-09-27T01:52:57.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/deportes/formula-1/2026/09/26/el-mensaje-de-apoyo-de-los-representantes-de-franco-colapinto-tras-su-choque-en-el-gp-de-azerbaiyan/",
+          "fecha": "2026-09-26T23:05:57.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/deportes/formula-1/2026/09/26/el-otro-choque-del-gp-de-azerbaiyan-que-paso-desapercibido-tras-el-accidente-de-colapinto/",
+          "fecha": "2026-09-26T22:57:32.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/deportes/formula-1/2026/09/26/el-gesto-de-colapinto-con-los-integrantes-de-alpine-despues-de-su-choque-en-el-gp-de-azerbaiyan/",
+          "fecha": "2026-09-26T18:08:49.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/deportes/automovilismo/2026/09/26/el-posteo-de-alpine-tras-el-error-de-franco-colapinto-que-provoco-el-abandono-de-los-dos-alpine-en-el-gp-de-azerbaiyan/",
+          "fecha": "2026-09-26T13:00:33.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/deportes/formula-1/2026/09/26/la-fia-sanciono-a-franco-colapinto-tras-el-accidente-que-provoco-en-el-gp-de-azerbaiyan/",
+          "fecha": "2026-09-26T15:50:59.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/deportes/formula-1/2026/09/26/franco-colapinto-en-el-gp-de-azerbaiyan-a-que-hora-y-como-ver-la-carrera-de-la-formula-1-en-vivo-por-tv/",
+          "fecha": "2026-09-26T16:03:31.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/deportes/formula-1/2026/09/26/lando-norris-pidio-una-suspension-para-franco-colapinto-esa-forma-de-conducir-no-merece-estar-en-la-formula-1/",
+          "fecha": "2026-09-26T13:48:55.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/deportes/formula-1/2026/09/26/gp-de-azerbaiyan-gano-george-russell-y-el-lider-kimi-antonelli-termino-quinto-tras-remontar-11-posiciones/",
+          "fecha": "2026-09-26T14:09:30.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/deportes/formula-1/2026/09/26/la-tajante-respuesta-de-pierre-gasly-sobre-el-error-de-colapinto-que-provoco-el-abandono-de-los-alpine-en-el-gp-de-azerbaiyan/",
+          "fecha": "2026-09-26T13:34:57.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/deportes/2026/09/26/la-primera-reaccion-de-franco-colapinto-tras-chocar-a-gasly-en-el-gp-de-azerbaiyan-me-bloquee-por-completo/",
+          "fecha": "2026-09-26T13:11:58.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/deportes/formula-1/2026/09/26/franco-colapinto-se-hizo-cargo-del-error-que-provoco-el-abandono-de-los-dos-alpine-en-el-gp-de-azerbaiyan-fue-grave/",
+          "fecha": "2026-09-26T13:10:22.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/deportes/automovilismo/2026/09/26/video-el-error-de-franco-colapinto-que-provoco-un-desastre-para-alpine-en-el-gp-de-azerbaiyan/",
+          "fecha": "2026-09-26T12:48:51.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "El Destape",
+          "enlace": "https://www.eldestapeweb.com/deportes/formula-1-fue-maniobra-franco-colapinto-provoco-accidente-gp-azerbaiyan-2026926213959",
+          "fecha": "2026-09-27T00:39:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "El Destape",
+          "enlace": "https://www.eldestapeweb.com/deportes/franco-colapinto-rompio-silencio-pidio-perdon-accidente-gp-azerbaiyan-error-grande-2026926192028",
+          "fecha": "2026-09-26T22:20:28.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "El Destape",
+          "enlace": "https://www.eldestapeweb.com/deportes/george-russell-gano-gp-azerbaiyan-asi-quedaron-posiciones-formula-1-2026926144225",
+          "fecha": "2026-09-26T17:42:25.034Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "El Destape",
+          "enlace": "https://www.eldestapeweb.com/deportes/franco-colapinto-fue-sancionado-5-posiciones-gran-premio-barein-choque-azerbaiyan-202692614260",
+          "fecha": "2026-09-26T17:26:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "El Destape",
+          "enlace": "https://www.eldestapeweb.com/deportes/franco-colapinto-cometio-peor-error-f1-choco-gasly-abandono-azerbaiyan-20269261026",
+          "fecha": "2026-09-26T13:02:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "El Destape",
+          "enlace": "https://www.eldestapeweb.com/deportes/grave-error-franco-colapinto-paso-choco-pierre-gasly-arruino-carrera-alpine-azerbaiyan-202692692313",
+          "fecha": "2026-09-26T12:23:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "El Destape",
+          "enlace": "https://www.eldestapeweb.com/deportes/vivo-franco-colapinto-larga-9-azerbaiyan-2026926840",
+          "fecha": "2026-09-26T12:17:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Perfil",
+          "enlace": "https://442.perfil.com/noticias/futbol/venimos-a-darle-carino-la-reaccion-del-kun-aguero-contra-lando-norris-por-sus-criticas-a-franco-colapinto.phtml",
+          "fecha": "2026-09-27T18:23:19.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Perfil",
+          "enlace": "https://442.perfil.com/noticias/automovilismo/nadie-deberia-ser-objeto-de-odio-el-comunicado-de-alpine-tras-los-ataques-en-redes-sociales-a-franco-colapinto.phtml",
+          "fecha": "2026-09-27T14:06:18.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Perfil",
+          "enlace": "https://442.perfil.com/noticias/automovilismo/tienes-que-admirarlo-el-respaldo-de-un-expiloto-a-franco-colapinto-tras-el-accidente-en-azerbaiyan.phtml",
+          "fecha": "2026-09-27T12:52:47.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Perfil",
+          "enlace": "https://442.perfil.com/noticias/automovilismo/hay-pilotos-que-no-deberian-estar-en-la-formula-1-lando-norris-exploto-contra-colapinto-y-pidio-que-lo-suspendan.phtml",
+          "fecha": "2026-09-26T14:32:27.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Perfil",
+          "enlace": "https://442.perfil.com/noticias/automovilismo/f1-en-baku-la-fuerte-autocritica-de-franco-colapinto-tras-chocar-a-su-companero-y-la-reaccion-de-pierre-gasly.phtml",
+          "fecha": "2026-09-26T13:50:48.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Perfil",
+          "enlace": "https://442.perfil.com/noticias/automovilismo/franco-colapinto-en-el-gran-premio-de-azerbaiyan.phtml",
+          "fecha": "2026-09-26T12:45:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Página/12",
+          "enlace": "https://www.pagina12.com.ar/2026/09/26/franco-colapinto-en-la-formula-1-por-el-gp-de-azerbaiyan-la-carrera-minuto-a-minuto/",
+          "fecha": "2026-09-26T22:50:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "A24",
+          "enlace": "https://www.a24.com/deportes/la-bronca-norris-y-gasly-el-choque-colapinto-a-esta-gente-deberian-suspenderla-n1600597",
+          "fecha": "2026-09-26T14:35:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "A24",
+          "enlace": "https://www.a24.com/deportes/colapinto-choco-gasly-el-gp-azerbaiyan-y-debio-abandonar-la-carrera-n1600580",
+          "fecha": "2026-09-26T12:50:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Ámbito",
+          "enlace": "https://www.ambito.com/deportes/un-historico-la-formula-1-defendio-franco-colapinto-su-error-azerbaiyan-admiro-la-gente-que-lo-intenta-n6327195",
+          "fecha": "2026-09-27T18:10:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Ámbito",
+          "enlace": "https://www.ambito.com/deportes/alpine-salio-defensa-colapinto-el-choque-azerbaiyan-y-lanzo-un-duro-mensaje-contra-el-odio-redes-n6327186",
+          "fecha": "2026-09-27T17:18:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Ámbito",
+          "enlace": "https://www.ambito.com/deportes/lando-norris-pidio-una-sancion-franco-colapinto-recibio-insultos-y-alpine-condeno-los-ataques-redes-n6327169",
+          "fecha": "2026-09-27T16:29:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Ámbito",
+          "enlace": "https://www.ambito.com/deportes/lando-norris-exploto-contra-franco-colapinto-el-choque-azerbaiyan-hay-pilotos-que-no-deberian-estar-la-formula-1-n6327111",
+          "fecha": "2026-09-27T12:21:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Ámbito",
+          "enlace": "https://www.ambito.com/deportes/la-dura-sancion-franco-colapinto-el-choque-azerbaiyan-perdera-cinco-puestos-la-proxima-carrera-n6327008",
+          "fecha": "2026-09-26T17:02:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Ámbito",
+          "enlace": "https://www.ambito.com/deportes/la-autocritica-franco-colapinto-el-choque-el-gp-azerbaiyan-fue-un-error-grande-y-grave-n6326975",
+          "fecha": "2026-09-26T13:45:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Ámbito",
+          "enlace": "https://www.ambito.com/deportes/formula-1-la-reaccion-pierre-gasly-el-choque-franco-colapinto-el-gp-azerbaiyan-n6326967",
+          "fecha": "2026-09-26T13:05:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Ámbito",
+          "enlace": "https://www.ambito.com/deportes/franco-colapinto-protagonizo-un-choque-pierre-gasly-y-lando-norris-y-abandono-el-gp-azerbaiyan-n6326962",
+          "fecha": "2026-09-26T12:36:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "TyC Sports",
+          "enlace": "https://www.tycsports.com/automovilismo/la-condicion-de-gasly-para-seguir-compartiendo-equipo-con-colapinto-tras-el-choque-en-azerbaiyan-id763284.html",
+          "fecha": "2026-09-28T01:09:38.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "TyC Sports",
+          "enlace": "https://www.tycsports.com/automovilismo/la-reaccion-del-kun-agueero-contra-lando-norris-tras-sus-criticas-a-franco-colapinto-id763242.html",
+          "fecha": "2026-09-27T17:04:27.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "TyC Sports",
+          "enlace": "https://www.tycsports.com/automovilismo/error-colapinto-gp-de-azerbaiyan-alpine-comunicado-repudiar-abusos-online-id763230.html",
+          "fecha": "2026-09-27T13:59:34.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "TyC Sports",
+          "enlace": "https://www.tycsports.com/automovilismo/un-referente-de-la-f1-banco-a-colapinto-tras-su-accidente-en-el-gp-de-azerbaiyan-tienes-que-admirarlo-id763223.html",
+          "fecha": "2026-09-27T12:18:41.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "TyC Sports",
+          "enlace": "https://www.tycsports.com/automovilismo/cual-fue-la-sancion-de-la-fia-a-franco-colapinto-tras-su-accidente-en-el-gp-de-azerbaiyan-de-la-formula-1-id763128.html",
+          "fecha": "2026-09-27T00:58:31.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "TyC Sports",
+          "enlace": "https://www.tycsports.com/automovilismo/norris-pidio-una-suspension-a-colapinto-tras-el-gp-de-azerbaiyan-no-deberias-estar-ahi-id763116.html",
+          "fecha": "2026-09-26T16:04:06.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "TyC Sports",
+          "enlace": "https://www.tycsports.com/automovilismo/como-quedo-franco-colapinto-en-el-campeonato-de-la-f1-tras-el-abandono-en-el-gp-de-azerbaiyan-id763119.html",
+          "fecha": "2026-09-26T16:58:41.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "TyC Sports",
+          "enlace": "https://www.tycsports.com/automovilismo/colapinto-pido-disculpas-al-equipo-y-a-pierre-gasly-ha-sido-un-error-grande-id763118.html",
+          "fecha": "2026-09-26T14:10:28.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "TyC Sports",
+          "enlace": "https://www.tycsports.com/automovilismo/colapinto-y-un-error-grave-gasly-y-alpine-tendran-que-saber-perdonarlo-op-id763111.html",
+          "fecha": "2026-09-26T14:18:10.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "TyC Sports",
+          "enlace": "https://www.tycsports.com/automovilismo/la-bronca-de-gasly-las-disculpas-de-colapinto-y-el-fuerte-pedido-de-norris-id763107.html",
+          "fecha": "2026-09-26T16:52:02.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Minuto Uno",
+          "enlace": "https://www.minutouno.com/deportes/la-reaccion-del-kun-aguero-contra-lando-norris-sus-duras-criticas-franco-colapinto-la-f1-n6327212",
+          "fecha": "2026-09-27T19:19:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "C5N",
+          "enlace": "https://www.c5n.com/deportes/el-fuerte-respaldo-los-representantes-franco-colapinto-el-choque-el-gran-premio-azerbaiyan-n250037",
+          "fecha": "2026-09-27T13:04:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "C5N",
+          "enlace": "https://www.c5n.com/deportes/alpine-condeno-los-ataques-redes-contra-pilotos-el-choque-colapinto-y-gasly-no-se-pueden-tolerar-n250034",
+          "fecha": "2026-09-27T12:11:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Crónica",
+          "enlace": "https://www.cronica.com.ar/depo/polideportivo/f1-mclaren-andrea-stella-critico-a-franco-colapinto/",
+          "fecha": "2026-09-27T11:28:14.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Radio Mitre",
+          "enlace": "https://radiomitre.cienradios.com/deportes/el-ironico-comentario-del-kun-aguero-tras-las-criticas-de-lando-norris-a-franco-colapinto-por-el-choque-en-baku/",
+          "fecha": "2026-09-27T23:10:25.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Radio Mitre",
+          "enlace": "https://radiomitre.cienradios.com/deportes/un-reconocido-expiloto-de-la-formula-1-respaldo-a-franco-colapinto-tras-el-choque-en-azerbaiyan-vas-a-cometer-errores/",
+          "fecha": "2026-09-27T19:26:57.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Radio Mitre",
+          "enlace": "https://radiomitre.cienradios.com/deportes/la-contundente-critica-del-jefe-de-mclaren-a-franco-colapinto-por-el-choque-en-el-gp-de-azerbaiyan-le-falto-sentido-comun/",
+          "fecha": "2026-09-27T10:15:23.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Radio Mitre",
+          "enlace": "https://radiomitre.cienradios.com/deportes/sancionaron-a-franco-colapinto-tras-el-accidente-con-pierre-gasly-y-lando-norris-como-lo-afectara-en-el-gp-de-malasia/",
+          "fecha": "2026-09-26T16:49:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Radio Mitre",
+          "enlace": "https://radiomitre.cienradios.com/deportes/lando-norris-estallo-con-todo-contra-franco-colapinto-tras-el-choque-en-baku-y-pidio-una-sancion-eso-no-merece-estar-en-la-formula-1/",
+          "fecha": "2026-09-26T16:02:12.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Radio Mitre",
+          "enlace": "https://radiomitre.cienradios.com/deportes/formula-1-asi-quedo-la-tabla-de-posiciones-tras-el-triunfo-de-george-russell-en-azerbaiyan-y-los-abandonos-de-franco-coalpinto-y-pierre-gasly/",
+          "fecha": "2026-09-26T15:12:22.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Canal 26",
+          "enlace": "https://www.canal26.com/deportes/2026/09/27/un-ex-piloto-de-la-formula-1-respaldo-a-colapinto-tras-su-accidente-en-el-gp-de-azerbaiyan-tienes-que-admirarlo/",
+          "fecha": "2026-09-27T17:53:27.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Canal 26",
+          "enlace": "https://www.canal26.com/deportes/2026/09/26/video-asi-fue-el-accidente-de-franco-colapinto-con-gasly-que-los-dejo-afuera-del-gp-de-azerbaiyan/",
+          "fecha": "2026-09-26T16:27:39.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Canal 26",
+          "enlace": "https://www.canal26.com/deportes/2026/09/26/con-el-objetivo-de-volver-a-sumar-puntos-franco-colapinto-afronta-el-gran-premio-de-azerbaiyan/",
+          "fecha": "2026-09-26T12:43:14.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Diario Popular",
+          "enlace": "https://www.diariopopular.com.ar/deportes/alpine-repudio-las-agresiones-redes-el-error-colapinto-el-gp-azerbaiyan-n921813",
+          "fecha": "2026-09-27T16:11:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Diario Popular",
+          "enlace": "https://www.diariopopular.com.ar/deportes/franco-colapinto-y-su-autocritica-el-choque-gasly-n921686",
+          "fecha": "2026-09-26T18:51:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Diario Popular",
+          "enlace": "https://www.diariopopular.com.ar/deportes/la-fia-le-aplico-una-sancion-colapinto-el-choque-gasly-azerbaiyan-n921569",
+          "fecha": "2026-09-26T15:12:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Diario Popular",
+          "enlace": "https://www.diariopopular.com.ar/deportes/video-asi-fue-el-error-franco-colapinto-que-provoco-el-choque-gasly-el-gp-azerbaiyan-n921568",
+          "fecha": "2026-09-26T14:07:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Noticias Argentinas (NA)",
+          "enlace": "https://noticiasargentinas.com/deportes/colapinto-en-la-formula-1--comienza-la-actividad-en-el-gran-premio-de-azerbaiyan_a6ab3c4f39489f9ec48fd7c09",
+          "fecha": "2026-09-26T12:58:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Noticias Argentinas (NA)",
+          "enlace": "https://noticiasargentinas.com/deportes/la-doble-vara-de-lando-norris-en-las-criticas-a-colapinto_a6ab91b68c2b8de8667e4e93b",
+          "fecha": "2026-09-27T13:41:11.969Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Noticias Argentinas (NA)",
+          "enlace": "https://noticiasargentinas.com/deportes/el-duro-comunicado-de-alpine-tras-el-error-de-colapinto-en-baku_a6ab90bfac2b8de8667e24a99",
+          "fecha": "2026-09-27T12:53:44.429Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Noticias Argentinas (NA)",
+          "enlace": "https://noticiasargentinas.com/deportes/la-dura-sancion-que-recibio-colapinto-tras-su-error-en-azerbaiyan_a6ab7d7329a676c64cfc94840",
+          "fecha": "2026-09-26T17:31:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Noticias Argentinas (NA)",
+          "enlace": "https://noticiasargentinas.com/deportes/lando-norris-pidio-que-suspendan-a-colapinto---algunos-pilotos-no-deberian-estar-en-la-formula-1-_a6ab7e0089a676c64cfcb90c3",
+          "fecha": "2026-09-26T15:44:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Noticias Argentinas (NA)",
+          "enlace": "https://noticiasargentinas.com/deportes/la-autocritica-de-colapinto-tras-chocar-con-gasly---fue-un-error-grande-y-grave-_a6ab7d2769a676c64cfc8221c",
+          "fecha": "2026-09-26T14:38:40.704Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Noticias Argentinas (NA)",
+          "enlace": "https://noticiasargentinas.com/deportes/video--el-grave-error-de-colapinto-que-le-costo-los-puntos-a-alpine-en-el-gp-de-azerbaiyan_a6ab7ba8b9a676c64cfc25dc0",
+          "fecha": "2026-09-26T12:55:44.596Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "El Día",
+          "enlace": "https://www.eldia.com/deportes/alpine-salio-a-respaldar-a-colapinto-tras-el-choque-y-lanzo-un-mensaje-por-los-ataques-en-redes-deportes_1790512320",
+          "fecha": "2026-09-27T12:35:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "0221",
+          "enlace": "https://www.0221.com.ar/deportes/alpine-volvio-condenar-el-acoso-redes-el-choque-franco-colapinto-azerbaiyan-n134887",
+          "fecha": "2026-09-27T12:29:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "0221",
+          "enlace": "https://www.0221.com.ar/deportes/franco-colapinto-recibio-una-dura-sancion-el-choque-baku-y-lo-pagara-proximo-gran-premio-n134859",
+          "fecha": "2026-09-26T17:26:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "0221",
+          "enlace": "https://www.0221.com.ar/deportes/el-duro-pedido-lando-norris-el-choque-franco-colapinto-que-derivo-su-salida-la-carrera-n134849",
+          "fecha": "2026-09-26T15:37:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "0221",
+          "enlace": "https://www.0221.com.ar/deportes/fue-un-error-grande-y-grave-franco-colapinto-se-disculpo-alpine-y-gasly-el-choque-azerbaiyan-n134847",
+          "fecha": "2026-09-26T14:11:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "0221",
+          "enlace": "https://www.0221.com.ar/deportes/video-asi-fue-el-choque-franco-colapinto-gasly-azerbaiyan-n134845",
+          "fecha": "2026-09-26T13:26:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "0221",
+          "enlace": "https://www.0221.com.ar/deportes/franco-colapinto-choco-su-companero-alpine-y-abandono-el-gp-azerbaiyan-n134844",
+          "fecha": "2026-09-26T12:47:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "La Verdad",
+          "enlace": "https://laverdadonline.com/colapinto-genero-un-fuerte-choque-y-debio-abandonar-en-el-gp-de-azerbaiyan/",
+          "fecha": "2026-09-26T13:29:06.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "La Voz del Pueblo",
+          "enlace": "https://lavozdelpueblo.com.ar/la-fia-sanciono-a-franco-colapinto-tras-el-choque-que-provoco-en-el-gp-de-azerbaiyan",
+          "fecha": "2026-09-26T17:20:39.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "La Voz del Pueblo",
+          "enlace": "https://lavozdelpueblo.com.ar/colapinto-choco-a-gasly-y-ambos-abandonaron-en-el-gran-premio-de-azerbaiyan",
+          "fecha": "2026-09-26T12:53:19.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "InfoRegión",
+          "enlace": "https://www.inforegion.com.ar/2026/09/26/colapinto-choco-y-debio-abandonar-el-gp-de-azerbaiyan/",
+          "fecha": "2026-09-26T13:07:37.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "QZ Noticias (Mar del Plata)",
+          "enlace": "https://www.qznoticias.com/deportes/lando-norris-pidio-la-suspension-de-franco-colapinto-tras-el-choque-que-los-dejo-fuera-de-baku",
+          "fecha": "2026-09-26T14:50:19.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "QZ Noticias (Mar del Plata)",
+          "enlace": "https://www.qznoticias.com/deportes/increible-un-choque-entre-colapinto-y-gasly-dejo-fuera-a-ambos-alpine-en-azerbaiyan",
+          "fecha": "2026-09-26T13:47:29.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "El Marplatense",
+          "enlace": "https://www.elmarplatense.com/alpine-salio-al-cruce-del-acoso-en-redes-tras-el-gp-de-azerbaiyan",
+          "fecha": "2026-09-27T13:19:13.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "El Marplatense",
+          "enlace": "https://www.elmarplatense.com/colapinto-choco-a-gasly-en-el-gp-de-azerbaiyan-y-provoco-el-abandono-de-ambos-alpine",
+          "fecha": "2026-09-26T13:35:14.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Mi8 (Canal 8 Mar del Plata)",
+          "enlace": "https://mi8.com.ar/polemica-en-baku-colapinto-asumio-su-grave-error-mientras-que-norris-dijo-que-hay-pilotos-que-no-deberian-estar-en-la-formula-1/",
+          "fecha": "2026-09-26T16:50:13.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Mi8 (Canal 8 Mar del Plata)",
+          "enlace": "https://mi8.com.ar/costoso-error-de-colapinto-choco-a-su-companero-de-escuderia-y-debio-abandonar-en-el-gran-premio-de-azerbaiyan/",
+          "fecha": "2026-09-26T13:22:56.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "El Eco de Tandil",
+          "enlace": "https://www.eleco.com.ar/deportes/un-error-grande-y-grave",
+          "fecha": "2026-09-27T02:29:30.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "El Eco de Tandil",
+          "enlace": "https://www.eleco.com.ar/deportes/colapinto-choco-con-gasly-y-debio-abandonar-en-el-gran-premio-de-azerbaiyan",
+          "fecha": "2026-09-26T12:47:03.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Ecos Diarios (Necochea)",
+          "enlace": "https://elecos.com.ar/colapinto-quedo-en-el-centro-de-las-criticas-tras-el-choque-en-baku",
+          "fecha": "2026-09-26T16:30:36.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Ecos Diarios (Necochea)",
+          "enlace": "https://elecos.com.ar/franco-colapinto-choco-a-su-companero",
+          "fecha": "2026-09-26T12:40:09.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "NDEN – Noticias de Necochea",
+          "enlace": "https://nden.com.ar/nota/38202/colapinto-recibio-cinco-puestos-de-sancion-tras-el-choque-con-gasly-en-baku",
+          "fecha": "2026-09-26T16:57:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Doble Amarilla",
+          "enlace": "https://www.dobleamarilla.com.ar/mas-alla-del-futbol/colapinto--en-el-centro-de-las-criticas-tras-su-accidente-en-azerbaiyan--sancion--reclamos-y-respaldo_a6ab8fe619b8cd1f9d6216ba4",
+          "fecha": "2026-09-27T11:43:02.616Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Doble Amarilla",
+          "enlace": "https://www.dobleamarilla.com.ar/mas-alla-del-futbol/franco-colapinto-sumo-su-primer-dnf-en-la-temporada-y-fue-sancionado--la-penalizacion-que-afrontara-en-barein_a6ab7bb6f1f6e609b1aa2793d",
+          "fecha": "2026-09-26T12:52:53.270Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Doble Amarilla",
+          "enlace": "https://www.dobleamarilla.com.ar/mas-alla-del-futbol/video--asi-fue-el-accidente-de-franco-colapinto-que-dejo-alpine-sin-puntos-en-baku_a6ab7b8191f6e609b1aa1ef27",
+          "fecha": "2026-09-26T12:25:31.663Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Bolavip Argentina",
+          "enlace": "https://bolavip.com/ar/formula-1/alpine-emitio-un-comunicado-en-defensa-de-colapinto-los-errores-ocurren-cuando-se-compite-al-limite",
+          "fecha": "2026-09-27T18:44:23.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Bolavip Argentina",
+          "enlace": "https://bolavip.com/ar/formula-1/la-fia-sanciono-a-franco-colapinto-por-el-accidente-en-baku-lo-debera-cumplir-en-el-proximo-gp-de-la-formula-1",
+          "fecha": "2026-09-26T18:34:12.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Bolavip Argentina",
+          "enlace": "https://bolavip.com/ar/formula-1/resignacion-total-la-reaccion-de-pierre-gasly-al-pedido-de-disculpas-de-colapinto",
+          "fecha": "2026-09-26T15:42:49.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Bolavip Argentina",
+          "enlace": "https://bolavip.com/ar/formula-1/tabla-de-posiciones-de-la-f1-tras-la-victoria-de-russell-y-el-abandono-de-colapinto-en-azerbaiyan",
+          "fecha": "2026-09-26T12:45:09.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Bolavip Argentina",
+          "enlace": "https://bolavip.com/ar/formula-1/gp-de-azerbaiyan-2026-minuto-a-minuto-de-la-carrera-de-franco-colapinto-en-baku",
+          "fecha": "2026-09-26T10:46:51.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Bolavip Argentina",
+          "enlace": "https://bolavip.com/ar/formula-1/colapinto-se-disculpo-con-gasly-y-alpine-por-el-accidente-en-baku-fue-un-error-grave-y-grande",
+          "fecha": "2026-09-26T13:08:35.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/colombia/deportes/2026/09/27/juan-pablo-montoya-destaco-la-conduccion-de-franco-colapinto-a-pesar-de-su-choque-en-el-gp-de-azerbaiyan-admiro-a-la-gente-que-lo-intenta/",
+          "fecha": "2026-09-27T18:37:55.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Clarín",
+          "enlace": "https://www.clarin.com/deportes/choque-colapinto-baku-alpine-volvio-condenar-energicamente-abuso-redes-mensajes-gasly-norris_0_CT7Vacgnv1.html",
+          "fecha": "2026-09-27T12:53:02.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "0223 (Mar del Plata)",
+          "enlace": "https://www.0223.com.ar/nota/2026-9-27-10-36-0-alpine-salio-con-todo-por-franco-colapinto-tras-la-polemica-en-baku-los-errores-ocurren-cuando-se-compite-al-limite",
+          "fecha": "2026-09-27T13:36:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Minuto Uno",
+          "enlace": "https://www.minutouno.com/deportes/alpine-emitio-un-comunicado-repudiar-los-abusos-online-el-error-franco-colapinto-azerbaiyan-n6327155",
+          "fecha": "2026-09-27T15:08:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "C5N",
+          "enlace": "https://www.c5n.com/deportes/la-fuerte-penalizacion-franco-colapinto-el-choque-pierre-gasly-y-lando-norris-el-gran-premio-azerbaiyan-la-formula-1-n249996",
+          "fecha": "2026-09-26T16:43:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Crónica",
+          "enlace": "https://www.cronica.com.ar/depo/polideportivo/norris-durisimo-contra-colapinto-por-su-error-en-baku-esa-no-es-una-forma-de-conducir-que-merezca-estar-en-la-formula-1/",
+          "fecha": "2026-09-26T16:11:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "La Nueva",
+          "enlace": "https://www.lanueva.com/nota/2026-9-27-10-10-0-el-duro-comunicado-de-alpine-tras-el-error-de-colapinto-en-baku",
+          "fecha": "2026-09-27T18:58:13.000Z",
+          "oficial": false,
+          "aporte": null
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "xtbw5",
+          "titulo": "Franco Colapinto largará noveno en el Gran Premio de Azerbaiyán",
+          "fecha": "2026-09-25T19:13:53.000Z",
+          "ruta": "/nota/franco-colapinto-largara-noveno-el-gran-premio-de-azerbaiyan-xtbw5"
+        },
+        {
+          "id": "1e2jbrs",
+          "titulo": "Franco Colapinto finaliza décimo en la práctica libre en Bakú",
+          "fecha": "2026-09-25T11:00:00.000Z",
+          "ruta": "/nota/franco-colapinto-finaliza-decimo-en-la-practica-libre-en-baku-1e2jbrs"
+        },
+        {
+          "id": "14uc9gg",
+          "titulo": "Franco Colapinto encara la tercera práctica libre y la clasificación en Bakú",
+          "fecha": "2026-09-25T07:57:16.000Z",
+          "ruta": "/nota/franco-colapinto-encara-la-tercera-practica-libre-y-la-clasificacion-14uc9gg"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron 33 medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      }
+    },
+    "1iri883": {
+      "estado": "automatica",
+      "titulo": "Max Verstappen defiende a Franco Colapinto tras el GP de Azerbaiyan",
+      "copete": "El piloto neerlandes respaldo al argentino tras el choque multiple en el Gran Premio de Azerbaiyan que involucro a Pierre Gasly y Lando Norris. El britanico pidio una suspension.",
+      "cuerpo": "Verstappen descarto la intencionalidad en la maniobra y considero excesivo un pedido de sancion.\n\nEl incidente se produjo luego de que el automovilista nacional, que habia clasificado noveno en la grilla tras avanzar en la tanda previa, perdiera el control al bloquear los neumaticos con los frenos frios.\n\nEl hecho genero repercusiones en el ambito de la Formula 1 debido al impacto en la competencia para los equipos involucrados, a la espera de posibles determinaciones oficiales sobre el piloto nacional.",
+      "guion": "Max Verstappen defiende a Franco Colapinto tras el Gran Premio de Azerbaiyan",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-28T03:52:33.537Z",
+      "claves": [
+        "Max Verstappen respaldo a Franco Colapinto tras el choque en Azerbaiyan.",
+        "Lando Norris critico la maniobra y pidio una sancion de suspension.",
+        "Colapinto admitio su error y pidio disculpas a los afectados.",
+        "El accidente dejo fuera de carrera a los dos vehiculos de Alpine y a Norris."
+      ],
+      "textoRedes": "Max Verstappen defendio a Franco Colapinto tras el choque multiple en el Gran Premio de Azerbaiyan que dejo fuera de carrera al argentino, a Pierre Gasly y a Lando Norris. El britanico reclamo sanciones severas mientras el piloto nacional asumio su error.",
+      "etiquetas": [
+        "Franco Colapinto",
+        "Max Verstappen",
+        "Lando Norris",
+        "Formula 1",
+        "Gran Premio de Azerbaiyan"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/deportes/formula-1/2026/09/26/max-verstappen-cruzo-a-norris-y-defendio-a-colapinto-tras-el-accidente-en-el-gp-de-azerbaiyan/",
+          "fecha": "2026-09-26T14:52:09.000Z",
+          "oficial": false,
+          "aporte": "Detallo las declaraciones de Max Verstappen y Lando Norris sobre el choque de Franco Colapinto."
+        },
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/deportes/2026/09/26/max-verstappen-y-george-russell-cruzaron-a-lando-norris-por-su-critica-a-franco-colapinto-fue-un-pequeno-error-que-tuvo-una-gran-consecuencia/",
+          "fecha": "2026-09-26T15:10:18.000Z",
+          "oficial": false,
+          "aporte": "Confirmo el desarrollo del accidente en el Gran Premio de Azerbaiyan y las reacciones de los protagonistas."
+        },
+        {
+          "medio": "El Destape",
+          "enlace": "https://www.eldestapeweb.com/deportes/max-verstappen-defendio-pleno-franco-colapinto-liquido-norris-demasiado-2026926115350",
+          "fecha": "2026-09-26T17:12:00.000Z",
+          "oficial": false,
+          "aporte": "Sin contenido adicional en el resumen."
+        },
+        {
+          "medio": "TyC Sports",
+          "enlace": "https://www.tycsports.com/automovilismo/verstappen-y-russell-cruzaron-a-norris-y-bancaron-a-colapinto-una-suspension-es-demasiado-id763127.html",
+          "fecha": "2026-09-26T16:59:52.000Z",
+          "oficial": false,
+          "aporte": "Sin contenido adicional en el resumen."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "xtbw5",
+          "titulo": "Franco Colapinto largará noveno en el Gran Premio de Azerbaiyán",
+          "fecha": "2026-09-25T19:13:53.000Z",
+          "ruta": "/nota/franco-colapinto-largara-noveno-el-gran-premio-de-azerbaiyan-xtbw5"
+        },
+        {
+          "id": "y8hgj",
+          "titulo": "Colapinto terminó 18 en la primera práctica del GP de Azerbaiyán y el más rápido fue Russell",
+          "fecha": "2026-09-24T10:07:22.000Z",
+          "ruta": "/nota/colapinto-termino-18-en-la-primera-practica-del-gp-de-azerbaiyan-y-el-y8hgj"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron cuatro medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      }
+    },
+    "j3rmxt": {
+      "estado": "automatica",
+      "titulo": "Franco Colapinto corre en el Gran Premio de Azerbaiyán",
+      "copete": "El piloto argentino compite en el circuito callejero de Bakú tras avanzar un puesto en la grilla de largada por una sanción a Carlos Sainz.",
+      "cuerpo": "El piloto argentino avanzó al noveno lugar de la grilla de largada luego de que la FIA sancionara con cinco posiciones a Carlos Sainz por no reducir la velocidad bajo bandera amarilla en el sector cuatro durante la sesión de clasificación, haciéndolo caer a la décima cuarta posición.\n\nLa pole position quedó en manos de George Russell, mientras que su compañero Pierre Gasly largará séptimo, ubicando a ambos autos de la escudería en los diez primeros puestos de la parrilla.\n\nLa competencia de la máxima categoría comenzó a las ocho, hora de Argentina, con transmisión televisiva y por plataforma digital. El calendario sufrió alteraciones según detallaron los medios, mientras la actividad principal se desarrolla en Azerbaiyán.",
+      "guion": "Franco Colapinto corre en el Gran Premio de Azerbaiyán",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-28T03:52:33.537Z",
+      "claves": [
+        "Franco Colapinto largó noveno en el Gran Premio de Azerbaiyán.",
+        "La FIA sancionó a Carlos Sainz y benefició al piloto argentino.",
+        "La competencia se desarrolla en el circuito callejero de Bakú."
+      ],
+      "seSabe": [
+        "La FIA sancionó con cinco puestos a Carlos Sainz por no bajar la velocidad bajo bandera amarilla en el sector cuatro durante la clasificación.",
+        "Franco Colapinto avanzó del décimo al noveno lugar en la grilla de largada.",
+        "George Russell se quedó con la pole position y Pierre Gasly largará séptimo.",
+        "La carrera comenzó a las ocho, hora de Argentina, en el circuito callejero de Bakú."
+      ],
+      "noConfirmado": [
+        "No se especificaron los motivos completos del cambio histórico en el calendario mencionado por una de las fuentes."
+      ],
+      "textoRedes": "Franco Colapinto compite en el Gran Premio de Azerbaiyán en el circuito callejero de Bakú tras largar noveno gracias a una sanción a Carlos Sainz.",
+      "etiquetas": [
+        "Franco Colapinto",
+        "Formula 1",
+        "Gran Premio de Azerbaiyán",
+        "Baku"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Radio Mitre",
+          "enlace": "https://radiomitre.cienradios.com/deportes/segui-en-vivo-a-franco-colapinto-en-el-gran-premio-de-azerbaiyan-de-la-formula-1/",
+          "fecha": "2026-09-26T10:00:00.000Z",
+          "oficial": false,
+          "aporte": "Detalló la sanción de la FIA a Carlos Sainz, la posición de largada de Franco Colapinto y los detalles de la grilla."
+        },
+        {
+          "medio": "Bolavip Argentina",
+          "enlace": "https://bolavip.com/ar/formula-1/por-que-franco-colapinto-corre-un-sabado-el-gran-premio-de-azerbaiyan-de-la-formula-1",
+          "fecha": "2026-09-26T12:40:47.000Z",
+          "oficial": false,
+          "aporte": "Mencionó los detalles generales sobre la carrera en el circuito callejero de Bakú."
+        },
+        {
+          "medio": "Minuto Uno",
+          "enlace": "https://www.minutouno.com/deportes/por-que-no-corre-franco-colapinto-hoy-domingo-el-gran-premio-azerbaiyan-2026-formula-1-n6327107",
+          "fecha": "2026-09-27T11:19:00.000Z",
+          "oficial": false,
+          "aporte": "Indicó que el calendario de la categoría sufrió una alteración y que la competencia ya se disputó."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "xtbw5",
+          "titulo": "Franco Colapinto largará noveno en el Gran Premio de Azerbaiyán",
+          "fecha": "2026-09-25T19:13:53.000Z",
+          "ruta": "/nota/franco-colapinto-largara-noveno-el-gran-premio-de-azerbaiyan-xtbw5"
+        },
+        {
+          "id": "1e2jbrs",
+          "titulo": "Franco Colapinto finaliza décimo en la práctica libre en Bakú",
+          "fecha": "2026-09-25T11:00:00.000Z",
+          "ruta": "/nota/franco-colapinto-finaliza-decimo-en-la-practica-libre-en-baku-1e2jbrs"
+        },
+        {
+          "id": "14uc9gg",
+          "titulo": "Franco Colapinto encara la tercera práctica libre y la clasificación en Bakú",
+          "fecha": "2026-09-25T07:57:16.000Z",
+          "ruta": "/nota/franco-colapinto-encara-la-tercera-practica-libre-y-la-clasificacion-14uc9gg"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron tres medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      }
+    },
+    "t9vczu": {
+      "estado": "automatica",
+      "titulo": "Lautaro Martínez anticipa el nuevo ciclo de la Selección",
+      "copete": "El delantero se refirió al rearmado del equipo nacional ante la inminente despedida de Lionel Messi. El combinado se prepara para afrontar una serie de amistosos en el país.",
+      "cuerpo": "El delantero de la Selección Argentina Lautaro Martínez analizó el inicio de una nueva etapa para el combinado nacional ante la inminente salida de Lionel Messi y el recambio generacional en el plantel. En declaraciones periodísticas, el atacante señaló que el equipo deberá comenzar desde cero en este nuevo proceso y destacó la importancia de sostener el legado de los referentes que formaron parte del ciclo anterior.\n\nEl conjunto que dirige Lionel Scaloni se encuentra en plena preparación para afrontar tres encuentros amistosos en el país durante la actual fecha FIFA, con partidos programados frente a Bolivia, Burkina Faso y Benín. Estos compromisos marcan los primeros desafíos del equipo tras la derrota en la final frente a España en la Copa del Mundo 2026.\n\nPor su parte, el delantero del Inter de Milán valoró la incorporación de nuevos futbolistas al plantel y remarcó la experiencia de aquellos jugadores que suman varios años en el seleccionado, con el objetivo de mantener la competitividad de cara al futuro.",
+      "guion": "Lautaro Martínez anticipa el nuevo ciclo de la Selección",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-28T03:52:33.537Z",
+      "claves": [
+        "La Selección Argentina afronta una serie de amistosos en el país.",
+        "Lautaro Martínez se refirió al recambio generacional en el equipo.",
+        "El plantel se prepara para los partidos frente a Bolivia, Burkina Faso y Benín."
+      ],
+      "seSabe": [
+        "La Selección Argentina disputará amistosos contra Bolivia, Burkina Faso y Benín en el país.",
+        "Los encuentros forman parte de la preparación del equipo tras la Copa del Mundo 2026 bajo la dirección de Lionel Scaloni.",
+        "Lautaro Martínez declaró que el plantel afrontará una renovación y deberá iniciar un nuevo proceso."
+      ],
+      "noConfirmado": [
+        "No se especificaron las fechas exactas de los partidos amistosos en el cuerpo de la información provista por las fuentes."
+      ],
+      "textoRedes": "Lautaro Martínez habló sobre el rearmado de la Selección Argentina ante la inminente despedida de Lionel Messi y el inicio de un nuevo proceso con partidos amistosos en el país.",
+      "etiquetas": [
+        "Selección Argentina",
+        "Lautaro Martínez",
+        "Lionel Messi",
+        "Lionel Scaloni"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Bolavip Argentina",
+          "enlace": "https://bolavip.com/ar/seleccion/lautaro-martinez-analizo-formula-de-la-seleccion-argentina-sin-lionel-messi-arrancar-de-cero",
+          "fecha": "2026-09-26T02:17:23.000Z",
+          "oficial": false,
+          "aporte": "Aportó las declaraciones de Lautaro Martínez sobre el recambio en la Selección y el calendario de amistosos."
+        },
+        {
+          "medio": "El Destape",
+          "enlace": "https://www.eldestapeweb.com/deportes/arrancar-cero-frase-lautaro-martinez-lionel-messi-seleccion-argentina-2026926123457",
+          "fecha": "2026-09-26T15:34:57.410Z",
+          "oficial": false,
+          "aporte": "Aportó la cobertura inicial del tema sin sumar datos adicionales al texto principal."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1gqd04y",
+          "titulo": "La foto casera que reveló la esposa de Dibu Martínez tras los dichos sobre el retiro de Lionel Messi",
+          "fecha": "2026-09-23T04:13:00.000Z",
+          "ruta": "/nota/la-foto-casera-que-revelo-la-esposa-de-dibu-martinez-tras-los-dichos-1gqd04y"
+        },
+        {
+          "id": "1uw8pf",
+          "titulo": "La foto casera que reveló la esposa de Dibu Martínez tras los dichos sobre el retiro de Lionel Messi",
+          "fecha": "2026-09-23T04:13:00.000Z",
+          "ruta": "/nota/la-foto-casera-que-revelo-la-esposa-de-dibu-martinez-tras-los-dichos-1uw8pf"
+        },
+        {
+          "id": "1nud4zm",
+          "titulo": "Entradas para la despedida de Lionel Messi de la Selección Argentina: paso a paso para comprarlas",
+          "fecha": "2026-09-24T19:05:00.000Z",
+          "ruta": "/nota/entradas-para-la-despedida-de-lionel-messi-de-la-seleccion-argentina-1nud4zm"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "MEDIA"
       }
     }
   },
