@@ -382,6 +382,7 @@ cada uno, cuándo corre y si cuesta plata), en `INFRAESTRUCTURA.md`.
 | `CRITERIO-REDES.md` | **El criterio único de las redes**: identidad ("Radar Balcarce", `radarbalcarce.com`), la voz (siempre la misma locutora), una ficha por pieza, las reglas de toda pieza, los números y las instrucciones exactas de voz |
 | `REDES.md` | Qué se publica en Instagram y Facebook, cuándo y con qué reglas (horarios e infraestructura; cómo suena, en `CRITERIO-REDES.md`) |
 | `PERFILES.md` | Biografías, categorías y colores de las redes |
+| `PARA-CARGAR-A-MANO.md` | Lista de tareas para pegar a mano en Instagram y Facebook (foto, portada, bios), con el texto ya listo |
 | `FORMATOS.md` | Medidas de imágenes y videos, con la auditoría semanal |
 | `MEDIA-KIT.md` | **Toda la identidad visual, junta**: colores, tipografía, íconos y medidas, con dónde vive cada uno en el código. Para cuando haya que volver a cambiar el diseño |
 | `SEO.md` | Posicionamiento: qué está hecho, cómo se audita, qué falta |
