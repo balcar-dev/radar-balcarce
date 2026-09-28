@@ -19,6 +19,11 @@
   "ultimo": "2026-09-27T10:00:45.205Z",
   "motivo": "con cuerpo"
  },
+ "10uy09c": {
+  "intentos": 1,
+  "ultimo": "2026-09-28T20:01:57.601Z",
+  "motivo": "con cuerpo"
+ },
  "10vh1ng": {
   "intentos": 1,
   "ultimo": "2026-09-26T03:00:42.173Z",
@@ -418,6 +423,11 @@
  "17bo7cs": {
   "intentos": 1,
   "ultimo": "2026-09-26T07:30:27.182Z",
+  "motivo": "con cuerpo"
+ },
+ "17f0jbe": {
+  "intentos": 1,
+  "ultimo": "2026-09-28T20:01:57.601Z",
   "motivo": "con cuerpo"
  },
  "17gsdsi": {
@@ -936,6 +946,13 @@
   "ultimo": "2026-09-25T14:30:50.886Z",
   "motivo": "con cuerpo"
  },
+ "1iq05rv": {
+  "intentos": 1,
+  "ultimo": "2026-09-28T20:01:57.601Z",
+  "motivo": "verificación baja: espera a una persona",
+  "baja": true,
+  "fuentes": 4
+ },
  "1iq1m6a": {
   "intentos": 1,
   "ultimo": "2026-09-26T03:00:42.173Z",
@@ -1426,6 +1443,11 @@
   "intentos": 3,
   "ultimo": "2026-09-26T04:00:50.275Z",
   "motivo": "sin material"
+ },
+ "1rvv0vx": {
+  "intentos": 1,
+  "ultimo": "2026-09-28T20:01:57.601Z",
+  "motivo": "cuerpo: 1 problema (copia): copia 14 palabras seguidas del original; sin esas oraciones quedan 63 palabras"
  },
  "1ry7mu3": {
   "intentos": 1,
@@ -1945,6 +1967,11 @@
   "ultimo": "2026-09-25T13:30:44.587Z",
   "motivo": "con cuerpo"
  },
+ "5av2kf": {
+  "intentos": 1,
+  "ultimo": "2026-09-28T20:01:57.601Z",
+  "motivo": "cuerpo: 2 problemas (copia, tildes): copia 14 palabras seguidas del original; sin esas oraciones quedan 89 palabras"
+ },
  "5bq6e6": {
   "intentos": 1,
   "ultimo": "2026-09-27T03:30:39.535Z",
@@ -2131,8 +2158,8 @@
   "motivo": "con cuerpo"
  },
  "9ecv5t": {
-  "intentos": 2,
-  "ultimo": "2026-09-28T19:50:23.332Z",
+  "intentos": 3,
+  "ultimo": "2026-09-28T20:01:57.601Z",
   "motivo": "sin material"
  },
  "9f1kip": {
@@ -2800,9 +2827,9 @@
   "motivo": "con cuerpo"
  },
  "njwnm3": {
-  "intentos": 2,
-  "ultimo": "2026-09-28T19:50:23.332Z",
-  "motivo": "cuerpo: 8 problemas (nombre, numero, repite, copia): el cuerpo nombra a \"campeones\" y la fuente no; sin esas oraciones quedan 17 palabras"
+  "intentos": 3,
+  "ultimo": "2026-09-28T20:01:57.601Z",
+  "motivo": "cuerpo: 3 problemas (fecha, numero, nombre): el cuerpo menciona \"domingo\" y la fuente no; sin esas oraciones quedan 32 palabras"
  },
  "ntbsnv": {
   "intentos": 1,
@@ -3249,6 +3276,11 @@
   "ultimo": "2026-09-25T12:00:43.134Z",
   "motivo": "con cuerpo"
  },
+ "w5bkuh": {
+  "intentos": 1,
+  "ultimo": "2026-09-28T20:01:57.601Z",
+  "motivo": "título o bajada: 1 problema (numero): el guion dice 14.000 y la fuente no lo dice"
+ },
  "wb80wz": {
   "intentos": 1,
   "ultimo": "2026-09-28T08:02:25.255Z",
@@ -3290,6 +3322,11 @@
   "intentos": 1,
   "ultimo": "2026-09-27T07:00:43.448Z",
   "motivo": "con cuerpo"
+ },
+ "wwgkbt": {
+  "intentos": 1,
+  "ultimo": "2026-09-28T20:01:57.601Z",
+  "motivo": "título o bajada: 2 problemas (largo, negacion): el titulo tiene 97 caracteres, el máximo es 90"
  },
  "wyhea8": {
   "intentos": 1,
