@@ -891,6 +891,7 @@ instrucción de la IA (70, 90, 70 a 180…) también se controlan.
 | Antecedentes: días hacia atrás | 30 | `REESCRITURA.diasDeAntecedentes` |
 | Antecedentes: como máximo | 3 | `REESCRITURA.antecedentesMaximo` |
 | Portada: horas que una nota está en las listas | 72 | `PORTADA.horas` |
+| Horas que puede tener un hecho para publicarse por primera vez (una nota que nunca salió y es más vieja, no sale) | 24 | `PORTADA.horasParaEstrenar` |
 | Portada: horas que una nota compite por el lugar grande | 6 | `PORTADA.horasNotaGrande` |
 | Días que dura la página de una nota | 180 | `PORTADA.diasDeArchivo` |
 | Nota del dólar: cuánto tiene que moverse el blue o el oficial contra el día anterior para salir (%) | 2 | `NOTA_DEL_DOLAR.movimientoMinimo` |

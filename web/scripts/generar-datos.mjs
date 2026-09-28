@@ -29,7 +29,7 @@ import { pendientesDeLaIngesta } from '../../redes/avisos.mjs';
 import { cuentaDelDia, anotarDia, comoHistoriaJson as comoNotasPorDiaJson } from '../../ingesta/estadistica-diaria.mjs';
 import {
   vigenteEnPortada, slugsConocidos, fijarSlug, actualizarArchivo, idsEnRedes, sinPuntaje, comoArchivoJson,
-  idsRetiradosAMano, correccionesAMano, conCorreccion, fechaDeLaNota,
+  idsRetiradosAMano, correccionesAMano, conCorreccion, fechaDeLaNota, llegaTarde,
 } from '../lib/archivo.js';
 import { actualizarAgenda, comoAgendaJson } from '../lib/eventos.js';
 import { traerDolar } from '../lib/dolar.js';
@@ -144,6 +144,9 @@ const vistoAntes = Object.fromEntries([...(archivoAnterior.notas ?? []), ...(ant
 const fechaAntes = Object.fromEntries([...(archivoAnterior.notas ?? []), ...(anterior.notas ?? [])]
   .filter((n) => n.fecha && !n.sinFecha)
   .map((n) => [n.id, n.fecha]));
+// Lo que ya salió alguna vez (la portada anterior y el archivo): sólo eso puede
+// seguir en las listas con el hecho de más de 24 horas (llegaTarde).
+const yaSalieron = new Set([...(archivoAnterior.notas ?? []), ...(anterior.notas ?? [])].map((n) => n.id));
 const ahoraISO = new Date().toISOString();
 
 // La lectura con IA (plan V2.2, ingesta/lectura-ia.mjs). Desde el 27/09 DECIDE
@@ -242,7 +245,11 @@ if (enLaNube) {
   // Gemini: sería gastar cupo en algo que después no se usa (27/09).
   const paraReescribir = (ultima.notas ?? [])
     .filter((n) => !CORRECCIONES.get(n.id)?.cuerpo)
-    .filter((n) => previas[n.id] || vigenteEnPortada({ fecha: fechaParaLista(n) }));
+    .filter((n) => previas[n.id] || vigenteEnPortada({ fecha: fechaParaLista(n) }))
+    // Lo que ya no se va a estrenar (hecho de más de 24 horas, nunca salió) no
+    // se le pide a Gemini: sería gastar cupo en algo que no va a salir (28/09).
+    .filter((n) => previas[n.id] || yaSalieron.has(n.id)
+      || !llegaTarde(fechaDeLaNota(n, { fechaAnterior: fechaAntes[n.id], visto: vistoAntes[n.id] })));
   // El archivo va también como fuente de ANTECEDENTES: lo que el sitio ya
   // publicó sobre el mismo tema en los últimos 30 días (CRITERIO-EDITORIAL.md).
   reescritas = await reescribirAutomaticas(paraReescribir, {
@@ -286,6 +293,10 @@ function notaPublicada(n) {
   const humana = decisionHumana(d);
   const st = humana ? d.estado : delSemaforo;
   if (st !== 'publicada' && st !== 'automatica') return null;
+  // Una nota que nunca salió no se estrena con el hecho de más de 24 horas
+  // (llegaTarde, lib/archivo.js). Lo que publicó una persona se respeta.
+  if (!humana && !yaSalieron.has(n.id) && n.cuando !== 'sin fecha en la fuente'
+    && llegaTarde(fechaDeLaNota(n, { fechaAnterior: fechaAntes[n.id], visto: vistoAntes[n.id] }))) return null;
   // Lo que decidió una persona manda. Si no, lo que ya reescribió la IA sola
   // en esta corrida o en una anterior. Si ninguna de las dos cosas pasó,
   // queda el resumen mecánico de la fuente, como salía antes de todo esto.

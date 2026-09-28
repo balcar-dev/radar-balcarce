@@ -346,3 +346,26 @@ test('la fecha de una nota es la más vieja que se conoce: un medio que actualiz
   assert.equal(fechaDeLaNota({ fecha: '2026-09-28T10:00:00.000Z' }, { visto: '2026-09-28T10:30:00.000Z' }), '2026-09-28T10:00:00.000Z');
   assert.equal(fechaDeLaNota({ fecha: null }), null);
 });
+
+// ------------------ una nota vieja no se estrena (28/09, "noticias viejas")
+
+import { llegaTarde, HORAS_PARA_ESTRENAR } from '../web/lib/archivo.js';
+import { PORTADA } from '../ingesta/criterio.mjs';
+
+test('una nota que nunca salió no se estrena con el hecho de más de 24 horas', () => {
+  assert.equal(HORAS_PARA_ESTRENAR, PORTADA.horasParaEstrenar);
+  const ahora = new Date('2026-09-28T15:00:00Z').getTime();
+  // El choque de Colapinto en Bakú (sábado 26 a la mañana): el lunes ya no se estrena.
+  assert.equal(llegaTarde('2026-09-26T12:47:00Z', ahora), true);
+  // Lo de esta mañana, sí.
+  assert.equal(llegaTarde('2026-09-28T09:00:00Z', ahora), false);
+  // Justo en el borde, todavía sale.
+  assert.equal(llegaTarde('2026-09-27T15:00:00Z', ahora), false);
+  assert.equal(llegaTarde(null, ahora), false, 'sin fecha no se sabe: la decide la regla de "sin hora"');
+});
+
+test('generar-datos no estrena lo que llega tarde ni le pide cuerpo a Gemini, y respeta lo ya publicado y lo de una persona', () => {
+  const s = fs.readFileSync(path.join(import.meta.dirname, '..', 'web', 'scripts', 'generar-datos.mjs'), 'utf8');
+  assert.match(s, /if \(!humana && !yaSalieron\.has\(n\.id\) && n\.cuando !== 'sin fecha en la fuente'\s+&& llegaTarde\(fechaDeLaNota\(/);
+  assert.match(s, /\.filter\(\(n\) => previas\[n\.id\] \|\| yaSalieron\.has\(n\.id\)\s+\|\| !llegaTarde\(/);
+});

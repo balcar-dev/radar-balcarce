@@ -104,6 +104,10 @@ export const NOTA_DEL_DOLAR = {
 /** Cuánto se queda una nota a la vista. */
 export const PORTADA = {
   horas: 72,
+  // Una nota que nunca salió no se estrena si el hecho ya tiene más de esto
+  // (28/09, Hernán: "no tomar notas que vienen de hace dos o tres días"; 40 de
+  // 140 salían con más de 24 horas, por esperar medios o cuerpo).
+  horasParaEstrenar: 24,
   horasNotaGrande: 6,
   diasDeArchivo: 180,
 };

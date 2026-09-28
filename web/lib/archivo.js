@@ -119,6 +119,27 @@ export function fechaDeLaNota(nota, { fechaAnterior = null, visto = null } = {})
   return new Date(Math.min(...candidatas)).toISOString();
 }
 
+/** Horas que puede tener un hecho para publicarse por primera vez
+ *  (PORTADA.horasParaEstrenar en ingesta/criterio.mjs; una prueba lo controla). */
+export const HORAS_PARA_ESTRENAR = 24;
+
+/**
+ * ¿Esta nota llega tarde para estrenarse? Una nota que nunca salió no se
+ * publica si el hecho (su fecha, ya corregida con fechaDeLaNota) tiene más de
+ * HORAS_PARA_ESTRENAR. Lo ya publicado sigue su curso hasta las 72 horas.
+ *
+ * 28/09, Hernán: "¿por qué trae noticias viejas todo el tiempo?". De 140 notas
+ * publicadas desde el viernes, 40 salieron con el hecho de más de 24 horas y 20
+ * de más de 48: lo de afuera esperaba a juntar medios, o esperaba cuerpo
+ * porque Gemini no tenía cupo, y al destrabarse salía como nuevo.
+ */
+export function llegaTarde(fecha, ahora = Date.now(), horas = HORAS_PARA_ESTRENAR) {
+  if (!fecha) return false;
+  const t = new Date(fecha).getTime();
+  if (!Number.isFinite(t)) return false;
+  return Number(ahora) - t > horas * HORA;
+}
+
 /** El slug de una dirección de nota ya publicada ("/nota/slug-id" o una
  *  dirección completa), o null si no se puede leer. */
 function slugDeEnlace(enlace, id) {
