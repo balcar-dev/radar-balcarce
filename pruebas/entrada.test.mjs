@@ -36,6 +36,24 @@ test('policiales de afuera y consejos genéricos no entran', () => {
   assert.equal(motivoDeDescarte(nota('https://www.ambito.com/autos/que-hacer-si-no-sube-el-vidrio-n6326308'), NACIONAL), 'consejo genérico');
 });
 
+test('el horóscopo no entra aunque la URL no diga "horoscopo" (28/09: se coló como "Cultura y agenda")', () => {
+  // Reales, de la nota 1m3wgub que salió publicada y no tendría que haber salido.
+  assert.equal(
+    motivoDeDescarte(nota('https://www.c5n.com/astrologia/horoscopo-hoy-lunes-28-septiembre-n250074', 'Horóscopo de hoy: qué dice tu signo'), NACIONAL),
+    'consejo genérico',
+  );
+  assert.equal(
+    motivoDeDescarte(nota('https://www.canal26.com/tendencias/2026/09/28/numeros-de-la-suerte-de-hoy-lunes/', 'Números de la suerte de hoy, lunes 28 de septiembre'), NACIONAL),
+    'consejo genérico',
+  );
+  assert.equal(
+    motivoDeDescarte(nota('https://www.eldia.com/informacion-general/los-numeros-de-la-suerte/', 'Los astros anticipan las previsiones para cada signo'), NACIONAL),
+    'consejo genérico',
+  );
+  // "signo" solo no alcanza: una enfermedad o un gol también tienen "signos".
+  assert.equal(motivoDeDescarte(nota('https://www.infobae.com/salud/2026/09/27/los-signos-de-alerta-de-un-acv/'), NACIONAL), null);
+});
+
 test('lo de secciones argentinas entra, y de los medios de Balcarce entra todo', () => {
   assert.equal(motivoDeDescarte(nota('https://www.infobae.com/economia/2026/09/27/el-riesgo-pais/'), NACIONAL), null);
   assert.equal(motivoDeDescarte(nota('https://www.lanacion.com.ar/politica/el-congreso-aprobo-nid1/'), NACIONAL), null);

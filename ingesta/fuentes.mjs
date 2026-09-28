@@ -843,9 +843,17 @@ export const SECCIONES_QUE_NO_ENTRAN = [
   },
   {
     motivo: 'consejo genérico',
-    tramos: ['autos', 'horoscopo', 'recetas'],
+    tramos: ['autos', 'horoscopo', 'astrologia', 'recetas'],
   },
 ];
+
+// El horóscopo se coló el 28/09 por URLs que no dicen "horoscopo": C5N y
+// Clarín lo ponen en /astrologia/ (ya cubierto arriba) y Canal 26 y El Día ni
+// eso, van en secciones genéricas como "tendencias" o "información general"
+// que también traen notas que sí sirven. Por eso esto mira el TÍTULO, con
+// frases bien puntuales (no "signo" solo, que también es de fútbol o de una
+// enfermedad) para no sacar algo que no es horóscopo.
+export const TITULO_HOROSCOPO = /horoscopo|numeros? de la suerte|prediccion(es)? para (tu|cada) signo|los astros anticipan|que le espera a cada signo/;
 
 // Lo que hace que una nota de una sección de otro país igual le importe a un
 // argentino. Sólo en el título, palabras enteras.

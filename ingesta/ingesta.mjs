@@ -7,7 +7,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import {
   NOMBRES_PROPIOS, FIGURAS, TEMAS, FARMACIAS_A_MANO, MEDIOS_DE_AFUERA, MEDIOS_POR_DEFECTO, MEDIOS_CON_FIGURA, CUPO_DE_AFUERA, CUPO_POR_DEFECTO, BALCARCE, FUENTES, FUENTES_NACIONALES, PALABRAS_LOCALES, PALABRAS_ZONA, REGLAS_SECCION, AMARILLO_MENORES, REGLAS_SEMAFORO, MOTIVO_COTIZACION, MOTIVO_POLICIAL_DE_AFUERA,
-  MOTIVO_INTERNACIONAL, PALABRAS_DE_TECNOLOGIA_EN_EL_TITULO, SECCIONES_QUE_NO_ENTRAN, CONEXION_ARGENTINA,
+  MOTIVO_INTERNACIONAL, PALABRAS_DE_TECNOLOGIA_EN_EL_TITULO, SECCIONES_QUE_NO_ENTRAN, CONEXION_ARGENTINA, TITULO_HOROSCOPO,
 } from './fuentes.mjs';
 import { diaDeTurno, fechaEnBalcarce } from './utiles.mjs';
 import { agruparPorHecho, leerMemoria, guardarMemoria, desdeLaMemoria } from './cruce.mjs';
@@ -440,6 +440,10 @@ function mencionaBalcarce(nota) {
  */
 function motivoDeDescarte(nota, fuente = {}) {
   if (fuente.alcance === 'local') return null;
+  // El horóscopo se cuela por URLs que no dicen "horoscopo" en ningún tramo
+  // (28/09: Canal 26 y El Día lo traían como "tendencias" e "información
+  // general"). Esto mira el título aparte, con frases puntuales.
+  if (TITULO_HOROSCOPO.test(normalizar(nota.titulo ?? ''))) return 'consejo genérico';
   let tramos;
   try { tramos = new URL(nota.enlace).pathname.toLowerCase().split('/').filter(Boolean); } catch { return null; }
   // El último tramo es el nombre de la nota ("colectivos-de-mexico-y-…"): no cuenta.
