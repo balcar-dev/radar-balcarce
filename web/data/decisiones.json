@@ -1,5 +1,5 @@
 {
-  "exportado": "2026-09-28T05:21:39.037Z",
+  "exportado": "2026-09-28T05:41:59.385Z",
   "decisiones": {
     "1951120": {
       "estado": "automatica",
@@ -41115,6 +41115,91 @@
       "verificacion": {
         "nivel": "ALTA",
         "porque": "Lo contaron 13 medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      }
+    },
+    "1dd9hj6": {
+      "estado": "automatica",
+      "titulo": "Guye Adola y Tigst Assefa ganan el maratón de Berlin",
+      "copete": "Los atletas etíopes Guye Adola y Tigst Assefa se impusieron este domingo en el tradicional maratón de Berlín, una de las pruebas más importantes del circuito mundial, que contó con una masiva participación.",
+      "cuerpo": "El podio de varones se completó con el también etíope Gemechu Dida y el tanzano Gabriel Geay.\n\nEn la rama femenina, Tigst Assefa, de veintinueve años, se impuso por tercera vez consecutiva en territorio alemán con un registro de dos horas, once minutos y cuatro segundos. Aunque dominó con autoridad y estableció una nueva marca para la competencia, la atleta se quedó a las puertas de batir el récord mundial debido a molestias físicas y una lesión sufrida en el tramo final del recorrido.\n\nEl evento forma parte del circuito de los ocho maratones principales del mundo. La competencia alemana reunió a atletas de elite internacional y dejó un contundente dominio de la delegación etíope tanto en la rama masculina como en la femenina.",
+      "guion": "Guye Adola y Tigst Assefa ganan el maratón de Berlin",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-28T05:41:59.282Z",
+      "noConfirmado": [
+        "Distintas fuentes discrepan sobre el diagnóstico exacto de la lesión de Assefa en el tramo final, mencionando desde molestias generales y una lesión en los últimos kilómetros hasta una rotura del tendón de Aquiles."
+      ],
+      "textoRedes": "Los atletas etíopes Guye Adola y Tigst Assefa se consagraron este domingo en el maratón de Berlín tras imponerse con autoridad en una nueva edición de la tradicional competencia internacional.",
+      "etiquetas": [
+        "maraton",
+        "Berlin",
+        "atletismo",
+        "Guye Adola",
+        "Tigst Assefa",
+        "Etiopia"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "TyC Sports",
+          "enlace": "https://www.tycsports.com/polideportivo/guye-adola-y-tigst-assefa-dominio-etiope-en-el-maraton-de-berlin-id763216.html",
+          "fecha": "2026-09-27T10:35:53.000Z",
+          "oficial": false,
+          "aporte": "Detalló los tiempos oficiales de los ganadores, la cantidad de participantes y el desarrollo de la competencia."
+        },
+        {
+          "medio": "Olé",
+          "enlace": "https://www.ole.com.ar/running/tigist-assefa-maratondeberlin-recordmundial-tendondeaquiles-lesion-rengueando-meta_0_cTG5Lqih6H.html",
+          "fecha": "2026-09-28T00:28:08.000Z",
+          "oficial": false,
+          "aporte": "Indicó que una grave lesión en los metros finales alteró el cierre de la atleta etíope."
+        },
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/deportes/atletismo/tigst-assefa-gano-la-maraton-de-berlin-por-tercera-vez-pero-una-lesion-la-dejo-sin-record-nid27092026/",
+          "fecha": "2026-09-27T15:33:59.000Z",
+          "oficial": false,
+          "aporte": "Confirmó los tiempos y el triunfo de Assefa a pesar de los inconvenientes físicos."
+        },
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/deportes/2026/09/27/parecia-que-iba-a-marcar-un-record-mundial-pero-se-lesiono-y-gano-rengueando-la-maraton-de-berlin-la-revelacion-que-conmovio-a-todos/",
+          "fecha": "2026-09-27T22:02:58.000Z",
+          "oficial": false,
+          "aporte": "Aportó la descripción del desarrollo de la prueba durante los primeros cuarenta kilómetros."
+        },
+        {
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/running/2026/09/27/assefa-gano-la-maraton-de-berlin-corrio-los-ultimos-2-kilometros-con-el-tendon-de-aquiles-roto-y-no-pudo-marcar-el-record-mundial/",
+          "fecha": "2026-09-27T23:45:43.000Z",
+          "oficial": false,
+          "aporte": "Mencionó la gravedad de la lesión sufrida por la maratonista etíope."
+        },
+        {
+          "medio": "Olé",
+          "enlace": "https://www.ole.com.ar/poli/momento-tigist-assefa-gana-maraton-berlin-rotura-tendon-aquiles_3_FUhROTuC6d.html",
+          "fecha": "2026-09-28T00:08:44.000Z",
+          "oficial": false,
+          "aporte": "No aportó información adicional al no incluir resumen."
+        },
+        {
+          "medio": "CADA (Confederación Argentina de Atletismo)",
+          "enlace": "https://cada-atletismo.org/maraton-de-berlin-2026-doblete-etiope-y-destacados-argentinos/",
+          "fecha": "2026-09-27T21:15:18.000Z",
+          "oficial": false,
+          "aporte": "Ratificó los tiempos de los ganadores de ambas ramas en el evento del veintisiete de septiembre."
+        },
+        {
+          "medio": "Clarín",
+          "enlace": "https://www.clarin.com/deportes/tigst-assefa-dolor-drama-maraton-berlin-iba-batir-record-mundial-llego-rengueando-meta_0_fLoYXoVxsH.html",
+          "fecha": "2026-09-27T13:41:42.000Z",
+          "oficial": false,
+          "aporte": "Señaló que Assefa marcó el tercer mejor tiempo de la historia y corrió cerca de la marca de referencia."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron 7 medios independientes.",
         "sugeridoPorIA": "ALTA"
       }
     }
