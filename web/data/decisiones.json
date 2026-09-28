@@ -1,5 +1,5 @@
 {
-  "exportado": "2026-09-28T06:12:07.057Z",
+  "exportado": "2026-09-28T06:22:05.592Z",
   "decisiones": {
     "1951120": {
       "estado": "automatica",
@@ -41200,6 +41200,81 @@
       "verificacion": {
         "nivel": "ALTA",
         "porque": "Lo contaron 7 medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      }
+    },
+    "1knje23": {
+      "estado": "automatica",
+      "titulo": "Comienza el sexagésimo segundo Coloquio de IDEA en Mar del Plata",
+      "copete": "Mar del Plata recibe esta semana una nueva edición del Coloquio de IDEA, un foro que reúne a empresarios, políticos y dirigentes para debatir sobre inversión, competitividad y crecimiento.",
+      "cuerpo": "El sexagésimo segundo Coloquio del Instituto para el Desarrollo Empresarial de la Argentina comienza este lunes y se desarrollará entre el miércoles y el viernes en la ciudad de Mar del Plata. El encuentro se lleva a cabo bajo el lema “Invirtiendo la historia. 20 años: de promesa a potencia” y convoca a líderes empresarios, sociales y políticos.\n\nDurante las jornadas se analizarán experiencias internacionales de naciones que consolidaron procesos de desarrollo a largo plazo, con el fin de aplicarlas en el país.\n\nEl presidente del evento y director ejecutivo del Grupo Galicia, Fabián Kon, señaló que trabajan para lograr que la estabilidad y el crecimiento tengan continuidad. La agenda incluye debates sobre cómo transformar la actual coyuntura económica en un proceso de inversión sostenida y empleo con reglas claras.",
+      "guion": "Comienza el sexagésimo segundo Coloquio de IDEA en Mar del Plata",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-28T06:22:05.464Z",
+      "claves": [
+        "El foro empresarial comienza esta semana en Mar del Plata.",
+        "El lema de esta edición es \"Invirtiendo la historia. 20 años: de promesa a potencia\".",
+        "Participan referentes del sector empresario, político y social.",
+        "Están previstas las presencias de Javier Milei y Luis Caputo."
+      ],
+      "seSabe": [
+        "El foro económico se realiza en Mar del Plata entre lunes, miércoles y viernes.",
+        "El lema oficial es \"Invirtiendo la historia. 20 años: de promesa a potencia\".",
+        "Fabián Kon ejerce como presidente del encuentro y director ejecutivo del Grupo Galicia.",
+        "Los organizadores invitaron a funcionarios nacionales como Javier Milei y Luis Caputo."
+      ],
+      "noConfirmado": [
+        "No se detalló la agenda exacta de exposiciones para cada una de las jornadas."
+      ],
+      "textoRedes": "Mar del Plata es sede del sexagésimo segundo Coloquio de IDEA, un encuentro que reúne a empresarios y funcionarios para debatir sobre inversión, competitividad y desarrollo económico a largo plazo.",
+      "etiquetas": [
+        "Coloquio IDEA",
+        "Mar del Plata",
+        "Economia",
+        "Empresarios",
+        "Politica"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Noticias Argentinas (NA)",
+          "enlace": "https://noticiasargentinas.com/economia/comienza-esta-semana-el-62--coloquio-de-idea-en-mar-del-plata_a6ab6eafa66108e5d34b88bfc",
+          "fecha": "2026-09-27T18:30:00.000Z",
+          "oficial": false,
+          "aporte": "Aportó los detalles sobre el lema, la presencia de funcionarios invitados y las declaraciones de Fabián Kon."
+        },
+        {
+          "medio": "El Eco de Tandil",
+          "enlace": "https://www.eleco.com.ar/economia/comienza-esta-semana-el-62o-coloquio-de-idea-en-mar-del-plata",
+          "fecha": "2026-09-28T06:00:00.000Z",
+          "oficial": false,
+          "aporte": "Confirmó las fechas de inicio y desarrollo del coloquio en Mar del Plata."
+        },
+        {
+          "medio": "Radio Sudestada",
+          "enlace": "https://radiosudestada.com.ar/2026/09/comienza-esta-semana-el-62-coloquio-de-idea-en-mar-del-plata/",
+          "fecha": "2026-09-27T20:51:39.000Z",
+          "oficial": false,
+          "aporte": "Coincidió en las fechas y el lema del foro económico."
+        },
+        {
+          "medio": "Punto Noticias",
+          "enlace": "https://puntonoticias.com/el-62-coloquio-de-idea-llega-a-mar-del-plata-asistira-milei/",
+          "fecha": "2026-09-27T20:55:28.000Z",
+          "oficial": false,
+          "aporte": "No aportó información adicional al no registrarse contenido en su resumen."
+        },
+        {
+          "medio": "El Norte",
+          "enlace": "https://diarioelnorte.com.ar/mar-del-plata-recibe-el-62-coloquio-de-idea-sobre-futuro-economico/",
+          "fecha": "2026-09-27T19:04:23.000Z",
+          "oficial": false,
+          "aporte": "Señaló la relevancia de Mar del Plata como sede del foro de negocios."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron cinco medios independientes.",
         "sugeridoPorIA": "ALTA"
       }
     }
