@@ -1,5 +1,5 @@
 {
-  "exportado": "2026-09-28T05:01:41.961Z",
+  "exportado": "2026-09-28T05:11:57.840Z",
   "decisiones": {
     "1951120": {
       "estado": "automatica",
@@ -40894,6 +40894,227 @@
       "verificacion": {
         "nivel": "ALTA",
         "porque": "Lo contaron 7 medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      }
+    },
+    "tibcla": {
+      "estado": "automatica",
+      "titulo": "Comienza el operativo de seguridad en playas en Mar del Plata",
+      "copete": "Mar del Plata pondrá en marcha el próximo jueves el operativo de seguridad en playas de manera progresiva. La medida abarca guardias mínimas en dieciocho balnearios costeros.",
+      "cuerpo": "Mar del Plata pondrá en marcha el operativo de seguridad en playas a partir del uno de octubre con guardias mínimas en dieciocho balnearios distribuidos en la costa. La primera etapa funcionará de once a diecisiete en sectores de la zona norte, el centro, Playa Grande y el sur, según informó el coordinador general del operativo municipal, Marcelo Zanetti.\n\nEl esquema integral incluye embarcaciones de rescate y articulación con Defensa Civil.\n\nDesde el área de seguridad recomendaron consultar previamente a los guardavidas y observar las banderas de prevención debido a las modificaciones en las playas tras los temporales invernales.",
+      "guion": "Comienza el operativo de seguridad en playas en Mar del Plata",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-28T05:11:57.740Z",
+      "noConfirmado": [
+        "No se especificó el número total de guardavidas que participarán en la temporada fuera del sector a cargo de Zanetti."
+      ],
+      "textoRedes": "Mar del Plata comenzará a implementar el operativo de seguridad en playas a partir del uno de octubre con guardias mínimas en dieciocho balnearios. El despliegue total en la costa se completará el uno de noviembre.",
+      "etiquetas": [
+        "seguridad en playas",
+        "Mar del Plata",
+        "guardavidas",
+        "temporada de verano"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infobrisas (Radio Brisas)",
+          "enlace": "https://www.infobrisas.com/noticias/2026/09/25/109255-comienza-el-operativo-de-seguridad-en-playas-en-mar-del-plata",
+          "fecha": "2026-09-25T22:43:41.000Z",
+          "oficial": false,
+          "aporte": "Detalló las fechas, horarios y zonas del operativo de seguridad en playas brindadas por el coordinador municipal."
+        },
+        {
+          "medio": "Noticias Argentinas (NA)",
+          "enlace": "https://noticiasargentinas.com/economia/comienza-esta-semana-el-62--coloquio-de-idea-en-mar-del-plata_a6ab6eafa66108e5d34b88bfc",
+          "fecha": "2026-09-27T18:30:00.000Z",
+          "oficial": false,
+          "aporte": "No aportó información relevante en el resumen proporcionado."
+        },
+        {
+          "medio": "Radio Sudestada",
+          "enlace": "https://radiosudestada.com.ar/2026/09/comienza-esta-semana-el-62-coloquio-de-idea-en-mar-del-plata/",
+          "fecha": "2026-09-27T20:51:39.000Z",
+          "oficial": false,
+          "aporte": "Presentó un titular divergente sobre el coloquio de IDEA que no coincide con el contenido de la fuente principal."
+        },
+        {
+          "medio": "Punto Noticias",
+          "enlace": "https://puntonoticias.com/el-62-coloquio-de-idea-llega-a-mar-del-plata-asistira-milei/",
+          "fecha": "2026-09-27T20:55:28.000Z",
+          "oficial": false,
+          "aporte": "No aportó información relevante en el resumen proporcionado."
+        },
+        {
+          "medio": "El Norte",
+          "enlace": "https://diarioelnorte.com.ar/mar-del-plata-recibe-el-62-coloquio-de-idea-sobre-futuro-economico/",
+          "fecha": "2026-09-27T19:04:23.000Z",
+          "oficial": false,
+          "aporte": "Mencionó el desarrollo del coloquio empresarial de IDEA en Mar del Plata."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron cinco medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      }
+    },
+    "13ytphz": {
+      "estado": "automatica",
+      "titulo": "Javier Milei viaja a Francia para participar del Argentina Week",
+      "copete": "El presidente Javier Milei partirá este martes hacia París junto a gobernadores, ministros y empresarios para encabezar la segunda edición del Argentina Week y atraer inversiones extranjeras. Además, mantendrá un encuentro bilateral con su par francés, Emmanuel Macron.",
+      "cuerpo": "El presidente Javier Milei viajará este martes por la noche a la ciudad de París, en Francia, para participar de una nueva edición del Argentina Week junto a una comitiva integrada por gobernadores, funcionarios nacionales y empresarios.\n\nAsimismo, el jefe de Estado recibirá una distinción del Paris Economic Forum que lo destacará como uno de los economistas más influyentes del planeta.\n\nEl viaje se concreta luego de la participación del mandatario en la octogésima primera Asamblea Anual de las Naciones Unidas en Estados Unidos, donde cuestionó a la organización internacional, según se informó en septiembre. De acuerdo con el detalle oficial, la delegación estará compuesta por la secretaria general Karina Milei y los ministros Pablo Quirno, Luis Caputo, Federico Sturzenegger, Juan Bautista Mahiques y Mario Lugones.",
+      "guion": "Javier Milei viaja a Francia para participar del Argentina Week",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-28T05:11:57.740Z",
+      "claves": [
+        "El Presidente viajará este martes por la noche rumbo a París.",
+        "Encabezará la segunda edición del Argentina Week junto a gobernadores y empresarios.",
+        "Prevé una reunión bilateral con Emmanuel Macron para el jueves 1 de octubre.",
+        "Recibirá una distinción del Paris Economic Forum."
+      ],
+      "seSabe": [
+        "Javier Milei partirá este martes a las veintidós rumbo a Francia.",
+        "La comitiva incluirá a gobernadores, empresarios y ministros nacionales como Luis Caputo y Federico Sturzenegger.",
+        "El mandatario mantendrá un encuentro con Emmanuel Macron y recibirá un reconocimiento económico en París.",
+        "El viaje forma parte de una gira que sigue a su paso por los Estados Unidos."
+      ],
+      "noConfirmado": [
+        "No se precisó la cantidad exacta de gobernadores que integrarán la comitiva final, aunque diversas fuentes mencionan doce mandatarios provinciales."
+      ],
+      "textoRedes": "El presidente Javier Milei viajará este martes a París para encabezar una nueva edición del Argentina Week y reunirse con Emmanuel Macron con el fin de atraer inversiones estratégicas.",
+      "etiquetas": [
+        "Javier Milei",
+        "Francia",
+        "Paris",
+        "Argentina Week",
+        "Emmanuel Macron",
+        "Inversiones"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "C5N",
+          "enlace": "https://www.c5n.com/politica/javier-milei-mantiene-su-agenda-internacional-y-ultima-detalles-su-viaje-francia-n249945",
+          "fecha": "2026-09-25T20:02:00.000Z",
+          "oficial": false,
+          "aporte": "Detalló la fecha de llegada a París, los integrantes de la comitiva y la agenda de reuniones bilaterales."
+        },
+        {
+          "medio": "El Eco de Tandil",
+          "enlace": "https://www.eleco.com.ar/nacionales/el-presidente-desembarca-en-paris-en-busca-de-inversiones",
+          "fecha": "2026-09-28T05:00:00.000Z",
+          "oficial": false,
+          "aporte": "Confirmó el viaje presidencial a Francia para exponer ante inversores globales."
+        },
+        {
+          "medio": "Ámbito",
+          "enlace": "https://www.ambito.com/economia/argentina-week-paris-los-detalles-del-evento-donde-el-gobierno-buscara-sumar-inversiones-europeas-n6327166",
+          "fecha": "2026-09-27T16:35:00.000Z",
+          "oficial": false,
+          "aporte": "Aportó que se trata de la segunda edición del evento orientado a inversiones."
+        },
+        {
+          "medio": "El Destape",
+          "enlace": "https://www.eldestapeweb.com/politica/milei-prepara-viaje-francia-junto-12-gobernadores-donde-reunira-macron-202692695226",
+          "fecha": "2026-09-26T12:52:26.537Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Perfil",
+          "enlace": "https://www.perfil.com/noticias/politica/javier-milei-viaja-a-paris-se-reune-con-macron-y-participara-de-la-argentina-week.phtml",
+          "fecha": "2026-09-27T23:12:39.000Z",
+          "oficial": false,
+          "aporte": "Indicó que el Presidente partirá el martes por la noche y regresará el sábado."
+        },
+        {
+          "medio": "A24",
+          "enlace": "https://www.a24.com/politica/milei-viajara-paris-12-gobernadores-participar-la-argentina-week-y-reunirse-macron-n1600796",
+          "fecha": "2026-09-27T21:36:00.000Z",
+          "oficial": false,
+          "aporte": "Mencionó las actividades sobre energía, minería y la distinción del Paris Economic Forum."
+        },
+        {
+          "medio": "Minuto Uno",
+          "enlace": "https://www.minutouno.com/politica/javier-milei-prepara-su-viaje-francia-la-argentina-week-llevara-12-gobernadores-y-otros-funcionarios-n6326909",
+          "fecha": "2026-09-26T00:44:00.000Z",
+          "oficial": false,
+          "aporte": "Precisó el inicio de la partida para el treinta de septiembre."
+        },
+        {
+          "medio": "C5N",
+          "enlace": "https://www.c5n.com/politica/la-agenda-javier-milei-francia-discurso-el-argentina-week-y-reunion-emmanuel-macron-n250076",
+          "fecha": "2026-09-27T23:13:48.000Z",
+          "oficial": false,
+          "aporte": "Señaló que el mandatario participará de un foro económico para captar inversiones."
+        },
+        {
+          "medio": "Canal 26",
+          "enlace": "https://www.canal26.com/politica/2026/09/27/milei-viajara-a-paris-junto-a-gobernadores-y-empresarios-para-la-argentina-week-la-agenda-del-gobierno-y-la-posible-cumbre-con-macron/",
+          "fecha": "2026-09-27T21:38:03.000Z",
+          "oficial": false,
+          "aporte": "Informó que la salida será este martes a las veintidós tras su paso por Nueva York."
+        },
+        {
+          "medio": "Noticias Argentinas (NA)",
+          "enlace": "https://noticiasargentinas.com/politica/argentina-week--milei-desembarca-en-paris-junto-a-gobernadores-y-empresarios-en-busca-de-inversiones_a6ab91477c2b8de8667e3c8a7",
+          "fecha": "2026-09-27T18:00:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "0221",
+          "enlace": "https://www.0221.com.ar/nacional/javier-milei-prepara-su-agenda-paris-el-foco-puesto-inversiones-y-una-reunion-emmanuel-macron-n134903",
+          "fecha": "2026-09-27T20:01:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "La Verdad",
+          "enlace": "https://laverdadonline.com/argentina-week-milei-desembarca-en-paris-junto-a-gobernadores-y-empresarios-en-busca-de-inversiones/",
+          "fecha": "2026-09-27T21:37:52.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "La Nueva",
+          "enlace": "https://www.lanueva.com/nota/2026-9-27-16-22-0-milei-viaja-a-paris-con-a-gobernadores-y-empresarios-en-busca-de-inversiones-en-el-argentina-week",
+          "fecha": "2026-09-27T22:36:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/america/agencias/2026/09/28/milei-se-reunira-con-macron-durante-su-visita-a-paris-por-la-argentina-week/",
+          "fecha": "2026-09-28T00:30:31.000Z",
+          "oficial": false,
+          "aporte": null
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "l0rwb4",
+          "titulo": "Javier Milei cuestiona a la ONU en su discurso",
+          "fecha": "2026-09-24T01:00:00.000Z",
+          "ruta": "/nota/milei-en-la-onu-llamo-a-la-organizacion-una-casta-de-parasitos-y-l0rwb4"
+        },
+        {
+          "id": "1y0j61m",
+          "titulo": "A qué hora habla Javier Milei en la ONU y cómo verlo en vivo",
+          "fecha": "2026-09-23T02:44:00.000Z",
+          "ruta": "/nota/a-que-hora-habla-javier-milei-en-la-onu-y-como-verlo-en-vivo-1y0j61m"
+        },
+        {
+          "id": "wc6fea",
+          "titulo": "El Colegio San José ultima detalles para una nueva edición de EduCoAgro",
+          "fecha": "2026-09-05T12:31:23.000Z",
+          "ruta": "/nota/muestra-anual-de-la-escuela-san-jose-en-balcarce-wc6fea"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron 13 medios independientes.",
         "sugeridoPorIA": "ALTA"
       }
     }
