@@ -1,5 +1,5 @@
 {
-  "exportado": "2026-09-28T01:02:05.717Z",
+  "exportado": "2026-09-28T01:51:44.158Z",
   "decisiones": {
     "1951120": {
       "estado": "automatica",
@@ -36140,6 +36140,51 @@
         "nivel": "ALTA",
         "porque": "Lo contaron dos medios independientes.",
         "sugeridoPorIA": "ALTA"
+      }
+    },
+    "187bqn1": {
+      "estado": "automatica",
+      "titulo": "El Movimiento 245 brinda contención y autoayuda en Balcarce",
+      "copete": "El espacio de autoayuda y casa de contención funciona en el Prado Español. Ofrece acompañamiento para problemáticas de consumo y dificultades emocionales.",
+      "cuerpo": "Durante una entrevista radial, los integrantes del espacio Candela Vinaccia y Nelson Lugo detallaron que el abordaje incluye situaciones de ludopatía, ansiedad, depresión, ataques de pánico y ansiedad, y remarcaron que el proceso requiere un trabajo cotidiano y sostenido.\n\nLa casa de contención local alberga actualmente a unas doce personas y cuenta con una permanencia orientativa de seis meses. Además, la organización ofrece espacios de participación destinados a las familias para brindarles herramientas de acompañamiento.",
+      "guion": "El Movimiento 245 brinda contención y autoayuda en Balcarce",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-28T01:51:44.079Z",
+      "claves": [
+        "Funciona en el Prado Español con un espacio de autoayuda.",
+        "Aborda consumos problemáticos y dificultades emocionales.",
+        "La casa local cuenta con unas doce personas en proceso.",
+        "Ofrece herramientas de acompañamiento para las familias."
+      ],
+      "seSabe": [
+        "El Movimiento 245 funciona en el Prado Español, en inmediaciones de calle 14 y 103.",
+        "La casa de contención cuenta actualmente con alrededor de 12 personas.",
+        "El proceso en la casa de contención puede extenderse aproximadamente durante seis meses.",
+        "El nombre del movimiento se debe a que las casas están abiertas las 24 horas y al cuarto y quinto paso de recuperación.",
+        "La organización fue establecida legalmente como Movimiento 245 en 2019 y tiene unos 20 años de existencia."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El Movimiento 245 ofrece en Balcarce un espacio de autoayuda y contención para consumos problemáticos y dificultades emocionales. Funciona en el Prado Español y también brinda acompañamiento para las familias.",
+      "etiquetas": [
+        "Movimiento 245",
+        "Prado Español"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infórmese Primero (FM 104.9)",
+          "enlace": "http://www.informeseprimero.com.ar/2026/09/movimiento-245-un-espacio-de-contencion.html",
+          "fecha": "2026-09-28T00:23:01.264Z",
+          "oficial": false,
+          "aporte": "Detalló el funcionamiento del espacio de autoayuda y la casa de contención del Movimiento 245 en Balcarce."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
       }
     }
   },
