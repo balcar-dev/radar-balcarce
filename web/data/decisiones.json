@@ -1,5 +1,5 @@
 {
-  "exportado": "2026-09-28T06:42:28.294Z",
+  "exportado": "2026-09-28T07:22:11.973Z",
   "decisiones": {
     "1951120": {
       "estado": "automatica",
@@ -41323,6 +41323,44 @@
           "fecha": "2026-09-27T09:00:14.000Z",
           "oficial": false,
           "aporte": "Aportó los datos coincidentes sobre las condiciones meteorológicas para productores rurales"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      }
+    },
+    "tawnyj": {
+      "estado": "automatica",
+      "titulo": "El Gobierno confirma el pago del bono previsional para octubre",
+      "copete": "El Gobierno nacional oficializó la entrega de un refuerzo económico en octubre para jubilados, pensionados y titulares de prestaciones no contributivas de la ANSES.",
+      "cuerpo": "El plus extraordinario y no remunerativo está dirigido a quienes perciben jubilaciones y pensiones contributivas, la Pensión Universal para el Adulto Mayor y pensiones no contributivas. Aquellos cuyos haberes sean menores o iguales al mínimo cobrarán el monto máximo del refuerzo, mientras que quienes superen ese umbral recibirán una suma proporcional para alcanzar el equivalente al haber mínimo más el adicional.\n\nLa ANSES quedó facultada para administrar la liquidación, efectuar controles y emitir normas complementarias para la acreditación del beneficio a los titulares.",
+      "guion": "El Gobierno confirma el pago del bono previsional para octubre",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-28T07:22:11.860Z",
+      "etiquetas": [
+        "Jubilados",
+        "ANSES",
+        "Bono",
+        "Gobierno nacional",
+        "Economía"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/economia/2026/09/28/el-gobierno-confirmo-el-pago-del-bono-para-jubilados-y-pensionados-para-octubre/",
+          "fecha": "2026-09-28T05:10:44.000Z",
+          "oficial": false,
+          "aporte": "Confirmó los detalles sobre los grupos alcanzados, el carácter no remunerativo del refuerzo y las condiciones de liquidación según los haberes."
+        },
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/economia/el-gobierno-confirmo-el-bono-previsional-de-octubre-para-jubilados-y-pensionados-nid28092026/",
+          "fecha": "2026-09-28T05:39:37.000Z",
+          "oficial": false,
+          "aporte": "Aportó el número de decreto oficial que formaliza la medida y el monto máximo del bono."
         }
       ],
       "verificacion": {
