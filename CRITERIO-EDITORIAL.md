@@ -80,7 +80,13 @@ argentina en el título (una figura argentina, "Argentina", Milei, Malvinas) o
 es automovilismo. De los medios de Balcarce entra todo. La lista es
 `SECCIONES_QUE_NO_ENTRAN` (`ingesta/fuentes.mjs`).
 
-**Nada de más de 72 horas (27/09).** El Diario Balcarce no tiene feed: se lee
+**Nada viejo (27/09 y 28/09).** Una nota que nunca salió no se publica si el
+hecho tiene más de 12 horas (`PORTADA.horasParaEstrenar`), y la portada y las
+secciones muestran sólo las últimas 36 horas (`PORTADA.horas`): de 140 notas
+publicadas del 25 al 28/09, 40 salieron con el hecho de más de un día, por
+esperar medios o cuerpo. La fecha de una nota es la más vieja que se conoce
+(la de su primera fuente): un medio que actualiza la suya no la rejuvenece.
+El Diario Balcarce no tiene feed: se lee
 su portada, que no dice la fecha de las notas y muestra también notas viejas
 (ese día, de 2025, que salían como de hoy). Ahora se abre cada nota sin fecha,
 se toma la fecha real de adentro por vieja que sea y lo que tiene más de 72
@@ -632,11 +638,10 @@ del 26/09, que recorrió las 300 páginas publicadas.
     el lector). Nunca una fila sin tiempo, ni frases como "la vimos hace".
 11. **Cada sección de la portada muestra tres notas, siempre.** Las tres más
     nuevas de esa sección, sin repetir las de la tapa. La tapa (la grande y las
-    cuatro de abajo) usa sólo lo de las últimas 72 horas; si una sección tiene
+    cuatro de abajo) usa sólo lo de las últimas 36 horas; si una sección tiene
     menos de tres ahí, se completa con lo más nuevo del archivo, pero **nunca
-    con nada de más de 72 horas** (27/09, Hernán: "no puede salir nada que ya
-    tenga más de 72 horas publicado"; eran 14 días y salían notas de "hace 9
-    días"): vuelve sólo lo de esas horas que la ingesta ya no trae, con cuerpo,
+    con nada de más de 36 horas** (28/09, Hernán: "en la tapa, lo que pasó
+    entre ayer y hoy"; eran 72 horas desde el 27/09, y antes 14 días): vuelve sólo lo de esas horas que la ingesta ya no trae, con cuerpo,
     sin repetidas, sin notas propias y sin lo que el semáforo retiró, y cada una
     **muestra su tiempo real**: nunca se inventa frescura. Una misma historia no
     completa dos secciones (`HORAS_PARA_COMPLETAR`). Si ni así hay tres, van las que haya; una
@@ -647,7 +652,7 @@ del 26/09, que recorrió las 300 páginas publicadas.
     nota que se lee: mismo titular, mismo tema o las mismas palabras cuentan
     como la misma historia (`mismaHistoria`, `web/lib/texto.js`). No entra la
     nota del dólar ni un repaso mientras haya otra cosa, ni notas sin hora salvo
-    que no quede nada más. Si las últimas 72 horas no alcanzan, se completa con
+    que no quede nada más. Si las últimas 36 horas no alcanzan, se completa con
     el archivo, con su fecha real (`web/lib/seguir-leyendo.js`).
 13. **Sin botones sobrantes al pie.** Ninguna página termina con "← Portada",
     "Más de…" o "Agenda": la navegación ya está arriba. El final de una página es,
@@ -890,8 +895,8 @@ instrucción de la IA (70, 90, 70 a 180…) también se controlan.
 | Texto completo de la fuente: caracteres que recibe la IA | 4000 | `REESCRITURA.caracteresDelTextoCompleto` |
 | Antecedentes: días hacia atrás | 30 | `REESCRITURA.diasDeAntecedentes` |
 | Antecedentes: como máximo | 3 | `REESCRITURA.antecedentesMaximo` |
-| Portada: horas que una nota está en las listas | 72 | `PORTADA.horas` |
-| Horas que puede tener un hecho para publicarse por primera vez (una nota que nunca salió y es más vieja, no sale) | 24 | `PORTADA.horasParaEstrenar` |
+| Portada: horas que una nota está en las listas | 36 | `PORTADA.horas` |
+| Horas que puede tener un hecho para publicarse por primera vez (una nota que nunca salió y es más vieja, no sale) | 12 | `PORTADA.horasParaEstrenar` |
 | Portada: horas que una nota compite por el lugar grande | 6 | `PORTADA.horasNotaGrande` |
 | Días que dura la página de una nota | 180 | `PORTADA.diasDeArchivo` |
 | Nota del dólar: cuánto tiene que moverse el blue o el oficial contra el día anterior para salir (%) | 2 | `NOTA_DEL_DOLAR.movimientoMinimo` |

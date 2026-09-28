@@ -10,7 +10,7 @@
 // Ahora hay dos listas separadas:
 //
 //   portada.json   lo que se MUESTRA: portada, secciones, temas, buscador,
-//                  feed. Sólo notas de las últimas 72 horas.
+//                  feed. Sólo notas de las últimas 36 horas (eran 72).
 //   archivo.json   lo que tiene PÁGINA: todo lo publicado de los últimos 180
 //                  días, con lo necesario para armar la página de la nota.
 //
@@ -24,7 +24,7 @@ import { tieneRespaldo } from './cuerpo.js';
  *  usa el panel para archivar lo que nadie decidió (panel/servidor.mjs,
  *  HORAS_PARA_ARCHIVAR), pero corre en la nube: el panel sólo archiva con la
  *  PC prendida, y el 25/09 la portada tenía 43 notas de más de tres días. */
-export const HORAS_EN_PORTADA = 72;
+export const HORAS_EN_PORTADA = 36;
 
 /**
  * Las notas que se sacaron a mano de la web (web/data/retiradas.json), fuera
@@ -121,12 +121,12 @@ export function fechaDeLaNota(nota, { fechaAnterior = null, visto = null } = {})
 
 /** Horas que puede tener un hecho para publicarse por primera vez
  *  (PORTADA.horasParaEstrenar en ingesta/criterio.mjs; una prueba lo controla). */
-export const HORAS_PARA_ESTRENAR = 24;
+export const HORAS_PARA_ESTRENAR = 12;
 
 /**
  * ¿Esta nota llega tarde para estrenarse? Una nota que nunca salió no se
  * publica si el hecho (su fecha, ya corregida con fechaDeLaNota) tiene más de
- * HORAS_PARA_ESTRENAR. Lo ya publicado sigue su curso hasta las 72 horas.
+ * HORAS_PARA_ESTRENAR. Lo ya publicado sigue su curso hasta las 36 horas.
  *
  * 28/09, Hernán: "¿por qué trae noticias viejas todo el tiempo?". De 140 notas
  * publicadas desde el viernes, 40 salieron con el hecho de más de 24 horas y 20

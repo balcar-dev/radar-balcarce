@@ -244,10 +244,10 @@ test('lo que salió de la portada antes del archivo se recupera del historial, e
 
 // ---------------------------------------------------------- 72 horas (25/09)
 
-test('las listas no muestran notas de más de 72 horas', () => {
-  assert.equal(HORAS_EN_PORTADA, 72);
-  assert.ok(vigenteEnPortada({ fecha: haceHoras(71) }, AHORA));
-  assert.ok(!vigenteEnPortada({ fecha: haceHoras(73) }, AHORA));
+test('las listas no muestran notas de más de 36 horas (eran 72 hasta el 28/09)', () => {
+  assert.equal(HORAS_EN_PORTADA, 36);
+  assert.ok(vigenteEnPortada({ fecha: haceHoras(35) }, AHORA));
+  assert.ok(!vigenteEnPortada({ fecha: haceHoras(37) }, AHORA));
   // Sin fecha no se sabe: no se saca.
   assert.ok(vigenteEnPortada({}, AHORA));
 });
@@ -352,15 +352,17 @@ test('la fecha de una nota es la más vieja que se conoce: un medio que actualiz
 import { llegaTarde, HORAS_PARA_ESTRENAR } from '../web/lib/archivo.js';
 import { PORTADA } from '../ingesta/criterio.mjs';
 
-test('una nota que nunca salió no se estrena con el hecho de más de 24 horas', () => {
+test('una nota que nunca salió no se estrena con el hecho de más de 12 horas', () => {
   assert.equal(HORAS_PARA_ESTRENAR, PORTADA.horasParaEstrenar);
   const ahora = new Date('2026-09-28T15:00:00Z').getTime();
   // El choque de Colapinto en Bakú (sábado 26 a la mañana): el lunes ya no se estrena.
   assert.equal(llegaTarde('2026-09-26T12:47:00Z', ahora), true);
+  // Lo de anoche a las 20, tampoco (más de 12 horas).
+  assert.equal(llegaTarde('2026-09-27T23:00:00Z', ahora), true);
   // Lo de esta mañana, sí.
   assert.equal(llegaTarde('2026-09-28T09:00:00Z', ahora), false);
   // Justo en el borde, todavía sale.
-  assert.equal(llegaTarde('2026-09-27T15:00:00Z', ahora), false);
+  assert.equal(llegaTarde('2026-09-28T03:00:00Z', ahora), false);
   assert.equal(llegaTarde(null, ahora), false, 'sin fecha no se sabe: la decide la regla de "sin hora"');
 });
 

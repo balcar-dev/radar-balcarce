@@ -6,7 +6,7 @@ a nada: lee dos archivos que regenera GitHub Actions cada 30 minutos
 (`../INFRAESTRUCTURA.md`):
 
 - `data/portada.json`: lo que se **muestra** (portada, secciones, buscador,
-  feed). Sólo notas de las últimas 72 horas.
+  feed). Sólo notas de las últimas 36 horas (28/09; eran 72).
 - `data/agenda.json`: los **eventos de la agenda**, cada uno con su página
   (`/agenda/<nombre>-<id>`): los del municipio y los que se publican desde el
   panel (llegan por `data/eventos-panel.json`), hasta 60 días después de que

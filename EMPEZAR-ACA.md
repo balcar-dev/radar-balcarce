@@ -53,7 +53,8 @@ Todo esto corre en GitHub, **con la PC apagada**:
 - **Cada 30 minutos (Vigilancia):** revisa que todo lo anterior ande y te
   escribe por WhatsApp si algo falla (anda desde el 25/09; a las 21 manda un
   resumen). Detalle: `INFRAESTRUCTURA.md`.
-- **72 horas:** la portada muestra sólo las notas de las últimas 72 horas. Eso
+- **36 horas:** la portada muestra sólo las notas de las últimas 36 horas (28/09;
+  eran 72), y una nota con el hecho de más de 12 horas ya no se estrena. Eso
   corre en la nube desde el 25/09 (antes lo hacía el panel, sólo con la PC
   prendida). Las notas más viejas siguen teniendo su página, así los enlaces
   que circulan no se rompen.

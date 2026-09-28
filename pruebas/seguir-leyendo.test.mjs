@@ -141,7 +141,7 @@ test('una sección con una nota reciente y cinco viejas muestra tres: la recient
     nota('c1', 'Muestra de pintura en el museo', 5, { seccion: 'Cultura y agenda' }),
   ];
   const titulos = ['Estrenan obra de teatro en la sala municipal', 'Charla de escritores en la biblioteca popular', 'Nueva muestra fotográfica del taller escuela', 'Coro de niños canta en la parroquia', 'Festival folclórico llega al parque'];
-  // Todas dentro de las 72 horas: más atrás no se completa nada (27/09).
+  // Sólo las de menos de 36 horas: más atrás no se completa nada (28/09).
   const archivo = titulos.map((t, i) => conCuerpo(nota(`cv${i + 1}`, t, 10 * (i + 1), { seccion: 'Cultura y agenda' })));
   // La de cultura es la única de su sección: va a la tapa como secundaria, así que
   // para probar el bloque se le suma otra reciente de otra sección que la deje abajo.
@@ -155,21 +155,21 @@ test('una sección con una nota reciente y cinco viejas muestra tres: la recient
 
 test('una sección vacía en la portada y en el archivo no se dibuja; una vacía en la portada pero con archivo, sí', () => {
   const portada = [nota('p', 'Nota grande de Balcarce', 1, { local: true })];
-  const archivo = [conCuerpo(nota('pol1', 'Robo en una casa de la calle veinte', 48, { seccion: 'Policiales' }))];
+  const archivo = [conCuerpo(nota('pol1', 'Robo en una casa de la calle veinte', 30, { seccion: 'Policiales' }))];
   const { bloques } = armarTapa(portada, ['Balcarce', 'Policiales', 'Agro'], { archivo });
   assert.equal(en(bloques, 'Agro').length, 0);
   assert.ok(!bloques.some(([s]) => s === 'Agro'));
   assert.equal(en(bloques, 'Policiales').length, 1);
 });
 
-test('las del archivo sin cuerpo, propias, sin hora o de hace más de 72 horas no completan', () => {
+test('las del archivo sin cuerpo, propias, sin hora o de hace más de 36 horas no completan', () => {
   const portada = [nota('p', 'Nota grande de Balcarce', 1, { local: true })];
   const archivo = [
-    nota('sin-cuerpo', 'Archivada que no tiene cuerpo de verdad', 24 * 2, { seccion: 'Agro' }),
+    nota('sin-cuerpo', 'Archivada que no tiene cuerpo de verdad', 30, { seccion: 'Agro' }),
     conCuerpo(nota('vieja', 'Archivada de hace cuatro días por la sequía', 24 * 4, { seccion: 'Agro' })),
-    conCuerpo(nota('propia', 'Repaso del podcast de la tarde de ayer', 24 * 2, { seccion: 'Agro', propia: 'repaso' })),
-    conCuerpo(nota('sinhora', 'Archivada sin hora de la fuente sobre siembra', 24 * 2, { seccion: 'Agro', sinFecha: true })),
-    conCuerpo(nota('ok', 'Archivada buena sobre el precio de la soja', 60, { seccion: 'Agro' })),
+    conCuerpo(nota('propia', 'Repaso del podcast de la tarde de ayer', 30, { seccion: 'Agro', propia: 'repaso' })),
+    conCuerpo(nota('sinhora', 'Archivada sin hora de la fuente sobre siembra', 30, { seccion: 'Agro', sinFecha: true })),
+    conCuerpo(nota('ok', 'Archivada buena sobre el precio de la soja', 20, { seccion: 'Agro' })),
   ];
   const { bloques } = armarTapa(portada, ['Balcarce', 'Agro'], { archivo });
   assert.deepEqual(en(bloques, 'Agro').map((n) => n.id), ['ok']);
@@ -182,8 +182,8 @@ test('una nota del archivo que repite un titular de la portada no se suma, ni un
   ];
   const archivo = [
     conCuerpo(nota('a1', 'Ferroviarios ganó por penales y llegó a la final anual', 3, { seccion: 'Deportes' })),
-    conCuerpo(nota('dup', 'Ferroviarios ganó por penales y llegó a la final anual', 40, { seccion: 'Deportes' })),
-    conCuerpo(nota('d2', 'Nuevo entrenador en el básquet local de la ciudad', 50, { seccion: 'Deportes' })),
+    conCuerpo(nota('dup', 'Ferroviarios ganó por penales y llegó a la final anual', 20, { seccion: 'Deportes' })),
+    conCuerpo(nota('d2', 'Nuevo entrenador en el básquet local de la ciudad', 30, { seccion: 'Deportes' })),
   ];
   const { bloques } = armarTapa(portada, ['Balcarce', 'Deportes'], { archivo });
   // La de Deportes de la portada (a1) va a la tapa; el bloque se completa sin repetirla.

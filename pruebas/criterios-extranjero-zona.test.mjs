@@ -42,8 +42,8 @@ test('las listas de sepelios no se publican nunca: es sensible (Hernán, 27/09)'
   assert.match(s.motivo, /sepelios/);
 });
 
-test('la portada no muestra nada de más de 72 horas y no repite una historia en dos secciones', () => {
-  assert.equal(HORAS_PARA_COMPLETAR, 72);
+test('la portada no muestra nada de más de 36 horas y no repite una historia en dos secciones', () => {
+  assert.equal(HORAS_PARA_COMPLETAR, 36);
   const ahora = Date.parse('2026-09-27T22:00:00Z');
   const hace = (d) => new Date(ahora - d * 864e5).toISOString();
   const cuerpo = 'palabra '.repeat(90);
@@ -52,15 +52,15 @@ test('la portada no muestra nada de más de 72 horas y no repite una historia en
     { id: 'h2', titulo: 'Nueva sesión del Concejo', seccion: 'Política', local: true, fecha: hace(0.2), relevancia: 70, cuerpo },
   ];
   const archivo = [
-    { id: 'a1', titulo: 'Informan los servicios de la Cooperativa de Electricidad', seccion: 'Balcarce', local: true, fecha: hace(2), cuerpo },
-    { id: 'a2', titulo: 'Informan los servicios de la Cooperativa de Electricidad', seccion: 'Fútbol', local: true, fecha: hace(3), cuerpo },
+    { id: 'a1', titulo: 'Informan los servicios de la Cooperativa de Electricidad', seccion: 'Balcarce', local: true, fecha: hace(1), cuerpo },
+    { id: 'a2', titulo: 'Informan los servicios de la Cooperativa de Electricidad', seccion: 'Fútbol', local: true, fecha: hace(1.2), cuerpo },
     { id: 'a3', titulo: 'Una nota de hace cuatro días', seccion: 'Deportes', local: true, fecha: hace(4), cuerpo },
   ];
   const { bloques } = armarTapa(hoy, undefined, { archivo, ahora });
   const ids = bloques.flatMap(([, ns]) => ns.map((n) => n.id));
   assert.ok(ids.includes('a1'));
   assert.ok(!ids.includes('a2'), 'la misma historia no completa otra sección');
-  assert.ok(!ids.includes('a3'), 'nada de más de 72 horas');
+  assert.ok(!ids.includes('a3'), 'nada de más de 36 horas');
 });
 
 test('las necrológicas que El Diario pega debajo de cada nota no se leen como la nota (27/09)', async () => {

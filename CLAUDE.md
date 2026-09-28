@@ -99,7 +99,7 @@ cada uno, cuándo corre y si cuesta plata), en `INFRAESTRUCTURA.md`.
   continuar.
 - **La dirección de una nota es fija** desde la primera vez que sale, aunque la
   IA cambie el titular después (los enlaces ya están en Facebook). La portada
-  muestra sólo 72 horas; `web/data/archivo.json` guarda lo publicado de los
+  muestra sólo 36 horas (28/09; eran 72); `web/data/archivo.json` guarda lo publicado de los
   últimos 180 días (hasta 2500 notas) y de ahí también salen páginas. Si una
   nota pasa a rojo o amarillo, o una persona la bloquea, sale del archivo y
   pierde la página. Lo de afuera contado por un solo medio también la pierde,
@@ -134,9 +134,15 @@ cada uno, cuándo corre y si cuesta plata), en `INFRAESTRUCTURA.md`.
   Balcarce (en el título o al comienzo), el cruce la trata como de afuera: la
   principal es de un medio de afuera y pide los medios de su sección
   (`historiaDeAca` y `mencionaBalcarce`, en `ingestar`).
-- **Nada de más de 72 horas en la portada ni en las secciones** (27/09, Hernán:
-  "no puede salir nada que ya tenga más de 72 horas publicado"). Para completar
-  una sección, del archivo vuelve sólo lo de esas mismas 72 horas
+- **Nada viejo en la portada ni en las secciones** (28/09, Hernán: "en la tapa,
+  lo que pasó entre ayer y hoy"; "¿por qué trae noticias viejas todo el
+  tiempo?"). Una nota que nunca salió **no se estrena si el hecho tiene más de
+  12 horas** (`PORTADA.horasParaEstrenar`, `llegaTarde` en
+  `web/lib/archivo.js`): 40 de 140 salían con más de un día por esperar medios
+  o cuerpo. Las listas muestran **36 horas** (`PORTADA.horas`,
+  `HORAS_EN_PORTADA`; eran 72). La fecha es la de la primera fuente
+  (`fechaDeLaNota`). Para completar una sección, del archivo vuelve sólo lo de
+  esas mismas 36 horas
   (`HORAS_PARA_COMPLETAR = HORAS_EN_PORTADA`, `web/lib/datos.js`; eran 14 días
   y después 7), y una misma historia no completa dos secciones. El Diario
   Balcarce, que se raspa, muestra en su portada notas viejas sin fecha (el
