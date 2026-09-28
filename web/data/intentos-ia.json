@@ -2546,9 +2546,9 @@
   "motivo": "sin material"
  },
  "m1ypjt": {
-  "intentos": 1,
-  "ultimo": "2026-09-28T04:01:05.206Z",
-  "motivo": "Gemini: Bad Unicode escape in JSON at position 877 (line 1 column 878)"
+  "intentos": 2,
+  "ultimo": "2026-09-28T05:11:30.306Z",
+  "motivo": "con cuerpo"
  },
  "m4pjpv": {
   "intentos": 3,
@@ -3163,9 +3163,9 @@
   "motivo": "título o bajada: 1 problema (negacion): la fuente niega algo en el título y el texto nuevo no"
  },
  "zd48ar": {
-  "intentos": 1,
-  "ultimo": "2026-09-27T11:00:48.560Z",
-  "motivo": "con cuerpo"
+  "intentos": 2,
+  "ultimo": "2026-09-28T05:11:30.306Z",
+  "motivo": "Gemini: Bad Unicode escape in JSON at position 84 (line 1 column 85)"
  },
  "zhx6lt": {
   "intentos": 1,
