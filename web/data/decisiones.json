@@ -1,5 +1,5 @@
 {
-  "exportado": "2026-09-28T08:41:53.934Z",
+  "exportado": "2026-09-28T08:52:19.389Z",
   "decisiones": {
     "1951120": {
       "estado": "automatica",
@@ -15943,13 +15943,92 @@
     },
     "n83p42": {
       "estado": "automatica",
-      "titulo": null,
-      "copete": null,
-      "cuerpo": null,
-      "guion": null,
-      "deIA": null,
-      "por": null,
-      "cuando": "2026-09-25T09:10:46.897Z"
+      "titulo": "ANSES avanza con el pago de jubilaciones y asignaciones",
+      "copete": "La Administración Nacional de la Seguridad Social continúa con su cronograma de pagos para jubilaciones, pensiones y diversas asignaciones según la terminación del documento.",
+      "cuerpo": "La Administración Nacional de la Seguridad Social avanza con el calendario de pagos de jubilaciones, asignaciones y otras prestaciones organizadas según la terminación del documento de identidad. Las fechas de cobro varían de acuerdo con el tipo de beneficio y el número final del DNI de cada titular.\n\nDurante este período, las prestaciones previsionales y las asignaciones cuentan con un incremento determinado por la variación mensual del Índice de Precios al Consumidor. El organismo previsional mantiene las acreditaciones correspondientes a jubilaciones y pensiones, además de las asignaciones familiares y los pagos destinados a beneficiarios de diferentes prestaciones sociales en todo el país.\n\nComo se había informado en el cronograma semanal, el organismo nacional continúa efectuando los depósitos en las sucursales bancarias habilitadas para tal fin, completando las fechas previstas para el sector pasivo y las distintas líneas de asistencia.",
+      "guion": "ANSES avanza con el pago de jubilaciones y asignaciones",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-28T08:52:19.287Z",
+      "claves": [
+        "El organismo previsional continúa con el cronograma de pagos.",
+        "Las fechas de cobro se organizan según la terminación del DNI.",
+        "La medida alcanza a jubilaciones, pensiones y asignaciones."
+      ],
+      "seSabe": [
+        "La ANSES avanza con el calendario de pagos de jubilaciones, asignaciones y otras prestaciones.",
+        "Las fechas de cobro varían según la terminación del DNI.",
+        "Las prestaciones y asignaciones recibieron un aumento según la variación mensual del Índice de Precios al Consumidor."
+      ],
+      "textoRedes": "La ANSES avanza con el calendario de pagos de jubilaciones, pensiones y asignaciones organizado según la terminación del documento.",
+      "etiquetas": [
+        "ANSES",
+        "jubilaciones",
+        "asignaciones",
+        "calendario de pagos"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/economia/2026/09/25/anses-quienes-cobran-hoy-viernes-25-de-septiembre-de-2026/",
+          "fecha": "2026-09-25T09:00:01.000Z",
+          "oficial": false,
+          "aporte": "Detalló el avance del calendario de pagos, los aumentos y los montos de las prestaciones."
+        },
+        {
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/economia/2026/09/28/anses-quienes-cobran-jubilaciones-auh-y-asignaciones-este-lunes-28-de-septiembre/",
+          "fecha": "2026-09-28T06:22:18.000Z",
+          "oficial": false,
+          "aporte": "Informó sobre el cronograma de pagos para el lunes 28 de septiembre y los DNI habilitados."
+        },
+        {
+          "medio": "C5N",
+          "enlace": "https://www.c5n.com/economia/cuando-cobro-anses-jubilaciones-y-pensiones-pago-unico-asignaciones-familiares-pnc-desempleo-plan-1-este-lunes-28-septiembre-n250073",
+          "fecha": "2026-09-27T22:44:00.000Z",
+          "oficial": false,
+          "aporte": "Indicó la realización de los pagos en sucursales bancarias y los aumentos previstos para octubre."
+        },
+        {
+          "medio": "C5N",
+          "enlace": "https://www.c5n.com/economia/asi-quedo-el-calendario-pagos-anses-jubilados-y-pensionados-octubre-2026-n249953",
+          "fecha": "2026-09-26T19:39:40.000Z",
+          "oficial": false,
+          "aporte": "Confirmó las fechas de cobro para ex trabajadores organizadas por terminación de DNI."
+        },
+        {
+          "medio": "Canal 26",
+          "enlace": "https://www.canal26.com/economia/2026/09/27/anses-cierra-septiembre-con-pagos-clave-quienes-cobran-el-28-29-y-30-segun-su-prestacion/",
+          "fecha": "2026-09-27T14:05:00.000Z",
+          "oficial": false,
+          "aporte": "Señaló la finalización del calendario de pagos de septiembre para jubilados y pensionados."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "u3yqhj",
+          "titulo": "ANSES: quiénes cobran hoy, miércoles 23 de septiembre de 2026",
+          "fecha": "2026-09-23T09:00:01.000Z",
+          "ruta": "/nota/anses-quienes-cobran-hoy-miercoles-23-de-septiembre-de-2026-u3yqhj"
+        },
+        {
+          "id": "19uutgi",
+          "titulo": "ANSES: quiénes cobran este miércoles 23 de septiembre",
+          "fecha": "2026-09-22T18:37:09.000Z",
+          "ruta": "/nota/anses-quienes-cobran-este-miercoles-23-de-septiembre-19uutgi"
+        },
+        {
+          "id": "n5lm6f",
+          "titulo": "Dólar blue hoy: a cuánto cotiza este viernes 25 de septiembre",
+          "fecha": "2026-09-25T07:00:08.000Z",
+          "ruta": "/nota/dolar-blue-hoy-a-cuanto-cotiza-este-viernes-25-de-septiembre-n5lm6f"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron cuatro medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      }
     },
     "1obhe3v": {
       "estado": "automatica",
