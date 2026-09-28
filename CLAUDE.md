@@ -382,6 +382,7 @@ cada uno, cuándo corre y si cuesta plata), en `INFRAESTRUCTURA.md`.
 | `REDES.md` | Qué se publica en Instagram y Facebook, cuándo y con qué reglas (horarios e infraestructura; cómo suena, en `CRITERIO-REDES.md`) |
 | `PERFILES.md` | Biografías, categorías y colores de las redes |
 | `FORMATOS.md` | Medidas de imágenes y videos, con la auditoría semanal |
+| `MEDIA-KIT.md` | **Toda la identidad visual, junta**: colores, tipografía, íconos y medidas, con dónde vive cada uno en el código. Para cuando haya que volver a cambiar el diseño |
 | `SEO.md` | Posicionamiento: qué está hecho, cómo se audita, qué falta |
 | `PANEL.md` | El tablero: pestañas, usuarios, respaldo, sincronización y cómo pasarlo online |
 | `PUBLICIDAD.md` | Avisos, monetización y AdSense |
