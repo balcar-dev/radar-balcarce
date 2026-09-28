@@ -326,7 +326,7 @@ if (enLaNube) {
   // El archivo va también como fuente de ANTECEDENTES: lo que el sitio ya
   // publicó sobre el mismo tema en los últimos 30 días (CRITERIO-EDITORIAL.md).
   reescritas = await reescribirAutomaticas(paraReescribir, {
-    previas, decisiones: estado.decisiones, archivo: archivoAnterior.notas ?? [], intentos,
+    previas, decisiones: estado.decisiones, retiradas: RETIRADAS_A_MANO, archivo: archivoAnterior.notas ?? [], intentos,
   });
   const nuevas = Object.keys(reescritas).filter((id) => !previas[id]).length;
   if (nuevas) console.log(`  ${nuevas} notas reescritas con IA en esta corrida`);

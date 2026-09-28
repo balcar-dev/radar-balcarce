@@ -2,7 +2,7 @@
 
 *Escrito el 28/09/2026, leyendo `CLAUDE.md` y cada archivo de `pruebas/` de
 ese día, y puesto al día esa noche con el commit "Trece arreglos encontrados al
-documentar". Las pruebas se corrieron ese día: **1.337 pruebas en 82 archivos,
+documentar". Las pruebas se corrieron ese día: **1.338 pruebas en 82 archivos,
 todas bien, en unos 11 segundos**. Si un documento dice otra cosa que el
 código, manda el código.*
 
@@ -82,7 +82,7 @@ libro de redes real del 24 y 25/09).
 ### 4. Cómo se agrega una regla
 
 1. Escribirla en este documento, en la tabla de su tema, con **el número
-   siguiente** (hoy, 68), aunque vaya en otra tabla: los números no se
+   siguiente** (hoy, 69), aunque vaya en otra tabla: los números no se
    reordenan.
 2. Escribir la prueba en el archivo del área (la tabla de abajo dice cuál) o en
    uno nuevo con un nombre que diga qué cuida.
@@ -171,6 +171,7 @@ publicada y avisa si la regla se rompió por algo que las pruebas no ven) o
 | 63 | **Una nota que nunca salió no se estrena si el hecho tiene más de 12 horas** (28/09, `llegaTarde`): de 140 notas del 25 al 28/09, 40 salieron con el hecho de más de un día. Lo que ya salió sigue su curso; lo que publicó una persona, también. | Prueba: `archivo.test.mjs` |
 | 65 | **Una nota tiene una sola fecha, y puede envejecer pero nunca rejuvenecer** (28/09, `fechaReal`, `fechaDeLaNota`): sin hora de la fuente, la primera vez que se vio (`web/data/vistas.json`); con hora, la más vieja conocida. Un medio que "actualiza" su nota no la devuelve a la tapa. | Prueba: `archivo.test.mjs` ("la fecha más vieja manda") |
 | 66 | **Una nota ya publicada no pierde su página por el cupo ni por los medios** (28/09, `pierdeLaPagina`): sale de las listas mientras espera, pero el enlace compartido sigue andando. Sí la pierde por rojo o por un amarillo de contenido. | Prueba: `arreglos-28-09.test.mjs` |
+| 68 | **La IA sólo reescribe lo que va a salir solo** (28/09, Hernán: "no reescribir cosas que requieran una habilitación a mano"): sólo las notas en verde, sin decisión de una persona y sin retirar a mano (`retiradas.json`). Amarillo y rojo no gastan cupo de redacción; la lectura con IA sí las lee, porque es la que decide el color. | Prueba: `reescritura.test.mjs` ("no toca una nota que no es verde", "no gasta un pedido en una nota retirada a mano") |
 
 ### Qué se trae y qué es de Balcarce
 

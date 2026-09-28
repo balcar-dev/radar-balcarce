@@ -101,7 +101,7 @@ Una regla o un número vive en **un** lugar; los demás documentos remiten.
 | `docs/07-REDES.md` | Facebook e Instagram: el interruptor, los posteos y el espejo, el reloj, las piezas, los podcasts, el contrato del día, el libro, la conexión con Meta y las auditorías |
 | `docs/08-INFRAESTRUCTURA.md` | Qué corre dónde: los trece workflows, cron-job.org, Cloudflare, GitHub, las claves de IA y sus topes, todos los secretos por nombre, la vigilancia, los vencimientos y lo que cuesta |
 | `docs/09-PANEL.md` | El tablero de la PC: arrancarlo, las pestañas, qué pasa cuando alguien decide, cómo sube a GitHub, el respaldo, la agenda paso a paso y cómo se podría pasar a online |
-| `docs/10-REGLAS-Y-PRUEBAS.md` | **Las reglas numeradas** (1 a 67), qué prueba cuida cada una, el mapa de `pruebas/` y la regla de la prueba después del error |
+| `docs/10-REGLAS-Y-PRUEBAS.md` | **Las reglas numeradas** (1 a 68), qué prueba cuida cada una, el mapa de `pruebas/` y la regla de la prueba después del error |
 | `docs/11-OPERACION.md` | El manual de uso diario: los enlaces, corregir, retirar, escribir cuerpos, prender o apagar las redes, publicar una pieza, qué mirar cuando algo deja de salir |
 | `docs/12-GLOSARIO.md` | Cada palabra propia del proyecto, con su definición y dónde vive |
 

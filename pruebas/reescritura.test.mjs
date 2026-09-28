@@ -181,6 +181,13 @@ test('no toca una nota que no es verde', async () => {
   assert.equal(pedidos.length, 0);
 });
 
+test('no gasta un pedido en una nota retirada a mano (retiradas.json)', async () => {
+  const { fn, pedidos } = fetchFalso([]);
+  const r = await reescribirAutomaticas([notaVerde()], { retiradas: new Set(['n1']), opciones: { fetchFn: fn } });
+  assert.deepEqual(r, {});
+  assert.equal(pedidos.length, 0);
+});
+
 test('reusa lo ya reescrito en una corrida anterior, sin gastar un pedido', async () => {
   const { fn, pedidos } = fetchFalso([]);
   const previas = { n1: { titulo: 'Ya reescrito', copete: 'Ya.', cuerpo: CUERPO, guion: 'Ya reescrito.', deIA: true } };

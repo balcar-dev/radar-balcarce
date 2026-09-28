@@ -955,7 +955,7 @@ export function ordenarParaReescribir(notas, previas = {}) {
 export async function reescribirAutomaticas(notas, {
   previas = {}, decisiones = {}, tope = REESCRITURAS_POR_CORRIDA, opciones, traer = traerTexto, registro = console.log,
   archivo = [], ahora = Date.now(), intentos = {}, maximoDeIntentos = MAXIMO_DE_INTENTOS,
-  minimoDeMaterial = PALABRAS_MINIMAS_DE_MATERIAL, porDia = REESCRITURAS_POR_DIA,
+  minimoDeMaterial = PALABRAS_MINIMAS_DE_MATERIAL, porDia = REESCRITURAS_POR_DIA, retiradas = new Set(),
 } = {}) {
   const resultado = {};
   const cuenta = {
@@ -969,7 +969,9 @@ export async function reescribirAutomaticas(notas, {
   const candidatas = ordenarParaReescribir(
     [...notas]
       .filter((n) => n.semaforo === 'verde')
-      .filter((n) => !decisionHumana(decisiones[n.id])),
+      .filter((n) => !decisionHumana(decisiones[n.id]))
+      // Lo retirado a mano (web/data/retiradas.json) no sale: no se gasta cupo.
+      .filter((n) => !retiradas.has(n.id)),
     previas,
   );
 
