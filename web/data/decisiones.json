@@ -1,5 +1,5 @@
 {
-  "exportado": "2026-09-28T11:11:50.567Z",
+  "exportado": "2026-09-28T11:22:22.921Z",
   "decisiones": {
     "1951120": {
       "estado": "automatica",
@@ -42631,6 +42631,93 @@
           "titulo": "Franco Colapinto choca con Pierre Gasly en el Gran Premio de Azerbaiyán",
           "fecha": "2026-09-26T15:07:30.000Z",
           "ruta": "/nota/franco-colapinto-choca-con-pierre-gasly-en-el-gran-premio-de-mk94me"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      }
+    },
+    "1q0dki": {
+      "estado": "automatica",
+      "titulo": "Suiza rechaza en referéndum endurecer su política de neutralidad",
+      "copete": "Los votantes suizos rechazaron en un referéndum una propuesta para endurecer la política de neutralidad constitucional del país y limitar la imposición de sanciones.",
+      "cuerpo": "Un amplio sector de los votantes rechazó en un referéndum una iniciativa destinada a endurecer la tradicional política de neutralidad de Suiza. La propuesta, que no obtuvo el respaldo de ninguno de los cantones, habría dificultado la imposición de sanciones y limitado la cooperación militar con alianzas extranjeras.\n\nEl codirector de la empresa demoscópica gfs.bern, Lukas Golder, explicó a la televisión pública que el resultado refleja el apoyo a una versión más matizada de la neutralidad, permitiendo que el Parlamento y el Gobierno conserven margen de maniobra.\n\nEn la misma consulta popular también fue rechazada otra propuesta centrada en la seguridad alimentaria y la autosuficiencia del sector, con el voto en contra de la gran mayoría de los participantes.",
+      "guion": "Suiza rechaza en referéndum endurecer su política de neutralidad",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-28T11:22:22.809Z",
+      "claves": [
+        "Rechazan en referéndum endurecer la neutralidad suiza",
+        "Ninguno de los cantones apoyó la iniciativa propuesta",
+        "La iniciativa buscaba limitar la aplicación de sanciones",
+        "También se rechazó otra propuesta sobre seguridad alimentaria"
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Los ciudadanos suizos rechazaron en un referéndum una iniciativa para endurecer la política de neutralidad del país y limitar la imposición de sanciones internacionales.",
+      "etiquetas": [
+        "Suiza",
+        "referéndum",
+        "neutralidad",
+        "política internacional"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Radio Sudestada",
+          "enlace": "https://radiosudestada.com.ar/2026/09/suiza-rechaza-en-referendum-endurecer-su-politica-de-neutralidad/",
+          "fecha": "2026-09-28T11:15:00.000Z",
+          "oficial": false,
+          "aporte": "Informó sobre el rechazo a la iniciativa de neutralidad en el referéndum de Suiza y sus detalles políticos."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "em0phg": {
+      "estado": "automatica",
+      "titulo": "Avanza la privatizacion de Enarsa con la venta de tres termoelectricas",
+      "copete": "El Gobierno nacional dispuso la venta de las participaciones de la empresa estatal en tres centrales termoelectricas mediante licitaciones publicas, como parte del proceso previsto en la Ley de Bases.",
+      "cuerpo": "en tres centrales termoelectricas, mediante licitaciones publicas con alcance nacional e internacional. y, en una etapa posterior, Central Termoelectrica Guillermo Brown S.A.\n\nLa decision forma parte de la privatizacion total de la empresa estatal autorizada en el marco de la legislacion vigente. El Ministerio de Economia y la Agencia de Transformacion de Empresas Publicas deberan instrumentar los procedimientos para la transferencia de las tenencias accionarias en las dos primeras plantas, mientras que el caso de la central Guillermo Brown tendra un cronograma diferente hasta completar la liquidacion del fideicomiso vinculado.\n\nEl proceso se instrumenta a traves de los mecanismos previstos en la normativa de reforma del Estado, sin que por el momento se hayan precisado los plazos ni los requisitos detallados para la presentacion de ofertas.",
+      "guion": "Avanza la privatizacion de Enarsa con la venta de tres termoelectricas",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-28T11:22:22.809Z",
+      "claves": [
+        "El Gobierno nacional dispuso la venta de acciones en tres centrales termoelectricas.",
+        "La medida se realiza mediante licitaciones publicas nacionales e internacionales.",
+        "El proceso incluye a las sociedades Manuel Belgrano, Jose de San Martin y Guillermo Brown."
+      ],
+      "noConfirmado": [
+        "No se informaron las fechas exactas para las convocatorias a licitacion ni los requisitos para los potenciales oferentes.",
+        "No se detallaron los montos ni las condiciones economicas de la operacion."
+      ],
+      "etiquetas": [
+        "Enarsa",
+        "privatizacion",
+        "termoelectricas",
+        "Gobierno nacional",
+        "energia"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/economia/2026/09/28/iniciaron-un-nuevo-proceso-de-privatizacion-de-las-acciones-de-enarsa/",
+          "fecha": "2026-09-28T07:44:28.000Z",
+          "oficial": false,
+          "aporte": "Detallo el alcance de la medida sobre las tres centrales termoelectricas y los antecedentes legales de las sociedades."
+        },
+        {
+          "medio": "Noticias Argentinas (NA)",
+          "enlace": "https://noticiasargentinas.com/economia/el-gobierno-lanzo-la-segunda-etapa-de-privatizacion-de-enarsa-y-abre-licitacion-por-tres-termoelectricas_a6aba46abb62936833e61535d",
+          "fecha": "2026-09-28T10:50:00.000Z",
+          "oficial": false,
+          "aporte": "Informo el lanzamiento de la segunda etapa del proceso de privatizacion de Enarsa mediante licitacion publica."
         }
       ],
       "verificacion": {
