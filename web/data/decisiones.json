@@ -1,5 +1,5 @@
 {
-  "exportado": "2026-09-28T10:41:55.259Z",
+  "exportado": "2026-09-28T11:02:40.131Z",
   "decisiones": {
     "1951120": {
       "estado": "automatica",
@@ -42331,6 +42331,154 @@
         "nivel": "ALTA",
         "porque": "Lo contaron tres medios independientes.",
         "sugeridoPorIA": "ALTA"
+      }
+    },
+    "18hobue": {
+      "estado": "automatica",
+      "titulo": "Abel Pintos cantará ante el papa León XIV en Claypole",
+      "copete": "El músico argentino participará de la visita que el papa León XIV realizará el lunes 9 de noviembre al Pequeño Cottolengo Don Orione en la localidad bonaerense de Claypole.",
+      "cuerpo": "La agenda papal prevé que el pontífice llegue al país el domingo 8 de noviembre y visite la institución al día siguiente desde las 9.15, en una actividad con carácter íntimo para preservar a los residentes.\n\nEn la previa al encuentro, las autoridades del centro advirtieron sobre una delicada situación por la falta de entrega de medicación, pañales y autorización de prestaciones por parte del Gobierno, de acuerdo con lo señalado por medios periodísticos y responsables de la institución.",
+      "guion": "Abel Pintos cantará ante el papa León XIV en Claypole",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-28T10:52:21.867Z",
+      "claves": [
+        "El papa León XIV visitará el Cottolengo Don Orione de Claypole el 9 de noviembre.",
+        "Abel Pintos confirmó su presentación validada por el Vaticano.",
+        "Las autoridades de la institución denunciaron una delicada situación por falta de insumos."
+      ],
+      "seSabe": [
+        "El papa León XIV llegará a la Argentina el domingo 8 de noviembre.",
+        "Abel Pintos cantará ante el pontífice el lunes 9 de noviembre en el Cottolengo Don Orione de Claypole.",
+        "El complejo de Claypole alberga a unas 410 personas con discapacidad y cuenta con unos 400 trabajadores.",
+        "El encuentro papal tendrá un carácter íntimo para preservar a los residentes."
+      ],
+      "noConfirmado": [
+        "Todavía restan definir los detalles finales de la presentación artística.",
+        "La respuesta oficial del Gobierno ante los reclamos de la institución por insumos y prestaciones."
+      ],
+      "etiquetas": [
+        "Abel Pintos",
+        "Papa León XIV",
+        "Cottolengo Don Orione",
+        "Claypole",
+        "Almirante Brown"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "InfoRegión",
+          "enlace": "https://www.inforegion.com.ar/2026/09/25/abel-pintos-cantara-ante-el-papa-leon-xiv-durante-su-visita-al-cottolengo-don-orione/",
+          "fecha": "2026-09-25T18:18:05.000Z",
+          "oficial": false,
+          "aporte": "Confirmó la participación de Abel Pintos validada por el Vaticano para el 9 de noviembre en Claypole."
+        },
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/teleshow/2026/09/25/abel-pintos-hablo-sobre-el-fuerte-rumor-de-su-actuacion-para-el-papa-leon-xiv-me-alegra-la-consideracion/",
+          "fecha": "2026-09-25T21:18:25.000Z",
+          "oficial": false,
+          "aporte": "Indicó que el cantante recibió la invitación y aguarda precisiones sobre la presentación."
+        },
+        {
+          "medio": "Perfil",
+          "enlace": "https://www.perfil.com/noticias/politica/realidad-limite-cottolengo-don-orione-visitara-papa-leon-xiv.phtml",
+          "fecha": "2026-09-27T02:55:00.000Z",
+          "oficial": false,
+          "aporte": "Aportó la denuncia de los responsables del centro sobre falta de medicación, pañales y prestaciones."
+        },
+        {
+          "medio": "C5N",
+          "enlace": "https://www.c5n.com/sociedad/cottolengo-don-orione-como-sera-el-recorrido-del-papa-leon-xiv-su-visita-la-argentina-n250079",
+          "fecha": "2026-09-27T23:54:00.000Z",
+          "oficial": false,
+          "aporte": "Mencionó el recorrido junto al director Jorge Silanes y las actividades planificadas."
+        },
+        {
+          "medio": "Noticias Argentinas (NA)",
+          "enlace": "https://noticiasargentinas.com/politica/cottolengo-don-orione---la-visita-del-papa-significa-una-visibilizacion-que-nunca-tuvimos-_a6ab7bd8d9a676c64cfc31e7e",
+          "fecha": "2026-09-27T11:27:18.349Z",
+          "oficial": false,
+          "aporte": "No aportó información relevante en el resumen proporcionado."
+        },
+        {
+          "medio": "Noticias Argentinas (NA)",
+          "enlace": "https://noticiasargentinas.com/politica/en-fotos--el-cottolengo-don-orione-que-visitara-el-papa-leon-xiv_a6ab818f69a676c64cfd8d212",
+          "fecha": "2026-09-27T10:30:00.000Z",
+          "oficial": false,
+          "aporte": "No aportó información relevante en el resumen proporcionado."
+        },
+        {
+          "medio": "El Día",
+          "enlace": "https://www.eldia.com/politica-y-economia/el-papa-leon-xiv-visitara-una-institucion-bonaerense-politica-y-economia_1790568131",
+          "fecha": "2026-09-28T04:02:11.000Z",
+          "oficial": false,
+          "aporte": "No aportó información relevante en el resumen proporcionado."
+        },
+        {
+          "medio": "InfoRegión",
+          "enlace": "https://www.inforegion.com.ar/2026/09/27/el-cottolengo-don-orione-de-claypole-se-prepara-para-recibir-al-papa-leon-xiv/",
+          "fecha": "2026-09-27T17:51:56.000Z",
+          "oficial": false,
+          "aporte": "Precisó la fecha de la visita papal y declaraciones del sacerdote Aníbal Quevedo."
+        },
+        {
+          "medio": "Diario Conurbano",
+          "enlace": "https://diarioconurbano.com.ar/principal/desde-el-cottolengo-don-orione-advierten-por-los-recortes-nacionales-en-discapacidad/",
+          "fecha": "2026-09-27T15:40:38.000Z",
+          "oficial": false,
+          "aporte": null
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron 7 medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      }
+    },
+    "1hi7xz2": {
+      "estado": "automatica",
+      "titulo": "Argentina juega contra Bolivia en Córdoba con aforo reducido",
+      "copete": "La Selección enfrentará a Bolivia el próximo miércoles en el estadio Mario Alberto Kempes de Córdoba. El encuentro se disputará con capacidad limitada debido a una sanción de la FIFA.",
+      "cuerpo": "La Selección Argentina se medirá ante Bolivia el próximo miércoles 30 de septiembre a las 20 en el estadio Mario Alberto Kempes de Córdoba, en el inicio de la serie de amistosos que el equipo dirigido por Lionel Scaloni disputará en el país. El encuentro marcará el regreso del conjunto nacional a ese escenario cordobés después de más de cuatro años.\n\nEl partido estará condicionado por una sanción de la FIFA que impuso un cierre parcial de las tribunas y una multa económica debido a cánticos e insultos discriminatorios registrados en encuentros anteriores. Por esta medida, la tribuna popular sur permanecerá sin público, la popular norte tendrá dos mil quinientos espectadores menos y la platea este se destinará exclusivamente a niños de hasta doce años de clubes y organizaciones sociales.\n\nTras este compromiso, la agenda continuará en octubre con partidos ante Burkina Faso y Benín en el estadio Monumental.",
+      "guion": "Argentina juega contra Bolivia en Córdoba con aforo reducido",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-28T11:02:40.004Z",
+      "claves": [
+        "El partido se jugará el miércoles 30 de septiembre a las 20 en el estadio Mario Alberto Kempes.",
+        "La FIFA aplicó una sanción por cánticos discriminatorios que reduce a la mitad la capacidad en ciertos sectores.",
+        "La popular sur estará cerrada y la norte tendrá dos mil quinientos lugares menos.",
+        "Es la única presentación de esta ventana de amistosos que se disputará fuera de Buenos Aires."
+      ],
+      "seSabe": [
+        "El encuentro se disputará el miércoles 30 de septiembre a las 20 en el estadio Mario Alberto Kempes de Córdoba.",
+        "La sanción de la FIFA incluye una multa y un cierre parcial del cincuenta por ciento de las gradas afectadas por cánticos discriminatorios.",
+        "La popular sur no tendrá público, la popular norte contará con dos mil quinientos espectadores menos y la platea este será para niños de hasta doce años.",
+        "Los siguientes partidos de la selección argentina se jugarán en el estadio Monumental frente a Burkina Faso y Benín."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "La Selección Argentina enfrentará a Bolivia este miércoles en el estadio Mario Alberto Kempes de Córdoba. El partido se jugará con aforo reducido debido a una sanción de la FIFA por cánticos discriminatorios.",
+      "etiquetas": [
+        "Selección Argentina",
+        "Córdoba",
+        "FIFA",
+        "Bolivia"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Radio Sudestada",
+          "enlace": "https://radiosudestada.com.ar/2026/09/argentina-vs-bolivia-cuando-juegan-entradas-y-las-claves-de-un-kempes-con-aforo-reducido/",
+          "fecha": "2026-09-28T11:00:00.000Z",
+          "oficial": false,
+          "aporte": "Detalló la fecha, el horario, las restricciones de aforo por sanción de la FIFA, los precios de las entradas y los antecedentes del seleccionado en Córdoba."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
       }
     }
   },
