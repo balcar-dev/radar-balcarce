@@ -1,5 +1,5 @@
 {
-  "exportado": "2026-09-28T07:31:45.515Z",
+  "exportado": "2026-09-28T08:01:56.027Z",
   "decisiones": {
     "1951120": {
       "estado": "automatica",
@@ -41366,6 +41366,92 @@
       "verificacion": {
         "nivel": "ALTA",
         "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      }
+    },
+    "1is0p0y": {
+      "estado": "automatica",
+      "titulo": "Diego Santilli visita el autódromo en la vuelta de las categorías nacionales",
+      "copete": "El jefe de Gabinete de la Nación recorrió el Autódromo Juan Manuel Fangio durante el regreso de las competencias nacionales después de quince años. Su visita coincidió con la participación de su hijo en la categoría TC Pista Pick Up.",
+      "cuerpo": "Durante su permanencia en el predio, Santilli recorrió los boxes y mantuvo encuentros con el intendente Esteban Reino y el senador nacional Maximiliano Abad. La llegada del funcionario nacional estuvo vinculada principalmente a su motivo familiar, ya que su hijo, Nicanor Santilli Pazos, compitió en la TC Pista Pick Up a bordo de una Foton del equipo Coiro Competición.\n\nEl joven piloto finalizó en el segundo puesto en la primera serie del domingo, detrás de Antonino Sganga, lo que le permitió mantenerse entre los protagonistas de la definición.",
+      "guion": "Diego Santilli visita el autódromo en la vuelta de las categorías nacionales",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-28T08:01:55.916Z",
+      "claves": [
+        "Diego Santilli visitó el Autódromo Juan Manuel Fangio este domingo.",
+        "El funcionario recorrió los boxes junto al intendente Esteban Reino y el senador Maximiliano Abad.",
+        "Su hijo, Nicanor Santilli Pazos, compitió en la categoría TC Pista Pick Up.",
+        "La competencia marcó el regreso del automovilismo nacional al circuito local después de quince años."
+      ],
+      "seSabe": [
+        "Diego Santilli visitó el autódromo local este domingo.",
+        "El funcionario recorrió los boxes junto al intendente Esteban Reino y el senador Maximiliano Abad.",
+        "Su hijo Nicanor compitió en la TC Pista Pick Up con el equipo Coiro Competición y fue segundo en su serie.",
+        "El circuito volvió a recibir competencias nacionales después de quince años."
+      ],
+      "textoRedes": "Diego Santilli visitó el Autódromo Juan Manuel Fangio en el marco del regreso de las competencias nacionales. El funcionario recorrió el circuito junto a autoridades locales y acompañó a su hijo en la categoría TC Pista Pick Up.",
+      "etiquetas": [
+        "Diego Santilli",
+        "Autodromo Juan Manuel Fangio",
+        "TC Pista Pick Up",
+        "Esteban Reino",
+        "Maximiliano Abad",
+        "Balcarce"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infórmese Primero (FM 104.9)",
+          "enlace": "http://www.informeseprimero.com.ar/2026/09/diego-santilli-recorrio-el-fangio-y.html",
+          "fecha": "2026-09-27T22:35:50.424Z",
+          "oficial": false,
+          "aporte": "Aportó los detalles sobre el resultado deportivo del hijo del funcionario y la concurrencia de público."
+        },
+        {
+          "medio": "Diario La Vanguardia",
+          "enlace": "https://www.diariolavanguardia.com/noticias/44914-diego-santilli-estuvo-en-los-boxes-del-fangio-acompanando-a-su-hijo-nicanor/",
+          "fecha": null,
+          "oficial": false,
+          "aporte": "Confirmó el recorrido del funcionario junto a las autoridades locales y provinciales."
+        },
+        {
+          "medio": "Diario La Vanguardia",
+          "enlace": "https://www.diariolavanguardia.com/noticias/44904-diego-santilli-estara-en-balcarce-para-la-reapertura-del-fangio-y-la-fecha-de-las-tc-pick-up/",
+          "fecha": null,
+          "oficial": false,
+          "aporte": "Aportó la confirmación previa sobre la llegada del funcionario durante el fin de semana."
+        },
+        {
+          "medio": "QZ Noticias (Mar del Plata)",
+          "enlace": "https://www.qznoticias.com/la-region/diego-santilli-visito-el-fangio-durante-la-jornada-de-tc-pick-up",
+          "fecha": "2026-09-27T15:34:50.000Z",
+          "oficial": false,
+          "aporte": "Detalló la presencia del intendente y el senador en el autódromo."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1mphhlq",
+          "titulo": "Diego Santilli llega a Balcarce por el automovilismo",
+          "fecha": "2026-09-25T13:40:13.000Z",
+          "ruta": "/nota/diego-santilli-llega-a-balcarce-por-el-automovilismo-1mphhlq"
+        },
+        {
+          "id": "if257m",
+          "titulo": "Boccanera y Baigorria ganan en el regreso del Turismo Special de la Costa al Fangio",
+          "fecha": "2026-09-27T22:28:39.000Z",
+          "ruta": "/nota/boccanera-y-baigorria-ganan-en-el-regreso-del-turismo-special-de-la-if257m"
+        },
+        {
+          "id": "wlcrq7",
+          "titulo": "El Autódromo Juan Manuel Fangio reabre",
+          "fecha": "2026-09-27T17:29:00.000Z",
+          "ruta": "/nota/el-autodromo-juan-manuel-fangio-reabre-wlcrq7"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron tres medios independientes.",
         "sugeridoPorIA": "ALTA"
       }
     }
