@@ -1,5 +1,5 @@
 {
-  "exportado": "2026-09-28T03:32:34.456Z",
+  "exportado": "2026-09-28T03:42:54.538Z",
   "decisiones": {
     "1951120": {
       "estado": "automatica",
@@ -38746,6 +38746,527 @@
       "verificacion": {
         "nivel": "ALTA",
         "porque": "Lo contaron cuatro medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      }
+    },
+    "1tr6iaa": {
+      "estado": "automatica",
+      "titulo": "Otro piloto defiende a Franco Colapinto tras las críticas",
+      "copete": "El piloto británico Alex Brundle respaldó al argentino tras el accidente en el Gran Premio de Azerbaiyán y sostuvo que los errores forman parte de la categoría.",
+      "cuerpo": "El piloto británico Alex Brundle respaldó a Franco Colapinto tras las críticas que recibió por el choque en el Gran Premio de Azerbaiyán, donde el argentino quedó involucrado en un incidente con Pierre Gasly y Lando Norris en la curva uno del circuito de Bakú. En declaraciones a F1 TV reproducidas por la Agencia de Noticias Argentinas, el corredor de resistencia indicó que este tipo de equivocaciones ocurren por decisiones tomadas en segundos, neumáticos fríos o la baja de la temperatura ambiente, y señaló que tras asumir la responsabilidad ante el equipo hay que continuar.\n\nEl episodio generó diversas reacciones en la categoría. Días atrás, el jefe de Alpine, Flavio Briatore, había cuestionado al piloto argentino por el impacto, mientras que el colombiano Juan Pablo Montoya también lo respaldó y los comisarios le impusieron una sanción de cinco lugares para la próxima fecha.",
+      "guion": "Otro piloto defiende a Franco Colapinto tras las críticas",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-28T03:42:54.417Z",
+      "seSabe": [
+        "Alex Brundle defendió a Franco Colapinto tras el Gran Premio de Azerbaiyán, según informó la Agencia de Noticias Argentinas.",
+        "El choque ocurrió en la curva uno del circuito de Bakú tras un relanzamiento con auto de seguridad.",
+        "El incidente dejó fuera de carrera a Lando Norris y Pierre Gasly."
+      ],
+      "textoRedes": "El piloto británico Alex Brundle respaldó a Franco Colapinto tras el choque en el Gran Premio de Azerbaiyán y afirmó que los errores forman parte de la categoría.",
+      "etiquetas": [
+        "Franco Colapinto",
+        "Formula 1",
+        "Alex Brundle",
+        "Gran Premio de Azerbaiyán",
+        "automovilismo"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Noticias Argentinas (NA)",
+          "enlace": "https://noticiasargentinas.com/deportes/otro-piloto-defendio-a-franco-colapinto---te-disculpas-con-todos-en-el-garaje-una-vez-y-despues-sigues-con-tu-vida-_a6ab97600c2b8de8667f3bc57",
+          "fecha": "2026-09-27T20:08:00.000Z",
+          "oficial": false,
+          "aporte": "Detalló las declaraciones de Alex Brundle sobre el incidente de Franco Colapinto en Azerbaiyán."
+        },
+        {
+          "medio": "Radio Sudestada",
+          "enlace": "https://radiosudestada.com.ar/2026/09/otro-piloto-defendio-a-franco-colapinto-te-disculpas-con-todos-en-el-garaje-una-vez-y-despues-sigues-con-tu-vida/",
+          "fecha": "2026-09-27T21:00:00.000Z",
+          "oficial": false,
+          "aporte": "Reprodujo el testimonio del piloto británico en defensa del corredor argentino."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "9hkq7t",
+          "titulo": "Juan Pablo Montoya respalda a Franco Colapinto en la F1",
+          "fecha": "2026-09-27T12:02:03.000Z",
+          "ruta": "/nota/juan-pablo-montoya-respalda-a-franco-colapinto-en-la-f1-9hkq7t"
+        },
+        {
+          "id": "g2u3l1",
+          "titulo": "Flavio Briatore critica a Franco Colapinto tras el Gran Premio de Azerbaiyán",
+          "fecha": "2026-09-26T22:12:00.000Z",
+          "ruta": "/nota/flavio-briatore-critica-a-franco-colapinto-tras-el-gran-premio-de-g2u3l1"
+        },
+        {
+          "id": "mk94me",
+          "titulo": "Franco Colapinto choca con Pierre Gasly en el Gran Premio de Azerbaiyán",
+          "fecha": "2026-09-26T15:07:30.000Z",
+          "ruta": "/nota/franco-colapinto-choca-con-pierre-gasly-en-el-gran-premio-de-mk94me"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      }
+    },
+    "ctfgxx": {
+      "estado": "automatica",
+      "titulo": "Confirman que la Marcha del Orgullo se hara el siete de noviembre",
+      "copete": "La Comision Organizadora y el Gobierno porteño acordaron mantener la fecha original de la movilización. La decisión busca compatibilizar el evento con el operativo por la llegada del papa León XIV.",
+      "cuerpo": "El entendimiento cerró varios días de tensión luego de que la administración de Jorge Macri planteara reprogramar la fecha debido al despliegue de seguridad para la visita papal, que comenzará el ocho de noviembre. Desde la Ciudad habían propuesto trasladar la marcha al veintiuno de noviembre y garantizar su logística, pero los organizadores rechazaron la alternativa por afectar una planificación que involucra a delegaciones de distintas provincias.\n\nEl acuerdo alcanzado contempla la creación de una mesa de trabajo para coordinar ambas agendas sin resignar derechos. La movilización recorrerá puntos tradicionales como el Obelisco, la Avenida de Mayo y el Congreso, un día antes del arribo del pontífice.",
+      "guion": "Confirman que la Marcha del Orgullo se hara el siete de noviembre",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-28T03:42:54.417Z",
+      "claves": [
+        "La Marcha del Orgullo se hará el siete de noviembre en la Ciudad de Buenos Aires.",
+        "El Gobierno porteño y la Comisión Organizadora alcanzaron un acuerdo para mantener la fecha.",
+        "La movilización coincidirá con el operativo previsto por la visita del papa León XIV.",
+        "La organización rechazó una propuesta inicial de trasladar el evento al veintiuno de noviembre."
+      ],
+      "seSabe": [
+        "La Marcha del Orgullo se llevará a cabo el siete de noviembre en la Ciudad de Buenos Aires, según el acuerdo entre la Comisión Organizadora y el Gobierno porteño.",
+        "El Gobierno de la Ciudad había propuesto inicialmente reprogramar la movilización para el veintiuno de noviembre.",
+        "La visita del papa León XIV comenzará el ocho de noviembre y motivó un operativo de seguridad y tránsito.",
+        "La marcha recorrerá puntos tradicionales como el Obelisco, la Avenida de Mayo y el Congreso."
+      ],
+      "textoRedes": "La Marcha del Orgullo se realizará el siete de noviembre en Buenos Aires tras un acuerdo entre la Comisión Organizadora y el Gobierno porteño. La fecha se mantuvo a pesar del operativo previsto por la visita del papa León XIV.",
+      "etiquetas": [
+        "Marcha del Orgullo",
+        "Ciudad de Buenos Aires",
+        "Comision Organizadora",
+        "Gobierno porteño",
+        "Papa León XIV"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Perfil",
+          "enlace": "https://www.perfil.com/noticias/politica/marcha-del-orgullo-2026-el-gobierno-porteno-y-el-colectivo-lgbtiq-acordaron-mantener-la-fecha.phtml",
+          "fecha": "2026-09-25T22:46:14.000Z",
+          "oficial": false,
+          "aporte": "Aportó detalles sobre el acuerdo entre la Comisión Organizadora y el Gobierno porteño, el rechazo a la fecha alternativa del veintiuno de noviembre y el recorrido por el centro porteño."
+        },
+        {
+          "medio": "El Eco de Tandil",
+          "enlace": "https://www.eleco.com.ar/nacionales/confirmaron-la-marcha-del-orgullo-para-el-7-de-noviembre-tras-alcanzar-un-acuerdo-con-el-gobierno-porteno",
+          "fecha": "2026-09-27T16:32:45.000Z",
+          "oficial": false,
+          "aporte": "Confirmó la realización de la marcha para el siete de noviembre en la Ciudad de Buenos Aires."
+        },
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/sociedad/2026/09/25/el-gobierno-porteno-y-el-colectivo-lgbtiq-llegaron-a-un-acuerdo-y-confirmaron-la-fecha-de-la-marcha-del-orgullo/",
+          "fecha": "2026-09-25T23:57:44.000Z",
+          "oficial": false,
+          "aporte": "Ratificó el entendimiento entre la Comisión Organizadora y la administración porteña para mantener la fecha original."
+        },
+        {
+          "medio": "Página/12",
+          "enlace": "https://www.pagina12.com.ar/2026/09/25/marcha-del-orgullo-las-organizaciones-anunciaron-un-acuerdo-para-que-se-mantenga-el-7-de-noviembre/",
+          "fecha": "2026-09-26T03:01:00.000Z",
+          "oficial": false,
+          "aporte": "Informó sobre la creación de una mesa de trabajo para compatibilizar la marcha con la visita papal."
+        },
+        {
+          "medio": "A24",
+          "enlace": "https://www.a24.com/actualidad/el-gobierno-porteno-y-la-organizacion-la-marcha-del-orgullo-alcanzaron-un-acuerdo-cuando-se-realizara-n1600498",
+          "fecha": "2026-09-25T22:56:00.000Z",
+          "oficial": false,
+          "aporte": "Aportó datos sobre la coordinación del operativo por la visita del papa León XIV y el recorrido por el centro porteño."
+        },
+        {
+          "medio": "El Marplatense",
+          "enlace": "https://www.elmarplatense.com/caba-y-las-organizaciones-lgbtiq-acordaron-realizar-la-marcha-del-orgullo-el-7-de-noviembre",
+          "fecha": "2026-09-26T12:14:06.000Z",
+          "oficial": false,
+          "aporte": "No aportó información adicional al no incluir texto en el resumen."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron seis medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      }
+    },
+    "1juccvy": {
+      "estado": "automatica",
+      "titulo": "Massa pide construir propuestas federales y unidad de cara a las elecciones",
+      "copete": "El líder del Frente Renovador encabezó un encuentro regional y envió un mensaje a dirigentes bonaerenses sobre la necesidad de lograr un país más federal y fortalecer la unidad.",
+      "cuerpo": "El líder del Frente Renovador, Sergio Massa, instó a construir propuestas con una mirada federal y a trabajar por la unidad durante mensajes dirigidos a referentes políticos que participaron de actividades partidarias en el noreste del país y en la provincia de Buenos Aires.\n\nLos encuentros políticos se desarrollaron de manera simultánea en distintas regiones. En Resistencia, dirigentes de Chaco, Corrientes y Misiones llevaron adelante el Encuentro Regional del NEA, donde debatieron en comisiones y concluyeron en la necesidad de impulsar economías regionales mediante infraestructura, inversión en ciencia y tecnología, programas de empleo joven y políticas de vivienda. En paralelo, referentes del espacio se reunieron en Carmen de Patagones para analizar el impacto de las medidas del Gobierno nacional en la Sexta Sección electoral, con especial atención en la modificación de la Ley de Zonas Frías.",
+      "guion": "Massa pide construir propuestas federales y unidad de cara a las elecciones",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-28T03:42:54.417Z",
+      "claves": [
+        "Sergio Massa pidió priorizar una mirada federal y fortalecer la unidad política.",
+        "El Frente Renovador realizó un encuentro regional en el NEA y otro en el sur bonaerense.",
+        "En Carmen de Patagones analizaron el impacto de las políticas nacionales y la Ley de Zonas Frías.",
+        "En Chaco debatieron sobre economías regionales, empleo joven e infraestructura."
+      ],
+      "seSabe": [
+        "Sergio Massa pidió construir propuestas con mirada federal y trabajar por la unidad.",
+        "El Frente Renovador llevó a cabo un Encuentro Regional del NEA en Resistencia con referentes de Chaco, Corrientes y Misiones.",
+        "Dirigentes del espacio realizaron un encuentro en Carmen de Patagones para analizar el impacto de las políticas del Gobierno nacional en la Sexta Sección electoral, con foco en la Ley de Zonas Frías."
+      ],
+      "noConfirmado": [
+        "No se especificaron detalles sobre posibles candidaturas de cara a los comicios del próximo año."
+      ],
+      "textoRedes": "Sergio Massa pidió construir propuestas con mirada federal y fortalecer la unidad durante un mensaje dirigido a dirigentes del Frente Renovador que participaron de encuentros políticos en el NEA y en la provincia de Buenos Aires.",
+      "etiquetas": [
+        "Sergio Massa",
+        "Frente Renovador",
+        "Elecciones",
+        "Política",
+        "NEA",
+        "Provincia de Buenos Aires"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Noticias Argentinas (NA)",
+          "enlace": "https://noticiasargentinas.com/politica/massa-pidio--construir-propuestas-con-mirada-federal-y-trabajar-por-la-unidad-_a6ab846609a676c64cfe40c26",
+          "fecha": "2026-09-26T22:34:40.482Z",
+          "oficial": false,
+          "aporte": "Detalló los dichos de Sergio Massa sobre la mirada federal y la unidad, además de las conclusiones de los encuentros en Resistencia y Carmen de Patagones."
+        },
+        {
+          "medio": "El Eco de Tandil",
+          "enlace": "https://www.eleco.com.ar/politica/sergio-massa-pidio-trabajar-por-la-unidad-y-una-mirada-federal-en-el-nea",
+          "fecha": "2026-09-27T11:31:50.000Z",
+          "oficial": false,
+          "aporte": "Informó sobre la realización del Encuentro Regional del NEA en Resistencia encabezado por Sergio Massa el pasado sábado."
+        },
+        {
+          "medio": "Agencia DIB",
+          "enlace": "https://dib.com.ar/politica/massa-pidio-trabajar-la-unidad-un-encuentro-del-fr-resistencia-n56060",
+          "fecha": "2026-09-26T23:24:00.000Z",
+          "oficial": false,
+          "aporte": "Indicó que Massa reunió a la militancia del noreste del país y conversó sobre la necesidad de un país más federal."
+        },
+        {
+          "medio": "Ámbito",
+          "enlace": "https://www.ambito.com/politica/sergio-massa-pidio-al-frente-renovador-impulsar-una-agenda-federal-y-unir-al-peronismo-n6327071",
+          "fecha": "2026-09-27T00:01:00.000Z",
+          "oficial": false,
+          "aporte": "Mencionó que el espacio realizó encuentros en el NEA y el sur bonaerense para debatir propuestas y analizar el impacto de las políticas de Javier Milei."
+        },
+        {
+          "medio": "Zona Norte Diario",
+          "enlace": "https://www.zonanortediario.com.ar/26/09/2026/massa-pidio-trabajar-por-la-unidad-y-el-frente-renovador-comenzo-a-mover-sus-fichas-para-2027/",
+          "fecha": "2026-09-26T23:23:17.000Z",
+          "oficial": false,
+          "aporte": "Señaló que el Frente Renovador discutió propuestas con vistas a 2027 y puso el foco en la unidad del peronismo."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1aco8u",
+          "titulo": "Viviana Erreguerena habló de 2027 y pidió construir consensos antes de definir candidaturas",
+          "fecha": "2026-09-22T18:03:18.138Z",
+          "ruta": "/nota/viviana-erreguerena-hablo-de-2027-y-pidio-construir-consensos-antes-1aco8u"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron cinco medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      }
+    },
+    "1h399fo": {
+      "estado": "automatica",
+      "titulo": "Docentes universitarios convocan a un paro de hasta tres días",
+      "copete": "Los gremios universitarios anunciaron una huelga para la próxima semana en reclamo de una recomposición salarial y la aplicación de la ley de financiamiento, previa a una nueva movilización federal.",
+      "cuerpo": "La medida de fuerza fue definida por el Frente Sindical de Universidades Nacionales y la CONADU, y afectará a las casas de altos estudios nacionales.\n\nEl cese de tareas se llevará a cabo en reclamo de la aplicación de la Ley de Financiamiento Universitario y una recomposición salarial del treinta y tres por ciento. Los sindicatos señalaron que la medida podría suspenderse únicamente si el Gobierno nacional cumple con la actualización salarial antes del martes 29 de septiembre.\n\nPor su parte, el Ejecutivo ofreció una suba del tres por ciento en la última paritaria, la cual fue rechazada por los gremios. En paralelo, la gestión nacional adelantó que apelará la resolución judicial que intimó a cumplir de manera total con la medida cautelar sobre el financiamiento del sector.",
+      "guion": "Docentes universitarios convocan a un paro de hasta tres días",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-28T03:42:54.417Z",
+      "claves": [
+        "El paro universitario comenzará el miércoles 30 de septiembre.",
+        "La medida se extenderá por hasta tres días según los gremios.",
+        "Los sindicatos reclaman la aplicación de la Ley de Financiamiento.",
+        "El Gobierno ofreció un incremento salarial del tres por ciento."
+      ],
+      "seSabe": [
+        "Los docentes universitarios realizarán un paro a partir del miércoles 30 de septiembre.",
+        "La medida de fuerza tendrá una duración de entre 48 y 72 horas.",
+        "Los gremios exigen la aplicación de la Ley de Financiamiento Universitario y una recomposición salarial.",
+        "El Gobierno ofreció una suba del 3% en la última paritaria y anunció que apelará la intimación judicial."
+      ],
+      "etiquetas": [
+        "docentes universitarios",
+        "paro",
+        "universidades nacionales",
+        "salarios",
+        "ley de financiamiento"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/politica/2026/09/26/los-docentes-universitarios-anunciaron-un-paro-de-72-horas-en-la-previa-de-una-nueva-marcha-federal/",
+          "fecha": "2026-09-26T13:49:54.000Z",
+          "oficial": false,
+          "aporte": "Detalló que el paro será el 30 de septiembre y podrá extenderse hasta 72 horas."
+        },
+        {
+          "medio": "La Noticia 1",
+          "enlace": "https://www.lanoticia1.com/noticia/paro-universitario-conadu-confirmo-la-medida-de-fuerza-por-72-horas-desde-el-miercoles",
+          "fecha": "2026-09-27T21:21:24.000Z",
+          "oficial": false,
+          "aporte": "Indicó que la huelga se extenderá del 30 de septiembre al 2 de octubre."
+        },
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/politica/2026/09/26/los-docentes-universitarios-convocaron-a-un-paro-para-la-proxima-semana-podria-durar-entre-48-y-72-horas/",
+          "fecha": "2026-09-26T16:39:27.000Z",
+          "oficial": false,
+          "aporte": "Informó que la medida exige la aplicación de la Ley de Financiamiento al gobierno de Javier Milei."
+        },
+        {
+          "medio": "Ámbito",
+          "enlace": "https://www.ambito.com/politica/docentes-universitarios-convocaron-un-paro-72-horas-y-condicionaron-la-medida-una-suba-salarial-n6327027",
+          "fecha": "2026-09-26T18:28:00.000Z",
+          "oficial": false,
+          "aporte": "Señaló que la huelga se levantará si el Gobierno otorga el aumento previsto."
+        },
+        {
+          "medio": "Minuto Uno",
+          "enlace": "https://www.minutouno.com/politica/se-viene-otro-paro-docentes-universitarios-la-previa-la-marcha-federal-n6327040",
+          "fecha": "2026-09-26T22:36:00.000Z",
+          "oficial": false,
+          "aporte": "Agregó que el reclamo incluye a trabajadores no docentes."
+        },
+        {
+          "medio": "Canal 26",
+          "enlace": "https://www.canal26.com/politica/2026/09/26/docentes-anunciaron-un-nuevo-paro-universitario-y-exigen-la-recomposicion-de-sus-salarios-y-la-aplicacion-de-la-ley-de-financiamiento-cuando-sera/",
+          "fecha": "2026-09-26T19:07:26.000Z",
+          "oficial": false,
+          "aporte": "Mencionó la participación de la CONADU en la convocatoria."
+        },
+        {
+          "medio": "El Cronista",
+          "enlace": "https://www.cronista.com/informacion-gral/paro-universitario-conadu-convoco-a-una-huelga-desde-el-30-de-septiembre-y-define-si-sera-de-48-o-72-horas/",
+          "fecha": "2026-09-26T17:31:23.000Z",
+          "oficial": false,
+          "aporte": "Indicó que la medida fue aprobada en un plenario de secretarios."
+        },
+        {
+          "medio": "C5N",
+          "enlace": "https://www.c5n.com/sociedad/de-cara-la-marcha-universitaria-docentes-paran-72-horas-el-proximo-30-septiembre-n250004",
+          "fecha": "2026-09-26T19:34:00.000Z",
+          "oficial": false,
+          "aporte": "Sostuvo que la marcha atrás dependerá del cumplimiento de la ley."
+        },
+        {
+          "medio": "Crónica",
+          "enlace": "https://www.cronica.com.ar/politica/paro-universitario-gremios-convocaron-a-una-medida-de-fuerza-para-la-proxima-semana/",
+          "fecha": "2026-09-26T18:59:00.000Z",
+          "oficial": false,
+          "aporte": null
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron 9 medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      }
+    },
+    "ahxm98": {
+      "estado": "automatica",
+      "titulo": "El riesgo país supera los seiscientos puntos y alcanza su nivel más alto",
+      "copete": "El indicador financiero superó la barrera de los seiscientos puntos básicos por la caída de los bonos soberanos. Esta suba impacta en la economía nacional y en la capacidad de financiamiento del Estado.",
+      "cuerpo": "El indicador de riesgo soberano escaló hasta superar la barrera de los seiscientos puntos básicos tras registrar diez jornadas consecutivas de alzas.\n\nEn paralelo, el presidente Javier Milei y el ministro de Economía, Luis Caputo, ratificaron durante su estadía en Estados Unidos que el plan económico no sufrirá modificaciones y que el país dispone de los fondos necesarios para afrontar los compromisos de deuda pública. Sin embargo, los inversores manifestaron preocupación por los recientes indicadores sociales y de actividad económica difundidos por el INDEC, los cuales mostraron un incremento en la pobreza y una retracción en el nivel de actividad durante julio.\n\nEste escenario de alta cotización en el índice financiero limita las posibilidades del Estado Nacional de evaluar una colocación de deuda voluntaria en los mercados internacionales. En el plano local, el índice Merval y los ADRs operaron con tendencia negativa.",
+      "guion": "El riesgo país supera los seiscientos puntos y alcanza su nivel más alto",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-28T03:42:54.417Z",
+      "noConfirmado": [
+        "No se especificaron detalles adicionales sobre el impacto directo de esta suba financiera en la economía cotidiana de los municipios de la provincia de Buenos Aires."
+      ],
+      "etiquetas": [
+        "riesgo pais",
+        "economia",
+        "bonos",
+        "mercados",
+        "indec"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Diario Popular",
+          "enlace": "https://www.diariopopular.com.ar/politica/el-riesgo-pais-supero-los-600-puntos-y-alcanzo-el-valor-mas-alto-cinco-meses-n921536",
+          "fecha": "2026-09-25T17:19:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/economia/el-riesgo-pais-vuelve-a-subir-y-ya-supera-los-600-puntos-nid25092026/",
+          "fecha": "2026-09-25T17:30:05.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/economia/2026/09/25/jornada-financiera-el-riesgo-pais-supero-los-600-puntos-basicos-y-toco-el-nivel-mas-alto-en-seis-meses/",
+          "fecha": "2026-09-25T21:00:10.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "C5N",
+          "enlace": "https://www.c5n.com/economia/crece-la-presion-financiera-el-riesgo-pais-escalo-encima-los-600-puntos-el-nivel-mas-alto-seis-meses-n249930",
+          "fecha": "2026-09-25T21:27:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "El Eco de Tandil",
+          "enlace": "https://www.eleco.com.ar/economia/duro-golpe-al-gobierno-el-riesgo-pais-supero-los-600-puntos-y-se-desplomaron-los-bonos",
+          "fecha": "2026-09-26T13:12:16.000Z",
+          "oficial": false,
+          "aporte": null
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron cinco medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      }
+    },
+    "uxan4p": {
+      "estado": "automatica",
+      "titulo": "El Banco Central evita comprar divisas y las reservas bajan",
+      "copete": "Ante la suba del dólar, la autoridad monetaria se mantuvo al margen del mercado cambiario para evitar una mayor presión. Las reservas internacionales cerraron la semana en un menor nivel tras un pago al Fondo Monetario Internacional.",
+      "cuerpo": "El Banco Central de la República Argentina no compró divisas por cuarta vez en el año debido a la suba del dólar, con el objetivo de evitar una mayor presión sobre el tipo de cambio.\n\nEn paralelo, las reservas internacionales sufrieron una baja por un pago al Fondo Monetario Internacional cercano a los ochocientos millones de dólares en concepto de intereses. Por su parte, el dólar mayorista registró un incremento y alcanzó un nuevo máximo nominal en la última rueda de la semana.",
+      "guion": "El Banco Central evita comprar divisas y las reservas bajan",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-28T03:42:54.417Z",
+      "etiquetas": [
+        "Banco Central",
+        "reservas internacionales",
+        "dolar",
+        "FMI",
+        "mercado cambiario"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/economia/2026/09/25/ante-la-suba-del-dolar-el-banco-central-evito-comprar-divisas-por-tercera-vez-en-el-ano/",
+          "fecha": "2026-09-25T21:21:55.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Perfil",
+          "enlace": "https://www.perfil.com/noticias/economia/el-banco-central-termino-la-jornada-sin-comprar-dolares-y-las-reservas-cayeron-por-un-pago-al-fmi-a40.phtml",
+          "fecha": "2026-09-25T23:50:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "iProfesional",
+          "enlace": "https://www.iprofesional.com/finanzas/465299-el-bcra-no-compro-dolares-y-las-reservas-cayeron-600-millones-tras-un-pago-al-fmi",
+          "fecha": "2026-09-25T21:45:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "C5N",
+          "enlace": "https://www.c5n.com/economia/golpe-las-reservas-el-gobierno-pago-casi-us800-millones-al-fmi-y-el-banco-central-no-compro-dolares-n249955",
+          "fecha": "2026-09-25T21:53:00.000Z",
+          "oficial": false,
+          "aporte": null
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1iqwljr",
+          "titulo": "Milei celebró la aprobación de la reforma de la carta orgánica del Banco Central: \"Comienza el fin de la inflación\"",
+          "fecha": "2026-09-24T21:44:04.000Z",
+          "ruta": "/nota/milei-celebro-la-aprobacion-de-la-reforma-de-la-carta-organica-del-1iqwljr"
+        },
+        {
+          "id": "bsna1",
+          "titulo": "El Senado aprobó con cambios la reforma de la Carta Orgánica del Banco Central",
+          "fecha": "2026-09-24T20:17:00.000Z",
+          "ruta": "/nota/el-senado-aprobo-con-cambios-la-reforma-de-la-carta-organica-del-bsna1"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron cuatro medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      }
+    },
+    "z01n4l": {
+      "estado": "automatica",
+      "titulo": "Pilotos de Fórmula 1 respaldan a Franco Colapinto tras el choque",
+      "copete": "George Russell y Max Verstappen restaron gravedad al accidente provocado por Franco Colapinto en el Gran Premio de Azerbaiyán, por el cual la FIA lo sancionó con cinco puestos.",
+      "cuerpo": "El episodio generó diversas posturas en la categoría. Mientras el piloto británico Norris calificó la acción de imprudente y pidió sanciones más severas, colegas como Russell y Verstappen relativizaron lo sucedido al considerar que se trató de un error menor condicionado por la temperatura de los neumáticos y descartaron que corresponda una suspensión. Por su parte, el deportista bonaerense reconoció su error en conferencia de prensa y pidió disculpas a su equipo y a los afectados.",
+      "guion": "Pilotos de Formula 1 respaldan a Franco Colapinto tras el choque",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-28T03:42:54.417Z",
+      "claves": [
+        "Colapinto chocó en el Gran Premio de Azerbaiyán y dejó a los dos Alpine fuera de carrera.",
+        "La FIA sancionó al piloto argentino con cinco posiciones de penalización para la grilla en Malasia.",
+        "George Russell y Max Verstappen defendieron al argentino y consideraron excesiva una suspensión.",
+        "Lando Norris criticó la maniobra y pidió castigos más estrictos."
+      ],
+      "noConfirmado": [
+        "No se registraron detalles sobre posibles daños mecánicos adicionales en los vehículos involucrados más allá de los abandonos."
+      ],
+      "textoRedes": "George Russell y Max Verstappen respaldaron a Franco Colapinto tras el choque múltiple en el Gran Premio de Azerbaiyán que dejó fuera a los Alpine y a Lando Norris. La FIA sancionó al argentino con cinco puestos para Malasia.",
+      "etiquetas": [
+        "Franco Colapinto",
+        "Formula 1",
+        "Gran Premio de Azerbaiyán",
+        "George Russell",
+        "Max Verstappen"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Radio Mitre",
+          "enlace": "https://radiomitre.cienradios.com/deportes/el-fuerte-respaldo-de-max-verstappen-y-george-russell-a-franco-colapinto-tras-su-choque-en-el-gp-de-azerbaiyan/",
+          "fecha": "2026-09-26T20:36:49.000Z",
+          "oficial": false,
+          "aporte": "Detalló las declaraciones de los pilotos, la sanción de la FIA, el impacto en Alpine y las disculpas de Colapinto."
+        },
+        {
+          "medio": "Minuto Uno",
+          "enlace": "https://www.minutouno.com/deportes/tras-los-reclamos-lando-norris-todo-el-podio-del-gp-azerbaiyan-respaldo-franco-colapinto-n6327091",
+          "fecha": "2026-09-27T03:35:00.000Z",
+          "oficial": false,
+          "aporte": "Aportó que George Russell, Max Verstappen y e Isack Hadjar relativizaron la responsabilidad del piloto argentino."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "mk94me",
+          "titulo": "Franco Colapinto choca con Pierre Gasly en el Gran Premio de Azerbaiyán",
+          "fecha": "2026-09-26T15:07:30.000Z",
+          "ruta": "/nota/franco-colapinto-choca-con-pierre-gasly-en-el-gran-premio-de-mk94me"
+        },
+        {
+          "id": "xtbw5",
+          "titulo": "Franco Colapinto largará noveno en el Gran Premio de Azerbaiyán",
+          "fecha": "2026-09-25T19:13:53.000Z",
+          "ruta": "/nota/franco-colapinto-largara-noveno-el-gran-premio-de-azerbaiyan-xtbw5"
+        },
+        {
+          "id": "y8hgj",
+          "titulo": "Colapinto terminó 18 en la primera práctica del GP de Azerbaiyán y el más rápido fue Russell",
+          "fecha": "2026-09-24T10:07:22.000Z",
+          "ruta": "/nota/colapinto-termino-18-en-la-primera-practica-del-gp-de-azerbaiyan-y-el-y8hgj"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
         "sugeridoPorIA": "ALTA"
       }
     }
