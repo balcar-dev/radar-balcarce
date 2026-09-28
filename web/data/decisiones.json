@@ -1,5 +1,5 @@
 {
-  "exportado": "2026-09-28T03:22:42.728Z",
+  "exportado": "2026-09-28T03:32:34.456Z",
   "decisiones": {
     "1951120": {
       "estado": "automatica",
@@ -37430,13 +37430,56 @@
     },
     "95c08r": {
       "estado": "automatica",
-      "titulo": null,
-      "copete": null,
-      "cuerpo": null,
-      "guion": null,
-      "deIA": null,
+      "titulo": "Mica Viciconte recuerda un calambre de Fabián Cubero",
+      "copete": "La mediática contó una anécdota sobre el primer encuentro íntimo con el exfutbolista. El episodio ocurrió tras un partido y generó sorpresa en el panel.",
+      "cuerpo": "Durante su participación en un programa de streaming, la mediática Mica Viciconte relató un inusual episodio que vivió con su pareja, el exfutbolista Fabián Cubero, durante su primer encuentro íntimo. Según relató, el deportista sufrió un calambre en medio de la situación, lo que los obligó a hacer una pausa para estirar el músculo antes de retomar el momento.\n\nEn la misma charla, Viciconte recordó como antecedente que en junio pasado habían comenzado terapia de pareja por separado debido al desgaste cotidiano. Según explicó, ambos decidieron abandonar las sesiones por su cuenta al poco tiempo, aunque lograron resolver las cuestiones que los habían llevado a buscar ayuda profesional.\n\nLa anécdota generó sorpresa y risas entre los compañeros del panel del programa La Jugada, donde la influencer suele compartir distintos aspectos de su vida familiar y de pareja.",
+      "guion": "Mica Viciconte recuerda un calambre de Fabian Cubero",
+      "deIA": true,
       "por": "ia",
-      "cuando": "2026-09-28T03:22:42.646Z"
+      "cuando": "2026-09-28T03:32:34.330Z",
+      "claves": [
+        "Viciconte contó una anécdota sobre su primer encuentro íntimo con Cubero.",
+        "El exfutbolista sufrió un calambre y debieron hacer una pausa.",
+        "La mediática recordó que en junio pasado habían hecho terapia por separado."
+      ],
+      "seSabe": [
+        "Mica Viciconte relató en el streaming La Jugada que Fabián Cubero sufrió un calambre durante su primer encuentro íntimo.",
+        "La influencer contó que hicieron terapia de pareja por separado en junio pasado y que ambos decidieron dejar las sesiones al poco tiempo."
+      ],
+      "textoRedes": "La mediática Mica Viciconte relató una insólita anécdota sobre el primer encuentro íntimo que tuvo con el exfutbolista Fabián Cubero, en la que contó que él sufrió un calambre. Además, recordó cuando hicieron terapia por separado.",
+      "etiquetas": [
+        "Mica Viciconte",
+        "Fabian Cubero",
+        "parejas"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/teleshow/2026/09/26/mica-viciconte-recordo-el-insolito-momento-que-vivio-con-fabian-cubero-la-primera-vez-que-tuvieron-intimidad-te-elongo/",
+          "fecha": "2026-09-26T19:23:11.000Z",
+          "oficial": false,
+          "aporte": "Aportó los detalles sobre el calambre de Cubero, la pausa en el encuentro íntimo y el antecedente de la terapia de pareja."
+        },
+        {
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/show/famosos/2026/09/26/mica-viciconte-recordo-el-inconveniente-que-tuvieron-con-fabian-cubero-la-primera-vez-que-hicieron-el-amor/",
+          "fecha": "2026-09-26T20:44:14.000Z",
+          "oficial": false,
+          "aporte": "No aportó información debido a la falta de resumen en el registro."
+        },
+        {
+          "medio": "A24",
+          "enlace": "https://www.a24.com/primiciasya/mica-viciconte-revelo-el-insolito-problema-que-surgio-la-primera-vez-fabian-cubero-n1600729",
+          "fecha": "2026-09-27T14:00:00.000Z",
+          "oficial": false,
+          "aporte": "Confirmó que la declaración de Mica Viciconte sobre el percance con Fabián Cubero ocurrió en el streaming La Jugada."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron tres medios independientes.",
+        "sugeridoPorIA": "MEDIA"
+      }
     },
     "194nq4e": {
       "estado": "automatica",
@@ -37996,6 +38039,713 @@
       "verificacion": {
         "nivel": "ALTA",
         "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      }
+    },
+    "1wfdv7e": {
+      "estado": "automatica",
+      "titulo": "Milei niega la recesión y asegura que hay sectores en expansión",
+      "copete": "El presidente Javier Milei sostuvo que la economía no va hacia una recesión y atribuyó la caída de la actividad a cambios estructurales. Además, defendió el plan de su gestión y cuestionó a la oposición.",
+      "cuerpo": "Durante una entrevista televisiva, el mandatario respondió a un informe del banco JP Morgan y explicó que la caída de la actividad registrada en julio responde a una transición del modelo productivo.\n\nEl jefe de Estado también defendió los indicadores de su administración, al sostener que se crearon más de medio millón de puestos de trabajo y que los salarios reales suben desde hace cinco meses. Asimismo, cuestionó a quienes piden un tipo de cambio más alto al señalar que buscan bajar los ingresos de los trabajadores, y calificó a los críticos de esa postura como cobardes.\n\nEn el plano político, el mandatario destacó que su relación con la senadora Patricia Bullrich es excelente y se refirió al escenario electoral de cara a 2027 como una definición entre el modelo actual y la decadencia anterior. Días atrás, el Presidente había protagonizado actos internacionales y discursos en el exterior, en el marco de su agenda de gestión.",
+      "guion": "Milei niega la recesión y asegura que hay sectores en expansión",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-28T03:32:34.329Z",
+      "claves": [
+        "El presidente Javier Milei negó que la economía argentina se encamine a una recesión.",
+        "Atribuyó la caída de la actividad a una desaceleración propia de cambios estructurales.",
+        "Aseguró que se crearon más de quinientos mil puestos de trabajo durante su gestión.",
+        "Defendió el nivel actual del dólar y cuestionó a quienes reclaman una devaluación."
+      ],
+      "seSabe": [
+        "El presidente Javier Milei afirmó que la economía no está en recesión, según declaraciones televisivas difundidas este domingo.",
+        "El mandatario sostuvo que el consumo privado se encuentra en niveles máximos históricos.",
+        "El jefe de Estado indicó que los salarios reales registran subas desde hace cinco meses.",
+        "Milei calificó como excelente su vínculo actual con la senadora Patricia Bullrich."
+      ],
+      "noConfirmado": [
+        "No se precisó el alcance temporal exacto de los datos sobre el consumo privado mencionados por el mandatario."
+      ],
+      "textoRedes": "El presidente Javier Milei negó que la economia argentina este en recesion y aseguro que el menor dinamismo responde a una transicion productiva. Ademas, defendio las cifras de empleo y consumo de su gestion.",
+      "etiquetas": [
+        "Javier Milei",
+        "economia",
+        "recesion",
+        "empleo",
+        "salarios",
+        "Gobierno nacional"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "C5N",
+          "enlace": "https://www.c5n.com/politica/javier-milei-entrevista-la-nacion-mas-27-septiembre-2026",
+          "fecha": "2026-09-27T23:46:00.000Z",
+          "oficial": false,
+          "aporte": "Detalló las declaraciones del Presidente sobre empleo, salarios y su cruce con el JP Morgan."
+        },
+        {
+          "medio": "La Noticia 1",
+          "enlace": "https://www.lanoticia1.com/noticia/segun-milei-el-consumo-esta-en-maximo-historico-lo-que-esta-cambiando-es-la-modalidad-y-adjudico-el-fenomeno-a-temu",
+          "fecha": "2026-09-28T02:33:34.000Z",
+          "oficial": false,
+          "aporte": "Indicó que el mandatario negó la recesión en declaraciones televisivas."
+        },
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/politica/2026/09/27/javier-milei-nego-que-la-economia-vaya-a-entrar-en-recesion-hay-una-desaceleracion-del-ritmo-de-expansion/",
+          "fecha": "2026-09-28T00:54:41.000Z",
+          "oficial": false,
+          "aporte": "Aportó la frase textual sobre la desaceleración del ritmo de expansión."
+        },
+        {
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/politica/2026/09/27/milei-defendio-su-programa-y-nego-que-la-economia-vaya-a-entrar-en-recesion-hay-una-desaceleracion-del-ritmo-de-expansion/",
+          "fecha": "2026-09-28T00:07:31.000Z",
+          "oficial": false,
+          "aporte": "Mencionó la caída de la actividad en julio y su vinculación con el cambio de modelo."
+        },
+        {
+          "medio": "Crónica",
+          "enlace": "https://www.cronica.com.ar/politica/milei-nego-que-la-economia-vaya-a-entrar-en-recesion-hay-una-desaceleracion-del-ritmo-de-expansion/",
+          "fecha": "2026-09-28T00:40:00.000Z",
+          "oficial": false,
+          "aporte": "Precisó la baja mensual de 2,9 por ciento en la actividad de julio analizada por el Gobierno."
+        },
+        {
+          "medio": "Radio Mitre",
+          "enlace": "https://radiomitre.cienradios.com/politica/javier-milei-nego-que-la-economia-vaya-a-entrar-en-recesion-y-defendio-el-rumbo-economico-el-consumo-esta-en-maximos-historicos/",
+          "fecha": "2026-09-28T01:07:48.000Z",
+          "oficial": false,
+          "aporte": "Señaló que el Presidente defendió el plan económico durante una entrevista."
+        },
+        {
+          "medio": "Noticias Argentinas (NA)",
+          "enlace": "https://noticiasargentinas.com/politica/milei---no-hay-recesion--hay-una-desaceleracion-del-ritmo-de-expansion-_a6ab9abf4c2b8de8667fb79f4",
+          "fecha": "2026-09-27T23:57:00.000Z",
+          "oficial": false,
+          "aporte": "Aportó la declaración de que quienes piden un dólar más caro son cobardes."
+        },
+        {
+          "medio": "La Nueva",
+          "enlace": "https://www.lanueva.com/nota/2026-9-27-21-26-0-milei-nego-que-la-economia-vaya-a-entrar-en-recesion-hay-una-desaceleracion-del-ritmo-de-expansion",
+          "fecha": "2026-09-28T02:46:27.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "El Norte",
+          "enlace": "https://diarioelnorte.com.ar/javier-milei-nego-que-la-economia-vaya-a-entrar-en-recesion-hay-una-desaceleracion-del-ritmo-de-expansion/",
+          "fecha": "2026-09-28T00:16:59.000Z",
+          "oficial": false,
+          "aporte": null
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "19foxy4",
+          "titulo": "Javier Milei viaja a Paris para participar de la Argentina Week",
+          "fecha": "2026-09-27T18:00:00.000Z",
+          "ruta": "/nota/javier-milei-viaja-a-paris-para-participar-de-la-argentina-week-19foxy4"
+        },
+        {
+          "id": "l0rwb4",
+          "titulo": "Javier Milei cuestiona a la ONU en su discurso",
+          "fecha": "2026-09-24T01:00:00.000Z",
+          "ruta": "/nota/milei-en-la-onu-llamo-a-la-organizacion-una-casta-de-parasitos-y-l0rwb4"
+        },
+        {
+          "id": "1y0j61m",
+          "titulo": "A qué hora habla Javier Milei en la ONU y cómo verlo en vivo",
+          "fecha": "2026-09-23T02:44:00.000Z",
+          "ruta": "/nota/a-que-hora-habla-javier-milei-en-la-onu-y-como-verlo-en-vivo-1y0j61m"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron 9 medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      }
+    },
+    "175tliz": {
+      "estado": "automatica",
+      "titulo": "Milei niega la recesión y cuestiona los indicadores económicos",
+      "copete": "El presidente Javier Milei rechazó que la Argentina se encuentre en recesión y cuestionó las mediciones oficiales y privadas. La discusión surge tras la revisión a la baja de las proyecciones de crecimiento económico para este año por parte de entidades financieras.",
+      "cuerpo": "El presidente Javier Milei negó que la Argentina se encuentre en recesión y cuestionó los indicadores recientes de actividad económica durante una entrevista televisiva. El mandatario sostuvo que las mediciones actuales \"están arrojando cualquier cosa\" debido a que la economía atraviesa profundos cambios estructurales que dificultan su lectura.\n\nAnte este escenario, la continuidad de la tendencia dependerá de los datos oficiales correspondientes a agosto y septiembre que difundirá el Indec en los próximos meses para determinar la evolución trimestral de la actividad.",
+      "guion": "Milei niega la recesión y cuestiona los indicadores económicos",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-28T03:32:34.329Z",
+      "noConfirmado": [
+        "Todavía no están disponibles los datos oficiales de actividad económica correspondientes a agosto y septiembre."
+      ],
+      "textoRedes": "El presidente Javier Milei negó que la economía esté en recesión y cuestionó los indicadores actuales. Sus declaraciones se conocieron tras la revisión a la baja de las proyecciones de crecimiento para este año por parte de entidades financieras.",
+      "etiquetas": [
+        "economia",
+        "recesion",
+        "javier milei",
+        "indec",
+        "jp morgan"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Día",
+          "enlace": "https://www.eldia.com/politica-y-economia/milei-nego-que-haya-recesion-y-cuestiono-los-indicadores-economicos-cualquier-cosa-politica-y-economia_1790553300",
+          "fecha": "2026-09-28T00:06:39.000Z",
+          "oficial": false,
+          "aporte": "Aportó los detalles sobre las declaraciones de Milei en el programa televisivo, las cifras del Indec y las proyecciones del JP Morgan."
+        },
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/politica/milei-nego-que-haya-una-recesion-y-dijo-los-indicadores-estan-arrojando-cualquier-cosa-nid27092026/",
+          "fecha": "2026-09-28T03:14:11.000Z",
+          "oficial": false,
+          "aporte": "Confirmó las declaraciones del presidente Javier Milei negando la recesión durante una entrevista en La Cornisa."
+        },
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/politica/javier-milei-y-sus-medidas-en-vivo-tengo-algunos-enemigos-muy-pesados-aca-y-en-el-mundo-dijo-el-nid28092026/",
+          "fecha": "2026-09-28T03:00:00.000Z",
+          "oficial": false,
+          "aporte": "Coincidió en el rechazo del presidente a la recesión y sus críticas a la lectura de los analistas."
+        },
+        {
+          "medio": "Clarín",
+          "enlace": "https://www.clarin.com/politica/milei-nego-recesion-afirmo-indicadores-dan-cualquier-cosa-cambios-estructurales-economia_0_LQsde53U2W.html",
+          "fecha": "2026-09-28T01:06:33.000Z",
+          "oficial": false,
+          "aporte": "Aportó las menciones sobre las críticas a economistas y las estimaciones electorales del mandatario."
+        },
+        {
+          "medio": "Perfil",
+          "enlace": "https://www.perfil.com/noticias/economia/milei-nego-que-haya-una-recesion-y-cuestiono-los-indicadores-estan-arrojando-cualquier-cosa.phtml",
+          "fecha": "2026-09-28T00:58:57.000Z",
+          "oficial": false,
+          "aporte": "Detalló la defensa del rumbo económico y el recorte de la previsión de crecimiento del JP Morgan."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron cuatro medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      }
+    },
+    "5mxbmz": {
+      "estado": "automatica",
+      "titulo": "YPF incrementa uno por ciento el valor de los combustibles en el país",
+      "copete": "YPF aplicó una suba del uno por ciento en las naftas y el gasoil en todo el territorio nacional. La medida se suma a los incrementos previos de otras petroleras y responde a un esquema de actualización gradual por la situación internacional.",
+      "cuerpo": "YPF aplicó una suba promedio del uno por ciento en los precios de las naftas y el gasoil en todo el país. La compañía estatal informó que la medida se implementó tras los aumentos aplicados previamente por otras empresas del sector, que rondaron entre el dos y el cinco por ciento.\n\nDesde la petrolera explicaron que la actualización responde a un esquema de buffer de precios vigente desde abril, diseñado para amortiguar el impacto de la volatilidad internacional y del conflicto en Medio Oriente sobre el mercado local. Asimismo, la empresa ratificó la continuidad de su sistema de micropricing para realizar ajustes según la zona geográfica, la competencia y la demanda.\n\nPara los conductores de Balcarce, este incremento en las estaciones de servicio locales se alinea con la tendencia nacional de subas graduales aplicadas por las principales marcas en las últimas semanas.",
+      "guion": "YPF incrementa uno por ciento el valor de los combustibles en el país",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-28T03:32:34.329Z",
+      "claves": [
+        "YPF aumentó uno por ciento el precio de sus combustibles en todo el país.",
+        "La suba se implementó tras los incrementos de entre el dos y el cinco por ciento aplicados por otras compañías.",
+        "La empresa atribuyó la medida a un esquema de actualización gradual por la situación internacional.",
+        "Continúa vigente el sistema de micropricing para ajustar valores según cada mercado."
+      ],
+      "seSabe": [
+        "YPF aplicó un aumento promedio del uno por ciento en naftas y gasoil en todo el país, según informó la compañía.",
+        "Otras compañías aplicaron previamente incrementos de entre el dos y el cinco por ciento, de acuerdo con los registros de las fuentes.",
+        "La empresa estatal mantiene un esquema de buffer de precios y un sistema de micropricing para fijar los valores según cada zona."
+      ],
+      "noConfirmado": [
+        "No se especificaron los valores nominales en pesos que tendrán las naftas y el gasoil en las estaciones de servicio tras el incremento."
+      ],
+      "textoRedes": "YPF aplicó una suba del uno por ciento en las naftas y el gasoil en todo el país. El incremento se suma al de otras petroleras y repercute en las estaciones de servicio locales.",
+      "etiquetas": [
+        "YPF",
+        "combustibles",
+        "aumento",
+        "precios"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "0221",
+          "enlace": "https://www.0221.com.ar/nacional/ypf-se-sumo-los-aumentos-los-combustibles-y-ajusto-sus-precios-todo-el-pais-n134820",
+          "fecha": "2026-09-25T20:16:00.000Z",
+          "oficial": false,
+          "aporte": "Detalló el porcentaje de aumento del uno por ciento, la fecha de aplicación y el esquema de buffer de precios."
+        },
+        {
+          "medio": "Infórmese Primero (FM 104.9)",
+          "enlace": "http://www.informeseprimero.com.ar/2026/09/ypf-aumento-1-el-precio-de-sus.html",
+          "fecha": "2026-09-26T13:30:28.264Z",
+          "oficial": false,
+          "aporte": "Confirmó la aplicación del incremento del uno por ciento desde la medianoche del sábado."
+        },
+        {
+          "medio": "El Destape",
+          "enlace": "https://www.eldestapeweb.com/economia/combustibles-aumentan-1-este-sabado-efectos-guerra-medio-oriente-2026925192425",
+          "fecha": "2026-09-25T22:24:25.000Z",
+          "oficial": false,
+          "aporte": "Indicó que otras compañías aplicaron incrementos previos de hasta el cinco por ciento."
+        },
+        {
+          "medio": "Minuto Uno",
+          "enlace": "https://www.minutouno.com/economia/ypf-aumenta-todos-sus-combustibles-este-sabado-cuanto-se-va-el-litro-nafta-n6326890",
+          "fecha": "2026-09-25T22:38:00.000Z",
+          "oficial": false,
+          "aporte": "Señaló que las subas de las compañías privadas oscilaron entre el dos y el cinco por ciento."
+        },
+        {
+          "medio": "Diario Popular",
+          "enlace": "https://www.diariopopular.com.ar/economia/desde-este-sabado-ypf-aumenta-un-1-los-precios-sus-combustibles-n921548",
+          "fecha": "2026-09-26T10:06:00.000Z",
+          "oficial": false,
+          "aporte": "Informó sobre la vigencia general de los ajustes en el sector."
+        },
+        {
+          "medio": "InfoRegión",
+          "enlace": "https://www.inforegion.com.ar/2026/09/26/ypf-tambien-aumento-el-precio-de-sus-combustibles/",
+          "fecha": "2026-09-26T11:05:07.000Z",
+          "oficial": false,
+          "aporte": "Precisó que la medida se da en sintonía con Shell, Axion y Puma, ratificando la política de micropricing."
+        },
+        {
+          "medio": "QZ Noticias (Mar del Plata)",
+          "enlace": "https://www.qznoticias.com/el-pais/ypf-aumenta-desde-hoy-un-1-el-precio-de-los-combustibles",
+          "fecha": "2026-09-26T12:01:57.000Z",
+          "oficial": false,
+          "aporte": "Registró la actualización de tarifas de la petrolera estatal."
+        },
+        {
+          "medio": "El Marplatense",
+          "enlace": "https://www.elmarplatense.com/ypf-aplico-un-aumento-del-1-en-el-precio-de-sus-combustibles",
+          "fecha": "2026-09-26T13:41:39.000Z",
+          "oficial": false,
+          "aporte": "Aportó cobertura sobre el impacto de la medida en la región."
+        },
+        {
+          "medio": "Punto Noticias",
+          "enlace": "https://puntonoticias.com/ypf-aplicara-un-aumento-del-1-a-los-combustibles-desde-este-sabado/",
+          "fecha": "2026-09-26T12:40:53.000Z",
+          "oficial": false,
+          "aporte": null
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron 9 medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      }
+    },
+    "uc9ftf": {
+      "estado": "automatica",
+      "titulo": "Abel Pintos cantará ante el papa León XIV en su visita al país",
+      "copete": "El músico argentino confirmó que recibió una invitación del Vaticano para actuar frente al pontífice durante su paso por el Cottolengo Don Orione de Claypole, previsto para noviembre.",
+      "cuerpo": "En diálogo con medios nacionales, el artista expresó su emoción por la convocatoria y señaló que la comunicación se canalizó a través de su productora, Plan Divino. Si bien indicó que su participación ya cuenta con una autorización inicial, aclaró que todavía aguarda precisiones sobre los detalles de la presentación y la confirmación definitiva del repertorio que interpretará ante el Sumo Pontífice.\n\nEn la previa de la llegada papal, las autoridades de la emblemática institución de Claypole advirtieron sobre la compleja situación que atraviesa el centro para personas con discapacidad ante la falta de entrega de medicación y prestaciones, mientras la organización ultimaba los preparativos para la agenda oficial del líder religioso en el país.",
+      "guion": "Abel Pintos cantará ante el papa León XIV en su visita al país",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-28T03:32:34.329Z",
+      "claves": [
+        "Abel Pintos fue invitado por el Vaticano para cantar ante el papa León XIV.",
+        "La actividad está prevista para el 9 de noviembre en el Cottolengo Don Orione de Claypole.",
+        "El músico aguarda precisiones sobre la organización y definirá un repertorio especial.",
+        "Autoridades del centro advirtieron sobre una delicada situación prestacional en la previa."
+      ],
+      "seSabe": [
+        "Abel Pintos confirmó la invitación del Vaticano para cantar ante el papa León XIV, según su entorno.",
+        "La visita del pontífice a la Argentina se extenderá entre el 8 y el 11 de noviembre, de acuerdo al cronograma.",
+        "El encuentro en el Cottolengo Don Orione de Claypole está previsto para el lunes 9 de noviembre, según informaron las fuentes.",
+        "Autoridades de la institución de Almirante Brown plantearon reclamos sobre la entrega de prestaciones y medicación."
+      ],
+      "noConfirmado": [
+        "Aún restan conocer los detalles precisos y la confirmación final sobre la presentación del artista.",
+        "No se especificó la lista definitiva de canciones que Pintos interpretará ante el pontífice."
+      ],
+      "textoRedes": "Abel Pintos confirmó que fue invitado por el Vaticano para cantarle al papa León XIV durante su visita al Cottolengo Don Orione de Claypole, prevista para el próximo mes de noviembre.",
+      "etiquetas": [
+        "Abel Pintos",
+        "Papa León XIV",
+        "Cottolengo Don Orione",
+        "Claypole",
+        "Almirante Brown",
+        "Música"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "La Tecla",
+          "enlace": "https://www.latecla.info/169960-abel-pintos-le-cantara-al-papa-leon-xiv-en-el-cottolengo-don-orione",
+          "fecha": "2026-09-25T14:50:00.000Z",
+          "oficial": false,
+          "aporte": "Confirmó la invitación del Vaticano a Abel Pintos y la expectativa en torno a la visita papal."
+        },
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/teleshow/2026/09/25/abel-pintos-hablo-sobre-el-fuerte-rumor-de-su-actuacion-para-el-papa-leon-xiv-me-alegra-la-consideracion/",
+          "fecha": "2026-09-25T21:18:25.000Z",
+          "oficial": false,
+          "aporte": "Detalló la fecha estimada del evento, los dichos del artista sobre su productora y el proceso de gestión."
+        },
+        {
+          "medio": "Perfil",
+          "enlace": "https://www.perfil.com/noticias/politica/realidad-limite-cottolengo-don-orione-visitara-papa-leon-xiv.phtml",
+          "fecha": "2026-09-27T02:55:00.000Z",
+          "oficial": false,
+          "aporte": "Aportó información sobre los reclamos de las autoridades del Cottolengo por la falta de insumos y prestaciones."
+        },
+        {
+          "medio": "C5N",
+          "enlace": "https://www.c5n.com/sociedad/cottolengo-don-orione-como-sera-el-recorrido-del-papa-leon-xiv-su-visita-la-argentina-n250079",
+          "fecha": "2026-09-27T23:54:00.000Z",
+          "oficial": false,
+          "aporte": "Mencionó los preparativos en la institución de Claypole y el recorrido junto al director Jorge Silanes."
+        },
+        {
+          "medio": "Noticias Argentinas (NA)",
+          "enlace": "https://noticiasargentinas.com/politica/cottolengo-don-orione---la-visita-del-papa-significa-una-visibilizacion-que-nunca-tuvimos-_a6ab7bd8d9a676c64cfc31e7e",
+          "fecha": "2026-09-27T11:27:18.349Z",
+          "oficial": false,
+          "aporte": "Sin información relevante en el resumen proporcionado."
+        },
+        {
+          "medio": "Noticias Argentinas (NA)",
+          "enlace": "https://noticiasargentinas.com/politica/en-fotos--el-cottolengo-don-orione-que-visitara-el-papa-leon-xiv_a6ab818f69a676c64cfd8d212",
+          "fecha": "2026-09-27T10:30:00.000Z",
+          "oficial": false,
+          "aporte": "Sin información relevante en el resumen proporcionado."
+        },
+        {
+          "medio": "InfoRegión",
+          "enlace": "https://www.inforegion.com.ar/2026/09/27/el-cottolengo-don-orione-de-claypole-se-prepara-para-recibir-al-papa-leon-xiv/",
+          "fecha": "2026-09-27T17:51:56.000Z",
+          "oficial": false,
+          "aporte": "Indicó la fecha exacta del evento y las declaraciones del sacerdote Aníbal Quevedo."
+        },
+        {
+          "medio": "InfoRegión",
+          "enlace": "https://www.inforegion.com.ar/2026/09/25/abel-pintos-cantara-ante-el-papa-leon-xiv-durante-su-visita-al-cottolengo-don-orione/",
+          "fecha": "2026-09-25T18:18:05.000Z",
+          "oficial": false,
+          "aporte": "Validó la participación del artista tras la confirmación de su entorno y el Vaticano."
+        },
+        {
+          "medio": "Diario Conurbano",
+          "enlace": "https://diarioconurbano.com.ar/principal/desde-el-cottolengo-don-orione-advierten-por-los-recortes-nacionales-en-discapacidad/",
+          "fecha": "2026-09-27T15:40:38.000Z",
+          "oficial": false,
+          "aporte": null
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron 7 medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      }
+    },
+    "12kbmif": {
+      "estado": "automatica",
+      "titulo": "Argentina termina segunda en los Juegos Suramericanos Santa Fe dos mil veintiséis",
+      "copete": "La delegación nacional finalizó en el segundo puesto del medallero general tras dos semanas de competencia. Brasil lideró la tabla y Colombia quedó en el tercer lugar.",
+      "cuerpo": "Los Juegos Suramericanos Santa Fe dos mil veintiséis concluyeron este sábado veintiséis de septiembre, tras desarrollarse entre el doce y el veintiséis del mismo mes con la participación de más de cuatro mil atletas de quince países, según informaron diversos medios nacionales.\n\nEn cuanto a la cima de la competencia regional, Brasil se ubicó en el primer puesto con trescientas doce medallas, mientras que Colombia completó el podio en la tercera posición, de acuerdo con los registros difundidos al término del evento. La actuación nacional superó ampliamente la cosecha obtenida en la edición anterior disputada en Asunción dos mil veintidós, acompañada por récord de espectadores en las distintas disciplinas distribuidas entre las sedes de Rosario, Santa Fe capital, Rafaela, Mar del Plata y Buenos Aires.",
+      "guion": "Argentina termina segunda en los Juegos Suramericanos Santa Fe dos mil veintiséis",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-28T03:32:34.329Z",
+      "claves": [
+        "Los Juegos Suramericanos finalizaron el sábado 26 de septiembre.",
+        "Argentina terminó segunda en el medallero con 293 preseas.",
+        "Brasil lideró la competencia y Colombia ocupó el tercer lugar.",
+        "La delegación nacional estuvo compuesta por 658 atletas."
+      ],
+      "textoRedes": "Argentina finalizó en el segundo puesto del medallero general en los Juegos Suramericanos Santa Fe 2026 tras cosechar 293 medallas. La delegación nacional estuvo integrada por 658 atletas en una competencia que lideró Brasil.",
+      "etiquetas": [
+        "Juegos Suramericanos",
+        "Santa Fe 2026",
+        "deportes",
+        "medallero",
+        "Argentina"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Perfil",
+          "enlace": "https://442.perfil.com/noticias/polideportivo/juegos-suramericanos-santa-fe-2026-la-agenda-de-argentina-para-hoy.phtml",
+          "fecha": "2026-09-25T11:53:00.000Z",
+          "oficial": false,
+          "aporte": "Aportó información sobre el desarrollo de la penúltima jornada y los horarios de las finales de atletismo y otros deportes."
+        },
+        {
+          "medio": "QZ Noticias (Mar del Plata)",
+          "enlace": "https://www.qznoticias.com/juegos-suramericanos-santa-fe-2026/mar-del-plata-brillo-en-santa-fe-con-24-medallas",
+          "fecha": "2026-09-27T19:28:20.000Z",
+          "oficial": false,
+          "aporte": "Confirmó la finalización de los Juegos y el total de medallas obtenidas por la delegación argentina."
+        },
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/deportes/asi-quedo-el-medallero-de-los-juegos-suramericanos-santa-fe-2026-con-la-argentina-en-el-segundo-nid26092026/",
+          "fecha": "2026-09-26T22:43:58.000Z",
+          "oficial": false,
+          "aporte": "Detalló que Brasil quedó en lo más alto del medallero con 312 medallas y que Colombia ocupó el tercer puesto."
+        },
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/deportes/el-medallero-de-los-juegos-suramericanos-santa-fe-2026-nid16092026/",
+          "fecha": "2026-09-26T11:35:53.000Z",
+          "oficial": false,
+          "aporte": "Indicó las fechas de realización del evento y las ciudades donde se concentraron las actividades."
+        },
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/deportes/asi-esta-el-medallero-de-los-juegos-suramericanos-santa-fe-2026-tras-el-dia-13-nid25092026/",
+          "fecha": "2026-09-26T05:13:11.000Z",
+          "oficial": false,
+          "aporte": "Señaló que participaron más de 4.000 deportistas de 15 países de la región."
+        },
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/deportes/2026/09/26/como-esta-argentina-en-el-medallero-de-los-juegos-suramericanos-santa-fe-2026-en-el-ultimo-dia-de-competencia-el-listado-historico/",
+          "fecha": "2026-09-26T20:20:18.000Z",
+          "oficial": false,
+          "aporte": "Precisó el desglose de las preseas obtenidas por la delegación albiceleste y el liderazgo de Brasil."
+        },
+        {
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/deportes/polideportivo/2026/09/26/juegos-suramericanos-ultimo-dia-en-vivo-resultados-medallas-y-noticias-de-argentina/",
+          "fecha": "2026-09-26T23:54:38.000Z",
+          "oficial": false,
+          "aporte": "Transmitió la cobertura en vivo y el resumen de la jornada de cierre."
+        },
+        {
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/deportes/2026/09/14/medallero-de-los-juegos-suramericanos-santa-fe-2026-tabla-resultados-y-como-le-va-a-la-argentina/",
+          "fecha": "2026-09-26T22:24:54.000Z",
+          "oficial": false,
+          "aporte": "Informó que los Juegos duraron 14 días y detalló las tres ciudades cabecera."
+        },
+        {
+          "medio": "El Destape",
+          "enlace": "https://www.eldestapeweb.com/deportes/asi-termino-argentina-medallero-juegos-suramericanos-2026-2026926161312",
+          "fecha": "2026-09-26T19:13:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Perfil",
+          "enlace": "https://442.perfil.com/noticias/polideportivo/argentina-cerro-los-juegos-suramericanos-santa-fe-2026-con-un-historico-segundo-puesto-en-el-medallero-el-ranking-final.phtml",
+          "fecha": "2026-09-27T00:39:33.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Ámbito",
+          "enlace": "https://www.ambito.com/deportes/juegos-suramericanos-argentina-pelea-arriba-y-asi-esta-el-medallero-n6326881",
+          "fecha": "2026-09-25T22:03:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "TyC Sports",
+          "enlace": "https://www.tycsports.com/polideportivo/el-legado-de-infraestructura-de-los-juegos-suramericanos-santa-fe-2026-id763058.html",
+          "fecha": "2026-09-26T10:48:09.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Olé",
+          "enlace": "https://www.ole.com.ar/polideportivo/juegos-suramericanos/juegos-suramericanos-santa-fe-2026-bajaron-telon-argentina-podio_0_OGwKl6tep2.html",
+          "fecha": "2026-09-27T02:00:22.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Olé",
+          "enlace": "https://www.ole.com.ar/polideportivo/juegos-suramericanos/medallero-completo-juegos-suramericanos-todas-medallas-argentina_0_bxzmCjABgq.html",
+          "fecha": "2026-09-26T22:28:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Olé",
+          "enlace": "https://www.ole.com.ar/polideportivo/juegos-suramericanos/juegos-suramericanos-agenda-sabado-26-septiembre_0_9jy5B7zer0.html",
+          "fecha": "2026-09-26T11:54:02.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "C5N",
+          "enlace": "https://www.c5n.com/deportes/historico-segundo-puesto-argentina-los-juegos-suramericanos-santa-fe-2026-el-medallero-final-n250021",
+          "fecha": "2026-09-26T23:15:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "QZ Noticias (Mar del Plata)",
+          "enlace": "https://www.qznoticias.com/juegos-suramericanos-santa-fe-2026/se-apago-la-llama-suramericana-en-unos",
+          "fecha": "2026-09-27T02:40:45.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "El Marplatense",
+          "enlace": "https://www.elmarplatense.com/mar-del-plata-brillo-en-los-odesur-24-medallas-y-protagonismo-en-multiples-disciplinas",
+          "fecha": "2026-09-26T23:19:14.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Mi8 (Canal 8 Mar del Plata)",
+          "enlace": "https://mi8.com.ar/mar-del-plata-brillo-en-los-juegos-suramericanos-24-medallas-y-presencia-en-18-disciplinas/",
+          "fecha": "2026-09-27T13:47:53.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Infobrisas (Radio Brisas)",
+          "enlace": "https://www.infobrisas.com/noticias/2026/09/27/109333-destacada-participacion-de-marplatenses-en-los-juegos-suramericanos-santa-fe-2026",
+          "fecha": "2026-09-27T12:28:03.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Punto Noticias",
+          "enlace": "https://puntonoticias.com/los-representantes-de-mar-del-plata-dejaron-su-marca-en-los-juegos-suramericanos-santa-fe-2026/",
+          "fecha": "2026-09-27T11:19:54.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Radio 10 Mar del Plata (FM 105.5)",
+          "enlace": "https://radio10mardelplata.com.ar/mar-del-plata-brillo-en-los-juegos-suramericanos-santa-fe-2026-24-medallas-y-una-destacada-presencia-en-el-podio/",
+          "fecha": "2026-09-26T22:52:47.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Ecos Diarios (Necochea)",
+          "enlace": "https://elecos.com.ar/sabado-26-de-septiembre-de-2026-1",
+          "fecha": "2026-09-26T03:05:32.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Bolavip Argentina",
+          "enlace": "https://bolavip.com/ar/polideportivo/argentina-gano-293-medallas-en-los-juegos-suramericanos-como-quedo-el-ranking",
+          "fecha": "2026-09-26T23:13:34.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "CADA (Confederación Argentina de Atletismo)",
+          "enlace": "https://cada-atletismo.org/medallas-argentinas-atletismo-juegos-suramericanos-santa-fe-2026/",
+          "fecha": "2026-09-26T15:32:52.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "0223 (Mar del Plata)",
+          "enlace": "https://www.0223.com.ar/nota/2026-9-27-9-29-0-mar-del-plata-brillo-en-santa-fe-los-marplatenses-que-ganaron-24-medallas-en-los-juegos-suramericanos",
+          "fecha": "2026-09-27T12:29:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "TyC Sports",
+          "enlace": "https://www.tycsports.com/polideportivo/argentina-en-los-juegos-suramericanos-santa-fe-2026-hoy-sabado-26-de-septiembre-cronograma-y-resultados-id760918.html",
+          "fecha": "2026-09-26T22:27:45.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Infocielo",
+          "enlace": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOWWVhcmI2bEhjbkczLWRMaGdmZFkxSENFRV9xa0dkY1BKdTluT2h0WVFhN0hKZ01WTEFjU0lZclNxUXk0N0lsWlpiaXBNRTlMc1FPOHVOWUJPaFBBZEJqRFpSRzltSmZyRHNremVoeGI1d3VLR2NwRXBmVnNFZEt4S1E3R2R5VVBmTWdmVWZ4SEdMRml3UHpCelJTNmtUUFpfUTNsUFQtcFdab1JBZWZoS0ZsU1c?oc=5",
+          "fecha": "2026-09-27T13:54:16.000Z",
+          "oficial": false,
+          "aporte": null
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1ch74gj",
+          "titulo": "Un balcarceño integró el equipo arbitral de los Juegos Suramericanos Santa Fe 2026",
+          "fecha": "2026-09-22T19:37:23.000Z",
+          "ruta": "/nota/un-balcarceno-integro-el-equipo-arbitral-de-los-juegos-suramericanos-1ch74gj"
+        },
+        {
+          "id": "1tqxkgi",
+          "titulo": "Ariel Bilbao integró el equipo arbitral de tiro en los Juegos Suramericanos Santa Fe 2026",
+          "fecha": "2026-09-22T15:28:50.300Z",
+          "ruta": "/nota/ariel-bilbao-integro-el-equipo-arbitral-de-tiro-en-los-juegos-1tqxkgi"
+        },
+        {
+          "id": "12y7w4i",
+          "titulo": "Con un gol sobre el final, la selección argentina Sub 19 le ganó 1-0 a Perú y se clasificó a la final de los Juegos Suramericanos",
+          "fecha": "2026-09-23T22:04:51.000Z",
+          "ruta": "/nota/con-un-gol-sobre-el-final-la-seleccion-argentina-sub-19-le-gano-1-0-a-12y7w4i"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron 20 medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      }
+    },
+    "1mjvb6n": {
+      "estado": "automatica",
+      "titulo": "San Nicolás realiza la segunda edición de su festival de jazz con entrada gratuita",
+      "copete": "El municipio bonaerense de San Nicolás organiza la segunda edición de su festival de jazz para el tres y cuatro de octubre con cinco sedes y entrada libre y gratuita.",
+      "cuerpo": "El evento cultural se desarrollará durante dos jornadas en el Teatro Municipal, la Casa del Acuerdo, el Colegio de Abogados, Villa Rocca y la Esquina Menchaca. La dirección artística estará a cargo de Nico Sorin y contará con homenajes al músico estadounidense Miles Davis en el año del centenario de su nacimiento, con presentaciones especiales de Mariano Loiácono y Hernán Jacinto.\n\nLas actividades comenzarán el sábado al mediodía y se extenderán hasta el domingo por la noche.\n\nEl acceso a los distintos auditorios será libre y gratuito, con cupos limitados que se completarán por orden de llegada hasta agotar la capacidad de cada uno de los espacios designados para el encuentro musical.",
+      "guion": "San Nicolás realiza la segunda edición de su festival de jazz con entrada gratuita",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-28T03:32:34.329Z",
+      "claves": [
+        "El encuentro se realizará el tres y cuatro de octubre en San Nicolás.",
+        "Habrá cinco sedes distribuidas en toda la ciudad.",
+        "La entrada será libre y gratuita con capacidad limitada."
+      ],
+      "seSabe": [
+        "El festival se llevará a cabo el sábado tres y domingo cuatro de octubre de dos mil veintiséis.",
+        "La dirección artística estará a cargo de Nico Sorin.",
+        "Habrá homenajes a Miles Davis en el centenario de su nacimiento.",
+        "Las actividades se desarrollarán en cinco espacios culturales de la ciudad.",
+        "La entrada será libre y gratuita hasta completar la capacidad de cada auditorio."
+      ],
+      "noConfirmado": [
+        "No se especificaron los horarios exactos de la mayoría de las presentaciones más allá del inicio del sábado y el cierre del domingo.",
+        "No se detalló el cupo exacto de espectadores permitidos en cada una de las cinco sedes."
+      ],
+      "textoRedes": "San Nicolás se prepara para la segunda edición de su festival de jazz con cinco sedes y entrada gratuita los días tres y cuatro de octubre.",
+      "etiquetas": [
+        "Festival de Jazz",
+        "San Nicolás",
+        "música"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Noticias Argentinas (NA)",
+          "enlace": "https://noticiasargentinas.com/cultura/san-nicolas-recibira-la-segunda-edicion-de-su-festival-de-jazz_a6ab7ecf09a676c64cfce6b7b",
+          "fecha": "2026-09-26T16:06:44.807Z",
+          "oficial": false,
+          "aporte": "Detalló el listado de artistas participantes, las sedes, las fechas, la dirección artística y la programación diaria."
+        },
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/cultura/2026/09/26/san-nicolas-sera-sede-de-dos-jornadas-de-jazz-con-entrada-gratuita-la-grilla-completa-del-festival/",
+          "fecha": "2026-09-26T16:42:03.000Z",
+          "oficial": false,
+          "aporte": "Confirmó las fechas del evento y la gratuidad con cupos limitados."
+        },
+        {
+          "medio": "Diario Popular",
+          "enlace": "https://www.diariopopular.com.ar/del-3-al-4-octubre-vuelve-el-festival-jazz-san-nicolas-n921681",
+          "fecha": "2026-09-26T16:48:00.000Z",
+          "oficial": false,
+          "aporte": "No aportó información adicional al no incluir texto en su registro."
+        },
+        {
+          "medio": "Crónica",
+          "enlace": "https://www.cronica.com.ar/sociedad/vuelve-el-festival-de-jazz-de-san-nicolas/",
+          "fecha": "2026-09-26T17:01:00.000Z",
+          "oficial": false,
+          "aporte": "Ratificó la realización del festival los días tres y cuatro de octubre en cinco espacios con acceso libre."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron cuatro medios independientes.",
         "sugeridoPorIA": "ALTA"
       }
     }
