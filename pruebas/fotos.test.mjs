@@ -5,6 +5,7 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import {
   imagenPrincipalDe, candidatasDeNota, descargarImagen, candidatasConDatos, elegirFoto,
+  personaPublicaDeNota, buscarFotoWikimedia, elegirFotoParaNota,
 } from '../ingesta/fotos.mjs';
 
 test('imagenPrincipalDe lee el og:image, con orden de atributos distinto, y si no hay, el twitter:image', () => {
@@ -101,7 +102,7 @@ test('elegirFoto: Gemini elige una candidata sin marca', async () => {
   assert.equal(r.razon, 'mejor encuadre');
 });
 
-test('elegirFoto: si la IA marca la elegida con marca de agua, no se elige ninguna', async () => {
+test('elegirFoto: si la IA elige (mal) la marcada, usa la otra sin marca en su lugar (28/09, Hernán: "aunque no sea la ideal")', async () => {
   const nota = { titulo: 't', seccion: 'Balcarce' };
   const candidatas = conDatos(['Local1', 'Local2']);
   const fetchFn = fetchGemini({
@@ -109,14 +110,27 @@ test('elegirFoto: si la IA marca la elegida con marca de agua, no se elige ningu
     fotos: [{ letra: 'A', tiene_marca: true, detalle: 'logo abajo a la derecha' }, { letra: 'B', tiene_marca: false }],
   });
   const r = await elegirFoto(nota, candidatas, { clave: 'g', claveRespaldo: null, fetchFn });
-  assert.equal(r.elegida, null);
+  assert.equal(r.elegida.medio, 'Local2');
   assert.equal(r.candidatas[0].sospechaMarca, true);
   // La "razon" no puede quedar como si la marcada se hubiera elegido (pasó
   // de verdad el 28/09, con la foto del papa León XIV y el logo de ANDigital).
   assert.match(r.razon, /Local1/);
   assert.match(r.razon, /marca de agua/);
   assert.match(r.razon, /logo abajo a la derecha/);
+  assert.match(r.razon, /Local2/);
   assert.doesNotMatch(r.razon, /^la mejor$/);
+});
+
+test('elegirFoto: si TODAS tienen marca, ahí sí no se elige ninguna', async () => {
+  const nota = { titulo: 't', seccion: 'Balcarce' };
+  const candidatas = conDatos(['Local1', 'Local2']);
+  const fetchFn = fetchGemini({
+    elegida: 'A', razon: 'la mejor de las dos',
+    fotos: [{ letra: 'A', tiene_marca: true, detalle: 'logo A' }, { letra: 'B', tiene_marca: true, detalle: 'logo B' }],
+  });
+  const r = await elegirFoto(nota, candidatas, { clave: 'g', claveRespaldo: null, fetchFn });
+  assert.equal(r.elegida, null);
+  assert.match(r.razon, /ninguna de las otras sirve sin marca/);
 });
 
 test('elegirFoto: si Gemini falla, prueba con Groq', async () => {
@@ -155,4 +169,98 @@ test('elegirFoto: sin ninguna clave, lo dice y no llama a nadie', async () => {
   const r = await elegirFoto(nota, candidatas, { clave: null, claveRespaldo: null, fetchFn: async () => { throw new Error('no debería llamarse'); } });
   assert.equal(r.elegida, null);
   assert.match(r.razon, /sin clave/);
+});
+
+// --------------------------------------- persona pública y Wikimedia (28/09)
+
+function fetchGeminiTexto(respuesta) {
+  return async (url) => {
+    assert.match(url, /generativelanguage\.googleapis\.com/);
+    return { ok: true, json: async () => ({ candidates: [{ content: { parts: [{ text: JSON.stringify(respuesta) }] } }] }) };
+  };
+}
+
+test('personaPublicaDeNota: devuelve el nombre que contesta la IA', async () => {
+  const nota = { titulo: 'Mariano Werner lidera la clasificación del TC Pick Up', copete: '' };
+  const fetchFn = fetchGeminiTexto({ persona: 'Mariano Werner' });
+  assert.equal(await personaPublicaDeNota(nota, { clave: 'g', fetchFn }), 'Mariano Werner');
+});
+
+test('personaPublicaDeNota: null si la IA dice null, si falla, o si no hay clave', async () => {
+  const nota = { titulo: 'El Concejo aprueba el presupuesto 2027' };
+  assert.equal(await personaPublicaDeNota(nota, { clave: 'g', fetchFn: fetchGeminiTexto({ persona: null }) }), null);
+  assert.equal(await personaPublicaDeNota(nota, { clave: 'g', fetchFn: async () => ({ ok: false, status: 500 }) }), null);
+  assert.equal(await personaPublicaDeNota(nota, { clave: null, fetchFn: async () => { throw new Error('no debería llamarse'); } }), null);
+});
+
+const paginaWikimedia = (props) => ({ 1: { imageinfo: [{ mime: 'image/jpeg', width: 1200, height: 800, url: 'https://upload.wikimedia.org/f.jpg', descriptionurl: 'https://commons.wikimedia.org/wiki/File:F.jpg', extmetadata: { LicenseShortName: { value: 'CC BY-SA 4.0' } }, ...props }] } });
+
+test('buscarFotoWikimedia: acepta una licencia libre, de tamaño razonable', async () => {
+  const fetchFn = async (url) => {
+    assert.match(url, /commons\.wikimedia\.org/);
+    assert.match(url, /Mariano%20Werner|Mariano\+Werner/);
+    return { ok: true, json: async () => ({ query: { pages: paginaWikimedia({}) } }) };
+  };
+  const r = await buscarFotoWikimedia('Mariano Werner', { fetchFn });
+  assert.equal(r.medio, 'Wikimedia Commons');
+  assert.equal(r.imagen, 'https://upload.wikimedia.org/f.jpg');
+  assert.equal(r.licencia, 'CC BY-SA 4.0');
+});
+
+test('buscarFotoWikimedia: rechaza licencias que no son libres, imágenes chicas, y SVG (logos)', async () => {
+  const casos = [
+    { query: { pages: paginaWikimedia({ extmetadata: { LicenseShortName: { value: 'All rights reserved' } } }) } },
+    { query: { pages: paginaWikimedia({ width: 100, height: 80 }) } },
+    { query: { pages: paginaWikimedia({ mime: 'image/svg+xml' }) } },
+    { query: { pages: {} } },
+  ];
+  for (const j of casos) {
+    const r = await buscarFotoWikimedia('X', { fetchFn: async () => ({ ok: true, json: async () => j }) });
+    assert.equal(r, null);
+  }
+  assert.equal(await buscarFotoWikimedia('X', { fetchFn: async () => ({ ok: false }) }), null);
+  assert.equal(await buscarFotoWikimedia('X', { fetchFn: async () => { throw new Error('caído'); } }), null);
+});
+
+test('elegirFotoParaNota: si una fuente sirve, ni pregunta por la persona pública', async () => {
+  const nota = { titulo: 't', seccion: 'Automovilismo' };
+  let preguntoPersona = false;
+  const fetchFn = async (url, init) => {
+    if (String(url).includes('generativelanguage')) {
+      const body = JSON.parse(init.body);
+      if (body.contents[0].parts.length === 1) preguntoPersona = true; // sin imágenes: sería el pedido de persona
+      return { ok: true, json: async () => ({ candidates: [{ content: { parts: [{ text: JSON.stringify({ elegida: 'A', razon: 'sirve', fotos: [{ letra: 'A', tiene_marca: false }] }) }] } }] }) };
+    }
+    if (url === 'https://a.com/n') return { ok: true, text: async () => '<meta property="og:image" content="https://a.com/f.jpg">' };
+    if (url === 'https://a.com/f.jpg') return { ok: true, headers: { get: () => 'image/jpeg' }, arrayBuffer: async () => Buffer.from('abc') };
+  };
+  const nota2 = { ...nota, fuentesConsultadas: [{ medio: 'A', enlace: 'https://a.com/n' }] };
+  const r = await elegirFotoParaNota(nota2, { clave: 'g', claveRespaldo: null, fetchFn });
+  assert.equal(r.origen, 'medio');
+  assert.equal(r.elegida.medio, 'A');
+  assert.equal(preguntoPersona, false);
+});
+
+test('elegirFotoParaNota: sin foto de fuente, prueba Wikimedia si hay una persona pública clara', async () => {
+  const nota = { titulo: 'Mariano Werner lidera la clasificación del TC Pick Up', seccion: 'Automovilismo', fuentesConsultadas: [] };
+  const fetchFn = async (url) => {
+    if (String(url).includes('generativelanguage')) return { ok: true, json: async () => ({ candidates: [{ content: { parts: [{ text: JSON.stringify({ persona: 'Mariano Werner' }) }] } }] }) };
+    if (String(url).includes('commons.wikimedia.org')) return { ok: true, json: async () => ({ query: { pages: paginaWikimedia({}) } }) };
+  };
+  const r = await elegirFotoParaNota(nota, { clave: 'g', claveRespaldo: null, fetchFn });
+  assert.equal(r.origen, 'wikimedia');
+  assert.equal(r.elegida.medio, 'Wikimedia Commons');
+  assert.match(r.razon, /Mariano Werner/);
+  assert.match(r.razon, /Wikimedia/);
+});
+
+test('elegirFotoParaNota: sin foto de fuente y sin persona pública clara, no elige ninguna', async () => {
+  const nota = { titulo: 'El Concejo aprueba el presupuesto 2027', seccion: 'Política', fuentesConsultadas: [] };
+  const fetchFn = async (url) => {
+    if (String(url).includes('generativelanguage')) return { ok: true, json: async () => ({ candidates: [{ content: { parts: [{ text: JSON.stringify({ persona: null }) }] } }] }) };
+    throw new Error('no debería buscar en Wikimedia sin persona');
+  };
+  const r = await elegirFotoParaNota(nota, { clave: 'g', claveRespaldo: null, fetchFn });
+  assert.equal(r.origen, 'ninguna');
+  assert.equal(r.elegida, null);
 });

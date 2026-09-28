@@ -4,13 +4,20 @@
 // las dos (o las que haya) a una IA con visión para que elija la que mejor
 // sirve, y para que avise si alguna tiene una marca de agua o el nombre de
 // otro medio adentro (más cuidado con los medios locales y de la zona:
-// CRITERIO-EDITORIAL.md, "Las fotos").
+// CRITERIO-EDITORIAL.md, "Las fotos"). Nunca elige una foto marcada: si la
+// mejor tiene marca, usa la mejor SIN marca en su lugar, aunque no sea la
+// ideal (Hernán, 28/09); si ninguna sirve sin marca, no elige ninguna.
 //
-// Todavía no guarda nada ni publica nada: es la comparación sola, para
-// mirar los resultados antes de construir el banco de verdad. Usa la clave
-// de clasificación (GEMINI_API_KEY_CLASIFICACION) y, si falla o se queda sin
-// cupo, Groq con un modelo con visión (28/09: Llama 4 Scout, el único con
-// visión que Groq aloja gratis). Sin dependencias: sólo fetch de Node.
+// Si ninguna fuente sirve y la nota es claramente sobre una sola persona
+// pública identificable (`personaPublicaDeNota`), se prueba una foto libre
+// de Wikimedia Commons antes de resignarse a la placa (`buscarFotoWikimedia`,
+// 28/09, idea de Hernán al ver el caso de Mariano Werner: una sola fuente,
+// con marca de agua, y una figura fácil de identificar).
+//
+// Usa la clave de clasificación (GEMINI_API_KEY_CLASIFICACION) y, si falla o
+// se queda sin cupo, Groq con un modelo con visión (28/09: Llama 4 Scout, el
+// único con visión que Groq aloja gratis). Sin dependencias: sólo fetch de
+// Node.
 
 import { claveClasificacion, claveGroq } from '../reels/claves.mjs';
 
@@ -104,6 +111,11 @@ en cualquier esquina o borde. Los medios locales y de la zona (de Balcarce o de 
 diarios nacionales) son los que más acostumbran poner su logo en una esquina: prestales más atención. Marcá
 "tiene_marca" en true para cualquier foto donde veas un logo o texto de marca, aunque sea chico o transparente.
 
+Regla que no se negocia: "elegida" NUNCA puede ser la letra de una foto a la que vos mismo le pusiste "tiene_marca"
+en true, aunque sea la que mejor encuadre o nitidez tenga. Si la mejor foto tiene marca, elegí la mejor ENTRE LAS
+QUE NO TIENEN MARCA, aunque no sea la ideal: una foto sin marca y sin ser perfecta sirve más que ninguna. Sólo
+dejá "elegida" en null si NINGUNA foto de la lista está libre de marca.
+
 Devolvé sólo un objeto JSON con esta forma exacta:
 {"elegida": "A" (la letra, o null si ninguna sirve), "razon": "una frase corta explicando por qué",
 "fotos": [{"letra": "A", "tiene_marca": false, "detalle": "qué viste, o vacío si no tiene nada"}]}
@@ -134,14 +146,21 @@ function interpretarRespuesta(obj, candidatas) {
   let elegida = null;
   let razon = String(obj?.razon ?? '').slice(0, 300);
   if (letraValida(obj?.elegida) && conMarca.has(obj.elegida)) {
-    // La IA prefería justo la que tiene marca: la "razon" que mandó describe
-    // ESA foto (28/09: pasó con la del papa León XIV, y la razón que quedaba
-    // decía "encuadre cerrado" hablando de la foto con el logo de ANDigital,
-    // como si igual se hubiera elegido). Se pisa con una que diga la verdad.
+    // La instrucción le pide que nunca elija una marcada (28/09), pero por
+    // si igual pasa: se busca la mejor candidata SIN marca en su lugar, en
+    // vez de resignarse a ninguna foto (Hernán, 28/09: "aunque no sea la
+    // ideal" es mejor que la placa). No es un ranking de calidad —eso ya lo
+    // intentó la IA y falló—, es la primera que sirve.
     const i = LETRAS.indexOf(obj.elegida);
     const medio = candidatas[i]?.medio ?? 'esa fuente';
     const detalle = porLetra.get(obj.elegida)?.detalle;
-    razon = `La mejor foto era la de ${medio}, pero tiene marca de agua${detalle ? ` (${detalle})` : ''}: no se elige ninguna.`;
+    const iSinMarca = candidatas.findIndex((c, j) => c.datos && !conMarca.has(LETRAS[j]));
+    if (iSinMarca >= 0) {
+      elegida = { ...resultado[iSinMarca], letra: LETRAS[iSinMarca] };
+      razon = `La IA había preferido la de ${medio}, pero tiene marca de agua${detalle ? ` (${detalle})` : ''}: se usa ${resultado[iSinMarca].medio} en su lugar, sin marca, aunque no sea la ideal.`;
+    } else {
+      razon = `La mejor foto era la de ${medio}, pero tiene marca de agua${detalle ? ` (${detalle})` : ''}, y ninguna de las otras sirve sin marca: no se elige ninguna.`;
+    }
   } else if (letraValida(obj?.elegida)) {
     const i = LETRAS.indexOf(obj.elegida);
     if (candidatas[i]?.datos) elegida = { ...resultado[i], letra: obj.elegida };
@@ -218,4 +237,102 @@ export async function elegirFoto(nota, candidatas, {
     }
   }
   return { elegida: null, razon: 'sin clave para comparar', candidatas, proveedor: null };
+}
+
+/** ¿La nota es sobre UNA sola persona pública identificable? Sólo texto, sin
+ *  visión: es mucho más liviano que comparar fotos y no hace falta pedirlo
+ *  si ya se eligió una foto de las fuentes. */
+async function pedirPersonaPublica(nota, { clave, fetchFn = fetch, modelo = MODELO_GEMINI } = {}) {
+  const texto = `Mirá el título y la bajada de esta nota de Radar Balcarce, un medio digital de Balcarce (Buenos Aires).
+Título: "${nota.titulo}"
+Bajada: "${nota.copete ?? ''}"
+
+¿Es centralmente sobre UNA sola persona pública identificable (un deportista, un funcionario, una figura conocida,
+alguien con página en Wikipedia)? Si sí, devolvé su nombre completo tal como se la conoce (por ejemplo "Mariano
+Werner" o "León XIV"). Si es sobre un hecho, una institución, dos o más personas por igual, o alguien sin
+identidad pública clara, devolvé null.
+
+Devolvé sólo un objeto JSON: {"persona": "Nombre Apellido" (o null)}`;
+  const res = await fetchFn(`https://generativelanguage.googleapis.com/v1beta/models/${modelo}:generateContent`, {
+    method: 'POST',
+    headers: { 'content-type': 'application/json', 'x-goog-api-key': clave },
+    body: JSON.stringify({ contents: [{ parts: [{ text: texto }] }], generationConfig: { responseMimeType: 'application/json', temperature: 0 } }),
+    signal: AbortSignal.timeout(30_000),
+  });
+  if (!res.ok) { const e = new Error(`HTTP ${res.status}`); e.status = res.status; throw e; }
+  const j = await res.json();
+  const t = j.candidates?.[0]?.content?.parts?.map((p) => p.text).join('') ?? '';
+  let obj;
+  try { obj = JSON.parse(t); } catch { return null; }
+  const persona = obj?.persona;
+  return (typeof persona === 'string' && persona.trim().length >= 3) ? persona.trim() : null;
+}
+
+/** Nunca lanza: sin nombre claro, devuelve null y la nota se queda sin foto,
+ *  como hoy. */
+export async function personaPublicaDeNota(nota, { clave = claveClasificacion(), fetchFn = fetch } = {}) {
+  if (!clave) return null;
+  try {
+    return await pedirPersonaPublica(nota, { clave, fetchFn });
+  } catch {
+    return null;
+  }
+}
+
+// Sólo licencias que de verdad permiten reusar la foto sin pedir permiso.
+// "Sólo con atribución" alcanza (el crédito ya va siempre en la cita); lo que
+// no está en esta lista (por ejemplo "todos los derechos reservados", que
+// Commons también aloja para material de archivo) se descarta.
+const WIKIMEDIA_LICENCIAS_LIBRES = /^(cc0|cc[\s-]?by(?:[\s-]?sa)?|public domain|dominio p[uú]blico|\bpd\b)/i;
+
+/** Busca una foto libre de una persona puntual en Wikimedia Commons: sin
+ *  clave, sin costo, y con la licencia siempre a la vista (`extmetadata`).
+ *  Devuelve la primera que sea una foto de verdad (no un logo ni un mapa) y
+ *  tenga una licencia libre, o null si no hay ninguna que sirva. */
+export async function buscarFotoWikimedia(nombre, { fetchFn = fetch, limite = 6 } = {}) {
+  const url = `https://commons.wikimedia.org/w/api.php?action=query&generator=search`
+    + `&gsrsearch=${encodeURIComponent(`intitle:"${nombre}"`)}&gsrnamespace=6&gsrlimit=${limite}`
+    + `&prop=imageinfo&iiprop=url|mime|extmetadata|size&format=json&origin=*`;
+  try {
+    const res = await fetchFn(url, { signal: AbortSignal.timeout(ESPERA), headers: { 'user-agent': 'Mozilla/5.0 (compatible; RadarBalcarceBot/1.0)' } });
+    if (!res.ok) return null;
+    const j = await res.json();
+    const paginas = Object.values(j?.query?.pages ?? {});
+    for (const p of paginas) {
+      const info = p.imageinfo?.[0];
+      if (!info || !/^image\/(jpeg|png)$/.test(info.mime ?? '')) continue;
+      if ((info.width ?? 0) < 400 || (info.height ?? 0) < 300) continue;
+      const licencia = info.extmetadata?.LicenseShortName?.value ?? '';
+      if (!WIKIMEDIA_LICENCIAS_LIBRES.test(licencia)) continue;
+      return { medio: 'Wikimedia Commons', enlace: info.descriptionurl, imagen: info.url, licencia };
+    }
+    return null;
+  } catch {
+    return null;
+  }
+}
+
+/**
+ * El armado completo para una nota: compara las fotos de las fuentes y,
+ * si ninguna sirve, prueba con una foto libre de la persona de la nota en
+ * Wikimedia Commons (28/09). Nunca lanza.
+ */
+export async function elegirFotoParaNota(nota, {
+  clave = claveClasificacion(), claveRespaldo = claveGroq(), fetchFn = fetch,
+} = {}) {
+  const candidatas = await candidatasConDatos(nota, { fetchFn });
+  const r = await elegirFoto(nota, candidatas, { clave, claveRespaldo, fetchFn });
+  if (r.elegida) return { ...r, origen: 'medio' };
+
+  const persona = await personaPublicaDeNota(nota, { clave, fetchFn });
+  if (!persona) return { ...r, origen: 'ninguna' };
+  const wiki = await buscarFotoWikimedia(persona, { fetchFn });
+  if (!wiki) return { ...r, razon: `${r.razon} (se probó una foto libre de "${persona}" en Wikimedia Commons, sin resultado)`, origen: 'ninguna' };
+  return {
+    elegida: { medio: wiki.medio, enlace: wiki.enlace, imagen: wiki.imagen, licencia: wiki.licencia, letra: null },
+    razon: `Ninguna fuente tenía una foto que sirviera; se usó una foto libre de "${persona}" de Wikimedia Commons (${wiki.licencia}).`,
+    candidatas: r.candidatas,
+    proveedor: r.proveedor,
+    origen: 'wikimedia',
+  };
 }
