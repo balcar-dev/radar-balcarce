@@ -41,6 +41,11 @@ test('elegirFotosNuevas: una nota nueva con foto queda en el banco y su archivo,
   assert.equal(banco.n1.credito, 'Foto: A');
   assert.equal(banco.n1.origen, 'medio');
   assert.equal(archivos['fotos-notas/n1.jpg'].toString(), 'foto');
+  // Con lo necesario para revisarla y reusarla (28/09): de qué nota nuestra
+  // es y de qué nota del medio salió.
+  assert.equal(banco.n1.titulo, 't');
+  assert.equal(banco.n1.enlace, 'https://a.com/n');
+  assert.ok(banco.n1.imagenOriginal, 'la dirección original de la imagen');
 });
 
 test('elegirFotosNuevas: una nota ya en el banco no se vuelve a preguntar', async () => {

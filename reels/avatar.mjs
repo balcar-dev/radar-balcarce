@@ -19,28 +19,26 @@ const archivos = fs.existsSync(FUENTES)
   ? fs.readdirSync(FUENTES).filter((f) => /\.(ttf|otf)$/i.test(f)).map((f) => path.join(FUENTES, f))
   : [];
 
-// El círculo del centro es el "radar": un punto y dos anillos, el mismo
-// ícono que va en la esquina de todas las piezas del rediseño (dirección B,
-// PROPUESTA-REDES.md). Acá va solo, sin texto: con la foto recortada en
-// círculo (así la muestran Instagram y Facebook) y vista a 60 píxeles, el
-// nombre no se leía y sobraba ruido. El fondo es el rojo de la marca
-// (MEDIA-KIT.md: "el perfil se mantiene siempre en el rojo de la marca"),
-// no el color de una sección — así se lo reconoce igual aunque cambien los
-// colores de las piezas alrededor.
+// El círculo naranja del centro es el "radar": un punto y dos anillos. No es
+// un logo elaborado, y a este tamaño es mejor así — en la lista de historias
+// de Instagram esto se ve a 60 píxeles.
 const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1080" viewBox="0 0 1080 1080">
   <defs>
     <linearGradient id="fondo" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#C7381C"/>
-      <stop offset="60%" stop-color="#9C2B15"/>
-      <stop offset="100%" stop-color="#14161A"/>
+      <stop offset="0%" stop-color="#1D4F63"/>
+      <stop offset="55%" stop-color="#14161A"/>
     </linearGradient>
   </defs>
   <rect width="1080" height="1080" fill="url(#fondo)"/>
-  <g fill="none" stroke="#F4F1EA">
-    <circle cx="540" cy="540" r="300" stroke-width="9" stroke-opacity="0.85"/>
-    <circle cx="540" cy="540" r="420" stroke-width="7" stroke-opacity="0.4"/>
+  <g fill="none" stroke="#C7381C">
+    <circle cx="540" cy="540" r="300" stroke-width="5" stroke-opacity="0.5"/>
+    <circle cx="540" cy="540" r="420" stroke-width="4" stroke-opacity="0.22"/>
   </g>
-  <circle cx="540" cy="548" r="40" fill="#E8A33C"/>
+  <circle cx="540" cy="548" r="22" fill="#E8A33C"/>
+  <text x="540" y="470" text-anchor="middle" font-family="Source Serif 4 60pt" font-weight="900"
+        font-size="138" fill="#F4F1EA" letter-spacing="-6">RADAR</text>
+  <text x="540" y="700" text-anchor="middle" font-family="Source Serif 4 60pt" font-weight="900"
+        font-size="116" fill="#C7381C" letter-spacing="-4">BALCARCE</text>
 </svg>`;
 
 const r = new Resvg(svg, {

@@ -44,12 +44,8 @@ const Y_BAJADA = 396;
 const TAM_BAJADA = 36;
 export const BAJADA = 'Lo que pasa en Balcarce, la región y el país';
 
-// Antes "BALCARCE" iba en rojo de marca: se leía sobre el fondo verde azulado
-// de antes, pero el fondo ahora es ese mismo rojo (28/09) y el texto
-// desaparecía encima. Todo el nombre va en crema, parejo, como en el resto
-// de las piezas del rediseño.
 const marcaSvg = (extra = '') => `<text x="${ANCHO / 2}" y="${Y_MARCA}" text-anchor="middle" font-family="Source Serif 4 60pt" font-weight="900"
-        font-size="${TAM_MARCA}" fill="#F4F1EA" letter-spacing="-4"${extra}>RADAR <tspan fill-opacity="0.75">BALCARCE</tspan></text>`;
+        font-size="${TAM_MARCA}" fill="#F4F1EA" letter-spacing="-4"${extra}>RADAR <tspan fill="#C7381C">BALCARCE</tspan></text>`;
 const bajadaSvg = () => `<text x="${ANCHO / 2}" y="${Y_BAJADA}" text-anchor="middle" font-family="Inter" font-weight="600"
         font-size="${TAM_BAJADA}" fill="#F4F1EA" fill-opacity="0.85" letter-spacing="1">${BAJADA}</text>`;
 
@@ -60,15 +56,14 @@ export function svgPortada() {
   return envolver(`
   <defs>
     <linearGradient id="fondo" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#C7381C"/>
-      <stop offset="55%" stop-color="#9C2B15"/>
-      <stop offset="100%" stop-color="#14161A"/>
+      <stop offset="0%" stop-color="#1D4F63"/>
+      <stop offset="55%" stop-color="#14161A"/>
     </linearGradient>
   </defs>
   <rect width="${ANCHO}" height="${ALTO}" fill="url(#fondo)"/>
-  <g fill="none" stroke="#F4F1EA">
-    <circle cx="${cx}" cy="${cy}" r="200" stroke-width="4" stroke-opacity="0.55"/>
-    <circle cx="${cx}" cy="${cy}" r="360" stroke-width="3" stroke-opacity="0.32"/>
+  <g fill="none" stroke="#C7381C">
+    <circle cx="${cx}" cy="${cy}" r="200" stroke-width="4" stroke-opacity="0.5"/>
+    <circle cx="${cx}" cy="${cy}" r="360" stroke-width="3" stroke-opacity="0.3"/>
     <circle cx="${cx}" cy="${cy}" r="540" stroke-width="3" stroke-opacity="0.18"/>
     <circle cx="${cx}" cy="${cy}" r="740" stroke-width="3" stroke-opacity="0.1"/>
     <circle cx="${cx}" cy="${cy}" r="960" stroke-width="3" stroke-opacity="0.06"/>

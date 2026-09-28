@@ -158,7 +158,8 @@ test('el HTML compilado tiene las clases del sistema (si ya se compiló)', (t) =
   const html = fs.readFileSync(f, 'utf8');
   if (!/class="etiqueta"/.test(html)) { t.skip('la compilación es de antes del sistema tipográfico'); return; }
   assert.match(html, /class="cabecera-tarjeta"/);
-  assert.match(html, /class="etiqueta">Farmacia de turno/);
+  // Desde el 28/09 la farmacia de la portada es un renglón de "Hoy en Balcarce".
+  assert.match(html, /class="que-hoy">Farmacia de turno/);
   assert.match(html, /class="etiqueta">Agenda de Balcarce/);
   assert.match(html, /class="etiqueta">Números útiles/);
   assert.match(html, /class="tarjeta tarjeta-util"/);

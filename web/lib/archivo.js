@@ -100,6 +100,25 @@ export function vigenteEnPortada(nota, ahora = Date.now(), horas = HORAS_EN_PORT
   return Number(ahora) - t <= horas * HORA;
 }
 
+/**
+ * La fecha de una nota: la más vieja entre la que trae la ingesta, la de cada
+ * una de sus fuentes, la que ya publicamos antes y la primera vez que la vimos.
+ *
+ * Los medios "actualizan" sus notas y el feed trae la fecha nueva: la de
+ * Colapinto y Gasly en Bakú (sábado 26/09) figuraba "hace 46 minutos" el lunes
+ * 28 (Hernán), y con la fecha corriéndose sola nunca cumplía las 72 horas. Una
+ * nota puede envejecer, nunca rejuvenecer. Devuelve ISO, o la de la ingesta si
+ * no hay ninguna fecha válida.
+ */
+export function fechaDeLaNota(nota, { fechaAnterior = null, visto = null } = {}) {
+  const candidatas = [
+    nota?.fecha, fechaAnterior, visto,
+    ...(nota?.origenes ?? []).map((o) => o?.fecha),
+  ].map((f) => (f ? new Date(f).getTime() : NaN)).filter(Number.isFinite);
+  if (!candidatas.length) return nota?.fecha ?? null;
+  return new Date(Math.min(...candidatas)).toISOString();
+}
+
 /** El slug de una dirección de nota ya publicada ("/nota/slug-id" o una
  *  dirección completa), o null si no se puede leer. */
 function slugDeEnlace(enlace, id) {

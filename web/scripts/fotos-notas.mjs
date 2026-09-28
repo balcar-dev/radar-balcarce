@@ -60,7 +60,9 @@ export async function elegirFotosNuevas(notas, {
     try {
       const r = await elegirFotoParaNota(n, { clave, claveRespaldo, fetchFn });
       if (!r.elegida) {
-        bancoNuevo[n.id] = { intentado: true, origen: r.origen, cuando: ahora.toISOString() };
+        bancoNuevo[n.id] = {
+          intentado: true, origen: r.origen, titulo: n.titulo ?? null, razon: r.razon ?? null, cuando: ahora.toISOString(),
+        };
         continue;
       }
       // La comparación ya bajó la imagen para mirarla, pero no la guardó: se
@@ -72,9 +74,15 @@ export async function elegirFotosNuevas(notas, {
         continue;
       }
       const archivo = `fotos-notas/${n.id}.${ext}`;
+      // Con todo lo necesario para revisarla y reusarla (28/09, Hernán: "que
+      // esas fotos se estén guardando con los datos que corresponda"): de qué
+      // nota nuestra es, de qué nota del medio salió, la dirección original de
+      // la imagen y por qué se eligió.
       bancoNuevo[n.id] = {
         archivo, medio: r.elegida.medio, credito: `Foto: ${r.elegida.medio}`,
-        licencia: r.elegida.licencia ?? null, origen: r.origen, cuando: ahora.toISOString(),
+        licencia: r.elegida.licencia ?? null, origen: r.origen,
+        titulo: n.titulo ?? null, enlace: r.elegida.enlace ?? null, imagenOriginal: r.elegida.imagen ?? null,
+        razon: r.razon ?? null, cuando: ahora.toISOString(),
       };
       archivos[archivo] = Buffer.from(datos.base64, 'base64');
     } catch (e) {

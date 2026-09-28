@@ -29,7 +29,7 @@ import { pendientesDeLaIngesta } from '../../redes/avisos.mjs';
 import { cuentaDelDia, anotarDia, comoHistoriaJson as comoNotasPorDiaJson } from '../../ingesta/estadistica-diaria.mjs';
 import {
   vigenteEnPortada, slugsConocidos, fijarSlug, actualizarArchivo, idsEnRedes, sinPuntaje, comoArchivoJson,
-  idsRetiradosAMano, correccionesAMano, conCorreccion,
+  idsRetiradosAMano, correccionesAMano, conCorreccion, fechaDeLaNota,
 } from '../lib/archivo.js';
 import { actualizarAgenda, comoAgendaJson } from '../lib/eventos.js';
 import { traerDolar } from '../lib/dolar.js';
@@ -68,6 +68,10 @@ const BANCO_FOTOS = path.join(AQUI, '..', 'data', 'banco-fotos.json');
 // reels/marca/fuentes/): así también las sirve Cloudflare Pages sin nada
 // más que hacer.
 const FOTOS_NOTAS = path.join(AQUI, '..', 'public', 'fotos-notas');
+// Las notas que esperan cuerpo, con lo necesario para escribirlo a mano (28/09:
+// Gemini sin cupo dejaba 34 esperando y la portada con notas de días atrás; así
+// Claude u otra persona las redacta en web/data/correcciones.json).
+const ESPERANDO_CUERPO = path.join(AQUI, '..', 'data', 'esperando-cuerpo.json');
 // Lo que se sacó a mano de la web, fuera del panel (lib/archivo.js).
 const RETIRADAS_A_MANO = idsRetiradosAMano(leerJson(path.join(AQUI, '..', 'data', 'retiradas.json'), null));
 // Lo que se corrigió a mano (título, bajada, sección), fuera del panel.
@@ -135,6 +139,11 @@ const archivoAnterior = leerJson(ARCHIVO, { notas: [] });
 const vistoAntes = Object.fromEntries([...(archivoAnterior.notas ?? []), ...(anterior.notas ?? [])]
   .filter((n) => n.visto)
   .map((n) => [n.id, n.visto]));
+// La fecha con la que ya salió cada nota: una nota no rejuvenece cuando el
+// medio actualiza la suya (fechaDeLaNota, lib/archivo.js).
+const fechaAntes = Object.fromEntries([...(archivoAnterior.notas ?? []), ...(anterior.notas ?? [])]
+  .filter((n) => n.fecha && !n.sinFecha)
+  .map((n) => [n.id, n.fecha]));
 const ahoraISO = new Date().toISOString();
 
 // La lectura con IA (plan V2.2, ingesta/lectura-ia.mjs). Desde el 27/09 DECIDE
@@ -323,7 +332,11 @@ function notaPublicada(n) {
     // La hora para ordenar. Si la fuente no la publica, la ingesta pone la de
     // ahora en cada corrida: la nota saltaba arriba de todo una y otra vez. En
     // ese caso manda la primera vez que la vimos, que no cambia.
-    fecha: n.cuando === 'sin fecha en la fuente' ? (vistoAntes[n.id] ?? ahoraISO) : n.fecha,
+    // Con fecha: la más vieja que se conoce, nunca una más nueva que la ya
+    // publicada (un medio que actualiza su nota no la trae de vuelta, 28/09).
+    fecha: n.cuando === 'sin fecha en la fuente'
+      ? (vistoAntes[n.id] ?? ahoraISO)
+      : fechaDeLaNota(n, { fechaAnterior: fechaAntes[n.id], visto: vistoAntes[n.id] }),
     // Cuando la fuente no publica la hora, la ingesta pone la de ahora para
     // poder ordenar. Se guarda el aviso para que la web no mienta un
     // "hace 1 minuto" que no es cierto.
@@ -364,7 +377,12 @@ function notaPublicada(n) {
   // cuerpo" y no aparece en ninguna lista, ni en el feed, el sitemap o las
   // redes (todo sale de acá). Lo que publicó una persona se respeta.
   if (!humana && !tieneCuerpo(corregida)) {
-    if (vigenteEnPortada(corregida)) esperandoCuerpo.push(n.id);
+    if (vigenteEnPortada(corregida)) {
+      esperandoCuerpo.push({
+        id: n.id, titulo: corregida.titulo, copete: corregida.copete, seccion: n.seccion, fecha: corregida.fecha,
+        fuentes: (n.origenes ?? []).map((o) => ({ medio: o.medio, enlace: o.enlace, fecha: o.fecha ?? null })),
+      });
+    }
     return null;
   }
   return corregida;
@@ -645,6 +663,13 @@ function cambioQueImporta(antes, ahora) {
   // El pronóstico de los próximos días sí se publica siempre que cambie: no
   // se mueve cada media hora y es lo que alguien mira para mañana.
   return JSON.stringify(antes.clima?.dias) !== JSON.stringify(ahora.clima?.dias);
+}
+
+{
+  const texto = `${JSON.stringify({ generado: salida.generado, notas: esperandoCuerpo }, null, 1)}
+`;
+  const antes = fs.existsSync(ESPERANDO_CUERPO) ? JSON.parse(fs.readFileSync(ESPERANDO_CUERPO, 'utf8')) : null;
+  if (JSON.stringify(antes?.notas) !== JSON.stringify(esperandoCuerpo)) fs.writeFileSync(ESPERANDO_CUERPO, texto, 'utf8');
 }
 
 if (cambioQueImporta(anterior, salida)) {

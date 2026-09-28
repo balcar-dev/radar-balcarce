@@ -63,7 +63,9 @@ test('una nota sin hora se ordena por cuándo apareció, no salta arriba de todo
 
 test('al generar los datos, una nota sin hora usa la primera vez que se la vio', () => {
   const s = leer('web/scripts/generar-datos.mjs');
-  assert.match(s, /fecha: n\.cuando === 'sin fecha en la fuente' \? \(vistoAntes\[n\.id\] \?\? ahoraISO\) : n\.fecha/);
+  // Sin hora: la primera vez que se la vio. Con hora: la más vieja que se
+  // conoce, nunca una más nueva que la ya publicada (fechaDeLaNota, 28/09).
+  assert.match(s, /fecha: n\.cuando === 'sin fecha en la fuente'\s+\? \(vistoAntes\[n\.id\] \?\? ahoraISO\)\s+: fechaDeLaNota\(n, \{ fechaAnterior: fechaAntes\[n\.id\], visto: vistoAntes\[n\.id\] \}\)/);
 });
 
 // --------------------------------------------------------- la farmacia

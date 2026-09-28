@@ -323,3 +323,26 @@ test('el archivo aplica la regla de las fuentes: lo de afuera de un solo medio p
   ];
   assert.deepEqual(actualizarArchivo({ archivo, ahora: Date.now() }).map((n) => n.id).sort(), ['cruzada', 'fb', 'local', 'propia']);
 });
+
+// -------------------------- una nota envejece, nunca rejuvenece (28/09)
+
+import { fechaDeLaNota } from '../web/lib/archivo.js';
+
+test('la fecha de una nota es la más vieja que se conoce: un medio que actualiza la suya no la trae de vuelta', () => {
+  // Colapinto y Gasly en Bakú: sábado 26/09. El lunes 28 La Nación actualizó su
+  // nota, el feed trajo la fecha nueva y la web decía "hace 46 minutos".
+  const nota = {
+    fecha: '2026-09-28T13:46:08.000Z',
+    origenes: [
+      { medio: 'La Nación', fecha: '2026-09-26T15:07:30.000Z' },
+      { medio: 'Motorsport', fecha: '2026-09-26T13:04:10.000Z' },
+      { medio: 'Sin fecha', fecha: null },
+    ],
+  };
+  assert.equal(fechaDeLaNota(nota, { visto: '2026-09-27T16:12:25.801Z' }), '2026-09-26T13:04:10.000Z');
+  // Lo ya publicado manda aunque la ingesta no traiga las fuentes.
+  assert.equal(fechaDeLaNota({ fecha: '2026-09-28T13:46:08.000Z' }, { fechaAnterior: '2026-09-26T15:00:00.000Z' }), '2026-09-26T15:00:00.000Z');
+  // Una nota normal no cambia.
+  assert.equal(fechaDeLaNota({ fecha: '2026-09-28T10:00:00.000Z' }, { visto: '2026-09-28T10:30:00.000Z' }), '2026-09-28T10:00:00.000Z');
+  assert.equal(fechaDeLaNota({ fecha: null }), null);
+});
