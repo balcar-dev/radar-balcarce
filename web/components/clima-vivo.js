@@ -18,6 +18,7 @@
 // navegador tenga JavaScript apagado. El pedido en vivo sólo la corrige.
 
 import { tipoDeCielo } from '@/lib/clima';
+import { useEffect, useState } from 'react';
 import { useClimaVivo } from '@/lib/pedir-clima';
 
 
@@ -200,13 +201,13 @@ export function TarjetaClima({ clima }) {
  *  veinte píxeles. Pero tiene que decir la verdad — antes sólo sabía si era
  *  de día o de noche, así que a las dos de la tarde con chaparrones mostraba
  *  un sol radiante mientras la tarjeta de abajo dibujaba lluvia. */
-export function SolChico({ cielo = '', esDeDia = true }) {
+export function SolChico({ cielo = '', esDeDia = true, tamano = 20 }) {
   const tipo = tipoDeCielo(cielo, esDeDia);
 
   if (tipo === 'lluvia' || tipo === 'lluvia-noche') {
     const noche = tipo === 'lluvia-noche';
     return (
-      <svg width="20" height="20" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+      <svg width={tamano} height={tamano} viewBox="0 0 48 48" fill="none" aria-hidden="true">
         <path d="M13 27a7 7 0 0 1 1-13.7 10 10 0 0 1 19 2.6A6 6 0 0 1 32 27z" fill={noche ? '#5B6B82' : '#C8D4DB'} />
         <g stroke={noche ? '#5A87AD' : '#7FBCE8'} strokeWidth="3" strokeLinecap="round">
           <path className="gota" d="M17 32v5" />
@@ -219,7 +220,7 @@ export function SolChico({ cielo = '', esDeDia = true }) {
 
   if (tipo === 'cubierto' || tipo === 'cubierto-noche') {
     return (
-      <svg width="20" height="20" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+      <svg width={tamano} height={tamano} viewBox="0 0 48 48" fill="none" aria-hidden="true">
         <path d="M13 32a7 7 0 0 1 1-13.7 10 10 0 0 1 19 2.6A6 6 0 0 1 32 32z" fill={tipo === 'cubierto-noche' ? '#5B6B82' : '#C8D4DB'} />
       </svg>
     );
@@ -227,7 +228,7 @@ export function SolChico({ cielo = '', esDeDia = true }) {
 
   if (tipo === 'nube' || tipo === 'luna-nube') {
     return (
-      <svg width="20" height="20" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+      <svg width={tamano} height={tamano} viewBox="0 0 48 48" fill="none" aria-hidden="true">
         {esDeDia
           ? <circle cx="32" cy="15" r="7" fill="#E8A33C" />
           : (
@@ -246,7 +247,7 @@ export function SolChico({ cielo = '', esDeDia = true }) {
 
   if (tipo === 'luna') {
     return (
-      <svg width="20" height="20" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+      <svg width={tamano} height={tamano} viewBox="0 0 48 48" fill="none" aria-hidden="true">
         <mask id="gajo-chico">
           <rect width="48" height="48" fill="#fff" />
           <circle cx="31" cy="17" r="11" fill="#000" />
@@ -266,7 +267,7 @@ export function SolChico({ cielo = '', esDeDia = true }) {
   }).join('');
 
   return (
-    <svg width="20" height="20" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+    <svg width={tamano} height={tamano} viewBox="0 0 48 48" fill="none" aria-hidden="true">
       <g className="rayos" stroke="#E8A33C" strokeWidth="3.4" strokeLinecap="round">
         <path d={rayos} />
       </g>
@@ -293,5 +294,50 @@ export function PastillaClima({ clima }) {
       <span className="fuerte">{a.temp}°</span>
       <span className="apagado solo-grande">{a.cielo}</span>
     </span>
+  );
+}
+const NOMBRE_DIA = ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'];
+
+/** "2026-09-28" de hoy en Balcarce, sin importar la hora del navegador. */
+function hoyEnBalcarce() {
+  return new Intl.DateTimeFormat('en-CA', { timeZone: 'America/Argentina/Buenos_Aires' }).format(new Date());
+}
+
+/** "Hoy", "Mañana" o "Miércoles 30". */
+function nombreDelDia(fecha, hoy) {
+  const d = new Date(`${fecha}T12:00:00`);
+  const manana = new Date(`${hoy}T12:00:00`);
+  manana.setDate(manana.getDate() + 1);
+  if (fecha === hoy) return 'Hoy';
+  if (d.toDateString() === manana.toDateString()) return 'Mañana';
+  return `${NOMBRE_DIA[d.getDay()]} ${d.getDate()}`;
+}
+
+/**
+ * El pronóstico de los próximos días, uno por renglón, para /clima. Usa el
+ * mismo pedido en vivo que la tarjeta: arranca con los días que armó el
+ * servidor (cuatro) y, cuando contesta Open-Meteo, muestra la semana.
+ */
+export function PronosticoDias({ clima }) {
+  const [datos] = useClimaVivo(clima);
+  const [hoy, setHoy] = useState(null);
+  useEffect(() => { setHoy(hoyEnBalcarce()); }, []);
+  const dias = (datos?.dias ?? []).filter((d) => !hoy || d.fecha >= hoy);
+  if (!dias.length) return null;
+
+  return (
+    <div className="pronostico-dias">
+      {dias.map((d) => (
+        <div className="dia-pronostico" key={d.fecha}>
+          <div className="nombre-dia">{hoy ? nombreDelDia(d.fecha, hoy) : `${NOMBRE_DIA[new Date(`${d.fecha}T12:00:00`).getDay()]}`}</div>
+          <IconoCielo cielo={d.cielo} esDeDia tamano={36} />
+          <div className="cielo-dia">
+            {d.cielo}
+            {d.lluvia >= 20 && <span className="lluvia-dia"> · {d.lluvia}% de lluvia</span>}
+          </div>
+          <div className="temps-dia"><strong>{d.max}°</strong> <span>{d.min}°</span></div>
+        </div>
+      ))}
+    </div>
   );
 }

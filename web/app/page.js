@@ -2,10 +2,10 @@ import {
   obtenerDatos, obtenerArchivo, armarTapa, temasVivos, proximosEventos, fotoDelDolar,
 } from '@/lib/datos';
 import {
-  TarjetaFarmacia, TarjetaBuzon,
+  TarjetaBuzon,
   Etiqueta, TituloSeccion, FilaNota, Evento, Hace,
 } from '@/components/piezas';
-import { ResumenDelDia } from '@/components/resumen-dia';
+import { HoyEnBalcarce } from '@/components/hoy-balcarce';
 import { Aviso } from '@/components/avisos';
 import { MOSTRAR_TEMAS } from '@/lib/sitio';
 import { metadatosDePagina } from '@/components/metadatos';
@@ -65,7 +65,7 @@ export default function Portada() {
       ))}
 
       {/* Dos columnas en escritorio: las noticias a la izquierda y UNA sola
-          pila a la derecha (clima, farmacia, dólar, agenda, buzón, números
+          pila a la derecha (hoy en Balcarce, agenda, buzón, números
           útiles), sin huecos. En el celular la pila derecha se desarma
           (`display: contents`): los servicios van primero, después las
           noticias y el resto al final. Ver .dos-columnas en globals.css. */}
@@ -73,12 +73,14 @@ export default function Portada() {
         <div className="derecha">
         {/* En el celular esto va primero: es lo que la gente viene a
             buscar. Antes había que pasar ochenta titulares para ver la
-            farmacia de turno. */}
+            farmacia de turno. Desde el 28/09 son tres renglones (clima,
+            farmacia, dólar) con el dato y el enlace a su página: el detalle
+            y los botones de llamar están en /clima, /farmacias y /dolar. */}
         <aside className="servicios">
-          <ResumenDelDia
+          <HoyEnBalcarce
             clima={d.clima}
+            farmacia={d.farmacias?.hoy}
             foto={fotoDelDolar()}
-            farmaciaPanel={<TarjetaFarmacia farmacia={d.farmacias?.hoy} />}
           />
           <Aviso slot="clima" />
         </aside>

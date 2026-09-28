@@ -114,10 +114,8 @@ export default function RaizLayout({ children }) {
             <span className="apagado solo-grande">Balcarce, Buenos Aires</span>
             <span className="crece" />
 
-            {/* El clima no es un enlace: no hay página de clima, está acá y
-                en la tarjeta de la portada. Un enlace que no lleva a ningún
-                lado mejor que no exista. */}
-            {clima && <PastillaClima clima={clima} />}
+            {/* Desde el 28/09 hay página de clima (/clima): la pastilla lleva ahí. */}
+            {clima && <a href="/clima" className="enlace-pastilla"><PastillaClima clima={clima} /></a>}
 
             {farmacia && (
               <a href="/farmacias" className="pastilla solo-grande">
@@ -151,13 +149,14 @@ export default function RaizLayout({ children }) {
           </div>
         </header>
 
-        {/* Navegación por secciones reales. Agenda, Farmacias, Dólar y Teléfonos
+        {/* Navegación por secciones reales. Agenda, Clima, Farmacias, Dólar y Teléfonos
             van al final y en verde: son servicios, no secciones de noticias. En
             el celular es una sola fila que se desliza (components/navegacion.js). */}
         <Navegacion
           secciones={navegacion.map((s) => ({ href: `/seccion/${s.ranura}`, nombre: nombreCorto(s.nombre) }))}
           servicios={[
             { href: '/agenda', nombre: 'Agenda' },
+            { href: '/clima', nombre: 'Clima' },
             { href: '/farmacias', nombre: 'Farmacias' },
             { href: '/dolar', nombre: 'Dólar' },
             { href: '/util', nombre: 'Teléfonos' },
@@ -188,7 +187,7 @@ export default function RaizLayout({ children }) {
               <a href={REDES_SOCIALES.facebook} target="_blank" rel="noopener noreferrer me">Facebook</a>
             </div>
             <div>
-              <a href="/agenda">Agenda</a> · <a href="/farmacias">Farmacias</a> ·{' '}
+              <a href="/agenda">Agenda</a> · <a href="/clima">Clima</a> · <a href="/farmacias">Farmacias</a> ·{' '}
               <a href="/dolar">Dólar</a> ·{' '}
               <a href="/util">Teléfonos útiles</a> ·{' '}
               <a href="/politica-de-privacidad">Política de privacidad</a>

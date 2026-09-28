@@ -31,6 +31,7 @@ export default function sitemap() {
   const fijas = [
     { url: base, lastModified: ultima, changeFrequency: 'hourly', priority: 1 },
     { url: `${base}/farmacias`, lastModified: new Date(), changeFrequency: 'daily', priority: 0.8 },
+    { url: `${base}/clima`, lastModified: new Date(), changeFrequency: 'hourly', priority: 0.7 },
     { url: `${base}/dolar`, lastModified: new Date(), changeFrequency: 'hourly', priority: 0.7 },
     { url: `${base}/agenda`, lastModified: new Date(), changeFrequency: 'daily', priority: 0.7 },
     { url: `${base}/util`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.6 },

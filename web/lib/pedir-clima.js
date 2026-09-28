@@ -33,7 +33,7 @@ const DIAS = ['dom', 'lun', 'mar', 'mié', 'jue', 'vie', 'sáb'];
 const URL = `https://api.open-meteo.com/v1/forecast?latitude=${BALCARCE.lat}&longitude=${BALCARCE.lon}`
   + '&current=temperature_2m,apparent_temperature,relative_humidity_2m,wind_speed_10m,wind_direction_10m,weather_code,is_day'
   + '&daily=temperature_2m_max,temperature_2m_min,precipitation_probability_max,weather_code'
-  + `&timezone=${encodeURIComponent(BALCARCE.tz)}&forecast_days=4`;
+  + `&timezone=${encodeURIComponent(BALCARCE.tz)}&forecast_days=7`;
 
 /** Aparte y exportada para poder probarla sin hacer un pedido de verdad. */
 export function interpretar(j) {

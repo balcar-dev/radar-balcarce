@@ -127,16 +127,14 @@ test('en escritorio la columna de la hora se reserva siempre, con hora o sin ell
 
 test('la columna derecha es una sola pila: servicios y lateral dentro de .derecha, sin filas de grilla aparte', () => {
   const page = leer('web/app/page.js');
-  const orden = ['className="derecha"', '<ResumenDelDia', 'Agenda de Balcarce', '<TarjetaBuzon', 'Números útiles', 'className="principal"']
+  const orden = ['className="derecha"', '<HoyEnBalcarce', 'Agenda de Balcarce', '<TarjetaBuzon', 'Números útiles', 'className="principal"']
     .map((t) => page.indexOf(t));
   assert.ok(orden.every((x, i) => x > 0 && (i === 0 || x > orden[i - 1])), `orden en el HTML: ${orden}`);
-  // Clima, farmacia y dólar siguen en ese orden, ahora adentro del resumen
-  // con pestañas (28/09). La farmacia llega ya armada desde page.js como
-  // "farmaciaPanel" (piezas.js no se puede importar desde un componente de
-  // cliente: trae node:fs).
-  const resumen = leer('web/components/resumen-dia.js');
-  const ordenInterno = ['<TarjetaClima', '{farmaciaPanel}', '<TarjetaDolar'].map((t) => resumen.indexOf(t));
-  assert.ok(ordenInterno.every((x, i) => x > 0 && (i === 0 || x > ordenInterno[i - 1])), `orden adentro del resumen: ${ordenInterno}`);
+  // Clima, farmacia y dólar siguen en ese orden, ahora como tres renglones
+  // de "Hoy en Balcarce" (28/09).
+  const hoy = leer('web/components/hoy-balcarce.js');
+  const ordenInterno = ['href="/clima"', 'href="/farmacias"', 'href="/dolar"'].map((t) => hoy.indexOf(t));
+  assert.ok(ordenInterno.every((x, i) => x > 0 && (i === 0 || x > ordenInterno[i - 1])), `orden adentro de Hoy en Balcarce: ${ordenInterno}`);
   const css = leer('web/app/globals.css').replace(/\/\*[\s\S]*?\*\//g, '');
   assert.match(css, /\.dos-columnas \.derecha \{ display: contents; \}/, 'en el celular la pila se desarma');
   assert.match(css, /\.dos-columnas \.derecha \{ display: flex; flex-direction: column; gap: 16px; grid-column: 2; grid-row: 1;/);
@@ -152,16 +150,28 @@ test("los repasos de los podcasts y las notas propias no se sacan por parecerse 
 
 // -------------------------------------- los botones de la farmacia (27/09)
 
-test('la farmacia del resumen de la portada muestra los botones: tiene su propia pestaña (28/09)', () => {
-  // Hasta el 27/09 la portada los ocultaba (verBotones={false}) porque la
-  // tarjeta de farmacia competía por lugar, apilada con la de clima y la del
-  // dólar. Con el resumen de pestañas (28/09) cada una tiene toda la tarjeta
-  // para sí sola cuando está activa, así que los botones ya entran bien.
-  const piezas = leer('web/components/piezas.js');
-  assert.match(piezas, /export function TarjetaFarmacia\(\{ farmacia, verLaSemana = true, verBotones = true \}\)/);
-  assert.match(piezas, /\{verBotones && \(llamar \|\| mapa\) && \(/);
+test('la portada muestra sólo el dato de la farmacia, sin botones; los botones están en /farmacias (28/09)', () => {
+  // Hernán, 28/09: "volvió el tema de los botones de farmacia; dos cruces de
+  // farmacias es mucho para la pantalla principal". En la portada va un
+  // renglón con los nombres de turno y el enlace a /farmacias; ahí están la
+  // dirección, "Llamar" y "Cómo llegar".
   const portada = leer('web/app/page.js');
-  assert.match(portada, /<TarjetaFarmacia farmacia=\{d\.farmacias\?\.hoy\} \/>/);
+  assert.ok(!/<TarjetaFarmacia/.test(portada), 'la tarjeta grande de farmacia no va en la portada');
+  const hoy = leer('web/components/hoy-balcarce.js');
+  assert.ok(!/Llamar|Cómo llegar|tel:|google\.com\/maps/.test(hoy), 'sin botones en la portada');
+  assert.match(hoy, /href="\/farmacias"/);
+  const piezas = leer('web/components/piezas.js');
+  assert.match(piezas, /\{verBotones && \(llamar \|\| mapa\) && \(/);
   const farmacias = leer('web/app/farmacias/page.js');
   assert.match(farmacias, /<TarjetaFarmacia farmacia=\{f\.hoy\} verLaSemana=\{false\} \/>/, 'en /farmacias los botones siguen (verBotones por defecto)');
+});
+
+test('hay página de clima: la pastilla de arriba y el menú llevan a /clima (28/09)', () => {
+  const pagina = leer('web/app/clima/page.js');
+  assert.match(pagina, /<TarjetaClima clima=\{d\.clima\} \/>/);
+  assert.match(pagina, /<PronosticoDias clima=\{d\.clima\} \/>/);
+  const layout = leer('web/app/layout.js');
+  assert.match(layout, /\{ href: '\/clima', nombre: 'Clima' \}/);
+  assert.match(layout, /<a href="\/clima" className="enlace-pastilla"><PastillaClima/);
+  assert.match(leer('web/app/sitemap.js'), /\/clima/);
 });

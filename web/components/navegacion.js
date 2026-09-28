@@ -7,7 +7,7 @@
 // Una fila que se desliza esconde secciones sin avisar, así que: un degradé en
 // el borde derecho dice que hay más (y se va cuando ya se llegó al final), y la
 // sección donde está la persona queda marcada y centrada. Los servicios
-// (Agenda, Farmacias, Dólar, Teléfonos) van al final, en verde.
+// (Agenda, Clima, Farmacias, Dólar, Teléfonos) van al final, en verde.
 
 import { useEffect, useRef, useState } from 'react';
 import { usePathname } from 'next/navigation';
