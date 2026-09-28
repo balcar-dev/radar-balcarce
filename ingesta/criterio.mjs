@@ -26,10 +26,13 @@ export const BAJADA = {
   maximo: 360,
 };
 
-/** El cuerpo: se piden de 100 a 180 palabras; con menos de 70 no se publica. */
+/** El cuerpo: se piden de 70 a 180 palabras (nunca más de lo que dan las
+ *  fuentes); con menos de 70 no se publica. Antes se pedían 100 como mínimo:
+ *  una auditoría del 28/09 encontró que eso empujaba a rellenar con
+ *  adjetivos cuando la fuente daba para menos. */
 export const CUERPO = {
   minimoParaPublicar: 70,
-  palabrasPedidasMinimo: 100,
+  palabrasPedidasMinimo: 70,
   palabrasPedidasMaximo: 180,
   parrafosMaximo: 3,
   maximo: 1800,

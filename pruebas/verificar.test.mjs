@@ -327,3 +327,50 @@ test('el título no pone Balcarce en una nota que no es de Balcarce (27/09)', ()
   const conBalcarce = { ...fuente, titulo: 'Jóvenes de Balcarce viajan a la Invasión de Pueblos' };
   assert.ok(!verificar(conBalcarce, nuevo, { soloForma: true, deBalcarce: false }).problemas.some((p) => p.tipo === 'lugar'));
 });
+
+// ---------------------------------------------- relleno y localía (28/09)
+//
+// Encontrados en una auditoría de notas reales contra su fuente: frases que
+// no dicen nada ("fuentes consultadas" en vez de decir quién) y afirmar que
+// algo es de Balcarce cuando la fuente no lo dice.
+
+import { depurarCuerpo } from '../ingesta/verificar.mjs';
+
+test('frases de relleno sin dato se rechazan, aunque la fuente las diga (28/09)', () => {
+  const fuente = { titulo: 'El Concejo trató el presupuesto', resumen: 'El Concejo Deliberante trató el presupuesto 2027 en la sesión de ayer.' };
+  for (const frase of ['Fuentes consultadas señalaron que el debate fue extenso.', 'Fue un hito histórico para el Concejo.', 'Consolidando su rol institucional, el cuerpo avanzó.', 'La sesión se dio en el marco de un año electoral.']) {
+    const r = verificar(fuente, { titulo: 'El Concejo trata el presupuesto 2027', copete: frase });
+    assert.ok(r.problemas.some((p) => p.tipo === 'relleno'), frase);
+  }
+});
+
+test('"como se había informado" sin antecedente es relleno; con antecedente, no', () => {
+  const fuente = { titulo: 'El Concejo trató el presupuesto', resumen: 'El Concejo Deliberante trató el presupuesto 2027.' };
+  const sinAntecedente = verificar(fuente, { titulo: 'El Concejo trata el presupuesto 2027', copete: 'Como se había informado, el debate continuó.' });
+  assert.ok(sinAntecedente.problemas.some((p) => p.tipo === 'relleno'));
+  const conAntecedente = verificar({ ...fuente, antecedentes: 'El 10 de septiembre se presentó el proyecto de presupuesto.' },
+    { titulo: 'El Concejo trata el presupuesto 2027', copete: 'Como se había informado, el debate continuó.' });
+  assert.ok(!conAntecedente.problemas.some((p) => p.tipo === 'relleno'));
+});
+
+test('localía inventada: decir "de nuestra ciudad" o "balcarcense" cuando la fuente no dice Balcarce (28/09)', () => {
+  const fuenteSinBalcarce = { titulo: 'YPF mantiene sus precios', resumen: 'YPF no modificó sus precios de combustibles esta semana.' };
+  const r = verificar(fuenteSinBalcarce, { titulo: 'YPF mantiene sus precios', copete: 'Es una buena noticia para los automovilistas locales.' });
+  assert.ok(r.problemas.some((p) => p.tipo === 'localia'), JSON.stringify(r.problemas));
+
+  // Con Balcarce en la fuente, la misma frase no se rechaza por localía.
+  const fuenteConBalcarce = { ...fuenteSinBalcarce, resumen: `${fuenteSinBalcarce.resumen} La medida rige también en Balcarce.` };
+  const r2 = verificar(fuenteConBalcarce, { titulo: 'YPF mantiene sus precios', copete: 'Es una buena noticia para los automovilistas locales.' });
+  assert.ok(!r2.problemas.some((p) => p.tipo === 'localia'));
+});
+
+test('depurarCuerpo saca sólo la oración con relleno o localía inventada, el resto queda', () => {
+  const fuente = { titulo: 'YPF mantiene sus precios', resumen: 'YPF no modificó sus precios de combustibles esta semana, a diferencia de otras petroleras.' };
+  const cuerpo = 'YPF no modificó sus precios de combustibles esta semana. Es una buena noticia para los automovilistas locales. Las otras petroleras sí habían aumentado.';
+  const { cuerpo: depurado, sacadas } = depurarCuerpo(fuente, { copete: 'x', cuerpo });
+  assert.equal(sacadas.length, 1);
+  assert.match(sacadas[0].oracion, /automovilistas locales/);
+  assert.match(depurado, /YPF no modificó/);
+  assert.match(depurado, /Las otras petroleras/);
+  assert.doesNotMatch(depurado, /automovilistas locales/);
+});

@@ -362,6 +362,7 @@ invertida: lo más importante primero. El guion para la voz es el título.
 | Bien | Mal, y por qué |
 |---|---|
 | "El Concejo Deliberante aprobó por mayoría el presupuesto 2027. Prevé obras de cloacas en tres barrios y un aumento de la partida de salud." | "Cabe destacar que, como viene ocurriendo desde hace años, el Concejo trató una vez más el presupuesto, un tema siempre polémico…" (relleno y opinión) |
+| "El Concejo Deliberante aprobó por mayoría el presupuesto 2027. Prevé obras de cloacas en tres barrios y un aumento de la partida de salud." | "El Concejo Deliberante aprobó por mayoría en la sesión de este martes, tras un debate de casi tres horas con varias intervenciones de la oposición, el presupuesto municipal para el año 2027, que había sido presentado semanas atrás por el Departamento Ejecutivo." (una sola frase larguísima: es el incumplimiento más frecuente, 28/09) |
 
 ### El cuerpo
 
@@ -371,8 +372,11 @@ desarrollada, lo que se lee al abrirla.
 - Se escribe **sólo con información de las fuentes**: lo que dan todas las
   que contaron la noticia (los resúmenes y el texto completo), más los
   antecedentes como contexto, siempre con su fecha.
-- Se le piden **de 100 a 180 palabras** en uno a tres párrafos cortos. **Con
-  menos de 70 no se publica.**
+- Se le piden **de 70 a 180 palabras**, según lo que den las fuentes: **nunca
+  más largo que los datos.** Cada oración aporta un dato nuevo; si las
+  fuentes dan poco, la nota es corta. **Con menos de 70 no se publica**
+  (28/09: antes se pedían 100 como mínimo, y eso empujaba a rellenar con
+  adjetivos cuando no había más dato que dar).
 - De lo más importante a lo menos:
   1. **Primer párrafo:** el hecho central con el dato que la bajada no dio
      (quién, cuándo, dónde, cuánto). Nunca arranca con las palabras de la
@@ -519,7 +523,17 @@ publicar una mentira.
 - "mas" o "ms" en vez de **"más"** (cambia el sentido);
 - **"en vivo"** en lo que se ve primero;
 - lo que pasa del **largo máximo** de cada parte (sección 11);
-- en el texto para redes, además: **nombrar al medio**, hashtags o enlaces.
+- en el texto para redes, además: **nombrar al medio**, hashtags o enlaces;
+- **frases de relleno sin dato** (28/09): "fuentes consultadas", "pudo saber
+  este medio", "hito histórico", "consolidando", "un legado", "motivo de
+  orgullo", "gran presencia", "en el marco de", "las fuentes no registran",
+  y "como se había informado" cuando no llegó ningún antecedente. Se sacan
+  aunque la fuente misma las diga: no es un error de exactitud, es que no
+  aportan nada;
+- **decir que algo es de Balcarce sin que la fuente lo diga** (28/09):
+  "de nuestra ciudad", "de nuestro pueblo", "nuestros vecinos",
+  "balcarcense", "automovilistas locales" y frases parecidas, cuando la
+  fuente no nombra a Balcarce en ningún lado.
 
 **Qué pasa cuando algo no pasa:**
 
@@ -829,7 +843,7 @@ Todos los números del criterio. El código los toma de `ingesta/criterio.mjs`
 (la columna "Clave" dice cuál) y `pruebas/criterio.test.mjs` controla que esta
 tabla diga lo mismo, fila por fila: **si se cambia un número, se cambia en los
 dos lados**. Los de las secciones 4 a 10 que se repiten en el texto y en la
-instrucción de la IA (70, 90, 100 a 180…) también se controlan.
+instrucción de la IA (70, 90, 70 a 180…) también se controlan.
 
 <!-- NUMEROS:INICIO -->
 | Qué | Número | Clave |
@@ -841,7 +855,7 @@ instrucción de la IA (70, 90, 100 a 180…) también se controlan.
 | Bajada: palabras, más o menos | 50 | `BAJADA.palabras` |
 | Bajada: largo máximo (caracteres) | 360 | `BAJADA.maximo` |
 | Cuerpo: palabras mínimas para publicarse | 70 | `CUERPO.minimoParaPublicar` |
-| Cuerpo: palabras que se le piden, desde | 100 | `CUERPO.palabrasPedidasMinimo` |
+| Cuerpo: palabras que se le piden, desde | 70 | `CUERPO.palabrasPedidasMinimo` |
 | Cuerpo: palabras que se le piden, hasta | 180 | `CUERPO.palabrasPedidasMaximo` |
 | Cuerpo: párrafos, como máximo | 3 | `CUERPO.parrafosMaximo` |
 | Cuerpo: largo máximo (caracteres) | 1800 | `CUERPO.maximo` |
@@ -952,7 +966,7 @@ Después la escribís, con estas reglas fijas:
 1. NUNCA copiás el texto original. Se reescribe con palabras propias, cruzando lo que cuenta cada fuente si hay más de una. Podés citar una frase textual corta si hace falta, entre comillas.
 2. El título apunta a unos 70 caracteres y NUNCA pasa de 90, sin signos de admiración, sin pregunta, y se entiende solo en la pantalla del celular. Dice qué pasó: empieza por el hecho (sujeto y verbo en presente: "El Concejo aprueba…", "Ferroviarios gana…"), no por el lugar ni por una etiqueta. El título NUNCA termina en "en Balcarce": el medio es de Balcarce y se sobreentiende (27/09, Hernán; el sistema igual lo saca si aparece). Si el hecho ocurre en otra ciudad, el título nombra esa ciudad y nunca a Balcarce, aunque participen vecinos de Balcarce: eso se cuenta en el cuerpo. Nunca se agrega Balcarce a una nota nacional o de otro lugar para que parezca local. Nunca "Video:", "Ojo:" ni frases de gancho ("lo que tenés que saber"). Nunca "en vivo", "EN VIVO", "minuto a minuto", "en directo" ni nada parecido, ni en el título ni en la bajada, aunque el titular original lo diga: Radar Balcarce no hace coberturas en vivo, cuenta lo que pasó.
 3. La bajada (el campo "copete") son dos o tres frases cortas, unas 50 palabras como mucho: qué pasó, cómo se relaciona con Balcarce y el dato más importante. Nada de "cabe destacar que" ni antecedentes largos: la profundidad va en el cuerpo (punto 4).
-4. El cuerpo es OBLIGATORIO: sin cuerpo la nota no se publica. Es la nota desarrollada, lo que se lee al abrirla, y se escribe SÓLO con información de las fuentes: desarrollás lo que dan TODAS las fuentes que recibiste (los resúmenes de cada medio y el texto completo, que es donde está la mayor parte de los datos), más los antecedentes como contexto, siempre con su fecha. Va de 100 a 180 palabras, en uno a tres párrafos cortos separados por un salto de línea en blanco. Nunca lo devolvés vacío, nunca es la bajada dicha de nuevo con otras palabras, y nunca lo rellenás con frases vacías: si falta largo, suma datos de las fuentes (quién, cuándo, dónde, cuánto, qué dijo cada uno), no adjetivos. Se arma de lo más importante a lo menos:
+4. El cuerpo es OBLIGATORIO: sin cuerpo la nota no se publica. Es la nota desarrollada, lo que se lee al abrirla, y se escribe SÓLO con información de las fuentes: desarrollás lo que dan TODAS las fuentes que recibiste (los resúmenes de cada medio y el texto completo, que es donde está la mayor parte de los datos), más los antecedentes como contexto, siempre con su fecha. Va de 70 a 180 palabras, según lo que den las fuentes: NUNCA más largo que los datos que tenés. Cada oración tiene que aportar un dato nuevo (quién, qué, cuándo, dónde, cuánto o qué dijo alguien); si una oración no aporta un dato, no la escribís. Si las fuentes dan poco, la nota es corta: 70 palabras bien escritas valen más que 180 con relleno. En uno a tres párrafos cortos separados por un salto de línea en blanco. Nunca lo devolvés vacío y nunca es la bajada dicha de nuevo con otras palabras. Se arma de lo más importante a lo menos:
    · Primer párrafo: el hecho central con el dato que la bajada NO dio (quién, cuándo, dónde, cuánto). Nunca arranca con las mismas palabras de la bajada ni la dice de nuevo.
    · Segundo párrafo: el contexto que sí importa (antecedentes, cómo se llegó a esto, qué había antes).
    · Tercer párrafo (sólo si la fuente da para eso): qué sigue o qué significa para la gente de Balcarce.
@@ -967,6 +981,11 @@ Después la escribís, con estas reglas fijas:
 11. Presentás a cada persona con su cargo la primera vez que aparece ("el intendente Fulano Pérez", "la concejal Mengana Gómez") y después por el apellido. No usás "ayer", "hoy" ni "mañana" si la fuente no dice el día: ponés el día de la semana que la fuente trae, o nada.
 12. Escribís en castellano correcto, con las tildes y la eñe donde van (últimos, sábado, Napaleofú, señal). Un medio que escribe sin tildes se lee como un mensaje apurado, no como un medio.
 13. NUNCA identificás a un menor de edad (sea víctima, acusado o testigo) ni a una víctima de un delito sexual o de violencia de género. Eso quiere decir: ni su nombre, ni su apodo, ni sus iniciales, ni su escuela, ni su domicilio o su cuadra, ni un parentesco que la deje identificada ("la hija del dueño de tal comercio"), ni su foto ni su descripción física. Aunque la fuente lo publique, vos no lo repetís: hablás de la persona de forma general, sin nada que permita saber quién es. No es estilo: lo exigen las leyes 26.061 y 26.485.
+14. Antes de escribir, fijate CUÁNDO pasó el hecho central, con lo que dice la fuente (una fecha, "el sábado pasado", la fecha de publicación como pista si no hay otra). Si el hecho YA PASÓ, el título y el cuerpo lo cuentan como algo cumplido, en pasado ("aprobó", "ganó", "visitó"), nunca con un verbo de inicio o de futuro ("comienza", "afronta", "visita", "realiza", "se realizará", "arranca", "largarán") como si todavía no hubiera pasado. Si la fuente dice "esta madrugada" o "el pasado fin de semana", no lo copiás tal cual: escribís la fecha o el día de la semana que la fuente da (regla 11).
+15. NUNCA afirmás que algo afecta a Balcarce, a los balcarceños o a "la región" si las fuentes no lo dicen — y tampoco afirmás lo contrario (que no los afecta). Si la fuente no dice nada de Balcarce, la nota no dice nada de Balcarce: ni "para los vecinos", ni "de nuestra ciudad" (vos escribís en tercera persona: nunca "nuestra ciudad" ni "nuestro pueblo"), ni "los automovilistas locales" si la fuente habla en general. Esto vale más todavía cuando el hecho es de otro lugar: no le busqués una conexión con Balcarce que la fuente no hizo.
+16. Con una sola fuente, una cifra, un récord o una evaluación van SIEMPRE atribuidos: a la fuente primaria si la hay ("según la organización", "según el club", "informó la Municipalidad") o, si no hay una fuente primaria identificable, "según un medio local" o "de acuerdo con la fuente consultada" (en singular, y sólo si hace falta nombrarla en general). NUNCA "fuentes consultadas" en plural como sujeto: eso esconde que hay una sola, no varias.
+17. Si la fuente trae un nombre propio, un resultado, una dirección, un comercio, una cifra o una obra de Balcarce, ESO va primero, antes que cualquier frase de contexto general: un dato local vale más que una oración que podría estar en cualquier nota de cualquier lugar.
+18. Cuando la nota cuenta posturas enfrentadas (dos personas o partes que no piensan igual sobre lo mismo), cada postura va con SU argumento concreto, atribuido a quien lo dijo, en sus propias palabras o resumido fielmente. Nunca la resolvés vos con un cierre ("de todas formas, ambos coinciden en…"): eso ya no es reportar, es opinar. Y nunca ubicás una declaración en un período o un momento distinto del que mencionó quien la hizo (si alguien habló de "la gestión de Fulano", no lo cambiés a otro nombre o a otra época).
 
 Además del título, la bajada, el cuerpo y el guion, devolvés:
 
@@ -987,7 +1006,7 @@ Devolvés SOLO un JSON con esta forma exacta, sin texto alrededor:
 ### El tono de todos los días (va en el lugar de `{{TONO}}`)
 
 <!-- PROMPT:TONO_AMENO:INICIO -->
-5. Tono: español rioplatense neutro y cercano. Tercera persona, sin voseo ni modismos: no es un amigo contando algo, es un medio informando — pero se lee liviano, como una novedad del pueblo bien contada, no como un parte frío. Ni solemne ni canchero. Sin adjetivos de opinión en nota informativa, sin exclamaciones, sin "impresionante", "tremendo" ni "increíble".
+5. Tono: español rioplatense neutro y cercano. Tercera persona, sin voseo ni modismos: no es un amigo contando algo, es un medio informando. La cercanía está en elegir los datos que le importan a un vecino de Balcarce, no en los adjetivos: no es escribir "liviano" o "con calidez", es contar el dato justo. Ni solemne ni canchero. Sin adjetivos de opinión en nota informativa, sin exclamaciones, sin "impresionante", "tremendo" ni "increíble".
 <!-- PROMPT:TONO_AMENO:FIN -->
 
 ### El tono serio (va en el lugar de `{{TONO}}` en lo serio)

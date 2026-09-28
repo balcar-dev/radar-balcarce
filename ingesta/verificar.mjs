@@ -126,6 +126,21 @@ export function nombresDe(texto) {
 // error que la doctrina Campillay busca evitar: presentar como hecho lo que
 // es una acusación.
 const DELITOS = /\b(asesino|mato|robo|hurto|estafo|violo|abuso|agredio|golpeo|amenazo|secuestro|apuñalo|balaceo|disparo|falsifico|defraudo)\b/;
+
+// Relleno sin dato (28/09, de una auditoría de notas reales contra la
+// fuente): frases que no dicen nada que no esté ya dicho, o que esconden que
+// no hay un dato ("fuentes consultadas" en vez de decir quién). Se tratan
+// igual que un número que no cuadra: se saca la oración entera, la diga o no
+// la fuente (no es un error de exactitud, es un vicio de estilo propio).
+const RELLENO = /\b(fuentes consultadas|pudo saber este medio|pudo saber|hito historico|consolidando|un legado|motivo de orgullo|gran presencia|en el marco de|las fuentes no registran|postal poco habitual)\b/;
+
+// Localía inventada (28/09): afirmar que algo es "de Balcarce" o afecta a
+// los balcarcenses cuando la fuente no lo dice. Deliberadamente angosto (no
+// cualquier "local" o "vecino": esas son palabras demasiado comunes con
+// otros usos, "el local de la esquina" no tiene nada que ver) para no sacar
+// oraciones buenas por error; agrandar esta lista con casos reales, no a
+// ojo.
+const LOCALIA_SIN_RESPALDO = /\b(de nuestra ciudad|de nuestro pueblo|nuestros vecinos|balcarcense|balcarcenses|vecinos de balcarce|automovilistas locales|productores locales|comerciantes locales)\b/;
 const ATRIBUCION = /\b(segun|habria|habrian|presunt|supuest|acusad|denunci|imputad|sospech|investig|policia|fiscal|justicia|alegadamente|de acuerdo)\b/;
 
 // ----------------------------------------------------------------- las citas
@@ -314,6 +329,25 @@ function problemasDelTexto(ctx, campo, texto, { soloForma = false, limite = LIMI
       agregar('forma', `el ${campo} dice "${vivo[0]}" y el sitio no hace coberturas en vivo`);
     }
   }
+
+  // 9. Relleno sin dato (28/09): frases que no aportan nada, encontradas en
+  // una auditoría de notas reales contra su fuente.
+  const relleno = n.match(RELLENO);
+  if (relleno) {
+    agregar('relleno', `el ${campo} tiene una frase de relleno sin dato: "${relleno[0]}"`);
+  }
+  // "Como se había informado" sin que llegara ningún antecedente: no hay qué
+  // se "había informado", así que es relleno también (28/09).
+  if (!ctx.previoNorm && /\bcomo se habia informado\b/.test(n)) {
+    agregar('relleno', `el ${campo} dice "como se había informado" sin que llegara ningún antecedente`);
+  }
+
+  // 10. Localía inventada (28/09): decir que algo es de Balcarce o afecta a
+  // los balcarcenses cuando la fuente no lo dice.
+  if (LOCALIA_SIN_RESPALDO.test(n) && !/\bbalcarce\b/.test(ctx.origenNorm)) {
+    agregar('localia', `el ${campo} dice "${n.match(LOCALIA_SIN_RESPALDO)[0]}" y la fuente no dice Balcarce`);
+  }
+
   return problemas;
 }
 
