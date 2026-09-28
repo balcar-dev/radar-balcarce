@@ -1,5 +1,5 @@
 {
-  "exportado": "2026-09-28T03:02:36.746Z",
+  "exportado": "2026-09-28T03:12:47.700Z",
   "decisiones": {
     "1951120": {
       "estado": "automatica",
@@ -36818,6 +36818,663 @@
         "nivel": "ALTA",
         "porque": "Lo contaron dos medios independientes.",
         "sugeridoPorIA": "ALTA"
+      }
+    },
+    "25vrga": {
+      "estado": "automatica",
+      "titulo": "Incidentes y disparos de balas de goma en la previa de Boca y Racing",
+      "copete": "La antesala del encuentro entre Boca Juniors y Racing en Rosario estuvo marcada por corridas, empujones y represión policial en los accesos al estadio Gigante de Arroyito.",
+      "cuerpo": "Se registraron momentos de tensión y graves incidentes en las inmediaciones del estadio Gigante de Arroyito, en Rosario, durante la previa del partido de cuartos de final de la Copa Argentina entre Boca Juniors y Racing. Los tumultos y las corridas comenzaron pasadas las dieciséis, una hora y media después de la apertura de puertas, cuando miles de simpatizantes con entradas intentaban ingresar a la cancha.\n\nDe acuerdo con los testimonios recogidos en el lugar, la situación se desbordó debido a la aglomeración de gente, calles bloqueadas por micros y pasos reducidos. Los hinchas denunciaron desorganización, malos tratos y situaciones de asfixia entre niños y adultos.\n\nA pesar de los enfrentamientos en los ingresos y los incidentes que también se habrían extendido hacia las tribunas, el encuentro comenzó a las diecisiete bajo el arbitraje de Andrés Gariano y culminó con la victoria de Boca por tres a dos.",
+      "guion": "Incidentes y disparos de balas de goma en la previa de Boca y Racing",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-28T03:12:47.611Z",
+      "claves": [
+        "Graves incidentes en los accesos al Gigante de Arroyito",
+        "Intervención policial con balas de goma y gases lacrimógenos",
+        "Reclamos de hinchas por desorganización y aglomeraciones",
+        "Triunfo posterior de Boca ante Racing por tres a dos"
+      ],
+      "seSabe": [
+        "El partido por los cuartos de final de la Copa Argentina entre Boca y Racing se disputó en el estadio Gigante de Arroyito en Rosario.",
+        "Se produjeron corridas, empujones y vallas derribadas en los ingresos a la cancha.",
+        "La Policía utilizó balas de goma y gases lacrimógenos en las inmediaciones.",
+        "Boca Juniors venció a Racing por tres a dos."
+      ],
+      "noConfirmado": [
+        "No se informó el número total de personas heridas o asistidas a raíz de los disturbios en los accesos y las tribunas."
+      ],
+      "textoRedes": "Incidentes, corridas y disparos de balas de goma marcaron la previa del partido entre Boca y Racing en Rosario por la Copa Argentina.",
+      "etiquetas": [
+        "Boca Juniors",
+        "Racing",
+        "Copa Argentina",
+        "Rosario",
+        "incidentes"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/deportes/futbol/2026/09/27/tension-en-rosario-hubo-tumultos-y-empujones-en-el-ingreso-de-los-hinchas-de-boca-antes-del-clasico-ante-racing/",
+          "fecha": "2026-09-27T19:40:33.000Z",
+          "oficial": false,
+          "aporte": "Detalló los horarios, los testimonios de los hinchas sobre la desorganización y el uso de balas de goma por parte de la Policía."
+        },
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/deportes/futbol/incidentes-en-el-ingreso-de-los-hinchas-de-boca-al-estadio-gigante-de-arroyito-nid27092026/",
+          "fecha": "2026-09-27T20:57:54.000Z",
+          "oficial": false,
+          "aporte": "Ubicó el encuentro entre Boca y Racing por los cuartos de final de la Copa Argentina en Rosario."
+        },
+        {
+          "medio": "Perfil",
+          "enlace": "https://442.perfil.com/noticias/futbol/tension-en-rosario-incidentes-entre-hinchas-y-la-policia-en-la-previa-de-boca-racing.phtml",
+          "fecha": "2026-09-27T22:15:38.000Z",
+          "oficial": false,
+          "aporte": "Mencionó la presencia de vallas derribadas y disparos de balas de goma."
+        },
+        {
+          "medio": "Ámbito",
+          "enlace": "https://www.ambito.com/deportes/caos-y-represion-la-previa-boca-vs-racing-corridas-balas-goma-y-tension-rosario-n6327243",
+          "fecha": "2026-09-27T21:36:00.000Z",
+          "oficial": false,
+          "aporte": "Indicó que miles de hinchas tuvieron dificultades para ingresar y sufrieron enfrentamientos con la fuerza de seguridad."
+        },
+        {
+          "medio": "TyC Sports",
+          "enlace": "https://www.tycsports.com/racing-club/pelea-entre-hinchas-de-racing-y-la-policia-balas-de-goma-antes-del-partido-con-boca-id763252.html",
+          "fecha": "2026-09-27T22:12:50.000Z",
+          "oficial": false,
+          "aporte": "Sin contenido relevante."
+        },
+        {
+          "medio": "Minuto Uno",
+          "enlace": "https://www.minutouno.com/deportes/represion-la-previa-boca-vs-racing-hinchas-entrada-afuera-y-balas-goma-la-tribuna-n6327224",
+          "fecha": "2026-09-27T20:04:00.000Z",
+          "oficial": false,
+          "aporte": "Informó sobre incidentes tanto en los ingresos externos como en las tribunas del estadio."
+        },
+        {
+          "medio": "Diario Popular",
+          "enlace": "https://www.diariopopular.com.ar/futbol/batalla-hinchas-racing-y-la-policia-antes-del-duelo-boca-n921822",
+          "fecha": "2026-09-27T20:49:00.000Z",
+          "oficial": false,
+          "aporte": "Sin contenido relevante."
+        },
+        {
+          "medio": "Noticias Argentinas (NA)",
+          "enlace": "https://noticiasargentinas.com/deportes/incidentes-antes-de-boca-racing--balas-de-goma-y-gases-lacrimogenos-contra-simpatizantes-xeneizes_a6ab99a62c2b8de8667f8d3cd",
+          "fecha": "2026-09-27T22:44:00.000Z",
+          "oficial": false,
+          "aporte": "Sin contenido relevante."
+        },
+        {
+          "medio": "El Norte",
+          "enlace": "https://diarioelnorte.com.ar/incidentes-y-represion-a-hinchas-de-boca-en-rosario/",
+          "fecha": "2026-09-27T23:04:30.000Z",
+          "oficial": false,
+          "aporte": null
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron 9 medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      }
+    },
+    "1f46y05": {
+      "estado": "automatica",
+      "titulo": "Juan Pablo Vojvoda suspende la conferencia y duda en Racing",
+      "copete": "Racing quedó eliminado de la Copa Argentina tras perder con Boca y el entrenador Juan Pablo Vojvoda suspendió su contacto con la prensa, lo que deja su continuidad en duda.",
+      "cuerpo": "El director técnico de Racing, Juan Pablo Vojvoda, suspendió la conferencia de prensa luego de que el equipo perdiera tres a dos ante Boca Juniors en los cuartos de final de la Copa Argentina, tras haber estado en ventaja por dos goles con tantos de Gastón Lodico y Adrián Martínez. Con esta derrota en el Gigante de Arroyito, el conjunto xeneize avanzó a las semifinales.\n\nLuego de ese respaldo y un triunfo ante Sarmiento de Junín, el equipo volvió a sufrir un duro traspié.\n\nEn el Torneo Clausura, el rendimiento deportivo también resulta adverso, ya que la institución se ubica anteúltima en la Zona B con ocho unidades acumuladas en diez presentaciones, producto de dos triunfos, dos empates y seis caídas.",
+      "guion": "Juan Pablo Vojvoda suspende la conferencia y duda en Racing",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-28T03:12:47.611Z",
+      "claves": [
+        "Racing cayó ante Boca y quedó eliminado de la Copa Argentina.",
+        "Vojvoda suspendió la conferencia tras el partido en Rosario.",
+        "El futuro del entrenador al frente del plantel quedó en duda.",
+        "El equipo atraviesa un presente desfavorable en el Torneo Clausura."
+      ],
+      "seSabe": [
+        "Racing perdió 3 a 2 frente a Boca Juniors en los cuartos de final de la Copa Argentina, según los medios consultados.",
+        "El encuentro se disputó este domingo en el Gigante de Arroyito, de acuerdo con la información brindada.",
+        "Juan Pablo Vojvoda suspendió la conferencia de prensa posterior al partido, según se informó."
+      ],
+      "noConfirmado": [
+        "Todavía no se oficializó la decisión definitiva sobre la continuidad de Vojvoda en el cargo de director técnico."
+      ],
+      "textoRedes": "Racing quedó eliminado de la Copa Argentina tras perder con Boca y el entrenador Juan Pablo Vojvoda suspendió la conferencia de prensa, por lo que su continuidad en el cargo quedó bajo análisis en medio de un presente complicado en el torneo local.",
+      "etiquetas": [
+        "Racing",
+        "Juan Pablo Vojvoda",
+        "Copa Argentina",
+        "Boca Juniors"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/deportes/futbol/2026/09/27/tras-la-derrota-ante-boca-juan-pablo-vojvoda-suspendio-la-conferencia-de-prensa-y-esta-en-duda-su-continuidad-como-dt-de-racing/",
+          "fecha": "2026-09-27T22:45:33.000Z",
+          "oficial": false,
+          "aporte": "Aportó los detalles sobre el desarrollo del partido, los goles, los dirigentes involucrados y la situación en el torneo local."
+        },
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/deportes/2026/09/27/la-decision-que-tomo-juan-pablo-vojvoda-tras-la-eliminacion-de-racing-ante-boca-en-la-copa-argentina/",
+          "fecha": "2026-09-27T23:45:18.000Z",
+          "oficial": false,
+          "aporte": "Confirmó la suspensión de la conferencia y el resultado final del encuentro."
+        },
+        {
+          "medio": "El Destape",
+          "enlace": "https://www.eldestapeweb.com/deportes/chau-racing-tajante-decision-juan-pablo-vojvoda-derrota-boca-2026927203434",
+          "fecha": "2026-09-27T23:34:34.000Z",
+          "oficial": false,
+          "aporte": "Informó sobre la decisión tomada por el entrenador tras la caída."
+        },
+        {
+          "medio": "TyC Sports",
+          "enlace": "https://www.tycsports.com/racing-club/vojvoda-racing-dudas-continuidad-suspension-conferencia-de-prensa-boca-copa-argentina-id763274.html",
+          "fecha": "2026-09-27T23:56:41.000Z",
+          "oficial": false,
+          "aporte": "No aportó información adicional en su resumen."
+        },
+        {
+          "medio": "Doble Amarilla",
+          "enlace": "https://www.dobleamarilla.com.ar/liga-/juan-pablo-vojvoda-suspendio-la-conferencia-de-prensa-y-su-futuro-es-una-incognita_a6ab9a1509b8cd1f9d62fcde3",
+          "fecha": "2026-09-27T23:15:06.000Z",
+          "oficial": false,
+          "aporte": "Señaló que el ciclo del entrenador quedó bajo la lupa tras la eliminación."
+        },
+        {
+          "medio": "Bolavip Argentina",
+          "enlace": "https://bolavip.com/ar/futbolargentino/juan-pablo-vojvoda-suspendio-la-conferencia-de-prensa-tras-la-derrota-de-racing-ante-boca-por-copa-argentina",
+          "fecha": "2026-09-27T22:48:22.000Z",
+          "oficial": false,
+          "aporte": "Detalló cómo se definió el partido en la última parte del encuentro."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron seis medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      }
+    },
+    "1vqvuab": {
+      "estado": "automatica",
+      "titulo": "Finalizan el sillón papal para la misa del papa León XIV en Luján",
+      "copete": "Ya está listo el asiento que utilizará el papa León XIV en la misa que oficiará el 11 de noviembre en la Basílica de Luján. La pieza fue fabricada en Santa Fe y luego quedará en el museo local.",
+      "cuerpo": "A un mes y medio de la ceremonia que el papa León XIV encabezará el miércoles 11 de noviembre en la Basílica de Luján, quedó finalizado el sillón principal que utilizará durante la misa. El encargo fue realizado por una vecina lujanense y la fabricación estuvo a cargo de la empresa Sillas Mehring, con más de setenta años de trayectoria en la localidad santafesina de Esperanza.\n\nPara su confección, los fabricantes trabajaron a partir de una fotografía del mobiliario que utiliza habitualmente el Vaticano. Enrique Mehring, uno de los propietarios de la firma, explicó que se trató de una pieza única elaborada sin planos previos. El diseño combina madera de guatambú en el exterior con un acabado dorado, estructura interna de paraíso y un tapizado especial con capas de poliéster.\n\nEl mobiliario cuenta con medidas específicas y una cresta tallada en Buenos Aires que eleva el respaldo. Tras la celebración religiosa, el sillón pasará a integrar el patrimonio histórico del museo de la Basílica de Luján.",
+      "guion": "Finalizan el sillón papal para la misa del papa León XIV en Luján",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-28T03:12:47.611Z",
+      "claves": [
+        "El sillón papal para la misa en Luján ya está terminado",
+        "Fue fabricado en la localidad santafesina de Esperanza",
+        "Se usó madera de guatambú y paraíso con tapizado especial",
+        "Quedará en el patrimonio histórico del museo de la Basílica"
+      ],
+      "seSabe": [
+        "La misa se celebrará el miércoles 11 de noviembre en la Basílica de Luján",
+        "El sillón fue fabricado por la empresa Sillas Mehring en Esperanza, Santa Fe",
+        "El encargo lo hizo una vecina de Luján a partir de una foto del mobiliario del Vaticano",
+        "La pieza combina guatambú, paraíso y un tapizado especial con poliéster",
+        "El sillón formará parte del museo de la Basílica de Luján tras la ceremonia"
+      ],
+      "noConfirmado": [
+        "No se informaron los costos ni los plazos exactos que demandó la fabricación de la pieza."
+      ],
+      "textoRedes": "Ya está terminado el sillón que utilizará el papa León XIV en su visita del 11 de noviembre a la Basílica de Luján. La pieza fue fabricada en Santa Fe por encargo de una vecina y luego pasará a formar parte del museo local.",
+      "etiquetas": [
+        "Papa León XIV",
+        "Luján",
+        "Basílica de Luján",
+        "Esperanza",
+        "Sillas Mehring"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Agencia DIB",
+          "enlace": "https://dib.com.ar/sociedad/leon-xiv-ya-esta-listo-el-sillon-que-usara-el-papa-la-misa-lujan-n56063",
+          "fecha": "2026-09-27T12:05:00.000Z",
+          "oficial": false,
+          "aporte": "Aportó los detalles sobre la fabricación, las medidas, los materiales y el destino final del sillón papal."
+        },
+        {
+          "medio": "0221",
+          "enlace": "https://www.0221.com.ar/nacional/el-sillon-que-usara-leon-xiv-lujan-ya-esta-listo-y-tiene-un-destino-especial-n134897",
+          "fecha": "2026-09-27T18:22:00.000Z",
+          "oficial": false,
+          "aporte": "Confirmó la fecha de la misa y el lugar de fabricación del asiento."
+        },
+        {
+          "medio": "La Verdad",
+          "enlace": "https://laverdadonline.com/leon-xiv-ya-esta-listo-el-sillon-que-usara-el-papa-en-la-misa-de-lujan/",
+          "fecha": "2026-09-27T20:58:29.000Z",
+          "oficial": false,
+          "aporte": "Coincidió en que el elemento central de la ceremonia ya está terminado."
+        },
+        {
+          "medio": "El Marplatense",
+          "enlace": "https://www.elmarplatense.com/ya-esta-listo-el-sillon-que-usara-leon-xiv-en-lujan",
+          "fecha": "2026-09-27T15:30:00.000Z",
+          "oficial": false,
+          "aporte": "Aportó el nombre de la empresa fabricante, Sillas Mehring."
+        },
+        {
+          "medio": "Mi8 (Canal 8 Mar del Plata)",
+          "enlace": "https://mi8.com.ar/ultiman-detalles-para-la-visita-de-leon-xiv-ya-esta-listo-el-sillon-que-usara-el-papa-en-la-misa-en-lujan/",
+          "fecha": "2026-09-27T18:02:32.000Z",
+          "oficial": false,
+          "aporte": "Ratificó los datos principales sobre la visita y el encargo del sillón."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron cinco medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      }
+    },
+    "gcast2": {
+      "estado": "automatica",
+      "titulo": "Esteban Lamothe y Débora Nishimoto confirman su casamiento",
+      "copete": "Los actores Esteban Lamothe y Débora Nishimoto anunciaron su casamiento tras casi dos años de relación. La pareja se conoció durante las grabaciones de la serie Envidiosa.",
+      "cuerpo": "La noticia había trascendido días antes en el programa LAM, emitido por América TV, donde el panelista Pepe Ochoa adelantó detalles del compromiso antes de la confirmación oficial de los protagonistas. Posteriormente, Lamothe reconoció los planes de boda en una entrevista en la que se mostró feliz por el vínculo y adelantó que la celebración será reducida, sin brindar mayores precisiones sobre la fecha exacta.\n\nLa frase elegida por los actores para acompañar el anuncio en sus perfiles fue \"Estaba todo dicho\", en alusión directa a un diálogo de la serie que compartieron. De esta manera, ambos apostaron por formalizar su relación tras iniciar su romance en el ámbito laboral.",
+      "guion": "Esteban Lamothe y Débora Nishimoto confirman su casamiento",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-28T03:12:47.611Z",
+      "claves": [
+        "Esteban Lamothe y Débora Nishimoto anunciaron su casamiento.",
+        "La pareja se conoció durante el rodaje de la serie Envidiosa.",
+        "Llevan casi dos años de relación y planean una celebración reducida.",
+        "Confirmaron la noticia con una publicación conjunta en redes sociales."
+      ],
+      "seSabe": [
+        "Esteban Lamothe y Débora Nishimoto confirmaron su compromiso mediante un posteo conjunto en redes sociales.",
+        "La pareja se conoció durante las grabaciones de la serie Envidiosa.",
+        "Mantienen una relación de casi dos años y prevén realizar una celebración íntima.",
+        "El actor declaró públicamente su felicidad respecto al vínculo."
+      ],
+      "noConfirmado": [
+        "No se informó la fecha exacta en la que se llevará a cabo la boda.",
+        "No trascendieron detalles sobre el lugar de la celebración ni sobre una eventual luna de miel."
+      ],
+      "textoRedes": "Esteban Lamothe y Débora Nishimoto anunciaron que se casarán en diciembre tras casi dos años de noviazgo. Los actores se conocieron durante las grabaciones de la serie Envidiosa y compartieron la noticia en sus redes sociales.",
+      "etiquetas": [
+        "Esteban Lamothe",
+        "Débora Nishimoto",
+        "Casamiento",
+        "Envidiosa"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/teleshow/2026/09/27/esteban-lamothe-y-debora-nishimoto-confirmaron-su-casamiento-estaba-todo-dicho/",
+          "fecha": "2026-09-27T16:14:53.000Z",
+          "oficial": false,
+          "aporte": "Detalló cómo se conocieron los actores en la serie Envidiosa y aportó declaraciones de Esteban Lamothe sobre el compromiso."
+        },
+        {
+          "medio": "Minuto Uno",
+          "enlace": "https://www.minutouno.com/espectaculos/debora-nishimoto-emociono-los-fans-al-mostrar-la-propuesta-casamiento-esteban-lamothe-n6327211",
+          "fecha": "2026-09-27T19:29:00.000Z",
+          "oficial": false,
+          "aporte": "Informó que la pareja está próxima a pasar por el altar tras dos años de relación."
+        },
+        {
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/show/famosos/2026/09/27/debora-nishimoto-mostro-fotos-de-la-propuesta-de-casamiento-con-esteban-lamothe-y-recordo-una-escena-que-compartieron/",
+          "fecha": "2026-09-27T17:08:51.000Z",
+          "oficial": false,
+          "aporte": "Indicó que Débora Nishimoto anunció la boda y compartió imágenes en su perfil de Instagram."
+        },
+        {
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/videos/show/famosos/2026/09/27/debora-nishimoto-mostro-fotos-de-la-propuesta-de-casamiento-con-esteban-lamothe-y-recordo-una-escena-que-compartieron/",
+          "fecha": "2026-09-27T17:08:55.000Z",
+          "oficial": false,
+          "aporte": "No aportó información adicional al no contar con desarrollo en el resumen."
+        },
+        {
+          "medio": "Clarín",
+          "enlace": "https://www.clarin.com/fama/esteban-lamothe-debora-nishimoto-confirmaron-compromiso-dicho_0_oRPIWt3vqU.html",
+          "fecha": "2026-09-27T17:56:46.000Z",
+          "oficial": false,
+          "aporte": "Confirmó que la boda se realizará en diciembre y que la pareja mostró los anillos en redes."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron cuatro medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      }
+    },
+    "62c0pz": {
+      "estado": "automatica",
+      "titulo": "Alex Barrena gana el Challenger de Buenos Aires ante Facundo Mena",
+      "copete": "El tenista Alex Barrena se consagró campeón del Challenger de Buenos Aires al vencer en la final a Facundo Mena por 6-4 y 6-0. El torneo se disputó sobre polvo de ladrillo en el Racket Club de Palermo.",
+      "cuerpo": "Para llegar a la instancia decisiva, Barrena había dejado en camino al boliviano Juan Carlos Prado en semifinales, mientras que Mena había superado al bonaerense Nicolás Kicker y luego al brasileño Pedro Boscardin Dias. Durante la definición, Mena no pudo contener las lágrimas al caer en el segundo set, en una jornada que coronó la sólida actuación del campeón a lo largo de toda la semana sin ceder ningún set.\n\nCon este triunfo, Barrena suma un nuevo título a su trayectoria profesional tras los obtenidos previamente en Tucumán y Santa Cruz de la Sierra durante la temporada pasada, consolidando su recuperación en el circuito internacional.",
+      "guion": "Alex Barrena gana el Challenger de Buenos Aires ante Facundo Mena",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-28T03:12:47.611Z",
+      "claves": [
+        "Alex Barrena derrotó a Facundo Mena en la final del Challenger de Buenos Aires.",
+        "El marcador del partido decisivo fue de 6-4 y 6-0.",
+        "El torneo se desarrolló en las canchas de polvo de ladrillo del Racket Club de Palermo.",
+        "Barrena obtuvo su tercer título en esta categoría y logró desquitarse de la final perdida en 2025."
+      ],
+      "seSabe": [
+        "Alex Barrena venció a Facundo Mena por 6-4 y 6-0 en la final.",
+        "El certamen se disputó en el Racket Club de Palermo.",
+        "Barrena ocupa el puesto 240 del ranking mundial y tiene 23 años.",
+        "Facundo Mena se encuentra en la posición 220 del escalafón internacional.",
+        "El campeón sumó su tercer título en la categoría Challenger."
+      ],
+      "noConfirmado": [
+        "No se detallaron otros incidentes o alternativas de la ceremonia de premiación más allá del momento emotivo de la final."
+      ],
+      "etiquetas": [
+        "tenis",
+        "Challenger de Buenos Aires",
+        "Alex Barrena",
+        "Facundo Mena"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/deportes/2026/09/26/challenger-de-buenos-aires-alex-barrena-y-facundo-mena-avanzaron-a-las-semifinales/",
+          "fecha": "2026-09-26T01:57:26.000Z",
+          "oficial": false,
+          "aporte": "Detalló el camino previo de Barrena y Mena hacia las semifinales del torneo."
+        },
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/deportes/2026/09/28/la-emotiva-escena-de-la-final-del-buenos-aires-challenger-el-llanto-de-facundo-mena-en-pleno-partido/",
+          "fecha": "2026-09-28T01:50:37.000Z",
+          "oficial": false,
+          "aporte": "Informó sobre el desarrollo emocional y el resultado final del partido decisivo."
+        },
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/deportes/tenis/alex-barrena-campeon-del-challenger-de-buenos-aires-en-una-final-marcada-por-la-emocion-nid27092026/",
+          "fecha": "2026-09-27T23:38:16.000Z",
+          "oficial": false,
+          "aporte": "Confirmó las posiciones en el ranking mundial y que Barrena ganó sin ceder sets en la semana."
+        },
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/deportes/2026/09/27/alex-barrena-se-consagro-campeon-del-buenos-aires-challenger-vencio-a-facundo-mena-con-una-contundente-actuacion/",
+          "fecha": "2026-09-27T23:33:41.000Z",
+          "oficial": false,
+          "aporte": "Aportó la edad de Barrena y su antecedente en la final del año anterior."
+        },
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/deportes/2026/09/27/challenger-buenos-aires-alex-barrena-y-facundo-mena-definen-el-titulo/",
+          "fecha": "2026-09-27T01:11:04.000Z",
+          "oficial": false,
+          "aporte": "Avanzó la previa de la final entre ambos tenistas argentinos."
+        },
+        {
+          "medio": "TyC Sports",
+          "enlace": "https://www.tycsports.com/tenis/mena-y-barrena-los-argentinos-que-buscaran-la-final-del-ypf-buenos-aires-challenger-id763194.html",
+          "fecha": "2026-09-27T00:31:07.000Z",
+          "oficial": false,
+          "aporte": "Sin información relevante aportada en el resumen."
+        },
+        {
+          "medio": "TyC Sports",
+          "enlace": "https://www.tycsports.com/tenis/facundo-mena-y-alex-barrena-aseguraron-un-campeon-argentino-en-el-ypf-buenos-aires-challenger-2026-id763193.html",
+          "fecha": "2026-09-27T00:20:51.000Z",
+          "oficial": false,
+          "aporte": "Sin información relevante aportada en el resumen."
+        },
+        {
+          "medio": "C5N",
+          "enlace": "https://www.c5n.com/deportes/alex-barrena-se-tomo-revancha-y-se-consagro-campeon-del-challenger-buenos-aires-pero-no-festejo-n250080",
+          "fecha": "2026-09-28T00:06:00.000Z",
+          "oficial": false,
+          "aporte": "Destacó que el ganador sumó su tercer título en la categoría."
+        },
+        {
+          "medio": "Noticias Argentinas (NA)",
+          "enlace": "https://noticiasargentinas.com/deportes/alex-barrena-es-el-nuevo-campeon-del-challenger-de-buenos-aires_a6ab9cc1fc2b8de8667ff8c53",
+          "fecha": "2026-09-28T02:49:00.000Z",
+          "oficial": false,
+          "aporte": null
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron cinco medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      }
+    },
+    "1y5er3b": {
+      "estado": "automatica",
+      "titulo": "Tigst Assefa gana el maratón de Berlín pero se queda sin récord",
+      "copete": "La atleta etíope se impuso por tercera vez consecutiva en la competencia alemana con un tiempo de dos horas, once minutos y cuatro segundos, afectada por una lesión en el tramo final.",
+      "cuerpo": "La etíope Tigst Assefa ganó este domingo el maratón de Berlín con un tiempo de dos horas, once minutos y cuatro segundos, en una competencia donde buscaba batir el récord mundial de la distancia que posee la keniana Ruth Chepngetich. A pesar de marchar por debajo de la marca de referencia durante gran parte del recorrido, la subcampeona olímpica sufrió una lesión en el tendón de Aquiles derecho en los últimos kilómetros que frustró la posibilidad de superar el registro histórico.\n\nLa deportista de veintinueve años, que ya se había impuesta en la capital alemana en ediciones anteriores, logró mantenerse al frente y abrochar su tercer triunfo consecutivo en la tradicional prueba germana, marcando el tercer mejor tiempo de la historia a nivel global.",
+      "guion": "Tigst Assefa gana el maratón de Berlín pero se queda sin récord",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-28T03:12:47.611Z",
+      "claves": [
+        "Assefa ganó en Berlín por tercera vez consecutiva.",
+        "Registró un tiempo de dos horas, once minutos y cuatro segundos.",
+        "Una lesión en el tramo final le impidió alcanzar el récord mundial."
+      ],
+      "noConfirmado": [
+        "No se precisó el tiempo exacto de recuperación que demandará la lesión de la atleta."
+      ],
+      "textoRedes": "La etíope Tigst Assefa se quedó con el maratón de Berlín con un tiempo de dos horas, once minutos y cuatro segundos, pero una lesión en los últimos kilómetros le impidió batir el récord mundial.",
+      "etiquetas": [
+        "maratón",
+        "Berlín",
+        "atletismo",
+        "Tigst Assefa",
+        "deportes"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "TyC Sports",
+          "enlace": "https://www.tycsports.com/polideportivo/la-etiope-tigst-assefa-a-por-el-record-del-mundo-de-maraton-en-berlin-id763092.html",
+          "fecha": "2026-09-26T08:35:47.000Z",
+          "oficial": false,
+          "aporte": "Detalló el tiempo oficial de la victoria, la edad de la atleta y las marcas previas."
+        },
+        {
+          "medio": "Olé",
+          "enlace": "https://www.ole.com.ar/running/tigist-assefa-maratondeberlin-recordmundial-tendondeaquiles-lesion-rengueando-meta_0_cTG5Lqih6H.html",
+          "fecha": "2026-09-28T00:28:08.000Z",
+          "oficial": false,
+          "aporte": "Informó que una lesión sobre el final modificó el desenlace de la carrera."
+        },
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/deportes/atletismo/tigst-assefa-gano-la-maraton-de-berlin-por-tercera-vez-pero-una-lesion-la-dejo-sin-record-nid27092026/",
+          "fecha": "2026-09-27T15:33:59.000Z",
+          "oficial": false,
+          "aporte": "Confirmó los datos principales del tiempo de llegada y los antecedentes deportivos de Assefa."
+        },
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/deportes/2026/09/27/parecia-que-iba-a-marcar-un-record-mundial-pero-se-lesiono-y-gano-rengueando-la-maraton-de-berlin-la-revelacion-que-conmovio-a-todos/",
+          "fecha": "2026-09-27T22:02:58.000Z",
+          "oficial": false,
+          "aporte": "Describió el desarrollo de la prueba durante los primeros cuarenta kilómetros."
+        },
+        {
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/running/2026/09/27/assefa-gano-la-maraton-de-berlin-corrio-los-ultimos-2-kilometros-con-el-tendon-de-aquiles-roto-y-no-pudo-marcar-el-record-mundial/",
+          "fecha": "2026-09-27T23:45:43.000Z",
+          "oficial": false,
+          "aporte": "Precisó que la lesión sufrida fue la rotura del tendón de Aquiles derecho."
+        },
+        {
+          "medio": "TyC Sports",
+          "enlace": "https://www.tycsports.com/polideportivo/guye-adola-y-tigst-assefa-dominio-etiope-en-el-maraton-de-berlin-id763216.html",
+          "fecha": "2026-09-27T10:35:53.000Z",
+          "oficial": false,
+          "aporte": "Sin contenido en el resumen aportado."
+        },
+        {
+          "medio": "Olé",
+          "enlace": "https://www.ole.com.ar/poli/momento-tigist-assefa-gana-maraton-berlin-rotura-tendon-aquiles_3_FUhROTuC6d.html",
+          "fecha": "2026-09-28T00:08:44.000Z",
+          "oficial": false,
+          "aporte": "Sin contenido en el resumen aportado."
+        },
+        {
+          "medio": "CADA (Confederación Argentina de Atletismo)",
+          "enlace": "https://cada-atletismo.org/maraton-de-berlin-2026-doblete-etiope-y-destacados-argentinos/",
+          "fecha": "2026-09-27T21:15:18.000Z",
+          "oficial": false,
+          "aporte": "Aportó los datos del ganador en la rama masculina, Guye Adola."
+        },
+        {
+          "medio": "Clarín",
+          "enlace": "https://www.clarin.com/deportes/tigst-assefa-dolor-drama-maraton-berlin-iba-batir-record-mundial-llego-rengueando-meta_0_fLoYXoVxsH.html",
+          "fecha": "2026-09-27T13:41:42.000Z",
+          "oficial": false,
+          "aporte": null
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron 7 medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      }
+    },
+    "1xgxjpi": {
+      "estado": "automatica",
+      "titulo": "Cabañas logran los premios principales en la jura de hembras Angus",
+      "copete": "Las cabañas Don Romeo y Don Cholo se consagraron con los máximos galardones en la Exposición Nacional Angus de Primavera realizada en Cañuelas.",
+      "cuerpo": "La cabaña Don Romeo se alzado con el premio a la Gran Campeón Hembra con su ejemplar colorado \"Primavera\", de dos años y medio, durante la jura realizada el jueves pasado en el predio ferial de Cañuelas. Por su parte, la cabaña Don Cholo obtuvo el título de Gran Campeón Ternera con el ejemplar \"La Más Soñadita\".\n\nLas juras formaron parte de la cuadragésima séptima Exposición Nacional Angus de Primavera y la vigésima sexta Exposición del Ternero Angus, eventos desarrollados en el marco de la Semana Angus de Primavera. Los jurados Emanuel Canale y Julio Fernández estuvieron a cargo de la evaluación de los animales en pista.\n\nLos responsables de las cabañas destacaron el esfuerzo genético y el trabajo cotidiano de los equipos de cría para alcanzar los máximos galardones en una de las muestras más importantes de la raza a nivel nacional.",
+      "guion": "Cabañas logran los premios principales en la jura de hembras Angus",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-28T03:12:47.611Z",
+      "claves": [
+        "Cabaña Don Romeo logró la Gran Campeón Hembra con \"Primavera\".",
+        "Don Cholo obtuvo el premio a la Gran Campeón Ternera.",
+        "Las juras se realizaron en el predio ferial de Cañuelas.",
+        "Participaron los jurados Emanuel Canale y Julio Fernández."
+      ],
+      "seSabe": [
+        "La cabaña Don Romeo obtuvo el premio Gran Campeón Hembra con el ejemplar \"Primavera\", según los datos difundidos por los medios.",
+        "La cabaña Don Cholo ganó en la categoría terneras con \"La Más Soñadita\", de acuerdo con las fuentes.",
+        "Las juras estuvieron a cargo de Emanuel Canale y Julio Fernández en el predio ferial de Cañuelas."
+      ],
+      "textoRedes": "Las cabañas Don Romeo y Don Cholo se consagraron con los máximos galardones en la Exposición Nacional Angus de Primavera realizada en Cañuelas.",
+      "etiquetas": [
+        "Angus",
+        "Cañuelas",
+        "exposición"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Agrositio",
+          "enlace": "https://www.agrositio.com.ar/noticia/248511-don-romeo-hizo-brillar-a-primavera-que-logro-la-gran-campeon-hembra-mientras-que-don-cholo-se-consagro-en-terneras.html",
+          "fecha": "2026-09-25T12:53:30.000Z",
+          "oficial": false,
+          "aporte": "Detalló los premios obtenidos por las cabañas Don Romeo y Don Cholo, junto con las declaraciones de los jurados y los criadores."
+        },
+        {
+          "medio": "Clarín",
+          "enlace": "https://www.clarin.com/rural/don-cholo-consagro-gran-campeon-macho-primavera-juanita-logro-gran-campeon-ternero_0_aIaRZA7AUo.html",
+          "fecha": "2026-09-26T08:12:12.000Z",
+          "oficial": false,
+          "aporte": "Aportó información sobre las juras a cargo de Emanuel Canale y Julio Fernández."
+        },
+        {
+          "medio": "Infoeme",
+          "enlace": "https://www.infoeme.com/agro/2026-9-27-12-24-15-primavera-de-olavarria-gano-el-premio-gran-campeon-hembra-en-la-expo-angus",
+          "fecha": "2026-09-27T15:24:15.000Z",
+          "oficial": false,
+          "aporte": "Mencionó la realización de la 47º Exposición Nacional Angus de Primavera y la 26º Exposición del Ternero Angus en Cañuelas."
+        },
+        {
+          "medio": "La Voz del Pueblo",
+          "enlace": "https://lavozdelpueblo.com.ar/el-mejor-macho-de-la-primavera-angus-fue-de-don-cholo",
+          "fecha": "2026-09-26T01:54:38.000Z",
+          "oficial": false,
+          "aporte": "Información sin contenido relevante en el resumen."
+        },
+        {
+          "medio": "ANDigital",
+          "enlace": "https://andigital.com.ar/nota/143842/semana-del-angus-don-cholo-se-consagro-con-josecito-el-gran-campeon-macho-de-primavera/",
+          "fecha": "2026-09-26T03:00:00.000Z",
+          "oficial": false,
+          "aporte": "Información sin contenido relevante en el resumen."
+        },
+        {
+          "medio": "La Verdad de Ayacucho",
+          "enlace": "https://laverdadayacucho.com.ar/canuelas-josecito-fue-el-gran-campeon-macho-de-la-semana-angus-de-primavera/",
+          "fecha": "2026-09-26T14:43:50.000Z",
+          "oficial": false,
+          "aporte": "Agregó referencias a cabañas de General Alvear y Roque Pérez en la misma exposición."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron seis medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      }
+    },
+    "95c08r": {
+      "estado": "automatica",
+      "titulo": "Mica Viciconte recuerda una anécdota íntima con Fabián Cubero",
+      "copete": "La mediática contó en un streaming un insólito episodio que vivió junto al exfutbolista durante su primer encuentro íntimo. La noticia no tiene vínculos directos con Balcarce.",
+      "cuerpo": "La influencer Mica Viciconte reveló detalles de su primer encuentro íntimo con su pareja, el exfutbolista Fabián Cubero, durante su participación en el streaming La Jugada. Según relató, el deportista sufrió un calambre en medio de la situación, lo que la llevó a preguntarle con humor si necesitaba que lo elongara antes de hacer una pausa para retomar la actividad.\n\nEn la misma charla, la mediática recordó que el episodio ocurrió porque el exdefensor venía de jugar un partido de fútbol. Además, la fuente mencionó como antecedente que en junio pasado la pareja había compartido en el mismo programa que ambos habían iniciado terapia psicológica por separado, tratamiento que suspendieron al poco tiempo por decisión propia.\n\nLa información surge de publicaciones de medios nacionales y no registra ninguna mención ni impacto directo en la ciudad de Balcarce, por lo que su difusión se limita al ámbito de los espectáculos.",
+      "guion": "Mica Viciconte recuerda una anécdota íntima con Fabián Cubero",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-28T03:12:47.611Z",
+      "claves": [
+        "Mica Viciconte relató un episodio íntimo con Fabián Cubero.",
+        "El exfutbolista sufrió un calambre durante su primer encuentro.",
+        "La pareja había hablado en junio sobre su paso por terapia."
+      ],
+      "textoRedes": "Mica Viciconte contó en un streaming una insólito anécdota sobre el primer encuentro íntimo que tuvo con Fabián Cubero, quien sufrió un calambre en plena situación.",
+      "etiquetas": [
+        "Mica Viciconte",
+        "Fabian Cubero",
+        "streaming"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/teleshow/2026/09/26/mica-viciconte-recordo-el-insolito-momento-que-vivio-con-fabian-cubero-la-primera-vez-que-tuvieron-intimidad-te-elongo/",
+          "fecha": "2026-09-26T19:23:11.000Z",
+          "oficial": false,
+          "aporte": "Aportó los detalles sobre el calambre de Cubero, la conversación durante el hecho y el antecedente de la terapia de pareja en junio."
+        },
+        {
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/show/famosos/2026/09/26/mica-viciconte-recordo-el-inconveniente-que-tuvieron-con-fabian-cubero-la-primera-vez-que-hicieron-el-amor/",
+          "fecha": "2026-09-26T20:44:14.000Z",
+          "oficial": false,
+          "aporte": "Registró la existencia de la noticia sin ofrecer texto ni detalles adicionales."
+        },
+        {
+          "medio": "A24",
+          "enlace": "https://www.a24.com/primiciasya/mica-viciconte-revelo-el-insolito-problema-que-surgio-la-primera-vez-fabian-cubero-n1600729",
+          "fecha": "2026-09-27T14:00:00.000Z",
+          "oficial": false,
+          "aporte": "Confirmó que la declaración ocurrió en el programa de streaming La Jugada."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron tres medios independientes.",
+        "sugeridoPorIA": "MEDIA"
       }
     }
   },
