@@ -220,6 +220,53 @@
         "seguidores": 4,
         "publicaciones": 33
       }
+    },
+    {
+      "cuando": "2026-09-28T12:00:16.725Z",
+      "web": {
+        "u12": {
+          "visitas": 19,
+          "vistas": 422
+        },
+        "a12": {
+          "visitas": 36,
+          "vistas": 230
+        },
+        "u24": {
+          "visitas": 55,
+          "vistas": 652
+        },
+        "a24": {
+          "visitas": 30,
+          "vistas": 117
+        },
+        "top": [
+          {
+            "camino": "/",
+            "vistas": 232
+          },
+          {
+            "camino": "/nota/antonino-sganga-gana-en-el-tc-pista-pick-up-en-el-fangio-gun9be",
+            "vistas": 22
+          },
+          {
+            "camino": "/nota/el-movimiento-245-brinda-contencion-y-autoayuda-187bqn1",
+            "vistas": 18
+          }
+        ]
+      },
+      "facebook": {
+        "seguidores": 2,
+        "vistas": 259,
+        "interacciones": 1
+      },
+      "instagram": {
+        "seguidores": 4,
+        "publicaciones": 33,
+        "alcance": 7,
+        "vistas": 9,
+        "interacciones": 0
+      }
     }
   ]
 }
