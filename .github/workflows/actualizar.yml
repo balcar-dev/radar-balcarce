@@ -143,7 +143,11 @@ jobs:
           # dolar-historia.json: la cotización de las 11 de cada día hábil, para
           # la nota propia del dólar y su comparación (web/lib/notas-propias.js).
           # fichas.json: lo que leyó la IA de cada nota y las repetidas (V2.2).
-          git add web/data/portada.json web/data/archivo.json web/data/agenda.json web/data/intentos-ia.json web/data/dolar-historia.json web/data/fichas.json web/data/notas-por-dia.json
+          # banco-fotos.json y fotos-notas/: el banco de fotos (28/09, "Las
+          # fotos" en CRITERIO-EDITORIAL.md); sin este `git add`, la corrida
+          # las armaba pero se perdían al terminar la corrida (encontrado el
+          # 28/09, en la primera corrida real: 8 fotos armadas, cero subidas).
+          git add web/data/portada.json web/data/archivo.json web/data/agenda.json web/data/intentos-ia.json web/data/dolar-historia.json web/data/fichas.json web/data/notas-por-dia.json web/data/banco-fotos.json web/public/fotos-notas/
           if git diff --cached --quiet; then
             echo "Sin novedades: no hay nada que publicar."
           else
@@ -158,7 +162,7 @@ jobs:
               if ! git pull --rebase; then
                 # Sólo los archivos en conflicto, y sólo si son de web/data/.
                 chocan=$(git diff --name-only --diff-filter=U)
-                echo "$chocan" | grep -qv "^web/data/" && { echo "Conflicto fuera de web/data: $chocan"; git rebase --abort; exit 1; }
+                echo "$chocan" | grep -qvE "^web/data/|^web/public/fotos-notas/" && { echo "Conflicto fuera de web/data o fotos-notas: $chocan"; git rebase --abort; exit 1; }
                 echo "$chocan" | xargs -r git checkout --theirs --
                 echo "$chocan" | xargs -r git add --
                 GIT_EDITOR=true git rebase --continue || { git rebase --abort; exit 1; }

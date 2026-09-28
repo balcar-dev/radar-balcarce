@@ -113,3 +113,10 @@ test('la página de la nota muestra la foto sólo si hay, con el crédito en el 
   const bloqueFoto = pagina.match(/\{n\.foto && \([\s\S]*?\)\}/)?.[0] ?? '';
   assert.equal((bloqueFoto.match(/n\.foto\.credito/g) ?? []).length, 1, 'el crédito aparece una sola vez, en el epígrafe');
 });
+
+test('el workflow "Actualizar la web" sube banco-fotos.json y las fotos guardadas (28/09: se armaban y se perdían)', () => {
+  const y = leer('.github/workflows/actualizar.yml');
+  const paso = y.match(/Guardar si cambió algo[\s\S]*?git add ([^\n]+)/)?.[1] ?? '';
+  assert.match(paso, /web\/data\/banco-fotos\.json/);
+  assert.match(paso, /web\/public\/fotos-notas\//);
+});
