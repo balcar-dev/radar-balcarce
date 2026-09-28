@@ -239,8 +239,13 @@ Sobre las **fotos**: no hay una excepción parecida a la de "noticias de
 interés general" para imágenes. Una fotografía es una obra protegida de
 quien la tomó (el fotógrafo o el medio que la publicó), y usarla sin
 permiso — aunque se cite la fuente — no está amparado por el artículo 28.
-Esto confirma lo que el proyecto ya decidió: nunca usar fotos ajenas,
-generar las placas propias por código.
+**Actualización (27/09):** con este riesgo explicado y entendido, Hernán
+decidió aceptarlo para las fotos (no para copiar párrafos de texto, que
+sigue prohibido): se puede recortar la foto de otro medio o de un
+organismo oficial cuando no hay una propia, oficial o de stock que sirva,
+sin su marca de agua ni su nombre adentro de la imagen, con el crédito
+siempre en la cita. Ver `CRITERIO-EDITORIAL.md`, sección "Las fotos", y
+`PENDIENTES.md`, "El banco de fotos".
 
 **Qué hacer (esto ya lo vienen haciendo bien):** resumir con palabras
 propias y citar de dónde salió la info es la práctica seguible y segura.

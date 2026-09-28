@@ -225,12 +225,39 @@ pueblo son pocas notas por semana, y es lo normal. El semáforo no cambia.
 "Sale sola" quiere decir que no espera a nadie **si el semáforo da verde**
 (sección 3) y si tiene cuerpo (sección 4).
 
+### Las fotos (27/09)
+
+Por defecto, una nota lleva: una foto propia de Balcarce (del banco propio o
+tomada por alguien del medio), una foto oficial (Municipio, Provincia, un
+organismo como INTA), una foto de stock libre marcada "imagen ilustrativa",
+o una ilustración de la sección. Nunca una foto inventada por IA que parezca
+real (un hecho, una persona o un lugar que no existió así).
+
+Cuando ninguna de esas sirve, se puede recortar la foto de otro medio o de un
+organismo oficial (decisión de Hernán, 27/09, con el riesgo legal explicado:
+una fotografía es una obra protegida y citar la fuente no la cubre —
+INVESTIGACION.md § 7 —, a diferencia del texto). Dos condiciones que no se
+negocian: nunca puede quedar la marca de agua ni el nombre del otro medio
+adentro de la imagen (el crédito va siempre en la cita, debajo, nunca en la
+foto), y toda foto usada así se guarda en el banco propio (con su crédito y
+de qué nota salió) para revisarla cada tanto y para poder reusarla después
+sin volver a buscarla. Cuando dos medios o más cubrieron el mismo hecho, se
+compara qué foto de cada uno sirve mejor (encuadre, calidad, que no tenga
+gente irreconocible de más) antes de elegir cuál recortar.
+
+Sigue habiendo notas que nunca llevan foto real, sea de quien sea: lo que
+identificaría a un menor o a una víctima (va la placa), y Policiales fuera de
+una foto oficial de Bomberos o la Policía.
+
+Construcción pendiente (PENDIENTES.md, "El banco de fotos"): hoy todas las
+piezas siguen saliendo con la placa propia; esto es el criterio ya
+decidido para cuando se arme.
+
 ### Lo que no entra nunca
 
 | Qué | Por qué |
 |---|---|
 | **Nada que identifique a un menor ni a una víctima** de un delito sexual o de violencia de género: ni nombre, ni apodo, ni iniciales, ni escuela, ni domicilio o cuadra, ni un parentesco que la deje identificada, ni su foto ni su descripción. Aunque la fuente lo publique | Lo exigen las leyes 26.061 y 26.485. No es estilo. El semáforo rojo lo frena (`INVESTIGACION.md` § 6) |
-| **La foto de otro medio.** Va siempre una placa propia con el titular | La ley 11.723 permite reproducir noticias de interés general: cubre el texto, no las fotos |
 | **Una acusación dicha como hecho.** Sin condena o confirmación oficial, se atribuye a quien acusó y va en condicional ("habría") | Doctrina Campillay: es lo que protege al medio de una demanda por calumnias o injurias |
 | **La cotización del dólar como nota de otro medio.** Si el título es "dólar hoy", "dólar blue", "a cuánto cotiza"… la nota no sale sola | La cotización se muestra en `/dolar`, que se actualiza sola, y el sitio arma su propia nota del dólar una vez por día hábil (sección 8). Una nota ajena por cada cotización es relleno |
 | **Lo de otros países sin conexión argentina.** Primero no se trae lo que el medio pone en una sección de otro país (sección 2, "Lo que no se trae"). Si igual se cuela por una sección argentina y el título nombra a Trump, Xi Jinping, Putin, Newsom, California, la Casa Blanca, Gaza, Ucrania, el G20…, y la nota no es de Balcarce, no sale sola | No le importa a nadie de acá: el 26/09 la cumbre Trump–Xi salió sola y el 27/09 salieron una ley de California y un tigre suelto en México. La lista de nombres es `REGLAS_SEMAFORO.internacional` (sólo mira el título) y es un respaldo: lo principal es no traerlo |

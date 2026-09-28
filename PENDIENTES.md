@@ -110,6 +110,42 @@ clave o una decisión.
 
 **Alta**
 
+- **El banco de fotos propio (27/09, Hernán).** Con la política ya decidida
+  (`CRITERIO-EDITORIAL.md`, "Las fotos"), falta construirlo:
+  1. Un archivo o carpeta (`web/data/banco-fotos.json` + los archivos, o una
+     carpeta versionada) con cada foto: de dónde salió (medio o "propia" u
+     "oficial"), el crédito exacto, la licencia si es de stock, la sección o
+     el tema, y de qué nota se usó la primera vez.
+  2. Cuando una nota necesita foto y hay dos medios o más que cubrieron el
+     hecho, comparar sus fotos (encuadre, calidad, sin gente irreconocible
+     de más) y guardar la mejor, recortada, con el crédito en la cita y sin
+     ninguna marca de agua ni nombre de otro medio adentro.
+  3. Guardar en el banco toda foto que se usa, aunque sea una sola vez, para
+     poder reusarla (una foto del autódromo sirve para muchas notas de
+     Automovilismo) y para que Hernán y Andrés la repasen cada tanto y saquen
+     lo que no sirva.
+  4. Un lugar donde ir sumando fotos propias (las que saquen ellos) al mismo
+     banco, con su propio crédito ("Foto: Radar Balcarce").
+  5. Mostrar la foto en la página de la nota (con su cita) y, si corresponde,
+     en la tarjeta para compartir; sin foto que sirva, sigue la placa propia.
+- **Escuchar el podcast en la web (27/09, idea de Hernán).** El audio de cada
+  repaso ya se genera para el reel; hoy se arma en un archivo temporal de la
+  corrida y no queda guardado en ningún lado después de subirlo a Instagram y
+  Facebook ("no alojamos archivos" era sobre eso). Para poner un reproductor
+  en la nota del repaso (`web/lib/notas-propias.js`) hay que:
+  1. Guardar el .mp3 (no el video) en un lugar público de nuestro propio
+     sitio (`web/public/audio/`, como ya se hace con las imágenes para
+     compartir), en la misma corrida que arma el reel.
+  2. Que ese archivo llegue al repositorio antes de que se compile la web
+     (hoy son workflows separados: `redes.yml` arma los reels, `actualizar.yml`
+     compila el sitio).
+  3. Un `<audio controls>` en la página de la nota del repaso, con el
+     archivo de esa fecha.
+- **Sumar el diseño de las piezas a cómo se ven al compartir por WhatsApp**
+  (27/09, Hernán). El rediseño de reels, historias y posteos (dirección B
+  elegida, ver `PROPUESTA-REDES.md` de esa noche) tiene que probarse también
+  como tarjeta de enlace de WhatsApp (`web/lib/tarjeta.js`, la misma que arma
+  Facebook), no sólo como pieza de Instagram.
 - **Mirar los primeros días de redes.** Que salgan bien los tres podcasts, el
   enlace en los posteos de Facebook y el espejo a Instagram; que el contrato del
   día cierre completo (`REDES.md`). Si algo deja de salir, seguir "Si algo dejó

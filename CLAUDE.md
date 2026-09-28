@@ -50,12 +50,23 @@ cada uno, cuándo corre y si cuesta plata), en `INFRAESTRUCTURA.md`.
   controlados contra la tabla del documento (`pruebas/criterio.test.mjs`). Un
   cambio de criterio se hace ahí, no en el código ni en otro documento. Lo que
   nunca se rompe al tocar código: nunca identificar a un menor ni a una
-  víctima (el semáforo rojo; no tocar esa lista sin preguntar), nunca la foto
-  de otro medio, lo que escribe la IA se verifica contra la fuente, cada nota
-  dice quién la escribió, y Política y Policiales esperan a una persona en
-  TODAS las piezas de redes.
+  víctima (el semáforo rojo; no tocar esa lista sin preguntar), nunca una
+  marca de agua o el nombre de otro medio adentro de una imagen (el crédito
+  va siempre en la cita, nunca en la foto — ver "Las fotos" más abajo), lo
+  que escribe la IA se verifica contra la fuente, cada nota dice quién la
+  escribió, y Política y Policiales esperan a una persona en TODAS las
+  piezas de redes.
 - **Todo lo que va a Instagram es video con voz.** La API no acepta una imagen
   si no está en una dirección pública, y no alojamos archivos.
+- **Las fotos (27/09, decisión de Hernán, con el riesgo explicado y aceptado):**
+  antes se generaba siempre una placa propia porque una foto es una obra
+  protegida y citar la fuente no alcanza para usarla (INVESTIGACION.md § 7).
+  Ahora sí se puede usar la foto de otro medio o de un organismo oficial,
+  recortada, cuando no hay una propia, oficial o de stock que sirva —
+  siempre que no tenga la marca de agua ni el nombre del otro medio adentro
+  (eso va sólo en la cita) y que se guarde en el banco propio para
+  revisarla y reusarla. Todavía no está construido: hoy sigue saliendo la
+  placa propia en todos lados (ver PENDIENTES.md, "El banco de fotos").
 - **Tokens y claves nunca en un chat ni en el código.** Van a GitHub Secrets o
   al `.env`. Quien los pega es una persona.
 - **Sin cuerpo no se publica** (25/09). Una nota automática sin cuerpo de al
