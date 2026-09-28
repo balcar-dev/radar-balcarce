@@ -258,10 +258,17 @@ test('el panel usa la misma lógica que /dolar: una consulta por página, sin "e
   assert.match(leer('web/components/dolar-vivo.js'), /useDolar\(foto\)/);
   assert.match(leer('web/components/usar-dolar.js'), /traerDolar\(\)/);
   assert.ok(!/traerDolar/.test(tarjeta + leer('web/components/dolar-vivo.js')), 'la consulta está sólo en usar-dolar.js');
-  // Está en la pila de servicios de la portada, con la foto del build.
+  // Está en el resumen del día de la portada, con la foto del build (28/09:
+  // antes en la pila de servicios directamente, ahora adentro del resumen
+  // con pestañas; components/resumen-dia.js). La farmacia se arma en page.js
+  // (un componente de servidor) y se le pasa ya armada al resumen (de
+  // cliente, por las pestañas): piezas.js trae node:fs y no puede importarse
+  // desde un componente de cliente.
   const portada = leer('web/app/page.js');
-  assert.match(portada, /<TarjetaDolar foto=\{fotoDelDolar\(\)\} \/>/);
-  assert.ok(portada.indexOf('<TarjetaFarmacia') < portada.indexOf('<TarjetaDolar'), 'el dólar va después de la farmacia');
+  assert.match(portada, /<ResumenDelDia\s*\n\s*clima=\{d\.clima\}\s*\n\s*foto=\{fotoDelDolar\(\)\}\s*\n\s*farmaciaPanel=\{<TarjetaFarmacia farmacia=\{d\.farmacias\?\.hoy\} \/>\}\s*\n\s*\/>/);
+  const resumen = leer('web/components/resumen-dia.js');
+  assert.match(resumen, /<TarjetaDolar foto=\{foto\} \/>/);
+  assert.ok(resumen.indexOf('{farmaciaPanel}') < resumen.indexOf('<TarjetaDolar'), 'el dólar va después de la farmacia');
 });
 
 test('el HTML compilado de la portada no dice "en vivo" en el panel del dólar (si ya se compiló)', (t) => {

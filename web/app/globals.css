@@ -577,6 +577,31 @@ main { padding: 24px 0 10px; }
 .pastilla-turno .punto-vivo { background: var(--farmacia); }
 .tarjeta-farmacia .ver-semana { white-space: nowrap; }
 
+/* El resumen del día (28/09): clima, farmacia y dólar en una sola tarjeta
+   con pestañas, en vez de tres apiladas. Adentro siguen viviendo las MISMAS
+   tarjetas de siempre (components/resumen-dia.js): esto sólo les saca su
+   propio marco y su etiqueta repetida ("Dólar" ya lo dice la pestaña), sin
+   tocar el dibujo del clima ni el punto verde de "en vivo". */
+.pestanas-resumen {
+  display: flex; gap: 4px; background: var(--crema); border-radius: 999px; padding: 4px; margin-bottom: 14px;
+}
+.pestana-resumen {
+  flex: 1; border: none; background: transparent; cursor: pointer;
+  padding: 9px 4px; border-radius: 999px; text-align: center;
+  font-family: var(--f-texto); font-size: 12.5px; font-weight: 700; color: var(--suave);
+  font-variant-numeric: tabular-nums;
+}
+.pestana-resumen.activa { background: var(--tinta); color: var(--crema); }
+.oculto-resumen { display: none; }
+/* Cada tarjeta de adentro pierde su propio borde y relleno: el marco ya lo
+   pone .resumen-del-dia. El clima conserva su fondo (el degradado de día o
+   de noche): sacarlo también haría perder el color que avisa si llueve o es
+   de noche, y es la única de las tres que ya se distingue sin esa etiqueta. */
+.resumen-del-dia .tarjeta-farmacia, .resumen-del-dia .panel-dolar { border: none; padding: 0; }
+.resumen-del-dia .panel-dolar .cabecera-tarjeta .etiqueta,
+.resumen-del-dia .pastilla-turno .etiqueta,
+.resumen-del-dia .tarjeta-clima .etiqueta { display: none; }
+
 /* El nombre de la farmacia es un DATO de servicio, no un titular: la letra de
    texto en el mismo tamaño y peso que cualquier otro dato (--t-dato), en tinta.
    Un nombre largo baja de renglón, nunca se corta. */

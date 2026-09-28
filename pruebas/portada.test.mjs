@@ -127,9 +127,16 @@ test('en escritorio la columna de la hora se reserva siempre, con hora o sin ell
 
 test('la columna derecha es una sola pila: servicios y lateral dentro de .derecha, sin filas de grilla aparte', () => {
   const page = leer('web/app/page.js');
-  const orden = ['className="derecha"', '<TarjetaClima', '<TarjetaFarmacia', '<TarjetaDolar', 'Agenda de Balcarce', '<TarjetaBuzon', 'Números útiles', 'className="principal"']
+  const orden = ['className="derecha"', '<ResumenDelDia', 'Agenda de Balcarce', '<TarjetaBuzon', 'Números útiles', 'className="principal"']
     .map((t) => page.indexOf(t));
   assert.ok(orden.every((x, i) => x > 0 && (i === 0 || x > orden[i - 1])), `orden en el HTML: ${orden}`);
+  // Clima, farmacia y dólar siguen en ese orden, ahora adentro del resumen
+  // con pestañas (28/09). La farmacia llega ya armada desde page.js como
+  // "farmaciaPanel" (piezas.js no se puede importar desde un componente de
+  // cliente: trae node:fs).
+  const resumen = leer('web/components/resumen-dia.js');
+  const ordenInterno = ['<TarjetaClima', '{farmaciaPanel}', '<TarjetaDolar'].map((t) => resumen.indexOf(t));
+  assert.ok(ordenInterno.every((x, i) => x > 0 && (i === 0 || x > ordenInterno[i - 1])), `orden adentro del resumen: ${ordenInterno}`);
   const css = leer('web/app/globals.css').replace(/\/\*[\s\S]*?\*\//g, '');
   assert.match(css, /\.dos-columnas \.derecha \{ display: contents; \}/, 'en el celular la pila se desarma');
   assert.match(css, /\.dos-columnas \.derecha \{ display: flex; flex-direction: column; gap: 16px; grid-column: 2; grid-row: 1;/);
@@ -145,12 +152,16 @@ test("los repasos de los podcasts y las notas propias no se sacan por parecerse 
 
 // -------------------------------------- los botones de la farmacia (27/09)
 
-test('la portada no muestra los botones de la farmacia: van dentro de la sección (Hernán, 27/09)', () => {
+test('la farmacia del resumen de la portada muestra los botones: tiene su propia pestaña (28/09)', () => {
+  // Hasta el 27/09 la portada los ocultaba (verBotones={false}) porque la
+  // tarjeta de farmacia competía por lugar, apilada con la de clima y la del
+  // dólar. Con el resumen de pestañas (28/09) cada una tiene toda la tarjeta
+  // para sí sola cuando está activa, así que los botones ya entran bien.
   const piezas = leer('web/components/piezas.js');
   assert.match(piezas, /export function TarjetaFarmacia\(\{ farmacia, verLaSemana = true, verBotones = true \}\)/);
   assert.match(piezas, /\{verBotones && \(llamar \|\| mapa\) && \(/);
   const portada = leer('web/app/page.js');
-  assert.match(portada, /<TarjetaFarmacia farmacia=\{d\.farmacias\?\.hoy\} verBotones=\{false\} \/>/);
+  assert.match(portada, /<TarjetaFarmacia farmacia=\{d\.farmacias\?\.hoy\} \/>/);
   const farmacias = leer('web/app/farmacias/page.js');
   assert.match(farmacias, /<TarjetaFarmacia farmacia=\{f\.hoy\} verLaSemana=\{false\} \/>/, 'en /farmacias los botones siguen (verBotones por defecto)');
 });

@@ -5,8 +5,7 @@ import {
   TarjetaFarmacia, TarjetaBuzon,
   Etiqueta, TituloSeccion, FilaNota, Evento, Hace,
 } from '@/components/piezas';
-import { TarjetaClima } from '@/components/clima-vivo';
-import TarjetaDolar from '@/components/tarjeta-dolar';
+import { ResumenDelDia } from '@/components/resumen-dia';
 import { Aviso } from '@/components/avisos';
 import { MOSTRAR_TEMAS } from '@/lib/sitio';
 import { metadatosDePagina } from '@/components/metadatos';
@@ -76,9 +75,11 @@ export default function Portada() {
             buscar. Antes había que pasar ochenta titulares para ver la
             farmacia de turno. */}
         <aside className="servicios">
-          <TarjetaClima clima={d.clima} />
-          <TarjetaFarmacia farmacia={d.farmacias?.hoy} verBotones={false} />
-          <TarjetaDolar foto={fotoDelDolar()} />
+          <ResumenDelDia
+            clima={d.clima}
+            foto={fotoDelDolar()}
+            farmaciaPanel={<TarjetaFarmacia farmacia={d.farmacias?.hoy} />}
+          />
           <Aviso slot="clima" />
         </aside>
 
