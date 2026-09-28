@@ -1,235 +1,81 @@
 {
-  "generado": "2026-09-28T15:02:49.509Z",
+  "generado": "2026-09-28T15:34:22.139Z",
   "notas": [
     {
-      "id": "em0phg",
-      "titulo": "Avanza la privatizacion de Enarsa con la venta de tres termoelectricas",
-      "copete": "El Gobierno nacional dispuso la venta de las participaciones de la empresa estatal en tres centrales termoelectricas mediante licitaciones publicas, como parte del proceso previsto en la Ley de Bases.",
-      "cuerpo": "en tres centrales termoelectricas, mediante licitaciones publicas con alcance nacional e internacional. y, en una etapa posterior, Central Termoelectrica Guillermo Brown S.A.\n\nLa decision forma parte de la privatizacion total de la empresa estatal autorizada en el marco de la legislacion vigente. El Ministerio de Economia y la Agencia de Transformacion de Empresas Publicas deberan instrumentar los procedimientos para la transferencia de las tenencias accionarias en las dos primeras plantas, mientras que el caso de la central Guillermo Brown tendra un cronograma diferente hasta completar la liquidacion del fideicomiso vinculado.\n\nEl proceso se instrumenta a traves de los mecanismos previstos en la normativa de reforma del Estado, sin que por el momento se hayan precisado los plazos ni los requisitos detallados para la presentacion de ofertas.",
-      "guion": "Avanza la privatizacion de Enarsa con la venta de tres termoelectricas",
-      "seccion": "Economía",
-      "medios": [
-        "Infobae",
-        "TN (Todo Noticias)",
-        "El Cronista",
-        "Ámbito",
-        "Diario Popular",
-        "Noticias Argentinas (NA)",
-        "La Nueva"
-      ],
-      "enlace": "https://www.infobae.com/economia/2026/09/28/iniciaron-un-nuevo-proceso-de-privatizacion-de-las-acciones-de-enarsa/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-28T14:25:58.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-28T11:30:57.376Z",
-      "relevancia": 83,
-      "local": false,
-      "publicadaPor": "ia",
-      "publicadaCuando": "2026-09-28T11:22:22.809Z",
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "El Gobierno nacional dispuso la venta de acciones en tres centrales termoelectricas.",
-        "La medida se realiza mediante licitaciones publicas nacionales e internacionales.",
-        "El proceso incluye a las sociedades Manuel Belgrano, Jose de San Martin y Guillermo Brown."
-      ],
-      "noConfirmado": [
-        "No se informaron las fechas exactas para las convocatorias a licitacion ni los requisitos para los potenciales oferentes.",
-        "No se detallaron los montos ni las condiciones economicas de la operacion."
-      ],
-      "etiquetas": [
-        "Enarsa",
-        "privatizacion",
-        "termoelectricas",
-        "Gobierno nacional",
-        "energia"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Infobae",
-          "enlace": "https://www.infobae.com/economia/2026/09/28/iniciaron-un-nuevo-proceso-de-privatizacion-de-las-acciones-de-enarsa/",
-          "fecha": "2026-09-28T07:44:28.000Z",
-          "oficial": false,
-          "aporte": "Detallo el alcance de la medida sobre las tres centrales termoelectricas y los antecedentes legales de las sociedades."
-        },
-        {
-          "medio": "Noticias Argentinas (NA)",
-          "enlace": "https://noticiasargentinas.com/economia/el-gobierno-lanzo-la-segunda-etapa-de-privatizacion-de-enarsa-y-abre-licitacion-por-tres-termoelectricas_a6aba46abb62936833e61535d",
-          "fecha": "2026-09-28T10:50:00.000Z",
-          "oficial": false,
-          "aporte": "Informo el lanzamiento de la segunda etapa del proceso de privatizacion de Enarsa mediante licitacion publica."
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron dos medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "avanza-la-privatizacion-de-enarsa-con-la-venta-de-tres-termoelectricas"
-    },
-    {
-      "id": "dolar20260928",
-      "propia": "dolar",
-      "titulo": "El dólar blue cotiza a $1.560 este lunes 28; el oficial, a $1.545",
-      "copete": "A las 11:01 de este lunes 28 de septiembre, el dólar oficial se vendía a $1.545 y el blue, a $1.560. La brecha entre los dos era de 1,0%.",
-      "cuerpo": "Según los datos de DolarApi.com consultados a las 11:01, el dólar oficial se compraba a $1.495 y se vendía a $1.545. El blue se compraba a $1.540 y se vendía a $1.560. Para la venta, el blue estaba $15 por encima del oficial, una brecha de 1,0%.\n\nEntre los dólares que se operan en la bolsa, el MEP (o dólar Bolsa) se vendía a $1.557,30 y el contado con liqui, a $1.616,60. El dólar tarjeta, que suma al oficial los impuestos y percepciones de los gastos en el exterior, estaba a $2.008,50. El mayorista, el que usan los bancos y las empresas, estaba a $1.525,50.\n\nContra la cotización que registramos el viernes 25, el blue no cambió y el oficial subió $5 (0,3%). La cotización cambia a lo largo del día: los valores actualizados de todos los tipos de dólar están en la página del dólar de Radar Balcarce.",
-      "guion": null,
-      "seccion": "Economía",
-      "local": false,
-      "relevancia": 55,
-      "medios": [
-        "DolarApi.com"
-      ],
-      "enlace": "https://dolarapi.com",
-      "fuentesConsultadas": [
-        {
-          "medio": "DolarApi.com",
-          "enlace": "https://dolarapi.com"
-        }
-      ],
-      "teniaImagenLaFuente": false,
-      "fecha": "2026-09-28T14:01:44.189Z",
-      "sinFecha": false,
-      "visto": "2026-09-28T14:01:44.189Z",
-      "publicadaPor": null,
-      "publicadaCuando": "2026-09-28T14:01:44.189Z",
-      "temas": [],
-      "etiquetas": [
-        "dólar",
-        "dólar blue",
-        "dólar oficial",
-        "cotización"
-      ],
-      "como": "automatica",
-      "firma": "Nota de Radar Balcarce armada con los datos de DolarApi.com a las 11:01.",
-      "enlacesEnTexto": [
-        {
-          "texto": "página del dólar de Radar Balcarce",
-          "href": "/dolar"
-        }
-      ],
-      "destacados": [
-        {
-          "texto": "Ver la cotización actualizada",
-          "href": "/dolar"
-        }
-      ],
-      "slug": "el-dolar-blue-cotiza-a-1-560-este-lunes-28-el-oficial-a-1-545"
-    },
-    {
-      "id": "mk94me",
-      "titulo": "Franco Colapinto choca con Pierre Gasly en el Gran Premio de Azerbaiyán",
-      "copete": "El piloto argentino colisionó con su compañero de equipo y con Lando Norris durante el relanzamiento de la carrera en Bakú. El incidente dejó a ambos fuera de competencia y generó distintas reacciones en la categoría.",
-      "cuerpo": "Tras el impacto, el piloto argentino se dirigió al box de Alpine para disculparse con el personal y con el corredor francés, quien mantuvo una postura fría y evitó declaraciones extensas ante la prensa. El antecedente inmediato señala que ambos integran la escudería Alpine y habían protagonizado semanas atrás tensiones internas por posiciones en pista, según consignó la cobertura previa.\n\nEn cuanto a las consecuencias para el corredor argentino, el circuito callejero de Bakú albergó este sábado la decimosexta fecha de la temporada, donde el deportista había partido desde el noveno puesto antes del incidente que determinó el abandono general de los involucrados en la maniobra.",
-      "guion": "Franco Colapinto choca con Pierre Gasly en el Gran Premio de Azerbaiyán",
+      "id": "9f1kip",
+      "titulo": "Carlos Bianco aclara la polémica por la inversión en el autódromo",
+      "copete": "El ministro de Gobierno bonaerense explicó la diferencia entre los desembolsos nominales y los valores actualizados de la obra en el autódromo Juan Manuel Fangio.",
+      "cuerpo": "El ministro de Gobierno bonaerense, Carlos Bianco, detalló el criterio utilizado para calcular los casi tres mil trescientos millones de pesos informados como inversión en la recuperación del autódromo Juan Manuel Fangio.\n\nLa discusión surgió a partir de la discrepancia entre el monto comunicado por la Provincia y los registros municipales y la rendición de cuentas. Mientras los documentos comunales reflejaban montos nominales menores —ubicados en torno a los mil millones y mil trescientos millones de pesos según distintos tramos del intercambio—, el Gobierno provincial sostuvo que el valor presente refleja el costo real de los trabajos ejecutados a lo largo de los últimos años.",
+      "guion": "Carlos Bianco aclara la polémica por la inversión en el autódromo",
       "seccion": "Automovilismo",
       "medios": [
-        "La Nación",
-        "Clarín",
-        "0223 (Mar del Plata)",
-        "El Eco de Tandil",
-        "LU9 Mar del Plata",
-        "QZ Noticias (Mar del Plata)",
-        "Ecos Diarios (Necochea)",
-        "Campeones",
-        "Motorsport",
-        "Infobae",
-        "TN (Todo Noticias)",
-        "El Destape",
-        "Perfil",
-        "Página/12",
-        "A24",
-        "Ámbito",
-        "TyC Sports",
-        "Minuto Uno",
-        "C5N",
-        "Crónica",
-        "Radio Mitre",
-        "Canal 26",
-        "Diario Popular",
-        "Noticias Argentinas (NA)",
-        "El Día",
-        "La Nueva",
-        "0221",
-        "InfoRegión",
-        "El Marplatense",
-        "Mi8 (Canal 8 Mar del Plata)",
-        "Doble Amarilla",
-        "Bolavip Argentina"
+        "La Noticia 1"
       ],
-      "enlace": "https://www.lanacion.com.ar/deportes/automovilismo/gasly-tuvo-una-fria-reaccion-ante-las-disculpas-de-colapinto-por-el-choque-en-baku-nid26092026/",
+      "enlace": "https://www.lanoticia1.com/noticia/autodromo-de-balcarce-bianco-respondio-por-la-polemica-de-los-3300-millones-y-explico-como-se-calculo",
       "teniaImagenLaFuente": true,
-      "fecha": "2026-09-28T13:46:08.000Z",
+      "fecha": "2026-09-28T13:57:23.000Z",
       "sinFecha": false,
-      "visto": "2026-09-27T16:12:25.801Z",
+      "visto": "2026-09-28T15:31:05.922Z",
       "relevancia": 100,
-      "local": false,
-      "publicadaPor": "ia",
-      "publicadaCuando": "2026-09-27T03:51:07.207Z",
-      "temas": [],
-      "como": "automatica",
-      "noConfirmado": [
-        "No se especificaron sanciones oficiales por parte de las autoridades de la competición tras el incidente."
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [
+        "autodromo",
+        "fangio"
       ],
+      "como": "automatica",
+      "claves": [
+        "Carlos Bianco explicó el cálculo de los fondos invertidos en el autódromo.",
+        "La Provincia sostiene que la obra asciende a tres mil trescientos millones de pesos actualizados.",
+        "Registros municipales reflejan desembolsos nominales menores durante la ejecución."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El ministro bonaerense Carlos Bianco explicó el criterio de actualización inflacionaria detrás de los casi tres mil trescientos millones de pesos informados para la obra del autódromo local.",
       "etiquetas": [
-        "Franco Colapinto",
-        "Pierre Gasly",
-        "Formula 1",
-        "Gran Premio de Azerbaiyán"
+        "autódromo",
+        "Carlos Bianco",
+        "inversión",
+        "Provincia de Buenos Aires",
+        "polémica"
       ],
       "fuentesConsultadas": [
         {
-          "medio": "La Nación",
-          "enlace": "https://www.lanacion.com.ar/deportes/automovilismo/gasly-tuvo-una-fria-reaccion-ante-las-disculpas-de-colapinto-por-el-choque-en-baku-nid26092026/",
-          "fecha": "2026-09-26T15:07:30.000Z",
+          "medio": "La Noticia 1",
+          "enlace": "https://www.lanoticia1.com/noticia/autodromo-de-balcarce-bianco-respondio-por-la-polemica-de-los-3300-millones-y-explico-como-se-calculo",
+          "fecha": "2026-09-28T13:57:23.000Z",
           "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Ámbito",
-          "enlace": "https://www.ambito.com/deportes/formula-1-la-reaccion-pierre-gasly-el-choque-franco-colapinto-el-gp-azerbaiyan-n6326967",
-          "fecha": "2026-09-26T13:05:00.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Motorsport",
-          "enlace": "https://es.motorsport.com/f1/news/franco-colapinto-sancion-accidente-baku/10859242/?utm_source=RSS&utm_medium=referral&utm_campaign=RSS-F1&utm_term=News&utm_content=es",
-          "fecha": "2026-09-26T13:04:10.000Z",
-          "oficial": false,
-          "aporte": null
+          "aporte": "Detalles sobre las declaraciones de Carlos Bianco respecto a la diferencia entre pagos nominales e inflación en la obra del autódromo."
         }
       ],
       "antecedentes": [
         {
-          "id": "f0797k",
-          "titulo": "Franco Colapinto choca con Pierre Gasly en el Gran Premio de Azerbaiyán",
-          "fecha": "2026-09-26T12:49:58.000Z",
-          "ruta": "/nota/franco-colapinto-choca-con-pierre-gasly-en-el-gran-premio-de-f0797k"
+          "id": "9oermg",
+          "titulo": "Autódromo: Bianco habló de una inversión de $3.300 millones, pero el monto de la obra fue de $1.038 millones",
+          "fecha": "2026-09-25T00:30:34.751Z",
+          "ruta": "/nota/autodromo-bianco-hablo-de-una-inversion-de-3-300-millones-pero-el-9oermg"
         },
         {
-          "id": "iyfntb",
-          "titulo": "La reacción de Sofía Solá, la hija de Maru Botana, al ser relacionada sentimentalmente con Franco Colapinto",
-          "fecha": "2026-09-24T21:03:28.000Z",
-          "ruta": "/nota/la-reaccion-de-sofia-sola-la-hija-de-maru-botana-al-ser-relacionada-iyfntb"
+          "id": "1ou5oaz",
+          "titulo": "Kicillof y Bianco explican los montos de la obra del autódromo",
+          "fecha": "2026-09-28T07:30:59.663Z",
+          "ruta": "/nota/kicillof-y-bianco-explican-los-montos-de-la-obra-del-autodromo-1ou5oaz"
         },
         {
-          "id": "he08gv",
-          "titulo": "Franco Colapinto larga noveno en el Gran Premio de Azerbaiyán",
-          "fecha": "2026-09-26T09:30:00.000Z",
-          "ruta": "/nota/franco-colapinto-larga-noveno-en-el-gran-premio-de-azerbaiyan-he08gv"
+          "id": "1chec7e",
+          "titulo": "Carlos Bianco detalla la inversión en la reinauguración del autódromo",
+          "fecha": "2026-09-26T00:15:11.000Z",
+          "ruta": "/nota/carlos-bianco-destaca-la-inversion-y-las-obras-en-el-autodromo-de-1chec7e"
         }
       ],
       "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron tres medios independientes.",
-        "sugeridoPorIA": "ALTA"
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
       },
-      "slug": "franco-colapinto-choca-con-pierre-gasly-en-el-gran-premio-de",
-      "foto": {
-        "archivo": "fotos-notas/mk94me.jpg",
-        "credito": "Foto: Motorsport"
-      }
+      "slug": "carlos-bianco-aclara-la-polemica-por-la-inversion-en-el-autodromo"
     },
     {
       "id": "1xs34mg",
@@ -313,10 +159,10 @@
     },
     {
       "id": "1d5l8dl",
-      "titulo": "Pato Naranja gana por amplio margen y apunta a los playoffs",
-      "copete": "El equipo balcarceño superó a Pampa por 99 a 12 en el Torneo Desarrollo. Quedan dos fechas para el cierre de la fase regular.",
-      "cuerpo": "El sábado pasado, Pato Naranja se impuso por 99 a 12 frente a Pampa en una nueva fecha del Torneo Desarrollo de rugby. Con este resultado, el conjunto de Balcarce quedó a dos jornadas del cierre de la fase regular y busca asegurar su clasificación a los playoffs.\n\nLa tabla de posiciones es liderada por Villagesell, seguido por Pato Naranja, Camarones Azul y Pato Negro. Desde la institución destacaron la importancia de los próximos compromisos y remarcaron el objetivo de lograr buenos resultados para meter a ambos equipos locales en la siguiente instancia.\n\n“No hay descanso, pero seguimos avanzando.",
-      "guion": "Pato Naranja gana por amplio margen y apunta a los playoffs",
+      "titulo": "Rugby: Pato Naranja ganó y va por la clasificación a los playoffs",
+      "copete": "El equipo balcarceño se impuso por 99 a 12 ante Pampa en una nueva fecha del Torneo Desarrollo y quedó a dos jornadas del cierre de la fase regular.",
+      "cuerpo": "El sábado pasado, Pato Naranja se impuso por 99 a 12 frente a Pampa en una nueva fecha del Torneo Desarrollo de rugby. Con este resultado, el conjunto de Balcarce quedó a dos jornadas del cierre de la fase regular y busca asegurar su clasificación a los playoffs.\n\nLa tabla de posiciones es liderada por Villagesell, seguido por Pato Naranja, Camarones Azul y Pato Negro. Desde el club remarcaron el objetivo de lograr buenos resultados para meter a ambos equipos locales en la siguiente instancia: “No hay descanso, pero seguimos avanzando. Se termina el año y queremos que sea una fiesta”.",
+      "guion": null,
       "seccion": "Deportes",
       "medios": [
         "Radio Gabal (FM 104.1)"
@@ -332,33 +178,15 @@
       "publicadaCuando": null,
       "temas": [],
       "como": "automatica",
-      "claves": [
-        "Pato Naranja venció a Pampa por 99 a 12.",
-        "El encuentro correspondió al Torneo Desarrollo de rugby.",
-        "Restan dos fechas para finalizar la fase regular.",
-        "El club convocó a los vecinos para los partidos del próximo fin de semana."
-      ],
-      "textoRedes": "Pato Naranja derrotó a Pampa por 99 a 12 en el Torneo Desarrollo de rugby y quedó a dos fechas del cierre de la fase regular. El equipo local se prepara para definir su pase a los playoffs en los próximos encuentros.",
-      "etiquetas": [
-        "rugby",
-        "Pato Naranja",
-        "Torneo Desarrollo",
-        "Balcarce"
-      ],
       "fuentesConsultadas": [
         {
           "medio": "Radio Gabal (FM 104.1)",
           "enlace": "https://www.radiogabal.com.ar/index.php/deportes/rugby-pato-naranja-gano-y-va-por-la-clasificacion-a-los-playoffs",
           "fecha": "2026-09-28T11:44:45.000Z",
           "oficial": false,
-          "aporte": "Informó sobre el triunfo de Pato Naranja ante Pampa por 99 a 12 en el Torneo Desarrollo y la situación de los equipos balcarceños en la tabla."
+          "aporte": null
         }
       ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
       "slug": "pato-naranja-gana-por-amplio-margen-y-apunta-a-los-playoffs",
       "foto": {
         "archivo": "fotos-notas/1d5l8dl.jpg",
@@ -366,10 +194,76 @@
       }
     },
     {
+      "id": "em0phg",
+      "titulo": "Avanza la privatización de Enarsa con la venta de tres termoeléctricas",
+      "copete": "El Gobierno nacional dispuso la venta de las participaciones de la empresa estatal en tres centrales termoeléctricas mediante licitaciones públicas, como parte del proceso previsto en la Ley de Bases.",
+      "cuerpo": "El Gobierno nacional autorizó la venta de las participaciones estatales de Enarsa en las centrales termoeléctricas Manuel Belgrano y José de San Martín, mediante licitaciones públicas con alcance nacional e internacional. Enarsa posee el 65,01% del capital de la primera y el 68,83% de la segunda. En una etapa posterior se sumará la Central Termoeléctrica Guillermo Brown S.A.\n\nLa decisión forma parte de la privatización total de la empresa estatal autorizada en el marco de la legislación vigente. El Ministerio de Economía y la Agencia de Transformación de Empresas Públicas deberán instrumentar los procedimientos para la transferencia de las tenencias accionarias en las dos primeras plantas, mientras que el caso de la central Guillermo Brown tendrá un cronograma diferente hasta completar la liquidación del fideicomiso vinculado.\n\nEl proceso se instrumenta a través de los mecanismos previstos en la normativa de reforma del Estado, sin que por el momento se hayan precisado los plazos ni los requisitos detallados para la presentación de ofertas.",
+      "guion": "Avanza la privatizacion de Enarsa con la venta de tres termoelectricas",
+      "seccion": "Economía",
+      "medios": [
+        "Infobae",
+        "TN (Todo Noticias)",
+        "El Cronista",
+        "Diario Popular",
+        "Noticias Argentinas (NA)",
+        "La Nueva",
+        "Ámbito"
+      ],
+      "enlace": "https://www.infobae.com/economia/2026/09/28/iniciaron-un-nuevo-proceso-de-privatizacion-de-las-acciones-de-enarsa/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-28T10:50:00.000Z",
+      "sinFecha": false,
+      "visto": "2026-09-28T11:30:57.376Z",
+      "relevancia": 89,
+      "local": false,
+      "publicadaPor": "ia",
+      "publicadaCuando": "2026-09-28T11:22:22.809Z",
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "El Gobierno nacional dispuso la venta de acciones en tres centrales termoelectricas.",
+        "La medida se realiza mediante licitaciones publicas nacionales e internacionales.",
+        "El proceso incluye a las sociedades Manuel Belgrano, Jose de San Martin y Guillermo Brown."
+      ],
+      "noConfirmado": [
+        "No se informaron las fechas exactas para las convocatorias a licitacion ni los requisitos para los potenciales oferentes.",
+        "No se detallaron los montos ni las condiciones economicas de la operacion."
+      ],
+      "etiquetas": [
+        "Enarsa",
+        "privatizacion",
+        "termoelectricas",
+        "Gobierno nacional",
+        "energia"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/economia/2026/09/28/iniciaron-un-nuevo-proceso-de-privatizacion-de-las-acciones-de-enarsa/",
+          "fecha": "2026-09-28T07:44:28.000Z",
+          "oficial": false,
+          "aporte": "Detallo el alcance de la medida sobre las tres centrales termoelectricas y los antecedentes legales de las sociedades."
+        },
+        {
+          "medio": "Noticias Argentinas (NA)",
+          "enlace": "https://noticiasargentinas.com/economia/el-gobierno-lanzo-la-segunda-etapa-de-privatizacion-de-enarsa-y-abre-licitacion-por-tres-termoelectricas_a6aba46abb62936833e61535d",
+          "fecha": "2026-09-28T10:50:00.000Z",
+          "oficial": false,
+          "aporte": "Informo el lanzamiento de la segunda etapa del proceso de privatizacion de Enarsa mediante licitacion publica."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "avanza-la-privatizacion-de-enarsa-con-la-venta-de-tres-termoelectricas"
+    },
+    {
       "id": "1ou5oaz",
       "titulo": "Kicillof y Bianco explican los montos de la obra del autódromo",
       "copete": "El gobernador bonaerense y el ministro de Gobierno aclararon la diferencia entre los desembolsos nominales y la cifra actualizada informada por la Provincia para el circuito local.",
-      "cuerpo": "La discusión surgió por la diferencia entre los montos nominales registrados a nivel local y la cifra de casi tres mil millones de pesos informada por la Provincia. Al respecto, Kicillof defendió el monto y señaló que corresponde a la actualización de los desembolsos realizados durante los últimos tres años.\n\nEn paralelo, el municipio había indicado transferencias por algo más de mil millones de pesos, además de recursos propios y no monetarios para completar los trabajos.",
+      "cuerpo": "La discusión surgió por la diferencia entre los montos nominales registrados a nivel local y la cifra de 3.300 millones de pesos que informa actualmente la Provincia. Kicillof defendió el monto y señaló que corresponde a la actualización de los desembolsos realizados durante los últimos tres años. El ministro de Gobierno bonaerense, Carlos Bianco, precisó que el monto nominal abonado en cuatro pagos desde junio de 2023 asciende a 1.300 millones de pesos, y que ese valor, actualizado a precios de hoy, equivale a los 3.300 millones que reclama la Provincia.\n\nEn paralelo, el municipio había indicado transferencias por algo más de mil millones de pesos, además de recursos propios y no monetarios para completar los trabajos.",
       "guion": "Kicillof y Bianco explican los montos de la obra del autódromo",
       "seccion": "Política",
       "medios": [
@@ -446,77 +340,94 @@
       }
     },
     {
-      "id": "tawnyj",
-      "titulo": "El Gobierno confirma el pago del bono previsional para octubre",
-      "copete": "El Gobierno nacional oficializó la entrega de un refuerzo económico en octubre para jubilados, pensionados y titulares de prestaciones no contributivas de la ANSES.",
-      "cuerpo": "El plus extraordinario y no remunerativo está dirigido a quienes perciben jubilaciones y pensiones contributivas, la Pensión Universal para el Adulto Mayor y pensiones no contributivas. Aquellos cuyos haberes sean menores o iguales al mínimo cobrarán el monto máximo del refuerzo, mientras que quienes superen ese umbral recibirán una suma proporcional para alcanzar el equivalente al haber mínimo más el adicional.\n\nLa ANSES quedó facultada para administrar la liquidación, efectuar controles y emitir normas complementarias para la acreditación del beneficio a los titulares.",
-      "guion": "El Gobierno confirma el pago del bono previsional para octubre",
-      "seccion": "Economía",
+      "id": "in20o1",
+      "titulo": "Hernán Palazzo gana la final del TC Pick Up en el autódromo Fangio",
+      "copete": "El autódromo Juan Manuel Fangio volvió a recibir al automovilismo nacional tras casi quince años. Casi 27 mil personas presenciaron el regreso del circuito serrano, con el triunfo de Hernán Palazzo en la final del TC Pick Up.",
+      "cuerpo": "El autódromo Juan Manuel Fangio volvió a recibir competencias nacionales de automovilismo este fin de semana, tras casi quince años sin actividad oficial desde la tragedia de noviembre de 2011, según informó un medio local. Cerca de 27 mil personas acompañaron la reapertura del circuito en la sierra La Barrosa, que contó con habilitación provisoria y el visto bueno de la ACTC tras un extenso proceso de recuperación en pista, boxes y medidas de seguridad.\n\nEn lo deportivo, el pinamarense Hernán Palazzo, al mando de una Toyota Hilux, se quedó con la victoria en la final del TC Pick Up tras una competencia cargada de alternativas, seguido por los pilotos de Ford Ranger Diego Ciantini y Otto Fritzler. El evento también marcó el regreso de figuras como Omar Martínez con permiso especial de la CAF y la participación de los locales José y Diego Ciantini y Santiago Mangoni, además de las categorías TC Pista Pick Up y Turismo Special de la Costa.\n\nLas actividades comenzaron el viernes con una reinauguración oficial y una caravana de camionetas que culminó en el Museo Fangio, luego de años en los que el escenario permaneció inactivo tras el accidente fatal de Guido Falaschi.",
+      "guion": "Hernán Palazzo gana la final del TC Pick Up en el autódromo Fangio",
+      "seccion": "Automovilismo",
       "medios": [
-        "La Nación",
-        "Infobae",
-        "Ámbito",
-        "TN (Todo Noticias)",
-        "El Cronista",
-        "El Destape",
-        "Perfil",
-        "A24",
-        "iProfesional",
-        "Minuto Uno",
-        "C5N",
-        "Crónica",
-        "Noticias Argentinas (NA)",
-        "El Día",
-        "La Nueva",
-        "Zona Norte Diario",
-        "El Eco de Tandil"
+        "El Día"
       ],
-      "enlace": "https://www.infobae.com/economia/2026/09/28/el-gobierno-confirmo-el-pago-del-bono-para-jubilados-y-pensionados-para-octubre/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-28T05:10:44.000Z",
+      "enlace": "https://www.eldia.com/deportes/balcarce-el-fangio-volvio-a-todo-esplendor-deportes_1790571518",
+      "teniaImagenLaFuente": false,
+      "fecha": "2026-09-28T04:58:38.000Z",
       "sinFecha": false,
-      "visto": "2026-09-28T06:01:00.563Z",
-      "relevancia": 79,
-      "local": false,
-      "publicadaPor": "ia",
-      "publicadaCuando": "2026-09-28T07:22:11.860Z",
-      "temas": [],
+      "visto": "2026-09-28T12:05:25.938Z",
+      "relevancia": 80,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [
+        "fangio"
+      ],
       "como": "automatica",
+      "claves": [
+        "El autódromo Fangio reabrió tras casi quince años sin carreras nacionales.",
+        "Casi 27 mil personas asistieron a la competencia del fin de semana.",
+        "Hernán Palazzo ganó la final del TC Pick Up con una Toyota Hilux.",
+        "Los pilotos locales Diego Ciantini, José Ciantini y Santiago Mangoni volvieron a competir en Balcarce."
+      ],
+      "seSabe": [
+        "El autódromo Juan Manuel Fangio volvió a recibir al automovilismo nacional tras casi quince años, según un medio local.",
+        "Cerca de 27 mil personas asistieron a la reapertura del circuito serrano durante el fin de semana.",
+        "Hernán Palazzo ganó la final del TC Pick Up con una Toyota Hilux, secundado por Diego Ciantini y Otto Fritzler.",
+        "La actividad nacional en el circuito se encontraba interrumpida desde la tragedia de noviembre de 2011, en la que murió Guido Falaschi.",
+        "Participaron las categorías TC Pick Up, TC Pista Pick Up y Turismo Special de la Costa."
+      ],
+      "textoRedes": "El autódromo Juan Manuel Fangio volvió a recibir al automovilismo nacional ante una multitud y Hernán Palazzo se quedó con el triunfo en el TC Pick Up.",
       "etiquetas": [
-        "Jubilados",
-        "ANSES",
-        "Bono",
-        "Gobierno nacional",
-        "Economía"
+        "Autódromo Juan Manuel Fangio",
+        "TC Pick Up",
+        "Hernán Palazzo",
+        "Automovilismo",
+        "Balcarce"
       ],
       "fuentesConsultadas": [
         {
-          "medio": "Infobae",
-          "enlace": "https://www.infobae.com/economia/2026/09/28/el-gobierno-confirmo-el-pago-del-bono-para-jubilados-y-pensionados-para-octubre/",
-          "fecha": "2026-09-28T05:10:44.000Z",
+          "medio": "El Día",
+          "enlace": "https://www.eldia.com/deportes/balcarce-el-fangio-volvio-a-todo-esplendor-deportes_1790571518",
+          "fecha": "2026-09-28T04:58:38.000Z",
           "oficial": false,
-          "aporte": "Confirmó los detalles sobre los grupos alcanzados, el carácter no remunerativo del refuerzo y las condiciones de liquidación según los haberes."
+          "aporte": "Detalles de la reapertura del autódromo, cantidad de público, ganadores de la competencia y antecedentes del cierre en 2011."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "83u2vt",
+          "titulo": "El autódromo Juan Manuel Fangio reabre tras quince años",
+          "fecha": "2026-09-28T03:01:51.643Z",
+          "ruta": "/nota/el-autodromo-juan-manuel-fangio-reabre-tras-quince-anos-83u2vt"
         },
         {
-          "medio": "La Nación",
-          "enlace": "https://www.lanacion.com.ar/economia/el-gobierno-confirmo-el-bono-previsional-de-octubre-para-jubilados-y-pensionados-nid28092026/",
-          "fecha": "2026-09-28T05:39:37.000Z",
-          "oficial": false,
-          "aporte": "Aportó el número de decreto oficial que formaliza la medida y el monto máximo del bono."
+          "id": "1oj9qzr",
+          "titulo": "El automovilismo nacional convoca a una multitud en el Fangio",
+          "fecha": "2026-09-27T23:49:17.000Z",
+          "ruta": "/nota/el-automovilismo-nacional-convoca-a-una-multitud-en-el-fangio-1oj9qzr"
+        },
+        {
+          "id": "gun9be",
+          "titulo": "Antonino Sganga gana en el TC Pista Pick Up en el Fangio",
+          "fecha": "2026-09-27T23:42:42.000Z",
+          "ruta": "/nota/antonino-sganga-gana-en-el-tc-pista-pick-up-en-el-fangio-gun9be"
         }
       ],
       "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron dos medios independientes.",
-        "sugeridoPorIA": "ALTA"
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
       },
-      "slug": "el-gobierno-oficializa-el-pago-del-bono-previsional-para-octubre"
+      "slug": "hernan-palazzo-gana-la-final-del-tc-pick-up-en-el-autodromo-fangio",
+      "foto": {
+        "archivo": "fotos-notas/in20o1.jpg",
+        "credito": "Foto: El Día"
+      }
     },
     {
       "id": "187bqn1",
-      "titulo": "El Movimiento 245 brinda contención y autoayuda",
+      "titulo": "El “Movimiento 245” brinda contención y autoayuda",
       "copete": "El espacio de autoayuda y casa de contención funciona en el Prado Español. Ofrece acompañamiento para problemáticas de consumo y dificultades emocionales.",
-      "cuerpo": "Durante una entrevista radial, los integrantes del espacio Candela Vinaccia y Nelson Lugo detallaron que el abordaje incluye situaciones de ludopatía, ansiedad, depresión, ataques de pánico y ansiedad, y remarcaron que el proceso requiere un trabajo cotidiano y sostenido.\n\nLa casa de contención local alberga actualmente a unas doce personas y cuenta con una permanencia orientativa de seis meses. Además, la organización ofrece espacios de participación destinados a las familias para brindarles herramientas de acompañamiento.",
+      "cuerpo": "Durante una entrevista radial, los integrantes del espacio Candela Vinaccia y Nelson Lugo detallaron que el abordaje incluye situaciones de ludopatía, ansiedad, depresión, ataques de pánico e ira, y remarcaron que el proceso requiere un trabajo cotidiano y sostenido.\n\nLa casa de contención local alberga actualmente a unas doce personas y cuenta con una permanencia orientativa de seis meses. Además, la organización ofrece espacios de participación destinados a las familias para brindarles herramientas de acompañamiento.",
       "guion": "El Movimiento 245 brinda contención y autoayuda",
       "seccion": "Balcarce",
       "medios": [
@@ -575,7 +486,7 @@
       "propia": "repaso",
       "titulo": "El repaso de la noche en Radar Balcarce: Mariano Werner, McCain, hockey y Matías Latorre",
       "copete": "Radar Balcarce publicó a las 20:36 de este domingo 27 de septiembre el repaso de la noche en Instagram y Facebook, un audio con 4 notas. Acá está en texto lo que se contó, con el enlace a cada nota.",
-      "cuerpo": "Estas son las 4 notas que se contaron en el repaso de la noche del domingo 27, en el orden en que salieron en el audio.\n\nMariano Werner y Otto Fritzler ganan las series. Mariano Werner y Otto Fritzler se quedaron con las baterías del TC Pick Up en el Autódromo Juan Manuel Fangio y largarán desde la primera fila en la final de la octava fecha del campeonato.\n\nAdvierten por una falsa convocatoria laboral de McCain. La empresa McCain alertó sobre mensajes fraudulentos que ofrecen puestos de trabajo en la planta local. Advierten que piden dinero y datos bancarios a los postulantes.\n\nCampo de Pato afronta una intensa doble fecha de hockey. El Club Social y Campo de Pato fue escenario de partidos frente a Del Valle de Necochea y Polideportivo Villa Gesell por el Torneo AB, con actividad en todas las categorías.\n\nMatías Latorre repasó su trayectoria musical. El cantante balcarceño fue entrevistado en un programa radial local, donde recorrió sus inicios artísticos, su paso por distintos escenarios del país y su vínculo con el tango y el folclore.\n\nMirá y escuchá el repaso en Instagram y Facebook, con los botones de acá abajo. Todas las notas del día están en la portada de Radar Balcarce.",
+      "cuerpo": "Estas son las 4 notas que se contaron en el repaso de la noche del domingo 27, en el orden en que salieron en el audio.\n\nMariano Werner y Otto Fritzler ganan las series. Mariano Werner y Otto Fritzler se quedaron con las baterías del TC Pick Up en el Autódromo Juan Manuel Fangio y largarán desde la primera fila en la final de la octava fecha del campeonato.\n\nAdvierten por una falsa convocatoria laboral de McCain. La empresa McCain alertó sobre mensajes fraudulentos que ofrecen puestos de trabajo en la planta local. Advierten que piden dinero y datos bancarios a los postulantes.\n\nCampo de Pato afronta una intensa doble fecha de hockey. El Club Social y Campo de Pato fue escenario de partidos frente a Del Valle de Necochea y Polideportivo Villa Gesell por el Torneo AB, con actividad en todas las categorías.\n\nMatías Latorre repasa su trayectoria musical. El cantante balcarceño fue entrevistado en un programa radial local, donde recorrió sus inicios artísticos, su paso por distintos escenarios del país y su vínculo con el tango y el folclore.\n\nMirá y escuchá el repaso en Instagram y Facebook, con los botones de acá abajo. Todas las notas del día están en la portada de Radar Balcarce.",
       "guion": null,
       "seccion": "Balcarce",
       "local": true,
@@ -617,7 +528,7 @@
           "href": "/nota/campo-de-pato-tuvo-una-intensa-doble-fecha-de-hockey-en-balcarce-1iyhhh6"
         },
         {
-          "texto": "Matías Latorre repasó su trayectoria musical",
+          "texto": "Matías Latorre repasa su trayectoria musical",
           "href": "/nota/matias-latorre-repaso-su-trayectoria-musical-en-balcarce-iobnth"
         }
       ],
@@ -637,26 +548,27 @@
     },
     {
       "id": "1f46y05",
-      "titulo": "Juan Pablo Vojvoda suspende la conferencia y duda en Racing",
+      "titulo": "Vojvoda suspende la conferencia de prensa y pone en duda su continuidad en Racing",
       "copete": "Racing quedó eliminado de la Copa Argentina tras perder con Boca y el entrenador Juan Pablo Vojvoda suspendió su contacto con la prensa, lo que deja su continuidad en duda.",
       "cuerpo": "El director técnico de Racing, Juan Pablo Vojvoda, suspendió la conferencia de prensa luego de que el equipo perdiera tres a dos ante Boca Juniors en los cuartos de final de la Copa Argentina, tras haber estado en ventaja por dos goles con tantos de Gastón Lodico y Adrián Martínez. Con esta derrota en el Gigante de Arroyito, el conjunto xeneize avanzó a las semifinales.\n\nLuego de ese respaldo y un triunfo ante Sarmiento de Junín, el equipo volvió a sufrir un duro traspié.\n\nEn el Torneo Clausura, el rendimiento deportivo también resulta adverso, ya que la institución se ubica anteúltima en la Zona B con ocho unidades acumuladas en diez presentaciones, producto de dos triunfos, dos empates y seis caídas.",
       "guion": "Juan Pablo Vojvoda suspende la conferencia y duda en Racing",
       "seccion": "Fútbol",
       "medios": [
+        "Infobae",
         "La Nación",
         "Ecos Diarios (Necochea)",
         "Minuto Uno",
-        "Infobae",
         "TN (Todo Noticias)",
         "El Destape",
         "Página/12",
-        "A24",
         "TyC Sports",
         "Crónica",
+        "Diario Popular",
         "La Nueva",
-        "La Verdad",
         "Doble Amarilla",
         "Bolavip Argentina",
+        "A24",
+        "La Verdad",
         "Olé",
         "El Día"
       ],
@@ -748,121 +660,11 @@
       }
     },
     {
-      "id": "1is0p0y",
-      "titulo": "Diego Santilli visita el autódromo en la vuelta de las categorías nacionales",
-      "copete": "El jefe de Gabinete de la Nación recorrió el Autódromo Juan Manuel Fangio durante el regreso de las competencias nacionales después de quince años. Su visita coincidió con la participación de su hijo en la categoría TC Pista Pick Up.",
-      "cuerpo": "Durante su permanencia en el predio, Santilli recorrió los boxes y mantuvo encuentros con el intendente Esteban Reino y el senador nacional Maximiliano Abad. La llegada del funcionario nacional estuvo vinculada principalmente a su motivo familiar, ya que su hijo, Nicanor Santilli Pazos, compitió en la TC Pista Pick Up a bordo de una Foton del equipo Coiro Competición.\n\nEl joven piloto finalizó en el segundo puesto en la primera serie del domingo, detrás de Antonino Sganga, lo que le permitió mantenerse entre los protagonistas de la definición.",
-      "guion": "Diego Santilli visita el autódromo en la vuelta de las categorías nacionales",
-      "seccion": "Automovilismo",
-      "medios": [
-        "Infórmese Primero (FM 104.9)",
-        "Radio Gabal (FM 104.1)",
-        "Diario La Vanguardia",
-        "QZ Noticias (Mar del Plata)"
-      ],
-      "enlace": "http://www.informeseprimero.com.ar/2026/09/diego-santilli-recorrio-el-fangio-y.html",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-27T22:35:50.424Z",
-      "sinFecha": false,
-      "visto": "2026-09-27T23:55:08.522Z",
-      "relevancia": 100,
-      "local": true,
-      "publicadaPor": "ia",
-      "publicadaCuando": "2026-09-28T08:01:55.916Z",
-      "temas": [
-        "autodromo",
-        "tc-pick-up",
-        "fangio"
-      ],
-      "como": "automatica",
-      "claves": [
-        "Diego Santilli visitó el Autódromo Juan Manuel Fangio este domingo.",
-        "El funcionario recorrió los boxes junto al intendente Esteban Reino y el senador Maximiliano Abad.",
-        "Su hijo, Nicanor Santilli Pazos, compitió en la categoría TC Pista Pick Up.",
-        "La competencia marcó el regreso del automovilismo nacional al circuito local después de quince años."
-      ],
-      "seSabe": [
-        "Diego Santilli visitó el autódromo local este domingo.",
-        "El funcionario recorrió los boxes junto al intendente Esteban Reino y el senador Maximiliano Abad.",
-        "Su hijo Nicanor compitió en la TC Pista Pick Up con el equipo Coiro Competición y fue segundo en su serie.",
-        "El circuito volvió a recibir competencias nacionales después de quince años."
-      ],
-      "textoRedes": "Diego Santilli visitó el Autódromo Juan Manuel Fangio en el marco del regreso de las competencias nacionales. El funcionario recorrió el circuito junto a autoridades locales y acompañó a su hijo en la categoría TC Pista Pick Up.",
-      "etiquetas": [
-        "Diego Santilli",
-        "Autodromo Juan Manuel Fangio",
-        "TC Pista Pick Up",
-        "Esteban Reino",
-        "Maximiliano Abad",
-        "Balcarce"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Infórmese Primero (FM 104.9)",
-          "enlace": "http://www.informeseprimero.com.ar/2026/09/diego-santilli-recorrio-el-fangio-y.html",
-          "fecha": "2026-09-27T22:35:50.424Z",
-          "oficial": false,
-          "aporte": "Aportó los detalles sobre el resultado deportivo del hijo del funcionario y la concurrencia de público."
-        },
-        {
-          "medio": "Diario La Vanguardia",
-          "enlace": "https://www.diariolavanguardia.com/noticias/44914-diego-santilli-estuvo-en-los-boxes-del-fangio-acompanando-a-su-hijo-nicanor/",
-          "fecha": null,
-          "oficial": false,
-          "aporte": "Confirmó el recorrido del funcionario junto a las autoridades locales y provinciales."
-        },
-        {
-          "medio": "Diario La Vanguardia",
-          "enlace": "https://www.diariolavanguardia.com/noticias/44904-diego-santilli-estara-en-balcarce-para-la-reapertura-del-fangio-y-la-fecha-de-las-tc-pick-up/",
-          "fecha": null,
-          "oficial": false,
-          "aporte": "Aportó la confirmación previa sobre la llegada del funcionario durante el fin de semana."
-        },
-        {
-          "medio": "QZ Noticias (Mar del Plata)",
-          "enlace": "https://www.qznoticias.com/la-region/diego-santilli-visito-el-fangio-durante-la-jornada-de-tc-pick-up",
-          "fecha": "2026-09-27T15:34:50.000Z",
-          "oficial": false,
-          "aporte": "Detalló la presencia del intendente y el senador en el autódromo."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "1mphhlq",
-          "titulo": "Diego Santilli llega a Balcarce por el automovilismo",
-          "fecha": "2026-09-25T13:40:13.000Z",
-          "ruta": "/nota/diego-santilli-llega-a-balcarce-por-el-automovilismo-1mphhlq"
-        },
-        {
-          "id": "if257m",
-          "titulo": "Boccanera y Baigorria ganan en el regreso del Turismo Special de la Costa al Fangio",
-          "fecha": "2026-09-27T22:28:39.000Z",
-          "ruta": "/nota/boccanera-y-baigorria-ganan-en-el-regreso-del-turismo-special-de-la-if257m"
-        },
-        {
-          "id": "wlcrq7",
-          "titulo": "El Autódromo Juan Manuel Fangio reabre",
-          "fecha": "2026-09-27T17:29:00.000Z",
-          "ruta": "/nota/el-autodromo-juan-manuel-fangio-reabre-wlcrq7"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron tres medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "diego-santilli-visita-el-autodromo-juan-manuel-fangio-en-el-regreso",
-      "foto": {
-        "archivo": "fotos-notas/1is0p0y.jpg",
-        "credito": "Foto: QZ Noticias (Mar del Plata)"
-      }
-    },
-    {
       "id": "zezsk3",
-      "titulo": "Sancionan a Werner, Canapino y Ciantini en el TC Pick Up",
-      "copete": "Autoridades del TC Pick Up aplicaron sanciones a Mariano Werner, Agustín Canapino y Diego Ciantini tras la final disputada en el Autódromo Juan Manuel Fangio. Las penalizaciones modificaron el podio de la competencia.",
-      "cuerpo": "Mariano Werner, quien había cruzado la meta entre los primeros puestos, fue excluido por una irregularidad técnica en la compresión.\n\nEn tanto, Diego Ciantini, que había terminado en el tercer escalón del podio, fue penalizado con cinco segundos por un sobrepaso indebido a Santiago Mangoni y cayó a la quinta posición.\n\nTras estas penalizaciones, Hernán Palazzo quedó confirmado como el ganador de la competencia, escoltado por Otto Fritzler y Lucas Valle.",
-      "guion": "Sancionan a Werner, Canapino y Ciantini en el TC Pick Up",
+      "titulo": "Sancionaron a Werner, Canapino y Ciantini y cambió el clasificador de la final de TC Pick Up",
+      "copete": "La final de las TC Pick Up disputada este domingo en el Autódromo Juan Manuel Fangio de Balcarce tuvo modificaciones en su clasificación oficial luego de las sanciones aplicadas por las autoridades de la competencia. Mariano Werner, quien había finalizado entre los primeros…",
+      "cuerpo": "Mariano Werner, quien había cruzado la meta entre los primeros puestos, fue excluido por una irregularidad técnica en la compresión. Agustín Canapino recibió un recargo de diez segundos por no realizar la chicana previa a la entrada de la calle de boxes.\n\nEn tanto, Diego Ciantini, que había terminado en el tercer escalón del podio, fue penalizado con cinco segundos por un sobrepaso indebido a Santiago Mangoni y cayó a la quinta posición.\n\nTras estas penalizaciones, Hernán Palazzo quedó confirmado como el ganador de la competencia, escoltado por Otto Fritzler y Lucas Valle.",
+      "guion": null,
       "seccion": "Automovilismo",
       "medios": [
         "Infórmese Primero (FM 104.9)"
@@ -882,56 +684,15 @@
         "fangio"
       ],
       "como": "automatica",
-      "claves": [
-        "Modifican el clasificador de la final de TC Pick Up en Balcarce por sanciones.",
-        "Mariano Werner fue excluido por una irregularidad técnica.",
-        "Agustín Canapino y Diego Ciantini recibieron recargos de tiempo.",
-        "Hernán Palazzo quedó confirmado como ganador de la competencia."
-      ],
-      "textoRedes": "Sancionaron a Mariano Werner, Agustín Canapino y Diego Ciantini tras la final de las TC Pick Up en el Autódromo Juan Manuel Fangio. Las penalizaciones modificaron el clasificador y Hernán Palazzo quedó como ganador.",
-      "etiquetas": [
-        "TC Pick Up",
-        "Autodromo Juan Manuel Fangio",
-        "Mariano Werner",
-        "Agustín Canapino",
-        "Diego Ciantini",
-        "Hernan Palazzo",
-        "Balcarce"
-      ],
       "fuentesConsultadas": [
         {
           "medio": "Infórmese Primero (FM 104.9)",
           "enlace": "http://www.informeseprimero.com.ar/2026/09/sancionaron-werner-canapino-y-ciantini.html",
           "fecha": "2026-09-27T21:45:00.902Z",
           "oficial": false,
-          "aporte": "Detalló las sanciones a los pilotos Werner, Canapino, Ciantini y Tadei, los cambios en el clasificador de la final y el triunfo de Hernán Palazzo en el Autódromo Juan Manuel Fangio."
+          "aporte": null
         }
       ],
-      "antecedentes": [
-        {
-          "id": "1spxjt5",
-          "titulo": "Mariano Werner y Otto Fritzler ganan las series",
-          "fecha": "2026-09-27T15:41:34.000Z",
-          "ruta": "/nota/mariano-werner-y-otto-fritzler-ganan-las-series-del-tc-pick-up-en-1spxjt5"
-        },
-        {
-          "id": "12jm31p",
-          "titulo": "Mariano Werner lidera la clasificación del TC Pick Up",
-          "fecha": "2026-09-27T00:32:00.000Z",
-          "ruta": "/nota/mariano-werner-lidera-la-clasificacion-del-tc-pick-up-12jm31p"
-        },
-        {
-          "id": "1pbhcrn",
-          "titulo": "Mariano Werner marca la pole del TC Pick Up",
-          "fecha": "2026-09-26T21:59:46.000Z",
-          "ruta": "/nota/mariano-werner-marca-la-pole-del-tc-pick-up-en-balcarce-1pbhcrn"
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
       "slug": "sancionan-a-werner-canapino-y-ciantini-en-el-tc-pick-up"
     },
     {
@@ -1019,161 +780,11 @@
       }
     },
     {
-      "id": "194nq4e",
-      "titulo": "J.P. Morgan recorta al 1,5% su proyección de crecimiento y anticipa una recesión",
-      "copete": "El banco estadounidense había previsto una suba de 2,7% para 2026. Cambió su estimación después de que la actividad cayera 2,9% en julio frente a junio, y ahora espera una contracción en el tercer trimestre.",
-      "cuerpo": "El dato de julio, que informó el INDEC, fue la mayor caída mensual desde abril de 2020 y superó con amplitud lo que esperaba el banco, que calculaba un retroceso cercano al 1%. Frente a julio del año pasado, la baja fue de 1,4%. Para el tercer trimestre, J.P. Morgan prevé ahora una contracción anualizada de 4%.\n\nComo la actividad ya había caído 0,6% en el segundo trimestre, un nuevo retroceso implicaría dos trimestres seguidos en baja, lo que técnicamente se considera una recesión. En julio, ocho de los quince sectores que se miden cayeron frente al año anterior: el comercio bajó 5,1% y la industria, 4,6%, mientras que la minería creció 8,4% y el agro, 0,7%.\n\nOtros analistas, entre ellos el economista Miguel Kiguel, también bajaron sus estimaciones, y varias consultoras privadas ubican ahora el crecimiento de 2026 entre 1,5% y 1,9%. En paralelo, el riesgo país subió a 609 puntos básicos, el nivel más alto desde abril.",
-      "guion": "El J.P. Morgan recorta su proyección y prevé una recesión",
-      "seccion": "Economía",
-      "medios": [
-        "El Eco de Tandil",
-        "Diputados Bonaerenses",
-        "Infobae",
-        "Ámbito",
-        "Perfil",
-        "TN (Todo Noticias)",
-        "iProfesional",
-        "Minuto Uno",
-        "Crónica",
-        "Canal 26",
-        "Diario Popular",
-        "Noticias Argentinas (NA)",
-        "Radio Mitre",
-        "La Nueva",
-        "La Nación",
-        "Clarín",
-        "Letra P",
-        "ANDigital",
-        "El Día",
-        "La Verdad",
-        "Mi8 (Canal 8 Mar del Plata)",
-        "Punto Noticias",
-        "El Destape",
-        "C5N"
-      ],
-      "enlace": "https://www.ambito.com/economia/jp-morgan-recorto-fuerte-su-proyeccion-actividad-economica-argentina-y-anticipo-una-recesion-el-tercer-trimestre-n6327194",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-27T18:17:00.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-27T23:28:54.122Z",
-      "relevancia": 72,
-      "local": false,
-      "publicadaPor": "ia",
-      "publicadaCuando": "2026-09-28T03:22:42.645Z",
-      "temas": [],
-      "como": "automatica",
-      "textoRedes": "El J.P. Morgan redujo su pronóstico de crecimiento para la economía nacional en 2026 y anticipa una recesión para el tercer trimestre tras conocerse la caída de la actividad en julio informada por el Indec.",
-      "etiquetas": [
-        "economia",
-        "jp morgan",
-        "indec",
-        "recesion",
-        "actividad economica"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Ámbito",
-          "enlace": "https://www.ambito.com/economia/jp-morgan-recorto-fuerte-su-proyeccion-actividad-economica-argentina-y-anticipo-una-recesion-el-tercer-trimestre-n6327194",
-          "fecha": "2026-09-27T18:17:00.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Minuto Uno",
-          "enlace": "https://www.minutouno.com/politica/durisimo-informe-del-jp-morgan-la-economia-argentina-el-peor-desempeno-la-pandemia-n6327246",
-          "fecha": "2026-09-27T21:26:00.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Infobae",
-          "enlace": "https://www.infobae.com/economia/2026/09/27/el-jp-morgan-recorto-su-prevision-de-crecimiento-para-la-argentina-tras-el-desplome-de-la-actividad-en-julio/",
-          "fecha": "2026-09-27T20:45:45.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Perfil",
-          "enlace": "https://www.perfil.com/noticias/economia/jp-morgan-cambio-su-pronostico-para-la-argentina-en-apenas-cuatro-dias-y-ahora-anticipa-una-recesion.phtml",
-          "fecha": "2026-09-27T20:37:09.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "TN (Todo Noticias)",
-          "enlace": "https://tn.com.ar/economia/2026/09/27/jp-morgan-recorto-sus-proyecciones-de-crecimiento-para-la-argentina-despues-de-la-caida-de-la-actividad-de-julio/",
-          "fecha": "2026-09-27T21:54:15.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "iProfesional",
-          "enlace": "https://www.iprofesional.com/economia/465345-j-p-morgan-recorto-su-proyeccion-de-crecimiento-para-el-pais-durante-2026",
-          "fecha": "2026-09-27T22:48:00.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Radio Mitre",
-          "enlace": "https://radiomitre.cienradios.com/economia/jp-morgan-recorto-la-proyeccion-de-crecimiento-de-argentina-a-15-tras-la-fuerte-caida-de-la-actividad-en-julio/",
-          "fecha": "2026-09-27T23:41:49.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Canal 26",
-          "enlace": "https://www.canal26.com/economia/2026/09/28/el-jp-morgan-recorto-su-proyeccion-de-crecimiento-para-la-argentina-debido-a-la-fuerte-caida-de-la-actividad-en-julio/",
-          "fecha": "2026-09-28T00:31:04.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Noticias Argentinas (NA)",
-          "enlace": "https://noticiasargentinas.com/economia/j-p--morgan-advirtio-por-la-fuerte-caida-de-la-actividad-y-recorto-su-proyeccion-de-crecimiento-para-argentina_a6ab9a217c2b8de8667fa1a84",
-          "fecha": "2026-09-27T23:36:00.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "La Nueva",
-          "enlace": "https://www.lanueva.com/nota/2026-9-27-19-21-0-jp-morgan-alerto-por-la-caida-de-la-actividad-y-recorto-su-proyeccion-de-crecimiento-para-la-argentina",
-          "fecha": "2026-09-28T03:00:09.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Radio Sudestada",
-          "enlace": "https://radiosudestada.com.ar/2026/09/j-p-morgan-advirtio-por-la-fuerte-caida-de-la-actividad-y-recorto-su-proyeccion-de-crecimiento-para-argentina/",
-          "fecha": "2026-09-28T00:15:00.000Z",
-          "oficial": false,
-          "aporte": null
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "1lg4u7s",
-          "titulo": "La actividad económica cae 2,9 % en julio",
-          "fecha": "2026-09-24T22:00:00.000Z",
-          "ruta": "/nota/la-actividad-economica-registra-una-caida-del-tres-por-ciento-en-julio-1lg4u7s"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron 11 medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "j-p-morgan-recorto-fuerte-su-proyeccion-de-actividad-economica-para",
-      "foto": {
-        "archivo": "fotos-notas/194nq4e.jpg",
-        "credito": "Foto: Minuto Uno"
-      }
-    },
-    {
       "id": "repaso20260927tarde",
       "propia": "repaso",
       "titulo": "El repaso de la tarde en Radar Balcarce: Mariano Werner, Club de Leones y Matías Latorre",
       "copete": "Radar Balcarce publicó a las 15:04 de este domingo 27 de septiembre el repaso de la tarde en Instagram y Facebook, un audio con 3 notas. Acá está en texto lo que se contó, con el enlace a cada nota.",
-      "cuerpo": "Estas son las 3 notas que se contaron en el repaso de la tarde del domingo 27, en el orden en que salieron en el audio.\n\nMariano Werner y Otto Fritzler ganan las series. Mariano Werner y Otto Fritzler se quedaron con las baterías del TC Pick Up en el Autódromo Juan Manuel Fangio y largarán desde la primera fila en la final de la octava fecha del campeonato.\n\nEl intendente recibe a autoridades del Club de Leones. El intendente Esteban Reino mantuvo un encuentro protocolar en el Palacio Municipal con representantes del Club de Leones para conversar sobre el trabajo social en la comunidad.\n\nMatías Latorre repasó su trayectoria musical. El cantante balcarceño fue entrevistado en un programa radial local, donde recorrió sus inicios artísticos, su paso por distintos escenarios del país y su vínculo con el tango y el folclore.\n\nMirá y escuchá el repaso en Instagram y Facebook, con los botones de acá abajo. Todas las notas del día están en la portada de Radar Balcarce.",
+      "cuerpo": "Estas son las 3 notas que se contaron en el repaso de la tarde del domingo 27, en el orden en que salieron en el audio.\n\nMariano Werner y Otto Fritzler ganan las series. Mariano Werner y Otto Fritzler se quedaron con las baterías del TC Pick Up en el Autódromo Juan Manuel Fangio y largarán desde la primera fila en la final de la octava fecha del campeonato.\n\nEl intendente recibe a autoridades del Club de Leones. El intendente Esteban Reino mantuvo un encuentro protocolar en el Palacio Municipal con representantes del Club de Leones para conversar sobre el trabajo social en la comunidad.\n\nMatías Latorre repasa su trayectoria musical. El cantante balcarceño fue entrevistado en un programa radial local, donde recorrió sus inicios artísticos, su paso por distintos escenarios del país y su vínculo con el tango y el folclore.\n\nMirá y escuchá el repaso en Instagram y Facebook, con los botones de acá abajo. Todas las notas del día están en la portada de Radar Balcarce.",
       "guion": null,
       "seccion": "Balcarce",
       "local": true,
@@ -1209,7 +820,7 @@
           "href": "/nota/esteban-reino-recibe-al-club-de-leones-en-balcarce-1k3g7wg"
         },
         {
-          "texto": "Matías Latorre repasó su trayectoria musical",
+          "texto": "Matías Latorre repasa su trayectoria musical",
           "href": "/nota/matias-latorre-repaso-su-trayectoria-musical-en-balcarce-iobnth"
         }
       ],
@@ -1316,10 +927,10 @@
     },
     {
       "id": "19foxy4",
-      "titulo": "Javier Milei viaja a Paris para participar de la Argentina Week",
-      "copete": "El presidente Javier Milei viajara a Paris junto a una comitiva de funcionarios, gobernadores y empresarios para participar de la Argentina Week en busca de inversiones.",
-      "cuerpo": "El presidente Javier Milei encabeza esta semana una comitiva rumbo a Paris para participar de la Argentina Week, un evento destinado a exponer oportunidades de inversion ante ejecutivos globales. La agenda oficial se desarrollara entre el treinta de septiembre y el dos de octubre en la capital francesa, con la presencia de ministros, secretarios, mandatarios provinciales y referentes del sector empresarial.\n\nEl programa prevé disertaciones sobre la situacion macroeconomica nacional, energia, mineria, tecnologia y agroindustria, ademas de paneles sectoriales y reuniones con referentes internacionales. Entre las actividades previstas figuran encuentros con directivos de empresas y la posibilidad de una reunion bilateral con el mandatario frances, Emmanuel Macron, durante la estadia oficial.\n\nLa delegacion oficial cuenta con la participacion de distintos gobernadores provinciales y referentes de compañias de diversos rubros productivos. Como antecedente, el propio mandatario habia participado previamente de un evento similar en Nueva York durante el mes de marzo, segun la informacion oficial difundida.",
-      "guion": "Javier Milei viaja a Paris para participar de la Argentina Week",
+      "titulo": "Javier Milei viaja a París para participar de la Argentina Week",
+      "copete": "El presidente Javier Milei viajará a París junto a una comitiva de funcionarios, gobernadores y empresarios para participar de la Argentina Week en busca de inversiones.",
+      "cuerpo": "El presidente Javier Milei encabeza esta semana una comitiva rumbo a París para participar de la Argentina Week, un evento destinado a exponer oportunidades de inversión ante ejecutivos globales. La agenda oficial se desarrollará entre el treinta de septiembre y el dos de octubre en la capital francesa, con la presencia de ministros, secretarios, mandatarios provinciales y referentes del sector empresarial.\n\nEl programa prevé disertaciones sobre la situación macroeconómica nacional, energía, minería, tecnología y agroindustria, además de paneles sectoriales y reuniones con referentes internacionales. Entre las actividades previstas figuran encuentros con directivos de empresas y la posibilidad de una reunión bilateral con el mandatario francés, Emmanuel Macron, durante la estadía oficial.\n\nLa delegación oficial cuenta con la participación de distintos gobernadores provinciales y referentes de compañías de diversos rubros productivos. Como antecedente, el propio mandatario había participado previamente de un evento similar en Nueva York durante el mes de marzo, según la información oficial difundida.",
+      "guion": null,
       "seccion": "Política",
       "medios": [
         "Ámbito",
@@ -1330,14 +941,14 @@
         "Canal 26",
         "Noticias Argentinas (NA)",
         "0221",
-        "La Verdad",
         "El Eco de Tandil",
         "La Nueva",
+        "La Verdad",
         "Infobae"
       ],
       "enlace": "https://noticiasargentinas.com/politica/argentina-week--milei-desembarca-en-paris-junto-a-gobernadores-y-empresarios-en-busca-de-inversiones_a6ab91477c2b8de8667e3c8a7",
       "teniaImagenLaFuente": true,
-      "fecha": "2026-09-27T18:00:00.000Z",
+      "fecha": "2026-09-27T16:35:00.000Z",
       "sinFecha": false,
       "visto": "2026-09-28T03:01:51.643Z",
       "relevancia": 66,
@@ -1346,90 +957,81 @@
       "publicadaCuando": null,
       "temas": [],
       "como": "automatica",
-      "claves": [
-        "El presidente viajara a Paris junto a funcionarios, gobernadores y empresarios.",
-        "El evento Argentina Week se desarrollara del treinta de septiembre al dos de octubre.",
-        "La agenda incluye exposiciones sobre energia, mineria, tecnologia y agroindustria.",
-        "Se prevé un encuentro bilateral con el mandatario frances Emmanuel Macron."
-      ],
-      "seSabe": [
-        "El presidente Javier Milei viajara a Paris junto a funcionarios, gobernadores y empresarios.",
-        "El evento Argentina Week se realizara entre el treinta de septiembre y el dos de octubre.",
-        "La apertura oficial se llevara a cabo en la sede de la OCDE.",
-        "Participaran gobernadores de distintas provincias y directivos de compañias."
-      ],
-      "noConfirmado": [
-        "Todavia resta la confirmacion oficial definitiva sobre los detalles de la agenda de reuniones bilaterales."
-      ],
-      "textoRedes": "El presidente Javier Milei viajara a Paris junto a funcionarios, gobernadores y empresarios para participar de la Argentina Week en busca de inversiones en sectores estrategicos.",
-      "etiquetas": [
-        "Javier Milei",
-        "Argentina Week",
-        "Paris",
-        "Inversiones",
-        "Gobernadores"
-      ],
       "fuentesConsultadas": [
         {
           "medio": "Noticias Argentinas (NA)",
           "enlace": "https://noticiasargentinas.com/politica/argentina-week--milei-desembarca-en-paris-junto-a-gobernadores-y-empresarios-en-busca-de-inversiones_a6ab91477c2b8de8667e3c8a7",
           "fecha": "2026-09-27T18:00:00.000Z",
           "oficial": false,
-          "aporte": "Detallo la agenda completa, los funcionarios presentes, los gobernadores y los empresarios."
+          "aporte": null
+        },
+        {
+          "medio": "Ámbito",
+          "enlace": "https://www.ambito.com/economia/argentina-week-paris-los-detalles-del-evento-donde-el-gobierno-buscara-sumar-inversiones-europeas-n6327166",
+          "fecha": "2026-09-27T16:35:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/videos/politica/2026/09/28/el-mundo-busca-lo-que-tiene-la-argentina-la-carrera-por-las-inversiones/",
+          "fecha": "2026-09-28T13:55:35.000Z",
+          "oficial": false,
+          "aporte": null
         },
         {
           "medio": "Perfil",
           "enlace": "https://www.perfil.com/noticias/politica/javier-milei-viaja-a-paris-se-reune-con-macron-y-participara-de-la-argentina-week.phtml",
           "fecha": "2026-09-27T23:12:39.000Z",
           "oficial": false,
-          "aporte": "Confirmo las fechas de partida y regreso del mandatario."
-        },
-        {
-          "medio": "La Nueva",
-          "enlace": "https://www.lanueva.com/nota/2026-9-27-16-22-0-milei-viaja-a-paris-con-a-gobernadores-y-empresarios-en-busca-de-inversiones-en-el-argentina-week",
-          "fecha": "2026-09-27T19:28:03.000Z",
-          "oficial": false,
-          "aporte": "Informo sobre el viaje de la comitiva a Paris para exponer inversiones."
-        },
-        {
-          "medio": "0221",
-          "enlace": "https://www.0221.com.ar/nacional/javier-milei-prepara-su-agenda-paris-el-foco-puesto-inversiones-y-una-reunion-emmanuel-macron-n134903",
-          "fecha": "2026-09-27T20:01:00.000Z",
-          "oficial": false,
-          "aporte": "Menciono los encuentros con empresarios y organismos internacionales."
-        },
-        {
-          "medio": "Canal 26",
-          "enlace": "https://www.canal26.com/politica/2026/09/27/milei-viajara-a-paris-junto-a-gobernadores-y-empresarios-para-la-argentina-week-la-agenda-del-gobierno-y-la-posible-cumbre-con-macron/",
-          "fecha": "2026-09-27T21:07:56.000Z",
-          "oficial": false,
-          "aporte": "Detallo el viaje tras el paso por Nueva York."
+          "aporte": null
         },
         {
           "medio": "A24",
           "enlace": "https://www.a24.com/politica/milei-viajara-paris-12-gobernadores-participar-la-argentina-week-y-reunirse-macron-n1600796",
           "fecha": "2026-09-27T21:36:00.000Z",
           "oficial": false,
-          "aporte": "Preciso que la estadia sera del treinta de septiembre al dos de octubre."
-        },
-        {
-          "medio": "La Verdad",
-          "enlace": "https://laverdadonline.com/argentina-week-milei-desembarca-en-paris-junto-a-gobernadores-y-empresarios-en-busca-de-inversiones/",
-          "fecha": "2026-09-27T21:37:52.000Z",
-          "oficial": false,
-          "aporte": "Confirmo la realizacion del evento Argentina Week en Paris."
-        },
-        {
-          "medio": "Noticias Argentinas (NA)",
-          "enlace": "https://noticiasargentinas.com/politica/javier-milei--entre-buenos-aires-y-paris_a6ab97f65c2b8de8667f51a61",
-          "fecha": "2026-09-27T21:50:00.000Z",
-          "oficial": false,
-          "aporte": "Menciono la combinacion de reuniones de Gabinete previa al viaje."
+          "aporte": null
         },
         {
           "medio": "C5N",
           "enlace": "https://www.c5n.com/politica/la-agenda-javier-milei-francia-discurso-el-argentina-week-y-reunion-emmanuel-macron-n250076",
           "fecha": "2026-09-27T23:13:48.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Canal 26",
+          "enlace": "https://www.canal26.com/politica/2026/09/27/milei-viajara-a-paris-junto-a-gobernadores-y-empresarios-para-la-argentina-week-la-agenda-del-gobierno-y-la-posible-cumbre-con-macron/",
+          "fecha": "2026-09-27T21:38:03.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "0221",
+          "enlace": "https://www.0221.com.ar/nacional/javier-milei-prepara-su-agenda-paris-el-foco-puesto-inversiones-y-una-reunion-emmanuel-macron-n134903",
+          "fecha": "2026-09-27T20:01:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "El Eco de Tandil",
+          "enlace": "https://www.eleco.com.ar/nacionales/el-presidente-desembarca-en-paris-en-busca-de-inversiones",
+          "fecha": "2026-09-28T05:00:03.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "La Nueva",
+          "enlace": "https://www.lanueva.com/nota/2026-9-27-16-22-0-milei-viaja-a-paris-con-a-gobernadores-y-empresarios-en-busca-de-inversiones-en-el-argentina-week",
+          "fecha": "2026-09-27T19:28:03.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "La Verdad",
+          "enlace": "https://laverdadonline.com/argentina-week-milei-desembarca-en-paris-junto-a-gobernadores-y-empresarios-en-busca-de-inversiones/",
+          "fecha": "2026-09-27T21:37:52.000Z",
           "oficial": false,
           "aporte": null
         },
@@ -1441,19 +1043,6 @@
           "aporte": null
         }
       ],
-      "antecedentes": [
-        {
-          "id": "13ytphz",
-          "titulo": "Milei viaja a París con gobernadores y empresarios para la Argentina Week",
-          "fecha": "2026-09-25T20:02:00.000Z",
-          "ruta": "/nota/javier-milei-mantiene-su-agenda-internacional-y-ultima-detalles-de-su-13ytphz"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron 9 medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
       "slug": "javier-milei-viaja-a-paris-para-participar-de-la-argentina-week",
       "foto": {
         "archivo": "fotos-notas/19foxy4.jpg",
@@ -1461,96 +1050,120 @@
       }
     },
     {
-      "id": "jakg2e",
-      "titulo": "La selección argentina juega amistosos en el inicio de un nuevo ciclo",
-      "copete": "Tras el subcampeonato en el Mundial, el seleccionado nacional afrontará partidos de preparación frente a Bolivia, Burkina Faso y Benín. El encuentro ante Benín marcará la despedida de Lionel Messi.",
-      "cuerpo": "La selección argentina iniciará un nuevo ciclo de preparación de cara a la Copa del Mundo de 2030 con una serie de partidos amistosos como local frente a Bolivia, Burkina Faso y Benín. El primer compromiso será el miércoles 30 de septiembre frente a Bolivia en el estadio Mario Alberto Kempes de Córdoba, mientras que luego recibirá a Burkina Faso el sábado 3 de octubre y a Benín el martes 6, ambos encuentros en el estadio Monumental de Buenos Aires.\n\nEl último partido ante Benín será especialmente significativo porque Lionel Messi pondrá fin a su trayectoria con la camiseta nacional tras anunciar su retiro luego del subcampeonato mundial. En ese mismo encuentro también se despedirán Nicolás Otamendi, Rodrigo De Paul y Giovani Lo Celso, según informó la fuente oficial. Por otra parte, la conducción técnica de Lionel Scaloni afronta su penúltima citación antes del vencimiento de su contrato, aunque trascendió extraoficialmente que es muy probable que renueve su vínculo por dos años más.\n\nComo antecedente, la Asociación del Fútbol Argentino había anunciado el pasado 22 de septiembre el cronograma para la venta de entradas de estos encuentros, cuya comercialización sufrió modificaciones en sus plazos iniciales.",
-      "guion": "La seleccion argentina juega amistosos en el inicio de un nuevo ciclo",
-      "seccion": "Fútbol",
+      "id": "1is0p0y",
+      "titulo": "Diego Santilli visita el autódromo en la vuelta de las categorías nacionales",
+      "copete": "El jefe de Gabinete de la Nación recorrió el Autódromo Juan Manuel Fangio durante el regreso de las competencias nacionales después de quince años. Su visita coincidió con la participación de su hijo en la categoría TC Pista Pick Up.",
+      "cuerpo": "Durante su permanencia en el predio, Santilli recorrió los boxes y mantuvo encuentros con el intendente Esteban Reino y el senador nacional Maximiliano Abad. La llegada del funcionario nacional estuvo vinculada principalmente a su motivo familiar, ya que su hijo, Nicanor Santilli Pazos, compitió en la TC Pista Pick Up a bordo de una Foton del equipo Coiro Competición.\n\nEl joven piloto finalizó en el segundo puesto en la primera serie del domingo, detrás de Antonino Sganga, lo que le permitió mantenerse entre los protagonistas de la definición.",
+      "guion": "Diego Santilli visita el autódromo en la vuelta de las categorías nacionales",
+      "seccion": "Automovilismo",
       "medios": [
-        "Clarín",
-        "Olé",
-        "La Nación",
-        "Minuto Uno",
-        "TN (Todo Noticias)",
-        "El Destape",
-        "Perfil",
-        "TyC Sports",
-        "Radio Mitre",
-        "La Nueva",
-        "La Brújula 24",
-        "ANDigital",
-        "El Marplatense",
-        "Doble Amarilla",
-        "Bolavip Argentina"
+        "Infórmese Primero (FM 104.9)",
+        "Radio Gabal (FM 104.1)",
+        "Diario La Vanguardia",
+        "QZ Noticias (Mar del Plata)"
       ],
-      "enlace": "https://www.lanacion.com.ar/deportes/futbol/horarios-de-los-amistosos-de-la-seleccion-argentina-vs-bolivia-burkina-faso-y-benin-nid27092026/",
+      "enlace": "http://www.informeseprimero.com.ar/2026/09/diego-santilli-recorrio-el-fangio-y.html",
       "teniaImagenLaFuente": true,
-      "fecha": "2026-09-27T17:55:16.000Z",
+      "fecha": "2026-09-27T16:09:37.000Z",
       "sinFecha": false,
-      "visto": "2026-09-28T03:01:51.643Z",
-      "relevancia": 90,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
+      "visto": "2026-09-27T23:55:08.522Z",
+      "relevancia": 100,
+      "local": true,
+      "publicadaPor": "ia",
+      "publicadaCuando": "2026-09-28T08:01:55.916Z",
+      "temas": [
+        "autodromo",
+        "tc-pick-up",
+        "fangio"
+      ],
       "como": "automatica",
       "claves": [
-        "La selección argentina disputará tres partidos amistosos en el país.",
-        "Los encuentros serán ante Bolivia, Burkina Faso y Benín.",
-        "El partido frente a Benín marcará la despedida de Lionel Messi y otros referentes.",
-        "El ciclo de preparación apunta al Mundial de 2030."
+        "Diego Santilli visitó el Autódromo Juan Manuel Fangio este domingo.",
+        "El funcionario recorrió los boxes junto al intendente Esteban Reino y el senador Maximiliano Abad.",
+        "Su hijo, Nicanor Santilli Pazos, compitió en la categoría TC Pista Pick Up.",
+        "La competencia marcó el regreso del automovilismo nacional al circuito local después de quince años."
       ],
       "seSabe": [
-        "La selección argentina jugará amistosos ante Bolivia, Burkina Faso y Benín.",
-        "El partido contra Bolivia será el 30 de septiembre en Córdoba.",
-        "Los encuentros ante Burkina Faso y Benín se jugarán en el estadio Monumental el 3 y 6 de octubre.",
-        "Lionel Messi y Nicolás Otamendi tendrán su despedida del seleccionado en el último partido.",
-        "El seleccionado viene de obtener el subcampeonato en el Mundial 2026."
+        "Diego Santilli visitó el autódromo local este domingo.",
+        "El funcionario recorrió los boxes junto al intendente Esteban Reino y el senador Maximiliano Abad.",
+        "Su hijo Nicanor compitió en la TC Pista Pick Up con el equipo Coiro Competición y fue segundo en su serie.",
+        "El circuito volvió a recibir competencias nacionales después de quince años."
       ],
-      "textoRedes": "La selección argentina iniciará una nueva etapa con partidos amistosos frente a Bolivia, Burkina Faso y Benín. El encuentro ante Benín marcará la despedida de Lionel Messi del combinado nacional.",
+      "textoRedes": "Diego Santilli visitó el Autódromo Juan Manuel Fangio en el marco del regreso de las competencias nacionales. El funcionario recorrió el circuito junto a autoridades locales y acompañó a su hijo en la categoría TC Pista Pick Up.",
       "etiquetas": [
-        "Selección Argentina",
-        "Lionel Messi",
-        "Fútbol",
-        "Partidos amistosos"
+        "Diego Santilli",
+        "Autodromo Juan Manuel Fangio",
+        "TC Pista Pick Up",
+        "Esteban Reino",
+        "Maximiliano Abad",
+        "Balcarce"
       ],
       "fuentesConsultadas": [
         {
-          "medio": "La Nación",
-          "enlace": "https://www.lanacion.com.ar/deportes/futbol/horarios-de-los-amistosos-de-la-seleccion-argentina-vs-bolivia-burkina-faso-y-benin-nid27092026/",
-          "fecha": "2026-09-27T17:55:16.000Z",
+          "medio": "Infórmese Primero (FM 104.9)",
+          "enlace": "http://www.informeseprimero.com.ar/2026/09/diego-santilli-recorrio-el-fangio-y.html",
+          "fecha": "2026-09-27T22:35:50.424Z",
           "oficial": false,
-          "aporte": "Detalló el cronograma de partidos amistosos, los estadios, las despedidas de los jugadores y el contexto del seleccionado nacional."
+          "aporte": "Aportó los detalles sobre el resultado deportivo del hijo del funcionario y la concurrencia de público."
         },
         {
-          "medio": "El Destape",
-          "enlace": "https://www.eldestapeweb.com/deportes/paredes-no-fue-convocado-scaloni-seleccion-argentina-amistosos-vs-bolivia-burkina-faso-benin-2026927193122",
-          "fecha": "2026-09-27T22:31:22.000Z",
+          "medio": "Diario La Vanguardia",
+          "enlace": "https://www.diariolavanguardia.com/noticias/44914-diego-santilli-estuvo-en-los-boxes-del-fangio-acompanando-a-su-hijo-nicanor/",
+          "fecha": null,
           "oficial": false,
-          "aporte": "Reprodujo la noticia sin ofrecer información adicional."
+          "aporte": "Confirmó el recorrido del funcionario junto a las autoridades locales y provinciales."
+        },
+        {
+          "medio": "Diario La Vanguardia",
+          "enlace": "https://www.diariolavanguardia.com/noticias/44904-diego-santilli-estara-en-balcarce-para-la-reapertura-del-fangio-y-la-fecha-de-las-tc-pick-up/",
+          "fecha": null,
+          "oficial": false,
+          "aporte": "Aportó la confirmación previa sobre la llegada del funcionario durante el fin de semana."
+        },
+        {
+          "medio": "QZ Noticias (Mar del Plata)",
+          "enlace": "https://www.qznoticias.com/la-region/diego-santilli-visito-el-fangio-durante-la-jornada-de-tc-pick-up",
+          "fecha": "2026-09-27T15:34:50.000Z",
+          "oficial": false,
+          "aporte": "Detalló la presencia del intendente y el senador en el autódromo."
         }
       ],
       "antecedentes": [
         {
-          "id": "ppqob1",
-          "titulo": "La agenda de la Selección Argentina en la fecha FIFA: días, horarios y venta de entradas",
-          "fecha": "2026-09-22T22:27:58.000Z",
-          "ruta": "/nota/la-agenda-de-la-seleccion-argentina-en-la-fecha-fifa-dias-horarios-y-ppqob1"
+          "id": "1mphhlq",
+          "titulo": "Diego Santilli llega a Balcarce por el automovilismo",
+          "fecha": "2026-09-25T13:40:13.000Z",
+          "ruta": "/nota/diego-santilli-llega-a-balcarce-por-el-automovilismo-1mphhlq"
+        },
+        {
+          "id": "if257m",
+          "titulo": "Boccanera y Baigorria ganan en el regreso del Turismo Special de la Costa al Fangio",
+          "fecha": "2026-09-27T22:28:39.000Z",
+          "ruta": "/nota/boccanera-y-baigorria-ganan-en-el-regreso-del-turismo-special-de-la-if257m"
+        },
+        {
+          "id": "wlcrq7",
+          "titulo": "El Autódromo Juan Manuel Fangio reabre",
+          "fecha": "2026-09-27T17:29:00.000Z",
+          "ruta": "/nota/el-autodromo-juan-manuel-fangio-reabre-wlcrq7"
         }
       ],
       "verificacion": {
         "nivel": "ALTA",
-        "porque": "Lo contaron dos medios independientes.",
+        "porque": "Lo contaron tres medios independientes.",
         "sugeridoPorIA": "ALTA"
       },
-      "slug": "la-seleccion-argentina-juega-amistosos-en-el-inicio-de-un-nuevo-ciclo"
+      "slug": "diego-santilli-visita-el-autodromo-juan-manuel-fangio-en-el-regreso",
+      "foto": {
+        "archivo": "fotos-notas/1is0p0y.jpg",
+        "credito": "Foto: QZ Noticias (Mar del Plata)"
+      }
     },
     {
       "id": "1spxjt5",
       "titulo": "Mariano Werner y Otto Fritzler ganan las series",
       "copete": "Mariano Werner y Otto Fritzler se quedaron con las baterías del TC Pick Up en el Autódromo Juan Manuel Fangio y largarán desde la primera fila en la final de la octava fecha del campeonato.",
-      "cuerpo": "Mariano Werner se quedó con la primera serie del TC Pick Up este domingo en el Autódromo Juan Manuel Fangio de Balcarce tras imponerse en una disputa inicial con Agustín Canapino, quien terminó segundo.\n\nEn tanto, Otto Fritzler se impuso en la segunda batería con la Ford Ranger luego de superar a Diego Azar, y compartirá la primera fila de la final junto a Werner. La carrera decisiva, correspondiente a la primera fecha de la Copa Coronación 2026 y a la octava del certamen, se largará a las 14:10 a un total de 20 vueltas o un máximo de 40 minutos en el circuito de 4.395 metros.\n\nLa actividad automovilística marca el regreso de una competencia nacional al autódromo local después de 15 años, un hecho que generó gran expectativa popular en la ciudad durante todo el fin de semana.",
+      "cuerpo": "Mariano Werner se quedó con la primera serie del TC Pick Up este domingo en el Autódromo Juan Manuel Fangio de Balcarce tras imponerse en una disputa inicial con Agustín Canapino, quien terminó segundo.\n\nEn tanto, Otto Fritzler se impuso en la segunda batería con la Ford Ranger luego de superar a Diego Azar, y compartió la primera fila de la final junto a Werner. La carrera decisiva, correspondiente a la primera fecha de la Copa Coronación 2026 y a la octava del certamen, se largó a las 14:10 a un total de 20 vueltas o un máximo de 40 minutos en el circuito de 4.395 metros.\n\nLa actividad automovilística marca el regreso de una competencia nacional al autódromo local después de 15 años, un hecho que generó gran expectativa popular en la ciudad durante todo el fin de semana.",
       "guion": "Mariano Werner y Otto Fritzler ganan las series",
       "seccion": "Automovilismo",
       "medios": [
@@ -1558,7 +1171,7 @@
       ],
       "enlace": "https://www.qznoticias.com/deportes/werner-y-fritzler-ganaron-las-series-y-largaran-adelante-en-balcarce",
       "teniaImagenLaFuente": true,
-      "fecha": "2026-09-27T16:04:06.000Z",
+      "fecha": "2026-09-27T15:45:00.980Z",
       "sinFecha": false,
       "visto": "2026-09-27T15:45:00.980Z",
       "relevancia": 72,
@@ -1630,6 +1243,72 @@
       }
     },
     {
+      "id": "tawnyj",
+      "titulo": "El Gobierno confirma el pago del bono previsional para octubre",
+      "copete": "El Gobierno nacional oficializó la entrega de un refuerzo económico en octubre para jubilados, pensionados y titulares de prestaciones no contributivas de la ANSES.",
+      "cuerpo": "El plus extraordinario y no remunerativo está dirigido a quienes perciben jubilaciones y pensiones contributivas, la Pensión Universal para el Adulto Mayor y pensiones no contributivas. Aquellos cuyos haberes sean menores o iguales al mínimo cobrarán el monto máximo del refuerzo, mientras que quienes superen ese umbral recibirán una suma proporcional para alcanzar el equivalente al haber mínimo más el adicional.\n\nLa ANSES quedó facultada para administrar la liquidación, efectuar controles y emitir normas complementarias para la acreditación del beneficio a los titulares.",
+      "guion": "El Gobierno confirma el pago del bono previsional para octubre",
+      "seccion": "Economía",
+      "medios": [
+        "El Eco de Tandil",
+        "La Nación",
+        "Infobae",
+        "Ámbito",
+        "TN (Todo Noticias)",
+        "El Cronista",
+        "El Destape",
+        "Perfil",
+        "A24",
+        "iProfesional",
+        "C5N",
+        "Crónica",
+        "Noticias Argentinas (NA)",
+        "El Día",
+        "Zona Norte Diario",
+        "La Nueva"
+      ],
+      "enlace": "https://www.infobae.com/economia/2026/09/28/el-gobierno-confirmo-el-pago-del-bono-para-jubilados-y-pensionados-para-octubre/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-27T13:59:00.000Z",
+      "sinFecha": false,
+      "visto": "2026-09-28T06:01:00.563Z",
+      "relevancia": 79,
+      "local": false,
+      "publicadaPor": "ia",
+      "publicadaCuando": "2026-09-28T07:22:11.860Z",
+      "temas": [],
+      "como": "automatica",
+      "etiquetas": [
+        "Jubilados",
+        "ANSES",
+        "Bono",
+        "Gobierno nacional",
+        "Economía"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/economia/2026/09/28/el-gobierno-confirmo-el-pago-del-bono-para-jubilados-y-pensionados-para-octubre/",
+          "fecha": "2026-09-28T05:10:44.000Z",
+          "oficial": false,
+          "aporte": "Confirmó los detalles sobre los grupos alcanzados, el carácter no remunerativo del refuerzo y las condiciones de liquidación según los haberes."
+        },
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/economia/el-gobierno-confirmo-el-bono-previsional-de-octubre-para-jubilados-y-pensionados-nid28092026/",
+          "fecha": "2026-09-28T05:39:37.000Z",
+          "oficial": false,
+          "aporte": "Aportó el número de decreto oficial que formaliza la medida y el monto máximo del bono."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "el-gobierno-oficializa-el-pago-del-bono-previsional-para-octubre"
+    },
+    {
       "id": "repaso20260927manana",
       "propia": "repaso",
       "titulo": "El repaso de la mañana en Radar Balcarce: cajas municipales y hockey",
@@ -1681,103 +1360,6 @@
         }
       ],
       "slug": "el-repaso-de-la-manana-en-radar-balcarce-autodromo-juan-manuel-fangio"
-    },
-    {
-      "id": "1vqvuab",
-      "titulo": "Una empresa de Esperanza termina el sillón que usará León XIV en Luján",
-      "copete": "Ya está listo el sillón en el que se sentará el papa León XIV durante la misa del miércoles 11 de noviembre en la Basílica de Luján. Lo fabricó una empresa de Esperanza, Santa Fe, por encargo de una vecina lujanense.",
-      "cuerpo": "La pieza la hizo Sillas Mehring, una empresa con más de 70 años de trayectoria, que trabajó a partir de una fotografía del mobiliario que suele usar el Vaticano. \"Es una pieza única y no hice ni plantilla, ni plano, ni nada, porque así como lo iba haciendo me iban saliendo las cosas\", explicó Enrique Mehring, uno de los dueños.\n\nEl exterior y las patas son de guatambú, con un lustre dorado, y la estructura interna es de paraíso, revestida con capas de poliéster de alta densidad y un tapizado especial. Mide 60 centímetros de ancho, 55 de profundidad y 75 de alto hasta los apoyabrazos. El respaldo llega a 1,20 metro y, con la cresta tallada en Buenos Aires, alcanza hasta 1,40.\n\nDespués de la misa, el sillón pasará a formar parte del patrimonio histórico del museo de la Basílica de Luján. La visita del Papa a la Argentina está prevista para noviembre, con Luján como uno de sus puntos centrales.",
-      "guion": "Finalizan el sillón papal para la misa del papa León XIV en Luján",
-      "seccion": "Argentina",
-      "medios": [
-        "0221",
-        "La Verdad",
-        "El Marplatense",
-        "Mi8 (Canal 8 Mar del Plata)",
-        "Agencia DIB"
-      ],
-      "enlace": "https://dib.com.ar/sociedad/leon-xiv-ya-esta-listo-el-sillon-que-usara-el-papa-la-misa-lujan-n56063",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-27T12:05:00.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-27T23:28:54.122Z",
-      "relevancia": 62,
-      "local": false,
-      "publicadaPor": "ia",
-      "publicadaCuando": "2026-09-28T03:12:47.611Z",
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "El sillón papal para la misa en Luján ya está terminado",
-        "Fue fabricado en la localidad santafesina de Esperanza",
-        "Se usó madera de guatambú y paraíso con tapizado especial",
-        "Quedará en el patrimonio histórico del museo de la Basílica"
-      ],
-      "seSabe": [
-        "La misa se celebrará el miércoles 11 de noviembre en la Basílica de Luján",
-        "El sillón fue fabricado por la empresa Sillas Mehring en Esperanza, Santa Fe",
-        "El encargo lo hizo una vecina de Luján a partir de una foto del mobiliario del Vaticano",
-        "La pieza combina guatambú, paraíso y un tapizado especial con poliéster",
-        "El sillón formará parte del museo de la Basílica de Luján tras la ceremonia"
-      ],
-      "noConfirmado": [
-        "No se informaron los costos ni los plazos exactos que demandó la fabricación de la pieza."
-      ],
-      "textoRedes": "Ya está terminado el sillón que utilizará el papa León XIV en su visita del 11 de noviembre a la Basílica de Luján. La pieza fue fabricada en Santa Fe por encargo de una vecina y luego pasará a formar parte del museo local.",
-      "etiquetas": [
-        "Papa León XIV",
-        "Luján",
-        "Basílica de Luján",
-        "Esperanza",
-        "Sillas Mehring"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Agencia DIB",
-          "enlace": "https://dib.com.ar/sociedad/leon-xiv-ya-esta-listo-el-sillon-que-usara-el-papa-la-misa-lujan-n56063",
-          "fecha": "2026-09-27T12:05:00.000Z",
-          "oficial": false,
-          "aporte": "Aportó los detalles sobre la fabricación, las medidas, los materiales y el destino final del sillón papal."
-        },
-        {
-          "medio": "0221",
-          "enlace": "https://www.0221.com.ar/nacional/el-sillon-que-usara-leon-xiv-lujan-ya-esta-listo-y-tiene-un-destino-especial-n134897",
-          "fecha": "2026-09-27T18:22:00.000Z",
-          "oficial": false,
-          "aporte": "Confirmó la fecha de la misa y el lugar de fabricación del asiento."
-        },
-        {
-          "medio": "La Verdad",
-          "enlace": "https://laverdadonline.com/leon-xiv-ya-esta-listo-el-sillon-que-usara-el-papa-en-la-misa-de-lujan/",
-          "fecha": "2026-09-27T20:58:29.000Z",
-          "oficial": false,
-          "aporte": "Coincidió en que el elemento central de la ceremonia ya está terminado."
-        },
-        {
-          "medio": "El Marplatense",
-          "enlace": "https://www.elmarplatense.com/ya-esta-listo-el-sillon-que-usara-leon-xiv-en-lujan",
-          "fecha": "2026-09-27T15:30:00.000Z",
-          "oficial": false,
-          "aporte": "Aportó el nombre de la empresa fabricante, Sillas Mehring."
-        },
-        {
-          "medio": "Mi8 (Canal 8 Mar del Plata)",
-          "enlace": "https://mi8.com.ar/ultiman-detalles-para-la-visita-de-leon-xiv-ya-esta-listo-el-sillon-que-usara-el-papa-en-la-misa-en-lujan/",
-          "fecha": "2026-09-27T18:02:32.000Z",
-          "oficial": false,
-          "aporte": "Ratificó los datos principales sobre la visita y el encargo del sillón."
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron cinco medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "leon-xiv-ya-esta-listo-el-sillon-que-usara-el-papa-en-la-misa-de-lujan",
-      "foto": {
-        "archivo": "fotos-notas/1vqvuab.jpg",
-        "credito": "Foto: 0221"
-      }
     },
     {
       "id": "c7em03",
@@ -1912,83 +1494,6 @@
       "slug": "un-motociclista-es-hospitalizado-tras-un-choque-en-balcarce"
     },
     {
-      "id": "1k5mdvt",
-      "titulo": "San Luis registra lluvias ligeras y temperaturas de hasta treinta grados",
-      "copete": "La provincia cuyana atraviesa una jornada con precipitaciones leves, alta humedad y registros térmicos que oscilan entre los dieciocho y los treinta grados, según los informes meteorológicos.",
-      "cuerpo": "San Luis atraviesa una jornada con lluvias ligeras y marcas térmicas que alcanzan una máxima de treinta grados y una mínima de dieciocho, según los datos difundidos por los servicios meteorológicos.\n\nLas condiciones actuales presentan variaciones según los reportes disponibles, ya que otros informes prevén registros de dieciséis grados de máxima y catorce de mínima con cielo cubierto, o bien veintiún grados de máxima con nubosidad parcial para este veintiocho de septiembre.",
-      "guion": "San Luis registra lluvias ligeras y temperaturas de hasta treinta grados",
-      "seccion": "Agro",
-      "medios": [
-        "TN (Todo Noticias)",
-        "Infocampo"
-      ],
-      "enlace": "https://www.infocampo.com.ar/clima-en-san-luis-hoy-27-septiembre-2026/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-27T09:00:14.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-28T12:05:25.938Z",
-      "relevancia": 28,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Lluvias ligeras y cielo cubierto en la región cuyana",
-        "Temperaturas máximas estimadas entre los dieciséis y los treinta grados",
-        "Humedad del treinta y uno por ciento y vientos moderados del sudeste",
-        "Recomendaciones para el sector agropecuario ante la baja probabilidad de precipitaciones"
-      ],
-      "seSabe": [
-        "Se registran precipitaciones ligeras en la provincia de San Luis",
-        "Las fuentes difieren sobre las marcas térmicas previstas para la jornada",
-        "La humedad se ubica en el treinta y uno por ciento"
-      ],
-      "noConfirmado": [
-        "Las fuentes presentan contradicciones en los valores máximos y mínimos de temperatura pronosticados para la fecha"
-      ],
-      "textoRedes": "San Luis registra una jornada con lluvias ligeras, cielo cubierto y temperaturas que varían según los informes meteorológicos entre los dieciséis y los treinta grados.",
-      "etiquetas": [
-        "San Luis",
-        "clima",
-        "temperatura",
-        "lluvia"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Infocampo",
-          "enlace": "https://www.infocampo.com.ar/clima-en-san-luis-hoy-27-septiembre-2026/",
-          "fecha": "2026-09-27T09:00:14.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "TN (Todo Noticias)",
-          "enlace": "https://tn.com.ar/clima/alertas/2026/09/28/clima-en-san-luis-hoy-lunes-28-de-septiembre-lluvia-ligera-durante-toda-la-jornada/",
-          "fecha": "2026-09-28T09:04:22.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Canal 26",
-          "enlace": "https://www.canal26.com/clima/san-luis/pronostico-en-san-luis-como-estara-el-clima-hoy-28-de-septiembre-de-2026/",
-          "fecha": "2026-09-28T06:30:36.000Z",
-          "oficial": false,
-          "aporte": null
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron tres medios independientes.",
-        "sugeridoPorIA": "BAJA"
-      },
-      "slug": "san-luis-registra-lluvias-ligeras-y-temperaturas-de-hasta-treinta",
-      "foto": {
-        "archivo": "fotos-notas/1k5mdvt.webp",
-        "credito": "Foto: Infocampo"
-      }
-    },
-    {
       "id": "wbaaus",
       "titulo": "Un motociclista choca contra una camioneta",
       "copete": "Un motociclista sufrió heridas graves tras perder el control de su rodado e impactar contra una camioneta estacionada en avenida Del Valle y Maipú. Fue asistido en el lugar por Bomberos Voluntarios.",
@@ -2058,7 +1563,7 @@
     },
     {
       "id": "121t71e",
-      "titulo": "Cruce en Balcarce por la habilitación del autódromo Fangio",
+      "titulo": "Balinotti responde a las críticas sobre el autódromo Fangio",
       "copete": "El médico de la ACTC, Rodolfo Balinotti, respondió a los cuestionamientos sobre el circuito local y defendió las obras realizadas. Pidió a los vecinos no dejarse engañar por críticas.",
       "cuerpo": "El médico de la ACTC, Rodolfo Balinotti, cuestionó las declaraciones del presidente de la CDA del ACA, Eduardo Baca, quien había puesto en duda la habilitación otorgada por la COPAM al Autódromo Juan Manuel Fangio en Balcarce. Balinotti defendió las obras y sostuvo que los pilotos dieron su conformidad con la traza.\n\nAdemás, criticó a quienes cuestionan el proyecto y pidió a los vecinos no dejarse engañar.\n\nEl profesional reconoció que la actividad contempla riesgos de accidentes, pero aclaró que eso no implica inseguridad en el escenario deportivo. Finalmente, consideró que el dirigente pudo recibir información errónea y lo invitó a revisar la documentación y las obras.",
       "guion": "Cruce en Balcarce por la habilitación del autódromo Fangio",
@@ -2141,20 +1646,21 @@
     },
     {
       "id": "1pbhcrn",
-      "titulo": "Mariano Werner marca la pole del TC Pick Up",
-      "copete": "Mariano Werner se quedó con la pole position del TC Pick Up en el autódromo Juan Manuel Fangio. El automovilismo nacional regresó al circuito local tras quince años de ausencia.",
-      "cuerpo": "A bordo de su Foton Tunland G7, Werner registró un tiempo de 1 minuto, 39 segundos y 866 milésimas, superando a Diego Azar con Toyota Hilux y a Agustín Canapino con Chevrolet S10. Con este resultado, el piloto sumó dos puntos para el campeonato y alcanzó su vigésima tercera pole en la categoría.\n\nLa actividad en el trazado balcarceño continuará este domingo con la realización de las series a partir de las 11.35, mientras que la carrera final dará comienzo a las 14.10 sobre un total de 20 vueltas o un tiempo máximo de 40 minutos.",
-      "guion": "Mariano Werner marca la pole del TC Pick Up",
+      "titulo": "Werner hizo la pole del TC Pick Up en el regreso del Autódromo",
+      "copete": "",
+      "cuerpo": "A bordo de su Foton Tunland G7, Werner registró un tiempo de 1 minuto, 39 segundos y 866 milésimas, superando a Diego Azar con Toyota Hilux y a Agustín Canapino con Chevrolet S10. Con este resultado, el piloto sumó dos puntos para el campeonato y alcanzó su vigésima tercera pole en la categoría.\n\nLa actividad en el trazado balcarceño continuó ese domingo con la disputa de las series desde las 11.35, mientras que la carrera final se largó a las 14.10 sobre un total de 20 vueltas o un tiempo máximo de 40 minutos.",
+      "guion": null,
       "seccion": "Automovilismo",
       "medios": [
-        "QZ Noticias (Mar del Plata)"
+        "QZ Noticias (Mar del Plata)",
+        "Campeones"
       ],
       "enlace": "https://www.qznoticias.com/deportes/werner-hizo-la-pole-del-tc-pick-up-en-el-regreso-del-autodromo-de-balcarce",
       "teniaImagenLaFuente": true,
       "fecha": "2026-09-26T23:44:02.000Z",
       "sinFecha": false,
       "visto": "2026-09-27T02:00:40.587Z",
-      "relevancia": 72,
+      "relevancia": 82,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -2163,67 +1669,22 @@
         "tc-pick-up"
       ],
       "como": "automatica",
-      "claves": [
-        "Mariano Werner logró la pole position del TC Pick Up.",
-        "El autódromo Juan Manuel Fangio volvió a recibir una competencia nacional tras quince años.",
-        "La actividad continuará este domingo con las series y la final."
-      ],
-      "textoRedes": "Mariano Werner se quedó con la pole position del TC Pick Up en el autódromo Juan Manuel Fangio, marcando el esperado regreso del automovilismo nacional a Balcarce tras quince años.",
-      "etiquetas": [
-        "Automovilismo",
-        "TC Pick Up",
-        "Autodromo Juan Manuel Fangio",
-        "Mariano Werner",
-        "Balcarce"
-      ],
       "fuentesConsultadas": [
         {
           "medio": "QZ Noticias (Mar del Plata)",
           "enlace": "https://www.qznoticias.com/deportes/werner-hizo-la-pole-del-tc-pick-up-en-el-regreso-del-autodromo-de-balcarce",
-          "fecha": "2026-09-26T21:59:46.000Z",
+          "fecha": "2026-09-26T23:44:02.000Z",
           "oficial": false,
-          "aporte": "Detalló los tiempos de la clasificación, las posiciones de los primeros puestos y el cronograma de la competencia para el domingo."
-        },
-        {
-          "medio": "Ecos Diarios (Necochea)",
-          "enlace": "https://elecos.com.ar/werner-consiguio-la-pole-en-el-regreso-del-automovilismo-nacional-a-balcarce",
-          "fecha": "2026-09-26T21:06:10.000Z",
-          "oficial": false,
-          "aporte": "Informó sobre el regreso de la competencia nacional al autódromo local tras quince años de ausencia."
+          "aporte": null
         },
         {
           "medio": "Campeones",
-          "enlace": "https://campeones.com.ar/werner-consiguio-una-pole-arrolladora-en-el-debut-del-tc-pick-up-en-balcarce/",
-          "fecha": "2026-09-26T19:59:30.000Z",
+          "enlace": "https://campeones.com.ar/tc-pick-up-en-balcarce-werner-y-fritzler-se-impusieron-en-las-series/",
+          "fecha": "2026-09-27T15:25:20.000Z",
           "oficial": false,
-          "aporte": "Confirmó el modelo del vehículo de Mariano Werner y su pertenencia al Fadel Racing."
+          "aporte": null
         }
       ],
-      "antecedentes": [
-        {
-          "id": "ve1kus",
-          "titulo": "Gran expectativa en Balcarce por el regreso del autódromo",
-          "fecha": "2026-09-23T14:37:19.000Z",
-          "ruta": "/nota/gran-expectativa-en-balcarce-por-el-regreso-del-autodromo-ve1kus"
-        },
-        {
-          "id": "epzsa5",
-          "titulo": "Reinauguran el autódromo Juan Manuel Fangio en Balcarce",
-          "fecha": "2026-09-26T13:46:35.000Z",
-          "ruta": "/nota/el-autodromo-juan-manuel-fangio-reabre-sus-puertas-en-balcarce-epzsa5"
-        },
-        {
-          "id": "7qxthx",
-          "titulo": "Kicillof encabeza la reinauguración del autódromo en Balcarce",
-          "fecha": "2026-09-26T02:38:34.000Z",
-          "ruta": "/nota/kicillof-encabeza-la-reapertura-del-autodromo-juan-manuel-fangio-en-7qxthx"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron tres medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
       "slug": "mariano-werner-marca-la-pole-del-tc-pick-up-en-balcarce",
       "foto": {
         "archivo": "fotos-notas/1pbhcrn.jpg",
@@ -2297,7 +1758,7 @@
     },
     {
       "id": "iobnth",
-      "titulo": "Matías Latorre repasó su trayectoria musical",
+      "titulo": "Matías Latorre repasa su trayectoria musical",
       "copete": "El cantante balcarceño fue entrevistado en un programa radial local, donde recorrió sus inicios artísticos, su paso por distintos escenarios del país y su vínculo con el tango y el folclore.",
       "cuerpo": "El músico balcarceño Matías Latorre participó de una emisión del ciclo radial \"Historias de Vida\", que conduce Mauricio Panaggio, para repasar distintos momentos de su trayectoria personal y artística. Durante la charla, el artista recordó que nació en Balcarce el 25 de octubre de 1982 y que tuvo su primer contacto con la guitarra a los seis o siete años gracias a un regalo de su padre y a unas clases con Hugo Centeno que abandonó rápidamente.\n\nLa relación con la música se reanudó a los doce años al retomar el estudio con Alberto Medina, influenciado también por su abuelo bandoneonista, cuyo instrumento conserva en la actualidad. Tras incursionar inicialmente en el folclore y participar en los Torneos Juveniles Bonaerenses en 1997, volcó su repertorio hacia el tango, género que marcó su carrera. Asimismo, recordó sus primeras presentaciones en la plaza Libertad, su paso por Buenos Aires para formarse con la licenciada Susana Naidich, y su participación en ciclos televisivos como \"Si lo sabe, cante\" y \"La Voz Argentina\" en 2012, además de su posterior presentación en el festival de Cosquín junto a Los Tekis en 2023.",
       "guion": "Matías Latorre repasó su trayectoria musical",
@@ -2355,157 +1816,6 @@
         "sugeridoPorIA": "MEDIA"
       },
       "slug": "matias-latorre-repaso-su-trayectoria-musical-en-balcarce"
-    },
-    {
-      "id": "1dlctqu",
-      "titulo": "Las cajas municipales cierran antes por el balance trimestral",
-      "copete": "La Secretaría de Hacienda dispuso que la atención al público finalice a las 10 el próximo miércoles 30 de septiembre. La medida alcanza únicamente a las cajas y se solicita a los contribuyentes realizar los trámites con anticipación.",
-      "cuerpo": "Así lo informó la Secretaría de Hacienda, que solicitó a los vecinos y contribuyentes que deban efectuar pagos o gestiones de manera presencial que procuren concretar sus trámites antes de ese horario para evitar inconvenientes.\n\nDesde el área comunal detallaron que la medida afectará de forma exclusiva la atención en el sector de cajas durante esa única jornada. Como se había informado en ocasiones previas por este medio, este tipo de interrupciones temporales se implementan de manera habitual para cumplir con las instancias administrativas correspondientes.",
-      "guion": "Las cajas municipales cierran antes por el balance trimestral",
-      "seccion": "Balcarce",
-      "medios": [
-        "Infórmese Primero (FM 104.9)",
-        "Municipalidad de Balcarce"
-      ],
-      "enlace": "http://www.informeseprimero.com.ar/2026/09/cierre-anticipado-de-las-cajas.html",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-26T22:01:01.559Z",
-      "sinFecha": false,
-      "visto": "2026-09-27T02:30:43.813Z",
-      "relevancia": 75,
-      "local": true,
-      "publicadaPor": "ia",
-      "publicadaCuando": "2026-09-27T02:20:16.533Z",
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Cierre anticipado de cajas municipales a las 10",
-        "La medida rige para el miércoles 30 de septiembre",
-        "Se debe a la realización del balance trimestral",
-        "Afecta únicamente la atención presencial de pagos y trámites"
-      ],
-      "seSabe": [
-        "Las cajas municipales cerrarán a las 10 el miércoles 30 de septiembre según informó la Secretaría de Hacienda.",
-        "La modificación en el horario obedece a la realización del balance trimestral.",
-        "La medida afectará únicamente la atención presencial en el sector de cajas durante esa jornada."
-      ],
-      "etiquetas": [
-        "cajas municipales",
-        "Secretaría de Hacienda",
-        "balance trimestral",
-        "Balcarce",
-        "trámites"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Infórmese Primero (FM 104.9)",
-          "enlace": "http://www.informeseprimero.com.ar/2026/09/cierre-anticipado-de-las-cajas.html",
-          "fecha": "2026-09-26T22:01:01.559Z",
-          "oficial": false,
-          "aporte": "Informó el horario del cierre anticipado a las 10 para el miércoles 30 de septiembre y el pedido de realizar trámites previos."
-        },
-        {
-          "medio": "Municipalidad de Balcarce",
-          "enlace": "https://balcarce.gob.ar/2026/09/25/cierre-anticipado-de-cajas-por-balance-trimestral/",
-          "fecha": "2026-09-25T13:13:45.000Z",
-          "oficial": true,
-          "aporte": "Aportó la comunicación oficial de la Secretaría de Hacienda sobre el balance trimestral y la afectación exclusiva de las cajas."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "1ft3pp0",
-          "titulo": "Las cajas municipales cierran antes por el balance en Balcarce",
-          "fecha": "2026-09-25T13:13:45.000Z",
-          "ruta": "/nota/las-cajas-municipales-cierran-antes-por-el-balance-en-balcarce-1ft3pp0"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo informaron Municipalidad de Balcarce y un medio independiente.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "las-cajas-municipales-cierran-antes-por-el-balance-trimestral-en",
-      "foto": {
-        "archivo": "fotos-notas/1dlctqu.png",
-        "credito": "Foto: Municipalidad de Balcarce"
-      }
-    },
-    {
-      "id": "1mbmoag",
-      "titulo": "Monteoliva dice que la mudanza de la cárcel de Devoto empieza “muy pronto”",
-      "copete": "La ministra de Seguridad nacional, Alejandra Monteoliva, confirmó que el traslado de los presos de Devoto al complejo de Marcos Paz se hará por etapas. También contó cómo será la visita del papa León XIV al penal, prevista para el miércoles 11 de noviembre.",
-      "cuerpo": "Según explicó Monteoliva, desde comienzo de año el Gobierno venía hablando del último trimestre para la mudanza, que se hará “en distintas fases” y sigue dentro del “cronograma previsto”, aunque no dio una fecha para el cierre del penal. “La mudanza de una cárcel no se hace de un día para el otro”, dijo.\n\nSobre el encuentro con León XIV, la ministra aclaró que no será masivo: participará un grupo reducido de internos, elegido por la Iglesia a través de la pastoral penitenciaria según sus historias de vida, que se enviarán antes al Vaticano. La actividad “no dura más de veinte minutos” e incluirá una bendición.\n\nLa visita forma parte de un operativo de seguridad de 120 horas ininterrumpidas entre el 8 y el 11 de noviembre, en la Ciudad de Buenos Aires, la provincia de Buenos Aires y Córdoba. Abarca tres aeropuertos, cuatro eventos masivos y 11 actividades cerradas, con unos siete millones de personas previstas.",
-      "guion": null,
-      "seccion": "Argentina",
-      "medios": [
-        "Infobae",
-        "TN (Todo Noticias)",
-        "A24",
-        "Minuto Uno",
-        "Radio Mitre",
-        "Noticias Argentinas (NA)"
-      ],
-      "enlace": "https://www.infobae.com/politica/2026/09/26/monteoliva-hablo-de-la-visita-de-leon-xiv-a-la-carcel-de-devoto-y-dijo-que-la-mudanza-del-penal-sera-muy-pronto/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-26T20:26:17.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-28T15:01:07.787Z",
-      "relevancia": 63,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "fuentesConsultadas": [
-        {
-          "medio": "Infobae",
-          "enlace": "https://www.infobae.com/politica/2026/09/26/monteoliva-hablo-de-la-visita-de-leon-xiv-a-la-carcel-de-devoto-y-dijo-que-la-mudanza-del-penal-sera-muy-pronto/",
-          "fecha": "2026-09-26T20:26:17.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "TN (Todo Noticias)",
-          "enlace": "https://tn.com.ar/politica/2026/09/26/monteoliva-confirmo-que-la-mudanza-de-la-carcel-de-devoto-comenzara-este-ano-y-dio-mas-detalles-sobre-la-visita-del-papa/",
-          "fecha": "2026-09-27T00:55:56.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "A24",
-          "enlace": "https://www.a24.com/politica/alejandra-monteoliva-detallo-como-sera-la-visita-leon-xiv-la-carcel-devoto-y-hablo-la-mudanza-del-penal-n1600674",
-          "fecha": "2026-09-27T01:05:00.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Minuto Uno",
-          "enlace": "https://www.minutouno.com/politica/el-gobierno-confirmo-que-la-mudanza-la-carcel-devoto-se-iniciara-este-ano-n6327087",
-          "fecha": "2026-09-27T01:41:00.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Radio Mitre",
-          "enlace": "https://radiomitre.cienradios.com/politica/alejandra-monteoliva-hablo-sobre-la-visita-de-leon-xiv-a-la-carcel-de-devoto-y-anticipo-cuando-comenzara-el-traslado-a-marcos-paz/",
-          "fecha": "2026-09-27T00:01:51.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Noticias Argentinas (NA)",
-          "enlace": "https://noticiasargentinas.com/politica/monteoliva-confirmo-que-la-mudanza-de-la-carcel-de-devoto-iniciara-este-ano-y-dio-detalles-del-operativo-por-la-visita-del-papa_a6ab83c9c9a676c64cfe19f0f",
-          "fecha": "2026-09-26T21:46:09.708Z",
-          "oficial": false,
-          "aporte": null
-        }
-      ],
-      "slug": "monteoliva-hablo-de-la-visita-de-leon-xiv-a-la-carcel-de-devoto-y",
-      "foto": {
-        "archivo": "fotos-notas/1mbmoag.jpg",
-        "credito": "Foto: Minuto Uno"
-      }
     },
     {
       "id": "1pz7nob",
@@ -2655,12 +1965,12 @@
         "TN (Todo Noticias)",
         "Perfil",
         "Página/12",
+        "A24",
         "TyC Sports",
         "Olé",
         "C5N",
         "Radio Mitre",
         "Diario Popular",
-        "Doble Amarilla",
         "Minuto Uno"
       ],
       "enlace": "https://www.ole.com.ar/futbol-internacional/espana/lamine-yamal-revelo-dijo-messi-apenas-termino-final-mundial_0_ez553WkjjQ.html",
@@ -2718,6 +2028,13 @@
           "aporte": null
         },
         {
+          "medio": "A24",
+          "enlace": "https://www.a24.com/deportes/me-salio-adentro-lamine-yamal-revelo-que-le-dijo-lionel-messi-la-final-del-mundial-2026-n1600982",
+          "fecha": "2026-09-28T15:04:42.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
           "medio": "TyC Sports",
           "enlace": "https://www.tycsports.com/futbol-internacional/yamal-detalles-charla-messi-final-mundial--id763232.html",
           "fecha": "2026-09-27T14:41:27.000Z",
@@ -2753,13 +2070,6 @@
           "aporte": null
         },
         {
-          "medio": "Doble Amarilla",
-          "enlace": "https://www.dobleamarilla.com.ar/por-el-mundo/mientras-lamine-yamal-gano-8-titulos-a-sus-19-anos--lionel-messi-habia-conseguido-esa-cantidad-a-la-misma-edad_a6ab6a8ce29d47f8cb536e0eb",
-          "fecha": "2026-09-26T23:40:18.320Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
           "medio": "Minuto Uno",
           "enlace": "https://www.minutouno.com/deportes/lamine-yamal-revelo-que-le-dijo-lionel-messi-la-final-del-mundial-2026-me-salio-del-alma-n6327189",
           "fecha": "2026-09-27T17:29:14.000Z",
@@ -2775,9 +2085,9 @@
     },
     {
       "id": "jgkb1p",
-      "titulo": "El autódromo Fangio completa su estacionamiento de autos",
+      "titulo": "El estacionamiento del autódromo Fangio llega a su capacidad máxima",
       "copete": "Los sectores habilitados para automóviles en el Autódromo Municipal Juan Manuel Fangio llegaron al total de su capacidad durante la jornada de las TC Pick Up.",
-      "cuerpo": "El Autódromo Municipal Juan Manuel Fangio alcanzó este sábado el cien por ciento de ocupación en los sectores habilitados para el estacionamiento de automóviles, en el marco del regreso de las categorías nacionales a Balcarce tras quince años sin competencias oficiales.\n\nAnte la saturación de los espacios internos, las autoridades recomendaron a los asistentes que aún se encuentran en camino contemplar alternativas de traslado y respetar las zonas permitidas en las inmediaciones, además de seguir las indicaciones del personal de tránsito y seguridad.",
+      "cuerpo": "El Autódromo Municipal Juan Manuel Fangio alcanzó el sábado 26 de septiembre el cien por ciento de ocupación en los sectores habilitados para el estacionamiento de automóviles, durante el regreso de las categorías nacionales a Balcarce tras quince años sin competencias oficiales.\n\nAnte la saturación de los espacios internos, las autoridades recomendaron a los asistentes que aún se encontraban en camino contemplar alternativas de traslado y respetar las zonas permitidas en las inmediaciones, además de seguir las indicaciones del personal de tránsito y seguridad.",
       "guion": "El autódromo Fangio completa su estacionamiento de autos",
       "seccion": "Automovilismo",
       "medios": [
@@ -2964,85 +2274,117 @@
       }
     },
     {
-      "id": "1aa6w2s",
-      "titulo": "Cabaña Don Cholo gana el Gran Campeón Macho de la Semana Angus",
-      "copete": "La cabaña Don Cholo obtuvo el máximo galardón con el toro \"Josecito\" en la Exposición Nacional Angus de Primavera realizada en Cañuelas.",
-      "cuerpo": "El toro \"Josecito\", de la cabaña Don Cholo, se consagró como Gran Campeón Macho de la cuadragésima séptima Exposición Nacional Angus de Primavera, desarrollada en Cañuelas en el cierre de la Semana Angus. La jura de machos a bozal estuvo a cargo de Julio Fernández, quien destacó la calidad y el balance del ejemplar ganador tras una competencia muy reñida.\n\nCarlos Ojea Rullán, socio de la cabaña ganadora, señaló que el logro es fruto de años de planificación genética y del trabajo cotidiano de todo el equipo de cabañeros, veterinarios y encargados de campo. Por su parte, la vigesimosexta Exposición del Ternero coronó a los mejores ejemplares bajo la evaluación del jurado Emanuel Canale, en una jornada que reunió a gran cantidad de público y contó con el respaldo de la Asociación Argentina de Angus.",
-      "guion": "Cabaña Don Cholo gana el Gran Campeón Macho de la Semana Angus",
-      "seccion": "Agro",
+      "id": "mk94me",
+      "titulo": "Franco Colapinto choca con Pierre Gasly en el Gran Premio de Azerbaiyán",
+      "copete": "El piloto argentino colisionó con su compañero de equipo y con Lando Norris durante el relanzamiento de la carrera en Bakú. El incidente dejó a ambos fuera de competencia y generó distintas reacciones en la categoría.",
+      "cuerpo": "Tras el impacto, el piloto argentino se dirigió al box de Alpine para disculparse con el personal y con el corredor francés, quien mantuvo una postura fría y evitó declaraciones extensas ante la prensa. El antecedente inmediato señala que ambos integran la escudería Alpine y habían protagonizado semanas atrás tensiones internas por posiciones en pista, según consignó la cobertura previa.\n\nEn cuanto a las consecuencias para el corredor argentino, el circuito callejero de Bakú albergó el sábado pasado la decimosexta fecha de la temporada, donde el deportista había partido desde el noveno puesto antes del incidente que determinó el abandono general de los involucrados en la maniobra.",
+      "guion": "Franco Colapinto choca con Pierre Gasly en el Gran Premio de Azerbaiyán",
+      "seccion": "Automovilismo",
       "medios": [
         "La Nación",
         "Clarín",
-        "ANDigital"
+        "0223 (Mar del Plata)",
+        "El Eco de Tandil",
+        "LU9 Mar del Plata",
+        "QZ Noticias (Mar del Plata)",
+        "Ecos Diarios (Necochea)",
+        "Motorsport",
+        "Infobae",
+        "TN (Todo Noticias)",
+        "El Destape",
+        "Perfil",
+        "A24",
+        "Ámbito",
+        "TyC Sports",
+        "Minuto Uno",
+        "C5N",
+        "Crónica",
+        "Radio Mitre",
+        "Canal 26",
+        "Diario Popular",
+        "Noticias Argentinas (NA)",
+        "El Día",
+        "La Nueva",
+        "0221",
+        "InfoRegión",
+        "El Marplatense",
+        "Mi8 (Canal 8 Mar del Plata)",
+        "Doble Amarilla",
+        "Bolavip Argentina",
+        "Campeones"
       ],
-      "enlace": "https://www.clarin.com/rural/don-cholo-consagro-gran-campeon-macho-primavera-juanita-logro-gran-campeon-ternero_0_aIaRZA7AUo.html",
+      "enlace": "https://www.lanacion.com.ar/deportes/automovilismo/gasly-tuvo-una-fria-reaccion-ante-las-disculpas-de-colapinto-por-el-choque-en-baku-nid26092026/",
       "teniaImagenLaFuente": true,
-      "fecha": "2026-09-26T08:12:12.000Z",
+      "fecha": "2026-09-26T12:47:00.000Z",
       "sinFecha": false,
-      "visto": "2026-09-26T09:00:32.976Z",
-      "relevancia": 42,
+      "visto": "2026-09-27T16:12:25.801Z",
+      "relevancia": 100,
       "local": false,
       "publicadaPor": "ia",
-      "publicadaCuando": "2026-09-26T08:53:21.927Z",
+      "publicadaCuando": "2026-09-27T03:51:07.207Z",
       "temas": [],
       "como": "automatica",
-      "claves": [
-        "El toro \"Josecito\", de Don Cholo, fue elegido Gran Campeón Macho.",
-        "La jura se realizó en Cañuelas durante la Semana Angus de Primavera.",
-        "Julio Fernández destacó el nivel y la paridad entre los animales presentados."
-      ],
-      "seSabe": [
-        "El toro \"Josecito\", de la cabaña Don Cholo, ganó el Gran Campeón Macho en la Exposición Nacional Angus de Primavera.",
-        "Julio Fernández ejerció como jurado de la jura de machos a bozal en Cañuelas.",
-        "Carlos Ojea Rullán destacó el trabajo del equipo de campo y los años de planificación genética."
-      ],
       "noConfirmado": [
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+        "No se especificaron sanciones oficiales por parte de las autoridades de la competición tras el incidente."
       ],
-      "textoRedes": "La cabaña Don Cholo se consagró con el toro Josecito como Gran Campeón Macho en la Exposición Nacional Angus de Primavera en Cañuelas.",
       "etiquetas": [
-        "Semana Angus",
-        "Cañuelas",
-        "Don Cholo"
+        "Franco Colapinto",
+        "Pierre Gasly",
+        "Formula 1",
+        "Gran Premio de Azerbaiyán"
       ],
       "fuentesConsultadas": [
         {
-          "medio": "Clarín",
-          "enlace": "https://www.clarin.com/rural/don-cholo-consagro-gran-campeon-macho-primavera-juanita-logro-gran-campeon-ternero_0_aIaRZA7AUo.html",
-          "fecha": "2026-09-26T08:12:12.000Z",
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/deportes/automovilismo/gasly-tuvo-una-fria-reaccion-ante-las-disculpas-de-colapinto-por-el-choque-en-baku-nid26092026/",
+          "fecha": "2026-09-26T15:07:30.000Z",
           "oficial": false,
-          "aporte": "Detalló los resultados de la Exposición Angus de Primavera y las declaraciones de los jurados y organizadores."
+          "aporte": null
+        },
+        {
+          "medio": "Ámbito",
+          "enlace": "https://www.ambito.com/deportes/formula-1-la-reaccion-pierre-gasly-el-choque-franco-colapinto-el-gp-azerbaiyan-n6326967",
+          "fecha": "2026-09-26T13:05:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Motorsport",
+          "enlace": "https://es.motorsport.com/f1/news/franco-colapinto-sancion-accidente-baku/10859242/?utm_source=RSS&utm_medium=referral&utm_campaign=RSS-F1&utm_term=News&utm_content=es",
+          "fecha": "2026-09-26T13:04:10.000Z",
+          "oficial": false,
+          "aporte": null
         }
       ],
       "antecedentes": [
         {
-          "id": "1paz2ii",
-          "titulo": "Atlanta se consagró campeón en la Liga Nacional de béisbol",
-          "fecha": "2026-09-20T22:00:04.000Z",
-          "ruta": "/nota/atlanta-se-consagro-campeon-en-la-liga-nacional-de-beisbol-1paz2ii"
+          "id": "f0797k",
+          "titulo": "Franco Colapinto choca con Pierre Gasly en el Gran Premio de Azerbaiyán",
+          "fecha": "2026-09-26T12:49:58.000Z",
+          "ruta": "/nota/franco-colapinto-choca-con-pierre-gasly-en-el-gran-premio-de-f0797k"
         },
         {
-          "id": "1ibi15p",
-          "titulo": "Kevin Gómez se consagró campeón nacional de boxeo",
-          "fecha": "2026-09-20T19:25:07.000Z",
-          "ruta": "/nota/kevin-gomez-se-consagro-campeon-nacional-de-boxeo-1ibi15p"
+          "id": "iyfntb",
+          "titulo": "La reacción de Sofía Solá, la hija de Maru Botana, al ser relacionada sentimentalmente con Franco Colapinto",
+          "fecha": "2026-09-24T21:03:28.000Z",
+          "ruta": "/nota/la-reaccion-de-sofia-sola-la-hija-de-maru-botana-al-ser-relacionada-iyfntb"
         },
         {
-          "id": "1dmj600",
-          "titulo": "Kevin Gómez se consagró campeón argentino de boxeo",
-          "fecha": "2026-09-20T04:57:04.000Z",
-          "ruta": "/nota/kevin-gomez-se-consagro-campeon-argentino-de-boxeo-1dmj600"
+          "id": "he08gv",
+          "titulo": "Franco Colapinto larga noveno en el Gran Premio de Azerbaiyán",
+          "fecha": "2026-09-26T09:30:00.000Z",
+          "ruta": "/nota/franco-colapinto-larga-noveno-en-el-gran-premio-de-azerbaiyan-he08gv"
         }
       ],
       "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
+        "nivel": "ALTA",
+        "porque": "Lo contaron tres medios independientes.",
+        "sugeridoPorIA": "ALTA"
       },
-      "slug": "cabana-don-cholo-gana-el-gran-campeon-macho-de-la-semana-angus",
+      "slug": "franco-colapinto-choca-con-pierre-gasly-en-el-gran-premio-de",
       "foto": {
-        "archivo": "fotos-notas/1aa6w2s.jpg",
-        "credito": "Foto: Clarín"
+        "archivo": "fotos-notas/mk94me.jpg",
+        "credito": "Foto: Motorsport"
       }
     },
     {
@@ -3130,10 +2472,92 @@
       }
     },
     {
+      "id": "1aa6w2s",
+      "titulo": "Cabaña Don Cholo gana el Gran Campeón Macho de la Semana Angus",
+      "copete": "La cabaña Don Cholo obtuvo el máximo galardón con el toro \"Josecito\" en la Exposición Nacional Angus de Primavera realizada en Cañuelas.",
+      "cuerpo": "El toro \"Josecito\", de la cabaña Don Cholo, se consagró como Gran Campeón Macho de la cuadragésima séptima Exposición Nacional Angus de Primavera, desarrollada en Cañuelas en el cierre de la Semana Angus. La jura de machos a bozal estuvo a cargo de Julio Fernández, quien destacó la calidad y el balance del ejemplar ganador tras una competencia muy reñida.\n\nCarlos Ojea Rullán, socio de la cabaña ganadora, señaló que el logro es fruto de años de planificación genética y del trabajo cotidiano de todo el equipo de cabañeros, veterinarios y encargados de campo. Por su parte, la vigesimosexta Exposición del Ternero coronó a los mejores ejemplares bajo la evaluación del jurado Emanuel Canale, en una jornada que reunió a gran cantidad de público y contó con el respaldo de la Asociación Argentina de Angus.",
+      "guion": "Cabaña Don Cholo gana el Gran Campeón Macho de la Semana Angus",
+      "seccion": "Agro",
+      "medios": [
+        "La Nación",
+        "Clarín",
+        "ANDigital"
+      ],
+      "enlace": "https://www.clarin.com/rural/don-cholo-consagro-gran-campeon-macho-primavera-juanita-logro-gran-campeon-ternero_0_aIaRZA7AUo.html",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-26T03:00:00.000Z",
+      "sinFecha": false,
+      "visto": "2026-09-26T09:00:32.976Z",
+      "relevancia": 42,
+      "local": false,
+      "publicadaPor": "ia",
+      "publicadaCuando": "2026-09-26T08:53:21.927Z",
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "El toro \"Josecito\", de Don Cholo, fue elegido Gran Campeón Macho.",
+        "La jura se realizó en Cañuelas durante la Semana Angus de Primavera.",
+        "Julio Fernández destacó el nivel y la paridad entre los animales presentados."
+      ],
+      "seSabe": [
+        "El toro \"Josecito\", de la cabaña Don Cholo, ganó el Gran Campeón Macho en la Exposición Nacional Angus de Primavera.",
+        "Julio Fernández ejerció como jurado de la jura de machos a bozal en Cañuelas.",
+        "Carlos Ojea Rullán destacó el trabajo del equipo de campo y los años de planificación genética."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "La cabaña Don Cholo se consagró con el toro Josecito como Gran Campeón Macho en la Exposición Nacional Angus de Primavera en Cañuelas.",
+      "etiquetas": [
+        "Semana Angus",
+        "Cañuelas",
+        "Don Cholo"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Clarín",
+          "enlace": "https://www.clarin.com/rural/don-cholo-consagro-gran-campeon-macho-primavera-juanita-logro-gran-campeon-ternero_0_aIaRZA7AUo.html",
+          "fecha": "2026-09-26T08:12:12.000Z",
+          "oficial": false,
+          "aporte": "Detalló los resultados de la Exposición Angus de Primavera y las declaraciones de los jurados y organizadores."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1paz2ii",
+          "titulo": "Atlanta se consagró campeón en la Liga Nacional de béisbol",
+          "fecha": "2026-09-20T22:00:04.000Z",
+          "ruta": "/nota/atlanta-se-consagro-campeon-en-la-liga-nacional-de-beisbol-1paz2ii"
+        },
+        {
+          "id": "1ibi15p",
+          "titulo": "Kevin Gómez se consagró campeón nacional de boxeo",
+          "fecha": "2026-09-20T19:25:07.000Z",
+          "ruta": "/nota/kevin-gomez-se-consagro-campeon-nacional-de-boxeo-1ibi15p"
+        },
+        {
+          "id": "1dmj600",
+          "titulo": "Kevin Gómez se consagró campeón argentino de boxeo",
+          "fecha": "2026-09-20T04:57:04.000Z",
+          "ruta": "/nota/kevin-gomez-se-consagro-campeon-argentino-de-boxeo-1dmj600"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "cabana-don-cholo-gana-el-gran-campeon-macho-de-la-semana-angus",
+      "foto": {
+        "archivo": "fotos-notas/1aa6w2s.jpg",
+        "credito": "Foto: Clarín"
+      }
+    },
+    {
       "id": "62c0pz",
       "titulo": "Alex Barrena gana el Challenger de Buenos Aires ante Facundo Mena",
       "copete": "El tenista Alex Barrena se consagró campeón del Challenger de Buenos Aires al vencer en la final a Facundo Mena por 6-4 y 6-0. El torneo se disputó sobre polvo de ladrillo en el Racket Club de Palermo.",
-      "cuerpo": "Para llegar a la instancia decisiva, Barrena había dejado en camino al boliviano Juan Carlos Prado en semifinales, mientras que Mena había superado al bonaerense Nicolás Kicker y luego al brasileño Pedro Boscardin Dias. Durante la definición, Mena no pudo contener las lágrimas al caer en el segundo set, en una jornada que coronó la sólida actuación del campeón a lo largo de toda la semana sin ceder ningún set.\n\nCon este triunfo, Barrena suma un nuevo título a su trayectoria profesional tras los obtenidos previamente en Tucumán y Santa Cruz de la Sierra durante la temporada pasada, consolidando su recuperación en el circuito internacional.",
+      "cuerpo": "Para llegar a la instancia decisiva, Barrena había dejado en camino al boliviano Juan Carlos Prado en semifinales, mientras que Mena había superado al bonaerense Nicolás Kicker y luego al brasileño Pedro Boscardin Dias. Durante la definición, Mena no pudo contener las lágrimas al caer en el segundo set, en una jornada que coronó la sólida actuación del campeón a lo largo de toda la semana sin ceder ningún set.\n\nCon este triunfo, Barrena suma un nuevo título a su trayectoria profesional, tras los obtenidos previamente en Tucumán y Santa Cruz de la Sierra durante la temporada pasada.",
       "guion": "Alex Barrena gana el Challenger de Buenos Aires ante Facundo Mena",
       "seccion": "Deportes",
       "medios": [
@@ -3391,99 +2815,6 @@
       }
     },
     {
-      "id": "1gnqz6n",
-      "titulo": "El Autódromo Juan Manuel Fangio reabre sus puertas tras quince años",
-      "copete": "El circuito de la sierra La Barrosa volvió a recibir actividad oficial este viernes con la presencia de autoridades provinciales y municipales. El fin de semana competirán las categorías nacionales.",
-      "cuerpo": "El Autódromo Juan Manuel Fangio reanudó oficialmente sus actividades este viernes tras quince años sin recibir competencias nacionales en la sierra La Barrosa. Del acto inaugural participaron el gobernador Axel Kicillof, el intendente Esteban Reino, el ministro de Gobierno Carlos Bianco y el presidente de la ACTC, Hugo Mazzacane, además de referentes y trabajadores del deporte.\n\nDurante la ceremonia se destacó el proceso de recuperación del circuito para cumplir con las exigencias actuales de seguridad.",
-      "guion": "El Autodromo Juan Manuel Fangio reabre sus puertas tras quince anos",
-      "seccion": "Automovilismo",
-      "medios": [
-        "News Balcarce (FM 91.7)",
-        "Infórmese Primero (FM 104.9)",
-        "Radio Gabal (FM 104.1)",
-        "Municipalidad de Balcarce",
-        "El Diario Balcarce",
-        "Diario La Vanguardia",
-        "Agencia DIB",
-        "El Destape",
-        "El Día",
-        "Infoeme",
-        "ANDigital",
-        "Infobrisas (Radio Brisas)",
-        "Sendero Regional",
-        "0223 (Mar del Plata)",
-        "Diario Popular",
-        "Noticias Argentinas (NA)",
-        "QZ Noticias (Mar del Plata)",
-        "La Verdad de Ayacucho",
-        "Campeones",
-        "Infocielo"
-      ],
-      "enlace": "http://www.informeseprimero.com.ar/2026/09/el-autodromo-juan-manuel-fangio-volvio.html",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-25T22:53:16.590Z",
-      "sinFecha": false,
-      "visto": "2026-09-28T03:01:51.643Z",
-      "relevancia": 100,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [
-        "autodromo",
-        "fangio"
-      ],
-      "como": "automatica",
-      "etiquetas": [
-        "autodromo",
-        "balcarce",
-        "deportes",
-        "automovilismo",
-        "turismo carretera"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Infórmese Primero (FM 104.9)",
-          "enlace": "http://www.informeseprimero.com.ar/2026/09/el-autodromo-juan-manuel-fangio-volvio.html",
-          "fecha": "2026-09-25T22:53:16.590Z",
-          "oficial": false,
-          "aporte": "Detalló los discursos de las autoridades, la inversión de las obras y las categorías que competirán el fin de semana."
-        },
-        {
-          "medio": "Diario La Vanguardia",
-          "enlace": "https://www.diariolavanguardia.com/noticias/44903-dia-historico-el-autodromo-juan-manuel-fangio-volvio-a-abrir-sus-puertas-despues-de-casi-15-anos/",
-          "fecha": null,
-          "oficial": false,
-          "aporte": "Confirmó la llegada de los fanáticos desde las primeras horas y la previa de la competencia de TC Pick Up."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "1hm23zx",
-          "titulo": "El autódromo Juan Manuel Fangio reabre sus puertas",
-          "fecha": "2026-09-25T08:03:43.000Z",
-          "ruta": "/nota/el-autodromo-juan-manuel-fangio-reabre-sus-puertas-en-balcarce-1hm23zx"
-        },
-        {
-          "id": "mayad0",
-          "titulo": "Autódromo Juan Manuel Fangio: accesos, entradas y operativo para la reapertura",
-          "fecha": "2026-09-25T02:56:25.783Z",
-          "ruta": "/nota/el-autodromo-juan-manuel-fangio-reabre-sus-puertas-en-balcarce-mayad0"
-        },
-        {
-          "id": "30tlwf",
-          "titulo": "Reabre el Autódromo Juan Manuel Fangio",
-          "fecha": "2026-09-25T00:03:22.000Z",
-          "ruta": "/nota/reabre-el-autodromo-juan-manuel-fangio-en-balcarce-30tlwf"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron dos medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "el-autodromo-juan-manuel-fangio-reabre-sus-puertas-tras-quince-anos"
-    },
-    {
       "id": "1cprk3f",
       "titulo": "Ailín Pérez le gana a Norma Dumont y suma siete triunfos seguidos en la UFC",
       "copete": "La peleadora argentina se impuso por decisión unánime en el combate coestelar de UFC Vegas 121, en Las Vegas, y quedó a un paso de pelear por el título del peso gallo.",
@@ -3497,7 +2828,6 @@
         "Olé",
         "C5N",
         "Noticias Argentinas (NA)",
-        "Bolavip Argentina",
         "0223 (Mar del Plata)",
         "La Nueva"
       ],
@@ -3559,34 +2889,6 @@
           "medio": "Noticias Argentinas (NA)",
           "enlace": "https://noticiasargentinas.com/deportes/ailin-perez-derroto-por-decision-unanime-a-norma-dumont-y-suma-siete-triunfos-seguidos-en-ufc_a6ab908b0c2b8de8667e1b1d0",
           "fecha": "2026-09-27T12:21:48.992Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Bolavip Argentina",
-          "enlace": "https://bolavip.com/ar/polideportivo/ailin-perez-fue-agredida-por-norma-dumont-tras-ganar-la-pelea-por-ufc",
-          "fecha": "2026-09-27T03:26:15.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Bolavip Argentina",
-          "enlace": "https://bolavip.com/ar/polideportivo/cuanto-dinero-gano-ailin-perez-por-vencer-a-norma-dumont-en-su-pelea-de-ufc",
-          "fecha": "2026-09-27T02:22:01.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Bolavip Argentina",
-          "enlace": "https://bolavip.com/ar/polideportivo/ailin-perez-quiere-ser-campeona-de-ufc-derroto-a-norma-dumont-en-una-pelea-caliente-y-quedo-a-un-paso-del-titulo",
-          "fecha": "2026-09-27T02:10:21.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Bolavip Argentina",
-          "enlace": "https://bolavip.com/ar/polideportivo/a-que-hora-es-la-pelea-de-ailin-perez-vs-norma-dumont-en-ufc",
-          "fecha": "2026-09-26T13:00:00.000Z",
           "oficial": false,
           "aporte": null
         },
@@ -3697,10 +2999,10 @@
     },
     {
       "id": "13eigya",
-      "titulo": "La compra de dólares experimenta una baja en agosto",
-      "copete": "La demanda de divisas por parte de las personas humanas registró una reducción respecto al mes anterior, según el último informe del Banco Central.",
-      "cuerpo": "Cerca de un millón y medio de individuos operaron para adquirir billetes, mientras que una menor cantidad de personas los vendieron. Asimismo, se registraron egresos netos por transferencias de divisas sin fines específicos.\n\nEl reporte oficial detalló que parte de los dólares que salieron del sistema quedaron depositados en bancos locales, otros pasaron a engrosar la tenencia de activos en el exterior y el resto se utilizó para saldar gastos con tarjetas y débitos en cuentas vinculados a servicios y turismo. Con estas operaciones, la demanda cambiaria mostró un descenso frente al punto más elevado que se había alcanzado en julio previo a este período.",
-      "guion": "La compra de dólares experimenta una baja en agosto",
+      "titulo": "Los argentinos compraron USD 2.853 millones en agosto, el segundo monto más alto del año",
+      "copete": "La demanda de dólares experimentó una leve baja en agosto: los argentinos compraron más de USD 2.800 millones , lo que se traduce en una reducción de casi USD 500 millones respecto al monto registrado en julio. Así se desprende del último informe del Banco Central de la…",
+      "cuerpo": "Cerca de 1,7 millones de personas compraron billetes en agosto, por unos 2.853 millones de dólares, mientras que unas 734 mil los vendieron, según el informe del Banco Central. La demanda cambiaria bajó casi 500 millones de dólares frente a julio, el mes de mayor compra del año.\n\nEl reporte oficial detalló que parte de los dólares que salieron del sistema quedaron depositados en bancos locales, otros pasaron a engrosar la tenencia de activos en el exterior y el resto se utilizó para saldar gastos con tarjetas y débitos en cuentas vinculados a servicios y turismo.",
+      "guion": null,
       "seccion": "Economía",
       "medios": [
         "Infobae",
@@ -3719,345 +3021,43 @@
       "publicadaCuando": null,
       "temas": [],
       "como": "automatica",
-      "claves": [
-        "Los argentinos redujeron la compra de dólares en agosto respecto a julio.",
-        "El Banco Central informó que 1,7 millones de personas compraron billetes.",
-        "Parte de las divisas quedaron depositadas en bancos locales y otras se destinaron a gastos con tarjetas."
-      ],
-      "textoRedes": "La demanda de dólares registró una baja en agosto y los argentinos compraron menos divisas que en julio, según el último informe difundido por el Banco Central.",
-      "etiquetas": [
-        "dólares",
-        "Banco Central",
-        "agosto",
-        "divisas"
-      ],
       "fuentesConsultadas": [
         {
           "medio": "Infobae",
           "enlace": "https://www.infobae.com/economia/2026/09/25/los-argentinos-compraron-usd-2853-millones-en-agosto-el-segundo-monto-mas-alto-del-ano/",
           "fecha": "2026-09-25T21:38:39.000Z",
           "oficial": false,
-          "aporte": "Aportó los datos del informe del Banco Central sobre la demanda de dólares de las personas humanas en agosto."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "9oermg",
-          "titulo": "Autódromo: Bianco habló de una inversión de $3.300 millones, pero el monto de la obra fue de $1.038 millones",
-          "fecha": "2026-09-25T00:30:34.751Z",
-          "ruta": "/nota/autodromo-bianco-hablo-de-una-inversion-de-3-300-millones-pero-el-9oermg"
-        },
-        {
-          "id": "w7i6mu",
-          "titulo": "Boom exportador: la carne vacuna generó US$518,4 millones en agosto y los embarques treparon a casi 73.000 toneladas",
-          "fecha": "2026-09-21T22:47:24.000Z",
-          "ruta": "/nota/boom-exportador-la-carne-vacuna-genero-us-518-4-millones-en-agosto-y-w7i6mu"
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "la-compra-de-dolares-experimenta-una-baja-en-agosto"
-    },
-    {
-      "id": "uxan4p",
-      "titulo": "El Banco Central evita comprar divisas y las reservas bajan",
-      "copete": "Ante la suba del dólar, la autoridad monetaria se mantuvo al margen del mercado cambiario para evitar una mayor presión. Las reservas internacionales cerraron la semana en un menor nivel tras un pago al Fondo Monetario Internacional.",
-      "cuerpo": "El Banco Central de la República Argentina no compró divisas por cuarta vez en el año debido a la suba del dólar, con el objetivo de evitar una mayor presión sobre el tipo de cambio.\n\nEn paralelo, las reservas internacionales sufrieron una baja por un pago al Fondo Monetario Internacional cercano a los ochocientos millones de dólares en concepto de intereses. Por su parte, el dólar mayorista registró un incremento y alcanzó un nuevo máximo nominal en la última rueda de la semana.",
-      "guion": "El Banco Central evita comprar divisas y las reservas bajan",
-      "seccion": "Economía",
-      "medios": [
-        "Infobae",
-        "Perfil",
-        "iProfesional",
-        "C5N"
-      ],
-      "enlace": "https://www.infobae.com/economia/2026/09/25/ante-la-suba-del-dolar-el-banco-central-evito-comprar-divisas-por-tercera-vez-en-el-ano/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-25T21:21:55.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-26T03:30:38.768Z",
-      "relevancia": 54,
-      "local": false,
-      "publicadaPor": "ia",
-      "publicadaCuando": "2026-09-28T03:42:54.417Z",
-      "temas": [],
-      "como": "automatica",
-      "etiquetas": [
-        "Banco Central",
-        "reservas internacionales",
-        "dolar",
-        "FMI",
-        "mercado cambiario"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Infobae",
-          "enlace": "https://www.infobae.com/economia/2026/09/25/ante-la-suba-del-dolar-el-banco-central-evito-comprar-divisas-por-tercera-vez-en-el-ano/",
-          "fecha": "2026-09-25T21:21:55.000Z",
-          "oficial": false,
           "aporte": null
         },
         {
           "medio": "Perfil",
-          "enlace": "https://www.perfil.com/noticias/economia/el-banco-central-termino-la-jornada-sin-comprar-dolares-y-las-reservas-cayeron-por-un-pago-al-fmi-a40.phtml",
-          "fecha": "2026-09-25T23:50:00.000Z",
+          "enlace": "https://www.perfil.com/noticias/economia/los-argentinos-compraron-us-2853-millones-en-agosto-segun-el-banco-central-a40.phtml",
+          "fecha": "2026-09-25T21:55:39.000Z",
           "oficial": false,
           "aporte": null
         },
         {
-          "medio": "iProfesional",
-          "enlace": "https://www.iprofesional.com/finanzas/465299-el-bcra-no-compro-dolares-y-las-reservas-cayeron-600-millones-tras-un-pago-al-fmi",
-          "fecha": "2026-09-25T21:45:00.000Z",
+          "medio": "Minuto Uno",
+          "enlace": "https://www.minutouno.com/economia/fiebre-el-dolar-los-argentinos-compraron-mas-usd-2800-millones-agosto-n6326937",
+          "fecha": "2026-09-26T02:08:00.000Z",
           "oficial": false,
           "aporte": null
         },
         {
           "medio": "C5N",
-          "enlace": "https://www.c5n.com/economia/golpe-las-reservas-el-gobierno-pago-casi-us800-millones-al-fmi-y-el-banco-central-no-compro-dolares-n249955",
-          "fecha": "2026-09-25T21:53:00.000Z",
+          "enlace": "https://www.c5n.com/economia/la-fiebre-el-dolar-no-cede-los-argentinos-compraron-mas-us2800-millones-agosto-n249967",
+          "fecha": "2026-09-25T23:47:00.000Z",
           "oficial": false,
           "aporte": null
         }
       ],
-      "antecedentes": [
-        {
-          "id": "1iqwljr",
-          "titulo": "Milei celebró la aprobación de la reforma de la carta orgánica del Banco Central: \"Comienza el fin de la inflación\"",
-          "fecha": "2026-09-24T21:44:04.000Z",
-          "ruta": "/nota/milei-celebro-la-aprobacion-de-la-reforma-de-la-carta-organica-del-1iqwljr"
-        },
-        {
-          "id": "bsna1",
-          "titulo": "El Senado aprobó con cambios la reforma de la Carta Orgánica del Banco Central",
-          "fecha": "2026-09-24T20:17:00.000Z",
-          "ruta": "/nota/el-senado-aprobo-con-cambios-la-reforma-de-la-carta-organica-del-bsna1"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron cuatro medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "el-banco-central-frena-la-compra-de-divisas-tras-la-suba-del-dolar",
-      "foto": {
-        "archivo": "fotos-notas/uxan4p.jpg",
-        "credito": "Foto: Perfil"
-      }
-    },
-    {
-      "id": "7fmhve",
-      "titulo": "Advierten por una falsa convocatoria laboral de McCain",
-      "copete": "La empresa McCain alertó sobre mensajes fraudulentos que ofrecen puestos de trabajo en la planta local. Advierten que piden dinero y datos bancarios a los postulantes.",
-      "cuerpo": "McCain Argentina advirtió sobre la circulación de mensajes fraudulentos que utilizan su marca para difundir una falsa convocatoria laboral. Según informó la compañía, en estas comunicaciones se ofrecen puestos de trabajo, se convoca a los interesados a presentarse en la planta de Balcarce y se exige dinero para uniformes, además de requerir datos bancarios y claves personales. La firma aclaró que no emitió esta convocatoria y recordó que nunca solicita pagos ni contraseñas en sus procesos de selección, los cuales se canalizan exclusivamente a través de sus canales oficiales. En caso de haber entregado dinero o información bancaria, recomendaron contactar de inmediato al banco y realizar la denuncia correspondiente.",
-      "guion": "Advierten por una falsa convocatoria laboral de McCain",
-      "seccion": "Balcarce",
-      "medios": [
-        "Infórmese Primero (FM 104.9)",
-        "Radio Gabal (FM 104.1)",
-        "Diario La Vanguardia",
-        "El Diario Balcarce"
-      ],
-      "enlace": "http://www.informeseprimero.com.ar/2026/09/advierten-por-una-falsa-convocatoria.html",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-25T19:33:22.484Z",
-      "sinFecha": false,
-      "visto": "2026-09-27T03:30:39.508Z",
-      "relevancia": 85,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "McCain alertó sobre una falsa convocatoria laboral en Balcarce.",
-        "Los estafadores piden dinero para uniformes y datos bancarios.",
-        "La empresa aclaró que nunca solicita pagos para acceder a un empleo."
-      ],
-      "seSabe": [
-        "McCain Argentina emitió una advertencia por comunicaciones fraudulentas que usan su nombre.",
-        "Los mensajes falsos citaban a los postulantes a presentarse en la planta de Balcarce.",
-        "La compañía recordó que sus búsquedas se realizan por dominios oficiales y nunca piden pagos ni claves."
-      ],
-      "textoRedes": "McCain alertó sobre una falsa convocatoria laboral que utiliza su nombre en Balcarce. Advierten que los estafadores piden dinero para uniformes y datos bancarios. Recordaron que la empresa nunca solicita pagos para acceder a un puesto de trabajo.",
-      "etiquetas": [
-        "McCain",
-        "empleo",
-        "Balcarce"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Infórmese Primero (FM 104.9)",
-          "enlace": "http://www.informeseprimero.com.ar/2026/09/advierten-por-una-falsa-convocatoria.html",
-          "fecha": "2026-09-25T19:33:22.484Z",
-          "oficial": false,
-          "aporte": "Informó sobre la falsa convocatoria laboral y las recomendaciones de seguridad brindadas por la empresa."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "1pjgnu4",
-          "titulo": "McCain advierte sobre una falsa convocatoria laboral en Balcarce",
-          "fecha": "2026-09-25T19:10:29.000Z",
-          "ruta": "/nota/mccain-advierte-sobre-una-falsa-convocatoria-laboral-en-balcarce-1pjgnu4"
-        },
-        {
-          "id": "1wzh43l",
-          "titulo": "Advierten por una falsa búsqueda laboral de la empresa McCain en Balcarce",
-          "fecha": "2026-09-25T15:36:43.000Z",
-          "ruta": "/nota/advierten-por-una-falsa-busqueda-laboral-de-la-empresa-mccain-en-1wzh43l"
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "advierten-por-una-falsa-convocatoria-laboral-de-mccain-en-balcarce"
-    },
-    {
-      "id": "o84faj",
-      "titulo": "Mirtha Legrand sigue internada en el Sanatorio Mater Dei por neumopatía",
-      "copete": "La conductora permanece internada en el Sanatorio Mater Dei por un cuadro de neumopatía. Su nieta Juana Viale contó que sigue el programa desde el sanatorio.",
-      "cuerpo": "La conductora Mirtha Legrand continúa internada en el Sanatorio Mater Dei bajo seguimiento médico por un cuadro compatible con neumopatía, según informó el centro de salud. La institución detalló que la paciente presenta una leve mejoría, pasó la noche tranquila y no necesitó asistencia respiratoria.\n\nAnte su ausencia, su nieta Juana Viale se puso al frente de la conducción del programa televisivo y contó que su abuela sigue cada emisión desde la clínica y le da consejos.\n\nDesde el sanatorio indicaron que la conductora seguirá internada hasta completar su recuperación. Por el momento, no se informó una fecha prevista para el alta médica.",
-      "guion": "Mirtha Legrand sigue internada en el Sanatorio Mater Dei por neumopatia",
-      "seccion": "Argentina",
-      "medios": [
-        "Infobae",
-        "Minuto Uno",
-        "Ámbito",
-        "TN (Todo Noticias)",
-        "El Destape",
-        "Crónica",
-        "Radio Mitre",
-        "Diario Popular",
-        "Noticias Argentinas (NA)",
-        "ANDigital",
-        "El Día"
-      ],
-      "enlace": "https://www.ambito.com/espectaculos/como-sigue-la-salud-mirtha-legrand-su-internacion-difundieron-un-nuevo-parte-medico-n6326737",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-25T17:32:00.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-28T03:01:51.643Z",
-      "relevancia": 62,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Mirtha Legrand continúa internada en el Sanatorio Mater Dei.",
-        "Presenta una leve mejoría de su cuadro de neumopatía.",
-        "Juana Viale la reemplaza en la conducción y contó que ve el programa.",
-        "Todavía no hay una fecha prevista para el alta médica."
-      ],
-      "seSabe": [
-        "Mirtha Legrand permanece internada en el Sanatorio Mater Dei por un cuadro de neumopatía, según el parte médico.",
-        "La conductora registró una leve mejoría y no requirió asistencia respiratoria, de acuerdo con la información oficial.",
-        "Su nieta Juana Viale conduce el programa en su reemplazo y contó que la mira desde el sanatorio y le hace correcciones."
-      ],
-      "noConfirmado": [
-        "No se informó una fecha prevista para el alta médica de la conductora."
-      ],
-      "textoRedes": "Mirtha Legrand continúa internada en el Sanatorio Mater Dei por un cuadro de neumopatía. Su nieta Juana Viale contó que la conductora sigue el programa desde la clínica y le da consejos, mientras aguarda su recuperación.",
-      "etiquetas": [
-        "Mirtha Legrand",
-        "Sanatorio Mater Dei",
-        "Juana Viale",
-        "salud",
-        "televisión"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Ámbito",
-          "enlace": "https://www.ambito.com/espectaculos/como-sigue-la-salud-mirtha-legrand-su-internacion-difundieron-un-nuevo-parte-medico-n6326737",
-          "fecha": "2026-09-25T17:32:00.000Z",
-          "oficial": false,
-          "aporte": "Detalló el parte médico del Sanatorio Mater Dei sobre el cuadro de neumopatía, la evolución favorable y los antecedentes de internación."
-        },
-        {
-          "medio": "Ámbito",
-          "enlace": "https://www.ambito.com/espectaculos/juana-viale-dio-nuevos-detalles-la-salud-mirtha-legrand-como-sigue-una-semana-su-internacion-n6327174",
-          "fecha": "2026-09-27T16:25:00.000Z",
-          "oficial": false,
-          "aporte": "Informó que la conductora sigue el programa desde la clínica y que aún no hay fecha de alta."
-        },
-        {
-          "medio": "TN (Todo Noticias)",
-          "enlace": "https://tn.com.ar/show/famosos/2026/09/26/juana-viale-hablo-del-estado-de-salud-de-mirtha-legrand-a-una-semana-de-la-nueva-internacion/",
-          "fecha": "2026-09-27T00:48:05.000Z",
-          "oficial": false,
-          "aporte": "Sin contenido relevante en el resumen."
-        },
-        {
-          "medio": "El Destape",
-          "enlace": "https://www.eldestapeweb.com/espectaculos/juana-viale-volvio-hablar-salud-mirtha-legrand-lentamente-202692720127",
-          "fecha": "2026-09-27T23:01:27.000Z",
-          "oficial": false,
-          "aporte": "Mencionó declaraciones de Juana Viale sobre la salud de su abuela."
-        },
-        {
-          "medio": "A24",
-          "enlace": "https://www.a24.com/primiciasya/el-inesperado-reclamo-mirtha-legrand-juana-viale-mientras-esta-internada-me-dice-n1600672",
-          "fecha": "2026-09-27T00:47:00.000Z",
-          "oficial": false,
-          "aporte": "Indicó que Juana Viale contó que su abuela sigue atentamente el programa y le hace correcciones."
-        },
-        {
-          "medio": "Crónica",
-          "enlace": "https://www.cronica.com.ar/diarioshow/farandula/juana-viale-revelo-como-mirtha-legrand-participa-de-su-programa-desde-la-clinica-me-dice/",
-          "fecha": "2026-09-27T16:25:11.000Z",
-          "oficial": false,
-          "aporte": "Señaló que la internación ocurrió hace una semana por un cuadro de neumopatía y que evoluciona favorablemente."
-        },
-        {
-          "medio": "Radio Mitre",
-          "enlace": "https://radiomitre.cienradios.com/espectaculos/la-letal-critica-de-mirtha-legrand-a-juana-viale-en-medio-de-su-internacion-no-se-lo-pierde-me-ve/",
-          "fecha": "2026-09-27T18:28:07.000Z",
-          "oficial": false,
-          "aporte": "Confirmó que Juana Viale reemplaza a su abuela en la conducción de La noche de Mirtha."
-        },
-        {
-          "medio": "Diario Popular",
-          "enlace": "https://www.diariopopular.com.ar/espectaculos/juana-viale-dio-detalles-la-salud-mirtha-legrand-una-semana-su-nueva-internacion-n921801",
-          "fecha": "2026-09-27T10:53:00.000Z",
-          "oficial": false,
-          "aporte": "Sin contenido relevante en el resumen."
-        },
-        {
-          "medio": "Noticias Argentinas (NA)",
-          "enlace": "https://noticiasargentinas.com/sociedad/juana-viale-hablo-sobre-la-salud-de-mirtha-legrand---esta-mejorando-muy-bien-_a6ab882a59a676c64cfef7c4f",
-          "fecha": "2026-09-27T02:53:02.454Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "El Día",
-          "enlace": "https://www.eldia.com/espectaculos/juana-viale-hablo-sobre-la-salud-de-mirtha-legrand-esta-mejorando-muy-bien-espectaculos_1790505660",
-          "fecha": "2026-09-27T10:45:19.000Z",
-          "oficial": false,
-          "aporte": null
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron 9 medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "mirtha-legrand-sigue-internada-en-el-sanatorio-mater-dei-por",
-      "foto": {
-        "archivo": "fotos-notas/o84faj.webp",
-        "credito": "Foto: Ámbito"
-      }
+      "slug": "la-compra-de-dolares-experimenta-una-baja-en-agosto"
     },
     {
       "id": "i3pe4a",
       "titulo": "La Cámpora rechaza la eliminación de la Zona Fría",
       "copete": "La organización política cuestionó la quita del beneficio tarifario tras su aprobación en el Senado. Advirtió que las boletas de gas aumentarán un cincuenta por ciento.",
-      "cuerpo": "La Cámpora Balcarce expresó su rechazo a la eliminación del régimen de Zona Fría, aprobada recientemente en el Senado nacional.\n\nDesde el espacio político indicaron que en las semanas previas impulsaron diversas acciones para visibilizar el reclamo, lo que incluyó tareas informativas en la vía pública y una recolección de firmas destinada a evitar la exclusión de la ciudad del beneficio tarifario. En el mismo texto, cuestionaron el rol de distintos sectores y apuntaron contra los radicales, la gestión del intendente municipal y la postura de referentes de otros espacios.\n\nPor último, la organización partidaria ratificó que mantendrá su labor en torno a las dificultades económicas que atraviesan los vecinos y adelantó que continuará realizando gestiones orientadas a mejorar la calidad de vida en el distrito.",
+      "cuerpo": "La Cámpora Balcarce expresó su rechazo a la eliminación del régimen de Zona Fría, aprobada recientemente en el Senado nacional, y advirtió que, según sus cálculos, las boletas de gas subirán un 50 por ciento.\n\nDesde el espacio político indicaron que en las semanas previas impulsaron diversas acciones para visibilizar el reclamo, lo que incluyó tareas informativas en la vía pública y una recolección de firmas destinada a evitar la exclusión de la ciudad del beneficio tarifario. En el mismo texto, cuestionaron el rol de distintos sectores y apuntaron contra los radicales, la gestión del intendente municipal y la postura de referentes de otros espacios.\n\nPor último, la organización partidaria ratificó que mantendrá su labor en torno a las dificultades económicas que atraviesan los vecinos y adelantó que continuará realizando gestiones orientadas a mejorar la calidad de vida en el distrito.",
       "guion": "La Cámpora rechaza la eliminación de la Zona Fría",
       "seccion": "Política",
       "medios": [
@@ -4119,7 +3119,7 @@
       "id": "d2elpy",
       "titulo": "La comunidad sorda celebra su día en el Complejo Polideportivo Municipal",
       "copete": "Integrantes de la comunidad sorda local y de la región se reúnen en el Complejo Polideportivo Municipal para celebrar su día, promover la inclusión y visibilizar la Lengua de Señas.",
-      "cuerpo": "Vecinos locales y visitantes provenientes de Mar del Plata y Miramar participan este viernes de un encuentro de camaradería en el Complejo Polideportivo Municipal, en el marco de las actividades por el Día de las Personas Sordas, conmemorado el pasado sábado 19 de septiembre.\n\nLa jornada apunta a visibilizar la importancia de la Lengua de Señas, la accesibilidad y la inclusión, además de destacar la cultura de la comunidad sorda mediante un espacio de intercambio entre distintas localidades de la región.\n\nEl evento se desarrolla en un clima de celebración con el objetivo de fortalecer los lazos entre los participantes y fomentar nuevos espacios de expresión y participación.",
+      "cuerpo": "Vecinos locales y visitantes provenientes de Mar del Plata y Miramar participaron el viernes 25 de septiembre de un encuentro de camaradería en el Complejo Polideportivo Municipal, en el marco de las actividades por el Día de las Personas Sordas, conmemorado el sábado 19 de septiembre.\n\nLa jornada apuntó a visibilizar la importancia de la Lengua de Señas, la accesibilidad y la inclusión, además de destacar la cultura de la comunidad sorda mediante un espacio de intercambio entre distintas localidades de la región.\n\nEl evento se desarrolló en un clima de celebración con el objetivo de fortalecer los lazos entre los participantes y fomentar nuevos espacios de expresión y participación.",
       "guion": "La comunidad sorda celebra su día en el Complejo Polideportivo Municipal",
       "seccion": "Balcarce",
       "medios": [
@@ -4174,78 +3174,66 @@
       "slug": "la-comunidad-sorda-celebra-su-dia-en-el-polideportivo-en-balcarce"
     },
     {
-      "id": "1jaqxc4",
-      "titulo": "Espectadores de Rawson son los primeros en ingresar al autódromo",
-      "copete": "Una pareja llegada desde Chubut inauguró los accesos al Autódromo Juan Manuel Fangio y recibió obsequios del Municipio y comercios locales en la previa de las competencias.",
-      "cuerpo": "Sonia y Darío París se transformaron en los primeros espectadores en acceder al Autódromo Juan Manuel Fangio para presenciar la reapertura del escenario balcarceño. Los visitantes arribaron desde Rawson, provincia de Chubut, con varios días de anticipación con la intención de conseguir un lugar preferencial en el predio.\n\nAl atravesar los accesos, la pareja recibió diversos presentes otorgados por la comuna y por firmas comerciales de la zona, entre ellas la panadería y confitería Tentaciones, como muestra de agradecimiento por el esfuerzo del viaje.\n\nEl arribo de los primeros asistentes marcó el inicio formal de una jornada marcada por la expectativa ante el retorno de las competencias automovilísticas al circuito local, que convocó a fanáticos de diferentes puntos del país.",
-      "guion": "Espectadores de Rawson son los primeros en ingresar al autódromo",
-      "seccion": "Automovilismo",
+      "id": "7fmhve",
+      "titulo": "Advierten por una falsa convocatoria laboral de McCain",
+      "copete": "La empresa McCain alertó sobre mensajes fraudulentos que ofrecen puestos de trabajo en la planta local. Advierten que piden dinero y datos bancarios a los postulantes.",
+      "cuerpo": "McCain Argentina advirtió sobre la circulación de mensajes fraudulentos que utilizan su marca para difundir una falsa convocatoria laboral. Según informó la compañía, en estas comunicaciones se ofrecen puestos de trabajo, se convoca a los interesados a presentarse en la planta de Balcarce y se exige dinero para uniformes, además de requerir datos bancarios y claves personales. La firma aclaró que no emitió esta convocatoria y recordó que nunca solicita pagos ni contraseñas en sus procesos de selección, los cuales se canalizan exclusivamente a través de sus canales oficiales. En caso de haber entregado dinero o información bancaria, recomendaron contactar de inmediato al banco y realizar la denuncia correspondiente.",
+      "guion": "Advierten por una falsa convocatoria laboral de McCain",
+      "seccion": "Balcarce",
       "medios": [
-        "Diario La Vanguardia"
+        "Infórmese Primero (FM 104.9)",
+        "Radio Gabal (FM 104.1)",
+        "Diario La Vanguardia",
+        "El Diario Balcarce"
       ],
-      "enlace": "https://www.diariolavanguardia.com/noticias/44905-sonia-y-dario-paris-los-primeros-espectadores-en-ingresar-al-fangio-fueron-recibidos-con-regalos/",
+      "enlace": "http://www.informeseprimero.com.ar/2026/09/advierten-por-una-falsa-convocatoria.html",
       "teniaImagenLaFuente": true,
-      "fecha": "2026-09-25T15:30:41.432Z",
-      "sinFecha": true,
-      "visto": "2026-09-25T15:30:41.432Z",
-      "relevancia": 71,
+      "fecha": "2026-09-25T15:36:43.000Z",
+      "sinFecha": false,
+      "visto": "2026-09-27T03:30:39.508Z",
+      "relevancia": 85,
       "local": true,
-      "publicadaPor": "ia",
-      "publicadaCuando": "2026-09-25T15:20:49.798Z",
-      "temas": [
-        "autodromo",
-        "fangio"
-      ],
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
       "como": "automatica",
       "claves": [
-        "Una pareja de Rawson fue la primera en ingresar al Autódromo Juan Manuel Fangio.",
-        "Recibieron presentes del Municipio y de comercios locales en el acceso al predio.",
-        "La llegada se produjo en el marco de la reapertura del circuito balcarceño."
+        "McCain alertó sobre una falsa convocatoria laboral en Balcarce.",
+        "Los estafadores piden dinero para uniformes y datos bancarios.",
+        "La empresa aclaró que nunca solicita pagos para acceder a un empleo."
       ],
       "seSabe": [
-        "Sonia y Darío París llegaron desde Rawson, Chubut, con anticipación.",
-        "Fueron los primeros espectadores en ingresar al Autódromo Juan Manuel Fangio.",
-        "Recibieron regalos del Municipio y de la panadería y confitería Tentaciones.",
-        "El autódromo volvió a abrir sus puertas para recibir competencias de automovilismo."
+        "McCain Argentina emitió una advertencia por comunicaciones fraudulentas que usan su nombre.",
+        "Los mensajes falsos citaban a los postulantes a presentarse en la planta de Balcarce.",
+        "La compañía recordó que sus búsquedas se realizan por dominios oficiales y nunca piden pagos ni claves."
       ],
-      "noConfirmado": [
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "Una pareja llegada desde Chubut se convirtió en la primera en ingresar al Autódromo Juan Manuel Fangio en Balcarce y recibió obsequios del Municipio y comercios locales en el inicio de la jornada automovilística.",
+      "textoRedes": "McCain alertó sobre una falsa convocatoria laboral que utiliza su nombre en Balcarce. Advierten que los estafadores piden dinero para uniformes y datos bancarios. Recordaron que la empresa nunca solicita pagos para acceder a un puesto de trabajo.",
       "etiquetas": [
-        "autodromo",
-        "Balcarce",
-        "automovilismo",
-        "Rawson",
-        "reapertura"
+        "McCain",
+        "empleo",
+        "Balcarce"
       ],
       "fuentesConsultadas": [
         {
-          "medio": "Diario La Vanguardia",
-          "enlace": "https://www.diariolavanguardia.com/noticias/44905-sonia-y-dario-paris-los-primeros-espectadores-en-ingresar-al-fangio-fueron-recibidos-con-regalos/",
-          "fecha": null,
+          "medio": "Infórmese Primero (FM 104.9)",
+          "enlace": "http://www.informeseprimero.com.ar/2026/09/advierten-por-una-falsa-convocatoria.html",
+          "fecha": "2026-09-25T19:33:22.484Z",
           "oficial": false,
-          "aporte": "Detalló la llegada de los primeros espectadores desde Rawson y los reconocimientos recibidos en la reapertura del autódromo."
+          "aporte": "Informó sobre la falsa convocatoria laboral y las recomendaciones de seguridad brindadas por la empresa."
         }
       ],
       "antecedentes": [
         {
-          "id": "xtlwre",
-          "titulo": "Largas filas para ingresar al autódromo Juan Manuel Fangio en Balcarce",
-          "fecha": "2026-09-24T12:24:00.000Z",
-          "ruta": "/nota/largas-filas-para-ingresar-al-autodromo-fangio-xtlwre"
+          "id": "1pjgnu4",
+          "titulo": "McCain advierte sobre una falsa convocatoria laboral en Balcarce",
+          "fecha": "2026-09-25T19:10:29.000Z",
+          "ruta": "/nota/mccain-advierte-sobre-una-falsa-convocatoria-laboral-en-balcarce-1pjgnu4"
         },
         {
-          "id": "yaqf3p",
-          "titulo": "El autódromo Juan Manuel Fangio abre sus puertas este viernes en Balcarce",
-          "fecha": "2026-09-25T13:35:22.000Z",
-          "ruta": "/nota/todo-sobre-la-reapertura-del-autodromo-juan-manuel-fangio-yaqf3p"
-        },
-        {
-          "id": "1e6tvp9",
-          "titulo": "Kicillof encabeza la reapertura del autódromo Juan Manuel Fangio en Balcarce",
-          "fecha": "2026-09-25T10:15:00.000Z",
-          "ruta": "/nota/el-gobernador-bonaerense-encabeza-la-reapertura-del-autodromo-en-1e6tvp9"
+          "id": "1wzh43l",
+          "titulo": "Advierten por una falsa búsqueda laboral de la empresa McCain en Balcarce",
+          "fecha": "2026-09-25T15:36:43.000Z",
+          "ruta": "/nota/advierten-por-una-falsa-busqueda-laboral-de-la-empresa-mccain-en-1wzh43l"
         }
       ],
       "verificacion": {
@@ -4253,120 +3241,30 @@
         "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
         "sugeridoPorIA": "MEDIA"
       },
-      "slug": "espectadores-de-rawson-son-los-primeros-en-ingresar-al-autodromo-en",
-      "foto": {
-        "archivo": "fotos-notas/1jaqxc4.png",
-        "credito": "Foto: Diario La Vanguardia"
-      }
-    },
-    {
-      "id": "56y0ry",
-      "titulo": "La Escuela Municipal de Deporte Adaptado compite en Mar del Plata",
-      "copete": "Equipos balcarceños lograron podios en un certamen de fútbol en Mar del Plata. Además, nadadores locales participaron días atrás en Necochea.",
-      "cuerpo": "Desde la institución destacaron la experiencia lograda durante el certamen y la importancia de estos espacios para fomentar la actividad deportiva. Como antecedente, a principios de la semana previa, integrantes del grupo de natación de la misma escuela representaron a la ciudad en un torneo nacional desarrollado en un complejo deportivo de Necochea que nucleó a deportistas de más de ocho localidades en doble jornada, de acuerdo con lo publicado por un medio local.",
-      "guion": "La Escuela Municipal de Deporte Adaptado compite en Mar del Plata",
-      "seccion": "Deportes",
-      "medios": [
-        "Infórmese Primero (FM 104.9)",
-        "Municipalidad de Balcarce"
-      ],
-      "enlace": "https://balcarce.gob.ar/2026/09/25/en-mar-del-plata/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-25T15:03:06.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-25T15:30:41.432Z",
-      "relevancia": 69,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Equipos de fútbol locales compitieron en Mar del Plata.",
-        "La delegación logró un segundo puesto y dos terceras ubicaciones.",
-        "Nadadores de la misma escuela participaron previamente en Necochea."
-      ],
-      "noConfirmado": [
-        "No se especificaron las fechas exactas de las competencias ni las identidades de los deportistas participantes."
-      ],
-      "textoRedes": "Equipos de fútbol de la Escuela Municipal de Deporte Adaptado obtuvieron podios en un torneo en Mar del Plata. Además, nadadores locales compitieron recientemente en Necochea.",
-      "etiquetas": [
-        "deporte adaptado",
-        "Balcarce",
-        "fútbol",
-        "natación",
-        "Mar del Plata"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Municipalidad de Balcarce",
-          "enlace": "https://balcarce.gob.ar/2026/09/25/en-mar-del-plata/",
-          "fecha": "2026-09-25T15:03:06.000Z",
-          "oficial": true,
-          "aporte": "Informó sobre la participación de los equipos de fútbol en Mar del Plata y los podios obtenidos."
-        },
-        {
-          "medio": "El Diario Balcarce",
-          "enlace": "https://eldiariobalcarce.com.ar/destacada-participacion-de-la-emdab-en-torneo-nacional-de-natacion-684",
-          "fecha": "2026-09-22T12:10:01.000Z",
-          "oficial": false,
-          "aporte": "Aportó datos sobre la participación del grupo de natación en un certamen en Necochea."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "hf1e85",
-          "titulo": "Destacada participación de nadadores de EMDAB en un torneo nacional en Necochea",
-          "fecha": "2026-09-21T20:20:34.000Z",
-          "ruta": "/nota/destacada-participacion-de-nadadores-de-emdab-en-un-torneo-nacional-hf1e85"
-        },
-        {
-          "id": "x9lsqs",
-          "titulo": "Destacada actuación de nadadores de EMDAB en un torneo nacional",
-          "fecha": "2026-09-21T13:12:00.000Z",
-          "ruta": "/nota/destacada-actuacion-de-nadadores-de-emdab-en-un-torneo-nacional-x9lsqs"
-        },
-        {
-          "id": "m4p2h",
-          "titulo": "Nadadores de la EMDAB compiten en un torneo nacional en Balcarce",
-          "fecha": "2026-09-22T12:10:01.000Z",
-          "ruta": "/nota/destacada-participacion-de-la-emdab-en-torneo-nacional-de-natacion-m4p2h"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo informaron Municipalidad de Balcarce y un medio independiente.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "la-escuela-municipal-de-deporte-adaptado-compite-en-mar-del-plata",
-      "foto": {
-        "archivo": "fotos-notas/56y0ry.jpg",
-        "credito": "Foto: Municipalidad de Balcarce"
-      }
+      "slug": "advierten-por-una-falsa-convocatoria-laboral-de-mccain-en-balcarce"
     }
   ],
   "secciones": [
-    "Economía",
     "Automovilismo",
     "Deportes",
+    "Economía",
     "Política",
     "Balcarce",
     "Fútbol",
     "Agro",
-    "Argentina",
     "Policiales",
     "Cultura y agenda"
   ],
   "temas": [
     {
-      "nombre": "El autódromo",
-      "ranura": "autodromo",
-      "cuantas": 9
-    },
-    {
       "nombre": "Fangio",
       "ranura": "fangio",
       "cuantas": 9
+    },
+    {
+      "nombre": "El autódromo",
+      "ranura": "autodromo",
+      "cuantas": 8
     },
     {
       "nombre": "TC Pick Up",
@@ -4381,10 +3279,10 @@
   ],
   "clima": {
     "ahora": {
-      "temp": 16,
-      "sensacion": 14,
-      "humedad": 81,
-      "viento": 17,
+      "temp": 17,
+      "sensacion": 15,
+      "humedad": 79,
+      "viento": 16,
       "rumbo": "NE",
       "cielo": "Nublado",
       "esDeDia": true
@@ -4767,22 +3665,22 @@
       "motivo": "necesita ojo humano: \"hospital\""
     },
     {
+      "id": "o8z3cp",
+      "titulo": "Horacio Marín, CEO de YPF: “La producción de petróleo va a…",
+      "seccion": "Economía",
+      "motivo": "internacional: sin relación con Balcarce"
+    },
+    {
       "id": "3sk31f",
       "titulo": "ANDIS bajo la lupa: denuncian sobreprecios de hasta…",
       "seccion": "Argentina",
       "motivo": "necesita ojo humano: \"denuncia\""
     },
     {
-      "id": "f63xeo",
-      "titulo": "Murió una figura de la lucha libre a los 40 años: había…",
+      "id": "gs5cei",
+      "titulo": "Acusan a un influencer de matar a cientos de aves…",
       "seccion": "Argentina",
-      "motivo": "necesita ojo humano: \"muerte\""
-    },
-    {
-      "id": "o8z3cp",
-      "titulo": "Horacio Marín, CEO de YPF: “La producción de petróleo va a…",
-      "seccion": "Economía",
-      "motivo": "internacional: sin relación con Balcarce"
+      "motivo": "necesita ojo humano: \"denuncia\""
     },
     {
       "id": "132bq5o",
@@ -4797,16 +3695,16 @@
       "motivo": "parece promoción, no noticia: \"sorteo\""
     },
     {
-      "id": "gs5cei",
-      "titulo": "Acusan a un influencer de matar a cientos de aves…",
-      "seccion": "Argentina",
-      "motivo": "necesita ojo humano: \"denuncia\""
-    },
-    {
       "id": "1iuksy8",
       "titulo": null,
       "seccion": "Policiales",
       "motivo": "necesita ojo humano: \"hospital\""
+    },
+    {
+      "id": "f63xeo",
+      "titulo": "Murió una figura de la lucha libre a los 40 años: había…",
+      "seccion": "Argentina",
+      "motivo": "necesita ojo humano: \"muerte\""
     },
     {
       "id": "1eh8cwq",
@@ -4815,22 +3713,16 @@
       "motivo": "necesita ojo humano: \"acusado\""
     },
     {
+      "id": "p2d4o6",
+      "titulo": "Ofrecen $10 millones de recompensa para identificar a los…",
+      "seccion": "Política",
+      "motivo": "necesita ojo humano: \"homicidio\""
+    },
+    {
       "id": "1cmtnhl",
       "titulo": null,
       "seccion": "Economía",
       "motivo": "necesita ojo humano: \"niño\""
-    },
-    {
-      "id": "optd3m",
-      "titulo": "Descuentos, cuotas y premios: de qué se trata la campaña…",
-      "seccion": "Argentina",
-      "motivo": "parece promoción, no noticia: \"sorteo\""
-    },
-    {
-      "id": "13kniom",
-      "titulo": "Incidentes en la previa de Boca - Racing por Copa…",
-      "seccion": "Fútbol",
-      "motivo": "necesita ojo humano: \"denuncia\""
     },
     {
       "id": "15p3bbp",
@@ -4839,10 +3731,16 @@
       "motivo": "necesita ojo humano: \"falleció\""
     },
     {
-      "id": "16mksfo",
-      "titulo": "Tragedia en Ezpeleta: murió un hombre tras ser atropellado…",
-      "seccion": "Argentina",
+      "id": "10jp54l",
+      "titulo": "De la mano de Abel Pintos, buscan juntar 10 mil ladrillos…",
+      "seccion": "Política",
       "motivo": "necesita ojo humano: \"hospital\""
+    },
+    {
+      "id": "optd3m",
+      "titulo": "Descuentos, cuotas y premios: de qué se trata la campaña…",
+      "seccion": "Argentina",
+      "motivo": "parece promoción, no noticia: \"sorteo\""
     },
     {
       "id": "1xkl8zr",
@@ -4851,11 +3749,17 @@
       "motivo": "necesita ojo humano: \"investigación\""
     },
     {
+      "id": "16mksfo",
+      "titulo": "Tragedia en Ezpeleta: murió un hombre tras ser atropellado…",
+      "seccion": "Argentina",
+      "motivo": "necesita ojo humano: \"hospital\""
+    },
+    {
       "id": "15w6fh2",
       "titulo": "Una pintura hallada en Lima podría ser una obra original…",
       "seccion": "Cultura y agenda",
       "motivo": "necesita ojo humano: \"investigación\""
     }
   ],
-  "esperandoCuerpo": 40
+  "esperandoCuerpo": 36
 }
