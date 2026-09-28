@@ -204,7 +204,9 @@ sección, feed, sitemap de noticias, archivo) y pasan por la regla de cuerpo
 (`lib/cuerpo.js`). No van a Facebook ni a los podcasts. Las arma
 `scripts/generar-datos.mjs` en cada corrida.
 
-- **El dólar del día**: una por día hábil, desde las 11:00 de Balcarce, con los
+- **El dólar del día**: sólo el día hábil en que el blue o el oficial se
+  movieron 2% o más contra el anterior guardado (`seMovioElDolar`,
+  `NOTA_DEL_DOLAR` en `ingesta/criterio.mjs`; 28/09), desde las 11:00 de Balcarce, con los
   números que da DolarApi en ese momento (oficial, blue, MEP, contado con liqui,
   tarjeta, mayorista y la brecha). Si el oficial no se actualizó hoy (feriado,
   o el mercado no abrió) no se hace, y se vuelve a probar hasta las 18. Compara

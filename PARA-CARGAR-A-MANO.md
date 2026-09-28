@@ -12,8 +12,9 @@ botones de "guardar" los toca una persona.
 
 ## 1. La foto de perfil (Instagram y Facebook, la misma en las dos)
 
-**Archivo:** `reels/salida/avatar.png` (1080×1080, ya armado con el radar en
-rojo de marca — es el mismo archivo en las dos redes).
+**Archivo:** `reels/salida/avatar.png` (1080×1080, fondo azul oscuro con
+"RADAR" en blanco y "BALCARCE" en rojo — es el mismo archivo en las dos
+redes). **Ya subida el 28/09** en Instagram y Facebook.
 
 - **Instagram:** Editar perfil → tocar la foto → Cambiar foto de perfil.
 - **Facebook:** la página "Radar Balcarce" → Editar foto de perfil.

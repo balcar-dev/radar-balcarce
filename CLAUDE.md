@@ -65,8 +65,13 @@ cada uno, cuándo corre y si cuesta plata), en `INFRAESTRUCTURA.md`.
   recortada, cuando no hay una propia, oficial o de stock que sirva —
   siempre que no tenga la marca de agua ni el nombre del otro medio adentro
   (eso va sólo en la cita) y que se guarde en el banco propio para
-  revisarla y reusarla. Todavía no está construido: hoy sigue saliendo la
-  placa propia en todos lados (ver PENDIENTES.md, "El banco de fotos").
+  revisarla y reusarla. **Construido y en vivo desde el 28/09**: la foto va
+  en la página de la nota, con el crédito en el epígrafe; en redes y en la
+  tarjeta para compartir sigue la placa propia. El banco
+  (`web/data/banco-fotos.json`, fotos en `web/public/fotos-notas/`) guarda
+  de cada una el medio, el crédito, la licencia, nuestra nota, la nota del
+  medio, la dirección original y por qué se eligió (PENDIENTES.md, "El banco
+  de fotos").
 - **Tokens y claves nunca en un chat ni en el código.** Van a GitHub Secrets o
   al `.env`. Quien los pega es una persona.
 - **Sin cuerpo no se publica** (25/09). Una nota automática sin cuerpo de al
@@ -360,6 +365,10 @@ cada uno, cuándo corre y si cuesta plata), en `INFRAESTRUCTURA.md`.
 | cambiar cómo se habla con Meta | `redes/meta.mjs` |
 | cargar o sacar un aviso publicitario | panel → Avisos (`web/data/avisos.json`) |
 | cambiar la página del dólar (fuentes, tipos, textos de "actualizado") | `web/lib/dolar.js` y `web/components/dolar-vivo.js`; la foto de respaldo la guarda `web/scripts/foto-dolar.mjs` en cada build. Nunca decir "en vivo" |
+| cambiar la tira "Hoy en Balcarce" de la portada (clima, farmacia y dólar en tres renglones, sin botones) o la página `/clima` | `web/components/hoy-balcarce.js`; `web/app/clima/page.js` y `PronosticoDias` en `web/components/clima-vivo.js` (28/09). El detalle y los botones de llamar van en `/clima`, `/farmacias` y `/dolar` |
+| cuándo sale la nota propia del dólar (hoy, sólo si el blue o el oficial se movieron 2% o más) | `NOTA_DEL_DOLAR` en `ingesta/criterio.mjs` y la tabla de `CRITERIO-EDITORIAL.md`; `seMovioElDolar` en `web/lib/notas-propias.js` |
+| la fecha que muestra una nota (nunca más nueva que su primera fuente ni que la ya publicada) | `fechaDeLaNota` en `web/lib/archivo.js` (28/09, Colapinto "hace 46 minutos" siendo del sábado) |
+| ver qué notas esperan cuerpo, para escribirlo a mano en `correcciones.json` | `web/data/esperando-cuerpo.json` (lo escribe cada corrida: título, bajada, sección y las fuentes con enlace) |
 | cambiar la tipografía (Source Serif 4 en los títulos, Inter en el resto, desde el 27/09) | La web: `web/app/layout.js` (el `<link>` de Google Fonts) y `web/app/globals.css` (`--f-titulo` y el sistema tipográfico; detalle en `web/README.md`). Las placas, reels, avatar y portada de Facebook: `reels/placa.mjs`, `reels/avatar.mjs` y `reels/portada.mjs`, con los archivos de `reels/marca/fuentes/`. Las imágenes para compartir: `web/lib/tarjeta.js`, con `web/fuentes/`. El panel, `panel/panel.html`; la guía comercial, `comercial/vista.plantilla.html` |
 | cambiar una medida de imagen de Instagram/Facebook | `redes/formatos.mjs` (fuente única, con fecha de verificación) y `FORMATOS.md`. Los lunes `redes/auditar.mjs` audita lo publicado y avisa por WhatsApp si algo se desvió o los datos pasaron de 90 días |
 | cambiar qué revisa el vigilante o cuándo avisa | `redes/vigilar.mjs` |

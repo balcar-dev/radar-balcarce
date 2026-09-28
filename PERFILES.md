@@ -30,7 +30,7 @@ sección B). Nada de acá inventa datos: sólo dice lo que el medio hace hoy.
 | **Categoría** | "Sitio web de noticias y medios de comunicación" (hoy está en "Blog personal"; no se ve en el perfil pero mejora cómo Instagram lo entiende). Se cambia desde el celular: Editar perfil → Categoría |
 | **Botón de contacto** | WhatsApp o correo del medio (el que se decida publicar) |
 | **Historias destacadas fijas** | Farmacia · Teléfonos · Agenda · Clima (portada cuadrada que se ve redonda: un ícono simple por tema) |
-| **Foto de perfil** | El avatar del medio (`reels/avatar.mjs`) sobre el rojo de la marca, centrado: se muestra redonda (ver medidas) |
+| **Foto de perfil** | El avatar del medio (`reels/avatar.mjs`): fondo azul oscuro con "RADAR" en blanco y "BALCARCE" en rojo, centrado; se muestra redonda (ver medidas). 28/09: se probó en rojo y Hernán prefirió éste |
 
 **Bio de Instagram (máx. 150 caracteres)**
 

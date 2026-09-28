@@ -171,14 +171,16 @@ clave o una decisión.
      como pieza de Instagram. **Sigue pendiente.**
   2. ~~El **ícono del sitio**~~ **Hecho el 28/09**: `web/scripts/hacer-iconos.mjs`
      dibuja ahora el mismo radar (dos anillos y un punto) del resto del
-     rediseño, en el rojo de marca, en vez de la "R" de antes.
+     rediseño, en el rojo de marca, en vez de la "R" de antes. (El ícono del
+     sitio siguió rojo; en redes volvió el azul, ver el punto 3.)
   3. ~~El **ícono de perfil de Instagram y de Facebook**, y la **portada de
      Facebook**~~ **Hecho el 28/09**: `reels/avatar.mjs` (el ícono, sin texto,
      para que se lea recortado en círculo) y `reels/portada.mjs` (la portada)
-     pasaron del fondo verde azulado de antes al rojo de marca, coherente con
-     `MEDIA-KIT.md` ("el perfil se mantiene siempre en el rojo de la marca").
-     Sigue pendiente subirlos a mano a Instagram y Facebook (`PENDIENTES.md`
-     → "Para Hernán y Andrés", ítem 5).
+     pasaron del fondo verde azulado de antes al rojo de marca. **El 28/09
+     Hernán los vio subidos y prefirió los de antes** ("me gustaba más la azul
+     y el logo que también diga el nombre, se ve mejor el contraste entre
+     Radar y Balcarce, lo otro es muy rojo"): los dos archivos volvieron a la
+     versión azul con el nombre y así quedaron en Instagram y Facebook.
 - **Mirar los primeros días de redes.** Que salgan bien los tres podcasts, el
   enlace en los posteos de Facebook y el espejo a Instagram; que el contrato del
   día cierre completo (`REDES.md`). Si algo deja de salir, seguir "Si algo dejó
