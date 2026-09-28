@@ -1,5 +1,5 @@
 {
-  "exportado": "2026-09-28T04:51:46.658Z",
+  "exportado": "2026-09-28T05:01:41.961Z",
   "decisiones": {
     "1951120": {
       "estado": "automatica",
@@ -40788,6 +40788,112 @@
       "verificacion": {
         "nivel": "ALTA",
         "porque": "Lo contaron 19 medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      }
+    },
+    "mjjpwo": {
+      "estado": "automatica",
+      "titulo": "Sergio Agüero responde a Lando Norris en medio de la polémica por Franco Colapinto",
+      "copete": "El exdeportista Sergio Agüero reaccionó con un comentario en redes sociales tras las duras críticas del piloto Lando Norris contra Franco Colapinto tras el Gran Premio de Azerbaiyán.",
+      "cuerpo": "El exfutbolista Sergio Agüero respondió a una publicación del piloto de Fórmula 1 Lando Norris con un GIF en el que hace el gesto de negación con el dedo, en medio de la fuerte repercusión generada por las críticas del británico hacia Franco Colapinto tras el Gran Premio de Azerbaiyán disputado en Bakú. La reacción del exdelantero acumuló miles de \"me gusta\" en pocas horas.\n\nEl incidente en pista ocurrió durante un relanzamiento posterior a un coche de seguridad, cuando Colapinto perdió el control de su vehículo, impactó contra su compañero de equipo Pierre Gasly y dejó fuera de carrera al propio Norris. Tras el choque, el piloto de McLaren reclamó una sanción de suspensión para el argentino, mientras que el corredor de Alpine asumió la responsabilidad y pidió disculpas.\n\nLa interacción entre Agüero y Norris cobró relevancia debido a antecedentes compartidos entre ambos en eventos virtuales y deportivos vinculados al Manchester City y a la categoría. El comentario del exjugador se sumó a una marea de reacciones de usuarios en el perfil del británico.",
+      "guion": "Sergio Aguero responde a Lando Norris en medio de la polemica por Franco Colapinto",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-28T05:01:41.857Z",
+      "claves": [
+        "Sergio Agüero respondió con un gesto en redes a Lando Norris.",
+        "Norris había pedido una suspensión para Franco Colapinto tras el choque en Bakú.",
+        "El accidente involucró a los vehículos de Colapinto, Pierre Gasly y Norris en el Gran Premio de Azerbaiyán.",
+        "La escudería Alpine repudió el acoso en redes sociales tras la repercusión del incidente."
+      ],
+      "textoRedes": "El exfutbolista Sergio Agüero reaccionó en redes sociales a los cuestionamientos del piloto Lando Norris contra Franco Colapinto tras el accidente en el Gran Premio de Azerbaiyán.",
+      "etiquetas": [
+        "Sergio Agüero",
+        "Lando Norris",
+        "Franco Colapinto",
+        "Gran Premio de Azerbaiyán"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/deportes/automovilismo/2026/09/26/el-kun-aguero-reacciono-a-los-dichos-de-lando-norris-sobre-franco-colapinto-el-gesto-que-se-volvio-viral/",
+          "fecha": "2026-09-27T01:52:57.000Z",
+          "oficial": false,
+          "aporte": "Detalló el incidente en el Gran Premio de Azerbaiyán, las declaraciones de Lando Norris y la respuesta de Sergio Agüero."
+        },
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/deportes/2026/09/27/el-ironico-mensaje-del-kun-aguero-a-lando-norris-tras-las-criticas-del-britanico-a-colapinto-por-el-choque-en-baku/",
+          "fecha": "2026-09-27T21:20:52.000Z",
+          "oficial": false,
+          "aporte": "Informó sobre la publicación de un comunicado por parte de la escudería tras el choque en pista."
+        },
+        {
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/deportes/formula-1/2026/09/28/el-kun-aguero-defendio-a-franco-colapinto-tras-el-accidente-en-baku-queremos-respeto-para-todos/",
+          "fecha": "2026-09-28T03:15:54.000Z",
+          "oficial": false,
+          "aporte": "Indicó que la escudería condenó el acoso sufrido en redes sociales tras la repercusión."
+        },
+        {
+          "medio": "Perfil",
+          "enlace": "https://442.perfil.com/noticias/futbol/venimos-a-darle-carino-la-reaccion-del-kun-aguero-contra-lando-norris-por-sus-criticas-a-franco-colapinto.phtml",
+          "fecha": "2026-09-27T18:23:19.000Z",
+          "oficial": false,
+          "aporte": "Señaló que el comentario irónico del exfutbolista acumuló miles de \"me gusta\"."
+        },
+        {
+          "medio": "TyC Sports",
+          "enlace": "https://www.tycsports.com/automovilismo/la-reaccion-del-kun-agueero-contra-lando-norris-tras-sus-criticas-a-franco-colapinto-id763242.html",
+          "fecha": "2026-09-27T17:04:27.000Z",
+          "oficial": false,
+          "aporte": "Aportó cobertura sobre el cruce digital entre los protagonistas."
+        },
+        {
+          "medio": "Minuto Uno",
+          "enlace": "https://www.minutouno.com/deportes/la-reaccion-del-kun-aguero-contra-lando-norris-sus-duras-criticas-franco-colapinto-la-f1-n6327212",
+          "fecha": "2026-09-27T19:19:00.000Z",
+          "oficial": false,
+          "aporte": "Mencionó la intervención del exfutbolista en el perfil del corredor británico en medio de alertas por odio en redes."
+        },
+        {
+          "medio": "Radio Mitre",
+          "enlace": "https://radiomitre.cienradios.com/deportes/el-ironico-comentario-del-kun-aguero-tras-las-criticas-de-lando-norris-a-franco-colapinto-por-el-choque-en-baku/",
+          "fecha": "2026-09-27T23:10:25.000Z",
+          "oficial": false,
+          "aporte": "Precisó que la respuesta de Agüero se dio a través de la plataforma Instagram."
+        },
+        {
+          "medio": "Noticias Argentinas (NA)",
+          "enlace": "https://noticiasargentinas.com/deportes/la-doble-vara-de-lando-norris-en-las-criticas-a-colapinto_a6ab91b68c2b8de8667e4e93b",
+          "fecha": "2026-09-27T13:41:11.969Z",
+          "oficial": false,
+          "aporte": "Registró las repercusiones del choque automovilístico en los medios."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "g2u3l1",
+          "titulo": "Flavio Briatore critica a Franco Colapinto tras el Gran Premio de Azerbaiyán",
+          "fecha": "2026-09-26T22:12:00.000Z",
+          "ruta": "/nota/flavio-briatore-critica-a-franco-colapinto-tras-el-gran-premio-de-g2u3l1"
+        },
+        {
+          "id": "mk94me",
+          "titulo": "Franco Colapinto choca con Pierre Gasly en el Gran Premio de Azerbaiyán",
+          "fecha": "2026-09-26T15:07:30.000Z",
+          "ruta": "/nota/franco-colapinto-choca-con-pierre-gasly-en-el-gran-premio-de-mk94me"
+        },
+        {
+          "id": "1iri883",
+          "titulo": "Max Verstappen defiende a Franco Colapinto tras el GP de Azerbaiyan",
+          "fecha": "2026-09-26T14:52:09.000Z",
+          "ruta": "/nota/verstappen-defiende-a-colapinto-tras-el-choque-en-azerbaiyan-1iri883"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron 7 medios independientes.",
         "sugeridoPorIA": "ALTA"
       }
     }
