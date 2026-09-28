@@ -1,5 +1,5 @@
 {
-  "exportado": "2026-09-28T03:52:33.647Z",
+  "exportado": "2026-09-28T04:02:00.403Z",
   "decisiones": {
     "1951120": {
       "estado": "automatica",
@@ -15588,13 +15588,67 @@
     },
     "axexs6": {
       "estado": "automatica",
-      "titulo": null,
-      "copete": null,
-      "cuerpo": null,
-      "guion": null,
-      "deIA": null,
-      "por": null,
-      "cuando": "2026-09-25T08:00:36.420Z"
+      "titulo": "Kevin Gomez gana el titulo argentino de supermedianos",
+      "copete": "El boxeador local se consagro campeon nacional de la categoria tras vencer por nocaut en el quinto asalto a Santiago Fernandez.",
+      "cuerpo": "El deportista balcarceneño Kevin Gomez obtuvo el titulo argentino de la categoria supermediano luego de derrotar por nocaut en el quinto asalto a Santiago Fernandez en un combate exigente.\n\nTras la consagracion, Gomez reconoció las dificultades que encontro durante los primeros rounds debido a la dureza del rival y a los problemas para conectar sus golpes, aunque logro revertir la situacion gracias al trabajo junto a su equipo. El nuevo campeon nacional apuntas a futuros desafios para aprovechar sus condiciones en el deporte.",
+      "guion": "Kevin Gomez gana el titulo argentino de supermedianos",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-28T04:02:00.298Z",
+      "claves": [
+        "Kevin Gomez se consagro campeon argentino supermediano.",
+        "Vencio por nocaut en el quinto asalto a Santiago Fernandez.",
+        "El boxeador apunta a nuevos desafios en su carrera deportiva."
+      ],
+      "seSabe": [
+        "Kevin Gomez obtuvo el titulo argentino de la categoria supermediano.",
+        "El boxeador local vencio por nocaut en el quinto asalto a Santiago Fernandez.",
+        "El combate presento dificultades iniciales para el deportista balcarceneño."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El boxeador balcarceneño Kevin Gómez se consagró campeón argentino de la categoría supermediano tras vencer por nocaut en el quinto asalto a Santiago Fernández.",
+      "etiquetas": [
+        "Kevin Gomez",
+        "boxeo",
+        "campeon argentino",
+        "supermediano"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/kevin-gomez-es-el-nuevo-campeon-de-supermedianos-997",
+          "fecha": null,
+          "oficial": false,
+          "aporte": "Detalles del combate, declaraciones del boxeador sobre las dificultades del encuentro y sus aspiraciones futuras."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1ibi15p",
+          "titulo": "Kevin Gómez se consagró campeón nacional de boxeo",
+          "fecha": "2026-09-20T19:25:07.000Z",
+          "ruta": "/nota/kevin-gomez-se-consagro-campeon-nacional-de-boxeo-1ibi15p"
+        },
+        {
+          "id": "1dmj600",
+          "titulo": "Kevin Gómez se consagró campeón argentino de boxeo",
+          "fecha": "2026-09-20T04:57:04.000Z",
+          "ruta": "/nota/kevin-gomez-se-consagro-campeon-argentino-de-boxeo-1dmj600"
+        },
+        {
+          "id": "qq816k",
+          "titulo": "Kevin Gómez se consagró campeón argentino de boxeo",
+          "fecha": "2026-09-20T04:35:00.000Z",
+          "ruta": "/nota/kevin-gomez-se-consagro-campeon-argentino-de-boxeo-en-balcarce-qq816k"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
     },
     "1hm23zx": {
       "estado": "automatica",
