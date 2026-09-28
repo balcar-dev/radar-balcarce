@@ -178,6 +178,48 @@
         "seguidores": 4,
         "publicaciones": 26
       }
+    },
+    {
+      "cuando": "2026-09-28T00:00:17.280Z",
+      "web": {
+        "u12": {
+          "visitas": 36,
+          "vistas": 230
+        },
+        "a12": {
+          "visitas": 15,
+          "vistas": 81
+        },
+        "u24": {
+          "visitas": 51,
+          "vistas": 311
+        },
+        "a24": {
+          "visitas": 21,
+          "vistas": 173
+        },
+        "top": [
+          {
+            "camino": "/",
+            "vistas": 124
+          },
+          {
+            "camino": "/seccion/balcarce",
+            "vistas": 13
+          },
+          {
+            "camino": "/seccion/politica",
+            "vistas": 12
+          }
+        ]
+      },
+      "facebook": {
+        "seguidores": 2
+      },
+      "instagram": {
+        "seguidores": 4,
+        "publicaciones": 33
+      }
     }
   ]
 }
