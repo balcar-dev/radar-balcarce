@@ -224,9 +224,12 @@ medio, no la del hecho. La farmacia, el clima y el dólar siguen siendo servicio
 "que sean policiales de Balcarce"): el partido, Napaleofú, Los Pinos, Ramos
 Otero y las rutas 226 y 55 dentro del partido. No hay fuentes nacionales de
 Policiales, y **un policial de otro lugar no se trae** (27/09, Hernán): lo que
-no viene de un medio de Balcarce ni dice Balcarce en el título, no entra.
-Antes quedaba amarillo esperando a una persona, y nadie lo miraba. En un
-pueblo son pocas notas por semana, y es lo normal. El semáforo no cambia.
+no viene de un medio de Balcarce, no dice Balcarce en el título ni toca la
+zona, no entra. **Lo de la zona sí** (28/09, Hernán): un choque en la 226
+contado por un medio de Mar del Plata entra, con el mismo semáforo (un muerto,
+un herido o un chico esperan a una persona). Antes quedaba amarillo esperando
+a una persona, y nadie lo miraba. En un pueblo son pocas notas por semana, y
+es lo normal.
 
 "Sale sola" quiere decir que no espera a nadie **si el semáforo da verde**
 (sección 3) y si tiene cuerpo (sección 4).
@@ -296,7 +299,7 @@ que sale cuando no hay foto que sirva.**
 | **La cotización del dólar como nota de otro medio.** Si el título es "dólar hoy", "dólar blue", "a cuánto cotiza"… la nota no sale sola | La cotización se muestra en `/dolar`, que se actualiza sola, y el sitio arma su propia nota del dólar una vez por día hábil (sección 8). Una nota ajena por cada cotización es relleno |
 | **Lo de otros países sin conexión argentina.** Primero no se trae lo que el medio pone en una sección de otro país (sección 2, "Lo que no se trae"). Si igual se cuela por una sección argentina y el título nombra a Trump, Xi Jinping, Putin, Newsom, California, la Casa Blanca, Gaza, Ucrania, el G20…, y la nota no es de Balcarce, no sale sola | No le importa a nadie de acá: el 26/09 la cumbre Trump–Xi salió sola y el 27/09 salieron una ley de California y un tigre suelto en México. La lista de nombres es `REGLAS_SEMAFORO.internacional` (sólo mira el título) y es un respaldo: lo principal es no traerlo |
 | **Chimentos y medios de España** | Decisión de Hernán, 27/09: esas fuentes están apagadas |
-| **Un policial de otro lugar.** Desde el 27/09 no se trae (ver "Policiales es sólo de Balcarce"): lo que no viene de un medio de Balcarce ni dice Balcarce en el título se descarta en la ingesta (`esPolicialDeAfuera`, `ingesta/ingesta.mjs`) | Los diarios nacionales traen crímenes y causas de todo el país, con nombres de acusados, y un medio de Balcarce no tiene por qué darles lugar (26/09: "Mató a su mujer embarazada…" salía verde). La regla de respaldo del semáforo que los dejaba amarillos (`policialDeAfuera`) no se alcanzaba nunca desde entonces y se borró el 28/09 |
+| **Un policial de otro lugar.** Desde el 27/09 no se trae (ver "Policiales es sólo de Balcarce"): lo que no viene de un medio de Balcarce, no dice Balcarce en el título ni toca la zona se descarta en la ingesta (`esPolicialDeAfuera`, `ingesta/ingesta.mjs`) | Los diarios nacionales traen crímenes y causas de todo el país, con nombres de acusados, y un medio de Balcarce no tiene por qué darles lugar (26/09: "Mató a su mujer embarazada…" salía verde). La regla de respaldo del semáforo que los dejaba amarillos (`policialDeAfuera`) no se alcanzaba nunca desde entonces y se borró el 28/09 |
 | **Una nota en Tecnología que no habla de tecnología.** Las fuentes de tecnología de los diarios traen de todo | La sección se confirma con el título (`PALABRAS_DE_TECNOLOGIA_EN_EL_TITULO`): si no nombra nada de tecnología, no se le cree a la fuente y se clasifica por lo que dice |
 | **"En vivo", "minuto a minuto", "en directo"** en el título, la bajada, el guion o el texto para redes, aunque el medio de origen lo diga ("música en vivo" sí) | Radar Balcarce no hace coberturas en vivo: cuenta lo que pasó |
 | **Una nota automática sin cuerpo** | Una nota de dos renglones no es una nota. Queda "esperando cuerpo" hasta tenerlo (sección 4) |
@@ -314,7 +317,7 @@ su prueba. **No se tocan sin que lo decidan Hernán y Andrés.**
 | Color | Qué pasa | Cuándo |
 |---|---|---|
 | **Rojo** | No se publica nunca, ni por error | Identifica o puede identificar a un menor o a una víctima de violencia de género o de un delito sexual (menor de edad, abuso sexual, violación, femicidio, grooming, suicidio…) |
-| **Amarillo** | Espera a una persona en el panel | Acusa a alguien (denuncia, detenido, imputado), habla de una muerte, involucra a un chico, parece promoción, es de afuera y la cuentan menos medios de los que pide su sección, pasó el cupo de su sección, es la cotización del dólar, o tiene **verificación baja** (sección 5) |
+| **Amarillo** | Espera a una persona en el panel | Acusa a alguien (denuncia, detenido, imputado), habla de una muerte o de un herido (sólo en Policiales, en Balcarce, en lo de acá o de la zona y en lo que cuenta un solo medio: 28/09), involucra a un chico, parece promoción, es de afuera y la cuentan menos medios de los que pide su sección, pasó el cupo de su sección, es la cotización del dólar, o tiene **verificación baja** (sección 5) |
 | **Verde** | Sale sola | Todo lo demás, en las secciones que salen solas |
 
 **Lo que no se publica nunca, aparte del rojo (27/09).** Las listas de
@@ -391,7 +394,7 @@ persona no se toca.
 ### La bajada (el campo `copete`)
 
 - **Dos o tres frases cortas**, unas **50 palabras** como mucho: qué pasó, cómo
-  se relaciona con Balcarce y el dato más importante.
+  se relaciona con Balcarce (sólo si la fuente lo dice) y el dato más importante.
 - Completa el título, no lo repite: suma el dato que el título no tenía
   (cuándo, cuánto, quién decidió) o por qué le importa a alguien de acá.
 - Todo dato de la bajada se desarrolla en el cuerpo: la bajada no puede
@@ -536,7 +539,7 @@ panel y para las redes (sección 7).
 | Qué se sabe | Los datos confirmados, atribuidos | Lista |
 | Qué falta confirmar | Lo que no se pudo verificar y lo que las fuentes cuentan distinto. Con una sola fuente va siempre "No pudo ser contrastado de forma independiente con las fuentes consultadas." | Lista, puede ir vacía |
 | Lo que aportó cada fuente | Una frase por fuente, sin nombrar al medio | Una por fuente |
-| Texto para redes | El posteo de Facebook: qué pasó y por qué le importa a Balcarce. Sin nombrar al medio, sin hashtags, enlaces ni emojis | Hasta 280 caracteres |
+| Texto para redes | El posteo de Facebook: qué pasó y, si la fuente lo dice, por qué le importa a Balcarce. Sin nombrar al medio, sin hashtags, enlaces ni emojis | Hasta 280 caracteres |
 | Etiquetas | De qué trata la nota, sin "#". Van a Google y dos o tres como hashtags en Facebook | De 3 a 8 |
 | Nivel sugerido | ALTA, MEDIA o BAJA. **Es sólo una sugerencia**: el nivel lo calcula el sistema (sección 5) | — |
 
@@ -606,7 +609,7 @@ esa fuente dice y en "qué falta confirmar" va que no pudo ser contrastada.
 |---|---|
 | **ALTA** | Entre las fuentes hay una oficial, o dos o más medios distintos (dos secciones del mismo medio cuentan como uno) |
 | **MEDIA** | Un solo medio, sin confirmación independiente |
-| **BAJA** | Un solo medio y la nota se apoya en una denuncia o una declaración de parte (denuncia, acusó, habría, presunto, "según trascendió"…); o, con cualquier cantidad de fuentes, lo que falta confirmar toca el hecho central |
+| **BAJA** | Un solo medio y la nota se apoya en una denuncia o una acusación (denuncia, acusó, habría, presunto, "según trascendió"…), o lo que falta confirmar toca el hecho central. Una opinión citada ("aseguró que") no baja el nivel, y con varias fuentes u oficial nunca es BAJA (28/09, Hernán) |
 
 **Con verificación BAJA la nota no sale sola**: espera a una persona, como
 una amarilla, y no se le vuelve a pedir a la IA salvo que aparezcan más
@@ -1123,7 +1126,7 @@ Después la escribís, con estas reglas fijas:
 
 1. NUNCA copiás el texto original. Se reescribe con palabras propias, cruzando lo que cuenta cada fuente si hay más de una. Podés citar una frase textual corta si hace falta, entre comillas.
 2. El título apunta a unos 70 caracteres y NUNCA pasa de 90, y se entiende solo en la pantalla del celular. Es UNA frase completa que dice qué pasó: empieza por el hecho, con sujeto y verbo en PRESENTE aunque el hecho ya haya pasado ("El Concejo aprueba…", "Ferroviarios gana…", "El intendente repasa…"). Nunca en pasado en el título: ni "aprobó", ni "ganó", ni "repasó", ni "se realizó", ni "fue elegido" (el pasado va en el cuerpo). Nunca empieza con una etiqueta y dos puntos ("Rugby:", "Exclusivo:", "Balcarce:") ni con un sustantivo y un lugar sin verbo ("Cruce en Balcarce por…", "Preocupación por…"). Nunca termina cortado: ni en coma, ni en "y", "de", "que", ni en puntos suspensivos; si no entra en el largo, elegís el dato central y el resto va a la bajada. Sin signos de admiración, sin pregunta y sin adjetivos de gancho ("impresionante", "tremendo", "increíble"). Con el nombre y el número cuando los hay: "Pato Naranja gana 24 a 10", no "Gran triunfo del rugby local". Así sí: "Pato Naranja gana el clásico y queda puntero", "Productores y el municipio discuten la tasa vial", "Tecnopapa reúne a toda la cadena productiva de la papa". Así no: "Rugby: Pato Naranja ganó el clásico" (etiqueta y pasado), "Cruce en Balcarce por la tasa vial" (no dice quién ni qué), "Tecnopapa, el evento que reunirá a toda la cadena productiva del país," (sin verbo principal y cortado). El título NUNCA termina en "en Balcarce": el medio es de Balcarce y se sobreentiende (27/09, Hernán; el sistema igual lo saca si aparece). Si el hecho ocurre en otra ciudad, el título nombra esa ciudad y nunca a Balcarce, aunque participen vecinos de Balcarce: eso se cuenta en el cuerpo. Nunca se agrega Balcarce a una nota nacional o de otro lugar para que parezca local. Nunca "Video:", "Ojo:" ni frases de gancho ("lo que tenés que saber"). Nunca "en vivo", "EN VIVO", "minuto a minuto", "en directo" ni nada parecido, ni en el título ni en la bajada, aunque el titular original lo diga: Radar Balcarce no hace coberturas en vivo, cuenta lo que pasó.
-3. La bajada (el campo "copete") son dos o tres frases cortas, unas 50 palabras como mucho: qué pasó, cómo se relaciona con Balcarce y el dato más importante. Completa el título, no lo repite: suma el dato que el título no tenía (cuándo, cuánto, quién decidió). Todo dato que pongas en la bajada lo desarrollás en el cuerpo: la bajada nunca promete algo que la nota no cuenta. Nada de "cabe destacar que" ni antecedentes largos: la profundidad va en el cuerpo (punto 4).
+3. La bajada (el campo "copete") son dos o tres frases cortas, unas 50 palabras como mucho: qué pasó, cómo se relaciona con Balcarce (sólo si la fuente lo dice: ver la regla 15) y el dato más importante. Completa el título, no lo repite: suma el dato que el título no tenía (cuándo, cuánto, quién decidió). Todo dato que pongas en la bajada lo desarrollás en el cuerpo: la bajada nunca promete algo que la nota no cuenta. Nada de "cabe destacar que" ni antecedentes largos: la profundidad va en el cuerpo (punto 4).
 4. El cuerpo es OBLIGATORIO: sin cuerpo la nota no se publica. Es la nota desarrollada, lo que se lee al abrirla, y se escribe SÓLO con información de las fuentes: desarrollás lo que dan TODAS las fuentes que recibiste (los resúmenes de cada medio y el texto completo, que es donde está la mayor parte de los datos), más los antecedentes como contexto, siempre con su fecha. Va de 70 a 180 palabras, según lo que den las fuentes: NUNCA más largo que los datos que tenés. Cada oración tiene que aportar un dato nuevo (quién, qué, cuándo, dónde, cuánto o qué dijo alguien); si una oración no aporta un dato, no la escribís. Si las fuentes dan poco, la nota es corta: 70 palabras bien escritas valen más que 180 con relleno. En uno a tres párrafos cortos separados por un salto de línea en blanco. Nunca lo devolvés vacío y nunca es la bajada dicha de nuevo con otras palabras. Se arma de lo más importante a lo menos:
    · Primer párrafo: el hecho central con el dato que la bajada NO dio (quién, cuándo, dónde, cuánto). Nunca arranca con las mismas palabras de la bajada ni la dice de nuevo.
    · Segundo párrafo: el contexto que sí importa (antecedentes, cómo se llegó a esto, qué había antes).
@@ -1154,7 +1157,7 @@ Además del título, la bajada, el cuerpo y el guion, devolvés:
 - seSabe: los datos confirmados por las fuentes, uno por punto, atribuidos cuando corresponde ("según la Municipalidad…").
 - noConfirmado: lo que no se pudo verificar con las fuentes recibidas y lo que las fuentes cuentan distinto, uno por punto. Si no hay nada, una lista vacía. Que hubo una sola fuente no hace falta que lo pongas: el sistema lo agrega solo.
 - aportes: por cada fuente que usaste, {"fuente": su número, "aporte": qué información aportó, en una frase}. Sin nombrar al medio: el nombre ya se muestra al lado.
-- textoRedes: el texto para el posteo de Facebook, hasta 280 caracteres: qué pasó y por qué le importa a Balcarce. Sin nombrar al medio de origen, sin hashtags, sin enlaces y sin emojis (el enlace a la nota y los hashtags se agregan aparte).
+- textoRedes: el texto para el posteo de Facebook, hasta 280 caracteres: qué pasó y, sólo si la fuente lo dice, por qué le importa a Balcarce. Sin nombrar al medio de origen, sin hashtags, sin enlaces y sin emojis (el enlace a la nota y los hashtags se agregan aparte).
 - etiquetas: de 3 a 8 palabras o frases cortas que digan de qué trata la nota, sin "#".
 - nivel: cómo evaluás la verificación, ALTA (hay una fuente oficial o varias fuentes independientes), MEDIA (una sola fuente confiable, sin confirmación independiente) o BAJA (información preliminar, declaraciones de parte sin verificar o evidencia insuficiente). Es sólo una sugerencia: el nivel que se publica lo calcula el sistema.
 

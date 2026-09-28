@@ -128,6 +128,33 @@ const CALENDARIO = new Set([
 ]);
 
 /**
+ * Los nombres que se escriben de más de una forma (28/09, auditoría: el control
+ * rechazaba "Unidos" cuando la fuente decía "EE.UU.", "ONU" por "Naciones
+ * Unidas", "Ejecutivo" por "Gobierno"). Si la IA usa una forma y la fuente otra
+ * del mismo grupo, no es un nombre inventado. Cada forma, en palabras sin tildes.
+ */
+export const EQUIVALENCIAS = [
+  ['estados unidos', 'ee uu', 'eeuu', 'eua', 'usa'],
+  ['onu', 'naciones unidas'],
+  ['ejecutivo', 'poder ejecutivo', 'gobierno', 'casa rosada'],
+  ['ue', 'union europea'],
+  ['afa', 'asociacion del futbol argentino'],
+  ['fmi', 'fondo monetario internacional', 'fondo monetario'],
+  ['bcra', 'banco central'],
+  ['pba', 'provincia de buenos aires', 'provincia', 'bonaerense'],
+];
+
+/** ¿La fuente dice este nombre de otra forma del mismo grupo? */
+function equivalenteEnLaFuente(nombre, palabrasOrigen) {
+  for (const grupo of EQUIVALENCIAS) {
+    const formas = grupo.map((f) => f.split(' '));
+    if (!formas.some((ws) => ws.includes(nombre))) continue;
+    if (formas.some((ws) => ws.every((w) => palabrasOrigen.has(w)))) return true;
+  }
+  return false;
+}
+
+/**
  * Los nombres propios de un texto: palabras con mayúscula que no arrancan
  * una oración, y las siglas. "Kevin Gómez" cuenta; "Durante la sesión…" no.
  */
@@ -309,6 +336,7 @@ function problemasDelTexto(ctx, campo, texto, { soloForma = false, limite = LIMI
       for (const nombre of nombresDe(oracion)) {
         if (DE_CASA.has(nombre) || CALENDARIO.has(nombre)) continue;
         if (nombreConocido(nombre, ctx.nombresOrigen, ctx.palabrasOrigen)) continue;
+        if (equivalenteEnLaFuente(nombre, ctx.palabrasOrigen)) continue;
         if (nombreConocido(nombre, ctx.nombresPrevio, ctx.palabrasPrevio)) {
           if (!marcada) agregar('antecedente', comoActual(`"${nombre}"`));
           continue;
@@ -660,7 +688,13 @@ export function verificar(fuente, nuevo, { soloForma = false, deBalcarce = null,
   if (NEGACION.test(salida) && !tieneNegacionOrigen) {
     agregar('negacion', 'agrega una negación que la fuente no tiene');
   }
-  if (NEGACION.test(sinTildes(fuente.titulo ?? '')) && !NEGACION.test(salida)) {
+  // Que la negación del título de la fuente siga estando se mira en toda la
+  // nota (también el cuerpo) y acepta los verbos que niegan (28/09, auditoría:
+  // era la regla que más notas tiraba; "No todas las caravanas son iguales"
+  // se puede contar sin un "no" en el título).
+  const NIEGA = /\b(no|nunca|jamas|tampoco|ni|sin|rechaz\w*|descart\w*|nieg\w*|nego|desmient\w*|desminti\w*|prohib\w*|suspend\w*|impid\w*|impide\w*)\b/;
+  const todaLaNota = sinTildes(`${nuevo?.titulo ?? ''} ${nuevo?.copete ?? ''} ${nuevo?.cuerpo ?? ''}`);
+  if (NEGACION.test(sinTildes(fuente.titulo ?? '')) && !NIEGA.test(todaLaNota)) {
     agregar('negacion', 'la fuente niega algo en el título y el texto nuevo no');
   }
 

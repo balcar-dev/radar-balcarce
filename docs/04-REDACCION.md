@@ -255,7 +255,7 @@ bajar una nota ya publicada). Los ejemplos marcados "real" salieron de
 | `vacio` | Sin título o sin bajada | — |
 | `largo` | Pasar el máximo de cada parte (título 90, bajada 360, guion 200, cuerpo 1.800; claves 180, datos 260, aporte 220, texto para redes 280, etiqueta 40) | Un título de 95 caracteres |
 | `acusacion` | Un verbo de delito en pasado (asesinó, mató, robó, estafó, abusó…) sin ninguna atribución en el mismo texto (según, habría, presunto, supuesto, acusado, la denuncia, imputado, investigan, policía, fiscal, justicia…). Se mira con tildes: "un robo" o "un presunto abuso" no son "robó" ni "abusó" (28/09) | Prueba: "Asesinó a su vecino" sin atribuir. Real (antes del 28/09 se rechazaba por error): "Difunden un nuevo video sobre un presunto abuso…", que hoy pasa |
-| `negacion` | Una negación (no, nunca, jamás, tampoco, ni) en el título o la bajada que las fuentes no tienen, o una del titular original que desapareció | Real: "la fuente niega algo en el título y el texto nuevo no" (28 notas así) |
+| `negacion` | Una negación (no, nunca, jamás, tampoco, ni) en el título o la bajada que las fuentes no tienen, o una del titular original que desapareció de toda la nota (desde el 28/09 se busca también en el cuerpo y valen "sin", "rechaza", "descarta", "niega", "prohíbe", "suspende") | Real: "la fuente niega algo en el título y el texto nuevo no" (28 notas así) |
 | `repite` | El primer párrafo del cuerpo dice casi lo mismo que la bajada (70 % de palabras en común) o arranca con sus mismas palabras | Real: "el cuerpo repite el copete en vez de desarrollarlo" |
 | `copia` | Más de 12 palabras seguidas copiadas del original (`COPIA_MAXIMA`) | Real: "copia 13 palabras seguidas del original" |
 | `tilde` | "mas" o "ms" en vez de "más" | Real (23/09): "con ms de ciento sesenta atletas" |
@@ -322,7 +322,7 @@ de antes (el titular y el resumen de la fuente), pero `reescribirAutomaticas`
 |---|---|
 | **ALTA** | Hay una fuente oficial, o dos o más medios distintos |
 | **MEDIA** | Un solo medio |
-| **BAJA** | Un solo medio y el titular original, el título o la bajada se apoyan en una denuncia o una declaración de parte (denuncia, acusó, habría, presunto, "según trascendió", aseguró que…); o, con cualquier cantidad de fuentes, algo de "qué falta confirmar" toca el hecho central (comparte con el título dos palabras que dicen algo, o una de ocho letras o más) |
+| **BAJA** | Un solo medio y el titular original, el título o la bajada se apoyan en una denuncia o una acusación (denuncia, acusó, habría, presunto, "según trascendió"…); o, con un solo medio, algo de "qué falta confirmar" toca el hecho central. Desde el 28/09 una opinión citada ("aseguró que") no baja el nivel, y con varias fuentes u oficial nunca es BAJA (comparte con el título dos palabras que dicen algo, o una de ocho letras o más) |
 
 Criterio en `CRITERIO-EDITORIAL.md` § 5.
 

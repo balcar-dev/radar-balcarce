@@ -2,7 +2,7 @@
 
 *Escrito el 28/09/2026, leyendo `CLAUDE.md` y cada archivo de `pruebas/` de
 ese día, y puesto al día esa noche con el commit "Trece arreglos encontrados al
-documentar". Las pruebas se corrieron ese día: **1.346 pruebas en 83 archivos,
+documentar". Las pruebas se corrieron ese día: **1.353 pruebas en 83 archivos,
 todas bien, en unos 11 segundos**. Si un documento dice otra cosa que el
 código, manda el código.*
 
@@ -82,7 +82,7 @@ libro de redes real del 24 y 25/09).
 ### 4. Cómo se agrega una regla
 
 1. Escribirla en este documento, en la tabla de su tema, con **el número
-   siguiente** (hoy, 71), aunque vaya en otra tabla: los números no se
+   siguiente** (hoy, 72), aunque vaya en otra tabla: los números no se
    reordenan.
 2. Escribir la prueba en el archivo del área (la tabla de abajo dice cuál) o en
    uno nuevo con un nombre que diga qué cuida.
@@ -174,6 +174,7 @@ publicada y avisa si la regla se rompió por algo que las pruebas no ven) o
 | 68 | **La IA sólo reescribe lo que va a salir solo** (28/09, Hernán: "no reescribir cosas que requieran una habilitación a mano"): sólo las notas en verde, sin decisión de una persona y sin retirar a mano (`retiradas.json`). Amarillo y rojo no gastan cupo de redacción; la lectura con IA sí las lee, porque es la que decide el color. | Prueba: `reescritura.test.mjs` ("no toca una nota que no es verde", "no gasta un pedido en una nota retirada a mano") |
 | 69 | **No se junta información sin sentido** (28/09, Hernán): los lunes, en la nube, `retiradas.json` pierde las de más de 7 días que la ingesta ya no trae (`podarRetiradas`, `web/lib/archivo.js`), y el panel no guarda lo que esperó a una persona (pendiente) más de 7 días (`DIAS_DE_PENDIENTES`, `panel/notas.mjs`). Pasada una semana, una nota ya no se puede estrenar. | Prueba: `archivo.test.mjs` ("las retiradas de más de una semana…"), `panel-seguridad.test.mjs` ("lo que espera a una persona…") |
 | 70 | **Arreglos de la auditoría del 28/09**: lo de la zona conserva la página aunque lo cuente un solo medio (`deLaZona` en la nota publicada y en `tieneRespaldo`); la foto de una nota retirada a mano o que ya no está en ningún lado se borra de `web/public/fotos-notas/` (`podarFotos`); el panel de la PC no reescribe solo con IA (sólo la nube); `reels/voz.mjs` corre sola sólo con su nombre exacto. | Prueba: `auditoria-28-09.test.mjs` |
+| 71 | **Decisiones de Hernán sobre la auditoría (28/09)**: los policiales de la zona entran (con el mismo semáforo); "hospital" e "investigación" ya no frenan, y una muerte o un herido frenan sólo en Policiales, Balcarce, lo de acá o de la zona y lo de un solo medio (`amarilloMuerte`, `laMuerteFrena`); la verificación BAJA es sólo por acusaciones o, con un solo medio, por lo sin confirmar del hecho central; la negación se busca en toda la nota y acepta los verbos que niegan; un nombre escrito de otra forma en la fuente (EE.UU., ONU) no es inventado (`EQUIVALENCIAS`); la IA dice qué le importa a Balcarce sólo si la fuente lo dice. | Prueba: `auditoria-28-09.test.mjs`, `editor.test.mjs` |
 
 ### Qué se trae y qué es de Balcarce
 

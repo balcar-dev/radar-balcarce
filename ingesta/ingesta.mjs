@@ -439,7 +439,12 @@ function motivoDeDescarte(nota, fuente = {}) {
 /** ¿Es un policial que no es de Balcarce? No viene de un medio de acá ni dice
  *  Balcarce en el título. Esos no se traen (Hernán, 27/09). */
 function esPolicialDeAfuera(nota) {
-  return nota.alcance !== 'local' && !esDeBalcarce(nota) && clasificar(nota) === 'Policiales';
+  // Lo de la zona (un choque en la 226 contado por un medio de Mar del Plata)
+  // entra desde el 28/09 (Hernán, auditoría): el criterio dice que Policiales
+  // es "de Balcarce y la zona". Con el mismo semáforo: un muerto, un herido o
+  // un chico igual esperan a una persona.
+  return nota.alcance !== 'local' && !esDeBalcarce(nota) && !nota.deLaZona && !tocaLaZona(nota)
+    && clasificar(nota) === 'Policiales';
 }
 
 /** ¿Toca la zona sin nombrar a Balcarce? La ruta 226, el sudeste, la papa.
@@ -660,7 +665,7 @@ const motivoPocoContada = (medios, seccion, minimo) => `${MOTIVO_POCO_CONTADA} (
  * y el texto completo de una página trae "seguinos en" y "suscribite" en
  * cualquier nota.
  */
-export function semaforoDelTexto(textoCrudo, { soloMenores = false } = {}) {
+export function semaforoDelTexto(textoCrudo, { soloMenores = false, conMuerte = true } = {}) {
   const texto = normalizar(String(textoCrudo ?? ''));
   if (!texto) return null;
   for (const p of REGLAS_SEMAFORO.rojo) {
@@ -671,13 +676,29 @@ export function semaforoDelTexto(textoCrudo, { soloMenores = false } = {}) {
   for (const p of soloMenores ? AMARILLO_MENORES : REGLAS_SEMAFORO.amarillo) {
     if (contiene(texto, p)) return { color: 'amarillo', motivo: `necesita ojo humano: "${p}"` };
   }
+  if (!soloMenores && conMuerte) {
+    for (const p of REGLAS_SEMAFORO.amarilloMuerte ?? []) {
+      if (contiene(texto, p)) return { color: 'amarillo', motivo: `necesita ojo humano: "${p}"` };
+    }
+  }
   return null;
+}
+
+/** ¿Las palabras de una muerte frenan esta nota? Sólo donde puede ser alguien
+ *  de acá: Policiales, Balcarce, lo de acá o de la zona, y lo que cuenta un
+ *  solo medio (28/09, REGLAS_SEMAFORO.amarilloMuerte). */
+export function laMuerteFrena(nota = {}, seccion = nota.seccion, medios = cuantosMedios(nota)) {
+  return seccion === 'Policiales' || seccion === 'Balcarce' || nota.alcance === 'local' || !!nota.local
+    || !!nota.nombraBalcarce || !!nota.deLaZona || tocaLaZona({ titulo: nota.titulo ?? '', cuerpo: nota.cuerpo ?? '' })
+    || medios < 2;
 }
 
 /** El color de una nota recién leída: { color, motivo }. El puntaje no entra
  *  (desde el 27/09 lo de afuera se mide en medios, no en puntaje). */
 function semaforo(nota, seccion, medios = cuantosMedios(nota)) {
-  const sensible = semaforoDelTexto(`${nota.titulo} ${nota.cuerpo.slice(0, 600)}`);
+  const sensible = semaforoDelTexto(`${nota.titulo} ${nota.cuerpo.slice(0, 600)}`, {
+    conMuerte: laMuerteFrena(nota, seccion, medios),
+  });
   if (sensible?.color === 'rojo') return sensible;
   // Lo que no se publica nunca (las listas de sepelios, Hernán 27/09). Sólo
   // el título: la palabra suelta en un texto largo no alcanza. Va ANTES del

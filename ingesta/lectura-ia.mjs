@@ -399,7 +399,8 @@ export function aplicarFichas(notas, fichas = {}, { verdeSecciones = [], esperar
     // título ("precios sugeridos para alquilar en Mar del Plata", 27/09).
     else if (f.impacto === 'nulo' && !deFierros && !conexionArgentina && !nacionalQueImporta
       && (!deFuenteLocal || !nombraBalcarceEnElTitulo(n))) motivo = 'no tiene relación con Balcarce';
-    else if (f.seccion === 'Policiales' && !esLocal) motivo = 'policial que no es de Balcarce';
+    // Lo de la zona sí entra (28/09): ver esPolicialDeAfuera, ingesta/ingesta.mjs.
+    else if (f.seccion === 'Policiales' && !esLocal && !n.deLaZona) motivo = 'policial que no es de Balcarce';
     if (motivo) { cambios.sacadas.push({ ...caso, motivo }); continue; }
 
     // Tenía la llave de la fuente o del título pero la IA dice que el hecho no

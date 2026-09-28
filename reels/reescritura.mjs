@@ -32,7 +32,7 @@ import {
   verificar, verificarExtras, resumirProblemas, depurarCuerpo, arreglarEscritura,
 } from '../ingesta/verificar.mjs';
 import { guionNoticia } from '../redes/guiones.mjs';
-import { semaforoDelTexto } from '../ingesta/ingesta.mjs';
+import { semaforoDelTexto, laMuerteFrena } from '../ingesta/ingesta.mjs';
 import { decisionHumana } from '../ingesta/utiles.mjs';
 import { ZONA } from '../ingesta/zona.mjs';
 import { traerTexto } from '../ingesta/articulo.mjs';
@@ -477,8 +477,9 @@ export function semaforoDeLaReescritura(nota, escrito = null) {
     ['lo que escribió la IA', escrito ? textoEscrito(escrito) : '', true],
   ];
   let peor = null;
+  const conMuerte = laMuerteFrena(nota ?? {});
   for (const [donde, texto, soloMenores] of partes) {
-    const s = semaforoDelTexto(texto, { soloMenores });
+    const s = semaforoDelTexto(texto, { soloMenores, conMuerte });
     if (!s) continue;
     const conDonde = { color: s.color, motivo: `${s.motivo}, en ${donde}` };
     if (s.color === 'rojo') return conDonde;
@@ -517,10 +518,13 @@ const normalizar = (s = '') => sinTildes(s)
   .replace(/\s+/g, ' ')
   .trim();
 
-// Una denuncia o una declaración de parte (doctrina Campillay): lo que alguien
-// afirma o acusa, no un hecho comprobado. "Según" a secas no: la instrucción
-// pide atribuir todo ("según informó el municipio") y eso no es una denuncia.
-const DE_PARTE = /\b(denuncia\w*|denuncio|denunciaron|acusa|acusan|acuso|acusaron|acusacion\w*|acusad\w*|habria|habrian|presunt\w*|supuest\w*|segun (trascendio|fuentes|la denuncia|el denunciante|la denunciante|testigos|vecinos|familiares|allegados)|aseguro que|afirmo que|sostuvo que|reclamo que)\b/;
+// Una denuncia o una acusación (doctrina Campillay): lo que alguien acusa, no
+// un hecho comprobado. "Según" a secas no: la instrucción pide atribuir todo
+// ("según informó el municipio") y eso no es una denuncia. Una opinión citada
+// ("aseguró que", "afirmó que") tampoco, desde el 28/09 (Hernán, auditoría):
+// casi todo lo de Balcarce tiene una sola fuente y cualquier entrevista quedaba
+// frenada.
+const DE_PARTE = /\b(denuncia\w*|denuncio|denunciaron|acusa|acusan|acuso|acusaron|acusacion\w*|acusad\w*|habria|habrian|presunt\w*|supuest\w*|segun (trascendio|fuentes|la denuncia|el denunciante|la denunciante|testigos|vecinos|familiares|allegados))\b/;
 
 const EN_PALABRAS = ['cero', 'un', 'dos', 'tres', 'cuatro', 'cinco', 'seis'];
 
@@ -538,7 +542,9 @@ function contarFuentes(origenes = [], medios = []) {
 }
 
 /** ¿Este dato sin confirmar toca el hecho central? Comparte con el título dos
- *  palabras que dicen algo, o una larga ("autódromo", "presupuesto"). */
+ *  palabras que dicen algo, o una larga ("autódromo", "presupuesto"). Sólo se
+ *  mira con una sola fuente (28/09): con varias, lo que la IA anota ahí son las
+ *  diferencias entre medios, que es lo que se le pide, y no un hueco. */
 function tocaElHecho(dato, titulo) {
   const delTitulo = palabrasDeTitular(titulo);
   const comunes = [...palabrasDeTitular(dato)].filter((w) => delTitulo.has(w));
@@ -553,10 +559,10 @@ function tocaElHecho(dato, titulo) {
  *          `oficial: true` en ingesta/fuentes.mjs) o dos o más medios
  *          distintos contaron lo mismo.
  *   MEDIA  un solo medio, sin confirmación independiente.
- *   BAJA   un solo medio y la nota se apoya en una denuncia o una declaración
- *          de parte (denuncia, acusó, habría, presunto, "según trascendió"…,
- *          en el titular original, el título o la bajada); o, con cualquier
- *          cantidad de fuentes, lo que falta confirmar toca el hecho central.
+ *   BAJA   un solo medio y la nota se apoya en una denuncia o una acusación
+ *          (denuncia, acusó, habría, presunto, "según trascendió"…, en el
+ *          titular original, el título o la bajada), o lo que falta confirmar
+ *          toca el hecho central. Con varias fuentes u oficial, nunca (28/09).
  *
  * Devuelve { nivel, porque, sugeridoPorIA } o null si no se sabe de dónde
  * salió la nota.
@@ -568,11 +574,6 @@ export function nivelDeVerificacion({
   if (!nOficiales && !nMedios) return null;
   const con = (nivel, porque) => ({ nivel, porque, sugeridoPorIA: sugerido ?? null });
 
-  const centrales = (escrito.noConfirmado ?? [])
-    .filter((d) => normalizar(d) !== normalizar(FRASE_FUENTE_UNICA))
-    .filter((d) => tocaElHecho(d, escrito.titulo || tituloFuente));
-  if (centrales.length) return con('BAJA', 'Hay datos centrales de la nota que no pudieron confirmarse con las fuentes consultadas.');
-
   const cuantos = EN_PALABRAS[nMedios] ?? String(nMedios);
   if (nOficiales) {
     const quien = oficiales[0] ?? 'un organismo oficial';
@@ -581,6 +582,11 @@ export function nivelDeVerificacion({
     return con('ALTA', `Lo confirman ${cuantos} medios independientes y ${quien}.`);
   }
   if (nMedios >= 2) return con('ALTA', `Lo contaron ${cuantos} medios independientes.`);
+
+  const centrales = (escrito.noConfirmado ?? [])
+    .filter((d) => normalizar(d) !== normalizar(FRASE_FUENTE_UNICA))
+    .filter((d) => tocaElHecho(d, escrito.titulo || tituloFuente));
+  if (centrales.length) return con('BAJA', 'Hay datos centrales de la nota que no pudieron confirmarse con otra fuente.');
 
   const central = normalizar(`${tituloFuente} ${escrito.titulo ?? ''} ${escrito.copete ?? ''}`);
   if (DE_PARTE.test(central)) {

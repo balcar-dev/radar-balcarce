@@ -1026,12 +1026,11 @@ export const REGLAS_SEMAFORO = {
   // Salieron diez veces, cada una en una sección distinta, y Hernán decidió
   // (27/09) que no se hacen: es sensible y no hay una fuente oficial.
   nunca: ['sepelio', 'sepelios', 'inhumación', 'inhumacion', 'inhumaciones'],
+  // "hospital" e "investigación" salieron el 28/09 (Hernán, auditoría): no
+  // acusan, no hablan de una muerte ni involucran a un chico, y frenaban la
+  // prórroga de las obras sociales o un refuerzo de fondos. Las palabras de
+  // una muerte están aparte, en `amarilloMuerte`.
   amarillo: ['denuncia', 'denunció', 'denuncio', 'detenido', 'acusado', 'imputado',
-    'hospital', 'muerte', 'falleció', 'fallecio', 'investigación', 'investigacion',
-    // Una muerte se llame como se llame. "Murió Mario Torres" salió sola
-    // porque el filtro sólo conocía "muerte" y "falleció": es una necrológica,
-    // y las necrológicas no salen sin fuente firmada.
-    'murió', 'murio', 'muere', 'fallece', 'deceso', 'velatorio',
     // Policiales entró a las secciones automáticas el 21/09. Esto es lo que
     // hace que eso sea seguro: lo grave sigue esperando a una persona.
     'homicidio', 'asesinato', 'asesinado', 'asesinaron', 'cadáver', 'cadaver',
@@ -1046,6 +1045,16 @@ export const REGLAS_SEMAFORO = {
     'un bebé', 'el bebé', 'del bebé', 'una beba', 'la beba', 'bebés',
     'recién nacido', 'recién nacida', 'alumna de', 'alumno de',
     'abusado', 'abusada', 'abusador', 'la abusó', 'lo abusó', 'abusaba de'],
+  // Una muerte se llame como se llame. "Murió Mario Torres" salió sola porque
+  // el filtro sólo conocía "muerte" y "falleció": es una necrológica, y las
+  // necrológicas no salen sin fuente firmada. Desde el 28/09 (Hernán, auditoría)
+  // frenan sólo donde una muerte puede ser de alguien de acá: Policiales,
+  // Balcarce, lo de acá o de la zona, y lo que cuenta un solo medio
+  // (laMuerteFrena, ingesta/ingesta.mjs). El homenaje a Los Nocheros o la
+  // vacunación contra la rabia, contados por varios medios, ya no esperan.
+  amarilloMuerte: ['muerte', 'falleció', 'fallecio', 'murió', 'murio', 'muere', 'fallece', 'deceso', 'velatorio',
+    // Un herido también (28/09): un choque en la 226 con heridos espera a una persona.
+    'herido', 'herida', 'heridos', 'heridas', 'lesionado', 'lesionada', 'lesionados'],
   // Todo lo demás sale solo si la sección lo permite.
   //
   // Balcarce entró el 20/09: estaba afuera por prudencia y el resultado era

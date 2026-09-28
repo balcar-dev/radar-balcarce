@@ -269,22 +269,28 @@ test('dos secciones del mismo medio no son dos fuentes independientes', () => {
   assert.equal(r.nivel, 'MEDIA');
 });
 
-test('nivel MEDIA con un solo medio; BAJA si se apoya en una denuncia o una declaración de parte', () => {
+test('nivel MEDIA con un solo medio; BAJA si se apoya en una denuncia o una acusación', () => {
   assert.equal(nivelDeVerificacion({ origenes: [medio('A')], escrito: { titulo: 'Reabre la pileta municipal' } }).nivel, 'MEDIA');
   const baja = nivelDeVerificacion({ origenes: [medio('A')], escrito: { titulo: 'Vecinos denuncian que el basural habría crecido' } });
   assert.equal(baja.nivel, 'BAJA');
   assert.match(baja.porque, /declaraciones de parte/);
-  assert.equal(nivelDeVerificacion({ origenes: [medio('A')], escrito: { titulo: 'x', copete: 'El dirigente aseguró que la obra termina en marzo.' } }).nivel, 'BAJA');
+  // Una opinión citada no es una acusación (28/09): el piloto que dice que el Fangio está mejor.
+  assert.equal(nivelDeVerificacion({ origenes: [medio('A')], escrito: { titulo: 'x', copete: 'El dirigente aseguró que la obra termina en marzo.' } }).nivel, 'MEDIA');
   // "según informó el municipio" es atribuir, no una denuncia.
   assert.equal(nivelDeVerificacion({ origenes: [medio('A')], escrito: { titulo: 'x', copete: 'Según informó el municipio, abre el lunes.' } }).nivel, 'MEDIA');
 });
 
-test('nivel BAJA si lo que falta confirmar toca el hecho central, aunque haya varias fuentes', () => {
+test('nivel BAJA si lo que falta confirmar toca el hecho central con una sola fuente; con varias, no', () => {
   const r = nivelDeVerificacion({
-    origenes: [medio('A'), medio('B')],
+    origenes: [medio('A')],
     escrito: { titulo: 'Reabre el autódromo Juan Manuel Fangio', noConfirmado: ['La fecha de la reapertura del autódromo no está confirmada.'] },
   });
   assert.equal(r.nivel, 'BAJA');
+  const conVarias = nivelDeVerificacion({
+    origenes: [medio('A'), medio('B')],
+    escrito: { titulo: 'Reabre el autódromo Juan Manuel Fangio', noConfirmado: ['La fecha de la reapertura del autódromo no está confirmada.'] },
+  });
+  assert.equal(conVarias.nivel, 'ALTA', 'con varios medios, la diferencia entre ellos no es un hueco');
   const lateral = nivelDeVerificacion({
     origenes: [medio('A'), medio('B')],
     escrito: { titulo: 'Reabre el autódromo Juan Manuel Fangio', noConfirmado: ['No se sabe cuántas personas irán.', FRASE_FUENTE_UNICA] },
