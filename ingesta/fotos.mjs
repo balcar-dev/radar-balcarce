@@ -1,8 +1,8 @@
 // El banco de fotos (PENDIENTES.md, "El banco de fotos propio"): primer paso,
-// una comparación de verdad con IA. Cuando una nota tiene 2 medios o más que
-// la cubrieron, se les pide la foto principal de cada uno y se le muestran
-// las dos (o las que haya) a una IA con visión para que elija la que mejor
-// sirve, y para que avise si alguna tiene una marca de agua o el nombre de
+// una comparación de verdad con IA. A cada medio que cubrió la nota (uno solo
+// también: entonces se mira esa única foto) se le pide su foto principal y se
+// le muestran todas las que haya a una IA con visión para que elija la que
+// mejor sirve, y para que avise si alguna tiene una marca de agua o el nombre de
 // otro medio adentro (más cuidado con los medios locales y de la zona:
 // CRITERIO-EDITORIAL.md, "Las fotos"). Nunca elige una foto marcada: si la
 // mejor tiene marca, usa la mejor SIN marca en su lugar, aunque no sea la
@@ -15,9 +15,11 @@
 // con marca de agua, y una figura fácil de identificar).
 //
 // Usa la clave de clasificación (GEMINI_API_KEY_CLASIFICACION) y, si falla o
-// se queda sin cupo, Groq con un modelo con visión (28/09: Llama 4 Scout, el
-// único con visión que Groq aloja gratis). Sin dependencias: sólo fetch de
-// Node.
+// se queda sin cupo, Groq con un modelo con visión (MODELO_GROQ_VISION, hoy
+// qwen/qwen3.8-27b: Llama 4 Scout, con el que se armó al principio, daba 404).
+// Si ninguna foto sirve, se prueba Wikimedia Commons (ver arriba), y el
+// crédito nombra al autor y la licencia (creditoDeFoto). Sin dependencias:
+// sólo fetch de Node.
 
 import { claveClasificacion, claveGroq } from '../reels/claves.mjs';
 
@@ -299,6 +301,31 @@ export async function personaPublicaDeNota(nota, { clave = claveClasificacion(),
 // Commons también aloja para material de archivo) se descarta.
 const WIKIMEDIA_LICENCIAS_LIBRES = /^(cc0|cc[\s-]?by(?:[\s-]?sa)?|public domain|dominio p[uú]blico|\bpd\b)/i;
 
+/** El autor que da Commons (`extmetadata.Artist`) viene en HTML: un enlace a
+ *  su página de usuario, a veces con <bdi> o <span>. Se deja sólo el texto. */
+export function textoPlano(html) {
+  const t = String(html ?? '')
+    .replace(/<[^>]*>/g, ' ')
+    .replace(/&nbsp;/g, ' ').replace(/&amp;/g, '&').replace(/&quot;/g, '"').replace(/&#0?39;|&apos;/g, "'")
+    .replace(/&lt;/g, '<').replace(/&gt;/g, '>')
+    .replace(/\s+/g, ' ')
+    .trim();
+  return t ? t.slice(0, 120) : null;
+}
+
+/**
+ * El crédito que va en la cita de la foto. Las licencias CC BY y CC BY-SA
+ * piden nombrar al autor y la licencia (28/09: decía sólo "Foto: Wikimedia
+ * Commons"): "Foto: <autor> / Wikimedia Commons (<licencia>)". La foto de un
+ * medio, "Foto: <medio>". Lo ya guardado en el banco sin autor queda como
+ * está.
+ */
+export function creditoDeFoto({ medio, autor, licencia } = {}) {
+  if (medio !== 'Wikimedia Commons') return `Foto: ${medio}`;
+  const quien = autor ? `${autor} / Wikimedia Commons` : 'Wikimedia Commons';
+  return licencia ? `Foto: ${quien} (${licencia})` : `Foto: ${quien}`;
+}
+
 /** Busca una foto libre de una persona puntual en Wikimedia Commons: sin
  *  clave, sin costo, y con la licencia siempre a la vista (`extmetadata`).
  *  Devuelve la primera que sea una foto de verdad (no un logo ni un mapa) y
@@ -318,7 +345,10 @@ export async function buscarFotoWikimedia(nombre, { fetchFn = fetch, limite = 6 
       if ((info.width ?? 0) < 400 || (info.height ?? 0) < 300) continue;
       const licencia = info.extmetadata?.LicenseShortName?.value ?? '';
       if (!WIKIMEDIA_LICENCIAS_LIBRES.test(licencia)) continue;
-      return { medio: 'Wikimedia Commons', enlace: info.descriptionurl, imagen: info.url, licencia };
+      const autor = textoPlano(info.extmetadata?.Artist?.value);
+      return {
+        medio: 'Wikimedia Commons', enlace: info.descriptionurl, imagen: info.url, licencia, ...(autor ? { autor } : {}),
+      };
     }
     return null;
   } catch {
@@ -343,7 +373,9 @@ export async function elegirFotoParaNota(nota, {
   const wiki = await buscarFotoWikimedia(persona, { fetchFn });
   if (!wiki) return { ...r, razon: `${r.razon} (se probó una foto libre de "${persona}" en Wikimedia Commons, sin resultado)`, origen: 'ninguna' };
   return {
-    elegida: { medio: wiki.medio, enlace: wiki.enlace, imagen: wiki.imagen, licencia: wiki.licencia, letra: null },
+    elegida: {
+      medio: wiki.medio, enlace: wiki.enlace, imagen: wiki.imagen, licencia: wiki.licencia, ...(wiki.autor ? { autor: wiki.autor } : {}), letra: null,
+    },
     razon: `Ninguna fuente tenía una foto que sirviera; se usó una foto libre de "${persona}" de Wikimedia Commons (${wiki.licencia}).`,
     candidatas: r.candidatas,
     proveedor: r.proveedor,

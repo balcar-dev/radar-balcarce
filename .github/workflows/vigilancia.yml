@@ -97,6 +97,23 @@ jobs:
             echo "Nada nuevo que guardar."
           else
             git commit -m "Vigilancia: estado de avisos · $(date '+%d/%m %H:%M')"
-            git pull --rebase
-            git push
+            # El mismo ciclo que "Actualizar la web" (actualizar.yml), "Redes" y
+            # "Piezas" (28/09): traer lo de las otras corridas, resolver choques
+            # de web/data/ con lo de esta corrida (en un rebase, "theirs" es el
+            # commit propio) y reintentar hasta tres veces. Con un solo intento,
+            # si otra corrida subía justo en el medio, el estado de los avisos se perdía.
+            for intento in 1 2 3; do
+              if ! git pull --rebase; then
+                # Sólo los archivos en conflicto, y sólo si son de web/data/.
+                chocan=$(git diff --name-only --diff-filter=U)
+                echo "$chocan" | grep -qvE "^web/data/" && { echo "Conflicto fuera de web/data: $chocan"; git rebase --abort; exit 1; }
+                echo "$chocan" | xargs -r git checkout --theirs --
+                echo "$chocan" | xargs -r git add --
+                GIT_EDITOR=true git rebase --continue || { git rebase --abort; exit 1; }
+              fi
+              git push && break
+              sleep 5
+            done
+            git fetch -q origin main
+            [ "$(git rev-list --count origin/main..HEAD)" = 0 ] || { echo "No se pudo guardar el estado de los avisos después de tres intentos"; exit 1; }
           fi

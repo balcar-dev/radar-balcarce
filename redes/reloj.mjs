@@ -12,10 +12,12 @@
 //   solo=a,b            las piezas, listas para plan.mjs --solo=
 //
 // Pide todo lo que toque: si una corrida llega tarde, no deja nada para la próxima.
+// Con el interruptor REDES_ACTIVAS apagado (estaActivo, redes/elegir.mjs) no
+// pide nada: hay=false.
 
 import fs from 'node:fs';
 import path from 'node:path';
-import { libroNuevo } from './elegir.mjs';
+import { libroNuevo, estaActivo } from './elegir.mjs';
 import { slotsQueTocan, POR_CORRIDA } from './piezas.mjs';
 
 const RAIZ = path.join(import.meta.dirname, '..');
@@ -24,12 +26,22 @@ const PORTADA = path.join(RAIZ, 'web', 'data', 'portada.json');
 
 /** Lo que corresponde publicar ahora, como { hora, tocan, textoResumen }.
  *  `clima` (el de web/data/portada.json) es para el aviso de clima: si hay uno
- *  grave, también lo pide (avisoDeClima en redes/piezas.mjs). */
-export function estadoDelReloj({ ahora = new Date(), libro, clima = null } = {}) {
-  const tocan = slotsQueTocan({ ahora, libro, clima }).slice(0, POR_CORRIDA);
+ *  grave, también lo pide (avisoDeClima en redes/piezas.mjs).
+ *
+ *  `activo`: el interruptor REDES_ACTIVAS leído con estaActivo (redes/elegir.mjs),
+ *  la MISMA regla que usa publicar.mjs (28/09: el workflow comparaba con seis
+ *  formas fijas y " si" o "SI " daban otra respuesta). Apagado, no toca nada:
+ *  no se gasta la voz paga en piezas que no se van a publicar. */
+export function estadoDelReloj({
+  ahora = new Date(), libro, clima = null, activo = true,
+} = {}) {
   const hora = new Intl.DateTimeFormat('es-AR', {
     hour: '2-digit', minute: '2-digit', timeZone: 'America/Argentina/Buenos_Aires',
   }).format(ahora);
+  if (!activo) {
+    return { hora, tocan: [], textoResumen: `${hora} en Balcarce · las redes están apagadas (REDES_ACTIVAS): no se arma ninguna pieza.` };
+  }
+  const tocan = slotsQueTocan({ ahora, libro, clima }).slice(0, POR_CORRIDA);
   const textoResumen = tocan.length
     ? `${hora} en Balcarce · tocan: ${tocan.map((p) => `${p.nombre} (${p.hora})`).join(', ')}`
     : `${hora} en Balcarce · no hay ninguna pieza para publicar ahora.`;
@@ -47,7 +59,7 @@ if (process.argv[1] && process.argv[1].endsWith('reloj.mjs')) {
   let clima = null;
   try { clima = JSON.parse(fs.readFileSync(PORTADA, 'utf8')).clima ?? null; } catch { /* sin portada, sin aviso */ }
 
-  const { tocan, textoResumen } = estadoDelReloj({ libro, clima });
+  const { tocan, textoResumen } = estadoDelReloj({ libro, clima, activo: estaActivo(process.env.REDES_ACTIVAS) });
   console.log(`  ${textoResumen}`);
 
   if (process.env.GITHUB_OUTPUT) {

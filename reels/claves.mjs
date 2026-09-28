@@ -1,19 +1,26 @@
-// Las claves de Gemini: una para redactar las notas y otra para las redes.
+// Las claves de las IA: cuatro, cada una con su cupo y su uso.
 //
 // Van separadas a propósito. Cada clave tiene su propio cupo diario en Google,
 // y si comparten, un día de muchos reels se come la cuota con la que se
 // reescriben las notas (o al revés) y una de las dos cosas deja de andar sin
 // que nadie se entere.
 //
-//   GEMINI_API_KEY_REDACCION   reescribir y redactar notas (panel/servidor.mjs)
-//   GEMINI_API_KEY_REDES       voces y reels (reels/)
+//   GEMINI_API_KEY_REDACCION       reescribir y redactar notas (gratis). Acepta
+//                                  también el nombre viejo, GEMINI_API_KEY
+//   GEMINI_API_KEY_REDES           voces y reels (paga). La reescritura la usa
+//                                  sólo si la de redacción se queda sin cupo (429)
+//   GEMINI_API_KEY_CLASIFICACION   la lectura con IA y el banco de fotos; si no
+//                                  está, usa la de redacción, nunca la de redes
+//   GROQ_API_KEY                   Groq, el respaldo gratis de la lectura con IA
+//                                  y de la comparación de fotos
 //
 // Se leen de una variable de entorno o del archivo .env de la raíz. Nunca se
 // escriben en el código ni se muestran.
 //
-// La de redacción acepta también el nombre viejo, GEMINI_API_KEY, para que
-// nada se rompa mientras se migra. La de redes NO tiene alternativa: si falta,
-// los reels no arrancan, en vez de gastar en silencio la de redactar.
+// La de redes no se reemplaza con otra clave de Gemini: si falta, no se gasta
+// en silencio la de redactar. Las piezas igual salen: decirGemini
+// (reels/voz-gemini.mjs) falla y armarReel (reels/reel.mjs) las lee con Elena,
+// la voz gratis de Microsoft.
 
 import fs from 'node:fs';
 import path from 'node:path';

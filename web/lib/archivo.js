@@ -20,6 +20,7 @@
 
 import { slugDe } from './ruta.js';
 import { tieneRespaldo } from './cuerpo.js';
+import { sinTildes } from './texto.js';
 
 /** Cuánto se queda una nota en las listas del sitio. Es el mismo criterio que
  *  usa el panel para archivar lo que nadie decidió (panel/servidor.mjs,
@@ -68,10 +69,46 @@ export function correccionesAMano(json) {
   return salida;
 }
 
-/** Aplica la corrección a mano de una nota, si la tiene. */
+/**
+ * Aplica la corrección a mano de una nota, si la tiene, y la marca: la firma
+ * dice "Revisada por la redacción" (CRITERIO-EDITORIAL.md § 10, "cargada o
+ * corregida por una persona"; quienEscribio, components/metadatos.js). El
+ * 28/09, 25 de las 44 notas con el cuerpo escrito en correcciones.json
+ * firmaban "Texto de <medio>". Con el cuerpo corregido, el texto ya no es el
+ * de la IA ni el del medio: `cuerpoAMano`.
+ */
 export function conCorreccion(nota, correcciones) {
   const c = nota?.id ? correcciones?.get(nota.id) : null;
-  return c ? { ...nota, ...c } : nota;
+  if (!c) return nota;
+  return { ...nota, ...c, corregidaAMano: true, ...(c.cuerpo ? { cuerpoAMano: true } : {}) };
+}
+
+/**
+ * ¿El título o la bajada FINALES son de lo que no se publica nunca? `lista` es
+ * REGLAS_SEMAFORO.nunca (ingesta/fuentes.mjs: las listas de sepelios). Se mira
+ * palabra por palabra, sin tildes. Vale también para lo que aprobó una
+ * persona (28/09): "no se publican nunca".
+ */
+export function esDeLoQueNuncaSePublica(nota, lista = []) {
+  const palabras = new Set(sinTildes(`${nota?.titulo ?? ''} ${nota?.copete ?? ''}`).split(/[^a-z0-9ñ]+/));
+  return (lista ?? []).some((p) => palabras.has(sinTildes(p)));
+}
+
+/**
+ * ¿Una nota YA PUBLICADA pierde su página porque la ingesta de hoy la frena?
+ * Recibe cómo la trae hoy la ingesta ({ semaforo, motivo }). El rojo, siempre.
+ * El amarillo, salvo lo que `conserva` dice que no es por el contenido: la
+ * cotización del dólar, y lo de afuera que hoy espera sólo por el cupo de su
+ * sección o por los medios que la cuentan (28/09: una nota ya publicada que en
+ * una corrida quedaba amarilla por el cupo perdía la página para siempre, con
+ * el enlace ya compartido). Lo que retira una persona o saca la IA se decide
+ * aparte (generar-datos.mjs).
+ */
+export function pierdeLaPagina(deHoy, { conserva = () => false } = {}) {
+  if (!deHoy) return false;
+  if (deHoy.semaforo === 'rojo') return true;
+  if (deHoy.semaforo === 'amarillo') return !conserva(deHoy);
+  return false;
 }
 
 /** Cuánto dura una página. Pasado eso, el enlace ya no circula. */

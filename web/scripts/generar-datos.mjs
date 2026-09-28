@@ -58,13 +58,16 @@ import {
 import { TEMAS, MOTIVO_COTIZACION, REGLAS_SEMAFORO } from '../../ingesta/fuentes.mjs';
 import { tieneCuerpo } from '../lib/cuerpo.js';
 import { tituloAutomatico } from '../lib/titulos.js';
-import { sinNotasRepetidas, sinTildes } from '../lib/texto.js';
+import { sinNotasRepetidas } from '../lib/texto.js';
 import { pendientesDeLaIngesta } from '../../redes/avisos.mjs';
 import { cuentaDelDia, anotarDia, comoHistoriaJson as comoNotasPorDiaJson } from '../../ingesta/estadistica-diaria.mjs';
 import {
   vigenteEnPortada, slugsConocidos, fijarSlug, actualizarArchivo, idsEnRedes, sinPuntaje, comoArchivoJson,
   idsRetiradosAMano, correccionesAMano, conCorreccion, fechaDeLaNota, llegaTarde,
+  esDeLoQueNuncaSePublica, pierdeLaPagina,
 } from '../lib/archivo.js';
+import { esperaSoloPorCantidad } from '../../ingesta/ingesta.mjs';
+import { conFotosDelBanco } from './fotos-notas.mjs';
 import { actualizarAgenda, comoAgendaJson } from '../lib/eventos.js';
 import { traerDolar } from '../lib/dolar.js';
 import {
@@ -348,10 +351,7 @@ const direcciones = slugsConocidos({
 const esperandoCuerpo = [];
 
 /** ¿El título o la bajada son de lo que no se publica nunca (REGLAS_SEMAFORO.nunca)? */
-function nuncaSePublica(nota) {
-  const palabras = new Set(sinTildes(`${nota.titulo ?? ''} ${nota.copete ?? ''}`).split(/[^a-z0-9ñ]+/));
-  return (REGLAS_SEMAFORO.nunca ?? []).some((p) => palabras.has(sinTildes(p)));
-}
+const nuncaSePublica = (nota) => esDeLoQueNuncaSePublica(nota, REGLAS_SEMAFORO.nunca);
 
 // Mismo criterio que el panel: sin decisión manda el semáforo (verde =
 // automática, rojo = bloqueada, el resto pendiente). Sólo lo publicado o
@@ -412,10 +412,10 @@ function notaPublicada(n) {
     seccion: n.seccion,
     medios: n.medios,
     enlace: n.enlace,
-    // La imagen de la fuente NO se publica: es obra protegida del medio
-    // que la sacó, y la excepción de "noticias de interés general" de la
-    // ley 11.723 cubre el texto, no las fotos. Se guarda sólo el dato de
-    // si la fuente tenía imagen, por si algún día sirve para priorizar.
+    // La dirección de la imagen de la fuente no se publica tal cual: se
+    // guarda sólo si la fuente tenía imagen. La foto que sí sale en la página
+    // es la del banco de fotos (28/09, `foto`, más abajo: conFotosDelBanco),
+    // elegida sin marca de agua y con el crédito en la cita.
     teniaImagenLaFuente: !!n.imagen,
     // La hora para ordenar. Si la fuente no la publica, la ingesta pone la de
     // ahora en cada corrida: la nota saltaba arriba de todo una y otra vez. En
@@ -432,6 +432,9 @@ function notaPublicada(n) {
     visto: vistoAntes[n.id] ?? ahoraISO,
     relevancia: n.relevancia,
     local: n.local,
+    // Una fuente oficial alcanza sola: la página la conserva aunque la cuente
+    // un solo medio (tieneRespaldo, lib/cuerpo.js; 28/09).
+    ...(n.oficial ? { oficial: true } : {}),
     publicadaPor: d?.por ?? null,
     publicadaCuando: d?.cuando ?? null,
     // Cómo llegó a publicarse: sola por el semáforo verde, o porque
@@ -456,8 +459,10 @@ function notaPublicada(n) {
   const corregida = conCorreccion(nota, CORRECCIONES);
   // Lo que no se publica nunca (las listas de sepelios), mirado en el texto
   // FINAL: el título de la fuente puede ser otro y el texto venir del panel,
-  // escrito con una página que traía las necrológicas pegadas (27/09).
-  if (!humana && nuncaSePublica(corregida)) return null;
+  // escrito con una página que traía las necrológicas pegadas (27/09). Tampoco
+  // lo que aprobó una persona (28/09): la regla es "no se publican nunca", y
+  // una lista de sepelios con "falleció" llegaba al panel como amarilla.
+  if (nuncaSePublica(corregida)) return null;
   // SIN CUERPO NO SE PUBLICA (25/09): una nota automática sin cuerpo de
   // verdad (70 palabras o más, distinto de la bajada) queda "esperando
   // cuerpo" y no aparece en ninguna lista, ni en el feed, el sitemap o las
@@ -487,11 +492,16 @@ const deLaIngesta = (ultima.notas ?? [])
 // no llevan foto de otro), y con memoria propia (web/data/banco-fotos.json)
 // para no volver a preguntar por una nota ya probada. Si algo falla acá, la
 // nota sigue publicándose igual, sin foto, como hasta ahora.
+//
+// Elegir fotos NUEVAS es sólo en la nube (gasta cupo de IA); poner las que YA
+// están en el banco, siempre (28/09): correr esto en la PC dejaba portada.json
+// sin ninguna foto.
+let bancoDeFotos = leerJson(BANCO_FOTOS, {});
 if (enLaNube) {
   try {
-    const { elegirFotosNuevas, fotoDeLaWeb } = await import('./fotos-notas.mjs');
+    const { elegirFotosNuevas } = await import('./fotos-notas.mjs');
     const { claveClasificacion, claveGroq } = await import('../../reels/claves.mjs');
-    const bancoAntes = leerJson(BANCO_FOTOS, {});
+    const bancoAntes = bancoDeFotos;
     const { banco, archivos } = await elegirFotosNuevas(deLaIngesta, {
       banco: bancoAntes, clave: claveClasificacion(), claveRespaldo: claveGroq(),
     });
@@ -506,14 +516,12 @@ if (enLaNube) {
       fs.mkdirSync(path.dirname(BANCO_FOTOS), { recursive: true });
       fs.writeFileSync(BANCO_FOTOS, `${JSON.stringify(banco, null, 1)}\n`, 'utf8');
     }
-    for (const n of deLaIngesta) {
-      const foto = fotoDeLaWeb(banco, n.id);
-      if (foto) n.foto = foto;
-    }
+    bancoDeFotos = banco;
   } catch (e) {
-    console.log(`  fotos: no se pudo (${e.message}); las notas siguen sin foto`);
+    console.log(`  fotos: no se pudieron elegir nuevas (${e.message}); quedan las del banco`);
   }
 }
+conFotosDelBanco(deLaIngesta, bancoDeFotos);
 
 // ------------------------------------------------------------- el archivo
 //
@@ -544,12 +552,18 @@ for (const a of archivoAnterior.notas ?? []) {
         titulo: d.titulo ?? a.titulo, copete: d.copete ?? a.copete, cuerpo: d.cuerpo ?? a.cuerpo, guion: d.guion ?? a.guion,
       });
     }
-  } else if (['rojo', 'amarillo'].includes(enIngesta.get(a.id)?.semaforo)
+  } else if (pierdeLaPagina(enIngesta.get(a.id), {
     // La cotización del dólar no es sensible: sale de las listas (está en
-    // /dolar) pero su página queda, por si el enlace ya circula.
-    && enIngesta.get(a.id)?.motivo !== MOTIVO_COTIZACION) {
+    // /dolar) pero su página queda, por si el enlace ya circula. Lo de afuera
+    // que hoy espera sólo por el cupo o por los medios que la cuentan, tampoco
+    // (28/09): no es por lo que dice, y el enlace ya circula.
+    conserva: (n) => n.motivo === MOTIVO_COTIZACION || esperaSoloPorCantidad(n),
+  })) {
     retiradas.add(a.id);
   }
+  // Lo que no se publica nunca (las listas de sepelios) no conserva la página,
+  // aunque la haya aprobado una persona (28/09).
+  if (nuncaSePublica(conCorreccion(a, CORRECCIONES))) retiradas.add(a.id);
 }
 // ------------------------------------------------------ las notas propias
 //

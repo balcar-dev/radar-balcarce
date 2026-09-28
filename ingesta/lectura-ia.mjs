@@ -105,7 +105,7 @@ export function perfilDeBalcarce() {
   return perfilCacheado;
 }
 
-// Con las del cruce: sin ellas, los 76 medios del cruce iban a la IA con la
+// Con las del cruce: sin ellas, los medios del cruce iban a la IA con la
 // ciudad "desconocida" (27/09).
 const FUENTE_POR_MEDIO = new Map([...FUENTES_CRUCE, ...FUENTES, ...FUENTES_NACIONALES].map((f) => [f.medio, f]));
 

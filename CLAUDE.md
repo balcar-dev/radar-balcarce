@@ -101,7 +101,7 @@ cada uno, cuándo corre y si cuesta plata), en `INFRAESTRUCTURA.md`.
   IA cambie el titular después (los enlaces ya están en Facebook). La portada
   muestra sólo 36 horas (28/09; eran 72); `web/data/archivo.json` guarda lo publicado de los
   últimos 180 días (hasta 2500 notas) y de ahí también salen páginas. Si una
-  nota pasa a rojo o amarillo, o una persona la bloquea, sale del archivo y
+  nota pasa a rojo o amarillo (no el amarillo sólo por el cupo o por los medios que la cuentan, 28/09: `pierdeLaPagina`), o una persona la bloquea, sale del archivo y
   pierde la página. Lo de afuera contado por un solo medio también la pierde,
   salvo que haya salido en redes (27/09: eran 1.069 páginas, todas de antes del
   cruce; `tieneRespaldo`). Todo en `web/lib/archivo.js`.
@@ -186,7 +186,7 @@ cada uno, cuándo corre y si cuesta plata), en `INFRAESTRUCTURA.md`.
 - **Dos claves de Gemini, separadas a propósito:** `GEMINI_API_KEY_REDACCION`
   para redactar las notas (acepta el nombre viejo `GEMINI_API_KEY`) y
   `GEMINI_API_KEY_REDES` para voces y reels (`reels/claves.mjs`). La de redes
-  no tiene alternativa: si falta, los reels no arrancan. La de redes es paga.
+  no se reemplaza con otra clave de Gemini: si falta, las piezas salen igual con Elena, la voz gratis de Microsoft (`reels/reel.mjs`). La de redes es paga.
   La de redacción es **gratis y está cargada y probada desde el 25/09**: la
   reescritura la usa primero y pasa a la de redes (paga) sólo si se queda sin
   cupo (429). Tope de 450 por día con la clave de lectura propia, 330 mientras la lectura con IA comparte la clave gratis (`REESCRITURA.porDia`, `porDiaSinClaveDeLectura`; lo elige `topeDeReescrituras`, 27/09).

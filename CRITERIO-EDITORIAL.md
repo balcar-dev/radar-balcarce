@@ -968,7 +968,7 @@ también son de IA.
   corregir, las partes para la redacción se borran, porque las armó la IA
   sobre otro texto y podrían contradecir la corregida.
 - **Se saca una nota**: si una persona la bloquea o la descarta, o el semáforo
-  la pasa a rojo o amarillo, sale de las listas y su página deja de existir
+  la pasa a rojo o amarillo, sale de las listas y su página deja de existir (el amarillo sólo por el cupo o por los medios que la cuentan la saca de las listas pero le deja la página: 28/09)
   hasta que una persona la apruebe. Sin el panel, se anota en
   `web/data/retiradas.json` (motivo, cuándo y quién).
 - **Una corrección sin el panel** (27/09): el título, la bajada o la sección de

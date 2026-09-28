@@ -285,8 +285,11 @@ async function ampliar(notas, { concurrencia = 4 } = {}) {
       const valida = d && !Number.isNaN(+d) && d < new Date(Date.now() + 864e5);
       if (valida) { n.fecha = d; n.fechaEstimada = false; }
 
-      // La foto no se publica nunca (es del medio que la sacó); se guarda
-      // sólo porque tener foto es señal de que la nota está trabajada.
+      // La dirección de la foto del medio. No se publica tal cual: tener foto
+      // es señal de que la nota está trabajada, y la foto que se publica es la
+      // que eligió y guardó el banco de fotos (ingesta/fotos.mjs,
+      // web/scripts/fotos-notas.mjs), sin marca de agua y con el crédito en la
+      // cita.
       const foto = meta(html, 'og:image');
       if (foto) n.imagen = foto;
     }));
@@ -675,12 +678,15 @@ export function semaforoDelTexto(textoCrudo, { soloMenores = false } = {}) {
  *  (desde el 27/09 lo de afuera se mide en medios, no en puntaje). */
 function semaforo(nota, seccion, medios = cuantosMedios(nota)) {
   const sensible = semaforoDelTexto(`${nota.titulo} ${nota.cuerpo.slice(0, 600)}`);
-  if (sensible) return sensible;
+  if (sensible?.color === 'rojo') return sensible;
   // Lo que no se publica nunca (las listas de sepelios, Hernán 27/09). Sólo
-  // el título: la palabra suelta en un texto largo no alcanza.
+  // el título: la palabra suelta en un texto largo no alcanza. Va ANTES del
+  // amarillo (28/09): una lista de sepelios dice "falleció", quedaba amarilla
+  // y una persona podía aprobarla. Nunca es nunca.
   if ((REGLAS_SEMAFORO.nunca ?? []).some((p) => contiene(normalizar(String(nota.titulo ?? '')), p))) {
     return { color: 'rojo', motivo: 'lista de sepelios: no se publica' };
   }
+  if (sensible) return sensible;
   // La cotización del dólar no sale como nota: está en /dolar. Sólo el título.
   const delTitulo = normalizar(String(nota.titulo ?? ''));
   if ((REGLAS_SEMAFORO.cotizacion ?? []).some((p) => contiene(delTitulo, p))) {
@@ -1179,11 +1185,27 @@ export function aplicarCupos(portada) {
     if (usados[n.seccion] > cupo) {
       n.semaforo = 'amarillo';
       n.motivo = cupo === 0
-        ? `${n.seccion} de afuera: la sección es sólo de Balcarce y la zona`
-        : `pasó el cupo de ${n.seccion} de afuera (${cupo} a la vez)`;
+        ? `${n.seccion} de afuera: ${MOTIVO_SECCION_DE_ACA}`
+        : `${MOTIVO_CUPO} ${n.seccion} de afuera (${cupo} a la vez)`;
     }
   }
   return portada;
+}
+
+/** Cómo empiezan (o qué dicen) los motivos del cupo de lo de afuera. */
+export const MOTIVO_CUPO = 'pasó el cupo de';
+export const MOTIVO_SECCION_DE_ACA = 'la sección es sólo de Balcarce y la zona';
+
+/**
+ * ¿Esta nota espera SÓLO por cantidad: el cupo de su sección (aplicarCupos) o
+ * los medios que pide lo de afuera (exigirMedios)? No es un problema de lo que
+ * dice la nota: una ya publicada no pierde su página por esto (28/09,
+ * pierdeLaPagina en web/lib/archivo.js).
+ */
+export function esperaSoloPorCantidad(nota = {}) {
+  if (nota.semaforo !== 'amarillo') return false;
+  const m = String(nota.motivo ?? '');
+  return m.startsWith(MOTIVO_POCO_CONTADA) || m.startsWith(MOTIVO_CUPO) || m.endsWith(MOTIVO_SECCION_DE_ACA);
 }
 
 /**
@@ -1389,7 +1411,12 @@ export async function ingestar({
   const portada = sinPolicialesDeAfuera.map((g) => {
     const seccion = clasificar(g.principal);
     const rel = relevancia(g.principal, seccion, g.medios.length);
-    const sem = semaforo(g.principal, seccion, g.medios.length);
+    // "Una fuente oficial alcanza sola" (CRITERIO-EDITORIAL.md § 2): vale para
+    // la historia si la principal O cualquiera de sus fuentes es oficial
+    // (28/09: exigirMedios y tieneRespaldo preguntaban `oficial` y la historia
+    // no lo traía).
+    const oficial = [g.principal, ...g.tambien].some((n) => n.oficial);
+    const sem = semaforo(oficial && !g.principal.oficial ? { ...g.principal, oficial } : g.principal, seccion, g.medios.length);
     return {
       // Con el enlace del feed si lo hay (Blogger): así el identificador es el
       // mismo que antes de que el enlace pasara a ser la página de la nota.
@@ -1433,6 +1460,7 @@ export async function ingestar({
       ...(g.principal.deLaZona ? { deLaZona: true } : {}),
       alcance: g.principal.alcance,
       nombraBalcarce: !!g.principal.nombraBalcarce,
+      ...(oficial ? { oficial: true } : {}),
     };
   }).sort((a, b) => b.relevancia - a.relevancia);
 

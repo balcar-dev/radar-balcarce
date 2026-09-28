@@ -422,8 +422,10 @@ function mecanicoPorDefecto(nota) {
 // que 40 por vuelta son unas 80 por hora: de sobra para lo que Balcarce
 // publica en un día. Lo ya reescrito (en caché) no cuenta contra el tope.
 export const REESCRITURAS_POR_CORRIDA = REESCRITURA.porCorrida;
-// Si la IA falla tres veces seguidas (Gemini saturado, sin red), se corta:
-// insistir sólo llenaría el registro de errores sin cambiar el resultado.
+// Si la IA falla tres veces en la misma corrida (no hace falta que sean
+// seguidas: la cuenta no vuelve a cero con un acierto; Gemini saturado, sin
+// red), se corta: insistir sólo llenaría el registro de errores sin cambiar el
+// resultado. Lo que ya está en caché se sigue usando.
 const FALLOS_PARA_CORTAR = 3;
 
 /** ¿Es de acá? Lo local se reescribe primero (ver reescribirAutomaticas). */

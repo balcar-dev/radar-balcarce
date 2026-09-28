@@ -72,13 +72,22 @@ export function quienEscribio(nota = {}) {
   // no las redactó la IA ni son de una fuente: las arma el sitio con
   // plantilla, a partir de datos. Su firma la dice la nota (`firma`).
   if (nota.propia) return { reescrita: false, revisada: false, propia: true };
-  return { reescrita: !!nota.guion, revisada: nota.como === 'publicada' };
+  // Lo corregido a mano en web/data/correcciones.json (conCorreccion,
+  // lib/archivo.js) es "cargado o corregido por una persona"
+  // (CRITERIO-EDITORIAL.md § 10). Si el cuerpo es el de la corrección, la
+  // nota ya no la redactó la IA aunque tenga un guion viejo.
+  return {
+    reescrita: !!nota.guion && !nota.cuerpoAMano,
+    revisada: nota.como === 'publicada' || !!nota.corregidaAMano,
+  };
 }
 
 /** El `author` del NewsArticle, igual a la firma de la nota. */
 export function autorDeNota(nota = {}, base = '') {
   const { reescrita, revisada, propia } = quienEscribio(nota);
-  if (propia) return { '@type': 'Organization', name: NOMBRE, url: base };
+  // El cuerpo lo escribió la redacción (web/data/correcciones.json): el
+  // autor es el sitio, no el medio ni la IA.
+  if (propia || nota.cuerpoAMano) return { '@type': 'Organization', name: NOMBRE, url: base };
   if (!reescrita) {
     // El resumen es el que publicó la fuente: el autor es ese medio.
     const fuente = (nota.medios ?? [])[0];

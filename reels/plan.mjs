@@ -366,7 +366,9 @@ export function planDelDia(datos, {
     piezas.push({
       tipo: 'historia', hora: cuando.utiles.hora, nombre: 'utiles',
       titulo: 'Teléfonos útiles de Balcarce', motivo: 'una vez por semana, día variable',
-      seccion: 'Servicios',
+      // No hay sección Servicios desde el 27/09: lo práctico de acá va a
+      // Balcarce (CLAUDE.md, "Las secciones son once").
+      seccion: 'Balcarce',
       guion: guionUtiles({ momento: momentoDeHora(cuando.utiles.hora) }),
       momento: momentoDeHora(cuando.utiles.hora), indicacion: INDICACIONES[momentoDeHora(cuando.utiles.hora)],
       svg: placaUtiles({ grupos }),

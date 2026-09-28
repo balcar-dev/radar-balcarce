@@ -374,3 +374,46 @@ test('depurarCuerpo saca sólo la oración con relleno o localía inventada, el 
   assert.match(depurado, /Las otras petroleras/);
   assert.doesNotMatch(depurado, /automovilistas locales/);
 });
+
+// ------------------------------- la atribución y el sustantivo (28/09)
+//
+// Caso real rechazado el 28/09: "Difunden un nuevo video sobre un presunto
+// abuso…". Las raíces de la atribución ("presunt", "denunci", "investig")
+// tenían un corte de palabra al final y nunca encontraban "presunto", "la
+// denuncia" ni "investigan"; y sin tildes, el sustantivo "abuso" era el verbo
+// "abusó".
+
+const acusa = (texto) => tipos(verificar(
+  { titulo: texto, resumen: texto },
+  { titulo: texto, copete: 'Sigue el caso.' },
+)).includes('acusacion');
+
+test('un "presunto abuso" no es una acusación sin atribuir (caso real, 28/09)', () => {
+  assert.equal(acusa('Difunden un nuevo video sobre un presunto abuso en un club'), false);
+});
+
+test('las raíces de la atribución se reconocen como prefijos', () => {
+  assert.equal(acusa('El comerciante estafó a varios clientes, según la denuncia'), false);
+  assert.equal(acusa('Investigan si el hombre agredió a su vecino'), false);
+  assert.equal(acusa('El joven acusado golpeó a un policía'), false);
+  assert.equal(acusa('El sospechoso robó una moto'), false);
+  assert.equal(acusa('La Fiscalía dice que el detenido disparó dos veces'), false);
+  assert.equal(acusa('El imputado habría amenazado a los testigos y amenazó a otro'), false);
+});
+
+test('el sustantivo no dispara el verbo: "un robo", "el secuestro", "un disparo"', () => {
+  assert.equal(acusa('Hubo un robo en una casa del barrio Norte'), false);
+  assert.equal(acusa('El secuestro de mercadería en la ruta 226'), false);
+  assert.equal(acusa('Se escuchó un disparo cerca de la plaza'), false);
+  assert.equal(acusa('Detuvieron al asesino del almacenero'), false);
+});
+
+test('el delito dicho como hecho, sin atribuir, se sigue frenando', () => {
+  assert.equal(acusa('Un vecino robó una moto en el centro'), true);
+  assert.equal(acusa('El entrenador abusó de un jugador del club'), true);
+  assert.equal(acusa('Un hombre secuestró a su expareja'), true);
+  assert.equal(acusa('El comerciante estafó a varios clientes'), true);
+  assert.equal(acusa('El hombre mató a su vecino'), true);
+  // Sin la tilde, el verbo que no se confunde con un sustantivo también.
+  assert.equal(acusa('El comerciante estafo a varios clientes'), true);
+});

@@ -74,7 +74,8 @@ test('las necrológicas que El Diario pega debajo de cada nota no se leen como l
 
 test('lo que no se publica nunca se mira también en el texto final (el panel pudo escribir sobre sepelios)', () => {
   const g = fs.readFileSync(new URL('../web/scripts/generar-datos.mjs', import.meta.url), 'utf8');
-  assert.match(g, /if \(!humana && nuncaSePublica\(corregida\)\) return null;/);
+  // Desde el 28/09, también lo que aprobó una persona: "no se publican nunca".
+  assert.match(g, /if \(nuncaSePublica\(corregida\)\) return null;/);
 });
 
 test('lo que se lee de la página de un medio sin feed toma la fecha real de adentro y no entra si tiene más de 72 horas (27/09, El Diario)', () => {

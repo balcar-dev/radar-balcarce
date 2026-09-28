@@ -9,7 +9,7 @@
 // (cada media hora) volvería a gastar cupo de Gemini en notas que ya se sabe
 // que no tienen una foto que sirva.
 
-import { elegirFotoParaNota, descargarImagen } from '../../ingesta/fotos.mjs';
+import { elegirFotoParaNota, descargarImagen, creditoDeFoto } from '../../ingesta/fotos.mjs';
 
 // Por corrida, no por día: la corrida se repite cada media hora, así que el
 // banco se completa solo en un par de horas sin gastar de una todo el cupo
@@ -80,8 +80,8 @@ export async function elegirFotosNuevas(notas, {
       // nota nuestra es, de qué nota del medio salió, la dirección original de
       // la imagen y por qué se eligió.
       bancoNuevo[n.id] = {
-        archivo, medio: r.elegida.medio, credito: `Foto: ${r.elegida.medio}`,
-        licencia: r.elegida.licencia ?? null, origen: r.origen,
+        archivo, medio: r.elegida.medio, credito: creditoDeFoto(r.elegida),
+        licencia: r.elegida.licencia ?? null, ...(r.elegida.autor ? { autor: r.elegida.autor } : {}), origen: r.origen,
         titulo: n.titulo ?? null, enlace: r.elegida.enlace ?? null, imagenOriginal: r.elegida.imagen ?? null,
         razon: r.razon ?? null, cuando: ahora.toISOString(),
       };
@@ -95,7 +95,21 @@ export async function elegirFotosNuevas(notas, {
 
 /** La nota lista para la web: `{archivo, credito}`, o nada si no tiene. */
 export function fotoDeLaWeb(banco, id) {
-  const b = banco[id];
+  const b = banco?.[id];
   if (!b || !b.archivo) return null;
   return { archivo: b.archivo, credito: b.credito };
+}
+
+/**
+ * Les pone a las notas la foto que YA tienen en el banco. Corre siempre, en
+ * la nube y en la PC (28/09: en la PC portada.json quedaba sin fotos); lo que
+ * es sólo de la nube es elegir fotos nuevas (elegirFotosNuevas). Modifica las
+ * notas y las devuelve.
+ */
+export function conFotosDelBanco(notas = [], banco = {}) {
+  for (const n of notas) {
+    const foto = fotoDeLaWeb(banco, n.id);
+    if (foto) n.foto = foto;
+  }
+  return notas;
 }

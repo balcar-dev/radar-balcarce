@@ -15,9 +15,11 @@
 // (fuenteParaVerificar, reels/reescritura.mjs). No usa otra IA: son comparaciones mecánicas, que
 // cuestan cero, no fallan por cuota y hacen siempre lo mismo.
 //
-// Es deliberadamente estricto. Un falso positivo cuesta poco: la nota sale
-// igual, con el resumen del medio original, que es como salía antes de que
-// existiera la reescritura. Un falso negativo es publicar una mentira.
+// Es deliberadamente estricto. Un falso positivo cuesta poco: la nota no
+// sale ESA vez y se le vuelve a pedir en otra corrida (hasta tres intentos,
+// MAXIMO_DE_INTENTOS en reels/reescritura.mjs); desde el 25/09 sin cuerpo no
+// se publica (web/lib/cuerpo.js), así que no sale con el resumen del medio.
+// Un falso negativo es publicar una mentira.
 //
 // Sin dependencias: corre en GitHub Actions sin instalar nada. Los límites de
 // largo salen de ingesta/criterio.mjs, los números del criterio editorial
@@ -148,7 +150,15 @@ export function nombresDe(texto) {
 // Verbos que afirman un delito. Si aparecen sin atribuir a alguien, es el
 // error que la doctrina Campillay busca evitar: presentar como hecho lo que
 // es una acusación.
-const DELITOS = /\b(asesino|mato|robo|hurto|estafo|violo|abuso|agredio|golpeo|amenazo|secuestro|apuñalo|balaceo|disparo|falsifico|defraudo)\b/;
+//
+// Se mira el texto CON tildes (28/09): sin ellas, el sustantivo es igual al
+// verbo ("un robo" y "robó", "un presunto abuso" y "abusó", "el secuestro" y
+// "secuestró", "un disparo" y "disparó") y una nota que decía "un presunto
+// abuso" se rechazaba como si afirmara el delito. Los verbos que no se
+// confunden con un sustantivo se reconocen también sin la tilde, por si la IA
+// se la come; los que sí se confunden, sólo con la tilde.
+const LETRA = 'a-záéíóúüñ';
+const DELITOS = new RegExp(`(?<![${LETRA}])(asesinó|mató|mato|robó|hurtó|estafó|estafo|violó|violo|abusó|agredió|agredio|golpeó|golpeo|amenazó|amenazo|secuestró|apuñaló|apuñalo|baleó|balaceó|disparó|falsificó|falsifico|defraudó|defraudo)(?![${LETRA}])`, 'u');
 
 // Relleno sin dato (28/09, de una auditoría de notas reales contra la
 // fuente): frases que no dicen nada que no esté ya dicho, o que esconden que
@@ -166,7 +176,10 @@ const RELLENO = new RegExp(`\\b(${FRASES_DE_RELLENO.map((f) => escaparRegex(sinT
 // oraciones buenas por error; agrandar esta lista con casos reales, no a
 // ojo.
 const LOCALIA_SIN_RESPALDO = /\b(de nuestra ciudad|de nuestro pueblo|nuestros vecinos|balcarcense|balcarcenses|vecinos de balcarce|automovilistas locales|productores locales|comerciantes locales)\b/;
-const ATRIBUCION = /\b(segun|habria|habrian|presunt|supuest|acusad|denunci|imputad|sospech|investig|policia|fiscal|justicia|alegadamente|de acuerdo)\b/;
+// Lo que atribuye una acusación a alguien. Las raíces son prefijos (28/09):
+// con el corte de palabra al final, "presunt" nunca encontraba "presunto", ni
+// "denunci" "la denuncia", ni "investig" "investigan". Se mira sin tildes.
+const ATRIBUCION = /\b(segun|habria|habrian|presunt\w*|supuest\w*|acusad\w*|acusacion\w*|denunci\w*|imputad\w*|sospech\w*|investig\w*|policia\w*|fiscal\w*|justicia|alegadamente|de acuerdo)\b/;
 
 // ----------------------------------------------------------------- las citas
 
@@ -201,8 +214,8 @@ export const LIMITES = {
   // La bajada: dos o tres frases (desde el 25/09; antes, dos líneas y 280).
   copete: BAJADA.maximo,
   guion: GUION.maximo,
-  // De 100 a 180 palabras en uno a tres párrafos: con esto sobra. Es la nota,
-  // no una crónica.
+  // De 70 a 180 palabras en uno a tres párrafos (CUERPO.palabrasPedidasMinimo
+  // y palabrasPedidasMaximo): con esto sobra. Es la nota, no una crónica.
   cuerpo: CUERPO.maximo,
   // Las partes nuevas (25/09): cada punto de una lista, y el texto para redes.
   clave: PARTES.clave,
@@ -332,7 +345,7 @@ function problemasDelTexto(ctx, campo, texto, { soloForma = false, limite = LIMI
 
   // 6. Una acusación dicha como hecho.
   const n = sinTildes(t);
-  if (DELITOS.test(n) && !ATRIBUCION.test(n)) {
+  if (DELITOS.test(t.toLowerCase().normalize('NFC')) && !ATRIBUCION.test(n)) {
     agregar('acusacion', `el ${campo} afirma un delito sin atribuirlo a nadie: "${t.slice(0, 50)}"`);
   }
 
