@@ -19,10 +19,10 @@ import { segundosDePodcast } from '../redes/guiones.mjs';
 import {
   HISTORIA_MAXIMA, duracionDeLaSalida, pasaDelMaximo, argumentosDeRecorte,
 } from '../reels/duracion.mjs';
-import { libroNuevo } from '../redes/elegir.mjs';
+import { libroNuevo, anotar } from '../redes/elegir.mjs';
 import { publicarPiezas, INTENTOS_HISTORIA } from '../redes/publicar-piezas.mjs';
 import {
-  cronogramaDelDia, diaRotativoDeUtiles, historiasQueSobran, EXTRAS_DE_HISTORIAS,
+  cronogramaDelDia, diaRotativoDeUtiles, historiasQueSobran, EXTRAS_DE_HISTORIAS, claveDePieza,
 } from '../redes/piezas.mjs';
 import { toca, horariosDe } from '../panel/horarios.mjs';
 import { tocaHoy, diaDeEstaSemana } from '../ingesta/utiles.mjs';
@@ -120,6 +120,48 @@ test('16a · el plan arma los tres podcasts con presupuesto, con las notas que q
     assert.equal(p.items.length, p.notaIds.length, `${p.nombre}: el pie lista las notas que quedaron`);
     assert.ok(p.notaIds.length >= 2);
   }
+});
+
+test('el repaso del día se cumple (mañana, tarde y noche) aunque parte de las notas ya se hayan contado en podcasts de días anteriores (27/09, McCain)', () => {
+  const notas = Array.from({ length: 14 }, (_, i) => ({
+    id: `p${i}`, seccion: ['Balcarce', 'Deportes', 'Servicios', 'Cultura y agenda', 'Agro', 'Salud', 'Economía'][i % 7],
+    relevancia: 95 - i, semaforo: 'verde', local: true, temas: [], guion: true, titulo: TITULO_LARGO(i), copete: `${COPETE_LARGO} Y otra.`,
+  }));
+  const datos = { clima: null, farmacias: { turnos: [] }, notas };
+
+  // El podcast de la mañana de AYER y de ANTEAYER ya contaron las cuatro
+  // notas de más puntaje (p0 a p3): siguen siendo publicables hoy (con
+  // buen puntaje, dentro de las 72 h), pero un repaso no las puede repetir.
+  const libro = libroNuevo();
+  const ayer = AR('2026-09-24', '10:00');
+  const anteayer = AR('2026-09-23', '10:00');
+  anotar(libro, 'instagram', claveDePieza('noticia1', anteayer), { notaIds: ['p0', 'p1'] });
+  anotar(libro, 'instagram', claveDePieza('noticia1', ayer), { notaIds: ['p2', 'p3'] });
+
+  const { piezas } = planDelDia(datos, { fecha: AR('2026-09-25', '09:00'), estado: {}, libro });
+  const podcasts = piezas.filter((p) => p.tipo === 'reel');
+  // Los tres repasos del día se arman igual: mañana, tarde y noche.
+  assert.deepEqual(podcasts.map((p) => p.nombre).sort(), ['noticia1', 'noticia2', 'podcast']);
+  for (const p of podcasts) assert.ok(p.notaIds.length >= 2, `${p.nombre} sin al menos dos notas`);
+
+  const manana = podcasts.find((p) => p.nombre === 'noticia1');
+  const tarde = podcasts.find((p) => p.nombre === 'noticia2');
+  const noche = podcasts.find((p) => p.nombre === 'podcast');
+  // Los de la mañana y la tarde de HOY no repiten lo que ya contaron los
+  // podcasts de ayer y anteayer.
+  for (const id of ['p0', 'p1', 'p2', 'p3']) {
+    assert.ok(!manana.notaIds.includes(id), `noticia1 repitió ${id}, contada un día antes`);
+    assert.ok(!tarde.notaIds.includes(id), `noticia2 repitió ${id}, contada un día antes`);
+  }
+  // El de la noche (el repaso del día entero) tampoco repite lo de otros
+  // días, pero si puede incluir lo que el propio día ya contó.
+  for (const id of ['p0', 'p1', 'p2', 'p3']) {
+    assert.ok(!noche.notaIds.includes(id), `el repaso de la noche repitió ${id}, contada un día antes`);
+  }
+  assert.ok(
+    noche.notaIds.some((id) => manana.notaIds.includes(id) || tarde.notaIds.includes(id)),
+    'el repaso de la noche puede repasar lo que ya contó el de la mañana o la tarde de HOY',
+  );
 });
 
 test('16a · la red de seguridad: duracionDeLaSalida lee lo que imprime ffmpeg y el recorte deja el reel en paz', () => {
