@@ -1,5 +1,5 @@
 {
-  "generado": "2026-09-28T08:31:43.805Z",
+  "generado": "2026-09-28T09:01:48.673Z",
   "notas": [
     {
       "id": "1hjmkd4",
@@ -252,14 +252,17 @@
       "seccion": "Economía",
       "medios": [
         "La Nación",
-        "Infobae"
+        "Infobae",
+        "Perfil",
+        "Crónica",
+        "Canal 26"
       ],
       "enlace": "https://www.infobae.com/economia/2026/09/28/el-gobierno-confirmo-el-pago-del-bono-para-jubilados-y-pensionados-para-octubre/",
       "teniaImagenLaFuente": true,
       "fecha": "2026-09-28T05:10:44.000Z",
       "sinFecha": false,
       "visto": "2026-09-28T06:01:00.563Z",
-      "relevancia": 49,
+      "relevancia": 79,
       "local": false,
       "publicadaPor": "ia",
       "publicadaCuando": "2026-09-28T07:22:11.860Z",
@@ -771,6 +774,7 @@
         "0223 (Mar del Plata)",
         "El Eco de Tandil",
         "LU9 Mar del Plata",
+        "QZ Noticias (Mar del Plata)",
         "Ecos Diarios (Necochea)",
         "Minuto Uno",
         "Infobae",
@@ -790,16 +794,16 @@
         "Noticias Argentinas (NA)",
         "El Día",
         "0221",
+        "La Brújula 24",
+        "La Verdad",
         "ANDigital",
         "El Marplatense",
         "Mi8 (Canal 8 Mar del Plata)",
         "NDEN – Noticias de Necochea",
         "Ayacucho al Día",
-        "La Verdad",
         "Doble Amarilla",
         "Bolavip Argentina",
         "La Nueva",
-        "La Brújula 24",
         "Vavel Argentina"
       ],
       "enlace": "https://www.ole.com.ar/copa-argentina/boca-racing-copa-argentina-chicana-cargada-salto-calidad-posteo-milito-redes_0_ExUFrdDV0w.html",
@@ -1278,9 +1282,9 @@
       "guion": "El J.P. Morgan recorta su proyección y prevé una recesión",
       "seccion": "Economía",
       "medios": [
-        "Ámbito",
         "Minuto Uno",
         "Infobae",
+        "Ámbito",
         "Perfil",
         "TN (Todo Noticias)",
         "iProfesional",
@@ -1301,7 +1305,7 @@
       "fecha": "2026-09-27T18:17:00.000Z",
       "sinFecha": false,
       "visto": "2026-09-27T23:28:54.122Z",
-      "relevancia": 73,
+      "relevancia": 72,
       "local": false,
       "publicadaPor": "ia",
       "publicadaCuando": "2026-09-28T03:22:42.645Z",
@@ -1577,8 +1581,8 @@
         "Canal 26",
         "Noticias Argentinas (NA)",
         "0221",
-        "La Nueva",
         "La Verdad",
+        "La Nueva",
         "Infobae"
       ],
       "enlace": "https://noticiasargentinas.com/politica/argentina-week--milei-desembarca-en-paris-junto-a-gobernadores-y-empresarios-en-busca-de-inversiones_a6ab91477c2b8de8667e3c8a7",
@@ -2328,9 +2332,9 @@
       "medios": [
         "Agencia DIB",
         "0221",
+        "La Verdad",
         "El Marplatense",
-        "Mi8 (Canal 8 Mar del Plata)",
-        "La Verdad"
+        "Mi8 (Canal 8 Mar del Plata)"
       ],
       "enlace": "https://dib.com.ar/sociedad/leon-xiv-ya-esta-listo-el-sillon-que-usara-el-papa-la-misa-lujan-n56063",
       "teniaImagenLaFuente": true,
@@ -3623,6 +3627,7 @@
         "Noticias Argentinas (NA)",
         "El Día",
         "0221",
+        "La Verdad",
         "InfoRegión",
         "El Marplatense",
         "Mi8 (Canal 8 Mar del Plata)",
@@ -3935,6 +3940,7 @@
         "Canal 26",
         "Diario Popular",
         "Noticias Argentinas (NA)",
+        "La Verdad",
         "Zona Norte Diario",
         "ANDigital",
         "El Marplatense",
@@ -4429,7 +4435,9 @@
         "QZ Noticias (Mar del Plata)",
         "La Noticia 1",
         "Diputados Bonaerenses",
+        "2261 – Noticias de Lobería",
         "Minuto Uno",
+        "Infocampo",
         "TN (Todo Noticias)",
         "El Cronista",
         "El Destape",
@@ -4444,6 +4452,7 @@
         "Noticias Argentinas (NA)",
         "0221",
         "La Opinión",
+        "Infoeme",
         "InfoRegión",
         "ANDigital",
         "El Marplatense",
@@ -4454,8 +4463,6 @@
         "Ámbito",
         "El Día",
         "La Nueva",
-        "Infoeme",
-        "2261 – Noticias de Lobería",
         "Clarín"
       ],
       "enlace": "https://www.lanacion.com.ar/sociedad/hay-alerta-amarilla-por-tormentas-y-lluvias-para-este-sabado-26-de-septiembre-las-provincias-nid26092026/",
@@ -5391,6 +5398,7 @@
         "0223 (Mar del Plata)",
         "El Destape",
         "El Día",
+        "La Verdad",
         "ANDigital",
         "Infobrisas (Radio Brisas)",
         "NDEN – Noticias de Necochea"
@@ -7229,7 +7237,7 @@
       "temp": 11,
       "sensacion": 8,
       "humedad": 98,
-      "viento": 17,
+      "viento": 18,
       "rumbo": "NE",
       "cielo": "Llovizna leve",
       "esDeDia": false
@@ -7618,16 +7626,16 @@
       "motivo": "necesita ojo humano: \"asesinato\""
     },
     {
-      "id": "3h6frb",
-      "titulo": null,
-      "seccion": "Argentina",
-      "motivo": "necesita ojo humano: \"menores de edad\", en lo que contaron otros medios (visto al reescribir)"
-    },
-    {
       "id": "3sk31f",
       "titulo": "ANDIS bajo la lupa: denuncian sobreprecios de hasta…",
       "seccion": "Argentina",
       "motivo": "necesita ojo humano: \"denuncia\""
+    },
+    {
+      "id": "3h6frb",
+      "titulo": null,
+      "seccion": "Argentina",
+      "motivo": "necesita ojo humano: \"menores de edad\", en lo que contaron otros medios (visto al reescribir)"
     },
     {
       "id": "gs5cei",
@@ -7660,5 +7668,5 @@
       "motivo": "necesita ojo humano: \"niño\""
     }
   ],
-  "esperandoCuerpo": 7
+  "esperandoCuerpo": 8
 }
