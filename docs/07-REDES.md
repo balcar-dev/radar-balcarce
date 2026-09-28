@@ -424,7 +424,7 @@ acento. Con dos excepciones firmes: las letras son las del sitio (Source Serif
 |---|---|---|---|
 | Placas de historias y reels | `reels/placa.mjs` (`placaRepaso`, `placaClima`, `placaFarmacia`, `placaUtiles`, `placaAgenda`) | 1080 × 1920 | Instagram y la página de Facebook |
 | Tarjeta del espejo | `web/lib/tarjeta.js` (`tarjeta(nota, { instagram: true })`), servida en `/nota/ID/instagram.png` (`web/app/nota/[id]/instagram.png/route.js`) | 1080 × 1350 (4:5) | El feed de Instagram |
-| Tarjeta para compartir | `web/lib/tarjeta.js` (`tarjeta(nota)`), servida por `opengraph-image` | 1200 × 630 | Facebook con enlace, WhatsApp, X |
+| Tarjeta para compartir (con la foto del banco a la izquierda si hay; `FOTO_EN_ENLACE`) | `web/lib/tarjeta.js` (`tarjeta(nota)`), servida por `opengraph-image` | 1200 × 630 | Facebook con enlace, WhatsApp, X |
 | Las cuentas de las tarjetas (colores, cuerpos del título, qué entra, zonas) | `web/lib/tarjeta-diseno.js` | — | Se prueban sin levantar el sitio (`pruebas/placas.test.mjs`) |
 
 - Las tarjetas se generan **al compilar el sitio**, una por nota (las de la

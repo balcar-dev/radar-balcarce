@@ -280,9 +280,11 @@ Una nota ya probada (tenga foto o no) queda en el banco
 (`web/data/banco-fotos.json`) y no se le vuelve a preguntar. En las redes,
 el espejo de Instagram de cada posteo de Facebook lleva esa misma foto (el
 crédito va en el texto del posteo, nunca en la imagen) y, si no hay una que
-sirva, la placa sin foto. La tarjeta para compartir el enlace y los videos
-(podcasts, clima, farmacia, útiles, agenda) siguen con placa: son piezas de
-datos o de texto, no de una nota con foto. **La placa no es una regla, es lo
+sirva, la placa sin foto. La tarjeta para compartir el enlace (la vista previa
+en WhatsApp y Facebook) lleva también esa foto, sin crédito adentro: el crédito
+está en el epígrafe de la página a la que lleva. Los videos (podcasts, clima,
+farmacia, útiles, agenda) siguen con placa: son piezas de datos o de texto, no
+de una nota con foto. **La placa no es una regla, es lo
 que sale cuando no hay foto que sirva.**
 
 ### Lo que no entra nunca

@@ -1,5 +1,6 @@
 import { obtenerNota, notasConImagen } from '@/lib/datos';
-import { tarjeta, TAMANO, TIPO } from '@/lib/tarjeta';
+import { tarjeta, fotoParaInstagram, TAMANO, TIPO } from '@/lib/tarjeta';
+import { FOTO_EN_ENLACE } from '@/lib/tarjeta-diseno';
 import { parteDeNota } from '@/lib/ruta';
 
 // La imagen de cada nota, generada al compilar. Una por nota, archivo
@@ -15,7 +16,7 @@ export function generateStaticParams() {
   return notasConImagen().map((n) => ({ id: parteDeNota(n) }));
 }
 
-export default function Imagen({ params }) {
+export default async function Imagen({ params }) {
   const n = obtenerNota(params.id);
-  return tarjeta(n ?? {});
+  return tarjeta(n ?? {}, { foto: FOTO_EN_ENLACE && n ? await fotoParaInstagram(n) : null });
 }

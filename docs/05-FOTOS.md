@@ -15,7 +15,8 @@ IA con visión elige la mejor **sin marca de agua** (o, si ninguna sirve y la
 nota es de una persona pública, se busca una foto libre en Wikimedia Commons),
 se guarda en el banco propio con su crédito y se muestra en la página de la
 nota con el crédito debajo y en el espejo de Instagram (el crédito va en el
-texto del posteo); la tarjeta para compartir y los videos siguen con placa.
+texto del posteo) y en la tarjeta para compartir el enlace; los videos siguen
+con placa.
 La placa es lo que sale cuando no hay foto que sirva.
 
 ### Por qué hay un banco de fotos
@@ -205,7 +206,10 @@ que salga del banco y no de la fuente, y que el crédito esté una sola vez.
   final (`conCreditoDeFoto`, `redes/elegir.mjs`). Para volver a la placa en
   todos: `false`.
 - **Facebook y la tarjeta para compartir enlaces** (WhatsApp, Facebook:
-  `opengraph-image.js`): placa sin foto (falta decidir si lleva la del banco).
+  `opengraph-image.js`): la foto del banco a la izquierda y el título a la
+  derecha desde el 28/09 (`FOTO_EN_ENLACE` en `web/lib/tarjeta-diseno.js`), sin
+  el crédito adentro: está en el epígrafe de la página. Sin foto, la banda de
+  color con los anillos.
 - **Podcasts, historias y reels:** placas de datos (`reels/placa.mjs`): no cuentan una sola nota, así que no llevan foto.
 - **La imagen que trae la ingesta de cada fuente** (`imagen`) no se publica en
   ningún lado: sólo suma 6 puntos de relevancia como señal de que la nota está

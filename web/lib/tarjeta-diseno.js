@@ -26,7 +26,18 @@ import path from 'node:path';
  */
 export const FOTO_EN_INSTAGRAM = true;
 
+/**
+ * ¿La tarjeta para compartir el enlace (Facebook, WhatsApp) lleva la foto de la
+ * nota, del banco propio? SÍ desde el 28/09, igual que el espejo de Instagram.
+ * El crédito no va en la imagen: está en el epígrafe de la página a la que
+ * lleva el enlace. Sin foto que sirva, va la banda de color. Para volver a la
+ * banda en todas: false.
+ */
+export const FOTO_EN_ENLACE = true;
+
 export const TAMANO = { width: 1200, height: 630 };
+/** El ancho de la foto en la apaisada con foto (a la izquierda). */
+export const ANCHO_FOTO_ENLACE = 460;
 export const TAMANO_INSTAGRAM = { width: 1080, height: 1350 };
 
 export const PAPEL = '#FAF8F3';
@@ -120,6 +131,7 @@ const ESCALONES = {
   conFoto: [{ tam: 72, max: 2 }, { tam: 64, max: 3 }, { tam: 56, max: 3 }, { tam: 50, max: 4 }, { tam: 44, max: 5 }, { tam: 38, max: 6 }],
   sinFoto: [{ tam: 84, max: 3 }, { tam: 74, max: 4 }, { tam: 64, max: 5 }, { tam: 56, max: 6 }, { tam: 48, max: 7 }, { tam: 42, max: 8 }],
   enlace: [{ tam: 78, max: 2 }, { tam: 68, max: 3 }, { tam: 60, max: 3 }, { tam: 52, max: 4 }, { tam: 44, max: 5 }, { tam: 38, max: 6 }],
+  enlaceConFoto: [{ tam: 56, max: 4 }, { tam: 50, max: 5 }, { tam: 44, max: 6 }, { tam: 40, max: 7 }, { tam: 36, max: 8 }],
 };
 export const INTERLINEA_TITULO = 1.06;
 export const INTERLINEA_BAJADA = 1.35;
@@ -127,7 +139,7 @@ export const INTERLINEA_BAJADA = 1.35;
 /**
  * Cómo se reparte el texto de la tarjeta: cuerpo del título (el más grande
  * donde entra entero en su lugar) y, con lo que sobra, cuánta bajada entra.
- * `formato`: 'conFoto' | 'sinFoto' | 'enlace'.
+ * `formato`: 'conFoto' | 'sinFoto' | 'enlace' | 'enlaceConFoto'.
  */
 export function repartirTexto({ titulo = '', copete = '' } = {}, formato = 'conFoto') {
   const alto = altoParaTexto(formato);
@@ -159,6 +171,7 @@ export function repartirTexto({ titulo = '', copete = '' } = {}, formato = 'conF
 /** El ancho del texto en cada formato. */
 export function anchoParaTexto(formato) {
   if (formato === 'enlace') return TAMANO.width - 64 * 2;
+  if (formato === 'enlaceConFoto') return TAMANO.width - ANCHO_FOTO_ENLACE - 14 - 52 * 2;
   return TAMANO_INSTAGRAM.width - INSTAGRAM.margen * 2;
 }
 
@@ -168,6 +181,8 @@ export function altoParaTexto(formato) {
   const finTexto = TAMANO_INSTAGRAM.height - I.abajo - I.pie - 24;
   if (formato === 'conFoto') return finTexto - (I.foto + I.franja + 44);
   if (formato === 'sinFoto') return finTexto - (I.bloque + 56);
+  // La apaisada con foto: el texto a la derecha, con 48 de aire arriba, el pie abajo (70).
+  if (formato === 'enlaceConFoto') return TAMANO.height - 48 - 24 - 70 - 40;
   // La apaisada: la banda de color arriba (150), el pie abajo (70).
   return TAMANO.height - 150 - 14 - 40 - 70 - 40;
 }

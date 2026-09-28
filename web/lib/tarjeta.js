@@ -2,7 +2,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { ImageResponse } from 'next/og';
 import {
-  PAPEL, TINTA, GRIS, ROJO, INSTAGRAM, INTERLINEA_TITULO, INTERLINEA_BAJADA,
+  PAPEL, TINTA, GRIS, ROJO, INSTAGRAM, INTERLINEA_TITULO, INTERLINEA_BAJADA, ANCHO_FOTO_ENLACE,
   colorDe, repartirTexto, tamNombreDeSeccion, fechaCorta, fotoDeLaNota,
 } from './tarjeta-diseno.js';
 
@@ -132,6 +132,26 @@ function instagramSinFoto(nota) {
   ]);
 }
 
+/** La apaisada para compartir el enlace con la foto de la nota a la izquierda y el texto a la derecha. */
+function paraCompartirConFoto(nota, foto) {
+  const color = colorDe(nota.seccion);
+  const titulo = nota.titulo ?? 'Lo que pasa en Balcarce';
+  const r = repartirTexto({ titulo }, 'enlaceConFoto');
+  return div({ width: '100%', height: '100%', backgroundColor: PAPEL }, [
+    div({ position: 'relative', width: ANCHO_FOTO_ENLACE, height: '100%', flexShrink: 0, backgroundColor: '#2B2F36' }, [
+      { type: 'img', props: { src: foto, width: ANCHO_FOTO_ENLACE, height: TAMANO.height, style: { width: ANCHO_FOTO_ENLACE, height: TAMANO.height, objectFit: 'cover' } } },
+      nota.seccion && rotuloDeSeccion(nota.seccion, {
+        position: 'absolute', top: 30, left: 30, padding: '12px 22px', borderRadius: 999, backgroundColor: color, color: '#FFFFFF', fontSize: 22,
+      }),
+    ]),
+    div({ width: 14, height: '100%', flexShrink: 0, backgroundColor: color }),
+    div({ width: TAMANO.width - ANCHO_FOTO_ENLACE - 14, flexShrink: 0, flexDirection: 'column', padding: '48px 52px 34px' }, [
+      titular(titulo, r.tamTitulo),
+      pie(nota, 30),
+    ]),
+  ]);
+}
+
 /** La apaisada para compartir el enlace: banda de color con los anillos y la sección, título y pie. */
 function paraCompartir(nota) {
   const color = colorDe(nota.seccion);
@@ -184,7 +204,7 @@ export async function fotoParaInstagram(nota) {
  */
 export function tarjeta(nota = {}, { instagram = false, foto = null } = {}) {
   let arbol;
-  if (!instagram) arbol = paraCompartir(nota);
+  if (!instagram) arbol = foto ? paraCompartirConFoto(nota, foto) : paraCompartir(nota);
   else arbol = foto ? instagramConFoto(nota, foto) : instagramSinFoto(nota);
 
   return new ImageResponse(arbol, {

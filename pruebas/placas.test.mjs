@@ -225,7 +225,7 @@ test('ninguna placa del plan nombra a un medio ni lleva la fuente adentro', () =
 
 test('tarjeta: el título largo nunca se corta y entra en su lugar, con o sin foto', () => {
   const largo = `${TITULOS_LARGOS[0]} y otras cosas más que agregó la redacción`;
-  for (const formato of ['conFoto', 'sinFoto', 'enlace']) {
+  for (const formato of ['conFoto', 'sinFoto', 'enlace', 'enlaceConFoto']) {
     for (const titulo of [...TITULOS_LARGOS, largo, 'Llueve']) {
       const r = repartirTexto({ titulo, copete: 'Una bajada.' }, formato);
       assert.ok(r.renglonesTitulo * r.tamTitulo * INTERLINEA_TITULO <= altoParaTexto(formato) + 1, `${formato}: "${titulo.slice(0, 30)}…" no entra (${r.renglonesTitulo} renglones a ${r.tamTitulo}px)`);

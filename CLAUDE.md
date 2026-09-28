@@ -60,9 +60,9 @@ vigilancia andan con la PC apagada**; sólo el panel vive en la PC.
 - **Las fotos** (27/09, decisión de Hernán con el riesgo explicado; en vivo
   desde el 28/09): se puede usar la foto de otro medio o de un organismo
   oficial sólo sin su marca de agua, con el crédito en el epígrafe y guardada
-  en el banco propio (`web/data/banco-fotos.json`). Va en la página de la nota
-  y en el espejo de Instagram (crédito en el texto del posteo); la tarjeta para
-  compartir y los videos siguen con placa. **La placa es lo que sale cuando no
+  en el banco propio (`web/data/banco-fotos.json`). Va en la página de la nota,
+  en el espejo de Instagram (crédito en el texto del posteo) y en la tarjeta
+  para compartir el enlace (`FOTO_EN_ENLACE`); los videos siguen con placa. **La placa es lo que sale cuando no
   hay foto que sirva**, no una regla. Nunca foto real de un menor o una
   víctima, ni en Policiales salvo fuente oficial (`docs/05-FOTOS.md`).
 - **Todo lo que va a Instagram es video con voz**, salvo el espejo: la API no

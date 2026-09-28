@@ -167,9 +167,9 @@ retirarlo. Queda esto:
   5. ~~Mostrar la foto en la página de la nota~~ **Hecho**: con su crédito en
      el epígrafe, nunca adentro de la imagen (`web/app/nota/[id]/page.js`).
      **El espejo de Instagram lleva la foto** (28/09, `FOTO_EN_INSTAGRAM`, con el
-     crédito en el texto del posteo). Sigue sin foto la tarjeta para compartir el
-     enlace (`web/lib/tarjeta.js`, `paraCompartir`): falta decidirlo, ver el
-     catálogo gráfico. La placa sin foto es lo que sale cuando no hay foto.
+     crédito en el texto del posteo). La tarjeta para compartir el enlace también lleva la
+     foto desde el 28/09 (`FOTO_EN_ENLACE`, `paraCompartirConFoto`; el crédito
+     está en el epígrafe de la página, no en la imagen). La placa sin foto es lo que sale cuando no hay foto.
   6. ~~Buscar una foto de la persona nombrada~~ **Hecho** (idea de Hernán,
      28/09, al ver el caso de Mariano Werner: una sola fuente, con marca de
      agua): si ninguna fuente sirve y la nota es de una sola persona pública
