@@ -106,10 +106,15 @@ ${lista}
 Elegí la que mejor sirve para ilustrar la nota: mejor encuadre y nitidez, que se identifique bien el hecho, sin gente
 irreconocible de más ni nada de mal gusto. Si dos son casi iguales, preferí la de mejor calidad de imagen.
 
-Muy importante: mirá cada foto ENTERA, no sólo el centro, buscando un logo, un nombre de medio o una marca de agua
-en cualquier esquina o borde. Los medios locales y de la zona (de Balcarce o de ciudades cercanas, no los grandes
-diarios nacionales) son los que más acostumbran poner su logo en una esquina: prestales más atención. Marcá
-"tiene_marca" en true para cualquier foto donde veas un logo o texto de marca, aunque sea chico o transparente.
+Muy importante: mirá cada foto ENTERA, no sólo el centro, buscando específicamente un logo, un nombre o una marca de
+agua que el MEDIO haya agregado a la imagen después de sacarla, para identificarse como la fuente de la foto (casi
+siempre en una esquina, a veces semitransparente). Los medios locales y de la zona (de Balcarce o de ciudades
+cercanas, no los grandes diarios nacionales) son los que más acostumbran poner su logo así: prestales más atención.
+"tiene_marca" es sólo para ESO. NO es "tiene_marca": un cartel de sponsor, el logo de un club o equipo, el nombre de
+un evento, un tablero o una pantalla, o cualquier otro logo que ya estaba ahí cuando se sacó la foto, aunque se vea
+grande o nítido — eso es parte de la escena real, no algo que el medio le agregó después. Si dudás si un logo es del
+medio o de la escena, pensá: ¿podría estar en una foto que sacó cualquier otra persona presente ese día? Si sí, no
+es "tiene_marca".
 
 Regla que no se negocia: "elegida" NUNCA puede ser la letra de una foto a la que vos mismo le pusiste "tiene_marca"
 en true, aunque sea la que mejor encuadre o nitidez tenga. Si la mejor foto tiene marca, elegí la mejor ENTRE LAS
