@@ -1,5 +1,5 @@
 {
-  "generado": "2026-09-28T10:54:42.289Z",
+  "generado": "2026-09-28T11:01:19.370Z",
   "notas": [
     {
       "id": "1ou5oaz",
@@ -94,7 +94,6 @@
         "TN (Todo Noticias)",
         "Perfil",
         "Crónica",
-        "Canal 26",
         "Noticias Argentinas (NA)",
         "La Nueva"
       ],
@@ -520,6 +519,7 @@
       "seccion": "Fútbol",
       "medios": [
         "Infórmese Primero (FM 104.9)",
+        "Infobae",
         "La Nación",
         "Clarín",
         "0223 (Mar del Plata)",
@@ -527,7 +527,6 @@
         "QZ Noticias (Mar del Plata)",
         "Ecos Diarios (Necochea)",
         "Minuto Uno",
-        "Infobae",
         "TN (Todo Noticias)",
         "El Destape",
         "Perfil",
@@ -543,19 +542,18 @@
         "Diario Popular",
         "Noticias Argentinas (NA)",
         "El Día",
-        "La Nueva",
         "0221",
-        "La Brújula 24",
-        "La Verdad",
         "ANDigital",
         "El Marplatense",
         "Mi8 (Canal 8 Mar del Plata)",
         "El Eco de Tandil",
-        "Ayacucho al Día",
-        "Infocielo",
         "NDEN – Noticias de Necochea",
         "Doble Amarilla",
         "Bolavip Argentina",
+        "Ayacucho al Día",
+        "La Verdad",
+        "La Nueva",
+        "La Brújula 24",
         "Vavel Argentina"
       ],
       "enlace": "https://www.ole.com.ar/copa-argentina/boca-racing-copa-argentina-chicana-cargada-salto-calidad-posteo-milito-redes_0_ExUFrdDV0w.html",
@@ -563,7 +561,7 @@
       "fecha": "2026-09-27T22:54:15.000Z",
       "sinFecha": false,
       "visto": "2026-09-28T03:01:51.643Z",
-      "relevancia": 89,
+      "relevancia": 82,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -940,7 +938,9 @@
         "La Nueva",
         "Radio Mitre",
         "La Noticia 1",
+        "Diputados Bonaerenses",
         "Crónica",
+        "InfoRegión",
         "La Nación",
         "Clarín",
         "El Día",
@@ -1224,12 +1224,13 @@
         "A24",
         "Minuto Uno",
         "C5N",
+        "Radio Mitre",
         "Canal 26",
         "Noticias Argentinas (NA)",
         "0221",
-        "La Verdad",
         "El Eco de Tandil",
         "La Nueva",
+        "La Verdad",
         "Infobae"
       ],
       "enlace": "https://noticiasargentinas.com/politica/argentina-week--milei-desembarca-en-paris-junto-a-gobernadores-y-empresarios-en-busca-de-inversiones_a6ab91477c2b8de8667e3c8a7",
@@ -1367,14 +1368,15 @@
       "medios": [
         "La Nación",
         "El Destape",
-        "Ámbito"
+        "Ámbito",
+        "La Página Millonaria"
       ],
       "enlace": "https://www.lanacion.com.ar/deportes/futbol/horarios-de-los-amistosos-de-la-seleccion-argentina-vs-bolivia-burkina-faso-y-benin-nid27092026/",
       "teniaImagenLaFuente": true,
       "fecha": "2026-09-27T17:55:16.000Z",
       "sinFecha": false,
       "visto": "2026-09-28T03:01:51.643Z",
-      "relevancia": 70,
+      "relevancia": 80,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1980,16 +1982,16 @@
       "medios": [
         "Agencia DIB",
         "0221",
-        "La Verdad",
         "El Marplatense",
-        "Mi8 (Canal 8 Mar del Plata)"
+        "Mi8 (Canal 8 Mar del Plata)",
+        "La Verdad"
       ],
       "enlace": "https://dib.com.ar/sociedad/leon-xiv-ya-esta-listo-el-sillon-que-usara-el-papa-la-misa-lujan-n56063",
       "teniaImagenLaFuente": true,
       "fecha": "2026-09-27T12:05:00.000Z",
       "sinFecha": false,
       "visto": "2026-09-27T23:28:54.122Z",
-      "relevancia": 70,
+      "relevancia": 66,
       "local": false,
       "publicadaPor": "ia",
       "publicadaCuando": "2026-09-28T03:12:47.611Z",
@@ -2142,7 +2144,8 @@
         "Canal 26",
         "Noticias Argentinas (NA)",
         "Perfil",
-        "Diario Popular"
+        "Diario Popular",
+        "La Brújula 24"
       ],
       "enlace": "https://www.canal26.com/economia/2026/09/27/morosidad-vence-el-plazo-para-dictaminar-y-la-oposicion-negocia-a-contrarreloj-un-proyecto-comun/",
       "teniaImagenLaFuente": true,
@@ -2867,7 +2870,6 @@
       "medios": [
         "0223 (Mar del Plata)",
         "Agencia DIB",
-        "La Noticia 1",
         "La Nación",
         "QZ Noticias (Mar del Plata)",
         "Infobrisas (Radio Brisas)",
@@ -3026,8 +3028,8 @@
         "C5N",
         "Radio Mitre",
         "Diario Popular",
-        "Minuto Uno",
-        "Doble Amarilla"
+        "Doble Amarilla",
+        "Minuto Uno"
       ],
       "enlace": "https://www.ole.com.ar/futbol-internacional/espana/lamine-yamal-revelo-dijo-messi-apenas-termino-final-mundial_0_ez553WkjjQ.html",
       "teniaImagenLaFuente": true,
@@ -3119,16 +3121,16 @@
           "aporte": null
         },
         {
-          "medio": "Minuto Uno",
-          "enlace": "https://www.minutouno.com/deportes/lamine-yamal-revelo-que-le-dijo-lionel-messi-la-final-del-mundial-2026-me-salio-del-alma-n6327189",
-          "fecha": "2026-09-27T17:29:14.000Z",
+          "medio": "Doble Amarilla",
+          "enlace": "https://www.dobleamarilla.com.ar/por-el-mundo/mientras-lamine-yamal-gano-8-titulos-a-sus-19-anos--lionel-messi-habia-conseguido-esa-cantidad-a-la-misma-edad_a6ab6a8ce29d47f8cb536e0eb",
+          "fecha": "2026-09-26T23:40:18.320Z",
           "oficial": false,
           "aporte": null
         },
         {
-          "medio": "Doble Amarilla",
-          "enlace": "https://www.dobleamarilla.com.ar/por-el-mundo/mientras-lamine-yamal-gano-8-titulos-a-sus-19-anos--lionel-messi-habia-conseguido-esa-cantidad-a-la-misma-edad_a6ab6a8ce29d47f8cb536e0eb",
-          "fecha": "2026-09-26T23:40:18.320Z",
+          "medio": "Minuto Uno",
+          "enlace": "https://www.minutouno.com/deportes/lamine-yamal-revelo-que-le-dijo-lionel-messi-la-final-del-mundial-2026-me-salio-del-alma-n6327189",
+          "fecha": "2026-09-27T17:29:14.000Z",
           "oficial": false,
           "aporte": null
         }
@@ -3140,116 +3142,90 @@
       }
     },
     {
-      "id": "mk94me",
-      "titulo": "Franco Colapinto choca con Pierre Gasly en el Gran Premio de Azerbaiyán",
-      "copete": "El piloto argentino colisionó con su compañero de equipo y con Lando Norris durante el relanzamiento de la carrera en Bakú. El incidente dejó a ambos fuera de competencia y generó distintas reacciones en la categoría.",
-      "cuerpo": "Tras el impacto, el piloto argentino se dirigió al box de Alpine para disculparse con el personal y con el corredor francés, quien mantuvo una postura fría y evitó declaraciones extensas ante la prensa. El antecedente inmediato señala que ambos integran la escudería Alpine y habían protagonizado semanas atrás tensiones internas por posiciones en pista, según consignó la cobertura previa.\n\nEn cuanto a las consecuencias para el corredor argentino, el circuito callejero de Bakú albergó este sábado la decimosexta fecha de la temporada, donde el deportista había partido desde el noveno puesto antes del incidente que determinó el abandono general de los involucrados en la maniobra.",
-      "guion": "Franco Colapinto choca con Pierre Gasly en el Gran Premio de Azerbaiyán",
-      "seccion": "Automovilismo",
+      "id": "5exxou",
+      "titulo": "Un gallo bataraz se vende por más de tres millones de pesos",
+      "copete": "Un ejemplar de la raza Plymouth Rock Barrada marcó un récord en un remate durante la última Exposición Rural de Bolívar al ser vendido por una cifra inédita en el mercado nacional.",
+      "cuerpo": "El evento ganadero reunió a criadores y productores de la región, donde la subasta del ejemplar llamó la atención por alcanzar un valor equivalente a unos dos mil dólares. La venta del ave generó repercusión en el sector agropecuario bonaerense por la magnitud del monto alcanzado para un animal de granja.\n\nAunque la operación comercial se concretó con éxito en la muestra rural bolivarense, hasta el momento no trascendieron detalles sobre la identidad del comprador ni el destino que tendrá el ejemplar tras la histórica subasta.",
+      "guion": "Un gallo bataraz se vende por más de tres millones de pesos",
+      "seccion": "Agro",
       "medios": [
-        "Motorsport",
-        "La Nación",
-        "Infobae",
-        "TN (Todo Noticias)",
-        "El Destape",
-        "Perfil",
-        "Página/12",
-        "A24",
-        "Ámbito",
-        "TyC Sports",
-        "Minuto Uno",
-        "C5N",
-        "Crónica",
-        "Radio Mitre",
-        "Canal 26",
-        "Diario Popular",
-        "Noticias Argentinas (NA)",
-        "El Día",
-        "0221",
-        "La Verdad",
-        "InfoRegión",
-        "QZ Noticias (Mar del Plata)",
-        "El Marplatense",
-        "Mi8 (Canal 8 Mar del Plata)",
-        "El Eco de Tandil",
-        "Clarín",
         "0223 (Mar del Plata)",
-        "La Nueva",
-        "Doble Amarilla",
-        "Bolavip Argentina"
+        "Ayacucho al Día",
+        "Infoeme",
+        "La Verdad de Ayacucho"
       ],
-      "enlace": "https://www.lanacion.com.ar/deportes/automovilismo/gasly-tuvo-una-fria-reaccion-ante-las-disculpas-de-colapinto-por-el-choque-en-baku-nid26092026/",
+      "enlace": "https://laverdadayacucho.com.ar/se-vendio-el-gallo-mas-caro-de-la-argentina-mas-de-tres-millones-de-pesos/",
       "teniaImagenLaFuente": true,
-      "fecha": "2026-09-26T15:07:30.000Z",
+      "fecha": "2026-09-26T14:37:43.000Z",
       "sinFecha": false,
-      "visto": "2026-09-27T16:12:25.801Z",
-      "relevancia": 90,
+      "visto": "2026-09-28T02:26:47.869Z",
+      "relevancia": 51,
       "local": false,
       "publicadaPor": "ia",
-      "publicadaCuando": "2026-09-27T03:51:07.207Z",
+      "publicadaCuando": "2026-09-28T03:02:36.621Z",
       "temas": [],
       "como": "automatica",
-      "noConfirmado": [
-        "No se especificaron sanciones oficiales por parte de las autoridades de la competición tras el incidente."
+      "claves": [
+        "Se vendió el gallo más caro de la Argentina",
+        "Alcanzó un valor de tres millones de pesos",
+        "La subasta ocurrió en la Exposición Rural de Bolívar",
+        "El ejemplar pertenece a la raza Plymouth Rock Barrada"
       ],
+      "seSabe": [
+        "Un gallo bataraz de la raza Plymouth Rock Barrada se vendió por 3.020.000 pesos",
+        "La subasta se realizó en el marco de la Exposición Rural de Bolívar",
+        "El monto equivale aproximadamente a dos mil dólares"
+      ],
+      "noConfirmado": [
+        "No se informó la identidad del comprador",
+        "No se detalló el destino que tendrá el ejemplar"
+      ],
+      "textoRedes": "Un gallo de la raza Plymouth Rock Barrada batió un récord en la Exposición Rural de Bolívar al venderse en más de tres millones de pesos.",
       "etiquetas": [
-        "Franco Colapinto",
-        "Pierre Gasly",
-        "Formula 1",
-        "Gran Premio de Azerbaiyán"
+        "remate",
+        "Exposición Rural de Bolívar",
+        "gallo bataraz",
+        "Plymouth Rock Barrada"
       ],
       "fuentesConsultadas": [
         {
-          "medio": "La Nación",
-          "enlace": "https://www.lanacion.com.ar/deportes/automovilismo/gasly-tuvo-una-fria-reaccion-ante-las-disculpas-de-colapinto-por-el-choque-en-baku-nid26092026/",
-          "fecha": "2026-09-26T15:07:30.000Z",
+          "medio": "La Verdad de Ayacucho",
+          "enlace": "https://laverdadayacucho.com.ar/se-vendio-el-gallo-mas-caro-de-la-argentina-mas-de-tres-millones-de-pesos/",
+          "fecha": "2026-09-26T14:37:43.000Z",
           "oficial": false,
-          "aporte": null
+          "aporte": "Informó los detalles de la venta del gallo bataraz en la Exposición Rural de Bolívar."
         },
         {
-          "medio": "Ámbito",
-          "enlace": "https://www.ambito.com/deportes/formula-1-la-reaccion-pierre-gasly-el-choque-franco-colapinto-el-gp-azerbaiyan-n6326967",
-          "fecha": "2026-09-26T13:05:00.000Z",
+          "medio": "0223 (Mar del Plata)",
+          "enlace": "https://www.0223.com.ar/nota/2026-9-27-15-4-0-record-se-vendio-el-gallo-mas-caro-del-pais-por-una-cifra-millonaria-en-bolivar",
+          "fecha": "2026-09-27T18:04:00.000Z",
           "oficial": false,
-          "aporte": null
+          "aporte": "Aportó el dato sobre la conversión estimada en dólares de la venta."
         },
         {
-          "medio": "Motorsport",
-          "enlace": "https://es.motorsport.com/f1/news/franco-colapinto-sancion-accidente-baku/10859242/?utm_source=RSS&utm_medium=referral&utm_campaign=RSS-F1&utm_term=News&utm_content=es",
-          "fecha": "2026-09-26T13:04:10.000Z",
+          "medio": "Ayacucho al Día",
+          "enlace": "https://ayacuchoaldia.com.ar/bolivar-se-vendio-el-gallo-mas-caro-de-la-argentina-mas-de-tres-millones-de-pesos/?utm_source=rss&utm_medium=rss&utm_campaign=bolivar-se-vendio-el-gallo-mas-caro-de-la-argentina-mas-de-tres-millones-de-pesos",
+          "fecha": "2026-09-27T17:00:08.000Z",
           "oficial": false,
-          "aporte": null
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "f0797k",
-          "titulo": "Franco Colapinto choca con Pierre Gasly en el Gran Premio de Azerbaiyán",
-          "fecha": "2026-09-26T12:49:58.000Z",
-          "ruta": "/nota/franco-colapinto-choca-con-pierre-gasly-en-el-gran-premio-de-f0797k"
+          "aporte": "Confirmó la cifra récord alcanzada durante el remate en la muestra rural."
         },
         {
-          "id": "iyfntb",
-          "titulo": "La reacción de Sofía Solá, la hija de Maru Botana, al ser relacionada sentimentalmente con Franco Colapinto",
-          "fecha": "2026-09-24T21:03:28.000Z",
-          "ruta": "/nota/la-reaccion-de-sofia-sola-la-hija-de-maru-botana-al-ser-relacionada-iyfntb"
-        },
-        {
-          "id": "he08gv",
-          "titulo": "Franco Colapinto larga noveno en el Gran Premio de Azerbaiyán",
-          "fecha": "2026-09-26T09:30:00.000Z",
-          "ruta": "/nota/franco-colapinto-larga-noveno-en-el-gran-premio-de-azerbaiyan-he08gv"
+          "medio": "Infoeme",
+          "enlace": "https://www.infoeme.com/agro/2026-9-26-12-38-47-bolivar-se-vendio-el-gallo-mas-caro-de-la-argentina",
+          "fecha": "2026-09-26T15:38:47.000Z",
+          "oficial": false,
+          "aporte": "Detalló la raza del ejemplar y el monto exacto de la transacción."
         }
       ],
       "verificacion": {
         "nivel": "ALTA",
-        "porque": "Lo contaron tres medios independientes.",
+        "porque": "Lo contaron cuatro medios independientes.",
         "sugeridoPorIA": "ALTA"
       },
-      "slug": "franco-colapinto-choca-con-pierre-gasly-en-el-gran-premio-de",
+      "slug": "un-gallo-se-vende-a-un-precio-record-en-bolivar",
       "foto": {
-        "archivo": "fotos-notas/mk94me.jpg",
-        "credito": "Foto: Motorsport"
+        "archivo": "fotos-notas/5exxou.jpg",
+        "credito": "Foto: Ayacucho al Día"
       }
     },
     {
@@ -3338,128 +3314,6 @@
       "slug": "el-autodromo-fangio-completa-su-estacionamiento-de-autos"
     },
     {
-      "id": "1h399fo",
-      "titulo": "Los docentes universitarios paran 72 horas desde el miércoles 30",
-      "copete": "La CONADU confirmó un paro del miércoles 30 de septiembre al viernes 2 de octubre para reclamar la aplicación de la Ley de Financiamiento Universitario y una recomposición salarial. Es la antesala de la quinta Marcha Federal Universitaria, prevista para el 15 de octubre.",
-      "cuerpo": "La medida se aprobó por mayoría en el plenario de secretarias y secretarios generales de la federación, que primero había hablado de una huelga de 48 a 72 horas y luego confirmó tres jornadas. Buscará hacerla junto con la CONADU Histórica. El paro se levantaría si el Gobierno otorga antes del martes 29 el aumento del 33,4% que prevé la ley; la última oferta oficial en la paritaria fue del 3%, y los gremios la rechazaron.\n\nEn paralelo, el juez federal Martín Cormick intimó esta semana al Gobierno a cumplir por completo la medida cautelar que ordena aplicar los artículos 5 y 6 de la Ley 27.795, y le dio cinco días. La Casa Rosada anunció que apelará y sostiene que ya cumplió.\n\nLa ley fue sancionada en 2025, vetada por el presidente Javier Milei y ratificada después por el Congreso con dos tercios en ambas cámaras. El Gobierno la promulgó, pero suspendió su aplicación.",
-      "guion": "Docentes universitarios convocan a un paro de hasta tres días",
-      "seccion": "Argentina",
-      "medios": [
-        "La Noticia 1",
-        "Infobae",
-        "TN (Todo Noticias)",
-        "Ámbito",
-        "Minuto Uno",
-        "Canal 26",
-        "Infobrisas (Radio Brisas)"
-      ],
-      "enlace": "https://tn.com.ar/politica/2026/09/26/los-docentes-universitarios-anunciaron-un-paro-de-72-horas-en-la-previa-de-una-nueva-marcha-federal/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-26T13:49:54.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-28T04:01:01.604Z",
-      "relevancia": 58,
-      "local": false,
-      "publicadaPor": "ia",
-      "publicadaCuando": "2026-09-28T03:42:54.417Z",
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "El paro universitario comenzará el miércoles 30 de septiembre.",
-        "La medida se extenderá por hasta tres días según los gremios.",
-        "Los sindicatos reclaman la aplicación de la Ley de Financiamiento.",
-        "El Gobierno ofreció un incremento salarial del tres por ciento."
-      ],
-      "seSabe": [
-        "Los docentes universitarios realizarán un paro a partir del miércoles 30 de septiembre.",
-        "La medida de fuerza tendrá una duración de entre 48 y 72 horas.",
-        "Los gremios exigen la aplicación de la Ley de Financiamiento Universitario y una recomposición salarial.",
-        "El Gobierno ofreció una suba del 3% en la última paritaria y anunció que apelará la intimación judicial."
-      ],
-      "etiquetas": [
-        "docentes universitarios",
-        "paro",
-        "universidades nacionales",
-        "salarios",
-        "ley de financiamiento"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "TN (Todo Noticias)",
-          "enlace": "https://tn.com.ar/politica/2026/09/26/los-docentes-universitarios-anunciaron-un-paro-de-72-horas-en-la-previa-de-una-nueva-marcha-federal/",
-          "fecha": "2026-09-26T13:49:54.000Z",
-          "oficial": false,
-          "aporte": "Detalló que el paro será el 30 de septiembre y podrá extenderse hasta 72 horas."
-        },
-        {
-          "medio": "La Noticia 1",
-          "enlace": "https://www.lanoticia1.com/noticia/paro-universitario-conadu-confirmo-la-medida-de-fuerza-por-72-horas-desde-el-miercoles",
-          "fecha": "2026-09-27T21:21:24.000Z",
-          "oficial": false,
-          "aporte": "Indicó que la huelga se extenderá del 30 de septiembre al 2 de octubre."
-        },
-        {
-          "medio": "Infobae",
-          "enlace": "https://www.infobae.com/politica/2026/09/26/los-docentes-universitarios-convocaron-a-un-paro-para-la-proxima-semana-podria-durar-entre-48-y-72-horas/",
-          "fecha": "2026-09-26T16:39:27.000Z",
-          "oficial": false,
-          "aporte": "Informó que la medida exige la aplicación de la Ley de Financiamiento al gobierno de Javier Milei."
-        },
-        {
-          "medio": "Ámbito",
-          "enlace": "https://www.ambito.com/politica/docentes-universitarios-convocaron-un-paro-72-horas-y-condicionaron-la-medida-una-suba-salarial-n6327027",
-          "fecha": "2026-09-26T18:28:00.000Z",
-          "oficial": false,
-          "aporte": "Señaló que la huelga se levantará si el Gobierno otorga el aumento previsto."
-        },
-        {
-          "medio": "Minuto Uno",
-          "enlace": "https://www.minutouno.com/politica/se-viene-otro-paro-docentes-universitarios-la-previa-la-marcha-federal-n6327040",
-          "fecha": "2026-09-26T22:36:00.000Z",
-          "oficial": false,
-          "aporte": "Agregó que el reclamo incluye a trabajadores no docentes."
-        },
-        {
-          "medio": "Canal 26",
-          "enlace": "https://www.canal26.com/politica/2026/09/26/docentes-anunciaron-un-nuevo-paro-universitario-y-exigen-la-recomposicion-de-sus-salarios-y-la-aplicacion-de-la-ley-de-financiamiento-cuando-sera/",
-          "fecha": "2026-09-26T19:07:26.000Z",
-          "oficial": false,
-          "aporte": "Mencionó la participación de la CONADU en la convocatoria."
-        },
-        {
-          "medio": "El Cronista",
-          "enlace": "https://www.cronista.com/informacion-gral/paro-universitario-conadu-convoco-a-una-huelga-desde-el-30-de-septiembre-y-define-si-sera-de-48-o-72-horas/",
-          "fecha": "2026-09-26T17:31:23.000Z",
-          "oficial": false,
-          "aporte": "Indicó que la medida fue aprobada en un plenario de secretarios."
-        },
-        {
-          "medio": "C5N",
-          "enlace": "https://www.c5n.com/sociedad/de-cara-la-marcha-universitaria-docentes-paran-72-horas-el-proximo-30-septiembre-n250004",
-          "fecha": "2026-09-26T19:34:00.000Z",
-          "oficial": false,
-          "aporte": "Sostuvo que la marcha atrás dependerá del cumplimiento de la ley."
-        },
-        {
-          "medio": "Crónica",
-          "enlace": "https://www.cronica.com.ar/politica/paro-universitario-gremios-convocaron-a-una-medida-de-fuerza-para-la-proxima-semana/",
-          "fecha": "2026-09-26T18:59:00.000Z",
-          "oficial": false,
-          "aporte": null
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron 9 medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "docentes-universitarios-convocan-a-un-paro-de-hasta-tres-dias",
-      "foto": {
-        "archivo": "fotos-notas/1h399fo.jpg",
-        "credito": "Foto: La Noticia 1"
-      }
-    },
-    {
       "id": "2ruiao",
       "titulo": "La Federacion Argentina de Municipios rechaza el fin de las zonas frias",
       "copete": "La Federacion Argentina de Municipios critico la modificacion del regimen de tarifa diferencial de gas aprobada por el Senado nacional, una medida que afecta a distintas provincias y genera impacto en los usuarios.",
@@ -3478,7 +3332,6 @@
         "Ámbito",
         "Diario Popular",
         "Noticias Argentinas (NA)",
-        "La Verdad",
         "InfoRegión",
         "Zona Norte Diario",
         "ANDigital",
@@ -3785,9 +3638,33 @@
       "medios": [
         "Motorsport",
         "La Nación",
+        "Infobae",
         "TN (Todo Noticias)",
         "El Destape",
-        "Radio Mitre"
+        "Perfil",
+        "Página/12",
+        "A24",
+        "Ámbito",
+        "TyC Sports",
+        "Minuto Uno",
+        "C5N",
+        "Crónica",
+        "Radio Mitre",
+        "Canal 26",
+        "Diario Popular",
+        "Noticias Argentinas (NA)",
+        "El Día",
+        "0221",
+        "InfoRegión",
+        "QZ Noticias (Mar del Plata)",
+        "El Marplatense",
+        "Mi8 (Canal 8 Mar del Plata)",
+        "El Eco de Tandil",
+        "NDEN – Noticias de Necochea",
+        "Doble Amarilla",
+        "Bolavip Argentina",
+        "0223 (Mar del Plata)",
+        "La Nueva"
       ],
       "enlace": "https://es.motorsport.com/f1/news/clasificacion-mundial-pilotos-equipos-formula1-2026-azerbaiyan-baku/10859208/?utm_source=RSS&utm_medium=referral&utm_campaign=RSS-F1&utm_term=News&utm_content=es",
       "teniaImagenLaFuente": true,
@@ -3888,14 +3765,15 @@
       "seccion": "Agro",
       "medios": [
         "Clarín",
-        "ANDigital"
+        "ANDigital",
+        "La Verdad de Ayacucho"
       ],
       "enlace": "https://www.clarin.com/rural/don-cholo-consagro-gran-campeon-macho-primavera-juanita-logro-gran-campeon-ternero_0_aIaRZA7AUo.html",
       "teniaImagenLaFuente": true,
       "fecha": "2026-09-26T08:12:12.000Z",
       "sinFecha": false,
       "visto": "2026-09-26T09:00:32.976Z",
-      "relevancia": 28,
+      "relevancia": 42,
       "local": false,
       "publicadaPor": "ia",
       "publicadaCuando": "2026-09-26T08:53:21.927Z",
@@ -3958,536 +3836,6 @@
       "foto": {
         "archivo": "fotos-notas/1aa6w2s.jpg",
         "credito": "Foto: Clarín"
-      }
-    },
-    {
-      "id": "1sj7dfp",
-      "titulo": "Emiten alerta amarilla por tormentas y lluvias en varias provincias",
-      "copete": "El Servicio Meteorológico Nacional emitió advertencias por precipitaciones intensas, ráfagas y posible caída de granizo en distintos distritos del país para el fin de semana y el inicio de la semana.",
-      "cuerpo": "El Servicio Meteorológico Nacional emitió una alerta amarilla por tormentas y lluvias fuertes que afecta a distintas provincias del país. Las advertencias contemplan fenómenos de variada intensidad, ráfagas de viento, actividad eléctrica y la ocasional caída de granizo en varias regiones.\n\nDe acuerdo con el organismo oficial, las medidas de prevención abarcan a sectores de Buenos Aires, Entre Ríos, Córdoba, Santa Fe, La Pampa y Corrientes por tormentas, mientras que se registran alertas por lluvias persistentes en provincias patagónicas como Chubut, Río Negro y Neuquén.\n\nLas condiciones de inestabilidad continuarán durante los primeros días de la semana en gran parte del territorio afectado, con pronóstico de precipitaciones que se extenderán hacia el inicio de las actividades laborales.",
-      "guion": "Emiten alerta amarilla por tormentas y lluvias en varias provincias",
-      "seccion": "Argentina",
-      "medios": [
-        "La Nación",
-        "QZ Noticias (Mar del Plata)",
-        "La Noticia 1",
-        "Diputados Bonaerenses",
-        "2261 – Noticias de Lobería",
-        "Minuto Uno",
-        "Infocampo",
-        "Infobae",
-        "TN (Todo Noticias)",
-        "El Cronista",
-        "El Destape",
-        "Perfil",
-        "Página/12",
-        "A24",
-        "C5N",
-        "Crónica",
-        "Radio Mitre",
-        "Canal 26",
-        "Diario Popular",
-        "Noticias Argentinas (NA)",
-        "0221",
-        "La Opinión",
-        "Infoeme",
-        "InfoRegión",
-        "ANDigital",
-        "El Marplatense",
-        "Mi8 (Canal 8 Mar del Plata)",
-        "Qué Digital",
-        "Infobrisas (Radio Brisas)",
-        "Ámbito",
-        "El Día",
-        "La Nueva",
-        "NDEN – Noticias de Necochea",
-        "Clarín"
-      ],
-      "enlace": "https://www.lanacion.com.ar/sociedad/hay-alerta-amarilla-por-tormentas-y-lluvias-para-este-sabado-26-de-septiembre-las-provincias-nid26092026/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-26T03:01:00.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-28T03:01:51.643Z",
-      "relevancia": 58,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "El Servicio Meteorológico Nacional emitió alertas amarillas.",
-        "Los avisos abarcan tormentas fuertes, ráfagas y granizo.",
-        "Varias provincias registran advertencias por precipitaciones.",
-        "La inestabilidad continuará durante el inicio de la semana."
-      ],
-      "seSabe": [
-        "El Servicio Meteorológico Nacional emitió alertas amarillas por tormentas y lluvias fuertes.",
-        "Las advertencias alcanzan a distritos como Buenos Aires, Entre Ríos, Córdoba, Santa Fe y la región patagónica.",
-        "El pronóstico prevé ráfagas intensas, actividad eléctrica y ocasional caída de granizo."
-      ],
-      "noConfirmado": [
-        "No se detalló el impacto exacto ni los daños materiales registrados en cada una de las localidades alcanzadas por las advertencias meteorológicas."
-      ],
-      "textoRedes": "El Servicio Meteorológico Nacional emitió alertas amarillas por tormentas fuertes, ráfagas y posible caída de granizo en distintas provincias del país para el fin de semana y el inicio de la semana.",
-      "etiquetas": [
-        "alerta meteorologica",
-        "Servicio Meteorologico Nacional",
-        "tormentas",
-        "clima",
-        "granizo"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "La Nación",
-          "enlace": "https://www.lanacion.com.ar/sociedad/hay-alerta-amarilla-por-tormentas-y-lluvias-para-este-sabado-26-de-septiembre-las-provincias-nid26092026/",
-          "fecha": "2026-09-26T03:01:00.000Z",
-          "oficial": false,
-          "aporte": "Detalló las alertas por tormentas y lluvias en distintas provincias, además de los registros de temperatura y recomendaciones oficiales."
-        },
-        {
-          "medio": "La Nación",
-          "enlace": "https://www.lanacion.com.ar/sociedad/temporal-y-alerta-meteorologica-en-la-ciudad-y-provincia-de-buenos-aires-como-seguira-el-tiempo-nid27092026/",
-          "fecha": "2026-09-28T02:02:02.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "La Nación",
-          "enlace": "https://www.lanacion.com.ar/sociedad/hay-alerta-amarilla-por-tormentas-y-posible-caida-de-granizo-para-este-lunes-28-de-septiembre-las-nid27092026/",
-          "fecha": "2026-09-27T23:37:52.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "La Nación",
-          "enlace": "https://www.lanacion.com.ar/sociedad/hay-alerta-amarilla-por-tormentas-y-lluvias-para-este-domingo-27-de-septiembre-las-provincias-nid27092026/",
-          "fecha": "2026-09-27T19:41:37.000Z",
-          "oficial": false,
-          "aporte": "Informó sobre la alerta amarilla en la Ciudad de Buenos Aires y el nivel naranja en la provincia para el domingo."
-        },
-        {
-          "medio": "QZ Noticias (Mar del Plata)",
-          "enlace": "https://www.qznoticias.com/el-clima/alerta-amarilla-por-tormentas-para-este-lunes-en-mar-del-plata",
-          "fecha": "2026-09-28T00:04:53.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Diputados Bonaerenses",
-          "enlace": "https://diputadosbsas.com.ar/alerta-amarilla-localidades-bonaerenses/",
-          "fecha": "2026-09-27T22:26:00.000Z",
-          "oficial": false,
-          "aporte": "Señaló que el nivel de advertencia fue elevado a naranja en sectores de Santa Fe, Entre Ríos y Córdoba."
-        },
-        {
-          "medio": "2261 – Noticias de Lobería",
-          "enlace": "https://www.2261.com.ar/alerta-amarillo-por-tormentas-para-este-lunes-2/",
-          "fecha": "2026-09-28T01:34:36.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Ámbito",
-          "enlace": "https://www.ambito.com/informacion-general/alerta-amarilla-tormentas-y-granizo-el-amba-y-otras-ocho-provincias-cuando-llueve-y-que-hora-cambia-el-clima-n6327122",
-          "fecha": "2026-09-28T01:44:00.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Minuto Uno",
-          "enlace": "https://www.minutouno.com/sociedad/alerta-maxima-diluvio-lluvias-tormentas-rafagas-y-granizo-este-lunes-las-zonas-mas-afectadas-n6327253",
-          "fecha": "2026-09-27T22:29:00.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Infobae",
-          "enlace": "https://www.infobae.com/sociedad/2026/09/27/tras-el-regreso-de-la-lluvia-como-seguira-el-clima-en-el-amba-durante-el-inicio-de-la-semana/",
-          "fecha": "2026-09-27T13:42:05.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "TN (Todo Noticias)",
-          "enlace": "https://tn.com.ar/sociedad/2026/09/27/tormentas-chaparrones-y-rafagas-de-hasta-50-kmh-asi-estara-el-tiempo-hoy-en-el-amba/",
-          "fecha": "2026-09-27T22:28:02.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "TN (Todo Noticias)",
-          "enlace": "https://tn.com.ar/sociedad/2026/09/27/granizo-en-buenos-aires-cuales-son-las-zonas-afectadas-segun-el-servicio-meteorologico-nacional/",
-          "fecha": "2026-09-27T13:23:02.000Z",
-          "oficial": false,
-          "aporte": "Indicó que Navarro y zonas aledañas estuvieron entre las áreas más afectadas por la caída de granizo."
-        },
-        {
-          "medio": "TN (Todo Noticias)",
-          "enlace": "https://tn.com.ar/sociedad/2026/09/27/hay-alerta-amarilla-por-tormentas-y-lluvias-en-buenos-aires-y-otras-ocho-provincias-para-hoy/",
-          "fecha": "2026-09-27T11:18:53.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "TN (Todo Noticias)",
-          "enlace": "https://tn.com.ar/sociedad/2026/09/26/hay-alerta-amarilla-por-tormentas-para-este-domingo-27-de-septiembre-en-buenos-aires-santa-fe-cordoba-entre-rios-y-la-pampa/",
-          "fecha": "2026-09-26T12:22:40.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "TN (Todo Noticias)",
-          "enlace": "https://tn.com.ar/clima/alertas/2026/09/27/clima-en-cordoba-hoy-domingo-27-de-septiembre-cielo-cubierto-y-temperaturas-agradables/",
-          "fecha": "2026-09-27T22:00:56.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "TN (Todo Noticias)",
-          "enlace": "https://tn.com.ar/clima/alertas/2026/09/27/hay-alerta-amarilla-por-tormentas-para-este-domingo-27-de-septiembre-en-la-pampa-las-zonas-afectadas/",
-          "fecha": "2026-09-27T16:01:03.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "TN (Todo Noticias)",
-          "enlace": "https://tn.com.ar/clima/alertas/2026/09/27/alerta-amarilla-por-tormentas-para-este-domingo-27-de-septiembre-en-caba/",
-          "fecha": "2026-09-27T19:30:39.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "TN (Todo Noticias)",
-          "enlace": "https://tn.com.ar/clima/alertas/2026/09/27/hay-alerta-amarilla-por-tormentas-para-este-domingo-27-de-septiembre-en-corrientes-las-zonas-afectadas/",
-          "fecha": "2026-09-27T10:01:23.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "TN (Todo Noticias)",
-          "enlace": "https://tn.com.ar/clima/alertas/2026/09/27/hay-alerta-amarilla-por-lluvias-para-este-domingo-27-de-septiembre-en-neuquen-las-zonas-afectadas/",
-          "fecha": "2026-09-27T22:00:43.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "TN (Todo Noticias)",
-          "enlace": "https://tn.com.ar/clima/alertas/2026/09/27/hay-alerta-amarilla-por-tormentas-para-este-domingo-27-de-septiembre-en-buenos-aires-las-zonas-afectadas/",
-          "fecha": "2026-09-27T22:01:09.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "TN (Todo Noticias)",
-          "enlace": "https://tn.com.ar/clima/alertas/2026/09/27/hay-alerta-amarilla-por-lluvias-para-este-domingo-27-de-septiembre-en-chubut-las-zonas-afectadas/",
-          "fecha": "2026-09-27T22:00:36.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "TN (Todo Noticias)",
-          "enlace": "https://tn.com.ar/clima/alertas/2026/09/27/hay-alerta-amarilla-por-lluvias-para-este-domingo-27-de-septiembre-en-rio-negro-las-zonas-afectadas/",
-          "fecha": "2026-09-27T22:00:50.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "TN (Todo Noticias)",
-          "enlace": "https://tn.com.ar/clima/alertas/2026/09/27/hay-alerta-amarilla-por-tormentas-para-este-domingo-27-de-septiembre-en-santa-fe-las-zonas-afectadas/",
-          "fecha": "2026-09-27T22:01:02.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "TN (Todo Noticias)",
-          "enlace": "https://tn.com.ar/clima/alertas/2026/09/27/hay-alerta-amarilla-por-tormentas-para-este-domingo-27-de-septiembre-en-entre-rios-las-zonas-afectadas/",
-          "fecha": "2026-09-27T22:01:16.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "TN (Todo Noticias)",
-          "enlace": "https://tn.com.ar/clima/alertas/2026/09/26/clima-en-santa-fe-hoy-sabado-26-de-septiembre-cielo-claro-y-temperaturas-elevadas/",
-          "fecha": "2026-09-27T00:30:47.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "TN (Todo Noticias)",
-          "enlace": "https://tn.com.ar/clima/alertas/2026/09/26/clima-en-corrientes-hoy-sabado-26-de-septiembre-algo-de-nubes-y-calor-intenso/",
-          "fecha": "2026-09-27T00:30:31.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "TN (Todo Noticias)",
-          "enlace": "https://tn.com.ar/clima/alertas/2026/09/26/hay-alerta-amarilla-por-lluvias-para-este-sabado-26-de-septiembre-en-rio-negro-las-zonas-afectadas/",
-          "fecha": "2026-09-26T10:00:41.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "TN (Todo Noticias)",
-          "enlace": "https://tn.com.ar/clima/alertas/2026/09/26/hay-alerta-amarilla-por-lluvias-para-este-sabado-26-de-septiembre-en-neuquen-las-zonas-afectadas/",
-          "fecha": "2026-09-27T00:30:53.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "TN (Todo Noticias)",
-          "enlace": "https://tn.com.ar/clima/alertas/2026/09/26/hay-alerta-amarilla-por-tormentas-para-este-sabado-26-de-septiembre-en-entre-rios-las-zonas-afectadas/",
-          "fecha": "2026-09-27T00:30:37.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "El Cronista",
-          "enlace": "https://www.cronista.com/informacion-gral/lluvias-y-tormentas-en-buenos-aires-hasta-cuando-seguira-el-mal-tiempo-segun-el-servicio-meteorologico-nacional/",
-          "fecha": "2026-09-27T17:15:37.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "El Cronista",
-          "enlace": "https://www.cronista.com/informacion-gral/como-estara-el-clima-en-buenos-aires-del-lunes-28-al-sabado-3-de-octubre-pronostico-para-toda-esa-semana/",
-          "fecha": "2026-09-27T12:04:31.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "El Destape",
-          "enlace": "https://www.eldestapeweb.com/sociedad/alerta-meteorologica-tormentas-continua-clima-este-domingo-semana-amba-2026927123310",
-          "fecha": "2026-09-27T15:33:10.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "El Destape",
-          "enlace": "https://www.eldestapeweb.com/sociedad/clima-en-buenos-aires-hoy-pronostico-del-tiempo-en-vivo-de-este-sabado-26-de-septiembre-20269263022",
-          "fecha": "2026-09-26T06:00:22.725Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Perfil",
-          "enlace": "https://www.perfil.com/noticias/actualidad/smn-alerta-amarillo-por-fuertes-tormentas-para-caba-y-amplia-zona-del-centro-y-sur-del-pais.phtml",
-          "fecha": "2026-09-27T14:30:21.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "La Nación",
-          "enlace": "https://www.lanacion.com.ar/clima/graniza-hoy-domingo-27-de-septiembre-en-el-amba-segun-el-smn-nid27092026/",
-          "fecha": "2026-09-27T16:36:37.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "El Cronista",
-          "enlace": "https://www.cronista.com/informacion-gral/cambia-el-pronostico-en-buenos-aires-el-smn-emitio-alerta-amarilla-por-tormentas-y-lluvias-para-estas-zonas/",
-          "fecha": "2026-09-26T18:44:16.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Página/12",
-          "enlace": "https://www.pagina12.com.ar/2026/09/27/clima-en-buenos-aires-el-pronostico-del-tiempo-para-este-domingo-27-de-septiembre/",
-          "fecha": "2026-09-27T10:00:00.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "A24",
-          "enlace": "https://www.a24.com/actualidad/pronostico-del-tiempo-como-estara-el-clima-buenos-aires-toda-la-semana-n1600736",
-          "fecha": "2026-09-27T14:02:00.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Minuto Uno",
-          "enlace": "https://www.minutouno.com/sociedad/granizo-buenos-aires-donde-hay-alerta-fotos-y-videos-impactantes-zonas-afectadas-n6327140",
-          "fecha": "2026-09-27T14:23:00.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Minuto Uno",
-          "enlace": "https://www.minutouno.com/sociedad/clima-hoy-buenos-aires-el-pronostico-del-tiempo-el-domingo-27-septiembre-n6327101",
-          "fecha": "2026-09-27T09:00:00.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Minuto Uno",
-          "enlace": "https://www.minutouno.com/sociedad/alerta-total-diluvio-buenos-aires-lluvias-tormentas-rafagas-y-granizo-que-hora-se-larga-n6327038",
-          "fecha": "2026-09-26T19:53:00.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "C5N",
-          "enlace": "https://www.c5n.com/sociedad/cayo-granizo-la-provincia-buenos-aires-y-el-servicio-meteorologico-actualizo-naranja-el-alerta-n250041",
-          "fecha": "2026-09-27T14:39:00.000Z",
-          "oficial": false,
-          "aporte": "Agregó que se registraron episodios de granizo en Navarro, Bragado y zonas cercanas."
-        },
-        {
-          "medio": "Crónica",
-          "enlace": "https://www.cronica.com.ar/sociedad/se-cae-el-cielo-tormentas-y-fuertes-rafagas-en-el-amba-hasta-cuando-sigue-el-mal-tiempo/",
-          "fecha": "2026-09-27T11:05:17.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Crónica",
-          "enlace": "https://www.cronica.com.ar/sociedad/buenos-aires-y-cuatro-provincias-en-alerta-amarilla-por-tormentas-fuertes-granizo-y-viento-cuando-llega-la-lluvia/",
-          "fecha": "2026-09-26T19:15:00.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Radio Mitre",
-          "enlace": "https://radiomitre.cienradios.com/clima/alerta-por-granizo-en-buenos-aires-cuales-son-las-zonas-afectadas-segun-el-smn/",
-          "fecha": "2026-09-27T16:07:27.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Radio Mitre",
-          "enlace": "https://radiomitre.cienradios.com/clima/alerta-por-tormentas-severas-y-fuertes-rafagas-de-viento-en-el-amba-cuando-se-larga-con-todo-segun-el-smn-2/",
-          "fecha": "2026-09-27T15:18:56.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Canal 26",
-          "enlace": "https://www.canal26.com/clima/2026/09/27/impactantes-imagenes-del-granizo-en-buenos-aires-cuales-fueron-las-zonas-afectadas-y-hasta-cuando-seguiran-las-lluvias/",
-          "fecha": "2026-09-27T16:47:03.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Canal 26",
-          "enlace": "https://www.canal26.com/clima/ciudad-de-buenos-aires/temperaturas-y-lluvias-en-ciudad-de-buenos-aires-los-datos-del-clima-hoy-27-de-septiembre-de-2026/",
-          "fecha": "2026-09-27T06:30:16.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Canal 26",
-          "enlace": "https://www.canal26.com/clima/buenos-aires/temperaturas-y-lluvias-en-buenos-aires-los-datos-del-clima-hoy-27-de-septiembre-de-2026/",
-          "fecha": "2026-09-27T06:30:04.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Noticias Argentinas (NA)",
-          "enlace": "https://noticiasargentinas.com/sociedad/el-servicio-meteorologico-nacional-emitio-un-alerta-amarillo-por-tormentas-fuertes-para-este-domingo_a6ab9275ac2b8de8667e6d7d8",
-          "fecha": "2026-09-27T14:32:03.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "El Día",
-          "enlace": "https://www.eldia.com/la-ciudad/domingo-gris-y-con-chaparrones-en-la-plata-como-seguira-el-tiempo-durante-la-semana-la-ciudad_1790505480",
-          "fecha": "2026-09-27T14:38:00.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "La Nueva",
-          "enlace": "https://www.lanueva.com/nota/2026-9-27-13-24-0-granizo-y-alertas-en-la-provincia-buenos-aires-cuales-son-las-zonas-afectadas",
-          "fecha": "2026-09-27T18:58:13.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "0221",
-          "enlace": "https://www.0221.com.ar/la-plata/lanzan-un-alerta-amarillo-la-plata-y-la-region-tormentas-todo-el-domingo-n134892",
-          "fecha": "2026-09-27T14:14:35.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "La Opinión",
-          "enlace": "https://laopinionline.ar/articulo/alerta-amarilla-por-tormentas-san-nicolas-y-la-region-esperan-lluvias-intensas-y-rafagas",
-          "fecha": "2026-09-27T12:31:37.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "InfoRegión",
-          "enlace": "https://www.inforegion.com.ar/2026/09/27/alerta-amarilla-por-tormentas-fuertes-que-zonas-seran-afectadas-este-domingo/",
-          "fecha": "2026-09-27T16:21:08.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Mi8 (Canal 8 Mar del Plata)",
-          "enlace": "https://mi8.com.ar/se-viene-la-lluvia-emiten-un-alerta-amarillo-por-fuertes-tormentas-para-esta-madrugada-en-mar-del-plata/",
-          "fecha": "2026-09-27T16:55:17.000Z",
-          "oficial": false,
-          "aporte": "Mencionó la vigencia de alertas en Mar del Plata para la madrugada y el día martes."
-        },
-        {
-          "medio": "Crónica",
-          "enlace": "https://www.cronica.com.ar/sociedad/alerta-meteorologica-por-tormentas-y-granizo-en-buenos-aires-a-que-hora-se-cae-el-cielo/",
-          "fecha": "2026-09-27T16:12:00.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Radio Mitre",
-          "enlace": "https://radiomitre.cienradios.com/clima/alerta-por-tormentas-severas-y-vientos-fuertes-hasta-cuando-llovera-en-el-amba-y-como-seguira-el-clima-segun-el-smn/",
-          "fecha": "2026-09-27T23:13:05.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Infoeme",
-          "enlace": "https://www.infoeme.com/informacion-general/2026-9-27-20-18-53-olavarria-bajo-alerta-amarilla-por-lluvias",
-          "fecha": "2026-09-27T23:18:53.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Infobrisas (Radio Brisas)",
-          "enlace": "https://www.infobrisas.com/noticias/2026/09/27/109378-el-smn-emitio-un-alerta-amarillo-por-tormentas-en-mar-del-plata-y-la-zona",
-          "fecha": "2026-09-27T23:25:33.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "El Marplatense",
-          "enlace": "https://www.elmarplatense.com/alerta-amarilla-por-tormentas-durante-la-madrugada-del-lunes",
-          "fecha": "2026-09-28T00:04:21.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Qué Digital",
-          "enlace": "https://quedigital.com.ar/sociedad/alertan-por-lluvias-y-tormentas-en-mar-del-plata-en-el-inicio-de-la-semana/",
-          "fecha": "2026-09-28T00:18:30.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "NDEN – Noticias de Necochea",
-          "enlace": "https://nden.com.ar/nota/38214/alerta-por-tormentas-en-necochea-y-quequen-que-se-espera-para-este-lunes",
-          "fecha": "2026-09-28T01:54:00.000Z",
-          "oficial": false,
-          "aporte": null
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron 29 medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "emiten-alerta-amarilla-por-tormentas-y-lluvias-en-varias-provincias",
-      "foto": {
-        "archivo": "fotos-notas/1sj7dfp.jpg",
-        "credito": "Foto: QZ Noticias (Mar del Plata)"
       }
     },
     {
@@ -4936,16 +4284,17 @@
         "Municipalidad de Balcarce",
         "El Diario Balcarce",
         "Diario La Vanguardia",
-        "0223 (Mar del Plata)",
         "El Destape",
-        "El Día",
-        "La Verdad",
         "ANDigital",
         "Infobrisas (Radio Brisas)",
+        "Sendero Regional",
+        "NDEN – Noticias de Necochea",
+        "0223 (Mar del Plata)",
         "QZ Noticias (Mar del Plata)",
-        "Campeones",
         "Diario Popular",
         "Noticias Argentinas (NA)",
+        "Campeones",
+        "El Día",
         "Agencia DIB",
         "Infocielo"
       ],
@@ -5026,10 +4375,10 @@
         "Olé",
         "C5N",
         "Noticias Argentinas (NA)",
+        "Bolavip Argentina",
         "0223 (Mar del Plata)",
         "Minuto Uno",
-        "La Nueva",
-        "Bolavip Argentina"
+        "La Nueva"
       ],
       "enlace": "https://www.infobae.com/deportes/2026/09/25/polemica-provocacion-de-la-brasilena-dumont-a-la-argentina-ailin-perez-antes-de-la-pelea-estelar-por-ufc-le-tiro-preservativos-y-dolares/",
       "teniaImagenLaFuente": true,
@@ -5093,27 +4442,6 @@
           "aporte": null
         },
         {
-          "medio": "0223 (Mar del Plata)",
-          "enlace": "https://www.0223.com.ar/nota/2026-9-27-8-16-0-ailin-perez-no-para-vencio-a-norma-dumont-sumo-su-septima-victoria-y-quedo-a-un-paso-del-titulo-de-ufc",
-          "fecha": "2026-09-27T11:16:00.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Minuto Uno",
-          "enlace": "https://www.minutouno.com/deportes/ailin-perez-vencio-norma-dumont-la-ufc-y-se-acerca-al-titulo-mundial-el-picante-festejo-n6327095",
-          "fecha": "2026-09-27T02:38:00.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "La Nueva",
-          "enlace": "https://www.lanueva.com/nota/2026-9-27-15-53-0-ailin-perez-derroto-por-decision-unanime-a-norma-dumont-y-suma-siete-triunfos-seguidos-en-ufc",
-          "fecha": "2026-09-27T19:02:58.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
           "medio": "Bolavip Argentina",
           "enlace": "https://bolavip.com/ar/polideportivo/ailin-perez-fue-agredida-por-norma-dumont-tras-ganar-la-pelea-por-ufc",
           "fecha": "2026-09-27T03:26:15.000Z",
@@ -5131,6 +4459,34 @@
           "medio": "Bolavip Argentina",
           "enlace": "https://bolavip.com/ar/polideportivo/ailin-perez-quiere-ser-campeona-de-ufc-derroto-a-norma-dumont-en-una-pelea-caliente-y-quedo-a-un-paso-del-titulo",
           "fecha": "2026-09-27T02:10:21.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Bolavip Argentina",
+          "enlace": "https://bolavip.com/ar/polideportivo/a-que-hora-es-la-pelea-de-ailin-perez-vs-norma-dumont-en-ufc",
+          "fecha": "2026-09-26T13:00:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "0223 (Mar del Plata)",
+          "enlace": "https://www.0223.com.ar/nota/2026-9-27-8-16-0-ailin-perez-no-para-vencio-a-norma-dumont-sumo-su-septima-victoria-y-quedo-a-un-paso-del-titulo-de-ufc",
+          "fecha": "2026-09-27T11:16:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Minuto Uno",
+          "enlace": "https://www.minutouno.com/deportes/ailin-perez-vencio-norma-dumont-la-ufc-y-se-acerca-al-titulo-mundial-el-picante-festejo-n6327095",
+          "fecha": "2026-09-27T02:38:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "La Nueva",
+          "enlace": "https://www.lanueva.com/nota/2026-9-27-15-53-0-ailin-perez-derroto-por-decision-unanime-a-norma-dumont-y-suma-siete-triunfos-seguidos-en-ufc",
+          "fecha": "2026-09-27T19:02:58.000Z",
           "oficial": false,
           "aporte": null
         }
@@ -5224,6 +4580,89 @@
         "sugeridoPorIA": "MEDIA"
       },
       "slug": "el-concejo-aprueba-pedir-la-baja-de-tasas-a-taxis-y-remises-en"
+    },
+    {
+      "id": "tibcla",
+      "titulo": "Comienza el operativo de seguridad en playas en Mar del Plata",
+      "copete": "Mar del Plata pondrá en marcha el próximo jueves el operativo de seguridad en playas de manera progresiva. La medida abarca guardias mínimas en dieciocho balnearios costeros.",
+      "cuerpo": "Mar del Plata pondrá en marcha el operativo de seguridad en playas a partir del uno de octubre con guardias mínimas en dieciocho balnearios distribuidos en la costa. La primera etapa funcionará de once a diecisiete en sectores de la zona norte, el centro, Playa Grande y el sur, según informó el coordinador general del operativo municipal, Marcelo Zanetti.\n\nEl esquema integral incluye embarcaciones de rescate y articulación con Defensa Civil.\n\nDesde el área de seguridad recomendaron consultar previamente a los guardavidas y observar las banderas de prevención debido a las modificaciones en las playas tras los temporales invernales.",
+      "guion": "Comienza el operativo de seguridad en playas en Mar del Plata",
+      "seccion": "Cultura y agenda",
+      "medios": [
+        "El Eco de Tandil",
+        "Noticias Argentinas (NA)",
+        "El Marplatense",
+        "Infobrisas (Radio Brisas)",
+        "Punto Noticias"
+      ],
+      "enlace": "https://www.infobrisas.com/noticias/2026/09/25/109255-comienza-el-operativo-de-seguridad-en-playas-en-mar-del-plata",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-25T22:43:41.000Z",
+      "sinFecha": false,
+      "visto": "2026-09-28T11:01:05.114Z",
+      "relevancia": 61,
+      "local": false,
+      "publicadaPor": "ia",
+      "publicadaCuando": "2026-09-28T05:11:57.740Z",
+      "temas": [],
+      "como": "automatica",
+      "noConfirmado": [
+        "No se especificó el número total de guardavidas que participarán en la temporada fuera del sector a cargo de Zanetti."
+      ],
+      "textoRedes": "Mar del Plata comenzará a implementar el operativo de seguridad en playas a partir del uno de octubre con guardias mínimas en dieciocho balnearios. El despliegue total en la costa se completará el uno de noviembre.",
+      "etiquetas": [
+        "seguridad en playas",
+        "Mar del Plata",
+        "guardavidas",
+        "temporada de verano"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infobrisas (Radio Brisas)",
+          "enlace": "https://www.infobrisas.com/noticias/2026/09/25/109255-comienza-el-operativo-de-seguridad-en-playas-en-mar-del-plata",
+          "fecha": "2026-09-25T22:43:41.000Z",
+          "oficial": false,
+          "aporte": "Detalló las fechas, horarios y zonas del operativo de seguridad en playas brindadas por el coordinador municipal."
+        },
+        {
+          "medio": "Noticias Argentinas (NA)",
+          "enlace": "https://noticiasargentinas.com/economia/comienza-esta-semana-el-62--coloquio-de-idea-en-mar-del-plata_a6ab6eafa66108e5d34b88bfc",
+          "fecha": "2026-09-27T18:30:00.000Z",
+          "oficial": false,
+          "aporte": "No aportó información relevante en el resumen proporcionado."
+        },
+        {
+          "medio": "Radio Sudestada",
+          "enlace": "https://radiosudestada.com.ar/2026/09/comienza-esta-semana-el-62-coloquio-de-idea-en-mar-del-plata/",
+          "fecha": "2026-09-27T20:51:39.000Z",
+          "oficial": false,
+          "aporte": "Presentó un titular divergente sobre el coloquio de IDEA que no coincide con el contenido de la fuente principal."
+        },
+        {
+          "medio": "Punto Noticias",
+          "enlace": "https://puntonoticias.com/el-62-coloquio-de-idea-llega-a-mar-del-plata-asistira-milei/",
+          "fecha": "2026-09-27T20:55:28.000Z",
+          "oficial": false,
+          "aporte": "No aportó información relevante en el resumen proporcionado."
+        },
+        {
+          "medio": "El Norte",
+          "enlace": "https://diarioelnorte.com.ar/mar-del-plata-recibe-el-62-coloquio-de-idea-sobre-futuro-economico/",
+          "fecha": "2026-09-27T19:04:23.000Z",
+          "oficial": false,
+          "aporte": "Mencionó el desarrollo del coloquio empresarial de IDEA en Mar del Plata."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron cinco medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "comienza-el-operativo-de-seguridad-en-playas-en-mar-del-plata",
+      "foto": {
+        "archivo": "fotos-notas/tibcla.webp",
+        "credito": "Foto: Infobrisas (Radio Brisas)"
+      }
     },
     {
       "id": "o5u09g",
@@ -5552,7 +4991,8 @@
         "Perfil",
         "A24",
         "Ámbito",
-        "El Eco de Tandil"
+        "El Eco de Tandil",
+        "Bolavip Argentina"
       ],
       "enlace": "https://www.a24.com/deportes/el-sub-19-argentina-perdio-paraguay-penales-y-se-quedo-la-medalla-plata-n1600457",
       "teniaImagenLaFuente": true,
@@ -6605,9 +6045,9 @@
         "Infobrisas (Radio Brisas)",
         "Punto Noticias",
         "Radio 10 Mar del Plata (FM 105.5)",
+        "Bolavip Argentina",
         "0223 (Mar del Plata)",
-        "Infocielo",
-        "Bolavip Argentina"
+        "Infocielo"
       ],
       "enlace": "https://442.perfil.com/noticias/polideportivo/juegos-suramericanos-santa-fe-2026-la-agenda-de-argentina-para-hoy.phtml",
       "teniaImagenLaFuente": true,
@@ -6901,7 +6341,7 @@
   "clima": {
     "ahora": {
       "temp": 11,
-      "sensacion": 9,
+      "sensacion": 10,
       "humedad": 98,
       "viento": 14,
       "rumbo": "NE",
