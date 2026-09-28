@@ -1,5 +1,5 @@
 {
-  "exportado": "2026-09-28T06:31:46.416Z",
+  "exportado": "2026-09-28T06:42:28.294Z",
   "decisiones": {
     "1951120": {
       "estado": "automatica",
@@ -41275,6 +41275,59 @@
       "verificacion": {
         "nivel": "ALTA",
         "porque": "Lo contaron cinco medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      }
+    },
+    "1lumlj1": {
+      "estado": "automatica",
+      "titulo": "Córdoba registra cielo cubierto y una temperatura máxima de treinta grados",
+      "copete": "La provincia de Córdoba registra condiciones climáticas estables con temperaturas que oscilan entre los diecinueve y los treinta grados. El pronóstico anticipa vientos moderados y nula probabilidad de precipitaciones.",
+      "cuerpo": "El pronóstico meteorológico para la provincia de Córdoba indica una jornada con cielo cubierto, con una temperatura mínima registrada de diecinueve grados y una máxima que alcanzará los treinta grados durante el transcurso del día.\n\nEl informe detalla que los vientos soplarán a una velocidad estimada entre once y veintinueve kilómetros por hora, mientras que la probabilidad de precipitaciones se mantiene en cero por ciento. Hacia la tarde, el termómetro descenderá gradualmente hasta los veinticinco grados a partir de las dieciocho.\n\nPara los próximos días, las marcas térmicas previstas alcanzarán una máxima de veinticuatro grados, en tanto que para el martes se espera que el termómetro ronde los veintitrés grados, permitiendo planificar las labores agropecuarias.",
+      "guion": "Cordoba registra cielo cubierto y una temperatura maxima de treinta grados",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-28T06:42:28.182Z",
+      "claves": [
+        "El pronóstico en Córdoba prevé una temperatura máxima de treinta grados",
+        "La mínima se ubica en diecinueve grados con cielo cubierto",
+        "Los vientos soplan entre once y veintinueve kilómetros por hora",
+        "No se registran probabilidades de precipitaciones para la jornada"
+      ],
+      "seSabe": [
+        "La temperatura máxima en Córdoba alcanza los treinta grados",
+        "La mínima se ubicó en diecinueve grados",
+        "Los vientos soplan a una velocidad de entre once y veintinueve kilómetros por hora",
+        "La probabilidad de lluvias es del cero por ciento"
+      ],
+      "noConfirmado": [
+        "No se registran datos adicionales sobre afectaciones en zonas rurales específicas"
+      ],
+      "textoRedes": "Córdoba registra una temperatura máxima de treinta grados con cielo cubierto y vientos moderados. El pronóstico anticipa estabilidad y nula probabilidad de lluvias para las actividades agropecuarias de la región.",
+      "etiquetas": [
+        "Clima",
+        "Córdoba",
+        "Pronóstico",
+        "Temperatura"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Canal 26",
+          "enlace": "https://www.canal26.com/clima/cordoba/temperaturas-y-lluvias-en-cordoba-los-datos-del-clima-hoy-27-de-septiembre-de-2026/",
+          "fecha": "2026-09-27T06:30:17.000Z",
+          "oficial": false,
+          "aporte": "Aportó los datos detallados de temperaturas, vientos y pronóstico extendido para Córdoba"
+        },
+        {
+          "medio": "Infocampo",
+          "enlace": "https://www.infocampo.com.ar/clima-en-cordoba-hoy-27-septiembre-2026/",
+          "fecha": "2026-09-27T09:00:14.000Z",
+          "oficial": false,
+          "aporte": "Aportó los datos coincidentes sobre las condiciones meteorológicas para productores rurales"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
         "sugeridoPorIA": "ALTA"
       }
     }
