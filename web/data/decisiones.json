@@ -1,5 +1,5 @@
 {
-  "exportado": "2026-09-28T09:01:41.599Z",
+  "exportado": "2026-09-28T09:11:47.872Z",
   "decisiones": {
     "1951120": {
       "estado": "automatica",
@@ -41569,6 +41569,116 @@
       "verificacion": {
         "nivel": "MEDIA",
         "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "gkojya": {
+      "estado": "automatica",
+      "titulo": "Mendoza registra lluvias ligeras y temperaturas moderadas",
+      "copete": "La provincia cuyana atraviesa una jornada con precipitaciones leves, cielo cubierto y marcas térmicas templadas. El pronóstico anticipa impacto en las labores agrícolas.",
+      "cuerpo": "La provincia de Mendoza registra este lunes un panorama climático marcado por lluvias ligeras, alta humedad y cielo cubierto con nubosidad total, según informaron medios especializados. Las temperaturas se ubican entre los 14 grados de mínima y los 18 de máxima según un reporte, mientras que otro sitúa la mínima en 11 y la máxima en 15 grados.\n\nEstas condiciones meteorológicas impactan en el sector agropecuario local. Las precipitaciones aportan riego natural pero pueden complicar las tareas de cosecha y generar desafíos para los productores, quienes deben monitorear los cultivos de vid para prevenir enfermedades fúngicas y vigilar posibles encharcamientos en las plantaciones de hortalizas.\n\nPara el seguimiento detallado de la evolución climática, los informes sugieren el uso de plataformas interactivas de visualización en tiempo real como Ventusky.",
+      "guion": "Mendoza registra lluvias ligeras y temperaturas moderadas",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-28T09:11:47.757Z",
+      "claves": [
+        "Lluvias ligeras y cielo cubierto en Mendoza.",
+        "Temperaturas entre 11 y 18 grados.",
+        "Impacto en cultivos de vid y hortalizas.",
+        "Recomiendan monitoreo por alta humedad."
+      ],
+      "seSabe": [
+        "Mendoza registra un día con lluvias ligeras y cielo mayormente cubierto.",
+        "La humedad ambiental se ubica entre el 51 y el 67 por ciento.",
+        "Los cultivos de vid y hortalizas requieren monitoreo especial por el exceso de humedad."
+      ],
+      "noConfirmado": [
+        "Discrepancia entre las fuentes sobre los registros térmicos exactos, con máximas de 15 y 18 grados y mínimas de 11 y 14 grados."
+      ],
+      "textoRedes": "Mendoza atraviesa una jornada de lunes con lluvias ligeras, cielo cubierto y temperaturas moderadas. El clima genera impacto en las labores agrícolas y exige monitoreo en cultivos de vid y hortalizas ante la alta humedad ambiental.",
+      "etiquetas": [
+        "Mendoza",
+        "clima",
+        "lluvias",
+        "cultivos"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infocampo",
+          "enlace": "https://www.infocampo.com.ar/clima-en-mendoza-hoy-28-septiembre-2026/",
+          "fecha": "2026-09-28T09:00:14.000Z",
+          "oficial": false,
+          "aporte": "Aportó datos detallados de temperaturas por franja horaria, velocidad del viento, milímetros de lluvia y el impacto específico en los cultivos de vid y hortalizas."
+        },
+        {
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/clima/alertas/2026/09/28/clima-en-mendoza-hoy-lunes-28-de-septiembre-lluvia-ligera-durante-toda-la-jornada/",
+          "fecha": "2026-09-28T09:02:52.000Z",
+          "oficial": false,
+          "aporte": "Aportó los registros generales de temperatura máxima y mínima y el porcentaje de humedad."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "MEDIA"
+      }
+    },
+    "1qak76m": {
+      "estado": "automatica",
+      "titulo": "Donato de Santis saluda a Maru Botana por su ingreso a MasterChef",
+      "copete": "El chef italiano le dedicó un mensaje en redes a su colega, quien lo reemplazará como jurado en la nueva temporada del programa de Telefe conducido por Wanda Nara.",
+      "cuerpo": "Una nueva edición del programa MasterChef Celebrity se prepara para llegar a la pantalla con Wanda Nara nuevamente en la conducción, según informaron diversos medios. En este ciclo, el jurado estará integrado por Damián Betular y Germán Martitegui, acompañados por Maru Botana, quien se sumará de manera estable en reemplazo de Donato de Santis.\n\nLa salida de De Santis se había conocido durante la previa de la final de la temporada anterior, cuando el chef anunció su alejamiento tras diez ediciones para dedicar tiempo a su familia. Recientemente, el cocinero compartió una publicación en redes sociales dirigida a Botana, donde recordó una amistad de veinticinco años y le pidió que cuide tanto al público como a sus compañeros, a quienes describió como su familia.\n\nLa presentación oficial del ciclo se llevó a cabo en el barrio porteño de Palermo y contó con la participación de los jurados junto a veinticuatro famosos que formarán parte de la competencia.",
+      "guion": "Donato de Santis saluda a Maru Botana por su ingreso a MasterChef",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-28T09:11:47.757Z",
+      "claves": [
+        "MasterChef Celebrity prepara una nueva temporada con veinticuatro famosos.",
+        "Maru Botana se suma al jurado en reemplazo de Donato de Santis.",
+        "Wanda Nara continuará en la conducción del ciclo junto a Betular y Martitegui."
+      ],
+      "textoRedes": "Donato de Santis le dedicó un mensaje a Maru Botana tras confirmarse que lo reemplazará como jurado en la nueva temporada de MasterChef Celebrity, que contará con la conducción de Wanda Nara y veinticuatro famosos en competencia.",
+      "etiquetas": [
+        "MasterChef",
+        "Donato de Santis",
+        "Maru Botana",
+        "Telefe",
+        "Wanda Nara"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/teleshow/2026/09/25/el-emotivo-mensaje-de-donato-de-santis-a-maru-botana-a-dias-del-inicio-de-masterchef-cuidame-mucho-a-damian-y-a-german/",
+          "fecha": "2026-09-25T21:04:49.000Z",
+          "oficial": false,
+          "aporte": "Detalló la salida de Donato de Santis y el mensaje que le dedicó a Maru Botana."
+        },
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/espectaculos/personajes/maru-botana-sobre-masterchef-por-que-dudo-en-aceptar-que-le-dijo-betular-y-que-no-va-a-perdonar-nid28092026/",
+          "fecha": "2026-09-28T09:00:00.000Z",
+          "oficial": false,
+          "aporte": "Confirmó que Botana ocupará por primera vez un lugar estable en el jurado."
+        },
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/teleshow/2026/09/27/german-martitegui-damian-betular-y-maru-botana-a-horas-del-estreno-de-masterchef-la-edicion-anterior-dejo-la-vara-muy-alta/",
+          "fecha": "2026-09-27T07:02:00.000Z",
+          "oficial": false,
+          "aporte": "Informó sobre la presentación oficial del programa en Palermo con veinticuatro famosos."
+        },
+        {
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/show/television/2026/09/26/donato-de-santis-le-hizo-un-pedido-especial-a-maru-botana-antes-del-debut-de-la-cocinera-en-masterchef-celebrity/",
+          "fecha": "2026-09-26T21:23:50.000Z",
+          "oficial": false,
+          "aporte": "No aportó información adicional al no registrar resumen."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron tres medios independientes.",
         "sugeridoPorIA": "MEDIA"
       }
     }
