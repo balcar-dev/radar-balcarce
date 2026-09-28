@@ -1,5 +1,5 @@
 {
-  "exportado": "2026-09-28T08:21:39.837Z",
+  "exportado": "2026-09-28T08:41:53.934Z",
   "decisiones": {
     "1951120": {
       "estado": "automatica",
@@ -41453,6 +41453,44 @@
         "nivel": "ALTA",
         "porque": "Lo contaron tres medios independientes.",
         "sugeridoPorIA": "ALTA"
+      }
+    },
+    "a32cr6": {
+      "estado": "automatica",
+      "titulo": "Pronostican una jornada inestable con marcas térmicas de hasta diecisiete grados",
+      "copete": "Se espera una jornada inestable en la ciudad, con probabilidad de lluvias y una temperatura máxima que alcanzará los diecisiete grados.",
+      "cuerpo": "Hacia la tarde, el termómetro subirá para ubicar la máxima entre los catorce y los diecisiete grados, con una persistencia de la inestabilidad que mantendrá una probabilidad de lluvia del cuarenta por ciento y vientos que rondarán los dieciséis kilómetros por hora.\n\nEl cierre de la jornada se presentará templado a fresco, con registros nocturnos de entre trece y quince grados, un descenso marcado en las chances de precipitación al catorce por ciento y una disminución en la intensidad del viento.",
+      "guion": "Pronostican una jornada inestable con marcas térmicas de hasta diecisiete grados",
+      "deIA": true,
+      "por": "ia",
+      "cuando": "2026-09-28T08:41:53.819Z",
+      "claves": [
+        "Jornada inestable con máxima de diecisiete grados",
+        "Probabilidad de lluvias durante la mañana y la tarde",
+        "Vientos suaves a moderados en toda la jornada"
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Se espera una jornada inestable con probabilidad de lluvias, cielo mayormente cubierto y una temperatura máxima que alcanzará los diecisiete grados en la ciudad.",
+      "etiquetas": [
+        "tiempo",
+        "lluvias",
+        "temperatura"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Radio Sudestada",
+          "enlace": "https://radiosudestada.com.ar/2026/09/el-tiempo-en-balcarce-una-jornada-inestable-con-maxima-de-17c/",
+          "fecha": "2026-09-28T08:31:42.000Z",
+          "oficial": false,
+          "aporte": "Aportó el detalle de la temperatura, la probabilidad de precipitaciones y las condiciones del viento para toda la jornada."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
       }
     }
   },
