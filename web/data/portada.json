@@ -1,76 +1,6 @@
 {
-  "generado": "2026-09-28T04:01:49.718Z",
+  "generado": "2026-09-28T04:32:03.622Z",
   "notas": [
-    {
-      "id": "1e5cybr",
-      "titulo": "Extienden hasta 2049 la concesión de Aeropuertos Argentina",
-      "copete": "El Gobierno nacional y la empresa acordaron prorrogar el servicio en 35 terminales del país. La compañía se comprometió a realizar nuevas inversiones en infraestructura.",
-      "cuerpo": "A cambio, la compañía operada por el grupo de Eduardo Eurnekian deberá invertir 600 millones de dólares adicionales de su propio bolsillo antes de finalizar 2031 para mejorar la infraestructura, con fondos independientes del canon que se paga al Estado.\n\nEsta renegociación tiene antecedentes en gestiones anteriores, ya que las discusiones habían comenzado en 2020 durante el gobierno de Alberto Fernández en el marco de la pandemia. En aquella oportunidad, las partes habían acordado una prórroga hasta 2038 a cambio de un compromiso de inversiones que, según los datos aportados por los medios, habría finalizado de ejecutarse este año en distintos aeropuertos.\n\nPara los pasajeros y vecinos de la región que utilizan las terminales del área metropolitana, como Aeroparque y Ezeiza, el acuerdo apunta a garantizar la continuidad operativa y nuevas obras de infraestructura. El presidente Javier Milei se excusó de intervenir en las tratativas por razones de decoro debido a un vínculo profesional previo con el holding empresarial.",
-      "guion": "Extienden hasta 2049 la concesión de Aeropuertos Argentina",
-      "seccion": "Economía",
-      "medios": [
-        "Infobae",
-        "Clarín",
-        "Noticias Argentinas (NA)"
-      ],
-      "enlace": "https://www.clarin.com/economia/extienden-2049-concesion-aeropuertos-argentina_0_OqcAPUBst6.html",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-28T01:16:41.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-28T03:47:03.826Z",
-      "relevancia": 69,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "El Gobierno nacional y Aeropuertos Argentina extendieron la concesión hasta 2049.",
-        "La empresa se comprometió a invertir 600 millones de dólares propios antes de 2031.",
-        "El entendimiento incluye el cierre de reclamos y litigios previos entre las partes.",
-        "El presidente Javier Milei se excusó de intervenir en las negociaciones por razones de decoro."
-      ],
-      "noConfirmado": [
-        "No se detalló oficialmente el listado completo de todas las obras específicas que se ejecutarán con los fondos de inversión adicionales, aunque se mencionó a Ezeiza como posible destino de una nueva terminal."
-      ],
-      "textoRedes": "El Gobierno nacional y Aeropuertos Argentina acordaron extender hasta 2049 la concesión de 35 terminales aéreas del país. La compañía se comprometió a realizar nuevas inversiones millonarias en infraestructura.",
-      "etiquetas": [
-        "Aeropuertos Argentina",
-        "Gobierno nacional",
-        "Concesión",
-        "Inversiones",
-        "Infraestructura"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Clarín",
-          "enlace": "https://www.clarin.com/economia/extienden-2049-concesion-aeropuertos-argentina_0_OqcAPUBst6.html",
-          "fecha": "2026-09-28T01:16:41.000Z",
-          "oficial": false,
-          "aporte": "Detalló el acuerdo de extensión hasta 2049, la obligación de invertir 600 millones de dólares y los antecedentes de negociación desde 2020."
-        },
-        {
-          "medio": "Infobae",
-          "enlace": "https://www.infobae.com/economia/2026/09/28/el-gobierno-y-aeropuertos-argentina-acordaron-extender-la-concesion-de-servicios-hasta-2049-se-esperan-inversiones-por-usd-600-millones/",
-          "fecha": "2026-09-28T03:25:39.000Z",
-          "oficial": false,
-          "aporte": "Aportó la confirmación sobre el entendimiento entre el Gobierno y la principal operadora aeroportuaria."
-        },
-        {
-          "medio": "Noticias Argentinas (NA)",
-          "enlace": "https://noticiasargentinas.com/economia/extienden-la-concesion-de-aeropuertos-argentina-con-nuevas-inversiones-por-us--600-millones_a6ab9cf50c2b8de8667fff81c",
-          "fecha": "2026-09-28T05:10:00.000Z",
-          "oficial": false,
-          "aporte": "Informó sobre el alcance de la concesión de 35 aeropuertos y la posibilidad de prórroga por siete años adicionales."
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron tres medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "extienden-hasta-2049-la-concesion-de-aeropuertos-argentina"
-    },
     {
       "id": "187bqn1",
       "titulo": "El Movimiento 245 brinda contención y autoayuda",
@@ -353,7 +283,11 @@
         "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
         "sugeridoPorIA": "MEDIA"
       },
-      "slug": "ypf-mantiene-precios-en-balcarce-y-queda-por-debajo-de-las-privadas"
+      "slug": "ypf-mantiene-precios-en-balcarce-y-queda-por-debajo-de-las-privadas",
+      "foto": {
+        "archivo": "fotos-notas/1x3bvjs.png",
+        "credito": "Foto: Diario La Vanguardia"
+      }
     },
     {
       "id": "1dou3ni",
@@ -433,7 +367,11 @@
         "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
         "sugeridoPorIA": "MEDIA"
       },
-      "slug": "estudian-el-costo-operativo-de-usar-drones-para-pulverizar-papa"
+      "slug": "estudian-el-costo-operativo-de-usar-drones-para-pulverizar-papa",
+      "foto": {
+        "archivo": "fotos-notas/1dou3ni.jpg",
+        "credito": "Foto: Argenpapa"
+      }
     },
     {
       "id": "nx6lkn",
@@ -444,15 +382,14 @@
       "seccion": "Fútbol",
       "medios": [
         "Infórmese Primero (FM 104.9)",
-        "Infobae",
         "La Nación",
         "Olé",
         "Clarín",
         "0223 (Mar del Plata)",
         "LU9 Mar del Plata",
-        "QZ Noticias (Mar del Plata)",
         "Ecos Diarios (Necochea)",
         "Minuto Uno",
+        "Infobae",
         "TN (Todo Noticias)",
         "El Destape",
         "Perfil",
@@ -470,16 +407,17 @@
         "La Nueva",
         "0221",
         "ANDigital",
+        "QZ Noticias (Mar del Plata)",
         "El Marplatense",
         "Mi8 (Canal 8 Mar del Plata)",
+        "Ayacucho al Día",
+        "Infocielo",
+        "La Verdad",
         "El Eco de Tandil",
         "NDEN – Noticias de Necochea",
         "Doble Amarilla",
         "Bolavip Argentina",
         "Vavel Argentina",
-        "Ayacucho al Día",
-        "Infocielo",
-        "La Verdad",
         "La Brújula 24"
       ],
       "enlace": "https://www.ole.com.ar/copa-argentina/boca-racing-copa-argentina-chicana-cargada-salto-calidad-posteo-milito-redes_0_ExUFrdDV0w.html",
@@ -650,106 +588,10 @@
         "porque": "Lo contaron seis medios independientes.",
         "sugeridoPorIA": "ALTA"
       },
-      "slug": "racing-cae-ante-boca-y-la-continuidad-del-entrenador-juan-pablo"
-    },
-    {
-      "id": "1is0p0y",
-      "titulo": "Diego Santilli visita el autódromo Juan Manuel Fangio en el regreso del automovilismo",
-      "copete": "El jefe de Gabinete nacional recorrió el circuito balcarceño en el marco de la competencia de las categorías TC Pick Up y TC Pista Pick Up, donde participa su hijo.",
-      "cuerpo": "La jornada contó con la participación de las categorías TC Pick Up y TC Pista Pick Up ante una importante presencia de público.\n\nLa llegada del funcionario nacional combinó la agenda institucional con la actividad deportiva, ya que su hijo, Nicanor Santilli Pazos, compitió en la categoría TC Pista Pick Up a bordo de un vehículo del equipo Coiro Competición. En su primera serie, el joven piloto finalizó en el segundo lugar detrás de Antonino Sganga, resultado que le permitió mantenerse entre los protagonistas de la definición.\n\nDurante su estadía en el predio, Santilli recorrió los boxes y mantuvo encuentros con el intendente Esteban Reino y el senador nacional Maximiliano Abad. Como se había anticipado en los días previos, la visita respondió principalmente al acompañamiento de su hijo en la competencia.",
-      "guion": "Diego Santilli visita el autódromo Juan Manuel Fangio en el regreso del automovilismo",
-      "seccion": "Automovilismo",
-      "medios": [
-        "Infórmese Primero (FM 104.9)",
-        "Diario La Vanguardia",
-        "QZ Noticias (Mar del Plata)"
-      ],
-      "enlace": "http://www.informeseprimero.com.ar/2026/09/diego-santilli-recorrio-el-fangio-y.html",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-27T22:35:50.424Z",
-      "sinFecha": false,
-      "visto": "2026-09-27T23:55:08.522Z",
-      "relevancia": 100,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [
-        "autodromo",
-        "tc-pick-up",
-        "fangio"
-      ],
-      "como": "automatica",
-      "claves": [
-        "Diego Santilli visitó el autódromo Juan Manuel Fangio este domingo.",
-        "El funcionario nacional acompañó a su hijo en la competencia de TC Pista Pick Up.",
-        "La visita coincidió con el regreso de las categorías nacionales a Balcarce tras quince años.",
-        "Santilli recorrió los boxes junto al intendente Esteban Reino y el senador Maximiliano Abad."
-      ],
-      "seSabe": [
-        "Diego Santilli visitó el Autódromo Juan Manuel Fangio este domingo, según informaron las fuentes consultadas.",
-        "El jefe de Gabinete recorrió los boxes y conversó con el intendente Esteban Reino y el senador Maximiliano Abad.",
-        "Nicanor Santilli Pazos compitió en la categoría TC Pista Pick Up con la unidad del equipo Coiro Competición.",
-        "El piloto finalizó en el segundo lugar en la primera serie de la categoría."
-      ],
-      "textoRedes": "El jefe de Gabinete nacional, Diego Santilli, visitó el autódromo Juan Manuel Fangio en el marco del regreso de las categorías nacionales a Balcarce y acompañó a su hijo en la competencia de TC Pista Pick Up.",
-      "etiquetas": [
-        "Diego Santilli",
-        "Autodromo Juan Manuel Fangio",
-        "TC Pista Pick Up",
-        "Esteban Reino"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Infórmese Primero (FM 104.9)",
-          "enlace": "http://www.informeseprimero.com.ar/2026/09/diego-santilli-recorrio-el-fangio-y.html",
-          "fecha": "2026-09-27T22:35:50.424Z",
-          "oficial": false,
-          "aporte": "Aportó los detalles sobre la visita de Diego Santilli, la competencia de su hijo en la TC Pista Pick Up y el resultado en la primera serie."
-        },
-        {
-          "medio": "Diario La Vanguardia",
-          "enlace": "https://www.diariolavanguardia.com/noticias/44904-diego-santilli-estara-en-balcarce-para-la-reapertura-del-fangio-y-la-fecha-de-las-tc-pick-up/",
-          "fecha": null,
-          "oficial": false,
-          "aporte": "Anticipó la llegada del jefe de Gabinete de Ministros de la Nación a la ciudad para las actividades de reinauguración del autódromo."
-        },
-        {
-          "medio": "QZ Noticias (Mar del Plata)",
-          "enlace": "https://www.qznoticias.com/la-region/diego-santilli-visito-el-fangio-durante-la-jornada-de-tc-pick-up",
-          "fecha": "2026-09-27T15:34:50.000Z",
-          "oficial": false,
-          "aporte": "Confirmó la presencia del intendente Esteban Reino y el senador Maximiliano Abad junto a Santilli durante su recorrido por los boxes."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "si6qmk",
-          "titulo": "Diego Santilli visita el autódromo Juan Manuel Fangio",
-          "fecha": "2026-09-27T15:00:58.065Z",
-          "ruta": "/nota/diego-santilli-visita-el-autodromo-juan-manuel-fangio-en-balcarce-si6qmk"
-        },
-        {
-          "id": "1mphhlq",
-          "titulo": "Diego Santilli llega a Balcarce por el automovilismo",
-          "fecha": "2026-09-25T13:40:13.000Z",
-          "ruta": "/nota/diego-santilli-llega-a-balcarce-por-el-automovilismo-1mphhlq"
-        },
-        {
-          "id": "1ofousc",
-          "titulo": "Suárez logra el segundo puesto en su serie del TC Pista Pick Up",
-          "fecha": "2026-09-27T15:55:51.000Z",
-          "ruta": "/nota/suarez-logra-el-segundo-puesto-en-su-serie-del-tc-pista-pick-up-en-1ofousc"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron tres medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "diego-santilli-visita-el-autodromo-juan-manuel-fangio-en-el-regreso",
+      "slug": "racing-cae-ante-boca-y-la-continuidad-del-entrenador-juan-pablo",
       "foto": {
-        "archivo": "fotos-notas/1is0p0y.jpg",
-        "credito": "Foto: QZ Noticias (Mar del Plata)"
+        "archivo": "fotos-notas/1f46y05.webp",
+        "credito": "Foto: TyC Sports"
       }
     },
     {
@@ -828,7 +670,11 @@
         "porque": "Lo contaron dos medios independientes.",
         "sugeridoPorIA": "ALTA"
       },
-      "slug": "scaloni-y-paredes-se-reunen-para-definir-el-futuro-del-mediocampista"
+      "slug": "scaloni-y-paredes-se-reunen-para-definir-el-futuro-del-mediocampista",
+      "foto": {
+        "archivo": "fotos-notas/1w77cph.webp",
+        "credito": "Foto: Minuto Uno"
+      }
     },
     {
       "id": "194nq4e",
@@ -1113,7 +959,11 @@
         "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
         "sugeridoPorIA": "MEDIA"
       },
-      "slug": "el-concejo-aprueba-proyectos-sobre-infecciones-y-celiaquia-en-balcarce"
+      "slug": "el-concejo-aprueba-proyectos-sobre-infecciones-y-celiaquia-en-balcarce",
+      "foto": {
+        "archivo": "fotos-notas/aabc5v.jpg",
+        "credito": "Foto: Radio Gabal (FM 104.1)"
+      }
     },
     {
       "id": "19foxy4",
@@ -1255,7 +1105,11 @@
         "porque": "Lo contaron 9 medios independientes.",
         "sugeridoPorIA": "ALTA"
       },
-      "slug": "javier-milei-viaja-a-paris-para-participar-de-la-argentina-week"
+      "slug": "javier-milei-viaja-a-paris-para-participar-de-la-argentina-week",
+      "foto": {
+        "archivo": "fotos-notas/19foxy4.jpg",
+        "credito": "Foto: 0221"
+      }
     },
     {
       "id": "jakg2e",
@@ -1267,16 +1121,14 @@
       "medios": [
         "La Nación",
         "El Destape",
-        "Ámbito",
-        "La Página Millonaria",
-        "Vavel Argentina"
+        "Ámbito"
       ],
       "enlace": "https://www.lanacion.com.ar/deportes/futbol/horarios-de-los-amistosos-de-la-seleccion-argentina-vs-bolivia-burkina-faso-y-benin-nid27092026/",
       "teniaImagenLaFuente": true,
       "fecha": "2026-09-27T17:55:16.000Z",
       "sinFecha": false,
       "visto": "2026-09-28T03:01:51.643Z",
-      "relevancia": 97,
+      "relevancia": 77,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1332,141 +1184,6 @@
         "sugeridoPorIA": "ALTA"
       },
       "slug": "la-seleccion-argentina-juega-amistosos-en-el-inicio-de-un-nuevo-ciclo"
-    },
-    {
-      "id": "1k29v7p",
-      "titulo": "El Gobierno decreta feriado nacional el lunes 9 de noviembre",
-      "copete": "El Gobierno nacional confirmó que el lunes 9 de noviembre será feriado en todo el país por la visita del papa León XIV. La medida afectará a todos los habitantes y regirán las normas de descanso dominical.",
-      "cuerpo": "El papa León XIV visitará la Argentina entre el 8 y el 11 de noviembre, con actividades previstas en la Ciudad de Buenos Aires, Luján y la provincia de Córdoba. Según detalló la funcionaria, las jornadas del martes y miércoles tendrán feriados limitados a las jurisdicciones específicas de Buenos Aires, la Ciudad y Córdoba, mientras que se aguarda la publicación oficial en el Boletín Oficial.\n\nComo antecedente, el 23 de septiembre pasado se había informado la declaración inicial del feriado nacional por parte del Gobierno. Al tratarse de un feriado nacional amparado por la Ley de Contrato de Trabajo, rigen las normas de descanso dominical, por lo que los empleados que presten servicios deberán cobrar el doble de una jornada habitual.\n\nPara los vecinos de Balcarce, la medida implica un fin de semana largo con alcance nacional en todo el país, replicando las condiciones laborales y de descanso establecidas por la legislación vigente para estos casos.",
-      "guion": "El Gobierno decreta feriado nacional el lunes 9 de noviembre",
-      "seccion": "Argentina",
-      "medios": [
-        "TN (Todo Noticias)",
-        "La Nación",
-        "Perfil",
-        "A24",
-        "C5N",
-        "ANDigital"
-      ],
-      "enlace": "https://www.lanacion.com.ar/feriados/2026/fin-de-semana-largo-a-quien-le-corresponde-el-feriado-del-9-de-noviembre-por-la-visita-del-papa-leon-nid24092026/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-27T17:01:40.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-24T10:27:08.767Z",
-      "relevancia": 73,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "El papa León XIV visitará el país del 8 al 11 de noviembre.",
-        "El Gobierno confirmó que el lunes 9 de noviembre será feriado nacional.",
-        "Regirán las normas de descanso dominical para los trabajadores.",
-        "Se aguarda la oficialización de la medida en el Boletín Oficial."
-      ],
-      "seSabe": [
-        "El papa León XIV llegará a la Argentina el 8 de noviembre y permanecerá hasta el 11.",
-        "La ministra de Seguridad Nacional, Alejandra Monteoliva, confirmó el feriado nacional para el lunes 9 de noviembre.",
-        "Habrá feriados y asuetos limitados en las jurisdicciones de Buenos Aires, la Ciudad y Córdoba para los días martes y miércoles.",
-        "El ministro de Seguridad Juan Pablo Quinteros confirmó feriados en Córdoba para los días 9 y 10 de noviembre."
-      ],
-      "noConfirmado": [
-        "Falta la publicación oficial del decreto en el Boletín Oficial."
-      ],
-      "etiquetas": [
-        "feriado nacional",
-        "papa Leon XIV",
-        "visita papal",
-        "Balcarce",
-        "calendario 2026"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "La Nación",
-          "enlace": "https://www.lanacion.com.ar/feriados/2026/fin-de-semana-largo-a-quien-le-corresponde-el-feriado-del-9-de-noviembre-por-la-visita-del-papa-leon-nid24092026/",
-          "fecha": "2026-09-27T17:01:40.000Z",
-          "oficial": false,
-          "aporte": "Confirmó el feriado nacional del 9 de noviembre anunciado por la ministra Alejandra Monteoliva y los detalles laborales."
-        },
-        {
-          "medio": "La Nación",
-          "enlace": "https://www.lanacion.com.ar/sociedad/hay-feriado-el-lunes-9-de-noviembre-por-la-visita-del-papa-leon-xiv-nid22092026/",
-          "fecha": "2026-09-27T17:01:45.000Z",
-          "oficial": false,
-          "aporte": "Reprodujo información sobre la llegada del papa León XIV y la modificación del calendario."
-        },
-        {
-          "medio": "Perfil",
-          "enlace": "https://www.perfil.com/noticias/cordoba/la-visita-del-papa-leon-xiv-cordoba-tendra-dos-feriados.phtml",
-          "fecha": "2026-09-24T09:56:00.000Z",
-          "oficial": false,
-          "aporte": "Aportó que en Córdoba los feriados serán los días lunes 9 y martes 10 de noviembre según Juan Pablo Quinteros."
-        },
-        {
-          "medio": "A24",
-          "enlace": "https://www.a24.com/politica/feriados-la-visita-del-papa-leon-xiv-que-dias-no-se-trabaja-y-quienes-alcanza-cada-uno-n1599883",
-          "fecha": "2026-09-24T14:29:00.000Z",
-          "oficial": false,
-          "aporte": "Detalló las fechas de la visita papal del 8 al 11 de noviembre y los asuetos en Córdoba y Buenos Aires."
-        },
-        {
-          "medio": "C5N",
-          "enlace": "https://www.c5n.com/sociedad/cual-es-el-ultimo-feriado-que-tendra-septiembre-2026-n249723",
-          "fecha": "2026-09-27T19:30:00.000Z",
-          "oficial": false,
-          "aporte": "Informó sobre feriados locales y la confirmación del asueto del 9 de noviembre."
-        },
-        {
-          "medio": "ANDigital",
-          "enlace": "https://andigital.com.ar/nota/143758/habra-feriado-nacional-por-la-visita-del-papa-leon-xiv-que-fecha-se-eligio/",
-          "fecha": "2026-09-22T03:00:00.000Z",
-          "oficial": false,
-          "aporte": "No aportó información utilizable al no registrar resumen."
-        },
-        {
-          "medio": "Infobrisas (Radio Brisas)",
-          "enlace": "https://www.infobrisas.com/noticias/2026/09/22/108838-el-9-de-noviembre-sera-feriado-nacional-por-la-visita-del-papa-leon-xiv",
-          "fecha": "2026-09-22T22:20:52.000Z",
-          "oficial": false,
-          "aporte": "No aportó información utilizable al no registrar resumen."
-        },
-        {
-          "medio": "La Nación",
-          "enlace": "https://www.lanacion.com.ar/feriados/2026/feriados-del-9-10-y-11-de-noviembre-por-la-visita-de-papa-leon-xiv-a-la-argentina-a-quien-le-nid23092026/",
-          "fecha": "2026-09-27T17:01:43.000Z",
-          "oficial": false,
-          "aporte": "Indicó que el cronograma fue confirmado por el Vaticano y la misa será en Luján."
-        },
-        {
-          "medio": "C5N",
-          "enlace": "https://www.c5n.com/sociedad/por-que-sera-feriado-este-martes-29-septiembre-2026-n249691",
-          "fecha": "2026-09-27T11:39:00.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "C5N",
-          "enlace": "https://www.c5n.com/sociedad/confirman-que-sera-feriado-el-miercoles-30-septiembre-2026-que-se-debe-n249757",
-          "fecha": "2026-09-26T19:50:00.000Z",
-          "oficial": false,
-          "aporte": null
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "myfrfq",
-          "titulo": "El Gobierno declara feriado nacional por la visita del Papa",
-          "fecha": "2026-09-23T12:01:51.000Z",
-          "ruta": "/nota/el-9-de-noviembre-sera-feriado-nacional-por-la-visita-del-papa-leon-myfrfq"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron seis medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "fin-de-semana-largo-a-quien-le-corresponde-el-feriado-del-9-de"
     },
     {
       "id": "1ofousc",
@@ -1548,7 +1265,11 @@
         "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
         "sugeridoPorIA": "MEDIA"
       },
-      "slug": "suarez-logra-el-segundo-puesto-en-su-serie-del-tc-pista-pick-up-en"
+      "slug": "suarez-logra-el-segundo-puesto-en-su-serie-del-tc-pista-pick-up-en",
+      "foto": {
+        "archivo": "fotos-notas/1ofousc.jpg",
+        "credito": "Foto: Radio Gabal (FM 104.1)"
+      }
     },
     {
       "id": "1spxjt5",
@@ -1707,7 +1428,11 @@
         "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
         "sugeridoPorIA": "MEDIA"
       },
-      "slug": "una-multitud-colma-el-autodromo-juan-manuel-fangio-en-balcarce"
+      "slug": "una-multitud-colma-el-autodromo-juan-manuel-fangio-en-balcarce",
+      "foto": {
+        "archivo": "fotos-notas/c2myhf.jpg",
+        "credito": "Foto: Radio Gabal (FM 104.1)"
+      }
     },
     {
       "id": "dmfg6e",
@@ -1853,7 +1578,74 @@
         "porque": "Lo contaron 10 medios independientes.",
         "sugeridoPorIA": "ALTA"
       },
-      "slug": "chile-condiciona-su-apoyo-a-argentina-en-la-causa-malvinas-reino"
+      "slug": "chile-condiciona-su-apoyo-a-argentina-en-la-causa-malvinas-reino",
+      "foto": {
+        "archivo": "fotos-notas/dmfg6e.jpg",
+        "credito": "Foto: Diario Popular"
+      }
+    },
+    {
+      "id": "1e2vo5q",
+      "titulo": "Diputados discute proyectos sobre morosidad y endeudamiento",
+      "copete": "La oposición negocia contrarreloj un proyecto unificado en la Cámara de Diputados para tratar la morosidad y el endeudamiento. El próximo martes se realizará el último plenario de comisiones para la firma de dictámenes.",
+      "cuerpo": "La Cámara de Diputados debatirá el próximo martes en un plenario de las comisiones de Finanzas y de Defensa del Consumidor los proyectos vinculados a la morosidad y el endeudamiento. Por su parte, el oficialismo prepara una iniciativa propia con medidas de educación financiera y advertencias a los usuarios.\n\nEl plenario fue convocado a partir de un emplazamiento aprobado el pasado veintiséis de agosto. De las negociaciones participan legisladores de distintos bloques opositores y aliados para alcanzar un dictamen de mayoría, mientras el Gobierno intenta enfriar la iniciativa.",
+      "guion": "Diputados discute proyectos sobre morosidad y endeudamiento",
+      "seccion": "Política",
+      "medios": [
+        "Perfil",
+        "Diario Popular",
+        "Canal 26",
+        "Noticias Argentinas (NA)"
+      ],
+      "enlace": "https://www.perfil.com/noticias/politica/morosidad-la-oposicion-acelera-las-negociaciones-en-diputados-y-busca-reunir-mas-firmas-que-lla.phtml",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-27T13:15:00.000Z",
+      "sinFecha": false,
+      "visto": "2026-09-28T04:30:57.070Z",
+      "relevancia": 36,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "La oposición negocia un proyecto unificado contra la morosidad.",
+        "El martes será el último plenario de comisiones en Diputados.",
+        "El oficialismo prepara una iniciativa propia sobre endeudamiento."
+      ],
+      "textoRedes": "La oposición en Diputados negocia un proyecto sobre morosidad y endeudamiento para llevar al plenario de comisiones del próximo martes.",
+      "etiquetas": [
+        "Diputados",
+        "morosidad",
+        "endeudamiento",
+        "comisiones"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Perfil",
+          "enlace": "https://www.perfil.com/noticias/politica/morosidad-la-oposicion-acelera-las-negociaciones-en-diputados-y-busca-reunir-mas-firmas-que-lla.phtml",
+          "fecha": "2026-09-27T13:15:00.000Z",
+          "oficial": false,
+          "aporte": "Detalló los puntos del proyecto opositor, el rol de los bloques y las medidas sobre tasas y refinanciación."
+        },
+        {
+          "medio": "Diario Popular",
+          "enlace": "https://www.diariopopular.com.ar/politica/morosidad-la-oposicion-acelera-las-negociaciones-el-dictamen-del-proyecto-n921805",
+          "fecha": "2026-09-27T13:47:00.000Z",
+          "oficial": false,
+          "aporte": "Confirmó la fecha del plenario del próximo martes y el trabajo del oficialismo en una iniciativa propia."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron cuatro medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "diputados-discute-proyectos-sobre-morosidad-y-endeudamiento",
+      "foto": {
+        "archivo": "fotos-notas/1e2vo5q.jpg",
+        "credito": "Foto: Perfil"
+      }
     },
     {
       "id": "repaso20260927manana",
@@ -2002,108 +1794,88 @@
       "slug": "leon-xiv-ya-esta-listo-el-sillon-que-usara-el-papa-en-la-misa-de-lujan"
     },
     {
-      "id": "10or876",
-      "titulo": "Alpine condena el acoso en redes tras el choque en Azerbaiyán",
-      "copete": "La escudería Alpine emitió un nuevo comunicado tras el Gran Premio de Azerbaiyán para rechazar las agresiones digitales registradas luego del accidente protagonizado por Franco Colapinto.",
-      "cuerpo": "Tras las declaraciones iniciales que habían apuntado a la afición, la institución emitió un nuevo comunicado que intentó despegar a los hinchas y cronistas de esos señalamientos.\n\nEn el tramo más revelador del texto, la escudería aclaró que su condena a los abusos no va dirigida a ninguna afición, equipo o piloto en particular, sino que se trata de una cuestión universal. Asimismo, el equipo ratificó su alineación con la FIA para trabajar en conjunto y erradicar estas conductas.",
-      "guion": "Alpine condena el acoso en redes tras el choque en Azerbaiyán",
+      "id": "9hkq7t",
+      "titulo": "Juan Pablo Montoya respalda a Franco Colapinto en la F1",
+      "copete": "El expiloto colombiano respaldó al argentino tras el accidente en el Gran Premio de Azerbaiyán. Los comisarios impusieron una sanción de cinco lugares para la próxima fecha.",
+      "cuerpo": "El expiloto colombiano Juan Pablo Montoya defendió al piloto Franco Colapinto tras el accidente múltiple que protagonizó en el Gran Premio de Azerbaiyán.\n\nTras el hecho, Colapinto asumió la responsabilidad por la maniobra. Por su parte, Montoya valoró la mentalidad competitiva del joven de veintitrés años y señaló que el error formó parte de una actitud de búsqueda de oportunidades en carrera.\n\nComo consecuencia del impacto, los comisarios deportivos confirmaron una sanción que obligará al argentino a retroceder cinco posiciones en la grilla de salida de la próxima competencia, programada para el siguiente fin de semana en Sepang.",
+      "guion": "Juan Pablo Montoya respalda a Franco Colapinto en la F1",
       "seccion": "Automovilismo",
       "medios": [
+        "El Eco de Tandil",
         "QZ Noticias (Mar del Plata)",
+        "Motorsport",
+        "La Nación",
+        "Infobae",
         "TN (Todo Noticias)",
+        "El Destape",
+        "Perfil",
+        "Página/12",
+        "A24",
+        "Ámbito",
+        "TyC Sports",
+        "Minuto Uno",
+        "C5N",
+        "Crónica",
+        "Radio Mitre",
+        "Canal 26",
+        "Diario Popular",
+        "Noticias Argentinas (NA)",
+        "El Día",
         "0221",
-        "El Marplatense"
+        "InfoRegión",
+        "El Marplatense",
+        "Mi8 (Canal 8 Mar del Plata)",
+        "Clarín",
+        "0223 (Mar del Plata)",
+        "La Nueva",
+        "NDEN – Noticias de Necochea",
+        "Doble Amarilla",
+        "Bolavip Argentina"
       ],
-      "enlace": "https://tn.com.ar/deportes/formula-1/2026/09/27/alpine-volvio-a-emitir-un-comunicado-sobre-sobre-los-acosos-en-redes-tras-el-choque-de-colapinto-en-azerbaiyan/",
+      "enlace": "https://www.lanacion.com.ar/deportes/automovilismo/montoya-respaldo-a-colapinto-tras-el-accidente-en-baku-admiro-a-la-gente-que-lo-intenta-nid27092026/",
       "teniaImagenLaFuente": true,
-      "fecha": "2026-09-27T12:02:53.000Z",
+      "fecha": "2026-09-27T12:02:03.000Z",
       "sinFecha": false,
-      "visto": "2026-09-28T03:31:01.875Z",
-      "relevancia": 80,
+      "visto": "2026-09-27T19:00:46.462Z",
+      "relevancia": 98,
       "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
+      "publicadaPor": "ia",
+      "publicadaCuando": "2026-09-27T12:10:34.244Z",
       "temas": [],
       "como": "automatica",
-      "claves": [
-        "Alpine emitió un nuevo comunicado institucional sobre el acoso en redes.",
-        "El pronunciamiento llega tras el choque protagonizado por Franco Colapinto.",
-        "La escudería aclaró que su repudio no va dirigido a ninguna afición en particular.",
-        "El equipo ratificó su trabajo junto a la FIA para frenar las agresiones digitales."
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
       ],
-      "seSabe": [
-        "La escudería Alpine emitió un comunicado oficial para repudiar el acoso en redes sociales.",
-        "El pronunciamiento se originó tras el Gran Premio de Azerbaiyán y el accidente que involucró a Franco Colapinto.",
-        "El equipo aclaró que las agresiones no van dirigidas a una afición, equipo o piloto en particular.",
-        "La institución ratificó su trabajo junto a la FIA y otras escuderías para erradicar la violencia digital."
-      ],
-      "textoRedes": "La escudería Alpine emitió un nuevo comunicado tras el Gran Premio de Azerbaiyán para rechazar las agresiones digitales registradas tras el accidente protagonizado por Franco Colapinto.",
+      "textoRedes": "El expiloto Juan Pablo Montoya respaldó a Franco Colapinto tras el accidente en el Gran Premio de Azerbaiyán. Los comisarios deportivos confirmaron una sanción de cinco posiciones para la próxima competencia.",
       "etiquetas": [
         "Franco Colapinto",
-        "Alpine",
-        "Redes sociales",
-        "Azerbaiyán"
+        "Juan Pablo Montoya",
+        "Formula 1",
+        "Gran Premio de Azerbaiyán"
       ],
       "fuentesConsultadas": [
         {
-          "medio": "TN (Todo Noticias)",
-          "enlace": "https://tn.com.ar/deportes/formula-1/2026/09/27/alpine-volvio-a-emitir-un-comunicado-sobre-sobre-los-acosos-en-redes-tras-el-choque-de-colapinto-en-azerbaiyan/",
-          "fecha": "2026-09-27T12:02:53.000Z",
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/deportes/automovilismo/montoya-respaldo-a-colapinto-tras-el-accidente-en-baku-admiro-a-la-gente-que-lo-intenta-nid27092026/",
+          "fecha": "2026-09-27T12:02:03.000Z",
           "oficial": false,
-          "aporte": "Detalló el comunicado oficial de Alpine, la aclaración sobre las críticas previas y la postura actual de la escudería."
-        },
-        {
-          "medio": "QZ Noticias (Mar del Plata)",
-          "enlace": "https://www.qznoticias.com/deportes/alpine-volvio-a-pronunciarse-tras-el-choque-de-colapinto-en-baku",
-          "fecha": "2026-09-27T13:16:57.000Z",
-          "oficial": false,
-          "aporte": "Informó sobre el contexto del accidente en el Gran Premio de Azerbaiyán y el involucramiento de los autos del equipo y de Lando Norris."
-        },
-        {
-          "medio": "0221",
-          "enlace": "https://www.0221.com.ar/deportes/alpine-volvio-condenar-el-acoso-redes-el-choque-franco-colapinto-azerbaiyan-n134887",
-          "fecha": "2026-09-27T12:29:00.000Z",
-          "oficial": false,
-          "aporte": "Sin información adicional en el resumen provisto."
-        },
-        {
-          "medio": "El Marplatense",
-          "enlace": "https://www.elmarplatense.com/alpine-salio-al-cruce-del-acoso-en-redes-tras-el-gp-de-azerbaiyan",
-          "fecha": "2026-09-27T13:19:13.000Z",
-          "oficial": false,
-          "aporte": "Sin información adicional en el resumen provisto."
+          "aporte": "Detalló las declaraciones de Juan Pablo Montoya y la sanción oficial aplicada por los comisarios deportivos de la Fórmula 1."
         }
       ],
       "antecedentes": [
         {
-          "id": "g2u3l1",
-          "titulo": "Flavio Briatore critica a Franco Colapinto tras el Gran Premio de Azerbaiyán",
-          "fecha": "2026-09-26T22:12:00.000Z",
-          "ruta": "/nota/flavio-briatore-critica-a-franco-colapinto-tras-el-gran-premio-de-g2u3l1"
-        },
-        {
-          "id": "mk94me",
-          "titulo": "Franco Colapinto choca con Pierre Gasly en el Gran Premio de Azerbaiyán",
-          "fecha": "2026-09-26T15:07:30.000Z",
-          "ruta": "/nota/franco-colapinto-choca-con-pierre-gasly-en-el-gran-premio-de-mk94me"
-        },
-        {
-          "id": "xtbw5",
-          "titulo": "Franco Colapinto largará noveno en el Gran Premio de Azerbaiyán",
-          "fecha": "2026-09-25T19:13:53.000Z",
-          "ruta": "/nota/franco-colapinto-largara-noveno-el-gran-premio-de-azerbaiyan-xtbw5"
+          "id": "zd48ar",
+          "titulo": "El respaldo de Juan Pablo Montoya a Franco Colapinto en la Fórmula 1",
+          "fecha": "2026-09-27T10:48:17.000Z",
+          "ruta": "/nota/juan-pablo-montoya-respalda-a-franco-colapinto-tras-el-choque-en-zd48ar"
         }
       ],
       "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron cuatro medios independientes.",
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
         "sugeridoPorIA": "MEDIA"
       },
-      "slug": "alpine-condena-el-acoso-en-redes-tras-el-choque-en-azerbaiyan",
-      "foto": {
-        "archivo": "fotos-notas/10or876.png",
-        "credito": "Foto: 0221"
-      }
+      "slug": "juan-pablo-montoya-respalda-a-franco-colapinto-en-la-f1"
     },
     {
       "id": "wyhea8",
@@ -2138,9 +1910,6 @@
         "Involucró a una utilitaria y a una motocicleta tipo motocross.",
         "El conductor de la moto fue trasladado al Hospital Municipal Felipe Fossati.",
         "Trabajaron en el lugar personal de Tránsito y servicios de emergencia."
-      ],
-      "noConfirmado": [
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
       ],
       "textoRedes": "Un motociclista debió ser hospitalizado tras protagonizar un choque con una utilitaria durante la madrugada del domingo en avenida Gonzáles Chaves y calle 9.",
       "etiquetas": [
@@ -2181,7 +1950,7 @@
       "fecha": "2026-09-27T04:28:35.901Z",
       "sinFecha": false,
       "visto": "2026-09-27T19:13:46.097Z",
-      "relevancia": 73,
+      "relevancia": 65,
       "local": true,
       "publicadaPor": "ia",
       "publicadaCuando": "2026-09-27T07:00:33.674Z",
@@ -2268,9 +2037,6 @@
         "Rodolfo Balinotti cuestionó a Eduardo Baca por la habilitación del autódromo Fangio",
         "El médico aseguró que el circuito cumple con las normas y supera las exigencias de la FIA",
         "Balinotti sostuvo que los pilotos dieron su conformidad con la traza y los arreglos"
-      ],
-      "noConfirmado": [
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
       ],
       "textoRedes": "El médico de la ACTC, Rodolfo Balinotti, defendió las obras en el autódromo Fangio y respondió a los cuestionamientos sobre la habilitación del circuito local en Balcarce.",
       "etiquetas": [
@@ -2934,6 +2700,78 @@
       "slug": "segun-el-proyecto-de-presupuesto-el-gasto-por-empleado-del-congreso"
     },
     {
+      "id": "pra9a0",
+      "titulo": "El Gobierno convoca al campo y a la industria por la ley de semillas",
+      "copete": "El Gobierno encabeza una reunión clave este lunes con la Mesa de Enlace y semilleros para avanzar en la reforma de la ley de semillas y definir el uso propio, un tema de alto interés para los productores de la región.",
+      "cuerpo": "El Instituto Nacional de Semillas (Inase) convoca para este lunes a la Mesa de Enlace y a la Asociación de Semilleros Argentinos (ASA) a una reunión en la Secretaría de Agricultura para debatir la reforma de la ley de semillas y el régimen de uso propio. El encuentro, previsto entre las 14 y las 16, estará encabezado por el presidente del Inase, Martín Famulari, junto con autoridades nacionales. El objetivo es identificar consensos entre productores y empresas tras tres encuentros técnicos previos, según los datos difundidos.\n\nLas negociaciones dejaron de lado la propuesta inicial de una excepción para explotaciones de hasta 500 hectáreas y pasaron a utilizar los deciles del Sistema de Información Simplificado Agrícola (SISA). El Ejecutivo prevé redactar un proyecto para enviar al Congreso en el plazo de un mes, una vez logrados los acuerdos necesarios.\n\nMientras el sector industrial y el ruralista discuten los alcances regulatorios, la reunión de este lunes servirá para evaluar el grado de entendimiento alcanzado antes de definir la redacción final del proyecto legislativo.",
+      "guion": "El Gobierno convoca al campo y a la industria por la ley de semillas",
+      "seccion": "Agro",
+      "medios": [
+        "Argenpapa",
+        "Agroempresario"
+      ],
+      "enlace": "https://agroempresario.com/publicacion/121864/ley-de-semillas-campo-e-industria-definen-el-uso-propio/",
+      "teniaImagenLaFuente": false,
+      "fecha": "2026-09-26T17:27:23.000Z",
+      "sinFecha": false,
+      "visto": "2026-09-28T02:26:47.869Z",
+      "relevancia": 18,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Reunión clave entre el Inase, la Mesa de Enlace y la industria semillera.",
+        "El eje del debate es el régimen de uso propio de semillas para la cosecha.",
+        "Se evalúa el uso de los deciles del SISA en lugar del límite de quinientas hectáreas.",
+        "El Gobierno proyecta enviar un proyecto de reforma al Congreso en un mes."
+      ],
+      "seSabe": [
+        "El Inase convoca a una reunión este lunes en la Secretaría de Agricultura, según informó el Gobierno.",
+        "Participarán la Mesa de Enlace y la Asociación de Semilleros Argentinos (ASA), de acuerdo con los datos oficiales.",
+        "El debate se centra en las condiciones para el uso propio de semillas en cultivos como soja y trigo, según las fuentes.",
+        "Las partes analizaron alternativas de uso propio gratuito y oneroso en reuniones previas, de acuerdo con la información difundida."
+      ],
+      "noConfirmado": [
+        "No se definió qué cantidad de hectáreas quedará comprendida para cada cultivo.",
+        "No existe todavía un borrador definitivo del proyecto de reforma ni un acuerdo global entre las entidades.",
+        "No se determinó si la Argentina avanzará hacia la adopción del Acta 1991 de Upov."
+      ],
+      "textoRedes": "El Gobierno encabeza este lunes una reunión con la Mesa de Enlace y semilleros para avanzar en la reforma de la ley de semillas y definir las condiciones del uso propio en cultivos clave para la producción agropecuaria.",
+      "etiquetas": [
+        "ley de semillas",
+        "gobierno",
+        "campo",
+        "industria",
+        "inase",
+        "soja",
+        "trigo"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Agroempresario",
+          "enlace": "https://agroempresario.com/publicacion/121864/ley-de-semillas-campo-e-industria-definen-el-uso-propio/",
+          "fecha": "2026-09-26T17:27:23.000Z",
+          "oficial": false,
+          "aporte": "Aportó los detalles sobre la convocatoria del Inase, la participación de la Mesa de Enlace y ASA, los ejes del debate sobre el uso propio, el uso del SISA y el contexto sobre el acta Upov."
+        },
+        {
+          "medio": "Argenpapa",
+          "enlace": "https://www.argenpapa.com.ar/noticia/17808-argentina-un-proyecto-busca-limitar-el-uso-propio-de-semillas-protegidas",
+          "fecha": null,
+          "oficial": false,
+          "aporte": "Aportó la referencia temática general sobre el debate entre el campo y la industria en torno al uso propio de semillas."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "el-gobierno-convoca-al-campo-y-a-la-industria-por-la-ley-de-semillas"
+    },
+    {
       "id": "1qm1ppu",
       "titulo": "La familia Crespi confirma que la fábrica seguirá abierta",
       "copete": "La emblemática planta de automóviles de Balcarce seguirá en marcha bajo la conducción de los hijos del fundador, Tulio Crespi, según informó la familia a través de un comunicado oficial.",
@@ -3415,10 +3253,10 @@
     },
     {
       "id": "2ruiao",
-      "titulo": "La Federación Argentina de Municipios rechaza los cambios en Zona Fría",
-      "copete": "La Federación Argentina de Municipios repudió la modificación del régimen de Zona Fría aprobada por el Senado impulsada por el gobierno nacional, al advertir que afectará a millones de usuarios de gas.",
-      "cuerpo": "La entidad, que nuclea a más de quinientos intendentes de todo el país, sostuvo en el texto difundido que la modificación legislativa provocará un enorme daño a millones de hogares que dependen del beneficio para afrontar los costos de calefacción durante los meses de invierno en provincias como Buenos Aires y Córdoba.\n\nDesde la organización conducida por el intendente Fernando Espinoza calificaron la modificación del esquema como un golpe directo al bolsillo de las familias y advirtieron sobre el fuerte impacto económico que tendrá la reducción del alcance de los subsidios en las tarifas de gas de las regiones afectadas.",
-      "guion": "La Federación Argentina de Municipios rechaza los cambios en Zona Fría",
+      "titulo": "La Federacion Argentina de Municipios rechaza el fin de las zonas frias",
+      "copete": "La Federacion Argentina de Municipios critico la modificacion del regimen de tarifa diferencial de gas aprobada por el Senado nacional, una medida que afecta a distintas provincias y genera impacto en los usuarios.",
+      "cuerpo": "El nucleo de intendentes sostuvo mediante un comunicado que la alteracion del esquema representa un golpe directo al bolsillo de las familias y un enorme dano para las regiones alcanzadas, entre las que se encuentran diversos partidos de la provincia de Buenos Aires y otras jurisdicciones del territorio nacional.\n\nLa medida legislativa habia generado previamente debate parlamentario hasta su sancion en la camara alta, lo que provoco la reaccion institucional de la federacion en defensa de los usuarios de las zonas afectadas por el clima.",
+      "guion": "La Federacion Argentina de Municipios rechaza el fin de las zonas frias",
       "seccion": "Economía",
       "medios": [
         "El Eco de Tandil",
@@ -3434,8 +3272,6 @@
         "Zona Norte Diario",
         "El Marplatense",
         "Mi8 (Canal 8 Mar del Plata)",
-        "Punto Noticias",
-        "Crónica",
         "Radio Mitre",
         "Infobrisas (Radio Brisas)"
       ],
@@ -3446,32 +3282,26 @@
       "visto": "2026-09-28T02:01:00.043Z",
       "relevancia": 58,
       "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
+      "publicadaPor": "ia",
+      "publicadaCuando": "2026-09-28T04:11:48.598Z",
       "temas": [],
       "como": "automatica",
       "claves": [
-        "El Senado aprobó la modificación del régimen de Zona Fría impulsada por el Gobierno nacional.",
-        "La Federación Argentina de Municipios emitió un comunicado para repudiar la medida.",
-        "La entidad advirtió que la reforma afectará a millones de usuarios de gas en distintas provincias.",
-        "El sector sostuvo que el cambio en las tarifas diferenciales perjudicará el bolsillo de las familias."
-      ],
-      "seSabe": [
-        "El Senado de la Nación sancionó la modificación del Régimen de Zona Fría por impulso del gobierno de Javier Milei.",
-        "La Federación Argentina de Municipios emitió un comunicado para repudiar los cambios.",
-        "La entidad representa a más de quinientos intendentes de todo el país.",
-        "El comunicado advierte que la medida afectará a millones de usuarios de gas en provincias como Buenos Aires y Córdoba."
+        "La Federacion Argentina de Municipios rechazo los cambios en el regimen de Zona Fria.",
+        "La entidad advirtio que la medida aprobada en el Senado afectara a millones de usuarios de gas.",
+        "El nucleo de intendentes calificado como un golpe al bolsillo la quita de tarifas diferenciales."
       ],
       "noConfirmado": [
-        "No se detalló el listado completo de todas las localidades específicas que quedarán fuera del beneficio en el nuevo esquema."
+        "No se detallaron aun los alcances especificos distrito por distrito del nuevo cuadro tarifario.",
+        "No trascendio el impacto economico exacto que tendra la medida en cada factura individual."
       ],
-      "textoRedes": "La Federación Argentina de Municipios repudió la modificación del régimen de Zona Fría sancionada en el Senado y advirtió que la quita de tarifas diferenciales afectará a millones de usuarios de gas en provincias como Buenos Aires.",
       "etiquetas": [
-        "Zona Fria",
-        "Tarifas",
-        "Gas",
-        "FAM",
-        "Senado"
+        "Zonas Frias",
+        "tarifas",
+        "gas",
+        "Senado",
+        "Federacion Argentina de Municipios",
+        "gobierno nacional"
       ],
       "fuentesConsultadas": [
         {
@@ -3479,56 +3309,56 @@
           "enlace": "https://noticiasargentinas.com/politica/fam-repudio-la-derogacion-del-regimen-de-zonas-frias---un-golpe-directo-al-bolsillo-_a6ab7c7879a676c64cfc57f58",
           "fecha": "2026-09-26T13:39:29.218Z",
           "oficial": false,
-          "aporte": "Informó sobre el comunicado de la FAM y la definición de la medida como un golpe al bolsillo."
+          "aporte": null
         },
         {
           "medio": "El Eco de Tandil",
           "enlace": "https://www.eleco.com.ar/politica/la-federacion-argentina-de-municipios-definio-como-un-ataque-los-cambios-en-el-regimen-de-zona-fria",
           "fecha": "2026-09-27T15:18:26.000Z",
           "oficial": false,
-          "aporte": "Ratificó el rechazo de la entidad municipal ante los cambios sancionados."
+          "aporte": null
         },
         {
           "medio": "LU9 Mar del Plata",
           "enlace": "https://www.lu9mardelplata.com.ar/zona-fria-la-fam-repudio-la-reforma-y-advirtio-que-es-un-golpe-directo-al-bolsillo-de-las-familias",
           "fecha": "2026-09-27T21:23:51.000Z",
           "oficial": false,
-          "aporte": "Señaló que la FAM representa a más de quinientos intendentes y que la norma fue impulsada por Milei."
+          "aporte": null
         },
         {
           "medio": "QZ Noticias (Mar del Plata)",
           "enlace": "https://www.qznoticias.com/el-pais/zona-fria-intendentes-rechazaron-la-reforma-y-alertaron-por-el-impacto-en-mar-del-plata",
           "fecha": "2026-09-27T13:22:31.000Z",
           "oficial": false,
-          "aporte": "Indicó que la reforma generó un fuerte rechazo entre jefes comunales de distintas regiones."
+          "aporte": null
         },
         {
           "medio": "Ecos Diarios (Necochea)",
           "enlace": "https://elecos.com.ar/zona-fria-la-fam-repudio-la-reforma-y-advirtio-que-es-un-golpe-directo-al-bolsillo-de-las-familias",
           "fecha": "2026-09-27T21:14:16.000Z",
           "oficial": false,
-          "aporte": "Consignó el repudio de la federación a la modificación del régimen de gas."
+          "aporte": null
         },
         {
           "medio": "La Noticia 1",
           "enlace": "https://www.lanoticia1.com/noticia/zona-fria-la-fam-rechazo-la-reforma-y-advirtio-por-el-impacto-en-las-familias-bonaerenses",
           "fecha": "2026-09-26T23:10:24.000Z",
           "oficial": false,
-          "aporte": "Aportó la fecha de difusión del pronunciamiento gremialinstitucional."
+          "aporte": null
         },
         {
           "medio": "TN (Todo Noticias)",
           "enlace": "https://tn.com.ar/politica/2026/09/26/la-federacion-argentina-de-municipios-critico-el-fin-del-regimen-de-zona-fria-es-un-golpe-directo-al-bolsillo/",
           "fecha": "2026-09-26T19:15:12.000Z",
           "oficial": false,
-          "aporte": "Detalló las advertencias sobre el perjuicio a los hogares dependientes del subsidio."
+          "aporte": null
         },
         {
           "medio": "El Destape",
           "enlace": "https://www.eldestapeweb.com/politica/500-intendentes-repudiaron-derogacion-zonas-frias-golpe-bolsillo-202692614754",
           "fecha": "2026-09-26T17:07:54.000Z",
           "oficial": false,
-          "aporte": "Mencionó la advertencia sobre el enorme daño a millones de usuarios."
+          "aporte": null
         },
         {
           "medio": "Ámbito",
@@ -3580,23 +3410,9 @@
           "aporte": null
         },
         {
-          "medio": "Infobrisas (Radio Brisas)",
-          "enlace": "https://www.infobrisas.com/noticias/2026/09/27/109342-la-federacion-argentina-de-municipios-repudio-el-nuevo-regimen-de-zona-fria-un-golpe-directo-al-bolsillo-de-las-familias",
-          "fecha": "2026-09-27T13:21:26.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
           "medio": "Punto Noticias",
           "enlace": "https://puntonoticias.com/la-fam-cuestiono-la-eliminacion-de-la-zona-fria-es-otro-ataque-a-las-familias-argentinas/",
           "fecha": "2026-09-26T14:16:29.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Agencia DIB",
-          "enlace": "https://dib.com.ar/politica/para-la-federacion-argentina-municipios-los-cambios-la-zona-fria-son-un-ataque-milei-n56052",
-          "fecha": "2026-09-26T15:15:00.000Z",
           "oficial": false,
           "aporte": null
         },
@@ -3611,6 +3427,20 @@
           "medio": "Radio Mitre",
           "enlace": "https://radiomitre.cienradios.com/sociedad/la-federacion-argentina-de-municipios-apunto-contra-el-fin-del-regimen-de-zona-fria-un-golpe-directo-al-bolsillo/",
           "fecha": "2026-09-26T21:13:10.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "El Día",
+          "enlace": "https://www.eldia.com/politica-y-economia/mas-criticas-por-cambios-al-regimen-de-zona-fria-politica-y-economia_1790488348",
+          "fecha": "2026-09-27T05:52:28.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Infobrisas (Radio Brisas)",
+          "enlace": "https://www.infobrisas.com/noticias/2026/09/27/109342-la-federacion-argentina-de-municipios-repudio-el-nuevo-regimen-de-zona-fria-un-golpe-directo-al-bolsillo-de-las-familias",
+          "fecha": "2026-09-27T13:21:26.000Z",
           "oficial": false,
           "aporte": null
         }
@@ -3731,36 +3561,11 @@
       "guion": "George Russell gana el Gran Premio de Azerbaiyán en la Fórmula 1",
       "seccion": "Automovilismo",
       "medios": [
-        "El Eco de Tandil",
         "Motorsport",
         "La Nación",
-        "Infobae",
         "TN (Todo Noticias)",
         "El Destape",
-        "Perfil",
-        "Página/12",
-        "A24",
-        "Ámbito",
-        "TyC Sports",
-        "Minuto Uno",
-        "C5N",
-        "Crónica",
-        "Radio Mitre",
-        "Canal 26",
-        "Diario Popular",
-        "Noticias Argentinas (NA)",
-        "El Día",
-        "0221",
-        "InfoRegión",
-        "QZ Noticias (Mar del Plata)",
-        "El Marplatense",
-        "Mi8 (Canal 8 Mar del Plata)",
-        "NDEN – Noticias de Necochea",
-        "Doble Amarilla",
-        "Bolavip Argentina",
-        "Clarín",
-        "0223 (Mar del Plata)",
-        "La Nueva"
+        "Radio Mitre"
       ],
       "enlace": "https://es.motorsport.com/f1/news/clasificacion-mundial-pilotos-equipos-formula1-2026-azerbaiyan-baku/10859208/?utm_source=RSS&utm_medium=referral&utm_campaign=RSS-F1&utm_term=News&utm_content=es",
       "teniaImagenLaFuente": true,
@@ -3861,15 +3666,14 @@
       "seccion": "Agro",
       "medios": [
         "Clarín",
-        "ANDigital",
-        "La Verdad de Ayacucho"
+        "ANDigital"
       ],
       "enlace": "https://www.clarin.com/rural/don-cholo-consagro-gran-campeon-macho-primavera-juanita-logro-gran-campeon-ternero_0_aIaRZA7AUo.html",
       "teniaImagenLaFuente": true,
       "fecha": "2026-09-26T08:12:12.000Z",
       "sinFecha": false,
       "visto": "2026-09-26T09:00:32.976Z",
-      "relevancia": 42,
+      "relevancia": 28,
       "local": false,
       "publicadaPor": "ia",
       "publicadaCuando": "2026-09-26T08:53:21.927Z",
@@ -3931,78 +3735,6 @@
       "slug": "cabana-don-cholo-gana-el-gran-campeon-macho-de-la-semana-angus"
     },
     {
-      "id": "1yjy49a",
-      "titulo": "El Concejo reconoce a alumnos de la Escuela Primaria por su proyecto",
-      "copete": "El Concejo Deliberante distinguió durante su última sesión a estudiantes de la Escuela Primaria que impulsaron una iniciativa educativa local.",
-      "cuerpo": "El Concejo Deliberante otorgó un reconocimiento en su última sesión a los alumnos de la Escuela Primaria que desarrollaron la iniciativa pedagógica denominada \"Balcarce se recorre jugando\", una propuesta orientada a estimular el conocimiento de los atractivos del distrito.\n\nComo se había informado a mediados de septiembre, la propuesta surgió de manera conjunta con la Subsecretaría de Turismo para descubrir la localidad mediante un recorrido lúdico por diferentes puntos de interés comunitario. El cuerpo deliberativo ya había dado el visto bueno por unanimidad al expediente en una jornada previa.\n\nEl proyecto busca fomentar la participación de los jóvenes en la difusión del patrimonio local a través de dinámicas recreativas.",
-      "guion": "El Concejo reconoce a alumnos de la Escuela Primaria por su proyecto",
-      "seccion": "Balcarce",
-      "medios": [
-        "El Diario Balcarce"
-      ],
-      "enlace": "https://eldiariobalcarce.com.ar/reconocieron-a-alumnos-de-la-escuela-n-3-por-su-proyecto-balcarce-se-recorre-jugando-217",
-      "teniaImagenLaFuente": false,
-      "fecha": "2026-09-26T03:30:38.768Z",
-      "sinFecha": true,
-      "visto": "2026-09-26T03:30:38.768Z",
-      "relevancia": 53,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "El Concejo Deliberante distinguió a estudiantes de la Escuela Primaria local",
-        "La distinción se otorgó durante la última sesión del cuerpo legislativo",
-        "La propuesta busca difundir puntos de interés mediante un recorrido lúdico",
-        "El proyecto había sido aprobado por unanimidad en una labor conjunta con Turismo"
-      ],
-      "noConfirmado": [
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "El Concejo Deliberante reconoció a los alumnos de la Escuela Primaria que desarrollaron el proyecto educativo Balcarce se recorre jugando durante la última sesión legislativa.",
-      "etiquetas": [
-        "Concejo Deliberante",
-        "Escuela Primaria",
-        "Balcarce"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "El Diario Balcarce",
-          "enlace": "https://eldiariobalcarce.com.ar/reconocieron-a-alumnos-de-la-escuela-n-3-por-su-proyecto-balcarce-se-recorre-jugando-217",
-          "fecha": "2026-09-25T22:45:26.000Z",
-          "oficial": false,
-          "aporte": "Informó sobre el reconocimiento del Concejo Deliberante a los alumnos en la última sesión por su proyecto educativo."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "1d356vs",
-          "titulo": "El Concejo aprueba el proyecto escolar Balcarce se recorre jugando en Balcarce",
-          "fecha": "2026-09-24T23:00:34.000Z",
-          "ruta": "/nota/el-concejo-aprueba-un-juego-turistico-escolar-en-balcarce-1d356vs"
-        },
-        {
-          "id": "jul4v3",
-          "titulo": "Hoy Balcarce «se recorre jugando».",
-          "fecha": "2026-09-16T15:09:41.000Z",
-          "ruta": "/nota/hoy-balcarce-se-recorre-jugando-jul4v3"
-        },
-        {
-          "id": "ntjgh8",
-          "titulo": "El Concejo aprueba pedir la baja de tasas a taxis y remises en Balcarce",
-          "fecha": "2026-09-25T22:43:54.000Z",
-          "ruta": "/nota/el-concejo-aprueba-pedir-la-baja-de-tasas-a-taxis-y-remises-en-ntjgh8"
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "el-concejo-reconoce-a-alumnos-de-la-escuela-primaria-por-su-proyecto"
-    },
-    {
       "id": "1sj7dfp",
       "titulo": "Emiten alerta amarilla por tormentas y lluvias en varias provincias",
       "copete": "El Servicio Meteorológico Nacional emitió advertencias por precipitaciones intensas, ráfagas y posible caída de granizo en distintos distritos del país para el fin de semana y el inicio de la semana.",
@@ -4037,11 +3769,11 @@
         "El Marplatense",
         "Mi8 (Canal 8 Mar del Plata)",
         "Qué Digital",
-        "Infobrisas (Radio Brisas)",
-        "NDEN – Noticias de Necochea",
         "Página/12",
         "La Nueva",
-        "Infoeme"
+        "Infoeme",
+        "Infobrisas (Radio Brisas)",
+        "NDEN – Noticias de Necochea"
       ],
       "enlace": "https://www.lanacion.com.ar/sociedad/hay-alerta-amarilla-por-tormentas-y-lluvias-para-este-sabado-26-de-septiembre-las-provincias-nid26092026/",
       "teniaImagenLaFuente": true,
@@ -4607,91 +4339,6 @@
       "slug": "las-tc-pick-up-se-presentan-en-balcarce-con-una-multitud"
     },
     {
-      "id": "t9vczu",
-      "titulo": "Lautaro Martínez anticipa el nuevo ciclo de la Selección",
-      "copete": "El delantero se refirió al rearmado del equipo nacional ante la inminente despedida de Lionel Messi. El combinado se prepara para afrontar una serie de amistosos en el país.",
-      "cuerpo": "El delantero de la Selección Argentina Lautaro Martínez analizó el inicio de una nueva etapa para el combinado nacional ante la inminente salida de Lionel Messi y el recambio generacional en el plantel. En declaraciones periodísticas, el atacante señaló que el equipo deberá comenzar desde cero en este nuevo proceso y destacó la importancia de sostener el legado de los referentes que formaron parte del ciclo anterior.\n\nEl conjunto que dirige Lionel Scaloni se encuentra en plena preparación para afrontar tres encuentros amistosos en el país durante la actual fecha FIFA, con partidos programados frente a Bolivia, Burkina Faso y Benín. Estos compromisos marcan los primeros desafíos del equipo tras la derrota en la final frente a España en la Copa del Mundo 2026.\n\nPor su parte, el delantero del Inter de Milán valoró la incorporación de nuevos futbolistas al plantel y remarcó la experiencia de aquellos jugadores que suman varios años en el seleccionado, con el objetivo de mantener la competitividad de cara al futuro.",
-      "guion": "Lautaro Martínez anticipa el nuevo ciclo de la Selección",
-      "seccion": "Fútbol",
-      "medios": [
-        "El Destape",
-        "Bolavip Argentina"
-      ],
-      "enlace": "https://bolavip.com/ar/seleccion/lautaro-martinez-analizo-formula-de-la-seleccion-argentina-sin-lionel-messi-arrancar-de-cero",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-26T02:17:23.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-28T02:01:00.043Z",
-      "relevancia": 52,
-      "local": false,
-      "publicadaPor": "ia",
-      "publicadaCuando": "2026-09-28T03:52:33.537Z",
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "La Selección Argentina afronta una serie de amistosos en el país.",
-        "Lautaro Martínez se refirió al recambio generacional en el equipo.",
-        "El plantel se prepara para los partidos frente a Bolivia, Burkina Faso y Benín."
-      ],
-      "seSabe": [
-        "La Selección Argentina disputará amistosos contra Bolivia, Burkina Faso y Benín en el país.",
-        "Los encuentros forman parte de la preparación del equipo tras la Copa del Mundo 2026 bajo la dirección de Lionel Scaloni.",
-        "Lautaro Martínez declaró que el plantel afrontará una renovación y deberá iniciar un nuevo proceso."
-      ],
-      "noConfirmado": [
-        "No se especificaron las fechas exactas de los partidos amistosos en el cuerpo de la información provista por las fuentes."
-      ],
-      "textoRedes": "Lautaro Martínez habló sobre el rearmado de la Selección Argentina ante la inminente despedida de Lionel Messi y el inicio de un nuevo proceso con partidos amistosos en el país.",
-      "etiquetas": [
-        "Selección Argentina",
-        "Lautaro Martínez",
-        "Lionel Messi",
-        "Lionel Scaloni"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Bolavip Argentina",
-          "enlace": "https://bolavip.com/ar/seleccion/lautaro-martinez-analizo-formula-de-la-seleccion-argentina-sin-lionel-messi-arrancar-de-cero",
-          "fecha": "2026-09-26T02:17:23.000Z",
-          "oficial": false,
-          "aporte": "Aportó las declaraciones de Lautaro Martínez sobre el recambio en la Selección y el calendario de amistosos."
-        },
-        {
-          "medio": "El Destape",
-          "enlace": "https://www.eldestapeweb.com/deportes/arrancar-cero-frase-lautaro-martinez-lionel-messi-seleccion-argentina-2026926123457",
-          "fecha": "2026-09-26T15:34:57.410Z",
-          "oficial": false,
-          "aporte": "Aportó la cobertura inicial del tema sin sumar datos adicionales al texto principal."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "1gqd04y",
-          "titulo": "La foto casera que reveló la esposa de Dibu Martínez tras los dichos sobre el retiro de Lionel Messi",
-          "fecha": "2026-09-23T04:13:00.000Z",
-          "ruta": "/nota/la-foto-casera-que-revelo-la-esposa-de-dibu-martinez-tras-los-dichos-1gqd04y"
-        },
-        {
-          "id": "1uw8pf",
-          "titulo": "La foto casera que reveló la esposa de Dibu Martínez tras los dichos sobre el retiro de Lionel Messi",
-          "fecha": "2026-09-23T04:13:00.000Z",
-          "ruta": "/nota/la-foto-casera-que-revelo-la-esposa-de-dibu-martinez-tras-los-dichos-1uw8pf"
-        },
-        {
-          "id": "1nud4zm",
-          "titulo": "Entradas para la despedida de Lionel Messi de la Selección Argentina: paso a paso para comprarlas",
-          "fecha": "2026-09-24T19:05:00.000Z",
-          "ruta": "/nota/entradas-para-la-despedida-de-lionel-messi-de-la-seleccion-argentina-1nud4zm"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron dos medios independientes.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "lautaro-martinez-anticipa-el-nuevo-ciclo-de-la-seleccion"
-    },
-    {
       "id": "62c0pz",
       "titulo": "Alex Barrena gana el Challenger de Buenos Aires ante Facundo Mena",
       "copete": "El tenista Alex Barrena se consagró campeón del Challenger de Buenos Aires al vencer en la final a Facundo Mena por 6-4 y 6-0. El torneo se disputó sobre polvo de ladrillo en el Racket Club de Palermo.",
@@ -4873,21 +4520,19 @@
       "medios": [
         "News Balcarce (FM 91.7)",
         "Infórmese Primero (FM 104.9)",
-        "Municipalidad de Balcarce",
         "El Diario Balcarce",
         "Diario La Vanguardia",
+        "0223 (Mar del Plata)",
+        "Municipalidad de Balcarce",
         "El Destape",
         "ANDigital",
-        "Sendero Regional",
-        "NDEN – Noticias de Necochea",
-        "0223 (Mar del Plata)",
         "QZ Noticias (Mar del Plata)",
         "Diario Popular",
         "Noticias Argentinas (NA)",
         "Campeones",
         "Agencia DIB",
-        "Radio Gabal (FM 104.1)",
         "Infocielo",
+        "Radio Gabal (FM 104.1)",
         "La Tecla"
       ],
       "enlace": "http://www.informeseprimero.com.ar/2026/09/el-autodromo-juan-manuel-fangio-volvio.html",
@@ -5063,10 +4708,10 @@
         "Olé",
         "C5N",
         "Noticias Argentinas (NA)",
-        "Bolavip Argentina",
         "0223 (Mar del Plata)",
         "Minuto Uno",
-        "La Nueva"
+        "La Nueva",
+        "Bolavip Argentina"
       ],
       "enlace": "https://www.infobae.com/deportes/2026/09/25/polemica-provocacion-de-la-brasilena-dumont-a-la-argentina-ailin-perez-antes-de-la-pelea-estelar-por-ufc-le-tiro-preservativos-y-dolares/",
       "teniaImagenLaFuente": true,
@@ -5130,34 +4775,6 @@
           "aporte": null
         },
         {
-          "medio": "Bolavip Argentina",
-          "enlace": "https://bolavip.com/ar/polideportivo/ailin-perez-fue-agredida-por-norma-dumont-tras-ganar-la-pelea-por-ufc",
-          "fecha": "2026-09-27T03:26:15.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Bolavip Argentina",
-          "enlace": "https://bolavip.com/ar/polideportivo/cuanto-dinero-gano-ailin-perez-por-vencer-a-norma-dumont-en-su-pelea-de-ufc",
-          "fecha": "2026-09-27T02:22:01.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Bolavip Argentina",
-          "enlace": "https://bolavip.com/ar/polideportivo/ailin-perez-quiere-ser-campeona-de-ufc-derroto-a-norma-dumont-en-una-pelea-caliente-y-quedo-a-un-paso-del-titulo",
-          "fecha": "2026-09-27T02:10:21.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Bolavip Argentina",
-          "enlace": "https://bolavip.com/ar/polideportivo/a-que-hora-es-la-pelea-de-ailin-perez-vs-norma-dumont-en-ufc",
-          "fecha": "2026-09-26T13:00:00.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
           "medio": "0223 (Mar del Plata)",
           "enlace": "https://www.0223.com.ar/nota/2026-9-27-8-16-0-ailin-perez-no-para-vencio-a-norma-dumont-sumo-su-septima-victoria-y-quedo-a-un-paso-del-titulo-de-ufc",
           "fecha": "2026-09-27T11:16:00.000Z",
@@ -5175,6 +4792,27 @@
           "medio": "La Nueva",
           "enlace": "https://www.lanueva.com/nota/2026-9-27-15-53-0-ailin-perez-derroto-por-decision-unanime-a-norma-dumont-y-suma-siete-triunfos-seguidos-en-ufc",
           "fecha": "2026-09-27T19:02:58.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Bolavip Argentina",
+          "enlace": "https://bolavip.com/ar/polideportivo/ailin-perez-fue-agredida-por-norma-dumont-tras-ganar-la-pelea-por-ufc",
+          "fecha": "2026-09-27T03:26:15.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Bolavip Argentina",
+          "enlace": "https://bolavip.com/ar/polideportivo/cuanto-dinero-gano-ailin-perez-por-vencer-a-norma-dumont-en-su-pelea-de-ufc",
+          "fecha": "2026-09-27T02:22:01.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Bolavip Argentina",
+          "enlace": "https://bolavip.com/ar/polideportivo/ailin-perez-quiere-ser-campeona-de-ufc-derroto-a-norma-dumont-en-una-pelea-caliente-y-quedo-a-un-paso-del-titulo",
+          "fecha": "2026-09-27T02:10:21.000Z",
           "oficial": false,
           "aporte": null
         }
@@ -5314,117 +4952,6 @@
       "slug": "suramericanos-una-caida-y-golpe-de-levaggi-no-impidio-el-doble-podio"
     },
     {
-      "id": "1vrqpb6",
-      "titulo": "YPF aumenta uno por ciento el precio de sus combustibles",
-      "copete": "La petrolera estatal aplicó una suba del uno por ciento en sus combustibles desde este sábado. La medida se suma a los incrementos previos de otras compañías y responde al impacto internacional por el conflicto en Medio Oriente.",
-      "cuerpo": "La petrolera estatal YPF aplicó desde este sábado a las cero horas un incremento del uno por ciento en el precio de todos sus combustibles.\n\nEl presidente y CEO de la empresa, Horacio Marín, había anticipado la posibilidad de ajustes ante la tensión internacional. La suba dispuesta por la firma estatal se ubica por debajo de los incrementos de entre el dos y el cinco por ciento aplicados previamente por otras compañías privadas como Shell, Axion y Puma.\n\nDesde la compañía explicaron que se sostiene la política de micropricing para realizar ajustes específicos según la oferta, la demanda y las zonas geográficas, en el marco de la estrategia orientada a sostener el consumo frente a señales de caída en la demanda del interior del país.",
-      "guion": "Ypf aumenta uno por ciento el precio de sus combustibles",
-      "seccion": "Economía",
-      "medios": [
-        "Infórmese Primero (FM 104.9)",
-        "El Destape",
-        "Minuto Uno",
-        "Diario Popular",
-        "0221",
-        "InfoRegión",
-        "QZ Noticias (Mar del Plata)",
-        "El Marplatense",
-        "Punto Noticias"
-      ],
-      "enlace": "https://www.eldestapeweb.com/economia/combustibles-aumentan-1-este-sabado-efectos-guerra-medio-oriente-2026925192425",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-25T22:24:25.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-28T03:47:03.826Z",
-      "relevancia": 58,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "YPF aumentó uno por ciento sus combustibles desde este sábado.",
-        "La suba responde al impacto internacional del conflicto en Medio Oriente.",
-        "Otras compañías privadas aplicaron incrementos de entre el dos y el cinco por ciento."
-      ],
-      "seSabe": [
-        "YPF aplicó un aumento del uno por ciento en todos sus combustibles desde este sábado a las cero horas.",
-        "La compañía estatal vinculó la medida al impacto de la situación en Medio Oriente sobre el valor del petróleo.",
-        "Otras empresas del sector como Shell, Axion y Puma aplicaron subas previas de entre el dos y el cinco por ciento."
-      ],
-      "textoRedes": "YPF aplicó un aumento del uno por ciento en el precio de sus combustibles desde este sábado, tras las subas de otras petroleras y en un contexto internacional marcado por el conflicto en Medio Oriente.",
-      "etiquetas": [
-        "YPF",
-        "combustibles",
-        "aumento",
-        "petróleo"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "El Destape",
-          "enlace": "https://www.eldestapeweb.com/economia/combustibles-aumentan-1-este-sabado-efectos-guerra-medio-oriente-2026925192425",
-          "fecha": "2026-09-25T22:24:25.000Z",
-          "oficial": false,
-          "aporte": "Detalló los porcentajes de aumento, los valores internacionales del petróleo y los motivos vinculados al conflicto en Medio Oriente."
-        },
-        {
-          "medio": "Infórmese Primero (FM 104.9)",
-          "enlace": "http://www.informeseprimero.com.ar/2026/09/ypf-aumento-1-el-precio-de-sus.html",
-          "fecha": "2026-09-26T13:30:28.264Z",
-          "oficial": false,
-          "aporte": "Confirmó la aplicación de la suba desde este sábado a las cero horas."
-        },
-        {
-          "medio": "Minuto Uno",
-          "enlace": "https://www.minutouno.com/economia/ypf-aumenta-todos-sus-combustibles-este-sabado-cuanto-se-va-el-litro-nafta-n6326890",
-          "fecha": "2026-09-25T22:38:00.000Z",
-          "oficial": false,
-          "aporte": "Indicó que las compañías privadas aplicaron aumentos previos de entre el dos y el cinco por ciento."
-        },
-        {
-          "medio": "Diario Popular",
-          "enlace": "https://www.diariopopular.com.ar/economia/desde-este-sabado-ypf-aumenta-un-1-los-precios-sus-combustibles-n921548",
-          "fecha": "2026-09-26T10:06:00.000Z",
-          "oficial": false,
-          "aporte": "Aportó mención sobre la noticia sin texto adicional."
-        },
-        {
-          "medio": "InfoRegión",
-          "enlace": "https://www.inforegion.com.ar/2026/09/26/ypf-tambien-aumento-el-precio-de-sus-combustibles/",
-          "fecha": "2026-09-26T11:05:07.000Z",
-          "oficial": false,
-          "aporte": "Ratificó la aplicación de la suba de YPF en sintonía con otras petroleras y la política de micropricing."
-        },
-        {
-          "medio": "QZ Noticias (Mar del Plata)",
-          "enlace": "https://www.qznoticias.com/el-pais/ypf-aumenta-desde-hoy-un-1-el-precio-de-los-combustibles",
-          "fecha": "2026-09-26T12:01:57.000Z",
-          "oficial": false,
-          "aporte": "Aportó mención sobre la noticia sin texto adicional."
-        },
-        {
-          "medio": "El Marplatense",
-          "enlace": "https://www.elmarplatense.com/ypf-aplico-un-aumento-del-1-en-el-precio-de-sus-combustibles",
-          "fecha": "2026-09-26T13:41:39.000Z",
-          "oficial": false,
-          "aporte": "Aportó mención sobre la noticia sin texto adicional."
-        },
-        {
-          "medio": "Punto Noticias",
-          "enlace": "https://puntonoticias.com/ypf-aplicara-un-aumento-del-1-a-los-combustibles-desde-este-sabado/",
-          "fecha": "2026-09-26T12:40:53.000Z",
-          "oficial": false,
-          "aporte": "Aportó mención sobre la noticia sin texto adicional."
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron 8 medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "ypf-aumenta-uno-por-ciento-el-precio-de-sus-combustibles"
-    },
-    {
       "id": "13eigya",
       "titulo": "La compra de dólares experimenta una baja en agosto",
       "copete": "La demanda de divisas por parte de las personas humanas registró una reducción respecto al mes anterior, según el último informe del Banco Central.",
@@ -5453,9 +4980,6 @@
         "Los argentinos redujeron la compra de dólares en agosto respecto a julio.",
         "El Banco Central informó que 1,7 millones de personas compraron billetes.",
         "Parte de las divisas quedaron depositadas en bancos locales y otras se destinaron a gastos con tarjetas."
-      ],
-      "noConfirmado": [
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
       ],
       "textoRedes": "La demanda de dólares registró una baja en agosto y los argentinos compraron menos divisas que en julio, según el último informe difundido por el Banco Central.",
       "etiquetas": [
@@ -5577,69 +5101,6 @@
       "slug": "el-banco-central-frena-la-compra-de-divisas-tras-la-suba-del-dolar"
     },
     {
-      "id": "by46mt",
-      "titulo": "Reconocen a productores de papa por prácticas regenerativas",
-      "copete": "McCain Foods y Arcos Dorados premiaron a productores locales en la segunda edición de su desafío ambiental. La iniciativa busca mejorar la salud del suelo y optimizar el uso de insumos en la región.",
-      "cuerpo": "La evaluación de los datos, desarrollada entre noviembre de 2025 y junio de 2026, abarcó diez indicadores ambientales y fue auditada por Carbon Group.\n\nEl primer puesto fue para Potato Growers, seguido por Agropecuaria La Gándara en el segundo lugar, mientras que el tercero quedó compartido por Luciano Garrido y Ricardo Alberto Strada.\n\nRomina Varela, Directora de Agricultura de McCain Foods Argentina, señaló que los resultados demuestran que el camino se construye de forma colaborativa. Por su parte, el ganador Gastón Viani remarcó que medir los indicadores campaña a campaña permite sostener las prácticas en el tiempo.",
-      "guion": "Reconocen a productores de papa por practicas regenerativas",
-      "seccion": "Agro",
-      "medios": [
-        "Argenpapa",
-        "iProfesional"
-      ],
-      "enlace": "https://www.argenpapa.com.ar/noticia/17688-argentina-mccain-foods-y-arcos-dorados-reconocen-a-productores-de-papa-por-su-compromiso-con-la-agricultura-regenerativa",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-25T20:35:00.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-28T03:01:51.643Z",
-      "relevancia": 36,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Premiaron a productores de papa de Balcarce y la región.",
-        "El primer puesto fue para Potato Growers.",
-        "La evaluación midió diez indicadores ambientales auditados por Carbon Group.",
-        "El certamen fue impulsado por McCain Foods y Arcos Dorados."
-      ],
-      "seSabe": [
-        "Potato Growers obtuvo el primer puesto del desafío.",
-        "Agropecuaria La Gándara se quedó con el segundo lugar y recibió un reconocimiento especial por el lote La Gringa.",
-        "Luciano Garrido y Ricardo Alberto Strada compartieron el tercer puesto.",
-        "Finca Va Da Ju obtuvo una mención especial por el lote 28, Ojo de Agua.",
-        "La evaluación fue auditada por Carbon Group."
-      ],
-      "noConfirmado": [
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "McCain Foods y Arcos Dorados premiaron a productores de papa de Balcarce por su compromiso con la agricultura regenerativa. Potato Growers obtuvo el primer puesto del certamen.",
-      "etiquetas": [
-        "agricultura",
-        "papa",
-        "Balcarce",
-        "McCain",
-        "Arcos Dorados",
-        "producción"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Argenpapa",
-          "enlace": "https://www.argenpapa.com.ar/noticia/17688-argentina-mccain-foods-y-arcos-dorados-reconocen-a-productores-de-papa-por-su-compromiso-con-la-agricultura-regenerativa",
-          "fecha": null,
-          "oficial": false,
-          "aporte": "Informó los resultados y detalles de la segunda edición del Desafío de Agricultura Regenerativa organizado por McCain Foods y Arcos Dorados."
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "reconocen-a-productores-de-papa-por-practicas-regenerativas"
-    },
-    {
       "id": "1ft8o28",
       "titulo": "Argentina pierde la final por penales y logra la medalla de plata",
       "copete": "La selección argentina sub-19 cayó ante Paraguay en la definición desde los doce pasos tras igualar sin goles en Rosario. El equipo nacional cerró su participación en los Juegos Suramericanos con el segundo puesto.",
@@ -5650,17 +5111,14 @@
         "Infobae",
         "Perfil",
         "A24",
-        "Ámbito",
-        "El Eco de Tandil",
-        "Bolavip Argentina",
-        "Vavel Argentina"
+        "Ámbito"
       ],
       "enlace": "https://www.a24.com/deportes/el-sub-19-argentina-perdio-paraguay-penales-y-se-quedo-la-medalla-plata-n1600457",
       "teniaImagenLaFuente": true,
       "fecha": "2026-09-25T20:19:00.000Z",
       "sinFecha": false,
       "visto": "2026-09-28T02:26:47.869Z",
-      "relevancia": 74,
+      "relevancia": 64,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -5725,6 +5183,126 @@
       "slug": "argentina-pierde-la-final-por-penales-y-logra-la-medalla-de-plata"
     },
     {
+      "id": "5mxbmz",
+      "titulo": "YPF aumenta 1% sus combustibles, por debajo de Shell, Axion y Puma",
+      "copete": "La petrolera aplicó la suba en naftas y gasoil de todo el país desde las 0 del sábado 26 de septiembre. Las otras compañías habían aumentado entre 2% y 5% días antes.",
+      "cuerpo": "Con el ajuste, los precios de referencia de YPF por litro quedaron en $2.112 la Súper, $2.299 la Infinia y $2.392 la Infinia Diésel, con variaciones según la zona y la estación. La empresa atribuyó la suba a la extensión del conflicto en Medio Oriente, que volvió a empujar el precio internacional del petróleo: el Brent superaba los 104 dólares por barril y el WTI rondaba los 93.\n\nYPF mantiene desde abril un esquema de “buffer” que, según la compañía, busca evitar trasladar la volatilidad a los precios locales, y sigue aplicando el micropricing, con ajustes según la oferta y la demanda, la competencia, las franjas horarias, los corredores y las zonas geográficas.\n\nEl presidente y CEO de la empresa, Horacio Marín, había adelantado que si el barril se establecía en 100 dólares, “los consumidores vamos a tener que pagar por US$ 100”.",
+      "guion": "YPF incrementa uno por ciento el valor de los combustibles en el país",
+      "seccion": "Economía",
+      "medios": [
+        "Infórmese Primero (FM 104.9)",
+        "Minuto Uno",
+        "Diario Popular",
+        "0221",
+        "InfoRegión",
+        "QZ Noticias (Mar del Plata)",
+        "El Marplatense"
+      ],
+      "enlace": "https://www.0221.com.ar/nacional/ypf-se-sumo-los-aumentos-los-combustibles-y-ajusto-sus-precios-todo-el-pais-n134820",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-25T20:16:00.000Z",
+      "sinFecha": false,
+      "visto": "2026-09-28T02:30:54.799Z",
+      "relevancia": 60,
+      "local": false,
+      "publicadaPor": "ia",
+      "publicadaCuando": "2026-09-28T03:32:34.329Z",
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "YPF aumentó uno por ciento el precio de sus combustibles en todo el país.",
+        "La suba se implementó tras los incrementos de entre el dos y el cinco por ciento aplicados por otras compañías.",
+        "La empresa atribuyó la medida a un esquema de actualización gradual por la situación internacional.",
+        "Continúa vigente el sistema de micropricing para ajustar valores según cada mercado."
+      ],
+      "seSabe": [
+        "YPF aplicó un aumento promedio del uno por ciento en naftas y gasoil en todo el país, según informó la compañía.",
+        "Otras compañías aplicaron previamente incrementos de entre el dos y el cinco por ciento, de acuerdo con los registros de las fuentes.",
+        "La empresa estatal mantiene un esquema de buffer de precios y un sistema de micropricing para fijar los valores según cada zona."
+      ],
+      "noConfirmado": [
+        "No se especificaron los valores nominales en pesos que tendrán las naftas y el gasoil en las estaciones de servicio tras el incremento."
+      ],
+      "textoRedes": "YPF aplicó una suba del uno por ciento en las naftas y el gasoil en todo el país. El incremento se suma al de otras petroleras y repercute en las estaciones de servicio locales.",
+      "etiquetas": [
+        "YPF",
+        "combustibles",
+        "aumento",
+        "precios"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "0221",
+          "enlace": "https://www.0221.com.ar/nacional/ypf-se-sumo-los-aumentos-los-combustibles-y-ajusto-sus-precios-todo-el-pais-n134820",
+          "fecha": "2026-09-25T20:16:00.000Z",
+          "oficial": false,
+          "aporte": "Detalló el porcentaje de aumento del uno por ciento, la fecha de aplicación y el esquema de buffer de precios."
+        },
+        {
+          "medio": "Infórmese Primero (FM 104.9)",
+          "enlace": "http://www.informeseprimero.com.ar/2026/09/ypf-aumento-1-el-precio-de-sus.html",
+          "fecha": "2026-09-26T13:30:28.264Z",
+          "oficial": false,
+          "aporte": "Confirmó la aplicación del incremento del uno por ciento desde la medianoche del sábado."
+        },
+        {
+          "medio": "El Destape",
+          "enlace": "https://www.eldestapeweb.com/economia/combustibles-aumentan-1-este-sabado-efectos-guerra-medio-oriente-2026925192425",
+          "fecha": "2026-09-25T22:24:25.000Z",
+          "oficial": false,
+          "aporte": "Indicó que otras compañías aplicaron incrementos previos de hasta el cinco por ciento."
+        },
+        {
+          "medio": "Minuto Uno",
+          "enlace": "https://www.minutouno.com/economia/ypf-aumenta-todos-sus-combustibles-este-sabado-cuanto-se-va-el-litro-nafta-n6326890",
+          "fecha": "2026-09-25T22:38:00.000Z",
+          "oficial": false,
+          "aporte": "Señaló que las subas de las compañías privadas oscilaron entre el dos y el cinco por ciento."
+        },
+        {
+          "medio": "Diario Popular",
+          "enlace": "https://www.diariopopular.com.ar/economia/desde-este-sabado-ypf-aumenta-un-1-los-precios-sus-combustibles-n921548",
+          "fecha": "2026-09-26T10:06:00.000Z",
+          "oficial": false,
+          "aporte": "Informó sobre la vigencia general de los ajustes en el sector."
+        },
+        {
+          "medio": "InfoRegión",
+          "enlace": "https://www.inforegion.com.ar/2026/09/26/ypf-tambien-aumento-el-precio-de-sus-combustibles/",
+          "fecha": "2026-09-26T11:05:07.000Z",
+          "oficial": false,
+          "aporte": "Precisó que la medida se da en sintonía con Shell, Axion y Puma, ratificando la política de micropricing."
+        },
+        {
+          "medio": "QZ Noticias (Mar del Plata)",
+          "enlace": "https://www.qznoticias.com/el-pais/ypf-aumenta-desde-hoy-un-1-el-precio-de-los-combustibles",
+          "fecha": "2026-09-26T12:01:57.000Z",
+          "oficial": false,
+          "aporte": "Registró la actualización de tarifas de la petrolera estatal."
+        },
+        {
+          "medio": "El Marplatense",
+          "enlace": "https://www.elmarplatense.com/ypf-aplico-un-aumento-del-1-en-el-precio-de-sus-combustibles",
+          "fecha": "2026-09-26T13:41:39.000Z",
+          "oficial": false,
+          "aporte": "Aportó cobertura sobre el impacto de la medida en la región."
+        },
+        {
+          "medio": "Punto Noticias",
+          "enlace": "https://puntonoticias.com/ypf-aplicara-un-aumento-del-1-a-los-combustibles-desde-este-sabado/",
+          "fecha": "2026-09-26T12:40:53.000Z",
+          "oficial": false,
+          "aporte": null
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron 9 medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "ypf-se-sumo-a-los-aumentos-de-los-combustibles-y-ajusto-sus-precios"
+    },
+    {
       "id": "7fmhve",
       "titulo": "Advierten por una falsa convocatoria laboral de McCain",
       "copete": "La empresa McCain alertó sobre mensajes fraudulentos que ofrecen puestos de trabajo en la planta local. Advierten que piden dinero y datos bancarios a los postulantes.",
@@ -5757,9 +5335,6 @@
         "McCain Argentina emitió una advertencia por comunicaciones fraudulentas que usan su nombre.",
         "Los mensajes falsos citaban a los postulantes a presentarse en la planta de Balcarce.",
         "La compañía recordó que sus búsquedas se realizan por dominios oficiales y nunca piden pagos ni claves."
-      ],
-      "noConfirmado": [
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
       ],
       "textoRedes": "McCain alertó sobre una falsa convocatoria laboral que utiliza su nombre en Balcarce. Advierten que los estafadores piden dinero para uniformes y datos bancarios. Recordaron que la empresa nunca solicita pagos para acceder a un puesto de trabajo.",
       "etiquetas": [
@@ -5796,6 +5371,110 @@
         "sugeridoPorIA": "MEDIA"
       },
       "slug": "advierten-por-una-falsa-convocatoria-laboral-de-mccain-en-balcarce"
+    },
+    {
+      "id": "udvnr4",
+      "titulo": "Lali Espósito cierra su gira con un show en River Plate",
+      "copete": "Lali Espósito completó su presentación en el estadio de River Plate ante una multitud con entradas agotadas. El evento contó con Tini Stoessel como invitada especial.",
+      "cuerpo": "Lali Espósito se presentó en el estadio Monumental el sábado veintiséis de septiembre para cerrar su gira, tras convocar a más de ciento sesenta mil personas en el mismo escenario cuatro meses atrás. El concierto marcó el último recital de la artista antes de su casamiento, según informaron diversos medios. La actuación contó con la participación especial de Tini Stoessel como invitada y con el acompañamiento de Pedro Rosemblat, quien compartió una reflexión tras el espectáculo.\n\nLa gira previa incluyó presentaciones en distintos estadios durante los últimos meses.",
+      "guion": "Lali Espósito cierra su gira con un show en River Plate",
+      "seccion": "Cultura y agenda",
+      "medios": [
+        "Ámbito",
+        "TN (Todo Noticias)",
+        "A24",
+        "Crónica",
+        "Clarín"
+      ],
+      "enlace": "https://www.ambito.com/espectaculos/lali-esposito-river-plate-horarios-accesos-y-lo-que-tenes-que-saber-antes-del-show-n6326723",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-25T17:37:00.000Z",
+      "sinFecha": false,
+      "visto": "2026-09-28T04:30:57.070Z",
+      "relevancia": 62,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Lali Espósito se presentó en el estadio Monumental con entradas agotadas.",
+        "Tini Stoessel participó como invitada especial en el concierto.",
+        "El show marcó el cierre de la gira de la artista antes de su casamiento."
+      ],
+      "seSabe": [
+        "Lali Espósito dio su tercer show en el estadio de River Plate el sábado 26 de septiembre de 2026.",
+        "Las entradas para la presentación estuvieron agotadas.",
+        "Tini Stoessel participó como invitada en el recital.",
+        "Pedro Rosemblat acompañó a la artista y compartió una reflexión tras el show.",
+        "El recital constituyó la última presentación de Lali antes de su casamiento."
+      ],
+      "noConfirmado": [
+        "No se especificó la cantidad exacta de asistentes al último concierto en el Monumental."
+      ],
+      "textoRedes": "Lali Espósito se presentó en el estadio de River Plate con entradas agotadas para cerrar su gira, en un show que contó con la participación de Tini Stoessel como invitada especial y marcó su último recital antes de su casamiento.",
+      "etiquetas": [
+        "Lali Espósito",
+        "River Plate",
+        "Tini Stoessel"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Ámbito",
+          "enlace": "https://www.ambito.com/espectaculos/lali-esposito-river-plate-horarios-accesos-y-lo-que-tenes-que-saber-antes-del-show-n6326723",
+          "fecha": "2026-09-25T17:37:00.000Z",
+          "oficial": false,
+          "aporte": "Informó sobre el tercer show de Lali en River con entradas agotadas y la presencia de Tini Stoessel como invitada."
+        },
+        {
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/musica/recitales/2026/09/26/las-fotos-de-lali-esposito-antes-de-su-show-en-river-con-entradas-agotadas/",
+          "fecha": "2026-09-26T22:37:32.000Z",
+          "oficial": false,
+          "aporte": "Registró la cobertura periodística de la jornada sin aportar texto adicional."
+        },
+        {
+          "medio": "A24",
+          "enlace": "https://www.a24.com/primiciasya/pedro-rosemblat-se-sincero-ver-lali-esposito-river-y-dejo-una-frase-que-sorprendio-que-tarde-llegue-n1600801",
+          "fecha": "2026-09-27T23:01:00.000Z",
+          "oficial": false,
+          "aporte": "Indicó que Pedro Rosemblat acompañó a Lali y compartió reflexiones tras el espectáculo."
+        },
+        {
+          "medio": "Crónica",
+          "enlace": "https://www.cronica.com.ar/diarioshow/por-la-red/el-tierno-mensaje-de-pedro-rosemblat-a-lali-esposito-tras-su-show-en-river-que-tarde-llegue/",
+          "fecha": "2026-09-27T20:08:02.000Z",
+          "oficial": false,
+          "aporte": "Confirmó los detalles sobre el show con entradas agotadas y la participación de Tini Stoessel."
+        },
+        {
+          "medio": "Clarín",
+          "enlace": "https://www.clarin.com/fama/pedro-rosemblat-reflexion-show-lali-esposito-river-tarde-llegue-shows-perdi_0_R7VMU5K1Z4.html",
+          "fecha": "2026-09-27T22:21:35.000Z",
+          "oficial": false,
+          "aporte": "Aportó el dato de que se trató del último recital de Lali antes de su casamiento."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1synfb5",
+          "titulo": "Reapertura del Fangio: horarios, accesos, estacionamiento y recomendaciones para el público",
+          "fecha": "2026-09-25T00:21:50.000Z",
+          "ruta": "/nota/reapertura-del-fangio-horarios-accesos-estacionamiento-y-1synfb5"
+        },
+        {
+          "id": "108vf6q",
+          "titulo": "River Plate pierde con Huracán en el Monumental y no puede acercarse a la cima de su zona en el Torneo Clausura",
+          "fecha": "2026-09-19T22:11:37.000Z",
+          "ruta": "/nota/river-plate-pierde-con-huracan-en-el-monumental-y-no-puede-acercarse-108vf6q"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron cinco medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "lali-esposito-cierra-su-gira-con-un-show-en-river-plate"
     },
     {
       "id": "o84faj",
@@ -5939,15 +5618,14 @@
         "La Nación",
         "Infobae",
         "C5N",
-        "Diario Popular",
-        "El Eco de Tandil"
+        "Diario Popular"
       ],
       "enlace": "https://www.diariopopular.com.ar/politica/el-riesgo-pais-supero-los-600-puntos-y-alcanzo-el-valor-mas-alto-cinco-meses-n921536",
       "teniaImagenLaFuente": true,
       "fecha": "2026-09-25T17:19:00.000Z",
       "sinFecha": false,
       "visto": "2026-09-28T01:48:54.790Z",
-      "relevancia": 58,
+      "relevancia": 48,
       "local": false,
       "publicadaPor": "ia",
       "publicadaCuando": "2026-09-28T03:42:54.417Z",
@@ -6229,6 +5907,106 @@
         "sugeridoPorIA": "MEDIA"
       },
       "slug": "espectadores-de-rawson-son-los-primeros-en-ingresar-al-autodromo-en"
+    },
+    {
+      "id": "1w27oo6",
+      "titulo": "Franco Colapinto larga décimo en el Gran Premio de Azerbaiyán",
+      "copete": "El piloto argentino de Alpine se metió en la Q3 y largará desde la décima posición en la carrera de este sábado en el circuito callejero de Bakú.",
+      "cuerpo": "El piloto argentino Franco Colapinto alcanzó la Q3 y se aseguró el décimo puesto de largada para la carrera del Gran Premio de Azerbaiyán de Fórmula 1, que se disputará este sábado a partir de las ocho en el circuito callejero de Bakú. Durante la sesión definitiva, el deportista sufrió un bloqueo de neumáticos que le impidió mejorar su registro, luego de haber avanzado con lo justo en la segunda instancia. La pole position quedó en manos de George Russell con Mercedes, seguido por Charles Leclerc y Oscar Piastri, mientras que su compañero de equipo, Pierre Gasly, finalizó séptimo.\n\nDurante la actividad previa en la capital azerbaiyana, el argentino había protagonizado un particular diálogo con su ingeniero, Stuart Barlow, al advertir por radio que un insecto había impactado en su monoplaza, aunque los controles descartaron inconvenientes técnicos. La competencia se adelantó al sábado debido a la conmemoración del Día del Recuerdo en ese país.\n\nPara los seguidores locales del automovilismo, la expectativa se centra en ver si el piloto de Alpine logra repetir o mejorar el rendimiento mostrado en sus recientes presentaciones en Monza y Madrid, donde sumó puntos para el campeonato.",
+      "guion": "Franco Colapinto larga décimo en el Gran Premio de Azerbaiyán",
+      "seccion": "Automovilismo",
+      "medios": [
+        "Perfil",
+        "Ámbito"
+      ],
+      "enlace": "https://www.ambito.com/deportes/franco-colapinto-f1-gran-premio-azerbaiyan-baku",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-25T15:18:00.000Z",
+      "sinFecha": false,
+      "visto": "2026-09-28T04:30:57.070Z",
+      "relevancia": 48,
+      "local": false,
+      "publicadaPor": "ia",
+      "publicadaCuando": "2026-09-25T15:20:49.798Z",
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Franco Colapinto largará desde la décima posición en el Gran Premio de Azerbaiyán.",
+        "El piloto de Alpine alcanzó la Q3 tras una ajustada definición en la segunda fase.",
+        "George Russell se quedó con la pole position con su Mercedes.",
+        "La carrera principal se disputará este sábado desde las ocho."
+      ],
+      "textoRedes": "Franco Colapinto se metió en la Q3 y largará décimo este sábado en el Gran Premio de Azerbaiyán de Fórmula 1 en Bakú. La pole position fue para George Russell.",
+      "etiquetas": [
+        "Franco Colapinto",
+        "Formula 1",
+        "Gran Premio de Azerbaiyán",
+        "Bakú",
+        "Automovilismo"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Ámbito",
+          "enlace": "https://www.ambito.com/deportes/franco-colapinto-f1-gran-premio-azerbaiyan-baku",
+          "fecha": "2026-09-25T15:02:00.000Z",
+          "oficial": false,
+          "aporte": "Detalles del desarrollo de la clasificación, el incidente con los neumáticos en la Q3 y el diálogo con el ingeniero Stuart Barlow."
+        },
+        {
+          "medio": "QZ Noticias (Mar del Plata)",
+          "enlace": "https://www.qznoticias.com/deportes/franco-colapinto-largara-10-en-el-gran-premio-de-azerbaiyan",
+          "fecha": "2026-09-25T14:30:27.000Z",
+          "oficial": false,
+          "aporte": "Confirmación de la posición de largada y la participación en la Q3."
+        },
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/deportes/automovilismo/franco-colapinto-en-la-formula-1-en-vivo-nid25092026/",
+          "fecha": "2026-09-25T14:09:23.000Z",
+          "oficial": false,
+          "aporte": "Información sobre la pole position de George Russell y la cantidad de fechas de la temporada."
+        },
+        {
+          "medio": "Ecos Diarios (Necochea)",
+          "enlace": "https://elecos.com.ar/formula-1-franco-colapinto-largara-en-el-10-lugar-en-azerbaiyan",
+          "fecha": "2026-09-25T13:14:02.000Z",
+          "oficial": false,
+          "aporte": "Horario de inicio de la carrera principal para este sábado."
+        },
+        {
+          "medio": "Clarín",
+          "enlace": "https://www.clarin.com/deportes/f1-gp-azerbaiyan-franco-colapinto-vivo-horario-fp3-clasificacion-ver-formula-1-baku_0_Jx2MWC16zZ.html",
+          "fecha": "2026-09-25T03:01:54.000Z",
+          "oficial": false,
+          "aporte": "Mención sobre el cambio de cronograma de la categoría al disputar la clasificación un viernes y la carrera un sábado."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "xb5kod",
+          "titulo": "Franco Colapinto larga décimo en el Gran Premio de Azerbaiyán",
+          "fecha": "2026-09-25T14:41:31.000Z",
+          "ruta": "/nota/franco-colapinto-larga-decimo-en-el-gran-premio-de-azerbaiyan-xb5kod"
+        },
+        {
+          "id": "1mr981m",
+          "titulo": "Franco Colapinto larga décimo en el Gran Premio de Azerbaiyán",
+          "fecha": "2026-09-25T14:30:27.000Z",
+          "ruta": "/nota/franco-colapinto-larga-decimo-en-el-gran-premio-de-azerbaiyan-1mr981m"
+        },
+        {
+          "id": "1y3aqq8",
+          "titulo": "Franco Colapinto avanza a la última tanda en el Gran Premio de Azerbaiyán",
+          "fecha": "2026-09-25T14:12:30.000Z",
+          "ruta": "/nota/franco-colapinto-avanza-a-la-ultima-tanda-en-el-gran-premio-de-1y3aqq8"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron cinco medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "franco-colapinto-larga-decimo-en-el-gran-premio-de-azerbaiyan"
     },
     {
       "id": "7ohqni",
@@ -6588,12 +6366,12 @@
         "C5N",
         "El Marplatense",
         "Mi8 (Canal 8 Mar del Plata)",
-        "Punto Noticias",
-        "Radio 10 Mar del Plata (FM 105.5)",
-        "Bolavip Argentina",
         "0223 (Mar del Plata)",
         "Infocielo",
-        "Infobrisas (Radio Brisas)"
+        "Infobrisas (Radio Brisas)",
+        "Punto Noticias",
+        "Radio 10 Mar del Plata (FM 105.5)",
+        "Bolavip Argentina"
       ],
       "enlace": "https://442.perfil.com/noticias/polideportivo/juegos-suramericanos-santa-fe-2026-la-agenda-de-argentina-para-hoy.phtml",
       "teniaImagenLaFuente": true,
@@ -6949,9 +6727,9 @@
     }
   ],
   "secciones": [
-    "Economía",
     "Balcarce",
     "Automovilismo",
+    "Economía",
     "Agro",
     "Fútbol",
     "Política",
@@ -6964,17 +6742,17 @@
     {
       "nombre": "Fangio",
       "ranura": "fangio",
-      "cuantas": 12
+      "cuantas": 11
     },
     {
       "nombre": "El autódromo",
       "ranura": "autodromo",
-      "cuantas": 11
+      "cuantas": 10
     },
     {
       "nombre": "TC Pick Up",
       "ranura": "tc-pick-up",
-      "cuantas": 5
+      "cuantas": 4
     },
     {
       "nombre": "El Concejo Deliberante",
@@ -6984,10 +6762,10 @@
   ],
   "clima": {
     "ahora": {
-      "temp": 11,
+      "temp": 10,
       "sensacion": 9,
-      "humedad": 95,
-      "viento": 13,
+      "humedad": 96,
+      "viento": 12,
       "rumbo": "NE",
       "cielo": "Parcialmente nublado",
       "esDeDia": false
@@ -6998,7 +6776,7 @@
         "dia": "lun",
         "max": 17,
         "min": 10,
-        "lluvia": 51,
+        "lluvia": 47,
         "codigo": 53,
         "viento": 21,
         "milimetros": 3,
@@ -7009,7 +6787,7 @@
         "dia": "mar",
         "max": 13,
         "min": 9,
-        "lluvia": 67,
+        "lluvia": 69,
         "codigo": 51,
         "viento": 26,
         "milimetros": 0,
@@ -7020,7 +6798,7 @@
         "dia": "mié",
         "max": 13,
         "min": 7,
-        "lluvia": 8,
+        "lluvia": 2,
         "codigo": 3,
         "viento": 27,
         "milimetros": 0,
@@ -7031,7 +6809,7 @@
         "dia": "jue",
         "max": 12,
         "min": 7,
-        "lluvia": 29,
+        "lluvia": 26,
         "codigo": 51,
         "viento": 26,
         "milimetros": 0,
@@ -7418,5 +7196,5 @@
       "motivo": "necesita ojo humano: \"niño\""
     }
   ],
-  "esperandoCuerpo": 3
+  "esperandoCuerpo": 7
 }
