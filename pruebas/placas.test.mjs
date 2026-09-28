@@ -9,7 +9,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { Resvg } from '@resvg/resvg-js';
 import {
-  ANCHO, ALTO, ZONA_TEXTO, COLOR_SECCION, COLORES, placaRepaso, placaClima, placaFarmacia, placaNoticia,
+  ANCHO, ALTO, ZONA_TEXTO, COLOR_SECCION, COLORES, placaRepaso, placaClima, placaFarmacia,
   placaUtiles, placaAgenda, diaConTilde, comoNombrePropio, encabezadoDelRepaso, iconoDelCielo, archivosDeFuente,
 } from '../reels/placa.mjs';
 import { planDelDia, hastaCuandoElTurno, cajaDeDia, pronosticoDe } from '../reels/plan.mjs';
@@ -184,13 +184,6 @@ test('farmacia: con tres farmacias y direcciones largas entra todo, sin pisar la
 });
 
 // ------------------------------------------------------------ las demás
-
-test('la placa sin foto (9:16): el título largo entra entero y no nombra otro medio', () => {
-  const svg = placaNoticia({ seccion: 'Automovilismo', titulo: TITULOS_LARGOS[0], cuando: 'Lunes 28 de septiembre' });
-  assert.ok(!svg.includes('…'));
-  revisarCajas(svg, 'placa sin foto');
-  assert.match(svg, new RegExp(COLOR_SECCION.Automovilismo));
-});
 
 test('útiles y agenda entran enteros', () => {
   revisarCajas(placaUtiles({

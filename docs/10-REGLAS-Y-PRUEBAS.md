@@ -2,7 +2,7 @@
 
 *Escrito el 28/09/2026, leyendo `CLAUDE.md` y cada archivo de `pruebas/` de
 ese día, y puesto al día esa noche con el commit "Trece arreglos encontrados al
-documentar". Las pruebas se corrieron ese día: **1.339 pruebas en 82 archivos,
+documentar". Las pruebas se corrieron ese día: **1.337 pruebas en 82 archivos,
 todas bien, en unos 11 segundos**. Si un documento dice otra cosa que el
 código, manda el código.*
 

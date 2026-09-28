@@ -161,7 +161,6 @@ de la web).
 | Teléfonos útiles y agenda (extras) | La misma cabecera de la historia diaria y una lista con rayas finas | 1080 × 1920 | `placaUtiles`, `placaAgenda` |
 | Espejo en Instagram de cada posteo de Facebook | Placa de noticia con foto (la foto del banco propio, la franja del color de la sección, título, bajada y el pie con la fecha); sin foto, Placa sin foto (el bloque de color con los anillos del radar y el nombre de la sección) | 1080 × 1350 | `web/lib/tarjeta.js` (`/nota/ID/instagram.png`) |
 | Facebook con enlace, WhatsApp, la web al compartir | Una banda con el color de la sección y los anillos, el título y el pie; sin foto | 1200 × 630 | `web/lib/tarjeta.js` (`opengraph-image`) |
-| La placa sin foto vertical | Placa sin foto, en 9:16 (hoy no la usa ninguna pieza fija) | 1080 × 1920 | `placaNoticia` |
 
 Lo que no se usa del lienzo, por ahora: "Repaso · una nota por placa" y
 "Repaso · cierre" son para un carrusel, y el repaso hoy es **un video**: se

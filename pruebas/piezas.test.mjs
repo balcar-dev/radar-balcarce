@@ -635,7 +635,6 @@ test('la primera corrida después de la hora de cada pieza la encuentra en venta
 // ------------------------------------------- un color por día para los podcasts
 
 import { colorDelDia, COLORES_DEL_DIA } from '../redes/piezas.mjs';
-import { placaNoticia } from '../reels/placa.mjs';
 
 test('hay siete colores distintos, uno por día de la semana', () => {
   assert.equal(COLORES_DEL_DIA.length, 7);
@@ -653,12 +652,6 @@ test('el color cambia de un día al otro y es el mismo todo el día', () => {
 test('el color del día se cuenta con la hora de Balcarce, no la de UTC', () => {
   // 23:30 del lunes en Balcarce ya es martes en UTC.
   assert.equal(colorDelDia(new Date('2026-09-21T23:30:00-03:00')), COLORES_DEL_DIA[1]);
-});
-
-test('la placa de un podcast toma el color que se le pide, no el de la sección', () => {
-  const svg = placaNoticia({ seccion: 'Balcarce', titulo: 'El repaso de la mañana', color: '#123ABC' });
-  assert.ok(svg.includes('#123ABC'));
-  assert.ok(!placaNoticia({ seccion: 'Balcarce', titulo: 'x' }).includes('#123ABC'));
 });
 
 test('los podcasts del plan usan el color del día', async () => {

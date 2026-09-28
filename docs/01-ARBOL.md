@@ -112,7 +112,7 @@ Lo que **no** se versiona (`.gitignore`): `node_modules/`, `.env*`,
 | `claves.mjs` | Las cuatro claves de IA (redacción, redes, clasificación, Groq), del entorno o del `.env` | Reescritura, lectura, fotos, voz, panel, `generar-datos.mjs` | Sí |
 | `cortina.mjs` | Genera la cortina musical con ffmpeg | `reel.mjs` (la importa, pero la cortina está apagada: sonaba a pitido) | Apagado |
 | `duracion.mjs` | Mide un video y recorta la historia que pasa de 58 segundos | `reel.mjs` | Sí |
-| `placa.mjs` | Dibuja las placas (SVG → PNG de 1080 × 1920). `placaNoticia` no la usa ninguna pieza | `plan.mjs`, `reel.mjs` | Sí |
+| `placa.mjs` | Dibuja las placas (SVG → PNG de 1080 × 1920). | `plan.mjs`, `reel.mjs` | Sí |
 | `plan.mjs` | El plan del día: qué pieza, con qué guion, placa y hora; con `--generar`, arma los videos | `redes.yml`, `piezas.yml` | Sí |
 | `portada.mjs` | Dibuja la portada de la página de Facebook | A mano (la sube una persona) | A mano |
 | `probar-gemini.mjs` | Un pedido mínimo a Gemini con la clave de redacción | `prueba-gemini.yml` | A mano |
@@ -325,7 +325,6 @@ Los documentos `00` a `12` y la carpeta `historico/`: ver
 
 ## Lo que no tiene uso
 
-- `placaNoticia` en `reels/placa.mjs`: ninguna pieza la usa.
 - `reels/cortina.mjs`: la importa `reel.mjs`, pero la cortina está apagada.
 - Las páginas de `/tema/`: existen y están en el sitemap, pero nada las
   enlaza desde el 21/09.

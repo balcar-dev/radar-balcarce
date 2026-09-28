@@ -19,7 +19,7 @@ rioplatense, sin voseo forzado.
     redes/     Facebook e Instagram (API de Meta), contrato del día, vigilante, WhatsApp. SIN dependencias
     panel/     el tablero editorial (vive en la PC de Hernán, puerto 4321). SIN dependencias
     web/       el sitio público (Next.js 15, JavaScript, HTML estático); web/scripts/generar-datos.mjs arma los datos
-    pruebas/   `npm test`: 1.339 pruebas en 82 archivos, sin red
+    pruebas/   `npm test`: 1.337 pruebas en 82 archivos, sin red
     docs/      la documentación: 00-INDICE a 12-GLOSARIO, e historico/
 
 Flujo (`docs/00-INDICE.md`): fuentes → ingesta → cruce de medios → sección,
@@ -188,8 +188,8 @@ vigilancia andan con la PC apagada**; sólo el panel vive en la PC.
 
 ## Estado
 
-Todo andando en la nube desde el 25/09: web en Cloudflare Pages, redes
-publicando (`REDES_ACTIVAS` en `Si`), vigilancia por WhatsApp con el resumen de
+Todo andando en la nube desde el 25/09: web en Cloudflare Pages,
+redes en pausa (`REDES_ACTIVAS` en `No` desde el 28/09, hasta el visto bueno de Hernán al diseño nuevo), vigilancia por WhatsApp con el resumen de
 las 21. Lo que falta, con quién y qué urgencia: **`PENDIENTES.md`** (entre lo
 más importante: la Auditoría de los lunes nunca corrió, mirar los trabajos de
 cron-job.org, el tope de gasto de la clave paga, reiniciar el panel).

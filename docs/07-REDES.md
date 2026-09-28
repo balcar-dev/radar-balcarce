@@ -433,8 +433,6 @@ acento. Con dos excepciones firmes: las letras son las del sitio (Source Serif
 - La tarjeta de Instagram tiene el texto entre las filas 135 y 1215, porque la
   grilla del perfil la recorta. Sin foto, lleva la "placa sin foto": el bloque
   de color de la sección con los anillos del radar.
-- `reels/placa.mjs` tiene también `placaNoticia` (la "placa sin foto" en
-  vertical), pero hoy **ninguna pieza la usa**.
 - Colores, letras, íconos y el catálogo de plantillas: `MEDIA-KIT.md` ("Las
   plantillas de las piezas"). Medidas y zonas seguras: `FORMATOS.md` y
   `redes/formatos.mjs`.
@@ -649,5 +647,5 @@ sílabas).
 En `PENDIENTES.md`: los disparos de cron-job.org a Redes (tres por hora, de 0
 a 22), la pestaña Calendario que no llega a GitHub, la Auditoría de los lunes
 que nunca corrió (y `auditoriaVencida`, que no avisa si nunca corrió),
-`placaNoticia` sin uso, el nombre doble de la variable del ID de la página y
+el nombre doble de la variable del ID de la página y
 la historia de un podcast que no se puede reintentar.

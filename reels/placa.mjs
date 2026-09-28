@@ -13,8 +13,6 @@
 //   placaFarmacia  la farmacia de turno: "Historia diaria", la tarjeta con
 //                  borde verde
 //   placaUtiles, placaAgenda   los extras de la semana, con la misma cabecera
-//   placaNoticia   "Placa sin foto": el bloque de color de la sección con los
-//                  anillos del radar y el título abajo
 //
 // Dos excepciones al lienzo, firmes: las letras son las del proyecto desde el
 // 27/09 (Source Serif 4 e Inter, no Fraunces ni IBM Plex) y los colores de
@@ -653,44 +651,6 @@ export function placaUtiles({ grupos = [] }) {
   ${cab.svg}
   ${listaDeFilas(filas, { desde: cab.hasta + 70, hasta: Y_PIE - 20, colorRotulo: COLOR_UTILES })}
   ${pie()}`);
-}
-
-// ------------------------------------------------ la placa sin foto (9:16)
-
-/**
- * "Placa sin foto": el bloque de color de la sección con los anillos del
- * radar y el nombre de la sección grande, y el título abajo en papel. `color`
- * pisa el de la sección (los podcasts llevaban el color del día).
- */
-export function placaNoticia({
-  seccion, titulo, cuando = '', color: colorPedido,
-}) {
-  const color = colorPedido ?? COLOR_SECCION[seccion] ?? COLORES.rojo;
-  const fondo = paraTextoBlanco(color);
-  const BLOQUE = 820;
-  const disponible = ANCHO - MARGEN * 2;
-
-  // El nombre de la sección, lo más grande que entre en un renglón.
-  const nombre = String(seccion ?? '');
-  const tamNombre = Math.min(220, Math.floor((disponible * AIRE) / Math.max(1, anchoAproximado(nombre, 1))));
-
-  const t = repartir(titulo, [
-    { tam: 96, max: 3 }, { tam: 86, max: 4 }, { tam: 76, max: 5 }, { tam: 66, max: 6 }, { tam: 58, max: 7 },
-  ], disponible);
-  const inter = Math.round(t.tam * 1.04);
-  const y0 = BLOQUE + 70 + Math.round(t.tam * 0.9);
-  const base = y0 + (t.lineas.length - 1) * inter;
-
-  return lienzo(`
-  <rect width="${ANCHO}" height="${BLOQUE}" fill="${fondo}"/>
-  ${anillos(ANCHO - 170, 330, { radios: [140, 250, 360] })}
-  ${rotulo(seccion ?? '', { y: 330, color: '#FFFFFF', tam: 30 })}
-  <text x="${MARGEN - 4}" y="${BLOQUE - 60}" font-family="${DISPLAY}" font-size="${tamNombre}" font-weight="900"
-        letter-spacing="-4" fill="#FFFFFF">${esc(nombre)}</text>
-  <rect width="${ANCHO}" height="14" y="${BLOQUE}" fill="${color}"/>
-  ${renglones(t.lineas, { y: y0, tam: t.tam, interlinea: inter, espaciado: -1.5 })}
-  ${cuando ? `<text x="${MARGEN}" y="${Math.min(base + 80, Y_PIE - 30)}" font-family="${TEXTO}" font-size="30" font-weight="500" fill="${COLORES.gris}">${esc(cuando)}</text>` : ''}
-  ${pie('La nota completa en radarbalcarce.com')}`);
 }
 
 // ------------------------------------------------------------- a imagen
