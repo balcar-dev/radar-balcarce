@@ -40,7 +40,7 @@ function Tarjeta({ href, etiqueta, icono, color, dato, debajo, pie, claseDato = 
 }
 
 const CRUZ = (
-  <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
+  <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
     <rect x="1" y="1" width="22" height="22" rx="6" fill="var(--farmacia)" />
     <path d="M10 5.5h4v4.5h4.5v4H14v4.5h-4V14H5.5v-4H10z" fill="#fff" />
   </svg>
@@ -76,10 +76,10 @@ export function HoyEnBalcarce({ clima, farmacia, foto }) {
         <Tarjeta
           href="/clima"
           etiqueta="Clima"
-          icono={<SolChico cielo={a.cielo} esDeDia={a.esDeDia !== false} tamano={22} />}
+          icono={<SolChico cielo={a.cielo} esDeDia={a.esDeDia !== false} tamano={18} />}
           dato={`${a.temp}°`}
           debajo={a.cielo}
-          pie={manana ? `Mañana ${manana.max}° · ${manana.min}°` : 'Pronóstico ›'}
+          pie={manana ? `Mañana ${manana.max}°` : 'Pronóstico ›'}
         />
       )}
       {turno.length > 0 && (
@@ -91,7 +91,7 @@ export function HoyEnBalcarce({ clima, farmacia, foto }) {
           dato={turno[0]}
           claseDato="nombre"
           debajo={turno.length > 1 ? `y ${turno.slice(1).join(' y ')}` : null}
-          pie="Dirección y teléfono ›"
+          pie="Ver más ›"
         />
       )}
       {(blue || oficial) && (

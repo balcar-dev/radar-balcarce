@@ -17,7 +17,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { claveClasificacion, claveGroq, leerVariable } from '../reels/claves.mjs';
-import { fichaDeFuente, FUENTES, FUENTES_NACIONALES, CONEXION_ARGENTINA, PALABRAS_LOCALES } from './fuentes.mjs';
+import { fichaDeFuente, FUENTES, FUENTES_NACIONALES, CONEXION_ARGENTINA, PALABRAS_LOCALES, PALABRAS_ZONA } from './fuentes.mjs';
 import { FUENTES_CRUCE } from './fuentes-cruce.mjs';
 import { diaAR } from './zona.mjs';
 import { sinTildes } from '../web/lib/texto.js';
@@ -340,13 +340,38 @@ export async function leerNotasNuevas(notas, {
  *
  * Devuelve { notas, cambios } sin tocar las originales.
  */
-export function aplicarFichas(notas, fichas = {}, { verdeSecciones = [] } = {}) {
+/** El motivo con que espera una nota de un medio de acá que no nombra nada de
+ *  acá, hasta que la lea la IA (28/09). */
+export const MOTIVO_ESPERA_LECTURA = 'de un medio de acá sin nombrar Balcarce ni la zona: espera la lectura con IA';
+
+/**
+ * ¿La nota nombra algo de Balcarce o de la zona en el título o al comienzo?
+ * Con palabras enteras ("papa" no es "papá"; "la 226" sí).
+ */
+export function mencionaAca(nota) {
+  if (nota?.nombraBalcarce || nota?.deLaZona) return true;
+  const texto = ` ${sinTildes(`${nota?.titulo ?? ''} ${String(nota?.resumenFuente ?? nota?.cuerpo ?? '').slice(0, 600)}`).replace(/[^a-z0-9ñ]+/g, ' ')} `;
+  return [...PALABRAS_LOCALES, ...PALABRAS_ZONA].some((p) => texto.includes(` ${sinTildes(p).replace(/[^a-z0-9ñ]+/g, ' ').trim()} `));
+}
+
+export function aplicarFichas(notas, fichas = {}, { verdeSecciones = [], esperarSinFicha = false, yaPublicadas = new Set() } = {}) {
   const cambios = { sacadas: [], dejanDeSerLocales: [], otraSeccion: [], aEsperar: [] };
   // Las fichas viejas pueden decir "Servicios", que ya no existe (27/09).
   const seccionDe = (f) => ({ Servicios: 'Balcarce', País: 'Argentina' }[f.seccion] ?? f.seccion);
   const salida = [];
   for (const original of notas) {
     const f = fichas[original.id];
+    // Un medio de acá que copia una noticia de afuera sin nombrar nada de acá
+    // (28/09: Radio Sudestada con un referéndum de Suiza, salió en Balcarce
+    // porque ningún medio de afuera contó lo mismo y la IA todavía no la había
+    // leído): espera a la IA. Sólo si la lectura anda (esperarSinFicha) y si la
+    // nota nunca salió: lo ya publicado no se toca.
+    if (!f && esperarSinFicha && original.semaforo === 'verde' && original.alcance === 'local'
+      && !yaPublicadas.has(original.id) && !mencionaAca(original)) {
+      salida.push({ ...original, semaforo: 'amarillo', motivo: MOTIVO_ESPERA_LECTURA });
+      cambios.aEsperar.push({ id: original.id, titulo: original.titulo, porque: MOTIVO_ESPERA_LECTURA });
+      continue;
+    }
     if (!f || original.semaforo === 'rojo') { salida.push(original); continue; }
     const n = { ...original };
     const deFuenteLocal = n.alcance === 'local';

@@ -227,7 +227,13 @@ if (enLaNube) {
     const fichasAntes = leerJson(FICHAS, {});
     const { archivo: fichas, cuenta } = await leerNotasNuevas(ultima.notas ?? [], { guardado: fichasAntes, registro: console.log });
     if (cuenta.sinClave) console.log('  lectura con IA: sin clave, se decide como siempre');
-    const { notas: conFichas, cambios } = aplicarFichas(ultima.notas ?? [], fichas.fichas, { verdeSecciones: REGLAS_SEMAFORO.verdeSecciones });
+    const { notas: conFichas, cambios } = aplicarFichas(ultima.notas ?? [], fichas.fichas, {
+      verdeSecciones: REGLAS_SEMAFORO.verdeSecciones,
+      // Lo de un medio de acá que no nombra nada de acá espera a la IA, si la
+      // lectura anda (28/09, la de Suiza en Balcarce).
+      esperarSinFicha: !cuenta.sinClave,
+      yaPublicadas: yaSalieron,
+    });
     sacadasPorLaIA = new Set(cambios.sacadas.map((c) => c.id));
 
     // Las repetidas: la misma noticia contada con otro título (27/09, McCain).
