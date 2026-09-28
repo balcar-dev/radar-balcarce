@@ -20,12 +20,13 @@
 import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
+import { MODELO_DE_TEXTO } from './claves.mjs';
 import { decirGemini, clave } from './voz-gemini.mjs';
 import { paraLeer } from './voz.mjs';
 import { opcionesDeVoz, SITIO_DICHO } from '../redes/prompt-redes.mjs';
 import { clipsDeAuditoria, variantesDeLaDireccion, revisarTranscripcion } from '../redes/auditoria-voz.mjs';
 
-const MODELO_DE_TRANSCRIPCION = 'gemini-flash-lite-latest';
+const MODELO_DE_TRANSCRIPCION = MODELO_DE_TEXTO;
 
 const PEDIDO = 'Transcribí este audio en castellano, LITERALMENTE: palabra por palabra, exactamente lo que se dice, '
   + 'sin corregir, sin completar y sin resumir. No normalices las direcciones web: si se dice "punto com" escribí '

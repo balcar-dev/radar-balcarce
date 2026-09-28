@@ -16,7 +16,7 @@
 
 import fs from 'node:fs';
 import path from 'node:path';
-import { claveClasificacion, claveGroq, leerVariable } from '../reels/claves.mjs';
+import { claveClasificacion, claveGroq, leerVariable, MODELO_DE_TEXTO } from '../reels/claves.mjs';
 import { fichaDeFuente, FUENTES, FUENTES_NACIONALES, CONEXION_ARGENTINA, PALABRAS_LOCALES, PALABRAS_ZONA } from './fuentes.mjs';
 import { FUENTES_CRUCE } from './fuentes-cruce.mjs';
 import { diaAR } from './zona.mjs';
@@ -29,7 +29,7 @@ function nombraBalcarceEnElTitulo(n) {
 }
 
 const AQUI = import.meta.dirname;
-const MODELO = 'gemini-flash-lite-latest';
+const MODELO = MODELO_DE_TEXTO;
 
 // El segundo proveedor (28/09): gpt-oss-120b, el modelo de OpenAI que Groq
 // aloja gratis (Llama dejó de estar en el plan gratis en agosto). Sólo para
@@ -92,8 +92,6 @@ Reglas:
   · Argentina: lo nacional que no entra en ninguna de las anteriores (sociedad, clima, salud, educación, grandes hechos).
 - "es_publicidad": true si promociona un comercio, producto o servicio sin ser noticia.
 - "es_chimento": true si es farándula o la vida privada de famosos (romances, casamientos, separaciones, peleas, internaciones, fiestas o viajes de gente de la tele, la música o las redes). La muerte de una figura, un premio, un estreno o una obra no son chimento.
-- "es_anuncio": true si la nota cuenta que alguien anunció algo (que todavía no pasó).
-- "clave_tema": de 3 a 5 palabras en minúscula, separadas por guiones, que describan el hecho (por ejemplo "reapertura-autodromo-fangio"). La misma para el mismo hecho.
 - Devolvé una ficha por nota, con el mismo "id".`;
 
 let perfilCacheado = null;
@@ -139,19 +137,18 @@ export const ESQUEMA = {
     properties: {
       id: { type: 'STRING' },
       ambito: { type: 'STRING', enum: AMBITOS },
-      lugar_del_hecho: { type: 'STRING' },
       seccion: { type: 'STRING', enum: SECCIONES_DE_LA_FICHA },
       impacto_balcarce: { type: 'STRING', enum: IMPACTOS },
       razon: { type: 'STRING', enum: RAZONES },
       importancia: { type: 'STRING', enum: IMPORTANCIAS },
       es_publicidad: { type: 'BOOLEAN' },
       es_chimento: { type: 'BOOLEAN' },
-      es_anuncio: { type: 'BOOLEAN' },
       por_que_interesa: { type: 'STRING' },
-      clave_tema: { type: 'STRING' },
     },
-    required: ['id', 'ambito', 'lugar_del_hecho', 'seccion', 'impacto_balcarce', 'razon', 'importancia',
-      'es_publicidad', 'es_anuncio', 'por_que_interesa', 'clave_tema'],
+    // Sin lugar_del_hecho, es_anuncio ni clave_tema desde el 28/09 (auditoría):
+    // se pedían y no decidían nada. es_chimento sí decide, así que es obligatoria.
+    required: ['id', 'ambito', 'seccion', 'impacto_balcarce', 'razon', 'importancia',
+      'es_publicidad', 'es_chimento', 'por_que_interesa'],
   },
 };
 
@@ -163,7 +160,6 @@ export function fichaValida(f) {
     || !RAZONES.includes(f.razon) || !IMPORTANCIAS.includes(f.importancia)) return null;
   return {
     ambito: f.ambito,
-    lugar: String(f.lugar_del_hecho ?? '').slice(0, 60),
     seccion: f.seccion,
     impacto: f.impacto_balcarce,
     razon: f.razon,
@@ -171,9 +167,7 @@ export function fichaValida(f) {
     publicidad: f.es_publicidad === true,
     // Las fichas de antes del 27/09 no lo traen: cuentan como "no".
     chimento: f.es_chimento === true,
-    anuncio: f.es_anuncio === true,
     porque: String(f.por_que_interesa ?? '').slice(0, 200),
-    tema: String(f.clave_tema ?? '').toLowerCase().replace(/[^a-z0-9ñ-]+/g, '-').slice(0, 60),
   };
 }
 
@@ -335,8 +329,7 @@ export async function leerNotasNuevas(notas, {
  *     el título ya no alcanza, y pide los medios de lo de afuera.
  *   · La sección es la de la IA, salvo "Balcarce" para lo que no es de acá.
  *     Las fichas viejas que dicen Servicios o País se traducen a Balcarce y
- *     Argentina. Si la IA la manda a una sección que no sale sola (fuera de
- *     `verdeSecciones`), la nota espera.
+ *     Argentina.
  *
  * Devuelve { notas, cambios } sin tocar las originales.
  */
@@ -354,7 +347,7 @@ export function mencionaAca(nota) {
   return [...PALABRAS_LOCALES, ...PALABRAS_ZONA].some((p) => texto.includes(` ${sinTildes(p).replace(/[^a-z0-9ñ]+/g, ' ').trim()} `));
 }
 
-export function aplicarFichas(notas, fichas = {}, { verdeSecciones = [], esperarSinFicha = false, yaPublicadas = new Set() } = {}) {
+export function aplicarFichas(notas, fichas = {}, { esperarSinFicha = false, yaPublicadas = new Set() } = {}) {
   const cambios = { sacadas: [], dejanDeSerLocales: [], otraSeccion: [], aEsperar: [] };
   // Las fichas viejas pueden decir "Servicios", que ya no existe (27/09).
   const seccionDe = (f) => ({ Servicios: 'Balcarce', País: 'Argentina' }[f.seccion] ?? f.seccion);
@@ -420,11 +413,6 @@ export function aplicarFichas(notas, fichas = {}, { verdeSecciones = [], esperar
     if (seccion !== n.seccion) {
       cambios.otraSeccion.push({ ...caso, antes: n.seccion, ahora: seccion });
       n.seccion = seccion;
-    }
-    if (n.semaforo === 'verde' && verdeSecciones.length && !verdeSecciones.includes(n.seccion)) {
-      n.semaforo = 'amarillo';
-      n.motivo = `la IA la puso en ${n.seccion}: espera a una persona`;
-      cambios.aEsperar.push(caso);
     }
     salida.push(n);
   }

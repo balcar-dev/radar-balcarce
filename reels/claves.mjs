@@ -39,6 +39,11 @@ export function leerVariable(nombre, { env = process.env, archivo = path.join(RA
   return null;
 }
 
+/** El modelo de texto de Gemini, en un solo lugar: lo usan la redacción, la
+ *  lectura con IA, las fotos y la auditoría de voz. El "flash" normal daba 503
+ *  seguido; si vuelve a fallar, es lo primero que se mira (CLAUDE.md). */
+export const MODELO_DE_TEXTO = 'gemini-flash-lite-latest';
+
 export const claveRedaccion = (o) => leerVariable('GEMINI_API_KEY_REDACCION', o) ?? leerVariable('GEMINI_API_KEY', o);
 
 export const claveRedes = (o) => leerVariable('GEMINI_API_KEY_REDES', o);

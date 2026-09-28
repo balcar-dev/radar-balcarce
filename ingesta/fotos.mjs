@@ -21,9 +21,9 @@
 // crédito nombra al autor y la licencia (creditoDeFoto). Sin dependencias:
 // sólo fetch de Node.
 
-import { claveClasificacion, claveGroq } from '../reels/claves.mjs';
+import { claveClasificacion, claveGroq, MODELO_DE_TEXTO } from '../reels/claves.mjs';
 
-const MODELO_GEMINI = 'gemini-flash-lite-latest';
+const MODELO_GEMINI = MODELO_DE_TEXTO;
 // El modelo con visión que documenta Groq hoy (confirmado el 28/09 en
 // console.groq.com/docs/vision: Llama 4 Scout, con el que se armó esto al
 // principio, ya no figura ahí y daba 404 en la corrida real). El gpt-oss-120b

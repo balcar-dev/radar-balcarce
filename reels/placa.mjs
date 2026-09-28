@@ -231,13 +231,6 @@ const pie = (derecha = 'radarbalcarce.com') => `<rect x="${MARGEN}" y="${Y_PIE}"
   <text x="${ANCHO - MARGEN}" y="${Y_PIE + 60}" font-family="${TEXTO}" font-size="27" font-weight="600"
         text-anchor="end" fill="${COLORES.gris}">${esc(derecha)}</text>`;
 
-/** Los anillos del radar, la marca de la casa. */
-const anillos = (cx, cy, { radios = [120, 220, 320], color = '#FFFFFF', opacidad = 0.22, barrido = true } = {}) => `<g fill="none" stroke="${color}" stroke-opacity="${opacidad}" stroke-width="3">
-    ${radios.map((r) => `<circle cx="${cx}" cy="${cy}" r="${r}"/>`).join('')}
-    ${barrido ? `<line x1="${cx}" y1="${cy}" x2="${cx - radios[radios.length - 1] * 0.75}" y2="${cy + radios[radios.length - 1] * 0.81}"/>` : ''}
-  </g>
-  <circle cx="${cx}" cy="${cy}" r="14" fill="${color}" fill-opacity="${Math.min(1, opacidad * 2.3)}"/>`;
-
 /** Cabecera de las historias de servicio: rótulo rojo y un título grande. */
 function cabecera(kicker, titulo, { y = 300, color = COLORES.rojo } = {}) {
   // Una fecha larga ("Miércoles 30 de septiembre") se achica para quedar en un
@@ -374,8 +367,6 @@ function iconoSvg(tipo, x, y, lado) {
   }[tipo] ?? ICONO_SOL;
   return `<g transform="translate(${x} ${y}) scale(${s.toFixed(3)})">${dibujo}</g>`;
 }
-
-const fmtPesos = (n) => `$${Math.round(Number(n)).toLocaleString('es-AR')}`;
 
 /**
  * El clima, con el diseño "Historia diaria": un rótulo, la fecha grande, la

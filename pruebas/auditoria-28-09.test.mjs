@@ -57,7 +57,7 @@ test('voz.mjs corre sola sólo con su nombre exacto (no con auditar-voz.mjs)', (
 // ------------------------------------------ decisiones de Hernán (28/09)
 
 import { semaforoDelTexto, laMuerteFrena, paraPruebas } from '../ingesta/ingesta.mjs';
-const { esPolicialDeAfuera } = paraPruebas;
+const { esPolicialDeAfuera, marcarDeAfuera } = paraPruebas;
 import { REGLAS_SEMAFORO } from '../ingesta/fuentes.mjs';
 
 test('un policial de la zona contado por un medio de afuera ya no se descarta', () => {
@@ -131,4 +131,29 @@ test('una opinión citada no baja la verificación; con varios medios, "qué fal
   const unMedio = [{ medio: 'La Vanguardia Noticias', oficial: false }];
   assert.equal(nivelDeVerificacion({ origenes: unMedio, escrito: { titulo: 'Balcarce está mejor que otras pistas, aseguró el piloto', copete: 'El piloto aseguró que el circuito está muchísimo mejor.' } }).nivel, 'MEDIA');
   assert.equal(nivelDeVerificacion({ origenes: unMedio, escrito: { titulo: 'Vecinos denuncian que el basural creció' } }).nivel, 'BAJA');
+});
+
+// ------------------------------------------------ limpieza (28/09)
+
+import { ESQUEMA } from '../ingesta/lectura-ia.mjs';
+import { MODELO_DE_TEXTO } from '../reels/claves.mjs';
+
+test('una figura que además toca la zona conserva las dos marcas', () => {
+  const n = { titulo: 'Colapinto visitó la ruta 226 camino al autódromo', cuerpo: '', categorias: [] };
+  marcarDeAfuera(n);
+  assert.ok(n.figura, 'la figura');
+  assert.equal(n.deLaZona, true, 'y la zona');
+});
+
+test('el modelo de texto de Gemini está escrito en un solo lugar', () => {
+  assert.equal(MODELO_DE_TEXTO, 'gemini-flash-lite-latest');
+  for (const f of ['ingesta/fotos.mjs', 'ingesta/lectura-ia.mjs', 'reels/reescritura.mjs', 'reels/auditar-voz.mjs', 'reels/probar-gemini.mjs']) {
+    assert.doesNotMatch(leer(f), /gemini-flash-lite-latest/, f);
+  }
+});
+
+test('la ficha de la IA pide sólo lo que decide algo, y es_chimento es obligatoria', () => {
+  const pide = Object.keys(ESQUEMA.items.properties);
+  for (const sobra of ['lugar_del_hecho', 'es_anuncio', 'clave_tema']) assert.ok(!pide.includes(sobra), sobra);
+  assert.ok(ESQUEMA.items.required.includes('es_chimento'));
 });

@@ -18,7 +18,7 @@
 // Sin red y sin reloj propio: se prueba entera.
 
 import { yaPublicada } from './elegir.mjs';
-import { diaAR, horaAR, minutoDelDiaAR, diaSemanaAR, minutosDeHora } from '../ingesta/zona.mjs';
+import { diaAR, minutoDelDiaAR, diaSemanaAR, minutosDeHora } from '../ingesta/zona.mjs';
 import { horariosDe, toca } from '../panel/horarios.mjs';
 import { diaRotativoDeUtiles } from '../ingesta/utiles.mjs';
 import { CONTRATO_DIARIO } from '../ingesta/criterio.mjs';

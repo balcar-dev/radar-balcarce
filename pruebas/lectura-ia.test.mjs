@@ -193,14 +193,11 @@ test('de Balcarce sólo con dos llaves: una nacional reproducida por un medio lo
   assert.equal(s.notas[0].seccion, 'Cultura y agenda', 'no la pasa a la sección Balcarce');
 });
 
-test('la IA nunca destraba: lo rojo y lo amarillo siguen igual, y si la manda a País, espera', () => {
+test('la IA nunca destraba: lo rojo y lo amarillo siguen igual', () => {
   const roja = { id: 'r', titulo: 'x', seccion: 'Balcarce', semaforo: 'rojo', alcance: 'local', local: true };
   assert.deepEqual(aplicar(roja, ficha({})).notas, [roja]);
   const amarilla = { id: 'y', titulo: 'x', seccion: 'Balcarce', semaforo: 'amarillo', motivo: 'necesita ojo humano', alcance: 'local', local: true };
   assert.equal(aplicar(amarilla, ficha({ seccion: 'Deportes' })).notas[0].semaforo, 'amarillo');
-  const verde = { id: 'v', titulo: 'x', seccion: 'Tecnología', semaforo: 'verde', alcance: 'pais', local: false, relevancia: 60 };
-  const r = aplicar(verde, ficha({ ambito: 'nacional', seccion: 'País', impacto_balcarce: 'indirecto', razon: 'nacional' }));
-  assert.equal(r.notas[0].semaforo, 'amarillo');
 });
 
 test('sin ficha, la nota queda como la decidió el sistema de siempre', () => {

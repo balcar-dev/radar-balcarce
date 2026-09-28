@@ -21,9 +21,9 @@ import {
 // La foto va recortada y SIN el crédito adentro: nunca el nombre de otro medio
 // ni una marca de agua dentro de una imagen (CLAUDE.md, "Las fotos"). El
 // crédito va en el texto del posteo (redes/elegir.mjs, conCreditoDeFoto) y en
-// la página de la nota. La apaisada (Facebook con enlace, WhatsApp) no lleva
-// foto: el texto de ese posteo no nombra la fuente (CRITERIO-EDITORIAL.md § 9),
-// así que no tendría dónde ir el crédito.
+// la página de la nota. La apaisada (Facebook con enlace, WhatsApp) lleva la
+// foto desde el 28/09 (FOTO_EN_ENLACE, lib/tarjeta-diseno.js): el crédito está
+// en el epígrafe de la página a la que lleva el enlace.
 //
 // Se generan al compilar el sitio, una por nota, y quedan como archivos
 // estáticos: no hay nada corriendo cuando alguien comparte.

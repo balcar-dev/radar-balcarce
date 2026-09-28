@@ -1055,21 +1055,9 @@ export const REGLAS_SEMAFORO = {
   amarilloMuerte: ['muerte', 'falleció', 'fallecio', 'murió', 'murio', 'muere', 'fallece', 'deceso', 'velatorio',
     // Un herido también (28/09): un choque en la 226 con heridos espera a una persona.
     'herido', 'herida', 'heridos', 'heridas', 'lesionado', 'lesionada', 'lesionados'],
-  // Todo lo demás sale solo si la sección lo permite.
-  //
-  // Balcarce entró el 20/09: estaba afuera por prudencia y el resultado era
-  // el contrario al buscado (58 de 61 notas locales esperando, contra 65 de
-  // 67 de Deportes publicándose solas).
-  //
-  // Política, Policiales, Economía y Tecnología entraron el 21/09. Política
-  // y Policiales estaban afuera porque en un pueblo son los dos temas donde
-  // un error no se perdona, y tenían 38 notas esperando que nadie aprobaba:
-  // dos secciones enteras que no existían para el lector. Lo que las hace
-  // seguras no es que estén afuera sino la lista de arriba — todo lo que
-  // acusa, mata o involucra a un chico sigue esperando a una persona — y
-  // el rojo, que no sale nunca.
-  verdeSecciones: ['Cultura y agenda', 'Fútbol', 'Argentina', 'Deportes', 'Automovilismo', 'Agro',
-    'Balcarce', 'Política', 'Policiales', 'Economía', 'Tecnología'],
+  // Todas las secciones salen solas si el semáforo da verde. Hasta el 28/09
+  // había una lista `verdeSecciones` con las secciones que salían solas; ya
+  // tenía las once y no frenaba nada, así que se sacó (auditoría).
   // Esto NO es noticia: es publicidad o promoción de otro medio. No se
   // bloquea (a veces un sorteo del club sí interesa), pero nunca sale solo:
   // el 18/09 la portada abrió con "Ganá tu entrada para el TC", que es una

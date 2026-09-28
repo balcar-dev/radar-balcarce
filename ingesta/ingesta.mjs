@@ -740,8 +740,7 @@ function semaforo(nota, seccion, medios = cuantosMedios(nota)) {
     return { color: 'amarillo', motivo: motivoPocoContada(medios, seccion, minimo) };
   }
 
-  if (REGLAS_SEMAFORO.verdeSecciones.includes(seccion)) return { color: 'verde', motivo: `sección ${seccion}` };
-  return { color: 'amarillo', motivo: 'sección general, sin regla verde' };
+  return { color: 'verde', motivo: `sección ${seccion}` };
 }
 
 /** Deja el copete listo para publicar: le saca la firma del medio que casi
@@ -1272,12 +1271,12 @@ export const MEMORIA_DEL_CRUCE = path.join(path.dirname(fileURLToPath(import.met
 /** Marca una nota de afuera: si dice Balcarce en el título, si nombra a una
  *  figura argentina o si toca la zona. */
 function marcarDeAfuera(n) {
+  // Las tres marcas por separado (28/09, auditoría): una nota con Colapinto que
+  // además toca la 226 se quedaba sin la marca de la zona.
   if (esDeBalcarce(n)) n.nombraBalcarce = true;
-  else {
-    const figura = figuraQueNombra(n);
-    if (figura) n.figura = figura;
-    else if (tocaLaZona(n)) n.deLaZona = true;
-  }
+  const figura = figuraQueNombra(n);
+  if (figura) n.figura = figura;
+  if (tocaLaZona(n)) n.deLaZona = true;
 }
 
 export async function ingestar({
@@ -1682,7 +1681,7 @@ export const paraPruebas = {
   cieloDeSimbolo, haceCuanto, sinEtiquetas, decodificar,
   clavesDe, anotar, buscarFarmacia, directorioDeLaVanguardia, mediosMinimosDe,
   contiene, cruzarFarmacias, controlDelCronograma, tocaLaZona, tituloEsDeTecnologia,
-  motivoDeDescarte, esPolicialDeAfuera,
+  motivoDeDescarte, esPolicialDeAfuera, marcarDeAfuera,
 };
 
 // Sólo corre cuando se lo invoca directo; si lo importa probar.mjs, no.

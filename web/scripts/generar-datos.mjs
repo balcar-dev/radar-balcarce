@@ -232,7 +232,6 @@ if (enLaNube) {
     const { archivo: fichas, cuenta } = await leerNotasNuevas(ultima.notas ?? [], { guardado: fichasAntes, registro: console.log });
     if (cuenta.sinClave) console.log('  lectura con IA: sin clave, se decide como siempre');
     const { notas: conFichas, cambios } = aplicarFichas(ultima.notas ?? [], fichas.fichas, {
-      verdeSecciones: REGLAS_SEMAFORO.verdeSecciones,
       // Lo de un medio de acá que no nombra nada de acá espera a la IA, si la
       // lectura anda (28/09, la de Suiza en Balcarce).
       esperarSinFicha: !cuenta.sinClave,
@@ -645,8 +644,8 @@ const repetidas = vigentes.length - notas.length;
 if (repetidas) console.log(`  ${repetidas} notas repetidas (mismo titular) salen de las listas y conservan su página`);
 
 // Sin sección Servicios desde el 27/09 (Hernán): lo que quedó con esa sección
-// en el archivo pasa a Balcarce si es de acá, y a País si no.
-// Y desde el mismo día País se llama Argentina.
+// en el archivo pasa a Balcarce si es de acá, y a Argentina si no (País se
+// llama Argentina desde el mismo día).
 // Y los títulos automáticos del archivo, con los mismos arreglos mecánicos
 // (tituloAutomatico: sin "en Balcarce" al final, sin etiqueta adelante, sin
 // coma colgando).

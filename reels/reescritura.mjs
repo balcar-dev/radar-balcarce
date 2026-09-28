@@ -27,7 +27,7 @@
 // son los medios que contaron lo mismo y los ANTECEDENTES, notas que el sitio
 // ya publicó sobre el tema en los últimos 30 días (antecedentesDe).
 
-import { claveRedaccion, claveRedes, leerVariable } from './claves.mjs';
+import { claveRedaccion, claveRedes, leerVariable, MODELO_DE_TEXTO } from './claves.mjs';
 import {
   verificar, verificarExtras, resumirProblemas, depurarCuerpo, arreglarEscritura,
 } from '../ingesta/verificar.mjs';
@@ -52,7 +52,7 @@ import {
 // "flash-lite" en vez de "flash" a secas: para reescribir un título y un
 // copete no hace falta el modelo grande, y en la práctica respondió más
 // rápido y con menos 503 de "alta demanda" que el flash normal.
-const MODELO = 'gemini-flash-lite-latest';
+const MODELO = MODELO_DE_TEXTO;
 
 // El criterio editorial, leído de CRITERIO-EDITORIAL.md (sección 12): las
 // reglas fijas (con el lugar del tono marcado {{TONO}}), los dos tonos, la

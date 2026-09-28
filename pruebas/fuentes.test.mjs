@@ -71,18 +71,9 @@ test('las reglas de sección tienen palabras', () => {
   }
 });
 
-test('el semáforo tiene las tres listas', () => {
+test('el semáforo tiene sus listas', () => {
   assert.ok(REGLAS_SEMAFORO.rojo.length, 'sin temas bloqueados');
   assert.ok(REGLAS_SEMAFORO.amarillo.length, 'sin temas que pidan ojo humano');
-  assert.ok(REGLAS_SEMAFORO.verdeSecciones.length, 'sin secciones automáticas');
-});
-
-test('ninguna sección automática está también en rojo', () => {
-  // Sería una contradicción silenciosa: la nota saldría o no según el orden
-  // en que se evalúan las reglas.
-  for (const s of REGLAS_SEMAFORO.verdeSecciones) {
-    assert.ok(!REGLAS_SEMAFORO.rojo.includes(s.toLowerCase()), s + ' está en verde y en rojo');
-  }
 });
 
 test('las farmacias cargadas a mano tienen dirección', () => {
