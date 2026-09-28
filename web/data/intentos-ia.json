@@ -2535,6 +2535,11 @@
   "ultimo": "2026-09-27T04:30:48.863Z",
   "motivo": "sin material"
  },
+ "m1ypjt": {
+  "intentos": 1,
+  "ultimo": "2026-09-28T04:01:05.206Z",
+  "motivo": "Gemini: Bad Unicode escape in JSON at position 877 (line 1 column 878)"
+ },
  "m4pjpv": {
   "intentos": 3,
   "ultimo": "2026-09-27T23:24:43.763Z",
