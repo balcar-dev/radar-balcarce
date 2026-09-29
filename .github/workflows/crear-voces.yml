@@ -1,12 +1,12 @@
-# Crear las voces propias de Radar Balcarce (28/09): la locutora y el locutor, con
-# Voice Design de Gemini 3.8 (una voz descripta con palabras que queda guardada en
-# el proyecto de Google con un id fijo). Prueba también la Interactions API, que
-# separa el texto del estilo. No publica nada: sube los audios como archivos de la
-# corrida (Actions → la corrida → Artifacts) para escucharlos.
+# Voces propias de Radar Balcarce (28/09): la locutora y el locutor, con Voice
+# Design de Gemini 3.8 (una voz descripta con palabras que queda guardada en el
+# proyecto de Google con un id fijo) y la Interactions API, que separa el texto del
+# estilo. No publica nada: sube los audios como archivos de la corrida (Actions →
+# la corrida → Artifacts) para escucharlos.
 #
-# SE CORRE A MANO (Actions → "Crear voces" → Run workflow). Cada corrida CREA voces
-# nuevas en el proyecto de Google (hasta 200 por proyecto, duran un año) y gasta
-# unos audios de la clave paga (centavos): no correrlo de más.
+# SE CORRE A MANO (Actions → "Crear voces" → Run workflow). "crear" CREA voces
+# nuevas en el proyecto de Google (hasta 200 por proyecto, duran un año); todos
+# los modos gastan audios de la clave paga (centavos): no correrlo de más.
 #
 # SECRETO: GEMINI_API_KEY_REDES.
 
@@ -16,14 +16,26 @@ on:
   workflow_dispatch:
     inputs:
       modo:
-        description: 'crear = crea los candidatos y los prueba; listar = sólo lista las voces propias del proyecto'
+        description: 'crear = crea los seis candidatos y los prueba; dialogo = una charla entre las dos voces; listar = la biblioteca de Google; borrar = quita una voz propia'
         type: choice
-        options: [crear, listar]
-        default: crear
+        options: [crear, dialogo, listar, borrar]
+        default: dialogo
       idioma:
-        description: 'Sólo para listar: el código de idioma de la biblioteca de voces (es-AR, es-US…); escribir todas para ver toda la biblioteca'
+        description: 'Sólo para listar: el código de idioma de la biblioteca (es-AR, es-US…); escribir todas para ver toda'
         type: string
         default: 'es-AR'
+      voz_mujer:
+        description: 'Para dialogo: el id de la locutora (voice_…)'
+        type: string
+        default: 'voice_fidaoon75zc8'
+      voz_hombre:
+        description: 'Para dialogo: el id del locutor (voice_…)'
+        type: string
+        default: 'voice_gmvugyu6tti1'
+      borrar_id:
+        description: 'Sólo para borrar: el id de la voz que se quita (voice_…)'
+        type: string
+        default: ''
 
 permissions:
   contents: read
@@ -43,10 +55,15 @@ jobs:
       # ffmpeg (para pasar el audio a mp3) viene con las dependencias.
       - run: npm ci --no-audit --no-fund
 
-      - name: Crear o listar las voces
-        run: node reels/crear-voces.mjs ${{ github.event.inputs.modo == 'listar' && format('listar {0}', github.event.inputs.idioma) || '' }}
+      - name: Correr
+        # Los datos del formulario van por variables de entorno, no dentro del comando.
+        run: node reels/crear-voces.mjs "$MODO" "$EXTRA"
         env:
           GEMINI_API_KEY_REDES: ${{ secrets.GEMINI_API_KEY_REDES }}
+          MODO: ${{ github.event.inputs.modo }}
+          EXTRA: ${{ github.event.inputs.modo == 'borrar' && github.event.inputs.borrar_id || github.event.inputs.idioma }}
+          VOZ_MUJER: ${{ github.event.inputs.voz_mujer }}
+          VOZ_HOMBRE: ${{ github.event.inputs.voz_hombre }}
 
       - uses: actions/upload-artifact@v4
         if: always()
