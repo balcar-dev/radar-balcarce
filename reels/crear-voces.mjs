@@ -108,7 +108,7 @@ fs.mkdirSync(SALIDA, { recursive: true });
 if (process.argv[2] === 'borrar') {
   // node reels/crear-voces.mjs borrar "voice_a voice_b": quita una o más voces propias del proyecto
   // (los ids separados por espacios o comas).
-  for (const id of String(process.argv[3] ?? '').split(/[s,]+/).filter(Boolean)) {
+  for (const id of String(process.argv[3] ?? '').split(/[\s,]+/).filter(Boolean)) {
     if (!/^voice_[a-z0-9]+$/.test(id)) { console.log(`${id}: no es un identificador de voz`); continue; }
     const r = await api('DELETE', `/voices/${id}`);
     console.log(`${id}: ${r.ok ? 'borrada' : `ERROR ${r.estado ?? ''} ${r.error}`}`);
