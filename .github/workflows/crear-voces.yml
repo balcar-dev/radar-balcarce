@@ -16,9 +16,9 @@ on:
   workflow_dispatch:
     inputs:
       modo:
-        description: 'crear = crea los seis candidatos y los prueba; dialogo = una charla entre las dos voces; listar = la biblioteca de Google; borrar = quita una voz propia'
+        description: 'crear = crea los seis candidatos y los prueba; dialogo = una charla entre las dos voces; dialogo2 = la misma charla con un estilo por intervención, pausas y un "mhm"; listar = la biblioteca de Google; borrar = quita una voz propia'
         type: choice
-        options: [crear, dialogo, listar, borrar]
+        options: [crear, dialogo, dialogo2, listar, borrar]
         default: dialogo
       idioma:
         description: 'Sólo para listar: el código de idioma de la biblioteca (es-AR, es-US…); escribir todas para ver toda'

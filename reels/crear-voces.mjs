@@ -126,7 +126,8 @@ if (process.argv[2] === 'listar') {
   process.exit(0);
 }
 
-if (process.argv[2] === 'dialogo') {
+if (process.argv[2] === 'dialogo' || process.argv[2] === 'dialogo2') {
+  const version2 = process.argv[2] === 'dialogo2';
   // Una charla de radio entre la locutora y el locutor (28/09). Con voces propias
   // (voice_…) Google no deja hacer la conversación en un solo pedido: se sintetiza
   // cada intervención por separado, con la voz fija de cada uno, y se pegan con una
@@ -135,7 +136,20 @@ if (process.argv[2] === 'dialogo') {
   const hombre = process.env.VOZ_HOMBRE;
   if (!mujer || !hombre) { console.log('Faltan VOZ_MUJER y VOZ_HOMBRE.'); process.exit(1); }
   // Sólo lo que dicen los titulares del lunes 28/09, sin agregar hechos.
-  const GUION = [
+  // La versión 2 usa lo que recomienda la documentación de Google para que suene a
+  // conversación: un estilo corto y distinto en cada intervención, una pausa marcada
+  // (<short pause>) y una interjección de quien escucha ("Mhm."). Mismos hechos.
+  const GUION2 = [
+    ['m', 'Buenas noches, Balcarce. Bienvenidos a Radar Balcarce.', 'warm and welcoming, relaxed'],
+    ['h', 'Buenas noches. <short pause> Hoy repasamos lo que dejó este lunes.', 'friendly and easygoing, smiling'],
+    ['m', 'Arrancamos por el autódromo: el Fangio volvió a rugir después de quince años.', 'excited, warm, with energy'],
+    ['h', 'Mhm. <short pause> Y otra que se comenta: la mala suerte de Ariel Durán en Balcarce.', 'attentive, then curious'],
+    ['m', 'También te contamos de Movimiento 245, un espacio de contención y recuperación que funciona en Balcarce.', 'warm, thoughtful, a little slower'],
+    ['h', 'Y por último, Argentina y Bolivia: cuándo juegan, las entradas y las claves de un Kempes con aforo reducido.', 'upbeat and energetic'],
+    ['m', 'Todo lo demás lo encontrás en Radar Balcarce punto com.', 'warm, clear, unhurried'],
+    ['h', 'Que tengan una buena noche.', 'warm and calm, closing the show'],
+  ];
+  const GUION1 = [
     ['m', 'Buenas noches, Balcarce. Bienvenidos a Radar Balcarce.'],
     ['h', 'Buenas noches. Hoy repasamos lo que dejó este lunes.'],
     ['m', 'Arrancamos por el autódromo: el Fangio volvió a rugir después de quince años.'],
@@ -145,11 +159,12 @@ if (process.argv[2] === 'dialogo') {
     ['m', 'Todo lo demás lo encontrás en Radar Balcarce punto com.'],
     ['h', 'Que tengan una buena noche.'],
   ];
+  const GUION = version2 ? GUION2 : GUION1;
   const partes = [];
-  for (const [i, [quien, texto]] of GUION.entries()) {
+  for (const [i, [quien, texto, estilo]] of GUION.entries()) {
     const gen = await api('POST', '/interactions', {
       model: MODELO,
-      input: [{ type: 'user_input', content: [{ type: 'text', text: texto, annotations: [{ type: 'speech_metadata', style: ESTILO }] }] }],
+      input: [{ type: 'user_input', content: [{ type: 'text', text: texto, annotations: [{ type: 'speech_metadata', style: estilo ?? ESTILO }] }] }],
       response_format: { type: 'audio' },
       generation_config: { speech_config: [{ voice: quien === 'm' ? mujer : hombre }] },
     });
@@ -166,7 +181,7 @@ if (process.argv[2] === 'dialogo') {
   const lista = path.join(SALIDA, 'lista.txt');
   const aRuta = (x) => x.split(path.sep).join('/');
   fs.writeFileSync(lista, partes.map((p) => `file '${aRuta(p)}'\nfile '${aRuta(silencio)}'`).join('\n'));
-  const salida = path.join(SALIDA, 'dialogo.mp3');
+  const salida = path.join(SALIDA, version2 ? 'dialogo2.mp3' : 'dialogo.mp3');
   await correr(ffmpeg, ['-y', '-v', 'error', '-f', 'concat', '-safe', '0', '-i', lista, '-ar', '24000', '-ac', '1', '-b:a', '128k', salida]);
   const palabras = GUION.map((t) => t[1]).join(' ').split(/\s+/).length;
   const info = await correr(ffmpeg, ['-i', salida, '-f', 'null', '-']).catch((x) => x);
