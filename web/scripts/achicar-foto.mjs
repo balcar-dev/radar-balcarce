@@ -20,8 +20,11 @@ const correr = promisify(execFile);
 
 /** El ancho máximo de una foto guardada (px). */
 export const ANCHO_MAXIMO_FOTO = 1200;
-/** Calidad JPEG de ffmpeg (2 es la mejor, 31 la peor): 4 es casi como el original. */
-export const CALIDAD_JPEG = 4;
+/** Calidad JPEG de ffmpeg (2 es la mejor, 31 la peor). Era 4 (casi como el
+ *  original); desde el 29/09 es 7: a ese tamaño no se nota la diferencia y cada
+ *  foto pesa un 37 % menos (12 fotos del banco: 1,09 MB con 4, 0,68 MB con 7).
+ *  Entran unas 50 por día, y cada una queda para siempre en el historial de git. */
+export const CALIDAD_JPEG = 7;
 
 async function ffmpegDelProyecto() {
   try {

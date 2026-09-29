@@ -304,7 +304,7 @@ async function pedir({ prompt, entrada, clave, fetchFn, intentos }) {
 export const PEDIDO_MAXIMO = 400;
 
 /** Cuántos pedidos fueron a cada clave desde que arrancó el programa: la gratis
- *  ('redaccion') o la paga ('redes'). El registro de Actualizar la web lo
+ *  ('redaccion'), la de redes ('redes') o la de clasificación. El registro de Actualizar la web lo
  *  muestra, para ver de un vistazo si se está gastando. */
 export const USO_DE_CLAVES = { redaccion: 0, redes: 0, clasificacion: 0 };
 
@@ -1220,7 +1220,7 @@ export async function reescribirAutomaticas(notas, {
       + `${cuenta.sinCuerpo} sin cuerpo que sirva, ${cuenta.rechazadas} rechazadas por el título o la bajada, ${cuenta.sinMaterial} sin material, `
       + `${cuenta.oraciones} oraciones sacadas, ${cuenta.agotadas} ya agotaron los ${maximoDeIntentos} intentos, `
       + `${cuenta.partesDescartadas} partes nuevas descartadas, ${cuenta.frenadas} frenadas por el semáforo`);
-    registro(`  claves de Gemini usadas: ${USO_DE_CLAVES.redaccion} con la gratis, ${USO_DE_CLAVES.redes} con la paga, ${USO_DE_CLAVES.clasificacion} con la de clasificación (respaldo)`);
+    registro(`  claves de Gemini usadas: ${USO_DE_CLAVES.redaccion} con la de redacción, ${USO_DE_CLAVES.redes} con la de redes, ${USO_DE_CLAVES.clasificacion} con la de clasificación (respaldo)`);
   }
   return resultado;
 }
