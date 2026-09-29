@@ -1,0 +1,187 @@
+{
+ "generado": "2026-09-29T23:50:11.083Z",
+ "portada": 59,
+ "archivo": 581,
+ "esperandoCuerpo": 8,
+ "redes": {
+  "generado": "2026-09-29T23:50:54.803Z",
+  "piezas": [
+   {
+    "nombre": "clima-manana",
+    "tipo": "historia",
+    "hora": "07:30",
+    "que": "El clima de la mañana",
+    "voz": "locutora",
+    "ventana": 240,
+    "momento": "cerrada",
+    "salio": null
+   },
+   {
+    "nombre": "noticia1",
+    "tipo": "reel",
+    "hora": "10:00",
+    "que": "El repaso de la mañana",
+    "voz": "locutor",
+    "ventana": 300,
+    "momento": "cerrada",
+    "salio": null
+   },
+   {
+    "nombre": "noticia2",
+    "tipo": "reel",
+    "hora": "15:00",
+    "que": "El repaso de la tarde",
+    "voz": "locutora",
+    "ventana": 300,
+    "momento": "cerrada",
+    "salio": "2026-09-29T19:46:57.548Z"
+   },
+   {
+    "nombre": "farmacia",
+    "tipo": "historia",
+    "hora": "19:00",
+    "que": "La farmacia de turno",
+    "voz": "locutor",
+    "ventana": 300,
+    "momento": "en-hora",
+    "salio": "2026-09-29T22:04:04.091Z"
+   },
+   {
+    "nombre": "clima-noche",
+    "tipo": "historia",
+    "hora": "20:00",
+    "que": "Cómo sigue el día (el clima de la noche)",
+    "voz": "locutora",
+    "ventana": 240,
+    "momento": "en-hora",
+    "salio": "2026-09-29T23:04:26.874Z"
+   },
+   {
+    "nombre": "podcast",
+    "tipo": "reel",
+    "hora": "20:30",
+    "que": "El repaso del día",
+    "voz": "locutor",
+    "ventana": 210,
+    "momento": "en-hora",
+    "salio": "2026-09-29T23:36:31.345Z"
+   }
+  ],
+  "repasos": [
+   {
+    "nombre": "noticia1",
+    "titulo": "El repaso de la mañana",
+    "hora": "10:00",
+    "voz": "locutor",
+    "momento": "cerrada",
+    "salio": null,
+    "segundos": null,
+    "notas": []
+   },
+   {
+    "nombre": "noticia2",
+    "titulo": "El repaso de la tarde",
+    "hora": "15:00",
+    "voz": "locutora",
+    "momento": "cerrada",
+    "salio": "2026-09-29T19:46:57.548Z",
+    "segundos": null,
+    "notas": [
+     {
+      "id": "1tgeg0m",
+      "titulo": "La Cooperativa de Electricidad anuncia un corte de luz para el miércoles",
+      "seccion": "Balcarce"
+     },
+     {
+      "id": "tttn9w",
+      "titulo": "Esteban Reino evalúa de positiva la vuelta del automovilismo",
+      "seccion": "Automovilismo"
+     },
+     {
+      "id": "1nyo5j6",
+      "titulo": "Pato Naranja gana por 99 a 12 y queda entre los cuatro mejores",
+      "seccion": "Fútbol"
+     }
+    ]
+   },
+   {
+    "nombre": "podcast",
+    "titulo": "El repaso del día",
+    "hora": "20:30",
+    "voz": "locutor",
+    "momento": "en-hora",
+    "salio": "2026-09-29T23:36:31.345Z",
+    "segundos": null,
+    "notas": [
+     {
+      "id": "f3xat8",
+      "titulo": "El Complejo Polideportivo aloja un encuentro regional por el Día del Sordo",
+      "seccion": "Balcarce"
+     },
+     {
+      "id": "14iq63v",
+      "titulo": "Realizan la fiscalización mensual de artesanos en la Casa del Bicentenario",
+      "seccion": "Cultura y agenda"
+     },
+     {
+      "id": "wgq362",
+      "titulo": "Omar Martínez termina cuarto en el autódromo Juan Manuel Fangio",
+      "seccion": "Automovilismo"
+     },
+     {
+      "id": "1nyo5j6",
+      "titulo": "Pato Naranja gana por 99 a 12 y queda entre los cuatro mejores",
+      "seccion": "Fútbol"
+     }
+    ]
+   }
+  ],
+  "facebook": {
+   "hoy": [
+    {
+     "id": "f3xat8",
+     "titulo": "El Complejo Polideportivo aloja un encuentro regional por el Día del Sordo",
+     "cuando": "2026-09-29T19:45:21.287Z"
+    },
+    {
+     "id": "wgq362",
+     "titulo": "Omar Martínez termina cuarto en el autódromo Juan Manuel Fangio",
+     "cuando": "2026-09-29T21:24:01.492Z"
+    },
+    {
+     "id": "8ydg1",
+     "titulo": "La cuenta corriente de la balanza de pagos cierra con superávit",
+     "cuando": "2026-09-29T23:03:13.423Z"
+    }
+   ],
+   "cola": [
+    {
+     "id": "1tgeg0m",
+     "titulo": "La Cooperativa de Electricidad anuncia un corte de luz para el miércoles",
+     "seccion": "Balcarce",
+     "marcada": false
+    },
+    {
+     "id": "1vgun5x",
+     "titulo": "Balcarce participa de la trigésima Feria Internacional de Turismo",
+     "seccion": "Cultura y agenda",
+     "marcada": false
+    },
+    {
+     "id": "1nyo5j6",
+     "titulo": "Pato Naranja gana por 99 a 12 y queda entre los cuatro mejores",
+     "seccion": "Fútbol",
+     "marcada": false
+    }
+   ],
+   "cupo": 2,
+   "proximoDesde": "2026-09-30T00:33:13.423Z",
+   "porDia": 5,
+   "minutosEntrePosteos": 90,
+   "edadMaximaHoras": 8,
+   "desdeHora": 8,
+   "hastaHora": 22
+  },
+  "activas": true
+ }
+}
