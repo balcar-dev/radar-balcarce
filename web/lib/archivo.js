@@ -94,6 +94,10 @@ export function correccionesAMano(json) {
   for (const [id, c] of Object.entries(notas)) {
     if (!c || !c.motivo) continue;
     const campos = Object.fromEntries(CAMPOS_CORREGIBLES.filter((k) => typeof c[k] === 'string' && c[k].trim()).map((k) => [k, c[k].trim()]));
+    // El texto lo escribió la IA a pedido de una persona, que lo revisó (panel
+    // del celular, 29/09): la firma dice "Redacción con IA, revisada por la
+    // redacción", no "Revisada por la redacción".
+    if (Object.keys(campos).length && c.deIA === true) campos.deIA = true;
     if (Object.keys(campos).length) salida.set(id, campos);
   }
   return salida;
@@ -110,7 +114,11 @@ export function correccionesAMano(json) {
 export function conCorreccion(nota, correcciones) {
   const c = nota?.id ? correcciones?.get(nota.id) : null;
   if (!c) return nota;
-  return { ...nota, ...c, corregidaAMano: true, ...(c.cuerpo ? { cuerpoAMano: true } : {}) };
+  const { deIA, ...campos } = c;
+  // Un cuerpo que escribió la IA (y revisó una persona) no es "a mano": la
+  // nota sigue firmando como redactada con IA, y revisada.
+  if (deIA) return { ...nota, ...campos, corregidaAMano: true, guion: nota.guion || `${String(campos.titulo ?? nota.titulo ?? '').replace(/[.:]+$/, '')}.` };
+  return { ...nota, ...campos, corregidaAMano: true, ...(campos.cuerpo ? { cuerpoAMano: true } : {}) };
 }
 
 /**

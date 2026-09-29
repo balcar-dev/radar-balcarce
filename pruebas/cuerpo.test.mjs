@@ -330,7 +330,10 @@ test('Facebook y los podcasts no toman una nota automática sin cuerpo', () => {
   assert.deepEqual(elegirParaFacebook({ notas: [nota], ahora }), []);
   assert.equal(sePuedeSola(nota), false);
   assert.equal(elegirParaFacebook({ notas: [{ ...nota, cuerpo: CUERPO }], ahora }).length, 1);
-  assert.equal(sePuedeSola({ ...nota, como: 'publicada' }), true, 'lo que publicó una persona se respeta');
+  // Lo que publicó una persona se respeta sin cuerpo, y desde el 29/09 va a las
+  // redes sólo si esa persona también lo marcó para las redes (regla 78).
+  assert.equal(sePuedeSola({ ...nota, como: 'publicada', aprobadaParaRedes: '2026-09-25T14:00:00Z' }), true, 'lo que publicó una persona se respeta');
+  assert.equal(sePuedeSola({ ...nota, como: 'publicada' }), false, 'lo que aprobó una persona para la web no va solo a las redes');
 });
 
 test('el resumen de las 21 dice cuántas notas esperan cuerpo', () => {

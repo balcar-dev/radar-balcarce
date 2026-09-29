@@ -48,6 +48,18 @@
 /fotos-notas/*
   Cache-Control: public, max-age=604800
 
+# El panel del celular (29/09, web/public/panel/): una herramienta de la
+# redacción, no una página. Que no se indexe, que el navegador traiga siempre la
+# versión nueva (un arreglo llega enseguida) y que sólo pueda hablar con GitHub:
+# guarda la llave de quien lo usa, así que nada de scripts de afuera.
+/panel
+  X-Robots-Tag: noindex, nofollow
+
+/panel/*
+  X-Robots-Tag: noindex, nofollow
+  Cache-Control: no-cache
+  Content-Security-Policy: default-src 'self'; connect-src 'self' https://api.github.com; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self'; base-uri 'none'; form-action 'self'
+
 # El archivo para agendar un evento: que el celular lo abra con el calendario.
 /agenda/*/evento.ics
   Content-Type: text/calendar; charset=utf-8

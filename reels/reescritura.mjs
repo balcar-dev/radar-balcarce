@@ -300,6 +300,9 @@ async function pedir({ prompt, entrada, clave, fetchFn, intentos }) {
   return res;
 }
 
+/** Cuántos caracteres del pedido de una persona llegan a la IA, como mucho. */
+export const PEDIDO_MAXIMO = 400;
+
 /** Cuántos pedidos fueron a cada clave desde que arrancó el programa: la gratis
  *  ('redaccion') o la paga ('redes'). El registro de Actualizar la web lo
  *  muestra, para ver de un vistazo si se está gastando. */
@@ -330,7 +333,7 @@ const probarOtraClave = (res) => !res || [401, 402, 403, 429].includes(res.statu
  * pedido de redacción ocupa unos 9.000.
  */
 export async function reescribir(nota, {
-  intentos = 3, fetchFn = fetch, correccion = null,
+  intentos = 3, fetchFn = fetch, correccion = null, pedido = null,
   clavePropia = claveRedaccion(), claveDeRedes = claveRedes(), claveDeRespaldo = leerVariable('GEMINI_API_KEY_CLASIFICACION'),
 } = {}) {
   const primera = clavePropia;
@@ -341,6 +344,13 @@ export async function reescribir(nota, {
 
   const prompt = instruccionPara(nota);
   let entrada = entradaDe(nota);
+  // El pedido de una persona desde el panel del celular (29/09): "más corta",
+  // "empezá por el horario"… Va después de la noticia y nunca por encima de
+  // las reglas: lo que las reglas no permiten, no se hace.
+  const delEditor = String(pedido ?? '').replace(/\s+/g, ' ').trim().slice(0, PEDIDO_MAXIMO);
+  if (delEditor) {
+    entrada += `\n\nPEDIDO DE LA REDACCIÓN (una persona de Radar Balcarce que va a revisar lo que escribas): ${delEditor}\nCumplilo sin romper ninguna de las reglas de arriba: si pide algo que las reglas no permiten (inventar un dato, identificar a un menor o a una víctima, opinar, nombrar al medio), seguí las reglas.`;
+  }
   // Segundo intento: se le dice qué inventó y se le pide que lo rehaga sin eso.
   if (correccion?.length) {
     entrada += `\n\nCORRECCIÓN OBLIGATORIA: en un intento anterior tu texto tenía estos problemas, y por eso se descartó:\n- ${correccion.join('\n- ')}\nEscribilo de nuevo usando ÚNICAMENTE lo que dicen las fuentes de arriba: si un nombre, un número, un día o una cita no está ahí, no lo pongas. El cuerpo sigue siendo obligatorio, de ${CUERPO.palabrasPedidasMinimo} a ${CUERPO.palabrasPedidasMaximo} palabras, desarrollado con lo que SÍ dicen todas las fuentes, y nunca repite el copete.`;

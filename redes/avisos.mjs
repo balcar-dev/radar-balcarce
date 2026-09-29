@@ -107,10 +107,11 @@ export function pendientesAAvisar(pendientes = [], previo = {}, ahora = new Date
 
 export function textoPendientes({ total, nuevos }) {
   const max = LIMITES_AVISOS.pendientesEnElMensaje;
-  const lista = nuevos.slice(0, max).map((p) => `• ${p.titulo ?? 'Tema delicado (el titular se ve en el panel)'}${p.seccion ? ` (${p.seccion})` : ''}`);
+  const lista = nuevos.slice(0, max).map((p) => `• ${p.titulo ?? 'Tema delicado (el titular se ve en el panel del celular)'}${p.seccion ? ` (${p.seccion})` : ''}`);
   if (nuevos.length > max) lista.push(`…y ${nuevos.length - max} más.`);
   const cab = `🟡 ${total} nota(s) esperando a una persona${nuevos.length < total ? ` (${nuevos.length} nueva(s))` : ''}:`;
-  return `${cab}\n${lista.join('\n')}\nSe aprueban desde el panel, en la PC de Hernán.`;
+  // Desde el 29/09 se deciden desde el celular (web/public/panel/).
+  return `${cab}\n${lista.join('\n')}\nSe deciden desde el panel del celular: radarbalcarce.com/panel`;
 }
 
 /** Lo que se guarda después de avisar: todas las que esperan ahora. */

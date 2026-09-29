@@ -1,0 +1,17 @@
+{
+  "name": "Radar Balcarce · Panel",
+  "short_name": "Radar Panel",
+  "description": "Aprobar, editar y retirar notas de Radar Balcarce",
+  "id": "/panel/",
+  "start_url": "/panel/",
+  "scope": "/panel/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "lang": "es-AR",
+  "background_color": "#14161A",
+  "theme_color": "#14161A",
+  "icons": [
+    { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}

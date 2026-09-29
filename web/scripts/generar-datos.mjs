@@ -39,6 +39,12 @@
 //     + web/public/fotos-notas/     web/public/fotos-notas/ (en la nube)
 //   web/data/esperando-cuerpo.json  las notas que esperan cuerpo
 //   web/data/vistas.json            la primera vez que se vio cada nota
+//   web/data/celular-pendientes.json lo que espera a una persona, cifrado para
+//     + .cache/celular-notas.json    el celular; y las notas enteras, en la
+//                                    caché de Actions (en la nube; panel/celular-datos.mjs)
+//
+// Lee, además de las decisiones del panel de la PC, las del celular
+// (web/data/celular-decisiones.json) y las correcciones (correcciones.json).
 //
 // La lógica de "qué nota está publicada" es la misma que usa
 // panel/servidor.mjs en su función vista(): se repite acá a propósito para no
@@ -74,6 +80,10 @@ import { traerDolar } from '../lib/dolar.js';
 import {
   cuandoArmarDolar, entradaDelDia, sumarAlHistorial, comoHistoriaJson, notasDelDolar, notasDeRepasos,
 } from '../lib/notas-propias.js';
+import {
+  leerDecisionesCelular, unirDecisiones, paraDecidir, notasParaEscribir,
+} from '../../panel/celular-datos.mjs';
+import { leerLlaves, cerrarSiCambio } from '../../panel/cifrado.mjs';
 
 const AQUI = import.meta.dirname;
 const DATOS_PANEL = path.join(AQUI, '..', '..', 'panel', 'datos');
@@ -119,6 +129,16 @@ const DIAS_DE_VISTAS = 7;
 const RETIRADAS_A_MANO = idsRetiradosAMano(leerJson(path.join(AQUI, '..', 'data', 'retiradas.json'), null));
 // Lo que se corrigió a mano (título, bajada, sección), fuera del panel.
 const CORRECCIONES = correccionesAMano(leerJson(path.join(AQUI, '..', 'data', 'correcciones.json'), null));
+// El panel del celular (29/09, panel/celular-datos.mjs): lo que decidió una
+// persona desde el celular (aprobar, descartar, retirar) y lo que marcó para que
+// también vaya a Facebook e Instagram. Lo escribe sólo el celular.
+const CELULAR = leerDecisionesCelular(leerJson(path.join(AQUI, '..', 'data', 'celular-decisiones.json'), null));
+// Lo que espera a una persona, cifrado para cada celular registrado
+// (panel/cifrado.mjs), y las notas completas para que GitHub las pueda escribir
+// con IA cuando el celular lo pide (en la caché de Actions, que no es pública).
+const CELULAR_LLAVES = path.join(AQUI, '..', 'data', 'celular-llaves.json');
+const CELULAR_PENDIENTES = path.join(AQUI, '..', 'data', 'celular-pendientes.json');
+const CELULAR_NOTAS = path.join(AQUI, '..', '..', '.cache', 'celular-notas.json');
 
 // Este script corre en dos lugares distintos:
 //
@@ -162,6 +182,12 @@ if (enLaNube) {
   estado = leerJson(path.join(DATOS_PANEL, 'estado.json'), { decisiones: {} });
   ultima = leerJson(path.join(DATOS_PANEL, 'ultima.json'), { notas: [] });
   agenda = leerJson(path.join(DATOS_PANEL, 'agenda.json'), null);
+}
+// Las del celular, encima de las del panel de la PC (manda la más nueva).
+estado.decisiones = unirDecisiones(estado.decisiones ?? {}, CELULAR.notas);
+{
+  const n = Object.keys(CELULAR.notas).length;
+  if (n) console.log(`  ${n} decisiones desde el celular`);
 }
 
 // Cuándo vimos cada nota por primera vez.
@@ -453,6 +479,10 @@ function notaPublicada(n) {
     ...(n.deLaZona ? { deLaZona: true } : {}),
     publicadaPor: d?.por ?? null,
     publicadaCuando: d?.cuando ?? null,
+    // Una persona la marcó desde el celular para que también vaya a Facebook e
+    // Instagram (29/09): hasta Política y Policiales, que solas no van nunca
+    // (redes/elegir.mjs). La fecha es la de ese visto bueno.
+    ...(CELULAR.redes[n.id] ? { aprobadaParaRedes: CELULAR.redes[n.id].cuando } : {}),
     // Cómo llegó a publicarse: sola por el semáforo verde, o porque
     // alguien la miró y le dio el visto bueno. La nota lo dice al pie.
     // Que parte de lo que publicamos lo redacte una IA no es algo para
@@ -803,6 +833,21 @@ function cambioQueImporta(antes, ahora) {
   const texto = `${JSON.stringify({ generado: salida.generado, notas: esperandoCuerpo }, null, 1)}\n`;
   const antes = leerJson(ESPERANDO_CUERPO, null);
   if (JSON.stringify(antes?.notas) !== JSON.stringify(esperandoCuerpo)) fs.writeFileSync(ESPERANDO_CUERPO, texto, 'utf8');
+}
+
+// El panel del celular (29/09), sólo en la nube: lo que espera a una persona,
+// cifrado para cada celular registrado (sólo se vuelve a escribir si cambió), y
+// las notas enteras en la caché de Actions para el workflow "Panel del celular".
+if (enLaNube) {
+  const llaves = leerLlaves(leerJson(CELULAR_LLAVES, null));
+  const lista = paraDecidir(ultima.notas ?? [], estado.decisiones ?? {});
+  const { sobre, cambio } = cerrarSiCambio({ pendientes: lista }, llaves, leerJson(CELULAR_PENDIENTES, null));
+  if (cambio || !fs.existsSync(CELULAR_PENDIENTES)) {
+    fs.writeFileSync(CELULAR_PENDIENTES, `${JSON.stringify({ ...sobre, generado: salida.generado, cuantas: lista.length })}\n`, 'utf8');
+    console.log(`  celular: ${lista.length} notas esperando a una persona, cifradas para ${llaves.length} celular(es)`);
+  }
+  fs.mkdirSync(path.dirname(CELULAR_NOTAS), { recursive: true });
+  fs.writeFileSync(CELULAR_NOTAS, JSON.stringify({ generado: salida.generado, notas: notasParaEscribir(ultima.notas ?? []) }), 'utf8');
 }
 
 if (cambioQueImporta(anterior, salida)) {

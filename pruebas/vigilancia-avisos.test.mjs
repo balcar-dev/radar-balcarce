@@ -104,7 +104,7 @@ test('pendientes: el mensaje lista hasta cinco, dice cuántas más y que se apru
   assert.match(t, /9 nota\(s\) esperando a una persona \(7 nueva\(s\)\)/);
   assert.equal((t.match(/^• /gm) ?? []).length, 5);
   assert.match(t, /…y 2 más/);
-  assert.match(t, /panel, en la PC de Hernán/);
+  assert.match(t, /panel del celular: radarbalcarce\.com\/panel/);
   assert.match(t, /Tema delicado.*\(Policiales\)/);
 });
 

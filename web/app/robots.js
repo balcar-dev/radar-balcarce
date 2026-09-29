@@ -26,8 +26,9 @@ export default function robots() {
     rules: {
       userAgent: '*',
       allow: '/',
-      // El feed es para programas, no para el índice de búsqueda.
-      disallow: ['/feed.xml'],
+      // El feed es para programas, no para el índice de búsqueda. El panel del
+      // celular (29/09) es una herramienta de la redacción, no una página.
+      disallow: ['/feed.xml', '/panel/'],
     },
     // El de noticias es aparte: Google Noticias y Discover lo miran solo,
     // con las reglas propias de ese sitemap (ver sitemap-news.xml/route.js).

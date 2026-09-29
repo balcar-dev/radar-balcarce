@@ -1,0 +1,103 @@
+# Panel del celular: la IA escribe o reescribe UNA nota porque lo pidió una
+# persona desde el celular (29/09; web/public/panel/, panel/celular.mjs).
+#
+# No lo dispara cron-job.org ni nadie a mano: lo dispara el panel del celular,
+# con la llave de GitHub de quien lo usa. Tarda un minuto. Deja el borrador
+# CIFRADO para los celulares registrados en web/data/celular-borradores.json
+# (el repositorio y este registro son públicos: acá no se imprime nada de la
+# nota). El borrador no se publica solo: lo decide la persona en el celular.
+#
+# SECRETOS: las mismas claves de IA que "Actualizar la web" (se usa primero la
+# de redacción; ver reels/claves.mjs).
+
+name: Panel del celular
+run-name: 'Panel · ${{ inputs.accion }} · ${{ inputs.marca }}'
+
+on:
+  workflow_dispatch:
+    inputs:
+      accion:
+        description: 'Qué hacer (escribir)'
+        required: true
+        default: escribir
+      id:
+        description: 'La nota'
+        required: true
+      pedido:
+        description: 'Lo que pidió la persona (opcional; queda a la vista en GitHub)'
+        required: false
+        default: ''
+      marca:
+        description: 'Una marca para que el celular encuentre esta corrida'
+        required: false
+        default: ''
+
+permissions:
+  contents: write
+
+# Uno por vez: dos borradores al mismo tiempo se pisarían el archivo.
+concurrency:
+  group: panel-celular
+  cancel-in-progress: false
+
+jobs:
+  escribir:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    env:
+      TZ: America/Argentina/Buenos_Aires
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      # Lo que trajo la última ingesta (las notas con sus fuentes enteras): lo
+      # deja "Actualizar la web" en la caché de Actions, que no es pública.
+      - name: Las notas de la última actualización
+        uses: actions/cache/restore@v4
+        with:
+          path: .cache
+          key: cruce-panel-${{ github.run_id }}
+          restore-keys: cruce-
+
+      - name: Escribir con IA
+        # Lo que manda el celular va por variables de entorno y nunca pegado en
+        # el comando: así un texto con comillas no puede ejecutar nada.
+        run: node panel/celular.mjs "$ACCION" "--id=$NOTA" "--pedido=$PEDIDO"
+        env:
+          ACCION: ${{ inputs.accion }}
+          NOTA: ${{ inputs.id }}
+          PEDIDO: ${{ inputs.pedido }}
+          GEMINI_API_KEY_REDACCION: ${{ secrets.GEMINI_API_KEY_REDACCION }}
+          GEMINI_API_KEY_REDES: ${{ secrets.GEMINI_API_KEY_REDES }}
+          GEMINI_API_KEY_CLASIFICACION: ${{ secrets.GEMINI_API_KEY_CLASIFICACION }}
+
+      - name: Guardar el borrador
+        run: |
+          git config user.name "Radar Balcarce"
+          git config user.email "272334999+balcar-dev@users.noreply.github.com"
+          git add web/data/celular-borradores.json
+          if git diff --cached --quiet; then
+            echo "Nada nuevo que guardar."
+            exit 0
+          fi
+          git commit -m "Panel del celular: borrador · $(date '+%d/%m %H:%M')"
+          # El mismo ciclo que "Actualizar la web": traer lo de las otras
+          # corridas y reintentar. Este archivo lo escribe sólo este workflow.
+          for intento in 1 2 3; do
+            if ! git pull --rebase; then
+              chocan=$(git diff --name-only --diff-filter=U)
+              echo "$chocan" | grep -qvE "^web/data/" && { echo "Conflicto fuera de web/data: $chocan"; git rebase --abort; exit 1; }
+              echo "$chocan" | xargs -r git checkout --theirs --
+              echo "$chocan" | xargs -r git add --
+              GIT_EDITOR=true git rebase --continue || { git rebase --abort; exit 1; }
+            fi
+            git push && break
+            sleep 5
+          done
+          git fetch -q origin main
+          [ "$(git rev-list --count origin/main..HEAD)" = 0 ] || { echo "No se pudo guardar el borrador después de tres intentos"; exit 1; }

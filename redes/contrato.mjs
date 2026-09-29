@@ -34,11 +34,10 @@
 //
 // Sin dependencias: sólo lo que trae Node. Sin red y sin reloj propio.
 
-import { CONTRATO_DIARIO, FACEBOOK, SECCIONES_QUE_ESPERAN_PERSONA } from '../ingesta/criterio.mjs';
-import { temaParecido, esNotaPropia, esParaLasRedes } from './elegir.mjs';
+import { CONTRATO_DIARIO, FACEBOOK } from '../ingesta/criterio.mjs';
+import { temaParecido, vaAFacebookPorLoQueEs } from './elegir.mjs';
 import { diaAR, minutoDelDiaAR, minutosDeHora } from '../ingesta/zona.mjs';
 import { cronogramaDelDia, ventanaDe, PODCASTS } from './piezas.mjs';
-import { esperaCuerpo } from '../web/lib/cuerpo.js';
 
 /** El día desde el que rige este contrato. Antes las historias eran de notas y
  *  los podcasts no se subían como historia: no se les puede pedir lo de ahora. */
@@ -148,11 +147,9 @@ export function candidatasSinPublicar({ portada, libro, fecha }) {
   const elegidas = [];
   const candidatas = portada.notas
     .filter((n) => !libro?.facebook?.[n.id])
-    .filter((n) => !esNotaPropia(n) && !esperaCuerpo(n))
-    .filter(esParaLasRedes)
-    .filter((n) => (n.relevancia ?? 0) >= FACEBOOK.relevanciaMinima)
-    .filter((n) => !SECCIONES_QUE_ESPERAN_PERSONA.includes(n.seccion))
-    .filter((n) => { const t = n.publicadaCuando ?? n.fecha; return t && diaAR(new Date(t)) === fecha && tuvoSuMomento(t, fecha); })
+    // La misma regla que usa Facebook para elegir (redes/elegir.mjs).
+    .filter((n) => vaAFacebookPorLoQueEs(n))
+    .filter((n) => { const t = n.aprobadaParaRedes ?? n.publicadaCuando ?? n.fecha; return t && diaAR(new Date(t)) === fecha && tuvoSuMomento(t, fecha); })
     .sort((a, b) => (b.relevancia ?? 0) - (a.relevancia ?? 0));
   for (const n of candidatas) {
     if ([...yaPuestas, ...elegidas].some((p) => temaParecido(n, p))) continue;

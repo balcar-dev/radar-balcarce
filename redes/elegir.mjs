@@ -11,7 +11,10 @@
 //     se ve, porque portada.json no lo trae.
 //   · Política y Policiales no salen solos a las redes. En la web sí, con el
 //     semáforo, pero en una red la nota viaja sin contexto y a un vecino lo
-//     nombra un titular. Para esas secciones decide una persona.
+//     nombra un titular. Para esas secciones decide una persona: desde el
+//     29/09, con el panel del celular ("también a Facebook e Instagram",
+//     `aprobadaParaRedes`). Lo que salió en la web porque lo aprobó una
+//     persona (era amarillo) tampoco va solo: sólo si lo marcó para las redes.
 //   · Una nota se publica una sola vez por red. El libro lo garantiza.
 //   · Se espera un rato antes de publicar: el enlace tiene que existir en la
 //     web, o Facebook guarda una tarjeta de "página no encontrada".
@@ -80,8 +83,36 @@ export function anotar(libro, red, id, datos, ahora = new Date()) {
 
 const minutosDesde = (iso, ahora) => (ahora.getTime() - new Date(iso).getTime()) / 60000;
 
-/** Cuándo salió la nota a la web. Si no lo dice, se usa la fecha de la nota. */
-const cuandoSalio = (n) => n.publicadaCuando ?? n.fecha ?? null;
+/** Cuándo salió la nota a la web. Si no lo dice, se usa la fecha de la nota.
+ *  Si una persona la aprobó para las redes, desde ese visto bueno. */
+const cuandoSalio = (n) => n.aprobadaParaRedes ?? n.publicadaCuando ?? n.fecha ?? null;
+
+/** ¿Una persona la marcó desde el panel del celular para que vaya a las redes? (29/09) */
+export const aprobadaParaLasRedes = (n) => Boolean(n?.aprobadaParaRedes);
+
+/** ¿Salió en la web porque la aprobó una persona (no por el semáforo verde)?
+ *  Eso era amarillo: no va solo a ninguna red, salvo que la persona lo marque. */
+export const loAproboUnaPersona = (n) => n?.como === 'publicada';
+
+/**
+ * ¿Puede ir a Facebook por lo que es, sin mirar la hora ni el libro? (29/09;
+ * la misma regla la usa el contrato del día, redes/contrato.mjs):
+ *
+ *   · lo que una persona marcó desde el celular para las redes, sí, aunque sea
+ *     de Política o Policiales, de afuera o de poca relevancia: lo decidió ella;
+ *   · si no: de Balcarce (esParaLasRedes), con la relevancia mínima, de una
+ *     sección que sale sola y que no haya salido en la web porque la aprobó una
+ *     persona.
+ *
+ * Nunca una nota propia ni una sin cuerpo.
+ */
+export function vaAFacebookPorLoQueEs(n, reglas = REGLAS_FACEBOOK) {
+  if (esNotaPropia(n) || esperaCuerpo(n)) return false;
+  if (aprobadaParaLasRedes(n)) return true;
+  return esParaLasRedes(n) && !loAproboUnaPersona(n)
+    && (n.relevancia ?? 0) >= reglas.relevanciaMinima
+    && !reglas.seccionesQueEsperanPersona.includes(n.seccion);
+}
 
 /**
  * Las notas que corresponde publicar ahora en Facebook, en orden.
@@ -117,11 +148,7 @@ export function elegirParaFacebook({ notas, libro = libroNuevo(), ahora = new Da
 
   const candidatas = notas.filter((n) => {
     if (yaPublicada(libro, 'facebook', n.id)) return false;
-    if (esperaCuerpo(n)) return false;
-    if (esNotaPropia(n)) return false;
-    if (!esParaLasRedes(n)) return false;
-    if ((n.relevancia ?? 0) < reglas.relevanciaMinima) return false;
-    if (reglas.seccionesQueEsperanPersona.includes(n.seccion)) return false;
+    if (!vaAFacebookPorLoQueEs(n, reglas)) return false;
     if (recientes.some((p) => temaParecido(n, p))) return false;
     const salio = cuandoSalio(n);
     if (!salio) return false;
@@ -129,7 +156,8 @@ export function elegirParaFacebook({ notas, libro = libroNuevo(), ahora = new Da
     return edad >= reglas.esperaMinutos && edad <= reglas.edadMaximaHoras * 60;
   });
 
-  candidatas.sort((a, b) => (b.relevancia ?? 0) - (a.relevancia ?? 0));
+  // Lo que aprobó una persona para las redes va primero; después, por relevancia.
+  candidatas.sort((a, b) => (Number(aprobadaParaLasRedes(b)) - Number(aprobadaParaLasRedes(a))) || ((b.relevancia ?? 0) - (a.relevancia ?? 0)));
   return candidatas.slice(0, Math.min(cupo, reglas.porCorrida));
 }
 
@@ -307,10 +335,12 @@ export function esParaLasRedes(nota) {
   return nota?.local === true || (nota?.seccion === 'Automovilismo' && !!nota?.figura);
 }
 
-/** ¿Se puede armar una pieza sola con esta nota? */
+/** ¿Se puede armar una pieza sola con esta nota? Lo que salió en la web porque
+ *  lo aprobó una persona, sólo si también lo marcó para las redes (29/09); y
+ *  nunca Política ni Policiales: los podcasts no las llevan. */
 export function sePuedeSola(nota) {
   return nota.semaforo !== 'rojo' && !SECCIONES_QUE_ESPERAN_PERSONA.includes(nota.seccion) && !esperaCuerpo(nota)
-    && !esNotaPropia(nota) && esParaLasRedes(nota);
+    && !esNotaPropia(nota) && esParaLasRedes(nota) && (!loAproboUnaPersona(nota) || aprobadaParaLasRedes(nota));
 }
 
 const porRelevancia = (a, b) => (b.relevancia ?? 0) - (a.relevancia ?? 0);

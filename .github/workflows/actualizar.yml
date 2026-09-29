@@ -94,6 +94,9 @@ jobs:
       # todos los medios en las últimas 36 horas, para contar cuántos cuentan
       # cada hecho. No va al repositorio: la guarda la caché de Actions entre
       # corridas. Si se pierde, se rearma sola con los índices de noticias.
+      # En la misma caché quedan las notas enteras de esta vuelta
+      # (.cache/celular-notas.json): las lee "Panel del celular" (panel.yml)
+      # cuando el celular pide que la IA escriba una nota que espera.
       - name: Memoria del cruce de medios
         uses: actions/cache@v4
         with:
@@ -152,7 +155,9 @@ jobs:
           # las armaba pero se perdían al terminar la corrida (encontrado el
           # 28/09, en la primera corrida real: 8 fotos armadas, cero subidas).
           # retiradas.json: los lunes pierde las de más de una semana.
-          git add web/data/portada.json web/data/archivo.json web/data/agenda.json web/data/intentos-ia.json web/data/dolar-historia.json web/data/fichas.json web/data/notas-por-dia.json web/data/banco-fotos.json web/data/esperando-cuerpo.json web/data/vistas.json web/data/retiradas.json web/public/fotos-notas/
+          # celular-pendientes.json: lo que espera a una persona, cifrado para el
+          # panel del celular (29/09; sólo cambia cuando cambia la lista).
+          git add web/data/portada.json web/data/archivo.json web/data/agenda.json web/data/intentos-ia.json web/data/dolar-historia.json web/data/fichas.json web/data/notas-por-dia.json web/data/banco-fotos.json web/data/esperando-cuerpo.json web/data/vistas.json web/data/retiradas.json web/data/celular-pendientes.json web/public/fotos-notas/
           if git diff --cached --quiet; then
             echo "Sin novedades: no hay nada que publicar."
           else
