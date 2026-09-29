@@ -1,6 +1,71 @@
 {
-  "generado": "2026-09-29T00:32:06.964Z",
+  "generado": "2026-09-29T01:01:35.735Z",
   "notas": [
+    {
+      "id": "14r6u8r",
+      "titulo": "El Gobierno define la nueva ley de semillas tras la falta de acuerdo",
+      "copete": "Productores y semilleros no lograron unificar posturas sobre quiénes deben pagar por el uso propio en soja, trigo y arroz. El Ejecutivo enviará el proyecto al Congreso.",
+      "cuerpo": "Las partes se reunieron con autoridades del Instituto Nacional de Semillas para exponer los puntos de acuerdo y las diferencias que aún mantienen sobre el pago por el uso propio en cultivos de soja, trigo y arroz.\n\nLa principal discrepancia radica en qué productores deben pagar y quiénes quedan exceptuados. La distancia entre ambas posturas involucra a 16.818 productores y 1.855.452 hectáreas.\n\nEl universo analizado comprende 56.065 productores y 14.582.238 hectáreas.",
+      "guion": "El Gobierno define la nueva ley de semillas tras la falta de acuerdo",
+      "seccion": "Agro",
+      "medios": [
+        "La Nación",
+        "Clarín"
+      ],
+      "enlace": "https://www.lanacion.com.ar/economia/campo/ley-de-semillas-pese-al-acercamiento-y-tras-la-falta-de-acuerdo-el-gobierno-decidira-quienes-pagaran-nid28092026/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-28T22:42:40.000Z",
+      "sinFecha": false,
+      "visto": "2026-09-29T01:01:05.709Z",
+      "relevancia": 53,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "El Gobierno elaborará el proyecto de ley tras la falta de acuerdo entre productores e industria.",
+        "La discusión se centra en el pago por el uso propio de semillas en soja, trigo y arroz.",
+        "Los productores proponen gravar a los primeros tres deciles del SISA.",
+        "La industria semillera plantea ampliar el pago hasta el sexto decil."
+      ],
+      "noConfirmado": [
+        "Todavía no se informó la fecha exacta en la que el Ejecutivo enviará el proyecto al Congreso.",
+        "No se precisó cuándo volverán a ser convocados los productores y la industria."
+      ],
+      "textoRedes": "El Gobierno definirá el proyecto de la nueva ley de semillas tras la falta de acuerdo entre productores y la industria semillera sobre el pago por el uso propio en soja, trigo y arroz.",
+      "etiquetas": [
+        "ley de semillas",
+        "Gobierno",
+        "industria semillera"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/economia/campo/ley-de-semillas-pese-al-acercamiento-y-tras-la-falta-de-acuerdo-el-gobierno-decidira-quienes-pagaran-nid28092026/",
+          "fecha": "2026-09-28T22:42:40.000Z",
+          "oficial": false,
+          "aporte": "Aportó detalles sobre las propuestas de productores e industria respecto a los deciles del SISA y las estadísticas de superficie."
+        },
+        {
+          "medio": "Clarín",
+          "enlace": "https://www.clarin.com/rural/ley-semillas-gobierno-evaluara-propuesta-entidades-campo-decidira-pagaran-uso-propio_0_VefVpa7sRl.html",
+          "fecha": "2026-09-28T23:37:19.000Z",
+          "oficial": false,
+          "aporte": "Confirmó la realización de la reunión entre productores, industria y autoridades para analizar la reforma."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "el-gobierno-define-la-nueva-ley-de-semillas-tras-la-falta-de-acuerdo",
+      "foto": {
+        "archivo": "fotos-notas/14r6u8r.jpg",
+        "credito": "Foto: Clarín"
+      }
+    },
     {
       "id": "17j3wna",
       "titulo": "La virgen de la tosquera compite por una nominación en los Oscar",
@@ -11,14 +76,15 @@
       "medios": [
         "Infobae",
         "La Nación",
-        "Clarín",
         "Ámbito",
         "TN (Todo Noticias)",
         "El Destape",
+        "A24",
         "C5N",
         "La Nueva",
         "La Brújula 24",
         "Minuto Uno",
+        "Clarín",
         "Página/12"
       ],
       "enlace": "https://www.minutouno.com/espectaculos/la-virgen-la-tosquera-laura-casabe-representara-la-argentina-los-oscar-n6327706",
@@ -403,7 +469,7 @@
       "fecha": "2026-09-28T21:59:12.000Z",
       "sinFecha": false,
       "visto": "2026-09-29T00:30:56.955Z",
-      "relevancia": 100,
+      "relevancia": 90,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -498,7 +564,7 @@
       "fecha": "2026-09-28T21:52:27.000Z",
       "sinFecha": false,
       "visto": "2026-09-28T22:01:03.337Z",
-      "relevancia": 88,
+      "relevancia": 78,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -587,7 +653,7 @@
       "fecha": "2026-09-28T21:48:55.000Z",
       "sinFecha": false,
       "visto": "2026-09-28T23:01:09.560Z",
-      "relevancia": 84,
+      "relevancia": 74,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -652,7 +718,7 @@
       "fecha": "2026-09-28T21:44:45.000Z",
       "sinFecha": false,
       "visto": "2026-09-28T22:01:03.337Z",
-      "relevancia": 96,
+      "relevancia": 86,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -735,14 +801,15 @@
         "Perfil",
         "TN (Todo Noticias)",
         "El Cronista",
-        "C5N"
+        "C5N",
+        "La Nueva"
       ],
       "enlace": "https://www.c5n.com/economia/informe-uia-la-caida-interanual-la-industria-llego-al-57-y-quedo-11-debajo-2022-2023-n250157",
       "teniaImagenLaFuente": true,
       "fecha": "2026-09-28T21:07:00.000Z",
       "sinFecha": false,
       "visto": "2026-09-29T00:30:56.955Z",
-      "relevancia": 63,
+      "relevancia": 73,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -990,6 +1057,7 @@
         "Clarín",
         "La Nación",
         "Noticias Argentinas (NA)",
+        "La Nueva",
         "Doble Amarilla",
         "Olé"
       ],
@@ -2648,7 +2716,8 @@
         "Perfil",
         "Ámbito",
         "Noticias Argentinas (NA)",
-        "La Nueva"
+        "La Nueva",
+        "La Voz del Pueblo"
       ],
       "enlace": "https://www.perfil.com/noticias/politica/presidente-por-dos-dias-el-senador-bartolome-abdala-quedara-a-cargo-del-ejecutivo-por-viajes-de-milei-y-villarruel.phtml",
       "teniaImagenLaFuente": true,
@@ -2921,8 +2990,8 @@
       "guion": "Biogénesis Bagó exporta por primera vez vacunas a Europa",
       "seccion": "Agro",
       "medios": [
-        "Agrositio",
-        "Radio Mitre"
+        "Radio Mitre",
+        "Agrositio"
       ],
       "enlace": "https://radiomitre.cienradios.com/mitre-y-el-campo/historico-un-laboratorio-argentino-logra-la-primera-exportacion-de-vacunas-a-un-pais-europeo/",
       "teniaImagenLaFuente": true,
@@ -2988,7 +3057,7 @@
       "fecha": "2026-09-28T12:59:47.931Z",
       "sinFecha": false,
       "visto": "2026-09-28T23:31:08.280Z",
-      "relevancia": 43,
+      "relevancia": 36,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -3068,7 +3137,7 @@
       "fecha": "2026-09-28T12:32:25.000Z",
       "sinFecha": false,
       "visto": "2026-09-28T16:31:05.398Z",
-      "relevancia": 78,
+      "relevancia": 71,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -3102,7 +3171,7 @@
       "fecha": "2026-09-28T12:31:28.000Z",
       "sinFecha": false,
       "visto": "2026-09-28T16:01:28.909Z",
-      "relevancia": 80,
+      "relevancia": 73,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -3404,10 +3473,10 @@
         "C5N",
         "Radio Mitre",
         "Noticias Argentinas (NA)",
-        "iProfesional",
         "A24",
         "El Cronista",
-        "La Nueva"
+        "La Nueva",
+        "iProfesional"
       ],
       "enlace": "https://www.infobae.com/economia/2026/09/28/bravo-milei-el-elogio-de-elon-musk-al-presidente-argentino-por-la-baja-de-la-inflacion-durante-su-gestion/",
       "teniaImagenLaFuente": true,
@@ -3457,13 +3526,6 @@
           "aporte": null
         },
         {
-          "medio": "iProfesional",
-          "enlace": "https://www.iprofesional.com/tecnologia/465389-elon-musk-felicito-a-milei-por-la-caida-de-la-inflacion-en-argentina",
-          "fecha": "2026-09-28T13:45:00.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
           "medio": "A24",
           "enlace": "https://www.a24.com/economia/bravo-milei-que-elon-musk-elogio-al-presidente-argentino-n1600917",
           "fecha": "2026-09-28T13:43:00.000Z",
@@ -3483,51 +3545,16 @@
           "fecha": "2026-09-28T16:51:31.000Z",
           "oficial": false,
           "aporte": null
+        },
+        {
+          "medio": "iProfesional",
+          "enlace": "https://www.iprofesional.com/tecnologia/465389-elon-musk-felicito-a-milei-por-la-caida-de-la-inflacion-en-argentina",
+          "fecha": "2026-09-28T13:45:00.000Z",
+          "oficial": false,
+          "aporte": null
         }
       ],
       "slug": "bravo-milei-el-elogio-de-elon-musk-al-presidente-argentino-por-la",
-      "corregidaAMano": true,
-      "cuerpoAMano": true
-    },
-    {
-      "id": "1ppws54",
-      "titulo": "Alpine elige una foto de Colapinto para anunciar el GP de Bahréin",
-      "copete": "Alpine usó una foto de Franco Colapinto para anunciar el Gran Premio de Bahréin, apenas dos días después de que el piloto chocara en Azerbaiyán y quedara fuera de carrera. Los comisarios lo sancionaron con cinco puestos de descenso en la grilla.",
-      "cuerpo": "Alpine eligió una foto de Franco Colapinto para anunciar en sus redes sociales su participación en el Gran Premio de Bahréin, dos días después de que el piloto argentino protagonizara un choque en el Gran Premio de Azerbaiyán. \"Otro fin de semana de carrera nos espera. Nos dirigimos a Bahréin\", escribió la escudería francesa.\n\nEl accidente en Bakú ocurrió en la vuelta 36, tras la reanudación con auto de seguridad: Colapinto llegó pasado a la primera curva, bloqueó en la frenada e impactó contra el Alpine de Pierre Gasly, lo que también involucró al McLaren de Lando Norris y dejó a los tres autos fuera de carrera. Colapinto asumió la responsabilidad de la maniobra y los comisarios le aplicaron una sanción de cinco puestos de descenso en la grilla para la próxima carrera.\n\nEl Gran Premio de Bahréin se correrá el fin de semana del 2 al 4 de octubre, con la carrera programada para las 4 de la mañana, hora argentina.",
-      "guion": null,
-      "seccion": "Automovilismo",
-      "medios": [
-        "TN (Todo Noticias)",
-        "Radio Mitre"
-      ],
-      "enlace": "https://tn.com.ar/deportes/formula-1/2026/09/28/la-imagen-que-eligio-alpine-para-anunciar-el-gp-de-bahrein-tras-el-choque-de-colapinto-en-azerbaiyan/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-28T10:57:11.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-28T16:01:28.909Z",
-      "relevancia": 60,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "fuentesConsultadas": [
-        {
-          "medio": "TN (Todo Noticias)",
-          "enlace": "https://tn.com.ar/deportes/formula-1/2026/09/28/la-imagen-que-eligio-alpine-para-anunciar-el-gp-de-bahrein-tras-el-choque-de-colapinto-en-azerbaiyan/",
-          "fecha": "2026-09-28T10:57:11.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Radio Mitre",
-          "enlace": "https://radiomitre.cienradios.com/deportes/la-imagen-que-alpine-publico-para-anunciar-el-gp-de-bahrein-tras-el-accidente-de-franco-colapinto-en-azerbaiyan/",
-          "fecha": "2026-09-28T12:01:37.000Z",
-          "oficial": false,
-          "aporte": null
-        }
-      ],
-      "slug": "la-imagen-que-eligio-alpine-para-anunciar-el-gp-de-bahrein-tras-el",
       "corregidaAMano": true,
       "cuerpoAMano": true
     },
@@ -3648,7 +3675,7 @@
         {
           "medio": "TyC Sports",
           "enlace": "https://www.tycsports.com/estados-unidos/mls/el-curioso-posteo-de-rodriguez-tras-su-picante-cruce-con-messi-en-la-mls-id763414.html",
-          "fecha": "2026-09-29T00:01:24.000Z",
+          "fecha": "2026-09-29T00:40:09.000Z",
           "oficial": false,
           "aporte": null
         },
@@ -3935,11 +3962,11 @@
         "El Día",
         "La Verdad",
         "El Marplatense",
-        "Agroempresario",
         "Clarín",
         "Noticias Argentinas (NA)",
         "A24",
-        "Ámbito"
+        "Ámbito",
+        "Agroempresario"
       ],
       "enlace": "https://www.clarin.com/economia/extienden-2049-concesion-aeropuertos-argentina_0_OqcAPUBst6.html",
       "teniaImagenLaFuente": true,
@@ -4073,13 +4100,6 @@
           "aporte": null
         },
         {
-          "medio": "Agroempresario",
-          "enlace": "https://agroempresario.com/publicacion/121883/aeropuertos-argentina-seguira-con-la-concesion-hasta-2049/",
-          "fecha": "2026-09-28T14:30:26.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
           "medio": "Noticias Argentinas (NA)",
           "enlace": "https://noticiasargentinas.com/economia/extienden-la-concesion-de-aeropuertos-argentina-con-nuevas-inversiones-por-us--600-millones_a6ab9cf50c2b8de8667fff81c",
           "fecha": "2026-09-28T05:10:00.000Z",
@@ -4111,6 +4131,13 @@
           "medio": "Infobae",
           "enlace": "https://www.infobae.com/america/agencias/2026/09/28/operador-de-aeropuertos-de-argentina-logra-prorroga-en-concesion-hasta-2049/",
           "fecha": "2026-09-28T14:04:01.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Agroempresario",
+          "enlace": "https://agroempresario.com/publicacion/121883/aeropuertos-argentina-seguira-con-la-concesion-hasta-2049/",
+          "fecha": "2026-09-28T14:30:26.000Z",
           "oficial": false,
           "aporte": null
         }
@@ -4177,13 +4204,6 @@
           "medio": "C5N",
           "enlace": "https://www.c5n.com/sociedad/cuando-es-la-peregrinacion-lujan-2026-y-todo-lo-que-hay-que-tener-cuenta-la-caminata-n250130",
           "fecha": "2026-09-28T17:25:00.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "C5N",
-          "enlace": "https://www.c5n.com/sociedad/peregrinacion-lujan-2026-como-va-estar-el-clima-n250115",
-          "fecha": "2026-09-28T15:20:00.000Z",
           "oficial": false,
           "aporte": null
         },
@@ -4871,6 +4891,7 @@
     }
   ],
   "secciones": [
+    "Agro",
     "Cultura y agenda",
     "Automovilismo",
     "Economía",
@@ -4879,7 +4900,6 @@
     "Fútbol",
     "Deportes",
     "Policiales",
-    "Agro",
     "Argentina"
   ],
   "temas": [
@@ -4911,9 +4931,9 @@
   ],
   "clima": {
     "ahora": {
-      "temp": 13,
-      "sensacion": 12,
-      "humedad": 94,
+      "temp": 12,
+      "sensacion": 11,
+      "humedad": 98,
       "viento": 11,
       "rumbo": "E",
       "cielo": "Nublado",
@@ -4928,7 +4948,7 @@
         "lluvia": 99,
         "codigo": 81,
         "viento": 23,
-        "milimetros": 8,
+        "milimetros": 9,
         "cielo": "Chaparrones fuertes"
       },
       {
@@ -4938,8 +4958,8 @@
         "min": 9,
         "lluvia": 96,
         "codigo": 81,
-        "viento": 27,
-        "milimetros": 22,
+        "viento": 29,
+        "milimetros": 28,
         "cielo": "Chaparrones fuertes"
       },
       {
@@ -4949,14 +4969,14 @@
         "min": 7,
         "lluvia": 0,
         "codigo": 3,
-        "viento": 30,
+        "viento": 29,
         "milimetros": 0,
         "cielo": "Nublado"
       },
       {
         "fecha": "2026-10-01",
         "dia": "jue",
-        "max": 12,
+        "max": 11,
         "min": 6,
         "lluvia": 14,
         "codigo": 51,
@@ -5309,12 +5329,6 @@
       "motivo": "verificación baja: espera a una persona (visto al reescribir)"
     },
     {
-      "id": "7ci1iq",
-      "titulo": "El Gobierno le dio dos semanas al Reino Unido para frenar…",
-      "seccion": "Argentina",
-      "motivo": "necesita ojo humano: \"denuncia\""
-    },
-    {
       "id": "1xxqwja",
       "titulo": "Piden detener a Diego Spagnuolo por los nuevos informes…",
       "seccion": "Política",
@@ -5339,6 +5353,12 @@
       "motivo": "necesita ojo humano: \"denuncia\""
     },
     {
+      "id": "132bq5o",
+      "titulo": "Quiniela de Santiago del Estero: resultados en VIVO de…",
+      "seccion": "Argentina",
+      "motivo": "parece promoción, no noticia: \"sorteo\""
+    },
+    {
       "id": "1dy5miv",
       "titulo": "Denunciaron a un influencer de Santa Fe por cazar aves…",
       "seccion": "Argentina",
@@ -5351,8 +5371,8 @@
       "motivo": "necesita ojo humano: \"menores de edad\""
     },
     {
-      "id": "132bq5o",
-      "titulo": "Quiniela de Santiago del Estero: resultados en VIVO de…",
+      "id": "1lkfxwa",
+      "titulo": "Quini 6: de cuánto será el pozo millonario del sorteo del…",
       "seccion": "Argentina",
       "motivo": "parece promoción, no noticia: \"sorteo\""
     },
@@ -5375,16 +5395,16 @@
       "motivo": "necesita ojo humano: \"acusado\""
     },
     {
-      "id": "18298e2",
-      "titulo": null,
-      "seccion": "Agro",
-      "motivo": "necesita ojo humano: \"niño\""
-    },
-    {
       "id": "mrkouk",
       "titulo": "El Gobierno denuncia vuelos no autorizados de una empresa…",
       "seccion": "Argentina",
       "motivo": "necesita ojo humano: \"denuncia\""
+    },
+    {
+      "id": "18298e2",
+      "titulo": null,
+      "seccion": "Agro",
+      "motivo": "necesita ojo humano: \"niño\""
     },
     {
       "id": "1cmtnhl",
@@ -5399,5 +5419,5 @@
       "motivo": "necesita ojo humano: \"denuncia\""
     }
   ],
-  "esperandoCuerpo": 12
+  "esperandoCuerpo": 10
 }
