@@ -1062,16 +1062,16 @@
   "cuando": "2026-09-28T16:02:11.565Z"
  },
  "4rzvaf": {
-  "archivo": "fotos-notas/4rzvaf.jpg",
   "medio": "Diario La Vanguardia",
-  "credito": "Foto: Diario La Vanguardia",
   "licencia": null,
   "origen": "medio",
   "titulo": "El recorte de la Zona Fría abre la vía judicial y afecta a Balcarce",
   "enlace": "https://www.diariolavanguardia.com/noticias/44921-recorte-de-la-zona-fria-se-abre-la-via-judicial-y-balcarce-esta-entre-los-distritos-afectados/",
   "imagenOriginal": "https://www.diariolavanguardia.com/img/noticias/img_d-65863.png",
   "razon": "Es la única imagen nítida y con buen encuadre que permite leer el cartel y entender el contexto de la protesta, sin marcas de agua.",
-  "cuando": "2026-09-28T16:32:46.335Z"
+  "cuando": "2026-09-28T16:32:46.335Z",
+  "intentado": true,
+  "borrada": true
  },
  "jul3tk": {
   "archivo": "fotos-notas/jul3tk.jpg",
@@ -2023,5 +2023,48 @@
   "titulo": "La Provincia crea un programa para formar en oficios a secundarios",
   "razon": "Todas las fotos muestran menores de edad reconocibles o personas donde no se puede descartar que sean menores cursando la secundaria.",
   "cuando": "2026-09-29T15:02:34.024Z"
+ },
+ "1nzl1bf": {
+  "archivo": "fotos-notas/1nzl1bf.jpg",
+  "medio": "Radio Gabal (FM 104.1)",
+  "credito": "Foto: Radio Gabal (FM 104.1)",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Edgardo Ríos participa en la Fiesta Nacional del Postre",
+  "enlace": "https://www.radiogabal.com.ar/index.php/comunidad/exclusivo-mambrunense-sera-otro-de-los-cocineros-de-la-fiesta-nacional-del-postre",
+  "imagenOriginal": "https://www.radiogabal.com.ar/images/2026/septiembre/Mambrunense.png",
+  "razon": "Es una foto clara, sin marcas de agua ni menores, que muestra correctamente al protagonista.",
+  "cuando": "2026-09-29T15:33:10.351Z"
+ },
+ "f3xat8": {
+  "intentado": true,
+  "origen": "ninguna",
+  "titulo": "El Complejo Polideportivo aloja un encuentro regional por el Día del Sordo",
+  "razon": "Todas las fotos disponibles contienen menores de edad reconocibles, por lo que ninguna puede ser publicada según la política del medio.",
+  "cuando": "2026-09-29T15:33:10.351Z"
+ },
+ "7mhrq7": {
+  "archivo": "fotos-notas/7mhrq7.jpg",
+  "medio": "A24",
+  "credito": "Foto: A24",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Juan Pablo Vojvoda repasa su salida de Racing",
+  "enlace": "https://www.a24.com/deportes/vojvoda-revelo-como-fue-su-salida-racing-y-la-reunion-milito-estaba-firme-pero-n1601339",
+  "imagenOriginal": "https://media.a24.com/p/21055fc497ed1109d38de7af47342049/adjuntos/296/imagenes/009/824/0009824628/1200x675/smart/imagenes-notas-a24-2026-09-29t113308816.png",
+  "razon": "La foto B muestra claramente a Juan Pablo Vojvoda con buena nitidez y encuadre, sin menores y sin marcas añadidas por el medio.",
+  "cuando": "2026-09-29T15:33:10.351Z"
+ },
+ "c7rwcn": {
+  "archivo": "fotos-notas/c7rwcn.jpg",
+  "medio": "Clarín",
+  "credito": "Foto: Clarín",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Margarita Belén recibe la muestra Nacional Primavera Braford",
+  "enlace": "https://www.clarin.com/rural/norte-volvera-mostrar-genetica-excelencia-nueva-edicion-nacional-primavera-braford_0_accrvn5jSW.html",
+  "imagenOriginal": "https://www.clarin.com/img/2026/09/29/VMhP0O2Dn_2000x1500__1.jpg",
+  "razon": "Tiene excelente nitidez, encuadre adecuado y no presenta marcas de medios ni menores reconocibles.",
+  "cuando": "2026-09-29T15:33:10.351Z"
  }
 }
