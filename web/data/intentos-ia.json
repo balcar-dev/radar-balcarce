@@ -2002,6 +2002,11 @@
   "ultimo": "2026-09-28T03:47:07.289Z",
   "motivo": "título o bajada: 2 problemas (numero): el copete dice 60 y la fuente no lo dice"
  },
+ "37hfsy": {
+  "intentos": 1,
+  "ultimo": "2026-09-29T03:31:02.388Z",
+  "motivo": "Gemini: HTTP 401 (clave redaccion): {\n  \"error\": {\n    \"code\": 401,\n    \"message\": \"The bound service account is deleted or disabled. The service account bound "
+ },
  "37t3r4": {
   "intentos": 2,
   "ultimo": "2026-09-28T18:33:26.201Z",
@@ -2288,8 +2293,8 @@
   "motivo": "con cuerpo"
  },
  "97y0gt": {
-  "intentos": 1,
-  "ultimo": "2026-09-29T03:01:11.062Z",
+  "intentos": 2,
+  "ultimo": "2026-09-29T03:31:02.388Z",
   "motivo": "Gemini: HTTP 401 (clave redaccion): {\n  \"error\": {\n    \"code\": 401,\n    \"message\": \"The bound service account is deleted or disabled. The service account bound "
  },
  "9817ym": {
@@ -3047,8 +3052,8 @@
   "motivo": "con cuerpo"
  },
  "ofau57": {
-  "intentos": 1,
-  "ultimo": "2026-09-29T03:01:11.062Z",
+  "intentos": 2,
+  "ultimo": "2026-09-29T03:31:02.388Z",
   "motivo": "Gemini: HTTP 401 (clave redaccion): {\n  \"error\": {\n    \"code\": 401,\n    \"message\": \"The bound service account is deleted or disabled. The service account bound "
  },
  "ofi5rd": {
