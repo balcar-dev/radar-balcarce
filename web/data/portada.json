@@ -1,5 +1,5 @@
 {
-  "generado": "2026-09-29T10:31:20.388Z",
+  "generado": "2026-09-29T11:01:15.703Z",
   "notas": [
     {
       "id": "1hjmkd4",
@@ -90,15 +90,17 @@
       "guion": "La virgen de la tosquera compite por una nominación en los Oscar",
       "seccion": "Cultura y agenda",
       "medios": [
-        "Minuto Uno",
         "Ámbito",
         "TN (Todo Noticias)",
         "El Destape",
         "A24",
         "C5N",
         "Radio Mitre",
+        "Diario Popular",
         "Noticias Argentinas (NA)",
+        "El Día",
         "La Nueva",
+        "Minuto Uno",
         "Infobae",
         "La Nación",
         "Clarín",
@@ -110,7 +112,7 @@
       "fecha": "2026-09-28T22:40:00.000Z",
       "sinFecha": false,
       "visto": "2026-09-28T23:31:08.280Z",
-      "relevancia": 78,
+      "relevancia": 71,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -645,6 +647,84 @@
       "foto": {
         "archivo": "fotos-notas/ip1dkb.jpg",
         "credito": "Foto: El Diario Balcarce"
+      }
+    },
+    {
+      "id": "12antth",
+      "titulo": "La UIA calcula una baja industrial del 5,7 por ciento en agosto",
+      "copete": "El sector fabril acumuló una contracción del 3 por ciento en lo que va del año y se mantiene un 11 por ciento por debajo del nivel registrado entre 2022 y 2023, según un informe oficial.",
+      "cuerpo": "La actividad industrial registró en agosto una caída interanual del 5,7 por ciento y una baja mensual del 0,3 por ciento frente a julio, según el último informe del Centro de Estudios de la Unión Industrial Argentina.\n\nEl relevamiento detalla que la menor demanda en el mercado interno y la caída de insumos afectan a sectores clave como textiles, herramientas y materiales de construcción, mientras que la molienda de oleaginosas y el procesamiento de petróleo mostraron subas.",
+      "guion": "La UIA calcula una baja industrial del 5,7 por ciento en agosto",
+      "seccion": "Economía",
+      "medios": [
+        "Perfil",
+        "TN (Todo Noticias)",
+        "El Cronista",
+        "C5N",
+        "La Nueva"
+      ],
+      "enlace": "https://www.c5n.com/economia/informe-uia-la-caida-interanual-la-industria-llego-al-57-y-quedo-11-debajo-2022-2023-n250157",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-28T21:07:00.000Z",
+      "sinFecha": false,
+      "visto": "2026-09-29T00:30:56.955Z",
+      "relevancia": 66,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "La actividad industrial cayó 5,7% interanual en agosto.",
+        "El sector acumula una baja del 3% en lo que va de 2026.",
+        "La construcción y el rubro textil registran las mayores caídas."
+      ],
+      "textoRedes": "La Unión Industrial Argentina informó que la actividad industrial cayó 5,7% interanual en agosto y acumula una baja del 3% en lo que va del año.",
+      "etiquetas": [
+        "industria",
+        "UIA",
+        "agosto",
+        "produccion"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "C5N",
+          "enlace": "https://www.c5n.com/economia/informe-uia-la-caida-interanual-la-industria-llego-al-57-y-quedo-11-debajo-2022-2023-n250157",
+          "fecha": "2026-09-28T21:07:00.000Z",
+          "oficial": false,
+          "aporte": "Detalló los números rojos en producción y empleo, y los sectores más afectados."
+        },
+        {
+          "medio": "Perfil",
+          "enlace": "https://www.perfil.com/noticias/economia/la-industria-sigue-sin-despegar-acumula-una-caida-del-3-en-2026-a40.phtml",
+          "fecha": "2026-09-28T22:35:06.000Z",
+          "oficial": false,
+          "aporte": "Informó la estimación preliminar de la baja mensual de 0,3% en agosto."
+        },
+        {
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/economia/2026/09/28/la-actividad-industrial-volvio-a-caer-en-agosto-y-acumula-una-baja-del-3-en-lo-que-va-del-ano/",
+          "fecha": "2026-09-29T00:04:47.000Z",
+          "oficial": false,
+          "aporte": "Indicó el acumulado del año y la comparación con los niveles de 2022 y 2023."
+        },
+        {
+          "medio": "El Cronista",
+          "enlace": "https://www.cronista.com/economia-politica/la-industria-modero-la-caida-en-agosto-tras-el-rebote-de-un-sector-clave/",
+          "fecha": "2026-09-28T21:57:24.000Z",
+          "oficial": false,
+          "aporte": "Especificó que el indicador es elaborado por el Centro de Estudios de la Unión Industrial Argentina."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron cuatro medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "la-uia-calcula-una-baja-industrial-del-5-7-por-ciento-en-agosto",
+      "foto": {
+        "archivo": "fotos-notas/12antth.jpg",
+        "credito": "Foto: C5N"
       }
     },
     {
@@ -1816,71 +1896,6 @@
       }
     },
     {
-      "id": "1py2fu3",
-      "titulo": "El Fondo Monetario Internacional continúa la revisión del acuerdo vigente",
-      "copete": "La misión del organismo internacional sigue en Buenos Aires para completar la tercera revisión del acuerdo y se esperan definiciones con una conferencia de prensa el jueves.",
-      "cuerpo": "La delegación del Fondo Monetario Internacional (FMI) continúa esta semana en Buenos Aires con la tercera revisión del acuerdo en curso, tras iniciar sus tareas el lunes 21 de septiembre. La revisión habilita un desembolso de 900 millones de dólares, que compensará el pago de 850 millones de dólares que la Argentina le realizó al organismo el último viernes.\n\nEl próximo jueves, la vocera del organismo, Juliet Kozack, brindará una conferencia de prensa en Washington para informar los resultados de la misión.",
-      "guion": "El Fondo Monetario Internacional continúa la revisión del acuerdo vigente",
-      "seccion": "Economía",
-      "medios": [
-        "Canal 26",
-        "InfoRegión"
-      ],
-      "enlace": "https://www.inforegion.com.ar/2026/09/28/avanza-la-mision-del-fmi-en-medio-de-datos-muy-negativos/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-28T16:02:18.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-28T22:01:03.337Z",
-      "relevancia": 38,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "La misión del FMI sigue en Buenos Aires.",
-        "Comleta la tercera revisión del acuerdo.",
-        "El jueves habrá conferencia de prensa.",
-        "Habilita un desembolso de 900 millones de dólares."
-      ],
-      "noConfirmado": [
-        "Todavía no se confirmó oficialmente el cierre de la visita de la delegación."
-      ],
-      "textoRedes": "La misión del Fondo Monetario Internacional continúa en Buenos Aires con la tercera revisión del acuerdo vigente y se espera una conferencia de prensa con los resultados para este jueves.",
-      "etiquetas": [
-        "FMI",
-        "acuerdo",
-        "Buenos Aires",
-        "desembolso"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "InfoRegión",
-          "enlace": "https://www.inforegion.com.ar/2026/09/28/avanza-la-mision-del-fmi-en-medio-de-datos-muy-negativos/",
-          "fecha": "2026-09-28T16:02:18.000Z",
-          "oficial": false,
-          "aporte": "Informó sobre la continuidad de la revisión, la conferencia del jueves, los datos negativos y el monto del desembolso."
-        },
-        {
-          "medio": "Canal 26",
-          "enlace": "https://www.canal26.com/economia/2026/09/28/en-medio-de-una-fuerte-suba-del-riego-pais-el-fmi-continua-la-revision-del-acuerdo-en-argentina-que-habilitaria-un-nuevo-desembolso-de-fondos/",
-          "fecha": "2026-09-28T17:18:10.000Z",
-          "oficial": false,
-          "aporte": "Confirmó el inicio de las tareas de la delegación el 21 de septiembre en Buenos Aires."
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron dos medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "el-fondo-monetario-internacional-continua-la-revision-del-acuerdo",
-      "foto": {
-        "archivo": "fotos-notas/1py2fu3.jpg",
-        "credito": "Foto: InfoRegión"
-      }
-    },
-    {
       "id": "zphfal",
       "titulo": "Las lluvias llegan a 30 milímetros en Tandil y a 10 en Balcarce",
       "copete": "Los registros de YPF Agro hasta las 8 de la mañana de este lunes muestran precipitaciones dispares en el sudeste bonaerense. Tandil tuvo el mayor acumulado, con 30 milímetros, seguido por Los Cardos y Ramos Otero. En Balcarce llovió entre 5 y 10 milímetros.",
@@ -2067,11 +2082,11 @@
       "guion": "Brisa Salud organiza el décimo congreso virtual de enfermería.",
       "seccion": "Argentina",
       "medios": [
+        "Página/12",
         "Minuto Uno",
         "C5N",
         "Crónica",
         "Diario Popular",
-        "Página/12",
         "El Cronista"
       ],
       "enlace": "https://www.pagina12.com.ar/2026/09/28/brisa-salud-organiza-el-x-congreso-de-enfermeria/",
@@ -2249,8 +2264,7 @@
         "News Balcarce (FM 91.7)",
         "Diario La Vanguardia",
         "Infórmese Primero (FM 104.9)",
-        "Radio Gabal (FM 104.1)",
-        "QZ Noticias (Mar del Plata)"
+        "Radio Gabal (FM 104.1)"
       ],
       "enlace": "https://newsbalcarce.com.ar/?p=30868",
       "teniaImagenLaFuente": true,
@@ -2300,10 +2314,10 @@
         "Infobae",
         "Perfil",
         "El Destape",
-        "Página/12",
         "Noticias Argentinas (NA)",
         "El Marplatense",
-        "El Eco de Tandil"
+        "El Eco de Tandil",
+        "Página/12"
       ],
       "enlace": "https://www.infobae.com/economia/2026/09/28/la-actividad-economica-de-caba-cayo-02-en-el-segundo-trimestre-cuales-fueron-los-sectores-mas-golpeados/",
       "teniaImagenLaFuente": true,
@@ -2404,11 +2418,11 @@
         "La Nación",
         "El Cronista",
         "Perfil",
+        "Ámbito",
         "Crónica",
         "Noticias Argentinas (NA)",
         "La Nueva",
-        "La Voz del Pueblo",
-        "Ámbito"
+        "La Voz del Pueblo"
       ],
       "enlace": "https://www.perfil.com/noticias/politica/presidente-por-dos-dias-el-senador-bartolome-abdala-quedara-a-cargo-del-ejecutivo-por-viajes-de-milei-y-villarruel.phtml",
       "teniaImagenLaFuente": true,
@@ -2802,6 +2816,81 @@
       "cuerpoAMano": true
     },
     {
+      "id": "ujkaqh",
+      "titulo": "ANSES actualiza la PUAM y otorga el bono completo en octubre",
+      "copete": "La Pensión Universal para el Adulto Mayor llega a 348.598,81 pesos en octubre gracias a un incremento del 1,66 por ciento. La medida incluye el pago del bono previsional completo.",
+      "cuerpo": "La Administración Nacional de la Seguridad Social aplica en octubre una actualización del 1,66 por ciento sobre los haberes de la Pensión Universal para el Adulto Mayor, de acuerdo con el índice de inflación de agosto. Con este incremento, el monto asciende a 348.598,81 pesos.\n\nDebido a que el haber de la PUAM se ubica por debajo de la jubilación mínima, sus titulares perciben además el bono de 70.000 pesos en su totalidad. El pago se acredita en la primera tanda del calendario mensual, coincidiendo habitualmente con la segunda semana del mes, según informó la ANSES.",
+      "guion": "ANSES actualiza la PUAM y otorga el bono completo en octubre",
+      "seccion": "Economía",
+      "medios": [
+        "La Nación",
+        "Infobae",
+        "El Cronista"
+      ],
+      "enlace": "https://www.lanacion.com.ar/economia/pagos-anses-a-cuanto-llega-la-puam-en-octubre-de-2026-con-el-aumento-confirmado-nid17092026/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-28T12:13:43.000Z",
+      "sinFecha": false,
+      "visto": "2026-09-28T19:02:49.410Z",
+      "relevancia": 63,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "La PUAM asciende a 348.598,81 pesos en octubre.",
+        "El incremento es del 1,66 por ciento basado en la inflación.",
+        "Los titulares reciben el bono completo de 70.000 pesos."
+      ],
+      "textoRedes": "La ANSES actualiza la PUAM a 348.598,81 pesos en octubre con un incremento del 1,66 por ciento y el pago del bono completo.",
+      "etiquetas": [
+        "ANSES",
+        "PUAM",
+        "jubilaciones",
+        "aumento",
+        "octubre",
+        "bono"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/economia/pagos-anses-a-cuanto-llega-la-puam-en-octubre-de-2026-con-el-aumento-confirmado-nid17092026/",
+          "fecha": "2026-09-28T12:13:43.000Z",
+          "oficial": false,
+          "aporte": "Informó el incremento automático por actualización de inflación y el detalle del reajuste del 1,66 por ciento."
+        },
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/economia/2026/09/28/de-cuanto-sera-la-puam-de-anses-en-octubre-2026/",
+          "fecha": "2026-09-28T17:00:00.000Z",
+          "oficial": false,
+          "aporte": "Precisó el monto exacto de la PUAM en 348.598,81 pesos para octubre de 2026."
+        },
+        {
+          "medio": "El Cronista",
+          "enlace": "https://www.cronista.com/economia-politica/puam-de-anses-en-octubre-cuanto-se-cobra-con-el-aumento-y-quienes-pueden-acceder/",
+          "fecha": "2026-09-28T18:56:29.000Z",
+          "oficial": false,
+          "aporte": "Detalló los requisitos de la prestación y la cobertura de salud para mayores de 65 años."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1cleyvd",
+          "titulo": "ANSES oficializó el aumento de octubre para jubilaciones",
+          "fecha": "2026-09-23T13:27:05.000Z",
+          "ruta": "/nota/anses-oficializo-el-aumento-de-octubre-para-jubilaciones-1cleyvd"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron tres medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "anses-actualiza-la-puam-y-otorga-el-bono-completo-en-octubre"
+    },
+    {
       "id": "1xs34mg",
       "titulo": "Boccanera y Baigorria ganan en el regreso del Turismo Special de la Costa al Fangio",
       "copete": "Bruno Boccanera y Kevin Baigorria se impusieron en las dos finales del Turismo Special de la Costa, en el marco del retorno de la categoría al circuito largo del autódromo Juan Manuel Fangio tras dieciséis años.",
@@ -2896,10 +2985,10 @@
       "medios": [
         "LU9 Mar del Plata",
         "0221",
-        "El Marplatense",
         "Agencia DIB",
         "El Eco de Tandil",
         "El Día",
+        "El Marplatense",
         "Ecos Diarios (Necochea)",
         "Radio 10 Mar del Plata (FM 105.5)"
       ],
@@ -3172,48 +3261,6 @@
       "cuerpoAMano": true
     },
     {
-      "id": "1ppws54",
-      "titulo": "Alpine elige una foto de Colapinto para anunciar el GP de Bahréin",
-      "copete": "Alpine usó una foto de Franco Colapinto para anunciar el Gran Premio de Bahréin, apenas dos días después de que el piloto chocara en Azerbaiyán y quedara fuera de carrera. Los comisarios lo sancionaron con cinco puestos de descenso en la grilla.",
-      "cuerpo": "Alpine eligió una foto de Franco Colapinto para anunciar en sus redes sociales su participación en el Gran Premio de Bahréin, dos días después de que el piloto argentino protagonizara un choque en el Gran Premio de Azerbaiyán. \"Otro fin de semana de carrera nos espera. Nos dirigimos a Bahréin\", escribió la escudería francesa.\n\nEl accidente en Bakú ocurrió en la vuelta 36, tras la reanudación con auto de seguridad: Colapinto llegó pasado a la primera curva, bloqueó en la frenada e impactó contra el Alpine de Pierre Gasly, lo que también involucró al McLaren de Lando Norris y dejó a los tres autos fuera de carrera. Colapinto asumió la responsabilidad de la maniobra y los comisarios le aplicaron una sanción de cinco puestos de descenso en la grilla para la próxima carrera.\n\nEl Gran Premio de Bahréin se correrá el fin de semana del 2 al 4 de octubre, con la carrera programada para las 4 de la mañana, hora argentina.",
-      "guion": null,
-      "seccion": "Automovilismo",
-      "medios": [
-        "TN (Todo Noticias)",
-        "Radio Mitre"
-      ],
-      "enlace": "https://tn.com.ar/deportes/formula-1/2026/09/28/la-imagen-que-eligio-alpine-para-anunciar-el-gp-de-bahrein-tras-el-choque-de-colapinto-en-azerbaiyan/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-28T10:57:11.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-28T16:01:28.909Z",
-      "relevancia": 60,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "fuentesConsultadas": [
-        {
-          "medio": "TN (Todo Noticias)",
-          "enlace": "https://tn.com.ar/deportes/formula-1/2026/09/28/la-imagen-que-eligio-alpine-para-anunciar-el-gp-de-bahrein-tras-el-choque-de-colapinto-en-azerbaiyan/",
-          "fecha": "2026-09-28T10:57:11.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Radio Mitre",
-          "enlace": "https://radiomitre.cienradios.com/deportes/la-imagen-que-alpine-publico-para-anunciar-el-gp-de-bahrein-tras-el-accidente-de-franco-colapinto-en-azerbaiyan/",
-          "fecha": "2026-09-28T12:01:37.000Z",
-          "oficial": false,
-          "aporte": null
-        }
-      ],
-      "slug": "la-imagen-que-eligio-alpine-para-anunciar-el-gp-de-bahrein-tras-el",
-      "corregidaAMano": true,
-      "cuerpoAMano": true
-    },
-    {
       "id": "em0phg",
       "titulo": "Avanza la privatización de Enarsa con la venta de tres termoeléctricas",
       "copete": "El Gobierno nacional dispuso la venta de las participaciones de la empresa estatal en tres centrales termoeléctricas mediante licitaciones públicas, como parte del proceso previsto en la Ley de Bases.",
@@ -3225,7 +3272,6 @@
         "Perfil",
         "TN (Todo Noticias)",
         "El Cronista",
-        "Página/12",
         "iProfesional",
         "Crónica",
         "Radio Mitre",
@@ -3233,7 +3279,8 @@
         "Noticias Argentinas (NA)",
         "Ámbito",
         "La Nueva",
-        "Clarín"
+        "Clarín",
+        "Página/12"
       ],
       "enlace": "https://www.infobae.com/economia/2026/09/28/iniciaron-un-nuevo-proceso-de-privatizacion-de-las-acciones-de-enarsa/",
       "teniaImagenLaFuente": true,
@@ -3464,8 +3511,8 @@
         "El Cronista",
         "El Destape",
         "Perfil",
-        "Página/12",
         "A24",
+        "Ámbito",
         "C5N",
         "Crónica",
         "Diario Popular",
@@ -3473,7 +3520,7 @@
         "El Día",
         "La Tecla",
         "ANDigital",
-        "Ámbito",
+        "Página/12",
         "Infobrisas (Radio Brisas)",
         "El Eco de Tandil"
       ],
@@ -3525,16 +3572,16 @@
           "aporte": null
         },
         {
-          "medio": "Página/12",
-          "enlace": "https://www.pagina12.com.ar/2026/09/28/la-confianza-en-el-gobierno-de-milei-volvio-a-caer-el-indice-toco-uno-de-sus-niveles-mas-bajos/",
-          "fecha": "2026-09-28T16:51:21.000Z",
+          "medio": "A24",
+          "enlace": "https://www.a24.com/politica/la-confianza-el-gobierno-cayo-59-y-asi-igualo-uno-los-niveles-mas-bajos-la-era-milei-n1601129",
+          "fecha": "2026-09-28T23:36:00.000Z",
           "oficial": false,
           "aporte": null
         },
         {
-          "medio": "A24",
-          "enlace": "https://www.a24.com/politica/la-confianza-el-gobierno-cayo-59-y-asi-igualo-uno-los-niveles-mas-bajos-la-era-milei-n1601129",
-          "fecha": "2026-09-28T23:36:00.000Z",
+          "medio": "Ámbito",
+          "enlace": "https://www.ambito.com/politica/la-confianza-el-gobierno-cayo-59-septiembre-y-toco-su-nivel-mas-javier-milei-n6327485",
+          "fecha": "2026-09-28T15:17:00.000Z",
           "oficial": false,
           "aporte": null
         },
@@ -3588,9 +3635,9 @@
           "aporte": null
         },
         {
-          "medio": "Ámbito",
-          "enlace": "https://www.ambito.com/politica/la-confianza-el-gobierno-cayo-59-septiembre-y-toco-su-nivel-mas-javier-milei-n6327485",
-          "fecha": "2026-09-28T15:17:00.000Z",
+          "medio": "Página/12",
+          "enlace": "https://www.pagina12.com.ar/2026/09/28/la-confianza-en-el-gobierno-de-milei-volvio-a-caer-el-indice-toco-uno-de-sus-niveles-mas-bajos/",
+          "fecha": "2026-09-28T16:51:21.000Z",
           "oficial": false,
           "aporte": null
         },
@@ -3605,6 +3652,13 @@
           "medio": "El Eco de Tandil",
           "enlace": "https://www.eleco.com.ar/economia/volvio-a-caer-el-indice-de-confianza-en-el-gobierno-pero-javier-milei-supera-a-macri",
           "fecha": "2026-09-28T21:10:19.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Página/12",
+          "enlace": "https://www.pagina12.com.ar/2026/09/28/la-confianza-en-milei-en-su-punto-mas-bajo/",
+          "fecha": "2026-09-28T22:48:37.000Z",
           "oficial": false,
           "aporte": null
         }
@@ -3628,11 +3682,11 @@
         "La Nación",
         "C5N",
         "Canal 26",
-        "InfoRegión",
         "La Noticia 1",
         "Ámbito",
         "El Cronista",
-        "InfoGEI"
+        "InfoGEI",
+        "InfoRegión"
       ],
       "enlace": "https://www.lanoticia1.com/noticia/peregrinacion-a-lujan-como-sera-el-operativo-para-acompanar-a-los-fieles-durante-los-60-kilometros",
       "teniaImagenLaFuente": true,
@@ -3656,14 +3710,14 @@
         {
           "medio": "La Nación",
           "enlace": "https://www.lanacion.com.ar/sociedad/caminata-a-lujan-2026-todas-las-recomendaciones-y-consejos-para-hacer-la-peregrinacion-este-fin-de-nid28092026/",
-          "fecha": "2026-09-28T15:22:02.000Z",
+          "fecha": "2026-09-29T10:41:47.000Z",
           "oficial": false,
           "aporte": null
         },
         {
           "medio": "La Nación",
           "enlace": "https://www.lanacion.com.ar/sociedad/cuando-es-la-caminata-a-lujan-este-2026-nid19082026/",
-          "fecha": "2026-09-28T12:10:04.000Z",
+          "fecha": "2026-09-29T10:41:44.000Z",
           "oficial": false,
           "aporte": null
         },
@@ -3696,13 +3750,6 @@
           "aporte": null
         },
         {
-          "medio": "InfoRegión",
-          "enlace": "https://www.inforegion.com.ar/2026/09/28/como-sera-el-recorrido-de-la-peregrinacion-a-lujan-en-2026/",
-          "fecha": "2026-09-28T22:01:02.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
           "medio": "Ámbito",
           "enlace": "https://www.ambito.com/informacion-general/peregrinacion-lujan-2026-cuando-es-y-que-tener-cuenta-la-caminata-n6322534",
           "fecha": "2026-09-28T12:47:00.000Z",
@@ -3727,6 +3774,13 @@
           "medio": "InfoGEI",
           "enlace": "https://infogei.ar/peregrinacion-a-lujan-como-sera-el-operativo-provincial-para-acompanar-a-los-caminantes/",
           "fecha": "2026-09-28T20:07:53.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "InfoRegión",
+          "enlace": "https://www.inforegion.com.ar/2026/09/28/como-sera-el-recorrido-de-la-peregrinacion-a-lujan-en-2026/",
+          "fecha": "2026-09-28T22:01:02.000Z",
           "oficial": false,
           "aporte": null
         }
@@ -3895,7 +3949,7 @@
       "temp": 12,
       "sensacion": 11,
       "humedad": 99,
-      "viento": 8,
+      "viento": 12,
       "rumbo": "S",
       "cielo": "Chaparrones",
       "esDeDia": true
@@ -4282,6 +4336,12 @@
       "motivo": "necesita ojo humano: \"denuncia\""
     },
     {
+      "id": "jien96",
+      "titulo": "Un futbolista fue detenido en Mendoza por realizar gestos…",
+      "seccion": "Fútbol",
+      "motivo": "necesita ojo humano: \"detenido\""
+    },
+    {
       "id": "v8jjgw",
       "titulo": null,
       "seccion": "Policiales",
@@ -4300,6 +4360,12 @@
       "motivo": "necesita ojo humano: \"denuncia\""
     },
     {
+      "id": "1iitoa4",
+      "titulo": "Quiniela de hoy: resultados de los sorteos en Nacional…",
+      "seccion": "Argentina",
+      "motivo": "parece promoción, no noticia: \"sorteo\""
+    },
+    {
       "id": "v3nlz0",
       "titulo": "Un influencer fue denunciado por cazar aves protegidas en…",
       "seccion": "Argentina",
@@ -4312,22 +4378,16 @@
       "motivo": "necesita ojo humano: \"menores de edad\""
     },
     {
-      "id": "1iitoa4",
-      "titulo": "Quiniela de hoy: resultados de los sorteos en Nacional…",
-      "seccion": "Argentina",
-      "motivo": "parece promoción, no noticia: \"sorteo\""
-    },
-    {
-      "id": "1u3nefi",
-      "titulo": "Causa Maradona: expectativa por la nueva declaración de…",
-      "seccion": "Argentina",
-      "motivo": "necesita ojo humano: \"imputado\""
-    },
-    {
       "id": "o8z3cp",
       "titulo": "Horacio Marín, CEO de YPF: “La producción de petróleo va a…",
       "seccion": "Economía",
       "motivo": "internacional: sin relación con Balcarce"
+    },
+    {
+      "id": "11a41j5",
+      "titulo": null,
+      "seccion": "Agro",
+      "motivo": "necesita ojo humano: \"niño\""
     },
     {
       "id": "1eh8cwq",
@@ -4342,5 +4402,5 @@
       "motivo": "necesita ojo humano: \"niño\""
     }
   ],
-  "esperandoCuerpo": 8
+  "esperandoCuerpo": 10
 }
