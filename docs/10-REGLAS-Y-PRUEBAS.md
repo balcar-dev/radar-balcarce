@@ -1,9 +1,10 @@
 # 10 · Las reglas y las pruebas que las cuidan
 
 *Escrito el 28/09/2026, leyendo `CLAUDE.md` y cada archivo de `pruebas/` de
-ese día, y puesto al día esa noche con el commit "Trece arreglos encontrados al
-documentar". Las pruebas se corrieron ese día: **1.355 pruebas en 83 archivos,
-todas bien** (la cuenta de cada archivo, al final). Si un documento dice otra cosa que el
+ese día, y puesto al día el 29/09 con las reglas 73 a 77 (fotos, voces,
+"sensación térmica", guardia de la cooperativa). Las pruebas se corrieron el
+29/09: **1.367 pruebas en 83 archivos, todas bien** (la cuenta de cada archivo,
+al final). Si un documento dice otra cosa que el
 código, manda el código.*
 
 Desde el 28/09 **la lista numerada de reglas vive acá** (antes estaba en un
@@ -82,7 +83,7 @@ libro de redes real del 24 y 25/09).
 ### 4. Cómo se agrega una regla
 
 1. Escribirla en este documento, en la tabla de su tema, con **el número
-   siguiente** (hoy, 73), aunque vaya en otra tabla: los números no se
+   siguiente** (hoy, 77), aunque vaya en otra tabla: los números no se
    reordenan.
 2. Escribir la prueba en el archivo del área (la tabla de abajo dice cuál) o en
    uno nuevo con un nombre que diga qué cuida.
@@ -138,9 +139,9 @@ libro de redes real del 24 y 25/09).
 
 ## Las reglas numeradas
 
-Hay **67 reglas**, del 1 al 67, sin huecos ni repetidas: las 1 a 40 son del 21
+Hay **77 reglas**, del 1 al 77, sin huecos ni repetidas: las 1 a 40 son del 21
 al 26/09, las 41 a 62 del 27/09 (el plan V2.2 y lo que se decidió en vivo ese
-día) y las 63 a 67 del 28/09. Están agrupadas por tema y no por número.
+día) y las 63 a 77 del 28/09. Están agrupadas por tema y no por número.
 
 "Qué la cuida" dice: **Prueba** (si alguien rompe la regla en el código,
 `npm test` falla y la web no se publica), **Vigilante** (mira la web ya
@@ -178,7 +179,7 @@ publicada y avisa si la regla se rompió por algo que las pruebas no ven) o
 | 72 | **Limpieza de la auditoría (28/09)**: el modelo de texto de Gemini vive sólo en `MODELO_DE_TEXTO` (`reels/claves.mjs`); la ficha de la lectura con IA pide sólo lo que decide algo y `es_chimento` es obligatoria; `marcarDeAfuera` pone figura, Balcarce y zona por separado; sin `verdeSecciones` (todas las secciones salen solas si el semáforo da verde). | Prueba: `auditoria-28-09.test.mjs` |
 | 73 | **Las fotos: otro medio en la escena y los menores (28/09)**. El nombre o el logo de otro medio que se lee en la foto la descarta aunque haya estado en la escena (caso real: el micrófono de Radio Líder en la nota de Reino); la IA marca `menor` si se reconoce a alguien que parece menor de 18, y el código no elige esa foto aunque la IA la prefiera (`interpretarRespuesta`, `ingesta/fotos.mjs`). | Prueba: `fotos.test.mjs` |
 | 74 | **Nunca otra voz, nunca Elena (28/09)**. Si Gemini no contesta, la pieza no se arma con otra voz: se cae, queda fuera del manifiesto y el reloj la vuelve a pedir en la vuelta siguiente mientras dure su ventana (`armarReel`, `reels/reel.mjs`). Las placas escriben la fecha sin coma, "Lunes 28 de septiembre" (`fechaLarga`, `reels/plan.mjs`). | Prueba: `arreglos-28-09.test.mjs`, `clima.test.mjs` |
-| 75 | **La voz nunca dice de más (28/09)**. Un audio que dura más que el texto a 1,8 palabras por segundo, más 3 segundos, se descarta y se pide de nuevo (`vozDeMas`, `reels/voz-gemini.mjs`): probando el modelo 3.8, el podcast de 81 palabras duró 140 segundos porque leyó las indicaciones. Las placas, la web y el panel dicen "sensación térmica", no "sensación" sola. | Prueba: `arreglos-28-09.test.mjs`, `placas.test.mjs` |
+| 75 | **La voz nunca dice de más (28/09)**. Un audio que dura más que el texto a 1,8 palabras por segundo, más 3 segundos, se descarta y se pide de nuevo (`vozDeMas`, `reels/voz-gemini.mjs`): probando el modelo 3.8, el podcast de 81 palabras duró 140 segundos porque leyó las indicaciones. Las placas y la web dicen "sensación térmica", no "sensación" sola (el panel de la PC todavía dice "sensación": `PENDIENTES.md`). | Prueba: `arreglos-28-09.test.mjs`, `placas.test.mjs` |
 | 76 | **Dos voces propias, una por pieza (28/09)**. La locutora y el locutor son voces creadas con Voice Design de Gemini 3.8 (`es-AR`), con un identificador fijo que guarda Google (vencen el 29/09/2027). Cada pieza tiene siempre la misma voz, según el reparto de `CRITERIO-REDES.md` § 6 (`vozDePieza`); una pieza sin voz en el reparto no se arma. Nunca dos voces en una pieza: las charlas simuladas se probaron y sonaban falsas. El texto va literal y el estilo aparte y corto, porque con indicaciones largas el modelo leía las indicaciones (`pedidoDeVoz`, `reels/voz-gemini.mjs`). | Prueba: `redes-criterio.test.mjs`, `voz-gemini.test.mjs` |
 | 77 | **La guardia de la Cooperativa Eléctrica va entre los teléfonos útiles (28/09)**: el 0800 222 2342 (24 horas, sin barra, para que entre en la portada y en la placa) y la línea fija (02266) 42-4091, tomados de coopbalcarce.com.ar. | Prueba: `arreglos-28-09.test.mjs` |
 
@@ -268,7 +269,7 @@ discutir salvo que Hernán y Andrés lo pidan.
 
 ## Todos los archivos de `pruebas/`
 
-El número es la cantidad de pruebas que corrió cada archivo el 28/09 (algunas
+El número es la cantidad de pruebas que corrió cada archivo el 29/09 (algunas
 se repiten por cada término de una lista, como las del semáforo). El área dice
 qué documento cuenta ese tema.
 
@@ -278,13 +279,13 @@ qué documento cuenta ese tema.
 | `agenda-panel.test.mjs` | 16 | Eventos cargados a mano: nacen como borrador, qué va al archivo público, contactos para pedir fechas, que el panel no mande nada solo | Panel / Web |
 | `agenda.test.mjs` | 13 | La agenda del municipio y las fiestas anuales; el semáforo también en la agenda | Ingesta |
 | `archivo.test.mjs` | 29 | Los enlaces no se rompen; archivo de 180 días; retiradas y correcciones; 36 h en las listas; nada se estrena con más de 12 h; la fecha más vieja manda | Web |
-| `arreglos-28-09.test.mjs` | 13 | Los trece arreglos del 28/09: firma de lo corregido a mano, sepelios antes del amarillo y aunque los apruebe una persona, la historia oficial, la página que se conserva por cupo, fotos del banco en la PC, crédito de Wikimedia, el interruptor en el reloj, útiles en Balcarce, tres intentos de Vigilancia y Auditoría, las claves, Piezas sin elegir | Varias |
+| `arreglos-28-09.test.mjs` | 15 | Los arreglos del 28/09 (los trece de la documentación, más el audio que dura de más y la guardia de la cooperativa): firma de lo corregido a mano, sepelios antes del amarillo y aunque los apruebe una persona, la historia oficial, la página que se conserva por cupo, fotos del banco en la PC, crédito de Wikimedia, el interruptor en el reloj, útiles en Balcarce, tres intentos de Vigilancia y Auditoría, las claves, Piezas sin elegir | Varias |
 | `articulo.test.mjs` | 9 | Bajar el texto completo de la nota original sin menús ni pies | Ingesta |
 | `auditar-redes.test.mjs` | 21 | Comparar el libro de redes con lo que Meta tiene de verdad | Redes |
 | `auditoria-28-09.test.mjs` | 15 | Los arreglos y las decisiones de la auditoría del 28/09 (reglas 70 y 71): la zona conserva la página, fotos sin nota se borran, el panel no reescribe solo, policiales de la zona, cuándo frena una muerte, la verificación BAJA, el modelo de IA en un solo lugar | Varias |
 | `buzon.test.mjs` | 4 | Los cuatro tipos del buzón y sus reglas (el reclamo nunca de un solo lado) | Panel |
 | `checkout-main.test.mjs` | 3 | Los workflows que publican bajan la última `main` | Infraestructura |
-| `clima.test.mjs` | 18 | El dibujo de cada cielo (de noche no hay sol) y cuándo avisar helada, granizo o viento | Web / Redes |
+| `clima.test.mjs` | 19 | El dibujo de cada cielo (de noche no hay sol) y cuándo avisar helada, granizo o viento | Web / Redes |
 | `comercial.test.mjs` | 31 | La base de comercios: fichas, teléfonos, fusión sin pisar lo cargado a mano, vigencia | Comercial (`COMERCIAL.md`) |
 | `contrato.test.mjs` | 16 | El contrato del día (3 reels, 6 historias, 5 posteos), con el libro real del 24 y 25/09 | Redes |
 | `copia-de-afuera.test.mjs` | 4 | Lo de un medio de acá que no nombra nada de acá espera a la IA (28/09, el referéndum de Suiza) | Selección |
@@ -305,7 +306,7 @@ qué documento cuenta ese tema.
 | `fechas-balcarce.test.mjs` | 11 | Las fechas son las de Balcarce aunque el servidor esté en UTC | Infraestructura |
 | `formatos.test.mjs` | 18 | Las medidas de las imágenes y videos de las redes; la auditoría semanal | Redes |
 | `fotos-notas.test.mjs` | 11 | A qué notas se les prueba foto, el banco, Policiales sólo con foto oficial, que el workflow suba las fotos | Fotos |
-| `fotos.test.mjs` | 19 | Elegir una foto sin marca con IA (Gemini, Groq de respaldo, Wikimedia) | Fotos |
+| `fotos.test.mjs` | 22 | Elegir una foto sin marca con IA (Gemini, Groq de respaldo, Wikimedia) | Fotos |
 | `fuentes-registro.test.mjs` | 2 | `FUENTES.md` dice lo mismo que el código | Ingesta |
 | `fuentes.test.mjs` | 12 | La salud de la configuración de fuentes; que el motor no dependa de nada instalado; caracteres escondidos | Ingesta / todo |
 | `guiones.test.mjs` | 1 | Los teléfonos útiles no dicen "esta semana" | Redes |
@@ -327,11 +328,11 @@ qué documento cuenta ese tema.
 | `placa-texto.test.mjs` | 6 | Cómo se cortan los renglones en las placas | Redes |
 | `placas.test.mjs` | 15 | El diseño del 28/09 de placas y tarjetas (`web/lib/tarjeta-diseno.js`): todo entra, sin nombres de medios adentro | Redes / Web |
 | `plan-vacio.test.mjs` | 1 | El plan no se cae con la lista vacía (25/09) | Redes |
-| `portada.test.mjs` | 16 | Lo que ve el lector en la portada: sin fuente arriba, horas, orden, repetidas, farmacia sin botones, `/clima` | Web |
+| `portada.test.mjs` | 17 | Lo que ve el lector en la portada: sin fuente arriba, horas, orden, repetidas, farmacia sin botones, `/clima` | Web |
 | `presentacion-celular.test.mjs` | 6 | El sitio en el celular: menú en una fila, tarjetas, farmacia, tipografía | Web |
 | `propuestas.test.mjs` | 12 | Los mensajes comerciales por WhatsApp | Comercial |
 | `redes-arreglos.test.mjs` | 16 | Cinco errores de redes del 28/09, una prueba por arreglo | Redes |
-| `redes-criterio.test.mjs` | 28 | El criterio de redes: identidad, voz, saludos por horario, auditoría de voz | Redes |
+| `redes-criterio.test.mjs` | 29 | El criterio de redes: identidad, voz, saludos por horario, auditoría de voz | Redes |
 | `redes.test.mjs` | 53 | Qué se publica en Facebook e Instagram, tokens, claves, podcasts | Redes |
 | `redirects.test.mjs` | 4 | Las redirecciones de Cloudflare (`/nota/ID` y secciones viejas) | Web |
 | `reescritura.test.mjs` | 40 | La reescritura: tonos, varias fuentes, clave gratis y paga, topes, semáforo sobre lo escrito | Redacción |
@@ -353,7 +354,7 @@ qué documento cuenta ese tema.
 | `vigilancia-cierre.test.mjs` | 17 | El cierre de las 23:30 contra Meta y los duplicados | Redes / Infraestructura |
 | `vigilancia-estadisticas.test.mjs` | 19 | Visitas de Cloudflare y seguidores de Meta, sin tokens | Infraestructura |
 | `vigilancia.test.mjs` | 46 | Qué es un problema para el vigilante, cuándo avisa, reglas de la portada publicada | Infraestructura |
-| `voz-gemini.test.mjs` | 2 | La voz de Gemini: clave en el encabezado, tiempo máximo | Redes |
+| `voz-gemini.test.mjs` | 6 | La voz de Gemini: clave en el encabezado, tiempo máximo, texto literal con el estilo aparte y la voz por su identificador, dónde viene el audio, y el audio que dura de más se rechaza | Redes |
 | `voz.test.mjs` | 18 | Cómo se leen los símbolos en voz alta y los carteles de subtítulos | Redes |
 | `web.test.mjs` | 29 | Páginas de sección, nombres, horas, la nota grande y la tapa | Web |
 | `zona.test.mjs` | 14 | Lo que toca la zona (ruta 226, la papa), Tecnología que no es tecnología, lo internacional | Selección |

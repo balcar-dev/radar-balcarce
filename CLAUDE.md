@@ -1,6 +1,6 @@
 # Radar Balcarce
 
-*Actualizado el 28/09/2026. Corto a propósito: el detalle está en `docs/`
+*Actualizado el 29/09/2026. Corto a propósito: el detalle está en `docs/`
 (empezar por `docs/00-INDICE.md`). Si esto y el código no coinciden, manda el
 código, y se corrige esto.*
 
@@ -19,7 +19,7 @@ rioplatense, sin voseo forzado.
     redes/     Facebook e Instagram (API de Meta), contrato del día, vigilante, WhatsApp. SIN dependencias
     panel/     el tablero editorial (vive en la PC de Hernán, puerto 4321). SIN dependencias
     web/       el sitio público (Next.js 15, JavaScript, HTML estático); web/scripts/generar-datos.mjs arma los datos
-    pruebas/   `npm test`: 1.355 pruebas en 83 archivos, sin red
+    pruebas/   `npm test`: 1.367 pruebas en 83 archivos, sin red
     docs/      la documentación: 00-INDICE a 12-GLOSARIO, e historico/
 
 Flujo (`docs/00-INDICE.md`): fuentes → ingesta → cruce de medios → sección,
@@ -196,9 +196,12 @@ vigilancia andan con la PC apagada**; sólo el panel vive en la PC.
 
 Todo andando en la nube desde el 25/09: web en Cloudflare Pages,
 redes en pausa (`REDES_ACTIVAS` en `No` desde el 28/09, hasta el visto bueno de Hernán al diseño nuevo), vigilancia por WhatsApp con el resumen de
-las 21. Lo que falta, con quién y qué urgencia: **`PENDIENTES.md`** (entre lo
-más importante: mirar los trabajos de cron-job.org, el tope de gasto de la
-clave paga, reiniciar el panel).
+las 21. **Desde el 29/09 la clave paga de Gemini (`GEMINI_API_KEY_REDES`) está
+suspendida** (se acabó el crédito y después Google la suspendió): sin ella no
+hay voces, o sea que las redes no pueden volver a prenderse hasta resolverlo
+con Google, y la redacción no tiene respaldo si la gratis da 429. Lo que falta,
+con quién y qué urgencia: **`PENDIENTES.md`** (entre lo más importante: la
+clave paga, mirar los trabajos de cron-job.org).
 
 ## Dónde tocar cada cosa
 

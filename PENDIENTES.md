@@ -1,6 +1,6 @@
 # Pendientes: todo en un solo lugar
 
-*Actualizado el 28/09/2026 a la noche.* Los otros documentos explican **cómo** funciona
+*Actualizado el 29/09/2026.* Los otros documentos explican **cómo** funciona
 cada cosa; éste dice **qué falta**. Las reglas que se exigen siempre están en `docs/10-REGLAS-Y-PRUEBAS.md`; cómo funciona
 cada parte, en `docs/` (empezar por `docs/00-INDICE.md`).
 Lo que ya se hizo, con fecha, está en `docs/00-INDICE.md` ("La historia
@@ -8,7 +8,8 @@ corta"), `docs/historico/HISTORIA.md` y `docs/historico/AUDITORIA.md`, para
 no volver a proponerlo. Cada cosa figura una sola vez.
 
 **Redes en pausa desde el 28/09** (`REDES_ACTIVAS` en `No`), hasta el visto
-bueno de Hernán al diseño nuevo; el estado del día está en `CLAUDE.md`
+bueno de Hernán al diseño nuevo **y, desde el 29/09, hasta resolver la clave
+paga de Gemini** (punto 2b: sin ella no hay voces); el estado del día está en `CLAUDE.md`
 ("Estado"). Para prenderlas: la variable a `Si` en GitHub
 (`docs/11-OPERACION.md`, tarea 5).
 
@@ -48,12 +49,13 @@ clave o una decisión.
 |---|---|---|---|
 | 1 | ~~Reiniciar el panel~~ **No hace falta** (28/09 a la noche: el panel no estaba abierto; la próxima vez que se abra con `ARRANCAR.bat` ya carga el código nuevo) | — | — |
 | 2 | ~~Tope de presupuesto para la clave paga de Gemini~~ **Hecho** (confirmado el 28/09: Gemini ya tiene el tope) | — | — |
+| 2b | **La clave paga de Gemini (`GEMINI_API_KEY_REDES`) está suspendida desde el 29/09**: primero se agotó el crédito (error 402) y después Google la suspendió. Sin ella no se puede armar ninguna pieza con voz y la redacción pierde su respaldo pago. Hay que entrar a Google AI Studio (proyecto RadarBalcarce), ver por qué la suspendieron, cargar crédito o pedir que la reactiven; si hace falta una clave nueva, la pega una persona en GitHub → Secrets (nunca en un chat). **Hasta que esto se resuelva no conviene prender las redes** (`docs/08-INFRAESTRUCTURA.md`, "Las claves de IA") | Los dos | Alta |
 | 3 | **Borrar las claves en texto plano**: `panel/datos/CLAVES-INICIALES.txt` (cuando las contraseñas nuevas estén guardadas en otro lado) y, en las copias viejas de `respaldos/`, los `CLAVES-INICIALES.txt` y `secreto.txt` de antes del 25/09. **No** borrar `panel/datos/secreto.txt`: es la firma de las sesiones del panel. Las copias nuevas ya no los llevan | Hernán | Alta |
 | 4 | **Decidir si Política y Policiales esperan a una persona también en la web.** Hoy, en la web, salen solas si el semáforo da verde; en las redes siempre esperan. Si se decide que esperen, es una regla nueva al final de `semaforo` (`ingesta/ingesta.mjs`; la lista `verdeSecciones` se sacó el 28/09) | Los dos | Media |
 | 5 | **Mirar en el celular la portada y la foto de perfil azules** (subidas el 28/09; Hernán prefirió las azules a las rojas: `MEDIA-KIT.md`, "Los colores") | Los dos | Baja |
 | 6 | **Biografías (28/09, Claude con el Chrome de Radar):** Instagram ya tiene la bio nueva, el nombre "Radar Balcarce · Noticias" y la foto azul; Facebook, la ubicación (Balcarce) y la categoría y el sitio web que ya estaban. **Falta a mano, desde el celular:** el enlace de Instagram (la web no deja editarlo), la categoría de Instagram, el botón de contacto y las historias destacadas. La presentación de Facebook quedó la que estaba (ya junta la breve y la larga; la página nueva tiene un solo campo) | Los dos | Media |
 | 7 | **Permisos de estadísticas de Meta** (los pide el resumen de WhatsApp; los seguidores ya llegan; Cloudflare quedó resuelto el 27/09): regenerar el token de `publicador-radar` con los permisos de ahora **más** `read_insights` e `instagram_manage_insights` y reemplazar `META_TOKEN`. Probar con Actions → "Prueba de estadísticas" | Los dos | Media |
-| 7b | **Gemini, presupuesto de octubre.** Se cargaron USD 5 en el proyecto RadarBalcarce (clave paga, voces); desde octubre se mide desde cero con USD 10 por mes. Al empezar el mes: ofrecer el límite mensual de AI Studio (Gasto → Establecer límite) y el gasto en el aviso de las 21. La clave de redacción es el proyecto RadarGratis (500 pedidos/día, sin facturación) | Los dos | Baja |
+| 7b | **Gemini, presupuesto de octubre.** Se cargaron USD 5 en el proyecto RadarBalcarce (clave paga, voces); desde octubre se mide desde cero con USD 10 por mes. Al empezar el mes: ofrecer el límite mensual de AI Studio (Gasto → Establecer límite) y el gasto en el aviso de las 21. La clave de redacción es el proyecto RadarGratis (500 pedidos/día, sin facturación). **Ojo (29/09): el crédito de USD 5 se agotó y la clave quedó suspendida; ver el punto 2b** | Los dos | Baja |
 | 8 | **Borrar el proyecto de Vercel** y limpiar el DNS que quedó (también el sitio duplicado de la cuenta vieja, `radar-balcarce.vercel.app`). Vercel está apagado desde el 25/09 | Los dos | Media |
 | 9 | **Google AdSense**: una persona abre la cuenta (pide datos fiscales) y pide la revisión; después, `ads.txt` con el ID de editor que da AdSense (sin el ID no se puede armar). La aprobación tarda de días a semanas. Detalle en `PUBLICIDAD.md` | Los dos | Media |
 | 10 | **Apuntar `RESPALDO_CARPETA`** a una carpeta de Drive u OneDrive, para que el respaldo del panel quede afuera de la PC. Si se rompe el disco hoy, se pierde el historial editorial | Hernán | Media |
@@ -64,7 +66,7 @@ clave o una decisión.
 | 15 | **Cerrar el túnel de Tailscale** (`tailscale funnel --https=443 off`) cuando no haga falta | Hernán | Baja |
 | 16 | **Renovar el token de GitHub de cron-job.org antes del 21/09/2027** (lo usa en sus tres trabajos; el vigilante avisa 30 días antes). El dominio vence el mismo día | Los dos | Fecha fija |
 | 17 | **Renovar las dos voces propias de Gemini antes del 29/09/2027** (vencen al año de crearse): Actions → "Crear voces" → crear, elegir una locutora y un locutor, borrar el resto y cambiar los identificadores en `CRITERIO-REDES.md` § 6. Si vencen, las piezas con voz dejan de salir | Los dos | Fecha fija |
-| 18 | **Confirmar el WhatsApp de reclamos de la Cooperativa de Electricidad** (2266-480809, anunciado en una nota de El Diario Balcarce de septiembre de 2024): no figura en coopbalcarce.com.ar y por eso no está en los teléfonos útiles. Si sigue vigente, se suma a `ingesta/utiles.mjs` | Los dos | Baja |
+| 18 | **Confirmar el WhatsApp de reclamos de la Cooperativa de Electricidad** (2266-480809, anunciado en una nota de El Diario Balcarce de septiembre de 2024): no figura en coopbalcarce.com.ar y por eso no está en los teléfonos útiles. Si sigue vigente, se suma a `ingesta/utiles.mjs`. *(Lo que sí figura en su página, la guardia de 24 horas 0800 222 2342 y el fijo (02266) 42-4091, ya está en los teléfonos útiles desde el 28/09: regla 77.)* | Los dos | Baja |
 
 ## Decisiones de criterio que esperan a los dos
 
@@ -151,10 +153,16 @@ retirarlo. Queda esto:
   28/09; ver `docs/07-REDES.md` y `MEDIA-KIT.md`):** probarlo también como
   tarjeta de enlace de **WhatsApp** (`web/lib/tarjeta.js`, la misma que arma
   la tarjeta para Facebook), no sólo como pieza de Instagram.
-- **Cuando se vuelvan a prender las redes, mirar los primeros días.** Que salgan bien los tres podcasts, el
+- **Cuando se vuelvan a prender las redes** (después de resolver la clave paga, punto 2b), **mirar los primeros días.** Que salgan las piezas con las dos voces nuevas (cada una con su voz del reparto), que salgan bien los tres podcasts, el
   enlace en los posteos de Facebook y el espejo a Instagram; que el contrato del
   día cierre completo (`docs/07-REDES.md`). Si algo deja de salir, seguir "Si
   algo dejó de salir" en `docs/11-OPERACION.md`.
+- **Dos detalles de las voces nuevas (29/09):** (1) el formulario de
+  "Crear voces" (`.github/workflows/crear-voces.yml`) trae como locutora por
+  defecto un identificador (`voice_fidaoon75zc8`) que no es el de
+  `CRITERIO-REDES.md` (`voice_x0fgw7agee4o`); (2) el panel (`panel/panel.html`,
+  línea del clima) dice "sensación" a secas, y la regla 75 pide "sensación
+  térmica" también ahí. Baja.
 - **Mirar los avisos nuevos por WhatsApp** (andan desde el 25/09): que no sean
   demasiados ni muy pocos, y ajustar los umbrales en `redes/avisos.mjs`.
 
@@ -169,7 +177,9 @@ retirarlo. Queda esto:
   siguiente; no se hizo por costo y por no poder probarlo sin publicar. Mientras
   tanto el vigilante avisa "no salió la historia de…".
 - **El ritmo de la voz** (2,4 palabras por segundo) es una medición de tres
-  días. Si la voz se enlentece, el corte de 58 s de las historias la ataja, pero
+  días hecha con la voz anterior (Kore): **volver a medirlo con la locutora y el
+  locutor nuevos** (`PODCAST_VOZ`, `ingesta/criterio.mjs` y la tabla del criterio).
+  Si la voz se enlentece, el corte de 58 s de las historias la ataja, pero
   hay que mirar los avisos amarillos de "Redes" ("la historia sube recortada").
 - **La agenda de la semana en historia** todavía se arma sólo en la PC
   (`reels/plan.mjs` lee `panel/datos/agenda.json`). Los eventos ya están en

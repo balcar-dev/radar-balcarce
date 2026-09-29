@@ -1,9 +1,9 @@
 # Criterio de las redes de Radar Balcarce
 
-*Actualizado el 26/09/2026.* Este es **el documento único** de todo lo que sale en Instagram y Facebook: cómo
+*Actualizado el 29/09/2026.* Este es **el documento único** de todo lo que sale en Instagram y Facebook: cómo
 suena la voz, qué dice cada pieza, qué no dice nunca. Hernán y Andrés lo pidieron
-así: que cada cosa de las redes tenga su criterio, que la voz sea **siempre la
-misma locutora**, que siempre sea "Radar Balcarce" y que la página sea siempre
+así: que cada cosa de las redes tenga su criterio, que cada pieza tenga **siempre la
+misma voz** (una locutora o un locutor), que siempre sea "Radar Balcarce" y que la página sea siempre
 `radarbalcarce.com`. Lo editorial de las notas (qué se publica, cómo se escribe
 una nota) está en [`CRITERIO-EDITORIAL.md`](CRITERIO-EDITORIAL.md); los horarios y
 cómo se publica, en [`docs/07-REDES.md`](docs/07-REDES.md).

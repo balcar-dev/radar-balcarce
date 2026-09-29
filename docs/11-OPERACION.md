@@ -1,6 +1,6 @@
 # 11 · Operación: el manual de uso diario
 
-*Escrito el 28/09/2026 para Hernán y Andrés, verificado contra el código y los
+*Escrito el 28/09/2026 (puesto al día el 29/09) para Hernán y Andrés, verificado contra el código y los
 workflows de ese día. Es un manual de tareas: cada sección dice qué hacer, paso
 a paso, y qué va a pasar después. Por qué funciona así está en los otros
 documentos: las redes en [`07-REDES.md`](07-REDES.md), dónde corre cada cosa
@@ -334,7 +334,9 @@ paga".
 - La lectura con IA, si Gemini falla, prueba con Groq.
 - Las voces: si Gemini no contesta, la pieza no sale en esa vuelta y se reintenta en la siguiente (nunca con otra voz).
   Si el error es **402 ("prepayment credits are depleted")**, se acabó el crédito de la clave paga: cargarlo en
-  Google AI Studio (proyecto RadarBalcarce); reintentar no lo arregla.
+  Google AI Studio (proyecto RadarBalcarce); reintentar no lo arregla. **Desde el 29/09 pasó eso y, después,
+  Google suspendió la clave**: mientras siga así, no sale ninguna pieza con voz (las redes están apagadas
+  de todos modos) y hay que resolverlo con Google antes de prender las redes.
 
 **Qué hacer:**
 
@@ -417,7 +419,8 @@ borrar publicaciones; aceptar términos; pagar.
 | Subir a mano un video que faltó (desde el artefacto de una corrida) | Las apps | Cuando haga falta |
 | Foto de perfil, portada, biografías, categorías | Las apps, con los textos de `PARA-CARGAR-A-MANO.md` | Una vez |
 | Comprobar con una cuenta que no sea administradora que el público ve los posteos y los reels | Facebook | Pendiente |
-| Poner un límite de gasto a la clave paga de Gemini | Google AI Studio (proyecto RadarBalcarce → Gasto) | Pendiente |
+| Poner un límite de gasto a la clave paga de Gemini | Google AI Studio (proyecto RadarBalcarce → Gasto) | Hecho el 28/09 (al empezar cada mes, volver a mirarlo) |
+| Resolver la clave paga de Gemini, suspendida por Google el 29/09 (sin ella no hay voces) | Google AI Studio (proyecto RadarBalcarce) y, si se crea otra clave, GitHub → Secrets (`GEMINI_API_KEY_REDES`) | Alta: antes de prender las redes |
 | Borrar el proyecto de Vercel y limpiar el DNS que quedó | Vercel y Cloudflare | Pendiente |
 | Activar o reactivar CallMeBot (si cambia el número del teléfono) | WhatsApp | Cuando haga falta |
 | Cambiar contraseñas del panel | En la PC: `node panel/clave.mjs` | Cuando haga falta |

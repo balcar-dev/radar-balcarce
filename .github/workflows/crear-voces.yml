@@ -27,7 +27,7 @@ on:
       voz_mujer:
         description: 'Para dialogo: el id de la locutora (voice_…)'
         type: string
-        default: 'voice_fidaoon75zc8'
+        default: 'voice_x0fgw7agee4o'
       voz_hombre:
         description: 'Para dialogo: el id del locutor (voice_…)'
         type: string

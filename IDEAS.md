@@ -1,6 +1,6 @@
 # Ideas para que el medio tenga alcance de verdad
 
-*Actualizado el 28/09/2026.* Ordenadas por lo que más devuelve con menos
+*Actualizado el 29/09/2026.* Ordenadas por lo que más devuelve con menos
 trabajo. No son todas buenas; están acá para discutirlas, no para hacerlas
 todas. Lo que ya se hizo está al final ("Lo que ya se hizo"); lo que falta
 hacer del sistema, en `PENDIENTES.md`.
@@ -40,7 +40,7 @@ funcione.*
 | 19 | **Vista previa de lo que el reloj va a publicar** | Ver antes las próximas horas de redes | Medio | Cambia cómo se mira el sistema, no cómo funciona |
 | 20 | **Guía comercial y mapa de Balcarce** | El catálogo de venta: mapa + fichas + mejoras pagas | Alto | Lo caro no es el código, es cargar y mantener los datos de cada comercio |
 | 21 | **Contenido gratis de gente local** | Músicos, fotógrafos o video makers que cedan material a cambio de crédito | Alto (investigación) | Depende de contactar y convencer a terceros, uno por uno |
-| 22 | **Segundo locutor (voz de hombre)** | Alternar o repartir secciones entre dos voces | Medio-alto | Ya con un plan concreto (`IDEAS.md` más abajo); Hernán la marcó "no prioridad hoy" |
+| 22 | ~~**Segundo locutor (voz de hombre)**~~ **Hecho el 28/09** | Dos voces propias (locutora y locutor) con un reparto fijo por pieza (`CRITERIO-REDES.md` § 6, regla 76) | — | Queda la idea de ponerles nombre a las dos voces |
 | 23 | **Revisar la accesibilidad a fondo** | El resto de lo que quedó pendiente del 25/09 | Medio-alto | Ninguna fecha límite, pero se acumula si no se agenda |
 | 24 | **Analítica propia sin cookies** | Más completa que la de Cloudflare | Alto | Es construir un sistema nuevo, no activar uno que ya existe |
 | 25 | **Probar los workflows en la máquina (`act`)** | Ver un workflow de GitHub Actions sin subirlo | Medio (técnico) | Ahorra tiempo a futuro, pero no lo nota nadie de afuera |
@@ -224,8 +224,8 @@ diarios viejos, con un personaje inventado por nosotros. Ideas para pensarla:
 Otra idea de Hernán para más adelante: una señal que no se corta nunca, con las
 noticias de Radar, los informes propios y, el día de mañana, publicidad.
 
-- **Qué ya tenemos**: la voz de la locutora de los reels y los podcasts
-  (CRITERIO-REDES.md), los tres podcasts por día, el clima, la farmacia y la
+- **Qué ya tenemos**: las dos voces (locutora y locutor) de los reels y los
+  podcasts (CRITERIO-REDES.md), los tres podcasts por día, el clima, la farmacia y la
   agenda. Con eso se puede armar una grilla que se repite y se actualiza sola.
 - **Radio online**: un servidor de audio (Icecast, AzuraCast) que pasa en
   bucle los podcasts del día, los avisos y música libre de derechos. Cuesta un
@@ -476,15 +476,11 @@ te muestra menos si tu gente no interactúa.
 
 ## Sumadas el 28/09, para más adelante (Hernán las pidió, no son prioridad hoy)
 
-- **Hecho el 28/09** (`CRITERIO-REDES.md` § 2 y 6, regla 76): **un segundo locutor, hombre, además de la voz mujer que ya tenemos**
-  (Kore). Alternar por pieza o fijar qué sección hace cada uno (por ejemplo:
-  ella el clima y los podcasts, él Policiales o Deportes), y ponerles nombre
-  a los dos para que se sientan más cercanos, no "la voz de Gemini". Para
-  armarlo bien: probar candidatas del catálogo de Gemini TTS (Puck, Charon,
-  Fenrir, Orus, entre otras) buscando una que suene masculina y clara en
-  castellano rioplatense, escribirle su propia ficha en `CRITERIO-REDES.md`
-  (igual que la de Kore hoy: identidad, tono, instrucción de voz) y decidir
-  la regla de reparto en `redes/piezas.mjs` o `reels/plan.mjs`.
+- **Hecho el 28/09** (`CRITERIO-REDES.md` § 2 y 6, regla 76): **un segundo locutor, hombre, además de la voz de mujer**.
+  En vez de una voz del catálogo de Gemini, se crearon dos voces propias con
+  Voice Design (una locutora y un locutor, es-AR) y cada pieza tiene siempre la
+  misma, según un reparto fijo. **Falta** sólo lo de ponerles nombre a los dos
+  para que se sientan más cercanos, no "la voz de Gemini".
 - **Contenido gratis para redes, de gente local o que recién arranca**:
   investigar si hay músicos, fotógrafos o video makers de Balcarce (o
   bancos de música/fotos libres) dispuestos a que usemos su material a

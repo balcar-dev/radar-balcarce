@@ -366,7 +366,7 @@ pieza") y lo arma `redes/guiones.mjs`.
 
 | Pieza | Guion (`redes/guiones.mjs`) | Placa (`reels/placa.mjs`) | Qué muestra la placa |
 |---|---|---|---|
-| Clima de la mañana | `guionClima` | `placaClima` | La tarjeta oscura del clima ahora (temperatura, cielo, sensación, viento), hoy y los dos días que siguen. Sin dólar: si se mueve, sale como nota propia |
+| Clima de la mañana | `guionClima` | `placaClima` | La tarjeta oscura del clima ahora (temperatura, cielo, sensación térmica, viento), hoy y los dos días que siguen. Sin dólar: si se mueve, sale como nota propia |
 | Clima de la noche | `guionClimaNoche` | `placaClima` | "Cómo sigue el día": ahora, la mínima de esta noche, mañana y pasado, con el pronóstico de mañana en una frase |
 | Aviso de clima | título y texto del aviso | `placaClima` con recuadro de aviso | La tarjeta del clima con el recuadro del aviso: el título del aviso es lo que se ve de reojo y abajo va lo que hay que saber; acento en el color de Policiales |
 | Farmacia de turno | `guionFarmacia` | `placaFarmacia` | La farmacia (o las dos) de turno, la dirección y "De turno hasta mañana a las 8:30" (`hastaCuandoElTurno`). El turno lo decide la web (`02-INGESTA`) |
@@ -472,8 +472,8 @@ código lo lee de ahí, sin copias:
 
 - `redes/prompt-redes.mjs` lee de ese documento, entre marcas `<!-- … -->`, la
   identidad ("Radar Balcarce", `radarbalcarce.com`, cómo se dice la dirección),
-  el nombre de la voz de Gemini y las indicaciones de tono (la de siempre y la
-  de mañana, tarde y noche). Si falta una parte, **falla a la vista** en vez de
+  las dos voces de Gemini (locutora y locutor), qué voz dice cada pieza y las
+  indicaciones de tono (la de siempre y la de mañana, tarde y noche). Si falta una parte, **falla a la vista** en vez de
   hablar sin criterio (y `npm test` lo controla).
 - `redes/guiones.mjs` es el "libro de recursos" hecho código: saludos, aperturas,
   conectores, comentarios del clima, cierres, y los guiones de cada pieza. La
@@ -563,8 +563,8 @@ anteriores cuenta las historias por el libro y lo dice.
   muchas cuentas. Se resolvió el 24/09 confirmando la cuenta; hubo que
   reactivar dos trabajos de cron-job.org que se habían apagado solos.
 
-**Los subtítulos**, medidos contra la voz de Edge (que trae el tiempo exacto de
-cada palabra), tienen un error medio de 0,1 a 0,2 segundos
+**Los subtítulos**, medidos (el 21/09) contra la voz de Edge, que traía el tiempo
+exacto de cada palabra, tienen un error medio de 0,1 a 0,2 segundos
 (`reels/tiempos.mjs`; los números se cuentan como los dice la voz: "715" son 6
 sílabas).
 

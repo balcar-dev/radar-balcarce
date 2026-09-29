@@ -409,11 +409,12 @@ noticia). Desde el 28/09 a la noche es un panel con **tres pestañas** (la idea
 C del lienzo "Radar Balcarce – Servicios"): se ve una cosa por vez, con los
 números grandes. Antes fueron tres tarjetas lado a lado (no entraban) y tres
 renglones apilados ("así no se leen los datos"). Una pestaña sin datos no se
-muestra; la primera con datos queda elegida.
+muestra; la primera con datos queda elegida. Es **compacto**: en el celular ocupa
+unos 235 píxeles de alto (antes, unos 385).
 
 | Pestaña | Qué muestra | Lleva a |
 |---|---|---|
-| Clima N° | la temperatura grande y el cielo, sensación, viento y humedad (sólo lo que hay) y los tres días que siguen (máxima, mínima y la lluvia si es de 20 % o más) | "Pronóstico extendido" → `/clima` |
+| Clima N° | la temperatura grande y el cielo, sensación térmica y viento (sólo lo que hay; **sin humedad**, que está en `/clima`) y los tres días que siguen (máxima, mínima y la lluvia si es de 20 % o más) | "Pronóstico extendido" → `/clima` |
 | Farmacias | las de turno, con nombre y dirección. **Sin botones** de llamar ni de mapa (Hernán, 28/09): están en `/farmacias` | "Teléfonos y turnos de la semana" → `/farmacias` |
 | Dólar | oficial y blue, compra y venta en pesos enteros; nunca "en vivo" | "Todos los dólares" → `/dolar` |
 
@@ -687,7 +688,7 @@ Las pruebas que cuidan el diseño: `pruebas/tipografia.test.mjs`,
 | `web/lib/enlaces-en-texto.js` | Enlaces adentro del cuerpo de las notas propias | Página de la nota | — | — |
 | `web/lib/farmacias.js` | El enlace `tel:` de cada farmacia | Tarjetas de farmacia | — | — |
 | `web/lib/tiempo.js` | "Hace cuánto" | `datos.js`, `horas-vivas.js` | — | — |
-| `web/components/hoy-balcarce.js` | La franja "Hoy en Balcarce" | Portada | Clima y dólar en vivo | — |
+| `web/components/hoy-balcarce.js` | El panel "Hoy en Balcarce" (tres pestañas) | Portada | Clima y dólar en vivo | — |
 | `web/components/piezas.js` | Piezas repetidas (fila de nota, hora, farmacia, evento, cierre, buzón) | Páginas | — | — |
 | `web/components/verificacion.js` | El desplegable "Fuentes (N)" y la firma | Página de la nota | — | — |
 | `web/components/metadatos.js`, `ficha.js` | Metadatos, firma, datos estructurados, migas | Páginas | — | — |

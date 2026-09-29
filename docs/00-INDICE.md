@@ -1,6 +1,6 @@
 # 00 · Índice: Radar Balcarce de punta a punta
 
-*Escrito el 28/09/2026. Es la puerta de entrada a toda la documentación: qué
+*Escrito el 28/09/2026 y puesto al día el 29/09. Es la puerta de entrada a toda la documentación: qué
 es el proyecto, por dónde pasa una noticia y qué documento cuenta cada cosa.
 Si un documento y el código no coinciden, manda el código.*
 
@@ -12,8 +12,8 @@ Un **medio digital automático** de Balcarce, provincia de Buenos Aires, en
 la zona, la provincia y el país), junta la misma noticia contada por varios,
 decide qué sale solo y qué espera a una persona, lo escribe con IA (Gemini),
 verifica lo escrito contra las fuentes, arma el sitio y lo sube a Cloudflare.
-Varias veces por día publica en Facebook e Instagram con una voz de IA, y un
-vigilante avisa por WhatsApp si algo falla. **Todo eso corre en GitHub con la
+Varias veces por día publica en Facebook e Instagram con dos voces de IA (una
+locutora y un locutor), y un vigilante avisa por WhatsApp si algo falla. **Todo eso corre en GitHub con la
 PC apagada.** Lo único que vive en la PC de Hernán es el panel, donde Hernán y
 Andrés deciden lo que el sistema no puede decidir solo. El principio que
 decide todo es una pregunta: **¿qué valor tiene esta nota para alguien que
@@ -101,7 +101,7 @@ Una regla o un número vive en **un** lugar; los demás documentos remiten.
 | `docs/07-REDES.md` | Facebook e Instagram: el interruptor, los posteos y el espejo, el reloj, las piezas, los podcasts, el contrato del día, el libro, la conexión con Meta y las auditorías |
 | `docs/08-INFRAESTRUCTURA.md` | Qué corre dónde: los trece workflows, cron-job.org, Cloudflare, GitHub, las claves de IA y sus topes, todos los secretos por nombre, la vigilancia, los vencimientos y lo que cuesta |
 | `docs/09-PANEL.md` | El tablero de la PC: arrancarlo, las pestañas, qué pasa cuando alguien decide, cómo sube a GitHub, el respaldo, la agenda paso a paso y cómo se podría pasar a online |
-| `docs/10-REGLAS-Y-PRUEBAS.md` | **Las reglas numeradas** (1 a 72), qué prueba cuida cada una, el mapa de `pruebas/` y la regla de la prueba después del error |
+| `docs/10-REGLAS-Y-PRUEBAS.md` | **Las reglas numeradas** (1 a 77), qué prueba cuida cada una, el mapa de `pruebas/` y la regla de la prueba después del error |
 | `docs/11-OPERACION.md` | El manual de uso diario: los enlaces, corregir, retirar, escribir cuerpos, prender o apagar las redes, publicar una pieza, qué mirar cuando algo deja de salir |
 | `docs/12-GLOSARIO.md` | Cada palabra propia del proyecto, con su definición y dónde vive |
 
@@ -166,6 +166,7 @@ y los documentos de cada área.
 | 26/09 | App de Meta publicada; Policiales sólo de Balcarce; fuentes para las secciones flacas; historias de hasta 58 s |
 | 27/09 | Plan V2.2: filtro de entrada, la lectura con IA decide, el cruce de medios (160 fuentes más), lo de afuera medido en medios, Fútbol y Argentina, títulos sin "en Balcarce", correcciones y retiradas a mano, `FUENTES.md`, Source Serif 4 e Inter |
 | 28/09 | Portada de 36 horas y 12 para estrenar; fecha única de cada nota; "de acá" con una sola definición; lo copiado de afuera espera a la IA; el banco de fotos en la web; Groq de respaldo; la nota del dólar sólo si se mueve 2 %; "Hoy en Balcarce" y `/clima`; plantillas nuevas de redes; trece arreglos encontrados al documentar; esta documentación |
+| 28–29/09 | Dos voces propias de Gemini 3.8 (locutora y locutor) con un reparto fijo por pieza, sin voz de respaldo; "Hoy en Balcarce" como panel de tres pestañas; "sensación térmica"; fechas de las placas sin coma; la IA de fotos descarta el nombre de otro medio y marca a los menores; guardia de la Cooperativa Eléctrica en los teléfonos útiles. El 29/09 la clave paga de Gemini quedó suspendida por Google (`PENDIENTES.md`) |
 
 El detalle, con fechas, en `docs/historico/HISTORIA.md` (hasta el 25/09) y en
 los mensajes de los commits.

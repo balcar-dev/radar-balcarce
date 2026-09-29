@@ -156,7 +156,7 @@ de la web).
 | Pieza | Plantilla del lienzo | Dónde se arma |
 |---|---|---|
 | Los tres podcasts (reel + historia) | Repaso · tapa: el nombre del podcast y la duración en el color del día, un título ("Tres noticias para empezar el día", "Tres cosas que pasaron hoy", "Lo que dejó el día") y la lista numerada de las notas, cada número en el color de su sección | `placaRepaso` (`reels/placa.mjs`), desde `reels/plan.mjs` |
-| El clima de la mañana | Historia diaria: "Hoy en Balcarce", la fecha, la tarjeta oscura del clima (temperatura, cielo, sensación y viento, hoy y los dos días que siguen); sin dólar: si se mueve, sale como nota propia | `placaClima` |
+| El clima de la mañana | Historia diaria: "Hoy en Balcarce", la fecha, la tarjeta oscura del clima (temperatura, cielo, sensación térmica y viento, hoy y los dos días que siguen); sin dólar: si se mueve, sale como nota propia | `placaClima` |
 | El clima de la noche | Historia diaria: "Cómo sigue el día", la tarjeta del clima (ahora, esta noche, mañana y pasado) y un recuadro con el pronóstico de mañana | `placaClima` |
 | El aviso de clima | Historia diaria con un recuadro de borde rojo ("Qué hay que saber") | `placaClima` |
 | La farmacia de turno | Historia diaria: la fecha y la tarjeta blanca con borde verde (nombre, dirección, teléfono) y hasta cuándo dura el turno | `placaFarmacia` |

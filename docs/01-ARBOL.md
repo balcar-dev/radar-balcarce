@@ -12,7 +12,7 @@ Cómo leer las tablas:
 - **¿En uso?**: **Sí** (corre solo, en la nube o en el panel), **A mano**
   (existe para correrlo cuando hace falta), **Apagado** (el código está pero
   no se usa, a propósito) o **Sin uso** (nadie lo llama).
-- Los archivos de `pruebas/` (84) tienen su línea cada uno en
+- Los archivos de `pruebas/` (85) tienen su línea cada uno en
   `docs/10-REGLAS-Y-PRUEBAS.md`, "Todos los archivos de `pruebas/`"; los
   documentos (`.md`), en `docs/00-INDICE.md`.
 
@@ -213,7 +213,7 @@ Lo que **no** se versiona (`.gitignore`): `node_modules/`, `.env*`,
 | `dolar-vivo.js` | Las tarjetas de `/dolar` | `dolar/page.js` | Sí |
 | `ficha.js` | Los datos estructurados para Google y las migas | `layout.js`, notas, secciones, temas, eventos | Sí |
 | `horas-vivas.js` | Recalcula "hace X" cada minuto | `layout.js` | Sí |
-| `hoy-balcarce.js` | "Hoy en Balcarce": clima, farmacia y dólar | `page.js` | Sí |
+| `hoy-balcarce.js` | "Hoy en Balcarce": el panel de la portada con tres pestañas (clima, farmacias, dólar) | `page.js` | Sí |
 | `metadatos.js` | Título, descripción, canónico, la firma (`firmaCorta`, `quienEscribio`) y el autor | Casi todas las páginas | Sí |
 | `navegacion.js` | El menú de secciones | `layout.js` | Sí |
 | `piezas.js` | Piezas repetidas: fila de nota, hora, farmacia, evento, cierre, buzón | Casi todas las páginas | Sí |

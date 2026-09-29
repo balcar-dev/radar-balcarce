@@ -1,6 +1,6 @@
 # 12 · Glosario: las palabras propias de Radar Balcarce
 
-*Escrito el 28/09/2026. Cada palabra con lo que quiere decir **acá** y dónde
+*Escrito el 28/09/2026, puesto al día el 29/09. Cada palabra con lo que quiere decir **acá** y dónde
 vive (en el código o en un documento). Si falta una palabra, se suma; si una
 cambia de sentido, se corrige acá y en el documento de su área.*
 
@@ -91,5 +91,6 @@ En orden alfabético.
 | **Verde** | El color del semáforo que sale solo (si después tiene cuerpo y, si es de afuera, los medios y el cupo) | `semaforo` (`ingesta/ingesta.mjs`): verde si ninguna regla la frenó |
 | **Verificación (el verificador)** | La comparación mecánica, sin IA, de lo que escribió la IA contra lo que recibió: números, nombres, fechas, citas, acusaciones, copia, relleno, forma del título… | `verificar` (`ingesta/verificar.mjs`); `docs/04-REDACCION.md` § 8 |
 | **Vigilante** | El programa que cada media hora mira la web publicada, las corridas y las redes, y avisa por WhatsApp (un solo mensaje por corrida; el resumen, a las 21) | `redes/vigilar.mjs`, workflow "Vigilancia"; `docs/08-INFRAESTRUCTURA.md` |
+| **Voces propias (locutora y locutor)** | Las dos voces de las piezas, creadas con Voice Design de Gemini 3.8 (`es-AR`), cada una con un identificador fijo que guarda Google y que vence al año (29/09/2027). Cada pieza tiene siempre la misma voz según el reparto de `CRITERIO-REDES.md` § 6; nunca hay otra voz de respaldo | `vozDePieza` (`redes/prompt-redes.mjs`), `reels/voz-gemini.mjs`, `reels/crear-voces.mjs`; regla 76 |
 | **Workflow** | Una tarea automática de GitHub. Son trece | `.github/workflows/`; `docs/08-INFRAESTRUCTURA.md` |
 | **Zona** | Lo que toca a Balcarce sin nombrarla: la ruta 226, la 55, el sudeste bonaerense, la papa. Sale sola aunque la cuente un solo medio | `PALABRAS_ZONA` (`ingesta/fuentes.mjs`), `deLaZona` |
