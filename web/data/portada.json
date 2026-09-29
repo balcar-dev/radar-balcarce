@@ -1,5 +1,5 @@
 {
-  "generado": "2026-09-29T00:03:03.620Z",
+  "generado": "2026-09-29T00:32:06.964Z",
   "notas": [
     {
       "id": "17j3wna",
@@ -13,11 +13,12 @@
         "La Nación",
         "Clarín",
         "Ámbito",
-        "Minuto Uno",
         "TN (Todo Noticias)",
         "El Destape",
         "C5N",
         "La Nueva",
+        "La Brújula 24",
+        "Minuto Uno",
         "Página/12"
       ],
       "enlace": "https://www.minutouno.com/espectaculos/la-virgen-la-tosquera-laura-casabe-representara-la-argentina-los-oscar-n6327706",
@@ -292,89 +293,194 @@
       }
     },
     {
-      "id": "1hhocwa",
-      "titulo": "El autódromo Fangio avanza con nuevas obras tras las competencias",
-      "copete": "El intendente Esteban Reino detalló los trabajos en marcha en el circuito local luego del fin de semana de automovilismo nacional, que incluyó tareas en el sector chico, el ingreso a boxes y la curva uno.",
-      "cuerpo": "El intendente Esteban Reino detalló las tareas en marcha en el autódromo Juan Manuel Fangio, luego del regreso de las competencias nacionales tras quince años. Entre las intervenciones, se interviene el circuito chico para corregir hundimientos mediante el desplazamiento del trazado y una nueva carpeta asfáltica con material procedente de Mar del Plata.\n\nAdemás, se ejecuta un relleno de hormigón en el ingreso a boxes y una obra hidráulica en la curva uno con tubos para el escurrimiento del agua. Reino indicó que las tareas alcanzan el noventa por ciento de la obra comprometida y adelantó que continuarán con paredones de contención y la ampliación de vías de escape en la sierra.",
-      "guion": "El autódromo Fangio avanza con nuevas obras tras las competencias",
-      "seccion": "Automovilismo",
+      "id": "1vmzrvq",
+      "titulo": "El consumo cae uno por ciento en agosto según la Cámara de Comercio",
+      "copete": "La compra de bienes y servicios baja un 1,1% interanual y un 0,8% frente a julio. Transporte y vehículos encabeza los retrocesos.",
+      "cuerpo": "El consumo de los hogares en bienes y servicios finales registra en agosto una caída del 1,1% en la comparación interanual, de acuerdo con el Indicador de Consumo elaborado por la Cámara Argentina de Comercio y Servicios. El índice muestra además una retracción desestacionalizada del 0,8% frente a julio, mientras el gasto familiar continúa en niveles bajos respecto de los picos de principios de 2025.\n\nEl relevamiento sectorial exhibe un comportamiento heterogéneo con bajas pronunciadas en transporte y vehículos, que retrocede un 11,4% interanual debido a la caída en el patentamiento de automóviles, y en recreación y cultura, que baja un 8,2%. En contraparte, indumentaria y calzado anota un incremento interanual estimado del 4,9%, y vivienda, alquileres y servicios públicos crece un 4,8% impulsado por la demanda de energía eléctrica.\n\nEl informe señala que el financiamiento comercial destinado a los hogares muestra signos de agotamiento, con caídas consecutivas en tarjetas de crédito, préstamos personales y prendarios. En tanto, la inflación mensual se ubica en el 1,7% durante agosto, por debajo del 2,1% registrado en julio, según los datos difundidos por la entidad empresaria.",
+      "guion": "El consumo cae uno por ciento en agosto según la Cámara de Comercio",
+      "seccion": "Economía",
       "medios": [
-        "El Diario Balcarce"
+        "Ámbito",
+        "Perfil",
+        "El Destape",
+        "Diario Popular",
+        "Noticias Argentinas (NA)"
       ],
-      "enlace": "https://eldiariobalcarce.com.ar/tras-el-regreso-del-automovilismo-el-fangio-avanza-con-nuevas-obras-480",
-      "teniaImagenLaFuente": false,
-      "fecha": "2026-09-28T22:01:03.337Z",
-      "sinFecha": true,
-      "visto": "2026-09-28T22:01:03.337Z",
-      "relevancia": 61,
+      "enlace": "https://www.eldestapeweb.com/economia/consumo-cayo-1-1-agosto-profundiza-crisis-hogares-202692819538",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-28T22:05:38.000Z",
+      "sinFecha": false,
+      "visto": "2026-09-29T00:30:56.955Z",
+      "relevancia": 83,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "El consumo baja 1,1% interanual en agosto.",
+        "Transporte y vehículos sufre la mayor caída.",
+        "El crédito a los hogares muestra signos de agotamiento.",
+        "La inflación mensual se ubica en 1,7%."
+      ],
+      "seSabe": [
+        "El Indicador de Consumo registra una baja interanual del 1,1% en agosto, según la Cámara Argentina de Comercio y Servicios.",
+        "La serie desestacionalizada marca una retracción del 0,8% frente a julio.",
+        "Transporte y vehículos cae 11,4% interanual por la baja en patentamientos.",
+        "Recreación y cultura retrocede un 8,2% respecto a agosto de 2025.",
+        "Indumentaria y calzado anota una suba interanual del 4,9%.",
+        "Vivienda, alquileres y servicios públicos crece un 4,8% interanual."
+      ],
+      "textoRedes": "El consumo de los hogares registra una caída del 1,1% interanual en agosto y una baja del 0,8% frente a julio, según el Indicador de Consumo de la Cámara Argentina de Comercio y Servicios. Transporte y vehículos encabeza las retracciones sectoriales.",
+      "etiquetas": [
+        "consumo",
+        "economia",
+        "camara de comercio",
+        "inflacion",
+        "agosto"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Destape",
+          "enlace": "https://www.eldestapeweb.com/economia/consumo-cayo-1-1-agosto-profundiza-crisis-hogares-202692819538",
+          "fecha": "2026-09-28T22:05:38.000Z",
+          "oficial": false,
+          "aporte": "Aportó los datos generales del Indicador de Consumo de agosto, la variación mensual, la inflación y el detalle por sectores y financiamiento."
+        },
+        {
+          "medio": "Ámbito",
+          "enlace": "https://www.ambito.com/economia/el-consumo-los-hogares-volvio-mostrar-una-contraccion-y-cayo-11-agosto-n6327727",
+          "fecha": "2026-09-29T00:02:00.000Z",
+          "oficial": false,
+          "aporte": "Confirmó la baja de 0,8% frente a julio y los rubros de transporte y recreación como los de mayor retroceso."
+        },
+        {
+          "medio": "Perfil",
+          "enlace": "https://www.perfil.com/noticias/economia/el-consumo-de-los-hogares-cayo-11-interanual-en-agosto-segun-la-cac.phtml",
+          "fecha": "2026-09-28T22:39:38.000Z",
+          "oficial": false,
+          "aporte": "Aportó que transporte y vehículos lastró el índice por la baja de patentamientos."
+        },
+        {
+          "medio": "Diario Popular",
+          "enlace": "https://www.diariopopular.com.ar/economia/el-consumo-los-hogares-sigue-baja-cayo-el-11-interanual-agosto-n921954",
+          "fecha": "2026-09-28T23:32:00.000Z",
+          "oficial": false,
+          "aporte": "No aportó información adicional al no incluir resumen."
+        },
+        {
+          "medio": "Noticias Argentinas (NA)",
+          "enlace": "https://noticiasargentinas.com/economia/el-consumo-de-los-hogares-volvio-a-caer-en-agosto-y-registro-una-baja-interanual-del-1-1-_a6abae059b62936833e766c80",
+          "fecha": "2026-09-28T22:06:04.000Z",
+          "oficial": false,
+          "aporte": "Coincidió con los datos de la caída interanual del 1,1% y la retracción desestacionalizada del 0,8% informados por la entidad."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron cinco medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "el-consumo-cae-uno-por-ciento-en-agosto-segun-la-camara-de-comercio",
+      "foto": {
+        "archivo": "fotos-notas/1vmzrvq.webp",
+        "credito": "Foto: Diario Popular"
+      }
+    },
+    {
+      "id": "1ytgm6c",
+      "titulo": "Petruccelli pide que Aparicio exponga ante la Comisión de Salud",
+      "copete": "El concejal solicita que la investigadora del INTA detalle en el Concejo Deliberante su trabajo sobre plaguicidas y su situación institucional.",
+      "cuerpo": "El pedido busca que la profesional exponga el alcance, la metodología y los resultados de su investigación sobre la presencia de plaguicidas y metabolitos en muestras biológicas humanas.\n\nLa presentación también incorpora el abordaje de las recientes manifestaciones públicas vinculadas a la situación laboral de la investigadora y a las denuncias sobre supuestas restricciones para difundir los resultados científicos. Aparicio participa en el proyecto internacional SPRINT, enfocado en el estudio de la exposición a productos fitosanitarios y sus efectos sobre la salud y el ambiente.\n\nPetruccelli solicitó que la reunión se concrete en una fecha y un horario a convenir con la investigadora para generar un espacio de diálogo institucional en el ámbito legislativo.",
+      "guion": "Petruccelli pide que Aparicio exponga ante la Comisión de Salud",
+      "seccion": "Política",
+      "medios": [
+        "Puntonueve (FM 100.9)",
+        "Diario La Vanguardia"
+      ],
+      "enlace": "https://puntonueve.com.ar/petruccelli-pidio-que-virginia-aparicio-exponga-ante-la-comision-de-salud/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-28T21:59:12.000Z",
+      "sinFecha": false,
+      "visto": "2026-09-29T00:30:56.955Z",
+      "relevancia": 100,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
       "temas": [
-        "fangio"
+        "concejo",
+        "inta"
       ],
       "como": "automatica",
       "claves": [
-        "El intendente Esteban Reino detalló las obras en el autódromo local.",
-        "Intervienen el circuito chico, el ingreso a boxes y la curva uno.",
-        "Los trabajos alcanzan el noventa por ciento de la obra comprometida."
+        "Gabriel Petruccelli presentó una nota en el Concejo Deliberante.",
+        "Solicitó convocar a la investigadora del INTA Balcarce, Virginia Aparicio.",
+        "El pedido apunta a conocer su estudio sobre plaguicidas en muestras biológicas.",
+        "Incluye el análisis de su actual situación institucional y laboral."
       ],
       "seSabe": [
-        "El autódromo Juan Manuel Fangio recibió competencias nacionales tras quince años.",
-        "El intendente Esteban Reino detalló que se interviene un sector del circuito chico para solucionar problemas de hundimiento.",
-        "Se realiza un relleno de hormigón en el ingreso a boxes y una obra hidráulica en la curva uno.",
-        "Las tareas actuales alcanzan el noventa por ciento de la obra comprometida."
+        "El concejal Gabriel Petruccelli presentó la solicitud dirigida a Viviana Erreguerena, titular de la Comisión de Salud.",
+        "La investigadora Virginia Aparicio integra el proyecto internacional SPRINT sobre fitosanitarios.",
+        "El pedido contempla que la profesional detalle la metodología y los resultados de su trabajo científico.",
+        "La iniciativa legislativa menciona las recientes manifestaciones sobre la situación laboral de la investigadora."
       ],
       "noConfirmado": [
-        "No se detalló el monto total de inversión para las nuevas obras en el circuito local.",
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+        "Todavía no se fijó la fecha ni el horario para la posible presentación de la investigadora en el cuerpo legislativo."
       ],
-      "textoRedes": "El intendente Esteban Reino detalló las obras que continúan en el autódromo Fangio tras el regreso de las competencias nacionales, con trabajos en el circuito chico, el ingreso a boxes y desagües en la curva uno.",
+      "textoRedes": "El concejal Gabriel Petruccelli pidió que la investigadora de la Estación Experimental INTA Balcarce, Virginia Aparicio, exponga ante la Comisión de Salud sobre su trabajo acerca de plaguicidas en muestras biológicas humanas y su situación institucional.",
       "etiquetas": [
-        "autodromo fangio",
-        "esteban reino",
-        "obras",
-        "balcarce",
-        "automovilismo"
+        "Concejo Deliberante",
+        "INTA Balcarce",
+        "Virginia Aparicio",
+        "Gabriel Petruccelli",
+        "Comisión de Salud",
+        "plaguicidas"
       ],
       "fuentesConsultadas": [
         {
-          "medio": "El Diario Balcarce",
-          "enlace": "https://eldiariobalcarce.com.ar/tras-el-regreso-del-automovilismo-el-fangio-avanza-con-nuevas-obras-480",
+          "medio": "Puntonueve (FM 100.9)",
+          "enlace": "https://puntonueve.com.ar/petruccelli-pidio-que-virginia-aparicio-exponga-ante-la-comision-de-salud/",
+          "fecha": "2026-09-28T21:59:12.000Z",
+          "oficial": false,
+          "aporte": "Detalló la presentación del concejal Gabriel Petruccelli a la Comisión de Salud y los objetivos de la exposición de la investigadora."
+        },
+        {
+          "medio": "Diario La Vanguardia",
+          "enlace": "https://www.diariolavanguardia.com/noticias/44933-petruccelli-pidio-que-virginia-aparicio-concurra-al-concejo-y-exponga-ante-la-comision-de-salud/",
           "fecha": null,
           "oficial": false,
-          "aporte": "Detalló los trabajos viales e hidráulicos en el autódromo Fangio y el porcentaje de avance de la obra según el intendente Esteban Reino."
+          "aporte": "Confirmó que la solicitud apunta a que la investigadora del INTA Balcarce informe sobre plaguicidas en muestras biológicas humanas."
         }
       ],
       "antecedentes": [
         {
-          "id": "caurxr",
-          "titulo": "Balinotti destaca las obras del autódromo Fangio tras el regreso nacional",
-          "fecha": "2026-09-28T15:35:16.000Z",
-          "ruta": "/nota/balinotti-destaca-las-obras-del-autodromo-fangio-tras-el-regreso-caurxr"
+          "id": "v91szb",
+          "titulo": "La APDH rechaza la factible exoneración de la Dra. Virginia Aparicio, investigadora del INTA Balcarce y del CONICET",
+          "fecha": "2026-09-23T01:50:24.356Z",
+          "ruta": "/nota/la-apdh-rechaza-la-factible-exoneracion-de-la-dra-virginia-aparicio-v91szb"
         },
         {
-          "id": "1a0ty94",
-          "titulo": "Reino destaca el éxito del regreso automovilístico al Fangio",
-          "fecha": "2026-09-28T19:02:49.410Z",
-          "ruta": "/nota/reino-destaca-el-exito-del-regreso-automovilistico-al-fangio-1a0ty94"
+          "id": "tmpmtz",
+          "titulo": "Legislatura bonarense: presentan un proyecto para respaldar a Virginia Aparicio, investigadora de INTA Balcarce",
+          "fecha": "2026-09-21T17:19:51.000Z",
+          "ruta": "/nota/legislatura-bonarense-presentan-un-proyecto-para-respaldar-a-virginia-tmpmtz"
         },
         {
-          "id": "1xs34mg",
-          "titulo": "Boccanera y Baigorria ganan en el regreso del Turismo Special de la Costa al Fangio",
-          "fecha": "2026-09-28T11:51:08.000Z",
-          "ruta": "/nota/boccanera-y-baigorria-ganan-en-el-regreso-del-turismo-special-de-la-1xs34mg"
+          "id": "dph8p3",
+          "titulo": "Petruccelli pidió informes sobre el programa para celíacos y las acciones de prevención de ITS",
+          "fecha": "2026-09-20T14:00:23.000Z",
+          "ruta": "/nota/petruccelli-pidio-informes-sobre-el-programa-para-celiacos-y-las-dph8p3"
         }
       ],
       "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "ALTA"
       },
-      "slug": "el-autodromo-fangio-avanza-con-nuevas-obras-tras-las-competencias",
+      "slug": "petruccelli-pide-que-aparicio-exponga-ante-la-comision-de-salud",
       "foto": {
-        "archivo": "fotos-notas/1hhocwa.jpg",
-        "credito": "Foto: El Diario Balcarce"
+        "archivo": "fotos-notas/1ytgm6c.png",
+        "credito": "Foto: Diario La Vanguardia"
       }
     },
     {
@@ -388,15 +494,17 @@
         "El Diario Balcarce"
       ],
       "enlace": "https://eldiariobalcarce.com.ar/piden-acelerar-la-reparacion-de-un-puente-clave-para-la-circulacion-en-la-zona-rural-677",
-      "teniaImagenLaFuente": false,
-      "fecha": "2026-09-28T22:01:03.337Z",
-      "sinFecha": true,
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-28T21:52:27.000Z",
+      "sinFecha": false,
       "visto": "2026-09-28T22:01:03.337Z",
-      "relevancia": 53,
+      "relevancia": 88,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
-      "temas": [],
+      "temas": [
+        "concejo"
+      ],
       "como": "automatica",
       "claves": [
         "El Concejo Deliberante aprobó por unanimidad la reparación de un puente rural.",
@@ -530,6 +638,170 @@
       }
     },
     {
+      "id": "1hhocwa",
+      "titulo": "El autódromo Fangio avanza con nuevas obras tras las competencias",
+      "copete": "El intendente Esteban Reino detalló los trabajos en marcha en el circuito local luego del fin de semana de automovilismo nacional, que incluyó tareas en el sector chico, el ingreso a boxes y la curva uno.",
+      "cuerpo": "El intendente Esteban Reino detalló las tareas en marcha en el autódromo Juan Manuel Fangio, luego del regreso de las competencias nacionales tras quince años. Entre las intervenciones, se interviene el circuito chico para corregir hundimientos mediante el desplazamiento del trazado y una nueva carpeta asfáltica con material procedente de Mar del Plata.\n\nAdemás, se ejecuta un relleno de hormigón en el ingreso a boxes y una obra hidráulica en la curva uno con tubos para el escurrimiento del agua. Reino indicó que las tareas alcanzan el noventa por ciento de la obra comprometida y adelantó que continuarán con paredones de contención y la ampliación de vías de escape en la sierra.",
+      "guion": "El autódromo Fangio avanza con nuevas obras tras las competencias",
+      "seccion": "Automovilismo",
+      "medios": [
+        "El Diario Balcarce"
+      ],
+      "enlace": "https://eldiariobalcarce.com.ar/tras-el-regreso-del-automovilismo-el-fangio-avanza-con-nuevas-obras-480",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-28T21:44:45.000Z",
+      "sinFecha": false,
+      "visto": "2026-09-28T22:01:03.337Z",
+      "relevancia": 96,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [
+        "autodromo",
+        "fangio"
+      ],
+      "como": "automatica",
+      "claves": [
+        "El intendente Esteban Reino detalló las obras en el autódromo local.",
+        "Intervienen el circuito chico, el ingreso a boxes y la curva uno.",
+        "Los trabajos alcanzan el noventa por ciento de la obra comprometida."
+      ],
+      "seSabe": [
+        "El autódromo Juan Manuel Fangio recibió competencias nacionales tras quince años.",
+        "El intendente Esteban Reino detalló que se interviene un sector del circuito chico para solucionar problemas de hundimiento.",
+        "Se realiza un relleno de hormigón en el ingreso a boxes y una obra hidráulica en la curva uno.",
+        "Las tareas actuales alcanzan el noventa por ciento de la obra comprometida."
+      ],
+      "noConfirmado": [
+        "No se detalló el monto total de inversión para las nuevas obras en el circuito local.",
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El intendente Esteban Reino detalló las obras que continúan en el autódromo Fangio tras el regreso de las competencias nacionales, con trabajos en el circuito chico, el ingreso a boxes y desagües en la curva uno.",
+      "etiquetas": [
+        "autodromo fangio",
+        "esteban reino",
+        "obras",
+        "balcarce",
+        "automovilismo"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/tras-el-regreso-del-automovilismo-el-fangio-avanza-con-nuevas-obras-480",
+          "fecha": null,
+          "oficial": false,
+          "aporte": "Detalló los trabajos viales e hidráulicos en el autódromo Fangio y el porcentaje de avance de la obra según el intendente Esteban Reino."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "caurxr",
+          "titulo": "Balinotti destaca las obras del autódromo Fangio tras el regreso nacional",
+          "fecha": "2026-09-28T15:35:16.000Z",
+          "ruta": "/nota/balinotti-destaca-las-obras-del-autodromo-fangio-tras-el-regreso-caurxr"
+        },
+        {
+          "id": "1a0ty94",
+          "titulo": "Reino destaca el éxito del regreso automovilístico al Fangio",
+          "fecha": "2026-09-28T19:02:49.410Z",
+          "ruta": "/nota/reino-destaca-el-exito-del-regreso-automovilistico-al-fangio-1a0ty94"
+        },
+        {
+          "id": "1xs34mg",
+          "titulo": "Boccanera y Baigorria ganan en el regreso del Turismo Special de la Costa al Fangio",
+          "fecha": "2026-09-28T11:51:08.000Z",
+          "ruta": "/nota/boccanera-y-baigorria-ganan-en-el-regreso-del-turismo-special-de-la-1xs34mg"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "el-autodromo-fangio-avanza-con-nuevas-obras-tras-las-competencias",
+      "foto": {
+        "archivo": "fotos-notas/1hhocwa.jpg",
+        "credito": "Foto: El Diario Balcarce"
+      }
+    },
+    {
+      "id": "12antth",
+      "titulo": "La UIA calcula una baja industrial del 5,7 por ciento en agosto",
+      "copete": "El sector fabril acumuló una contracción del 3 por ciento en lo que va del año y se mantiene un 11 por ciento por debajo del nivel registrado entre 2022 y 2023, según un informe oficial.",
+      "cuerpo": "La actividad industrial registró en agosto una caída interanual del 5,7 por ciento y una baja mensual del 0,3 por ciento frente a julio, según el último informe del Centro de Estudios de la Unión Industrial Argentina.\n\nEl relevamiento detalla que la menor demanda en el mercado interno y la caída de insumos afectan a sectores clave como textiles, herramientas y materiales de construcción, mientras que la molienda de oleaginosas y el procesamiento de petróleo mostraron subas.",
+      "guion": "La UIA calcula una baja industrial del 5,7 por ciento en agosto",
+      "seccion": "Economía",
+      "medios": [
+        "Perfil",
+        "TN (Todo Noticias)",
+        "El Cronista",
+        "C5N"
+      ],
+      "enlace": "https://www.c5n.com/economia/informe-uia-la-caida-interanual-la-industria-llego-al-57-y-quedo-11-debajo-2022-2023-n250157",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-28T21:07:00.000Z",
+      "sinFecha": false,
+      "visto": "2026-09-29T00:30:56.955Z",
+      "relevancia": 63,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "La actividad industrial cayó 5,7% interanual en agosto.",
+        "El sector acumula una baja del 3% en lo que va de 2026.",
+        "La construcción y el rubro textil registran las mayores caídas."
+      ],
+      "textoRedes": "La Unión Industrial Argentina informó que la actividad industrial cayó 5,7% interanual en agosto y acumula una baja del 3% en lo que va del año.",
+      "etiquetas": [
+        "industria",
+        "UIA",
+        "agosto",
+        "produccion"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "C5N",
+          "enlace": "https://www.c5n.com/economia/informe-uia-la-caida-interanual-la-industria-llego-al-57-y-quedo-11-debajo-2022-2023-n250157",
+          "fecha": "2026-09-28T21:07:00.000Z",
+          "oficial": false,
+          "aporte": "Detalló los números rojos en producción y empleo, y los sectores más afectados."
+        },
+        {
+          "medio": "Perfil",
+          "enlace": "https://www.perfil.com/noticias/economia/la-industria-sigue-sin-despegar-acumula-una-caida-del-3-en-2026-a40.phtml",
+          "fecha": "2026-09-28T22:35:06.000Z",
+          "oficial": false,
+          "aporte": "Informó la estimación preliminar de la baja mensual de 0,3% en agosto."
+        },
+        {
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/economia/2026/09/28/la-actividad-industrial-volvio-a-caer-en-agosto-y-acumula-una-baja-del-3-en-lo-que-va-del-ano/",
+          "fecha": "2026-09-29T00:04:47.000Z",
+          "oficial": false,
+          "aporte": "Indicó el acumulado del año y la comparación con los niveles de 2022 y 2023."
+        },
+        {
+          "medio": "El Cronista",
+          "enlace": "https://www.cronista.com/economia-politica/la-industria-modero-la-caida-en-agosto-tras-el-rebote-de-un-sector-clave/",
+          "fecha": "2026-09-28T21:57:24.000Z",
+          "oficial": false,
+          "aporte": "Especificó que el indicador es elaborado por el Centro de Estudios de la Unión Industrial Argentina."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron cuatro medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "la-uia-calcula-una-baja-industrial-del-5-7-por-ciento-en-agosto",
+      "foto": {
+        "archivo": "fotos-notas/12antth.jpg",
+        "credito": "Foto: C5N"
+      }
+    },
+    {
       "id": "1jf1w7c",
       "titulo": "Cierra la votación del Balón de Oro y definen al ganador",
       "copete": "Terminó el plazo para que los jurados elijan a los candidatos. La ceremonia de entrega será el 26 de octubre en Londres.",
@@ -538,6 +810,7 @@
       "seccion": "Fútbol",
       "medios": [
         "TN (Todo Noticias)",
+        "El Destape",
         "Perfil",
         "Canal 26"
       ],
@@ -546,7 +819,7 @@
       "fecha": "2026-09-28T20:57:01.000Z",
       "sinFecha": false,
       "visto": "2026-09-28T22:30:54.996Z",
-      "relevancia": 69,
+      "relevancia": 79,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -713,11 +986,12 @@
       "guion": "Fernando Batista deja la dirección técnica de la selección de Costa Rica",
       "seccion": "Fútbol",
       "medios": [
+        "Infobae",
         "Clarín",
         "La Nación",
-        "Infobae",
-        "Olé",
-        "Noticias Argentinas (NA)"
+        "Noticias Argentinas (NA)",
+        "Doble Amarilla",
+        "Olé"
       ],
       "enlace": "https://noticiasargentinas.com/deportes/fernando--bocha--batista-fue-despedido-como-entrenador-de-costa-rica_a6abad07ab62936833e741867",
       "teniaImagenLaFuente": true,
@@ -782,6 +1056,91 @@
       "foto": {
         "archivo": "fotos-notas/cx4j4n.jpg",
         "credito": "Foto: Olé"
+      }
+    },
+    {
+      "id": "18tlzl2",
+      "titulo": "The Race ubica último a Franco Colapinto tras Bakú",
+      "copete": "El medio inglés situó al piloto argentino en el fondo de la lista de veintidós corredores tras el Gran Premio de Azerbaiyán de Fórmula 1.",
+      "cuerpo": "El sitio especializado The Race ubicó a Franco Colapinto en el último lugar de su ranking tras el Gran Premio de Azerbaiyán en el circuito callejero de Bakú. El análisis del medio británico señaló que el piloto carecía de confianza en las frenadas y del ritmo de su compañero de equipo, Pierre Gasly, además de mencionar un choque en la reanudación junto con Gasly y Lando Norris.\n\nEn cuanto a las repercusiones, los fanáticos de Colapinto cuestionaron al medio por considerarlo tendencioso debido a las críticas constantes hacia el desempeño del piloto argentino en la categoría.",
+      "guion": "The Race ubica último a Franco Colapinto tras Bakú",
+      "seccion": "Automovilismo",
+      "medios": [
+        "Infobae",
+        "TN (Todo Noticias)"
+      ],
+      "enlace": "https://tn.com.ar/deportes/formula-1/2026/09/28/un-medio-ingles-publico-un-ranking-de-pilotos-tras-el-gp-de-azerbaiyan-y-ubico-a-franco-colapinto-ultimo-fallo-estrepitosamente/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-28T20:26:16.000Z",
+      "sinFecha": false,
+      "visto": "2026-09-29T00:30:56.955Z",
+      "relevancia": 67,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "The Race ubicó a Franco Colapinto último en su ranking.",
+        "El análisis menciona problemas de ritmo y un choque.",
+        "El incidente en Bakú involucró a Gasly y a Norris."
+      ],
+      "seSabe": [
+        "The Race publicó su ranking tras el Gran Premio de Azerbaiyán.",
+        "Franco Colapinto quedó en el último lugar entre veintidós corredores.",
+        "El medio británico señaló problemas de ritmo y un choque."
+      ],
+      "textoRedes": "The Race ubicó a Franco Colapinto en el último lugar de su ranking tras el Gran Premio de Azerbaiyán de Fórmula 1 en Bakú.",
+      "etiquetas": [
+        "Franco Colapinto",
+        "Formula 1",
+        "Gran Premio de Azerbaiyán"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/deportes/formula-1/2026/09/28/un-medio-ingles-publico-un-ranking-de-pilotos-tras-el-gp-de-azerbaiyan-y-ubico-a-franco-colapinto-ultimo-fallo-estrepitosamente/",
+          "fecha": "2026-09-28T20:26:16.000Z",
+          "oficial": false,
+          "aporte": "Informó sobre la repercusión del accidente y las críticas del medio inglés."
+        },
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/deportes/2026/09/29/el-crudo-analisis-de-un-medio-ingles-sobre-colapinto-tras-ubicarlo-en-el-ultimo-puesto-de-su-ranking-fallo-estrepitosamente/",
+          "fecha": "2026-09-29T00:21:16.000Z",
+          "oficial": false,
+          "aporte": "Detalló que The Race colocó a Colapinto último entre los veintidós corredores en Bakú."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "g2u3l1",
+          "titulo": "Flavio Briatore critica a Franco Colapinto tras el Gran Premio de Azerbaiyán",
+          "fecha": "2026-09-26T22:12:00.000Z",
+          "ruta": "/nota/flavio-briatore-critica-a-franco-colapinto-tras-el-gran-premio-de-g2u3l1"
+        },
+        {
+          "id": "mk94me",
+          "titulo": "Franco Colapinto choca con Pierre Gasly en el Gran Premio de Azerbaiyán",
+          "fecha": "2026-09-26T09:48:00.000Z",
+          "ruta": "/nota/franco-colapinto-choca-con-pierre-gasly-en-el-gran-premio-de-mk94me"
+        },
+        {
+          "id": "xtbw5",
+          "titulo": "Franco Colapinto largará noveno en el Gran Premio de Azerbaiyán",
+          "fecha": "2026-09-25T19:13:53.000Z",
+          "ruta": "/nota/franco-colapinto-largara-noveno-el-gran-premio-de-azerbaiyan-xtbw5"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "the-race-ubica-ultimo-a-franco-colapinto-tras-baku",
+      "foto": {
+        "archivo": "fotos-notas/18tlzl2.jpg",
+        "credito": "Foto: Liauzh / Wikimedia Commons (CC BY-SA 4.0)"
       }
     },
     {
@@ -1954,12 +2313,12 @@
       "guion": "Brisa Salud organiza el décimo congreso virtual de enfermería.",
       "seccion": "Argentina",
       "medios": [
-        "El Cronista",
         "Página/12",
         "Minuto Uno",
         "C5N",
         "Crónica",
-        "Diario Popular"
+        "Diario Popular",
+        "El Cronista"
       ],
       "enlace": "https://www.pagina12.com.ar/2026/09/28/brisa-salud-organiza-el-x-congreso-de-enfermeria/",
       "teniaImagenLaFuente": true,
@@ -2288,7 +2647,8 @@
         "Infobae",
         "Perfil",
         "Ámbito",
-        "Noticias Argentinas (NA)"
+        "Noticias Argentinas (NA)",
+        "La Nueva"
       ],
       "enlace": "https://www.perfil.com/noticias/politica/presidente-por-dos-dias-el-senador-bartolome-abdala-quedara-a-cargo-del-ejecutivo-por-viajes-de-milei-y-villarruel.phtml",
       "teniaImagenLaFuente": true,
@@ -2561,8 +2921,8 @@
       "guion": "Biogénesis Bagó exporta por primera vez vacunas a Europa",
       "seccion": "Agro",
       "medios": [
-        "Radio Mitre",
-        "Agrositio"
+        "Agrositio",
+        "Radio Mitre"
       ],
       "enlace": "https://radiomitre.cienradios.com/mitre-y-el-campo/historico-un-laboratorio-argentino-logra-la-primera-exportacion-de-vacunas-a-un-pais-europeo/",
       "teniaImagenLaFuente": true,
@@ -2765,81 +3125,6 @@
       "cuerpoAMano": true
     },
     {
-      "id": "ujkaqh",
-      "titulo": "ANSES actualiza la PUAM y otorga el bono completo en octubre",
-      "copete": "La Pensión Universal para el Adulto Mayor llega a 348.598,81 pesos en octubre gracias a un incremento del 1,66 por ciento. La medida incluye el pago del bono previsional completo.",
-      "cuerpo": "La Administración Nacional de la Seguridad Social aplica en octubre una actualización del 1,66 por ciento sobre los haberes de la Pensión Universal para el Adulto Mayor, de acuerdo con el índice de inflación de agosto. Con este incremento, el monto asciende a 348.598,81 pesos.\n\nDebido a que el haber de la PUAM se ubica por debajo de la jubilación mínima, sus titulares perciben además el bono de 70.000 pesos en su totalidad. El pago se acredita en la primera tanda del calendario mensual, coincidiendo habitualmente con la segunda semana del mes, según informó la ANSES.",
-      "guion": "ANSES actualiza la PUAM y otorga el bono completo en octubre",
-      "seccion": "Economía",
-      "medios": [
-        "La Nación",
-        "Infobae",
-        "El Cronista"
-      ],
-      "enlace": "https://www.lanacion.com.ar/economia/pagos-anses-a-cuanto-llega-la-puam-en-octubre-de-2026-con-el-aumento-confirmado-nid17092026/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-28T12:13:43.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-28T19:02:49.410Z",
-      "relevancia": 60,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "La PUAM asciende a 348.598,81 pesos en octubre.",
-        "El incremento es del 1,66 por ciento basado en la inflación.",
-        "Los titulares reciben el bono completo de 70.000 pesos."
-      ],
-      "textoRedes": "La ANSES actualiza la PUAM a 348.598,81 pesos en octubre con un incremento del 1,66 por ciento y el pago del bono completo.",
-      "etiquetas": [
-        "ANSES",
-        "PUAM",
-        "jubilaciones",
-        "aumento",
-        "octubre",
-        "bono"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "La Nación",
-          "enlace": "https://www.lanacion.com.ar/economia/pagos-anses-a-cuanto-llega-la-puam-en-octubre-de-2026-con-el-aumento-confirmado-nid17092026/",
-          "fecha": "2026-09-28T12:13:43.000Z",
-          "oficial": false,
-          "aporte": "Informó el incremento automático por actualización de inflación y el detalle del reajuste del 1,66 por ciento."
-        },
-        {
-          "medio": "Infobae",
-          "enlace": "https://www.infobae.com/economia/2026/09/28/de-cuanto-sera-la-puam-de-anses-en-octubre-2026/",
-          "fecha": "2026-09-28T17:00:00.000Z",
-          "oficial": false,
-          "aporte": "Precisó el monto exacto de la PUAM en 348.598,81 pesos para octubre de 2026."
-        },
-        {
-          "medio": "El Cronista",
-          "enlace": "https://www.cronista.com/economia-politica/puam-de-anses-en-octubre-cuanto-se-cobra-con-el-aumento-y-quienes-pueden-acceder/",
-          "fecha": "2026-09-28T18:56:29.000Z",
-          "oficial": false,
-          "aporte": "Detalló los requisitos de la prestación y la cobertura de salud para mayores de 65 años."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "1cleyvd",
-          "titulo": "ANSES oficializó el aumento de octubre para jubilaciones",
-          "fecha": "2026-09-23T13:27:05.000Z",
-          "ruta": "/nota/anses-oficializo-el-aumento-de-octubre-para-jubilaciones-1cleyvd"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron tres medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "anses-actualiza-la-puam-y-otorga-el-bono-completo-en-octubre"
-    },
-    {
       "id": "1xs34mg",
       "titulo": "Boccanera y Baigorria ganan en el regreso del Turismo Special de la Costa al Fangio",
       "copete": "Bruno Boccanera y Kevin Baigorria se impusieron en las dos finales del Turismo Special de la Costa, en el marco del retorno de la categoría al circuito largo del autódromo Juan Manuel Fangio tras dieciséis años.",
@@ -3033,6 +3318,80 @@
       }
     },
     {
+      "id": "17xis6a",
+      "titulo": "Una tormenta de granizo causa destrozos en el norte de Córdoba",
+      "copete": "Una tormenta de granizo con piedras del tamaño de una pelota de golf cayó este lunes por la madrugada en el norte de la ciudad de Córdoba y en localidades cercanas. El Servicio Meteorológico Nacional mantiene una alerta amarilla por tormentas fuertes en gran parte de la provincia.",
+      "cuerpo": "Los primeros reportes llegaron desde las cinco de la mañana en barrios del norte de la capital cordobesa, como Villa Belgrano y Argüello, y se extendieron hacia Unquillo, Mendiolaza y la zona de Sierras Chicas alrededor de las siete. El granizo se combinó con lluvias fuertes, ráfagas de viento del sur y un descenso brusco de la temperatura.\n\nVecinos mostraron en las redes sociales patios, calles y techos cubiertos de hielo, con daños en viviendas de las localidades afectadas.\n\nLa alerta amarilla del Servicio Meteorológico Nacional rige para varios departamentos de la provincia, entre ellos Colón, Cruz del Eje, Punilla y San Alberto, por tormentas fuertes con lluvias intensas, ráfagas y caída ocasional de granizo. Hasta el momento no se reportaron heridos.",
+      "guion": null,
+      "seccion": "Argentina",
+      "medios": [
+        "Clarín",
+        "A24",
+        "Crónica",
+        "Noticias Argentinas (NA)",
+        "Radio 10 Mar del Plata (FM 105.5)",
+        "Minuto Uno"
+      ],
+      "enlace": "https://www.clarin.com/sociedad/impresionante-tormenta-granizo-azoto-cordoba-causo-destrozos-unquillo-mendiolaza_0_6Z0Q2rOb0d.html",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-28T11:38:50.000Z",
+      "sinFecha": false,
+      "visto": "2026-09-28T16:01:28.909Z",
+      "relevancia": 66,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "fuentesConsultadas": [
+        {
+          "medio": "Clarín",
+          "enlace": "https://www.clarin.com/sociedad/impresionante-tormenta-granizo-azoto-cordoba-causo-destrozos-unquillo-mendiolaza_0_6Z0Q2rOb0d.html",
+          "fecha": "2026-09-28T11:38:50.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "A24",
+          "enlace": "https://www.a24.com/actualidad/un-impresionante-temporal-azoto-cordoba-granizo-tormentas-y-destrozos-n1600920",
+          "fecha": "2026-09-28T13:28:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Crónica",
+          "enlace": "https://www.cronica.com.ar/sociedad/imagenes-y-videos-asi-granizo-del-tamano-de-pelotas-de-golf-causo-graves-destrozos-en-cordoba/",
+          "fecha": "2026-09-28T15:35:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Noticias Argentinas (NA)",
+          "enlace": "https://noticiasargentinas.com/sociedad/graves-destrozos-por-la-caida-de-granizo-en-distintas-ciudades-de-la-provincia-de-cordoba_a6aba572ab62936833e63584f",
+          "fecha": "2026-09-28T12:34:24.077Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Radio 10 Mar del Plata (FM 105.5)",
+          "enlace": "https://radio10mardelplata.com.ar/impresionante-granizada-en-cordoba-piedras-del-tamano-de-una-pelota-de-golf-provocaron-destrozos/",
+          "fecha": "2026-09-28T15:59:44.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Minuto Uno",
+          "enlace": "https://www.minutouno.com/sociedad/impresionante-tormenta-granizo-cordoba-causo-destrozos-varias-ciudades-n6327360",
+          "fecha": "2026-09-28T12:06:00.000Z",
+          "oficial": false,
+          "aporte": null
+        }
+      ],
+      "slug": "impresionante-tormenta-de-granizo-en-cordoba-con-piedras-del-tamano",
+      "corregidaAMano": true,
+      "cuerpoAMano": true
+    },
+    {
       "id": "hilolt",
       "titulo": "Elon Musk elogia a Milei por la baja de la inflación en Argentina",
       "copete": "El empresario Elon Musk compartió en la red social X un mensaje de respaldo a Javier Milei, tras la difusión de datos que muestran una fuerte desaceleración de la inflación en la Argentina. \"Bravo @JMilei!\", escribió el magnate.",
@@ -3042,13 +3401,13 @@
       "medios": [
         "Infobae",
         "Perfil",
-        "El Cronista",
         "C5N",
         "Radio Mitre",
         "Noticias Argentinas (NA)",
+        "iProfesional",
         "A24",
-        "La Nueva",
-        "iProfesional"
+        "El Cronista",
+        "La Nueva"
       ],
       "enlace": "https://www.infobae.com/economia/2026/09/28/bravo-milei-el-elogio-de-elon-musk-al-presidente-argentino-por-la-baja-de-la-inflacion-durante-su-gestion/",
       "teniaImagenLaFuente": true,
@@ -3077,13 +3436,6 @@
           "aporte": null
         },
         {
-          "medio": "El Cronista",
-          "enlace": "https://www.cronista.com/informacion-gral/la-reaccion-de-elon-musk-al-ver-como-milei-bajo-la-inflacion-bravo/",
-          "fecha": "2026-09-28T14:27:10.237Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
           "medio": "C5N",
           "enlace": "https://www.c5n.com/economia/elon-musk-elogio-javier-milei-la-baja-la-inflacion-bravo-n250149",
           "fecha": "2026-09-28T19:23:00.000Z",
@@ -3105,6 +3457,13 @@
           "aporte": null
         },
         {
+          "medio": "iProfesional",
+          "enlace": "https://www.iprofesional.com/tecnologia/465389-elon-musk-felicito-a-milei-por-la-caida-de-la-inflacion-en-argentina",
+          "fecha": "2026-09-28T13:45:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
           "medio": "A24",
           "enlace": "https://www.a24.com/economia/bravo-milei-que-elon-musk-elogio-al-presidente-argentino-n1600917",
           "fecha": "2026-09-28T13:43:00.000Z",
@@ -3112,16 +3471,16 @@
           "aporte": null
         },
         {
-          "medio": "La Nueva",
-          "enlace": "https://www.lanueva.com/nota/2026-9-28-13-37-0-bravo-milei-elon-musk-celebro-la-desaceleracion-de-la-inflacion-argentina",
-          "fecha": "2026-09-28T16:51:31.000Z",
+          "medio": "El Cronista",
+          "enlace": "https://www.cronista.com/informacion-gral/la-reaccion-de-elon-musk-al-ver-como-milei-bajo-la-inflacion-bravo/",
+          "fecha": "2026-09-28T14:27:10.000Z",
           "oficial": false,
           "aporte": null
         },
         {
-          "medio": "iProfesional",
-          "enlace": "https://www.iprofesional.com/tecnologia/465389-elon-musk-felicito-a-milei-por-la-caida-de-la-inflacion-en-argentina",
-          "fecha": "2026-09-28T13:45:00.000Z",
+          "medio": "La Nueva",
+          "enlace": "https://www.lanueva.com/nota/2026-9-28-13-37-0-bravo-milei-elon-musk-celebro-la-desaceleracion-de-la-inflacion-argentina",
+          "fecha": "2026-09-28T16:51:31.000Z",
           "oficial": false,
           "aporte": null
         }
@@ -3247,34 +3606,25 @@
       "cuerpoAMano": true
     },
     {
-      "id": "v1mupk",
-      "titulo": "El fútbol argentino conmemora hoy el Día del Hincha de River",
-      "copete": "La fecha conmemora el nacimiento de Ángel Labruna, considerado el máximo ídolo de la historia de River. La estableció en 2003 la Subcomisión del Hincha del club, presidida entonces por Fernando Guarini.",
-      "cuerpo": "Labruna nació el 28 de septiembre de 1918 y jugó 21 años en River como delantero izquierdo. Disputó 515 partidos, el segundo registro histórico del club detrás de Amadeo Carrizo (520), y es el máximo goleador del Superclásico ante Boca, con 16 tantos. Como jugador, ganó nueve torneos locales y siete copas oficiales.\n\nYa retirado, se dedicó a la dirección técnica en clubes como Rosario Central, Racing, Lanús y Platense. Su logro más recordado en ese rol fue en 1975, cuando llevó a River a cortar una racha de 18 años sin títulos. Labruna murió en 1983, mientras dirigía a Argentinos Juniors.",
+      "id": "1vmofxd",
+      "titulo": "Messi discute con un futbolista uruguayo tras la derrota de Inter Miami",
+      "copete": "Lionel Messi tuvo un cruce verbal con el uruguayo Santiago Rodríguez durante la derrota de Inter Miami ante Columbus Crew. No era la primera vez que discutían: ya habían chocado en 2023, en otro partido con derrota del equipo de Messi.",
+      "cuerpo": "Lionel Messi protagonizó un cruce verbal con el mediocampista uruguayo Santiago Rodríguez durante la derrota de Inter Miami por 2 a 1 ante Columbus Crew, el sábado en el Lower.com Field de Columbus, Ohio. El incidente ocurrió sobre el final del primer tiempo, después de que el capitán argentino cometiera una infracción sobre el jugador de Nacional. El árbitro Víctor Manuel Rivas no amonestó a ninguno de los dos por la discusión, aunque Messi vio la tarjeta amarilla minutos más tarde por otra falta.\n\nNo era la primera vez que Messi y Rodríguez se cruzaban: ya habían discutido en noviembre de 2023, tras un partido en el que Inter Miami perdió también 2 a 1, entonces ante el New York City FC de Rodríguez. En febrero de 2024, en una votación de la MLS por el mejor jugador rival, el uruguayo no eligió a Messi.\n\nFue el último partido de Messi antes de viajar a la Argentina para su despedida de la selección.",
       "guion": null,
       "seccion": "Fútbol",
       "medios": [
-        "LU9 Mar del Plata",
-        "El Destape",
-        "Perfil",
+        "Infobae",
+        "TN (Todo Noticias)",
         "TyC Sports",
         "Olé",
-        "Minuto Uno",
-        "Crónica",
-        "Canal 26",
-        "Diario Popular",
-        "La Nueva",
-        "El Marplatense",
-        "Clarín",
-        "Ecos Diarios (Necochea)",
-        "La Página Millonaria"
+        "Minuto Uno"
       ],
-      "enlace": "https://www.clarin.com/informacion-general/dia-internacional-hincha-river-angel-labruna-origen-celebracion-28-septiembre_0_nGU4cj1flL.html",
+      "enlace": "https://tn.com.ar/deportes/futbol/2026/09/28/messi-tuvo-una-fuerte-discusion-con-un-futbolista-uruguayo-de-columbus-crew-ya-habian-protagonizado-un-cruce-en-2023/",
       "teniaImagenLaFuente": true,
-      "fecha": "2026-09-28T10:00:41.000Z",
+      "fecha": "2026-09-28T10:18:02.000Z",
       "sinFecha": false,
       "visto": "2026-09-28T16:01:28.909Z",
-      "relevancia": 66,
+      "relevancia": 82,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -3282,161 +3632,42 @@
       "como": "automatica",
       "fuentesConsultadas": [
         {
-          "medio": "Clarín",
-          "enlace": "https://www.clarin.com/informacion-general/dia-internacional-hincha-river-angel-labruna-origen-celebracion-28-septiembre_0_nGU4cj1flL.html",
-          "fecha": "2026-09-28T10:00:41.000Z",
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/deportes/futbol/2026/09/28/messi-tuvo-una-fuerte-discusion-con-un-futbolista-uruguayo-de-columbus-crew-ya-habian-protagonizado-un-cruce-en-2023/",
+          "fecha": "2026-09-28T10:18:02.000Z",
           "oficial": false,
           "aporte": null
         },
         {
-          "medio": "LU9 Mar del Plata",
-          "enlace": "https://www.lu9mardelplata.com.ar/dia-internacional-del-hincha-de-river-por-que-se-celebra-cada-28-de-septiembre",
-          "fecha": "2026-09-28T13:43:31.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "El Destape",
-          "enlace": "https://www.eldestapeweb.com/deportes/dia-internacional-hincha-river-28-septiembre-debe-2026928145916",
-          "fecha": "2026-09-28T17:59:16.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Perfil",
-          "enlace": "https://442.perfil.com/noticias/futbol/dia-del-hincha-de-river-porque-se-conmemora-el-28-de-septiembre.phtml",
-          "fecha": "2026-09-28T14:15:00.000Z",
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/deportes/2026/09/28/la-fuerte-discusion-entre-messi-y-el-uruguayo-santiago-rodriguez-en-la-derrota-de-inter-miami-el-video-del-cruce-en-2023/",
+          "fecha": "2026-09-28T14:08:36.000Z",
           "oficial": false,
           "aporte": null
         },
         {
           "medio": "TyC Sports",
-          "enlace": "https://www.tycsports.com/river-plate/por-que-se-festeja-el-dia-del-hincha-de-river-28-de-septiembre-id763323.html",
-          "fecha": "2026-09-28T14:32:50.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "TyC Sports",
-          "enlace": "https://www.tycsports.com/river-plate/river-dia-del-hincha-nacimiento-angel-amadeo-labruna-video-conmemorativo-id763317.html",
-          "fecha": "2026-09-28T14:43:52.000Z",
+          "enlace": "https://www.tycsports.com/estados-unidos/mls/el-curioso-posteo-de-rodriguez-tras-su-picante-cruce-con-messi-en-la-mls-id763414.html",
+          "fecha": "2026-09-29T00:01:24.000Z",
           "oficial": false,
           "aporte": null
         },
         {
           "medio": "Olé",
-          "enlace": "https://www.ole.com.ar/river-plate/river-saludos-jugadores-ex-dia-hincha-labruna_0_3bpPHrpqVb.html",
-          "fecha": "2026-09-28T20:14:39.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Olé",
-          "enlace": "https://www.ole.com.ar/river-plate/homenaje-river-labruna-dia-hincha_3_geMyaMuMp9.html",
-          "fecha": "2026-09-28T19:16:13.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Olé",
-          "enlace": "https://www.ole.com.ar/river-plate/river-plate-angel-labruna-dia-hincha_0_AMWJFJgpro.html",
-          "fecha": "2026-09-28T12:41:12.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Olé",
-          "enlace": "https://www.ole.com.ar/river-plate/river-plate-angel-labruna-dia-hincha_0_N0efkmOEkO.html",
-          "fecha": "2026-09-28T12:30:38.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Olé",
-          "enlace": "https://www.ole.com.ar/river-plate/river-plate-noticias_0_18FkZ1v0Ia.html",
-          "fecha": "2026-09-28T12:08:15.000Z",
+          "enlace": "https://www.ole.com.ar/messi/cruce-messi-santiago-rodriguez_3_poEn24glS0.html",
+          "fecha": "2026-09-28T23:50:48.000Z",
           "oficial": false,
           "aporte": null
         },
         {
           "medio": "Minuto Uno",
-          "enlace": "https://www.minutouno.com/deportes/por-que-se-festeja-el-dia-internacional-del-hincha-river-cada-28-septiembre-n6327637",
-          "fecha": "2026-09-28T20:37:00.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Minuto Uno",
-          "enlace": "https://www.minutouno.com/deportes/dia-del-hincha-river-el-emotivo-video-celebrar-el-legado-angel-labruna-n6327480",
-          "fecha": "2026-09-28T15:29:00.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Crónica",
-          "enlace": "https://www.cronica.com.ar/depo/actualidad/dia-del-hincha-de-river-angel-labruna-homenaje-108-anos/",
-          "fecha": "2026-09-28T14:06:11.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Canal 26",
-          "enlace": "https://www.canal26.com/deportes/2026/09/28/dia-del-hincha-de-river-por-que-se-festeja-cada-28-de-septiembre-y-cual-es-el-vinculo-con-angel-labruna/",
-          "fecha": "2026-09-28T18:19:38.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Canal 26",
-          "enlace": "https://www.canal26.com/deportes/2026/09/28/dia-del-hincha-de-river-el-emotivo-video-que-compartio-el-club-con-las-frases-mas-emblematicas-de-angel-labruna/",
-          "fecha": "2026-09-28T13:34:08.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Diario Popular",
-          "enlace": "https://www.diariopopular.com.ar/deportes/dia-del-hincha-river-que-se-celebra-hoy-el-video-del-club-y-los-saludos-n921957",
-          "fecha": "2026-09-28T23:09:00.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "La Nueva",
-          "enlace": "https://www.lanueva.com/nota/2026-9-28-15-47-0-el-dia-del-hincha-de-river-el-honor-eterno-a-angel-labruna-y-el-robo-del-gol-en-cancha-de-olimpo",
-          "fecha": "2026-09-28T23:51:13.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "El Marplatense",
-          "enlace": "https://www.elmarplatense.com/dia-del-hincha-de-river-homenaje-a-angel-labruna",
-          "fecha": "2026-09-28T15:30:03.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Ecos Diarios (Necochea)",
-          "enlace": "https://elecos.com.ar/dia-internacional-del-hincha-de-river-por-que-se-celebra-cada-28-de-septiembre-en-honor-a-angel-labruna",
-          "fecha": "2026-09-28T13:34:15.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "La Página Millonaria",
-          "enlace": "https://lapaginamillonaria.com/river-plate/por-que-el-28-de-septiembre-se-festeja-el-dia-internacional-del-hincha-de-river",
-          "fecha": "2026-09-28T14:22:48.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "La Página Millonaria",
-          "enlace": "https://lapaginamillonaria.com/river-plate/desde-el-beto-alonso-hasta-otamendi-los-saludos-por-el-dia-internacional-del-hincha-de-river",
-          "fecha": "2026-09-28T18:54:06.000Z",
+          "enlace": "https://www.minutouno.com/deportes/el-fuerte-cruce-lionel-messi-santiago-rodriguez-que-reavivo-una-historia-2023-n6327423",
+          "fecha": "2026-09-28T13:34:19.000Z",
           "oficial": false,
           "aporte": null
         }
       ],
-      "slug": "dia-internacional-del-hincha-de-river-y-quien-fue-angel-labruna-el",
+      "slug": "messi-tuvo-una-fuerte-discusion-con-un-futbolista-uruguayo-de",
       "corregidaAMano": true,
       "cuerpoAMano": true
     },
@@ -3704,11 +3935,11 @@
         "El Día",
         "La Verdad",
         "El Marplatense",
+        "Agroempresario",
         "Clarín",
         "Noticias Argentinas (NA)",
         "A24",
-        "Ámbito",
-        "Agroempresario"
+        "Ámbito"
       ],
       "enlace": "https://www.clarin.com/economia/extienden-2049-concesion-aeropuertos-argentina_0_OqcAPUBst6.html",
       "teniaImagenLaFuente": true,
@@ -3842,6 +4073,13 @@
           "aporte": null
         },
         {
+          "medio": "Agroempresario",
+          "enlace": "https://agroempresario.com/publicacion/121883/aeropuertos-argentina-seguira-con-la-concesion-hasta-2049/",
+          "fecha": "2026-09-28T14:30:26.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
           "medio": "Noticias Argentinas (NA)",
           "enlace": "https://noticiasargentinas.com/economia/extienden-la-concesion-de-aeropuertos-argentina-con-nuevas-inversiones-por-us--600-millones_a6ab9cf50c2b8de8667fff81c",
           "fecha": "2026-09-28T05:10:00.000Z",
@@ -3875,13 +4113,6 @@
           "fecha": "2026-09-28T14:04:01.000Z",
           "oficial": false,
           "aporte": null
-        },
-        {
-          "medio": "Agroempresario",
-          "enlace": "https://agroempresario.com/publicacion/121883/aeropuertos-argentina-seguira-con-la-concesion-hasta-2049/",
-          "fecha": "2026-09-28T14:30:26.000Z",
-          "oficial": false,
-          "aporte": null
         }
       ],
       "slug": "extienden-hasta-2049-la-concesion-de-aeropuertos-argentina",
@@ -3901,20 +4132,20 @@
       "seccion": "Argentina",
       "medios": [
         "La Nación",
-        "El Cronista",
         "C5N",
         "Canal 26",
         "InfoRegión",
         "InfoGEI",
         "La Noticia 1",
-        "Ámbito"
+        "Ámbito",
+        "El Cronista"
       ],
       "enlace": "https://www.lanoticia1.com/noticia/peregrinacion-a-lujan-como-sera-el-operativo-para-acompanar-a-los-fieles-durante-los-60-kilometros",
       "teniaImagenLaFuente": true,
       "fecha": "2026-09-28T00:23:57.000Z",
       "sinFecha": false,
       "visto": "2026-09-28T16:01:28.909Z",
-      "relevancia": 69,
+      "relevancia": 61,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -3930,15 +4161,15 @@
         },
         {
           "medio": "La Nación",
-          "enlace": "https://www.lanacion.com.ar/sociedad/cuando-es-la-caminata-a-lujan-este-2026-nid19082026/",
-          "fecha": "2026-09-28T12:10:04.000Z",
+          "enlace": "https://www.lanacion.com.ar/sociedad/caminata-a-lujan-2026-todas-las-recomendaciones-y-consejos-para-hacer-la-peregrinacion-este-fin-de-nid28092026/",
+          "fecha": "2026-09-28T15:22:02.000Z",
           "oficial": false,
           "aporte": null
         },
         {
-          "medio": "El Cronista",
-          "enlace": "https://www.cronista.com/informacion-gral/peregrinacion-a-lujan-2026-cuando-es-como-estara-el-clima-y-que-recomiendan-para-hacer-la-caminata-de-60-kilometros/",
-          "fecha": "2026-09-28T13:38:29.892Z",
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/sociedad/cuando-es-la-caminata-a-lujan-este-2026-nid19082026/",
+          "fecha": "2026-09-28T12:10:04.000Z",
           "oficial": false,
           "aporte": null
         },
@@ -3946,6 +4177,13 @@
           "medio": "C5N",
           "enlace": "https://www.c5n.com/sociedad/cuando-es-la-peregrinacion-lujan-2026-y-todo-lo-que-hay-que-tener-cuenta-la-caminata-n250130",
           "fecha": "2026-09-28T17:25:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "C5N",
+          "enlace": "https://www.c5n.com/sociedad/peregrinacion-lujan-2026-como-va-estar-el-clima-n250115",
+          "fecha": "2026-09-28T15:20:00.000Z",
           "oficial": false,
           "aporte": null
         },
@@ -3983,6 +4221,20 @@
           "fecha": "2026-09-28T12:47:00.000Z",
           "oficial": false,
           "aporte": null
+        },
+        {
+          "medio": "El Cronista",
+          "enlace": "https://www.cronista.com/informacion-gral/peregrinacion-a-lujan-2026-cuando-es-como-estara-el-clima-y-que-recomiendan-para-hacer-la-caminata-de-60-kilometros/",
+          "fecha": "2026-09-28T13:38:29.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Ámbito",
+          "enlace": "https://www.ambito.com/informacion-general/madre-tu-abrazo-nos-reconocemos-hermanos-el-significado-del-lema-la-52-peregrinacion-lujan-n6327534",
+          "fecha": "2026-09-28T17:30:00.000Z",
+          "oficial": false,
+          "aporte": null
         }
       ],
       "slug": "peregrinacion-a-lujan-como-sera-el-operativo-para-acompanar-a-los",
@@ -4004,7 +4256,7 @@
       "fecha": "2026-09-28T00:23:01.264Z",
       "sinFecha": false,
       "visto": "2026-09-28T02:01:00.043Z",
-      "relevancia": 73,
+      "relevancia": 65,
       "local": true,
       "publicadaPor": "ia",
       "publicadaCuando": "2026-09-28T01:51:44.079Z",
@@ -4113,6 +4365,76 @@
         }
       ],
       "slug": "el-repaso-de-la-noche-en-radar-balcarce-mariano-werner-mccain-hockey"
+    },
+    {
+      "id": "1o9tryb",
+      "titulo": "Marcos Acuña vota en las elecciones de Ferro Carril Oeste",
+      "copete": "El defensor de River Plate votó el domingo en las elecciones de Ferro Carril Oeste, el club de Caballito donde se formó. Respaldó a la lista opositora Somos Ferro, en la que participan su esposa y su suegro como candidatos.",
+      "cuerpo": "Marcos Acuña, defensor de River Plate, se acercó el domingo al estadio Arquitecto Ricardo Etcheverri para votar en las elecciones de Ferro Carril Oeste, el club de Caballito en el que se formó como jugador. El Huevo, como lo apodan, respaldó a la lista opositora Somos Ferro.\n\nSu esposa, María Julia Silva, integra esa lista como vocal titular, y su suegro, Darío Silva, es candidato a vicepresidente primero. La elección, realizada el 27 y 28 de septiembre, fue la más concurrida del club en los últimos 30 años y tuvo tres agrupaciones en pugna: Identidad Verdolaga, encabezada por Daniel Alcaraz; Ferro en Acción, con Daniel De Aloysio; y Somos Ferro, con Patricio Baigorrotegui.\n\nLa presencia de Acuña, que hoy juega en River, sorprendió a los socios presentes en el comicio. El resultado de la votación no se conoció todavía.",
+      "guion": null,
+      "seccion": "Fútbol",
+      "medios": [
+        "TN (Todo Noticias)",
+        "Olé",
+        "Doble Amarilla",
+        "La Página Millonaria",
+        "Minuto Uno"
+      ],
+      "enlace": "https://www.dobleamarilla.com.ar/ascenso-e-interior/marcos-acuna-se-presento-en-las-elecciones-de-ferro-para-votar_a6ab98c7a9b8cd1f9d62e340b",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-27T21:48:37.000Z",
+      "sinFecha": false,
+      "visto": "2026-09-28T16:01:28.909Z",
+      "relevancia": 74,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "fuentesConsultadas": [
+        {
+          "medio": "Doble Amarilla",
+          "enlace": "https://www.dobleamarilla.com.ar/ascenso-e-interior/marcos-acuna-se-presento-en-las-elecciones-de-ferro-para-votar_a6ab98c7a9b8cd1f9d62e340b",
+          "fecha": "2026-09-27T21:48:37.383Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/deportes/futbol/2026/09/27/marcos-acuna-fue-a-votar-en-las-elecciones-de-ferro-la-sorpresa-de-los-socios-al-verlo/",
+          "fecha": "2026-09-28T01:59:26.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Olé",
+          "enlace": "https://www.ole.com.ar/river-plate/river-plate-marcos-acuna-ferro_0_onh2Lb4Iqu.html",
+          "fecha": "2026-09-27T22:09:28.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "La Página Millonaria",
+          "enlace": "https://lapaginamillonaria.com/river-plate/en-su-dia-de-descanso-marcos-acuna-se-presento-en-ferro-para-votar-en-las-elecciones-el-motivo",
+          "fecha": "2026-09-27T23:18:54.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Minuto Uno",
+          "enlace": "https://www.minutouno.com/deportes/marcos-huevo-acuna-sorprendio-los-hinchas-ferro-participar-las-elecciones-el-club-n6327367",
+          "fecha": "2026-09-28T12:42:00.000Z",
+          "oficial": false,
+          "aporte": null
+        }
+      ],
+      "slug": "marcos-acuna-se-presento-en-las-elecciones-de-ferro-para-votar",
+      "corregidaAMano": true,
+      "cuerpoAMano": true,
+      "foto": {
+        "archivo": "fotos-notas/1o9tryb.webp",
+        "credito": "Foto: La Página Millonaria"
+      }
     },
     {
       "id": "zezsk3",
@@ -4551,25 +4873,25 @@
   "secciones": [
     "Cultura y agenda",
     "Automovilismo",
+    "Economía",
+    "Política",
     "Balcarce",
     "Fútbol",
-    "Economía",
     "Deportes",
     "Policiales",
     "Agro",
-    "Argentina",
-    "Política"
+    "Argentina"
   ],
   "temas": [
+    {
+      "nombre": "El autódromo",
+      "ranura": "autodromo",
+      "cuantas": 14
+    },
     {
       "nombre": "Fangio",
       "ranura": "fangio",
       "cuantas": 14
-    },
-    {
-      "nombre": "El autódromo",
-      "ranura": "autodromo",
-      "cuantas": 13
     },
     {
       "nombre": "TC Pick Up",
@@ -4579,26 +4901,46 @@
     {
       "nombre": "El Concejo Deliberante",
       "ranura": "concejo",
+      "cuantas": 4
+    },
+    {
+      "nombre": "El INTA",
+      "ranura": "inta",
       "cuantas": 2
     }
   ],
   "clima": {
     "ahora": {
-      "temp": 14,
-      "sensacion": 14,
-      "humedad": 93,
-      "viento": 13,
+      "temp": 13,
+      "sensacion": 12,
+      "humedad": 94,
+      "viento": 11,
       "rumbo": "E",
-      "cielo": "Nublado"
+      "cielo": "Nublado",
+      "esDeDia": false
     },
     "dias": [
+      {
+        "fecha": "2026-09-28",
+        "dia": "lun",
+        "max": 17,
+        "min": 11,
+        "lluvia": 99,
+        "codigo": 81,
+        "viento": 23,
+        "milimetros": 8,
+        "cielo": "Chaparrones fuertes"
+      },
       {
         "fecha": "2026-09-29",
         "dia": "mar",
         "max": 14,
         "min": 9,
-        "lluvia": 0,
-        "cielo": "Lluvia leve"
+        "lluvia": 96,
+        "codigo": 81,
+        "viento": 27,
+        "milimetros": 22,
+        "cielo": "Chaparrones fuertes"
       },
       {
         "fecha": "2026-09-30",
@@ -4606,26 +4948,24 @@
         "max": 13,
         "min": 7,
         "lluvia": 0,
+        "codigo": 3,
+        "viento": 30,
+        "milimetros": 0,
         "cielo": "Nublado"
       },
       {
         "fecha": "2026-10-01",
         "dia": "jue",
         "max": 12,
-        "min": 7,
-        "lluvia": 0,
-        "cielo": "Parcialmente nublado"
-      },
-      {
-        "fecha": "2026-10-02",
-        "dia": "vie",
-        "max": 13,
-        "min": 3,
-        "lluvia": 0,
-        "cielo": "Parcialmente nublado"
+        "min": 6,
+        "lluvia": 14,
+        "codigo": 51,
+        "viento": 28,
+        "milimetros": 0,
+        "cielo": "Llovizna leve"
       }
     ],
-    "fuente": "MET Noruega"
+    "fuente": "Open-Meteo"
   },
   "avisosClima": [],
   "farmacias": {
@@ -4951,12 +5291,6 @@
       "motivo": "necesita ojo humano: \"niño\""
     },
     {
-      "id": "1ytgm6c",
-      "titulo": "Petruccelli pidió que Virginia Aparicio exponga ante la…",
-      "seccion": "Política",
-      "motivo": "verificación baja: espera a una persona (visto al reescribir)"
-    },
-    {
       "id": "1p4pkwo",
       "titulo": null,
       "seccion": "Argentina",
@@ -4967,12 +5301,6 @@
       "titulo": null,
       "seccion": "Policiales",
       "motivo": "necesita ojo humano: \"adolescente\", en el texto completo de la fuente (visto al reescribir)"
-    },
-    {
-      "id": "3bv2yi",
-      "titulo": "Cris Morena recordó a Romina Yan a 16 años de su muerte…",
-      "seccion": "Argentina",
-      "motivo": "necesita ojo humano: \"muerte\", en lo que escribió la IA (título, bajada o texto para redes) (visto al reescribir)"
     },
     {
       "id": "1hjmkd4",
@@ -5071,5 +5399,5 @@
       "motivo": "necesita ojo humano: \"denuncia\""
     }
   ],
-  "esperandoCuerpo": 13
+  "esperandoCuerpo": 12
 }
