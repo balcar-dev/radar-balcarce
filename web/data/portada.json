@@ -1,5 +1,5 @@
 {
-  "generado": "2026-09-29T13:01:53.516Z",
+  "generado": "2026-09-29T13:31:38.856Z",
   "notas": [
     {
       "id": "1hjmkd4",
@@ -90,15 +90,18 @@
       "guion": "La virgen de la tosquera compite por una nominación en los Oscar",
       "seccion": "Cultura y agenda",
       "medios": [
+        "Agencia DIB",
         "Ámbito",
         "TN (Todo Noticias)",
         "El Destape",
         "Perfil",
+        "Página/12",
         "A24",
         "Radio Mitre",
         "Diario Popular",
         "Noticias Argentinas (NA)",
         "El Día",
+        "La Tecla",
         "La Verdad",
         "ANDigital",
         "Minuto Uno",
@@ -106,10 +109,8 @@
         "La Nación",
         "Clarín",
         "C5N",
-        "Página/12",
         "La Nueva",
-        "La Brújula 24",
-        "Agencia DIB"
+        "La Brújula 24"
       ],
       "enlace": "https://www.minutouno.com/espectaculos/la-virgen-la-tosquera-laura-casabe-representara-la-argentina-los-oscar-n6327706",
       "teniaImagenLaFuente": true,
@@ -490,6 +491,7 @@
       "medios": [
         "Puntonueve (FM 100.9)",
         "Infórmese Primero (FM 104.9)",
+        "Radio Gabal (FM 104.1)",
         "Diario La Vanguardia"
       ],
       "enlace": "https://puntonueve.com.ar/petruccelli-pidio-que-virginia-aparicio-exponga-ante-la-comision-de-salud/",
@@ -497,7 +499,7 @@
       "fecha": "2026-09-28T21:59:12.000Z",
       "sinFecha": false,
       "visto": "2026-09-29T00:30:56.955Z",
-      "relevancia": 93,
+      "relevancia": 100,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -732,93 +734,6 @@
       }
     },
     {
-      "id": "1hhocwa",
-      "titulo": "El autódromo Fangio avanza con nuevas obras tras las competencias",
-      "copete": "El intendente Esteban Reino detalló los trabajos en marcha en el circuito local luego del fin de semana de automovilismo nacional, que incluyó tareas en el sector chico, el ingreso a boxes y la curva uno.",
-      "cuerpo": "El intendente Esteban Reino detalló las tareas en marcha en el autódromo Juan Manuel Fangio, luego del regreso de las competencias nacionales tras quince años. Entre las intervenciones, se interviene el circuito chico para corregir hundimientos mediante el desplazamiento del trazado y una nueva carpeta asfáltica con material procedente de Mar del Plata.\n\nAdemás, se ejecuta un relleno de hormigón en el ingreso a boxes y una obra hidráulica en la curva uno con tubos para el escurrimiento del agua. Reino indicó que las tareas alcanzan el noventa por ciento de la obra comprometida y adelantó que continuarán con paredones de contención y la ampliación de vías de escape en la sierra.",
-      "guion": "El autódromo Fangio avanza con nuevas obras tras las competencias",
-      "seccion": "Automovilismo",
-      "medios": [
-        "El Diario Balcarce"
-      ],
-      "enlace": "https://eldiariobalcarce.com.ar/tras-el-regreso-del-automovilismo-el-fangio-avanza-con-nuevas-obras-480",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-28T21:44:45.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-28T22:01:03.337Z",
-      "relevancia": 79,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [
-        "autodromo",
-        "fangio"
-      ],
-      "como": "automatica",
-      "claves": [
-        "El intendente Esteban Reino detalló las obras en el autódromo local.",
-        "Intervienen el circuito chico, el ingreso a boxes y la curva uno.",
-        "Los trabajos alcanzan el noventa por ciento de la obra comprometida."
-      ],
-      "seSabe": [
-        "El autódromo Juan Manuel Fangio recibió competencias nacionales tras quince años.",
-        "El intendente Esteban Reino detalló que se interviene un sector del circuito chico para solucionar problemas de hundimiento.",
-        "Se realiza un relleno de hormigón en el ingreso a boxes y una obra hidráulica en la curva uno.",
-        "Las tareas actuales alcanzan el noventa por ciento de la obra comprometida."
-      ],
-      "noConfirmado": [
-        "No se detalló el monto total de inversión para las nuevas obras en el circuito local.",
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "El intendente Esteban Reino detalló las obras que continúan en el autódromo Fangio tras el regreso de las competencias nacionales, con trabajos en el circuito chico, el ingreso a boxes y desagües en la curva uno.",
-      "etiquetas": [
-        "autodromo fangio",
-        "esteban reino",
-        "obras",
-        "balcarce",
-        "automovilismo"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "El Diario Balcarce",
-          "enlace": "https://eldiariobalcarce.com.ar/tras-el-regreso-del-automovilismo-el-fangio-avanza-con-nuevas-obras-480",
-          "fecha": null,
-          "oficial": false,
-          "aporte": "Detalló los trabajos viales e hidráulicos en el autódromo Fangio y el porcentaje de avance de la obra según el intendente Esteban Reino."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "caurxr",
-          "titulo": "Balinotti destaca las obras del autódromo Fangio tras el regreso nacional",
-          "fecha": "2026-09-28T15:35:16.000Z",
-          "ruta": "/nota/balinotti-destaca-las-obras-del-autodromo-fangio-tras-el-regreso-caurxr"
-        },
-        {
-          "id": "1a0ty94",
-          "titulo": "Reino destaca el éxito del regreso automovilístico al Fangio",
-          "fecha": "2026-09-28T19:02:49.410Z",
-          "ruta": "/nota/reino-destaca-el-exito-del-regreso-automovilistico-al-fangio-1a0ty94"
-        },
-        {
-          "id": "1xs34mg",
-          "titulo": "Boccanera y Baigorria ganan en el regreso del Turismo Special de la Costa al Fangio",
-          "fecha": "2026-09-28T11:51:08.000Z",
-          "ruta": "/nota/boccanera-y-baigorria-ganan-en-el-regreso-del-turismo-special-de-la-1xs34mg"
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "el-autodromo-fangio-avanza-con-nuevas-obras-tras-las-competencias",
-      "foto": {
-        "archivo": "fotos-notas/1hhocwa.jpg",
-        "credito": "Foto: El Diario Balcarce"
-      }
-    },
-    {
       "id": "12antth",
       "titulo": "La UIA calcula una baja industrial del 5,7 por ciento en agosto",
       "copete": "El sector fabril acumuló una contracción del 3 por ciento en lo que va del año y se mantiene un 11 por ciento por debajo del nivel registrado entre 2022 y 2023, según un informe oficial.",
@@ -830,6 +745,7 @@
         "TN (Todo Noticias)",
         "El Cronista",
         "C5N",
+        "Noticias Argentinas (NA)",
         "La Nueva"
       ],
       "enlace": "https://www.c5n.com/economia/informe-uia-la-caida-interanual-la-industria-llego-al-57-y-quedo-11-debajo-2022-2023-n250157",
@@ -908,6 +824,7 @@
         "TN (Todo Noticias)",
         "El Destape",
         "Perfil",
+        "Radio Mitre",
         "Canal 26"
       ],
       "enlace": "https://tn.com.ar/deportes/futbol/2026/09/28/cerro-la-votacion-del-balon-de-oro-2026-y-crece-la-expectativa-por-el-ganador-lionel-messi-esta-entre-los-nominados/",
@@ -1395,8 +1312,7 @@
       "guion": "Reino destaca el éxito del regreso automovilístico al Fangio",
       "seccion": "Balcarce",
       "medios": [
-        "Diario La Vanguardia",
-        "QZ Noticias (Mar del Plata)"
+        "Diario La Vanguardia"
       ],
       "enlace": "https://www.diariolavanguardia.com/noticias/44928-reino-sobre-el-fangio-vivimos-una-fiesta-increible-y-demostramos-que-estamos-a-la-altura/",
       "teniaImagenLaFuente": true,
@@ -2013,6 +1929,71 @@
       }
     },
     {
+      "id": "1py2fu3",
+      "titulo": "El Fondo Monetario Internacional continúa la revisión del acuerdo vigente",
+      "copete": "La misión del organismo internacional sigue en Buenos Aires para completar la tercera revisión del acuerdo y se esperan definiciones con una conferencia de prensa el jueves.",
+      "cuerpo": "La delegación del Fondo Monetario Internacional (FMI) continúa esta semana en Buenos Aires con la tercera revisión del acuerdo en curso, tras iniciar sus tareas el lunes 21 de septiembre. La revisión habilita un desembolso de 900 millones de dólares, que compensará el pago de 850 millones de dólares que la Argentina le realizó al organismo el último viernes.\n\nEl próximo jueves, la vocera del organismo, Juliet Kozack, brindará una conferencia de prensa en Washington para informar los resultados de la misión.",
+      "guion": "El Fondo Monetario Internacional continúa la revisión del acuerdo vigente",
+      "seccion": "Economía",
+      "medios": [
+        "Canal 26",
+        "InfoRegión"
+      ],
+      "enlace": "https://www.inforegion.com.ar/2026/09/28/avanza-la-mision-del-fmi-en-medio-de-datos-muy-negativos/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-28T16:02:18.000Z",
+      "sinFecha": false,
+      "visto": "2026-09-28T22:01:03.337Z",
+      "relevancia": 38,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "La misión del FMI sigue en Buenos Aires.",
+        "Comleta la tercera revisión del acuerdo.",
+        "El jueves habrá conferencia de prensa.",
+        "Habilita un desembolso de 900 millones de dólares."
+      ],
+      "noConfirmado": [
+        "Todavía no se confirmó oficialmente el cierre de la visita de la delegación."
+      ],
+      "textoRedes": "La misión del Fondo Monetario Internacional continúa en Buenos Aires con la tercera revisión del acuerdo vigente y se espera una conferencia de prensa con los resultados para este jueves.",
+      "etiquetas": [
+        "FMI",
+        "acuerdo",
+        "Buenos Aires",
+        "desembolso"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "InfoRegión",
+          "enlace": "https://www.inforegion.com.ar/2026/09/28/avanza-la-mision-del-fmi-en-medio-de-datos-muy-negativos/",
+          "fecha": "2026-09-28T16:02:18.000Z",
+          "oficial": false,
+          "aporte": "Informó sobre la continuidad de la revisión, la conferencia del jueves, los datos negativos y el monto del desembolso."
+        },
+        {
+          "medio": "Canal 26",
+          "enlace": "https://www.canal26.com/economia/2026/09/28/en-medio-de-una-fuerte-suba-del-riego-pais-el-fmi-continua-la-revision-del-acuerdo-en-argentina-que-habilitaria-un-nuevo-desembolso-de-fondos/",
+          "fecha": "2026-09-28T17:18:10.000Z",
+          "oficial": false,
+          "aporte": "Confirmó el inicio de las tareas de la delegación el 21 de septiembre en Buenos Aires."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "el-fondo-monetario-internacional-continua-la-revision-del-acuerdo",
+      "foto": {
+        "archivo": "fotos-notas/1py2fu3.jpg",
+        "credito": "Foto: InfoRegión"
+      }
+    },
+    {
       "id": "zphfal",
       "titulo": "Las lluvias llegan a 30 milímetros en Tandil y a 10 en Balcarce",
       "copete": "Los registros de YPF Agro hasta las 8 de la mañana de este lunes muestran precipitaciones dispares en el sudeste bonaerense. Tandil tuvo el mayor acumulado, con 30 milímetros, seguido por Los Cardos y Ramos Otero. En Balcarce llovió entre 5 y 10 milímetros.",
@@ -2046,70 +2027,6 @@
       "slug": "argentina-sudeste-bonaerense-las-lluvias-alcanzaron-los-30-mm-en",
       "corregidaAMano": true,
       "cuerpoAMano": true
-    },
-    {
-      "id": "1f9bhpx",
-      "titulo": "Top Serrano clasifica sus seis equipos a los Play Off provinciales",
-      "copete": "La Asociación Balcarceña de Tenis de Mesa metió a sus seis representantes en la fase decisiva de la Liga Provincial por Equipos FeBATeM. La definición será a fin de octubre en Santa Clara del Mar.",
-      "cuerpo": "La Asociación Balcarceña de Tenis de Mesa Top Serrano logró que sus seis equipos accedieran a los Play Off de la Liga Provincial por Equipos FeBATeM, tras disputar la tercera y última fecha clasificatoria en el Centro de Exposiciones Municipal de Olavarría (CEMO).\n\nEl torneo reunió a unos 70 equipos y más de 350 jugadores de distintos puntos de la provincia de Buenos Aires, el conurbano y Santa Rosa. Con cerca de 30 jugadores distribuidos en cinco categorías, cinco de los conjuntos balcarceños terminaron entre los dos primeros de la tabla general y el restante se ubicó sexto.",
-      "guion": "Top Serrano clasifica sus seis equipos a los Play Off provinciales",
-      "seccion": "Deportes",
-      "medios": [
-        "Infórmese Primero (FM 104.9)",
-        "Radio Gabal (FM 104.1)"
-      ],
-      "enlace": "https://www.radiogabal.com.ar/index.php/deportes/top-serrano-metio-a-sus-seis-equipos-en-los-play-off-provinciales",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-28T15:56:41.169Z",
-      "sinFecha": false,
-      "visto": "2026-09-28T23:31:08.280Z",
-      "relevancia": 79,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Top Serrano metió a sus seis equipos en los Play Off de la Liga Provincial por Equipos FeBATeM.",
-        "La última fecha clasificatoria se disputó el fin de semana en el CEMO de Olavarría.",
-        "Cinco equipos terminaron entre los dos primeros de sus categorías y uno quedó sexto.",
-        "La fase final se jugará el 31 de octubre y 1 de noviembre en Santa Clara del Mar."
-      ],
-      "noConfirmado": [
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "Top Serrano metió a sus seis equipos en los Play Off de la Liga Provincial por Equipos FeBATeM tras competir en Olavarría. La definición será a fines de octubre en Santa Clara del Mar.",
-      "etiquetas": [
-        "Top Serrano",
-        "tenis de mesa",
-        "Liga Provincial",
-        "Play Off",
-        "Olavarría",
-        "Santa Clara del Mar"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Radio Gabal (FM 104.1)",
-          "enlace": "https://www.radiogabal.com.ar/index.php/deportes/top-serrano-metio-a-sus-seis-equipos-en-los-play-off-provinciales",
-          "fecha": "2026-09-28T22:29:32.000Z",
-          "oficial": false,
-          "aporte": "Informó que los seis equipos de Top Serrano clasificaron a los Play Off de la Liga Provincial de Tenis de Mesa tras competir en Olavarría."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "y4ezfb",
-          "titulo": "Top Serrano clasifica sus seis equipos a los Play Off",
-          "fecha": "2026-09-28T20:04:58.000Z",
-          "ruta": "/nota/top-serrano-clasifica-sus-seis-equipos-a-los-play-off-y4ezfb"
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "top-serrano-clasifica-sus-seis-equipos-a-los-play-off-provinciales"
     },
     {
       "id": "caurxr",
@@ -2200,11 +2117,11 @@
       "seccion": "Argentina",
       "medios": [
         "Página/12",
-        "Minuto Uno",
         "C5N",
         "Crónica",
         "Diario Popular",
-        "El Cronista"
+        "El Cronista",
+        "Minuto Uno"
       ],
       "enlace": "https://www.pagina12.com.ar/2026/09/28/brisa-salud-organiza-el-x-congreso-de-enfermeria/",
       "teniaImagenLaFuente": true,
@@ -2381,7 +2298,6 @@
         "News Balcarce (FM 91.7)",
         "Diario La Vanguardia",
         "Infórmese Primero (FM 104.9)",
-        "Radio Gabal (FM 104.1)",
         "QZ Noticias (Mar del Plata)"
       ],
       "enlace": "https://newsbalcarce.com.ar/?p=30868",
@@ -2429,8 +2345,8 @@
       "guion": "El producto bruto porteño crece cero coma tres por ciento interanual en el segundo trimestre",
       "seccion": "Economía",
       "medios": [
-        "Infobae",
         "El Eco de Tandil",
+        "Infobae",
         "Perfil",
         "El Destape",
         "El Marplatense"
@@ -2520,6 +2436,111 @@
       "foto": {
         "archivo": "fotos-notas/13l9r47.jpg",
         "credito": "Foto: El Marplatense"
+      }
+    },
+    {
+      "id": "nobyaz",
+      "titulo": "Bartolomé Abdala asume la presidencia por un viaje de Milei y Villarruel",
+      "copete": "El senador provisional quedará a cargo del Ejecutivo nacional durante poco más de tres días. La medida responde a las salidas simultáneas del presidente y la vicepresidenta hacia Francia y España.",
+      "cuerpo": "El presidente provisional del Senado, Bartolomé Abdala, asumirá la conducción interina del Poder Ejecutivo nacional durante un período de 84 horas debido a los viajes al exterior del presidente Javier Milei y de la vicepresidenta Victoria Villarruel. El traspaso se formalizará cuando ambas autoridades despeguen el martes por la noche y se extenderá hasta el sábado a las 10 de la mañana, según informaron diversos medios nacionales.\n\nMilei viajará a París para liderar la Argentina Week, mientras que Villarruel participará del XII Foro Parlamentario Iberoamericano en Madrid. Durante su mandato transitorio, Abdala cumplirá sus funciones desde su oficina en el Congreso Nacional y no se trasladará a la Casa Rosada.\n\nEl senador libertario ya había ocupado la presidencia de manera temporal entre el 8 y el 9 de diciembre de 2025 bajo circunstancias similares, amparado por la Ley de Acefalía ante la ausencia simultánea de la fórmula presidencial.",
+      "guion": "Bartolomé Abdala asume la presidencia por un viaje de Milei y Villarruel",
+      "seccion": "Política",
+      "medios": [
+        "Infobae",
+        "La Nación",
+        "El Cronista",
+        "El Destape",
+        "Perfil",
+        "Ámbito",
+        "Crónica",
+        "Noticias Argentinas (NA)",
+        "La Voz del Pueblo",
+        "La Nueva"
+      ],
+      "enlace": "https://www.perfil.com/noticias/politica/presidente-por-dos-dias-el-senador-bartolome-abdala-quedara-a-cargo-del-ejecutivo-por-viajes-de-milei-y-villarruel.phtml",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-28T13:57:46.000Z",
+      "sinFecha": false,
+      "visto": "2026-09-28T23:31:08.280Z",
+      "relevancia": 66,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Abdala quedará a cargo del Ejecutivo por 84 horas.",
+        "Milei viajará a París y Villarruel a Madrid.",
+        "El traspaso se formaliza el martes por la noche.",
+        "El senador ejercerá desde su despacho en el Congreso."
+      ],
+      "seSabe": [
+        "Bartolomé Abdala asumirá la presidencia provisional del Senado a cargo del Ejecutivo.",
+        "Javier Milei viajará a París este martes a las 22 para participar de la Argentina Week.",
+        "Victoria Villarruel viajará a Madrid para asistir al XII Foro Parlamentario Iberoamericano.",
+        "El mandato interino durará 84 horas hasta el sábado a las 10 de la mañana."
+      ],
+      "textoRedes": "El senador Bartolomé Abdala quedará a cargo del Poder Ejecutivo nacional durante 84 horas debido a los viajes internacionales que realizarán de manera simultánea el presidente Javier Milei y la vicepresidenta Victoria Villarruel.",
+      "etiquetas": [
+        "Bartolomé Abdala",
+        "Javier Milei",
+        "Victoria Villarruel",
+        "Poder Ejecutivo",
+        "Senado"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Perfil",
+          "enlace": "https://www.perfil.com/noticias/politica/presidente-por-dos-dias-el-senador-bartolome-abdala-quedara-a-cargo-del-ejecutivo-por-viajes-de-milei-y-villarruel.phtml",
+          "fecha": "2026-09-28T13:57:46.000Z",
+          "oficial": false,
+          "aporte": "Detalló los horarios de los viajes a Francia y España, la duración exacta del interinato y la trayectoria política de Abdala."
+        },
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/politica/milei-y-villarruel-viajan-al-exterior-al-mismo-tiempo-por-lo-que-la-presidencia-quedara-en-manos-de-nid28092026/",
+          "fecha": "2026-09-28T22:20:49.000Z",
+          "oficial": false,
+          "aporte": "Confirmó que el Poder Ejecutivo quedará en manos de Abdala por los viajes simultáneos."
+        },
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/politica/2026/09/28/el-senador-abdala-quedara-a-cargo-del-ejecutivo-e-igualara-a-rodriguez-saa-al-frente-de-la-presidencia/",
+          "fecha": "2026-09-28T21:00:31.000Z",
+          "oficial": false,
+          "aporte": "Señaló que el senador puntano volverá a quedar a cargo del Ejecutivo de forma fortuita."
+        },
+        {
+          "medio": "Perfil",
+          "enlace": "https://www.perfil.com/noticias/politica/victoria-villarruel-viajara-a-espana-para-participar-del-foro-parlamentario-iberoamericano-todos-los-detalles-de-su-agenda.phtml",
+          "fecha": "2026-09-28T14:04:47.000Z",
+          "oficial": false,
+          "aporte": "Indicó que el mandato interino durará tres días y medio."
+        },
+        {
+          "medio": "Ámbito",
+          "enlace": "https://www.ambito.com/politica/javier-milei-y-victoria-villarruel-viajan-al-exterior-el-senador-bartolome-abdala-quedara-cargo-la-presidencia-n6327664",
+          "fecha": "2026-09-28T21:05:00.000Z",
+          "oficial": false,
+          "aporte": "Especificó los motivos de los viajes a París y Madrid y que Abdala permanecerá en Buenos Aires."
+        },
+        {
+          "medio": "Noticias Argentinas (NA)",
+          "enlace": "https://noticiasargentinas.com/politica/por-los-viajes-de-milei-y-villarruel--bartolome-abdala-quedara-a-cargo-del-ejecutivo-_a6abaee8fb62936833e785191",
+          "fecha": "2026-09-28T23:12:17.000Z",
+          "oficial": false,
+          "aporte": "Informó la coincidencia de los viajes internacionales y la formalización del cargo."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron cinco medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "bartolome-abdala-asume-la-presidencia-por-un-viaje-de-milei-y",
+      "foto": {
+        "archivo": "fotos-notas/nobyaz.jpg",
+        "credito": "Foto: Perfil"
       }
     },
     {
@@ -2707,15 +2728,15 @@
       "guion": "Biogénesis Bagó exporta por primera vez vacunas a Europa",
       "seccion": "Agro",
       "medios": [
-        "Agrositio",
-        "Radio Mitre"
+        "Radio Mitre",
+        "Agrositio"
       ],
       "enlace": "https://radiomitre.cienradios.com/mitre-y-el-campo/historico-un-laboratorio-argentino-logra-la-primera-exportacion-de-vacunas-a-un-pais-europeo/",
       "teniaImagenLaFuente": true,
       "fecha": "2026-09-28T13:13:50.000Z",
       "sinFecha": false,
       "visto": "2026-09-28T20:30:57.053Z",
-      "relevancia": 32,
+      "relevancia": 24,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -2920,6 +2941,7 @@
       "medios": [
         "El Diario Balcarce",
         "Infórmese Primero (FM 104.9)",
+        "Radio Gabal (FM 104.1)",
         "Diario Popular",
         "Noticias Argentinas (NA)",
         "QZ Noticias (Mar del Plata)"
@@ -2992,119 +3014,6 @@
       "foto": {
         "archivo": "fotos-notas/1xs34mg.jpg",
         "credito": "Foto: El Diario Balcarce"
-      }
-    },
-    {
-      "id": "kzqlp8",
-      "titulo": "La Provincia prorroga el plazo para que obras sociales paguen deudas",
-      "copete": "El Gobierno bonaerense extiende hasta el 31 de octubre la adhesión al régimen especial. Busca recuperar fondos por prestaciones en hospitales públicos.",
-      "cuerpo": "La medida fue oficializada mediante una resolución del Sistema de Atención Médica Organizada en el Boletín Oficial, según informó la Provincia.\n\nLa disposición inicial vencía el 26 de septiembre tras su puesta en marcha el 12 de agosto con una vigencia de 45 días y el objetivo de recuperar unos 150 mil millones de pesos. La prórroga busca facilitar la presentación de notas, documentación y conciliación de deudas, y alcanza a las entidades de la Ley 23.660.\n\nLas obras sociales pueden cancelar en un solo pago, en hasta 18 cuotas mensuales sin interés o en hasta 24 cuotas con una tasa de financiación anual del 4 por ciento sobre saldos.",
-      "guion": "La Provincia prorroga el plazo para que obras sociales paguen deudas",
-      "seccion": "Política",
-      "medios": [
-        "LU9 Mar del Plata",
-        "0221",
-        "El Marplatense",
-        "Radio 10 Mar del Plata (FM 105.5)",
-        "El Eco de Tandil",
-        "Agencia DIB",
-        "El Día",
-        "Ecos Diarios (Necochea)"
-      ],
-      "enlace": "https://dib.com.ar/sociedad/prorrogan-el-plazo-que-las-obras-sociales-regularicen-deudas-hospitales-bonaerenses-n56074",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-28T11:42:12.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-28T22:01:03.337Z",
-      "relevancia": 62,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Extienden hasta el 31 de octubre el plazo para obras sociales.",
-        "La medida busca regularizar deudas con hospitales públicos bonaerenses.",
-        "El régimen contempla planes de pago en cuotas con y sin interés."
-      ],
-      "seSabe": [
-        "El Gobierno bonaerense oficializó la prórroga hasta el 31 de octubre.",
-        "La medida alcanza a las obras sociales nacionales comprendidas en la Ley 23.660.",
-        "El plan original se había publicado el 12 de agosto."
-      ],
-      "etiquetas": [
-        "obras sociales",
-        "hospitales públicos",
-        "provincia de Buenos Aires",
-        "deudas"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Agencia DIB",
-          "enlace": "https://dib.com.ar/sociedad/prorrogan-el-plazo-que-las-obras-sociales-regularicen-deudas-hospitales-bonaerenses-n56074",
-          "fecha": "2026-09-28T11:42:12.000Z",
-          "oficial": false,
-          "aporte": "Detalló los plazos, los montos estimados y las modalidades de pago del régimen especial."
-        },
-        {
-          "medio": "LU9 Mar del Plata",
-          "enlace": "https://www.lu9mardelplata.com.ar/prorrogan-el-plazo-para-que-obras-sociales-regularicen-deudas-con-hospitales-bonaerenses",
-          "fecha": "2026-09-28T15:55:17.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Ecos Diarios (Necochea)",
-          "enlace": "https://elecos.com.ar/prorrogan-el-plazo-para-que-obras-sociales-regularicen-deudas-con-hospitales-bonaerenses",
-          "fecha": "2026-09-28T15:49:22.000Z",
-          "oficial": false,
-          "aporte": "Confirmó la oficialización de la prórroga para la adhesión de las obras sociales."
-        },
-        {
-          "medio": "El Día",
-          "enlace": "https://www.eldia.com/politica-y-economia/provincia-prorrogo-el-plazo-para-que-las-obras-sociales-regularicen-deudas-con-hospitales-politica-y-economia_1790599740",
-          "fecha": "2026-09-28T13:00:01.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "0221",
-          "enlace": "https://www.0221.com.ar/provincia/la-provincia-extendio-el-plazo-que-las-obras-sociales-paguen-sus-deudas-los-hospitales-publicos-n134945",
-          "fecha": "2026-09-28T19:44:00.000Z",
-          "oficial": false,
-          "aporte": "Indicó la fecha límite del 31 de octubre para recuperar deudas con hospitales bonaerenses."
-        },
-        {
-          "medio": "El Marplatense",
-          "enlace": "https://www.elmarplatense.com/la-provincia-amplio-el-plazo-para-que-las-obras-sociales-paguen-sus-deudas-con-hospitales",
-          "fecha": "2026-09-28T14:30:04.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Radio 10 Mar del Plata (FM 105.5)",
-          "enlace": "https://radio10mardelplata.com.ar/la-provincia-extendio-hasta-el-31-de-octubre-el-plazo-para-que-las-obras-sociales-paguen-sus-deudas-con-hospitales/",
-          "fecha": "2026-09-28T16:28:41.000Z",
-          "oficial": false,
-          "aporte": "Precisó que la medida abarca a efectores públicos de la provincia y sus prestaciones a afiliados."
-        },
-        {
-          "medio": "El Eco de Tandil",
-          "enlace": "https://www.eleco.com.ar/provincia/prorrogaron-hasta-octubre-el-plazo-para-que-obras-sociales-regularicen-deudas-con-hospitales-bonaerenses",
-          "fecha": "2026-09-28T12:30:16.000Z",
-          "oficial": false,
-          "aporte": null
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron 8 medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "la-provincia-prorroga-el-plazo-para-que-obras-sociales-paguen-deudas",
-      "foto": {
-        "archivo": "fotos-notas/kzqlp8.jpg",
-        "credito": "Foto: El Día"
       }
     },
     {
@@ -3202,6 +3111,48 @@
         }
       ],
       "slug": "bravo-milei-el-elogio-de-elon-musk-al-presidente-argentino-por-la",
+      "corregidaAMano": true,
+      "cuerpoAMano": true
+    },
+    {
+      "id": "1ppws54",
+      "titulo": "Alpine elige una foto de Colapinto para anunciar el GP de Bahréin",
+      "copete": "Alpine usó una foto de Franco Colapinto para anunciar el Gran Premio de Bahréin, apenas dos días después de que el piloto chocara en Azerbaiyán y quedara fuera de carrera. Los comisarios lo sancionaron con cinco puestos de descenso en la grilla.",
+      "cuerpo": "Alpine eligió una foto de Franco Colapinto para anunciar en sus redes sociales su participación en el Gran Premio de Bahréin, dos días después de que el piloto argentino protagonizara un choque en el Gran Premio de Azerbaiyán. \"Otro fin de semana de carrera nos espera. Nos dirigimos a Bahréin\", escribió la escudería francesa.\n\nEl accidente en Bakú ocurrió en la vuelta 36, tras la reanudación con auto de seguridad: Colapinto llegó pasado a la primera curva, bloqueó en la frenada e impactó contra el Alpine de Pierre Gasly, lo que también involucró al McLaren de Lando Norris y dejó a los tres autos fuera de carrera. Colapinto asumió la responsabilidad de la maniobra y los comisarios le aplicaron una sanción de cinco puestos de descenso en la grilla para la próxima carrera.\n\nEl Gran Premio de Bahréin se correrá el fin de semana del 2 al 4 de octubre, con la carrera programada para las 4 de la mañana, hora argentina.",
+      "guion": null,
+      "seccion": "Automovilismo",
+      "medios": [
+        "TN (Todo Noticias)",
+        "Radio Mitre"
+      ],
+      "enlace": "https://tn.com.ar/deportes/formula-1/2026/09/28/la-imagen-que-eligio-alpine-para-anunciar-el-gp-de-bahrein-tras-el-choque-de-colapinto-en-azerbaiyan/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-28T10:57:11.000Z",
+      "sinFecha": false,
+      "visto": "2026-09-28T16:01:28.909Z",
+      "relevancia": 52,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "fuentesConsultadas": [
+        {
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/deportes/formula-1/2026/09/28/la-imagen-que-eligio-alpine-para-anunciar-el-gp-de-bahrein-tras-el-choque-de-colapinto-en-azerbaiyan/",
+          "fecha": "2026-09-28T10:57:11.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Radio Mitre",
+          "enlace": "https://radiomitre.cienradios.com/deportes/la-imagen-que-alpine-publico-para-anunciar-el-gp-de-bahrein-tras-el-accidente-de-franco-colapinto-en-azerbaiyan/",
+          "fecha": "2026-09-28T12:01:37.000Z",
+          "oficial": false,
+          "aporte": null
+        }
+      ],
+      "slug": "la-imagen-que-eligio-alpine-para-anunciar-el-gp-de-bahrein-tras-el",
       "corregidaAMano": true,
       "cuerpoAMano": true
     },
@@ -3544,19 +3495,18 @@
     "Fútbol",
     "Agro",
     "Policiales",
-    "Deportes",
     "Argentina"
   ],
   "temas": [
     {
       "nombre": "El autódromo",
       "ranura": "autodromo",
-      "cuantas": 12
+      "cuantas": 11
     },
     {
       "nombre": "Fangio",
       "ranura": "fangio",
-      "cuantas": 12
+      "cuantas": 11
     },
     {
       "nombre": "El Concejo Deliberante",
@@ -3578,10 +3528,10 @@
     "ahora": {
       "temp": 11,
       "sensacion": 8,
-      "humedad": 98,
-      "viento": 23,
+      "humedad": 99,
+      "viento": 22,
       "rumbo": "S",
-      "cielo": "Lluvia",
+      "cielo": "Chaparrones",
       "esDeDia": true
     },
     "dias": [
@@ -3996,14 +3946,14 @@
       "motivo": "parece promoción, no noticia: \"sorteo\""
     },
     {
-      "id": "12wle8z",
-      "titulo": "Denuncia penal contra Bullrich y Monteoliva por los dichos…",
+      "id": "1xxqwja",
+      "titulo": "Piden detener a Diego Spagnuolo por los nuevos informes…",
       "seccion": "Política",
       "motivo": "necesita ojo humano: \"denuncia\""
     },
     {
-      "id": "1xxqwja",
-      "titulo": "Piden detener a Diego Spagnuolo por los nuevos informes…",
+      "id": "12wle8z",
+      "titulo": "Denuncia penal contra Bullrich y Monteoliva por los dichos…",
       "seccion": "Política",
       "motivo": "necesita ojo humano: \"denuncia\""
     },
@@ -4032,5 +3982,5 @@
       "motivo": "necesita ojo humano: \"niño\""
     }
   ],
-  "esperandoCuerpo": 16
+  "esperandoCuerpo": 18
 }
