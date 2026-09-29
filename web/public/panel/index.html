@@ -20,7 +20,7 @@
   @media (prefers-color-scheme: dark) {
     :root:not([data-theme="light"]) {
       --papel: #1C1F24; --fondo: #121417; --linea: #2E333A; --suave: #A7ADB3; --texto: #ECEDEE;
-      --ambar: #F2C46B; --ambar-fondo: #2B2415; --rojo: #E4583B;
+      --ambar: #F2C46B; --ambar-fondo: #2B2415; --rojo: #E4583B; --verde: #5CC2B2;
     }
   }
   * { box-sizing: border-box; }
@@ -70,13 +70,41 @@
   details { background: var(--papel); border: 1px solid var(--linea); border-radius: var(--radio); padding: 10px 14px; margin: 12px 0; }
   summary { cursor: pointer; font-weight: 600; min-height: 32px; }
   .pasos li { margin: 8px 0; }
-  .pestanas { position: fixed; left: 0; right: 0; bottom: 0; z-index: 5; display: grid; grid-template-columns: repeat(4, 1fr);
+  h3 { font-size: 16px; margin: 4px 0 6px; }
+  .caja { background: var(--papel); border: 1px solid var(--linea); border-radius: var(--radio); padding: 10px 14px; margin: 0 0 10px; font-size: 15px; }
+  .caja p { margin: 4px 0; }
+  .aviso-motivo { background: var(--ambar-fondo); border-color: transparent; color: var(--texto); }
+  .titulo-borrador { font-weight: 700; font-size: 17px; line-height: 1.3; margin-top: 0; }
+  .que-es { margin: 0 0 10px; padding: 6px 12px; font-size: 14.5px; }
+  .que-es summary { min-height: 28px; color: var(--suave); }
+  .est { display: inline-block; font-size: 13px; font-weight: 600; }
+  .est.ok { color: var(--verde); }
+  .est.espera { color: var(--ambar); }
+  .est.mal { color: var(--rojo); }
+  .tarjeta .est { display: block; margin-top: 4px; font-weight: 500; }
+  .cronograma { list-style: none; margin: 0; padding: 0; background: var(--papel); border: 1px solid var(--linea); border-radius: var(--radio); }
+  .fila { display: grid; grid-template-columns: 52px 1fr; gap: 2px 10px; padding: 10px 12px; border-top: 1px solid var(--linea); }
+  .fila:first-child { border-top: 0; }
+  .fila .hora { font-weight: 700; font-variant-numeric: tabular-nums; grid-row: span 2; }
+  .fila .que { font-weight: 600; }
+  .fila .meta { font-weight: 400; font-size: 13px; color: var(--suave); }
+  .lista-simple, .notas-repaso { margin: 6px 0 10px; padding-left: 20px; }
+  .lista-simple li, .notas-repaso li { margin: 6px 0; }
+  .enlace-boton { display: flex; align-items: center; justify-content: center; text-decoration: none; color: inherit; }
+  dialog.pregunta { width: min(92vw, 480px); border: 0; border-radius: 16px; padding: 18px; background: var(--papel); color: var(--texto); box-shadow: 0 12px 40px rgba(0,0,0,.35); }
+  dialog.pregunta::backdrop { background: rgba(0,0,0,.45); }
+  dialog.pregunta h2 { font-size: 18px; text-transform: none; letter-spacing: 0; color: var(--texto); margin: 0 0 8px; }
+  dialog.pregunta p { font-size: 15px; }
+  dialog.pregunta .botones { margin-bottom: 0; }
+  .pestanas { position: fixed; left: 0; right: 0; bottom: 0; z-index: 5; display: grid; grid-template-columns: repeat(5, 1fr);
     background: var(--papel); border-top: 1px solid var(--linea); padding-bottom: env(safe-area-inset-bottom); }
-  .pestanas button { min-height: 58px; border: 0; background: transparent; font-size: 13px; font-weight: 600; color: var(--suave); cursor: pointer; }
+  .pestanas button { min-height: 58px; border: 0; background: transparent; font-size: 12.5px; font-weight: 600; color: var(--suave); cursor: pointer; padding: 0 2px; }
   .pestanas button[aria-current="page"] { color: var(--rojo); box-shadow: inset 0 3px 0 var(--rojo); }
   .pestanas .numero { display: block; font-size: 17px; }
-  .aviso { position: fixed; left: 12px; right: 12px; bottom: calc(70px + env(safe-area-inset-bottom)); z-index: 9; background: var(--tinta); color: #fff;
-    border-radius: 12px; padding: 12px 14px; box-shadow: 0 6px 20px rgba(0,0,0,.25); font-size: 14.5px; }
+  /* Arriba y no abajo: abajo tapaba los botones de la nota mientras estaba a la vista. */
+  .aviso { position: fixed; left: 12px; right: 12px; top: calc(64px + env(safe-area-inset-top)); z-index: 9; background: var(--tinta); color: #fff;
+    border-radius: 12px; padding: 12px 40px 12px 14px; box-shadow: 0 6px 20px rgba(0,0,0,.25); font-size: 14.5px; }
+  .aviso .cerrar { position: absolute; top: 4px; right: 4px; margin: 0; min-height: 36px; min-width: 36px; padding: 0; background: transparent; color: #fff; font-size: 18px; }
   .aviso button { margin-top: 8px; background: #fff; color: var(--tinta); border: 0; border-radius: 8px; min-height: 38px; padding: 0 12px; font-weight: 700; }
   .girando { width: 38px; height: 38px; border: 4px solid var(--linea); border-top-color: var(--rojo); border-radius: 50%; animation: g 1s linear infinite; margin: 30px auto 12px; }
   @keyframes g { to { transform: rotate(360deg); } }

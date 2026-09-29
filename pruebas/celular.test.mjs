@@ -6,10 +6,13 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import crypto from 'node:crypto';
-import { cerrar, abrir, huellaDe, leerLlaves, cerrarSiCambio } from '../panel/cifrado.mjs';
+import {
+  cerrar, abrir, huellaDe, leerLlaves, cerrarSiCambio, cerrarCadaUno,
+} from '../panel/cifrado.mjs';
 import * as navegador from '../web/public/panel/cifrado.js';
 import {
   problemaDeDecision, leerDecisionesCelular, unirDecisiones, paraDecidir, notasParaEscribir,
+  piden, conBorradoresNuevos, papeleraAlDia, paraLaPapelera,
 } from '../panel/celular-datos.mjs';
 import { buscarNota, conBorrador, idValido, BORRADORES } from '../panel/celular.mjs';
 import { notaDesdeLoPublicado } from '../panel/reescribir-una.mjs';
@@ -128,7 +131,7 @@ const nota = (o) => ({
   fecha: '2026-09-29T18:00:00Z', origenes: [{ medio: 'Medio', enlace: 'https://medio.com/a', resumen: 'r' }], ...o,
 });
 
-test('para decidir: lo amarillo de estos días, nunca lo rojo, ni el relleno, ni lo ya decidido', () => {
+test('para decidir: lo amarillo de estos días con lo que contó cada medio; nunca lo rojo ni el relleno (29/09: "es muy poca información")', () => {
   const ahora = new Date(AHORA);
   const lista = paraDecidir([
     nota({ id: 'a' }),
@@ -138,12 +141,118 @@ test('para decidir: lo amarillo de estos días, nunca lo rojo, ni el relleno, ni
     nota({ id: 'e', semaforo: 'verde' }),
     nota({ id: 'f', fecha: '2026-09-20T18:00:00Z' }),
     nota({ id: 'g', semaforo: 'verde' }),
-  ], { d: { estado: 'descartada', por: 'Hernán', cuando: AHORA }, g: { estado: 'pendiente', por: 'Andrés', cuando: AHORA } }, { ahora });
-  assert.deepEqual(lista.map((n) => n.id).sort(), ['a', 'g']);
+    nota({ id: 'h' }),
+  ], {
+    // Descartada en la PC: no vuelve. Descartada en el celular: queda marcada, para poder deshacerlo.
+    d: { estado: 'descartada', por: 'Hernán', cuando: AHORA },
+    g: { estado: 'pendiente', por: 'Andrés', cuando: AHORA },
+    h: { estado: 'descartada', por: 'Hernán', cuando: AHORA, desdeElCelular: true },
+  }, { ahora, fichas: { a: { ambito: 'balcarce', impacto: 'directo', importancia: 'alta', porque: 'Pasa acá.', razon: 'local', publicidad: false } } });
+  assert.deepEqual(lista.map((n) => n.id).sort(), ['a', 'g', 'h']);
   const a = lista.find((n) => n.id === 'a');
-  assert.deepEqual(a.fuentes, [{ medio: 'Medio', enlace: 'https://medio.com/a' }]);
+  assert.deepEqual(a.fuentes, [{ medio: 'Medio', enlace: 'https://medio.com/a', fecha: null, oficial: false, resumen: 'r' }]);
   assert.equal(a.resumen, 'Un resumen');
-  assert.ok(!('origenes' in a), 'los resúmenes de cada fuente no viajan al celular: van a la caché');
+  assert.deepEqual(a.ficha, { ambito: 'balcarce', impacto: 'directo', importancia: 'alta', porque: 'Pasa acá.', razon: 'local' });
+  assert.ok(!('origenes' in a) && !('fuentesTexto' in a), 'viaja lo que hace falta para decidir, no la nota entera');
+  assert.equal(lista.find((n) => n.id === 'h').decision.estado, 'descartada');
+  assert.equal(lista.find((n) => n.id === 'g').motivo, 'marcada "pendiente" en el panel de la PC');
+});
+
+test('los borradores automáticos: hasta 4 por corrida y 30 por día; uno fallido se reintenta a las 12 horas', () => {
+  const ahora = new Date(AHORA);
+  const lista = ['a', 'b', 'c', 'd', 'e', 'f'].map((id) => ({ id }));
+  assert.deepEqual(piden(lista, {}, { ahora }), ['a', 'b', 'c', 'd'], 'más de 4 por corrida');
+  const cache = {
+    dia: '2026-09-29',
+    pedidosHoy: 28,
+    borradores: {
+      a: { cuando: AHORA, ok: true, texto: { titulo: 'T' } },
+      b: { cuando: '2026-09-29T02:00:00Z', ok: false },  // falló hace 18 h: se reintenta
+      c: { cuando: '2026-09-29T15:00:00Z', ok: false },  // falló hace 5 h: todavía no
+    },
+  };
+  assert.deepEqual(piden(lista, cache, { ahora }), ['b', 'd'], 'el tope del día');
+  assert.deepEqual(piden([{ id: 'x', decision: { estado: 'descartada' } }], {}, { ahora }), [], 'lo descartado no gasta cupo');
+  // Otro día, el contador vuelve a cero; lo de más de 4 días se va.
+  const manana = new Date('2026-09-30T12:00:00Z');
+  assert.deepEqual(piden(lista, cache, { ahora: manana }), ['b', 'c', 'd', 'e']);
+  const nueva = conBorradoresNuevos({ ...cache, borradores: { ...cache.borradores, viejo: { cuando: '2026-09-20T00:00:00Z' } } }, { d: { cuando: AHORA, ok: true } }, { ahora });
+  assert.equal(nueva.pedidosHoy, 29);
+  assert.ok(nueva.borradores.d && !nueva.borradores.viejo);
+});
+
+test('un sobre por nota: la que no cambió conserva el suyo; que se vaya una también es un cambio', () => {
+  const p = crypto.generateKeyPairSync('rsa', { modulusLength: 2048 });
+  const llaves = leerLlaves({ llaves: [{ publica: p.publicKey.export({ type: 'spki', format: 'der' }).toString('base64') }] });
+  const primero = cerrarCadaUno({ a: { t: 1 }, b: { t: 2 } }, llaves, {});
+  assert.equal(primero.cambio, true);
+  const igual = cerrarCadaUno({ a: { t: 1 }, b: { t: 2 } }, llaves, primero.sobres);
+  assert.equal(igual.cambio, false);
+  assert.equal(igual.sobres.a, primero.sobres.a);
+  const otra = cerrarCadaUno({ a: { t: 1 }, b: { t: 3 } }, llaves, primero.sobres);
+  assert.equal(otra.cambio, true);
+  assert.equal(otra.sobres.a, primero.sobres.a, 'la que no cambió no se vuelve a cifrar');
+  assert.notEqual(otra.sobres.b, primero.sobres.b);
+  assert.equal(cerrarCadaUno({ a: { t: 1 } }, llaves, primero.sobres).cambio, true, 'se fue una nota');
+  assert.deepEqual(abrir(otra.sobres.b, { huella: llaves[0].huella, privada: p.privateKey }), { t: 3 });
+});
+
+// ------------------------------------------------------------ la papelera
+
+const publicadaAntes = { id: 'r', titulo: 'Corte de calle', copete: 'B', cuerpo: CUERPO, seccion: 'Balcarce', slug: 'corte-de-calle', guion: 'Corte de calle.' };
+
+test('la papelera: lo que retira una persona se guarda y vuelve si una persona lo vuelve a aprobar (29/09)', () => {
+  const ahora = new Date(AHORA);
+  const retiradas = new Map([['r', { cuando: '2026-09-29T10:00:00Z', por: 'Hernán', motivo: 'el corte se suspendió' }]]);
+  const conPagina = new Map([['r', publicadaAntes]]);
+  const uno = papeleraAlDia({ papelera: {}, retiradas, conPagina, ahora });
+  assert.deepEqual(uno.restaurar, []);
+  assert.equal(uno.papelera.r.nota, publicadaAntes);
+  assert.equal(uno.papelera.r.motivo, 'el corte se suspendió');
+  // Mientras siga retirada, sigue en la papelera (aunque ya no tenga página).
+  const dos = papeleraAlDia({ papelera: uno.papelera, retiradas, conPagina: new Map(), ahora });
+  assert.ok(dos.papelera.r);
+  // Una persona la vuelve a aprobar: vuelve, y sale de la papelera.
+  const tres = papeleraAlDia({
+    papelera: dos.papelera, retiradas: new Map(), vuelven: new Map([['r', { cuando: '2026-09-29T19:00:00Z', por: 'Hernán' }]]), ahora,
+  });
+  assert.deepEqual(tres.restaurar, [publicadaAntes]);
+  assert.deepEqual(tres.papelera, {});
+});
+
+test('la papelera no vuelve a publicar sola: retiradas.json se poda los lunes y eso no es volver a aprobar', () => {
+  const ahora = new Date(AHORA);
+  const papelera = { r: { nota: publicadaAntes, cuando: '2026-09-21', por: 'Claude', motivo: 'repetida' } };
+  // Ya no está en retiradas.json (se podó) y nadie la aprobó: se queda en la papelera.
+  const podada = papeleraAlDia({ papelera, retiradas: new Map(), ahora });
+  assert.deepEqual(podada.restaurar, []);
+  assert.ok(podada.papelera.r);
+  // Una aprobación VIEJA (de antes de retirarla) tampoco la trae.
+  const vieja = papeleraAlDia({ papelera, retiradas: new Map(), vuelven: new Map([['r', { cuando: '2026-09-20T12:00:00Z' }]]), ahora });
+  assert.deepEqual(vieja.restaurar, []);
+  // Aprobada después pero todavía retirada (falta sacarla de retiradas.json): no vuelve, y no se pierde.
+  const aMedias = papeleraAlDia({
+    papelera, retiradas: new Map([['r', { cuando: '2026-09-21' }]]), vuelven: new Map([['r', { cuando: AHORA }]]), ahora,
+  });
+  assert.deepEqual(aMedias.restaurar, []);
+  assert.ok(aMedias.papelera.r);
+  // A los 30 días se va.
+  assert.deepEqual(papeleraAlDia({ papelera, retiradas: new Map(), ahora: new Date('2026-10-25T00:00:00Z') }).papelera, {});
+});
+
+test('el celular ve de la papelera lo que necesita para volver a publicar, y si salió de retiradas.json', () => {
+  const lista = paraLaPapelera({
+    r: { nota: publicadaAntes, cuando: '2026-09-29T10:00:00Z', por: 'Hernán', motivo: 'm' },
+    s: { nota: { ...publicadaAntes, id: 's', guion: '' }, cuando: '2026-09-29T11:00:00Z', por: 'Claude', motivo: 'repetida' },
+  }, { aMano: new Set(['s']) });
+  assert.deepEqual(lista.map((n) => n.id), ['s', 'r'], 'la más reciente primero');
+  const r = lista.find((n) => n.id === 'r');
+  assert.equal(r.desde, 'panel');
+  assert.equal(r.deIA, true);
+  const aprobacion = { estado: 'publicada', titulo: r.titulo, copete: r.copete, cuerpo: r.cuerpo, por: 'Hernán', cuando: AHORA };
+  assert.equal(problemaDeDecision(aprobacion), null, 'con lo que trae alcanza para volver a aprobarla');
+  assert.equal(lista.find((n) => n.id === 's').desde, 'a mano');
+  assert.equal(lista.find((n) => n.id === 's').deIA, false);
 });
 
 test('las notas para escribir con IA no incluyen nunca una roja', () => {

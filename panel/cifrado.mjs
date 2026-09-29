@@ -106,3 +106,22 @@ export function cerrarSiCambio(contenido, llaves = [], anterior = null) {
   if (anterior?.huellaDatos === huellaDatos && anterior?.version === 1) return { sobre: anterior, cambio: false };
   return { sobre: { ...cerrar(contenido, llaves), huellaDatos }, cambio: true };
 }
+
+/**
+ * Un sobre por nota (29/09): { id: contenido } → { sobres: { id: sobre }, cambio }.
+ * Cada nota que no cambió conserva su sobre de la vez anterior, así el archivo
+ * cambia sólo en las notas nuevas o cambiadas, y git guarda nada más que eso (con
+ * un solo sobre para toda la lista, cualquier cambio reescribía todo el texto
+ * cifrado). `cambio` dice si algo es distinto de la vez anterior, también si se
+ * fue una nota.
+ */
+export function cerrarCadaUno(items = {}, llaves = [], anteriores = {}) {
+  const sobres = {};
+  let cambio = Object.keys(anteriores ?? {}).some((id) => !(id in items));
+  for (const [id, contenido] of Object.entries(items)) {
+    const r = cerrarSiCambio(contenido, llaves, anteriores?.[id]);
+    sobres[id] = r.sobre;
+    if (r.cambio) cambio = true;
+  }
+  return { sobres, cambio };
+}

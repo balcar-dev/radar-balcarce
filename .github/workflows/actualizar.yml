@@ -118,6 +118,9 @@ jobs:
           # workflow nunca llegaba a `process.env` y el respaldo no se probaba
           # nunca de verdad (encontrado el 28/09 al armar la prueba del banco de fotos).
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          # Sólo para contarle al panel del celular si las redes están prendidas
+          # (celular-estado.json, 29/09). Acá no se publica nada en las redes.
+          REDES_ACTIVAS: ${{ vars.REDES_ACTIVAS }}
 
       # El sitio se compila acá antes de publicar. Si no, un cambio que
       # rompía Next se descubría recién cuando fallaba el despliegue — con la
@@ -157,9 +160,11 @@ jobs:
           # retiradas.json: los lunes pierde las de más de una semana.
           # celular-pendientes.json: lo que espera a una persona, cifrado para el
           # panel del celular (29/09; sólo cambia cuando cambia la lista).
+          # celular-estado.json: cuántas notas hay y lo que va a salir hoy en las
+          # redes, para el celular (redes/previa.mjs; es de lo ya publicado).
           # fusionadas.json: las notas repetidas con otra dirección y adónde
           # redirige cada una (29/09, web/lib/repetidas.js).
-          git add web/data/portada.json web/data/archivo.json web/data/agenda.json web/data/intentos-ia.json web/data/dolar-historia.json web/data/fichas.json web/data/notas-por-dia.json web/data/banco-fotos.json web/data/esperando-cuerpo.json web/data/vistas.json web/data/retiradas.json web/data/celular-pendientes.json web/data/fusionadas.json web/public/fotos-notas/
+          git add web/data/portada.json web/data/archivo.json web/data/agenda.json web/data/intentos-ia.json web/data/dolar-historia.json web/data/fichas.json web/data/notas-por-dia.json web/data/banco-fotos.json web/data/esperando-cuerpo.json web/data/vistas.json web/data/retiradas.json web/data/celular-pendientes.json web/data/celular-estado.json web/data/fusionadas.json web/public/fotos-notas/
           if git diff --cached --quiet; then
             echo "Sin novedades: no hay nada que publicar."
           else

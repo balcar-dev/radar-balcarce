@@ -99,37 +99,167 @@ const recortar = (t, n) => {
 };
 
 /**
- * Lo que espera a una persona, con lo necesario para decidir en el celular:
- * título, resumen de la fuente, motivo, sección, fecha y las fuentes con su
- * enlace. Nunca una roja (no se publica nunca, ni aprobada), ni lo que ya
- * decidió alguien, ni lo de más de `horas` (como el WhatsApp). Corto a
- * propósito: el archivo cifrado se vuelve a subir cada vez que cambia.
+ * Lo que espera a una persona, con lo necesario para decidir en el celular
+ * (29/09; Hernán: "es muy poca información para decidir"): el título, el resumen
+ * de la fuente principal, el de CADA medio que la contó, el motivo por el que
+ * espera, lo que anotó la IA al leerla (`fichas`: de dónde es el hecho, por qué
+ * le importaría a un vecino) y las fuentes con su enlace. El borrador que escribe
+ * la IA lo suma generar-datos aparte (`borrador`).
+ *
+ * Nunca una roja (no se publica nunca, ni aprobada), ni lo de más de `horas`
+ * (como el WhatsApp). Lo que se descartó desde el celular sigue en la lista,
+ * marcado (`decision`), para poder deshacerlo mientras la nota esté en la ingesta.
  */
-export function paraDecidir(notas = [], decisiones = {}, { ahora = new Date(), horas = 72, maximo = 40 } = {}) {
+export function paraDecidir(notas = [], decisiones = {}, {
+  ahora = new Date(), horas = 72, maximo = 40, fichas = {},
+} = {}) {
   const desde = ahora.getTime() - horas * 3600e3;
   const lista = [];
   for (const n of notas ?? []) {
     if (!n?.id || n.semaforo === 'rojo') continue;
     const d = decisiones?.[n.id];
     const humana = decisionHumana(d);
-    const esperando = humana ? d.estado === 'pendiente' : n.semaforo === 'amarillo';
+    const descartadaEnElCelular = humana && d.desdeElCelular && d.estado === 'descartada';
+    const esperando = humana ? (d.estado === 'pendiente' || descartadaEnElCelular) : n.semaforo === 'amarillo';
     if (!esperando || (!humana && RELLENO.test(n.motivo ?? ''))) continue;
     const t = Date.parse(n.fecha ?? '');
     if (n.cuando !== 'sin fecha en la fuente' && Number.isFinite(t) && t < desde) continue;
+    const ficha = fichas?.[n.id];
     lista.push({
       id: n.id,
-      titulo: recortar(n.titulo, 160),
-      resumen: recortar(n.resumenFuente, 420),
+      titulo: recortar(n.titulo, 200),
+      resumen: recortar(n.resumenFuente, 900),
       seccion: n.seccion ?? null,
-      motivo: humana ? 'marcada "pendiente" en el panel de la PC' : (n.motivo ?? 'sin regla automática'),
+      motivo: humana && d.estado === 'pendiente' ? 'marcada "pendiente" en el panel de la PC' : (n.motivo ?? 'sin regla automática'),
       fecha: n.fecha ?? null,
       local: !!n.local,
-      fuentes: (n.origenes ?? []).filter((o) => o?.enlace).slice(0, 6).map((o) => ({ medio: o.medio ?? null, enlace: o.enlace })),
+      fuentes: (n.origenes ?? []).filter((o) => o?.enlace).slice(0, 6).map((o) => ({
+        medio: o.medio ?? null, enlace: o.enlace, fecha: o.fecha ?? null, oficial: !!o.oficial, resumen: recortar(o.resumen, 600),
+      })),
+      ...(ficha ? {
+        ficha: {
+          ambito: ficha.ambito ?? null,
+          impacto: ficha.impacto ?? null,
+          importancia: ficha.importancia ?? null,
+          porque: recortar(ficha.porque, 300) || null,
+          razon: ficha.razon && ficha.razon !== 'ninguna' ? ficha.razon : null,
+        },
+      } : {}),
+      ...(descartadaEnElCelular ? { decision: { estado: d.estado, por: d.por, cuando: d.cuando } } : {}),
     });
   }
   return lista
     .sort((a, b) => (Date.parse(b.fecha ?? 0) || 0) - (Date.parse(a.fecha ?? 0) || 0))
     .slice(0, maximo);
+}
+
+// ----------------------------------------------------- el borrador automático
+
+/** Cuántos borradores automáticos se piden por corrida y por día, como mucho. */
+export const BORRADORES_AUTOMATICOS = { porCorrida: 4, porDia: 30, horasParaReintentar: 12, diasQueSeGuardan: 4 };
+
+/**
+ * Qué notas de las que esperan necesitan un borrador de la IA (29/09): las que
+ * no tienen uno guardado, o lo tienen fallido de hace más de unas horas (sin
+ * texto de la fuente, la IA no contestó). Devuelve los ids en el orden de la
+ * lista (las más nuevas primero), hasta lo que dejan los topes. `cache` es
+ * { dia, pedidosHoy, borradores: { id: { cuando, ok, texto?, … } } }.
+ */
+export function piden(lista = [], cache = {}, { ahora = new Date(), topes = BORRADORES_AUTOMATICOS } = {}) {
+  const hoy = ahora.toISOString().slice(0, 10);
+  const usados = cache?.dia === hoy ? (cache.pedidosHoy ?? 0) : 0;
+  const quedan = Math.max(0, Math.min(topes.porCorrida, topes.porDia - usados));
+  return lista
+    .filter((n) => !n.decision)
+    .filter((n) => {
+      const b = cache?.borradores?.[n.id];
+      if (!b) return true;
+      return !b.texto && ahora.getTime() - Date.parse(b.cuando) > topes.horasParaReintentar * 3600e3;
+    })
+    .map((n) => n.id)
+    .slice(0, quedan);
+}
+
+/** La caché de borradores con los de esta corrida sumados y los viejos afuera. */
+export function conBorradoresNuevos(cache = {}, nuevos = {}, { ahora = new Date(), topes = BORRADORES_AUTOMATICOS } = {}) {
+  const hoy = ahora.toISOString().slice(0, 10);
+  const limite = ahora.getTime() - topes.diasQueSeGuardan * 864e5;
+  const borradores = Object.fromEntries(Object.entries({ ...(cache?.borradores ?? {}), ...nuevos })
+    .filter(([, b]) => Date.parse(b?.cuando ?? '') >= limite));
+  const pedidosHoy = (cache?.dia === hoy ? (cache.pedidosHoy ?? 0) : 0) + Object.keys(nuevos).length;
+  return { dia: hoy, pedidosHoy, borradores };
+}
+
+// -------------------------------------------------------------- la papelera
+
+/** Cuántos días se puede volver a publicar una nota retirada por una persona. */
+export const DIAS_EN_LA_PAPELERA = 30;
+
+/**
+ * La papelera (29/09; Hernán: "si las retiro de la web, ¿a dónde vuelven?"). Una
+ * nota que retira una persona (desde el celular, desde el panel de la PC o en
+ * retiradas.json) pierde su página, y hasta ahora no había cómo recuperarla una
+ * vez que la ingesta la dejaba de traer. Acá se guarda tal como estaba
+ * publicada, y si una persona la vuelve a publicar, vuelve a su página con la
+ * misma dirección.
+ *
+ *   papelera:   { id: { nota, cuando, por, motivo } } (la de la corrida anterior)
+ *   retiradas:  Map id → { cuando, por, motivo }: lo que hoy está retirado por una persona
+ *   vuelven:    Map id → { cuando, por }: lo que una persona aprobó (estado "publicada")
+ *   conPagina:  Map id → nota: lo que tenía página antes de esta corrida
+ *
+ * Vuelve sólo lo que una persona aprobó DESPUÉS de retirarlo y ya no está
+ * retirado. Que deje de estar retirado no alcanza: retiradas.json se poda solo
+ * los lunes (regla 69) y eso no es volver a publicar.
+ *
+ * Devuelve { papelera, restaurar }: la papelera nueva y las notas que hay que
+ * volver a publicar. Lo de más de DIAS_EN_LA_PAPELERA días se va. La papelera no
+ * va al repositorio (es público, y una nota se puede retirar justamente por lo
+ * que dice): vive en la caché de Actions y el celular la ve cifrada.
+ */
+export function papeleraAlDia({
+  papelera = {}, retiradas = new Map(), vuelven = new Map(), conPagina = new Map(), ahora = new Date(),
+} = {}) {
+  const limite = ahora.getTime() - DIAS_EN_LA_PAPELERA * 864e5;
+  const nueva = {};
+  const restaurar = [];
+  const vuelve = (id, e) => !retiradas.has(id) && vuelven.has(id)
+    && (Date.parse(vuelven.get(id)?.cuando ?? '') || 0) > (Date.parse(e?.cuando ?? '') || 0);
+  for (const [id, e] of Object.entries(papelera ?? {})) {
+    if (vuelve(id, e)) {
+      if (e?.nota) restaurar.push(e.nota);
+      continue;
+    }
+    if (Date.parse(e?.cuando ?? '') >= limite) nueva[id] = e;
+  }
+  for (const [id, r] of retiradas) {
+    if (nueva[id] || !conPagina.has(id)) continue;
+    nueva[id] = { nota: conPagina.get(id), cuando: r.cuando ?? ahora.toISOString(), por: r.por ?? null, motivo: r.motivo ?? null };
+  }
+  return { papelera: nueva, restaurar };
+}
+
+/**
+ * Lo que el celular necesita de cada nota de la papelera: lo que muestra y el
+ * texto con el que la vuelve a publicar (una aprobación pide título, bajada y
+ * cuerpo: problemaDeDecision). `aMano` son los ids de retiradas.json: para
+ * volver a publicar ésas, el celular también las saca de ahí.
+ */
+export function paraLaPapelera(papelera = {}, { aMano = new Set() } = {}) {
+  return Object.entries(papelera).map(([id, e]) => ({
+    id,
+    titulo: e.nota?.titulo ?? null,
+    copete: e.nota?.copete ?? null,
+    cuerpo: e.nota?.cuerpo ?? null,
+    seccion: e.nota?.seccion ?? null,
+    fecha: e.nota?.fecha ?? null,
+    slug: e.nota?.slug ?? null,
+    deIA: !!e.nota?.guion && !e.nota?.cuerpoAMano,
+    retirada: e.cuando ?? null,
+    por: e.por ?? null,
+    motivo: e.motivo ?? null,
+    desde: aMano.has(id) ? 'a mano' : 'panel',
+  })).sort((a, b) => (Date.parse(b.retirada ?? 0) || 0) - (Date.parse(a.retirada ?? 0) || 0));
 }
 
 /**

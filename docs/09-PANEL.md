@@ -11,8 +11,9 @@ paso de todos los días (crear la llave, instalar, decidir, corregir):
 
 Hay dos paneles. **El del celular** (`radarbalcarce.com/panel/`) es el de
 todos los días: una app sin servidor propio que habla directo con GitHub con la
-llave de quien lo usa, para aprobar, editar, retirar y pedirle a la IA que
-escriba una nota, con la PC apagada. **El de la PC** (`http://localhost:4321`,
+llave de quien lo usa, para aprobar, editar, retirar (y volver a publicar),
+pedirle a la IA que escriba una nota y ver lo que sale hoy en las redes, con la
+PC apagada. **El de la PC** (`http://localhost:4321`,
 `ARRANCAR.bat`) queda de respaldo para lo que el celular no hace: la agenda
 cargada a mano, los avisos publicitarios, el buzón, las fuentes y el
 calendario.
@@ -24,8 +25,10 @@ calendario.
 ### Qué es y cómo se instala
 
 - Son archivos de la web (`web/public/panel/`: `index.html`, `app.js`,
-  `github.js`, `cifrado.js`, `sw.js`, `manifest.webmanifest`) que Cloudflare
-  publica con el sitio. No hay servidor propio: todo lo que lee y escribe pasa
+  `github.js`, `cifrado.js`, `textos.js`, `sw.js`, `manifest.webmanifest`) que
+  Cloudflare publica con el sitio. Los textos que explican cada cosa (por qué
+  espera una nota, qué hace cada botón, las preguntas antes de confirmar) están
+  todos en `textos.js`. No hay servidor propio: todo lo que lee y escribe pasa
   por la API de GitHub.
 - **Se instala desde Chrome**: menú ⋮ → **"Instalar app"** (o "Agregar a
   pantalla principal"). Chrome lo convierte en app: ícono propio, pantalla
@@ -69,21 +72,41 @@ Generate new token (el panel tiene el enlace directo):
    criptografía del navegador). La **privada** queda en el navegador y no sale
    nunca del celular; la **pública** se sube a `web/data/celular-llaves.json`.
    Hasta 6 celulares (`LLAVES_MAXIMAS`, `panel/cifrado.mjs`).
-2. **Cada corrida de "Actualizar la web"** arma la lista de lo que espera a una
-   persona (`paraDecidir`, `panel/celular-datos.mjs`) y la **cifra para cada
-   celular registrado** en `web/data/celular-pendientes.json` (`panel/cifrado.mjs`:
-   AES-256-GCM, con la llave de cada sobre cifrada con la pública de cada
-   celular). Sólo la vuelve a subir si cambió (`cerrarSiCambio`). Además deja
-   las notas enteras, con sus fuentes, en la caché de Actions
-   (`.cache/celular-notas.json`), que no es pública.
+2. **Cada corrida de "Actualizar la web"** (sólo en la nube) arma:
+   - **lo que espera a una persona**, con todo lo que hace falta para decidir
+     (`paraDecidir`, `panel/celular-datos.mjs`): el resumen de la fuente
+     principal, **lo que contó cada medio** (su resumen, si es oficial y el
+     enlace a la nota original), el motivo, lo que anotó la IA al leerla (de
+     dónde es el hecho, su importancia, por qué le importaría a un vecino:
+     `web/data/fichas.json`) y **un borrador que escribe la IA sola**
+     (`piden` y `conBorradoresNuevos`: hasta 4 por corrida, 30 por día y dos
+     minutos por corrida, sólo con la clave gratis de redacción y un intento;
+     si falla, se reintenta a las 12 horas; quedan en `.cache/celular-borradores-auto.json`);
+   - **la papelera**: lo que retiró una persona, tal como estaba publicado (ver
+     "Retirar y volver a publicar", más abajo);
+   - las dos cosas **cifradas para cada celular registrado**, un sobre por nota
+     (`cerrarCadaUno`, `panel/cifrado.mjs`: AES-256-GCM, con la llave de cada
+     sobre cifrada con la pública de cada celular), en
+     `web/data/celular-pendientes.json` (versión 2). Una nota que no cambió
+     conserva su sobre, así git guarda sólo lo nuevo;
+   - las notas enteras, con sus fuentes, en la caché de Actions
+     (`.cache/celular-notas.json`), que no es pública, para "Escribir con IA";
+   - **`web/data/celular-estado.json`**, sin cifrar (es de lo ya publicado):
+     cuántas notas hay en la portada y en el archivo, y **la previa de las
+     redes** (`previaDelDia`, `redes/previa.mjs`): el cronograma de hoy, qué
+     cuenta cada repaso (con la misma función que usa el plan de los videos,
+     `repasosDelDia` en `redes/repasos.mjs`), la cola de Facebook y si las redes
+     están prendidas (`REDES_ACTIVAS`, que el workflow le pasa sólo para esto).
    **¿Por qué cifrado?** El repositorio es público y esas notas pueden nombrar
    a un acusado o a un chico (regla 79). Por lo mismo, la lista corta de
    `portada.json` va sin titular cuando la nota es de Policiales o habla de
    chicos o de víctimas: es lo que muestra "Esperan" hasta que llega la cifrada
    (un celular recién registrado la recibe en la próxima actualización).
-3. **El celular lee** con la llave: `portada.json`, `esperando-cuerpo.json`,
-   `celular-pendientes.json` (lo abre con su llave privada),
-   `celular-decisiones.json`, `correcciones.json` y, si se pide, `archivo.json`.
+3. **El celular lee** con la llave: `portada.json`, `esperando-cuerpo.json`
+   (con cuántas veces lo intentó la IA), `celular-pendientes.json` (lo abre con
+   su llave privada), `celular-decisiones.json`, `correcciones.json`,
+   `celular-estado.json`, `redes.json` (el libro de las redes, para decir al
+   momento lo que ya salió) y, si se pide, `archivo.json`.
 4. **"Escribir con IA"** dispara el workflow **"Panel del celular"**
    (`.github/workflows/panel.yml`) con la nota, el pedido (opcional) y una marca
    para encontrar la corrida. `panel/celular.mjs` busca la nota en la caché (lo
@@ -109,25 +132,38 @@ Generate new token (el panel tiene el enlace directo):
 
 ### Las pestañas
 
+Cada pestaña tiene arriba un "¿Qué es esto?" que la explica, y "Más" explica
+todo el panel.
+
 | Pestaña | Qué muestra | Qué se puede hacer |
 |---|---|---|
-| **Esperan** | Lo que espera a una persona: lo amarillo de los últimos 3 días (hasta 40), nunca lo rojo ni lo ya decidido, y sin el "relleno" que tampoco avisa el WhatsApp (lo de afuera poco contado, lo que pasó el cupo, la cotización del dólar). Cada nota con su motivo, el resumen de la fuente y las fuentes con enlace | **Escribir con IA** (con un pedido opcional) → revisar el borrador → **Publicar** o **Pedir otra versión**; **Descartar**. Lo decidido se puede **Deshacer** |
-| **Sin cuerpo** | Las notas que saldrían solas pero esperan cuerpo (`esperando-cuerpo.json`) | **Escribir con IA** o **Escribir a mano** → "Publicar con este cuerpo" |
-| **Publicadas** | Las de las últimas 36 horas y, con "Buscar también en el archivo", las de 180 días; buscador por título o sección | **Editar** (título, bajada, cuerpo y sección), **Reescribir con IA** (con pedido), **También a Facebook e Instagram** (o "Sacar de las redes"), **Retirar de la web** (pide el motivo) y **Deshacer** |
-| **Más** | Quién entró | **Actualizar la web ahora**, abrir la web, cómo instalarlo, cómo funciona, **Salir y borrar la llave de este celular** |
+| **Esperan** | Lo que espera a una persona: lo amarillo de los últimos 3 días (hasta 40), nunca lo rojo, y sin el "relleno" que tampoco avisa el WhatsApp (lo de afuera poco contado, lo que pasó el cupo, la cotización del dólar). En la lista, el motivo en pocas palabras ("Acusa a alguien ("detenido")") y si ya hay borrador. Al abrirla: **por qué espera y qué mirar** (`explicarMotivo`), lo que anotó la IA al leerla, **el borrador de la IA** con lo que marcó el verificador, el resumen de la fuente principal y **lo que contó cada medio**, con el enlace a la nota original. Abajo, las aprobadas que salen en la próxima actualización y las **descartadas** | **Publicar este texto** (abre el borrador para corregirlo) → **Publicar**; **Pedir otra versión** o **Escribir con IA ahora** (con un pedido opcional); **Escribirla a mano**; **Descartar** (pregunta antes). Una descartada se puede **Volver a traer** mientras siga en las noticias del día; una aprobada, **Deshacer** hasta la próxima actualización |
+| **Sin cuerpo** | Las notas que **salen solas** pero todavía no tienen un cuerpo que pase el verificador (`esperando-cuerpo.json`), con cuántas veces lo intentó la IA (hasta 3, `MAXIMO_DE_INTENTOS`): mientras le queden intentos, la IA la vuelve a probar sola en cada actualización | **Escribir con IA ahora** o **Escribir a mano** → "Publicar con este cuerpo" |
+| **Publicadas** | Cuántas hay **en la portada** (las de las últimas 36 horas) y cuántas **en el archivo** (con página, hasta 180 días); la lista de la portada y, con "Buscar también en el archivo", las del archivo; buscador por título o sección. Cada nota dice si salió en Facebook e Instagram o si está en la cola. Al final, **Retiradas**: lo que retiró una persona en los últimos 30 días | **Editar** (título, bajada, cuerpo y sección), **Reescribir con IA** (con pedido), **Mandar también a las redes** (o "Sacar de la cola de las redes"; pregunta antes), **Retirar de la web** (pregunta y pide el motivo) y **Deshacer**. En las retiradas: **Volver a publicar** o **Corregirla y volver a publicarla** |
+| **Redes** | El cronograma de hoy (cada pieza con su hora, su voz y si salió, está en su horario o ya no sale), **qué cuenta cada repaso** (lo que contó, o lo que contaría si saliera ahora), los posteos de Facebook de hoy, cuándo puede salir el próximo y la cola. Si las redes están apagadas (`REDES_ACTIVAS`), lo dice arriba | Mirar. Para mandar una nota: Publicadas → "Mandar también a las redes" |
+| **Más** | Quién entró y **cómo funciona todo**, pregunta por pregunta | **Actualizar la web ahora**, abrir la web, **Salir y borrar la llave de este celular** |
 
 Al aprobar hacen falta título, bajada y cuerpo, con el texto de la IA o
 editado. Con menos de 70 palabras de cuerpo pregunta antes de guardar (con
 menos de 70 una nota automática no sale sola). El borrador muestra lo que el
 verificador marcó contra las fuentes y lo que sacó. Se puede cambiar la
-sección y, en lo que espera, marcar "También a Facebook e Instagram".
+sección y, en lo que espera o no tiene cuerpo, marcar "Mandarla también a
+Facebook e Instagram" (pregunta antes de guardar).
+
+**Las preguntas antes de confirmar** (29/09, Hernán: "estaría bueno que re
+pregunte antes de mandar"): mandar a las redes, sacar de la cola, retirar,
+descartar, volver a publicar y publicar un cuerpo corto preguntan en una
+ventana que explica qué va a pasar (`PREGUNTAS` y `preguntaRedes`,
+`textos.js`); el foco queda en "Cancelar", para que un toque de más no
+confirme. Deshacer no pregunta.
 
 ### Qué escribe
 
 | Archivo | Qué guarda | Cuándo |
 |---|---|---|
-| `web/data/celular-decisiones.json` | `notas`: aprobar = `publicada` con el texto entero (`deIA` si lo escribió la IA, con sus partes internas), descartar = `descartada`, retirar = `bloqueada` con el motivo; cada una con `por` y `cuando`. `redes`: las marcadas para Facebook e Instagram | Aprobar, descartar, retirar, deshacer, marcar para las redes |
+| `web/data/celular-decisiones.json` | `notas`: aprobar = `publicada` con el texto entero (`deIA` si lo escribió la IA, con sus partes internas), descartar = `descartada`, retirar = `bloqueada` con el motivo (y `antes: "publicada"` si estaba aprobada desde el celular, para que deshacer la deje aprobada); volver a publicar = `publicada` con el texto que tenía; cada una con `por` y `cuando`. `redes`: las marcadas para Facebook e Instagram | Aprobar, descartar, retirar, volver a publicar, deshacer, marcar para las redes |
 | `web/data/correcciones.json` | Título, bajada, cuerpo o sección, con `motivo`, `cuando` y `por` (el mismo archivo de las correcciones a mano). Un texto de la IA revisado lleva `deIA: true` y firma "Redacción con IA, revisada por la redacción"; uno escrito a mano, "Revisada por la redacción" | Editar, escribir un cuerpo, cambiar la sección al aprobar |
+| `web/data/retiradas.json` | Sólo **saca** una nota (nunca agrega) | Volver a publicar una nota que se retiró a mano ahí |
 | `web/data/celular-llaves.json` | Las llaves públicas de los celulares | La primera vez que entra cada celular |
 
 **Ningún workflow toca esos archivos**, así nunca se pisan.
@@ -136,14 +172,39 @@ texto entero (una decisión humana sin texto publicaría el de la fuente tal
 cual, que es copiar a otro medio) y que retirar traiga el motivo; lo que no
 vale se saltea, y una prueba avisa antes de publicar.
 
+### Retirar y volver a publicar: la papelera
+
+"Retirar de la web" no borra nada. Una nota retirada por una persona (desde el
+celular, desde el panel de la PC o en `retiradas.json`) pierde su página en la
+próxima actualización, y la corrida la guarda **tal como estaba publicada** en
+la papelera (`papeleraAlDia`, `panel/celular-datos.mjs`; en la caché de
+Actions, `.cache/papelera.json`, porque el repositorio es público y una nota se
+puede retirar justamente por lo que dice). El celular la ve, cifrada, al final
+de "Publicadas", **durante 30 días** (`DIAS_EN_LA_PAPELERA`).
+
+- **Antes de la próxima actualización**, "Deshacer" la deja como estaba (si
+  estaba aprobada desde el celular, sigue aprobada).
+- **Después**, "Volver a publicar" la aprueba de nuevo con el texto que tenía
+  (o corregido, con "Corregirla y volver a publicarla"). En la próxima
+  actualización vuelve a su página, **con la misma dirección**; si es de las
+  últimas 36 horas, también a la portada. Si se había retirado en
+  `retiradas.json`, el celular también la saca de ahí.
+- **Vuelve sólo lo que una persona vuelve a aprobar después de retirarlo.** Que
+  deje de estar retirado no alcanza: `retiradas.json` se poda solo los lunes
+  (regla 69) y eso no es volver a publicar.
+- Lo que ya salió en Facebook o Instagram no se borra al retirar ni vuelve al
+  volver a publicar: allá se maneja a mano.
+
 ### Las redes: aprobar no es publicar en redes
 
 Lo que salió en la web porque lo aprobó una persona (era amarillo) **no va
-solo** a las redes. Va si la persona lo marca **"También a Facebook e
-Instagram"**, y así sí puede ir Política o Policiales (regla 78,
+solo** a las redes. Va si la persona lo manda con **"Mandar también a las
+redes"** (antes pregunta), y así sí puede ir Política o Policiales (regla 78,
 `vaAFacebookPorLoQueEs` en `redes/elegir.mjs`): sale en el próximo posteo que
 permitan las reglas de Facebook (de 8 a 22, 90 minutos entre posteos, 5 por
-día), antes que las demás. Los podcasts siguen sin Política ni Policiales.
+día), antes que las demás. Mientras no salga, se saca de la cola con el mismo
+botón; una vez publicada, sólo se borra a mano en Facebook e Instagram. Los
+podcasts siguen sin Política ni Policiales.
 
 ### El modo de prueba
 
@@ -158,6 +219,9 @@ nada (`web/public/panel/prueba.js`). Sirve para mostrarlo o probar un cambio.
   la web" (cada media hora) o con "Actualizar la web ahora" (unos 8 minutos).
 - **Retirar de la web no borra lo que ya salió en Facebook o Instagram**: eso
   se borra a mano en la red (el celular lo recuerda).
+- **Lo que contaría un repaso puede cambiar hasta su hora**: la pestaña Redes
+  muestra lo que elegiría si saliera ahora, calculado en la última
+  actualización.
 - **No hace** lo del panel de la PC: agenda cargada a mano, avisos, buzón,
   fuentes, calendario.
 - **El panel de la PC no ve lo decidido en el celular**: una nota aprobada en
@@ -393,13 +457,16 @@ ni fotos): sirve para mirar la web en la PC, pero deja modificados
 
 | Archivo | Qué hace | Quién lo llama | Qué lee | Qué escribe |
 |---|---|---|---|---|
-| `web/public/panel/app.js` | El panel del celular: pantallas, pestañas, decisiones | El navegador del celular | Por la API de GitHub: `web/data/` | `celular-decisiones.json`, `correcciones.json`, `celular-llaves.json` (vía `github.js`) |
+| `web/public/panel/app.js` | El panel del celular: pantallas, pestañas, decisiones, las preguntas antes de confirmar | El navegador del celular | Por la API de GitHub: `web/data/` | `celular-decisiones.json`, `correcciones.json`, `retiradas.json` (sólo saca), `celular-llaves.json` (vía `github.js`) |
+| `web/public/panel/textos.js` | Lo que explica el panel: por qué espera cada nota (`explicarMotivo`, `motivoCorto`), lo que anotó la IA (`explicarFicha`), las pestañas (`PESTANAS`), las preguntas (`PREGUNTAS`, `preguntaRedes`), el estado de cada pieza y del próximo posteo, la hora de Balcarce | `app.js` | — | — |
 | `web/public/panel/github.js` | Cómo habla con GitHub: leer, guardar con reintento, disparar un workflow, encontrar su corrida | `app.js` | La llave | — |
 | `web/public/panel/cifrado.js` | Crea las llaves del celular y abre los sobres | `app.js` | La llave privada del navegador | — |
 | `web/public/panel/sw.js`, `manifest.webmanifest` | Lo que lo vuelve una app instalable | Chrome | — | — |
-| `web/public/panel/prueba.js`, `prueba-sobre.js` | El modo de prueba (`?demo`) | `app.js` | — | — |
-| `panel/celular-datos.mjs` | Qué decide el celular (`problemaDeDecision`, `leerDecisionesCelular`, `unirDecisiones`) y qué necesita (`paraDecidir`, `notasParaEscribir`) | `generar-datos.mjs`, `celular.mjs` | — | — (funciones puras) |
-| `panel/cifrado.mjs` | Cierra los sobres para cada celular (`cerrar`, `cerrarSiCambio`, `leerLlaves`) | `generar-datos.mjs`, `celular.mjs` | `celular-llaves.json` | — |
+| `web/public/panel/prueba.js`, `prueba-sobre.js` | El modo de prueba (`?demo`), con los mismos archivos que arma la web | `app.js` | — | — |
+| `panel/celular-datos.mjs` | Qué decide el celular (`problemaDeDecision`, `leerDecisionesCelular`, `unirDecisiones`), qué necesita (`paraDecidir`, `notasParaEscribir`), los borradores automáticos (`piden`, `conBorradoresNuevos`) y la papelera (`papeleraAlDia`, `paraLaPapelera`) | `generar-datos.mjs`, `celular.mjs` | — | — (funciones puras) |
+| `panel/cifrado.mjs` | Cierra los sobres para cada celular (`cerrar`, `cerrarSiCambio`, `cerrarCadaUno`, `leerLlaves`) | `generar-datos.mjs`, `celular.mjs` | `celular-llaves.json` | — |
+| `redes/previa.mjs` | Lo que sale hoy en las redes, para la pestaña Redes (`previaDelDia`) | `generar-datos.mjs` | La portada, el libro, el archivo | — (lo escribe `generar-datos.mjs` en `celular-estado.json`) |
+| `redes/repasos.mjs` | Qué notas cuenta cada repaso (`repasosDelDia`): la misma regla para el plan de los videos y para la previa | `reels/plan.mjs`, `redes/previa.mjs` | — | — |
 | `panel/celular.mjs` | El programa de "Panel del celular": busca la nota, la escribe, cierra el borrador | `.github/workflows/panel.yml` | `.cache/celular-notas.json`, `web/data/` | `web/data/celular-borradores.json` |
 | `panel/reescribir-una.mjs` | Escribe una nota con IA con el criterio y el verificador de siempre | `celular.mjs` | Las fuentes, `archivo.json` | — |
 | `ARRANCAR.bat` | Abre la ventana del panel de la PC y el navegador | Hernán, con doble clic | — | — |
@@ -423,8 +490,12 @@ ni fotos): sirve para mirar la web en la PC, pero deja modificados
 | Qué acepta la web de una decisión del celular | `problemaDeDecision` y `leerDecisionesCelular` (`panel/celular-datos.mjs`) |
 | Cómo escribe la IA a pedido | `panel/reescribir-una.mjs` (y el criterio, `CRITERIO-EDITORIAL.md`) |
 | Cuántos borradores se guardan | `BORRADORES` (`panel/celular.mjs`) |
+| Cuántos borradores escribe la IA sola, y cuándo reintenta | `BORRADORES_AUTOMATICOS` (`panel/celular-datos.mjs`) |
+| Cuántos días se puede volver a publicar una nota retirada | `DIAS_EN_LA_PAPELERA` (`panel/celular-datos.mjs`) |
 | Cuántos celulares pueden registrarse | `LLAVES_MAXIMAS` (`panel/cifrado.mjs`) |
 | Las pantallas del celular | `web/public/panel/app.js` e `index.html` |
+| Lo que dice el celular (explicaciones, preguntas, motivos) | `web/public/panel/textos.js` |
+| Lo que muestra la pestaña Redes | `previaDelDia` (`redes/previa.mjs`) y `NOMBRES_DE_PIEZAS` |
 | Crear una cuenta o cambiar una clave del panel de la PC | `node panel/clave.mjs <usuario> "<clave>"` en la PC |
 | Que el panel de la PC no suba nada a GitHub | Arrancarlo con `SINCRONIZAR_GITHUB=no` |
 | Que el respaldo quede fuera de la PC | Variable `RESPALDO_CARPETA` (Drive u OneDrive) |
@@ -442,7 +513,10 @@ ni fotos): sirve para mirar la web en la PC, pero deja modificados
 |---|---|---|
 | La llave del celular venció o la borraron | El celular dice "La llave no anda (venció o la borraron en GitHub)" | Crear otra y cargarla (`docs/11-OPERACION.md`) |
 | A la llave le falta un permiso | "Esa llave no puede escribir…" o "GitHub no deja hacer esto con esta llave" | Crear otra con Contents y Actions en "Read and write" |
-| "Esperan" muestra la lista corta, sin detalle | "Todavía no llegaron cifradas para este celular" | Esperar la próxima actualización de la web (el celular recién se registró) |
+| "Esperan" muestra la lista corta, sin detalle | "El detalle de cada nota todavía no llegó cifrado para este celular" | Esperar la próxima actualización de la web (el celular recién se registró) |
+| Una nota que espera no trae borrador | "La IA escribe sola un borrador en las próximas actualizaciones", o "La IA no la pudo escribir sola" con el motivo | Esperar (hasta 4 por corrida), o "Escribir con IA ahora" |
+| La pestaña Redes dice que las redes están apagadas | "Las redes están apagadas (la variable REDES_ACTIVAS…)" | Es lo esperable mientras `REDES_ACTIVAS` no diga "Si" (`docs/07-REDES.md`) |
+| Una nota volvió a publicarse y no aparece | Sigue en "Retiradas" con "↺ vuelve en la próxima actualización" | Esperar la próxima actualización. Si estaba en `retiradas.json` y no se pudo sacar de ahí, sigue retirada: volver a tocar "Volver a publicar" |
 | "Escribir con IA" no vuelve | "GitHub tardó demasiado" o "La corrida de GitHub falló" | Mirar "Panel del celular" en GitHub → Actions; probar de nuevo. Si la nota ya no está en la caché ni publicada: "No encontré la nota" |
 | La IA no pudo escribirla | El borrador dice por qué (sin fuentes que bajar, la IA no contestó, da rojo) o trae la lista de lo que no cuadra | Revisar y editar, pedir otra versión o escribirla a mano |
 | Se decidió en el celular y la web no cambió | — | Esperar la próxima vuelta o tocar "Actualizar la web ahora" (unos 8 minutos) |
@@ -455,7 +529,7 @@ ni fotos): sirve para mirar la web en la PC, pero deja modificados
 | Se rompió el disco de la PC | Se pierde el historial editorial y el buzón, salvo lo respaldado afuera | Por eso conviene `RESPALDO_CARPETA` |
 
 Lo vigilan las pruebas `celular.test.mjs`, `celular-app.test.mjs`,
-`panel.test.mjs`, `panel-seguridad.test.mjs`, `acceso.test.mjs`,
+`previa-redes.test.mjs`, `panel.test.mjs`, `panel-seguridad.test.mjs`, `acceso.test.mjs`,
 `respaldo.test.mjs`, `horarios.test.mjs`, `agenda-panel.test.mjs`,
 `buzon.test.mjs` y parte de `editor.test.mjs` y `limpieza-29-09.test.mjs`
 (`docs/10-REGLAS-Y-PRUEBAS.md`).

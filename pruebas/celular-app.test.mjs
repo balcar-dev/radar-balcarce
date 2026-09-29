@@ -7,8 +7,12 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import {
   crearCliente, SECCIONES, ARCHIVOS, comoRenglones, formatear, aBase64, deBase64,
-  conDecision, sinDecision, conRedes, conCorreccion, conLlave, corridaConMarca, haceCuanto,
+  conDecision, sinDecision, conRedes, conCorreccion, conLlave, sinRetirada, corridaConMarca, haceCuanto,
 } from '../web/public/panel/github.js';
+import {
+  tipoDeMotivo, motivoCorto, explicarMotivo, explicarFicha, estadoSinCuerpo, estadoDePieza, proximoPosteo,
+  preguntaRedes, REGLAS_FACEBOOK, minutoEnBalcarce, hoyEnBalcarce,
+} from '../web/public/panel/textos.js';
 import { SECCIONES as DE_LA_WEB } from '../web/lib/datos.js';
 import { comoRetiradasJson, correccionesAMano } from '../web/lib/archivo.js';
 import { problemaDeDecision, leerDecisionesCelular } from '../panel/celular-datos.mjs';
@@ -103,6 +107,82 @@ test('la corrida del celular se encuentra por su marca; las fechas se dicen como
   assert.equal(haceCuanto('2026-09-29T19:59:30Z', ahora), 'recién');
   assert.equal(haceCuanto('2026-09-29T17:00:00Z', ahora), 'hace 3 h');
   assert.equal(haceCuanto('2026-09-28T17:00:00Z', ahora), 'ayer');
+});
+
+test('volver a publicar lo retirado a mano lo saca de retiradas.json y deja el resto como estaba', () => {
+  const j = { notas: { a: { motivo: 'm', cuando: '2026-09-29', por: 'Claude' }, b: { motivo: 'n', cuando: '2026-09-29', por: 'Claude' } } };
+  const sin = sinRetirada(j, 'a');
+  assert.deepEqual(Object.keys(sin.notas), ['b']);
+  assert.deepEqual(sin.notas.b, j.notas.b);
+  assert.equal(formatear(ARCHIVOS.retiradas, sin), comoRetiradasJson(sin), 'el mismo formato que el repositorio');
+});
+
+// Lo que importa app.js de cada módulo tiene que existir: un nombre mal escrito
+// deja el panel en blanco en el celular (y app.js no se puede cargar en Node).
+test('todo lo que usa la app del celular existe en sus módulos', async () => {
+  const app = leer('web/public/panel/app.js');
+  for (const [, nombres, archivo] of app.matchAll(/import \{([^}]+)\} from '\.\/([a-z-]+\.js)'/g)) {
+    const modulo = await import(`../web/public/panel/${archivo}`);
+    for (const nombre of nombres.split(',').map((s) => s.trim()).filter(Boolean)) {
+      assert.ok(nombre in modulo, `app.js importa "${nombre}" de ${archivo}, que no lo exporta`);
+    }
+  }
+  const sw = leer('web/public/panel/sw.js');
+  for (const [, archivo] of app.matchAll(/from '\.\/([a-z-]+\.js)'/g)) assert.ok(sw.includes(`/panel/${archivo}`), `el service worker no guarda ${archivo}`);
+});
+
+test('por qué espera una nota, dicho para una persona: cada motivo que pone el sistema tiene su explicación', () => {
+  const casos = [
+    ['necesita ojo humano: "detenido"', 'acusa', /atribuida a quien la hizo/],
+    ['necesita ojo humano: "heridos", en el cuerpo', 'muerte', /no identifique a una víctima/],
+    ['necesita ojo humano: "menor"', 'chico', /no se lo pueda identificar/],
+    ['necesita ojo humano: "abuso"', 'violencia', /víctima/],
+    ['necesita ojo humano: "incendio"', 'palabra', /Dice "incendio"/],
+    ['parece promoción, no noticia: "sorteo"', 'promocion', /promoción/],
+    ['verificación baja: espera a una persona', 'verificacion', /un solo medio/],
+    ['de afuera, contada por 2 medios', 'poco-contada', /menos medios/],
+    ['internacional: sin relación con Balcarce', 'extranjero', /otro país/],
+    ['de un medio de acá sin nombrar Balcarce ni la zona: espera la lectura con IA', 'lectura', /copiada/],
+    ['la sección es sólo de Balcarce y la zona', 'seccion-de-aca', /sólo para lo de Balcarce/],
+    ['marcada "pendiente" en el panel de la PC', 'pc', /panel de la PC/],
+  ];
+  for (const [motivo, tipo, explicacion] of casos) {
+    assert.equal(tipoDeMotivo(motivo).tipo, tipo, motivo);
+    assert.match(explicarMotivo(motivo), explicacion, motivo);
+    assert.ok(motivoCorto(motivo).length <= 40, `el motivo corto de "${motivo}" es largo para una tarjeta`);
+  }
+  assert.equal(motivoCorto('necesita ojo humano: "detenido"'), 'Acusa a alguien ("detenido")');
+  assert.match(explicarMotivo('algo nuevo que no conozco'), /algo nuevo que no conozco/, 'lo desconocido se muestra tal cual');
+});
+
+test('lo que anotó la IA, sin repetir; y si una nota sin cuerpo todavía puede salir sola', () => {
+  assert.equal(explicarFicha({ ambito: 'balcarce', impacto: 'directo', importancia: 'media', porque: 'Es en la ruta de acceso' }), 'Pasa en Balcarce. Importancia media. Es en la ruta de acceso.');
+  assert.equal(explicarFicha({ ambito: 'provincia', impacto: 'directo', importancia: 'alta' }), 'Es de la provincia y cambia algo concreto en Balcarce. Importancia alta.');
+  assert.equal(explicarFicha(null), '');
+  assert.equal(estadoSinCuerpo({ intentos: 0 }).clase, 'espera');
+  assert.match(estadoSinCuerpo({ intentos: 2, maximo: 3 }).texto, /2 de 3/);
+  assert.equal(estadoSinCuerpo({ intentos: 3, maximo: 3 }).clase, 'mal');
+  assert.equal(estadoSinCuerpo({ intentos: 3, maximo: 3, conCuerpo: true }).clase, 'ok');
+});
+
+test('las redes del día en el celular: la hora de Balcarce, el estado de cada pieza y cuándo puede salir el próximo posteo', () => {
+  // 16:00 en Balcarce.
+  const ahora = new Date('2026-09-29T19:00:00Z');
+  assert.equal(minutoEnBalcarce(ahora), 16 * 60);
+  assert.equal(hoyEnBalcarce(new Date('2026-09-30T02:00:00Z')), '2026-09-29', 'a las 23 de Balcarce todavía es el 29');
+  assert.equal(estadoDePieza({ hora: '20:30', ventana: 210 }, ahora).clase, 'espera');
+  assert.match(estadoDePieza({ hora: '15:00', ventana: 300 }, ahora).texto, /próxima vuelta/);
+  assert.equal(estadoDePieza({ hora: '10:00', ventana: 300 }, ahora).clase, 'mal');
+  assert.match(estadoDePieza({ hora: '10:00', ventana: 300, salio: '2026-09-29T13:05:00Z' }, ahora).texto, /10:05/);
+  // Facebook: 90 minutos entre posteos, de 8 a 22, hasta 5.
+  assert.match(proximoPosteo({ ultimo: '2026-09-29T18:30:00Z', hoySalieron: 2, ahora }), /desde las 17:00/);
+  assert.match(proximoPosteo({ ultimo: '2026-09-29T15:00:00Z', hoySalieron: 2, ahora }), /próxima vuelta/);
+  assert.match(proximoPosteo({ hoySalieron: 5, ahora }), /mañana desde las 8/);
+  assert.match(proximoPosteo({ ultimo: '2026-09-30T00:10:00Z', hoySalieron: 3, ahora: new Date('2026-09-30T00:15:00Z') }), /mañana/, 'si el próximo caería después de las 22, es mañana');
+  assert.match(proximoPosteo({ hoySalieron: 0, ahora: new Date('2026-09-29T09:00:00Z') }), /desde las 08:00/, 'a las 6 de la mañana');
+  const r = preguntaRedes({ ...REGLAS_FACEBOOK, porDia: 4 });
+  assert.match(r.texto, /hasta 4 por día/, 'la pregunta usa las reglas de verdad');
+  assert.match(r.texto, /sólo se puede borrar a mano/);
 });
 
 test('la página del panel: sin nada de afuera, sin indexar, y se puede instalar', () => {

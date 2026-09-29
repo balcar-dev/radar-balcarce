@@ -15,8 +15,9 @@ import path from 'node:path';
 import { placaClima, placaFarmacia, placaRepaso, placaUtiles, placaAgenda, COLOR_SECCION } from './placa.mjs';
 import { NUMEROS, decisionHumana, HORA_DE_CAMBIO, MINUTO_DE_CAMBIO } from '../ingesta/utiles.mjs';
 import { horariosDe, toca } from '../panel/horarios.mjs';
-import { elegirParaPodcast, repasoConPresupuesto, enlaceDeNota } from '../redes/elegir.mjs';
-import { CONTRATO_DIARIO, PIEZAS } from '../ingesta/criterio.mjs';
+import { enlaceDeNota } from '../redes/elegir.mjs';
+import { repasosDelDia } from '../redes/repasos.mjs';
+import { CONTRATO_DIARIO } from '../ingesta/criterio.mjs';
 import { datosDeLaWeb } from '../redes/datos.mjs';
 import {
   guionClima, guionClimaNoche, guionFarmacia, guionUtiles, guionAgenda, comoNombre,
@@ -24,7 +25,7 @@ import {
 import { INDICACIONES, momentoDeHora } from '../redes/prompt-redes.mjs';
 import { nombreDeEvento } from '../web/lib/eventos.js';
 import {
-  PODCASTS, NOMBRES_DE_PODCAST, HORA_AVISO, avisoDeClima, colorDelDia, notasContadasEnPodcasts, piezasPublicadasHoy, historiasQueSobran,
+  PODCASTS, NOMBRES_DE_PODCAST, HORA_AVISO, avisoDeClima, colorDelDia, piezasPublicadasHoy, historiasQueSobran,
 } from '../redes/piezas.mjs';
 
 // El cupo de reels es el recurso escaso del día, así que NO se gasta en lo que
@@ -387,8 +388,11 @@ export function planDelDia(datos, {
   // (notasContadasEnPodcasts). Sin esto, una nota local de puntaje alto se
   // repetía en el repaso de la mañana, la tarde y la noche, varios días
   // seguidos (27/09, Hernán: "veo de nuevo la nota de McCain").
-  const hechas = piezasPublicadasHoy(libro);
-  const libresParaPodcast = publicables.filter((n) => !notasContadasEnPodcasts(libro, fecha).has(n.id));
+  // Qué cuenta cada repaso que falta hoy: la misma función que usa la previa del
+  // panel del celular (redes/repasos.mjs), así lo que muestra el celular es lo
+  // que arma el plan.
+  const repasos = repasosDelDia(publicables, { libro, fecha });
+  const hechas = piezasPublicadasHoy(libro, fecha);
 
   // Tres podcasts por día en vez de noticias sueltas (24/09: una noticia sola
   // dicha en voz alta sonaba rara). Mañana y tarde cuentan tres notas de temas
@@ -400,18 +404,14 @@ export function planDelDia(datos, {
   // cierre y el tono salen de CRITERIO-REDES.md (redes/guiones.mjs).
   const SITIO = process.env.SITIO ?? 'https://radarbalcarce.com';
   const [podcastManana, podcastTarde, podcastNoche] = PODCASTS;
-  const yaContadas = [];
   [podcastManana, podcastTarde].forEach((ronda) => {
-    if (hechas.has(ronda.nombre)) return;
     // Con presupuesto de duración: cada podcast se sube también como historia y
     // una historia acepta 60 s. Si el guion no cabe en 55, se le sacan las
-    // oraciones de contexto y después notas (mínimo 2): `elegidas` son las que quedaron.
-    const repaso = repasoConPresupuesto(
-      elegirParaPodcast(libresParaPodcast, { cuantas: PIEZAS.notasPorPodcast, excluir: yaContadas }), { momento: ronda.momento, fecha },
-    );
-    if (!repaso) return; // un podcast de una sola noticia no es un repaso
+    // oraciones de contexto y después notas (mínimo 2): `elegidas` son las que
+    // quedaron. Sin repaso (ya salió hoy, o no hay dos notas), no hay pieza.
+    const repaso = repasos[ronda.nombre];
+    if (!repaso) return;
     const { guion, notas: elegidas } = repaso;
-    yaContadas.push(...elegidas);
     piezas.push({
       tipo: 'reel', hora: ronda.hora, nombre: ronda.nombre, notaId: elegidas[0].id,
       notaIds: elegidas.map((n) => n.id),
@@ -436,14 +436,8 @@ export function planDelDia(datos, {
   // También con presupuesto: el del 25/09 (4 notas, 62,7 s) dejó sin historia a las dos redes.
   // Puede repasar lo que ya contó el podcast de la mañana o el de la tarde
   // DE HOY (es el repaso del día entero), pero no lo de días anteriores.
-  const contadasAntes = notasContadasEnPodcasts(libro, fecha, 3, { incluirHoy: false });
-  const delDia = elegirParaPodcast(
-    publicables.filter((n) => !contadasAntes.has(n.id)),
-    { cuantas: PIEZAS.notasPodcastNoche },
-    { relevanciaParaPodcast: 0 },
-  );
-  const repasoNoche = repasoConPresupuesto(delDia, { momento: podcastNoche.momento, fecha });
-  if (repasoNoche && !hechas.has(podcastNoche.nombre)) {
+  const repasoNoche = repasos[podcastNoche.nombre];
+  if (repasoNoche) {
     const notasNoche = repasoNoche.notas;
     piezas.push({
       tipo: 'reel', hora: podcastNoche.hora, nombre: podcastNoche.nombre,

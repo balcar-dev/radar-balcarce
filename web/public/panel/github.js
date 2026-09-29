@@ -18,6 +18,9 @@ export const ARCHIVOS = {
   llaves: 'web/data/celular-llaves.json',
   pendientes: 'web/data/celular-pendientes.json',
   borradores: 'web/data/celular-borradores.json',
+  estado: 'web/data/celular-estado.json',
+  libro: 'web/data/redes.json',
+  retiradas: 'web/data/retiradas.json',
   portada: 'web/data/portada.json',
   esperando: 'web/data/esperando-cuerpo.json',
   archivo: 'web/data/archivo.json',
@@ -57,7 +60,7 @@ export function comoRenglones(json, claves = Object.keys(json)) {
 
 /** Cómo se escribe cada archivo que toca el celular. */
 export function formatear(ruta, json) {
-  if (ruta === ARCHIVOS.correcciones) return comoRenglones(json, ['notas']);
+  if (ruta === ARCHIVOS.correcciones || ruta === ARCHIVOS.retiradas) return comoRenglones(json, ['notas']);
   if (ruta === ARCHIVOS.decisiones) return comoRenglones(json, ['notas', 'redes']);
   return `${JSON.stringify(json, null, 1)}\n`;
 }
@@ -157,6 +160,14 @@ export function conDecision(json, id, decision) {
 /** Saca la decisión del celular sobre una nota (deshacer). */
 export function sinDecision(json, id) {
   const j = { notas: {}, redes: {}, ...json };
+  const { [id]: _, ...resto } = j.notas;
+  j.notas = resto;
+  return j;
+}
+
+/** Saca una nota de web/data/retiradas.json (deshacer un retiro hecho a mano). */
+export function sinRetirada(json, id) {
+  const j = { notas: {}, ...json };
   const { [id]: _, ...resto } = j.notas;
   j.notas = resto;
   return j;

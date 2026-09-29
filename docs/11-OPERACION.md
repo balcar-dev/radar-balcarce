@@ -16,6 +16,8 @@ lo que falta, en [`PENDIENTES.md`](../PENDIENTES.md).*
 | **La web** | https://radarbalcarce.com | Cualquiera |
 | Instagram | https://www.instagram.com/radarbalcarce | Cualquiera |
 | Facebook | La página "Radar Balcarce" (se busca por el nombre; su ID para la API está en `docs/07-REDES.md`) | Cualquiera |
+| **El panel del celular** (el de todos los días) | https://radarbalcarce.com/panel/ (instalado como app desde Chrome) | Quien tenga una llave de GitHub cargada en su celular |
+| El modo de prueba del panel del celular | https://radarbalcarce.com/panel/?demo | Cualquiera (notas inventadas, no guarda nada) |
 | **El panel**, desde la PC | http://localhost:4321 | Hernán y Andrés, con su usuario y contraseña |
 | El panel, desde afuera | La dirección del túnel de Tailscale, en `panel/datos/DIRECCION-DEL-PANEL.txt`, en la PC (no va al repositorio, que es público) | Igual |
 | El código y las corridas | https://github.com/balcar-dev/radar-balcarce (pestaña **Actions**) | Público desde el 25/09; cuenta `balcardev@gmail.com` |
@@ -40,8 +42,9 @@ cron-job.org, GitHub Actions y el interruptor de las redes.
 
 | Dónde | Qué se hace ahí | Se puede desde el celular |
 |---|---|---|
+| **El panel del celular** (radarbalcarce.com/panel/) | Decidir lo que espera, corregir, cambiar de sección, reescribir con IA, retirar y volver a publicar, mandar una nota a las redes, ver lo que sale hoy en las redes, actualizar la web | Sí: es para eso. Con la PC apagada |
 | **GitHub** (github.com/balcar-dev/radar-balcarce, cuenta `balcardev@gmail.com`) | Ver si algo falló (pestaña **Actions**), correr un workflow a mano (**Run workflow**), corregir o retirar una nota editando un archivo, prender o apagar las redes (**Settings**) | Sí, desde el navegador |
-| **El panel** (http://localhost:4321 en la PC; afuera, la dirección de `panel/datos/DIRECCION-DEL-PANEL.txt`) | Decidir las notas amarillas, cargar avisos, la agenda, el buzón | Sí, si la PC está prendida |
+| **El panel de la PC** (http://localhost:4321 en la PC; afuera, la dirección de `panel/datos/DIRECCION-DEL-PANEL.txt`) | Cargar avisos, la agenda a mano, el buzón (lo que el celular no hace) | Sí, si la PC está prendida |
 | **cron-job.org** (console.cron-job.org/jobs, cuenta `radarbalcarce@gmail.com`) | Ver y reactivar los trabajos que despiertan a GitHub | Sí |
 | **Claude** (una sesión de Claude Code sobre la carpeta del proyecto) | Cualquier cambio de código, escribir cuerpos, repasos editoriales, mirar la web publicada | Según dónde esté abierta la sesión |
 | **Meta, Cloudflare, Google AI Studio, DonWeb** | Cuentas: claves, borrar publicaciones, pagos, dominio | Sí, pero lo hace siempre una persona |
@@ -65,14 +68,51 @@ cron-job.org, GitHub Actions y el interruptor de las redes.
 | Cuándo | Qué | Tiempo |
 |---|---|---|
 | **Todos los días, a las 21** | Leer el WhatsApp del resumen. "✅ todo bien" = nada que hacer. Si no llegó, ver "El WhatsApp no llega" | 1 minuto |
-| **Cuando llega un WhatsApp de notas esperando** (cada 3 horas como mucho) | Decidirlas en el panel (`09-PANEL`) | Unos minutos |
+| **Cuando llega un WhatsApp de notas esperando** (cada 3 horas como mucho) | Decidirlas en el panel del celular, pestaña **Esperan** (ver "0. El panel del celular") | Unos minutos |
 | **Cuando llega un WhatsApp de problema** | Seguir lo que dice; si no se entiende, "Si algo dejó de salir" | — |
 | **Los lunes** | Mirar que la **Auditoría** haya corrido (Actions → Auditoría). Corrió por primera vez el 28/09; si un lunes no corre, correrla a mano (Run workflow) | 1 minuto |
 | **Principios de cada mes** | Mirar el gasto de la clave paga de Gemini en Google AI Studio (presupuesto: USD 10 por mes desde octubre) | 2 minutos |
 | **Cada 90 días** (la primera, hacia el 24/12/2026) | Volver a verificar las medidas de las redes (`FORMATOS.md`). La auditoría avisa | — |
 | **Antes del 21/09/2027** | Renovar el dominio en DonWeb y el token de GitHub de cron-job.org (el vigilante avisa 30 días antes) | — |
 
+## 0. El panel del celular
+
+Es lo de todos los días. Cómo funciona por dentro: `09-PANEL`. Para entrar hace
+falta una **llave de GitHub** que se crea una sola vez: el mismo panel lo
+explica paso a paso la primera vez (el detalle, en `09-PANEL`, "La llave de
+GitHub"). Se instala desde Chrome: menú ⋮ → **Instalar app**. **Si se pierde
+un celular**: en GitHub (cuenta `balcardev@gmail.com`) → Settings → Developer
+settings → Fine-grained tokens → esa llave → **Delete**.
+
+**Todo lo que se hace ahí sale en la web en la próxima actualización** (a los
+:00 y :30, más unos minutos). Para no esperar: "Más" → **Actualizar la web
+ahora** (unos 8 minutos).
+
+| Pestaña | Para qué | Lo que conviene saber |
+|---|---|---|
+| **Esperan** | Las notas que el sistema no publica solo | Cada una dice **por qué espera y qué mirar**, qué contó cada medio (con el enlace a la nota original) y trae un **borrador que escribe la IA sola** (tarda hasta una o dos actualizaciones). "Publicar este texto" abre el borrador para corregirlo, y recién ahí se publica. "Descartar" pregunta antes; lo descartado queda al final ("Descartadas") y se puede volver a traer |
+| **Sin cuerpo** | Notas que **salen solas** pero todavía no tienen cuerpo | La IA las vuelve a intentar sola hasta 3 veces; cada una dice cuántas van. Si una importa y no puede esperar, "Escribir con IA ahora" o "Escribir a mano" |
+| **Publicadas** | Lo que está en la web | El número de la pestaña son las de **la portada** (las últimas 36 horas); arriba dice también cuántas tienen página **en el archivo** (hasta 180 días; se buscan con "Buscar también en el archivo"). Desde cada nota: Editar, Reescribir con IA, Mandar también a las redes, Retirar de la web |
+| **Redes** | Lo que sale hoy en Facebook e Instagram | El cronograma (hora, voz, si salió), **qué noticias cuenta cada repaso** (lo que contaría si saliera ahora: puede cambiar hasta su hora) y la cola de Facebook |
+| **Más** | Actualizar la web, y cómo funciona todo | — |
+
+**"Mandar también a las redes"** (en una nota publicada): la pone en la cola de
+Facebook, con su foto en Instagram. Sale en la próxima vuelta de las redes que
+corresponda (de 8 a 22, con 90 minutos entre posteos, hasta 5 por día), antes
+que las que van solas. **Antes pregunta.** Mientras no salga, el mismo botón la
+saca de la cola; una vez publicada, sólo se borra a mano en Facebook e
+Instagram. Sirve también para Política y Policiales, que solas no van nunca.
+
+**Si retirás una nota por error:** mientras no pasó la próxima actualización,
+en la misma nota aparece **Deshacer**. Después, la nota está al final de
+**Publicadas → Retiradas** durante 30 días: "Volver a publicar" la trae de
+nuevo, **con la misma dirección**, en la próxima actualización. Lo que ya había
+salido en Facebook o Instagram no se toca solo, ni al retirar ni al volver.
+
 ## 1. Corregir una nota ya publicada
+
+Lo más fácil: panel del celular → **Publicadas** → la nota → **Editar**. Lo que
+sigue es cómo hacerlo sin el panel, desde GitHub.
 
 Sirve para cambiar el **título**, la **bajada** (se llama `copete`), la
 **sección** o el **cuerpo** de una nota que ya está en la web, sin el panel.
@@ -116,9 +156,14 @@ aplicados por `web/scripts/generar-datos.mjs` (ver `06-WEB`).
 
 ## 2. Sacar (retirar) una nota de la web
 
+Lo más fácil: panel del celular → **Publicadas** → la nota → **Retirar de la
+web** (pide el motivo; se puede volver a publicar durante 30 días). Lo que
+sigue es cómo hacerlo desde GitHub.
+
 Para una nota que no tendría que haber salido: la saca de la portada, de las
 secciones y del archivo, y **la página deja de existir**, aunque la ingesta la
-vuelva a traer. Vale aunque el panel esté prendido.
+vuelva a traer. Vale aunque el panel esté prendido. También queda en la
+papelera del celular 30 días.
 
 1. Identificador de la nota (como en 1.1).
 2. Editar `web/data/retiradas.json` en GitHub y agregar, dentro de `"notas"`:
