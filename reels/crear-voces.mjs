@@ -126,8 +126,9 @@ if (process.argv[2] === 'listar') {
   process.exit(0);
 }
 
-if (process.argv[2] === 'dialogo' || process.argv[2] === 'dialogo2') {
+if (['dialogo', 'dialogo2', 'dialogo3'].includes(process.argv[2])) {
   const version2 = process.argv[2] === 'dialogo2';
+  const version3 = process.argv[2] === 'dialogo3';
   // Una charla de radio entre la locutora y el locutor (28/09). Con voces propias
   // (voice_…) Google no deja hacer la conversación en un solo pedido: se sintetiza
   // cada intervención por separado, con la voz fija de cada uno, y se pegan con una
@@ -159,7 +160,19 @@ if (process.argv[2] === 'dialogo' || process.argv[2] === 'dialogo2') {
     ['m', 'Todo lo demás lo encontrás en Radar Balcarce punto com.'],
     ['h', 'Que tengan una buena noche.'],
   ];
-  const GUION = version2 ? GUION2 : GUION1;
+  // La versión 3 (a pedido: "no suena profesional, bastante falso"): sin charla ni
+  // reacciones. Un noticiero con dos lectores que se turnan las notas, con el mismo
+  // estilo sobrio los dos. Mismos hechos.
+  const ESTILO3 = 'professional local radio newsreader, calm, clear and steady, natural pace';
+  const GUION3 = [
+    ['m', 'Buenas noches, Balcarce. Esto es Radar Balcarce, lo que dejó este lunes.', ESTILO3],
+    ['m', 'El Fangio volvió a rugir después de quince años.', ESTILO3],
+    ['h', 'Otra que se comenta: la mala suerte de Ariel Durán en Balcarce.', ESTILO3],
+    ['m', 'Movimiento 245 es un espacio de contención y recuperación que funciona en Balcarce.', ESTILO3],
+    ['h', 'Y Argentina y Bolivia: cuándo juegan, las entradas y las claves de un Kempes con aforo reducido.', ESTILO3],
+    ['h', 'Todo lo demás lo encontrás en Radar Balcarce punto com. Que tengan una buena noche.', ESTILO3],
+  ];
+  const GUION = version3 ? GUION3 : version2 ? GUION2 : GUION1;
   const partes = [];
   for (const [i, [quien, texto, estilo]] of GUION.entries()) {
     const gen = await api('POST', '/interactions', {
@@ -181,7 +194,7 @@ if (process.argv[2] === 'dialogo' || process.argv[2] === 'dialogo2') {
   const lista = path.join(SALIDA, 'lista.txt');
   const aRuta = (x) => x.split(path.sep).join('/');
   fs.writeFileSync(lista, partes.map((p) => `file '${aRuta(p)}'\nfile '${aRuta(silencio)}'`).join('\n'));
-  const salida = path.join(SALIDA, version2 ? 'dialogo2.mp3' : 'dialogo.mp3');
+  const salida = path.join(SALIDA, version3 ? 'dialogo3.mp3' : version2 ? 'dialogo2.mp3' : 'dialogo.mp3');
   await correr(ffmpeg, ['-y', '-v', 'error', '-f', 'concat', '-safe', '0', '-i', lista, '-ar', '24000', '-ac', '1', '-b:a', '128k', salida]);
   const palabras = GUION.map((t) => t[1]).join(' ').split(/\s+/).length;
   const info = await correr(ffmpeg, ['-i', salida, '-f', 'null', '-']).catch((x) => x);
