@@ -1,6 +1,6 @@
 # 08 · Infraestructura: qué corre dónde
 
-*Escrito el 28/09/2026 leyendo los doce workflows de `.github/workflows/`, el
+*Escrito el 28/09/2026 leyendo los trece workflows de `.github/workflows/`, el
 código que corren y el historial de corridas de GitHub de ese día. Si algo de
 acá no coincide con los `.yml` o con el código, mandan ellos. Los secretos
 figuran **sólo por nombre**: sus valores no se escriben en ningún documento ni
@@ -81,7 +81,7 @@ PC de Hernán: el panel (puerto 4321, `09-PANEL`) ── sube sus decisiones a G
    `CLAUDE.md`). Los que chocan entre sí se ponen de acuerdo con `git pull
    --rebase` (ver "Cómo no se pisan").
 
-## Los doce workflows
+## Los trece workflows
 
 "Gasta plata" quiere decir si puede generar un cargo: GitHub no cobra minutos
 porque el repositorio es público; lo único pago es la clave de Gemini de redes.
@@ -95,6 +95,7 @@ porque el repositorio es público; lo único pago es la clave de Gemini de redes
 | **Vigilancia** (`vigilancia.yml`) | cron-job.org a los :00 y :30; respaldo `schedule` cada 3 horas (a los :17 UTC); a mano: `vigilar`, `probar-resumen`, `probar-cierre` | `node redes/vigilar.mjs` | `WHATSAPP_TELEFONO`, `WHATSAPP_APIKEY`, `CLOUDFLARE_ACCOUNT_ID`, `CLOUDFLARE_ANALYTICS_TOKEN`, `CLOUDFLARE_API_TOKEN`, `META_TOKEN`, `GITHUB_TOKEN` (automático); variable `REDES_ACTIVAS` | `web/data/vigilancia.json` y `web/data/estadisticas.json` (no en los modos de prueba) | 10 min | No |
 | **Auditoría** (`auditoria.yml`) | Lunes 12:00 UTC (9:00 en Balcarce); a mano | `redes/auditar.mjs`; `redes/auditar-redes.mjs --semana` (si falla, sigue) | `WHATSAPP_TELEFONO`, `WHATSAPP_APIKEY`, `META_TOKEN` | `web/data/auditoria.json` | sin tope propio (el de GitHub: 6 h) | No |
 | **Auditar redes** (`auditar-redes.yml`) | A mano (opcional: `desde`, AAAA-MM-DD) | `redes/auditar-redes.mjs` cuatro veces: hoy, ayer, la semana y "crudo" | `META_TOKEN` | Nada | 10 min | No |
+| **Crear voces** (`crear-voces.yml`) | A mano: `modo` (`crear` los seis candidatos, `dialogo`/`dialogo2`/`dialogo3` una prueba de charla, `listar` la biblioteca de Google, `borrar` una o más voces propias) | `npm ci`, `reels/crear-voces.mjs` | `GEMINI_API_KEY_REDES` | Nada (los audios quedan como artefactos 7 días) | 30 min | **Sí, centavos por audio; `crear` además guarda voces nuevas en el proyecto de Google (200 como máximo)** |
 | **Auditar voz** (`auditar-voz.yml`) | A mano (opcional: `explorar`) | `npm ci`, `reels/auditar-voz.mjs [--explorar]` | `GEMINI_API_KEY_REDES` | Nada | 15 min | Centavos (unos audios cortos y su transcripción) |
 | **Ver Facebook** (`ver-facebook.yml`) | A mano | `redes/ver-facebook.mjs` | `META_TOKEN` | Nada | 5 min | No |
 | **Prueba de estadísticas** (`prueba-estadisticas.yml`) | A mano | `redes/estadisticas.mjs` | `CLOUDFLARE_ACCOUNT_ID`, `CLOUDFLARE_ANALYTICS_TOKEN`, `CLOUDFLARE_API_TOKEN`, `META_TOKEN` | Nada | 5 min | No |
@@ -192,7 +193,7 @@ si compartieran, un día de muchos videos se comería la cuota de la redacción
 | Secreto | Proyecto / servicio | Para qué | Modelo | Topes | Si falta | Costo |
 |---|---|---|---|---|---|---|
 | `GEMINI_API_KEY_REDACCION` (acepta el nombre viejo `GEMINI_API_KEY`) | Google AI Studio, proyecto "RadarGratis", sin facturación | Reescribir las notas: título, bajada, cuerpo (`reels/reescritura.mjs`, `04-REDACCION`) | `gemini-flash-lite-latest` | Google da 500 pedidos por día. El sistema se pone **450 por día** si la lectura tiene su propia clave, **330** si no (`topeDeReescrituras`, `REESCRITURA` en `ingesta/criterio.mjs`); 40 por corrida; los últimos 80 del día quedan para lo de Balcarce; 3 intentos por nota | Usa la de redes (paga) | Gratis |
-| `GEMINI_API_KEY_REDES` | Google AI Studio, proyecto "RadarBalcarce", **con facturación** (Nivel 1) | La voz de las piezas (`reels/voz-gemini.mjs`) y la auditoría de voz. Además, **respaldo pago de la redacción**: si la gratis no está o contesta 429 ("sin cupo"), se reintenta una vez con ésta | `gemini-2.5-flash-preview-tts` (voz) | Sin tope en el código (se sacó el 28/09); 2 segundos entre pedidos | La pieza no sale (nunca con otra voz, 28/09) | **Paga.** Hasta el 26/09 se gastaron USD 3,27 (con pruebas); el uso normal ronda USD 0,10 por día. Desde octubre se mide con un presupuesto de USD 10 por mes; el límite de gasto en Google ya está puesto (28/09) |
+| `GEMINI_API_KEY_REDES` | Google AI Studio, proyecto "RadarBalcarce", **con facturación** (Nivel 1) | La voz de las piezas (`reels/voz-gemini.mjs`) y la auditoría de voz. Además, **respaldo pago de la redacción**: si la gratis no está o contesta 429 ("sin cupo"), se reintenta una vez con ésta | `gemini-3.8-flash-tts` (voz; USD 9 por millón de tokens de audio, 25 por segundo: 1,4 centavos de dólar por minuto hasta el 31/12/2026, el doble desde el 1/1/2027) | Sin tope en el código (se sacó el 28/09); 2 segundos entre pedidos | La pieza no sale (nunca con otra voz, 28/09) | **Paga.** Hasta el 26/09 se gastaron USD 3,27 (con pruebas); el uso normal ronda USD 0,10 por día. Desde octubre se mide con un presupuesto de USD 10 por mes; el límite de gasto en Google ya está puesto (28/09) |
 | `GEMINI_API_KEY_CLASIFICACION` (cargada el 28/09) | Google, su propio proyecto | La lectura con IA (`ingesta/lectura-ia.mjs`: qué entra, sección, qué es de Balcarce, repetidas; `03-SELECCION`) y el banco de fotos (`ingesta/fotos.mjs`, `05-FOTOS`) | `gemini-flash-lite-latest` | Fichas: **200 pedidos por día** con esta clave (60 sin ella, `topeDeLecturas`), 5 por corrida, 12 notas por pedido; repetidas: 60 por día | Usa la de redacción. **Nunca la de redes** | No es la paga |
 | `GROQ_API_KEY` (cargada el 28/09) | Groq (console.groq.com) | Segundo proveedor, gratis: si Gemini falla o se queda sin cupo en la lectura o en las fotos, se prueba el mismo pedido con Groq | `openai/gpt-oss-120b` (lectura); `qwen/qwen3.8-27b` (fotos, con visión) | Los de la cuenta gratis de Groq | La lectura sigue sólo con Gemini | Gratis |
 
@@ -294,6 +295,7 @@ sitio, no una clave.
 |---|---|---|---|
 | Token de GitHub de cron-job.org | **21/09/2027** | Crear otro en GitHub (cuenta `balcardev@gmail.com` → Settings → Developer settings → Fine-grained tokens, sólo este repositorio, Actions lectura y escritura) y pegarlo en el encabezado de **todos** los trabajos de cron-job.org | El vigilante, desde 30 días antes |
 | Dominio `radarbalcarce.com` (DonWeb) | **21/09/2027** | Renovarlo en DonWeb. Si vence, se cae la web y todos los enlaces de los posteos | El vigilante, desde 30 días antes |
+| Las dos voces propias de Gemini (creadas el 29/09/2026) | **29/09/2027** | Crear otras dos (Actions → "Crear voces" → `crear`, elegir una locutora y un locutor, borrar el resto con `borrar`) y cambiar los identificadores en `CRITERIO-REDES.md` sección 6 antes de que venzan: si vencen, las piezas con voz dejan de salir | Nadie todavía (`PENDIENTES.md`) |
 | Medidas de imágenes de las redes (`redes/formatos.mjs`) | 90 días desde el 25/09/2026 | Volver a verificarlas (`FORMATOS.md`) | La auditoría semanal |
 | `META_TOKEN` | No vence | — | — |
 | Presupuesto de Gemini (clave paga) | Cada mes, desde octubre | Mirar el gasto en Google AI Studio | Nadie todavía (`PENDIENTES.md`) |
@@ -333,7 +335,7 @@ sitio, no una clave.
 
 | Archivo | Qué hace | Quién lo llama | Qué lee | Qué escribe |
 |---|---|---|---|---|
-| `.github/workflows/*.yml` | Los doce workflows (tabla de arriba) | cron-job.org, GitHub, una persona | secretos y variables | commits en `main`, artefactos |
+| `.github/workflows/*.yml` | Los trece workflows (tabla de arriba) | cron-job.org, GitHub, una persona | secretos y variables | commits en `main`, artefactos |
 | `web/scripts/generar-datos.mjs` | Todo lo que hace "Actualizar la web" entre las pruebas y la compilación | `actualizar.yml` | fuentes, `web/data/`, claves de IA | `web/data/*.json`, `web/public/fotos-notas/` |
 | `web/scripts/revisar-seo.mjs` | Que el SEO siga en el HTML compilado | `actualizar.yml` | `web/out` | — |
 | `reels/claves.mjs` | Las cuatro claves de IA | redacción, lectura, fotos, voz | entorno, `.env` | — |

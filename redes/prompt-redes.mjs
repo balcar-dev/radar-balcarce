@@ -1,13 +1,17 @@
-// La identidad y la voz de las redes, leídas de CRITERIO-REDES.md.
+// La identidad y las voces de las redes, leídas de CRITERIO-REDES.md.
 //
-// Hernán y Andrés pidieron (26/09) que la locutora sea SIEMPRE la misma, que el
-// medio sea siempre "Radar Balcarce" y la página siempre radarbalcarce.com. Esto
-// lee de ese documento, sin copia en el código:
+// Hernán y Andrés pidieron (26/09) que la voz sea SIEMPRE la misma, que el medio
+// sea siempre "Radar Balcarce" y la página siempre radarbalcarce.com. Desde el
+// 28/09 hay dos voces propias (la locutora y el locutor, creadas con Voice Design
+// de Gemini 3.8) y cada pieza tiene siempre la misma. Esto lee de ese documento,
+// sin copia en el código:
 //
 //   <!-- IDENTIDAD:INICIO -->     Medio / Sitio escrito / Sitio dicho
-//   <!-- VOZ:NOMBRE:INICIO -->    la voz de Gemini (Kore)
-//   <!-- VOZ:BASE:INICIO -->      la indicación de siempre
-//   <!-- VOZ:MANANA|TARDE|NOCHE:INICIO -->   la del momento del día
+//   <!-- VOZ:LOCUTORA:INICIO -->  el identificador de la voz de la locutora (voice_…)
+//   <!-- VOZ:LOCUTOR:INICIO -->   el de la voz del locutor
+//   <!-- VOZ:REPARTO:INICIO -->   qué voz dice cada pieza ("clima-manana: locutora")
+//   <!-- VOZ:BASE:INICIO -->      el estilo de siempre (corto, en inglés)
+//   <!-- VOZ:MANANA|TARDE|NOCHE:INICIO -->   el estilo del momento del día
 //
 // (cada una cierra con su :FIN). Si el archivo falta o le falta una parte,
 // leerCriterioRedes() LANZA, y como los módulos que lo usan lo cargan al
@@ -44,8 +48,9 @@ export const MOMENTOS = ['manana', 'tarde', 'noche'];
 
 /**
  * Lee el criterio de las redes. Devuelve
- *   { texto, medio, sitio, sitioDicho, vozNombre, base, momentos: { manana, tarde, noche } }
- * o lanza si falta el archivo o una parte.
+ *   { texto, medio, sitio, sitioDicho, voces: { locutora, locutor }, reparto, base,
+ *     momentos: { manana, tarde, noche } }
+ * o lanza si falta el archivo o una parte. `reparto` es { pieza: "locutora"|"locutor" }.
  */
 export function leerCriterioRedes(ruta = RUTA_CRITERIO_REDES) {
   let texto;
@@ -72,15 +77,29 @@ export function leerCriterioRedes(ruta = RUTA_CRITERIO_REDES) {
   const voz = entreMarcas(texto, 'VOZ', ruta);
   const parte = (nombre) => entreMarcas(voz, `VOZ:${nombre}`, ruta);
   const base = parte('BASE');
-  if (!/punto ar/i.test(base) || !/Radar Balcarce/.test(base)) {
-    throw falla(ruta, 'la indicación base tiene que nombrar "Radar Balcarce" y prohibir explícitamente "punto ar"');
+  // El identificador de una voz propia de Gemini: voice_ y letras y números.
+  const idDeVoz = (nombre) => {
+    const id = parte(nombre).trim();
+    if (!/^voice_[a-z0-9]+$/.test(id)) throw falla(ruta, `la voz ${nombre} no es un identificador de Gemini (voice_…): dice "${id}"`);
+    return id;
+  };
+  const voces = { locutora: idDeVoz('LOCUTORA'), locutor: idDeVoz('LOCUTOR') };
+  if (voces.locutora === voces.locutor) throw falla(ruta, 'la locutora y el locutor no pueden ser la misma voz');
+  // Quién dice cada pieza: una línea "pieza: locutora|locutor" por pieza.
+  const reparto = {};
+  for (const linea of parte('REPARTO').split('\n')) {
+    const m = linea.trim().match(/^([a-z0-9-]+):\s*(locutora|locutor)$/);
+    if (!m) throw falla(ruta, `en el reparto de voces, la línea "${linea.trim()}" no es "pieza: locutora" ni "pieza: locutor"`);
+    if (reparto[m[1]]) throw falla(ruta, `en el reparto de voces, "${m[1]}" está repetida`);
+    reparto[m[1]] = m[2];
   }
   return {
     texto,
     medio,
     sitio,
     sitioDicho,
-    vozNombre: parte('NOMBRE'),
+    voces,
+    reparto,
     base,
     momentos: { manana: parte('MANANA'), tarde: parte('TARDE'), noche: parte('NOCHE') },
   };
@@ -95,21 +114,34 @@ export const MEDIO = CRITERIO.medio;
 export const SITIO = CRITERIO.sitio;
 /** "Radar Balcarce punto com": la dirección, dicha en voz alta. */
 export const SITIO_DICHO = CRITERIO.sitioDicho;
-/** La voz de Gemini: siempre la misma (Kore). */
-export const VOZ_NOMBRE = CRITERIO.vozNombre;
-/** La indicación de siempre, la misma para toda pieza. */
+/** Las dos voces propias de Gemini (identificadores voice_…). */
+export const VOCES = CRITERIO.voces;
+/** Qué voz dice cada pieza: { pieza: "locutora"|"locutor" }. */
+export const REPARTO = CRITERIO.reparto;
+/** El estilo de siempre, el mismo para toda pieza (corto, en inglés). */
 export const INDICACION_BASE = CRITERIO.base;
 /** Cómo suena cada momento del día (se suma a la base). */
 export const INDICACIONES = CRITERIO.momentos;
 
-/** La indicación completa: la de siempre más la del momento (si hay). Es lo que
- *  recibe Gemini en producción (reels/reel.mjs) y en la auditoría. */
+/** La voz (identificador voice_…) de una pieza. Los avisos de clima (`aviso-helada`,
+ *  `aviso-granizo`…) comparten la fila `aviso`. Una pieza que no está en el reparto
+ *  LANZA: mejor que no salga a que hable con una voz que nadie eligió. */
+export function vozDePieza(nombre) {
+  const clave = String(nombre).startsWith('aviso-') ? 'aviso' : String(nombre);
+  const quien = REPARTO[clave];
+  if (!quien) throw new Error(`la pieza "${nombre}" no tiene voz en el reparto de CRITERIO-REDES.md (sección 6)`);
+  return VOCES[quien];
+}
+
+/** El estilo completo: el de siempre más el del momento (si hay). Es lo que recibe
+ *  Gemini, aparte del texto, en producción (reels/reel.mjs) y en la auditoría. */
 export const componerIndicacion = (delMomento = '') => (delMomento ? `${INDICACION_BASE} ${delMomento}` : INDICACION_BASE);
 
-/** Las opciones de voz de una pieza según su momento: la voz y la indicación. */
-export function opcionesDeVoz(momento) {
+/** Las opciones de voz según el momento del día y, si se sabe, la pieza: la voz y el
+ *  estilo. Sin pieza habla la locutora. */
+export function opcionesDeVoz(momento, pieza = null) {
   if (!MOMENTOS.includes(momento)) throw new Error(`momento desconocido: ${momento}`);
-  return { voz: VOZ_NOMBRE, indicacion: componerIndicacion(INDICACIONES[momento]) };
+  return { voz: pieza ? vozDePieza(pieza) : VOCES.locutora, indicacion: componerIndicacion(INDICACIONES[momento]) };
 }
 
 /** Qué franja del día es una hora "HH:MM": hasta las 12:59 mañana, desde las 13

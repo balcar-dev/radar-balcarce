@@ -25,7 +25,7 @@ import os from 'node:os';
 import path from 'node:path';
 import * as criterio from '../ingesta/criterio.mjs';
 import {
-  leerCriterioRedes, RUTA_CRITERIO_REDES, MEDIO, SITIO, SITIO_DICHO, VOZ_NOMBRE, INDICACION_BASE, INDICACIONES,
+  leerCriterioRedes, RUTA_CRITERIO_REDES, MEDIO, SITIO, SITIO_DICHO, VOCES, REPARTO, vozDePieza, INDICACION_BASE, INDICACIONES,
   opcionesDeVoz, componerIndicacion, momentoDeHora, MOMENTOS,
 } from '../redes/prompt-redes.mjs';
 import {
@@ -36,10 +36,10 @@ import {
 import {
   repasoConPresupuesto, elegirParaPodcast, REGLAS_PIEZAS, mensajeDeNota, FRASES_DEL_ENLACE,
 } from '../redes/elegir.mjs';
-import { pieDePieza } from '../redes/piezas.mjs';
+import { pieDePieza, PODCASTS } from '../redes/piezas.mjs';
 import { fechaEnBalcarce } from '../ingesta/utiles.mjs';
 import { clipsDeAuditoria, revisarTranscripcion, cuantasDirecciones } from '../redes/auditoria-voz.mjs';
-import { INDICACION, VOZ_DEL_MEDIO } from '../reels/voz-gemini.mjs';
+import { VOZ_POR_DEFECTO, ESTILO_POR_DEFECTO } from '../reels/voz-gemini.mjs';
 import { planDelDia } from '../reels/plan.mjs';
 
 // El guion de un podcast sin tope de duración (el recorte se prueba en
@@ -106,31 +106,52 @@ test('la identidad sale del documento: "Radar Balcarce", radarbalcarce.com y "Ra
   assert.equal(c.sitioDicho, SITIO_DICHO);
 });
 
-test('la voz es siempre Kore y la indicación sale del documento, sin copia en el código', () => {
-  assert.equal(VOZ_NOMBRE, 'Kore');
-  assert.equal(VOZ_DEL_MEDIO, VOZ_NOMBRE);
-  assert.equal(INDICACION, INDICACION_BASE);
-  assert.match(INDICACION_BASE, /punto ar/, 'la indicación tiene que prohibir "punto ar" a la voz');
-  assert.match(INDICACION_BASE, /Radar Balcarce punto com/);
+test('las voces son las dos propias de Gemini y el estilo sale del documento, sin copia en el código (28/09)', () => {
+  // Dos voces propias (Voice Design, es-AR), distintas, con su identificador de Google.
+  assert.match(VOCES.locutora, /^voice_[a-z0-9]+$/);
+  assert.match(VOCES.locutor, /^voice_[a-z0-9]+$/);
+  assert.notEqual(VOCES.locutora, VOCES.locutor);
+  assert.ok(DOC.includes(VOCES.locutora) && DOC.includes(VOCES.locutor), 'los identificadores no están tal cual en el documento');
+  assert.equal(VOZ_POR_DEFECTO, VOCES.locutora);
+  assert.equal(ESTILO_POR_DEFECTO, INDICACION_BASE);
+  // El estilo es corto y en inglés: con una indicación larga el modelo 3.8 la leía en voz alta.
+  assert.ok(INDICACION_BASE.length < 200, `el estilo base tiene ${INDICACION_BASE.length} caracteres`);
+  assert.ok(DOC.includes(INDICACION_BASE), 'el estilo base no está tal cual en el documento');
   // Los momentos del día que usa el plan son los del documento.
   for (const m of MOMENTOS) {
-    assert.ok(DOC.includes(INDICACIONES[m]), `la indicación de ${m} no está tal cual en el documento`);
-    assert.equal(opcionesDeVoz(m).voz, 'Kore');
+    assert.ok(DOC.includes(INDICACIONES[m]), `el estilo de ${m} no está tal cual en el documento`);
+    assert.ok(INDICACIONES[m].length < 100);
+    assert.equal(opcionesDeVoz(m).voz, VOCES.locutora, 'sin pieza habla la locutora');
     assert.equal(opcionesDeVoz(m).indicacion, componerIndicacion(INDICACIONES[m]));
   }
-  assert.ok(DOC.includes(INDICACION_BASE), 'la indicación base no está tal cual en el documento');
-  // El saludo de cada momento en la indicación: nunca "buen día" fuera de la mañana.
-  assert.match(INDICACIONES.manana, /buen día/);
-  assert.match(INDICACIONES.tarde, /buenas tardes/);
-  assert.match(INDICACIONES.noche, /buenas noches/);
 });
 
-test('ni la voz ni la indicación están escritas en el código (sólo en CRITERIO-REDES.md)', () => {
-  for (const f of ['reels/voz-gemini.mjs', 'reels/reel.mjs', 'reels/plan.mjs', 'redes/guiones.mjs']) {
+test('cada pieza tiene siempre la misma voz, según el reparto del documento (28/09)', () => {
+  // La tabla que confirmaron Hernán y Andrés: se alternan a lo largo del día.
+  const esperado = {
+    'clima-manana': 'locutora', noticia1: 'locutor', noticia2: 'locutora', farmacia: 'locutor',
+    'clima-noche': 'locutora', podcast: 'locutor', utiles: 'locutor', agenda: 'locutora', aviso: 'locutor',
+  };
+  assert.deepEqual(REPARTO, esperado);
+  for (const [pieza, quien] of Object.entries(esperado)) {
+    if (pieza !== 'aviso') assert.equal(vozDePieza(pieza), VOCES[quien], pieza);
+  }
+  // Los avisos de clima comparten una fila.
+  assert.equal(vozDePieza('aviso-helada'), VOCES.locutor);
+  assert.equal(vozDePieza('aviso-granizo'), VOCES.locutor);
+  assert.equal(opcionesDeVoz('noche', 'podcast').voz, VOCES.locutor);
+  // Una pieza sin voz en el reparto no habla: mejor que no salga a que suene a otra.
+  assert.throws(() => vozDePieza('pieza-nueva'), /no tiene voz en el reparto/);
+  // Y todas las piezas fijas del plan (redes/piezas.mjs) tienen su voz.
+  for (const p of PODCASTS) assert.ok(REPARTO[p.nombre], `el podcast ${p.nombre} no tiene voz`);
+});
+
+test('ni las voces ni el estilo están escritos en el código (sólo en CRITERIO-REDES.md)', () => {
+  for (const f of ['reels/voz-gemini.mjs', 'reels/reel.mjs', 'reels/plan.mjs', 'redes/guiones.mjs', 'redes/prompt-redes.mjs']) {
     const codigo = leer(f);
-    assert.ok(!/locutora de una radio/.test(codigo), `${f} trae una copia de la indicación de voz`);
-    assert.ok(!/voiceName:\s*'Kore'|voz = 'Kore'|\|\| 'Kore'|\?\? 'Kore'/.test(codigo), `${f} trae la voz escrita`);
-    assert.ok(!/Es de (mañana|tarde|noche):/.test(codigo), `${f} trae una copia de la indicación de un momento`);
+    assert.ok(!/voice_[a-z0-9]{6,}/.test(codigo), `${f} trae un identificador de voz escrito`);
+    assert.ok(!/local radio announcer/.test(codigo), `${f} trae una copia del estilo`);
+    assert.ok(!/It is the (morning|afternoon|night)/.test(codigo), `${f} trae una copia del estilo de un momento`);
   }
 });
 
@@ -148,7 +169,10 @@ test('si falta CRITERIO-REDES.md o le falta una parte, falla a la vista', () => 
   assert.throws(() => leerCriterioRedes(roto('com-ar', (t) => t.replace('Sitio escrito: radarbalcarce.com', 'Sitio escrito: radarbalcarce.com.ar'))), /radarbalcarce\.com/);
   assert.throws(() => leerCriterioRedes(roto('otro-medio', (t) => t.replace('Medio: Radar Balcarce', 'Medio: Radar'))), /Radar Balcarce/);
   assert.throws(() => leerCriterioRedes(roto('dicho-mal', (t) => t.replace('Sitio dicho: Radar Balcarce punto com', 'Sitio dicho: Radar Balcarce punto com punto ar'))), /punto com/);
-  assert.throws(() => leerCriterioRedes(roto('base-sin-prohibicion', (t) => t.replace(/Nunca agregues "punto ar"[^\n]*/, 'Listo.'))), /punto ar/);
+  assert.throws(() => leerCriterioRedes(roto('voz-mal', (t) => t.replace(/voice_[a-z0-9]+(?=\r?\n<!-- VOZ:LOCUTORA:FIN)/, 'Kore'))), /no es un identificador de Gemini/);
+  assert.throws(() => leerCriterioRedes(roto('la-misma-voz', (t) => t.replace(/voice_gmvugyu6tti1/, 'voice_x0fgw7agee4o'))), /no pueden ser la misma voz/);
+  assert.throws(() => leerCriterioRedes(roto('reparto-raro', (t) => t.replace('clima-manana: locutora', 'clima-manana: los dos'))), /reparto de voces/);
+  assert.throws(() => leerCriterioRedes(roto('reparto-repetido', (t) => t.replace('aviso: locutor', 'aviso: locutor\nfarmacia: locutora'))), /está repetida/);
   assert.throws(() => leerCriterioRedes(roto('vacia', (t) => t.replace(/<!-- VOZ:MANANA:INICIO -->[\s\S]*?<!-- VOZ:MANANA:FIN -->/, '<!-- VOZ:MANANA:INICIO -->\n<!-- VOZ:MANANA:FIN -->'))), /vacía/);
 });
 

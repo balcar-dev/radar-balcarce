@@ -18,6 +18,12 @@ export const NUMEROS = [
   { categoria: 'Emergencias', nombre: 'Emergencias (línea única)', numero: '911' },
   { categoria: 'Emergencias', nombre: 'SAME / Emergencias médicas', numero: '107' },
   { categoria: 'Emergencias', nombre: 'Bomberos', numero: '100' },
+  // La guardia de la Cooperativa de Electricidad (coopbalcarce.com.ar, mirada el
+  // 28/09/2026): el 0800 atiende las 24 horas, los 365 días. Va en Emergencias, sin
+  // barra (la portada sólo muestra los números de una sola línea), y la línea fija
+  // de la guardia queda en Servicios. El WhatsApp de reclamos que anunció la
+  // cooperativa en 2024 no está en su página: no se carga hasta confirmarlo.
+  { categoria: 'Emergencias', nombre: 'Cooperativa Eléctrica · guardia 24 h', numero: '0800 222 2342' },
 
   // De la lista oficial del municipio.
   { categoria: 'Salud', nombre: 'Hospital · conmutador', numero: '(02266) 42-2017 / 42-2018 / 43-0384 / 43-0449' },
@@ -27,6 +33,7 @@ export const NUMEROS = [
   { categoria: 'Seguridad', nombre: 'Tránsito (Movilidad y Control Urbano)', numero: '(02266) 43-1765' },
   { categoria: 'Municipio', nombre: 'Municipalidad · conmutador', numero: '(02266) 42-4044 / 42-5330 / 42-4009' },
   { categoria: 'Municipio', nombre: 'Concejo Deliberante', numero: '(02266) 42-4089' },
+  { categoria: 'Servicios', nombre: 'Cooperativa Eléctrica · guardia (fijo)', numero: '(02266) 42-4091' },
   { categoria: 'Servicios', nombre: 'ARBAL · atención al público', numero: '(02266) 15-674175 / 15-660261' },
   { categoria: 'Servicios', nombre: 'Cementerio', numero: '(02266) 42-4064' },
   { categoria: 'Servicios', nombre: 'Licencias de conducir', numero: '(02266) 42-0055' },

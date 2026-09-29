@@ -10,8 +10,8 @@ import { promisify } from 'node:util';
 import ffmpeg from 'ffmpeg-static';
 import { paraLeer, enCarteles } from './voz.mjs';
 import { aPng } from './placa.mjs';
-import { decirGemini, VOZ_DEL_MEDIO } from './voz-gemini.mjs';
-import { componerIndicacion } from '../redes/prompt-redes.mjs';
+import { decirGemini } from './voz-gemini.mjs';
+import { componerIndicacion, vozDePieza } from '../redes/prompt-redes.mjs';
 import { ARCHIVO as CORTINA, generar as generarCortina } from './cortina.mjs';
 import {
   HISTORIA_MAXIMA, duracionDeLaSalida, pasaDelMaximo, argumentosDeRecorte,
@@ -114,9 +114,10 @@ export async function recortarParaHistoria(mp4, salida) {
 // { musica: true }.
 export async function armarReel({
   nombre, svg, guion, acento = '#E8A33C', musica = false, indicacion = null,
-  // La voz es siempre la misma (Kore, de CRITERIO-REDES.md): no se cambia por
-  // variable de entorno ni hay otra de respaldo.
-  vozGemini = VOZ_DEL_MEDIO,
+  // Cada pieza tiene siempre la misma voz (el reparto de CRITERIO-REDES.md, sección
+  // 6): la locutora o el locutor. No se cambia por variable de entorno ni hay otra
+  // de respaldo; una pieza sin voz en el reparto lanza.
+  vozGemini = vozDePieza(nombre),
 }, dir) {
   fs.mkdirSync(dir, { recursive: true });
   const png = path.join(dir, `${nombre}.png`);
@@ -129,7 +130,7 @@ export async function armarReel({
   // texto con los silencios del audio (alinear.mjs).
   const texto = paraLeer(guion);
 
-  // Una sola locutora, siempre (28/09): si Gemini no contesta después de sus
+  // Una sola voz por pieza, siempre (28/09): si Gemini no contesta después de sus
   // cuatro intentos (voz-gemini.mjs), la pieza NO sale con otra voz. Se cae
   // acá, plan.mjs la deja fuera del manifiesto y, como no quedó en el libro,
   // el reloj la vuelve a pedir en la vuelta siguiente mientras dure su
@@ -140,7 +141,7 @@ export async function armarReel({
   try {
     voz = await decirGemini(texto, mp3, {
       voz: vozGemini,
-      // La de siempre más la del momento del día (mañana, tarde o noche).
+      // El estilo de siempre más el del momento del día (mañana, tarde o noche).
       indicacion: componerIndicacion(indicacion),
     });
   } catch (e) {

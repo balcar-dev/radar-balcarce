@@ -45,7 +45,7 @@ vigilancia andan con la PC apagada**; sólo el panel vive en la PC.
   prueba lo vigila (sigue los imports en cadena).
 - **Cuando se arregla algo que estuvo mal publicado, se escribe una prueba**
   (con el caso real) y, si es una regla nueva, se anota en
-  `docs/10-REGLAS-Y-PRUEBAS.md` con el número siguiente (hoy, 76).
+  `docs/10-REGLAS-Y-PRUEBAS.md` con el número siguiente (hoy, 77).
 - **El criterio editorial es uno solo: `CRITERIO-EDITORIAL.md`.** La IA lee su
   § 12 **tal cual** (`ingesta/prompt-editorial.mjs`; si falta, la reescritura
   no arranca) y sus números están en `ingesta/criterio.mjs`, controlados contra
@@ -158,7 +158,9 @@ vigilancia andan con la PC apagada**; sólo el panel vive en la PC.
 - **Cuatro claves de IA, separadas a propósito** (`reels/claves.mjs`):
   `GEMINI_API_KEY_REDACCION` (gratis; redactar, 450 por día), `GEMINI_API_KEY_REDES`
   (**paga**: voces, y respaldo de la redacción sólo si la gratis da 429; si
-  falta o Gemini no contesta, las piezas **no salen**: nunca con otra voz),
+  falta o Gemini no contesta, las piezas **no salen**: nunca con otra voz;
+  modelo `gemini-3.8-flash-tts`, dos voces propias con un reparto fijo por pieza
+  en `CRITERIO-REDES.md` § 6, que **vencen el 29/09/2027**),
   `GEMINI_API_KEY_CLASIFICACION` (lectura con IA, 200 pedidos por día, y fotos;
   nunca la de redes) y `GROQ_API_KEY` (respaldo gratis de la lectura y las
   fotos). Modelo de texto: `gemini-flash-lite-latest` (el "flash" normal daba

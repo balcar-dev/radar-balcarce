@@ -63,6 +63,8 @@ clave o una decisión.
 | 14 | **Confirmar las medidas sin fuente oficial** de `FORMATOS.md` (foto de perfil de Instagram 1080 × 1080 y de Facebook 720 × 720; están `verificado: false` en `redes/formatos.mjs`) y volver a mirar todas cada 90 días (la auditoría avisa) | Los dos | Baja |
 | 15 | **Cerrar el túnel de Tailscale** (`tailscale funnel --https=443 off`) cuando no haga falta | Hernán | Baja |
 | 16 | **Renovar el token de GitHub de cron-job.org antes del 21/09/2027** (lo usa en sus tres trabajos; el vigilante avisa 30 días antes). El dominio vence el mismo día | Los dos | Fecha fija |
+| 17 | **Renovar las dos voces propias de Gemini antes del 29/09/2027** (vencen al año de crearse): Actions → "Crear voces" → crear, elegir una locutora y un locutor, borrar el resto y cambiar los identificadores en `CRITERIO-REDES.md` § 6. Si vencen, las piezas con voz dejan de salir | Los dos | Fecha fija |
+| 18 | **Confirmar el WhatsApp de reclamos de la Cooperativa de Electricidad** (2266-480809, anunciado en una nota de El Diario Balcarce de septiembre de 2024): no figura en coopbalcarce.com.ar y por eso no está en los teléfonos útiles. Si sigue vigente, se suma a `ingesta/utiles.mjs` | Los dos | Baja |
 
 ## Decisiones de criterio que esperan a los dos
 

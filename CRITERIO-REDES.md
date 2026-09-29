@@ -36,11 +36,16 @@ Sitio dicho: Radar Balcarce punto com
 
 ## 2. La voz
 
-Hay **una sola locutora**: la voz **Kore** de Gemini, siempre con la misma
-indicación base. A esa indicación se le suma la de cada momento del día (mañana,
-tarde o noche), que sólo cambia el ánimo, no la voz. Nadie elige otra voz ni cambia
-la velocidad a mano. **No hay voz de respaldo** (28/09, "mejor nunca Elena"): si
-Gemini no responde, la pieza no sale en esa vuelta y se vuelve a pedir en la
+Hay **dos voces propias**, creadas para Radar Balcarce con Voice Design de Gemini 3.8
+(idioma `es-AR`): la **locutora** (unos 45 años, serena y pausada) y el **locutor** (unos
+40 años, grave y firme). Cada una tiene un identificador fijo que Google guarda en nuestro
+proyecto: por eso suena **siempre igual** y no depende de cómo se escriba cada pedido.
+**Cada pieza tiene siempre la misma voz** (la tabla de la sección 6) y las voces se
+alternan a lo largo del día. Nunca dos voces en una misma pieza: las charlas simuladas se
+probaron el 28/09 y sonaban falsas. Nadie elige otra voz ni cambia la velocidad a mano.
+Al texto se le suma, aparte, un estilo corto según el momento del día (mañana, tarde o
+noche), que sólo cambia el ánimo, no la voz. **No hay voz de respaldo** (28/09, "mejor
+nunca Elena"): si Gemini no responde, la pieza no sale en esa vuelta y se vuelve a pedir en la
 siguiente, mientras dure su horario. Es preferible una historia que falta a una que
 suena a otro medio.
 
@@ -296,42 +301,71 @@ salida (`podcast-historia.mp4`) y el reel sube entero. Con el guion del 25/09 a 
 noche: 153 palabras y ~65 s estimados antes; 112 palabras y ~48 s ahora, con las
 cuatro notas y el contexto sólo de las dos primeras.
 
-## 6. Las instrucciones que recibe la voz
+## 6. Las voces y cómo se les habla
 
-Esto es **lo que lee Gemini, tal cual**, antes de cada texto: la voz, la indicación
-base y la de cada momento del día. El código lo lee de acá (`redes/prompt-redes.mjs`);
-no hay copia. Un cambio se hace acá, y se reinicia el panel.
+Esto es **lo que lee el código** (`redes/prompt-redes.mjs`): las dos voces, quién dice cada
+pieza y el estilo. No hay copia. Un cambio se hace acá, y se reinicia el panel.
+
+Con el modelo `gemini-3.8-flash-tts` y su Interactions API, el texto se lee **literal** y el
+estilo va en un campo aparte, corto y en inglés (es lo que mejor entiende el modelo). Ya no
+hay indicaciones largas que la voz pueda leer en voz alta: el 28/09, con el modelo y el
+formato anteriores, el podcast leyó las indicaciones y duró 140 s en vez de 35. El saludo
+de cada momento sale del guion (`redes/guiones.mjs`), no del estilo.
 
 <!-- VOZ:INICIO -->
 
-La voz (siempre la misma):
+Las voces. Cada identificador lo guarda Google en nuestro proyecto y **vence al año de
+crearse (29/09/2027)**: hay que crear las voces de nuevo antes (`docs/11-OPERACION.md`).
 
-<!-- VOZ:NOMBRE:INICIO -->
-Kore
-<!-- VOZ:NOMBRE:FIN -->
+La locutora (creada el 29/09/2026):
 
-La indicación base:
+<!-- VOZ:LOCUTORA:INICIO -->
+voice_x0fgw7agee4o
+<!-- VOZ:LOCUTORA:FIN -->
+
+El locutor (creado el 29/09/2026):
+
+<!-- VOZ:LOCUTOR:INICIO -->
+voice_gmvugyu6tti1
+<!-- VOZ:LOCUTOR:FIN -->
+
+Quién dice cada pieza (siempre la misma; los nombres son los de `redes/piezas.mjs`, y `aviso`
+vale para todos los avisos de clima):
+
+<!-- VOZ:REPARTO:INICIO -->
+clima-manana: locutora
+noticia1: locutor
+noticia2: locutora
+farmacia: locutor
+clima-noche: locutora
+podcast: locutor
+utiles: locutor
+agenda: locutora
+aviso: locutor
+<!-- VOZ:REPARTO:FIN -->
+
+El estilo base:
 
 <!-- VOZ:BASE:INICIO -->
-Sos la locutora de Radar Balcarce, un medio digital de Balcarce, en la provincia de Buenos Aires. Leé el texto que sigue tal cual está escrito, sin agregar ni sacar palabras. Hablá como locutora de una radio de pueblo: cercana, cálida y tranquila, con acento rioplatense, sin solemnidad y sin exagerar. Ritmo parejo y natural, con una pausa corta en cada coma y una más larga en cada punto, como quien le cuenta algo a un vecino. Sonás humana: nunca como un robot ni como un noticiero de televisión. El nombre del medio se dice siempre "Radar Balcarce". Cuando el texto diga "Radar Balcarce punto com", decilo exactamente así, palabra por palabra, y terminá ahí: la última palabra es "com". Nunca agregues "punto ar", "punto a ere" ni nada después de "com": la dirección es siempre radarbalcarce punto com.
+Calm, confident and warm, at a steady natural pace, like a local radio announcer from Buenos Aires province, Argentina.
 <!-- VOZ:BASE:FIN -->
 
 Para la mañana:
 
 <!-- VOZ:MANANA:INICIO -->
-Es de mañana: sonás fresca y con energía tranquila, como quien arranca el día. Si saludás, es con "buen día".
+It is the morning: fresh, with calm energy.
 <!-- VOZ:MANANA:FIN -->
 
 Para la tarde:
 
 <!-- VOZ:TARDE:INICIO -->
-Es de tarde: sonás pareja y cálida, sin apuro. Si saludás, es con "buenas tardes", nunca "buen día".
+It is the afternoon: even and warm, unhurried.
 <!-- VOZ:TARDE:FIN -->
 
 Para la noche:
 
 <!-- VOZ:NOCHE:INICIO -->
-Es de noche: sonás más pausada, más baja y calma, como quien cierra el día. Si saludás, es con "buenas noches", nunca "buen día".
+It is the night: slower, lower and calm, closing the day.
 <!-- VOZ:NOCHE:FIN -->
 
 <!-- VOZ:FIN -->
@@ -347,6 +381,6 @@ comprueba: que se oiga "Radar Balcarce"; que si el texto dice "punto com" la voz
 diga "punto com" y **nunca** "punto ar" ni ".com.ar"; y que el saludo sea el de la
 hora y ningún otro. Imprime un cuadro PASA/FALLA por clip y sale con error si alguno
 falla. Cuesta centavos (unos pocos audios cortos), así que **no se corre en lazo**: se
-corre a mano cuando se toca la voz. Si la voz insiste en agregar ".ar" aun con la
-instrucción, la dirección se deja fuera de lo que se dice (poniendo `VOZ.direccionEnPodcasts`
+corre a mano cuando se toca la voz. Si la voz insiste en agregar ".ar" aunque el texto diga
+"punto com", la dirección se deja fuera de lo que se dice (poniendo `VOZ.direccionEnPodcasts`
 y `VOZ.direccionUnaDeCada` en 0) y las piezas cierran sólo con "Radar Balcarce".

@@ -476,7 +476,7 @@ te muestra menos si tu gente no interactúa.
 
 ## Sumadas el 28/09, para más adelante (Hernán las pidió, no son prioridad hoy)
 
-- **Un segundo locutor, hombre, además de la voz mujer que ya tenemos**
+- **Hecho el 28/09** (`CRITERIO-REDES.md` § 2 y 6, regla 76): **un segundo locutor, hombre, además de la voz mujer que ya tenemos**
   (Kore). Alternar por pieza o fijar qué sección hace cada uno (por ejemplo:
   ella el clima y los podcasts, él Policiales o Deportes), y ponerles nombre
   a los dos para que se sientan más cercanos, no "la voz de Gemini". Para

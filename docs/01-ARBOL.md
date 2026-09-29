@@ -20,7 +20,7 @@ Cómo leer las tablas:
 
 ```
 radar-balcarce/
-├── .github/workflows/   12 workflows: lo que corre solo en GitHub (docs/08)
+├── .github/workflows/   13 workflows: lo que corre solo en GitHub (docs/08)
 ├── ingesta/             el motor: fuentes, cruce, selección, lectura con IA, verificador. SIN dependencias (docs/02, 03, 04)
 ├── reels/               placas, voz, video y la reescritura con IA. SÍ tiene dependencias (docs/04, 07)
 ├── redes/               Facebook, Instagram, contrato, vigilante, WhatsApp. SIN dependencias (docs/07, 08)
@@ -117,7 +117,8 @@ Lo que **no** se versiona (`.gitignore`): `node_modules/`, `.env*`,
 | `reel.mjs` | Arma un video: placa, voz (sólo Gemini), subtítulos, ffmpeg | `plan.mjs` | Sí |
 | `reescritura.mjs` | La reescritura con IA de punta a punta: orden, topes, texto completo, pedido, verificación, partes internas, nivel de verificación, semáforo sobre lo escrito | `generar-datos.mjs` (nube), `panel/servidor.mjs` y `panel/notas.mjs` (PC) | Sí |
 | `tiempos.mjs` | Reparte el tiempo del audio entre las palabras según sus sílabas | `alinear.mjs` | Sí |
-| `voz-gemini.mjs` | La voz de Gemini (modelo TTS, clave paga) | `reel.mjs`, `auditar-voz.mjs` | Sí |
+| `voz-gemini.mjs` | La voz de Gemini 3.8 (Interactions API, clave paga): texto literal, estilo aparte, la voz propia de cada pieza; frena el audio que dura de más | `reel.mjs`, `auditar-voz.mjs` | Sí |
+| `crear-voces.mjs` | Crea, lista y borra las voces propias (Voice Design) y prueba charlas | `crear-voces.yml` | A mano |
 | `voz.mjs` | `paraLeer` (símbolos dichos en voz alta) y la voz de Edge, que ya no se usa en las piezas (28/09) | `reel.mjs`, `auditar-voz.mjs` | Sí |
 | `marca/fuentes/*.ttf` (6) | Source Serif 4 (700 y 900, corte de 60 puntos) e Inter (400 a 700) para las placas, el avatar y la portada | `placa.mjs`, `avatar.mjs`, `portada.mjs` | Sí |
 
@@ -139,7 +140,7 @@ Lo que **no** se versiona (`.gitignore`): `node_modules/`, `.env*`,
 | `meta.mjs` | Habla con Meta (Graph v23.0): posteo, foto, video, dirección pública, verificación | `publicar.mjs`, `auditar-redes.mjs`, `estadisticas.mjs`, `ver-facebook.mjs` | Sí |
 | `piezas.mjs` | Cronograma, ventanas, podcasts, aviso de clima, color del día, techo de historias | `reloj.mjs`, `publicar-piezas.mjs`, `reels/plan.mjs`, `contrato.mjs`, `vigilar.mjs` | Sí |
 | `probar-whatsapp.mjs` | Un WhatsApp de prueba, sin mostrar la clave | `prueba-whatsapp.yml` | A mano |
-| `prompt-redes.mjs` | Lee la identidad y la voz de `CRITERIO-REDES.md` | `guiones.mjs`, `elegir.mjs`, `reels/plan.mjs`, `reels/reel.mjs`, `reels/voz-gemini.mjs` | Sí |
+| `prompt-redes.mjs` | Lee la identidad, las dos voces, el reparto de voces por pieza y el estilo de `CRITERIO-REDES.md` | `guiones.mjs`, `elegir.mjs`, `reels/plan.mjs`, `reels/reel.mjs`, `reels/voz-gemini.mjs` | Sí |
 | `publicar-piezas.mjs` | Sube los videos (Instagram manda, Facebook con reintentos, la historia de cada reel) y completa direcciones | `publicar.mjs` | Sí |
 | `publicar.mjs` | El programa de publicar: `--verificar`, `--facebook`, `--piezas`, `--enlaces` | `redes.yml`, `piezas.yml` | Sí |
 | `reloj.mjs` | ¿Toca alguna pieza ahora? (con el interruptor apagado, no) | `redes.yml` | Sí |

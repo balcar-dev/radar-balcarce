@@ -333,6 +333,8 @@ paga".
   (hasta tres intentos por nota). El cupo gratis se renueva al día siguiente.
 - La lectura con IA, si Gemini falla, prueba con Groq.
 - Las voces: si Gemini no contesta, la pieza no sale en esa vuelta y se reintenta en la siguiente (nunca con otra voz).
+  Si el error es **402 ("prepayment credits are depleted")**, se acabó el crédito de la clave paga: cargarlo en
+  Google AI Studio (proyecto RadarBalcarce); reintentar no lo arregla.
 
 **Qué hacer:**
 

@@ -12,7 +12,7 @@ tener dos copias que se desacuerden); acá se lo nombra y se dice dónde está.
 - **Nombre:** Radar Balcarce. **Dominio:** `radarbalcarce.com`.
 - **Quiénes lo hacen:** Hernán y Andrés, dos vecinos de Balcarce
   (`/quienes-somos`).
-- **La voz:** siempre la misma locutora (Kore, de Gemini), un tono cercano y
+- **La voz:** dos voces propias (una locutora y un locutor, creadas con Voice Design de Gemini), cada pieza siempre con la misma; un tono cercano y
   otro serio para lo grave. Identidad completa, saludos, cierres y las
   instrucciones exactas de voz: `CRITERIO-REDES.md`.
 - **El eslogan de la portada de Facebook:** "Lo que pasa en Balcarce, la

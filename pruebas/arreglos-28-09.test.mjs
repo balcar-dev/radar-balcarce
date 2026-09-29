@@ -321,8 +321,26 @@ test('vozDeMas frena un audio mucho más largo que el texto (el podcast de 81 pa
   const podcast = Array.from({ length: 81 }, () => 'palabra').join(' ');
   assert.match(vozDeMas(podcast, 140.2), /leyó algo que no estaba en el texto/);
   assert.equal(vozDeMas(podcast, 34), null, 'a 2,4 palabras por segundo está bien');
+  // El clima de 47 palabras que Charon leyó dos veces seguidas (34,6 s) también se frena.
+  const clima = Array.from({ length: 47 }, () => 'palabra').join(' ');
+  assert.match(vozDeMas(clima, 34.6), /leyó algo que no estaba/);
+  assert.equal(vozDeMas(clima, 20), null);
   assert.equal(vozDeMas('Buen día, Balcarce.', 4), null, 'un texto corto tiene margen');
   const fuente = leer('reels/voz-gemini.mjs');
-  assert.match(fuente, /const deMas = vozDeMas\(texto, pcm\.length \/ 48000\);/);
+  assert.match(fuente, /const deMas = vozDeMas\(texto, segundosDeWav\(wav\)\);/);
   assert.match(fuente, /if \(deMas\) \{\s*ultimoError = new Error\(deMas\);\s*if \(intento < intentos\) \{ await dormir\(3000 \* intento\); continue; \}/);
+});
+
+// ------- 28/09: el teléfono de emergencia de la Cooperativa de Electricidad
+test('teléfonos útiles: la guardia de la Cooperativa Eléctrica está entre las emergencias, con el número oficial', async () => {
+  const { NUMEROS } = await import('../ingesta/utiles.mjs');
+  const guardia = NUMEROS.find((n) => /Cooperativa Eléctrica · guardia 24 h/.test(n.nombre));
+  assert.ok(guardia, 'falta la guardia de la cooperativa');
+  assert.equal(guardia.categoria, 'Emergencias');
+  assert.equal(guardia.numero, '0800 222 2342');
+  assert.ok(!guardia.numero.includes('/'), 'sin barra: así también la muestra la portada');
+  // Entra en la placa (que muestra las primeras seis filas) y en la lista de la portada (las primeras cinco sin barra).
+  assert.ok(NUMEROS.indexOf(guardia) < 6);
+  assert.ok(NUMEROS.filter((n) => !n.numero.includes('/')).indexOf(guardia) < 5);
+  assert.ok(NUMEROS.some((n) => n.numero === '(02266) 42-4091'), 'la línea fija de la guardia');
 });

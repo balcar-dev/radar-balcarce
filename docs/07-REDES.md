@@ -230,10 +230,12 @@ sacan.
    con las tipografías de `reels/marca/fuentes/`.
 2. **La voz.** `paraLeer` (`reels/voz.mjs`) traduce los símbolos ("12°" →
    "12 grados", "%" → "por ciento", "km/h", "N°"). Después `decirGemini`
-   (`reels/voz-gemini.mjs`) pide el audio al modelo `gemini-2.5-flash-preview-tts`
-   con la voz y la indicación de tono de `CRITERIO-REDES.md` (la de siempre más
-   la de la mañana, la tarde o la noche). Hasta 4 intentos, 2 segundos entre
-   pedidos, 2 minutos como máximo por pedido. Un audio que dura de más para su texto
+   (`reels/voz-gemini.mjs`) pide el audio al modelo `gemini-3.8-flash-tts` por la
+   Interactions API: el texto va literal y, aparte, un estilo corto (el de siempre
+   más el de la mañana, la tarde o la noche, de `CRITERIO-REDES.md`), con la voz
+   de esa pieza: la locutora o el locutor, según el reparto de la sección 6 del
+   criterio (`vozDePieza`, `redes/prompt-redes.mjs`; una pieza sin voz lanza).
+   Hasta 4 intentos, 2 segundos entre pedidos, 2 minutos como máximo por pedido. Un audio que dura de más para su texto
    (`vozDeMas`: leyó algo que no estaba) cuenta como falla. **Si Gemini falla, la pieza no
    sale** (28/09: nunca con otra voz): `armarReel` corta, `plan.mjs` la deja
    fuera del manifiesto y el reloj la vuelve a pedir en la vuelta siguiente
@@ -587,7 +589,7 @@ sílabas).
 | `reels/reel.mjs` | Arma un video: placa, voz, subtítulos, ffmpeg, recorte para historia | `plan.mjs` | la pieza | archivos en `reels/salida/` |
 | `reels/placa.mjs` | Dibuja las placas (SVG) y las pasa a PNG | `plan.mjs`, `reel.mjs` | `reels/marca/fuentes/` | PNG |
 | `reels/voz-gemini.mjs` | La voz de Gemini (modelo TTS) | `reel.mjs`, auditar voz | `GEMINI_API_KEY_REDES` (`reels/claves.mjs`) | mp3 |
-| `reels/voz.mjs` | La voz de respaldo (Elena, Edge) y `paraLeer` | `reel.mjs` | — | mp3 |
+| `reels/voz.mjs` | `paraLeer` (los símbolos, dichos en voz alta); la voz de Edge (Elena) ya no se usa en las piezas | `reel.mjs` | — | mp3 |
 | `reels/alinear.mjs` y `reels/tiempos.mjs` | Cuándo arranca cada palabra del subtítulo | `voz-gemini.mjs` | el audio | — |
 | `reels/duracion.mjs` | El máximo de una historia (58 s) y el recorte | `reel.mjs` | — | — |
 | `reels/cortina.mjs` | Cortina musical (apagada) | `reel.mjs` si se prende | — | `reels/marca/cortina.wav` |

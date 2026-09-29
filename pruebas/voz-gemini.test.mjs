@@ -13,7 +13,7 @@ import { test, before, after } from 'node:test';
 import assert from 'node:assert/strict';
 import os from 'node:os';
 import path from 'node:path';
-import { decirGemini } from '../reels/voz-gemini.mjs';
+import { decirGemini, pedidoDeVoz, audioDeLaRespuesta, segundosDeWav, ENDPOINT, MODELO } from '../reels/voz-gemini.mjs';
 
 before(() => { process.env.GEMINI_API_KEY_REDES = 'clave-redes-de-prueba'; });
 after(() => { delete process.env.GEMINI_API_KEY_REDES; });
@@ -43,4 +43,48 @@ test('la voz ya no lleva la cuenta de un cupo gratis: no escribe en panel/datos'
   assert.ok(!/CUPO_DIARIO|anotarPedido/.test(codigo));
   const modulo = await import('../reels/voz-gemini.mjs');
   assert.equal('CUPO_DIARIO' in modulo, false);
+});
+
+// ------- 28/09: el modelo 3.8 y su Interactions API
+test('el pedido lleva el texto literal y el estilo aparte, con la voz por su identificador', () => {
+  const p = pedidoDeVoz({ texto: 'Buen día, Balcarce.', voz: 'voice_abc123', estilo: 'calm and warm' });
+  assert.equal(p.model, 'gemini-3.8-flash-tts');
+  assert.equal(MODELO, p.model);
+  assert.equal(ENDPOINT, 'https://generativelanguage.googleapis.com/v1beta/interactions');
+  const [texto] = p.input[0].content;
+  assert.equal(texto.text, 'Buen día, Balcarce.', 'el texto va solo, sin indicaciones mezcladas');
+  assert.deepEqual(texto.annotations, [{ type: 'speech_metadata', style: 'calm and warm' }]);
+  assert.deepEqual(p.generation_config.speech_config, [{ voice: 'voice_abc123' }]);
+  assert.deepEqual(p.response_format, { type: 'audio' });
+  assert.ok(!('systemInstruction' in p), 'el modelo no acepta instrucciones de sistema');
+});
+
+test('el audio de la respuesta se busca en los pasos del modelo y se toma el último', () => {
+  const r = { steps: [{ type: 'user_input' }, { type: 'model_output', content: [{ type: 'text', text: 'hola' }, { type: 'audio', data: 'AAA' }, { type: 'audio', data: 'BBB' }] }] };
+  assert.equal(audioDeLaRespuesta(r), 'BBB');
+  assert.equal(audioDeLaRespuesta({ steps: [] }), null);
+});
+
+function wavDeSegundos(segundos) {
+  const datos = Buffer.alloc(Math.round(segundos * 48000));
+  const cab = Buffer.alloc(44);
+  cab.write('RIFF', 0, 'ascii'); cab.writeUInt32LE(36 + datos.length, 4); cab.write('WAVE', 8, 'ascii');
+  cab.write('fmt ', 12, 'ascii'); cab.writeUInt32LE(16, 16); cab.writeUInt16LE(1, 20); cab.writeUInt16LE(1, 22);
+  cab.writeUInt32LE(24000, 24); cab.writeUInt32LE(48000, 28); cab.writeUInt16LE(2, 32); cab.writeUInt16LE(16, 34);
+  cab.write('data', 36, 'ascii'); cab.writeUInt32LE(datos.length, 40);
+  return Buffer.concat([cab, datos]);
+}
+
+test('segundosDeWav lee la duración del trozo de datos', () => {
+  assert.equal(segundosDeWav(wavDeSegundos(12.5)), 12.5);
+});
+
+test('un audio que dura de más para su texto no sale: se rechaza (la voz leyó las indicaciones)', async () => {
+  const largo = wavDeSegundos(100).toString('base64');
+  const fetchFn = async () => ({ ok: true, status: 200, json: async () => ({ steps: [{ type: 'model_output', content: [{ type: 'audio', data: largo }] }] }) });
+  const destino = path.join(os.tmpdir(), 'radar-prueba-voz', 'largo.mp3');
+  await assert.rejects(
+    () => decirGemini('Hola, Balcarce.', destino, { intentos: 1, fetchFn }),
+    /leyó algo que no estaba en el texto/,
+  );
 });
