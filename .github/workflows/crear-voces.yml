@@ -21,7 +21,7 @@ on:
         options: [crear, listar]
         default: crear
       idioma:
-        description: 'Sólo para listar: el código de idioma de la biblioteca de voces (es-AR, es-US…); 'todas' = toda la biblioteca'
+        description: 'Sólo para listar: el código de idioma de la biblioteca de voces (es-AR, es-US…); escribir todas para ver toda la biblioteca'
         type: string
         default: 'es-AR'
 
