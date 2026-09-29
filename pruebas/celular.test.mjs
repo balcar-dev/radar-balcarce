@@ -258,6 +258,6 @@ test('el workflow del celular nunca pega lo que manda el celular en un comando',
   const comandos = yml.split('\n').filter((l) => /^\s+run:/.test(l) || /^\s{10}\S/.test(l));
   assert.ok(!comandos.some((l) => /\$\{\{\s*inputs\./.test(l) && /run:/.test(l)), 'un run: usa ${{ inputs.* }} directo');
   assert.match(yml, /PEDIDO: \$\{\{ inputs\.pedido \}\}/);
-  assert.match(yml, /git add web\/data\/celular-borradores\.json\n/);
+  assert.match(yml, /git add web\/data\/celular-borradores\.json\r?\n/);
   assert.match(leer('.github/workflows/actualizar.yml'), /web\/data\/celular-pendientes\.json/);
 });

@@ -13,7 +13,7 @@
 
 import fs from 'node:fs';
 import path from 'node:path';
-import { crearCliente, ErrorMeta, sinToken } from './meta.mjs';
+import { crearCliente, ErrorMeta, sinToken, PAGINA_DE_FACEBOOK } from './meta.mjs';
 import { leerJson as leer } from '../ingesta/json.mjs';
 import { publicarPiezas, completarEnlaces } from './publicar-piezas.mjs';
 import { espejosPendientes } from './espejo.mjs';
@@ -30,7 +30,7 @@ const SITIO = process.env.SITIO ?? 'https://radarbalcarce.com';
 // Ojo: NO es el número de la dirección facebook.com/profile.php?id=..., que es el
 // del perfil de la página. El de la API sale de Configuración del negocio →
 // Páginas → "Identificador".
-const PAGINA = process.env.META_PAGE_ID ?? '1254237411116171';
+const PAGINA = PAGINA_DE_FACEBOOK;
 const ACTIVO = estaActivo(process.env.REDES_ACTIVAS);
 
 function cliente() {

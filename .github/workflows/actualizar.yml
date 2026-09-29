@@ -66,7 +66,7 @@ jobs:
           node-version: '24'
 
       # Hace falta ANTES de las pruebas: desde que pruebas/ tiene tests que
-      # tocan reels/ (voz.mjs, msedge-tts) y web/lib (pedir-clima.js, react),
+      # tocan reels/ (placas con resvg, video con ffmpeg) y web/lib (pedir-clima.js, react),
       # "npm test" ya no corre con lo único que trae Node. Sin este paso,
       # esos dos archivos de prueba fallaban por "Cannot find package" y la
       # corrida entera se cortaba acá: pasó el 22/09, la web quedó sin
@@ -157,7 +157,9 @@ jobs:
           # retiradas.json: los lunes pierde las de más de una semana.
           # celular-pendientes.json: lo que espera a una persona, cifrado para el
           # panel del celular (29/09; sólo cambia cuando cambia la lista).
-          git add web/data/portada.json web/data/archivo.json web/data/agenda.json web/data/intentos-ia.json web/data/dolar-historia.json web/data/fichas.json web/data/notas-por-dia.json web/data/banco-fotos.json web/data/esperando-cuerpo.json web/data/vistas.json web/data/retiradas.json web/data/celular-pendientes.json web/public/fotos-notas/
+          # fusionadas.json: las notas repetidas con otra dirección y adónde
+          # redirige cada una (29/09, web/lib/repetidas.js).
+          git add web/data/portada.json web/data/archivo.json web/data/agenda.json web/data/intentos-ia.json web/data/dolar-historia.json web/data/fichas.json web/data/notas-por-dia.json web/data/banco-fotos.json web/data/esperando-cuerpo.json web/data/vistas.json web/data/retiradas.json web/data/celular-pendientes.json web/data/fusionadas.json web/public/fotos-notas/
           if git diff --cached --quiet; then
             echo "Sin novedades: no hay nada que publicar."
           else

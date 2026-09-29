@@ -29,7 +29,7 @@
 // Sin dependencias: sólo fetch, con tiempo máximo.
 
 import path from 'node:path';
-import { crearCliente } from './meta.mjs';
+import { crearCliente, PAGINA_DE_FACEBOOK } from './meta.mjs';
 import { sinSecretos } from './whatsapp.mjs';
 import { diaAR, horaAR } from '../ingesta/zona.mjs';
 import { leerJson as leer } from '../ingesta/json.mjs';
@@ -40,7 +40,7 @@ const SITIO = 'radarbalcarce.com';
  *  No es secreto: está en cada página. A veces el de la API es otro; por eso
  *  primero se le pregunta a Cloudflare cuál corresponde a radarbalcarce.com. */
 const TOKEN_DEL_BEACON = '63fea16828ce46988d62382b0fbabf60';
-const PAGINA_ID = '1254237411116171';
+const PAGINA_ID = PAGINA_DE_FACEBOOK;
 export const MAXIMO_DE_PUNTOS = 120;
 const HORAS_DE_MEDICION = [9, 21];
 const GRAPHQL = 'https://api.cloudflare.com/client/v4/graphql';

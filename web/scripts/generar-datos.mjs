@@ -68,7 +68,7 @@ import { sinNotasRepetidas } from '../lib/texto.js';
 import { pendientesDeLaIngesta } from '../../redes/avisos.mjs';
 import { cuentaDelDia, anotarDia, comoHistoriaJson as comoNotasPorDiaJson } from '../../ingesta/estadistica-diaria.mjs';
 import {
-  vigenteEnPortada, slugsConocidos, fijarSlug, actualizarArchivo, idsEnRedes, sinPuntaje, comoArchivoJson,
+  vigenteEnPortada, slugsConocidos, fijarSlug, actualizarArchivo, aligerarViejas, idsEnRedes, sinPuntaje, comoArchivoJson,
   idsRetiradosAMano, correccionesAMano, conCorreccion, fechaDeLaNota, llegaTarde,
   esDeLoQueNuncaSePublica, pierdeLaPagina, podarRetiradas, comoRetiradasJson,
 } from '../lib/archivo.js';
@@ -84,6 +84,8 @@ import {
   leerDecisionesCelular, unirDecisiones, paraDecidir, notasParaEscribir,
 } from '../../panel/celular-datos.mjs';
 import { leerLlaves, cerrarSiCambio } from '../../panel/cifrado.mjs';
+import { repetidasConOtraDireccion, conFusionadas } from '../lib/repetidas.js';
+import { diceEnVivo } from '../../ingesta/verificar.mjs';
 
 const AQUI = import.meta.dirname;
 const DATOS_PANEL = path.join(AQUI, '..', '..', 'panel', 'datos');
@@ -610,6 +612,10 @@ for (const a of archivoAnterior.notas ?? []) {
   // Lo que no se publica nunca (las listas de sepelios) no conserva la página,
   // aunque la haya aprobado una persona (28/09).
   if (nuncaSePublica(conCorreccion(a, CORRECCIONES))) retiradas.add(a.id);
+  // Una página vieja que promete una cobertura "EN VIVO" o "minuto a minuto" en
+  // el título (el texto de otro medio, de antes de la regla): Radar Balcarce no
+  // hace coberturas en vivo (29/09; "música en vivo" sí).
+  if (!decisionHumana(d) && diceEnVivo(conCorreccion(a, CORRECCIONES).titulo)) retiradas.add(a.id);
 }
 // ------------------------------------------------------ las notas propias
 //
@@ -656,7 +662,24 @@ const propias = [...notasDelDolar(historiaDolar), ...repasos]
   .filter((n) => tieneCuerpo(n));
 if (propias.length) console.log(`  notas propias: ${propias.map((n) => n.id).join(', ')}`);
 
-const publicadas = [...deLaIngesta, ...propias]
+// La misma noticia con otra dirección (lib/repetidas.js, 29/09): queda una y
+// la dirección de la otra redirige a ésa (fusionadas.json, generar-redirects.mjs).
+const FUSIONADAS = path.join(AQUI, '..', 'data', 'fusionadas.json');
+const conPaginaHoy = [...deLaIngesta, ...propias];
+const fusion = repetidasConOtraDireccion(
+  [...(archivoAnterior.notas ?? []).filter((a) => !retiradas.has(a.id)), ...conPaginaHoy],
+  { enRedes: idsEnRedes(libroRedes) },
+);
+for (const id of fusion.keys()) retiradas.add(id);
+{
+  const antes = leerJson(FUSIONADAS, null);
+  const porId = new Map([...(archivoAnterior.notas ?? []), ...conPaginaHoy].map((n) => [n.id, n]));
+  const json = conFusionadas(antes, fusion, porId);
+  // Una por renglón, como retiradas.json.
+  if (!antes || JSON.stringify(antes.notas) !== JSON.stringify(json.notas)) fs.writeFileSync(FUSIONADAS, comoRetiradasJson(json), 'utf8');
+  if (fusion.size) console.log(`  repetidas con otra dirección: ${fusion.size}, redirigidas a la que queda`);
+}
+const publicadas = conPaginaHoy.filter((n) => !fusion.has(n.id))
   .sort((a, b) => new Date(b.fecha) - new Date(a.fecha));
 
 // Lo que se MUESTRA (portada, secciones, temas, buscador, feed): sólo lo de
@@ -683,7 +706,8 @@ const sinCola = (n) => (n && (!n.publicadaPor || n.publicadaPor === 'ia') && !n.
 const sinServicios = (n) => conCorreccion(sinColaDe(n), CORRECCIONES);
 const sinColaDe = (n) => sinCola(n?.seccion === 'Servicios' ? { ...n, seccion: n.local ? 'Balcarce' : 'Argentina' }
   : n?.seccion === 'País' ? { ...n, seccion: 'Argentina' } : n);
-const archivo = actualizarArchivo({
+// Lo de más de unos días guarda sólo lo que ve el lector (aligerarViejas, 29/09).
+const archivo = aligerarViejas(actualizarArchivo({
   archivo: (archivoAnterior.notas ?? []).map(sinServicios),
   // Las partes nuevas que hoy no están (una persona corrigió el texto, o la
   // reescritura se cayó) tampoco quedan de la vez anterior en el archivo: el
@@ -693,7 +717,7 @@ const archivo = actualizarArchivo({
   enPortada: new Set(vigentes.map((n) => n.id)),
   retiradas,
   enRedes: idsEnRedes(libroRedes),
-});
+}));
 if (JSON.stringify(archivo) !== JSON.stringify(archivoAnterior.notas ?? [])) {
   fs.mkdirSync(path.dirname(ARCHIVO), { recursive: true });
   fs.writeFileSync(ARCHIVO, comoArchivoJson(archivo), 'utf8');

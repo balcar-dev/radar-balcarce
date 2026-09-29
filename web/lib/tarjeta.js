@@ -34,7 +34,10 @@ export const TAMANO = { width: 1200, height: 630 };
 const TAMANO_INSTAGRAM = { width: 1080, height: 1350 };
 export const TIPO = 'image/png';
 
-const FUENTES = path.join(process.cwd(), 'fuentes');
+// Las mismas tipografías de las placas (reels/marca/fuentes): hasta el 29/09
+// había una copia idéntica en web/fuentes. Se compila desde web/ (process.cwd();
+// import.meta no sirve acá porque Next mueve este archivo al empaquetarlo).
+const FUENTES = path.join(process.cwd(), '..', 'reels', 'marca', 'fuentes');
 const leer = (archivo) => fs.readFileSync(path.join(FUENTES, archivo));
 
 // Un nodo para satori, sin JSX (este archivo no pasa por el compilador de React).

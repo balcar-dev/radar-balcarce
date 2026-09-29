@@ -298,8 +298,9 @@ export function PastillaClima({ clima }) {
 }
 const NOMBRE_DIA = ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'];
 
-/** "2026-09-28" de hoy en Balcarce, sin importar la hora del navegador. */
-function hoyEnBalcarce() {
+/** "2026-09-28" de hoy en Balcarce, sin importar la hora del navegador (la usa
+ *  también "Hoy en Balcarce", components/hoy-balcarce.js). */
+export function hoyEnBalcarce() {
   return new Intl.DateTimeFormat('en-CA', { timeZone: 'America/Argentina/Buenos_Aires' }).format(new Date());
 }
 

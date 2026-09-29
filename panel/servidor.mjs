@@ -31,7 +31,7 @@ import { horariosDe, guardarHorario, DIAS as DIAS_SEMANA } from './horarios.mjs'
 import { guionNoticia } from '../redes/guiones.mjs';
 import { aplicarAviso } from './avisos.mjs';
 import {
-  camposEditables, decisionParaLaWeb, podarDecisiones, conTextoCorregido,
+  camposEditables, decisionParaLaWeb, podarDecisiones, conTextoCorregido, vaALaWeb,
 } from './notas.mjs';
 import { crearSincronizador, ejecutarGit } from './sincronizar.mjs';
 import { respaldar } from './respaldo.mjs';
@@ -121,7 +121,9 @@ function exportarDecisiones(estado) {
     // Las de más de 60 días no se exportan: la web ya no las usa y el
     // archivo crecía sin fin (ver podarDecisiones en panel/notas.mjs).
     for (const [id, d] of Object.entries(podarDecisiones(estado.decisiones))) {
-      decisiones[id] = decisionParaLaWeb(d);
+      // Sólo lo que la web usa (vaALaWeb, 29/09): lo de una persona y los
+      // textos recientes de la IA.
+      if (vaALaWeb(d)) decisiones[id] = decisionParaLaWeb(d);
     }
     fs.mkdirSync(path.dirname(F_DECISIONES), { recursive: true });
     fs.writeFileSync(F_DECISIONES, JSON.stringify({

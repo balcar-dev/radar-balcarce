@@ -15,6 +15,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { leerJson } from '../../ingesta/json.mjs';
 import { rutaDeNota } from '../lib/ruta.js';
+import { redireccionesDeFusionadas } from '../lib/repetidas.js';
 
 const AQUI = import.meta.dirname;
 const RAIZ = path.join(AQUI, '..');
@@ -60,7 +61,11 @@ export function comoRedirectsDeCloudflare(redirecciones) {
 if (process.argv[1] && process.argv[1].endsWith('generar-redirects.mjs')) {
   const portada = leerJson(path.join(RAIZ, 'data', 'portada.json'), { notas: [] });
   const archivo = leerJson(path.join(RAIZ, 'data', 'archivo.json'), { notas: [] });
-  const redirecciones = [...SECCIONES_VIEJAS, ...redireccionesDeNotas(portada, archivo)];
+  // Las repetidas que se unieron a otra nota (fusionadas.json, 29/09) van antes
+  // que las de las notas: su página ya no existe.
+  const rutas = new Map([...(portada.notas ?? []), ...(archivo.notas ?? [])].map((n) => [n.id, rutaDeNota(n)]));
+  const fusionadas = redireccionesDeFusionadas(leerJson(path.join(RAIZ, 'data', 'fusionadas.json'), null), (id) => rutas.get(id));
+  const redirecciones = [...SECCIONES_VIEJAS, ...fusionadas, ...redireccionesDeNotas(portada, archivo)];
 
   fs.mkdirSync(path.join(RAIZ, 'public'), { recursive: true });
   fs.writeFileSync(path.join(RAIZ, 'public', '_redirects'), comoRedirectsDeCloudflare(redirecciones), 'utf8');

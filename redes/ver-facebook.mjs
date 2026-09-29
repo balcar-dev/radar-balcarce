@@ -2,9 +2,9 @@
 // posteos, reels y historias, con fecha. Sirve para comparar con lo que anota
 // nuestro libro (web/data/redes.json) cuando algo no cuadra. No publica nada.
 //   node redes/ver-facebook.mjs        (con META_TOKEN)
-import { sinToken } from './meta.mjs';
+import { sinToken, PAGINA_DE_FACEBOOK } from './meta.mjs';
 
-const PAGINA = process.env.META_PAGINA_ID ?? '1254237411116171';
+const PAGINA = PAGINA_DE_FACEBOOK;
 const token = process.env.META_TOKEN;
 if (!token) { console.log('Falta META_TOKEN.'); process.exit(1); }
 const BASE = 'https://graph.facebook.com/v23.0';

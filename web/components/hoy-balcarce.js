@@ -18,17 +18,12 @@
 
 import { useEffect, useState } from 'react';
 import { useClimaVivo } from '@/lib/pedir-clima';
-import { IconoCielo, SolChico } from './clima-vivo';
+import { IconoCielo, SolChico, hoyEnBalcarce } from './clima-vivo';
 import useDolar from '@/components/usar-dolar';
 import { filasDelPanel, pesosEnteros } from '@/lib/dolar';
 import { comoNombre } from '@/lib/texto';
 
 const DIA_CORTO = ['DOM', 'LUN', 'MAR', 'MIÉ', 'JUE', 'VIE', 'SÁB'];
-
-/** "2026-09-28" de hoy en Balcarce, sin importar la hora del navegador. */
-function hoyEnBalcarce() {
-  return new Intl.DateTimeFormat('en-CA', { timeZone: 'America/Argentina/Buenos_Aires' }).format(new Date());
-}
 
 /** Las farmacias de turno, como se escriben: el detalle (del directorio del
  *  Colegio) trae acentos y dirección; si no está, sólo los nombres. */
@@ -40,11 +35,6 @@ export function farmaciasDeTurno(farmacia) {
       .filter((f) => f.nombre);
   }
   return (farmacia.farmacias ?? []).map((n) => ({ nombre: comoNombre(n), direccion: null })).filter((f) => f.nombre);
-}
-
-/** Sólo los nombres (lo usan otras partes del sitio). */
-export function nombresDeTurno(farmacia) {
-  return farmaciasDeTurno(farmacia).map((f) => f.nombre);
 }
 
 /** Los tres días que siguen a hoy. Hasta saber qué día es en el navegador,

@@ -49,6 +49,12 @@ const dormir = (ms) => new Promise((r) => setTimeout(r, ms));
 export const ESPERA_MAXIMA = 60_000;
 export const ESPERA_MAXIMA_SUBIDA = 10 * 60_000;
 
+/** La página de Facebook "Radar Balcarce", para la API (no es el número de la
+ *  dirección de la página). Un solo lugar desde el 29/09: antes estaba escrita
+ *  en cuatro archivos y con dos nombres de variable. Se puede cambiar con
+ *  META_PAGE_ID, que hoy no está cargada en ningún workflow. */
+export const PAGINA_DE_FACEBOOK = process.env.META_PAGE_ID || '1254237411116171';
+
 /**
  * @param {object} o
  * @param {string} o.token          el del usuario del sistema

@@ -6,6 +6,7 @@
 // la cadena y no a esta mezcla. Ahora hay una prueba que lo vigila.
 
 import { extrasDe, sinExtras } from '../reels/reescritura.mjs';
+import { decisionHumana } from '../ingesta/utiles.mjs';
 
 /** El título, el copete, el cuerpo y el guion tal como salen en el panel:
  *  lo decidido manda; si no, lo que trajo la fuente. Y, si la IA las
@@ -54,6 +55,21 @@ export function conTextoCorregido(previo = {}, nuevo = {}) {
 // notas que la ingesta trae ese día (web/scripts/generar-datos.mjs busca por
 // id de nota). Una nota de hace dos meses ya no vuelve a aparecer.
 export const DIAS_DE_DECISIONES = 60;
+
+/** Cuántos días se exporta un texto que escribió la IA desde el panel de la PC. */
+export const DIAS_DE_TEXTOS_DE_LA_IA = 3;
+
+/**
+ * ¿Esta decisión le sirve a la web? (29/09) Lo que decidió una persona, sí; lo
+ * que guardó la máquina (`por: 'ia'`), sólo si es un texto con cuerpo de los
+ * últimos días: la web lo usa si la nube todavía no escribió esa nota. El 29/09
+ * decisiones.json pesaba 2,5 MB: 1.538 textos viejos de la IA que no miraba nadie.
+ */
+export function vaALaWeb(d, ahora = Date.now()) {
+  if (decisionHumana(d)) return true;
+  const t = Date.parse(d?.cuando ?? '');
+  return !!d?.cuerpo && Number.isFinite(t) && t >= ahora - DIAS_DE_TEXTOS_DE_LA_IA * 86400000;
+}
 /** Lo que quedó esperando a una persona (amarillo) y nadie aprobó se va a la
  *  semana (28/09, Hernán: "para no juntar información sin sentido"). */
 export const DIAS_DE_PENDIENTES = 7;

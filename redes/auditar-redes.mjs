@@ -36,7 +36,7 @@ import path from 'node:path';
 import { leerJson } from '../ingesta/json.mjs';
 import { CONTRATO_DIARIO } from '../ingesta/criterio.mjs';
 import { diaAR, horaCortaAR as hhmm } from '../ingesta/zona.mjs';
-import { crearCliente, sinToken } from './meta.mjs';
+import { crearCliente, sinToken, PAGINA_DE_FACEBOOK } from './meta.mjs';
 import {
   contratoDelDia, lineaDeRed, CONTRATO_DESDE, REDES_DEL_CONTRATO,
 } from './contrato.mjs';
@@ -427,7 +427,7 @@ export function resumenCrudo(meta) {
 }
 
 /** Consulta a Meta con META_TOKEN, o devuelve null si no hay. Nunca tira. */
-export async function consultarMeta({ token = process.env.META_TOKEN, paginaId = process.env.META_PAGE_ID ?? '1254237411116171', ahora = new Date(), dias } = {}) {
+export async function consultarMeta({ token = process.env.META_TOKEN, paginaId = PAGINA_DE_FACEBOOK, ahora = new Date(), dias } = {}) {
   if (!token) return null;
   try {
     const api = crearCliente({ token, paginaId });

@@ -48,10 +48,10 @@ test('el panel de la PC no reescribe solo con IA (lo hace sólo la nube)', () =>
   assert.doesNotMatch(servidor, /reescribirPendientes\(\)/);
 });
 
-test('voz.mjs corre sola sólo con su nombre exacto (no con auditar-voz.mjs)', () => {
+test('voz.mjs ya no habla: sin la voz de Edge ni su paquete (29/09), así no corre nada al importarlo', () => {
   const voz = leer('reels/voz.mjs');
-  assert.match(voz, /path\.basename\(process\.argv\[1\]\) === 'voz\.mjs'/);
-  assert.doesNotMatch(voz, /endsWith\('voz\.mjs'\)/);
+  assert.doesNotMatch(voz, /msedge-tts|process\.argv|export async function decir/);
+  assert.ok(!('msedge-tts' in (JSON.parse(leer('package.json')).dependencies ?? {})), 'el paquete de la voz de Edge sigue en package.json');
 });
 
 // ------------------------------------------ decisiones de Hernán (28/09)

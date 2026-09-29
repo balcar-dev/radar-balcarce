@@ -295,6 +295,31 @@ export function comoArchivoJson(notas = []) {
  *     medios (27/09): el 27/09 eran 1.069 de 1.614 páginas.
  *   · Más de 180 días, o pasado el tope, se va.
  */
+/** Lo que escribe la IA para la redacción y no ve el lector (CRITERIO-EDITORIAL.md § 7). */
+const SOLO_PARA_LA_REDACCION = ['claves', 'seSabe', 'noConfirmado', 'antecedentes', 'verificacion', 'textoRedes'];
+/** Desde cuántos días una nota del archivo guarda sólo lo que se ve. */
+export const DIAS_CON_ANALISIS = 4;
+
+/**
+ * El archivo, más liviano (29/09): a las notas de más de DIAS_CON_ANALISIS días
+ * se les saca lo que es sólo para la redacción (claves, qué se sabe, qué falta
+ * confirmar, antecedentes, nivel de verificación, texto para redes) y, de cada
+ * fuente, todo menos el medio y el enlace, que es lo único que muestra la
+ * página. Eran casi un tercio de archivo.json, que crecía hacia 5 MB. A esa edad
+ * la nota ya no está en la ingesta (72 horas), así que la reescritura no lo usa.
+ */
+export function aligerarViejas(notas = [], { ahora = Date.now(), dias = DIAS_CON_ANALISIS } = {}) {
+  const corte = Number(ahora) - dias * 24 * HORA;
+  return notas.map((n) => {
+    if (!(tiempo(n) < corte)) return n;
+    const liviana = Object.fromEntries(Object.entries(n).filter(([k]) => !SOLO_PARA_LA_REDACCION.includes(k)));
+    if (Array.isArray(n.fuentesConsultadas)) {
+      liviana.fuentesConsultadas = n.fuentesConsultadas.map((f) => ({ medio: f?.medio ?? null, enlace: f?.enlace ?? null }));
+    }
+    return liviana;
+  });
+}
+
 export function actualizarArchivo({
   archivo = [], publicadas = [], enPortada = new Set(), retiradas = new Set(), enRedes = new Set(),
   ahora = Date.now(), dias = DIAS_DE_ARCHIVO, maximo = MAXIMO_EN_ARCHIVO,

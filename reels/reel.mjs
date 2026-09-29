@@ -1,7 +1,8 @@
 // Arma el video vertical: placa + voz + subtítulos sincronizados palabra por
-// palabra. El video se arma con ffmpeg, en la máquina; lo único que se paga es
-// la voz de Gemini (la clave de redes es paga desde el 25/09). Si Gemini falla,
-// la pieza no se arma: nunca sale con otra voz (28/09, "mejor nunca Elena").
+// palabra. El video se arma con ffmpeg, en la máquina; la voz es la de Gemini
+// (la clave de redes, con su cupo diario de audios). Si Gemini falla, la pieza
+// no se arma: nunca sale con otra voz (28/09, "mejor nunca Elena"). Sin música:
+// la cortina hecha con osciladores sonaba a pitido y se sacó el 29/09.
 
 import fs from 'node:fs';
 import path from 'node:path';
@@ -12,13 +13,13 @@ import { paraLeer, enCarteles } from './voz.mjs';
 import { aPng } from './placa.mjs';
 import { decirGemini } from './voz-gemini.mjs';
 import { componerIndicacion, vozDePieza } from '../redes/prompt-redes.mjs';
-import { ARCHIVO as CORTINA, generar as generarCortina } from './cortina.mjs';
 import {
   HISTORIA_MAXIMA, duracionDeLaSalida, pasaDelMaximo, argumentosDeRecorte,
 } from './duracion.mjs';
 
 const correr = promisify(execFile);
-const RETARDO = 0.7; // lo que suena la cortina sola antes de que entre la voz
+// Lo que tarda en entrar la voz después de que aparece la placa.
+const RETARDO = 0.25;
 
 // ASS usa los colores al revés: &HAABBGGRR.
 const aAss = (hex, alfa = '00') => {
@@ -108,12 +109,8 @@ export async function recortarParaHistoria(mp4, salida) {
  * @param spec { nombre, svg, guion, acento }
  * @returns ruta del mp4
  */
-// La cortina queda apagada: generada con osciladores puros sonaba a pitido de
-// fondo, no a música. El código sigue en cortina.mjs para cuando tengamos una
-// pista de verdad (grabada o de una librería libre) y ahí se prende con
-// { musica: true }.
 export async function armarReel({
-  nombre, svg, guion, acento = '#E8A33C', musica = false, indicacion = null,
+  nombre, svg, guion, acento = '#E8A33C', indicacion = null,
   // Cada pieza tiene siempre la misma voz (el reparto de CRITERIO-REDES.md, sección
   // 6): la locutora o el locutor. No se cambia por variable de entorno ni hay otra
   // de respaldo; una pieza sin voz en el reparto lanza.
@@ -149,9 +146,7 @@ export async function armarReel({
   }
   if (!voz.palabras.length) throw new Error('la voz no devolvió tiempos de palabra');
 
-  // Sin música, la voz entra casi enseguida; con música, medio segundo después.
-  const retardo = musica ? RETARDO : 0.25;
-  if (musica && !fs.existsSync(CORTINA)) await generarCortina();
+  const retardo = RETARDO;
   fs.writeFileSync(ass, armarAss(enCarteles(voz.palabras, { max: 4, minimo: 2 }), { acento, retardo }), 'utf8');
 
   // Zoom lento sobre la placa: sin movimiento, un reel parece una foto y la
@@ -177,20 +172,12 @@ export async function armarReel({
   const total = retardo + voz.duracion + 1.4;
   const ms = Math.round(retardo * 1000);
 
-  // Con música: la voz retrasada y la cortina 21 dB más abajo (normalize=0
-  // evita que amix baje la voz para hacerle lugar). Sin música: sólo la voz.
-  const audio = musica
-    ? [
-      `[1:a]adelay=${ms}|${ms}[voz]`,
-      `[2:a]volume=0.18,afade=t=out:st=${(total - 1.4).toFixed(2)}:d=1.4[mus]`,
-      '[voz][mus]amix=inputs=2:duration=first:normalize=0[a]',
-    ].join(';')
-    : `[1:a]adelay=${ms}|${ms},apad=pad_dur=1.2[a]`;
+  // La voz, apenas retrasada, y un silencio corto al final.
+  const audio = `[1:a]adelay=${ms}|${ms},apad=pad_dur=1.2[a]`;
 
   await correr(ffmpeg, [
     '-y', '-loop', '1', '-i', path.basename(png),
     '-i', path.basename(mp3),
-    ...(musica ? ['-stream_loop', '-1', '-i', CORTINA] : []),
     '-filter_complex', `[0:v]${filtro}[v];${audio}`,
     '-map', '[v]', '-map', '[a]',
     '-c:v', 'libx264', '-preset', 'veryfast', '-crf', '20', '-pix_fmt', 'yuv420p',

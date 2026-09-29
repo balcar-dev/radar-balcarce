@@ -89,8 +89,10 @@ test('placas y tarjetas usan Source Serif 4 e Inter, con los archivos en su luga
   const t = fs.readFileSync(new URL('web/lib/tarjeta.js', raiz), 'utf8');
   for (const f of ['SourceSerif4-900.ttf', 'Inter-600.ttf']) {
     assert.match(t, new RegExp(f.replace('.', '\.')));
-    assert.ok(fs.existsSync(new URL(`web/fuentes/${f}`, raiz)), `falta web/fuentes/${f}`);
+    assert.ok(fs.existsSync(new URL(`reels/marca/fuentes/${f}`, raiz)), `falta reels/marca/fuentes/${f}`);
   }
+  assert.ok(t.includes("path.join(process.cwd(), '..', 'reels', 'marca', 'fuentes')"), 'las tarjetas no leen las tipografías de reels/marca/fuentes');
+  assert.ok(!fs.existsSync(new URL('web/fuentes/', raiz)), 'volvió la copia de las tipografías en web/fuentes');
   const marca = fs.readdirSync(new URL('reels/marca/fuentes/', raiz));
   for (const f of ['SourceSerif4-700.ttf', 'SourceSerif4-900.ttf', 'Inter-400.ttf', 'Inter-500.ttf', 'Inter-600.ttf', 'Inter-700.ttf']) {
     assert.ok(marca.includes(f), `falta reels/marca/fuentes/${f}`);

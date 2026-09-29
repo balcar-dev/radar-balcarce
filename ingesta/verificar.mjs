@@ -650,6 +650,14 @@ const EN_VIVO = /\b(en vivo|en directo|minuto a minuto|live)\b/;
 // Un show en vivo es un show con músicos en el escenario, no una cobertura.
 const EN_VIVO_PERMITIDO = /\b(musica|show|shows|banda|bandas|espectaculo|espectaculos|recital|recitales|concierto|conciertos|toca|tocan|tocara|tocaran) en vivo\b/;
 
+/** ¿El texto promete una cobertura en vivo ("EN VIVO", "minuto a minuto")? Un
+ *  show en vivo no cuenta. Lo usa también generar-datos para sacar del archivo
+ *  las páginas viejas que lo dicen en el título (29/09). */
+export function diceEnVivo(texto = '') {
+  const s = sinTildes(String(texto));
+  return EN_VIVO.test(s) && !EN_VIVO_PERMITIDO.test(s);
+}
+
 /**
  * Compara lo que escribió la IA contra lo que recibió.
  *
