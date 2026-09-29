@@ -267,6 +267,53 @@
         "vistas": 9,
         "interacciones": 0
       }
+    },
+    {
+      "cuando": "2026-09-29T00:00:16.884Z",
+      "web": {
+        "u12": {
+          "visitas": 30,
+          "vistas": 292
+        },
+        "a12": {
+          "visitas": 19,
+          "vistas": 422
+        },
+        "u24": {
+          "visitas": 49,
+          "vistas": 714
+        },
+        "a24": {
+          "visitas": 51,
+          "vistas": 311
+        },
+        "top": [
+          {
+            "camino": "/",
+            "vistas": 283
+          },
+          {
+            "camino": "/farmacias",
+            "vistas": 36
+          },
+          {
+            "camino": "/nota/el-movimiento-245-brinda-contencion-y-autoayuda-187bqn1",
+            "vistas": 25
+          }
+        ]
+      },
+      "facebook": {
+        "seguidores": 2,
+        "vistas": 259,
+        "interacciones": 1
+      },
+      "instagram": {
+        "seguidores": 4,
+        "publicaciones": 34,
+        "alcance": 20,
+        "vistas": 40,
+        "interacciones": 1
+      }
     }
   ]
 }
