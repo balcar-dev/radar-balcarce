@@ -521,9 +521,9 @@
   "motivo": "título o bajada: 1 problema (negacion): la fuente niega algo en el título y el texto nuevo no"
  },
  "17zxv70": {
-  "intentos": 2,
-  "ultimo": "2026-09-29T18:31:17.064Z",
-  "motivo": "título o bajada: 1 problema (copia): copia 13 palabras seguidas del original"
+  "intentos": 3,
+  "ultimo": "2026-09-29T19:01:14.061Z",
+  "motivo": "cuerpo: 1 problema (copia): copia 18 palabras seguidas del original; sin esas oraciones quedan 47 palabras"
  },
  "180ifr6": {
   "intentos": 1,
@@ -2334,6 +2334,11 @@
   "ultimo": "2026-09-25T14:00:47.762Z",
   "motivo": "con cuerpo"
  },
+ "6khxos": {
+  "intentos": 1,
+  "ultimo": "2026-09-29T19:01:14.061Z",
+  "motivo": "título o bajada: 1 problema (negacion): la fuente niega algo en el título y el texto nuevo no"
+ },
  "6m9ixr": {
   "intentos": 3,
   "ultimo": "2026-09-27T19:30:41.196Z",
@@ -2719,9 +2724,9 @@
   "motivo": "con cuerpo"
  },
  "e7jcec": {
-  "intentos": 1,
-  "ultimo": "2026-09-29T18:31:17.064Z",
-  "motivo": "cuerpo: 1 problema (repite): el cuerpo repite el copete en vez de desarrollarlo; sin esas oraciones quedan 42 palabras"
+  "intentos": 2,
+  "ultimo": "2026-09-29T19:01:14.061Z",
+  "motivo": "con cuerpo"
  },
  "e7ym9v": {
   "intentos": 1,
