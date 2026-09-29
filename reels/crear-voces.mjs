@@ -106,7 +106,7 @@ async function aMp3(wav, destino) {
 fs.mkdirSync(SALIDA, { recursive: true });
 
 if (process.argv[2] === 'listar') {
-  const r = await api('GET', '/voices?type_=prompted');
+  const r = await api('GET', '/voices?page_size=100');
   console.log(r.ok ? sinAudio(r.json) : `ERROR ${r.estado ?? ''} ${r.error}`);
   process.exit(0);
 }
