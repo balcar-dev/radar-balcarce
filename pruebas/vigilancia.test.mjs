@@ -261,6 +261,88 @@ test('el vencimiento apunta al 21/09/2027, como dice docs/08-INFRAESTRUCTURA.md'
   assert.equal(VENCIMIENTOS.find((v) => v.clave === 'vence-token-github').fecha, '2027-09-21');
 });
 
+// ------------------------------------------- las claves de IA y las voces (29/09)
+
+import { revisarClaves, CLAVES_DE_IA } from '../redes/vigilar.mjs';
+import { VOCES } from '../redes/prompt-redes.mjs';
+import fs from 'node:fs';
+
+test('la fecha en que vence cada voz la da Google: se avisa un mes antes, grave la última semana', () => {
+  const voces = (vence) => ({ locutora: { existe: true, vence }, locutor: { existe: true, vence: '2027-12-01T00:00:00Z' } });
+  const o = sano(new Date('2027-09-10T12:00:00-03:00'));
+  o.voces = voces('2027-09-29T13:50:39Z');
+  const v = evaluar(o).find((p) => p.clave === 'vence-voz-locutora');
+  assert.ok(v && /Crear voces/.test(v.texto) && /29\/09\/2027/.test(v.texto), 'no avisó del vencimiento');
+  assert.equal(v.nivel, 'media');
+  assert.ok(!evaluar(o).some((p) => p.clave === 'vence-voz-locutor'), 'avisó de una voz con tiempo de sobra');
+  o.ahora = new Date('2027-09-25T12:00:00-03:00');
+  assert.equal(evaluar(o).find((p) => p.clave === 'vence-voz-locutora').nivel, 'alta');
+  // El documento dice lo mismo que Google para las voces de hoy.
+  assert.match(fs.readFileSync(new URL('../CRITERIO-REDES.md', import.meta.url), 'utf8'), /29\/09\/2027/);
+});
+
+test('una clave de IA suspendida o rechazada es un problema grave que dice qué hacer (29/09)', () => {
+  const o = sano(A('12:00'));
+  o.claves = [
+    { nombre: 'GEMINI_API_KEY_REDES', uso: 'las voces de las redes', proveedor: 'gemini', estado: 403, detalle: 'Consumer has been suspended' },
+    { nombre: 'GROQ_API_KEY', uso: 'el respaldo', proveedor: 'groq', estado: 401, detalle: 'Invalid API Key' },
+    { nombre: 'GEMINI_API_KEY_REDACCION', uso: 'redactar', proveedor: 'gemini', estado: 200, detalle: '' },
+  ];
+  const r = evaluar(o);
+  assert.deepEqual(claves(r), ['clave-GEMINI_API_KEY_REDES', 'clave-GROQ_API_KEY']);
+  assert.ok(r.every((p) => p.nivel === 'alta'));
+  assert.match(r[0].texto, /AI Studio/);
+  assert.match(r[0].texto, /nunca en un chat/);
+  assert.match(r[1].texto, /console\.groq\.com/);
+});
+
+test('sin cupo (429), un servicio caído (5xx) o sin red no son una clave rota', () => {
+  const o = sano(A('12:00'));
+  o.claves = [429, 500, 503, null].map((estado) => ({ nombre: 'GEMINI_API_KEY_REDACCION', uso: 'redactar', proveedor: 'gemini', estado, detalle: '' }));
+  assert.deepEqual(evaluar(o), []);
+});
+
+test('si Gemini ya no tiene una de las voces propias, se avisa; si no se pudo mirar, no', () => {
+  const o = sano(A('12:00'));
+  o.voces = { locutora: { existe: false, vence: null }, locutor: { existe: true, vence: '2027-09-29T13:50:39Z' } };
+  const r = evaluar(o);
+  assert.deepEqual(claves(r), ['voz-locutora']);
+  assert.ok(r[0].texto.includes(VOCES.locutora));
+  o.voces = { locutora: { existe: null, vence: null }, locutor: { existe: null, vence: null } };
+  assert.deepEqual(evaluar(o), []);
+});
+
+test('revisarClaves pregunta sin gastar cupo, salta las claves que no están y nunca muestra una clave', async () => {
+  const pedidos = [];
+  const fetchFn = async (url, { headers }) => {
+    pedidos.push({ url, headers });
+    const clave = headers['x-goog-api-key'] ?? headers.authorization;
+    if (url.includes('/voices/')) {
+      return url.endsWith(VOCES.locutor)
+        ? new Response(JSON.stringify({ id: VOCES.locutor, expire_time: '2027-09-29T13:50:39Z' }), { status: 200 })
+        : new Response(JSON.stringify({ error: { code: 404, message: 'The voice was not found' } }), { status: 404 });
+    }
+    if (String(clave).includes('rota')) {
+      return new Response(JSON.stringify({ error: { message: `API key not valid: ${clave}` } }), { status: 400 });
+    }
+    return new Response('{}', { status: 200 });
+  };
+  const env = { GEMINI_API_KEY_REDACCION: 'clave-rota-123', GEMINI_API_KEY_REDES: 'clave-buena' };
+  const r = await revisarClaves({ env, fetchFn });
+  assert.deepEqual(r.claves.map((c) => [c.nombre, c.estado]), [['GEMINI_API_KEY_REDACCION', 400], ['GEMINI_API_KEY_REDES', 200]]);
+  assert.ok(!r.claves[0].detalle.includes('clave-rota-123'), 'el detalle muestra la clave');
+  assert.deepEqual(r.voces, { locutora: { existe: false, vence: null }, locutor: { existe: true, vence: '2027-09-29T13:50:39Z' } });
+  // Sólo la lista de modelos y la ficha de cada voz: nada que genere texto o audio.
+  assert.ok(pedidos.every((p) => /\/models\?pageSize=1$|\/voices\/voice_[a-z0-9]+$/.test(p.url)));
+  assert.equal(CLAVES_DE_IA.length, 4);
+});
+
+test('revisarClaves sin red no inventa problemas', async () => {
+  const r = await revisarClaves({ env: { GEMINI_API_KEY_REDES: 'x' }, fetchFn: async () => { throw new Error('sin red'); } });
+  assert.deepEqual(r.claves.map((c) => c.estado), [null]);
+  assert.deepEqual(r.voces, { locutora: { existe: null, vence: null }, locutor: { existe: null, vence: null } });
+});
+
 // ------------------------------------- lo que se pidió que NO aparezca
 
 import { revisarPortada } from '../redes/vigilar.mjs';

@@ -17,8 +17,10 @@
 //     contra lo que Meta tiene de verdad; con REDES_ACTIVAS apagado, sólo lo
 //     dice una vez por día;
 //   · que `www` redirija al dominio sin `www`;
-//   · lo que vence y hay que renovar a mano (el token de GitHub, el dominio),
-//     con 30 días de aviso;
+//   · lo que vence y hay que renovar a mano (el token de GitHub, el dominio,
+//     las voces propias), con 30 días de aviso;
+//   · que las claves de IA sigan andando y que Gemini tenga las dos voces
+//     propias (29/09: se suspendió la clave paga y nos enteramos mirando);
 //   · que la portada NO vuelva a mostrar lo que se pidió sacar (la fuente arriba
 //     de un título, "la vimos hace…", hasta qué hora está la farmacia), y que
 //     la mayoría de las notas tengan cuerpo. Ver docs/10-REGLAS-Y-PRUEBAS.md.
@@ -55,6 +57,7 @@ import {
   consultarMeta, informeDelDia, textoCierre, lineaDeCierreCompleto, textoInforme,
 } from './auditar-redes.mjs';
 import { CONTRATO_DIARIO } from '../ingesta/criterio.mjs';
+import { VOCES } from './prompt-redes.mjs';
 import {
   importantesAAvisar, textoImportantes, anotarImportantes, pendientesAAvisar, textoPendientes,
   anotarPendientes, novedadesEnRedes, textoRedes, datosDelDia, textoResumen, armarMensaje, textoInformeDelDia,
@@ -108,6 +111,77 @@ export const VENCIMIENTOS = [
 ];
 export const DIAS_DE_AVISO_ANTES = 30;
 
+/**
+ * Las claves de IA que se revisan en cada vuelta (29/09). Ese día Google
+ * suspendió la clave paga, la voz se cortó y nos enteramos mirando. Se pregunta
+ * algo que no gasta cupo (la lista de modelos) y, con la de redes, por cada una
+ * de las dos voces propias: si sigue existiendo y cuándo vence (Google lo dice;
+ * vencen al año de crearse). Una clave que no está cargada no se revisa.
+ */
+export const CLAVES_DE_IA = [
+  { nombre: 'GEMINI_API_KEY_REDACCION', uso: 'redactar las notas', proveedor: 'gemini' },
+  { nombre: 'GEMINI_API_KEY_REDES', uso: 'las voces de las redes', proveedor: 'gemini' },
+  { nombre: 'GEMINI_API_KEY_CLASIFICACION', uso: 'la lectura con IA y las fotos', proveedor: 'gemini' },
+  { nombre: 'GROQ_API_KEY', uso: 'el respaldo de la lectura y de las fotos', proveedor: 'groq' },
+];
+
+const API_GEMINI = 'https://generativelanguage.googleapis.com/v1beta';
+
+/** El mensaje de error de una respuesta, corto y sin la clave. */
+async function detalleDe(res, clave) {
+  const texto = await res.text().catch(() => '');
+  let mensaje = texto;
+  try { mensaje = JSON.parse(texto)?.error?.message ?? texto; } catch { /* no era JSON */ }
+  return sinSecretos(String(mensaje).replace(/\s+/g, ' ').trim(), clave).slice(0, 140);
+}
+
+/**
+ * Qué contesta cada proveedor a cada clave, y si Gemini todavía tiene las dos
+ * voces propias. Devuelve { claves: [{ nombre, uso, proveedor, estado, detalle }],
+ * voces: { locutora: { existe, vence }, locutor: { existe, vence } } } (`existe`
+ * es true, false o null si no se pudo mirar; `vence`, la fecha que da Google).
+ * Nunca lanza: sin red, `estado` queda en null y no se avisa nada.
+ */
+export async function revisarClaves({ env = process.env, fetchFn = fetch, voces = VOCES } = {}) {
+  const claves = [];
+  const pedir = async (url, cabeceras) => {
+    try {
+      return await fetchFn(url, { headers: cabeceras, signal: AbortSignal.timeout(15000) });
+    } catch {
+      return null;
+    }
+  };
+  for (const c of CLAVES_DE_IA) {
+    const clave = String(env[c.nombre] ?? '').trim();
+    if (!clave) continue;
+    const res = c.proveedor === 'groq'
+      ? await pedir('https://api.groq.com/openai/v1/models', { authorization: `Bearer ${clave}` })
+      : await pedir(`${API_GEMINI}/models?pageSize=1`, { 'x-goog-api-key': clave });
+    claves.push({ ...c, estado: res?.status ?? null, detalle: res && !res.ok ? await detalleDe(res, clave) : '' });
+  }
+  // Las voces propias viven en el proyecto de la clave de redes. Google contesta
+  // 404 si la voz ya no existe (se borró o venció) y, si existe, su `expire_time`.
+  const deRedes = String(env.GEMINI_API_KEY_REDES ?? '').trim();
+  const hay = { locutora: { existe: null, vence: null }, locutor: { existe: null, vence: null } };
+  if (deRedes && voces) {
+    for (const quien of ['locutora', 'locutor']) {
+      const res = await pedir(`${API_GEMINI}/voices/${voces[quien]}`, { 'x-goog-api-key': deRedes });
+      if (res?.status === 404) hay[quien].existe = false;
+      else if (res?.ok) {
+        const j = await res.json().catch(() => null);
+        hay[quien] = { existe: true, vence: j?.expire_time ?? null };
+      }
+    }
+  }
+  return { claves, voces: hay };
+}
+
+/** Qué hacer cuando una clave no anda. */
+const ARREGLO_DE_CLAVE = {
+  gemini: (nombre) => `Entrá a Google AI Studio (radarbalcarce@gmail.com), fijate si la clave o su proyecto están suspendidos o sin crédito y, si hace falta, creá una clave nueva y pegala en GitHub → Settings → Secrets and variables → Actions → ${nombre} (nunca en un chat).`,
+  groq: (nombre) => `Entrá a console.groq.com, creá una clave nueva y pegala en GitHub → Settings → Secrets and variables → Actions → ${nombre} (nunca en un chat).`,
+};
+
 const minutos = (desde, ahora) => (ahora.getTime() - new Date(desde).getTime()) / 60000;
 
 /**
@@ -123,7 +197,7 @@ const minutos = (desde, ahora) => (ahora.getTime() - new Date(desde).getTime()) 
  */
 export function evaluar({
   ahora, web, www = null, corridas = {}, libro = {}, contenido = null, auditoria = null, contrato = null,
-  redesActivas = true,
+  redesActivas = true, claves = [], voces = null,
 }) {
   const problemas = [];
   const de = (clave, nivel, texto) => problemas.push({ clave, nivel, texto });
@@ -169,8 +243,33 @@ export function evaluar({
     }
   }
 
+  // --- las claves de IA y las voces propias (29/09). Sólo lo que dice que la
+  // clave no sirve (400 a 403): "sin cupo" (429) o un servicio caído (5xx) son de
+  // un rato y ya los maneja cada corrida.
+  for (const c of claves ?? []) {
+    if (![400, 401, 402, 403].includes(c.estado)) continue;
+    const quien = c.proveedor === 'groq' ? 'Groq' : 'Google';
+    de(`clave-${c.nombre}`, 'alta', `La clave ${c.nombre} (${c.uso}) no anda: ${quien} contesta ${c.estado}${c.detalle ? ` ("${c.detalle}")` : ''}. ${ARREGLO_DE_CLAVE[c.proveedor]?.(c.nombre) ?? ''}`.trim());
+  }
+  for (const quien of ['locutora', 'locutor']) {
+    const v = voces?.[quien];
+    const cual = quien === 'locutora' ? 'de la locutora' : 'del locutor';
+    const arreglo = 'Hay que crearla de nuevo (Actions → "Crear voces") y cambiar el identificador en CRITERIO-REDES.md (docs/11-OPERACION.md)';
+    if (v?.existe === false) {
+      de(`voz-${quien}`, 'alta', `Gemini ya no tiene la voz ${cual} (${VOCES[quien]}): las piezas que dice no salen. ${arreglo}.`);
+      continue;
+    }
+    const t = Date.parse(v?.vence ?? '');
+    if (!Number.isFinite(t)) continue;
+    const dias = Math.ceil((t - ahora.getTime()) / 86400000);
+    if (dias <= DIAS_DE_AVISO_ANTES) {
+      const fecha = new Intl.DateTimeFormat('es-AR', { day: '2-digit', month: '2-digit', year: 'numeric', timeZone: 'America/Argentina/Buenos_Aires' }).format(new Date(t));
+      de(`vence-voz-${quien}`, dias <= 7 ? 'alta' : 'media', `${dias > 0 ? `Faltan ${dias} día(s): la` : 'YA VENCIÓ la'} voz ${cual} vence el ${fecha}. ${arreglo}; si vence, las piezas que dice dejan de salir.`);
+    }
+  }
+
   // --- las corridas de GitHub
-  const NOMBRES = { 'Actualizar la web': 'Actualizar la web', Redes: 'Redes', 'Cloudflare Pages': 'Cloudflare Pages' };
+  const NOMBRES ={ 'Actualizar la web': 'Actualizar la web', Redes: 'Redes', 'Cloudflare Pages': 'Cloudflare Pages' };
   for (const [nombre, lista] of Object.entries(corridas)) {
     if (!NOMBRES[nombre]) continue;
     const terminadas = lista.filter((r) => r.status === 'completed' && r.conclusion !== 'cancelled' && r.conclusion !== 'skipped');
@@ -486,7 +585,7 @@ export function ultimaModificacion(xml = '') {
   return fechas.reduce((a, b) => (b.t > a.t ? b : a)).texto;
 }
 
-export async function observar({ sitio, repo, token, ahora = new Date() }) {
+export async function observar({ sitio, repo, token, ahora = new Date(), env = process.env }) {
   const portada = await pedir(`${sitio}/sitemap.xml`);
   let actualizado = null;
   if (portada?.ok) {
@@ -509,12 +608,15 @@ export async function observar({ sitio, repo, token, ahora = new Date() }) {
       corridas[nombre] = lista;
     }
   }
+  const { claves, voces } = await revisarClaves({ env });
   return {
     ahora,
     web: { estado: inicio?.status ?? 0, actualizado: portada?.ok ? actualizado : null },
     www: www ? { redirige: [301, 302, 307, 308].includes(www.status) } : null,
     contenido: html ? { home: revisarPortada(html) } : null,
     corridas,
+    claves,
+    voces,
   };
 }
 
