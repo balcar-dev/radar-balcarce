@@ -126,6 +126,55 @@ if (process.argv[2] === 'listar') {
   process.exit(0);
 }
 
+if (process.argv[2] === 'dialogo') {
+  // Una charla de radio entre la locutora y el locutor (28/09). Con voces propias
+  // (voice_…) Google no deja hacer la conversación en un solo pedido: se sintetiza
+  // cada intervención por separado, con la voz fija de cada uno, y se pegan con una
+  // pausa corta. Los ids vienen de VOZ_MUJER y VOZ_HOMBRE.
+  const mujer = process.env.VOZ_MUJER;
+  const hombre = process.env.VOZ_HOMBRE;
+  if (!mujer || !hombre) { console.log('Faltan VOZ_MUJER y VOZ_HOMBRE.'); process.exit(1); }
+  // Sólo lo que dicen los titulares del lunes 28/09, sin agregar hechos.
+  const GUION = [
+    ['m', 'Buenas noches, Balcarce. Bienvenidos a Radar Balcarce.'],
+    ['h', 'Buenas noches. Hoy repasamos lo que dejó este lunes.'],
+    ['m', 'Arrancamos por el autódromo: el Fangio volvió a rugir después de quince años.'],
+    ['h', 'Y otra que se comenta: la mala suerte de Ariel Durán en Balcarce.'],
+    ['m', 'También te contamos de Movimiento 245, un espacio de contención y recuperación que funciona en Balcarce.'],
+    ['h', 'Y por último, Argentina y Bolivia: cuándo juegan, las entradas y las claves de un Kempes con aforo reducido.'],
+    ['m', 'Todo lo demás lo encontrás en Radar Balcarce punto com.'],
+    ['h', 'Que tengan una buena noche.'],
+  ];
+  const partes = [];
+  for (const [i, [quien, texto]] of GUION.entries()) {
+    const gen = await api('POST', '/interactions', {
+      model: MODELO,
+      input: [{ type: 'user_input', content: [{ type: 'text', text: texto, annotations: [{ type: 'speech_metadata', style: ESTILO }] }] }],
+      response_format: { type: 'audio' },
+      generation_config: { speech_config: [{ voice: quien === 'm' ? mujer : hombre }] },
+    });
+    const audio = gen.ok ? buscarAudio(gen.json) : null;
+    if (!audio) { console.log('turno ' + (i + 1) + ': ERROR ' + (gen.error ?? 'sin audio')); process.exit(1); }
+    const wav = path.join(SALIDA, 'turno-' + i + '.wav');
+    fs.writeFileSync(wav, Buffer.from(audio.data, 'base64'));
+    partes.push(wav);
+    console.log('turno ' + (i + 1) + ' (' + (quien === 'm' ? 'ella' : 'él') + '): ' + (segundosDeWav(fs.readFileSync(wav))).toFixed(1) + ' s');
+    await dormir(1500);
+  }
+  const silencio = path.join(SALIDA, 'silencio.wav');
+  await correr(ffmpeg, ['-y', '-v', 'error', '-f', 'lavfi', '-i', 'anullsrc=r=24000:cl=mono', '-t', '0.3', silencio]);
+  const lista = path.join(SALIDA, 'lista.txt');
+  const aRuta = (x) => x.split(path.sep).join('/');
+  fs.writeFileSync(lista, partes.map((p) => `file '${aRuta(p)}'\nfile '${aRuta(silencio)}'`).join('\n'));
+  const salida = path.join(SALIDA, 'dialogo.mp3');
+  await correr(ffmpeg, ['-y', '-v', 'error', '-f', 'concat', '-safe', '0', '-i', lista, '-ar', '24000', '-ac', '1', '-b:a', '128k', salida]);
+  const palabras = GUION.map((t) => t[1]).join(' ').split(/\s+/).length;
+  const info = await correr(ffmpeg, ['-i', salida, '-f', 'null', '-']).catch((x) => x);
+  const dur = String(info.stderr ?? '').match(/time=(\d+):(\d+):(\d+\.\d+)/g)?.pop();
+  console.log('\nListo: dialogo.mp3, ' + palabras + ' palabras, ' + dur);
+  process.exit(0);
+}
+
 const creadas = [];
 for (const c of CANDIDATOS) {
   console.log(`\n== ${c.id} ==`);
