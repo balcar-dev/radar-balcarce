@@ -1,5 +1,5 @@
 {
-  "generado": "2026-09-29T12:32:17.486Z",
+  "generado": "2026-09-29T13:01:53.516Z",
   "notas": [
     {
       "id": "1hjmkd4",
@@ -90,7 +90,6 @@
       "guion": "La virgen de la tosquera compite por una nominación en los Oscar",
       "seccion": "Cultura y agenda",
       "medios": [
-        "Agencia DIB",
         "Ámbito",
         "TN (Todo Noticias)",
         "El Destape",
@@ -100,6 +99,7 @@
         "Diario Popular",
         "Noticias Argentinas (NA)",
         "El Día",
+        "La Verdad",
         "ANDigital",
         "Minuto Uno",
         "Infobae",
@@ -108,7 +108,8 @@
         "C5N",
         "Página/12",
         "La Nueva",
-        "La Brújula 24"
+        "La Brújula 24",
+        "Agencia DIB"
       ],
       "enlace": "https://www.minutouno.com/espectaculos/la-virgen-la-tosquera-laura-casabe-representara-la-argentina-los-oscar-n6327706",
       "teniaImagenLaFuente": true,
@@ -395,8 +396,8 @@
         "C5N",
         "Diario Popular",
         "Noticias Argentinas (NA)",
-        "La Nueva",
-        "InfoRegión"
+        "InfoRegión",
+        "La Nueva"
       ],
       "enlace": "https://www.eldestapeweb.com/economia/consumo-cayo-1-1-agosto-profundiza-crisis-hogares-202692819538",
       "teniaImagenLaFuente": true,
@@ -480,6 +481,257 @@
       }
     },
     {
+      "id": "1ytgm6c",
+      "titulo": "Petruccelli pide que Aparicio exponga ante la Comisión de Salud",
+      "copete": "El concejal solicita que la investigadora del INTA detalle en el Concejo Deliberante su trabajo sobre plaguicidas y su situación institucional.",
+      "cuerpo": "El pedido busca que la profesional exponga el alcance, la metodología y los resultados de su investigación sobre la presencia de plaguicidas y metabolitos en muestras biológicas humanas.\n\nLa presentación también incorpora el abordaje de las recientes manifestaciones públicas vinculadas a la situación laboral de la investigadora y a las denuncias sobre supuestas restricciones para difundir los resultados científicos. Aparicio participa en el proyecto internacional SPRINT, enfocado en el estudio de la exposición a productos fitosanitarios y sus efectos sobre la salud y el ambiente.\n\nPetruccelli solicitó que la reunión se concrete en una fecha y un horario a convenir con la investigadora para generar un espacio de diálogo institucional en el ámbito legislativo.",
+      "guion": "Petruccelli pide que Aparicio exponga ante la Comisión de Salud",
+      "seccion": "Política",
+      "medios": [
+        "Puntonueve (FM 100.9)",
+        "Infórmese Primero (FM 104.9)",
+        "Diario La Vanguardia"
+      ],
+      "enlace": "https://puntonueve.com.ar/petruccelli-pidio-que-virginia-aparicio-exponga-ante-la-comision-de-salud/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-28T21:59:12.000Z",
+      "sinFecha": false,
+      "visto": "2026-09-29T00:30:56.955Z",
+      "relevancia": 93,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [
+        "concejo",
+        "inta"
+      ],
+      "como": "automatica",
+      "claves": [
+        "Gabriel Petruccelli presentó una nota en el Concejo Deliberante.",
+        "Solicitó convocar a la investigadora del INTA Balcarce, Virginia Aparicio.",
+        "El pedido apunta a conocer su estudio sobre plaguicidas en muestras biológicas.",
+        "Incluye el análisis de su actual situación institucional y laboral."
+      ],
+      "seSabe": [
+        "El concejal Gabriel Petruccelli presentó la solicitud dirigida a Viviana Erreguerena, titular de la Comisión de Salud.",
+        "La investigadora Virginia Aparicio integra el proyecto internacional SPRINT sobre fitosanitarios.",
+        "El pedido contempla que la profesional detalle la metodología y los resultados de su trabajo científico.",
+        "La iniciativa legislativa menciona las recientes manifestaciones sobre la situación laboral de la investigadora."
+      ],
+      "noConfirmado": [
+        "Todavía no se fijó la fecha ni el horario para la posible presentación de la investigadora en el cuerpo legislativo."
+      ],
+      "textoRedes": "El concejal Gabriel Petruccelli pidió que la investigadora de la Estación Experimental INTA Balcarce, Virginia Aparicio, exponga ante la Comisión de Salud sobre su trabajo acerca de plaguicidas en muestras biológicas humanas y su situación institucional.",
+      "etiquetas": [
+        "Concejo Deliberante",
+        "INTA Balcarce",
+        "Virginia Aparicio",
+        "Gabriel Petruccelli",
+        "Comisión de Salud",
+        "plaguicidas"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Puntonueve (FM 100.9)",
+          "enlace": "https://puntonueve.com.ar/petruccelli-pidio-que-virginia-aparicio-exponga-ante-la-comision-de-salud/",
+          "fecha": "2026-09-28T21:59:12.000Z",
+          "oficial": false,
+          "aporte": "Detalló la presentación del concejal Gabriel Petruccelli a la Comisión de Salud y los objetivos de la exposición de la investigadora."
+        },
+        {
+          "medio": "Diario La Vanguardia",
+          "enlace": "https://www.diariolavanguardia.com/noticias/44933-petruccelli-pidio-que-virginia-aparicio-concurra-al-concejo-y-exponga-ante-la-comision-de-salud/",
+          "fecha": null,
+          "oficial": false,
+          "aporte": "Confirmó que la solicitud apunta a que la investigadora del INTA Balcarce informe sobre plaguicidas en muestras biológicas humanas."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "v91szb",
+          "titulo": "La APDH rechaza la factible exoneración de la Dra. Virginia Aparicio, investigadora del INTA Balcarce y del CONICET",
+          "fecha": "2026-09-23T01:50:24.356Z",
+          "ruta": "/nota/la-apdh-rechaza-la-factible-exoneracion-de-la-dra-virginia-aparicio-v91szb"
+        },
+        {
+          "id": "tmpmtz",
+          "titulo": "Legislatura bonarense: presentan un proyecto para respaldar a Virginia Aparicio, investigadora de INTA Balcarce",
+          "fecha": "2026-09-21T17:19:51.000Z",
+          "ruta": "/nota/legislatura-bonarense-presentan-un-proyecto-para-respaldar-a-virginia-tmpmtz"
+        },
+        {
+          "id": "dph8p3",
+          "titulo": "Petruccelli pidió informes sobre el programa para celíacos y las acciones de prevención de ITS",
+          "fecha": "2026-09-20T14:00:23.000Z",
+          "ruta": "/nota/petruccelli-pidio-informes-sobre-el-programa-para-celiacos-y-las-dph8p3"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "petruccelli-pide-que-aparicio-exponga-ante-la-comision-de-salud",
+      "foto": {
+        "archivo": "fotos-notas/1ytgm6c.jpg",
+        "credito": "Foto: Diario La Vanguardia"
+      }
+    },
+    {
+      "id": "ip1dkb",
+      "titulo": "El Concejo pide acelerar la reparación de un puente en la zona rural",
+      "copete": "El Concejo Deliberante aprobó por unanimidad un proyecto para solicitar la reparación de un puente en el sector de La Esperanza y El Volcán. La iniciativa exige la intervención del Ministerio de Infraestructura provincial.",
+      "cuerpo": "Durante el debate en el recinto, el concejal Enrique Guillén presentó la iniciativa y remarcó la necesidad de restablecer la circulación de los vecinos de la zona. A su vez, el edil Leandro Spinelli indicó que el Municipio trabaja en un pliego de licitación para construir un paso de piedra en ese sector y señaló que existen puentes en la red rural con entre 60 y 80 años de antigüedad. En la misma sesión, la concejal Sol Di Gerónimo propuso dirigir el reclamo de forma directa al Ministerio provincial.\n\nAdemás, se informó que ya funciona el puente de La Cerámica y que durante este año se proyecta colocar otro sobre el arroyo Dulce, tras recibir el presupuesto correspondiente.",
+      "guion": "El Concejo pide acelerar la reparación de un puente en la zona rural",
+      "seccion": "Balcarce",
+      "medios": [
+        "El Diario Balcarce"
+      ],
+      "enlace": "https://eldiariobalcarce.com.ar/piden-acelerar-la-reparacion-de-un-puente-clave-para-la-circulacion-en-la-zona-rural-677",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-28T21:52:27.000Z",
+      "sinFecha": false,
+      "visto": "2026-09-28T22:01:03.337Z",
+      "relevancia": 71,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [
+        "concejo"
+      ],
+      "como": "automatica",
+      "claves": [
+        "El Concejo Deliberante aprobó por unanimidad la reparación de un puente rural.",
+        "El pedido está dirigido al Ministerio de Infraestructura de la Provincia.",
+        "La estructura afectada se ubica en el sector de La Esperanza y El Volcán.",
+        "Prevén construir un paso de piedra provisional para restablecer el tránsito."
+      ],
+      "seSabe": [
+        "El proyecto fue aprobado por unanimidad en la última sesión del Concejo Deliberante.",
+        "La iniciativa solicita la intervención del Ministerio de Infraestructura bonaerense.",
+        "El puente afectado se encuentra en la zona de La Esperanza y El Volcán.",
+        "El concejal Leandro Spinelli indicó que se proyecta un paso de piedra en ese tramo.",
+        "Quedó habilitado el puente de La Cerámica y prevén otro sobre el arroyo Dulce durante 2026."
+      ],
+      "noConfirmado": [
+        "No se precisó el plazo exacto en el que comenzarán las obras en el puente de La Esperanza y El Volcán.",
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El Concejo Deliberante aprobó por unanimidad un pedido al Ministerio de Infraestructura provincial para acelerar la reparación de un puente intransitable en la zona de La Esperanza y El Volcán.",
+      "etiquetas": [
+        "Concejo Deliberante",
+        "puente rural",
+        "La Esperanza",
+        "El Volcán",
+        "Ministerio de Infraestructura",
+        "caminos rurales"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/piden-acelerar-la-reparacion-de-un-puente-clave-para-la-circulacion-en-la-zona-rural-677",
+          "fecha": "2026-09-28T21:52:27.000Z",
+          "oficial": false,
+          "aporte": "Informó sobre la aprobación del proyecto en el Concejo Deliberante y los detalles del debate en torno a los puentes rurales."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1n4w9ua",
+          "titulo": "Piden instalar un punto presencial para gestionar el TelePASE en Balcarce o en el peaje de la Ruta 226",
+          "fecha": "2026-09-23T14:56:16.191Z",
+          "ruta": "/nota/piden-instalar-un-punto-presencial-para-gestionar-el-telepase-en-1n4w9ua"
+        },
+        {
+          "id": "32591i",
+          "titulo": "Piden un punto TelePASE",
+          "fecha": "2026-09-23T12:51:34.000Z",
+          "ruta": "/nota/piden-un-punto-telepase-en-balcarce-32591i"
+        },
+        {
+          "id": "1acx84s",
+          "titulo": "Fundación Banco Provincia entrega instrumentos a la Orquesta Escuela",
+          "fecha": "2026-09-28T16:14:24.000Z",
+          "ruta": "/nota/fundacion-banco-provincia-entrega-instrumentos-a-la-orquesta-escuela-1acx84s"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "el-concejo-pide-acelerar-la-reparacion-de-un-puente-en-la-zona-rural",
+      "foto": {
+        "archivo": "fotos-notas/ip1dkb.jpg",
+        "credito": "Foto: El Diario Balcarce"
+      }
+    },
+    {
+      "id": "q8aat8",
+      "titulo": "Pampa Dúo presenta su espectáculo en el Teatro Municipal",
+      "copete": "Los músicos Marcelo Giménez y Pablo Lobato llegan al escenario local con una propuesta de música surera, poesía y elementos folklóricos tradicionales.",
+      "cuerpo": "El conjunto musical Pampa Dúo, integrado por Marcelo Giménez y Pablo Lobato, se presentará el próximo 17 de octubre a las 21 en el Teatro Municipal.\n\nEl espectáculo lleva por título “Nuestra forma de mirar el mundo” y combina música en vivo, poesía y elementos folklóricos tradicionales para proponer un recorrido por la cultura popular, según informó un medio local.\n\nLa presentación busca acercar al público a los paisajes, vivencias y sentimientos vinculados con la identidad y la memoria colectiva a través de distintas expresiones artísticas.",
+      "guion": "Pampa Dúo presenta su espectáculo en el Teatro Municipal",
+      "seccion": "Cultura y agenda",
+      "medios": [
+        "Puntonueve (FM 100.9)"
+      ],
+      "enlace": "https://puntonueve.com.ar/pampa-duo-presenta-nuestra-forma-de-mirar-el-mundo-en-el-teatro-municipal/",
+      "teniaImagenLaFuente": false,
+      "fecha": "2026-09-28T21:48:55.000Z",
+      "sinFecha": false,
+      "visto": "2026-09-28T23:01:09.560Z",
+      "relevancia": 67,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Pampa Dúo actúa en el Teatro Municipal",
+        "La presentación es el 17 de octubre a las 21",
+        "Participan los músicos Marcelo Giménez y Pablo Lobato",
+        "El espectáculo se llama Nuestra forma de mirar el mundo"
+      ],
+      "seSabe": [
+        "Pampa Dúo se presenta en el Teatro Municipal según informó un medio local.",
+        "El show es el 17 de octubre a las 21.",
+        "El dúo está integrado por Marcelo Giménez y Pablo Lobato.",
+        "El espectáculo se titula “Nuestra forma de mirar el mundo” y combina música surera, poesía y elementos folklóricos."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Pampa Dúo llega al Teatro Municipal con su espectáculo “Nuestra forma de mirar el mundo”. Será el 17 de octubre a las 21 con una propuesta de música surera y poesía.",
+      "etiquetas": [
+        "Pampa Dúo",
+        "Teatro Municipal",
+        "Cultura",
+        "Música",
+        "Marcelo Giménez",
+        "Pablo Lobato"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Puntonueve (FM 100.9)",
+          "enlace": "https://puntonueve.com.ar/pampa-duo-presenta-nuestra-forma-de-mirar-el-mundo-en-el-teatro-municipal/",
+          "fecha": "2026-09-28T21:48:55.000Z",
+          "oficial": false,
+          "aporte": "Informó la fecha, la hora, el lugar y los detalles del espectáculo de Pampa Dúo."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "pampa-duo-presenta-su-espectaculo-en-el-teatro-municipal",
+      "foto": {
+        "archivo": "fotos-notas/q8aat8.jpg",
+        "credito": "Foto: Puntonueve (FM 100.9)"
+      }
+    },
+    {
       "id": "1hhocwa",
       "titulo": "El autódromo Fangio avanza con nuevas obras tras las competencias",
       "copete": "El intendente Esteban Reino detalló los trabajos en marcha en el circuito local luego del fin de semana de automovilismo nacional, que incluyó tareas en el sector chico, el ingreso a boxes y la curva uno.",
@@ -490,15 +742,16 @@
         "El Diario Balcarce"
       ],
       "enlace": "https://eldiariobalcarce.com.ar/tras-el-regreso-del-automovilismo-el-fangio-avanza-con-nuevas-obras-480",
-      "teniaImagenLaFuente": false,
-      "fecha": "2026-09-28T22:01:03.337Z",
-      "sinFecha": true,
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-28T21:44:45.000Z",
+      "sinFecha": false,
       "visto": "2026-09-28T22:01:03.337Z",
-      "relevancia": 61,
+      "relevancia": 79,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
       "temas": [
+        "autodromo",
         "fangio"
       ],
       "como": "automatica",
@@ -566,90 +819,81 @@
       }
     },
     {
-      "id": "ip1dkb",
-      "titulo": "El Concejo pide acelerar la reparación de un puente en la zona rural",
-      "copete": "El Concejo Deliberante aprobó por unanimidad un proyecto para solicitar la reparación de un puente en el sector de La Esperanza y El Volcán. La iniciativa exige la intervención del Ministerio de Infraestructura provincial.",
-      "cuerpo": "Durante el debate en el recinto, el concejal Enrique Guillén presentó la iniciativa y remarcó la necesidad de restablecer la circulación de los vecinos de la zona. A su vez, el edil Leandro Spinelli indicó que el Municipio trabaja en un pliego de licitación para construir un paso de piedra en ese sector y señaló que existen puentes en la red rural con entre 60 y 80 años de antigüedad. En la misma sesión, la concejal Sol Di Gerónimo propuso dirigir el reclamo de forma directa al Ministerio provincial.\n\nAdemás, se informó que ya funciona el puente de La Cerámica y que durante este año se proyecta colocar otro sobre el arroyo Dulce, tras recibir el presupuesto correspondiente.",
-      "guion": "El Concejo pide acelerar la reparación de un puente en la zona rural",
-      "seccion": "Balcarce",
+      "id": "12antth",
+      "titulo": "La UIA calcula una baja industrial del 5,7 por ciento en agosto",
+      "copete": "El sector fabril acumuló una contracción del 3 por ciento en lo que va del año y se mantiene un 11 por ciento por debajo del nivel registrado entre 2022 y 2023, según un informe oficial.",
+      "cuerpo": "La actividad industrial registró en agosto una caída interanual del 5,7 por ciento y una baja mensual del 0,3 por ciento frente a julio, según el último informe del Centro de Estudios de la Unión Industrial Argentina.\n\nEl relevamiento detalla que la menor demanda en el mercado interno y la caída de insumos afectan a sectores clave como textiles, herramientas y materiales de construcción, mientras que la molienda de oleaginosas y el procesamiento de petróleo mostraron subas.",
+      "guion": "La UIA calcula una baja industrial del 5,7 por ciento en agosto",
+      "seccion": "Economía",
       "medios": [
-        "El Diario Balcarce"
+        "Perfil",
+        "TN (Todo Noticias)",
+        "El Cronista",
+        "C5N",
+        "La Nueva"
       ],
-      "enlace": "https://eldiariobalcarce.com.ar/piden-acelerar-la-reparacion-de-un-puente-clave-para-la-circulacion-en-la-zona-rural-677",
-      "teniaImagenLaFuente": false,
-      "fecha": "2026-09-28T22:01:03.337Z",
-      "sinFecha": true,
-      "visto": "2026-09-28T22:01:03.337Z",
-      "relevancia": 53,
-      "local": true,
+      "enlace": "https://www.c5n.com/economia/informe-uia-la-caida-interanual-la-industria-llego-al-57-y-quedo-11-debajo-2022-2023-n250157",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-28T21:07:00.000Z",
+      "sinFecha": false,
+      "visto": "2026-09-29T00:30:56.955Z",
+      "relevancia": 66,
+      "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
       "temas": [],
       "como": "automatica",
       "claves": [
-        "El Concejo Deliberante aprobó por unanimidad la reparación de un puente rural.",
-        "El pedido está dirigido al Ministerio de Infraestructura de la Provincia.",
-        "La estructura afectada se ubica en el sector de La Esperanza y El Volcán.",
-        "Prevén construir un paso de piedra provisional para restablecer el tránsito."
+        "La actividad industrial cayó 5,7% interanual en agosto.",
+        "El sector acumula una baja del 3% en lo que va de 2026.",
+        "La construcción y el rubro textil registran las mayores caídas."
       ],
-      "seSabe": [
-        "El proyecto fue aprobado por unanimidad en la última sesión del Concejo Deliberante.",
-        "La iniciativa solicita la intervención del Ministerio de Infraestructura bonaerense.",
-        "El puente afectado se encuentra en la zona de La Esperanza y El Volcán.",
-        "El concejal Leandro Spinelli indicó que se proyecta un paso de piedra en ese tramo.",
-        "Quedó habilitado el puente de La Cerámica y prevén otro sobre el arroyo Dulce durante 2026."
-      ],
-      "noConfirmado": [
-        "No se precisó el plazo exacto en el que comenzarán las obras en el puente de La Esperanza y El Volcán.",
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "El Concejo Deliberante aprobó por unanimidad un pedido al Ministerio de Infraestructura provincial para acelerar la reparación de un puente intransitable en la zona de La Esperanza y El Volcán.",
+      "textoRedes": "La Unión Industrial Argentina informó que la actividad industrial cayó 5,7% interanual en agosto y acumula una baja del 3% en lo que va del año.",
       "etiquetas": [
-        "Concejo Deliberante",
-        "puente rural",
-        "La Esperanza",
-        "El Volcán",
-        "Ministerio de Infraestructura",
-        "caminos rurales"
+        "industria",
+        "UIA",
+        "agosto",
+        "produccion"
       ],
       "fuentesConsultadas": [
         {
-          "medio": "El Diario Balcarce",
-          "enlace": "https://eldiariobalcarce.com.ar/piden-acelerar-la-reparacion-de-un-puente-clave-para-la-circulacion-en-la-zona-rural-677",
-          "fecha": "2026-09-28T21:52:27.000Z",
+          "medio": "C5N",
+          "enlace": "https://www.c5n.com/economia/informe-uia-la-caida-interanual-la-industria-llego-al-57-y-quedo-11-debajo-2022-2023-n250157",
+          "fecha": "2026-09-28T21:07:00.000Z",
           "oficial": false,
-          "aporte": "Informó sobre la aprobación del proyecto en el Concejo Deliberante y los detalles del debate en torno a los puentes rurales."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "1n4w9ua",
-          "titulo": "Piden instalar un punto presencial para gestionar el TelePASE en Balcarce o en el peaje de la Ruta 226",
-          "fecha": "2026-09-23T14:56:16.191Z",
-          "ruta": "/nota/piden-instalar-un-punto-presencial-para-gestionar-el-telepase-en-1n4w9ua"
+          "aporte": "Detalló los números rojos en producción y empleo, y los sectores más afectados."
         },
         {
-          "id": "32591i",
-          "titulo": "Piden un punto TelePASE",
-          "fecha": "2026-09-23T12:51:34.000Z",
-          "ruta": "/nota/piden-un-punto-telepase-en-balcarce-32591i"
+          "medio": "Perfil",
+          "enlace": "https://www.perfil.com/noticias/economia/la-industria-sigue-sin-despegar-acumula-una-caida-del-3-en-2026-a40.phtml",
+          "fecha": "2026-09-28T22:35:06.000Z",
+          "oficial": false,
+          "aporte": "Informó la estimación preliminar de la baja mensual de 0,3% en agosto."
         },
         {
-          "id": "1acx84s",
-          "titulo": "Fundación Banco Provincia entrega instrumentos a la Orquesta Escuela",
-          "fecha": "2026-09-28T16:14:24.000Z",
-          "ruta": "/nota/fundacion-banco-provincia-entrega-instrumentos-a-la-orquesta-escuela-1acx84s"
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/economia/2026/09/28/la-actividad-industrial-volvio-a-caer-en-agosto-y-acumula-una-baja-del-3-en-lo-que-va-del-ano/",
+          "fecha": "2026-09-29T00:04:47.000Z",
+          "oficial": false,
+          "aporte": "Indicó el acumulado del año y la comparación con los niveles de 2022 y 2023."
+        },
+        {
+          "medio": "El Cronista",
+          "enlace": "https://www.cronista.com/economia-politica/la-industria-modero-la-caida-en-agosto-tras-el-rebote-de-un-sector-clave/",
+          "fecha": "2026-09-28T21:57:24.000Z",
+          "oficial": false,
+          "aporte": "Especificó que el indicador es elaborado por el Centro de Estudios de la Unión Industrial Argentina."
         }
       ],
       "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
+        "nivel": "ALTA",
+        "porque": "Lo contaron cuatro medios independientes.",
+        "sugeridoPorIA": "ALTA"
       },
-      "slug": "el-concejo-pide-acelerar-la-reparacion-de-un-puente-en-la-zona-rural",
+      "slug": "la-uia-calcula-una-baja-industrial-del-5-7-por-ciento-en-agosto",
       "foto": {
-        "archivo": "fotos-notas/ip1dkb.jpg",
-        "credito": "Foto: El Diario Balcarce"
+        "archivo": "fotos-notas/12antth.jpg",
+        "credito": "Foto: C5N"
       }
     },
     {
@@ -749,6 +993,89 @@
       }
     },
     {
+      "id": "tttn9w",
+      "titulo": "Esteban Reino evalúa de positiva la vuelta del automovilismo",
+      "copete": "El intendente municipal analizó el regreso de las categorías nacionales al autódromo Juan Manuel Fangio. Informó que la obra costó 1.053 millones de pesos y destacó la concurrencia de público.",
+      "cuerpo": "En diálogo con Radio 100.9, el jefe comunal destacó el funcionamiento de los servicios y la concurrencia de público en el predio, además de señalar que las condiciones climáticas acompañaron la jornada del domingo luego de una semana compleja. En cuanto a los costos, precisó que la puesta en valor demandó 1.053 millones de pesos y aclaró que la cifra de 3.300 millones difundida previamente responde a una actualización por inflación.\n\nReino reconoció que aún restan trabajos pendientes en el circuito y remarcó la necesidad de mantener una actividad permanente para recaudar fondos destinados al mantenimiento del trazado.",
+      "guion": "Esteban Reino evalúa de positiva la vuelta del automovilismo",
+      "seccion": "Automovilismo",
+      "medios": [
+        "Puntonueve (FM 100.9)",
+        "Sendero Regional"
+      ],
+      "enlace": "https://puntonueve.com.ar/esteban-reino-salio-mejor-de-lo-esperado-tras-el-regreso-del-automovilismo-nacional/",
+      "teniaImagenLaFuente": false,
+      "fecha": "2026-09-28T20:45:35.000Z",
+      "sinFecha": false,
+      "visto": "2026-09-28T23:01:09.560Z",
+      "relevancia": 85,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [
+        "autodromo",
+        "tc-pick-up",
+        "fangio"
+      ],
+      "como": "automatica",
+      "claves": [
+        "El intendente evaluó positivamente el regreso del automovilismo nacional al autódromo Juan Manuel Fangio.",
+        "Precisó que la obra de puesta en valor costó 1.053 millones de pesos.",
+        "Remarcó la necesidad de generar actividad permanente para garantizar el mantenimiento del circuito."
+      ],
+      "noConfirmado": [
+        "No se informaron los detalles sobre los plazos de los trabajos que todavía restan concretar en el escenario automovilístico.",
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El intendente Esteban Reino analizó el regreso del automovilismo nacional al autódromo Juan Manuel Fangio, aseguró que la obra costó 1.053 millones de pesos y destacó el impacto turístico para la ciudad.",
+      "etiquetas": [
+        "Esteban Reino",
+        "autodromo Juan Manuel Fangio",
+        "automovilismo",
+        "TC Pick Up",
+        "Balcarce"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Puntonueve (FM 100.9)",
+          "enlace": "https://puntonueve.com.ar/esteban-reino-salio-mejor-de-lo-esperado-tras-el-regreso-del-automovilismo-nacional/",
+          "fecha": "2026-09-28T20:45:35.000Z",
+          "oficial": false,
+          "aporte": "Aportó las declaraciones del intendente Esteban Reino sobre el balance del evento, los costos de la obra y la necesidad de financiamiento futuro."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1a0ty94",
+          "titulo": "Reino destaca el éxito del regreso automovilístico al Fangio",
+          "fecha": "2026-09-28T19:02:49.410Z",
+          "ruta": "/nota/reino-destaca-el-exito-del-regreso-automovilistico-al-fangio-1a0ty94"
+        },
+        {
+          "id": "p7nd3j",
+          "titulo": "Balcarce palpita el regreso del automovilismo nacional",
+          "fecha": "2026-09-26T01:13:28.000Z",
+          "ruta": "/nota/comienza-la-previa-del-tc-pick-up-en-balcarce-p7nd3j"
+        },
+        {
+          "id": "4v2vga",
+          "titulo": "Largas filas en Balcarce por el regreso del automovilismo",
+          "fecha": "2026-09-24T13:34:15.000Z",
+          "ruta": "/nota/largas-filas-en-balcarce-por-el-regreso-del-automovilismo-4v2vga"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "esteban-reino-evalua-de-positiva-la-vuelta-del-automovilismo",
+      "foto": {
+        "archivo": "fotos-notas/tttn9w.webp",
+        "credito": "Foto: Puntonueve (FM 100.9)"
+      }
+    },
+    {
       "id": "cx4j4n",
       "titulo": "Fernando Batista deja la dirección técnica de la selección de Costa Rica",
       "copete": "La Federación Costarricense de Fútbol despidió al entrenador argentino tras siete meses en el cargo y seis partidos dirigidos. Asume Bryan Ruiz de forma interina.",
@@ -761,9 +1088,9 @@
         "Infobae",
         "Crónica",
         "Noticias Argentinas (NA)",
-        "La Nueva",
+        "Doble Amarilla",
         "Olé",
-        "Doble Amarilla"
+        "La Nueva"
       ],
       "enlace": "https://noticiasargentinas.com/deportes/fernando--bocha--batista-fue-despedido-como-entrenador-de-costa-rica_a6abad07ab62936833e741867",
       "teniaImagenLaFuente": true,
@@ -1068,7 +1395,8 @@
       "guion": "Reino destaca el éxito del regreso automovilístico al Fangio",
       "seccion": "Balcarce",
       "medios": [
-        "Diario La Vanguardia"
+        "Diario La Vanguardia",
+        "QZ Noticias (Mar del Plata)"
       ],
       "enlace": "https://www.diariolavanguardia.com/noticias/44928-reino-sobre-el-fangio-vivimos-una-fiesta-increible-y-demostramos-que-estamos-a-la-altura/",
       "teniaImagenLaFuente": true,
@@ -1209,16 +1537,18 @@
         "Diario La Vanguardia"
       ],
       "enlace": "https://www.diariolavanguardia.com/noticias/44927-guillen-tenemos-que-ser-creativos-y-ver-que-otras-cosas-podemos-sumarle-al-autodromo/",
-      "teniaImagenLaFuente": false,
+      "teniaImagenLaFuente": true,
       "fecha": "2026-09-28T18:31:07.835Z",
       "sinFecha": true,
       "visto": "2026-09-28T18:31:07.835Z",
-      "relevancia": 61,
+      "relevancia": 71,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
       "temas": [
-        "autodromo"
+        "autodromo",
+        "concejo",
+        "fangio"
       ],
       "como": "automatica",
       "claves": [
@@ -1283,6 +1613,93 @@
       }
     },
     {
+      "id": "1fp9m4l",
+      "titulo": "El INTA Balcarce enfrenta una polémica por la posible exoneración de una científica",
+      "copete": "El Consejo Directivo analiza una sanción contra la investigadora Virginia Aparicio tras coordinar un estudio sobre plaguicidas. El caso genera rechazo en sectores científicos y gremiales.",
+      "cuerpo": "El Consejo Directivo del INTA trató el expediente contra la investigadora Virginia Aparicio y la exoneración habría sido ratificada, según un medio local. La ingeniera agrónoma, con más de 20 años de trayectoria en la Estación Experimental Agropecuaria Balcarce, coordinó en Argentina el proyecto internacional SPRINT sobre la presencia de plaguicidas.\n\nEl sumario administrativo incluye cuestionamientos por supuestos incumplimientos de procedimientos internos y el manejo de información de voluntarios. La científica sostuvo que existían compromisos de confidencialidad y argumentó que el proyecto, financiado por la Unión Europea, no provocó perjuicios económicos al Estado.\n\nEl estudio analizó muestras en localidades bonaerenses, incluida Balcarce, y detectó glifosato en el 86,1 por ciento de los voluntarios argentinos.",
+      "guion": "El INTA Balcarce enfrenta una polémica por la posible exoneración de una científica",
+      "seccion": "Agro",
+      "medios": [
+        "Diario La Vanguardia"
+      ],
+      "enlace": "https://www.diariolavanguardia.com/noticias/44923-polemica-en-el-inta-balcarce-por-el-pedido-de-exoneracion-de-la-cientifica-virginia-aparicio/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-28T18:31:07.835Z",
+      "sinFecha": true,
+      "visto": "2026-09-28T18:31:07.835Z",
+      "relevancia": 63,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [
+        "inta"
+      ],
+      "como": "automatica",
+      "claves": [
+        "El INTA tramita una sanción contra Virginia Aparicio.",
+        "La investigadora coordinó el proyecto internacional SPRINT.",
+        "El estudio detectó glifosato en voluntarios bonaerenses.",
+        "Gremios y sectores científicos rechazan la medida."
+      ],
+      "seSabe": [
+        "Virginia Aparicio cuenta con más de 20 años de trayectoria en el INTA Balcarce.",
+        "La investigadora coordinó el proyecto internacional SPRINT en Argentina.",
+        "El estudio detectó glifosato en el 86,1% de los voluntarios analizados.",
+        "El Consejo Directivo del INTA trató el expediente y la sanción habría sido ratificada, según informó un medio."
+      ],
+      "noConfirmado": [
+        "La resolución definitiva del sumario administrativo y su impacto legal en el empleo público.",
+        "Los detalles formales de los cargos económicos que se le atribuyen a la investigadora.",
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El INTA Balcarce atraviesa una polémica por el proceso de exoneración contra la investigadora Virginia Aparicio, coordinadora de un estudio internacional sobre plaguicidas que detectó glifosato en voluntarios.",
+      "etiquetas": [
+        "INTA Balcarce",
+        "Virginia Aparicio",
+        "plaguicidas",
+        "investigación"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Diario La Vanguardia",
+          "enlace": "https://www.diariolavanguardia.com/noticias/44923-polemica-en-el-inta-balcarce-por-el-pedido-de-exoneracion-de-la-cientifica-virginia-aparicio/",
+          "fecha": null,
+          "oficial": false,
+          "aporte": "Informó sobre el sumario al INTA contra la científica Virginia Aparicio, los resultados del proyecto SPRINT y la ratificación de la sanción."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "v91szb",
+          "titulo": "La APDH rechaza la factible exoneración de la Dra. Virginia Aparicio, investigadora del INTA Balcarce y del CONICET",
+          "fecha": "2026-09-23T01:50:24.356Z",
+          "ruta": "/nota/la-apdh-rechaza-la-factible-exoneracion-de-la-dra-virginia-aparicio-v91szb"
+        },
+        {
+          "id": "tmpmtz",
+          "titulo": "Legislatura bonarense: presentan un proyecto para respaldar a Virginia Aparicio, investigadora de INTA Balcarce",
+          "fecha": "2026-09-21T17:19:51.000Z",
+          "ruta": "/nota/legislatura-bonarense-presentan-un-proyecto-para-respaldar-a-virginia-tmpmtz"
+        },
+        {
+          "id": "q84c12",
+          "titulo": "Una investigadora del INTA cuestiona la suspensión de un proyecto",
+          "fecha": "2026-09-24T14:26:31.000Z",
+          "ruta": "/nota/carta-abierta-de-investigadora-del-inta-balcarce-q84c12"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "el-inta-balcarce-enfrenta-una-polemica-por-la-posible-exoneracion-de",
+      "foto": {
+        "archivo": "fotos-notas/1fp9m4l.jpg",
+        "credito": "Foto: Diario La Vanguardia"
+      }
+    },
+    {
       "id": "10uy09c",
       "titulo": "Omar Martínez valora el regreso de Balcarce pero extraña el dibujo original",
       "copete": "El piloto entrerriano compitió en la fecha de las camionetas en el autódromo local, finalizó en el cuarto puesto y destacó la presencia del público tras casi quince años sin carreras nacionales.",
@@ -1297,7 +1714,7 @@
       "fecha": "2026-09-28T18:06:21.000Z",
       "sinFecha": false,
       "visto": "2026-09-28T20:01:02.538Z",
-      "relevancia": 81,
+      "relevancia": 85,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1509,6 +1926,7 @@
       "guion": "Fundación Banco Provincia entrega instrumentos a la Orquesta Escuela",
       "seccion": "Balcarce",
       "medios": [
+        "Puntonueve (FM 100.9)",
         "Infórmese Primero (FM 104.9)",
         "Municipalidad de Balcarce",
         "Diario La Vanguardia"
@@ -1518,7 +1936,7 @@
       "fecha": "2026-09-28T16:14:24.000Z",
       "sinFecha": false,
       "visto": "2026-09-28T17:31:01.054Z",
-      "relevancia": 87,
+      "relevancia": 97,
       "local": true,
       "oficial": true,
       "publicadaPor": null,
@@ -2011,12 +2429,11 @@
       "guion": "El producto bruto porteño crece cero coma tres por ciento interanual en el segundo trimestre",
       "seccion": "Economía",
       "medios": [
-        "El Eco de Tandil",
         "Infobae",
+        "El Eco de Tandil",
         "Perfil",
         "El Destape",
-        "El Marplatense",
-        "Página/12"
+        "El Marplatense"
       ],
       "enlace": "https://www.infobae.com/economia/2026/09/28/la-actividad-economica-de-caba-cayo-02-en-el-segundo-trimestre-cuales-fueron-los-sectores-mas-golpeados/",
       "teniaImagenLaFuente": true,
@@ -2103,111 +2520,6 @@
       "foto": {
         "archivo": "fotos-notas/13l9r47.jpg",
         "credito": "Foto: El Marplatense"
-      }
-    },
-    {
-      "id": "nobyaz",
-      "titulo": "Bartolomé Abdala asume la presidencia por un viaje de Milei y Villarruel",
-      "copete": "El senador provisional quedará a cargo del Ejecutivo nacional durante poco más de tres días. La medida responde a las salidas simultáneas del presidente y la vicepresidenta hacia Francia y España.",
-      "cuerpo": "El presidente provisional del Senado, Bartolomé Abdala, asumirá la conducción interina del Poder Ejecutivo nacional durante un período de 84 horas debido a los viajes al exterior del presidente Javier Milei y de la vicepresidenta Victoria Villarruel. El traspaso se formalizará cuando ambas autoridades despeguen el martes por la noche y se extenderá hasta el sábado a las 10 de la mañana, según informaron diversos medios nacionales.\n\nMilei viajará a París para liderar la Argentina Week, mientras que Villarruel participará del XII Foro Parlamentario Iberoamericano en Madrid. Durante su mandato transitorio, Abdala cumplirá sus funciones desde su oficina en el Congreso Nacional y no se trasladará a la Casa Rosada.\n\nEl senador libertario ya había ocupado la presidencia de manera temporal entre el 8 y el 9 de diciembre de 2025 bajo circunstancias similares, amparado por la Ley de Acefalía ante la ausencia simultánea de la fórmula presidencial.",
-      "guion": "Bartolomé Abdala asume la presidencia por un viaje de Milei y Villarruel",
-      "seccion": "Política",
-      "medios": [
-        "Infobae",
-        "La Nación",
-        "El Cronista",
-        "El Destape",
-        "Perfil",
-        "Ámbito",
-        "Crónica",
-        "Noticias Argentinas (NA)",
-        "La Voz del Pueblo",
-        "La Nueva"
-      ],
-      "enlace": "https://www.perfil.com/noticias/politica/presidente-por-dos-dias-el-senador-bartolome-abdala-quedara-a-cargo-del-ejecutivo-por-viajes-de-milei-y-villarruel.phtml",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-28T13:57:46.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-28T23:31:08.280Z",
-      "relevancia": 66,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Abdala quedará a cargo del Ejecutivo por 84 horas.",
-        "Milei viajará a París y Villarruel a Madrid.",
-        "El traspaso se formaliza el martes por la noche.",
-        "El senador ejercerá desde su despacho en el Congreso."
-      ],
-      "seSabe": [
-        "Bartolomé Abdala asumirá la presidencia provisional del Senado a cargo del Ejecutivo.",
-        "Javier Milei viajará a París este martes a las 22 para participar de la Argentina Week.",
-        "Victoria Villarruel viajará a Madrid para asistir al XII Foro Parlamentario Iberoamericano.",
-        "El mandato interino durará 84 horas hasta el sábado a las 10 de la mañana."
-      ],
-      "textoRedes": "El senador Bartolomé Abdala quedará a cargo del Poder Ejecutivo nacional durante 84 horas debido a los viajes internacionales que realizarán de manera simultánea el presidente Javier Milei y la vicepresidenta Victoria Villarruel.",
-      "etiquetas": [
-        "Bartolomé Abdala",
-        "Javier Milei",
-        "Victoria Villarruel",
-        "Poder Ejecutivo",
-        "Senado"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Perfil",
-          "enlace": "https://www.perfil.com/noticias/politica/presidente-por-dos-dias-el-senador-bartolome-abdala-quedara-a-cargo-del-ejecutivo-por-viajes-de-milei-y-villarruel.phtml",
-          "fecha": "2026-09-28T13:57:46.000Z",
-          "oficial": false,
-          "aporte": "Detalló los horarios de los viajes a Francia y España, la duración exacta del interinato y la trayectoria política de Abdala."
-        },
-        {
-          "medio": "La Nación",
-          "enlace": "https://www.lanacion.com.ar/politica/milei-y-villarruel-viajan-al-exterior-al-mismo-tiempo-por-lo-que-la-presidencia-quedara-en-manos-de-nid28092026/",
-          "fecha": "2026-09-28T22:20:49.000Z",
-          "oficial": false,
-          "aporte": "Confirmó que el Poder Ejecutivo quedará en manos de Abdala por los viajes simultáneos."
-        },
-        {
-          "medio": "Infobae",
-          "enlace": "https://www.infobae.com/politica/2026/09/28/el-senador-abdala-quedara-a-cargo-del-ejecutivo-e-igualara-a-rodriguez-saa-al-frente-de-la-presidencia/",
-          "fecha": "2026-09-28T21:00:31.000Z",
-          "oficial": false,
-          "aporte": "Señaló que el senador puntano volverá a quedar a cargo del Ejecutivo de forma fortuita."
-        },
-        {
-          "medio": "Perfil",
-          "enlace": "https://www.perfil.com/noticias/politica/victoria-villarruel-viajara-a-espana-para-participar-del-foro-parlamentario-iberoamericano-todos-los-detalles-de-su-agenda.phtml",
-          "fecha": "2026-09-28T14:04:47.000Z",
-          "oficial": false,
-          "aporte": "Indicó que el mandato interino durará tres días y medio."
-        },
-        {
-          "medio": "Ámbito",
-          "enlace": "https://www.ambito.com/politica/javier-milei-y-victoria-villarruel-viajan-al-exterior-el-senador-bartolome-abdala-quedara-cargo-la-presidencia-n6327664",
-          "fecha": "2026-09-28T21:05:00.000Z",
-          "oficial": false,
-          "aporte": "Especificó los motivos de los viajes a París y Madrid y que Abdala permanecerá en Buenos Aires."
-        },
-        {
-          "medio": "Noticias Argentinas (NA)",
-          "enlace": "https://noticiasargentinas.com/politica/por-los-viajes-de-milei-y-villarruel--bartolome-abdala-quedara-a-cargo-del-ejecutivo-_a6abaee8fb62936833e785191",
-          "fecha": "2026-09-28T23:12:17.000Z",
-          "oficial": false,
-          "aporte": "Informó la coincidencia de los viajes internacionales y la formalización del cargo."
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron cinco medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "bartolome-abdala-asume-la-presidencia-por-un-viaje-de-milei-y",
-      "foto": {
-        "archivo": "fotos-notas/nobyaz.jpg",
-        "credito": "Foto: Perfil"
       }
     },
     {
@@ -2395,8 +2707,8 @@
       "guion": "Biogénesis Bagó exporta por primera vez vacunas a Europa",
       "seccion": "Agro",
       "medios": [
-        "Radio Mitre",
-        "Agrositio"
+        "Agrositio",
+        "Radio Mitre"
       ],
       "enlace": "https://radiomitre.cienradios.com/mitre-y-el-campo/historico-un-laboratorio-argentino-logra-la-primera-exportacion-de-vacunas-a-un-pais-europeo/",
       "teniaImagenLaFuente": true,
@@ -2462,7 +2774,7 @@
       "fecha": "2026-09-28T12:59:47.000Z",
       "sinFecha": false,
       "visto": "2026-09-28T23:31:08.280Z",
-      "relevancia": 36,
+      "relevancia": 28,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -2542,7 +2854,7 @@
       "fecha": "2026-09-28T12:32:25.000Z",
       "sinFecha": false,
       "visto": "2026-09-28T16:31:05.398Z",
-      "relevancia": 71,
+      "relevancia": 63,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -2576,7 +2888,7 @@
       "fecha": "2026-09-28T12:31:28.000Z",
       "sinFecha": false,
       "visto": "2026-09-28T16:01:28.909Z",
-      "relevancia": 73,
+      "relevancia": 65,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -2597,81 +2909,6 @@
       "slug": "balcarce-vivio-un-fin-de-semana-historico-con-el-regreso-del",
       "corregidaAMano": true,
       "cuerpoAMano": true
-    },
-    {
-      "id": "ujkaqh",
-      "titulo": "ANSES actualiza la PUAM y otorga el bono completo en octubre",
-      "copete": "La Pensión Universal para el Adulto Mayor llega a 348.598,81 pesos en octubre gracias a un incremento del 1,66 por ciento. La medida incluye el pago del bono previsional completo.",
-      "cuerpo": "La Administración Nacional de la Seguridad Social aplica en octubre una actualización del 1,66 por ciento sobre los haberes de la Pensión Universal para el Adulto Mayor, de acuerdo con el índice de inflación de agosto. Con este incremento, el monto asciende a 348.598,81 pesos.\n\nDebido a que el haber de la PUAM se ubica por debajo de la jubilación mínima, sus titulares perciben además el bono de 70.000 pesos en su totalidad. El pago se acredita en la primera tanda del calendario mensual, coincidiendo habitualmente con la segunda semana del mes, según informó la ANSES.",
-      "guion": "ANSES actualiza la PUAM y otorga el bono completo en octubre",
-      "seccion": "Economía",
-      "medios": [
-        "La Nación",
-        "Infobae",
-        "El Cronista"
-      ],
-      "enlace": "https://www.lanacion.com.ar/economia/pagos-anses-a-cuanto-llega-la-puam-en-octubre-de-2026-con-el-aumento-confirmado-nid17092026/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-28T12:13:43.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-28T19:02:49.410Z",
-      "relevancia": 63,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "La PUAM asciende a 348.598,81 pesos en octubre.",
-        "El incremento es del 1,66 por ciento basado en la inflación.",
-        "Los titulares reciben el bono completo de 70.000 pesos."
-      ],
-      "textoRedes": "La ANSES actualiza la PUAM a 348.598,81 pesos en octubre con un incremento del 1,66 por ciento y el pago del bono completo.",
-      "etiquetas": [
-        "ANSES",
-        "PUAM",
-        "jubilaciones",
-        "aumento",
-        "octubre",
-        "bono"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "La Nación",
-          "enlace": "https://www.lanacion.com.ar/economia/pagos-anses-a-cuanto-llega-la-puam-en-octubre-de-2026-con-el-aumento-confirmado-nid17092026/",
-          "fecha": "2026-09-28T12:13:43.000Z",
-          "oficial": false,
-          "aporte": "Informó el incremento automático por actualización de inflación y el detalle del reajuste del 1,66 por ciento."
-        },
-        {
-          "medio": "Infobae",
-          "enlace": "https://www.infobae.com/economia/2026/09/28/de-cuanto-sera-la-puam-de-anses-en-octubre-2026/",
-          "fecha": "2026-09-28T17:00:00.000Z",
-          "oficial": false,
-          "aporte": "Precisó el monto exacto de la PUAM en 348.598,81 pesos para octubre de 2026."
-        },
-        {
-          "medio": "El Cronista",
-          "enlace": "https://www.cronista.com/economia-politica/puam-de-anses-en-octubre-cuanto-se-cobra-con-el-aumento-y-quienes-pueden-acceder/",
-          "fecha": "2026-09-28T18:56:29.000Z",
-          "oficial": false,
-          "aporte": "Detalló los requisitos de la prestación y la cobertura de salud para mayores de 65 años."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "1cleyvd",
-          "titulo": "ANSES oficializó el aumento de octubre para jubilaciones",
-          "fecha": "2026-09-23T13:27:05.000Z",
-          "ruta": "/nota/anses-oficializo-el-aumento-de-octubre-para-jubilaciones-1cleyvd"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron tres medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "anses-actualiza-la-puam-y-otorga-el-bono-completo-en-octubre"
     },
     {
       "id": "1xs34mg",
@@ -2755,6 +2992,119 @@
       "foto": {
         "archivo": "fotos-notas/1xs34mg.jpg",
         "credito": "Foto: El Diario Balcarce"
+      }
+    },
+    {
+      "id": "kzqlp8",
+      "titulo": "La Provincia prorroga el plazo para que obras sociales paguen deudas",
+      "copete": "El Gobierno bonaerense extiende hasta el 31 de octubre la adhesión al régimen especial. Busca recuperar fondos por prestaciones en hospitales públicos.",
+      "cuerpo": "La medida fue oficializada mediante una resolución del Sistema de Atención Médica Organizada en el Boletín Oficial, según informó la Provincia.\n\nLa disposición inicial vencía el 26 de septiembre tras su puesta en marcha el 12 de agosto con una vigencia de 45 días y el objetivo de recuperar unos 150 mil millones de pesos. La prórroga busca facilitar la presentación de notas, documentación y conciliación de deudas, y alcanza a las entidades de la Ley 23.660.\n\nLas obras sociales pueden cancelar en un solo pago, en hasta 18 cuotas mensuales sin interés o en hasta 24 cuotas con una tasa de financiación anual del 4 por ciento sobre saldos.",
+      "guion": "La Provincia prorroga el plazo para que obras sociales paguen deudas",
+      "seccion": "Política",
+      "medios": [
+        "LU9 Mar del Plata",
+        "0221",
+        "El Marplatense",
+        "Radio 10 Mar del Plata (FM 105.5)",
+        "El Eco de Tandil",
+        "Agencia DIB",
+        "El Día",
+        "Ecos Diarios (Necochea)"
+      ],
+      "enlace": "https://dib.com.ar/sociedad/prorrogan-el-plazo-que-las-obras-sociales-regularicen-deudas-hospitales-bonaerenses-n56074",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-28T11:42:12.000Z",
+      "sinFecha": false,
+      "visto": "2026-09-28T22:01:03.337Z",
+      "relevancia": 62,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Extienden hasta el 31 de octubre el plazo para obras sociales.",
+        "La medida busca regularizar deudas con hospitales públicos bonaerenses.",
+        "El régimen contempla planes de pago en cuotas con y sin interés."
+      ],
+      "seSabe": [
+        "El Gobierno bonaerense oficializó la prórroga hasta el 31 de octubre.",
+        "La medida alcanza a las obras sociales nacionales comprendidas en la Ley 23.660.",
+        "El plan original se había publicado el 12 de agosto."
+      ],
+      "etiquetas": [
+        "obras sociales",
+        "hospitales públicos",
+        "provincia de Buenos Aires",
+        "deudas"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Agencia DIB",
+          "enlace": "https://dib.com.ar/sociedad/prorrogan-el-plazo-que-las-obras-sociales-regularicen-deudas-hospitales-bonaerenses-n56074",
+          "fecha": "2026-09-28T11:42:12.000Z",
+          "oficial": false,
+          "aporte": "Detalló los plazos, los montos estimados y las modalidades de pago del régimen especial."
+        },
+        {
+          "medio": "LU9 Mar del Plata",
+          "enlace": "https://www.lu9mardelplata.com.ar/prorrogan-el-plazo-para-que-obras-sociales-regularicen-deudas-con-hospitales-bonaerenses",
+          "fecha": "2026-09-28T15:55:17.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Ecos Diarios (Necochea)",
+          "enlace": "https://elecos.com.ar/prorrogan-el-plazo-para-que-obras-sociales-regularicen-deudas-con-hospitales-bonaerenses",
+          "fecha": "2026-09-28T15:49:22.000Z",
+          "oficial": false,
+          "aporte": "Confirmó la oficialización de la prórroga para la adhesión de las obras sociales."
+        },
+        {
+          "medio": "El Día",
+          "enlace": "https://www.eldia.com/politica-y-economia/provincia-prorrogo-el-plazo-para-que-las-obras-sociales-regularicen-deudas-con-hospitales-politica-y-economia_1790599740",
+          "fecha": "2026-09-28T13:00:01.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "0221",
+          "enlace": "https://www.0221.com.ar/provincia/la-provincia-extendio-el-plazo-que-las-obras-sociales-paguen-sus-deudas-los-hospitales-publicos-n134945",
+          "fecha": "2026-09-28T19:44:00.000Z",
+          "oficial": false,
+          "aporte": "Indicó la fecha límite del 31 de octubre para recuperar deudas con hospitales bonaerenses."
+        },
+        {
+          "medio": "El Marplatense",
+          "enlace": "https://www.elmarplatense.com/la-provincia-amplio-el-plazo-para-que-las-obras-sociales-paguen-sus-deudas-con-hospitales",
+          "fecha": "2026-09-28T14:30:04.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Radio 10 Mar del Plata (FM 105.5)",
+          "enlace": "https://radio10mardelplata.com.ar/la-provincia-extendio-hasta-el-31-de-octubre-el-plazo-para-que-las-obras-sociales-paguen-sus-deudas-con-hospitales/",
+          "fecha": "2026-09-28T16:28:41.000Z",
+          "oficial": false,
+          "aporte": "Precisó que la medida abarca a efectores públicos de la provincia y sus prestaciones a afiliados."
+        },
+        {
+          "medio": "El Eco de Tandil",
+          "enlace": "https://www.eleco.com.ar/provincia/prorrogaron-hasta-octubre-el-plazo-para-que-obras-sociales-regularicen-deudas-con-hospitales-bonaerenses",
+          "fecha": "2026-09-28T12:30:16.000Z",
+          "oficial": false,
+          "aporte": null
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron 8 medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "la-provincia-prorroga-el-plazo-para-que-obras-sociales-paguen-deudas",
+      "foto": {
+        "archivo": "fotos-notas/kzqlp8.jpg",
+        "credito": "Foto: El Día"
       }
     },
     {
@@ -2867,6 +3217,7 @@
         "Perfil",
         "TN (Todo Noticias)",
         "El Cronista",
+        "Página/12",
         "iProfesional",
         "Crónica",
         "Radio Mitre",
@@ -2874,8 +3225,7 @@
         "Noticias Argentinas (NA)",
         "Ámbito",
         "La Nueva",
-        "Clarín",
-        "Página/12"
+        "Clarín"
       ],
       "enlace": "https://www.infobae.com/economia/2026/09/28/iniciaron-un-nuevo-proceso-de-privatizacion-de-las-acciones-de-enarsa/",
       "teniaImagenLaFuente": true,
@@ -3012,88 +3362,6 @@
       }
     },
     {
-      "id": "1as5wmy",
-      "titulo": "El autódromo Fangio completa su capacidad de estacionamiento para autos",
-      "copete": "La capacidad para vehículos particulares en el predio llegó al límite en plena jornada de las TC Pick Up. Las motos todavía tienen lugar y el ingreso de automóviles quedó cerrado.",
-      "cuerpo": "El estacionamiento general para automóviles en el Autódromo Municipal Juan Manuel Fangio alcanzó el ciento por ciento de ocupación en la jornada automovilística de este sábado. Según informaron las autoridades, el ingreso para vehículos de cuatro ruedas quedó cerrado y quienes arriben deberán hacerlo de manera peatonal, mientras que las motos aún disponen de espacio.\n\nAnte el intenso movimiento de público registrado desde las primeras horas de la mañana, la organización recomendó a los espectadores que aún están en camino contemplar alternativas de traslado y mantener despejados los accesos destinados a emergencias para garantizar la circulación.",
-      "guion": "El autodromo Fangio completa su capacidad de estacionamiento para autos",
-      "seccion": "Balcarce",
-      "medios": [
-        "Diario La Vanguardia"
-      ],
-      "enlace": "https://www.diariolavanguardia.com/noticias/44911-tc-pickup-el-estacionamiento-para-autos-llego-al-100-en-el-autodromo-fangio/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-28T03:01:51.643Z",
-      "sinFecha": true,
-      "visto": "2026-09-28T03:01:51.643Z",
-      "relevancia": 71,
-      "local": true,
-      "publicadaPor": "ia",
-      "publicadaCuando": "2026-09-27T01:11:04.003Z",
-      "temas": [
-        "autodromo",
-        "fangio"
-      ],
-      "como": "automatica",
-      "claves": [
-        "Estacionamiento de autos al ciento por ciento en el autódromo Fangio",
-        "Cierre del acceso vehicular para automóviles",
-        "Las motos todavía cuentan con lugares disponibles",
-        "Intenso movimiento de público en el regreso de las competencias nacionales"
-      ],
-      "seSabe": [
-        "La capacidad de estacionamiento para automóviles en el autódromo Fangio llegó al ciento por ciento de ocupación.",
-        "El ingreso para vehículos de cuatro ruedas quedó cerrado.",
-        "Las motos todavía disponen de espacios para estacionar dentro del predio.",
-        "El autódromo volvió a recibir actividad oficial este fin de semana tras quince años."
-      ],
-      "noConfirmado": [
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "El estacionamiento para autos en el autódromo Fangio llegó al ciento por ciento de su capacidad en el marco de la competencia de las TC Pick Up. El ingreso vehicular quedó cerrado y las motos aún tienen lugar.",
-      "etiquetas": [
-        "Autodromo Juan Manuel Fangio",
-        "TC Pick Up",
-        "Balcarce",
-        "Estacionamiento"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Diario La Vanguardia",
-          "enlace": "https://www.diariolavanguardia.com/noticias/44911-tc-pickup-el-estacionamiento-para-autos-llego-al-100-en-el-autodromo-fangio/",
-          "fecha": null,
-          "oficial": false,
-          "aporte": "Informó que el estacionamiento para autos llegó al ciento por ciento, el cierre de accesos vehiculares y la disponibilidad para motos."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "epzsa5",
-          "titulo": "Reinauguran el autódromo Juan Manuel Fangio en Balcarce",
-          "fecha": "2026-09-26T13:46:35.000Z",
-          "ruta": "/nota/el-autodromo-juan-manuel-fangio-reabre-sus-puertas-en-balcarce-epzsa5"
-        },
-        {
-          "id": "1mkm1na",
-          "titulo": "El autódromo Juan Manuel Fangio abre sus puertas en Balcarce",
-          "fecha": "2026-09-26T02:30:21.000Z",
-          "ruta": "/nota/el-autodromo-juan-manuel-fangio-abre-sus-puertas-en-balcarce-1mkm1na"
-        },
-        {
-          "id": "uukabt",
-          "titulo": "Kicillof destaca la reinauguración del autódromo Juan Manuel Fangio en Balcarce",
-          "fecha": "2026-09-26T00:07:31.000Z",
-          "ruta": "/nota/kicillof-destaca-la-reapertura-del-autodromo-en-balcarce-uukabt"
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "el-autodromo-fangio-completa-su-capacidad-de-estacionamiento-para"
-    },
-    {
       "id": "1uy5mj8",
       "titulo": "Cae la confianza en el Gobierno e iguala la peor medición de la era Milei",
       "copete": "El Índice de Confianza en el Gobierno de la Universidad Di Tella cayó a 1,94 puntos en septiembre, una baja del 5,9% respecto de agosto. El dato igualó el registro más bajo de la gestión de Javier Milei.",
@@ -3106,7 +3374,9 @@
         "El Cronista",
         "El Destape",
         "Perfil",
+        "Página/12",
         "A24",
+        "Ámbito",
         "C5N",
         "Crónica",
         "Diario Popular",
@@ -3115,9 +3385,7 @@
         "La Tecla",
         "ANDigital",
         "Infobrisas (Radio Brisas)",
-        "El Eco de Tandil",
-        "Ámbito",
-        "Página/12"
+        "El Eco de Tandil"
       ],
       "enlace": "https://www.infobae.com/politica/2026/09/28/cayo-la-confianza-en-el-gobierno-e-igualo-la-peor-medicion-de-la-era-milei/",
       "teniaImagenLaFuente": true,
@@ -3167,9 +3435,30 @@
           "aporte": null
         },
         {
+          "medio": "Página/12",
+          "enlace": "https://www.pagina12.com.ar/2026/09/28/la-confianza-en-milei-en-su-punto-mas-bajo/",
+          "fecha": "2026-09-29T03:01:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Página/12",
+          "enlace": "https://www.pagina12.com.ar/2026/09/28/la-confianza-en-el-gobierno-de-milei-volvio-a-caer-el-indice-toco-uno-de-sus-niveles-mas-bajos/",
+          "fecha": "2026-09-28T16:51:21.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
           "medio": "A24",
           "enlace": "https://www.a24.com/politica/la-confianza-el-gobierno-cayo-59-y-asi-igualo-uno-los-niveles-mas-bajos-la-era-milei-n1601129",
           "fecha": "2026-09-28T23:36:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Ámbito",
+          "enlace": "https://www.ambito.com/politica/la-confianza-el-gobierno-cayo-59-septiembre-y-toco-su-nivel-mas-javier-milei-n6327485",
+          "fecha": "2026-09-28T15:17:00.000Z",
           "oficial": false,
           "aporte": null
         },
@@ -3235,27 +3524,6 @@
           "fecha": "2026-09-28T21:10:36.000Z",
           "oficial": false,
           "aporte": null
-        },
-        {
-          "medio": "Ámbito",
-          "enlace": "https://www.ambito.com/politica/la-confianza-el-gobierno-cayo-59-septiembre-y-toco-su-nivel-mas-javier-milei-n6327485",
-          "fecha": "2026-09-28T15:17:00.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Página/12",
-          "enlace": "https://www.pagina12.com.ar/2026/09/28/la-confianza-en-el-gobierno-de-milei-volvio-a-caer-el-indice-toco-uno-de-sus-niveles-mas-bajos/",
-          "fecha": "2026-09-28T16:51:21.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Página/12",
-          "enlace": "https://www.pagina12.com.ar/2026/09/28/la-confianza-en-milei-en-su-punto-mas-bajo/",
-          "fecha": "2026-09-28T22:48:37.000Z",
-          "oficial": false,
-          "aporte": null
         }
       ],
       "slug": "cayo-la-confianza-en-el-gobierno-e-igualo-la-peor-medicion-de-la-era",
@@ -3271,39 +3539,49 @@
     "Automovilismo",
     "Cultura y agenda",
     "Economía",
+    "Política",
     "Balcarce",
     "Fútbol",
-    "Policiales",
     "Agro",
+    "Policiales",
     "Deportes",
-    "Argentina",
-    "Política"
+    "Argentina"
   ],
   "temas": [
     {
       "nombre": "El autódromo",
       "ranura": "autodromo",
-      "cuantas": 11
+      "cuantas": 12
     },
     {
       "nombre": "Fangio",
       "ranura": "fangio",
-      "cuantas": 11
+      "cuantas": 12
+    },
+    {
+      "nombre": "El Concejo Deliberante",
+      "ranura": "concejo",
+      "cuantas": 4
     },
     {
       "nombre": "TC Pick Up",
       "ranura": "tc-pick-up",
+      "cuantas": 3
+    },
+    {
+      "nombre": "El INTA",
+      "ranura": "inta",
       "cuantas": 2
     }
   ],
   "clima": {
     "ahora": {
-      "temp": 12,
-      "sensacion": 10,
+      "temp": 11,
+      "sensacion": 8,
       "humedad": 98,
-      "viento": 15,
+      "viento": 23,
       "rumbo": "S",
-      "cielo": "Chaparrones fuertes",
+      "cielo": "Lluvia",
       "esDeDia": true
     },
     "dias": [
@@ -3314,8 +3592,8 @@
         "min": 9,
         "lluvia": 100,
         "codigo": 81,
-        "viento": 28,
-        "milimetros": 19,
+        "viento": 32,
+        "milimetros": 22,
         "cielo": "Chaparrones fuertes"
       },
       {
@@ -3333,7 +3611,7 @@
         "fecha": "2026-10-01",
         "dia": "jue",
         "max": 11,
-        "min": 7,
+        "min": 5,
         "lluvia": 12,
         "codigo": 51,
         "viento": 27,
@@ -3344,10 +3622,10 @@
         "fecha": "2026-10-02",
         "dia": "vie",
         "max": 14,
-        "min": 3,
+        "min": 2,
         "lluvia": 61,
         "codigo": 51,
-        "viento": 21,
+        "viento": 22,
         "milimetros": 1,
         "cielo": "Llovizna leve"
       }
@@ -3682,12 +3960,6 @@
       "motivo": "necesita ojo humano: \"niño\""
     },
     {
-      "id": "1xe4pop",
-      "titulo": "De una oferta laboral en Facebook a prisionero de guerra…",
-      "seccion": "Argentina",
-      "motivo": "internacional: sin relación con Balcarce"
-    },
-    {
       "id": "v8jjgw",
       "titulo": null,
       "seccion": "Policiales",
@@ -3706,12 +3978,6 @@
       "motivo": "necesita ojo humano: \"denuncia\""
     },
     {
-      "id": "1iitoa4",
-      "titulo": "Quiniela de hoy: resultados de los sorteos en Nacional…",
-      "seccion": "Argentina",
-      "motivo": "parece promoción, no noticia: \"sorteo\""
-    },
-    {
       "id": "v3nlz0",
       "titulo": "Un influencer fue denunciado por cazar aves protegidas en…",
       "seccion": "Argentina",
@@ -3724,9 +3990,27 @@
       "motivo": "necesita ojo humano: \"menores de edad\""
     },
     {
+      "id": "1iitoa4",
+      "titulo": "Quiniela de hoy: resultados de los sorteos en Nacional…",
+      "seccion": "Argentina",
+      "motivo": "parece promoción, no noticia: \"sorteo\""
+    },
+    {
       "id": "12wle8z",
       "titulo": "Denuncia penal contra Bullrich y Monteoliva por los dichos…",
       "seccion": "Política",
+      "motivo": "necesita ojo humano: \"denuncia\""
+    },
+    {
+      "id": "1xxqwja",
+      "titulo": "Piden detener a Diego Spagnuolo por los nuevos informes…",
+      "seccion": "Política",
+      "motivo": "necesita ojo humano: \"denuncia\""
+    },
+    {
+      "id": "18gldok",
+      "titulo": "Psicólogos bonaerenses cortan la atención con el IOMA por…",
+      "seccion": "Argentina",
       "motivo": "necesita ojo humano: \"denuncia\""
     },
     {
@@ -3748,5 +4032,5 @@
       "motivo": "necesita ojo humano: \"niño\""
     }
   ],
-  "esperandoCuerpo": 12
+  "esperandoCuerpo": 16
 }

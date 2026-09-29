@@ -204,6 +204,11 @@
   "ultimo": "2026-09-27T21:30:31.155Z",
   "motivo": "título o bajada: 2 problemas (numero): el copete dice 90 y la fuente no lo dice"
  },
+ "13zbalx": {
+  "intentos": 1,
+  "ultimo": "2026-09-29T13:01:42.011Z",
+  "motivo": "sin material"
+ },
  "1408sz9": {
   "intentos": 1,
   "ultimo": "2026-09-25T11:38:40.017Z",
@@ -1550,8 +1555,8 @@
   "motivo": "con cuerpo"
  },
  "1rk1qaj": {
-  "intentos": 2,
-  "ultimo": "2026-09-29T12:32:11.106Z",
+  "intentos": 3,
+  "ultimo": "2026-09-29T13:01:42.011Z",
   "motivo": "Gemini: HTTP 401 (clave redaccion): {\n  \"error\": {\n    \"code\": 401,\n    \"message\": \"The bound service account is deleted or disabled. The service account bound "
  },
  "1rkn51h": {
@@ -2133,8 +2138,8 @@
   "motivo": "con cuerpo"
  },
  "4p0z63": {
-  "intentos": 1,
-  "ultimo": "2026-09-29T12:32:11.106Z",
+  "intentos": 2,
+  "ultimo": "2026-09-29T13:01:42.011Z",
   "motivo": "Gemini: HTTP 401 (clave redaccion): {\n  \"error\": {\n    \"code\": 401,\n    \"message\": \"The bound service account is deleted or disabled. The service account bound "
  },
  "52q3fj": {
@@ -2335,6 +2340,11 @@
  "8wzaw7": {
   "intentos": 1,
   "ultimo": "2026-09-29T07:01:07.758Z",
+  "motivo": "Gemini: HTTP 401 (clave redaccion): {\n  \"error\": {\n    \"code\": 401,\n    \"message\": \"The bound service account is deleted or disabled. The service account bound "
+ },
+ "8zhfqv": {
+  "intentos": 1,
+  "ultimo": "2026-09-29T13:01:42.011Z",
   "motivo": "Gemini: HTTP 401 (clave redaccion): {\n  \"error\": {\n    \"code\": 401,\n    \"message\": \"The bound service account is deleted or disabled. The service account bound "
  },
  "913w0e": {
