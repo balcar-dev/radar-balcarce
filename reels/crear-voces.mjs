@@ -40,12 +40,12 @@ const ESTILO = 'calm, confident and warm, steady pace, like a local radio announ
 
 const COMUN = 'Acento rioplatense de la provincia de Buenos Aires, natural y sin exagerarlo, con voseo. Dicción clara y ritmo parejo y tranquilo. Transmite confianza, sin sonar a noticiero de televisión ni a robot.';
 const CANDIDATOS = [
-  { id: 'mujer-a', nombre: 'Radar Balcarce · locutora A', descripcion: `Locutora de radio local argentina, mujer de unos 40 años, voz media tirando a grave, firme, cálida y segura. ${COMUN}` },
-  { id: 'mujer-b', nombre: 'Radar Balcarce · locutora B', descripcion: `Locutora de radio local argentina, mujer de unos 35 años, voz media, cercana, cálida y amable, con una sonrisa leve. ${COMUN}` },
-  { id: 'mujer-c', nombre: 'Radar Balcarce · locutora C', descripcion: `Locutora de radio local argentina, mujer de unos 45 años, voz más grave, serena y pausada, con mucho oficio. ${COMUN}` },
-  { id: 'hombre-a', nombre: 'Radar Balcarce · locutor A', descripcion: `Locutor de radio local argentino, hombre de unos 40 años, voz media tirando a grave, firme, cálida y segura. ${COMUN}` },
-  { id: 'hombre-b', nombre: 'Radar Balcarce · locutor B', descripcion: `Locutor de radio local argentino, hombre de unos 35 años, voz media, cercana, cálida y amable, con una sonrisa leve. ${COMUN}` },
-  { id: 'hombre-c', nombre: 'Radar Balcarce · locutor C', descripcion: `Locutor de radio local argentino, hombre de unos 50 años, voz grave, serena y pausada, con mucho oficio. ${COMUN}` },
+  { id: 'mujer-a', genero: 'female', nombre: 'Radar Balcarce · locutora A', descripcion: `Locutora de radio local argentina, mujer de unos 40 años, voz media tirando a grave, firme, cálida y segura. ${COMUN}` },
+  { id: 'mujer-b', genero: 'female', nombre: 'Radar Balcarce · locutora B', descripcion: `Locutora de radio local argentina, mujer de unos 35 años, voz media, cercana, cálida y amable, con una sonrisa leve. ${COMUN}` },
+  { id: 'mujer-c', genero: 'female', nombre: 'Radar Balcarce · locutora C', descripcion: `Locutora de radio local argentina, mujer de unos 45 años, voz más grave, serena y pausada, con mucho oficio. ${COMUN}` },
+  { id: 'hombre-a', genero: 'male', nombre: 'Radar Balcarce · locutor A', descripcion: `Locutor de radio local argentino, hombre de unos 40 años, voz media tirando a grave, firme, cálida y segura. ${COMUN}` },
+  { id: 'hombre-b', genero: 'male', nombre: 'Radar Balcarce · locutor B', descripcion: `Locutor de radio local argentino, hombre de unos 35 años, voz media, cercana, cálida y amable, con una sonrisa leve. ${COMUN}` },
+  { id: 'hombre-c', genero: 'male', nombre: 'Radar Balcarce · locutor C', descripcion: `Locutor de radio local argentino, hombre de unos 50 años, voz grave, serena y pausada, con mucho oficio. ${COMUN}` },
 ];
 
 const clave = claveRedes();
@@ -105,6 +105,13 @@ async function aMp3(wav, destino) {
 
 fs.mkdirSync(SALIDA, { recursive: true });
 
+if (process.argv[2] === 'borrar') {
+  // node reels/crear-voces.mjs borrar voice_…: quita una voz propia del proyecto.
+  const r = await api('DELETE', `/voices/${process.argv[3]}`);
+  console.log(r.ok ? 'borrada' : `ERROR ${r.estado ?? ''} ${r.error}`);
+  process.exit(0);
+}
+
 if (process.argv[2] === 'listar') {
   // Con un idioma (`listar es-AR`) muestra una línea por voz de la biblioteca de Google.
   const idioma = process.argv[3] && process.argv[3] !== 'todas' ? process.argv[3] : '';
@@ -122,8 +129,13 @@ if (process.argv[2] === 'listar') {
 const creadas = [];
 for (const c of CANDIDATOS) {
   console.log(`\n== ${c.id} ==`);
+  // El cuerpo exacto de ai.google.dev/gemini-api/docs/voice-design: store guarda la voz
+  // en el proyecto (200 como máximo, un año).
   const cre = await api('POST', '/voices', {
-    type: 'prompted', display_name: c.nombre, language_code: 'es-AR', description: c.descripcion, sample_text: MUESTRA,
+    store: true,
+    voice: {
+      model: MODELO, type: 'prompted', display_name: c.nombre, gender: c.genero, language_code: 'es-AR', prompted: { input: c.descripcion },
+    },
   });
   if (!cre.ok) { console.log(`crear: ERROR ${cre.estado ?? ''} ${cre.error}`); creadas.push({ ...c, error: cre.error }); continue; }
   const idVoz = cre.json?.id ?? cre.json?.name ?? null;
