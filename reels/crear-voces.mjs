@@ -208,7 +208,14 @@ if (['dialogo', 'dialogo2', 'dialogo3'].includes(process.argv[2])) {
 }
 
 const creadas = [];
-for (const c of CANDIDATOS) {
+// `recrear` (29/09): las dos voces aprobadas (la locutora C y el locutor A) viven en el proyecto de Google de la
+// clave paga. Con una clave de OTRO proyecto (la gratis) esos identificadores no existen: se crean de nuevo,
+// dos versiones de cada una, con las mismas descripciones, y se prueban con el mismo podcast. Voice Design no
+// devuelve dos veces la misma voz: por eso son dos versiones para elegir la más parecida a la aprobada.
+const paraCrear = process.argv[2] === 'recrear'
+  ? ['mujer-c', 'hombre-a'].flatMap((base) => [1, 2].map((n) => ({ ...CANDIDATOS.find((c) => c.id === base), id: `${base}-v${n}` })))
+  : CANDIDATOS;
+for (const c of paraCrear) {
   console.log(`\n== ${c.id} ==`);
   // El cuerpo exacto de ai.google.dev/gemini-api/docs/voice-design: store guarda la voz
   // en el proyecto (200 como máximo, un año).

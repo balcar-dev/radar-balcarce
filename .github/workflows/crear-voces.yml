@@ -16,9 +16,9 @@ on:
   workflow_dispatch:
     inputs:
       modo:
-        description: 'crear = crea los seis candidatos y los prueba; dialogo = una charla entre las dos voces; dialogo2 = la misma charla con un estilo por intervención, pausas y un "mhm"; dialogo3 = un noticiero con dos lectores que se turnan las notas, sin charla; listar = la biblioteca de Google; borrar = quita una voz propia'
+        description: 'crear = crea los seis candidatos y los prueba; recrear = vuelve a crear la locutora C y el locutor A (dos versiones de cada uno) en el proyecto de la clave; dialogo = una charla entre las dos voces; dialogo2 = la misma charla con un estilo por intervención, pausas y un "mhm"; dialogo3 = un noticiero con dos lectores que se turnan las notas, sin charla; listar = la biblioteca de Google; borrar = quita una voz propia'
         type: choice
-        options: [crear, dialogo, dialogo2, dialogo3, listar, borrar]
+        options: [crear, recrear, dialogo, dialogo2, dialogo3, listar, borrar]
         default: dialogo
       idioma:
         description: 'Sólo para listar: el código de idioma de la biblioteca (es-AR, es-US…); escribir todas para ver toda'
