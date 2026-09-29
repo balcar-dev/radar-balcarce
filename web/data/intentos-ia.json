@@ -1550,8 +1550,8 @@
   "motivo": "con cuerpo"
  },
  "1rk1qaj": {
-  "intentos": 1,
-  "ultimo": "2026-09-29T12:01:42.379Z",
+  "intentos": 2,
+  "ultimo": "2026-09-29T12:32:11.106Z",
   "motivo": "Gemini: HTTP 401 (clave redaccion): {\n  \"error\": {\n    \"code\": 401,\n    \"message\": \"The bound service account is deleted or disabled. The service account bound "
  },
  "1rkn51h": {
@@ -2131,6 +2131,11 @@
   "intentos": 1,
   "ultimo": "2026-09-25T12:12:18.091Z",
   "motivo": "con cuerpo"
+ },
+ "4p0z63": {
+  "intentos": 1,
+  "ultimo": "2026-09-29T12:32:11.106Z",
+  "motivo": "Gemini: HTTP 401 (clave redaccion): {\n  \"error\": {\n    \"code\": 401,\n    \"message\": \"The bound service account is deleted or disabled. The service account bound "
  },
  "52q3fj": {
   "intentos": 3,
@@ -3052,8 +3057,8 @@
   "motivo": "título o bajada: 1 problema (antecedente): el copete usa \"camara\", que sale de una nota anterior, como si fuera de hoy"
  },
  "n5ls7m": {
-  "intentos": 1,
-  "ultimo": "2026-09-29T12:01:42.379Z",
+  "intentos": 2,
+  "ultimo": "2026-09-29T12:32:11.106Z",
   "motivo": "Gemini: HTTP 401 (clave redaccion): {\n  \"error\": {\n    \"code\": 401,\n    \"message\": \"The bound service account is deleted or disabled. The service account bound "
  },
  "nauwa6": {
