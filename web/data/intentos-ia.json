@@ -952,8 +952,8 @@
   "motivo": "sin material"
  },
  "1gwvoj5": {
-  "intentos": 2,
-  "ultimo": "2026-09-29T04:01:07.655Z",
+  "intentos": 3,
+  "ultimo": "2026-09-29T05:31:16.176Z",
   "motivo": "Gemini: HTTP 401 (clave redaccion): {\n  \"error\": {\n    \"code\": 401,\n    \"message\": \"The bound service account is deleted or disabled. The service account bound "
  },
  "1gzq987": {
@@ -1861,6 +1861,11 @@
   "intentos": 1,
   "ultimo": "2026-09-27T02:30:43.835Z",
   "motivo": "con cuerpo"
+ },
+ "1wqb91s": {
+  "intentos": 1,
+  "ultimo": "2026-09-29T05:31:16.176Z",
+  "motivo": "Gemini: HTTP 401 (clave redaccion): {\n  \"error\": {\n    \"code\": 401,\n    \"message\": \"The bound service account is deleted or disabled. The service account bound "
  },
  "1wwmim6": {
   "intentos": 1,
@@ -3000,6 +3005,11 @@
   "intentos": 3,
   "ultimo": "2026-09-27T19:07:05.641Z",
   "motivo": "con cuerpo"
+ },
+ "ndbvkl": {
+  "intentos": 1,
+  "ultimo": "2026-09-29T05:31:16.176Z",
+  "motivo": "Gemini: HTTP 401 (clave redaccion): {\n  \"error\": {\n    \"code\": 401,\n    \"message\": \"The bound service account is deleted or disabled. The service account bound "
  },
  "ne2su2": {
   "intentos": 3,
