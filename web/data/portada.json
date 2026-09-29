@@ -1,5 +1,5 @@
 {
-  "generado": "2026-09-29T21:02:18.137Z",
+  "generado": "2026-09-29T21:22:25.874Z",
   "notas": [
     {
       "id": "repaso20260929tarde",
@@ -61,6 +61,77 @@
       "slug": "el-repaso-de-la-tarde-en-radar-balcarce-corte-de-luz-esteban-reino-y"
     },
     {
+      "id": "8ydg1",
+      "titulo": "La cuenta corriente de la balanza de pagos cierra con superávit",
+      "copete": "La balanza de pagos cerró el segundo trimestre de 2026 con un superávit de US$ 2.214 millones, según informó el Indec. El resultado se logró por el incremento de las exportaciones de bienes y servicios.",
+      "cuerpo": "Este monto representa una mejora frente al déficit de US$ 2.452 millones anotado en el mismo período de 2025.\n\nEl resultado positivo se explicó por los saldos favorables en el intercambio comercial de bienes por US$ 9.293 millones y en el ingreso secundario por US$ 1.055 millones. Estos números contrarrestaron los saldos negativos del ingreso primario por US$ 6.032 millones y de la balanza de servicios por US$ 2.102 millones.\n\nEl ministro de Economía, Luis Caputo, destacó a través de sus redes sociales que las exportaciones totales de bienes y servicios llegaron a los US$ 32.499 millones y alcanzaron un nivel récord histórico.",
+      "guion": "La cuenta corriente de la balanza de pagos cierra con superávit",
+      "seccion": "Economía",
+      "medios": [
+        "Perfil",
+        "A24",
+        "Noticias Argentinas (NA)"
+      ],
+      "enlace": "https://www.perfil.com/noticias/economia/la-cuenta-corriente-tuvo-un-superavit-de-us-2214-millones-en-el-segundo-trimestre-a40.phtml",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-29T19:36:01.000Z",
+      "sinFecha": false,
+      "visto": "2026-09-29T21:22:01.752Z",
+      "relevancia": 68,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "El Indec informó un superávit de US$ 2.214 millones en la cuenta corriente.",
+        "El número contrasta con el déficit de US$ 2.452 millones del segundo trimestre de 2025.",
+        "Las exportaciones de bienes y servicios alcanzaron un récord de US$ 32.499 millones."
+      ],
+      "noConfirmado": [
+        "Todavía no se informaron los datos definitivos para el cierre del próximo trimestre."
+      ],
+      "etiquetas": [
+        "economia",
+        "indec",
+        "balanza de pagos",
+        "exportaciones"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Perfil",
+          "enlace": "https://www.perfil.com/noticias/economia/la-cuenta-corriente-tuvo-un-superavit-de-us-2214-millones-en-el-segundo-trimestre-a40.phtml",
+          "fecha": "2026-09-29T19:36:01.000Z",
+          "oficial": false,
+          "aporte": "Aportó los datos del Indec sobre el superávit de la cuenta corriente y el desglose de bienes, servicios e ingresos."
+        },
+        {
+          "medio": "A24",
+          "enlace": "https://www.a24.com/economia/argentina-registro-un-superavit-us-2214-millones-la-cuenta-corriente-el-segundo-trimestre-2026-n1601462",
+          "fecha": "2026-09-29T20:25:00.000Z",
+          "oficial": false,
+          "aporte": "Informó la comparación interanual con el déficit de 2025 y las declaraciones del ministro Luis Caputo."
+        },
+        {
+          "medio": "Noticias Argentinas (NA)",
+          "enlace": "https://noticiasargentinas.com/economia/gracias-a-las-exportaciones--la-balanza-de-pagos-cerro-el-segundo-trimestre-con-un-superavit-de-us-2-214-millones_a6abc0d09aeec850fb26e88b2",
+          "fecha": "2026-09-29T21:01:00.000Z",
+          "oficial": false,
+          "aporte": "Informó el dato central sobre el superávit de la balanza de pagos en el segundo trimestre."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron tres medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "la-cuenta-corriente-de-la-balanza-de-pagos-cierra-con-superavit",
+      "foto": {
+        "archivo": "fotos-notas/8ydg1.jpg",
+        "credito": "Foto: Perfil"
+      }
+    },
+    {
       "id": "8pri82",
       "titulo": "Roma no cede a Dybala y a Molina para la despedida de Messi",
       "copete": "El club italiano informó que los futbolistas campeones del mundo no viajarán a Buenos Aires para el amistoso ante Benín. La decisión responde a motivos deportivos y logísticos.",
@@ -76,6 +147,8 @@
         "Olé",
         "Minuto Uno",
         "Radio Mitre",
+        "Canal 26",
+        "Noticias Argentinas (NA)",
         "Bolavip Argentina",
         "Doble Amarilla"
       ],
@@ -220,9 +293,11 @@
         "Infobae",
         "QZ Noticias (Mar del Plata)",
         "Ámbito",
+        "El Destape",
         "Minuto Uno",
         "C5N",
         "Noticias Argentinas (NA)",
+        "0221",
         "Mi8 (Canal 8 Mar del Plata)"
       ],
       "enlace": "https://noticiasargentinas.com/politica/la-corte-revoco-el-fallo-que-declaraba-inconstitucional-la-derogacion-de-la-ley-de-tierras_a6abc0d42aeec850fb26e90c9",
@@ -1740,9 +1815,9 @@
       "guion": "WhatsApp detalla los pasos para liberar espacio en el celular",
       "seccion": "Tecnología",
       "medios": [
-        "El Eco de Tandil",
         "Infobae",
-        "Diario Popular"
+        "Diario Popular",
+        "El Eco de Tandil"
       ],
       "enlace": "https://www.infobae.com/tecno/2026/09/29/donde-esta-la-papelera-de-whatsapp-y-como-vaciarla-para-tener-mas-almacenamiento-en-el-celular/",
       "teniaImagenLaFuente": true,
@@ -1804,9 +1879,9 @@
       "medios": [
         "TN (Todo Noticias)",
         "C5N",
-        "Crónica",
         "Canal 26",
-        "Radio Mitre"
+        "Radio Mitre",
+        "Crónica"
       ],
       "enlace": "https://tn.com.ar/economia/2026/09/29/luis-caputo-no-esperamos-volatilidad-cambiaria-en-2027-pero-nos-preparamos-como-si-fuera-a-pasar/",
       "teniaImagenLaFuente": true,
@@ -2050,8 +2125,8 @@
       "seccion": "Agro",
       "medios": [
         "TN (Todo Noticias)",
-        "Agrositio",
         "Infobrisas (Radio Brisas)",
+        "Agrositio",
         "Agroempresario"
       ],
       "enlace": "https://www.agrositio.com.ar/noticia/248583-la-molienda-de-soja-en-agosto-fue-la-mayor-de-las-ultimas-10-campanas.html",
@@ -2668,92 +2743,6 @@
       "slug": "el-servicio-meteorologico-nacional-mantiene-alerta-amarilla-por"
     },
     {
-      "id": "1i0n3x9",
-      "titulo": "El autódromo Juan Manuel Fangio recupera actividad nacional",
-      "copete": "El circuito serrano vuelve a recibir categorías nacionales tras el acuerdo firmado en mayo de 2023 por la Provincia y el municipio para adecuar las instalaciones.",
-      "cuerpo": "El autódromo Juan Manuel Fangio recuperó actividad nacional en el circuito serrano tras el cierre registrado el 13 de noviembre de 2011. La recuperación comenzó con el trabajo de vecinos nucleados en la Asociación Autódromo y el apoyo de la Asociación Corredores Turismo Carretera, la Federación Regional de Automovilismo Mar y Sierras, la Municipalidad, el Museo Fangio y el Auto Club Balcarce.\n\nTras el regreso del automovilismo zonal el 10 de noviembre de 2019 con un trazado corto, las obras continuaron con la construcción de la variante Juan Manuel Bordeu inaugurada en agosto de 2021, que extendió el circuito a más de 2.000 metros con aportes privados, municipales y de cooperativas locales.\n\nEl proceso para la llegada de categorías nacionales avanzó en mayo de 2023, cuando el gobernador Axel Kicillof y el intendente Esteban Reino firmaron el acuerdo para que la Provincia realizara los aportes económicos necesarios para poner el escenario en condiciones.",
-      "guion": "El autódromo Juan Manuel Fangio recupera actividad nacional",
-      "seccion": "Automovilismo",
-      "medios": [
-        "El Diario Balcarce"
-      ],
-      "enlace": "https://eldiariobalcarce.com.ar/el-juan-manuel-fangio-volvio-a-latir-811",
-      "teniaImagenLaFuente": false,
-      "fecha": "2026-09-29T10:01:16.776Z",
-      "sinFecha": true,
-      "visto": "2026-09-29T21:01:18.143Z",
-      "relevancia": 61,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [
-        "autodromo",
-        "fangio"
-      ],
-      "como": "automatica",
-      "claves": [
-        "El autódromo recuperó actividad nacional tras permanecer cerrado desde noviembre de 2011.",
-        "Un grupo de vecinos y la Asociación Autódromo impulsaron la reapertura zonal en 2019.",
-        "La variante Juan Manuel Bordeu amplió el circuito en agosto de 2021.",
-        "El gobernador Axel Kicillof y el intendente Esteban Reino firmaron el acuerdo de fondos en mayo de 2023."
-      ],
-      "seSabe": [
-        "El autódromo Juan Manuel Fangio dejó de operar a nivel nacional el 13 de noviembre de 2011.",
-        "El circuito zonal volvió a funcionar el 10 de noviembre de 2019 según informó la Asociación Autódromo.",
-        "La variante Juan Manuel Bordeu se inauguró en agosto de 2021 y extendió el trazado a más de dos mil metros.",
-        "El gobernador Axel Kicillof y el intendente Esteban Reino firmaron el acuerdo de financiamiento provincial en mayo de 2023."
-      ],
-      "noConfirmado": [
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "El autódromo Juan Manuel Fangio recuperó actividad nacional tras un largo proceso de obras y gestiones entre el municipio y la Provincia que comenzó con el trabajo de vecinos y entidades locales.",
-      "etiquetas": [
-        "autodromo",
-        "Juan Manuel Fangio",
-        "automovilismo",
-        "Balcarce"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "El Diario Balcarce",
-          "enlace": "https://eldiariobalcarce.com.ar/el-juan-manuel-fangio-volvio-a-latir-811",
-          "fecha": null,
-          "oficial": false,
-          "aporte": "Detalló la cronología de la recuperación del autódromo Juan Manuel Fangio desde el cierre de 2011 hasta los acuerdos provinciales de 2023."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "wgq362",
-          "titulo": "Omar Martínez termina cuarto en el autódromo Juan Manuel Fangio",
-          "fecha": "2026-09-29T14:55:00.000Z",
-          "ruta": "/nota/omar-martinez-termina-cuarto-en-el-autodromo-juan-manuel-fangio-wgq362"
-        },
-        {
-          "id": "rebipe",
-          "titulo": "Mangoni repasa su paso por el autódromo Juan Manuel Fangio",
-          "fecha": "2026-09-28T16:15:38.000Z",
-          "ruta": "/nota/mangoni-repasa-su-paso-por-el-autodromo-juan-manuel-fangio-rebipe"
-        },
-        {
-          "id": "83u2vt",
-          "titulo": "El autódromo Juan Manuel Fangio reabre tras quince años",
-          "fecha": "2026-09-28T03:01:51.643Z",
-          "ruta": "/nota/el-autodromo-juan-manuel-fangio-reabre-tras-quince-anos-83u2vt"
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "el-autodromo-juan-manuel-fangio-recupera-actividad-nacional",
-      "foto": {
-        "archivo": "fotos-notas/1i0n3x9.jpg",
-        "credito": "Foto: El Diario Balcarce"
-      }
-    },
-    {
       "id": "1l8mp60",
       "titulo": "Una pareja de jubilados inquilinos necesita más de 2,5 millones",
       "copete": "Una pareja de jubilados que alquila en la Ciudad de Buenos Aires necesitó $2.526.219 en agosto para cubrir su canasta de consumo. El monto subió un 2,2% frente a julio y acumuló un incremento interanual del 35,3%.",
@@ -2939,8 +2928,8 @@
       "seccion": "Deportes",
       "medios": [
         "La Nación",
-        "Infobae",
         "Clarín",
+        "Infobae",
         "TN (Todo Noticias)",
         "El Destape",
         "Perfil",
@@ -2949,8 +2938,8 @@
         "C5N",
         "Canal 26",
         "Noticias Argentinas (NA)",
-        "Crónica",
         "QZ Noticias (Mar del Plata)",
+        "Crónica",
         "La Nueva",
         "La Verdad",
         "Mi8 (Canal 8 Mar del Plata)",
@@ -3112,7 +3101,6 @@
       "seccion": "Política",
       "medios": [
         "La Nación",
-        "El Eco de Tandil",
         "LU9 Mar del Plata",
         "Ecos Diarios (Necochea)",
         "Agencia DIB",
@@ -3128,6 +3116,7 @@
         "ANDigital",
         "La Nueva",
         "Diputados Bonaerenses",
+        "El Eco de Tandil",
         "La Brújula 24"
       ],
       "enlace": "https://www.clarin.com/economia/luis-caputo-kicillof-anticristo-kirchnerismo-infierno-visto_0_t8mAjylcj2.html",
@@ -3646,15 +3635,17 @@
         "El Diario Balcarce"
       ],
       "enlace": "https://eldiariobalcarce.com.ar/piden-acelerar-la-reparacion-de-un-puente-clave-para-la-circulacion-en-la-zona-rural-677",
-      "teniaImagenLaFuente": false,
-      "fecha": "2026-09-28T22:01:03.337Z",
-      "sinFecha": true,
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-28T21:52:27.000Z",
+      "sinFecha": false,
       "visto": "2026-09-28T22:01:03.337Z",
-      "relevancia": 53,
+      "relevancia": 71,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
-      "temas": [],
+      "temas": [
+        "concejo"
+      ],
       "como": "automatica",
       "claves": [
         "El Concejo Deliberante aprobó por unanimidad la reparación de un puente rural.",
@@ -4350,106 +4341,6 @@
       "slug": "omar-martinez-valora-el-regreso-de-balcarce-pero-extrana-el-dibujo"
     },
     {
-      "id": "224geo",
-      "titulo": "Diputados discute proyectos sobre endeudamiento familiar",
-      "copete": "El plenario de comisiones de la Cámara de Diputados debate este martes los dictámenes sobre morosidad familiar. El oficialismo impulsa la educación financiera y la oposición exige topes a las tasas y refinanciación.",
-      "cuerpo": "La Libertad Avanza, el PRO y la UCR impulsan un proyecto centrado en la prevención y la educación financiera, articulado por la diputada nacional Silvana Giudici y el presidente de la comisión de Finanzas, Santiago Pauli, según informó la Agencia Noticias Argentinas. Por su parte, Unión por la Patria, Provincias Unidas y la Coalición Cívica presentan una iniciativa que contempla una emergencia por 180 días, topes a las tasas de interés, gastos y comisiones, y planes de refinanciación de hasta 36 meses para más de 6 millones de personas morosas, además de la eliminación total de los intereses punitorios. A su vez, el bloque Argentina Federal, a través de los diputados Oscar Herrera Ahuad y Yolanda Vega, promueve el Programa Nacional de Desendeudamiento Familiar y Personal con cuotas a tasa fija de hasta el 35%.\n\nEn la jornada legislativa se busca definir el dictamen final en medio de las diferencias sobre el alcance de las medidas para los deudores con bancos y proveedores financieros no bancarios.",
-      "guion": "Diputados discute proyectos sobre endeudamiento familiar",
-      "seccion": "Economía",
-      "medios": [
-        "La Nación",
-        "Ámbito",
-        "Infobae",
-        "C5N",
-        "Radio Mitre",
-        "Diario Popular",
-        "Noticias Argentinas (NA)",
-        "La Tecla",
-        "El Marplatense"
-      ],
-      "enlace": "https://noticiasargentinas.com/politica/endeudamiento-familiar--que-dicen-la-propuesta-del-oficialismo-y-los-dos-proyectos-de-la-oposicion-_a6ababa7eb62936833e714a2d",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-28T18:04:11.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-29T20:31:16.821Z",
-      "relevancia": 73,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "El plenario de comisiones de Diputados debate este martes dictámenes sobre morosidad familiar.",
-        "El oficialismo impulsa la educación financiera sin intervención en las tasas.",
-        "La oposición propone una emergencia por 180 días, topes a las tasas y planes de pago.",
-        "Argentina Federal presenta un programa con cuotas a tasa fija de hasta el 35%."
-      ],
-      "noConfirmado": [
-        "Todavía no se definió cuál de los dictámenes conseguirá la mayoría en la votación."
-      ],
-      "textoRedes": "El plenario de comisiones de la Cámara de Diputados debate este martes los proyectos sobre endeudamiento familiar. El oficialismo impulsa la educación financiera y los bloques opositores exigen topes a las tasas y planes de refinanciación para morosos.",
-      "etiquetas": [
-        "Diputados",
-        "endeudamiento",
-        "morosidad familiar",
-        "economía"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Noticias Argentinas (NA)",
-          "enlace": "https://noticiasargentinas.com/politica/endeudamiento-familiar--que-dicen-la-propuesta-del-oficialismo-y-los-dos-proyectos-de-la-oposicion-_a6ababa7eb62936833e714a2d",
-          "fecha": "2026-09-29T09:05:00.000Z",
-          "oficial": false,
-          "aporte": "Detalla el contenido de los proyectos del oficialismo, de la oposición y de Argentina Federal, además de las posturas de los legisladores."
-        },
-        {
-          "medio": "Ámbito",
-          "enlace": "https://www.ambito.com/politica/vence-el-plazo-dictaminar-morosidad-oficialismo-y-oposicion-negocian-contrarreloj-n6327524",
-          "fecha": "2026-09-29T19:54:00.000Z",
-          "oficial": false,
-          "aporte": "Indica que el oficialismo consiguió la mayoría en una agenda ajena y menciona el proyecto opositor para refinanciar deudas."
-        },
-        {
-          "medio": "C5N",
-          "enlace": "https://www.c5n.com/politica/endeudamiento-y-morosidad-que-proyectos-presentaron-el-oficialismo-y-la-oposicion-la-camara-diputados-n250251",
-          "fecha": "2026-09-29T19:54:00.000Z",
-          "oficial": false,
-          "aporte": "Señala que las propuestas abordan la prevención, límites a las tasas y la búsqueda de dictamen en Diputados."
-        },
-        {
-          "medio": "Diario Popular",
-          "enlace": "https://www.diariopopular.com.ar/politica/endeudamiento-familiar-como-son-los-proyectos-del-oficialismo-y-la-oposicion-n922092",
-          "fecha": "2026-09-29T13:00:00.000Z",
-          "oficial": false,
-          "aporte": "Confirma la reunión del plenario de comisiones de la Cámara de Diputados este martes."
-        },
-        {
-          "medio": "La Tecla",
-          "enlace": "https://www.latecla.info/170043-endeudamiento-y-tribunal-fiscal-platos-fuertes-de-la-sesion-en-diputados",
-          "fecha": "2026-09-29T19:34:00.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "El Marplatense",
-          "enlace": "https://www.elmarplatense.com/endeudamiento-familiar-la-camara-de-diputados-bonaerense-lleva-el-tema-al-recinto",
-          "fecha": "2026-09-29T16:00:03.000Z",
-          "oficial": false,
-          "aporte": null
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron seis medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "diputados-discute-proyectos-sobre-endeudamiento-familiar",
-      "foto": {
-        "archivo": "fotos-notas/224geo.jpg",
-        "credito": "Foto: Ámbito"
-      }
-    },
-    {
       "id": "10wnf2m",
       "titulo": "El riesgo país baja y corta una racha de subas",
       "copete": "El indicador elaborado por JP Morgan cae este martes a 609 puntos tras doce jornadas consecutivas al alza. Los bonos en dólares se recuperan.",
@@ -4464,9 +4355,9 @@
         "Canal 26",
         "Noticias Argentinas (NA)",
         "El Día",
+        "El Marplatense",
         "La Nueva",
         "Radio Mitre",
-        "El Marplatense",
         "Agencia DIB",
         "Mi8 (Canal 8 Mar del Plata)",
         "Crónica",
@@ -4732,11 +4623,11 @@
         "Argenpapa"
       ],
       "enlace": "https://www.argenpapa.com.ar/noticia/17837-argentina-sudeste-bonaerense-las-lluvias-alcanzaron-los-30-mm-en-tandil",
-      "teniaImagenLaFuente": true,
+      "teniaImagenLaFuente": false,
       "fecha": "2026-09-28T16:01:28.909Z",
       "sinFecha": true,
       "visto": "2026-09-28T16:01:28.909Z",
-      "relevancia": 26,
+      "relevancia": 16,
       "local": false,
       "deLaZona": true,
       "publicadaPor": null,
@@ -5205,97 +5096,17 @@
         "sugeridoPorIA": "ALTA"
       },
       "slug": "anses-actualiza-la-puam-y-otorga-el-bono-completo-en-octubre"
-    },
-    {
-      "id": "1xs34mg",
-      "titulo": "Boccanera y Baigorria ganan en el regreso del Turismo Special de la Costa al Fangio",
-      "copete": "Bruno Boccanera y Kevin Baigorria se impusieron en las dos finales del Turismo Special de la Costa, en el marco del retorno de la categoría al circuito largo del autódromo Juan Manuel Fangio tras dieciséis años.",
-      "cuerpo": "La jornada contó con dieciocho vehículos en pista e incluyó el cierre de la Fase Regular del torneo. La primera competencia tuvo como vencedor a Boccanera, escoltado por Nahuel Morón y Kevin Walter, tras una carrera que registró incidentes en la primera vuelta que involucraron a Carlos Climente, Ariel Ianni, Darío Rapari y Pablo Buduba. La segunda final, destinada a pilotos invitados, quedó en manos de Baigorria, seguido por Buduba y Martín Calamante. El resultado dejó al balcarceño Esteban Dimuro como ganador de la Fase Regular por segunda ocasión, asegurando el inicio de la Copa de Oro con cuarenta puntos, mientras que la próxima fecha se desarrollará los días diez y once de octubre en la variante Juan Manuel Bordeu.",
-      "guion": "Boccanera y Baigorria ganan en el regreso del Turismo Special de la Costa al Fangio",
-      "seccion": "Automovilismo",
-      "medios": [
-        "El Diario Balcarce"
-      ],
-      "enlace": "https://eldiariobalcarce.com.ar/boccanera-y-baigorria-los-ganadores-en-el-tsc-en-jornada-historica-en-el-fangio-543",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-28T11:51:08.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-28T12:05:25.938Z",
-      "relevancia": 71,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [
-        "autodromo",
-        "tc-pick-up",
-        "fangio"
-      ],
-      "como": "automatica",
-      "seSabe": [
-        "El Turismo Special de la Costa volvió a utilizar el circuito largo del autódromo Juan Manuel Fangio después de dieciséis años.",
-        "Bruno Boccanera ganó la primera final con Ford y Kevin Baigorria la segunda con Chevrolet.",
-        "La competencia reunió a dieciocho autos en su quinta fecha y se desarrolló junto a las TC Pick Up.",
-        "El balcarceño Esteban Dimuro se adjudicó la Fase Regular del torneo y comenzará la Copa de Oro con cuarenta puntos.",
-        "La próxima fecha se disputará el fin de semana del 10 y 11 de octubre en la variante Juan Manuel Bordeu."
-      ],
-      "textoRedes": "Bruno Boccanera y Kevin Baigorria ganaron las dos finales del Turismo Special de la Costa en el autódromo Juan Manuel Fangio, en el regreso de la categoría al circuito largo tras dieciséis años y ante una multitud.",
-      "etiquetas": [
-        "Turismo Special de la Costa",
-        "Autodromo Fangio",
-        "Bruno Boccanera",
-        "Kevin Baigorria",
-        "Esteban Dimuro"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "El Diario Balcarce",
-          "enlace": "https://eldiariobalcarce.com.ar/boccanera-y-baigorria-los-ganadores-en-el-tsc-en-jornada-historica-en-el-fangio-543",
-          "fecha": "2026-09-28T11:51:08.000Z",
-          "oficial": false,
-          "aporte": "Detalles de las dos finales del Turismo Special de la Costa, ganadores, posiciones, incidentes en pista y posiciones para la Copa de Oro."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "if257m",
-          "titulo": "Boccanera y Baigorria ganan en el regreso del Turismo Special de la Costa al Fangio",
-          "fecha": "2026-09-27T22:28:39.000Z",
-          "ruta": "/nota/boccanera-y-baigorria-ganan-en-el-regreso-del-turismo-special-de-la-if257m"
-        },
-        {
-          "id": "83u2vt",
-          "titulo": "El autódromo Juan Manuel Fangio reabre tras quince años",
-          "fecha": "2026-09-28T03:01:51.643Z",
-          "ruta": "/nota/el-autodromo-juan-manuel-fangio-reabre-tras-quince-anos-83u2vt"
-        },
-        {
-          "id": "1oj9qzr",
-          "titulo": "El automovilismo nacional convoca a una multitud en el Fangio",
-          "fecha": "2026-09-27T23:49:17.000Z",
-          "ruta": "/nota/el-automovilismo-nacional-convoca-a-una-multitud-en-el-fangio-1oj9qzr"
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "boccanera-y-baigorria-ganan-en-el-regreso-del-turismo-special-de-la",
-      "foto": {
-        "archivo": "fotos-notas/1xs34mg.jpg",
-        "credito": "Foto: El Diario Balcarce"
-      }
     }
   ],
   "secciones": [
     "Balcarce",
+    "Economía",
     "Fútbol",
     "Política",
     "Argentina",
     "Cultura y agenda",
     "Deportes",
     "Agro",
-    "Economía",
     "Automovilismo",
     "Tecnología",
     "Policiales"
@@ -5304,21 +5115,21 @@
     {
       "nombre": "El autódromo",
       "ranura": "autodromo",
-      "cuantas": 9
+      "cuantas": 7
     },
     {
       "nombre": "Fangio",
       "ranura": "fangio",
-      "cuantas": 8
-    },
-    {
-      "nombre": "TC Pick Up",
-      "ranura": "tc-pick-up",
-      "cuantas": 4
+      "cuantas": 6
     },
     {
       "nombre": "El Concejo Deliberante",
       "ranura": "concejo",
+      "cuantas": 4
+    },
+    {
+      "nombre": "TC Pick Up",
+      "ranura": "tc-pick-up",
       "cuantas": 3
     },
     {
@@ -5329,7 +5140,7 @@
   ],
   "clima": {
     "ahora": {
-      "temp": 11,
+      "temp": 10,
       "sensacion": 6,
       "humedad": 85,
       "viento": 27,
@@ -5761,6 +5572,12 @@
       "motivo": "parece promoción, no noticia: \"sorteo\""
     },
     {
+      "id": "1hx8sho",
+      "titulo": "Diputados aprobó el paquete de leyes para combatir el…",
+      "seccion": "Política",
+      "motivo": "parece promoción, no noticia: \"publicidad\""
+    },
+    {
       "id": "nlwd45",
       "titulo": "Cano adelantó un nuevo sistema de turnos para el Hospital…",
       "seccion": "Balcarce",
@@ -5797,5 +5614,5 @@
       "motivo": "necesita ojo humano: \"adolescente\""
     }
   ],
-  "esperandoCuerpo": 6
+  "esperandoCuerpo": 7
 }
