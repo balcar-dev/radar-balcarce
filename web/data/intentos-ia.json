@@ -769,6 +769,11 @@
   "ultimo": "2026-09-25T17:05:21.676Z",
   "motivo": "cuerpo: 6 problemas (numero): el cuerpo dice 5 y la fuente no lo dice; sin esas oraciones quedan 19 palabras"
  },
+ "1dhqkr9": {
+  "intentos": 1,
+  "ultimo": "2026-09-29T09:01:15.325Z",
+  "motivo": "Gemini: HTTP 401 (clave redaccion): {\n  \"error\": {\n    \"code\": 401,\n    \"message\": \"The bound service account is deleted or disabled. The service account bound "
+ },
  "1dlcd7p": {
   "intentos": 2,
   "ultimo": "2026-09-27T03:00:47.961Z",
