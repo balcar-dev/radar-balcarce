@@ -118,6 +118,7 @@ Lo que **no** se versiona (`.gitignore`): `node_modules/`, `.env*`,
 | `reescritura.mjs` | La reescritura con IA de punta a punta: orden, topes, texto completo, pedido, verificación, partes internas, nivel de verificación, semáforo sobre lo escrito | `generar-datos.mjs` (nube), `panel/servidor.mjs` y `panel/notas.mjs` (PC) | Sí |
 | `tiempos.mjs` | Reparte el tiempo del audio entre las palabras según sus sílabas | `alinear.mjs` | Sí |
 | `voz-gemini.mjs` | La voz de Gemini 3.8 (Interactions API, clave paga): texto literal, estilo aparte, la voz propia de cada pieza; frena el audio que dura de más | `reel.mjs`, `auditar-voz.mjs` | Sí |
+| `comparar-instruccion.mjs` | Compara dos versiones de las reglas de la IA con notas reales y el verificador de producción (29/09) | A mano | Sí |
 | `crear-voces.mjs` | Crea, lista y borra las voces propias (Voice Design) y prueba charlas | `crear-voces.yml` | A mano |
 | `voz.mjs` | `paraLeer` (símbolos dichos en voz alta) y la voz de Edge, que ya no se usa en las piezas (28/09) | `reel.mjs`, `auditar-voz.mjs` | Sí |
 | `marca/fuentes/*.ttf` (6) | Source Serif 4 (700 y 900, corte de 60 puntos) e Inter (400 a 700) para las placas, el avatar y la portada | `placa.mjs`, `avatar.mjs`, `portada.mjs` | Sí |

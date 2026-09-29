@@ -77,8 +77,14 @@ export function esTemaSerio(nota) {
   return PALABRAS_SERIAS.some((p) => texto.includes(p));
 }
 
+// Sólo para comparar dos versiones de las reglas con notas reales
+// (reels/comparar-instruccion.mjs): reemplaza las reglas de CRITERIO-EDITORIAL.md
+// mientras dure el programa. En producción nunca se usa.
+let reglasDePrueba = null;
+export function usarReglasDePrueba(texto) { reglasDePrueba = texto ?? null; }
+
 function instruccionPara(nota) {
-  return CRITERIO.reglas.replace('{{TONO}}', () => (esTemaSerio(nota) ? CRITERIO.tonoSerio : CRITERIO.tonoAmeno));
+  return (reglasDePrueba ?? CRITERIO.reglas).replace('{{TONO}}', () => (esTemaSerio(nota) ? CRITERIO.tonoSerio : CRITERIO.tonoAmeno));
 }
 
 // Para el panel ("Cómo escribe la IA"): las reglas con el tono de todos los

@@ -88,3 +88,14 @@ test('un audio que dura de más para su texto no sale: se rechaza (la voz leyó 
     /leyó algo que no estaba en el texto/,
   );
 });
+
+// ------- 29/09: con una clave gratis, el cupo del día no se reintenta
+test('un 429 por cupo del DÍA corta al instante; uno por minuto sí espera', async () => {
+  const { esCupoDelDia } = await import('../reels/voz-gemini.mjs');
+  assert.equal(esCupoDelDia('Quota exceeded for metric: generate_content_free_tier_requests, quotaId: GenerateRequestsPerDayPerProjectPerModel-FreeTier'), true);
+  assert.equal(esCupoDelDia('quotaId: GenerateRequestsPerMinutePerProjectPerModel-FreeTier'), false);
+  let pedidos = 0;
+  const fetchFn = async () => { pedidos += 1; return { ok: false, status: 429, text: async () => 'GenerateRequestsPerDayPerProjectPerModel-FreeTier' }; };
+  await assert.rejects(() => decirGemini('Hola', path.join(os.tmpdir(), 'radar-prueba-voz', 'dia.mp3'), { intentos: 4, fetchFn }), /se acabó el cupo del día/);
+  assert.equal(pedidos, 1, 'no reintenta');
+});

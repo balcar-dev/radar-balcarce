@@ -68,6 +68,9 @@ export function vozDeMas(texto, segundos) {
     : null;
 }
 
+/** ¿La respuesta 429 es del límite por DÍA (GenerateRequestsPerDay…) y no del de por minuto? */
+export const esCupoDelDia = (cuerpo) => /PerDay/i.test(String(cuerpo));
+
 /** El cuerpo del pedido: el texto literal y, aparte, el estilo; la voz por su
  *  identificador. Sin `systemInstruction`: el modelo no lo acepta. */
 export function pedidoDeVoz({ texto, voz = VOZ_POR_DEFECTO, estilo = ESTILO_POR_DEFECTO }) {
@@ -149,6 +152,9 @@ export async function decirGemini(texto, destino, {
       const cuerpo = await res.text();
       const seg = +(cuerpo.match(/"retryDelay":\s*"(\d+)s"/)?.[1] ?? 30);
       ultimoError = new Error(`Gemini pidió esperar (429, límite de pedidos): ${cuerpo.slice(0, 300)}`);
+      // Con una clave gratis (10 audios por día y por modelo) el límite del DÍA no se arregla
+      // esperando: reintentar sólo gasta tiempo. Se corta acá y la pieza espera a la próxima vuelta.
+      if (esCupoDelDia(cuerpo)) throw new Error(`Gemini: se acabó el cupo del día (429). ${cuerpo.slice(0, 200)}`);
       if (intento < intentos) { await dormir((seg + 2) * 1000); continue; }
       throw ultimoError;
     }
