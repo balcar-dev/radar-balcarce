@@ -122,6 +122,16 @@ export function notasConImagen() {
 }
 
 /**
+ * ¿Esta nota tiene tarjeta propia para compartir? Las demás (las archivadas que
+ * no salieron en las redes) declaran la tarjeta del sitio: hasta el 29/09
+ * declaraban una tarjeta que no existía y 7 de cada 10 notas compartían un 404
+ * (auditoría del sitio en vivo).
+ */
+export function tieneTarjetaPropia(nota) {
+  return Boolean(nota?.id) && notasConImagen().some((n) => n.id === nota.id);
+}
+
+/**
  * Una nota, por lo que llegó en la dirección: "titular-en-guiones-id" o el
  * id a secas. Se resuelve por el final, no por el titular entero, y se busca
  * también en el archivo: una nota que salió de la portada sigue teniendo

@@ -1,17 +1,18 @@
 import {
-  obtenerDatos, obtenerArchivo, obtenerNota, todasLasNotas, datosSeccion, temasVivos,
+  obtenerDatos, obtenerArchivo, obtenerNota, todasLasNotas, datosSeccion, temasVivos, tieneTarjetaPropia,
 } from '@/lib/datos';
 import {
   Etiqueta, FilaNota, Cierre, Invitacion, TemasDeLaNota, Hace,
 } from '@/components/piezas';
 import Compartir from '@/components/compartir';
 import FuentesDeLaNota from '@/components/verificacion';
-import { OG_COMUN } from '@/components/metadatos';
+import { OG_COMUN, TARJETA_DEL_SITIO } from '@/components/metadatos';
 import { FichaDeNota, Migas } from '@/components/ficha';
 import { notFound } from 'next/navigation';
 import { parteDeNota } from '@/lib/ruta';
 import { MOSTRAR_TEMAS } from '@/lib/sitio';
 import { recortarEn } from '@/lib/texto';
+import { fechaDeModificacion } from '@/lib/tiempo';
 import { seguirLeyendo } from '@/lib/seguir-leyendo';
 import { parrafosConEnlaces } from '@/lib/enlaces-en-texto';
 
@@ -29,14 +30,17 @@ export function generateStaticParams() {
  * parámetros pegados (?fbclid=…, ?utm_source=…) y sin esto Google la cuenta
  * como páginas distintas y reparte el mérito entre todas.
  *
- * La imagen no se declara acá: la toma sola de opengraph-image.js, que está
- * al lado.
+ * La imagen se declara acá: la tarjeta propia de la nota (opengraph-image/route.js)
+ * si la tiene, y si no la del sitio (29/09: antes se declaraba una que no existía).
  */
 export function generateMetadata({ params }) {
   const n = obtenerNota(params.id);
   if (!n) return {};
 
   const camino = n.ruta;
+  const imagen = tieneTarjetaPropia(n)
+    ? { url: `${camino}/opengraph-image`, width: 1200, height: 630, type: 'image/png', alt: n.titulo }
+    : TARJETA_DEL_SITIO;
   // El título que ve Google se acorta; el titular entero queda en la página.
   const descripcion = recortarEn(n.copete || `${n.seccion} en Balcarce: ${n.titulo}`, 155);
 
@@ -51,10 +55,11 @@ export function generateMetadata({ params }) {
       description: descripcion,
       url: camino,
       publishedTime: n.fecha,
-      modifiedTime: n.fecha,
+      modifiedTime: fechaDeModificacion(n),
       section: n.seccion,
+      images: [imagen],
     },
-    twitter: { card: 'summary_large_image', title: n.titulo, description: descripcion },
+    twitter: { card: 'summary_large_image', title: n.titulo, description: descripcion, images: [imagen.url] },
   };
 }
 
@@ -73,7 +78,7 @@ export default function PaginaNota({ params }) {
 
   return (
     <div className="envoltura">
-      <FichaDeNota nota={n} />
+      <FichaDeNota nota={n} conTarjeta={tieneTarjetaPropia(n)} />
       <Migas pasos={[
         { nombre: s.nombre, camino: `/seccion/${s.ranura}` },
         { nombre: n.titulo, camino: n.ruta },

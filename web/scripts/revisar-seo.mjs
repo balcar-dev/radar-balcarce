@@ -69,6 +69,28 @@ if (!primera) {
   }
 }
 
+// La imagen de CADA nota (29/09): hasta esa fecha 7 de cada 10 notas declaraban
+// una tarjeta que nunca se generó y compartían un 404 en Facebook y WhatsApp.
+// Se controla la que declara cada página, no sólo la de la primera nota.
+{
+  const carpeta = path.join(SALIDA, 'nota');
+  const paginas = fs.existsSync(carpeta) ? fs.readdirSync(carpeta).filter((f) => f.endsWith('.html')) : [];
+  const sinImagen = [];
+  for (const f of paginas) {
+    const html = fs.readFileSync(path.join(carpeta, f), 'utf8');
+    const declarada = html.match(/property="og:image" content="([^"]+)"/)?.[1];
+    if (!declarada) { sinImagen.push(`${f}: sin og:image`); continue; }
+    let ruta;
+    try { ruta = new URL(declarada).pathname; } catch { sinImagen.push(`${f}: og:image inválida (${declarada})`); continue; }
+    const archivo = path.join(SALIDA, `${ruta.replace(/^\//, '')}.body`);
+    if (!fs.existsSync(archivo)) sinImagen.push(`${f}: declara ${ruta} pero no existe`);
+    else if (fs.statSync(archivo).size < 4000) sinImagen.push(`${f}: la imagen ${ruta} salió vacía o rota`);
+  }
+  if (sinImagen.length) {
+    fallas.push(`${sinImagen.length} de ${paginas.length} notas con la imagen para compartir rota; por ejemplo ${sinImagen.slice(0, 3).join(' | ')}`);
+  }
+}
+
 // --- El sitemap y el robots -------------------------------------------
 const sitemap = leer('sitemap.xml.body');
 if (!sitemap) fallas.push('el sitemap: no se generó');

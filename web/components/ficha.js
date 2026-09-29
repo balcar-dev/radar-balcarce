@@ -3,6 +3,7 @@ import { autorDeNota } from '@/components/metadatos';
 import { REDES_SOCIALES } from '@/lib/datos';
 import { fichaDeEvento } from '@/lib/eventos';
 import { enlaceParaElLector } from '@/lib/fuentes-de-la-nota';
+import { fechaDeModificacion } from '@/lib/tiempo';
 
 // Los datos estructurados: lo mismo que ya está en la página, pero escrito
 // para que lo lea una máquina.
@@ -75,7 +76,7 @@ export function FichaDelSitio() {
  * después de publicarlas. Cuando el panel guarde la hora de la última
  * edición, sale de ahí.
  */
-export function FichaDeNota({ nota }) {
+export function FichaDeNota({ nota, conTarjeta = true }) {
   const base = sitio();
   const url = enlace(nota.ruta);
   const datos = {
@@ -86,11 +87,12 @@ export function FichaDeNota({ nota }) {
     description: nota.copete || undefined,
     articleBody: nota.cuerpo || undefined,
     datePublished: nota.fecha,
-    dateModified: nota.publicadaCuando ?? nota.fecha,
+    dateModified: fechaDeModificacion(nota),
     articleSection: nota.seccion,
     inLanguage: 'es-AR',
     url,
-    image: [enlace(`${nota.ruta}/opengraph-image`)],
+    // La tarjeta propia si la nota la tiene; si no, la del sitio (la otra daba 404).
+    image: [enlace(conTarjeta ? `${nota.ruta}/opengraph-image` : '/opengraph-image')],
     isAccessibleForFree: true,
     publisher: { '@id': `${base}/#medio` },
     // Quién la escribió: lo mismo que dice la firma al pie de la nota (IA o

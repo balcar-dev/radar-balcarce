@@ -248,6 +248,7 @@ test('_headers: la tarjeta para compartir sale como imagen, y los encabezados de
   // Todas las tarjetas que genera la app (opengraph-image.js o
   // twitter-image.js en cualquier carpeta), como las ve Cloudflare.
   const tarjetas = archivos('app')
+    .map((f) => f.replace(/(\/opengraph-image)\/route\.js$/, '$1.js'))
     .filter((f) => /(^|\/)(opengraph|twitter)-image\.js$/.test(f))
     .map((f) => f.replace(/^app/, '').replace(/\.js$/, '').replace(/\[[^\]]+\]/g, '*'));
   assert.ok(tarjetas.includes('/opengraph-image'));
@@ -350,4 +351,35 @@ test('ninguna página del sitio lleva la firma larga ni "en vivo" (fuente: el c�
     const texto = fs.readFileSync(a, 'utf8');
     for (const re of prohibidas) assert.ok(!re.test(texto), `${path.relative(raiz, a)} tiene un texto que ya no va: ${re}`);
   }
+});
+
+// ------- 29/09: la imagen para compartir de cada nota tiene que existir
+test('cada nota declara una tarjeta que existe: la propia si la tiene y, si no, la del sitio', () => {
+  const pagina = leer('app/nota/[id]/page.js');
+  assert.match(pagina, /const imagen = tieneTarjetaPropia\(n\)/);
+  assert.match(pagina, /: TARJETA_DEL_SITIO;/);
+  assert.match(pagina, /images: \[imagen\]/, 'og:image declarada a mano');
+  assert.match(pagina, /images: \[imagen\.url\]/, 'twitter:image igual que og:image');
+  assert.match(pagina, /<FichaDeNota nota=\{n\} conTarjeta=\{tieneTarjetaPropia\(n\)\} \/>/);
+  assert.match(leer('components/ficha.js'), /enlace\(conTarjeta \? `\$\{nota\.ruta\}\/opengraph-image` : '\/opengraph-image'\)/);
+  // La tarjeta apaisada es una ruta: con el archivo especial opengraph-image.js, Next declaraba la
+  // etiqueta en todas las notas, tuvieran tarjeta o no.
+  assert.ok(!fs.existsSync(path.join(RAIZ, 'app/nota/[id]/opengraph-image.js')));
+  assert.ok(fs.existsSync(path.join(RAIZ, 'app/nota/[id]/opengraph-image/route.js')));
+  // Y el control de antes de publicar mira todas las notas.
+  const control = leer('scripts/revisar-seo.mjs');
+  assert.match(control, /de \$\{paginas\.length\} notas con la imagen para compartir rota/);
+});
+
+test('fechaDeModificacion: nunca anterior a la de publicación (12 notas lo estaban)', async () => {
+  const { fechaDeModificacion, haceCuanto } = await import('../web/lib/tiempo.js');
+  const n = { fecha: '2026-09-28T22:30:00.000Z', publicadaCuando: '2026-09-27T22:18:00.000Z' };
+  assert.equal(fechaDeModificacion(n), '2026-09-28T22:30:00.000Z');
+  assert.equal(fechaDeModificacion({ fecha: '2026-09-28T22:30:00.000Z', publicadaCuando: '2026-09-29T01:00:00.000Z' }), '2026-09-29T01:00:00.000Z');
+  assert.equal(fechaDeModificacion({ fecha: '2026-09-28T22:30:00.000Z' }), '2026-09-28T22:30:00.000Z');
+  // haceCuanto redondea hacia abajo: 1 h 30 es "hace 1 h", y 36 horas son "ayer".
+  const ahora = Date.parse('2026-09-29T12:00:00Z');
+  assert.equal(haceCuanto('2026-09-29T10:30:00Z', ahora), 'hace 1 h');
+  assert.equal(haceCuanto('2026-09-28T00:00:00Z', ahora), 'ayer');
+  assert.equal(haceCuanto('2026-09-29T11:20:00Z', ahora), 'hace 40 min');
 });

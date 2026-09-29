@@ -208,7 +208,7 @@ test('una nota que sale de la portada sigue teniendo página y no aparece en las
 
 test('las páginas de notas se generan desde todas las notas, no sólo las de la portada', () => {
   assert.match(leer('web/app/nota/[id]/page.js'), /return todasLasNotas\(\)\.map/);
-  for (const f of ['web/app/nota/[id]/opengraph-image.js', 'web/app/nota/[id]/instagram.png/route.js']) {
+  for (const f of ['web/app/nota/[id]/opengraph-image/route.js', 'web/app/nota/[id]/instagram.png/route.js']) {
     assert.match(leer(f), /notasConImagen\(\)/, f);
   }
 });
