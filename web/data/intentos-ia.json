@@ -500,6 +500,11 @@
   "ultimo": "2026-09-25T17:00:45.979Z",
   "motivo": "título o bajada: 1 problema (negacion): la fuente niega algo en el título y el texto nuevo no"
  },
+ "180ifr6": {
+  "intentos": 1,
+  "ultimo": "2026-09-29T09:31:09.607Z",
+  "motivo": "Gemini: HTTP 401 (clave redaccion): {\n  \"error\": {\n    \"code\": 401,\n    \"message\": \"The bound service account is deleted or disabled. The service account bound "
+ },
  "181ggb5": {
   "intentos": 1,
   "ultimo": "2026-09-28T10:31:12.426Z",
@@ -770,8 +775,8 @@
   "motivo": "cuerpo: 6 problemas (numero): el cuerpo dice 5 y la fuente no lo dice; sin esas oraciones quedan 19 palabras"
  },
  "1dhqkr9": {
-  "intentos": 1,
-  "ultimo": "2026-09-29T09:01:15.325Z",
+  "intentos": 2,
+  "ultimo": "2026-09-29T09:31:09.607Z",
   "motivo": "Gemini: HTTP 401 (clave redaccion): {\n  \"error\": {\n    \"code\": 401,\n    \"message\": \"The bound service account is deleted or disabled. The service account bound "
  },
  "1dlcd7p": {
@@ -2647,6 +2652,11 @@
   "intentos": 1,
   "ultimo": "2026-09-27T02:30:43.835Z",
   "motivo": "con cuerpo"
+ },
+ "g00k21": {
+  "intentos": 1,
+  "ultimo": "2026-09-29T09:31:09.607Z",
+  "motivo": "Gemini: HTTP 401 (clave redaccion): {\n  \"error\": {\n    \"code\": 401,\n    \"message\": \"The bound service account is deleted or disabled. The service account bound "
  },
  "g2u3l1": {
   "intentos": 2,
