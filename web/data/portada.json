@@ -1,5 +1,5 @@
 {
-  "generado": "2026-09-29T20:31:59.065Z",
+  "generado": "2026-09-29T21:02:18.137Z",
   "notas": [
     {
       "id": "repaso20260929tarde",
@@ -70,14 +70,14 @@
       "medios": [
         "Infobae",
         "La Nación",
-        "Olé",
         "Clarín",
         "TN (Todo Noticias)",
         "TyC Sports",
+        "Olé",
         "Minuto Uno",
         "Radio Mitre",
-        "Doble Amarilla",
-        "Bolavip Argentina"
+        "Bolavip Argentina",
+        "Doble Amarilla"
       ],
       "enlace": "https://bolavip.com/ar/seleccion/roma-comunico-que-molina-y-dybala-no-estaran-presentes-en-la-despedida-de-messi-de-la-seleccion-argentina",
       "teniaImagenLaFuente": true,
@@ -217,8 +217,10 @@
       "guion": "La Corte revoca el fallo sobre la Ley de Tierras del DNU",
       "seccion": "Política",
       "medios": [
+        "Infobae",
         "QZ Noticias (Mar del Plata)",
         "Ámbito",
+        "Minuto Uno",
         "C5N",
         "Noticias Argentinas (NA)",
         "Mi8 (Canal 8 Mar del Plata)"
@@ -295,6 +297,97 @@
       "foto": {
         "archivo": "fotos-notas/16ufhqn.jpg",
         "credito": "Foto: QZ Noticias (Mar del Plata)"
+      }
+    },
+    {
+      "id": "1qzorkr",
+      "titulo": "San Isidro suma más de veinticinco mil vecinos al programa Ojos en Alerta",
+      "copete": "El 77,6% de los avisos sobre seguridad en el partido bonaerense ingresa por vías municipales. Las patrullas demoran hasta cinco minutos en llegar tras cada reporte.",
+      "cuerpo": "El programa Ojos en Alerta superó los veinticinco mil vecinos adheridos en San Isidro y concentra el 77,6% de las comunicaciones vinculadas a la seguridad local, según informó la Comuna. La herramienta permite enviar mensajes, audios, fotos, videos y ubicación mediante WhatsApp de forma directa al Centro de Operaciones Municipal.\n\nDesde el área de seguridad comunal explicaron que las patrullas demoran entre tres y cinco minutos en llegar tras la recepción de un aviso. El sistema articula la participación vecinal con el monitoreo de cámaras y los móviles en las calles.\n\nPara sumarse a la red preventiva, los vecinos deben completar una capacitación gratuita que se dicta en delegaciones, clubes y comercios. La última jornada masiva se llevó a cabo el jueves pasado en la localidad de Beccar.",
+      "guion": "San Isidro suma más de veinticinco mil vecinos al programa Ojos en Alerta",
+      "seccion": "Argentina",
+      "medios": [
+        "Minuto Uno",
+        "C5N",
+        "Zona Norte Diario"
+      ],
+      "enlace": "https://www.c5n.com/sociedad/san-isidro-el-776-las-comunicaciones-seguridad-ya-ingresa-canales-municipales-n250240",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-29T18:40:00.000Z",
+      "sinFecha": false,
+      "visto": "2026-09-29T21:01:18.143Z",
+      "relevancia": 63,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Más de 25.000 vecinos participan de la red vecinal en San Isidro.",
+        "El 77,6% de los avisos de seguridad ingresa por vías municipales.",
+        "Las patrullas demoran entre 3 y 5 minutos en llegar tras un reporte.",
+        "El programa utiliza WhatsApp para enviar mensajes, fotos y ubicación."
+      ],
+      "seSabe": [
+        "El programa Ojos en Alerta cuenta con más de 25.000 adheridos en San Isidro, según la Comuna.",
+        "El 77,6% de las comunicaciones sobre seguridad ingresa por canales municipales.",
+        "Las patrullas demoran entre 3 y 5 minutos en llegar tras una denuncia, de acuerdo con datos oficiales.",
+        "La última capacitación masiva se realizó el jueves pasado en Beccar."
+      ],
+      "textoRedes": "San Isidro supera los veinticinco mil vecinos adheridos al programa Ojos en Alerta. El 77,6% de las comunicaciones sobre seguridad ya ingresa por canales municipales y las patrullas demoran hasta cinco minutos en llegar.",
+      "etiquetas": [
+        "San Isidro",
+        "seguridad",
+        "Ojos en Alerta",
+        "municipio",
+        "vecinos"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "C5N",
+          "enlace": "https://www.c5n.com/sociedad/san-isidro-el-776-las-comunicaciones-seguridad-ya-ingresa-canales-municipales-n250240",
+          "fecha": "2026-09-29T18:40:00.000Z",
+          "oficial": false,
+          "aporte": "Informó el porcentaje de comunicaciones de seguridad y los detalles del funcionamiento del programa."
+        },
+        {
+          "medio": "Minuto Uno",
+          "enlace": "https://www.minutouno.com/sociedad/san-isidro-el-776-denuncias-ingresa-ojos-alerta-n6328077",
+          "fecha": "2026-09-29T18:57:00.000Z",
+          "oficial": false,
+          "aporte": "Aportó los tiempos de respuesta de las patrullas tras recibir una alerta."
+        },
+        {
+          "medio": "Zona Norte Diario",
+          "enlace": "https://www.zonanortediario.com.ar/29/09/2026/san-isidro-el-776-de-las-comunicaciones-de-seguridad-ya-ingresa-por-canales-municipales/",
+          "fecha": "2026-09-29T19:21:53.000Z",
+          "oficial": false,
+          "aporte": "Detalló la cantidad de vecinos adheridos a la red preventiva."
+        },
+        {
+          "medio": "C5N",
+          "enlace": "https://www.c5n.com/sociedad/san-isidro-el-776-las-denuncias-seguridad-ya-ingresa-canales-municipales-gracias-ojos-alerta-n250240",
+          "fecha": "2026-09-29T18:40:00.000Z",
+          "oficial": false,
+          "aporte": "Mencionó la realización de la última capacitación masiva en Beccar."
+        },
+        {
+          "medio": "Zona Norte Diario",
+          "enlace": "https://www.zonanortediario.com.ar/29/09/2026/san-isidro-el-776-de-las-denuncias-de-seguridad-ya-ingresa-por-canales-municipales/",
+          "fecha": "2026-09-29T19:21:53.000Z",
+          "oficial": false,
+          "aporte": "Difundió los datos oficiales sobre el crecimiento de los canales municipales."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron tres medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "san-isidro-suma-mas-de-veinticinco-mil-vecinos-al-programa-ojos-en",
+      "foto": {
+        "archivo": "fotos-notas/1qzorkr.jpg",
+        "credito": "Foto: Minuto Uno"
       }
     },
     {
@@ -385,7 +478,7 @@
       "fecha": "2026-09-29T17:47:43.000Z",
       "sinFecha": false,
       "visto": "2026-09-29T18:31:11.646Z",
-      "relevancia": 82,
+      "relevancia": 72,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -596,140 +689,6 @@
       }
     },
     {
-      "id": "4r2jgy",
-      "titulo": "Lionel Scaloni libera a Tomás Palacios para jugar en Estudiantes",
-      "copete": "El director técnico de la Selección argentina desafectó al defensor y a otros dos futbolistas de cara al amistoso contra Bolivia. El jugador estará disponible para enfrentar el jueves a Platense por la Copa Argentina.",
-      "cuerpo": "El director técnico de la Selección argentina, Lionel Scaloni, desafectó este martes a tres futbolistas del plantel que se prepara para enfrentar el miércoles a Bolivia en el Estadio Mario Alberto Kempes de Córdoba. Entre los jugadores liberados se encuentra el defensor Tomás Palacios, quien quedó a disposición de Estudiantes para disputar el jueves a las 21.15 el encuentro ante Platense por los cuartos de final de la Copa Argentina, según informó la Asociación del Fútbol Argentino (AFA) y medios periodísticos. Junto a Palacios, también fueron desafectados Leonel Flores y Tobías Aranda. De acuerdo con la información difundida, el defensor regresará al predio de Ezeiza el viernes para retomar los entrenamientos con el seleccionado nacional.",
-      "guion": "Lionel Scaloni libera a Tomás Palacios para jugar en Estudiantes",
-      "seccion": "Fútbol",
-      "medios": [
-        "Clarín",
-        "Minuto Uno",
-        "TyC Sports",
-        "Crónica",
-        "El Día",
-        "0221",
-        "Bolavip Argentina"
-      ],
-      "enlace": "https://www.0221.com.ar/estudiantes/finalmente-lionel-scaloni-libero-tomas-palacios-y-jugara-estudiantes-platense-copa-argentina-n134991",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-29T16:45:00.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-29T19:31:15.444Z",
-      "relevancia": 91,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Lionel Scaloni desafectó a tres futbolistas de la Selección argentina.",
-        "Tomás Palacios fue liberado y jugará este jueves para Estudiantes ante Platense.",
-        "El encuentro por los cuartos de final de la Copa Argentina se disputará desde las 21.15.",
-        "El defensor regresará al predio de Ezeiza el viernes para retomar las prácticas con el seleccionado."
-      ],
-      "seSabe": [
-        "La Selección argentina enfrenta este miércoles a Bolivia en Córdoba.",
-        "Lionel Scaloni desafectó a Tomás Palacios, Leonel Flores y Tobías Aranda.",
-        "Palacios jugará este jueves para Estudiantes ante Platense por la Copa Argentina.",
-        "El defensor volverá a entrenarse con la Selección argentina el viernes en Ezeiza."
-      ],
-      "noConfirmado": [
-        "Los motivos específicos de la liberación de Leonel Flores y Tobías Aranda por parte del cuerpo técnico nacional."
-      ],
-      "textoRedes": "Lionel Scaloni desafectó a Tomás Palacios de la Selección argentina para que pueda jugar este jueves en Estudiantes ante Platense por la Copa Argentina.",
-      "etiquetas": [
-        "Seleccion Argentina",
-        "Estudiantes",
-        "Tomas Palacios",
-        "Copa Argentina",
-        "Lionel Scaloni"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "0221",
-          "enlace": "https://www.0221.com.ar/estudiantes/finalmente-lionel-scaloni-libero-tomas-palacios-y-jugara-estudiantes-platense-copa-argentina-n134991",
-          "fecha": "2026-09-29T16:45:00.000Z",
-          "oficial": false,
-          "aporte": "Informó que Scaloni liberó a Tomás Palacios para que juegue en Estudiantes ante Platense y detalló que volverá a Ezeiza el viernes."
-        },
-        {
-          "medio": "Clarín",
-          "enlace": "https://www.clarin.com/deportes/seleccion-argentina-scaloni-libero-leonel-flores-tomas-palacios-puedan-jugar-boca-estudiantes_0_lDByUSYyWg.html",
-          "fecha": "2026-09-29T17:41:44.000Z",
-          "oficial": false,
-          "aporte": "Mencionó la situación de Tobías Andrada y otros jugadores respecto a sus clubes."
-        },
-        {
-          "medio": "El Eco de Tandil",
-          "enlace": "https://www.eleco.com.ar/deportes/bajas-en-la-seleccion-que-jugadores-fueron-desafectados-para-la-doble-fecha-fifa",
-          "fecha": "2026-09-29T17:48:31.000Z",
-          "oficial": false,
-          "aporte": "Indicó la modificación en la nómina de la Selección argentina y los próximos partidos."
-        },
-        {
-          "medio": "Minuto Uno",
-          "enlace": "https://www.minutouno.com/deportes/boca-recibio-una-gran-noticia-antes-jugar-union-la-decision-scaloni-leonel-flores-n6328042",
-          "fecha": "2026-09-29T17:47:00.000Z",
-          "oficial": false,
-          "aporte": "Señaló la salida de un delantero tras el amistoso ante Bolivia para su club."
-        },
-        {
-          "medio": "TyC Sports",
-          "enlace": "https://www.tycsports.com/boca-juniors/leonel-flores-esta-en-duda-para-jugar-con-boca-ante-union-id763497.html",
-          "fecha": "2026-09-29T17:00:18.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Crónica",
-          "enlace": "https://www.cronica.com.ar/depo/seleccionargentina/atentos-la-seleccion-argentina-libero-a-tomas-palacios-leonel-flores-y-tobias-andrada/",
-          "fecha": "2026-09-29T18:50:00.000Z",
-          "oficial": false,
-          "aporte": "Confirmó la oficialización de la AFA sobre las tres bajas en la lista de convocados."
-        },
-        {
-          "medio": "Noticias Argentinas (NA)",
-          "enlace": "https://noticiasargentinas.com/deportes/bajas-en-la-seleccion--tres-jugadores-fueron-desafectados-para-la-doble-fecha-fifa_a6abbf20512f3a9893c266c09",
-          "fecha": "2026-09-29T17:22:37.000Z",
-          "oficial": false,
-          "aporte": "Aportó los nombres de Tomás Palacios, Leonel Flores y Tobías Aranda como los desafectados."
-        },
-        {
-          "medio": "El Día",
-          "enlace": "https://www.eldia.com/deportes/tomas-palacios-fue-liberado-por-scaloni-y-estara-disponible-para-el-partido-con-platense-deportes_1790707500",
-          "fecha": "2026-09-29T18:54:21.000Z",
-          "oficial": false,
-          "aporte": "Detalló los próximos amistosos de la Selección argentina ante Burkina Faso y Benín."
-        },
-        {
-          "medio": "Bolavip Argentina",
-          "enlace": "https://bolavip.com/ar/seleccion/la-seleccion-argentina-libero-a-tomas-palacios-leonel-flores-y-tobias-andrada-volveran-a-estudiantes-boca-y-river",
-          "fecha": "2026-09-29T17:09:23.000Z",
-          "oficial": false,
-          "aporte": "Confirmó que los tres jugadores desafectados pertenecen al fútbol argentino."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "x0r3gd",
-          "titulo": "Avanzan las negociaciones para la continuidad de Lionel Scaloni en la selección",
-          "fecha": "2026-09-26T08:16:07.000Z",
-          "ruta": "/nota/avanzan-las-negociaciones-para-la-continuidad-de-lionel-scaloni-en-la-x0r3gd"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron 9 medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "lionel-scaloni-libera-a-tomas-palacios-para-jugar-en-estudiantes",
-      "foto": {
-        "archivo": "fotos-notas/4r2jgy.jpg",
-        "credito": "Foto: 0221"
-      }
-    },
-    {
       "id": "1vgun5x",
       "titulo": "Balcarce participa de la trigésima Feria Internacional de Turismo",
       "copete": "La Subsecretaría de Turismo local presenta propuestas en la Ciudad Autónoma de Buenos Aires y recibe un reconocimiento internacional.",
@@ -819,7 +778,6 @@
       "guion": "La Cooperativa de Electricidad anuncia un corte de luz para el miércoles",
       "seccion": "Balcarce",
       "medios": [
-        "Puntonueve (FM 100.9)",
         "Infórmese Primero (FM 104.9)",
         "Radio Gabal (FM 104.1)"
       ],
@@ -828,7 +786,7 @@
       "fecha": "2026-09-29T16:05:00.906Z",
       "sinFecha": false,
       "visto": "2026-09-29T17:02:31.052Z",
-      "relevancia": 100,
+      "relevancia": 90,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -896,7 +854,6 @@
       "guion": "Pato Naranja gana por 99 a 12 y queda entre los cuatro mejores",
       "seccion": "Fútbol",
       "medios": [
-        "Puntonueve (FM 100.9)",
         "Infórmese Primero (FM 104.9)"
       ],
       "enlace": "http://www.informeseprimero.com.ar/2026/09/pato-naranja-goleo-pampas-y-quedo-entre.html",
@@ -904,7 +861,7 @@
       "fecha": "2026-09-29T16:01:29.256Z",
       "sinFecha": false,
       "visto": "2026-09-29T16:31:06.769Z",
-      "relevancia": 90,
+      "relevancia": 80,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1325,7 +1282,6 @@
       "guion": "El Complejo Polideportivo aloja un encuentro regional por el Día del Sordo",
       "seccion": "Balcarce",
       "medios": [
-        "Puntonueve (FM 100.9)",
         "Infórmese Primero (FM 104.9)",
         "Radio Gabal (FM 104.1)",
         "Municipalidad de Balcarce",
@@ -1461,6 +1417,140 @@
       "foto": {
         "archivo": "fotos-notas/wgq362.jpg",
         "credito": "Foto: 0223 (Mar del Plata)"
+      }
+    },
+    {
+      "id": "4r2jgy",
+      "titulo": "Lionel Scaloni libera a Tomás Palacios para jugar en Estudiantes",
+      "copete": "El director técnico de la Selección argentina desafectó al defensor y a otros dos futbolistas de cara al amistoso contra Bolivia. El jugador estará disponible para enfrentar el jueves a Platense por la Copa Argentina.",
+      "cuerpo": "El director técnico de la Selección argentina, Lionel Scaloni, desafectó este martes a tres futbolistas del plantel que se prepara para enfrentar el miércoles a Bolivia en el Estadio Mario Alberto Kempes de Córdoba. Entre los jugadores liberados se encuentra el defensor Tomás Palacios, quien quedó a disposición de Estudiantes para disputar el jueves a las 21.15 el encuentro ante Platense por los cuartos de final de la Copa Argentina, según informó la Asociación del Fútbol Argentino (AFA) y medios periodísticos. Junto a Palacios, también fueron desafectados Leonel Flores y Tobías Aranda. De acuerdo con la información difundida, el defensor regresará al predio de Ezeiza el viernes para retomar los entrenamientos con el seleccionado nacional.",
+      "guion": "Lionel Scaloni libera a Tomás Palacios para jugar en Estudiantes",
+      "seccion": "Fútbol",
+      "medios": [
+        "Clarín",
+        "TyC Sports",
+        "Minuto Uno",
+        "Crónica",
+        "El Día",
+        "0221",
+        "Bolavip Argentina"
+      ],
+      "enlace": "https://www.0221.com.ar/estudiantes/finalmente-lionel-scaloni-libero-tomas-palacios-y-jugara-estudiantes-platense-copa-argentina-n134991",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-29T14:45:00.000Z",
+      "sinFecha": false,
+      "visto": "2026-09-29T19:31:15.444Z",
+      "relevancia": 91,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Lionel Scaloni desafectó a tres futbolistas de la Selección argentina.",
+        "Tomás Palacios fue liberado y jugará este jueves para Estudiantes ante Platense.",
+        "El encuentro por los cuartos de final de la Copa Argentina se disputará desde las 21.15.",
+        "El defensor regresará al predio de Ezeiza el viernes para retomar las prácticas con el seleccionado."
+      ],
+      "seSabe": [
+        "La Selección argentina enfrenta este miércoles a Bolivia en Córdoba.",
+        "Lionel Scaloni desafectó a Tomás Palacios, Leonel Flores y Tobías Aranda.",
+        "Palacios jugará este jueves para Estudiantes ante Platense por la Copa Argentina.",
+        "El defensor volverá a entrenarse con la Selección argentina el viernes en Ezeiza."
+      ],
+      "noConfirmado": [
+        "Los motivos específicos de la liberación de Leonel Flores y Tobías Aranda por parte del cuerpo técnico nacional."
+      ],
+      "textoRedes": "Lionel Scaloni desafectó a Tomás Palacios de la Selección argentina para que pueda jugar este jueves en Estudiantes ante Platense por la Copa Argentina.",
+      "etiquetas": [
+        "Seleccion Argentina",
+        "Estudiantes",
+        "Tomas Palacios",
+        "Copa Argentina",
+        "Lionel Scaloni"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "0221",
+          "enlace": "https://www.0221.com.ar/estudiantes/finalmente-lionel-scaloni-libero-tomas-palacios-y-jugara-estudiantes-platense-copa-argentina-n134991",
+          "fecha": "2026-09-29T16:45:00.000Z",
+          "oficial": false,
+          "aporte": "Informó que Scaloni liberó a Tomás Palacios para que juegue en Estudiantes ante Platense y detalló que volverá a Ezeiza el viernes."
+        },
+        {
+          "medio": "Clarín",
+          "enlace": "https://www.clarin.com/deportes/seleccion-argentina-scaloni-libero-leonel-flores-tomas-palacios-puedan-jugar-boca-estudiantes_0_lDByUSYyWg.html",
+          "fecha": "2026-09-29T17:41:44.000Z",
+          "oficial": false,
+          "aporte": "Mencionó la situación de Tobías Andrada y otros jugadores respecto a sus clubes."
+        },
+        {
+          "medio": "El Eco de Tandil",
+          "enlace": "https://www.eleco.com.ar/deportes/bajas-en-la-seleccion-que-jugadores-fueron-desafectados-para-la-doble-fecha-fifa",
+          "fecha": "2026-09-29T17:48:31.000Z",
+          "oficial": false,
+          "aporte": "Indicó la modificación en la nómina de la Selección argentina y los próximos partidos."
+        },
+        {
+          "medio": "Minuto Uno",
+          "enlace": "https://www.minutouno.com/deportes/boca-recibio-una-gran-noticia-antes-jugar-union-la-decision-scaloni-leonel-flores-n6328042",
+          "fecha": "2026-09-29T17:47:00.000Z",
+          "oficial": false,
+          "aporte": "Señaló la salida de un delantero tras el amistoso ante Bolivia para su club."
+        },
+        {
+          "medio": "TyC Sports",
+          "enlace": "https://www.tycsports.com/boca-juniors/leonel-flores-esta-en-duda-para-jugar-con-boca-ante-union-id763497.html",
+          "fecha": "2026-09-29T17:00:18.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Crónica",
+          "enlace": "https://www.cronica.com.ar/depo/seleccionargentina/atentos-la-seleccion-argentina-libero-a-tomas-palacios-leonel-flores-y-tobias-andrada/",
+          "fecha": "2026-09-29T18:50:00.000Z",
+          "oficial": false,
+          "aporte": "Confirmó la oficialización de la AFA sobre las tres bajas en la lista de convocados."
+        },
+        {
+          "medio": "Noticias Argentinas (NA)",
+          "enlace": "https://noticiasargentinas.com/deportes/bajas-en-la-seleccion--tres-jugadores-fueron-desafectados-para-la-doble-fecha-fifa_a6abbf20512f3a9893c266c09",
+          "fecha": "2026-09-29T17:22:37.000Z",
+          "oficial": false,
+          "aporte": "Aportó los nombres de Tomás Palacios, Leonel Flores y Tobías Aranda como los desafectados."
+        },
+        {
+          "medio": "El Día",
+          "enlace": "https://www.eldia.com/deportes/tomas-palacios-fue-liberado-por-scaloni-y-estara-disponible-para-el-partido-con-platense-deportes_1790707500",
+          "fecha": "2026-09-29T18:54:21.000Z",
+          "oficial": false,
+          "aporte": "Detalló los próximos amistosos de la Selección argentina ante Burkina Faso y Benín."
+        },
+        {
+          "medio": "Bolavip Argentina",
+          "enlace": "https://bolavip.com/ar/seleccion/la-seleccion-argentina-libero-a-tomas-palacios-leonel-flores-y-tobias-andrada-volveran-a-estudiantes-boca-y-river",
+          "fecha": "2026-09-29T17:09:23.000Z",
+          "oficial": false,
+          "aporte": "Confirmó que los tres jugadores desafectados pertenecen al fútbol argentino."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "x0r3gd",
+          "titulo": "Avanzan las negociaciones para la continuidad de Lionel Scaloni en la selección",
+          "fecha": "2026-09-26T08:16:07.000Z",
+          "ruta": "/nota/avanzan-las-negociaciones-para-la-continuidad-de-lionel-scaloni-en-la-x0r3gd"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron 9 medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "lionel-scaloni-libera-a-tomas-palacios-para-jugar-en-estudiantes",
+      "foto": {
+        "archivo": "fotos-notas/4r2jgy.jpg",
+        "credito": "Foto: 0221"
       }
     },
     {
@@ -1959,8 +2049,9 @@
       "guion": "La molienda de soja en agosto alcanza el nivel más alto en diez campañas",
       "seccion": "Agro",
       "medios": [
-        "Infobrisas (Radio Brisas)",
+        "TN (Todo Noticias)",
         "Agrositio",
+        "Infobrisas (Radio Brisas)",
         "Agroempresario"
       ],
       "enlace": "https://www.agrositio.com.ar/noticia/248583-la-molienda-de-soja-en-agosto-fue-la-mayor-de-las-ultimas-10-campanas.html",
@@ -1968,7 +2059,7 @@
       "fecha": "2026-09-29T12:47:18.000Z",
       "sinFecha": false,
       "visto": "2026-09-29T19:01:06.137Z",
-      "relevancia": 49,
+      "relevancia": 59,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -2034,7 +2125,6 @@
       "seccion": "Policiales",
       "medios": [
         "News Balcarce (FM 91.7)",
-        "Puntonueve (FM 100.9)",
         "Infórmese Primero (FM 104.9)",
         "Radio Gabal (FM 104.1)",
         "El Diario Balcarce",
@@ -2219,11 +2309,11 @@
         "Agencia DIB",
         "El Día",
         "0221",
-        "Infoeme",
         "Zona Norte Diario",
-        "Mi8 (Canal 8 Mar del Plata)",
+        "Ámbito",
         "El Eco de Tandil",
-        "Ámbito"
+        "Mi8 (Canal 8 Mar del Plata)",
+        "Infoeme"
       ],
       "enlace": "https://www.ambito.com/informacion-general/la-provincia-buenos-aires-crea-un-programa-que-estudiantes-secundarios-se-formen-oficios-n6327786",
       "teniaImagenLaFuente": true,
@@ -2302,7 +2392,6 @@
       "guion": "Aston Martin renueva los contratos de Fernando Alonso y Lance Stroll para 2027",
       "seccion": "Automovilismo",
       "medios": [
-        "Campeones",
         "Motorsport",
         "La Nación",
         "Infobae",
@@ -2310,9 +2399,10 @@
         "Perfil",
         "Ámbito",
         "TyC Sports",
-        "Minuto Uno",
         "La Nueva",
+        "Campeones",
         "Radio Mitre",
+        "Minuto Uno",
         "Clarín"
       ],
       "enlace": "https://es.motorsport.com/f1/news/alonso-aston-martin-renovacion/10848231/?utm_source=RSS&utm_medium=referral&utm_campaign=RSS-F1&utm_term=News&utm_content=es",
@@ -2578,53 +2668,78 @@
       "slug": "el-servicio-meteorologico-nacional-mantiene-alerta-amarilla-por"
     },
     {
-      "id": "13zbalx",
-      "titulo": "Continúa el alerta por lluvias y descartan la suspensión de clases",
-      "copete": "Las precipitaciones intensas siguen durante el momento más crítico y prevén una mejora hacia la tarde.",
-      "cuerpo": "El distrito transita el momento más crítico de la alerta por lluvias intensas, según informaron los datos meteorológicos. Resta aproximadamente una hora de máxima intensidad de precipitaciones antes de que comiencen a disminuir de manera paulatina hacia el mediodía.\n\nLas autoridades recomendaron a la comunidad mantenerse informada y evitar transitar por zonas anegadas mientras dure el pico de tormenta.\n\nFrente a las consultas sobre el dictado de actividades, los datos difundidos indican que no hay suspensión de clases.",
-      "guion": "Continúa el alerta por lluvias y descartan la suspensión de clases",
-      "seccion": "Balcarce",
+      "id": "1i0n3x9",
+      "titulo": "El autódromo Juan Manuel Fangio recupera actividad nacional",
+      "copete": "El circuito serrano vuelve a recibir categorías nacionales tras el acuerdo firmado en mayo de 2023 por la Provincia y el municipio para adecuar las instalaciones.",
+      "cuerpo": "El autódromo Juan Manuel Fangio recuperó actividad nacional en el circuito serrano tras el cierre registrado el 13 de noviembre de 2011. La recuperación comenzó con el trabajo de vecinos nucleados en la Asociación Autódromo y el apoyo de la Asociación Corredores Turismo Carretera, la Federación Regional de Automovilismo Mar y Sierras, la Municipalidad, el Museo Fangio y el Auto Club Balcarce.\n\nTras el regreso del automovilismo zonal el 10 de noviembre de 2019 con un trazado corto, las obras continuaron con la construcción de la variante Juan Manuel Bordeu inaugurada en agosto de 2021, que extendió el circuito a más de 2.000 metros con aportes privados, municipales y de cooperativas locales.\n\nEl proceso para la llegada de categorías nacionales avanzó en mayo de 2023, cuando el gobernador Axel Kicillof y el intendente Esteban Reino firmaron el acuerdo para que la Provincia realizara los aportes económicos necesarios para poner el escenario en condiciones.",
+      "guion": "El autódromo Juan Manuel Fangio recupera actividad nacional",
+      "seccion": "Automovilismo",
       "medios": [
-        "Puntonueve (FM 100.9)"
+        "El Diario Balcarce"
       ],
-      "enlace": "https://puntonueve.com.ar/no-hay-suspension-de-clases/",
+      "enlace": "https://eldiariobalcarce.com.ar/el-juan-manuel-fangio-volvio-a-latir-811",
       "teniaImagenLaFuente": false,
-      "fecha": "2026-09-29T10:21:24.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-29T19:31:15.444Z",
-      "relevancia": 74,
+      "fecha": "2026-09-29T10:01:16.776Z",
+      "sinFecha": true,
+      "visto": "2026-09-29T21:01:18.143Z",
+      "relevancia": 61,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
-      "temas": [],
+      "temas": [
+        "autodromo",
+        "fangio"
+      ],
       "como": "automatica",
       "claves": [
-        "Atraviesan el momento más crítico de la alerta por lluvias",
-        "Prevén una mejora gradual del tiempo hacia el mediodía",
-        "Recomiendan evitar transitar por zonas anegadas"
+        "El autódromo recuperó actividad nacional tras permanecer cerrado desde noviembre de 2011.",
+        "Un grupo de vecinos y la Asociación Autódromo impulsaron la reapertura zonal en 2019.",
+        "La variante Juan Manuel Bordeu amplió el circuito en agosto de 2021.",
+        "El gobernador Axel Kicillof y el intendente Esteban Reino firmaron el acuerdo de fondos en mayo de 2023."
       ],
       "seSabe": [
-        "Atraviesan el momento más crítico de la alerta por lluvias",
-        "Restaba aproximadamente una hora de máxima intensidad",
-        "Las precipitaciones comenzarán a disminuir hacia el mediodía",
-        "El tiempo mejorará durante la tarde con apertura del cielo"
+        "El autódromo Juan Manuel Fangio dejó de operar a nivel nacional el 13 de noviembre de 2011.",
+        "El circuito zonal volvió a funcionar el 10 de noviembre de 2019 según informó la Asociación Autódromo.",
+        "La variante Juan Manuel Bordeu se inauguró en agosto de 2021 y extendió el trazado a más de dos mil metros.",
+        "El gobernador Axel Kicillof y el intendente Esteban Reino firmaron el acuerdo de financiamiento provincial en mayo de 2023."
       ],
       "noConfirmado": [
         "No pudo ser contrastado de forma independiente con las fuentes consultadas."
       ],
-      "textoRedes": "Continúa el momento más crítico de la alerta por lluvias intensas en Balcarce y descartan la suspensión de clases. Prevén que las precipitaciones disminuyan hacia el mediodía y el tiempo mejore por la tarde.",
+      "textoRedes": "El autódromo Juan Manuel Fangio recuperó actividad nacional tras un largo proceso de obras y gestiones entre el municipio y la Provincia que comenzó con el trabajo de vecinos y entidades locales.",
       "etiquetas": [
-        "lluvias",
-        "alerta",
-        "balcarce"
+        "autodromo",
+        "Juan Manuel Fangio",
+        "automovilismo",
+        "Balcarce"
       ],
       "fuentesConsultadas": [
         {
-          "medio": "Puntonueve (FM 100.9)",
-          "enlace": "https://puntonueve.com.ar/no-hay-suspension-de-clases/",
-          "fecha": "2026-09-29T10:21:24.000Z",
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/el-juan-manuel-fangio-volvio-a-latir-811",
+          "fecha": null,
           "oficial": false,
-          "aporte": "Detalló el estado actual del alerta por lluvias, la evolución prevista y las recomendaciones para transitar"
+          "aporte": "Detalló la cronología de la recuperación del autódromo Juan Manuel Fangio desde el cierre de 2011 hasta los acuerdos provinciales de 2023."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "wgq362",
+          "titulo": "Omar Martínez termina cuarto en el autódromo Juan Manuel Fangio",
+          "fecha": "2026-09-29T14:55:00.000Z",
+          "ruta": "/nota/omar-martinez-termina-cuarto-en-el-autodromo-juan-manuel-fangio-wgq362"
+        },
+        {
+          "id": "rebipe",
+          "titulo": "Mangoni repasa su paso por el autódromo Juan Manuel Fangio",
+          "fecha": "2026-09-28T16:15:38.000Z",
+          "ruta": "/nota/mangoni-repasa-su-paso-por-el-autodromo-juan-manuel-fangio-rebipe"
+        },
+        {
+          "id": "83u2vt",
+          "titulo": "El autódromo Juan Manuel Fangio reabre tras quince años",
+          "fecha": "2026-09-28T03:01:51.643Z",
+          "ruta": "/nota/el-autodromo-juan-manuel-fangio-reabre-tras-quince-anos-83u2vt"
         }
       ],
       "verificacion": {
@@ -2632,10 +2747,10 @@
         "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
         "sugeridoPorIA": "MEDIA"
       },
-      "slug": "continua-el-alerta-por-lluvias-y-descartan-la-suspension-de-clases",
+      "slug": "el-autodromo-juan-manuel-fangio-recupera-actividad-nacional",
       "foto": {
-        "archivo": "fotos-notas/13zbalx.jpg",
-        "credito": "Foto: Puntonueve (FM 100.9)"
+        "archivo": "fotos-notas/1i0n3x9.jpg",
+        "credito": "Foto: El Diario Balcarce"
       }
     },
     {
@@ -2648,12 +2763,12 @@
       "medios": [
         "Infobae",
         "C5N",
-        "Crónica",
         "Diario Popular",
         "Noticias Argentinas (NA)",
-        "La Verdad",
+        "La Nueva",
         "Mi8 (Canal 8 Mar del Plata)",
-        "La Nueva"
+        "La Verdad",
+        "Crónica"
       ],
       "enlace": "https://noticiasargentinas.com/economia/una-pareja-de-jubilados-que-alquila-necesito-mas-de--2-5-millones-para-vivir-en-agosto_a6abb838b12f3a9893c1662be",
       "teniaImagenLaFuente": true,
@@ -2749,103 +2864,6 @@
       }
     },
     {
-      "id": "224geo",
-      "titulo": "Diputados discute proyectos sobre endeudamiento familiar",
-      "copete": "El plenario de comisiones de la Cámara de Diputados debate este martes los dictámenes sobre morosidad familiar. El oficialismo impulsa la educación financiera y la oposición exige topes a las tasas y refinanciación.",
-      "cuerpo": "La Libertad Avanza, el PRO y la UCR impulsan un proyecto centrado en la prevención y la educación financiera, articulado por la diputada nacional Silvana Giudici y el presidente de la comisión de Finanzas, Santiago Pauli, según informó la Agencia Noticias Argentinas. Por su parte, Unión por la Patria, Provincias Unidas y la Coalición Cívica presentan una iniciativa que contempla una emergencia por 180 días, topes a las tasas de interés, gastos y comisiones, y planes de refinanciación de hasta 36 meses para más de 6 millones de personas morosas, además de la eliminación total de los intereses punitorios. A su vez, el bloque Argentina Federal, a través de los diputados Oscar Herrera Ahuad y Yolanda Vega, promueve el Programa Nacional de Desendeudamiento Familiar y Personal con cuotas a tasa fija de hasta el 35%.\n\nEn la jornada legislativa se busca definir el dictamen final en medio de las diferencias sobre el alcance de las medidas para los deudores con bancos y proveedores financieros no bancarios.",
-      "guion": "Diputados discute proyectos sobre endeudamiento familiar",
-      "seccion": "Economía",
-      "medios": [
-        "Ámbito",
-        "C5N",
-        "Diario Popular",
-        "Noticias Argentinas (NA)",
-        "La Tecla",
-        "El Marplatense"
-      ],
-      "enlace": "https://noticiasargentinas.com/politica/endeudamiento-familiar--que-dicen-la-propuesta-del-oficialismo-y-los-dos-proyectos-de-la-oposicion-_a6ababa7eb62936833e714a2d",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-29T09:05:00.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-29T20:31:16.821Z",
-      "relevancia": 69,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "El plenario de comisiones de Diputados debate este martes dictámenes sobre morosidad familiar.",
-        "El oficialismo impulsa la educación financiera sin intervención en las tasas.",
-        "La oposición propone una emergencia por 180 días, topes a las tasas y planes de pago.",
-        "Argentina Federal presenta un programa con cuotas a tasa fija de hasta el 35%."
-      ],
-      "noConfirmado": [
-        "Todavía no se definió cuál de los dictámenes conseguirá la mayoría en la votación."
-      ],
-      "textoRedes": "El plenario de comisiones de la Cámara de Diputados debate este martes los proyectos sobre endeudamiento familiar. El oficialismo impulsa la educación financiera y los bloques opositores exigen topes a las tasas y planes de refinanciación para morosos.",
-      "etiquetas": [
-        "Diputados",
-        "endeudamiento",
-        "morosidad familiar",
-        "economía"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Noticias Argentinas (NA)",
-          "enlace": "https://noticiasargentinas.com/politica/endeudamiento-familiar--que-dicen-la-propuesta-del-oficialismo-y-los-dos-proyectos-de-la-oposicion-_a6ababa7eb62936833e714a2d",
-          "fecha": "2026-09-29T09:05:00.000Z",
-          "oficial": false,
-          "aporte": "Detalla el contenido de los proyectos del oficialismo, de la oposición y de Argentina Federal, además de las posturas de los legisladores."
-        },
-        {
-          "medio": "Ámbito",
-          "enlace": "https://www.ambito.com/politica/vence-el-plazo-dictaminar-morosidad-oficialismo-y-oposicion-negocian-contrarreloj-n6327524",
-          "fecha": "2026-09-29T19:54:00.000Z",
-          "oficial": false,
-          "aporte": "Indica que el oficialismo consiguió la mayoría en una agenda ajena y menciona el proyecto opositor para refinanciar deudas."
-        },
-        {
-          "medio": "C5N",
-          "enlace": "https://www.c5n.com/politica/endeudamiento-y-morosidad-que-proyectos-presentaron-el-oficialismo-y-la-oposicion-la-camara-diputados-n250251",
-          "fecha": "2026-09-29T19:54:00.000Z",
-          "oficial": false,
-          "aporte": "Señala que las propuestas abordan la prevención, límites a las tasas y la búsqueda de dictamen en Diputados."
-        },
-        {
-          "medio": "Diario Popular",
-          "enlace": "https://www.diariopopular.com.ar/politica/endeudamiento-familiar-como-son-los-proyectos-del-oficialismo-y-la-oposicion-n922092",
-          "fecha": "2026-09-29T13:00:00.000Z",
-          "oficial": false,
-          "aporte": "Confirma la reunión del plenario de comisiones de la Cámara de Diputados este martes."
-        },
-        {
-          "medio": "La Tecla",
-          "enlace": "https://www.latecla.info/170043-endeudamiento-y-tribunal-fiscal-platos-fuertes-de-la-sesion-en-diputados",
-          "fecha": "2026-09-29T19:34:00.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "El Marplatense",
-          "enlace": "https://www.elmarplatense.com/endeudamiento-familiar-la-camara-de-diputados-bonaerense-lleva-el-tema-al-recinto",
-          "fecha": "2026-09-29T16:00:03.000Z",
-          "oficial": false,
-          "aporte": null
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron seis medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "diputados-discute-proyectos-sobre-endeudamiento-familiar",
-      "foto": {
-        "archivo": "fotos-notas/224geo.jpg",
-        "credito": "Foto: Ámbito"
-      }
-    },
-    {
       "id": "180ifr6",
       "titulo": "Amigos Unidos organiza un encuentro comunitario con siete millones en premios",
       "copete": "El club local realiza un evento el domingo 4 de octubre con siete rondas de premios en órdenes de compra. El valor del cartón es de 25.000 pesos y hay opciones de pago en cuotas.",
@@ -2922,6 +2940,7 @@
       "medios": [
         "La Nación",
         "Infobae",
+        "Clarín",
         "TN (Todo Noticias)",
         "El Destape",
         "Perfil",
@@ -2930,13 +2949,12 @@
         "C5N",
         "Canal 26",
         "Noticias Argentinas (NA)",
-        "La Verdad",
-        "QZ Noticias (Mar del Plata)",
-        "Mi8 (Canal 8 Mar del Plata)",
-        "Doble Amarilla",
-        "Clarín",
         "Crónica",
-        "La Nueva"
+        "QZ Noticias (Mar del Plata)",
+        "La Nueva",
+        "La Verdad",
+        "Mi8 (Canal 8 Mar del Plata)",
+        "Doble Amarilla"
       ],
       "enlace": "https://www.infobae.com/politica/2026/09/29/designaron-a-adolfo-cambiaso-como-embajador-internacional-del-deporte-argentino/",
       "teniaImagenLaFuente": true,
@@ -3106,11 +3124,11 @@
         "Radio Mitre",
         "Noticias Argentinas (NA)",
         "El Día",
-        "La Brújula 24",
         "InfoRegión",
         "ANDigital",
         "La Nueva",
-        "Diputados Bonaerenses"
+        "Diputados Bonaerenses",
+        "La Brújula 24"
       ],
       "enlace": "https://www.clarin.com/economia/luis-caputo-kicillof-anticristo-kirchnerismo-infierno-visto_0_t8mAjylcj2.html",
       "teniaImagenLaFuente": true,
@@ -3218,10 +3236,9 @@
       "medios": [
         "LU9 Mar del Plata",
         "Ecos Diarios (Necochea)",
-        "ANDigital",
-        "Mi8 (Canal 8 Mar del Plata)",
+        "Agencia DIB",
         "El Eco de Tandil",
-        "Agencia DIB"
+        "Mi8 (Canal 8 Mar del Plata)"
       ],
       "enlace": "https://dib.com.ar/sociedad/los-establecimientos-bonaerenses-que-garantizan-el-aborto-legal-se-triplicaron-seis-anos-n56095",
       "teniaImagenLaFuente": true,
@@ -3319,7 +3336,6 @@
         "Noticias Argentinas (NA)",
         "El Día",
         "La Tecla",
-        "La Verdad",
         "La Opinión",
         "ANDigital",
         "Minuto Uno",
@@ -3329,7 +3345,8 @@
         "Página/12",
         "La Nueva",
         "La Brújula 24",
-        "Perfil"
+        "Perfil",
+        "La Verdad"
       ],
       "enlace": "https://www.minutouno.com/espectaculos/la-virgen-la-tosquera-laura-casabe-representara-la-argentina-los-oscar-n6327706",
       "teniaImagenLaFuente": true,
@@ -3442,18 +3459,15 @@
         "El Diario Balcarce"
       ],
       "enlace": "https://eldiariobalcarce.com.ar/el-6-de-diciembre-por-las-dudas-circuito-libre-fecha-para-el-tc-673",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-28T22:06:53.000Z",
-      "sinFecha": false,
+      "teniaImagenLaFuente": false,
+      "fecha": "2026-09-28T22:30:54.996Z",
+      "sinFecha": true,
       "visto": "2026-09-28T22:30:54.996Z",
-      "relevancia": 79,
+      "relevancia": 61,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
-      "temas": [
-        "autodromo",
-        "fangio"
-      ],
+      "temas": [],
       "como": "automatica",
       "claves": [
         "El autódromo Fangio evalúa recibir al Turismo Carretera el próximo 6 de diciembre.",
@@ -3536,8 +3550,8 @@
         "Noticias Argentinas (NA)",
         "0221",
         "InfoRegión",
-        "El Eco de Tandil",
         "La Nueva",
+        "El Eco de Tandil",
         "Agencia DIB"
       ],
       "enlace": "https://www.eldestapeweb.com/economia/consumo-cayo-1-1-agosto-profundiza-crisis-hogares-202692819538",
@@ -3632,17 +3646,15 @@
         "El Diario Balcarce"
       ],
       "enlace": "https://eldiariobalcarce.com.ar/piden-acelerar-la-reparacion-de-un-puente-clave-para-la-circulacion-en-la-zona-rural-677",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-28T21:52:27.000Z",
-      "sinFecha": false,
+      "teniaImagenLaFuente": false,
+      "fecha": "2026-09-28T22:01:03.337Z",
+      "sinFecha": true,
       "visto": "2026-09-28T22:01:03.337Z",
-      "relevancia": 71,
+      "relevancia": 53,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
-      "temas": [
-        "concejo"
-      ],
+      "temas": [],
       "como": "automatica",
       "claves": [
         "El Concejo Deliberante aprobó por unanimidad la reparación de un puente rural.",
@@ -3721,10 +3733,10 @@
         "TN (Todo Noticias)",
         "El Destape",
         "Perfil",
-        "Olé",
         "Radio Mitre",
         "Canal 26",
         "La Nueva",
+        "Olé",
         "Clarín"
       ],
       "enlace": "https://tn.com.ar/deportes/futbol/2026/09/28/cerro-la-votacion-del-balon-de-oro-2026-y-crece-la-expectativa-por-el-ganador-lionel-messi-esta-entre-los-nominados/",
@@ -3732,7 +3744,7 @@
       "fecha": "2026-09-28T20:57:01.000Z",
       "sinFecha": false,
       "visto": "2026-09-28T22:30:54.996Z",
-      "relevancia": 82,
+      "relevancia": 74,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -3820,11 +3832,10 @@
         "Infobae",
         "Perfil",
         "El Cronista",
-        "iProfesional",
         "C5N",
         "Noticias Argentinas (NA)",
-        "El Eco de Tandil",
         "Ámbito",
+        "El Eco de Tandil",
         "Clarín",
         "Crónica"
       ],
@@ -4093,92 +4104,6 @@
       }
     },
     {
-      "id": "37t3r4",
-      "titulo": "Guillén propone sumar nuevos eventos al autódromo municipal",
-      "copete": "El concejal de La Libertad Avanza destacó el impacto del regreso del automovilismo y planteó aprovechar la nueva infraestructura para organizar actividades durante todo el año.",
-      "cuerpo": "El concejal de La Libertad Avanza evaluó el regreso de la actividad automovilística tras quince años y calificó el fin de semana como un evento espectacular. Durante una entrevista radial, el edil señalado que la convocatoria superó las expectativas de la propia ACTC con un marco de público estimado entre treinta mil y cuarenta mil personas.\n\nEn cuanto a la infraestructura, destacó la instalación eléctrica nueva en el playón de boxes realizada por la Cooperativa de Electricidad. El edil planteó que esa mejora debe servir para generar otros espectáculos que no se limiten exclusivamente al automovilismo y sostuvo que la dirigencia debe trabajar unida de cara al futuro.",
-      "guion": "Guillén propone sumar nuevos eventos al autódromo municipal",
-      "seccion": "Automovilismo",
-      "medios": [
-        "Diario La Vanguardia"
-      ],
-      "enlace": "https://www.diariolavanguardia.com/noticias/44927-guillen-tenemos-que-ser-creativos-y-ver-que-otras-cosas-podemos-sumarle-al-autodromo/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-28T18:31:07.835Z",
-      "sinFecha": true,
-      "visto": "2026-09-28T18:31:07.835Z",
-      "relevancia": 71,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [
-        "autodromo",
-        "concejo",
-        "fangio"
-      ],
-      "como": "automatica",
-      "claves": [
-        "El concejal evaluó el regreso del automovilismo tras quince años.",
-        "Estimaron una concurrencia de entre treinta mil y cuarenta mil espectadores.",
-        "Destacaron las mejoras en la instalación eléctrica del playón de boxes."
-      ],
-      "seSabe": [
-        "El edil destacó el impacto del regreso de la actividad al circuito local.",
-        "Mencionó que la convocatoria superó las expectativas de la ACTC.",
-        "Señaló que la Cooperativa de Electricidad realizó una instalación eléctrica nueva en el playón de boxes."
-      ],
-      "noConfirmado": [
-        "No se informó el número definitivo de espectadores, ya que se mencionaron cifras estimativas entre treinta mil y cuarenta mil personas.",
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "El concejal de La Libertad Avanza planteó aprovechar la nueva infraestructura del autódromo para generar nuevos eventos durante el año tras el regreso de la actividad.",
-      "etiquetas": [
-        "Guillén",
-        "autódromo",
-        "automovilismo",
-        "Balcarce"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Diario La Vanguardia",
-          "enlace": "https://www.diariolavanguardia.com/noticias/44927-guillen-tenemos-que-ser-creativos-y-ver-que-otras-cosas-podemos-sumarle-al-autodromo/",
-          "fecha": null,
-          "oficial": false,
-          "aporte": "Aportó las declaraciones del concejal sobre el impacto del automovilismo y las propuestas para el predio."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "rebipe",
-          "titulo": "Mangoni repasa su paso por el autódromo Juan Manuel Fangio",
-          "fecha": "2026-09-28T16:15:38.000Z",
-          "ruta": "/nota/mangoni-repasa-su-paso-por-el-autodromo-juan-manuel-fangio-rebipe"
-        },
-        {
-          "id": "caurxr",
-          "titulo": "Balinotti destaca las obras del autódromo Fangio tras el regreso nacional",
-          "fecha": "2026-09-28T15:35:16.000Z",
-          "ruta": "/nota/balinotti-destaca-las-obras-del-autodromo-fangio-tras-el-regreso-caurxr"
-        },
-        {
-          "id": "9f1kip",
-          "titulo": "Carlos Bianco aclara la polémica por la inversión en el autódromo",
-          "fecha": "2026-09-28T13:57:23.000Z",
-          "ruta": "/nota/carlos-bianco-aclara-la-polemica-por-la-inversion-en-el-autodromo-9f1kip"
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "guillen-propone-sumar-nuevos-eventos-al-autodromo-municipal",
-      "foto": {
-        "archivo": "fotos-notas/37t3r4.jpg",
-        "credito": "Foto: Diario La Vanguardia"
-      }
-    },
-    {
       "id": "1fp9m4l",
       "titulo": "El INTA Balcarce enfrenta una polémica por la posible exoneración de una científica",
       "copete": "El Consejo Directivo analiza una sanción contra la investigadora Virginia Aparicio tras coordinar un estudio sobre plaguicidas. El caso genera rechazo en sectores científicos y gremiales.",
@@ -4266,6 +4191,90 @@
       }
     },
     {
+      "id": "37t3r4",
+      "titulo": "Guillén propone sumar nuevos eventos al autódromo municipal",
+      "copete": "El concejal de La Libertad Avanza destacó el impacto del regreso del automovilismo y planteó aprovechar la nueva infraestructura para organizar actividades durante todo el año.",
+      "cuerpo": "El concejal de La Libertad Avanza evaluó el regreso de la actividad automovilística tras quince años y calificó el fin de semana como un evento espectacular. Durante una entrevista radial, el edil señalado que la convocatoria superó las expectativas de la propia ACTC con un marco de público estimado entre treinta mil y cuarenta mil personas.\n\nEn cuanto a la infraestructura, destacó la instalación eléctrica nueva en el playón de boxes realizada por la Cooperativa de Electricidad. El edil planteó que esa mejora debe servir para generar otros espectáculos que no se limiten exclusivamente al automovilismo y sostuvo que la dirigencia debe trabajar unida de cara al futuro.",
+      "guion": "Guillén propone sumar nuevos eventos al autódromo municipal",
+      "seccion": "Automovilismo",
+      "medios": [
+        "Diario La Vanguardia"
+      ],
+      "enlace": "https://www.diariolavanguardia.com/noticias/44927-guillen-tenemos-que-ser-creativos-y-ver-que-otras-cosas-podemos-sumarle-al-autodromo/",
+      "teniaImagenLaFuente": false,
+      "fecha": "2026-09-28T18:31:07.835Z",
+      "sinFecha": true,
+      "visto": "2026-09-28T18:31:07.835Z",
+      "relevancia": 61,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [
+        "autodromo"
+      ],
+      "como": "automatica",
+      "claves": [
+        "El concejal evaluó el regreso del automovilismo tras quince años.",
+        "Estimaron una concurrencia de entre treinta mil y cuarenta mil espectadores.",
+        "Destacaron las mejoras en la instalación eléctrica del playón de boxes."
+      ],
+      "seSabe": [
+        "El edil destacó el impacto del regreso de la actividad al circuito local.",
+        "Mencionó que la convocatoria superó las expectativas de la ACTC.",
+        "Señaló que la Cooperativa de Electricidad realizó una instalación eléctrica nueva en el playón de boxes."
+      ],
+      "noConfirmado": [
+        "No se informó el número definitivo de espectadores, ya que se mencionaron cifras estimativas entre treinta mil y cuarenta mil personas.",
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El concejal de La Libertad Avanza planteó aprovechar la nueva infraestructura del autódromo para generar nuevos eventos durante el año tras el regreso de la actividad.",
+      "etiquetas": [
+        "Guillén",
+        "autódromo",
+        "automovilismo",
+        "Balcarce"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Diario La Vanguardia",
+          "enlace": "https://www.diariolavanguardia.com/noticias/44927-guillen-tenemos-que-ser-creativos-y-ver-que-otras-cosas-podemos-sumarle-al-autodromo/",
+          "fecha": null,
+          "oficial": false,
+          "aporte": "Aportó las declaraciones del concejal sobre el impacto del automovilismo y las propuestas para el predio."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "rebipe",
+          "titulo": "Mangoni repasa su paso por el autódromo Juan Manuel Fangio",
+          "fecha": "2026-09-28T16:15:38.000Z",
+          "ruta": "/nota/mangoni-repasa-su-paso-por-el-autodromo-juan-manuel-fangio-rebipe"
+        },
+        {
+          "id": "caurxr",
+          "titulo": "Balinotti destaca las obras del autódromo Fangio tras el regreso nacional",
+          "fecha": "2026-09-28T15:35:16.000Z",
+          "ruta": "/nota/balinotti-destaca-las-obras-del-autodromo-fangio-tras-el-regreso-caurxr"
+        },
+        {
+          "id": "9f1kip",
+          "titulo": "Carlos Bianco aclara la polémica por la inversión en el autódromo",
+          "fecha": "2026-09-28T13:57:23.000Z",
+          "ruta": "/nota/carlos-bianco-aclara-la-polemica-por-la-inversion-en-el-autodromo-9f1kip"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "guillen-propone-sumar-nuevos-eventos-al-autodromo-municipal",
+      "foto": {
+        "archivo": "fotos-notas/37t3r4.jpg",
+        "credito": "Foto: Diario La Vanguardia"
+      }
+    },
+    {
       "id": "10uy09c",
       "titulo": "Omar Martínez valora el regreso de Balcarce pero extraña el dibujo original",
       "copete": "El piloto entrerriano compitió en la fecha de las camionetas en el autódromo local, finalizó en el cuarto puesto y destacó la presencia del público tras casi quince años sin carreras nacionales.",
@@ -4341,6 +4350,106 @@
       "slug": "omar-martinez-valora-el-regreso-de-balcarce-pero-extrana-el-dibujo"
     },
     {
+      "id": "224geo",
+      "titulo": "Diputados discute proyectos sobre endeudamiento familiar",
+      "copete": "El plenario de comisiones de la Cámara de Diputados debate este martes los dictámenes sobre morosidad familiar. El oficialismo impulsa la educación financiera y la oposición exige topes a las tasas y refinanciación.",
+      "cuerpo": "La Libertad Avanza, el PRO y la UCR impulsan un proyecto centrado en la prevención y la educación financiera, articulado por la diputada nacional Silvana Giudici y el presidente de la comisión de Finanzas, Santiago Pauli, según informó la Agencia Noticias Argentinas. Por su parte, Unión por la Patria, Provincias Unidas y la Coalición Cívica presentan una iniciativa que contempla una emergencia por 180 días, topes a las tasas de interés, gastos y comisiones, y planes de refinanciación de hasta 36 meses para más de 6 millones de personas morosas, además de la eliminación total de los intereses punitorios. A su vez, el bloque Argentina Federal, a través de los diputados Oscar Herrera Ahuad y Yolanda Vega, promueve el Programa Nacional de Desendeudamiento Familiar y Personal con cuotas a tasa fija de hasta el 35%.\n\nEn la jornada legislativa se busca definir el dictamen final en medio de las diferencias sobre el alcance de las medidas para los deudores con bancos y proveedores financieros no bancarios.",
+      "guion": "Diputados discute proyectos sobre endeudamiento familiar",
+      "seccion": "Economía",
+      "medios": [
+        "La Nación",
+        "Ámbito",
+        "Infobae",
+        "C5N",
+        "Radio Mitre",
+        "Diario Popular",
+        "Noticias Argentinas (NA)",
+        "La Tecla",
+        "El Marplatense"
+      ],
+      "enlace": "https://noticiasargentinas.com/politica/endeudamiento-familiar--que-dicen-la-propuesta-del-oficialismo-y-los-dos-proyectos-de-la-oposicion-_a6ababa7eb62936833e714a2d",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-28T18:04:11.000Z",
+      "sinFecha": false,
+      "visto": "2026-09-29T20:31:16.821Z",
+      "relevancia": 73,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "El plenario de comisiones de Diputados debate este martes dictámenes sobre morosidad familiar.",
+        "El oficialismo impulsa la educación financiera sin intervención en las tasas.",
+        "La oposición propone una emergencia por 180 días, topes a las tasas y planes de pago.",
+        "Argentina Federal presenta un programa con cuotas a tasa fija de hasta el 35%."
+      ],
+      "noConfirmado": [
+        "Todavía no se definió cuál de los dictámenes conseguirá la mayoría en la votación."
+      ],
+      "textoRedes": "El plenario de comisiones de la Cámara de Diputados debate este martes los proyectos sobre endeudamiento familiar. El oficialismo impulsa la educación financiera y los bloques opositores exigen topes a las tasas y planes de refinanciación para morosos.",
+      "etiquetas": [
+        "Diputados",
+        "endeudamiento",
+        "morosidad familiar",
+        "economía"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Noticias Argentinas (NA)",
+          "enlace": "https://noticiasargentinas.com/politica/endeudamiento-familiar--que-dicen-la-propuesta-del-oficialismo-y-los-dos-proyectos-de-la-oposicion-_a6ababa7eb62936833e714a2d",
+          "fecha": "2026-09-29T09:05:00.000Z",
+          "oficial": false,
+          "aporte": "Detalla el contenido de los proyectos del oficialismo, de la oposición y de Argentina Federal, además de las posturas de los legisladores."
+        },
+        {
+          "medio": "Ámbito",
+          "enlace": "https://www.ambito.com/politica/vence-el-plazo-dictaminar-morosidad-oficialismo-y-oposicion-negocian-contrarreloj-n6327524",
+          "fecha": "2026-09-29T19:54:00.000Z",
+          "oficial": false,
+          "aporte": "Indica que el oficialismo consiguió la mayoría en una agenda ajena y menciona el proyecto opositor para refinanciar deudas."
+        },
+        {
+          "medio": "C5N",
+          "enlace": "https://www.c5n.com/politica/endeudamiento-y-morosidad-que-proyectos-presentaron-el-oficialismo-y-la-oposicion-la-camara-diputados-n250251",
+          "fecha": "2026-09-29T19:54:00.000Z",
+          "oficial": false,
+          "aporte": "Señala que las propuestas abordan la prevención, límites a las tasas y la búsqueda de dictamen en Diputados."
+        },
+        {
+          "medio": "Diario Popular",
+          "enlace": "https://www.diariopopular.com.ar/politica/endeudamiento-familiar-como-son-los-proyectos-del-oficialismo-y-la-oposicion-n922092",
+          "fecha": "2026-09-29T13:00:00.000Z",
+          "oficial": false,
+          "aporte": "Confirma la reunión del plenario de comisiones de la Cámara de Diputados este martes."
+        },
+        {
+          "medio": "La Tecla",
+          "enlace": "https://www.latecla.info/170043-endeudamiento-y-tribunal-fiscal-platos-fuertes-de-la-sesion-en-diputados",
+          "fecha": "2026-09-29T19:34:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "El Marplatense",
+          "enlace": "https://www.elmarplatense.com/endeudamiento-familiar-la-camara-de-diputados-bonaerense-lleva-el-tema-al-recinto",
+          "fecha": "2026-09-29T16:00:03.000Z",
+          "oficial": false,
+          "aporte": null
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron seis medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "diputados-discute-proyectos-sobre-endeudamiento-familiar",
+      "foto": {
+        "archivo": "fotos-notas/224geo.jpg",
+        "credito": "Foto: Ámbito"
+      }
+    },
+    {
       "id": "10wnf2m",
       "titulo": "El riesgo país baja y corta una racha de subas",
       "copete": "El indicador elaborado por JP Morgan cae este martes a 609 puntos tras doce jornadas consecutivas al alza. Los bonos en dólares se recuperan.",
@@ -4352,16 +4461,16 @@
         "Clarín",
         "TN (Todo Noticias)",
         "iProfesional",
-        "Crónica",
         "Canal 26",
         "Noticias Argentinas (NA)",
         "El Día",
-        "La Verdad",
-        "El Marplatense",
-        "Mi8 (Canal 8 Mar del Plata)",
         "La Nueva",
         "Radio Mitre",
-        "Agencia DIB"
+        "El Marplatense",
+        "Agencia DIB",
+        "Mi8 (Canal 8 Mar del Plata)",
+        "Crónica",
+        "La Verdad"
       ],
       "enlace": "https://www.clarin.com/economia/riesgo-pais-toma-respiro-despues-12-dias-subas-baja-acerca-600-puntos_0_K2fouVK3eb.html",
       "teniaImagenLaFuente": true,
@@ -4825,15 +4934,14 @@
       "guion": null,
       "seccion": "Política",
       "medios": [
-        "News Balcarce (FM 91.7)",
-        "Puntonueve (FM 100.9)"
+        "News Balcarce (FM 91.7)"
       ],
       "enlace": "https://newsbalcarce.com.ar/?p=30868",
       "teniaImagenLaFuente": true,
       "fecha": "2026-09-28T14:36:12.000Z",
       "sinFecha": false,
       "visto": "2026-09-28T16:31:05.398Z",
-      "relevancia": 83,
+      "relevancia": 73,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -4848,13 +4956,6 @@
           "fecha": "2026-09-28T14:36:12.000Z",
           "oficial": false,
           "aporte": null
-        },
-        {
-          "medio": "Puntonueve (FM 100.9)",
-          "enlace": "https://puntonueve.com.ar/diego-cerone-mantuvo-un-encuentro-de-trabajo-con-diego-santilli-y-ezequiel-galli/",
-          "fecha": "2026-09-29T20:23:17.000Z",
-          "oficial": false,
-          "aporte": null
         }
       ],
       "slug": "dirigentes-del-pro-se-reunieron-con-santilli-en-el-autodromo",
@@ -4863,107 +4964,6 @@
       "foto": {
         "archivo": "fotos-notas/jul3tk.jpg",
         "credito": "Foto: Diario La Vanguardia"
-      }
-    },
-    {
-      "id": "13l9r47",
-      "titulo": "El producto bruto porteño crece 0,3 por ciento interanual en el segundo trimestre",
-      "copete": "La actividad económica en la Ciudad de Buenos Aires muestra una desaceleración entre abril y junio de 2026. Los sectores de intermediación financiera lideran las subas, mientras que el comercio y la industria caen.",
-      "cuerpo": "El organismo detalló que la economía registradó una caída de 0,2 por ciento frente a los primeros tres meses del año, lo que marca una desaceleración visible desde el tercer trimestre de 2025.\n\nEntre las actividades con mayores subas se ubicó la intermediación financiera con un incremento de 7,7 por ciento, acompañada por el transporte con 0,9 por ciento y la construcción con 0,3 por ciento. En contrapartida, el comercio retrocedió 2,2 por ciento y la industria manufacturera cayó 1,8 por ciento interanual en el mismo período.",
-      "guion": "El producto bruto porteño crece cero coma tres por ciento interanual en el segundo trimestre",
-      "seccion": "Economía",
-      "medios": [
-        "Infobae",
-        "Perfil",
-        "El Destape",
-        "Minuto Uno",
-        "El Marplatense"
-      ],
-      "enlace": "https://www.infobae.com/economia/2026/09/28/la-actividad-economica-de-caba-cayo-02-en-el-segundo-trimestre-cuales-fueron-los-sectores-mas-golpeados/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-28T14:32:00.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-28T19:47:26.141Z",
-      "relevancia": 64,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "La actividad económica porteña creció 0,3 por ciento interanual entre abril y junio de 2026.",
-        "Frente al primer trimestre del año, el PGB registró una baja de 0,2 por ciento.",
-        "La intermediación financiera lideró las subas con un incremento de 7,7 por ciento.",
-        "El comercio y la industria manufacturera mostraron retrocesos de 2,2 y 1,8 por ciento."
-      ],
-      "seSabe": [
-        "El PGB de la Ciudad de Buenos Aires creció 0,3 por ciento interanual en el segundo trimestre de 2026, según el Idecba.",
-        "La economía porteña cayó 0,2 por ciento frente a los primeros tres meses del año.",
-        "La intermediación financiera subió 7,7 por ciento y el transporte creció 0,9 por ciento.",
-        "El comercio retrocedió 2,2 por ciento y la industria manufacturera bajó 1,8 por ciento.",
-        "El acumulado del primer semestre de 2026 muestra un crecimiento de 0,6 por ciento."
-      ],
-      "textoRedes": "La actividad económica en la Ciudad de Buenos Aires creció 0,3 por ciento interanual en el segundo trimestre de 2026 pero cayó 0,2 por ciento frente al trimestre anterior, según el Idecba.",
-      "etiquetas": [
-        "economia",
-        "ciudad de buenos aires",
-        "idecba",
-        "actividad economica",
-        "segundo trimestre"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Infobae",
-          "enlace": "https://www.infobae.com/economia/2026/09/28/la-actividad-economica-de-caba-cayo-02-en-el-segundo-trimestre-cuales-fueron-los-sectores-mas-golpeados/",
-          "fecha": "2026-09-28T17:11:41.000Z",
-          "oficial": false,
-          "aporte": "Informó los datos del PGB porteño del segundo trimestre de 2026 y la desaceleración sectorial."
-        },
-        {
-          "medio": "Perfil",
-          "enlace": "https://www.perfil.com/noticias/economia/la-actividad-economica-cayo-02-en-el-segundo-trimestre-en-caba-a40.phtml",
-          "fecha": "2026-09-28T17:44:41.000Z",
-          "oficial": false,
-          "aporte": "Atribuyó las cifras oficiales al Instituto de Estadísticas y Censos porteño."
-        },
-        {
-          "medio": "El Destape",
-          "enlace": "https://www.eldestapeweb.com/economia/ciudad-buenos-aires-esta-recesion-actividad-economica-cayo-segundo-trimestre-fila-2026928164048",
-          "fecha": "2026-09-28T19:40:48.686Z",
-          "oficial": false,
-          "aporte": "No aportó información adicional en el resumen."
-        },
-        {
-          "medio": "El Marplatense",
-          "enlace": "https://www.elmarplatense.com/la-actividad-economica-en-caba-cayo-02-durante-el-segundo-trimestre",
-          "fecha": "2026-09-28T19:43:07.000Z",
-          "oficial": false,
-          "aporte": "Confirmó la caída trimestral de 0,2 por ciento y el crecimiento interanual de 0,3 por ciento."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "1vm79z5",
-          "titulo": "La CGT rechaza los dichos de Milei sobre la actividad económica",
-          "fecha": "2026-09-28T13:52:34.000Z",
-          "ruta": "/nota/la-cgt-rechaza-los-dichos-de-milei-sobre-la-actividad-economica-1vm79z5"
-        },
-        {
-          "id": "1lg4u7s",
-          "titulo": "La actividad económica cae 2,9 % en julio",
-          "fecha": "2026-09-24T22:00:00.000Z",
-          "ruta": "/nota/la-actividad-economica-registra-una-caida-del-tres-por-ciento-en-julio-1lg4u7s"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron cuatro medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "el-producto-bruto-porteno-crece-0-3-por-ciento-interanual-en-el",
-      "foto": {
-        "archivo": "fotos-notas/13l9r47.jpg",
-        "credito": "Foto: El Marplatense"
       }
     },
     {
@@ -5047,8 +5047,8 @@
       "guion": "Biogénesis Bagó exporta por primera vez vacunas a Europa",
       "seccion": "Agro",
       "medios": [
-        "Agrositio",
-        "Radio Mitre"
+        "Radio Mitre",
+        "Agrositio"
       ],
       "enlace": "https://radiomitre.cienradios.com/mitre-y-el-campo/historico-un-laboratorio-argentino-logra-la-primera-exportacion-de-vacunas-a-un-pais-europeo/",
       "teniaImagenLaFuente": true,
@@ -5291,13 +5291,13 @@
     "Balcarce",
     "Fútbol",
     "Política",
+    "Argentina",
     "Cultura y agenda",
     "Deportes",
     "Agro",
     "Economía",
     "Automovilismo",
     "Tecnología",
-    "Argentina",
     "Policiales"
   ],
   "temas": [
@@ -5309,17 +5309,17 @@
     {
       "nombre": "Fangio",
       "ranura": "fangio",
-      "cuantas": 9
-    },
-    {
-      "nombre": "El Concejo Deliberante",
-      "ranura": "concejo",
-      "cuantas": 5
+      "cuantas": 8
     },
     {
       "nombre": "TC Pick Up",
       "ranura": "tc-pick-up",
       "cuantas": 4
+    },
+    {
+      "nombre": "El Concejo Deliberante",
+      "ranura": "concejo",
+      "cuantas": 3
     },
     {
       "nombre": "El INTA",
@@ -5330,7 +5330,7 @@
   "clima": {
     "ahora": {
       "temp": 11,
-      "sensacion": 7,
+      "sensacion": 6,
       "humedad": 85,
       "viento": 27,
       "rumbo": "SO",
@@ -5695,12 +5695,6 @@
   },
   "pendientes": [
     {
-      "id": "dyzigj",
-      "titulo": null,
-      "seccion": "Policiales",
-      "motivo": "necesita ojo humano: \"herida\""
-    },
-    {
       "id": "199k1u0",
       "titulo": "Guillén: “Con una vuelta del TC a Balcarce podemos pensar…",
       "seccion": "Automovilismo",
@@ -5711,12 +5705,6 @@
       "titulo": null,
       "seccion": "Política",
       "motivo": "necesita ojo humano: \"niño\", en el texto completo de la fuente (visto al reescribir)"
-    },
-    {
-      "id": "1pqkrnn",
-      "titulo": "En la previa de la visita del Papa, el Gobierno denunció…",
-      "seccion": "Argentina",
-      "motivo": "necesita ojo humano: \"denunció\""
     },
     {
       "id": "fr44g3",
@@ -5731,28 +5719,16 @@
       "motivo": "necesita ojo humano: \"denuncia\""
     },
     {
-      "id": "1yygidx",
-      "titulo": "Por el pase de Lomónaco: otro revés del TAS para…",
-      "seccion": "Fútbol",
-      "motivo": "necesita ojo humano: \"denuncia\""
-    },
-    {
       "id": "11a41j5",
       "titulo": null,
       "seccion": "Agro",
       "motivo": "necesita ojo humano: \"niño\""
     },
     {
-      "id": "nlwd45",
-      "titulo": "Cano adelantó un nuevo sistema de turnos para el Hospital…",
-      "seccion": "Balcarce",
-      "motivo": "verificación baja: espera a una persona (visto al reescribir)"
-    },
-    {
-      "id": "14q2bn5",
+      "id": "1ni4812",
       "titulo": null,
-      "seccion": "Balcarce",
-      "motivo": "necesita ojo humano: \"alumno de\", en el texto completo de la fuente (visto al reescribir)"
+      "seccion": "Argentina",
+      "motivo": "necesita ojo humano: \"niña\""
     },
     {
       "id": "1xe4pop",
@@ -5761,14 +5737,8 @@
       "motivo": "internacional: sin relación con Balcarce"
     },
     {
-      "id": "jj2141",
-      "titulo": null,
-      "seccion": "Argentina",
-      "motivo": "necesita ojo humano: \"niña\""
-    },
-    {
-      "id": "1fu0xn0",
-      "titulo": "San Isidro: el 77,6% de las denuncias de seguridad ya…",
+      "id": "18gldok",
+      "titulo": "Psicólogos bonaerenses cortan la atención con el IOMA por…",
       "seccion": "Argentina",
       "motivo": "necesita ojo humano: \"denuncia\""
     },
@@ -5791,6 +5761,18 @@
       "motivo": "parece promoción, no noticia: \"sorteo\""
     },
     {
+      "id": "nlwd45",
+      "titulo": "Cano adelantó un nuevo sistema de turnos para el Hospital…",
+      "seccion": "Balcarce",
+      "motivo": "verificación baja: espera a una persona (visto al reescribir)"
+    },
+    {
+      "id": "14q2bn5",
+      "titulo": null,
+      "seccion": "Balcarce",
+      "motivo": "necesita ojo humano: \"alumno de\", en el texto completo de la fuente (visto al reescribir)"
+    },
+    {
       "id": "1ogz9mz",
       "titulo": null,
       "seccion": "Argentina",
@@ -5809,23 +5791,11 @@
       "motivo": "necesita ojo humano: \"denuncia\""
     },
     {
-      "id": "1eh8cwq",
-      "titulo": "Arrancan las indagatorias a los acusados por el…",
-      "seccion": "Argentina",
-      "motivo": "necesita ojo humano: \"acusado\""
-    },
-    {
       "id": "iyupy7",
       "titulo": null,
       "seccion": "Economía",
       "motivo": "necesita ojo humano: \"adolescente\""
-    },
-    {
-      "id": "1cmtnhl",
-      "titulo": null,
-      "seccion": "Economía",
-      "motivo": "necesita ojo humano: \"niño\""
     }
   ],
-  "esperandoCuerpo": 5
+  "esperandoCuerpo": 6
 }
