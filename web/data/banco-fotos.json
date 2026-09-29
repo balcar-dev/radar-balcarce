@@ -1513,16 +1513,16 @@
   "cuando": "2026-09-28T21:34:10.724Z"
  },
  "cx4j4n": {
-  "archivo": "fotos-notas/cx4j4n.jpg",
   "medio": "Olé",
-  "credito": "Foto: Olé",
   "licencia": null,
   "origen": "medio",
   "titulo": "Fernando Batista deja la dirección técnica de la selección de Costa Rica",
   "enlace": "https://www.ole.com.ar/futbol-internacional/bocha-batista-dejo-entrenador-costa-rica_0_H9Q21PFLPg.html",
   "imagenOriginal": "https://www.ole.com.ar/images/2026/09/25/w3_ZxI7rA_2000x1500__1.jpg",
   "razon": "La foto B muestra claramente al protagonista y no tiene marca de agua agregada por el medio.",
-  "cuando": "2026-09-28T21:34:10.724Z"
+  "cuando": "2026-09-28T21:34:10.724Z",
+  "intentado": true,
+  "borrada": true
  },
  "10595ii": {
   "medio": "Ámbito",
@@ -2066,5 +2066,60 @@
   "imagenOriginal": "https://www.clarin.com/img/2026/09/29/VMhP0O2Dn_2000x1500__1.jpg",
   "razon": "Tiene excelente nitidez, encuadre adecuado y no presenta marcas de medios ni menores reconocibles.",
   "cuando": "2026-09-29T15:33:10.351Z"
+ },
+ "1vgun5x": {
+  "archivo": "fotos-notas/1vgun5x.jpg",
+  "medio": "Municipalidad de Balcarce",
+  "credito": "Foto: Municipalidad de Balcarce",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Balcarce participa de la trigésima Feria Internacional de Turismo",
+  "enlace": "https://balcarce.gob.ar/2026/09/29/balcarce-presente-en-la-30-feria-internacional-de-turismo-fit/",
+  "imagenOriginal": "https://balcarce.gob.ar/wp-content/uploads/2026/09/WhatsApp-Image-2026-09-29-at-12.46.52-1.jpeg",
+  "razon": "Es la única opción disponible, posee buena nitidez y encuadre adecuado sin marcas ni menores.",
+  "cuando": "2026-09-29T16:32:21.768Z"
+ },
+ "1nyo5j6": {
+  "intentado": true,
+  "origen": "ninguna",
+  "titulo": "Pato Naranja gana por 99 a 12 y queda entre los cuatro mejores",
+  "razon": "sin fotos para comparar",
+  "cuando": "2026-09-29T16:32:21.768Z"
+ },
+ "wgq362": {
+  "archivo": "fotos-notas/wgq362.jpg",
+  "medio": "0223 (Mar del Plata)",
+  "credito": "Foto: 0223 (Mar del Plata)",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Omar Martínez termina cuarto en el autódromo Juan Manuel Fangio",
+  "enlace": "https://www.0223.com.ar/nota/2026-9-29-11-55-0-la-vigencia-del-guri-martinez-a-los-60-anos-el-historico-piloto-del-tc-volvio-a-demostrar-su-capacidad-en-balcarce",
+  "imagenOriginal": "https://pxcdn.0223.com.ar/f/092026/1790697089967.jpg?&amp;cw=600&amp;ch=365",
+  "razon": "Es la única opción disponible, cuenta con buena nitidez y encuadre del auto en pista sin marcas ni menores.",
+  "cuando": "2026-09-29T16:32:21.768Z"
+ },
+ "tlydas": {
+  "archivo": "fotos-notas/tlydas.jpg",
+  "medio": "El Eco de Tandil",
+  "credito": "Foto: El Eco de Tandil",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Canciller afirma que Chile no da apoyo logístico en Malvinas",
+  "enlace": "https://www.eleco.com.ar/politica/quirno-aseguro-que-chile-se-comprometio-a-no-brindar-apoyo-para-la-explotacion-de-recursos-en-malvinas",
+  "imagenOriginal": "https://cdnartic.ar/JfVORFr8FuUSlE1dvrO2vxroljU=/1200x630/smart/filters:format(jpeg):quality(70)/https://cdn.eleco.com.ar/media/2026/09/quirno.webp",
+  "razon": "La foto B no tiene marca de agua ni menores, y ofrece una buena calidad para ilustrar la nota.",
+  "cuando": "2026-09-29T16:32:21.768Z"
+ },
+ "1s56ua": {
+  "archivo": "fotos-notas/1s56ua.jpg",
+  "medio": "El Eco de Tandil",
+  "credito": "Foto: El Eco de Tandil",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "WhatsApp detalla los pasos para liberar espacio en el celular",
+  "enlace": "https://www.eleco.com.ar/instruyendo-al-ciudadano/donde-esta-la-papelera-de-whatsapp-y-como-vaciarla-para-mas-almacenamiento",
+  "imagenOriginal": "https://cdnartic.ar/0O4WegTFD_M-d2p0m90X8Mf_wTo=/1200x630/smart/filters:format(jpeg):quality(70)/https://cdn.eleco.com.ar/media/2025/05/estafas_whatsapp.jpg",
+  "razon": "Es la única opción disponible, cuenta con buena nitidez y no presenta marcas ni menores.",
+  "cuando": "2026-09-29T16:32:21.768Z"
  }
 }
