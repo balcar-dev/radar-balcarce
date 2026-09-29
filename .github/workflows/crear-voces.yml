@@ -1,0 +1,53 @@
+# Crear las voces propias de Radar Balcarce (28/09): la locutora y el locutor, con
+# Voice Design de Gemini 3.8 (una voz descripta con palabras que queda guardada en
+# el proyecto de Google con un id fijo). Prueba también la Interactions API, que
+# separa el texto del estilo. No publica nada: sube los audios como archivos de la
+# corrida (Actions → la corrida → Artifacts) para escucharlos.
+#
+# SE CORRE A MANO (Actions → "Crear voces" → Run workflow). Cada corrida CREA voces
+# nuevas en el proyecto de Google (hasta 200 por proyecto, duran un año) y gasta
+# unos audios de la clave paga (centavos): no correrlo de más.
+#
+# SECRETO: GEMINI_API_KEY_REDES.
+
+name: Crear voces
+
+on:
+  workflow_dispatch:
+    inputs:
+      modo:
+        description: 'crear = crea los candidatos y los prueba; listar = sólo lista las voces propias del proyecto'
+        type: choice
+        options: [crear, listar]
+        default: crear
+
+permissions:
+  contents: read
+
+jobs:
+  voces:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+
+      # ffmpeg (para pasar el audio a mp3) viene con las dependencias.
+      - run: npm ci --no-audit --no-fund
+
+      - name: Crear o listar las voces
+        run: node reels/crear-voces.mjs ${{ github.event.inputs.modo == 'listar' && 'listar' || '' }}
+        env:
+          GEMINI_API_KEY_REDES: ${{ secrets.GEMINI_API_KEY_REDES }}
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: voces-propias
+          path: reels/salida/voces/
+          retention-days: 7
+          if-no-files-found: ignore
