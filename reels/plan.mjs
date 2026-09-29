@@ -22,6 +22,7 @@ import {
   guionClima, guionClimaNoche, guionFarmacia, guionUtiles, guionAgenda, comoNombre,
 } from '../redes/guiones.mjs';
 import { INDICACIONES, momentoDeHora } from '../redes/prompt-redes.mjs';
+import { nombreDeEvento } from '../web/lib/eventos.js';
 import {
   PODCASTS, NOMBRES_DE_PODCAST, HORA_AVISO, avisoDeClima, colorDelDia, notasContadasEnPodcasts, piezasPublicadasHoy, historiasQueSobran,
 } from '../redes/piezas.mjs';
@@ -111,6 +112,7 @@ export function hastaCuandoElTurno(hora = '19:00') {
 }
 
 const F_AGENDA = path.join(import.meta.dirname, '..', 'panel', 'datos', 'agenda.json');
+const F_AGENDA_WEB = path.join(import.meta.dirname, '..', 'web', 'data', 'agenda.json');
 const F_ESTADO = path.join(import.meta.dirname, '..', 'panel', 'datos', 'estado.json');
 
 /** Lo que decidió el panel (estado.json). Sin panel, vacío: valen los de fábrica. */
@@ -126,24 +128,31 @@ function horariosConfigurados(estado) {
   return porId;
 }
 
-/** Los eventos de los próximos días, listos para la placa. Si no hay agenda
- *  todavía, devuelve vacío: la pieza simplemente no se arma. */
-function eventosProximos(dias = 4) {
-  let agenda;
-  try { agenda = JSON.parse(fs.readFileSync(F_AGENDA, 'utf8')); } catch { return []; }
+/** Los eventos de los próximos días, listos para la placa: los de la agenda
+ *  publicada en la web (web/data/agenda.json, los mismos que tienen página en
+ *  /agenda), así la historia sale también desde GitHub con la PC apagada
+ *  (29/09). Sin esa agenda, la copia del panel de la PC. Si no hay ninguna,
+ *  devuelve vacío: la pieza simplemente no se arma. */
+export function eventosProximos(dias = 4, { web = F_AGENDA_WEB, pc = F_AGENDA, hoy: desde = new Date() } = {}) {
+  let eventos = null;
+  try { eventos = JSON.parse(fs.readFileSync(web, 'utf8')).eventos; } catch { /* sin agenda en la web */ }
+  if (!Array.isArray(eventos)) {
+    try { eventos = JSON.parse(fs.readFileSync(pc, 'utf8')).municipio; } catch { return []; }
+  }
   const DIAS = ['domingo', 'lunes', 'martes', 'miércoles', 'jueves', 'viernes', 'sábado'];
-  const hoy = new Date(); hoy.setHours(0, 0, 0, 0);
+  const hoy = new Date(desde); hoy.setHours(0, 0, 0, 0);
   const tope = new Date(hoy.getTime() + dias * 86400000);
 
-  return (agenda.municipio ?? []).map((e) => {
+  return (eventos ?? []).map((e) => {
     const m = String(e.desde ?? '').match(/^(\d{4})-(\d{2})-(\d{2})(?:[T ](\d{2}):(\d{2}))?/);
     if (!m) return null;
     const f = new Date(Number(m[1]), Number(m[2]) - 1, Number(m[3]));
     if (f < hoy || f > tope) return null;
     const dia = DIAS[f.getDay()];
     return {
-      nombre: e.nombre,
-      lugar: e.lugar,
+      // Como en su página: "22° FIESTA NACIONAL DEL POSTRE" pasa a "22° Fiesta Nacional del Postre".
+      nombre: nombreDeEvento(e.nombre),
+      lugar: nombreDeEvento(e.lugar ?? ''),
       cuando: m[4] ? `${dia} ${m[4]}:${m[5]}` : dia,
       orden: f.getTime(),
     };

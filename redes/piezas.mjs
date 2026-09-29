@@ -116,8 +116,9 @@ export const NOMBRES_DE_PODCAST = PODCASTS.map((p) => p.nombre);
 
 /** Piezas fijas que sólo se pueden armar en la PC: sus datos no están en la
  *  web. Hasta que lo estén, GitHub no las espera (si no, las reintentaría en
- *  cada corrida sin poder armarlas nunca). */
-const SOLO_EN_LA_PC = ['agenda'];
+ *  cada corrida sin poder armarlas nunca). Desde el 29/09 no queda ninguna: la
+ *  agenda sale de la agenda publicada (web/data/agenda.json, reels/plan.mjs). */
+const SOLO_EN_LA_PC = [];
 
 /**
  * El color de los podcasts de cada día. Los tres del día llevan el mismo, y

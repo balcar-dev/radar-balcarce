@@ -314,11 +314,23 @@ test('si alguien fija el día de los útiles a mano en el panel, eso manda y no 
   assert.ok(nombres(cronogramaDelDia(diaConElFijado, { estado })).includes('utiles'));
 });
 
-test('la agenda no la espera GitHub: necesita datos que sólo hay en la PC', () => {
-  // Si GitHub la esperara, la reintentaría en cada corrida sin poder
-  // armarla nunca.
+test('la agenda del jueves la arma también GitHub, con la agenda publicada en la web (29/09)', async () => {
+  // Hasta el 29/09 sólo se armaba en la PC (leía panel/datos/agenda.json). Ahora
+  // lee web/data/agenda.json, la misma de las páginas /agenda.
   const jueves = new Date('2026-09-24T12:00:00-03:00');
-  assert.ok(!nombres(cronogramaDelDia(jueves)).includes('agenda'));
+  assert.ok(nombres(cronogramaDelDia(jueves)).includes('agenda'));
+  const { eventosProximos } = await import('../reels/plan.mjs');
+  const fs = await import('node:fs');
+  const os = await import('node:os');
+  const path = await import('node:path');
+  const dir = fs.mkdtempSync(path.join(os.tmpdir(), 'agenda-'));
+  const web = path.join(dir, 'agenda.json');
+  fs.writeFileSync(web, JSON.stringify({ eventos: [
+    { nombre: '22° FIESTA NACIONAL DEL POSTRE', lugar: 'SOCIEDAD RURAL DE BALCARCE', desde: '2026-10-09 12:30:00' },
+    { nombre: 'CABALGATA', lugar: 'Estancia', desde: '2026-11-27 08:00:00' },
+  ] }));
+  const eventos = eventosProximos(4, { web, pc: path.join(dir, 'no-existe.json'), hoy: new Date('2026-10-08T12:00:00-03:00') });
+  assert.deepEqual(eventos.map((e) => [e.nombre, e.lugar, e.cuando]), [['22° Fiesta Nacional del Postre', 'Sociedad Rural de Balcarce', 'viernes 12:30']]);
 });
 
 test('los horarios de los podcasts son los que dice docs/07-REDES.md, y no hay historias de una nota', () => {

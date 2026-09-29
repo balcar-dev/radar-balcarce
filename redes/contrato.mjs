@@ -11,8 +11,8 @@
 //       espejo como foto del feed. Pueden ser menos si no hubo candidatas
 //       (relevancia 75 o más, tema no repetido, de 8 a 22).
 //   SEMANALES, aparte (no cuentan en las 6 historias): los teléfonos útiles un
-//   día por semana (rotan, ver diaRotativoDeUtiles) y la agenda del jueves (ésta
-//   sólo se arma en la PC). El día no pasa de 8 historias en total
+//   día por semana (rotan, ver diaRotativoDeUtiles) y la agenda del jueves (sólo
+//   si hay eventos en los próximos días). El día no pasa de 8 historias en total
 //   (CONTRATO_DIARIO.historiasMaximasPorDia).
 //
 // Las horas y las ventanas salen de redes/piezas.mjs (no se repiten acá) y los
@@ -189,7 +189,7 @@ function contratoDeUnaRed(def, { libro, fecha, ahora, portada }) {
   });
   const delContrato = piezas.filter((p) => !p.semanal);
   const semanales = piezas.filter((p) => p.semanal);
-  // La agenda sólo se arma en la PC: si es jueves se anota, pero no se le exige nada.
+  // La agenda sale sólo si hay eventos cargados: si es jueves y salió se anota, pero no se le exige.
   const agenda = [...Object.entries(videos)].find(([k]) => k === `${fecha}/agenda`);
   if (agenda) semanales.push({ id: 'historia:agenda', grupo: 'agenda', nombre: 'agenda', etiqueta: 'agenda', tipo: 'STORIES', estado: 'salio', cuando: agenda[1].cuando, semanal: true });
 
