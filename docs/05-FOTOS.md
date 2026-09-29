@@ -160,6 +160,13 @@ como archivo propio del sitio: `web/public/fotos-notas/<id de la nota>.<jpg,
 png o webp>`. Cloudflare Pages la sirve como cualquier archivo del sitio. El
 workflow la sube al repositorio junto con el resto de los datos.
 
+**Se guarda achicada (29/09).** Antes la foto se guardaba tal cual la bajaba el medio (hasta
+3.778 × 2.126 y 1,8 MB) y el repositorio crecía unos 25 MB por día. Ahora `fotoParaGuardar`
+(`web/scripts/achicar-foto.mjs`, con el ffmpeg del proyecto) la pasa a **JPEG de hasta 1.200 px de ancho**;
+si no se puede achicar o queda más pesada, se guarda la original. Las 48 fotos pesadas que ya
+estaban en el banco se achicaron una vez (`web/scripts/achicar-fotos-existentes.mjs`): de 32,7 a
+6,0 MB. Las fotos se sirven con caché de una semana (`web/public/_headers`).
+
 **Las fotos que se quedan sin nota se borran** (28/09, `podarFotos`): en cada
 corrida de la nube, la de una nota retirada a mano (`retiradas.json`: puede
 haberse retirado por un menor o una víctima) y la de una nota que ya no está en

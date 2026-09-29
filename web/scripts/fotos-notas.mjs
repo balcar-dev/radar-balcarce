@@ -10,6 +10,7 @@
 // que no tienen una foto que sirva.
 
 import { elegirFotoParaNota, descargarImagen, creditoDeFoto } from '../../ingesta/fotos.mjs';
+import { achicarFoto, fotoParaGuardar } from './achicar-foto.mjs';
 
 // Por corrida, no por día: la corrida se repite cada media hora, así que el
 // banco se completa solo en un par de horas sin gastar de una todo el cupo
@@ -39,7 +40,7 @@ export function elegiblePorSeccion(nota) {
  * los archivos nuevos a guardar (sólo los que consiguieron foto).
  */
 export async function elegirFotosNuevas(notas, {
-  banco = {}, tope = TOPE_POR_CORRIDA, clave, claveRespaldo, fetchFn = fetch, ahora = new Date(),
+  banco = {}, tope = TOPE_POR_CORRIDA, clave, claveRespaldo, fetchFn = fetch, ahora = new Date(), achicar = achicarFoto,
 } = {}) {
   const bancoNuevo = { ...banco };
   const archivos = {};
@@ -74,7 +75,10 @@ export async function elegirFotosNuevas(notas, {
         bancoNuevo[n.id] = { intentado: true, origen: r.origen, cuando: ahora.toISOString(), error: 'no se pudo volver a bajar la elegida' };
         continue;
       }
-      const archivo = `fotos-notas/${n.id}.${ext}`;
+      // Achicada a 1.200 px y JPEG (29/09): la original pesaba hasta 1,8 MB y crecía el
+      // repositorio unos 25 MB por día. Si no se puede achicar, se guarda la original.
+      const guardar = await fotoParaGuardar(Buffer.from(datos.base64, 'base64'), ext, { achicar });
+      const archivo = `fotos-notas/${n.id}.${guardar.ext}`;
       // Con todo lo necesario para revisarla y reusarla (28/09, Hernán: "que
       // esas fotos se estén guardando con los datos que corresponda"): de qué
       // nota nuestra es, de qué nota del medio salió, la dirección original de
@@ -85,7 +89,7 @@ export async function elegirFotosNuevas(notas, {
         titulo: n.titulo ?? null, enlace: r.elegida.enlace ?? null, imagenOriginal: r.elegida.imagen ?? null,
         razon: r.razon ?? null, cuando: ahora.toISOString(),
       };
-      archivos[archivo] = Buffer.from(datos.base64, 'base64');
+      archivos[archivo] = guardar.bytes;
     } catch (e) {
       bancoNuevo[n.id] = { intentado: true, origen: 'error', error: e.message, cuando: ahora.toISOString() };
     }
