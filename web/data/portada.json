@@ -1,5 +1,5 @@
 {
-  "generado": "2026-09-29T11:31:56.627Z",
+  "generado": "2026-09-29T11:34:09.722Z",
   "notas": [
     {
       "id": "1hjmkd4",
@@ -922,11 +922,12 @@
         "Infobae",
         "Perfil",
         "El Cronista",
+        "iProfesional",
         "C5N",
         "Crónica",
         "Noticias Argentinas (NA)",
-        "Ámbito",
         "El Eco de Tandil",
+        "Ámbito",
         "Clarín"
       ],
       "enlace": "https://noticiasargentinas.com/economia/el-gobierno-nacional-renovo-la-totalidad-de-los-vencimientos-de-deuda-en-pesos-_a6abad281b62936833e746fc2",
@@ -2153,9 +2154,7 @@
         "Perfil",
         "El Destape",
         "Página/12",
-        "Noticias Argentinas (NA)",
-        "El Marplatense",
-        "El Eco de Tandil"
+        "El Marplatense"
       ],
       "enlace": "https://www.infobae.com/economia/2026/09/28/la-actividad-economica-de-caba-cayo-02-en-el-segundo-trimestre-cuales-fueron-los-sectores-mas-golpeados/",
       "teniaImagenLaFuente": true,
@@ -2584,6 +2583,89 @@
       }
     },
     {
+      "id": "p9r5ff",
+      "titulo": "La caída en la vacunación encendé la alerta por la rabia",
+      "copete": "Se conmemora el día mundial de la enfermedad y advierten sobre la circulación del virus en murciélagos urbanos. El país registró cientos de casos en animales en los últimos años.",
+      "cuerpo": "El país registra una alerta sanitaria en el marco del día mundial de la lucha contra la rabia debido a la circulación del virus en murciélagos urbanos y la baja en la vacunación de mascotas.\n\nLas autoridades sanitarias señalan que las mascotas que viven dentro de hogares no están exentas del peligro si entran en contacto con la fauna silvestre urbana.\n\nEl veterinario Walter Comas advirtió que la falta de percepción del riesgo lleva a descuidar la prevención. La inmunización antirrábica en perros y gatos es obligatoria en todo el país desde los tres meses de vida.",
+      "guion": "La caída en la vacunación enciende la alerta por la rabia",
+      "seccion": "Argentina",
+      "medios": [
+        "Noticias Argentinas (NA)",
+        "La Opinión",
+        "ANDigital",
+        "El Día"
+      ],
+      "enlace": "https://noticiasargentinas.com/sociedad/rabia-en-argentina--la-caida-de-la-vacunacion-vuelve-a-encender-la-alerta_a6aba62c7b62936833e652060",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-28T12:59:47.000Z",
+      "sinFecha": false,
+      "visto": "2026-09-28T23:31:08.280Z",
+      "relevancia": 36,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Se conmemora el día mundial de la lucha contra la rabia.",
+        "Notificaron 927 casos de rabia animal entre 2019 y 2024.",
+        "Detectaron 76 casos en 2025 hasta la semana epidemiológica 22.",
+        "La vacuna antirrábica es obligatoria en perros y gatos."
+      ],
+      "seSabe": [
+        "El 28 de septiembre se conmemora el Día Mundial de la Lucha contra la Rabia en honor a Louis Pasteur.",
+        "Entre 2019 y 2024 se registraron 927 casos de rabia animal en Argentina.",
+        "En 2025 se confirmaron 76 casos en 13 jurisdicciones hasta la semana epidemiológica 22.",
+        "Se detectó un caso en un gato doméstico en la provincia de Buenos Aires durante 2025.",
+        "La vacunación antirrábica en perros y gatos es obligatoria a partir de los tres meses de edad."
+      ],
+      "noConfirmado": [
+        "No se informaron nuevas cifras de contagios posteriores a la semana epidemiológica 22 de 2025."
+      ],
+      "textoRedes": "El país advierte sobre la circulación del virus de la rabia en murciélagos y recuerda la obligatoriedad de vacunar a perros y gatos ante la baja de inmunización.",
+      "etiquetas": [
+        "salud",
+        "rabia",
+        "vacunacion",
+        "mascotas",
+        "argentina"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Noticias Argentinas (NA)",
+          "enlace": "https://noticiasargentinas.com/sociedad/rabia-en-argentina--la-caida-de-la-vacunacion-vuelve-a-encender-la-alerta_a6aba62c7b62936833e652060",
+          "fecha": "2026-09-28T12:59:47.931Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "La Opinión",
+          "enlace": "https://laopinionline.ar/articulo/rabia-en-argentina-la-caida-de-la-vacunacion-vuelve-a-encender-la-alerta",
+          "fecha": "2026-09-28T17:45:53.000Z",
+          "oficial": false,
+          "aporte": null
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1abvpqj",
+          "titulo": "Balcarce bajo alerta naranja por fuertes vientos: hubo caída de ramas, desprendimientos y cortes de luz",
+          "fecha": "2026-09-23T23:12:38.000Z",
+          "ruta": "/nota/balcarce-bajo-alerta-naranja-por-fuertes-vientos-hubo-caida-de-ramas-1abvpqj"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron cuatro medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "la-caida-en-la-vacunacion-encende-la-alerta-por-la-rabia",
+      "foto": {
+        "archivo": "fotos-notas/p9r5ff.jpg",
+        "credito": "Foto: La Opinión"
+      }
+    },
+    {
       "id": "15o4k9f",
       "titulo": "Tecnopapa, el evento que reunirá a toda la cadena productiva del país, ya tiene fecha",
       "copete": "Tecnopapa reunirá a productores paperos, asesores técnicos, empresas e instituciones de todo el país el 26 de febrero de 2027, en un establecimiento de Colonia Balcarce. La organiza el ingeniero agrónomo Celso Murias.",
@@ -2632,7 +2714,7 @@
       "fecha": "2026-09-28T12:31:28.000Z",
       "sinFecha": false,
       "visto": "2026-09-28T16:01:28.909Z",
-      "relevancia": 73,
+      "relevancia": 74,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -2825,11 +2907,11 @@
         "LU9 Mar del Plata",
         "0221",
         "El Marplatense",
-        "Agencia DIB",
+        "Radio 10 Mar del Plata (FM 105.5)",
         "El Eco de Tandil",
+        "Agencia DIB",
         "El Día",
-        "Ecos Diarios (Necochea)",
-        "Radio 10 Mar del Plata (FM 105.5)"
+        "Ecos Diarios (Necochea)"
       ],
       "enlace": "https://dib.com.ar/sociedad/prorrogan-el-plazo-que-las-obras-sociales-regularicen-deudas-hospitales-bonaerenses-n56074",
       "teniaImagenLaFuente": true,
@@ -2939,8 +3021,8 @@
         "A24",
         "Crónica",
         "Noticias Argentinas (NA)",
-        "Minuto Uno",
-        "Radio 10 Mar del Plata (FM 105.5)"
+        "Radio 10 Mar del Plata (FM 105.5)",
+        "Minuto Uno"
       ],
       "enlace": "https://www.clarin.com/sociedad/impresionante-tormenta-granizo-azoto-cordoba-causo-destrozos-unquillo-mendiolaza_0_6Z0Q2rOb0d.html",
       "teniaImagenLaFuente": true,
@@ -2983,16 +3065,16 @@
           "aporte": null
         },
         {
-          "medio": "Minuto Uno",
-          "enlace": "https://www.minutouno.com/sociedad/impresionante-tormenta-granizo-cordoba-causo-destrozos-varias-ciudades-n6327360",
-          "fecha": "2026-09-28T12:06:00.000Z",
+          "medio": "Radio 10 Mar del Plata (FM 105.5)",
+          "enlace": "https://radio10mardelplata.com.ar/impresionante-granizada-en-cordoba-piedras-del-tamano-de-una-pelota-de-golf-provocaron-destrozos/",
+          "fecha": "2026-09-28T15:59:44.000Z",
           "oficial": false,
           "aporte": null
         },
         {
-          "medio": "Radio 10 Mar del Plata (FM 105.5)",
-          "enlace": "https://radio10mardelplata.com.ar/impresionante-granizada-en-cordoba-piedras-del-tamano-de-una-pelota-de-golf-provocaron-destrozos/",
-          "fecha": "2026-09-28T15:59:44.000Z",
+          "medio": "Minuto Uno",
+          "enlace": "https://www.minutouno.com/sociedad/impresionante-tormenta-granizo-cordoba-causo-destrozos-varias-ciudades-n6327360",
+          "fecha": "2026-09-28T12:06:00.000Z",
           "oficial": false,
           "aporte": null
         }
@@ -3024,7 +3106,7 @@
       "fecha": "2026-09-28T11:32:01.000Z",
       "sinFecha": false,
       "visto": "2026-09-28T16:01:28.909Z",
-      "relevancia": 72,
+      "relevancia": 64,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -3497,7 +3579,7 @@
         {
           "medio": "El Eco de Tandil",
           "enlace": "https://www.eleco.com.ar/economia/volvio-a-caer-el-indice-de-confianza-en-el-gobierno-pero-javier-milei-supera-a-macri",
-          "fecha": "2026-09-28T21:10:19.000Z",
+          "fecha": "2026-09-28T21:10:36.000Z",
           "oficial": false,
           "aporte": null
         }
@@ -4163,6 +4245,12 @@
       "motivo": "necesita ojo humano: \"denuncia\""
     },
     {
+      "id": "11a41j5",
+      "titulo": null,
+      "seccion": "Agro",
+      "motivo": "necesita ojo humano: \"niño\""
+    },
+    {
       "id": "jien96",
       "titulo": "Un futbolista fue detenido en Mendoza por realizar gestos…",
       "seccion": "Fútbol",
@@ -4211,12 +4299,6 @@
       "motivo": "necesita ojo humano: \"menores de edad\""
     },
     {
-      "id": "11a41j5",
-      "titulo": null,
-      "seccion": "Agro",
-      "motivo": "necesita ojo humano: \"niño\""
-    },
-    {
       "id": "o8z3cp",
       "titulo": "Horacio Marín, CEO de YPF: “La producción de petróleo va a…",
       "seccion": "Economía",
@@ -4235,5 +4317,5 @@
       "motivo": "necesita ojo humano: \"niño\""
     }
   ],
-  "esperandoCuerpo": 10
+  "esperandoCuerpo": 8
 }

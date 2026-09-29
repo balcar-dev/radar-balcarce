@@ -702,6 +702,11 @@
   "ultimo": "2026-09-25T14:00:47.762Z",
   "motivo": "Gemini: No number after minus sign in JSON at position 11 (line 1 column 12)"
  },
+ "1bkacee": {
+  "intentos": 1,
+  "ultimo": "2026-09-29T11:34:08.296Z",
+  "motivo": "Gemini: HTTP 401 (clave redaccion): {\n  \"error\": {\n    \"code\": 401,\n    \"message\": \"The bound service account is deleted or disabled. The service account bound "
+ },
  "1bmj07h": {
   "intentos": 1,
   "ultimo": "2026-09-25T12:12:18.091Z",
@@ -1515,8 +1520,8 @@
   "motivo": "con cuerpo"
  },
  "1qudzsc": {
-  "intentos": 2,
-  "ultimo": "2026-09-29T11:31:53.948Z",
+  "intentos": 3,
+  "ultimo": "2026-09-29T11:34:08.296Z",
   "motivo": "Gemini: HTTP 401 (clave redaccion): {\n  \"error\": {\n    \"code\": 401,\n    \"message\": \"The bound service account is deleted or disabled. The service account bound "
  },
  "1qwg40g": {
