@@ -1,19 +1,20 @@
 # Criterio de las redes de Radar Balcarce
 
-*Actualizado el 29/09/2026.* Este es **el documento único** de todo lo que sale en Instagram y Facebook: cómo
-suena la voz, qué dice cada pieza, qué no dice nunca. Hernán y Andrés lo pidieron
-así: que cada cosa de las redes tenga su criterio, que cada pieza tenga **siempre la
-misma voz** (una locutora o un locutor), que siempre sea "Radar Balcarce" y que la página sea siempre
-`radarbalcarce.com`. Lo editorial de las notas (qué se publica, cómo se escribe
-una nota) está en [`CRITERIO-EDITORIAL.md`](CRITERIO-EDITORIAL.md); los horarios y
-cómo se publica, en [`docs/07-REDES.md`](docs/07-REDES.md).
+*Actualizado el 29/09/2026.* Es **el documento único** de lo que sale en Instagram y
+Facebook: cómo suena la voz, qué dice cada pieza y qué no dice nunca. Hernán y Andrés
+lo pidieron así: cada pieza con su criterio, **siempre la misma voz** para cada pieza,
+siempre "Radar Balcarce" y siempre `radarbalcarce.com`.
 
-**Cómo funciona este documento.** El código lo lee y lo respeta (`redes/prompt-redes.mjs`):
-la identidad (sección 1) y las instrucciones de voz (sección 6) se leen de acá, sin
-copia en el código, y los números (sección 5) los controla una prueba. Si se cambia
-algo de las secciones 1, 5 o 6 hay que **reiniciar el panel** (cerrar su ventana y
-correr `ARRANCAR.bat`), porque Node carga el código al arrancar. Si este archivo falta
-o está roto, todo falla a la vista: `npm test` avisa antes de publicar.
+Lo editorial de las notas (qué se publica y cómo se escribe) está en
+[`CRITERIO-EDITORIAL.md`](CRITERIO-EDITORIAL.md). Los horarios y cómo se publica, en
+[`docs/07-REDES.md`](docs/07-REDES.md).
+
+**El código lee este documento tal cual** (`redes/prompt-redes.mjs`): la identidad
+(sección 1), los números (sección 5) y las voces con su estilo (sección 6), entre las
+marcas `<!-- … -->`. No hay otra copia. Para cambiar algo se edita acá, sin borrar
+las marcas, y se corre `npm test`: si falta una parte o un número no coincide con el
+código, la prueba falla antes de publicar. El panel de la PC, si está abierto, hay que
+reiniciarlo para que lo lea.
 
 ## 1. Quiénes somos, dicho siempre igual
 
@@ -23,254 +24,199 @@ Sitio escrito: radarbalcarce.com
 Sitio dicho: Radar Balcarce punto com
 <!-- IDENTIDAD:FIN -->
 
-- **El medio se llama siempre "Radar Balcarce"**: con espacio y las dos
-  mayúsculas. Nunca "Radar", nunca "RadarBalcarce", nunca "El Radar".
-- **La página se escribe siempre `radarbalcarce.com`.** Nunca `.com.ar`, nunca con
-  `www`, nunca otra variante.
-- **La página, dicha en voz alta, es "Radar Balcarce punto com".** Y termina ahí:
-  la última palabra es "com". Nunca "punto ar", nunca "punto a ere", nunca
-  ".com.ar". La voz recibe esa orden explícita (sección 6) y una auditoría la comprueba
+- **El medio se llama siempre "Radar Balcarce"**, con espacio y las dos mayúsculas.
+  Nunca "Radar", "RadarBalcarce" ni "El Radar".
+- **La página se escribe siempre `radarbalcarce.com`**: nunca `.com.ar`, nunca con
+  `www`.
+- **Dicha en voz alta es "Radar Balcarce punto com"** y termina ahí. Nunca "punto ar"
+  ni "punto a ere". La voz recibe el texto literal y la auditoría de voz lo comprueba
   (sección 7).
-- Para referirse a la página se dice "Radar Balcarce" o su dirección, no "nuestra
-  página" a secas.
+- Para nombrar la página se dice "Radar Balcarce" o su dirección, no "nuestra página".
 
 ## 2. La voz
 
 Hay **dos voces propias**, creadas para Radar Balcarce con Voice Design de Gemini 3.8
-(idioma `es-AR`): la **locutora** (unos 45 años, serena y pausada) y el **locutor** (unos
-40 años, grave y firme). Cada una tiene un identificador fijo que Google guarda en nuestro
-proyecto: por eso suena **siempre igual** y no depende de cómo se escriba cada pedido.
-**Cada pieza tiene siempre la misma voz** (la tabla de la sección 6) y las voces se
-alternan a lo largo del día. Nunca dos voces en una misma pieza: las charlas simuladas se
-probaron el 28/09 y sonaban falsas. Nadie elige otra voz ni cambia la velocidad a mano.
-Al texto se le suma, aparte, un estilo corto según el momento del día (mañana, tarde o
-noche), que sólo cambia el ánimo, no la voz. **No hay voz de respaldo** (28/09, "mejor
-nunca Elena"): si Gemini no responde, la pieza no sale en esa vuelta y se vuelve a pedir en la
-siguiente, mientras dure su horario. Es preferible una historia que falta a una que
-suena a otro medio.
+(idioma `es-AR`): **la locutora** (unos 45 años, serena y pausada) y **el locutor** (unos
+40, grave y firme). Cada una tiene un identificador fijo que Google guarda en el proyecto
+de la clave de redes, así que suena siempre igual. **Cada pieza tiene siempre la misma
+voz** (el reparto de la sección 6) y a lo largo del día se alternan.
+
+- **Una sola voz por pieza.** Las charlas entre las dos se probaron el 28/09 y sonaban
+  falsas.
+- **No hay voz de respaldo** ("mejor nunca Elena", 28/09). Si Gemini no contesta, la
+  pieza no sale en esa vuelta y se vuelve a pedir en la siguiente mientras dure su
+  horario. Es preferible una historia que falta a una que suena a otro medio.
+- **El cupo es de 10 audios por día** (la clave de redes es gratis). Un día normal usa 6
+  y, algunos días, los útiles, la agenda o un aviso de clima. Si el cupo se acaba, lo
+  que falta ese día no sale.
+- Al texto se le suma aparte un **estilo corto** según el momento del día (mañana, tarde
+  o noche): cambia el ánimo, no la voz. Nadie elige otra voz ni cambia la velocidad a
+  mano.
 
 **Cómo suena:** cálida y cercana, rioplatense sin exagerar, tranquila, como quien le
 cuenta algo a un vecino. Humana: nunca un noticiero de televisión ni un robot.
 
-### El libro de recursos para sonar humana
+### El libro de recursos
 
-Para que no suene a plantilla, cada pieza elige, con una semilla que depende de la
-**fecha y de la pieza** (mismo día y misma pieza dan siempre el mismo texto; días
-distintos, textos distintos), entre estos recursos:
+Para que no suene a plantilla, cada pieza elige entre estos recursos con una semilla
+que depende de **la fecha y la pieza**: el mismo día y la misma pieza dan siempre el
+mismo texto (así se puede probar), y días distintos suenan distinto
+(`redes/guiones.mjs`).
 
-- **Aperturas variadas:** "Buen día, Balcarce." / "Muy buen día, Balcarce." /
-  "Buenas tardes, Balcarce, ¿cómo va el día?". Nunca la misma tres días seguidos por
-  costumbre.
-- **Conectores entre notas** que no suenen a lista escolar. "Primero…, después…,
-  además…, y para cerrar…" es robótico: se alterna con "Para arrancar", "Empezamos
-  con esto", "Cambiando de tema", "Por otro lado", "Otra que se comenta", "Y para
-  terminar", "Y cerramos con".
-- **Pequeñas humanidades:** una observación breve sobre el clima ("Está fresquito
-  para salir: lo mejor es taparse", "Un día lindo para caminar") o un cierre cálido
-  ("Que tengan un buen día", "A descansar, que mañana seguimos"). Una sola por pieza.
-- **Ritmo con la puntuación:** oraciones cortas, comas donde hay que respirar, un
-  punto donde hay que parar. Nada de oraciones de tres renglones.
-- **Expresiones locales, moderadas:** "salí abrigado", "un mate caliente", "una
-  madrugada". Con medida: una por pieza, no un festival.
+- **Aperturas variadas:** "Buen día, Balcarce." / "Muy buen día, Balcarce." / "Buenas
+  tardes, Balcarce, ¿cómo va el día?".
+- **Conectores que no suenan a lista escolar:** "Para arrancar", "Empezamos con esto",
+  "Cambiando de tema", "Por otro lado", "Otra que se comenta", "Y para terminar", "Y
+  cerramos con". Nunca "Primero…, segundo…".
+- **Una pequeña humanidad por pieza:** un comentario del clima ("Está fresquito para
+  salir") o un cierre cálido ("A descansar, que mañana seguimos").
+- **Ritmo con la puntuación:** oraciones cortas, comas donde se respira.
+- **Expresiones locales con medida:** "salí abrigado", "un mate caliente". Una por pieza.
 
-### Lo que la voz NO hace
+### Lo que la voz no hace
 
-- **Nada de "hola"** fuera de la mañana (y en general se usa "buen día", "buenas
-  tardes" o "buenas noches", según la hora).
-- **Nada de humor en temas serios** (accidentes, emergencias, salud).
-- **Nada de exclamaciones exageradas** ni signos de admiración.
-- **Nada de "increíble", "impactante", "escándalo"** ni adjetivos de titular.
-- **Nada de opinión.** Se cuenta el dato; no se dice si está bien o mal.
-- **Nada de "en vivo" ni "minuto a minuto"** si no lo es (y nuestras piezas no lo
-  son: son un repaso de lo ya publicado).
+- "Hola" fuera de la mañana: se saluda con "buen día", "buenas tardes" o "buenas noches"
+  según la hora.
+- Humor en temas serios (accidentes, emergencias, salud).
+- Exclamaciones, "increíble", "impactante", "escándalo" o adjetivos de titular.
+- Opinión: se cuenta el dato, no se dice si está bien o mal.
+- "En vivo" o "minuto a minuto": las piezas son un repaso de lo ya publicado.
 
-## 3. Una ficha por pieza
+## 3. Las piezas
 
-Cada ficha dice para qué sirve la pieza, cuándo sale, cuánto dura, cómo está armada,
-con qué saludo y qué cierre, qué datos lleva y cuáles no, y un ejemplo bueno y uno
-malo. Los largos se miden a **2,5 palabras por segundo** (ritmo de locución). Los
-horarios son los de fábrica: los cambia el panel (pestaña Calendario), y el saludo
-sigue a la hora real: hasta las 12:59 es "buen día", desde las 13 "buenas tardes",
-desde las 19 "buenas noches".
+Lo común a todas:
 
-**Sobre la dirección dicha.** Los tres podcasts la dicen **siempre**, al cerrar. El
-clima, la farmacia y las piezas semanales la dicen **1 de cada 3 días** (lo decide la
-fecha, no el azar: sale el mismo día siempre), y los otros dos días cierran sólo con
-"Radar Balcarce". Así se nombra la página con frecuencia sin que suene a propaganda.
+- **Los largos** se miden a **2,5 palabras por segundo** (sección 5).
+- **El saludo sigue a la hora real:** hasta las 12:59 "buen día", desde las 13 "buenas
+  tardes" y desde las 19 "buenas noches".
+- **La dirección dicha:** los tres repasos la dicen **siempre** al cerrar. El clima, la
+  farmacia y las semanales, **1 de cada 3 días** (lo decide la fecha, no el azar); los
+  otros días cierran con "Radar Balcarce".
+- Los horarios están en el código (`redes/piezas.mjs`, `panel/horarios.mjs`) y en
+  `docs/07-REDES.md`. La pestaña Calendario del panel de la PC no los cambia en GitHub.
 
-### Clima de la mañana
+### Clima de la mañana · 7:30 · 10 a 20 segundos
 
-- **Objetivo:** que el vecino sepa qué ropa ponerse y si lleva paraguas.
-- **Hora:** 7:30. **Largo:** 10 a 20 segundos (unas 25 a 50 palabras; nunca más de 25 s).
-- **Estructura:** saludo, temperatura de ahora, un comentario humano según lo que
-  haya (frío, helada, calor, lluvia, tormenta, viento o un día lindo), máxima, chances
-  de lluvia, cierre cálido y firma.
-- **Saludo y cierre:** "Buen día, Balcarce" y un deseo de buen día.
-- **Lleva:** temperatura, mínima y máxima, lluvia, viento fuerte si lo hay.
-- **No lleva:** la farmacia (tiene su pieza), la fuente de los datos, alertas
+- **Para qué:** que el vecino sepa qué ponerse y si lleva paraguas.
+- **Cómo se arma:** saludo, temperatura de ahora, un comentario según el día (frío,
+  helada, calor, lluvia, tormenta, viento o un día lindo), máxima, lluvia, cierre cálido
+  y firma. Nunca más de 25 segundos.
+- **No lleva:** la farmacia (tiene su pieza), la fuente de los datos ni alertas
   inventadas.
-- **Bueno:** "Buen día, Balcarce. Arrancamos con 8 grados. Mañana fría: salí
-  abrigado. A la tarde levanta hasta 19, así que el abrigo te va a sobrar. No se
-  espera lluvia. Que tengan un buen día. Radar Balcarce."
-- **Malo:** "¡Hola! ¡Increíble mañana en Balcarce, en vivo desde Meteored!" (hola,
-  exclamaciones, "increíble", "en vivo" y nombra la fuente).
+- **Bien:** "Buen día, Balcarce. Arrancamos con 8 grados. Mañana fría: salí abrigado. A
+  la tarde levanta hasta 19, así que el abrigo te va a sobrar. No se espera lluvia. Que
+  tengan un buen día. Radar Balcarce."
+- **Mal:** "¡Hola! ¡Increíble mañana en Balcarce, en vivo desde Meteored!" (hola,
+  exclamaciones, "increíble", "en vivo" y la fuente).
 
-### Clima de la noche
+### Clima de la noche · 20:00 · 10 a 20 segundos
 
-- **Objetivo:** cómo sigue la noche y cómo amanece mañana.
-- **Hora:** 20:00. **Largo:** 10 a 20 segundos.
-- **Estructura:** saludo, temperatura de ahora, la mínima de la noche (con aviso si
-  hay helada), cómo viene mañana, un toque humano, cierre y firma.
-- **Saludo y cierre:** "Buenas noches, Balcarce" y un cierre de noche ("Que
-  descansen", "A descansar, que mañana seguimos"). **Nunca "buen día".**
-- **Lleva:** temperatura, mínima, máxima y lluvia de mañana.
-- **No lleva:** datos de la mañana, la fuente.
-- **Bueno:** "Buenas noches, Balcarce. En este momento hay 12 grados. Esta noche la
-  mínima va a ser de 7. Mañana levanta: máxima de 21 grados. A descansar, que mañana
-  seguimos. Radar Balcarce."
-- **Malo:** "Buen día, Balcarce. Minuto a minuto: 12 grados." (buen día de noche y
-  "minuto a minuto").
+- **Para qué:** cómo sigue la noche y cómo amanece mañana.
+- **Cómo se arma:** saludo, temperatura de ahora, la mínima de la noche (con aviso si hay
+  helada), cómo viene mañana, un toque humano, cierre de noche ("Que descansen") y firma.
+  **Nunca "buen día".**
+- **Bien:** "Buenas noches, Balcarce. En este momento hay 12 grados. Esta noche la mínima
+  va a ser de 7. Mañana levanta: máxima de 21 grados. A descansar, que mañana seguimos.
+  Radar Balcarce."
+- **Mal:** "Buen día, Balcarce. Minuto a minuto: 12 grados."
 
-### Farmacia de turno
+### Farmacia de turno · 19:00 · 6 a 25 segundos
 
-- **Objetivo:** que en la madrugada alguien sepa adónde ir.
-- **Hora:** 19:00. **Largo:** 6 a 25 segundos.
-- **Estructura:** saludo, cuál es la de turno (con la dirección dicha, sin "N°" ni
-  "e/"), un cierre útil y firma.
-- **Saludo y cierre:** "Buenas noches, Balcarce"; cierre: "Guardá el dato, que te
-  puede salvar una madrugada".
-- **Lleva:** nombre y dirección de la o las farmacias de turno.
-- **No lleva:** hasta qué hora está abierta (eso va en la web), teléfonos, la fuente
+- **Para qué:** que en la madrugada alguien sepa adónde ir.
+- **Cómo se arma:** saludo, la o las farmacias de turno con la dirección dicha (sin "N°"
+  ni "e/"), "Guardá el dato, que te puede salvar una madrugada" y firma.
+- **No lleva:** hasta qué hora está abierta (eso va en la web), teléfonos, ni la fuente
   (el Colegio de Farmacéuticos, La Vanguardia o Radio Gabal no se nombran).
-- **Bueno:** "Buenas noches, Balcarce. Si esta noche necesitás una farmacia, la de
-  turno es Del Pueblo, en Calle 17 número 1140. Guardá el dato, que te puede salvar
-  una madrugada. Radar Balcarce."
-- **Malo:** "Según La Vanguardia, la de turno es DEL PUEBLO." (nombra la fuente y
-  lee el nombre en mayúsculas).
+- **Bien:** "Buenas noches, Balcarce. Si esta noche necesitás una farmacia, la de turno
+  es Del Pueblo, en Calle 17 número 1140. Guardá el dato, que te puede salvar una
+  madrugada. Radar Balcarce."
+- **Mal:** "Según La Vanguardia, la de turno es DEL PUEBLO." (la fuente y el nombre en
+  mayúsculas).
 
-### Podcast de la mañana
+### Los tres repasos (reel e historia) · 10:00, 15:00 y 20:30
 
-- **Objetivo:** las tres notas para arrancar el día.
-- **Hora:** 10:00. **Largo:** 45 a 75 segundos con tres notas (nunca más de 100 s),
-  y **el video no pasa de 55 segundos**: cada podcast se sube también como historia y
-  Meta acepta 60. Si el guion no cabe, primero se le saca la oración de contexto a las
-  últimas notas y después se sacan notas del final (mínimo dos). Ver "Los números".
-- **Estructura:** saludo, una línea de entrada, tres notas de temas distintos (cada
-  una con su titular y, si el texto es nuestro, una oración de contexto), cierre
-  cálido y la dirección dicha.
-- **Saludo y cierre:** "Buen día, Balcarce" y un deseo de buen día; termina en
-  "Radar Balcarce punto com".
-- **Lleva:** titulares ya publicados en la web, con los conectores del libro de
-  recursos.
-- **No lleva:** Política ni Policiales, nada en rojo, notas propias del sitio, la
-  fuente de ninguna nota, ni nombres de víctimas o menores.
-- **Bueno:** "Buen día, Balcarce. Esto es lo que hay para saber esta mañana. Para
-  arrancar: Ferroviarios ganó el Apertura. Cambiando de tema: Cortan el agua en el
-  centro. Y para cerrar: Nueva muestra en el museo. Que tengan un buen día. Todo lo
-  demás lo encontrás en Radar Balcarce punto com."
-- **Malo:** "Hola, ¡increíble mañana! Primero: Según Infobae… Segundo…" (hola,
-  exclamación, nombra el medio de origen y el conector robótico).
-
-### Podcast de la tarde
-
-- **Objetivo:** lo que se fue sumando desde la mañana, con temas distintos.
-- **Hora:** 15:00. **Largo:** 45 a 75 segundos con tres notas.
-- **Estructura:** la misma que la de la mañana, sin repetir notas ni temas.
-- **Saludo y cierre:** "Buenas tardes, Balcarce" y un deseo de tarde; termina en la
-  dirección. **Nunca "buen día".**
-- **Lleva y no lleva:** lo mismo que la mañana.
-- **Bueno:** "Buenas tardes, Balcarce. Repasamos lo que fue pasando hoy. Lo primero:
-  … Por otro lado: … Y cerramos con: … Que tengan una linda tarde. Seguimos en
-  Radar Balcarce punto com."
-- **Malo:** "Buen día, Balcarce…" a las 15.
-
-### Podcast de la noche
-
-- **Objetivo:** el repaso de lo más fuerte del día, para cerrarlo.
-- **Hora:** 20:30. **Largo:** hasta 55 segundos de video (la historia acepta 60):
-  cuatro notas si caben; si no, se saca el contexto y después notas, hasta un mínimo
-  de dos. El 25/09 salieron cuatro con contexto, 153 palabras y 62,7 s, y su historia
-  no salió en ninguna red.
-- **Estructura:** saludo con el día de la semana, cuatro notas (o tres o dos si no caben),
-  cierre de noche y la dirección dicha.
-- **Saludo y cierre:** "Buenas noches, Balcarce" y "Que descansen" o "hasta mañana";
-  termina en la dirección.
-- **Lleva y no lleva:** lo mismo que la mañana; además, tono más pausado.
-- **Bueno:** "Buenas noches, Balcarce. Este es el repaso de este viernes. Para
-  arrancar: … Y para terminar: … A descansar, que mañana seguimos. Radar Balcarce
-  punto com."
-- **Malo:** cerrar con "¡Hasta mañana, gente!" y "punto com punto ar".
+- **Para qué:** a la mañana, las notas para arrancar el día; a la tarde, lo que se fue
+  sumando, sin repetir notas ni temas; a la noche, lo más fuerte del día.
+- **Cómo se arma:** saludo de su hora (a la noche, con el día de la semana), una línea de
+  entrada, las notas con los conectores del libro de recursos (cada una con su titular y,
+  si el texto es nuestro, una oración de contexto), un cierre de su hora y la dirección
+  dicha.
+- **Cuántas notas:** tres a la mañana y a la tarde; cuatro a la noche si caben. **El
+  video no pasa de 55 segundos**, porque cada repaso se sube también como historia y
+  Meta acepta hasta 60. Si no entra, primero se saca la oración de contexto de las
+  últimas notas y después notas del final, hasta un mínimo de dos. Con menos de dos
+  notas, ese repaso no sale.
+- **Lleva:** titulares ya publicados en la web, de temas distintos y de Balcarce.
+- **No lleva nunca:** Política ni Policiales, nada en rojo, las notas propias del sitio,
+  la fuente de ninguna nota, ni nombres de víctimas o menores.
+- **Bien (mañana):** "Buen día, Balcarce. Esto es lo que hay para saber esta mañana. Para
+  arrancar: Ferroviarios gana el Apertura. Cambiando de tema: Cortan el agua en el centro.
+  Y para cerrar: Nueva muestra en el museo. Que tengan un buen día. Todo lo demás lo
+  encontrás en Radar Balcarce punto com."
+- **Mal:** "Hola, ¡increíble mañana! Primero: Según Infobae… Segundo…" (hola,
+  exclamación, el medio de origen y el conector robótico). A las 15, "Buen día". A la
+  noche, "¡Hasta mañana, gente!" o "punto com punto ar".
 
 ### Posteo de una nota en Facebook (y su espejo en Instagram)
 
-- **Objetivo:** que el vecino entre a la nota, en nuestra página.
-- **Hora:** cuando hay una nota fuerte (ver `docs/07-REDES.md`). **Largo:** el texto para
-  redes tiene un máximo de 280 caracteres (`PARTES.textoRedes`).
-- **Estructura:** el texto para redes (o el titular y la bajada), una línea con el
-  enlace a nuestra nota (`radarbalcarce.com/nota/…`) que va cambiando de frase, y
-  hasta tres hashtags.
-- **Lleva:** el enlace a **nuestra** nota, `#Balcarce` si es local.
-- **No lleva:** la fuente, "Resumen hecho con IA" (quién escribió la nota se dice
-  en la nota), "en vivo", `.com.ar`, "punto com" escrito (en un texto se escribe la
-  dirección; "punto com" es sólo para la voz).
-- **Bueno:** "Ferroviarios ganó el Apertura y va por la final.\n\nToda la nota acá:
-  https://radarbalcarce.com/nota/ferroviarios-gano-abc\n\n#Balcarce #Fútbol"
-- **Malo:** "Ferroviarios ganó (Resumen hecho con IA). Fuente: Puntonueve.
+- **Para qué:** que el vecino entre a la nota, en nuestra página.
+- **Cuándo:** cuando hay una nota fuerte de Balcarce, hasta 5 por día (las reglas están en
+  `CRITERIO-EDITORIAL.md` § 9 y en `docs/07-REDES.md`).
+- **Cómo se arma:** el texto para redes (hasta 280 caracteres) o el titular y la bajada,
+  una línea con el enlace a **nuestra** nota que va cambiando de frase, y hasta tres
+  hashtags (`#Balcarce` si es de acá). El espejo de Instagram lleva la foto de la nota,
+  con el crédito en el texto del posteo.
+- **Lo que decide una persona:** Política y Policiales, y lo que salió en la web porque lo
+  aprobó una persona, van a Facebook e Instagram **sólo si esa persona lo marca** desde el
+  panel del celular ("También a Facebook e Instagram").
+- **No lleva:** la fuente, "Resumen hecho con IA" (quién escribió la nota se dice en la
+  nota), "en vivo", `.com.ar`, ni "punto com" escrito (eso es sólo para la voz).
+- **Bien:** "Ferroviarios gana el Apertura y va por la final. Toda la nota acá:
+  https://radarbalcarce.com/nota/ferroviarios-gana-abc #Balcarce #Fútbol"
+- **Mal:** "Ferroviarios ganó (Resumen hecho con IA). Fuente: Puntonueve.
   https://puntonueve.com/…"
 
-### Semanales: teléfonos útiles
+### Teléfonos útiles · 11:00, un día hábil por semana · 8 a 20 segundos
 
-- **Objetivo:** que tengan a mano los números que sirven.
-- **Hora:** 11:00, un día distinto de lunes a viernes. **Largo:** 8 a 20 segundos.
-- **Estructura:** saludo, qué números son, un cierre ("Guardalos ahora, que después
-  te olvidás") y dónde están todos (el audio no lee los números).
-- **Saludo y cierre:** el de su hora (a las 11, "buen día").
-- **Lleva:** las categorías (emergencias, hospital, comisaría, municipio).
-- **No lleva:** "esta semana" ni "una vez por semana": son siempre los mismos
-  teléfonos.
-- **Bueno:** "Buen día, Balcarce. Te dejamos los teléfonos que sirve tener a mano.
-  Están los de emergencias, el hospital, la comisaría y el municipio. Tenelos a
-  mano, que nunca se sabe. Los encontrás todos en la web de Radar Balcarce.
-  Radar Balcarce."
-- **Malo:** "Los teléfonos de esta semana…" (los números no cambian).
+- **Para qué:** que tengan a mano los números que sirven.
+- **Cómo se arma:** saludo de su hora, qué números son (emergencias, hospital, comisaría,
+  municipio), "Guardalos ahora, que después te olvidás" y dónde están todos. El audio no
+  lee los números.
+- **No lleva:** "esta semana" ni "una vez por semana": los teléfonos son siempre los
+  mismos.
 
-### Semanales: la agenda del jueves
+### La agenda del jueves · 18:00, si hay eventos · 6 a 25 segundos
 
-- **Objetivo:** contar qué se puede hacer en Balcarce estos días.
-- **Hora:** jueves 18:00, si hay eventos cargados. **Largo:** 6 a 25 segundos.
-- **Estructura:** saludo, cuántas actividades hay, la primera con día y lugar, dónde
-  está la agenda completa, firma.
-- **Saludo y cierre:** el de su hora ("buenas tardes").
-- **Lleva:** la primera actividad, con su día y su lugar.
-- **No lleva:** actividades sin confirmar, ni la fuente.
-- **Bueno:** "Buenas tardes, Balcarce. Hay 3 actividades en Balcarce estos días. La
-  feria de artesanos, el sábado 10:00, en el Parque Cerro El Triunfo. La agenda
-  completa está en Radar Balcarce punto com. Radar Balcarce."
-- **Malo:** "En la agenda del municipio, según el Facebook de Cultura…".
+- **Para qué:** contar qué se puede hacer en Balcarce estos días.
+- **Cómo se arma:** saludo, cuántas actividades hay, la primera con su día y su lugar,
+  dónde está la agenda completa y firma. Sale de la agenda publicada en la web.
+- **No lleva:** actividades sin fecha confirmada ni la fuente.
+- **Bien:** "Buenas tardes, Balcarce. Hay 3 actividades en Balcarce estos días. La feria
+  de artesanos, el sábado 10:00, en el Parque Cerro El Triunfo. La agenda completa está en
+  Radar Balcarce punto com. Radar Balcarce."
 
-## 4. Lo que TODA pieza respeta
+## 4. Lo que toda pieza respeta
 
-1. **Nombra sólo "Radar Balcarce".** Nunca otro nombre para el medio.
-2. **Nunca nombra la fuente del texto** (Infobae, Clarín, La Vanguardia, Puntonueve,
-   Radio Gabal ni ningún otro medio): la atribución está en la nota de la web.
-3. **Nunca "en vivo" ni "minuto a minuto"** si no lo es.
-4. **Nada de Política ni Policiales** en las piezas automáticas: los decide una
-   persona.
+1. **Nombra sólo "Radar Balcarce"**, nunca otro nombre para el medio.
+2. **Nunca nombra la fuente del texto** (Infobae, Clarín, La Vanguardia, Puntonueve, Radio
+   Gabal ni ningún otro medio): la atribución está en la nota de la web.
+3. **Nunca "en vivo" ni "minuto a minuto".**
+4. **Política y Policiales nunca salen solas.** En Facebook e Instagram, sólo si una
+   persona las marca desde el panel del celular; en los repasos, nunca.
 5. **Nunca identifica a un menor ni a una víctima.**
-6. **Nunca dice "Resumen hecho con IA".** La firma de la nota está en la nota.
-7. **La dirección escrita es `radarbalcarce.com`;** dicha en voz alta es "Radar
-   Balcarce punto com" y termina ahí. Nunca `.com.ar`, "punto ar" ni "punto a ere".
-8. **El saludo es el de la hora:** "buen día" sólo de mañana, "buenas tardes" de
-   tarde, "buenas noches" de noche. Ningún "buen día" fuera de la mañana.
-9. **Sin exclamaciones, sin "increíble", sin opinión, sin humor en lo serio.**
-10. **Mismo día y misma pieza dan el mismo texto** (así se puede probar), y días
-    distintos suenan distinto.
+6. **Nunca dice "Resumen hecho con IA":** la firma de la nota está en la nota.
+7. **La dirección escrita es `radarbalcarce.com`; dicha, "Radar Balcarce punto com"** y
+   termina ahí.
+8. **El saludo es el de la hora:** ningún "buen día" fuera de la mañana.
+9. **Sin exclamaciones, sin "increíble", sin opinión y sin humor en lo serio.**
+10. **El mismo día y la misma pieza dan el mismo texto**, y días distintos suenan
+    distinto.
 
 ## 5. Los números
 
 El código los toma de `ingesta/criterio.mjs` (la columna "Clave" dice cuál) y
-`pruebas/redes-criterio.test.mjs` controla que esta tabla diga lo mismo, fila por
-fila: **si se cambia un número, se cambia en los dos lados.**
+`pruebas/redes-criterio.test.mjs` controla que esta tabla diga lo mismo, fila por fila:
+**si se cambia un número, se cambia en los dos lados.**
 
 <!-- NUMEROS_REDES:INICIO -->
 | Qué | Número | Clave |
@@ -291,46 +237,41 @@ fila: **si se cambia un número, se cambia en los dos lados.**
 | Posteo: hashtags como máximo | 3 | `POSTEO.hashtagsMaximo` |
 <!-- NUMEROS_REDES:FIN -->
 
-**Cómo se usan los cuatro números de la duración** (`redes/elegir.mjs`,
-`repasoConPresupuesto`; `reels/duracion.mjs`): la duración estimada de un podcast es
-`palabras / ritmo + adorno`. Si pasa de 55, se le saca el contexto a las notas de la
-última a la primera y después notas del final (nunca menos de dos). El podcast dice
-en el posteo sólo las notas que quedaron. Si el video ya armado igual pasa de 58
-(se mide con ffmpeg), las historias suben una copia cortada en 58 con fundido de
-salida (`podcast-historia.mp4`) y el reel sube entero. Con el guion del 25/09 a la
-noche: 153 palabras y ~65 s estimados antes; 112 palabras y ~48 s ahora, con las
-cuatro notas y el contexto sólo de las dos primeras.
+**Cómo se usa la duración** (`repasoConPresupuesto`, `redes/elegir.mjs`): un repaso
+dura, estimado, `palabras / ritmo + adorno`. Si pasa de 55 segundos se recorta como dice
+la sección 3. Si el video ya armado igual pasa de 58 (se mide con ffmpeg), la historia
+sube una copia cortada en 58 con fundido de salida y el reel sube entero. El ritmo real
+(2,4) se midió con la voz anterior: falta volver a medirlo con las voces nuevas
+(`PENDIENTES.md`).
 
 ## 6. Las voces y cómo se les habla
 
-Esto es **lo que lee el código** (`redes/prompt-redes.mjs`): las dos voces, quién dice cada
-pieza y el estilo. No hay copia. Un cambio se hace acá, y se reinicia el panel.
-
-Con el modelo `gemini-3.8-flash-tts` y su Interactions API, el texto se lee **literal** y el
-estilo va en un campo aparte, corto y en inglés (es lo que mejor entiende el modelo). Ya no
-hay indicaciones largas que la voz pueda leer en voz alta: el 28/09, con el modelo y el
-formato anteriores, el podcast leyó las indicaciones y duró 140 s en vez de 35. El saludo
-de cada momento sale del guion (`redes/guiones.mjs`), no del estilo.
+Esto es **lo que lee el código** (`redes/prompt-redes.mjs`): las dos voces, quién dice
+cada pieza y el estilo. Con el modelo `gemini-3.8-flash-tts` y su Interactions API, el
+texto se lee **literal** y el estilo va aparte, corto y en inglés (es lo que mejor
+entiende el modelo): con indicaciones largas, el 28/09 la voz leyó las indicaciones en
+voz alta. El saludo de cada momento sale del guion (`redes/guiones.mjs`), no del estilo.
 
 <!-- VOZ:INICIO -->
 
-Las voces. Cada identificador lo guarda Google en nuestro proyecto y **vence al año de
-crearse (29/09/2027)**: hay que crear las voces de nuevo antes (`docs/11-OPERACION.md`).
+Las voces. Cada identificador lo guarda Google en el proyecto de la clave de redes y
+**vence al año de crearse (29/09/2027)**: la vigilancia avisa 30 días antes, y hay que
+crearlas de nuevo con Actions → "Crear voces" (`docs/11-OPERACION.md`).
 
-La locutora (creada el 29/09/2026):
+La locutora (versión 2, creada el 29/09/2026):
 
 <!-- VOZ:LOCUTORA:INICIO -->
 voice_v8mf7jt16hch
 <!-- VOZ:LOCUTORA:FIN -->
 
-El locutor (creado el 29/09/2026):
+El locutor (versión 2, creado el 29/09/2026):
 
 <!-- VOZ:LOCUTOR:INICIO -->
 voice_cdljkn0jpmk6
 <!-- VOZ:LOCUTOR:FIN -->
 
-Quién dice cada pieza (siempre la misma; los nombres son los de `redes/piezas.mjs`, y `aviso`
-vale para todos los avisos de clima):
+Quién dice cada pieza (siempre la misma; los nombres son los de `redes/piezas.mjs`, y
+`aviso` vale para todos los avisos de clima):
 
 <!-- VOZ:REPARTO:INICIO -->
 clima-manana: locutora
@@ -372,15 +313,14 @@ It is the night: slower, lower and calm, closing the day.
 
 ## 7. La auditoría de voz
 
-Como nadie puede "escuchar" todo lo que sale, hay una auditoría automática:
-`reels/auditar-voz.mjs`, que se corre a mano desde GitHub (Actions → "Auditar voz"
-→ Run workflow). Genera con la **misma ruta de producción** unos clips cortos con
-la voz (cierres de los podcasts de mañana, tarde y noche, un clima de la noche y
-varias frases con la dirección), le pide a Gemini la **transcripción literal** y
-comprueba: que se oiga "Radar Balcarce"; que si el texto dice "punto com" la voz
-diga "punto com" y **nunca** "punto ar" ni ".com.ar"; y que el saludo sea el de la
-hora y ningún otro. Imprime un cuadro PASA/FALLA por clip y sale con error si alguno
-falla. Cuesta centavos (unos pocos audios cortos), así que **no se corre en lazo**: se
-corre a mano cuando se toca la voz. Si la voz insiste en agregar ".ar" aunque el texto diga
-"punto com", la dirección se deja fuera de lo que se dice (poniendo `VOZ.direccionEnPodcasts`
-y `VOZ.direccionUnaDeCada` en 0) y las piezas cierran sólo con "Radar Balcarce".
+Como nadie puede escuchar todo lo que sale, hay una auditoría: `reels/auditar-voz.mjs`,
+que se corre a mano (Actions → "Auditar voz" → Run workflow). Genera con la misma ruta de
+producción unos clips cortos (cierres de los repasos, un clima de la noche y frases con
+la dirección), le pide a Gemini la transcripción literal y comprueba que se oiga "Radar
+Balcarce", que "punto com" nunca sea "punto ar" y que el saludo sea el de la hora. Imprime
+PASA o FALLA por clip.
+
+**Gasta del cupo de voz del día** (cada clip es un audio): se corre sólo cuando se toca
+la voz, y mejor de noche, después del último repaso. Si la voz insistiera en agregar
+".ar", la dirección se deja de decir (`VOZ.direccionEnPodcasts` y `VOZ.direccionUnaDeCada`
+en 0) y las piezas cierran sólo con "Radar Balcarce".

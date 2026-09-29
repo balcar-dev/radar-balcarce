@@ -1,346 +1,194 @@
 # Criterio editorial de Radar Balcarce
 
-*Actualizado el 28/09/2026.* Éste es **el** criterio editorial del medio: qué
-se publica, cómo se escribe, cómo se trabaja con las fuentes y cómo se
-verifica. Hay uno solo y está acá. Todo lo demás lo respeta:
+*Actualizado el 29/09/2026.* Éste es **el** criterio editorial del medio: qué se publica,
+cómo se escribe, cómo se trabaja con las fuentes y cómo se verifica. Hay uno solo y está
+acá; los otros documentos remiten a éste.
 
-- **La IA lo lee tal cual.** La sección 12, "La instrucción de la IA", es el
-  texto exacto que recibe Gemini antes de cada nota. No hay otra copia en el
-  código: `reels/reescritura.mjs` la carga de este archivo al arrancar
-  (`ingesta/prompt-editorial.mjs`). Si este archivo falta o le falta una parte,
-  la reescritura no arranca: la IA no escribe sin criterio.
-- **Los números están en la sección 11**, "Los números", y el código usa los
-  mismos (`ingesta/criterio.mjs`). Una prueba (`pruebas/criterio.test.mjs`)
-  compara esa tabla con el código: si alguien cambia un número en un lado y
-  no en el otro, `npm test` falla y la web no se publica.
-- El panel muestra este criterio en la pestaña **"Cómo escribe la IA"**.
+- **La IA lo lee tal cual.** La sección 12 es el texto exacto que recibe Gemini antes de
+  cada nota (`ingesta/prompt-editorial.mjs` la carga; `reels/reescritura.mjs` la usa). No
+  hay otra copia: si este archivo falta o le falta una parte, la IA no escribe.
+- **Los números están en la sección 11** y el código usa los mismos
+  (`ingesta/criterio.mjs`). Una prueba compara la tabla con el código: si se cambia un
+  número de un lado y no del otro, `npm test` falla y la web no se publica.
+- **Cómo se cambia:** se edita este archivo (sin borrar las marcas `<!-- … -->`), se corre
+  `npm test` y se sube a GitHub. "Actualizar la web" usa la versión nueva en la corrida
+  siguiente. El panel de la PC la muestra en la pestaña "Cómo escribe la IA" (si está
+  abierto, hay que reiniciarlo).
 
-**Cómo se cambia el criterio.** Se edita este archivo (el texto de la sección
-12 cambia lo que escribe la IA; un número de la sección 11, también en
-`ingesta/criterio.mjs`), se corre `npm test` y se sube a GitHub. "Actualizar
-la web" usa la versión nueva en la corrida siguiente. **El panel, recién
-después de reiniciarlo** (cerrar su ventana y correr `ARRANCAR.bat`).
-
-Los otros documentos no repiten estas reglas: remiten acá. `docs/` cuenta
-cómo lo aplica el código (empezar por `docs/00-INDICE.md`); `docs/10-REGLAS-Y-PRUEBAS.md`,
-qué prueba cuida cada regla; `docs/07-REDES.md`, los horarios de las redes;
-`INVESTIGACION.md`, lo legal con sus fuentes.
+Dónde se ve cada cosa en el código: `CLAUDE.md` ("Dónde tocar cada cosa") y `docs/`
+(empezar por `docs/00-INDICE.md`). Qué prueba cuida cada regla:
+`docs/10-REGLAS-Y-PRUEBAS.md`. Las redes tienen su propio criterio:
+[`CRITERIO-REDES.md`](CRITERIO-REDES.md). Lo legal, con sus fuentes: `INVESTIGACION.md`.
 
 ---
 
 ## 1. Qué es Radar Balcarce y a quién le escribe
 
-Radar Balcarce es un medio digital de Balcarce (provincia de Buenos Aires)
-que funciona solo: cada media hora lee los medios de la zona y los
-organismos públicos, decide qué se publica, lo escribe con IA, lo verifica y
-arma el sitio, sin que haya nadie despierto. Hernán y Andrés deciden lo que
-el sistema no puede decidir solo.
+Radar Balcarce es un medio digital de Balcarce (provincia de Buenos Aires) que funciona
+solo: cada media hora lee los medios de la zona y los organismos públicos, decide qué se
+publica, lo escribe con IA, lo verifica y arma el sitio. Hernán y Andrés deciden lo que
+el sistema no puede decidir solo, desde el panel del celular.
 
-**Le escribe a la gente de Balcarce**, que quiere saber qué pasó en su
-pueblo sin leer cinco medios. Por eso:
+**Le escribe a la gente de Balcarce**, que quiere saber qué pasó en su pueblo sin leer
+cinco medios. Por eso:
 
-- **Lo local primero.** Lo que pasa en Balcarce pesa más que cualquier cosa
-  de afuera. Lo de afuera entra si le importa a alguien de acá.
-- **Informar, no gritar.** Claro, directo y neutral. Sin sensacionalismo, sin
-  opinión, sin cebar el clic. En un pueblo el que exagera se quema rápido.
-- **Decir de dónde sale cada cosa.** Cada nota dice quién la escribió y de qué
-  medios sale la información.
-- **Opera como un diario**: la redacción (la IA) junta lo que contaron todas
-  las fuentes, lo contrasta y escribe una nota. El lector ve la nota, no el
-  trabajo de redacción.
+- **Lo local primero.** Lo de afuera entra si le importa a alguien de acá.
+- **Informar, no gritar.** Claro, directo y neutral. Sin sensacionalismo, sin opinión,
+  sin cebar el clic.
+- **Decir de dónde sale cada cosa.** Cada nota dice quién la escribió y de qué medios sale
+  la información.
+- **Opera como un diario:** la redacción (la IA) junta lo que contaron todas las fuentes,
+  lo contrasta y escribe una nota. El lector ve la nota, no el trabajo de redacción.
 
 ## 2. Qué entra y qué no entra nunca
 
 ### Las fuentes
 
-Las fuentes están en `ingesta/fuentes.mjs` (58: medios de Balcarce, de la
-región, de la provincia, secciones de los diarios nacionales y organismos
-públicos; la Municipalidad es **fuente oficial**) y en `ingesta/fuentes-cruce.mjs`
-(160 feeds de 71 medios, para el cruce de medios; ver abajo). Todas, con su
-ciudad, su peso y cómo se usan, están en **`FUENTES.md`**, que se escribe solo
-desde el código (`node ingesta/listar-fuentes.mjs`; una prueba controla que
-esté al día).
-Cada una tiene un peso: los medios locales pesan más que los nacionales. Si
-dos o más medios cuentan lo mismo, es **una** nota con varias fuentes, no
-varias notas. Por eso **cada medio tiene un solo nombre** para todos sus feeds
-(27/09): TN, con Campo, Tecno y Clima, es un medio, no cuatro.
+Todas las fuentes, con su ciudad, su peso y cómo se usan, están en **`FUENTES.md`**, que
+se escribe solo desde el código (`ingesta/fuentes.mjs` y `ingesta/fuentes-cruce.mjs`; la
+Municipalidad es **fuente oficial**). Los medios de Balcarce pesan más que los de afuera.
+**Cada medio tiene un solo nombre** para todos sus feeds: TN, con Campo, Tecno y Clima,
+es un medio, no cuatro. Cada fuente tiene su ficha: qué es (oficial, de Balcarce, de la
+región, provincial o nacional) y **de qué ciudad es** (Ecos Diarios es de Necochea, no de
+Balcarce); la IA recibe esa ciudad con cada nota.
 
-**Cada fuente tiene su ficha (27/09):** qué es (oficial, medio de Balcarce, de
-la región, provincial, nacional por sección o nacional general) y **de qué
-ciudad es** (Ecos Diarios es de Necochea, no de Balcarce) (`fichaDeFuente`).
-La IA recibe esa ciudad con cada nota, también la de los medios del cruce.
+**Lo que no se trae.** De los medios de afuera no entra lo que el medio pone en una
+sección de **otro país** (`/mexico/`, `/el-mundo/`…), de **policiales o seguridad**, ni
+**consejos genéricos** (autos, horóscopo, recetas). Se mira la sección de la dirección de
+la nota, no palabras del texto. De una sección de otro país entra sólo lo que tiene
+conexión argentina en el título (una figura argentina, "Argentina", Malvinas) o es
+automovilismo (`SECCIONES_QUE_NO_ENTRAN`). De los medios de Balcarce entra todo. Los
+medios de España y de chimentos están apagados.
 
-**Lo que no se trae (27/09).** De los medios de afuera no entra lo que el
-propio medio pone en una sección de **otro país** (`/mexico/`, `/colombia/`,
-`/estados-unidos/`, `/el-mundo/`…), de **policiales o seguridad**, ni
-**consejos genéricos** (autos, horóscopo, recetas). Se mira la sección de la
-dirección de la nota, no palabras del texto, así que un juego de palabras no
-lo engaña. De una sección de otro país entra sólo lo que tiene conexión
-argentina en el título (una figura argentina, "Argentina", Milei, Malvinas) o
-es automovilismo. De los medios de Balcarce entra todo. La lista es
-`SECCIONES_QUE_NO_ENTRAN` (`ingesta/fuentes.mjs`).
+### De acá y de afuera
 
-**Nada viejo (27/09 y 28/09).** Una nota que nunca salió no se publica si el
-hecho tiene más de 12 horas (`PORTADA.horasParaEstrenar`), y la portada y las
-secciones muestran sólo las últimas 36 horas (`PORTADA.horas`): de 140 notas
-publicadas del 25 al 28/09, 40 salieron con el hecho de más de un día, por
-esperar medios o cuerpo. La fecha de una nota es la más vieja que se conoce
-(la de su primera fuente): un medio que actualiza la suya no la rejuvenece.
-El Diario Balcarce no tiene feed: se lee
-su portada, que no dice la fecha de las notas y muestra también notas viejas
-(ese día, de 2025, que salían como de hoy). Ahora se abre cada nota sin fecha,
-se toma la fecha real de adentro por vieja que sea y lo que tiene más de 72
-horas no se trae (`ampliar` y `HORAS_DE_UNA_NOTA_NUEVA`, `ingesta/ingesta.mjs`).
-Del texto de sus notas tampoco se lee el bloque de necrológicas que el medio
-pega debajo de cada una (`ingesta/articulo.mjs`).
+**"De acá" tiene una sola definición** (`esDeAca`): lo que toca la zona (la ruta 226, la
+55, Napaleofú, Los Pinos, la papa del sudeste); si no, lo de un medio de Balcarce o lo que
+dice Balcarce **en el título**, siempre que la IA no haya dicho que no es de Balcarce.
+Nombrarla al pasar en el texto no alcanza. Lo de acá no pide medios ni ocupa cupo, y **lo
+que toca la zona sale solo aunque lo cuente un solo medio**.
 
-**Los feeds generales de los diarios nacionales.** Infobae, La Nación, Clarín
-"lo último", Ámbito "últimas" y Minuto Uno traen de todo. Cuentan como
-cualquier medio de afuera: sus notas quedan sólo si otros medios cuentan lo
-mismo, y sirven sobre todo para contar cuántos medios cuentan una misma
-historia. (A la mañana del 27/09 habían pasado a "señal"; desde el cruce esa
-etiqueta ya no hacía nada, y esa noche se sacó, junto con el máximo de notas
-por fuente.)
+**Lo copiado de afuera por un medio de acá es de afuera.** Un medio de Balcarce que
+cuenta lo mismo que los nacionales sin nombrar nada de acá está copiando una noticia de
+afuera (Malvinas, un incendio en Misiones): se rige por lo de afuera (`historiaDeAca`).
+Lo que cuentan **sólo** medios de otras ciudades de la zona (Mar del Plata, Tandil,
+Necochea) no se trae, salvo que diga Balcarce en el título o toque la zona.
 
-**De afuera entra poco y a propósito.** De un medio de afuera queda lo que es
-de Balcarce, lo que toca la zona (la ruta 226, la 55, el sudeste, la papa) y
-lo que cuentan dos medios distintos o más (ver "El cruce de medios"). **Una nota de un medio de afuera es
-de Balcarce sólo si el medio dice Balcarce en su propio título (27/09)**:
-nombrarla al pasar en el texto (una lista de localidades, "en Balcarce también
-hay productores") no la hace local. Lo que cuentan **sólo** medios de otras
-ciudades de la zona (Mar del Plata, Tandil, Necochea…) no se trae, salvo que
-diga Balcarce en el título o toque la zona: es de esas ciudades. Y lo de afuera
-tiene, por sección, un **mínimo de medios** que lo cuenten y un **cupo**
-(cuántas pueden salir solas a la vez, como máximo): los números están en la
-sección 11. Lo de Balcarce no pide medios ni tiene cupo. **Lo que toca la zona
-sale solo aunque lo cuente un solo medio** (27/09, Hernán: "si son de la zona y
-son realmente temas de Balcarce, que salga"): no pide medios y, desde el
-28/09, tampoco ocupa cupo (es "de acá", `esDeAca`); la lectura con IA igual
-saca lo que no tenga relación con acá (`deLaZona`, en `semaforo`,
-`exigirMedios` y `aplicarCupos`).
+**Lo de afuera se mide en medios, no en puntaje.** Una nota que no es de Balcarce sale
+sola sólo si la cuentan los medios distintos que pide su sección: 3 por defecto; Fútbol y
+Deportes, 4; Economía, Tecnología, Agro y Automovilismo, 2; lo que nombra a una figura
+argentina, 2. **Nunca con uno solo**; una fuente oficial alcanza sola. Si no llega,
+espera a una persona con el motivo "de afuera y poco contada (N medios; Sección pide M)".
+Además, cada sección tiene un **cupo** de lo de afuera (cuántas pueden salir solas a la
+vez). Los números, en la sección 11. Se mira en la ingesta y otra vez después de la
+lectura con IA: si al juntar repetidas una nota llega a los medios que pide, sale.
 
-**Una IA lee cada nota antes de decidir (27/09).** Con el perfil de Balcarce
-(`ingesta/perfil-balcarce.md`) y la ciudad del medio, arma una ficha: de dónde
-es el hecho, de qué sección es, si le importa a un vecino y por qué. Con esa
-ficha: no entra la **publicidad**, los **chimentos** (farándula y vida privada
-de famosos), lo del **extranjero** (entra sólo si se destaca un argentino, una
-figura como Colapinto o Messi, o hay conexión argentina en el título: la
-Fórmula 1 o el fútbol de otro país sin un argentino, no; 27/09, Hernán), lo de
-un medio de afuera **sin relación con Balcarce**
-ni un **policial que no es de acá**. Una nota es de Balcarce sólo con **dos
-llaves**: la fuente es de acá (o el medio dice Balcarce en el título) y la IA
-dice que el hecho es de acá; una nota nacional reproducida por un medio local
-deja de contar como local. La sección es la que dice la IA. **La IA nunca
-destraba:** lo que el semáforo pone en rojo o amarillo sigue igual, y si no
-hay ficha se decide como antes. (Lo único que puede salir después de la
-lectura es lo de afuera que esperaba por pocos medios y, al juntarse con sus
-repetidas, llega a los que pide su sección: lo decide la regla de medios, no
-la IA.) Empezó sin prueba previa, a pedido de Hernán:
-los errores se corrigen en vivo, y lo que saca cada corrida queda en el
-registro de "Actualizar la web" (`ingesta/lectura-ia.mjs`, `aplicarFichas`).
+**Una IA lee cada nota antes de decidir** (`ingesta/lectura-ia.mjs`). Con el perfil de
+Balcarce (`ingesta/perfil-balcarce.md`) y la ciudad del medio arma una ficha: de dónde es
+el hecho, de qué sección es, si le importa a un vecino y por qué. Con esa ficha no entran
+la **publicidad**, los **chimentos**, lo del **extranjero** sin un argentino destacado,
+lo de un medio de afuera **sin relación con Balcarce** ni un **policial que no es de
+acá**. La sección es la que dice la IA. **La IA nunca destraba:** lo que el semáforo pone
+en rojo o amarillo sigue igual.
 
-**El cruce de medios (27/09).** Se leen 214 feeds activos (nacionales,
-provincia, Mar del Plata, zona, especializados y todos los de Balcarce: los de
-`fuentes.mjs` y 160 de 71 medios en `fuentes-cruce.mjs`) y se juntan las notas que cuentan el mismo hecho, con una memoria de 36 horas
-(`ingesta/cruce.mjs`, `ingesta/fuentes-cruce.mjs`). De afuera sólo entra lo
-que cuentan dos medios o más (además de lo que dice Balcarce en el título o
-toca la zona), y cuantos más lo cuentan, más arriba va y más fácil sale sola:
-es lo que se está hablando. Una exclusiva de un solo medio no entra hasta que
-otro la cuente. Las fuentes: `FUENTES.md`; la medición: `docs/historico/CRUCE-DE-MEDIOS.md`.
+**Una noticia, una nota.** Si varios medios cuentan el mismo hecho, es **una** nota con
+todos los medios como fuentes (el cruce de medios, `ingesta/cruce.mjs`, y la IA que junta
+repetidas, `agruparRepetidas`). No se juntan notas distintas del mismo tema (dos
+prácticas del TC son dos notas). Queda, en este orden, la que ya está publicada, la que
+puede salir sola, la que cuentan más medios y la de más puntaje. Si la misma noticia
+igual vuelve a entrar con otra dirección (porque el medio cambió el enlace), se une sola:
+queda una y la otra dirección redirige a ésa (`web/lib/repetidas.js`).
 
-**Lo copiado de afuera por un medio de acá es de afuera (27/09).** Un medio de
-Balcarce que cuenta lo mismo que los nacionales sin nombrar nada de acá está
-copiando una noticia de afuera (Malvinas y el Reino Unido, un incendio en
-Misiones, una pelea de UFC salían "de Balcarce"). Si la historia la cuentan
-también medios de afuera y ningún medio de acá nombra a Balcarce en el título o
-al comienzo, se rige por lo de afuera: la principal es de un medio de afuera y
-pide los medios de su sección. Lo que el medio de acá cuenta de Balcarce sigue
-siendo de acá (`historiaDeAca`, `ingesta/ingesta.mjs`).
-
-**La importancia de lo de afuera se mide en medios (27/09, Hernán y Andrés:
-"que sea popular y esté medido").** Una nota que no es de Balcarce sale sola
-sólo si la cuentan los medios distintos que pide su sección: 3 por defecto;
-Fútbol y Deportes, 4 (son un tercio de todo lo que entra, y un medio de
-Balcarce no puede ser Olé); Economía, Tecnología, Agro y Automovilismo, 2 (las
-cubren pocos medios y tienen cupo propio); lo que nombra a una figura
-argentina, 2. **Nunca con uno solo**; una fuente oficial alcanza sola. Si no
-llega, espera a una persona con el motivo "de afuera y poco contada (N medios;
-Sección pide M)". El puntaje ya no decide si sale: sirve para ordenar, para el
-cupo y para Facebook. (Hasta el 27/09 a la noche había un piso de puntaje por
-sección, que frenaba historias contadas por 9 y por 17 medios.) Se mira en la
-ingesta y otra vez después de la lectura con IA, en los dos sentidos: si al
-juntar repetidas una nota llega a los medios que pide, sale (`exigirMedios`,
-`mediosMinimosDe`). Las páginas viejas de lo de afuera contado por un solo
-medio salen del archivo, salvo las que fueron a las redes, y tampoco completan
-la tapa ni aparecen en "Seguí leyendo" (`tieneRespaldo`).
-
-**Una noticia, una nota (27/09).** Cuando varios medios cuentan el mismo hecho
-con títulos distintos (las tres notas de las falsas ofertas de empleo de
-McCain), la IA las junta y queda una sola, con todos los medios como fuentes
-(`agruparRepetidas`, `quitarRepetidas`). No junta notas distintas del mismo
-tema (dos prácticas del TC son dos notas). Queda, en este orden, la que ya
-está publicada (en la portada o en las últimas 36 horas, `HORAS_EN_PORTADA`: si no, desaparece la
-que la gente ya ve), la que puede salir sola, la que cuentan más medios y la de
-más puntaje (27/09).
-
-**Sin medios de España ni chimentos (27/09, Hernán).** Hipertextual y Xataka
-(de España), Infobae Teleshow y Minuto Uno Espectáculos (chimentos) están
-apagados.
-
-**Las secciones flacas (26/09).** La portada tiene que tener tres notas por
-sección, y para eso hay fuentes de afuera con la sección fija: **lo que le gusta
-a la gente** en otros medios (cultura, tecnología, el campo y la economía de
-los diarios nacionales). Cuentan igual que cualquier nota de afuera: peso
-bajo, los medios que pide y el cupo de su sección, semáforo, verificación
-contra la fuente y cuerpo. Lo internacional sin relación con Balcarce no entra. Cuando
-falta material para una sección se suman fuentes o se bajan los medios que pide
-esa sección (nunca a menos de dos, nunca en Fútbol ni Deportes, y nunca el
-semáforo); no se sube el tope de pedidos
-a la IA. Para gastar ese tope, se reescribe primero lo de Balcarce y, después,
-la sección con menos notas escritas.
+**Nada viejo.** Una nota que nunca salió no se publica si el hecho tiene más de 12 horas,
+y la portada y las secciones muestran sólo las últimas 36. La fecha de una nota es la más
+vieja que se conoce: un medio que actualiza la suya no la rejuvenece. De lo que se lee
+raspando la portada de un medio (El Diario Balcarce, que no tiene feed) se toma la fecha
+de adentro de cada nota y lo de más de 72 horas no se trae.
 
 ### Las secciones
 
 | Sección | ¿Sale sola? |
 |---|---|
 | Balcarce | Sí |
-| Fútbol | Sí (desde el 27/09: de la liga de Balcarce a la Selección) |
+| Fútbol | Sí (de la liga de Balcarce a la Selección) |
 | Deportes | Sí (todos los demás deportes) |
 | Automovilismo | Sí |
 | Agro | Sí |
 | Cultura y agenda | Sí |
-| Tecnología | Sí |
+| Tecnología | Sí (se confirma con el título: si no nombra nada de tecnología, se clasifica por lo que dice) |
 | Economía | Sí |
 | Política | Sí en la web; **en las redes, nunca sin una persona** |
 | Policiales | Sí en la web; **en las redes, nunca sin una persona** |
-| Argentina | Sí (desde el 27/09; antes se llamaba País y no salía sola): lo nacional que no es de otra sección (sociedad, clima, salud, educación, grandes hechos), contado por tres medios o más; también lo de afuera que no encaja en ninguna |
+| Argentina | Sí: lo nacional que no es de otra sección, contado por tres medios o más |
 
-**No hay sección Servicios (27/09, Hernán).** Los cortes, trámites, tarifas y
-obras de acá van a **Balcarce**. Lo de afuera que sólo trataba de eso queda
-en Argentina. **Tampoco hay Región ni Provincia** (27/09): eran la ciudad del
-medio, no la del hecho. La farmacia, el clima y el dólar siguen siendo servicios del sitio
-(la barra de arriba), no una sección de notas.
+No hay sección Servicios, Región ni Provincia: los cortes, trámites y obras de acá van a
+Balcarce; la farmacia, el clima y el dólar son servicios del sitio, no notas.
+**Policiales es sólo de Balcarce y la zona** (el partido, Napaleofú, Los Pinos, Ramos
+Otero y las rutas 226 y 55 dentro del partido): un policial de otro lugar no se trae; lo
+de la zona sí, con el mismo semáforo. "Sale sola" quiere decir que no espera a nadie si el
+semáforo da verde (sección 3) y si tiene cuerpo (sección 4).
 
-**Policiales es sólo de Balcarce y la zona** (26/09; pedido de Hernán y Andrés:
-"que sean policiales de Balcarce"): el partido, Napaleofú, Los Pinos, Ramos
-Otero y las rutas 226 y 55 dentro del partido. No hay fuentes nacionales de
-Policiales, y **un policial de otro lugar no se trae** (27/09, Hernán): lo que
-no viene de un medio de Balcarce, no dice Balcarce en el título ni toca la
-zona, no entra. **Lo de la zona sí** (28/09, Hernán): un choque en la 226
-contado por un medio de Mar del Plata entra, con el mismo semáforo (un muerto,
-un herido o un chico esperan a una persona). Antes quedaba amarillo esperando
-a una persona, y nadie lo miraba. En un pueblo son pocas notas por semana, y
-es lo normal.
+### Las fotos
 
-"Sale sola" quiere decir que no espera a nadie **si el semáforo da verde**
-(sección 3) y si tiene cuerpo (sección 4).
+Una nota puede llevar una foto propia de Balcarce, una oficial (Municipio, Provincia,
+INTA) o, cuando ninguna de esas está, **la de otro medio o de un organismo oficial**
+(decisión de Hernán del 27/09, con el riesgo legal explicado: una fotografía es una obra
+protegida y citar la fuente no la cubre, `INVESTIGACION.md` § 7). Nunca una foto inventada
+por IA que parezca real. Condiciones que no se negocian:
 
-### Las fotos (27/09)
+- **Nunca la marca de agua ni el nombre de otro medio adentro de la imagen**, tampoco en
+  la escena (el micrófono de una radio): el crédito va en la cita, debajo. Los medios
+  chicos de la zona suelen pegar su logo en una esquina: con la mínima duda, esa foto no
+  se usa.
+- **Toda foto usada así se guarda en el banco propio** (`web/data/banco-fotos.json`), con
+  su crédito y de qué nota salió.
+- **Nunca la foto de un menor o de una víctima**, ni en Policiales, salvo una foto oficial
+  de Bomberos o la Policía.
 
-Por defecto, una nota lleva: una foto propia de Balcarce (del banco propio o
-tomada por alguien del medio), una foto oficial (Municipio, Provincia, un
-organismo como INTA), una foto de stock libre marcada "imagen ilustrativa",
-o una ilustración de la sección. Nunca una foto inventada por IA que parezca
-real (un hecho, una persona o un lugar que no existió así).
-
-Cuando ninguna de esas sirve, se puede recortar la foto de otro medio o de un
-organismo oficial (decisión de Hernán, 27/09, con el riesgo legal explicado:
-una fotografía es una obra protegida y citar la fuente no la cubre —
-INVESTIGACION.md § 7 —, a diferencia del texto). Dos condiciones que no se
-negocian: nunca puede quedar la marca de agua ni el nombre del otro medio
-adentro de la imagen (el crédito va siempre en la cita, debajo, nunca en la
-foto), y toda foto usada así se guarda en el banco propio (con su crédito y
-de qué nota salió) para revisarla cada tanto y para poder reusarla después
-sin volver a buscarla. Cuando dos medios o más cubrieron el mismo hecho, se
-compara qué foto de cada uno sirve mejor (encuadre, calidad, que no tenga
-gente irreconocible de más) antes de elegir cuál recortar.
-
-**Cuidado extra con los medios locales y de la zona** (28/09, Hernán: "hay que
-tener mucho más cuidado con los medios locales y zonales que no se nos pase
-una marca de agua"). Un medio nacional casi nunca marca sus fotos; uno chico
-de Balcarce o de la zona (El Diario Balcarce, La Vanguardia, Infórmese
-Primero, QZ Noticias, Campeones…) sí acostumbra pegar su logo en una esquina,
-y es justo ahí donde más se recorta porque son la única fuente con foto del
-hecho. Mirarla una vez no alcanza: antes de guardar cualquier foto de un
-medio local o zonal en el banco, se revisa a ojo (o con la IA que compare)
-buscando específicamente un logo o texto de marca en las esquinas y los
-bordes, y si hay la mínima duda, no se usa esa foto. Un recorte que saca el
-logo de una esquina puede dejar otro pedazo de marca de agua en otra esquina:
-no alcanza con encuadrar distinto, hay que mirar la foto entera antes de
-recortarla.
-
-Sigue habiendo notas que nunca llevan foto real, sea de quien sea: lo que
-identificaría a un menor o a una víctima (va la placa), y Policiales fuera de
-una foto oficial de Bomberos o la Policía.
-
-**En la página de la nota, desde el 28/09.** Cada corrida de "Actualizar la
-web" le prueba una foto a hasta 10 notas nuevas (`web/scripts/fotos-notas.mjs`,
-`ingesta/fotos.mjs`): compara las de las fuentes con Gemini o Groq (nunca
-elige una con marca; si la mejor la tiene, usa la mejor SIN marca en su
-lugar), y si ninguna sirve y la nota es de una sola persona pública
-identificable, prueba una foto libre en Wikimedia Commons antes de
-resignarse. Sólo Policiales sigue sin foto salvo que la fuente sea oficial.
-Una nota ya probada (tenga foto o no) queda en el banco
-(`web/data/banco-fotos.json`) y no se le vuelve a preguntar. En las redes,
-el espejo de Instagram de cada posteo de Facebook lleva esa misma foto (el
-crédito va en el texto del posteo, nunca en la imagen) y, si no hay una que
-sirva, la placa sin foto. La tarjeta para compartir el enlace (la vista previa
-en WhatsApp y Facebook) lleva también esa foto, sin crédito adentro: el crédito
-está en el epígrafe de la página a la que lleva. Los videos (podcasts, clima,
-farmacia, útiles, agenda) siguen con placa: son piezas de datos o de texto, no
-de una nota con foto. **La placa no es una regla, es lo
-que sale cuando no hay foto que sirva.**
+La foto va en la página de la nota, en el espejo de Instagram de cada posteo de Facebook
+(con el crédito en el texto) y en la tarjeta para compartir el enlace. Los videos llevan
+placa. **La placa no es una regla: es lo que sale cuando no hay foto que sirva.** Cómo se
+elige cada foto, en `docs/05-FOTOS.md`.
 
 ### Lo que no entra nunca
 
 | Qué | Por qué |
 |---|---|
-| **Nada que identifique a un menor ni a una víctima** de un delito sexual o de violencia de género: ni nombre, ni apodo, ni iniciales, ni escuela, ni domicilio o cuadra, ni un parentesco que la deje identificada, ni su foto ni su descripción. Aunque la fuente lo publique | Lo exigen las leyes 26.061 y 26.485. No es estilo. El semáforo rojo lo frena (`INVESTIGACION.md` § 6) |
+| **Nada que identifique a un menor ni a una víctima** de un delito sexual o de violencia de género: ni nombre, ni apodo, ni iniciales, ni escuela, ni domicilio o cuadra, ni un parentesco que la deje identificada, ni su foto ni su descripción. Aunque la fuente lo publique | Lo exigen las leyes 26.061 y 26.485. El semáforo rojo lo frena (`INVESTIGACION.md` § 6) |
 | **Una acusación dicha como hecho.** Sin condena o confirmación oficial, se atribuye a quien acusó y va en condicional ("habría") | Doctrina Campillay: es lo que protege al medio de una demanda por calumnias o injurias |
-| **La cotización del dólar como nota de otro medio.** Si el título es "dólar hoy", "dólar blue", "a cuánto cotiza"… la nota no sale sola | La cotización se muestra en `/dolar`, que se actualiza sola, y el sitio arma su propia nota del dólar una vez por día hábil (sección 8). Una nota ajena por cada cotización es relleno |
-| **Lo de otros países sin conexión argentina.** Primero no se trae lo que el medio pone en una sección de otro país (sección 2, "Lo que no se trae"). Si igual se cuela por una sección argentina y el título nombra a Trump, Xi Jinping, Putin, Newsom, California, la Casa Blanca, Gaza, Ucrania, el G20…, y la nota no es de Balcarce, no sale sola | No le importa a nadie de acá: el 26/09 la cumbre Trump–Xi salió sola y el 27/09 salieron una ley de California y un tigre suelto en México. La lista de nombres es `REGLAS_SEMAFORO.internacional` (sólo mira el título) y es un respaldo: lo principal es no traerlo |
-| **Chimentos y medios de España** | Decisión de Hernán, 27/09: esas fuentes están apagadas |
-| **Un policial de otro lugar.** Desde el 27/09 no se trae (ver "Policiales es sólo de Balcarce"): lo que no viene de un medio de Balcarce, no dice Balcarce en el título ni toca la zona se descarta en la ingesta (`esPolicialDeAfuera`, `ingesta/ingesta.mjs`) | Los diarios nacionales traen crímenes y causas de todo el país, con nombres de acusados, y un medio de Balcarce no tiene por qué darles lugar (26/09: "Mató a su mujer embarazada…" salía verde). La regla de respaldo del semáforo que los dejaba amarillos (`policialDeAfuera`) no se alcanzaba nunca desde entonces y se borró el 28/09 |
-| **Una nota en Tecnología que no habla de tecnología.** Las fuentes de tecnología de los diarios traen de todo | La sección se confirma con el título (`PALABRAS_DE_TECNOLOGIA_EN_EL_TITULO`): si no nombra nada de tecnología, no se le cree a la fuente y se clasifica por lo que dice |
-| **"En vivo", "minuto a minuto", "en directo"** en el título, la bajada, el guion o el texto para redes, aunque el medio de origen lo diga ("música en vivo" sí) | Radar Balcarce no hace coberturas en vivo: cuenta lo que pasó |
-| **Una nota automática sin cuerpo** | Una nota de dos renglones no es una nota. Queda "esperando cuerpo" hasta tenerlo (sección 4) |
+| **La cotización del dólar como nota de otro medio** ("dólar hoy", "dólar blue") | La cotización está en `/dolar`, y el sitio arma su propia nota del dólar el día que se mueve (sección 8) |
+| **Lo de otros países sin conexión argentina** (Trump, Gaza, Ucrania…, `REGLAS_SEMAFORO.internacional`, sólo en el título) | No le importa a nadie de acá; lo principal es no traerlo (sección 2) |
+| **Un policial de otro lugar** | Los diarios nacionales traen crímenes de todo el país, con nombres de acusados |
+| **"En vivo", "minuto a minuto", "en directo"** en el título, la bajada, el guion o el texto para redes ("música en vivo" sí). Las páginas viejas que lo dicen en el título se retiran solas | Radar Balcarce no hace coberturas en vivo: cuenta lo que pasó |
+| **Una nota automática sin cuerpo** | Una nota de dos renglones no es una nota (sección 4) |
 | **El nombre del medio de origen en el título, el guion, las placas o las redes** | La atribución va en la nota de la web, con el enlace al original |
 | **Lo que parece promoción y no noticia** (sorteos, "ganá tu entrada") | No se bloquea, pero nunca sale solo |
-| **Las listas de sepelios** ("servicios de sepelios", inhumaciones: nombres de personas fallecidas) | Decisión de Hernán, 27/09: "es sensible y no hay fuente oficial". Salieron diez veces, cada una en otra sección. Quedan en rojo por el título (`REGLAS_SEMAFORO.nunca`, sección 3) y se vuelve a mirar en el título y la bajada finales de toda nota automática (`nuncaSePublica`, `web/scripts/generar-datos.mjs`) |
-| **Fúnebres, comentarios de lectores y transmisiones en vivo largas** | Decisión vigente (`docs/10-REGLAS-Y-PRUEBAS.md`, "Decisiones que siguen valiendo") |
+| **Las listas de sepelios** (nombres de personas fallecidas), ni aprobadas por una persona | Decisión de Hernán, 27/09: es sensible y no hay fuente oficial (`REGLAS_SEMAFORO.nunca`, `nuncaSePublica`) |
+| **Fúnebres, comentarios de lectores y transmisiones en vivo largas** | Decisión vigente (`docs/10-REGLAS-Y-PRUEBAS.md`) |
 
 ## 3. El semáforo
 
-Cada noticia pasa por un semáforo antes de publicarse. Las listas de
-palabras están en `REGLAS_SEMAFORO` (`ingesta/fuentes.mjs`) y cada una tiene
-su prueba. **No se tocan sin que lo decidan Hernán y Andrés.**
+Cada noticia pasa por un semáforo antes de publicarse. Las listas de palabras están en
+`REGLAS_SEMAFORO` (`ingesta/fuentes.mjs`) y cada una tiene su prueba. **No se tocan sin
+que lo decidan Hernán y Andrés.**
 
 | Color | Qué pasa | Cuándo |
 |---|---|---|
-| **Rojo** | No se publica nunca, ni por error | Identifica o puede identificar a un menor o a una víctima de violencia de género o de un delito sexual (menor de edad, abuso sexual, violación, femicidio, grooming, suicidio…) |
-| **Amarillo** | Espera a una persona en el panel | Acusa a alguien (denuncia, detenido, imputado), habla de una muerte o de un herido (sólo en Policiales, en Balcarce, en lo de acá o de la zona y en lo que cuenta un solo medio: 28/09), involucra a un chico, parece promoción, es de afuera y la cuentan menos medios de los que pide su sección, pasó el cupo de su sección, es la cotización del dólar, o tiene **verificación baja** (sección 5) |
-| **Verde** | Sale sola | Todo lo demás, en las secciones que salen solas |
+| **Rojo** | No se publica nunca, ni por error | Identifica o puede identificar a un menor o a una víctima de violencia de género o de un delito sexual (menor de edad, abuso sexual, violación, femicidio, grooming, suicidio…). También las listas de sepelios (`REGLAS_SEMAFORO.nunca`) |
+| **Amarillo** | Espera a una persona (en el panel del celular) | Acusa a alguien (denuncia, detenido, imputado), habla de una muerte o de un herido (en Policiales, en Balcarce, en lo de acá o de la zona y en lo que cuenta un solo medio), involucra a un chico, parece promoción, es de afuera y la cuentan menos medios de los que pide su sección, pasó el cupo de su sección, es la cotización del dólar, o tiene **verificación baja** (sección 5) |
+| **Verde** | Sale sola | Todo lo demás |
 
-**Lo que no se publica nunca, aparte del rojo (27/09).** Las listas de
-sepelios (sepelio, inhumación y sus variantes) son otra lista,
-`REGLAS_SEMAFORO.nunca`, que mira sólo el título: la nota queda en rojo con el
-motivo "lista de sepelios: no se publica". La lista roja de menores y víctimas
-no cambió.
+**Qué mira.** En el **título y el comienzo del resumen**, las listas enteras. En el
+**texto entero** (el artículo de la fuente, lo de los otros medios y lo que escribe la
+IA), sólo el rojo y lo de chicos y víctimas: mirando todo, "denuncia" o "falleció"
+perdidas en el octavo párrafo frenaban casi todo. Lo que escribe la IA **vuelve a pasar**
+por el semáforo: si da rojo o amarillo, esa escritura no se usa. Se prefiere pasarse de
+cuidadoso: "violación de la ley" da rojo y "el menor de los males" da amarillo.
 
-**Qué mira el semáforo.** En el **título y el comienzo del resumen**, las
-listas enteras. En el **texto entero** (el artículo completo de la fuente, lo
-que contaron los otros medios, el cuerpo y las partes internas que escribe la
-IA), sólo el rojo y lo de chicos y víctimas: mirando todo, "denuncia" o
-"falleció" perdidas en el octavo párrafo frenaban 16 de cada 23 notas
-(decisión del 25/09). Lo que escribe la IA **vuelve a pasar** por el semáforo:
-si da rojo o amarillo, esa escritura no se usa y la nota deja de salir sola.
-
-Se prefiere pasarse de cuidadoso: "violación de la ley" da rojo y "el menor
-de los males" da amarillo, y así queda.
-
-**Política y Policiales.** En la web salen solas si el semáforo da verde. En
-las redes (Facebook, podcasts, historias) **siempre** esperan a una persona:
-en una red la nota viaja sin contexto y a un vecino lo nombra un titular.
+**Política y Policiales.** En la web salen solas si el semáforo da verde. En las redes
+**siempre** esperan a una persona, que las marca desde el panel del celular: en una red
+la nota viaja sin contexto y a un vecino lo nombra un titular. Tampoco va sola a las
+redes una nota que salió en la web porque la aprobó una persona.
 
 ## 4. Cómo se escribe una nota
 
@@ -430,8 +278,8 @@ desarrollada, lo que se lee al abrirla.
      a esto).
   3. **Tercer párrafo**, si la fuente da para eso: qué sigue o qué significa
      para la gente de Balcarce.
-- Las citas textuales, sólo si están en la fuente, entre comillas y
-  atribuidas ("dijo", "explicó").
+- Las citas textuales, sólo si están en la fuente, entre comillas,
+  atribuidas ("dijo", "explicó") y de diez palabras como mucho.
 - Si falta largo, se suman **datos de las fuentes**, no adjetivos. Nada de
   cierres de opinión ("sin dudas", "una gran noticia").
 - **Explica todo lo que prometen el título y la bajada.** Si el título nombra
@@ -700,22 +548,18 @@ medio" pasaba sin que nadie lo mirara).
 4. **Las partes para la redacción** (claves, qué se sabe…) se controlan **cada
    una por su lado**: la que falla se descarta sola y la nota sale igual. Las
    etiquetas se sacan de a una.
-5. **Tres intentos por nota como mucho**, en corridas distintas: la clave de
-   respaldo es paga y no se gasta de más en una nota que no da. Una falla del
-   servicio (sin cupo, saturado, sin red) no cuenta como intento.
+5. **Tres intentos por nota como mucho**, en corridas distintas: no se gasta
+   cupo de más en una nota que no da. Una falla del servicio (sin cupo,
+   saturado, sin red, una clave rechazada) no cuenta como intento.
 6. **Sin material no se escribe.** Sin el texto completo de ninguna fuente y
    con menos de 60 palabras de resumen entre todas, no se le pide nada a la
    IA.
 7. **Lo ya publicado se revalida** en cada corrida contra las reglas de hoy:
    si una regla nueva ya no lo dejaría pasar, se saca y se vuelve a escribir.
    Nunca se paga dos veces por lo mismo: lo que ya tiene cuerpo se reusa.
-   **Límite real, encontrado el 28/09:** esto sólo alcanza a una nota mientras
-   su fuente siga trayéndola la ingesta (`ultima.notas`, en `reescribirAutomaticas`).
-   Si la fuente ya sacó esa nota de su feed —lo normal a los pocos días—, la
-   nota queda congelada con lo que tenga escrito, aunque una regla nueva ya
-   no la dejaría pasar. Por eso una regla nueva conviene revisarla también
-   a mano contra un puñado de notas ya publicadas, como cualquier corrección
-   (`web/data/correcciones.json`).
+   Alcanza a una nota mientras su fuente siga en la ingesta (unos tres días):
+   lo que ya salió de la ingesta queda como está, así que una regla nueva
+   conviene revisarla también a mano contra lo ya publicado.
 
 El vigilante avisa por WhatsApp si menos del 35 % de las notas de las últimas
 24 horas tienen cuerpo, y el resumen de las 21 dice cuántas esperan cuerpo.
@@ -724,239 +568,113 @@ El vigilante avisa por WhatsApp si menos del 35 % de las notas de las últimas
 
 | | Qué es | Dónde se ve |
 |---|---|---|
-| **El lector** | Título, bajada, cuerpo y, al pie, un desplegable chico y **cerrado** "Fuentes (N)" con el nombre de cada medio y el enlace a su nota. Después, compartir. La **firma** va en el mismo renglón del desplegable (§ 10) | La web |
-| **La redacción** | Claves, qué se sabe, qué falta confirmar, lo que aportó cada fuente, los antecedentes, el nivel de verificación con su porqué y el texto para redes | El panel, plegado en "Análisis interno" de cada nota. No va a la web ni a los datos para Google (las etiquetas sí, como palabras clave) |
+| **El lector** | Título, bajada, cuerpo y, al pie, un desplegable chico y **cerrado** "Fuentes (N)" con el nombre de cada medio y el enlace a su nota; la **firma** va en el mismo renglón (sección 10). Después, compartir | La web |
+| **La redacción** | Claves, qué se sabe, qué falta confirmar, lo que aportó cada fuente, los antecedentes, el nivel de verificación y el texto para redes | Internos: no van a la web ni a los datos para Google (las etiquetas sí, como palabras clave). En el archivo, las notas de más de cuatro días guardan sólo lo que ve el lector |
 
-**El desplegable de fuentes es la atribución** (ley 11.723): toda nota tiene
-al menos la fuente principal. El enlace es siempre **la página de la nota
-original**, nunca un archivo interno del medio (hasta el 25/09, las notas de
-Infórmese Primero enlazaban la entrada del feed de Blogger, que es XML: ahora
-enlazan la página, y si alguna quedó con el enlace viejo se muestra el medio
-sin enlace).
+**El desplegable de fuentes es la atribución** (ley 11.723): toda nota tiene al menos la
+fuente principal, y el enlace es siempre **la página de la nota original**, nunca un
+archivo interno del medio.
 
-### Cómo se presenta: lo que respeta TODA página del sitio
+### Lo que respeta toda página del sitio
 
-Vale igual para una nota de una fuente, la nota del dólar, el repaso de un
-podcast, la ficha de un evento y las páginas de servicio (farmacias, dólar,
-teléfonos útiles). Está cuidado por pruebas (`pruebas/seo-paginas.test.mjs`,
-`pruebas/tipografia.test.mjs`, `pruebas/eventos.test.mjs`) y por la auditoría
-del 26/09, que recorrió las 300 páginas publicadas.
+Vale para una nota de una fuente, la nota del dólar, el repaso de un podcast, la ficha de
+un evento y las páginas de servicio. Lo cuidan pruebas (`pruebas/seo-paginas.test.mjs`,
+`pruebas/tipografia.test.mjs`, `pruebas/eventos.test.mjs`).
 
-1. **Una sola línea de firma.** Corta, gris, pegada al desplegable "Fuentes".
-   Nunca un párrafo explicando quién la escribió o si la revisó una persona
-   (eso está en `/quienes-somos`).
-2. **Las fuentes, plegadas.** Un botón chico y cerrado "Fuentes (N)" con el
-   nombre y el enlace. Nunca "Lo que cuenta el medio…", ni "De dónde sale esta
-   nota" a la vista.
-3. **El análisis es interno.** Claves, qué se sabe, qué falta confirmar, lo
-   que aportó cada fuente y el nivel de verificación se ven en el panel, no en
-   la web.
-4. **No se copia texto de otro.** Ni en una nota ni en una ficha de evento: los
-   datos van con palabras nuestras (plantilla o IA verificada), nunca la
-   descripción cruda de la fuente, con sus mayúsculas y sus frases de venta.
-5. **Nada de "en vivo"** si no está en vivo. Los datos que se actualizan en
-   el navegador (dólar, clima, "hace X") dicen la hora real de su última
-   actualización.
-6. **Sin promoción ni mayúsculas sostenidas ni signos dobles** en ningún
-   título ni texto ("¡¡¡INFORMACIÓN IMPORTANTE!!!"). Los nombres que llegan mal
-   de una fuente se corrigen (tildes, mayúsculas) antes de mostrarse.
-7. **Una tipografía, un sistema.** Source Serif 4 sólo para títulos de nota,
-   de sección y de tarjeta, y la marca. Todo dato, cifra y etiqueta va en
-   Inter, con cifras tabulares. Cada tarjeta (clima, farmacia, dólar, agenda,
-   buzón, números útiles) usa la misma etiqueta, el mismo dato principal, el
-   mismo texto secundario y las mismas acciones ("Ver la semana →"). Hasta el
-   27/09 eran Fraunces e IBM Plex Sans, que en el celular se veían pesadas. En
-   los titulares, las cifras van a la altura de las
-   mayúsculas y de ancho propio (`lining-nums proportional-nums`). El detalle
-   y las variables están en `MEDIA-KIT.md` ("El sistema tipográfico") y al
-   principio del bloque de tarjetas de `web/app/globals.css`.
-8. **Todo se ve bien en cualquier tamaño.** Sin desborde horizontal, sin
-   texto cortado ni pisado, columnas alineadas, contraste de 4,5:1 o más, de
-   320 a 1440 píxeles. La columna de la derecha es una sola pila continua
-   (clima, farmacia, dólar, agenda, buzón, útiles), sin huecos.
-9. **Una nota por tema.** Dos notas con el mismo título (o casi) no conviven en
-   la portada: se queda la más relevante y la otra conserva su página.
-10. **Siempre lo nuevo primero, y cada nota con su tiempo.** La tapa lleva
-    cinco notas de cinco secciones distintas, todas con la hora de la fuente
-    (una nota cuya fuente no dijo la hora no compite por la tapa: queda en su
-    sección). Donde se lista una nota —tapa, secciones, temas, "Seguí leyendo"
-    y la página de la nota— se dice hace cuánto salió, con UNA sola escala:
-    "recién", "hace N min", "hace N h", "ayer", "hace N días". Si la fuente no
-    fechó la nota, cuenta desde que apareció en el sitio (es lo honesto para
-    el lector). Nunca una fila sin tiempo, ni frases como "la vimos hace".
-11. **Cada sección de la portada muestra tres notas, siempre.** Las tres más
-    nuevas de esa sección, sin repetir las de la tapa. La tapa (la grande y las
-    cuatro de abajo) usa sólo lo de las últimas 36 horas; si una sección tiene
-    menos de tres ahí, se completa con lo más nuevo del archivo, pero **nunca
-    con nada de más de 36 horas** (28/09, Hernán: "en la tapa, lo que pasó
-    entre ayer y hoy"; eran 72 horas desde el 27/09, y antes 14 días): vuelve sólo lo de esas horas que la ingesta ya no trae, con cuerpo,
-    sin repetidas, sin notas propias y sin lo que el semáforo retiró, y cada una
-    **muestra su tiempo real**: nunca se inventa frescura. Una misma historia no
-    completa dos secciones (`HORAS_PARA_COMPLETAR`). Si ni así hay tres, van las que haya; una
-    sección sin ninguna no se dibuja (`armarTapa`, `web/lib/datos.js`).
-12. **"Seguí leyendo" siempre está y nunca repite.** Cuatro notas: dos de la
-    misma sección y dos de otras (de secciones distintas entre sí), todas con
-    su hora y de la más nueva a la más vieja. Son distintas entre sí y de la
-    nota que se lee: mismo titular, mismo tema o las mismas palabras cuentan
-    como la misma historia (`mismaHistoria`, `web/lib/texto.js`). No entra la
-    nota del dólar ni un repaso mientras haya otra cosa, ni notas sin hora salvo
-    que no quede nada más. Si las últimas 36 horas no alcanzan, se completa con
-    el archivo, con su fecha real (`web/lib/seguir-leyendo.js`).
-13. **Sin botones sobrantes al pie.** Ninguna página termina con "← Portada",
-    "Más de…" o "Agenda": la navegación ya está arriba. El final de una página es,
-    en este orden: "Seguí leyendo" (en las notas), la invitación a escribirnos y,
-    si hace falta, de dónde sale el dato. Una sección larga se recorre con "Ver
-    todo →" del título y con la paginación.
-14. **El menú, en una sola fila en el celular.** Con menos de 900 píxeles es una
-    fila que se desliza (scroll-snap, sin barra visible), con un degradé en el
-    borde derecho que avisa que hay más, la sección actual marcada y centrada,
-    y Agenda, Farmacias, Dólar y Teléfonos al final, en verde. Cada toque mide
-    44 px de alto. En escritorio queda como estaba.
-15. **Los servicios, compactos en el celular.** Clima, farmacia y dólar juntos no
-    pasan de 420 px de alto a 375 px de ancho (se miden: hoy 418). Van
-    apilados y no en un carrusel, para que nada quede escondido detrás de un
-    gesto. En el dólar, el celular muestra Oficial y Blue; el MEP se ve en
-    escritorio y en `/dolar`. La columna de escritorio no se achica.
-16. **La farmacia tiene identidad propia.** Cruz de farmacia (SVG propio), verde
-    farmacia de acento (borde de arriba, cruz, píldora "Farmacia de turno"),
-    y dos botones: "Llamar" (enlace `tel:` con el número completo, para marcar
-    desde un celular) y "Cómo llegar". `/farmacias` usa la misma tarjeta arriba y
-    ordena la semana (cada día con su tacito verde, sus farmacias con la
-    dirección y el teléfono que llama), sin repetir el día de hoy. Sin imágenes de
-    afuera, y con los tamaños y familias del sistema tipográfico.
+1. **Una sola línea de firma.** Corta, gris, pegada al desplegable "Fuentes". Nunca un
+   párrafo explicando quién la escribió o si la revisó una persona (eso está en
+   `/quienes-somos`).
+2. **Las fuentes, plegadas.** Un botón chico y cerrado "Fuentes (N)" con el nombre y el
+   enlace.
+3. **El análisis es interno.** Claves, qué se sabe, qué falta confirmar, lo que aportó
+   cada fuente y el nivel de verificación no se ven en la web.
+4. **No se copia texto de otro.** Ni en una nota ni en una ficha de evento: los datos van
+   con palabras nuestras (plantilla o IA verificada), nunca la descripción cruda de la
+   fuente.
+5. **Nada de "en vivo"** si no está en vivo. Los datos que se actualizan en el navegador
+   (dólar, clima, "hace X") dicen la hora real de su última actualización.
+6. **Sin promoción, sin mayúsculas sostenidas ni signos dobles** en ningún título ni
+   texto. Los nombres que llegan mal de una fuente se corrigen antes de mostrarse.
+7. **Una tipografía, un sistema.** Source Serif 4 sólo para títulos y la marca; todo
+   dato, cifra y etiqueta en Inter, con cifras tabulares (`MEDIA-KIT.md`).
+8. **Todo se ve bien en cualquier tamaño**, de 320 a 1440 píxeles: sin desborde, sin
+   texto cortado, contraste de 4,5:1 o más.
+9. **Una nota por tema.** Dos notas con el mismo título (o casi) no conviven en la
+   portada, y la misma noticia no tiene dos páginas (sección 2, "Una noticia, una nota").
+10. **Lo nuevo primero, y cada nota con su tiempo.** Donde se lista una nota se dice hace
+    cuánto salió, con una sola escala ("recién", "hace N min", "hace N h", "ayer", "hace N
+    días"). Si la fuente no fechó la nota, cuenta desde que apareció en el sitio. Nunca se
+    inventa frescura.
+11. **Cada sección de la portada muestra tres notas** de las últimas 36 horas, sin repetir
+    las de la tapa ni una misma historia en dos secciones; si no hay tres, van las que
+    haya, y una sección sin ninguna no se dibuja.
+12. **"Seguí leyendo" siempre está y nunca repite**: cuatro notas, dos de la misma sección
+    y dos de otras, todas distintas de la que se lee.
+
+El detalle del diseño (menú, tarjetas de servicio, farmacia) está en `MEDIA-KIT.md` y
+`docs/06-WEB.md`.
 
 ## 8. Notas propias: el dólar, los podcasts y la agenda
 
-Son notas que arma el sitio con datos propios, **sin IA**: un texto de
-plantilla lleno con números o con lo ya publicado, así que no hay nada que
-inventar. Son notas normales (portada, sección, feed, archivo) y pasan por la
-regla de cuerpo como cualquier otra. **No van a Facebook como posteo ni
-entran a un podcast**: serían redundantes. El detalle técnico está en
-`docs/06-WEB.md` ("Las notas propias", `web/lib/notas-propias.js`).
+Son notas que arma el sitio con datos propios, **sin IA**: una plantilla llena con
+números o con lo ya publicado, así que no hay nada que inventar. Pasan por la regla de
+cuerpo como cualquier otra. **No van a Facebook como posteo ni entran a un podcast.**
 
-**El dólar.** La cotización del momento se muestra en `/dolar`, que se
-actualiza sola. Además, **una nota propia, sólo el día hábil en que el dólar
-se mueve** (el blue o el oficial, 2% o más contra el día hábil anterior que
-guardó el sitio; 28/09, Hernán: el dato de todos los días ya está en la
-portada y en `/dolar`), desde las 11 de Balcarce, con los números de ese momento (oficial, blue, MEP, contado con
-liqui, tarjeta, mayorista y la brecha), comparados sólo con lo que el sitio
-guardó de días anteriores. Si el oficial no se actualizó ese día (feriado, el
-mercado no abrió), no se hace. Sección Economía, sin ganarle a lo de Balcarce.
-En cambio, la nota **de otro medio** cuyo título es la cotización ("dólar
-hoy", "dólar blue"…) no sale sola: queda amarilla con el motivo "cotización
-del dólar: se muestra en /dolar", no se avisa por WhatsApp y, si ya tenía
-página, la conserva.
+**El dólar.** La cotización está en `/dolar`, que se actualiza sola. Además hay **una nota
+propia sólo el día hábil en que el dólar se mueve** (el blue o el oficial, 2 % o más contra
+el día hábil anterior que guardó el sitio), desde las 11: título con el día y los dos
+números que más se buscan ("El dólar blue cotiza a $1.560 este viernes 25; el oficial, a
+$1.540"), nunca "abre" ni "en vivo", sin adjetivos ni pronósticos. Sección Economía. La
+nota de otro medio cuyo título es la cotización no sale sola (sección 2).
 
-**Los podcasts.** El guion se arma sólo con lo ya publicado en la web: el
-titular de cada nota y, si el texto es propio (reescrito por la IA o por una
-persona), una oración de la bajada. Nunca se nombra la fuente. Con menos de
-dos notas, ese podcast no sale. Cuando un podcast sale, **tiene su nota en la
-web**: cada nota que se contó, con su titular, su enlace y una o dos frases de
-lo que ya publicó, y los botones para verlo en Instagram y Facebook. Si una
-de esas notas se retira después, el repaso se rearma sin ella. Cuáles notas y
-a qué hora: sección 9 y `docs/07-REDES.md`.
+**Los podcasts.** El guion se arma sólo con lo ya publicado: el titular de cada nota y, si
+el texto es propio, una oración de la bajada. Nunca se nombra la fuente. Con menos de dos
+notas, ese podcast no sale. Cuando sale, **tiene su nota en la web**: cada nota que se
+contó, con su titular, su enlace y una o dos frases, y los botones para verlo en Instagram
+y Facebook. Nunca incluye Política ni Policiales. Si una de esas notas se retira, el
+repaso se rearma sin ella.
 
-**Cómo se escriben.** La del dólar: título con el día y los dos números que
-más se buscan ("El dólar blue cotiza a $1.560 este viernes 25; el oficial, a
-$1.540"), nunca "abre" ni "en vivo", porque la nota puede salir un rato después
-de la apertura. Sin adjetivos ("se dispara", "se desploma") y sin pronósticos:
-sólo los números y la diferencia en pesos y en porcentaje. La firma dice la hora
-real en que se consultaron los datos. La del repaso: cada nota con su titular
-enlazado y lo que esa nota ya publicó; nunca incluye Política ni Policiales
-(tampoco los podcasts), y sin dos notas con página no hay repaso.
-
-**Quién las firma.** La nota dice que es de Radar Balcarce y de dónde salen
-los datos (por ejemplo, la del repaso: "Nota de Radar Balcarce: el texto del
-repaso publicado en nuestras redes"), y los datos para Google dicen "Radar
-Balcarce". Nunca dicen que las escribió una IA, porque no la escribió.
-
-**La agenda: una página por evento, sin IA.** Cada fecha de la agenda tiene su
-página (`/agenda/<nombre>-<id>`), armada con los datos y una plantilla
-(`web/lib/eventos.js`): "Del viernes 9 al lunes 12 de octubre, desde las
-12.30, en…". No hay nada que inventar.
-
-- **Sólo con fecha confirmada**: la del municipio o una que publicó una persona
-  desde el panel. Las fiestas del calendario anual dicen "fecha a confirmar"
-  hasta entonces. Una fecha aproximada nunca se publica como confirmada.
-- **Qué muestra la ficha** (25/09): el título (con los nombres bien escritos),
-  una bajada de plantilla con cuándo y dónde, y un bloque de datos: Cuándo,
-  Dónde (con "Cómo llegar"), Entrada, Organiza y, si se detecta, "Qué hay"
-  (gastronomía, feria o stands, música en vivo, estacionamiento, ambiente
-  familiar: etiquetas nuestras, detectadas por palabras clave en la descripción
-  de la fuente y nunca negadas). Debajo, los botones: Agendar en el celular,
-  Google Calendar y, si el organizador lo cargó, "Entradas e información ↗"
-  (es una acción útil, va como botón). Al pie, la firma corta y "Fuentes (1)".
-- **Qué NO muestra**: la descripción que trae el municipio (es el texto de
-  otro, con mayúsculas y frases de venta como "no te quedes afuera"; no se
-  copia, igual que con las notas); ningún párrafo explicativo de firma; ni
-  enlaces a la fuente sueltos ("Lo que cuenta la Municipalidad", "Ver en la
-  agenda…"): el enlace al original va adentro del desplegable de fuentes. La
-  descripción cruda tampoco va al .ics ni a los datos para Google (llevan la
-  bajada de plantilla). Sólo se muestra la descripción que escribió una
-  persona de la redacción desde el panel ("De qué se trata"). Una prueba
-  (`pruebas/eventos.test.mjs`) cuida todo esto.
-- **Los nombres se limpian** (`nombreDeEvento`, `web/lib/eventos.js`), en la
-  ficha, la lista, la portada, el .ics y la tarjeta para compartir: lo que
-  viene TODO en mayúsculas o todo en minúscula pasa a mayúscula inicial (las
-  siglas TC, UTTD, ARG-13, ACTC se quedan) y una lista de correcciones conocidas
-  repone las tildes ("Autódromo", "Napaleofú", "Misión"). Un nombre nuevo mal
-  escrito se suma a `CORRECCIONES`.
-- **La entrada no se inventa**: si no la informaron, la página dice "No la
-  informaron. Consultá el valor con quien organiza", nunca "gratis" por las dudas.
-- La tarjeta para compartir es propia, **nunca el afiche del organizador**.
-- **La firma es una línea corta y gris**, pegada al desplegable "Fuentes (N)" (el
-  mismo pie que las notas): "Ficha con los datos de la Municipalidad de
-  Balcarce" o "Ficha cargada por la redacción". La explicación larga va sólo al
-  abrir el desplegable, y los datos para Google dicen lo mismo. Nunca un
-  párrafo a la vista sobre quién la escribió o la revisó.
-- El semáforo también mira la agenda: si el nombre de un evento da rojo, no
-  sale; si da rojo la descripción, sale sólo con los datos.
-- Un evento no es una noticia: no entra en la lista de notas, el feed ni el
-  sitemap de noticias. Cuando pasa, la página sigue 60 días con el aviso "Este
-  evento ya pasó".
+**La agenda: una página por evento, sin IA** (`web/lib/eventos.js`). Sólo con **fecha
+confirmada** (la del municipio o la que publicó una persona); una fecha aproximada nunca se
+publica como confirmada. La ficha dice cuándo, dónde, la entrada ("No la informaron.
+Consultá el valor con quien organiza", nunca "gratis" por las dudas) y quién organiza,
+con los nombres limpios de mayúsculas. Nunca copia la descripción que trae el municipio
+(sólo la que escribió una persona de la redacción) y la tarjeta para compartir es propia,
+nunca el afiche del organizador. El semáforo también mira la agenda. Un evento no es una
+noticia: no va al feed ni al sitemap de noticias, y su página sigue 60 días con el aviso
+"Este evento ya pasó".
 
 ## 9. Las redes
 
-Resumen del criterio. **Cómo suenan y qué dicen las piezas de redes (la voz, los
-saludos, la dirección, una ficha por pieza) está en
-[`CRITERIO-REDES.md`](CRITERIO-REDES.md)**: es el documento único de las redes y
-manda sobre lo que se repita acá. Los horarios, las piezas y cómo se publica, en
+Cómo suenan y qué dicen las piezas está en [`CRITERIO-REDES.md`](CRITERIO-REDES.md), que
+manda sobre lo que se repita acá. Los horarios y cómo se publica, en
 [`docs/07-REDES.md`](docs/07-REDES.md).
 
-- **Sólo sale lo que ya está publicado en la web.** Lo que el semáforo frenó no
-  llega a las redes.
-- **Por ahora, sólo lo de Balcarce (27/09, Hernán):** a Facebook, Instagram y
-  los podcasts van las notas de un medio de Balcarce o de un medio de afuera
-  que dice Balcarce en su propio título. Del automovilismo de afuera, sólo lo
-  que nombra a una figura argentina (Colapinto). Nada nacional ni de otra
-  ciudad suelto: el 26/09 el podcast contó una nota de Necochea.
-- **Nada sensible sale solo:** Política, Policiales y lo que está en rojo
-  esperan a una persona en todas las piezas. Tampoco va una nota sin cuerpo,
-  ni una nota propia (el dólar, el repaso de un podcast).
-- **Facebook:** hasta **5 notas por día**, con relevancia **75 o más**, de 8
-  a **22:00 en punto**, con 90 minutos entre una y otra, y **sin repetir un
-  tema** publicado en las últimas 24 horas. El posteo lleva el texto para
-  redes (o el título y la bajada), **el enlace a nuestra nota**
-  (`radarbalcarce.com/…`) y hasta tres hashtags. **Nunca nombra la fuente** (eso
-  está en la nota de la web) **ni dice "Resumen hecho con IA"** (desde el 26/09).
-- **Instagram** recibe video con voz (historias y reels) y el espejo de cada
-  posteo de Facebook como tarjeta propia. Desde el 28/09 el espejo lleva la
-  foto de la nota guardada en el banco propio, sin marca de agua y con el
-  crédito en el texto del posteo (`FOTO_EN_INSTAGRAM`); sin foto que sirva,
-  la placa. La tarjeta que acompaña el enlace en Facebook y WhatsApp también
-  lleva esa foto (`FOTO_EN_ENLACE`), con el crédito en el epígrafe de la
-  nota (ver "Las fotos", sección 2).
-- **Podcasts en vez de noticias sueltas:** tres por día, con notas de
-  relevancia **62 o más** (el de la noche, sin mínimo: repasa el día) y de temas distintos, sin repetir las del podcast
-  anterior.
+- **Sólo sale lo que ya está publicado en la web.** Lo que el semáforo frenó no llega a
+  las redes.
+- **Por ahora, sólo lo de Balcarce:** a Facebook, Instagram y los podcasts van las notas
+  de un medio de Balcarce o de uno de afuera que dice Balcarce en su título. Del
+  automovilismo de afuera, sólo lo que nombra a una figura argentina.
+- **Nada sensible sale solo:** Política, Policiales y lo que salió en la web porque lo
+  aprobó una persona van a las redes sólo si una persona las marca desde el panel del
+  celular ("También a Facebook e Instagram"); lo rojo, nunca. Tampoco va una nota sin
+  cuerpo ni una nota propia.
+- **Facebook:** hasta 5 notas por día, con relevancia 75 o más, de 8 a 22:00 en punto, con
+  90 minutos entre una y otra, y sin repetir un tema publicado en las últimas 24 horas. El
+  posteo lleva el texto para redes (o el título y la bajada), **el enlace a nuestra nota**
+  y hasta tres hashtags. **Nunca nombra la fuente ni dice "Resumen hecho con IA".**
+- **Instagram** recibe video con voz (historias y reels) y el espejo de cada posteo de
+  Facebook, con la foto de la nota del banco propio (sin marca de agua, con el crédito en
+  el texto) o, si no hay, la placa.
+- **Podcasts en vez de noticias sueltas:** tres por día, con notas de relevancia 62 o más
+  (el de la noche, sin mínimo: repasa el día), de temas distintos y sin repetir las del
+  podcast anterior.
 
 ## 10. Correcciones y firma
 
-**Cada nota dice quién la escribió**, y lo dice en **una sola línea chica y gris**
-al pie, pegada al desplegable de fuentes (`firmaCorta`, en
-`web/components/metadatos.js`; la línea es el renglón del `<summary>` de
-`web/components/verificacion.js`), y en los datos para Google (`author`, con el
-mismo criterio). Los textos:
+**Cada nota dice quién la escribió**, en **una sola línea chica y gris** al pie, pegada al
+desplegable de fuentes (`firmaCorta`, `web/components/metadatos.js`), y en los datos para
+Google (`author`):
 
 | La nota es… | La línea dice |
 |---|---|
@@ -966,43 +684,30 @@ mismo criterio). Los textos:
 | El texto de la fuente, sin reescribir | "Texto de *medio* · Fuentes (N)" |
 | Propia (dólar, repaso) | Lo que dice la nota: "Nota de Radar Balcarce con datos de…" |
 
-La explicación larga ("la escribió una inteligencia artificial con lo que
-publicaron las fuentes, y se verificó automáticamente contra ellas: un dato que
-no estaba se descarta", más el enlace a *Quiénes somos*) se ve sólo al abrir el
-desplegable. Nunca se dice "sin revisión humana": es un dato interno, y el
-sitio nunca promete una revisión que no hubo. En las redes no se repite: quién
-escribió la nota se dice en la nota. El pie de la web lo dice para todo el sitio: los textos los escribe una IA
-y se verifican automáticamente contra la fuente, que queda enlazada; lo
-sensible lo revisa una persona antes de salir; las voces de los videos
-también son de IA.
+La explicación larga se ve sólo al abrir el desplegable. Nunca se dice "sin revisión
+humana", y el sitio nunca promete una revisión que no hubo. En las redes no se repite. El
+pie de la web lo dice para todo el sitio: los textos los escribe una IA y se verifican
+automáticamente contra la fuente; lo sensible lo revisa una persona antes de salir; las
+voces de los videos también son de IA.
 
 **Cuando algo sale mal:**
 
-- **Una persona corrige desde el panel** (título, bajada o cuerpo). Lo que
-  decide una persona manda siempre: la IA nunca pisa una decisión humana. Al
-  corregir, las partes para la redacción se borran, porque las armó la IA
-  sobre otro texto y podrían contradecir la corregida.
-- **Se saca una nota**: si una persona la bloquea o la descarta, o el semáforo
-  la pasa a rojo o amarillo, sale de las listas y su página deja de existir (el amarillo sólo por el cupo o por los medios que la cuentan la saca de las listas pero le deja la página: 28/09)
-  hasta que una persona la apruebe. Sin el panel, se anota en
-  `web/data/retiradas.json` (motivo, cuándo y quién).
-- **Una corrección sin el panel** (27/09): el título, la bajada o la sección de
-  una nota van en `web/data/correcciones.json`, con motivo, cuándo y quién (sin
-  motivo no vale). Manda sobre lo que escribe la IA y la dirección de la nota no
-  cambia (`correccionesAMano` y `conCorreccion`, `web/lib/archivo.js`). Desde el
-  27/09 a la noche también el **cuerpo** (`CAMPOS_CORREGIBLES`): se aplica antes
-  de mirar si la nota tiene cuerpo, así que cuenta para "sin cuerpo no se
-  publica", y a esa nota ya no se le pide nada a Gemini. Se escribe con este
-  mismo criterio (sección 12), contra el texto de las fuentes, y el campo "por"
-  dice quién. Esa noche Claude escribió así 37 cuerpos de notas que esperaban a
-  Gemini ("redacción de Claude, pedida por Hernán"), y en un repaso editorial de
-  todo lo visible retiró 68 notas y después 15 más, y corrigió 36.
-- **El enlace no se rompe**: la dirección de una nota queda fija desde que sale
-  aunque cambie el titular, y la página dura 180 días aunque salga de la
-  portada.
-- **Cuando se arregla algo que estuvo mal publicado, se escribe una prueba**,
-  para que no vuelva a pasar (`docs/10-REGLAS-Y-PRUEBAS.md`, regla 19). Y si el error es de
-  criterio, se corrige **acá**.
+- **Una persona corrige desde el panel del celular** (título, bajada, cuerpo o sección) o,
+  sin el panel, en `web/data/correcciones.json`, siempre con motivo, cuándo y quién (sin
+  motivo no vale). Lo que decide una persona manda siempre: la IA nunca pisa una decisión
+  humana, y a una nota con el cuerpo corregido no se le pide nada más a Gemini. La
+  dirección de la nota no cambia.
+- **Se saca una nota:** si una persona la retira o la descarta (desde el celular, o en
+  `web/data/retiradas.json`), o el semáforo la pasa a rojo o a amarillo por lo que dice,
+  sale de las listas y su página deja de existir. El amarillo sólo por el cupo o por los
+  medios que la cuentan la saca de las listas pero le deja la página. Si ya había salido
+  en Facebook o Instagram, allá se borra a mano.
+- **El enlace no se rompe:** la dirección de una nota queda fija desde que sale aunque
+  cambie el titular, y la página dura 180 días aunque salga de la portada. Si la misma
+  noticia tenía dos direcciones, la que se va redirige a la que queda.
+- **Cuando se arregla algo que estuvo mal publicado, se escribe una prueba**, para que no
+  vuelva a pasar (`docs/10-REGLAS-Y-PRUEBAS.md`). Y si el error es de criterio, se
+  corrige **acá**.
 
 ## 11. Los números
 
@@ -1238,24 +943,3 @@ mismo y hasta tres notas que el sitio ya publicó sobre el tema en los últimos
 <!-- PROMPT:NOTA_PANEL:FIN -->
 
 <!-- PROMPT:FIN -->
-
-## Dónde está cada cosa en el código
-
-| Qué | Dónde |
-|---|---|
-| La instrucción de la IA (se lee de acá) | `ingesta/prompt-editorial.mjs` la carga; `reels/reescritura.mjs` la usa |
-| Los números | `ingesta/criterio.mjs`, controlados por `pruebas/criterio.test.mjs` |
-| El semáforo, las secciones, las fuentes y sus pesos | `ingesta/fuentes.mjs` (`REGLAS_SEMAFORO`, `REGLAS_SECCION`, `FUENTES`, `FUENTES_NACIONALES`) |
-| El cruce de medios y sus fuentes | `ingesta/cruce.mjs` y `ingesta/fuentes-cruce.mjs`; la lista de todas, `FUENTES.md` (`ingesta/listar-fuentes.mjs`); cuántos medios pide lo de afuera, `exigirMedios` y `mediosMinimosDe` (`ingesta/ingesta.mjs`, con `MEDIOS_DE_AFUERA` de `ingesta/criterio.mjs`) |
-| La lectura con IA | `ingesta/lectura-ia.mjs` (fichas en `web/data/fichas.json`), con `ingesta/perfil-balcarce.md` |
-| Títulos sin "en Balcarce" al final, sin etiqueta adelante y sin coma colgando | `tituloAutomatico` (con `sinBalcarceAlFinal`, `sinEtiqueta` y `sinCierreColgado`), en `web/lib/titulos.js` |
-| Lo que se corrige solo antes de verificar (etiqueta, coma, "este sábado", "cabe destacar", una tilde) | `arreglarEscritura`, en `ingesta/verificar.mjs` |
-| Las frases de relleno y el umbral de tildes | `RELLENO` y `ESTILO`, en `ingesta/criterio.mjs` |
-| Retiradas y correcciones sin el panel | `web/data/retiradas.json` y `web/data/correcciones.json` (`web/lib/archivo.js`) |
-| El verificador | `ingesta/verificar.mjs` |
-| El nivel de verificación, el tono y los intentos | `reels/reescritura.mjs` |
-| "Sin cuerpo no se publica" | `web/lib/cuerpo.js` |
-| Lo que ve el lector de las fuentes | `web/lib/fuentes-de-la-nota.js` y `web/components/verificacion.js` |
-| Qué sale en las redes | `redes/elegir.mjs` |
-| La firma (una línea) | `firmaCorta` en `web/components/metadatos.js`; se ve en `web/components/verificacion.js` |
-| Las pruebas de todo esto | `pruebas/criterio.test.mjs`, `pruebas/notas.test.mjs`, `pruebas/cruce-coherente.test.mjs`, `pruebas/editor.test.mjs`, `pruebas/reescritura.test.mjs`, `pruebas/verificar.test.mjs`, `pruebas/estilo.test.mjs` (títulos, tildes, fechas relativas, relleno y los arreglos mecánicos, 28/09), `pruebas/cuerpo.test.mjs`, `pruebas/semaforo.test.mjs` |
