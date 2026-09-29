@@ -2292,6 +2292,11 @@
   "ultimo": "2026-09-25T15:30:41.452Z",
   "motivo": "con cuerpo"
  },
+ "8wzaw7": {
+  "intentos": 1,
+  "ultimo": "2026-09-29T07:01:07.758Z",
+  "motivo": "Gemini: HTTP 401 (clave redaccion): {\n  \"error\": {\n    \"code\": 401,\n    \"message\": \"The bound service account is deleted or disabled. The service account bound "
+ },
  "913w0e": {
   "intentos": 1,
   "ultimo": "2026-09-27T04:30:48.863Z",

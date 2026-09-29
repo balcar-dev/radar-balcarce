@@ -1,5 +1,5 @@
 {
-  "generado": "2026-09-29T06:31:24.371Z",
+  "generado": "2026-09-29T07:01:09.876Z",
   "notas": [
     {
       "id": "1hjmkd4",
@@ -1208,7 +1208,7 @@
       "fecha": "2026-09-28T18:46:45.000Z",
       "sinFecha": false,
       "visto": "2026-09-28T19:31:40.140Z",
-      "relevancia": 74,
+      "relevancia": 67,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1766,6 +1766,120 @@
       "cuerpoAMano": true
     },
     {
+      "id": "5ddc24",
+      "titulo": "El riesgo país llega a 642 puntos y marca un récord anual",
+      "copete": "El indicador del JP Morgan trepa el lunes tras una suba de más de 30 unidades. Los bonos soberanos y la Bolsa operan en baja.",
+      "cuerpo": "El índice que elabora el JP Morgan trepa el lunes a 642 puntos básicos tras una suba de más de 30 unidades y alcanza su nivel más alto en lo que va del año. El indicador había cerrado el viernes en 609 unidades.\n\nLos bonos soberanos Bonares y Globales registran una caída promedio de 1,8% y la Bolsa acumula su sexta baja consecutiva con un retroceso del 2,1%, encabezada por las acciones de Banco BBVA, Grupo Financiero Galicia y Grupo Supervielle. En paralelo, el dólar oficial minorista se negocia entre 1.545 y 1.550 pesos para la venta.",
+      "guion": "El riesgo país llega a 642 puntos y marca un récord anual",
+      "seccion": "Economía",
+      "medios": [
+        "Diario Popular",
+        "El Día"
+      ],
+      "enlace": "https://www.eldia.com/politica-y-economia/el-riesgo-pais-sigue-subiendo-y-llega-al-nivel-mas-alto-en-lo-que-va-del-ano-politica-y-economia_1790610300",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-28T16:00:16.000Z",
+      "sinFecha": false,
+      "visto": "2026-09-28T23:01:09.560Z",
+      "relevancia": 51,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "El riesgo país alcanza los 642 puntos básicos este lunes.",
+        "El indicador del JP Morgan marca un nuevo máximo anual.",
+        "Los bonos soberanos y la Bolsa operan en terreno negativo.",
+        "El dólar oficial registra valores de hasta 1.550 pesos."
+      ],
+      "seSabe": [
+        "El riesgo país trepó este lunes a 642 puntos básicos, según varias fuentes.",
+        "El indicador elaborado por el JP Morgan superó las 600 unidades el viernes pasado, según El Día.",
+        "Los bonos Bonares y Globales caen un 1,8% en promedio, de acuerdo con El Día.",
+        "El dólar oficial cotiza entre 1.545 y 1.550 pesos para la venta."
+      ],
+      "noConfirmado": [
+        "Existen leves diferencias entre las fuentes sobre el valor exacto de apertura y cierre del índice durante la jornada, ubicándose entre 628 y 642 puntos."
+      ],
+      "textoRedes": "El riesgo país trepó este lunes a 642 puntos básicos y alcanza su nivel más alto en lo que va del año. En paralelo, los bonos soberanos y la Bolsa operan en baja, mientras el dólar oficial cotiza entre 1.545 y 1.550 pesos.",
+      "etiquetas": [
+        "riesgo pais",
+        "mercados",
+        "dolar",
+        "bonos",
+        "jp morgan"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Día",
+          "enlace": "https://www.eldia.com/politica-y-economia/el-riesgo-pais-sigue-subiendo-y-llega-al-nivel-mas-alto-en-lo-que-va-del-ano-politica-y-economia_1790610300",
+          "fecha": "2026-09-28T16:00:16.000Z",
+          "oficial": false,
+          "aporte": "Detalló la caída de los bonos Bonares y Globales, y las bajas en la Bolsa."
+        },
+        {
+          "medio": "Agencia DIB",
+          "enlace": "https://dib.com.ar/economia/el-riesgo-pais-alcanzo-los-641-puntos-basicos-su-nivel-mas-alto-lo-que-va-del-ano-n56090",
+          "fecha": "2026-09-28T22:22:00.000Z",
+          "oficial": false,
+          "aporte": "Informó el cierre previo del índice en 609 unidades."
+        },
+        {
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/economia/2026/09/28/el-riesgo-pais-vuelve-a-subir-y-el-dolar-oficial-marca-un-nuevo-record/",
+          "fecha": "2026-09-28T22:03:22.000Z",
+          "oficial": false,
+          "aporte": "Indicó la cotización del dólar oficial en el Banco Nación a 1.545 pesos."
+        },
+        {
+          "medio": "Crónica",
+          "enlace": "https://www.cronica.com.ar/politica/el-riesgo-pais-alcanzo-su-nivel-mas-alto-en-lo-que-va-del-ano/",
+          "fecha": "2026-09-28T22:23:00.000Z",
+          "oficial": false,
+          "aporte": "Señaló que el indicador acumula un incremento del 22% en septiembre."
+        },
+        {
+          "medio": "Canal 26",
+          "enlace": "https://www.canal26.com/economia/2026/09/28/el-riesgo-pais-alcanzo-los-642-puntos-su-maximo-de-2026-el-dolar-oficial-tambien-marco-un-nuevo-record/",
+          "fecha": "2026-09-28T19:10:53.000Z",
+          "oficial": false,
+          "aporte": "Reportó que el dólar oficial minorista alcanzó los 1.550 pesos."
+        },
+        {
+          "medio": "Noticias Argentinas (NA)",
+          "enlace": "https://noticiasargentinas.com/economia/los-bonos-operan-en-rojo-y-el-riesgo-pais-trepa-al-mayor-nivel-en-lo-que-va-del-ano_a6aba8414b62936833e69a542",
+          "fecha": "2026-09-28T21:20:00.000Z",
+          "oficial": false,
+          "aporte": "Informó una suba de más de 30 unidades en la jornada."
+        },
+        {
+          "medio": "El Marplatense",
+          "enlace": "https://www.elmarplatense.com/el-riesgo-pais-alcanzo-los-642-puntos-y-el-dolar-oficial-marco-un-nuevo-record",
+          "fecha": "2026-09-28T21:45:00.000Z",
+          "oficial": false,
+          "aporte": "Indicó que el indicador acumuló una suba del 25,2% durante septiembre."
+        },
+        {
+          "medio": "Mi8 (Canal 8 Mar del Plata)",
+          "enlace": "https://mi8.com.ar/riesgo-pais-en-642-puntos-y-dolar-a-1550-ambos-marcaron-su-maximo-del-ano/",
+          "fecha": "2026-09-28T22:29:48.000Z",
+          "oficial": false,
+          "aporte": "Señaló que los activos argentinos operan en terreno negativo."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron 8 medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "el-riesgo-pais-llega-a-642-puntos-y-marca-un-record-anual",
+      "foto": {
+        "archivo": "fotos-notas/5ddc24.jpg",
+        "credito": "Foto: El Día"
+      }
+    },
+    {
       "id": "1f9bhpx",
       "titulo": "Top Serrano clasifica sus seis equipos a los Play Off provinciales",
       "copete": "La Asociación Balcarceña de Tenis de Mesa metió a sus seis representantes en la fase decisiva de la Liga Provincial por Equipos FeBATeM. La definición será a fin de octubre en Santa Clara del Mar.",
@@ -2151,9 +2265,9 @@
         "Infobae",
         "Perfil",
         "El Destape",
+        "Página/12",
         "Noticias Argentinas (NA)",
-        "El Marplatense",
-        "Página/12"
+        "El Marplatense"
       ],
       "enlace": "https://www.infobae.com/economia/2026/09/28/la-actividad-economica-de-caba-cayo-02-en-el-segundo-trimestre-cuales-fueron-los-sectores-mas-golpeados/",
       "teniaImagenLaFuente": true,
@@ -2580,6 +2694,89 @@
       }
     },
     {
+      "id": "p9r5ff",
+      "titulo": "La caída en la vacunación encendé la alerta por la rabia",
+      "copete": "Se conmemora el día mundial de la enfermedad y advierten sobre la circulación del virus en murciélagos urbanos. El país registró cientos de casos en animales en los últimos años.",
+      "cuerpo": "El país registra una alerta sanitaria en el marco del día mundial de la lucha contra la rabia debido a la circulación del virus en murciélagos urbanos y la baja en la vacunación de mascotas.\n\nLas autoridades sanitarias señalan que las mascotas que viven dentro de hogares no están exentas del peligro si entran en contacto con la fauna silvestre urbana.\n\nEl veterinario Walter Comas advirtió que la falta de percepción del riesgo lleva a descuidar la prevención. La inmunización antirrábica en perros y gatos es obligatoria en todo el país desde los tres meses de vida.",
+      "guion": "La caída en la vacunación enciende la alerta por la rabia",
+      "seccion": "Argentina",
+      "medios": [
+        "Noticias Argentinas (NA)",
+        "La Opinión",
+        "ANDigital",
+        "El Día"
+      ],
+      "enlace": "https://noticiasargentinas.com/sociedad/rabia-en-argentina--la-caida-de-la-vacunacion-vuelve-a-encender-la-alerta_a6aba62c7b62936833e652060",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-28T12:59:47.000Z",
+      "sinFecha": false,
+      "visto": "2026-09-28T23:31:08.280Z",
+      "relevancia": 36,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Se conmemora el día mundial de la lucha contra la rabia.",
+        "Notificaron 927 casos de rabia animal entre 2019 y 2024.",
+        "Detectaron 76 casos en 2025 hasta la semana epidemiológica 22.",
+        "La vacuna antirrábica es obligatoria en perros y gatos."
+      ],
+      "seSabe": [
+        "El 28 de septiembre se conmemora el Día Mundial de la Lucha contra la Rabia en honor a Louis Pasteur.",
+        "Entre 2019 y 2024 se registraron 927 casos de rabia animal en Argentina.",
+        "En 2025 se confirmaron 76 casos en 13 jurisdicciones hasta la semana epidemiológica 22.",
+        "Se detectó un caso en un gato doméstico en la provincia de Buenos Aires durante 2025.",
+        "La vacunación antirrábica en perros y gatos es obligatoria a partir de los tres meses de edad."
+      ],
+      "noConfirmado": [
+        "No se informaron nuevas cifras de contagios posteriores a la semana epidemiológica 22 de 2025."
+      ],
+      "textoRedes": "El país advierte sobre la circulación del virus de la rabia en murciélagos y recuerda la obligatoriedad de vacunar a perros y gatos ante la baja de inmunización.",
+      "etiquetas": [
+        "salud",
+        "rabia",
+        "vacunacion",
+        "mascotas",
+        "argentina"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Noticias Argentinas (NA)",
+          "enlace": "https://noticiasargentinas.com/sociedad/rabia-en-argentina--la-caida-de-la-vacunacion-vuelve-a-encender-la-alerta_a6aba62c7b62936833e652060",
+          "fecha": "2026-09-28T12:59:47.931Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "La Opinión",
+          "enlace": "https://laopinionline.ar/articulo/rabia-en-argentina-la-caida-de-la-vacunacion-vuelve-a-encender-la-alerta",
+          "fecha": "2026-09-28T17:45:53.000Z",
+          "oficial": false,
+          "aporte": null
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1abvpqj",
+          "titulo": "Balcarce bajo alerta naranja por fuertes vientos: hubo caída de ramas, desprendimientos y cortes de luz",
+          "fecha": "2026-09-23T23:12:38.000Z",
+          "ruta": "/nota/balcarce-bajo-alerta-naranja-por-fuertes-vientos-hubo-caida-de-ramas-1abvpqj"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron cuatro medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "la-caida-en-la-vacunacion-encende-la-alerta-por-la-rabia",
+      "foto": {
+        "archivo": "fotos-notas/p9r5ff.jpg",
+        "credito": "Foto: La Opinión"
+      }
+    },
+    {
       "id": "15o4k9f",
       "titulo": "Tecnopapa, el evento que reunirá a toda la cadena productiva del país, ya tiene fecha",
       "copete": "Tecnopapa reunirá a productores paperos, asesores técnicos, empresas e instituciones de todo el país el 26 de febrero de 2027, en un establecimiento de Colonia Balcarce. La organiza el ingeniero agrónomo Celso Murias.",
@@ -2821,11 +3018,11 @@
         "LU9 Mar del Plata",
         "0221",
         "El Marplatense",
-        "Agencia DIB",
+        "Radio 10 Mar del Plata (FM 105.5)",
         "El Eco de Tandil",
+        "Agencia DIB",
         "El Día",
-        "Ecos Diarios (Necochea)",
-        "Radio 10 Mar del Plata (FM 105.5)"
+        "Ecos Diarios (Necochea)"
       ],
       "enlace": "https://dib.com.ar/sociedad/prorrogan-el-plazo-que-las-obras-sociales-regularicen-deudas-hospitales-bonaerenses-n56074",
       "teniaImagenLaFuente": true,
@@ -2935,8 +3132,8 @@
         "A24",
         "Crónica",
         "Noticias Argentinas (NA)",
-        "Minuto Uno",
-        "Radio 10 Mar del Plata (FM 105.5)"
+        "Radio 10 Mar del Plata (FM 105.5)",
+        "Minuto Uno"
       ],
       "enlace": "https://www.clarin.com/sociedad/impresionante-tormenta-granizo-azoto-cordoba-causo-destrozos-unquillo-mendiolaza_0_6Z0Q2rOb0d.html",
       "teniaImagenLaFuente": true,
@@ -2979,16 +3176,16 @@
           "aporte": null
         },
         {
-          "medio": "Minuto Uno",
-          "enlace": "https://www.minutouno.com/sociedad/impresionante-tormenta-granizo-cordoba-causo-destrozos-varias-ciudades-n6327360",
-          "fecha": "2026-09-28T12:06:00.000Z",
+          "medio": "Radio 10 Mar del Plata (FM 105.5)",
+          "enlace": "https://radio10mardelplata.com.ar/impresionante-granizada-en-cordoba-piedras-del-tamano-de-una-pelota-de-golf-provocaron-destrozos/",
+          "fecha": "2026-09-28T15:59:44.000Z",
           "oficial": false,
           "aporte": null
         },
         {
-          "medio": "Radio 10 Mar del Plata (FM 105.5)",
-          "enlace": "https://radio10mardelplata.com.ar/impresionante-granizada-en-cordoba-piedras-del-tamano-de-una-pelota-de-golf-provocaron-destrozos/",
-          "fecha": "2026-09-28T15:59:44.000Z",
+          "medio": "Minuto Uno",
+          "enlace": "https://www.minutouno.com/sociedad/impresionante-tormenta-granizo-cordoba-causo-destrozos-varias-ciudades-n6327360",
+          "fecha": "2026-09-28T12:06:00.000Z",
           "oficial": false,
           "aporte": null
         }
@@ -3150,14 +3347,14 @@
         "Perfil",
         "TN (Todo Noticias)",
         "El Cronista",
+        "Página/12",
         "iProfesional",
         "Crónica",
         "Radio Mitre",
         "Diario Popular",
         "Noticias Argentinas (NA)",
         "Ámbito",
-        "La Nueva",
-        "Página/12"
+        "La Nueva"
       ],
       "enlace": "https://www.infobae.com/economia/2026/09/28/iniciaron-un-nuevo-proceso-de-privatizacion-de-las-acciones-de-enarsa/",
       "teniaImagenLaFuente": true,
@@ -3583,6 +3780,7 @@
         "El Cronista",
         "El Destape",
         "Perfil",
+        "Página/12",
         "A24",
         "C5N",
         "Crónica",
@@ -3592,8 +3790,7 @@
         "La Tecla",
         "ANDigital",
         "Infobrisas (Radio Brisas)",
-        "Ámbito",
-        "Página/12"
+        "Ámbito"
       ],
       "enlace": "https://www.infobae.com/politica/2026/09/28/cayo-la-confianza-en-el-gobierno-e-igualo-la-peor-medicion-de-la-era-milei/",
       "teniaImagenLaFuente": true,
@@ -3646,6 +3843,13 @@
           "medio": "Perfil",
           "enlace": "https://www.perfil.com/noticias/politica/el-indice-de-confianza-en-el-gobierno-cayo-59-en-septiembre-de-2026.phtml",
           "fecha": "2026-09-28T15:45:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Página/12",
+          "enlace": "https://www.pagina12.com.ar/2026/09/28/la-confianza-en-el-gobierno-de-milei-volvio-a-caer-el-indice-toco-uno-de-sus-niveles-mas-bajos/",
+          "fecha": "2026-09-28T16:51:21.000Z",
           "oficial": false,
           "aporte": null
         },
@@ -3718,13 +3922,6 @@
           "fecha": "2026-09-28T15:17:00.000Z",
           "oficial": false,
           "aporte": null
-        },
-        {
-          "medio": "Página/12",
-          "enlace": "https://www.pagina12.com.ar/2026/09/28/la-confianza-en-el-gobierno-de-milei-volvio-a-caer-el-indice-toco-uno-de-sus-niveles-mas-bajos/",
-          "fecha": "2026-09-28T16:51:21.000Z",
-          "oficial": false,
-          "aporte": null
         }
       ],
       "slug": "cayo-la-confianza-en-el-gobierno-e-igualo-la-peor-medicion-de-la-era",
@@ -3746,11 +3943,11 @@
         "La Nación",
         "C5N",
         "Canal 26",
-        "InfoRegión",
         "La Noticia 1",
         "Ámbito",
         "El Cronista",
-        "InfoGEI"
+        "InfoGEI",
+        "InfoRegión"
       ],
       "enlace": "https://www.lanoticia1.com/noticia/peregrinacion-a-lujan-como-sera-el-operativo-para-acompanar-a-los-fieles-durante-los-60-kilometros",
       "teniaImagenLaFuente": true,
@@ -3814,13 +4011,6 @@
           "aporte": null
         },
         {
-          "medio": "InfoRegión",
-          "enlace": "https://www.inforegion.com.ar/2026/09/28/como-sera-el-recorrido-de-la-peregrinacion-a-lujan-en-2026/",
-          "fecha": "2026-09-28T22:01:02.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
           "medio": "Ámbito",
           "enlace": "https://www.ambito.com/informacion-general/peregrinacion-lujan-2026-cuando-es-y-que-tener-cuenta-la-caminata-n6322534",
           "fecha": "2026-09-28T12:47:00.000Z",
@@ -3845,6 +4035,13 @@
           "medio": "InfoGEI",
           "enlace": "https://infogei.ar/peregrinacion-a-lujan-como-sera-el-operativo-provincial-para-acompanar-a-los-caminantes/",
           "fecha": "2026-09-28T20:07:53.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "InfoRegión",
+          "enlace": "https://www.inforegion.com.ar/2026/09/28/como-sera-el-recorrido-de-la-peregrinacion-a-lujan-en-2026/",
+          "fecha": "2026-09-28T22:01:02.000Z",
           "oficial": false,
           "aporte": null
         }
@@ -3989,7 +4186,6 @@
         "TN (Todo Noticias)",
         "Olé",
         "Doble Amarilla",
-        "La Página Millonaria",
         "Minuto Uno"
       ],
       "enlace": "https://www.dobleamarilla.com.ar/ascenso-e-interior/marcos-acuna-se-presento-en-las-elecciones-de-ferro-para-votar_a6ab98c7a9b8cd1f9d62e340b",
@@ -3997,7 +4193,7 @@
       "fecha": "2026-09-27T21:48:37.000Z",
       "sinFecha": false,
       "visto": "2026-09-28T16:01:28.909Z",
-      "relevancia": 74,
+      "relevancia": 64,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -4022,13 +4218,6 @@
           "medio": "Olé",
           "enlace": "https://www.ole.com.ar/river-plate/river-plate-marcos-acuna-ferro_0_onh2Lb4Iqu.html",
           "fecha": "2026-09-27T22:09:28.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "La Página Millonaria",
-          "enlace": "https://lapaginamillonaria.com/river-plate/en-su-dia-de-descanso-marcos-acuna-se-presento-en-ferro-para-votar-en-las-elecciones-el-motivo",
-          "fecha": "2026-09-27T23:18:54.000Z",
           "oficial": false,
           "aporte": null
         },
@@ -4208,8 +4397,8 @@
       "temp": 12,
       "sensacion": 11,
       "humedad": 99,
-      "viento": 11,
-      "rumbo": "S",
+      "viento": 13,
+      "rumbo": "SE",
       "cielo": "Chaparrones",
       "esDeDia": false
     },
@@ -4625,12 +4814,6 @@
       "motivo": "necesita ojo humano: \"denuncia\""
     },
     {
-      "id": "3sk31f",
-      "titulo": "ANDIS bajo la lupa: denuncian sobreprecios de hasta…",
-      "seccion": "Argentina",
-      "motivo": "necesita ojo humano: \"denuncia\""
-    },
-    {
       "id": "132bq5o",
       "titulo": "Quiniela de Santiago del Estero: resultados en VIVO de…",
       "seccion": "Argentina",
@@ -4667,12 +4850,6 @@
       "motivo": "necesita ojo humano: \"acusado\""
     },
     {
-      "id": "mrkouk",
-      "titulo": "El Gobierno denuncia vuelos no autorizados de una empresa…",
-      "seccion": "Argentina",
-      "motivo": "necesita ojo humano: \"denuncia\""
-    },
-    {
       "id": "1cmtnhl",
       "titulo": null,
       "seccion": "Economía",
@@ -4685,5 +4862,5 @@
       "motivo": "necesita ojo humano: \"denuncia\""
     }
   ],
-  "esperandoCuerpo": 11
+  "esperandoCuerpo": 10
 }
