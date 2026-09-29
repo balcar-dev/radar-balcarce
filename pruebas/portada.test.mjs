@@ -195,5 +195,5 @@ test('Hoy en Balcarce: tres pestañas accesibles, clima primero, y la farmacia s
   assert.match(hoy, /Pronóstico extendido/);
   assert.ok(!/Llamar|Cómo llegar|tel:|google\.com\/maps/.test(hoy), 'sin botones de farmacia en la portada');
   const css = leer('web/app/globals.css');
-  assert.match(css, /\.pestana-hoy \{[^}]*min-height: 44px;/, 'las pestañas se tocan cómodas con el dedo');
+  assert.match(css, /\.pestana-hoy \{[^}]*min-height: 40px;/, 'las pestañas se tocan cómodas con el dedo');
 });

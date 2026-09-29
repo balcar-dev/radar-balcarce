@@ -57,7 +57,7 @@ function PanelClima({ a, dias }) {
   const detalle = [
     a.sensacion != null ? `Sensación térmica ${a.sensacion}°` : null,
     a.viento != null ? `Viento ${[a.rumbo, a.viento].filter((x) => x != null && x !== '').join(' ')} km/h` : null,
-    a.humedad != null ? `Humedad ${a.humedad}%` : null,
+    // La humedad no entra en la portada: está en /clima.
   ].filter(Boolean).join(' · ');
   return (
     <>
@@ -66,18 +66,20 @@ function PanelClima({ a, dias }) {
           <strong>{a.temp}°</strong>
           <span>{a.cielo}</span>
         </div>
-        <IconoCielo cielo={a.cielo} esDeDia={a.esDeDia !== false} tamano={52} />
+        <IconoCielo cielo={a.cielo} esDeDia={a.esDeDia !== false} tamano={38} />
       </div>
       {detalle && <p className="detalle-hoy">{detalle}</p>}
       {dias.length > 0 && (
         <ul className="dias-hoy">
           {dias.map((d) => (
             <li key={d.fecha}>
-              <span className="nombre-dia-hoy">{DIA_CORTO[new Date(`${d.fecha}T12:00:00`).getDay()]}</span>
-              <SolChico cielo={d.cielo} tamano={30} />
-              <span className="temps-hoy"><strong>{d.max}°</strong> {d.min}°</span>
-              <span className={d.lluvia >= 20 ? 'lluvia-hoy' : 'lluvia-hoy sin-lluvia'}>
-                {d.lluvia >= 20 ? `${d.lluvia}%` : '—'}
+              <span className="nombre-dia-hoy">
+                {DIA_CORTO[new Date(`${d.fecha}T12:00:00`).getDay()]}
+                {d.lluvia >= 20 && <span className="lluvia-hoy">{` · ${d.lluvia}%`}</span>}
+              </span>
+              <span className="linea-dia-hoy">
+                <SolChico cielo={d.cielo} tamano={24} />
+                <span className="temps-hoy"><strong>{d.max}°</strong> {d.min}°</span>
               </span>
             </li>
           ))}
