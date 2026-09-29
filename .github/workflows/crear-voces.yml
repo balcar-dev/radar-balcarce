@@ -27,11 +27,11 @@ on:
       voz_mujer:
         description: 'Para dialogo: el id de la locutora (voice_…)'
         type: string
-        default: 'voice_x0fgw7agee4o'
+        default: 'voice_v8mf7jt16hch'
       voz_hombre:
         description: 'Para dialogo: el id del locutor (voice_…)'
         type: string
-        default: 'voice_gmvugyu6tti1'
+        default: 'voice_cdljkn0jpmk6'
       borrar_id:
         description: 'Sólo para borrar: el id de la voz que se quita (voice_…)'
         type: string

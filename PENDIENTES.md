@@ -183,12 +183,9 @@ repetidas y el peso de las fotos. Lo que falta, con las ideas nuevas en `IDEAS.m
   enlace en los posteos de Facebook y el espejo a Instagram; que el contrato del
   día cierre completo (`docs/07-REDES.md`). Si algo deja de salir, seguir "Si
   algo dejó de salir" en `docs/11-OPERACION.md`.
-- **Dos detalles de las voces nuevas (29/09):** (1) el formulario de
-  "Crear voces" (`.github/workflows/crear-voces.yml`) trae como locutora por
-  defecto un identificador (`voice_fidaoon75zc8`) que no es el de
-  `CRITERIO-REDES.md` (`voice_x0fgw7agee4o`); (2) el panel (`panel/panel.html`,
-  línea del clima) dice "sensación" a secas, y la regla 75 pide "sensación
-  térmica" también ahí. Baja.
+- ~~**Dos detalles de las voces nuevas (29/09)**~~ **Hechos el 29/09**: el
+  formulario de "Crear voces" ya trae los identificadores vigentes y el panel
+  dice "sensación térmica".
 - **Mirar los avisos nuevos por WhatsApp** (andan desde el 25/09): que no sean
   demasiados ni muy pocos, y ajustar los umbrales en `redes/avisos.mjs`.
 

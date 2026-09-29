@@ -170,7 +170,7 @@ test('si falta CRITERIO-REDES.md o le falta una parte, falla a la vista', () => 
   assert.throws(() => leerCriterioRedes(roto('otro-medio', (t) => t.replace('Medio: Radar Balcarce', 'Medio: Radar'))), /Radar Balcarce/);
   assert.throws(() => leerCriterioRedes(roto('dicho-mal', (t) => t.replace('Sitio dicho: Radar Balcarce punto com', 'Sitio dicho: Radar Balcarce punto com punto ar'))), /punto com/);
   assert.throws(() => leerCriterioRedes(roto('voz-mal', (t) => t.replace(/voice_[a-z0-9]+(?=\r?\n<!-- VOZ:LOCUTORA:FIN)/, 'Kore'))), /no es un identificador de Gemini/);
-  assert.throws(() => leerCriterioRedes(roto('la-misma-voz', (t) => t.replace(/voice_gmvugyu6tti1/, 'voice_x0fgw7agee4o'))), /no pueden ser la misma voz/);
+  assert.throws(() => leerCriterioRedes(roto('la-misma-voz', (t) => t.replace(VOCES.locutor, VOCES.locutora))), /no pueden ser la misma voz/);
   assert.throws(() => leerCriterioRedes(roto('reparto-raro', (t) => t.replace('clima-manana: locutora', 'clima-manana: los dos'))), /reparto de voces/);
   assert.throws(() => leerCriterioRedes(roto('reparto-repetido', (t) => t.replace('aviso: locutor', 'aviso: locutor\nfarmacia: locutora'))), /está repetida/);
   assert.throws(() => leerCriterioRedes(roto('vacia', (t) => t.replace(/<!-- VOZ:MANANA:INICIO -->[\s\S]*?<!-- VOZ:MANANA:FIN -->/, '<!-- VOZ:MANANA:INICIO -->\n<!-- VOZ:MANANA:FIN -->'))), /vacía/);

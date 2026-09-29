@@ -320,13 +320,13 @@ crearse (29/09/2027)**: hay que crear las voces de nuevo antes (`docs/11-OPERACI
 La locutora (creada el 29/09/2026):
 
 <!-- VOZ:LOCUTORA:INICIO -->
-voice_x0fgw7agee4o
+voice_v8mf7jt16hch
 <!-- VOZ:LOCUTORA:FIN -->
 
 El locutor (creado el 29/09/2026):
 
 <!-- VOZ:LOCUTOR:INICIO -->
-voice_gmvugyu6tti1
+voice_cdljkn0jpmk6
 <!-- VOZ:LOCUTOR:FIN -->
 
 Quién dice cada pieza (siempre la misma; los nombres son los de `redes/piezas.mjs`, y `aviso`
