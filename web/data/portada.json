@@ -1,5 +1,5 @@
 {
-  "generado": "2026-09-29T07:01:09.876Z",
+  "generado": "2026-09-29T07:31:05.090Z",
   "notas": [
     {
       "id": "1hjmkd4",
@@ -100,10 +100,10 @@
         "Radio Mitre",
         "Noticias Argentinas (NA)",
         "La Nueva",
+        "La Brújula 24",
         "Infobae",
         "Clarín",
-        "Página/12",
-        "La Brújula 24"
+        "Página/12"
       ],
       "enlace": "https://www.minutouno.com/espectaculos/la-virgen-la-tosquera-laura-casabe-representara-la-argentina-los-oscar-n6327706",
       "teniaImagenLaFuente": true,
@@ -754,8 +754,8 @@
         "Infobae",
         "Noticias Argentinas (NA)",
         "La Nueva",
-        "Olé",
-        "Doble Amarilla"
+        "Doble Amarilla",
+        "Olé"
       ],
       "enlace": "https://noticiasargentinas.com/deportes/fernando--bocha--batista-fue-despedido-como-entrenador-de-costa-rica_a6abad07ab62936833e741867",
       "teniaImagenLaFuente": true,
@@ -1352,7 +1352,7 @@
       "fecha": "2026-09-28T18:06:21.000Z",
       "sinFecha": false,
       "visto": "2026-09-28T20:01:02.538Z",
-      "relevancia": 81,
+      "relevancia": 85,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1731,6 +1731,71 @@
       }
     },
     {
+      "id": "1py2fu3",
+      "titulo": "El Fondo Monetario Internacional continúa la revisión del acuerdo vigente",
+      "copete": "La misión del organismo internacional sigue en Buenos Aires para completar la tercera revisión del acuerdo y se esperan definiciones con una conferencia de prensa el jueves.",
+      "cuerpo": "La delegación del Fondo Monetario Internacional (FMI) continúa esta semana en Buenos Aires con la tercera revisión del acuerdo en curso, tras iniciar sus tareas el lunes 21 de septiembre. La revisión habilita un desembolso de 900 millones de dólares, que compensará el pago de 850 millones de dólares que la Argentina le realizó al organismo el último viernes.\n\nEl próximo jueves, la vocera del organismo, Juliet Kozack, brindará una conferencia de prensa en Washington para informar los resultados de la misión.",
+      "guion": "El Fondo Monetario Internacional continúa la revisión del acuerdo vigente",
+      "seccion": "Economía",
+      "medios": [
+        "Canal 26",
+        "InfoRegión"
+      ],
+      "enlace": "https://www.inforegion.com.ar/2026/09/28/avanza-la-mision-del-fmi-en-medio-de-datos-muy-negativos/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-28T16:02:18.000Z",
+      "sinFecha": false,
+      "visto": "2026-09-28T22:01:03.337Z",
+      "relevancia": 38,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "La misión del FMI sigue en Buenos Aires.",
+        "Comleta la tercera revisión del acuerdo.",
+        "El jueves habrá conferencia de prensa.",
+        "Habilita un desembolso de 900 millones de dólares."
+      ],
+      "noConfirmado": [
+        "Todavía no se confirmó oficialmente el cierre de la visita de la delegación."
+      ],
+      "textoRedes": "La misión del Fondo Monetario Internacional continúa en Buenos Aires con la tercera revisión del acuerdo vigente y se espera una conferencia de prensa con los resultados para este jueves.",
+      "etiquetas": [
+        "FMI",
+        "acuerdo",
+        "Buenos Aires",
+        "desembolso"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "InfoRegión",
+          "enlace": "https://www.inforegion.com.ar/2026/09/28/avanza-la-mision-del-fmi-en-medio-de-datos-muy-negativos/",
+          "fecha": "2026-09-28T16:02:18.000Z",
+          "oficial": false,
+          "aporte": "Informó sobre la continuidad de la revisión, la conferencia del jueves, los datos negativos y el monto del desembolso."
+        },
+        {
+          "medio": "Canal 26",
+          "enlace": "https://www.canal26.com/economia/2026/09/28/en-medio-de-una-fuerte-suba-del-riego-pais-el-fmi-continua-la-revision-del-acuerdo-en-argentina-que-habilitaria-un-nuevo-desembolso-de-fondos/",
+          "fecha": "2026-09-28T17:18:10.000Z",
+          "oficial": false,
+          "aporte": "Confirmó el inicio de las tareas de la delegación el 21 de septiembre en Buenos Aires."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "el-fondo-monetario-internacional-continua-la-revision-del-acuerdo",
+      "foto": {
+        "archivo": "fotos-notas/1py2fu3.jpg",
+        "credito": "Foto: InfoRegión"
+      }
+    },
+    {
       "id": "zphfal",
       "titulo": "Las lluvias llegan a 30 milímetros en Tandil y a 10 en Balcarce",
       "copete": "Los registros de YPF Agro hasta las 8 de la mañana de este lunes muestran precipitaciones dispares en el sudeste bonaerense. Tandil tuvo el mayor acumulado, con 30 milímetros, seguido por Los Cardos y Ramos Otero. En Balcarce llovió entre 5 y 10 milímetros.",
@@ -1764,120 +1829,6 @@
       "slug": "argentina-sudeste-bonaerense-las-lluvias-alcanzaron-los-30-mm-en",
       "corregidaAMano": true,
       "cuerpoAMano": true
-    },
-    {
-      "id": "5ddc24",
-      "titulo": "El riesgo país llega a 642 puntos y marca un récord anual",
-      "copete": "El indicador del JP Morgan trepa el lunes tras una suba de más de 30 unidades. Los bonos soberanos y la Bolsa operan en baja.",
-      "cuerpo": "El índice que elabora el JP Morgan trepa el lunes a 642 puntos básicos tras una suba de más de 30 unidades y alcanza su nivel más alto en lo que va del año. El indicador había cerrado el viernes en 609 unidades.\n\nLos bonos soberanos Bonares y Globales registran una caída promedio de 1,8% y la Bolsa acumula su sexta baja consecutiva con un retroceso del 2,1%, encabezada por las acciones de Banco BBVA, Grupo Financiero Galicia y Grupo Supervielle. En paralelo, el dólar oficial minorista se negocia entre 1.545 y 1.550 pesos para la venta.",
-      "guion": "El riesgo país llega a 642 puntos y marca un récord anual",
-      "seccion": "Economía",
-      "medios": [
-        "Diario Popular",
-        "El Día"
-      ],
-      "enlace": "https://www.eldia.com/politica-y-economia/el-riesgo-pais-sigue-subiendo-y-llega-al-nivel-mas-alto-en-lo-que-va-del-ano-politica-y-economia_1790610300",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-28T16:00:16.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-28T23:01:09.560Z",
-      "relevancia": 51,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "El riesgo país alcanza los 642 puntos básicos este lunes.",
-        "El indicador del JP Morgan marca un nuevo máximo anual.",
-        "Los bonos soberanos y la Bolsa operan en terreno negativo.",
-        "El dólar oficial registra valores de hasta 1.550 pesos."
-      ],
-      "seSabe": [
-        "El riesgo país trepó este lunes a 642 puntos básicos, según varias fuentes.",
-        "El indicador elaborado por el JP Morgan superó las 600 unidades el viernes pasado, según El Día.",
-        "Los bonos Bonares y Globales caen un 1,8% en promedio, de acuerdo con El Día.",
-        "El dólar oficial cotiza entre 1.545 y 1.550 pesos para la venta."
-      ],
-      "noConfirmado": [
-        "Existen leves diferencias entre las fuentes sobre el valor exacto de apertura y cierre del índice durante la jornada, ubicándose entre 628 y 642 puntos."
-      ],
-      "textoRedes": "El riesgo país trepó este lunes a 642 puntos básicos y alcanza su nivel más alto en lo que va del año. En paralelo, los bonos soberanos y la Bolsa operan en baja, mientras el dólar oficial cotiza entre 1.545 y 1.550 pesos.",
-      "etiquetas": [
-        "riesgo pais",
-        "mercados",
-        "dolar",
-        "bonos",
-        "jp morgan"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "El Día",
-          "enlace": "https://www.eldia.com/politica-y-economia/el-riesgo-pais-sigue-subiendo-y-llega-al-nivel-mas-alto-en-lo-que-va-del-ano-politica-y-economia_1790610300",
-          "fecha": "2026-09-28T16:00:16.000Z",
-          "oficial": false,
-          "aporte": "Detalló la caída de los bonos Bonares y Globales, y las bajas en la Bolsa."
-        },
-        {
-          "medio": "Agencia DIB",
-          "enlace": "https://dib.com.ar/economia/el-riesgo-pais-alcanzo-los-641-puntos-basicos-su-nivel-mas-alto-lo-que-va-del-ano-n56090",
-          "fecha": "2026-09-28T22:22:00.000Z",
-          "oficial": false,
-          "aporte": "Informó el cierre previo del índice en 609 unidades."
-        },
-        {
-          "medio": "TN (Todo Noticias)",
-          "enlace": "https://tn.com.ar/economia/2026/09/28/el-riesgo-pais-vuelve-a-subir-y-el-dolar-oficial-marca-un-nuevo-record/",
-          "fecha": "2026-09-28T22:03:22.000Z",
-          "oficial": false,
-          "aporte": "Indicó la cotización del dólar oficial en el Banco Nación a 1.545 pesos."
-        },
-        {
-          "medio": "Crónica",
-          "enlace": "https://www.cronica.com.ar/politica/el-riesgo-pais-alcanzo-su-nivel-mas-alto-en-lo-que-va-del-ano/",
-          "fecha": "2026-09-28T22:23:00.000Z",
-          "oficial": false,
-          "aporte": "Señaló que el indicador acumula un incremento del 22% en septiembre."
-        },
-        {
-          "medio": "Canal 26",
-          "enlace": "https://www.canal26.com/economia/2026/09/28/el-riesgo-pais-alcanzo-los-642-puntos-su-maximo-de-2026-el-dolar-oficial-tambien-marco-un-nuevo-record/",
-          "fecha": "2026-09-28T19:10:53.000Z",
-          "oficial": false,
-          "aporte": "Reportó que el dólar oficial minorista alcanzó los 1.550 pesos."
-        },
-        {
-          "medio": "Noticias Argentinas (NA)",
-          "enlace": "https://noticiasargentinas.com/economia/los-bonos-operan-en-rojo-y-el-riesgo-pais-trepa-al-mayor-nivel-en-lo-que-va-del-ano_a6aba8414b62936833e69a542",
-          "fecha": "2026-09-28T21:20:00.000Z",
-          "oficial": false,
-          "aporte": "Informó una suba de más de 30 unidades en la jornada."
-        },
-        {
-          "medio": "El Marplatense",
-          "enlace": "https://www.elmarplatense.com/el-riesgo-pais-alcanzo-los-642-puntos-y-el-dolar-oficial-marco-un-nuevo-record",
-          "fecha": "2026-09-28T21:45:00.000Z",
-          "oficial": false,
-          "aporte": "Indicó que el indicador acumuló una suba del 25,2% durante septiembre."
-        },
-        {
-          "medio": "Mi8 (Canal 8 Mar del Plata)",
-          "enlace": "https://mi8.com.ar/riesgo-pais-en-642-puntos-y-dolar-a-1550-ambos-marcaron-su-maximo-del-ano/",
-          "fecha": "2026-09-28T22:29:48.000Z",
-          "oficial": false,
-          "aporte": "Señaló que los activos argentinos operan en terreno negativo."
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron 8 medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "el-riesgo-pais-llega-a-642-puntos-y-marca-un-record-anual",
-      "foto": {
-        "archivo": "fotos-notas/5ddc24.jpg",
-        "credito": "Foto: El Día"
-      }
     },
     {
       "id": "1f9bhpx",
@@ -3425,10 +3376,10 @@
         "Canal 26",
         "Diario Popular",
         "El Marplatense",
+        "La Página Millonaria",
         "Clarín",
         "Ecos Diarios (Necochea)",
         "Crónica",
-        "La Página Millonaria",
         "La Nueva"
       ],
       "enlace": "https://www.clarin.com/informacion-general/dia-internacional-hincha-river-angel-labruna-origen-celebracion-28-septiembre_0_nGU4cj1flL.html",
@@ -3563,6 +3514,20 @@
           "aporte": null
         },
         {
+          "medio": "La Página Millonaria",
+          "enlace": "https://lapaginamillonaria.com/river-plate/desde-el-beto-alonso-hasta-otamendi-los-saludos-por-el-dia-internacional-del-hincha-de-river",
+          "fecha": "2026-09-28T18:54:06.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "La Página Millonaria",
+          "enlace": "https://lapaginamillonaria.com/river-plate/por-que-el-28-de-septiembre-se-festeja-el-dia-internacional-del-hincha-de-river",
+          "fecha": "2026-09-28T14:22:48.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
           "medio": "Ecos Diarios (Necochea)",
           "enlace": "https://elecos.com.ar/dia-internacional-del-hincha-de-river-por-que-se-celebra-cada-28-de-septiembre-en-honor-a-angel-labruna",
           "fecha": "2026-09-28T13:34:15.000Z",
@@ -3577,23 +3542,9 @@
           "aporte": null
         },
         {
-          "medio": "La Página Millonaria",
-          "enlace": "https://lapaginamillonaria.com/river-plate/por-que-el-28-de-septiembre-se-festeja-el-dia-internacional-del-hincha-de-river",
-          "fecha": "2026-09-28T14:22:48.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
           "medio": "La Nueva",
           "enlace": "https://www.lanueva.com/nota/2026-9-28-15-47-0-el-dia-del-hincha-de-river-el-honor-eterno-a-angel-labruna-y-el-robo-del-gol-en-cancha-de-olimpo",
           "fecha": "2026-09-28T18:55:40.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "La Página Millonaria",
-          "enlace": "https://lapaginamillonaria.com/river-plate/desde-el-beto-alonso-hasta-otamendi-los-saludos-por-el-dia-internacional-del-hincha-de-river",
-          "fecha": "2026-09-28T18:54:06.000Z",
           "oficial": false,
           "aporte": null
         }
@@ -3943,11 +3894,11 @@
         "La Nación",
         "C5N",
         "Canal 26",
+        "InfoRegión",
+        "InfoGEI",
         "La Noticia 1",
         "Ámbito",
-        "El Cronista",
-        "InfoGEI",
-        "InfoRegión"
+        "El Cronista"
       ],
       "enlace": "https://www.lanoticia1.com/noticia/peregrinacion-a-lujan-como-sera-el-operativo-para-acompanar-a-los-fieles-durante-los-60-kilometros",
       "teniaImagenLaFuente": true,
@@ -4011,6 +3962,20 @@
           "aporte": null
         },
         {
+          "medio": "InfoRegión",
+          "enlace": "https://www.inforegion.com.ar/2026/09/28/como-sera-el-recorrido-de-la-peregrinacion-a-lujan-en-2026/",
+          "fecha": "2026-09-28T22:01:02.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "InfoGEI",
+          "enlace": "https://infogei.ar/peregrinacion-a-lujan-como-sera-el-operativo-provincial-para-acompanar-a-los-caminantes/",
+          "fecha": "2026-09-28T20:07:53.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
           "medio": "Ámbito",
           "enlace": "https://www.ambito.com/informacion-general/peregrinacion-lujan-2026-cuando-es-y-que-tener-cuenta-la-caminata-n6322534",
           "fecha": "2026-09-28T12:47:00.000Z",
@@ -4028,20 +3993,6 @@
           "medio": "Ámbito",
           "enlace": "https://www.ambito.com/informacion-general/madre-tu-abrazo-nos-reconocemos-hermanos-el-significado-del-lema-la-52-peregrinacion-lujan-n6327534",
           "fecha": "2026-09-28T17:30:00.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "InfoGEI",
-          "enlace": "https://infogei.ar/peregrinacion-a-lujan-como-sera-el-operativo-provincial-para-acompanar-a-los-caminantes/",
-          "fecha": "2026-09-28T20:07:53.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "InfoRegión",
-          "enlace": "https://www.inforegion.com.ar/2026/09/28/como-sera-el-recorrido-de-la-peregrinacion-a-lujan-en-2026/",
-          "fecha": "2026-09-28T22:01:02.000Z",
           "oficial": false,
           "aporte": null
         }
@@ -4109,6 +4060,95 @@
       "slug": "el-movimiento-245-brinda-contencion-y-autoayuda",
       "corregidaAMano": true,
       "cuerpoAMano": true
+    },
+    {
+      "id": "17pc5cx",
+      "titulo": "Milei descarta una recesión y tilda de cobardes a quienes piden un dólar alto",
+      "copete": "El presidente Javier Milei aseguró que en el país no hay recesión y defendió el rumbo económico. La entrevista no menciona un impacto directo en Balcarce.",
+      "cuerpo": "El presidente de la Nación, Javier Milei, afirmó el domingo 27 de septiembre que en la Argentina no existe una recesión económica, sino una desaceleración del ritmo de expansión. Durante una entrevista televisiva, el mandatario rechazó modificar el programa económico, defendió la apertura y sostuvo que el consumo se encuentra en un nivel máximo histórico.\n\nEn la misma entrevista, Milei cuestionó a quienes reclaman un tipo de cambio más elevado y sostuvo que esa postura busca reducir el salario de la población. Además, el jefe de Estado descartó la posibilidad de un default durante su mandato y señaló que el Gobierno tiene cubiertas las necesidades financieras hasta fines del año próximo.\n\nComo se informó el domingo 27 de septiembre, el mandatario ya había rechazado que la economía entre en recesión y atribuyó la caída previa de la actividad a un cambio en la modalidad de consumo hacia las plataformas digitales.",
+      "guion": "Milei descarta una recesión y tilda de cobardes a quienes piden un dólar alto",
+      "seccion": "Política",
+      "medios": [
+        "Noticias Argentinas (NA)",
+        "La Verdad",
+        "Mi8 (Canal 8 Mar del Plata)",
+        "Punto Noticias"
+      ],
+      "enlace": "https://puntonoticias.com/milei-afirmo-que-no-hay-recesion-y-dijo-que-quienes-piden-un-dolar-mas-caro-son-unos-cobardes/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-27T23:57:00.000Z",
+      "sinFecha": false,
+      "visto": "2026-09-28T19:02:49.410Z",
+      "relevancia": 67,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "El presidente Javier Milei negó que la economía atraviese una recesión.",
+        "Calificó de cobardes a quienes piden un dólar más caro para bajar los salarios.",
+        "Defendió la apertura económica y aseguró que el consumo está en máximo histórico.",
+        "Afirmó que el riesgo país supera los 600 puntos por la incertidumbre política."
+      ],
+      "seSabe": [
+        "El presidente Javier Milei afirmó que la economía registra una desaceleración y no una recesión.",
+        "El mandatario sostuvo que el consumo está en máximo histórico y crece el comercio electrónico.",
+        "Milei aseguró que el Gobierno tiene cubiertas las necesidades de financiamiento hasta fines del año próximo.",
+        "El presidente ubicó la desocupación en el 7,9 por ciento."
+      ],
+      "noConfirmado": [
+        "No se informaron precisiones sobre cómo impactarán estas medidas en la economía local de Balcarce."
+      ],
+      "textoRedes": "El presidente Javier Milei afirmó que en el país no hay recesión, defendió el rumbo económico y cuestionó a quienes piden un dólar más caro. La nota no detalla un impacto directo en Balcarce.",
+      "etiquetas": [
+        "Javier Milei",
+        "economia",
+        "recesion",
+        "dolar",
+        "gobierno nacional"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Punto Noticias",
+          "enlace": "https://puntonoticias.com/milei-afirmo-que-no-hay-recesion-y-dijo-que-quienes-piden-un-dolar-mas-caro-son-unos-cobardes/",
+          "fecha": "2026-09-28T11:24:54.000Z",
+          "oficial": false,
+          "aporte": "Aportó la declaración completa del presidente Javier Mile durante una entrevista televisiva."
+        },
+        {
+          "medio": "La Verdad",
+          "enlace": "https://laverdadonline.com/milei-afirmo-que-no-hay-recesion-y-dijo-que-quienes-piden-un-dolar-mas-caro-son-unos-cobardes/",
+          "fecha": "2026-09-28T12:40:01.000Z",
+          "oficial": false,
+          "aporte": "Aportó la confirmación de las declaraciones presidenciales sobre la situación económica."
+        },
+        {
+          "medio": "Mi8 (Canal 8 Mar del Plata)",
+          "enlace": "https://mi8.com.ar/milei-afirmo-que-no-hay-recesion-y-dijo-que-quienes-piden-un-dolar-mas-caro-son-unos-cobardes/",
+          "fecha": "2026-09-28T11:46:45.000Z",
+          "oficial": false,
+          "aporte": "No aportó información adicional al no incluir resumen."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "11ahvrq",
+          "titulo": "Milei niega que la economía entre en recesión",
+          "fecha": "2026-09-28T00:07:31.000Z",
+          "ruta": "/nota/javier-milei-defendio-su-programa-y-nego-que-la-economia-vaya-a-11ahvrq"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron tres medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "milei-descarta-una-recesion-y-tilda-de-cobardes-a-quienes-piden-un",
+      "foto": {
+        "archivo": "fotos-notas/17pc5cx.webp",
+        "credito": "Foto: La Verdad"
+      }
     },
     {
       "id": "repaso20260927noche",
@@ -4186,6 +4226,7 @@
         "TN (Todo Noticias)",
         "Olé",
         "Doble Amarilla",
+        "La Página Millonaria",
         "Minuto Uno"
       ],
       "enlace": "https://www.dobleamarilla.com.ar/ascenso-e-interior/marcos-acuna-se-presento-en-las-elecciones-de-ferro-para-votar_a6ab98c7a9b8cd1f9d62e340b",
@@ -4193,7 +4234,7 @@
       "fecha": "2026-09-27T21:48:37.000Z",
       "sinFecha": false,
       "visto": "2026-09-28T16:01:28.909Z",
-      "relevancia": 64,
+      "relevancia": 74,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -4203,7 +4244,7 @@
         {
           "medio": "Doble Amarilla",
           "enlace": "https://www.dobleamarilla.com.ar/ascenso-e-interior/marcos-acuna-se-presento-en-las-elecciones-de-ferro-para-votar_a6ab98c7a9b8cd1f9d62e340b",
-          "fecha": "2026-09-27T21:48:37.000Z",
+          "fecha": "2026-09-27T21:48:37.383Z",
           "oficial": false,
           "aporte": null
         },
@@ -4218,6 +4259,13 @@
           "medio": "Olé",
           "enlace": "https://www.ole.com.ar/river-plate/river-plate-marcos-acuna-ferro_0_onh2Lb4Iqu.html",
           "fecha": "2026-09-27T22:09:28.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "La Página Millonaria",
+          "enlace": "https://lapaginamillonaria.com/river-plate/en-su-dia-de-descanso-marcos-acuna-se-presento-en-ferro-para-votar-en-las-elecciones-el-motivo",
+          "fecha": "2026-09-27T23:18:54.000Z",
           "oficial": false,
           "aporte": null
         },
@@ -4274,93 +4322,6 @@
       "slug": "sancionan-a-werner-canapino-y-ciantini-en-el-tc-pick-up",
       "corregidaAMano": true,
       "cuerpoAMano": true
-    },
-    {
-      "id": "1dou3ni",
-      "titulo": "Estiman el costo operativo de usar drones para pulverizar papa",
-      "copete": "Un trabajo del INTA Balcarce estimó en 6,71 dólares el costo de pulverizar una hectárea de papa con un dron propio, en explotaciones del sudeste bonaerense. El valor varía según la superficie trabajada y la amortización del equipo.",
-      "cuerpo": "Un informe de especialistas del INTA Balcarce calculó en 6,71 dólares el costo operativo de pulverizar una hectárea de papa con un dron propio, en explotaciones de escala media del sudeste bonaerense. El estudio, hecho sobre una base de 3.000 hectáreas de vuelo por año durante dos años, encontró que el valor depende especialmente de la amortización del equipo y de cuánto se lo use.\n\nLos investigadores señalaron que la cantidad de hectáreas trabajadas permite distribuir los costos fijos sobre una superficie mayor, por lo que el resultado varía según cada establecimiento; el dron evaluado tiene una capacidad de 11,2 hectáreas por hora. Además, el trabajo comparó el sistema con las pulverizadoras terrestres y destacó ventajas como evitar la compactación del suelo por el tránsito de maquinaria y facilitar el ingreso a lotes con problemas de transitabilidad.\n\nEl análisis aclaró que el monto calculado corresponde únicamente a la operación con maquinaria propia bajo supuestos específicos y no incluye el valor del producto fitosanitario ni representa la tarifa de un servicio contratado.",
-      "guion": "Estiman el costo operativo de usar drones para pulverizar papa",
-      "seccion": "Agro",
-      "medios": [
-        "Argenpapa"
-      ],
-      "enlace": "https://www.argenpapa.com.ar/noticia/17680-argentina-drones-aplicadores-iquest-cuanto-cuesta-pulverizar-una-hectarea-de-papa-en-el-sudeste-bonaerense",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-27T19:06:20.725Z",
-      "sinFecha": false,
-      "visto": "2026-09-27T23:11:05.598Z",
-      "relevancia": 22,
-      "local": false,
-      "deLaZona": true,
-      "publicadaPor": "ia",
-      "publicadaCuando": "2026-09-28T03:02:36.622Z",
-      "temas": [
-        "inta"
-      ],
-      "como": "automatica",
-      "claves": [
-        "Especialistas del INTA Balcarce analizaron el costo de usar drones en papa.",
-        "El valor depende del uso anual y de la amortización de la inversión.",
-        "La tecnología evita el tránsito de maquinaria sobre el cultivo."
-      ],
-      "seSabe": [
-        "Un análisis del INTA Balcarce evaluó el costo operativo de drones aplicadores en papas.",
-        "El estudio consideró una explotación de escala media en el sudeste bonaerense.",
-        "La amortización y el uso anual son determinantes en el costo por hectárea.",
-        "Los autores del trabajo son Leandro Pagliaricci, Franco Donna y Ulises Loizaga."
-      ],
-      "noConfirmado": [
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "Un trabajo del INTA Balcarce analizó el costo operativo de usar drones aplicadores en la producción de papa del sudeste bonaerense y destacó el impacto del uso anual del equipo.",
-      "etiquetas": [
-        "INTA Balcarce",
-        "papa",
-        "drones",
-        "sudeste bonaerense"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Argenpapa",
-          "enlace": "https://www.argenpapa.com.ar/noticia/17680-argentina-drones-aplicadores-iquest-cuanto-cuesta-pulverizar-una-hectarea-de-papa-en-el-sudeste-bonaerense",
-          "fecha": null,
-          "oficial": false,
-          "aporte": "Detalló el análisis del INTA Balcarce sobre el costo operativo de usar drones en cultivos de papa."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "q84c12",
-          "titulo": "Una investigadora del INTA cuestiona la suspensión de un proyecto",
-          "fecha": "2026-09-24T14:26:31.000Z",
-          "ruta": "/nota/carta-abierta-de-investigadora-del-inta-balcarce-q84c12"
-        },
-        {
-          "id": "v91szb",
-          "titulo": "La APDH rechaza la factible exoneración de la Dra. Virginia Aparicio, investigadora del INTA Balcarce y del CONICET",
-          "fecha": "2026-09-23T01:50:24.356Z",
-          "ruta": "/nota/la-apdh-rechaza-la-factible-exoneracion-de-la-dra-virginia-aparicio-v91szb"
-        },
-        {
-          "id": "tmpmtz",
-          "titulo": "Legislatura bonarense: presentan un proyecto para respaldar a Virginia Aparicio, investigadora de INTA Balcarce",
-          "fecha": "2026-09-21T17:19:51.000Z",
-          "ruta": "/nota/legislatura-bonarense-presentan-un-proyecto-para-respaldar-a-virginia-tmpmtz"
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "estudian-el-costo-operativo-de-usar-drones-para-pulverizar-papa",
-      "corregidaAMano": true,
-      "cuerpoAMano": true,
-      "foto": {
-        "archivo": "fotos-notas/1dou3ni.jpg",
-        "credito": "Foto: Argenpapa"
-      }
     }
   ],
   "secciones": [
@@ -4395,11 +4356,11 @@
   "clima": {
     "ahora": {
       "temp": 12,
-      "sensacion": 11,
-      "humedad": 99,
-      "viento": 13,
+      "sensacion": 10,
+      "humedad": 100,
+      "viento": 14,
       "rumbo": "SE",
-      "cielo": "Chaparrones",
+      "cielo": "Llovizna",
       "esDeDia": false
     },
     "dias": [
@@ -4411,7 +4372,7 @@
         "lluvia": 100,
         "codigo": 81,
         "viento": 29,
-        "milimetros": 28,
+        "milimetros": 19,
         "cielo": "Chaparrones fuertes"
       },
       {
@@ -4442,10 +4403,10 @@
         "max": 14,
         "min": 3,
         "lluvia": 47,
-        "codigo": 53,
+        "codigo": 51,
         "viento": 20,
         "milimetros": 1,
-        "cielo": "Llovizna"
+        "cielo": "Llovizna leve"
       }
     ],
     "fuente": "Open-Meteo"
@@ -4772,12 +4733,6 @@
   },
   "pendientes": [
     {
-      "id": "rd4l11",
-      "titulo": "«Balcarce está muchísimo mejor que otras pistas del…",
-      "seccion": "Automovilismo",
-      "motivo": "verificación baja: espera a una persona (visto al reescribir)"
-    },
-    {
       "id": "i9q5tj",
       "titulo": null,
       "seccion": "Automovilismo",
@@ -4788,6 +4743,12 @@
       "titulo": null,
       "seccion": "Policiales",
       "motivo": "necesita ojo humano: \"adolescente\", en el texto completo de la fuente (visto al reescribir)"
+    },
+    {
+      "id": "1o9rp73",
+      "titulo": "La ANMAT prohibió productos de limpieza de una marca en…",
+      "seccion": "Economía",
+      "motivo": "necesita ojo humano: \"denuncia\""
     },
     {
       "id": "v8jjgw",
@@ -4808,9 +4769,15 @@
       "motivo": "necesita ojo humano: \"adolescente\""
     },
     {
-      "id": "1o9rp73",
-      "titulo": "La ANMAT prohibió productos de limpieza de una marca en…",
-      "seccion": "Economía",
+      "id": "1yygidx",
+      "titulo": "Por el pase de Lomónaco: otro revés del TAS para…",
+      "seccion": "Fútbol",
+      "motivo": "necesita ojo humano: \"denuncia\""
+    },
+    {
+      "id": "3sk31f",
+      "titulo": "ANDIS bajo la lupa: denuncian sobreprecios de hasta…",
+      "seccion": "Argentina",
       "motivo": "necesita ojo humano: \"denuncia\""
     },
     {
@@ -4850,6 +4817,12 @@
       "motivo": "necesita ojo humano: \"acusado\""
     },
     {
+      "id": "mrkouk",
+      "titulo": "El Gobierno denuncia vuelos no autorizados de una empresa…",
+      "seccion": "Argentina",
+      "motivo": "necesita ojo humano: \"denuncia\""
+    },
+    {
       "id": "1cmtnhl",
       "titulo": null,
       "seccion": "Economía",
@@ -4862,5 +4835,5 @@
       "motivo": "necesita ojo humano: \"denuncia\""
     }
   ],
-  "esperandoCuerpo": 10
+  "esperandoCuerpo": 7
 }
