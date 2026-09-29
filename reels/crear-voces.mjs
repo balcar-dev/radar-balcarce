@@ -107,7 +107,7 @@ fs.mkdirSync(SALIDA, { recursive: true });
 
 if (process.argv[2] === 'listar') {
   // Con un idioma (`listar es-AR`) muestra una línea por voz de la biblioteca de Google.
-  const idioma = process.argv[3];
+  const idioma = process.argv[3] && process.argv[3] !== 'todas' ? process.argv[3] : '';
   let pagina = '';
   for (let i = 0; i < 20; i += 1) {
     const r = await api('GET', `/voices?page_size=100${idioma ? `&language_code=${idioma}` : ''}${pagina}`);
