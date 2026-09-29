@@ -1,92 +1,6 @@
 {
-  "generado": "2026-09-29T22:01:46.435Z",
+  "generado": "2026-09-29T22:31:36.545Z",
   "notas": [
-    {
-      "id": "1i0n3x9",
-      "titulo": "El autódromo Juan Manuel Fangio recupera actividad nacional",
-      "copete": "El circuito serrano vuelve a recibir categorías nacionales tras el acuerdo firmado en mayo de 2023 por la Provincia y el municipio para adecuar las instalaciones.",
-      "cuerpo": "El autódromo Juan Manuel Fangio recuperó actividad nacional en el circuito serrano tras el cierre registrado el 13 de noviembre de 2011. La recuperación comenzó con el trabajo de vecinos nucleados en la Asociación Autódromo y el apoyo de la Asociación Corredores Turismo Carretera, la Federación Regional de Automovilismo Mar y Sierras, la Municipalidad, el Museo Fangio y el Auto Club Balcarce.\n\nTras el regreso del automovilismo zonal el 10 de noviembre de 2019 con un trazado corto, las obras continuaron con la construcción de la variante Juan Manuel Bordeu inaugurada en agosto de 2021, que extendió el circuito a más de 2.000 metros con aportes privados, municipales y de cooperativas locales.\n\nEl proceso para la llegada de categorías nacionales avanzó en mayo de 2023, cuando el gobernador Axel Kicillof y el intendente Esteban Reino firmaron el acuerdo para que la Provincia realizara los aportes económicos necesarios para poner el escenario en condiciones.",
-      "guion": "El autódromo Juan Manuel Fangio recupera actividad nacional",
-      "seccion": "Automovilismo",
-      "medios": [
-        "El Diario Balcarce"
-      ],
-      "enlace": "https://eldiariobalcarce.com.ar/el-juan-manuel-fangio-volvio-a-latir-811",
-      "teniaImagenLaFuente": false,
-      "fecha": "2026-09-29T21:01:18.143Z",
-      "sinFecha": true,
-      "visto": "2026-09-29T21:01:18.143Z",
-      "relevancia": 61,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [
-        "autodromo",
-        "fangio"
-      ],
-      "como": "automatica",
-      "claves": [
-        "El autódromo recuperó actividad nacional tras permanecer cerrado desde noviembre de 2011.",
-        "Un grupo de vecinos y la Asociación Autódromo impulsaron la reapertura zonal en 2019.",
-        "La variante Juan Manuel Bordeu amplió el circuito en agosto de 2021.",
-        "El gobernador Axel Kicillof y el intendente Esteban Reino firmaron el acuerdo de fondos en mayo de 2023."
-      ],
-      "seSabe": [
-        "El autódromo Juan Manuel Fangio dejó de operar a nivel nacional el 13 de noviembre de 2011.",
-        "El circuito zonal volvió a funcionar el 10 de noviembre de 2019 según informó la Asociación Autódromo.",
-        "La variante Juan Manuel Bordeu se inauguró en agosto de 2021 y extendió el trazado a más de dos mil metros.",
-        "El gobernador Axel Kicillof y el intendente Esteban Reino firmaron el acuerdo de financiamiento provincial en mayo de 2023."
-      ],
-      "noConfirmado": [
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "El autódromo Juan Manuel Fangio recuperó actividad nacional tras un largo proceso de obras y gestiones entre el municipio y la Provincia que comenzó con el trabajo de vecinos y entidades locales.",
-      "etiquetas": [
-        "autodromo",
-        "Juan Manuel Fangio",
-        "automovilismo",
-        "Balcarce"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "El Diario Balcarce",
-          "enlace": "https://eldiariobalcarce.com.ar/el-juan-manuel-fangio-volvio-a-latir-811",
-          "fecha": null,
-          "oficial": false,
-          "aporte": "Detalló la cronología de la recuperación del autódromo Juan Manuel Fangio desde el cierre de 2011 hasta los acuerdos provinciales de 2023."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "wgq362",
-          "titulo": "Omar Martínez termina cuarto en el autódromo Juan Manuel Fangio",
-          "fecha": "2026-09-29T14:55:00.000Z",
-          "ruta": "/nota/omar-martinez-termina-cuarto-en-el-autodromo-juan-manuel-fangio-wgq362"
-        },
-        {
-          "id": "rebipe",
-          "titulo": "Mangoni repasa su paso por el autódromo Juan Manuel Fangio",
-          "fecha": "2026-09-28T16:15:38.000Z",
-          "ruta": "/nota/mangoni-repasa-su-paso-por-el-autodromo-juan-manuel-fangio-rebipe"
-        },
-        {
-          "id": "83u2vt",
-          "titulo": "El autódromo Juan Manuel Fangio reabre tras quince años",
-          "fecha": "2026-09-28T03:01:51.643Z",
-          "ruta": "/nota/el-autodromo-juan-manuel-fangio-reabre-tras-quince-anos-83u2vt"
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "el-autodromo-juan-manuel-fangio-recupera-actividad-nacional",
-      "foto": {
-        "archivo": "fotos-notas/1i0n3x9.jpg",
-        "credito": "Foto: El Diario Balcarce"
-      }
-    },
     {
       "id": "9ul7an",
       "titulo": "El Banco Central compra setenta millones pero bajan las reservas",
@@ -95,9 +9,10 @@
       "guion": "El Banco Central compra setenta millones pero bajan las reservas",
       "seccion": "Economía",
       "medios": [
-        "Ámbito",
         "Infobae",
         "iProfesional",
+        "Ámbito",
+        "C5N",
         "Noticias Argentinas (NA)"
       ],
       "enlace": "https://www.infobae.com/economia/2026/09/29/el-banco-central-acelero-la-compra-de-dolares-pero-cerraria-septiembre-con-el-menor-nivel-de-adquisiciones-del-ano/",
@@ -105,7 +20,7 @@
       "fecha": "2026-09-29T20:40:31.000Z",
       "sinFecha": false,
       "visto": "2026-09-29T22:01:11.253Z",
-      "relevancia": 79,
+      "relevancia": 89,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -185,6 +100,97 @@
       }
     },
     {
+      "id": "436uz0",
+      "titulo": "San Lorenzo sufre un millonario embargo de su exentrenador",
+      "copete": "El club sufre un embargo judicial millonario impulsado por su ex director técnico Damián Ayude. La institución atraviesa una profunda crisis económica e institucional.",
+      "cuerpo": "San Lorenzo recibió un embargo judicial por parte de su exentrenador Damián Ayude, quien reclama una millonaria deuda acumulada en pesos y dólares. Según informó la institución mediante un comunicado oficial, el técnico exige un capital de 415.614.932 pesos sumados a 124.000.000 pesos en concepto de intereses, además de 48.558 dólares y otros 14.600 dólares por el mismo concepto.\n\nAyude se desempeñó al frente del plantel profesional entre mediados de 2025 e inicios de 2026, período en el cual dirigió 29 encuentros con un saldo de diez victorias, diez empates y nueve derrotas. Las autoridades del club decidieron despedirlo en marzo tras una derrota por 5 a 2 ante Defensa y Justicia, a pesar de haber renovado su vínculo meses antes.\n\nDesde la entidad azulgrana advirtieron que la demanda judicial tendrá un fuerte impacto sobre las cuentas bancarias de la institución, que actualmente transita un momento financiero delicado.",
+      "guion": "San Lorenzo sufre un millonario embargo de su exentrenador",
+      "seccion": "Fútbol",
+      "medios": [
+        "La Nación",
+        "Olé",
+        "Minuto Uno",
+        "Perfil",
+        "TyC Sports"
+      ],
+      "enlace": "https://www.lanacion.com.ar/deportes/nuevo-embargo-a-san-lorenzo-el-millonario-monto-que-reclama-damian-ayude-nid29092026/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-29T20:28:09.000Z",
+      "sinFecha": false,
+      "visto": "2026-09-29T22:31:07.763Z",
+      "relevancia": 83,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "El exentrenador Damián Ayude embargó judicialmente a San Lorenzo.",
+        "El reclamo incluye más de 415 millones de pesos y 48 mil dólares.",
+        "El club advirtió que la medida afectará sus cuentas bancarias."
+      ],
+      "seSabe": [
+        "San Lorenzo recibió un embargo judicial por parte de su ex DT Damián Ayude, según informó el club.",
+        "El reclamo comprende 415.614.932 pesos y 48.558 dólares de capital, más 124 millones de pesos y 14.600 dólares de intereses.",
+        "Ayude dirigió al equipo en 29 partidos entre 2025 y 2026."
+      ],
+      "textoRedes": "San Lorenzo sufre un millonario embargo judicial impulsado por su exentrenador Damián Ayude, quien reclama una deuda en pesos y dólares.",
+      "etiquetas": [
+        "San Lorenzo",
+        "Damián Ayude",
+        "Fútbol",
+        "Liga Profesional",
+        "Embargo"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/deportes/nuevo-embargo-a-san-lorenzo-el-millonario-monto-que-reclama-damian-ayude-nid29092026/",
+          "fecha": "2026-09-29T20:28:09.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Olé",
+          "enlace": "https://www.ole.com.ar/san-lorenzo/sanlorenzo-damianayude-embargo-marcelomoretti-marceloculotta_0_9hn9Xm7q0U.html",
+          "fecha": "2026-09-29T20:30:54.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Minuto Uno",
+          "enlace": "https://www.minutouno.com/deportes/nuevo-golpe-san-lorenzo-damian-ayude-embargo-al-club-una-cifra-millonaria-n6328150",
+          "fecha": "2026-09-29T21:08:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Perfil",
+          "enlace": "https://442.perfil.com/noticias/futbol/san-lorenzo-fue-embargado-por-damian-ayude-los-millones-que-reclama-el-ex-dt.phtml",
+          "fecha": "2026-09-29T21:47:25.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "TyC Sports",
+          "enlace": "https://www.tycsports.com/san-lorenzo/ayude-embargo-a-san-lorenzo-por-una-suma-millonaria-id763547.html",
+          "fecha": "2026-09-29T22:28:25.000Z",
+          "oficial": false,
+          "aporte": null
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron cinco medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "san-lorenzo-sufre-un-millonario-embargo-de-su-exentrenador",
+      "foto": {
+        "archivo": "fotos-notas/436uz0.jpg",
+        "credito": "Foto: Perfil"
+      }
+    },
+    {
       "id": "repaso20260929tarde",
       "propia": "repaso",
       "titulo": "El repaso de la tarde en Radar Balcarce: corte de luz, Esteban Reino y Pato Naranja",
@@ -254,6 +260,7 @@
         "El Eco de Tandil",
         "Perfil",
         "TN (Todo Noticias)",
+        "El Cronista",
         "A24",
         "Noticias Argentinas (NA)"
       ],
@@ -325,27 +332,32 @@
       "guion": "La Corte revoca el fallo sobre la Ley de Tierras del DNU",
       "seccion": "Política",
       "medios": [
+        "Infobae",
         "La Nación",
+        "El Eco de Tandil",
         "QZ Noticias (Mar del Plata)",
+        "Bichos de Campo",
         "TN (Todo Noticias)",
         "El Cronista",
         "El Destape",
+        "Perfil",
+        "iProfesional",
         "Ámbito",
         "Minuto Uno",
         "C5N",
         "Crónica",
         "Noticias Argentinas (NA)",
+        "El Día",
         "0221",
         "La Tecla",
-        "Mi8 (Canal 8 Mar del Plata)",
-        "Infobae"
+        "Mi8 (Canal 8 Mar del Plata)"
       ],
       "enlace": "https://noticiasargentinas.com/politica/la-corte-revoco-el-fallo-que-declaraba-inconstitucional-la-derogacion-de-la-ley-de-tierras_a6abc0d42aeec850fb26e90c9",
       "teniaImagenLaFuente": true,
       "fecha": "2026-09-29T19:14:18.120Z",
       "sinFecha": false,
       "visto": "2026-09-29T20:31:16.821Z",
-      "relevancia": 83,
+      "relevancia": 73,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -731,90 +743,6 @@
         "sugeridoPorIA": "MEDIA"
       },
       "slug": "cambareri-cuestiona-el-ajuste-y-la-situacion-en-el-inta-balcarce"
-    },
-    {
-      "id": "1pdo6sk",
-      "titulo": "La Selección desafecta a tres jugadores para la doble fecha FIFA",
-      "copete": "Tomás Palacios, Leonel Flores y Tobías Aranda quedaron fuera del plantel que jugará el miércoles ante Bolivia en Córdoba. La medida responde a compromisos con sus clubes.",
-      "cuerpo": "La Selección argentina desafectó a tres futbolistas de cara a los encuentros amistosos programados para la fecha FIFA.\n\nPalacios y Flores fueron liberados para afrontar compromisos con Estudiantes de La Plata y Boca, respectivamente, mientras que Aranda, de Vélez, quedó fuera de la convocatoria. El entrenador Lionel Scaloni se refirió en conferencia de prensa al recambio generacional y sostuvo que a los nuevos jugadores se les dará la oportunidad de sumar minutos en los amistosos que completan la serie ante Burkina Faso y Benín.",
-      "guion": "La Selección desafecta a tres jugadores para la doble fecha FIFA",
-      "seccion": "Fútbol",
-      "medios": [
-        "El Eco de Tandil",
-        "TN (Todo Noticias)",
-        "Noticias Argentinas (NA)"
-      ],
-      "enlace": "https://noticiasargentinas.com/deportes/bajas-en-la-seleccion--tres-jugadores-fueron-desafectados-para-la-doble-fecha-fifa_a6abbf20512f3a9893c266c09",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-29T17:22:37.863Z",
-      "sinFecha": false,
-      "visto": "2026-09-29T20:01:10.426Z",
-      "relevancia": 69,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Tres futbolistas fueron desafectados del plantel de la Selección argentina.",
-        "La medida incluye a Tomás Palacios, Leonel Flores y Tobías Aranda.",
-        "El equipo se prepara para enfrentar a Bolivia este miércoles en Córdoba.",
-        "Los jugadores liberados se sumarán a sus respectivos clubes."
-      ],
-      "seSabe": [
-        "Tomás Palacios, Leonel Flores y Tobías Aranda fueron desafectados de la Selección argentina, según informó oficialmente el seleccionado.",
-        "El plantel se prepara para enfrentar este miércoles 30 de septiembre a Bolivia en Córdoba, en el primero de los amistosos previstos.",
-        "Palacios y Flores fueron liberados para cumplir compromisos con Estudiantes de La Plata y Boca, respectivamente.",
-        "Lionel Scaloni confirmó que aún no tiene definida la formación titular para el encuentro."
-      ],
-      "noConfirmado": [
-        "No se especificaron los motivos de la baja de Tobías Aranda más allá de su exclusión de la nómina."
-      ],
-      "textoRedes": "La Selección argentina desafectó a tres jugadores de cara a los próximos amistosos. Tomás Palacios, Leonel Flores y Tobías Aranda quedaron fuera del plantel que este miércoles enfrentará a Bolivia en Córdoba.",
-      "etiquetas": [
-        "Seleccion argentina",
-        "Lionel Scaloni",
-        "Fecha FIFA",
-        "Futbol",
-        "Bolivia"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Noticias Argentinas (NA)",
-          "enlace": "https://noticiasargentinas.com/deportes/bajas-en-la-seleccion--tres-jugadores-fueron-desafectados-para-la-doble-fecha-fifa_a6abbf20512f3a9893c266c09",
-          "fecha": "2026-09-29T17:22:37.863Z",
-          "oficial": false,
-          "aporte": "Detalló los nombres de los tres jugadores desafectados y los motivos de las liberaciones por compromisos de clubes."
-        },
-        {
-          "medio": "El Eco de Tandil",
-          "enlace": "https://www.eleco.com.ar/deportes/bajas-en-la-seleccion-que-jugadores-fueron-desafectados-para-la-doble-fecha-fifa",
-          "fecha": "2026-09-29T17:48:31.000Z",
-          "oficial": false,
-          "aporte": "Informó oficialmente sobre las modificaciones en la nómina de futbolistas de la Selección."
-        },
-        {
-          "medio": "TN (Todo Noticias)",
-          "enlace": "https://tn.com.ar/deportes/futbol/2026/09/29/tres-jugadores-fueron-desafectados-de-la-seleccion-argentina-antes-del-partido-con-bolivia/",
-          "fecha": "2026-09-29T19:33:57.000Z",
-          "oficial": false,
-          "aporte": "Aportó las declaraciones de Lionel Scaloni en conferencia de prensa sobre la formación y el recambio."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "jjldm5",
-          "titulo": "Scaloni sumó seis jugadores del ámbito local a la Selección",
-          "fecha": "2026-09-20T19:33:01.000Z",
-          "ruta": "/nota/scaloni-sumo-seis-jugadores-del-ambito-local-a-la-seleccion-jjldm5"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron tres medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "la-seleccion-desafecta-a-tres-jugadores-para-la-doble-fecha-fifa"
     },
     {
       "id": "105bdce",
@@ -1391,11 +1319,14 @@
       "guion": "El Gobierno defiende el control de fronteras y habla de expulsados",
       "seccion": "Política",
       "medios": [
+        "El Eco de Tandil",
         "LU9 Mar del Plata",
         "Ecos Diarios (Necochea)",
         "Agencia DIB",
         "La Nación",
         "Ámbito",
+        "Noticias Argentinas (NA)",
+        "Zona Norte Diario",
         "La Verdad"
       ],
       "enlace": "https://www.ambito.com/politica/adrian-ravier-defendio-el-control-fronteras-y-hablo-posibles-terroristas-los-expulsados-n6327951",
@@ -1538,93 +1469,6 @@
       "slug": "el-complejo-polideportivo-aloja-un-encuentro-regional-por-el-dia-del"
     },
     {
-      "id": "qxi2f0",
-      "titulo": "Artista deja la ciudad y levanta una casa con doce parabrisas",
-      "copete": "Una mujer de 38 años se instaló en las sierras de Córdoba para construir su propio hogar. Utilizó materiales reciclados, barro y cristales de autos.",
-      "cuerpo": "Mariana Di Pascuales se instaló en el Valle de Traslasierra, en la provincia de Córdoba, donde levantó una vivienda autosuficiente con materiales reciclados. A los 38 años, tras dejar su provincia natal de Santa Fe y recorrer distintos países de América Latina, la artista eligió el paraje de Los Hornillos para desarrollar el proyecto.\n\nLa construcción se realizó mediante técnicas de bioconstrucción, combinando tierra, agua y fibras vegetales para moldear los muros. El elemento más llamativo de la estructura son doce parabrisas de automóviles adquiridos en una subasta, los cuales funcionan como aberturas para iluminar el interior con luz solar. Además, empleó botellas de vidrio vacías para generar detalles decorativos en las paredes.\n\nEl inmueble cuenta con soluciones autónomas para los servicios básicos, ya que el agua proviene de una fuente natural serrana y los desagües se procesan a través de un biodigestor casero compuesto por tanques. En la actualidad, la propietaria reside en el lugar junto a su hijo.",
-      "guion": "Artista deja la ciudad y levanta una casa con doce parabrisas",
-      "seccion": "Argentina",
-      "medios": [
-        "TN (Todo Noticias)",
-        "El Destape",
-        "Radio Mitre",
-        "Canal 26"
-      ],
-      "enlace": "https://www.canal26.com/planeta/2026/09/29/dejo-la-ciudad-se-refugio-en-las-montanas-y-construyo-su-propia-casa-de-tierra-lo-hizo-con-12-parabrisas-de-autos-y-materiales-reciclados/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-29T14:56:51.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-29T21:31:16.726Z",
-      "relevancia": 63,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Una mujer de 38 años construyó su vivienda en el Valle de Traslasierra, Córdoba.",
-        "Empleó la técnica de bioconstrucción con barro, madera y fibras vegetales.",
-        "Colocó doce parabrisas de autos usados y botellas de vidrio como aberturas.",
-        "El suministro de agua surge de una fuente natural y utiliza un biodigestor."
-      ],
-      "seSabe": [
-        "Mariana Di Pascuales construyó una casa en Los Hornillos, Córdoba.",
-        "La vivienda fue hecha con barro, madera, botellas y doce parabrisas de autos.",
-        "La obra incluye un sistema de biodigestión y agua de fuente natural."
-      ],
-      "textoRedes": "Dejó la ciudad, se instaló en las sierras de Córdoba y construyó su propia casa con barro, madera y doce parabrisas de autos usados reciclados.",
-      "etiquetas": [
-        "bioconstruccion",
-        "cordoba",
-        "reciclaje",
-        "vivienda"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Canal 26",
-          "enlace": "https://www.canal26.com/planeta/2026/09/29/dejo-la-ciudad-se-refugio-en-las-montanas-y-construyo-su-propia-casa-de-tierra-lo-hizo-con-12-parabrisas-de-autos-y-materiales-reciclados/",
-          "fecha": "2026-09-29T14:56:51.000Z",
-          "oficial": false,
-          "aporte": "Detalló el proceso constructivo, los materiales y el sistema de servicios."
-        },
-        {
-          "medio": "TN (Todo Noticias)",
-          "enlace": "https://tn.com.ar/sociedad/2026/09/29/tiene-38-anos-dejo-santa-fe-y-construyo-su-propia-casa-de-barro-en-cordoba-con-materiales-reciclados/",
-          "fecha": "2026-09-29T20:49:05.000Z",
-          "oficial": false,
-          "aporte": "Aportó el apellido de la protagonista y la ubicación exacta."
-        },
-        {
-          "medio": "El Destape",
-          "enlace": "https://www.eldestapeweb.com/sociedad/dejo-vida-ciudad-construyo-propia-casa-tierra-asi-vivienda-mariana-hecha-parabrisas-materiales-reciclados-2026929181933",
-          "fecha": "2026-09-29T21:19:33.000Z",
-          "oficial": false,
-          "aporte": "Mencionó la actividad artística de la propietaria."
-        },
-        {
-          "medio": "Radio Mitre",
-          "enlace": "https://radiomitre.cienradios.com/sociedad/dejo-la-ciudad-para-construir-su-propia-casa-de-tierra-en-las-sierras-uso-12-cristales-de-parabrisas-de-coches-barro-madera-y-materiales-reciclados/",
-          "fecha": "2026-09-29T17:42:52.000Z",
-          "oficial": false,
-          "aporte": "Confirmó el uso de técnicas de bioconstrucción en las sierras."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "lh579a",
-          "titulo": "Alumnos del San José transformaron materiales reciclados en juguetes y propuestas educativas",
-          "fecha": "2026-09-15T19:59:41.000Z",
-          "ruta": "/nota/alumnos-del-san-jose-transformaron-materiales-reciclados-en-juguetes-lh579a"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron cuatro medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "artista-deja-la-ciudad-y-levanta-una-casa-con-doce-parabrisas"
-    },
-    {
       "id": "wgq362",
       "titulo": "Omar Martínez termina cuarto en el autódromo Juan Manuel Fangio",
       "copete": "A los 60 años, el histórico piloto compitió en la fecha de las TC Pick Up en el circuito serrano. La actividad marcó el regreso de las categorías nacionales a Balcarce.",
@@ -1639,7 +1483,7 @@
       "fecha": "2026-09-29T14:55:00.000Z",
       "sinFecha": false,
       "visto": "2026-09-29T16:31:06.769Z",
-      "relevancia": 92,
+      "relevancia": 88,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -2374,11 +2218,11 @@
         "Agencia DIB",
         "El Día",
         "0221",
-        "Zona Norte Diario",
-        "Ámbito",
-        "El Eco de Tandil",
+        "Infoeme",
         "Mi8 (Canal 8 Mar del Plata)",
-        "Infoeme"
+        "Ámbito",
+        "Zona Norte Diario",
+        "El Eco de Tandil"
       ],
       "enlace": "https://www.ambito.com/informacion-general/la-provincia-buenos-aires-crea-un-programa-que-estudiantes-secundarios-se-formen-oficios-n6327786",
       "teniaImagenLaFuente": true,
@@ -2457,6 +2301,7 @@
       "guion": "Aston Martin renueva los contratos de Fernando Alonso y Lance Stroll para 2027",
       "seccion": "Automovilismo",
       "medios": [
+        "Campeones",
         "Motorsport",
         "La Nación",
         "Infobae",
@@ -2465,7 +2310,6 @@
         "Ámbito",
         "TyC Sports",
         "La Nueva",
-        "Campeones",
         "Radio Mitre",
         "Minuto Uno",
         "Clarín"
@@ -2686,7 +2530,7 @@
       "fecha": "2026-09-29T10:29:49.000Z",
       "sinFecha": false,
       "visto": "2026-09-29T14:01:11.480Z",
-      "relevancia": 33,
+      "relevancia": 26,
       "local": false,
       "deLaZona": true,
       "publicadaPor": null,
@@ -2744,8 +2588,8 @@
         "C5N",
         "Diario Popular",
         "Noticias Argentinas (NA)",
-        "La Nueva",
         "Mi8 (Canal 8 Mar del Plata)",
+        "La Nueva",
         "La Verdad",
         "Crónica"
       ],
@@ -2919,7 +2763,6 @@
       "medios": [
         "Infobae",
         "La Nación",
-        "Clarín",
         "TN (Todo Noticias)",
         "El Destape",
         "Perfil",
@@ -2928,11 +2771,12 @@
         "C5N",
         "Canal 26",
         "Noticias Argentinas (NA)",
-        "Crónica",
         "QZ Noticias (Mar del Plata)",
+        "Mi8 (Canal 8 Mar del Plata)",
+        "Clarín",
+        "Crónica",
         "La Nueva",
         "La Verdad",
-        "Mi8 (Canal 8 Mar del Plata)",
         "Doble Amarilla"
       ],
       "enlace": "https://www.infobae.com/politica/2026/09/29/designaron-a-adolfo-cambiaso-como-embajador-internacional-del-deporte-argentino/",
@@ -3102,14 +2946,14 @@
         "Canal 26",
         "Noticias Argentinas (NA)",
         "El Día",
+        "La Brújula 24",
+        "InfoRegión",
         "ANDigital",
         "Crónica",
         "La Nueva",
         "Diputados Bonaerenses",
         "A24",
-        "El Eco de Tandil",
-        "La Brújula 24",
-        "InfoRegión"
+        "El Eco de Tandil"
       ],
       "enlace": "https://www.clarin.com/economia/luis-caputo-kicillof-anticristo-kirchnerismo-infierno-visto_0_t8mAjylcj2.html",
       "teniaImagenLaFuente": true,
@@ -3217,9 +3061,9 @@
       "medios": [
         "LU9 Mar del Plata",
         "Ecos Diarios (Necochea)",
+        "Mi8 (Canal 8 Mar del Plata)",
         "Agencia DIB",
-        "El Eco de Tandil",
-        "Mi8 (Canal 8 Mar del Plata)"
+        "El Eco de Tandil"
       ],
       "enlace": "https://dib.com.ar/sociedad/los-establecimientos-bonaerenses-que-garantizan-el-aborto-legal-se-triplicaron-seis-anos-n56095",
       "teniaImagenLaFuente": true,
@@ -3305,6 +3149,7 @@
       "seccion": "Fútbol",
       "medios": [
         "Clarín",
+        "Página/12",
         "Ámbito",
         "TyC Sports",
         "Olé",
@@ -3447,7 +3292,6 @@
         "El Cronista",
         "El Destape",
         "A24",
-        "C5N",
         "Radio Mitre",
         "Diario Popular",
         "Noticias Argentinas (NA)",
@@ -3459,6 +3303,7 @@
         "Infobae",
         "La Nación",
         "Clarín",
+        "C5N",
         "Página/12",
         "La Nueva",
         "La Brújula 24",
@@ -3651,107 +3496,89 @@
       }
     },
     {
-      "id": "1vmzrvq",
-      "titulo": "El consumo cae uno por ciento en agosto según la Cámara de Comercio",
-      "copete": "La compra de bienes y servicios baja un 1,1% interanual y un 0,8% frente a julio. Transporte y vehículos encabeza los retrocesos.",
-      "cuerpo": "El consumo de los hogares en bienes y servicios finales registra en agosto una caída del 1,1% en la comparación interanual, de acuerdo con el Indicador de Consumo elaborado por la Cámara Argentina de Comercio y Servicios. El índice muestra además una retracción desestacionalizada del 0,8% frente a julio, mientras el gasto familiar continúa en niveles bajos respecto de los picos de principios de 2025.\n\nEl relevamiento sectorial exhibe un comportamiento heterogéneo con bajas pronunciadas en transporte y vehículos, que retrocede un 11,4% interanual debido a la caída en el patentamiento de automóviles, y en recreación y cultura, que baja un 8,2%. En contraparte, indumentaria y calzado anota un incremento interanual estimado del 4,9%, y vivienda, alquileres y servicios públicos crece un 4,8% impulsado por la demanda de energía eléctrica.\n\nEl informe señala que el financiamiento comercial destinado a los hogares muestra signos de agotamiento, con caídas consecutivas en tarjetas de crédito, préstamos personales y prendarios. En tanto, la inflación mensual se ubica en el 1,7% durante agosto, por debajo del 2,1% registrado en julio, según los datos difundidos por la entidad empresaria.",
-      "guion": "El consumo cae uno por ciento en agosto según la Cámara de Comercio",
-      "seccion": "Economía",
+      "id": "1i0n3x9",
+      "titulo": "El autódromo Juan Manuel Fangio recupera actividad nacional",
+      "copete": "El circuito serrano vuelve a recibir categorías nacionales tras el acuerdo firmado en mayo de 2023 por la Provincia y el municipio para adecuar las instalaciones.",
+      "cuerpo": "El autódromo Juan Manuel Fangio recuperó actividad nacional en el circuito serrano tras el cierre registrado el 13 de noviembre de 2011. La recuperación comenzó con el trabajo de vecinos nucleados en la Asociación Autódromo y el apoyo de la Asociación Corredores Turismo Carretera, la Federación Regional de Automovilismo Mar y Sierras, la Municipalidad, el Museo Fangio y el Auto Club Balcarce.\n\nTras el regreso del automovilismo zonal el 10 de noviembre de 2019 con un trazado corto, las obras continuaron con la construcción de la variante Juan Manuel Bordeu inaugurada en agosto de 2021, que extendió el circuito a más de 2.000 metros con aportes privados, municipales y de cooperativas locales.\n\nEl proceso para la llegada de categorías nacionales avanzó en mayo de 2023, cuando el gobernador Axel Kicillof y el intendente Esteban Reino firmaron el acuerdo para que la Provincia realizara los aportes económicos necesarios para poner el escenario en condiciones.",
+      "guion": "El autódromo Juan Manuel Fangio recupera actividad nacional",
+      "seccion": "Automovilismo",
       "medios": [
-        "La Nación",
-        "Infobae",
-        "Ámbito",
-        "Perfil",
-        "El Destape",
-        "C5N",
-        "Diario Popular",
-        "Noticias Argentinas (NA)",
-        "0221",
-        "La Voz del Pueblo",
-        "La Nueva",
-        "InfoRegión",
-        "El Eco de Tandil",
-        "Agencia DIB"
+        "El Diario Balcarce"
       ],
-      "enlace": "https://www.eldestapeweb.com/economia/consumo-cayo-1-1-agosto-profundiza-crisis-hogares-202692819538",
+      "enlace": "https://eldiariobalcarce.com.ar/el-juan-manuel-fangio-volvio-a-latir-811",
       "teniaImagenLaFuente": true,
-      "fecha": "2026-09-28T22:05:38.000Z",
+      "fecha": "2026-09-28T22:02:49.000Z",
       "sinFecha": false,
-      "visto": "2026-09-29T00:30:56.955Z",
-      "relevancia": 66,
-      "local": false,
+      "visto": "2026-09-29T21:01:18.143Z",
+      "relevancia": 71,
+      "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
-      "temas": [],
+      "temas": [
+        "autodromo",
+        "fangio"
+      ],
       "como": "automatica",
       "claves": [
-        "El consumo baja 1,1% interanual en agosto.",
-        "Transporte y vehículos sufre la mayor caída.",
-        "El crédito a los hogares muestra signos de agotamiento.",
-        "La inflación mensual se ubica en 1,7%."
+        "El autódromo recuperó actividad nacional tras permanecer cerrado desde noviembre de 2011.",
+        "Un grupo de vecinos y la Asociación Autódromo impulsaron la reapertura zonal en 2019.",
+        "La variante Juan Manuel Bordeu amplió el circuito en agosto de 2021.",
+        "El gobernador Axel Kicillof y el intendente Esteban Reino firmaron el acuerdo de fondos en mayo de 2023."
       ],
       "seSabe": [
-        "El Indicador de Consumo registra una baja interanual del 1,1% en agosto, según la Cámara Argentina de Comercio y Servicios.",
-        "La serie desestacionalizada marca una retracción del 0,8% frente a julio.",
-        "Transporte y vehículos cae 11,4% interanual por la baja en patentamientos.",
-        "Recreación y cultura retrocede un 8,2% respecto a agosto de 2025.",
-        "Indumentaria y calzado anota una suba interanual del 4,9%.",
-        "Vivienda, alquileres y servicios públicos crece un 4,8% interanual."
+        "El autódromo Juan Manuel Fangio dejó de operar a nivel nacional el 13 de noviembre de 2011.",
+        "El circuito zonal volvió a funcionar el 10 de noviembre de 2019 según informó la Asociación Autódromo.",
+        "La variante Juan Manuel Bordeu se inauguró en agosto de 2021 y extendió el trazado a más de dos mil metros.",
+        "El gobernador Axel Kicillof y el intendente Esteban Reino firmaron el acuerdo de financiamiento provincial en mayo de 2023."
       ],
-      "textoRedes": "El consumo de los hogares registra una caída del 1,1% interanual en agosto y una baja del 0,8% frente a julio, según el Indicador de Consumo de la Cámara Argentina de Comercio y Servicios. Transporte y vehículos encabeza las retracciones sectoriales.",
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El autódromo Juan Manuel Fangio recuperó actividad nacional tras un largo proceso de obras y gestiones entre el municipio y la Provincia que comenzó con el trabajo de vecinos y entidades locales.",
       "etiquetas": [
-        "consumo",
-        "economia",
-        "camara de comercio",
-        "inflacion",
-        "agosto"
+        "autodromo",
+        "Juan Manuel Fangio",
+        "automovilismo",
+        "Balcarce"
       ],
       "fuentesConsultadas": [
         {
-          "medio": "El Destape",
-          "enlace": "https://www.eldestapeweb.com/economia/consumo-cayo-1-1-agosto-profundiza-crisis-hogares-202692819538",
-          "fecha": "2026-09-28T22:05:38.000Z",
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/el-juan-manuel-fangio-volvio-a-latir-811",
+          "fecha": null,
           "oficial": false,
-          "aporte": "Aportó los datos generales del Indicador de Consumo de agosto, la variación mensual, la inflación y el detalle por sectores y financiamiento."
+          "aporte": "Detalló la cronología de la recuperación del autódromo Juan Manuel Fangio desde el cierre de 2011 hasta los acuerdos provinciales de 2023."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "wgq362",
+          "titulo": "Omar Martínez termina cuarto en el autódromo Juan Manuel Fangio",
+          "fecha": "2026-09-29T14:55:00.000Z",
+          "ruta": "/nota/omar-martinez-termina-cuarto-en-el-autodromo-juan-manuel-fangio-wgq362"
         },
         {
-          "medio": "Ámbito",
-          "enlace": "https://www.ambito.com/economia/el-consumo-los-hogares-volvio-mostrar-una-contraccion-y-cayo-11-agosto-n6327727",
-          "fecha": "2026-09-29T00:02:00.000Z",
-          "oficial": false,
-          "aporte": "Confirmó la baja de 0,8% frente a julio y los rubros de transporte y recreación como los de mayor retroceso."
+          "id": "rebipe",
+          "titulo": "Mangoni repasa su paso por el autódromo Juan Manuel Fangio",
+          "fecha": "2026-09-28T16:15:38.000Z",
+          "ruta": "/nota/mangoni-repasa-su-paso-por-el-autodromo-juan-manuel-fangio-rebipe"
         },
         {
-          "medio": "Perfil",
-          "enlace": "https://www.perfil.com/noticias/economia/el-consumo-de-los-hogares-cayo-11-interanual-en-agosto-segun-la-cac.phtml",
-          "fecha": "2026-09-28T22:39:38.000Z",
-          "oficial": false,
-          "aporte": "Aportó que transporte y vehículos lastró el índice por la baja de patentamientos."
-        },
-        {
-          "medio": "Diario Popular",
-          "enlace": "https://www.diariopopular.com.ar/economia/el-consumo-los-hogares-sigue-baja-cayo-el-11-interanual-agosto-n921954",
-          "fecha": "2026-09-28T23:32:00.000Z",
-          "oficial": false,
-          "aporte": "No aportó información adicional al no incluir resumen."
-        },
-        {
-          "medio": "Noticias Argentinas (NA)",
-          "enlace": "https://noticiasargentinas.com/economia/el-consumo-de-los-hogares-volvio-a-caer-en-agosto-y-registro-una-baja-interanual-del-1-1-_a6abae059b62936833e766c80",
-          "fecha": "2026-09-28T22:06:04.000Z",
-          "oficial": false,
-          "aporte": "Coincidió con los datos de la caída interanual del 1,1% y la retracción desestacionalizada del 0,8% informados por la entidad."
+          "id": "83u2vt",
+          "titulo": "El autódromo Juan Manuel Fangio reabre tras quince años",
+          "fecha": "2026-09-28T03:01:51.643Z",
+          "ruta": "/nota/el-autodromo-juan-manuel-fangio-reabre-tras-quince-anos-83u2vt"
         }
       ],
       "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron cinco medios independientes.",
-        "sugeridoPorIA": "ALTA"
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
       },
-      "slug": "el-consumo-cae-uno-por-ciento-en-agosto-segun-la-camara-de-comercio",
+      "slug": "el-autodromo-juan-manuel-fangio-recupera-actividad-nacional",
       "foto": {
-        "archivo": "fotos-notas/1vmzrvq.webp",
-        "credito": "Foto: Diario Popular"
+        "archivo": "fotos-notas/1i0n3x9.jpg",
+        "credito": "Foto: El Diario Balcarce"
       }
     },
     {
@@ -4386,6 +4213,102 @@
       "slug": "omar-martinez-valora-el-regreso-de-balcarce-pero-extrana-el-dibujo"
     },
     {
+      "id": "1b57l0z",
+      "titulo": "El riesgo país baja a 604 puntos tras el repunte de los bonos",
+      "copete": "El indicador que elabora JP Morgan cede 24 unidades este martes debido a una rueda financiera positiva para los títulos soberanos.",
+      "cuerpo": "El indicador que elabora JP Morgan cae 24 unidades con relación a la jornada previa y se posiciona muy cerca de cruzar el umbral de las 600 unidades. Esta mejora en la deuda local se produce por un repunte de hasta 0,9% en los títulos públicos en dólares. Como antecedente, el indicador había superado los 630 puntos en la víspera tras una caída de los bonos y de las acciones líderes.",
+      "guion": "El riesgo país baja a 604 puntos tras el repunte de los bonos",
+      "seccion": "Economía",
+      "medios": [
+        "La Nación",
+        "TN (Todo Noticias)",
+        "Crónica",
+        "Canal 26",
+        "Noticias Argentinas (NA)",
+        "El Día",
+        "La Tecla",
+        "El Marplatense",
+        "Mi8 (Canal 8 Mar del Plata)",
+        "La Nueva",
+        "Radio Mitre",
+        "Agencia DIB",
+        "La Verdad"
+      ],
+      "enlace": "https://noticiasargentinas.com/economia/el-riesgo-pais-cae-y-se-acerca-a-los-600-puntos_a6abbd7d312f3a9893c2280a8",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-28T16:23:02.000Z",
+      "sinFecha": false,
+      "visto": "2026-09-29T16:59:39.618Z",
+      "relevancia": 83,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "El riesgo país se ubica en 604 puntos básicos este martes.",
+        "El indicador de JP Morgan cae 24 unidades respecto de la jornada previa.",
+        "La baja se produce por un repunte de hasta 0,9% en los títulos públicos.",
+        "El índice Merval registra un retroceso de 0,9% al promediar la rueda."
+      ],
+      "noConfirmado": [
+        "No se confirmó si el indicador logrará perforar el umbral de las 600 unidades en las próximas ruedas."
+      ],
+      "textoRedes": "El riesgo país cede 24 unidades este martes y se ubica en 604 puntos básicos tras una rueda positiva para los bonos soberanos, según informaron las fuentes financieras.",
+      "etiquetas": [
+        "riesgo pais",
+        "bonos",
+        "merval"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Noticias Argentinas (NA)",
+          "enlace": "https://noticiasargentinas.com/economia/el-riesgo-pais-cae-y-se-acerca-a-los-600-puntos_a6abbd7d312f3a9893c2280a8",
+          "fecha": "2026-09-29T15:25:34.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Crónica",
+          "enlace": "https://www.cronica.com.ar/politica/riesgo-pais-bonos-soberanos/",
+          "fecha": "2026-09-29T15:39:08.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "El Día",
+          "enlace": "https://www.eldia.com/politica-y-economia/retrocede-el-riesgo-pais-y-se-acerca-a-los-600-puntos-politica-y-economia_1790699700",
+          "fecha": "2026-09-29T16:48:35.000Z",
+          "oficial": false,
+          "aporte": null
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1k34j05",
+          "titulo": "El riesgo país supera los 630 puntos y marca el récord de 2026",
+          "fecha": "2026-09-28T15:49:00.000Z",
+          "ruta": "/nota/el-riesgo-pais-supera-los-630-puntos-y-marca-el-record-de-2026-1k34j05"
+        },
+        {
+          "id": "5ddc24",
+          "titulo": "El riesgo país llega a 642 puntos y marca un récord anual",
+          "fecha": "2026-09-25T21:00:10.000Z",
+          "ruta": "/nota/el-riesgo-pais-llega-a-642-puntos-y-marca-un-record-anual-5ddc24"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron tres medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "el-riesgo-pais-baja-a-604-puntos-tras-el-repunte-de-los-bonos",
+      "foto": {
+        "archivo": "fotos-notas/1b57l0z.jpg",
+        "credito": "Foto: Crónica"
+      }
+    },
+    {
       "id": "14iq63v",
       "titulo": "Realizan la fiscalización mensual de artesanos en la Casa del Bicentenario",
       "copete": "La evaluación para feriantes locales será el jueves de 10 a 12 en el espacio de avenida Favaloro. Los participantes deben llevar dos piezas.",
@@ -4563,11 +4486,11 @@
         "Argenpapa"
       ],
       "enlace": "https://www.argenpapa.com.ar/noticia/17837-argentina-sudeste-bonaerense-las-lluvias-alcanzaron-los-30-mm-en-tandil",
-      "teniaImagenLaFuente": false,
+      "teniaImagenLaFuente": true,
       "fecha": "2026-09-28T16:01:28.909Z",
       "sinFecha": true,
       "visto": "2026-09-28T16:01:28.909Z",
-      "relevancia": 16,
+      "relevancia": 26,
       "local": false,
       "deLaZona": true,
       "publicadaPor": null,
@@ -4817,11 +4740,7 @@
         "Perfil",
         "El Destape",
         "Minuto Uno",
-        "Noticias Argentinas (NA)",
-        "El Día",
-        "El Marplatense",
-        "El Eco de Tandil",
-        "Página/12"
+        "El Marplatense"
       ],
       "enlace": "https://www.infobae.com/economia/2026/09/28/la-actividad-economica-de-caba-cayo-02-en-el-segundo-trimestre-cuales-fueron-los-sectores-mas-golpeados/",
       "teniaImagenLaFuente": true,
@@ -5152,16 +5071,16 @@
     }
   ],
   "secciones": [
-    "Automovilismo",
     "Economía",
+    "Fútbol",
     "Balcarce",
     "Política",
     "Cultura y agenda",
     "Deportes",
-    "Fútbol",
     "Agro",
-    "Argentina",
+    "Automovilismo",
     "Tecnología",
+    "Argentina",
     "Policiales"
   ],
   "temas": [
@@ -5195,8 +5114,8 @@
     "ahora": {
       "temp": 10,
       "sensacion": 6,
-      "humedad": 86,
-      "viento": 23,
+      "humedad": 87,
+      "viento": 22,
       "rumbo": "SO",
       "cielo": "Nublado",
       "esDeDia": false
@@ -5565,10 +5484,22 @@
       "motivo": "necesita ojo humano: \"herida\""
     },
     {
+      "id": "1a1eesp",
+      "titulo": "Impulsan una diplomatura para la gestión y creación de…",
+      "seccion": "Balcarce",
+      "motivo": "verificación baja: espera a una persona (visto al reescribir)"
+    },
+    {
       "id": "199k1u0",
       "titulo": "Guillén: “Con una vuelta del TC a Balcarce podemos pensar…",
       "seccion": "Automovilismo",
       "motivo": "verificación baja: espera a una persona (visto al reescribir)"
+    },
+    {
+      "id": "10ybc9u",
+      "titulo": "Diputados salió al cruce de la justicia y negó encubrir…",
+      "seccion": "Política",
+      "motivo": "necesita ojo humano: \"denuncia\""
     },
     {
       "id": "1ic6bsr",
@@ -5577,10 +5508,10 @@
       "motivo": "necesita ojo humano: \"niño\", en el texto completo de la fuente (visto al reescribir)"
     },
     {
-      "id": "13cwgql",
-      "titulo": "La Corte Suprema anuló la absolución a César Milani y…",
+      "id": "1pqkrnn",
+      "titulo": "En la previa de la visita del Papa, el Gobierno denunció…",
       "seccion": "Argentina",
-      "motivo": "necesita ojo humano: \"acusado\""
+      "motivo": "necesita ojo humano: \"denunció\""
     },
     {
       "id": "fr44g3",
@@ -5607,12 +5538,6 @@
       "motivo": "necesita ojo humano: \"niña\""
     },
     {
-      "id": "10ybc9u",
-      "titulo": "Diputados salió al cruce de la justicia y negó encubrir…",
-      "seccion": "Política",
-      "motivo": "necesita ojo humano: \"denuncia\""
-    },
-    {
       "id": "1xe4pop",
       "titulo": "De una oferta laboral en Facebook a prisionero de guerra…",
       "seccion": "Argentina",
@@ -5631,22 +5556,16 @@
       "motivo": "necesita ojo humano: \"denuncia\""
     },
     {
-      "id": "1u3nefi",
-      "titulo": "Causa Maradona: expectativa por la nueva declaración de…",
+      "id": "1iitoa4",
+      "titulo": "Quiniela de hoy: resultados de los sorteos en Nacional…",
       "seccion": "Argentina",
-      "motivo": "necesita ojo humano: \"acusado\""
+      "motivo": "parece promoción, no noticia: \"sorteo\""
     },
     {
       "id": "jien96",
       "titulo": "Un futbolista fue detenido en Mendoza por realizar gestos…",
       "seccion": "Fútbol",
       "motivo": "necesita ojo humano: \"detenido\""
-    },
-    {
-      "id": "1iitoa4",
-      "titulo": "Quiniela de hoy: resultados de los sorteos en Nacional…",
-      "seccion": "Argentina",
-      "motivo": "parece promoción, no noticia: \"sorteo\""
     },
     {
       "id": "nlwd45",
@@ -5659,6 +5578,12 @@
       "titulo": null,
       "seccion": "Balcarce",
       "motivo": "necesita ojo humano: \"alumno de\", en el texto completo de la fuente (visto al reescribir)"
+    },
+    {
+      "id": "ny4zx0",
+      "titulo": "Fuego cruzado entre los acusados por la muerte de Maradona…",
+      "seccion": "Argentina",
+      "motivo": "necesita ojo humano: \"acusado\""
     },
     {
       "id": "1ogz9mz",
@@ -5685,5 +5610,5 @@
       "motivo": "necesita ojo humano: \"adolescente\""
     }
   ],
-  "esperandoCuerpo": 7
+  "esperandoCuerpo": 8
 }

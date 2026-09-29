@@ -659,6 +659,13 @@
   "ultimo": "2026-09-28T19:05:34.750Z",
   "motivo": "con cuerpo"
  },
+ "1a1eesp": {
+  "intentos": 1,
+  "ultimo": "2026-09-29T22:31:15.416Z",
+  "motivo": "verificación baja: espera a una persona",
+  "baja": true,
+  "fuentes": 1
+ },
  "1a1vwe0": {
   "intentos": 1,
   "ultimo": "2026-09-25T15:30:41.452Z",
@@ -2229,6 +2236,11 @@
   "ultimo": "2026-09-28T18:33:26.201Z",
   "motivo": "con cuerpo"
  },
+ "436uz0": {
+  "intentos": 1,
+  "ultimo": "2026-09-29T22:31:15.416Z",
+  "motivo": "con cuerpo"
+ },
  "45w2kj": {
   "intentos": 1,
   "ultimo": "2026-09-25T12:32:06.257Z",
@@ -3585,9 +3597,9 @@
   "motivo": "sin material"
  },
  "rtk3io": {
-  "intentos": 1,
-  "ultimo": "2026-09-29T22:01:20.500Z",
-  "motivo": "título o bajada: 2 problemas (negacion, tildes): la fuente niega algo en el título y el texto nuevo no"
+  "intentos": 2,
+  "ultimo": "2026-09-29T22:31:15.416Z",
+  "motivo": "título o bajada: 2 problemas (nombre, negacion): el copete nombra a \"gobierno\" y la fuente no"
  },
  "ryudlj": {
   "intentos": 1,
