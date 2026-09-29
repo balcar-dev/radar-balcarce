@@ -703,8 +703,8 @@
   "motivo": "Gemini: No number after minus sign in JSON at position 11 (line 1 column 12)"
  },
  "1bkacee": {
-  "intentos": 1,
-  "ultimo": "2026-09-29T11:34:08.296Z",
+  "intentos": 2,
+  "ultimo": "2026-09-29T12:01:42.379Z",
   "motivo": "Gemini: HTTP 401 (clave redaccion): {\n  \"error\": {\n    \"code\": 401,\n    \"message\": \"The bound service account is deleted or disabled. The service account bound "
  },
  "1bmj07h": {
@@ -1548,6 +1548,11 @@
   "intentos": 1,
   "ultimo": "2026-09-25T13:00:43.192Z",
   "motivo": "con cuerpo"
+ },
+ "1rk1qaj": {
+  "intentos": 1,
+  "ultimo": "2026-09-29T12:01:42.379Z",
+  "motivo": "Gemini: HTTP 401 (clave redaccion): {\n  \"error\": {\n    \"code\": 401,\n    \"message\": \"The bound service account is deleted or disabled. The service account bound "
  },
  "1rkn51h": {
   "intentos": 1,
@@ -3045,6 +3050,11 @@
   "intentos": 3,
   "ultimo": "2026-09-26T04:00:50.275Z",
   "motivo": "título o bajada: 1 problema (antecedente): el copete usa \"camara\", que sale de una nota anterior, como si fuera de hoy"
+ },
+ "n5ls7m": {
+  "intentos": 1,
+  "ultimo": "2026-09-29T12:01:42.379Z",
+  "motivo": "Gemini: HTTP 401 (clave redaccion): {\n  \"error\": {\n    \"code\": 401,\n    \"message\": \"The bound service account is deleted or disabled. The service account bound "
  },
  "nauwa6": {
   "intentos": 3,
