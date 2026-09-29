@@ -2221,16 +2221,16 @@
   "cuando": "2026-09-29T18:31:54.551Z"
  },
  "1pqkrnn": {
-  "archivo": "fotos-notas/1pqkrnn.jpg",
   "medio": "QZ Noticias (Mar del Plata)",
-  "credito": "Foto: QZ Noticias (Mar del Plata)",
   "licencia": null,
   "origen": "medio",
   "titulo": "El Gobierno vincula cambios en Olivos a amenazas y la visita papal",
   "enlace": "https://www.qznoticias.com/el-pais/el-gobierno-justifico-la-militarizacion-de-olivos-por-amenazas-a-funcionarios-y-la-visita-del-papa",
   "imagenOriginal": "https://n2.cdnartic.ar/Syj4FP5RRzmVqe2e9t3zUr0A8Dw=/1200x0/filters:no_upscale():format(jpeg):quality(70)/https://qznoticiascdn.eleco.com.ar/media/2026/08/vocero.webp",
   "razon": "La foto B muestra claramente una conferencia de prensa oficial en Casa Rosada sobre los cambios en Olivos, con mejor calidad y sin marcas ni menores.",
-  "cuando": "2026-09-29T18:31:54.551Z"
+  "cuando": "2026-09-29T18:31:54.551Z",
+  "intentado": true,
+  "borrada": true
  },
  "e7jcec": {
   "archivo": "fotos-notas/e7jcec.jpg",
@@ -2310,5 +2310,41 @@
   "imagenOriginal": "https://cdn.eldestapeweb.com/eldestape/092026/1790696177099.jpg?&cw=1600&ch=900",
   "razon": "La foto B muestra claramente al vocero en conferencia de prensa sin personas en primer plano que molesten ni marcas de agua.",
   "cuando": "2026-09-29T20:01:39.859Z"
+ },
+ "8pri82": {
+  "archivo": "fotos-notas/8pri82.jpg",
+  "medio": "Minuto Uno",
+  "credito": "Foto: Minuto Uno",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Roma no cede a Dybala y a Molina para la despedida de Messi",
+  "enlace": "https://www.minutouno.com/deportes/roma-no-cede-paulo-dybala-ni-nahuel-molina-la-despedida-lionel-messi-el-motivo-n6328104",
+  "imagenOriginal": "https://media.minutouno.com/p/d7107b4ded58e841666fccfedf9dffb2/adjuntos/150/imagenes/043/672/0043672743/1200x675/smart/dybala-molina.jpg",
+  "razon": "Muestra a Dybala y Molina entrenando juntos en la Roma, relacionándose directamente con la noticia.",
+  "cuando": "2026-09-29T20:31:42.192Z"
+ },
+ "16ufhqn": {
+  "archivo": "fotos-notas/16ufhqn.jpg",
+  "medio": "QZ Noticias (Mar del Plata)",
+  "credito": "Foto: QZ Noticias (Mar del Plata)",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "La Corte revoca el fallo sobre la Ley de Tierras del DNU",
+  "enlace": "https://www.qznoticias.com/el-pais/la-corte-suprema-revoco-el-fallo-contra-la-derogacion-de-la-ley-de-tierras",
+  "imagenOriginal": "https://n2.cdnartic.ar/oCPMOAiuQhTaCpqdiQyBPJKPckM=/1200x0/filters:no_upscale():format(jpeg):quality(70)/https://qznoticiascdn.eleco.com.ar/media/2026/09/cordillera.webp",
+  "razon": "Es la mejor foto que ilustra un campo rural sin marcas de agua ni menores reconocibles.",
+  "cuando": "2026-09-29T20:31:42.192Z"
+ },
+ "224geo": {
+  "archivo": "fotos-notas/224geo.jpg",
+  "medio": "Ámbito",
+  "credito": "Foto: Ámbito",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Diputados discute proyectos sobre endeudamiento familiar",
+  "enlace": "https://www.ambito.com/politica/vence-el-plazo-dictaminar-morosidad-oficialismo-y-oposicion-negocian-contrarreloj-n6327524",
+  "imagenOriginal": "https://media.ambito.com/p/077a8d7d883643981f33f3304fd31685/adjuntos/239/imagenes/043/672/0043672845/1200x675/smart/diputados-plenario.jpg",
+  "razon": "La IA había preferido la de Noticias Argentinas (NA), pero no se puede usar (marca de agua, otro medio o un menor) (Logo de Noticias Argentinas (NA) abajo a la izquierda): se usa Ámbito en su lugar, aunque no sea la ideal.",
+  "cuando": "2026-09-29T20:31:42.192Z"
  }
 }
