@@ -1,5 +1,5 @@
 {
-  "generado": "2026-09-29T17:00:26.460Z",
+  "generado": "2026-09-29T17:03:06.000Z",
   "notas": [
     {
       "id": "1vgun5x",
@@ -84,6 +84,82 @@
       }
     },
     {
+      "id": "1tgeg0m",
+      "titulo": "La Cooperativa de Electricidad anuncia un corte de luz para el miércoles",
+      "copete": "El servicio eléctrico se interrumpirá el miércoles 30 de septiembre entre las 7:30 y las 13 horas por tareas de mantenimiento en líneas de baja tensión.",
+      "cuerpo": "La Cooperativa de Electricidad informó que el miércoles 30 de septiembre se llevará a cabo un corte programado en el suministro de energía eléctrica. La medida responde a la ejecución de trabajos específicos en líneas de baja tensión.\n\nLa interrupción del servicio se extenderá desde las 7:30 hasta las 13 horas. Según detallaron los medios locales, el corte afectará a la mayoría de los usuarios ubicados en distintas arterias de la ciudad.\n\nEste procedimiento se suma a las tareas de mantenimiento que la entidad realiza de manera periódica en la red de distribución para optimizar el funcionamiento del sistema eléctrico local.",
+      "guion": "La Cooperativa de Electricidad anuncia un corte de luz para el miércoles",
+      "seccion": "Balcarce",
+      "medios": [
+        "Infórmese Primero (FM 104.9)",
+        "Radio Gabal (FM 104.1)"
+      ],
+      "enlace": "http://www.informeseprimero.com.ar/2026/09/este-miercoles-habra-un-corte-de.html",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-29T16:05:00.906Z",
+      "sinFecha": false,
+      "visto": "2026-09-29T17:02:31.052Z",
+      "relevancia": 100,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Corte programado de energía eléctrica este miércoles 30 de septiembre.",
+        "El servicio se interrumpirá entre las 7:30 y las 13 horas.",
+        "Los trabajos se realizarán sobre líneas de baja tensión."
+      ],
+      "seSabe": [
+        "La Cooperativa de Electricidad realizará un corte programado de energía este miércoles 30 de septiembre, según informó la entidad.",
+        "La interrupción del servicio transcurrirá entre las 7:30 y las 13 horas.",
+        "Los trabajos se ejecutarán en líneas de baja tensión."
+      ],
+      "noConfirmado": [
+        "No se especificaron las calles exactas ni la cantidad total de usuarios afectados por el corte."
+      ],
+      "etiquetas": [
+        "corte de luz",
+        "Cooperativa de Electricidad",
+        "Balcarce",
+        "servicios"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infórmese Primero (FM 104.9)",
+          "enlace": "http://www.informeseprimero.com.ar/2026/09/este-miercoles-habra-un-corte-de.html",
+          "fecha": "2026-09-29T16:05:00.906Z",
+          "oficial": false,
+          "aporte": "Informó que el corte será este miércoles 30 de septiembre entre las 7:30 y las 13 por trabajos en baja tensión y afectará a la mayoría de los usuarios de ciertas arterias."
+        },
+        {
+          "medio": "Radio Gabal (FM 104.1)",
+          "enlace": "https://www.radiogabal.com.ar/index.php/comunidad/anuncian-un-corte-del-servicio-electrico-para-este-miercoles-en-un-sector-de-la-ciudad",
+          "fecha": "2026-09-29T16:49:36.000Z",
+          "oficial": false,
+          "aporte": "Confirmó el horario de la interrupción del servicio entre las 7:30 y las 13 horas debido a tareas en líneas de baja tensión."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1oji07d",
+          "titulo": "Se anuncia corte de energía para este viernes",
+          "fecha": "2026-09-17T20:27:01.000Z",
+          "ruta": "/nota/se-anuncia-corte-de-energia-para-este-viernes-1oji07d"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "la-cooperativa-de-electricidad-anuncia-un-corte-de-luz-para-el",
+      "foto": {
+        "archivo": "fotos-notas/1tgeg0m.jpg",
+        "credito": "Foto: Infórmese Primero (FM 104.9)"
+      }
+    },
+    {
       "id": "1nyo5j6",
       "titulo": "Pato Naranja gana por 99 a 12 y queda entre los cuatro mejores",
       "copete": "El equipo de rugby de Campo de Pato superó a Pampas de Dolores y se metió en la pelea por los play off del Torneo Desarrollo. El próximo sábado jugará de local frente a Villa Gesell.",
@@ -157,6 +233,72 @@
         "sugeridoPorIA": "MEDIA"
       },
       "slug": "pato-naranja-gana-por-99-a-12-y-queda-entre-los-cuatro-mejores"
+    },
+    {
+      "id": "1kzsj5l",
+      "titulo": "ARBal aplica un cronograma especial de atención el miércoles",
+      "copete": "La Agencia de Recaudación Balcarce modifica sus horarios el miércoles por una capacitación interna y el cierre del balance trimestral.",
+      "cuerpo": "La Agencia de Recaudación Balcarce (ARBal) interrumpirá la atención presencial el miércoles entre las 7:15 y las 8 por una capacitación interna orientada a optimizar el funcionamiento del organismo, según informó la propia entidad.\n\nAdemás, las líneas de caja finalizarán sus operaciones de forma anticipada a las 10 debido al cierre del balance trimestral. Desde el organismo solicitaron a los contribuyentes considerar estas modificaciones horarias al realizar sus trámites.",
+      "guion": "ARBal aplica un cronograma especial de atención el miércoles",
+      "seccion": "Balcarce",
+      "medios": [
+        "Infórmese Primero (FM 104.9)",
+        "Diario La Vanguardia"
+      ],
+      "enlace": "http://www.informeseprimero.com.ar/2026/09/arbal-tendra-un-cronograma-especial-de.html",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-29T15:45:01.050Z",
+      "sinFecha": false,
+      "visto": "2026-09-29T17:02:31.052Z",
+      "relevancia": 100,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Atención suspendida de 7:15 a 8",
+        "Cajas cerradas desde las 10",
+        "Modificaciones por capacitación y balance"
+      ],
+      "seSabe": [
+        "ARBal interrumpirá la atención presencial este miércoles de 7:15 a 8 por una capacitación interna.",
+        "Las líneas de caja finalizarán sus operaciones a las 10 debido al cierre del balance trimestral.",
+        "El organismo solicitó a los contribuyentes tener en cuenta estas modificaciones."
+      ],
+      "textoRedes": "ARBal tendrá un cronograma especial de atención este miércoles. La atención presencial se interrumpirá de 7:15 a 8 por una capacitación y las cajas cerrarán a las 10 por el cierre del balance trimestral.",
+      "etiquetas": [
+        "ARBal",
+        "Balcarce",
+        "atención",
+        "cronograma"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infórmese Primero (FM 104.9)",
+          "enlace": "http://www.informeseprimero.com.ar/2026/09/arbal-tendra-un-cronograma-especial-de.html",
+          "fecha": "2026-09-29T15:45:01.050Z",
+          "oficial": false,
+          "aporte": "Informó el horario de interrupción matutina por capacitación y el pedido a los contribuyentes."
+        },
+        {
+          "medio": "Diario La Vanguardia",
+          "enlace": "https://www.diariolavanguardia.com/noticias/44942-arbal-modifica-manana-su-horario-de-atencion-al-publico/",
+          "fecha": null,
+          "oficial": false,
+          "aporte": "Aportó el dato sobre el cierre de las líneas de caja a las 10 por el balance trimestral."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "arbal-aplica-un-cronograma-especial-de-atencion-el-miercoles",
+      "foto": {
+        "archivo": "fotos-notas/1kzsj5l.jpg",
+        "credito": "Foto: Infórmese Primero (FM 104.9)"
+      }
     },
     {
       "id": "1b57l0z",
@@ -403,7 +545,8 @@
       "medios": [
         "Infórmese Primero (FM 104.9)",
         "Municipalidad de Balcarce",
-        "Diario La Vanguardia"
+        "Diario La Vanguardia",
+        "Sendero Regional"
       ],
       "enlace": "https://balcarce.gob.ar/2026/09/29/balcarce-fue-sede-del-primer-encuentro-regional-por-el-dia-internacional-del-sordo/",
       "teniaImagenLaFuente": true,
@@ -628,6 +771,94 @@
       }
     },
     {
+      "id": "8zhfqv",
+      "titulo": "El Municipio analiza ir a la Justicia por la Zona Fría",
+      "copete": "El Gobierno local evalúa sumarse a un reclamo colectivo tras la eliminación del beneficio. Alrededor de 12.000 usuarios del distrito están alcanzados por el régimen.",
+      "cuerpo": "El Gobierno municipal analiza sumarse a un reclamo colectivo de los municipios afectados por la reforma de la Zona Fría. La modificación del régimen fue convertida en ley por el Senado y deja el acceso al descuento sujeto a criterios de vulnerabilidad para las zonas incorporadas desde 2021.\n\nEn Balcarce, entre 11.000 y 12.000 usuarios reciben actualmente el beneficio. El intendente Esteban Reino conversó sobre el tema durante el fin de semana con el jefe de Gabinete de la Nación, Diego Santilli, y el senador nacional Maximiliano Abad.\n\nLa presentación institucional de los municipios y la iniciativa de organizaciones de consumidores podrían coexistir como estrategias en los tribunales.",
+      "guion": "El Municipio analiza ir a la Justicia por la Zona Fría",
+      "seccion": "Política",
+      "medios": [
+        "Diario La Vanguardia"
+      ],
+      "enlace": "https://www.diariolavanguardia.com/noticias/44934-zona-fria-balcarce-evalua-la-via-judicial-tras-la-eliminacion-del-beneficio/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-29T14:01:11.480Z",
+      "sinFecha": true,
+      "visto": "2026-09-29T14:01:11.480Z",
+      "relevancia": 63,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [
+        "concejo"
+      ],
+      "como": "automatica",
+      "claves": [
+        "El Gobierno local evalúa sumarse a un reclamo colectivo.",
+        "Entre 11.000 y 12.000 usuarios reciben el beneficio en el distrito.",
+        "El concejal Gabriel Petruccelli y la Liga de Amas de Casa preparan otra vía judicial.",
+        "El aumento estimado para quienes pierdan el descuento puede llegar al 30%."
+      ],
+      "seSabe": [
+        "El Senado convirtió en ley la reforma del régimen de Zona Fría.",
+        "Alrededor de 11.000 a 12.000 usuarios de Balcarce están alcanzados por el beneficio.",
+        "El intendente Esteban Reino conversó sobre el tema con Diego Santilli y Maximiliano Abad.",
+        "El concejal Gabriel Petruccelli y la Liga de Amas de Casa preparan una alternativa judicial."
+      ],
+      "noConfirmado": [
+        "Todavía no se concretó la presentación judicial por parte del Municipio.",
+        "Falta definir los argumentos jurídicos y si los distritos avanzarán conjuntamente.",
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El Municipio evalúa sumarse a un reclamo colectivo tras la eliminación de la Zona Fría. Unos 12.000 usuarios de Balcarce están alcanzados por el régimen.",
+      "etiquetas": [
+        "Zona Fria",
+        "Municipalidad de Balcarce",
+        "Gabriel Petruccelli",
+        "Esteban Reino",
+        "Tarifas"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Diario La Vanguardia",
+          "enlace": "https://www.diariolavanguardia.com/noticias/44934-zona-fria-balcarce-evalua-la-via-judicial-tras-la-eliminacion-del-beneficio/",
+          "fecha": null,
+          "oficial": false,
+          "aporte": "Informó que el Municipio analiza sumarse a un reclamo colectivo y que el concejal Gabriel Petruccelli y la Liga de Amas de Casa preparan otra vía judicial."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1ytgm6c",
+          "titulo": "Petruccelli pide que Aparicio exponga ante la Comisión de Salud",
+          "fecha": "2026-09-28T21:59:12.000Z",
+          "ruta": "/nota/petruccelli-pide-que-aparicio-exponga-ante-la-comision-de-salud-1ytgm6c"
+        },
+        {
+          "id": "ip1dkb",
+          "titulo": "El Concejo pide acelerar la reparación de un puente en la zona rural",
+          "fecha": "2026-09-28T21:52:27.000Z",
+          "ruta": "/nota/el-concejo-pide-acelerar-la-reparacion-de-un-puente-en-la-zona-rural-ip1dkb"
+        },
+        {
+          "id": "37t3r4",
+          "titulo": "Guillén propone sumar nuevos eventos al autódromo municipal",
+          "fecha": "2026-09-28T18:31:07.835Z",
+          "ruta": "/nota/guillen-propone-sumar-nuevos-eventos-al-autodromo-municipal-37t3r4"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "el-municipio-analiza-ir-a-la-justicia-por-la-zona-fria",
+      "foto": {
+        "archivo": "fotos-notas/8zhfqv.jpg",
+        "credito": "Foto: Diario La Vanguardia"
+      }
+    },
+    {
       "id": "1s56ua",
       "titulo": "WhatsApp detalla los pasos para liberar espacio en el celular",
       "copete": "La aplicación no incluye una papelera única, pero ofrece herramientas internas para borrar fotos, videos y archivos pesados sin perder las conversaciones.",
@@ -700,8 +931,8 @@
         "TN (Todo Noticias)",
         "C5N",
         "Crónica",
-        "Radio Mitre",
-        "Canal 26"
+        "Canal 26",
+        "Radio Mitre"
       ],
       "enlace": "https://tn.com.ar/economia/2026/09/29/luis-caputo-no-esperamos-volatilidad-cambiaria-en-2027-pero-nos-preparamos-como-si-fuera-a-pasar/",
       "teniaImagenLaFuente": true,
@@ -945,6 +1176,7 @@
       "seccion": "Policiales",
       "medios": [
         "News Balcarce (FM 91.7)",
+        "Puntonueve (FM 100.9)",
         "Infórmese Primero (FM 104.9)",
         "Radio Gabal (FM 104.1)",
         "El Diario Balcarce",
@@ -1484,84 +1716,6 @@
         "sugeridoPorIA": "MEDIA"
       },
       "slug": "el-servicio-meteorologico-nacional-mantiene-alerta-amarilla-por"
-    },
-    {
-      "id": "kvzlzl",
-      "titulo": "Vasco da Gama busca estadio para recibir a Boca por la Copa Sudamericana",
-      "copete": "El club brasileño no puede usar el Maracaná para la revancha de las semifinales ante Boca y debe definir la sede antes del 10 de octubre.",
-      "cuerpo": "Vasco da Gama busca estadio para la revancha de las semifinales de la Copa Sudamericana ante Boca Juniors, tras recibir una respuesta negativa para utilizar el Maracaná. El consorcio integrado por Flamengo y Fluminense rechazó la solicitud debido a la cantidad de partidos programados y al estado del campo de juego.\n\nEl presidente del club brasileño, Pedrinho, explicó que la institución tiene tiempo hasta el 10 de octubre para informar la sede oficial. Como alternativa, el club evalúa el estadio Nilton Santos, de Botafogo, a pesar de contar con césped sintético.",
-      "guion": "Vasco da Gama busca estadio para recibir a Boca por la Copa Sudamericana",
-      "seccion": "Fútbol",
-      "medios": [
-        "TyC Sports",
-        "Minuto Uno",
-        "Crónica",
-        "El Marplatense",
-        "Doble Amarilla"
-      ],
-      "enlace": "https://www.cronica.com.ar/depo/actualidad/vasco-boca-maracana-sao-januario-copa-sudamericana/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-29T10:23:43.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-29T14:31:00.739Z",
-      "relevancia": 73,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Vasco da Gama no puede usar el Maracaná ante Boca.",
-        "El club brasileño debe definir la sede antes del 10 de octubre.",
-        "Busca la habilitación de su estadio o evalúa el Nilton Santos."
-      ],
-      "textoRedes": "Vasco da Gama no podrá usar el Maracaná ante Boca por la Copa Sudamericana y busca estadio para la revancha de semifinales antes del 10 de octubre.",
-      "etiquetas": [
-        "Vasco da Gama",
-        "Boca Juniors",
-        "Copa Sudamericana",
-        "Maracaná"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Crónica",
-          "enlace": "https://www.cronica.com.ar/depo/actualidad/vasco-boca-maracana-sao-januario-copa-sudamericana/",
-          "fecha": "2026-09-29T10:23:43.000Z",
-          "oficial": false,
-          "aporte": "Detalló el rechazo del Maracaná, el plazo del 10 de octubre y las gestiones de Vasco da Gama."
-        },
-        {
-          "medio": "Minuto Uno",
-          "enlace": "https://www.minutouno.com/deportes/vasco-da-gama-aun-busca-estadio-recibir-boca-el-rechazo-del-maracana-n6327836",
-          "fecha": "2026-09-29T12:15:00.000Z",
-          "oficial": false,
-          "aporte": "Informó que el escenario para la revancha de la semifinal aún no está definido."
-        },
-        {
-          "medio": "El Marplatense",
-          "enlace": "https://www.elmarplatense.com/vasco-da-gama-busca-estadio-para-recibir-a-boca-en-la-copa-sudamericana",
-          "fecha": "2026-09-29T12:46:17.000Z",
-          "oficial": false,
-          "aporte": "Confirmó que el consorcio de Flamengo y Fluminense rechazó la solicitud del conjunto carioca."
-        },
-        {
-          "medio": "Doble Amarilla",
-          "enlace": "https://www.dobleamarilla.com.ar/america/el-consorcio-del-maracana-le-nego-la-localia-al-vasco-da-gama-y-busca-estadios-para-jugar-ante-boca-las-semifinales_a6abb9f6908968fa920822064",
-          "fecha": "2026-09-29T12:04:20.000Z",
-          "oficial": false,
-          "aporte": "Señaló que el club atraviesa una situación compleja para definir la localía ante Boca Juniors."
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron cuatro medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "vasco-da-gama-busca-estadio-para-recibir-a-boca-por-la-copa",
-      "foto": {
-        "archivo": "fotos-notas/kvzlzl.jpg",
-        "credito": "Foto: El Marplatense"
-      }
     },
     {
       "id": "1l8mp60",
@@ -2442,6 +2596,104 @@
       }
     },
     {
+      "id": "1ytgm6c",
+      "titulo": "Petruccelli pide que Aparicio exponga ante la Comisión de Salud",
+      "copete": "El concejal solicita que la investigadora del INTA detalle en el Concejo Deliberante su trabajo sobre plaguicidas y su situación institucional.",
+      "cuerpo": "El pedido busca que la profesional exponga el alcance, la metodología y los resultados de su investigación sobre la presencia de plaguicidas y metabolitos en muestras biológicas humanas.\n\nLa presentación también incorpora el abordaje de las recientes manifestaciones públicas vinculadas a la situación laboral de la investigadora y a las denuncias sobre supuestas restricciones para difundir los resultados científicos. Aparicio participa en el proyecto internacional SPRINT, enfocado en el estudio de la exposición a productos fitosanitarios y sus efectos sobre la salud y el ambiente.\n\nPetruccelli solicitó que la reunión se concrete en una fecha y un horario a convenir con la investigadora para generar un espacio de diálogo institucional en el ámbito legislativo.",
+      "guion": "Petruccelli pide que Aparicio exponga ante la Comisión de Salud",
+      "seccion": "Política",
+      "medios": [
+        "Puntonueve (FM 100.9)",
+        "Infórmese Primero (FM 104.9)",
+        "Radio Gabal (FM 104.1)",
+        "Diario La Vanguardia"
+      ],
+      "enlace": "https://puntonueve.com.ar/petruccelli-pidio-que-virginia-aparicio-exponga-ante-la-comision-de-salud/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-28T21:59:12.000Z",
+      "sinFecha": false,
+      "visto": "2026-09-29T00:30:56.955Z",
+      "relevancia": 100,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [
+        "concejo",
+        "inta"
+      ],
+      "como": "automatica",
+      "claves": [
+        "Gabriel Petruccelli presentó una nota en el Concejo Deliberante.",
+        "Solicitó convocar a la investigadora del INTA Balcarce, Virginia Aparicio.",
+        "El pedido apunta a conocer su estudio sobre plaguicidas en muestras biológicas.",
+        "Incluye el análisis de su actual situación institucional y laboral."
+      ],
+      "seSabe": [
+        "El concejal Gabriel Petruccelli presentó la solicitud dirigida a Viviana Erreguerena, titular de la Comisión de Salud.",
+        "La investigadora Virginia Aparicio integra el proyecto internacional SPRINT sobre fitosanitarios.",
+        "El pedido contempla que la profesional detalle la metodología y los resultados de su trabajo científico.",
+        "La iniciativa legislativa menciona las recientes manifestaciones sobre la situación laboral de la investigadora."
+      ],
+      "noConfirmado": [
+        "Todavía no se fijó la fecha ni el horario para la posible presentación de la investigadora en el cuerpo legislativo."
+      ],
+      "textoRedes": "El concejal Gabriel Petruccelli pidió que la investigadora de la Estación Experimental INTA Balcarce, Virginia Aparicio, exponga ante la Comisión de Salud sobre su trabajo acerca de plaguicidas en muestras biológicas humanas y su situación institucional.",
+      "etiquetas": [
+        "Concejo Deliberante",
+        "INTA Balcarce",
+        "Virginia Aparicio",
+        "Gabriel Petruccelli",
+        "Comisión de Salud",
+        "plaguicidas"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Puntonueve (FM 100.9)",
+          "enlace": "https://puntonueve.com.ar/petruccelli-pidio-que-virginia-aparicio-exponga-ante-la-comision-de-salud/",
+          "fecha": "2026-09-28T21:59:12.000Z",
+          "oficial": false,
+          "aporte": "Detalló la presentación del concejal Gabriel Petruccelli a la Comisión de Salud y los objetivos de la exposición de la investigadora."
+        },
+        {
+          "medio": "Diario La Vanguardia",
+          "enlace": "https://www.diariolavanguardia.com/noticias/44933-petruccelli-pidio-que-virginia-aparicio-concurra-al-concejo-y-exponga-ante-la-comision-de-salud/",
+          "fecha": null,
+          "oficial": false,
+          "aporte": "Confirmó que la solicitud apunta a que la investigadora del INTA Balcarce informe sobre plaguicidas en muestras biológicas humanas."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "v91szb",
+          "titulo": "La APDH rechaza la factible exoneración de la Dra. Virginia Aparicio, investigadora del INTA Balcarce y del CONICET",
+          "fecha": "2026-09-23T01:50:24.356Z",
+          "ruta": "/nota/la-apdh-rechaza-la-factible-exoneracion-de-la-dra-virginia-aparicio-v91szb"
+        },
+        {
+          "id": "tmpmtz",
+          "titulo": "Legislatura bonarense: presentan un proyecto para respaldar a Virginia Aparicio, investigadora de INTA Balcarce",
+          "fecha": "2026-09-21T17:19:51.000Z",
+          "ruta": "/nota/legislatura-bonarense-presentan-un-proyecto-para-respaldar-a-virginia-tmpmtz"
+        },
+        {
+          "id": "dph8p3",
+          "titulo": "Petruccelli pidió informes sobre el programa para celíacos y las acciones de prevención de ITS",
+          "fecha": "2026-09-20T14:00:23.000Z",
+          "ruta": "/nota/petruccelli-pidio-informes-sobre-el-programa-para-celiacos-y-las-dph8p3"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "petruccelli-pide-que-aparicio-exponga-ante-la-comision-de-salud",
+      "foto": {
+        "archivo": "fotos-notas/1ytgm6c.jpg",
+        "credito": "Foto: Diario La Vanguardia"
+      }
+    },
+    {
       "id": "ip1dkb",
       "titulo": "El Concejo pide acelerar la reparación de un puente en la zona rural",
       "copete": "El Concejo Deliberante aprobó por unanimidad un proyecto para solicitar la reparación de un puente en el sector de La Esperanza y El Volcán. La iniciativa exige la intervención del Ministerio de Infraestructura provincial.",
@@ -2528,6 +2780,72 @@
       "foto": {
         "archivo": "fotos-notas/ip1dkb.jpg",
         "credito": "Foto: El Diario Balcarce"
+      }
+    },
+    {
+      "id": "q8aat8",
+      "titulo": "Pampa Dúo presenta su espectáculo en el Teatro Municipal",
+      "copete": "Los músicos Marcelo Giménez y Pablo Lobato llegan al escenario local con una propuesta de música surera, poesía y elementos folklóricos tradicionales.",
+      "cuerpo": "El conjunto musical Pampa Dúo, integrado por Marcelo Giménez y Pablo Lobato, se presentará el próximo 17 de octubre a las 21 en el Teatro Municipal.\n\nEl espectáculo lleva por título “Nuestra forma de mirar el mundo” y combina música en vivo, poesía y elementos folklóricos tradicionales para proponer un recorrido por la cultura popular, según informó un medio local.\n\nLa presentación busca acercar al público a los paisajes, vivencias y sentimientos vinculados con la identidad y la memoria colectiva a través de distintas expresiones artísticas.",
+      "guion": "Pampa Dúo presenta su espectáculo en el Teatro Municipal",
+      "seccion": "Cultura y agenda",
+      "medios": [
+        "News Balcarce (FM 91.7)",
+        "Puntonueve (FM 100.9)"
+      ],
+      "enlace": "https://puntonueve.com.ar/pampa-duo-presenta-nuestra-forma-de-mirar-el-mundo-en-el-teatro-municipal/",
+      "teniaImagenLaFuente": false,
+      "fecha": "2026-09-28T21:48:55.000Z",
+      "sinFecha": false,
+      "visto": "2026-09-28T23:01:09.560Z",
+      "relevancia": 77,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Pampa Dúo actúa en el Teatro Municipal",
+        "La presentación es el 17 de octubre a las 21",
+        "Participan los músicos Marcelo Giménez y Pablo Lobato",
+        "El espectáculo se llama Nuestra forma de mirar el mundo"
+      ],
+      "seSabe": [
+        "Pampa Dúo se presenta en el Teatro Municipal según informó un medio local.",
+        "El show es el 17 de octubre a las 21.",
+        "El dúo está integrado por Marcelo Giménez y Pablo Lobato.",
+        "El espectáculo se titula “Nuestra forma de mirar el mundo” y combina música surera, poesía y elementos folklóricos."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Pampa Dúo llega al Teatro Municipal con su espectáculo “Nuestra forma de mirar el mundo”. Será el 17 de octubre a las 21 con una propuesta de música surera y poesía.",
+      "etiquetas": [
+        "Pampa Dúo",
+        "Teatro Municipal",
+        "Cultura",
+        "Música",
+        "Marcelo Giménez",
+        "Pablo Lobato"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Puntonueve (FM 100.9)",
+          "enlace": "https://puntonueve.com.ar/pampa-duo-presenta-nuestra-forma-de-mirar-el-mundo-en-el-teatro-municipal/",
+          "fecha": "2026-09-28T21:48:55.000Z",
+          "oficial": false,
+          "aporte": "Informó la fecha, la hora, el lugar y los detalles del espectáculo de Pampa Dúo."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "pampa-duo-presenta-su-espectaculo-en-el-teatro-municipal",
+      "foto": {
+        "archivo": "fotos-notas/q8aat8.jpg",
+        "credito": "Foto: Puntonueve (FM 100.9)"
       }
     },
     {
@@ -2626,6 +2944,89 @@
       "foto": {
         "archivo": "fotos-notas/1jf1w7c.jpg",
         "credito": "Foto: Perfil"
+      }
+    },
+    {
+      "id": "tttn9w",
+      "titulo": "Esteban Reino evalúa de positiva la vuelta del automovilismo",
+      "copete": "El intendente municipal analizó el regreso de las categorías nacionales al autódromo Juan Manuel Fangio. Informó que la obra costó 1.053 millones de pesos y destacó la concurrencia de público.",
+      "cuerpo": "En diálogo con Radio 100.9, el jefe comunal destacó el funcionamiento de los servicios y la concurrencia de público en el predio, además de señalar que las condiciones climáticas acompañaron la jornada del domingo luego de una semana compleja. En cuanto a los costos, precisó que la puesta en valor demandó 1.053 millones de pesos y aclaró que la cifra de 3.300 millones difundida previamente responde a una actualización por inflación.\n\nReino reconoció que aún restan trabajos pendientes en el circuito y remarcó la necesidad de mantener una actividad permanente para recaudar fondos destinados al mantenimiento del trazado.",
+      "guion": "Esteban Reino evalúa de positiva la vuelta del automovilismo",
+      "seccion": "Automovilismo",
+      "medios": [
+        "Puntonueve (FM 100.9)",
+        "Sendero Regional"
+      ],
+      "enlace": "https://puntonueve.com.ar/esteban-reino-salio-mejor-de-lo-esperado-tras-el-regreso-del-automovilismo-nacional/",
+      "teniaImagenLaFuente": false,
+      "fecha": "2026-09-28T20:45:35.000Z",
+      "sinFecha": false,
+      "visto": "2026-09-28T23:01:09.560Z",
+      "relevancia": 85,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [
+        "autodromo",
+        "tc-pick-up",
+        "fangio"
+      ],
+      "como": "automatica",
+      "claves": [
+        "El intendente evaluó positivamente el regreso del automovilismo nacional al autódromo Juan Manuel Fangio.",
+        "Precisó que la obra de puesta en valor costó 1.053 millones de pesos.",
+        "Remarcó la necesidad de generar actividad permanente para garantizar el mantenimiento del circuito."
+      ],
+      "noConfirmado": [
+        "No se informaron los detalles sobre los plazos de los trabajos que todavía restan concretar en el escenario automovilístico.",
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El intendente Esteban Reino analizó el regreso del automovilismo nacional al autódromo Juan Manuel Fangio, aseguró que la obra costó 1.053 millones de pesos y destacó el impacto turístico para la ciudad.",
+      "etiquetas": [
+        "Esteban Reino",
+        "autodromo Juan Manuel Fangio",
+        "automovilismo",
+        "TC Pick Up",
+        "Balcarce"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Puntonueve (FM 100.9)",
+          "enlace": "https://puntonueve.com.ar/esteban-reino-salio-mejor-de-lo-esperado-tras-el-regreso-del-automovilismo-nacional/",
+          "fecha": "2026-09-28T20:45:35.000Z",
+          "oficial": false,
+          "aporte": "Aportó las declaraciones del intendente Esteban Reino sobre el balance del evento, los costos de la obra y la necesidad de financiamiento futuro."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1a0ty94",
+          "titulo": "Reino destaca el éxito del regreso automovilístico al Fangio",
+          "fecha": "2026-09-28T19:02:49.410Z",
+          "ruta": "/nota/reino-destaca-el-exito-del-regreso-automovilistico-al-fangio-1a0ty94"
+        },
+        {
+          "id": "p7nd3j",
+          "titulo": "Balcarce palpita el regreso del automovilismo nacional",
+          "fecha": "2026-09-26T01:13:28.000Z",
+          "ruta": "/nota/comienza-la-previa-del-tc-pick-up-en-balcarce-p7nd3j"
+        },
+        {
+          "id": "4v2vga",
+          "titulo": "Largas filas en Balcarce por el regreso del automovilismo",
+          "fecha": "2026-09-24T13:34:15.000Z",
+          "ruta": "/nota/largas-filas-en-balcarce-por-el-regreso-del-automovilismo-4v2vga"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "esteban-reino-evalua-de-positiva-la-vuelta-del-automovilismo",
+      "foto": {
+        "archivo": "fotos-notas/tttn9w.webp",
+        "credito": "Foto: Puntonueve (FM 100.9)"
       }
     },
     {
@@ -2997,6 +3398,92 @@
       }
     },
     {
+      "id": "37t3r4",
+      "titulo": "Guillén propone sumar nuevos eventos al autódromo municipal",
+      "copete": "El concejal de La Libertad Avanza destacó el impacto del regreso del automovilismo y planteó aprovechar la nueva infraestructura para organizar actividades durante todo el año.",
+      "cuerpo": "El concejal de La Libertad Avanza evaluó el regreso de la actividad automovilística tras quince años y calificó el fin de semana como un evento espectacular. Durante una entrevista radial, el edil señalado que la convocatoria superó las expectativas de la propia ACTC con un marco de público estimado entre treinta mil y cuarenta mil personas.\n\nEn cuanto a la infraestructura, destacó la instalación eléctrica nueva en el playón de boxes realizada por la Cooperativa de Electricidad. El edil planteó que esa mejora debe servir para generar otros espectáculos que no se limiten exclusivamente al automovilismo y sostuvo que la dirigencia debe trabajar unida de cara al futuro.",
+      "guion": "Guillén propone sumar nuevos eventos al autódromo municipal",
+      "seccion": "Automovilismo",
+      "medios": [
+        "Diario La Vanguardia"
+      ],
+      "enlace": "https://www.diariolavanguardia.com/noticias/44927-guillen-tenemos-que-ser-creativos-y-ver-que-otras-cosas-podemos-sumarle-al-autodromo/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-28T18:31:07.835Z",
+      "sinFecha": true,
+      "visto": "2026-09-28T18:31:07.835Z",
+      "relevancia": 71,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [
+        "autodromo",
+        "concejo",
+        "fangio"
+      ],
+      "como": "automatica",
+      "claves": [
+        "El concejal evaluó el regreso del automovilismo tras quince años.",
+        "Estimaron una concurrencia de entre treinta mil y cuarenta mil espectadores.",
+        "Destacaron las mejoras en la instalación eléctrica del playón de boxes."
+      ],
+      "seSabe": [
+        "El edil destacó el impacto del regreso de la actividad al circuito local.",
+        "Mencionó que la convocatoria superó las expectativas de la ACTC.",
+        "Señaló que la Cooperativa de Electricidad realizó una instalación eléctrica nueva en el playón de boxes."
+      ],
+      "noConfirmado": [
+        "No se informó el número definitivo de espectadores, ya que se mencionaron cifras estimativas entre treinta mil y cuarenta mil personas.",
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El concejal de La Libertad Avanza planteó aprovechar la nueva infraestructura del autódromo para generar nuevos eventos durante el año tras el regreso de la actividad.",
+      "etiquetas": [
+        "Guillén",
+        "autódromo",
+        "automovilismo",
+        "Balcarce"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Diario La Vanguardia",
+          "enlace": "https://www.diariolavanguardia.com/noticias/44927-guillen-tenemos-que-ser-creativos-y-ver-que-otras-cosas-podemos-sumarle-al-autodromo/",
+          "fecha": null,
+          "oficial": false,
+          "aporte": "Aportó las declaraciones del concejal sobre el impacto del automovilismo y las propuestas para el predio."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "rebipe",
+          "titulo": "Mangoni repasa su paso por el autódromo Juan Manuel Fangio",
+          "fecha": "2026-09-28T16:15:38.000Z",
+          "ruta": "/nota/mangoni-repasa-su-paso-por-el-autodromo-juan-manuel-fangio-rebipe"
+        },
+        {
+          "id": "caurxr",
+          "titulo": "Balinotti destaca las obras del autódromo Fangio tras el regreso nacional",
+          "fecha": "2026-09-28T15:35:16.000Z",
+          "ruta": "/nota/balinotti-destaca-las-obras-del-autodromo-fangio-tras-el-regreso-caurxr"
+        },
+        {
+          "id": "9f1kip",
+          "titulo": "Carlos Bianco aclara la polémica por la inversión en el autódromo",
+          "fecha": "2026-09-28T13:57:23.000Z",
+          "ruta": "/nota/carlos-bianco-aclara-la-polemica-por-la-inversion-en-el-autodromo-9f1kip"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "guillen-propone-sumar-nuevos-eventos-al-autodromo-municipal",
+      "foto": {
+        "archivo": "fotos-notas/37t3r4.jpg",
+        "credito": "Foto: Diario La Vanguardia"
+      }
+    },
+    {
       "id": "1fp9m4l",
       "titulo": "El INTA Balcarce enfrenta una polémica por la posible exoneración de una científica",
       "copete": "El Consejo Directivo analiza una sanción contra la investigadora Virginia Aparicio tras coordinar un estudio sobre plaguicidas. El caso genera rechazo en sectores científicos y gremiales.",
@@ -3084,90 +3571,6 @@
       }
     },
     {
-      "id": "37t3r4",
-      "titulo": "Guillén propone sumar nuevos eventos al autódromo municipal",
-      "copete": "El concejal de La Libertad Avanza destacó el impacto del regreso del automovilismo y planteó aprovechar la nueva infraestructura para organizar actividades durante todo el año.",
-      "cuerpo": "El concejal de La Libertad Avanza evaluó el regreso de la actividad automovilística tras quince años y calificó el fin de semana como un evento espectacular. Durante una entrevista radial, el edil señalado que la convocatoria superó las expectativas de la propia ACTC con un marco de público estimado entre treinta mil y cuarenta mil personas.\n\nEn cuanto a la infraestructura, destacó la instalación eléctrica nueva en el playón de boxes realizada por la Cooperativa de Electricidad. El edil planteó que esa mejora debe servir para generar otros espectáculos que no se limiten exclusivamente al automovilismo y sostuvo que la dirigencia debe trabajar unida de cara al futuro.",
-      "guion": "Guillén propone sumar nuevos eventos al autódromo municipal",
-      "seccion": "Automovilismo",
-      "medios": [
-        "Diario La Vanguardia"
-      ],
-      "enlace": "https://www.diariolavanguardia.com/noticias/44927-guillen-tenemos-que-ser-creativos-y-ver-que-otras-cosas-podemos-sumarle-al-autodromo/",
-      "teniaImagenLaFuente": false,
-      "fecha": "2026-09-28T18:31:07.835Z",
-      "sinFecha": true,
-      "visto": "2026-09-28T18:31:07.835Z",
-      "relevancia": 61,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [
-        "autodromo"
-      ],
-      "como": "automatica",
-      "claves": [
-        "El concejal evaluó el regreso del automovilismo tras quince años.",
-        "Estimaron una concurrencia de entre treinta mil y cuarenta mil espectadores.",
-        "Destacaron las mejoras en la instalación eléctrica del playón de boxes."
-      ],
-      "seSabe": [
-        "El edil destacó el impacto del regreso de la actividad al circuito local.",
-        "Mencionó que la convocatoria superó las expectativas de la ACTC.",
-        "Señaló que la Cooperativa de Electricidad realizó una instalación eléctrica nueva en el playón de boxes."
-      ],
-      "noConfirmado": [
-        "No se informó el número definitivo de espectadores, ya que se mencionaron cifras estimativas entre treinta mil y cuarenta mil personas.",
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "El concejal de La Libertad Avanza planteó aprovechar la nueva infraestructura del autódromo para generar nuevos eventos durante el año tras el regreso de la actividad.",
-      "etiquetas": [
-        "Guillén",
-        "autódromo",
-        "automovilismo",
-        "Balcarce"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Diario La Vanguardia",
-          "enlace": "https://www.diariolavanguardia.com/noticias/44927-guillen-tenemos-que-ser-creativos-y-ver-que-otras-cosas-podemos-sumarle-al-autodromo/",
-          "fecha": null,
-          "oficial": false,
-          "aporte": "Aportó las declaraciones del concejal sobre el impacto del automovilismo y las propuestas para el predio."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "rebipe",
-          "titulo": "Mangoni repasa su paso por el autódromo Juan Manuel Fangio",
-          "fecha": "2026-09-28T16:15:38.000Z",
-          "ruta": "/nota/mangoni-repasa-su-paso-por-el-autodromo-juan-manuel-fangio-rebipe"
-        },
-        {
-          "id": "caurxr",
-          "titulo": "Balinotti destaca las obras del autódromo Fangio tras el regreso nacional",
-          "fecha": "2026-09-28T15:35:16.000Z",
-          "ruta": "/nota/balinotti-destaca-las-obras-del-autodromo-fangio-tras-el-regreso-caurxr"
-        },
-        {
-          "id": "9f1kip",
-          "titulo": "Carlos Bianco aclara la polémica por la inversión en el autódromo",
-          "fecha": "2026-09-28T13:57:23.000Z",
-          "ruta": "/nota/carlos-bianco-aclara-la-polemica-por-la-inversion-en-el-autodromo-9f1kip"
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "guillen-propone-sumar-nuevos-eventos-al-autodromo-municipal",
-      "foto": {
-        "archivo": "fotos-notas/37t3r4.jpg",
-        "credito": "Foto: Diario La Vanguardia"
-      }
-    },
-    {
       "id": "10uy09c",
       "titulo": "Omar Martínez valora el regreso de Balcarce pero extraña el dibujo original",
       "copete": "El piloto entrerriano compitió en la fecha de las camionetas en el autódromo local, finalizó en el cuarto puesto y destacó la presencia del público tras casi quince años sin carreras nacionales.",
@@ -3241,94 +3644,6 @@
         "sugeridoPorIA": "MEDIA"
       },
       "slug": "omar-martinez-valora-el-regreso-de-balcarce-pero-extrana-el-dibujo"
-    },
-    {
-      "id": "8zhfqv",
-      "titulo": "El Municipio analiza ir a la Justicia por la Zona Fría",
-      "copete": "El Gobierno local evalúa sumarse a un reclamo colectivo tras la eliminación del beneficio. Alrededor de 12.000 usuarios del distrito están alcanzados por el régimen.",
-      "cuerpo": "El Gobierno municipal analiza sumarse a un reclamo colectivo de los municipios afectados por la reforma de la Zona Fría. La modificación del régimen fue convertida en ley por el Senado y deja el acceso al descuento sujeto a criterios de vulnerabilidad para las zonas incorporadas desde 2021.\n\nEn Balcarce, entre 11.000 y 12.000 usuarios reciben actualmente el beneficio. El intendente Esteban Reino conversó sobre el tema durante el fin de semana con el jefe de Gabinete de la Nación, Diego Santilli, y el senador nacional Maximiliano Abad.\n\nLa presentación institucional de los municipios y la iniciativa de organizaciones de consumidores podrían coexistir como estrategias en los tribunales.",
-      "guion": "El Municipio analiza ir a la Justicia por la Zona Fría",
-      "seccion": "Política",
-      "medios": [
-        "Diario La Vanguardia",
-        "QZ Noticias (Mar del Plata)",
-        "El Marplatense"
-      ],
-      "enlace": "https://www.diariolavanguardia.com/noticias/44934-zona-fria-balcarce-evalua-la-via-judicial-tras-la-eliminacion-del-beneficio/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-28T18:05:23.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-29T14:01:11.480Z",
-      "relevancia": 87,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "El Gobierno local evalúa sumarse a un reclamo colectivo.",
-        "Entre 11.000 y 12.000 usuarios reciben el beneficio en el distrito.",
-        "El concejal Gabriel Petruccelli y la Liga de Amas de Casa preparan otra vía judicial.",
-        "El aumento estimado para quienes pierdan el descuento puede llegar al 30%."
-      ],
-      "seSabe": [
-        "El Senado convirtió en ley la reforma del régimen de Zona Fría.",
-        "Alrededor de 11.000 a 12.000 usuarios de Balcarce están alcanzados por el beneficio.",
-        "El intendente Esteban Reino conversó sobre el tema con Diego Santilli y Maximiliano Abad.",
-        "El concejal Gabriel Petruccelli y la Liga de Amas de Casa preparan una alternativa judicial."
-      ],
-      "noConfirmado": [
-        "Todavía no se concretó la presentación judicial por parte del Municipio.",
-        "Falta definir los argumentos jurídicos y si los distritos avanzarán conjuntamente.",
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "El Municipio evalúa sumarse a un reclamo colectivo tras la eliminación de la Zona Fría. Unos 12.000 usuarios de Balcarce están alcanzados por el régimen.",
-      "etiquetas": [
-        "Zona Fria",
-        "Municipalidad de Balcarce",
-        "Gabriel Petruccelli",
-        "Esteban Reino",
-        "Tarifas"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Diario La Vanguardia",
-          "enlace": "https://www.diariolavanguardia.com/noticias/44934-zona-fria-balcarce-evalua-la-via-judicial-tras-la-eliminacion-del-beneficio/",
-          "fecha": null,
-          "oficial": false,
-          "aporte": "Informó que el Municipio analiza sumarse a un reclamo colectivo y que el concejal Gabriel Petruccelli y la Liga de Amas de Casa preparan otra vía judicial."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "1ytgm6c",
-          "titulo": "Petruccelli pide que Aparicio exponga ante la Comisión de Salud",
-          "fecha": "2026-09-28T21:59:12.000Z",
-          "ruta": "/nota/petruccelli-pide-que-aparicio-exponga-ante-la-comision-de-salud-1ytgm6c"
-        },
-        {
-          "id": "ip1dkb",
-          "titulo": "El Concejo pide acelerar la reparación de un puente en la zona rural",
-          "fecha": "2026-09-28T21:52:27.000Z",
-          "ruta": "/nota/el-concejo-pide-acelerar-la-reparacion-de-un-puente-en-la-zona-rural-ip1dkb"
-        },
-        {
-          "id": "37t3r4",
-          "titulo": "Guillén propone sumar nuevos eventos al autódromo municipal",
-          "fecha": "2026-09-28T18:31:07.835Z",
-          "ruta": "/nota/guillen-propone-sumar-nuevos-eventos-al-autodromo-municipal-37t3r4"
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "el-municipio-analiza-ir-a-la-justicia-por-la-zona-fria",
-      "foto": {
-        "archivo": "fotos-notas/8zhfqv.jpg",
-        "credito": "Foto: Diario La Vanguardia"
-      }
     },
     {
       "id": "fnl2h5",
@@ -4296,49 +4611,49 @@
   ],
   "secciones": [
     "Cultura y agenda",
+    "Balcarce",
     "Fútbol",
     "Economía",
-    "Balcarce",
     "Automovilismo",
+    "Política",
     "Tecnología",
     "Agro",
     "Argentina",
     "Policiales",
-    "Deportes",
-    "Política"
+    "Deportes"
   ],
   "temas": [
     {
       "nombre": "El autódromo",
       "ranura": "autodromo",
-      "cuantas": 9
+      "cuantas": 10
     },
     {
       "nombre": "Fangio",
       "ranura": "fangio",
-      "cuantas": 8
+      "cuantas": 10
     },
     {
       "nombre": "TC Pick Up",
       "ranura": "tc-pick-up",
-      "cuantas": 4
+      "cuantas": 5
     },
     {
       "nombre": "El Concejo Deliberante",
       "ranura": "concejo",
-      "cuantas": 2
+      "cuantas": 5
     },
     {
       "nombre": "El INTA",
       "ranura": "inta",
-      "cuantas": 2
+      "cuantas": 3
     }
   ],
   "clima": {
     "ahora": {
-      "temp": 14,
+      "temp": 15,
       "sensacion": 10,
-      "humedad": 78,
+      "humedad": 76,
       "viento": 32,
       "rumbo": "S",
       "cielo": "Nublado",
@@ -4744,6 +5059,12 @@
       "motivo": "verificación baja: espera a una persona (visto al reescribir)"
     },
     {
+      "id": "14q2bn5",
+      "titulo": null,
+      "seccion": "Balcarce",
+      "motivo": "necesita ojo humano: \"alumno de\", en el texto completo de la fuente (visto al reescribir)"
+    },
+    {
       "id": "1iuksy8",
       "titulo": null,
       "seccion": "Policiales",
@@ -4768,12 +5089,6 @@
       "motivo": "parece promoción, no noticia: \"sorteo\""
     },
     {
-      "id": "14q2bn5",
-      "titulo": null,
-      "seccion": "Balcarce",
-      "motivo": "necesita ojo humano: \"alumno de\", en el texto completo de la fuente (visto al reescribir)"
-    },
-    {
       "id": "1vijv4l",
       "titulo": null,
       "seccion": "Argentina",
@@ -4790,12 +5105,6 @@
       "titulo": null,
       "seccion": "Economía",
       "motivo": "necesita ojo humano: \"adolescente\""
-    },
-    {
-      "id": "18gldok",
-      "titulo": "Psicólogos bonaerenses cortan la atención con el IOMA por…",
-      "seccion": "Argentina",
-      "motivo": "necesita ojo humano: \"denuncia\""
     },
     {
       "id": "12wle8z",
@@ -4816,5 +5125,5 @@
       "motivo": "necesita ojo humano: \"niño\""
     }
   ],
-  "esperandoCuerpo": 8
+  "esperandoCuerpo": 6
 }
