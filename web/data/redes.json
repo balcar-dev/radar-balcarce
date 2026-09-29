@@ -167,6 +167,13 @@
         "autodromo",
         "fangio"
       ]
+    },
+    "f3xat8": {
+      "cuando": "2026-09-29T19:45:21.287Z",
+      "postId": "1254237411116171_122099166837495512",
+      "titulo": "El Complejo Polideportivo aloja un encuentro regional por el Día del Sordo",
+      "enlace": "https://radarbalcarce.com/nota/el-complejo-polideportivo-aloja-un-encuentro-regional-por-el-dia-del-f3xat8",
+      "temas": []
     }
   },
   "instagram": {
@@ -495,6 +502,19 @@
         "187bqn1"
       ],
       "permalink": "https://www.instagram.com/reel/Dd1lFnfDoUn/"
+    },
+    "2026-09-29/noticia2": {
+      "cuando": "2026-09-29T19:46:57.548Z",
+      "mediaId": "18098970128564191",
+      "nombre": "noticia2",
+      "tipo": "REELS",
+      "notaId": "1tgeg0m",
+      "notaIds": [
+        "1tgeg0m",
+        "tttn9w",
+        "1nyo5j6"
+      ],
+      "permalink": "https://www.instagram.com/reel/Dd4ixGnAsgT/"
     }
   },
   "facebookVideos": {
@@ -817,6 +837,19 @@
         "187bqn1"
       ],
       "permalink": "https://www.facebook.com/reel/1757688565498900/"
+    },
+    "2026-09-29/noticia2": {
+      "cuando": "2026-09-29T19:48:18.101Z",
+      "mediaId": "4367759140156466",
+      "nombre": "noticia2",
+      "tipo": "REELS",
+      "notaId": "1tgeg0m",
+      "notaIds": [
+        "1tgeg0m",
+        "tttn9w",
+        "1nyo5j6"
+      ],
+      "permalink": "https://www.facebook.com/reel/4367759140156466/"
     }
   },
   "instagramFeed": {
@@ -929,6 +962,12 @@
       "mediaId": "18362745823247611",
       "titulo": "Carlos Bianco aclara la polémica por la inversión en el autódromo",
       "enlace": "https://radarbalcarce.com/nota/carlos-bianco-aclara-la-polemica-por-la-inversion-en-el-autodromo-9f1kip"
+    },
+    "f3xat8": {
+      "cuando": "2026-09-29T19:45:39.209Z",
+      "mediaId": "18103856720574637",
+      "titulo": "El Complejo Polideportivo aloja un encuentro regional por el Día del Sordo",
+      "enlace": "https://radarbalcarce.com/nota/el-complejo-polideportivo-aloja-un-encuentro-regional-por-el-dia-del-f3xat8"
     }
   },
   "historiasDeReels": {
@@ -1085,6 +1124,20 @@
       "nombre": "noticia1",
       "red": "facebook",
       "notaId": "9f1kip"
+    },
+    "instagram/2026-09-29/noticia2": {
+      "cuando": "2026-09-29T19:47:43.301Z",
+      "mediaId": "18427874431198463",
+      "nombre": "noticia2",
+      "red": "instagram",
+      "notaId": "1tgeg0m"
+    },
+    "facebook/2026-09-29/noticia2": {
+      "cuando": "2026-09-29T19:49:23.299Z",
+      "mediaId": "1865998204840672",
+      "nombre": "noticia2",
+      "red": "facebook",
+      "notaId": "1tgeg0m"
     }
   }
 }
