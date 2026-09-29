@@ -162,8 +162,11 @@ vigilancia andan con la PC apagada**; sólo el panel vive en la PC.
   modelo `gemini-3.8-flash-tts`, dos voces propias con un reparto fijo por pieza
   en `CRITERIO-REDES.md` § 6, que **vencen el 29/09/2027**),
   `GEMINI_API_KEY_CLASIFICACION` (lectura con IA, 200 pedidos por día, y fotos;
-  nunca la de redes) y `GROQ_API_KEY` (respaldo gratis de la lectura y las
-  fotos). Modelo de texto: `gemini-flash-lite-latest` (el "flash" normal daba
+  nunca la de redes; desde el 29/09, **último respaldo de la redacción** si las
+  otras fallan por el servicio) y `GROQ_API_KEY` (respaldo gratis de la lectura y
+  las fotos; **no sirve para redactar**: 8.000 tokens por minuto y un pedido de
+  redacción ocupa unos 9.000). Una clave rechazada (401/402/403) no gasta los
+  intentos de una nota. Modelo de texto: `gemini-flash-lite-latest` (el "flash" normal daba
   503 seguido: si vuelve a fallar, es lo primero que se mira).
 - **Para que "hoy" sea el de Balcarce en Actions** hay que poner
   `TZ: America/Argentina/Buenos_Aires` en el workflow (el servidor corre en

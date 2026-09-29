@@ -339,3 +339,33 @@ test('el resumen de las 21 dice cuántas notas esperan cuerpo', () => {
   assert.match(textoResumen({ datos }), /• Esperando cuerpo: 4/);
   assert.ok(!/Esperando cuerpo/.test(textoResumen({ datos: { ...datos, esperandoCuerpo: null } })));
 });
+
+// ------- 29/09: la clave de clasificación como último respaldo de la redacción
+test('si la clave de redacción está rechazada (401), la nota se escribe con la de clasificación', async () => {
+  const { reescribir, USO_DE_CLAVES } = await import('../reels/reescritura.mjs');
+  const usadas = [];
+  const respuesta = { titulo: "Título", copete: "Bajada", cuerpo: "Cuerpo", guion: "Guion" };
+  const fetchFn = async (_url, init) => {
+    const clave = init.headers['x-goog-api-key'];
+    usadas.push(clave);
+    if (clave === 'clave-redaccion') return { ok: false, status: 401, text: async () => 'The bound service account is deleted or disabled' };
+    return { ok: true, status: 200, json: async () => ({ candidates: [{ content: { parts: [{ text: JSON.stringify(respuesta) }] } }] }) };
+  };
+  const antes = USO_DE_CLAVES.clasificacion;
+  const r = await reescribir({ titulo: 't', resumenFuente: 'r', seccion: 'Balcarce', medios: ['A'] }, {
+    fetchFn, intentos: 1, clavePropia: 'clave-redaccion', claveDeRedes: null, claveDeRespaldo: 'clave-clasificacion',
+  });
+  assert.equal(r.titulo, 'Título');
+  assert.deepEqual(usadas, ['clave-redaccion', 'clave-clasificacion']);
+  assert.equal(USO_DE_CLAVES.clasificacion, antes + 1);
+});
+
+test('un pedido mal armado (400) no se reintenta con la clave de clasificación', async () => {
+  const { reescribir } = await import('../reels/reescritura.mjs');
+  const usadas = [];
+  const fetchFn = async (_url, init) => { usadas.push(init.headers['x-goog-api-key']); return { ok: false, status: 400, text: async () => 'mal' }; };
+  await assert.rejects(() => reescribir({ titulo: "t", resumenFuente: "r", seccion: "Balcarce", medios: ["A"] }, {
+    fetchFn, intentos: 1, clavePropia: 'a', claveDeRedes: null, claveDeRespaldo: 'b',
+  }), /HTTP 400/);
+  assert.deepEqual(usadas, ['a']);
+});

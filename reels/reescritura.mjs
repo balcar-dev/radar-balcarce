@@ -297,7 +297,11 @@ async function pedir({ prompt, entrada, clave, fetchFn, intentos }) {
 /** Cuántos pedidos fueron a cada clave desde que arrancó el programa: la gratis
  *  ('redaccion') o la paga ('redes'). El registro de Actualizar la web lo
  *  muestra, para ver de un vistazo si se está gastando. */
-export const USO_DE_CLAVES = { redaccion: 0, redes: 0 };
+export const USO_DE_CLAVES = { redaccion: 0, redes: 0, clasificacion: 0 };
+
+/** Una respuesta de Gemini que vale la pena reintentar con OTRA clave: sin cupo
+ *  (429), saturado (5xx) o la clave rechazada o sin crédito (401, 402, 403). */
+const probarOtraClave = (res) => !res || [401, 402, 403, 429].includes(res.status) || res.status >= 500;
 
 /**
  * Reescribe una nota. `nota` = { titulo, resumenFuente, seccion, medios,
@@ -309,13 +313,25 @@ export const USO_DE_CLAVES = { redaccion: 0, redes: 0 };
  * Prueba primero con la clave de redacción (gratis). Si esa clave devuelve
  * "sin cupo" (429) y hay una clave de redes cargada (paga), reintenta una
  * sola vez con esa — mejor gastar un poco de la paga que dejar la nota sin
- * reescribir. Cualquier otro error no reintenta con la otra clave: no tiene
- * sentido pagar por un pedido que ya está mal armado.
+ * reescribir. Cualquier otro error de pedido (400) no reintenta con otra clave:
+ * no tiene sentido pagar por un pedido que ya está mal armado.
+ *
+ * Último respaldo (29/09): la clave de CLASIFICACIÓN (gratis, otro proyecto de
+ * Google, el mismo modelo), si las anteriores fallaron por el servicio (sin cupo,
+ * saturado, clave rechazada o sin crédito). Ese día la de redacción y la paga
+ * quedaron desactivadas por Google y no se publicó ninguna nota en 14 horas.
+ * Groq no sirve de respaldo acá: su plan gratis acepta 8.000 tokens por minuto y un
+ * pedido de redacción ocupa unos 9.000.
  */
-export async function reescribir(nota, { intentos = 3, fetchFn = fetch, correccion = null } = {}) {
-  const primera = claveRedaccion();
-  const segunda = claveRedes();
-  if (!primera && !segunda) throw new Error('falta GEMINI_API_KEY_REDACCION');
+export async function reescribir(nota, {
+  intentos = 3, fetchFn = fetch, correccion = null,
+  clavePropia = claveRedaccion(), claveDeRedes = claveRedes(), claveDeRespaldo = leerVariable('GEMINI_API_KEY_CLASIFICACION'),
+} = {}) {
+  const primera = clavePropia;
+  const segunda = claveDeRedes;
+  // La de clasificación, sólo si es otra clave distinta de las dos de arriba.
+  const tercera = claveDeRespaldo && claveDeRespaldo !== primera && claveDeRespaldo !== segunda ? claveDeRespaldo : null;
+  if (!primera && !segunda && !tercera) throw new Error('falta GEMINI_API_KEY_REDACCION');
 
   const prompt = instruccionPara(nota);
   let entrada = entradaDe(nota);
@@ -332,6 +348,10 @@ export async function reescribir(nota, { intentos = 3, fetchFn = fetch, correcci
   if ((!primera || res?.status === 429) && segunda) {
     res = await pedir({ prompt, entrada, clave: segunda, fetchFn, intentos });
     usada = 'redes';
+  }
+  if (probarOtraClave(res) && tercera) {
+    res = await pedir({ prompt, entrada, clave: tercera, fetchFn, intentos });
+    usada = 'clasificacion';
   }
   if (!res) throw new Error('no se pudo pedir a Gemini');
   USO_DE_CLAVES[usada] += 1;
@@ -1184,7 +1204,7 @@ export async function reescribirAutomaticas(notas, {
       + `${cuenta.sinCuerpo} sin cuerpo que sirva, ${cuenta.rechazadas} rechazadas por el título o la bajada, ${cuenta.sinMaterial} sin material, `
       + `${cuenta.oraciones} oraciones sacadas, ${cuenta.agotadas} ya agotaron los ${maximoDeIntentos} intentos, `
       + `${cuenta.partesDescartadas} partes nuevas descartadas, ${cuenta.frenadas} frenadas por el semáforo`);
-    registro(`  claves de Gemini usadas: ${USO_DE_CLAVES.redaccion} con la gratis, ${USO_DE_CLAVES.redes} con la paga`);
+    registro(`  claves de Gemini usadas: ${USO_DE_CLAVES.redaccion} con la gratis, ${USO_DE_CLAVES.redes} con la paga, ${USO_DE_CLAVES.clasificacion} con la de clasificación (respaldo)`);
   }
   return resultado;
 }

@@ -10,7 +10,9 @@
 //   GEMINI_API_KEY_REDES           voces y reels (paga). La reescritura la usa
 //                                  sólo si la de redacción se queda sin cupo (429)
 //   GEMINI_API_KEY_CLASIFICACION   la lectura con IA y el banco de fotos; si no
-//                                  está, usa la de redacción, nunca la de redes
+//                                  está, usa la de redacción, nunca la de redes.
+//                                  Desde el 29/09 es también el último respaldo
+//                                  de la redacción (reescribir, reels/reescritura.mjs)
 //   GROQ_API_KEY                   Groq, el respaldo gratis de la lectura con IA
 //                                  y de la comparación de fotos
 //
