@@ -314,6 +314,53 @@
         "vistas": 40,
         "interacciones": 1
       }
+    },
+    {
+      "cuando": "2026-09-29T12:00:54.447Z",
+      "web": {
+        "u12": {
+          "visitas": 1,
+          "vistas": 18
+        },
+        "a12": {
+          "visitas": 30,
+          "vistas": 292
+        },
+        "u24": {
+          "visitas": 31,
+          "vistas": 310
+        },
+        "a24": {
+          "visitas": 55,
+          "vistas": 652
+        },
+        "top": [
+          {
+            "camino": "/",
+            "vistas": 151
+          },
+          {
+            "camino": "/nota/carlos-bianco-aclara-la-polemica-por-la-inversion-en-el-autodromo-9f1kip",
+            "vistas": 22
+          },
+          {
+            "camino": "/farmacias",
+            "vistas": 21
+          }
+        ]
+      },
+      "facebook": {
+        "seguidores": 2,
+        "vistas": 531,
+        "interacciones": 0
+      },
+      "instagram": {
+        "seguidores": 4,
+        "publicaciones": 34,
+        "alcance": 0,
+        "vistas": 0,
+        "interacciones": 0
+      }
     }
   ]
 }
