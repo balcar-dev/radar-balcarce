@@ -1,331 +1,391 @@
-# 09 · El panel: el tablero de la PC
+# 09 · Los paneles: el del celular y el de la PC
 
-*Escrito el 28/09/2026, leyendo el código de ese día (`panel/`). Si algo de
-acá no coincide con el código, manda el código.*
-
-Qué es cada nota y por qué el semáforo la pone de un color es de
-`docs/03-SELECCION.md`; cómo escribe la IA, de `docs/04-REDACCION.md`; cómo
-usa la web lo que el panel decide, de `docs/06-WEB.md`; las redes, de
-`docs/07-REDES.md`; los enlaces y el uso diario, de `docs/11-OPERACION.md`.
-
----
+*Actualizado el 29/09/2026. Si algo de acá no coincide con el código, manda el
+código.* Qué es cada nota y por qué el semáforo la pone de un color:
+`docs/03-SELECCION.md`; cómo escribe la IA: `docs/04-REDACCION.md`; cómo usa la
+web lo que se decide: `docs/06-WEB.md`; las redes: `docs/07-REDES.md`; el paso a
+paso de todos los días (crear la llave, instalar, decidir, corregir):
+`docs/11-OPERACION.md`.
 
 ## En una frase
 
-El panel es un programa de Node que corre **sólo en la PC de Hernán**
-(`http://localhost:4321`): busca noticias cada 10 minutos, muestra la cola de notas amarillas para que Hernán o
-Andrés decidan, y **sube solo a GitHub** lo que se decide (las decisiones, los
-avisos y los eventos), para que la web, que se arma en GitHub, lo respete
-aunque después la PC se apague.
+Hay dos paneles. **El del celular** (`radarbalcarce.com/panel/`) es el de
+todos los días: una app sin servidor propio que habla directo con GitHub con la
+llave de quien lo usa, para aprobar, editar, retirar y pedirle a la IA que
+escriba una nota, con la PC apagada. **El de la PC** (`http://localhost:4321`,
+`ARRANCAR.bat`) queda de respaldo para lo que el celular no hace: la agenda
+cargada a mano, los avisos publicitarios, el buzón, las fuentes y el
+calendario.
 
 ---
 
-## El recorrido, paso a paso
+## El panel del celular
 
-### 1. Arrancar
+### Qué es y cómo se instala
 
-- Doble clic en **`ARRANCAR.bat`** (en la raíz del proyecto). Abre una ventana
-  negra titulada "Radar Balcarce - PANEL" que corre
-  `node panel/servidor.mjs`, espera 5 segundos y abre
-  `http://localhost:4321` en el navegador. **Esa ventana es el panel:** si se
-  cierra, el panel se apaga.
-- También se puede arrancar con `npm run panel` desde la raíz.
-- El panel **no arma ni publica la web** (dejó de hacerlo el 25/09). La web
-  la arma GitHub y la sirve Cloudflare, con la PC prendida o apagada.
+- Son archivos de la web (`web/public/panel/`: `index.html`, `app.js`,
+  `github.js`, `cifrado.js`, `sw.js`, `manifest.webmanifest`) que Cloudflare
+  publica con el sitio. No hay servidor propio: todo lo que lee y escribe pasa
+  por la API de GitHub.
+- **Se instala desde Chrome**: menú ⋮ → **"Instalar app"** (o "Agregar a
+  pantalla principal"). Chrome lo convierte en app: ícono propio, pantalla
+  completa y se actualiza solo. No hace falta un .apk.
+- No se indexa (`web/app/robots.js` y `X-Robots-Tag`) y sólo puede hablar con
+  GitHub (una `Content-Security-Policy` propia en `web/public/_headers`):
+  guarda la llave de quien lo usa, así que no carga nada de afuera.
 
-### 2. Lo que hace al arrancar (`panel/servidor.mjs`)
+### La llave de GitHub
 
-1. Lee `panel/datos/estado.json` (la memoria del panel). Si no existe, lo crea
-   con la lista de fuentes del código.
-2. Si el código tiene fuentes nuevas (`TODAS_LAS_FUENTES`, de
-   `ingesta/fuentes.mjs` y `ingesta/fuentes-cruce.mjs`) que el panel no
-   conoce, las suma y lo anota en el historial ("fuentes nuevas del código").
-   A las que ya tenía les actualiza los temas, pero **respeta** el peso y la
-   pausa que se hayan tocado en el panel.
-3. Guarda el estado. Guardar el estado **siempre** exporta las decisiones y
-   los eventos y programa la subida a GitHub (paso 6).
-4. A los 15 segundos hace una copia de seguridad (`panel/respaldo.mjs`), y
-   después una cada 6 horas.
-5. Empieza a escuchar en el puerto 4321. Si nunca buscó noticias
-   (`panel/datos/ultima.json` no existe) hace la primera búsqueda; si no tiene
-   la agenda, la trae.
-6. Programa dos relojes: **buscar noticias cada 10 minutos** y **traer la
-   agenda cada hora**.
+Para entrar hace falta una **llave de GitHub**: un *fine-grained personal
+access token* de la cuenta `balcardev@gmail.com`, que una persona crea una sola
+vez y pega en el celular junto con su nombre (va en cada decisión, en `por`).
+**Sólo quien tiene la llave puede tocar algo**: la página es pública, pero sin
+llave no lee lo cifrado ni escribe nada.
 
-### 3. Cada 10 minutos: el ciclo (`correrIngesta`)
+Se crea en github.com → Settings → Developer settings → Fine-grained tokens →
+Generate new token (el panel tiene el enlace directo):
 
-1. Corre la ingesta (`ingestar`, `ingesta/ingesta.mjs`) con las fuentes del
-   código, pero con el peso y la pausa que tengan en el panel
-   (`fuentesParaIngestar`). Una fuente que se borró en el panel no vuelve.
-2. Guarda el resultado en `panel/datos/ultima.json`.
-3. **Ya no reescribe solo** (desde el 28/09, auditoría): hasta ese día pedía a
-   Gemini hasta 12 notas verdes por ciclo con la misma clave que la nube y un
-   contador aparte, y la web no usaba esos textos (manda sólo lo que decidió
-   una persona). La reescritura automática la hace sólo la nube
-   (`docs/04-REDACCION.md`). Queda el botón "Reescribir", a pedido.
+| Campo | Qué poner |
+|---|---|
+| Token name | "Panel del celular" |
+| Expiration | Un año (anotar la fecha) |
+| Repository access | "Only select repositories" → **radar-balcarce** |
+| Repository permissions | **Contents**: "Read and write" y **Actions**: "Read and write". Nada más |
 
-Mientras corre, la luz de arriba del tablero se pone amarilla.
+- Queda guardada **sólo en ese celular** (en el navegador) y nunca va por chat
+  ni por mail. GitHub la muestra una sola vez: si se pierde, se crea otra.
+- Puede ser la misma llave en los dos celulares o una por persona (así, si se
+  pierde un celular, se borra sólo esa).
+- **Para revocarla** (celular perdido, llave expuesta): en GitHub, el mismo
+  lugar donde se creó → la llave → **Delete**. En el celular, "Más" → "Salir y
+  borrar la llave de este celular".
+- Al entrar, el panel prueba que la llave pueda escribir en el repositorio; si
+  no, dice qué permiso falta. Vencida o borrada, dice "La llave no anda" y pide
+  otra.
 
-### 4. Entrar
+### Cómo viajan los datos
 
-- La primera pantalla es el **login** (`panel/acceso.mjs`). Hay dos usuarios,
-  Hernán y Andrés. Las cuentas se crean o se les cambia la clave desde la
-  consola de la PC con `node panel/clave.mjs <usuario> "<clave>" ["Nombre"]`
-  (`panel/clave.mjs`). **Una clave nunca se escribe en un documento ni en un
-  chat.**
-- Las claves se guardan como hash (scrypt con sal) en
-  `panel/datos/usuarios.json`. La sesión es una cookie firmada que dura 30
-  días (`DIAS_DE_SESION`); la firma sale de `panel/datos/secreto.txt`, que se
-  crea solo (si se borra, se cierran todas las sesiones).
-- Cinco claves mal seguidas desde la misma dirección cierran la puerta 15
-  minutos (`MAX_FALLOS`, `CASTIGO_MS`).
-- Además (`panel/seguridad.mjs`): un pedido que cambia algo y viene de otra
-  página se rechaza (`origenPermitido`), "Salir" es un botón y no un enlace, y
-  "Probar una fuente" no deja entrar a la red de la casa ni a la PC
-  (`probarUrlPermitida`).
-- Además (`panel/acceso.mjs`): la cookie sale marcada `Secure` cuando se
-  entra por https (el túnel); para el freno de intentos, la dirección que
-  manda el túnel (`X-Forwarded-For`) sólo se cree si la conexión viene de la
-  misma PC, así no se saltea inventándola (25/09); y el error de acceso no
-  delata si el usuario existe.
-- El panel escucha en todas las conexiones de la PC (cualquiera en la misma
-  red llega a la pantalla del login) y, con **Tailscale Funnel** prendido, se
-  puede entrar desde afuera, con la dirección que está en
-  `panel/datos/DIRECCION-DEL-PANEL.txt` (no va al repositorio, que es
-  público). Ahí lo protege **sólo la contraseña**. Para cerrarlo:
-  `tailscale funnel --https=443 off`.
-- Las contraseñas iniciales se cambiaron el 25/09. Si todavía existe
-  `panel/datos/CLAVES-INICIALES.txt`, se borra (`PENDIENTES.md`).
+1. **La primera vez**, el celular crea su par de llaves de cifrado (con la
+   criptografía del navegador). La **privada** queda en el navegador y no sale
+   nunca del celular; la **pública** se sube a `web/data/celular-llaves.json`.
+   Hasta 6 celulares (`LLAVES_MAXIMAS`, `panel/cifrado.mjs`).
+2. **Cada corrida de "Actualizar la web"** arma la lista de lo que espera a una
+   persona (`paraDecidir`, `panel/celular-datos.mjs`) y la **cifra para cada
+   celular registrado** en `web/data/celular-pendientes.json` (`panel/cifrado.mjs`:
+   AES-256-GCM, con la llave de cada sobre cifrada con la pública de cada
+   celular). Sólo la vuelve a subir si cambió (`cerrarSiCambio`). Además deja
+   las notas enteras, con sus fuentes, en la caché de Actions
+   (`.cache/celular-notas.json`), que no es pública.
+   **¿Por qué cifrado?** El repositorio es público y esas notas pueden nombrar
+   a un acusado o a un chico (regla 79). Por lo mismo, la lista corta de
+   `portada.json` va sin titular cuando la nota es de Policiales o habla de
+   chicos o de víctimas: es lo que muestra "Esperan" hasta que llega la cifrada
+   (un celular recién registrado la recibe en la próxima actualización).
+3. **El celular lee** con la llave: `portada.json`, `esperando-cuerpo.json`,
+   `celular-pendientes.json` (lo abre con su llave privada),
+   `celular-decisiones.json`, `correcciones.json` y, si se pide, `archivo.json`.
+4. **"Escribir con IA"** dispara el workflow **"Panel del celular"**
+   (`.github/workflows/panel.yml`) con la nota, el pedido (opcional) y una marca
+   para encontrar la corrida. `panel/celular.mjs` busca la nota en la caché (lo
+   que trajo la última ingesta) o en lo publicado (portada, esperando cuerpo,
+   archivo), y `panel/reescribir-una.mjs` la escribe por el mismo camino que la
+   redacción automática: el texto completo de las fuentes, los antecedentes,
+   `CRITERIO-EDITORIAL.md` § 12 con el pedido al final (nunca por encima de las
+   reglas), los arreglos que no inventan y el mismo verificador. La diferencia:
+   no descarta nada en silencio, devuelve el texto con la lista de lo que no
+   cuadra con las fuentes. Lo rojo no se escribe nunca. El borrador queda
+   **cifrado** en `web/data/celular-borradores.json` (hasta 30, por 7 días).
+   Tarda un minuto: el celular espera y lo abre. El registro del workflow no
+   muestra nada de la nota.
+5. **Lo que decide la persona** se escribe en el repositorio por la API de
+   GitHub, en un commit con su nombre ("Panel del celular: Hernán aprueba una
+   nota"), una nota por renglón (el historial muestra una línea por decisión).
+   Si otro cambió el archivo en el medio, lo vuelve a leer y reintenta.
+6. **La próxima corrida de "Actualizar la web"** lo aplica: `generar-datos.mjs`
+   pone las decisiones del celular encima de las del panel de la PC
+   (`unirDecisiones`; si las dos decidieron sobre la misma nota, gana la más
+   nueva). Para no esperar la media hora: "Actualizar la web ahora" (unos 8
+   minutos hasta la web).
 
-### 5. Usarlo: las pestañas
-
-El tablero (`panel/panel.html`, una sola página) se recarga solo cada minuto
-mientras no haya una nota abierta. Arriba a la derecha: quién entró,
-**"Buscar noticias ahora"** (corre el ciclo del paso 3 en ese momento) y
-**"Salir"**.
+### Las pestañas
 
 | Pestaña | Qué muestra | Qué se puede hacer |
 |---|---|---|
-| **Para decidir** (con el número de pendientes) | Las notas en estado `pendiente`: las amarillas sin decidir (lo sensible, lo de afuera poco contado o fuera de cupo, la cotización del dólar, la verificación baja). Cada tarjeta: el punto del semáforo, sección, medios, cuándo, "coinciden N" si la cuentan varios medios, "nos nombran afuera", "sin cuerpo" y el puntaje, con el motivo del semáforo | Abrir una nota: editar título, bajada, cuerpo y guion; **Reescribir con IA**; **Publicar**, **Guardar cambios** o **Descartar**. Plegado, el **análisis interno** (nivel de verificación y por qué, claves, qué se sabe, qué falta confirmar, fuentes y lo que aportó cada una, antecedentes): es para quien decide, la web no lo muestra. Si la nota no tiene cuerpo, "Publicar" pide confirmarlo con **"Publicar igual, sin cuerpo"**. Botón **"Archivar esas N"** para descartar de una vez las viejas o flojas (las que dicen "días" o tienen menos de 55 de puntaje) |
-| **Publicadas** | Lo publicado por una persona y lo que salió solo (`automatica`) | **Volver a la cola** (borra la decisión) y, en lo que salió solo, **Bajar de la web** (la descarta) |
-| **Descartadas** | Lo que alguien descartó | **Volver a la cola** |
-| **Frenadas** | El semáforo rojo (menores, víctimas y lo que no se publica nunca) | Nada: no se publica ni por error |
-| **Archivadas** | Lo que pasó 72 horas sin que nadie lo decidiera (`HORAS_PARA_ARCHIVAR = 72`) | **Volver a la cola** |
-| **Fuentes** | Todas las fuentes con su peso, si están activas y cómo les fue en la última búsqueda; los últimos movimientos del historial | Pausar o reactivar, cambiar el peso (de 1 a 40), borrar, **sumar una fuente** y **probarla** antes |
-| **Clima y farmacias** | La farmacia de turno y la semana, el clima ahora y los próximos días, los números útiles | Sólo mirar |
-| **Agenda** | Los eventos cargados a mano, los del municipio, el formulario "Cargar un evento", "A quién pedirle fechas" y las fiestas anuales | Cargar un evento (nace como borrador), **Publicar en la web**, **Sacar de la web**, **Borrar**; "Ya tengo la fecha" para una fiesta anual; escribirle a un contacto por WhatsApp o mail (el panel abre el mensaje, **no manda nada solo**), marcar "Le escribimos hoy" y "Respondió". El paso a paso, en "La agenda, paso a paso", más abajo |
-| **Calendario** | A qué hora y qué días sale cada historia fija (clima de la mañana y de la noche, farmacia, útiles, agenda) | Cambiar hora, días o apagarla. **Sólo rige en la PC**: en GitHub valen los horarios de fábrica (`HISTORIAS_FIJAS`, `panel/horarios.mjs`) |
-| **Para redes** (con el número) | Los videos y placas que se armaron **en la PC** en las últimas 24 horas (`reels/salida/`) | Bajarlos. Las redes de todos los días salen desde GitHub, no de acá (`docs/07-REDES.md`) |
-| **Buzón** (con el número de nuevos) | Lo que manda la gente: dato, reclamo, opinión o seguimiento, cada uno con su regla (`panel/buzon.mjs`) | Cargar algo que llegó por otro canal, cambiarle el estado, anotar la respuesta de la otra parte en un reclamo, borrar. Un reclamo **nunca** se publica de un solo lado |
-| **Avisos** | Los tres espacios publicitarios de la web (apertura, clima, pie; `SLOTS_AVISOS` en `panel/avisos.mjs`) | Cargar nombre, texto y logo; con el nombre vacío se borra. Ver `PUBLICIDAD.md` |
-| **Cómo escribe la IA** | La instrucción exacta que recibe la IA (sale de `CRITERIO-EDITORIAL.md` § 12) y, plegado, el criterio entero | Sólo mirar. Se cambia en el documento y se reinicia el panel |
+| **Esperan** | Lo que espera a una persona: lo amarillo de los últimos 3 días (hasta 40), nunca lo rojo ni lo ya decidido, y sin el "relleno" que tampoco avisa el WhatsApp (lo de afuera poco contado, lo que pasó el cupo, la cotización del dólar). Cada nota con su motivo, el resumen de la fuente y las fuentes con enlace | **Escribir con IA** (con un pedido opcional) → revisar el borrador → **Publicar** o **Pedir otra versión**; **Descartar**. Lo decidido se puede **Deshacer** |
+| **Sin cuerpo** | Las notas que saldrían solas pero esperan cuerpo (`esperando-cuerpo.json`) | **Escribir con IA** o **Escribir a mano** → "Publicar con este cuerpo" |
+| **Publicadas** | Las de las últimas 36 horas y, con "Buscar también en el archivo", las de 180 días; buscador por título o sección | **Editar** (título, bajada, cuerpo y sección), **Reescribir con IA** (con pedido), **También a Facebook e Instagram** (o "Sacar de las redes"), **Retirar de la web** (pide el motivo) y **Deshacer** |
+| **Más** | Quién entró | **Actualizar la web ahora**, abrir la web, cómo instalarlo, cómo funciona, **Salir y borrar la llave de este celular** |
 
-### 6. Qué pasa cuando alguien decide algo
+Al aprobar hacen falta título, bajada y cuerpo, con el texto de la IA o
+editado. Con menos de 70 palabras de cuerpo pregunta antes de guardar (con
+menos de 70 una nota automática no sale sola). El borrador muestra lo que el
+verificador marcó contra las fuentes y lo que sacó. Se puede cambiar la
+sección y, en lo que espera, marcar "También a Facebook e Instagram".
 
-1. El navegador manda el pedido al panel (`/api/nota`, `/api/lote`,
-   `/api/reescribir`, `/api/avisos`, `/api/evento`…). Quién lo hizo sale de
-   la sesión, no de lo que diga el navegador.
-2. El panel cambia `estado.decisiones` (o el buzón, los eventos, las
-   fuentes) y lo anota en el historial.
-3. Guarda `panel/datos/estado.json` y, en el mismo momento:
-   - **exporta las decisiones** a `web/data/decisiones.json`
-     (`exportarDecisiones`): por cada nota, sólo lo que la web usa
-     (`decisionParaLaWeb`, `panel/notas.mjs`: estado, título, bajada, cuerpo,
-     guion, si es de la IA, quién, cuándo y las partes internas). **Poda** las
-     de más de 60 días (`DIAS_DE_DECISIONES`, `podarDecisiones`), salvo lo que
-     una persona descartó, bloqueó o archivó: eso se guarda siempre, para que
-     no vuelva a salir si un medio la republica. También van los horarios del
-     Calendario (que hoy la nube no usa);
-   - **exporta los eventos** publicados a `web/data/eventos-panel.json`
-     (`eventosParaLaWeb`, `panel/agenda.mjs`): sólo los campos que se ven en
-     la web (`CAMPOS_PUBLICOS`), nunca quién avisó ni su teléfono, hasta 90
-     días después de que terminan. Si no cambió nada, no lo toca;
-   - los avisos se escriben directo en `web/data/avisos.json`.
-4. **Programa la subida a GitHub** (`panel/sincronizar.mjs`). Espera **30
-   segundos** desde el último cambio (`esperaMs = 30000`): varios cambios
-   seguidos se juntan en una sola subida. Después:
-   `git add` de los tres archivos → si no hay cambios, nada → `git commit`
-   "Panel: decisiones, avisos y agenda · fecha" → `git pull --rebase
-   --autostash` → `git push`. Si algo falla (sin internet, un conflicto),
-   cancela el rebase, lo dice en la ventana ("no se pudo subir…; queda para
-   el próximo intento") y no rompe nada: el cambio queda en el archivo y sube
-   con el próximo cambio. Se apaga con la variable `SINCRONIZAR_GITHUB=no`.
-5. En la próxima corrida de "Actualizar la web" (cada 30 minutos), GitHub lee
-   `decisiones.json` y la web lo respeta (`notaPublicada`,
-   `web/scripts/generar-datos.mjs`; ver `docs/06-WEB.md`). Entre que alguien
-   aprieta "Publicar" y la nota está en el sitio pueden pasar unos 35 minutos
-   en el peor caso.
+### Qué escribe
 
-**Qué cuenta como decisión de una persona.** Para la web, sólo manda una
-decisión con `por` distinto de `'ia'` (`decisionHumana`,
-`ingesta/utiles.mjs`). Lo que escribió la IA desde el panel se usa **como
-texto** (si tiene cuerpo), pero no cambia si la nota sale o no: eso lo sigue
-decidiendo el semáforo. Al 28/09, de las 1.540 decisiones exportadas, 1.390
-son de la IA y 2 de una persona.
+| Archivo | Qué guarda | Cuándo |
+|---|---|---|
+| `web/data/celular-decisiones.json` | `notas`: aprobar = `publicada` con el texto entero (`deIA` si lo escribió la IA, con sus partes internas), descartar = `descartada`, retirar = `bloqueada` con el motivo; cada una con `por` y `cuando`. `redes`: las marcadas para Facebook e Instagram | Aprobar, descartar, retirar, deshacer, marcar para las redes |
+| `web/data/correcciones.json` | Título, bajada, cuerpo o sección, con `motivo`, `cuando` y `por` (el mismo archivo de las correcciones a mano). Un texto de la IA revisado lleva `deIA: true` y firma "Redacción con IA, revisada por la redacción"; uno escrito a mano, "Revisada por la redacción" | Editar, escribir un cuerpo, cambiar la sección al aprobar |
+| `web/data/celular-llaves.json` | Las llaves públicas de los celulares | La primera vez que entra cada celular |
 
-**"Volver a la cola" borra la decisión.** Si la nota es verde, vuelve a salir
-sola; si es amarilla, vuelve a "Para decidir".
+**Ningún workflow toca esos archivos**, así nunca se pisan.
+`problemaDeDecision` (`panel/celular-datos.mjs`) exige que aprobar traiga el
+texto entero (una decisión humana sin texto publicaría el de la fuente tal
+cual, que es copiar a otro medio) y que retirar traiga el motivo; lo que no
+vale se saltea, y una prueba avisa antes de publicar.
 
-**Publicar sin cuerpo.** Publicar de a una nota sin cuerpo pide la
-confirmación; en lote (`/api/lote`) las que no tienen cuerpo se saltean.
+### Las redes: aprobar no es publicar en redes
 
-**Si una persona cambia el título, la bajada o el cuerpo,** las partes
-internas que armó la IA sobre su versión se borran (`conTextoCorregido`,
-`panel/notas.mjs`): podrían contradecir la nota corregida.
+Lo que salió en la web porque lo aprobó una persona (era amarillo) **no va
+solo** a las redes. Va si la persona lo marca **"También a Facebook e
+Instagram"**, y así sí puede ir Política o Policiales (regla 78,
+`vaAFacebookPorLoQueEs` en `redes/elegir.mjs`): sale en el próximo posteo que
+permitan las reglas de Facebook (de 8 a 22, 90 minutos entre posteos, 5 por
+día), antes que las demás. Los podcasts siguen sin Política ni Policiales.
 
-### 7. El respaldo (`panel/respaldo.mjs`)
+### El modo de prueba
 
-Copia `panel/datos/` a una carpeta con la fecha de Balcarce (`AAAA-MM-DD`) al
-arrancar y cada 6 horas, y guarda las **últimas 14** copias. La carpeta es la
-de la variable `RESPALDO_CARPETA` (conviene una de Drive u OneDrive, así queda
-afuera de la PC); si no está, `respaldos/` junto al proyecto. **Nunca** va a
-GitHub (hay usuarios y datos de gente del buzón) y **no copia** los secretos
-en texto plano (`esSecreto`: los `.txt` con "clave", "secreto", "password" o
-"token" en el nombre). A mano: `node panel/respaldo.mjs [carpeta]`.
+`radarbalcarce.com/panel/?demo`: notas inventadas, no pide llave y no guarda
+nada (`web/public/panel/prueba.js`). Sirve para mostrarlo o probar un cambio.
+
+### Límites
+
+- **El pedido a la IA queda a la vista en GitHub** (es un dato de la corrida):
+  el celular avisa que no se pongan nombres.
+- **Nada es instantáneo**: lo decidido sale en la próxima vuelta de "Actualizar
+  la web" (cada media hora) o con "Actualizar la web ahora" (unos 8 minutos).
+- **Retirar de la web no borra lo que ya salió en Facebook o Instagram**: eso
+  se borra a mano en la red (el celular lo recuerda).
+- **No hace** lo del panel de la PC: agenda cargada a mano, avisos, buzón,
+  fuentes, calendario.
+- **El panel de la PC no ve lo decidido en el celular**: una nota aprobada en
+  el celular puede seguir en "Para decidir" de la PC. Si se decide en los dos,
+  manda la decisión más nueva.
+
+### ¿Y el panel 100 % online?
+
+Es éste. De las opciones que se habían pensado (Cloudflare Functions con
+Access, una página que escriba por la API de GitHub, un servidor gratis o uno
+pago) se eligió la segunda, sin servidor: el celular escribe directo en el
+repositorio con la llave de cada persona, y lo sensible viaja cifrado.
 
 ---
 
-## La agenda, paso a paso
+## El panel de la PC
 
-Desde el 25/09 (`panel/agenda.mjs`; el criterio, en `CRITERIO-EDITORIAL.md`
-§ 8; la página de cada evento, en `docs/06-WEB.md`).
+Un programa de Node que corre **sólo en la PC de Hernán**
+(`http://localhost:4321`): busca noticias cada 10 minutos, deja decidir las
+amarillas y **sube solo a GitHub** sus decisiones, los avisos y los eventos. No
+arma ni publica la web: la arma GitHub con la PC prendida o apagada.
+
+### 1. Arrancar
+
+Doble clic en **`ARRANCAR.bat`** (en la raíz del proyecto): abre una ventana
+negra, "Radar Balcarce - PANEL", que corre `node panel/servidor.mjs`, y a los 5
+segundos el navegador en `http://localhost:4321`. **Esa ventana es el panel**:
+si se cierra, se apaga. También se puede con `npm run panel`.
+
+### 2. Lo que hace al arrancar (`panel/servidor.mjs`)
+
+1. Lee `panel/datos/estado.json` (su memoria; si no existe, lo crea con las
+   fuentes del código). Suma las fuentes nuevas del código
+   (`TODAS_LAS_FUENTES`) y respeta el peso y la pausa que se hayan tocado en el
+   panel.
+2. Guarda el estado, lo que **siempre** exporta las decisiones y los eventos y
+   programa la subida a GitHub (paso 5).
+3. A los 15 segundos hace una copia de seguridad (paso 6) y después, una cada 6
+   horas.
+4. Escucha en el puerto 4321. Si nunca buscó noticias, busca; si no tiene la
+   agenda del municipio, la trae. Después, **busca noticias cada 10 minutos**
+   (`correrIngesta`, con el peso y la pausa del panel: `fuentesParaIngestar`) y
+   **trae la agenda cada hora**. No reescribe solo con IA: eso lo hace sólo la
+   nube; queda el botón "Reescribir con IA", a pedido.
+
+### 3. Entrar
+
+- La primera pantalla es el **login** (`panel/acceso.mjs`), con dos usuarios,
+  Hernán y Andrés. Las cuentas se crean o se les cambia la clave en la consola
+  de la PC: `node panel/clave.mjs <usuario> "<clave>" ["Nombre"]`. **Una clave
+  nunca se escribe en un documento ni en un chat.**
+- Las claves se guardan como hash (scrypt con sal) en
+  `panel/datos/usuarios.json`. La sesión es una cookie firmada que dura 30 días
+  (`DIAS_DE_SESION`); la firma sale de `panel/datos/secreto.txt`, que se crea
+  solo (si se borra, se cierran todas las sesiones).
+- Cinco claves mal seguidas desde la misma dirección cierran la puerta 15
+  minutos (`MAX_FALLOS`, `CASTIGO_MS`); la dirección que manda el túnel
+  (`X-Forwarded-For`) sólo se cree si la conexión viene de la misma PC, y el
+  error no delata si el usuario existe. Un pedido que cambia algo y viene de
+  otra página se rechaza (`origenPermitido`, `panel/seguridad.mjs`), "Salir" es
+  un botón y no un enlace, y "Probar una fuente" no deja entrar a la red de la
+  casa (`probarUrlPermitida`).
+- El panel escucha en todas las conexiones de la PC (cualquiera en la misma red
+  llega al login) y, con **Tailscale Funnel** prendido, se entra desde afuera
+  con la dirección de `panel/datos/DIRECCION-DEL-PANEL.txt` (no va al
+  repositorio). Ahí lo protege **sólo la contraseña**; con https la cookie sale
+  `Secure`. Con el panel del celular, el túnel ya no hace falta: se cierra con
+  `tailscale funnel --https=443 off`.
+
+### 4. Las pestañas
+
+El tablero (`panel/panel.html`, una sola página) se recarga solo cada minuto
+mientras no haya una nota abierta. Arriba: quién entró, **"Buscar noticias
+ahora"** y **"Salir"**.
+
+| Pestaña | Qué muestra | Qué se puede hacer |
+|---|---|---|
+| **Para decidir** | Las notas en `pendiente`: las amarillas sin decidir, con el semáforo, sección, medios, cuándo, "coinciden N", "nos nombran afuera", "sin cuerpo", el puntaje y el motivo | Editar título, bajada, cuerpo y guion; **Reescribir con IA**; **Publicar**, **Guardar cambios** o **Descartar**. Plegado, el **análisis interno** (verificación, claves, qué se sabe, qué falta confirmar, fuentes, antecedentes), que la web no muestra. Sin cuerpo, "Publicar" pide **"Publicar igual, sin cuerpo"**. **"Archivar esas N"** descarta de una vez las viejas o flojas (las que dicen "días" o tienen menos de 55 de puntaje) |
+| **Publicadas** | Lo publicado por una persona y lo que salió solo | **Volver a la cola** (borra la decisión); en lo que salió solo, **Bajar de la web** |
+| **Descartadas** | Lo que alguien descartó | **Volver a la cola** |
+| **Frenadas** | El semáforo rojo | Nada: no se publica ni por error |
+| **Archivadas** | Lo que pasó 72 horas sin decidirse (`HORAS_PARA_ARCHIVAR`) | **Volver a la cola** |
+| **Fuentes** | Cada fuente con su peso, si está activa y cómo le fue; el historial | Pausar, reactivar, cambiar el peso (1 a 40), borrar, **sumar una fuente** y **probarla** antes |
+| **Clima y farmacias** | La farmacia de turno y la semana, el clima, los números útiles | Sólo mirar |
+| **Agenda** | Los eventos cargados a mano, los del municipio, "Cargar un evento", "A quién pedirle fechas" y las fiestas anuales | Ver "La agenda, paso a paso" |
+| **Calendario** | A qué hora y qué días sale cada historia fija | Cambiarlas. **Sólo rige en la PC**: GitHub usa los horarios de fábrica (`HISTORIAS_FIJAS`, `panel/horarios.mjs`; `PENDIENTES.md`, D7) |
+| **Para redes** | Los videos y placas armados **en la PC** en las últimas 24 horas (`reels/salida/`) | Bajarlos. Las redes de todos los días salen desde GitHub (`docs/07-REDES.md`) |
+| **Buzón** | Lo que manda la gente: dato, reclamo, opinión o seguimiento (`panel/buzon.mjs`) | Cargar algo que llegó por otro canal, cambiarle el estado, anotar la respuesta de la otra parte, borrar. Un reclamo **nunca** se publica de un solo lado |
+| **Avisos** | Los tres espacios publicitarios de la web (apertura, clima, pie; `SLOTS_AVISOS`) | Cargar nombre, texto y logo; con el nombre vacío se borra (`PUBLICIDAD.md`) |
+| **Cómo escribe la IA** | La instrucción exacta que recibe la IA (`CRITERIO-EDITORIAL.md` § 12) y, plegado, el criterio entero | Sólo mirar. Se cambia en el documento y se reinicia el panel |
+
+### 5. Qué pasa cuando alguien decide algo
+
+1. El navegador manda el pedido al panel (`/api/nota`, `/api/lote`,
+   `/api/reescribir`, `/api/avisos`, `/api/evento`…). Quién lo hizo sale de la
+   sesión, no de lo que diga el navegador.
+2. El panel cambia su estado, lo anota en el historial y guarda
+   `panel/datos/estado.json`. En el mismo momento:
+   - **exporta las decisiones** a `web/data/decisiones.json`
+     (`exportarDecisiones`): sólo lo que decidió una persona y los textos de la
+     IA de los últimos 3 días (`vaALaWeb`, `panel/notas.mjs`), con los campos
+     que la web usa (`decisionParaLaWeb`). **Poda** lo de más de 60 días
+     (`DIAS_DE_DECISIONES`), salvo lo que una persona descartó, bloqueó o
+     archivó (así no vuelve si un medio la republica), y lo pendiente de más de
+     7 días (`DIAS_DE_PENDIENTES`);
+   - **exporta los eventos** publicados a `web/data/eventos-panel.json`
+     (`eventosParaLaWeb`, `panel/agenda.mjs`): sólo los campos públicos
+     (`CAMPOS_PUBLICOS`), nunca quién avisó ni su teléfono, hasta 90 días
+     después de que terminan;
+   - los avisos se escriben directo en `web/data/avisos.json`.
+3. **Sube a GitHub** (`panel/sincronizar.mjs`) **30 segundos** después del
+   último cambio (`esperaMs`), así varios cambios van en una sola subida:
+   `git add` de los tres archivos → `git commit` "Panel: decisiones, avisos y
+   agenda · fecha" → `git pull --rebase --autostash` → `git push`. Si algo falla
+   (sin internet, un conflicto), cancela, lo dice en la ventana y el cambio sube
+   con el próximo. Se apaga con `SINCRONIZAR_GITHUB=no`.
+4. La próxima corrida de "Actualizar la web" lo respeta (`notaPublicada`,
+   `generar-datos.mjs`): unos 35 minutos en el peor caso.
+
+Para la web sólo manda una decisión con `por` distinto de `'ia'`
+(`decisionHumana`, `ingesta/utiles.mjs`); lo que escribió la IA desde el panel
+se usa como texto, pero no decide si la nota sale. **"Volver a la cola" borra
+la decisión**: si la nota es verde, vuelve a salir sola; si es amarilla, vuelve
+a "Para decidir". En lote (`/api/lote`), las que no tienen cuerpo se saltean. Si
+una persona cambia el título, la bajada o el cuerpo, las partes internas que
+armó la IA se borran (`conTextoCorregido`, `panel/notas.mjs`).
+
+### 6. El respaldo (`panel/respaldo.mjs`)
+
+Copia `panel/datos/` a una carpeta con la fecha (`AAAA-MM-DD`) al arrancar y
+cada 6 horas, y guarda las **últimas 14**. La carpeta es la de
+`RESPALDO_CARPETA` (conviene Drive u OneDrive, afuera de la PC); si no está,
+`respaldos/` junto al proyecto. **Nunca** va a GitHub (hay usuarios y datos del
+buzón) y **no copia** los secretos en texto plano (`esSecreto`). A mano: `node
+panel/respaldo.mjs [carpeta]`.
+
+### La agenda, paso a paso
+
+`panel/agenda.mjs`; el criterio, en `CRITERIO-EDITORIAL.md` § 8; la página de
+cada evento, en `docs/06-WEB.md`. La historia de la agenda de los jueves sale
+desde GitHub con la agenda publicada (`docs/07-REDES.md`).
 
 **Cargar un evento que avisó alguien:**
 
-1. Pestaña **Agenda** → formulario **Cargar un evento**: nombre, fecha
-   (`2026-10-15`) y, si se sabe, hora (`20:30`), cuándo termina, lugar,
-   dirección, entrada, quién organiza, página de entradas y una descripción.
-   Todo eso **sale en la web tal cual**. "Quién lo avisó" queda en el panel.
+1. Pestaña **Agenda** → **Cargar un evento**: nombre, fecha (`2026-10-15`) y,
+   si se sabe, hora (`20:30`), cuándo termina, lugar, dirección, entrada, quién
+   organiza, página de entradas y descripción. Todo eso **sale en la web tal
+   cual**; "Quién lo avisó" queda en el panel.
 2. Si la fecha está **confirmada por quien organiza**, tildar "Publicar ya en
    la web". Si no, queda como **borrador** y se publica después con **Publicar
    en la web**. Una fecha aproximada no se publica.
-3. En la próxima corrida de GitHub (media hora como mucho) el evento tiene su
-   página. **Sacar de la web** o **Borrar** la hacen desaparecer en la corrida
-   siguiente.
+3. En la próxima corrida de GitHub el evento tiene su página. **Sacar de la
+   web** o **Borrar** la hacen desaparecer en la corrida siguiente.
 
 **Una fiesta del calendario anual** (Automovilismo, Postre, Balcarce Corre…):
-cuando el organizador confirma la fecha, **Ya tengo la fecha** (en "Se acercan
-estas fechas anuales" o "Todo el calendario anual") llena el formulario y lo
-liga a la fiesta; la web cambia "fecha a confirmar" por la fecha con enlace.
+cuando el organizador confirma la fecha, **Ya tengo la fecha** llena el
+formulario y lo liga a la fiesta; la web cambia "fecha a confirmar" por la
+fecha con enlace.
 
-**Pedirle fechas a las instituciones** (tarjeta "A quién pedirle fechas"):
+**Pedirle fechas a las instituciones** ("A quién pedirle fechas"):
 
 1. **A quién escribir este mes** muestra a los que suelen tener eventos en los
    próximos 45 días (`DIAS_ADELANTE`) y a los que no se les escribió en los
-   últimos 30 (`DIAS_ENTRE_MENSAJES`). "Todos" muestra la base completa.
+   últimos 30 (`DIAS_ENTRE_MENSAJES`).
 2. **Escribir por WhatsApp** (o por mail) abre el mensaje ya escrito. **El
-   panel no manda nada solo**: lo manda una persona. Sin WhatsApp ni mail,
-   **Ver mensaje**, copiarlo y mandarlo por Instagram o Facebook.
-3. Después, **Le escribimos hoy** (si varios comparten el número, vale para
-   todos). Cuando contestan, **Respondió** y, si mandan una fecha, **Cargar un
-   evento suyo**.
+   panel no manda nada solo**: lo manda una persona. Sin WhatsApp ni mail, **Ver
+   mensaje**, copiarlo y mandarlo por Instagram o Facebook.
+3. Después, **Le escribimos hoy**; cuando contestan, **Respondió** y, si mandan
+   una fecha, **Cargar un evento suyo**.
 
-**La base de contactos** es `ingesta/contactos-agenda.json` (43 instituciones
-al 28/09): qué organiza cada una, en qué meses (sólo si hay una fuente que lo
-respalde), sus canales **oficiales**, de dónde salió cada dato y cuándo se
-verificó. El repositorio es público: nunca un celular personal que la
-institución no publique. Se corrige editando ese archivo y reiniciando el
-panel. No se mezcla con `comercial/` (comercios para vender publicidad).
+**La base de contactos** es `ingesta/contactos-agenda.json`: qué organiza cada
+institución, en qué meses (sólo si hay una fuente que lo respalde), sus canales
+**oficiales** y de dónde salió cada dato. El repositorio es público: nunca un
+celular personal que la institución no publique. Se corrige editando ese
+archivo y reiniciando el panel.
 
-## Cómo se podría pasar a online
-
-Ninguna opción está decidida ni probada (`PENDIENTES.md`, "Panel 100%
-online"); los límites de los planes gratis cambian, hay que verificarlos antes:
-
-1. **Cloudflare Pages + Functions + Access** (la que mejor encaja: el sitio ya
-   está ahí). El panel detrás de Cloudflare Access (entrar con el correo, sin
-   contraseñas propias), unas funciones que escriben las decisiones en el
-   repositorio por la API de GitHub y los datos del buzón en un almacenamiento
-   de Cloudflare, nunca en el repositorio. Trabajo mediano: el servidor se
-   reescribe como funciones.
-2. **Sólo lo esencial**: aprobar notas y cargar avisos en una página protegida
-   que escriba `decisiones.json` y `avisos.json` por GitHub; buzón y agenda,
-   después.
-3. **Un servidor gratis**: el panel ya corre con Node sin dependencias, pero
-   hay que resolver el disco para `panel/datos/`, el respaldo y el acceso (muchos
-   planes gratis duermen el servicio o borran el disco).
-4. **Con gasto** (unos USD 5 por mes): Railway o Fly.io. Lo más simple.
-
-Mientras tanto: respaldo apuntado afuera de la PC, contraseñas cambiadas (25/09)
-y el túnel cerrado cuando no haga falta.
-
-## Qué guarda el panel y dónde
+### Qué guarda y dónde
 
 | Archivo | Qué es | ¿Va a GitHub? |
 |---|---|---|
-| `panel/datos/estado.json` | La memoria del panel: decisiones completas, fuentes, historial (200 movimientos), eventos cargados a mano, buzón, a quién se le escribió y cuándo, horarios, intentos de la IA | No (`.gitignore`) |
-| `panel/datos/ultima.json` | La última búsqueda de noticias | No |
-| `panel/datos/agenda.json` | La agenda del municipio de la última hora | No |
-| `panel/datos/usuarios.json` | Los usuarios con su hash | No |
-| `panel/datos/secreto.txt` | La firma de las sesiones | No (y no se respalda) |
+| `panel/datos/estado.json` | La memoria: decisiones completas, fuentes, historial (200 movimientos), eventos, buzón, contactos escritos, horarios | No (`.gitignore`) |
+| `panel/datos/ultima.json`, `agenda.json` | La última búsqueda de noticias y la agenda del municipio | No |
+| `panel/datos/usuarios.json`, `secreto.txt` | Los usuarios con su hash y la firma de las sesiones | No (y la firma no se respalda) |
 | `web/data/decisiones.json` | Lo que la web necesita de las decisiones | **Sí**, lo sube el panel |
 | `web/data/avisos.json` | Los tres avisos | **Sí**, lo sube el panel |
 | `web/data/eventos-panel.json` | Los eventos publicados, sólo lo público | **Sí**, lo sube el panel |
 | `reels/salida/` | Las piezas armadas en la PC | No |
 
----
+### Por qué hay que reiniciarlo
 
-## Por qué hay que reiniciarlo
+Node lee el código **una sola vez, al arrancar**. Si cambia algo en `ingesta/`,
+`panel/`, `reels/`, `CRITERIO-EDITORIAL.md` o `ingesta/contactos-agenda.json`
+(también por un `git pull`) mientras el panel está prendido, sigue con la
+versión vieja. Para que tome lo nuevo: **cerrar la ventana negra y volver a
+correr `ARRANCAR.bat`**.
 
-Node lee el código **una sola vez, al arrancar**, y lo guarda en memoria. Si
-alguien cambia algo en `ingesta/`, `panel/`, `reels/`, `CRITERIO-EDITORIAL.md`
-o `ingesta/contactos-agenda.json` mientras el panel está prendido, el panel
-**sigue trabajando con la versión vieja**: busca con las reglas viejas,
-reescribe con la instrucción vieja y muestra el criterio viejo. Para que tome
-lo nuevo: **cerrar la ventana negra y volver a correr `ARRANCAR.bat`**. Si
-hubo un `git pull` que trajo código nuevo, lo mismo.
+### Cómo puede pisar datos
 
----
+1. **Pisa `web/data/decisiones.json`**: cada vez que guarda su estado lo
+   reescribe entero desde su memoria. Un cambio hecho a mano o desde GitHub con
+   el panel prendido **se pierde**. Por eso, para sacar o corregir notas sin el
+   panel se usan **`web/data/retiradas.json`** y **`web/data/correcciones.json`**
+   (o el panel del celular), que el panel de la PC no toca.
+2. **Pisa `web/data/avisos.json`** con lo que tiene al guardar: los avisos
+   conviene cargarlos sólo desde el panel.
+3. **Su estado no se comparte entre PCs**: otra PC tendría su propio
+   `estado.json`.
 
-## Cómo el panel puede pisar datos
+### La corrida de la PC y la de la nube no son iguales
 
-1. **Pisa `web/data/decisiones.json`.** El panel tiene las decisiones en
-   memoria y cada vez que guarda su estado **reescribe el archivo entero**
-   desde esa memoria: al arrancar, con cada botón que se aprieta y después de
-   cada ciclo de 10 minutos en que la IA escribió o borró algo (en la práctica,
-   casi siempre). Si alguien cambió `decisiones.json` a mano o desde GitHub con
-   el panel prendido, ese cambio **se pierde** en la próxima escritura. Por eso,
-   para sacar o corregir notas sin el panel se usan **`web/data/retiradas.json`**
-   y **`web/data/correcciones.json`**, que el panel no toca nunca.
-2. **Pisa `web/data/avisos.json`** si se cargan avisos desde el panel: el
-   archivo se arma con lo que el panel lee en ese momento, así que un cambio a
-   mano que el panel ya leyó se conserva, pero conviene cargar los avisos sólo
-   desde el panel.
-3. **El estado del panel no se sincroniza entre PCs.** Si el panel se corriera
-   en otra PC, tendría su propio `estado.json` y exportaría otras decisiones.
-4. **El respaldo borra copias viejas**: sólo quedan las últimas 14 del destino.
-
----
-
-## La corrida de la PC y la de la nube no son iguales
-
-Las dos usan la misma ingesta y la misma reescritura, pero:
-
-| | Panel (PC, cada 10 min) | "Actualizar la web" (GitHub, cada 30 min) |
+| | Panel de la PC (cada 10 min) | "Actualizar la web" (GitHub, cada 30 min) |
 |---|---|---|
-| Fuentes | Las del código, con el peso y la pausa que se pusieron en el panel | Las del código tal cual (pausar una fuente en el panel **no** la pausa en la nube) |
-| Memoria del cruce de medios | `.cache/` de la PC | `.cache/` de la caché de Actions |
+| Fuentes | Las del código, con el peso y la pausa del panel | Las del código tal cual (pausar una fuente en el panel **no** la pausa en la nube) |
 | Identificadores ya publicados (`idsConocidos`) | No los pasa | Sí: una historia conserva su identificador cuando otro medio se suma |
-| Lectura con IA, repetidas, medios y cupos después de la IA | No | Sí |
-| Qué se reescribe | Las verdes de menos de 72 h, hasta 12 por ciclo | Lo que va a salir, con las reglas de 36 h y 12 h |
-| Cuándo una nota "se archiva" | A las 72 h sin decidir (`HORAS_PARA_ARCHIVAR`) | Sale de la portada a las 36 h (`HORAS_EN_PORTADA`) |
-| Fotos, dólar, estadística, portada | No | Sí |
+| Lectura con IA, repetidas, cupos, fotos, dólar, portada | No | Sí |
+| Qué se reescribe con IA | Nada solo: sólo "Reescribir con IA", a pedido | Lo que va a salir, con las reglas de 36 y 12 horas |
+| Cuándo una nota "se archiva" | A las 72 h sin decidir | Sale de la portada a las 36 h |
 
-Consecuencias:
-- En "Para decidir" pueden aparecer notas que en la nube la IA ya sacó, o con
-  otra sección, o con otro color.
-- Para una historia que cuentan varios medios, el identificador que arma el
-  panel **puede no ser el mismo** que el de la nube (la nube prefiere el ya
-  publicado; el panel, la nota más vieja de la historia). Si difieren, lo que
-  se decida en el panel sobre esa nota no le llega a la web, porque la web
-  busca la decisión por identificador. No está medido cuántas veces pasa.
+Por eso en "Para decidir" de la PC pueden aparecer notas que en la nube la IA
+ya sacó, o con otra sección o color. Y el identificador que arma el panel para
+una historia de varios medios **puede no ser el de la nube**: si difieren, lo
+que se decida en la PC sobre esa nota no le llega a la web. El panel del
+celular no tiene este problema: decide sobre lo que armó la nube.
 
-Si en la PC se corre `cd web && npm run datos` con el panel habiendo buscado
-al menos una vez, `generar-datos.mjs` trabaja en "modo PC" (lee
-`panel/datos/`), sin IA ni fotos. Sirve para mirar la web en la PC
-(`npm run dev`), pero deja modificados `portada.json`, `archivo.json` y otros,
-que el panel no sube y que después chocan en un `git pull` (`CLAUDE.md`: se
-resuelve con `git checkout --theirs`).
+Si en la PC se corre `cd web && npm run datos` después de que el panel buscó
+noticias, `generar-datos.mjs` trabaja en "modo PC" (lee `panel/datos/`, sin IA
+ni fotos): sirve para mirar la web en la PC, pero deja modificados
+`portada.json`, `archivo.json` y otros, que no se suben (`CLAUDE.md`).
 
 ---
 
@@ -333,72 +393,69 @@ resuelve con `git checkout --theirs`).
 
 | Archivo | Qué hace | Quién lo llama | Qué lee | Qué escribe |
 |---|---|---|---|---|
-| `ARRANCAR.bat` | Abre la ventana del panel y el navegador | Hernán, con doble clic | — | — |
-| `panel/servidor.mjs` | El servidor: ciclo de 10 min, reescritura, API del tablero, exportar y sincronizar | `ARRANCAR.bat`, `npm run panel` | `panel/datos/*`, `web/data/archivo.json` (antecedentes), `web/data/avisos.json`, `reels/salida/` | `panel/datos/estado.json`, `ultima.json`, `agenda.json`, `web/data/decisiones.json`, `eventos-panel.json`, `avisos.json` |
-| `panel/panel.html` | El tablero (las 13 pestañas) | El navegador, desde el servidor | `/api/estado` | Pedidos a la API |
-| `panel/acceso.mjs` | Usuarios, claves, sesiones, freno por intentos | `servidor.mjs`, `clave.mjs` | `panel/datos/usuarios.json`, `secreto.txt` | Esos dos |
-| `panel/clave.mjs` | Crear una cuenta o cambiar la clave | Una persona, en la consola | `usuarios.json` | `usuarios.json` |
-| `panel/seguridad.mjs` | Control de origen y de qué direcciones se pueden probar | `servidor.mjs`, `acceso.mjs` | — | — |
-| `panel/notas.mjs` | Qué se puede editar, qué va a la web, poda de decisiones | `servidor.mjs` | — | — |
+| `web/public/panel/app.js` | El panel del celular: pantallas, pestañas, decisiones | El navegador del celular | Por la API de GitHub: `web/data/` | `celular-decisiones.json`, `correcciones.json`, `celular-llaves.json` (vía `github.js`) |
+| `web/public/panel/github.js` | Cómo habla con GitHub: leer, guardar con reintento, disparar un workflow, encontrar su corrida | `app.js` | La llave | — |
+| `web/public/panel/cifrado.js` | Crea las llaves del celular y abre los sobres | `app.js` | La llave privada del navegador | — |
+| `web/public/panel/sw.js`, `manifest.webmanifest` | Lo que lo vuelve una app instalable | Chrome | — | — |
+| `web/public/panel/prueba.js`, `prueba-sobre.js` | El modo de prueba (`?demo`) | `app.js` | — | — |
+| `panel/celular-datos.mjs` | Qué decide el celular (`problemaDeDecision`, `leerDecisionesCelular`, `unirDecisiones`) y qué necesita (`paraDecidir`, `notasParaEscribir`) | `generar-datos.mjs`, `celular.mjs` | — | — (funciones puras) |
+| `panel/cifrado.mjs` | Cierra los sobres para cada celular (`cerrar`, `cerrarSiCambio`, `leerLlaves`) | `generar-datos.mjs`, `celular.mjs` | `celular-llaves.json` | — |
+| `panel/celular.mjs` | El programa de "Panel del celular": busca la nota, la escribe, cierra el borrador | `.github/workflows/panel.yml` | `.cache/celular-notas.json`, `web/data/` | `web/data/celular-borradores.json` |
+| `panel/reescribir-una.mjs` | Escribe una nota con IA con el criterio y el verificador de siempre | `celular.mjs` | Las fuentes, `archivo.json` | — |
+| `ARRANCAR.bat` | Abre la ventana del panel de la PC y el navegador | Hernán, con doble clic | — | — |
+| `panel/servidor.mjs` | El panel de la PC: ciclo de 10 min, API del tablero, exportar y sincronizar | `ARRANCAR.bat`, `npm run panel` | `panel/datos/*`, `web/data/archivo.json`, `avisos.json`, `reels/salida/` | `panel/datos/*`, `web/data/decisiones.json`, `eventos-panel.json`, `avisos.json` |
+| `panel/panel.html` | El tablero de la PC (13 pestañas) | El navegador | `/api/estado` | Pedidos a la API |
+| `panel/acceso.mjs`, `panel/clave.mjs` | Usuarios, claves, sesiones, freno por intentos; crear una cuenta o cambiar la clave | `servidor.mjs`; una persona, en la consola | `usuarios.json`, `secreto.txt` | Esos dos |
+| `panel/seguridad.mjs` | Control de origen y de qué direcciones se pueden probar | `servidor.mjs` | — | — |
+| `panel/notas.mjs` | Qué se puede editar, qué va a la web (`vaALaWeb`), poda de decisiones | `servidor.mjs` | — | — |
 | `panel/sincronizar.mjs` | Subir a GitHub los tres archivos | `servidor.mjs` | git | Commits |
 | `panel/respaldo.mjs` | Copia de `panel/datos/` | `servidor.mjs`; a mano | `panel/datos/` | La carpeta de respaldo |
-| `panel/avisos.mjs` | Cargar o borrar un aviso (tres espacios) | `servidor.mjs` | — | — |
-| `panel/agenda.mjs` | Eventos a mano, qué es público, a quién pedirle fechas | `servidor.mjs` | `ingesta/contactos-agenda.json` (vía `ingesta/agenda.mjs`) | — |
+| `panel/avisos.mjs`, `panel/buzon.mjs` | Los tres avisos; los cuatro tipos del buzón y sus reglas | `servidor.mjs` | — | — |
+| `panel/agenda.mjs` | Eventos a mano, qué es público, a quién pedirle fechas | `servidor.mjs` | `ingesta/contactos-agenda.json` | — |
 | `panel/horarios.mjs` | Horarios de las historias fijas y `toca` | `servidor.mjs`, `reels/plan.mjs`, `redes/piezas.mjs` | `estado.horarios` | — |
-| `panel/buzon.mjs` | Los cuatro tipos del buzón y sus reglas | `servidor.mjs` | — | — |
-
----
 
 ## Dónde se toca cada cosa
 
 | Quiero… | Dónde |
 |---|---|
-| Crear una cuenta o cambiar una clave | `node panel/clave.mjs <usuario> "<clave>"` en la PC |
-| Que el panel no suba nada a GitHub | Arrancarlo con `SINCRONIZAR_GITHUB=no` |
-| Que el respaldo quede fuera de la PC | Variable `RESPALDO_CARPETA` apuntando a Drive u OneDrive (pendiente, `PENDIENTES.md`) |
-| Cuántas notas reescribe por ciclo | `REESCRITURAS_POR_CICLO` (`panel/servidor.mjs`) |
-| Cada cuánto busca noticias | `setInterval(correrIngesta, 10 * 60 * 1000)` al final de `panel/servidor.mjs` |
+| Crear, renovar o revocar la llave del celular | github.com (cuenta `balcardev@gmail.com`) → Settings → Developer settings → Fine-grained tokens (`docs/11-OPERACION.md`) |
+| Qué ve el celular en "Esperan" | `paraDecidir` (`panel/celular-datos.mjs`) |
+| Qué acepta la web de una decisión del celular | `problemaDeDecision` y `leerDecisionesCelular` (`panel/celular-datos.mjs`) |
+| Cómo escribe la IA a pedido | `panel/reescribir-una.mjs` (y el criterio, `CRITERIO-EDITORIAL.md`) |
+| Cuántos borradores se guardan | `BORRADORES` (`panel/celular.mjs`) |
+| Cuántos celulares pueden registrarse | `LLAVES_MAXIMAS` (`panel/cifrado.mjs`) |
+| Las pantallas del celular | `web/public/panel/app.js` e `index.html` |
+| Crear una cuenta o cambiar una clave del panel de la PC | `node panel/clave.mjs <usuario> "<clave>"` en la PC |
+| Que el panel de la PC no suba nada a GitHub | Arrancarlo con `SINCRONIZAR_GITHUB=no` |
+| Que el respaldo quede fuera de la PC | Variable `RESPALDO_CARPETA` (Drive u OneDrive) |
+| Cada cuánto busca noticias la PC | `setInterval(correrIngesta, 10 * 60 * 1000)`, al final de `panel/servidor.mjs` |
 | A las cuántas horas archiva lo no decidido | `HORAS_PARA_ARCHIVAR` (`panel/servidor.mjs`) |
-| Cuánto tarda en subir a GitHub | `esperaMs` (`panel/sincronizar.mjs`) |
-| Qué archivos sube | `archivos` en `crearSincronizador(…)` (`panel/servidor.mjs`) |
-| Cuántos días se guardan las decisiones | `DIAS_DE_DECISIONES` (`panel/notas.mjs`) |
+| Cuánto tarda en subir a GitHub, y qué archivos | `esperaMs` (`panel/sincronizar.mjs`); `archivos` en `crearSincronizador(…)` (`panel/servidor.mjs`) |
+| Cuántos días se guardan las decisiones y los textos de la IA | `DIAS_DE_DECISIONES`, `DIAS_DE_TEXTOS_DE_LA_IA`, `DIAS_DE_PENDIENTES` (`panel/notas.mjs`) |
 | Qué campos del evento son públicos | `CAMPOS_PUBLICOS` (`panel/agenda.mjs`) |
 | Los horarios de fábrica de las historias fijas | `HISTORIAS_FIJAS` (`panel/horarios.mjs`) |
 | Los espacios publicitarios | `SLOTS_AVISOS` (`panel/avisos.mjs`) y `web/components/avisos.js` |
-| Sacar o corregir una nota **sin** el panel | `web/data/retiradas.json`, `web/data/correcciones.json` |
-
----
 
 ## Qué puede fallar y cómo se nota
 
 | Qué pasa | Cómo se nota | Qué hacer |
 |---|---|---|
-| La PC está apagada o se cerró la ventana | No se pueden decidir amarillas ni cargar avisos o eventos. La web, las redes y la vigilancia siguen. El vigilante avisa por WhatsApp las notas que esperan a una persona | Prender la PC y correr `ARRANCAR.bat` |
-| Se cambió código y no se reinició | El panel se comporta "como antes" | Cerrar la ventana y `ARRANCAR.bat` |
-| No sube a GitHub | En la ventana: "panel → GitHub: no se pudo subir (…)". La web no ve lo decidido | Revisar internet y `git status` en la PC; se reintenta con el próximo cambio |
-| Conflicto de git en la PC | El mismo mensaje con "pull: …" | Resolver a mano (`git pull --rebase`; en `web/data/`, `git checkout --theirs`) |
-| Se editó `decisiones.json` a mano con el panel prendido | El cambio desaparece | Usar `retiradas.json` o `correcciones.json` |
-| Sin clave de redacción de Gemini | El panel no reescribe solo; "Reescribir con IA" cae al armado mecánico y lo dice | Revisar el `.env` de la PC (lo pega una persona) |
-| Gemini sin cupo | "Reescribir con IA" deja la versión mecánica y lo anota en el historial | Esperar o escribir a mano |
-| La sesión venció | El tablero vuelve al login | Entrar de nuevo |
-| Cinco claves mal | "Demasiados intentos. Probá de nuevo en N minutos." | Esperar |
-| Se rompió el disco | Se pierde el historial editorial y el buzón, salvo lo respaldado afuera | Por eso conviene `RESPALDO_CARPETA` |
+| La llave del celular venció o la borraron | El celular dice "La llave no anda (venció o la borraron en GitHub)" | Crear otra y cargarla (`docs/11-OPERACION.md`) |
+| A la llave le falta un permiso | "Esa llave no puede escribir…" o "GitHub no deja hacer esto con esta llave" | Crear otra con Contents y Actions en "Read and write" |
+| "Esperan" muestra la lista corta, sin detalle | "Todavía no llegaron cifradas para este celular" | Esperar la próxima actualización de la web (el celular recién se registró) |
+| "Escribir con IA" no vuelve | "GitHub tardó demasiado" o "La corrida de GitHub falló" | Mirar "Panel del celular" en GitHub → Actions; probar de nuevo. Si la nota ya no está en la caché ni publicada: "No encontré la nota" |
+| La IA no pudo escribirla | El borrador dice por qué (sin fuentes que bajar, la IA no contestó, da rojo) o trae la lista de lo que no cuadra | Revisar y editar, pedir otra versión o escribirla a mano |
+| Se decidió en el celular y la web no cambió | — | Esperar la próxima vuelta o tocar "Actualizar la web ahora" (unos 8 minutos) |
+| La PC está apagada o se cerró la ventana | No se pueden cargar avisos, eventos a mano ni el buzón. La web, las redes, la vigilancia y el panel del celular siguen | Prender la PC y correr `ARRANCAR.bat` |
+| Se cambió código y no se reinició el panel de la PC | Se comporta "como antes" | Cerrar la ventana y `ARRANCAR.bat` |
+| El panel de la PC no sube a GitHub | En la ventana: "panel → GitHub: no se pudo subir (…)" | Revisar internet y `git status`; se reintenta con el próximo cambio. Un conflicto se resuelve a mano (`git pull --rebase`; en `web/data/`, `git checkout --theirs`) |
+| Se editó `decisiones.json` a mano con el panel de la PC prendido | El cambio desaparece | Usar el panel del celular, `retiradas.json` o `correcciones.json` |
+| Sin clave de redacción en el `.env` de la PC, o sin cupo | "Reescribir con IA" cae al armado mecánico y lo dice | Revisar el `.env` (lo pega una persona), esperar o escribir a mano |
+| La sesión venció, o cinco claves mal | El tablero vuelve al login, o "Demasiados intentos. Probá de nuevo en N minutos." | Entrar de nuevo, o esperar |
+| Se rompió el disco de la PC | Se pierde el historial editorial y el buzón, salvo lo respaldado afuera | Por eso conviene `RESPALDO_CARPETA` |
 
-Lo que vigilan las pruebas: `pruebas/panel.test.mjs`,
-`pruebas/panel-seguridad.test.mjs`, `pruebas/acceso.test.mjs`,
-`pruebas/respaldo.test.mjs`, `pruebas/horarios.test.mjs`,
-`pruebas/agenda-panel.test.mjs`, `pruebas/buzon.test.mjs` y parte de
-`pruebas/editor.test.mjs` (ver `docs/10-REGLAS-Y-PRUEBAS.md`).
-
----
-
-## Lo que sigue abierto
-
-En `PENDIENTES.md`: los horarios del Calendario, que se exportan pero GitHub
-no lee; el tamaño de `decisiones.json` (2,5 MB al 28/09, 1.540 decisiones,
-1.390 escritas por la IA desde el panel: la poda a 60 días no alcanza porque
-cada decisión de la IA lleva el cuerpo y las partes internas); que el panel
-escucha en todas las conexiones; que una decisión del panel puede no llegar a
-la web si la nota tiene otro identificador en la nube (sale de leer el código,
-no está medido); y el comentario viejo de la pestaña "Para redes" (dice que es
-"el camino real de todos los días": Meta ya publica sola).
+Lo vigilan las pruebas `celular.test.mjs`, `celular-app.test.mjs`,
+`panel.test.mjs`, `panel-seguridad.test.mjs`, `acceso.test.mjs`,
+`respaldo.test.mjs`, `horarios.test.mjs`, `agenda-panel.test.mjs`,
+`buzon.test.mjs` y parte de `editor.test.mjs` y `limpieza-29-09.test.mjs`
+(`docs/10-REGLAS-Y-PRUEBAS.md`).

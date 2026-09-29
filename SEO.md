@@ -1,68 +1,63 @@
 # SEO: cómo se posiciona la web
 
-*Actualizado el 26/09/2026.* Qué está hecho, cómo se audita y qué falta. La
-lista completa de pendientes está en `PENDIENTES.md` ("Para Claude", Baja, "SEO"); acá se explica
-el estado.
+*Actualizado el 29/09/2026.* Qué está hecho, cómo se audita y qué falta. Lo que
+falta, con quién y qué urgencia, vive en `PENDIENTES.md`; acá se explica el estado.
 
-## Qué está hecho
+## Lo hecho
 
 | Tema | Cómo está | Dónde |
 |---|---|---|
-| **Direcciones con el titular adentro** | `/nota/titulo-de-la-nota-id`. Las direcciones viejas (`/nota/id`) redirigen con 301. **Desde el 25/09 la dirección queda fija** desde la primera publicación, aunque la IA cambie el titular, y la página dura 180 días aunque la nota salga de la portada (`web/data/archivo.json`). La 404 rescata direcciones viejas por el identificador (`/nota/indice.json`) | `web/lib/ruta.js`, `web/lib/archivo.js`, `web/scripts/generar-redirects.mjs`, `pruebas/archivo.test.mjs` |
-| **Redirecciones** | Se escriben en cada compilación en `web/public/_redirects` (Cloudflare), también para las notas archivadas. `www` redirige con 301 al dominio sin `www` (regla de Cloudflare) | `pruebas/redirects.test.mjs`; el vigilante avisa si `www` deja de redirigir |
-| **Sitemaps** | `sitemap.xml` (todo el sitio, con "Quiénes somos" y "Contacto", y desde el 26/09 también las notas archivadas con cuerpo, hasta 180 días) y `sitemap-news.xml` (formato Google News, últimas 48 horas; desde el 25/09 deja afuera las notas sin fecha real, en vez de ponerles una de relleno). Los dos enviados a Search Console el 24/09 | `web/app/sitemap.js`, `web/app/sitemap-news.xml/` |
-| **`robots.txt`** | En el dominio propio permite todo menos `/feed.xml` y apunta a los dos sitemaps. **Fuera del dominio propio (vistas previas) prohíbe indexar**, para no duplicar las notas | `web/app/robots.js`, `web/lib/sitio.js` |
-| **Enlace canónico** | Siempre al dominio sin `www` y con `https`. **Cada página declara el suyo** y sólo la portada es `/`: hasta el 25/09 Farmacias, Agenda, Útil y Privacidad decían ser la portada y Google podía no mostrarlas nunca | `web/lib/sitio.js`, `web/components/metadatos.js`, `pruebas/seo.test.mjs`, `pruebas/seo-paginas.test.mjs` |
-| **Datos estructurados (JSON-LD)** | `NewsArticle` en cada nota, `NewsMediaOrganization` (con logo, desde el 25/09) y `WebSite` en el sitio, `BreadcrumbList` en las migas. El autor dice lo mismo que la firma de la nota | `web/components/ficha.js`, `pruebas/seo-paginas.test.mjs` |
-| **Título, descripción y `h1` propios** | Portada, cada sección, cada tema y cada nota; se recortan al largo que muestra Google | `pruebas/seo-paginas.test.mjs` |
-| **Imagen para compartir** | Una tarjeta propia por nota de 1200 × 630 (`opengraph-image`) y otra de 1080 × 1350 para el posteo de Instagram (`instagram.png`). Desde el 28/09 las dos llevan la foto de la nota del banco propio si hay (sin marca de agua ni crédito adentro: el crédito va en el epígrafe de la página y en el texto del posteo); si no, la banda de color o la placa | `web/lib/tarjeta.js`; medidas en `FORMATOS.md` |
-| **Íconos y manifiesto** | `favicon.ico` (16/32/48), `icon-192`, `icon-512`, `apple-touch-icon` (180) y `manifest.webmanifest` | `web/public/`, `web/scripts/hacer-iconos.mjs`, `pruebas/seo-paginas.test.mjs` |
-| **`feed.xml`** (RSS) | Para programas, no para el índice de búsqueda | `web/app/feed.xml` |
-| **`llms.txt`** | Descripción del sitio para buscadores con IA | `web/app/llms.txt` |
-| **Política de privacidad** | Página pública | `web/app/politica-de-privacidad`, `POLITICA-PRIVACIDAD.md` |
-| **Páginas de confianza** | "Quiénes somos" y "Contacto" (25/09), enlazadas desde el pie y en el sitemap. El pie ya no promete "revisión humana": dice que los resúmenes los escribe una IA, se verifican solos contra la fuente y lo sensible lo revisa una persona | `web/app/quienes-somos`, `web/app/contacto`, `pruebas/seo-paginas.test.mjs` |
-| **Dólar** (`/dolar`, 25/09) | Página de servicio como Farmacias: título "Dólar hoy en Balcarce: oficial, blue y MEP", canónico propio y en el sitemap (`hourly`). El HTML estático trae la foto guardada al compilar, con su hora; la cotización se actualiza en el navegador y la página nunca dice "en vivo" | `web/app/dolar/page.js`, `pruebas/dolar.test.mjs` |
-| **Encabezados** (`_headers`) | La imagen para compartir sale como `image/png` (antes `application/octet-stream`: Facebook y WhatsApp podían no mostrarla); HSTS, `nosniff`, `frame-ancestors` y otros de seguridad; caché de un año para `/_next/static` (25/09) | `web/public/_headers`, `pruebas/seo-paginas.test.mjs` |
-| **Idioma y accesibilidad básica** | `lang="es-AR"`; las etiquetas de sección con contraste de al menos 4,5:1; el buscador tiene nombre para lectores de pantalla (25/09) | `pruebas/seo-paginas.test.mjs` |
-| **Search Console** | Propiedad de dominio verificada con un registro TXT en Cloudflare (24/09) | `radarbalcarce@gmail.com` |
-| **Analítica** | Cloudflare Web Analytics (gratis, sin cookies). Vercel Analytics se sacó: en Cloudflare pedía un archivo que no existe | `pruebas/seo-paginas.test.mjs` |
-| **Velocidad** | La portada es HTML estático, sin banners de terceros | ver `docs/historico/INVESTIGACION-COMPETENCIA.md` |
+| **Direcciones fijas** | `/nota/titulo-de-la-nota-id`, fija desde la primera vez que sale aunque cambie el titular; la página dura 180 días (`web/data/archivo.json`). La 404 rescata direcciones viejas por el identificador (`/nota/indice.json`) | `web/lib/ruta.js`, `web/lib/archivo.js`, `pruebas/archivo.test.mjs` |
+| **Redirecciones 301** | Se escriben en cada compilación en `web/public/_redirects`: las direcciones viejas de las notas (`/nota/id`) y de las secciones y, desde el 29/09, **las notas repetidas**: la misma noticia que volvió a entrar con otro enlace se une sola y la que se retira redirige a la que queda (`web/lib/repetidas.js`, `web/data/fusionadas.json`). `www` va al dominio sin `www` (regla de Cloudflare; el vigilante avisa si deja de andar) | `web/scripts/generar-redirects.mjs`, `pruebas/redirects.test.mjs` |
+| **Sitemaps** | `sitemap.xml`: la portada, las secciones, los servicios, las páginas de confianza, las notas, las archivadas con cuerpo (180 días), los eventos que vienen y los temas. `sitemap-news.xml`: formato Google News, últimas 48 horas, sin las notas sin fecha real. Los dos, enviados a Search Console el 24/09 | `web/app/sitemap.js`, `web/app/sitemap-news.xml/` |
+| **`robots.txt`** | En el dominio propio permite todo menos `/feed.xml` y **`/panel/`** (el panel del celular, 29/09, que además manda `X-Robots-Tag: noindex`). Fuera del dominio propio (vistas previas) prohíbe indexar, para no duplicar las notas | `web/app/robots.js`, `web/lib/sitio.js` |
+| **Canónico** | Siempre `https` y sin `www`; cada página declara el suyo y sólo la portada es `/` | `web/lib/sitio.js`, `web/components/metadatos.js`, `pruebas/seo.test.mjs` |
+| **Título, descripción y `h1`** | Propios en la portada, cada sección, cada tema y cada nota; el título de una nota se corta en 60 caracteres y la descripción en 155 (`recortarEn`, `web/lib/texto.js`) | `pruebas/seo-paginas.test.mjs` |
+| **Datos estructurados** | `NewsArticle` en cada nota (el autor dice lo mismo que la firma), `NewsMediaOrganization` con logo, `WebSite` y `BreadcrumbList` | `web/components/ficha.js` |
+| **Imagen para compartir** | Una tarjeta de 1200 × 630 por nota (`opengraph-image`) y otra de 1080 × 1350 para Instagram, con la foto del banco si hay (sin marca de agua ni crédito adentro) o la banda de color; servidas como `image/png` | `web/lib/tarjeta.js`; medidas en `FORMATOS.md` |
+| **Íconos y manifiesto** | `favicon.ico`, `icon-192`, `icon-512`, `apple-touch-icon` y `manifest.webmanifest` | `web/public/`, `web/scripts/hacer-iconos.mjs` |
+| **Páginas de servicio y de confianza** | `/farmacias`, `/clima`, `/dolar` (nunca dice "en vivo"), `/agenda`, `/util`; "Quiénes somos", "Contacto" y la política de privacidad, enlazadas desde el pie | `web/app/` |
+| **Notas con cuerpo** | Una nota automática sin cuerpo de 70 palabras no se publica, y al sitemap van sólo las archivadas con cuerpo. Las viejas con "EN VIVO" o "minuto a minuto" en el título se retiran solas (`diceEnVivo`) | `web/lib/cuerpo.js`; regla 23 de `docs/10-REGLAS-Y-PRUEBAS.md` |
+| **Encabezados** (`_headers`) | HSTS, `nosniff`, `frame-ancestors`; caché de un año para `/_next/static` y de una semana para las fotos; el panel del celular, con su propia política de seguridad (sólo puede hablar con GitHub) | `web/public/_headers`, `pruebas/seo-paginas.test.mjs` |
+| **Idioma y accesibilidad básica** | `lang="es-AR"`, etiquetas de sección con contraste de al menos 4,5:1, el buscador con nombre para lectores de pantalla | `pruebas/seo-paginas.test.mjs` |
+| **Feed y `llms.txt`** | `feed.xml` (RSS, para programas) y una descripción del sitio para buscadores con IA | `web/app/feed.xml/`, `web/app/llms.txt/` |
+| **Search Console y analítica** | Dominio verificado con un registro TXT en Cloudflare (24/09). Cloudflare Web Analytics, gratis y sin cookies; su token (`CLOUDFLARE_ANALYTICS_TOKEN`) trae las visitas al resumen de WhatsApp | `radarbalcarce@gmail.com` |
+| **Velocidad** | HTML estático, sin banners de terceros | — |
 
 ## Cómo se audita
 
-- **En cada compilación**: `web/scripts/revisar-seo.mjs` (título, descripción,
-  canónico, `h1` de las páginas generadas).
-- **En vivo, a demanda**: `node web/scripts/auditar-seo-vivo.mjs [url]`
-  revisa las páginas publicadas (título, descripción, `h1`, canónico, ícono,
-  imagen para compartir).
-- **En vivo, cada lunes**: `redes/auditar.mjs` (workflow `auditoria.yml`)
-  corre ese auditor y además mide las imágenes publicadas. Si algo falla, avisa
-  por WhatsApp. Ver `FORMATOS.md` y `docs/08-INFRAESTRUCTURA.md`.
+- **En cada compilación:** `web/scripts/revisar-seo.mjs` (título, descripción,
+  canónico y `h1` de las páginas generadas).
+- **A demanda:** `node web/scripts/auditar-seo-vivo.mjs [url]` revisa lo publicado
+  (título, descripción, `h1`, canónico, ícono, imagen para compartir).
+- **Cada lunes:** `redes/auditar.mjs` (workflow `auditoria.yml`) corre ese auditor,
+  mide las imágenes publicadas y avisa por WhatsApp si algo falla (`FORMATOS.md`).
 
 ## Lo que falta
 
-| Qué | Por qué importa | Nota |
-|---|---|---|
-| **Bing Webmaster Tools** | Bing también alimenta a otros buscadores y a asistentes | Se puede importar desde Search Console, pero pide un permiso de Google: lo hace una persona |
-| **Mirar qué indexó Google** | El sitemap se envió el 24/09 | Revisar en Search Console en unos días |
-| **Google Publisher Center** (Google Noticias y Discover) | El sitemap de noticias ya está; falta el alta manual | Discover pide imágenes de al menos 1200 px |
-| **Google Business Profile** | Aparecer en el mapa y en "cerca de mí" | Si corresponde |
-| **Google AdSense** | Monetizar con avisos de Google | Pendiente (`PENDIENTES.md`). Falta: que una persona abra la cuenta (datos fiscales), `ads.txt` con el ID de editor que da AdSense (sin el ID no se puede armar) y sostener las notas con cuerpo. La aprobación tarda de días a semanas. Ver `PUBLICIDAD.md` |
-| **Notas con cuerpo** | Google y AdSense premian el contenido propio | Desde el 25/09 una nota automática sin cuerpo no se publica (`docs/10-REGLAS-Y-PRUEBAS.md`, regla 23): toda nota visible tiene cuerpo (el 26/09 a las 00:33, las 94 de la portada; 21 esperaban cuerpo). El 25/09 a la mañana sólo el 19 % lo tenía. Mirar que siga así |
-| **Política editorial** como página | Lo que Google y las IA miran para decidir si un medio es confiable | "Quiénes somos" y "Contacto" ya están. Falta la política editorial: sacar de `CRITERIO-EDITORIAL.md` lo que se puede publicar. Y confirmar el texto de "Quiénes somos" |
-| **CSP completa** | Seguridad | Hoy `_headers` sólo trae `frame-ancestors` |
-| **Rastreadores de IA** (GPTBot, ClaudeBot, PerplexityBot, Google-Extended) | Permitirlos da visibilidad y citas; bloquearlos protege el contenido | Decisión editorial, no técnica. Hoy `robots.txt` no distingue |
-| **PageSpeed / Core Web Vitals** | Posicionamiento y experiencia en celulares con mala señal | Medir y ajustar |
-| **Depurador de Facebook y Twitter Cards** | Confirmar cómo se ve cada nota compartida | Revisar en todas las páginas |
-| **Parámetros UTM** en los enlaces de redes | Saber cuánta gente llega desde cada red | Con la analítica sin cookies |
-| **Enlaces internos entre notas** | Ahora las etiquetas de temas están apagadas (`MOSTRAR_TEMAS`) | Pensar una alternativa |
-| **Resumen claro al abrir cada nota** | Es lo que una IA cita | Ya lo hace el copete; falta revisar fecha y autor visibles |
-| **Permisos `read_insights` e `instagram_manage_insights`** | Leer qué rinde cada red | Con Meta: regenerar `META_TOKEN` (`docs/08-INFRAESTRUCTURA.md`) |
-| **Token de Cloudflare Analytics** | Que el resumen de WhatsApp traiga las visitas | Hecho: el secreto `CLOUDFLARE_ANALYTICS_TOKEN` está cargado (`docs/08-INFRAESTRUCTURA.md`) |
+Con quién y qué urgencia, en `PENDIENTES.md`. En corto:
+
+- **Del sitio (Claude):** las páginas archivadas sin cuerpo de verdad, que Google
+  puede encontrar (A7); las tarjetas para compartir pesadas (A8); el feed y el
+  sitemap (A11: `robots.txt` bloquea `/feed.xml` pero la portada lo anuncia); las
+  cosas chicas (A12: `ads.txt`, una política de seguridad completa para todo el
+  sitio, "saltar al contenido"); las páginas `/tema/`, que están en el sitemap sin
+  que nada las enlace (sacarlas o prenderlas).
+- **De una persona:** el alta en Google Publisher Center (Google Noticias y
+  Discover, que pide imágenes de 1200 px o más), Bing Webmaster Tools (se importa
+  de Search Console con un permiso de Google), mirar qué indexó Google, Google
+  Business Profile si corresponde y AdSense (`PUBLICIDAD.md`).
+- **A decidir:** los rastreadores de IA en `robots.txt` (GPTBot, ClaudeBot,
+  PerplexityBot, Google-Extended: permitirlos da citas, bloquearlos protege el
+  contenido) y la política editorial como página pública (`IDEAS.md`).
+- **Para medir:** PageSpeed y Core Web Vitals, cómo se ve cada nota compartida
+  (depurador de Facebook, Twitter Cards) y parámetros UTM en los enlaces de redes.
 
 ## Reglas a cuidar
 
-- No cambiar direcciones de notas sin redirección 301.
+- No cambiar la dirección de una nota sin redirección 301.
+- Una nota repetida no se borra: se une a la que queda y redirige
+  (`web/data/fusionadas.json`).
 - No indexar la web desde una dirección que no sea `radarbalcarce.com`
   (`web/lib/sitio.js` lo evita solo).
 - El canónico apunta siempre al dominio sin `www`.

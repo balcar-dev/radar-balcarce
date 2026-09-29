@@ -1,38 +1,37 @@
 # Perfiles de Instagram y Facebook
 
-*Actualizado el 28/09/2026: bios nuevas, con el nombre del medio adelante,
-para que peguen con el rediseño (dirección B).* **Aplicados en parte el
-28/09**: lo que falta cargar a mano está en `PENDIENTES.md` ("Para Hernán y
-Andrés", Biografías) y los pasos en cada app, en `PARA-CARGAR-A-MANO.md`.
-**Este documento es el único lugar del texto de los perfiles**: se copia de
-acá. Nada de acá inventa datos: sólo dice lo que el medio hace hoy.
+*Actualizado el 29/09/2026.* **El único lugar del texto de los perfiles**: se
+copia de acá, tal cual (una prueba cuida los largos: `pruebas/perfiles.test.mjs`).
+Nada de acá inventa datos: sólo dice lo que el medio hace hoy. Los colores y las
+letras están en `MEDIA-KIT.md`; las medidas, en `FORMATOS.md`; lo que falta
+cargar, en `PENDIENTES.md`.
 
 ## Qué tiene que decir un perfil
 
 1. **Qué es**: un medio digital de Balcarce.
 2. **Qué se encuentra**: noticias, clima y agenda. **No se nombran las
    farmacias** (decisión del 26/09: es una pieza diaria, no la identidad).
-3. **Que hay IA, sin esconderla y sin hacerla protagonista**: una línea, en la
-   descripción larga de Facebook y en `/quienes-somos`. La bio de Instagram
-   tiene poco lugar y va sin ella. Es la misma transparencia que pide
-   `docs/10-REGLAS-Y-PRUEBAS.md` (regla 7: cada nota dice quién la escribió).
-4. **Adónde ir**: `radarbalcarce.com`, **en los dos perfiles**, siempre
-   escrito así (nunca `.com.ar`).
-5. **Tono**: el del medio (`CRITERIO-REDES.md`, sección 2, y `CRITERIO-EDITORIAL.md`,
-   sección 4). Sin "IMPACTANTE", sin promesas.
+3. **Que hay IA, sin esconderla y sin hacerla protagonista**: una línea en la
+   descripción larga de Facebook y en `/quienes-somos`. La bio de Instagram tiene
+   poco lugar y va sin ella. Es la transparencia de la regla 7
+   (`docs/10-REGLAS-Y-PRUEBAS.md`: cada nota dice quién la escribió).
+4. **Adónde ir**: `radarbalcarce.com`, **en los dos perfiles**, siempre escrito
+   así (nunca `.com.ar`).
+5. **Tono**: el del medio (`CRITERIO-REDES.md` § 2 y `CRITERIO-EDITORIAL.md` § 4).
+   Sin "IMPACTANTE", sin promesas.
 
 ## Instagram (`@radarbalcarce`)
 
 | Campo | Texto o valor |
 |---|---|
 | **Nombre** (el que se busca) | `Radar Balcarce · Noticias` |
-| **Usuario** | `@radarbalcarce` (ya está) |
+| **Usuario** | `@radarbalcarce` (no se toca) |
 | **Bio** (máx. 150 caracteres) | ver abajo |
 | **Enlace** | `https://radarbalcarce.com` |
-| **Categoría** | "Sitio web de noticias y medios de comunicación" (hoy está en "Blog personal"; no se ve en el perfil pero mejora cómo Instagram lo entiende). Se cambia desde el celular: Editar perfil → Categoría |
-| **Botón de contacto** | WhatsApp o correo del medio (el que se decida publicar) |
-| **Historias destacadas fijas** | Farmacia · Teléfonos · Agenda · Clima (portada cuadrada que se ve redonda: un ícono simple por tema) |
-| **Foto de perfil** | El avatar del medio (`reels/avatar.mjs`): fondo azul oscuro con "RADAR" en blanco y "BALCARCE" en rojo, centrado; se muestra redonda (ver medidas). 28/09: se probó en rojo y Hernán prefirió éste |
+| **Categoría** | "Sitio web de noticias y medios de comunicación" (hoy figura "Blog personal": no se ve en el perfil, pero ayuda a que Instagram entienda qué es) |
+| **Botón de contacto** | El WhatsApp del medio, **2266 51-1612** (el del pie de la web, confirmado el 29/09) |
+| **Historias destacadas fijas** | Farmacia · Teléfonos · Agenda · Clima, cada una con una portada cuadrada que se vea bien recortada en círculo (un ícono simple por tema, sin texto) |
+| **Foto de perfil** | El avatar azul (`reels/avatar.mjs`; cómo es, en `MEDIA-KIT.md`, "Los colores"). Se muestra redondo |
 
 **Bio de Instagram (máx. 150 caracteres)**
 
@@ -43,7 +42,7 @@ Todo en radarbalcarce.com
 ```
 
 Tres renglones, sin emojis ni promesas. Si se cambia una palabra, volver a
-contar: el límite es 150 (una prueba lo cuida).
+contar: el límite es 150.
 
 ## Facebook (página "Radar Balcarce")
 
@@ -51,11 +50,11 @@ contar: el límite es 150 (una prueba lo cuida).
 |---|---|
 | **Nombre** | `Radar Balcarce` |
 | **Nombre de usuario de la página** | El más parecido a `radarbalcarce` que Facebook permita |
-| **Categoría** | La más cercana a "Sitio web de noticias y medios de comunicación" que ofrezca Facebook |
+| **Categoría** | La más cercana a "Sitio web de noticias y medios de comunicación" |
 | **Información breve** | ver abajo |
 | **Descripción larga** | ver abajo |
 | **Sitio web** | `https://radarbalcarce.com` |
-| **Botón de llamado a la acción** | "Más información" (o "Enviar mensaje") apuntando al sitio |
+| **Botón de la página** | "Enviar mensaje de WhatsApp" al 2266 51-1612, o "Más información" hacia el sitio |
 | **Ubicación** | Balcarce, Buenos Aires |
 
 **Información breve de Facebook (máx. 101 caracteres)**
@@ -78,56 +77,50 @@ escribinos y lo corregimos.
 Todas las notas, la agenda y el clima, en radarbalcarce.com
 ```
 
-## Imágenes y colores
+La página nueva de Facebook tiene un solo campo de presentación, que junta la
+breve y la larga (el 28/09 quedó la que estaba).
 
-Las medidas de cada imagen (foto de perfil, portada, historias destacadas)
-están en [`FORMATOS.md`](FORMATOS.md). La foto de perfil se arma con
-`node reels/avatar.mjs` y la portada de la página de Facebook con
-`node reels/portada.mjs` (genera `reels/salida/portada-facebook.png`, 1640 × 924,
-16:9; ver "La portada de Facebook" en `FORMATOS.md`), con las mismas tipografías
-que las placas y la web.
+## Las imágenes
 
-**Cómo se sube la portada:** sólo a mano, desde la app de Facebook o desde el
-navegador (página → Editar portada → Subir foto), con ese archivo. Meta no deja
-hacerlo por API con el token actual. Después mirarla en el celular y en la
-compu: la marca tiene que verse entera.
+- **Foto de perfil**, la misma en las dos redes: `reels/salida/avatar.png`. Se
+  arma con `node reels/avatar.mjs`.
+- **Portada de Facebook**: `reels/salida/portada-facebook.png` (1640 × 924, 16:9;
+  por qué esa medida, en `FORMATOS.md`, "La portada de Facebook"). Se arma con
+  `node reels/portada.mjs`. Instagram no tiene portada.
+- Las dos son azules y usan las letras de la marca (`MEDIA-KIT.md`). El perfil no
+  cambia de color aunque los podcasts cambien cada día: así la grilla muestra un
+  perfil firme y piezas que cambian.
 
-**Colores** (los de la web, `web/app/globals.css`):
+## Cómo cargarlo
 
-- **Rojo de la marca** `#C7381C` (y `#9C2B15` como oscuro): detalles (en la
-  foto de perfil, "BALCARCE" y los anillos). Nunca en avisos publicitarios
-  (`PUBLICIDAD.md`).
-- **La foto de perfil y la portada de Facebook son azules** (`reels/avatar.mjs`,
-  `reels/portada.mjs`): el detalle de colores, en `MEDIA-KIT.md`, "Los
-  colores".
-- **Tinta** `#14161A` y **crema** `#F4F1EA`: fondos y textos.
-- Los **podcasts** cambian de color cada día de la semana (`colorDelDia` en
-  `redes/piezas.mjs`): domingo magenta, lunes rojo de la marca, martes verde,
-  miércoles azul, jueves ámbar, viernes violeta, sábado verde azulado. El
-  perfil no cambia (siempre el avatar azul): así la grilla muestra un perfil
-  firme y piezas que cambian.
-- **Tipografía** (desde el 27/09): **Source Serif 4** en los títulos e **Inter**
-  en todo lo demás, igual que la web. Las placas, el avatar y la portada usan
-  los archivos de `reels/marca/fuentes/` (Source Serif 4 en su corte de 60
-  puntos). Hasta el 27/09 eran Fraunces e IBM Plex Sans.
-- **Cada sección, su color**, el mismo de la web (`--s-*` en
-  `web/app/globals.css`; la tabla está en `MEDIA-KIT.md`, "Los colores").
+Se carga a mano, en cada app (la portada, por ejemplo, Meta no deja subirla por
+API con el token actual). Los textos se copian de los bloques de arriba, tal
+cual: no de otro lado.
+
+| Qué | Dónde se toca | Estado |
+|---|---|---|
+| Foto de perfil | Instagram: Editar perfil → tocar la foto → Cambiar foto de perfil. Facebook: la página → Editar foto de perfil | Subida el 28/09 |
+| Portada de Facebook | La página → Editar portada → Subir foto. Después mirarla en el celular **y** en la computadora: el avatar redondo tapa distinto en cada una | Subida el 28/09 (la azul) |
+| Bio de Instagram | Editar perfil → Biografía → borrar todo y pegar | Cargada el 28/09 |
+| Presentación de Facebook | Configuración de la página → Información de la página | Quedó la que estaba |
+| Nombre de Instagram | Editar perfil (el usuario no se toca) | Cargado el 28/09 |
+| Categoría de Instagram | Editar perfil → Categoría | **Falta** |
+| Enlace de Instagram | Editar perfil → Enlaces; sólo desde el celular (la web no deja). Nunca `.com.ar` | **Falta** |
+| Categoría, sitio web y ubicación de Facebook | Configuración de la página → Información de la página | Hechos |
+| Botón de contacto | Instagram: Editar perfil → Opciones de contacto → WhatsApp 2266 51-1612. Facebook: el botón de la página | **Falta** |
+| Historias destacadas | Sólo Instagram, desde el perfil: las cuatro de la tabla de arriba | **Falta** |
+
+Nada de esto pide una clave ni un token: son textos e imágenes. Después de
+cargar algo, avisarle a Claude con una captura o el enlace público del perfil,
+para revisarlo y sacarlo de `PENDIENTES.md`.
 
 ## Cuándo actualizar
 
-- **Al terminar de aplicarlas** (lo que falta, en `PENDIENTES.md`): Facebook
-  se puede desde Meta Business Suite; Instagram, sólo desde el celular.
-- **Si cambia lo que el medio hace**: por ejemplo, si se suma otra cosa fija
-  (alertas de clima, la guía comercial) o si deja de haber podcasts.
-- **Si cambia la política de IA** o cómo se firma cada nota.
-- **Si se decide un contacto público** (WhatsApp o correo): cargarlo en el
-  botón.
+- **Si cambia lo que el medio hace** (otra cosa fija, como la guía comercial, o
+  si dejan de salir los podcasts), la política de IA o cómo se firma cada nota.
 - **Cada 90 días**, con la revisión de medidas de `FORMATOS.md`: mirar si
-  Instagram o Facebook cambiaron el tamaño de la foto de perfil o de la
-  portada.
-- **Si se prende la publicidad** (`PUBLICIDAD.md`): revisar que la bio siga
-  diciendo qué es el medio.
+  Instagram o Facebook cambiaron la foto de perfil o la portada.
+- **Si se prende la publicidad** (`PUBLICIDAD.md`): que la bio siga diciendo qué
+  es el medio.
 
-## Relacionado
-
-`docs/07-REDES.md`, `FORMATOS.md`, `docs/10-REGLAS-Y-PRUEBAS.md`, `PENDIENTES.md`.
+Relacionado: `docs/07-REDES.md`, `MEDIA-KIT.md`, `FORMATOS.md`, `PENDIENTES.md`.

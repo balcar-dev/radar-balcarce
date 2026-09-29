@@ -1,305 +1,236 @@
-# Investigación legal — Radar Balcarce
+# Investigación legal: Radar Balcarce
 
-Fecha: 18 de septiembre de 2026. *Estado de lo aplicado revisado el 25/09/2026
-(ver "Qué cambiaría en el proyecto", al final).*
-
-Este archivo junta lo que se investigó sobre el marco legal argentino que
-le importa a un medio digital chico como este. Se buscó en fuentes
-oficiales (BORA, InfoLeg, ENACOM, AAIP, CSJN) y doctrina/notas jurídicas
-reconocidas. Donde la búsqueda no dio algo confiable, se aclara en vez de
-inventar un artículo o un número de ley. Nada de esto reemplaza una
-consulta con un abogado antes de publicar algo con riesgo real (una nota
-que acusa a alguien de un delito, un reclamo grande contra una empresa o
-un funcionario, etc.).
+*Investigado el 18/09/2026; actualizado el 29/09/2026.* Lo que se averiguó del
+marco legal argentino que le importa a un medio digital chico. Se buscó en fuentes
+oficiales (BORA, InfoLeg, ENACOM, AAIP, CSJN) y en doctrina y notas jurídicas
+reconocidas; donde la búsqueda no dio algo confiable, se aclara en vez de inventar
+un artículo o un número de ley. **Nada de esto reemplaza a un abogado** antes de
+publicar algo con riesgo real (una nota que acusa a alguien de un delito, un
+reclamo grande contra una empresa o un funcionario). Cómo se aplica hoy, al final.
 
 ---
 
 ## 1. Derecho de rectificación o respuesta
 
-Existe, tiene rango constitucional (art. 14 del Pacto de San José de
-Costa Rica, ley 23.054, incorporado a la Constitución en la reforma de
-1994) y la Corte Suprema lo hizo aplicable en Argentina en el fallo
-**"Ekmekdjian c/ Sofovich"** (1992), aunque el caso haya sido sobre un
-programa de TV. El problema es que **nunca se reglamentó por ley
-nacional**: no hay una ley que diga "el medio digital tiene tantos días
-para publicar la respuesta, con tal formato". Eso lo confirma tanto
-doctrina académica como notas especializadas — se buscaron proyectos de
-ley al respecto y ninguno prosperó.
+Tiene rango constitucional (art. 14 del Pacto de San José de Costa Rica, ley
+23.054, incorporado a la Constitución en 1994) y la Corte Suprema lo hizo
+aplicable en el fallo **"Ekmekdjian c/ Sofovich"** (1992). Pero **nunca se
+reglamentó por ley nacional**: no hay una norma que diga cuántos días tiene un
+medio digital para publicar la respuesta ni con qué formato (ningún proyecto de
+ley prosperó). Si alguien pide "mi derecho a réplica", el reclamo tiene base
+constitucional y puede terminar en un amparo si se lo ignora.
 
-En la práctica esto significa: si alguien se siente afectado por una nota
-y pide "quiero mi derecho a réplica", el medio no tiene una ley específica
-de medios digitales que le diga exactamente cómo responder, pero el
-reclamo tiene base constitucional y puede terminar en un amparo judicial
-si se lo ignora. La regla interna del proyecto — nunca publicar un
-reclamo sin la respuesta de la otra parte — va **más allá** de lo que
-exige la ley (que es reactiva: alguien pide la rectificación después de
-publicado) y por eso es más segura: evita directamente el conflicto en
-vez de tener que resolverlo después.
+La regla del buzón (nunca publicar un reclamo sin la respuesta de la otra parte)
+va **más allá** de lo que exige la ley, que es reactiva: evita el conflicto en vez
+de resolverlo después.
 
-**Qué hacer:** ante un pedido formal de rectificación, no ignorarlo — corresponde ofrecer publicar la respuesta o corrección en un plazo razonable, aunque no haya un plazo legal exacto fijado. **Zona gris:** si algún día llega un pedido formal serio (nota de abogado, carta documento) pidiendo rectificación, conviene consultar antes de responder — no hay un procedimiento estándar a seguir "a libro".
+**Qué hacer:** ante un pedido formal de rectificación, no ignorarlo: ofrecer
+publicar la respuesta o la corrección en un plazo razonable. **Zona gris:** si
+llega un pedido formal serio (nota de un abogado, carta documento), consultar
+antes de responder: no hay un procedimiento "a libro".
 
 Fuentes:
 - [Artículo 14. Derecho de rectificación o respuesta (UBA)](https://www.derecho.uba.ar/publicaciones/libros/pdf/la-cadh-y-su-proyeccion-en-el-derecho-argentino/014-scioscioli-rectificacion-o-respuesta-la-cadh-y-su-proyeccion-en-el-da.pdf)
 - [El derecho a réplica, rectificación o respuesta y su falta de reglamentación (UAI)](https://repositorio.uai.edu.ar/items/8f2993d4-828d-49f9-8299-222f8e0fc8d3)
-- [SAIJ — Derecho de réplica, Pacto de San José de Costa Rica](https://www.saij.gob.ar/derecho-replica-pacto-san-jose-costa-rica-interpretacion-tratados-internacionales-normas-operativas-sua0021744/123456789-0abc-defg4471-200asoiramus)
-- [Global Freedom of Expression — Ekmekdjian v. Sofovich (Columbia)](https://globalfreedomofexpression.columbia.edu/es/cases/ekmekdjian-v-sofovich/)
+- [SAIJ: Derecho de réplica, Pacto de San José de Costa Rica](https://www.saij.gob.ar/derecho-replica-pacto-san-jose-costa-rica-interpretacion-tratados-internacionales-normas-operativas-sua0021744/123456789-0abc-defg4471-200asoiramus)
+- [Global Freedom of Expression: Ekmekdjian v. Sofovich (Columbia)](https://globalfreedomofexpression.columbia.edu/es/cases/ekmekdjian-v-sofovich/)
 
 ---
 
-## 2. Calumnias e injurias (Código Penal, arts. 109-117 bis)
+## 2. Calumnias e injurias (Código Penal, arts. 109 a 117 bis)
 
-Desde la reforma de **2009 (ley 26.551)**, motivada por el fallo "Kimel
-c/ Argentina" de la Corte Interamericana, el Código Penal dice
-expresamente que **"en ningún caso configurarán delito de calumnia [o de
-injurias] las expresiones referidas a asuntos de interés público o las
-que no sean asertivas"** (arts. 109 y 110). Es decir: opinar o informar
-sobre algo de interés público, con cuidado en cómo se afirma, quedó fuera
-del delito penal. También bajaron las penas de cárcel a multas.
+Desde la **ley 26.551 (2009)**, motivada por el fallo "Kimel c/ Argentina" de la
+Corte Interamericana, el Código Penal dice que **"en ningún caso configurarán
+delito de calumnia [o de injurias] las expresiones referidas a asuntos de interés
+público o las que no sean asertivas"** (arts. 109 y 110), y las penas de cárcel
+pasaron a multas.
 
-El artículo clave para un medio que reproduce el reclamo o la denuncia de
-otro es el **113**: el que publica o reproduce injurias o calumnias de un
-tercero responde como autor **salvo que atribuya el contenido de forma
-"sustancialmente fiel" a la fuente**. Ahí conecta directo con la doctrina
-Campillay (punto siguiente). Además existe la **retractación** (art. 117):
-si alguien es acusado de injuria o calumnia y se retracta públicamente
-antes de contestar la demanda, queda exento de pena.
+Para un medio que reproduce el reclamo o la denuncia de otro, la clave es el
+**art. 113**: quien publica o reproduce injurias o calumnias de un tercero responde
+como autor, **salvo que atribuya el contenido de forma "sustancialmente fiel" a la
+fuente** (de ahí la doctrina Campillay, abajo). Además existe la **retractación**
+(art. 117): quien se retracta públicamente antes de contestar la demanda queda
+exento de pena.
 
-**Qué hacer:** cuando el buzón trae un reclamo que acusa a una persona identificable de algo grave, tratarlo como lo que es — una imputación que puede rozar calumnias/injurias si se publica como afirmación propia del medio sin atribuirla claramente a quien la hizo. **Zona gris:** una nota de "interés público" está más protegida, pero la frontera entre "interés público" y "chusmerío sobre una persona privada" no la define la ley con precisión — ahí conviene criterio editorial fuerte y, si hay dudas, consulta legal.
+**Qué hacer:** un reclamo que acusa a una persona identificable de algo grave es
+una imputación; publicado como afirmación propia del medio, sin atribuirlo a quien
+lo hizo, puede rozar calumnias o injurias. **Zona gris:** la frontera entre
+"interés público" y "chusmerío sobre una persona privada" no la define la ley con
+precisión: criterio editorial fuerte y, si hay dudas, consulta legal.
 
 Fuentes:
-- [CELE — Argentina Ley 26.551 Código Penal (calumnias e injurias)](https://observatoriolegislativocele.com/codigo-penal-26551/)
+- [CELE: Argentina, ley 26.551, Código Penal (calumnias e injurias)](https://observatoriolegislativocele.com/codigo-penal-26551/)
 - [Texto de la ley 26.551 (CELE, PDF oficial)](https://observatoriolegislativocele.com/wp-content/uploads/LEYES/Argentina/CODIGO-PENAL-26551.pdf)
 - [Arts. 109 a 117 bis CP comentados (ST Abogados)](https://stabogados.com.ar/penal/codigo-penal/parte-especial/arts-109-110-111-112-113-114-115-116-117-117bis)
-- [Calumnias e Injurias, a dos años de la reforma (CELE/Palermo, PDF)](https://www.palermo.edu/cele/pdf/Calumnias-e-Injurias.pdf)
+- [Calumnias e injurias, a dos años de la reforma (CELE/Palermo, PDF)](https://www.palermo.edu/cele/pdf/Calumnias-e-Injurias.pdf)
 
 ---
 
 ## 3. Doctrina Campillay y real malicia
 
-**Campillay c/ La Razón, Crónica y Diario Popular** (CSJN, 1986) es el
-fallo que fija cómo un medio puede reproducir información que podría ser
-difamatoria sin responder penalmente por ella. Según la doctrina, el
-medio queda exento de responsabilidad si hace **al menos una** de estas
-tres cosas: (1) atribuye directamente la información a la fuente
-pertinente (ej. "según fuentes policiales", "de acuerdo con la denuncia
-presentada por..."), (2) usa el **modo potencial/condicional** ("habría
-golpeado", no "golpeó"), o (3) mantiene reserva de la identidad del
-implicado. Es exactamente la lógica de atribución de fuente que ya se usa
-de forma intuitiva en buen periodismo.
+**"Campillay c/ La Razón, Crónica y Diario Popular"** (CSJN, 1986) fija cómo un
+medio puede reproducir información que podría ser difamatoria sin responder por
+ella. Queda exento si hace **al menos una** de tres cosas: (1) atribuye la
+información a la fuente pertinente ("según fuentes policiales", "de acuerdo con la
+denuncia presentada por…"), (2) usa el **modo condicional** ("habría golpeado", no
+"golpeó"), o (3) mantiene reservada la identidad del implicado.
 
-La **real malicia** es un estándar distinto y más exigente para el que
-demanda: aplica sobre todo cuando el medio hace una afirmación propia
-(no reproduce una fuente) sobre un funcionario público o figura pública,
-y exige probar que el medio supo que la información era falsa o actuó
-con "notoria despreocupación" por si lo era. Campillay protege al que
-reproduce con atribución de fuente; real malicia protege al que informa
-de buena fe sobre interés público aunque después algo resulte inexacto.
+La **real malicia** es otro estándar, más exigente para el que demanda: aplica
+cuando el medio hace una afirmación propia sobre un funcionario o una figura
+pública, y exige probar que el medio sabía que era falso o actuó con "notoria
+despreocupación". Campillay protege al que reproduce con atribución; la real
+malicia, al que informa de buena fe sobre algo de interés público aunque después
+resulte inexacto.
 
-**Qué hacer (esto ya es prácticamente una checklist de redacción):** en toda nota con acusaciones — policiales, reclamos del buzón, denuncias — atribuir la fuente explícitamente ("según la denuncia de...", "de acuerdo con la Policía...") y usar condicional mientras no haya condena o confirmación oficial. Esto baja mucho el riesgo legal y además es buena práctica periodística estándar.
+**Qué hacer (es una lista de redacción):** en toda nota con acusaciones
+(policiales, reclamos del buzón, denuncias), atribuir la fuente explícitamente y
+usar el condicional mientras no haya condena o confirmación oficial.
 
 Fuentes:
-- [CSJN — Libertad de expresión II: Doctrina "Campillay" (csjn.gov.ar)](https://www.csjn.gov.ar/novedades/detalle/8266)
+- [CSJN: Libertad de expresión II, doctrina "Campillay"](https://www.csjn.gov.ar/novedades/detalle/8266)
 - [Aniversario del fallo Campillay: los requisitos (Palabras del Derecho)](https://www.palabrasdelderecho.com.ar/articulo/6757/Aniversario-del-fallo-Campillay-los-requisitos-para-reproducir-una-noticia-y-eximirse-de-responsabilidad)
-- [Doctrina de la real malicia — fallo reciente comentado (Microjuris, dic. 2025)](https://aldiaargentina.microjuris.com/2025/12/19/fallos-doctrina-de-la-real-malicia-rechazo-de-la-demanda-resarcitoria-respecto-de-la-conductora-de-un-programa-de-television-que-brindo-informacion-sobre-la-desaparicion-de-una-menor-de-edad-aclara/)
+- [Doctrina de la real malicia, fallo comentado (Microjuris, dic. 2025)](https://aldiaargentina.microjuris.com/2025/12/19/fallos-doctrina-de-la-real-malicia-rechazo-de-la-demanda-resarcitoria-respecto-de-la-conductora-de-un-programa-de-television-que-brindo-informacion-sobre-la-desaparicion-de-una-menor-de-edad-aclara/)
 
 ---
 
-## 4. Registro en ENACOM (ex-AFSCA)
+## 4. Registro en ENACOM
 
-La ley 26.522 (Ley de Servicios de Comunicación Audiovisual) y el rol de
-ENACOM giran alrededor de servicios que usan **espectro radioeléctrico**
-(radio, TV abierta) o licencias de comunicación audiovisual en general
-(cable, etc.) — el artículo 32 de esa ley, por ejemplo, habla de
-licencias para servicios que usan espectro. La búsqueda no encontró
-ninguna norma de ENACOM que exija registro o licencia para un **portal de
-noticias puramente web + redes sociales**, sin señal de radio o TV
-propia. Esto es consistente con el objeto de la ley: regula
-radiodifusión, no páginas web ni cuentas de Instagram/Facebook.
+La ley 26.522 (Servicios de Comunicación Audiovisual) y ENACOM regulan los
+servicios que usan **espectro radioeléctrico** (radio, TV abierta) o licencias
+audiovisuales (cable, etc.). La búsqueda no encontró ninguna norma que exija
+registro o licencia para un **portal de noticias en la web y las redes**, sin
+señal de radio o TV propia. *Aclaración honesta:* ninguna fuente lo dice punto
+por punto; la conclusión sale del objeto de la ley. Para estar seguros del todo,
+una consulta a ENACOM.
 
-**Importante — esto es lo que hay que diferenciar:** el día que Radar
-Balcarce decida tener una **radio real** (con señal, streaming de audio
-en vivo como servicio, no solo un video subido), ahí sí entra en el
-terreno regulado por ENACOM y conviene averiguar específicamente qué tipo
-de autorización corresponde (la búsqueda no llegó a un trámite concreto
-paso a paso para radios online chicas — es zona gris que amerita consulta
-directa con ENACOM o un abogado especializado en el momento en que se
-evalúe en serio).
-
-**Qué hacer:** para el proyecto tal cual está hoy (web + redes, sin
-transmisión de audio/video en vivo como servicio) no hace falta trámite
-en ENACOM. **Zona gris / a futuro:** si se arma una radio real, consultar
-antes de lanzarla.
+**Qué hacer:** tal como está el proyecto (web y redes, sin transmisión en vivo
+como servicio) no hace falta trámite. **Zona gris:** el día que haya una **radio
+de verdad** (con señal o transmisión de audio en vivo como servicio; `IDEAS.md`,
+idea 40), averiguar qué autorización corresponde antes de lanzarla: la búsqueda no
+llegó a un trámite concreto para radios online chicas.
 
 Fuentes:
-- [ENACOM — Servicios de Comunicación Audiovisual, normativa](https://www.enacom.gob.ar/servicios-de-comunicacion-audiovisual_p125/normativas)
+- [ENACOM: Servicios de Comunicación Audiovisual, normativa](https://www.enacom.gob.ar/servicios-de-comunicacion-audiovisual_p125/normativas)
 - [Ley 26.522, texto completo (ENACOM, PDF oficial)](https://www.enacom.gob.ar/multimedia/normativas/2009/Ley%2026522.pdf)
-- [ENACOM — Preguntas Frecuentes, Servicios de comunicación audiovisual](https://enacom.gob.ar/servicios-comunicacion-audiovisual_pc39/preguntas)
-
-*Aclaración honesta: no se encontró una fuente que responda punto por
-punto "un portal web no necesita licencia de ENACOM" de forma explícita
-— la conclusión surge de que el objeto regulado por la ley y por ENACOM
-es la radiodifusión con espectro/licencia, y ninguna búsqueda mostró
-registro obligatorio para sitios web de noticias. Si se quiere estar
-100% seguro, conviene una consulta puntual a ENACOM.*
+- [ENACOM: preguntas frecuentes, servicios de comunicación audiovisual](https://enacom.gob.ar/servicios-comunicacion-audiovisual_pc39/preguntas)
 
 ---
 
 ## 5. Ley de Protección de Datos Personales (25.326) y el buzón
 
-La ley 25.326 (Ley de Hábeas Data) protege cualquier dato personal en una
-base de datos, pública o privada. El buzón del proyecto — nombre,
-teléfono, y el reclamo/dato que manda la persona — **es exactamente ese
-tipo de base de datos**. La ley exige cosas básicas para cualquiera que
-trate datos personales, con o sin registro: informar para qué se usan los
-datos, no usarlos para un fin distinto del declarado, guardarlos con
-seguridad razonable, y permitirle a la persona pedir que se corrijan o
-eliminen (derecho de acceso, rectificación y supresión).
+La ley 25.326 (de Hábeas Data) protege cualquier dato personal guardado en una
+base de datos, pública o privada. El buzón (nombre, teléfono y el reclamo o el
+dato que manda la persona) **es ese tipo de base**. Con o sin registro, la ley
+pide: informar para qué se usan los datos, no usarlos para otra cosa, guardarlos
+con seguridad razonable y dejar que la persona pida corregirlos o borrarlos.
 
-Sobre el **registro obligatorio ante la AAIP** (Registro Nacional de
-Bases de Datos Personales): la ley (art. 21) y su reglamentación lo exigen
-para bases de datos **"destinadas a dar informes"** — es decir, pensadas
-para transferir o ceder los datos a terceros (tipo empresas de informes
-crediticios). Un formulario de reclamos que el medio usa internamente
-para verificar y contactar a la gente, sin vender ni ceder esos datos a
-terceros, cae en una zona más liviana, pero la práctica recomendada
-igual — según notas de estudios jurídicos consultadas — es tener una
-**política de privacidad visible** en el sitio (qué datos se piden, para
-qué, y cómo pedir que se borren), conforme a la Resolución AAIP 14/2018.
-No haberlo registrado sin ceder los datos a nadie no debería generar una
-multa (que sí existen, hasta $100.000, para infracciones más serias), pero
-la falta de una política de privacidad visible es un incumplimiento más
-directo y fácil de evitar.
+El **registro ante la AAIP** (art. 21) se exige para las bases **"destinadas a
+dar informes"**, las pensadas para ceder datos a terceros. Un buzón que el medio
+usa para verificar y contactar, sin ceder los datos, cae en una zona más liviana,
+pero la práctica recomendada (Resolución AAIP 14/2018) es tener una **política de
+privacidad visible**: qué se pide, para qué y cómo pedir que se borre. Las multas
+(hasta $100.000) son para infracciones más serias; la falta de una política
+visible es el incumplimiento más directo y el más fácil de evitar.
 
-**Qué hacer (esto sí es concreto y barato de hacer):** agregar una página
-corta de "Política de privacidad" al sitio antes de lanzar el buzón
-público, explicando qué se pide (nombre, teléfono, el reclamo), para qué
-se usa (contactar y verificar, nunca publicar el teléfono), y que se
-puede pedir borrar los datos. **Zona gris:** si en algún momento el
-volumen de datos crece mucho o se empieza a compartir información con
-otros (por ejemplo, pasarle contactos a otro medio o a un anunciante),
-ahí conviene revisar si corresponde el registro formal ante la AAIP.
+**Qué hacer:** una política de privacidad pública (hecha: abajo). **Zona gris:**
+si el volumen crece mucho o se empiezan a compartir datos con otros (otro medio,
+un anunciante), revisar si corresponde el registro formal.
 
 Fuentes:
-- [AAIP — Obligaciones de los responsables de bases de datos personales](https://www.argentina.gob.ar/aaip/datospersonales/responsables/obligaciones)
-- [JBB Abogados — Registro de bases de datos personales: cuándo corresponde inscribirlas](https://jbbabogados.com.ar/registro-de-bases-de-datos-personales-en-argentina-cuando-corresponde-inscribirlas-ante-la-aaip-y-como-hacerlo/)
-- [Devoto Magazine — Base de datos en regla: inscripción obligatoria ante la AAIP](https://devotomagazine.com.ar/base-de-datos-en-regla-como-cumplir-con-la-inscripcion-obligatoria-ante-la-aaip/)
-- [Texto de la Ley 25.326 (HCDN, PDF actualizado)](https://www3.hcdn.gob.ar/dependencias/secparl/dgral_info_parlamentaria/dip/archivos/Ley_25326.pdf)
+- [AAIP: obligaciones de los responsables de bases de datos personales](https://www.argentina.gob.ar/aaip/datospersonales/responsables/obligaciones)
+- [JBB Abogados: registro de bases de datos personales, cuándo corresponde](https://jbbabogados.com.ar/registro-de-bases-de-datos-personales-en-argentina-cuando-corresponde-inscribirlas-ante-la-aaip-y-como-hacerlo/)
+- [Devoto Magazine: inscripción obligatoria ante la AAIP](https://devotomagazine.com.ar/base-de-datos-en-regla-como-cumplir-con-la-inscripcion-obligatoria-ante-la-aaip/)
+- [Texto de la ley 25.326 (HCDN, PDF actualizado)](https://www3.hcdn.gob.ar/dependencias/secparl/dgral_info_parlamentaria/dip/archivos/Ley_25326.pdf)
 
 ---
 
 ## 6. Menores de edad y víctimas de delitos sexuales
 
-Acá sí hay una norma concreta más allá del buen criterio editorial: la
-**ley 26.061** (Protección Integral de los Derechos de Niñas, Niños y
-Adolescentes) establece protecciones que impiden la identificación
-pública de niños, niñas y adolescentes en situaciones como éstas, y en
-particular reconoce una situación de "especial vulnerabilidad" cuando la
-víctima es menor de edad. Además, el art. 30 bis de esa ley pone
-**obligación de denunciar** (no de publicar) ante abuso o violencia contra
-un menor.
+Acá hay norma concreta, no sólo criterio: la **ley 26.061** (Protección Integral
+de los Derechos de Niñas, Niños y Adolescentes) impide identificar públicamente a
+los chicos en estas situaciones y reconoce una "especial vulnerabilidad" cuando la
+víctima es menor; su art. 30 bis obliga a **denunciar** (no a publicar) el abuso o
+la violencia contra un menor. Para las víctimas de violencia de género, la **ley
+26.485** prohíbe a los "medios masivos de comunicación" (cualquier medio gráfico o
+audiovisual de alcance público: un portal entra) difundir mensajes o imágenes que
+estimulen la explotación sexual, que sean injuriosos o humillantes hacia la
+víctima o que perpetúen patrones de dominación.
 
-Para víctimas de violencia de género, la **ley 26.485** (Protección
-Integral a las Mujeres) también le pone límites a los medios: prohíbe
-difundir mensajes o imágenes que estimulen la explotación sexual, que
-sean injuriosos o humillantes hacia la víctima, o que perpetúen patrones
-de dominación — y aplica a "medios masivos de comunicación", definidos
-como cualquier medio gráfico o audiovisual de alcance público (un portal
-de noticias entra ahí).
-
-**Qué hacer (regla dura, no opcional):** nunca publicar el nombre, la
-imagen, la dirección o cualquier dato que permita identificar a un menor
-involucrado en un hecho policial o judicial (ni como víctima ni como
-imputado), ni de una víctima de un delito sexual o de violencia de
-género, salvo que la propia víctima adulta decida hacerlo pública ella
-misma. Esto coincide con el criterio editorial que ya tienen, pero acá
-queda confirmado que además es ley, no sólo buena práctica.
+**Qué hacer (regla dura):** nunca publicar el nombre, la imagen, la dirección ni
+ningún dato que permita identificar a un menor involucrado en un hecho policial o
+judicial (víctima o imputado), ni a una víctima de un delito sexual o de violencia
+de género, salvo que la propia víctima adulta lo haga público. Coincide con el
+criterio del medio, y además es ley.
 
 Fuentes:
-- [Ley 26.061 — resumen oficial (Argentina.gob.ar)](https://www.argentina.gob.ar/normativa/nacional/ley-26061-110778)
-- [Texto completo Ley 26.061 (PDF, Ministerio de Trabajo Bs. As.)](https://www.trabajo.gba.gov.ar/documentos/legislacion/copreti/ley26061.pdf)
-- [Ley 26.485 — Protección Integral a las Mujeres (texto, OAS)](https://www.oas.org/dil/esp/ley_de_proteccion_integral_de_mujeres_argentina.pdf)
+- [Ley 26.061, resumen oficial (Argentina.gob.ar)](https://www.argentina.gob.ar/normativa/nacional/ley-26061-110778)
+- [Texto completo de la ley 26.061 (PDF, Ministerio de Trabajo bonaerense)](https://www.trabajo.gba.gov.ar/documentos/legislacion/copreti/ley26061.pdf)
+- [Ley 26.485, Protección Integral a las Mujeres (texto, OEA)](https://www.oas.org/dil/esp/ley_de_proteccion_integral_de_mujeres_argentina.pdf)
 
 ---
 
-## 7. Uso de fotos y contenido de otros medios (Ley 11.723)
+## 7. Uso de fotos y contenido de otros medios (ley 11.723)
 
-La Ley de Propiedad Intelectual (11.723) protege el texto y las
-fotografías que produce cada medio como obra propia. El artículo clave
-para citar noticias es el **28**: las noticias **de interés general**
-pueden usarse, transmitirse o retransmitirse libremente, **pero si se
-publican en su "versión original" hay que citar la fuente**. Es decir: la
-ley distingue entre reproducir literalmente (necesita mínimo la cita de
-la fuente, y en rigor eso no cubre copiar párrafos enteros sin permiso,
-que sigue siendo la obra protegida del otro medio) y contar la noticia
-con palabras propias (que es simplemente hacer periodismo, no una cuestión
-de "cita" sino de reportar un hecho, y ahí lo único exigible por buena
-práctica —y lo más seguro legalmente— es atribuir de dónde salió el dato).
+La Ley de Propiedad Intelectual (11.723) protege el texto y las fotos de cada
+medio como obra propia. Para las noticias, la clave es el **art. 28**: las
+noticias **de interés general** se pueden usar y retransmitir libremente, **pero
+si se publican en su "versión original" hay que citar la fuente**. Contar la
+noticia con palabras propias es hacer periodismo; copiar párrafos enteros, aunque
+se cite la fuente, sigue siendo reproducir la obra ajena.
 
-Sobre las **fotos**: no hay una excepción parecida a la de "noticias de
-interés general" para imágenes. Una fotografía es una obra protegida de
-quien la tomó (el fotógrafo o el medio que la publicó), y usarla sin
-permiso — aunque se cite la fuente — no está amparado por el artículo 28.
-**Actualización (27/09):** con este riesgo explicado y entendido, Hernán
-decidió aceptarlo para las fotos (no para copiar párrafos de texto, que
-sigue prohibido): se puede recortar la foto de otro medio o de un
-organismo oficial cuando no hay una propia, oficial o de stock que sirva,
-sin su marca de agua ni su nombre adentro de la imagen, con el crédito
-siempre en la cita. Ver `CRITERIO-EDITORIAL.md`, sección "Las fotos", y
-`PENDIENTES.md`, "El banco de fotos".
+Para las **fotos** no hay una excepción parecida: una fotografía es obra de quien
+la tomó (el fotógrafo o el medio) y usarla sin permiso, aunque se cite la fuente,
+no está amparado por el art. 28.
 
-**Qué hacer (esto ya lo vienen haciendo bien):** resumir con palabras
-propias y citar de dónde salió la info es la práctica seguible y segura.
-**Lo que no se puede hacer:** copiar párrafos largos textuales de otro
-medio (aunque se cite la fuente, eso no es "informar sobre la noticia",
-es reproducir la obra ajena) ni usar una foto de otro medio sin permiso,
-ni siquiera citando de dónde salió.
+**Qué hacer:**
+
+- **Texto:** siempre con palabras propias, citando y enlazando de dónde salió el
+  dato. Copiar de otro medio sigue prohibido: la IA tiene prohibido repetir más de
+  diez palabras seguidas de una fuente, tampoco en una cita, y el verificador
+  rechaza la nota desde las 13 (`CRITERIO-EDITORIAL.md` § 12, regla 1).
+- **Fotos: un riesgo aceptado, con condiciones.** El 27/09 Hernán, con este riesgo
+  explicado, decidió aceptarlo para las fotos (no para el texto); en vivo desde el
+  28/09. Se puede usar la foto de otro medio o de un organismo oficial cuando no
+  hay una propia u oficial que sirva, **sólo sin su marca de agua ni su nombre
+  adentro de la imagen** (tampoco en la escena, como el micrófono de una radio),
+  **con el crédito en el epígrafe** y **guardada en el banco propio**
+  (`web/data/banco-fotos.json`). **Nunca la foto de un menor ni de una víctima**
+  (la IA marca a los menores reconocibles y esa foto no se elige), y en Policiales
+  **sólo de fuentes oficiales**. El criterio completo, en `CRITERIO-EDITORIAL.md`
+  § 2 ("Las fotos"); cómo se elige cada foto, en `docs/05-FOTOS.md`.
+- **Zona gris:** si un medio o un fotógrafo reclama por una foto, lo prudente es
+  sacarla y consultar antes de responder.
 
 Fuentes:
 - [Ley 11.723, texto actualizado (Argentina.gob.ar)](https://www.argentina.gob.ar/normativa/nacional/ley-11723-42755/texto)
-- [Ley 11.723, texto completo (InfoLeg, PDF)](https://servicios.infoleg.gob.ar/infolegInternet/anexos/40000-44999/42755/texact.htm)
+- [Ley 11.723, texto completo (InfoLeg)](https://servicios.infoleg.gob.ar/infolegInternet/anexos/40000-44999/42755/texact.htm)
 - [Ley 11.723 (WIPO Lex, texto oficial actualizado a 2020)](https://www.wipo.int/wipolex/es/legislation/details/21169)
 
 ---
 
-## Qué cambiaría en el proyecto
+## Cómo se aplica hoy
 
-1. **Agregar una página de "Política de privacidad" al sitio antes de
-   lanzar el buzón público** (punto 4): qué datos pide el formulario
-   (nombre, teléfono, el reclamo), para qué se usan, que no se publican
-   sin verificar, y cómo pedir que se borren. Es barato de hacer y es lo
-   más concreto que salió de esta investigación.
-2. **Sumar al prompt editorial / checklist de redacción la lógica
-   Campillay** (punto 3): toda nota con una acusación (policiales,
-   reclamos del buzón, denuncias) tiene que atribuir la fuente
-   explícitamente y usar condicional hasta que haya confirmación oficial.
-   Esto se puede meter directo como regla en `reels/reescritura.mjs` o en
-   el prompt editorial que ya usan, no sólo como criterio a mano.
-3. **Ampliar el criterio editorial de menores/víctimas** (punto 6) para
-   dejarlo explícito por escrito en `docs/10-REGLAS-Y-PRUEBAS.md` o donde estén las reglas
-   del semáforo: no es sólo buen criterio, es ley (26.061 y 26.485). Se
-   puede agregar como una regla dura al semáforo (rojo automático si la
-   nota identifica a un menor o una víctima de delito sexual/violencia de
-   género), no dependiente del juicio de quien aprueba esa nota puntual.
-4. **Documentar en el propio código/panel el porqué de la regla del
-   reclamo** (punto 1 y 2): dejar una línea corta en `panel/buzon.mjs` o
-   cerca de la lógica que bloquea el reclamo, recordando que además de
-   buen periodismo es lo que reduce exposición legal por calumnias/
-   injurias y conecta con el derecho de rectificación — así la regla no
-   se lee como una traba burocrática sino como protección real, si en
-   algún momento alguien nuevo toca ese código.
+De la investigación salieron cuatro cambios. **Los cuatro están aplicados:**
 
-**Estado al 25/09/2026: los cuatro puntos están aplicados.** (1) La política
-de privacidad está publicada en la web (`web/app/politica-de-privacidad`, la
-única fuente del texto; lo interno del buzón, en `POLITICA-PRIVACIDAD.md`). (2) La lógica Campillay está en el prompt de
-`reels/reescritura.mjs` (regla 10). (3) Menores y víctimas son rojo automático
-en `ingesta/fuentes.mjs`. (4) La regla del reclamo está comentada en
-`panel/buzon.mjs`.
+1. **La política de privacidad** (sección 5) está publicada en
+   `/politica-de-privacidad` (`web/app/politica-de-privacidad/page.js`, la única
+   fuente del texto público); lo interno del buzón, en `POLITICA-PRIVACIDAD.md`.
+2. **La lógica Campillay** (sección 3) está en `CRITERIO-EDITORIAL.md`: § 5
+   ("Acusaciones: doctrina Campillay") y la regla 10 de § 12, que la IA lee tal
+   cual. Además, una nota de un solo medio que se apoya en una acusación tiene
+   verificación BAJA y no sale sola (`nivelDeVerificacion`, `reels/reescritura.mjs`),
+   y toda acusación espera a una persona (el semáforo amarillo).
+3. **Menores y víctimas** (sección 6): rojo automático en el semáforo
+   (`REGLAS_SEMAFORO`, `ingesta/fuentes.mjs`), la regla 13 de la instrucción de la
+   IA y, en las fotos, la marca de menores (regla 73 de
+   `docs/10-REGLAS-Y-PRUEBAS.md`).
+4. **La regla del reclamo** (secciones 1 a 3) está explicada en el código, al lado
+   de la regla (`panel/buzon.mjs`), para que nadie la lea como una traba
+   burocrática.
 
-**Zona gris nueva (25/09):** los posteos de redes no nombran la fuente y
-enlazan a nuestra nota, donde sí se cita y se enlaza el original. Es una
-decisión editorial (`docs/10-REGLAS-Y-PRUEBAS.md`, regla 10); si algún día llega un reclamo de un
-medio por eso, consultar antes de responder.
+**Zona gris (25/09):** los posteos de redes no nombran la fuente y enlazan a
+nuestra nota, donde sí se cita y se enlaza el original (regla 10 de
+`docs/10-REGLAS-Y-PRUEBAS.md`). Si algún día un medio reclama por eso, consultar
+antes de responder.
 
-No se encontró necesidad de trámite ante ENACOM para el proyecto tal cual
-está (punto 4 de la investigación original — renumerado acá como sección
-4), así que no hay acción pendiente ahí mientras no haya radio propia.
+**ENACOM** (sección 4): nada pendiente mientras no haya una radio propia.

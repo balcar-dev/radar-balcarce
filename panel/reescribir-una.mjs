@@ -65,7 +65,8 @@ export async function reescribirUna(nota, {
       sacadas = depurado.sacadas.length;
     }
   }
-  const problemas = control.problemas.map((p) => p.detalle);
+  // Sin repetir: el mismo aviso puede salir por dos oraciones distintas.
+  const problemas = [...new Set(control.problemas.map((p) => p.detalle))];
   if (!tieneCuerpo(r)) problemas.push(`el cuerpo tiene ${palabrasDe(r.cuerpo)} palabras: hacen falta ${PALABRAS_MINIMAS_CUERPO}`);
 
   // Lo escrito también pasa por el semáforo: rojo no vuelve nunca; amarillo
