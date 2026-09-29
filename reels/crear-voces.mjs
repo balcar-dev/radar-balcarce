@@ -106,8 +106,16 @@ async function aMp3(wav, destino) {
 fs.mkdirSync(SALIDA, { recursive: true });
 
 if (process.argv[2] === 'listar') {
-  const r = await api('GET', '/voices?page_size=100');
-  console.log(r.ok ? sinAudio(r.json) : `ERROR ${r.estado ?? ''} ${r.error}`);
+  // Con un idioma (`listar es-AR`) muestra una línea por voz de la biblioteca de Google.
+  const idioma = process.argv[3];
+  let pagina = '';
+  for (let i = 0; i < 20; i += 1) {
+    const r = await api('GET', `/voices?page_size=100${idioma ? `&language_code=${idioma}` : ''}${pagina}`);
+    if (!r.ok) { console.log(`ERROR ${r.estado ?? ''} ${r.error}`); break; }
+    for (const x of r.json?.voices ?? []) console.log([x.id, x.type, x.display_name, x.language_code, x.accent, x.gender, x.pitch, x.persona, x.description].join(' | '));
+    if (!r.json?.next_page_token) break;
+    pagina = `&page_token=${encodeURIComponent(r.json.next_page_token)}`;
+  }
   process.exit(0);
 }
 

@@ -20,6 +20,10 @@ on:
         type: choice
         options: [crear, listar]
         default: crear
+      idioma:
+        description: 'Sólo para listar: el código de idioma de la biblioteca de voces (es-AR, es-US…); vacío = todas'
+        type: string
+        default: 'es-AR'
 
 permissions:
   contents: read
@@ -40,7 +44,7 @@ jobs:
       - run: npm ci --no-audit --no-fund
 
       - name: Crear o listar las voces
-        run: node reels/crear-voces.mjs ${{ github.event.inputs.modo == 'listar' && 'listar' || '' }}
+        run: node reels/crear-voces.mjs ${{ github.event.inputs.modo == 'listar' && format('listar {0}', github.event.inputs.idioma) || '' }}
         env:
           GEMINI_API_KEY_REDES: ${{ secrets.GEMINI_API_KEY_REDES }}
 
