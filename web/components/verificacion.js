@@ -19,7 +19,7 @@
 // Componente de servidor, sin estado: <details> de HTML, sin JavaScript.
 // Qué fuentes van sale de lib/fuentes-de-la-nota.js (sin JSX, se prueba).
 
-import { fuentesDeLaNota } from '@/lib/fuentes-de-la-nota';
+import { fuentesDeLaNota, etiquetasDeFuentes } from '@/lib/fuentes-de-la-nota';
 import { firmaCorta, explicacionDeFirma } from '@/components/metadatos';
 
 // Chico y en gris: es un dato de apoyo, no otra nota. La primera parte del
@@ -78,6 +78,7 @@ export function PieConFuentes({ firma, explicacion, fuentes }) {
       </p>
     );
   }
+  const etiquetas = etiquetasDeFuentes(fuentes);
   return (
     <details className="fuentes-nota">
       <style dangerouslySetInnerHTML={{ __html: ESTILO }} />
@@ -92,11 +93,11 @@ export function PieConFuentes({ firma, explicacion, fuentes }) {
         </p>
       )}
       <ul>
-        {fuentes.map((f) => (
+        {fuentes.map((f, i) => (
           <li key={f.enlace ?? f.medio}>
             {f.enlace
-              ? <a href={f.enlace} target="_blank" rel="noopener noreferrer">{f.medio ?? 'Nota original'}</a>
-              : <span>{f.medio}</span>}
+              ? <a href={f.enlace} target="_blank" rel="noopener noreferrer">{etiquetas[i]}</a>
+              : <span>{etiquetas[i]}</span>}
           </li>
         ))}
       </ul>

@@ -45,7 +45,10 @@ export function generateMetadata({ params }) {
   const descripcion = recortarEn(n.copete || `${n.seccion} en Balcarce: ${n.titulo}`, 155);
 
   return {
-    title: recortarEn(n.titulo, 52),
+    // Sin la marca al final (29/09): con " · Radar Balcarce" el título pasaba de 60 caracteres
+    // y 130 de 239 notas salían cortadas a mitad de frase. El nombre del sitio lo pone Google
+    // (WebSite y og:site_name).
+    title: { absolute: recortarEn(n.titulo, 60) },
     description: descripcion,
     alternates: { canonical: camino },
     openGraph: {
@@ -104,7 +107,11 @@ export default function PaginaNota({ params }) {
             <img
               src={`/${n.foto.archivo}`}
               alt={n.titulo}
-              style={{ width: '100%', maxHeight: 480, objectFit: 'cover', borderRadius: 10, display: 'block' }}
+              width={1200}
+              height={675}
+              decoding="async"
+              fetchPriority="high"
+              style={{ width: '100%', height: 'auto', aspectRatio: '16 / 9', maxHeight: 480, objectFit: 'cover', borderRadius: 10, display: 'block' }}
             />
             <figcaption style={{ fontSize: 13, color: 'var(--suave)', fontStyle: 'italic', marginTop: 6 }}>{n.foto.credito}</figcaption>
           </figure>

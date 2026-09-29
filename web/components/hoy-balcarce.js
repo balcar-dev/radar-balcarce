@@ -63,7 +63,7 @@ function PanelClima({ a, dias }) {
     <>
       <div className="ahora-hoy">
         <div className="temp-hoy">
-          <strong>{a.temp}°</strong>
+          <strong>{Number.isFinite(a.temp) ? `${a.temp}°` : '—'}</strong>
           <span>{a.cielo}</span>
         </div>
         <IconoCielo cielo={a.cielo} esDeDia={a.esDeDia !== false} tamano={38} />
@@ -141,7 +141,7 @@ export function HoyEnBalcarce({ clima, farmacia, foto }) {
     .filter((f) => f.casa === 'oficial' || f.casa === 'blue');
 
   const pestanas = [
-    a && { id: 'clima', etiqueta: `Clima ${a.temp}°` },
+    a && { id: 'clima', etiqueta: Number.isFinite(a.temp) ? `Clima ${a.temp}°` : 'Clima' },
     turno.length > 0 && { id: 'farmacias', etiqueta: 'Farmacias' },
     filas.length > 0 && { id: 'dolar', etiqueta: 'Dólar' },
   ].filter(Boolean);
@@ -150,9 +150,25 @@ export function HoyEnBalcarce({ clima, farmacia, foto }) {
   if (!pestanas.length) return null;
   const activa = pestanas.find((p) => p.id === elegida)?.id ?? pestanas[0].id;
 
+  // Teclado (patrón de pestañas de WAI-ARIA): flechas, inicio y fin mueven la
+  // selección y el foco; sólo la pestaña activa entra en el orden de Tab.
+  const alTeclear = (e) => {
+    const i = pestanas.findIndex((p) => p.id === activa);
+    const destino = {
+      ArrowRight: (i + 1) % pestanas.length,
+      ArrowLeft: (i - 1 + pestanas.length) % pestanas.length,
+      Home: 0,
+      End: pestanas.length - 1,
+    }[e.key];
+    if (destino === undefined) return;
+    e.preventDefault();
+    setElegida(pestanas[destino].id);
+    document.getElementById(`pestana-hoy-${pestanas[destino].id}`)?.focus();
+  };
+
   return (
     <section className="hoy-balcarce" aria-label="Hoy en Balcarce">
-      <div className="pestanas-hoy" role="tablist" aria-label="Hoy en Balcarce">
+      <div className="pestanas-hoy" role="tablist" aria-label="Servicios de hoy" onKeyDown={alTeclear}>
         {pestanas.map((p) => (
           <button
             key={p.id}
@@ -160,7 +176,8 @@ export function HoyEnBalcarce({ clima, farmacia, foto }) {
             role="tab"
             id={`pestana-hoy-${p.id}`}
             aria-selected={activa === p.id}
-            aria-controls={`panel-hoy-${p.id}`}
+            tabIndex={activa === p.id ? 0 : -1}
+            aria-controls={activa === p.id ? `panel-hoy-${p.id}` : undefined}
             className={activa === p.id ? 'pestana-hoy activa' : 'pestana-hoy'}
             onClick={() => setElegida(p.id)}
           >

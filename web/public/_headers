@@ -43,6 +43,11 @@
 /agenda/*/opengraph-image
   Content-Type: image/png
 
+# Las fotos de las notas: el nombre es el de la nota y no cambia. Una semana en
+# el navegador y en Cloudflare (29/09: antes 4 horas por defecto).
+/fotos-notas/*
+  Cache-Control: public, max-age=604800
+
 # El archivo para agendar un evento: que el celular lo abra con el calendario.
 /agenda/*/evento.ics
   Content-Type: text/calendar; charset=utf-8

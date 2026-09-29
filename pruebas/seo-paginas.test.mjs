@@ -97,7 +97,7 @@ test('la descripción de una sección nombra las últimas notas: no es igual par
 
 test('los títulos y descripciones de las notas se recortan al largo que muestra Google', () => {
   const n = leer('app/nota/[id]/page.js');
-  assert.match(n, /title: recortarEn\(n\.titulo, \d+\)/);
+  assert.match(n, /title: \{ absolute: recortarEn\(n\.titulo, (5\d|60)\) \}/);
   assert.match(n, /recortarEn\(n\.copete[^)]*, 155\)/);
 });
 
@@ -382,4 +382,38 @@ test('fechaDeModificacion: nunca anterior a la de publicación (12 notas lo esta
   assert.equal(haceCuanto('2026-09-29T10:30:00Z', ahora), 'hace 1 h');
   assert.equal(haceCuanto('2026-09-28T00:00:00Z', ahora), 'ayer');
   assert.equal(haceCuanto('2026-09-29T11:20:00Z', ahora), 'hace 40 min');
+});
+
+// ------- 29/09: más arreglos de la auditoría del sitio en vivo
+test('el título de la nota no lleva la marca pegada ni pasa de 60 caracteres', () => {
+  assert.match(leer('app/nota/[id]/page.js'), /title: \{ absolute: recortarEn\(n\.titulo, 60\) \}/);
+});
+
+test('una sección sin notas hoy se genera igual, con noindex, y no da 404 ("Ver todo →" de la nota)', () => {
+  const seccion = leer('app/seccion/[ranura]/page.js');
+  assert.match(seccion, /const paginas = Math\.max\(1, cuantasPaginas\(cuantas\)\);/);
+  assert.match(seccion, /robots: \{ index: false, follow: true \}/);
+  assert.ok(!/if \(todas\.length === 0\) notFound\(\);/.test(seccion), 'volvió el 404 de las secciones vacías');
+});
+
+test('las fotos de las notas: proporción fija y caché de una semana', () => {
+  assert.match(leer('app/nota/[id]/page.js'), /aspectRatio: '16 \/ 9'/);
+  const h = leer('public/_headers').replace(/\r\n/g, '\n');
+  assert.match(h, /\/fotos-notas\/\*\n  Cache-Control: public, max-age=604800/);
+});
+
+test('etiquetasDeFuentes numera el medio que se repite', async () => {
+  const { etiquetasDeFuentes } = await import('../web/lib/fuentes-de-la-nota.js');
+  const f = [{ medio: 'Infobae' }, { medio: 'La Nación' }, { medio: 'Infobae' }, { medio: null }, { medio: 'Infobae' }];
+  assert.deepEqual(etiquetasDeFuentes(f), ['Infobae (1)', 'La Nación', 'Infobae (2)', 'Nota original', 'Infobae (3)']);
+  assert.deepEqual(etiquetasDeFuentes([{ medio: 'Clarín' }]), ['Clarín']);
+});
+
+test('Hoy en Balcarce: flechas del teclado, una sola pestaña en el orden de Tab y sin NaN', () => {
+  const hoy = leer('components/hoy-balcarce.js');
+  assert.match(hoy, /ArrowRight/);
+  assert.match(hoy, /ArrowLeft/);
+  assert.match(hoy, /tabIndex=\{activa === p\.id \? 0 : -1\}/);
+  assert.match(hoy, /Number\.isFinite\(a\.temp\)/);
+  assert.match(hoy, /aria-label="Servicios de hoy"/);
 });

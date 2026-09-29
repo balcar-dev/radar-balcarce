@@ -12,17 +12,17 @@ import { Migas } from '@/components/ficha';
 import { recortarEn } from '@/lib/texto';
 import { OG_COMUN } from '@/components/metadatos';
 
-// Se generan sólo las secciones que hoy tienen notas —no tiene sentido
-// publicar una página vacía de Política si en el día no hubo nada— y una
-// entrada por cada página de esa sección.
+// Se generan todas las secciones. Las que hoy no tienen notas salen con un
+// aviso y "noindex" (29/09): la nota enlaza a su sección ("Ver todo →" y las
+// migas) y esa página daba 404 cuando no había notas de la sección en las
+// últimas 36 horas. Una entrada por cada página de las que sí tienen.
 
 export function generateStaticParams() {
   const notas = obtenerDatos().notas;
   const params = [];
   for (const s of SECCIONES) {
     const cuantas = notas.filter((n) => n.seccion === s.nombre).length;
-    if (!cuantas) continue;
-    const paginas = cuantasPaginas(cuantas);
+    const paginas = Math.max(1, cuantasPaginas(cuantas));
     for (let i = 1; i <= paginas; i += 1) {
       params.push({ ranura: i === 1 ? s.ranura : `${s.ranura}-${i}` });
     }
@@ -48,6 +48,8 @@ export function generateMetadata({ params }) {
     title: titulo,
     description: descripcion,
     alternates: { canonical: camino },
+    // Sin notas hoy no es una página para el buscador (29/09).
+    ...(delDia.length === 0 ? { robots: { index: false, follow: true } } : {}),
     // La tarjeta la pone sola opengraph-image.js, que está al lado.
     openGraph: { ...OG_COMUN, type: 'website', title: titulo, description: descripcion, url: camino },
   };
@@ -62,9 +64,7 @@ export default function PaginaSeccion({ params }) {
   if (!s) notFound();
 
   const todas = obtenerDatos().notas.filter((n) => n.seccion === s.nombre);
-  if (todas.length === 0) notFound();
-
-  const paginas = cuantasPaginas(todas.length);
+  const paginas = Math.max(1, cuantasPaginas(todas.length));
   if (pagina > paginas) notFound();
 
   const notas = todas.slice((pagina - 1) * POR_PAGINA, pagina * POR_PAGINA);
@@ -92,6 +92,13 @@ export default function PaginaSeccion({ params }) {
           {paginas > 1 ? ` · página ${pagina} de ${paginas}` : ''}
         </span>
       </div>
+
+      {todas.length === 0 && (
+        <p style={{ fontSize: 16, lineHeight: 1.6, color: 'var(--texto)' }}>
+          Hoy no hay notas de {nombreCorto(s.nombre)} en las últimas 36 horas.{' '}
+          <a href="/" style={{ color: 'var(--rojo)', fontWeight: 600 }}>Mirá lo último en la portada →</a>
+        </p>
+      )}
 
       {principal && (
       <article className="destacada">

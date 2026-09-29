@@ -19,6 +19,24 @@ export function enlaceParaElLector(enlace) {
 }
 
 /** Las fuentes para el lector: { medio, enlace } sin repetir enlaces. */
+/**
+ * Cómo se llama cada fuente en el desplegable. Un medio que aparece varias veces
+ * (cuatro notas de Infobae sobre lo mismo) se numera: "Infobae (1)", "Infobae (2)".
+ * Antes se leía "Infobae, Infobae, La Nación, Infobae…" (auditoría del 29/09).
+ */
+export function etiquetasDeFuentes(fuentes = []) {
+  const nombre = (f) => f.medio ?? 'Nota original';
+  const cuantas = new Map();
+  for (const f of fuentes) cuantas.set(nombre(f), (cuantas.get(nombre(f)) ?? 0) + 1);
+  const vistas = new Map();
+  return fuentes.map((f) => {
+    const n = nombre(f);
+    if (cuantas.get(n) === 1) return n;
+    vistas.set(n, (vistas.get(n) ?? 0) + 1);
+    return `${n} (${vistas.get(n)})`;
+  });
+}
+
 export function fuentesDeLaNota(nota) {
   const consultadas = (nota?.fuentesConsultadas ?? [])
     .map((f) => ({ medio: f?.medio ?? null, enlace: enlaceParaElLector(f?.enlace ?? null) }))
