@@ -234,6 +234,18 @@ test('una falla del servicio (sin cupo, sin red) no cuenta como intento: no se g
   assert.equal(intentos.n1, undefined);
 });
 
+// Caso real, 29/09: la clave de redacción quedó desactivada ("The bound service
+// account is deleted or disabled") y cada nota gastaba sus tres intentos en 401.
+test('una clave rechazada o sin crédito (401, 402, 403) tampoco cuenta como intento', async () => {
+  for (const status of [401, 402, 403]) {
+    const { intentos } = await correr([{ status }]);
+    assert.equal(intentos.n1, undefined, `HTTP ${status}`);
+  }
+  const { FALLA_DEL_SERVICIO } = await import('../reels/reescritura.mjs');
+  assert.match('HTTP 401 (clave redaccion): { "message": "The bound service account is deleted or disabled" }', FALLA_DEL_SERVICIO);
+  assert.doesNotMatch('HTTP 400 (clave redaccion): pedido mal armado', FALLA_DEL_SERVICIO, 'un 400 sí es culpa del pedido');
+});
+
 test('los intentos se podan a los siete días', () => {
   const ahora = Date.parse('2026-09-25T12:00:00Z');
   const podado = podarIntentos({

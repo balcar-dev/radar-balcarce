@@ -841,8 +841,11 @@ export function podarIntentos(intentos = {}, ahora = Date.now(), dias = DIAS_DE_
 }
 
 /** Una falla de Gemini que no es culpa de la nota (sin cupo, saturado, sin
- *  red, sin clave): no cuenta como intento, porque no se gastó nada. */
-const FALLA_DEL_SERVICIO = /falta GEMINI|no se pudo pedir|HTTP (429|5\d\d)|fetch failed|abort|timeout|network|ECONN|ENOTFOUND|EAI_AGAIN/i;
+ *  red, sin clave): no cuenta como intento, porque no se gastó nada. Una clave
+ *  rechazada o sin crédito (401, 402, 403) tampoco: el 29/09 la clave de
+ *  redacción quedó desactivada por Google y cada nota gastaba sus tres intentos
+ *  en 401, así que se perdía para siempre aunque después volviera la clave. */
+export const FALLA_DEL_SERVICIO = /falta GEMINI|no se pudo pedir|HTTP (40[123]|429|5\d\d)|fetch failed|abort|timeout|network|ECONN|ENOTFOUND|EAI_AGAIN/i;
 
 /**
  * El texto completo de la noticia: el de la nota principal y, si ése no se
