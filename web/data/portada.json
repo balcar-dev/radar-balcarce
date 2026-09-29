@@ -1,6 +1,70 @@
 {
-  "generado": "2026-09-29T23:01:45.348Z",
+  "generado": "2026-09-29T23:32:05.717Z",
   "notas": [
+    {
+      "id": "1puwvvm",
+      "titulo": "El Geriátrico Pinto recibe diez colchones y diez almohadas",
+      "copete": "El Hogar Municipal sumó equipamiento para el descanso de los residentes. Los elementos surgieron de una iniciativa solidaria desarrollada en la Casa del Bicentenario.",
+      "cuerpo": "El Hogar Municipal Dr. Ernesto L. Pinto recibió diez colchones y diez almohadas para mejorar el descanso de los residentes. La directora del establecimiento, Mariana Terminiello, recibió los elementos este martes, según informó un medio local.\n\nLos insumos se adquirieron mediante los fondos recaudados en la movida solidaria Moda en movimiento, impulsada por Daniel Eymann en la Casa del Bicentenario. La propuesta contó con una amplia convocatoria de vecinos.\n\nAdemás, la compra se concretó con la colaboración de Casa Nueva, comercio que aplicó un descuento especial para facilitar la adquisición de los elementos destinados a los adultos mayores.",
+      "guion": "El Geriátrico Pinto recibe diez colchones y diez almohadas",
+      "seccion": "Balcarce",
+      "medios": [
+        "Diario La Vanguardia"
+      ],
+      "enlace": "https://www.diariolavanguardia.com/noticias/44947-el-geriatrico-pinto-recibio-colchones-y-almohadas-tras-la-movida-solidaria-moda-en-movimiento/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-29T23:01:10.965Z",
+      "sinFecha": true,
+      "visto": "2026-09-29T23:31:11.657Z",
+      "relevancia": 63,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "El Hogar Municipal recibió diez colchones y diez almohadas.",
+        "La entrega fue recibida por la directora Mariana Terminiello.",
+        "Los elementos se obtuvieron mediante la movida solidaria Moda en movimiento.",
+        "La iniciativa fue impulsada por Daniel Eymann en la Casa del Bicentenario."
+      ],
+      "seSabe": [
+        "El Hogar Municipal recibió 10 colchones y 10 almohadas.",
+        "La entrega fue recibida por la directora del geriátrico, Mariana Terminiello.",
+        "La movida solidaria Moda en movimiento fue impulsada por Daniel Eymann en la Casa del Bicentenario.",
+        "Casa Nueva realizó un descuento especial para la compra de los elementos."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El Hogar Municipal Dr. Ernesto L. Pinto recibió diez colchones y diez almohadas gracias a una movida solidaria impulsada en la Casa del Bicentenario.",
+      "etiquetas": [
+        "Geriátrico Pinto",
+        "Hogar Municipal",
+        "solidaridad",
+        "Casa del Bicentenario",
+        "donación"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Diario La Vanguardia",
+          "enlace": "https://www.diariolavanguardia.com/noticias/44947-el-geriatrico-pinto-recibio-colchones-y-almohadas-tras-la-movida-solidaria-moda-en-movimiento/",
+          "fecha": null,
+          "oficial": false,
+          "aporte": "Informó sobre la donación de colchones y almohadas al Hogar Municipal y el origen de los fondos a través de una movida solidaria."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "el-geriatrico-pinto-recibe-diez-colchones-y-diez-almohadas",
+      "foto": {
+        "archivo": "fotos-notas/1puwvvm.jpg",
+        "credito": "Foto: Diario La Vanguardia"
+      }
+    },
     {
       "id": "9ul7an",
       "titulo": "El Banco Central compra setenta millones pero bajan las reservas",
@@ -10,6 +74,7 @@
       "seccion": "Economía",
       "medios": [
         "Infobae",
+        "Perfil",
         "iProfesional",
         "Ámbito",
         "C5N",
@@ -100,97 +165,6 @@
       }
     },
     {
-      "id": "436uz0",
-      "titulo": "San Lorenzo sufre un millonario embargo de su exentrenador",
-      "copete": "El club sufre un embargo judicial millonario impulsado por su ex director técnico Damián Ayude. La institución atraviesa una profunda crisis económica e institucional.",
-      "cuerpo": "San Lorenzo recibió un embargo judicial por parte de su exentrenador Damián Ayude, quien reclama una millonaria deuda acumulada en pesos y dólares. Según informó la institución mediante un comunicado oficial, el técnico exige un capital de 415.614.932 pesos sumados a 124.000.000 pesos en concepto de intereses, además de 48.558 dólares y otros 14.600 dólares por el mismo concepto.\n\nAyude se desempeñó al frente del plantel profesional entre mediados de 2025 e inicios de 2026, período en el cual dirigió 29 encuentros con un saldo de diez victorias, diez empates y nueve derrotas. Las autoridades del club decidieron despedirlo en marzo tras una derrota por 5 a 2 ante Defensa y Justicia, a pesar de haber renovado su vínculo meses antes.\n\nDesde la entidad azulgrana advirtieron que la demanda judicial tendrá un fuerte impacto sobre las cuentas bancarias de la institución, que actualmente transita un momento financiero delicado.",
-      "guion": "San Lorenzo sufre un millonario embargo de su exentrenador",
-      "seccion": "Fútbol",
-      "medios": [
-        "La Nación",
-        "Minuto Uno",
-        "Perfil",
-        "TyC Sports",
-        "Olé"
-      ],
-      "enlace": "https://www.lanacion.com.ar/deportes/nuevo-embargo-a-san-lorenzo-el-millonario-monto-que-reclama-damian-ayude-nid29092026/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-29T20:28:09.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-29T22:31:07.763Z",
-      "relevancia": 83,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "El exentrenador Damián Ayude embargó judicialmente a San Lorenzo.",
-        "El reclamo incluye más de 415 millones de pesos y 48 mil dólares.",
-        "El club advirtió que la medida afectará sus cuentas bancarias."
-      ],
-      "seSabe": [
-        "San Lorenzo recibió un embargo judicial por parte de su ex DT Damián Ayude, según informó el club.",
-        "El reclamo comprende 415.614.932 pesos y 48.558 dólares de capital, más 124 millones de pesos y 14.600 dólares de intereses.",
-        "Ayude dirigió al equipo en 29 partidos entre 2025 y 2026."
-      ],
-      "textoRedes": "San Lorenzo sufre un millonario embargo judicial impulsado por su exentrenador Damián Ayude, quien reclama una deuda en pesos y dólares.",
-      "etiquetas": [
-        "San Lorenzo",
-        "Damián Ayude",
-        "Fútbol",
-        "Liga Profesional",
-        "Embargo"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "La Nación",
-          "enlace": "https://www.lanacion.com.ar/deportes/nuevo-embargo-a-san-lorenzo-el-millonario-monto-que-reclama-damian-ayude-nid29092026/",
-          "fecha": "2026-09-29T20:28:09.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Olé",
-          "enlace": "https://www.ole.com.ar/san-lorenzo/sanlorenzo-damianayude-embargo-marcelomoretti-marceloculotta_0_9hn9Xm7q0U.html",
-          "fecha": "2026-09-29T20:30:54.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Minuto Uno",
-          "enlace": "https://www.minutouno.com/deportes/nuevo-golpe-san-lorenzo-damian-ayude-embargo-al-club-una-cifra-millonaria-n6328150",
-          "fecha": "2026-09-29T21:08:00.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Perfil",
-          "enlace": "https://442.perfil.com/noticias/futbol/san-lorenzo-fue-embargado-por-damian-ayude-los-millones-que-reclama-el-ex-dt.phtml",
-          "fecha": "2026-09-29T21:47:25.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "TyC Sports",
-          "enlace": "https://www.tycsports.com/san-lorenzo/ayude-embargo-a-san-lorenzo-por-una-suma-millonaria-id763547.html",
-          "fecha": "2026-09-29T22:28:25.000Z",
-          "oficial": false,
-          "aporte": null
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron cinco medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "san-lorenzo-sufre-un-millonario-embargo-de-su-exentrenador",
-      "foto": {
-        "archivo": "fotos-notas/436uz0.jpg",
-        "credito": "Foto: Perfil"
-      }
-    },
-    {
       "id": "repaso20260929tarde",
       "propia": "repaso",
       "titulo": "El repaso de la tarde en Radar Balcarce: corte de luz, Esteban Reino y Pato Naranja",
@@ -273,7 +247,6 @@
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
-      "aprobadaParaRedes": "2026-09-29T21:48:29.963Z",
       "temas": [],
       "como": "automatica",
       "claves": [
@@ -325,6 +298,98 @@
       }
     },
     {
+      "id": "436uz0",
+      "titulo": "San Lorenzo sufre un millonario embargo de su exentrenador",
+      "copete": "El club sufre un embargo judicial millonario impulsado por su ex director técnico Damián Ayude. La institución atraviesa una profunda crisis económica e institucional.",
+      "cuerpo": "San Lorenzo recibió un embargo judicial por parte de su exentrenador Damián Ayude, quien reclama una millonaria deuda acumulada en pesos y dólares. Según informó la institución mediante un comunicado oficial, el técnico exige un capital de 415.614.932 pesos sumados a 124.000.000 pesos en concepto de intereses, además de 48.558 dólares y otros 14.600 dólares por el mismo concepto.\n\nAyude se desempeñó al frente del plantel profesional entre mediados de 2025 e inicios de 2026, período en el cual dirigió 29 encuentros con un saldo de diez victorias, diez empates y nueve derrotas. Las autoridades del club decidieron despedirlo en marzo tras una derrota por 5 a 2 ante Defensa y Justicia, a pesar de haber renovado su vínculo meses antes.\n\nDesde la entidad azulgrana advirtieron que la demanda judicial tendrá un fuerte impacto sobre las cuentas bancarias de la institución, que actualmente transita un momento financiero delicado.",
+      "guion": "San Lorenzo sufre un millonario embargo de su exentrenador",
+      "seccion": "Fútbol",
+      "medios": [
+        "La Nación",
+        "Perfil",
+        "TyC Sports",
+        "Olé",
+        "Minuto Uno",
+        "Bolavip Argentina"
+      ],
+      "enlace": "https://www.lanacion.com.ar/deportes/nuevo-embargo-a-san-lorenzo-el-millonario-monto-que-reclama-damian-ayude-nid29092026/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-29T19:27:33.000Z",
+      "sinFecha": false,
+      "visto": "2026-09-29T22:31:07.763Z",
+      "relevancia": 81,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "El exentrenador Damián Ayude embargó judicialmente a San Lorenzo.",
+        "El reclamo incluye más de 415 millones de pesos y 48 mil dólares.",
+        "El club advirtió que la medida afectará sus cuentas bancarias."
+      ],
+      "seSabe": [
+        "San Lorenzo recibió un embargo judicial por parte de su ex DT Damián Ayude, según informó el club.",
+        "El reclamo comprende 415.614.932 pesos y 48.558 dólares de capital, más 124 millones de pesos y 14.600 dólares de intereses.",
+        "Ayude dirigió al equipo en 29 partidos entre 2025 y 2026."
+      ],
+      "textoRedes": "San Lorenzo sufre un millonario embargo judicial impulsado por su exentrenador Damián Ayude, quien reclama una deuda en pesos y dólares.",
+      "etiquetas": [
+        "San Lorenzo",
+        "Damián Ayude",
+        "Fútbol",
+        "Liga Profesional",
+        "Embargo"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/deportes/nuevo-embargo-a-san-lorenzo-el-millonario-monto-que-reclama-damian-ayude-nid29092026/",
+          "fecha": "2026-09-29T20:28:09.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Olé",
+          "enlace": "https://www.ole.com.ar/san-lorenzo/sanlorenzo-damianayude-embargo-marcelomoretti-marceloculotta_0_9hn9Xm7q0U.html",
+          "fecha": "2026-09-29T20:30:54.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Minuto Uno",
+          "enlace": "https://www.minutouno.com/deportes/nuevo-golpe-san-lorenzo-damian-ayude-embargo-al-club-una-cifra-millonaria-n6328150",
+          "fecha": "2026-09-29T21:08:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Perfil",
+          "enlace": "https://442.perfil.com/noticias/futbol/san-lorenzo-fue-embargado-por-damian-ayude-los-millones-que-reclama-el-ex-dt.phtml",
+          "fecha": "2026-09-29T21:47:25.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "TyC Sports",
+          "enlace": "https://www.tycsports.com/san-lorenzo/ayude-embargo-a-san-lorenzo-por-una-suma-millonaria-id763547.html",
+          "fecha": "2026-09-29T22:28:25.000Z",
+          "oficial": false,
+          "aporte": null
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron cinco medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "san-lorenzo-sufre-un-millonario-embargo-de-su-exentrenador",
+      "foto": {
+        "archivo": "fotos-notas/436uz0.jpg",
+        "credito": "Foto: Perfil"
+      }
+    },
+    {
       "id": "16ufhqn",
       "titulo": "La Corte revoca el fallo sobre la Ley de Tierras del DNU",
       "copete": "El máximo tribunal revirtió la decisión que declaraba inconstitucional la derogación de la Ley de Tierras Rurales, al rechazar la demanda por falta de legitimación.",
@@ -332,7 +397,6 @@
       "guion": "La Corte revoca el fallo sobre la Ley de Tierras del DNU",
       "seccion": "Política",
       "medios": [
-        "Infobae",
         "La Nación",
         "El Eco de Tandil",
         "QZ Noticias (Mar del Plata)",
@@ -347,13 +411,15 @@
         "Ámbito",
         "Minuto Uno",
         "C5N",
-        "Crónica",
+        "Diario Popular",
         "Noticias Argentinas (NA)",
         "El Día",
         "0221",
         "La Tecla",
-        "Infoeme",
-        "Mi8 (Canal 8 Mar del Plata)"
+        "Mi8 (Canal 8 Mar del Plata)",
+        "Infobae",
+        "Crónica",
+        "Infoeme"
       ],
       "enlace": "https://noticiasargentinas.com/politica/la-corte-revoco-el-fallo-que-declaraba-inconstitucional-la-derogacion-de-la-ley-de-tierras_a6abc0d42aeec850fb26e90c9",
       "teniaImagenLaFuente": true,
@@ -427,6 +493,233 @@
       "foto": {
         "archivo": "fotos-notas/16ufhqn.jpg",
         "credito": "Foto: QZ Noticias (Mar del Plata)"
+      }
+    },
+    {
+      "id": "13cwgql",
+      "titulo": "La Corte Suprema anula la absolución de César Milani por el caso Ledo",
+      "copete": "El máximo tribunal dejó sin efecto el fallo que favorecía al exjefe del Ejército y ordenó una nueva revisión judicial vinculada con la desaparición de un soldado en 1976.",
+      "cuerpo": "La Corte Suprema de Justicia de la Nación revocó la absolución del exjefe del Ejército César Milani y dispuso que la Cámara Federal de Casación Penal dicte un nuevo pronunciamiento. El expediente investiga el encubrimiento de la privación ilegal de la libertad y posterior homicidio del soldado conscripto Alberto Agapito Ledo, ocurrido en junio de 1976 en Tucumán.\n\nEl máximo tribunal hizo lugar por mayoría a los planteos de la Procuración General contra el fallo previo que había beneficiado al exfuncionario militar. La investigación se centra en la confección de un documento castrense que atribuyó una supuesta deserción a la víctima cuando realizaba el servicio militar obligatorio.\n\nDurante el proceso judicial, el imputado rechazó los señalamientos en su contra y negó haber tenido vínculo con el conscripto. La causa regresará a los tribunales inferiores para reexaminar las pruebas y la validez de la pericia caligráfica.",
+      "guion": "La Corte Suprema anula la absolución de César Milani por el caso Ledo",
+      "seccion": "Argentina",
+      "medios": [
+        "Infobae",
+        "El Eco de Tandil",
+        "La Nación",
+        "TN (Todo Noticias)",
+        "El Cronista",
+        "El Destape",
+        "Perfil",
+        "Página/12",
+        "A24",
+        "Ámbito",
+        "Minuto Uno",
+        "Diario Popular",
+        "Noticias Argentinas (NA)",
+        "El Día",
+        "La Nueva",
+        "Clarín",
+        "iProfesional",
+        "La Verdad",
+        "Crónica",
+        "El Marplatense"
+      ],
+      "enlace": "https://www.infobae.com/judiciales/2026/09/29/la-corte-suprema-anulo-la-absolucion-a-cesar-milani-y-ordeno-revisar-el-fallo-por-la-muerte-del-soldado-ledo/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-29T18:43:51.000Z",
+      "sinFecha": false,
+      "visto": "2026-09-29T23:31:11.657Z",
+      "relevancia": 73,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "La Corte Suprema revocó la absolución de César Milani.",
+        "El expediente vuelve a Casación para emitir una nueva sentencia.",
+        "Se investiga el encubrimiento por la desaparición de Alberto Ledo en 1976."
+      ],
+      "seSabe": [
+        "El máximo tribunal dejó sin efecto el sobreseimiento del exjefe del Ejército.",
+        "La causa investiga los hechos ocurridos en Tucumán en 1976.",
+        "El expediente retorna a la Cámara Federal de Casación Penal."
+      ],
+      "noConfirmado": [
+        "Todavía se desconoce la fecha en la que el tribunal inferior emitirá la nueva sentencia."
+      ],
+      "etiquetas": [
+        "Corte Suprema",
+        "César Milani",
+        "Alberto Ledo",
+        "Justicia",
+        "Ejército Argentino"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/judiciales/2026/09/29/la-corte-suprema-anulo-la-absolucion-a-cesar-milani-y-ordeno-revisar-el-fallo-por-la-muerte-del-soldado-ledo/",
+          "fecha": "2026-09-29T18:43:51.000Z",
+          "oficial": false,
+          "aporte": "Detalló los jueces firmantes del fallo y los argumentos sobre el sumario falso."
+        },
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/judiciales/2026/09/29/se-abre-una-esperanza-de-justicia-la-hermana-de-alberto-ledo-tras-el-fallo-que-ordeno-revisar-la-absolucion-de-milani/",
+          "fecha": "2026-09-29T22:38:57.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "El Eco de Tandil",
+          "enlace": "https://www.eleco.com.ar/nacionales/la-corte-revoco-su-absolucion-de-cesar-milani-en-la-causa-por-la-desaparicion-de-un-soldado",
+          "fecha": "2026-09-29T22:22:04.000Z",
+          "oficial": false,
+          "aporte": "Indicó que la decisión se tomó por mayoría con la intervención de conjueces."
+        },
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/politica/la-corte-revoco-la-absolucion-de-milani-por-la-desaparicion-en-1976-del-conscripto-ledo-en-tucuman-nid29092026/",
+          "fecha": "2026-09-29T18:58:31.000Z",
+          "oficial": false,
+          "aporte": "Mencionó el nombre completo del imputado y el contexto geográfico."
+        },
+        {
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/politica/2026/09/29/la-corte-suprema-anulo-la-absolucion-de-cesar-milani-por-la-desaparicion-del-soldado-alberto-ledo-en-1976/",
+          "fecha": "2026-09-29T19:46:07.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "El Cronista",
+          "enlace": "https://www.cronista.com/economia-politica/la-corte-anulo-la-absolucion-de-milani-y-ordeno-revisar-el-fallo-por-la-muerte-del-soldado-ledo-en-tucuman/",
+          "fecha": "2026-09-29T19:09:32.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "El Destape",
+          "enlace": "https://www.eldestapeweb.com/politica/corte-anulo-sobreseimiento-cesar-milani-muerte-soldado-ledo-2026929172632",
+          "fecha": "2026-09-29T20:26:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Perfil",
+          "enlace": "https://www.perfil.com/noticias/politica/la-corte-suprema-dejo-sin-efecto-la-absolucion-de-cesar-milani-por-la-desaparicion-de-un-soldado-en-1976.phtml",
+          "fecha": "2026-09-29T19:52:50.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Página/12",
+          "enlace": "https://www.pagina12.com.ar/2026/09/29/la-corte-suprema-revoco-absolucion-de-milani/",
+          "fecha": "2026-09-29T23:11:41.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "A24",
+          "enlace": "https://www.a24.com/politica/la-corte-anulo-la-absolucion-cesar-milani-la-causa-la-desaparicion-del-soldado-ledo-n1601473",
+          "fecha": "2026-09-29T19:48:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Ámbito",
+          "enlace": "https://www.ambito.com/politica/caso-ledo-la-corte-dejo-efecto-la-absolucion-cesar-milani-y-ordeno-volver-revisar-la-decision-n6328137",
+          "fecha": "2026-09-29T20:27:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Minuto Uno",
+          "enlace": "https://www.minutouno.com/politica/caso-ledo-la-corte-suprema-dejo-efecto-la-absolucion-milani-y-ordeno-volver-revisar-la-decision-n6328131",
+          "fecha": "2026-09-29T20:14:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Diario Popular",
+          "enlace": "https://www.diariopopular.com.ar/politica/la-corte-suprema-revoco-la-absolucion-cesar-milani-n922113",
+          "fecha": "2026-09-29T19:58:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Noticias Argentinas (NA)",
+          "enlace": "https://noticiasargentinas.com/politica/reves-para-milani--la-corte-revoco-su-absolucion-por-agapito-ledo_a6abc0c50aeec850fb26e6259",
+          "fecha": "2026-09-29T19:10:02.297Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "El Día",
+          "enlace": "https://www.eldia.com/politica-y-economia/la-corte-suprema-revoco-el-sobreseimiento-de-cesar-milani-por-el-caso-del-soldado-ledo-politica-y-economia_1790709180",
+          "fecha": "2026-09-29T19:17:57.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "La Nueva",
+          "enlace": "https://www.lanueva.com/nota/2026-9-29-16-46-0-la-corte-suprema-anulo-la-absolucion-de-milani-por-la-desaparicion-del-soldado-ledo-en-1976",
+          "fecha": "2026-09-29T23:07:30.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Clarín",
+          "enlace": "https://www.clarin.com/politica/corte-revoco-sobreseimiento-general-milani-desaparicion-soldado-ledo-dictadura_0_QPVTROCUHD.html",
+          "fecha": "2026-09-29T18:45:39.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "iProfesional",
+          "enlace": "https://www.iprofesional.com/legales/465515-la-corte-revoco-la-absolucion-de-milani-por-la-desaparicion-de-un-soldado-en-dictadura",
+          "fecha": "2026-09-29T19:19:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "iProfesional",
+          "enlace": "https://www.iprofesional.com/actualidad/465515-la-corte-revoco-la-absolucion-de-milani-por-la-desaparicion-de-un-soldado-en-dictadura",
+          "fecha": "2026-09-29T19:19:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "La Verdad",
+          "enlace": "https://laverdadonline.com/reves-para-milani-la-corte-revoco-su-absolucion-por-agapito-ledo/",
+          "fecha": "2026-09-29T20:00:03.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Crónica",
+          "enlace": "https://www.cronica.com.ar/politica/corte-revoca-absolucion-cesar-milani-agapito-ledo/",
+          "fecha": "2026-09-29T20:32:03.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "El Marplatense",
+          "enlace": "https://www.elmarplatense.com/la-corte-anulo-la-absolucion-del-exjefe-del-ejercito-cesar-milani-en-el-caso-ledo",
+          "fecha": "2026-09-29T22:45:00.000Z",
+          "oficial": false,
+          "aporte": null
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron 20 medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "la-corte-suprema-anula-la-absolucion-de-cesar-milani-por-el-caso-ledo",
+      "foto": {
+        "archivo": "fotos-notas/13cwgql.jpg",
+        "credito": "Foto: El Eco de Tandil"
       }
     },
     {
@@ -909,7 +1202,6 @@
       "guion": "La Cooperativa de Electricidad anuncia un corte de luz para el miércoles",
       "seccion": "Balcarce",
       "medios": [
-        "Puntonueve (FM 100.9)",
         "Infórmese Primero (FM 104.9)",
         "Radio Gabal (FM 104.1)"
       ],
@@ -918,7 +1210,7 @@
       "fecha": "2026-09-29T16:05:00.906Z",
       "sinFecha": false,
       "visto": "2026-09-29T17:02:31.052Z",
-      "relevancia": 100,
+      "relevancia": 90,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -986,7 +1278,6 @@
       "guion": "Pato Naranja gana por 99 a 12 y queda entre los cuatro mejores",
       "seccion": "Fútbol",
       "medios": [
-        "Puntonueve (FM 100.9)",
         "Infórmese Primero (FM 104.9)"
       ],
       "enlace": "http://www.informeseprimero.com.ar/2026/09/pato-naranja-goleo-pampas-y-quedo-entre.html",
@@ -994,7 +1285,7 @@
       "fecha": "2026-09-29T16:01:29.256Z",
       "sinFecha": false,
       "visto": "2026-09-29T16:31:06.769Z",
-      "relevancia": 90,
+      "relevancia": 80,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1064,9 +1355,9 @@
       "medios": [
         "QZ Noticias (Mar del Plata)",
         "Agencia DIB",
-        "Crónica",
         "Noticias Argentinas (NA)",
         "La Tecla",
+        "Crónica",
         "Realpolitik"
       ],
       "enlace": "https://noticiasargentinas.com/politica/fernando-gray-anuncio-una-exencion-impositiva-total-para-mayores-de-75-anos_a6abbdd6512f3a9893c237ce6",
@@ -1419,7 +1710,6 @@
       "guion": "El Complejo Polideportivo aloja un encuentro regional por el Día del Sordo",
       "seccion": "Balcarce",
       "medios": [
-        "Puntonueve (FM 100.9)",
         "Infórmese Primero (FM 104.9)",
         "Radio Gabal (FM 104.1)",
         "Municipalidad de Balcarce",
@@ -1874,6 +2164,7 @@
       "guion": "La Justicia Federal pide informes al Estado por fondos viales",
       "seccion": "Argentina",
       "medios": [
+        "La Nación",
         "Ámbito",
         "Minuto Uno",
         "C5N",
@@ -1966,8 +2257,8 @@
       "seccion": "Agro",
       "medios": [
         "TN (Todo Noticias)",
-        "Infobrisas (Radio Brisas)",
         "Agrositio",
+        "Infobrisas (Radio Brisas)",
         "Agroempresario"
       ],
       "enlace": "https://www.agrositio.com.ar/noticia/248583-la-molienda-de-soja-en-agosto-fue-la-mayor-de-las-ultimas-10-campanas.html",
@@ -2033,73 +2324,6 @@
       }
     },
     {
-      "id": "2e3etr",
-      "titulo": "Cierran más de doscientos locales de juguetes en un año por la crisis",
-      "copete": "La caída del consumo y el aumento de costos impactan en el sector juguetero. La cámara empresaria advierte sobre la competencia de importados y el contrabando.",
-      "cuerpo": "Entre los casos recientes figura el cese de operaciones de la tradicional cadena Tío Mario, ubicada en la avenida Pueyrredón, tras casi treinta años de actividad.\n\nEl dirigente detalló que los comercios enfrentan una fuerte presión por el incremento en los alquileres, los servicios y los salarios, lo que lleva a muchos a volcarse a la venta digital para liquidar mercadería. Asimismo, advirtió que el treinta por ciento del mercado corresponde a contrabando y cuestionó el impacto de la desregulación en las compras al exterior.\n\nActualmente, el territorio nacional cuenta con 2.800 establecimientos activos que intentan sostener sus estructuras frente a este escenario complejo.",
-      "guion": "Cierran más de doscientos locales de juguetes en un año por la crisis",
-      "seccion": "Economía",
-      "medios": [
-        "Minuto Uno",
-        "El Eco de Tandil"
-      ],
-      "enlace": "https://www.eleco.com.ar/nacionales/jugueterias-en-crisis-cerraron-mas-de-200-en-un-ano",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-29T12:26:40.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-29T23:01:10.965Z",
-      "relevancia": 42,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Más de 200 jugueterías cerraron en un año.",
-        "El sector sufre caída del consumo y suba de costos.",
-        "El treinta por ciento del mercado es contrabando.",
-        "Subsisten 2.800 comercios en todo el país."
-      ],
-      "seSabe": [
-        "Cerraron más de 200 jugueterías en el último año según la Cámara Argentina de la Industria del Juguete.",
-        "La cadena Tío Mario cerró su local de avenida Pueyrredón tras casi tres décadas.",
-        "El país cuenta actualmente con 2.800 jugueterías.",
-        "El 30 por ciento del mercado del juguete es de contrabando según el sector."
-      ],
-      "textoRedes": "La industria juguetería atraviesa una crisis con más de doscientos locales cerrados en un año debido a la caída del consumo, el aumento de costos y la competencia de productos importados, según informó la cámara del sector.",
-      "etiquetas": [
-        "Jugueterías",
-        "Crisis",
-        "Consumo"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "El Eco de Tandil",
-          "enlace": "https://www.eleco.com.ar/nacionales/jugueterias-en-crisis-cerraron-mas-de-200-en-un-ano",
-          "fecha": "2026-09-29T12:26:40.000Z",
-          "oficial": false,
-          "aporte": "Detalló el cierre de la cadena Tío Mario, datos de la cámara empresaria sobre cierres de locales y denunció contrabando."
-        },
-        {
-          "medio": "Minuto Uno",
-          "enlace": "https://www.minutouno.com/economia/crisis-economica-mas-300-jugueterias-cerraron-o-pasaron-comercio-online-n6328099",
-          "fecha": "2026-09-29T20:40:00.000Z",
-          "oficial": false,
-          "aporte": "Indicó que la transformación del sector se debe al consumo, compras externas y canales digitales."
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron dos medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "cierran-mas-de-doscientos-locales-de-juguetes-en-un-ano-por-la-crisis",
-      "foto": {
-        "archivo": "fotos-notas/2e3etr.jpg",
-        "credito": "Foto: El Eco de Tandil"
-      }
-    },
-    {
       "id": "4p0z63",
       "titulo": "Infraccionan a un tractor por circular en caminos rurales durante la tormenta",
       "copete": "El Comando de Prevención Rural sancionó al conductor de un tractor en el paraje La Esperanza. La medida responde a los daños que la maquinaria pesada causa en los caminos tras las lluvias.",
@@ -2108,7 +2332,6 @@
       "seccion": "Policiales",
       "medios": [
         "News Balcarce (FM 91.7)",
-        "Puntonueve (FM 100.9)",
         "Infórmese Primero (FM 104.9)",
         "Radio Gabal (FM 104.1)",
         "El Diario Balcarce",
@@ -2292,12 +2515,12 @@
         "QZ Noticias (Mar del Plata)",
         "El Día",
         "0221",
-        "Infoeme",
-        "Mi8 (Canal 8 Mar del Plata)",
-        "El Eco de Tandil",
         "Ámbito",
         "Zona Norte Diario",
-        "Agencia DIB"
+        "Agencia DIB",
+        "El Eco de Tandil",
+        "Mi8 (Canal 8 Mar del Plata)",
+        "Infoeme"
       ],
       "enlace": "https://www.ambito.com/informacion-general/la-provincia-buenos-aires-crea-un-programa-que-estudiantes-secundarios-se-formen-oficios-n6327786",
       "teniaImagenLaFuente": true,
@@ -2376,7 +2599,6 @@
       "guion": "Aston Martin renueva los contratos de Fernando Alonso y Lance Stroll para 2027",
       "seccion": "Automovilismo",
       "medios": [
-        "Campeones",
         "Motorsport",
         "La Nación",
         "Infobae",
@@ -2385,6 +2607,7 @@
         "Ámbito",
         "TyC Sports",
         "La Nueva",
+        "Campeones",
         "Radio Mitre",
         "Minuto Uno",
         "Clarín"
@@ -2652,67 +2875,6 @@
       "slug": "el-servicio-meteorologico-nacional-mantiene-alerta-amarilla-por"
     },
     {
-      "id": "13zbalx",
-      "titulo": "Continúa el alerta por lluvias y descartan la suspensión de clases",
-      "copete": "Las precipitaciones intensas siguen durante el momento más crítico y prevén una mejora hacia la tarde.",
-      "cuerpo": "El distrito transita el momento más crítico de la alerta por lluvias intensas, según informaron los datos meteorológicos. Resta aproximadamente una hora de máxima intensidad de precipitaciones antes de que comiencen a disminuir de manera paulatina hacia el mediodía.\n\nLas autoridades recomendaron a la comunidad mantenerse informada y evitar transitar por zonas anegadas mientras dure el pico de tormenta.\n\nFrente a las consultas sobre el dictado de actividades, los datos difundidos indican que no hay suspensión de clases.",
-      "guion": "Continúa el alerta por lluvias y descartan la suspensión de clases",
-      "seccion": "Balcarce",
-      "medios": [
-        "Puntonueve (FM 100.9)"
-      ],
-      "enlace": "https://puntonueve.com.ar/no-hay-suspension-de-clases/",
-      "teniaImagenLaFuente": false,
-      "fecha": "2026-09-29T10:21:24.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-29T19:31:15.444Z",
-      "relevancia": 67,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Atraviesan el momento más crítico de la alerta por lluvias",
-        "Prevén una mejora gradual del tiempo hacia el mediodía",
-        "Recomiendan evitar transitar por zonas anegadas"
-      ],
-      "seSabe": [
-        "Atraviesan el momento más crítico de la alerta por lluvias",
-        "Restaba aproximadamente una hora de máxima intensidad",
-        "Las precipitaciones comenzarán a disminuir hacia el mediodía",
-        "El tiempo mejorará durante la tarde con apertura del cielo"
-      ],
-      "noConfirmado": [
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "Continúa el momento más crítico de la alerta por lluvias intensas en Balcarce y descartan la suspensión de clases. Prevén que las precipitaciones disminuyan hacia el mediodía y el tiempo mejore por la tarde.",
-      "etiquetas": [
-        "lluvias",
-        "alerta",
-        "balcarce"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Puntonueve (FM 100.9)",
-          "enlace": "https://puntonueve.com.ar/no-hay-suspension-de-clases/",
-          "fecha": "2026-09-29T10:21:24.000Z",
-          "oficial": false,
-          "aporte": "Detalló el estado actual del alerta por lluvias, la evolución prevista y las recomendaciones para transitar"
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "continua-el-alerta-por-lluvias-y-descartan-la-suspension-de-clases",
-      "foto": {
-        "archivo": "fotos-notas/13zbalx.jpg",
-        "credito": "Foto: Puntonueve (FM 100.9)"
-      }
-    },
-    {
       "id": "1l8mp60",
       "titulo": "Una pareja de jubilados inquilinos necesita más de 2,5 millones",
       "copete": "Una pareja de jubilados que alquila en la Ciudad de Buenos Aires necesitó $2.526.219 en agosto para cubrir su canasta de consumo. El monto subió un 2,2% frente a julio y acumuló un incremento interanual del 35,3%.",
@@ -2724,9 +2886,9 @@
         "C5N",
         "Diario Popular",
         "Noticias Argentinas (NA)",
-        "La Verdad",
-        "Mi8 (Canal 8 Mar del Plata)",
         "La Nueva",
+        "Mi8 (Canal 8 Mar del Plata)",
+        "La Verdad",
         "Crónica"
       ],
       "enlace": "https://noticiasargentinas.com/economia/una-pareja-de-jubilados-que-alquila-necesito-mas-de--2-5-millones-para-vivir-en-agosto_a6abb838b12f3a9893c1662be",
@@ -2897,9 +3059,10 @@
       "guion": "El Gobierno designa a Adolfo Cambiaso embajador del deporte",
       "seccion": "Deportes",
       "medios": [
+        "Infobae",
         "La Nación",
         "Ámbito",
-        "Infobae",
+        "Clarín",
         "TN (Todo Noticias)",
         "El Destape",
         "Perfil",
@@ -2907,13 +3070,12 @@
         "C5N",
         "Canal 26",
         "Noticias Argentinas (NA)",
-        "La Verdad",
-        "QZ Noticias (Mar del Plata)",
-        "Mi8 (Canal 8 Mar del Plata)",
-        "Doble Amarilla",
-        "Clarín",
         "Crónica",
-        "La Nueva"
+        "QZ Noticias (Mar del Plata)",
+        "La Nueva",
+        "La Verdad",
+        "Mi8 (Canal 8 Mar del Plata)",
+        "Doble Amarilla"
       ],
       "enlace": "https://www.infobae.com/politica/2026/09/29/designaron-a-adolfo-cambiaso-como-embajador-internacional-del-deporte-argentino/",
       "teniaImagenLaFuente": true,
@@ -3084,13 +3246,13 @@
         "Canal 26",
         "Noticias Argentinas (NA)",
         "El Día",
-        "La Brújula 24",
-        "InfoRegión",
-        "ANDigital",
         "Crónica",
         "La Nueva",
         "Diputados Bonaerenses",
-        "A24"
+        "A24",
+        "La Brújula 24",
+        "ANDigital",
+        "InfoRegión"
       ],
       "enlace": "https://www.clarin.com/economia/luis-caputo-kicillof-anticristo-kirchnerismo-infierno-visto_0_t8mAjylcj2.html",
       "teniaImagenLaFuente": true,
@@ -3199,9 +3361,9 @@
         "LU9 Mar del Plata",
         "Ecos Diarios (Necochea)",
         "ANDigital",
-        "Mi8 (Canal 8 Mar del Plata)",
+        "Agencia DIB",
         "El Eco de Tandil",
-        "Agencia DIB"
+        "Mi8 (Canal 8 Mar del Plata)"
       ],
       "enlace": "https://dib.com.ar/sociedad/los-establecimientos-bonaerenses-que-garantizan-el-aborto-legal-se-triplicaron-seis-anos-n56095",
       "teniaImagenLaFuente": true,
@@ -3287,17 +3449,18 @@
       "seccion": "Fútbol",
       "medios": [
         "Clarín",
-        "Página/12",
+        "Perfil",
         "Ámbito",
         "TyC Sports",
         "Olé",
         "Minuto Uno",
-        "Crónica",
         "El Día",
         "0221",
-        "Doble Amarilla",
+        "La Página Millonaria",
         "Bolavip Argentina",
-        "La Página Millonaria"
+        "Crónica",
+        "Página/12",
+        "Doble Amarilla"
       ],
       "enlace": "https://www.0221.com.ar/estudiantes/finalmente-lionel-scaloni-libero-tomas-palacios-y-jugara-estudiantes-platense-copa-argentina-n134991",
       "teniaImagenLaFuente": true,
@@ -3436,9 +3599,7 @@
         "Noticias Argentinas (NA)",
         "El Día",
         "La Tecla",
-        "La Verdad",
         "La Opinión",
-        "ANDigital",
         "Minuto Uno",
         "Infobae",
         "La Nación",
@@ -3448,7 +3609,9 @@
         "La Nueva",
         "La Brújula 24",
         "Agencia DIB",
-        "Perfil"
+        "Perfil",
+        "ANDigital",
+        "La Verdad"
       ],
       "enlace": "https://www.minutouno.com/espectaculos/la-virgen-la-tosquera-laura-casabe-representara-la-argentina-los-oscar-n6327706",
       "teniaImagenLaFuente": true,
@@ -3561,18 +3724,15 @@
         "El Diario Balcarce"
       ],
       "enlace": "https://eldiariobalcarce.com.ar/el-6-de-diciembre-por-las-dudas-circuito-libre-fecha-para-el-tc-673",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-28T22:06:53.000Z",
-      "sinFecha": false,
+      "teniaImagenLaFuente": false,
+      "fecha": "2026-09-28T22:30:54.996Z",
+      "sinFecha": true,
       "visto": "2026-09-28T22:30:54.996Z",
-      "relevancia": 71,
+      "relevancia": 61,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
-      "temas": [
-        "autodromo",
-        "fangio"
-      ],
+      "temas": [],
       "como": "automatica",
       "claves": [
         "El autódromo Fangio evalúa recibir al Turismo Carretera el próximo 6 de diciembre.",
@@ -3961,68 +4121,6 @@
       }
     },
     {
-      "id": "rlvlss",
-      "titulo": "Valentín Galdon Ritvo suma su presencia a la Fiesta del Postre",
-      "copete": "El cocinero conocido en redes como @chefsale_ llega a la vigesimosegunda edición de la celebración gastronómica. Su presentación será el lunes 12 de octubre en la Sociedad Rural de Balcarce.",
-      "cuerpo": "El cocinero Valentín Galdon Ritvo se suma a la vigesimosegunda Fiesta Nacional del Postre con una presentación en la Sociedad Rural de Balcarce. Su clase de cocina será el lunes 12 de octubre a las 16, según informó la cuenta oficial de Turismo Balcarce.\n\nLa celebración gastronómica es organizada por la Municipalidad de Balcarce junto al Banco Provincia. El evento reunirá durante el fin de semana largo propuestas vinculadas a la cocina y espectáculos.",
-      "guion": "Valentín Galdon Ritvo suma su presencia a la Fiesta del Postre",
-      "seccion": "Cultura y agenda",
-      "medios": [
-        "Diario La Vanguardia"
-      ],
-      "enlace": "https://www.diariolavanguardia.com/noticias/44922-valentin-galdon-ritvo-se-suma-a-la-22-fiesta-nacional-del-postre/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-28T19:02:49.410Z",
-      "sinFecha": true,
-      "visto": "2026-09-28T19:02:49.410Z",
-      "relevancia": 63,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Valentín Galdon Ritvo se presenta en la Fiesta del Postre.",
-        "El cocinero actúa el lunes 12 de octubre a las 16.",
-        "La cita es en la Sociedad Rural de Balcarce.",
-        "La organización corre por cuenta del municipio y el Banco Provincia."
-      ],
-      "seSabe": [
-        "Valentín Galdon Ritvo, conocido como @chefsale_, se presentará en la Fiesta del Postre según Turismo Balcarce.",
-        "La actuación será el lunes 12 de octubre a las 16 en la Sociedad Rural.",
-        "La fiesta es organizada por la Municipalidad con el acompañamiento del Banco Provincia."
-      ],
-      "noConfirmado": [
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "etiquetas": [
-        "Fiesta Nacional del Postre",
-        "Valentín Galdon Ritvo",
-        "Sociedad Rural",
-        "Turismo Balcarce",
-        "Municipalidad de Balcarce"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Diario La Vanguardia",
-          "enlace": "https://www.diariolavanguardia.com/noticias/44922-valentin-galdon-ritvo-se-suma-a-la-22-fiesta-nacional-del-postre/",
-          "fecha": null,
-          "oficial": false,
-          "aporte": "Informó la participación del chef Valentín Galdon Ritvo en la Fiesta Nacional del Postre, con fecha, hora y lugar."
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "valentin-galdon-ritvo-suma-su-presencia-a-la-fiesta-del-postre",
-      "foto": {
-        "archivo": "fotos-notas/rlvlss.jpg",
-        "credito": "Foto: Diario La Vanguardia"
-      }
-    },
-    {
       "id": "37t3r4",
       "titulo": "Guillén propone sumar nuevos eventos al autódromo municipal",
       "copete": "El concejal de La Libertad Avanza destacó el impacto del regreso del automovilismo y planteó aprovechar la nueva infraestructura para organizar actividades durante todo el año.",
@@ -4196,13 +4294,14 @@
         "Página/12",
         "Canal 26",
         "Noticias Argentinas (NA)",
-        "La Verdad",
-        "El Marplatense",
-        "Mi8 (Canal 8 Mar del Plata)",
+        "El Día",
         "La Nueva",
         "Radio Mitre",
+        "El Marplatense",
         "Agencia DIB",
-        "Crónica"
+        "Mi8 (Canal 8 Mar del Plata)",
+        "Crónica",
+        "La Verdad"
       ],
       "enlace": "https://noticiasargentinas.com/economia/el-riesgo-pais-cae-y-se-acerca-a-los-600-puntos_a6abbd7d312f3a9893c2280a8",
       "teniaImagenLaFuente": true,
@@ -4456,11 +4555,11 @@
         "Argenpapa"
       ],
       "enlace": "https://www.argenpapa.com.ar/noticia/17837-argentina-sudeste-bonaerense-las-lluvias-alcanzaron-los-30-mm-en-tandil",
-      "teniaImagenLaFuente": true,
+      "teniaImagenLaFuente": false,
       "fecha": "2026-09-28T16:01:28.909Z",
       "sinFecha": true,
       "visto": "2026-09-28T16:01:28.909Z",
-      "relevancia": 26,
+      "relevancia": 16,
       "local": false,
       "deLaZona": true,
       "publicadaPor": null,
@@ -4659,7 +4758,6 @@
       "seccion": "Política",
       "medios": [
         "News Balcarce (FM 91.7)",
-        "Puntonueve (FM 100.9)",
         "Infórmese Primero (FM 104.9)"
       ],
       "enlace": "https://newsbalcarce.com.ar/?p=30868",
@@ -4667,7 +4765,7 @@
       "fecha": "2026-09-28T14:36:12.000Z",
       "sinFecha": false,
       "visto": "2026-09-28T16:31:05.398Z",
-      "relevancia": 93,
+      "relevancia": 83,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -4680,13 +4778,6 @@
           "medio": "News Balcarce (FM 91.7)",
           "enlace": "https://newsbalcarce.com.ar/?p=30868",
           "fecha": "2026-09-28T14:36:12.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Puntonueve (FM 100.9)",
-          "enlace": "https://puntonueve.com.ar/diego-cerone-mantuvo-un-encuentro-de-trabajo-con-diego-santilli-y-ezequiel-galli/",
-          "fecha": "2026-09-29T20:23:17.000Z",
           "oficial": false,
           "aporte": null
         },
@@ -4717,8 +4808,12 @@
         "Infobae",
         "Perfil",
         "El Destape",
+        "Página/12",
         "Minuto Uno",
-        "El Marplatense"
+        "Noticias Argentinas (NA)",
+        "El Día",
+        "El Marplatense",
+        "El Eco de Tandil"
       ],
       "enlace": "https://www.infobae.com/economia/2026/09/28/la-actividad-economica-de-caba-cayo-02-en-el-segundo-trimestre-cuales-fueron-los-sectores-mas-golpeados/",
       "teniaImagenLaFuente": true,
@@ -4973,28 +5068,28 @@
     }
   ],
   "secciones": [
+    "Balcarce",
     "Economía",
     "Fútbol",
-    "Balcarce",
     "Política",
+    "Argentina",
     "Cultura y agenda",
     "Deportes",
     "Agro",
     "Automovilismo",
     "Tecnología",
-    "Argentina",
     "Policiales"
   ],
   "temas": [
     {
       "nombre": "El autódromo",
       "ranura": "autodromo",
-      "cuantas": 8
+      "cuantas": 7
     },
     {
       "nombre": "Fangio",
       "ranura": "fangio",
-      "cuantas": 8
+      "cuantas": 7
     },
     {
       "nombre": "El Concejo Deliberante",
@@ -5014,11 +5109,11 @@
   ],
   "clima": {
     "ahora": {
-      "temp": 10,
+      "temp": 9,
       "sensacion": 6,
-      "humedad": 88,
-      "viento": 20,
-      "rumbo": "S",
+      "humedad": 90,
+      "viento": 19,
+      "rumbo": "SO",
       "cielo": "Nublado",
       "esDeDia": false
     },
@@ -5380,16 +5475,16 @@
   },
   "pendientes": [
     {
-      "id": "1ur5pa4",
-      "titulo": null,
-      "seccion": "Policiales",
-      "motivo": "necesita ojo humano: \"herida\""
-    },
-    {
       "id": "1a1eesp",
       "titulo": "Impulsan una diplomatura para la gestión y creación de…",
       "seccion": "Balcarce",
       "motivo": "verificación baja: espera a una persona (visto al reescribir)"
+    },
+    {
+      "id": "1ur5pa4",
+      "titulo": null,
+      "seccion": "Policiales",
+      "motivo": "necesita ojo humano: \"herida\""
     },
     {
       "id": "199k1u0",
@@ -5398,10 +5493,10 @@
       "motivo": "verificación baja: espera a una persona (visto al reescribir)"
     },
     {
-      "id": "10ybc9u",
-      "titulo": "Diputados salió al cruce de la justicia y negó encubrir…",
-      "seccion": "Política",
-      "motivo": "necesita ojo humano: \"denuncia\""
+      "id": "1pqkrnn",
+      "titulo": "En la previa de la visita del Papa, el Gobierno denunció…",
+      "seccion": "Argentina",
+      "motivo": "necesita ojo humano: \"denunció\""
     },
     {
       "id": "fr44g3",
@@ -5428,6 +5523,48 @@
       "motivo": "necesita ojo humano: \"niña\""
     },
     {
+      "id": "1xe4pop",
+      "titulo": "De una oferta laboral en Facebook a prisionero de guerra…",
+      "seccion": "Argentina",
+      "motivo": "internacional: sin relación con Balcarce"
+    },
+    {
+      "id": "18gldok",
+      "titulo": "Psicólogos bonaerenses cortan la atención con el IOMA por…",
+      "seccion": "Argentina",
+      "motivo": "necesita ojo humano: \"denuncia\""
+    },
+    {
+      "id": "1iitoa4",
+      "titulo": "Quiniela de hoy: resultados de los sorteos en Nacional…",
+      "seccion": "Argentina",
+      "motivo": "parece promoción, no noticia: \"sorteo\""
+    },
+    {
+      "id": "1u3nefi",
+      "titulo": "Causa Maradona: expectativa por la nueva declaración de…",
+      "seccion": "Argentina",
+      "motivo": "necesita ojo humano: \"acusado\""
+    },
+    {
+      "id": "jien96",
+      "titulo": "Un futbolista fue detenido en Mendoza por realizar gestos…",
+      "seccion": "Fútbol",
+      "motivo": "necesita ojo humano: \"detenido\""
+    },
+    {
+      "id": "1cx7eis",
+      "titulo": "Milei intimó al Reino Unido a que frene las operaciones de…",
+      "seccion": "Política",
+      "motivo": "necesita ojo humano: \"denuncia\""
+    },
+    {
+      "id": "10ybc9u",
+      "titulo": "Diputados salió al cruce de la justicia y negó encubrir…",
+      "seccion": "Política",
+      "motivo": "necesita ojo humano: \"denuncia\""
+    },
+    {
       "id": "nlwd45",
       "titulo": "Cano adelantó un nuevo sistema de turnos para el Hospital…",
       "seccion": "Balcarce",
@@ -5440,46 +5577,16 @@
       "motivo": "necesita ojo humano: \"alumno de\", en el texto completo de la fuente (visto al reescribir)"
     },
     {
-      "id": "1xe4pop",
-      "titulo": "De una oferta laboral en Facebook a prisionero de guerra…",
-      "seccion": "Argentina",
-      "motivo": "internacional: sin relación con Balcarce"
-    },
-    {
-      "id": "7ci1iq",
-      "titulo": "El Gobierno le dio dos semanas al Reino Unido para frenar…",
-      "seccion": "Argentina",
-      "motivo": "necesita ojo humano: \"denuncia\""
-    },
-    {
-      "id": "1iitoa4",
-      "titulo": "Quiniela de hoy: resultados de los sorteos en Nacional…",
-      "seccion": "Argentina",
-      "motivo": "parece promoción, no noticia: \"sorteo\""
-    },
-    {
-      "id": "jien96",
-      "titulo": "Un futbolista fue detenido en Mendoza por realizar gestos…",
-      "seccion": "Fútbol",
-      "motivo": "necesita ojo humano: \"detenido\""
-    },
-    {
-      "id": "1yygidx",
-      "titulo": "Por el pase de Lomónaco: otro revés del TAS para…",
-      "seccion": "Fútbol",
-      "motivo": "necesita ojo humano: \"denuncia\""
-    },
-    {
-      "id": "ny4zx0",
-      "titulo": "Fuego cruzado entre los acusados por la muerte de Maradona…",
-      "seccion": "Argentina",
-      "motivo": "necesita ojo humano: \"acusado\""
-    },
-    {
       "id": "1ogz9mz",
       "titulo": null,
       "seccion": "Argentina",
       "motivo": "necesita ojo humano: \"niño\""
+    },
+    {
+      "id": "1qzorkr",
+      "titulo": "San Isidro: el 77,6% de las comunicaciones de seguridad ya…",
+      "seccion": "Argentina",
+      "motivo": "necesita ojo humano: \"balearon\""
     },
     {
       "id": "o8z3cp",
@@ -5500,5 +5607,5 @@
       "motivo": "necesita ojo humano: \"denuncia\""
     }
   ],
-  "esperandoCuerpo": 10
+  "esperandoCuerpo": 9
 }

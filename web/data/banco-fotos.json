@@ -2354,28 +2354,28 @@
   "cuando": "2026-09-29T20:31:42.192Z"
  },
  "1qzorkr": {
-  "archivo": "fotos-notas/1qzorkr.jpg",
   "medio": "Minuto Uno",
-  "credito": "Foto: Minuto Uno",
   "licencia": null,
   "origen": "medio",
   "titulo": "San Isidro suma más de veinticinco mil vecinos al programa Ojos en Alerta",
   "enlace": "https://www.minutouno.com/sociedad/san-isidro-el-776-denuncias-ingresa-ojos-alerta-n6328077",
   "imagenOriginal": "https://media.minutouno.com/p/7552e6404859ccaaf152cc549d50b086/adjuntos/150/imagenes/043/672/0043672594/1200x675/smart/whatsapp-image-2026-09-29-at-145905-1.jpeg",
   "razon": "Es la única foto que ilustra claramente el programa Ojos en Alerta mediante un celular con la app de chat y no tiene marcas de medios ni menores reconocibles.",
-  "cuando": "2026-09-29T21:01:49.838Z"
+  "cuando": "2026-09-29T21:01:49.838Z",
+  "intentado": true,
+  "borrada": true
  },
  "1i0n3x9": {
-  "archivo": "fotos-notas/1i0n3x9.jpg",
   "medio": "El Diario Balcarce",
-  "credito": "Foto: El Diario Balcarce",
   "licencia": null,
   "origen": "medio",
   "titulo": "El autódromo Juan Manuel Fangio recupera actividad nacional",
   "enlace": "https://eldiariobalcarce.com.ar/el-juan-manuel-fangio-volvio-a-latir-811",
   "imagenOriginal": "http://imagenes.eldiariobalcarce.com.ar/2026-09-28-22-2-49PIPOL.JPG",
   "razon": "Es la única opción disponible y cumple con los requisitos de la nota sin marcas ni menores.",
-  "cuando": "2026-09-29T21:01:49.838Z"
+  "cuando": "2026-09-29T21:01:49.838Z",
+  "intentado": true,
+  "borrada": true
  },
  "8ydg1": {
   "archivo": "fotos-notas/8ydg1.jpg",
@@ -2443,5 +2443,29 @@
   "imagenOriginal": "https://cdnartic.ar/Bfoj1ZA_P_l45_hqtzjvQypoeq0=/1200x630/smart/filters:format(jpeg):quality(70)/https://cdn.eleco.com.ar/media/2026/09/juguetes.webp",
   "razon": "Muestra una juguetería surtida con buena nitidez, sin marcas de agua ni menores reconocibles.",
   "cuando": "2026-09-29T23:01:41.926Z"
+ },
+ "1puwvvm": {
+  "archivo": "fotos-notas/1puwvvm.jpg",
+  "medio": "Diario La Vanguardia",
+  "credito": "Foto: Diario La Vanguardia",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "El Geriátrico Pinto recibe diez colchones y diez almohadas",
+  "enlace": "https://www.diariolavanguardia.com/noticias/44947-el-geriatrico-pinto-recibio-colchones-y-almohadas-tras-la-movida-solidaria-moda-en-movimiento/",
+  "imagenOriginal": "https://www.diariolavanguardia.com/img/noticias/img_d-65892.png",
+  "razon": "Es la única opción disponible, cumple con todos los requisitos de calidad y no tiene marcas de medios ni menores.",
+  "cuando": "2026-09-29T23:31:48.166Z"
+ },
+ "13cwgql": {
+  "archivo": "fotos-notas/13cwgql.jpg",
+  "medio": "El Eco de Tandil",
+  "credito": "Foto: El Eco de Tandil",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "La Corte Suprema anula la absolución de César Milani por el caso Ledo",
+  "enlace": "https://www.eleco.com.ar/nacionales/la-corte-revoco-su-absolucion-de-cesar-milani-en-la-causa-por-la-desaparicion-de-un-soldado",
+  "imagenOriginal": "https://cdnartic.ar/rAyWFRGD2JqH4FSEbnNPjsqrOcs=/1200x630/smart/filters:format(jpeg):quality(70)/https://cdn.eleco.com.ar/media/2026/09/milani.webp",
+  "razon": "Tiene excelente nitidez, encuadre cerrado sobre el protagonista y no presenta marcas de agua ni menores.",
+  "cuando": "2026-09-29T23:31:48.166Z"
  }
 }
