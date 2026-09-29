@@ -123,6 +123,31 @@ retirarlo. Queda esto:
 | D13 | **La variable del ID de la página de Facebook tiene dos nombres** (`META_PAGE_ID` y `META_PAGINA_ID`). Ninguna está cargada y todos usan el ID fijo; unificar | Claude | Baja |
 | D14 | **Comentarios y títulos de pruebas que quedaron viejos** (no cambian lo que hace el código): `ampliar` en `ingesta/ingesta.mjs` ("sólo lo que no tiene cuerpo, unos 15 pedidos": abre todo lo raspado); `HORAS_EN_PORTADA` en `web/lib/archivo.js` ("el mismo criterio que el panel": el panel archiva a las 72 h); `panel/servidor.mjs` ("si la IA falla tres veces seguidas": son tres en el ciclo); `web/next.config.mjs` ("las únicas imágenes son las placas propias"); la descripción de `web/package.json` ("datos generados desde el panel"); `web/app/sitemap.js` (el feed "trae las últimas veinte"); `web/lib/tarjeta-diseno.js` (nombra `tarjeta-diseno.test.mjs`, que no existe: es `placas.test.mjs`); la pestaña "Para redes" de `panel/panel.html` ("el camino real de todos los días"); `redes.yml` (D2); el título "corta las listas en 72 horas" de `pruebas/archivo.test.mjs` (son 36) y el encabezado de `pruebas/criterios-extranjero-zona.test.mjs` ("los sepelios esperan a una persona", "7 días") | Claude | Baja |
 
+## Auditoría del sitio (29/09): lo que quedó
+
+Tres auditorías el 29/09 (documentos, sitio publicado y código de `web/`). **Ya se arregló el
+mismo día:** la imagen para compartir de 7 de cada 10 notas (daba 404), los títulos cortados,
+las secciones vacías, las fechas de modificación, el teclado en las pestañas, las fuentes
+repetidas y el peso de las fotos. Lo que falta, con las ideas nuevas en `IDEAS.md`:
+
+| # | Qué | Quién | Urgencia |
+|---|---|---|---|
+| A1 | **Notas repetidas con dos o más direcciones** (9 grupos vistos: el Fangio "reabre / reabre sus puertas / reinauguran" en 4 notas, YPF en 3, Top Serrano, Boccanera y Baigorria, Campo de Pato…). Compiten entre sí en Google. Unirlas (una queda y las otras redirigen con 301) y revisar por qué el cruce (`ingesta/cruce.mjs`) no las juntó | Claude | Alta |
+| A2 | **Mirar el sitio publicado después de la próxima corrida:** que las notas viejas muestren la tarjeta del sitio, que las fotos achicadas se vean y que `/seccion/tecnologia` ya no sea la página vieja del 24/09. Esa página respondía con encabezados que no son los de Cloudflare Pages (`x-robots-tag: noindex`, caché de 7 días): parece un resto del sitio anterior en Vercel (ver el punto 8 de arriba) | Claude | Alta |
+| A3 | **Alertas del vigilante cuando la clave de Gemini falla** (401, 402, 403 o "sin crédito") y 30 días antes de que venzan las voces propias. Hoy se cortó la voz y nos enteramos mirando | Claude | Alta |
+| A4 | **Google AI Studio:** separar Radar de los otros proyectos (la cuenta de facturación es compartida y ya se llevaron parte del saldo) y poner el límite mensual de USD 10 en RadarBalcarce (hoy figura sin límite) | Los dos | Media |
+| A5 | **Confirmar que el WhatsApp 5492266511612 del pie de cada página es el del medio**, no uno personal | Los dos | Media |
+| A6 | **Botones y enlaces de menos de 44 px en el celular** (38 de 91 en la portada: "Ver todo →", teléfonos de emergencia, "Facebook") y 73 textos de menos de 12 px | Claude | Media |
+| A7 | **316 de las 499 páginas archivadas no tienen cuerpo de verdad** (menos de 70 palabras): no están en el sitemap pero Google las puede encontrar. `noindex` o sacarlas del archivo | Claude | Media |
+| A8 | **Las tarjetas para compartir con foto pesan hasta 749 KB** (34 de 69 pasan de 300 KB): pasarlas a JPEG | Claude | Media |
+| A9 | **La política de privacidad debe decir** que el navegador le pide cosas a Google Fonts, Open-Meteo y DolarApi/Bluelytics (su IP les llega). Mejor todavía, servir las tipografías desde el sitio (`IDEAS.md`) | Los dos; Claude | Media |
+| A10 | **Pruebas que faltan:** un verificador de enlaces del sitio compilado (hoy ya controla la imagen para compartir), un tope de peso para las fotos y las tarjetas, y "Hoy en Balcarce" en un navegador de verdad | Claude | Media |
+| A11 | **Feed y sitemap:** `robots.txt` bloquea `/feed.xml` pero la portada lo anuncia; el feed no tiene `lastBuildDate` ni `atom:link`; el sitemap pone la misma fecha en todas las páginas | Claude | Baja |
+| A12 | **Cosas chicas del sitio:** sin `ads.txt`, sin CSP completa, sin "saltar al contenido"; los enlaces de compartir por correo pasan por la ofuscación de Cloudflare (probar a mano que abren el correo); el buscador sin foco atrapado ni anuncio de resultados | Claude | Baja |
+| A13 | **Código repetido o sin uso en `web/`:** `nombresDeTurno` (`hoy-balcarce.js`) no la usa nadie, `hoyEnBalcarce` está copiada en dos archivos, la clase `.fraunces` quedó con nombre viejo | Claude | Baja |
+| A14 | **`banco-fotos.json` guarda cada nota probada para siempre** (unos 40 KB por día): podar las de más de 180 días. Además había 2 grupos de fotos idénticas guardadas dos y tres veces | Claude | Baja |
+| A15 | **`next` 15.5.26** (parche) y las 2 vulnerabilidades de compilación (postcss y next: no afectan al sitio publicado, que son archivos estáticos). No usar `npm audit fix --force`: sube a next 16 | Claude | Baja |
+
 ## Para Claude (código y seguimiento)
 
 **Alta**

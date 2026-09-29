@@ -17,35 +17,50 @@ documento (cada fila linkea a su detalle) más dos ideas nuevas de esta noche.
 que un tercero conteste algo, y no hace falta audiencia previa para que
 funcione.*
 
-| # | Idea | Qué es, en una línea | Esfuerzo | Por qué acá |
-|---|---|---|---|---|
-| 1 | **Farmacia por WhatsApp** | Un mensaje automático contesta qué farmacia está de turno | Bajo | Todo el dato ya existe; sólo falta la puerta de WhatsApp |
-| 2 | **Lista de WhatsApp para conseguir información** *(nueva, 28/09)* | Un número o lista de difusión donde vecinos mandan datos, fotos o avisos ("se cortó la luz en tal barrio", "hay una obra en tal calle") | Bajo | El buzón (`panel/buzon.mjs`) ya sabe moderar esto; falta sólo la puerta de entrada, igual que "en qué quedó" |
-| 3 | **Aviso cuando una fuente deja de traer notas** | El vigilante avisa si un medio no trae nada hace 12 horas | Bajo | Ya existe el vigilante; es sumarle una regla |
-| 4 | **Ser buen vecino con los medios** | Guardar el texto ya leído y espaciar los pedidos a la misma fuente | Bajo | Evita que algún día nos bloqueen; es casi gratis |
-| 5 | **Estadísticas en el panel** | Ver la evolución de visitas y seguidores sin esperar el WhatsApp | Bajo | El dato ya se guarda (`estadisticas.json`); falta mostrarlo |
-| 6 | **Alta en Google Noticias** | Anotar el sitio en Publisher Center | Bajo | Ya están todos los requisitos; es un trámite manual |
-| 7 | **"En qué quedó"** | Cargar 3 o 4 promesas concretas del municipio y revisarlas cada 4-6 semanas | Bajo | El tipo `seguimiento` del buzón ya existe; sólo falta cargar la primera ficha |
-| 8 | **Efemérides, fechas patrias y "la semana en Balcarce"** | Contenido fijo que llena la portada aunque no pase nada (Fangio, feriados, resumen del domingo) | Bajo-medio | No depende de que nadie más publique nada; se arma una vez y sirve todos los años |
-| 9 | **"Lo que abre y lo que cierra"** | Un posteo semanal con comercios nuevos y cerrados | Bajo-medio | Barato, se comparte solo, y es la puerta a vender publicidad |
-| 10 | **Historias invitando a la gente a participar** | Encuestas, "contanos tu reclamo u opinión", y de fondo la idea 2: que cualquier vecino pueda avisar un hecho, no sólo opinar | Bajo-medio | La regla de moderación ya existe (nunca de un solo lado, opinión siempre firmada); falta la costumbre de invitar seguido |
-| 11 | **Clasificados** (compra-venta, changas, alquileres) | Un aviso que paga el propio vecino, no un espacio por mes | Medio | Complementa la guía comercial sin competir con los avisos fijos |
-| 12 | **"Lo que pasó en el Concejo"** | Resumir en 5 líneas las actas que nadie lee | Medio | Requiere leer PDFs administrativos cada sesión, pero nadie más lo hace |
-| 13 | **Aprobar notas desde el celular** | Una mini app con Aprobar / Rechazar / Corregir, sin depender de la PC prendida | Medio | Hoy lo amarillo espera a que Hernán esté frente a la PC |
-| 14 | **Buscar en todo el archivo** | El buscador hoy sólo busca en la portada del día | Medio | Un índice liviano alcanza; los 180 días de archivo ya existen |
-| 15 | **Automovilismo como marca propia** | Una nota semanal sobre pilotos balcarceños en cualquier categoría | Medio | Nicho que nadie cubre, con público asegurado por Fangio |
-| 16 | **Página pública de correcciones** | `/correcciones`: qué se corrigió, cuándo y por qué | Medio | Da confianza, y lo piden Google Noticias y AdSense |
-| 17 | **Tipografías servidas por el sitio, no por Google Fonts** | Que la web no le muestre la IP de cada lector a Google | Medio | Ya están dos cortes; faltan todos los pesos que pide `layout.js` |
-| 18 | **Panel de salud del sistema** | Ver de un vistazo si algo se cayó, sin abrir tres workflows | Medio | El vigilante ya cubre gran parte por WhatsApp; esto es para cuando hace falta mirar en el momento |
-| 19 | **Vista previa de lo que el reloj va a publicar** | Ver antes las próximas horas de redes | Medio | Cambia cómo se mira el sistema, no cómo funciona |
-| 20 | **Guía comercial y mapa de Balcarce** | El catálogo de venta: mapa + fichas + mejoras pagas | Alto | Lo caro no es el código, es cargar y mantener los datos de cada comercio |
-| 21 | **Contenido gratis de gente local** | Músicos, fotógrafos o video makers que cedan material a cambio de crédito | Alto (investigación) | Depende de contactar y convencer a terceros, uno por uno |
-| 22 | ~~**Segundo locutor (voz de hombre)**~~ **Hecho el 28/09** | Dos voces propias (locutora y locutor) con un reparto fijo por pieza (`CRITERIO-REDES.md` § 6, regla 76) | — | Queda la idea de ponerles nombre a las dos voces |
-| 23 | **Revisar la accesibilidad a fondo** | El resto de lo que quedó pendiente del 25/09 | Medio-alto | Ninguna fecha límite, pero se acumula si no se agenda |
-| 24 | **Analítica propia sin cookies** | Más completa que la de Cloudflare | Alto | Es construir un sistema nuevo, no activar uno que ya existe |
-| 25 | **Probar los workflows en la máquina (`act`)** | Ver un workflow de GitHub Actions sin subirlo | Medio (técnico) | Ahorra tiempo a futuro, pero no lo nota nadie de afuera |
-| 26 | **Historieta / mascota propia** | Un personaje de Balcarce, como los diarios de antes | Alto | Hernán mismo lo puso "para cuando el medio ya tenga lectores" |
-| 27 | **Radio online o YouTube 24/7** | Una señal que no se corta nunca, con nuestras piezas | Alto | Pide un servidor aparte y pagar derechos de música; "para después del lanzamiento" |
+*Reordenada y clasificada el 29/09: cada idea lleva su **área** (Contenido,
+Audiencia, Web, Web / SEO, Sistema, Negocio o Voz), se sumaron las que salieron
+de estos días (marcadas "nueva, 29/09": las efemérides, el clima de otros años, el
+cielo, teléfonos, compartir, RSS y las de la auditoría del sitio) y el segundo
+locutor salió porque ya está hecho (abajo, "Lo que ya se hizo"). Los números de
+esta tabla son de esta tabla: no coinciden con los de "Las que yo haría
+primero".*
+
+| # | Área | Idea | Qué es, en una línea | Esfuerzo | Por qué acá |
+|---|---|---|---|---|---|
+| 1 | Audiencia | **Farmacia por WhatsApp** | Un mensaje automático contesta qué farmacia está de turno | Bajo | Todo el dato ya existe; sólo falta la puerta de WhatsApp |
+| 2 | Audiencia | **Lista de WhatsApp para conseguir información** *(nueva, 28/09)* | Un número o lista de difusión donde vecinos mandan datos, fotos o avisos ("se cortó la luz en tal barrio", "hay una obra en tal calle") | Bajo | El buzón (`panel/buzon.mjs`) ya sabe moderar esto; falta sólo la puerta de entrada, igual que "en qué quedó" |
+| 3 | Contenido | **"Un día como hoy" a las 12:30** *(nueva, 29/09)* | Un reel, una historia y una nota por día con hechos de la fecha, un balcarceño si coincide y el día especial | Bajo-medio | Las fuentes ya se probaron: Wikipedia en español, Wikidata (31 nacidos en Balcarce, con Fangio) y el calendario oficial de feriados. Detalle en "Sumadas el 29/09" |
+| 4 | Contenido | **El clima de Balcarce un día como hoy** *(nueva, 29/09)* | "El 29 de septiembre de 2019 se registraron 24,9°, la máxima más alta desde 1950" (Open-Meteo, datos de modelo, no de estación) | Bajo | Probado el 29/09: contenido propio y verificable para la pieza del clima |
+| 5 | Contenido | **El cielo de hoy** *(nueva, 29/09)* | La fase de la luna, la salida y la puesta del sol y las lluvias de meteoros del mes | Bajo | Se calcula sin depender de ninguna fuente externa |
+| 6 | Sistema | **Aviso cuando una fuente deja de traer notas** | El vigilante avisa si un medio no trae nada hace 12 horas | Bajo | Ya existe el vigilante; es sumarle una regla |
+| 7 | Sistema | **Ser buen vecino con los medios** | Guardar el texto ya leído y espaciar los pedidos a la misma fuente | Bajo | Evita que algún día nos bloqueen; es casi gratis |
+| 8 | Sistema | **Estadísticas en el panel** | Ver la evolución de visitas y seguidores sin esperar el WhatsApp | Bajo | El dato ya se guarda (`estadisticas.json`); falta mostrarlo |
+| 9 | Web / SEO | **Alta en Google Noticias** | Anotar el sitio en Publisher Center | Bajo | Ya están todos los requisitos; es un trámite manual |
+| 10 | Contenido | **"En qué quedó"** | Cargar 3 o 4 promesas concretas del municipio y revisarlas cada 4-6 semanas | Bajo | El tipo `seguimiento` del buzón ya existe; sólo falta cargar la primera ficha |
+| 11 | Web / SEO | **Una página de teléfonos y emergencias** *(nueva, 29/09)* | Todos los teléfonos útiles juntos, con "Llamar", las guardias (cooperativa, farmacias, hospital) y su propio lugar en Google | Bajo | El dato ya está en `ingesta/utiles.mjs`; es de lo más buscado en un pueblo |
+| 12 | Web / SEO | **Compartir mejor desde el celular** *(nueva, 29/09)* | Botón nativo de compartir, el enlace sin `?fbclid`, un "Copiado" que se anuncie y un botón fijo de WhatsApp al pie de la nota | Bajo | Salió de la auditoría del sitio: casi todos comparten desde el celular |
+| 13 | Audiencia | **Un RSS por sección** *(nueva, 29/09)* | `/seccion/balcarce/feed.xml`, pensado para canales de WhatsApp y lectores de noticias | Bajo | El feed general ya existe; falta partirlo |
+| 14 | Contenido | **La semana en Balcarce y las fechas patrias** | Contenido fijo que llena la portada aunque no pase nada (feriados, días temáticos, resumen del domingo) | Bajo-medio | No depende de que nadie más publique nada. Las efemérides pasaron a su propia fila |
+| 15 | Contenido | **"Lo que abre y lo que cierra"** | Un posteo semanal con comercios nuevos y cerrados | Bajo-medio | Barato, se comparte solo, y es la puerta a vender publicidad |
+| 16 | Audiencia | **Historias invitando a la gente a participar** | Encuestas, "contanos tu reclamo u opinión", y de fondo la idea 2: que cualquier vecino pueda avisar un hecho, no sólo opinar | Bajo-medio | La regla de moderación ya existe (nunca de un solo lado, opinión siempre firmada); falta la costumbre de invitar seguido |
+| 17 | Web | **Buscar en todo el archivo** | El buscador hoy sólo busca en las notas de las últimas 36 horas y cada página trae su índice adentro (unos 27 KB repetidos en 583 páginas) | Medio | Un `buscador.json` que se baja al abrir la lupa alcanza; los 180 días de archivo ya existen |
+| 18 | Web / SEO | **Página pública de correcciones y política editorial** | `/correcciones` (qué se corrigió, cuándo y por qué) y una página con cómo trabajamos, enlazada desde cada nota | Medio | Da confianza, y lo piden Google Noticias y AdSense |
+| 19 | Web / SEO | **Encender las páginas de "Temas"** *(nueva, 29/09)* | Prender `MOSTRAR_TEMAS` cuando cada tema tenga suficientes notas, para enlazar notas entre sí | Medio | Las páginas ya existen y están en el sitemap; hoy nada las enlaza |
+| 20 | Negocio | **Clasificados** (compra-venta, changas, alquileres) | Un aviso que paga el propio vecino, no un espacio por mes | Medio | Complementa la guía comercial sin competir con los avisos fijos |
+| 21 | Contenido | **"Lo que pasó en el Concejo"** | Resumir en 5 líneas las actas que nadie lee | Medio | Requiere leer PDFs administrativos cada sesión, pero nadie más lo hace |
+| 22 | Sistema | **Aprobar notas desde el celular** | Una mini app con Aprobar / Rechazar / Corregir, sin depender de la PC prendida | Medio | Hoy lo amarillo espera a que Hernán esté frente a la PC |
+| 23 | Contenido | **Automovilismo como marca propia** | Una nota semanal sobre pilotos balcarceños en cualquier categoría | Medio | Nicho que nadie cubre, con público asegurado por Fangio |
+| 24 | Web | **Tipografías servidas por el sitio, no por Google Fonts** | Que la web no le muestre la IP de cada lector a Google | Medio | Ya están dos cortes; faltan todos los pesos que pide `layout.js` |
+| 25 | Voz | **Nombre propio para los dos locutores, y noticiero de dos lectores** *(nueva, 29/09)* | Ponerles nombre y probar que se turnen las notas de un mismo reel, sin charla | Medio | La charla simulada se probó el 28/09 y sonaba falsa (ver "Las que NO haría"); el noticiero de dos lectores quedó sin decidir |
+| 26 | Sistema | **Panel de salud del sistema** | Ver de un vistazo si algo se cayó, sin abrir tres workflows | Medio | El vigilante ya cubre gran parte por WhatsApp; esto es para cuando hace falta mirar en el momento |
+| 27 | Sistema | **Vista previa de lo que el reloj va a publicar** | Ver antes las próximas horas de redes | Medio | Cambia cómo se mira el sistema, no cómo funciona |
+| 28 | Negocio | **Guía comercial y mapa de Balcarce** | El catálogo de venta: mapa + fichas + mejoras pagas | Alto | Lo caro no es el código, es cargar y mantener los datos de cada comercio |
+| 29 | Contenido | **Contenido gratis de gente local** | Músicos, fotógrafos o video makers que cedan material a cambio de crédito | Alto (investigación) | Depende de contactar y convencer a terceros, uno por uno |
+| 30 | Web | **Revisar la accesibilidad a fondo** | El resto de lo que quedó pendiente del 25/09 | Medio-alto | Ninguna fecha límite, pero se acumula si no se agenda |
+| 31 | Sistema | **Analítica propia sin cookies** | Más completa que la de Cloudflare | Alto | Es construir un sistema nuevo, no activar uno que ya existe |
+| 32 | Sistema | **Probar los workflows en la máquina (`act`)** | Ver un workflow de GitHub Actions sin subirlo | Medio (técnico) | Ahorra tiempo a futuro, pero no lo nota nadie de afuera |
+| 33 | Contenido | **Historieta / mascota propia** | Un personaje de Balcarce, como los diarios de antes | Alto | Hernán mismo lo puso "para cuando el medio ya tenga lectores" |
+| 34 | Audiencia | **Radio online o YouTube 24/7** | Una señal que no se corta nunca, con nuestras piezas | Alto | Pide un servidor aparte y pagar derechos de música; "para después del lanzamiento" |
 
 No está en la tabla la publicidad en sí (avisos, precios, AdSense): eso vive
 en `PUBLICIDAD.md`, que ya tiene su propio orden.
@@ -444,6 +459,15 @@ que más se notan.
   podcast (25/09; `CRITERIO-EDITORIAL.md` § 8).
 - La base de comercios de Balcarce (145, de OpenStreetMap; `COMERCIAL.md`):
   falta el mapa y la guía pública.
+- **Dos voces propias, una por pieza** (28/09, regla 76): la locutora y el locutor,
+  con Voice Design de Gemini 3.8 y un reparto fijo (`CRITERIO-REDES.md` § 6). Salió
+  de la idea del "segundo locutor".
+- **El panel de tres pestañas en la portada** (Clima, Farmacias, Dólar), compacto:
+  235 px en el celular (28-29/09).
+- **La guardia de la Cooperativa Eléctrica en los teléfonos útiles** (29/09, regla 77).
+- **Auditoría del sitio del 29/09**: ninguna nota apunta ya a una imagen para compartir
+  que no existe (era el 71 %), títulos de hasta 60 caracteres, secciones vacías sin 404,
+  teclado en las pestañas, fuentes numeradas, fotos achicadas (de 1,8 MB a unos 150 KB).
 
 ## Las que NO haría
 
@@ -459,6 +483,12 @@ chico la gente se cruza en la calle. No vale la pena.
 
 **Crecer con seguidores comprados.** Se nota, y al algoritmo no lo engañás:
 te muestra menos si tu gente no interactúa.
+
+**Una charla simulada entre dos voces de IA.** Se probaron tres versiones el 28/09
+(charla, charla con estilos y "mhm", y un noticiero con dos lectores) y la charla
+suena falsa: cada intervención se genera sin saber qué dijo la anterior, y todo lo
+que se agrega para que "converse" es texto que no sale de las fuentes verificadas.
+Una voz por pieza, alternadas a lo largo del día, suena profesional.
 
 ---
 
@@ -487,3 +517,66 @@ te muestra menos si tu gente no interactúa.
   cambio de crédito y difusión, para no depender sólo de lo que generamos
   por código. Falta investigar a fondo; ver también si cruza con "Las
   fotos" (`CRITERIO-EDITORIAL.md`) para el banco de fotos propio.
+
+---
+
+## Sumadas el 29/09: efemérides y otros datos, con las fuentes ya probadas
+
+*Pedido de Hernán y Andrés (28-29/09): "agregar algo más de contenido, efemérides
+que incluya personas y días importantes, entre el repaso de la mañana y el de la
+tarde, y que genere la nota para el diario". Estas fuentes se probaron el 29/09 y
+andan sin clave.*
+
+### "Un día como hoy" (12:30, reel + historia + nota)
+
+**Fuentes que sirven (probadas):**
+- **Wikipedia en español, "un día como hoy"** (`es.wikipedia.org/api/rest_v1/feed/onthisday/all/MM/DD`):
+  hechos, nacimientos, fallecimientos y celebraciones de cada fecha, con la página de
+  origen de cada uno. Trae los días de Argentina (el 29/9, el Día del Inventor). Es CC BY-SA:
+  la nota se escribe con palabras propias y la fuente figura en "Fuentes (N)".
+- **Wikidata (consulta SPARQL): personas nacidas en Balcarce.** Dio 31, con sus fechas:
+  Fangio (24/6/1911 y 17/7/1995), Lucas Kraglievich (3/8/1886, paleontólogo), Juan Manuel Bordeu
+  (28/1/1934), Carlos Heras (historiador), Santiago Mangoni y varios futbolistas. Hay que
+  descartar las fechas "1 de enero" (es sólo el año) y ser cuidadosos con las personas vivas.
+- **Wikidata: argentinos conocidos por fecha** (más de 12 idiomas de Wikipedia como señal de
+  fama). Necesita un filtro de temas sensibles: para el 29/9 apareció una detenida desaparecida.
+- **Calendario oficial de feriados de Argentina** (`api.argentinadatos.com/v1/feriados/AAAA`).
+- **Lo local, a mano:** un archivo (`ingesta/efemerides-locales.json`) para cargar fechas de
+  Balcarce (fundación, clubes, escuelas, el autódromo) verificadas con el Museo y el Archivo.
+
+**Lo que no sirve:** las efemérides del Ministerio de Educación (el sitio bloquea el acceso
+automático: sólo como control a mano) y los portales grandes (texto con derechos: no se copia).
+
+**Cómo se armaría:** un hecho de Wikipedia, el balcarceño de la fecha si coincide, el día
+especial y el dato del clima de otros años. La IA redacta sólo con esos hechos y el
+verificador controla que no agregue nada (`ingesta/verificar.mjs`). Reglas: que sea de
+Argentina o de Balcarce primero; nada de asesinatos, atentados ni víctimas (salvo feriados
+nacionales); nunca de menores; cuerpo de 70 palabras o más. Sale a las 12:30 con la
+voz de la locutora y la nota "Un día como hoy" en Cultura y agenda. Toca el contrato del
+día (`CONTRATO_DIARIO`: un reel más, una historia más) y agrega unos 35 segundos de voz por
+día, unos 40 centavos de dólar por mes.
+
+### El clima de Balcarce un día como hoy
+
+Con los datos históricos de Open-Meteo (desde 1950, reanálisis ERA5, unos 27.700 días,
+760 KB) se calcula por fecha la máxima más alta, la mínima más baja y la mayor lluvia. Para el
+29/9: máxima 24,9° (2019), mínima 2° (1963), lluvia 37,2 mm (2013). Son **datos de modelo, no de
+una estación**: la nota tiene que decir "según los datos históricos de Open-Meteo". Se baja una
+sola vez y se guarda en un archivo del repositorio.
+
+### El cielo de hoy
+
+La fase de la luna, la salida y la puesta del sol (ya las trae el pronóstico), los solsticios y
+equinoccios y las lluvias de meteoros del mes (Perseidas, Gemínidas…). Todo se calcula o
+sale de un calendario fijo: no depende de ninguna fuente.
+
+### Otras ideas que dejó la auditoría del sitio (29/09)
+
+- "Actualizado hace X min" arriba de la portada, además del pie: refuerza la promesa de frescura.
+- La fecha y la hora exactas junto al "hace X" de cada nota.
+- Que las pestañas de "Hoy en Balcarce" se puedan enlazar (`/#dolar`).
+- Que la auditoría de los lunes cuente cuántas notas tienen la imagen rota y cuántos grupos de
+  notas repetidas hay.
+- Un verificador de enlaces sobre el sitio compilado (todo `href`, `src` e imagen tiene que
+  existir): hoy ya controla la imagen para compartir; falta el resto.
+- La caja de búsqueda de Google (`SearchAction`) cuando exista la página de búsqueda.
