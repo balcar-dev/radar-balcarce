@@ -1,10 +1,10 @@
 {
- "generado": "2026-09-30T16:33:31.361Z",
- "portada": 54,
- "archivo": 627,
- "esperandoCuerpo": 6,
+ "generado": "2026-09-30T17:03:48.872Z",
+ "portada": 60,
+ "archivo": 633,
+ "esperandoCuerpo": 5,
  "redes": {
-  "generado": "2026-09-30T16:33:31.409Z",
+  "generado": "2026-09-30T17:03:48.955Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -106,27 +106,27 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 50,
+    "segundos": 52,
     "notas": [
-     {
-      "id": "10xubmm",
-      "titulo": "Joan Laporta revela el llamado que frenó el pase de Lautaro",
-      "seccion": "Fútbol"
-     },
-     {
-      "id": "h36tlu",
-      "titulo": "La Municipalidad recauda millones en una subasta de tierras",
-      "seccion": "Balcarce"
-     },
-     {
-      "id": "1rpzsy3",
-      "titulo": "Tres jugadores locales integran la selección provincial de pádel",
-      "seccion": "Deportes"
-     },
      {
       "id": "1j6ui2n",
       "titulo": "La ACTC sanciona a Mariano Werner con multa y largada desde el fondo",
       "seccion": "Automovilismo"
+     },
+     {
+      "id": "y9vwef",
+      "titulo": "El equipo de fútbol playa clasifica a la final bonaerense",
+      "seccion": "Deportes"
+     },
+     {
+      "id": "v2h1r4",
+      "titulo": "Lanzan una diplomatura universitaria para emprendedores locales",
+      "seccion": "Balcarce"
+     },
+     {
+      "id": "1s10vxl",
+      "titulo": "Rocío Espinillo anticipa su receta para la Fiesta del Postre",
+      "seccion": "Cultura y agenda"
      }
     ]
    },
@@ -140,8 +140,13 @@
     "segundos": 52,
     "notas": [
      {
-      "id": "y9vwef",
-      "titulo": "El equipo de fútbol playa clasifica a la final bonaerense",
+      "id": "h36tlu",
+      "titulo": "La Municipalidad recauda millones en una subasta de tierras",
+      "seccion": "Balcarce"
+     },
+     {
+      "id": "5evpzb",
+      "titulo": "Cabrera y Otero ganan la carrera nocturna en Napaleofú",
       "seccion": "Deportes"
      },
      {
@@ -153,11 +158,6 @@
       "id": "616lop",
       "titulo": "Japón abre su mercado a la carne vacuna de todo el país",
       "seccion": "Agro"
-     },
-     {
-      "id": "1vgun5x",
-      "titulo": "Balcarce participa de la trigésima Feria Internacional de Turismo",
-      "seccion": "Cultura y agenda"
      }
     ]
    }
@@ -173,13 +173,18 @@
      "id": "1rpzsy3",
      "titulo": "Tres jugadores locales integran la selección provincial de pádel",
      "cuando": "2026-09-30T15:04:58.480Z"
+    },
+    {
+     "id": "h36tlu",
+     "titulo": "La Municipalidad recauda millones en una subasta de tierras",
+     "cuando": "2026-09-30T16:35:26.718Z"
     }
    ],
    "cola": [
     {
-     "id": "h36tlu",
-     "titulo": "La Municipalidad recauda millones en una subasta de tierras",
-     "seccion": "Balcarce",
+     "id": "1s10vxl",
+     "titulo": "Rocío Espinillo anticipa su receta para la Fiesta del Postre",
+     "seccion": "Cultura y agenda",
      "marcada": false
     },
     {
@@ -189,8 +194,8 @@
      "marcada": false
     }
    ],
-   "cupo": 3,
-   "proximoDesde": "2026-09-30T16:34:58.480Z",
+   "cupo": 2,
+   "proximoDesde": "2026-09-30T18:05:26.718Z",
    "porDia": 5,
    "minutosEntrePosteos": 90,
    "edadMaximaHoras": 8,
