@@ -1,10 +1,10 @@
 {
- "generado": "2026-09-30T08:01:05.655Z",
+ "generado": "2026-09-30T08:31:13.267Z",
  "portada": 53,
  "archivo": 599,
  "esperandoCuerpo": 1,
  "redes": {
-  "generado": "2026-09-30T08:01:05.693Z",
+  "generado": "2026-09-30T08:31:13.293Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -83,14 +83,14 @@
       "seccion": "Agro"
      },
      {
-      "id": "1o1dlqq",
-      "titulo": "La Escuela de Arte Astor Piazzolla expone desde el 2 de octubre en el Museo Histórico",
-      "seccion": "Cultura y agenda"
-     },
-     {
       "id": "1pbrz27",
       "titulo": "Aston Martin renueva los contratos de Fernando Alonso y Lance Stroll para 2027",
       "seccion": "Automovilismo"
+     },
+     {
+      "id": "1o1dlqq",
+      "titulo": "La Escuela de Arte Astor Piazzolla expone desde el 2 de octubre en el Museo Histórico",
+      "seccion": "Cultura y agenda"
      },
      {
       "id": "4r2jgy",
@@ -106,17 +106,12 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 53,
+    "segundos": 47,
     "notas": [
      {
       "id": "1j6ui2n",
       "titulo": "La ACTC sanciona a Mariano Werner con multa y largada desde el fondo",
       "seccion": "Automovilismo"
-     },
-     {
-      "id": "436uz0",
-      "titulo": "San Lorenzo sufre un millonario embargo de su exentrenador",
-      "seccion": "Fútbol"
      },
      {
       "id": "1hkh8ez",
@@ -127,6 +122,11 @@
       "id": "1vgun5x",
       "titulo": "Balcarce participa de la trigésima Feria Internacional de Turismo",
       "seccion": "Cultura y agenda"
+     },
+     {
+      "id": "h7o4xt",
+      "titulo": "Cambareri cuestiona el ajuste y la situación en el INTA Balcarce",
+      "seccion": "Agro"
      }
     ]
    },
@@ -137,7 +137,7 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 43,
+    "segundos": 54,
     "notas": [
      {
       "id": "1asj6cl",
@@ -155,9 +155,9 @@
       "seccion": "Cultura y agenda"
      },
      {
-      "id": "h7o4xt",
-      "titulo": "Cambareri cuestiona el ajuste y la situación en el INTA Balcarce",
-      "seccion": "Agro"
+      "id": "ip1dkb",
+      "titulo": "El Concejo pide acelerar la reparación de un puente en la zona rural",
+      "seccion": "Balcarce"
      }
     ]
    }
