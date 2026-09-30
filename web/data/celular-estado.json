@@ -1,10 +1,10 @@
 {
- "generado": "2026-09-30T15:35:10.324Z",
- "portada": 55,
- "archivo": 624,
+ "generado": "2026-09-30T16:03:17.019Z",
+ "portada": 56,
+ "archivo": 625,
  "esperandoCuerpo": 6,
  "redes": {
-  "generado": "2026-09-30T15:35:10.362Z",
+  "generado": "2026-09-30T16:03:17.048Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -23,7 +23,7 @@
     "que": "El repaso de la mañana",
     "voz": "locutor",
     "ventana": 180,
-    "momento": "en-hora",
+    "momento": "cerrada",
     "salio": "2026-09-30T13:01:31.279Z"
    },
    {
@@ -73,7 +73,7 @@
     "titulo": "El repaso de la mañana",
     "hora": "10:00",
     "voz": "locutor",
-    "momento": "en-hora",
+    "momento": "cerrada",
     "salio": "2026-09-30T13:01:31.279Z",
     "segundos": null,
     "notas": [
@@ -106,12 +106,17 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 44,
+    "segundos": 48,
     "notas": [
      {
       "id": "1rpzsy3",
       "titulo": "Tres jugadores locales integran la selección provincial de pádel",
       "seccion": "Deportes"
+     },
+     {
+      "id": "10xubmm",
+      "titulo": "Joan Laporta revela el llamado que frenó el pase de Lautaro",
+      "seccion": "Fútbol"
      },
      {
       "id": "1vgun5x",
@@ -122,11 +127,6 @@
       "id": "h36tlu",
       "titulo": "La Municipalidad recauda millones en una subasta de tierras",
       "seccion": "Balcarce"
-     },
-     {
-      "id": "122dsf6",
-      "titulo": "Rosario Central genera polêcutemica en los festejos contra Juan Sebastián Verón",
-      "seccion": "Fútbol"
      }
     ]
    },
@@ -137,12 +137,17 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 52,
+    "segundos": 53,
     "notas": [
      {
       "id": "y9vwef",
       "titulo": "El equipo de fútbol playa clasifica a la final bonaerense",
       "seccion": "Deportes"
+     },
+     {
+      "id": "122dsf6",
+      "titulo": "Rosario Central genera polêcutemica en los festejos contra Juan Sebastián Verón",
+      "seccion": "Fútbol"
      },
      {
       "id": "1j6ui2n",
@@ -153,11 +158,6 @@
       "id": "616lop",
       "titulo": "Japón abre su mercado a la carne vacuna de todo el país",
       "seccion": "Agro"
-     },
-     {
-      "id": "1puwvvm",
-      "titulo": "El Geriátrico Pinto recibe diez colchones y diez almohadas",
-      "seccion": "Balcarce"
      }
     ]
    }
@@ -177,12 +177,6 @@
    ],
    "cola": [
     {
-     "id": "5evpzb",
-     "titulo": "Cabrera y Otero ganan la carrera nocturna en Napaleofú",
-     "seccion": "Deportes",
-     "marcada": false
-    },
-    {
      "id": "h36tlu",
      "titulo": "La Municipalidad recauda millones en una subasta de tierras",
      "seccion": "Balcarce",
@@ -192,6 +186,18 @@
      "id": "qbrt3e",
      "titulo": "La noche de los sueños llega con artistas locales para ayudar a Rufi Cerezuela",
      "seccion": "Cultura y agenda",
+     "marcada": false
+    },
+    {
+     "id": "5evpzb",
+     "titulo": "Cabrera y Otero ganan la carrera nocturna en Napaleofú",
+     "seccion": "Deportes",
+     "marcada": false
+    },
+    {
+     "id": "v2h1r4",
+     "titulo": "Lanzan una diplomatura universitaria para emprendedores locales",
+     "seccion": "Balcarce",
      "marcada": false
     }
    ],
