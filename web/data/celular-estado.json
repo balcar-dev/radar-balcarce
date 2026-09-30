@@ -1,10 +1,10 @@
 {
- "generado": "2026-09-30T04:01:24.709Z",
- "portada": 57,
- "archivo": 598,
+ "generado": "2026-09-30T04:31:18.485Z",
+ "portada": 58,
+ "archivo": 599,
  "esperandoCuerpo": 2,
  "redes": {
-  "generado": "2026-09-30T04:01:24.742Z",
+  "generado": "2026-09-30T04:31:18.513Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -75,17 +75,17 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 49,
+    "segundos": 52,
     "notas": [
-     {
-      "id": "1pbrz27",
-      "titulo": "Aston Martin renueva los contratos de Fernando Alonso y Lance Stroll para 2027",
-      "seccion": "Automovilismo"
-     },
      {
       "id": "jul3w9",
       "titulo": "Infraccionan a un tractor en caminos rurales tras las lluvias",
       "seccion": "Agro"
+     },
+     {
+      "id": "1pbrz27",
+      "titulo": "Aston Martin renueva los contratos de Fernando Alonso y Lance Stroll para 2027",
+      "seccion": "Automovilismo"
      },
      {
       "id": "4r2jgy",
@@ -93,9 +93,9 @@
       "seccion": "Fútbol"
      },
      {
-      "id": "1acx84s",
-      "titulo": "Fundación Banco Provincia entrega instrumentos a la Orquesta Escuela",
-      "seccion": "Balcarce"
+      "id": "1o1dlqq",
+      "titulo": "La Escuela de Arte Astor Piazzolla expone desde el 2 de octubre en el Museo Histórico",
+      "seccion": "Cultura y agenda"
      }
     ]
    },
@@ -106,17 +106,12 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 49,
+    "segundos": 53,
     "notas": [
      {
       "id": "1j6ui2n",
       "titulo": "La ACTC sanciona a Mariano Werner con multa y largada desde el fondo",
       "seccion": "Automovilismo"
-     },
-     {
-      "id": "1o1dlqq",
-      "titulo": "La Escuela de Arte Astor Piazzolla expone desde el 2 de octubre en el Museo Histórico",
-      "seccion": "Cultura y agenda"
      },
      {
       "id": "436uz0",
@@ -127,6 +122,11 @@
       "id": "1hkh8ez",
       "titulo": "UPCN dicta una capacitación gratuita para auxiliares",
       "seccion": "Balcarce"
+     },
+     {
+      "id": "1vgun5x",
+      "titulo": "Balcarce participa de la trigésima Feria Internacional de Turismo",
+      "seccion": "Cultura y agenda"
      }
     ]
    },
@@ -137,12 +137,12 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 50,
+    "segundos": 46,
     "notas": [
      {
-      "id": "1vgun5x",
-      "titulo": "Balcarce participa de la trigésima Feria Internacional de Turismo",
-      "seccion": "Cultura y agenda"
+      "id": "1asj6cl",
+      "titulo": "Las TC Pick Up evalúan regresar a Balcarce antes de fin de año",
+      "seccion": "Automovilismo"
      },
      {
       "id": "1a0ty94",
@@ -150,14 +150,14 @@
       "seccion": "Balcarce"
      },
      {
+      "id": "12rp30w",
+      "titulo": "Edgardo Ríos visita la Fiesta Nacional del Postre",
+      "seccion": "Cultura y agenda"
+     },
+     {
       "id": "h7o4xt",
       "titulo": "Cambareri cuestiona el ajuste y la situación en el INTA Balcarce",
       "seccion": "Agro"
-     },
-     {
-      "id": "1puwvvm",
-      "titulo": "El Geriátrico Pinto recibe diez colchones y diez almohadas",
-      "seccion": "Balcarce"
      }
     ]
    }
