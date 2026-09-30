@@ -53,7 +53,7 @@ export const COLORES = {
   climaEtiqueta: '#A9C2D9',
   climaSuave: '#C9D6E2',
   sol: '#F2A93B',
-  farmacia: '#C13F6E',
+  farmacia: '#13804A',
 };
 
 // Cada sección tiene su color, siempre el mismo: el de la web (--s-* de
@@ -65,7 +65,7 @@ export const COLOR_SECCION = {
   Balcarce: '#B91C1C',
   Política: '#3730A3',
   Policiales: '#831843',
-  Fútbol: '#15803D',
+  Fútbol: '#7C3AED',
   Deportes: '#0F766E',
   Automovilismo: '#B45309',
   Agro: '#5A6B0A',
@@ -75,7 +75,7 @@ export const COLOR_SECCION = {
   // El clima era el verde azulado de Deportes y no se leía sobre el papel (contraste 4,2):
   // desde el 30/09 es un cian propio y más oscuro (CRITERIO-REDES.md § 8).
   Clima: '#4A5D8F',
-  Farmacias: '#C13F6E',
+  Farmacias: '#13804A',
   Economía: '#8A6500',
   Tecnología: '#0B6FB8',
   // El azul oscuro de las fechas patrias y los feriados (30/09): institucional y
@@ -87,7 +87,7 @@ export const COLOR_SECCION = {
 
 // Colores ya elegidos y guardados para secciones o piezas futuras (30/09): nadie más los usa.
 // Al estrenar uno se lo pasa a COLOR_SECCION y a la tabla de CRITERIO-REDES.md § 8.
-export const COLORES_RESERVADOS = ['#7C3AED', '#C0258F', '#0A7C99'];
+export const COLORES_RESERVADOS = ['#C0258F', '#0A7C99'];
 
 /** El color de una sección, o la tinta si no tiene (nunca un color inventado). */
 export const colorDeSeccion = (seccion) => COLOR_SECCION[seccion] ?? COLORES.tinta;

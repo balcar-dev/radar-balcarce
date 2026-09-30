@@ -53,7 +53,7 @@ export const COLOR = {
   Balcarce: '#B91C1C',
   Política: '#3730A3',
   Policiales: '#831843',
-  Fútbol: '#15803D',
+  Fútbol: '#7C3AED',
   Deportes: '#0F766E',
   Automovilismo: '#B45309',
   Agro: '#5A6B0A',

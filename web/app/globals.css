@@ -30,7 +30,7 @@
   --s-politica: #3730A3;
   --s-policiales: #831843;
   --s-deportes: #0F766E;
-  --s-futbol: #15803D;
+  --s-futbol: #7C3AED;
   /* Naranja oscurecido: el #E08A16 de antes daba 2,69:1 con el texto blanco
      de la etiqueta (hace falta 4,5:1). Éste da 4,83:1. Todas las --s-* se
      usan de fondo de texto blanco: si se cambia una, medir el contraste

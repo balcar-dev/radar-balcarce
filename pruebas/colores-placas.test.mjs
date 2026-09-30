@@ -67,7 +67,7 @@ const distancia = (x, y) => Math.hypot(...oklab(x).map((v, i) => v - oklab(y)[i]
 
 test('los colores de las piezas se distinguen entre sí, reservados incluidos', async () => {
   const { COLORES_RESERVADOS } = await import('../reels/placa.mjs');
-  assert.ok(COLORES_RESERVADOS.length >= 3);
+  assert.ok(COLORES_RESERVADOS.length >= 2);
   const todos = { ...COLOR_SECCION };
   delete todos.Región; // es el mismo gris que Argentina a propósito
   COLORES_RESERVADOS.forEach((h, i) => { todos[`Reservado ${i + 1}`] = h; });

@@ -354,7 +354,7 @@ que esta tabla diga lo mismo que el código.
 | Balcarce | #B91C1C | Lo de acá; participá con noticias; una efeméride de Balcarce |
 | Política | #3730A3 | Política (nunca sale sola) |
 | Policiales | #831843 | Policiales (nunca sale sola) |
-| Fútbol | #15803D | Fútbol y el resumen de los lunes |
+| Fútbol | #7C3AED | Fútbol y el resumen de los lunes |
 | Deportes | #0F766E | Deportes |
 | Automovilismo | #B45309 | Automovilismo y Fangio |
 | Agro | #5A6B0A | Agro y campo |
@@ -365,13 +365,12 @@ que esta tabla diga lo mismo que el código.
 | Región | #4B5563 | Lo de otras ciudades de la zona (el mismo gris que Argentina) |
 | Feriados | #1E3A6E | Feriados y fechas patrias; sólo esas piezas |
 | Clima | #4A5D8F | El clima de la mañana, el de la noche y el aviso |
-| Farmacias | #C13F6E | La farmacia de turno |
+| Farmacias | #13804A | La farmacia de turno |
 | WhatsApp | #0F5132 | La franja del número de WhatsApp en las piezas de participar (en el sitio, el botón sigue rojo) |
 <!-- COLORES:FIN -->
 
 **Colores reservados** (elegidos el 30/09 para que, cuando nazca una sección o una pieza nueva, ya tenga
-un color notorio y distinto de todos; están en `COLORES_RESERVADOS`, `reels/placa.mjs`): violeta `#7C3AED`,
-fucsia `#C0258F` y celeste `#0A7C99`. Se estrena el primero libre y se lo pasa a la
+un color notorio y distinto de todos; están en `COLORES_RESERVADOS`, `reels/placa.mjs`): fucsia `#C0258F` y celeste `#0A7C99`.
 tabla de arriba. "Participá con reclamos" usa el color de Balcarce.
 
 **Reglas de uso**
@@ -390,8 +389,7 @@ tabla de arriba. "Participá con reclamos" usa el color de Balcarce.
 6. **Todos los colores se leen sobre el papel** (contraste de 4,5 o más) y con letras
    blancas encima.
 7. **Todos se distinguen entre sí** (30/09): una prueba mide la distancia de color (OKLab) entre cada par y exige
-   0,06 o más; el verde de Fútbol y el verde bosque de la franja de WhatsApp se separan además por
-   el rótulo y la forma. La farmacia dejó el verde (era el de Fútbol) y pasó a un rosa.
+   0,06 o más. El verde es de la farmacia (como el de las cruces); Fútbol pasó a violeta el 30/09.
 
 **El diseño de una placa** (rediseño del 30/09): fondo papel; rótulo chico en mayúsculas
 con el color de la pieza, a la altura de las filas 250 a 300; el cuerpo usa **toda la
