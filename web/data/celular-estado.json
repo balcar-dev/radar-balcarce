@@ -1,10 +1,10 @@
 {
- "generado": "2026-09-30T17:03:48.872Z",
- "portada": 60,
- "archivo": 633,
- "esperandoCuerpo": 5,
+ "generado": "2026-09-30T17:33:55.863Z",
+ "portada": 56,
+ "archivo": 635,
+ "esperandoCuerpo": 7,
  "redes": {
-  "generado": "2026-09-30T17:03:48.955Z",
+  "generado": "2026-09-30T17:33:55.894Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -114,19 +114,19 @@
       "seccion": "Automovilismo"
      },
      {
-      "id": "y9vwef",
-      "titulo": "El equipo de fútbol playa clasifica a la final bonaerense",
-      "seccion": "Deportes"
-     },
-     {
-      "id": "v2h1r4",
-      "titulo": "Lanzan una diplomatura universitaria para emprendedores locales",
-      "seccion": "Balcarce"
-     },
-     {
       "id": "1s10vxl",
       "titulo": "Rocío Espinillo anticipa su receta para la Fiesta del Postre",
       "seccion": "Cultura y agenda"
+     },
+     {
+      "id": "h36tlu",
+      "titulo": "La Municipalidad recauda millones en una subasta de tierras",
+      "seccion": "Balcarce"
+     },
+     {
+      "id": "1rpzsy3",
+      "titulo": "Tres jugadores locales integran la selección provincial de pádel",
+      "seccion": "Deportes"
      }
     ]
    },
@@ -140,13 +140,8 @@
     "segundos": 52,
     "notas": [
      {
-      "id": "h36tlu",
-      "titulo": "La Municipalidad recauda millones en una subasta de tierras",
-      "seccion": "Balcarce"
-     },
-     {
-      "id": "5evpzb",
-      "titulo": "Cabrera y Otero ganan la carrera nocturna en Napaleofú",
+      "id": "y9vwef",
+      "titulo": "El equipo de fútbol playa clasifica a la final bonaerense",
       "seccion": "Deportes"
      },
      {
@@ -158,6 +153,11 @@
       "id": "616lop",
       "titulo": "Japón abre su mercado a la carne vacuna de todo el país",
       "seccion": "Agro"
+     },
+     {
+      "id": "1vgun5x",
+      "titulo": "Balcarce participa de la trigésima Feria Internacional de Turismo",
+      "seccion": "Cultura y agenda"
      }
     ]
    }
