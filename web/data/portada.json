@@ -1,5 +1,5 @@
 {
-  "generado": "2026-09-30T02:31:41.180Z",
+  "generado": "2026-09-30T03:01:37.146Z",
   "notas": [
     {
       "id": "1hkh8ez",
@@ -53,6 +53,90 @@
         "sugeridoPorIA": "MEDIA"
       },
       "slug": "upcn-dicta-una-capacitacion-gratuita-para-auxiliares"
+    },
+    {
+      "id": "2p3z0n",
+      "titulo": "La selección argentina juega con Bolivia en Córdoba",
+      "copete": "El plantel arribó a la provincia mediterránea para disputar el primer amistoso de la fecha FIFA. Unas quinientas personas recibieron a los jugadores en el hotel.",
+      "cuerpo": "El plantel de la selección argentina arribó pasada la hora veintiuno del martes al hotel Quorum en Córdoba, donde unas quinientas personas aguardaron la llegada de los futbolistas. El arquero Emiliano Mart\\u00inez se acercó a firmar autógrafos y luego se sumaron sus compañeros junto al director técnico Lionel Scaloni.\n\nEl encuentro amistoso frente a Bolivia se disputa este miércoles a partir de las veintiuna en el estadio Mario Alberto Kempes, con entradas agotadas. El aforo del recinto está reducido al cincuenta por ciento por una sanción de la FIFA, aunque una platea quedará reservada para ocho mil chicos de clubes de barrio.\n\nLa selección nacional no jugaba en territorio cordobés desde febrero de dos mil veintidós, cuando superó a Colombia por la mínima diferencia.",
+      "guion": "La selección argentina juega con Bolivia en Cordoba",
+      "seccion": "Fútbol",
+      "medios": [
+        "Infobae",
+        "Clarín",
+        "Radio Mitre"
+      ],
+      "enlace": "https://radiomitre.cienradios.com/videos/video-el-noble-gesto-del-dibu-martinez-con-los-hinchas-de-la-seleccion-argentina-antes-del-amistoso-frente-a-bolivia/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-30T00:51:30.000Z",
+      "sinFecha": false,
+      "visto": "2026-09-30T03:01:20.625Z",
+      "relevancia": 79,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "El plantel nacional arribó a Córdoba el martes por la noche",
+        "Unas quinientas personas recibieron a los jugadores en el hotel",
+        "El partido ante Bolivia se disputa este miércoles a las veintiuna",
+        "El estadio Kempes tiene su aforo reducido al cincuenta por ciento"
+      ],
+      "seSabe": [
+        "El plantel se instaló en el hotel Quorum de Córdoba",
+        "Unas quinientas personas esperaron la llegada de los futbolistas",
+        "El partido ante Bolivia comienza este miércoles a las veintiuna",
+        "El aforo del estadio Kempes se redujo al cincuenta por ciento por una sanción de la FIFA"
+      ],
+      "noConfirmado": [
+        "No se detallaron los motivos exactos del operativo especial de transporte municipal más allá de los traslados desde la plaza de la Municipalidad"
+      ],
+      "textoRedes": "La selección argentina se instaló en Córdoba para disputar el amistoso ante Bolivia tras una recepción de cientos de hinchas en el hotel.",
+      "etiquetas": [
+        "seleccion argentina",
+        "cordoba",
+        "bolivia",
+        "fecha fifa",
+        "estadio mario alberto kempes"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Radio Mitre",
+          "enlace": "https://radiomitre.cienradios.com/videos/video-el-noble-gesto-del-dibu-martinez-con-los-hinchas-de-la-seleccion-argentina-antes-del-amistoso-frente-a-bolivia/",
+          "fecha": "2026-09-30T00:51:30.000Z",
+          "oficial": false,
+          "aporte": "Informó sobre el gesto espontáneo de Emiliano Mart\\u00inez hacia los hinchas en Córdoba"
+        },
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/deportes/2026/09/30/el-gesto-del-dibu-martinez-y-el-plantel-de-la-seleccion-argentina-al-arribar-a-cordoba-la-multitudinaria-bienvenida/",
+          "fecha": "2026-09-30T02:59:15.000Z",
+          "oficial": false,
+          "aporte": "Detalló la llegada del plantel al hotel, la cantidad de público y los datos del partido contra Bolivia"
+        },
+        {
+          "medio": "Clarín",
+          "enlace": "https://www.clarin.com/deportes/llegada-seleccion-cordoba-amistoso-bolivia-gesto-nuevo-capitan-cuti-romero-dibu-martinez-jugadores-hinchas_0_ZCh7xYMVKt.html",
+          "fecha": "2026-09-30T01:44:40.000Z",
+          "oficial": false,
+          "aporte": "Confirmó la presencia de unas quinientas personas en el hotel de concentración"
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "ol6eey",
+          "titulo": "La Selección argentina juega el miércoles ante Bolivia con una sola duda",
+          "fecha": "2026-09-28T10:14:45.000Z",
+          "ruta": "/nota/la-seleccion-argentina-juega-el-miercoles-ante-bolivia-con-una-sola-ol6eey"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron tres medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "la-seleccion-argentina-juega-con-bolivia-en-cordoba"
     },
     {
       "id": "1j6ui2n",
@@ -291,7 +375,7 @@
       "id": "1puwvvm",
       "titulo": "El Geriátrico Pinto recibe diez colchones y diez almohadas",
       "copete": "El Hogar Municipal sumó equipamiento para el descanso de los residentes. Los elementos surgieron de una iniciativa solidaria desarrollada en la Casa del Bicentenario.",
-      "cuerpo": "El Hogar Municipal Dr. Ernesto L. Pinto recibió diez colchones y diez almohadas para mejorar el descanso de los residentes. La directora del establecimiento, Mariana Terminiello, recibió los elementos este martes, según informó un medio local.\n\nLos insumos se adquirieron mediante los fondos recaudados en la movida solidaria Moda en movimiento, impulsada por Daniel Eymann en la Casa del Bicentenario. La propuesta contó con una amplia convocatoria de vecinos.\n\nAdemás, la compra se concretó con la colaboración de Casa Nueva, comercio que aplicó un descuento especial para facilitar la adquisición de los elementos destinados a los adultos mayores.",
+      "cuerpo": "El Hogar Municipal Dr. Ernesto L. Pinto recibió diez colchones y diez almohadas para mejorar el descanso de los residentes. La directora del establecimiento, Mariana Terminiello, recibió los elementos el martes, según informó un medio local.\n\nLos insumos se adquirieron mediante los fondos recaudados en la movida solidaria Moda en movimiento, impulsada por Daniel Eymann en la Casa del Bicentenario. La propuesta contó con una amplia convocatoria de vecinos.\n\nAdemás, la compra se concretó con la colaboración de Casa Nueva, comercio que aplicó un descuento especial para facilitar la adquisición de los elementos destinados a los adultos mayores.",
       "guion": "El Geriátrico Pinto recibe diez colchones y diez almohadas",
       "seccion": "Balcarce",
       "medios": [
@@ -455,7 +539,7 @@
       "id": "1vzdxxe",
       "titulo": "El Banco Central compra dólares pero las reservas caen",
       "copete": "La autoridad monetaria adquirió 70 millones de dólares en el mercado oficial, la mayor cifra del mes. Sin embargo, las reservas brutas retrocedieron 494 millones por pagos a organismos internacionales.",
-      "cuerpo": "El Banco Central compró este martes 70 millones de dólares en el mercado oficial, la mayor cifra para una sola jornada en lo que va del mes, aunque las reservas brutas sufrieron una baja de 494 millones y se ubicaron en 47.482 millones, según informó iProfesional. El descenso se debió a pagos a organismos internacionales por 140 millones de dólares y a movimientos operativos habituales de cierre de mes. Con esta operación, el saldo acumulado de compras durante septiembre llegó a 313 millones.\n\nEn la misma jornada, el precio del dólar mayorista bajó a 1.522 pesos, mientras que la cotización minorista en el Banco Nación se mantuvo en 1.545 pesos. Además, el riesgo país descendió hasta los 607 puntos básicos, de acuerdo con los datos difundidos por el sector financiero.",
+      "cuerpo": "El Banco Central compró el martes 70 millones de dólares en el mercado oficial, la mayor cifra para una sola jornada en lo que va del mes, aunque las reservas brutas sufrieron una baja de 494 millones y se ubicaron en 47.482 millones, según informó iProfesional. El descenso se debió a pagos a organismos internacionales por 140 millones de dólares y a movimientos operativos habituales de cierre de mes. Con esta operación, el saldo acumulado de compras durante septiembre llegó a 313 millones.\n\nEn la misma jornada, el precio del dólar mayorista bajó a 1.522 pesos, mientras que la cotización minorista en el Banco Nación se mantuvo en 1.545 pesos. Además, el riesgo país descendió hasta los 607 puntos básicos, de acuerdo con los datos difundidos por el sector financiero.",
       "guion": "El Banco Central compra dólares pero las reservas caen",
       "seccion": "Economía",
       "medios": [
@@ -635,7 +719,7 @@
       "fecha": "2026-09-29T19:36:01.000Z",
       "sinFecha": false,
       "visto": "2026-09-29T21:22:01.752Z",
-      "relevancia": 88,
+      "relevancia": 78,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -800,7 +884,6 @@
         "El Cronista",
         "El Destape",
         "Perfil",
-        "Página/12",
         "A24",
         "Ámbito",
         "Minuto Uno",
@@ -813,7 +896,8 @@
         "Clarín",
         "iProfesional",
         "La Nueva",
-        "La Verdad"
+        "La Verdad",
+        "Página/12"
       ],
       "enlace": "https://www.infobae.com/judiciales/2026/09/29/la-corte-suprema-anulo-la-absolucion-a-cesar-milani-y-ordeno-revisar-el-fallo-por-la-muerte-del-soldado-ledo/",
       "teniaImagenLaFuente": true,
@@ -1333,92 +1417,6 @@
       "foto": {
         "archivo": "fotos-notas/h7o4xt.jpg",
         "credito": "Foto: Diario La Vanguardia"
-      }
-    },
-    {
-      "id": "y8awi1",
-      "titulo": "Leandro Paredes visita el predio de la AFA y ratifica su deseo de seguir en la Selección",
-      "copete": "El mediocampista visitó al plantel en Ezeiza y aclaró que continuaría en el seleccionado si no estuviera suspendido. La AFA busca reducirle la sanción.",
-      "cuerpo": "Leandro Paredes visitó al plantel en el predio de Ezeiza durante la práctica dirigida por Lionel Scaloni y ratificó su intención de continuar en el seleccionado nacional. El mediocampista reconoció que mantiene la sanción de diez partidos recibida por los incidentes con España durante la Copa del Mundo y aclaró que su presencia en el equipo se daría si no tuviera ese impedimento disciplinario.\n\nLa Asociación del Fútbol Argentino realiza gestiones para conseguir una reducción del castigo impuesto a Paredes, Nahuel Molina y Roberto Ayala. El asesor legal Andrés Patón Urich calificó las sanciones como excesivas y adelantó que buscarán atenuarlas.\n\nSi la apelación prospera y la pena baja a cinco encuentros, el volante completará la suspensión en las fechas FIFA de octubre y noviembre para quedar habilitado de cara al inicio de las Eliminatorias Sudamericanas.",
-      "guion": "Leandro Paredes visita el predio de la AFA y ratifica su deseo de seguir en la Selección",
-      "seccion": "Fútbol",
-      "medios": [
-        "Clarín",
-        "Minuto Uno",
-        "Radio Mitre"
-      ],
-      "enlace": "https://radiomitre.cienradios.com/deportes/la-frase-de-leandro-paredes-que-sacudio-a-la-seleccion-argentina-si-no-estuviese-sancionado/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-29T17:26:03.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-30T02:01:20.938Z",
-      "relevancia": 69,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Leandro Paredes visitó el predio de la AFA en Ezeiza y saludó al plantel.",
-        "El mediocampista aclaró que seguiría en la Selección si no estuviera suspendido.",
-        "La AFA gestiona una reducción de la sanción de diez partidos impuesta tras la Copa del Mundo."
-      ],
-      "seSabe": [
-        "Leandro Paredes visitó el predio de la AFA y dialogó con el plantel durante la práctica.",
-        "El mediocampista cumple una sanción de diez partidos por los incidentes ocurridos con España en la Copa del Mundo.",
-        "La AFA realiza gestiones legales para intentar reducir la pena disciplinaria."
-      ],
-      "noConfirmado": [
-        "Todavía no se confirmó si la apelación prosperará para reducir la sanción a cinco partidos.",
-        "No hay confirmación sobre una charla formal entre el jugador y el entrenador respecto al futuro."
-      ],
-      "textoRedes": "Leandro Paredes visitó al plantel en el predio de Ezeiza y aseguró que continuaría en el seleccionado nacional si no estuviera suspendido. La AFA busca reducir la sanción de diez partidos que cumple el mediocampista.",
-      "etiquetas": [
-        "Leandro Paredes",
-        "Seleccion Argentina",
-        "AFA",
-        "Lionel Scaloni",
-        "Futbol"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Radio Mitre",
-          "enlace": "https://radiomitre.cienradios.com/deportes/la-frase-de-leandro-paredes-que-sacudio-a-la-seleccion-argentina-si-no-estuviese-sancionado/",
-          "fecha": "2026-09-29T17:26:03.000Z",
-          "oficial": false,
-          "aporte": "Detalló las declaraciones de Paredes sobre su visita al predio y el deseo de seguir en la Selección."
-        },
-        {
-          "medio": "Clarín",
-          "enlace": "https://www.clarin.com/deportes/leandro-paredes-entrenamiento-seleccion-hablo-scaloni-futuro-mediocampista-scaloneta_0_ylnahgeqxN.html",
-          "fecha": "2026-09-29T21:49:04.000Z",
-          "oficial": false,
-          "aporte": "Informó que el capitán de Boca saludó a sus compañeros y arrastra una suspensión de diez partidos."
-        },
-        {
-          "medio": "Minuto Uno",
-          "enlace": "https://www.minutouno.com/deportes/que-dijo-lionel-scaloni-la-continuidad-leandro-paredes-la-seleccion-argentina-n6328045",
-          "fecha": "2026-09-29T18:05:00.000Z",
-          "oficial": false,
-          "aporte": "Indicó que el entrenador respaldó al volante y prevé reunirse con él."
-        },
-        {
-          "medio": "Radio Mitre",
-          "enlace": "https://radiomitre.cienradios.com/videos/video-leandro-paredes-visito-el-entrenamiento-de-la-seleccion-argentina-y-hablo-con-lionel-scaloni/",
-          "fecha": "2026-09-29T21:57:50.000Z",
-          "oficial": false,
-          "aporte": "Precisó que el jugador estuvo presente en la práctica del equipo en el predio de Ezeiza."
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron tres medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "leandro-paredes-visita-el-predio-de-la-afa-y-ratifica-su-deseo-de",
-      "foto": {
-        "archivo": "fotos-notas/y8awi1.jpg",
-        "credito": "Foto: Clarín"
       }
     },
     {
@@ -2529,6 +2527,97 @@
       "slug": "el-complejo-polideportivo-aloja-un-encuentro-regional-por-el-dia-del"
     },
     {
+      "id": "qxi2f0",
+      "titulo": "Artista deja la ciudad y levanta una casa con doce parabrisas",
+      "copete": "Una mujer de 38 años se instaló en las sierras de Córdoba para construir su propio hogar. Utilizó materiales reciclados, barro y cristales de autos.",
+      "cuerpo": "Mariana Di Pascuales se instaló en el Valle de Traslasierra, en la provincia de Córdoba, donde levantó una vivienda autosuficiente con materiales reciclados. A los 38 años, tras dejar su provincia natal de Santa Fe y recorrer distintos países de América Latina, la artista eligió el paraje de Los Hornillos para desarrollar el proyecto.\n\nLa construcción se realizó mediante técnicas de bioconstrucción, combinando tierra, agua y fibras vegetales para moldear los muros. El elemento más llamativo de la estructura son doce parabrisas de automóviles adquiridos en una subasta, los cuales funcionan como aberturas para iluminar el interior con luz solar. Además, empleó botellas de vidrio vacías para generar detalles decorativos en las paredes.\n\nEl inmueble cuenta con soluciones autónomas para los servicios básicos, ya que el agua proviene de una fuente natural serrana y los desagües se procesan a través de un biodigestor casero compuesto por tanques. En la actualidad, la propietaria reside en el lugar junto a su hijo.",
+      "guion": "Artista deja la ciudad y levanta una casa con doce parabrisas",
+      "seccion": "Argentina",
+      "medios": [
+        "TN (Todo Noticias)",
+        "El Destape",
+        "Radio Mitre",
+        "Canal 26"
+      ],
+      "enlace": "https://www.canal26.com/planeta/2026/09/29/dejo-la-ciudad-se-refugio-en-las-montanas-y-construyo-su-propia-casa-de-tierra-lo-hizo-con-12-parabrisas-de-autos-y-materiales-reciclados/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-29T14:56:51.000Z",
+      "sinFecha": false,
+      "visto": "2026-09-29T21:31:16.726Z",
+      "relevancia": 63,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Una mujer de 38 años construyó su vivienda en el Valle de Traslasierra, Córdoba.",
+        "Empleó la técnica de bioconstrucción con barro, madera y fibras vegetales.",
+        "Colocó doce parabrisas de autos usados y botellas de vidrio como aberturas.",
+        "El suministro de agua surge de una fuente natural y utiliza un biodigestor."
+      ],
+      "seSabe": [
+        "Mariana Di Pascuales construyó una casa en Los Hornillos, Córdoba.",
+        "La vivienda fue hecha con barro, madera, botellas y doce parabrisas de autos.",
+        "La obra incluye un sistema de biodigestión y agua de fuente natural."
+      ],
+      "textoRedes": "Dejó la ciudad, se instaló en las sierras de Córdoba y construyó su propia casa con barro, madera y doce parabrisas de autos usados reciclados.",
+      "etiquetas": [
+        "bioconstruccion",
+        "cordoba",
+        "reciclaje",
+        "vivienda"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Canal 26",
+          "enlace": "https://www.canal26.com/planeta/2026/09/29/dejo-la-ciudad-se-refugio-en-las-montanas-y-construyo-su-propia-casa-de-tierra-lo-hizo-con-12-parabrisas-de-autos-y-materiales-reciclados/",
+          "fecha": "2026-09-29T14:56:51.000Z",
+          "oficial": false,
+          "aporte": "Detalló el proceso constructivo, los materiales y el sistema de servicios."
+        },
+        {
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/sociedad/2026/09/29/tiene-38-anos-dejo-santa-fe-y-construyo-su-propia-casa-de-barro-en-cordoba-con-materiales-reciclados/",
+          "fecha": "2026-09-29T20:49:05.000Z",
+          "oficial": false,
+          "aporte": "Aportó el apellido de la protagonista y la ubicación exacta."
+        },
+        {
+          "medio": "El Destape",
+          "enlace": "https://www.eldestapeweb.com/sociedad/dejo-vida-ciudad-construyo-propia-casa-tierra-asi-vivienda-mariana-hecha-parabrisas-materiales-reciclados-2026929181933",
+          "fecha": "2026-09-29T21:19:33.000Z",
+          "oficial": false,
+          "aporte": "Mencionó la actividad artística de la propietaria."
+        },
+        {
+          "medio": "Radio Mitre",
+          "enlace": "https://radiomitre.cienradios.com/sociedad/dejo-la-ciudad-para-construir-su-propia-casa-de-tierra-en-las-sierras-uso-12-cristales-de-parabrisas-de-coches-barro-madera-y-materiales-reciclados/",
+          "fecha": "2026-09-29T17:42:52.000Z",
+          "oficial": false,
+          "aporte": "Confirmó el uso de técnicas de bioconstrucción en las sierras."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "lh579a",
+          "titulo": "Alumnos del San José transformaron materiales reciclados en juguetes y propuestas educativas",
+          "fecha": "2026-09-15T19:59:41.000Z",
+          "ruta": "/nota/alumnos-del-san-jose-transformaron-materiales-reciclados-en-juguetes-lh579a"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron cuatro medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "artista-deja-la-ciudad-y-levanta-una-casa-con-doce-parabrisas",
+      "foto": {
+        "archivo": "fotos-notas/qxi2f0.jpg",
+        "credito": "Foto: TN (Todo Noticias)"
+      }
+    },
+    {
       "id": "wgq362",
       "titulo": "Omar Martínez termina cuarto en el autódromo Juan Manuel Fangio",
       "copete": "A los 60 años, el histórico piloto compitió en la fecha de las TC Pick Up en el circuito serrano. La actividad marcó el regreso de las categorías nacionales a Balcarce.",
@@ -2543,7 +2632,7 @@
       "fecha": "2026-09-29T14:55:00.000Z",
       "sinFecha": false,
       "visto": "2026-09-29T16:31:06.769Z",
-      "relevancia": 88,
+      "relevancia": 81,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -2627,7 +2716,7 @@
       "fecha": "2026-09-29T14:32:05.000Z",
       "sinFecha": false,
       "visto": "2026-09-30T00:31:08.568Z",
-      "relevancia": 94,
+      "relevancia": 87,
       "local": true,
       "oficial": true,
       "publicadaPor": null,
@@ -2989,6 +3078,87 @@
       "foto": {
         "archivo": "fotos-notas/1edzkza.jpg",
         "credito": "Foto: Crónica"
+      }
+    },
+    {
+      "id": "zcn7od",
+      "titulo": "River y Boca llevan hinchas visitantes a Córdoba",
+      "copete": "La Asociación del Fútbol Argentino aprobó el regreso del público visitante. River jugará ante Belgrano en el Estadio Mario Alberto Kempes con unas 11.500 localidades, mientras que Boca se medirá frente a Instituto.",
+      "cuerpo": "La Asociación del Fútbol Argentino dio el visto bueno para la continuidad del plan que permite la presencia de simpatizantes visitantes en los partidos. En ese marco, River Plate se enfrentará a Belgrano en el Estadio Mario Alberto Kempes y contará con un total aproximado de 11.500 ubicaciones en la popular Willington, según confirmó el club cordobés.\n\nEn tanto, el Millonario acumuló tres presentaciones con su parcialidad visitante en el presente certamen. Todavía resta definir la cantidad exacta de entradas y el valor que tendrán los tickets para el partido del equipo auriazul.",
+      "guion": "River y Boca llevan hinchas visitantes a Córdoba",
+      "seccion": "Fútbol",
+      "medios": [
+        "C5N",
+        "Doble Amarilla",
+        "Minuto Uno",
+        "El Marplatense",
+        "La Página Millonaria"
+      ],
+      "enlace": "https://www.dobleamarilla.com.ar/liga-/avanza-el-publico-visitante--river-llevara-a-sus-hinchas-ante-belgrano-y-boca-haria-lo-propio-frente-a-instituto--ambos-en-el-kempes_a6abbae6608968fa92082fa8f",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-29T13:20:32.000Z",
+      "sinFecha": false,
+      "visto": "2026-09-30T01:01:00.516Z",
+      "relevancia": 42,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "La AFA autorizó la presencia de hinchas visitantes en el fútbol argentino.",
+        "River jugará contra Belgrano en el Estadio Mario Alberto Kempes con unas 11.500 localidades.",
+        "Boca se enfrentará a Instituto el viernes 9 de octubre en el mismo estadio cordobés."
+      ],
+      "seSabe": [
+        "La AFA aprobó el regreso de los hinchas visitantes.",
+        "Belgrano confirmó que otorgará unas 11.500 localidades para los simpatizantes de River.",
+        "Boca jugará ante Instituto el viernes 9 de octubre en el Estadio Mario Alberto Kempes."
+      ],
+      "noConfirmado": [
+        "Todavía resta la aprobación de los organismos de seguridad para la presencia de hinchas de Boca.",
+        "No se detalló la cantidad exacta de butacas ni el precio de las entradas para el partido de Boca.",
+        "No se informó cuándo comenzará la venta de localidades para el encuentro de River."
+      ],
+      "etiquetas": [
+        "AFA",
+        "River Plate",
+        "Belgrano",
+        "Instituto",
+        "fútbol visitante"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Doble Amarilla",
+          "enlace": "https://www.dobleamarilla.com.ar/liga-/avanza-el-publico-visitante--river-llevara-a-sus-hinchas-ante-belgrano-y-boca-haria-lo-propio-frente-a-instituto--ambos-en-el-kempes_a6abbae6608968fa92082fa8f",
+          "fecha": "2026-09-29T13:20:32.000Z",
+          "oficial": false,
+          "aporte": "Informó que la AFA aprobó la continuidad del plan con hinchas visitantes."
+        },
+        {
+          "medio": "C5N",
+          "enlace": "https://www.c5n.com/deportes/buenas-noticias-los-hinchas-boca-y-river-habra-hinchas-visitantes-cordoba-n250217",
+          "fecha": "2026-09-29T17:12:00.000Z",
+          "oficial": false,
+          "aporte": "Detalló los partidos de River y Boca en el Kempes, las fechas y la cantidad de entradas de Belgrano."
+        },
+        {
+          "medio": "Minuto Uno",
+          "enlace": "https://www.minutouno.com/deportes/river-y-boca-tendran-hinchas-visitantes-cordoba-jugaran-el-kempes-belgrano-e-instituto-n6327907",
+          "fecha": "2026-09-29T13:51:00.000Z",
+          "oficial": false,
+          "aporte": "Confirmó la luz verde de la AFA para que los dos equipos jueguen con visitantes."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron cinco medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "river-y-boca-llevan-hinchas-visitantes-a-cordoba",
+      "foto": {
+        "archivo": "fotos-notas/zcn7od.jpg",
+        "credito": "Foto: C5N"
       }
     },
     {
@@ -3478,7 +3648,7 @@
       "id": "1pbrz27",
       "titulo": "Aston Martin renueva los contratos de Fernando Alonso y Lance Stroll para 2027",
       "copete": "La escudería británica confirma que mantiene su alineación titular en la Fórmula 1 para la próxima temporada. La decisión despeja las especulaciones sobre posibles cambios en la grilla.",
-      "cuerpo": "El equipo Aston Martin anunció este martes la continuidad de Fernando Alonso y Lance Stroll como sus pilotos titulares para la temporada 2027 de la Fórmula 1, tras extender sus contratos a largo plazo. La escudería británica despejó las especulaciones y apostó por la estabilidad interna para mantener su base de trabajo de cara a los próximos desafíos reglamentarios, según informaron diversos medios. Con esta confirmación, la parrilla de la categoría quedó prácticamente definida y solo restan cuatro asientos por confirmar en la grilla.",
+      "cuerpo": "El equipo Aston Martin anunció el martes la continuidad de Fernando Alonso y Lance Stroll como sus pilotos titulares para la temporada 2027 de la Fórmula 1, tras extender sus contratos a largo plazo. La escudería británica despejó las especulaciones y apostó por la estabilidad interna para mantener su base de trabajo de cara a los próximos desafíos reglamentarios, según informaron diversos medios. Con esta confirmación, la parrilla de la categoría quedó prácticamente definida y solo restan cuatro asientos por confirmar en la grilla.",
       "guion": "Aston Martin renueva los contratos de Fernando Alonso y Lance Stroll para 2027",
       "seccion": "Automovilismo",
       "medios": [
@@ -4054,6 +4224,7 @@
       "guion": "La Corte revoca el fallo sobre la Ley de Tierras del DNU",
       "seccion": "Política",
       "medios": [
+        "Infobae",
         "La Nación",
         "0223 (Mar del Plata)",
         "El Eco de Tandil",
@@ -4072,6 +4243,7 @@
         "Ámbito",
         "C5N",
         "Crónica",
+        "Radio Mitre",
         "Canal 26",
         "Diario Popular",
         "Noticias Argentinas (NA)",
@@ -4082,7 +4254,6 @@
         "La Voz del Pueblo",
         "ANDigital",
         "Mi8 (Canal 8 Mar del Plata)",
-        "Infobae",
         "Infoeme",
         "La Brújula 24"
       ],
@@ -4381,11 +4552,12 @@
       "id": "4r2jgy",
       "titulo": "Lionel Scaloni libera a Tomás Palacios para jugar en Estudiantes",
       "copete": "El director técnico de la Selección argentina desafectó al defensor y a otros dos futbolistas de cara al amistoso contra Bolivia. El jugador estará disponible para enfrentar el jueves a Platense por la Copa Argentina.",
-      "cuerpo": "El director técnico de la Selección argentina, Lionel Scaloni, desafectó este martes a tres futbolistas del plantel que se prepara para enfrentar el miércoles a Bolivia en el Estadio Mario Alberto Kempes de Córdoba. Entre los jugadores liberados se encuentra el defensor Tomás Palacios, quien quedó a disposición de Estudiantes para disputar el jueves a las 21.15 el encuentro ante Platense por los cuartos de final de la Copa Argentina, según informó la Asociación del Fútbol Argentino (AFA) y medios periodísticos. Junto a Palacios, también fueron desafectados Leonel Flores y Tobías Aranda. De acuerdo con la información difundida, el defensor regresará al predio de Ezeiza el viernes para retomar los entrenamientos con el seleccionado nacional.",
+      "cuerpo": "El director técnico de la Selección argentina, Lionel Scaloni, desafectó el martes a tres futbolistas del plantel que se prepara para enfrentar el miércoles a Bolivia en el Estadio Mario Alberto Kempes de Córdoba. Entre los jugadores liberados se encuentra el defensor Tomás Palacios, quien quedó a disposición de Estudiantes para disputar el jueves a las 21.15 el encuentro ante Platense por los cuartos de final de la Copa Argentina, según informó la Asociación del Fútbol Argentino (AFA) y medios periodísticos. Junto a Palacios, también fueron desafectados Leonel Flores y Tobías Aranda. De acuerdo con la información difundida, el defensor regresará al predio de Ezeiza el viernes para retomar los entrenamientos con el seleccionado nacional.",
       "guion": "Lionel Scaloni libera a Tomás Palacios para jugar en Estudiantes",
       "seccion": "Fútbol",
       "medios": [
         "Perfil",
+        "Página/12",
         "Ámbito",
         "TyC Sports",
         "Olé",
@@ -4396,7 +4568,6 @@
         "La Página Millonaria",
         "Bolavip Argentina",
         "Clarín",
-        "Página/12",
         "Doble Amarilla"
       ],
       "enlace": "https://www.0221.com.ar/estudiantes/finalmente-lionel-scaloni-libero-tomas-palacios-y-jugara-estudiantes-platense-copa-argentina-n134991",
@@ -5162,7 +5333,7 @@
     {
       "id": "1b57l0z",
       "titulo": "El riesgo país baja a 604 puntos tras el repunte de los bonos",
-      "copete": "El indicador que elabora JP Morgan cede 24 unidades este martes debido a una rueda financiera positiva para los títulos soberanos.",
+      "copete": "El indicador que elabora JP Morgan cede 24 unidades el martes debido a una rueda financiera positiva para los títulos soberanos.",
       "cuerpo": "El indicador que elabora JP Morgan cae 24 unidades con relación a la jornada previa y se posiciona muy cerca de cruzar el umbral de las 600 unidades. Esta mejora en la deuda local se produce por un repunte de hasta 0,9% en los títulos públicos en dólares. Como antecedente, el indicador había superado los 630 puntos en la víspera tras una caída de los bonos y de las acciones líderes.",
       "guion": "El riesgo país baja a 604 puntos tras el repunte de los bonos",
       "seccion": "Economía",
@@ -5501,254 +5672,15 @@
         "sugeridoPorIA": "MEDIA"
       },
       "slug": "balinotti-destaca-las-obras-del-autodromo-fangio-tras-el-regreso"
-    },
-    {
-      "id": "1loie5",
-      "titulo": "Cristiano Rattazzi pide dolarizar y califica al peso de falopa",
-      "copete": "El empresario automotriz reclamó avanzar hacia una economía dolarizada, cuestionó con dureza a la moneda nacional y criticó la carga impositiva y la gestión bonaerense.",
-      "cuerpo": "En una entrevista televisiva, el ex CEO de Fiat sostuvo que reemplazar la moneda nacional por el dólar defendería el poder adquisitivo de la población y cuestionó el sistema impositivo al calificar a Ingresos Brutos como un pésimo impuesto que destruye la cadena de producción.\n\nEn el plano político, el empresario cuestionó la gestión del gobernador bonaerense Axel Kicillof, al considerar que su paso por la economía fue trágico y su administración en la provincia resulta pésima. Las fuentes no informan ninguna vinculación directa de estas declaraciones con el ámbito local.",
-      "guion": "Cristiano Rattazzi pide dolarizar y califica al peso de falopa",
-      "seccion": "Economía",
-      "medios": [
-        "La Nación",
-        "Infobae",
-        "Perfil",
-        "iProfesional",
-        "C5N",
-        "Noticias Argentinas (NA)",
-        "El Eco de Tandil"
-      ],
-      "enlace": "https://www.lanacion.com.ar/economia/cristiano-rattazzi-dijo-que-el-peso-argentino-es-una-moneda-falopa-y-hablo-del-pesimo-impuesto-del-nid28092026/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-28T14:39:56.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-28T19:02:49.410Z",
-      "relevancia": 65,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Rattazzi reclamó avanzar con la dolarización de la economía.",
-        "Calificó al peso argentino como una moneda falopa y basura.",
-        "Cuestionó el impuesto a los Ingresos Brutos y la gestión de Kicillof."
-      ],
-      "seSabe": [
-        "Cristiano Rattazzi pidió implementar la dolarización en una entrevista televisiva.",
-        "El empresario calificó al peso argentino como una moneda falopa y basura.",
-        "Cuestionó la carga impositiva y calificó a Ingresos Brutos como un pésimo impuesto.",
-        "Criticó la gestión económica y provincial de Axel Kicillof."
-      ],
-      "noConfirmado": [
-        "No se informaron reacciones oficiales de funcionarios nacionales ni provinciales ante las declaraciones."
-      ],
-      "textoRedes": "El empresario Cristiano Rattazzi reclamó avanzar con la dolarización, calificó al peso de moneda falopa y criticó la carga impositiva y la gestión bonaerense.",
-      "etiquetas": [
-        "Cristiano Rattazzi",
-        "dolarizacion",
-        "peso argentino",
-        "impuestos",
-        "Axel Kicillof"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "La Nación",
-          "enlace": "https://www.lanacion.com.ar/economia/cristiano-rattazzi-dijo-que-el-peso-argentino-es-una-moneda-falopa-y-hablo-del-pesimo-impuesto-del-nid28092026/",
-          "fecha": "2026-09-28T14:39:56.000Z",
-          "oficial": false,
-          "aporte": "Aportó las declaraciones completas de Rattazzi sobre la dolarización, el peso, el sistema impositivo y la gestión de Kicillof en una entrevista en LN+."
-        },
-        {
-          "medio": "Infobae",
-          "enlace": "https://www.infobae.com/economia/2026/09/28/el-peso-es-una-moneda-falopa-la-dura-definicion-de-un-reconocido-empresario-que-pidio-dolarizar/",
-          "fecha": "2026-09-28T16:57:05.000Z",
-          "oficial": false,
-          "aporte": "Confirmó que el empresario afirmó que el peso es una moneda falopa y pidió avanzar con la dolarización."
-        },
-        {
-          "medio": "iProfesional",
-          "enlace": "https://www.iprofesional.com/economia/465420-cristiano-rattazzi-pidio-dolarizar-y-dijo-que-el-peso-es-una-moneda-falopa",
-          "fecha": "2026-09-28T18:45:00.000Z",
-          "oficial": false,
-          "aporte": "Señaló que la propuesta busca defender el poder adquisitivo frente a la inflación y la pobreza."
-        },
-        {
-          "medio": "Noticias Argentinas (NA)",
-          "enlace": "https://noticiasargentinas.com/economia/cristiano-rattazzi-pidio-dolarizar-la-economia-y-califico-al-peso-como-una--moneda-falopa-_a6abaa969b62936833e6ee0c7",
-          "fecha": "2026-09-28T18:30:25.000Z",
-          "oficial": false,
-          "aporte": "Aportó el cable de agencia que registra el reclamo de dolarización y los dichos sobre la moneda nacional."
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron cuatro medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "cristiano-rattazzi-pide-dolarizar-y-califica-al-peso-de-falopa",
-      "foto": {
-        "archivo": "fotos-notas/1loie5.jpg",
-        "credito": "Foto: iProfesional"
-      }
-    },
-    {
-      "id": "jul3tk",
-      "titulo": "Dirigentes del PRO de Balcarce se reúnen con Santilli y Galli",
-      "copete": "El presidente del PRO local, Diego Cerone, se reunió con el jefe de Gabinete Diego Santilli y el asesor Ezequiel Galli. Antes, Cerone y Carolina Gízzi, del espacio local, ya se habían visto con ambos funcionarios.",
-      "cuerpo": "El encuentro coincidió con la presencia de Santilli en Balcarce por la reapertura del autódromo Juan Manuel Fangio. Según indicó el PRO local, los participantes repasaron distintos aspectos de la realidad de la ciudad y las posibilidades de avanzar en una agenda de gestión conjunta.\n\nAntes de esa reunión, Cerone y Carolina Gízzi, del espacio local, mantuvieron un encuentro previo con Santilli y Galli. Galli, que fue funcionario en la intendencia de Olavarría, ahora integra el equipo de asesores de Santilli en el Gobierno nacional.\n\nDesde el espacio remarcaron el objetivo de trasladar las propuestas del PRO a los barrios de Balcarce. \"Seguimos articulando una agenda de gestión y de futuro para Balcarce, con el compromiso de llevar las ideas del PRO a cada barrio\", señalaron en un comunicado.",
-      "guion": null,
-      "seccion": "Política",
-      "medios": [
-        "News Balcarce (FM 91.7)",
-        "Infórmese Primero (FM 104.9)"
-      ],
-      "enlace": "https://newsbalcarce.com.ar/?p=30868",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-28T14:36:12.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-28T16:31:05.398Z",
-      "relevancia": 83,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [
-        "autodromo"
-      ],
-      "como": "automatica",
-      "fuentesConsultadas": [
-        {
-          "medio": "News Balcarce (FM 91.7)",
-          "enlace": "https://newsbalcarce.com.ar/?p=30868",
-          "fecha": "2026-09-28T14:36:12.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Infórmese Primero (FM 104.9)",
-          "enlace": "http://www.informeseprimero.com.ar/2026/09/diego-cerone-mantuvo-un-encuentro-de.html",
-          "fecha": "2026-09-29T20:18:22.699Z",
-          "oficial": false,
-          "aporte": null
-        }
-      ],
-      "slug": "dirigentes-del-pro-se-reunieron-con-santilli-en-el-autodromo",
-      "corregidaAMano": true,
-      "cuerpoAMano": true,
-      "foto": {
-        "archivo": "fotos-notas/jul3tk.jpg",
-        "credito": "Foto: Diario La Vanguardia"
-      }
-    },
-    {
-      "id": "13l9r47",
-      "titulo": "El producto bruto porteño crece 0,3 por ciento interanual en el segundo trimestre",
-      "copete": "La actividad económica en la Ciudad de Buenos Aires muestra una desaceleración entre abril y junio de 2026. Los sectores de intermediación financiera lideran las subas, mientras que el comercio y la industria caen.",
-      "cuerpo": "El organismo detalló que la economía registradó una caída de 0,2 por ciento frente a los primeros tres meses del año, lo que marca una desaceleración visible desde el tercer trimestre de 2025.\n\nEntre las actividades con mayores subas se ubicó la intermediación financiera con un incremento de 7,7 por ciento, acompañada por el transporte con 0,9 por ciento y la construcción con 0,3 por ciento. En contrapartida, el comercio retrocedió 2,2 por ciento y la industria manufacturera cayó 1,8 por ciento interanual en el mismo período.",
-      "guion": "El producto bruto porteño crece cero coma tres por ciento interanual en el segundo trimestre",
-      "seccion": "Economía",
-      "medios": [
-        "Infobae",
-        "Perfil",
-        "El Destape",
-        "Minuto Uno",
-        "El Marplatense"
-      ],
-      "enlace": "https://www.infobae.com/economia/2026/09/28/la-actividad-economica-de-caba-cayo-02-en-el-segundo-trimestre-cuales-fueron-los-sectores-mas-golpeados/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-28T14:32:00.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-28T19:47:26.141Z",
-      "relevancia": 64,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "La actividad económica porteña creció 0,3 por ciento interanual entre abril y junio de 2026.",
-        "Frente al primer trimestre del año, el PGB registró una baja de 0,2 por ciento.",
-        "La intermediación financiera lideró las subas con un incremento de 7,7 por ciento.",
-        "El comercio y la industria manufacturera mostraron retrocesos de 2,2 y 1,8 por ciento."
-      ],
-      "seSabe": [
-        "El PGB de la Ciudad de Buenos Aires creció 0,3 por ciento interanual en el segundo trimestre de 2026, según el Idecba.",
-        "La economía porteña cayó 0,2 por ciento frente a los primeros tres meses del año.",
-        "La intermediación financiera subió 7,7 por ciento y el transporte creció 0,9 por ciento.",
-        "El comercio retrocedió 2,2 por ciento y la industria manufacturera bajó 1,8 por ciento.",
-        "El acumulado del primer semestre de 2026 muestra un crecimiento de 0,6 por ciento."
-      ],
-      "textoRedes": "La actividad económica en la Ciudad de Buenos Aires creció 0,3 por ciento interanual en el segundo trimestre de 2026 pero cayó 0,2 por ciento frente al trimestre anterior, según el Idecba.",
-      "etiquetas": [
-        "economia",
-        "ciudad de buenos aires",
-        "idecba",
-        "actividad economica",
-        "segundo trimestre"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Infobae",
-          "enlace": "https://www.infobae.com/economia/2026/09/28/la-actividad-economica-de-caba-cayo-02-en-el-segundo-trimestre-cuales-fueron-los-sectores-mas-golpeados/",
-          "fecha": "2026-09-28T17:11:41.000Z",
-          "oficial": false,
-          "aporte": "Informó los datos del PGB porteño del segundo trimestre de 2026 y la desaceleración sectorial."
-        },
-        {
-          "medio": "Perfil",
-          "enlace": "https://www.perfil.com/noticias/economia/la-actividad-economica-cayo-02-en-el-segundo-trimestre-en-caba-a40.phtml",
-          "fecha": "2026-09-28T17:44:41.000Z",
-          "oficial": false,
-          "aporte": "Atribuyó las cifras oficiales al Instituto de Estadísticas y Censos porteño."
-        },
-        {
-          "medio": "El Destape",
-          "enlace": "https://www.eldestapeweb.com/economia/ciudad-buenos-aires-esta-recesion-actividad-economica-cayo-segundo-trimestre-fila-2026928164048",
-          "fecha": "2026-09-28T19:40:48.686Z",
-          "oficial": false,
-          "aporte": "No aportó información adicional en el resumen."
-        },
-        {
-          "medio": "El Marplatense",
-          "enlace": "https://www.elmarplatense.com/la-actividad-economica-en-caba-cayo-02-durante-el-segundo-trimestre",
-          "fecha": "2026-09-28T19:43:07.000Z",
-          "oficial": false,
-          "aporte": "Confirmó la caída trimestral de 0,2 por ciento y el crecimiento interanual de 0,3 por ciento."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "1vm79z5",
-          "titulo": "La CGT rechaza los dichos de Milei sobre la actividad económica",
-          "fecha": "2026-09-28T13:52:34.000Z",
-          "ruta": "/nota/la-cgt-rechaza-los-dichos-de-milei-sobre-la-actividad-economica-1vm79z5"
-        },
-        {
-          "id": "1lg4u7s",
-          "titulo": "La actividad económica cae 2,9 % en julio",
-          "fecha": "2026-09-24T22:00:00.000Z",
-          "ruta": "/nota/la-actividad-economica-registra-una-caida-del-tres-por-ciento-en-julio-1lg4u7s"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron cuatro medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "el-producto-bruto-porteno-crece-0-3-por-ciento-interanual-en-el",
-      "foto": {
-        "archivo": "fotos-notas/13l9r47.jpg",
-        "credito": "Foto: El Marplatense"
-      }
     }
   ],
   "secciones": [
     "Balcarce",
+    "Fútbol",
     "Automovilismo",
     "Política",
     "Argentina",
     "Economía",
-    "Fútbol",
     "Cultura y agenda",
     "Deportes",
     "Agro",
@@ -5756,14 +5688,14 @@
   ],
   "temas": [
     {
-      "nombre": "El autódromo",
-      "ranura": "autodromo",
-      "cuantas": 7
-    },
-    {
       "nombre": "Fangio",
       "ranura": "fangio",
       "cuantas": 7
+    },
+    {
+      "nombre": "El autódromo",
+      "ranura": "autodromo",
+      "cuantas": 6
     },
     {
       "nombre": "El Concejo Deliberante",
@@ -5783,26 +5715,15 @@
   ],
   "clima": {
     "ahora": {
-      "temp": 9,
+      "temp": 8,
       "sensacion": 5,
       "humedad": 92,
-      "viento": 20,
+      "viento": 19,
       "rumbo": "SO",
       "cielo": "Nublado",
       "esDeDia": false
     },
     "dias": [
-      {
-        "fecha": "2026-09-29",
-        "dia": "mar",
-        "max": 14,
-        "min": 9,
-        "lluvia": 100,
-        "codigo": 81,
-        "viento": 27,
-        "milimetros": 26,
-        "cielo": "Chaparrones fuertes"
-      },
       {
         "fecha": "2026-09-30",
         "dia": "mié",
@@ -5835,6 +5756,17 @@
         "viento": 24,
         "milimetros": 1,
         "cielo": "Llovizna leve"
+      },
+      {
+        "fecha": "2026-10-03",
+        "dia": "sáb",
+        "max": 18,
+        "min": 8,
+        "lluvia": 92,
+        "codigo": 80,
+        "viento": 23,
+        "milimetros": 11,
+        "cielo": "Chaparrones"
       }
     ],
     "fuente": "Open-Meteo"
@@ -6167,22 +6099,16 @@
       "motivo": "verificación baja: espera a una persona (visto al reescribir)"
     },
     {
+      "id": "10ybc9u",
+      "titulo": "Diputados salió al cruce de la justicia y negó encubrir…",
+      "seccion": "Política",
+      "motivo": "necesita ojo humano: \"denuncia\""
+    },
+    {
       "id": "125lok7",
       "titulo": null,
       "seccion": "Argentina",
       "motivo": "necesita ojo humano: \"nene\", en lo que contaron otros medios (visto al reescribir)"
-    },
-    {
-      "id": "fr44g3",
-      "titulo": null,
-      "seccion": "Automovilismo",
-      "motivo": "necesita ojo humano: \"niño\""
-    },
-    {
-      "id": "1vtpdh5",
-      "titulo": "La Cámara de Diputados bonaerense rechazó la denuncia de…",
-      "seccion": "Política",
-      "motivo": "necesita ojo humano: \"denuncia\""
     },
     {
       "id": "1o9rp73",
@@ -6245,12 +6171,6 @@
       "motivo": "verificación baja: espera a una persona (visto al reescribir)"
     },
     {
-      "id": "14q2bn5",
-      "titulo": null,
-      "seccion": "Balcarce",
-      "motivo": "necesita ojo humano: \"alumno de\", en el texto completo de la fuente (visto al reescribir)"
-    },
-    {
       "id": "1ogz9mz",
       "titulo": null,
       "seccion": "Argentina",
@@ -6287,5 +6207,5 @@
       "motivo": "necesita ojo humano: \"detenido\""
     }
   ],
-  "esperandoCuerpo": 3
+  "esperandoCuerpo": 2
 }
