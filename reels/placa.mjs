@@ -59,7 +59,7 @@ export const COLORES = {
 // Cada sección tiene su color, siempre el mismo: el de la web (--s-* de
 // web/app/globals.css, 27/09). Son oscuros: se leen como texto sobre el papel
 // y llevan texto blanco encima (pruebas/titulos-colores.test.mjs controla que
-// coincidan con la web). Clima, Farmacias, Reclamos y Seguimiento no son
+// coincidan con la web). Clima, Farmacias, Reclamos y Feriados no son
 // secciones: son el acento de su pieza (la palabra que se dice en el subtítulo).
 export const COLOR_SECCION = {
   Balcarce: '#B91C1C',
@@ -72,12 +72,16 @@ export const COLOR_SECCION = {
   'Cultura y agenda': '#9D2C8F',
   Argentina: '#4B5563',
   Región: '#4B5563',
-  Clima: '#12857A',
+  // El clima era el verde azulado de Deportes y no se leía sobre el papel (contraste 4,2):
+  // desde el 30/09 es un cian propio y más oscuro (CRITERIO-REDES.md § 8).
+  Clima: '#0E7490',
   Farmacias: '#13804A',
   Economía: '#8A6500',
   Tecnología: '#0B6FB8',
+  // El azul oscuro de las fechas patrias y los feriados (30/09): institucional y
+  // distinto del azul de Tecnología, que es más claro y más vivo.
+  Feriados: '#1E3A6E',
   Reclamos: '#B23A1C',
-  Seguimiento: '#7E9420',
 };
 
 /** El color de una sección, o la tinta si no tiene (nunca un color inventado). */
@@ -663,8 +667,8 @@ export function placaLista({ rotulo: kicker, titulo, filas = [], color = COLORES
 // ------------------------------------------------------ un día como hoy
 
 const COLOR_EFEMERIDE = COLOR_SECCION['Cultura y agenda'];
-/** El azul de las fechas patrias y los feriados (el de la bandera, oscuro para leerse sobre el papel). */
-export const COLOR_FERIADO = '#2B6AA6';
+/** El azul oscuro de las fechas patrias y los feriados. */
+export const COLOR_FERIADO = COLOR_SECCION.Feriados;
 
 /**
  * Una escena de "Un día como hoy" (y de los feriados), con el mismo diseño que

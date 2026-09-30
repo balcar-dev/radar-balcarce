@@ -336,3 +336,63 @@ PASA o FALLA por clip.
 la voz, y mejor de noche, después del último repaso. Si la voz insistiera en agregar
 ".ar", la dirección se deja de decir (`VOZ.direccionEnPodcasts` y `VOZ.direccionUnaDeCada`
 en 0) y las piezas cierran sólo con "Radar Balcarce".
+
+## 8. Colores y diseño de las placas
+
+Decisión del 30/09 (Hernán): **el color de una pieza tiene un sentido de uso, siempre el
+mismo**, así todo queda unificado entre la web, el panel, las placas y las tarjetas. Se
+agrega un color nuevo sólo después de sumarlo a esta tabla, a `COLOR_SECCION`
+(`reels/placa.mjs`) y al sitio. Una prueba (`pruebas/colores-placas.test.mjs`) controla
+que esta tabla diga lo mismo que el código.
+
+<!-- COLORES:INICIO -->
+| Color | Hex | Para qué se usa |
+|---|---|---|
+| Tinta | #14161A | Texto, títulos, la raya y "Radar" de la firma |
+| Papel | #FAF8F3 | Fondo de todas las placas |
+| Rojo de la marca | #C7381C | Sólo "Balcarce" de la firma y los rótulos de la marca |
+| Balcarce | #B91C1C | Lo de acá; participá con noticias; una efeméride de Balcarce |
+| Política | #3730A3 | Política (nunca sale sola) |
+| Policiales | #831843 | Policiales (nunca sale sola) |
+| Fútbol | #15803D | Fútbol y el resumen de los lunes |
+| Deportes | #0F766E | Deportes |
+| Automovilismo | #B45309 | Automovilismo y Fangio |
+| Agro | #4D7C0F | Agro y campo |
+| Economía | #8A6500 | Economía, los descuentos de hoy y "Tu plata" |
+| Cultura y agenda | #9D2C8F | Cultura, la agenda, "Un día como hoy" y "Tu nota" |
+| Tecnología | #0B6FB8 | Tecnología y las novedades de IA |
+| Argentina | #4B5563 | Lo nacional que no es de otra sección |
+| Región | #4B5563 | Lo de otras ciudades de la zona (el mismo gris que Argentina) |
+| Feriados | #1E3A6E | Feriados y fechas patrias; sólo esas piezas |
+| Clima | #0E7490 | El clima de la mañana, el de la noche y el aviso |
+| Farmacias | #13804A | La farmacia de turno |
+| Reclamos | #B23A1C | Participá con reclamos |
+<!-- COLORES:FIN -->
+
+**Reglas de uso**
+
+1. **Una pieza, un color.** El rótulo y el rasgo grande de la pieza (el año, el
+   porcentaje, la franja) llevan el color de su sección; el resto, tinta sobre papel.
+2. **El color lo da lo que se cuenta**, no el día ni la hora: un resumen del fútbol es
+   verde, uno de IA es azul, una efeméride es violeta, un feriado es azul oscuro.
+3. **El repaso lleva el rojo de la marca** en su rótulo, y cada nota de la lista lleva el
+   color de su propia sección. (Hasta el 30/09 el repaso rotaba un color por día de la
+   semana, sin significado: se saca.)
+4. **Lo que pide una acción va en tinta**, no en un color de sección: la franja del
+   WhatsApp es negra con letras blancas, porque el verde ya quiere decir Fútbol o
+   Farmacia.
+5. **Nunca un color inventado:** una pieza sin sección usa la tinta.
+6. **Todos los colores se leen sobre el papel** (contraste de 4,5 o más) y con letras
+   blancas encima.
+7. **Confusión conocida:** la farmacia comparte el verde de Fútbol. Se distinguen por la
+   forma de la pieza (la tarjeta de la farmacia lleva una cruz y su borde), no por el
+   color; si molesta, se cambia acá y en el código. (El clima era el verde azulado de
+   Deportes y no se leía sobre el papel: el 30/09 pasó a un cian propio.)
+
+**El diseño de una placa** (rediseño del 30/09): fondo papel; rótulo chico en mayúsculas
+con el color de la pieza, a la altura de las filas 250 a 300; el cuerpo usa **toda la
+zona segura** (filas 250 a 1480), con el rasgo grande propio de cada pieza; y **el mismo
+cierre en todas**: la raya de tinta, "Radar Balcarce" a la izquierda y radarbalcarce.com
+a la derecha, sobre la fila 1478. Sin nombre de otro medio ni foto con marca de agua.
+Las placas van **quietas**: sin zoom sobre la imagen (regla 90); el movimiento, cuando
+llegue, es de detalles calculados cuadro a cuadro.

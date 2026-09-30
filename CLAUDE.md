@@ -177,6 +177,7 @@ próxima regla es la 92.)
 | Las voces | `CRITERIO-REDES.md` § 6; crearlas, "Crear voces" (`reels/crear-voces.mjs`) |
 | El contrato del día | `redes/contrato.mjs` y `CONTRATO_DIARIO` (`ingesta/criterio.mjs` **y** `CRITERIO-EDITORIAL.md`) |
 | El dibujo de una placa o de una tarjeta | `reels/placa.mjs`; `web/lib/tarjeta.js` y `web/lib/tarjeta-diseno.js` |
+| Los colores de las placas (qué color es de qué) | `CRITERIO-REDES.md` § 8 y `COLOR_SECCION` (`reels/placa.mjs`); una prueba controla que digan lo mismo |
 | Qué vigila el vigilante o qué dice el WhatsApp | `redes/vigilar.mjs` (`evaluar`, `revisarClaves`, `VENCIMIENTOS`), `redes/avisos.mjs` |
 | Qué archivos guarda "Actualizar la web" | La línea `git add` de `.github/workflows/actualizar.yml` (un archivo nuevo de `web/data/` que no esté ahí se pierde) |
 | Los avisos publicitarios, la agenda a mano | El panel de la PC (`PUBLICIDAD.md`, `panel/agenda.mjs`) |
