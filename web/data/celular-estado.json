@@ -1,10 +1,10 @@
 {
- "generado": "2026-09-30T16:03:17.019Z",
- "portada": 56,
- "archivo": 625,
+ "generado": "2026-09-30T16:33:31.361Z",
+ "portada": 54,
+ "archivo": 627,
  "esperandoCuerpo": 6,
  "redes": {
-  "generado": "2026-09-30T16:03:17.048Z",
+  "generado": "2026-09-30T16:33:31.409Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -106,27 +106,27 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 48,
+    "segundos": 50,
     "notas": [
-     {
-      "id": "1rpzsy3",
-      "titulo": "Tres jugadores locales integran la selección provincial de pádel",
-      "seccion": "Deportes"
-     },
      {
       "id": "10xubmm",
       "titulo": "Joan Laporta revela el llamado que frenó el pase de Lautaro",
       "seccion": "Fútbol"
      },
      {
-      "id": "1vgun5x",
-      "titulo": "Balcarce participa de la trigésima Feria Internacional de Turismo",
-      "seccion": "Cultura y agenda"
-     },
-     {
       "id": "h36tlu",
       "titulo": "La Municipalidad recauda millones en una subasta de tierras",
       "seccion": "Balcarce"
+     },
+     {
+      "id": "1rpzsy3",
+      "titulo": "Tres jugadores locales integran la selección provincial de pádel",
+      "seccion": "Deportes"
+     },
+     {
+      "id": "1j6ui2n",
+      "titulo": "La ACTC sanciona a Mariano Werner con multa y largada desde el fondo",
+      "seccion": "Automovilismo"
      }
     ]
    },
@@ -137,7 +137,7 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 53,
+    "segundos": 52,
     "notas": [
      {
       "id": "y9vwef",
@@ -150,14 +150,14 @@
       "seccion": "Fútbol"
      },
      {
-      "id": "1j6ui2n",
-      "titulo": "La ACTC sanciona a Mariano Werner con multa y largada desde el fondo",
-      "seccion": "Automovilismo"
-     },
-     {
       "id": "616lop",
       "titulo": "Japón abre su mercado a la carne vacuna de todo el país",
       "seccion": "Agro"
+     },
+     {
+      "id": "1vgun5x",
+      "titulo": "Balcarce participa de la trigésima Feria Internacional de Turismo",
+      "seccion": "Cultura y agenda"
      }
     ]
    }
@@ -183,21 +183,9 @@
      "marcada": false
     },
     {
-     "id": "qbrt3e",
-     "titulo": "La noche de los sueños llega con artistas locales para ayudar a Rufi Cerezuela",
-     "seccion": "Cultura y agenda",
-     "marcada": false
-    },
-    {
      "id": "5evpzb",
      "titulo": "Cabrera y Otero ganan la carrera nocturna en Napaleofú",
      "seccion": "Deportes",
-     "marcada": false
-    },
-    {
-     "id": "v2h1r4",
-     "titulo": "Lanzan una diplomatura universitaria para emprendedores locales",
-     "seccion": "Balcarce",
      "marcada": false
     }
    ],
