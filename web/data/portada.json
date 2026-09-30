@@ -1,5 +1,5 @@
 {
-  "generado": "2026-09-30T03:32:06.287Z",
+  "generado": "2026-09-30T04:01:24.709Z",
   "notas": [
     {
       "id": "1hkh8ez",
@@ -16,7 +16,7 @@
       "fecha": "2026-09-30T00:54:04.490Z",
       "sinFecha": false,
       "visto": "2026-09-30T02:31:08.479Z",
-      "relevancia": 90,
+      "relevancia": 80,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -62,8 +62,8 @@
       "guion": "La selección argentina juega con Bolivia en Cordoba",
       "seccion": "Fútbol",
       "medios": [
-        "Infobae",
         "Clarín",
+        "Infobae",
         "Radio Mitre"
       ],
       "enlace": "https://radiomitre.cienradios.com/videos/video-el-noble-gesto-del-dibu-martinez-con-los-hinchas-de-la-seleccion-argentina-antes-del-amistoso-frente-a-bolivia/",
@@ -71,7 +71,7 @@
       "fecha": "2026-09-30T00:51:30.000Z",
       "sinFecha": false,
       "visto": "2026-09-30T03:01:20.625Z",
-      "relevancia": 79,
+      "relevancia": 69,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -139,6 +139,88 @@
       "slug": "la-seleccion-argentina-juega-con-bolivia-en-cordoba"
     },
     {
+      "id": "q6p856",
+      "titulo": "Concejales reciben a Virginia Aparicio de forma independiente",
+      "copete": "Tras el rechazo de la Comisión de Salud, un grupo de ediles mantendrá un encuentro con la investigadora del INTA el próximo jueves para escuchar su trabajo sobre plaguicidas.",
+      "cuerpo": "Un grupo de concejales recibirá de manera independiente a la investigadora de la Estación Experimental Agropecuaria Balcarce del INTA, Virginia Aparicio, luego de que la Comisión de Salud del Honorable Concejo Deliberante rechazara su visita por mayoría.\n\nLa iniciativa original había sido impulsada por el edil Gabriel Petruccelli para que la especialista exponga sobre su trabajo respecto a la presencia de plaguicidas en muestras humanas. Tras el voto negativo de los bloques del oficialismo y La Libertad Avanza, la convocatoria institucional quedó descartada.\n\nDel encuentro participarán Sol Di Gerónimo, Viviana Erreguerena, Javier Menonne, Andrés Lombardini y el propio Petruccelli.",
+      "guion": "Concejales reciben a Virginia Aparicio de forma independiente",
+      "seccion": "Política",
+      "medios": [
+        "Infórmese Primero (FM 104.9)"
+      ],
+      "enlace": "http://www.informeseprimero.com.ar/2026/09/virginia-aparicio-sera-recibida-por.html",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-30T00:42:35.926Z",
+      "sinFecha": false,
+      "visto": "2026-09-30T04:01:02.148Z",
+      "relevancia": 80,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [
+        "concejo",
+        "inta"
+      ],
+      "como": "automatica",
+      "claves": [
+        "Rechazan en la Comisión de Salud recibir a la investigadora del INTA Virginia Aparicio.",
+        "El oficialismo y La Libertad Avanza votaron en contra de la iniciativa inicial.",
+        "Un grupo de ediles organizó un encuentro independiente para este jueves a las 18."
+      ],
+      "seSabe": [
+        "La Comisión de Salud del HCD rechazó por mayoría recibir a la investigadora Virginia Aparicio, según informó un medio local.",
+        "El pedido original fue presentado por el concejal Gabriel Petruccelli para exponer sobre plaguicidas.",
+        "El oficialismo y La Libertad Avanza votaron en contra del proyecto.",
+        "Un grupo de concejales la recibirá de forma independiente este jueves a las 18 en el recinto."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Concejales recibirán de manera independiente a la investigadora del INTA Virginia Aparicio tras el rechazo de su visita en la Comisión de Salud del Concejo Deliberante.",
+      "etiquetas": [
+        "Virginia Aparicio",
+        "INTA",
+        "Concejo Deliberante",
+        "Salud",
+        "Balcarce"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infórmese Primero (FM 104.9)",
+          "enlace": "http://www.informeseprimero.com.ar/2026/09/virginia-aparicio-sera-recibida-por.html",
+          "fecha": "2026-09-30T00:42:35.926Z",
+          "oficial": false,
+          "aporte": "Informó el rechazo en la Comisión de Salud y el encuentro independiente organizado por los concejales."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "25strz",
+          "titulo": "Concejales del oficialismo y LLA rechazan recibir a Virginia Aparicio",
+          "fecha": "2026-09-30T00:32:04.000Z",
+          "ruta": "/nota/concejales-del-oficialismo-y-lla-rechazan-recibir-a-virginia-aparicio-25strz"
+        },
+        {
+          "id": "1ytgm6c",
+          "titulo": "Petruccelli pide que Aparicio exponga ante la Comisión de Salud",
+          "fecha": "2026-09-28T21:59:12.000Z",
+          "ruta": "/nota/petruccelli-pide-que-aparicio-exponga-ante-la-comision-de-salud-1ytgm6c"
+        },
+        {
+          "id": "113qesp",
+          "titulo": "Petruccelli convoca a Virginia Aparicio tras el rechazo en el Concejo",
+          "fecha": "2026-09-30T00:31:08.568Z",
+          "ruta": "/nota/petruccelli-convoca-a-virginia-aparicio-tras-el-rechazo-en-el-concejo-113qesp"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "concejales-reciben-a-virginia-aparicio-de-forma-independiente"
+    },
+    {
       "id": "1j6ui2n",
       "titulo": "La ACTC sanciona a Mariano Werner con multa y largada desde el fondo",
       "copete": "La categoría penaliza al piloto por una infracción técnica tras la competencia en el autódromo Juan Manuel Fangio. La medida incluye sanciones económicas para su preparador y otros corredores.",
@@ -154,7 +236,7 @@
       "fecha": "2026-09-30T00:39:00.000Z",
       "sinFecha": false,
       "visto": "2026-09-30T01:01:00.516Z",
-      "relevancia": 100,
+      "relevancia": 92,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -436,73 +518,89 @@
       }
     },
     {
-      "id": "qbtyp4",
-      "titulo": "Diputados bonaerenses aprueba cuatro proyectos sobre endeudamiento",
-      "copete": "La Cámara baja provincial dio el visto bueno a cuatro iniciativas orientadas a morigerar la mora y el endeudamiento familiar, que pasarán a la revisión del Senado.",
-      "cuerpo": "La Cámara de Diputados bonaerense dio sanción a cuatro iniciativas orientadas a atenuar la mora y el endeudamiento de los hogares durante su quinta sesión del año. Los expedientes fueron impulsados por los legisladores Facundo Tignanelli, Mayra Mendoza, María Noelia Saavedra, Leonardo Moreno y Ana Luz Balor.\n\nLas propuestas contemplan la prohibición del hostigamiento en las gestiones de cobro, además de la creación de sistemas de prevención y de protección frente a las deudas. Tras la votación en el recinto, los textos giraron a la Cámara alta para su tratamiento.\n\nEl bloque del PRO cuestionó fuertemente las medidas al considerarlas perjudiciales para los usuarios, en la misma línea que el rechazo manifestado por el legislador Francisco Adorni en representación de La Libertad Avanza.",
-      "guion": "Diputados bonaerenses aprueba cuatro proyectos sobre endeudamiento",
-      "seccion": "Política",
+      "id": "k33wy9",
+      "titulo": "Rafael Grossi recupera apoyos y queda tercero en la carrera hacia la ONU",
+      "copete": "El diplomático argentino sumó ocho votos favorables en la cuarta consulta informal del Consejo de Seguridad. Buscará suceder a António Guterres al frente de las Naciones Unidas.",
+      "cuerpo": "El diplomático argentino Rafael Grossi sumó respaldos en la cuarta votación informal realizada por el Consejo de Seguridad de las Naciones Unidas para definir al próximo secretario general. El director general del Organismo Internacional de Energía Atómica acumuló ocho votos favorables, siete negativos y ninguno sin opinión, lo que le permitió quedar en el tercer puesto de la carrera.\n\nEl resultado representó una mejora de tres apoyos respecto de la tercera ronda realizada el 18 de septiembre, donde había obtenido cinco votos a favor. Con este desempeño, el candidato oficializado por la Argentina a fines de 2025 volvió a ubicarse entre los tres postulantes con mayor respaldo, posición que ya había alcanzado en agosto.\n\nDetrás de Grossi se posicionaron Olara Otunnu, de Uganda, y el expresidente senegalés Macky Sall, ambos con cinco votos favorables. El primer lugar quedó para Rebeca Grynspan, de Costa Rica, con 10 respaldos, seguida por Carolyn Rodrigues-Birkett, de Guyana, con la misma cantidad de votos a favor que el argentino pero con un rechazo menos.\n\nPara avanzar formalmente en la elección que sucederá al portugués António Guterres a fin de año, el postulante necesita al menos nueve votos favorables y la ausencia de vetos por parte de las cinco potencias permanentes.",
+      "guion": "Rafael Grossi recupera apoyos y queda tercero en la carrera hacia la ONU",
+      "seccion": "Argentina",
       "medios": [
-        "Agencia DIB",
-        "La Voz del Pueblo",
-        "La Noticia 1",
-        "Diputados Bonaerenses"
+        "TN (Todo Noticias)",
+        "Ámbito",
+        "C5N",
+        "Noticias Argentinas (NA)",
+        "La Nueva"
       ],
-      "enlace": "https://dib.com.ar/politica/aprobaron-cuatro-proyectos-endeudamiento-familiar-diputados-que-soluciones-plantean-n56116",
+      "enlace": "https://tn.com.ar/internacional/2026/09/29/el-argentino-rafael-grossi-recupero-apoyos-y-volvio-a-quedar-tercero-en-la-carrera-para-liderar-la-onu/",
       "teniaImagenLaFuente": true,
-      "fecha": "2026-09-29T21:27:00.000Z",
+      "fecha": "2026-09-29T21:39:57.000Z",
       "sinFecha": false,
-      "visto": "2026-09-30T03:31:03.492Z",
-      "relevancia": 47,
+      "visto": "2026-09-30T04:01:02.148Z",
+      "relevancia": 73,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
       "temas": [],
       "como": "automatica",
+      "claves": [
+        "Rafael Grossi obtuvo ocho votos favorables en la cuarta consulta informal.",
+        "El diplomático argentino sumó tres respaldos respecto de la ronda previa.",
+        "Rebeca Grynspan, de Costa Rica, lideró el respaldo con diez votos a favor.",
+        "El Consejo de Seguridad debe definir al sucesor de António Guterres."
+      ],
       "noConfirmado": [
-        "El impacto final que tendrán las medidas en las finanzas de los hogares"
+        "Todavía no se determinó qué países emitieron cada uno de los votos negativos en las consultas informales.",
+        "No se especificaron los detalles del pedido presentado por Cristina Kirchner ante la ONU, según lo mencionado por C5N."
       ],
       "etiquetas": [
-        "Diputados",
-        "endeudamiento",
-        "familia",
-        "Senado",
-        "provincia"
+        "Rafael Grossi",
+        "ONU",
+        "Consejo de Seguridad",
+        "internacionales"
       ],
       "fuentesConsultadas": [
         {
-          "medio": "Agencia DIB",
-          "enlace": "https://dib.com.ar/politica/aprobaron-cuatro-proyectos-endeudamiento-familiar-diputados-que-soluciones-plantean-n56116",
-          "fecha": "2026-09-29T21:27:00.000Z",
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/internacional/2026/09/29/el-argentino-rafael-grossi-recupero-apoyos-y-volvio-a-quedar-tercero-en-la-carrera-para-liderar-la-onu/",
+          "fecha": "2026-09-29T21:39:57.000Z",
           "oficial": false,
-          "aporte": "Aportó los detalles sobre los proyectos aprobados, los autores y las posturas de los bloques"
+          "aporte": "Detalló los resultados de la cuarta votación informal y el historial de rondas previas de Rafael Grossi."
         },
         {
-          "medio": "La Voz del Pueblo",
-          "enlace": "https://lavozdelpueblo.com.ar/aprobaron-cuatro-proyectos-sobre-endeudamiento-familiar-en-diputados-que-soluciones-plantean",
-          "fecha": "2026-09-30T01:29:50.000Z",
+          "medio": "Ámbito",
+          "enlace": "https://www.ambito.com/mundo/el-argentino-rafael-grossi-recupero-apoyos-y-volvio-quedar-tercero-la-carrera-liderar-la-onu-n6328226",
+          "fecha": "2026-09-30T00:12:00.000Z",
           "oficial": false,
-          "aporte": "Aportó la confirmación de la aprobación de los proyectos en la cámara baja"
-        }
-      ],
-      "antecedentes": [
+          "aporte": "Indicó que el resultado significó una mejora y que el cargo sucederá al de António Guterres."
+        },
         {
-          "id": "224geo",
-          "titulo": "Diputados discute proyectos sobre endeudamiento familiar",
-          "fecha": "2026-09-28T18:04:11.000Z",
-          "ruta": "/nota/diputados-discute-proyectos-sobre-endeudamiento-familiar-224geo"
+          "medio": "C5N",
+          "enlace": "https://www.c5n.com/mundo/carrera-la-secretaria-general-la-onu-el-argentino-rafael-grossi-recupero-terreno-n250292",
+          "fecha": "2026-09-30T02:05:00.000Z",
+          "oficial": false,
+          "aporte": "Mencionó que el escenario sigue trabado por tensiones geopolíticas y un pedido de Cristina Kirchner."
+        },
+        {
+          "medio": "Noticias Argentinas (NA)",
+          "enlace": "https://noticiasargentinas.com/internacionales/el-argentino-grossi-sigue-en-carrera-para-ser-nuevo-secretario-general-de-la-onu_a6abc59a3aeec850fb27a5dc2",
+          "fecha": "2026-09-30T00:58:00.000Z",
+          "oficial": false,
+          "aporte": "Informó la realización de la cuarta votación indicativa del Consejo de Seguridad de la ONU."
+        },
+        {
+          "medio": "La Nueva",
+          "enlace": "https://www.lanueva.com/nota/2026-9-29-23-42-0-en-carrera-el-argentino-grossi-sigue-con-chances-de-ser-el-nuevo-secretario-general-de-la-onu",
+          "fecha": "2026-09-30T02:55:16.000Z",
+          "oficial": false,
+          "aporte": "Aportó la declaración oficial sobre el desarrollo de la cuarta votación indicativa."
         }
       ],
       "verificacion": {
         "nivel": "ALTA",
-        "porque": "Lo contaron cuatro medios independientes.",
+        "porque": "Lo contaron cinco medios independientes.",
         "sugeridoPorIA": "ALTA"
       },
-      "slug": "diputados-bonaerenses-aprueba-cuatro-proyectos-sobre-endeudamiento",
-      "foto": {
-        "archivo": "fotos-notas/qbtyp4.jpg",
-        "credito": "Foto: Agencia DIB"
-      }
+      "slug": "rafael-grossi-recupera-apoyos-y-queda-tercero-en-la-carrera-hacia-la"
     },
     {
       "id": "1fpyvha",
@@ -962,11 +1060,11 @@
         "Noticias Argentinas (NA)",
         "El Día",
         "La Verdad",
+        "El Marplatense",
         "Infobae",
         "Clarín",
         "iProfesional",
-        "La Nueva",
-        "El Marplatense"
+        "La Nueva"
       ],
       "enlace": "https://www.infobae.com/judiciales/2026/09/29/la-corte-suprema-anulo-la-absolucion-a-cesar-milani-y-ordeno-revisar-el-fallo-por-la-muerte-del-soldado-ledo/",
       "teniaImagenLaFuente": true,
@@ -1238,78 +1336,6 @@
         "archivo": "fotos-notas/12rp30w.jpg",
         "credito": "Foto: Diario La Vanguardia"
       }
-    },
-    {
-      "id": "riobys",
-      "titulo": "Campo de Pato disputa el Torneo Regional de Clubes F en Bahía Blanca",
-      "copete": "El equipo Sub 16 de hockey del Club Social y Campo de Pato participa desde el jueves en el certamen bonaerense. Las jugadoras balcarceñas buscan repetir el subcampeonato logrado en la edición anterior.",
-      "cuerpo": "El equipo de sexta división del Club Social y Campo de Pato compite desde el jueves 1 hasta el domingo 4 de octubre en el Torneo Regional de Clubes F en Bahía Blanca. El plantel busca repetir el protagonismo obtenido en 2025, cuando finalizó como subcampeón de la categoría.\n\nEl cuerpo técnico está conformado por Matías Antonelli y Analuz Salvo. El debut en la competencia se programó para el jueves con dos encuentros: a las 12.20 frente a Comercial de Mar del Plata y a las 20.40 contra Racing de Chivilcoy, mientras que el viernes jugarán ante Argentino B de Bahía Blanca a las 15.40.",
-      "guion": "Campo de Pato disputa el Torneo Regional de Clubes F en Bahía Blanca",
-      "seccion": "Deportes",
-      "medios": [
-        "Radio Gabal (FM 104.1)"
-      ],
-      "enlace": "https://www.radiogabal.com.ar/index.php/deportes/hockey-la-sub-16-de-campo-de-pato-disputara-el-regional-de-bahia-blanca",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-29T17:47:43.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-29T18:31:11.646Z",
-      "relevancia": 72,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "La Sub 16 de hockey de Campo de Pato participa en Bahía Blanca.",
-        "El torneo se disputa del jueves 1 al domingo 4 de octubre.",
-        "Matías Antonelli y Analuz Salvo integran el cuerpo técnico."
-      ],
-      "noConfirmado": [
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "El equipo Sub 16 de hockey de Campo de Pato disputa desde este jueves el Torneo Regional de Clubes F en Bahía Blanca. Las jugadoras balcarceñas buscan repetir el subcampeonato obtenido el año pasado.",
-      "etiquetas": [
-        "Hockey",
-        "Campo de Pato",
-        "Bahía Blanca",
-        "Balcarce"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Radio Gabal (FM 104.1)",
-          "enlace": "https://www.radiogabal.com.ar/index.php/deportes/hockey-la-sub-16-de-campo-de-pato-disputara-el-regional-de-bahia-blanca",
-          "fecha": "2026-09-29T17:47:43.000Z",
-          "oficial": false,
-          "aporte": "Informó el calendario, el cuerpo técnico y el plantel del equipo Sub 16 en el torneo de Bahía Blanca."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "1iyhhh6",
-          "titulo": "Campo de Pato afronta una intensa doble fecha de hockey",
-          "fecha": "2026-09-25T16:18:25.329Z",
-          "ruta": "/nota/campo-de-pato-tuvo-una-intensa-doble-fecha-de-hockey-en-balcarce-1iyhhh6"
-        },
-        {
-          "id": "1825h24",
-          "titulo": "Campo de Pato disputa una doble fecha de hockey",
-          "fecha": "2026-09-25T13:28:23.000Z",
-          "ruta": "/nota/campo-de-pato-disputa-una-doble-fecha-de-hockey-en-balcarce-1825h24"
-        },
-        {
-          "id": "1xf2418",
-          "titulo": "Campo de Pato volvió a tener una destacada jornada de hockey",
-          "fecha": "2026-09-18T05:43:46.737Z",
-          "ruta": "/nota/campo-de-pato-volvio-a-tener-una-destacada-jornada-de-hockey-1xf2418"
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "campo-de-pato-disputa-el-torneo-regional-de-clubes-f-en-bahia-blanca"
     },
     {
       "id": "infbfx",
@@ -1637,8 +1663,8 @@
         "Noticias Argentinas (NA)",
         "El Día",
         "La Nueva",
-        "Clarín",
         "El Eco de Tandil",
+        "Clarín",
         "El Cronista",
         "Bolavip Argentina"
       ],
@@ -1769,7 +1795,7 @@
         {
           "medio": "El Día",
           "enlace": "https://www.eldia.com/deportes/gaston-gaudio-confirmo-que-sera-candidato-a-presidente-de-independiente-deportes_1790704620",
-          "fecha": "2026-09-29T18:05:23.000Z",
+          "fecha": "2026-09-29T18:02:00.000Z",
           "oficial": false,
           "aporte": null
         },
@@ -1783,7 +1809,7 @@
         {
           "medio": "El Eco de Tandil",
           "enlace": "https://www.eleco.com.ar/deportes/gaston-gaudio-confirmo-su-candidatura-a-presidente-de-independiente",
-          "fecha": "2026-09-29T17:10:16.000Z",
+          "fecha": "2026-09-29T17:29:08.000Z",
           "oficial": false,
           "aporte": null
         },
@@ -1996,15 +2022,14 @@
       "guion": "La Cooperativa de Electricidad anuncia un corte de luz para el miércoles",
       "seccion": "Balcarce",
       "medios": [
-        "Infórmese Primero (FM 104.9)",
-        "Radio Gabal (FM 104.1)"
+        "Infórmese Primero (FM 104.9)"
       ],
       "enlace": "http://www.informeseprimero.com.ar/2026/09/este-miercoles-habra-un-corte-de.html",
       "teniaImagenLaFuente": true,
       "fecha": "2026-09-29T16:05:00.906Z",
       "sinFecha": false,
       "visto": "2026-09-29T17:02:31.052Z",
-      "relevancia": 90,
+      "relevancia": 80,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -2140,113 +2165,6 @@
       "slug": "pato-naranja-gana-por-99-a-12-y-queda-entre-los-cuatro-mejores"
     },
     {
-      "id": "1xzookf",
-      "titulo": "Fernando Gray anuncia exención impositiva total para jubilados",
-      "copete": "El intendente de Esteban Echeverría confirma el beneficio fiscal desde enero de 2027 para mayores de 75 años con una sola propiedad y bajos ingresos.",
-      "cuerpo": "El intendente de Esteban Echeverría, Fernando Gray, anuncia una exención impositiva total para vecinos mayores de 75 años que cumplan con requisitos de ingresos y propiedad. La medida comienza a regir el 1 de enero de 2027 y alcanza a quienes perciban hasta dos haberes jubilatorios mínimos y posean un único inmueble destinado a vivienda propia y permanente.\n\nEl beneficio incluye la quita de tasas por servicios generales, obras públicas, salud y seguridad, además de patentes, carnet de conducir y derechos de cementerio. Asimismo, el municipio condonará las deudas acumuladas en dichos tributos hasta la fecha de entrada en vigencia.\n\nPara acceder, cada contribuyente debe presentar una declaración jurada y la documentación respaldatoria que fije la reglamentación local. El jefe comunal fundamenta la decisión en la difícil situación económica que atraviesa el país y que afecta a los adultos mayores.",
-      "guion": "Fernando Gray anuncia exención impositiva total para jubilados",
-      "seccion": "Política",
-      "medios": [
-        "QZ Noticias (Mar del Plata)",
-        "Agencia DIB",
-        "Crónica",
-        "Noticias Argentinas (NA)",
-        "La Tecla",
-        "Realpolitik"
-      ],
-      "enlace": "https://noticiasargentinas.com/politica/fernando-gray-anuncio-una-exencion-impositiva-total-para-mayores-de-75-anos_a6abbdd6512f3a9893c237ce6",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-29T15:47:00.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-29T18:01:09.192Z",
-      "relevancia": 73,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [
-        "concejo"
-      ],
-      "como": "automatica",
-      "claves": [
-        "El intendente de Esteban Echeverría confirma la exención impositiva para mayores de 75 años.",
-        "La medida entra en vigencia el 1 de enero de 2027 en ese distrito.",
-        "Alcanza a jubilados con ingresos de hasta dos haberes mínimos y una sola propiedad.",
-        "Incluye la condonación de deudas acumuladas en tasas y patentes municipales."
-      ],
-      "seSabe": [
-        "El intendente Fernando Gray anuncia la exención impositiva total en Esteban Echeverría.",
-        "La medida rige desde el 1 de enero de 2027 para mayores de 75 años.",
-        "Los beneficiarios deben cobrar hasta dos haberes mínimos y tener una sola propiedad.",
-        "La medida incluye la condonación de deudas en tasas municipales y patentes."
-      ],
-      "textoRedes": "El intendente de Esteban Echeverría, Fernando Gray, anunció una exención impositiva total para mayores de 75 años con una sola propiedad y bajos ingresos, que regirá desde enero de 2027.",
-      "etiquetas": [
-        "Esteban Echeverria",
-        "Fernando Gray",
-        "municipio"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Noticias Argentinas (NA)",
-          "enlace": "https://noticiasargentinas.com/politica/fernando-gray-anuncio-una-exencion-impositiva-total-para-mayores-de-75-anos_a6abbdd6512f3a9893c237ce6",
-          "fecha": "2026-09-29T15:47:00.000Z",
-          "oficial": false,
-          "aporte": "Detalla el anuncio del intendente Fernando Gray en Esteban Echeverría sobre la exención impositiva, los requisitos de ingresos y propiedad, la fecha de inicio y las tasas abarcadas."
-        },
-        {
-          "medio": "QZ Noticias (Mar del Plata)",
-          "enlace": "https://www.qznoticias.com/la-provincia/un-municipio-bonaerense-anuncio-una-exencion-impositiva-total-para-mayores-de-75-anos",
-          "fecha": "2026-09-29T17:26:30.000Z",
-          "oficial": false,
-          "aporte": "Reproduce el anuncio del intendente sobre la exención impositiva total para mayores de 75 años."
-        },
-        {
-          "medio": "Crónica",
-          "enlace": "https://www.cronica.com.ar/politica/esteban-echeverria-eximira-de-todos-los-impuestos-municipales-a-los-mayores-de-75-anos-con-hasta-dos-jubilaciones-minimas/",
-          "fecha": "2026-09-29T17:23:57.000Z",
-          "oficial": false,
-          "aporte": "Confirma que el beneficio aplica a quienes cobran hasta dos jubilaciones mínimas y tienen una sola propiedad, y que el anuncio se hizo ante el Concejo Deliberante."
-        },
-        {
-          "medio": "La Tecla",
-          "enlace": "https://www.latecla.info/170050-un-alivio-para-los-jubilados-gray-anuncio-la-exencion-impositiva-total-para-mayores-de-75-anos",
-          "fecha": "2026-09-29T17:53:00.000Z",
-          "oficial": false,
-          "aporte": "Menciona el anuncio del intendente Fernando Gray."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "8zhfqv",
-          "titulo": "El Municipio analiza ir a la Justicia por la Zona Fría",
-          "fecha": "2026-09-29T14:01:11.480Z",
-          "ruta": "/nota/el-municipio-analiza-ir-a-la-justicia-por-la-zona-fria-8zhfqv"
-        },
-        {
-          "id": "1ytgm6c",
-          "titulo": "Petruccelli pide que Aparicio exponga ante la Comisión de Salud",
-          "fecha": "2026-09-28T21:59:12.000Z",
-          "ruta": "/nota/petruccelli-pide-que-aparicio-exponga-ante-la-comision-de-salud-1ytgm6c"
-        },
-        {
-          "id": "1acx84s",
-          "titulo": "Fundación Banco Provincia entrega instrumentos a la Orquesta Escuela",
-          "fecha": "2026-09-28T16:14:24.000Z",
-          "ruta": "/nota/fundacion-banco-provincia-entrega-instrumentos-a-la-orquesta-escuela-1acx84s"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron cuatro medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "fernando-gray-anuncia-exencion-impositiva-total-para-jubilados",
-      "foto": {
-        "archivo": "fotos-notas/1xzookf.jpg",
-        "credito": "Foto: Crónica"
-      }
-    },
-    {
       "id": "1kzsj5l",
       "titulo": "ARBal aplica un cronograma especial de atención el miércoles",
       "copete": "La Agencia de Recaudación Balcarce modifica sus horarios el miércoles por una capacitación interna y el cierre del balance trimestral.",
@@ -2262,7 +2180,7 @@
       "fecha": "2026-09-29T15:45:01.050Z",
       "sinFecha": false,
       "visto": "2026-09-29T17:02:31.052Z",
-      "relevancia": 90,
+      "relevancia": 83,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -2313,6 +2231,97 @@
       }
     },
     {
+      "id": "8213y6",
+      "titulo": "El Gobierno atribuye el salto del riesgo país a factores externos",
+      "copete": "El índice que elabora JP Morgan tocó los 641 puntos básicos en el inicio de la semana y luego bajó a 604. El Ejecutivo defendió el programa económico.",
+      "cuerpo": "Frente a esta suba del indicador que elabora la banca privada JP Morgan, el vocero presidencial Adrián Ravier atribuyó la escalada a factores internacionales vinculados a la guerra en Medio Oriente y al incremento de tasas en los Estados Unidos.\n\nDurante una conferencia de prensa en la Casa Rosada, el funcionario defendió la política económica y remarcó que la economía nacional continúa en crecimiento pese a los shocks externos. Además, el vocero responsabilizó a la oposición por los aumentos en la inflación y la pobreza tras los ataques políticos registrados a fines del año pasado.\n\nEn la jornada del martes, el índice financiero que mide el sobrecosto de la deuda argentina retrocedió hasta los 604 puntos básicos gracias a una recuperación de los bonos. Días atrás, el presidente Javier Milei había culpado al gobernador bonaerense Axel Kicillof por el incremento del indicador financiero durante una visita a los Estados Unidos.",
+      "guion": "El Gobierno atribuye el salto del riesgo país a factores externos",
+      "seccion": "Economía",
+      "medios": [
+        "Clarín",
+        "TN (Todo Noticias)",
+        "El Destape",
+        "El Día",
+        "El Marplatense"
+      ],
+      "enlace": "https://www.clarin.com/economia/gobierno-atribuyo-alza-riesgo-pais-conflicto-medio-oriente-suba-tasas-estados-unidos_0_Cx7P3WgeCb.html",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-29T15:21:01.000Z",
+      "sinFecha": false,
+      "visto": "2026-09-29T20:01:10.426Z",
+      "relevancia": 72,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "El riesgo país tocó los 641 puntos básicos al inicio de la semana.",
+        "El Ejecutivo adjudicó la suba a la guerra en Medio Oriente y a tasas en Estados Unidos.",
+        "El índice financiero retrocedió este martes hasta los 604 puntos básicos."
+      ],
+      "seSabe": [
+        "El riesgo país alcanzó los 641 puntos básicos el lunes y bajó a 604 este martes, según los medios y fuentes oficiales.",
+        "El vocero presidencial Adrián Ravier atribuyó la suba a factores externos como Medio Oriente y las tasas de Estados Unidos.",
+        "El presidente Javier Milei había responsabilizado al gobernador Axel Kicillof por el indicador en septiembre de 2026."
+      ],
+      "textoRedes": "El riesgo país argentino llegó a los 641 puntos básicos en el inicio de la semana y luego bajó a 604. El Gobierno nacional atribuyó la suba a la guerra en Medio Oriente y al aumento de tasas en los Estados Unidos.",
+      "etiquetas": [
+        "riesgo pais",
+        "economia",
+        "gobierno nacional",
+        "adrian ravier"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Clarín",
+          "enlace": "https://www.clarin.com/economia/gobierno-atribuyo-alza-riesgo-pais-conflicto-medio-oriente-suba-tasas-estados-unidos_0_Cx7P3WgeCb.html",
+          "fecha": "2026-09-29T15:21:01.000Z",
+          "oficial": false,
+          "aporte": "Informó que el riesgo país tocó 641 puntos y detalló las declaraciones del vocero Adrián Ravier."
+        },
+        {
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/economia/2026/09/29/el-gobierno-le-atribuyo-la-suba-del-riesgo-pais-al-conflicto-en-medio-oriente-y-el-alza-de-las-tasas-en-los-estados-unidos/",
+          "fecha": "2026-09-29T18:40:14.000Z",
+          "oficial": false,
+          "aporte": "Confirmó los datos del salto del riesgo país a 641 puntos básicos al inicio de la semana."
+        },
+        {
+          "medio": "El Destape",
+          "enlace": "https://www.eldestapeweb.com/politica/ahora-gobierno-culpo-ee-uu-guerra-medio-oriente-suba-riesgo-pais-2026929125227",
+          "fecha": "2026-09-29T15:52:00.000Z",
+          "oficial": false,
+          "aporte": "Aportó que Ravier adjudicó la suba a factores externos y mencionó cifras sobre control migratorio."
+        },
+        {
+          "medio": "El Marplatense",
+          "enlace": "https://www.elmarplatense.com/el-gobierno-atribuyo-el-crecimiento-del-riesgo-pais-al-conflicto-en-medio-oriente",
+          "fecha": "2026-09-29T19:36:14.000Z",
+          "oficial": false,
+          "aporte": "Indicó que el gobierno buscó llevar tranquilidad tras el aumento del indicador de JP Morgan."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "11nk8l",
+          "titulo": "Milei cruza a Kicillof en Estados Unidos y lo culpa por el riesgo país",
+          "fecha": "2026-09-24T01:04:00.000Z",
+          "ruta": "/nota/milei-critico-a-kicillof-por-el-riesgo-pais-en-nueva-york-11nk8l"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron cuatro medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "el-gobierno-atribuye-el-salto-del-riesgo-pais-a-factores-externos",
+      "foto": {
+        "archivo": "fotos-notas/8213y6.jpg",
+        "credito": "Foto: El Destape"
+      }
+    },
+    {
       "id": "jul48u",
       "titulo": "Pampa Dúo toca el 17 de octubre en el Teatro Municipal",
       "copete": "Marcelo Giménez y Pablo Lobato presentarán \"Nuestra forma de mirar el mundo\", un espectáculo de música surera, a las 21 en el Teatro Municipal Luis Conti.",
@@ -2359,7 +2368,6 @@
       "seccion": "Balcarce",
       "medios": [
         "Infórmese Primero (FM 104.9)",
-        "Radio Gabal (FM 104.1)",
         "Municipalidad de Balcarce",
         "Diario La Vanguardia",
         "Sendero Regional"
@@ -2636,97 +2644,6 @@
       "slug": "arte-fusion-expo-anual-2026-en-el-museo-historico",
       "corregidaAMano": true,
       "cuerpoAMano": true
-    },
-    {
-      "id": "1asj6cl",
-      "titulo": "Las TC Pick Up evalúan regresar a Balcarce antes de fin de año",
-      "copete": "Tras convocar a más de 20.000 personas en el autódromo Juan Manuel Fangio, la categoría analiza volver al circuito local antes de terminar el campeonato. Quedan tres fechas pendientes.",
-      "cuerpo": "Las TC Pick Up analizan regresar al autódromo Juan Manuel Fangio antes de finalizar 2026, según informó un medio local. La evaluación surge tras el fin de semana que reunió a más de 20.000 personas y dejó sin precintos momentáneamente a la organización en los accesos durante el domingo.\n\nLa categoría disputó ocho fechas en el año en el Roberto Mouras de La Plata, en Rosario y en Balcarce. El evento marcó el regreso de una competencia nacional al circuito local después de quince años, un hecho acompañado por una ocupación hotelera plena en la ciudad.",
-      "guion": "Las TC Pick Up evalúan regresar a Balcarce antes de fin de año",
-      "seccion": "Automovilismo",
-      "medios": [
-        "Radio Gabal (FM 104.1)"
-      ],
-      "enlace": "https://www.radiogabal.com.ar/index.php/deportes/exclusivo-las-tc-pick-up-podrian-volver-a-balcarce-antes-de-fin-de-ano",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-29T14:30:43.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-29T15:01:04.360Z",
-      "relevancia": 73,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [
-        "autodromo",
-        "tc-pick-up",
-        "fangio"
-      ],
-      "como": "automatica",
-      "claves": [
-        "La categoría analiza volver a Balcarce antes de terminar 2026.",
-        "El último fin de semana reunió a más de 20.000 espectadores.",
-        "Quedan tres fechas pendientes en el calendario oficial.",
-        "No se descarta que el circuito local reciba más de una competencia."
-      ],
-      "seSabe": [
-        "Las TC Pick Up evalúan regresar al autódromo Juan Manuel Fangio antes de fin de año, según un medio local.",
-        "El último fin de semana reunió a más de 20.000 personas en el circuito.",
-        "La organización se quedó momentáneamente sin precintos en los accesos el domingo por la masiva concurrencia.",
-        "El campeonato de la categoría tiene tres fechas pendientes por disputarse.",
-        "La competencia del último fin de semana marcó el regreso del automovilismo nacional a Balcarce tras quince años."
-      ],
-      "noConfirmado": [
-        "No existe una confirmación oficial de la ACTC sobre el regreso de las TC Pick Up a Balcarce.",
-        "No se sabe con precisión si el circuito local recibirá más de una competencia antes del cierre del año.",
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "Las TC Pick Up analizan regresar al autódromo Juan Manuel Fangio antes de terminar el año tras convocar a más de 20.000 personas en Balcarce.",
-      "etiquetas": [
-        "TC Pick Up",
-        "Autodromo Juan Manuel Fangio",
-        "Automovilismo",
-        "Balcarce",
-        "ACTC"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Radio Gabal (FM 104.1)",
-          "enlace": "https://www.radiogabal.com.ar/index.php/deportes/exclusivo-las-tc-pick-up-podrian-volver-a-balcarce-antes-de-fin-de-ano",
-          "fecha": "2026-09-29T14:30:43.000Z",
-          "oficial": false,
-          "aporte": "Aportó la información sobre la evaluación de la ACTC para regresar a Balcarce con las TC Pick Up antes de fin de año y los datos de convocatoria del último fin de semana."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "1o216bo",
-          "titulo": "Los Ciantini presentaron las Pick Up para volver a correr",
-          "fecha": "2026-09-21T20:45:01.000Z",
-          "ruta": "/nota/los-ciantini-presentaron-las-pick-up-para-volver-a-correr-en-balcarce-1o216bo"
-        },
-        {
-          "id": "1hjmkd4",
-          "titulo": "Más de 1.400 vehículos ingresan al autódromo Fangio",
-          "fecha": "2026-09-29T03:01:03.481Z",
-          "ruta": "/nota/ingresan-mas-de-mil-cuatrocientos-vehiculos-al-fangio-1hjmkd4"
-        },
-        {
-          "id": "2jiiqj",
-          "titulo": "El automovilismo nacional convoca a una multitud",
-          "fecha": "2026-09-28T22:30:54.996Z",
-          "ruta": "/nota/el-automovilismo-nacional-convoca-a-una-multitud-2jiiqj"
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "las-tc-pick-up-evaluan-regresar-a-balcarce-antes-de-fin-de-ano",
-      "foto": {
-        "archivo": "fotos-notas/1asj6cl.jpg",
-        "credito": "Foto: Radio Gabal (FM 104.1)"
-      }
     },
     {
       "id": "8zhfqv",
@@ -3036,98 +2953,6 @@
       }
     },
     {
-      "id": "1j7xy5x",
-      "titulo": "La Justicia Federal pide informes al Estado por fondos viales",
-      "copete": "El juez federal de Victoria dio trámite a un amparo presentado por legisladores entrerrianos. El reclamo apunta al destino de los recursos del impuesto a los combustibles para rutas nacionales.",
-      "cuerpo": "El expediente fue iniciado por el senador Adán Bahl y los diputados Guillermo Michel y Marianela Marclay, quienes solicitaron que se retomen las tareas en rutas nacionales de la provincia.\n\nEn la causa 12957/2026, el juez federal Federico Martin declaró la competencia del fuero y ordenó al Estado nacional que presente un informe sobre el interés público en un plazo de tres días. La medida procesal no implica una orden de transferencia de fondos ni una decisión definitiva sobre el planteo.\n\nLos demandantes denunciaron que más de 1,5 billones de pesos que debían destinarse al Sistema de Infraestructura de Transporte para la reparación vial fueron derivados a otros instrumentos financieros. El expediente continuará con la presentación de la documentación requerida a las partes.",
-      "guion": "La Justicia Federal pide informes al Estado por fondos viales",
-      "seccion": "Argentina",
-      "medios": [
-        "La Nación",
-        "Minuto Uno",
-        "C5N",
-        "Canal 26",
-        "Noticias Argentinas (NA)",
-        "Ámbito"
-      ],
-      "enlace": "https://www.canal26.com/politica/2026/09/29/rutas-de-entre-rios-la-justicia-federal-pidio-informes-al-gobierno-por-los-fondos-del-impuesto-a-los-combustibles/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-29T13:02:59.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-29T15:01:04.360Z",
-      "relevancia": 66,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "La Justicia federal dio trámite a un amparo de legisladores de Entre Ríos.",
-        "El expediente apunta al Ministerio de Economía y a Vialidad Nacional.",
-        "El juez Federico Martin dio un plazo de tres días para presentar un informe.",
-        "Los demandantes reclaman por más de 1,5 billones de pesos del impuesto a los combustibles."
-      ],
-      "noConfirmado": [
-        "Todavía no hay una orden judicial al Gobierno para transferir los fondos reclamados.",
-        "No se dictó una resolución definitiva sobre la medida cautelar solicitada por los demandantes."
-      ],
-      "etiquetas": [
-        "Justicia Federal",
-        "Entre Ríos",
-        "rutas nacionales",
-        "impuesto a los combustibles",
-        "Vialidad Nacional"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Canal 26",
-          "enlace": "https://www.canal26.com/politica/2026/09/29/rutas-de-entre-rios-la-justicia-federal-pidio-informes-al-gobierno-por-los-fondos-del-impuesto-a-los-combustibles/",
-          "fecha": "2026-09-29T13:02:59.000Z",
-          "oficial": false,
-          "aporte": "Informó que la Justicia Federal de Victoria dio trámite al amparo y detalló el pedido de informes al Estado."
-        },
-        {
-          "medio": "Ámbito",
-          "enlace": "https://www.ambito.com/politica/la-justicia-habilito-un-amparo-que-nacion-transfiera-fondos-las-rutas-rios-n6327927",
-          "fecha": "2026-09-29T14:30:00.000Z",
-          "oficial": false,
-          "aporte": "Precisó que el reclamo fue presentado por legisladores peronistas contra el Gobierno y Vialidad Nacional."
-        },
-        {
-          "medio": "Minuto Uno",
-          "enlace": "https://www.minutouno.com/politica/la-justicia-da-curso-un-amparo-que-nacion-reactive-obras-rutas-rios-n6327930",
-          "fecha": "2026-09-29T14:32:00.000Z",
-          "oficial": false,
-          "aporte": "Indicó que la Justicia federal hizo lugar al planteo para la transferencia de fondos a la provincia."
-        },
-        {
-          "medio": "Noticias Argentinas (NA)",
-          "enlace": "https://noticiasargentinas.com/politica/fondos-para-rutas--la-justicia-pidio-informes-al-gobierno_a6abbb6a412f3a9893c1d887e",
-          "fecha": "2026-09-29T13:55:13.000Z",
-          "oficial": false,
-          "aporte": "Señaló que la presentación judicial busca la reactivación de obras y tareas de mantenimiento en rutas nacionales."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "dph8p3",
-          "titulo": "Petruccelli pidió informes sobre el programa para celíacos y las acciones de prevención de ITS",
-          "fecha": "2026-09-20T14:00:23.000Z",
-          "ruta": "/nota/petruccelli-pidio-informes-sobre-el-programa-para-celiacos-y-las-dph8p3"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron cuatro medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "la-justicia-federal-pide-informes-al-estado-por-fondos-viales",
-      "foto": {
-        "archivo": "fotos-notas/1j7xy5x.jpg",
-        "credito": "Foto: Minuto Uno"
-      }
-    },
-    {
       "id": "e7jcec",
       "titulo": "La molienda de soja en agosto alcanza el nivel más alto en diez campañas",
       "copete": "La Secretaría de Agricultura informa que el procesamiento de soja llegó a las 4.252.151 toneladas en agosto de 2026, lo que representa una suba interanual del 8,81% frente al mismo mes del año anterior.",
@@ -3136,8 +2961,8 @@
       "seccion": "Agro",
       "medios": [
         "TN (Todo Noticias)",
-        "Agrositio",
         "Infobrisas (Radio Brisas)",
+        "Agrositio",
         "Agroempresario"
       ],
       "enlace": "https://www.agrositio.com.ar/noticia/248583-la-molienda-de-soja-en-agosto-fue-la-mayor-de-las-ultimas-10-campanas.html",
@@ -3203,6 +3028,73 @@
       }
     },
     {
+      "id": "2e3etr",
+      "titulo": "Cierran más de doscientos locales de juguetes en un año por la crisis",
+      "copete": "La caída del consumo y el aumento de costos impactan en el sector juguetero. La cámara empresaria advierte sobre la competencia de importados y el contrabando.",
+      "cuerpo": "Entre los casos recientes figura el cese de operaciones de la tradicional cadena Tío Mario, ubicada en la avenida Pueyrredón, tras casi treinta años de actividad.\n\nEl dirigente detalló que los comercios enfrentan una fuerte presión por el incremento en los alquileres, los servicios y los salarios, lo que lleva a muchos a volcarse a la venta digital para liquidar mercadería. Asimismo, advirtió que el treinta por ciento del mercado corresponde a contrabando y cuestionó el impacto de la desregulación en las compras al exterior.\n\nActualmente, el territorio nacional cuenta con 2.800 establecimientos activos que intentan sostener sus estructuras frente a este escenario complejo.",
+      "guion": "Cierran más de doscientos locales de juguetes en un año por la crisis",
+      "seccion": "Economía",
+      "medios": [
+        "Minuto Uno",
+        "El Eco de Tandil"
+      ],
+      "enlace": "https://www.eleco.com.ar/nacionales/jugueterias-en-crisis-cerraron-mas-de-200-en-un-ano",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-29T12:26:40.000Z",
+      "sinFecha": false,
+      "visto": "2026-09-29T23:01:10.965Z",
+      "relevancia": 35,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Más de 200 jugueterías cerraron en un año.",
+        "El sector sufre caída del consumo y suba de costos.",
+        "El treinta por ciento del mercado es contrabando.",
+        "Subsisten 2.800 comercios en todo el país."
+      ],
+      "seSabe": [
+        "Cerraron más de 200 jugueterías en el último año según la Cámara Argentina de la Industria del Juguete.",
+        "La cadena Tío Mario cerró su local de avenida Pueyrredón tras casi tres décadas.",
+        "El país cuenta actualmente con 2.800 jugueterías.",
+        "El 30 por ciento del mercado del juguete es de contrabando según el sector."
+      ],
+      "textoRedes": "La industria juguetería atraviesa una crisis con más de doscientos locales cerrados en un año debido a la caída del consumo, el aumento de costos y la competencia de productos importados, según informó la cámara del sector.",
+      "etiquetas": [
+        "Jugueterías",
+        "Crisis",
+        "Consumo"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Eco de Tandil",
+          "enlace": "https://www.eleco.com.ar/nacionales/jugueterias-en-crisis-cerraron-mas-de-200-en-un-ano",
+          "fecha": "2026-09-29T12:26:40.000Z",
+          "oficial": false,
+          "aporte": "Detalló el cierre de la cadena Tío Mario, datos de la cámara empresaria sobre cierres de locales y denunció contrabando."
+        },
+        {
+          "medio": "Minuto Uno",
+          "enlace": "https://www.minutouno.com/economia/crisis-economica-mas-300-jugueterias-cerraron-o-pasaron-comercio-online-n6328099",
+          "fecha": "2026-09-29T20:40:00.000Z",
+          "oficial": false,
+          "aporte": "Indicó que la transformación del sector se debe al consumo, compras externas y canales digitales."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "cierran-mas-de-doscientos-locales-de-juguetes-en-un-ano-por-la-crisis",
+      "foto": {
+        "archivo": "fotos-notas/2e3etr.jpg",
+        "credito": "Foto: El Eco de Tandil"
+      }
+    },
+    {
       "id": "jul3w9",
       "titulo": "Infraccionan a un tractor en caminos rurales tras las lluvias",
       "copete": "El Comando de Prevención Rural sancionó a un conductor en el paraje La Esperanza. El municipio advirtió que aplicará multas severas.",
@@ -3212,8 +3104,6 @@
       "medios": [
         "News Balcarce (FM 91.7)",
         "Infórmese Primero (FM 104.9)",
-        "Radio Gabal (FM 104.1)",
-        "El Diario Balcarce",
         "Diario La Vanguardia",
         "Municipalidad de Balcarce",
         "Sendero Regional"
@@ -3223,7 +3113,7 @@
       "fecha": "2026-09-29T12:08:15.000Z",
       "sinFecha": false,
       "visto": "2026-09-30T01:01:00.516Z",
-      "relevancia": 100,
+      "relevancia": 93,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -3395,16 +3285,15 @@
       "guion": "La Provincia crea un programa para formar en oficios a secundarios",
       "seccion": "Argentina",
       "medios": [
-        "El Diario Balcarce",
         "QZ Noticias (Mar del Plata)",
         "El Día",
         "0221",
+        "Infoeme",
+        "Mi8 (Canal 8 Mar del Plata)",
+        "El Eco de Tandil",
         "Ámbito",
         "Zona Norte Diario",
-        "Agencia DIB",
-        "El Eco de Tandil",
-        "Mi8 (Canal 8 Mar del Plata)",
-        "Infoeme"
+        "Agencia DIB"
       ],
       "enlace": "https://www.ambito.com/informacion-general/la-provincia-buenos-aires-crea-un-programa-que-estudiantes-secundarios-se-formen-oficios-n6327786",
       "teniaImagenLaFuente": true,
@@ -3710,8 +3599,8 @@
         "Diario Popular",
         "Noticias Argentinas (NA)",
         "La Verdad",
-        "La Nueva",
         "Mi8 (Canal 8 Mar del Plata)",
+        "La Nueva",
         "Crónica"
       ],
       "enlace": "https://noticiasargentinas.com/economia/una-pareja-de-jubilados-que-alquila-necesito-mas-de--2-5-millones-para-vivir-en-agosto_a6abb838b12f3a9893c1662be",
@@ -3893,11 +3782,11 @@
         "Canal 26",
         "Noticias Argentinas (NA)",
         "La Verdad",
+        "QZ Noticias (Mar del Plata)",
+        "Mi8 (Canal 8 Mar del Plata)",
         "Clarín",
         "Crónica",
-        "QZ Noticias (Mar del Plata)",
         "La Nueva",
-        "Mi8 (Canal 8 Mar del Plata)",
         "Doble Amarilla"
       ],
       "enlace": "https://www.infobae.com/politica/2026/09/29/designaron-a-adolfo-cambiaso-como-embajador-internacional-del-deporte-argentino/",
@@ -4055,7 +3944,6 @@
       "guion": "La Corte revoca el fallo sobre la Ley de Tierras del DNU",
       "seccion": "Política",
       "medios": [
-        "Infobae",
         "La Nación",
         "0223 (Mar del Plata)",
         "El Eco de Tandil",
@@ -4083,10 +3971,11 @@
         "0221",
         "La Brújula 24",
         "La Tecla",
+        "Infoeme",
         "La Voz del Pueblo",
         "ANDigital",
         "Mi8 (Canal 8 Mar del Plata)",
-        "Infoeme"
+        "Infobae"
       ],
       "enlace": "https://noticiasargentinas.com/politica/la-corte-revoco-el-fallo-que-declaraba-inconstitucional-la-derogacion-de-la-ley-de-tierras_a6abc0d42aeec850fb26e90c9",
       "teniaImagenLaFuente": true,
@@ -4295,9 +4184,9 @@
       "medios": [
         "LU9 Mar del Plata",
         "ANDigital",
-        "Agencia DIB",
-        "El Eco de Tandil",
         "Mi8 (Canal 8 Mar del Plata)",
+        "El Eco de Tandil",
+        "Agencia DIB",
         "Ecos Diarios (Necochea)"
       ],
       "enlace": "https://dib.com.ar/sociedad/los-establecimientos-bonaerenses-que-garantizan-el-aborto-legal-se-triplicaron-seis-anos-n56095",
@@ -4653,179 +4542,6 @@
       "slug": "la-virgen-de-la-tosquera-compite-por-una-nominacion-en-los-oscar"
     },
     {
-      "id": "1t74fyv",
-      "titulo": "El autódromo Fangio asoma como alternativa para cerrar el año del TC",
-      "copete": "Tras el fin de semana de actividad nacional, surgen tratativas para que la máxima categoría del automovilismo argentino corra en diciembre en el circuito local.",
-      "cuerpo": "El autódromo Juan Manuel Fangio se posiciona con firmeza para recibir a las categorías nacionales bajo la órbita de la ACTC, tras la actividad desarrollada el fin de semana con las TC Pick Up y el Turismo Special de la Costa.\n\nLa dirigencia que encabeza Hugo Mazzacane quedó satisfecha con el evento y existen tratativas para retornar a Balcarce antes de concluir la temporada 2026. Ante la clausura provisoria del autódromo de La Plata, trascendió que el Turismo Carretera evalúa correr el 6 de diciembre en Balcarce, una fecha que por el momento se mantiene libre de compromisos para el circuito local.\n\nPara concretar la llegada de la categoría principal, el escenario balcarceño requiere obras importantes de infraestructura.",
-      "guion": "El autódromo Fangio asoma como alternativa para cerrar el año del TC",
-      "seccion": "Automovilismo",
-      "medios": [
-        "El Diario Balcarce"
-      ],
-      "enlace": "https://eldiariobalcarce.com.ar/el-6-de-diciembre-por-las-dudas-circuito-libre-fecha-para-el-tc-673",
-      "teniaImagenLaFuente": false,
-      "fecha": "2026-09-28T22:30:54.996Z",
-      "sinFecha": true,
-      "visto": "2026-09-28T22:30:54.996Z",
-      "relevancia": 61,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "El autódromo Fangio evalúa recibir al Turismo Carretera el próximo 6 de diciembre.",
-        "La ACTC analiza alternativas ante la clausura provisoria del circuito de La Plata.",
-        "El escenario local requiere obras importantes para albergar a la máxima categoría."
-      ],
-      "seSabe": [
-        "Las TC Pick Up y el Turismo Special de la Costa compitieron el fin de semana en el autódromo Juan Manuel Fangio.",
-        "La dirigencia de la ACTC, encabezada por Hugo Mazzacane, quedó satisfecha con la competencia realizada en Balcarce.",
-        "El autódromo de La Plata se encuentra provisoriamente clausurado por cuestiones de seguridad.",
-        "El circuito local no tendría compromisos asumidos para la fecha del 6 de diciembre."
-      ],
-      "noConfirmado": [
-        "Todavía no se confirmó de manera oficial la llegada del Turismo Carretera a Balcarce para el 6 de diciembre.",
-        "No se precisó el inicio ni el detalle de las obras necesarias para adaptar el circuito a los requerimientos del TC.",
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "Tras la actividad del fin de semana, surgen tratativas para que el Turismo Carretera evalúe correr el 6 de diciembre en el autódromo Juan Manuel Fangio de Balcarce.",
-      "etiquetas": [
-        "Turismo Carretera",
-        "Autodromo Juan Manuel Fangio",
-        "ACTC",
-        "Balcarce"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "El Diario Balcarce",
-          "enlace": "https://eldiariobalcarce.com.ar/el-6-de-diciembre-por-las-dudas-circuito-libre-fecha-para-el-tc-673",
-          "fecha": "2026-09-28T22:06:53.000Z",
-          "oficial": false,
-          "aporte": "Aportó información sobre las tratativas para el regreso del Turismo Carretera y la evaluación positiva de la ACTC tras el fin de semana de competencias."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "lcvlqf",
-          "titulo": "Vuelve el TC al tradicional autódromo Juan Manuel Fangio: la categoría Pick Up protagonizará la reapertura del circuito",
-          "fecha": "2026-09-24T17:08:37.000Z",
-          "ruta": "/nota/vuelve-el-tc-al-tradicional-autodromo-juan-manuel-fangio-la-categoria-lcvlqf"
-        },
-        {
-          "id": "1hhocwa",
-          "titulo": "El autódromo Fangio avanza con nuevas obras tras las competencias",
-          "fecha": "2026-09-28T22:01:03.337Z",
-          "ruta": "/nota/el-autodromo-fangio-avanza-con-nuevas-obras-tras-las-competencias-1hhocwa"
-        },
-        {
-          "id": "1a0ty94",
-          "titulo": "Reino destaca el éxito del regreso automovilístico al Fangio",
-          "fecha": "2026-09-28T19:02:49.410Z",
-          "ruta": "/nota/reino-destaca-el-exito-del-regreso-automovilistico-al-fangio-1a0ty94"
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "el-autodromo-fangio-asoma-como-alternativa-para-cerrar-el-ano-del-tc",
-      "foto": {
-        "archivo": "fotos-notas/1t74fyv.jpg",
-        "credito": "Foto: El Diario Balcarce"
-      }
-    },
-    {
-      "id": "ip1dkb",
-      "titulo": "El Concejo pide acelerar la reparación de un puente en la zona rural",
-      "copete": "El Concejo Deliberante aprobó por unanimidad un proyecto para solicitar la reparación de un puente en el sector de La Esperanza y El Volcán. La iniciativa exige la intervención del Ministerio de Infraestructura provincial.",
-      "cuerpo": "Durante el debate en el recinto, el concejal Enrique Guillén presentó la iniciativa y remarcó la necesidad de restablecer la circulación de los vecinos de la zona. A su vez, el edil Leandro Spinelli indicó que el Municipio trabaja en un pliego de licitación para construir un paso de piedra en ese sector y señaló que existen puentes en la red rural con entre 60 y 80 años de antigüedad. En la misma sesión, la concejal Sol Di Gerónimo propuso dirigir el reclamo de forma directa al Ministerio provincial.\n\nAdemás, se informó que ya funciona el puente de La Cerámica y que durante este año se proyecta colocar otro sobre el arroyo Dulce, tras recibir el presupuesto correspondiente.",
-      "guion": "El Concejo pide acelerar la reparación de un puente en la zona rural",
-      "seccion": "Balcarce",
-      "medios": [
-        "El Diario Balcarce"
-      ],
-      "enlace": "https://eldiariobalcarce.com.ar/piden-acelerar-la-reparacion-de-un-puente-clave-para-la-circulacion-en-la-zona-rural-677",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-28T21:52:27.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-28T22:01:03.337Z",
-      "relevancia": 63,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [
-        "concejo"
-      ],
-      "como": "automatica",
-      "claves": [
-        "El Concejo Deliberante aprobó por unanimidad la reparación de un puente rural.",
-        "El pedido está dirigido al Ministerio de Infraestructura de la Provincia.",
-        "La estructura afectada se ubica en el sector de La Esperanza y El Volcán.",
-        "Prevén construir un paso de piedra provisional para restablecer el tránsito."
-      ],
-      "seSabe": [
-        "El proyecto fue aprobado por unanimidad en la última sesión del Concejo Deliberante.",
-        "La iniciativa solicita la intervención del Ministerio de Infraestructura bonaerense.",
-        "El puente afectado se encuentra en la zona de La Esperanza y El Volcán.",
-        "El concejal Leandro Spinelli indicó que se proyecta un paso de piedra en ese tramo.",
-        "Quedó habilitado el puente de La Cerámica y prevén otro sobre el arroyo Dulce durante 2026."
-      ],
-      "noConfirmado": [
-        "No se precisó el plazo exacto en el que comenzarán las obras en el puente de La Esperanza y El Volcán.",
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "El Concejo Deliberante aprobó por unanimidad un pedido al Ministerio de Infraestructura provincial para acelerar la reparación de un puente intransitable en la zona de La Esperanza y El Volcán.",
-      "etiquetas": [
-        "Concejo Deliberante",
-        "puente rural",
-        "La Esperanza",
-        "El Volcán",
-        "Ministerio de Infraestructura",
-        "caminos rurales"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "El Diario Balcarce",
-          "enlace": "https://eldiariobalcarce.com.ar/piden-acelerar-la-reparacion-de-un-puente-clave-para-la-circulacion-en-la-zona-rural-677",
-          "fecha": "2026-09-28T21:52:27.000Z",
-          "oficial": false,
-          "aporte": "Informó sobre la aprobación del proyecto en el Concejo Deliberante y los detalles del debate en torno a los puentes rurales."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "1n4w9ua",
-          "titulo": "Piden instalar un punto presencial para gestionar el TelePASE en Balcarce o en el peaje de la Ruta 226",
-          "fecha": "2026-09-23T14:56:16.191Z",
-          "ruta": "/nota/piden-instalar-un-punto-presencial-para-gestionar-el-telepase-en-1n4w9ua"
-        },
-        {
-          "id": "32591i",
-          "titulo": "Piden un punto TelePASE",
-          "fecha": "2026-09-23T12:51:34.000Z",
-          "ruta": "/nota/piden-un-punto-telepase-en-balcarce-32591i"
-        },
-        {
-          "id": "1acx84s",
-          "titulo": "Fundación Banco Provincia entrega instrumentos a la Orquesta Escuela",
-          "fecha": "2026-09-28T16:14:24.000Z",
-          "ruta": "/nota/fundacion-banco-provincia-entrega-instrumentos-a-la-orquesta-escuela-1acx84s"
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "el-concejo-pide-acelerar-la-reparacion-de-un-puente-en-la-zona-rural",
-      "foto": {
-        "archivo": "fotos-notas/ip1dkb.jpg",
-        "credito": "Foto: El Diario Balcarce"
-      }
-    },
-    {
       "id": "1jf1w7c",
       "titulo": "Cierra la votación del Balón de Oro y definen al ganador",
       "copete": "Terminó el plazo para que los jurados elijan a los candidatos. La ceremonia de entrega será el 26 de octubre en Londres.",
@@ -5174,12 +4890,13 @@
         "Página/12",
         "Canal 26",
         "Noticias Argentinas (NA)",
+        "La Tecla",
         "La Verdad",
+        "El Marplatense",
+        "Mi8 (Canal 8 Mar del Plata)",
         "La Nueva",
         "Radio Mitre",
-        "El Marplatense",
         "Agencia DIB",
-        "Mi8 (Canal 8 Mar del Plata)",
         "Crónica"
       ],
       "enlace": "https://noticiasargentinas.com/economia/el-riesgo-pais-cae-y-se-acerca-a-los-600-puntos_a6abbd7d312f3a9893c2280a8",
@@ -5422,135 +5139,55 @@
         "archivo": "fotos-notas/1acx84s.jpg",
         "credito": "Foto: Municipalidad de Balcarce"
       }
-    },
-    {
-      "id": "caurxr",
-      "titulo": "Balinotti destaca las obras del autódromo Fangio tras el regreso nacional",
-      "copete": "El jefe médico de la ACTC, Rodolfo Balinotti, valoró los trabajos realizados en el circuito local tras la competencia del fin de semana y consideró factible la llegada del Turismo Carretera.",
-      "cuerpo": "Según informó en declaraciones radiales, los trabajos superaron las recomendaciones iniciales y se documentó que el circuito cuenta con el doble de las intervenciones pedidas, basándose en un informe firmado por Carlos Bertrán, vinculado a la FIA.\n\nAsimismo, destacó la conformidad de los pilotos Agustín Canapino, Mariano Werner y Otto Fritzler durante las competencias de TC Pick Up y Turismo Special de la Costa, además de la actuación de los Bomberos Voluntarios de Balcarce ante un foco de incendio en la sierra.\n\nPor último, Balinotti señaló que el regreso funcionó como prueba para evaluar la infraestructura del predio y consideró factible la futura llegada del Turismo Carretera, aunque advirtió que se requiere continuar con trabajos como la ampliación del sector de boxes.",
-      "guion": "Balinotti destaca las obras del autódromo Fangio tras el regreso nacional",
-      "seccion": "Automovilismo",
-      "medios": [
-        "Radio Gabal (FM 104.1)"
-      ],
-      "enlace": "https://www.radiogabal.com.ar/index.php/politica/rodolfo-balinotti-lo-mas-dificil-ya-se-hizo-ahora-el-fangio-tiene-un-potencial-enorme",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-28T15:35:16.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-28T17:31:01.054Z",
-      "relevancia": 67,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [
-        "autodromo",
-        "fangio"
-      ],
-      "como": "automatica",
-      "claves": [
-        "Rodolfo Balinotti defendió las obras realizadas en el autódromo Juan Manuel Fangio.",
-        "El jefe médico de la ACTC afirmó que las intervenciones duplicaron las recomendaciones iniciales.",
-        "Destacó la conformidad de los pilotos y la tarea de los Bomberos Voluntarios locales.",
-        "Consideró factible que el Turismo Carretera compita en el circuito tras ampliar los boxes."
-      ],
-      "seSabe": [
-        "El jefe médico de la ACTC, Rodolfo Balinotti, aseguró que las obras en el autódromo Fangio superaron las recomendaciones iniciales.",
-        "Existen registros firmados por Carlos Bertran, vinculado a la FIA, sobre los trabajos ejecutados en el circuito.",
-        "Pilotos como Agustín Canapino, Mariano Werner y Otto Fritzler manifestaron conformidad con la pista durante el fin de semana.",
-        "Balinotti consideró factible la llegada del Turismo Carretera tras realizar mejoras en el sector de boxes."
-      ],
-      "textoRedes": "El jefe médico de la ACTC, Rodolfo Balinotti, repasó las obras en el autódromo Juan Manuel Fangio tras el fin de semana de actividad nacional y consideró factible la llegada del Turismo Carretera.",
-      "etiquetas": [
-        "Rodolfo Balinotti",
-        "autodromo Juan Manuel Fangio",
-        "ACTC",
-        "Turismo Carretera",
-        "Balcarce"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Radio Gabal (FM 104.1)",
-          "enlace": "https://www.radiogabal.com.ar/index.php/politica/rodolfo-balinotti-lo-mas-dificil-ya-se-hizo-ahora-el-fangio-tiene-un-potencial-enorme",
-          "fecha": "2026-09-28T15:35:16.000Z",
-          "oficial": false,
-          "aporte": "Detalló las mediciones de las obras en el autódromo Fangio, la conformidad de los pilotos y la evaluación para la llegada del Turismo Carretera."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "121t71e",
-          "titulo": "Balinotti responde a las críticas sobre el autódromo Fangio",
-          "fecha": "2026-09-27T02:30:43.813Z",
-          "ruta": "/nota/cruce-en-balcarce-por-la-habilitacion-del-autodromo-fangio-121t71e"
-        },
-        {
-          "id": "1xs34mg",
-          "titulo": "Boccanera y Baigorria ganan en el regreso del Turismo Special de la Costa al Fangio",
-          "fecha": "2026-09-28T11:51:08.000Z",
-          "ruta": "/nota/boccanera-y-baigorria-ganan-en-el-regreso-del-turismo-special-de-la-1xs34mg"
-        },
-        {
-          "id": "in20o1",
-          "titulo": "Hernán Palazzo gana la final del TC Pick Up en el autódromo Fangio",
-          "fecha": "2026-09-28T04:58:38.000Z",
-          "ruta": "/nota/hernan-palazzo-gana-la-final-del-tc-pick-up-en-el-autodromo-fangio-in20o1"
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "balinotti-destaca-las-obras-del-autodromo-fangio-tras-el-regreso"
     }
   ],
   "secciones": [
     "Balcarce",
     "Fútbol",
-    "Automovilismo",
     "Política",
+    "Automovilismo",
     "Argentina",
     "Economía",
     "Cultura y agenda",
-    "Deportes",
     "Agro",
+    "Deportes",
     "Tecnología"
   ],
   "temas": [
     {
       "nombre": "Fangio",
       "ranura": "fangio",
-      "cuantas": 7
+      "cuantas": 5
     },
     {
       "nombre": "El autódromo",
       "ranura": "autodromo",
-      "cuantas": 6
+      "cuantas": 4
     },
     {
       "nombre": "El Concejo Deliberante",
       "ranura": "concejo",
-      "cuantas": 5
+      "cuantas": 4
     },
     {
       "nombre": "TC Pick Up",
       "ranura": "tc-pick-up",
-      "cuantas": 4
+      "cuantas": 3
     },
     {
       "nombre": "El INTA",
       "ranura": "inta",
-      "cuantas": 2
+      "cuantas": 3
     }
   ],
   "clima": {
     "ahora": {
       "temp": 8,
-      "sensacion": 5,
-      "humedad": 90,
+      "sensacion": 4,
+      "humedad": 89,
       "viento": 19,
       "rumbo": "SO",
-      "cielo": "Nublado",
+      "cielo": "Parcialmente nublado",
       "esDeDia": false
     },
     "dias": [
@@ -5570,7 +5207,7 @@
         "dia": "jue",
         "max": 11,
         "min": 6,
-        "lluvia": 4,
+        "lluvia": 6,
         "codigo": 51,
         "viento": 30,
         "milimetros": 0,
@@ -5581,7 +5218,7 @@
         "dia": "vie",
         "max": 13,
         "min": 4,
-        "lluvia": 42,
+        "lluvia": 44,
         "codigo": 51,
         "viento": 24,
         "milimetros": 1,
@@ -5592,7 +5229,7 @@
         "dia": "sáb",
         "max": 18,
         "min": 8,
-        "lluvia": 92,
+        "lluvia": 100,
         "codigo": 80,
         "viento": 23,
         "milimetros": 11,
@@ -5917,18 +5554,6 @@
       "motivo": "necesita ojo humano: \"herida\""
     },
     {
-      "id": "199k1u0",
-      "titulo": "Guillén: “Con una vuelta del TC a Balcarce podemos pensar…",
-      "seccion": "Automovilismo",
-      "motivo": "verificación baja: espera a una persona (visto al reescribir)"
-    },
-    {
-      "id": "1a1eesp",
-      "titulo": "Impulsan una diplomatura para la gestión y creación de…",
-      "seccion": "Balcarce",
-      "motivo": "verificación baja: espera a una persona (visto al reescribir)"
-    },
-    {
       "id": "10ybc9u",
       "titulo": "Diputados salió al cruce de la justicia y negó encubrir…",
       "seccion": "Política",
@@ -5939,12 +5564,6 @@
       "titulo": null,
       "seccion": "Argentina",
       "motivo": "necesita ojo humano: \"nene\", en lo que contaron otros medios (visto al reescribir)"
-    },
-    {
-      "id": "1pqkrnn",
-      "titulo": "En la previa de la visita del Papa, el Gobierno denunció…",
-      "seccion": "Argentina",
-      "motivo": "necesita ojo humano: \"denunció\""
     },
     {
       "id": "1o9rp73",
@@ -5977,12 +5596,6 @@
       "motivo": "necesita ojo humano: \"denuncia\""
     },
     {
-      "id": "1u3nefi",
-      "titulo": "Causa Maradona: expectativa por la nueva declaración de…",
-      "seccion": "Argentina",
-      "motivo": "necesita ojo humano: \"acusado\""
-    },
-    {
       "id": "jien96",
       "titulo": "Un futbolista fue detenido en Mendoza por realizar gestos…",
       "seccion": "Fútbol",
@@ -6011,6 +5624,12 @@
       "titulo": null,
       "seccion": "Argentina",
       "motivo": "necesita ojo humano: \"víctima\""
+    },
+    {
+      "id": "ny4zx0",
+      "titulo": "Fuego cruzado entre los acusados por la muerte de Maradona…",
+      "seccion": "Argentina",
+      "motivo": "necesita ojo humano: \"acusado\""
     },
     {
       "id": "1ogz9mz",
@@ -6043,5 +5662,5 @@
       "motivo": "necesita ojo humano: \"detenido\""
     }
   ],
-  "esperandoCuerpo": 3
+  "esperandoCuerpo": 2
 }
