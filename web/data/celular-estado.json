@@ -1,10 +1,10 @@
 {
- "generado": "2026-09-30T21:31:58.791Z",
- "portada": 69,
- "archivo": 657,
- "esperandoCuerpo": 8,
+ "generado": "2026-09-30T22:01:56.835Z",
+ "portada": 65,
+ "archivo": 658,
+ "esperandoCuerpo": 9,
  "redes": {
-  "generado": "2026-09-30T21:31:58.827Z",
+  "generado": "2026-09-30T22:01:56.879Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -43,7 +43,7 @@
     "que": "El repaso de la tarde",
     "voz": "locutora",
     "ventana": 240,
-    "momento": "en-hora",
+    "momento": "cerrada",
     "salio": "2026-09-30T18:06:28.052Z"
    },
    {
@@ -53,7 +53,7 @@
     "que": "La farmacia de turno",
     "voz": "locutor",
     "ventana": 300,
-    "momento": "antes",
+    "momento": "en-hora",
     "salio": null
    },
    {
@@ -114,7 +114,7 @@
     "titulo": "El repaso de la tarde",
     "hora": "15:00",
     "voz": "locutora",
-    "momento": "en-hora",
+    "momento": "cerrada",
     "salio": "2026-09-30T18:06:28.052Z",
     "segundos": null,
     "notas": [
@@ -150,14 +150,14 @@
     "segundos": 47,
     "notas": [
      {
-      "id": "1rpzsy3",
-      "titulo": "Tres jugadores locales integran la selección provincial de pádel",
-      "seccion": "Deportes"
-     },
-     {
       "id": "10xubmm",
       "titulo": "Joan Laporta revela el llamado que frenó el pase de Lautaro",
       "seccion": "Fútbol"
+     },
+     {
+      "id": "1rpzsy3",
+      "titulo": "Tres jugadores locales integran la selección provincial de pádel",
+      "seccion": "Deportes"
      },
      {
       "id": "h36tlu",
@@ -200,20 +200,7 @@
      "cuando": "2026-09-30T20:04:06.971Z"
     }
    ],
-   "cola": [
-    {
-     "id": "z3c4f",
-     "titulo": "Estudiantes del Colegio Santa Rosa de Lima visitan el municipio",
-     "seccion": "Balcarce",
-     "marcada": false
-    },
-    {
-     "id": "1xow9qi",
-     "titulo": "Agustín Molpeceres recibe un reconocimiento legislativo en la Provincia",
-     "seccion": "Deportes",
-     "marcada": false
-    }
-   ],
+   "cola": [],
    "cupo": 0,
    "proximoDesde": "2026-09-30T21:34:06.971Z",
    "porDia": 5,

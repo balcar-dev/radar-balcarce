@@ -3380,16 +3380,16 @@
   "cuando": "2026-09-30T21:01:50.416Z"
  },
  "6xex85": {
-  "archivo": "fotos-notas/6xex85.jpg",
   "medio": "La Noticia 1",
-  "credito": "Foto: La Noticia 1",
   "licencia": null,
   "origen": "medio",
   "titulo": "La Fiesta Nacional del Postre se extiende a cuatro días en octubre",
   "enlace": "https://www.lanoticia1.com/noticia/balcarce-se-prepara-para-la-fiesta-nacional-del-postre-cuando-sera-y-que-actividades-tendra",
   "imagenOriginal": "https://cdnartic.ar/D2xlWvQfBKhUbrFTZu7z03AGUok=/1200x0/filters:no_upscale():format(jpeg):quality(70)/https://lanoticia1cdn.eleco.com.ar/media/2026/09/postre_balcarce.webp",
   "razon": "La foto B muestra claramente la temática del postre característico de la fiesta sin menores reconocibles ni marcas de agua superpuestas.",
-  "cuando": "2026-09-30T21:01:50.416Z"
+  "cuando": "2026-09-30T21:01:50.416Z",
+  "intentado": true,
+  "borrada": true
  },
  "1lfoejz": {
   "archivo": "fotos-notas/1lfoejz.jpg",
@@ -3430,5 +3430,29 @@
   "razon": "Groq también falló: HTTP 413",
   "cuando": "2026-09-30T21:31:43.793Z",
   "intentos": 1
+ },
+ "1yu9ytn": {
+  "archivo": "fotos-notas/1yu9ytn.jpg",
+  "medio": "El Diario Balcarce",
+  "credito": "Foto: El Diario Balcarce",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "El oficialismo explica el rechazo a la convocatoria de Virginia Aparicio en el Concejo",
+  "enlace": "https://eldiariobalcarce.com.ar/no-es-el-momento-por-que-el-oficialismo-no-acompano-la-convocatoria-a-virginia-aparicio-714",
+  "imagenOriginal": "http://imagenes.eldiariobalcarce.com.ar/2026-09-30-20-53-48Martinez_sobre_Aparicio.JPG",
+  "razon": "Es la única foto disponible, cumple con los requisitos y no tiene marcas ni menores.",
+  "cuando": "2026-09-30T22:01:46.545Z"
+ },
+ "vp5l7j": {
+  "archivo": "fotos-notas/vp5l7j.jpg",
+  "medio": "El Cronista",
+  "credito": "Foto: El Cronista",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Toyota consigue el primer RIGI automotriz para fabricar autos eléctricos",
+  "enlace": "https://www.cronista.com/negocios/toyota-ya-consiguio-su-rigi-y-avanza-con-la-mayor-inversion-en-la-historia-de-la-industria-automotriz-argentina/",
+  "imagenOriginal": "https://www.cronista.com/resizer/v2/3PPEVMFW75AEXG2RGB5JVQZUOA.jpg?auth=74118370b67cef29389ea374eabb4f471939bfbbc84bd9144d2063ff3dac85cd&height=630&width=1200&quality=70&smart=true",
+  "razon": "La foto A muestra claramente la línea de montaje de vehículos con excelente nitidez y sin personas reconocibles ni marcas superpuestas.",
+  "cuando": "2026-09-30T22:01:46.545Z"
  }
 }
