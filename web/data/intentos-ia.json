@@ -1606,6 +1606,11 @@
   "ultimo": "2026-09-26T06:30:48.809Z",
   "motivo": "con cuerpo"
  },
+ "1paybo8": {
+  "intentos": 1,
+  "ultimo": "2026-09-30T15:02:22.963Z",
+  "motivo": "cuerpo: 3 problemas (numero, copia): el cuerpo dice 50 y la fuente no lo dice; sin esas oraciones quedan 44 palabras"
+ },
  "1pbhcrn": {
   "intentos": 1,
   "ultimo": "2026-09-27T02:00:40.608Z",
@@ -3836,6 +3841,13 @@
   "ultimo": "2026-09-26T03:00:42.173Z",
   "motivo": "con cuerpo"
  },
+ "saz121": {
+  "intentos": 1,
+  "ultimo": "2026-09-30T15:02:22.963Z",
+  "motivo": "verificación baja: espera a una persona",
+  "baja": true,
+  "fuentes": 1
+ },
  "sc8pro": {
   "intentos": 2,
   "ultimo": "2026-09-25T14:30:50.886Z",
@@ -3950,6 +3962,11 @@
   "intentos": 2,
   "ultimo": "2026-09-27T21:08:04.858Z",
   "motivo": "con cuerpo"
+ },
+ "uhxgoz": {
+  "intentos": 1,
+  "ultimo": "2026-09-30T15:02:22.963Z",
+  "motivo": "sin material"
  },
  "uj4h1v": {
   "intentos": 1,
@@ -4276,6 +4293,11 @@
  "zrdt8x": {
   "intentos": 1,
   "ultimo": "2026-09-30T12:31:48.503Z",
+  "motivo": "con cuerpo"
+ },
+ "zrjl6d": {
+  "intentos": 1,
+  "ultimo": "2026-09-30T15:02:22.963Z",
   "motivo": "con cuerpo"
  },
  "zsocqt": {

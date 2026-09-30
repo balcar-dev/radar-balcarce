@@ -1,10 +1,10 @@
 {
- "generado": "2026-09-30T14:31:54.445Z",
- "portada": 57,
- "archivo": 620,
+ "generado": "2026-09-30T15:03:25.184Z",
+ "portada": 52,
+ "archivo": 621,
  "esperandoCuerpo": 5,
  "redes": {
-  "generado": "2026-09-30T14:31:54.482Z",
+  "generado": "2026-09-30T15:03:25.224Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -106,7 +106,38 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 50,
+    "segundos": 54,
+    "notas": [
+     {
+      "id": "y9vwef",
+      "titulo": "El equipo de fútbol playa clasifica a la final bonaerense",
+      "seccion": "Deportes"
+     },
+     {
+      "id": "1vgun5x",
+      "titulo": "Balcarce participa de la trigésima Feria Internacional de Turismo",
+      "seccion": "Cultura y agenda"
+     },
+     {
+      "id": "1j6ui2n",
+      "titulo": "La ACTC sanciona a Mariano Werner con multa y largada desde el fondo",
+      "seccion": "Automovilismo"
+     },
+     {
+      "id": "122dsf6",
+      "titulo": "Rosario Central genera polêcutemica en los festejos contra Juan Sebastián Verón",
+      "seccion": "Fútbol"
+     }
+    ]
+   },
+   {
+    "nombre": "podcast",
+    "titulo": "El repaso del día",
+    "hora": "20:30",
+    "voz": "locutor",
+    "momento": "antes",
+    "salio": null,
+    "segundos": 45,
     "notas": [
      {
       "id": "1rpzsy3",
@@ -119,39 +150,8 @@
       "seccion": "Agro"
      },
      {
-      "id": "1vgun5x",
-      "titulo": "Balcarce participa de la trigésima Feria Internacional de Turismo",
-      "seccion": "Cultura y agenda"
-     },
-     {
-      "id": "1j6ui2n",
-      "titulo": "La ACTC sanciona a Mariano Werner con multa y largada desde el fondo",
-      "seccion": "Automovilismo"
-     }
-    ]
-   },
-   {
-    "nombre": "podcast",
-    "titulo": "El repaso del día",
-    "hora": "20:30",
-    "voz": "locutor",
-    "momento": "antes",
-    "salio": null,
-    "segundos": 54,
-    "notas": [
-     {
-      "id": "y9vwef",
-      "titulo": "El equipo de fútbol playa clasifica a la final bonaerense",
-      "seccion": "Deportes"
-     },
-     {
-      "id": "122dsf6",
-      "titulo": "Rosario Central genera polêcutemica en los festejos contra Juan Sebastián Verón",
-      "seccion": "Fútbol"
-     },
-     {
-      "id": "wabor5",
-      "titulo": "Proponen mayores exigencias para radares viales y anular multas irregulares",
+      "id": "1dqm02n",
+      "titulo": "El Hospital Fossati afronta una deuda millonaria de obras sociales",
       "seccion": "Balcarce"
      },
      {
