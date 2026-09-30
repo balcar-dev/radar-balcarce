@@ -1,10 +1,10 @@
 {
- "generado": "2026-09-30T01:01:57.585Z",
- "portada": 63,
+ "generado": "2026-09-30T01:31:50.423Z",
+ "portada": 66,
  "archivo": 592,
- "esperandoCuerpo": 2,
+ "esperandoCuerpo": 3,
  "redes": {
-  "generado": "2026-09-30T01:01:57.628Z",
+  "generado": "2026-09-30T01:31:50.460Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -22,7 +22,7 @@
     "hora": "10:00",
     "que": "El repaso de la mañana",
     "voz": "locutor",
-    "ventana": 300,
+    "ventana": 180,
     "momento": "cerrada",
     "salio": null
    },
@@ -32,7 +32,7 @@
     "hora": "15:00",
     "que": "El repaso de la tarde",
     "voz": "locutora",
-    "ventana": 300,
+    "ventana": 240,
     "momento": "cerrada",
     "salio": "2026-09-29T19:46:57.548Z"
    },
@@ -50,7 +50,7 @@
     "nombre": "clima-noche",
     "tipo": "historia",
     "hora": "20:00",
-    "que": "Cómo sigue el día (el clima de la noche)",
+    "que": "Cómo sigue el clima esta noche",
     "voz": "locutora",
     "ventana": 240,
     "momento": "en-hora",

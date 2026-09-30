@@ -1,5 +1,5 @@
 {
-  "generado": "2026-09-30T01:01:57.585Z",
+  "generado": "2026-09-30T01:31:50.423Z",
   "notas": [
     {
       "id": "1j6ui2n",
@@ -9,7 +9,8 @@
       "guion": "La ACTC sanciona a Mariano Werner con multa y largada desde el fondo",
       "seccion": "Automovilismo",
       "medios": [
-        "0223 (Mar del Plata)"
+        "0223 (Mar del Plata)",
+        "Campeones"
       ],
       "enlace": "https://www.0223.com.ar/nota/2026-9-29-21-9-0-tras-la-fiesta-en-el-autodromo-juan-manuel-fangio-dura-sancion-a-werner-multa-millonaria-y-largada-desde-el-fondo",
       "teniaImagenLaFuente": true,
@@ -92,50 +93,59 @@
       }
     },
     {
-      "id": "113qesp",
-      "titulo": "Petruccelli convoca a Virginia Aparicio tras el rechazo en el Concejo",
-      "copete": "La Comisión de Salud desestimó el pedido para recibir a la investigadora del INTA. Ante esto, el bloque de Potencia organizará un encuentro propio con la participación de otros ediles.",
-      "cuerpo": "La comisión de Salud del Concejo Deliberante desestimó la convocatoria a la investigadora del INTA y del CONICET Virginia Aparicio. El pedido había sido impulsado por el concejal de Potencia Gabriel Petruccelli para que la científica exponga sobre su labor y su situación institucional. Un planteo similar de Sol Di Gerónimo en la comisión de Industria tampoco prosperó.\n\nAparicio afronta un proceso administrativo que podría derivar en su exoneración, según denunció el gremio APINTA. Ante la falta de tratamiento legislativo, Petruccelli decidió convocarla a un encuentro de su bloque e invitará al resto de los ediles para escuchar su exposición.",
-      "guion": "Petruccelli convoca a Virginia Aparicio tras el rechazo en el Concejo",
+      "id": "25strz",
+      "titulo": "Concejales del oficialismo y LLA rechazan recibir a Virginia Aparicio",
+      "copete": "Los ediles del oficialismo y de La Libertad Avanza desestimaron la convocatoria a la investigadora del INTA en la Comisión de Salud del Concejo Deliberante.",
+      "cuerpo": "Los concejales del oficialismo y de La Libertad Avanza decidieron no recibir a la ingeniera agrónoma e investigadora Virginia Aparicio en la Comisión de Salud del Honorable Concejo Deliberante. La solicitud había sido presentada por el edil Gabriel Petruccelli para que la especialista exponga sobre el proyecto SPRINT, una iniciativa internacional sobre el impacto de los plaguicidas. Sin embargo, durante la reunión de la comisión, los representantes de ambos espacios consideraron innecesaria su presencia y determinaron que continúe el proceso administrativo que atraviesa y que podría derivar en su exoneración de la administración pública. En tanto, los bloques de Fuerza Patria, el peronismo y Potencia manifestaron que recibirán a la investigadora en sus espacios partidarios.",
+      "guion": "Concejales del oficialismo y LLA rechazan recibir a Virginia Aparicio",
       "seccion": "Política",
       "medios": [
-        "Diario La Vanguardia"
+        "Puntonueve (FM 100.9)"
       ],
-      "enlace": "https://www.diariolavanguardia.com/noticias/44949-la-comision-de-salud-no-convocara-a-virginia-aparicio-y-petruccelli-decidio-citarla-a-una-reunion-de-bloque/",
+      "enlace": "https://puntonueve.com.ar/concejales-del-oficialismo-y-lla-no-recibiran-a-virginia-aparicio-en-la-comision-de-salud/",
       "teniaImagenLaFuente": false,
-      "fecha": "2026-09-30T00:31:08.568Z",
-      "sinFecha": true,
-      "visto": "2026-09-30T00:31:08.568Z",
-      "relevancia": 53,
+      "fecha": "2026-09-30T00:32:04.000Z",
+      "sinFecha": false,
+      "visto": "2026-09-30T00:44:03.283Z",
+      "relevancia": 84,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
-      "temas": [],
+      "temas": [
+        "concejo"
+      ],
       "como": "automatica",
       "claves": [
-        "La Comisión de Salud no convocó a la investigadora del INTA.",
-        "El concejal Gabriel Petruccelli organizará una reunión de bloque.",
-        "APINTA denunció un proceso administrativo contra la científica."
+        "El oficialismo y La Libertad Avanza rechazaron la convocatoria a Virginia Aparicio.",
+        "La investigadora del CONICET e INTA transita un proceso administrativo.",
+        "El concejal Gabriel Petruccelli había impulsado el pedido ante la Comisión de Salud.",
+        "Otros bloques políticos recibirán a la especialista en sus propios espacios."
+      ],
+      "seSabe": [
+        "Los ediles del oficialismo y de La Libertad Avanza resolvieron no recibir a la investigadora Virginia Aparicio en la Comisión de Salud.",
+        "El concejal Gabriel Petruccelli había solicitado su presencia mediante una nota.",
+        "Aparicio es ingeniera agrónoma, investigadora del CONICET y trabajadora del INTA.",
+        "Fuerza Patria, el peronismo y Potencia manifestaron que recibirán a la ingeniera en sus espacios."
       ],
       "noConfirmado": [
-        "No se especificó la fecha exacta en la que se realizará el encuentro organizado por el bloque.",
+        "No trascendieron los detalles sobre los plazos y la resolución definitiva del proceso administrativo que enfrenta la investigadora.",
         "No pudo ser contrastado de forma independiente con las fuentes consultadas."
       ],
-      "textoRedes": "El concejal Gabriel Petruccelli convocará a una reunión de bloque a la investigadora del INTA Virginia Aparicio, luego de que la Comisión de Salud rechazara su presentación en el Concejo Deliberante local.",
+      "textoRedes": "Concejales del oficialismo y de La Libertad Avanza resolvieron no recibir a la investigadora Virginia Aparicio en la Comisión de Salud del Concejo Deliberante.",
       "etiquetas": [
-        "Virginia Aparicio",
         "Concejo Deliberante",
-        "Gabriel Petruccelli",
+        "Virginia Aparicio",
+        "Comision de Salud",
         "INTA",
-        "Salud"
+        "CONICET"
       ],
       "fuentesConsultadas": [
         {
-          "medio": "Diario La Vanguardia",
-          "enlace": "https://www.diariolavanguardia.com/noticias/44949-la-comision-de-salud-no-convocara-a-virginia-aparicio-y-petruccelli-decidio-citarla-a-una-reunion-de-bloque/",
-          "fecha": null,
+          "medio": "Puntonueve (FM 100.9)",
+          "enlace": "https://puntonueve.com.ar/concejales-del-oficialismo-y-lla-no-recibiran-a-virginia-aparicio-en-la-comision-de-salud/",
+          "fecha": "2026-09-30T00:32:04.000Z",
           "oficial": false,
-          "aporte": "Detalló el rechazo de la Comisión de Salud a la convocatoria de Virginia Aparicio y la decisión del concejal Gabriel Petruccelli de citarla a su bloque."
+          "aporte": "Informó la decisión del oficialismo y La Libertad Avanza de no recibir a Virginia Aparicio en la Comisión de Salud."
         }
       ],
       "antecedentes": [
@@ -146,16 +156,16 @@
           "ruta": "/nota/petruccelli-pide-que-aparicio-exponga-ante-la-comision-de-salud-1ytgm6c"
         },
         {
+          "id": "113qesp",
+          "titulo": "Petruccelli convoca a Virginia Aparicio tras el rechazo en el Concejo",
+          "fecha": "2026-09-30T00:31:08.568Z",
+          "ruta": "/nota/petruccelli-convoca-a-virginia-aparicio-tras-el-rechazo-en-el-concejo-113qesp"
+        },
+        {
           "id": "v91szb",
           "titulo": "La APDH rechaza la factible exoneración de la Dra. Virginia Aparicio, investigadora del INTA Balcarce y del CONICET",
           "fecha": "2026-09-23T01:50:24.356Z",
           "ruta": "/nota/la-apdh-rechaza-la-factible-exoneracion-de-la-dra-virginia-aparicio-v91szb"
-        },
-        {
-          "id": "tmpmtz",
-          "titulo": "Legislatura bonarense: presentan un proyecto para respaldar a Virginia Aparicio, investigadora de INTA Balcarce",
-          "fecha": "2026-09-21T17:19:51.000Z",
-          "ruta": "/nota/legislatura-bonarense-presentan-un-proyecto-para-respaldar-a-virginia-tmpmtz"
         }
       ],
       "verificacion": {
@@ -163,10 +173,10 @@
         "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
         "sugeridoPorIA": "MEDIA"
       },
-      "slug": "petruccelli-convoca-a-virginia-aparicio-tras-el-rechazo-en-el-concejo",
+      "slug": "concejales-del-oficialismo-y-lla-rechazan-recibir-a-virginia-aparicio",
       "foto": {
-        "archivo": "fotos-notas/113qesp.jpg",
-        "credito": "Foto: Diario La Vanguardia"
+        "archivo": "fotos-notas/25strz.jpg",
+        "credito": "Foto: Puntonueve (FM 100.9)"
       }
     },
     {
@@ -585,12 +595,14 @@
         "Clarín",
         "La Nación",
         "Perfil",
-        "TyC Sports",
         "Olé",
         "Minuto Uno",
         "C5N",
+        "Diario Popular",
         "Noticias Argentinas (NA)",
-        "Bolavip Argentina"
+        "Doble Amarilla",
+        "Bolavip Argentina",
+        "TyC Sports"
       ],
       "enlace": "https://www.lanacion.com.ar/deportes/nuevo-embargo-a-san-lorenzo-el-millonario-monto-que-reclama-damian-ayude-nid29092026/",
       "teniaImagenLaFuente": true,
@@ -970,6 +982,78 @@
       }
     },
     {
+      "id": "riobys",
+      "titulo": "Campo de Pato disputa el Torneo Regional de Clubes F en Bahía Blanca",
+      "copete": "El equipo Sub 16 de hockey del Club Social y Campo de Pato participa desde el jueves en el certamen bonaerense. Las jugadoras balcarceñas buscan repetir el subcampeonato logrado en la edición anterior.",
+      "cuerpo": "El equipo de sexta división del Club Social y Campo de Pato compite desde el jueves 1 hasta el domingo 4 de octubre en el Torneo Regional de Clubes F en Bahía Blanca. El plantel busca repetir el protagonismo obtenido en 2025, cuando finalizó como subcampeón de la categoría.\n\nEl cuerpo técnico está conformado por Matías Antonelli y Analuz Salvo. El debut en la competencia se programó para el jueves con dos encuentros: a las 12.20 frente a Comercial de Mar del Plata y a las 20.40 contra Racing de Chivilcoy, mientras que el viernes jugarán ante Argentino B de Bahía Blanca a las 15.40.",
+      "guion": "Campo de Pato disputa el Torneo Regional de Clubes F en Bahía Blanca",
+      "seccion": "Deportes",
+      "medios": [
+        "Radio Gabal (FM 104.1)"
+      ],
+      "enlace": "https://www.radiogabal.com.ar/index.php/deportes/hockey-la-sub-16-de-campo-de-pato-disputara-el-regional-de-bahia-blanca",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-29T17:47:43.000Z",
+      "sinFecha": false,
+      "visto": "2026-09-29T18:31:11.646Z",
+      "relevancia": 72,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "La Sub 16 de hockey de Campo de Pato participa en Bahía Blanca.",
+        "El torneo se disputa del jueves 1 al domingo 4 de octubre.",
+        "Matías Antonelli y Analuz Salvo integran el cuerpo técnico."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El equipo Sub 16 de hockey de Campo de Pato disputa desde este jueves el Torneo Regional de Clubes F en Bahía Blanca. Las jugadoras balcarceñas buscan repetir el subcampeonato obtenido el año pasado.",
+      "etiquetas": [
+        "Hockey",
+        "Campo de Pato",
+        "Bahía Blanca",
+        "Balcarce"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Radio Gabal (FM 104.1)",
+          "enlace": "https://www.radiogabal.com.ar/index.php/deportes/hockey-la-sub-16-de-campo-de-pato-disputara-el-regional-de-bahia-blanca",
+          "fecha": "2026-09-29T17:47:43.000Z",
+          "oficial": false,
+          "aporte": "Informó el calendario, el cuerpo técnico y el plantel del equipo Sub 16 en el torneo de Bahía Blanca."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1iyhhh6",
+          "titulo": "Campo de Pato afronta una intensa doble fecha de hockey",
+          "fecha": "2026-09-25T16:18:25.329Z",
+          "ruta": "/nota/campo-de-pato-tuvo-una-intensa-doble-fecha-de-hockey-en-balcarce-1iyhhh6"
+        },
+        {
+          "id": "1825h24",
+          "titulo": "Campo de Pato disputa una doble fecha de hockey",
+          "fecha": "2026-09-25T13:28:23.000Z",
+          "ruta": "/nota/campo-de-pato-disputa-una-doble-fecha-de-hockey-en-balcarce-1825h24"
+        },
+        {
+          "id": "1xf2418",
+          "titulo": "Campo de Pato volvió a tener una destacada jornada de hockey",
+          "fecha": "2026-09-18T05:43:46.737Z",
+          "ruta": "/nota/campo-de-pato-volvio-a-tener-una-destacada-jornada-de-hockey-1xf2418"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "campo-de-pato-disputa-el-torneo-regional-de-clubes-f-en-bahia-blanca"
+    },
+    {
       "id": "infbfx",
       "titulo": "Lionel Scaloni niega contactos para dirigir a River",
       "copete": "El director técnico de la Selección argentina descartó versiones sobre su llegada al club de Núñez. Ratificó que cumplirá su contrato vigente y rechazó ofertas.",
@@ -978,8 +1062,8 @@
       "seccion": "Fútbol",
       "medios": [
         "Minuto Uno",
-        "TyC Sports",
-        "Noticias Argentinas (NA)"
+        "Noticias Argentinas (NA)",
+        "TyC Sports"
       ],
       "enlace": "https://www.minutouno.com/deportes/lionel-scaloni-hablo-los-rumores-un-posible-llegada-river-a-mi-n6328022",
       "teniaImagenLaFuente": true,
@@ -1282,7 +1366,6 @@
         "Perfil",
         "A24",
         "Ámbito",
-        "TyC Sports",
         "Olé",
         "Minuto Uno",
         "C5N",
@@ -1292,9 +1375,10 @@
         "El Día",
         "La Nueva",
         "El Eco de Tandil",
+        "Bolavip Argentina",
         "Clarín",
         "El Cronista",
-        "Bolavip Argentina"
+        "TyC Sports"
       ],
       "enlace": "https://www.clarin.com/deportes/gaston-gaudio-confirmo-candidato-presidente-independiente-cerre-sponsor-animaba_0_xygZqLz7gC.html",
       "teniaImagenLaFuente": true,
@@ -1372,13 +1456,6 @@
           "aporte": null
         },
         {
-          "medio": "TyC Sports",
-          "enlace": "https://www.tycsports.com/independiente/elecciones-en-independiente-gaudio-candidato-a-presidente-y-acompanado-por-una-leyenda-del-club-id763522.html",
-          "fecha": "2026-09-29T20:20:20.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
           "medio": "Olé",
           "enlace": "https://www.ole.com.ar/independiente/gastongaudio-independiente-elecciones-presidente_0_DasskWeAfC.html",
           "fecha": "2026-09-29T16:48:11.000Z",
@@ -1442,6 +1519,13 @@
           "aporte": null
         },
         {
+          "medio": "Bolavip Argentina",
+          "enlace": "https://bolavip.com/ar/futbolargentino/50-millones-de-inversion-director-deportivo-y-milito-gaudio-sera-candidato-en-independiente",
+          "fecha": "2026-09-29T17:37:18.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
           "medio": "El Cronista",
           "enlace": "https://www.cronista.com/informacion-gral/gaston-gaudio-confirmo-su-candidatura-a-presidente-de-independiente/",
           "fecha": "2026-09-29T17:03:49.000Z",
@@ -1449,16 +1533,20 @@
           "aporte": null
         },
         {
-          "medio": "Bolavip Argentina",
-          "enlace": "https://bolavip.com/ar/futbolargentino/50-millones-de-inversion-director-deportivo-y-milito-gaudio-sera-candidato-en-independiente",
-          "fecha": "2026-09-29T17:37:18.000Z",
+          "medio": "TyC Sports",
+          "enlace": "https://www.tycsports.com/independiente/elecciones-en-independiente-gaudio-candidato-a-presidente-y-acompanado-por-una-leyenda-del-club-id763522.html",
+          "fecha": "2026-09-29T19:33:42.000Z",
           "oficial": false,
           "aporte": null
         }
       ],
       "slug": "gaston-gaudio-confirmo-que-sera-candidato-a-presidente-de",
       "corregidaAMano": true,
-      "cuerpoAMano": true
+      "cuerpoAMano": true,
+      "foto": {
+        "archivo": "fotos-notas/1g1xj8g.jpg",
+        "credito": "Foto: La Nación"
+      }
     },
     {
       "id": "709xqq",
@@ -1549,7 +1637,11 @@
         "porque": "Lo contaron cinco medios independientes.",
         "sugeridoPorIA": "ALTA"
       },
-      "slug": "procesan-a-un-exsocio-de-martin-menem-y-a-dos-exinterventores-de"
+      "slug": "procesan-a-un-exsocio-de-martin-menem-y-a-dos-exinterventores-de",
+      "foto": {
+        "archivo": "fotos-notas/709xqq.jpg",
+        "credito": "Foto: El Eco de Tandil"
+      }
     },
     {
       "id": "1vgun5x",
@@ -1642,14 +1734,16 @@
       "guion": "La Cooperativa de Electricidad anuncia un corte de luz para el miércoles",
       "seccion": "Balcarce",
       "medios": [
-        "Infórmese Primero (FM 104.9)"
+        "Puntonueve (FM 100.9)",
+        "Infórmese Primero (FM 104.9)",
+        "Radio Gabal (FM 104.1)"
       ],
       "enlace": "http://www.informeseprimero.com.ar/2026/09/este-miercoles-habra-un-corte-de.html",
       "teniaImagenLaFuente": true,
       "fecha": "2026-09-29T16:05:00.906Z",
       "sinFecha": false,
       "visto": "2026-09-29T17:02:31.052Z",
-      "relevancia": 80,
+      "relevancia": 100,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1717,6 +1811,7 @@
       "guion": "Pato Naranja gana por 99 a 12 y queda entre los cuatro mejores",
       "seccion": "Deportes",
       "medios": [
+        "Puntonueve (FM 100.9)",
         "Infórmese Primero (FM 104.9)"
       ],
       "enlace": "http://www.informeseprimero.com.ar/2026/09/pato-naranja-goleo-pampas-y-quedo-entre.html",
@@ -1724,7 +1819,7 @@
       "fecha": "2026-09-29T16:01:29.256Z",
       "sinFecha": false,
       "visto": "2026-09-29T16:31:06.769Z",
-      "relevancia": 80,
+      "relevancia": 90,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -2095,7 +2190,9 @@
         "Agencia DIB",
         "La Nación",
         "Ámbito",
-        "La Verdad"
+        "Noticias Argentinas (NA)",
+        "La Verdad",
+        "Zona Norte Diario"
       ],
       "enlace": "https://www.ambito.com/politica/adrian-ravier-defendio-el-control-fronteras-y-hablo-posibles-terroristas-los-expulsados-n6327951",
       "teniaImagenLaFuente": true,
@@ -2181,7 +2278,9 @@
       "guion": "El Complejo Polideportivo aloja un encuentro regional por el Día del Sordo",
       "seccion": "Balcarce",
       "medios": [
+        "Puntonueve (FM 100.9)",
         "Infórmese Primero (FM 104.9)",
+        "Radio Gabal (FM 104.1)",
         "Municipalidad de Balcarce",
         "Diario La Vanguardia",
         "Sendero Regional"
@@ -2320,7 +2419,11 @@
         "porque": "Lo contaron cuatro medios independientes.",
         "sugeridoPorIA": "ALTA"
       },
-      "slug": "artista-deja-la-ciudad-y-levanta-una-casa-con-doce-parabrisas"
+      "slug": "artista-deja-la-ciudad-y-levanta-una-casa-con-doce-parabrisas",
+      "foto": {
+        "archivo": "fotos-notas/qxi2f0.jpg",
+        "credito": "Foto: TN (Todo Noticias)"
+      }
     },
     {
       "id": "wgq362",
@@ -2412,6 +2515,7 @@
       "guion": null,
       "seccion": "Cultura y agenda",
       "medios": [
+        "Puntonueve (FM 100.9)",
         "Infórmese Primero (FM 104.9)",
         "Municipalidad de Balcarce",
         "Diario La Vanguardia"
@@ -2421,7 +2525,7 @@
       "fecha": "2026-09-29T14:32:05.000Z",
       "sinFecha": false,
       "visto": "2026-09-30T00:31:08.568Z",
-      "relevancia": 94,
+      "relevancia": 100,
       "local": true,
       "oficial": true,
       "publicadaPor": null,
@@ -2434,6 +2538,13 @@
           "enlace": "https://balcarce.gob.ar/2026/09/29/arte-fusion-%c2%b7-expo-anual-2026-en-el-museo-historico/",
           "fecha": "2026-09-29T14:32:05.000Z",
           "oficial": true,
+          "aporte": null
+        },
+        {
+          "medio": "Puntonueve (FM 100.9)",
+          "enlace": "https://puntonueve.com.ar/arte-fusion-la-escuela-de-arte-astor-piazzolla-presenta-su-expo-anual-2026-en-el-museo-historico/",
+          "fecha": "2026-09-29T19:54:02.000Z",
+          "oficial": false,
           "aporte": null
         },
         {
@@ -2454,6 +2565,97 @@
       "slug": "arte-fusion-expo-anual-2026-en-el-museo-historico",
       "corregidaAMano": true,
       "cuerpoAMano": true
+    },
+    {
+      "id": "1asj6cl",
+      "titulo": "Las TC Pick Up evalúan regresar a Balcarce antes de fin de año",
+      "copete": "Tras convocar a más de 20.000 personas en el autódromo Juan Manuel Fangio, la categoría analiza volver al circuito local antes de terminar el campeonato. Quedan tres fechas pendientes.",
+      "cuerpo": "Las TC Pick Up analizan regresar al autódromo Juan Manuel Fangio antes de finalizar 2026, según informó un medio local. La evaluación surge tras el fin de semana que reunió a más de 20.000 personas y dejó sin precintos momentáneamente a la organización en los accesos durante el domingo.\n\nLa categoría disputó ocho fechas en el año en el Roberto Mouras de La Plata, en Rosario y en Balcarce. El evento marcó el regreso de una competencia nacional al circuito local después de quince años, un hecho acompañado por una ocupación hotelera plena en la ciudad.",
+      "guion": "Las TC Pick Up evalúan regresar a Balcarce antes de fin de año",
+      "seccion": "Automovilismo",
+      "medios": [
+        "Radio Gabal (FM 104.1)"
+      ],
+      "enlace": "https://www.radiogabal.com.ar/index.php/deportes/exclusivo-las-tc-pick-up-podrian-volver-a-balcarce-antes-de-fin-de-ano",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-29T14:30:43.000Z",
+      "sinFecha": false,
+      "visto": "2026-09-29T15:01:04.360Z",
+      "relevancia": 80,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [
+        "autodromo",
+        "tc-pick-up",
+        "fangio"
+      ],
+      "como": "automatica",
+      "claves": [
+        "La categoría analiza volver a Balcarce antes de terminar 2026.",
+        "El último fin de semana reunió a más de 20.000 espectadores.",
+        "Quedan tres fechas pendientes en el calendario oficial.",
+        "No se descarta que el circuito local reciba más de una competencia."
+      ],
+      "seSabe": [
+        "Las TC Pick Up evalúan regresar al autódromo Juan Manuel Fangio antes de fin de año, según un medio local.",
+        "El último fin de semana reunió a más de 20.000 personas en el circuito.",
+        "La organización se quedó momentáneamente sin precintos en los accesos el domingo por la masiva concurrencia.",
+        "El campeonato de la categoría tiene tres fechas pendientes por disputarse.",
+        "La competencia del último fin de semana marcó el regreso del automovilismo nacional a Balcarce tras quince años."
+      ],
+      "noConfirmado": [
+        "No existe una confirmación oficial de la ACTC sobre el regreso de las TC Pick Up a Balcarce.",
+        "No se sabe con precisión si el circuito local recibirá más de una competencia antes del cierre del año.",
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Las TC Pick Up analizan regresar al autódromo Juan Manuel Fangio antes de terminar el año tras convocar a más de 20.000 personas en Balcarce.",
+      "etiquetas": [
+        "TC Pick Up",
+        "Autodromo Juan Manuel Fangio",
+        "Automovilismo",
+        "Balcarce",
+        "ACTC"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Radio Gabal (FM 104.1)",
+          "enlace": "https://www.radiogabal.com.ar/index.php/deportes/exclusivo-las-tc-pick-up-podrian-volver-a-balcarce-antes-de-fin-de-ano",
+          "fecha": "2026-09-29T14:30:43.000Z",
+          "oficial": false,
+          "aporte": "Aportó la información sobre la evaluación de la ACTC para regresar a Balcarce con las TC Pick Up antes de fin de año y los datos de convocatoria del último fin de semana."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1o216bo",
+          "titulo": "Los Ciantini presentaron las Pick Up para volver a correr",
+          "fecha": "2026-09-21T20:45:01.000Z",
+          "ruta": "/nota/los-ciantini-presentaron-las-pick-up-para-volver-a-correr-en-balcarce-1o216bo"
+        },
+        {
+          "id": "1hjmkd4",
+          "titulo": "Más de 1.400 vehículos ingresan al autódromo Fangio",
+          "fecha": "2026-09-29T03:01:03.481Z",
+          "ruta": "/nota/ingresan-mas-de-mil-cuatrocientos-vehiculos-al-fangio-1hjmkd4"
+        },
+        {
+          "id": "2jiiqj",
+          "titulo": "El automovilismo nacional convoca a una multitud",
+          "fecha": "2026-09-28T22:30:54.996Z",
+          "ruta": "/nota/el-automovilismo-nacional-convoca-a-una-multitud-2jiiqj"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "las-tc-pick-up-evaluan-regresar-a-balcarce-antes-de-fin-de-ano",
+      "foto": {
+        "archivo": "fotos-notas/1asj6cl.jpg",
+        "credito": "Foto: Radio Gabal (FM 104.1)"
+      }
     },
     {
       "id": "8zhfqv",
@@ -2544,100 +2746,6 @@
       }
     },
     {
-      "id": "jul3w9",
-      "titulo": "Infraccionan a un tractor en caminos rurales tras las lluvias",
-      "copete": "El Comando de Prevención Rural sancionó a un conductor en el paraje La Esperanza. El municipio advirtió que aplicará multas severas.",
-      "cuerpo": "Personal del Comando de Prevención Rural sancionó a un tractor que transitaba por el paraje La Esperanza. El operativo se concretó poco después de finalizar las tareas de reparación en el camino que une la ruta nacional 226 con el almacén de La Brava.\n\nLa normativa vigente establece condiciones para transitar por la red vial tras las precipitaciones, exigiendo aguardar el secado del suelo para prevenir daños estructurales. Desde la comuna advirtieron que los operativos continuarán de manera sostenida y que se aplicarán sanciones económicas rigurosas a los infractores.",
-      "guion": "Infraccionan a un tractor en caminos rurales tras las lluvias",
-      "seccion": "Agro",
-      "medios": [
-        "News Balcarce (FM 91.7)",
-        "Infórmese Primero (FM 104.9)",
-        "Diario La Vanguardia",
-        "Municipalidad de Balcarce",
-        "Sendero Regional"
-      ],
-      "enlace": "https://newsbalcarce.com.ar/?p=30878",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-29T13:48:32.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-30T01:01:00.516Z",
-      "relevancia": 100,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [
-        "rutas"
-      ],
-      "como": "automatica",
-      "claves": [
-        "Sancionaron a un tractor en el paraje La Esperanza",
-        "El camino había sido reparado recientemente",
-        "Rige la ordenanza sobre circulación en días de lluvia"
-      ],
-      "textoRedes": "El Comando de Prevención Rural sancionó a un tractor que circulaba por el paraje La Esperanza en días de lluvia. La comuna advirtió que habrá multas severas para quienes incumplan las normativas viales.",
-      "etiquetas": [
-        "caminos rurales",
-        "multas",
-        "Comando de Prevención Rural",
-        "transito",
-        "Municipalidad de Balcarce"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "News Balcarce (FM 91.7)",
-          "enlace": "https://newsbalcarce.com.ar/?p=30878",
-          "fecha": "2026-09-29T13:48:32.000Z",
-          "oficial": false,
-          "aporte": "Informó sobre la infracción al tractor en el paraje La Esperanza y la ordenanza vigente."
-        },
-        {
-          "medio": "Infórmese Primero (FM 104.9)",
-          "enlace": "http://www.informeseprimero.com.ar/2026/09/infraccionaron-un-tractor-por-circular.html",
-          "fecha": "2026-09-29T15:42:36.402Z",
-          "oficial": false,
-          "aporte": "Aportó detalles sobre los controles en la red vial rural."
-        },
-        {
-          "medio": "Diario La Vanguardia",
-          "enlace": "https://www.diariolavanguardia.com/noticias/44939-infraccionaron-a-un-tractor-por-circular-sobre-un-camino-rural-recien-reparado/",
-          "fecha": null,
-          "oficial": false,
-          "aporte": "Indicó que desde el municipio se intensificarán los controles con sanciones severas."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "4p0z63",
-          "titulo": "Infraccionan a un tractor por circular en caminos rurales durante la tormenta",
-          "fecha": "2026-09-29T12:08:15.000Z",
-          "ruta": "/nota/infraccionan-a-un-tractor-por-circular-en-caminos-rurales-durante-la-4p0z63"
-        },
-        {
-          "id": "1l648f5",
-          "titulo": "A menos de un mes de la apertura de sobres, sigue sin haber empresas interesadas en el Frigorífico Municipal",
-          "fecha": "2026-09-23T20:15:31.970Z",
-          "ruta": "/nota/a-menos-de-un-mes-de-la-apertura-de-sobres-sigue-sin-haber-empresas-1l648f5"
-        },
-        {
-          "id": "1n4w9ua",
-          "titulo": "Piden instalar un punto presencial para gestionar el TelePASE en Balcarce o en el peaje de la Ruta 226",
-          "fecha": "2026-09-23T14:56:16.191Z",
-          "ruta": "/nota/piden-instalar-un-punto-presencial-para-gestionar-el-telepase-en-1n4w9ua"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron cuatro medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "infraccionan-a-un-tractor-en-caminos-rurales-tras-las-lluvias",
-      "foto": {
-        "archivo": "fotos-notas/jul3w9.jpg",
-        "credito": "Foto: Diario La Vanguardia"
-      }
-    },
-    {
       "id": "1s56ua",
       "titulo": "WhatsApp detalla los pasos para liberar espacio en el celular",
       "copete": "La aplicación no incluye una papelera única, pero ofrece herramientas internas para borrar fotos, videos y archivos pesados sin perder las conversaciones.",
@@ -2655,7 +2763,7 @@
       "fecha": "2026-09-29T13:28:19.000Z",
       "sinFecha": false,
       "visto": "2026-09-29T16:31:06.769Z",
-      "relevancia": 69,
+      "relevancia": 62,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -2701,87 +2809,6 @@
       }
     },
     {
-      "id": "zcn7od",
-      "titulo": "River y Boca llevan hinchas visitantes a Córdoba",
-      "copete": "La Asociación del Fútbol Argentino aprobó el regreso del público visitante. River jugará ante Belgrano en el Estadio Mario Alberto Kempes con unas 11.500 localidades, mientras que Boca se medirá frente a Instituto.",
-      "cuerpo": "La Asociación del Fútbol Argentino dio el visto bueno para la continuidad del plan que permite la presencia de simpatizantes visitantes en los partidos. En ese marco, River Plate se enfrentará a Belgrano en el Estadio Mario Alberto Kempes y contará con un total aproximado de 11.500 ubicaciones en la popular Willington, según confirmó el club cordobés.\n\nEn tanto, el Millonario acumuló tres presentaciones con su parcialidad visitante en el presente certamen. Todavía resta definir la cantidad exacta de entradas y el valor que tendrán los tickets para el partido del equipo auriazul.",
-      "guion": "River y Boca llevan hinchas visitantes a Córdoba",
-      "seccion": "Fútbol",
-      "medios": [
-        "C5N",
-        "Doble Amarilla",
-        "Minuto Uno",
-        "El Marplatense",
-        "La Página Millonaria"
-      ],
-      "enlace": "https://www.dobleamarilla.com.ar/liga-/avanza-el-publico-visitante--river-llevara-a-sus-hinchas-ante-belgrano-y-boca-haria-lo-propio-frente-a-instituto--ambos-en-el-kempes_a6abbae6608968fa92082fa8f",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-29T13:20:32.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-30T01:01:00.516Z",
-      "relevancia": 49,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "La AFA autorizó la presencia de hinchas visitantes en el fútbol argentino.",
-        "River jugará contra Belgrano en el Estadio Mario Alberto Kempes con unas 11.500 localidades.",
-        "Boca se enfrentará a Instituto el viernes 9 de octubre en el mismo estadio cordobés."
-      ],
-      "seSabe": [
-        "La AFA aprobó el regreso de los hinchas visitantes.",
-        "Belgrano confirmó que otorgará unas 11.500 localidades para los simpatizantes de River.",
-        "Boca jugará ante Instituto el viernes 9 de octubre en el Estadio Mario Alberto Kempes."
-      ],
-      "noConfirmado": [
-        "Todavía resta la aprobación de los organismos de seguridad para la presencia de hinchas de Boca.",
-        "No se detalló la cantidad exacta de butacas ni el precio de las entradas para el partido de Boca.",
-        "No se informó cuándo comenzará la venta de localidades para el encuentro de River."
-      ],
-      "etiquetas": [
-        "AFA",
-        "River Plate",
-        "Belgrano",
-        "Instituto",
-        "fútbol visitante"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Doble Amarilla",
-          "enlace": "https://www.dobleamarilla.com.ar/liga-/avanza-el-publico-visitante--river-llevara-a-sus-hinchas-ante-belgrano-y-boca-haria-lo-propio-frente-a-instituto--ambos-en-el-kempes_a6abbae6608968fa92082fa8f",
-          "fecha": "2026-09-29T13:20:32.000Z",
-          "oficial": false,
-          "aporte": "Informó que la AFA aprobó la continuidad del plan con hinchas visitantes."
-        },
-        {
-          "medio": "C5N",
-          "enlace": "https://www.c5n.com/deportes/buenas-noticias-los-hinchas-boca-y-river-habra-hinchas-visitantes-cordoba-n250217",
-          "fecha": "2026-09-29T17:12:00.000Z",
-          "oficial": false,
-          "aporte": "Detalló los partidos de River y Boca en el Kempes, las fechas y la cantidad de entradas de Belgrano."
-        },
-        {
-          "medio": "Minuto Uno",
-          "enlace": "https://www.minutouno.com/deportes/river-y-boca-tendran-hinchas-visitantes-cordoba-jugaran-el-kempes-belgrano-e-instituto-n6327907",
-          "fecha": "2026-09-29T13:51:00.000Z",
-          "oficial": false,
-          "aporte": "Confirmó la luz verde de la AFA para que los dos equipos jueguen con visitantes."
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron cinco medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "river-y-boca-llevan-hinchas-visitantes-a-cordoba",
-      "foto": {
-        "archivo": "fotos-notas/zcn7od.jpg",
-        "credito": "Foto: C5N"
-      }
-    },
-    {
       "id": "c7rwcn",
       "titulo": "Margarita Belén recibe la muestra Nacional Primavera Braford",
       "copete": "La exposición ganadera reúne a 184 animales de 28 cabañas en Chaco. El encuentro se realiza del 6 al 8 de octubre con remates y juras.",
@@ -2797,7 +2824,7 @@
       "fecha": "2026-09-29T13:08:21.000Z",
       "sinFecha": false,
       "visto": "2026-09-29T15:31:09.262Z",
-      "relevancia": 47,
+      "relevancia": 40,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -2847,98 +2874,6 @@
       "foto": {
         "archivo": "fotos-notas/c7rwcn.jpg",
         "credito": "Foto: Clarín"
-      }
-    },
-    {
-      "id": "1j7xy5x",
-      "titulo": "La Justicia Federal pide informes al Estado por fondos viales",
-      "copete": "El juez federal de Victoria dio trámite a un amparo presentado por legisladores entrerrianos. El reclamo apunta al destino de los recursos del impuesto a los combustibles para rutas nacionales.",
-      "cuerpo": "El expediente fue iniciado por el senador Adán Bahl y los diputados Guillermo Michel y Marianela Marclay, quienes solicitaron que se retomen las tareas en rutas nacionales de la provincia.\n\nEn la causa 12957/2026, el juez federal Federico Martin declaró la competencia del fuero y ordenó al Estado nacional que presente un informe sobre el interés público en un plazo de tres días. La medida procesal no implica una orden de transferencia de fondos ni una decisión definitiva sobre el planteo.\n\nLos demandantes denunciaron que más de 1,5 billones de pesos que debían destinarse al Sistema de Infraestructura de Transporte para la reparación vial fueron derivados a otros instrumentos financieros. El expediente continuará con la presentación de la documentación requerida a las partes.",
-      "guion": "La Justicia Federal pide informes al Estado por fondos viales",
-      "seccion": "Argentina",
-      "medios": [
-        "La Nación",
-        "Minuto Uno",
-        "C5N",
-        "Canal 26",
-        "Noticias Argentinas (NA)",
-        "Ámbito"
-      ],
-      "enlace": "https://www.canal26.com/politica/2026/09/29/rutas-de-entre-rios-la-justicia-federal-pidio-informes-al-gobierno-por-los-fondos-del-impuesto-a-los-combustibles/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-29T13:02:59.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-29T15:01:04.360Z",
-      "relevancia": 73,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "La Justicia federal dio trámite a un amparo de legisladores de Entre Ríos.",
-        "El expediente apunta al Ministerio de Economía y a Vialidad Nacional.",
-        "El juez Federico Martin dio un plazo de tres días para presentar un informe.",
-        "Los demandantes reclaman por más de 1,5 billones de pesos del impuesto a los combustibles."
-      ],
-      "noConfirmado": [
-        "Todavía no hay una orden judicial al Gobierno para transferir los fondos reclamados.",
-        "No se dictó una resolución definitiva sobre la medida cautelar solicitada por los demandantes."
-      ],
-      "etiquetas": [
-        "Justicia Federal",
-        "Entre Ríos",
-        "rutas nacionales",
-        "impuesto a los combustibles",
-        "Vialidad Nacional"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Canal 26",
-          "enlace": "https://www.canal26.com/politica/2026/09/29/rutas-de-entre-rios-la-justicia-federal-pidio-informes-al-gobierno-por-los-fondos-del-impuesto-a-los-combustibles/",
-          "fecha": "2026-09-29T13:02:59.000Z",
-          "oficial": false,
-          "aporte": "Informó que la Justicia Federal de Victoria dio trámite al amparo y detalló el pedido de informes al Estado."
-        },
-        {
-          "medio": "Ámbito",
-          "enlace": "https://www.ambito.com/politica/la-justicia-habilito-un-amparo-que-nacion-transfiera-fondos-las-rutas-rios-n6327927",
-          "fecha": "2026-09-29T14:30:00.000Z",
-          "oficial": false,
-          "aporte": "Precisó que el reclamo fue presentado por legisladores peronistas contra el Gobierno y Vialidad Nacional."
-        },
-        {
-          "medio": "Minuto Uno",
-          "enlace": "https://www.minutouno.com/politica/la-justicia-da-curso-un-amparo-que-nacion-reactive-obras-rutas-rios-n6327930",
-          "fecha": "2026-09-29T14:32:00.000Z",
-          "oficial": false,
-          "aporte": "Indicó que la Justicia federal hizo lugar al planteo para la transferencia de fondos a la provincia."
-        },
-        {
-          "medio": "Noticias Argentinas (NA)",
-          "enlace": "https://noticiasargentinas.com/politica/fondos-para-rutas--la-justicia-pidio-informes-al-gobierno_a6abbb6a412f3a9893c1d887e",
-          "fecha": "2026-09-29T13:55:13.000Z",
-          "oficial": false,
-          "aporte": "Señaló que la presentación judicial busca la reactivación de obras y tareas de mantenimiento en rutas nacionales."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "dph8p3",
-          "titulo": "Petruccelli pidió informes sobre el programa para celíacos y las acciones de prevención de ITS",
-          "fecha": "2026-09-20T14:00:23.000Z",
-          "ruta": "/nota/petruccelli-pidio-informes-sobre-el-programa-para-celiacos-y-las-dph8p3"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron cuatro medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "la-justicia-federal-pide-informes-al-estado-por-fondos-viales",
-      "foto": {
-        "archivo": "fotos-notas/1j7xy5x.jpg",
-        "credito": "Foto: Minuto Uno"
       }
     },
     {
@@ -3084,6 +3019,102 @@
       }
     },
     {
+      "id": "jul3w9",
+      "titulo": "Infraccionan a un tractor en caminos rurales tras las lluvias",
+      "copete": "El Comando de Prevención Rural sancionó a un conductor en el paraje La Esperanza. El municipio advirtió que aplicará multas severas.",
+      "cuerpo": "Personal del Comando de Prevención Rural sancionó a un tractor que transitaba por el paraje La Esperanza. El operativo se concretó poco después de finalizar las tareas de reparación en el camino que une la ruta nacional 226 con el almacén de La Brava.\n\nLa normativa vigente establece condiciones para transitar por la red vial tras las precipitaciones, exigiendo aguardar el secado del suelo para prevenir daños estructurales. Desde la comuna advirtieron que los operativos continuarán de manera sostenida y que se aplicarán sanciones económicas rigurosas a los infractores.",
+      "guion": "Infraccionan a un tractor en caminos rurales tras las lluvias",
+      "seccion": "Agro",
+      "medios": [
+        "News Balcarce (FM 91.7)",
+        "Infórmese Primero (FM 104.9)",
+        "Radio Gabal (FM 104.1)",
+        "El Diario Balcarce",
+        "Diario La Vanguardia",
+        "Municipalidad de Balcarce",
+        "Sendero Regional"
+      ],
+      "enlace": "https://newsbalcarce.com.ar/?p=30878",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-29T12:08:15.000Z",
+      "sinFecha": false,
+      "visto": "2026-09-30T01:01:00.516Z",
+      "relevancia": 100,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [
+        "rutas"
+      ],
+      "como": "automatica",
+      "claves": [
+        "Sancionaron a un tractor en el paraje La Esperanza",
+        "El camino había sido reparado recientemente",
+        "Rige la ordenanza sobre circulación en días de lluvia"
+      ],
+      "textoRedes": "El Comando de Prevención Rural sancionó a un tractor que circulaba por el paraje La Esperanza en días de lluvia. La comuna advirtió que habrá multas severas para quienes incumplan las normativas viales.",
+      "etiquetas": [
+        "caminos rurales",
+        "multas",
+        "Comando de Prevención Rural",
+        "transito",
+        "Municipalidad de Balcarce"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "News Balcarce (FM 91.7)",
+          "enlace": "https://newsbalcarce.com.ar/?p=30878",
+          "fecha": "2026-09-29T13:48:32.000Z",
+          "oficial": false,
+          "aporte": "Informó sobre la infracción al tractor en el paraje La Esperanza y la ordenanza vigente."
+        },
+        {
+          "medio": "Infórmese Primero (FM 104.9)",
+          "enlace": "http://www.informeseprimero.com.ar/2026/09/infraccionaron-un-tractor-por-circular.html",
+          "fecha": "2026-09-29T15:42:36.402Z",
+          "oficial": false,
+          "aporte": "Aportó detalles sobre los controles en la red vial rural."
+        },
+        {
+          "medio": "Diario La Vanguardia",
+          "enlace": "https://www.diariolavanguardia.com/noticias/44939-infraccionaron-a-un-tractor-por-circular-sobre-un-camino-rural-recien-reparado/",
+          "fecha": null,
+          "oficial": false,
+          "aporte": "Indicó que desde el municipio se intensificarán los controles con sanciones severas."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "4p0z63",
+          "titulo": "Infraccionan a un tractor por circular en caminos rurales durante la tormenta",
+          "fecha": "2026-09-29T12:08:15.000Z",
+          "ruta": "/nota/infraccionan-a-un-tractor-por-circular-en-caminos-rurales-durante-la-4p0z63"
+        },
+        {
+          "id": "1l648f5",
+          "titulo": "A menos de un mes de la apertura de sobres, sigue sin haber empresas interesadas en el Frigorífico Municipal",
+          "fecha": "2026-09-23T20:15:31.970Z",
+          "ruta": "/nota/a-menos-de-un-mes-de-la-apertura-de-sobres-sigue-sin-haber-empresas-1l648f5"
+        },
+        {
+          "id": "1n4w9ua",
+          "titulo": "Piden instalar un punto presencial para gestionar el TelePASE en Balcarce o en el peaje de la Ruta 226",
+          "fecha": "2026-09-23T14:56:16.191Z",
+          "ruta": "/nota/piden-instalar-un-punto-presencial-para-gestionar-el-telepase-en-1n4w9ua"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron cuatro medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "infraccionan-a-un-tractor-en-caminos-rurales-tras-las-lluvias",
+      "foto": {
+        "archivo": "fotos-notas/jul3w9.jpg",
+        "credito": "Foto: Diario La Vanguardia"
+      }
+    },
+    {
       "id": "19rwgiy",
       "titulo": "El INTA analiza las claves para la siembra de soja de primavera",
       "copete": "Especialistas detallan los factores climáticos y de manejo necesarios para adelantar la implantación del cultivo en el Chaco sin reemplazar la fecha tradicional.",
@@ -3180,6 +3211,7 @@
       "guion": "La Provincia crea un programa para formar en oficios a secundarios",
       "seccion": "Argentina",
       "medios": [
+        "El Diario Balcarce",
         "QZ Noticias (Mar del Plata)",
         "El Día",
         "0221",
@@ -3428,7 +3460,11 @@
         "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
         "sugeridoPorIA": "MEDIA"
       },
-      "slug": "el-servicio-meteorologico-nacional-mantiene-alerta-amarilla-por"
+      "slug": "el-servicio-meteorologico-nacional-mantiene-alerta-amarilla-por",
+      "foto": {
+        "archivo": "fotos-notas/1qudzsc.jpg",
+        "credito": "Foto: Canal 26"
+      }
     },
     {
       "id": "1l8mp60",
@@ -3628,10 +3664,10 @@
         "La Verdad",
         "QZ Noticias (Mar del Plata)",
         "Mi8 (Canal 8 Mar del Plata)",
+        "Doble Amarilla",
         "Clarín",
         "Crónica",
-        "La Nueva",
-        "Doble Amarilla"
+        "La Nueva"
       ],
       "enlace": "https://www.infobae.com/politica/2026/09/29/designaron-a-adolfo-cambiaso-como-embajador-internacional-del-deporte-argentino/",
       "teniaImagenLaFuente": true,
@@ -3802,13 +3838,13 @@
         "Canal 26",
         "Noticias Argentinas (NA)",
         "El Día",
-        "La Brújula 24",
         "InfoRegión",
         "ANDigital",
         "Crónica",
         "La Nueva",
         "Diputados Bonaerenses",
-        "A24"
+        "A24",
+        "La Brújula 24"
       ],
       "enlace": "https://www.clarin.com/economia/luis-caputo-kicillof-anticristo-kirchnerismo-infierno-visto_0_t8mAjylcj2.html",
       "teniaImagenLaFuente": true,
@@ -3915,12 +3951,14 @@
       "seccion": "Política",
       "medios": [
         "Infobae",
+        "La Nación",
         "0223 (Mar del Plata)",
         "El Eco de Tandil",
         "QZ Noticias (Mar del Plata)",
         "Agencia DIB",
+        "La Noticia 1",
+        "Minuto Uno",
         "Clarín",
-        "La Nación",
         "Bichos de Campo",
         "TN (Todo Noticias)",
         "El Cronista",
@@ -3929,7 +3967,6 @@
         "A24",
         "iProfesional",
         "Ámbito",
-        "Minuto Uno",
         "C5N",
         "Crónica",
         "Canal 26",
@@ -4107,7 +4144,11 @@
         "porque": "Lo contaron cinco medios independientes.",
         "sugeridoPorIA": "ALTA"
       },
-      "slug": "el-ministerio-de-salud-provincial-triplica-la-red-de-atencion-para-el"
+      "slug": "el-ministerio-de-salud-provincial-triplica-la-red-de-atencion-para-el",
+      "foto": {
+        "archivo": "fotos-notas/1bm6ntn.jpg",
+        "credito": "Foto: Agencia DIB"
+      }
     },
     {
       "id": "4r2jgy",
@@ -4120,16 +4161,16 @@
         "Perfil",
         "Página/12",
         "Ámbito",
-        "TyC Sports",
         "Olé",
         "Minuto Uno",
         "Crónica",
         "El Día",
         "0221",
-        "La Página Millonaria",
+        "Doble Amarilla",
         "Bolavip Argentina",
-        "Clarín",
-        "Doble Amarilla"
+        "La Página Millonaria",
+        "TyC Sports",
+        "Clarín"
       ],
       "enlace": "https://www.0221.com.ar/estudiantes/finalmente-lionel-scaloni-libero-tomas-palacios-y-jugara-estudiantes-platense-copa-argentina-n134991",
       "teniaImagenLaFuente": true,
@@ -4383,6 +4424,265 @@
       "slug": "la-virgen-de-la-tosquera-compite-por-una-nominacion-en-los-oscar"
     },
     {
+      "id": "113qesp",
+      "titulo": "Petruccelli convoca a Virginia Aparicio tras el rechazo en el Concejo",
+      "copete": "La Comisión de Salud desestimó el pedido para recibir a la investigadora del INTA. Ante esto, el bloque de Potencia organizará un encuentro propio con la participación de otros ediles.",
+      "cuerpo": "La comisión de Salud del Concejo Deliberante desestimó la convocatoria a la investigadora del INTA y del CONICET Virginia Aparicio. El pedido había sido impulsado por el concejal de Potencia Gabriel Petruccelli para que la científica exponga sobre su labor y su situación institucional. Un planteo similar de Sol Di Gerónimo en la comisión de Industria tampoco prosperó.\n\nAparicio afronta un proceso administrativo que podría derivar en su exoneración, según denunció el gremio APINTA. Ante la falta de tratamiento legislativo, Petruccelli decidió convocarla a un encuentro de su bloque e invitará al resto de los ediles para escuchar su exposición.",
+      "guion": "Petruccelli convoca a Virginia Aparicio tras el rechazo en el Concejo",
+      "seccion": "Política",
+      "medios": [
+        "Infórmese Primero (FM 104.9)",
+        "Radio Gabal (FM 104.1)",
+        "Diario La Vanguardia"
+      ],
+      "enlace": "https://www.diariolavanguardia.com/noticias/44949-la-comision-de-salud-no-convocara-a-virginia-aparicio-y-petruccelli-decidio-citarla-a-una-reunion-de-bloque/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-28T22:16:06.119Z",
+      "sinFecha": false,
+      "visto": "2026-09-30T00:31:08.568Z",
+      "relevancia": 83,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [
+        "concejo",
+        "inta"
+      ],
+      "como": "automatica",
+      "claves": [
+        "La Comisión de Salud no convocó a la investigadora del INTA.",
+        "El concejal Gabriel Petruccelli organizará una reunión de bloque.",
+        "APINTA denunció un proceso administrativo contra la científica."
+      ],
+      "noConfirmado": [
+        "No se especificó la fecha exacta en la que se realizará el encuentro organizado por el bloque.",
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El concejal Gabriel Petruccelli convocará a una reunión de bloque a la investigadora del INTA Virginia Aparicio, luego de que la Comisión de Salud rechazara su presentación en el Concejo Deliberante local.",
+      "etiquetas": [
+        "Virginia Aparicio",
+        "Concejo Deliberante",
+        "Gabriel Petruccelli",
+        "INTA",
+        "Salud"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Diario La Vanguardia",
+          "enlace": "https://www.diariolavanguardia.com/noticias/44949-la-comision-de-salud-no-convocara-a-virginia-aparicio-y-petruccelli-decidio-citarla-a-una-reunion-de-bloque/",
+          "fecha": null,
+          "oficial": false,
+          "aporte": "Detalló el rechazo de la Comisión de Salud a la convocatoria de Virginia Aparicio y la decisión del concejal Gabriel Petruccelli de citarla a su bloque."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1ytgm6c",
+          "titulo": "Petruccelli pide que Aparicio exponga ante la Comisión de Salud",
+          "fecha": "2026-09-28T21:59:12.000Z",
+          "ruta": "/nota/petruccelli-pide-que-aparicio-exponga-ante-la-comision-de-salud-1ytgm6c"
+        },
+        {
+          "id": "v91szb",
+          "titulo": "La APDH rechaza la factible exoneración de la Dra. Virginia Aparicio, investigadora del INTA Balcarce y del CONICET",
+          "fecha": "2026-09-23T01:50:24.356Z",
+          "ruta": "/nota/la-apdh-rechaza-la-factible-exoneracion-de-la-dra-virginia-aparicio-v91szb"
+        },
+        {
+          "id": "tmpmtz",
+          "titulo": "Legislatura bonarense: presentan un proyecto para respaldar a Virginia Aparicio, investigadora de INTA Balcarce",
+          "fecha": "2026-09-21T17:19:51.000Z",
+          "ruta": "/nota/legislatura-bonarense-presentan-un-proyecto-para-respaldar-a-virginia-tmpmtz"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "petruccelli-convoca-a-virginia-aparicio-tras-el-rechazo-en-el-concejo",
+      "foto": {
+        "archivo": "fotos-notas/113qesp.jpg",
+        "credito": "Foto: Diario La Vanguardia"
+      }
+    },
+    {
+      "id": "1t74fyv",
+      "titulo": "El autódromo Fangio asoma como alternativa para cerrar el año del TC",
+      "copete": "Tras el fin de semana de actividad nacional, surgen tratativas para que la máxima categoría del automovilismo argentino corra en diciembre en el circuito local.",
+      "cuerpo": "El autódromo Juan Manuel Fangio se posiciona con firmeza para recibir a las categorías nacionales bajo la órbita de la ACTC, tras la actividad desarrollada el fin de semana con las TC Pick Up y el Turismo Special de la Costa.\n\nLa dirigencia que encabeza Hugo Mazzacane quedó satisfecha con el evento y existen tratativas para retornar a Balcarce antes de concluir la temporada 2026. Ante la clausura provisoria del autódromo de La Plata, trascendió que el Turismo Carretera evalúa correr el 6 de diciembre en Balcarce, una fecha que por el momento se mantiene libre de compromisos para el circuito local.\n\nPara concretar la llegada de la categoría principal, el escenario balcarceño requiere obras importantes de infraestructura.",
+      "guion": "El autódromo Fangio asoma como alternativa para cerrar el año del TC",
+      "seccion": "Automovilismo",
+      "medios": [
+        "El Diario Balcarce"
+      ],
+      "enlace": "https://eldiariobalcarce.com.ar/el-6-de-diciembre-por-las-dudas-circuito-libre-fecha-para-el-tc-673",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-28T22:06:53.000Z",
+      "sinFecha": false,
+      "visto": "2026-09-28T22:30:54.996Z",
+      "relevancia": 71,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [
+        "autodromo",
+        "fangio"
+      ],
+      "como": "automatica",
+      "claves": [
+        "El autódromo Fangio evalúa recibir al Turismo Carretera el próximo 6 de diciembre.",
+        "La ACTC analiza alternativas ante la clausura provisoria del circuito de La Plata.",
+        "El escenario local requiere obras importantes para albergar a la máxima categoría."
+      ],
+      "seSabe": [
+        "Las TC Pick Up y el Turismo Special de la Costa compitieron el fin de semana en el autódromo Juan Manuel Fangio.",
+        "La dirigencia de la ACTC, encabezada por Hugo Mazzacane, quedó satisfecha con la competencia realizada en Balcarce.",
+        "El autódromo de La Plata se encuentra provisoriamente clausurado por cuestiones de seguridad.",
+        "El circuito local no tendría compromisos asumidos para la fecha del 6 de diciembre."
+      ],
+      "noConfirmado": [
+        "Todavía no se confirmó de manera oficial la llegada del Turismo Carretera a Balcarce para el 6 de diciembre.",
+        "No se precisó el inicio ni el detalle de las obras necesarias para adaptar el circuito a los requerimientos del TC.",
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Tras la actividad del fin de semana, surgen tratativas para que el Turismo Carretera evalúe correr el 6 de diciembre en el autódromo Juan Manuel Fangio de Balcarce.",
+      "etiquetas": [
+        "Turismo Carretera",
+        "Autodromo Juan Manuel Fangio",
+        "ACTC",
+        "Balcarce"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/el-6-de-diciembre-por-las-dudas-circuito-libre-fecha-para-el-tc-673",
+          "fecha": "2026-09-28T22:06:53.000Z",
+          "oficial": false,
+          "aporte": "Aportó información sobre las tratativas para el regreso del Turismo Carretera y la evaluación positiva de la ACTC tras el fin de semana de competencias."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "lcvlqf",
+          "titulo": "Vuelve el TC al tradicional autódromo Juan Manuel Fangio: la categoría Pick Up protagonizará la reapertura del circuito",
+          "fecha": "2026-09-24T17:08:37.000Z",
+          "ruta": "/nota/vuelve-el-tc-al-tradicional-autodromo-juan-manuel-fangio-la-categoria-lcvlqf"
+        },
+        {
+          "id": "1hhocwa",
+          "titulo": "El autódromo Fangio avanza con nuevas obras tras las competencias",
+          "fecha": "2026-09-28T22:01:03.337Z",
+          "ruta": "/nota/el-autodromo-fangio-avanza-con-nuevas-obras-tras-las-competencias-1hhocwa"
+        },
+        {
+          "id": "1a0ty94",
+          "titulo": "Reino destaca el éxito del regreso automovilístico al Fangio",
+          "fecha": "2026-09-28T19:02:49.410Z",
+          "ruta": "/nota/reino-destaca-el-exito-del-regreso-automovilistico-al-fangio-1a0ty94"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "el-autodromo-fangio-asoma-como-alternativa-para-cerrar-el-ano-del-tc",
+      "foto": {
+        "archivo": "fotos-notas/1t74fyv.jpg",
+        "credito": "Foto: El Diario Balcarce"
+      }
+    },
+    {
+      "id": "ip1dkb",
+      "titulo": "El Concejo pide acelerar la reparación de un puente en la zona rural",
+      "copete": "El Concejo Deliberante aprobó por unanimidad un proyecto para solicitar la reparación de un puente en el sector de La Esperanza y El Volcán. La iniciativa exige la intervención del Ministerio de Infraestructura provincial.",
+      "cuerpo": "Durante el debate en el recinto, el concejal Enrique Guillén presentó la iniciativa y remarcó la necesidad de restablecer la circulación de los vecinos de la zona. A su vez, el edil Leandro Spinelli indicó que el Municipio trabaja en un pliego de licitación para construir un paso de piedra en ese sector y señaló que existen puentes en la red rural con entre 60 y 80 años de antigüedad. En la misma sesión, la concejal Sol Di Gerónimo propuso dirigir el reclamo de forma directa al Ministerio provincial.\n\nAdemás, se informó que ya funciona el puente de La Cerámica y que durante este año se proyecta colocar otro sobre el arroyo Dulce, tras recibir el presupuesto correspondiente.",
+      "guion": "El Concejo pide acelerar la reparación de un puente en la zona rural",
+      "seccion": "Balcarce",
+      "medios": [
+        "El Diario Balcarce"
+      ],
+      "enlace": "https://eldiariobalcarce.com.ar/piden-acelerar-la-reparacion-de-un-puente-clave-para-la-circulacion-en-la-zona-rural-677",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-28T21:52:27.000Z",
+      "sinFecha": false,
+      "visto": "2026-09-28T22:01:03.337Z",
+      "relevancia": 63,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [
+        "concejo"
+      ],
+      "como": "automatica",
+      "claves": [
+        "El Concejo Deliberante aprobó por unanimidad la reparación de un puente rural.",
+        "El pedido está dirigido al Ministerio de Infraestructura de la Provincia.",
+        "La estructura afectada se ubica en el sector de La Esperanza y El Volcán.",
+        "Prevén construir un paso de piedra provisional para restablecer el tránsito."
+      ],
+      "seSabe": [
+        "El proyecto fue aprobado por unanimidad en la última sesión del Concejo Deliberante.",
+        "La iniciativa solicita la intervención del Ministerio de Infraestructura bonaerense.",
+        "El puente afectado se encuentra en la zona de La Esperanza y El Volcán.",
+        "El concejal Leandro Spinelli indicó que se proyecta un paso de piedra en ese tramo.",
+        "Quedó habilitado el puente de La Cerámica y prevén otro sobre el arroyo Dulce durante 2026."
+      ],
+      "noConfirmado": [
+        "No se precisó el plazo exacto en el que comenzarán las obras en el puente de La Esperanza y El Volcán.",
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El Concejo Deliberante aprobó por unanimidad un pedido al Ministerio de Infraestructura provincial para acelerar la reparación de un puente intransitable en la zona de La Esperanza y El Volcán.",
+      "etiquetas": [
+        "Concejo Deliberante",
+        "puente rural",
+        "La Esperanza",
+        "El Volcán",
+        "Ministerio de Infraestructura",
+        "caminos rurales"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/piden-acelerar-la-reparacion-de-un-puente-clave-para-la-circulacion-en-la-zona-rural-677",
+          "fecha": "2026-09-28T21:52:27.000Z",
+          "oficial": false,
+          "aporte": "Informó sobre la aprobación del proyecto en el Concejo Deliberante y los detalles del debate en torno a los puentes rurales."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1n4w9ua",
+          "titulo": "Piden instalar un punto presencial para gestionar el TelePASE en Balcarce o en el peaje de la Ruta 226",
+          "fecha": "2026-09-23T14:56:16.191Z",
+          "ruta": "/nota/piden-instalar-un-punto-presencial-para-gestionar-el-telepase-en-1n4w9ua"
+        },
+        {
+          "id": "32591i",
+          "titulo": "Piden un punto TelePASE",
+          "fecha": "2026-09-23T12:51:34.000Z",
+          "ruta": "/nota/piden-un-punto-telepase-en-balcarce-32591i"
+        },
+        {
+          "id": "1acx84s",
+          "titulo": "Fundación Banco Provincia entrega instrumentos a la Orquesta Escuela",
+          "fecha": "2026-09-28T16:14:24.000Z",
+          "ruta": "/nota/fundacion-banco-provincia-entrega-instrumentos-a-la-orquesta-escuela-1acx84s"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "el-concejo-pide-acelerar-la-reparacion-de-un-puente-en-la-zona-rural",
+      "foto": {
+        "archivo": "fotos-notas/ip1dkb.jpg",
+        "credito": "Foto: El Diario Balcarce"
+      }
+    },
+    {
       "id": "1jf1w7c",
       "titulo": "Cierra la votación del Balón de Oro y definen al ganador",
       "copete": "Terminó el plazo para que los jurados elijan a los candidatos. La ceremonia de entrega será el 26 de octubre en Londres.",
@@ -4538,7 +4838,11 @@
         "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
         "sugeridoPorIA": "MEDIA"
       },
-      "slug": "copetonas-celebra-su-fiesta-de-mate-y-tortas-fritas"
+      "slug": "copetonas-celebra-su-fiesta-de-mate-y-tortas-fritas",
+      "foto": {
+        "archivo": "fotos-notas/1ylr7j3.jpg",
+        "credito": "Foto: Canal 26"
+      }
     },
     {
       "id": "1a0ty94",
@@ -5072,7 +5376,91 @@
       ],
       "slug": "argentina-sudeste-bonaerense-las-lluvias-alcanzaron-los-30-mm-en",
       "corregidaAMano": true,
-      "cuerpoAMano": true
+      "cuerpoAMano": true,
+      "foto": {
+        "archivo": "fotos-notas/zphfal.jpg",
+        "credito": "Foto: Argenpapa"
+      }
+    },
+    {
+      "id": "caurxr",
+      "titulo": "Balinotti destaca las obras del autódromo Fangio tras el regreso nacional",
+      "copete": "El jefe médico de la ACTC, Rodolfo Balinotti, valoró los trabajos realizados en el circuito local tras la competencia del fin de semana y consideró factible la llegada del Turismo Carretera.",
+      "cuerpo": "Según informó en declaraciones radiales, los trabajos superaron las recomendaciones iniciales y se documentó que el circuito cuenta con el doble de las intervenciones pedidas, basándose en un informe firmado por Carlos Bertrán, vinculado a la FIA.\n\nAsimismo, destacó la conformidad de los pilotos Agustín Canapino, Mariano Werner y Otto Fritzler durante las competencias de TC Pick Up y Turismo Special de la Costa, además de la actuación de los Bomberos Voluntarios de Balcarce ante un foco de incendio en la sierra.\n\nPor último, Balinotti señaló que el regreso funcionó como prueba para evaluar la infraestructura del predio y consideró factible la futura llegada del Turismo Carretera, aunque advirtió que se requiere continuar con trabajos como la ampliación del sector de boxes.",
+      "guion": "Balinotti destaca las obras del autódromo Fangio tras el regreso nacional",
+      "seccion": "Automovilismo",
+      "medios": [
+        "Radio Gabal (FM 104.1)"
+      ],
+      "enlace": "https://www.radiogabal.com.ar/index.php/politica/rodolfo-balinotti-lo-mas-dificil-ya-se-hizo-ahora-el-fangio-tiene-un-potencial-enorme",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-28T15:35:16.000Z",
+      "sinFecha": false,
+      "visto": "2026-09-28T17:31:01.054Z",
+      "relevancia": 67,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [
+        "autodromo",
+        "fangio"
+      ],
+      "como": "automatica",
+      "claves": [
+        "Rodolfo Balinotti defendió las obras realizadas en el autódromo Juan Manuel Fangio.",
+        "El jefe médico de la ACTC afirmó que las intervenciones duplicaron las recomendaciones iniciales.",
+        "Destacó la conformidad de los pilotos y la tarea de los Bomberos Voluntarios locales.",
+        "Consideró factible que el Turismo Carretera compita en el circuito tras ampliar los boxes."
+      ],
+      "seSabe": [
+        "El jefe médico de la ACTC, Rodolfo Balinotti, aseguró que las obras en el autódromo Fangio superaron las recomendaciones iniciales.",
+        "Existen registros firmados por Carlos Bertran, vinculado a la FIA, sobre los trabajos ejecutados en el circuito.",
+        "Pilotos como Agustín Canapino, Mariano Werner y Otto Fritzler manifestaron conformidad con la pista durante el fin de semana.",
+        "Balinotti consideró factible la llegada del Turismo Carretera tras realizar mejoras en el sector de boxes."
+      ],
+      "textoRedes": "El jefe médico de la ACTC, Rodolfo Balinotti, repasó las obras en el autódromo Juan Manuel Fangio tras el fin de semana de actividad nacional y consideró factible la llegada del Turismo Carretera.",
+      "etiquetas": [
+        "Rodolfo Balinotti",
+        "autodromo Juan Manuel Fangio",
+        "ACTC",
+        "Turismo Carretera",
+        "Balcarce"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Radio Gabal (FM 104.1)",
+          "enlace": "https://www.radiogabal.com.ar/index.php/politica/rodolfo-balinotti-lo-mas-dificil-ya-se-hizo-ahora-el-fangio-tiene-un-potencial-enorme",
+          "fecha": "2026-09-28T15:35:16.000Z",
+          "oficial": false,
+          "aporte": "Detalló las mediciones de las obras en el autódromo Fangio, la conformidad de los pilotos y la evaluación para la llegada del Turismo Carretera."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "121t71e",
+          "titulo": "Balinotti responde a las críticas sobre el autódromo Fangio",
+          "fecha": "2026-09-27T02:30:43.813Z",
+          "ruta": "/nota/cruce-en-balcarce-por-la-habilitacion-del-autodromo-fangio-121t71e"
+        },
+        {
+          "id": "1xs34mg",
+          "titulo": "Boccanera y Baigorria ganan en el regreso del Turismo Special de la Costa al Fangio",
+          "fecha": "2026-09-28T11:51:08.000Z",
+          "ruta": "/nota/boccanera-y-baigorria-ganan-en-el-regreso-del-turismo-special-de-la-1xs34mg"
+        },
+        {
+          "id": "in20o1",
+          "titulo": "Hernán Palazzo gana la final del TC Pick Up en el autódromo Fangio",
+          "fecha": "2026-09-28T04:58:38.000Z",
+          "ruta": "/nota/hernan-palazzo-gana-la-final-del-tc-pick-up-en-el-autodromo-fangio-in20o1"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "balinotti-destaca-las-obras-del-autodromo-fangio-tras-el-regreso"
     },
     {
       "id": "1loie5",
@@ -5173,6 +5561,7 @@
       "seccion": "Política",
       "medios": [
         "News Balcarce (FM 91.7)",
+        "Puntonueve (FM 100.9)",
         "Infórmese Primero (FM 104.9)"
       ],
       "enlace": "https://newsbalcarce.com.ar/?p=30868",
@@ -5180,7 +5569,7 @@
       "fecha": "2026-09-28T14:36:12.000Z",
       "sinFecha": false,
       "visto": "2026-09-28T16:31:05.398Z",
-      "relevancia": 83,
+      "relevancia": 93,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -5193,6 +5582,13 @@
           "medio": "News Balcarce (FM 91.7)",
           "enlace": "https://newsbalcarce.com.ar/?p=30868",
           "fecha": "2026-09-28T14:36:12.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Puntonueve (FM 100.9)",
+          "enlace": "https://puntonueve.com.ar/diego-cerone-mantuvo-un-encuentro-de-trabajo-con-diego-santilli-y-ezequiel-galli/",
+          "fecha": "2026-09-29T20:23:17.000Z",
           "oficial": false,
           "aporte": null
         },
@@ -5385,63 +5781,6 @@
         "sugeridoPorIA": "MEDIA"
       },
       "slug": "carlos-bianco-aclara-la-polemica-por-la-inversion-en-el-autodromo"
-    },
-    {
-      "id": "1xiyc3w",
-      "titulo": "Biogénesis Bagó exporta por primera vez vacunas a Europa",
-      "copete": "El laboratorio argentino envía vacunas contra la fiebre aftosa a Chipre para contener una emergencia sanitaria por la variante SAT1. Es la primera vez que un fármaco veterinario nacional ingresa al mercado de la Unión Europea.",
-      "cuerpo": "Hasta el momento, el bloque comunitario se abastecía únicamente de laboratorios europeos.\n\nChipre perdió su estatus de país libre de fiebre aftosa sin vacunación el diecinueve de febrero pasado tras detectar contagios en Lárnaca, lo que motivó restricciones al movimiento animal y la suspensión de exportaciones de ganado en pie.\n\nEl CEO de la compañía, Esteban Turic, destacó que la empresa produce trescientos millones de dosis anuales de vacuna antiaftosa y comercializa productos en más de setenta países. La intervención busca frenar las pérdidas económicas generadas por la diseminación de la enfermedad.",
-      "guion": "Biogénesis Bagó exporta por primera vez vacunas a Europa",
-      "seccion": "Agro",
-      "medios": [
-        "Radio Mitre",
-        "Agrositio"
-      ],
-      "enlace": "https://radiomitre.cienradios.com/mitre-y-el-campo/historico-un-laboratorio-argentino-logra-la-primera-exportacion-de-vacunas-a-un-pais-europeo/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-28T13:13:50.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-28T20:30:57.053Z",
-      "relevancia": 24,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "textoRedes": "El laboratorio argentino Biogénesis Bagó concretó su primer envío de vacunas contra la fiebre aftosa a la Unión Europea para contener un brote en Chipre. Es la primera vez que un fármaco veterinario nacional ingresa al mercado comunitario.",
-      "etiquetas": [
-        "Biogénesis Bagó",
-        "vacuna",
-        "fiebre aftosa",
-        "Europa",
-        "Chipre"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Radio Mitre",
-          "enlace": "https://radiomitre.cienradios.com/mitre-y-el-campo/historico-un-laboratorio-argentino-logra-la-primera-exportacion-de-vacunas-a-un-pais-europeo/",
-          "fecha": "2026-09-28T13:13:50.000Z",
-          "oficial": false,
-          "aporte": "Informó los detalles del envío a Chipre, declaraciones del CEO Esteban Turic y los datos sobre la validación científica de Wageningen Bioveterinary Research."
-        },
-        {
-          "medio": "Agrositio",
-          "enlace": "https://www.agrositio.com.ar/noticia/248549-historico-un-laboratorio-argentino-logra-la-primera-exportacion-de-vacunas-a-un-pais-europeo.html",
-          "fecha": "2026-09-28T14:12:56.000Z",
-          "oficial": false,
-          "aporte": "Confirmó la operación como la primera exportación de vacunas veterinarias argentinas a la Unión Europea y su impacto en la industria."
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron dos medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "biogenesis-bago-exporta-por-primera-vez-vacunas-a-europa",
-      "foto": {
-        "archivo": "fotos-notas/1xiyc3w.jpg",
-        "credito": "Foto: Agrositio"
-      }
     }
   ],
   "secciones": [
@@ -5460,34 +5799,34 @@
     {
       "nombre": "El autódromo",
       "ranura": "autodromo",
-      "cuantas": 6
+      "cuantas": 9
     },
     {
       "nombre": "Fangio",
       "ranura": "fangio",
-      "cuantas": 6
+      "cuantas": 9
     },
     {
       "nombre": "El Concejo Deliberante",
       "ranura": "concejo",
-      "cuantas": 4
+      "cuantas": 7
     },
     {
       "nombre": "TC Pick Up",
       "ranura": "tc-pick-up",
-      "cuantas": 3
+      "cuantas": 4
     },
     {
       "nombre": "El INTA",
       "ranura": "inta",
-      "cuantas": 2
+      "cuantas": 3
     }
   ],
   "clima": {
     "ahora": {
       "temp": 9,
       "sensacion": 6,
-      "humedad": 89,
+      "humedad": 90,
       "viento": 19,
       "rumbo": "SO",
       "cielo": "Nublado",
@@ -5857,6 +6196,18 @@
       "motivo": "necesita ojo humano: \"herida\""
     },
     {
+      "id": "199k1u0",
+      "titulo": "Guillén: “Con una vuelta del TC a Balcarce podemos pensar…",
+      "seccion": "Automovilismo",
+      "motivo": "verificación baja: espera a una persona (visto al reescribir)"
+    },
+    {
+      "id": "1a1eesp",
+      "titulo": "Impulsan una diplomatura para la gestión y creación de…",
+      "seccion": "Balcarce",
+      "motivo": "verificación baja: espera a una persona (visto al reescribir)"
+    },
+    {
       "id": "10ybc9u",
       "titulo": "Diputados salió al cruce de la justicia y negó encubrir…",
       "seccion": "Política",
@@ -5887,42 +6238,6 @@
       "motivo": "necesita ojo humano: \"niño\""
     },
     {
-      "id": "1ni4812",
-      "titulo": null,
-      "seccion": "Argentina",
-      "motivo": "necesita ojo humano: \"niña\""
-    },
-    {
-      "id": "1xe4pop",
-      "titulo": "De una oferta laboral en Facebook a prisionero de guerra…",
-      "seccion": "Argentina",
-      "motivo": "internacional: sin relación con Balcarce"
-    },
-    {
-      "id": "18gldok",
-      "titulo": "Psicólogos bonaerenses cortan la atención con el IOMA por…",
-      "seccion": "Argentina",
-      "motivo": "necesita ojo humano: \"denuncia\""
-    },
-    {
-      "id": "7ci1iq",
-      "titulo": "El Gobierno le dio dos semanas al Reino Unido para frenar…",
-      "seccion": "Argentina",
-      "motivo": "necesita ojo humano: \"denuncia\""
-    },
-    {
-      "id": "jien96",
-      "titulo": "Un futbolista fue detenido en Mendoza por realizar gestos…",
-      "seccion": "Fútbol",
-      "motivo": "necesita ojo humano: \"detenido\""
-    },
-    {
-      "id": "1iitoa4",
-      "titulo": "Quiniela de hoy: resultados de los sorteos en Nacional…",
-      "seccion": "Argentina",
-      "motivo": "parece promoción, no noticia: \"sorteo\""
-    },
-    {
       "id": "nlwd45",
       "titulo": "Cano adelantó un nuevo sistema de turnos para el Hospital…",
       "seccion": "Balcarce",
@@ -5933,6 +6248,42 @@
       "titulo": null,
       "seccion": "Balcarce",
       "motivo": "necesita ojo humano: \"alumno de\", en el texto completo de la fuente (visto al reescribir)"
+    },
+    {
+      "id": "1xe4pop",
+      "titulo": "De una oferta laboral en Facebook a prisionero de guerra…",
+      "seccion": "Argentina",
+      "motivo": "internacional: sin relación con Balcarce"
+    },
+    {
+      "id": "7ci1iq",
+      "titulo": "El Gobierno le dio dos semanas al Reino Unido para frenar…",
+      "seccion": "Argentina",
+      "motivo": "necesita ojo humano: \"denuncia\""
+    },
+    {
+      "id": "1iitoa4",
+      "titulo": "Quiniela de hoy: resultados de los sorteos en Nacional…",
+      "seccion": "Argentina",
+      "motivo": "parece promoción, no noticia: \"sorteo\""
+    },
+    {
+      "id": "jien96",
+      "titulo": "Un futbolista fue detenido en Mendoza por realizar gestos…",
+      "seccion": "Fútbol",
+      "motivo": "necesita ojo humano: \"detenido\""
+    },
+    {
+      "id": "1yygidx",
+      "titulo": "Por el pase de Lomónaco: otro revés del TAS para…",
+      "seccion": "Fútbol",
+      "motivo": "necesita ojo humano: \"denuncia\""
+    },
+    {
+      "id": "1ni4812",
+      "titulo": null,
+      "seccion": "Argentina",
+      "motivo": "necesita ojo humano: \"niña\""
     },
     {
       "id": "1ogz9mz",
@@ -5953,6 +6304,12 @@
       "motivo": "necesita ojo humano: \"denuncia\""
     },
     {
+      "id": "12wle8z",
+      "titulo": "Denuncia penal contra Bullrich y Monteoliva por los dichos…",
+      "seccion": "Política",
+      "motivo": "necesita ojo humano: \"denuncia\""
+    },
+    {
       "id": "iyupy7",
       "titulo": null,
       "seccion": "Economía",
@@ -5963,13 +6320,7 @@
       "titulo": "Comenzó en San Nicolás un inédito juicio a los…",
       "seccion": "Política",
       "motivo": "necesita ojo humano: \"detenido\""
-    },
-    {
-      "id": "12wle8z",
-      "titulo": "Denuncia penal contra Bullrich y Monteoliva por los dichos…",
-      "seccion": "Política",
-      "motivo": "necesita ojo humano: \"denuncia\""
     }
   ],
-  "esperandoCuerpo": 2
+  "esperandoCuerpo": 3
 }
