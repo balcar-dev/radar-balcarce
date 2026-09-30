@@ -193,6 +193,25 @@ test('la página de la nota muestra la foto sólo si hay, con el crédito en el 
   assert.equal((bloqueFoto.match(/n\.foto\.credito/g) ?? []).length, 1, 'el crédito aparece una sola vez, en el epígrafe');
 });
 
+test('sin foto, la página de la nota lleva la placa de su sección, con su dibujo; las notas propias no (29/09)', () => {
+  // Hernán, 29/09: "si no tiene fotos hay que ponerle la placa de la sección".
+  // Nunca una imagen hecha con IA: la placa es un dibujo propio, en el código.
+  const pagina = leer('web/app/nota/[id]/page.js');
+  assert.match(pagina, /\{!n\.foto && !n\.propia && <PlacaSeccion seccion=\{n\.seccion\} chica \/>\}/);
+  const piezas = leer('web/components/piezas.js');
+  const dibujos = piezas.match(/const DIBUJOS = \{([\s\S]*?)\n\};/)?.[1] ?? '';
+  for (const ranura of ['balcarce', 'politica', 'policiales', 'futbol', 'deportes', 'automovilismo', 'agro', 'economia', 'cultura', 'tecnologia', 'argentina']) {
+    assert.match(dibujos, new RegExp(`\\n  ${ranura}: `), `falta el dibujo de ${ranura}`);
+  }
+  assert.ok(!/<image|href=|https?:/.test(dibujos), 'los dibujos se hacen con trazos, sin imágenes de afuera');
+  // La destacada de una sección o de un tema: su foto con el crédito debajo, o la placa.
+  const destacada = leer('web/components/imagen-destacada.js');
+  assert.match(destacada, /export function ImagenDestacada[\s\S]*?<PlacaSeccion seccion=\{nota\?\.seccion\} \/>[\s\S]*?<figcaption className="credito-foto">\{nota\.foto\.credito\}<\/figcaption>/);
+  for (const f of ['web/app/seccion/[ranura]/page.js', 'web/app/tema/[ranura]/page.js']) {
+    assert.match(leer(f), /<ImagenDestacada nota=\{principal\} \/>/, f);
+  }
+});
+
 test('el workflow "Actualizar la web" sube banco-fotos.json y las fotos guardadas (28/09: se armaban y se perdían)', () => {
   const y = leer('.github/workflows/actualizar.yml');
   const paso = y.match(/Guardar si cambió algo[\s\S]*?git add ([^\n]+)/)?.[1] ?? '';

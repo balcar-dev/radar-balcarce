@@ -450,7 +450,7 @@ Todas se generan al compilar, como archivos.
 | Dirección | Archivo | Qué muestra / de dónde sale |
 |---|---|---|
 | `/` | `app/page.js` | La tapa (ver arriba) |
-| `/nota/titular-ID` | `app/nota/[id]/page.js` | Título, bajada, **foto si la hay** (con el crédito en el epígrafe, nunca adentro de la imagen), cuerpo (con enlaces si es propia), botones de las notas propias, el desplegable cerrado "Fuentes (N)" con la firma (`components/verificacion.js`), compartir, "Seguí leyendo" y la invitación a escribir. Se genera una página por **cada nota de la portada y del archivo** (`todasLasNotas`) |
+| `/nota/titular-ID` | `app/nota/[id]/page.js` | Título, bajada, **foto si la hay** (con el crédito en el epígrafe, nunca adentro de la imagen; si no, desde el 29/09, la placa de la sección con su dibujo), cuerpo (con enlaces si es propia), botones de las notas propias, el desplegable cerrado "Fuentes (N)" con la firma (`components/verificacion.js`), compartir, "Seguí leyendo" y la invitación a escribir. Se genera una página por **cada nota de la portada y del archivo** (`todasLasNotas`) |
 | `/nota/titular-ID/opengraph-image` | `app/nota/[id]/opengraph-image.js` | La tarjeta apaisada para compartir (1200 × 630, con la foto del banco si hay) |
 | `/nota/titular-ID/instagram.png` | `app/nota/[id]/instagram.png/route.js` | La tarjeta vertical del espejo en Instagram (1080 × 1350). Lleva la foto del banco si la nota tiene una, y si no la placa sin foto (`FOTO_EN_INSTAGRAM = true` desde el 28/09, `web/lib/tarjeta-diseno.js`) |
 | `/nota/indice.json` | `app/nota/indice.json/route.js` | `{ id: "titular-id" }` de todas las notas con página, para el rescate de la 404 |

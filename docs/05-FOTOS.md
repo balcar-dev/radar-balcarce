@@ -216,8 +216,15 @@ En `web/app/nota/[id]/page.js`, **entre la bajada y el cuerpo**: la imagen a lo
 ancho de la columna (hasta 480 píxeles de alto, recortada por la página para
 llenar ese espacio) y, debajo, el crédito en cursiva gris ("Foto: Radio Gabal
 (FM 104.1)"). **El crédito aparece una sola vez, en el epígrafe, nunca adentro
-de la imagen.** Sin foto no va nada: no hay placa de sección grande de
-respaldo, a propósito (repetía la etiqueta de arriba sin ningún dato).
+de la imagen.** Sin foto, desde el 29/09 va **la placa de la sección**, más
+baja que una foto y con el dibujo de su sección (`PlacaSeccion` con `chica` y
+`Pictograma`, `web/components/piezas.js`; Hernán: "si no tiene fotos hay que
+ponerle la placa de la sección"). Hasta ese día no iba nada. Las notas propias
+(el dólar, los repasos) no la llevan. **Nunca una imagen hecha con IA**: el
+criterio no la permite y una ilustración inventada de un hecho real confunde.
+
+La nota destacada de una sección o de un tema lleva su foto, con el crédito
+debajo, o la placa (`ImagenDestacada`); hasta el 29/09 llevaba siempre la placa.
 
 La prueba `pruebas/fotos-notas.test.mjs` cuida que la foto sea condicional,
 que salga del banco y no de la fuente, y que el crédito esté una sola vez.
@@ -291,14 +298,14 @@ Ver `docs/07-REDES.md`.
 | **Una nota amarilla aprobada por una persona puede llevar la foto de un chico** | La exclusión de menores y víctimas depende del semáforo rojo; las notas amarillas por "niño", "adolescente" o "alumno de" que una persona publica desde el panel sí se prueban (sólo Policiales está excluida) | Mirar la foto al aprobar una nota así, o sumar la regla a `elegiblePorSeccion` |
 | La elegida no se pudo volver a bajar | Entrada con `"error":"no se pudo volver a bajar la elegida"`; esa nota no se vuelve a probar nunca | Borrar la entrada para que se reintente |
 | Una nota sin foto que después cuentan más medios | Se probó con los medios de ese momento y quedó `intentado`: no se vuelve a probar aunque aparezca una foto mejor | Borrar la entrada si importa |
-| Gemini y Groq sin cupo | "fotos: N notas nuevas probadas (0 con foto)"; entradas con la razón "Gemini falló…" o "Groq también falló…", que ya no se reintentan | Borrar esas entradas cuando vuelva el cupo |
+| Gemini y Groq sin cupo | "fotos: N notas nuevas probadas (0 con foto)"; entradas con la razón "Gemini falló…" o "Groq también falló…" | Desde el 29/09 se reintentan solas, hasta tres veces con una hora entre una y otra (`sePuedeReintentar`); si igual quedan, borrar esas entradas cuando vuelva el cupo |
 | La IA de fotos le gana cupo a la lectura con IA | Comparten `GEMINI_API_KEY_CLASIFICACION`: diez pedidos con imágenes por corrida se suman a los de las fichas | Si falta cupo, bajar `TOPE_POR_CORRIDA` |
 
 ## Lo que sigue abierto
 
 `CRITERIO-EDITORIAL.md` § 2 ("Las fotos") pide cosas que el código no hace:
 una foto propia, oficial, de stock o una ilustración "por defecto" (sin foto
-elegida la página va sin imagen), "recortar" la foto de otro medio (se guarda
+elegida va la placa de la sección desde el 29/09), "recortar" la foto de otro medio (se guarda
 entera y la página sólo la encuadra) y revisarla a ojo antes de guardarla (lo
 hace sólo la IA). Hay que alinear el criterio o el código: está en
 `PENDIENTES.md`, con lo de las fotos de chicos en notas amarillas aprobadas y

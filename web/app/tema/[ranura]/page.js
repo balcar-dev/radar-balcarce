@@ -2,8 +2,9 @@ import {
   obtenerDatos, ordenarPortada, porTema, nombreDeTema,
 } from '@/lib/datos';
 import {
-  PlacaSeccion, Etiqueta, FilaNota, Cierre, Invitacion, Hace,
+  Etiqueta, FilaNota, Cierre, Invitacion, Hace,
 } from '@/components/piezas';
+import { ImagenDestacada } from '@/components/imagen-destacada';
 import { notFound } from 'next/navigation';
 import { Migas } from '@/components/ficha';
 import { OG_COMUN } from '@/components/metadatos';
@@ -51,7 +52,7 @@ export default function PaginaTema({ params }) {
 
       {principal && (
         <article className="destacada" style={{ marginTop: 24 }}>
-          <a href={principal.ruta}><PlacaSeccion seccion={principal.seccion} /></a>
+          <a href={principal.ruta} tabIndex={-1} aria-hidden="true"><ImagenDestacada nota={principal} /></a>
           <div className="chapa-nota" style={{ marginTop: 16 }}>
             <Etiqueta seccion={principal.seccion} />
             <Hace nota={principal} />

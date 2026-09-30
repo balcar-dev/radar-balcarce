@@ -114,13 +114,73 @@ export function Etiqueta({ seccion }) {
   return <span className="tag" style={{ background: s.color }}>{nombreCorto(seccion)}</span>;
 }
 
-/** La placa que va donde otros ponen la foto del medio de origen. */
-export function PlacaSeccion({ seccion }) {
+/**
+ * La placa de la sección: lo que va donde iría la foto cuando no hay una que
+ * sirva (CLAUDE.md, "Las fotos"), con el dibujo de su sección. Desde el 29/09
+ * también en la página de la nota (Hernán: "si no tiene fotos hay que ponerle
+ * la placa de la sección"); antes ahí no iba nada. Nunca una imagen hecha con
+ * IA: el criterio no la permite ("Nunca una foto inventada por IA"). `chica`
+ * es la de la página de una nota, más baja que la de la portada de sección.
+ */
+export function PlacaSeccion({ seccion, chica = false }) {
   const s = datosSeccion(seccion);
   return (
-    <div className="placa-seccion" style={{ '--color-seccion': s.color }}>
+    <div className={chica ? 'placa-seccion chica' : 'placa-seccion'} style={{ '--color-seccion': s.color }} aria-hidden="true">
+      <Pictograma ranura={s.ranura} />
       <span>{nombreCorto(seccion)}</span>
     </div>
+  );
+}
+
+// Los rayos del sol de mayo, calculados una vez: 16, uno largo y uno corto.
+const RAYOS = Array.from({ length: 16 }, (_, i) => {
+  const a = (i * Math.PI) / 8;
+  const hasta = i % 2 ? 21 : 25;
+  const p = (r) => `${(32 + r * Math.cos(a)).toFixed(1)} ${(32 + r * Math.sin(a)).toFixed(1)}`;
+  return `M${p(15)} L${p(hasta)}`;
+}).join(' ');
+
+// Un dibujo por sección, de trazo, en un cuadro de 64 x 64.
+const DIBUJOS = {
+  // Un marcador sobre las sierras: la montaña con un sol sola es el dibujo de
+  // "imagen que no cargó", justo donde no hay foto.
+  balcarce: <><path d="M32 6 C23 6 17 13 17 21 C17 32 32 44 32 44 C32 44 47 32 47 21 C47 13 41 6 32 6 Z" /><circle cx="32" cy="21" r="5" /><path d="M4 58 L16 50 L26 55 L38 47 L60 58" /></>,
+  politica: <><path d="M8 22 L32 8 L56 22 Z" /><path d="M16 27 V46 M26 27 V46 M38 27 V46 M48 27 V46" /><path d="M10 50 H54 M6 56 H58" /></>,
+  policiales: <><path d="M20 46 V32 A12 12 0 0 1 44 32 V46 Z" /><path d="M14 52 H50" /><path d="M32 6 V12 M13 14 L17 18 M51 14 L47 18" /></>,
+  futbol: <><circle cx="32" cy="32" r="24" /><path d="M32 22 L41 29 L38 40 H26 L23 29 Z" /><path d="M32 22 V8 M41 29 L54 24 M38 40 L46 52 M26 40 L18 52 M23 29 L10 24" /></>,
+  deportes: <><path d="M20 10 H44 V22 C44 32 38 38 32 38 C26 38 20 32 20 22 Z" /><path d="M20 14 H12 C12 23 16 28 22 29 M44 14 H52 C52 23 48 28 42 29" /><path d="M32 38 V48 M24 48 H40 M20 55 H44" /></>,
+  automovilismo: (
+    <>
+      <path d="M14 58 V8" /><path d="M14 10 H52 V36 H14" />
+      <g fill="currentColor" stroke="none">
+        <rect x="14" y="10" width="9.5" height="8.7" /><rect x="33" y="10" width="9.5" height="8.7" />
+        <rect x="23.5" y="18.7" width="9.5" height="8.6" /><rect x="42.5" y="18.7" width="9.5" height="8.6" />
+        <rect x="14" y="27.3" width="9.5" height="8.7" /><rect x="33" y="27.3" width="9.5" height="8.7" />
+      </g>
+    </>
+  ),
+  agro: (
+    <>
+      <path d="M32 60 V14" />
+      <path d="M32 14 C29 10 29 6 32 2 C35 6 35 10 32 14" />
+      {[18, 28, 38, 48].map((y) => (
+        <path key={y} d={`M32 ${y + 6} C24 ${y + 4} 20 ${y - 2} 22 ${y - 6} C28 ${y - 4} 32 ${y} 32 ${y + 6} M32 ${y + 6} C40 ${y + 4} 44 ${y - 2} 42 ${y - 6} C36 ${y - 4} 32 ${y} 32 ${y + 6}`} />
+      ))}
+    </>
+  ),
+  economia: <><path d="M8 8 V56 H58" /><path d="M14 46 L26 32 L36 38 L54 16" /><path d="M45 16 H54 V25" /></>,
+  cultura: <><circle cx="20" cy="47" r="7" /><circle cx="46" cy="41" r="7" /><path d="M27 47 V15 L53 9 V41" /><path d="M27 23 L53 17" /></>,
+  tecnologia: <><rect x="16" y="16" width="32" height="32" rx="4" /><rect x="25" y="25" width="14" height="14" rx="2" /><path d="M24 8 V16 M32 8 V16 M40 8 V16 M24 48 V56 M32 48 V56 M40 48 V56 M8 24 H16 M8 32 H16 M8 40 H16 M48 24 H56 M48 32 H56 M48 40 H56" /></>,
+  argentina: <><circle cx="32" cy="32" r="11" /><path d={RAYOS} /></>,
+};
+
+/** El dibujo de una sección, para la placa. Sin dibujo propio, el de Argentina. */
+export function Pictograma({ ranura }) {
+  return (
+    <svg className="pictograma" viewBox="0 0 64 64" fill="none" stroke="currentColor" strokeWidth="3"
+      strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+      {DIBUJOS[ranura] ?? DIBUJOS.argentina}
+    </svg>
   );
 }
 

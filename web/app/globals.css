@@ -369,6 +369,23 @@ main { padding: 24px 0 10px; }
   color: var(--crema); position: relative; letter-spacing: -0.03em;
 }
 @media (min-width: 720px) { .placa-seccion span { font-size: 42px; } }
+/* El dibujo de la sección (29/09), a la derecha, sobre los círculos. */
+.placa-seccion .pictograma {
+  position: absolute; right: 9%; top: 50%; transform: translateY(-50%);
+  width: 34%; max-width: 150px; height: auto; color: rgba(255, 255, 255, 0.88);
+}
+/* La de la página de una nota: más baja, porque arriba ya está el título. */
+.placa-seccion.chica { height: 150px; margin: 20px 0 4px; padding: 22px; }
+@media (min-width: 720px) { .placa-seccion.chica { height: 210px; } }
+.placa-seccion.chica .pictograma { max-width: 110px; }
+.placa-seccion.chica span { font-size: 24px; }
+@media (min-width: 720px) { .placa-seccion.chica span { font-size: 32px; } }
+/* La foto de la nota destacada de una sección o de un tema, con su crédito. */
+.foto-destacada {
+  width: 100%; height: auto; aspect-ratio: 16 / 9; max-height: 300px;
+  object-fit: cover; border-radius: 10px; display: block;
+}
+.credito-foto { font-size: 12.5px; color: var(--suave); font-style: italic; margin-top: 6px; }
 
 .destacada h2 { font-size: 27px; line-height: 1.12; font-weight: 700; margin-top: 12px; }
 .destacada p { font-size: 15.5px; color: var(--texto); line-height: 1.55; margin: 12px 0 0; max-width: 660px; }

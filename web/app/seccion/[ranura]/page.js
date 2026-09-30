@@ -2,8 +2,9 @@ import {
   obtenerDatos, porRanura, nombreCorto, ordenarPortada, SECCIONES, proximosEventos,
 } from '@/lib/datos';
 import {
-  PlacaSeccion, Etiqueta, FilaNota, Cierre, Invitacion, Evento, Hace,
+  Etiqueta, FilaNota, Cierre, Invitacion, Evento, Hace,
 } from '@/components/piezas';
+import { ImagenDestacada } from '@/components/imagen-destacada';
 import { notFound } from 'next/navigation';
 import {
   POR_PAGINA, partirRanura, cuantasPaginas, direccionDePagina,
@@ -102,7 +103,8 @@ export default function PaginaSeccion({ params }) {
 
       {principal && (
       <article className="destacada">
-        <a href={principal.ruta}><PlacaSeccion seccion={principal.seccion} /></a>
+        {/* El título de abajo ya enlaza a la nota: éste no se anuncia dos veces. */}
+        <a href={principal.ruta} tabIndex={-1} aria-hidden="true"><ImagenDestacada nota={principal} /></a>
         <div className="chapa-nota" style={{ marginTop: 16 }}>
           <Etiqueta seccion={principal.seccion} />
           <Hace nota={principal} />

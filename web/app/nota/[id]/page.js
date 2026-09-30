@@ -2,7 +2,7 @@ import {
   obtenerDatos, obtenerArchivo, obtenerNota, todasLasNotas, datosSeccion, temasVivos, tieneTarjetaPropia,
 } from '@/lib/datos';
 import {
-  Etiqueta, FilaNota, Cierre, Invitacion, TemasDeLaNota, Hace,
+  Etiqueta, FilaNota, Cierre, Invitacion, TemasDeLaNota, Hace, PlacaSeccion,
 } from '@/components/piezas';
 import Compartir from '@/components/compartir';
 import FuentesDeLaNota from '@/components/verificacion';
@@ -96,12 +96,14 @@ export default function PaginaNota({ params }) {
         {n.copete && <p className="copete">{n.copete}</p>}
 
         {/* La foto (28/09, CRITERIO-EDITORIAL.md, "Las fotos"): recortada,
-            sin ningún nombre de medio adentro (eso va sólo acá, en el
-            epígrafe, nunca en la imagen) y guardada en el banco propio
+            sin ningún nombre de medio pegado encima (el crédito va sólo acá,
+            en el epígrafe, nunca en la imagen) y guardada en el banco propio
             (web/data/banco-fotos.json, web/scripts/fotos-notas.mjs). Sin
-            foto que sirviera, no va nada: no hay placa de sección grande
-            de respaldo, a propósito (repetía la etiqueta de arriba, en un
-            rectángulo enorme sin ningún dato nuevo). */}
+            foto que sirva, desde el 29/09 va la placa de la sección, más baja
+            y con su dibujo (Hernán: "si no tiene fotos hay que ponerle la
+            placa de la sección"); las notas propias (el dólar, los repasos)
+            no la llevan. */}
+        {!n.foto && !n.propia && <PlacaSeccion seccion={n.seccion} chica />}
         {n.foto && (
           <figure style={{ margin: '20px 0 4px' }}>
             <img
