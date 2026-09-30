@@ -13,7 +13,7 @@ import {
   conDecision, sinDecision, conRedes, conCorreccion, conLlave, sinRetirada, haceCuanto, palabras, conEleccionDeDia, conDecisionDeFeriado,
 } from './github.js';
 import {
-  ESTILOS, COLOR_DE_ESTILO, etiquetaCorta, etiquetaLarga, semanas, borradorDe, rolDe, marcarEn, eleccionDeDia, estadoDelDia,
+  ESTILOS, COLOR_DE_ESTILO, ROLES, etiquetaCorta, etiquetaLarga, semanas, borradorDe, rolDe, marcarEn, eleccionDeDia, estadoDelDia,
   haceTexto, marcaLegible, diasArmados, estadoDeFeriado,
 } from './fechas.js';
 import { crearLlaves, abrir } from './cifrado.js';
@@ -479,17 +479,19 @@ function vistaDia() {
     estilos.map((s) => '<button type="button" data-accion="filtro-estilo" data-estilo="' + esc(s) + '" aria-pressed="' + (E.filtroEstilo === s) + '">' + esc(ESTILOS[s] ?? s) + '</button>').join('') + '</div>';
   const tarjetas = visibles.map((c) => {
     const rol = rolDe(b, c.id);
+    const enlace = /^https?:/.test(c.enlace ?? '') ? c.enlace : (/^https?:/.test(c.fuente ?? '') ? c.fuente : null);
     const boton = (r, texto) => '<button type="button" data-accion="marcar" data-id="' + esc(c.id) + '" data-rol="' + r + '" aria-pressed="' + (rol === r) + '">' + texto + '</button>';
     const marcas = [...(c.marcas ?? []).map((m) => '<span class="motivo">' + esc(marcaLegible(m)) + '</span>'), c.revisaUnaPersona ? '<span class="motivo">la revisa una persona</span>' : ''].join('');
     const datos = c.datos?.length ? '<details><summary>Datos verificados (' + c.datos.length + ')</summary><ul class="datos">' + c.datos.map((x) => '<li>' + esc(x.texto) + (x.fuente && /^https?:/.test(x.fuente) ? ' <a href="' + esc(x.fuente) + '" target="_blank" rel="noopener">fuente</a>' : '') + '</li>').join('') + '</ul></details>' : '';
     return '<div class="cand ' + (rol ?? '') + '">' +
-      '<div>' + chipEstilo(c.estilo) + '<span class="meta">' + [c.anio, haceTexto(c.hace), c.puntaje + ' pts'].filter(Boolean).map(esc).join(' · ') + '</span></div>' +
+      '<div>' + chipEstilo(c.estilo) + '<span class="meta">' + [c.anio, haceTexto(c.hace), c.importancia ? c.importancia + ' idiomas' : '', c.puntaje + ' pts'].filter(Boolean).map(esc).join(' · ') + '</span></div>' +
       '<div class="texto">' + esc(c.texto) + '</div>' + (marcas ? '<div class="marcas">' + marcas + '</div>' : '') + datos +
-      (c.fuente ? '<div class="meta">' + (/^https?:/.test(c.fuente) ? '<a href="' + esc(c.fuente) + '" target="_blank" rel="noopener">Wikipedia</a>' : esc(c.fuente)) + '</div>' : '') +
-      '<div class="roles">' + boton('principal', '★ Principal') + boton('extra', '+ Suma') + boton('no', '✕ No') + '</div></div>';
+      (c.fuente ? '<div class="meta">' + esc(c.fuente) + '</div>' : '') +
+      (enlace ? '<a class="ver-nota" href="' + esc(enlace) + '" target="_blank" rel="noopener">Ver la nota en Wikipedia ↗</a>' : '') +
+      '<div class="roles">' + ROLES.map(([r, texto]) => boton(r, texto)).join('') + '</div></div>';
   }).join('');
   app.innerHTML = '<button type="button" class="boton" data-accion="volver-fechas">← Los días</button><h1>' + esc(etiquetaLarga(d)) + '</h1>' +
-    '<p class="ayuda">Elegí <strong>una principal</strong> y, si querés, algunas que <strong>suman</strong>. Con "No" descartás. Lo que elijas queda guardado para afinar el criterio: nada sale solo.</p>' +
+    '<p class="ayuda">Elegí <strong>una principal</strong>; las que <strong>sí</strong> van; las <strong>opcionales</strong> pueden ir si hace falta; con <strong>no</strong> descartás. Tocá "Ver la nota" para leerla. Lo que elijas queda guardado para afinar el criterio: nada sale solo.</p>' +
     filtros + (tarjetas || '<p class="vacio">No hay candidatas de ese estilo.</p>') +
     '<div class="barra-guardar"><button type="button" class="boton principal ancho" data-accion="guardar-dia">Guardar el día</button></div>';
 }

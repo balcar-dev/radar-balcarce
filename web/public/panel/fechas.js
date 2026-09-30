@@ -50,19 +50,28 @@ export function semanas(dias = []) {
   return grupos;
 }
 
-/** El borrador de un día, a partir de lo que ya se guardó (o vacío). */
+/**
+ * El borrador de un día, a partir de lo que ya se guardó (o vacío). Los roles son
+ * cuatro (Hernán, 30/09): una principal, "sí" (va), "opcional" (puede ir si hace falta)
+ * y "no". Lo guardado antes con "extras" cuenta como "sí".
+ */
 export function borradorDe(eleccion) {
   return {
     principal: eleccion?.principal ?? null,
-    extras: [...(eleccion?.extras ?? [])],
+    si: [...(eleccion?.si ?? eleccion?.extras ?? [])],
+    opcionales: [...(eleccion?.opcionales ?? [])],
     descartadas: [...(eleccion?.descartadas ?? [])],
   };
 }
 
-/** Qué rol tiene una candidata en el borrador: 'principal', 'extra', 'no' o null. */
+/** Los roles, en el orden en que se muestran. */
+export const ROLES = [['principal', '★ Principal'], ['si', 'Sí'], ['opcional', 'Opcional'], ['no', 'No']];
+
+/** Qué rol tiene una candidata en el borrador: 'principal', 'si', 'opcional', 'no' o null. */
 export function rolDe(b, id) {
   if (b.principal === id) return 'principal';
-  if (b.extras.includes(id)) return 'extra';
+  if (b.si.includes(id)) return 'si';
+  if (b.opcionales.includes(id)) return 'opcional';
   if (b.descartadas.includes(id)) return 'no';
   return null;
 }
@@ -72,40 +81,46 @@ export function marcarEn(b, id, rol) {
   const actual = rolDe(b, id);
   const nuevo = {
     principal: b.principal === id ? null : b.principal,
-    extras: b.extras.filter((x) => x !== id),
+    si: b.si.filter((x) => x !== id),
+    opcionales: b.opcionales.filter((x) => x !== id),
     descartadas: b.descartadas.filter((x) => x !== id),
   };
   if (actual === rol) return nuevo;
   if (rol === 'principal') nuevo.principal = id;
-  else if (rol === 'extra') nuevo.extras.push(id);
+  else if (rol === 'si') nuevo.si.push(id);
+  else if (rol === 'opcional') nuevo.opcionales.push(id);
   else if (rol === 'no') nuevo.descartadas.push(id);
   return nuevo;
 }
 
 /**
  * Lo que se guarda de un día: qué se eligió, qué se descartó y, de cada
- * elegida, cómo era (estilo, puntaje, año, origen, marcas). Así, aunque las
- * candidatas se vuelvan a generar, se puede mirar después qué patrón siguen las
- * elecciones y afinar el puntaje.
+ * candidata marcada, cómo era (rol, estilo, puntaje, año, idiomas, origen) y en qué
+ * lugar de la lista estaba. Así, aunque las candidatas se vuelvan a generar, se puede
+ * mirar después qué patrón siguen las elecciones y afinar el puntaje.
  */
 export function eleccionDeDia(b, candidatas = [], por, cuando = new Date().toISOString()) {
   const detalle = {};
-  for (const c of candidatas) {
-    if (rolDe(b, c.id) && rolDe(b, c.id) !== 'no') {
-      detalle[c.id] = { estilo: c.estilo, puntaje: c.puntaje, anio: c.anio, origen: c.origen, marcas: c.marcas, titulo: c.titulo };
+  const lugar = {};
+  candidatas.forEach((c, i) => {
+    const rol = rolDe(b, c.id);
+    if (!rol) return;
+    lugar[c.id] = i + 1;
+    if (rol !== 'no') {
+      detalle[c.id] = { rol, estilo: c.estilo, puntaje: c.puntaje, anio: c.anio, origen: c.origen, marcas: c.marcas, ...(c.importancia !== undefined ? { importancia: c.importancia } : {}), titulo: c.titulo };
     }
-  }
-  const posiciones = {};
-  candidatas.forEach((c, i) => { if (rolDe(b, c.id)) posiciones[c.id] = i + 1; });
-  return { principal: b.principal, extras: b.extras, descartadas: b.descartadas, detalle, lugar: posiciones, por, cuando };
+  });
+  return { principal: b.principal, si: b.si, opcionales: b.opcionales, descartadas: b.descartadas, detalle, lugar, por, cuando };
 }
 
 /** Cómo va un día, para la lista. */
 export function estadoDelDia(eleccion) {
   if (!eleccion) return { texto: 'Sin armar', clase: 'espera' };
   if (!eleccion.principal) return { texto: 'Falta la principal', clase: 'espera' };
-  const extras = eleccion.extras?.length ?? 0;
-  return { texto: `✓ Armado${extras ? ` (+${extras})` : ''}`, clase: 'ok' };
+  const si = (eleccion.si ?? eleccion.extras ?? []).length;
+  const opc = (eleccion.opcionales ?? []).length;
+  const resto = [si ? si + ' sí' : '', opc ? opc + ' opcional' + (opc > 1 ? 'es' : '') : ''].filter(Boolean).join(', ');
+  return { texto: '✓ Armado' + (resto ? ' (+' + resto + ')' : ''), clase: 'ok' };
 }
 
 /** "hace 87 años", "hace 1 año". */

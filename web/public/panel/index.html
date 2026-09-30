@@ -118,10 +118,12 @@
   .filtros button[aria-pressed="true"] { background: var(--tinta); color: #fff; border-color: var(--tinta); }
   .cand { background: var(--papel); border: 1px solid var(--linea); border-radius: var(--radio); padding: 12px 14px; margin: 0 0 10px; }
   .cand.principal { border-color: var(--verde); box-shadow: inset 4px 0 0 var(--verde); }
-  .cand.extra { border-color: var(--ambar); box-shadow: inset 4px 0 0 var(--ambar); }
+  .cand.si { border-color: var(--verde); }
+  .cand.opcional { border-color: var(--ambar); box-shadow: inset 4px 0 0 var(--ambar); }
   .cand.no { opacity: .55; }
   .cand .texto { margin: 6px 0; line-height: 1.4; }
-  .cand .roles { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 8px; margin-top: 8px; }
+  .cand .roles { display: grid; grid-template-columns: 1.5fr .8fr 1.2fr .8fr; gap: 6px; margin-top: 8px; }
+  .cand .ver-nota { display: inline-block; margin: 4px 0; font-weight: 600; }
   .cand .roles button { min-height: 44px; border-radius: 10px; border: 1px solid var(--linea); background: transparent; font-weight: 600; cursor: pointer; }
   .cand .roles button[aria-pressed="true"] { background: var(--tinta); color: #fff; border-color: var(--tinta); }
   .marcas { display: flex; flex-wrap: wrap; gap: 4px; margin: 4px 0; }

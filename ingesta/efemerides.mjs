@@ -22,6 +22,8 @@ export const MAXIMO_POR_ESTILO = 6;
 export const MAXIMO_DE_DIAS_ESPECIALES = 3;
 /** Los datos curiosos del mundo, que sobran, también con tope. */
 export const MAXIMO_DE_CURIOSOS = 5;
+/** Lo del mundo que no toca a Argentina, como mucho esto por día: lo de acá va primero. */
+export const MAXIMO_DEL_MUNDO = 8;
 
 const AQUI = import.meta.dirname;
 export const RUTA_CURADAS = path.join(AQUI, 'efemerides-curadas.json');
@@ -49,7 +51,9 @@ export function parsearPortal(wikitext = '') {
     const m = linea.match(/^\*\s*'''\s*(\d{1,4})\s*'''\s*(?:[-–—]|&ndash;|&mdash;)?\s*(.*)$/);
     if (m) {
       const texto = limpiarWiki(m[2]);
-      if (texto) salida.push({ anio: Number(m[1]), texto });
+      // La página del tema: el primer enlace de la línea (sirve para el enlace a la nota y para medir qué tan conocido es).
+      const pagina = m[2].match(/\[\[([^\]|#]+)/)?.[1]?.trim() ?? null;
+      if (texto) salida.push({ anio: Number(m[1]), texto, ...(pagina ? { pagina } : {}) });
     }
   }
   return salida;
@@ -83,10 +87,40 @@ export function especialesDelDia(lista = []) {
   return salida;
 }
 
+// ------------------------------------------ qué es importante (30/09)
+
+/** Lo que toca a Argentina, la zona o Balcarce: siempre es de interés. */
+export const RE_ARGENTINA = /\b(Argentina|argentin\w*|Buenos Aires|Rosario|Mar del Plata|Tandil|Necochea|Balcarce|Lober[ií]a|Mendoza|Tucum[aá]n|Santa Fe|Patagonia|Malvinas|Fangio|Colapinto|Messi|Maradona|R[ií]o de la Plata|Sudam[eé]rica)\b/i;
+/** Lo de España sólo entra si es de importancia mundial o toca a Argentina (había muchas). */
+export const RE_ESPANA = /\b(Espa[ñn]a|espa[ñn]ol\w*|Madrid|Barcelona|Sevilla|Valencia|Catalu[ñn]a|Andaluc[ií]a|Galicia|Bilbao|Zaragoza|Castilla|Arag[oó]n|Granada|Mallorca|Pa[ií]s Vasco|Real Madrid|C[oó]rdoba \(pen[ií]nsula|pen[ií]nsula ib[eé]rica|emir|Al-[ÁA]ndalus|Reconquista|Reyes Cat[oó]licos|Inquisici[oó]n)\b/i;
+/** Desde cuántas ediciones de Wikipedia (idiomas) algo es importante para todo el mundo. */
+export const IDIOMAS_MUNDIAL = 150;
+export const IDIOMAS_MUNDIAL_SI_ES_DE_ESPANA = 220;
+export const IDIOMAS_FIGURA_MUNDIAL = 150;
+/** Con menos puntaje que esto, una candidata no entra a la lista: mejor pocas y buenas que veinte con relleno. */
+export const PUNTAJE_MINIMO = 45;
+/** Un argentino del feed de nacimientos, desde cuántos idiomas se lo considera conocido (Manzi tiene 10). */
+export const IDIOMAS_ARGENTINO_CONOCIDO = 10;
+/** Las páginas que no cuentan para medir qué tan importante es un hecho: países, ciudades, años, religiones… */
+export const RE_PAGINA_GENERICA = /^(?:un |una |el |la )?(pa[ií]s|ciudad|estado|provincia|municipio|capital|regi[oó]n|localidad|comuna|condado|r[ií]o|isla|continente|departamento|distrito|territorio|reino|imperio|archipi[eé]lago|partido pol[ií]tico|a[ñn]o|siglo|d[eé]cada|mes|d[ií]a|religi[oó]n|iglesia|idioma|lengua|oc[eé]ano|mar\b|guerra mundial|cristianismo|calendario|deporte|f[uú]tbol|m[uú]sica|cine|literatura|filosof[ií]a|pol[ií]tica|econom[ií]a|historia|ciencia|tecnolog[ií]a|arte|concepto|fen[oó]meno|lenguaje|enfermedad|elemento qu[ií]mico|planeta|estrella|especie|g[eé]nero|organizaci[oó]n internacional|conjunto de|t[eé]rmino)/i;
+
+/**
+ * ¿Un hecho o una persona del mundo (feed de Wikipedia) es importante para nosotros?
+ * "importancia" = en cuántos idiomas tiene página lo más específico del hecho.
+ */
+export function esImportante({ texto = '', importancia = 0 }) {
+  if (RE_ARGENTINA.test(texto)) return true;
+  if (RE_ESPANA.test(texto)) return importancia >= IDIOMAS_MUNDIAL_SI_ES_DE_ESPANA;
+  return importancia >= IDIOMAS_MUNDIAL;
+}
+
+/** Los días especiales del mundo que valen: los de las Naciones Unidas y sus organismos. */
+export const RE_DIA_MUNDIAL_OFICIAL = /\b(Naciones Unidas|ONU|UNESCO|OMS|Organizaci[oó]n Mundial|UNICEF|Asamblea General)\b/i;
+
 // ------------------------------------------------------------- las marcas
 
-const RE_VIOLENCIA = /\b(asesin\w*|mata|matan|matar|mat[oó]|mataron|matanza|fusil\w*|golpe de estado|guerra|batalla|atentado|bombard\w*|masacre|secuestr\w*|desaparecid\w*|tortur\w*|genocid\w*|terroris\w*|ejecut\w*|linch\w*|explosi[oó]n|incendio|naufrag\w*|accidente|tragedia|v[ií]ctimas?|represi[oó]n|dictadura|crimen|homicid\w*|suicid\w*|c[aá]rcel|condenad\w*|invasi[oó]n|combate|sublevaci\w*|mot[ií]n|derrocad\w*|epidemia|peste)\b/i;
-const RE_POLITICA = /\b(presidente|presidencia|gobernador|ministro|elecci\w*|golpe|peronis\w*|per[oó]n|evita|kirchner\w*|radical|senador|diputad\w*|congreso|gobierno|asume|decreto|constituci[oó]n|sindicat\w*|partido)\b/i;
+const RE_VIOLENCIA = /\b(asesin\w*|mata|matan|matar|mat[oó]|mataron|matanza|fusil\w*|golpe de estado|guerra|batalla|atentado|bombard\w*|masacre|secuestr\w*|desaparecid\w*|tortur\w*|genocid\w*|terroris\w*|ejecut\w*|linch\w*|explosi[oó]n|incendio|naufrag\w*|accidente|tragedia|v[ií]ctimas?|represi[oó]n|dictadura|crimen|homicid\w*|suicid\w*|c[aá]rcel|condenad\w*|invasi[oó]n|combate|sublevaci\w*|mot[ií]n|derrocad\w*|epidemia|peste|inundaci\w*|ahogad\w*|terremoto|huracan\w*|hurac[aá]n|tsunami|erupci[oó]n|hambruna|arrasad\w*|tormenta de|damnificad\w*|ca[ií]da del avi[oó]n)\b/i;
+const RE_POLITICA = /\b(presidente|presidencia|gobernador|ministro|elecci\w*|golpe|peronis\w*|per[oó]n|evita|kirchner\w*|radical|senador|diputad\w*|congreso|gobierno|asume|decreto|constituci[oó]n|sindicat\w*|partido|pol[ií]tic[oa]s?)\b/i;
 const RE_RELIGION = /\b(papa [A-Z]\w+|el papa|iglesia|obispo|enc[ií]clica|cardenal|cat[oó]lic\w*|conc[ií]lio|bula)\b/i;
 const RE_MENORES = /\b(ni[ñn]os?|ni[ñn]as?|menores?|adolescentes?|chicos?|chicas?)\b/i;
 
@@ -135,7 +169,7 @@ const PISTA_DE_CURIOSO = /\b(primer\w*|invent\w*|patente|lanz\w*|estren\w*|funda
  * bajan. Los números son de partida: se afinan mirando qué elige la gente
  * (docs/13-EFEMERIDES.md).
  */
-export function puntuar({ origen, estilo, texto, anio, marcas = [], nacional = true }) {
+export function puntuar({ origen, estilo, texto, anio, marcas = [], nacional = true, importancia }) {
   let p = 40;
   p += { curada: 50, portal: 15, 'especial-ar': 12, feed: 0, especial: 0 }[origen] ?? 0;
   if (origen === 'feed' && /\b(Argentina|argentin\w*|Buenos Aires|Rosario|C[oó]rdoba|Mendoza|Am[eé]rica Latina)\b/i.test(texto)) p += 12;
@@ -147,6 +181,7 @@ export function puntuar({ origen, estilo, texto, anio, marcas = [], nacional = t
     else if (hace > 0 && hace % 25 === 0) p += 7;
     else if (hace > 0 && hace % 10 === 0) p += 3;
   }
+  if (RE_ARGENTINA.test(texto)) p += 12;
   if (/\b(Balcarce|Fangio)\b/i.test(texto)) p += 25;
   else if (/\b(Mar del Plata|Tandil|Necochea|Lober[ií]a)\b/i.test(texto)) p += 8;
   if (marcas.includes('política')) p -= 25;
@@ -155,6 +190,9 @@ export function puntuar({ origen, estilo, texto, anio, marcas = [], nacional = t
   if (texto.length < 45) p -= 8;
   if (texto.length > 260) p -= 5;
   if (origen === 'especial' && !nacional) p -= 10;
+  // Qué tan conocido es: cada 5 idiomas de Wikipedia suman 1 (hasta 22); un argentino casi desconocido resta.
+  if (importancia > 0) p += Math.min(22, Math.round(importancia / 5));
+  if (origen === 'portal' && importancia !== undefined && importancia < 8) p -= 8;
   return Math.round(p);
 }
 
@@ -185,11 +223,13 @@ export function candidatasDelDia(dia, fuentes = {}) {
     if (!texto) return;
     const estilo = c.estilo ?? estiloDe(texto);
     const marcas = c.marcas ?? marcasDe(texto, c.anio);
-    const puntaje = puntuar({ origen: c.origen, estilo, texto, anio: c.anio, marcas, nacional: c.nacional });
+    const puntaje = puntuar({ origen: c.origen, estilo, texto, anio: c.anio, marcas, nacional: c.nacional, importancia: c.importancia });
     todas.push({
       id: idDe(`${dia}|${c.origen}|${c.anio ?? ''}|${texto.slice(0, 60)}`),
       origen: c.origen, estilo, anio: c.anio ?? null, hace: c.anio ? ANIO_DE_REFERENCIA - c.anio : null,
       titulo: c.titulo ?? corto(texto), texto, marcas, puntaje, fuente: c.fuente ?? null,
+      // Para ver la nota: la página del tema en Wikipedia, o la del día.
+      enlace: c.enlace ?? null, ...(c.importancia !== undefined ? { importancia: c.importancia } : {}),
       ...(c.datos ? { datos: c.datos } : {}),
       ...(c.revisaUnaPersona ? { revisaUnaPersona: true } : {}),
     });
@@ -197,9 +237,13 @@ export function candidatasDelDia(dia, fuentes = {}) {
   for (const c of fuentes.curadas ?? []) sumar({ ...c, origen: 'curada', marcas: [] });
   for (const c of fuentes.portal ?? []) sumar({ ...c, origen: 'portal', fuente: 'Portal Argentina de Wikipedia' });
   for (const c of fuentes.especiales ?? []) {
+    // Los del mundo, sólo los de las Naciones Unidas: "Día Mundial de los Calvos" no.
+    if (!c.nacional && !RE_DIA_MUNDIAL_OFICIAL.test(c.texto)) continue;
     sumar({ ...c, origen: c.nacional ? 'especial-ar' : 'especial', estilo: 'dia-especial', fuente: 'Wikipedia: días especiales' });
   }
   for (const c of fuentes.feed ?? []) {
+    // Del mundo, sólo lo importante para todos o para Argentina; lo de España, sólo si es enorme.
+    if (!esImportante(c)) continue;
     const tieneCuriosidad = PISTA_DE_CURIOSO.test(c.texto);
     sumar({ ...c, origen: 'feed', estilo: tieneCuriosidad ? 'curioso' : undefined, fuente: 'Wikipedia: un día como hoy' });
   }
@@ -216,13 +260,17 @@ export function lasMejores(ordenadas, cuantas = CANDIDATAS_POR_DIA, maximoPorEst
   const cuenta = {};
   for (const c of ordenadas) {
     if (elegidas.length >= cuantas) break;
+    const delMundo = c.origen === 'feed' && !RE_ARGENTINA.test(c.texto);
+    if (delMundo && (cuenta.mundo ?? 0) >= MAXIMO_DEL_MUNDO) continue;
     if ((cuenta[c.estilo] ?? 0) >= ({ 'dia-especial': MAXIMO_DE_DIAS_ESPECIALES, curioso: MAXIMO_DE_CURIOSOS }[c.estilo] ?? maximoPorEstilo)) continue;
     cuenta[c.estilo] = (cuenta[c.estilo] ?? 0) + 1;
+    if (delMundo) cuenta.mundo = (cuenta.mundo ?? 0) + 1;
     elegidas.push(c);
   }
   for (const c of ordenadas) {
     if (elegidas.length >= cuantas) break;
-    if (!elegidas.includes(c)) elegidas.push(c);
+    const delMundo = c.origen === 'feed' && !RE_ARGENTINA.test(c.texto);
+    if (!elegidas.includes(c) && !(delMundo && (cuenta.mundo ?? 0) >= MAXIMO_DEL_MUNDO)) elegidas.push(c);
   }
   return elegidas.sort((a, b) => b.puntaje - a.puntaje);
 }
@@ -279,4 +327,18 @@ export function piezasDeFeriados(feriados = [], curadas = leerCuradas(), { desde
     });
   }
   return salida;
+}
+
+/**
+ * ¿Dos candidatas cuentan lo mismo? Mismo año y al menos dos nombres propios largos en
+ * común ("Nace Carlos Saavedra Lamas, jurista…" del Portal y del feed). Se queda la de
+ * más puntaje: por eso hay que llamarla con las ordenadas de mayor a menor.
+ */
+export function mismoHecho(a, b) {
+  if (!a.anio || a.anio !== b.anio) return false;
+  const propios = (t) => new Set((t.match(/\p{Lu}\p{L}{3,}/gu) ?? []).filter((w) => !['Nace', 'Fallece', 'Muere', 'Argentina', 'Buenos'].includes(w)));
+  const A = propios(a.texto);
+  let comunes = 0;
+  for (const w of propios(b.texto)) if (A.has(w)) comunes += 1;
+  return comunes >= 2 || (comunes >= 1 && a.texto.length < 90 && b.texto.length < 130);
 }

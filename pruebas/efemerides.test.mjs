@@ -6,7 +6,8 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import {
   limpiarWiki, parsearPortal, especialesDelDia, marcasDe, estiloDe, puntuar, candidatasDelDia, lasMejores, curadasDelDia,
-  leerCuradas, piezasDeFeriados, CANDIDATAS_POR_DIA, MAXIMO_POR_ESTILO, MAXIMO_DE_DIAS_ESPECIALES,
+  leerCuradas, piezasDeFeriados, CANDIDATAS_POR_DIA, MAXIMO_POR_ESTILO, MAXIMO_DE_DIAS_ESPECIALES, MAXIMO_DEL_MUNDO,
+  esImportante, mismoHecho, RE_PAGINA_GENERICA, IDIOMAS_MUNDIAL, IDIOMAS_MUNDIAL_SI_ES_DE_ESPANA,
 } from '../ingesta/efemerides.mjs';
 import { ARCHIVOS, formatear, conEleccionDeDia, conDecisionDeFeriado } from '../web/public/panel/github.js';
 import {
@@ -27,6 +28,8 @@ test('el Portal Argentina se lee: año y texto de cada efeméride', () => {
   const items = parsearPortal(PORTAL_7_10);
   assert.deepEqual(items.map((i) => i.anio), [1734, 1793, 1901, 1939]);
   assert.equal(items[1].texto, 'Es fundada la ciudad de Rosario.');
+  assert.equal(items[1].pagina, 'Rosario (Argentina)', 'la página del tema, para el enlace a la nota y para medir qué tan conocido es');
+  assert.equal(items[0].pagina, undefined);
 });
 
 test('los días especiales: sólo los de Argentina y los del mundo, sin santos ni lo de una provincia', () => {
@@ -39,11 +42,15 @@ test('los días especiales: sólo los de Argentina y los del mundo, sin santos n
   ];
   const r = especialesDelDia(lista);
   assert.deepEqual(r.map((x) => x.texto), ['Día del Farmacéutico Argentino.', 'Día Mundial del Algodón.', 'Día Nacional del Asado. En 2013 se decidió convertirlo en una efeméride.']);
+  // Y a la lista de candidatas, de los del mundo, sólo entran los de las Naciones Unidas (30/09: "Día Mundial de los Calvos" no).
+  const cand = candidatasDelDia('10-07', { especiales: [{ texto: 'Día Mundial de los Calvos.', nacional: false }, { texto: 'Día Mundial del Algodón, proclamado por la ONU.', nacional: false }, { texto: 'Día del Farmacéutico Argentino.', nacional: true }] });
+  assert.deepEqual(cand.map((c) => c.texto).sort(), ['Día Mundial del Algodón, proclamado por la ONU.', 'Día del Farmacéutico Argentino.']);
   assert.deepEqual(r.map((x) => x.nacional), [true, false, true]);
 });
 
 test('se marca lo delicado: violencia, política, menores, religión y "puede estar vivo"', () => {
   assert.deepEqual(marcasDe('Un atentado deja tres muertos en la ciudad'), ['violencia']);
+  assert.ok(marcasDe('Una marea de tormenta barre la costa: la inundación deja 8000 ahogados').includes('violencia'), 'las tragedias naturales también');
   assert.ok(marcasDe('Manuel Quintana asume la presidencia de Argentina.').includes('política'));
   assert.ok(marcasDe('Nace un niño prodigio en Córdoba').includes('menores'));
   assert.ok(marcasDe('El papa Julio II envía sus ejércitos').includes('religión'));
@@ -75,14 +82,39 @@ test('las candidatas del 7/10: sin violencia, ordenadas, con el Nobel y lo de la
   const cand = candidatasDelDia('10-07', {
     portal: parsearPortal(PORTAL_7_10),
     feed: [
-      { anio: 1806, texto: 'En Londres, el inventor Ralph Wedgewood patenta el papel carbón.' },
-      { anio: 1951, texto: 'El Ejército de Liberación Malayo contraataca y mata al comisionado británico.' },
+      { anio: 1806, texto: 'En Londres, el inventor Ralph Wedgewood patenta el papel carbón.', importancia: 160 },
+      { anio: 1951, texto: 'El Ejército de Liberación Malayo contraataca y mata al comisionado británico.', importancia: 160 },
+      { anio: 1800, texto: 'En Sevilla se inaugura una plaza de toros.', importancia: 60 },
     ],
   });
   assert.ok(!cand.some((c) => /mata al comisionado/.test(c.texto)), 'lo violento no entra');
   assert.ok(cand.some((c) => /papel carbón/.test(c.texto) && c.estilo === 'curioso'));
+  assert.ok(!cand.some((c) => /Sevilla/.test(c.texto)), 'lo de España de poca fama no entra (30/09)');
   for (let i = 1; i < cand.length; i += 1) assert.ok(cand[i - 1].puntaje >= cand[i].puntaje, 'de más a menos puntaje');
   assert.ok(cand.every((c) => c.id && c.titulo && Array.isArray(c.marcas)));
+});
+
+test('lo importante: Argentina y la zona siempre; el mundo, sólo si lo conoce todo el mundo; España, sólo si es enorme (30/09)', () => {
+  // "Hay muchas de España": una de Sevilla con poca fama no entra, y una de Buenos Aires con poca fama, sí.
+  assert.equal(esImportante({ texto: 'En Sevilla se inaugura una plaza de toros', importancia: 60 }), false);
+  assert.equal(esImportante({ texto: 'En Sevilla se inaugura una plaza de toros', importancia: IDIOMAS_MUNDIAL }), false, 'con la fama del mundo no alcanza para lo de España');
+  assert.equal(esImportante({ texto: 'En Sevilla parte la expedición de Magallanes', importancia: IDIOMAS_MUNDIAL_SI_ES_DE_ESPANA }), true);
+  assert.equal(esImportante({ texto: 'En Buenos Aires se funda un club de barrio', importancia: 2 }), true);
+  assert.equal(esImportante({ texto: 'En Necochea se inaugura un paseo', importancia: 0 }), true);
+  assert.equal(esImportante({ texto: 'Un equipo de Bulgaria gana una copa local', importancia: 30 }), false);
+  assert.equal(esImportante({ texto: 'La NASA crea el proyecto Mercurio', importancia: IDIOMAS_MUNDIAL }), true);
+  // Y las páginas que no sirven para medir (países, años, ciudades, deportes) se reconocen por cómo empiezan.
+  for (const d of ['país de Europa', 'ciudad de Argentina', 'año del calendario gregoriano', 'deporte de equipo', 'siglo XX']) assert.match(d, RE_PAGINA_GENERICA, d);
+  for (const d of ['físico danés', 'actor argentino', 'álbum de 1986', 'compañía aérea neerlandesa']) assert.doesNotMatch(d, RE_PAGINA_GENERICA, d);
+});
+
+test('el Portal y el feed cuentan a veces lo mismo: no se repite', () => {
+  const a = { anio: 1878, texto: 'Nace Carlos Saavedra Lamas, jurista ganador del Premio Nobel de la Paz.' };
+  const b = { anio: 1878, texto: 'Nace Carlos Saavedra Lamas, político y jurista argentino, premio nobel de la Paz.' };
+  assert.equal(mismoHecho(b, a), true);
+  assert.equal(mismoHecho({ anio: 1907, texto: 'Nace Homero Manzi, escritor y guionista de cine.' }, { anio: 1907, texto: 'Nace Carlos Gardel en Toulouse.' }), false);
+  assert.equal(mismoHecho({ anio: 1900, texto: 'Nace Carlos Saavedra Lamas' }, a), false, 'otro año, otro hecho');
+  assert.equal(mismoHecho({ anio: 1881, texto: 'Se funda la ciudad de Necochea.' }, { anio: 1881, texto: 'En el sureste de Buenos Aires, sobre la costa, se funda la aldea de Necochea.' }), true, 'la misma fundación, contada dos veces');
 });
 
 test('las 20 mejores: de un estilo no entran más que el tope, y siempre hay 20 si alcanzan', () => {
@@ -95,6 +127,11 @@ test('las 20 mejores: de un estilo no entran más que el tope, y siempre hay 20 
   const primeras = lasMejores(muchas.sort((a, b) => b.puntaje - a.puntaje), 10);
   assert.ok(primeras.filter((c) => c.estilo === 'nacimiento').length <= MAXIMO_POR_ESTILO);
   assert.ok(primeras.filter((c) => c.estilo === 'dia-especial').length <= MAXIMO_DE_DIAS_ESPECIALES);
+  // Lo del mundo que no toca a Argentina tiene su tope: lo de acá va primero.
+  const mundo = Array.from({ length: 15 }, (_, i) => ({ id: `m${i}`, estilo: i % 2 ? 'historia' : 'cultura', origen: 'feed', texto: 'Un hecho del mundo', puntaje: 90 - i }));
+  const conMundo = lasMejores([...mundo, { id: 'a1', estilo: 'fundacion', origen: 'portal', texto: 'Se funda Necochea', puntaje: 40 }].sort((a, b) => b.puntaje - a.puntaje));
+  assert.ok(conMundo.filter((c) => c.origen === 'feed').length <= MAXIMO_DEL_MUNDO);
+  assert.ok(conMundo.some((c) => c.id === 'a1'), 'lo de acá entra aunque tenga menos puntaje');
 });
 
 test('lo curado: las fechas de Balcarce y las patrias entran con sus datos y su fuente', () => {
@@ -146,35 +183,47 @@ test('el panel: los días se agrupan por semana, de lunes a domingo', () => {
   assert.equal(haceTexto(1), 'hace 1 año');
 });
 
-test('el panel: cada candidata tiene un solo rol, hay una sola principal y tocar de nuevo lo saca', () => {
+test('el panel: cuatro roles (principal, sí, opcional, no): uno solo por candidata, una sola principal, y tocar de nuevo lo saca', () => {
   let b = borradorDe(null);
   b = marcarEn(b, 'a', 'principal');
   b = marcarEn(b, 'b', 'principal');
   assert.equal(b.principal, 'b', 'la principal es una sola');
   assert.equal(rolDe(b, 'a'), null);
-  b = marcarEn(b, 'a', 'extra');
-  b = marcarEn(b, 'c', 'no');
-  assert.deepEqual([rolDe(b, 'a'), rolDe(b, 'b'), rolDe(b, 'c')], ['extra', 'principal', 'no']);
+  b = marcarEn(b, 'a', 'si');
+  b = marcarEn(b, 'c', 'opcional');
+  b = marcarEn(b, 'd', 'no');
+  assert.deepEqual(['a', 'b', 'c', 'd'].map((id) => rolDe(b, id)), ['si', 'principal', 'opcional', 'no']);
   b = marcarEn(b, 'a', 'principal');
-  assert.deepEqual([b.principal, b.extras], ['a', []], 'pasar a principal la saca de las que suman');
+  assert.deepEqual([b.principal, b.si], ['a', []], 'pasar a principal la saca de las que sí');
+  b = marcarEn(b, 'c', 'si');
+  assert.deepEqual([b.si, b.opcionales], [['c'], []], 'de opcional a sí, sin quedar en las dos');
   b = marcarEn(b, 'a', 'principal');
   assert.equal(b.principal, null, 'tocar otra vez el mismo rol lo saca');
+  // Lo guardado antes con "extras" cuenta como "sí".
+  assert.deepEqual(borradorDe({ principal: 'x', extras: ['y'] }).si, ['y']);
 });
 
 test('el panel: lo que se guarda de un día lleva cómo era cada elegida, para afinar el criterio después', () => {
   const cand = [
-    { id: 'a', estilo: 'nacimiento', puntaje: 66, anio: 1901, origen: 'portal', marcas: [], titulo: 'Nace X' },
-    { id: 'b', estilo: 'curioso', puntaje: 51, anio: 1952, origen: 'feed', marcas: [], titulo: 'Patente' },
+    { id: 'a', estilo: 'nacimiento', puntaje: 66, anio: 1901, origen: 'portal', marcas: [], titulo: 'Nace X', importancia: 5 },
+    { id: 'b', estilo: 'curioso', puntaje: 51, anio: 1952, origen: 'feed', marcas: [], titulo: 'Patente', importancia: 123 },
     { id: 'c', estilo: 'historia', puntaje: 30, anio: 1904, origen: 'portal', marcas: ['política'], titulo: 'Asume' },
+    { id: 'd', estilo: 'deporte', puntaje: 28, anio: 1930, origen: 'feed', marcas: [], titulo: 'Gol' },
   ];
-  const b = marcarEn(marcarEn(marcarEn(borradorDe(null), 'b', 'principal'), 'a', 'extra'), 'c', 'no');
+  let b = borradorDe(null);
+  for (const [id, rol] of [['b', 'principal'], ['a', 'si'], ['d', 'opcional'], ['c', 'no']]) b = marcarEn(b, id, rol);
   const e = eleccionDeDia(b, cand, 'Hernán', '2026-10-05T12:00:00Z');
   assert.equal(e.principal, 'b');
-  assert.deepEqual(e.detalle.b, { estilo: 'curioso', puntaje: 51, anio: 1952, origen: 'feed', marcas: [], titulo: 'Patente' });
+  assert.deepEqual(e.si, ['a']);
+  assert.deepEqual(e.opcionales, ['d']);
+  assert.deepEqual(e.descartadas, ['c']);
+  assert.deepEqual(e.detalle.b, { rol: 'principal', estilo: 'curioso', puntaje: 51, anio: 1952, origen: 'feed', marcas: [], importancia: 123, titulo: 'Patente' });
+  assert.equal(e.detalle.d.rol, 'opcional');
   assert.ok(!('c' in e.detalle), 'de lo descartado no se guarda el detalle');
-  assert.deepEqual(e.lugar, { a: 1, b: 2, c: 3 }, 'en qué lugar de la lista estaba cada una');
-  assert.deepEqual(estadoDelDia(e), { texto: '✓ Armado (+1)', clase: 'ok' });
+  assert.deepEqual(e.lugar, { a: 1, b: 2, c: 3, d: 4 }, 'en qué lugar de la lista estaba cada una');
+  assert.deepEqual(estadoDelDia(e), { texto: '✓ Armado (+1 sí, 1 opcional)', clase: 'ok' });
   assert.equal(estadoDelDia(null).texto, 'Sin armar');
+  assert.equal(estadoDelDia({ principal: null }).texto, 'Falta la principal');
   assert.equal(diasArmados(['2026-10-05', '2026-10-06'], { dias: { '2026-10-05': e } }), 1);
 });
 
@@ -197,5 +246,8 @@ test('el panel: la pestaña Fechas está en la app, el service worker y los arch
   const cand = JSON.parse(leer(ARCHIVOS.candidatas));
   assert.equal(Object.keys(cand.dias).length, 31, 'el mes entero desde el lunes 5/10');
   assert.ok(Object.keys(cand.dias)[0] === '2026-10-05');
-  for (const [dia, v] of Object.entries(cand.dias)) assert.ok(v.candidatas.length >= 10 && v.candidatas.length <= 20, `${dia}: ${v.candidatas.length} candidatas`);
+  for (const [dia, v] of Object.entries(cand.dias)) {
+    assert.ok(v.candidatas.length >= 1 && v.candidatas.length <= 20, `${dia}: ${v.candidatas.length} candidatas`);
+    for (const c of v.candidatas) assert.ok(/^https?:/.test(c.enlace ?? '') || c.origen === 'curada' || c.origen === 'especial-ar', `${dia}: una candidata sin enlace para ver la nota`);
+  }
 });
