@@ -2,7 +2,10 @@
 // banco (web/scripts/fotos-notas.mjs). Sin red: todo con fetchFn de mentira.
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { elegiblePorSeccion, elegirFotosNuevas, fotoDeLaWeb, TOPE_POR_CORRIDA } from '../web/scripts/fotos-notas.mjs';
+import {
+  elegiblePorSeccion, elegirFotosNuevas, fotoDeLaWeb, TOPE_POR_CORRIDA, sePuedeReintentar,
+} from '../web/scripts/fotos-notas.mjs';
+import { imagenPrincipalDe, letraDe } from '../ingesta/fotos.mjs';
 
 test('elegiblePorSeccion: Policiales sólo con una fuente oficial; el resto, siempre', () => {
   assert.equal(elegiblePorSeccion({ seccion: 'Balcarce' }), true);
@@ -64,7 +67,7 @@ test('elegirFotosNuevas: una nota de Policiales sin fuente oficial no se pregunt
   assert.equal(banco.p1, undefined);
 });
 
-test('elegirFotosNuevas: sin foto que sirva, queda "intentado" (no se reintenta después)', async () => {
+test('elegirFotosNuevas: sin foto que sirva, queda "intentado", con cuántas veces se probó', async () => {
   const nota = { id: 'n2', titulo: 't', seccion: 'Economía', fuentesConsultadas: [] };
   const fetchFn = async (url) => {
     if (String(url).includes('generativelanguage')) return { ok: true, json: async () => ({ candidates: [{ content: { parts: [{ text: JSON.stringify({ persona: null }) }] } }] }) };
@@ -117,6 +120,61 @@ test('elegirFotosNuevas: un error de red en una nota no frena a las demás', asy
   const { banco } = await elegirFotosNuevas(notas, { clave: 'g', claveRespaldo: null, fetchFn });
   assert.equal(banco.ok.archivo, 'fotos-notas/ok.jpg');
   assert.ok(banco.cae.intentado || banco.cae.archivo === undefined);
+});
+
+// ------------------------------------- las que quedaron sin foto (30/09)
+
+test('una nota sin foto por una falla se vuelve a probar (hasta 3 veces, cada una hora); lo que la IA descartó, no', () => {
+  const ahora = new Date('2026-09-30T12:00:00Z');
+  const hace = (min) => new Date(ahora.getTime() - min * 60_000).toISOString();
+  assert.equal(sePuedeReintentar(undefined, { ahora }), true, 'nunca probada');
+  assert.equal(sePuedeReintentar({ archivo: 'fotos-notas/a.jpg' }, { ahora }), false);
+  assert.equal(sePuedeReintentar({ intentado: true, origen: 'ninguna', razon: 'Todas las fotos muestran menores de edad reconocibles', cuando: hace(600) }, { ahora }), false);
+  assert.equal(sePuedeReintentar({ intentado: true, origen: 'ninguna', razon: 'Groq también falló: HTTP 429', cuando: hace(30) }, { ahora }), false, 'todavía no pasó una hora');
+  assert.equal(sePuedeReintentar({ intentado: true, origen: 'ninguna', razon: 'Groq también falló: HTTP 429', cuando: hace(90) }, { ahora }), true);
+  assert.equal(sePuedeReintentar({ intentado: true, origen: 'ninguna', razon: 'sin fotos para comparar', cuando: hace(90) }, { ahora }), true);
+  assert.equal(sePuedeReintentar({ intentado: true, origen: 'medio', error: 'no se pudo volver a bajar la elegida', cuando: hace(90) }, { ahora }), true);
+  assert.equal(sePuedeReintentar({ intentado: true, origen: 'error', error: 'timeout', cuando: hace(90), intentos: 3 }, { ahora }), false, 'ya se probó tres veces');
+});
+
+test('elegirFotosNuevas vuelve a probar la que falló por cupo, y no gasta en la que la IA descartó', async () => {
+  const ahora = new Date('2026-09-30T12:00:00Z');
+  const hace2h = new Date(ahora.getTime() - 2 * 3600e3).toISOString();
+  const notas = [
+    { id: 'n1', titulo: 't', seccion: 'Balcarce', fuentesConsultadas: [{ medio: 'A', enlace: 'https://a.com/n' }] },
+    { id: 'n2', titulo: 't', seccion: 'Balcarce', fuentesConsultadas: [{ medio: 'A', enlace: 'https://b.com/n' }] },
+  ];
+  const banco = {
+    n1: { intentado: true, origen: 'ninguna', razon: 'Groq también falló: HTTP 429', cuando: hace2h },
+    n2: { intentado: true, origen: 'ninguna', razon: 'La única foto tiene el micrófono de otro medio', cuando: hace2h },
+  };
+  const fetchFn = async (url) => {
+    if (String(url).includes('b.com')) throw new Error('no debería preguntarse por la descartada');
+    return fetchDeUnaFuenteConFoto()(url);
+  };
+  const { banco: nuevo } = await elegirFotosNuevas(notas, { banco, clave: 'g', claveRespaldo: null, fetchFn, ahora });
+  assert.equal(nuevo.n1.archivo, 'fotos-notas/n1.jpg');
+  assert.deepEqual(nuevo.n2, banco.n2);
+});
+
+test('la foto principal de una página: con "&amp;" traducido, y si no declara una, la primera foto de la nota (30/09)', () => {
+  // Canal 26: la dirección venía con "&amp;" y la descarga daba error.
+  assert.equal(
+    imagenPrincipalDe('<meta property="og:image" content="https://www.canal26.com/resizer/v2/X.jpeg?auth=abc&amp;width=1200&amp;height=675">'),
+    'https://www.canal26.com/resizer/v2/X.jpeg?auth=abc&width=1200&height=675',
+  );
+  // News Balcarce no declara la principal: vale la primera foto del cuerpo, no el logo ni una miniatura.
+  const html = `<header><img src="https://newsbalcarce.com.ar/wp-content/uploads/logo-news.png"></header>
+    <article><img src="https://newsbalcarce.com.ar/wp-content/uploads/otra-150x150.jpg">
+    <img src="https://newsbalcarce.com.ar/wp-content/uploads/GIMENEZ-LOBATO-PAMPA-DUO.webp"></article>`;
+  assert.equal(imagenPrincipalDe(html), 'https://newsbalcarce.com.ar/wp-content/uploads/GIMENEZ-LOBATO-PAMPA-DUO.webp');
+  assert.equal(imagenPrincipalDe('<p>sin fotos</p><img src="/images/base/logo.png">'), null);
+});
+
+test('la letra que elige la IA se entiende aunque no venga sola (29/09: "se seleccionó la foto de…" y quedó sin foto)', () => {
+  for (const [valor, letra] of [['A', 'A'], ['b', 'B'], ['Foto C', 'C'], ['A)', 'A'], [1, 'A'], ['2', 'B'], [null, null], ['ninguna', null], ['', null]]) {
+    assert.equal(letraDe(valor), letra, JSON.stringify(valor));
+  }
 });
 
 // --------------------------------------------------- la página de la nota

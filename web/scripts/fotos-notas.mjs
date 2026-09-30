@@ -7,7 +7,9 @@
 // El banco (`web/data/banco-fotos.json`) es la memoria: una nota que ya se
 // probó no se vuelve a preguntar, tenga foto o no. Sin esto, cada corrida
 // (cada media hora) volvería a gastar cupo de Gemini en notas que ya se sabe
-// que no tienen una foto que sirva.
+// que no tienen una foto que sirva. Salvo si quedó sin foto por una falla (sin
+// cupo, ninguna foto en ese momento, una descarga): ésa se prueba hasta tres
+// veces, con una hora entre una y otra (`sePuedeReintentar`, 30/09).
 
 import { elegirFotoParaNota, descargarImagen, creditoDeFoto } from '../../ingesta/fotos.mjs';
 import { achicarFoto, fotoParaGuardar } from './achicar-foto.mjs';
@@ -31,10 +33,30 @@ export function elegiblePorSeccion(nota) {
   return fuentes.some((f) => f.oficial === true);
 }
 
+/** Cuántas veces se prueba una nota que quedó sin foto por una falla (no porque la
+ *  IA la descartó), y cuánto se espera entre una vez y la otra. */
+export const REINTENTOS_DE_FOTO = { veces: 3, minutosEntreIntentos: 60 };
+
+// Lo que no es una decisión sobre la foto sino una falla: sin cupo o sin
+// respuesta de la IA, ninguna foto que bajar en ese momento, o la elegida que
+// no se pudo volver a bajar. Eso se vuelve a probar (30/09: cinco de 17 notas
+// sin foto eran esto, y el banco no las volvía a mirar nunca). Lo que la IA
+// descartó a propósito (menores, marcas, otro medio) no se vuelve a preguntar.
+const FALLA = /^(Gemini falló|Groq también falló|sin clave para comparar|sin fotos para comparar)/;
+
+/** ¿Esta entrada del banco se puede volver a probar ahora? */
+export function sePuedeReintentar(entrada, { ahora = new Date(), reintentos = REINTENTOS_DE_FOTO } = {}) {
+  if (!entrada) return true;
+  if (entrada.archivo || entrada.borrada) return false;
+  const falla = entrada.origen === 'error' || !!entrada.error || FALLA.test(String(entrada.razon ?? ''));
+  if (!falla || (entrada.intentos ?? 1) >= reintentos.veces) return false;
+  return ahora.getTime() - Date.parse(entrada.cuando ?? 0) >= reintentos.minutosEntreIntentos * 60_000;
+}
+
 /**
- * Prueba una foto para las notas que todavía no están en el banco, hasta
- * `tope` por corrida. Nunca lanza: una nota que falla queda "intentado", para
- * no volver a preguntarle en la próxima corrida.
+ * Prueba una foto para las notas que todavía no están en el banco (y las que
+ * quedaron sin foto por una falla, hasta tres veces), hasta `tope` por corrida.
+ * Nunca lanza: una nota que falla queda "intentado", con cuántas veces se probó.
  *
  * Devuelve el banco entero actualizado (para escribir tal cual) y, aparte,
  * los archivos nuevos a guardar (sólo los que consiguieron foto).
@@ -50,20 +72,22 @@ export async function elegirFotosNuevas(notas, {
   // viejas sin probar y no le tocaba turno en la corrida donde más importa
   // (la primera media hora, cuando más se comparte). Las viejas se van
   // procesando igual, más despacio, y salen solas de la tapa pasadas las
-  // HORAS_EN_PORTADA (lib/archivo.js).
+  // HORAS_EN_PORTADA (lib/archivo.js). Las que se reintentan van después de
+  // las que nunca se probaron.
   const candidatas = notas
-    .filter((n) => !banco[n.id] && elegiblePorSeccion(n))
-    .sort((a, b) => new Date(b.fecha ?? 0) - new Date(a.fecha ?? 0));
+    .filter((n) => sePuedeReintentar(banco[n.id], { ahora }) && elegiblePorSeccion(n))
+    .sort((a, b) => (Number(!!banco[a.id]) - Number(!!banco[b.id])) || (new Date(b.fecha ?? 0) - new Date(a.fecha ?? 0)));
 
   let procesadas = 0;
   for (const n of candidatas) {
     if (procesadas >= tope) break;
     procesadas += 1;
+    const intentos = (banco[n.id]?.intentos ?? (banco[n.id] ? 1 : 0)) + 1;
     try {
       const r = await elegirFotoParaNota(n, { clave, claveRespaldo, fetchFn });
       if (!r.elegida) {
         bancoNuevo[n.id] = {
-          intentado: true, origen: r.origen, titulo: n.titulo ?? null, razon: r.razon ?? null, cuando: ahora.toISOString(),
+          intentado: true, origen: r.origen, titulo: n.titulo ?? null, razon: r.razon ?? null, cuando: ahora.toISOString(), intentos,
         };
         continue;
       }
@@ -72,7 +96,7 @@ export async function elegirFotosNuevas(notas, {
       const datos = await descargarImagen(r.elegida.imagen, { fetchFn });
       const ext = EXTENSION[datos?.mime];
       if (!datos || !ext) {
-        bancoNuevo[n.id] = { intentado: true, origen: r.origen, cuando: ahora.toISOString(), error: 'no se pudo volver a bajar la elegida' };
+        bancoNuevo[n.id] = { intentado: true, origen: r.origen, cuando: ahora.toISOString(), error: 'no se pudo volver a bajar la elegida', intentos };
         continue;
       }
       // Achicada a 1.200 px y JPEG (29/09): la original pesaba hasta 1,8 MB y crecía el
@@ -91,7 +115,7 @@ export async function elegirFotosNuevas(notas, {
       };
       archivos[archivo] = guardar.bytes;
     } catch (e) {
-      bancoNuevo[n.id] = { intentado: true, origen: 'error', error: e.message, cuando: ahora.toISOString() };
+      bancoNuevo[n.id] = { intentado: true, origen: 'error', error: e.message, cuando: ahora.toISOString(), intentos };
     }
   }
   return { banco: bancoNuevo, archivos };

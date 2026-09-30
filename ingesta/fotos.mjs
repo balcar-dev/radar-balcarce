@@ -35,16 +35,36 @@ const ESPERA = 20_000;
 // además de lento, algunas APIs rechazan páginas muy pesadas.
 const TAMANO_MAXIMO = 6 * 1024 * 1024;
 
+/** Una dirección tal como viene en el HTML, con las entidades traducidas: en un
+ *  atributo "&" se escribe "&amp;", y así la bajaba Canal 26 (sus fotos piden
+ *  "?auth=…&width=…"): la respuesta era un error y la nota quedaba sin foto (30/09). */
+const direccionDe = (texto) => String(texto)
+  .replace(/&amp;/gi, '&').replace(/&#0?38;/g, '&').replace(/&quot;/gi, '"').replace(/&#x2F;/gi, '/')
+  .trim();
+
+// Las imágenes de una página que no son la foto de la nota: logos, íconos, avatares, publicidades.
+const NO_ES_LA_FOTO = /logo|icon|avatar|gravatar|banner|publicidad|sprite|placeholder|emoji|pixel|spacer|loading|whatsapp|facebook|twitter|instagram/i;
+
 /** La primera imagen que la página dice que es la principal (og:image o,
- *  si no está, twitter:image). No es una lectura completa del HTML: alcanza
- *  con esto porque son las mismas etiquetas que ya lee `web/scripts/auditar-seo-vivo.mjs`. */
+ *  si no está, twitter:image). Si no declara ninguna, la primera foto del
+ *  cuerpo de la página que no sea un logo ni un ícono (30/09: News Balcarce no
+ *  declara la principal, pero la foto está en la nota). No es una lectura
+ *  completa del HTML: alcanza con esto porque son las mismas etiquetas que ya lee
+ *  `web/scripts/auditar-seo-vivo.mjs`. */
 export function imagenPrincipalDe(html) {
   const og = html.match(/<meta[^>]+property=["']og:image["'][^>]+content=["']([^"']+)["']/i)
     ?? html.match(/<meta[^>]+content=["']([^"']+)["'][^>]+property=["']og:image["']/i);
-  if (og) return og[1];
+  if (og) return direccionDe(og[1]);
   const tw = html.match(/<meta[^>]+name=["']twitter:image["'][^>]+content=["']([^"']+)["']/i)
     ?? html.match(/<meta[^>]+content=["']([^"']+)["'][^>]+name=["']twitter:image["']/i);
-  return tw ? tw[1] : null;
+  if (tw) return direccionDe(tw[1]);
+  const cuerpo = String(html).replace(/<(header|nav|footer|aside)[\s\S]*?<\/\1>/gi, ' ');
+  for (const m of cuerpo.matchAll(/<img[^>]+src=["']([^"']+\.(?:jpe?g|png|webp)(?:\?[^"']*)?)["']/gi)) {
+    const chica = m[1].match(/-(\d{2,4})x(\d{2,4})\.(?:jpe?g|png|webp)/i);
+    if (chica && Math.max(Number(chica[1]), Number(chica[2])) < 400) continue; // una miniatura
+    if (!NO_ES_LA_FOTO.test(m[1]) && /^https?:\/\//i.test(m[1])) return direccionDe(m[1]);
+  }
+  return null;
 }
 
 /** Trae la foto principal de cada fuente que cubrió la nota (fuentesConsultadas,
@@ -144,12 +164,28 @@ con una entrada en "fotos" por cada letra de la lista, en el mismo orden.`;
 
 const letraValida = (l) => typeof l === 'string' && LETRAS.includes(l);
 
+/** La letra de una foto como la haya escrito la IA: "A", "a", "Foto A", "A)" o
+ *  el número (1 es la A). El 29/09 dos notas quedaron sin foto con la razón
+ *  "se seleccionó la foto de…": la IA había elegido, pero no con la letra sola. */
+export function letraDe(valor) {
+  if (typeof valor === 'number' && Number.isInteger(valor) && valor >= 1 && valor <= LETRAS.length) return LETRAS[valor - 1];
+  const t = String(valor ?? '').trim().toUpperCase();
+  if (/^\d$/.test(t)) return letraDe(Number(t));
+  const m = t.match(/^(?:FOTO|IMAGEN|OPCI[OÓ]N)?\s*([A-H])(?![A-Z])/);
+  return m ? m[1] : null;
+}
+
 /** Interpreta la respuesta (misma forma venga de Gemini o de Groq) contra
  *  las candidatas reales, y arma el resultado final. Nunca confía a ciegas
  *  en la letra elegida: si la IA marcó esa foto con una marca de agua, o si
  *  la letra no corresponde a ninguna candidata con imagen, no se elige nada. */
-function interpretarRespuesta(obj, candidatas) {
-  const fotos = Array.isArray(obj?.fotos) ? obj.fotos : [];
+function interpretarRespuesta(respuesta, candidatas) {
+  const obj = {
+    ...respuesta,
+    elegida: letraDe(respuesta?.elegida),
+    fotos: (Array.isArray(respuesta?.fotos) ? respuesta.fotos : []).map((f) => ({ ...f, letra: letraDe(f?.letra) })),
+  };
+  const fotos = obj.fotos;
   const porLetra = new Map(fotos.filter((f) => letraValida(f?.letra)).map((f) => [f.letra, f]));
   // Una foto con un menor reconocible (28/09) queda afuera igual que una con marca.
   const conMarca = new Set([...porLetra.entries()].filter(([, f]) => f.tiene_marca === true || f.menor === true).map(([l]) => l));
