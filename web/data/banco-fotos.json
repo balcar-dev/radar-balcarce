@@ -1876,11 +1876,16 @@
   "borrada": true
  },
  "ol6eey": {
-  "intentado": true,
-  "origen": "ninguna",
+  "archivo": "fotos-notas/ol6eey.jpg",
+  "medio": "La Nueva",
+  "credito": "Foto: La Nueva",
+  "licencia": null,
+  "origen": "medio",
   "titulo": "La Selección argentina juega el miércoles ante Bolivia con una sola duda",
-  "razon": "Groq también falló: HTTP 429",
-  "cuando": "2026-09-29T14:10:41.647Z"
+  "enlace": "https://www.lanueva.com/nota/2026-9-29-10-16-0-asi-sera-sin-messi-la-posible-formacion-de-la-seleccion-argentina-para-enfrentar-a-bolivia",
+  "imagenOriginal": "https://pxcdn.lanueva.com/092026/1790687984172.jpg?&cw=600&ch=365",
+  "razon": "La foto B muestra al DT de cuerpo entero sin marcas de agua de medios agregadas posteriormente.",
+  "cuando": "2026-09-30T18:01:48.288Z"
  },
  "8zhfqv": {
   "archivo": "fotos-notas/8zhfqv.jpg",
@@ -3161,5 +3166,29 @@
   "imagenOriginal": "https://www.radiogabal.com.ar/images/2026/septiembre/Mario%20Alberghini%20autodromo.jpeg",
   "razon": "Es la única foto disponible, tiene buen encuadre y no presenta marcas de agua ni menores.",
   "cuando": "2026-09-30T17:33:27.568Z"
+ },
+ "76r67w": {
+  "archivo": "fotos-notas/76r67w.jpg",
+  "medio": "Radio Gabal (FM 104.1)",
+  "credito": "Foto: Radio Gabal (FM 104.1)",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Bomberos gestiona una unidad de traslado para capacitaciones",
+  "enlace": "https://www.radiogabal.com.ar/index.php/comunidad/bomberos-gestiona-en-provincia-una-unidad-de-traslados-para-capacitaciones-fuera-de-balcarce",
+  "imagenOriginal": "https://www.radiogabal.com.ar/images/2025/Bomberos_cuartel_23-10.jpeg",
+  "razon": "Es la unica foto disponible, tiene buen encuadre y no presenta marcas ni menores.",
+  "cuando": "2026-09-30T18:01:48.288Z"
+ },
+ "1i6b1ka": {
+  "archivo": "fotos-notas/1i6b1ka.jpg",
+  "medio": "Ámbito",
+  "credito": "Foto: Ámbito",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "El consumo porteño muestra caídas en supermercados y subas en shoppings",
+  "enlace": "https://www.ambito.com/economia/el-consumo-caba-profundiza-su-caida-venta-supermercados-cedio-12-interanual-el-segundo-trimestre-n6328457",
+  "imagenOriginal": "https://media.ambito.com/p/d8fbdc44efd939ecd80c272f8e96b608/adjuntos/239/imagenes/043/351/0043351574/supermercado.png",
+  "razon": "Es la única foto de supermercado limpia de marcas de agua del medio, sin menores de edad y con buena calidad.",
+  "cuando": "2026-09-30T18:01:48.288Z"
  }
 }

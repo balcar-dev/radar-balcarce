@@ -1,10 +1,10 @@
 {
- "generado": "2026-09-30T17:33:55.863Z",
- "portada": 56,
- "archivo": 635,
- "esperandoCuerpo": 7,
+ "generado": "2026-09-30T18:02:17.426Z",
+ "portada": 57,
+ "archivo": 637,
+ "esperandoCuerpo": 5,
  "redes": {
-  "generado": "2026-09-30T17:33:55.894Z",
+  "generado": "2026-09-30T18:02:17.466Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -33,7 +33,7 @@
     "que": "El repaso de la tarde",
     "voz": "locutora",
     "ventana": 240,
-    "momento": "antes",
+    "momento": "en-hora",
     "salio": null
    },
    {
@@ -104,9 +104,9 @@
     "titulo": "El repaso de la tarde",
     "hora": "15:00",
     "voz": "locutora",
-    "momento": "antes",
+    "momento": "en-hora",
     "salio": null,
-    "segundos": 52,
+    "segundos": 49,
     "notas": [
      {
       "id": "1j6ui2n",
@@ -114,19 +114,19 @@
       "seccion": "Automovilismo"
      },
      {
-      "id": "1s10vxl",
-      "titulo": "Rocío Espinillo anticipa su receta para la Fiesta del Postre",
-      "seccion": "Cultura y agenda"
+      "id": "122dsf6",
+      "titulo": "Rosario Central genera polêcutemica en los festejos contra Juan Sebastián Verón",
+      "seccion": "Fútbol"
      },
      {
-      "id": "h36tlu",
-      "titulo": "La Municipalidad recauda millones en una subasta de tierras",
+      "id": "76r67w",
+      "titulo": "Bomberos gestiona una unidad de traslado para capacitaciones",
       "seccion": "Balcarce"
      },
      {
-      "id": "1rpzsy3",
-      "titulo": "Tres jugadores locales integran la selección provincial de pádel",
-      "seccion": "Deportes"
+      "id": "1s10vxl",
+      "titulo": "Rocío Espinillo anticipa su receta para la Fiesta del Postre",
+      "seccion": "Cultura y agenda"
      }
     ]
    },
@@ -137,17 +137,17 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 52,
+    "segundos": 50,
     "notas": [
      {
-      "id": "y9vwef",
-      "titulo": "El equipo de fútbol playa clasifica a la final bonaerense",
-      "seccion": "Deportes"
+      "id": "h36tlu",
+      "titulo": "La Municipalidad recauda millones en una subasta de tierras",
+      "seccion": "Balcarce"
      },
      {
-      "id": "122dsf6",
-      "titulo": "Rosario Central genera polêcutemica en los festejos contra Juan Sebastián Verón",
-      "seccion": "Fútbol"
+      "id": "1rpzsy3",
+      "titulo": "Tres jugadores locales integran la selección provincial de pádel",
+      "seccion": "Deportes"
      },
      {
       "id": "616lop",
@@ -181,6 +181,12 @@
     }
    ],
    "cola": [
+    {
+     "id": "76r67w",
+     "titulo": "Bomberos gestiona una unidad de traslado para capacitaciones",
+     "seccion": "Balcarce",
+     "marcada": false
+    },
     {
      "id": "1s10vxl",
      "titulo": "Rocío Espinillo anticipa su receta para la Fiesta del Postre",
