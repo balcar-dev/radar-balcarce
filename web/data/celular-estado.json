@@ -1,10 +1,10 @@
 {
- "generado": "2026-09-30T13:03:36.568Z",
+ "generado": "2026-09-30T13:32:36.949Z",
  "portada": 51,
- "archivo": 611,
- "esperandoCuerpo": 5,
+ "archivo": 615,
+ "esperandoCuerpo": 7,
  "redes": {
-  "generado": "2026-09-30T13:03:36.603Z",
+  "generado": "2026-09-30T13:32:36.985Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -24,7 +24,7 @@
     "voz": "locutor",
     "ventana": 180,
     "momento": "en-hora",
-    "salio": null
+    "salio": "2026-09-30T13:01:31.279Z"
    },
    {
     "nombre": "noticia2",
@@ -74,8 +74,8 @@
     "hora": "10:00",
     "voz": "locutor",
     "momento": "en-hora",
-    "salio": null,
-    "segundos": 52,
+    "salio": "2026-09-30T13:01:31.279Z",
+    "segundos": null,
     "notas": [
      {
       "id": "jul3w9",
@@ -93,9 +93,9 @@
       "seccion": "Cultura y agenda"
      },
      {
-      "id": "y9vwef",
-      "titulo": "El equipo de fútbol playa clasifica a la final bonaerense",
-      "seccion": "Deportes"
+      "id": "1hkh8ez",
+      "titulo": "UPCN dicta una capacitación gratuita para auxiliares",
+      "seccion": "Balcarce"
      }
     ]
    },
@@ -106,27 +106,27 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 49,
+    "segundos": 52,
     "notas": [
+     {
+      "id": "y9vwef",
+      "titulo": "El equipo de fútbol playa clasifica a la final bonaerense",
+      "seccion": "Deportes"
+     },
      {
       "id": "zrdt8x",
       "titulo": "Japón abre su mercado a la carne vacuna argentina tras dos décadas",
       "seccion": "Agro"
      },
      {
+      "id": "1vgun5x",
+      "titulo": "Balcarce participa de la trigésima Feria Internacional de Turismo",
+      "seccion": "Cultura y agenda"
+     },
+     {
       "id": "1j6ui2n",
       "titulo": "La ACTC sanciona a Mariano Werner con multa y largada desde el fondo",
       "seccion": "Automovilismo"
-     },
-     {
-      "id": "5evpzb",
-      "titulo": "Cabrera y Otero ganan la carrera nocturna en Napaleofú",
-      "seccion": "Deportes"
-     },
-     {
-      "id": "1yqjdtm",
-      "titulo": "El Gobierno posterga por un mes la suba impositiva en los combustibles",
-      "seccion": "Economía"
      }
     ]
    },
@@ -140,19 +140,19 @@
     "segundos": 46,
     "notas": [
      {
-      "id": "1vgun5x",
-      "titulo": "Balcarce participa de la trigésima Feria Internacional de Turismo",
-      "seccion": "Cultura y agenda"
+      "id": "5evpzb",
+      "titulo": "Cabrera y Otero ganan la carrera nocturna en Napaleofú",
+      "seccion": "Deportes"
      },
      {
-      "id": "1hkh8ez",
-      "titulo": "UPCN dicta una capacitación gratuita para auxiliares",
+      "id": "1dqm02n",
+      "titulo": "El Hospital Fossati afronta una deuda millonaria de obras sociales",
       "seccion": "Balcarce"
      },
      {
-      "id": "1asj6cl",
-      "titulo": "Las TC Pick Up evalúan regresar a Balcarce antes de fin de año",
-      "seccion": "Automovilismo"
+      "id": "12rp30w",
+      "titulo": "Edgardo Ríos visita la Fiesta Nacional del Postre",
+      "seccion": "Cultura y agenda"
      },
      {
       "id": "h7o4xt",

@@ -2807,12 +2807,16 @@
   "cuando": "2026-09-30T12:03:42.100Z"
  },
  "zrdt8x": {
-  "intentado": true,
-  "origen": "ninguna",
+  "archivo": "fotos-notas/zrdt8x.jpg",
+  "medio": "Ámbito",
+  "credito": "Foto: Ámbito",
+  "licencia": null,
+  "origen": "medio",
   "titulo": "Japón abre su mercado a la carne vacuna argentina tras dos décadas",
-  "razon": "Groq también falló: HTTP 413",
-  "cuando": "2026-09-30T12:32:13.870Z",
-  "intentos": 1
+  "enlace": "https://www.ambito.com/economia/argentina-vuelve-exportar-carne-japon-despues-20-anos-y-se-abre-un-mercado-us3000-millones-n6328292",
+  "imagenOriginal": "https://media.ambito.com/p/34ce711a748b8bf2ace83079ff810166/adjuntos/239/imagenes/043/157/0043157066/1200x675/917x333:937x353/frigorifico-carne.jpg",
+  "razon": "Es la única foto que ilustra claramente la actividad industrial cárnica sin marcas de agua ni menores, cumpliendo con todos los requisitos editoriales.",
+  "cuando": "2026-09-30T13:32:18.412Z"
  },
  "1h321lc": {
   "archivo": "fotos-notas/1h321lc.jpg",
@@ -2877,5 +2881,41 @@
   "imagenOriginal": "https://www.infobae.com/resizer/v2/HK6HLXDXLJFGXDH6T4EKKM6PQ4.jpg?auth=01b1435de1c9f24035b13c882b202c5818bd6f806453b9fedc657c0444362310&smart=true&width=1200&height=630&quality=85",
   "razon": "Ambas fotos son limpias y sin marcas, pero la A muestra mejor nitidez y encuadre del protagonista.",
   "cuando": "2026-09-30T13:02:32.692Z"
+ },
+ "1dqm02n": {
+  "archivo": "fotos-notas/1dqm02n.jpg",
+  "medio": "Diario La Vanguardia",
+  "credito": "Foto: Diario La Vanguardia",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "El Hospital Fossati afronta una deuda millonaria de obras sociales",
+  "enlace": "https://www.diariolavanguardia.com/noticias/44950-el-hospital-fossati-bajo-presion-mas-demanda-1-124-millones-de-deuda-y-una-fuerte-dependencia-de-fondos-municipales/",
+  "imagenOriginal": "https://www.diariolavanguardia.com/img/noticias/img_d-65896.png",
+  "razon": "Muestra claramente el frente del Hospital Fossati sin marcas de agua ni menores visibles.",
+  "cuando": "2026-09-30T13:32:18.412Z"
+ },
+ "wabor5": {
+  "archivo": "fotos-notas/wabor5.jpg",
+  "medio": "Diario La Vanguardia",
+  "credito": "Foto: Diario La Vanguardia",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Proponen mayores exigencias para radares viales y anular multas irregulares",
+  "enlace": "https://www.diariolavanguardia.com/noticias/44951-buscan-modificar-las-reglas-para-la-instalacion-y-funcionamiento-de-radares/",
+  "imagenOriginal": "https://www.diariolavanguardia.com/img/noticias/img_d-65897.png",
+  "razon": "Es la única opción disponible, tiene buen encuadre y no presenta marcas de agua ni menores.",
+  "cuando": "2026-09-30T13:32:18.412Z"
+ },
+ "1xrha3j": {
+  "archivo": "fotos-notas/1xrha3j.jpg",
+  "medio": "Radio Mitre",
+  "credito": "Foto: Radio Mitre",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Lionel Scaloni compara el inicio de su ciclo con el recambio actual",
+  "enlace": "https://radiomitre.cienradios.com/deportes/quienes-fueron-los-primeros-convocados-de-lionel-scaloni-en-2018-y-donde-esta-cada-uno-ahora/",
+  "imagenOriginal": "https://radiomitre.cienradios.com/resizer/v2/5D5KLGMKCNGDTB2326N2LYKUPM.jpg?smart=true&auth=eb699d36302336c3936ade1ffb6b1fd30de04a3b9e170e6d70c996ed915ceb67&width=1200&height=630",
+  "razon": "Es la única foto que muestra directamente a Lionel Scaloni, el protagonista principal de la nota sobre su ciclo.",
+  "cuando": "2026-09-30T13:32:18.412Z"
  }
 }
