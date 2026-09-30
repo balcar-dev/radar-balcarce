@@ -498,7 +498,7 @@ test('el pie de un reel lleva radarbalcarce.com escrito y nunca la frase de la v
 
 // --------------------------------------------------- el plan completo
 
-test('el clima de la noche dice la mínima de esta noche (la de mañana temprano), no la de hoy, que ya pasó (30/09)', () => {
+test('el clima de la noche dice la mínima de esta noche (la de mañana temprano), no la de hoy, que ya pasó (29/09)', () => {
   const clima = {
     ahora: { temp: 12, cielo: 'Despejado', esDeDia: false, viento: 10 },
     dias: [{ fecha: '2026-09-29', max: 14, min: 9, lluvia: 0 }, { fecha: '2026-09-30', max: 13, min: 3, lluvia: 0 }],
@@ -519,7 +519,7 @@ test('todas las piezas del plan hablan según su horario y cumplen el criterio',
     notas: Array.from({ length: 14 }, (_, i) => nota(`p${i}`, `Nota número ${['uno', 'dos', 'tres', 'cuatro', 'cinco', 'seis', 'siete', 'ocho', 'nueve', 'diez', 'once', 'doce', 'trece', 'catorce'][i]} del día en ${['la plaza', 'el museo', 'el club', 'la escuela', 'el hospital', 'la ruta', 'el parque', 'el teatro', 'la feria', 'el puerto', 'la biblioteca', 'el barrio', 'el campo', 'el centro'][i]}`, ['Balcarce', 'Deportes', 'Servicios', 'Cultura y agenda', 'Agro', 'Salud', 'Economía'][i % 7], { relevancia: 95 - i })),
   };
   // A las 9 de la mañana: los tres repasos todavía no pasaron su hora (uno que ya
-  // la pasó sin salir no se arma: 30/09).
+  // la pasó sin salir no se arma: 29/09).
   const { anio, mes } = fechaEnBalcarce();
   const nueve = new Date(`${anio}-${String(mes).padStart(2, '0')}-${String(hoy).padStart(2, '0')}T09:00:00-03:00`);
   const { piezas } = planDelDia(datos, { fecha: nueve });

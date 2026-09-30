@@ -25,7 +25,7 @@ const yaPasoSuHora = (ronda, fecha) => minutoDelDiaAR(fecha) >= minutosDeHora(ro
  *
  * Los tres cuentan cuatro notas de temas distintos (PIEZAS.notasPorPodcast), y
  * ninguno repite una nota ni un tema que ya contó otro repaso de hoy o de los dos
- * días anteriores (30/09, Hernán: la misma nota salió en el de la tarde y en el de
+ * días anteriores (29/09, Hernán: la misma nota salió en el de la tarde y en el de
  * la noche). El de la noche repasa lo que dejó el día y todavía no se contó, sin
  * piso de relevancia. Con menos notas, el repaso sale con las que haya; con
  * menos de dos, no sale. Un repaso cuya hora ya pasó sin salir no se lleva

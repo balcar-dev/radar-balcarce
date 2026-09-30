@@ -1,17 +1,34 @@
-// Lo que afecta a Balcarce sin nombrarla (25/09): la ruta 226, el sudeste, la
-// papa. De las fuentes de región entra aunque no diga "Balcarce".
+// Lo que afecta a Balcarce sin nombrarla (25/09): la ruta 226, la 55, la papa.
+// De las fuentes de región entra aunque no diga "Balcarce". El sudeste, hasta
+// el 29/09.
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
+import { readFileSync } from 'node:fs';
 import { paraPruebas } from '../ingesta/ingesta.mjs';
 import { FUENTES_NACIONALES, PALABRAS_ZONA } from '../ingesta/fuentes.mjs';
 
 const { tocaLaZona } = paraPruebas;
 const nota = (titulo, cuerpo = '') => ({ titulo, cuerpo });
 
-test('la ruta 226, el sudeste y la papa tocan la zona', () => {
+test('la ruta 226 y la papa tocan la zona', () => {
   assert.ok(tocaLaZona(nota('Avanza la obra de la Ruta 226 entre Tandil y Mar del Plata')));
-  assert.ok(tocaLaZona(nota('Lluvias en el sudeste bonaerense', 'El temporal afectó caminos rurales.')));
   assert.ok(tocaLaZona(nota('Precios en baja', 'Los productores de papa advierten por la importación.')));
+});
+
+test('decir "sudeste bonaerense" no hace a una nota de la zona: la fiesta de Copetonas (28/09)', () => {
+  // Pasó el 28/09: "Copetonas celebra su fiesta de mate y tortas fritas" (1ylr7j3)
+  // salió sola en Cultura y agenda con un solo medio (Canal 26), porque "sudeste"
+  // la hacía de la zona. Copetonas es del partido de Tres Arroyos, a 300 km.
+  // El 29/09 se sacó "sudeste" de las palabras de la zona.
+  assert.equal(tocaLaZona(nota(
+    'Copetonas, el pueblo bonaerense que nació con el tren, celebra una fiesta de mate y tortas fritas con entrada gratis',
+    'Copetonas, localidad del partido de Tres Arroyos, en el sudeste bonaerense, celebrará la 12ª Fiesta Provincial del Mate y la Torta Frita.',
+  )), false);
+  assert.equal(tocaLaZona(nota('Lluvias en el sudeste de la provincia', 'El temporal afectó caminos rurales.')), false);
+  assert.ok(!PALABRAS_ZONA.some((p) => /sudeste/.test(p)));
+  // Y la IA sabe que la misma región no alcanza.
+  const perfil = readFileSync(new URL('../ingesta/perfil-balcarce.md', import.meta.url), 'utf8');
+  assert.match(perfil, /sudeste bonaerense[\s\S]{0,120}Copetonas[\s\S]{0,160}misma región no\s+alcanza/);
 });
 
 test('"el Papa" no es la papa, y una ruta cualquiera no es la zona', () => {

@@ -180,8 +180,9 @@ que corresponda:
    argentina (`FIGURAS`: Messi, Scaloni, la Selección, Colapinto, Canapino, Los
    Pumas…). Se guarda el nombre encontrado.
 3. **`deLaZona`**: el título o los primeros 600 caracteres tocan la zona sin
-   nombrar a Balcarce (`PALABRAS_ZONA`: ruta 226, ruta 55, sudeste bonaerense,
-   papa semilla, cosecha de papa…), con la frase exacta ("ruta 2260" no es la 226).
+   nombrar a Balcarce (`PALABRAS_ZONA`: ruta 226, ruta 55, papa semilla, cosecha
+   de papa…), con la frase exacta ("ruta 2260" no es la 226). "Sudeste
+   bonaerense" se sacó el 29/09: con eso había salido sola, el 28/09, una fiesta de Copetonas.
 
 Qué hace cada marca: `docs/03-SELECCION.md`, pasos 3, 5 y 6.
 

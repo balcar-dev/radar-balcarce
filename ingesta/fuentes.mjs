@@ -808,13 +808,14 @@ export const PALABRAS_LOCALES = [
   'autódromo juan manuel fangio', 'museo fangio',
 ];
 
-// Lo que afecta a Balcarce sin nombrarla: las rutas que la cruzan, el sudeste
-// y la papa. De las fuentes de afuera entra aunque no diga "Balcarce", pero sin
-// los +22 de nombrarla (25/09). "papa" sola no: el 25/09 apareció "el Papa
-// León XIV"; van frases que sólo pueden ser del cultivo.
+// Lo que afecta a Balcarce sin nombrarla: las rutas que la cruzan y la papa.
+// De las fuentes de afuera entra aunque no diga "Balcarce", pero sin los +22
+// de nombrarla (25/09). "papa" sola no: el 25/09 apareció "el Papa León XIV";
+// van frases que sólo pueden ser del cultivo. "Sudeste bonaerense" ya no
+// (29/09): el 28/09 salió con un solo medio la fiesta del mate de Copetonas
+// (Tres Arroyos, a 300 km) porque la nota decía "sudeste".
 export const PALABRAS_ZONA = [
   'ruta 226', 'ruta nacional 226', 'ruta 55', 'ruta provincial 55',
-  'sudeste bonaerense', 'sudeste de la provincia',
   'productores de papa', 'papa semilla', 'cultivo de papa', 'producción de papa',
   'produccion de papa', 'cosecha de papa', 'siembra de papa',
 ];

@@ -112,7 +112,7 @@ Lo común a todas:
 ### Clima de la noche · 20:00 · 10 a 20 segundos
 
 - **Para qué:** cómo sigue la noche y cómo amanece mañana. La placa dice **"Cómo sigue
-  el clima esta noche"** (30/09: decía "Cómo sigue el día", y a las 20 el día ya pasó).
+  el clima esta noche"** (29/09: decía "Cómo sigue el día", y a las 20 el día ya pasó).
 - **Cómo se arma:** saludo, temperatura de ahora, la mínima de la noche (con aviso si hay
   helada), cómo viene mañana, un toque humano, cierre de noche ("Que descansen") y firma.
   **Nunca "buen día" ni "hoy".** La mínima de la noche es la del pronóstico de mañana:
@@ -140,13 +140,13 @@ Lo común a todas:
 
 - **Para qué:** a la mañana, las notas para arrancar el día; a la tarde, lo que se fue
   sumando; a la noche, lo que dejó el día y todavía no se contó. **Ninguno repite una
-  nota ni un tema** que ya contó otro repaso de hoy o de los dos días anteriores (30/09,
+  nota ni un tema** que ya contó otro repaso de hoy o de los dos días anteriores (29/09,
   Hernán: la misma nota salió en el de la tarde y en el de la noche).
 - **Cómo se arma:** saludo de su hora (a la noche, con el día de la semana), una línea de
   entrada, las notas con los conectores del libro de recursos (cada una con su titular y,
   si el texto es nuestro, una oración de contexto), un cierre de su hora y la dirección
   dicha.
-- **Cuántas notas:** cuatro en cada uno, si hay y si caben (30/09: eran tres a la mañana
+- **Cuántas notas:** cuatro en cada uno, si hay y si caben (29/09: eran tres a la mañana
   y a la tarde). **El video no pasa de 55 segundos**, porque cada repaso se sube también
   como historia y Meta acepta hasta 60. Si no entra, primero se saca la oración de
   contexto de las últimas notas y después notas del final, hasta un mínimo de dos. Un día
@@ -215,7 +215,7 @@ Lo común a todas:
 8. **El saludo es el de la hora:** ningún "buen día" fuera de la mañana. Y todo lo que
    dice es de su parte del día: por eso cada pieza sale sólo dentro de su franja
    (mañana hasta las 12:59, tarde hasta las 18:59, noche desde las 19; `VENTANAS`,
-   `redes/piezas.mjs`). Si se le pasa, ese día no sale (30/09: el repaso de la mañana
+   `redes/piezas.mjs`). Si se le pasa, ese día no sale (29/09: el repaso de la mañana
    podía salir hasta las 15 diciendo "buen día").
 9. **Sin exclamaciones, sin "increíble", sin opinión y sin humor en lo serio.**
 10. **El mismo día y la misma pieza dan el mismo texto**, y días distintos suenan

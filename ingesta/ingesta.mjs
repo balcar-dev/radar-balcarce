@@ -447,7 +447,7 @@ function esPolicialDeAfuera(nota) {
     && clasificar(nota) === 'Policiales';
 }
 
-/** ¿Toca la zona sin nombrar a Balcarce? La ruta 226, el sudeste, la papa.
+/** ¿Toca la zona sin nombrar a Balcarce? La ruta 226, la 55, la papa.
  *  Coincidencia exacta, sin la cola de `contiene` (que acepta hasta tres
  *  letras más para los plurales): con ella "ruta 2260" era "ruta 226". */
 const RE_ZONA = PALABRAS_ZONA.map((p) => new RegExp(`\\b${normalizar(p).replace(/\s+/g, '\\s+')}\\b`));
@@ -469,7 +469,7 @@ function tocaLaZona(nota) {
  *     (`local`, o esDeBalcarce si la nota todavía no lo trae);
  *   · lo que otro medio de la misma historia dice con Balcarce en el título
  *     (`nombraBalcarce`, que el cruce le pasa a la principal);
- *   · lo que toca la zona (`deLaZona`: la 226, la 55, la papa, el sudeste),
+ *   · lo que toca la zona (`deLaZona`: la 226, la 55, la papa),
  *     que sale solo aunque lo cuente un medio.
  *
  * La lectura con IA manda sobre las dos primeras: si dice que el hecho no es
@@ -753,7 +753,7 @@ function semaforo(nota, seccion, medios = cuantosMedios(nota)) {
 
   // Lo de afuera sale solo si lo cuentan bastantes medios (27/09, el cruce):
   // la importancia se mide con cuántos lo cuentan, no con el puntaje.
-  // Lo que toca la zona (la 226, la 55, la papa, el sudeste) es tema de
+  // Lo que toca la zona (la 226, la 55, la papa) es tema de
   // Balcarce aunque lo cuente un solo medio (Hernán, 27/09: "si son de la zona
   // y son realmente temas de Balcarce, que salga"). La lectura con IA igual
   // saca lo que no tenga relación con acá. Qué es de acá: esDeAca.

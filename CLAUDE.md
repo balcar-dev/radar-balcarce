@@ -54,7 +54,7 @@ próxima regla es la 81.)
   fuente. Cada nota dice quién la escribió. Política y Policiales esperan a una persona en
   todas las piezas de redes.**
 - **Las fotos**: la de otro medio o de un organismo, sólo sin su marca (lo que estaba en
-  la escena, como el micrófono de una radio, sí: 30/09), con el crédito en el epígrafe y guardada en el banco propio
+  la escena, como el micrófono de una radio, sí: 29/09), con el crédito en el epígrafe y guardada en el banco propio
   (`web/data/banco-fotos.json`). Nunca foto real de un menor o una víctima, ni en
   Policiales salvo fuente oficial (`docs/05-FOTOS.md`). La placa es lo que sale cuando no
   hay foto que sirva.

@@ -286,7 +286,7 @@ test('elegirFotoParaNota: sin foto de fuente y sin persona pública clara, no el
 // ------------- el nombre de otro medio en la escena y los menores
 // 28/09: la nota de Reino sobre el Fangio salió con la foto de La Vanguardia
 // donde se leía el micrófono de "Radio Líder 90.9", y se decidió descartar esas
-// fotos. 30/09, Hernán: "lo del micrófono no hay problema que salga": lo que
+// fotos. Esa noche (29/09), Hernán: "lo del micrófono no hay problema que salga": lo que
 // estaba en la escena vale; lo que el medio le sobreimprimió a la imagen, no. Y
 // el banco tenía fotos de equipos de chicas (U15, hockey) con las caras a la vista.
 

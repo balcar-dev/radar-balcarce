@@ -94,10 +94,10 @@ cada una con una letra (A, B, C…) y el medio que la publicó. La instrucción
   sponsor, el escudo de un club, el nombre de un evento o una pantalla no son
   marca de agua ("¿podría estar en una foto que sacó cualquier otra persona
   presente ese día?");
-- **el nombre de otro medio que estaba en la escena tampoco es marca** (30/09).
-  Del 28 al 30/09 sí lo era (la nota de Reino sobre el Fangio tenía el micrófono
+- **el nombre de otro medio que estaba en la escena tampoco es marca** (29/09).
+  El 28 y el 29/09 sí lo era (la nota de Reino sobre el Fangio tenía el micrófono
   de "Radio Líder 90.9" y se decidió descartar esas fotos), pero muchas notas
-  quedaban sin foto y el 30/09 se decidió: "lo del micrófono no hay problema que
+  quedaban sin foto y esa noche se decidió: "lo del micrófono no hay problema que
   salga". Sí es marca lo que un medio **le pegó encima** a la imagen aunque no
   esté en una esquina: el zócalo o el logo de un canal (una captura de la tele),
   un recuadro o una placa con su nombre;

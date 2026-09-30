@@ -278,7 +278,7 @@ export function guionClima(clima, _turno, { fecha = new Date(), direccion } = {}
  * El segundo pase del clima (20:00): no repite el de la mañana, mira para
  * adelante. Saludo de noche, cierre de noche, nunca "buen día". La mínima de
  * esta noche es la de mañana (la de la madrugada): la de hoy casi siempre ya
- * pasó a la mañana temprano (30/09).
+ * pasó a la mañana temprano (29/09).
  */
 export function guionClimaNoche(clima, { fecha = new Date(), direccion } = {}) {
   const s = semillaDe('clima-noche', fecha);

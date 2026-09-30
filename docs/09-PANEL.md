@@ -78,7 +78,7 @@ Generate new token (el panel tiene el enlace directo):
      principal, **lo que contó cada medio** (su resumen, si es oficial y el
      enlace a la nota original), el motivo, lo que anotó la IA al leerla (de
      dónde es el hecho, su importancia, por qué le importaría a un vecino:
-     `web/data/fichas.json`). **La IA no escribe sola lo que espera** (30/09,
+     `web/data/fichas.json`). **La IA no escribe sola lo que espera** (29/09,
      Hernán: "si la nota no sale en automático, la idea es que no se escriba
      nada"; regla 68): lo escribe sólo si una persona lo pide;
    - **la papelera**: lo que retiró una persona, tal como estaba publicado (ver

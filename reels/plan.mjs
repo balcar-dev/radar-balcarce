@@ -289,7 +289,7 @@ export function planDelDia(datos, {
 
   // Segundo pase: de noche, cuando la gente ya está en casa y lo que
   // importa es cómo amanece mañana. "Cómo sigue el clima esta noche" y no "cómo
-  // sigue el día": a las 20 el día ya pasó (30/09, Hernán). La mínima de esta
+  // sigue el día": a las 20 el día ya pasó (29/09, Hernán). La mínima de esta
   // noche es la de mañana: el pronóstico da una por día y la de mañana es la
   // de la madrugada; la de hoy casi siempre ya pasó.
   if (datos.clima && tocaHoy('clima-noche')) {
@@ -399,7 +399,7 @@ export function planDelDia(datos, {
 
   // Tres podcasts por día en vez de noticias sueltas (24/09: una noticia sola
   // dicha en voz alta sonaba rara). Los tres cuentan cuatro notas de temas
-  // distintos, sin repetir entre sí (30/09); el de la noche, lo que dejó el día
+  // distintos, sin repetir entre sí (29/09); el de la noche, lo que dejó el día
   // y no se contó. Cada uno lleva su lista de notas con el enlace en el texto del posteo,
   // y sin nombrar la fuente. Cada podcast se sube también como historia.
   // La lista (nombre, título, momento, hora) es una sola: PODCASTS, en
@@ -437,7 +437,7 @@ export function planDelDia(datos, {
   // gente ya vio todo y quiere el resumen. Si ese día no hay al menos dos
   // noticias para repasar, no se arma.
   // También con presupuesto: el del 25/09 (4 notas, 62,7 s) dejó sin historia a las dos redes.
-  // Desde el 30/09 no repite lo que ya contaron el de la mañana o el de la tarde.
+  // Desde el 29/09 no repite lo que ya contaron el de la mañana o el de la tarde.
   const repasoNoche = repasos[podcastNoche.nombre];
   if (repasoNoche) {
     const notasNoche = repasoNoche.notas;

@@ -9,7 +9,7 @@
 // (cada media hora) volvería a gastar cupo de Gemini en notas que ya se sabe
 // que no tienen una foto que sirva. Salvo si quedó sin foto por una falla (sin
 // cupo, ninguna foto en ese momento, una descarga): ésa se prueba hasta tres
-// veces, con una hora entre una y otra (`sePuedeReintentar`, 30/09).
+// veces, con una hora entre una y otra (`sePuedeReintentar`, 29/09).
 
 import { elegirFotoParaNota, descargarImagen, creditoDeFoto } from '../../ingesta/fotos.mjs';
 import { achicarFoto, fotoParaGuardar } from './achicar-foto.mjs';
@@ -39,7 +39,7 @@ export const REINTENTOS_DE_FOTO = { veces: 3, minutosEntreIntentos: 60 };
 
 // Lo que no es una decisión sobre la foto sino una falla: sin cupo o sin
 // respuesta de la IA, ninguna foto que bajar en ese momento, o la elegida que
-// no se pudo volver a bajar. Eso se vuelve a probar (30/09: cinco de 17 notas
+// no se pudo volver a bajar. Eso se vuelve a probar (29/09: cinco de 17 notas
 // sin foto eran esto, y el banco no las volvía a mirar nunca). Lo que la IA
 // descartó a propósito (menores, marcas, otro medio) no se vuelve a preguntar.
 const FALLA = /^(Gemini falló|Groq también falló|sin clave para comparar|sin fotos para comparar)/;

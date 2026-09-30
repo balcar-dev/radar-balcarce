@@ -137,7 +137,7 @@ test('falta la farmacia: a las 18:00 no toca, a las 19:30 está a tiempo, a las 
   assert.deepEqual(d.faltan.map((p) => p.id), ['historia:farmacia']);
 });
 
-test('la ventana de cada pieza es la de redes/piezas.mjs: el podcast de la tarde vale hasta las 19:00, lo que dura la tarde (30/09)', () => {
+test('la ventana de cada pieza es la de redes/piezas.mjs: el podcast de la tarde vale hasta las 19:00, lo que dura la tarde (29/09)', () => {
   const p = piezasDelContrato('2026-09-23').find((x) => x.id === 'reel:noticia2');
   assert.equal(estadoDeLaPieza({ hora: p.hora, ventana: p.ventana, fecha: '2026-09-23', ahora: AR('2026-09-23', '18:59') }).estado, 'pendiente');
   assert.equal(estadoDeLaPieza({ hora: p.hora, ventana: p.ventana, fecha: '2026-09-23', ahora: AR('2026-09-23', '19:00') }).estado, 'falta');

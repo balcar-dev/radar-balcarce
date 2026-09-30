@@ -193,7 +193,7 @@ no está amparado por el art. 28.
   28/09. Se puede usar la foto de otro medio o de un organismo oficial cuando no
   hay una propia u oficial que sirva, **sólo sin su marca de agua ni su nombre
   pegado encima de la imagen** (lo que estaba en la escena, como el micrófono de
-  una radio, sí puede verse desde el 30/09),
+  una radio, sí puede verse desde el 29/09),
   **con el crédito en el epígrafe** y **guardada en el banco propio**
   (`web/data/banco-fotos.json`). **Nunca la foto de un menor ni de una víctima**
   (la IA marca a los menores reconocibles y esa foto no se elige), y en Policiales

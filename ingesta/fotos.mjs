@@ -4,7 +4,7 @@
 // le muestran todas las que haya a una IA con visión para que elija la que
 // mejor sirve, y para que avise si alguna tiene una marca de agua o el nombre de
 // otro medio pegado encima (lo que estaba en la escena, como el micrófono de una
-// radio, vale desde el 30/09; más cuidado con los medios locales y de la zona:
+// radio, vale desde el 29/09; más cuidado con los medios locales y de la zona:
 // CRITERIO-EDITORIAL.md, "Las fotos"). Nunca elige una foto marcada: si la
 // mejor tiene marca, usa la mejor SIN marca en su lugar, aunque no sea la
 // ideal (Hernán, 28/09); si ninguna sirve sin marca, no elige ninguna.
@@ -38,7 +38,7 @@ const TAMANO_MAXIMO = 6 * 1024 * 1024;
 
 /** Una dirección tal como viene en el HTML, con las entidades traducidas: en un
  *  atributo "&" se escribe "&amp;", y así la bajaba Canal 26 (sus fotos piden
- *  "?auth=…&width=…"): la respuesta era un error y la nota quedaba sin foto (30/09). */
+ *  "?auth=…&width=…"): la respuesta era un error y la nota quedaba sin foto (29/09). */
 const direccionDe = (texto) => String(texto)
   .replace(/&amp;/gi, '&').replace(/&#0?38;/g, '&').replace(/&quot;/gi, '"').replace(/&#x2F;/gi, '/')
   .trim();
@@ -48,7 +48,7 @@ const NO_ES_LA_FOTO = /logo|icon|avatar|gravatar|banner|publicidad|sprite|placeh
 
 /** La primera imagen que la página dice que es la principal (og:image o,
  *  si no está, twitter:image). Si no declara ninguna, la primera foto del
- *  cuerpo de la página que no sea un logo ni un ícono (30/09: News Balcarce no
+ *  cuerpo de la página que no sea un logo ni un ícono (29/09: News Balcarce no
  *  declara la principal, pero la foto está en la nota). No es una lectura
  *  completa del HTML: alcanza con esto porque son las mismas etiquetas que ya lee
  *  `web/scripts/auditar-seo-vivo.mjs`. */

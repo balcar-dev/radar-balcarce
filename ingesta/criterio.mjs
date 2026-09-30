@@ -231,7 +231,7 @@ export const FACEBOOK = {
 
 /** Las piezas de video: los podcasts. (Las historias de una nota y el feed de
  *  fotos de Instagram se sacaron el 28/09, y con ellos sus números.) Los tres
- *  repasos cuentan cuatro notas desde el 30/09 (Hernán: "capaz que esté bueno
+ *  repasos cuentan cuatro notas desde el 29/09 (Hernán: "capaz que esté bueno
  *  que siempre sean 4"; eran tres a la mañana y a la tarde). */
 export const PIEZAS = {
   relevanciaPodcast: 62,

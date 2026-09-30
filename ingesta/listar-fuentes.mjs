@@ -62,7 +62,7 @@ Hoy: **${activas.length} feeds activos de ${medios.size} medios** (${todas.lengt
 3. **El cruce** (\`ingesta/cruce.mjs\`): se juntan las notas de todos los medios que cuentan el mismo hecho, con una memoria de 36 horas. Un medio cuenta una sola vez aunque llegue por varios feeds (por eso cada medio tiene **un solo nombre**, el de la columna "Medio").
 4. **Qué queda:**
    - todo lo de los medios de Balcarce;
-   - de afuera, lo que dice Balcarce en el título o toca la zona (la ruta 226, la 55, la papa, el sudeste);
+   - de afuera, lo que dice Balcarce en el título o toca la zona (la ruta 226, la 55, la papa);
    - de afuera, lo que cuentan los medios que pide su sección: ${pide}; el resto, ${MEDIOS_POR_DEFECTO}; lo que nombra a una figura argentina, ${MEDIOS_CON_FIGURA} (\`MEDIOS_DE_AFUERA\`, en \`ingesta/criterio.mjs\`). Nunca con un solo medio.
    - Lo que cuentan **sólo** medios de otras ciudades de la zona (Mar del Plata, Tandil, Necochea…) no se trae.
 5. **El peso** sirve para ordenar (qué va primero, qué entra en el cupo de cada sección), no para decidir si sale. Lo de Balcarce pesa más a propósito.

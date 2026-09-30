@@ -63,7 +63,8 @@ medios de España y de chimentos están apagados.
 ### De acá y de afuera
 
 **"De acá" tiene una sola definición** (`esDeAca`): lo que toca la zona (la ruta 226, la
-55, Napaleofú, Los Pinos, la papa del sudeste); si no, lo de un medio de Balcarce o lo que
+55, Napaleofú, Los Pinos, la papa; decir "sudeste bonaerense" no alcanza desde el 29/09);
+si no, lo de un medio de Balcarce o lo que
 dice Balcarce **en el título**, siempre que la IA no haya dicho que no es de Balcarce.
 Nombrarla al pasar en el texto no alcanza. Lo de acá no pide medios ni ocupa cupo, y **lo
 que toca la zona sale solo aunque lo cuente un solo medio**.
@@ -140,7 +141,7 @@ por IA que parezca real. Condiciones que no se negocian:
   logo en una esquina, el zócalo de un canal): el crédito va en la cita, debajo. Los
   medios chicos de la zona suelen pegar su logo en una esquina: con la mínima duda, esa
   foto no se usa. Lo que estaba en la escena real sí puede verse, también el micrófono
-  con el nombre de una radio (decisión del 30/09).
+  con el nombre de una radio (decisión del 29/09).
 - **Toda foto usada así se guarda en el banco propio** (`web/data/banco-fotos.json`), con
   su crédito y de qué nota salió.
 - **Nunca la foto de un menor o de una víctima**, ni en Policiales, salvo una foto oficial

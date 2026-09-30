@@ -153,7 +153,7 @@ test('el repaso del día se cumple (mañana, tarde y noche) aunque parte de las 
     assert.ok(!manana.notaIds.includes(id), `noticia1 repitió ${id}, contada un día antes`);
     assert.ok(!tarde.notaIds.includes(id), `noticia2 repitió ${id}, contada un día antes`);
   }
-  // El de la noche tampoco repite lo de otros días, ni (desde el 30/09) lo que
+  // El de la noche tampoco repite lo de otros días, ni (desde el 29/09) lo que
   // contaron el de la mañana o el de la tarde de hoy.
   for (const id of ['p0', 'p1', 'p2', 'p3']) {
     assert.ok(!noche.notaIds.includes(id), `el repaso de la noche repitió ${id}, contada un día antes`);

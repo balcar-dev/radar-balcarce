@@ -122,7 +122,7 @@ test('elegirFotosNuevas: un error de red en una nota no frena a las demás', asy
   assert.ok(banco.cae.intentado || banco.cae.archivo === undefined);
 });
 
-// ------------------------------------- las que quedaron sin foto (30/09)
+// ------------------------------------- las que quedaron sin foto (29/09)
 
 test('una nota sin foto por una falla se vuelve a probar (hasta 3 veces, cada una hora); lo que la IA descartó, no', () => {
   const ahora = new Date('2026-09-30T12:00:00Z');
@@ -157,7 +157,7 @@ test('elegirFotosNuevas vuelve a probar la que falló por cupo, y no gasta en la
   assert.deepEqual(nuevo.n2, banco.n2);
 });
 
-test('la foto principal de una página: con "&amp;" traducido, y si no declara una, la primera foto de la nota (30/09)', () => {
+test('la foto principal de una página: con "&amp;" traducido, y si no declara una, la primera foto de la nota (29/09)', () => {
   // Canal 26: la dirección venía con "&amp;" y la descarga daba error.
   assert.equal(
     imagenPrincipalDe('<meta property="og:image" content="https://www.canal26.com/resizer/v2/X.jpeg?auth=abc&amp;width=1200&amp;height=675">'),

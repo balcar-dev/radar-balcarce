@@ -158,7 +158,7 @@ test('para decidir: lo amarillo de estos días con lo que contó cada medio; nun
   assert.equal(lista.find((n) => n.id === 'g').motivo, 'marcada "pendiente" en el panel de la PC');
 });
 
-test('lo que espera a una persona no lo escribe la IA sola: sólo si una persona lo pide (30/09, Hernán; regla 68)', () => {
+test('lo que espera a una persona no lo escribe la IA sola: sólo si una persona lo pide (29/09, Hernán; regla 68)', () => {
   // "Si la nota no sale en automático, la idea es que no se escriba nada." La
   // corrida de la web no pide textos para lo que espera (el 29/09 pidió
   // borradores sola unas horas); sólo el workflow del celular, cuando una

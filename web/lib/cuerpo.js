@@ -37,7 +37,7 @@ const plano = (s) => sinTildes(s)
  */
 /**
  * ¿Tiene respaldo para mostrarse? Lo de Balcarce, lo de la zona (la 226, la 55,
- * la papa, el sudeste: esDeAca, 28/09), lo propio y lo oficial, sí;
+ * la papa: esDeAca, 28/09), lo propio y lo oficial, sí;
  * lo de afuera, sólo si lo contaron dos medios o más (Hernán, 27/09). Desde
  * esa noche el archivo aplica la misma regla: lo que no la cumple pierde la
  * página, salvo que haya salido en las redes (web/lib/archivo.js), y tampoco

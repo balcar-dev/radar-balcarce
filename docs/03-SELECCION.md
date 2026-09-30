@@ -122,7 +122,7 @@ se toca sin preguntar.**
 Una sola definición para las tres reglas que la usan (el semáforo, los medios que
 pide lo de afuera y el cupo). **Es de acá:**
 
-1. lo que toca la zona (`deLaZona`: la 226, la 55, la papa, el sudeste), pase lo
+1. lo que toca la zona (`deLaZona`: la 226, la 55, la papa), pase lo
    que pase;
 2. si no, y si la lectura con IA dijo que el hecho **no** es de Balcarce
    (`noEsDeAcaSegunLaIA`, paso 8): **no** es de acá;

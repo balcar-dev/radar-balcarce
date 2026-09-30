@@ -153,7 +153,7 @@ export function paraDecidir(notas = [], decisiones = {}, {
 }
 
 // (El borrador que la IA escribía sola para lo que espera a una persona se sacó
-// el 30/09: "si la nota no sale en automático, la idea es que no se escriba
+// el 29/09: "si la nota no sale en automático, la idea es que no se escriba
 // nada" (Hernán). Lo que espera se escribe sólo si una persona lo pide desde el
 // celular. Regla 68.)
 

@@ -47,4 +47,7 @@ Esteban Reino.
 
 - Lo que pasa en otro país, salvo que tenga una conexión argentina directa.
 - Lo que pasa en otra ciudad, aunque una nota nombre a Balcarce en una lista.
+- Lo que pasa en otra ciudad o pueblo del sudeste bonaerense (por ejemplo, una
+  fiesta en Copetonas, del partido de Tres Arroyos): estar en la misma región no
+  alcanza para que le importe a un vecino de Balcarce.
 - Lo nacional que no cambia nada concreto para un vecino.

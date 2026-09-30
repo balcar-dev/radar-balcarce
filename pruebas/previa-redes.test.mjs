@@ -65,11 +65,11 @@ test('qué cuenta cada repaso: lo que contó si salió; nada si ya no sale; si n
   assert.deepEqual(porNombre.podcast.notas.map((n) => n.id), delPlan.podcast.notas.map((n) => n.id));
   assert.ok(porNombre.podcast.notas.length >= 2);
   assert.ok(!porNombre.podcast.notas.some((n) => ['e', 'f'].includes(n.id)), 'ni Política ni Policiales en un repaso');
-  assert.ok(!porNombre.podcast.notas.some((n) => ['b', 'c'].includes(n.id)), 'la noche no repite lo que contó la tarde (30/09)');
+  assert.ok(!porNombre.podcast.notas.some((n) => ['b', 'c'].includes(n.id)), 'la noche no repite lo que contó la tarde (29/09)');
   assert.ok(porNombre.podcast.segundos > 0);
 });
 
-test('los tres repasos cuentan cuatro notas cada uno y ninguno repite (30/09, Hernán)', () => {
+test('los tres repasos cuentan cuatro notas cada uno y ninguno repite (29/09, Hernán)', () => {
   const temas = ['mercado', 'biblioteca', 'hospital', 'cooperadora', 'autódromo', 'bomberos', 'polideportivo', 'carnaval', 'geriátrico', 'terminal', 'cementerio', 'balneario'];
   const secciones = ['Balcarce', 'Cultura y agenda', 'Deportes', 'Agro'];
   // Títulos sin palabras largas en común: si no, son "el mismo tema" y cuentan una vez.

@@ -362,7 +362,7 @@ ni reels de una sola nota: dichas de a una sonaban raras.
 1. Sólo las que pueden salir solas (`sePuedeSola`): ni roja, ni Política ni
    Policiales, con cuerpo, que no sea nota propia, y **de Balcarce**
    (`esParaLasRedes`, la misma regla que Facebook).
-2. **Los tres, 4 notas** (30/09; eran 3 a la mañana y a la tarde), y **ninguno
+2. **Los tres, 4 notas** (29/09; eran 3 a la mañana y a la tarde), y **ninguno
    repite** una nota ni un tema que ya contó otro repaso de hoy o de los dos días
    anteriores (`notasContadasEnPodcasts`, `repasosDelDia` en `redes/repasos.mjs`).
 3. **Mañana y tarde:** relevancia 62 o más. **Noche:** lo que dejó el día y
