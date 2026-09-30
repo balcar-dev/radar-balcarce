@@ -1,52 +1,7 @@
 {
- "generado": "2026-09-30T19:33:07.255Z",
+ "generado": "2026-09-30T20:02:11.164Z",
  "intentosMaximos": 3,
  "notas": [
-  {
-   "id": "1lyj59u",
-   "titulo": "\"Hoy es no, pero estamos cercanos a que pronto podamos llegar a eso\"",
-   "copete": "Luego de lo que pasó el fin de semana con la reapertura del autódromo \"Juan Manuel Fangio\", el acompañamiento multitudinario del público, el buen espectáculo que brindaron las TC Pick Up y el Turismo Special de la Costa y la buena respuesta del",
-   "seccion": "Automovilismo",
-   "fecha": "2026-09-30T11:48:36.000Z",
-   "fuentes": [
-    {
-     "medio": "El Diario Balcarce",
-     "enlace": "https://eldiariobalcarce.com.ar/hoy-es-no-pero-estamos-cercanos-a-que-pronto-podamos-llegar-a-eso-726",
-     "fecha": "2026-09-30T11:48:36.000Z"
-    }
-   ],
-   "intentos": 3
-  },
-  {
-   "id": "kwip9o",
-   "titulo": "De la escuela a la universidad: estudiantes de la EP N.º 10 recorrieron la huerta y los laboratorios de Ciencias Agrarias",
-   "copete": "Un total de 84 estudiantes de la Escuela Primaria N.º 10 “Malvinas Argentinas” participaron el lunes 28 de septiembre de una jornada educativa en la Facultad de Ciencias Agrarias de la Universidad Nacional de Mar del Plata. La propuesta tuvo como objetivo fortalecer el trabajo…",
-   "seccion": "Balcarce",
-   "fecha": "2026-09-30T19:12:45.000Z",
-   "fuentes": [
-    {
-     "medio": "Puntonueve (FM 100.9)",
-     "enlace": "https://puntonueve.com.ar/de-la-escuela-a-la-universidad-estudiantes-de-la-ep-n-o-10-recorrieron-la-huerta-y-los-laboratorios-de-ciencias-agrarias/",
-     "fecha": "2026-09-30T19:12:45.000Z"
-    }
-   ],
-   "intentos": 1
-  },
-  {
-   "id": "140a3wt",
-   "titulo": "Guillén habló en GABAL sobre su encuentro con Santilli y Abad en el Fangio",
-   "copete": "El concejal Enrique Guillén brindó detalles en los estudios de GABAL sobre las conversaciones que mantuvo durante el fin de semana con Diego Santilli y Maximiliano Abad. Aseguró que dialogaron sobre la situación nacional, provincial y regional, además del automovilismo.",
-   "seccion": "Política",
-   "fecha": "2026-09-30T12:52:26.000Z",
-   "fuentes": [
-    {
-     "medio": "Radio Gabal (FM 104.1)",
-     "enlace": "https://www.radiogabal.com.ar/index.php/politica/guillen-hablo-en-gabal-sobre-su-encuentro-con-santilli-y-abad-en-el-fangio",
-     "fecha": "2026-09-30T12:52:26.000Z"
-    }
-   ],
-   "intentos": 3
-  },
   {
    "id": "uhxgoz",
    "titulo": "Hockey – Gran labor de «Las Mamis del Ateneo»",
@@ -75,14 +30,14 @@
      "fecha": "2026-09-30T16:58:00.000Z"
     },
     {
-     "medio": "Ámbito",
-     "enlace": "https://www.ambito.com/espectaculos/el-juicio-del-pity-alvarez-quedo-pausa-las-razones-detras-la-decision-n6328541",
-     "fecha": "2026-09-30T18:31:00.000Z"
-    },
-    {
      "medio": "Minuto Uno",
      "enlace": "https://www.minutouno.com/espectaculos/ordenaron-un-nuevo-peritaje-determinar-si-pity-alvarez-puede-continuar-el-juicio-homicidio-n6328558",
      "fecha": "2026-09-30T18:51:00.000Z"
+    },
+    {
+     "medio": "Ámbito",
+     "enlace": "https://www.ambito.com/espectaculos/el-juicio-del-pity-alvarez-quedo-pausa-las-razones-detras-la-decision-n6328541",
+     "fecha": "2026-09-30T18:31:00.000Z"
     },
     {
      "medio": "Noticias Argentinas (NA)",
@@ -90,7 +45,22 @@
      "fecha": "2026-09-30T18:39:00.000Z"
     }
    ],
-   "intentos": 2
+   "intentos": 3
+  },
+  {
+   "id": "1lyj59u",
+   "titulo": "\"Hoy es no, pero estamos cercanos a que pronto podamos llegar a eso\"",
+   "copete": "",
+   "seccion": "Automovilismo",
+   "fecha": "2026-09-30T12:01:02.331Z",
+   "fuentes": [
+    {
+     "medio": "El Diario Balcarce",
+     "enlace": "https://eldiariobalcarce.com.ar/hoy-es-no-pero-estamos-cercanos-a-que-pronto-podamos-llegar-a-eso-726",
+     "fecha": null
+    }
+   ],
+   "intentos": 3
   },
   {
    "id": "qsc6ig",

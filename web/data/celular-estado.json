@@ -1,10 +1,10 @@
 {
- "generado": "2026-09-30T19:33:07.255Z",
- "portada": 66,
- "archivo": 648,
- "esperandoCuerpo": 7,
+ "generado": "2026-09-30T20:02:11.164Z",
+ "portada": 63,
+ "archivo": 649,
+ "esperandoCuerpo": 5,
  "redes": {
-  "generado": "2026-09-30T19:33:07.303Z",
+  "generado": "2026-09-30T20:02:11.195Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -25,6 +25,16 @@
     "ventana": 180,
     "momento": "cerrada",
     "salio": "2026-09-30T13:01:31.279Z"
+   },
+   {
+    "nombre": "participa-reclamos",
+    "tipo": "historia",
+    "hora": "12:00",
+    "que": "Tu reclamo",
+    "voz": null,
+    "ventana": 60,
+    "momento": "cerrada",
+    "salio": null
    },
    {
     "nombre": "noticia2",
@@ -137,17 +147,17 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 52,
+    "segundos": 51,
     "notas": [
-     {
-      "id": "y9vwef",
-      "titulo": "El equipo de fútbol playa clasifica a la final bonaerense",
-      "seccion": "Deportes"
-     },
      {
       "id": "2uqvxt",
       "titulo": "La AFA apela en la FIFA la sanción a Leandro Paredes para reducirla",
       "seccion": "Fútbol"
+     },
+     {
+      "id": "1vqwmji",
+      "titulo": "Cristian Giuliano y Desirée Fraiz sobresalen en el Rally Mar y Sierras MTB",
+      "seccion": "Deportes"
      },
      {
       "id": "1vgun5x",
@@ -187,12 +197,6 @@
    ],
    "cola": [
     {
-     "id": "5evpzb",
-     "titulo": "Cabrera y Otero ganan la carrera nocturna en Napaleofú",
-     "seccion": "Deportes",
-     "marcada": false
-    },
-    {
      "id": "1h3b7f0",
      "titulo": "La Fiesta Nacional del Postre anuncia sus actividades para octubre",
      "seccion": "Cultura y agenda",
@@ -205,15 +209,15 @@
      "marcada": false
     },
     {
-     "id": "1s10vxl",
-     "titulo": "Rocío Espinillo anticipa su receta para la Fiesta del Postre",
+     "id": "qbrt3e",
+     "titulo": "La noche de los sueños llega con artistas locales para ayudar a Rufi Cerezuela",
      "seccion": "Cultura y agenda",
      "marcada": false
     },
     {
-     "id": "qbrt3e",
-     "titulo": "La noche de los sueños llega con artistas locales para ayudar a Rufi Cerezuela",
-     "seccion": "Cultura y agenda",
+     "id": "5evpzb",
+     "titulo": "Cabrera y Otero ganan la carrera nocturna en Napaleofú",
+     "seccion": "Deportes",
      "marcada": false
     }
    ],

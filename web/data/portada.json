@@ -1,5 +1,5 @@
 {
-  "generado": "2026-09-30T19:33:07.255Z",
+  "generado": "2026-09-30T20:02:11.164Z",
   "notas": [
     {
       "id": "1h3b7f0",
@@ -146,9 +146,11 @@
       "guion": "El FMI concluye su misión técnica y evalúa la economía",
       "seccion": "Economía",
       "medios": [
+        "QZ Noticias (Mar del Plata)",
         "Infobae",
         "TN (Todo Noticias)",
         "El Cronista",
+        "iProfesional",
         "Crónica",
         "Canal 26",
         "Noticias Argentinas (NA)"
@@ -580,14 +582,15 @@
       "medios": [
         "Diputados Bonaerenses",
         "La Nación",
-        "TN (Todo Noticias)"
+        "TN (Todo Noticias)",
+        "Página/12"
       ],
       "enlace": "https://tn.com.ar/politica/2026/09/30/la-oposicion-busca-forzar-una-sesion-especial-para-declarar-inconstitucional-el-dnu-que-habilita-la-venta-de-tierras-a-extranjeros/",
       "teniaImagenLaFuente": true,
       "fecha": "2026-09-30T17:09:20.000Z",
       "sinFecha": false,
       "visto": "2026-09-30T19:31:11.463Z",
-      "relevancia": 63,
+      "relevancia": 73,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -649,69 +652,6 @@
       "foto": {
         "archivo": "fotos-notas/1pawdnw.jpg",
         "credito": "Foto: TN (Todo Noticias)"
-      }
-    },
-    {
-      "id": "n3bhr",
-      "titulo": "Diputados discute la ley de soberanía de Malvinas entre forcejeos e insultos",
-      "copete": "Un plenario de comisiones de la Cámara de Diputados terminó en escándalo este miércoles durante el debate por la defensa de la soberanía de Malvinas. Hubo insultos, empujones y cruces entre legisladores del oficialismo y de la oposición.",
-      "cuerpo": "Los roces empezaron cuando el oficialista Jairo Guzmán interrumpió el discurso de la diputada Myriam Bregman, lo que motivó la reacción del diputado opositor Juan Grabois y derivó en cruces verbales con otros representantes del espacio libertario.\n\nEl debate se desarrolló tras el fallo de la Corte Suprema que restableció la vigencia de la derogación de la ley de tierras incluida en el decreto de necesidad y urgencia 70 de 2023, una medida que había frenado una cautelar del Centro de Ex Combatientes Islas Malvinas de La Plata.\n\nTras los incidentes y las exposiciones de la subsecretaria de Planeamiento Estratégico, Paula Tadei, y del secretario Legal y Administrativo de Economía, Juan Ignacio Stampalija, el presidente de la comisión de Defensa, Carlos Zapata, intentó levantar la reunión.",
-      "guion": "Diputados discute la ley de soberanía de Malvinas entre forcejeos e insultos",
-      "seccion": "Política",
-      "medios": [
-        "Infobae",
-        "Clarín",
-        "iProfesional"
-      ],
-      "enlace": "https://www.clarin.com/politica/escandalo-diputados-debate-ley-malvinas-forcejeos-legisladores-insultos-cagon-vende-patria_0_x3qLPfBFzm.html",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-30T17:08:17.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-30T19:31:11.463Z",
-      "relevancia": 68,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "textoRedes": "Un plenario de comisiones de la Cámara de Diputados sobre la soberanía de Malvinas terminó en escándalo con forcejeos e insultos entre legisladores.",
-      "etiquetas": [
-        "Diputados",
-        "Ley Malvinas",
-        "Nación"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Clarín",
-          "enlace": "https://www.clarin.com/politica/escandalo-diputados-debate-ley-malvinas-forcejeos-legisladores-insultos-cagon-vende-patria_0_x3qLPfBFzm.html",
-          "fecha": "2026-09-30T17:08:17.000Z",
-          "oficial": false,
-          "aporte": "Aportó detalles sobre el desarrollo del plenario, los cruces entre los legisladores y los funcionarios presentes."
-        },
-        {
-          "medio": "Infobae",
-          "enlace": "https://www.infobae.com/politica/2026/09/30/cagon-y-vende-patria-el-debate-del-proyecto-sobre-malvinas-empezo-con-escandalo-en-diputados/",
-          "fecha": "2026-09-30T19:24:34.000Z",
-          "oficial": false,
-          "aporte": "Informó sobre el inicio del debate y el clima de tensión en la Cámara de Diputados."
-        },
-        {
-          "medio": "iProfesional",
-          "enlace": "https://www.iprofesional.com/politica/465599-escandalo-en-diputados-insultos-y-forcejeos-entre-grabois-y-legisladores-libertarios",
-          "fecha": "2026-09-30T18:45:00.000Z",
-          "oficial": false,
-          "aporte": "Detalló el cruce entre los diputados nacionales durante la exposición de Myriam Bregman."
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron tres medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "diputados-discute-la-ley-de-soberania-de-malvinas-entre-forcejeos-e",
-      "foto": {
-        "archivo": "fotos-notas/n3bhr.jpg",
-        "credito": "Foto: Clarín"
       }
     },
     {
@@ -861,7 +801,7 @@
       "fecha": "2026-09-30T16:59:57.000Z",
       "sinFecha": false,
       "visto": "2026-09-30T17:01:10.363Z",
-      "relevancia": 84,
+      "relevancia": 74,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -947,7 +887,7 @@
       "fecha": "2026-09-30T16:46:30.000Z",
       "sinFecha": false,
       "visto": "2026-09-30T18:23:17.621Z",
-      "relevancia": 87,
+      "relevancia": 77,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1010,88 +950,6 @@
       }
     },
     {
-      "id": "1k45c07",
-      "titulo": "Caról pide a Diputados rechazar el decreto sobre tierras tras el fallo",
-      "copete": "La fundadora de la Coalición Cívica reclamó al cuerpo legislativo que rechace el artículo del DNU que derogó la ley de control de tierras a extranjeros. El pedido surge luego de que la Corte Suprema dejara sin efecto una sentencia contraria a la norma.",
-      "cuerpo": "La dirigente sostuvo que la medida afecta la soberanía territorial y exigió un tratamiento urgente tras la intervención del máximo tribunal.\n\nEl planteo se produjo un día después de que la Corte Suprema revocara un fallo de la Cámara Federal de La Plata que había declarado inconstitucional la derogación de la Ley de Tierras Rurales. El máximo tribunal dejó sin efecto aquella sentencia por considerar que el Centro de Ex Combatientes Islas Malvinas La Plata no tenía legitimación para iniciar la demanda.\n\nA partir de la decisión judicial, volvió a regir la derogación de la normativa que fijaba un tope del 15% para la titularidad extranjera sobre la superficie nacional, provincial y departamental, además de un límite de 1.000 hectáreas en la zona núcleo.",
-      "guion": "Carrio pide a Diputados rechazar el decreto sobre tierras tras el fallo",
-      "seccion": "Política",
-      "medios": [
-        "La Nación",
-        "Infobae",
-        "iProfesional"
-      ],
-      "enlace": "https://www.iprofesional.com/politica/465593-venta-tierras-extranjeros-bajo-presion-fallo-que-podria-pasar",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-30T16:44:00.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-30T19:01:15.723Z",
-      "relevancia": 63,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Elisa Carrió pidió a Diputados rechazar el artículo sobre tierras del DNU 70/23.",
-        "La Corte Suprema revocó un fallo que declaraba inconstitucional la derogación de la ley.",
-        "El máximo tribunal no se pronunció sobre el fondo de la constitucionalidad de la norma.",
-        "Volvieron a quedar sin efecto los límites a la compra de tierras por parte de extranjeros."
-      ],
-      "noConfirmado": [
-        "La Corte Suprema no determinó si la derogación de la Ley de Tierras resulta constitucional o inconstitucional."
-      ],
-      "textoRedes": "Elisa Carrió pidió a la Cámara de Diputados que rechace el artículo del DNU que derogó la ley de tierras a extranjeros, luego de que la Corte Suprema revocara un fallo que frenaba la medida.",
-      "etiquetas": [
-        "Elisa Carrio",
-        "Corte Suprema",
-        "Ley de Tierras",
-        "Camara de Diputados",
-        "DNU 70/23"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "iProfesional",
-          "enlace": "https://www.iprofesional.com/politica/465593-venta-tierras-extranjeros-bajo-presion-fallo-que-podria-pasar",
-          "fecha": "2026-09-30T16:44:00.000Z",
-          "oficial": false,
-          "aporte": "Detalló las declaraciones de Elisa Carrió, los argumentos del fallo de la Corte Suprema y los límites que establecía la derogada Ley de Tierras."
-        },
-        {
-          "medio": "Infobae",
-          "enlace": "https://www.infobae.com/politica/2026/09/30/carrio-critico-el-fallo-que-dejo-vigente-la-venta-de-tierras-a-extranjeros-y-pidio-que-diputados-rechace-el-capitulo-en-el-dnu-702023/",
-          "fecha": "2026-09-30T18:50:03.000Z",
-          "oficial": false,
-          "aporte": "Informó sobre el pedido de Elisa Carrió a la Cámara de Diputados tras el fallo del máximo tribunal."
-        },
-        {
-          "medio": "La Nación",
-          "enlace": "https://www.lanacion.com.ar/politica/tras-el-fallo-de-la-corte-elisa-carrio-reclamo-a-diputados-que-rechace-el-dnu-de-extranjerizacion-de-nid30092026/",
-          "fecha": "2026-09-30T18:56:25.000Z",
-          "oficial": false,
-          "aporte": "Confirmó el pedido de Elisa Carrió a la Cámara de Diputados para rechazar el artículo 154 del DNU 70/23."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "16ufhqn",
-          "titulo": "La Corte revoca el fallo sobre la Ley de Tierras del DNU",
-          "fecha": "2026-09-29T03:00:00.000Z",
-          "ruta": "/nota/la-corte-revoca-el-fallo-sobre-la-ley-de-tierras-del-dnu-16ufhqn"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron tres medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "carol-pide-a-diputados-rechazar-el-decreto-sobre-tierras-tras-el-fallo",
-      "foto": {
-        "archivo": "fotos-notas/1k45c07.jpg",
-        "credito": "Foto: La Nación"
-      }
-    },
-    {
       "id": "1gv3zir",
       "titulo": "La Defensoría del Pueblo asiste a vecinos con trámites y subsidios",
       "copete": "La delegación local detalla su trabajo en la atención de reclamos, el asesoramiento por el subsidio de gas y las gestiones para acceder a prestaciones de salud.",
@@ -1102,11 +960,11 @@
         "Diario La Vanguardia"
       ],
       "enlace": "https://www.diariolavanguardia.com/noticias/44954-zona-fria-el-rol-de-la-defensoria-y-como-asesoran-a-los-vecinos-por-el-subsidio-del-gas/",
-      "teniaImagenLaFuente": true,
+      "teniaImagenLaFuente": false,
       "fecha": "2026-09-30T16:31:19.444Z",
       "sinFecha": true,
       "visto": "2026-09-30T16:31:19.444Z",
-      "relevancia": 63,
+      "relevancia": 53,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1224,6 +1082,194 @@
       }
     },
     {
+      "id": "i4muk4",
+      "titulo": "Argentina juega las Eliminatorias para el Mundial 2030 pese a estar clasificada",
+      "copete": "La Selección nacional disputará el torneo sudamericano con su lugar asegurado en la Copa del Mundo. Uruguay y Paraguay harán lo mismo bajo el formato habitual de dieciocho fechas.",
+      "cuerpo": "Las Eliminatorias Sudamericanas rumbo al Mundial 2030 conservarán el sistema de disputa tradicional de todos contra todos a lo largo de dieciocho fechas. La Selección Argentina participará del certamen a pesar de tener su lugar garantizado en la Copa del Mundo por ser anfitriona de al menos un encuentro de la fase inicial. El mismo recorrido realizarán Uruguay y Paraguay, que también organizarán partidos del torneo centenario y recibieron el pase directo.\n\nDe esta manera, las tres plazas y media restantes que la FIFA otorga a la Conmebol se las disputarán los otros siete países de la región: Brasil, Colombia, Ecuador, Chile, Perú, Venezuela y Bolivia. El campeonato conmemorará el centenario de la primera edición de la Copa del Mundo y contará con un formato tricontinental e inédito.\n\nLa competencia se desarrollará con los diez seleccionados de la confederación y los tres mejores ubicados en la tabla final, exceptuando a los anfitriones, accederán de manera directa al torneo.",
+      "guion": "Argentina juega las Eliminatorias para el Mundial 2030 pese a estar clasificada",
+      "seccion": "Fútbol",
+      "medios": [
+        "El Destape",
+        "Perfil",
+        "Noticias Argentinas (NA)",
+        "El Marplatense",
+        "Bolavip Argentina"
+      ],
+      "enlace": "https://www.elmarplatense.com/argentina-uruguay-y-paraguay-jugaran-las-eliminatorias-rumbo-al-mundial-2030",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-30T14:56:48.000Z",
+      "sinFecha": false,
+      "visto": "2026-09-30T20:01:15.771Z",
+      "relevancia": 92,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Las Eliminatorias mantendrán el formato de dieciocho fechas con diez selecciones",
+        "Argentina, Uruguay y Paraguay competirán pese a estar clasificados",
+        "Los tres países son sedes de partidos por el centenario del torneo"
+      ],
+      "seSabe": [
+        "Las Eliminatorias Sudamericanas para el Mundial 2030 se jugarán a 18 fechas bajo el formato de todos contra todos",
+        "Argentina, Uruguay y Paraguay tienen su lugar asegurado en la Copa del Mundo por ser sedes de partidos del centenario",
+        "Las tres plazas y media restantes se disputarán entre Brasil, Colombia, Ecuador, Chile, Perú, Venezuela y Bolivia"
+      ],
+      "noConfirmado": [
+        "La oficialización completa del reparto de cupos y detalles finales por parte de los organismos competentes"
+      ],
+      "textoRedes": "La Selección Argentina disputará las Eliminatorias Sudamericanas rumbo al Mundial 2030 a pesar de tener su clasificación asegurada por ser sede del torneo centenario.",
+      "etiquetas": [
+        "Seleccion Argentina",
+        "Eliminatorias 2030",
+        "Mundial 2030",
+        "Conmebol",
+        "Futbol"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Marplatense",
+          "enlace": "https://www.elmarplatense.com/argentina-uruguay-y-paraguay-jugaran-las-eliminatorias-rumbo-al-mundial-2030",
+          "fecha": "2026-09-30T14:56:48.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "El Destape",
+          "enlace": "https://www.eldestapeweb.com/deportes/confirmado-seleccion-argentina-clasificada-mundial-2030-asi-jugaran-eliminatorias-2026930151016",
+          "fecha": "2026-09-30T18:10:16.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Perfil",
+          "enlace": "https://442.perfil.com/noticias/futbol/argentina-jugaria-las-eliminatorias-del-mundial-2030-pese-a-estar-clasificada-como-seria-el-insolito-formato.phtml",
+          "fecha": "2026-09-30T19:20:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Noticias Argentinas (NA)",
+          "enlace": "https://noticiasargentinas.com/deportes/eliminatorias-2030--argentina--uruguay-y-paraguay-jugaran-aunque-ya-esten-clasificadas_a6abd5d61c5ebcb5a82accc62",
+          "fecha": "2026-09-30T19:33:53.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Bolavip Argentina",
+          "enlace": "https://bolavip.com/ar/eliminatorias-conmebol/se-confirma-como-se-jugaran-las-eliminatorias-conmebol-rumbo-al-mundial-2030-argentina-paraguay-y-uruguay-clasificadas",
+          "fecha": "2026-09-30T16:44:14.000Z",
+          "oficial": false,
+          "aporte": null
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron cinco medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "argentina-juega-las-eliminatorias-para-el-mundial-2030-pese-a-estar",
+      "foto": {
+        "archivo": "fotos-notas/i4muk4.jpg",
+        "credito": "Foto: El Marplatense"
+      }
+    },
+    {
+      "id": "1i6b1ka",
+      "titulo": "El consumo porteño muestra caídas en supermercados y subas en shoppings",
+      "copete": "El consumo en la Ciudad de Buenos Aires registró resultados dispares durante el segundo trimestre del año. Las ventas aumentaron en los shoppings pero cayeron en los supermercados y mayoristas.",
+      "cuerpo": "En contraste con el sector de consumo masivo, los shoppings incrementaron sus ventas un 6,5% interanual a valores constantes. El organismo estadístico detalló que este repunte estuvo impulsado por descuentos y financiamiento sin interés en el mes de mayo, con subas destacadas en indumentaria y ropa deportiva.\n\nPor otra parte, el mercado automotor contabilizó 27.627 patentamientos, lo que representó una baja interanual del 3,9%. En este rubro, los vehículos nacionales se derrumbaron un 36,3% y los importados crecieron un 12,8%, mientras que los automóviles ecológicos alcanzaron al 4% del total de las ventas.",
+      "guion": "El consumo porteño muestra caídas en supermercados y subas en shoppings.",
+      "seccion": "Economía",
+      "medios": [
+        "Infobae",
+        "Ámbito",
+        "C5N",
+        "Noticias Argentinas (NA)"
+      ],
+      "enlace": "https://noticiasargentinas.com/economia/el-consumo-en-los-shoppings-portenos-crece-por-promociones-pero-cae-en-supermercados-y-mayoristas_a6abd216d129df45908d872f7",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-30T14:48:00.000Z",
+      "sinFecha": false,
+      "visto": "2026-09-30T18:01:10.942Z",
+      "relevancia": 63,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Las ventas en supermercados cayeron 1,2% interanual en el segundo trimestre.",
+        "Los autoservicios mayoristas sufrieron una retracción del 17,6%.",
+        "Los shoppings aumentaron sus operaciones un 6,5% gracias a promociones.",
+        "El mercado automotor registró una baja del 3,9% en patentamientos."
+      ],
+      "seSabe": [
+        "Las ventas en supermercados porteños bajaron 1,2% interanual en el segundo trimestre de 2026, según el IDECBA.",
+        "Los autoservicios mayoristas acumularon diez trimestres consecutivos de caída con un desplome del 17,6%.",
+        "Los shoppings crecieron 6,5% interanual impulsados por el desempeño de mayo y sus promociones.",
+        "El mercado automotor local registró 27.627 patentamientos, con una baja del 3,9% interanual."
+      ],
+      "textoRedes": "El consumo en la Ciudad de Buenos Aires mostró resultados dispares durante el segundo trimestre de 2026. Las ventas cayeron en supermercados y mayoristas, pero crecieron en los shoppings gracias a las promociones.",
+      "etiquetas": [
+        "consumo",
+        "supermercados",
+        "shoppings",
+        "IDECBA",
+        "Buenos Aires",
+        "autoservicios mayoristas"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Noticias Argentinas (NA)",
+          "enlace": "https://noticiasargentinas.com/economia/el-consumo-en-los-shoppings-portenos-crece-por-promociones-pero-cae-en-supermercados-y-mayoristas_a6abd216d129df45908d872f7",
+          "fecha": "2026-09-30T14:48:00.000Z",
+          "oficial": false,
+          "aporte": "Detalló las cifras del IDECBA sobre supermercados, mayoristas, shoppings y patentamientos."
+        },
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/economia/2026/09/30/el-consumo-en-supermercados-de-caba-disminuyo-12-interanual-en-el-segundo-trimestre-y-en-autoservicios-mayoristas-176/",
+          "fecha": "2026-09-30T14:51:48.000Z",
+          "oficial": false,
+          "aporte": "Coincidió en la baja del 1,2% en supermercados y la tendencia descendente."
+        },
+        {
+          "medio": "Ámbito",
+          "enlace": "https://www.ambito.com/economia/el-consumo-caba-profundiza-su-caida-venta-supermercados-cedio-12-interanual-el-segundo-trimestre-n6328457",
+          "fecha": "2026-09-30T16:42:00.000Z",
+          "oficial": false,
+          "aporte": "Aportó datos sobre la caída de la canasta básica y el ticket promedio."
+        },
+        {
+          "medio": "C5N",
+          "enlace": "https://www.c5n.com/economia/el-consumo-supermercados-portenos-cayo-un-12-interanual-y-los-mayoristas-se-hundieron-176-n250352",
+          "fecha": "2026-09-30T17:32:00.000Z",
+          "oficial": false,
+          "aporte": "Informó que los mayoristas acumulan diez caídas trimestrales consecutivas."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "xqf3rp",
+          "titulo": "Señales mixtas para el consumo: volvieron a caer las ventas en supermercados, pero crecieron en los mayoristas",
+          "fecha": "2026-09-23T19:53:57.000Z",
+          "ruta": "/nota/senales-mixtas-para-el-consumo-volvieron-a-caer-las-ventas-en-xqf3rp"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron cuatro medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "el-consumo-porteno-muestra-caidas-en-supermercados-y-subas-en",
+      "foto": {
+        "archivo": "fotos-notas/1i6b1ka.jpg",
+        "credito": "Foto: Ámbito"
+      }
+    },
+    {
       "id": "10xubmm",
       "titulo": "Joan Laporta revela el llamado que frenó el pase de Lautaro",
       "copete": "El presidente del Barcelona explicó que intentó contratar al delantero argentino. Sin embargo, el Inter de Milán rechazó la propuesta de inmediato.",
@@ -1315,11 +1361,11 @@
         "Diario La Vanguardia"
       ],
       "enlace": "https://www.diariolavanguardia.com/noticias/44950-el-hospital-fossati-bajo-presion-mas-demanda-1-124-millones-de-deuda-y-una-fuerte-dependencia-de-fondos-municipales/",
-      "teniaImagenLaFuente": true,
+      "teniaImagenLaFuente": false,
       "fecha": "2026-09-30T13:31:15.123Z",
       "sinFecha": true,
       "visto": "2026-09-30T13:31:15.123Z",
-      "relevancia": 63,
+      "relevancia": 53,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1450,7 +1496,6 @@
       "seccion": "Deportes",
       "medios": [
         "Infórmese Primero (FM 104.9)",
-        "Radio Gabal (FM 104.1)",
         "Municipalidad de Balcarce"
       ],
       "enlace": "https://balcarce.gob.ar/2026/09/30/tres-balcarcenos-elegidos-para-representar-a-la-federacion-provincial-de-padel/",
@@ -1458,7 +1503,7 @@
       "fecha": "2026-09-30T13:24:29.000Z",
       "sinFecha": false,
       "visto": "2026-09-30T14:01:11.068Z",
-      "relevancia": 94,
+      "relevancia": 84,
       "local": true,
       "oficial": true,
       "publicadaPor": null,
@@ -1565,7 +1610,11 @@
         "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
         "sugeridoPorIA": "MEDIA"
       },
-      "slug": "cristian-giuliano-y-desiree-fraiz-sobresalen-en-el-rally-mar-y"
+      "slug": "cristian-giuliano-y-desiree-fraiz-sobresalen-en-el-rally-mar-y",
+      "foto": {
+        "archivo": "fotos-notas/1vqwmji.jpg",
+        "credito": "Foto: Infórmese Primero (FM 104.9)"
+      }
     },
     {
       "id": "qbrt3e",
@@ -1700,9 +1749,7 @@
       "guion": "El equipo de fútbol playa clasifica a la final bonaerense",
       "seccion": "Deportes",
       "medios": [
-        "Puntonueve (FM 100.9)",
         "Infórmese Primero (FM 104.9)",
-        "Radio Gabal (FM 104.1)",
         "Municipalidad de Balcarce"
       ],
       "enlace": "https://balcarce.gob.ar/2026/09/30/equipo-de-futbol-playa-a-la-final-bonaerense/",
@@ -1710,7 +1757,7 @@
       "fecha": "2026-09-30T13:00:08.000Z",
       "sinFecha": false,
       "visto": "2026-09-30T13:01:14.157Z",
-      "relevancia": 100,
+      "relevancia": 84,
       "local": true,
       "oficial": true,
       "publicadaPor": null,
@@ -1835,7 +1882,6 @@
       "seccion": "Deportes",
       "medios": [
         "Infórmese Primero (FM 104.9)",
-        "Radio Gabal (FM 104.1)",
         "Municipalidad de Balcarce"
       ],
       "enlace": "https://balcarce.gob.ar/2026/09/30/cabrera-y-otero-ganaron-la-nocturna-de-napaleofu/",
@@ -1843,7 +1889,7 @@
       "fecha": "2026-09-30T12:54:26.000Z",
       "sinFecha": false,
       "visto": "2026-09-30T13:01:14.157Z",
-      "relevancia": 94,
+      "relevancia": 84,
       "local": true,
       "oficial": true,
       "publicadaPor": null,
@@ -1991,7 +2037,7 @@
       "fecha": "2026-09-30T11:49:49.000Z",
       "sinFecha": false,
       "visto": "2026-09-30T12:01:02.331Z",
-      "relevancia": 88,
+      "relevancia": 84,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -2041,6 +2087,7 @@
       "guion": "El Gobierno eleva a 35 mil dólares el tope para importar autos eléctricos sin arancel",
       "seccion": "Economía",
       "medios": [
+        "LU9 Mar del Plata",
         "Infobae",
         "Clarín",
         "El Cronista",
@@ -2116,94 +2163,6 @@
       "foto": {
         "archivo": "fotos-notas/1h321lc.jpg",
         "credito": "Foto: Infobae"
-      }
-    },
-    {
-      "id": "10skxuq",
-      "titulo": "Reclaman a la Provincia datos sobre las habilitaciones del Autódromo",
-      "copete": "Un pedido formal ingresado ante el Ministerio de Desarrollo de la Comunidad bonaerense exige expedientes y pólizas sobre las competencias realizadas el último fin de semana en el circuito serrano.",
-      "cuerpo": "Un pedido formal de acceso a la información pública ingresó el martes ante el Ministerio de Desarrollo de la Comunidad bonaerense para conocer las habilitaciones, inspecciones y mecanismos de control del Autódromo Juan Manuel Fangio. La presentación, impulsada por el periodista Julio César Politano, exige copias de los expedientes, resoluciones y dictámenes vinculados con el evento desarrollado durante el fin de semana del 26 y 27 de septiembre.\n\nEl requerimiento apunta a determinar la situación regulatoria de la Municipalidad de Balcarce y de la Comisión Asesora y Fiscalizadora de la ACTC ante la Comisión Provincial de Automovilismo y Motociclismo. Además, solicita las constancias de las pólizas de seguro obligatorio y los antecedentes técnicos de la autorización provisoria otorgada al circuito. El escrito advierte con recurrir a la vía judicial si el Poder Ejecutivo provincial incumple los plazos legales de respuesta.",
-      "guion": "Reclaman a la Provincia datos sobre las habilitaciones del Autódromo",
-      "seccion": "Política",
-      "medios": [
-        "Puntonueve (FM 100.9)"
-      ],
-      "enlace": "https://puntonueve.com.ar/piden-informacion-a-la-provincia-sobre-las-habilitaciones-y-controles-del-autodromo-juan-manuel-fangio/",
-      "teniaImagenLaFuente": false,
-      "fecha": "2026-09-30T11:15:42.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-30T12:01:02.331Z",
-      "relevancia": 82,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [
-        "autodromo",
-        "fangio"
-      ],
-      "como": "automatica",
-      "claves": [
-        "Presentan un pedido de acceso a la información pública ante la Provincia.",
-        "Exigen expedientes sobre habilitaciones, inspecciones y seguros del circuito.",
-        "Apunta a determinar las autorizaciones de la Municipalidad y de la fiscalizadora.",
-        "El autódromo había reabierto el último fin de semana tras quince años."
-      ],
-      "seSabe": [
-        "El pedido formal fue presentado el martes 29 de septiembre por el periodista Julio César Politano.",
-        "La solicitud se dirigió al Ministerio de Desarrollo de la Comunidad bonaerense.",
-        "Se reclaman copias de expedientes, resoluciones y comprobantes de seguros de las competencias del 26 y 27 de septiembre.",
-        "El escrito incluye una reserva de acudir a la vía judicial ante la falta de respuesta oficial."
-      ],
-      "noConfirmado": [
-        "La respuesta oficial del gobierno provincial sobre la documentación solicitada.",
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "Presentan un pedido formal ante la Provincia para conocer las habilitaciones, inspecciones y pólizas de seguro del Autódromo Juan Manuel Fangio tras las competencias del último fin de semana.",
-      "etiquetas": [
-        "Autodromo Juan Manuel Fangio",
-        "Balcarce",
-        "Provincia de Buenos Aires",
-        "CoPAM",
-        "Automovilismo"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Puntonueve (FM 100.9)",
-          "enlace": "https://puntonueve.com.ar/piden-informacion-a-la-provincia-sobre-las-habilitaciones-y-controles-del-autodromo-juan-manuel-fangio/",
-          "fecha": "2026-09-30T11:15:42.000Z",
-          "oficial": false,
-          "aporte": "Detalló la presentación del pedido de acceso a la información pública sobre las habilitaciones del autódromo."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "wgq362",
-          "titulo": "Omar Martínez termina cuarto en el autódromo Juan Manuel Fangio",
-          "fecha": "2026-09-29T14:55:00.000Z",
-          "ruta": "/nota/omar-martinez-termina-cuarto-en-el-autodromo-juan-manuel-fangio-wgq362"
-        },
-        {
-          "id": "rebipe",
-          "titulo": "Mangoni repasa su paso por el autódromo Juan Manuel Fangio",
-          "fecha": "2026-09-28T16:15:38.000Z",
-          "ruta": "/nota/mangoni-repasa-su-paso-por-el-autodromo-juan-manuel-fangio-rebipe"
-        },
-        {
-          "id": "83u2vt",
-          "titulo": "El autódromo Juan Manuel Fangio reabre tras quince años",
-          "fecha": "2026-09-28T03:01:51.643Z",
-          "ruta": "/nota/el-autodromo-juan-manuel-fangio-reabre-tras-quince-anos-83u2vt"
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "reclaman-a-la-provincia-datos-sobre-las-habilitaciones-del-autodromo",
-      "foto": {
-        "archivo": "fotos-notas/10skxuq.jpg",
-        "credito": "Foto: Puntonueve (FM 100.9)"
       }
     },
     {
@@ -2342,8 +2301,8 @@
         "Agrositio",
         "Agroempresario",
         "El Economista",
-        "Noticias Agropecuarias",
-        "Radio Mitre"
+        "Radio Mitre",
+        "Noticias Agropecuarias"
       ],
       "enlace": "https://www.lanacion.com.ar/economia/campo/el-gobierno-anuncio-que-japon-abrio-su-mercado-a-la-carne-vacuna-argentina-nid30092026/",
       "teniaImagenLaFuente": true,
@@ -2551,8 +2510,8 @@
         "La Verdad de Ayacucho",
         "Solotc",
         "0223 (Mar del Plata)",
-        "Córdoba Competición",
-        "Campeones"
+        "Campeones",
+        "Córdoba Competición"
       ],
       "enlace": "https://www.0223.com.ar/nota/2026-9-29-21-9-0-tras-la-fiesta-en-el-autodromo-juan-manuel-fangio-dura-sancion-a-werner-multa-millonaria-y-largada-desde-el-fondo",
       "teniaImagenLaFuente": true,
@@ -2651,6 +2610,7 @@
         "TyC Sports",
         "Olé",
         "C5N",
+        "La Nueva",
         "0221",
         "Bolavip Argentina",
         "Minuto Uno",
@@ -2848,79 +2808,6 @@
       "foto": {
         "archivo": "fotos-notas/1puwvvm.jpg",
         "credito": "Foto: Diario La Vanguardia"
-      }
-    },
-    {
-      "id": "v2h1r4",
-      "titulo": "Lanzan una diplomatura universitaria para emprendedores locales",
-      "copete": "La Universidad Nacional de Mar del Plata dictará una capacitación de un año y medio en el Centro Universitario. La iniciativa busca fortalecer proyectos productivos mediante una modalidad mixta.",
-      "cuerpo": "El Centro Universitario albergará una nueva diplomatura destinada a la creación y gestión de emprendimientos, a cargo de la Universidad Nacional de Mar del Plata. La propuesta se desarrollará a través del programa Puentes y tendrá una duración de un año y medio bajo una modalidad mixta de cursada.\n\nLa iniciativa surge articulada con la Subsecretaría de Producción y Empleo y la Dirección de Juventud. Según explicó Marina Berardo, la oferta apunta a brindar herramientas de planificación a quienes poseen un proyecto en marcha o buscan transformar una idea en una iniciativa productiva.\n\nComo parte del proceso previo, la semana pasada se concretó un taller introductorio que despertó interés entre los asistentes y tendrá continuidad con un nuevo encuentro antes del inicio de la formación principal.",
-      "guion": "Lanzan una diplomatura universitaria para emprendedores locales",
-      "seccion": "Balcarce",
-      "medios": [
-        "Puntonueve (FM 100.9)",
-        "El Diario Balcarce"
-      ],
-      "enlace": "https://puntonueve.com.ar/impulsan-una-diplomatura-para-la-creacion-y-gestion-de-emprendimientos-en-balcarce/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-29T22:23:55.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-30T16:01:20.946Z",
-      "relevancia": 90,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Dictará la Universidad Nacional de Mar del Plata",
-        "Duración de un año y medio en el Centro Universitario",
-        "Modalidad mixta orientada a proyectos productivos",
-        "Articulada mediante el programa Puentes"
-      ],
-      "seSabe": [
-        "La capacitación durará un año y medio según la Universidad Nacional de Mar del Plata.",
-        "Las clases presenciales se dictarán en el Centro Universitario.",
-        "La propuesta combina instancias virtuales y presenciales.",
-        "Marina Berardo explicó los detalles del programa desde la Subsecretaría de Producción y Empleo."
-      ],
-      "noConfirmado": [
-        "Todavía no se informó la fecha exacta de inicio de la diplomatura.",
-        "No trascendió el cronograma del próximo encuentro del taller introductorio."
-      ],
-      "textoRedes": "Impulsan una diplomatura universitaria de un año y medio para emprendedores en el Centro Universitario con modalidad mixta.",
-      "etiquetas": [
-        "Diplomatura",
-        "Emprendedores",
-        "Universidad Nacional de Mar del Plata",
-        "Centro Universitario",
-        "Producción y Empleo"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Puntonueve (FM 100.9)",
-          "enlace": "https://puntonueve.com.ar/impulsan-una-diplomatura-para-la-creacion-y-gestion-de-emprendimientos-en-balcarce/",
-          "fecha": "2026-09-30T11:46:08.000Z",
-          "oficial": false,
-          "aporte": "Aportó los detalles sobre la duración, modalidad y sede de la diplomatura, además de las declaraciones del área municipal."
-        },
-        {
-          "medio": "El Diario Balcarce",
-          "enlace": "https://eldiariobalcarce.com.ar/impulsan-una-diplomatura-para-la-gestion-y-creacion-de-emprendimientos-en-balcarce-907",
-          "fecha": null,
-          "oficial": false,
-          "aporte": "No aportó información adicional al no incluir texto en el resumen."
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron dos medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "lanzan-una-diplomatura-universitaria-para-emprendedores-locales",
-      "foto": {
-        "archivo": "fotos-notas/v2h1r4.jpg",
-        "credito": "Foto: Puntonueve (FM 100.9)"
       }
     },
     {
@@ -3607,9 +3494,9 @@
       "medios": [
         "La Nación",
         "Agroempresario",
-        "Todo Agro",
         "Infocampo",
-        "Bichos de Campo"
+        "Bichos de Campo",
+        "Todo Agro"
       ],
       "enlace": "https://www.infocampo.com.ar/federacion-agraria-es-necesario-que-las-retenciones-tengan-un-fin-que-sea-por-ley-y-que-no-vuelvan-mas/",
       "teniaImagenLaFuente": true,
@@ -3645,16 +3532,16 @@
           "aporte": null
         },
         {
-          "medio": "Todo Agro",
-          "enlace": "https://www.todoagro.com.ar/faa-volvio-a-reclamar-el-fin-de-las-retenciones-necesitamos-politicas-publicas-que-contemplen-la-realidad-y-la-escala-de-los-productores/",
-          "fecha": "2026-09-29T21:28:34.000Z",
+          "medio": "Bichos de Campo",
+          "enlace": "https://bichosdecampo.com/andrea-sarnari-abrio-el-congreso-de-federacion-agraria-reclamando-que-las-retenciones-terminen-por-ley-en-el-congreso-y-no-vuelvan-nunca-mas/",
+          "fecha": "2026-09-29T22:51:16.000Z",
           "oficial": false,
           "aporte": null
         },
         {
-          "medio": "Bichos de Campo",
-          "enlace": "https://bichosdecampo.com/andrea-sarnari-abrio-el-congreso-de-federacion-agraria-reclamando-que-las-retenciones-terminen-por-ley-en-el-congreso-y-no-vuelvan-nunca-mas/",
-          "fecha": "2026-09-29T22:51:16.000Z",
+          "medio": "Todo Agro",
+          "enlace": "https://www.todoagro.com.ar/faa-volvio-a-reclamar-el-fin-de-las-retenciones-necesitamos-politicas-publicas-que-contemplen-la-realidad-y-la-escala-de-los-productores/",
+          "fecha": "2026-09-29T21:28:34.000Z",
           "oficial": false,
           "aporte": null
         }
@@ -3905,7 +3792,6 @@
       "guion": "Pato Naranja gana por 99 a 12 y queda entre los cuatro mejores",
       "seccion": "Deportes",
       "medios": [
-        "Puntonueve (FM 100.9)",
         "Infórmese Primero (FM 104.9)"
       ],
       "enlace": "http://www.informeseprimero.com.ar/2026/09/pato-naranja-goleo-pampas-y-quedo-entre.html",
@@ -3913,7 +3799,7 @@
       "fecha": "2026-09-29T16:01:29.256Z",
       "sinFecha": false,
       "visto": "2026-09-29T16:31:06.769Z",
-      "relevancia": 75,
+      "relevancia": 65,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -4178,7 +4064,6 @@
       "seccion": "Balcarce",
       "medios": [
         "News Balcarce (FM 91.7)",
-        "Puntonueve (FM 100.9)",
         "Infórmese Primero (FM 104.9)",
         "Municipalidad de Balcarce",
         "Diario La Vanguardia",
@@ -4612,7 +4497,7 @@
       "fecha": "2026-09-29T12:47:18.000Z",
       "sinFecha": false,
       "visto": "2026-09-29T19:01:06.137Z",
-      "relevancia": 58,
+      "relevancia": 54,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -4959,13 +4844,13 @@
         "Perfil",
         "TyC Sports",
         "Olé",
-        "Córdoba Competición",
         "La Nueva",
         "Campeones",
         "Radio Mitre",
         "Ámbito",
         "Minuto Uno",
-        "Clarín"
+        "Clarín",
+        "Córdoba Competición"
       ],
       "enlace": "https://es.motorsport.com/f1/news/alonso-aston-martin-renovacion/10848231/?utm_source=RSS&utm_medium=referral&utm_campaign=RSS-F1&utm_term=News&utm_content=es",
       "teniaImagenLaFuente": true,
@@ -5055,73 +4940,6 @@
         "archivo": "fotos-notas/1pbrz27.webp",
         "credito": "Foto: Ámbito"
       }
-    },
-    {
-      "id": "180ifr6",
-      "titulo": "Amigos Unidos organiza un encuentro comunitario con siete millones en premios",
-      "copete": "El club local realiza un evento el domingo 4 de octubre con siete rondas de premios en órdenes de compra. El valor del cartón es de 25.000 pesos y hay opciones de pago en cuotas.",
-      "cuerpo": "El Club Atlético Amigos Unidos organiza un encuentro comunitario para el domingo 4 de octubre, desde las 15, en su sede situada en avenida Favaloro, entre Suipacha y calle 30. Según informó una fuente local, la institución distribuirá 7 millones de pesos en premios a través de siete rondas.\n\nLas primeras cuatro rondas entregarán 50.000 pesos por terno, 100.000 por línea y 300.000 por cartón. La quinta ronda fijó montos de 100.000, 200.000 y 500.000 pesos, en tanto que la sexta ofrecerá 100.000, 200.000 y 1.000.000 de pesos. La séptima ronda contará con 200.000 pesos por terno, 400.000 por línea y 2.500.000 por cartón, y los pagos se realizarán mediante órdenes de compra.\n\nEl costo del cartón de contado es de 25.000 pesos, con alternativa de abonarlo en tres cuotas de 10.000 pesos, y cada uno da derecho a una silla. Las reservas se realizan al teléfono 2266-442660.",
-      "guion": "Amigos Unidos organiza un encuentro comunitario con siete millones en premios",
-      "seccion": "Balcarce",
-      "medios": [
-        "Infórmese Primero (FM 104.9)"
-      ],
-      "enlace": "http://www.informeseprimero.com.ar/2026/09/el-club-atletico-amigos-unidos-organiza.html",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-29T07:48:30.670Z",
-      "sinFecha": false,
-      "visto": "2026-09-29T14:01:11.480Z",
-      "relevancia": 65,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "El evento se realiza el domingo 4 de octubre desde las 15 en la sede de la institución",
-        "Se distribuyen siete millones de pesos en premios mediante órdenes de compra",
-        "El valor del cartón es de 25.000 pesos al contado o en tres cuotas de 10.000 pesos",
-        "Las reservas se coordinan a través del teléfono 2266-442660"
-      ],
-      "seSabe": [
-        "El encuentro comunitario de Amigos Unidos se lleva a cabo el domingo 4 de octubre desde las 15 en la sede de avenida Favaloro",
-        "El total de premios asciende a 7 millones de pesos distribuidos en siete rondas",
-        "El valor del cartón es de 25.000 pesos al contado o en tres cuotas de 10.000 pesos",
-        "Las reservas de entradas se realizan mediante el teléfono 2266-442660"
-      ],
-      "noConfirmado": [
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "El Club Atlético Amigos Unidos organiza un encuentro comunitario con siete millones de pesos en premios para este domingo 4 de octubre en su sede de avenida Favaloro.",
-      "etiquetas": [
-        "Amigos Unidos",
-        "encuentro comunitario",
-        "premios",
-        "Balcarce"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Infórmese Primero (FM 104.9)",
-          "enlace": "http://www.informeseprimero.com.ar/2026/09/el-club-atletico-amigos-unidos-organiza.html",
-          "fecha": "2026-09-29T07:48:30.670Z",
-          "oficial": false,
-          "aporte": "Informó los detalles del encuentro comunitario, el cronograma de premios, los valores de los cartones y las vías de contacto"
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "15u7qbh",
-          "titulo": "Amigos Unidos y Los Patos jugarán la final del Play OFF",
-          "fecha": "2026-09-07T19:14:09.000Z",
-          "ruta": "/nota/amigos-unidos-y-los-patos-jugaran-la-final-del-play-off-15u7qbh"
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "amigos-unidos-organiza-un-encuentro-comunitario-con-siete-millones-en"
     }
   ],
   "secciones": [
@@ -5140,12 +4958,12 @@
     {
       "nombre": "El autódromo",
       "ranura": "autodromo",
-      "cuantas": 4
+      "cuantas": 3
     },
     {
       "nombre": "Fangio",
       "ranura": "fangio",
-      "cuantas": 4
+      "cuantas": 3
     },
     {
       "nombre": "TC Pick Up",
@@ -5166,11 +4984,11 @@
   "clima": {
     "ahora": {
       "temp": 12,
-      "sensacion": 8,
-      "humedad": 58,
+      "sensacion": 7,
+      "humedad": 61,
       "viento": 23,
       "rumbo": "SO",
-      "cielo": "Parcialmente nublado",
+      "cielo": "Nublado",
       "esDeDia": true
     },
     "dias": [
@@ -5633,12 +5451,6 @@
       "motivo": "necesita ojo humano: \"niña\""
     },
     {
-      "id": "50rj2r",
-      "titulo": null,
-      "seccion": "Argentina",
-      "motivo": "necesita ojo humano: \"bebés\""
-    },
-    {
       "id": "8hswff",
       "titulo": "Quini 6: de cuánto será el pozo millonario del sorteo del…",
       "seccion": "Argentina",
@@ -5663,6 +5475,12 @@
       "motivo": "necesita ojo humano: \"niño\""
     },
     {
+      "id": "50rj2r",
+      "titulo": null,
+      "seccion": "Argentina",
+      "motivo": "necesita ojo humano: \"bebés\""
+    },
+    {
       "id": "1fu0xn0",
       "titulo": "San Isidro: el 77,6% de las denuncias de seguridad ya…",
       "seccion": "Argentina",
@@ -5681,11 +5499,17 @@
       "motivo": "internacional: sin relación con Balcarce"
     },
     {
+      "id": "7jqg6c",
+      "titulo": "PAMI: los motivos oficiales para reclamar por medicamentos…",
+      "seccion": "Argentina",
+      "motivo": "necesita ojo humano: \"denuncia\""
+    },
+    {
       "id": "12wle8z",
       "titulo": "Denuncia penal contra Bullrich y Monteoliva por los dichos…",
       "seccion": "Política",
       "motivo": "necesita ojo humano: \"denuncia\""
     }
   ],
-  "esperandoCuerpo": 7
+  "esperandoCuerpo": 5
 }
