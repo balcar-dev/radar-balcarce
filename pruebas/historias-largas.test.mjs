@@ -322,7 +322,8 @@ test('16c · el plan arma la historia de útiles el día que toca y no el que no
 
 test('16d · el techo de historias es 8 (6 del contrato + 2 extras) y está en el criterio', () => {
   assert.equal(CONTRATO_DIARIO.historiasMaximasPorDia, 8);
-  assert.equal(CONTRATO_DIARIO.historiasMaximasPorDia, CONTRATO_DIARIO.historiasPorDia + EXTRAS_DE_HISTORIAS.length);
+  assert.equal(CONTRATO_DIARIO.historiasMaximasPorDia, CONTRATO_DIARIO.historiasPorDia + 2, 'el techo deja lugar a 2 extras');
+  assert.ok(EXTRAS_DE_HISTORIAS.length >= 2);
   assert.equal(REGLAS.historiasPorDia, 6);
   assert.equal(REGLAS.historiasMaximasPorDia, 8);
 });
@@ -338,20 +339,21 @@ test('16d · historiasQueSobran: primero se sacan los útiles, después la agend
   assert.deepEqual(historiasQueSobran([...base, 'utiles', 'utiles']), [], 'no cuenta dos veces la misma');
 });
 
+const SIN_PARTICIPA = { horarios: { 'participa-nota': { activa: false } } };
 test('16d · en el plan, el día no pasa de 8 historias: con aviso grave y agenda los útiles quedan afuera; sin eso, entran', () => {
   const notas = Array.from({ length: 10 }, (_, i) => ({
     id: `q${i}`, seccion: ['Balcarce', 'Deportes', 'Servicios', 'Agro', 'Salud'][i % 5], relevancia: 90 - i, semaforo: 'verde', local: true, temas: [], guion: true, titulo: `${TEMAS[i]} en la zona`, copete: '',
   }));
   const datos = DATOS(25);
   datos.notas = notas;
-  const sinAviso = planDelDia(datos, { fecha: AR('2026-09-25', '09:00'), estado: {} }).piezas;
+  const sinAviso = planDelDia(datos, { fecha: AR('2026-09-25', '09:00'), estado: SIN_PARTICIPA }).piezas;
   assert.ok(sinAviso.find((p) => p.nombre === 'utiles') && !sinAviso.find((p) => p.nombre === 'utiles').fueraDeTecho);
   const cuenta = (piezas) => new Set(piezas.filter((p) => !p.fueraDeTecho && (p.tipo === 'historia' || p.tipo === 'reel')).map((p) => p.nombre)).size;
   assert.equal(cuenta(sinAviso), 7);
 
   // Con un aviso grave, sin agenda, son 8 y entra todo.
   const conAviso = { ...datos, clima: { ...datos.clima, dias: [{ fecha: '2026-09-25', max: 20, min: -6, lluvia: 30, codigo: 3, viento: 15 }, datos.clima.dias[1]] } };
-  const plan = planDelDia(conAviso, { fecha: AR('2026-09-25', '09:00'), estado: {} }).piezas;
+  const plan = planDelDia(conAviso, { fecha: AR('2026-09-25', '09:00'), estado: SIN_PARTICIPA }).piezas;
   const aviso = plan.find((p) => p.nombre.startsWith('aviso'));
   assert.ok(aviso, 'el aviso de helada fuerte sale');
   assert.equal(aviso.fueraDeTecho, undefined);

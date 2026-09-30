@@ -278,7 +278,7 @@ const nombres = (lista) => lista.map((p) => p.nombre);
 test('el cronograma del día trae las fijas y los tres podcasts, sin historias sueltas de una nota', () => {
   const c = cronogramaDelDia(LUNES('12:00'));
   assert.deepEqual(nombres(c), [
-    'clima-manana', 'noticia1', 'noticia2', 'farmacia', 'clima-noche', 'podcast',
+    'clima-manana', 'noticia1', 'participa-noticias', 'noticia2', 'farmacia', 'clima-noche', 'podcast',
   ]);
   assert.equal(c.find((p) => p.nombre === 'clima-manana').hora, '07:30');
   assert.equal(c.find((p) => p.nombre === 'podcast').tipo, 'reel');

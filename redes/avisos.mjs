@@ -197,6 +197,10 @@ const NOMBRES_DE_PIEZAS = {
   podcast: 'Podcast de la noche',
   utiles: 'Teléfonos útiles',
   agenda: 'Agenda',
+  'participa-noticias': 'Participá con noticias',
+  'participa-evento': 'Tu evento',
+  'participa-reclamos': 'Tu reclamo',
+  'participa-nota': 'Tu nota',
 };
 const nombreDePieza = (n) => NOMBRES_DE_PIEZAS[n] ?? (n ? String(n) : 'Pieza');
 const tipoDeVideo = (t) => (t === 'REELS' ? 'reel' : 'historia');

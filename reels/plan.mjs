@@ -12,7 +12,8 @@
 
 import fs from 'node:fs';
 import path from 'node:path';
-import { placaClima, placaFarmacia, placaRepaso, placaUtiles, placaAgenda, COLOR_SECCION, COLORES } from './placa.mjs';
+import { placaClima, placaFarmacia, placaRepaso, placaUtiles, placaAgenda, placaParticipa, COLOR_SECCION, COLORES } from './placa.mjs';
+import { PIEZAS_PARTICIPA, IDS_PARTICIPA, guionParticipa } from '../redes/participa.mjs';
 import { NUMEROS, decisionHumana, HORA_DE_CAMBIO, MINUTO_DE_CAMBIO } from '../ingesta/utiles.mjs';
 import { horariosDe, toca } from '../panel/horarios.mjs';
 import { enlaceDeNota } from '../redes/elegir.mjs';
@@ -375,6 +376,23 @@ export function planDelDia(datos, {
       momento: momentoDeHora(cuando.agenda.hora), indicacion: INDICACIONES[momentoDeHora(cuando.agenda.hora)],
       svg: placaAgenda({ eventos: deLaAgenda }),
       acento: '#6D4BA0',
+    });
+  }
+
+  // Participá (30/09): al mediodía, una invitación a escribir por WhatsApp; cada día de la
+  // semana toca una distinta (redes/participa.mjs).
+  for (const id of IDS_PARTICIPA) {
+    if (!tocaHoy(id)) continue;
+    const p = PIEZAS_PARTICIPA[id];
+    const momento = momentoDeHora(cuando[id].hora);
+    piezas.push({
+      tipo: 'historia', hora: cuando[id].hora, nombre: id,
+      titulo: p.nombre, motivo: 'invitación a participar, al mediodía',
+      seccion: p.seccion,
+      guion: guionParticipa(id, { fecha, momento }),
+      momento, indicacion: INDICACIONES[momento],
+      svg: placaParticipa({ rotulo: p.rotulo, pregunta: p.pregunta, pie1: p.pie1, pie2: p.pie2, color: COLOR_SECCION[p.seccion] }),
+      acento: COLOR_SECCION[p.seccion],
     });
   }
 

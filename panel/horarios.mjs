@@ -9,6 +9,7 @@
 // decisiones de la redacción, no del proyecto.
 
 import { diaRotativoDeUtiles } from '../ingesta/utiles.mjs';
+import { PIEZAS_PARTICIPA } from '../redes/participa.mjs';
 import { diaSemanaAR } from '../ingesta/zona.mjs';
 
 // Los días de la semana como los devuelve Date#getDay(): 0 es domingo.
@@ -72,6 +73,14 @@ export const HISTORIAS_FIJAS = [
     dias: [2],
   },
 ];
+
+// Las piezas de participá (30/09): una historia con voz a las 12:00, cuatro días por semana.
+for (const [id, p] of Object.entries(PIEZAS_PARTICIPA)) {
+  HISTORIAS_FIJAS.push({
+    id, nombre: p.nombre, porQue: 'Invita a mandar noticias, eventos, reclamos o notas por WhatsApp. Al mediodía, que es cuando más gente mira.',
+    activa: true, hora: '12:00', dias: [p.dia],
+  });
+}
 
 /** Mezcla lo guardado con los valores por defecto. Una pieza que se agregue
  *  al código más adelante aparece sola, sin perder lo que ya se ajustó. */

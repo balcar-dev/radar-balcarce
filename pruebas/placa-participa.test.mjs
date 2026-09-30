@@ -33,3 +33,27 @@ test('el clima y la farmacia cierran igual que las demás: raya, firma a la izqu
     assert.ok(!/text-anchor="middle"[^>]*>\s*radarbalcarce\.com/.test(svg), 'la dirección no va centrada');
   }
 });
+
+// ---- el cronograma: lunes noticias, martes evento, miércoles reclamos, viernes nota, a las 12:00
+import { cronogramaDelDia } from '../redes/piezas.mjs';
+import { PIEZAS_PARTICIPA, guionParticipa } from '../redes/participa.mjs';
+
+test('cada día toca su pieza de participá, a las 12:00, y jueves y fines de semana ninguna', () => {
+  const dia = (f) => cronogramaDelDia(new Date(`${f}T12:00:00-03:00`)).filter((p) => p.nombre.startsWith('participa')).map((p) => `${p.nombre}@${p.hora}`);
+  assert.deepEqual(dia('2026-10-05'), ['participa-noticias@12:00']); // lunes
+  assert.deepEqual(dia('2026-10-06'), ['participa-evento@12:00']);
+  assert.deepEqual(dia('2026-10-07'), ['participa-reclamos@12:00']);
+  assert.deepEqual(dia('2026-10-08'), []); // jueves: la agenda
+  assert.deepEqual(dia('2026-10-09'), ['participa-nota@12:00']);
+  assert.deepEqual(dia('2026-10-10'), []);
+  assert.deepEqual(dia('2026-10-11'), []);
+});
+
+test('el guion de participá saluda, hace la pregunta y manda al número de la pantalla, sin leerlo', () => {
+  for (const id of Object.keys(PIEZAS_PARTICIPA)) {
+    const g = guionParticipa(id, { fecha: new Date('2026-10-05T12:00:00-03:00'), momento: 'manana' });
+    assert.match(g, /^Buen día/);
+    assert.match(g, /WhatsApp/);
+    assert.ok(!/\d{4}/.test(g), 'el número no se lee en voz alta');
+  }
+});
