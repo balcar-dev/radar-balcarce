@@ -1,10 +1,10 @@
 {
- "generado": "2026-09-30T15:03:25.184Z",
- "portada": 52,
- "archivo": 621,
- "esperandoCuerpo": 5,
+ "generado": "2026-09-30T15:35:10.324Z",
+ "portada": 55,
+ "archivo": 624,
+ "esperandoCuerpo": 6,
  "redes": {
-  "generado": "2026-09-30T15:03:25.224Z",
+  "generado": "2026-09-30T15:35:10.362Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -106,11 +106,11 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 54,
+    "segundos": 44,
     "notas": [
      {
-      "id": "y9vwef",
-      "titulo": "El equipo de fútbol playa clasifica a la final bonaerense",
+      "id": "1rpzsy3",
+      "titulo": "Tres jugadores locales integran la selección provincial de pádel",
       "seccion": "Deportes"
      },
      {
@@ -119,9 +119,9 @@
       "seccion": "Cultura y agenda"
      },
      {
-      "id": "1j6ui2n",
-      "titulo": "La ACTC sanciona a Mariano Werner con multa y largada desde el fondo",
-      "seccion": "Automovilismo"
+      "id": "h36tlu",
+      "titulo": "La Municipalidad recauda millones en una subasta de tierras",
+      "seccion": "Balcarce"
      },
      {
       "id": "122dsf6",
@@ -137,12 +137,17 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 45,
+    "segundos": 52,
     "notas": [
      {
-      "id": "1rpzsy3",
-      "titulo": "Tres jugadores locales integran la selección provincial de pádel",
+      "id": "y9vwef",
+      "titulo": "El equipo de fútbol playa clasifica a la final bonaerense",
       "seccion": "Deportes"
+     },
+     {
+      "id": "1j6ui2n",
+      "titulo": "La ACTC sanciona a Mariano Werner con multa y largada desde el fondo",
+      "seccion": "Automovilismo"
      },
      {
       "id": "616lop",
@@ -150,14 +155,9 @@
       "seccion": "Agro"
      },
      {
-      "id": "1dqm02n",
-      "titulo": "El Hospital Fossati afronta una deuda millonaria de obras sociales",
+      "id": "1puwvvm",
+      "titulo": "El Geriátrico Pinto recibe diez colchones y diez almohadas",
       "seccion": "Balcarce"
-     },
-     {
-      "id": "12rp30w",
-      "titulo": "Edgardo Ríos visita la Fiesta Nacional del Postre",
-      "seccion": "Cultura y agenda"
      }
     ]
    }
@@ -168,19 +168,24 @@
      "id": "y9vwef",
      "titulo": "El equipo de fútbol playa clasifica a la final bonaerense",
      "cuando": "2026-09-30T13:34:06.307Z"
+    },
+    {
+     "id": "1rpzsy3",
+     "titulo": "Tres jugadores locales integran la selección provincial de pádel",
+     "cuando": "2026-09-30T15:04:58.480Z"
     }
    ],
    "cola": [
     {
-     "id": "1rpzsy3",
-     "titulo": "Tres jugadores locales integran la selección provincial de pádel",
+     "id": "5evpzb",
+     "titulo": "Cabrera y Otero ganan la carrera nocturna en Napaleofú",
      "seccion": "Deportes",
      "marcada": false
     },
     {
-     "id": "5evpzb",
-     "titulo": "Cabrera y Otero ganan la carrera nocturna en Napaleofú",
-     "seccion": "Deportes",
+     "id": "h36tlu",
+     "titulo": "La Municipalidad recauda millones en una subasta de tierras",
+     "seccion": "Balcarce",
      "marcada": false
     },
     {
@@ -190,8 +195,8 @@
      "marcada": false
     }
    ],
-   "cupo": 4,
-   "proximoDesde": "2026-09-30T15:04:06.307Z",
+   "cupo": 3,
+   "proximoDesde": "2026-09-30T16:34:58.480Z",
    "porDia": 5,
    "minutosEntrePosteos": 90,
    "edadMaximaHoras": 8,

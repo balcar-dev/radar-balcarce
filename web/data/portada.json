@@ -1,6 +1,73 @@
 {
-  "generado": "2026-09-30T15:03:25.184Z",
+  "generado": "2026-09-30T15:35:10.324Z",
   "notas": [
+    {
+      "id": "h36tlu",
+      "titulo": "La Municipalidad recauda millones en una subasta de tierras",
+      "copete": "Tres parcelas fiscales fueron adjudicadas en un remate oficial. El Club Racing adquirió uno de los espacios y el dinero se destinará al Hospital Municipal.",
+      "cuerpo": "Tres parcelas recibieron ofertas y fueron adjudicadas por un total de $ 88.550.000, según informó el municipio.\n\nEl predio ubicado en la calle 57 entre 14 y 16 quedó en manos del Club Racing tras ofertar $ 36.750.000, y el martillero Horacio Fontana donó sus honorarios a la institución. Además, el lote de la calle 41 esquina 42 se vendió por $ 28.000.000 y el de la calle 7 esquina 38 llegó a $ 23.800.000, con la intervención de los martilleros Rodolfo Canto, Juan José Latorre, Carolina Viana y Javier Raimundo.\n\nLas parcelas sin ofertas podrán sumarse a futuros remates.",
+      "guion": "La Municipalidad recauda millones en una subasta de tierras",
+      "seccion": "Balcarce",
+      "medios": [
+        "Municipalidad de Balcarce"
+      ],
+      "enlace": "https://balcarce.gob.ar/2026/09/30/tres-lotes-municipales-fueron-adjudicados-en-una-subasta-publica/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-30T15:26:12.000Z",
+      "sinFecha": false,
+      "visto": "2026-09-30T15:31:12.935Z",
+      "relevancia": 84,
+      "local": true,
+      "oficial": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Remate oficial de parcelas fiscales en la Casa del Bicentenario",
+        "Adjudicación de tres terrenos por un total de $ 88.550.000",
+        "El Club Racing compró un lote y recibió la donación de honorarios del martillero",
+        "Los fondos recaudados financiarán mejoras en el Hospital Municipal"
+      ],
+      "seSabe": [
+        "La subasta se realizó en la Casa del Bicentenario según la Municipalidad",
+        "Participaron el asesor legal César Romera y el director de Regularización Dominial Sergio Garitta",
+        "Se adjudicaron tres lotes por $ 88.550.000 en total",
+        "El Club Racing adquirió el terreno de calle 57 entre 14 y 16 por $ 36.750.000",
+        "El lote de calle 41 esquina 42 se vendió por $ 28.000.000",
+        "La parcela de calle 7 esquina 38 alcanzó los $ 23.800.000"
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "La Municipalidad concretó una subasta de tierras fiscales y adjudicó tres lotes por un total de 88.550.000 pesos. El Club Racing adquirió uno de los espacios y los fondos recaudados se destinarán a las obras en el Hospital Municipal.",
+      "etiquetas": [
+        "Municipalidad",
+        "subasta",
+        "terrenos",
+        "Club Racing",
+        "Hospital Municipal"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Municipalidad de Balcarce",
+          "enlace": "https://balcarce.gob.ar/2026/09/30/tres-lotes-municipales-fueron-adjudicados-en-una-subasta-publica/",
+          "fecha": "2026-09-30T15:26:12.000Z",
+          "oficial": true,
+          "aporte": "Informó la realización de la subasta de terrenos municipales, los montos adjudicados, los compradores y el destino de los fondos."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Sale de una fuente oficial: Municipalidad de Balcarce.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "la-municipalidad-recauda-millones-en-una-subasta-de-tierras",
+      "foto": {
+        "archivo": "fotos-notas/h36tlu.jpg",
+        "credito": "Foto: Municipalidad de Balcarce"
+      }
+    },
     {
       "id": "10xubmm",
       "titulo": "Joan Laporta revela el llamado que frenó el pase de Lautaro",
@@ -91,11 +158,11 @@
         "Diario La Vanguardia"
       ],
       "enlace": "https://www.diariolavanguardia.com/noticias/44950-el-hospital-fossati-bajo-presion-mas-demanda-1-124-millones-de-deuda-y-una-fuerte-dependencia-de-fondos-municipales/",
-      "teniaImagenLaFuente": true,
+      "teniaImagenLaFuente": false,
       "fecha": "2026-09-30T13:31:15.123Z",
       "sinFecha": true,
       "visto": "2026-09-30T13:31:15.123Z",
-      "relevancia": 63,
+      "relevancia": 53,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -145,6 +212,61 @@
       "slug": "el-hospital-fossati-afronta-una-deuda-millonaria-de-obras-sociales",
       "foto": {
         "archivo": "fotos-notas/1dqm02n.jpg",
+        "credito": "Foto: Diario La Vanguardia"
+      }
+    },
+    {
+      "id": "wabor5",
+      "titulo": "Proponen mayores exigencias para radares viales y anular multas irregulares",
+      "copete": "Un bloque legislativo impulsa un proyecto para regular cinemómetros en territorio bonaerense. La iniciativa exige homologaciones técnicas y crea un registro público de dispositivos.",
+      "cuerpo": "Un bloque de diputados presentó un proyecto de ley para modificar el régimen de instalación de cinemómetros en territorio bonaerense, según informó un medio local. La iniciativa fue impulsada por el legislador Andrés De Leo, quien cuestionó el uso de los controles con fines recaudatorios.\n\nEl texto propone exigir homologaciones y verificaciones técnicas cada seis meses para los equipos de control. Además, contempla la creación de un registro público para consultar la ubicación, el número de serie y las autorizaciones de cada dispositivo.\n\nEl proyecto establece que las infracciones labradas por equipos que no cumplan con la normativa sean anuladas. Desde el espacio político remarcaron que los controles deben cumplir una función preventiva y contar con respaldo técnico.",
+      "guion": "Proponen mayores exigencias para radares viales y anular multas irregulares",
+      "seccion": "Balcarce",
+      "medios": [
+        "Diario La Vanguardia"
+      ],
+      "enlace": "https://www.diariolavanguardia.com/noticias/44951-buscan-modificar-las-reglas-para-la-instalacion-y-funcionamiento-de-radares/",
+      "teniaImagenLaFuente": false,
+      "fecha": "2026-09-30T13:31:15.123Z",
+      "sinFecha": true,
+      "visto": "2026-09-30T13:31:15.123Z",
+      "relevancia": 53,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Presentan un proyecto para regular radares en la provincia.",
+        "Exigen homologaciones técnicas periódicas para los equipos.",
+        "Proponen anular multas de cinemómetros sin habilitación."
+      ],
+      "noConfirmado": [
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "etiquetas": [
+        "radares",
+        "fotomultas",
+        "seguridad vial",
+        "provincia de Buenos Aires"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Diario La Vanguardia",
+          "enlace": "https://www.diariolavanguardia.com/noticias/44951-buscan-modificar-las-reglas-para-la-instalacion-y-funcionamiento-de-radares/",
+          "fecha": null,
+          "oficial": false,
+          "aporte": "Detalló los puntos centrales del proyecto de ley para regular radares viales."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "proponen-mayores-exigencias-para-radares-viales-y-anular-multas",
+      "foto": {
+        "archivo": "fotos-notas/wabor5.jpg",
         "credito": "Foto: Diario La Vanguardia"
       }
     },
@@ -347,7 +469,6 @@
       "guion": "El equipo de fútbol playa clasifica a la final bonaerense",
       "seccion": "Deportes",
       "medios": [
-        "Puntonueve (FM 100.9)",
         "Radio Gabal (FM 104.1)",
         "Municipalidad de Balcarce"
       ],
@@ -356,7 +477,7 @@
       "fecha": "2026-09-30T13:00:08.000Z",
       "sinFecha": false,
       "visto": "2026-09-30T13:01:14.157Z",
-      "relevancia": 100,
+      "relevancia": 94,
       "local": true,
       "oficial": true,
       "publicadaPor": null,
@@ -541,6 +662,142 @@
       }
     },
     {
+      "id": "1paybo8",
+      "titulo": "La provincia de Buenos Aires crea un mapa digital con empresas exportadoras",
+      "copete": "La Cámara de Diputados bonaerense aprobó la ley que impulsa el senador Adrián Santarelli para reunir datos de firmas exportadoras. La iniciativa provino del Senado.",
+      "cuerpo": "La Cámara de Diputados de la provincia de Buenos Aires aprobó la ley para crear el Mapa Digital de la Oferta Exportable, según informaron las fuentes periodísticas. La herramienta concentrará datos sobre las firmas bonaerenses con capacidad para vender al exterior.\n\nLa iniciativa surgió del Senado y recibió el voto definitivo durante la quinta sesión ordinaria correspondiente al centésimo quincuagésimo cuarto período legislativo. El proyecto original pertenece al legislador Adrián Santarelli, integrante del espacio político Fuerza Patria.",
+      "guion": "La provincia de Buenos Aires crea un mapa digital con empresas exportadoras",
+      "seccion": "Economía",
+      "medios": [
+        "La Noticia 1",
+        "Diputados Bonaerenses"
+      ],
+      "enlace": "https://www.lanoticia1.com/noticia/la-provincia-de-buenos-aires-tendra-un-mapa-digital-de-empresas-con-capacidad-exportadora",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-30T12:40:38.000Z",
+      "sinFecha": false,
+      "visto": "2026-09-30T15:31:12.935Z",
+      "relevancia": 56,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Aprobaron la creación del mapa digital de exportaciones",
+        "El proyecto provino de la Cámara de Senadores",
+        "La autoría corresponde al senador Adrián Santarelli"
+      ],
+      "seSabe": [
+        "La Cámara de Diputados sancionó la ley del mapa digital exportador",
+        "El proyecto fue presentado por el senador Adrián Santarelli",
+        "La iniciativa llegó desde la Cámara de Senadores"
+      ],
+      "textoRedes": "La provincia de Buenos Aires aprobó una ley para crear un mapa digital con información sobre las empresas locales con capacidad exportadora.",
+      "etiquetas": [
+        "Legislatura bonaerense",
+        "empresas",
+        "provincia de Buenos Aires",
+        "Adrián Santarelli"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "La Noticia 1",
+          "enlace": "https://www.lanoticia1.com/noticia/la-provincia-de-buenos-aires-tendra-un-mapa-digital-de-empresas-con-capacidad-exportadora",
+          "fecha": "2026-09-30T12:40:38.000Z",
+          "oficial": false,
+          "aporte": "Informó la sanción definitiva de la ley en la cámara baja y su origen en el senado."
+        },
+        {
+          "medio": "Diputados Bonaerenses",
+          "enlace": "https://diputadosbsas.com.ar/diputados-aprobo-mapa-exportaciones-bonaernse/",
+          "fecha": "2026-09-30T14:28:00.000Z",
+          "oficial": false,
+          "aporte": "Precisó que la iniciativa pertenece al senador Adrián Santarelli y se trató en la quinta sesión."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "la-provincia-de-buenos-aires-crea-un-mapa-digital-con-empresas",
+      "foto": {
+        "archivo": "fotos-notas/1paybo8.jpg",
+        "credito": "Foto: La Noticia 1"
+      }
+    },
+    {
+      "id": "7bv4jl",
+      "titulo": "La AFA organiza un Fan Fest para la despedida de Lionel Messi",
+      "copete": "La Asociación del Fútbol Argentino prepara un festival en la Ciudad Universitaria para el último partido de Lionel Messi con la selección nacional. El evento incluirá pantallas gigantes, shows musicales y gastronomía el próximo martes.",
+      "cuerpo": "La Asociación del Fútbol Argentino organiza el Fan Fest titulado Gracias Leo para el próximo martes 6 de octubre. El evento funcionará desde las 12 del mediodía hasta la medianoche en el Campo de Deportes de la Ciudad Universitaria de la UBA, destinado a quienes no consiguieron entradas para el estadio.\n\nEl predio contará con propuestas gastronómicas, juegos interactivos y transmisiones en una pantalla gigante de alta tecnología. Los shows musicales incluirán las presentaciones de Kapanga a las 18.30 y La T y La M a las 19.30, bajo la conducción de Sergio Goycochea.\n\nEl amistoso de la Selección Argentina frente a Benín en el Estadio Monumental comenzará a las 20. El encuentro marcará la despedida del delantero Lionel Messi del combinado nacional.",
+      "guion": "La AFA organiza un Fan Fest para la despedida de Lionel Messi",
+      "seccion": "Fútbol",
+      "medios": [
+        "Crónica",
+        "Bolavip Argentina"
+      ],
+      "enlace": "https://bolavip.com/ar/seleccion/afa-confirmo-el-fan-fest-gracias-leo-para-el-amistoso-de-argentina-ante-benin",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-30T12:37:20.000Z",
+      "sinFecha": false,
+      "visto": "2026-09-30T15:31:12.935Z",
+      "relevancia": 69,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "La AFA organiza un Fan Fest para la despedida de Lionel Messi.",
+        "El evento será el martes 6 de octubre en la Ciudad Universitaria de la UBA.",
+        "Habrá pantallas gigantes, gastronomía y shows musicales en vivo.",
+        "El partido amistoso frente a Benín comenzará a las 20 en el Estadio Monumental."
+      ],
+      "seSabe": [
+        "La AFA organiza el Fan Fest Gracias Leo el martes 6 de octubre.",
+        "El festival se hará en la Ciudad Universitaria de la UBA desde las 12 hasta la medianoche.",
+        "El partido de la Selección Argentina ante Benín en el Estadio Monumental empezará a las 20.",
+        "Kapanga tocará a las 18.30 y La T y La M a las 19.30.",
+        "Sergio Goycochea estará a cargo de la conducción del evento."
+      ],
+      "textoRedes": "La AFA organiza un Fan Fest en la Ciudad Universitaria para la despedida de Lionel Messi de la Selección Argentina. El evento será el martes 6 de octubre con pantallas gigantes, shows musicales y gastronomía.",
+      "etiquetas": [
+        "AFA",
+        "Lionel Messi",
+        "Seleccion Argentina",
+        "Estadio Monumental",
+        "Benin"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Bolavip Argentina",
+          "enlace": "https://bolavip.com/ar/seleccion/afa-confirmo-el-fan-fest-gracias-leo-para-el-amistoso-de-argentina-ante-benin",
+          "fecha": "2026-09-30T12:37:20.000Z",
+          "oficial": false,
+          "aporte": "Informó los detalles del Fan Fest, horarios, actividades, artistas y cronograma del evento."
+        },
+        {
+          "medio": "Crónica",
+          "enlace": "https://www.cronica.com.ar/depo/actualidad/despedida-lionel-messi-seleccion-argentina-benin-fan-fest-afa/",
+          "fecha": "2026-09-30T14:36:24.000Z",
+          "oficial": false,
+          "aporte": "Confirmó la fecha del partido amistoso de la Selección Argentina ante Benín en el Estadio Monumental."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "la-afa-organiza-un-fan-fest-para-la-despedida-de-lionel-messi",
+      "foto": {
+        "archivo": "fotos-notas/7bv4jl.jpg",
+        "credito": "Foto: Bolavip Argentina"
+      }
+    },
+    {
       "id": "1ijifkt",
       "titulo": "Ernesto Povilaitis Giovazzino asume la presidencia del Puerto de Quequén",
       "copete": "El Ejecutivo bonaerense oficializó la llegada del nuevo titular al organismo portuario. La medida lleva la firma del gobernador Axel Kicillof y rige de forma retroactiva desde agosto.",
@@ -558,7 +815,7 @@
       "fecha": "2026-09-30T12:12:33.000Z",
       "sinFecha": false,
       "visto": "2026-09-30T14:31:03.728Z",
-      "relevancia": 76,
+      "relevancia": 66,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -640,7 +897,7 @@
       "fecha": "2026-09-30T11:49:49.000Z",
       "sinFecha": false,
       "visto": "2026-09-30T12:01:02.331Z",
-      "relevancia": 88,
+      "relevancia": 84,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -690,13 +947,16 @@
       "guion": "Japón abre su mercado a la carne vacuna de todo el país",
       "seccion": "Agro",
       "medios": [
-        "Infobae",
         "El Eco de Tandil",
         "Agencia DIB",
         "La Nación",
+        "Infobae",
         "Clarín",
+        "Infocampo",
+        "Bichos de Campo",
         "TN (Todo Noticias)",
         "El Cronista",
+        "iProfesional",
         "C5N",
         "Crónica",
         "Radio Mitre",
@@ -704,8 +964,7 @@
         "El Día",
         "Infoeme",
         "Infobrisas (Radio Brisas)",
-        "Agrositio",
-        "Infocampo"
+        "Agrositio"
       ],
       "enlace": "https://www.lanacion.com.ar/economia/campo/el-gobierno-anuncio-que-japon-abrio-su-mercado-a-la-carne-vacuna-argentina-nid30092026/",
       "teniaImagenLaFuente": true,
@@ -859,6 +1118,7 @@
       "medios": [
         "El Eco de Tandil",
         "Infobae",
+        "Clarín",
         "El Cronista",
         "C5N",
         "Noticias Argentinas (NA)"
@@ -929,94 +1189,6 @@
       "foto": {
         "archivo": "fotos-notas/1h321lc.jpg",
         "credito": "Foto: Infobae"
-      }
-    },
-    {
-      "id": "10skxuq",
-      "titulo": "Reclaman a la Provincia datos sobre las habilitaciones del Autódromo",
-      "copete": "Un pedido formal ingresado ante el Ministerio de Desarrollo de la Comunidad bonaerense exige expedientes y pólizas sobre las competencias realizadas el último fin de semana en el circuito serrano.",
-      "cuerpo": "Un pedido formal de acceso a la información pública ingresó el martes ante el Ministerio de Desarrollo de la Comunidad bonaerense para conocer las habilitaciones, inspecciones y mecanismos de control del Autódromo Juan Manuel Fangio. La presentación, impulsada por el periodista Julio César Politano, exige copias de los expedientes, resoluciones y dictámenes vinculados con el evento desarrollado durante el fin de semana del 26 y 27 de septiembre.\n\nEl requerimiento apunta a determinar la situación regulatoria de la Municipalidad de Balcarce y de la Comisión Asesora y Fiscalizadora de la ACTC ante la Comisión Provincial de Automovilismo y Motociclismo. Además, solicita las constancias de las pólizas de seguro obligatorio y los antecedentes técnicos de la autorización provisoria otorgada al circuito. El escrito advierte con recurrir a la vía judicial si el Poder Ejecutivo provincial incumple los plazos legales de respuesta.",
-      "guion": "Reclaman a la Provincia datos sobre las habilitaciones del Autódromo",
-      "seccion": "Política",
-      "medios": [
-        "Puntonueve (FM 100.9)"
-      ],
-      "enlace": "https://puntonueve.com.ar/piden-informacion-a-la-provincia-sobre-las-habilitaciones-y-controles-del-autodromo-juan-manuel-fangio/",
-      "teniaImagenLaFuente": false,
-      "fecha": "2026-09-30T11:15:42.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-30T12:01:02.331Z",
-      "relevancia": 82,
-      "local": true,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [
-        "autodromo",
-        "fangio"
-      ],
-      "como": "automatica",
-      "claves": [
-        "Presentan un pedido de acceso a la información pública ante la Provincia.",
-        "Exigen expedientes sobre habilitaciones, inspecciones y seguros del circuito.",
-        "Apunta a determinar las autorizaciones de la Municipalidad y de la fiscalizadora.",
-        "El autódromo había reabierto el último fin de semana tras quince años."
-      ],
-      "seSabe": [
-        "El pedido formal fue presentado el martes 29 de septiembre por el periodista Julio César Politano.",
-        "La solicitud se dirigió al Ministerio de Desarrollo de la Comunidad bonaerense.",
-        "Se reclaman copias de expedientes, resoluciones y comprobantes de seguros de las competencias del 26 y 27 de septiembre.",
-        "El escrito incluye una reserva de acudir a la vía judicial ante la falta de respuesta oficial."
-      ],
-      "noConfirmado": [
-        "La respuesta oficial del gobierno provincial sobre la documentación solicitada.",
-        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
-      ],
-      "textoRedes": "Presentan un pedido formal ante la Provincia para conocer las habilitaciones, inspecciones y pólizas de seguro del Autódromo Juan Manuel Fangio tras las competencias del último fin de semana.",
-      "etiquetas": [
-        "Autodromo Juan Manuel Fangio",
-        "Balcarce",
-        "Provincia de Buenos Aires",
-        "CoPAM",
-        "Automovilismo"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Puntonueve (FM 100.9)",
-          "enlace": "https://puntonueve.com.ar/piden-informacion-a-la-provincia-sobre-las-habilitaciones-y-controles-del-autodromo-juan-manuel-fangio/",
-          "fecha": "2026-09-30T11:15:42.000Z",
-          "oficial": false,
-          "aporte": "Detalló la presentación del pedido de acceso a la información pública sobre las habilitaciones del autódromo."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "wgq362",
-          "titulo": "Omar Martínez termina cuarto en el autódromo Juan Manuel Fangio",
-          "fecha": "2026-09-29T14:55:00.000Z",
-          "ruta": "/nota/omar-martinez-termina-cuarto-en-el-autodromo-juan-manuel-fangio-wgq362"
-        },
-        {
-          "id": "rebipe",
-          "titulo": "Mangoni repasa su paso por el autódromo Juan Manuel Fangio",
-          "fecha": "2026-09-28T16:15:38.000Z",
-          "ruta": "/nota/mangoni-repasa-su-paso-por-el-autodromo-juan-manuel-fangio-rebipe"
-        },
-        {
-          "id": "83u2vt",
-          "titulo": "El autódromo Juan Manuel Fangio reabre tras quince años",
-          "fecha": "2026-09-28T03:01:51.643Z",
-          "ruta": "/nota/el-autodromo-juan-manuel-fangio-reabre-tras-quince-anos-83u2vt"
-        }
-      ],
-      "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "reclaman-a-la-provincia-datos-sobre-las-habilitaciones-del-autodromo",
-      "foto": {
-        "archivo": "fotos-notas/10skxuq.jpg",
-        "credito": "Foto: Puntonueve (FM 100.9)"
       }
     },
     {
@@ -1220,9 +1392,9 @@
       "guion": "Martín Guzmán y Malena Galmarini protagonizan fuerte cruce en redes",
       "seccion": "Política",
       "medios": [
-        "La Nación",
         "Infobae",
         "Clarín",
+        "La Nación",
         "Perfil"
       ],
       "enlace": "https://www.clarin.com/politica/cruce-pensado-martin-guzman-critico-milei-malena-galmarini-fulmino-antecesor-massa_0_wRIHxWo4q0.html",
@@ -1454,15 +1626,15 @@
       "seccion": "Automovilismo",
       "medios": [
         "0223 (Mar del Plata)",
-        "Campeones",
-        "La Verdad de Ayacucho"
+        "La Verdad de Ayacucho",
+        "Campeones"
       ],
       "enlace": "https://www.0223.com.ar/nota/2026-9-29-21-9-0-tras-la-fiesta-en-el-autodromo-juan-manuel-fangio-dura-sancion-a-werner-multa-millonaria-y-largada-desde-el-fondo",
       "teniaImagenLaFuente": true,
       "fecha": "2026-09-30T00:39:00.000Z",
       "sinFecha": false,
       "visto": "2026-09-30T01:01:00.516Z",
-      "relevancia": 85,
+      "relevancia": 81,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1754,6 +1926,96 @@
       }
     },
     {
+      "id": "k33wy9",
+      "titulo": "Rafael Grossi recupera apoyos y queda tercero en la carrera hacia la ONU",
+      "copete": "El diplomático argentino sumó ocho votos favorables en la cuarta consulta informal del Consejo de Seguridad. Buscará suceder a António Guterres al frente de las Naciones Unidas.",
+      "cuerpo": "El diplomático argentino Rafael Grossi sumó respaldos en la cuarta votación informal realizada por el Consejo de Seguridad de las Naciones Unidas para definir al próximo secretario general. El director general del Organismo Internacional de Energía Atómica acumuló ocho votos favorables, siete negativos y ninguno sin opinión, lo que le permitió quedar en el tercer puesto de la carrera.\n\nEl resultado representó una mejora de tres apoyos respecto de la tercera ronda realizada el 18 de septiembre, donde había obtenido cinco votos a favor. Con este desempeño, el candidato oficializado por la Argentina a fines de 2025 volvió a ubicarse entre los tres postulantes con mayor respaldo, posición que ya había alcanzado en agosto.\n\nDetrás de Grossi se posicionaron Olara Otunnu, de Uganda, y el expresidente senegalés Macky Sall, ambos con cinco votos favorables. El primer lugar quedó para Rebeca Grynspan, de Costa Rica, con 10 respaldos, seguida por Carolyn Rodrigues-Birkett, de Guyana, con la misma cantidad de votos a favor que el argentino pero con un rechazo menos.\n\nPara avanzar formalmente en la elección que sucederá al portugués António Guterres a fin de año, el postulante necesita al menos nueve votos favorables y la ausencia de vetos por parte de las cinco potencias permanentes.",
+      "guion": "Rafael Grossi recupera apoyos y queda tercero en la carrera hacia la ONU",
+      "seccion": "Argentina",
+      "medios": [
+        "TN (Todo Noticias)",
+        "Noticias Argentinas (NA)",
+        "Ámbito",
+        "C5N",
+        "La Nueva",
+        "Perfil"
+      ],
+      "enlace": "https://tn.com.ar/internacional/2026/09/29/el-argentino-rafael-grossi-recupero-apoyos-y-volvio-a-quedar-tercero-en-la-carrera-para-liderar-la-onu/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-29T21:39:57.000Z",
+      "sinFecha": false,
+      "visto": "2026-09-30T04:01:02.148Z",
+      "relevancia": 62,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Rafael Grossi obtuvo ocho votos favorables en la cuarta consulta informal.",
+        "El diplomático argentino sumó tres respaldos respecto de la ronda previa.",
+        "Rebeca Grynspan, de Costa Rica, lideró el respaldo con diez votos a favor.",
+        "El Consejo de Seguridad debe definir al sucesor de António Guterres."
+      ],
+      "noConfirmado": [
+        "Todavía no se determinó qué países emitieron cada uno de los votos negativos en las consultas informales.",
+        "No se especificaron los detalles del pedido presentado por Cristina Kirchner ante la ONU, según lo mencionado por C5N."
+      ],
+      "etiquetas": [
+        "Rafael Grossi",
+        "ONU",
+        "Consejo de Seguridad",
+        "internacionales"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/internacional/2026/09/29/el-argentino-rafael-grossi-recupero-apoyos-y-volvio-a-quedar-tercero-en-la-carrera-para-liderar-la-onu/",
+          "fecha": "2026-09-29T21:39:57.000Z",
+          "oficial": false,
+          "aporte": "Detalló los resultados de la cuarta votación informal y el historial de rondas previas de Rafael Grossi."
+        },
+        {
+          "medio": "Ámbito",
+          "enlace": "https://www.ambito.com/mundo/el-argentino-rafael-grossi-recupero-apoyos-y-volvio-quedar-tercero-la-carrera-liderar-la-onu-n6328226",
+          "fecha": "2026-09-30T00:12:00.000Z",
+          "oficial": false,
+          "aporte": "Indicó que el resultado significó una mejora y que el cargo sucederá al de António Guterres."
+        },
+        {
+          "medio": "C5N",
+          "enlace": "https://www.c5n.com/mundo/carrera-la-secretaria-general-la-onu-el-argentino-rafael-grossi-recupero-terreno-n250292",
+          "fecha": "2026-09-30T02:05:00.000Z",
+          "oficial": false,
+          "aporte": "Mencionó que el escenario sigue trabado por tensiones geopolíticas y un pedido de Cristina Kirchner."
+        },
+        {
+          "medio": "Noticias Argentinas (NA)",
+          "enlace": "https://noticiasargentinas.com/internacionales/el-argentino-grossi-sigue-en-carrera-para-ser-nuevo-secretario-general-de-la-onu_a6abc59a3aeec850fb27a5dc2",
+          "fecha": "2026-09-30T00:58:00.000Z",
+          "oficial": false,
+          "aporte": "Informó la realización de la cuarta votación indicativa del Consejo de Seguridad de la ONU."
+        },
+        {
+          "medio": "La Nueva",
+          "enlace": "https://www.lanueva.com/nota/2026-9-29-23-42-0-en-carrera-el-argentino-grossi-sigue-con-chances-de-ser-el-nuevo-secretario-general-de-la-onu",
+          "fecha": "2026-09-30T02:55:16.000Z",
+          "oficial": false,
+          "aporte": "Aportó la declaración oficial sobre el desarrollo de la cuarta votación indicativa."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron cinco medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "rafael-grossi-recupera-apoyos-y-queda-tercero-en-la-carrera-hacia-la",
+      "foto": {
+        "archivo": "fotos-notas/k33wy9.jpg",
+        "credito": "Foto: TN (Todo Noticias)"
+      }
+    },
+    {
       "id": "1fpyvha",
       "titulo": "El Gobierno recibe un nuevo lote de aviones caza F-16 en Córdoba",
       "copete": "La Fuerza Aérea incorpora seis nuevas unidades de combate tras un vuelo desde Dinamarca. El país ya suma una docena de aeronaves operativas.",
@@ -1768,7 +2030,8 @@
         "Noticias Argentinas (NA)",
         "El Eco de Tandil",
         "iProfesional",
-        "La Nueva"
+        "La Nueva",
+        "Clarín"
       ],
       "enlace": "https://www.iprofesional.com/actualidad/465533-llegaron-a-argentina-los-aviones-cazas-f-16-que-compro-el-gobierno-y-ya-hay-12-en-el-pais",
       "teniaImagenLaFuente": true,
@@ -2105,7 +2368,6 @@
         "Perfil",
         "TyC Sports",
         "Olé",
-        "Minuto Uno",
         "C5N",
         "Crónica",
         "Diario Popular",
@@ -2113,6 +2375,7 @@
         "El Eco de Tandil",
         "Doble Amarilla",
         "Bolavip Argentina",
+        "Minuto Uno",
         "Clarín"
       ],
       "enlace": "https://www.lanacion.com.ar/deportes/nuevo-embargo-a-san-lorenzo-el-millonario-monto-que-reclama-damian-ayude-nid29092026/",
@@ -2738,7 +3001,6 @@
       "guion": "Pato Naranja gana por 99 a 12 y queda entre los cuatro mejores",
       "seccion": "Deportes",
       "medios": [
-        "Puntonueve (FM 100.9)",
         "Infórmese Primero (FM 104.9)"
       ],
       "enlace": "http://www.informeseprimero.com.ar/2026/09/pato-naranja-goleo-pampas-y-quedo-entre.html",
@@ -2746,7 +3008,7 @@
       "fecha": "2026-09-29T16:01:29.256Z",
       "sinFecha": false,
       "visto": "2026-09-29T16:31:06.769Z",
-      "relevancia": 83,
+      "relevancia": 73,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -2817,10 +3079,10 @@
         "La Noticia 1",
         "Noticias Argentinas (NA)",
         "La Tecla",
-        "Realpolitik",
         "QZ Noticias (Mar del Plata)",
         "Crónica",
-        "Agencia DIB"
+        "Agencia DIB",
+        "Realpolitik"
       ],
       "enlace": "https://noticiasargentinas.com/politica/fernando-gray-anuncio-una-exencion-impositiva-total-para-mayores-de-75-anos_a6abbdd6512f3a9893c237ce6",
       "teniaImagenLaFuente": true,
@@ -2981,96 +3243,6 @@
       }
     },
     {
-      "id": "8213y6",
-      "titulo": "El Gobierno atribuye el salto del riesgo país a factores externos",
-      "copete": "El índice que elabora JP Morgan tocó los 641 puntos básicos en el inicio de la semana y luego bajó a 604. El Ejecutivo defendió el programa económico.",
-      "cuerpo": "Frente a esta suba del indicador que elabora la banca privada JP Morgan, el vocero presidencial Adrián Ravier atribuyó la escalada a factores internacionales vinculados a la guerra en Medio Oriente y al incremento de tasas en los Estados Unidos.\n\nDurante una conferencia de prensa en la Casa Rosada, el funcionario defendió la política económica y remarcó que la economía nacional continúa en crecimiento pese a los shocks externos. Además, el vocero responsabilizó a la oposición por los aumentos en la inflación y la pobreza tras los ataques políticos registrados a fines del año pasado.\n\nEn la jornada del martes, el índice financiero que mide el sobrecosto de la deuda argentina retrocedió hasta los 604 puntos básicos gracias a una recuperación de los bonos. Días atrás, el presidente Javier Milei había culpado al gobernador bonaerense Axel Kicillof por el incremento del indicador financiero durante una visita a los Estados Unidos.",
-      "guion": "El Gobierno atribuye el salto del riesgo país a factores externos",
-      "seccion": "Economía",
-      "medios": [
-        "TN (Todo Noticias)",
-        "El Destape",
-        "El Marplatense",
-        "Clarín"
-      ],
-      "enlace": "https://www.clarin.com/economia/gobierno-atribuyo-alza-riesgo-pais-conflicto-medio-oriente-suba-tasas-estados-unidos_0_Cx7P3WgeCb.html",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-29T15:21:01.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-29T20:01:10.426Z",
-      "relevancia": 62,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "El riesgo país tocó los 641 puntos básicos al inicio de la semana.",
-        "El Ejecutivo adjudicó la suba a la guerra en Medio Oriente y a tasas en Estados Unidos.",
-        "El índice financiero retrocedió este martes hasta los 604 puntos básicos."
-      ],
-      "seSabe": [
-        "El riesgo país alcanzó los 641 puntos básicos el lunes y bajó a 604 este martes, según los medios y fuentes oficiales.",
-        "El vocero presidencial Adrián Ravier atribuyó la suba a factores externos como Medio Oriente y las tasas de Estados Unidos.",
-        "El presidente Javier Milei había responsabilizado al gobernador Axel Kicillof por el indicador en septiembre de 2026."
-      ],
-      "textoRedes": "El riesgo país argentino llegó a los 641 puntos básicos en el inicio de la semana y luego bajó a 604. El Gobierno nacional atribuyó la suba a la guerra en Medio Oriente y al aumento de tasas en los Estados Unidos.",
-      "etiquetas": [
-        "riesgo pais",
-        "economia",
-        "gobierno nacional",
-        "adrian ravier"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Clarín",
-          "enlace": "https://www.clarin.com/economia/gobierno-atribuyo-alza-riesgo-pais-conflicto-medio-oriente-suba-tasas-estados-unidos_0_Cx7P3WgeCb.html",
-          "fecha": "2026-09-29T15:21:01.000Z",
-          "oficial": false,
-          "aporte": "Informó que el riesgo país tocó 641 puntos y detalló las declaraciones del vocero Adrián Ravier."
-        },
-        {
-          "medio": "TN (Todo Noticias)",
-          "enlace": "https://tn.com.ar/economia/2026/09/29/el-gobierno-le-atribuyo-la-suba-del-riesgo-pais-al-conflicto-en-medio-oriente-y-el-alza-de-las-tasas-en-los-estados-unidos/",
-          "fecha": "2026-09-29T18:40:14.000Z",
-          "oficial": false,
-          "aporte": "Confirmó los datos del salto del riesgo país a 641 puntos básicos al inicio de la semana."
-        },
-        {
-          "medio": "El Destape",
-          "enlace": "https://www.eldestapeweb.com/politica/ahora-gobierno-culpo-ee-uu-guerra-medio-oriente-suba-riesgo-pais-2026929125227",
-          "fecha": "2026-09-29T15:52:00.000Z",
-          "oficial": false,
-          "aporte": "Aportó que Ravier adjudicó la suba a factores externos y mencionó cifras sobre control migratorio."
-        },
-        {
-          "medio": "El Marplatense",
-          "enlace": "https://www.elmarplatense.com/el-gobierno-atribuyo-el-crecimiento-del-riesgo-pais-al-conflicto-en-medio-oriente",
-          "fecha": "2026-09-29T19:36:14.000Z",
-          "oficial": false,
-          "aporte": "Indicó que el gobierno buscó llevar tranquilidad tras el aumento del indicador de JP Morgan."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "11nk8l",
-          "titulo": "Milei cruza a Kicillof en Estados Unidos y lo culpa por el riesgo país",
-          "fecha": "2026-09-24T01:04:00.000Z",
-          "ruta": "/nota/milei-critico-a-kicillof-por-el-riesgo-pais-en-nueva-york-11nk8l"
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron cuatro medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "el-gobierno-atribuye-el-salto-del-riesgo-pais-a-factores-externos",
-      "foto": {
-        "archivo": "fotos-notas/8213y6.jpg",
-        "credito": "Foto: El Destape"
-      }
-    },
-    {
       "id": "jul48u",
       "titulo": "Pampa Dúo toca el 17 de octubre en el Teatro Municipal",
       "copete": "Marcelo Giménez y Pablo Lobato presentarán \"Nuestra forma de mirar el mundo\", un espectáculo de música surera, a las 21 en el Teatro Municipal Luis Conti.",
@@ -3085,7 +3257,7 @@
       "fecha": "2026-09-29T15:07:30.000Z",
       "sinFecha": false,
       "visto": "2026-09-30T00:31:08.568Z",
-      "relevancia": 67,
+      "relevancia": 59,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -3129,7 +3301,7 @@
       "fecha": "2026-09-29T15:07:00.000Z",
       "sinFecha": false,
       "visto": "2026-09-29T19:31:15.444Z",
-      "relevancia": 73,
+      "relevancia": 65,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -3208,7 +3380,7 @@
       "guion": "El Complejo Polideportivo aloja un encuentro regional por el Día del Sordo",
       "seccion": "Balcarce",
       "medios": [
-        "Puntonueve (FM 100.9)",
+        "News Balcarce (FM 91.7)",
         "Infórmese Primero (FM 104.9)",
         "Municipalidad de Balcarce",
         "Diario La Vanguardia",
@@ -3353,7 +3525,7 @@
       "guion": null,
       "seccion": "Cultura y agenda",
       "medios": [
-        "Puntonueve (FM 100.9)",
+        "News Balcarce (FM 91.7)",
         "Infórmese Primero (FM 104.9)",
         "Municipalidad de Balcarce",
         "Diario La Vanguardia"
@@ -3379,9 +3551,9 @@
           "aporte": null
         },
         {
-          "medio": "Puntonueve (FM 100.9)",
-          "enlace": "https://puntonueve.com.ar/arte-fusion-la-escuela-de-arte-astor-piazzolla-presenta-su-expo-anual-2026-en-el-museo-historico/",
-          "fecha": "2026-09-29T19:54:02.000Z",
+          "medio": "News Balcarce (FM 91.7)",
+          "enlace": "https://newsbalcarce.com.ar/?p=30904",
+          "fecha": "2026-09-30T15:25:57.000Z",
           "oficial": false,
           "aporte": null
         },
@@ -3699,73 +3871,6 @@
       }
     },
     {
-      "id": "2e3etr",
-      "titulo": "Cierran más de doscientos locales de juguetes en un año por la crisis",
-      "copete": "La caída del consumo y el aumento de costos impactan en el sector juguetero. La cámara empresaria advierte sobre la competencia de importados y el contrabando.",
-      "cuerpo": "Entre los casos recientes figura el cese de operaciones de la tradicional cadena Tío Mario, ubicada en la avenida Pueyrredón, tras casi treinta años de actividad.\n\nEl dirigente detalló que los comercios enfrentan una fuerte presión por el incremento en los alquileres, los servicios y los salarios, lo que lleva a muchos a volcarse a la venta digital para liquidar mercadería. Asimismo, advirtió que el treinta por ciento del mercado corresponde a contrabando y cuestionó el impacto de la desregulación en las compras al exterior.\n\nActualmente, el territorio nacional cuenta con 2.800 establecimientos activos que intentan sostener sus estructuras frente a este escenario complejo.",
-      "guion": "Cierran más de doscientos locales de juguetes en un año por la crisis",
-      "seccion": "Economía",
-      "medios": [
-        "Minuto Uno",
-        "El Eco de Tandil"
-      ],
-      "enlace": "https://www.eleco.com.ar/nacionales/jugueterias-en-crisis-cerraron-mas-de-200-en-un-ano",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-29T12:26:40.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-29T23:01:10.965Z",
-      "relevancia": 27,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "Más de 200 jugueterías cerraron en un año.",
-        "El sector sufre caída del consumo y suba de costos.",
-        "El treinta por ciento del mercado es contrabando.",
-        "Subsisten 2.800 comercios en todo el país."
-      ],
-      "seSabe": [
-        "Cerraron más de 200 jugueterías en el último año según la Cámara Argentina de la Industria del Juguete.",
-        "La cadena Tío Mario cerró su local de avenida Pueyrredón tras casi tres décadas.",
-        "El país cuenta actualmente con 2.800 jugueterías.",
-        "El 30 por ciento del mercado del juguete es de contrabando según el sector."
-      ],
-      "textoRedes": "La industria juguetería atraviesa una crisis con más de doscientos locales cerrados en un año debido a la caída del consumo, el aumento de costos y la competencia de productos importados, según informó la cámara del sector.",
-      "etiquetas": [
-        "Jugueterías",
-        "Crisis",
-        "Consumo"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "El Eco de Tandil",
-          "enlace": "https://www.eleco.com.ar/nacionales/jugueterias-en-crisis-cerraron-mas-de-200-en-un-ano",
-          "fecha": "2026-09-29T12:26:40.000Z",
-          "oficial": false,
-          "aporte": "Detalló el cierre de la cadena Tío Mario, datos de la cámara empresaria sobre cierres de locales y denunció contrabando."
-        },
-        {
-          "medio": "Minuto Uno",
-          "enlace": "https://www.minutouno.com/economia/crisis-economica-mas-300-jugueterias-cerraron-o-pasaron-comercio-online-n6328099",
-          "fecha": "2026-09-29T20:40:00.000Z",
-          "oficial": false,
-          "aporte": "Indicó que la transformación del sector se debe al consumo, compras externas y canales digitales."
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron dos medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "cierran-mas-de-doscientos-locales-de-juguetes-en-un-ano-por-la-crisis",
-      "foto": {
-        "archivo": "fotos-notas/2e3etr.jpg",
-        "credito": "Foto: El Eco de Tandil"
-      }
-    },
-    {
       "id": "jul3w9",
       "titulo": "Infraccionan a un tractor en caminos rurales tras las lluvias",
       "copete": "El Comando de Prevención Rural sancionó a un conductor en el paraje La Esperanza. El municipio advirtió que aplicará multas severas.",
@@ -3859,6 +3964,95 @@
       "foto": {
         "archivo": "fotos-notas/jul3w9.jpg",
         "credito": "Foto: Diario La Vanguardia"
+      }
+    },
+    {
+      "id": "19rwgiy",
+      "titulo": "El INTA analiza las claves para la siembra de soja de primavera",
+      "copete": "Especialistas detallan los factores climáticos y de manejo necesarios para adelantar la implantación del cultivo en el Chaco sin reemplazar la fecha tradicional.",
+      "cuerpo": "El INTA analiza las alternativas para adelantar la siembra de soja en el Chaco mediante el aprovechamiento de la humedad acumulada durante el invierno y la primavera. La investigadora Johana Luzzi explicó que la práctica requiere evaluar el equilibrio entre el desarrollo de la planta y la duración del ciclo, y señaló que la demanda hídrica de la región se ubica en torno a los 650 milímetros. \n\nEl trabajo técnico detalla que una temperatura de suelo cercana a los 22 grados favorece la emergencia, mientras que los registros inferiores a 18 grados la demoran y los superiores a 35 grados la reducen. Asimismo, aconseja densidades de 25 a 30 plantas por metro cuadrado en lotes con buena disponibilidad hídrica y de 20 a 25 en ambientes más ajustados, además de mantener un monitoreo constante ante la posible aparición de enfermedades y plagas.",
+      "guion": "El INTA analiza las claves para la siembra de soja de primavera",
+      "seccion": "Agro",
+      "medios": [
+        "INTA",
+        "Agrositio"
+      ],
+      "enlace": "https://www.agrositio.com.ar/noticia/248580-soja-de-primavera-claves-para-definir-la-siembra-en-el-chaco.html",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-29T12:04:10.000Z",
+      "sinFecha": false,
+      "visto": "2026-09-29T14:01:11.480Z",
+      "relevancia": 28,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [
+        "inta"
+      ],
+      "como": "automatica",
+      "claves": [
+        "El INTA evalúa la siembra de soja de primavera en el Chaco.",
+        "La investigadora Johana Luzzi destaca la importancia del agua y la temperatura.",
+        "Recomiendan densidades de hasta 30 plantas por metro cuadrado.",
+        "advierten la necesidad de monitorear enfermedades y plagas tempranas."
+      ],
+      "seSabe": [
+        "La soja de primavera en el Chaco es una alternativa supeditada a condiciones de humedad y temperatura.",
+        "La demanda hídrica estimada para el cultivo en la región es de unos 650 milímetros.",
+        "La temperatura óptima de suelo para la emergencia se ubica alrededor de los 22 grados.",
+        "Las experiencias de la Red de Soja en el NEA sugieren grupos V y VI cortos."
+      ],
+      "etiquetas": [
+        "INTA",
+        "soja",
+        "Chaco",
+        "siembra"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Agrositio",
+          "enlace": "https://www.agrositio.com.ar/noticia/248580-soja-de-primavera-claves-para-definir-la-siembra-en-el-chaco.html",
+          "fecha": "2026-09-29T12:04:10.000Z",
+          "oficial": false,
+          "aporte": "Detalló las condiciones de humedad, temperatura, densidad y manejo sanitario para la siembra de soja de primavera."
+        },
+        {
+          "medio": "INTA",
+          "enlace": "https://www.argentina.gob.ar/noticias/soja-de-primavera-claves-para-definir-la-siembra-en-el-chaco",
+          "fecha": "2026-09-29T15:25:43.000Z",
+          "oficial": false,
+          "aporte": "Informó sobre la evaluación técnica del INTA respecto al cultivo en el Chaco."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1ytgm6c",
+          "titulo": "Petruccelli pide que Aparicio exponga ante la Comisión de Salud",
+          "fecha": "2026-09-28T21:59:12.000Z",
+          "ruta": "/nota/petruccelli-pide-que-aparicio-exponga-ante-la-comision-de-salud-1ytgm6c"
+        },
+        {
+          "id": "1fp9m4l",
+          "titulo": "El INTA Balcarce enfrenta una polémica por la posible exoneración de una científica",
+          "fecha": "2026-09-28T18:31:07.835Z",
+          "ruta": "/nota/el-inta-balcarce-enfrenta-una-polemica-por-la-posible-exoneracion-de-1fp9m4l"
+        },
+        {
+          "id": "1dou3ni",
+          "titulo": "Estiman el costo operativo de usar drones para pulverizar papa",
+          "fecha": "2026-09-27T19:06:20.725Z",
+          "ruta": "/nota/estudian-el-costo-operativo-de-usar-drones-para-pulverizar-papa-1dou3ni"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "el-inta-analiza-las-claves-para-la-siembra-de-soja-de-primavera",
+      "foto": {
+        "archivo": "fotos-notas/19rwgiy.jpg",
+        "credito": "Foto: INTA"
       }
     },
     {
@@ -4129,13 +4323,13 @@
     }
   ],
   "secciones": [
-    "Fútbol",
     "Balcarce",
+    "Fútbol",
     "Deportes",
     "Cultura y agenda",
+    "Economía",
     "Política",
     "Agro",
-    "Economía",
     "Automovilismo",
     "Argentina",
     "Tecnología"
@@ -4144,12 +4338,12 @@
     {
       "nombre": "El autódromo",
       "ranura": "autodromo",
-      "cuantas": 5
+      "cuantas": 4
     },
     {
       "nombre": "Fangio",
       "ranura": "fangio",
-      "cuantas": 5
+      "cuantas": 4
     },
     {
       "nombre": "TC Pick Up",
@@ -4160,13 +4354,18 @@
       "nombre": "El Concejo Deliberante",
       "ranura": "concejo",
       "cuantas": 2
+    },
+    {
+      "nombre": "El INTA",
+      "ranura": "inta",
+      "cuantas": 2
     }
   ],
   "clima": {
     "ahora": {
-      "temp": 12,
+      "temp": 13,
       "sensacion": 8,
-      "humedad": 60,
+      "humedad": 59,
       "viento": 23,
       "rumbo": "SO",
       "cielo": "Nublado",
@@ -4542,12 +4741,6 @@
       "motivo": "internacional: sin relación con Balcarce"
     },
     {
-      "id": "saz121",
-      "titulo": "Autódromo: qué le exigía el contrato de la ACTC al…",
-      "seccion": "Automovilismo",
-      "motivo": "verificación baja: espera a una persona (visto al reescribir)"
-    },
-    {
       "id": "10ybc9u",
       "titulo": "Diputados salió al cruce de la justicia y negó encubrir…",
       "seccion": "Política",
@@ -4566,16 +4759,16 @@
       "motivo": "necesita ojo humano: \"acusado\""
     },
     {
-      "id": "9a9diu",
-      "titulo": null,
-      "seccion": "Argentina",
-      "motivo": "necesita ojo humano: \"víctima\""
-    },
-    {
       "id": "hhuf5i",
       "titulo": "RSF denuncia los ataques de Milei a la prensa y pasea sus…",
       "seccion": "Política",
       "motivo": "necesita ojo humano: \"denuncia\""
+    },
+    {
+      "id": "saz121",
+      "titulo": "Autódromo: qué le exigía el contrato de la ACTC al…",
+      "seccion": "Automovilismo",
+      "motivo": "verificación baja: espera a una persona (visto al reescribir)"
     },
     {
       "id": "13cnvur",
@@ -4590,6 +4783,12 @@
       "motivo": "necesita ojo humano: \"denuncia\""
     },
     {
+      "id": "18usy75",
+      "titulo": "Quiniela de HOY: los resultados de la Nacional de este…",
+      "seccion": "Argentina",
+      "motivo": "parece promoción, no noticia: \"sorteo\""
+    },
+    {
       "id": "nujlcl",
       "titulo": "Un argentino buscaba trabajo y terminó como prisionero de…",
       "seccion": "Argentina",
@@ -4600,12 +4799,6 @@
       "titulo": "La ANMAT prohibió productos de limpieza de una marca en…",
       "seccion": "Economía",
       "motivo": "necesita ojo humano: \"denuncia\""
-    },
-    {
-      "id": "18usy75",
-      "titulo": "Quiniela de HOY: los resultados de la Nacional de este…",
-      "seccion": "Argentina",
-      "motivo": "parece promoción, no noticia: \"sorteo\""
     },
     {
       "id": "11a41j5",
@@ -4624,6 +4817,12 @@
       "titulo": null,
       "seccion": "Argentina",
       "motivo": "necesita ojo humano: \"niña\""
+    },
+    {
+      "id": "fexz24",
+      "titulo": null,
+      "seccion": "Argentina",
+      "motivo": "necesita ojo humano: \"víctima\""
     },
     {
       "id": "1ogz9mz",
@@ -4674,5 +4873,5 @@
       "motivo": "necesita ojo humano: \"denuncia\""
     }
   ],
-  "esperandoCuerpo": 5
+  "esperandoCuerpo": 6
 }
