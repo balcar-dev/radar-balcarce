@@ -1,47 +1,7 @@
 {
- "generado": "2026-09-30T12:04:14.652Z",
+ "generado": "2026-09-30T12:32:59.949Z",
  "intentosMaximos": 3,
  "notas": [
-  {
-   "id": "1lyj59u",
-   "titulo": "\"Hoy es no, pero estamos cercanos a que pronto podamos llegar a eso\"",
-   "copete": "Luego de lo que pasó el fin de semana con la reapertura del autódromo \"Juan Manuel Fangio\", el acompañamiento multitudinario del público, el buen espectáculo que brindaron las TC Pick Up y el Turismo Special de la Costa y la buena respuesta del",
-   "seccion": "Automovilismo",
-   "fecha": "2026-09-30T11:48:36.000Z",
-   "fuentes": [
-    {
-     "medio": "El Diario Balcarce",
-     "enlace": "https://eldiariobalcarce.com.ar/hoy-es-no-pero-estamos-cercanos-a-que-pronto-podamos-llegar-a-eso-726",
-     "fecha": "2026-09-30T11:48:36.000Z"
-    }
-   ],
-   "intentos": 1
-  },
-  {
-   "id": "pfkkq1",
-   "titulo": "Carne argentina a Japón: tras 20 años, reabre un mercado de más de u$s3.000 millones",
-   "copete": "El ministro de Economía, Luis Caputo , anunció este miércoles que Japón abrió su mercado a la carne vacuna argentina. “Se trata de un acuerdo histórico alcanzado luego de las negociaciones iniciadas en 2024 por las autoridades de nuestro país”, definió. Según el titular del…",
-   "seccion": "Agro",
-   "fecha": "2026-09-30T11:20:23.000Z",
-   "fuentes": [
-    {
-     "medio": "Perfil",
-     "enlace": "https://www.perfil.com/noticias/economia/carne-argentina-a-japon-tras-20-anos-acordaron-la-reapertura-de-un-mercado-de-mas-de-us3000-millones-a40.phtml",
-     "fecha": "2026-09-30T11:20:23.000Z"
-    },
-    {
-     "medio": "La Nación",
-     "enlace": "https://www.lanacion.com.ar/economia/campo/el-gobierno-anuncio-que-japon-abrio-su-mercado-a-la-carne-vacuna-argentina-nid30092026/",
-     "fecha": "2026-09-30T11:31:58.000Z"
-    },
-    {
-     "medio": "TN (Todo Noticias)",
-     "enlace": "https://tn.com.ar/campo/2026/09/30/luis-caputo-anuncio-que-japon-reabrio-su-mercado-a-la-carne-vacuna-argentina-despues-de-20-anos/",
-     "fecha": "2026-09-30T11:54:00.000Z"
-    }
-   ],
-   "intentos": 1
-  },
   {
    "id": "qolc14",
    "titulo": "El local Bu frena la remontada de Juan Manuel Cerúndolo en Pekín",
@@ -61,6 +21,41 @@
     }
    ],
    "intentos": 3
+  },
+  {
+   "id": "1lyj59u",
+   "titulo": "\"Hoy es no, pero estamos cercanos a que pronto podamos llegar a eso\"",
+   "copete": "",
+   "seccion": "Automovilismo",
+   "fecha": "2026-09-30T12:01:02.331Z",
+   "fuentes": [
+    {
+     "medio": "El Diario Balcarce",
+     "enlace": "https://eldiariobalcarce.com.ar/hoy-es-no-pero-estamos-cercanos-a-que-pronto-podamos-llegar-a-eso-726",
+     "fecha": null
+    }
+   ],
+   "intentos": 2
+  },
+  {
+   "id": "zv8yz3",
+   "titulo": "Los albañiles coinciden: mezclar cemento con bolas de poliestireno crea un hormigón más ligero y ayuda con el aislamiento térmico",
+   "copete": "En el mundo de la construcción existen diferentes técnicas para modificar las características de los materiales tradicionales. Una de ellas consiste en incorporar bolitas de telgopor o poliestireno expandido (EPS) a determinadas mezclas cementicias. El resultado es un hormigón…",
+   "seccion": "Tecnología",
+   "fecha": "2026-09-30T10:43:25.000Z",
+   "fuentes": [
+    {
+     "medio": "TN (Todo Noticias)",
+     "enlace": "https://tn.com.ar/sociedad/2026/09/30/los-albaniles-coinciden-mezclar-cemento-con-bolas-de-poliestireno-crea-un-hormigon-mas-ligero-y-ayuda-con-el-aislamiento-termico/",
+     "fecha": "2026-09-30T10:43:25.000Z"
+    },
+    {
+     "medio": "Radio Mitre",
+     "enlace": "https://radiomitre.cienradios.com/curiosidades/los-albaniles-coinciden-mezclar-cemento-con-bolas-de-poliestireno-es-ideal-para-el-aislamiento-termico/",
+     "fecha": "2026-09-30T11:48:43.000Z"
+    }
+   ],
+   "intentos": 1
   }
  ]
 }

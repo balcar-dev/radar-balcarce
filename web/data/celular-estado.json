@@ -1,10 +1,10 @@
 {
- "generado": "2026-09-30T12:04:14.652Z",
- "portada": 48,
- "archivo": 604,
+ "generado": "2026-09-30T12:32:59.949Z",
+ "portada": 49,
+ "archivo": 605,
  "esperandoCuerpo": 3,
  "redes": {
-  "generado": "2026-09-30T12:04:14.697Z",
+  "generado": "2026-09-30T12:32:59.985Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -83,14 +83,14 @@
       "seccion": "Agro"
      },
      {
-      "id": "1o1dlqq",
-      "titulo": "La Escuela de Arte Astor Piazzolla expone desde el 2 de octubre en el Museo Histórico",
-      "seccion": "Cultura y agenda"
-     },
-     {
       "id": "1j6ui2n",
       "titulo": "La ACTC sanciona a Mariano Werner con multa y largada desde el fondo",
       "seccion": "Automovilismo"
+     },
+     {
+      "id": "1o1dlqq",
+      "titulo": "La Escuela de Arte Astor Piazzolla expone desde el 2 de octubre en el Museo Histórico",
+      "seccion": "Cultura y agenda"
      },
      {
       "id": "1hkh8ez",
@@ -106,8 +106,13 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 53,
+    "segundos": 55,
     "notas": [
+     {
+      "id": "zrdt8x",
+      "titulo": "Japón abre su mercado a la carne vacuna argentina tras dos décadas",
+      "seccion": "Agro"
+     },
      {
       "id": "1pbrz27",
       "titulo": "Aston Martin renueva los contratos de Fernando Alonso y Lance Stroll para 2027",
@@ -122,11 +127,6 @@
       "id": "1puwvvm",
       "titulo": "El Geriátrico Pinto recibe diez colchones y diez almohadas",
       "seccion": "Balcarce"
-     },
-     {
-      "id": "h7o4xt",
-      "titulo": "Cambareri cuestiona el ajuste y la situación en el INTA Balcarce",
-      "seccion": "Agro"
      }
     ]
    },
@@ -137,8 +137,13 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 28,
+    "segundos": 47,
     "notas": [
+     {
+      "id": "1yqjdtm",
+      "titulo": "El Gobierno posterga por un mes la suba impositiva en los combustibles",
+      "seccion": "Economía"
+     },
      {
       "id": "1asj6cl",
       "titulo": "Las TC Pick Up evalúan regresar a Balcarce antes de fin de año",
@@ -148,6 +153,11 @@
       "id": "12rp30w",
       "titulo": "Edgardo Ríos visita la Fiesta Nacional del Postre",
       "seccion": "Cultura y agenda"
+     },
+     {
+      "id": "h7o4xt",
+      "titulo": "Cambareri cuestiona el ajuste y la situación en el INTA Balcarce",
+      "seccion": "Agro"
      }
     ]
    }
