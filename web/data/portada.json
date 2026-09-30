@@ -1,6 +1,84 @@
 {
-  "generado": "2026-09-30T00:03:04.919Z",
+  "generado": "2026-09-30T00:32:04.198Z",
   "notas": [
+    {
+      "id": "113qesp",
+      "titulo": "Petruccelli convoca a Virginia Aparicio tras el rechazo en el Concejo",
+      "copete": "La Comisión de Salud desestimó el pedido para recibir a la investigadora del INTA. Ante esto, el bloque de Potencia organizará un encuentro propio con la participación de otros ediles.",
+      "cuerpo": "La comisión de Salud del Concejo Deliberante desestimó la convocatoria a la investigadora del INTA y del CONICET Virginia Aparicio. El pedido había sido impulsado por el concejal de Potencia Gabriel Petruccelli para que la científica exponga sobre su labor y su situación institucional. Un planteo similar de Sol Di Gerónimo en la comisión de Industria tampoco prosperó.\n\nAparicio afronta un proceso administrativo que podría derivar en su exoneración, según denunció el gremio APINTA. Ante la falta de tratamiento legislativo, Petruccelli decidió convocarla a un encuentro de su bloque e invitará al resto de los ediles para escuchar su exposición.",
+      "guion": "Petruccelli convoca a Virginia Aparicio tras el rechazo en el Concejo",
+      "seccion": "Política",
+      "medios": [
+        "Diario La Vanguardia"
+      ],
+      "enlace": "https://www.diariolavanguardia.com/noticias/44949-la-comision-de-salud-no-convocara-a-virginia-aparicio-y-petruccelli-decidio-citarla-a-una-reunion-de-bloque/",
+      "teniaImagenLaFuente": false,
+      "fecha": "2026-09-30T00:31:08.568Z",
+      "sinFecha": true,
+      "visto": "2026-09-30T00:31:08.568Z",
+      "relevancia": 53,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "La Comisión de Salud no convocó a la investigadora del INTA.",
+        "El concejal Gabriel Petruccelli organizará una reunión de bloque.",
+        "APINTA denunció un proceso administrativo contra la científica."
+      ],
+      "noConfirmado": [
+        "No se especificó la fecha exacta en la que se realizará el encuentro organizado por el bloque.",
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "El concejal Gabriel Petruccelli convocará a una reunión de bloque a la investigadora del INTA Virginia Aparicio, luego de que la Comisión de Salud rechazara su presentación en el Concejo Deliberante local.",
+      "etiquetas": [
+        "Virginia Aparicio",
+        "Concejo Deliberante",
+        "Gabriel Petruccelli",
+        "INTA",
+        "Salud"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Diario La Vanguardia",
+          "enlace": "https://www.diariolavanguardia.com/noticias/44949-la-comision-de-salud-no-convocara-a-virginia-aparicio-y-petruccelli-decidio-citarla-a-una-reunion-de-bloque/",
+          "fecha": null,
+          "oficial": false,
+          "aporte": "Detalló el rechazo de la Comisión de Salud a la convocatoria de Virginia Aparicio y la decisión del concejal Gabriel Petruccelli de citarla a su bloque."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1ytgm6c",
+          "titulo": "Petruccelli pide que Aparicio exponga ante la Comisión de Salud",
+          "fecha": "2026-09-28T21:59:12.000Z",
+          "ruta": "/nota/petruccelli-pide-que-aparicio-exponga-ante-la-comision-de-salud-1ytgm6c"
+        },
+        {
+          "id": "v91szb",
+          "titulo": "La APDH rechaza la factible exoneración de la Dra. Virginia Aparicio, investigadora del INTA Balcarce y del CONICET",
+          "fecha": "2026-09-23T01:50:24.356Z",
+          "ruta": "/nota/la-apdh-rechaza-la-factible-exoneracion-de-la-dra-virginia-aparicio-v91szb"
+        },
+        {
+          "id": "tmpmtz",
+          "titulo": "Legislatura bonarense: presentan un proyecto para respaldar a Virginia Aparicio, investigadora de INTA Balcarce",
+          "fecha": "2026-09-21T17:19:51.000Z",
+          "ruta": "/nota/legislatura-bonarense-presentan-un-proyecto-para-respaldar-a-virginia-tmpmtz"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "petruccelli-convoca-a-virginia-aparicio-tras-el-rechazo-en-el-concejo",
+      "foto": {
+        "archivo": "fotos-notas/113qesp.jpg",
+        "credito": "Foto: Diario La Vanguardia"
+      }
+    },
     {
       "id": "repaso20260929noche",
       "propia": "repaso",
@@ -149,7 +227,7 @@
       "fecha": "2026-09-29T21:02:00.000Z",
       "sinFecha": false,
       "visto": "2026-09-30T00:01:12.712Z",
-      "relevancia": 83,
+      "relevancia": 73,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -299,8 +377,8 @@
       "guion": "La cuenta corriente de la balanza de pagos cierra con superávit",
       "seccion": "Economía",
       "medios": [
-        "Clarín",
         "El Eco de Tandil",
+        "Clarín",
         "Perfil",
         "TN (Todo Noticias)",
         "El Cronista",
@@ -312,7 +390,7 @@
       "fecha": "2026-09-29T19:36:01.000Z",
       "sinFecha": false,
       "visto": "2026-09-29T21:22:01.752Z",
-      "relevancia": 78,
+      "relevancia": 88,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -374,6 +452,7 @@
       "guion": "San Lorenzo sufre un millonario embargo de su exentrenador",
       "seccion": "Fútbol",
       "medios": [
+        "Clarín",
         "La Nación",
         "Perfil",
         "TyC Sports",
@@ -1004,6 +1083,60 @@
       "slug": "cambareri-cuestiona-el-ajuste-y-la-situacion-en-el-inta-balcarce"
     },
     {
+      "id": "rtk3io",
+      "titulo": "La Federación Agraria pide una ley que termine con las retenciones",
+      "copete": "Su presidenta, Andrea Sarnari, abrió en Rosario el Congreso Anual de la entidad. Reconoció que la baja de alícuotas prevista para 2027 \"alivió un poco\", pero reclamó que el final de los derechos de exportación lo fije el Congreso.",
+      "cuerpo": "La presidenta de la Federación Agraria Argentina (FAA), Andrea Sarnari, reclamó el martes que las retenciones tengan un final establecido por una ley del Congreso. Lo planteó al abrir en Rosario el Congreso Anual de la entidad, con el secretario de Agricultura de la Nación, Sergio Iraeta, y el gobernador de Santa Fe, Maximiliano Pullaro, entre los presentes.\n\nSarnari reconoció que la reducción de alícuotas que el Gobierno fijó a partir de 2027 \"alivió un poco\", pero sostuvo que las medidas transitorias no alcanzan. Definió a las retenciones como \"el peor de los impuestos\" y pidió además una reforma tributaria integral, porque la suma de impuestos nacionales, provinciales y tasas municipales golpea más a los productores chicos.\n\nTambién reclamó crédito acorde a los tiempos de la producción y mejores caminos rurales y rutas, y ratificó el rechazo de la entidad a UPOV 91, el convenio sobre semillas. El miércoles, los federados elegirán a su nuevo presidente.",
+      "guion": null,
+      "seccion": "Agro",
+      "medios": [
+        "La Nación",
+        "Infocampo",
+        "Bichos de Campo"
+      ],
+      "enlace": "https://www.infocampo.com.ar/federacion-agraria-es-necesario-que-las-retenciones-tengan-un-fin-que-sea-por-ley-y-que-no-vuelvan-mas/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-29T17:11:00.000Z",
+      "sinFecha": false,
+      "visto": "2026-09-30T00:31:08.568Z",
+      "relevancia": 57,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "fuentesConsultadas": [
+        {
+          "medio": "Infocampo",
+          "enlace": "https://www.infocampo.com.ar/federacion-agraria-es-necesario-que-las-retenciones-tengan-un-fin-que-sea-por-ley-y-que-no-vuelvan-mas/",
+          "fecha": "2026-09-29T17:11:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/economia/campo/que-no-vuelvan-nunca-mas-fuerte-reclamo-de-federacion-agraria-para-poner-fin-a-las-retenciones-por-nid29092026/",
+          "fecha": "2026-09-29T21:37:11.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Bichos de Campo",
+          "enlace": "https://bichosdecampo.com/andrea-sarnari-abrio-el-congreso-de-federacion-agraria-reclamando-que-las-retenciones-terminen-por-ley-en-el-congreso-y-no-vuelvan-nunca-mas/",
+          "fecha": "2026-09-29T22:51:16.000Z",
+          "oficial": false,
+          "aporte": null
+        }
+      ],
+      "slug": "federacion-agraria-es-necesario-que-las-retenciones-tengan-un-fin-que",
+      "corregidaAMano": true,
+      "cuerpoAMano": true,
+      "foto": {
+        "archivo": "fotos-notas/rtk3io.jpg",
+        "credito": "Foto: Infocampo"
+      }
+    },
+    {
       "id": "105bdce",
       "titulo": "Los Pumas juegan ante Australia en julio por el Championship 2027",
       "copete": "El seleccionado argentino confirma los primeros dos partidos para el Rugby Championship 2027. La serie se juega en julio en territorio australiano como preparación para el Mundial.",
@@ -1073,6 +1206,231 @@
         "archivo": "fotos-notas/105bdce.jpg",
         "credito": "Foto: El Marplatense"
       }
+    },
+    {
+      "id": "1dbacpl",
+      "titulo": "La lluvia deja 35 milímetros en Balcarce y 50 en la zona de Bosch",
+      "copete": "Son los registros del 29 de septiembre que difundió YPF Agro para el sudeste bonaerense. El valor más bajo se midió en Mechongué: 18 milímetros.",
+      "cuerpo": "Según los datos de YPF Agro, el 29 de septiembre llovieron 35 milímetros en Balcarce. El registro más alto entre los puntos medidos fue el de Las Marías, en la zona de Bosch, con 50 milímetros, seguido por El Relincho, en Vidal, con 40, y Santa Rita, sobre la ruta 29, con 38.\n\nEn los demás lugares hubo 36 milímetros en La Concepción (Ramos Otero), 35 en Vivoratá, 32 en Mi Sueño (Colegio Adventista) y 30 en El Dorado, Corral Indio, La Esperanza, Ojo de Agua, Tres Esquinas y La Mezquita. San Manuel sumó 28 y Valle Feliz, 27.\n\nLos valores más bajos se registraron en Tanque de Agua, sobre la ruta 55, con 20 milímetros, y en Mechongué, con 18.",
+      "guion": null,
+      "seccion": "Agro",
+      "medios": [
+        "Argenpapa"
+      ],
+      "enlace": "https://www.argenpapa.com.ar/noticia/17839-argentina-sudeste-bonaerense-las-lluvias-llegaron-a-50-mm-en-la-zona-de-bosch",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-29T16:59:39.618Z",
+      "sinFecha": true,
+      "visto": "2026-09-30T00:31:08.568Z",
+      "relevancia": 26,
+      "local": false,
+      "deLaZona": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "fuentesConsultadas": [
+        {
+          "medio": "Argenpapa",
+          "enlace": "https://www.argenpapa.com.ar/noticia/17839-argentina-sudeste-bonaerense-las-lluvias-llegaron-a-50-mm-en-la-zona-de-bosch",
+          "fecha": null,
+          "oficial": false,
+          "aporte": null
+        }
+      ],
+      "slug": "argentina-sudeste-bonaerense-las-lluvias-llegaron-a-50-mm-en-la-zona",
+      "corregidaAMano": true,
+      "cuerpoAMano": true,
+      "foto": {
+        "archivo": "fotos-notas/1dbacpl.jpg",
+        "credito": "Foto: Argenpapa"
+      }
+    },
+    {
+      "id": "1g1xj8g",
+      "titulo": "Gastón Gaudio se postula a presidente de Independiente",
+      "copete": "El extenista, campeón de Roland Garros en 2004, confirmó que competirá en las elecciones del 13 de diciembre. Dijo que se decidió después de cerrar un sponsor para el club.",
+      "cuerpo": "Gastón Gaudio confirmó el martes que será candidato a presidente de Independiente en las elecciones del 13 de diciembre. \"Eso ya está decidido\", dijo el extenista en una entrevista con radio La Red, y contó que dio el paso porque consiguió un sponsor: sin eso, aseguró, no se habría animado.\n\nGaudio se suma a quienes ya habían confirmado su postulación: el exfutbolista Daniel Bertoni, el dirigente Luciano Nakis y el periodista Enrique Sacco. Quien gane sucederá a Néstor Grindetti.\n\nEl campeón de Roland Garros 2004 anticipó que Ricardo Bochini será asesor futbolístico de su equipo y que no sumará a su lista a quienes, a su criterio, perjudicaron al club en los últimos 20 años.",
+      "guion": null,
+      "seccion": "Fútbol",
+      "medios": [
+        "La Nación",
+        "Infobae",
+        "TN (Todo Noticias)",
+        "El Destape",
+        "Perfil",
+        "Ámbito",
+        "TyC Sports",
+        "Olé",
+        "Minuto Uno",
+        "C5N",
+        "Crónica",
+        "Diario Popular",
+        "Noticias Argentinas (NA)",
+        "El Día",
+        "La Nueva",
+        "El Eco de Tandil",
+        "Bolavip Argentina",
+        "Clarín",
+        "El Cronista",
+        "A24"
+      ],
+      "enlace": "https://www.clarin.com/deportes/gaston-gaudio-confirmo-candidato-presidente-independiente-cerre-sponsor-animaba_0_xygZqLz7gC.html",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-29T16:41:28.000Z",
+      "sinFecha": false,
+      "visto": "2026-09-30T00:31:08.568Z",
+      "relevancia": 73,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "fuentesConsultadas": [
+        {
+          "medio": "Clarín",
+          "enlace": "https://www.clarin.com/deportes/gaston-gaudio-confirmo-candidato-presidente-independiente-cerre-sponsor-animaba_0_xygZqLz7gC.html",
+          "fecha": "2026-09-29T16:41:28.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "La Nación",
+          "enlace": "https://www.lanacion.com.ar/deportes/futbol/gaston-gaudio-confirmo-que-sera-candidato-a-presidente-de-independiente-nid29092026/",
+          "fecha": "2026-09-29T18:56:02.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/deportes/2026/09/29/gaston-gaudio-confirmo-que-sera-candidato-a-presidente-de-independiente/",
+          "fecha": "2026-09-29T17:20:56.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/deportes/futbol/2026/09/29/gaston-gaudio-confirmo-que-sera-candidato-a-presidente-de-independiente/",
+          "fecha": "2026-09-29T16:46:03.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "El Destape",
+          "enlace": "https://www.eldestapeweb.com/deportes/gaston-gaudio-confirmo-sera-candidato-independiente-dio-vision-sad-hablo-macri-2026929162653",
+          "fecha": "2026-09-29T19:26:53.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Perfil",
+          "enlace": "https://442.perfil.com/noticias/futbol/gaston-gaudio-confirmo-que-sera-candidato-a-presidente-de-independiente.phtml",
+          "fecha": "2026-09-29T19:17:19.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Ámbito",
+          "enlace": "https://www.ambito.com/deportes/gaston-gaudio-confirmo-su-candidatura-las-proximas-elecciones-independiente-tengo-todo-arreglado-n6328145",
+          "fecha": "2026-09-29T20:43:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "TyC Sports",
+          "enlace": "https://www.tycsports.com/independiente/elecciones-en-independiente-gaudio-candidato-a-presidente-y-acompanado-por-una-leyenda-del-club-id763522.html",
+          "fecha": "2026-09-29T20:20:20.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Olé",
+          "enlace": "https://www.ole.com.ar/independiente/gastongaudio-independiente-elecciones-presidente_0_DasskWeAfC.html",
+          "fecha": "2026-09-29T16:48:11.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Minuto Uno",
+          "enlace": "https://www.minutouno.com/deportes/gaston-gaudio-confirmo-que-sera-candidato-presidente-independiente-n6328139",
+          "fecha": "2026-09-29T20:34:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "C5N",
+          "enlace": "https://www.c5n.com/deportes/gaston-gaudio-confirmo-su-postulacion-como-presidente-independiente-no-quiero-nadie-que-le-haya-hecho-dano-al-club-n250232",
+          "fecha": "2026-09-29T17:03:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Crónica",
+          "enlace": "https://www.cronica.com.ar/depo/actualidad/gaston-gau/",
+          "fecha": "2026-09-29T20:00:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Diario Popular",
+          "enlace": "https://www.diariopopular.com.ar/futbol/gaston-gaudio-confirmo-que-sera-candidato-presidente-independiente-n922122",
+          "fecha": "2026-09-29T22:41:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Noticias Argentinas (NA)",
+          "enlace": "https://noticiasargentinas.com/deportes/gaston-gaudio-lanzo-su-candidatura-a-presidente-de-independiente---vamos-a-volver-a-salir-campeones-_a6abc2c80aeec850fb273b46f",
+          "fecha": "2026-09-29T22:25:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "El Día",
+          "enlace": "https://www.eldia.com/deportes/gaston-gaudio-confirmo-que-sera-candidato-a-presidente-de-independiente-deportes_1790704620",
+          "fecha": "2026-09-29T18:02:00.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "La Nueva",
+          "enlace": "https://www.lanueva.com/nota/2026-9-29-20-2-0-gaston-gaudio-lanzo-su-candidatura-a-presidente-de-independiente-vamos-a-volver-a-salir-campeones",
+          "fecha": "2026-09-29T23:08:10.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "El Eco de Tandil",
+          "enlace": "https://www.eleco.com.ar/deportes/gaston-gaudio-confirmo-su-candidatura-a-presidente-de-independiente",
+          "fecha": "2026-09-29T17:29:08.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Bolavip Argentina",
+          "enlace": "https://bolavip.com/ar/futbolargentino/50-millones-de-inversion-director-deportivo-y-milito-gaudio-sera-candidato-en-independiente",
+          "fecha": "2026-09-29T17:37:18.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "El Cronista",
+          "enlace": "https://www.cronista.com/informacion-gral/gaston-gaudio-confirmo-su-candidatura-a-presidente-de-independiente/",
+          "fecha": "2026-09-29T17:03:49.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "A24",
+          "enlace": "https://www.a24.com/deportes/bombazo-un-reconocido-ex-tenista-confirmo-que-sera-candidato-presidente-independiente-n1601435",
+          "fecha": "2026-09-29T17:53:00.000Z",
+          "oficial": false,
+          "aporte": null
+        }
+      ],
+      "slug": "gaston-gaudio-confirmo-que-sera-candidato-a-presidente-de",
+      "corregidaAMano": true,
+      "cuerpoAMano": true
     },
     {
       "id": "709xqq",
@@ -1663,6 +2021,40 @@
       }
     },
     {
+      "id": "jul48u",
+      "titulo": "Pampa Dúo toca el 17 de octubre en el Teatro Municipal",
+      "copete": "Marcelo Giménez y Pablo Lobato presentarán \"Nuestra forma de mirar el mundo\", un espectáculo de música surera, a las 21 en el Teatro Municipal Luis Conti.",
+      "cuerpo": "El dúo que forman Giménez y Lobato tocará el 17 de octubre, a las 21, en el teatro de la ciudad, según anunció un medio local.\n\nEl espectáculo lleva el nombre de \"Nuestra forma de mirar el mundo\" y está hecho de música surera. La idea del dúo es que el público conozca los paisajes, las vivencias y los sentimientos de esta tierra a través de sus canciones.\n\nHasta el momento no se informaron el precio de las entradas ni dónde se pueden conseguir.",
+      "guion": null,
+      "seccion": "Cultura y agenda",
+      "medios": [
+        "News Balcarce (FM 91.7)"
+      ],
+      "enlace": "https://newsbalcarce.com.ar/?p=30891",
+      "teniaImagenLaFuente": false,
+      "fecha": "2026-09-29T15:07:30.000Z",
+      "sinFecha": false,
+      "visto": "2026-09-30T00:31:08.568Z",
+      "relevancia": 74,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "fuentesConsultadas": [
+        {
+          "medio": "News Balcarce (FM 91.7)",
+          "enlace": "https://newsbalcarce.com.ar/?p=30891",
+          "fecha": "2026-09-29T15:07:30.000Z",
+          "oficial": false,
+          "aporte": null
+        }
+      ],
+      "slug": "pampa-duo-se-presentara-en-el-teatro-municipal",
+      "corregidaAMano": true,
+      "cuerpoAMano": true
+    },
+    {
       "id": "ql0ams",
       "titulo": "El Gobierno defiende el control de fronteras y habla de expulsados",
       "copete": "El vocero presidencial Adrián Ravier brindó detalles sobre las declaraciones de Javier Milei acerca de la expulsión de extranjeros y vinculó la caída de la actividad económica con la seguridad nacional.",
@@ -1989,6 +2381,57 @@
       }
     },
     {
+      "id": "1o1dlqq",
+      "titulo": "La Escuela de Arte Astor Piazzolla expone desde el 2 de octubre en el Museo Histórico",
+      "copete": "La muestra junta obras de estudiantes y profesores de la escuela: música, ilustración, artes visuales y diseño gráfico. Se podrá visitar hasta el 1 de noviembre.",
+      "cuerpo": "Arte Fusión · Expo Anual 2026 es el nombre de la muestra con la que la Escuela de Arte \"Astor Piazzolla\" ocupará el Museo Histórico Municipal durante casi un mes. Es la exposición anual de la escuela y reúne en un mismo recorrido las distintas disciplinas que se enseñan allí. Abrirá el 2 de octubre.\n\nSegún informó el municipio, la propuesta busca mostrar lo que la escuela produjo durante el año y el arte como forma de expresión y de construcción colectiva. Desde el museo, el MUHBA, celebraron la iniciativa porque, según dijeron, fortalece a la comunidad artística y cultural de la ciudad. \"Formando creadores, abriendo futuros\", resumieron.\n\nNo se informaron los horarios de visita.",
+      "guion": null,
+      "seccion": "Cultura y agenda",
+      "medios": [
+        "Infórmese Primero (FM 104.9)",
+        "Municipalidad de Balcarce",
+        "Diario La Vanguardia"
+      ],
+      "enlace": "https://balcarce.gob.ar/2026/09/29/arte-fusion-%c2%b7-expo-anual-2026-en-el-museo-historico/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-29T14:32:05.000Z",
+      "sinFecha": false,
+      "visto": "2026-09-30T00:31:08.568Z",
+      "relevancia": 94,
+      "local": true,
+      "oficial": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "fuentesConsultadas": [
+        {
+          "medio": "Municipalidad de Balcarce",
+          "enlace": "https://balcarce.gob.ar/2026/09/29/arte-fusion-%c2%b7-expo-anual-2026-en-el-museo-historico/",
+          "fecha": "2026-09-29T14:32:05.000Z",
+          "oficial": true,
+          "aporte": null
+        },
+        {
+          "medio": "Infórmese Primero (FM 104.9)",
+          "enlace": "http://www.informeseprimero.com.ar/2026/09/arte-fusion-llega-la-muestra-de-la.html",
+          "fecha": "2026-09-29T15:53:09.683Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Diario La Vanguardia",
+          "enlace": "https://www.diariolavanguardia.com/noticias/44940-arte-fusion-la-escuela-de-arte-astor-piazzolla-presenta-su-expo-anual-2026/",
+          "fecha": null,
+          "oficial": false,
+          "aporte": null
+        }
+      ],
+      "slug": "arte-fusion-expo-anual-2026-en-el-museo-historico",
+      "corregidaAMano": true,
+      "cuerpoAMano": true
+    },
+    {
       "id": "1asj6cl",
       "titulo": "Las TC Pick Up evalúan regresar a Balcarce antes de fin de año",
       "copete": "Tras convocar a más de 20.000 personas en el autódromo Juan Manuel Fangio, la categoría analiza volver al circuito local antes de terminar el campeonato. Quedan tres fechas pendientes.",
@@ -2176,6 +2619,7 @@
       "seccion": "Tecnología",
       "medios": [
         "Infobae",
+        "Perfil",
         "Diario Popular",
         "El Eco de Tandil"
       ],
@@ -2184,7 +2628,7 @@
       "fecha": "2026-09-29T13:28:19.000Z",
       "sinFecha": false,
       "visto": "2026-09-29T16:31:06.769Z",
-      "relevancia": 59,
+      "relevancia": 69,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -2306,11 +2750,11 @@
       "seccion": "Argentina",
       "medios": [
         "La Nación",
-        "Ámbito",
         "Minuto Uno",
         "C5N",
         "Canal 26",
-        "Noticias Argentinas (NA)"
+        "Noticias Argentinas (NA)",
+        "Ámbito"
       ],
       "enlace": "https://www.canal26.com/politica/2026/09/29/rutas-de-entre-rios-la-justicia-federal-pidio-informes-al-gobierno-por-los-fondos-del-impuesto-a-los-combustibles/",
       "teniaImagenLaFuente": true,
@@ -2480,7 +2924,7 @@
       "fecha": "2026-09-29T12:26:40.000Z",
       "sinFecha": false,
       "visto": "2026-09-29T23:01:10.965Z",
-      "relevancia": 42,
+      "relevancia": 35,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -2638,7 +3082,7 @@
       "fecha": "2026-09-29T12:04:10.000Z",
       "sinFecha": false,
       "visto": "2026-09-29T14:01:11.480Z",
-      "relevancia": 43,
+      "relevancia": 36,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -2924,7 +3368,7 @@
       "fecha": "2026-09-29T10:29:49.000Z",
       "sinFecha": false,
       "visto": "2026-09-29T14:01:11.480Z",
-      "relevancia": 26,
+      "relevancia": 22,
       "local": false,
       "deLaZona": true,
       "publicadaPor": null,
@@ -3157,10 +3601,11 @@
       "medios": [
         "Infobae",
         "La Nación",
-        "Ámbito",
+        "Clarín",
         "TN (Todo Noticias)",
         "El Destape",
         "Perfil",
+        "Ámbito",
         "Minuto Uno",
         "C5N",
         "Canal 26",
@@ -3169,7 +3614,6 @@
         "QZ Noticias (Mar del Plata)",
         "Mi8 (Canal 8 Mar del Plata)",
         "Doble Amarilla",
-        "Clarín",
         "Crónica",
         "La Nueva"
       ],
@@ -3454,10 +3898,10 @@
       "guion": "La Corte revoca el fallo sobre la Ley de Tierras del DNU",
       "seccion": "Política",
       "medios": [
+        "0223 (Mar del Plata)",
         "El Eco de Tandil",
         "QZ Noticias (Mar del Plata)",
         "Agencia DIB",
-        "Clarín",
         "La Nación",
         "Bichos de Campo",
         "TN (Todo Noticias)",
@@ -3474,13 +3918,15 @@
         "Diario Popular",
         "Noticias Argentinas (NA)",
         "El Día",
+        "La Nueva",
         "0221",
         "La Brújula 24",
         "La Tecla",
         "Infoeme",
         "ANDigital",
         "Mi8 (Canal 8 Mar del Plata)",
-        "Infobae"
+        "Infobae",
+        "Clarín"
       ],
       "enlace": "https://noticiasargentinas.com/politica/la-corte-revoco-el-fallo-que-declaraba-inconstitucional-la-derogacion-de-la-ley-de-tierras_a6abc0d42aeec850fb26e90c9",
       "teniaImagenLaFuente": true,
@@ -3654,7 +4100,6 @@
       "guion": "Lionel Scaloni libera a Tomás Palacios para jugar en Estudiantes",
       "seccion": "Fútbol",
       "medios": [
-        "Clarín",
         "Perfil",
         "Página/12",
         "Ámbito",
@@ -3666,7 +4111,8 @@
         "0221",
         "Doble Amarilla",
         "Bolavip Argentina",
-        "La Página Millonaria"
+        "La Página Millonaria",
+        "Clarín"
       ],
       "enlace": "https://www.0221.com.ar/estudiantes/finalmente-lionel-scaloni-libero-tomas-palacios-y-jugara-estudiantes-platense-copa-argentina-n134991",
       "teniaImagenLaFuente": true,
@@ -5270,6 +5716,7 @@
     }
   ],
   "secciones": [
+    "Política",
     "Balcarce",
     "Economía",
     "Fútbol",
@@ -5277,7 +5724,6 @@
     "Cultura y agenda",
     "Deportes",
     "Agro",
-    "Política",
     "Automovilismo",
     "Tecnología",
     "Policiales"
@@ -5347,7 +5793,7 @@
         "dia": "jue",
         "max": 11,
         "min": 5,
-        "lluvia": 35,
+        "lluvia": 4,
         "codigo": 51,
         "viento": 29,
         "milimetros": 0,
@@ -5358,7 +5804,7 @@
         "dia": "vie",
         "max": 14,
         "min": 3,
-        "lluvia": 43,
+        "lluvia": 42,
         "codigo": 51,
         "viento": 25,
         "milimetros": 0,
@@ -5677,22 +6123,16 @@
   },
   "pendientes": [
     {
-      "id": "1a1eesp",
-      "titulo": "Impulsan una diplomatura para la gestión y creación de…",
-      "seccion": "Balcarce",
-      "motivo": "verificación baja: espera a una persona (visto al reescribir)"
-    },
-    {
-      "id": "1aaafwm",
-      "titulo": "Murió una turista francesa de 29 años: quedó atrapada tras…",
-      "seccion": "Argentina",
-      "motivo": "necesita ojo humano: \"falleció\", en lo que escribió la IA (título, bajada o texto para redes) (visto al reescribir)"
-    },
-    {
       "id": "1ur5pa4",
       "titulo": null,
       "seccion": "Policiales",
       "motivo": "necesita ojo humano: \"herida\""
+    },
+    {
+      "id": "1a1eesp",
+      "titulo": "Impulsan una diplomatura para la gestión y creación de…",
+      "seccion": "Balcarce",
+      "motivo": "verificación baja: espera a una persona (visto al reescribir)"
     },
     {
       "id": "199k1u0",
@@ -5731,12 +6171,6 @@
       "motivo": "necesita ojo humano: \"niña\""
     },
     {
-      "id": "ww3s5p",
-      "titulo": "Histórico desafío a la Argentina: 40 empresas de las…",
-      "seccion": "Argentina",
-      "motivo": "necesita ojo humano: \"denuncia\""
-    },
-    {
       "id": "1xe4pop",
       "titulo": "De una oferta laboral en Facebook a prisionero de guerra…",
       "seccion": "Argentina",
@@ -5749,10 +6183,10 @@
       "motivo": "necesita ojo humano: \"denuncia\""
     },
     {
-      "id": "1u3nefi",
-      "titulo": "Causa Maradona: expectativa por la nueva declaración de…",
+      "id": "7ci1iq",
+      "titulo": "El Gobierno le dio dos semanas al Reino Unido para frenar…",
       "seccion": "Argentina",
-      "motivo": "necesita ojo humano: \"acusado\""
+      "motivo": "necesita ojo humano: \"denuncia\""
     },
     {
       "id": "jien96",
@@ -5785,16 +6219,16 @@
       "motivo": "necesita ojo humano: \"alumno de\", en el texto completo de la fuente (visto al reescribir)"
     },
     {
+      "id": "ny4zx0",
+      "titulo": "Fuego cruzado entre los acusados por la muerte de Maradona…",
+      "seccion": "Argentina",
+      "motivo": "necesita ojo humano: \"acusado\""
+    },
+    {
       "id": "1ogz9mz",
       "titulo": null,
       "seccion": "Argentina",
       "motivo": "necesita ojo humano: \"niño\""
-    },
-    {
-      "id": "o8z3cp",
-      "titulo": "Horacio Marín, CEO de YPF: “La producción de petróleo va a…",
-      "seccion": "Economía",
-      "motivo": "internacional: sin relación con Balcarce"
     },
     {
       "id": "iyupy7",
@@ -5809,5 +6243,5 @@
       "motivo": "necesita ojo humano: \"denuncia\""
     }
   ],
-  "esperandoCuerpo": 8
+  "esperandoCuerpo": 3
 }
