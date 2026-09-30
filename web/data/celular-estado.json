@@ -1,10 +1,10 @@
 {
- "generado": "2026-09-30T00:44:26.498Z",
- "portada": 67,
- "archivo": 589,
- "esperandoCuerpo": 3,
+ "generado": "2026-09-30T01:01:57.585Z",
+ "portada": 63,
+ "archivo": 592,
+ "esperandoCuerpo": 2,
  "redes": {
-  "generado": "2026-09-30T00:44:41.364Z",
+  "generado": "2026-09-30T01:01:57.628Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -100,7 +100,7 @@
      {
       "id": "1nyo5j6",
       "titulo": "Pato Naranja gana por 99 a 12 y queda entre los cuatro mejores",
-      "seccion": "Fútbol"
+      "seccion": "Deportes"
      }
     ]
    },
@@ -131,7 +131,7 @@
      {
       "id": "1nyo5j6",
       "titulo": "Pato Naranja gana por 99 a 12 y queda entre los cuatro mejores",
-      "seccion": "Fútbol"
+      "seccion": "Deportes"
      }
     ]
    }
@@ -154,7 +154,14 @@
      "cuando": "2026-09-29T23:03:13.423Z"
     }
    ],
-   "cola": [],
+   "cola": [
+    {
+     "id": "1j6ui2n",
+     "titulo": "La ACTC sanciona a Mariano Werner con multa y largada desde el fondo",
+     "seccion": "Automovilismo",
+     "marcada": false
+    }
+   ],
    "cupo": 2,
    "proximoDesde": "2026-09-30T00:33:13.423Z",
    "porDia": 5,
