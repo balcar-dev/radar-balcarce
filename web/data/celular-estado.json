@@ -1,10 +1,10 @@
 {
- "generado": "2026-09-30T18:31:36.639Z",
- "portada": 64,
- "archivo": 642,
- "esperandoCuerpo": 4,
+ "generado": "2026-09-30T19:02:16.816Z",
+ "portada": 58,
+ "archivo": 645,
+ "esperandoCuerpo": 3,
  "redes": {
-  "generado": "2026-09-30T18:31:36.680Z",
+  "generado": "2026-09-30T19:02:16.859Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -137,21 +137,21 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 50,
+    "segundos": 51,
     "notas": [
-     {
-      "id": "2uqvxt",
-      "titulo": "La AFA apela en la FIFA la sanción a Leandro Paredes para reducirla",
-      "seccion": "Fútbol"
-     },
      {
       "id": "12mtzuq",
       "titulo": "La Universidad de Buenos Aires otorga el doctorado honoris causa a Lionel Messi",
       "seccion": "Argentina"
      },
      {
-      "id": "1rpzsy3",
-      "titulo": "Tres jugadores locales integran la selección provincial de pádel",
+      "id": "2uqvxt",
+      "titulo": "La AFA apela en la FIFA la sanción a Leandro Paredes para reducirla",
+      "seccion": "Fútbol"
+     },
+     {
+      "id": "1vqwmji",
+      "titulo": "Cristian Giuliano y Desirée Fraiz sobresalen en el Rally Mar y Sierras MTB",
       "seccion": "Deportes"
      },
      {
@@ -193,8 +193,14 @@
      "marcada": false
     },
     {
-     "id": "1s10vxl",
-     "titulo": "Rocío Espinillo anticipa su receta para la Fiesta del Postre",
+     "id": "1vqwmji",
+     "titulo": "Cristian Giuliano y Desirée Fraiz sobresalen en el Rally Mar y Sierras MTB",
+     "seccion": "Deportes",
+     "marcada": false
+    },
+    {
+     "id": "qbrt3e",
+     "titulo": "La noche de los sueños llega con artistas locales para ayudar a Rufi Cerezuela",
      "seccion": "Cultura y agenda",
      "marcada": false
     },
