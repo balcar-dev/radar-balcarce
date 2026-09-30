@@ -1,10 +1,10 @@
 {
- "generado": "2026-09-30T23:02:48.003Z",
- "portada": 74,
- "archivo": 672,
- "esperandoCuerpo": 9,
+ "generado": "2026-09-30T23:32:07.634Z",
+ "portada": 80,
+ "archivo": 675,
+ "esperandoCuerpo": 8,
  "redes": {
-  "generado": "2026-09-30T23:02:48.043Z",
+  "generado": "2026-09-30T23:32:07.695Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -64,7 +64,7 @@
     "voz": "locutora",
     "ventana": 240,
     "momento": "en-hora",
-    "salio": null
+    "salio": "2026-09-30T23:05:08.174Z"
    },
    {
     "nombre": "podcast",
@@ -73,7 +73,7 @@
     "que": "El repaso del día",
     "voz": "locutor",
     "ventana": 210,
-    "momento": "antes",
+    "momento": "en-hora",
     "salio": null
    }
   ],
@@ -145,9 +145,9 @@
     "titulo": "El repaso del día",
     "hora": "20:30",
     "voz": "locutor",
-    "momento": "antes",
+    "momento": "en-hora",
     "salio": null,
-    "segundos": 47,
+    "segundos": 44,
     "notas": [
      {
       "id": "h36tlu",
@@ -165,8 +165,8 @@
       "seccion": "Fútbol"
      },
      {
-      "id": "1vgun5x",
-      "titulo": "Balcarce participa de la trigésima Feria Internacional de Turismo",
+      "id": "1ivau49",
+      "titulo": "Cristian Méndez realiza una gira de payadas en Gran Canaria",
       "seccion": "Cultura y agenda"
      }
     ]
@@ -201,6 +201,18 @@
     }
    ],
    "cola": [
+    {
+     "id": "1a2z04a",
+     "titulo": "El Zonal del Atlántico regresa al autódromo local en octubre",
+     "seccion": "Automovilismo",
+     "marcada": false
+    },
+    {
+     "id": "1ivau49",
+     "titulo": "Cristian Méndez realiza una gira de payadas en Gran Canaria",
+     "seccion": "Cultura y agenda",
+     "marcada": false
+    },
     {
      "id": "z3c4f",
      "titulo": "Estudiantes del Colegio Santa Rosa de Lima visitan el municipio",
