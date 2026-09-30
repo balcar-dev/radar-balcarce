@@ -1,10 +1,10 @@
 {
- "generado": "2026-09-30T22:35:41.141Z",
+ "generado": "2026-09-30T23:02:48.003Z",
  "portada": 74,
- "archivo": 667,
- "esperandoCuerpo": 7,
+ "archivo": 672,
+ "esperandoCuerpo": 9,
  "redes": {
-  "generado": "2026-09-30T22:35:41.184Z",
+  "generado": "2026-09-30T23:02:48.043Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -63,7 +63,7 @@
     "que": "Cómo sigue el clima esta noche",
     "voz": "locutora",
     "ventana": 240,
-    "momento": "antes",
+    "momento": "en-hora",
     "salio": null
    },
    {
@@ -147,11 +147,11 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 50,
+    "segundos": 47,
     "notas": [
      {
-      "id": "z3c4f",
-      "titulo": "Estudiantes del Colegio Santa Rosa de Lima visitan el municipio",
+      "id": "h36tlu",
+      "titulo": "La Municipalidad recauda millones en una subasta de tierras",
       "seccion": "Balcarce"
      },
      {
@@ -204,6 +204,12 @@
     {
      "id": "z3c4f",
      "titulo": "Estudiantes del Colegio Santa Rosa de Lima visitan el municipio",
+     "seccion": "Balcarce",
+     "marcada": false
+    },
+    {
+     "id": "g8dncb",
+     "titulo": "Racing adquiere un terreno lindero a su predio en subasta municipal",
      "seccion": "Balcarce",
      "marcada": false
     },
