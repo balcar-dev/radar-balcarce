@@ -11,7 +11,8 @@ cuenta, una clave o una decisión de criterio lo hace una persona; Claude nunca.
 
 | # | Qué | Quién |
 |---|---|---|
-| 1 | **Crear la llave del panel del celular e instalarlo.** En github.com (cuenta balcardev@gmail.com): Settings → Developer settings → Fine-grained tokens → Generate new token; nombre "Panel del celular"; un año de vencimiento (anotar la fecha); sólo el repositorio radar-balcarce; permisos **Contents** y **Actions** en "Read and write". Después, en el celular: Chrome → `radarbalcarce.com/panel` → pegar la llave y el nombre → menú ⋮ → "Instalar app". Paso a paso en `docs/11-OPERACION.md`. La llave nunca va por chat | Hernán |
+| 1 | **El posteo del superávit de la balanza de pagos** salió en Facebook y en Instagram el 29/09 a las 20:03 porque se tocó "También a Facebook e Instagram" sin querer (desde ese día el celular pregunta antes). Decidir si se borra; borrar lo hace una persona, en Facebook y en Instagram | Hernán |
+| 1b | **Decidir si la IA escribe sola un borrador para lo que espera a una persona** (29/09). Es lo que muestra "Esperan" en el celular: el texto listo para publicar o corregir. Cambia la regla 68 del 28/09 (la IA no gastaba en lo que no sale solo): usa sólo la clave gratis, un intento y hasta 30 por día. Si no, se apaga con `porDia: 0` en `BORRADORES_AUTOMATICOS` (`panel/celular-datos.mjs`) | Hernán |
 | 2 | **Comprobar que Facebook se ve para los que no son administradores** (la app de Meta se publicó el 26/09): que una persona sin rol en la página vea los posteos y los reels nuevos. El workflow "Ver Facebook" muestra lo que Meta tiene publicado | Los dos |
 | 3 | **Borrar las claves en texto plano** de la PC: `panel/datos/CLAVES-INICIALES.txt` (cuando las contraseñas estén guardadas en otro lado) y, en `respaldos/`, los `CLAVES-INICIALES.txt` y `secreto.txt` de antes del 25/09. **No** borrar `panel/datos/secreto.txt` (firma las sesiones del panel de la PC) | Hernán |
 | 4 | **Mirar los primeros días de las redes con las voces nuevas**: que salgan las seis piezas del día con su voz, los tres repasos enteros, el enlace en los posteos y el espejo en Instagram, y que el cupo de 10 audios alcance (si una pieza falla y se reintenta, gasta otro). Si algo deja de salir, "Si algo dejó de salir" en `docs/11-OPERACION.md` | Claude, con los dos |
@@ -49,7 +50,7 @@ cuenta, una clave o una decisión de criterio lo hace una persona; Claude nunca.
 | 26 | **La lectura con IA**: leer con el texto completo, historias por `clave_tema` y el resumen de lo que sacó la IA en el WhatsApp de las 21. Mirar unos días cómo rinde Groq de respaldo | Claude |
 | 27 | **Lo que queda del plan V2.2** (`docs/historico/PLAN-V2.2.md`): reglas por ámbito, puntaje de fuentes por sección, el podcast de la noche con el mismo piso de relevancia, fuentes nuevas (Concejo, hospital, bomberos, Facultad, SMN, ANSES, Boletín Oficial, Acción 5), actualizar una nota cuando la historia sigue, notas populares medidas | Claude, con los dos |
 | 28 | **Fuente local de Policiales**: la Comisaría y Bomberos no tienen feed; Tránsito publica en la categoría Movilidad y Control Urbano del municipio | Claude |
-| 29 | **La clasificación por palabras se equivoca a veces** (un proyecto escolar en Deportes): se ajusta con `REGLAS_SECCION`; `npm run auditar` muestra qué palabra decidió | Claude |
+| 29 | **La clasificación por palabras se equivoca a veces** (un proyecto escolar en Deportes; el 29/09, un partido de rugby en Fútbol por "goleó", ya arreglado: regla 85): se ajusta con `REGLAS_SECCION`; `npm run auditar` muestra qué palabra decidió | Claude |
 | 30 | **Comentarios viejos en el código** (D14) y los avisos del vigilante: que no sean ni muchos ni pocos | Claude |
 | 31 | **cron-job.org llama a "Redes" tres veces por hora** (:05, :35 y :45; D2): mirar si hay un cuarto trabajo y sumarlo a los que llevan el token de GitHub | Hernán (mirar); Claude |
 | 32 | **Threads, hashtags** (probar `#Balcarce` más uno de la sección durante dos semanas) y **SEO** (`SEO.md`): Bing, Publisher Center, Core Web Vitals, parámetros UTM | Claude, con los dos |
@@ -60,7 +61,7 @@ cuenta, una clave o una decisión de criterio lo hace una persona; Claude nunca.
 
 | Cuándo | Qué | Quién |
 |---|---|---|
-| Un año después de crearla | **Renovar la llave del panel del celular**: crear otra igual (punto 1) y pegarla en el celular | Hernán |
+| Cuando venza la llave (se creó el 29/09/2026; con un año de vencimiento, el 29/09/2027) | **Renovar la llave del panel del celular**: crear otra igual (`docs/09-PANEL.md`, "La llave de GitHub") y cargarla en el celular ("Más" → "Salir", y entrar con la nueva). El celular avisa "La llave no anda" cuando vence | Hernán |
 | 21/09/2027 | **Renovar el token de GitHub de cron-job.org** (está en sus tres trabajos) y **el dominio** radarbalcarce.com (DonWeb). El vigilante avisa 30 días antes | Los dos |
 | 29/09/2027 | **Renovar las dos voces propias**: Actions → "Crear voces" (modo `recrear` con las mismas descripciones), elegir, borrar las que sobran y cambiar los identificadores en `CRITERIO-REDES.md` § 6. El vigilante avisa 30 días antes, con la fecha que da Google | Los dos |
 | Cada 90 días | Mirar las medidas de las imágenes de las redes (`FORMATOS.md`; la auditoría de los lunes avisa) | Los dos |

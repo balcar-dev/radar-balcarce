@@ -278,7 +278,7 @@ function pestanas() {
   const sinCuerpo = E.esperando.filter((n) => !E.correcciones.notas?.[n.id]?.cuerpo).length;
   const items = [
     ['esperan', 'Esperan', esperan], ['sin-cuerpo', 'Sin cuerpo', sinCuerpo],
-    ['publicadas', 'Publicadas', E.portada?.notas?.length ?? 0], ['redes', 'Redes', '◷'], ['mas', 'Más', '⋯'],
+    ['publicadas', 'Publicadas', (E.portada?.notas ?? []).filter((n) => !n.propia).length], ['redes', 'Redes', '◷'], ['mas', 'Más', '⋯'],
   ];
   nav.innerHTML = items.map(([id, t, n]) => `<button type="button" data-pestana="${id}" ${E.pestana === id ? 'aria-current="page"' : ''}><span class="numero">${n}</span>${t}</button>`).join('');
   nav.hidden = false;
@@ -335,13 +335,15 @@ function vistaSinCuerpo(cuando) {
 function vistaPublicadas(cuando) {
   const q = E.busqueda.toLowerCase();
   const enPortada = E.portada?.notas ?? [];
+  const deLasFuentes = enPortada.filter((n) => !n.propia).length;
+  const propias = enPortada.length - deLasFuentes;
   const todas = [...enPortada, ...(E.archivo ?? []).filter((a) => !enPortada.some((n) => n.id === a.id))];
   const lista = todas.filter((n) => !n.propia && (!q || `${n.titulo} ${n.seccion}`.toLowerCase().includes(q))).slice(0, 80);
   const enArchivo = E.estadoCel?.archivo;
   app.innerHTML = `
     <h1>Publicadas</h1>
     ${queEs('publicadas')}
-    <p class="estado">${esc(cuando)} <strong>${enPortada.length}</strong> en la portada (las de las últimas 36 horas)${enArchivo ? ` · <strong>${enArchivo}</strong> con página en el archivo (hasta 180 días)` : ''}.</p>
+    <p class="estado">${esc(cuando)} <strong>${deLasFuentes}</strong> en la portada (las de las últimas 36 horas)${propias ? `, más ${propias} del sitio (el dólar y los repasos, que no se editan desde acá)` : ''}${enArchivo ? ` · <strong>${enArchivo}</strong> con página en el archivo (hasta 180 días)` : ''}.</p>
     <input type="search" id="buscar" placeholder="Buscar por título o sección" value="${esc(E.busqueda)}" aria-label="Buscar">
     <p class="estado">${E.archivo ? `Buscando también en el archivo: ${todas.length} notas.` : '<button type="button" class="boton" data-accion="archivo">Buscar también en el archivo</button>'}</p>
     ${lista.map((n) => tarjeta(n, { tipo: 'publicada', extra: E.correcciones.notas?.[n.id] ? '<span class="marca">✎ corregida</span>' : '' })).join('') || '<p class="vacio">Nada con eso.</p>'}
