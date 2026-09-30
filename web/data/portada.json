@@ -1,5 +1,5 @@
 {
-  "generado": "2026-09-30T05:01:16.035Z",
+  "generado": "2026-09-30T05:31:08.221Z",
   "notas": [
     {
       "id": "1hkh8ez",
@@ -62,9 +62,9 @@
       "guion": "La selección argentina juega con Bolivia en Cordoba",
       "seccion": "Fútbol",
       "medios": [
-        "Clarín",
         "Infobae",
-        "Radio Mitre"
+        "Radio Mitre",
+        "Clarín"
       ],
       "enlace": "https://radiomitre.cienradios.com/videos/video-el-noble-gesto-del-dibu-martinez-con-los-hinchas-de-la-seleccion-argentina-antes-del-amistoso-frente-a-bolivia/",
       "teniaImagenLaFuente": true,
@@ -1517,7 +1517,7 @@
       "fecha": "2026-09-29T17:11:00.000Z",
       "sinFecha": false,
       "visto": "2026-09-30T00:31:08.568Z",
-      "relevancia": 57,
+      "relevancia": 50,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -3108,6 +3108,73 @@
       }
     },
     {
+      "id": "2e3etr",
+      "titulo": "Cierran más de doscientos locales de juguetes en un año por la crisis",
+      "copete": "La caída del consumo y el aumento de costos impactan en el sector juguetero. La cámara empresaria advierte sobre la competencia de importados y el contrabando.",
+      "cuerpo": "Entre los casos recientes figura el cese de operaciones de la tradicional cadena Tío Mario, ubicada en la avenida Pueyrredón, tras casi treinta años de actividad.\n\nEl dirigente detalló que los comercios enfrentan una fuerte presión por el incremento en los alquileres, los servicios y los salarios, lo que lleva a muchos a volcarse a la venta digital para liquidar mercadería. Asimismo, advirtió que el treinta por ciento del mercado corresponde a contrabando y cuestionó el impacto de la desregulación en las compras al exterior.\n\nActualmente, el territorio nacional cuenta con 2.800 establecimientos activos que intentan sostener sus estructuras frente a este escenario complejo.",
+      "guion": "Cierran más de doscientos locales de juguetes en un año por la crisis",
+      "seccion": "Economía",
+      "medios": [
+        "Minuto Uno",
+        "El Eco de Tandil"
+      ],
+      "enlace": "https://www.eleco.com.ar/nacionales/jugueterias-en-crisis-cerraron-mas-de-200-en-un-ano",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-29T12:26:40.000Z",
+      "sinFecha": false,
+      "visto": "2026-09-29T23:01:10.965Z",
+      "relevancia": 35,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Más de 200 jugueterías cerraron en un año.",
+        "El sector sufre caída del consumo y suba de costos.",
+        "El treinta por ciento del mercado es contrabando.",
+        "Subsisten 2.800 comercios en todo el país."
+      ],
+      "seSabe": [
+        "Cerraron más de 200 jugueterías en el último año según la Cámara Argentina de la Industria del Juguete.",
+        "La cadena Tío Mario cerró su local de avenida Pueyrredón tras casi tres décadas.",
+        "El país cuenta actualmente con 2.800 jugueterías.",
+        "El 30 por ciento del mercado del juguete es de contrabando según el sector."
+      ],
+      "textoRedes": "La industria juguetería atraviesa una crisis con más de doscientos locales cerrados en un año debido a la caída del consumo, el aumento de costos y la competencia de productos importados, según informó la cámara del sector.",
+      "etiquetas": [
+        "Jugueterías",
+        "Crisis",
+        "Consumo"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Eco de Tandil",
+          "enlace": "https://www.eleco.com.ar/nacionales/jugueterias-en-crisis-cerraron-mas-de-200-en-un-ano",
+          "fecha": "2026-09-29T12:26:40.000Z",
+          "oficial": false,
+          "aporte": "Detalló el cierre de la cadena Tío Mario, datos de la cámara empresaria sobre cierres de locales y denunció contrabando."
+        },
+        {
+          "medio": "Minuto Uno",
+          "enlace": "https://www.minutouno.com/economia/crisis-economica-mas-300-jugueterias-cerraron-o-pasaron-comercio-online-n6328099",
+          "fecha": "2026-09-29T20:40:00.000Z",
+          "oficial": false,
+          "aporte": "Indicó que la transformación del sector se debe al consumo, compras externas y canales digitales."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "cierran-mas-de-doscientos-locales-de-juguetes-en-un-ano-por-la-crisis",
+      "foto": {
+        "archivo": "fotos-notas/2e3etr.jpg",
+        "credito": "Foto: El Eco de Tandil"
+      }
+    },
+    {
       "id": "jul3w9",
       "titulo": "Infraccionan a un tractor en caminos rurales tras las lluvias",
       "copete": "El Comando de Prevención Rural sancionó a un conductor en el paraje La Esperanza. El municipio advirtió que aplicará multas severas.",
@@ -4440,6 +4507,7 @@
         "Radio Mitre",
         "Diario Popular",
         "Noticias Argentinas (NA)",
+        "El Día",
         "La Tecla",
         "La Verdad",
         "La Opinión",
@@ -4452,7 +4520,6 @@
         "Página/12",
         "La Nueva",
         "La Brújula 24",
-        "El Día",
         "Agencia DIB",
         "Perfil",
         "El Cronista"
@@ -5201,12 +5268,12 @@
   ],
   "clima": {
     "ahora": {
-      "temp": 8,
-      "sensacion": 4,
-      "humedad": 92,
-      "viento": 20,
+      "temp": 7,
+      "sensacion": 3,
+      "humedad": 93,
+      "viento": 21,
       "rumbo": "SO",
-      "cielo": "Parcialmente nublado",
+      "cielo": "Nublado",
       "esDeDia": false
     },
     "dias": [
@@ -5579,12 +5646,6 @@
       "motivo": "verificación baja: espera a una persona (visto al reescribir)"
     },
     {
-      "id": "10ybc9u",
-      "titulo": "Diputados salió al cruce de la justicia y negó encubrir…",
-      "seccion": "Política",
-      "motivo": "necesita ojo humano: \"denuncia\""
-    },
-    {
       "id": "125lok7",
       "titulo": null,
       "seccion": "Argentina",
@@ -5597,12 +5658,6 @@
       "motivo": "necesita ojo humano: \"denunció\""
     },
     {
-      "id": "1o9rp73",
-      "titulo": "La ANMAT prohibió productos de limpieza de una marca en…",
-      "seccion": "Economía",
-      "motivo": "necesita ojo humano: \"denuncia\""
-    },
-    {
       "id": "11a41j5",
       "titulo": null,
       "seccion": "Agro",
@@ -5613,6 +5668,12 @@
       "titulo": "De una oferta laboral en Facebook a prisionero de guerra…",
       "seccion": "Argentina",
       "motivo": "internacional: sin relación con Balcarce"
+    },
+    {
+      "id": "1vtpdh5",
+      "titulo": "La Cámara de Diputados bonaerense rechazó la denuncia de…",
+      "seccion": "Política",
+      "motivo": "necesita ojo humano: \"denuncia\""
     },
     {
       "id": "7ci1iq",
@@ -5631,6 +5692,12 @@
       "titulo": "Quiniela de hoy: resultados de los sorteos en Nacional…",
       "seccion": "Argentina",
       "motivo": "parece promoción, no noticia: \"sorteo\""
+    },
+    {
+      "id": "1o9rp73",
+      "titulo": "La ANMAT prohibió productos de limpieza de una marca en…",
+      "seccion": "Economía",
+      "motivo": "necesita ojo humano: \"denuncia\""
     },
     {
       "id": "1yygidx",
