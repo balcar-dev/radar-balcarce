@@ -1,10 +1,10 @@
 {
- "generado": "2026-09-30T18:25:07.833Z",
- "portada": 61,
+ "generado": "2026-09-30T18:31:36.639Z",
+ "portada": 64,
  "archivo": 642,
  "esperandoCuerpo": 4,
  "redes": {
-  "generado": "2026-09-30T18:25:07.874Z",
+  "generado": "2026-09-30T18:31:36.680Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -137,7 +137,7 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 52,
+    "segundos": 50,
     "notas": [
      {
       "id": "2uqvxt",
@@ -145,19 +145,19 @@
       "seccion": "Fútbol"
      },
      {
-      "id": "y9vwef",
-      "titulo": "El equipo de fútbol playa clasifica a la final bonaerense",
+      "id": "12mtzuq",
+      "titulo": "La Universidad de Buenos Aires otorga el doctorado honoris causa a Lionel Messi",
+      "seccion": "Argentina"
+     },
+     {
+      "id": "1rpzsy3",
+      "titulo": "Tres jugadores locales integran la selección provincial de pádel",
       "seccion": "Deportes"
      },
      {
-      "id": "v2h1r4",
-      "titulo": "Lanzan una diplomatura universitaria para emprendedores locales",
-      "seccion": "Balcarce"
-     },
-     {
-      "id": "616lop",
-      "titulo": "Japón abre su mercado a la carne vacuna de todo el país",
-      "seccion": "Agro"
+      "id": "1vgun5x",
+      "titulo": "Balcarce participa de la trigésima Feria Internacional de Turismo",
+      "seccion": "Cultura y agenda"
      }
     ]
    }
@@ -178,19 +178,18 @@
      "id": "h36tlu",
      "titulo": "La Municipalidad recauda millones en una subasta de tierras",
      "cuando": "2026-09-30T16:35:26.718Z"
+    },
+    {
+     "id": "76r67w",
+     "titulo": "Bomberos gestiona una unidad de traslado para capacitaciones",
+     "cuando": "2026-09-30T18:26:44.078Z"
     }
    ],
    "cola": [
     {
-     "id": "76r67w",
-     "titulo": "Bomberos gestiona una unidad de traslado para capacitaciones",
-     "seccion": "Balcarce",
-     "marcada": false
-    },
-    {
-     "id": "103siit",
-     "titulo": "Bomberos vende los últimos números de la rifa anual",
-     "seccion": "Balcarce",
+     "id": "1h3b7f0",
+     "titulo": "La Fiesta Nacional del Postre anuncia sus actividades para octubre",
+     "seccion": "Cultura y agenda",
      "marcada": false
     },
     {
@@ -206,8 +205,8 @@
      "marcada": false
     }
    ],
-   "cupo": 2,
-   "proximoDesde": "2026-09-30T18:05:26.718Z",
+   "cupo": 1,
+   "proximoDesde": "2026-09-30T19:56:44.078Z",
    "porDia": 5,
    "minutosEntrePosteos": 90,
    "edadMaximaHoras": 8,

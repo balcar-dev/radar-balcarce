@@ -1,22 +1,7 @@
 {
- "generado": "2026-09-30T18:25:07.833Z",
+ "generado": "2026-09-30T18:31:36.639Z",
  "intentosMaximos": 3,
  "notas": [
-  {
-   "id": "1lyj59u",
-   "titulo": "\"Hoy es no, pero estamos cercanos a que pronto podamos llegar a eso\"",
-   "copete": "Luego de lo que pasó el fin de semana con la reapertura del autódromo \"Juan Manuel Fangio\", el acompañamiento multitudinario del público, el buen espectáculo que brindaron las TC Pick Up y el Turismo Special de la Costa y la buena respuesta del",
-   "seccion": "Automovilismo",
-   "fecha": "2026-09-30T11:48:36.000Z",
-   "fuentes": [
-    {
-     "medio": "El Diario Balcarce",
-     "enlace": "https://eldiariobalcarce.com.ar/hoy-es-no-pero-estamos-cercanos-a-que-pronto-podamos-llegar-a-eso-726",
-     "fecha": "2026-09-30T11:48:36.000Z"
-    }
-   ],
-   "intentos": 3
-  },
   {
    "id": "uhxgoz",
    "titulo": "Hockey – Gran labor de «Las Mamis del Ateneo»",
@@ -28,6 +13,21 @@
      "medio": "Ayacucho al Día",
      "enlace": "https://ayacuchoaldia.com.ar/hockey-gran-labor-de-las-mamis-del-ateneo-en-balcarce/?utm_source=rss&utm_medium=rss&utm_campaign=hockey-gran-labor-de-las-mamis-del-ateneo-en-balcarce",
      "fecha": "2026-09-30T15:00:00.000Z"
+    }
+   ],
+   "intentos": 3
+  },
+  {
+   "id": "1lyj59u",
+   "titulo": "\"Hoy es no, pero estamos cercanos a que pronto podamos llegar a eso\"",
+   "copete": "",
+   "seccion": "Automovilismo",
+   "fecha": "2026-09-30T12:01:02.331Z",
+   "fuentes": [
+    {
+     "medio": "El Diario Balcarce",
+     "enlace": "https://eldiariobalcarce.com.ar/hoy-es-no-pero-estamos-cercanos-a-que-pronto-podamos-llegar-a-eso-726",
+     "fecha": null
     }
    ],
    "intentos": 3
