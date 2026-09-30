@@ -70,6 +70,27 @@ export function clienteDePrueba() {
     'web/data/celular-decisiones.json': { notas: { e2: { estado: 'descartada', por: 'Prueba', cuando: hace(200), motivo: 'descartada desde el celular' } }, redes: {} },
     'web/data/correcciones.json': { notas: {} },
     'web/data/retiradas.json': { notas: {} },
+    // La pestaña Fechas: un par de días y de feriados de ejemplo.
+    'web/data/efemerides-candidatas.json': {
+      generado: hace(60), desde: '2026-10-05', dias: {
+        '2026-10-05': { diaSemana: 'lunes', candidatas: [
+          { id: 'c1', origen: 'portal', estilo: 'nacimiento', anio: 1901, hace: 125, titulo: 'Nace el poeta Carlos Mastronardi', texto: 'Nace en Gualeguay (Entre Ríos) el poeta y ensayista Carlos Mastronardi.', marcas: [], puntaje: 66, fuente: 'Portal Argentina de Wikipedia' },
+          { id: 'c2', origen: 'feed', estilo: 'curioso', anio: 1952, hace: 74, titulo: 'Primera patente del código de barras', texto: 'En Estados Unidos sale a la luz la primera patente del código de barras.', marcas: [], puntaje: 51, fuente: 'https://es.wikipedia.org/wiki/C%C3%B3digo_de_barras' },
+          { id: 'c3', origen: 'portal', estilo: 'historia', anio: 1904, hace: 122, titulo: 'Asume la presidencia Manuel Quintana', texto: 'Manuel Quintana asume la presidencia de Argentina.', marcas: ['política'], puntaje: 30, fuente: 'Portal Argentina de Wikipedia' },
+          { id: 'c4', origen: 'especial', estilo: 'dia-especial', anio: null, hace: null, titulo: 'Día Mundial del Algodón', texto: 'Día Mundial del Algodón.', marcas: [], puntaje: 22, fuente: 'Wikipedia: días especiales' },
+        ] },
+        '2026-10-06': { diaSemana: 'martes', candidatas: [
+          { id: 'c5', origen: 'curada', estilo: 'balcarce', anio: null, hace: null, titulo: 'Fundación del pueblo de Balcarce', texto: 'El 22 de junio de 1876 se fundó el pueblo de San José de Balcarce.', marcas: [], puntaje: 120, fuente: 'https://es.wikipedia.org/wiki/Balcarce_(ciudad)', datos: [{ texto: 'Fue declarado ciudad el 15 de septiembre de 1949.', fuente: 'https://es.wikipedia.org/wiki/Balcarce_(ciudad)' }] },
+        ] },
+      },
+    },
+    'web/data/feriados-piezas.json': {
+      generado: hace(60), feriados: [
+        { fecha: '2026-10-12', nombre: 'Día del Respeto a la Diversidad Cultural', tipo: 'trasladable', estado: 'propuesta', enfoque: 'La historia del nombre de la fecha, en tono institucional, y el censo 2022.', datos: [{ texto: 'El decreto 1584/2010 le cambió el nombre.', fuente: 'https://servicios.infoleg.gob.ar/infolegInternet/anexos/170000-174999/174389/norma.htm' }, { texto: 'En el censo 2022, 1.306.730 personas se reconocieron indígenas o descendientes.', fuente: 'https://censo.gob.ar/' }], citas: [], revisaUnaPersona: false },
+        { fecha: '2026-12-08', nombre: 'Día de la Inmaculada Concepción de María', tipo: 'inamovible', estado: 'propuesta', enfoque: 'Sobrio y corto: el dogma de 1854.', datos: [], citas: [], revisaUnaPersona: false },
+      ],
+    },
+    'web/data/efemerides-elegidas.json': { dias: {}, feriados: {} },
     'web/data/celular-llaves.json': { llaves: [] },
     'web/data/celular-borradores.json': { version: 1, borradores: {} },
     'web/data/archivo.json': { notas: [] },

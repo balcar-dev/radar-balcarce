@@ -24,6 +24,9 @@ export const ARCHIVOS = {
   portada: 'web/data/portada.json',
   esperando: 'web/data/esperando-cuerpo.json',
   archivo: 'web/data/archivo.json',
+  candidatas: 'web/data/efemerides-candidatas.json',
+  feriados: 'web/data/feriados-piezas.json',
+  elegidas: 'web/data/efemerides-elegidas.json',
 };
 
 export class ErrorDeGitHub extends Error {
@@ -62,6 +65,8 @@ export function comoRenglones(json, claves = Object.keys(json)) {
 export function formatear(ruta, json) {
   if (ruta === ARCHIVOS.correcciones || ruta === ARCHIVOS.retiradas) return comoRenglones(json, ['notas']);
   if (ruta === ARCHIVOS.decisiones) return comoRenglones(json, ['notas', 'redes']);
+  // Un día o un feriado por renglón: el historial dice qué se decidió cuándo.
+  if (ruta === ARCHIVOS.elegidas) return comoRenglones(json, ['dias', 'feriados']);
   return `${JSON.stringify(json, null, 1)}\n`;
 }
 
@@ -193,6 +198,20 @@ export function conCorreccion(json, id, campos, { motivo, por, deIA = false }) {
   const nueva = { ...antes, ...limpios, motivo, cuando: hoyISO().slice(0, 10), por };
   if (deIA) nueva.deIA = true; else delete nueva.deIA;
   j.notas = { ...j.notas, [id]: nueva };
+  return j;
+}
+
+/** Lo que se eligió para un día de "Un día como hoy" (panel/fechas.js arma `eleccion`). */
+export function conEleccionDeDia(json, dia, eleccion) {
+  const j = { dias: {}, feriados: {}, ...json };
+  j.dias = { ...j.dias, [dia]: eleccion };
+  return j;
+}
+
+/** La decisión sobre el enfoque de un feriado: aprobado, o con cambios pedidos. */
+export function conDecisionDeFeriado(json, fecha, { estado, comentario = '', por }) {
+  const j = { dias: {}, feriados: {}, ...json };
+  j.feriados = { ...j.feriados, [fecha]: { estado, ...(comentario ? { comentario } : {}), por, cuando: hoyISO() } };
   return j;
 }
 

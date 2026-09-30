@@ -530,3 +530,7 @@ Lo vigilan las pruebas `celular.test.mjs`, `celular-app.test.mjs`,
 `respaldo.test.mjs`, `horarios.test.mjs`, `agenda-panel.test.mjs`,
 `buzon.test.mjs` y parte de `editor.test.mjs` y `limpieza-29-09.test.mjs`
 (`docs/10-REGLAS-Y-PRUEBAS.md`).
+
+## La pestaña Fechas (30/09)
+
+Arma con anticipación "Un día como hoy" y los feriados: las 20 mejores candidatas de cada día para elegir una principal, y el enfoque de cada feriado para aprobarlo o pedir cambios. Lo elegido queda en `web/data/efemerides-elegidas.json`. Cómo se generan las candidatas y cómo se afina el criterio: `docs/13-EFEMERIDES.md`.

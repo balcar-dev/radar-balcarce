@@ -83,6 +83,7 @@ Un dato vive en **un** lugar; los demás documentos remiten a ése.
 | `docs/07-REDES.md` | Facebook e Instagram: el interruptor, los posteos y el espejo, el reloj, las piezas, los podcasts, el contrato del día, el libro, la conexión con Meta y las auditorías |
 | `docs/08-INFRAESTRUCTURA.md` | Qué corre dónde: los workflows, cron-job.org, Cloudflare, GitHub, las claves de IA y sus topes, los secretos por nombre, la vigilancia, los vencimientos y lo que cuesta |
 | `docs/09-PANEL.md` | Los dos paneles: el del celular (el de todos los días) y el de la PC (respaldo): qué muestra cada uno, qué pasa cuando alguien decide y cómo llega a la web |
+| `docs/13-EFEMERIDES.md` | "Un día como hoy" y los feriados: la base mensual de candidatas, la pestaña Fechas del panel y cómo se afina el criterio con lo que se elige |
 | `docs/10-REGLAS-Y-PRUEBAS.md` | **Las reglas numeradas**, qué prueba cuida cada una, el mapa de `pruebas/` y la regla de la prueba después del error |
 | `docs/11-OPERACION.md` | El manual de uso diario: los enlaces, corregir, retirar, escribir cuerpos, el panel del celular, prender o apagar las redes, qué mirar cuando algo deja de salir |
 | `docs/12-GLOSARIO.md` | Cada palabra propia del proyecto, con su definición y dónde vive |

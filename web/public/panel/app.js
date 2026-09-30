@@ -10,8 +10,12 @@
 
 import {
   crearCliente, ARCHIVOS, SECCIONES, ErrorDeGitHub, marcaNueva, corridaConMarca,
-  conDecision, sinDecision, conRedes, conCorreccion, conLlave, sinRetirada, haceCuanto, palabras,
+  conDecision, sinDecision, conRedes, conCorreccion, conLlave, sinRetirada, haceCuanto, palabras, conEleccionDeDia, conDecisionDeFeriado,
 } from './github.js';
+import {
+  ESTILOS, COLOR_DE_ESTILO, etiquetaCorta, etiquetaLarga, semanas, borradorDe, rolDe, marcarEn, eleccionDeDia, estadoDelDia,
+  haceTexto, marcaLegible, diasArmados, estadoDeFeriado,
+} from './fechas.js';
 import { crearLlaves, abrir } from './cifrado.js';
 import {
   explicarMotivo, motivoCorto, explicarFicha, estadoSinCuerpo, PESTANAS, PREGUNTAS, preguntaRedes, comoSalenLosPosteos,
@@ -77,6 +81,8 @@ const E = {
   cliente: null, nombre: '', llaves: null, pestana: 'esperan', busqueda: '',
   portada: null, esperando: [], intentosMaximos: 3, pendientes: null, descartadas: [], papelera: [], publicos: [],
   decisiones: { notas: {}, redes: {} }, correcciones: { notas: {} }, archivo: null, estadoCel: null, libro: {},
+  // La pestaña Fechas (se carga la primera vez que se abre).
+  fechas: null, subfechas: 'efemerides', dia: null, borrador: null, filtroEstilo: null, feriado: null,
 };
 
 function aviso(texto, { conActualizar = false, ms = 7000 } = {}) {
@@ -278,7 +284,7 @@ function pestanas() {
   const sinCuerpo = E.esperando.filter((n) => !E.correcciones.notas?.[n.id]?.cuerpo).length;
   const items = [
     ['esperan', 'Esperan', esperan], ['sin-cuerpo', 'Sin cuerpo', sinCuerpo],
-    ['publicadas', 'Publicadas', (E.portada?.notas ?? []).filter((n) => !n.propia).length], ['redes', 'Redes', '◷'], ['mas', 'Más', '⋯'],
+    ['publicadas', 'Publicadas', (E.portada?.notas ?? []).filter((n) => !n.propia).length], ['redes', 'Redes', '◷'], ['fechas', 'Fechas', '▦'], ['mas', 'Más', '⋯'],
   ];
   nav.innerHTML = items.map(([id, t, n]) => `<button type="button" data-pestana="${id}" ${E.pestana === id ? 'aria-current="page"' : ''}><span class="numero">${n}</span>${t}</button>`).join('');
   nav.hidden = false;
@@ -306,6 +312,7 @@ function vistaLista() {
   else if (E.pestana === 'sin-cuerpo') vistaSinCuerpo(cuando);
   else if (E.pestana === 'publicadas') vistaPublicadas(cuando);
   else if (E.pestana === 'redes') vistaRedes();
+  else if (E.pestana === 'fechas') vistaFechas();
   else vistaMas();
 }
 
@@ -412,6 +419,119 @@ function vistaRedes() {
     ${cola.length ? `<ol class="lista-simple">${cola.map((n) => `<li>${n.marcada ? '<span class="marca">→ la mandó una persona</span> ' : ''}${chip(n.seccion)}${esc(n.titulo ?? tituloDe(n.id) ?? '')}</li>`).join('')}</ol>
       <p class="ayuda">Sale la primera de la cola cuando toca. Para mandar otra, abrila en Publicadas y tocá "Mandar también a las redes".</p>`
     : `<p class="estado">No hay notas en la cola. Entran solas las de Balcarce con relevancia alta, y las que manda una persona, de las últimas ${reglas.edadMaximaHoras} horas.</p>`}`;
+}
+
+// ------------------------------------------------------------------ las fechas
+
+/** Trae las candidatas, los feriados y lo elegido (la primera vez que se abre la pestaña). */
+async function abrirFechas() {
+  app.innerHTML = '<div class="girando"></div><p class="vacio">Trayendo las fechas…</p>';
+  try {
+    const c = E.cliente;
+    const [candidatas, feriados, elegidas] = await Promise.all([
+      leerSiHay(c, ARCHIVOS.candidatas, null), leerSiHay(c, ARCHIVOS.feriados, null), leerSiHay(c, ARCHIVOS.elegidas, { dias: {}, feriados: {} }),
+    ]);
+    E.fechas = { candidatas, feriados, elegidas: { dias: {}, feriados: {}, ...elegidas } };
+    vistaFechas();
+  } catch (e) {
+    aviso(explicarError(e), { ms: 9000 });
+    app.innerHTML = '<p class="problemas">No se pudieron traer las fechas.</p><button class="boton" type="button" data-accion="volver-fechas">Probar de nuevo</button>';
+  }
+}
+
+const chipEstilo = (estilo) => '<span class="chip" style="background:var(--s-' + (COLOR_DE_ESTILO[estilo] ?? 'pais') + ')">' + esc(ESTILOS[estilo] ?? estilo) + '</span>';
+
+function vistaFechas() {
+  pestanas();
+  $('#recargar').hidden = false;
+  if (!E.fechas) { abrirFechas(); return; }
+  if (E.dia) { vistaDia(); return; }
+  if (E.feriado) { vistaFeriado(); return; }
+  const sub = (id, texto) => '<button type="button" data-accion="sub-fechas" data-sub="' + id + '" aria-current="' + (E.subfechas === id) + '">' + texto + '</button>';
+  app.innerHTML = '<h1>Fechas</h1>' + queEs('fechas') +
+    '<div class="sub">' + sub('efemerides', 'Efemérides') + sub('feriados', 'Feriados') + '</div>' +
+    (E.subfechas === 'efemerides' ? listaDeDias() : listaDeFeriados());
+}
+
+function listaDeDias() {
+  const cand = E.fechas.candidatas;
+  if (!cand) return '<p class="vacio">Todavía no hay candidatas. Se arman con <code>node ingesta/generar-efemerides.mjs</code>.</p>';
+  const dias = Object.keys(cand.dias ?? {});
+  const el = E.fechas.elegidas;
+  const bloques = semanas(dias).map((s) => '<h2>Semana del ' + esc(etiquetaCorta(s.lunes)) + '</h2>' + s.dias.map((d) => {
+    const e = el.dias?.[d];
+    const est = estadoDelDia(e);
+    const principal = e?.principal ? (e.detalle?.[e.principal]?.titulo ?? '') : '';
+    return '<button type="button" class="tarjeta" data-accion="abrir-dia" data-dia="' + esc(d) + '"><div><strong>' + esc(etiquetaCorta(d)) + '</strong> <span class="est ' + est.clase + '">' + esc(est.texto) + '</span></div>' +
+      (principal ? '<div class="meta">' + esc(principal) + '</div>' : '<div class="meta">' + (cand.dias[d].candidatas?.length ?? 0) + ' candidatas</div>') + '</button>';
+  }).join('')).join('');
+  return '<p class="estado">Armaste ' + diasArmados(dias, el) + ' de ' + dias.length + ' días. Cada uno tiene sus 20 mejores candidatas.</p>' + bloques;
+}
+
+function vistaDia() {
+  const d = E.dia;
+  const cand = E.fechas.candidatas?.dias?.[d]?.candidatas ?? [];
+  const b = E.borrador ?? borradorDe(E.fechas.elegidas.dias?.[d]);
+  E.borrador = b;
+  const estilos = [...new Set(cand.map((c) => c.estilo))];
+  const visibles = E.filtroEstilo ? cand.filter((c) => c.estilo === E.filtroEstilo) : cand;
+  const filtros = '<div class="filtros"><button type="button" data-accion="filtro-estilo" data-estilo="" aria-pressed="' + !E.filtroEstilo + '">Todas (' + cand.length + ')</button>' +
+    estilos.map((s) => '<button type="button" data-accion="filtro-estilo" data-estilo="' + esc(s) + '" aria-pressed="' + (E.filtroEstilo === s) + '">' + esc(ESTILOS[s] ?? s) + '</button>').join('') + '</div>';
+  const tarjetas = visibles.map((c) => {
+    const rol = rolDe(b, c.id);
+    const boton = (r, texto) => '<button type="button" data-accion="marcar" data-id="' + esc(c.id) + '" data-rol="' + r + '" aria-pressed="' + (rol === r) + '">' + texto + '</button>';
+    const marcas = [...(c.marcas ?? []).map((m) => '<span class="motivo">' + esc(marcaLegible(m)) + '</span>'), c.revisaUnaPersona ? '<span class="motivo">la revisa una persona</span>' : ''].join('');
+    const datos = c.datos?.length ? '<details><summary>Datos verificados (' + c.datos.length + ')</summary><ul class="datos">' + c.datos.map((x) => '<li>' + esc(x.texto) + (x.fuente && /^https?:/.test(x.fuente) ? ' <a href="' + esc(x.fuente) + '" target="_blank" rel="noopener">fuente</a>' : '') + '</li>').join('') + '</ul></details>' : '';
+    return '<div class="cand ' + (rol ?? '') + '">' +
+      '<div>' + chipEstilo(c.estilo) + '<span class="meta">' + [c.anio, haceTexto(c.hace), c.puntaje + ' pts'].filter(Boolean).map(esc).join(' · ') + '</span></div>' +
+      '<div class="texto">' + esc(c.texto) + '</div>' + (marcas ? '<div class="marcas">' + marcas + '</div>' : '') + datos +
+      (c.fuente ? '<div class="meta">' + (/^https?:/.test(c.fuente) ? '<a href="' + esc(c.fuente) + '" target="_blank" rel="noopener">Wikipedia</a>' : esc(c.fuente)) + '</div>' : '') +
+      '<div class="roles">' + boton('principal', '★ Principal') + boton('extra', '+ Suma') + boton('no', '✕ No') + '</div></div>';
+  }).join('');
+  app.innerHTML = '<button type="button" class="boton" data-accion="volver-fechas">← Los días</button><h1>' + esc(etiquetaLarga(d)) + '</h1>' +
+    '<p class="ayuda">Elegí <strong>una principal</strong> y, si querés, algunas que <strong>suman</strong>. Con "No" descartás. Lo que elijas queda guardado para afinar el criterio: nada sale solo.</p>' +
+    filtros + (tarjetas || '<p class="vacio">No hay candidatas de ese estilo.</p>') +
+    '<div class="barra-guardar"><button type="button" class="boton principal ancho" data-accion="guardar-dia">Guardar el día</button></div>';
+}
+
+function listaDeFeriados() {
+  const lista = E.fechas.feriados?.feriados ?? [];
+  if (!lista.length) return '<p class="vacio">Todavía no hay feriados armados.</p>';
+  const el = E.fechas.elegidas;
+  return '<p class="estado">Los feriados que vienen, cada uno con su enfoque, sus datos y sus fuentes. Los aprobás o pedís cambios.</p>' + lista.map((f) => {
+    const e = estadoDeFeriado(el, f.fecha);
+    const est = e === 'aprobada' ? '<span class="est ok">✓ aprobado</span>' : e === 'cambiar' ? '<span class="est espera">✎ pediste cambios</span>' : (f.estado === 'por definir' ? '<span class="est mal">por definir</span>' : '<span class="est espera">propuesta</span>');
+    return '<button type="button" class="tarjeta" data-accion="abrir-feriado" data-dia="' + esc(f.fecha) + '"><div><strong>' + esc(etiquetaLarga(f.fecha)) + '</strong></div><div class="titulo">' + esc(f.nombre) + '</div><div>' + est + '</div></button>';
+  }).join('');
+}
+
+function vistaFeriado() {
+  const fecha = E.feriado;
+  const f = (E.fechas.feriados?.feriados ?? []).find((x) => x.fecha === fecha);
+  if (!f) { E.feriado = null; vistaFechas(); return; }
+  const e = E.fechas.elegidas.feriados?.[fecha];
+  const enlace = (x) => (x.fuente && /^https?:/.test(x.fuente) ? ' <a href="' + esc(x.fuente) + '" target="_blank" rel="noopener">fuente</a>' : '');
+  app.innerHTML = '<button type="button" class="boton" data-accion="volver-fechas">← Los feriados</button>' +
+    '<h1>' + esc(f.nombre) + '</h1><p class="estado">' + esc(etiquetaLarga(fecha)) + ' · ' + esc(f.tipo) + '</p>' +
+    (f.revisaUnaPersona ? '<p class="problemas">Este tema lo revisa una persona antes de salir.</p>' : '') +
+    '<div class="caja"><h3>Enfoque propuesto</h3><p>' + esc(f.enfoque ?? 'Todavía no hay un enfoque para este feriado: lo armamos juntos.') + '</p></div>' +
+    (f.datos?.length ? '<h2>Datos con su fuente</h2><ul class="datos lista-simple">' + f.datos.map((x) => '<li>' + esc(x.texto) + enlace(x) + (x.segundaFuente === false ? ' <span class="motivo">falta una segunda fuente</span>' : '') + '</li>').join('') + '</ul>' : '') +
+    (f.citas?.length ? '<h2>Citas</h2><ul class="datos lista-simple">' + f.citas.map((x) => '<li>«' + esc(x.texto) + '» ' + esc(x.autor ?? '') + enlace(x) + (x.verificada === false ? ' <span class="motivo">sin referencia: confirmar</span>' : '') + '</li>').join('') + '</ul>' : '') +
+    (f.nota ? '<p class="ayuda">' + esc(f.nota) + '</p>' : '') +
+    '<p class="ayuda">Siempre formal y ameno, sin política partidaria. La pieza habla sólo de la fecha y sale ese día.</p>' +
+    (e ? '<p class="estado">Tu decisión: ' + (e.estado === 'aprobada' ? '✓ aprobado' : '✎ cambios pedidos') + (e.comentario ? ' — ' + esc(e.comentario) : '') + ' (' + esc(e.por ?? '') + ')</p>' : '') +
+    '<div class="botones"><button type="button" class="boton principal" data-accion="aprobar-feriado">Aprobar el enfoque</button><button type="button" class="boton" data-accion="cambiar-feriado">Pedir cambios</button></div>';
+}
+
+async function guardarFechas(cambiarJson, mensaje, listo) {
+  try {
+    app.innerHTML = '<div class="girando"></div><p class="vacio">Guardando en GitHub…</p>';
+    E.fechas.elegidas = { dias: {}, feriados: {}, ...(await E.cliente.guardar(ARCHIVOS.elegidas, cambiarJson, 'Panel del celular: ' + E.nombre + ' ' + mensaje)) };
+    listo();
+  } catch (e) {
+    aviso(explicarError(e), { ms: 9000 });
+    vistaFechas();
+  }
 }
 
 function vistaMas() {
@@ -692,13 +812,37 @@ document.addEventListener('click', async (ev) => {
   const el = ev.target.closest('[data-pestana],[data-abrir],[data-accion]');
   if (!el || el.closest('dialog')) return;
   const { id, tipo } = el.dataset;
-  if (el.dataset.pestana) { E.pestana = el.dataset.pestana; vistaLista(); window.scrollTo(0, 0); return; }
+  if (el.dataset.pestana) { E.pestana = el.dataset.pestana; E.dia = null; E.feriado = null; E.borrador = null; vistaLista(); window.scrollTo(0, 0); return; }
   if (el.dataset.abrir) { vistaNota(el.dataset.abrir, id); return; }
   const accion = el.dataset.accion;
   const por = E.nombre;
   const decision = (cambiar, mensaje) => [ARCHIVOS.decisiones, cambiar, `Panel del celular: ${por} ${mensaje}`];
   if (accion === 'cerrar-aviso') $('#aviso').hidden = true;
-  else if (accion === 'volver') vistaLista();
+  else if (accion === 'sub-fechas') { E.subfechas = el.dataset.sub; vistaFechas(); }
+  else if (accion === 'abrir-dia') { E.dia = el.dataset.dia; E.borrador = null; E.filtroEstilo = null; vistaFechas(); window.scrollTo(0, 0); }
+  else if (accion === 'abrir-feriado') { E.feriado = el.dataset.dia; vistaFechas(); window.scrollTo(0, 0); }
+  else if (accion === 'volver-fechas') { E.dia = null; E.feriado = null; E.borrador = null; if (!E.fechas) E.fechas = null; vistaFechas(); window.scrollTo(0, 0); }
+  else if (accion === 'filtro-estilo') { E.filtroEstilo = el.dataset.estilo || null; vistaDia(); }
+  else if (accion === 'marcar') { E.borrador = marcarEn(E.borrador, id, el.dataset.rol); const y = window.scrollY; vistaDia(); window.scrollTo(0, y); }
+  else if (accion === 'guardar-dia') {
+    const dia = E.dia;
+    const cand = E.fechas.candidatas?.dias?.[dia]?.candidatas ?? [];
+    const eleccion = eleccionDeDia(E.borrador, cand, por);
+    guardarFechas((j) => conEleccionDeDia(j, dia, eleccion), 'arma ' + dia + ' de Un día como hoy', () => {
+      E.dia = null; E.borrador = null; vistaFechas(); aviso(eleccion.principal ? 'Guardado. Ese día ya tiene su principal.' : 'Guardado, pero todavía falta elegir la principal.');
+    });
+  } else if (accion === 'aprobar-feriado' || accion === 'cambiar-feriado') {
+    const fecha = E.feriado;
+    let comentario = '';
+    if (accion === 'cambiar-feriado') {
+      const r = await preguntar({ titulo: 'Pedir cambios', texto: 'Contame qué cambiarías del enfoque. Queda anotado.', si: 'Guardar', conMotivo: '¿Qué cambiarías?' });
+      if (!r.ok) return;
+      comentario = r.texto;
+    }
+    guardarFechas((j) => conDecisionDeFeriado(j, fecha, { estado: accion === 'aprobar-feriado' ? 'aprobada' : 'cambiar', comentario, por }), 'decide un feriado', () => {
+      E.feriado = null; vistaFechas(); aviso(accion === 'aprobar-feriado' ? 'Aprobado.' : 'Anotado: lo cambiamos.');
+    });
+  } else if (accion === 'volver') vistaLista();
   else if (accion === 'volver-nota') vistaNota(tipo, id);
   else if (accion === 'escribir') {
     const r = await preguntar({

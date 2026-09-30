@@ -14,7 +14,7 @@
     --tinta: #14161A; --papel: #FFFFFF; --fondo: #F4F1EA; --linea: #E4DFD2; --suave: #5F635F; --texto: #22262B;
     --rojo: #C7381C; --rojo-oscuro: #9C2B15; --verde: #16615B; --ambar: #8A5A00; --ambar-fondo: #FFF4DC;
     --s-balcarce: #B91C1C; --s-politica: #3730A3; --s-policiales: #831843; --s-deportes: #0F766E; --s-futbol: #15803D;
-    --s-automovilismo: #B45309; --s-agro: #4D7C0F; --s-cultura: #9D2C8F; --s-economia: #8A6500; --s-tecnologia: #0B6FB8; --s-pais: #4B5563;
+    --s-feriado: #2B6AA6; --s-automovilismo: #B45309; --s-agro: #4D7C0F; --s-cultura: #9D2C8F; --s-economia: #8A6500; --s-tecnologia: #0B6FB8; --s-pais: #4B5563;
     --radio: 12px;
   }
   @media (prefers-color-scheme: dark) {
@@ -96,9 +96,9 @@
   dialog.pregunta h2 { font-size: 18px; text-transform: none; letter-spacing: 0; color: var(--texto); margin: 0 0 8px; }
   dialog.pregunta p { font-size: 15px; }
   dialog.pregunta .botones { margin-bottom: 0; }
-  .pestanas { position: fixed; left: 0; right: 0; bottom: 0; z-index: 5; display: grid; grid-template-columns: repeat(5, 1fr);
+  .pestanas { position: fixed; left: 0; right: 0; bottom: 0; z-index: 5; display: grid; grid-template-columns: repeat(6, 1fr);
     background: var(--papel); border-top: 1px solid var(--linea); padding-bottom: env(safe-area-inset-bottom); }
-  .pestanas button { min-height: 58px; border: 0; background: transparent; font-size: 12.5px; font-weight: 600; color: var(--suave); cursor: pointer; padding: 0 2px; }
+  .pestanas button { min-height: 58px; border: 0; background: transparent; font-size: 11.5px; font-weight: 600; color: var(--suave); cursor: pointer; padding: 0 2px; }
   .pestanas button[aria-current="page"] { color: var(--rojo); box-shadow: inset 0 3px 0 var(--rojo); }
   .pestanas .numero { display: block; font-size: 17px; }
   /* Arriba y no abajo: abajo tapaba los botones de la nota mientras estaba a la vista. */
@@ -110,6 +110,24 @@
   @keyframes g { to { transform: rotate(360deg); } }
   .check { display: flex; gap: 10px; align-items: flex-start; font-weight: 500; }
   .check input { width: 22px; height: 22px; margin-top: 2px; }
+  .sub { display: flex; gap: 8px; margin: 8px 0 12px; }
+  .sub button { flex: 1; min-height: 44px; border-radius: 10px; border: 1px solid var(--linea); background: var(--papel); font-weight: 600; cursor: pointer; }
+  .sub button[aria-current="true"] { background: var(--tinta); color: #fff; border-color: var(--tinta); }
+  .filtros { display: flex; gap: 6px; overflow-x: auto; padding: 4px 0 10px; margin: 0 -16px; padding-inline: 16px; }
+  .filtros button { flex: 0 0 auto; min-height: 36px; border-radius: 999px; border: 1px solid var(--linea); background: var(--papel); padding: 0 12px; font-size: 13.5px; cursor: pointer; }
+  .filtros button[aria-pressed="true"] { background: var(--tinta); color: #fff; border-color: var(--tinta); }
+  .cand { background: var(--papel); border: 1px solid var(--linea); border-radius: var(--radio); padding: 12px 14px; margin: 0 0 10px; }
+  .cand.principal { border-color: var(--verde); box-shadow: inset 4px 0 0 var(--verde); }
+  .cand.extra { border-color: var(--ambar); box-shadow: inset 4px 0 0 var(--ambar); }
+  .cand.no { opacity: .55; }
+  .cand .texto { margin: 6px 0; line-height: 1.4; }
+  .cand .roles { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 8px; margin-top: 8px; }
+  .cand .roles button { min-height: 44px; border-radius: 10px; border: 1px solid var(--linea); background: transparent; font-weight: 600; cursor: pointer; }
+  .cand .roles button[aria-pressed="true"] { background: var(--tinta); color: #fff; border-color: var(--tinta); }
+  .marcas { display: flex; flex-wrap: wrap; gap: 4px; margin: 4px 0; }
+  .marcas .motivo { margin: 0; }
+  .barra-guardar { position: sticky; bottom: calc(66px + env(safe-area-inset-bottom)); padding: 8px 0; background: linear-gradient(to top, var(--fondo) 70%, transparent); }
+  .datos li { margin: 6px 0; }
   .demo { background: var(--ambar-fondo); color: var(--ambar); text-align: center; font-size: 13px; padding: 6px; }
 </style>
 </head>

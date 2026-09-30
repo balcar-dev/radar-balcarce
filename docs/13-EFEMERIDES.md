@@ -1,0 +1,91 @@
+# 13 · Un día como hoy y los feriados
+
+*Actualizado el 30/09/2026. Cómo se arma la base mensual de efemérides, qué se
+muestra en la pestaña "Fechas" del panel del celular y cómo se afina el criterio
+con lo que se elige. Todavía no sale nada solo: esto prepara lo que una persona
+aprueba.*
+
+## Para qué
+
+Hernán pidió una pieza diaria de "Un día como hoy" (nota en la web, reel e
+historia) y piezas propias para los feriados, armadas **con una semana de
+anticipación** para revisarlas y aprobarlas sin gastar audio. Como todavía no
+está claro qué efemérides funcionan mejor, la idea es empezar dándole a una
+persona **las 20 mejores candidatas de cada día**, dejar que elija, y mirar
+después qué patrón siguen las elecciones para ir puliendo el criterio.
+
+## Las dos partes
+
+| Parte | Qué hace | Dónde |
+|---|---|---|
+| **Efemérides** | 31 días desde el lunes 5/10, con 20 candidatas cada uno | `web/data/efemerides-candidatas.json` |
+| **Feriados** | Los feriados de los próximos ocho meses, cada uno con su enfoque, sus datos y sus fuentes | `web/data/feriados-piezas.json` |
+| **Lo elegido** | Qué eligió cada persona, con cómo era cada elegida | `web/data/efemerides-elegidas.json` |
+
+Los tres viajan en claro: son datos públicos de Wikipedia y de leyes, no hay nada
+sensible. El repositorio es público y está bien.
+
+## De dónde salen las candidatas
+
+`ingesta/generar-efemerides.mjs` (una corrida a mano por mes:
+`node ingesta/generar-efemerides.mjs --desde=2026-10-05 --dias=31`) baja:
+
+1. **El Portal Argentina de Wikipedia** ("Efemérides del 7 de octubre"): unas 4
+   por día, todas de Argentina.
+2. **Los "días especiales" de Wikipedia** (feed `holidays`): sólo los de
+   Argentina y los del mundo; sin santos ni lo que es de una provincia.
+3. **El feed "un día como hoy"** (`events` y los `births` de argentinos): hechos
+   del mundo, con tope.
+4. **Lo curado a mano** (`ingesta/efemerides-curadas.json`): las fechas patrias,
+   los feriados y las fechas de Balcarce, con datos verificados contra su fuente.
+
+Wikipedia es CC BY-SA: se toma como **pista**, se reescribe con palabras propias
+y se cita. Cada fecha o número se confirma con una segunda fuente antes de salir.
+
+## Cómo se ordenan (el puntaje de partida)
+
+`ingesta/efemerides.mjs`, `puntuar`. Es un punto de partida que se afina con lo
+que la gente elige:
+
+- **Suben:** lo curado (+50), el Portal Argentina (+15), lo de Balcarce o Fangio
+  (+25 a +30), un aniversario redondo (25, 50 o 100 años), ciencia, cultura,
+  campo y fundaciones.
+- **Bajan:** lo político (−25), lo que puede estar vivo (nacidos desde 1930, −12),
+  lo religioso (−15), los muertos, y lo muy corto o muy largo.
+- **No entran:** lo que tiene violencia o menores, salvo las fechas patrias
+  curadas (que revisa una persona).
+- **Ningún estilo se come la lista:** hasta 6 de un mismo estilo, 5 datos
+  curiosos y 3 días especiales; lo que sobra completa hasta 20.
+
+## Qué se ve en el panel
+
+Pestaña **Fechas**:
+
+- **Efemérides:** los días agrupados por semana, cada uno con su estado ("Sin
+  armar", "Falta la principal", "✓ Armado (+2)"). Al abrir un día, las 20
+  candidatas con su estilo, año, "hace N años", puntaje, marcas (política, puede
+  estar vivo…) y fuente. Se elige **una principal**, algunas que **suman**, y "No"
+  para descartar. Se puede filtrar por estilo. "Guardar el día" escribe en
+  GitHub con el nombre de quien lo hizo.
+- **Feriados:** cada feriado con su enfoque, los datos con su enlace, las citas
+  y lo que falta confirmar. Se aprueba el enfoque o se piden cambios (con un
+  comentario). Los puentes no llevan pieza.
+
+## Cómo se afina el criterio
+
+Cada día guardado lleva, de cada elegida, su estilo, puntaje, año, origen y
+marcas, y en qué lugar de la lista estaba. Con varias semanas de elecciones se
+puede ver, por ejemplo, si se elige más lo redondo que lo curioso, si el puntaje
+ordena bien, o si un estilo casi nunca se elige. Ese análisis lo hace Claude
+sobre `efemerides-elegidas.json`, y lo que salga se anota acá y en
+`ingesta/efemerides.mjs`.
+
+## Reglas que no se negocian
+
+- Nada de política partidaria ni de personas conflictivas: ante la duda, esa
+  fecha queda afuera o espera a una persona.
+- Nunca un menor ni una víctima; nunca nombres ni fotos de una víctima.
+- En un feriado la pieza habla sólo de la fecha, en tono formal y ameno.
+- Todo dato se confirma con una segunda fuente; lo que no la tiene está
+  marcado ("falta una segunda fuente") y no sale.
+- Nada sale solo: una persona aprueba cada pieza.

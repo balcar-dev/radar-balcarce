@@ -108,6 +108,7 @@ export const PESTANAS = {
   esperan: 'Notas que el sistema no publica solo: tocan un tema delicado, son de afuera y poco contadas, o no se pudieron verificar bien. Cada una trae por qué espera y lo que contó cada medio. La IA no las escribe sola: si querés publicar una, se la pedís (y la revisás antes) o la escribís vos. Si no, la descartás.',
   'sin-cuerpo': 'Notas que SÍ salen solas, pero todavía no tienen un cuerpo que pase el verificador. La IA las vuelve a intentar sola en las próximas actualizaciones (hasta tres veces); si lo logra, salen sin que hagas nada. Si querés que salga ya, escribila con la IA o a mano.',
   publicadas: 'Lo que está en la web. "En la portada" son las de las últimas 36 horas; las más viejas siguen teniendo su página en el archivo (180 días). Desde acá se corrige, se cambia de sección, se reescribe con IA, se manda a las redes o se retira.',
+  fechas: 'Armar con anticipación "Un día como hoy" y los feriados. En Efemérides, cada día trae sus 20 mejores candidatas, ordenadas por un puntaje de partida: elegís una principal y, si querés, algunas que suman; con "No" descartás. Lo que elegís queda guardado y sirve para afinar el criterio. Los feriados llevan un enfoque ya armado con sus datos y sus fuentes: lo aprobás o pedís cambios. Nada sale solo ni gasta audio hasta que se arme la pieza.',
   redes: 'Lo que sale hoy en Facebook e Instagram: el cronograma, qué contaría cada repaso si saliera ahora, y la cola de los posteos de Facebook. Lo arma la web cada media hora; lo que ya salió se ve al momento.',
 };
 
