@@ -2831,12 +2831,16 @@
   "cuando": "2026-09-30T12:58:47.498Z"
  },
  "m6yqqj": {
-  "intentado": true,
-  "origen": "ninguna",
+  "archivo": "fotos-notas/m6yqqj.jpg",
+  "medio": "Clarín",
+  "credito": "Foto: Clarín",
+  "licencia": null,
+  "origen": "medio",
   "titulo": "Robbie Williams da un show acústico en la calle frente a su hotel en Buenos Aires",
-  "razon": "Groq también falló: HTTP 413",
-  "cuando": "2026-09-30T12:58:47.498Z",
-  "intentos": 1
+  "enlace": "https://www.clarin.com/fama/llegada-pais-robbie-williams-sorprendio-fans-hizo-mini-unplugged-exclusivo-puerta-hotel_0_E6hUcO9EwY.html",
+  "imagenOriginal": "https://www.clarin.com/img/2026/09/30/phAw2WkAc_2000x1500__1.jpg",
+  "razon": "Es la foto de mejor calidad, encuadre claro y sin marcas ni menores.",
+  "cuando": "2026-09-30T14:04:03.103Z"
  },
  "y9vwef": {
   "intentado": true,
@@ -2917,5 +2921,53 @@
   "imagenOriginal": "https://radiomitre.cienradios.com/resizer/v2/5D5KLGMKCNGDTB2326N2LYKUPM.jpg?smart=true&auth=eb699d36302336c3936ade1ffb6b1fd30de04a3b9e170e6d70c996ed915ceb67&width=1200&height=630",
   "razon": "Es la única foto que muestra directamente a Lionel Scaloni, el protagonista principal de la nota sobre su ciclo.",
   "cuando": "2026-09-30T13:32:18.412Z"
+ },
+ "10xubmm": {
+  "archivo": "fotos-notas/10xubmm.jpg",
+  "medio": "TN (Todo Noticias)",
+  "credito": "Foto: TN (Todo Noticias)",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Joan Laporta revela el llamado que frenó el pase de Lautaro",
+  "enlace": "https://tn.com.ar/deportes/futbol/2026/09/30/el-presidente-del-barcelona-admitio-su-interes-por-lautaro-martinez-en-el-ultimo-mercado-de-pases-lo-queria-a-cualquier-precio/",
+  "imagenOriginal": "https://tn.com.ar/resizer/v2/el-presidente-del-barcelona-aseguro-que-buscaron-contratar-a-lautaro-martinez-a-cualquier-precio-foto-efe-ETT72HCOTNAMTAMVSC2E2DRF2A.jpg?auth=e2903784a9552b98e45656f95430831fb8c00c339b8cf2f570f1d038331dfe7a&width=1023",
+  "razon": "Muestra claramente a Joan Laporta, el protagonista principal de la noticia sobre el pase de Lautaro.",
+  "cuando": "2026-09-30T14:04:03.103Z"
+ },
+ "1rpzsy3": {
+  "archivo": "fotos-notas/1rpzsy3.jpg",
+  "medio": "Municipalidad de Balcarce",
+  "credito": "Foto: Municipalidad de Balcarce",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Tres jugadores locales integran la selección provincial de pádel",
+  "enlace": "https://balcarce.gob.ar/2026/09/30/tres-balcarcenos-elegidos-para-representar-a-la-federacion-provincial-de-padel/",
+  "imagenOriginal": "https://balcarce.gob.ar/wp-content/uploads/2026/09/WhatsApp-Image-2026-09-30-at-10.05.07-AM.jpeg",
+  "razon": "Tiene mejor nitidez y encuadre para mostrar a los jugadores locales de pádel.",
+  "cuando": "2026-09-30T14:04:03.103Z"
+ },
+ "qbrt3e": {
+  "archivo": "fotos-notas/qbrt3e.jpg",
+  "medio": "Municipalidad de Balcarce",
+  "credito": "Foto: Municipalidad de Balcarce",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "La noche de los sueños llega con artistas locales para ayudar a Rufi Cerezuela",
+  "enlace": "https://balcarce.gob.ar/2026/09/30/espectaculo-a-la-gorra-a-beneficio-de-rufi-cerezuela/",
+  "imagenOriginal": "https://balcarce.gob.ar/wp-content/uploads/2026/09/WhatsApp-Image-2026-09-28-at-6.26.29-PM.jpeg",
+  "razon": "Es la única opción disponible, cuenta con buena nitidez y no presenta marcas de agua ni menores reconocibles.",
+  "cuando": "2026-09-30T14:04:03.103Z"
+ },
+ "616lop": {
+  "archivo": "fotos-notas/616lop.jpg",
+  "medio": "Bichos de Campo",
+  "credito": "Foto: Bichos de Campo",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Japón abre su mercado a la carne vacuna de todo el país",
+  "enlace": "https://bichosdecampo.com/al-fin-el-sushi-podra-hacerse-con-carne-argentina-japon-le-abrio-el-mercado-a-nuestros-bifes-tras-dos-decadas-de-negociaciones/",
+  "imagenOriginal": "https://bichosdecampo.com/wp-content/uploads/2026/09/acuerdo-carne-a-Japon.jpeg",
+  "razon": "Muestra claramente a funcionarios e integrantes de la delegación diplomática exhibiendo las banderas de Argentina y Japón, ilustrando perfectamente el acuerdo de apertura del mercado.",
+  "cuando": "2026-09-30T14:04:03.103Z"
  }
 }

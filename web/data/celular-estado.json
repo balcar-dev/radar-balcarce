@@ -1,10 +1,10 @@
 {
- "generado": "2026-09-30T13:32:36.949Z",
- "portada": 51,
- "archivo": 615,
- "esperandoCuerpo": 7,
+ "generado": "2026-09-30T14:05:45.607Z",
+ "portada": 54,
+ "archivo": 619,
+ "esperandoCuerpo": 5,
  "redes": {
-  "generado": "2026-09-30T13:32:36.985Z",
+  "generado": "2026-09-30T14:05:45.655Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -106,27 +106,27 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 52,
+    "segundos": 50,
     "notas": [
      {
-      "id": "y9vwef",
-      "titulo": "El equipo de fútbol playa clasifica a la final bonaerense",
+      "id": "1rpzsy3",
+      "titulo": "Tres jugadores locales integran la selección provincial de pádel",
       "seccion": "Deportes"
      },
      {
-      "id": "zrdt8x",
-      "titulo": "Japón abre su mercado a la carne vacuna argentina tras dos décadas",
-      "seccion": "Agro"
+      "id": "1h321lc",
+      "titulo": "El Gobierno eleva a 35 mil dólares el tope para importar autos eléctricos sin arancel",
+      "seccion": "Economía"
+     },
+     {
+      "id": "122dsf6",
+      "titulo": "Rosario Central genera polêcutemica en los festejos contra Juan Sebastián Verón",
+      "seccion": "Fútbol"
      },
      {
       "id": "1vgun5x",
       "titulo": "Balcarce participa de la trigésima Feria Internacional de Turismo",
       "seccion": "Cultura y agenda"
-     },
-     {
-      "id": "1j6ui2n",
-      "titulo": "La ACTC sanciona a Mariano Werner con multa y largada desde el fondo",
-      "seccion": "Automovilismo"
      }
     ]
    },
@@ -137,37 +137,43 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 46,
+    "segundos": 52,
     "notas": [
      {
-      "id": "5evpzb",
-      "titulo": "Cabrera y Otero ganan la carrera nocturna en Napaleofú",
+      "id": "y9vwef",
+      "titulo": "El equipo de fútbol playa clasifica a la final bonaerense",
       "seccion": "Deportes"
      },
      {
-      "id": "1dqm02n",
-      "titulo": "El Hospital Fossati afronta una deuda millonaria de obras sociales",
-      "seccion": "Balcarce"
+      "id": "1j6ui2n",
+      "titulo": "La ACTC sanciona a Mariano Werner con multa y largada desde el fondo",
+      "seccion": "Automovilismo"
      },
      {
-      "id": "12rp30w",
-      "titulo": "Edgardo Ríos visita la Fiesta Nacional del Postre",
-      "seccion": "Cultura y agenda"
-     },
-     {
-      "id": "h7o4xt",
-      "titulo": "Cambareri cuestiona el ajuste y la situación en el INTA Balcarce",
+      "id": "616lop",
+      "titulo": "Japón abre su mercado a la carne vacuna de todo el país",
       "seccion": "Agro"
+     },
+     {
+      "id": "wabor5",
+      "titulo": "Proponen mayores exigencias para radares viales y anular multas irregulares",
+      "seccion": "Balcarce"
      }
     ]
    }
   ],
   "facebook": {
-   "hoy": [],
-   "cola": [
+   "hoy": [
     {
      "id": "y9vwef",
      "titulo": "El equipo de fútbol playa clasifica a la final bonaerense",
+     "cuando": "2026-09-30T13:34:06.307Z"
+    }
+   ],
+   "cola": [
+    {
+     "id": "1rpzsy3",
+     "titulo": "Tres jugadores locales integran la selección provincial de pádel",
      "seccion": "Deportes",
      "marcada": false
     },
@@ -176,10 +182,16 @@
      "titulo": "Cabrera y Otero ganan la carrera nocturna en Napaleofú",
      "seccion": "Deportes",
      "marcada": false
+    },
+    {
+     "id": "qbrt3e",
+     "titulo": "La noche de los sueños llega con artistas locales para ayudar a Rufi Cerezuela",
+     "seccion": "Cultura y agenda",
+     "marcada": false
     }
    ],
-   "cupo": 5,
-   "proximoDesde": "2026-09-30T00:33:13.423Z",
+   "cupo": 4,
+   "proximoDesde": "2026-09-30T15:04:06.307Z",
    "porDia": 5,
    "minutosEntrePosteos": 90,
    "edadMaximaHoras": 8,
