@@ -130,6 +130,7 @@ vigente está en `docs/`.
 | `docs/historico/CRUCE-DE-MEDIOS.md` | La medición del 27/09 que llevó al cruce de medios |
 | `docs/historico/PLAN-V2.2.md` | El plan del 27/09 para elegir mejor las notas (filtro de entrada, lectura con IA) |
 | `docs/historico/VARIANTES-29-09.md` | La medición de las reglas de la IA del 29/09 y las opciones para las redes |
+| `docs/historico/REDACCION-29-09.md` | 18 notas de la IA leídas contra sus originales: qué falla, qué se arregló y qué falta probar |
 
 ## La historia corta
 
