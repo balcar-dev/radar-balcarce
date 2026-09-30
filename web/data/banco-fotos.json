@@ -2723,11 +2723,27 @@
   "intentos": 1
  },
  "1of8593": {
-  "intentado": true,
-  "origen": "ninguna",
+  "archivo": "fotos-notas/1of8593.jpg",
+  "medio": "Agencia DIB",
+  "credito": "Foto: Agencia DIB",
+  "licencia": null,
+  "origen": "medio",
   "titulo": "ATE bonaerense realiza un paro general por veinticuatro horas",
-  "razon": "Groq también falló: HTTP 413",
-  "cuando": "2026-09-30T06:01:21.131Z",
-  "intentos": 2
+  "enlace": "https://dib.com.ar/politica/ate-le-hace-un-paro-kicillof-reclamo-terminar-la-precariedad-laboral-el-estado-n56113",
+  "imagenOriginal": "https://media.dib.com.ar/p/a835f5c0b353ed4c952de20247d08366/adjuntos/377/imagenes/100/046/0100046961/1200x675/702x692:722x712/ate-pba-1.jpg",
+  "razon": "Es la única foto sin marcas de agua ni menores reconocibles, con buena nitidez y encuadre.",
+  "cuando": "2026-09-30T07:31:30.551Z"
+ },
+ "122dsf6": {
+  "archivo": "fotos-notas/122dsf6.jpg",
+  "medio": "Minuto Uno",
+  "credito": "Foto: Minuto Uno",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "Rosario Central genera polêcutemica en los festejos contra Juan Sebastián Verón",
+  "enlace": "https://www.minutouno.com/deportes/qepd-polemica-los-festejos-los-jugadores-rosario-central-contra-juan-sebastian-veron-n6328250",
+  "imagenOriginal": "https://media.minutouno.com/p/d2fc164de44c02b326371835375ce2f7/adjuntos/150/imagenes/043/673/0043673741/1200x675/smart/centra-veron.jpg",
+  "razon": "La foto A muestra claramente el hecho polémico sin marcas de agua ni menores reconocibles en primer plano.",
+  "cuando": "2026-09-30T07:31:30.551Z"
  }
 }
