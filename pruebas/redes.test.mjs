@@ -327,7 +327,7 @@ import os from 'node:os';
 import path from 'node:path';
 import { claveRedaccion, claveRedes, leerVariable } from '../reels/claves.mjs';
 import {
-  mismoTema, sePuedeSola, estaActivo, repasoConPresupuesto, REGLAS_PIEZAS,
+  mismoTema, sePuedeSola, sePuedeEnUnRepaso, estaActivo, repasoConPresupuesto, REGLAS_PIEZAS,
 } from '../redes/elegir.mjs';
 import { PIEZAS } from '../ingesta/criterio.mjs';
 
@@ -579,5 +579,34 @@ test('a las redes va sólo lo de Balcarce; del automovilismo de afuera, lo que n
   assert.equal(esParaLasRedes(rosario), false);
   assert.equal(esParaLasRedes(deAca), true);
   assert.equal(esParaLasRedes(colapinto), true);
-  assert.deepEqual(elegirParaPodcast([necochea, deAca, colapinto, rosario], { cuantas: 4 }).map((n) => n.id).sort(), ['b', 'c']);
+  // Desde el 29/09 los repasos sí pueden contar lo de afuera de mucho puntaje
+  // (la prueba de abajo); lo de Necochea sólo ya no llega a la portada
+  // (zona.test.mjs: lo que cuentan sólo medios de otras ciudades no se trae).
+  assert.deepEqual(elegirParaPodcast([{ ...necochea, relevancia: 75 }, deAca, colapinto, { ...rosario, relevancia: 70 }], { cuantas: 4 }).map((n) => n.id).sort(), ['b', 'c']);
+});
+
+test('los repasos también cuentan lo de afuera si está entre lo de más puntaje: 80 o más y dos como mucho (29/09)', () => {
+  // Hernán, 29/09: "las 4 noticias podrían ser también fuera de Balcarce si son
+  // las mejores rankeadas". Casos de la portada de ese día.
+  const afuera = (id, titulo, seccion, relevancia) => ({ id, titulo, seccion, relevancia, local: false, semaforo: 'verde' });
+  const notas = [
+    afuera('f1', 'Aston Martin renueva los contratos de Fernando Alonso y Lance Stroll', 'Automovilismo', 97),
+    afuera('f2', 'Lionel Scaloni libera a Tomás Palacios para jugar en Estudiantes', 'Fútbol', 91),
+    afuera('f3', 'La cuenta corriente de la balanza de pagos cierra con superávit', 'Economía', 88),
+    afuera('f4', 'Artista deja la ciudad y levanta una casa con doce parabrisas', 'Argentina', 73),
+    afuera('f5', 'Luis Caputo califica a Kicillof como el anticristo', 'Política', 99),
+    nn('a', 'La Cooperativa anuncia un corte de luz para el miércoles', 'Balcarce', 100),
+    nn('b', 'Pato Naranja gana por 99 a 12 y queda entre los cuatro mejores', 'Deportes', 90),
+  ];
+  const elegidas = elegirParaPodcast(notas, { cuantas: 4 });
+  assert.deepEqual(elegidas.map((x) => x.id), ['a', 'f1', 'f2', 'b'], 'las dos de afuera de más puntaje, y lo de acá');
+  assert.ok(!elegidas.some((x) => x.id === 'f3'), 'una tercera de afuera no entra aunque tenga 88');
+  assert.ok(!elegidas.some((x) => x.id === 'f5'), 'Política nunca, sea de donde sea');
+  // A la noche lo de acá no pide puntaje; lo de afuera sigue pidiendo 80.
+  const noche = elegirParaPodcast(notas, { cuantas: 4, excluir: elegidas }, { ...REGLAS_PIEZAS, relevanciaParaPodcast: 0 });
+  assert.deepEqual(noche.map((x) => x.id), ['f3'], 'con 73, la del artista no entra ni a la noche');
+  // Lo de afuera que salió en la web porque lo aprobó una persona, sólo si lo marcó para las redes.
+  assert.equal(sePuedeEnUnRepaso({ ...notas[0], como: 'publicada' }), false);
+  assert.equal(sePuedeEnUnRepaso({ ...notas[0], como: 'publicada', aprobadaParaRedes: '2026-09-29T20:00:00Z' }), true);
+  assert.equal(sePuedeSola(notas[0]), false, 'para una pieza sola (Facebook) sigue pidiendo que sea de acá');
 });

@@ -670,9 +670,12 @@ manda sobre lo que se repita acá. Los horarios y cómo se publica, en
 
 - **Sólo sale lo que ya está publicado en la web.** Lo que el semáforo frenó no llega a
   las redes.
-- **Por ahora, sólo lo de Balcarce:** a Facebook, Instagram y los podcasts van las notas
-  de un medio de Balcarce o de uno de afuera que dice Balcarce en su título. Del
-  automovilismo de afuera, sólo lo que nombra a una figura argentina.
+- **A Facebook e Instagram, por ahora, sólo lo de Balcarce:** las notas de un medio de
+  Balcarce o de uno de afuera que dice Balcarce en su título. Del automovilismo de afuera,
+  sólo lo que nombra a una figura argentina.
+- **Los podcasts, lo de Balcarce primero:** desde el 29/09 también pueden contar notas de
+  afuera, si están entre las de más puntaje (80 o más, también a la noche) y **dos como
+  mucho por repaso**, para que siga siendo un repaso de Balcarce.
 - **Nada sensible sale solo:** Política, Policiales y lo que salió en la web porque lo
   aprobó una persona van a las redes sólo si una persona las marca desde el panel del
   celular ("También a Facebook e Instagram"); lo rojo, nunca. Tampoco va una nota sin
@@ -684,9 +687,9 @@ manda sobre lo que se repita acá. Los horarios y cómo se publica, en
 - **Instagram** recibe video con voz (historias y reels) y el espejo de cada posteo de
   Facebook, con la foto de la nota del banco propio (sin marca de agua, con el crédito en
   el texto) o, si no hay, la placa.
-- **Podcasts en vez de noticias sueltas:** tres por día, con notas de relevancia 62 o más
-  (el de la noche, sin mínimo: repasa el día), de temas distintos y sin repetir las del
-  podcast anterior.
+- **Podcasts en vez de noticias sueltas:** tres por día, de cuatro notas, con notas de
+  Balcarce de relevancia 62 o más (el de la noche, sin mínimo: repasa el día) y hasta dos
+  de afuera con 80 o más, de temas distintos y sin repetir las de otro repaso.
 
 ## 10. Correcciones y firma
 
@@ -806,6 +809,8 @@ instrucción de la IA (70, 90, 70 a 180…) también se controlan.
 | Podcasts: relevancia mínima | 62 | `PIEZAS.relevanciaPodcast` |
 | Podcasts (los tres repasos): notas | 4 | `PIEZAS.notasPorPodcast` |
 | Podcast: notas mínimas para que salga | 2 | `PIEZAS.notasMinimasPodcast` |
+| Podcasts: relevancia mínima de una nota de afuera (también a la noche) | 80 | `PIEZAS.relevanciaAfueraPodcast` |
+| Podcasts: notas de afuera como máximo en cada repaso | 2 | `PIEZAS.notasDeAfueraPorPodcast` |
 | Contrato del día: posteos de notas, como máximo | 5 | `CONTRATO_DIARIO.posteosPorDia` |
 | Contrato del día: reels (los tres podcasts) | 3 | `CONTRATO_DIARIO.reelsPorDia` |
 | Contrato del día: historias de podcast | 3 | `CONTRATO_DIARIO.historiasDePodcast` |

@@ -359,9 +359,13 @@ ni reels de una sola nota: dichas de a una sonaban raras.
 **Qué notas entran** (`elegirParaPodcast`, `redes/elegir.mjs`; números en
 `PIEZAS`, `ingesta/criterio.mjs`):
 
-1. Sólo las que pueden salir solas (`sePuedeSola`): ni roja, ni Política ni
-   Policiales, con cuerpo, que no sea nota propia, y **de Balcarce**
-   (`esParaLasRedes`, la misma regla que Facebook).
+1. Sólo las que pueden ir en un repaso (`sePuedeEnUnRepaso`): ni roja, ni
+   Política ni Policiales, con cuerpo, que no sea nota propia. **De Balcarce
+   primero** (`esParaLasRedes`, la misma regla que Facebook); **de afuera**,
+   desde el 29/09, sólo con relevancia 80 o más (también a la noche) y **dos
+   como mucho por repaso**, las de más puntaje (`PIEZAS.relevanciaAfueraPodcast`
+   y `PIEZAS.notasDeAfueraPorPodcast`; Hernán: "podrían ser también fuera de
+   Balcarce si son las mejores rankeadas"). Compiten por puntaje con las de acá.
 2. **Los tres, 4 notas** (29/09; eran 3 a la mañana y a la tarde), y **ninguno
    repite** una nota ni un tema que ya contó otro repaso de hoy o de los dos días
    anteriores (`notasContadasEnPodcasts`, `repasosDelDia` en `redes/repasos.mjs`).

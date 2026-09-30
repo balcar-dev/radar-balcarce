@@ -105,9 +105,13 @@ test('los que usan los números los toman del criterio (o dicen lo mismo)', () =
   // de una nota y el feed de fotos de Instagram se sacaron del código (no salían
   // desde el 24/09), y sus números (historiasDeNotas, relevanciaFeed y
   // feedPorDia) se borraron de ingesta/criterio.mjs y de la tabla.
-  assert.deepEqual(Object.keys(REGLAS_PIEZAS), ['relevanciaParaPodcast']);
+  // Desde el 29/09, también lo de afuera en los repasos: su puntaje mínimo y
+  // cuántas como mucho.
+  assert.deepEqual(Object.keys(REGLAS_PIEZAS), ['relevanciaParaPodcast', 'relevanciaAfuera', 'afueraPorPodcast']);
   for (const k of ['historiasDeNotas', 'relevanciaFeed', 'feedPorDia']) assert.ok(!(k in PIEZAS), `PIEZAS.${k} ya no existe`);
   assert.equal(REGLAS_PIEZAS.relevanciaParaPodcast, PIEZAS.relevanciaPodcast);
+  assert.equal(REGLAS_PIEZAS.relevanciaAfuera, PIEZAS.relevanciaAfueraPodcast);
+  assert.equal(REGLAS_PIEZAS.afueraPorPodcast, PIEZAS.notasDeAfueraPorPodcast);
   assert.deepEqual([...SECCIONES_QUE_ESPERAN_PERSONA].sort(), [...criterio.SECCIONES_QUE_ESPERAN_PERSONA].sort());
   // Los tres que viven en web/lib porque los compila la web.
   assert.equal(PALABRAS_MINIMAS_CUERPO, CUERPO.minimoParaPublicar);

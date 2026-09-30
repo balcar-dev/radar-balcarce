@@ -313,14 +313,17 @@ export function mensajeDeNota(nota, sitio) {
 // ------------------------------------------------------------- los podcasts
 //
 // Las notas de los podcasts (reels/plan.mjs, en GitHub o en la PC) se eligen
-// con las mismas reglas de fondo que Facebook: nada sensible solo, sólo lo de
-// Balcarce. Está acá, y no en plan.mjs, porque plan.mjs necesita resvg y ffmpeg
-// instalados y esto se prueba sin nada. Desde el 24/09 no hay historias ni
-// reels de UNA nota, ni fotos en el feed de Instagram fuera del espejo de
-// Facebook: las notas salen dentro de los podcasts.
+// con las mismas reglas de fondo que Facebook: nada sensible solo. Lo de
+// Balcarce primero; lo de afuera, desde el 29/09, sólo si está entre lo de más
+// puntaje y como mucho dos por repaso. Está acá, y no en plan.mjs, porque
+// plan.mjs necesita resvg y ffmpeg instalados y esto se prueba sin nada. Desde
+// el 24/09 no hay historias ni reels de UNA nota, ni fotos en el feed de
+// Instagram fuera del espejo de Facebook: las notas salen dentro de los podcasts.
 
 export const REGLAS_PIEZAS = {
   relevanciaParaPodcast: PIEZAS.relevanciaPodcast,
+  relevanciaAfuera: PIEZAS.relevanciaAfueraPodcast,
+  afueraPorPodcast: PIEZAS.notasDeAfueraPorPodcast,
 };
 
 /**
@@ -335,12 +338,19 @@ export function esParaLasRedes(nota) {
   return nota?.local === true || (nota?.seccion === 'Automovilismo' && !!nota?.figura);
 }
 
-/** ¿Se puede armar una pieza sola con esta nota? Lo que salió en la web porque
+/** ¿Puede ir en un repaso, sea de acá o de afuera? Lo que salió en la web porque
  *  lo aprobó una persona, sólo si también lo marcó para las redes (29/09); y
- *  nunca Política ni Policiales: los podcasts no las llevan. */
-export function sePuedeSola(nota) {
+ *  nunca Política ni Policiales: los podcasts no las llevan. Lo de afuera,
+ *  además, tiene que estar entre lo de más puntaje (elegirParaPodcast). */
+export function sePuedeEnUnRepaso(nota) {
   return nota.semaforo !== 'rojo' && !SECCIONES_QUE_ESPERAN_PERSONA.includes(nota.seccion) && !esperaCuerpo(nota)
-    && !esNotaPropia(nota) && esParaLasRedes(nota) && (!loAproboUnaPersona(nota) || aprobadaParaLasRedes(nota));
+    && !esNotaPropia(nota) && (!loAproboUnaPersona(nota) || aprobadaParaLasRedes(nota));
+}
+
+/** ¿Se puede armar una pieza sola con esta nota, sin mirar el puntaje? Lo mismo
+ *  que sePuedeEnUnRepaso, y de Balcarce (esParaLasRedes). */
+export function sePuedeSola(nota) {
+  return sePuedeEnUnRepaso(nota) && esParaLasRedes(nota);
 }
 
 const porRelevancia = (a, b) => (b.relevancia ?? 0) - (a.relevancia ?? 0);
@@ -397,15 +407,20 @@ export function primeraOracion(texto = '', maximo = 150) {
  *  repetir las que ya se contaron en otro podcast del día (`excluir`). Primero
  *  una por sección, para que un podcast no sea tres notas del mismo evento
  *  (el 24/09 salían tres del autódromo); si sobra lugar, se completa por
- *  puntaje. */
-export function elegirParaPodcast(notas, { cuantas = PIEZAS.notasPorPodcast, excluir = [] } = {}, reglas = REGLAS_PIEZAS) {
+ *  puntaje. Lo de afuera (29/09) compite por puntaje con lo de acá, pero sólo
+ *  con `relevanciaAfuera` o más (también a la noche) y hasta `afueraPorPodcast`
+ *  notas: las de más puntaje. */
+export function elegirParaPodcast(notas, { cuantas = PIEZAS.notasPorPodcast, excluir = [] } = {}, reglasPedidas = REGLAS_PIEZAS) {
+  const reglas = { ...REGLAS_PIEZAS, ...reglasPedidas };
+  const alcanza = (n) => (n.relevancia ?? 0) >= (esParaLasRedes(n) ? reglas.relevanciaParaPodcast : reglas.relevanciaAfuera);
+  let deAfuera = 0;
   const candidatas = sinRepetidos(
     [...notas]
-      .filter(sePuedeSola)
-      .filter((n) => (n.relevancia ?? 0) >= reglas.relevanciaParaPodcast)
+      .filter(sePuedeEnUnRepaso)
+      .filter(alcanza)
       .sort(porRelevancia),
     excluir,
-  );
+  ).filter((n) => esParaLasRedes(n) || (deAfuera += 1) <= reglas.afueraPorPodcast);
   const secciones = new Set();
   const variadas = candidatas.filter((n) => {
     if (secciones.has(n.seccion)) return false;

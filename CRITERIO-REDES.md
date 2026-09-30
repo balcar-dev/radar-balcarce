@@ -151,7 +151,10 @@ Lo común a todas:
   como historia y Meta acepta hasta 60. Si no entra, primero se saca la oración de
   contexto de las últimas notas y después notas del final, hasta un mínimo de dos. Un día
   flojo, sale con las notas nuevas que haya; con menos de dos, ese repaso no sale.
-- **Lleva:** titulares ya publicados en la web, de temas distintos y de Balcarce.
+- **Lleva:** titulares ya publicados en la web, de temas distintos, de Balcarce primero.
+  Desde el 29/09 también **hasta dos notas de afuera** por repaso, si están entre las de
+  más puntaje (80 o más, también a la noche): "podrían ser también fuera de Balcarce si
+  son las mejores rankeadas" (Hernán).
 - **No lleva nunca:** Política ni Policiales, nada en rojo, las notas propias del sitio,
   la fuente de ninguna nota, ni nombres de víctimas o menores.
 - **Bien (mañana):** "Buen día, Balcarce. Esto es lo que hay para saber esta mañana. Para
