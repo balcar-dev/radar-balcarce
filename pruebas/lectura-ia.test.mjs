@@ -287,6 +287,17 @@ test('las repetidas se acumulan de una corrida a otra: A~B antes y B~C ahora son
   assert.deepEqual(unirGrupos([['a', 'viejo']], [], new Set(['a'])), [], 'un grupo de uno no es grupo');
 });
 
+test('una ficha que ya conocía Fútbol y dice Deportes manda, aunque las palabras digan Fútbol (29/09: el rugby de Pato Naranja)', () => {
+  const nota = { id: '1nyo5j6', titulo: 'Pato Naranja goleó a Pampas y quedó entre los cuatro mejores', seccion: 'Fútbol', semaforo: 'verde', alcance: 'local', local: true, relevancia: 60 };
+  const nueva = { ...fichaValida(fichaDe('1nyo5j6', { seccion: 'Deportes' })), cuando: '2026-09-29T16:31:06.777Z' };
+  assert.equal(aplicarFichas([nota], { '1nyo5j6': nueva }).notas[0].seccion, 'Deportes');
+  // Una ficha de antes de que existiera Fútbol no sabía elegirlo: ahí siguen mandando las palabras.
+  const vieja = { ...nueva, cuando: '2026-09-27T12:00:00.000Z' };
+  assert.equal(aplicarFichas([nota], { '1nyo5j6': vieja }).notas[0].seccion, 'Fútbol');
+  const sinFecha = { ...nueva, cuando: undefined };
+  assert.equal(aplicarFichas([nota], { '1nyo5j6': sinFecha }).notas[0].seccion, 'Fútbol');
+});
+
 test('la IA ya no tiene la sección Servicios; una ficha vieja que la dice va a Balcarce (27/09)', () => {
   assert.ok(!ESQUEMA.items.properties.seccion.enum.includes('Servicios'));
   const vieja = { ...fichaValida(fichaDe('s', { seccion: 'Balcarce' })), seccion: 'Servicios' };

@@ -347,6 +347,9 @@ export function mencionaAca(nota) {
   return [...PALABRAS_LOCALES, ...PALABRAS_ZONA].some((p) => texto.includes(` ${sinTildes(p).replace(/[^a-z0-9ñ]+/g, ' ').trim()} `));
 }
 
+/** Desde cuándo las fichas conocen la sección Fútbol (con margen: fue el 27/09 a la tarde). */
+const FICHAS_CON_FUTBOL = '2026-09-28T00:00:00Z';
+
 export function aplicarFichas(notas, fichas = {}, { esperarSinFicha = false, yaPublicadas = new Set() } = {}) {
   const cambios = { sacadas: [], dejanDeSerLocales: [], otraSeccion: [], aEsperar: [] };
   // Las fichas viejas pueden decir "Servicios", que ya no existe (27/09).
@@ -405,8 +408,12 @@ export function aplicarFichas(notas, fichas = {}, { esperarSinFicha = false, yaP
       cambios.dejanDeSerLocales.push(caso);
     }
     // Las fichas de antes del 27/09 a la tarde no conocían Fútbol: si la IA
-    // dice Deportes y las palabras dicen Fútbol, es Fútbol.
-    const deLaIA = seccionDe(f) === 'Deportes' && n.seccion === 'Fútbol' ? 'Fútbol' : seccionDe(f);
+    // dice Deportes y las palabras dicen Fútbol, es Fútbol. Sólo en ésas: una
+    // ficha nueva que dice Deportes sabe lo que dice (29/09: "Pato Naranja goleó
+    // a Pampas", de rugby, salió en Fútbol por "goleó"). Las fichas duran tres
+    // días (LECTURA.diasDeFichas): desde el 1/10 no queda ninguna vieja.
+    const sinFutbol = !(Date.parse(f.cuando ?? '') >= Date.parse(FICHAS_CON_FUTBOL));
+    const deLaIA = sinFutbol && seccionDe(f) === 'Deportes' && n.seccion === 'Fútbol' ? 'Fútbol' : seccionDe(f);
     const seccion = deLaIA === 'Balcarce' && !esLocal ? (['Servicios', 'País'].includes(n.seccion) ? 'Argentina' : n.seccion)
       : deLaIA === 'Argentina' && esLocal ? 'Balcarce'
         : deLaIA;

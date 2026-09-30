@@ -218,7 +218,7 @@ publicada y avisa si la regla se rompió por algo que las pruebas no ven) o
 | 62 | **Lo que se lee de la página de un medio sin feed toma la fecha real de la nota**, y lo de más de 72 horas no se trae (`HORAS_DE_UNA_NOTA_NUEVA`). | Prueba: `criterios-extranjero-zona.test.mjs` |
 | 64 | **Lo de un medio de acá que no nombra nada de acá espera a la IA** (28/09, `mencionaAca`): mientras la lectura con IA ande y la nota nunca haya salido, no sale sola sin ficha (pasó con un referéndum de Suiza que copió una radio de acá). | Prueba: `copia-de-afuera.test.mjs` |
 | 84 | **Una lista de la nota llega a la IA** (29/09): las calles de un corte, los requisitos de un trámite, los horarios, puestos en `<ul>` u `<ol>`, se leen como un párrafo (`textoDeLista`, `ingesta/articulo.mjs`); una lista de enlaces ("Te puede interesar") no. Cada calle tenía menos de 50 letras y el corte de luz del 30/09 salió sin las calles ("distintas arterias de la ciudad"). | Prueba: `redaccion-29-09.test.mjs` |
-| 85 | **"Goleó" no hace fútbol a otro deporte** (29/09): con otro deporte nombrado (rugby, hockey, básquet, vóley…), las palabras que usa cualquier deporte ("goleó", "gol", "arquero", "penal"…) no alcanzan para Fútbol (`DE_CUALQUIER_DEPORTE`, `nombraOtroDeporte`, `ingesta/ingesta.mjs`). "Pato Naranja goleó a Pampas", de rugby, salió en Fútbol y en la cola de Facebook. | Prueba: `notas.test.mjs` |
+| 85 | **"Goleó" no hace fútbol a otro deporte** (29/09): con otro deporte nombrado (rugby, hockey, básquet, vóley…), las palabras que usa cualquier deporte ("goleó", "gol", "arquero", "penal"…) no alcanzan para Fútbol (`DE_CUALQUIER_DEPORTE`, `nombraOtroDeporte`, `ingesta/ingesta.mjs`). "Pato Naranja goleó a Pampas", de rugby, salió en Fútbol y en la cola de Facebook. Y cuando la lectura con IA dice Deportes, manda la IA: que ganen las palabras ("Fútbol") vale sólo para las fichas de antes del 28/09, que no conocían esa sección (`FICHAS_CON_FUTBOL`, `ingesta/lectura-ia.mjs`). | Prueba: `notas.test.mjs`, `lectura-ia.test.mjs` |
 
 ### Las redes (detalle en `docs/07-REDES.md`)
 
@@ -326,7 +326,7 @@ qué documento cuenta ese tema.
 | `horarios.test.mjs` | 9 | Los horarios de las historias fijas editables desde el panel | Panel / Redes |
 | `informese.test.mjs` | 8 | El enlace de Infórmese Primero es la página, no el XML del feed | Ingesta |
 | `json-ia.test.mjs` | 3 | Leer una respuesta de la IA con una barra invertida mal formada (28/09) | Redacción |
-| `lectura-ia.test.mjs` | 23 | La lectura con IA: perfil, listas cerradas, topes, Groq, repetidas, nunca destraba | Selección |
+| `lectura-ia.test.mjs` | 24 | La lectura con IA: perfil, listas cerradas, topes, Groq, repetidas, nunca destraba, la sección de la IA manda | Selección |
 | `meta-tiempo.test.mjs` | 3 | Los pedidos a Meta tienen tiempo máximo | Redes |
 | `notas-propias.test.mjs` | 24 | La nota del dólar (sólo si se movió 2 %) y los repasos de los podcasts | Web |
 | `notas.test.mjs` | 56 | Semáforo, puntaje, secciones ("goleó" no hace fútbol a otro deporte), medios que pide lo de afuera, cupos, limpieza del texto | Selección |
