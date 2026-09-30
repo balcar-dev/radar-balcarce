@@ -1,10 +1,10 @@
 {
- "generado": "2026-09-30T22:33:23.800Z",
- "portada": 73,
- "archivo": 666,
- "esperandoCuerpo": 9,
+ "generado": "2026-09-30T22:35:41.141Z",
+ "portada": 74,
+ "archivo": 667,
+ "esperandoCuerpo": 7,
  "redes": {
-  "generado": "2026-09-30T22:33:23.828Z",
+  "generado": "2026-09-30T22:35:41.184Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -147,12 +147,12 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 47,
+    "segundos": 50,
     "notas": [
      {
-      "id": "10xubmm",
-      "titulo": "Joan Laporta revela el llamado que frenó el pase de Lautaro",
-      "seccion": "Fútbol"
+      "id": "z3c4f",
+      "titulo": "Estudiantes del Colegio Santa Rosa de Lima visitan el municipio",
+      "seccion": "Balcarce"
      },
      {
       "id": "1rpzsy3",
@@ -160,9 +160,9 @@
       "seccion": "Deportes"
      },
      {
-      "id": "h36tlu",
-      "titulo": "La Municipalidad recauda millones en una subasta de tierras",
-      "seccion": "Balcarce"
+      "id": "10xubmm",
+      "titulo": "Joan Laporta revela el llamado que frenó el pase de Lautaro",
+      "seccion": "Fútbol"
      },
      {
       "id": "1vgun5x",
@@ -201,6 +201,12 @@
     }
    ],
    "cola": [
+    {
+     "id": "z3c4f",
+     "titulo": "Estudiantes del Colegio Santa Rosa de Lima visitan el municipio",
+     "seccion": "Balcarce",
+     "marcada": false
+    },
     {
      "id": "1t43pl5",
      "titulo": "Tres balcarceños compiten en el torneo argentino de pádel",
