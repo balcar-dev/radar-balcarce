@@ -149,20 +149,13 @@ export async function armarReel({
   const retardo = RETARDO;
   fs.writeFileSync(ass, armarAss(enCarteles(voz.palabras, { max: 4, minimo: 2 }), { acento, retardo }), 'utf8');
 
-  // Zoom lento sobre la placa: sin movimiento, un reel parece una foto y la
-  // gente sigue de largo.
-  // El movimiento se veía a saltos, y la culpa era del tamaño: zoompan
-  // trabaja con recortes de píxeles enteros, así que sobre una imagen de
-  // 1350 de ancho cada paso del zoom se nota como un tirón. Agrandando la
-  // placa al doble antes de mover, un paso equivale a medio píxel de
-  // salida y el movimiento se vuelve continuo. Más de 2x se nota poco y
-  // duplica lo que tarda el render.
-  //
-  // El zoom también es más corto que antes (1.035 en vez de 1.05): a esta
-  // suavidad, menos recorrido se lee mejor que más.
+  // La placa va QUIETA (30/09, Hernán: "algunas historias y reels tiemblan
+  // levemente, es molesto"). Antes llevaba un zoom lento con zoompan, que
+  // recorta la imagen en píxeles enteros: aun agrandada al doble, cada cuadro
+  // caía medio píxel corrido y el texto fino temblaba. Sin zoom no hay temblor.
+  // Los subtítulos se dibujan encima, ya sin mover nada. El movimiento, cuando
+  // se sume, será de detalles calculados cuadro a cuadro (docs/07-REDES.md).
   const filtro = [
-    'scale=2160:3840:flags=lanczos',
-    "zoompan=z='min(pzoom+0.00010,1.035)':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':d=1:s=1080x1920:fps=30",
     // fontsdir: sin esto ffmpeg busca la tipografía en el sistema y, si no
     // la encuentra, cae en una cualquiera. Las nuestras están en marca/fuentes.
     `subtitles=${path.basename(ass)}:fontsdir=${CARPETA_FUENTES}`,
