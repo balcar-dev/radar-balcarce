@@ -12,7 +12,7 @@ import {
 import * as navegador from '../web/public/panel/cifrado.js';
 import {
   problemaDeDecision, leerDecisionesCelular, unirDecisiones, paraDecidir, notasParaEscribir,
-  piden, conBorradoresNuevos, papeleraAlDia, paraLaPapelera,
+  papeleraAlDia, paraLaPapelera,
 } from '../panel/celular-datos.mjs';
 import { buscarNota, conBorrador, idValido, BORRADORES } from '../panel/celular.mjs';
 import { notaDesdeLoPublicado } from '../panel/reescribir-una.mjs';
@@ -158,27 +158,16 @@ test('para decidir: lo amarillo de estos días con lo que contó cada medio; nun
   assert.equal(lista.find((n) => n.id === 'g').motivo, 'marcada "pendiente" en el panel de la PC');
 });
 
-test('los borradores automáticos: hasta 4 por corrida y 30 por día; uno fallido se reintenta a las 12 horas', () => {
-  const ahora = new Date(AHORA);
-  const lista = ['a', 'b', 'c', 'd', 'e', 'f'].map((id) => ({ id }));
-  assert.deepEqual(piden(lista, {}, { ahora }), ['a', 'b', 'c', 'd'], 'más de 4 por corrida');
-  const cache = {
-    dia: '2026-09-29',
-    pedidosHoy: 28,
-    borradores: {
-      a: { cuando: AHORA, ok: true, texto: { titulo: 'T' } },
-      b: { cuando: '2026-09-29T02:00:00Z', ok: false },  // falló hace 18 h: se reintenta
-      c: { cuando: '2026-09-29T15:00:00Z', ok: false },  // falló hace 5 h: todavía no
-    },
-  };
-  assert.deepEqual(piden(lista, cache, { ahora }), ['b', 'd'], 'el tope del día');
-  assert.deepEqual(piden([{ id: 'x', decision: { estado: 'descartada' } }], {}, { ahora }), [], 'lo descartado no gasta cupo');
-  // Otro día, el contador vuelve a cero; lo de más de 4 días se va.
-  const manana = new Date('2026-09-30T12:00:00Z');
-  assert.deepEqual(piden(lista, cache, { ahora: manana }), ['b', 'c', 'd', 'e']);
-  const nueva = conBorradoresNuevos({ ...cache, borradores: { ...cache.borradores, viejo: { cuando: '2026-09-20T00:00:00Z' } } }, { d: { cuando: AHORA, ok: true } }, { ahora });
-  assert.equal(nueva.pedidosHoy, 29);
-  assert.ok(nueva.borradores.d && !nueva.borradores.viejo);
+test('lo que espera a una persona no lo escribe la IA sola: sólo si una persona lo pide (30/09, Hernán; regla 68)', () => {
+  // "Si la nota no sale en automático, la idea es que no se escriba nada." La
+  // corrida de la web no pide textos para lo que espera (el 29/09 pidió
+  // borradores sola unas horas); sólo el workflow del celular, cuando una
+  // persona toca "Escribirla con IA".
+  const g = leer('web/scripts/generar-datos.mjs');
+  assert.ok(!/reescribir-una|reescribirUna/.test(g), 'la corrida de la web escribe lo que espera');
+  assert.match(leer('panel/celular.mjs'), /reescribirUna/, 'el pedido de una persona sí escribe');
+  const [n] = paraDecidir([nota({ id: 'a' })], {}, { ahora: new Date(AHORA) });
+  assert.ok(!('borrador' in n));
 });
 
 test('un sobre por nota: la que no cambió conserva el suyo; que se vaya una también es un cambio', () => {

@@ -105,7 +105,7 @@ export function estadoSinCuerpo({ intentos = 0, maximo = 3, conCuerpo = false } 
 
 /** Lo que explica cada pestaña, arriba de la lista. */
 export const PESTANAS = {
-  esperan: 'Notas que el sistema no publica solo: tocan un tema delicado, son de afuera y poco contadas, o no se pudieron verificar bien. Cada una trae lo que contó cada medio y un borrador que escribe la IA sola. Vos decidís: publicarla (con ese texto o corregido) o descartarla.',
+  esperan: 'Notas que el sistema no publica solo: tocan un tema delicado, son de afuera y poco contadas, o no se pudieron verificar bien. Cada una trae por qué espera y lo que contó cada medio. La IA no las escribe sola: si querés publicar una, se la pedís (y la revisás antes) o la escribís vos. Si no, la descartás.',
   'sin-cuerpo': 'Notas que SÍ salen solas, pero todavía no tienen un cuerpo que pase el verificador. La IA las vuelve a intentar sola en las próximas actualizaciones (hasta tres veces); si lo logra, salen sin que hagas nada. Si querés que salga ya, escribila con la IA o a mano.',
   publicadas: 'Lo que está en la web. "En la portada" son las de las últimas 36 horas; las más viejas siguen teniendo su página en el archivo (180 días). Desde acá se corrige, se cambia de sección, se reescribe con IA, se manda a las redes o se retira.',
   redes: 'Lo que sale hoy en Facebook e Instagram: el cronograma, qué contaría cada repaso si saliera ahora, y la cola de los posteos de Facebook. Lo arma la web cada media hora; lo que ya salió se ve al momento.',

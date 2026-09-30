@@ -78,10 +78,9 @@ Generate new token (el panel tiene el enlace directo):
      principal, **lo que contó cada medio** (su resumen, si es oficial y el
      enlace a la nota original), el motivo, lo que anotó la IA al leerla (de
      dónde es el hecho, su importancia, por qué le importaría a un vecino:
-     `web/data/fichas.json`) y **un borrador que escribe la IA sola**
-     (`piden` y `conBorradoresNuevos`: hasta 4 por corrida, 30 por día y dos
-     minutos por corrida, sólo con la clave gratis de redacción y un intento;
-     si falla, se reintenta a las 12 horas; quedan en `.cache/celular-borradores-auto.json`);
+     `web/data/fichas.json`). **La IA no escribe sola lo que espera** (30/09,
+     Hernán: "si la nota no sale en automático, la idea es que no se escriba
+     nada"; regla 68): lo escribe sólo si una persona lo pide;
    - **la papelera**: lo que retiró una persona, tal como estaba publicado (ver
      "Retirar y volver a publicar", más abajo);
    - las dos cosas **cifradas para cada celular registrado**, un sobre por nota
@@ -137,7 +136,7 @@ todo el panel.
 
 | Pestaña | Qué muestra | Qué se puede hacer |
 |---|---|---|
-| **Esperan** | Lo que espera a una persona: lo amarillo de los últimos 3 días (hasta 40), nunca lo rojo, y sin el "relleno" que tampoco avisa el WhatsApp (lo de afuera poco contado, lo que pasó el cupo, la cotización del dólar). En la lista, el motivo en pocas palabras ("Acusa a alguien ("detenido")") y si ya hay borrador. Al abrirla: **por qué espera y qué mirar** (`explicarMotivo`), lo que anotó la IA al leerla, **el borrador de la IA** con lo que marcó el verificador, el resumen de la fuente principal y **lo que contó cada medio**, con el enlace a la nota original. Abajo, las aprobadas que salen en la próxima actualización y las **descartadas** | **Publicar este texto** (abre el borrador para corregirlo) → **Publicar**; **Pedir otra versión** o **Escribir con IA ahora** (con un pedido opcional); **Escribirla a mano**; **Descartar** (pregunta antes). Una descartada se puede **Volver a traer** mientras siga en las noticias del día; una aprobada, **Deshacer** hasta la próxima actualización |
+| **Esperan** | Lo que espera a una persona: lo amarillo de los últimos 3 días (hasta 40), nunca lo rojo, y sin el "relleno" que tampoco avisa el WhatsApp (lo de afuera poco contado, lo que pasó el cupo, la cotización del dólar). En la lista, el motivo en pocas palabras ("Acusa a alguien ("detenido")"). Al abrirla: **por qué espera y qué mirar** (`explicarMotivo`), lo que anotó la IA al leerla, el resumen de la fuente principal y **lo que contó cada medio**, con el enlace a la nota original. La IA no las escribe sola. Abajo, las aprobadas que salen en la próxima actualización y las **descartadas** | **Escribirla con IA** (con un pedido opcional; tarda un minuto y muestra el texto con lo que marcó el verificador, para corregirlo) → **Publicar**; **Escribirla a mano**; **Descartar** (pregunta antes). Una descartada se puede **Volver a traer** mientras siga en las noticias del día; una aprobada, **Deshacer** hasta la próxima actualización |
 | **Sin cuerpo** | Las notas que **salen solas** pero todavía no tienen un cuerpo que pase el verificador (`esperando-cuerpo.json`), con cuántas veces lo intentó la IA (hasta 3, `MAXIMO_DE_INTENTOS`): mientras le queden intentos, la IA la vuelve a probar sola en cada actualización | **Escribir con IA ahora** o **Escribir a mano** → "Publicar con este cuerpo" |
 | **Publicadas** | Cuántas hay **en la portada** (las de las últimas 36 horas) y cuántas **en el archivo** (con página, hasta 180 días); la lista de la portada y, con "Buscar también en el archivo", las del archivo; buscador por título o sección. Cada nota dice si salió en Facebook e Instagram o si está en la cola. Al final, **Retiradas**: lo que retiró una persona en los últimos 30 días | **Editar** (título, bajada, cuerpo y sección), **Reescribir con IA** (con pedido), **Mandar también a las redes** (o "Sacar de la cola de las redes"; pregunta antes), **Retirar de la web** (pregunta y pide el motivo) y **Deshacer**. En las retiradas: **Volver a publicar** o **Corregirla y volver a publicarla** |
 | **Redes** | El cronograma de hoy (cada pieza con su hora, su voz y si salió, está en su horario o ya no sale), **qué cuenta cada repaso** (lo que contó, o lo que contaría si saliera ahora), los posteos de Facebook de hoy, cuándo puede salir el próximo y la cola. Si las redes están apagadas (`REDES_ACTIVAS`), lo dice arriba | Mirar. Para mandar una nota: Publicadas → "Mandar también a las redes" |
@@ -463,7 +462,7 @@ ni fotos): sirve para mirar la web en la PC, pero deja modificados
 | `web/public/panel/cifrado.js` | Crea las llaves del celular y abre los sobres | `app.js` | La llave privada del navegador | — |
 | `web/public/panel/sw.js`, `manifest.webmanifest` | Lo que lo vuelve una app instalable | Chrome | — | — |
 | `web/public/panel/prueba.js`, `prueba-sobre.js` | El modo de prueba (`?demo`), con los mismos archivos que arma la web | `app.js` | — | — |
-| `panel/celular-datos.mjs` | Qué decide el celular (`problemaDeDecision`, `leerDecisionesCelular`, `unirDecisiones`), qué necesita (`paraDecidir`, `notasParaEscribir`), los borradores automáticos (`piden`, `conBorradoresNuevos`) y la papelera (`papeleraAlDia`, `paraLaPapelera`) | `generar-datos.mjs`, `celular.mjs` | — | — (funciones puras) |
+| `panel/celular-datos.mjs` | Qué decide el celular (`problemaDeDecision`, `leerDecisionesCelular`, `unirDecisiones`), qué necesita (`paraDecidir`, `notasParaEscribir`) y la papelera (`papeleraAlDia`, `paraLaPapelera`) | `generar-datos.mjs`, `celular.mjs` | — | — (funciones puras) |
 | `panel/cifrado.mjs` | Cierra los sobres para cada celular (`cerrar`, `cerrarSiCambio`, `cerrarCadaUno`, `leerLlaves`) | `generar-datos.mjs`, `celular.mjs` | `celular-llaves.json` | — |
 | `redes/previa.mjs` | Lo que sale hoy en las redes, para la pestaña Redes (`previaDelDia`) | `generar-datos.mjs` | La portada, el libro, el archivo | — (lo escribe `generar-datos.mjs` en `celular-estado.json`) |
 | `redes/repasos.mjs` | Qué notas cuenta cada repaso (`repasosDelDia`): la misma regla para el plan de los videos y para la previa | `reels/plan.mjs`, `redes/previa.mjs` | — | — |
@@ -490,7 +489,6 @@ ni fotos): sirve para mirar la web en la PC, pero deja modificados
 | Qué acepta la web de una decisión del celular | `problemaDeDecision` y `leerDecisionesCelular` (`panel/celular-datos.mjs`) |
 | Cómo escribe la IA a pedido | `panel/reescribir-una.mjs` (y el criterio, `CRITERIO-EDITORIAL.md`) |
 | Cuántos borradores se guardan | `BORRADORES` (`panel/celular.mjs`) |
-| Cuántos borradores escribe la IA sola, y cuándo reintenta | `BORRADORES_AUTOMATICOS` (`panel/celular-datos.mjs`) |
 | Cuántos días se puede volver a publicar una nota retirada | `DIAS_EN_LA_PAPELERA` (`panel/celular-datos.mjs`) |
 | Cuántos celulares pueden registrarse | `LLAVES_MAXIMAS` (`panel/cifrado.mjs`) |
 | Las pantallas del celular | `web/public/panel/app.js` e `index.html` |
@@ -514,7 +512,6 @@ ni fotos): sirve para mirar la web en la PC, pero deja modificados
 | La llave del celular venció o la borraron | El celular dice "La llave no anda (venció o la borraron en GitHub)" | Crear otra y cargarla (`docs/11-OPERACION.md`) |
 | A la llave le falta un permiso | "Esa llave no puede escribir…" o "GitHub no deja hacer esto con esta llave" | Crear otra con Contents y Actions en "Read and write" |
 | "Esperan" muestra la lista corta, sin detalle | "El detalle de cada nota todavía no llegó cifrado para este celular" | Esperar la próxima actualización de la web (el celular recién se registró) |
-| Una nota que espera no trae borrador | "La IA escribe sola un borrador en las próximas actualizaciones", o "La IA no la pudo escribir sola" con el motivo | Esperar (hasta 4 por corrida), o "Escribir con IA ahora" |
 | La pestaña Redes dice que las redes están apagadas | "Las redes están apagadas (la variable REDES_ACTIVAS…)" | Es lo esperable mientras `REDES_ACTIVAS` no diga "Si" (`docs/07-REDES.md`) |
 | Una nota volvió a publicarse y no aparece | Sigue en "Retiradas" con "↺ vuelve en la próxima actualización" | Esperar la próxima actualización. Si estaba en `retiradas.json` y no se pudo sacar de ahí, sigue retirada: volver a tocar "Volver a publicar" |
 | "Escribir con IA" no vuelve | "GitHub tardó demasiado" o "La corrida de GitHub falló" | Mirar "Panel del celular" en GitHub → Actions; probar de nuevo. Si la nota ya no está en la caché ni publicada: "No encontré la nota" |

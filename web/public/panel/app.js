@@ -311,7 +311,7 @@ function vistaLista() {
 
 function vistaEsperan(cuando) {
   const { sinDecidir, aprobadas, descartadas } = listasDeEsperan();
-  const conMotivo = (n) => `<span class="motivo">${esc(motivoCorto(n.motivo))}</span>${n.borrador?.titulo ? '<span class="marca">✎ borrador listo</span>' : ''}`;
+  const conMotivo = (n) => `<span class="motivo">${esc(motivoCorto(n.motivo))}</span>`;
   app.innerHTML = `
     <h1>Esperan a una persona</h1>
     ${queEs('esperan')}
@@ -428,7 +428,7 @@ function vistaMas() {
     <details><summary>¿Cuándo se ve en la web lo que hago acá?</summary>
       <p>Todo lo que hacés acá (aprobar, corregir, retirar, deshacer) se guarda al instante en GitHub y sale en la web en la próxima actualización, que es cada media hora. Si no querés esperar, tocá "Actualizar la web ahora": tarda unos 8 minutos.</p></details>
     <details><summary>Esperan: publicar o descartar</summary>
-      <p>Son las notas que el sistema no publica solo. Cada una dice por qué espera y qué hay que mirar, qué contó cada medio (con el enlace a la nota original) y un borrador que la IA escribe sola en las actualizaciones. "Publicar este texto" abre el borrador para corregirlo si hace falta, y recién ahí se publica. "Descartar" la saca de la lista; queda en "Descartadas", al final, por si te equivocaste.</p></details>
+      <p>Son las notas que el sistema no publica solo. Cada una dice por qué espera y qué hay que mirar, y qué contó cada medio (con el enlace a la nota original). La IA no las escribe sola: si querés publicar una, tocás "Escribirla con IA" (tarda un minuto y te muestra el texto para corregir antes de publicar) o la escribís a mano. "Descartar" la saca de la lista; queda en "Descartadas", al final, por si te equivocaste.</p></details>
     <details><summary>Sin cuerpo: ¿salen solas?</summary>
       <p>Sí. Son notas que salen solas, pero todavía no tienen un cuerpo que pase el verificador. La IA las vuelve a intentar sola, hasta ${esc(E.intentosMaximos)} veces, en las próximas actualizaciones; si lo logra, se publican sin que hagas nada. Cada una dice cuántas veces lo intentó. Si una es importante y querés que salga ya, escribila con la IA o a mano.</p></details>
     <details><summary>Publicadas: corregir, cambiar de sección, reescribir</summary>
@@ -485,15 +485,11 @@ function vistaNota(tipo, id) {
   let cuerpo = '';
   let acciones = '';
   if (tipo === 'pendiente') {
-    const b = n.borrador;
     const conDetalle = !!(n.resumen || n.fuentes?.length);
     cuerpo = `
       <div class="caja aviso-motivo"><strong>Por qué espera:</strong> ${esc(explicarMotivo(n.motivo))}</div>
       ${n.ficha ? `<div class="caja"><strong>Lo que anotó la IA al leerla:</strong> ${esc(explicarFicha(n.ficha))}</div>` : ''}
       ${!conDetalle ? '<p class="problemas">El detalle de esta nota llega cifrado en la próxima actualización de la web. Igual se le puede pedir a la IA que la escriba.</p>' : ''}
-      ${b?.titulo ? `<h2>Así quedaría (borrador de la IA, sin publicar)</h2>${textoDeLaNota(b)}${listaDeProblemas(b, n.motivo)}`
-    : b ? `<p class="problemas">La IA no la pudo escribir sola${b.motivo ? `: ${esc(b.motivo)}` : ''}. Se lo podés pedir de nuevo.</p>`
-      : (conDetalle ? '<p class="estado">La IA escribe sola un borrador en las próximas actualizaciones. Si no querés esperar, pedíselo ahora.</p>' : '')}
       ${n.resumen ? `<h2>Lo que dice la fuente principal</h2><div class="texto-nota"><p>${esc(n.resumen)}</p></div>` : ''}
       ${fuentesConResumen(n)}`;
     if (d) {
@@ -501,8 +497,7 @@ function vistaNota(tipo, id) {
         ? `<p class="estado">La aprobaste ${esc(haceCuanto(d.cuando))}: sale en la próxima actualización.</p><button type="button" class="boton" data-accion="deshacer" data-id="${esc(id)}">Deshacer (vuelve a esperar)</button>`
         : `<p class="estado">La descartaste ${esc(haceCuanto(d.cuando))}${d.por ? ` (${esc(d.por)})` : ''}.</p><button type="button" class="boton principal" data-accion="deshacer" data-id="${esc(id)}">Volver a traerla</button>`;
     } else {
-      acciones = `${b?.titulo ? `<button type="button" class="boton principal" data-accion="usar-borrador" data-id="${esc(id)}">Publicar este texto (lo revisás antes)</button>` : ''}
-        <button type="button" class="boton ${b?.titulo ? '' : 'principal'}" data-accion="escribir" data-tipo="pendiente" data-id="${esc(id)}">${b?.titulo ? 'Pedir otra versión' : 'Escribir con IA ahora'}</button>
+      acciones = `<button type="button" class="boton principal" data-accion="escribir" data-tipo="pendiente" data-id="${esc(id)}">Escribirla con IA</button>
         <button type="button" class="boton" data-accion="a-mano" data-tipo="pendiente" data-id="${esc(id)}">Escribirla a mano</button>
         <button type="button" class="boton peligro" data-accion="descartar" data-id="${esc(id)}">Descartar</button>`;
     }
@@ -715,9 +710,6 @@ document.addEventListener('click', async (ev) => {
       titulo: 'Pedir otra versión', texto: 'Tarda un minuto. No cambia nada en la web hasta que la guardes.', si: 'Pedirla', conPedido: '¿Qué cambiar? (opcional)',
     });
     if (r.ok) pedirALaIA(accion === 'otra-version' ? tipo : 'publicada', id, r.texto);
-  } else if (accion === 'usar-borrador') {
-    const b = buscar('pendiente', id)?.borrador;
-    if (b?.titulo) vistaBorrador('pendiente', id, { texto: b, ok: b.ok, problemas: b.problemas ?? [], aviso: b.aviso });
   } else if (accion === 'a-mano') vistaBorrador(tipo, id, null);
   else if (accion === 'descartar') {
     if ((await preguntar(PREGUNTAS.descartar)).ok) {

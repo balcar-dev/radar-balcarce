@@ -90,7 +90,7 @@ ahora** (unos 8 minutos).
 
 | Pestaña | Para qué | Lo que conviene saber |
 |---|---|---|
-| **Esperan** | Las notas que el sistema no publica solo | Cada una dice **por qué espera y qué mirar**, qué contó cada medio (con el enlace a la nota original) y trae un **borrador que escribe la IA sola** (tarda hasta una o dos actualizaciones). "Publicar este texto" abre el borrador para corregirlo, y recién ahí se publica. "Descartar" pregunta antes; lo descartado queda al final ("Descartadas") y se puede volver a traer |
+| **Esperan** | Las notas que el sistema no publica solo | Cada una dice **por qué espera y qué mirar** y qué contó cada medio (con el enlace a la nota original). La IA no las escribe sola: para publicar una, **"Escribirla con IA"** (tarda un minuto y te muestra el texto para corregir) o "Escribirla a mano". "Descartar" pregunta antes; lo descartado queda al final ("Descartadas") y se puede volver a traer |
 | **Sin cuerpo** | Notas que **salen solas** pero todavía no tienen cuerpo | La IA las vuelve a intentar sola hasta 3 veces; cada una dice cuántas van. Si una importa y no puede esperar, "Escribir con IA ahora" o "Escribir a mano" |
 | **Publicadas** | Lo que está en la web | El número de la pestaña son las de **la portada** (las últimas 36 horas); arriba dice también cuántas tienen página **en el archivo** (hasta 180 días; se buscan con "Buscar también en el archivo"). Desde cada nota: Editar, Reescribir con IA, Mandar también a las redes, Retirar de la web |
 | **Redes** | Lo que sale hoy en Facebook e Instagram | El cronograma (hora, voz, si salió), **qué noticias cuenta cada repaso** (lo que contaría si saliera ahora: puede cambiar hasta su hora) y la cola de Facebook |

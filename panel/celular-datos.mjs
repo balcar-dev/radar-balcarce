@@ -103,8 +103,7 @@ const recortar = (t, n) => {
  * (29/09; Hernán: "es muy poca información para decidir"): el título, el resumen
  * de la fuente principal, el de CADA medio que la contó, el motivo por el que
  * espera, lo que anotó la IA al leerla (`fichas`: de dónde es el hecho, por qué
- * le importaría a un vecino) y las fuentes con su enlace. El borrador que escribe
- * la IA lo suma generar-datos aparte (`borrador`).
+ * le importaría a un vecino) y las fuentes con su enlace.
  *
  * Nunca una roja (no se publica nunca, ni aprobada), ni lo de más de `horas`
  * (como el WhatsApp). Lo que se descartó desde el celular sigue en la lista,
@@ -153,42 +152,10 @@ export function paraDecidir(notas = [], decisiones = {}, {
     .slice(0, maximo);
 }
 
-// ----------------------------------------------------- el borrador automático
-
-/** Cuántos borradores automáticos se piden por corrida y por día, como mucho. */
-export const BORRADORES_AUTOMATICOS = { porCorrida: 4, porDia: 30, horasParaReintentar: 12, diasQueSeGuardan: 4 };
-
-/**
- * Qué notas de las que esperan necesitan un borrador de la IA (29/09): las que
- * no tienen uno guardado, o lo tienen fallido de hace más de unas horas (sin
- * texto de la fuente, la IA no contestó). Devuelve los ids en el orden de la
- * lista (las más nuevas primero), hasta lo que dejan los topes. `cache` es
- * { dia, pedidosHoy, borradores: { id: { cuando, ok, texto?, … } } }.
- */
-export function piden(lista = [], cache = {}, { ahora = new Date(), topes = BORRADORES_AUTOMATICOS } = {}) {
-  const hoy = ahora.toISOString().slice(0, 10);
-  const usados = cache?.dia === hoy ? (cache.pedidosHoy ?? 0) : 0;
-  const quedan = Math.max(0, Math.min(topes.porCorrida, topes.porDia - usados));
-  return lista
-    .filter((n) => !n.decision)
-    .filter((n) => {
-      const b = cache?.borradores?.[n.id];
-      if (!b) return true;
-      return !b.texto && ahora.getTime() - Date.parse(b.cuando) > topes.horasParaReintentar * 3600e3;
-    })
-    .map((n) => n.id)
-    .slice(0, quedan);
-}
-
-/** La caché de borradores con los de esta corrida sumados y los viejos afuera. */
-export function conBorradoresNuevos(cache = {}, nuevos = {}, { ahora = new Date(), topes = BORRADORES_AUTOMATICOS } = {}) {
-  const hoy = ahora.toISOString().slice(0, 10);
-  const limite = ahora.getTime() - topes.diasQueSeGuardan * 864e5;
-  const borradores = Object.fromEntries(Object.entries({ ...(cache?.borradores ?? {}), ...nuevos })
-    .filter(([, b]) => Date.parse(b?.cuando ?? '') >= limite));
-  const pedidosHoy = (cache?.dia === hoy ? (cache.pedidosHoy ?? 0) : 0) + Object.keys(nuevos).length;
-  return { dia: hoy, pedidosHoy, borradores };
-}
+// (El borrador que la IA escribía sola para lo que espera a una persona se sacó
+// el 30/09: "si la nota no sale en automático, la idea es que no se escriba
+// nada" (Hernán). Lo que espera se escribe sólo si una persona lo pide desde el
+// celular. Regla 68.)
 
 // -------------------------------------------------------------- la papelera
 

@@ -9,7 +9,6 @@ import { hoyEnBalcarce } from './textos.js';
 
 const hace = (min) => new Date(Date.now() - min * 60000).toISOString();
 const CUERPO = 'El Concejo Deliberante aprobó por mayoría el presupuesto 2027 en la sesión del martes. La ordenanza prevé obras de cloacas en los barrios Norte, Sur y Villa Dolores, y un aumento de la partida de salud, según informó el cuerpo.\n\nEl intendente había enviado el proyecto en octubre. La oposición votó en contra y pidió más fondos para caminos rurales.\n\nLa próxima sesión será el martes 13 de octubre.';
-const CUERPO_MOTO = 'Según informó la Policía, un hombre de 34 años fue detenido el lunes acusado de robar una moto en la ruta 226. De acuerdo con la denuncia, el hecho habría ocurrido a la tarde, cerca del acceso a la ciudad.\n\nLa moto fue recuperada horas después y devuelta a su dueño. La causa quedó a cargo de la fiscalía de turno, que deberá definir la situación del detenido.\n\nLa Policía pidió a los vecinos que denuncien cualquier movimiento sospechoso en la zona.';
 
 let llaves = null;
 export async function llavesDePrueba() {
@@ -27,9 +26,6 @@ const PENDIENTES = [
       { medio: 'Policía de la Provincia', enlace: 'https://example.com/d', fecha: hace(80), oficial: true, resumen: 'Personal policial aprehendió a un masculino de 34 años sindicado como autor del robo de un motovehículo.' },
     ],
     ficha: { ambito: 'balcarce', impacto: 'directo', importancia: 'media', porque: 'Es un hecho policial en la ruta de acceso a la ciudad.' },
-    borrador: {
-      cuando: hace(20), ok: true, titulo: 'La Policía detiene a un hombre por el robo de una moto en la ruta 226', copete: 'Tiene 34 años. Según la Policía, habría robado la moto cerca del acceso a la ciudad; la recuperaron horas después.', cuerpo: CUERPO_MOTO, textoRedes: null, etiquetas: [], problemas: [], aviso: 'necesita ojo humano: "detenido"',
-    },
   },
   {
     id: 'e3', titulo: 'Sortean dos entradas para el recital del sábado en el Club', seccion: 'Cultura y agenda', motivo: 'parece promoción, no noticia: "sorteo"', fecha: hace(140),

@@ -82,7 +82,7 @@ import {
   cuandoArmarDolar, entradaDelDia, sumarAlHistorial, comoHistoriaJson, notasDelDolar, notasDeRepasos,
 } from '../lib/notas-propias.js';
 import {
-  leerDecisionesCelular, unirDecisiones, paraDecidir, notasParaEscribir, piden, conBorradoresNuevos, papeleraAlDia, paraLaPapelera,
+  leerDecisionesCelular, unirDecisiones, paraDecidir, notasParaEscribir, papeleraAlDia, paraLaPapelera,
 } from '../../panel/celular-datos.mjs';
 import { leerLlaves, cerrarCadaUno } from '../../panel/cifrado.mjs';
 import { previaDelDia } from '../../redes/previa.mjs';
@@ -147,10 +147,8 @@ const CELULAR_NOTAS = path.join(AQUI, '..', '..', '.cache', 'celular-notas.json'
 // Lo que el celular muestra aparte de las notas: cuántas hay y lo que va a salir
 // hoy en las redes (redes/previa.mjs). Es de lo ya publicado: no va cifrado.
 const CELULAR_ESTADO = path.join(AQUI, '..', 'data', 'celular-estado.json');
-// Los borradores que escribe la IA solos para lo que espera a una persona, y la
-// papelera (lo que retiró una persona, para poder volver a publicarlo). En la
-// caché de Actions: no son públicos.
-const CELULAR_BORRADORES_AUTO = path.join(AQUI, '..', '..', '.cache', 'celular-borradores-auto.json');
+// La papelera (lo que retiró una persona, para poder volver a publicarlo). En la
+// caché de Actions: no es pública.
 const PAPELERA = path.join(AQUI, '..', '..', '.cache', 'papelera.json');
 
 // Este script corre en dos lugares distintos:
@@ -897,52 +895,21 @@ function cambioQueImporta(antes, ahora) {
 
 // El panel del celular (29/09), sólo en la nube:
 //
-//   · lo que espera a una persona, con todo lo que hace falta para decidir y un
-//     borrador que escribe la IA sola (hasta 4 por corrida y 30 por día), y la
+//   · lo que espera a una persona, con todo lo que hace falta para decidir, y la
 //     papelera: un sobre cifrado por nota para cada celular registrado
-//     (panel/cifrado.mjs); una nota que no cambió conserva su sobre;
+//     (panel/cifrado.mjs); una nota que no cambió conserva su sobre. Lo que
+//     espera no lo escribe la IA sola: sólo si una persona lo pide (regla 68);
 //   · las notas enteras, en la caché de Actions, para el workflow "Panel del celular";
 //   · cuántas notas hay y lo que va a salir hoy en las redes (celular-estado.json).
 if (enLaNube) {
   const llaves = leerLlaves(leerJson(CELULAR_LLAVES, null));
   const lista = paraDecidir(ultima.notas ?? [], estado.decisiones ?? {}, { fichas: leerJson(FICHAS, {}).fichas ?? {} });
-
-  const cacheAntes = leerJson(CELULAR_BORRADORES_AUTO, {});
-  const nuevos = {};
-  const aPedir = llaves.length ? piden(lista, cacheAntes) : [];
-  if (aPedir.length) {
-    const { reescribirUna } = await import('../../panel/reescribir-una.mjs');
-    const porId = new Map((ultima.notas ?? []).map((n) => [n.id, n]));
-    // Como mucho dos minutos por corrida: la web no se demora por un borrador.
-    const hasta = Date.now() + 120e3;
-    for (const id of aPedir) {
-      if (!porId.has(id) || Date.now() > hasta) continue;
-      // Sólo con la clave gratis de redacción y un solo intento: un borrador que
-      // nadie pidió no gasta la paga ni el cupo de la lectura con IA (si no hay
-      // cupo, se reintenta a las 12 horas).
-      const r = await reescribirUna(porId.get(id), {
-        archivo: archivoAnterior.notas ?? [], opciones: { claveDeRedes: null, claveDeRespaldo: null, intentos: 1 },
-      }).catch((e) => ({ ok: false, motivo: e.message, problemas: [] }));
-      nuevos[id] = {
-        cuando: new Date().toISOString(), ok: !!r.ok,
-        ...(r.texto ? { texto: { titulo: r.texto.titulo, copete: r.texto.copete, cuerpo: r.texto.cuerpo, textoRedes: r.texto.textoRedes ?? null, etiquetas: r.texto.etiquetas ?? [] } } : {}),
-        problemas: r.problemas ?? [], aviso: r.aviso ?? null, ...(r.motivo ? { motivo: r.motivo } : {}),
-      };
-    }
-    console.log(`  celular: ${Object.keys(nuevos).length} borrador(es) de la IA para lo que espera a una persona`);
-  }
-  const cache = conBorradoresNuevos(cacheAntes, nuevos);
-  fs.mkdirSync(path.dirname(CELULAR_BORRADORES_AUTO), { recursive: true });
-  fs.writeFileSync(CELULAR_BORRADORES_AUTO, JSON.stringify(cache), 'utf8');
+  fs.mkdirSync(path.dirname(PAPELERA), { recursive: true });
   fs.writeFileSync(PAPELERA, JSON.stringify({ notas: papelera }), 'utf8');
 
-  const conBorrador = (n) => {
-    const b = cache.borradores[n.id];
-    return b ? { ...n, borrador: { cuando: b.cuando, ok: b.ok, ...(b.texto ?? {}), problemas: b.problemas ?? [], aviso: b.aviso ?? null, motivo: b.motivo ?? null } } : n;
-  };
   const sobresAntes = leerJson(CELULAR_PENDIENTES, null);
   const previos = sobresAntes?.version === 2 ? sobresAntes : { notas: {}, retiradas: {} };
-  const esperan = cerrarCadaUno(Object.fromEntries(lista.map((n) => [n.id, conBorrador(n)])), llaves, previos.notas);
+  const esperan = cerrarCadaUno(Object.fromEntries(lista.map((n) => [n.id, n])), llaves, previos.notas);
   const enPapelera = paraLaPapelera(papelera, { aMano: RETIRADAS_A_MANO });
   const retiradasCel = cerrarCadaUno(Object.fromEntries(enPapelera.map((n) => [n.id, n])), llaves, previos.retiradas);
   const orden = lista.map((n) => n.id);
