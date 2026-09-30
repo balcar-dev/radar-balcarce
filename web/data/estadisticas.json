@@ -361,6 +361,53 @@
         "vistas": 0,
         "interacciones": 0
       }
+    },
+    {
+      "cuando": "2026-09-30T00:00:19.731Z",
+      "web": {
+        "u12": {
+          "visitas": 32,
+          "vistas": 99
+        },
+        "a12": {
+          "visitas": 1,
+          "vistas": 18
+        },
+        "u24": {
+          "visitas": 33,
+          "vistas": 117
+        },
+        "a24": {
+          "visitas": 49,
+          "vistas": 714
+        },
+        "top": [
+          {
+            "camino": "/",
+            "vistas": 47
+          },
+          {
+            "camino": "/nota/la-cuenta-corriente-de-la-balanza-de-pagos-cierra-con-superavit-8ydg1",
+            "vistas": 11
+          },
+          {
+            "camino": "/nota/el-complejo-polideportivo-aloja-un-encuentro-regional-por-el-dia-del-f3xat8",
+            "vistas": 9
+          }
+        ]
+      },
+      "facebook": {
+        "seguidores": 2,
+        "vistas": 531,
+        "interacciones": 0
+      },
+      "instagram": {
+        "seguidores": 4,
+        "publicaciones": 39,
+        "alcance": 1,
+        "vistas": 17,
+        "interacciones": 1
+      }
     }
   ]
 }
