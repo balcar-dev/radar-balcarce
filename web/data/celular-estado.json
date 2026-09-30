@@ -1,10 +1,10 @@
 {
- "generado": "2026-09-30T12:32:59.949Z",
- "portada": 49,
- "archivo": 605,
- "esperandoCuerpo": 3,
+ "generado": "2026-09-30T12:58:54.640Z",
+ "portada": 50,
+ "archivo": 607,
+ "esperandoCuerpo": 6,
  "redes": {
-  "generado": "2026-09-30T12:32:59.985Z",
+  "generado": "2026-09-30T12:58:54.677Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -83,8 +83,8 @@
       "seccion": "Agro"
      },
      {
-      "id": "1j6ui2n",
-      "titulo": "La ACTC sanciona a Mariano Werner con multa y largada desde el fondo",
+      "id": "1pbrz27",
+      "titulo": "Aston Martin renueva los contratos de Fernando Alonso y Lance Stroll para 2027",
       "seccion": "Automovilismo"
      },
      {
@@ -106,7 +106,7 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 55,
+    "segundos": 49,
     "notas": [
      {
       "id": "zrdt8x",
@@ -114,19 +114,19 @@
       "seccion": "Agro"
      },
      {
-      "id": "1pbrz27",
-      "titulo": "Aston Martin renueva los contratos de Fernando Alonso y Lance Stroll para 2027",
+      "id": "1j6ui2n",
+      "titulo": "La ACTC sanciona a Mariano Werner con multa y largada desde el fondo",
       "seccion": "Automovilismo"
+     },
+     {
+      "id": "1yqjdtm",
+      "titulo": "El Gobierno posterga por un mes la suba impositiva en los combustibles",
+      "seccion": "Economía"
      },
      {
       "id": "1vgun5x",
       "titulo": "Balcarce participa de la trigésima Feria Internacional de Turismo",
       "seccion": "Cultura y agenda"
-     },
-     {
-      "id": "1puwvvm",
-      "titulo": "El Geriátrico Pinto recibe diez colchones y diez almohadas",
-      "seccion": "Balcarce"
      }
     ]
    },
@@ -137,17 +137,17 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 47,
+    "segundos": 43,
     "notas": [
-     {
-      "id": "1yqjdtm",
-      "titulo": "El Gobierno posterga por un mes la suba impositiva en los combustibles",
-      "seccion": "Economía"
-     },
      {
       "id": "1asj6cl",
       "titulo": "Las TC Pick Up evalúan regresar a Balcarce antes de fin de año",
       "seccion": "Automovilismo"
+     },
+     {
+      "id": "1puwvvm",
+      "titulo": "El Geriátrico Pinto recibe diez colchones y diez almohadas",
+      "seccion": "Balcarce"
      },
      {
       "id": "12rp30w",

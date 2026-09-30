@@ -2813,5 +2813,25 @@
   "razon": "Groq también falló: HTTP 413",
   "cuando": "2026-09-30T12:32:13.870Z",
   "intentos": 1
+ },
+ "1h321lc": {
+  "archivo": "fotos-notas/1h321lc.jpg",
+  "medio": "Infobae",
+  "credito": "Foto: Infobae",
+  "licencia": null,
+  "origen": "medio",
+  "titulo": "El Gobierno eleva a 35 mil dólares el tope para importar autos eléctricos sin arancel",
+  "enlace": "https://www.infobae.com/economia/2026/09/30/el-gobierno-elevo-a-usd-35000-el-tope-para-importar-autos-electricos-sin-arancel/",
+  "imagenOriginal": "https://www.infobae.com/resizer/v2/3HNR5XMOVRGKBA5F2CQUEXENMQ.JPG?auth=0116c835e4dd80b870f3dcb4d1b08452eda35728b503bf471055c6262fff0d59&smart=true&width=1200&height=630&quality=85",
+  "razon": "La foto A muestra claramente autos eléctricos cargándose en una estación, sin marcas de agua ni menores, y tiene muy buena calidad de imagen.",
+  "cuando": "2026-09-30T12:58:47.498Z"
+ },
+ "m6yqqj": {
+  "intentado": true,
+  "origen": "ninguna",
+  "titulo": "Robbie Williams da un show acústico en la calle frente a su hotel en Buenos Aires",
+  "razon": "Groq también falló: HTTP 413",
+  "cuando": "2026-09-30T12:58:47.498Z",
+  "intentos": 1
  }
 }
