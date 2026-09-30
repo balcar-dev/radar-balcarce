@@ -1,10 +1,10 @@
 {
- "generado": "2026-09-30T11:31:43.073Z",
- "portada": 47,
- "archivo": 600,
- "esperandoCuerpo": 1,
+ "generado": "2026-09-30T12:04:14.652Z",
+ "portada": 48,
+ "archivo": 604,
+ "esperandoCuerpo": 3,
  "redes": {
-  "generado": "2026-09-30T11:31:43.108Z",
+  "generado": "2026-09-30T12:04:14.697Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -75,7 +75,7 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 52,
+    "segundos": 51,
     "notas": [
      {
       "id": "jul3w9",
@@ -83,19 +83,19 @@
       "seccion": "Agro"
      },
      {
-      "id": "1j6ui2n",
-      "titulo": "La ACTC sanciona a Mariano Werner con multa y largada desde el fondo",
-      "seccion": "Automovilismo"
-     },
-     {
       "id": "1o1dlqq",
       "titulo": "La Escuela de Arte Astor Piazzolla expone desde el 2 de octubre en el Museo Histórico",
       "seccion": "Cultura y agenda"
      },
      {
-      "id": "4r2jgy",
-      "titulo": "Lionel Scaloni libera a Tomás Palacios para jugar en Estudiantes",
-      "seccion": "Fútbol"
+      "id": "1j6ui2n",
+      "titulo": "La ACTC sanciona a Mariano Werner con multa y largada desde el fondo",
+      "seccion": "Automovilismo"
+     },
+     {
+      "id": "1hkh8ez",
+      "titulo": "UPCN dicta una capacitación gratuita para auxiliares",
+      "seccion": "Balcarce"
      }
     ]
    },
@@ -106,7 +106,7 @@
     "voz": "locutora",
     "momento": "antes",
     "salio": null,
-    "segundos": 55,
+    "segundos": 53,
     "notas": [
      {
       "id": "1pbrz27",
@@ -114,14 +114,14 @@
       "seccion": "Automovilismo"
      },
      {
-      "id": "1hkh8ez",
-      "titulo": "UPCN dicta una capacitación gratuita para auxiliares",
-      "seccion": "Balcarce"
-     },
-     {
       "id": "1vgun5x",
       "titulo": "Balcarce participa de la trigésima Feria Internacional de Turismo",
       "seccion": "Cultura y agenda"
+     },
+     {
+      "id": "1puwvvm",
+      "titulo": "El Geriátrico Pinto recibe diez colchones y diez almohadas",
+      "seccion": "Balcarce"
      },
      {
       "id": "h7o4xt",
@@ -137,17 +137,12 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 37,
+    "segundos": 28,
     "notas": [
      {
       "id": "1asj6cl",
       "titulo": "Las TC Pick Up evalúan regresar a Balcarce antes de fin de año",
       "seccion": "Automovilismo"
-     },
-     {
-      "id": "1puwvvm",
-      "titulo": "El Geriátrico Pinto recibe diez colchones y diez almohadas",
-      "seccion": "Balcarce"
      },
      {
       "id": "12rp30w",
