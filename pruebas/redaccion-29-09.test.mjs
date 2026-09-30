@@ -4,7 +4,7 @@
 
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { verificar } from '../ingesta/verificar.mjs';
+import { verificar, numerosDe } from '../ingesta/verificar.mjs';
 import { sinNegacionQueEstaEnElCuerpo, motivoCorto } from '../reels/reescritura.mjs';
 import { extraerTexto } from '../ingesta/articulo.mjs';
 
@@ -51,6 +51,20 @@ test('las calles de un corte de luz llegan a la IA: una lista de la nota cuenta 
   assert.match(texto, /Calle 18, entre 41 y 45, vereda impar; Calle 20, entre 41 y 43, ambas veredas; Calle 43, entre 18 y 24, ambas veredas\./);
   assert.ok(!texto.includes('Guillén'), 'la lista de enlaces relacionados no es la nota');
   assert.ok(texto.indexOf('Calle 18') < texto.indexOf('Desde la entidad'), 'la lista va en su lugar');
+});
+
+test('"35 milímetros" son 35, no 35 mil: una nota de lluvias no se cae por los milímetros (29/09)', () => {
+  assert.deepEqual(numerosDe('Llovieron 35 milímetros en Balcarce'), [35]);
+  assert.deepEqual(numerosDe('Hubo 12 millonarios en la lista'), [12]);
+  // Lo de siempre sigue igual.
+  assert.deepEqual(numerosDe('Costará 35 mil pesos'), [35000]);
+  assert.deepEqual(numerosDe('2 millones y medio de dólares'), [2500000]);
+  const fuente = { titulo: 'Las lluvias llegaron a 50 mm en la zona de Bosch', resumen: 'YPF-AGRO informó: Balcarce: 35 mm; Las Marías (Bosch): 50 mm; Mechongué: 18 mm.' };
+  const r = verificar(fuente, {
+    titulo: 'La lluvia deja 35 milímetros en Balcarce y 50 en la zona de Bosch',
+    copete: 'El valor más bajo se midió en Mechongué: 18 milímetros.',
+  });
+  assert.ok(!r.problemas.some((p) => p.tipo === 'numero'), JSON.stringify(r.problemas));
 });
 
 test('cuando la IA copia, la corrección le dice qué frase; el motivo público no la lleva', () => {

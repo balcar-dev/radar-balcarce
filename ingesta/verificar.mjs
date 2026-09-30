@@ -70,8 +70,9 @@ export function numerosDe(texto) {
 
   // En cifras. "1.234" son mil doscientos treinta y cuatro; "12,5" es doce y
   // medio; "14 millones" es catorce millones; "2 millones y medio", dos
-  // millones quinientos mil.
-  for (const m of t.matchAll(/(\d[\d.,]*)(?:\s+(millones|millon|mil)(\s+y\s+medio)?)?/g)) {
+  // millones quinientos mil. La escala es una palabra entera: "35 milímetros"
+  // se leía "35 mil" y tiraba cualquier nota de lluvias (29/09).
+  for (const m of t.matchAll(/(\d[\d.,]*)(?:\s+(millones|millon|mil)\b(\s+y\s+medio)?)?/g)) {
     let n = m[1].replace(/[.,]+$/, '');
     if (/^\d{1,3}(\.\d{3})+$/.test(n)) n = n.replace(/\./g, '');
     else n = n.replace(',', '.');
