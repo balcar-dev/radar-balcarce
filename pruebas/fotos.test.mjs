@@ -283,13 +283,14 @@ test('elegirFotoParaNota: sin foto de fuente y sin persona pública clara, no el
   assert.equal(r.elegida, null);
 });
 
-// ------------- 28/09: el nombre de otro medio en la escena y los menores
-// Caso real: la nota de Reino sobre el Fangio salió con la foto de La Vanguardia
-// donde se leía el micrófono de "Radio Líder 90.9". La IA la dejó pasar porque
-// la instrucción decía que un logo "de la escena" no es marca. Y el banco tenía
-// fotos de equipos de chicas (U15, hockey) con las caras a la vista.
+// ------------- el nombre de otro medio en la escena y los menores
+// 28/09: la nota de Reino sobre el Fangio salió con la foto de La Vanguardia
+// donde se leía el micrófono de "Radio Líder 90.9", y se decidió descartar esas
+// fotos. 30/09, Hernán: "lo del micrófono no hay problema que salga": lo que
+// estaba en la escena vale; lo que el medio le sobreimprimió a la imagen, no. Y
+// el banco tenía fotos de equipos de chicas (U15, hockey) con las caras a la vista.
 
-test('la instrucción de fotos pide descartar el nombre de otro medio aunque esté en la escena, y a los menores', async () => {
+test('la instrucción de fotos: un micrófono de otro medio en la escena vale; lo sobreimpreso (zócalo, logo del canal) y los menores, no', async () => {
   let pedido = '';
   const fetchFn = async (url, opciones) => {
     pedido = JSON.parse(opciones.body).contents[0].parts[0].text;
@@ -297,8 +298,9 @@ test('la instrucción de fotos pide descartar el nombre de otro medio aunque est
   };
   await elegirFoto({ titulo: 'Reino destaca el éxito del regreso automovilístico al Fangio', seccion: 'Balcarce' },
     conDatos(['Diario La Vanguardia']), { clave: 'g', claveRespaldo: null, fetchFn });
-  assert.match(pedido, /OTRO MEDIO DE\s+COMUNICACIÓN/);
-  assert.match(pedido, /micrófono con el nombre de una radio/);
+  assert.match(pedido, /micrófono con\s+el nombre de una radio[\s\S]*NO es "tiene_marca"/);
+  assert.match(pedido, /SOBREIMPRIMIÓ[\s\S]*zócalo o el logo de un canal de televisión/);
+  assert.ok(!/nunca muestra el\s+nombre de otro medio adentro de una imagen, venga de donde venga/.test(pedido));
   assert.match(pedido, /MENOR DE 18 AÑOS/);
   assert.match(pedido, /"menor": false/);
 });
@@ -314,7 +316,7 @@ test('elegirFoto: una foto con un menor nunca es la elegida, aunque la IA la pre
   assert.equal(r.candidatas[0].sospechaMenor, true);
 });
 
-test('elegirFoto: si la única foto muestra el nombre de otro medio, no se elige ninguna (Reino, 28/09)', async () => {
+test('elegirFoto: si la IA marca la única foto (por ejemplo, un zócalo de otro canal), no se elige ninguna', async () => {
   const fetchFn = fetchGemini({
     elegida: 'A', razon: 'la única',
     fotos: [{ letra: 'A', tiene_marca: true, menor: false, detalle: 'micrófono de Radio Líder 90.9 a la derecha' }],

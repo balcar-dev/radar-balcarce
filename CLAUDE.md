@@ -49,12 +49,12 @@ próxima regla es la 81.)
   `ingesta/criterio.mjs`, controlados contra su tabla. Lo de las redes, en
   `CRITERIO-REDES.md` (el código también lo lee tal cual). No borrar las marcas `<!-- … -->`.
 - **Nunca identificar a un menor ni a una víctima** (el semáforo rojo; **no tocar esa
-  lista sin preguntar**). **Nunca una marca de agua ni el nombre de otro medio dentro de
-  una imagen**: el crédito va en la cita. **Lo que escribe la IA se verifica contra la
+  lista sin preguntar**). **Nunca una marca de agua ni el nombre de otro medio pegado
+  encima de una imagen**: el crédito va en la cita. **Lo que escribe la IA se verifica contra la
   fuente. Cada nota dice quién la escribió. Política y Policiales esperan a una persona en
   todas las piezas de redes.**
-- **Las fotos**: la de otro medio o de un organismo, sólo sin su marca (ni otro medio en
-  la escena), con el crédito en el epígrafe y guardada en el banco propio
+- **Las fotos**: la de otro medio o de un organismo, sólo sin su marca (lo que estaba en
+  la escena, como el micrófono de una radio, sí: 30/09), con el crédito en el epígrafe y guardada en el banco propio
   (`web/data/banco-fotos.json`). Nunca foto real de un menor o una víctima, ni en
   Policiales salvo fuente oficial (`docs/05-FOTOS.md`). La placa es lo que sale cuando no
   hay foto que sirva.

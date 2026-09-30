@@ -25,8 +25,8 @@ Una fotografía es una obra protegida y citar la fuente no alcanza para usarla
 (`INVESTIGACION.md` § 7). Hasta el 27/09 el sitio usaba siempre una placa
 propia. Ese día Hernán decidió, con el riesgo explicado y aceptado, que se
 puede usar la foto de otro medio o de un organismo oficial con dos
-condiciones: **nunca con la marca de agua ni el nombre del otro medio adentro**
-(el crédito va en la cita, debajo) y **siempre guardada en el banco propio**
+condiciones: **nunca con la marca de agua ni el nombre del otro medio pegado
+encima** (el crédito va en la cita, debajo) y **siempre guardada en el banco propio**
 para poder revisarla y reusarla. Desde el 28/09 está construido y en vivo.
 
 ---
@@ -94,10 +94,13 @@ cada una con una letra (A, B, C…) y el medio que la publicó. La instrucción
   sponsor, el escudo de un club, el nombre de un evento o una pantalla no son
   marca de agua ("¿podría estar en una foto que sacó cualquier otra persona
   presente ese día?");
-- **con una excepción: el nombre de otro medio** (28/09). Aunque haya estado en
-  la escena, el cubo de un micrófono con el nombre de una radio, el móvil de un
-  canal, un zócalo o una pantalla con el nombre de un medio cuentan como marca.
-  Pasó con la nota de Reino sobre el Fangio: se leía "Radio Líder 90.9";
+- **el nombre de otro medio que estaba en la escena tampoco es marca** (30/09).
+  Del 28 al 30/09 sí lo era (la nota de Reino sobre el Fangio tenía el micrófono
+  de "Radio Líder 90.9" y se decidió descartar esas fotos), pero muchas notas
+  quedaban sin foto y el 30/09 se decidió: "lo del micrófono no hay problema que
+  salga". Sí es marca lo que un medio **le pegó encima** a la imagen aunque no
+  esté en una esquina: el zócalo o el logo de un canal (una captura de la tele),
+  un recuadro o una placa con su nombre;
 - **marcar a los menores** (28/09): si aparece alguien que parece menor de 18 y
   se lo reconoce, aunque esté en un grupo o un equipo, la foto lleva `menor` y
   no se elige; ante la duda, es menor;

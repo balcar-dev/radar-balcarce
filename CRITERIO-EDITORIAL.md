@@ -136,10 +136,11 @@ INTA) o, cuando ninguna de esas está, **la de otro medio o de un organismo ofic
 protegida y citar la fuente no la cubre, `INVESTIGACION.md` § 7). Nunca una foto inventada
 por IA que parezca real. Condiciones que no se negocian:
 
-- **Nunca la marca de agua ni el nombre de otro medio adentro de la imagen**, tampoco en
-  la escena (el micrófono de una radio): el crédito va en la cita, debajo. Los medios
-  chicos de la zona suelen pegar su logo en una esquina: con la mínima duda, esa foto no
-  se usa.
+- **Nunca la marca de agua ni el nombre de otro medio pegado encima de la imagen** (el
+  logo en una esquina, el zócalo de un canal): el crédito va en la cita, debajo. Los
+  medios chicos de la zona suelen pegar su logo en una esquina: con la mínima duda, esa
+  foto no se usa. Lo que estaba en la escena real sí puede verse, también el micrófono
+  con el nombre de una radio (decisión del 30/09).
 - **Toda foto usada así se guarda en el banco propio** (`web/data/banco-fotos.json`), con
   su crédito y de qué nota salió.
 - **Nunca la foto de un menor o de una víctima**, ni en Policiales, salvo una foto oficial

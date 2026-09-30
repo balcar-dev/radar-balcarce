@@ -3,7 +3,8 @@
 // también: entonces se mira esa única foto) se le pide su foto principal y se
 // le muestran todas las que haya a una IA con visión para que elija la que
 // mejor sirve, y para que avise si alguna tiene una marca de agua o el nombre de
-// otro medio adentro (más cuidado con los medios locales y de la zona:
+// otro medio pegado encima (lo que estaba en la escena, como el micrófono de una
+// radio, vale desde el 30/09; más cuidado con los medios locales y de la zona:
 // CRITERIO-EDITORIAL.md, "Las fotos"). Nunca elige una foto marcada: si la
 // mejor tiene marca, usa la mejor SIN marca en su lugar, aunque no sea la
 // ideal (Hernán, 28/09); si ninguna sirve sin marca, no elige ninguna.
@@ -140,11 +141,11 @@ grande o nítido — eso es parte de la escena real, no algo que el medio le agr
 medio o de la escena, pensá: ¿podría estar en una foto que sacó cualquier otra persona presente ese día? Si sí, no
 es "tiene_marca".
 
-Con UNA excepción, que sí es "tiene_marca" aunque haya estado en la escena: el nombre o el logo de OTRO MEDIO DE
-COMUNICACIÓN (un diario, una radio, un canal o un portal) que se pueda leer en la foto. Por ejemplo, el cubo o la
-esponja de un micrófono con el nombre de una radio o de un canal, un móvil o una camioneta de un medio, un cartel o
-una pantalla con el nombre de un medio, un zócalo o el logo de un canal de televisión. Radar Balcarce nunca muestra el
-nombre de otro medio adentro de una imagen, venga de donde venga. Anotá en "detalle" qué medio se lee y dónde.
+Eso vale también para el nombre de otro medio que estaba en la escena real: el cubo o la esponja de un micrófono con
+el nombre de una radio, el móvil de un canal, un cartel. NO es "tiene_marca": cualquiera que estuvo ahí lo habría
+fotografiado igual. Sí es "tiene_marca" lo que un medio le SOBREIMPRIMIÓ a la imagen aunque no esté en una esquina:
+el zócalo o el logo de un canal de televisión (una captura de la tele), un recuadro o una placa con el nombre del
+medio. Anotá en "detalle" qué medio se lee y dónde.
 
 Mirá también si aparece alguien que parezca MENOR DE 18 AÑOS y se lo pueda reconocer (se le ve la cara, aunque esté
 en un grupo, en un equipo o en segundo plano). Radar Balcarce nunca publica la foto de un menor: esa foto lleva
