@@ -1,10 +1,10 @@
 {
- "generado": "2026-09-30T08:31:13.267Z",
- "portada": 53,
+ "generado": "2026-09-30T09:01:14.759Z",
+ "portada": 51,
  "archivo": 599,
  "esperandoCuerpo": 1,
  "redes": {
-  "generado": "2026-09-30T08:31:13.293Z",
+  "generado": "2026-09-30T09:01:14.790Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -83,14 +83,14 @@
       "seccion": "Agro"
      },
      {
-      "id": "1pbrz27",
-      "titulo": "Aston Martin renueva los contratos de Fernando Alonso y Lance Stroll para 2027",
-      "seccion": "Automovilismo"
-     },
-     {
       "id": "1o1dlqq",
       "titulo": "La Escuela de Arte Astor Piazzolla expone desde el 2 de octubre en el Museo Histórico",
       "seccion": "Cultura y agenda"
+     },
+     {
+      "id": "1pbrz27",
+      "titulo": "Aston Martin renueva los contratos de Fernando Alonso y Lance Stroll para 2027",
+      "seccion": "Automovilismo"
      },
      {
       "id": "4r2jgy",
@@ -164,20 +164,7 @@
   ],
   "facebook": {
    "hoy": [],
-   "cola": [
-    {
-     "id": "1j6ui2n",
-     "titulo": "La ACTC sanciona a Mariano Werner con multa y largada desde el fondo",
-     "seccion": "Automovilismo",
-     "marcada": false
-    },
-    {
-     "id": "1hkh8ez",
-     "titulo": "UPCN dicta una capacitación gratuita para auxiliares",
-     "seccion": "Balcarce",
-     "marcada": false
-    }
-   ],
+   "cola": [],
    "cupo": 5,
    "proximoDesde": "2026-09-30T00:33:13.423Z",
    "porDia": 5,
