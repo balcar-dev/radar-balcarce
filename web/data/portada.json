@@ -1,5 +1,5 @@
 {
-  "generado": "2026-09-30T20:31:41.574Z",
+  "generado": "2026-09-30T21:02:15.107Z",
   "notas": [
     {
       "id": "1ugpk62",
@@ -10,6 +10,8 @@
       "seccion": "Automovilismo",
       "medios": [
         "Clarín",
+        "TN (Todo Noticias)",
+        "El Cronista",
         "Noticias Argentinas (NA)"
       ],
       "enlace": "https://www.clarin.com/economia/toyota-obtuvo-primer-rigi-automotriz-invertira-us-1300-millones-fabricar-vehiculos-electricos_0_XhHa3tAZx6.html",
@@ -17,7 +19,7 @@
       "fecha": "2026-09-30T20:14:46.000Z",
       "sinFecha": false,
       "visto": "2026-09-30T20:31:19.814Z",
-      "relevancia": 53,
+      "relevancia": 73,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -76,47 +78,312 @@
       }
     },
     {
-      "id": "1h3b7f0",
-      "titulo": "La Fiesta Nacional del Postre anuncia sus actividades para octubre",
-      "copete": "La vigesimosegunda edición del tradicional encuentro gastronómico se realizará del 9 al 12 de octubre en la Sociedad Rural, con entrada libre y gratuita y cuatro jornadas de propuestas para toda la familia.",
-      "cuerpo": "Balcarce se prepara para la vigesimosegunda edición de la Fiesta Nacional del Postre, que se desarrollará del 9 al 12 de octubre en el predio de la Sociedad Rural con entrada libre y gratuita. Durante las cuatro jornadas habrá clases magistrales, demostraciones culinarias, concursos y degustaciones.\n\nEl evento contará con la presencia del cocinero Valentín Galdón Ritvo y de la madrina Rocío Espinillo.\n\nLa celebración busca impulsar el movimiento turístico y beneficiar a hoteles, restaurantes y comercios locales. El producto principal del encuentro es el emblemático Postre Balcarce, creado en 1950 por Guillermo Talou a base de pionono, dulce de leche, crema, merengue, nueces y coco rallado.",
-      "guion": "La Fiesta Nacional del Postre anuncia sus actividades para octubre",
-      "seccion": "Cultura y agenda",
+      "id": "z3c4f",
+      "titulo": "Estudiantes del Colegio Santa Rosa de Lima visitan el municipio",
+      "copete": "Alumnos de tercer y cuarto año del establecimiento educativo concurrieron a la Sala de los Intendentes. Mantuvieron un diálogo con el jefe comunal sobre el funcionamiento de la administración local.",
+      "cuerpo": "El intendente municipal Esteban Reino recibió al mediodía en la Sala de los Intendentes a estudiantes de tercer y cuarto año del Colegio Santa Rosa de Lima.\n\nDurante la reunión, el jefe comunal conversó con los alumnos sobre las tareas que se desarrollan en el ámbito del gobierno local y la vida institucional de la ciudad. La actividad se enmarcó en una propuesta pedagógica para vincular los contenidos escolares con el funcionamiento de las entidades públicas.",
+      "guion": "Estudiantes del Colegio Santa Rosa de Lima visitan el municipio",
+      "seccion": "Balcarce",
       "medios": [
-        "La Noticia 1"
+        "Puntonueve (FM 100.9)"
       ],
-      "enlace": "https://www.lanoticia1.com/noticia/balcarce-se-prepara-para-la-fiesta-nacional-del-postre-cuando-sera-y-que-actividades-tendra",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-30T18:17:49.000Z",
+      "enlace": "https://puntonueve.com.ar/alumnos-del-colegio-santa-rosa-de-lima-visitaron-el-municipio/",
+      "teniaImagenLaFuente": false,
+      "fecha": "2026-09-30T19:53:10.000Z",
       "sinFecha": false,
-      "visto": "2026-09-30T18:31:15.831Z",
-      "relevancia": 93,
+      "visto": "2026-09-30T21:01:04.723Z",
+      "relevancia": 84,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
       "temas": [],
       "como": "automatica",
+      "claves": [
+        "El intendente Esteban Reino recibió a estudiantes secundarios este miércoles.",
+        "Participaron alumnos de tercer y cuarto año del Colegio Santa Rosa de Lima.",
+        "Acompañaron las docentes Pamela Valle, Mariela Martínez y Claudia Forte.",
+        "El encuentro se realizó en la Sala de los Intendentes."
+      ],
+      "seSabe": [
+        "El intendente municipal Esteban Reino recibió a los estudiantes este miércoles al mediodía, según informó un medio local.",
+        "Participaron alumnos de tercer y cuarto año del Colegio Santa Rosa de Lima junto a las docentes Pamela Valle, Mariela Martínez y Claudia Forte.",
+        "El encuentro tuvo lugar en la Sala de los Intendentes para dialogar sobre la gestión municipal."
+      ],
       "noConfirmado": [
         "No pudo ser contrastado de forma independiente con las fuentes consultadas."
       ],
-      "textoRedes": "Balcarce se prepara para la 22ª Fiesta Nacional del Postre, que se realizará del 9 al 12 de octubre en la Sociedad Rural con entrada libre y gratuita y cuatro jornadas de propuestas gastronómicas.",
+      "textoRedes": "Alumnos de tercer y cuarto año del Colegio Santa Rosa de Lima visitaron este miércoles la Sala de los Intendentes y se reunieron con el intendente Esteban Reino para conocer el funcionamiento del municipio.",
       "etiquetas": [
-        "Fiesta del Postre",
-        "turismo",
-        "Sociedad Rural",
-        "gastronomía",
-        "Balcarce"
+        "Estudiantes",
+        "Municipalidad de Balcarce",
+        "Colegio Santa Rosa de Lima",
+        "Esteban Reino"
       ],
       "fuentesConsultadas": [
+        {
+          "medio": "Puntonueve (FM 100.9)",
+          "enlace": "https://puntonueve.com.ar/alumnos-del-colegio-santa-rosa-de-lima-visitaron-el-municipio/",
+          "fecha": "2026-09-30T19:53:10.000Z",
+          "oficial": false,
+          "aporte": "Informó la visita de los alumnos del Colegio Santa Rosa de Lima al intendente municipal y detalló los nombres de las docentes acompañantes."
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "estudiantes-del-colegio-santa-rosa-de-lima-visitan-el-municipio"
+    },
+    {
+      "id": "gd6n9s",
+      "titulo": "Pronostican lluvias escasas y una nueva ola de frío en la región",
+      "copete": "El informe climático para la primera semana de octubre anticipa precipitaciones reducidas en la mayor parte del área productiva, acompañadas por altas temperaturas iniciales y un posterior ingreso de vientos polares con heladas.",
+      "cuerpo": "La Bolsa de Cereales de Buenos Aires informó que la primera semana de octubre comenzará con precipitaciones escasas en la mayor parte de la región agrícola. El reporte detalló que las lluvias fuertes se concentrarán en el norte del área y en el Litoral Fluvial, con un foco superior a los 150 milímetros en Misiones.\n\nAl inicio del período, los vientos del trópico generarán temperaturas máximas superiores a los 30 grados, con registros de hasta 40 grados en varias zonas. Según indicó la perspectiva agroclimática, luego arribarán vientos polares que provocarán un marcado descenso térmico, con riesgo de heladas generales y localizadas en el oeste y el sudeste de la región pampeana.",
+      "guion": "Pronostican lluvias escasas y una nueva ola de frío en la región",
+      "seccion": "Agro",
+      "medios": [
+        "TN (Todo Noticias)",
+        "Noticias Agropecuarias"
+      ],
+      "enlace": "https://tn.com.ar/campo/2026/09/30/se-esperan-lluvias-escasas-en-la-mayor-parte-de-la-region-agricola-durante-la-primera-semana-de-octubre/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-30T18:42:58.000Z",
+      "sinFecha": false,
+      "visto": "2026-09-30T21:01:04.723Z",
+      "relevancia": 53,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Lluvias escasas en gran parte de la región agrícola entre el 1 y el 7 de octubre.",
+        "Tormentas intensas concentradas en el norte y el Litoral Fluvial.",
+        "Altas temperaturas iniciales con registros superiores a 30 grados.",
+        "Ingreso de vientos polares con descenso térmico y riesgo de heladas."
+      ],
+      "seSabe": [
+        "La Bolsa de Cereales de Buenos Aires difundió el pronóstico para el período del 1 al 7 de octubre.",
+        "Se prevén lluvias escasas en la mayor parte del área productiva.",
+        "Habrá tormentas intensas en el norte del área agrícola y Misiones.",
+        "Se registrará un descenso térmico con heladas tras el paso de vientos polares."
+      ],
+      "textoRedes": "El informe climático para la primera semana de octubre anticipa lluvias escasas en gran parte de la región agrícola, temperaturas elevadas iniciales y un posterior ingreso de vientos polares con riesgo de heladas.",
+      "etiquetas": [
+        "clima",
+        "Bolsa de Cereales",
+        "heladas",
+        "lluvias"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/campo/2026/09/30/se-esperan-lluvias-escasas-en-la-mayor-parte-de-la-region-agricola-durante-la-primera-semana-de-octubre/",
+          "fecha": "2026-09-30T18:42:58.000Z",
+          "oficial": false,
+          "aporte": "Detalló el pronóstico completo de lluvias, temperaturas y heladas para la primera semana de octubre según la Bolsa de Cereales."
+        },
+        {
+          "medio": "Noticias Agropecuarias",
+          "enlace": "https://www.noticiasagropecuarias.com/2026/09/30/proximos-dias-con-lluvias-escasas-en-gran-parte-de-la-region-agricola/",
+          "fecha": "2026-09-30T20:17:47.000Z",
+          "oficial": false,
+          "aporte": "Aportó la previsión de tormentas fuertes en el norte y la posterior llegada de una ola de frío."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "pronostican-lluvias-escasas-y-una-nueva-ola-de-frio-en-la-region",
+      "foto": {
+        "archivo": "fotos-notas/gd6n9s.jpg",
+        "credito": "Foto: TN (Todo Noticias)"
+      }
+    },
+    {
+      "id": "1nlsp0x",
+      "titulo": "Juan Grabois discute a los gritos con legisladores en el plenario",
+      "copete": "Un fuerte cruce verbal protagonizó el diputado nacional en la Cámara baja durante el debate sobre el proyecto de soberanía de Malvinas. Hubo gritos e insultos con legisladores oficialistas.",
+      "cuerpo": "Un plenario de comisiones en la Cámara de Diputados terminó en momentos de tensión este miércoles cuando el diputado Juan Grabois increpó a los gritos a legisladores de La Libertad Avanza. El intercambio verbal escaló con insultos y manotazos en medio de la exposición de la legisladora Myriam Bregman, según informaron fuentes periodísticas. \n\nEl legislador nacional cuestionó al oficialismo y lanzó duras acusaciones vinculadas al reciente fallo del máximo tribunal sobre la extranjerización de tierras. Posteriormente, ratificó sus críticas a través de sus redes sociales.",
+      "guion": "Juan Grabois discute a los gritos con legisladores en el plenario",
+      "seccion": "Política",
+      "medios": [
+        "La Noticia 1",
+        "El Destape",
+        "Noticias Argentinas (NA)",
+        "La Tecla",
+        "El Marplatense"
+      ],
+      "enlace": "https://noticiasargentinas.com/politica/grabois-a-los-gritos-en-diputados-por-la-ley-de-tierras---tienen-a-la-corte-comprada--_a6abd45db129df45908dd66b0",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-30T18:34:25.751Z",
+      "sinFecha": false,
+      "visto": "2026-09-30T21:01:04.723Z",
+      "relevancia": 83,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Tensión y gritos en un plenario de comisiones en la Cámara de Diputados",
+        "El cruce involucró al diputado Juan Grabois y a legisladores oficialistas",
+        "La discusión ocurrió durante la exposición de Myriam Bregman"
+      ],
+      "seSabe": [
+        "El hecho ocurrió este miércoles 30 de septiembre en la Cámara de Diputados",
+        "El debate inicial trataba sobre el proyecto de Defensa de la Soberanía de Malvinas",
+        "Juan Grabois cruzó gritos e insultos con legisladores de La Libertad Avanza"
+      ],
+      "noConfirmado": [
+        "La sanción o medidas disciplinarias para los involucrados en el altercado",
+        "El alcance total de los daños materiales o físicos durante los forcejeos"
+      ],
+      "textoRedes": "Juan Grabois protagonizó una tensa discusión a los gritos con legisladores oficialistas en la Cámara de Diputados durante el debate sobre el proyecto de soberanía de Malvinas.",
+      "etiquetas": [
+        "Juan Grabois",
+        "Diputados",
+        "La Libertad Avanza"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Noticias Argentinas (NA)",
+          "enlace": "https://noticiasargentinas.com/politica/grabois-a-los-gritos-en-diputados-por-la-ley-de-tierras---tienen-a-la-corte-comprada--_a6abd45db129df45908dd66b0",
+          "fecha": "2026-09-30T18:34:25.751Z",
+          "oficial": false,
+          "aporte": "Detalló los insultos, los manotazos y las declaraciones de Grabois contra el oficialismo."
+        },
+        {
+          "medio": "La Noticia 1",
+          "enlace": "https://www.lanoticia1.com/noticia/ley-malvinas-tension-y-gritos-entre-grabois-y-libertarios-durante-el-debate-en-comision",
+          "fecha": "2026-09-30T19:25:14.000Z",
+          "oficial": false,
+          "aporte": "Informó sobre el inicio de la tensión durante la exposición de Myriam Bregman."
+        },
+        {
+          "medio": "El Destape",
+          "enlace": "https://www.eldestapeweb.com/politica/grabois-cruzo-diputados-lla-tienen-corte-comprada-202693017841",
+          "fecha": "2026-09-30T20:08:41.000Z",
+          "oficial": false,
+          "aporte": "Mencionó el repudio de Grabois al fallo de la Corte Suprema sobre el decreto de tierras."
+        },
+        {
+          "medio": "La Tecla",
+          "enlace": "https://www.latecla.info/170080-a-los-gritos-y-empujones-fuerte-cruce-entre-grabois-y-diputados-libertarios-por-la-ley-malvinas",
+          "fecha": "2026-09-30T19:31:00.000Z",
+          "oficial": false,
+          "aporte": "No aportó información específica en su resumen."
+        },
+        {
+          "medio": "El Marplatense",
+          "enlace": "https://www.elmarplatense.com/grabois-estallo-en-diputados-por-la-ley-de-tierras-tienen-a-la-corte-comprada",
+          "fecha": "2026-09-30T19:26:36.000Z",
+          "oficial": false,
+          "aporte": "Confirmó la fecha del miércoles y el debate sobre el proyecto de soberanía de Malvinas."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "1k45c07",
+          "titulo": "Caról pide a Diputados rechazar el decreto sobre tierras tras el fallo",
+          "fecha": "2026-09-30T16:44:00.000Z",
+          "ruta": "/nota/carol-pide-a-diputados-rechazar-el-decreto-sobre-tierras-tras-el-fallo-1k45c07"
+        },
+        {
+          "id": "1pawdnw",
+          "titulo": "La oposición busca una sesión especial en Diputados contra el decreto de tierras",
+          "fecha": "2026-09-29T03:00:00.000Z",
+          "ruta": "/nota/la-oposicion-busca-una-sesion-especial-en-diputados-contra-el-decreto-1pawdnw"
+        },
+        {
+          "id": "16ufhqn",
+          "titulo": "La Corte revoca el fallo sobre la Ley de Tierras del DNU",
+          "fecha": "2026-09-29T03:00:00.000Z",
+          "ruta": "/nota/la-corte-revoca-el-fallo-sobre-la-ley-de-tierras-del-dnu-16ufhqn"
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron cinco medios independientes.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "juan-grabois-discute-a-los-gritos-con-legisladores-en-el-plenario",
+      "foto": {
+        "archivo": "fotos-notas/1nlsp0x.jpg",
+        "credito": "Foto: La Tecla"
+      }
+    },
+    {
+      "id": "6xex85",
+      "titulo": "La Fiesta Nacional del Postre se extiende a cuatro días en octubre",
+      "copete": "La vigesimosegunda edición de la celebración gastronómica se realizará del viernes 9 al lunes 12 de octubre en la Sociedad Rural, con acceso libre y gratuito y nuevas propuestas para el público.",
+      "cuerpo": "La vigesimosegunda edición de la Fiesta Nacional del Postre modificará su fecha tradicional de invierno y se desarrollará del viernes 9 al lunes 12 de octubre en el predio de la Sociedad Rural. La subsecretaria de Turismo, Rosario de Tufró, explicó que la extensión a cuatro jornadas busca generar nuevas alternativas y que la modificación se consensuó con el sector pastelero local. \n\nEl encuentro sumará un espacio para cafeterías con dos emprendimientos, sectores para artesanos, food trucks y una zona de cocina al aire libre. La primera jornada tendrá un perfil educativo con la participación de la Escuela N° 3 y el Museo Histórico Municipal, mientras que la agenda gastronómica incluirá a Lulo Patisserie, Manbrunense, Chef Sale y Rocío Espinillo como madrina. \n\nComo antecedente, la celebración se realizaba habitualmente en julio y esta edición coincidirá con una competencia organizada por el Grupo GEC en la sierra.",
+      "guion": "La Fiesta Nacional del Postre se extiende a cuatro días en octubre",
+      "seccion": "Cultura y agenda",
+      "medios": [
+        "El Diario Balcarce",
+        "La Noticia 1"
+      ],
+      "enlace": "https://eldiariobalcarce.com.ar/la-fiesta-del-postre-tendra-cuatro-dias-y-sumara-nuevas-propuestas-735",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-30T18:17:49.000Z",
+      "sinFecha": false,
+      "visto": "2026-09-30T21:01:04.723Z",
+      "relevancia": 100,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "La fiesta se realizará del 9 al 12 de octubre en la Sociedad Rural.",
+        "Por primera vez el encuentro durará cuatro jornadas.",
+        "Habrá entrada libre y gratuita y nuevos espacios gastronómicos.",
+        "Participarán cocineros invitados como Rocío Espinillo y Manbrunense."
+      ],
+      "seSabe": [
+        "El evento se hará en la Sociedad Rural del 9 al 12 de octubre.",
+        "La subsecretaria de Turismo, Rosario de Tufró, confirmó que el cambio se consensuó con los pasteleros.",
+        "La entrada será libre y gratuita.",
+        "Participarán la Escuela N° 3 y el Museo Histórico Municipal en la primera jornada."
+      ],
+      "noConfirmado": [
+        "Todavía resta la presentación oficial del cronograma completo."
+      ],
+      "textoRedes": "La vigesimosegunda Fiesta Nacional del Postre se realizará del 9 al 12 de octubre en la Sociedad Rural, con cuatro días de duración, entrada gratuita y nuevas propuestas gastronómicas.",
+      "etiquetas": [
+        "Fiesta del Postre",
+        "Balcarce",
+        "Sociedad Rural",
+        "turismo",
+        "gastronomía"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/la-fiesta-del-postre-tendra-cuatro-dias-y-sumara-nuevas-propuestas-735",
+          "fecha": "2026-09-30T20:52:00.000Z",
+          "oficial": false,
+          "aporte": "Aportó los detalles sobre las nuevas propuestas, los expositores y los dichos de Turismo."
+        },
         {
           "medio": "La Noticia 1",
           "enlace": "https://www.lanoticia1.com/noticia/balcarce-se-prepara-para-la-fiesta-nacional-del-postre-cuando-sera-y-que-actividades-tendra",
           "fecha": "2026-09-30T18:17:49.000Z",
           "oficial": false,
-          "aporte": "Detalló fechas, lugar, entrada libre y gratuita y presencia de figuras como Galdón Ritvo y Espinillo."
+          "aporte": "Aportó la confirmación de la sede y el acceso libre y gratuito."
         }
       ],
       "antecedentes": [
+        {
+          "id": "1h3b7f0",
+          "titulo": "La Fiesta Nacional del Postre anuncia sus actividades para octubre",
+          "fecha": "2026-09-30T18:17:49.000Z",
+          "ruta": "/nota/la-fiesta-nacional-del-postre-anuncia-sus-actividades-para-octubre-1h3b7f0"
+        },
         {
           "id": "1s10vxl",
           "titulo": "Rocío Espinillo anticipa su receta para la Fiesta del Postre",
@@ -128,22 +395,16 @@
           "titulo": "Edgardo Ríos visita la Fiesta Nacional del Postre",
           "fecha": "2026-09-29T18:01:09.192Z",
           "ruta": "/nota/edgardo-rios-visita-la-fiesta-nacional-del-postre-12rp30w"
-        },
-        {
-          "id": "1nzl1bf",
-          "titulo": "Edgardo Ríos participa en la Fiesta Nacional del Postre",
-          "fecha": "2026-09-29T15:24:50.000Z",
-          "ruta": "/nota/edgardo-rios-participa-en-la-fiesta-nacional-del-postre-1nzl1bf"
         }
       ],
       "verificacion": {
-        "nivel": "MEDIA",
-        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
-        "sugeridoPorIA": "MEDIA"
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "ALTA"
       },
-      "slug": "la-fiesta-nacional-del-postre-anuncia-sus-actividades-para-octubre",
+      "slug": "la-fiesta-nacional-del-postre-se-extiende-a-cuatro-dias-en-octubre",
       "foto": {
-        "archivo": "fotos-notas/1h3b7f0.jpg",
+        "archivo": "fotos-notas/6xex85.jpg",
         "credito": "Foto: La Noticia 1"
       }
     },
@@ -213,104 +474,6 @@
       "slug": "el-repaso-de-la-tarde-en-radar-balcarce-actc-rosario-central-y"
     },
     {
-      "id": "1q0vfmx",
-      "titulo": "El FMI concluye su misión técnica y evalúa la economía",
-      "copete": "La delegación del Fondo Monetario Internacional finalizó el martes la auditoría sobre el programa vigente. De la aprobación depende un desembolso cercano a los 900 millones de dólares.",
-      "cuerpo": "Las conversaciones se centraron en el resultado fiscal y en la acumulación de reservas del Banco Central, tras una visita que había comenzado el lunes 21.\n\nLa estancia de los enviados internacionales se enmarca en la tercera revisión del acuerdo financiero suscripto en abril del año pasado.\n\nTras el cierre de las reuniones técnicas, resta la elaboración de un entendimiento a nivel de staff para su posterior tratamiento en el directorio. La eventual aprobación activaría un desembolso de aproximadamente 900 millones de dólares.",
-      "guion": "El FMI concluye su misión técnica y evalúa la economía",
-      "seccion": "Economía",
-      "medios": [
-        "QZ Noticias (Mar del Plata)",
-        "Infobae",
-        "TN (Todo Noticias)",
-        "El Cronista",
-        "iProfesional",
-        "Crónica",
-        "Canal 26"
-      ],
-      "enlace": "https://tn.com.ar/economia/2026/09/30/el-fmi-termino-su-mision-en-la-argentina-y-hay-expectativa-por-el-resultado-de-la-tercera-revision-del-programa-economico/",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-30T17:40:31.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-30T19:01:15.723Z",
-      "relevancia": 83,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "El FMI finalizó la tercera revisión del acuerdo económico.",
-        "La visita técnica estuvo liderada por la funcionaria Joyce Wong.",
-        "Un eventual visto bueno destrabaría un desembolso de 900 millones de dólares."
-      ],
-      "noConfirmado": [
-        "Todavía no se informó la fecha exacta en la que el directorio emitirá su resolución final sobre la revisión."
-      ],
-      "textoRedes": "La misión técnica del FMI concluyó este martes su auditoría sobre el programa financiero y evaluó las cuentas fiscales y las reservas del Banco Central. De su aprobación depende un desembolso cercano a los 900 millones de dólares.",
-      "etiquetas": [
-        "FMI",
-        "economia",
-        "acuerdo",
-        "reservas",
-        "banco central"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "TN (Todo Noticias)",
-          "enlace": "https://tn.com.ar/economia/2026/09/30/el-fmi-termino-su-mision-en-la-argentina-y-hay-expectativa-por-el-resultado-de-la-tercera-revision-del-programa-economico/",
-          "fecha": "2026-09-30T17:40:31.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Infobae",
-          "enlace": "https://www.infobae.com/economia/2026/09/30/el-fmi-concluyo-su-mision-tecnica-en-argentina-por-la-tercera-revision-del-programa/",
-          "fecha": "2026-09-30T18:00:31.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "El Cronista",
-          "enlace": "https://www.cronista.com/economia-politica/termino-la-mision-del-fmi-en-argentina-que-sigue/",
-          "fecha": "2026-09-30T18:47:01.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Crónica",
-          "enlace": "https://www.cronica.com.ar/politica/fmi-concluyo-mision-tecnica-argentina/",
-          "fecha": "2026-09-30T18:18:31.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Canal 26",
-          "enlace": "https://www.canal26.com/economia/2026/09/30/el-fmi-termino-su-mision-en-argentina-que-paso-con-las-metas-y-cuando-se-define-la-revision/",
-          "fecha": "2026-09-30T17:47:57.000Z",
-          "oficial": false,
-          "aporte": null
-        },
-        {
-          "medio": "Noticias Argentinas (NA)",
-          "enlace": "https://noticiasargentinas.com/economia/finalizo-la-revision-del-fmi-que-dispara-un-desembolso-de-us-900-millones_a6abd45ac129df45908dd62c4",
-          "fecha": "2026-09-30T18:29:00.000Z",
-          "oficial": false,
-          "aporte": null
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron seis medios independientes.",
-        "sugeridoPorIA": "ALTA"
-      },
-      "slug": "el-fmi-concluye-su-mision-tecnica-y-evalua-la-economia",
-      "foto": {
-        "archivo": "fotos-notas/1q0vfmx.jpg",
-        "credito": "Foto: TN (Todo Noticias)"
-      }
-    },
-    {
       "id": "76r67w",
       "titulo": "Bomberos gestiona una unidad de traslado para capacitaciones",
       "copete": "La Asociación de Bomberos Voluntarios solicitó un vehículo al Gobierno provincial para trasladar a los agentes hacia capacitaciones fuera de la ciudad. El pedido apunta a optimizar los viajes de la brigada USAR.",
@@ -325,7 +488,7 @@
       "fecha": "2026-09-30T17:35:31.000Z",
       "sinFecha": false,
       "visto": "2026-09-30T18:01:10.942Z",
-      "relevancia": 84,
+      "relevancia": 74,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -402,20 +565,21 @@
       "guion": "La AFA apela en la FIFA la sanción a Leandro Paredes para reducirla",
       "seccion": "Fútbol",
       "medios": [
+        "Minuto Uno",
         "El Destape",
         "Perfil",
         "A24",
         "TyC Sports",
-        "Minuto Uno",
         "Crónica",
-        "Radio Mitre"
+        "Radio Mitre",
+        "Bolavip Argentina"
       ],
       "enlace": "https://radiomitre.cienradios.com/deportes/la-contundente-decision-de-afa-sobre-la-sancion-de-leandro-paredes-cuando-podria-volver-a-jugar/",
       "teniaImagenLaFuente": true,
       "fecha": "2026-09-30T17:31:39.000Z",
       "sinFecha": false,
       "visto": "2026-09-30T18:23:17.621Z",
-      "relevancia": 99,
+      "relevancia": 89,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -779,73 +943,56 @@
       "slug": "la-liga-balcarcena-inicia-el-torneo-clausura-con-partidos-a-las-16"
     },
     {
-      "id": "1s10vxl",
-      "titulo": "Rocío Espinillo anticipa su receta para la Fiesta del Postre",
-      "copete": "La madrina de la celebración balcarceña adelantó detalles de la propuesta que presentará del 9 al 12 de octubre. Preparará una alternativa saludable con crema de castañas de cajú y colorantes naturales.",
-      "cuerpo": "La pastelera Rocío Espinillo avanza con los preparativos para su participación en la vigesimosegunda edición de la Fiesta Nacional del Postre en Balcarce. La madrina del tradicional encuentro gastronómico detalló que trabaja en una receta alternativa elaborada a base de una crema de castañas de cajú y colorantes naturales obtenidos de frutas y vegetales.\n\nLa celebración balcarceña se llevará a cabo del viernes 9 al lunes 12 de octubre, con actividades programadas de 11 a 20 horas. Espinillo valoró el traslado de la fecha al mes de octubre y destacó que el cambio resulta favorable para el público asistente.\n\nPor otra parte, la pastelera indicó que su propuesta busca ofrecer una opción atractiva tanto para chicos como para adultos, mientras ajusta los detalles de su presentación en pleno proceso creativo.",
-      "guion": "Rocío Espinillo anticipa su receta para la Fiesta del Postre",
-      "seccion": "Cultura y agenda",
+      "id": "1gv3zir",
+      "titulo": "La Defensoría del Pueblo asiste a vecinos con trámites y subsidios",
+      "copete": "La delegación local detalla su trabajo en la atención de reclamos, el asesoramiento por el subsidio de gas y las gestiones para acceder a prestaciones de salud.",
+      "cuerpo": "La responsable de la delegación local de la Defensoría del Pueblo, Fernanda Ruzza, detalló las tareas que realiza el organismo en la ciudad para acompañar a los vecinos frente a distintas problemáticas y facilitar gestiones cotidianas. Durante una entrevista brindada a un medio local, explicó que la institución funciona como un espacio de escucha y asesoramiento cuando las vías habituales no ofrecen respuestas.\n\nEl organismo brinda orientación para completar trámites y realizar el relevamiento necesario para acceder al régimen de subsidios del gas. Ruzza remarcó que la entidad no depende del poder político, lo que facilita la articulación con obras sociales y organismos estatales para destrabar expedientes.\n\nEn las últimas semanas, la delegación intervino en situaciones complejas relacionadas con la obtención de prótesis, la realización de cirugías y la atención de personas sin cobertura médica, según informó la funcionaria.",
+      "guion": "La Defensoría del Pueblo asiste a vecinos con trámites y subsidios",
+      "seccion": "Balcarce",
       "medios": [
-        "Radio Gabal (FM 104.1)"
+        "Diario La Vanguardia"
       ],
-      "enlace": "https://www.radiogabal.com.ar/index.php/comunidad/rocio-espinillo-ya-palpita-la-fiesta-nacional-del-postre-mis-expectativas-son-altisimas",
+      "enlace": "https://www.diariolavanguardia.com/noticias/44954-zona-fria-el-rol-de-la-defensoria-y-como-asesoran-a-los-vecinos-por-el-subsidio-del-gas/",
       "teniaImagenLaFuente": true,
-      "fecha": "2026-09-30T16:59:57.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-30T17:01:10.363Z",
-      "relevancia": 74,
+      "fecha": "2026-09-30T16:31:19.444Z",
+      "sinFecha": true,
+      "visto": "2026-09-30T16:31:19.444Z",
+      "relevancia": 63,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
       "temas": [],
       "como": "automatica",
       "claves": [
-        "Rocío Espinillo prepara una torta con crema de castañas de cajú.",
-        "La Fiesta Nacional del Postre será del 9 al 12 de octubre.",
-        "El evento gastronómico se desarrollará de 11 a 20 horas."
+        "La Defensoría del Pueblo local asesora sobre el subsidio del gas.",
+        "El organismo canaliza reclamos y guía a los vecinos en trámites.",
+        "Fernanda Ruzza destacó que la entidad no depende del poder político.",
+        "Gestionaron cirugías y prótesis para personas sin obra social."
       ],
       "seSabe": [
-        "Rocío Espinillo es la madrina de la Fiesta Nacional del Postre.",
-        "La pastelera elabora una alternativa con colorantes naturales de frutas y vegetales.",
-        "La celebración se realizará en octubre tras dejar atrás su fecha invernal habitual."
+        "Fernanda Ruzza encabeza la delegación local de la Defensoría del Pueblo.",
+        "El organismo brinda asesoramiento para el relevamiento del subsidio del gas.",
+        "La institución articula con obras sociales y organismos estatales para resolver reclamos.",
+        "En las últimas semanas se concretaron gestiones para conseguir prótesis y cirugías."
       ],
       "noConfirmado": [
         "No pudo ser contrastado de forma independiente con las fuentes consultadas."
       ],
-      "textoRedes": "La madrina de la Fiesta Nacional del Postre, Rocío Espinillo, adelantó detalles de la receta saludable que presentará en la celebración balcarceña que se realizará del 9 al 12 de octubre.",
+      "textoRedes": "La Defensoría del Pueblo en Balcarce detalla su trabajo en la atención de reclamos, el asesoramiento por el subsidio de gas y gestiones de salud.",
       "etiquetas": [
-        "Fiesta Nacional del Postre",
-        "Rocío Espinillo",
+        "Defensoria del Pueblo",
         "Balcarce",
-        "gastronomía"
+        "subsidios",
+        "gas",
+        "reclamos"
       ],
       "fuentesConsultadas": [
         {
-          "medio": "Radio Gabal (FM 104.1)",
-          "enlace": "https://www.radiogabal.com.ar/index.php/comunidad/rocio-espinillo-ya-palpita-la-fiesta-nacional-del-postre-mis-expectativas-son-altisimas",
-          "fecha": "2026-09-30T16:59:57.000Z",
+          "medio": "Diario La Vanguardia",
+          "enlace": "https://www.diariolavanguardia.com/noticias/44954-zona-fria-el-rol-de-la-defensoria-y-como-asesoran-a-los-vecinos-por-el-subsidio-del-gas/",
+          "fecha": null,
           "oficial": false,
-          "aporte": "Detalló la receta que presentará en la Fiesta Nacional del Postre y opinó sobre el cambio de fecha."
-        }
-      ],
-      "antecedentes": [
-        {
-          "id": "12rp30w",
-          "titulo": "Edgardo Ríos visita la Fiesta Nacional del Postre",
-          "fecha": "2026-09-29T18:01:09.192Z",
-          "ruta": "/nota/edgardo-rios-visita-la-fiesta-nacional-del-postre-12rp30w"
-        },
-        {
-          "id": "1nzl1bf",
-          "titulo": "Edgardo Ríos participa en la Fiesta Nacional del Postre",
-          "fecha": "2026-09-29T15:24:50.000Z",
-          "ruta": "/nota/edgardo-rios-participa-en-la-fiesta-nacional-del-postre-1nzl1bf"
-        },
-        {
-          "id": "rlvlss",
-          "titulo": "Valentín Galdon Ritvo suma su presencia a la Fiesta del Postre",
-          "fecha": "2026-09-28T19:02:49.410Z",
-          "ruta": "/nota/valentin-galdon-ritvo-suma-su-presencia-a-la-fiesta-del-postre-rlvlss"
+          "aporte": "Detalló el funcionamiento de la Defensoría del Pueblo en Balcarce y las gestiones de asistencia a vecinos."
         }
       ],
       "verificacion": {
@@ -853,10 +1000,10 @@
         "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
         "sugeridoPorIA": "MEDIA"
       },
-      "slug": "rocio-espinillo-anticipa-su-receta-para-la-fiesta-del-postre",
+      "slug": "la-defensoria-del-pueblo-asiste-a-vecinos-con-tramites-y-subsidios",
       "foto": {
-        "archivo": "fotos-notas/1s10vxl.jpg",
-        "credito": "Foto: Radio Gabal (FM 104.1)"
+        "archivo": "fotos-notas/1gv3zir.jpg",
+        "credito": "Foto: Diario La Vanguardia"
       }
     },
     {
@@ -867,6 +1014,7 @@
       "guion": "La Municipalidad recauda millones en una subasta de tierras",
       "seccion": "Balcarce",
       "medios": [
+        "Puntonueve (FM 100.9)",
         "Municipalidad de Balcarce",
         "Diario La Vanguardia"
       ],
@@ -875,7 +1023,7 @@
       "fecha": "2026-09-30T15:26:12.000Z",
       "sinFecha": false,
       "visto": "2026-09-30T15:31:12.935Z",
-      "relevancia": 74,
+      "relevancia": 94,
       "local": true,
       "oficial": true,
       "publicadaPor": null,
@@ -938,8 +1086,10 @@
         "El Destape",
         "Perfil",
         "Noticias Argentinas (NA)",
+        "La Nueva",
         "El Marplatense",
-        "Bolavip Argentina"
+        "Bolavip Argentina",
+        "La Capital (Rosario)"
       ],
       "enlace": "https://www.elmarplatense.com/argentina-uruguay-y-paraguay-jugaran-las-eliminatorias-rumbo-al-mundial-2030",
       "teniaImagenLaFuente": true,
@@ -1207,11 +1357,11 @@
         "Diario La Vanguardia"
       ],
       "enlace": "https://www.diariolavanguardia.com/noticias/44950-el-hospital-fossati-bajo-presion-mas-demanda-1-124-millones-de-deuda-y-una-fuerte-dependencia-de-fondos-municipales/",
-      "teniaImagenLaFuente": false,
+      "teniaImagenLaFuente": true,
       "fecha": "2026-09-30T13:31:15.123Z",
       "sinFecha": true,
       "visto": "2026-09-30T13:31:15.123Z",
-      "relevancia": 53,
+      "relevancia": 63,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -1341,6 +1491,7 @@
       "guion": "Tres jugadores locales integran la selección provincial de padel",
       "seccion": "Deportes",
       "medios": [
+        "Puntonueve (FM 100.9)",
         "Infórmese Primero (FM 104.9)",
         "Radio Gabal (FM 104.1)",
         "Municipalidad de Balcarce"
@@ -1350,7 +1501,7 @@
       "fecha": "2026-09-30T13:24:29.000Z",
       "sinFecha": false,
       "visto": "2026-09-30T14:01:11.068Z",
-      "relevancia": 94,
+      "relevancia": 100,
       "local": true,
       "oficial": true,
       "publicadaPor": null,
@@ -1596,6 +1747,7 @@
       "guion": "El equipo de fútbol playa clasifica a la final bonaerense",
       "seccion": "Deportes",
       "medios": [
+        "Puntonueve (FM 100.9)",
         "Infórmese Primero (FM 104.9)",
         "Radio Gabal (FM 104.1)",
         "Municipalidad de Balcarce"
@@ -1605,7 +1757,7 @@
       "fecha": "2026-09-30T13:00:08.000Z",
       "sinFecha": false,
       "visto": "2026-09-30T13:01:14.157Z",
-      "relevancia": 94,
+      "relevancia": 100,
       "local": true,
       "oficial": true,
       "publicadaPor": null,
@@ -1643,83 +1795,6 @@
         "sugeridoPorIA": "MEDIA"
       },
       "slug": "el-equipo-de-futbol-playa-clasifica-a-la-final-bonaerense"
-    },
-    {
-      "id": "qglhlg",
-      "titulo": "La inversión real cae un 5,4 por ciento anual en agosto",
-      "copete": "La formación de capital sumó 7.515 millones de dólares durante el octavo mes del año. El sector de la construcción y el rubro de maquinaria registraron bajas interanuales.",
-      "cuerpo": "La inversión real alcanzó los 7.515 millones de dólares en agosto y acumuló una contracción de 5,4 por ciento interanual, de acuerdo con el informe difundido por el Centro de Estudios Económicos de Orlando J. Ferreres y Asociados.\n\nAl discriminar por sectores, la adquisición de maquinaria y equipo disminuyó un 4,1 por ciento anual. En ese rubro, los equipos de fabricación nacional retrocedieron un 5,3 por ciento y las compras externas cayeron un 3,1 por ciento, lo que dejó una merma acumulada del 11,4 por ciento en los primeros ocho meses.\n\nPor su parte, el sector de la construcción se contrajo un 7,1 por ciento y marcó el descenso más pronunciado del sector en el cuatrimestre, con un saldo negativo acumulado del 3,6 por ciento. Desde la consultora privada señalaron que el desempeño general mantiene la debilidad aunque la merma interanual se moderó en comparación con los meses previos.",
-      "guion": "La inversión real cae un 5,4 por ciento anual en agosto",
-      "seccion": "Economía",
-      "medios": [
-        "Infobae",
-        "Perfil",
-        "C5N",
-        "Diario Popular",
-        "Noticias Argentinas (NA)"
-      ],
-      "enlace": "https://noticiasargentinas.com/economia/otra-mala-noticia-para-el-gobierno--la-inversion-real-cayo-5-4--en-agosto_a6abcfa65129df45908d3736a",
-      "teniaImagenLaFuente": true,
-      "fecha": "2026-09-30T12:57:13.000Z",
-      "sinFecha": false,
-      "visto": "2026-09-30T14:31:03.728Z",
-      "relevancia": 73,
-      "local": false,
-      "publicadaPor": null,
-      "publicadaCuando": null,
-      "temas": [],
-      "como": "automatica",
-      "claves": [
-        "La inversión real sumó 7.515 millones de dólares en agosto.",
-        "La baja interanual fue de 5,4 por ciento con una merma acumulada del 7,9 por ciento en el año.",
-        "La construcción cayó un 7,1 por ciento y la compra de maquinaria un 4,1 por ciento."
-      ],
-      "seSabe": [
-        "La inversión real alcanzó los 7.515 millones de dólares en agosto.",
-        "La baja interanual fue de 5,4 por ciento según el centro de estudios privados.",
-        "La acumulada de los primeros ocho meses marca una disminución del 7,9 por ciento."
-      ],
-      "textoRedes": "La inversión real alcanzó los 7.515 millones de dólares en agosto y acumuló una baja interanual del 5,4 por ciento según un informe privado.",
-      "etiquetas": [
-        "inversión",
-        "economia",
-        "agosto",
-        "construccion",
-        "maquinaria"
-      ],
-      "fuentesConsultadas": [
-        {
-          "medio": "Noticias Argentinas (NA)",
-          "enlace": "https://noticiasargentinas.com/economia/otra-mala-noticia-para-el-gobierno--la-inversion-real-cayo-5-4--en-agosto_a6abcfa65129df45908d3736a",
-          "fecha": "2026-09-30T12:57:13.000Z",
-          "oficial": false,
-          "aporte": "Aportó los datos globales de la inversión, los porcentajes de cada sector y el análisis de la consultora privada."
-        },
-        {
-          "medio": "C5N",
-          "enlace": "https://www.c5n.com/economia/la-inversion-cayo-54-agosto-y-acumula-una-baja-79-lo-que-va-del-ano-n250321",
-          "fecha": "2026-09-30T14:24:48.000Z",
-          "oficial": false,
-          "aporte": "Confirmó la cifra de 7.515 millones de dólares para la inversión real de agosto."
-        },
-        {
-          "medio": "Diario Popular",
-          "enlace": "https://www.diariopopular.com.ar/economia/la-inversion-real-cayo-54-agosto-y-acumula-un-retroceso-79-el-ano-n922270",
-          "fecha": "2026-09-30T14:19:00.000Z",
-          "oficial": false,
-          "aporte": "Detalló que la inversión representó el 18,6 por ciento del PBI y las caídas específicas en construcción y maquinaria."
-        }
-      ],
-      "verificacion": {
-        "nivel": "ALTA",
-        "porque": "Lo contaron tres medios independientes.",
-        "sugeridoPorIA": "MEDIA"
-      },
-      "slug": "la-inversion-real-cae-un-5-4-por-ciento-anual-en-agosto",
-      "foto": {
-        "archivo": "fotos-notas/qglhlg.jpg",
-        "credito": "Foto: C5N"
-      }
     },
     {
       "id": "5evpzb",
@@ -1886,7 +1961,7 @@
       "fecha": "2026-09-30T11:49:49.000Z",
       "sinFecha": false,
       "visto": "2026-09-30T12:01:02.331Z",
-      "relevancia": 84,
+      "relevancia": 88,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -2016,62 +2091,154 @@
       }
     },
     {
-      "id": "1b9yxaj",
-      "titulo": "La ANSES automatiza el control escolar para cobrar el retenido de la AUH",
-      "copete": "La Administración Nacional de la Seguridad Social oficializó un cambio en el sistema para cobrar el porcentaje retenido de la Asignación Universal por Hijo. La verificación será automática desde noviembre.",
-      "cuerpo": "En octubre, los beneficiarios percibirán un total de 156.588 pesos, de los cuales 125.270,40 pesos corresponden al ochenta por ciento y 31.317,60 pesos al veinte por ciento retenido, según informó la ANSES. El cronograma de pagos comenzará el jueves 8 de octubre para los documentos terminados en cero y concluirá el jueves 22 de octubre para los finalizados en nueve, sin pagos el lunes 12 por el feriado nacional.\n\nSi el organismo previsional no cuenta con los datos educativos necesarios de manera automática, los titulares podrán acreditar el cumplimiento de los controles escolares mediante la presentación presencial del documento sanitario y educativo.",
-      "guion": "La ANSES automatiza el control escolar para cobrar el retenido de la AUH",
+      "id": "10skxuq",
+      "titulo": "Reclaman a la Provincia datos sobre las habilitaciones del Autódromo",
+      "copete": "Un pedido formal ingresado ante el Ministerio de Desarrollo de la Comunidad bonaerense exige expedientes y pólizas sobre las competencias realizadas el último fin de semana en el circuito serrano.",
+      "cuerpo": "Un pedido formal de acceso a la información pública ingresó el martes ante el Ministerio de Desarrollo de la Comunidad bonaerense para conocer las habilitaciones, inspecciones y mecanismos de control del Autódromo Juan Manuel Fangio. La presentación, impulsada por el periodista Julio César Politano, exige copias de los expedientes, resoluciones y dictámenes vinculados con el evento desarrollado durante el fin de semana del 26 y 27 de septiembre.\n\nEl requerimiento apunta a determinar la situación regulatoria de la Municipalidad de Balcarce y de la Comisión Asesora y Fiscalizadora de la ACTC ante la Comisión Provincial de Automovilismo y Motociclismo. Además, solicita las constancias de las pólizas de seguro obligatorio y los antecedentes técnicos de la autorización provisoria otorgada al circuito. El escrito advierte con recurrir a la vía judicial si el Poder Ejecutivo provincial incumple los plazos legales de respuesta.",
+      "guion": "Reclaman a la Provincia datos sobre las habilitaciones del Autódromo",
+      "seccion": "Política",
+      "medios": [
+        "Puntonueve (FM 100.9)"
+      ],
+      "enlace": "https://puntonueve.com.ar/piden-informacion-a-la-provincia-sobre-las-habilitaciones-y-controles-del-autodromo-juan-manuel-fangio/",
+      "teniaImagenLaFuente": false,
+      "fecha": "2026-09-30T11:15:42.000Z",
+      "sinFecha": false,
+      "visto": "2026-09-30T12:01:02.331Z",
+      "relevancia": 82,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [
+        "autodromo",
+        "fangio"
+      ],
+      "como": "automatica",
+      "claves": [
+        "Presentan un pedido de acceso a la información pública ante la Provincia.",
+        "Exigen expedientes sobre habilitaciones, inspecciones y seguros del circuito.",
+        "Apunta a determinar las autorizaciones de la Municipalidad y de la fiscalizadora.",
+        "El autódromo había reabierto el último fin de semana tras quince años."
+      ],
+      "seSabe": [
+        "El pedido formal fue presentado el martes 29 de septiembre por el periodista Julio César Politano.",
+        "La solicitud se dirigió al Ministerio de Desarrollo de la Comunidad bonaerense.",
+        "Se reclaman copias de expedientes, resoluciones y comprobantes de seguros de las competencias del 26 y 27 de septiembre.",
+        "El escrito incluye una reserva de acudir a la vía judicial ante la falta de respuesta oficial."
+      ],
+      "noConfirmado": [
+        "La respuesta oficial del gobierno provincial sobre la documentación solicitada.",
+        "No pudo ser contrastado de forma independiente con las fuentes consultadas."
+      ],
+      "textoRedes": "Presentan un pedido formal ante la Provincia para conocer las habilitaciones, inspecciones y pólizas de seguro del Autódromo Juan Manuel Fangio tras las competencias del último fin de semana.",
+      "etiquetas": [
+        "Autodromo Juan Manuel Fangio",
+        "Balcarce",
+        "Provincia de Buenos Aires",
+        "CoPAM",
+        "Automovilismo"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Puntonueve (FM 100.9)",
+          "enlace": "https://puntonueve.com.ar/piden-informacion-a-la-provincia-sobre-las-habilitaciones-y-controles-del-autodromo-juan-manuel-fangio/",
+          "fecha": "2026-09-30T11:15:42.000Z",
+          "oficial": false,
+          "aporte": "Detalló la presentación del pedido de acceso a la información pública sobre las habilitaciones del autódromo."
+        }
+      ],
+      "antecedentes": [
+        {
+          "id": "wgq362",
+          "titulo": "Omar Martínez termina cuarto en el autódromo Juan Manuel Fangio",
+          "fecha": "2026-09-29T14:55:00.000Z",
+          "ruta": "/nota/omar-martinez-termina-cuarto-en-el-autodromo-juan-manuel-fangio-wgq362"
+        },
+        {
+          "id": "rebipe",
+          "titulo": "Mangoni repasa su paso por el autódromo Juan Manuel Fangio",
+          "fecha": "2026-09-28T16:15:38.000Z",
+          "ruta": "/nota/mangoni-repasa-su-paso-por-el-autodromo-juan-manuel-fangio-rebipe"
+        },
+        {
+          "id": "83u2vt",
+          "titulo": "El autódromo Juan Manuel Fangio reabre tras quince años",
+          "fecha": "2026-09-28T03:01:51.643Z",
+          "ruta": "/nota/el-autodromo-juan-manuel-fangio-reabre-tras-quince-anos-83u2vt"
+        }
+      ],
+      "verificacion": {
+        "nivel": "MEDIA",
+        "porque": "La informó un solo medio y todavía no pudo ser contrastada de forma independiente.",
+        "sugeridoPorIA": "MEDIA"
+      },
+      "slug": "reclaman-a-la-provincia-datos-sobre-las-habilitaciones-del-autodromo",
+      "foto": {
+        "archivo": "fotos-notas/10skxuq.jpg",
+        "credito": "Foto: Puntonueve (FM 100.9)"
+      }
+    },
+    {
+      "id": "1qbwmd0",
+      "titulo": "Caputo descarta una expansión monetaria y prioriza contener la inflación",
+      "copete": "El ministro de Economía descartó una emisión de dinero para reactivar la actividad. Ratificó que el eje de la gestión sigue en controlar la cotización cambiaria y la suba de precios.",
+      "cuerpo": "El ministro de Economía, Luis Caputo, descartó la aplicación de una expansión monetaria para impulsar la actividad económica de cara a los comicios presidenciales de octubre de 2027. Durante su exposición en el CFO Summit, el funcionario nacional aseguró que la cantidad de pesos es limitada y que la base monetaria se encuentra en uno de sus registros más bajos tras no registrar crecimiento en el último año.\n\nEl titular del Palacio de Hacienda ratificó la continuidad del ajuste fiscal y monetario, al tiempo que apuntó contra quienes reclaman una inyección de fondos. En ese sentido, detalló que la administración central dispone de unos 75.000 millones de dólares entre reservas compradas, swaps y operaciones en el mercado de futuros, a lo que sumó proyecciones de ingreso de divisas por el RIGI y la balanza comercial para la etapa previa a la elección.\n\nPor otra parte, la estimación inflacionaria para septiembre se ubicaría por debajo del 2%, tras el registro del 1,7% contabilizado en agosto, aunque las consultoras privadas advierten sobre un posible repunte en los precios de los alimentos y los combustibles.",
+      "guion": "Caputo descarta una expansión monetaria y prioriza contener la inflación",
       "seccion": "Economía",
       "medios": [
-        "El Cronista",
+        "Infobae",
         "Minuto Uno",
-        "C5N",
-        "Crónica"
+        "Radio Mitre"
       ],
-      "enlace": "https://www.cronista.com/informacion-gral/auh-anses-confirmo-un-cambio-clave-para-cobrar-el-20-retenido-como-se-implementara-y-desde-cuando/",
+      "enlace": "https://www.infobae.com/economia/2026/09/30/caputo-descarto-un-plan-platita-para-reactivar-la-economia-el-foco-es-controlar-el-dolar-y-bajar-mas-la-inflacion/",
       "teniaImagenLaFuente": true,
-      "fecha": "2026-09-30T10:50:00.000Z",
+      "fecha": "2026-09-30T10:39:05.000Z",
       "sinFecha": false,
-      "visto": "2026-09-30T16:31:19.444Z",
-      "relevancia": 63,
+      "visto": "2026-09-30T13:01:14.157Z",
+      "relevancia": 59,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
       "temas": [],
       "como": "automatica",
       "claves": [
-        "La ANSES oficializó un cambio en el cobro del retenido de la AUH.",
-        "La verificación de la escolaridad será automática desde noviembre.",
-        "El cronograma de pagos de octubre se extiende del jueves 8 al jueves 22.",
-        "Los haberes de octubre alcanzan los 156.588 pesos con un veinte por ciento de retención."
+        "El ministro de Economía descartó emitir dinero para reactivar la economía.",
+        "Caputo ratificó que el objetivo central es controlar el dólar y bajar la inflación.",
+        "El funcionario aseguró que la base monetaria se mantiene en niveles históricamente bajos.",
+        "El Gobierno proyecta que la inflación de septiembre se ubique por debajo del 2%."
       ],
       "seSabe": [
-        "La ANSES emitió la Resolución N 290/2026 para modificar el acceso al porcentaje retenido de la AUH, según el Boletín Oficial.",
-        "La verificación escolar automática regirá desde noviembre para menores desde los cinco años.",
-        "El haber de octubre será de 156.588 pesos, con una retención de 31.317,60 pesos.",
-        "El calendario de pagos de octubre se desarrollará entre el 8 y el 22 de dicho mes."
+        "Luis Caputo descartó una expansión monetaria antes de las elecciones presidenciales de octubre de 2027.",
+        "El ministro afirmó que la base monetaria no creció en el último año.",
+        "El funcionario detalló recursos por 75.000 millones de dólares entre reservas, swaps y futuros."
       ],
-      "textoRedes": "La ANSES modificó el sistema para cobrar el porcentaje retenido de la Asignación Universal por Hijo y la verificación escolar será automática desde noviembre.",
+      "noConfirmado": [
+        "El impacto final que tendrán los posibles aumentos de combustibles en el índice de precios de octubre.",
+        "El nivel exacto de la inflación de septiembre, que las consultoras proyectan con un leve repunte respecto a agosto."
+      ],
+      "textoRedes": "El ministro de Economía, Luis Caputo, descartó emitir dinero para reactivar la economía y ratificó que el foco oficial sigue en controlar el dólar y bajar la inflación de cara a los comicios de 2027.",
       "etiquetas": [
-        "ANSES",
-        "AUH",
-        "Asignación Universal por Hijo",
-        "Boletín Oficial"
+        "Luis Caputo",
+        "economia",
+        "inflacion",
+        "dolar",
+        "base monetaria",
+        "elecciones 2027"
       ],
       "fuentesConsultadas": [
         {
-          "medio": "El Cronista",
-          "enlace": "https://www.cronista.com/informacion-gral/auh-anses-confirmo-un-cambio-clave-para-cobrar-el-20-retenido-como-se-implementara-y-desde-cuando/",
-          "fecha": "2026-09-30T14:08:26.000Z",
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/economia/2026/09/30/caputo-descarto-un-plan-platita-para-reactivar-la-economia-el-foco-es-controlar-el-dolar-y-bajar-mas-la-inflacion/",
+          "fecha": "2026-09-30T10:39:05.000Z",
           "oficial": false,
-          "aporte": "Detalló los números de las resoluciones, los montos de octubre, la retención y el cronograma de pagos."
+          "aporte": "Aportó los detalles sobre la base monetaria, los dichos de Caputo en el CFO Summit, los datos de reservas y las proyecciones de inflación."
         },
         {
-          "medio": "Crónica",
-          "enlace": "https://www.cronica.com.ar/sociedad/mucha-atencion-cambia-un-requisito-clave-para-cobrar-el-20-retenido-de-la-auh/",
-          "fecha": "2026-09-30T15:20:00.000Z",
+          "medio": "Radio Mitre",
+          "enlace": "https://radiomitre.cienradios.com/economia/luis-caputo-hablo-sobre-el-rumbo-economico-de-la-argentina-y-descarto-un-plan-platita/",
+          "fecha": "2026-09-30T11:31:46.000Z",
           "oficial": false,
-          "aporte": "Confirmó la oficialización de la medida y su publicación en el Boletín Oficial el miércoles."
+          "aporte": "Aportó la confirmación sobre el rechazo a la expansión monetaria de cara a los comicios de 2027 y la defensa del ajuste ante ejecutivos."
         }
       ],
       "verificacion": {
@@ -2079,10 +2246,10 @@
         "porque": "Lo contaron dos medios independientes.",
         "sugeridoPorIA": "ALTA"
       },
-      "slug": "la-anses-automatiza-el-control-escolar-para-cobrar-el-retenido-de-la",
+      "slug": "caputo-descarta-una-expansion-monetaria-y-prioriza-contener-la",
       "foto": {
-        "archivo": "fotos-notas/1b9yxaj.jpg",
-        "credito": "Foto: El Cronista"
+        "archivo": "fotos-notas/1qbwmd0.jpg",
+        "credito": "Foto: Infobae"
       }
     },
     {
@@ -2104,12 +2271,12 @@
         "iProfesional",
         "Minuto Uno",
         "C5N",
-        "Crónica",
         "Noticias Argentinas (NA)",
         "El Día",
         "0221",
         "La Opinión",
         "El Eco de Tandil",
+        "Crónica",
         "La Nueva",
         "Radio Mitre"
       ],
@@ -2200,7 +2367,6 @@
       "seccion": "Agro",
       "medios": [
         "Infórmese Primero (FM 104.9)",
-        "El Eco de Tandil",
         "Agencia DIB",
         "La Nación",
         "Infobae",
@@ -2214,15 +2380,16 @@
         "Crónica",
         "Noticias Argentinas (NA)",
         "El Día",
+        "Infoeme",
         "ANDigital",
         "El Marplatense",
         "Infobrisas (Radio Brisas)",
-        "Radio Mitre",
-        "Infoeme",
+        "El Eco de Tandil",
         "Agrositio",
-        "El Economista",
         "Agroempresario",
-        "Noticias Agropecuarias"
+        "El Economista",
+        "Noticias Agropecuarias",
+        "Radio Mitre"
       ],
       "enlace": "https://www.lanacion.com.ar/economia/campo/el-gobierno-anuncio-que-japon-abrio-su-mercado-a-la-carne-vacuna-argentina-nid30092026/",
       "teniaImagenLaFuente": true,
@@ -2367,6 +2534,97 @@
       }
     },
     {
+      "id": "m6yqqj",
+      "titulo": "Robbie Williams da un show acústico en la calle frente a su hotel en Buenos Aires",
+      "copete": "El músico británico sorprendió a sus seguidores en el barrio porteño de Puerto Madero con un mini recital improvisado. El artista se prepara para sus presentaciones en el Arena de Buenos Aires.",
+      "cuerpo": "El cantante Robbie Williams salió a la puerta del Hotel Faena en Buenos Aires e interpretó cuatro temas junto a su guitarrista ante un grupo de entre 30 y 40 personas.\n\nEl artista británico llegó al país procedente de Chile para iniciar una serie de recitales que marcarán su reencuentro con el público argentino tras dos décadas sin shows propios en la ciudad. Sus presentaciones están previstas para los días 1, 2 y 4 de octubre en el Arena de Buenos Aires con un repertorio centrado en su nuevo disco y sus clásicos.\n\nLa última vez que el músico realizó conciertos individuales en Buenos Aires fue en octubre de 2006 en el estadio River Plate. En 2018 tenía previsto actuar en un festival local, pero el show debió suspenderse por un temporal.",
+      "guion": "Robbie Williams da un show acústico en la calle frente a su hotel en Buenos Aires",
+      "seccion": "Cultura y agenda",
+      "medios": [
+        "Ámbito",
+        "TN (Todo Noticias)",
+        "Infobae",
+        "Minuto Uno",
+        "Clarín",
+        "A24",
+        "La Nación",
+        "La Capital (Rosario)"
+      ],
+      "enlace": "https://www.infobae.com/teleshow/2026/09/30/robbie-williams-sorprendio-a-sus-fans-en-buenos-aires-con-un-show-acustico-en-la-puerta-de-su-hotel/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-30T02:13:42.000Z",
+      "sinFecha": false,
+      "visto": "2026-09-30T12:57:58.335Z",
+      "relevancia": 62,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "textoRedes": "Robbie Williams sorprendió a sus seguidores con un show acústico improvisado en la puerta de su hotel en Buenos Aires antes de sus conciertos en el Arena.",
+      "etiquetas": [
+        "Robbie Williams",
+        "Buenos Aires",
+        "musica",
+        "recitales",
+        "Hotel Faena"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/teleshow/2026/09/30/robbie-williams-sorprendio-a-sus-fans-en-buenos-aires-con-un-show-acustico-en-la-puerta-de-su-hotel/",
+          "fecha": "2026-09-30T02:13:42.000Z",
+          "oficial": false,
+          "aporte": "Detalló la hora, el lugar y la dinámica del encuentro con los seguidores."
+        },
+        {
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/musica/noticias/2026/09/30/robbie-williams-salio-a-la-puerta-del-hotel-y-canto-para-los-fans-argentinos-que-fueron-a-saludarlo/",
+          "fecha": "2026-09-30T04:03:56.000Z",
+          "oficial": false,
+          "aporte": "Confirmó la presencia del artista en la puerta del hotel."
+        },
+        {
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/videos/musica/noticias/2026/09/30/robbie-williams-salio-a-la-puerta-del-hotel-y-canto-para-los-fans-argentinos-que-fueron-a-saludarlo-video-2/",
+          "fecha": "2026-09-30T04:04:00.000Z",
+          "oficial": false,
+          "aporte": "No aportó información adicional."
+        },
+        {
+          "medio": "Minuto Uno",
+          "enlace": "https://www.minutouno.com/espectaculos/robbie-williams-sorprendio-sus-fans-buenos-aires-y-les-canto-frente-al-hotel-el-video-n6328256",
+          "fecha": "2026-09-30T03:08:00.000Z",
+          "oficial": false,
+          "aporte": "Mencionó el encuentro entre el cantante y sus seguidores."
+        },
+        {
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/videos/musica/noticias/2026/09/30/robbie-williams-salio-a-la-puerta-del-hotel-y-canto-para-los-fans-argentinos-que-fueron-a-saludarlo/",
+          "fecha": "2026-09-30T04:03:59.000Z",
+          "oficial": false,
+          "aporte": "Indicó que el artista cantó cuatro canciones."
+        },
+        {
+          "medio": "Clarín",
+          "enlace": "https://www.clarin.com/fama/llegada-pais-robbie-williams-sorprendio-fans-hizo-mini-unplugged-exclusivo-puerta-hotel_0_E6hUcO9EwY.html",
+          "fecha": "2026-09-30T07:10:04.000Z",
+          "oficial": false,
+          "aporte": "Precisó que la improvisación ocurrió en Puerto Madero e incluyó una videollamada familiar."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron cuatro medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "robbie-williams-da-un-show-acustico-en-la-calle-frente-a-su-hotel-en",
+      "foto": {
+        "archivo": "fotos-notas/m6yqqj.jpg",
+        "credito": "Foto: Clarín"
+      }
+    },
+    {
       "id": "1hkh8ez",
       "titulo": "UPCN dicta una capacitación gratuita para auxiliares",
       "copete": "La seccional provincial del gremio organiza el miércoles una jornada formativa sobre normativas, derechos y trámites laborales. Será en el Salón de Actos del establecimiento secundario número uno.",
@@ -2428,10 +2686,10 @@
       "seccion": "Automovilismo",
       "medios": [
         "La Verdad de Ayacucho",
-        "0223 (Mar del Plata)",
-        "Campeones",
         "Solotc",
-        "Córdoba Competición"
+        "0223 (Mar del Plata)",
+        "Córdoba Competición",
+        "Campeones"
       ],
       "enlace": "https://www.0223.com.ar/nota/2026-9-29-21-9-0-tras-la-fiesta-en-el-autodromo-juan-manuel-fangio-dura-sancion-a-werner-multa-millonaria-y-largada-desde-el-fondo",
       "teniaImagenLaFuente": true,
@@ -2533,6 +2791,7 @@
         "La Nueva",
         "0221",
         "Bolavip Argentina",
+        "La Capital (Rosario)",
         "Minuto Uno",
         "Clarín"
       ],
@@ -2731,6 +2990,79 @@
       }
     },
     {
+      "id": "v2h1r4",
+      "titulo": "Lanzan una diplomatura universitaria para emprendedores locales",
+      "copete": "La Universidad Nacional de Mar del Plata dictará una capacitación de un año y medio en el Centro Universitario. La iniciativa busca fortalecer proyectos productivos mediante una modalidad mixta.",
+      "cuerpo": "El Centro Universitario albergará una nueva diplomatura destinada a la creación y gestión de emprendimientos, a cargo de la Universidad Nacional de Mar del Plata. La propuesta se desarrollará a través del programa Puentes y tendrá una duración de un año y medio bajo una modalidad mixta de cursada.\n\nLa iniciativa surge articulada con la Subsecretaría de Producción y Empleo y la Dirección de Juventud. Según explicó Marina Berardo, la oferta apunta a brindar herramientas de planificación a quienes poseen un proyecto en marcha o buscan transformar una idea en una iniciativa productiva.\n\nComo parte del proceso previo, la semana pasada se concretó un taller introductorio que despertó interés entre los asistentes y tendrá continuidad con un nuevo encuentro antes del inicio de la formación principal.",
+      "guion": "Lanzan una diplomatura universitaria para emprendedores locales",
+      "seccion": "Balcarce",
+      "medios": [
+        "Puntonueve (FM 100.9)",
+        "El Diario Balcarce"
+      ],
+      "enlace": "https://puntonueve.com.ar/impulsan-una-diplomatura-para-la-creacion-y-gestion-de-emprendimientos-en-balcarce/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-29T22:23:55.000Z",
+      "sinFecha": false,
+      "visto": "2026-09-30T16:01:20.946Z",
+      "relevancia": 90,
+      "local": true,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "Dictará la Universidad Nacional de Mar del Plata",
+        "Duración de un año y medio en el Centro Universitario",
+        "Modalidad mixta orientada a proyectos productivos",
+        "Articulada mediante el programa Puentes"
+      ],
+      "seSabe": [
+        "La capacitación durará un año y medio según la Universidad Nacional de Mar del Plata.",
+        "Las clases presenciales se dictarán en el Centro Universitario.",
+        "La propuesta combina instancias virtuales y presenciales.",
+        "Marina Berardo explicó los detalles del programa desde la Subsecretaría de Producción y Empleo."
+      ],
+      "noConfirmado": [
+        "Todavía no se informó la fecha exacta de inicio de la diplomatura.",
+        "No trascendió el cronograma del próximo encuentro del taller introductorio."
+      ],
+      "textoRedes": "Impulsan una diplomatura universitaria de un año y medio para emprendedores en el Centro Universitario con modalidad mixta.",
+      "etiquetas": [
+        "Diplomatura",
+        "Emprendedores",
+        "Universidad Nacional de Mar del Plata",
+        "Centro Universitario",
+        "Producción y Empleo"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "Puntonueve (FM 100.9)",
+          "enlace": "https://puntonueve.com.ar/impulsan-una-diplomatura-para-la-creacion-y-gestion-de-emprendimientos-en-balcarce/",
+          "fecha": "2026-09-30T11:46:08.000Z",
+          "oficial": false,
+          "aporte": "Aportó los detalles sobre la duración, modalidad y sede de la diplomatura, además de las declaraciones del área municipal."
+        },
+        {
+          "medio": "El Diario Balcarce",
+          "enlace": "https://eldiariobalcarce.com.ar/impulsan-una-diplomatura-para-la-gestion-y-creacion-de-emprendimientos-en-balcarce-907",
+          "fecha": null,
+          "oficial": false,
+          "aporte": "No aportó información adicional al no incluir texto en el resumen."
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron dos medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "lanzan-una-diplomatura-universitaria-para-emprendedores-locales",
+      "foto": {
+        "archivo": "fotos-notas/v2h1r4.jpg",
+        "credito": "Foto: Puntonueve (FM 100.9)"
+      }
+    },
+    {
       "id": "1fpyvha",
       "titulo": "El Gobierno recibe un nuevo lote de aviones caza F-16 en Córdoba",
       "copete": "La Fuerza Aérea incorpora seis nuevas unidades de combate tras un vuelo desde Dinamarca. El país ya suma una docena de aeronaves operativas.",
@@ -2841,7 +3173,9 @@
       "guion": "El Banco Central compra dólares pero las reservas caen",
       "seccion": "Economía",
       "medios": [
+        "La Nación",
         "Perfil",
+        "El Cronista",
         "El Destape",
         "iProfesional",
         "C5N",
@@ -3079,8 +3413,8 @@
       "guion": "Atlético de Madrid busca al arquero de River Santiago Beltrán",
       "seccion": "Fútbol",
       "medios": [
-        "TyC Sports",
         "Minuto Uno",
+        "TyC Sports",
         "Crónica",
         "La Página Millonaria"
       ],
@@ -3313,11 +3647,15 @@
       "guion": null,
       "seccion": "Agro",
       "medios": [
+        "Infobae",
         "La Nación",
-        "Infocampo",
+        "Clarín",
         "Bichos de Campo",
+        "TN (Todo Noticias)",
+        "Agroempresario",
         "Todo Agro",
-        "Agroempresario"
+        "Noticias Agropecuarias",
+        "Infocampo"
       ],
       "enlace": "https://www.infocampo.com.ar/federacion-agraria-es-necesario-que-las-retenciones-tengan-un-fin-que-sea-por-ley-y-que-no-vuelvan-mas/",
       "teniaImagenLaFuente": true,
@@ -3339,6 +3677,13 @@
           "aporte": null
         },
         {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/revista-chacra/2026/09/30/andrea-sarnari-fue-reelegida-al-frente-de-federacion-agraria-argentina-con-el-955-de-los-votos/",
+          "fecha": "2026-09-30T20:51:48.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
           "medio": "La Nación",
           "enlace": "https://www.lanacion.com.ar/economia/campo/que-no-vuelvan-nunca-mas-fuerte-reclamo-de-federacion-agraria-para-poner-fin-a-las-retenciones-por-nid29092026/",
           "fecha": "2026-09-29T21:37:11.000Z",
@@ -3346,9 +3691,30 @@
           "aporte": null
         },
         {
+          "medio": "Clarín",
+          "enlace": "https://www.clarin.com/rural/reeligieron-andrea-sarnari-presidenta-federacion-agraria-periodo_0_n2GlNmgonO.html",
+          "fecha": "2026-09-30T19:58:05.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
           "medio": "Bichos de Campo",
-          "enlace": "https://bichosdecampo.com/andrea-sarnari-abrio-el-congreso-de-federacion-agraria-reclamando-que-las-retenciones-terminen-por-ley-en-el-congreso-y-no-vuelvan-nunca-mas/",
-          "fecha": "2026-09-29T22:51:16.000Z",
+          "enlace": "https://bichosdecampo.com/aplastante-andrea-sarnari-fue-relecta-al-mando-de-la-federacion-agraria-con-mas-del-90-de-los-votos/",
+          "fecha": "2026-09-30T20:30:10.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/campo/2026/09/30/andrea-sarnari-fue-reelecta-en-la-federacion-agraria-con-mas-del-90-de-los-votos/",
+          "fecha": "2026-09-30T20:45:05.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Agroempresario",
+          "enlace": "https://agroempresario.com/publicacion/121988/federacion-agraria-pidio-una-ley-para-eliminar-las-retenciones-y-reclamo-cambios-en-impuestos-credito-e-infraestructura/",
+          "fecha": "2026-09-30T17:40:37.000Z",
           "oficial": false,
           "aporte": null
         },
@@ -3360,9 +3726,16 @@
           "aporte": null
         },
         {
-          "medio": "Agroempresario",
-          "enlace": "https://agroempresario.com/publicacion/121988/federacion-agraria-pidio-una-ley-para-eliminar-las-retenciones-y-reclamo-cambios-en-impuestos-credito-e-infraestructura/",
-          "fecha": "2026-09-30T17:40:37.000Z",
+          "medio": "Noticias Agropecuarias",
+          "enlace": "https://www.noticiasagropecuarias.com/2026/09/30/sarnari-fue-reelecta-como-presidenta-de-la-federacion-agraria-argentina/",
+          "fecha": "2026-09-30T20:47:18.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Bichos de Campo",
+          "enlace": "https://bichosdecampo.com/andrea-sarnari-abrio-el-congreso-de-federacion-agraria-reclamando-que-las-retenciones-terminen-por-ley-en-el-congreso-y-no-vuelvan-nunca-mas/",
+          "fecha": "2026-09-29T22:51:16.000Z",
           "oficial": false,
           "aporte": null
         }
@@ -3747,6 +4120,110 @@
       }
     },
     {
+      "id": "1q0vfmx",
+      "titulo": "El FMI concluye su misión técnica y evalúa la economía",
+      "copete": "La delegación del Fondo Monetario Internacional finalizó el martes la auditoría sobre el programa vigente. De la aprobación depende un desembolso cercano a los 900 millones de dólares.",
+      "cuerpo": "Las conversaciones se centraron en el resultado fiscal y en la acumulación de reservas del Banco Central, tras una visita que había comenzado el lunes 21.\n\nLa estancia de los enviados internacionales se enmarca en la tercera revisión del acuerdo financiero suscripto en abril del año pasado.\n\nTras el cierre de las reuniones técnicas, resta la elaboración de un entendimiento a nivel de staff para su posterior tratamiento en el directorio. La eventual aprobación activaría un desembolso de aproximadamente 900 millones de dólares.",
+      "guion": "El FMI concluye su misión técnica y evalúa la economía",
+      "seccion": "Economía",
+      "medios": [
+        "QZ Noticias (Mar del Plata)",
+        "Infobae",
+        "Perfil",
+        "TN (Todo Noticias)",
+        "El Cronista",
+        "El Destape",
+        "iProfesional",
+        "Crónica",
+        "Canal 26",
+        "Diario Popular",
+        "Noticias Argentinas (NA)",
+        "El Eco de Tandil",
+        "La Nueva"
+      ],
+      "enlace": "https://tn.com.ar/economia/2026/09/30/el-fmi-termino-su-mision-en-la-argentina-y-hay-expectativa-por-el-resultado-de-la-tercera-revision-del-programa-economico/",
+      "teniaImagenLaFuente": true,
+      "fecha": "2026-09-29T15:12:49.351Z",
+      "sinFecha": false,
+      "visto": "2026-09-30T19:01:15.723Z",
+      "relevancia": 73,
+      "local": false,
+      "publicadaPor": null,
+      "publicadaCuando": null,
+      "temas": [],
+      "como": "automatica",
+      "claves": [
+        "El FMI finalizó la tercera revisión del acuerdo económico.",
+        "La visita técnica estuvo liderada por la funcionaria Joyce Wong.",
+        "Un eventual visto bueno destrabaría un desembolso de 900 millones de dólares."
+      ],
+      "noConfirmado": [
+        "Todavía no se informó la fecha exacta en la que el directorio emitirá su resolución final sobre la revisión."
+      ],
+      "textoRedes": "La misión técnica del FMI concluyó este martes su auditoría sobre el programa financiero y evaluó las cuentas fiscales y las reservas del Banco Central. De su aprobación depende un desembolso cercano a los 900 millones de dólares.",
+      "etiquetas": [
+        "FMI",
+        "economia",
+        "acuerdo",
+        "reservas",
+        "banco central"
+      ],
+      "fuentesConsultadas": [
+        {
+          "medio": "TN (Todo Noticias)",
+          "enlace": "https://tn.com.ar/economia/2026/09/30/el-fmi-termino-su-mision-en-la-argentina-y-hay-expectativa-por-el-resultado-de-la-tercera-revision-del-programa-economico/",
+          "fecha": "2026-09-30T17:40:31.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Infobae",
+          "enlace": "https://www.infobae.com/economia/2026/09/30/el-fmi-concluyo-su-mision-tecnica-en-argentina-por-la-tercera-revision-del-programa/",
+          "fecha": "2026-09-30T18:00:31.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "El Cronista",
+          "enlace": "https://www.cronista.com/economia-politica/termino-la-mision-del-fmi-en-argentina-que-sigue/",
+          "fecha": "2026-09-30T18:47:01.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Crónica",
+          "enlace": "https://www.cronica.com.ar/politica/fmi-concluyo-mision-tecnica-argentina/",
+          "fecha": "2026-09-30T18:18:31.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Canal 26",
+          "enlace": "https://www.canal26.com/economia/2026/09/30/el-fmi-termino-su-mision-en-argentina-que-paso-con-las-metas-y-cuando-se-define-la-revision/",
+          "fecha": "2026-09-30T17:47:57.000Z",
+          "oficial": false,
+          "aporte": null
+        },
+        {
+          "medio": "Noticias Argentinas (NA)",
+          "enlace": "https://noticiasargentinas.com/economia/finalizo-la-revision-del-fmi-que-dispara-un-desembolso-de-us-900-millones_a6abd45ac129df45908dd62c4",
+          "fecha": "2026-09-30T18:29:00.000Z",
+          "oficial": false,
+          "aporte": null
+        }
+      ],
+      "verificacion": {
+        "nivel": "ALTA",
+        "porque": "Lo contaron seis medios independientes.",
+        "sugeridoPorIA": "ALTA"
+      },
+      "slug": "el-fmi-concluye-su-mision-tecnica-y-evalua-la-economia",
+      "foto": {
+        "archivo": "fotos-notas/1q0vfmx.jpg",
+        "credito": "Foto: TN (Todo Noticias)"
+      }
+    },
+    {
       "id": "jul48u",
       "titulo": "Pampa Dúo toca el 17 de octubre en el Teatro Municipal",
       "copete": "Marcelo Giménez y Pablo Lobato presentarán \"Nuestra forma de mirar el mundo\", un espectáculo de música surera, a las 21 en el Teatro Municipal Luis Conti.",
@@ -3954,7 +4431,7 @@
       "fecha": "2026-09-29T14:55:00.000Z",
       "sinFecha": false,
       "visto": "2026-09-29T16:31:06.769Z",
-      "relevancia": 73,
+      "relevancia": 76,
       "local": true,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -4318,7 +4795,7 @@
       "fecha": "2026-09-29T12:47:18.000Z",
       "sinFecha": false,
       "visto": "2026-09-29T19:01:06.137Z",
-      "relevancia": 54,
+      "relevancia": 58,
       "local": false,
       "publicadaPor": null,
       "publicadaCuando": null,
@@ -4663,15 +5140,15 @@
         "Infobae",
         "TN (Todo Noticias)",
         "Perfil",
+        "Ámbito",
         "TyC Sports",
+        "Olé",
+        "Córdoba Competición",
         "La Nueva",
         "Campeones",
         "Radio Mitre",
-        "Ámbito",
         "Minuto Uno",
-        "Clarín",
-        "Olé",
-        "Córdoba Competición"
+        "Clarín"
       ],
       "enlace": "https://es.motorsport.com/f1/news/alonso-aston-martin-renovacion/10848231/?utm_source=RSS&utm_medium=referral&utm_campaign=RSS-F1&utm_term=News&utm_content=es",
       "teniaImagenLaFuente": true,
@@ -4765,26 +5242,26 @@
   ],
   "secciones": [
     "Automovilismo",
-    "Cultura y agenda",
     "Balcarce",
-    "Economía",
+    "Agro",
+    "Política",
+    "Cultura y agenda",
     "Fútbol",
     "Deportes",
+    "Economía",
     "Tecnología",
-    "Política",
-    "Agro",
     "Argentina"
   ],
   "temas": [
     {
       "nombre": "El autódromo",
       "ranura": "autodromo",
-      "cuantas": 3
+      "cuantas": 4
     },
     {
       "nombre": "Fangio",
       "ranura": "fangio",
-      "cuantas": 3
+      "cuantas": 4
     },
     {
       "nombre": "TC Pick Up",
@@ -4804,9 +5281,9 @@
   ],
   "clima": {
     "ahora": {
-      "temp": 11,
-      "sensacion": 6,
-      "humedad": 63,
+      "temp": 10,
+      "sensacion": 5,
+      "humedad": 65,
       "viento": 23,
       "rumbo": "SO",
       "cielo": "Nublado",
@@ -5176,6 +5653,18 @@
       "motivo": "necesita ojo humano: \"herida\""
     },
     {
+      "id": "qc6kah",
+      "titulo": "Un joven denunció que el Municipio le prohibió vender…",
+      "seccion": "Balcarce",
+      "motivo": "necesita ojo humano: \"denunció\""
+    },
+    {
+      "id": "4dqqqh",
+      "titulo": null,
+      "seccion": "Argentina",
+      "motivo": "necesita ojo humano: \"niño\", en el texto completo de la fuente (visto al reescribir)"
+    },
+    {
       "id": "12dge64",
       "titulo": "La empresa británica Rockhopper aseguró que las sanciones…",
       "seccion": "Argentina",
@@ -5198,12 +5687,6 @@
       "titulo": "Tensión en el estadio de Newell’s tras los festejos de…",
       "seccion": "Fútbol",
       "motivo": "necesita ojo humano: \"detenido\""
-    },
-    {
-      "id": "9a9diu",
-      "titulo": null,
-      "seccion": "Argentina",
-      "motivo": "necesita ojo humano: \"víctima\""
     },
     {
       "id": "13cnvur",
@@ -5230,6 +5713,12 @@
       "motivo": "necesita ojo humano: \"acusado\""
     },
     {
+      "id": "9a9diu",
+      "titulo": null,
+      "seccion": "Argentina",
+      "motivo": "necesita ojo humano: \"víctima\""
+    },
+    {
       "id": "nujlcl",
       "titulo": "Un argentino buscaba trabajo y terminó como prisionero de…",
       "seccion": "Argentina",
@@ -5254,16 +5743,16 @@
       "motivo": "necesita ojo humano: \"niño\""
     },
     {
-      "id": "1y99bnh",
-      "titulo": "El TAS falló por la deuda de Lomónaco y fijó cuánto deberá…",
-      "seccion": "Fútbol",
-      "motivo": "necesita ojo humano: \"denuncia\""
-    },
-    {
       "id": "1ni4812",
       "titulo": null,
       "seccion": "Argentina",
       "motivo": "necesita ojo humano: \"niña\""
+    },
+    {
+      "id": "1d7e9tl",
+      "titulo": "Escándalo en el ascenso: hizo gestos racistas, no lo…",
+      "seccion": "Argentina",
+      "motivo": "necesita ojo humano: \"detenido\""
     },
     {
       "id": "e8lrci",
@@ -5314,5 +5803,5 @@
       "motivo": "necesita ojo humano: \"denuncia\""
     }
   ],
-  "esperandoCuerpo": 7
+  "esperandoCuerpo": 8
 }

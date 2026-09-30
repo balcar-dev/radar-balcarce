@@ -1,10 +1,10 @@
 {
- "generado": "2026-09-30T20:31:41.574Z",
- "portada": 61,
- "archivo": 649,
- "esperandoCuerpo": 7,
+ "generado": "2026-09-30T21:02:15.107Z",
+ "portada": 66,
+ "archivo": 653,
+ "esperandoCuerpo": 8,
  "redes": {
-  "generado": "2026-09-30T20:31:41.617Z",
+  "generado": "2026-09-30T21:02:15.145Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -147,27 +147,27 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 52,
+    "segundos": 47,
     "notas": [
-     {
-      "id": "2uqvxt",
-      "titulo": "La AFA apela en la FIFA la sanción a Leandro Paredes para reducirla",
-      "seccion": "Fútbol"
-     },
      {
       "id": "1rpzsy3",
       "titulo": "Tres jugadores locales integran la selección provincial de pádel",
       "seccion": "Deportes"
      },
      {
-      "id": "1vgun5x",
-      "titulo": "Balcarce participa de la trigésima Feria Internacional de Turismo",
-      "seccion": "Cultura y agenda"
+      "id": "10xubmm",
+      "titulo": "Joan Laporta revela el llamado que frenó el pase de Lautaro",
+      "seccion": "Fútbol"
      },
      {
       "id": "h36tlu",
       "titulo": "La Municipalidad recauda millones en una subasta de tierras",
       "seccion": "Balcarce"
+     },
+     {
+      "id": "1vgun5x",
+      "titulo": "Balcarce participa de la trigésima Feria Internacional de Turismo",
+      "seccion": "Cultura y agenda"
      }
     ]
    }
@@ -202,15 +202,15 @@
    ],
    "cola": [
     {
-     "id": "5evpzb",
-     "titulo": "Cabrera y Otero ganan la carrera nocturna en Napaleofú",
+     "id": "1vqwmji",
+     "titulo": "Cristian Giuliano y Desirée Fraiz sobresalen en el Rally Mar y Sierras MTB",
      "seccion": "Deportes",
      "marcada": false
     },
     {
-     "id": "1vqwmji",
-     "titulo": "Cristian Giuliano y Desirée Fraiz sobresalen en el Rally Mar y Sierras MTB",
-     "seccion": "Deportes",
+     "id": "z3c4f",
+     "titulo": "Estudiantes del Colegio Santa Rosa de Lima visitan el municipio",
+     "seccion": "Balcarce",
      "marcada": false
     },
     {
