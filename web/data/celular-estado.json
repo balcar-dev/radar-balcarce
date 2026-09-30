@@ -1,10 +1,10 @@
 {
- "generado": "2026-09-30T19:02:16.816Z",
- "portada": 58,
- "archivo": 645,
- "esperandoCuerpo": 3,
+ "generado": "2026-09-30T19:33:07.255Z",
+ "portada": 66,
+ "archivo": 648,
+ "esperandoCuerpo": 7,
  "redes": {
-  "generado": "2026-09-30T19:02:16.859Z",
+  "generado": "2026-09-30T19:33:07.303Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -137,12 +137,12 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 51,
+    "segundos": 52,
     "notas": [
      {
-      "id": "12mtzuq",
-      "titulo": "La Universidad de Buenos Aires otorga el doctorado honoris causa a Lionel Messi",
-      "seccion": "Argentina"
+      "id": "y9vwef",
+      "titulo": "El equipo de fútbol playa clasifica a la final bonaerense",
+      "seccion": "Deportes"
      },
      {
       "id": "2uqvxt",
@@ -150,14 +150,14 @@
       "seccion": "Fútbol"
      },
      {
-      "id": "1vqwmji",
-      "titulo": "Cristian Giuliano y Desirée Fraiz sobresalen en el Rally Mar y Sierras MTB",
-      "seccion": "Deportes"
-     },
-     {
       "id": "1vgun5x",
       "titulo": "Balcarce participa de la trigésima Feria Internacional de Turismo",
       "seccion": "Cultura y agenda"
+     },
+     {
+      "id": "h36tlu",
+      "titulo": "La Municipalidad recauda millones en una subasta de tierras",
+      "seccion": "Balcarce"
      }
     ]
    }
@@ -187,6 +187,12 @@
    ],
    "cola": [
     {
+     "id": "5evpzb",
+     "titulo": "Cabrera y Otero ganan la carrera nocturna en Napaleofú",
+     "seccion": "Deportes",
+     "marcada": false
+    },
+    {
      "id": "1h3b7f0",
      "titulo": "La Fiesta Nacional del Postre anuncia sus actividades para octubre",
      "seccion": "Cultura y agenda",
@@ -199,15 +205,15 @@
      "marcada": false
     },
     {
-     "id": "qbrt3e",
-     "titulo": "La noche de los sueños llega con artistas locales para ayudar a Rufi Cerezuela",
+     "id": "1s10vxl",
+     "titulo": "Rocío Espinillo anticipa su receta para la Fiesta del Postre",
      "seccion": "Cultura y agenda",
      "marcada": false
     },
     {
-     "id": "5evpzb",
-     "titulo": "Cabrera y Otero ganan la carrera nocturna en Napaleofú",
-     "seccion": "Deportes",
+     "id": "qbrt3e",
+     "titulo": "La noche de los sueños llega con artistas locales para ayudar a Rufi Cerezuela",
+     "seccion": "Cultura y agenda",
      "marcada": false
     }
    ],
