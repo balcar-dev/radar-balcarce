@@ -33,7 +33,7 @@ const UA = 'RadarBalcarce/0.1 (agregador local de noticias de Balcarce)';
 
 // ---------------------------------------------------------------- utilidades
 
-export async function traer(url, { timeout = 15000, agente } = {}) {
+export async function traer(url, { timeout = 15000, agente, sinCompresion = false } = {}) {
   const ctrl = new AbortController();
   const t = setTimeout(() => ctrl.abort(), timeout);
   try {
@@ -42,7 +42,9 @@ export async function traer(url, { timeout = 15000, agente } = {}) {
       redirect: 'follow',
       // Algunas APIs (met.no) exigen un User-Agent que identifique al que
       // llama, con contacto incluido: es su condición de uso gratuito.
-      headers: { 'user-agent': agente ?? UA, accept: '*/*' },
+      // Algunos servidores mandan la compresión rota (SoloTC) y otros rechazan el nombre
+      // de siempre (TNT Sports): por fuente, `sinCompresion` y `agente` (30/09).
+      headers: { 'user-agent': agente ?? UA, accept: '*/*', ...(sinCompresion ? { 'accept-encoding': 'identity' } : {}) },
     });
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     // Varios sitios no declaran charset y fetch los lee como latin1: forzamos UTF-8
@@ -424,11 +426,14 @@ function motivoDeDescarte(nota, fuente = {}) {
   try { tramos = new URL(nota.enlace).pathname.toLowerCase().split('/').filter(Boolean); } catch { return null; }
   // El último tramo es el nombre de la nota ("colectivos-de-mexico-y-…"): no cuenta.
   tramos = tramos.slice(0, -1);
+  const esDeFierros = fuente.seccion === 'Automovilismo' || (fuente.temas ?? []).includes('automovilismo');
   for (const regla of SECCIONES_QUE_NO_ENTRAN) {
-    if (!regla.tramos.some((t) => tramos.includes(t))) continue;
+    const coinciden = regla.tramos.filter((t) => tramos.includes(t));
+    if (!coinciden.length) continue;
+    // Olé pone toda su F1 y su TC bajo "/autos/": en una fuente de automovilismo no es un consejo de autos (30/09).
+    if (esDeFierros && coinciden.every((t) => t === 'autos')) continue;
     if (regla.conExcepcion) {
       const titulo = normalizar(nota.titulo ?? '');
-      const esDeFierros = fuente.seccion === 'Automovilismo' || (fuente.temas ?? []).includes('automovilismo');
       if (esDeFierros || figuraQueNombra(nota) || CONEXION_ARGENTINA.some((p) => contiene(titulo, p))) continue;
     }
     return regla.motivo;
@@ -1317,8 +1322,10 @@ export async function ingestar({
   // 1. Fuentes de noticias
   log('\x1b[1mFUENTES\x1b[0m');
   const resultados = await Promise.allSettled(lista.map(async (f) => {
-    const cuerpo = await traer(f.url);
+    const cuerpo = await traer(f.url, { agente: f.agente, sinCompresion: f.sinCompresion });
     let notas = f.tipo === 'scrape' ? parsearScrape(cuerpo, f) : parsearFeed(cuerpo, f);
+    // Los feeds enormes (OpenAI trae más de mil notas) se cortan en las primeras, que son las nuevas.
+    if (f.maxNotas) notas = notas.slice(0, f.maxNotas);
     // Raspar la portada da títulos sin bajada ni fecha: hay que entrar a cada nota.
     if (f.tipo === 'scrape') {
       await ampliar(notas);

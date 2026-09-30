@@ -373,3 +373,27 @@ ingesta), se baja la página de la nota original (`ingesta/articulo.mjs`):
 | Una figura de la lista es ambigua | Entra como "figura" algo que no lo es ("etcheverry" solo tomó una inmobiliaria) | Usar nombre y apellido en `FIGURAS` |
 
 Lo que falta, en `PENDIENTES.md`.
+
+## Fuentes apagadas por bloqueo (30/09)
+
+Varios sitios están detrás de Cloudflare y contestan 403 a los servidores de
+GitHub (están en Estados Unidos), aunque desde una PC en Argentina andan. **Lo
+que nos bloquea se apaga y se anota, no se usa** (Hernán, 30/09): en
+`ingesta/fuentes.mjs` y `ingesta/fuentes-cruce.mjs` queda con `activa: false` y
+una `nota` con la fecha y el motivo. Apagadas ese día: El Norte (San Nicolás),
+Radio Sudestada (que no es de lo más relevante de Balcarce), El Argentino
+Digital, los índices de La Voz del Pueblo y Ecos Diarios (sus feeds Atom siguen),
+Sendero Regional y 2261 Lobería (hosting argentino que no deja entrar a GitHub),
+el índice de El Diario de Tandil, Municipios vecinos (se reemplazó por General
+Alvarado y San Cayetano), y las que nunca traían nada (La Nueva y Solo Ascenso
+por sus índices sin título, A24 policiales, Motor1 en inglés y Autoblog, de autos
+0 km). Para volver a probar una, se le saca `activa: false` y se mira si aparece
+en la corrida de GitHub.
+
+Lo que se arregló ese día: Olé automovilismo ya no se tira entero por "/autos/"
+en la dirección; La Vanguardia también se lee en sus notas de deportes; SoloTC se
+pide sin compresión (`sinCompresion`) y TNT Sports con otro nombre (`agente`); y
+los feeds enormes (OpenAI trae más de mil notas) se cortan en las primeras
+(`maxNotas`). Se sumaron Acción 5 (deportes de Balcarce) y unas treinta fuentes
+por sección (fútbol, economía, agro, cultura, tecnología e IA con los blogs de
+Google, DeepMind, OpenAI, Microsoft, Nvidia, NASA y ESA).

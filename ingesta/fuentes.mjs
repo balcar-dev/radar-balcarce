@@ -136,15 +136,26 @@ export const FUENTES = [
     temas: ['actualidad', 'rural', 'deportes', 'policiales'],
   },
   {
+    id: 'accion5',
+    nombre: 'Acción 5',
+    medio: 'Acción 5 (Balcarce)',
+    url: 'https://accion5.com/feed/',
+    tipo: 'rss',
+    alcance: 'local',
+    peso: 28,
+    temas: ['deportes', 'liga', 'automovilismo', 'ajedrez'],
+    nota: 'Medio de deportes de Balcarce (30/09). Es el que más escribe de la Liga Balcarceña: 16 de las 55 notas más recientes de Google Noticias sobre la Liga.',
+  },
+  {
     id: 'lavanguardia',
     nombre: 'La Vanguardia',
     medio: 'Diario La Vanguardia',
     url: 'https://www.diariolavanguardia.com/',
     base: 'https://www.diariolavanguardia.com',
-    // Sus notas son .../noticias/<id>-<slug>/, con el link absoluto (no
+    // Sus notas son .../noticias/<id>-<slug>/ y, desde el 30/09, también .../deportes/<id>-<slug>/ (el Clausura de la Liga no se leía), con el link absoluto (no
     // relativo como El Diario). Cada tarjeta trae un <h3> de bajada y un <h2>
     // con el título real: parsearScrape ya sabe preferir el <h2> si existe.
-    patronEnlace: /<a[^>]+href=["']([^"']*\/noticias\/\d+-[a-z0-9-]+\/?)["'][^>]*>([\s\S]*?)<\/a>/gi,
+    patronEnlace: /<a[^>]+href=["']([^"']*\/(?:noticias|deportes)\/\d+-[a-z0-9-]+\/?)["'][^>]*>([\s\S]*?)<\/a>/gi,
     tipo: 'scrape',
     alcance: 'local',
     peso: 28,
@@ -211,6 +222,7 @@ export const FUENTES_NACIONALES = [
   },
   {
     id: 'sendero',
+    activa: false, // 30/09: no responde desde GitHub (hosting argentino); no la usamos
     ciudad: 'varias ciudades del sudeste',
     nombre: 'Sendero Regional',
     medio: 'Sendero Regional',
@@ -346,6 +358,7 @@ export const FUENTES_NACIONALES = [
   },
   {
     id: 'loberia2261',
+    activa: false, // 30/09: no responde desde GitHub (mismo hosting que Sendero); no la usamos
     ciudad: 'Lobería',
     nombre: '2261 Lobería',
     medio: '2261 – Noticias de Lobería',
