@@ -1,10 +1,10 @@
 {
- "generado": "2026-09-30T22:01:56.835Z",
- "portada": 65,
- "archivo": 658,
+ "generado": "2026-09-30T22:33:23.800Z",
+ "portada": 73,
+ "archivo": 666,
  "esperandoCuerpo": 9,
  "redes": {
-  "generado": "2026-09-30T22:01:56.879Z",
+  "generado": "2026-09-30T22:33:23.828Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -54,7 +54,7 @@
     "voz": "locutor",
     "ventana": 300,
     "momento": "en-hora",
-    "salio": null
+    "salio": "2026-09-30T22:04:13.822Z"
    },
    {
     "nombre": "clima-noche",
@@ -200,7 +200,14 @@
      "cuando": "2026-09-30T20:04:06.971Z"
     }
    ],
-   "cola": [],
+   "cola": [
+    {
+     "id": "1t43pl5",
+     "titulo": "Tres balcarceños compiten en el torneo argentino de pádel",
+     "seccion": "Deportes",
+     "marcada": false
+    }
+   ],
    "cupo": 0,
    "proximoDesde": "2026-09-30T21:34:06.971Z",
    "porDia": 5,

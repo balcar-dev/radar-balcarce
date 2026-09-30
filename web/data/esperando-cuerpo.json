@@ -1,5 +1,5 @@
 {
- "generado": "2026-09-30T22:01:56.835Z",
+ "generado": "2026-09-30T22:33:23.800Z",
  "intentosMaximos": 3,
  "notas": [
   {
@@ -15,7 +15,7 @@
      "fecha": "2026-09-30T21:23:20.092Z"
     }
    ],
-   "intentos": 1
+   "intentos": 2
   },
   {
    "id": "1lyj59u",
@@ -31,6 +31,41 @@
     }
    ],
    "intentos": 3
+  },
+  {
+   "id": "1p68wmw",
+   "titulo": "La Liga de Intendentes llevó a Bahía Blanca su agenda de producción y desarrollo y respaldó el reclamo por la Zona Fría",
+   "copete": "Los intendentes de la Liga, Federico Achával (Pilar) , Nicolás Mantegazza (San Vicente), Federico Otermín (Lomas de Zamora) y Gastón Granados (Ezeiza), fueron recibidos por el intendente de Bahía Blanca, Federico Susbielles, también integrante de la Liga, para avanzar, desde el…",
+   "seccion": "Política",
+   "fecha": "2026-09-30T21:16:34.000Z",
+   "fuentes": [
+    {
+     "medio": "Zona Norte Diario",
+     "enlace": "https://www.zonanortediario.com.ar/30/09/2026/la-liga-de-intendentes-llevo-a-bahia-blanca-su-agenda-de-produccion-y-desarrollo-y-respaldo-el-reclamo-por-la-zona-fria/",
+     "fecha": "2026-09-30T21:16:34.000Z"
+    },
+    {
+     "medio": "Clarín",
+     "enlace": "https://www.clarin.com/politica/intendentes-peronistas-reunieron-bahia-blanca-renovaron-reclamo-quita-subsidios-zonas-frias_0_qFFacqzZuE.html",
+     "fecha": "2026-09-30T21:51:22.000Z"
+    },
+    {
+     "medio": "Crónica",
+     "enlace": "https://www.cronica.com.ar/politica/la-liga-de-intendentes-desembarco-en-bahia-blanca-y-respaldo-el-reclamo-por-la-zona-fria/",
+     "fecha": "2026-09-30T21:36:28.000Z"
+    },
+    {
+     "medio": "La Nueva",
+     "enlace": "https://www.lanueva.com/nota/2026-9-30-10-52-0-intendentes-peronistas-en-bahia-puede-estar-aqui-el-proximo-gobernador-de-la-provincia",
+     "fecha": "2026-09-30T22:21:13.000Z"
+    },
+    {
+     "medio": "La Tecla",
+     "enlace": "https://www.latecla.info/170085-la-liga-de-intendentes-desembarco-en-bahia-blanca-y-cerro-filas-por-la-zona-fria",
+     "fecha": "2026-09-30T21:37:00.000Z"
+    }
+   ],
+   "intentos": 1
   },
   {
    "id": "140a3wt",
@@ -63,64 +98,44 @@
    "intentos": 3
   },
   {
-   "id": "jhvbxg",
-   "titulo": "Intendentes peronistas en Bahía: \"Puede estar aquí el próximo gobernador de la Provincia\"",
-   "copete": "Bahía Blanca fue escenario este miércoles de un encuentro de la Liga de Intendentes Peronistas de la provincia de Buenos Aires, que reunió a Federico Achával (Pilar), Gastón Granados (Ezeiza), Nicolás Mantegazza (San Vicente) y Federico Otermín (Lomas de Zamora), junto al jefe…",
-   "seccion": "Política",
-   "fecha": "2026-09-30T21:14:00.000Z",
+   "id": "1g985bm",
+   "titulo": "El juicio a Pity Álvarez quedó en pausa y ordenaron una nueva evaluación sobre su estado",
+   "copete": "El Tribunal Oral en lo Criminal y Correccional 29 ordenó una nueva evaluación interdisciplinaria a Cristian “Pity” Álvarez y, de esta manera, el debate por el crimen de Cristian Díaz en 2018 quedó en pausa hasta conocer el resultado. El presidente del tribunal, Gustavo Goerner…",
+   "seccion": "Argentina",
+   "fecha": "2026-09-30T16:58:00.000Z",
    "fuentes": [
     {
-     "medio": "La Nueva",
-     "enlace": "https://www.lanueva.com/nota/2026-9-30-10-52-0-intendentes-peronistas-en-bahia-puede-estar-aqui-el-proximo-gobernador-de-la-provincia",
-     "fecha": "2026-09-30T21:14:00.000Z"
+     "medio": "Minuto Uno",
+     "enlace": "https://www.minutouno.com/espectaculos/el-juicio-pity-alvarez-quedo-pausa-y-ordenaron-una-nueva-evaluacion-su-estado-n6328483",
+     "fecha": "2026-09-30T16:58:00.000Z"
     },
     {
-     "medio": "Crónica",
-     "enlace": "https://www.cronica.com.ar/politica/la-liga-de-intendentes-desembarco-en-bahia-blanca-y-respaldo-el-reclamo-por-la-zona-fria/",
-     "fecha": "2026-09-30T21:36:28.000Z"
+     "medio": "El Eco de Tandil",
+     "enlace": "https://www.eleco.com.ar/nacionales/el-juicio-a-pity-alvarez-quedo-en-pausa-por-otra-evaluacion",
+     "fecha": "2026-09-30T21:52:11.000Z"
     },
     {
-     "medio": "La Tecla",
-     "enlace": "https://www.latecla.info/170085-la-liga-de-intendentes-desembarco-en-bahia-blanca-y-cerro-filas-por-la-zona-fria",
-     "fecha": "2026-09-30T21:37:00.000Z"
+     "medio": "Ámbito",
+     "enlace": "https://www.ambito.com/informacion-general/ordenaron-un-nuevo-peritaje-determinar-si-pity-alvarez-puede-continuar-el-juicio-homicidio-n6328637",
+     "fecha": "2026-09-30T21:41:00.000Z"
     },
     {
-     "medio": "Zona Norte Diario",
-     "enlace": "https://www.zonanortediario.com.ar/30/09/2026/la-liga-de-intendentes-llevo-a-bahia-blanca-su-agenda-de-produccion-y-desarrollo-y-respaldo-el-reclamo-por-la-zona-fria/",
-     "fecha": "2026-09-30T21:16:34.000Z"
+     "medio": "Ámbito",
+     "enlace": "https://www.ambito.com/espectaculos/el-juicio-del-pity-alvarez-quedo-pausa-las-razones-detras-la-decision-n6328541",
+     "fecha": "2026-09-30T18:31:00.000Z"
+    },
+    {
+     "medio": "Noticias Argentinas (NA)",
+     "enlace": "https://noticiasargentinas.com/sociedad/el-juicio-contra--pity--alvarez-quedo-en-pausa-hasta-una-nueva-evaluacion-interdisciplinaria_a6abd2728129df45908d94973",
+     "fecha": "2026-09-30T18:39:00.000Z"
+    },
+    {
+     "medio": "Minuto Uno",
+     "enlace": "https://www.minutouno.com/espectaculos/ordenaron-un-nuevo-peritaje-determinar-si-pity-alvarez-puede-continuar-el-juicio-homicidio-n6328558",
+     "fecha": "2026-09-30T18:51:00.000Z"
     }
    ],
-   "intentos": 1
-  },
-  {
-   "id": "1hgayvy",
-   "titulo": "Oficializan la prórroga hasta 2027 de las concesiones de las 24 unidades balnearias de Punta Mogotes",
-   "copete": "La Administración de Punta Mogotes (APM) oficializó la prórroga de las concesiones de las 24 unidades fiscales del complejo. La medida quedó formalizada mediante la resolución administrativa N° 112/26, publicada en el Boletín Oficial de la Provincia de Buenos Aires, y establece…",
-   "seccion": "Cultura y agenda",
-   "fecha": "2026-09-30T11:06:21.000Z",
-   "fuentes": [
-    {
-     "medio": "Infobrisas (Radio Brisas)",
-     "enlace": "https://www.infobrisas.com/noticias/2026/09/30/109680-oficializan-la-prorroga-hasta-2027-de-las-concesiones-de-las-24-unidades-balnearias-de-punta-mogotes",
-     "fecha": "2026-09-30T11:06:21.000Z"
-    },
-    {
-     "medio": "QZ Noticias (Mar del Plata)",
-     "enlace": "https://www.qznoticias.com/la-ciudad/es-oficial-la-prorroga-de-las-concesiones-de-los-24-balnearios-de-punta-mogotes",
-     "fecha": "2026-09-30T16:22:37.000Z"
-    },
-    {
-     "medio": "Agencia DIB",
-     "enlace": "https://dib.com.ar/politica/punta-mogotes-prorrogaron-las-concesiones-los-24-balnearios-junio-2027-n56147",
-     "fecha": "2026-09-30T21:03:00.000Z"
-    },
-    {
-     "medio": "La Tecla",
-     "enlace": "https://www.latecla.info/170071-punta-mogotes-oficializaron-la-prorroga-de-los-24-balnearios",
-     "fecha": "2026-09-30T13:47:00.000Z"
-    }
-   ],
-   "intentos": 1
+   "intentos": 3
   },
   {
    "id": "1lzo6mc",
