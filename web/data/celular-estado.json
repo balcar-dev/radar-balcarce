@@ -1,10 +1,10 @@
 {
- "generado": "2026-09-30T12:58:54.640Z",
- "portada": 50,
- "archivo": 607,
- "esperandoCuerpo": 6,
+ "generado": "2026-09-30T13:03:36.568Z",
+ "portada": 51,
+ "archivo": 611,
+ "esperandoCuerpo": 5,
  "redes": {
-  "generado": "2026-09-30T12:58:54.677Z",
+  "generado": "2026-09-30T13:03:36.603Z",
   "piezas": [
    {
     "nombre": "clima-manana",
@@ -23,7 +23,7 @@
     "que": "El repaso de la mañana",
     "voz": "locutor",
     "ventana": 180,
-    "momento": "antes",
+    "momento": "en-hora",
     "salio": null
    },
    {
@@ -73,9 +73,9 @@
     "titulo": "El repaso de la mañana",
     "hora": "10:00",
     "voz": "locutor",
-    "momento": "antes",
+    "momento": "en-hora",
     "salio": null,
-    "segundos": 51,
+    "segundos": 52,
     "notas": [
      {
       "id": "jul3w9",
@@ -93,9 +93,9 @@
       "seccion": "Cultura y agenda"
      },
      {
-      "id": "1hkh8ez",
-      "titulo": "UPCN dicta una capacitación gratuita para auxiliares",
-      "seccion": "Balcarce"
+      "id": "y9vwef",
+      "titulo": "El equipo de fútbol playa clasifica a la final bonaerense",
+      "seccion": "Deportes"
      }
     ]
    },
@@ -119,14 +119,14 @@
       "seccion": "Automovilismo"
      },
      {
+      "id": "5evpzb",
+      "titulo": "Cabrera y Otero ganan la carrera nocturna en Napaleofú",
+      "seccion": "Deportes"
+     },
+     {
       "id": "1yqjdtm",
       "titulo": "El Gobierno posterga por un mes la suba impositiva en los combustibles",
       "seccion": "Economía"
-     },
-     {
-      "id": "1vgun5x",
-      "titulo": "Balcarce participa de la trigésima Feria Internacional de Turismo",
-      "seccion": "Cultura y agenda"
      }
     ]
    },
@@ -137,22 +137,22 @@
     "voz": "locutor",
     "momento": "antes",
     "salio": null,
-    "segundos": 43,
+    "segundos": 46,
     "notas": [
+     {
+      "id": "1vgun5x",
+      "titulo": "Balcarce participa de la trigésima Feria Internacional de Turismo",
+      "seccion": "Cultura y agenda"
+     },
+     {
+      "id": "1hkh8ez",
+      "titulo": "UPCN dicta una capacitación gratuita para auxiliares",
+      "seccion": "Balcarce"
+     },
      {
       "id": "1asj6cl",
       "titulo": "Las TC Pick Up evalúan regresar a Balcarce antes de fin de año",
       "seccion": "Automovilismo"
-     },
-     {
-      "id": "1puwvvm",
-      "titulo": "El Geriátrico Pinto recibe diez colchones y diez almohadas",
-      "seccion": "Balcarce"
-     },
-     {
-      "id": "12rp30w",
-      "titulo": "Edgardo Ríos visita la Fiesta Nacional del Postre",
-      "seccion": "Cultura y agenda"
      },
      {
       "id": "h7o4xt",
@@ -164,7 +164,20 @@
   ],
   "facebook": {
    "hoy": [],
-   "cola": [],
+   "cola": [
+    {
+     "id": "y9vwef",
+     "titulo": "El equipo de fútbol playa clasifica a la final bonaerense",
+     "seccion": "Deportes",
+     "marcada": false
+    },
+    {
+     "id": "5evpzb",
+     "titulo": "Cabrera y Otero ganan la carrera nocturna en Napaleofú",
+     "seccion": "Deportes",
+     "marcada": false
+    }
+   ],
    "cupo": 5,
    "proximoDesde": "2026-09-30T00:33:13.423Z",
    "porDia": 5,
