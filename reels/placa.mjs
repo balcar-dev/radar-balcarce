@@ -644,6 +644,49 @@ export function placaUtiles({ grupos = [] }) {
   ${pie()}`);
 }
 
+// ------------------------------------------------------ un día como hoy
+
+const COLOR_EFEMERIDE = COLOR_SECCION['Cultura y agenda'];
+/** El azul de las fechas patrias y los feriados (el de la bandera, oscuro para leerse sobre el papel). */
+export const COLOR_FERIADO = '#2B6AA6';
+
+/**
+ * Una escena de "Un día como hoy" (y de los feriados), con el mismo diseño que
+ * las demás placas: rótulo en color, título grande en serif, la raya y la firma
+ * de siempre abajo, y el texto dentro de la zona segura. `grande` es el año o la
+ * cifra que manda en la escena. Es la base de las escenas animadas: el
+ * movimiento se arma cuadro a cuadro sobre estas mismas placas.
+ */
+export function placaEfemeride({
+  rotulo: kicker, grande = '', titulo = '', cuerpo = '', color = COLOR_EFEMERIDE,
+}) {
+  const disponible = ANCHO - MARGEN * 2;
+  let y = 300;
+  const partes = [rotulo(kicker, { y, color })];
+  if (grande) {
+    const tam = grande.length <= 5 ? 300 : grande.length <= 7 ? 210 : 150;
+    y += 40 + Math.round(tam * 0.8);
+    partes.push(renglones([grande], { y, tam, peso: 900, color, espaciado: -6 }));
+    y += 70;
+  } else {
+    y += 26;
+  }
+  if (titulo) {
+    const t = repartir(titulo, [{ tam: grande ? 84 : 100, max: 3 }, { tam: 74, max: 4 }, { tam: 62, max: 5 }], disponible);
+    y += Math.round(t.tam * 0.92);
+    partes.push(renglones(t.lineas, { y, tam: t.tam, interlinea: Math.round(t.tam * 1.04), espaciado: -1.5 }));
+    y += (t.lineas.length - 1) * Math.round(t.tam * 1.04) + Math.round(t.tam * 0.25);
+  }
+  if (cuerpo) {
+    const lineas = envolverAncho(cuerpo, 42, disponible, 'sans');
+    y += 64;
+    partes.push(renglones(lineas, { y, tam: 42, interlinea: 60, familia: TEXTO, peso: 500, color: COLORES.gris }));
+  }
+  return lienzo(`
+  ${partes.join('\n  ')}
+  ${pie()}`);
+}
+
 // ------------------------------------------------------------- a imagen
 
 // Las tipografías del portal, incrustadas de verdad: Source Serif 4 para los
